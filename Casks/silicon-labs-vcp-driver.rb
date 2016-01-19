@@ -8,9 +8,9 @@ cask 'silicon-labs-vcp-driver' do
   homepage 'https://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx'
   license :gratis
 
-  container :nested => 'SiLabsUSBDriverDisk.dmg'
+  container nested: 'SiLabsUSBDriverDisk.dmg'
 
   pkg 'Silicon Labs VCP Driver.pkg'
 
-  uninstall :pkgutil => 'com.silabs.siliconLabsVcpDriver.*'
+  uninstall pkgutil: 'com.silabs.siliconLabsVcpDriver.*'
 end

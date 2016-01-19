@@ -5,12 +5,12 @@ cask 'cocoapods' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/CocoaPods/CocoaPods-app/releases/download/#{version}/CocoaPods.app-#{version}.tar.bz2"
   appcast 'https://app.cocoapods.org/sparkle',
-          :checkpoint => 'e4e0ac27db2639c5349c6be4273be6fd0dae4bc81128d25bc9c541e83ba032dd'
+          checkpoint: 'e4e0ac27db2639c5349c6be4273be6fd0dae4bc81128d25bc9c541e83ba032dd'
   name 'CocoaPods.app'
   homepage 'https://cocoapods.org/'
   license :mit
 
-  container :type => :tar
+  container type: :tar
 
   app 'CocoaPods.app'
   binary 'CocoaPods.app/Contents/Helpers/pod'

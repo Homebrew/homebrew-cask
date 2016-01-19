@@ -4,7 +4,7 @@ cask 'backuploupe' do
 
   url "http://www.soma-zone.com/download/files/BackupLoupe_#{version}.tar.bz2"
   appcast 'http://www.soma-zone.com/BackupLoupe/a/appcast.xml',
-          :checkpoint => 'c509a27aac8e4a1aa1512cc8a4ba17a035086fca467db31a2fd824dd817a3691'
+          checkpoint: 'c509a27aac8e4a1aa1512cc8a4ba17a035086fca467db31a2fd824dd817a3691'
   name 'BackupLoupe'
   homepage 'http://www.soma-zone.com/BackupLoupe/'
   license :commercial

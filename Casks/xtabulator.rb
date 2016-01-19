@@ -4,7 +4,7 @@ cask 'xtabulator' do
 
   url "http://www.bartastechnologies.com/products/xtabulator/sparkleupdates/#{version}.zip"
   appcast 'http://www.bartastechnologies.com/products/xtabulator/sparkleupdates/xtappcast.php',
-          :checkpoint => '6d9bec45bf8d4214eb1973876728c622ca8cd476c3b16430f63433693443359f'
+          checkpoint: '6d9bec45bf8d4214eb1973876728c622ca8cd476c3b16430f63433693443359f'
   name 'XTabulator'
   homepage 'http://www.bartastechnologies.com/products/xtabulator/'
   license :commercial

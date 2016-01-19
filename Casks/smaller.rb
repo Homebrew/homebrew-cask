@@ -1,10 +1,10 @@
 cask 'smaller' do
-  version :latest
-  sha256 :no_check
+  version '1.4'
+  sha256 '3d15fe4e216e24c02138da0a598d1c81ed80904cfa662b876acaa9cdefa57901'
 
   url 'http://smallerapp.com/download/Smaller.zip'
-  appcast 'http://smallerapp.com/up/updates.xml',
-          :checkpoint => 'f3dcdd9aa67653c819d149e3a50efbdf5752a4614056b2bef415ba32314eb4ee'
+  appcast 'http://25.io/smaller/up/updates.xml',
+          checkpoint: 'c544450799565e3905e0ddfebabfed02a384aaad5cfbe7367542c15152d3277c'
   name 'Smaller'
   homepage 'http://smallerapp.com/'
   license :commercial

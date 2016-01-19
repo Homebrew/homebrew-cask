@@ -18,10 +18,10 @@ cask 'logitech-control-center' do
 
   pkg 'LCC Installer.app/Contents/Resources/Logitech Control Center.mpkg'
 
-  uninstall :script  => 'LCC Installer.app/Contents/Resources/LCC Uninstaller Tool',
-            :pkgutil => [
-                          'com.Logitech.Control Center.pkg',
-                          'com.Logitech.Unifying Software.pkg',
-                          'com.Logitech.Updater.pkg',
-                        ]
+  uninstall script:  'LCC Installer.app/Contents/Resources/LCC Uninstaller Tool',
+            pkgutil: [
+                       'com.Logitech.Control Center.pkg',
+                       'com.Logitech.Unifying Software.pkg',
+                       'com.Logitech.Updater.pkg',
+                     ]
 end

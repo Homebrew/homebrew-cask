@@ -9,12 +9,12 @@ cask 'python' do
 
   pkg "python-#{version}-macosx10.6.pkg"
 
-  uninstall :delete => [
-                         "/Library/Receipts/Python*-#{version.slice(%r{\d+\.\d+})}.pkg",
-                         "/Applications/Python #{version.slice(%r{\d+\.\d+})}",
-                         "/Library/Frameworks/Python.Framework/Versions/#{version.slice(%r{\d+\.\d+})}",
-                         "/Library/Python/#{version.slice(%r{\d+\.\d+})}",
-                       ]
+  uninstall delete: [
+                      "/Library/Receipts/Python*-#{version.slice(%r{\d+\.\d+})}.pkg",
+                      "/Applications/Python #{version.slice(%r{\d+\.\d+})}",
+                      "/Library/Frameworks/Python.Framework/Versions/#{version.slice(%r{\d+\.\d+})}",
+                      "/Library/Python/#{version.slice(%r{\d+\.\d+})}",
+                    ]
 
-  zap :delete => "~/Library/Python/#{version.slice(%r{\d+\.\d+})}"
+  zap delete: "~/Library/Python/#{version.slice(%r{\d+\.\d+})}"
 end

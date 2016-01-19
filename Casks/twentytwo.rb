@@ -4,7 +4,7 @@ cask 'twentytwo' do
 
   url 'https://github.com/marcw/twentytwo/raw/master/dist/TwentyTwo.dmg'
   appcast 'https://raw.githubusercontent.com/marcw/soundcleod/master/appcast.xml',
-          :checkpoint => '06258aea8d327ba47b86884f7c0036b0ed5f08b3cd82e15dc4f4bda7382e560c'
+          checkpoint: '06258aea8d327ba47b86884f7c0036b0ed5f08b3cd82e15dc4f4bda7382e560c'
   name 'TwentyTwo'
   homepage 'https://github.com/marcw/twentytwo'
   license :mit

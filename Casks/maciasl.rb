@@ -15,7 +15,7 @@ cask 'maciasl' do
   homepage 'http://sourceforge.net/projects/maciasl/'
   license :gpl
 
-  depends_on :macos => '>= :lion'
+  depends_on macos: '>= :lion'
 
   app 'MaciASL.app'
 end

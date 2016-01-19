@@ -7,7 +7,7 @@ cask 'jameica' do
   homepage 'https://www.willuhn.de/products/jameica/'
   license :gpl
   gpg "#{url}.asc",
-      :key_id => '5a8ed9cfc0db6c70'
+      key_id: '5a8ed9cfc0db6c70'
 
   app 'Jameica.app'
 end

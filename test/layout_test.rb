@@ -14,6 +14,8 @@ describe "Repo layout" do
                     ..
                     .DS_Store
                     .bundle
+                    .rubocop.yml
+                    .rubocop_todo.yml
                     .ruby-version
                     coverage
                    }
@@ -42,7 +44,6 @@ describe "Repo layout" do
                       .gitignore
                       .rspec
                       .rubocop.yml
-                      .rubocop_todo.yml
                       .simplecov
                       .travis.yml
                       CONDUCT.md

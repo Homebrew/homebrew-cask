@@ -9,7 +9,7 @@ cask 'faw-circle' do
 
   pkg 'Circle².pkg'
 
-  uninstall :pkgutil => 'com.futureaudioworkshop.pkg.*'
+  uninstall pkgutil: 'com.futureaudioworkshop.pkg.*'
 
-  zap :delete => '~/Library/Preferences/Circle2.settings'
+  zap delete: '~/Library/Preferences/Circle2.settings'
 end

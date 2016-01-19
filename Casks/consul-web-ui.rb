@@ -8,7 +8,7 @@ cask 'consul-web-ui' do
   homepage 'https://www.consul.io/intro/getting-started/ui.html'
   license :mpl
 
-  depends_on :cask => 'consul'
+  depends_on cask: 'consul'
 
   stage_only true
 

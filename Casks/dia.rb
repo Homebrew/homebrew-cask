@@ -8,7 +8,7 @@ cask 'dia' do
   homepage 'http://dia-installer.de/'
   license :gpl
 
-  depends_on :x11 => true
+  depends_on x11: true
 
   app 'Dia.app'
 

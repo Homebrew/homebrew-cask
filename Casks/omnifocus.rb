@@ -20,19 +20,19 @@ cask 'omnifocus' do
   app 'OmniFocus.app'
 
   if MacOS.release <= :mountain_lion
-    zap :delete => [
-                     '~/Library/Application Support/OmniFocus/Plug-Ins',
-                     '~/Library/Application Support/OmniFocus/Themes',
-                     '~/Library/Preferences/com.omnigroup.OmniFocus.plist',
-                   ]
+    zap delete: [
+                  '~/Library/Application Support/OmniFocus/Plug-Ins',
+                  '~/Library/Application Support/OmniFocus/Themes',
+                  '~/Library/Preferences/com.omnigroup.OmniFocus.plist',
+                ]
   else
-    zap :delete => [
-                     '~/Library/containers/com.omnigroup.omnifocus2',
-                     '~/Library/Preferences/com.omnigroup.OmniFocus2.LSSharedFileList.plist',
-                     '~/Library/Preferences/com.omnigroup.OmniSoftwareUpdate.plist',
-                     '~/Library/Caches/Metadata/com.omnigroup.OmniFocus2',
-                     '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.omnigroup.omnifocus2.sfl',
-                     '~/Library/Group Containers/34YW5XSRB7.com.omnigroup.OmniFocus',
-                   ]
+    zap delete: [
+                  '~/Library/containers/com.omnigroup.omnifocus2',
+                  '~/Library/Preferences/com.omnigroup.OmniFocus2.LSSharedFileList.plist',
+                  '~/Library/Preferences/com.omnigroup.OmniSoftwareUpdate.plist',
+                  '~/Library/Caches/Metadata/com.omnigroup.OmniFocus2',
+                  '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.omnigroup.omnifocus2.sfl',
+                  '~/Library/Group Containers/34YW5XSRB7.com.omnigroup.OmniFocus',
+                ]
   end
 end

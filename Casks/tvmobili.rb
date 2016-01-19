@@ -9,9 +9,9 @@ cask 'tvmobili' do
 
   pkg 'tvmobili-yosemite-universal.2.1.4693.pkg'
 
-  uninstall :pkgutil   => 'com.tvmobili.tvmobilisvcd',
-            :launchctl => [
-                            'com.tvmobili.artwork',
-                            'com.tvmobili.tvmobilisvcd',
-                          ]
+  uninstall pkgutil:   'com.tvmobili.tvmobilisvcd',
+            launchctl: [
+                         'com.tvmobili.artwork',
+                         'com.tvmobili.tvmobilisvcd',
+                       ]
 end

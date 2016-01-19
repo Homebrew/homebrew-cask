@@ -7,5 +7,5 @@ cask 'google-nik-collection' do
   homepage 'https://www.google.com/nikcollection/'
   license :commercial
 
-  installer :manual => 'Nik Collection.app'
+  installer manual: 'Nik Collection.app'
 end

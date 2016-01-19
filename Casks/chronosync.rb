@@ -9,5 +9,5 @@ cask 'chronosync' do
 
   pkg 'Install.pkg'
 
-  uninstall :pkgutil => 'com.econtechnologies.pkg.ChronoSyncApplication'
+  uninstall pkgutil: 'com.econtechnologies.pkg.ChronoSyncApplication'
 end

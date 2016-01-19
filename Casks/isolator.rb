@@ -4,7 +4,7 @@ cask 'isolator' do
 
   url "http://willmore.eu/software/download/Isolator-#{version}.dmg"
   appcast 'http://willmore.eu/software/isolator/releases.xml',
-          :checkpoint => 'e6c1876267632694796c24767ac822879dfb28a06eaa87d99bbc794363a600e2'
+          checkpoint: 'e6c1876267632694796c24767ac822879dfb28a06eaa87d99bbc794363a600e2'
   name 'Isolator'
   homepage 'http://willmore.eu/software/isolator/'
   license :gratis

@@ -10,6 +10,6 @@ cask 'klayout' do
 
   pkg "klayout.#{version}.pkg"
 
-  uninstall :pkgutil => 'klayout.de',
-            :quit    => 'klayout.de'
+  uninstall pkgutil: 'klayout.de',
+            quit:    'klayout.de'
 end

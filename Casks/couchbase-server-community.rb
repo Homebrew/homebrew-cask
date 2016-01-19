@@ -10,7 +10,7 @@ cask 'couchbase-server-community' do
   end
 
   appcast 'http://appcast.couchbase.com/membasex.xml',
-          :checkpoint => '92ed75092bb887de84b8e2204a44794e18992f8191383cc32d60eae68bf44cd3'
+          checkpoint: '92ed75092bb887de84b8e2204a44794e18992f8191383cc32d60eae68bf44cd3'
   name 'Couchbase Server'
   homepage 'http://www.couchbase.com/'
   license :apache

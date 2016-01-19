@@ -9,5 +9,5 @@ cask 'mono-mdk' do
 
   pkg "MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
 
-  uninstall :pkgutil => 'com.xamarin.mono-*'
+  uninstall pkgutil: 'com.xamarin.mono-*'
 end

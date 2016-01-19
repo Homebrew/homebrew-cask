@@ -7,5 +7,5 @@ test_cask 'with-uninstall-kext' do
 
   pkg 'Fancy.pkg'
 
-  uninstall :kext => 'my.fancy.package.kernelextension'
+  uninstall kext: 'my.fancy.package.kernelextension'
 end

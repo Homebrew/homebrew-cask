@@ -7,5 +7,5 @@ test_cask 'with-uninstall-launchctl' do
 
   app 'Fancy.app'
 
-  uninstall :launchctl => 'my.fancy.package.service'
+  uninstall launchctl: 'my.fancy.package.service'
 end

@@ -7,5 +7,5 @@ test_cask 'with-zap-launchctl' do
 
   app 'Fancy.app'
 
-  zap :launchctl => 'my.fancy.package.service'
+  zap launchctl: 'my.fancy.package.service'
 end

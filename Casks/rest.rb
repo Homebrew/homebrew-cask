@@ -9,8 +9,8 @@ cask 'rest' do
 
   app 'Rest.app'
 
-  uninstall :quit      => 'dangelov.Rest-Lite',
-            :launchctl => 'dangelov.RestHelper'
+  uninstall quit:      'dangelov.Rest-Lite',
+            launchctl: 'dangelov.RestHelper'
 
-  zap :delete => '~/Library/Preferences/dangelov.Rest-Lite.plist'
+  zap delete: '~/Library/Preferences/dangelov.Rest-Lite.plist'
 end

@@ -5,7 +5,7 @@ cask 'hostbuddy' do
   # netdna-ssl.com is the official download host per the vendor homepage
   url "https://downloads-clickonideas.netdna-ssl.com/hostbuddy/hostbuddy_#{version}.zip"
   appcast 'https://shine.clickontyler.com/appcast.php?id=22',
-          :checkpoint => '5374460f8275768f75986c50d0a7a207bb259638b54fd9f0bf7795611d084606'
+          checkpoint: '5374460f8275768f75986c50d0a7a207bb259638b54fd9f0bf7795611d084606'
   name 'Hostbuddy'
   homepage 'https://clickontyler.com/hostbuddy/'
   license :commercial

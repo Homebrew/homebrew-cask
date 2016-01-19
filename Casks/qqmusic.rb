@@ -9,12 +9,12 @@ cask 'qqmusic' do
 
   app 'QQMusic.app'
 
-  uninstall :quit => 'com.tencent.QQMusicMac'
+  uninstall quit: 'com.tencent.QQMusicMac'
 
-  zap :delete => [
-                   '~/Library/Caches/com.tencent.QQMusicMac',
-                   '~/Library/Application Support/com.tencent.QQMusicMac',
-                   '~/Library/Preferences/com.tencent.QQMusicMac.plist',
-                   '~/Library/Saved Application State/com.tencent.QQMusicMac.savedState',
-                 ]
+  zap delete: [
+                '~/Library/Caches/com.tencent.QQMusicMac',
+                '~/Library/Application Support/com.tencent.QQMusicMac',
+                '~/Library/Preferences/com.tencent.QQMusicMac.plist',
+                '~/Library/Saved Application State/com.tencent.QQMusicMac.savedState',
+              ]
 end

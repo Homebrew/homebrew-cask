@@ -8,9 +8,9 @@ cask 'xampp' do
   homepage 'https://www.apachefriends.org/'
   license :gpl
 
-  installer :script => 'XAMPP.app/Contents/MacOS/osx-intel',
-            :args   => ['--mode', 'unattended']
+  installer script: 'XAMPP.app/Contents/MacOS/osx-intel',
+            args:   ['--mode', 'unattended']
 
-  uninstall :quit   => 'com.bitnami.manager',
-            :delete => '/Applications/XAMPP/'
+  uninstall quit:   'com.bitnami.manager',
+            delete: '/Applications/XAMPP/'
 end

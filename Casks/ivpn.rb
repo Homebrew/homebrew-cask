@@ -4,28 +4,28 @@ cask 'ivpn' do
 
   url "https://macserve.org.uk/downloads/ivpn/iVPN_#{version}.zip"
   appcast 'http://macserve.org.uk:8090/profileInfo.php',
-          :checkpoint => '7184e0158d170544ee95a29762c4aa6fe0f96782862894814c0832ac91d7fba9'
+          checkpoint: '7184e0158d170544ee95a29762c4aa6fe0f96782862894814c0832ac91d7fba9'
   name 'iVPN'
   homepage 'https://macserve.org.uk/projects/ivpn/'
   license :commercial
 
   app 'iVPN.app'
 
-  uninstall :quit      => [
-                            'com.MacServe.iVPN',
-                            'com.MacServe.iVPN-Monitor',
-                          ],
-            :launchctl => [
-                            'com.MacServe.ivpnHelper',
-                            'com.macserve.ivpn',
-                            'com.macserve.ppp.l2tp',
-                            'com.macserve.ppp.pptp',
-                          ]
-
-  zap       :delete => [
-                         '~/Library/Preferences/com.MacServe.iVPN.plist',
-                         '/Library/LaunchDaemons/com.macserve.ppp.l2tp.plist',
-                         '/Library/LaunchDaemons/com.macserve.ppp.pptp.plist',
-                         '/private/etc/ppp/',
+  uninstall quit:      [
+                         'com.MacServe.iVPN',
+                         'com.MacServe.iVPN-Monitor',
+                       ],
+            launchctl: [
+                         'com.MacServe.ivpnHelper',
+                         'com.macserve.ivpn',
+                         'com.macserve.ppp.l2tp',
+                         'com.macserve.ppp.pptp',
                        ]
+
+  zap       delete: [
+                      '~/Library/Preferences/com.MacServe.iVPN.plist',
+                      '/Library/LaunchDaemons/com.macserve.ppp.l2tp.plist',
+                      '/Library/LaunchDaemons/com.macserve.ppp.pptp.plist',
+                      '/private/etc/ppp/',
+                    ]
 end

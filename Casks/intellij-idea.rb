@@ -9,11 +9,11 @@ cask 'intellij-idea' do
 
   app 'IntelliJ IDEA 15.app'
 
-  zap :delete => [
-                   '~/Library/Application Support/IntelliJIdea15',
-                   '~/Library/Preferences/IntelliJIdea15',
-                   '~/Library/Preferences/com.jetbrains.intellij.plist',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/IntelliJIdea15',
+                '~/Library/Preferences/IntelliJIdea15',
+                '~/Library/Preferences/com.jetbrains.intellij.plist',
+              ]
 
   caveats do
     depends_on_java

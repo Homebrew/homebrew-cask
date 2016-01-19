@@ -59,18 +59,18 @@ if [[ -z "${appcast_url}" ]]; then
   exit 0
 fi
 
-# vaidate appcast
+# validate appcast
 appcast_http_response="$(curl --silent --head --write-out '%{http_code}' "${appcast_url}" -o /dev/null)"
 [[ "${appcast_http_response}" != '200' ]] && appcast_found_error "returned a non-200 (OK) HTTP response code (${appcast_http_response})"
 
-appcast_checkpoint=$(curl --silent "${appcast_url}" | sed 's|<pubDate>[^<]*</pubDate>||g' | shasum --algorithm 256 | awk '{ print $1 }')
+appcast_checkpoint=$(curl --silent --compressed "${appcast_url}" | sed 's|<pubDate>[^<]*</pubDate>||g' | shasum --algorithm 256 | awk '{ print $1 }')
 [[ "${appcast_checkpoint}" == 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855' ]] && appcast_found_error 'seems to be empty'
 
 # output appcast
-echo "A Sparkle appcast was found. You sould add it to your cask as
+echo "A Sparkle appcast was found. You should add it to your cask as
 
-appcast '${appcast_url}',
-        :checkpoint => '${appcast_checkpoint}'
+  appcast '${appcast_url}',
+          :checkpoint => '${appcast_checkpoint}'
 
 You should likely also add 'auto_updates true'"
 

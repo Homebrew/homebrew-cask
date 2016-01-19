@@ -4,7 +4,7 @@ cask 'lingrradar' do
 
   url "http://radar.lingr.com/mac/LingrRadar_#{version}.tbz"
   appcast 'http://radar.lingr.com/mac_appcast.xml',
-          :checkpoint => 'f076e43ea82c411d7a598bc28ee893451b7baaed35dd9450774e6a1f31139019'
+          checkpoint: 'f076e43ea82c411d7a598bc28ee893451b7baaed35dd9450774e6a1f31139019'
   name 'Lingr Radar'
   homepage 'http://radar.lingr.com/'
   license :gratis

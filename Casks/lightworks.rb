@@ -7,7 +7,7 @@ cask 'lightworks' do
   homepage 'https://www.lwks.com'
   license :freemium
 
-  depends_on :macos => '>= 10.8'
+  depends_on macos: '>= 10.8'
 
   app 'Lightworks.app'
 end

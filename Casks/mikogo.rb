@@ -9,5 +9,5 @@ cask 'mikogo' do
   license :gratis
 
   # Renamed for clarity: app name is inconsistent with its branding
-  app 'Mikogo-host.app', :target => 'Mikogo.app'
+  app 'Mikogo-host.app', target: 'Mikogo.app'
 end

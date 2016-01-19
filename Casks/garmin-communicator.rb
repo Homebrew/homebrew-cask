@@ -9,5 +9,5 @@ cask 'garmin-communicator' do
 
   pkg 'Install Communicator Plugin.pkg'
 
-  uninstall :pkgutil => 'com.garmin.garminGpsControl.pkg'
+  uninstall pkgutil: 'com.garmin.garminGpsControl.pkg'
 end

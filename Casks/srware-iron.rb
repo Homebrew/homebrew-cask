@@ -8,5 +8,5 @@ cask 'srware-iron' do
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   # Renamed for clarity: app name is inconsistent with its branding.
-  app 'Chromium.app', :target => 'SRWare Iron.app'
+  app 'Chromium.app', target: 'SRWare Iron.app'
 end

@@ -9,5 +9,5 @@ cask 'chessx' do
 
   pkg 'chessx-installer.mpkg'
 
-  uninstall :pkgutil => 'net.sourceforge.chessx'
+  uninstall pkgutil: 'net.sourceforge.chessx'
 end

@@ -9,5 +9,5 @@ cask 'simplemoviex' do
 
   app 'SimpleMovieX.app'
 
-  zap :delete => '~/Library/Preferences/com.BJ.SimpleMovieX.plist'
+  zap delete: '~/Library/Preferences/com.BJ.SimpleMovieX.plist'
 end

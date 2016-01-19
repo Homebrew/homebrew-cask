@@ -10,5 +10,5 @@ cask 'kindlepreviewer' do
 
   pkg 'KindlePreviewer.pkg'
 
-  uninstall :pkgutil => 'Amazon.Kindle.Previewer.pkg'
+  uninstall pkgutil: 'Amazon.Kindle.Previewer.pkg'
 end

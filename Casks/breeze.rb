@@ -9,10 +9,10 @@ cask 'breeze' do
 
   app 'Breeze.app'
 
-  uninstall :quit => 'com.autumnapps.direct.Breeze'
+  uninstall quit: 'com.autumnapps.direct.Breeze'
 
-  zap :delete => [
-                   '~/Library/Caches/com.autumnapps.direct.Breeze',
-                   '~/Library/Preferences/com.autumnapps.direct.Breeze.plist',
-                 ]
+  zap delete: [
+                '~/Library/Caches/com.autumnapps.direct.Breeze',
+                '~/Library/Preferences/com.autumnapps.direct.Breeze.plist',
+              ]
 end

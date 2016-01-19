@@ -7,9 +7,9 @@ cask 'borgbackup' do
   homepage 'https://borgbackup.readthedocs.org/en/stable/'
   license :bsd
   gpg "#{url}.asc",
-      :key_id => '243ACFA951F78E01'
+      key_id: '243ACFA951F78E01'
 
-  container :type => :naked
+  container type: :naked
 
-  binary 'borg-macosx64', :target => 'borg'
+  binary 'borg-macosx64', target: 'borg'
 end

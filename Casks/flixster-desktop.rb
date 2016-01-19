@@ -5,7 +5,7 @@ cask 'flixster-desktop' do
   # cloudfront.net is the official download host per the vendor homepage
   url 'https://dtmmt9rxsy2no.cloudfront.net/desktop/mac/FlixsterDesktop.zip'
   appcast 'https://dtmmt9rxsy2no.cloudfront.net/desktop/mac/FlixsterDesktopMacAppcast.xml',
-          :checkpoint => '7514b17d0d09125a97c71d42ace094885f46ca605c5b4c5a651f5fbd1cfec619'
+          checkpoint: '7514b17d0d09125a97c71d42ace094885f46ca605c5b4c5a651f5fbd1cfec619'
   name 'Flixster Desktop for Mac'
   homepage 'https://www.flixster.com/about/ultraviolet/'
   license :gratis
@@ -13,6 +13,6 @@ cask 'flixster-desktop' do
   app 'Flixster Desktop.app'
 
   postflight do
-    suppress_move_to_applications :key => 'moveToApplicationsFolderAlertSuppress'
+    suppress_move_to_applications key: 'moveToApplicationsFolderAlertSuppress'
   end
 end

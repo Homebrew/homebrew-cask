@@ -9,5 +9,5 @@ cask 'intel-xdk-iot' do
 
   pkg "xdk_full_#{version}.pkg"
 
-  uninstall :pkgutil => 'com.intel.pkg.xdk_new'
+  uninstall pkgutil: 'com.intel.pkg.xdk_new'
 end

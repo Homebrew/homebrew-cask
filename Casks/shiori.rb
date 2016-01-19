@@ -4,7 +4,7 @@ cask 'shiori' do
 
   url "https://aki-null.net/shiori/release/Shiori_#{version}.zip"
   appcast 'https://aki-null.net/shiori/appcast.xml',
-          :checkpoint => 'b69c3dfa9d53455a156b3db08474ebc53dfb7478f6a4792d7bc1f4b4531fcd85'
+          checkpoint: 'b69c3dfa9d53455a156b3db08474ebc53dfb7478f6a4792d7bc1f4b4531fcd85'
   name 'Shiori'
   homepage 'https://aki-null.net/shiori/'
   license :gratis

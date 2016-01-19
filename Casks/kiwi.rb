@@ -5,7 +5,7 @@ cask 'kiwi' do
   # yourhead.com is the official download host per the vendor homepage
   url "http://yourhead.com/appcast/kiwi/Kiwi_#{version}.zip"
   appcast 'http://yourhead.com/appcast/kiwi/appcast.xml',
-          :checkpoint => '70b8a5bf1e8f8d3becd7b20c79a7a85b7b4b30729e064c6fa9f98fdea3c8bd4f'
+          checkpoint: '70b8a5bf1e8f8d3becd7b20c79a7a85b7b4b30729e064c6fa9f98fdea3c8bd4f'
   name 'Kiwi'
   homepage 'http://kiwi-app.net/'
   license :commercial

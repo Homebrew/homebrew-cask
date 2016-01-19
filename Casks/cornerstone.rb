@@ -4,7 +4,7 @@ cask 'cornerstone' do
 
   url "https://www.zennaware.com/cornerstone/downloads/Cornerstone-#{version}.zip"
   appcast 'https://www.zennaware.com/cornerstone/appcast/feed2.php',
-          :checkpoint => '6b45e1c9ab25d606dd6d80657848b20002fdd8abbb587610f9dd7840827f94fc'
+          checkpoint: '6b45e1c9ab25d606dd6d80657848b20002fdd8abbb587610f9dd7840827f94fc'
   name 'Cornerstone'
   homepage 'https://www.zennaware.com/cornerstone/'
   license :commercial

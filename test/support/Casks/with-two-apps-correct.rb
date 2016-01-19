@@ -6,5 +6,5 @@ test_cask 'with-two-apps-correct' do
   homepage 'http://example.com/local-caffeine'
 
   app 'Caffeine.app'
-  app 'Caffeine.app', :target => 'AnotherName.app'
+  app 'Caffeine.app', target: 'AnotherName.app'
 end

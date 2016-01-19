@@ -9,9 +9,9 @@ cask 'brytonbridge' do
 
   pkg 'BrytonBridge2.pkg'
 
-  uninstall :pkgutil => 'com.brytonsport.pkg.BrytonBridge2',
-            :quit    => 'com.yourcompany.BrytonBridge',
-            :delete  => '/Applications/BrytonBridge2'
+  uninstall pkgutil: 'com.brytonsport.pkg.BrytonBridge2',
+            quit:    'com.yourcompany.BrytonBridge',
+            delete:  '/Applications/BrytonBridge2'
 
-  zap       :delete   => '~/Library/Saved Application State/com.yourcompany.BrytonBridge.savedState'
+  zap       delete: '~/Library/Saved Application State/com.yourcompany.BrytonBridge.savedState'
 end

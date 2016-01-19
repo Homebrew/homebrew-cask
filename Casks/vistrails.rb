@@ -8,7 +8,7 @@ cask 'vistrails' do
   homepage 'http://www.vistrails.org/'
   license :bsd
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
   suite 'VisTrails'
 end

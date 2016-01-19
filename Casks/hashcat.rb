@@ -7,7 +7,7 @@ cask 'hashcat' do
   homepage 'https://hashcat.net/hashcat/'
   license :mit
 
-  depends_on :formula => 'unar'
+  depends_on formula: 'unar'
 
-  binary "hashcat-#{version}/hashcat-cli64.app", :target => 'hashcat'
+  binary "hashcat-#{version}/hashcat-cli64.app", target: 'hashcat'
 end

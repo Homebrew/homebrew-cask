@@ -7,14 +7,14 @@ cask 'anaconda' do
   homepage 'https://www.continuum.io/why-anaconda'
   license :gratis
 
-  depends_on :macos => '>= :lion'
-  container :type => :naked
+  depends_on macos: '>= :lion'
+  container type: :naked
 
-  installer :script => "Anaconda3-#{version}-MacOSX-x86_64.sh",
-            :args   => ['-b'],
-            :sudo   => false
+  installer script: "Anaconda3-#{version}-MacOSX-x86_64.sh",
+            args:   ['-b'],
+            sudo:   false
 
-  uninstall :delete => '~/anaconda3'
+  uninstall delete: '~/anaconda3'
 
   caveats do
     path_environment_variable '~/anaconda3/bin'

@@ -16,7 +16,7 @@ cask 'default-folder-x' do
   license :commercial
 
   if MacOS.release <= :mavericks
-    installer :manual => 'Default Folder X Installer.app'
+    installer manual: 'Default Folder X Installer.app'
   else
     app 'Default Folder X.app'
   end
@@ -26,18 +26,18 @@ cask 'default-folder-x' do
   end
 
   if MacOS.release <= :mavericks
-    zap :delete => [
-                     '~/Library/Preferences/com.stclairsoft.DefaultFolderX.favorites.plist',
-                     '~/Library/Preferences/com.stclairsoft.DefaultFolderX.plist',
-                     '~/Library/Preferences/com.stclairsoft.DefaultFolderX.settings.plist',
-                   ]
+    zap delete: [
+                  '~/Library/Preferences/com.stclairsoft.DefaultFolderX.favorites.plist',
+                  '~/Library/Preferences/com.stclairsoft.DefaultFolderX.plist',
+                  '~/Library/Preferences/com.stclairsoft.DefaultFolderX.settings.plist',
+                ]
   else
-    zap :delete => [
-                     '~/Library/Application Support/.com.stclairsoft',
-                     '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.stclairsoft.defaultfolderx5.sfl',
-                     '~/Library/Application Support/com.stclairsoft.DefaultFolderX5',
-                     '~/Library/Caches/com.stclairsoft.DefaultFolderX5',
-                     '~/Library/Preferences/com.stclairsoft.DefaultFolderX5.plist',
-                   ]
+    zap delete: [
+                  '~/Library/Application Support/.com.stclairsoft',
+                  '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.stclairsoft.defaultfolderx5.sfl',
+                  '~/Library/Application Support/com.stclairsoft.DefaultFolderX5',
+                  '~/Library/Caches/com.stclairsoft.DefaultFolderX5',
+                  '~/Library/Preferences/com.stclairsoft.DefaultFolderX5.plist',
+                ]
   end
 end

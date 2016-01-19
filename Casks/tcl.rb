@@ -8,9 +8,9 @@ cask 'tcl' do
   homepage 'https://tcl.tk/'
   license :oss
 
-  depends_on :macos => '>= :leopard'
+  depends_on macos: '>= :leopard'
 
   pkg "ActiveTcl-#{version.sub(%r{^(\d+)\.(\d+).*}, '\1.\2')}.pkg"
 
-  uninstall :pkgutil => "com.activestate.pkg.ActiveTcl#{version.sub(%r{^(\d+)\.(\d+).*}, '\1\2')}"
+  uninstall pkgutil: "com.activestate.pkg.ActiveTcl#{version.sub(%r{^(\d+)\.(\d+).*}, '\1\2')}"
 end

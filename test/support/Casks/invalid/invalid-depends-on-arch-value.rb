@@ -5,7 +5,7 @@ test_cask 'invalid-depends-on-arch-value' do
   url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/invalid-depends-on-arch-value'
 
-  depends_on :arch => :no_such_arch
+  depends_on arch: :no_such_arch
 
   app 'Caffeine.app'
 end

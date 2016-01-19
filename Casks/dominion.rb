@@ -8,9 +8,9 @@ cask 'dominion' do
   homepage 'https://www.playdominion.com/'
   license :gratis
 
-  depends_on :macos => '>= :lion'
+  depends_on macos: '>= :lion'
 
   pkg "Dominion #{version}.pkg"
 
-  uninstall :pkgutil => 'com.makingfun.dominion'
+  uninstall pkgutil: 'com.makingfun.dominion'
 end

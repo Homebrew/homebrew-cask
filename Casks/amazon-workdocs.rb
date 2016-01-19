@@ -10,5 +10,5 @@ cask 'amazon-workdocs' do
 
   pkg 'Amazon WorkDocs.pkg'
 
-  uninstall :pkgutil => 'com.amazon.aws.AmazonWorkDocs'
+  uninstall pkgutil: 'com.amazon.aws.AmazonWorkDocs'
 end

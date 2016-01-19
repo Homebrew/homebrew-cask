@@ -10,5 +10,5 @@ cask 'qlimagesize' do
 
   pkg 'qlImageSize.pkg'
 
-  uninstall :pkgutil => 'io.whine.qlimagesize.pkg'
+  uninstall pkgutil: 'io.whine.qlimagesize.pkg'
 end

@@ -4,7 +4,7 @@ cask 'flashlight' do
 
   url "https://github.com/nate-parrott/Flashlight/releases/download/v#{version}/Flashlight.zip"
   appcast 'https://github.com/nate-parrott/Flashlight/releases.atom',
-          :checkpoint => '8c5e2c28b99d28496b74bd58b778ef895bb143f19bc6eaee21d8e0eeb55c0309'
+          checkpoint: '8c5e2c28b99d28496b74bd58b778ef895bb143f19bc6eaee21d8e0eeb55c0309'
   name 'Flashlight'
   homepage 'https://flashlight.nateparrott.com/'
   license :gpl
@@ -17,14 +17,14 @@ cask 'flashlight' do
     suppress_move_to_applications
   end
 
-  uninstall :quit => 'com.nateparrott.Flashlight.FlashlightSIMBLAgent'
+  uninstall quit: 'com.nateparrott.Flashlight.FlashlightSIMBLAgent'
 
-  zap :delete => [
-                   '~/Library/Caches/com.nateparrott.Flashlight',
-                   '~/Library/FlashlightPlugins',
-                   '~/Library/Preferences/com.nateparrott.Flashlight.plist',
-                   '~/Library/Preferences/com.nateparrott.Flashlight.FlashlightSIMBLAgent.plist',
-                   '~/Library/Saved Application State/com.nateparrott.Flashlight.savedState',
-                   '~/Library/ScriptingAdditions/Flashlight.osax',
-                 ]
+  zap delete: [
+                '~/Library/Caches/com.nateparrott.Flashlight',
+                '~/Library/FlashlightPlugins',
+                '~/Library/Preferences/com.nateparrott.Flashlight.plist',
+                '~/Library/Preferences/com.nateparrott.Flashlight.FlashlightSIMBLAgent.plist',
+                '~/Library/Saved Application State/com.nateparrott.Flashlight.savedState',
+                '~/Library/ScriptingAdditions/Flashlight.osax',
+              ]
 end

@@ -13,7 +13,7 @@ cask 'daisydisk' do
   homepage 'https://www.daisydiskapp.com'
   license :freemium
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
   app 'DaisyDisk.app'
 

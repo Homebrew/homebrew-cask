@@ -4,7 +4,7 @@ cask 'paparazzi' do
 
   url "https://derailer.org/paparazzi/Paparazzi!%20#{version}.dmg"
   appcast 'https://derailer.org/paparazzi/appcast/',
-          :checkpoint => '376d19a4674b030d0b824c7d482bc4ba6af5773df36bbd2578632b5787db6d54'
+          checkpoint: '376d19a4674b030d0b824c7d482bc4ba6af5773df36bbd2578632b5787db6d54'
   name 'Paparazzi!'
   homepage 'https://derailer.org/paparazzi/'
   license :gpl

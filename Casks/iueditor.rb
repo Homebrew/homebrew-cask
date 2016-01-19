@@ -10,8 +10,8 @@ cask 'iueditor' do
 
   app 'IUEditor.app'
 
-  zap :delete => [
-                   '~/Library/Preferences/org.jdlab.IUEditor.LSSharedFileList.plist',
-                   '~/Library/Preferences/org.jdlab.IUEditor.plist',
-                 ]
+  zap delete: [
+                '~/Library/Preferences/org.jdlab.IUEditor.LSSharedFileList.plist',
+                '~/Library/Preferences/org.jdlab.IUEditor.plist',
+              ]
 end

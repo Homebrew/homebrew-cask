@@ -9,5 +9,5 @@ cask 'geomap' do
 
   app 'GeoMapApp.app'
 
-  zap :delete => '~/.GMA'
+  zap delete: '~/.GMA'
 end

@@ -7,5 +7,5 @@ cask 'scout' do
   homepage 'https://mhs.github.io/scout-app/'
   license :oss
 
-  installer :manual => 'Install Scout.app'
+  installer manual: 'Install Scout.app'
 end

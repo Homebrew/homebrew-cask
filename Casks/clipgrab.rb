@@ -9,5 +9,5 @@ cask 'clipgrab' do
 
   app 'ClipGrab.app'
 
-  zap :delete => '~/Library/Preferences/de.clipgrab.ClipGrab.plist'
+  zap delete: '~/Library/Preferences/de.clipgrab.ClipGrab.plist'
 end

@@ -8,7 +8,7 @@ cask 'wercker-cli' do
   homepage 'http://wercker.com/'
   license :mit
 
-  container :type => :naked
+  container type: :naked
 
   binary 'wercker'
 

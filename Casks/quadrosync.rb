@@ -8,18 +8,18 @@ cask 'quadrosync' do
   homepage 'http://quadro.me/sync'
   license :gratis
 
-  installer :manual => 'QuadroInstaller.app'
+  installer manual: 'QuadroInstaller.app'
 
-  uninstall :quit       => [
-                             'com.quadro.QuadroSync',
-                             'com.quadro.QuadroNGui',
-                           ],
-            :delete     => [
-                             '/Applications/QuadroSync.app',
-                             '/Applications/QuadroNGui.app',
-                           ],
-            :launchctl  => 'com.quadro.QuadroInstaller.HelperTool',
-            :login_item => 'QuadroSync'
+  uninstall quit:       [
+                          'com.quadro.QuadroSync',
+                          'com.quadro.QuadroNGui',
+                        ],
+            delete:     [
+                          '/Applications/QuadroSync.app',
+                          '/Applications/QuadroNGui.app',
+                        ],
+            launchctl:  'com.quadro.QuadroInstaller.HelperTool',
+            login_item: 'QuadroSync'
 
-  zap :delete => '/Library/Application Support/Quadro'
+  zap delete: '/Library/Application Support/Quadro'
 end

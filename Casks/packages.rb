@@ -9,5 +9,5 @@ cask 'packages' do
 
   pkg 'packages/Packages.pkg'
 
-  uninstall :script => 'Extras/uninstall.sh'
+  uninstall script: 'Extras/uninstall.sh'
 end

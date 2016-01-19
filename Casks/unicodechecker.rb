@@ -4,7 +4,7 @@ cask 'unicodechecker' do
 
   url 'http://earthlingsoft.net/UnicodeChecker/UnicodeChecker.zip'
   appcast 'http://earthlingsoft.net/UnicodeChecker/appcast.xml',
-          :checkpoint => 'de148c37d18cc1903ecf5e11524b77671e848ed7074a4c2a5b51185352d692ad'
+          checkpoint: 'de148c37d18cc1903ecf5e11524b77671e848ed7074a4c2a5b51185352d692ad'
   name 'UnicodeChecker'
   homepage 'http://earthlingsoft.net/UnicodeChecker/'
   license :gratis

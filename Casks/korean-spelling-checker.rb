@@ -10,7 +10,7 @@ cask 'korean-spelling-checker' do
 
   service "Korean-Spelling-Checker-Workflow-#{version}/✔ 선택한 글의 한국어 맞춤법 검사하기.workflow"
 
-  uninstall :delete => '~/Library/Services/✔ 선택한 글의 한국어 맞춤법 검사하기.workflow'
+  uninstall delete: '~/Library/Services/✔ 선택한 글의 한국어 맞춤법 검사하기.workflow'
 
   caveats do
     <<-EOS.undent

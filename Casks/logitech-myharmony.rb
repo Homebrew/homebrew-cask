@@ -9,6 +9,6 @@ cask 'logitech-myharmony' do
 
   pkg 'MyHarmonySetup.pkg'
 
-  uninstall :quit    => 'org.logitech.MyHarmony',
-            :pkgutil => 'MyHarmony.pkg'
+  uninstall quit:    'org.logitech.MyHarmony',
+            pkgutil: 'MyHarmony.pkg'
 end

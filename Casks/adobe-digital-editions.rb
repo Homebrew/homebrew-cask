@@ -9,5 +9,5 @@ cask 'adobe-digital-editions' do
 
   pkg "Digital Editions #{version} Installer.pkg"
 
-  uninstall :pkgutil => 'com.adobe.adobedigitaleditions.app'
+  uninstall pkgutil: 'com.adobe.adobedigitaleditions.app'
 end

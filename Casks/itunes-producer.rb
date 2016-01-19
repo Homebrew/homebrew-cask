@@ -15,9 +15,9 @@ cask 'itunes-producer' do
   homepage 'https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/ra/ng/resources_page'
   license :closed
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
   pkg 'iTunesProducer.pkg'
 
-  uninstall :pkgutil => 'com.apple.pkg.iTunesProducer'
+  uninstall pkgutil: 'com.apple.pkg.iTunesProducer'
 end

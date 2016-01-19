@@ -9,6 +9,6 @@ cask 'steermouse' do
 
   pkg 'SteerMouse Installer.app/Contents/Resources/SteerMouse.pkg'
 
-  uninstall :pkgutil => 'jp.plentycom.SteerMouse.pkg.*',
-            :kext    => 'com.cyberic.SmoothMouse'
+  uninstall pkgutil: 'jp.plentycom.SteerMouse.pkg.*',
+            kext:    'com.cyberic.SmoothMouse'
 end

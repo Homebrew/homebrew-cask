@@ -9,7 +9,7 @@ cask 'avast' do
 
   pkg 'Avast Mac Security.pkg'
 
-  uninstall :script => '/Library/Application Support/Avast/hub/uninstall.sh'
+  uninstall script: '/Library/Application Support/Avast/hub/uninstall.sh'
 
-  zap :delete => '~/Library/Preferences/com.avast.avast!.plist'
+  zap delete: '~/Library/Preferences/com.avast.avast!.plist'
 end

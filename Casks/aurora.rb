@@ -4,7 +4,7 @@ cask 'aurora' do
 
   url "https://www.oneperiodic.com/files/Aurora%20v#{version}.zip"
   appcast 'https://www.oneperiodic.com/aurora5.xml',
-          :checkpoint => '204f30afe061ed20b223e8dfc498388c4c9b861efe0d5af2be6594aa19121de2'
+          checkpoint: '204f30afe061ed20b223e8dfc498388c4c9b861efe0d5af2be6594aa19121de2'
   name 'Aurora'
   homepage 'https://www.oneperiodic.com/products/aurora/'
   license :commercial

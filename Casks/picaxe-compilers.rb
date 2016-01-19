@@ -17,5 +17,5 @@ cask 'picaxe-compilers' do
     binary "picaxe#{v}"
   end
 
-  depends_on :arch => :intel
+  depends_on arch: :intel
 end

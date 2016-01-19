@@ -4,12 +4,12 @@ cask 'betterzip' do
 
   url "http://macitbetter.com/dl/BetterZip-#{version}.zip"
   appcast 'http://macitbetter.com/BetterZip3.rss',
-          :checkpoint => '1325a3e93df91dfe6a460546b806ce46fa05f649bffe4b291424d74e4136c8db'
+          checkpoint: '1325a3e93df91dfe6a460546b806ce46fa05f649bffe4b291424d74e4136c8db'
   name 'BetterZip'
   homepage 'http://macitbetter.com'
   license :commercial
 
   app 'BetterZip.app'
 
-  zap :delete => '~/Library/Preferences/com.macitbetter.betterzip.plist'
+  zap delete: '~/Library/Preferences/com.macitbetter.betterzip.plist'
 end

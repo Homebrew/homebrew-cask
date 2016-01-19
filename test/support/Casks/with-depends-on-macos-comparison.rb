@@ -5,7 +5,7 @@ test_cask 'with-depends-on-macos-comparison' do
   url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/with-depends-on-macos-comparison'
 
-  depends_on :macos => '>= 10.0'
+  depends_on macos: '>= 10.0'
 
   app 'Caffeine.app'
 end

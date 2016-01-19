@@ -9,5 +9,5 @@ cask 'cajviewer' do
 
   pkg 'CAJViewerMac.pkg'
 
-  uninstall :pkgutil => 'com.TTKN.CAJViewerMac'
+  uninstall pkgutil: 'com.TTKN.CAJViewerMac'
 end

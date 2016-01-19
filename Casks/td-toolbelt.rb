@@ -7,7 +7,7 @@ cask 'td-toolbelt' do
   homepage 'https://toolbelt.treasuredata.com/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  container :type => :naked
+  container type: :naked
 
   pkg 'td-toolbelt.pkg'
 
@@ -15,7 +15,7 @@ cask 'td-toolbelt' do
     system '/bin/mv', '--', "#{staged_path}/mac", "#{staged_path}/td-toolbelt.pkg"
   end
 
-  uninstall :pkgutil => 'com.td.toolbelt'
+  uninstall pkgutil: 'com.td.toolbelt'
 
-  zap :pkgutil => 'org.ruby-lang.installer'
+  zap pkgutil: 'org.ruby-lang.installer'
 end

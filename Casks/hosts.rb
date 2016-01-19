@@ -10,5 +10,5 @@ cask 'hosts' do
 
   pkg "Hosts-#{version}.pkg"
 
-  uninstall :pkgutil => 'nl.permanentmarkers.hosts.Hosts.pkg'
+  uninstall pkgutil: 'nl.permanentmarkers.hosts.Hosts.pkg'
 end

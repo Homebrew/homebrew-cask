@@ -8,7 +8,7 @@ cask 'octohub' do
   homepage 'http://octohubapp.com/'
   license :gratis
 
-  depends_on :macos => '>= 10.10'
+  depends_on macos: '>= 10.10'
 
   app 'Octohub.app'
 end

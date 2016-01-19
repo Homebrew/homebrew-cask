@@ -5,7 +5,7 @@ test_cask 'with-depends-on-x11' do
   url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/with-depends-on-x11'
 
-  depends_on :x11 => true
+  depends_on x11: true
 
   app 'Caffeine.app'
 end

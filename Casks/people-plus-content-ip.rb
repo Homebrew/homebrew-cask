@@ -7,7 +7,7 @@ cask 'people-plus-content-ip' do
   homepage 'http://www.polycom.co.uk/products-services/hd-telepresence-video-conferencing/realpresence-accessories/people-content-ip.html#stab1'
   license :gratis
 
-  container :nested => "PPCIPmac_v#{version}.dmg"
+  container nested: "PPCIPmac_v#{version}.dmg"
 
   app 'People + Content IP.app'
 end

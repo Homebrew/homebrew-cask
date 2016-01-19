@@ -15,5 +15,5 @@ cask 'usb-overdrive' do
 
   pkg 'Install USB Overdrive.pkg'
 
-  uninstall :pkgutil => 'com.usboverdrive.installer'
+  uninstall pkgutil: 'com.usboverdrive.installer'
 end

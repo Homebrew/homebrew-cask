@@ -10,8 +10,8 @@ cask 'redcine-x-pro' do
 
   pkg "REDCINE-X_PRO_Build_#{version.to_i}.pkg"
 
-  uninstall :pkgutil => [
-                          'com.red.pkg.REDCINE-X PRO',
-                          'com.red.pkg.SupportLibs',
-                        ]
+  uninstall pkgutil: [
+                       'com.red.pkg.REDCINE-X PRO',
+                       'com.red.pkg.SupportLibs',
+                     ]
 end

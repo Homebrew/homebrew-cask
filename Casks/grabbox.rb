@@ -4,7 +4,7 @@ cask 'grabbox' do
 
   url "http://grabbox.devsoft.no/updates/GrabBox%20Beta%20v#{version}.zip"
   appcast 'http://grabbox.devsoft.no/appcastBeta.xml',
-          :checkpoint => '984e696e4034f787eae08c3977eb9a85fd5f8a02756f3b92fde13975f17dc334'
+          checkpoint: '984e696e4034f787eae08c3977eb9a85fd5f8a02756f3b92fde13975f17dc334'
   name 'GrabBox'
   homepage 'http://grabbox.devsoft.no/'
   license :gpl

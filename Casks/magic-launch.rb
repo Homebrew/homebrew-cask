@@ -9,5 +9,5 @@ cask 'magic-launch' do
 
   prefpane 'Magic Launch.prefPane'
 
-  zap :delete => '~/Library/Preferences/com.metakine.magic-launch.agent.plist'
+  zap delete: '~/Library/Preferences/com.metakine.magic-launch.agent.plist'
 end

@@ -9,5 +9,5 @@ cask 'photo-supreme-single-user' do
 
   pkg 'PhotoSupreme_V3.pkg'
 
-  uninstall :pkgutil => 'com.idimager.idimagersu'
+  uninstall pkgutil: 'com.idimager.idimagersu'
 end

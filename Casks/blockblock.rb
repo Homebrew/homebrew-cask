@@ -8,16 +8,16 @@ cask 'blockblock' do
   homepage 'https://objective-see.com/products/blockblock.html'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  installer :manual => 'BlockBlock_Installer.app'
+  installer manual: 'BlockBlock_Installer.app'
 
-  uninstall :quit      => 'com.objectivesee.BlockBlock',
-            :launchctl => [
-                            'com.objectiveSee.blockblock.agent',
-                            'com.objectiveSee.blockblock.daemon',
-                          ],
-            :delete    => [
-                            '/Applications/BlockBlock.app',
-                            '/Library/LaunchDaemons/com.objectiveSee.blockblock.plist',
-                            '~/Library/LaunchAgents/com.objectiveSee.blockblock.plist',
-                          ]
+  uninstall quit:      'com.objectivesee.BlockBlock',
+            launchctl: [
+                         'com.objectiveSee.blockblock.agent',
+                         'com.objectiveSee.blockblock.daemon',
+                       ],
+            delete:    [
+                         '/Applications/BlockBlock.app',
+                         '/Library/LaunchDaemons/com.objectiveSee.blockblock.plist',
+                         '~/Library/LaunchAgents/com.objectiveSee.blockblock.plist',
+                       ]
 end

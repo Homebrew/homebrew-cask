@@ -14,8 +14,8 @@ cask 'osxfuse' do
     set_ownership ['/usr/local/include', '/usr/local/lib']
   end
 
-  uninstall :pkgutil => 'com.github.osxfuse.pkg.Core|com.github.osxfuse.pkg.PrefPane',
-            :kext    => 'com.github.osxfuse.filesystems.osxfusefs'
+  uninstall pkgutil: 'com.github.osxfuse.pkg.Core|com.github.osxfuse.pkg.PrefPane',
+            kext:    'com.github.osxfuse.filesystems.osxfusefs'
 
   caveats do
     reboot

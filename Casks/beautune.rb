@@ -10,7 +10,7 @@ cask 'beautune' do
 
   pkg "Beautune_mac_en_V#{version}.100.pkg"
 
-  uninstall :pkgutil => 'com.everimaging.beautune.Beautune.pkg'
+  uninstall pkgutil: 'com.everimaging.beautune.Beautune.pkg'
 
-  zap :delete => '~/Library/Containers/com.everimaging.beautune'
+  zap delete: '~/Library/Containers/com.everimaging.beautune'
 end

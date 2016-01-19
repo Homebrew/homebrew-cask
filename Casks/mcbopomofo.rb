@@ -7,7 +7,7 @@ cask 'mcbopomofo' do
   homepage 'https://mcbopomofo.openvanilla.org/'
   license :mit
 
-  installer :manual => 'McBopomofoInstaller.app'
+  installer manual: 'McBopomofoInstaller.app'
 
-  zap :delete => '~/Library/Input Methods/McBopomofo.app'
+  zap delete: '~/Library/Input Methods/McBopomofo.app'
 end

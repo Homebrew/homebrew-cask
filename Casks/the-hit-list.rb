@@ -4,7 +4,7 @@ cask 'the-hit-list' do
 
   url 'http://distrib.karelia.com/downloads/TheHitList-302.zip'
   appcast 'https://launch.karelia.com/appcast.php?product=9&appname=The+Hit+List',
-          :checkpoint => '5ce7515d238fb5f926530df2127e86ea1e4ccfa9a581834885530d038804f086'
+          checkpoint: '5ce7515d238fb5f926530df2127e86ea1e4ccfa9a581834885530d038804f086'
   name 'The Hit List'
   homepage 'https://www.karelia.com/products/the-hit-list/mac.html'
   license :commercial

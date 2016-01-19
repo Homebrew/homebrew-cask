@@ -5,7 +5,7 @@ cask 'epic' do
   # kxcdn.com is the official download host per the vendor homepage
   url "https://macepic-cbe.kxcdn.com/#{version}/sign/Epic.dmg"
   appcast 'https://updates.epicbrowser.com/mac_updates/appcast.xml',
-          :checkpoint => 'aac3853720066e62a3398b67df8e2250a9d0163459f1513918899bad06b566d4'
+          checkpoint: 'aac3853720066e62a3398b67df8e2250a9d0163459f1513918899bad06b566d4'
   name 'Epic Privacy Browser'
   homepage 'https://www.epicbrowser.com/'
   license :gratis

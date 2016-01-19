@@ -10,6 +10,6 @@ cask 'eagle' do
 
   pkg "eagle-mac64-#{version}.pkg"
 
-  uninstall :pkgutil => 'com.CadSoftComputerGmbH.EAGLE',
-            :delete  => "/Applications/EAGLE-#{version}"
+  uninstall pkgutil: 'com.CadSoftComputerGmbH.EAGLE',
+            delete:  "/Applications/EAGLE-#{version}"
 end
