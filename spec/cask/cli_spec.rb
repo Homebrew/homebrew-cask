@@ -33,6 +33,13 @@ describe Hbc::CLI do
       described_class.process(%w[noop --version])
     end
 
+    it "prints help output when subcommand receives `--help` flag" do
+      expect(described_class).to receive(:run_command).with('help')
+      described_class.process(%w[noop --help])
+      expect(Hbc.help).to eq(true)
+      Hbc.help = false
+    end
+
     it "respects the env variable when choosing what appdir to create" do
       EnvHelper.with_env_var('HOMEBREW_CASK_OPTS', "--appdir=/custom/appdir") do
         expect(Hbc).to receive(:appdir=).with(Pathname('/custom/appdir'))
