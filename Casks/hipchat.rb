@@ -12,6 +12,8 @@ cask 'hipchat' do
 
   app 'HipChat.app'
 
+  auto_updates true  
+
   postflight do
     suppress_move_to_applications
   end

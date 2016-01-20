@@ -9,6 +9,8 @@ cask 'skitch' do
 
   app 'Skitch.app'
 
+  auto_updates true
+
   zap delete: [
                 '~/Library/Preferences/com.plasq.skitch.plist',
                 '~/Library/Preferences/com.plasq.skitch.history',
