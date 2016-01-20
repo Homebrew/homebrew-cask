@@ -10,6 +10,8 @@ cask 'hipchat' do
   homepage 'https://www.hipchat.com/'
   license :freemium
 
+  auto_updates true
+
   app 'HipChat.app'
 
   postflight do
