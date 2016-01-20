@@ -10,5 +10,7 @@ cask 'slack' do
   homepage 'https://slack.com/'
   license :gratis
 
+  auto_updates true
+
   app 'Slack.app'
 end
