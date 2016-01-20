@@ -5,7 +5,7 @@ cask 'subtitle-master' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/subtitle-master/subtitlemaster/releases/download/v#{version}-SNAPSHOT/Subtitle.Master-osx-v#{version}-SNAPSHOT.zip"
   appcast 'https://github.com/subtitle-master/subtitlemaster/releases.atom',
-          :sha256 => 'e12b1034eeb5c53a908d9ddaea48e3e58d408853b4d0836bbbc50334e7a70878'
+          checkpoint: 'e12b1034eeb5c53a908d9ddaea48e3e58d408853b4d0836bbbc50334e7a70878'
   name 'Subtitle Master'
   homepage 'http://subtitlemaster.com/'
   license :eclipse

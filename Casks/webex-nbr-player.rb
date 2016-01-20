@@ -9,5 +9,5 @@ cask 'webex-nbr-player' do
 
   pkg 'Network Recording Player.pkg'
 
-  uninstall :pkgutil => 'nbr.mac.webex.com'
+  uninstall pkgutil: 'nbr.mac.webex.com'
 end

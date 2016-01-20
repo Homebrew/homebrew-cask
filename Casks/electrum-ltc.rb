@@ -7,7 +7,7 @@ cask 'electrum-ltc' do
   homepage 'https://electrum-ltc.org/'
   license :gpl
   gpg "#{url}.asc",
-      :key_id => '9914864dfc33499c6ca2beea22453004695506fd'
+      key_id: '9914864dfc33499c6ca2beea22453004695506fd'
 
   app 'Electrum-LTC.app'
 end

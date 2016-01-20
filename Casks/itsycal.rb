@@ -5,7 +5,7 @@ cask 'itsycal' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/itsycal/Itsycal-#{version}.zip"
   appcast 'https://s3.amazonaws.com/itsycal/itsycal.xml',
-          :sha256 => 'e5f3a432c8a1b2f123cbfba5e94123ab86a815dbad0f09f52649ca989d5212db'
+          checkpoint: '1444fa57c853a15016c227497da0dcb78bda53f1724332047a6a5f0346ead3fa'
   name 'Itsycal'
   homepage 'http://www.mowglii.com/itsycal/'
   license :gratis

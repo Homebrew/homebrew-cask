@@ -5,16 +5,16 @@ cask 'feeds' do
   # googleapis.com is the official download host per the vendor homepage
   url "https://storage.googleapis.com/feeds-releases/Feeds-#{version}.zip"
   appcast 'https://storage.googleapis.com/feeds-releases/appcast.xml',
-          :sha256 => '2c1c1e58c342c3975126181da367f8bbd342fc6586832ac5b0f4d84a0f17042c'
+          checkpoint: '7af76d6014097647a2c5bf89bf8fc50019bd86c68c3eea60288eaf20c1a5c7f5'
   name 'Feeds'
   homepage 'http://www.feedsapp.com/'
   license :mit
 
   app 'Feeds.app'
 
-  zap :delete => [
-                   '~/Library/Caches/com.feedsapp.Feeds',
-                   '~/Library/Logs/Feeds',
-                   '~/Library/Preferences/com.feedsapp.Feeds.plist',
-                 ]
+  zap delete: [
+                '~/Library/Caches/com.feedsapp.Feeds',
+                '~/Library/Logs/Feeds',
+                '~/Library/Preferences/com.feedsapp.Feeds.plist',
+              ]
 end

@@ -9,8 +9,8 @@ cask 'mps' do
 
   app "MPS #{version.major_minor}.app"
 
-  zap :delete => [
-                   "~/Library/Application Support/MPS#{version.tr('.', '')[0, 2]}",
-                   "~/Library/Preferences/MPS#{version.tr('.', '')[0, 2]}",
-                 ]
+  zap delete: [
+                "~/Library/Application Support/MPS#{version.tr('.', '')[0, 2]}",
+                "~/Library/Preferences/MPS#{version.tr('.', '')[0, 2]}",
+              ]
 end

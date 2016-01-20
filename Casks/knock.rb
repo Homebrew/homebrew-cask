@@ -5,7 +5,7 @@ cask 'knock' do
   # amazonaws.com is the official download host per the vendor homepage
   url 'https://knock-updates.s3.amazonaws.com/Knock.zip'
   appcast 'https://knock-updates.s3.amazonaws.com/Knock.xml',
-          :sha256 => '45d49b2a76c79ef7838798a975f9322135c7d3ffaf9af13c271fa597aee8b2f1'
+          checkpoint: '1cb349afe8e53755921e251360b8b41ab6ecb5897ca503be959822c623672bb8'
   name 'Knock'
   homepage 'http://knocktounlock.com'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

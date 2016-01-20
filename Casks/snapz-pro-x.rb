@@ -4,13 +4,13 @@ cask 'snapz-pro-x' do
 
   url "http://downloads3.ambrosiasw.com/snapzprox/essentials/SnapzProX#{version.to_i}.dmg"
   appcast 'https://www.ambrosiasw.com/updates/profile.php/snapz_pro_x/release',
-          :sha256 => '1e702c62afa457fc518955cf9d8d2ba18de36bd5809c292e3a2e4cdd1a13850e'
+          checkpoint: 'f71ccac75a7cf7ab497f9e35eec3783c8d7c8a6b10d5bd55d6a467764ac81afa'
   name 'Snapz Pro X'
   homepage 'http://www.ambrosiasw.com/utilities/snapzprox/'
   license :commercial
 
   pkg 'Snapz Pro X.pkg'
 
-  uninstall :pkgutil => 'com.ambrosiasw.pkg.(snapz|audiosupport)',
-            :kext    => 'com.AmbrosiaSW.AudioSupport'
+  uninstall pkgutil: 'com.ambrosiasw.pkg.(snapz|audiosupport)',
+            kext:    'com.AmbrosiaSW.AudioSupport'
 end

@@ -10,7 +10,7 @@ cask 'sourcetree' do
   # atlassian.com is the official download host per the vendor homepage
   url "https://downloads.atlassian.com/software/sourcetree/SourceTree_#{version}.dmg"
   appcast 'https://www.sourcetreeapp.com/update/SparkleAppcast.xml',
-          :sha256 => 'bad598541c1d7d6cdd934542d55d1f3ce85550e8e76bd6b59b40aecdf85e3c76'
+          checkpoint: 'ef1f286dd1194d6715994ce99332e1db203de7f83555f15c5442773a9de44bf3'
   name 'Atlassian SourceTree'
   homepage 'https://www.sourcetreeapp.com/'
   license :gratis
@@ -18,12 +18,12 @@ cask 'sourcetree' do
   app 'SourceTree.app'
   binary 'SourceTree.app/Contents/Resources/stree'
 
-  uninstall :launchctl => 'com.atlassian.SourceTreePrivilegedHelper2'
+  uninstall launchctl: 'com.atlassian.SourceTreePrivilegedHelper2'
 
-  zap :delete => [
-                   '~/Library/Application Support/SourceTree',
-                   '~/Library/Caches/com.torusknot.SourceTreeNotMAS',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/SourceTree',
+                '~/Library/Caches/com.torusknot.SourceTreeNotMAS',
+              ]
 
   caveats do
     files_in_usr_local

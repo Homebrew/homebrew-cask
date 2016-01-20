@@ -4,7 +4,7 @@ cask 'epichrome' do
 
   url "https://github.com/dmarmor/epichrome/releases/download/v#{version}/epichrome-#{version}.dmg"
   appcast 'https://github.com/dmarmor/epichrome/releases.atom',
-          :sha256 => 'c22d897666fdcea32a260fe0c361d4bd76d146ab8c26756535514427d65150f0'
+          checkpoint: 'c22d897666fdcea32a260fe0c361d4bd76d146ab8c26756535514427d65150f0'
   name 'Epichrome'
   homepage 'https://github.com/dmarmor/epichrome'
   license :gpl

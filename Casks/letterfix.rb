@@ -9,5 +9,5 @@ cask 'letterfix' do
 
   pkg "LetterFix-#{version}.pkg"
 
-  uninstall :pkgutil => 'org.kuri.letterfix.LetterFix.pkg'
+  uninstall pkgutil: 'org.kuri.letterfix.LetterFix.pkg'
 end

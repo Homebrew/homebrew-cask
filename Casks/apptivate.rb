@@ -8,4 +8,10 @@ cask 'apptivate' do
   license :gratis
 
   app 'Apptivate.app'
+
+  zap delete: [
+                '~/Library/Application Support/Apptivate',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/se.cocoabeans.apptivate.sfl',
+                '~/Library/Preferences/se.cocoabeans.apptivate.plist',
+              ]
 end

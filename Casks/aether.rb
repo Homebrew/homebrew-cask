@@ -5,7 +5,7 @@ cask 'aether' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/nehbit/aether-public/releases/download/v#{version}-OSX/Aether.#{version}.dmg"
   appcast 'https://github.com/nehbit/aether-public/releases.atom',
-          :sha256 => '950d21a97d51a45b278ec5efea34a815662be861234c79030d215c1afbcd4fbb'
+          checkpoint: '950d21a97d51a45b278ec5efea34a815662be861234c79030d215c1afbcd4fbb'
   name 'Aether'
   homepage 'http://getaether.net/'
   license :affero

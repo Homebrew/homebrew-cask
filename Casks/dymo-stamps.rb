@@ -7,7 +7,7 @@ cask 'dymo-stamps' do
   homepage 'https://www.dymo.com/en-US/online-support'
   license :gratis
 
-  depends_on :cask => 'dymo-label'
+  depends_on cask: 'dymo-label'
 
   app 'DYMO Stamps.app'
 end

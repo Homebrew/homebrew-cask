@@ -4,21 +4,21 @@ cask 'hopper-disassembler' do
 
   url "http://www.hopperapp.com/HopperWeb/downloads/Hopper-#{version}.zip"
   appcast "http://www.hopperapp.com/HopperWeb/appcast_v#{version.major}.php",
-          :sha256 => '1ae3256f85304ac725327968ca30f04a3c77f0f508c6dc5ac93fba145b6984a5'
+          checkpoint: '9b8d74f064e2541d0a20c8a371f019f6c792be4d762e262ce072f5d414f17a47'
   name 'Hopper Disassembler'
   homepage 'http://www.hopperapp.com/'
   license :commercial
 
-  depends_on :macos => '>= :lion'
+  depends_on macos: '>= :lion'
 
   app "Hopper Disassembler v#{version.major}.app"
   binary "Hopper Disassembler v#{version.major}.app/Contents/MacOS/hopper"
 
-  zap :delete => [
-                   '~/Library/Application Support/Hopper',
-                   "~/Library/Application Support/Hopper Disassembler v#{version.major}",
-                   "~/Library/Caches/com.cryptic-apps.hopper-web-#{version.major}",
-                   "~/Library/Preferences/com.cryptic-apps.hopper-web-#{version.major}.plist",
-                   "~/Library/Saved Application State/com.cryptic-apps.hopper-web-#{version.major}.savedState",
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Hopper',
+                "~/Library/Application Support/Hopper Disassembler v#{version.major}",
+                "~/Library/Caches/com.cryptic-apps.hopper-web-#{version.major}",
+                "~/Library/Preferences/com.cryptic-apps.hopper-web-#{version.major}.plist",
+                "~/Library/Saved Application State/com.cryptic-apps.hopper-web-#{version.major}.savedState",
+              ]
 end

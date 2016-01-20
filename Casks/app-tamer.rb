@@ -4,7 +4,7 @@ cask 'app-tamer' do
 
   url "https://www.stclairsoft.com/download/AppTamer-#{version}.dmg"
   appcast 'https://www.stclairsoft.com/cgi-bin/sparkle.cgi?AT',
-          :sha256 => 'c60e74c3da756c958bc961ad711759d7904473e75d26e0df410e2e83c34268ae'
+          checkpoint: '50a6d8c14040f6f228963e699f4c2d6292d25f011603ee2d0ca0949d0fd74e73'
   name 'AppTamer'
   homepage 'https://www.stclairsoft.com/AppTamer/'
   license :commercial

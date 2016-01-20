@@ -7,7 +7,7 @@ cask 'alinof-timer' do
   homepage 'http://www.alinofsoftware.ch/apps/products-timer/index.html'
   license :gratis
 
-  pkg 'AlinofTimer.pkg', :allow_untrusted => true
+  pkg 'AlinofTimer.pkg', allow_untrusted: true
 
-  uninstall :pkgutil => 'com.alinofsoftware.alinoftimer'
+  uninstall pkgutil: 'com.alinofsoftware.alinoftimer'
 end

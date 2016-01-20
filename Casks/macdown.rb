@@ -5,7 +5,7 @@ cask 'macdown' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/uranusjr/macdown/releases/download/v#{version}/MacDown.app.zip"
   appcast 'https://github.com/uranusjr/macdown/releases.atom',
-          :sha256 => 'c64fa486514c00101c5a44e92a8562f270bb5474e0e4587e085add5cb0a64e70'
+          checkpoint: 'c64fa486514c00101c5a44e92a8562f270bb5474e0e4587e085add5cb0a64e70'
   name 'MacDown'
   homepage 'http://macdown.uranusjr.com/'
   license :mit
@@ -13,6 +13,6 @@ cask 'macdown' do
   app 'MacDown.app'
   binary 'MacDown.app/Contents/SharedSupport/bin/macdown'
 
-  zap :delete => ['~/Library/Preferences/com.uranusjr.macdown.plist',
-                  '~/Library/Application Support/MacDown']
+  zap delete: ['~/Library/Preferences/com.uranusjr.macdown.plist',
+               '~/Library/Application Support/MacDown']
 end

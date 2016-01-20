@@ -5,7 +5,7 @@ test_cask 'stuffit-container' do
   url TestHelper.local_binary_url('sheldonmac.sit')
   homepage 'http://www.tobias-jung.de/seekingprofont/'
 
-  depends_on :formula => 'unar'
+  depends_on formula: 'unar'
 
   artifact 'sheldonmac/v1.0'
 end

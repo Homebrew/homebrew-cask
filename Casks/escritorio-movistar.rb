@@ -9,13 +9,13 @@ cask 'escritorio-movistar' do
 
   pkg "Escritorio Movistar_v#{version}.pkg"
 
-  uninstall :quit    => 'com.movistar.tgcm.devel.tme',
-            :pkgutil => [
-                          'com.ZTE.DatacardDriver.MacV1.3.41NDISICAEM1000.01.02',
-                          'com.bellardo.driver.HuaweiDataCardDriver',
-                          'com.movistar.tgcm.tme',
-                          'com.novatelwireless.3G',
-                        ]
+  uninstall quit:    'com.movistar.tgcm.devel.tme',
+            pkgutil: [
+                       'com.ZTE.DatacardDriver.MacV1.3.41NDISICAEM1000.01.02',
+                       'com.bellardo.driver.HuaweiDataCardDriver',
+                       'com.movistar.tgcm.tme',
+                       'com.novatelwireless.3G',
+                     ]
 
   caveats do
     reboot

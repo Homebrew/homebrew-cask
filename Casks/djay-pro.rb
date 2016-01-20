@@ -4,7 +4,7 @@ cask 'djay-pro' do
 
   url "http://download.algoriddim.com/djay/#{version.after_comma}/djay_Pro_#{version.before_comma}.zip"
   appcast 'https://www.algoriddim.com/djay-pro-mac/releasenotes/appcast',
-          :sha256 => '083a0a5d667e5800508715cfccb610d81bbf5f8653bc388ece7e093f542785e6'
+          checkpoint: 'ddd4abff880586ae04e436e7eee091e5fd459938e81ac6af89bb2c18d05c15cf'
   name 'Algoriddim djay Pro'
   homepage 'http://algoriddim.com/djay-mac'
   license :commercial

@@ -4,7 +4,7 @@ cask 'butter' do
 
   url "https://github.com/harukasan/butter/releases/download/v#{version}/Butter_#{version}.dmg"
   appcast 'https://github.com/harukasan/butter/releases.atom',
-          :sha256 => '95870314529e113a7162ef6b946b26768691ee5e8ee3b45f1a01d57e50f53beb'
+          checkpoint: '95870314529e113a7162ef6b946b26768691ee5e8ee3b45f1a01d57e50f53beb'
   name 'Butter'
   homepage 'https://github.com/harukasan/butter'
   license :mit

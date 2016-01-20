@@ -9,5 +9,5 @@ cask 'digital-power-station' do
 
   pkg 'Digital Power Station Installer.pkg'
 
-  uninstall :pkgutil => 'com.bongiovi.pkg.DigitalPowerStation.*'
+  uninstall pkgutil: 'com.bongiovi.pkg.DigitalPowerStation.*'
 end

@@ -4,7 +4,7 @@ cask 'drop-to-gif' do
 
   url "https://github.com/mortenjust/droptogif/releases/download/#{version}/Drop.to.GIF#{version.no_dots}.zip"
   appcast 'https://github.com/mortenjust/droptogif/releases.atom',
-          :sha256 => '6ac820bac52e7780d1aa24a31dd17e34c7c1253ae1c23f16dc77a91cfc77bab6'
+          checkpoint: '6ac820bac52e7780d1aa24a31dd17e34c7c1253ae1c23f16dc77a91cfc77bab6'
   name 'Drop to GIF'
   homepage 'http://mortenjust.github.io/droptogif'
   license :oss

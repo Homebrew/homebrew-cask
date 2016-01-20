@@ -7,10 +7,10 @@ cask 'horndis' do
   homepage 'http://joshuawise.com/horndis'
   license :gpl
   gpg "#{url}.sig",
-      :key_id => '3e7f6d58ea80e0b3'
+      key_id: '3e7f6d58ea80e0b3'
 
   pkg "HoRNDIS-rel#{version}.pkg"
 
-  uninstall :kext    => 'com.joshuawise.kexts.HoRNDIS',
-            :pkgutil => 'com.joshuawise.*'
+  uninstall kext:    'com.joshuawise.kexts.HoRNDIS',
+            pkgutil: 'com.joshuawise.*'
 end

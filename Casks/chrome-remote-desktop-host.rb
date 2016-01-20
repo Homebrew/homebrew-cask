@@ -9,11 +9,11 @@ cask 'chrome-remote-desktop-host' do
 
   pkg 'Chrome Remote Desktop Host.pkg'
 
-  uninstall :script  => {
-                          :executable => '/Applications/Chrome Remote Desktop Host Uninstaller.app/Contents/MacOS/remoting_host_uninstaller',
-                          :args       => %w[--no-ui],
-                        },
-            :pkgutil => 'com.google.pkg.ChromeRemoteDesktopHost'
+  uninstall script:  {
+                       executable: '/Applications/Chrome Remote Desktop Host Uninstaller.app/Contents/MacOS/remoting_host_uninstaller',
+                       args:       %w[--no-ui],
+                     },
+            pkgutil: 'com.google.pkg.ChromeRemoteDesktopHost'
 
   caveats do
     logout

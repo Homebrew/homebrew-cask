@@ -4,12 +4,12 @@ cask 'aquaskk' do
 
   url "https://github.com/codefirst/aquaskk/releases/download/#{version}/AquaSKK-#{version}.dmg"
   appcast 'https://github.com/codefirst/aquaskk/releases.atom',
-          :sha256 => 'd5858e86a4cac5e0380083242d40be65ac5eb757048e88863dbf265bc236ee14'
+          checkpoint: 'd5858e86a4cac5e0380083242d40be65ac5eb757048e88863dbf265bc236ee14'
   name 'AquaSKK'
   homepage 'https://github.com/codefirst/aquaskk'
   license :gpl
 
   pkg 'AquaSKK.pkg'
 
-  uninstall :pkgutil => 'jp.sourceforge.inputmethod.aquaskk.pkg'
+  uninstall pkgutil: 'jp.sourceforge.inputmethod.aquaskk.pkg'
 end

@@ -9,8 +9,8 @@ cask 'pixelconduit' do
 
   app 'PixelConduit.app'
 
-  zap :delete => [
-                   '~/Library/Application Support/Conduit',
-                   '~/Library/Preferences/fi.lacquer.PixelConduit.plist',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Conduit',
+                '~/Library/Preferences/fi.lacquer.PixelConduit.plist',
+              ]
 end

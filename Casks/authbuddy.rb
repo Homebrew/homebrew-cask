@@ -9,7 +9,7 @@ cask 'authbuddy' do
 
   pkg 'DssW authbuddy.pkg'
 
-  uninstall :pkgutil => 'uk.co.dssw.authbuddy'
+  uninstall pkgutil: 'uk.co.dssw.authbuddy'
 
   caveats do
     files_in_usr_local

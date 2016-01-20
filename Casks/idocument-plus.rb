@@ -4,8 +4,8 @@ cask 'idocument-plus' do
 
   # amazonaws.com is the official download host per the appcast feed
   url "https://s3.amazonaws.com/IcyBlaze-iDocument#{version.to_i}/Download/idocument_plus_#{version}.dmg"
-  appcast 'http://t.icyblaze.com/idplusc4ud',
-          :sha256 => 'b7c5f6b12755b3ecd2d99da17f2634eb3312ea483e36e0635efd6714fc087aa6'
+  appcast 'http://www.icyblaze.com/idocument/changelogs/idocumentplus_release.html',
+          checkpoint: '816e6021878b62ab2c0e0f2f808255a08ae4b2dd1e4da7cfdd62170e7c7a1cde'
   name 'iDocument Plus'
   homepage 'http://www.icyblaze.com/idocument/'
   license :commercial

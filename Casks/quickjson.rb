@@ -4,7 +4,7 @@ cask 'quickjson' do
 
   url "https://github.com/johan/QuickJSON/releases/download/v#{version}/QuickJSON.qlgenerator.zip"
   appcast 'https://github.com/johan/QuickJSON/releases.atom',
-          :sha256 => '248514b303e47ae0da1001e82a3135afff602a31fd4a3aa44ad8953747848195'
+          checkpoint: '248514b303e47ae0da1001e82a3135afff602a31fd4a3aa44ad8953747848195'
   name 'QuickJSON'
   homepage 'https://github.com/johan/QuickJSON'
   license :mit

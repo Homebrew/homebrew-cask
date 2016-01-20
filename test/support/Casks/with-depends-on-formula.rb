@@ -5,7 +5,7 @@ test_cask 'with-depends-on-formula' do
   url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/with-depends-on-formula'
 
-  depends_on :formula => 'unar'
+  depends_on formula: 'unar'
 
   app 'Caffeine.app'
 end

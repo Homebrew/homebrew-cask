@@ -7,7 +7,7 @@ cask 'carmaintenance' do
   homepage 'http://www.traxxsoftware.com/download.html'
   license :commercial
 
-  depends_on :macos => '>= 10.9'
+  depends_on macos: '>= 10.9'
 
   app "CarMaintenance_#{version.gsub('.', '_')}/CarMaintenance.app"
 end

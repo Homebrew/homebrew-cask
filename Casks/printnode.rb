@@ -7,7 +7,7 @@ cask 'printnode' do
   homepage 'https://www.printnode.com/'
   license :gratis
 
-  depends_on :macos => '>= :mountain_lion'
+  depends_on macos: '>= :mountain_lion'
 
   app 'PrintNode.app'
 end

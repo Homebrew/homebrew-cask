@@ -10,5 +10,5 @@ cask 'fpc' do
 
   pkg "fpc-#{version}.intel-macosx.pkg"
 
-  uninstall :pkgutil => 'org.freepascal.freePascalCompiler262.fpcinst386.pkg'
+  uninstall pkgutil: 'org.freepascal.freePascalCompiler262.fpcinst386.pkg'
 end

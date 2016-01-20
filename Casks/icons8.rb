@@ -5,7 +5,7 @@ cask 'icons8' do
 
   url 'http://icons8.com/icons8_mac_app'
   appcast 'https://maxcdn.icons8.com/download/icons8_cast.xml',
-          :sha256 => '9c3c191442cce028054d4bae65a2383620429005043540f4965a87e3d24aeffb'
+          checkpoint: '1f0768b3ef85dc432e746e7cd33e9d0c473c38caeeda900ed09131116d92c00b'
   name 'Icons8 App'
   homepage 'https://icons8.com/'
   license :freemium

@@ -4,7 +4,7 @@ cask 'texturepacker' do
 
   url "https://www.codeandweb.com/download/texturepacker/#{version}/TexturePacker-#{version}-uni.dmg"
   appcast 'https://www.codeandweb.com/releases/TexturePacker/appcast-mac-release.xml',
-          :sha256 => '4971b06b26f5ba7d54b8fbf633ac614f614969b9eb2d549078b37e0193e8740b'
+          checkpoint: 'd648679891bf00f81a6da0c53b6c70dbf0859bf13d27a6b7fc511e898908246f'
   name 'TexturePacker'
   homepage 'https://www.codeandweb.com/texturepacker'
   license :freemium

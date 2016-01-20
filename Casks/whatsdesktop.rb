@@ -4,7 +4,7 @@ cask 'whatsdesktop' do
 
   url "https://github.com/mawie81/whatsdesktop/releases/download/#{version}/WhatsDesktop-osx-#{version}.zip"
   appcast 'https://github.com/mawie81/whatsdesktop/releases.atom',
-          :sha256 => 'e4ecd99fa82f9bfd32d6c64e853bedd1b6d91ca2e4abbe6bef31e5094e1f04e2'
+          checkpoint: 'e4ecd99fa82f9bfd32d6c64e853bedd1b6d91ca2e4abbe6bef31e5094e1f04e2'
   name 'WhatsDesktop'
   homepage 'https://github.com/mawie81/whatsdesktop'
   license :mit

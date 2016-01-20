@@ -9,5 +9,5 @@ cask 'minimalclock' do
 
   pkg ' .pkg'
 
-  uninstall :pkgutil => 'com.ilovecolorz.minimalclockScreenSaver.*'
+  uninstall pkgutil: 'com.ilovecolorz.minimalclockScreenSaver.*'
 end

@@ -4,7 +4,7 @@ cask 'pixlr' do
 
   url "https://cdn2.pixlr.com/mac/Autodesk_Pixlr_v#{version}_Mac_Installer.dmg"
   appcast 'https://updatefeed.pixlr.com/pixlr-for-mac-appfeed.xml',
-          :sha256 => '46d01575b9fd926b62093e9d5614544428f49a5f1013217b92c29b2dbed78966'
+          checkpoint: '9250cecc90d9809e96babf7db2033b56bb572ee7b35628a138c6c05a01fd53c4'
   name 'Autodesk Pixlr'
   homepage 'https://pixlr.com'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

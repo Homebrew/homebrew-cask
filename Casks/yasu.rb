@@ -14,13 +14,13 @@ cask 'yasu' do
 
   app 'Yasu.app'
 
-  zap :delete => [
-                   '~/Library/Caches/com.apple.helpd/Generated/net.yasuapp.yasu.help',
-                   '~/Library/Caches/net.yasuapp.yasu',
-                   '~/Library/Logs/Yasu.log',
-                   '~/Library/Preferences/net.yasuapp.yasu.plist',
-                   '~/Library/Preferences/org.jimmitchell.yasu.plist',
-                 ]
+  zap delete: [
+                '~/Library/Caches/com.apple.helpd/Generated/net.yasuapp.yasu.help',
+                '~/Library/Caches/net.yasuapp.yasu',
+                '~/Library/Logs/Yasu.log',
+                '~/Library/Preferences/net.yasuapp.yasu.plist',
+                '~/Library/Preferences/org.jimmitchell.yasu.plist',
+              ]
 
   caveats do
     discontinued

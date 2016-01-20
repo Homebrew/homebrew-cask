@@ -7,7 +7,7 @@ cask 'nisus-thesaurus' do
   homepage 'http://nisus.com/Thesaurus/'
   license :gratis
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
   app 'Nisus Thesaurus.app'
 end

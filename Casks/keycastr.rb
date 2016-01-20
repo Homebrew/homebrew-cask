@@ -4,7 +4,7 @@ cask 'keycastr' do
 
   url "https://github.com/keycastr/keycastr/releases/download/v#{version}/KeyCastr.app.zip"
   appcast 'https://github.com/keycastr/keycastr/releases.atom',
-          :sha256 => '5394902ffafbea8715673cab0837cb54dccfe9d8258067b94cfb10d009debf5f'
+          checkpoint: '5394902ffafbea8715673cab0837cb54dccfe9d8258067b94cfb10d009debf5f'
   name 'KeyCastr'
   homepage 'https://github.com/keycastr/keycastr'
   license :bsd

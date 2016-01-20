@@ -7,23 +7,23 @@ cask 'amazon-music' do
   homepage 'https://www.amazon.com/gp/feature.html/?ie=UTF8&docId=1001067901'
   license :gratis
 
-  installer :script => 'Amazon Music Installer.app/Contents/MacOS/osx-intel',
-            :args   => ['--unattendedmodeui', 'none'],
-            :sudo   => true
+  installer script: 'Amazon Music Installer.app/Contents/MacOS/osx-intel',
+            args:   ['--unattendedmodeui', 'none'],
+            sudo:   true
 
-  uninstall :quit      => [
-                            'com.amazon.music',
-                            'com.amazon.music-renderer',
-                          ],
-            :delete    => [
-                            '/Applications/Amazon Music.app'
-                          ],
-            :launchctl => 'com.amazon.music'
+  uninstall quit:      [
+                         'com.amazon.music',
+                         'com.amazon.music-renderer',
+                       ],
+            delete:    [
+                         '/Applications/Amazon Music.app',
+                       ],
+            launchctl: 'com.amazon.music'
 
-  zap :delete => [
-                   '~/Library/Preferences/com.amazon.music.plist',
-                   '~/Library/Application Support/Amazon Music/',
-                 ]
+  zap delete: [
+                '~/Library/Preferences/com.amazon.music.plist',
+                '~/Library/Application Support/Amazon Music/',
+              ]
 
   caveats <<-EOS.undent
     If the app won't launch after installation, try

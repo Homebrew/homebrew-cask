@@ -4,7 +4,7 @@ cask 'cinch' do
 
   url "https://www.irradiatedsoftware.com/downloads/Cinch_#{version}.zip"
   appcast 'https://www.irradiatedsoftware.com/updates/profiles/cinch.php',
-          :sha256 => '7aa0c5cbb3a1359c0b5de01f541260002cbc8560935a0241b94cdc14f8987246'
+          checkpoint: '435102475154532fb560886dd3ac50ee589a38c1a3a1457d03800c3d187a6b3e'
   name 'Cinch'
   homepage 'https://www.irradiatedsoftware.com/cinch/'
   license :commercial

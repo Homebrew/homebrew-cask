@@ -7,7 +7,7 @@ cask 'sharetool' do
   homepage 'https://www.bainsware.com'
   license :gratis
 
-  container :nested => "ShareTool #{version.to_i}.dmg"
+  container nested: "ShareTool #{version.to_i}.dmg"
 
   app 'ShareTool.app'
 end

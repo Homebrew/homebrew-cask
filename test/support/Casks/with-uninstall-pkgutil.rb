@@ -7,5 +7,5 @@ test_cask 'with-uninstall-pkgutil' do
 
   pkg 'Fancy.pkg'
 
-  uninstall :pkgutil => 'my.fancy.package.*'
+  uninstall pkgutil: 'my.fancy.package.*'
 end

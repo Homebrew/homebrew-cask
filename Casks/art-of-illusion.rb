@@ -7,7 +7,7 @@ cask 'art-of-illusion' do
   homepage 'http://www.artofillusion.org'
   license :gpl
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
   app 'Art of Illusion/Art of Illusion.app'
 end

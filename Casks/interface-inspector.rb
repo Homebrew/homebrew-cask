@@ -4,7 +4,7 @@ cask 'interface-inspector' do
 
   url "http://www.interface-inspector.com/download/Interface-Inspector-#{version}.zip"
   appcast 'http://www.interface-inspector.com/download/feed.xml',
-          :sha256 => '30e63af18a14bd79d283c035fabbbf26e429b81e91e74fe607d901a024ac9a6f'
+          checkpoint: 'bfb2eb4fb35aa4ce5db1124d7450af12915323d59b73161c9358e5c8f514d08e'
   name 'Interface Inspector'
   homepage 'http://www.interface-inspector.com/'
   license :closed

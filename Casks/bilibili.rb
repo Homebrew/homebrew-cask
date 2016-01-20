@@ -4,12 +4,12 @@ cask 'bilibili' do
 
   url "https://github.com/typcn/bilibili-mac-client/releases/download/#{version}/Bilibili.dmg.zip"
   appcast 'https://github.com/typcn/bilibili-mac-client/releases.atom',
-          :sha256 => '74f97168f824f6b63b6c9e5fe23ffb66613ecefb444f6a8a6dd3107caaa8c5be'
+          checkpoint: '74f97168f824f6b63b6c9e5fe23ffb66613ecefb444f6a8a6dd3107caaa8c5be'
   name 'Bilibili'
   homepage 'https://github.com/typcn/bilibili-mac-client/'
   license :gpl
 
-  container :nested => 'Bilibili.dmg'
+  container nested: 'Bilibili.dmg'
 
   app 'Bilibili.app'
 end

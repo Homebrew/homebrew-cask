@@ -4,7 +4,7 @@ cask 'pupil' do
 
   url "http://pupil.io/downloads/#{version}/Pupil.app.zip"
   appcast 'http://www.pupil.io/index.php?p=appcast.rss',
-          :sha256 => 'bb44937c4ac1cc66b9f9dd1e4b7a7e98f0495a5d940ee9a8a95b67be98d0e0b8'
+          checkpoint: '22832f1d30f005b38e031625532d8d36f4c650c1e74c7e68a9c2d621f5504f85'
   name 'Pupil'
   homepage 'https://pupil.io/'
   license :commercial

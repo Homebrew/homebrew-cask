@@ -10,6 +10,6 @@ cask 'airvpn' do
   pkg 'airvpn_osx_x64_installer.pkg'
   binary '/Applications/AirVPN.app/Contents/MacOS/AirVPN'
 
-  uninstall :quit    => 'com.airvpn.client',
-            :pkgutil => 'com.airvpn.client'
+  uninstall quit:    'com.airvpn.client',
+            pkgutil: 'com.airvpn.client'
 end

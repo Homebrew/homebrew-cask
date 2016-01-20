@@ -5,15 +5,15 @@ cask 'cartographica' do
   # cluetrust.com is the official download host per the vendor homepage
   url "https://www.cluetrust.com/Downloads/Cartographica_#{version.after_comma}.dmg"
   appcast 'https://www.cluetrust.com/AppCasts/Cartographica.xml',
-          :sha256 => '836d6694d66c60a7c151b0859f59532d9ebc2803030f7bd6d05f04c2faea5deb'
+          checkpoint: '7e85531c1c261a52989a7c08dc56e3fd2bb55c4d7627ed3cf6154dc0bab316ec'
   name 'Cartographica'
   homepage 'https://www.macgis.com/'
   license :commercial
 
   app 'Cartographica.app'
 
-  zap :delete => [
-                   '~/Library/Application Support/Cartographica',
-                   '~/Library/Preferences/com.ClueTrust.Cartographica.plist',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Cartographica',
+                '~/Library/Preferences/com.ClueTrust.Cartographica.plist',
+              ]
 end

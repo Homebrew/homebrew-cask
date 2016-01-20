@@ -4,7 +4,7 @@ cask 'gitifier' do
 
   url "https://github.com/nschum/Gitifier/releases/download/#{version}/Gitifier-#{version}.zip"
   appcast 'https://github.com/nschum/Gitifier/releases.atom',
-          :sha256 => 'a0cce6c8ca814f0586a2c07e602183cb07e164ee26c543346b4e2a6a03e834b1'
+          checkpoint: 'a0cce6c8ca814f0586a2c07e602183cb07e164ee26c543346b4e2a6a03e834b1'
   name 'Gitifier'
   homepage 'https://psionides.github.io/Gitifier/'
   license :eclipse

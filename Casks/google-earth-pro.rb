@@ -9,13 +9,13 @@ cask 'google-earth-pro' do
 
   pkg 'Install Google Earth.pkg'
 
-  uninstall :pkgutil => 'com.Google.GoogleEarthPro'
+  uninstall pkgutil: 'com.Google.GoogleEarthPro'
 
-  zap :delete => [
-                   '~/Library/Application Support/Google Earth',
-                   '~/Library/Caches/Google Earth',
-                   '~/Library/Caches/com.Google.GoogleEarthPro',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Google Earth',
+                '~/Library/Caches/Google Earth',
+                '~/Library/Caches/com.Google.GoogleEarthPro',
+              ]
 
   caveats <<-EOS.undent
     Using #{token} requires a license key. If you do not have a key, use your

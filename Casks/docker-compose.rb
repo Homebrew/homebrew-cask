@@ -5,16 +5,16 @@ cask 'docker-compose' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/docker/compose/releases/download/#{version}/docker-compose-Darwin-x86_64"
   appcast 'https://github.com/docker/compose/releases.atom',
-          :sha256 => 'c0bdb8a2745f73241fc2188eea159567753552a3b7afa0a1874ee61ff663b288'
+          checkpoint: 'c0bdb8a2745f73241fc2188eea159567753552a3b7afa0a1874ee61ff663b288'
   name 'Docker Compose'
   homepage 'https://docs.docker.com/compose'
   license :apache
 
-  depends_on :cask => 'docker'
-  depends_on :arch => :x86_64
-  container :type => :naked
+  depends_on cask: 'docker'
+  depends_on arch: :x86_64
+  container type: :naked
 
-  binary 'docker-compose-Darwin-x86_64', :target => 'docker-compose'
+  binary 'docker-compose-Darwin-x86_64', target: 'docker-compose'
 
   postflight do
     set_permissions "#{staged_path}/docker-compose-Darwin-x86_64", '0755'

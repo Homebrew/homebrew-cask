@@ -4,7 +4,7 @@ cask 'trailrunner' do
 
   url 'http://downloads.trailrunnerx.com/TrailRunner.app.zip'
   appcast 'https://rink.hockeyapp.net/api/2/apps/83c4086e3f968b874757ba689e71f610',
-          :sha256 => 'eb7ebed6ca392b7676a6424376b8f82748a6478d2a4f2b23b102f3b7b05ab28c'
+          checkpoint: '0eae095d43a50d654cdcccd78206088bbbf101634509e488fa11c094d6cbfdff'
   name 'TrailRunner'
   homepage 'http://trailrunnerx.com/'
   license :gratis

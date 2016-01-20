@@ -4,7 +4,7 @@ cask 'gitify' do
 
   url "https://github.com/ekonstantinidis/gitify/releases/download/#{version}/gitify-osx.zip"
   appcast 'https://github.com/ekonstantinidis/gitify/releases.atom',
-          :sha256 => '2518cea1da222ddeb581507ea7ba17cc58ba10dd5b56122033114dfd9a6fbef7'
+          checkpoint: '2518cea1da222ddeb581507ea7ba17cc58ba10dd5b56122033114dfd9a6fbef7'
   name 'Gitify'
   homepage 'https://github.com/ekonstantinidis/gitify'
   license :oss

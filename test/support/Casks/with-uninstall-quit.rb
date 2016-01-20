@@ -7,5 +7,5 @@ test_cask 'with-uninstall-quit' do
 
   pkg 'MyFancyPkg/Fancy.pkg'
 
-  uninstall :quit => 'my.fancy.package.app'
+  uninstall quit: 'my.fancy.package.app'
 end

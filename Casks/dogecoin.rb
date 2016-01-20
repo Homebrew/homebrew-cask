@@ -5,7 +5,7 @@ cask 'dogecoin' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/dogecoin/dogecoin/releases/download/v#{version}/dogecoin-#{version}-osx-signed.dmg"
   appcast 'https://github.com/dogecoin/dogecoin/releases.atom',
-          :sha256 => '3d22468ec5e9fe768efce8293cb1af298a6332ee4e1018768257418a64f99f0b'
+          checkpoint: '3d22468ec5e9fe768efce8293cb1af298a6332ee4e1018768257418a64f99f0b'
   name 'Dogecoin'
   homepage 'http://dogecoin.com/'
   license :mit

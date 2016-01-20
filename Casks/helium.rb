@@ -9,7 +9,7 @@ cask 'helium' do
 
   app 'Helium.app'
 
-  uninstall :quit => 'com.koushikdutta.Helium'
+  uninstall quit: 'com.koushikdutta.Helium'
 
-  zap :delete => '~/Library/Saved Application State/com.koushikdutta.Helium.savedState'
+  zap delete: '~/Library/Saved Application State/com.koushikdutta.Helium.savedState'
 end

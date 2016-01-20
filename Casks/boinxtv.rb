@@ -7,8 +7,8 @@ cask 'boinxtv' do
   homepage 'https://boinx.com/boinxtv/'
   license :commercial
 
-  depends_on :macos => '>= :lion'
-  depends_on :arch => :intel
+  depends_on macos: '>= :lion'
+  depends_on arch: :intel
 
   app 'BoinxTV.app'
 end

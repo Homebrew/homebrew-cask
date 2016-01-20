@@ -4,7 +4,7 @@ cask 'trailer' do
 
   url "https://ptsochantaris.github.io/trailer/trailer#{version.delete('.')}.zip"
   appcast 'https://ptsochantaris.github.io/trailer/appcast.xml',
-          :sha256 => '826391ec662f84e8d2aeb8dac87b9d31d2ae3cd856ece1e02822ccfdd9eb2b17'
+          checkpoint: 'fa3d9eb33c5af7da73afa5dd9a0f95bdac606e04701448554bca72a5942def0b'
   name 'Trailer'
   homepage 'https://ptsochantaris.github.io/trailer/'
   license :mit

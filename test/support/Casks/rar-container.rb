@@ -5,7 +5,7 @@ test_cask 'rar-container' do
   url TestHelper.local_binary_url('rarcontainer.rar')
   homepage 'http://example.com/rar-container'
 
-  depends_on :formula => 'unar'
+  depends_on formula: 'unar'
 
   app 'rarcontainer/Application.app'
 end

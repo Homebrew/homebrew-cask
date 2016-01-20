@@ -4,18 +4,18 @@ cask 'timings' do
 
   url "https://mediaatelier.com/Timings2/Timings_#{version}.zip"
   appcast 'https://mediaatelier.com/Timings2/feed.php',
-          :sha256 => '9188596cedaf92329471f37b8129d2facee6ca955378ea7c772bbd745fde272f'
+          checkpoint: '3b6e549e1b34da291cc51eddad9b27db684b6165ddd2f7fd8c72432e55982694'
   name 'Timings'
   homepage 'http://mediaatelier.com/Timings'
   license :commercial
 
-  depends_on :macos => '>= :mavericks'
+  depends_on macos: '>= :mavericks'
 
   app 'Timings.app'
 
-  zap :delete => [
-                   '~/Library/Preferences/com.mediaateller.Timings.plist',
-                   '~/Library/Application Support/Timings',
-                   '~/Library/Caches/com.mediaateller.timings',
-                 ]
+  zap delete: [
+                '~/Library/Preferences/com.mediaateller.Timings.plist',
+                '~/Library/Application Support/Timings',
+                '~/Library/Caches/com.mediaateller.timings',
+              ]
 end

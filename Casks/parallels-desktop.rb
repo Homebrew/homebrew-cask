@@ -14,21 +14,21 @@ cask 'parallels-desktop' do
     system '/usr/bin/SetFile', '-a', 'v', staged_path.join('Parallels Desktop.app')
   end
 
-  uninstall :delete => [
-                         '/usr/bin/prl_convert',
-                         '/usr/bin/prl_disk_tool',
-                         '/usr/bin/prl_perf_ctl',
-                         '/usr/bin/prlctl',
-                         '/usr/bin/prlsrvctl',
-                       ]
+  uninstall delete: [
+                      '/usr/bin/prl_convert',
+                      '/usr/bin/prl_disk_tool',
+                      '/usr/bin/prl_perf_ctl',
+                      '/usr/bin/prlctl',
+                      '/usr/bin/prlsrvctl',
+                    ]
 
-  zap       :delete => [
-                         '~/.parallels_settings',
-                         '~/Library/Caches/com.parallels.desktop.console',
-                         '~/Library/Preferences/com.parallels.desktop.console.LSSharedFileList.plist',
-                         '~/Library/Preferences/com.parallels.desktop.console.plist',
-                         '~/Library/Preferences/com.parallels.Parallels Desktop Statistics.plist',
-                         '~/Library/Preferences/com.parallels.Parallels Desktop.plist',
-                         '~/Library/Preferences/com.parallels.Parallels.plist',
-                       ]
+  zap       delete: [
+                      '~/.parallels_settings',
+                      '~/Library/Caches/com.parallels.desktop.console',
+                      '~/Library/Preferences/com.parallels.desktop.console.LSSharedFileList.plist',
+                      '~/Library/Preferences/com.parallels.desktop.console.plist',
+                      '~/Library/Preferences/com.parallels.Parallels Desktop Statistics.plist',
+                      '~/Library/Preferences/com.parallels.Parallels Desktop.plist',
+                      '~/Library/Preferences/com.parallels.Parallels.plist',
+                    ]
 end

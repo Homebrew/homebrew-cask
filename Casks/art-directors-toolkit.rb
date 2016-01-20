@@ -9,5 +9,5 @@ cask 'art-directors-toolkit' do
 
   app "Art Directors Toolkit #{version.to_i}i.app"
 
-  zap :delete => '~/Library/Preferences/com.code-line.artdirectorstoolkit*.plist'
+  zap delete: '~/Library/Preferences/com.code-line.artdirectorstoolkit*.plist'
 end

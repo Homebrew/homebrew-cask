@@ -5,7 +5,7 @@ cask 'crashlytics' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://ssl-download-crashlytics-com.s3.amazonaws.com/mac/builds/Crashlytics-#{version.sub(%r{.*_}, '')}.zip"
   appcast 'https://ssl-download-crashlytics-com.s3.amazonaws.com/mac/version.xml',
-          :sha256 => '39e2fdc58426b1771c42d26218de331494fdbabb91ad4df77cbb14357cf1a423'
+          checkpoint: '5795458712cc0d1e3a76cdbf5a58c00a98ca5cf72c52948859a9b5668365d8bb'
   name 'Crashlytics'
   homepage 'https://crashlytics.com'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

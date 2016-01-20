@@ -12,19 +12,19 @@ cask 'radio-silence' do
   # We intentionally unload the kext twice as a workaround
   # See https://github.com/caskroom/homebrew-cask/pull/1802#issuecomment-34171151
 
-  uninstall :early_script => {
-                               :executable   => '/sbin/kextunload',
-                               :args         => ['-b', 'com.radiosilenceapp.nke.filter'],
-                               :must_succeed => false,
-                             },
-            :quit         => 'com.radiosilenceapp.client',
-            :kext         => 'com.radiosilenceapp.nke.filter',
-            :pkgutil      => 'com.radiosilenceapp.radioSilence.*',
-            :launchctl    => [
-                               'com.radiosilenceapp.trial',
-                               'com.radiosilenceapp.agent',
-                               'com.radiosilenceapp.nke',
-                             ]
+  uninstall early_script: {
+                            executable:   '/sbin/kextunload',
+                            args:         ['-b', 'com.radiosilenceapp.nke.filter'],
+                            must_succeed: false,
+                          },
+            quit:         'com.radiosilenceapp.client',
+            kext:         'com.radiosilenceapp.nke.filter',
+            pkgutil:      'com.radiosilenceapp.radioSilence.*',
+            launchctl:    [
+                            'com.radiosilenceapp.trial',
+                            'com.radiosilenceapp.agent',
+                            'com.radiosilenceapp.nke',
+                          ]
 
-  zap :delete => '~/Library/Application Support/Radio Silence'
+  zap delete: '~/Library/Application Support/Radio Silence'
 end

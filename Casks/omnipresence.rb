@@ -7,7 +7,7 @@ cask 'omnipresence' do
   homepage 'https://www.omnigroup.com/omnipresence'
   license :commercial
 
-  depends_on :macos => '>= :yosemite'
+  depends_on macos: '>= :yosemite'
 
   app 'OmniPresence.app'
 end

@@ -4,7 +4,7 @@ cask 'coreos-gui' do
 
   url "https://github.com/TheNewNormal/coreos-osx/releases/download/v#{version}/CoreOS_v#{version}.dmg"
   appcast 'https://github.com/TheNewNormal/coreos-osx/releases.atom',
-          :sha256 => '803e6564c8bdcc9fee6326216de865e39bfece0e87d9d38c3b34c4f90382aa06'
+          checkpoint: '803e6564c8bdcc9fee6326216de865e39bfece0e87d9d38c3b34c4f90382aa06'
   name 'CoreOS GUI'
   homepage 'https://github.com/TheNewNormal/coreos-osx'
   license :apache

@@ -10,7 +10,7 @@ cask 'vitalsource-bookshelf' do
   end
 
   appcast 'https://services.vitalbook.com/version/check',
-          :sha256 => 'a310b400eadb9aabc7bcf12e5e56ee2dd80d595288a380d8d2a572b242016bb8'
+          checkpoint: 'a310b400eadb9aabc7bcf12e5e56ee2dd80d595288a380d8d2a572b242016bb8'
   name 'VitalSource Bookshelf'
   homepage 'https://www.vitalsource.com/bookshelf-features'
   license :freemium

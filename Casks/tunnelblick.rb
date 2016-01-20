@@ -4,17 +4,17 @@ cask 'tunnelblick' do
 
   url "https://www.tunnelblick.net/release/Tunnelblick_#{version}.dmg"
   appcast 'https://www.tunnelblick.net/appcast.rss',
-          :sha256 => '3d0d7a0240db7bb0e4ec4729a7fce804a261492461444a36d3b6c38c9d8ad4fb'
+          checkpoint: 'dbeb8845f3fb88a2b3faf4bb3a9ef2b9a0af19b586a0fd03b83fa88d8583570c'
   name 'Tunnelblick'
   homepage 'https://www.tunnelblick.net'
   license :gpl
 
-  depends_on :macos => '>= :tiger'
+  depends_on macos: '>= :tiger'
 
   app 'Tunnelblick.app'
 
-  uninstall :launchctl => 'net.tunnelblick.tunnelblick.LaunchAtLogin',
-            :quit      => 'net.tunnelblick.tunnelblick'
+  uninstall launchctl: 'net.tunnelblick.tunnelblick.LaunchAtLogin',
+            quit:      'net.tunnelblick.tunnelblick'
 
   caveats <<-EOS.undent
     For security reasons, #{token} must be installed to /Applications,

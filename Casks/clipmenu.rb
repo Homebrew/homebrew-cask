@@ -5,15 +5,15 @@ cask 'clipmenu' do
   # dropbox.com is the official download host per the vendor homepage
   url "https://dl.dropbox.com/u/1140644/clipmenu/ClipMenu_#{version}.dmg"
   appcast 'https://feeds.feedburner.com/clipmenu-appcast',
-          :sha256 => 'e9f9df0e48aad4e00b8df26fd622f42a0218f5be662b6d2ee496664c5f45b4a3'
+          checkpoint: 'bcd91bd0f5da24998cbdb2ac0be516c156a60105a9504aedc05ae2a7a4165647'
   name 'ClipMenu'
   homepage 'http://www.clipmenu.com/'
   license :gratis
 
   app 'ClipMenu.app'
 
-  zap :delete => [
-                   '~/Library/Application Support/ClipMenu',
-                   '~/Library/Preferences/com.naotaka.ClipMenu.plist',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/ClipMenu',
+                '~/Library/Preferences/com.naotaka.ClipMenu.plist',
+              ]
 end

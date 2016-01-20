@@ -9,8 +9,8 @@ cask 'authoxy' do
 
   pkg 'Authoxy (double click me).pkg'
 
-  uninstall :pkgutil => 'net.hrsoftworks.authoxy.*',
-            :delete  => '/tmp/authoxyd.pid'
+  uninstall pkgutil: 'net.hrsoftworks.authoxy.*',
+            delete:  '/tmp/authoxyd.pid'
 
-  zap       :delete   => '~/Library/Preferences/net.hrsoftworks.AuthoxyPref.plist'
+  zap       delete: '~/Library/Preferences/net.hrsoftworks.AuthoxyPref.plist'
 end

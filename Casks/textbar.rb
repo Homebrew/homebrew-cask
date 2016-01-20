@@ -4,13 +4,13 @@ cask 'textbar' do
 
   url "http://www.richsomerfield.com/apps/textbar/TextBar.app-#{version}.zip"
   appcast 'http://www.richsomerfield.com/apps/textbar/sparkle_textbar.xml',
-          :sha256 => '639930c95ad623671b7f3eb3f7a330eaa2c2cf456c31109ecdac03685881833b'
+          checkpoint: '639930c95ad623671b7f3eb3f7a330eaa2c2cf456c31109ecdac03685881833b'
   name 'TextBar'
   homepage 'http://www.richsomerfield.com/apps/'
   license :closed
 
-  depends_on :macos => '>= :mountain_lion'
-  depends_on :arch => :x86_64
+  depends_on macos: '>= :mountain_lion'
+  depends_on arch: :x86_64
 
   app 'TextBar.app'
 end

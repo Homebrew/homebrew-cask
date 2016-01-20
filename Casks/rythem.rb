@@ -4,7 +4,7 @@ cask 'rythem' do
 
   url "https://github.com/AlloyTeam/Rythem/releases/download/filter/Rythem-#{version}.dmg"
   appcast 'https://github.com/AlloyTeam/Rythem/releases.atom',
-          :sha256 => 'b44420dfb2a0a02bafa8edf85fe57a421779419e0bfe29c2c60c3ef93eeb73d5'
+          checkpoint: 'b44420dfb2a0a02bafa8edf85fe57a421779419e0bfe29c2c60c3ef93eeb73d5'
   name 'Rythem'
   homepage 'https://github.com/AlloyTeam/Rythem'
   license :mit

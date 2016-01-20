@@ -7,10 +7,10 @@ cask 'photo-supreme-postgresql' do
   homepage 'http://www.idimager.com/WP/?page_id=20'
   license :commercial
 
-  depends_on :macos => '>= 10.7'
-  depends_on :formula => 'postgresql'
+  depends_on macos: '>= 10.7'
+  depends_on formula: 'postgresql'
 
   pkg 'PhotoSupremePostgreSQL_V3.pkg'
 
-  uninstall :pkgutil => 'com.idimager.idimagersu'
+  uninstall pkgutil: 'com.idimager.idimagersu'
 end

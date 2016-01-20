@@ -7,8 +7,8 @@ cask 'murus' do
   homepage 'http://www.murusfirewall.com'
   license :freemium
 
-  depends_on :macos => '>= :mavericks'
-  container :nested => "Murus #{version}.dmg"
+  depends_on macos: '>= :mavericks'
+  container nested: "Murus #{version}.dmg"
 
   app 'Murus.app'
 end

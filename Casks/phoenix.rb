@@ -4,15 +4,15 @@ cask 'phoenix' do
 
   url "https://github.com/kasper/phoenix/releases/download/#{version}/phoenix-#{version}.tar.gz"
   appcast 'https://github.com/kasper/phoenix/releases.atom',
-          :sha256 => '2880ccfe4a79f84e6aa55b29e47d46663a8f007926d62af7d44fa83d71f70750'
+          checkpoint: '2880ccfe4a79f84e6aa55b29e47d46663a8f007926d62af7d44fa83d71f70750'
   name 'Phoenix'
   homepage 'https://github.com/kasper/phoenix/'
   license :mit
 
   accessibility_access true
-  depends_on :macos => '>= :yosemite'
+  depends_on macos: '>= :yosemite'
 
   app 'Phoenix.app'
 
-  zap :delete => '~/.phoenix.js'
+  zap delete: '~/.phoenix.js'
 end

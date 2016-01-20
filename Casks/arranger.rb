@@ -4,7 +4,7 @@ cask 'arranger' do
 
   url "http://bucketomac.de/downloads/Arranger#{version}.zip"
   appcast 'http://bucketomac.de/appcast/arrangercast.xml',
-          :sha256 => '6765d9f64d1d753ecf46699f0d67f2255f5a732daaa89baf5782684a5384c304'
+          checkpoint: 'c6938ca1a2301d4d20f70f1012fd7d244e71d42f06bebb126dd8ee126bac3930'
   name 'Arranger'
   homepage 'http://bucketomac.de/arranger/arranger/'
   license :gratis

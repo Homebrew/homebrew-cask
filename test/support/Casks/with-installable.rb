@@ -7,14 +7,14 @@ test_cask 'with-installable' do
 
   pkg 'MyFancyPkg/Fancy.pkg'
 
-  uninstall :script     => { :executable => 'MyFancyPkg/FancyUninstaller.tool', :args => %w[--please] },
-            :quit       => 'my.fancy.package.app',
-            :login_item => 'Fancy',
-            :delete     => [
-                             '/permissible/absolute/path',
-                             '~/permissible/path/with/tilde',
-                             'impermissible/relative/path',
-                             '/another/impermissible/../relative/path',
-                           ],
-            :rmdir      => TestHelper.local_binary_path('empty_directory')
+  uninstall script:     { executable: 'MyFancyPkg/FancyUninstaller.tool', args: %w[--please] },
+            quit:       'my.fancy.package.app',
+            login_item: 'Fancy',
+            delete:     [
+                          '/permissible/absolute/path',
+                          '~/permissible/path/with/tilde',
+                          'impermissible/relative/path',
+                          '/another/impermissible/../relative/path',
+                        ],
+            rmdir:      TestHelper.local_binary_path('empty_directory')
 end

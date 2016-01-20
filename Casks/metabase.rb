@@ -4,7 +4,7 @@ cask 'metabase' do
 
   url "http://downloads.metabase.com/v#{version}/Metabase.dmg"
   appcast 'http://downloads.metabase.com/appcast.xml',
-          :sha256 => '780a6253ae1a5249a8846e7bbbb8dd828128e49669d81286eafc6b60ff456f56'
+          checkpoint: '54adac98a301a104408fc7983d4e466d86e6ba830ca5431479ed425fa6759827'
   name 'Metabase'
   homepage 'http://www.metabase.com/'
   license :affero

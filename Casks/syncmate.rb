@@ -5,7 +5,7 @@ cask 'syncmate' do
   # eltima.com is the official download host per the appcast feed
   url "http://www.eltima.com/download/syncmate-update/SyncMate_#{version}.zip"
   appcast 'http://www.eltima.com/download/syncmate-update/syncmate6.xml',
-          :sha256 => 'dbad84f846f25a623a7b1551b8d21b6a6c5887ba3079b02b5571aac94c1a9286'
+          checkpoint: '116cf7df50ef73545c5dac6323e8f32d068ebd37740601d9bd4037b21b3538ff'
   name 'SyncMate'
   homepage 'http://www.sync-mac.com'
   license :commercial

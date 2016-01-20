@@ -7,13 +7,13 @@ cask 'acquia-dev-desktop' do
   homepage 'https://www.acquia.com/products-services/dev-desktop'
   license :gratis
 
-  installer :script => 'Acquia Dev Desktop Installer.app/Contents/MacOS/installbuilder.sh',
-            :args   => ['--mode', 'unattended', '--unattendedmodeui', 'none'],
-            :sudo   => true
+  installer script: 'Acquia Dev Desktop Installer.app/Contents/MacOS/installbuilder.sh',
+            args:   ['--mode', 'unattended', '--unattendedmodeui', 'none'],
+            sudo:   true
 
-  uninstall :script => {
-                         :executable => '/Applications/DevDesktop/uninstall.app/Contents/MacOS/installbuilder.sh',
-                         :args       => ['--mode', 'unattended', '--unattendedmodeui', 'none'],
-                         :sudo       => true,
-                       }
+  uninstall script: {
+                      executable: '/Applications/DevDesktop/uninstall.app/Contents/MacOS/installbuilder.sh',
+                      args:       ['--mode', 'unattended', '--unattendedmodeui', 'none'],
+                      sudo:       true,
+                    }
 end

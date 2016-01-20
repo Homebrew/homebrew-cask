@@ -5,7 +5,7 @@ cask 'sigil' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/user-none/Sigil/releases/download/#{version}/Sigil-#{version}-Mac-Package.dmg"
   appcast 'https://github.com/user-none/Sigil/releases.atom',
-          :sha256 => '7db982b4c4be6c05da7438161c8f844a32203c5a3bf76b2ab14f5eddc2ad69ce'
+          checkpoint: '23751416ae96455509d00cb3e55beedbf6047c089c5f0d3c4663ca4faf6e64e8'
   name 'Sigil'
   homepage 'http://sigil-ebook.com/'
   license :gpl

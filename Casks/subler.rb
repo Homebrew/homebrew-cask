@@ -5,17 +5,17 @@ cask 'subler' do
   # bitbucket.org is the official download host per the vendor homepage
   url "https://bitbucket.org/galad87/subler/downloads/Subler-#{version}.zip"
   appcast 'https://subler.org/appcast/appcast.xml',
-          :sha256 => '521d5efab5192750dfdc6dad5fa3ee0a5a563ed4658fdcc9c640e5aa11202a45'
+          checkpoint: '348e5ac77e8e5cecb8c9e73683fb4e131a5ac9688e70893254e526125ca07117'
   name 'Subler'
   homepage 'https://subler.org/'
   license :gpl
 
   app 'Subler.app'
 
-  zap :delete => [
-                   '~/Library/Preferences/org.galad.Subler.plist',
-                   '~/Library/Application Support/Subler',
-                   '~/Library/Caches/org.galad.Subler',
-                   '~/Library/Saved Application State/org.galad.Subler.savedState',
-                 ]
+  zap delete: [
+                '~/Library/Preferences/org.galad.Subler.plist',
+                '~/Library/Application Support/Subler',
+                '~/Library/Caches/org.galad.Subler',
+                '~/Library/Saved Application State/org.galad.Subler.savedState',
+              ]
 end

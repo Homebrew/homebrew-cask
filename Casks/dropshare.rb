@@ -5,7 +5,7 @@ cask 'dropshare' do
   # cloudfront.net is the official download host per the vendor homepage
   url 'https://d2wvuuix8c9e48.cloudfront.net/Dropshare-latest.zip'
   appcast 'https://getdropsha.re/sparkle/Dropshare.xml',
-          :sha256 => '1ebb0d998879640da85a1e9e26f75c6c8aaae3f294d0f15098247e4ea8a48389'
+          checkpoint: 'c4fa30235c14673cd615dcfba5d57596e5c595793d77f3ba0cf5d4663769a63c'
   name 'Dropshare'
   homepage 'https://getdropsha.re/'
   license :commercial

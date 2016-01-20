@@ -4,7 +4,7 @@ cask 'finderminder' do
 
   url "https://www.irradiatedsoftware.com/downloads/FinderMinder_#{version}.zip"
   appcast 'https://www.irradiatedsoftware.com/updates/profiles/finderminder.php',
-          :sha256 => 'f546195134c20f6b04600b97c089467afeb02c7c3c86e683ca9545fbe8d49770'
+          checkpoint: '7871062270c4d96fb0878619d71edbdee1da5f4a51818401d5fd864450826853'
   name 'FinderMinder'
   homepage 'http://irradiatedsoftware.com/labs'
   license :gratis
@@ -13,5 +13,5 @@ cask 'finderminder' do
 
   app 'FinderMinder.app'
 
-  zap :delete => '~/Library/Preferences/com.irradiatedsoftware.FinderMinder.plist'
+  zap delete: '~/Library/Preferences/com.irradiatedsoftware.FinderMinder.plist'
 end

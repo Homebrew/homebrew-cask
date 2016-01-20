@@ -7,10 +7,10 @@ cask 'pagico' do
   homepage 'https://www.pagico.com/'
   license :commercial
 
-  depends_on :macos => '>= :lion'
+  depends_on macos: '>= :lion'
 
   pkg 'Install Pagico.pkg'
 
-  uninstall :pkgutil => 'com.pagico.*',
-            :delete  => '/Applications/Pagico'
+  uninstall pkgutil: 'com.pagico.*',
+            delete:  '/Applications/Pagico'
 end

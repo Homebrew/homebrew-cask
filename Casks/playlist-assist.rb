@@ -4,7 +4,7 @@ cask 'playlist-assist' do
 
   url "http://dougscripts.com/itunes/scrx/playlistassistv#{version.delete('.')}.zip"
   appcast 'http://dougscripts.com/itunes/itinfo/playlistassist_appcast.xml',
-          :sha256 => '28442470f6d3f8dd413dedef0888e051f594799a2861f83134d8ebe21f4a014f'
+          checkpoint: 'e9f93840c8cdd03e3d467931a6f73b6d3a00a125c1217452e332b1e8900ea264'
   name 'Playlist Assist'
   homepage 'http://dougscripts.com/apps/playlistassistapp.php'
   license :commercial

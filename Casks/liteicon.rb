@@ -4,7 +4,7 @@ cask 'liteicon' do
 
   url "https://www.freemacsoft.net/downloads/LiteIcon_#{version}.zip"
   appcast 'https://freemacsoft.net/liteicon/updates.xml',
-          :sha256 => 'fe12f2590c59cce77f16184d907af8ef82aa653d78bd180bc2445ee869b10b45'
+          checkpoint: 'c330488006bfbb52886583be258e919b6d9865aa55f51658a410f3e38cfba9c5'
   name 'LiteIcon'
   homepage 'https://www.freemacsoft.net/liteicon/'
   license :gratis

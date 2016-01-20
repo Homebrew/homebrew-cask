@@ -10,5 +10,5 @@ cask 'cups-pdf' do
 
   pkg "CUPS-PDF #{version} Installer.pkg"
 
-  uninstall :pkgutil => 'net.codepoetry.cupspdf.*'
+  uninstall pkgutil: 'net.codepoetry.cupspdf.*'
 end

@@ -4,7 +4,7 @@ cask 'kakapo' do
 
   url "https://github.com/bluedaniel/Kakapo-app/releases/download/v#{version}/Kakapo-#{version}-Mac.zip"
   appcast 'https://github.com/bluedaniel/Kakapo-app/releases.atom',
-          :sha256 => '8558f7962f8e87a02aada6b70743b26ae01403506eacce7613324915dd6dd497'
+          checkpoint: '8558f7962f8e87a02aada6b70743b26ae01403506eacce7613324915dd6dd497'
   name 'Kakapo'
   homepage 'http://www.kakapo.co/app.html'
   license :isc

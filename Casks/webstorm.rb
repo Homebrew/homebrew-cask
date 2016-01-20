@@ -9,14 +9,14 @@ cask 'webstorm' do
 
   app 'WebStorm.app'
 
-  zap :delete => [
-                   '~/.WebStorm11',
-                   '~/Library/Preferences/com.jetbrains.webstorm.plist',
-                   '~/Library/Preferences/WebStorm11',
-                   '~/Library/Application Support/WebStorm11',
-                   '~/Library/Caches/WebStorm11',
-                   '~/Library/Logs/WebStorm11',
-                 ]
+  zap delete: [
+                '~/.WebStorm11',
+                '~/Library/Preferences/com.jetbrains.webstorm.plist',
+                '~/Library/Preferences/WebStorm11',
+                '~/Library/Application Support/WebStorm11',
+                '~/Library/Caches/WebStorm11',
+                '~/Library/Logs/WebStorm11',
+              ]
 
   caveats do
     depends_on_java

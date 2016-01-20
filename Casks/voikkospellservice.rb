@@ -7,9 +7,9 @@ cask 'voikkospellservice' do
   homepage 'http://verteksi.net/lab/osxspell/'
   license :gpl
 
-  depends_on :macos => '>= :mavericks'
+  depends_on macos: '>= :mavericks'
 
   service 'VoikkoSpellService.app'
 
-  uninstall :signal => ['TERM', 'org.puimula.VoikkoSpellService']
+  uninstall signal: ['TERM', 'org.puimula.VoikkoSpellService']
 end

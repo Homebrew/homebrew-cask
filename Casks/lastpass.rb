@@ -7,8 +7,8 @@ cask 'lastpass' do
   homepage 'https://lastpass.com/'
   license :gratis
 
-  installer :manual => 'LastPass Installer.app'
+  installer manual: 'LastPass Installer.app'
 
-  uninstall :script => 'Uninstaller.app/Contents/Resources/uninstall.sh',
-            :sudo   => true
+  uninstall script: 'Uninstaller.app/Contents/Resources/uninstall.sh',
+            sudo:   true
 end

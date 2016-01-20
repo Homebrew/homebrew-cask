@@ -4,12 +4,12 @@ cask 'enjoyable' do
 
   url "https://yukkurigames.com/enjoyable/Enjoyable-#{version}.zip"
   appcast 'https://yukkurigames.com/enjoyable/appcast.xml',
-          :sha256 => '881f8e727e3d9b3244fc9b9530d24301306ffb21afd98c970c4cc5e7bcb1489c'
+          checkpoint: 'bca0054ee381155cd8c4e64191c3b7d7c8142ac1af91a029bab84a66e73e27ed'
   name 'Enjoyable'
   homepage 'https://yukkurigames.com/enjoyable/'
   license :gratis
 
   app 'Enjoyable.app'
 
-  zap :delete => '~/Library/Preferences/com.yukkurigames.Enjoyable.plist'
+  zap delete: '~/Library/Preferences/com.yukkurigames.Enjoyable.plist'
 end

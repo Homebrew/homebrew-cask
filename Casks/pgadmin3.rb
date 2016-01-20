@@ -9,12 +9,12 @@ cask 'pgadmin3' do
   homepage 'http://pgadmin.org'
   license :oss
   gpg "#{url}.sig",
-      :key_id => 'e0c4ceeb826b1fda4fb468e024adfaaf698f1519'
+      key_id: 'e0c4ceeb826b1fda4fb468e024adfaaf698f1519'
 
   app 'pgAdmin3.app'
 
-  zap :delete => [
-                   '~/Library/Preferences/pgadmin3 Preferences',
-                   '~/Library/Saved Application State/org.postgresql.pgadmin.savedState',
-                 ]
+  zap delete: [
+                '~/Library/Preferences/pgadmin3 Preferences',
+                '~/Library/Saved Application State/org.postgresql.pgadmin.savedState',
+              ]
 end

@@ -9,5 +9,5 @@ cask 'steelseries-exactmouse-tool' do
 
   app 'SteelSeries ExactMouse Tool.app'
 
-  zap :delete => '~/Preferences/com.SteelSeries.SteelSeries-ExactMouse-Tool.plist'
+  zap delete: '~/Preferences/com.SteelSeries.SteelSeries-ExactMouse-Tool.plist'
 end

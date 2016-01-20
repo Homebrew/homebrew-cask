@@ -7,7 +7,7 @@ cask 'cmake' do
   homepage 'https://cmake.org'
   license :bsd
 
-  conflicts_with :formula => 'cmake'
+  conflicts_with formula: 'cmake'
 
   app 'CMake.app'
   binary 'CMake.app/Contents/bin/cmake'

@@ -9,6 +9,6 @@ cask 'synology-cloud-station' do
 
   pkg "synology-cloud-station-#{version.sub(%r{.*-}, '')}.pkg"
 
-  uninstall :pkgutil   => 'com.synology.CloudStation',
-            :launchctl => 'com.synology.Synology Cloud Station'
+  uninstall pkgutil:   'com.synology.CloudStation',
+            launchctl: 'com.synology.Synology Cloud Station'
 end

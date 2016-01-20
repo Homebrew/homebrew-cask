@@ -4,20 +4,20 @@ cask 'focus' do
 
   url "https://heyfocus.com/releases/Focus-#{version}.zip"
   appcast 'https://heyfocus.com/appcast.xml',
-          :sha256 => 'f59e67be214db7e8eca19e3cd8bd1c0297bfd2caefb3dacc725b4d9204fdd041'
+          checkpoint: '9256c6667585c7748e52d911502d9b6d17e6ab2be4c87d84af88753a58db1e4c'
   name 'Focus'
   homepage 'https://heyfocus.com/'
   license :commercial
 
-  depends_on :macos => '>= :mavericks'
+  depends_on macos: '>= :mavericks'
 
   app 'Focus.app'
 
-  uninstall :quit => 'BradJasper.focus'
+  uninstall quit: 'BradJasper.focus'
 
-  zap :delete => [
-                   '~/Library/Caches/BradJasper.focus/',
-                   '~/Library/Application Support/Focus/',
-                   '~/Library/Preferences/BradJasper.focus.plist',
-                 ]
+  zap delete: [
+                '~/Library/Caches/BradJasper.focus/',
+                '~/Library/Application Support/Focus/',
+                '~/Library/Preferences/BradJasper.focus.plist',
+              ]
 end

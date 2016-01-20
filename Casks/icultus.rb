@@ -4,7 +4,7 @@ cask 'icultus' do
 
   url "https://github.com/djyde/iCultus/releases/download/v#{version}/iCultus-#{version}-darwin-x64.zip"
   appcast 'https://github.com/djyde/iCultus/releases.atom',
-          :sha256 => '093578d94bc93c0dbbd6fbefd837faaf6824ad516add11ca6acc8b7f81a1fec8'
+          checkpoint: '093578d94bc93c0dbbd6fbefd837faaf6824ad516add11ca6acc8b7f81a1fec8'
   name 'iCultus'
   homepage 'http://djyde.github.io/iCultus'
   license :mit

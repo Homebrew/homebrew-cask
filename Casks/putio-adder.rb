@@ -4,7 +4,7 @@ cask 'putio-adder' do
 
   url "https://github.com/nicoSWD/put.io-adder/releases/download/v#{version}/put.io-adder-v#{version}.app.zip"
   appcast 'https://github.com/nicoSWD/put.io-adder/releases.atom',
-          :sha256 => '61af61693ed928360f852e78effb509b8f30cb3af2eea809d59a5c38bbbbac56'
+          checkpoint: '61af61693ed928360f852e78effb509b8f30cb3af2eea809d59a5c38bbbbac56'
   name 'Put.IO Adder'
   homepage 'https://github.com/nicoSWD/put.io-adder'
   license :mit

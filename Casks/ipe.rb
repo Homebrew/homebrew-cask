@@ -9,4 +9,12 @@ cask 'ipe' do
   license :gpl
 
   app 'Ipe.app'
+
+  zap delete: [
+                '~/.ipe',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.otfried.ipe.ipe.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.otfried.ipe.sfl',
+                '~/Library/Preferences/org.otfried.ipe.Ipe.plist',
+                '~/Library/Saved Application State/org.otfried.ipe.savedState',
+              ]
 end

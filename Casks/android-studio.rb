@@ -10,14 +10,14 @@ cask 'android-studio' do
 
   app 'Android Studio.app'
 
-  zap :delete => [
-                   '~/Library/Preferences/AndroidStudio*',
-                   '~/Library/Preferences/com.google.android.studio.plist',
-                   '~/Library/Application Support/AndroidStudio*',
-                   '~/Library/Logs/AndroidStudio*',
-                   '~/Library/Caches/AndroidStudio*',
-                 ],
-      :rmdir  => '~/AndroidStudioProjects'
+  zap delete: [
+                '~/Library/Preferences/AndroidStudio*',
+                '~/Library/Preferences/com.google.android.studio.plist',
+                '~/Library/Application Support/AndroidStudio*',
+                '~/Library/Logs/AndroidStudio*',
+                '~/Library/Caches/AndroidStudio*',
+              ],
+      rmdir:  '~/AndroidStudioProjects'
 
   caveats do
     depends_on_java

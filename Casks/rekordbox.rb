@@ -9,6 +9,6 @@ cask 'rekordbox' do
 
   pkg "Install_rekordbox_#{version.gsub('.', '_')}.pkg"
 
-  uninstall :pkgutil => 'com.pioneer.rekordbox.*',
-            :delete  => '/Applications/rekordbox 3/'
+  uninstall pkgutil: 'com.pioneer.rekordbox.*',
+            delete:  '/Applications/rekordbox 3/'
 end

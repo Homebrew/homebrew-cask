@@ -10,8 +10,8 @@ cask 'disconnect' do
 
   pkg 'Disconnect+Desktop.pkg'
 
-  uninstall :pkgutil => [
-                          'com.disconnect.pkg.DisconnectDependencies',
-                          'com.disconnect.pkg.DisconnectDesktop',
-                        ]
+  uninstall pkgutil: [
+                       'com.disconnect.pkg.DisconnectDependencies',
+                       'com.disconnect.pkg.DisconnectDesktop',
+                     ]
 end

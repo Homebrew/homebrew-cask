@@ -4,7 +4,7 @@ cask 'pusher' do
 
   url "https://github.com/noodlewerk/NWPusher/releases/download/#{version}/pusher.app.zip"
   appcast 'https://github.com/noodlewerk/NWPusher/releases.atom',
-          :sha256 => '5a5c4793b2a280dcd123f861fc9d9677a1deeb557f88e549ced80e5ecca697df'
+          checkpoint: '5a5c4793b2a280dcd123f861fc9d9677a1deeb557f88e549ced80e5ecca697df'
   name 'NWPusher'
   homepage 'https://github.com/noodlewerk/NWPusher'
   license :bsd

@@ -3,7 +3,7 @@ cask 'jce-unlimited-strength-policy' do
   sha256 'f3020a3922efd6626c2fff45695d527f34a8020e938a49292561f18ad1320b59'
 
   url "http://download.oracle.com/otn-pub/java/jce/#{version.split('.')[1]}/jce_policy-#{version.split('.')[1]}.zip",
-      :cookies => { 'oraclelicense' => 'accept-securebackup-cookie' }
+      cookies: { 'oraclelicense' => 'accept-securebackup-cookie' }
   name 'Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files'
   homepage "http://www.oracle.com/technetwork/java/javase/downloads/jce#{version.split('.')[1]}-download-2133166.html"
   license :gratis

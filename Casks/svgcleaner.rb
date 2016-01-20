@@ -10,5 +10,5 @@ cask 'svgcleaner' do
 
   app 'SVGCleaner.app'
 
-  zap :delete => '~/Library/Saved Application State/com.yourcompany.SVGCleaner.savedState'
+  zap delete: '~/Library/Saved Application State/com.yourcompany.SVGCleaner.savedState'
 end

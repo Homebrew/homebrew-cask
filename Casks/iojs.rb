@@ -7,12 +7,12 @@ cask 'iojs' do
   homepage 'https://iojs.org'
   license :oss
 
-  conflicts_with :formula => 'iojs'
+  conflicts_with formula: 'iojs'
 
   pkg "iojs-v#{version}.pkg"
 
-  uninstall :pkgutil => [
-                          'com.nodesource.iojs.npm.pkg',
-                          'com.nodesource.iojs.pkg',
-                        ]
+  uninstall pkgutil: [
+                       'com.nodesource.iojs.npm.pkg',
+                       'com.nodesource.iojs.pkg',
+                     ]
 end

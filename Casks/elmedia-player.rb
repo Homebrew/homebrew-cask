@@ -9,10 +9,10 @@ cask 'elmedia-player' do
 
   app 'Elmedia Player.app'
 
-  zap :delete => [
-                   '~/Library/Caches/com.Eltima.ElmediaPlayer',
-                   '~/Library/Preferences/com.Eltima.ElmediaPlayer.LSSharedFileList.plist',
-                   '~/Library/Preferences/com.Eltima.ElmediaPlayer.plist',
-                   '~/Library/Preferences/com.eltima.activator.xml',
-                 ]
+  zap delete: [
+                '~/Library/Caches/com.Eltima.ElmediaPlayer',
+                '~/Library/Preferences/com.Eltima.ElmediaPlayer.LSSharedFileList.plist',
+                '~/Library/Preferences/com.Eltima.ElmediaPlayer.plist',
+                '~/Library/Preferences/com.eltima.activator.xml',
+              ]
 end

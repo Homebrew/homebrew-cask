@@ -5,12 +5,12 @@ cask 'fenix' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/coreybutler/fenix/releases/download/v#{version}/fenix-osx-#{version}.zip"
   appcast 'https://github.com/coreybutler/fenix/releases.atom',
-          :sha256 => '57b8ed989956042b16b76844cb4c294c8b31e0aba29cd349ebb69d91588c2daa'
+          checkpoint: '57b8ed989956042b16b76844cb4c294c8b31e0aba29cd349ebb69d91588c2daa'
   name 'Fenix'
   homepage 'http://fenixwebserver.com/'
   license :gpl
 
-  container :nested => "Fenix_#{version}.dmg"
+  container nested: "Fenix_#{version}.dmg"
 
   app 'Fenix.app'
 end

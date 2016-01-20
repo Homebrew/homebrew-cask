@@ -20,8 +20,8 @@ cask 'sage' do
   homepage 'http://www.sagemath.org/'
   license :gpl
 
-  depends_on :macos => '>= :lion'
-  depends_on :arch => :x86_64
+  depends_on macos: '>= :lion'
+  depends_on arch: :x86_64
 
   if MacOS.release <= :yosemite
     app "Sage-#{version}.app"
@@ -31,10 +31,10 @@ cask 'sage' do
     binary "SageMath-#{version}.app/Contents/Resources/sage/sage"
   end
 
-  zap :delete => [
-                   '~/.sage',
-                   '~/Library/Logs/sage.log',
-                 ]
+  zap delete: [
+                '~/.sage',
+                '~/Library/Logs/sage.log',
+              ]
 
   caveats do
     files_in_usr_local

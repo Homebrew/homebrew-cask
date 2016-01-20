@@ -52,7 +52,7 @@ end
 def modified_cask_files
   return @modified_cask_files if defined? @modified_cask_files
   out = git(*%w[diff --name-only --diff-filter=AM], commit_range,
-            '--', CASK_DIR)
+            '--', "#{CASK_DIR}/*.rb")
   @modified_cask_files = out.split("\n")
 end
 

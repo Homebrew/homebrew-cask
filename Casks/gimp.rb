@@ -9,8 +9,8 @@ cask 'gimp' do
 
   app 'GIMP.app'
 
-  zap :delete => [
-                   '~/Library/Application Support/GIMP',
-                   '~/Library/Saved Application State/org.gnome.gimp.savedState',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/GIMP',
+                '~/Library/Saved Application State/org.gnome.gimp.savedState',
+              ]
 end

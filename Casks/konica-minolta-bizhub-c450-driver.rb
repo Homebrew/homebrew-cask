@@ -9,5 +9,5 @@ cask 'konica-minolta-bizhub-c450-driver' do
 
   pkg 'KONICAMINOLTA_C450_109.pkg'
 
-  uninstall :pkgutil => 'jp.konicaminolta.print.package.C450'
+  uninstall pkgutil: 'jp.konicaminolta.print.package.C450'
 end

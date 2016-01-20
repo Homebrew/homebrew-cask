@@ -4,7 +4,7 @@ cask 'fauxpas' do
 
   url "http://files.fauxpasapp.com/FauxPas-#{version}.tar.bz2"
   appcast 'http://api.fauxpasapp.com/appcast',
-          :sha256 => '478477793b0b317edeae2cda359bc0d180e8749ac72d11a5c71a5d9dab4a0f93'
+          checkpoint: '43efce1b93652e1adfbaa6df61534216972524f763d163e9fc1f5a48b89bcf54'
   name 'Faux Pas'
   homepage 'http://fauxpasapp.com'
   license :commercial

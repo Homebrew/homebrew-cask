@@ -5,7 +5,7 @@ cask 'toggldesktop' do
   # github.com is the official download host per the appcast feed
   url "https://github.com/toggl/toggldesktop/releases/download/v#{version}/TogglDesktop-#{version.dots_to_underscores}.dmg"
   appcast 'https://assets.toggl.com/installers/darwin_stable_appcast.xml',
-          :sha256 => '6641c717bb95709107b3a9dadf73db7c5aee2fda32bb7ba83ce3ee10bec61531'
+          checkpoint: 'cd00113cfce04e368dc0209d73d9bb07e46a97622eaf2611de02e2c6d8e21f31'
   name 'TogglDesktop'
   homepage 'https://www.toggl.com'
   license :bsd

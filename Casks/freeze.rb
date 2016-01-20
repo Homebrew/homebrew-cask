@@ -4,7 +4,7 @@ cask 'freeze' do
 
   url 'https://freezeapp.net/download/Freeze.zip'
   appcast 'https://freezeapp.net/appcast.xml',
-          :sha256 => '928237ec9bfca13666e922af26b965cb05f94e014937c32c14a3029c2b66c133'
+          checkpoint: '21c72159f3110653ec1e819791f17d1f9e08b93f441179d93a7a58a0897fb719'
   name 'Freeze'
   homepage 'https://freezeapp.net/'
   license :freemium

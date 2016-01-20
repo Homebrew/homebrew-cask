@@ -5,7 +5,7 @@ cask 'tunnelbear' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://tunnelbear.s3.amazonaws.com/downloads/mac/TunnelBear-#{version}.zip"
   appcast 'https://s3.amazonaws.com/tunnelbear/downloads/mac/appcast.xml',
-          :sha256 => '800dcdba4bf51951a84b9b9914d0d330f19ce67d6dcf6c103525e818cc4febf7'
+          checkpoint: '64c8c10bf8135ecdb1631363e95d9e22a458dc8c8daa9d658353c62c749798fb'
   name 'TunnelBear'
   homepage 'https://www.tunnelbear.com/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

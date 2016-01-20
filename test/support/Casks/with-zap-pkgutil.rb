@@ -7,5 +7,5 @@ test_cask 'with-zap-pkgutil' do
 
   pkg 'Fancy.pkg'
 
-  zap :pkgutil => 'my.fancy.package.*'
+  zap pkgutil: 'my.fancy.package.*'
 end

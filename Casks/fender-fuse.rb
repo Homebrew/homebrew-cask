@@ -10,6 +10,6 @@ cask 'fender-fuse' do
 
   pkg 'Fender FUSE Installer.app/Contents/Resources/Fender FUSE.pkg'
 
-  uninstall :pkgutil => 'com.Fender.pkg.FenderFUSE',
-            :delete  => '/Applications/Fender FUSE.app'
+  uninstall pkgutil: 'com.Fender.pkg.FenderFUSE',
+            delete:  '/Applications/Fender FUSE.app'
 end

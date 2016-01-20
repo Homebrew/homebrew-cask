@@ -9,10 +9,10 @@ cask 'ui-browser' do
 
   pkg 'UI Browser.pkg'
 
-  uninstall :pkgutil => [
-                          'com.pfiddlesoft.pkg.uibrowser',
-                          'com.pfiddlesoft.pkg.uielementscriptsfolder',
-                          'com.pfiddlesoft.pkg.pfassistiveframework',
-                          'com.pfiddlesoft.pkg.pfeventtapsframework',
-                        ]
+  uninstall pkgutil: [
+                       'com.pfiddlesoft.pkg.uibrowser',
+                       'com.pfiddlesoft.pkg.uielementscriptsfolder',
+                       'com.pfiddlesoft.pkg.pfassistiveframework',
+                       'com.pfiddlesoft.pkg.pfeventtapsframework',
+                     ]
 end

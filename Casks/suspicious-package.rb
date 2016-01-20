@@ -7,8 +7,8 @@ cask 'suspicious-package' do
   homepage 'http://www.mothersruin.com/software/SuspiciousPackage/'
   license :gratis
 
-  depends_on :formula => 'unar'
-  container :type => :generic_unar
+  depends_on formula: 'unar'
+  container type: :generic_unar
 
   qlplugin 'Suspicious Package.qlgenerator'
 end

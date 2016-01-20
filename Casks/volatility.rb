@@ -8,8 +8,8 @@ cask 'volatility' do
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   if Hardware::CPU.is_32_bit?
-    binary "volatility_#{version}.mac.standalone/volatility_#{version}_x86", :target => 'volatility'
+    binary "volatility_#{version}.mac.standalone/volatility_#{version}_x86", target: 'volatility'
   else
-    binary "volatility_#{version}.mac.standalone/volatility_#{version}_x64", :target => 'volatility'
+    binary "volatility_#{version}.mac.standalone/volatility_#{version}_x64", target: 'volatility'
   end
 end

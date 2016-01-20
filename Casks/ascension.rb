@@ -4,7 +4,7 @@ cask 'ascension' do
 
   url "https://github.com/ansilove/Ascension/releases/download/v#{version}/Ascension_v#{version}.zip"
   appcast 'https://github.com/ansilove/Ascension/releases.atom',
-          :sha256 => '0612470d68579a2a5b5be66d7ce7e0ba9c7c592a144f462da42f00aa463f8c11'
+          checkpoint: '0612470d68579a2a5b5be66d7ce7e0ba9c7c592a144f462da42f00aa463f8c11'
   name 'Ascension'
   homepage 'https://github.com/ansilove/Ascension'
   license :bsd

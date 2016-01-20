@@ -5,7 +5,7 @@ cask 'hear' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/prosoft-engineering/hear/Hear_#{version}.dmg"
   appcast 'https://www.prosofteng.com/resources/sparkle/sparkle.php?psProduct=Hear',
-          :sha256 => '70719bdb2692b7d14ac2e410c4c9b75a2849519169b819fd85f6cf99a8caaf13'
+          checkpoint: '70719bdb2692b7d14ac2e410c4c9b75a2849519169b819fd85f6cf99a8caaf13'
   name 'Hear'
   homepage 'https://www.prosofteng.com/hear/'
   license :commercial

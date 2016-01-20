@@ -7,7 +7,7 @@ cask 'tuneinstructor' do
   homepage 'http://www.tune-instructor.de/com/start.html'
   license :commercial
 
-  depends_on :macos => '>= :yosemite'
+  depends_on macos: '>= :yosemite'
 
   app 'Tune•Instructor.app'
 end

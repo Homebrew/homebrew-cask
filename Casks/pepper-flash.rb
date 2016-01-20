@@ -7,13 +7,13 @@ cask 'pepper-flash' do
   homepage 'https://get.adobe.com/flashplayer/otherversions'
   license :gratis
 
-  installer :manual => 'Install Adobe Flash Player.app'
+  installer manual: 'Install Adobe Flash Player.app'
 
-  uninstall :pkgutil => 'com.adobe.pkg.PepperFlashPlayer',
-            :delete  => '/Library/Internet Plug-Ins/PepperFlashPlayer.plugin'
+  uninstall pkgutil: 'com.adobe.pkg.PepperFlashPlayer',
+            delete:  '/Library/Internet Plug-Ins/PepperFlashPlayer.plugin'
 
-  zap       :delete => [
-                         '~/Library/Caches/Adobe/Flash Player',
-                         '~/Library/Logs/FlashPlayerInstallManager.log',
-                       ]
+  zap       delete: [
+                      '~/Library/Caches/Adobe/Flash Player',
+                      '~/Library/Logs/FlashPlayerInstallManager.log',
+                    ]
 end

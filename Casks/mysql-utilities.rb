@@ -7,9 +7,9 @@ cask 'mysql-utilities' do
   homepage 'https://dev.mysql.com/downloads/utilities/'
   license :gpl
 
-  depends_on :macos => '<= :yosemite'
+  depends_on macos: '<= :yosemite'
 
   pkg "mysql-utilities-#{version}.pkg"
 
-  uninstall :pkgutil => 'com.oracle.mysql.utilities'
+  uninstall pkgutil: 'com.oracle.mysql.utilities'
 end

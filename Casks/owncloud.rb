@@ -9,8 +9,8 @@ cask 'owncloud' do
 
   pkg "ownCloud-#{version}.pkg"
 
-  uninstall :pkgutil => [
-                          'com.ownCloud.client',
-                          'com.owncCloud.finderPlugin',
-                        ]
+  uninstall pkgutil: [
+                       'com.ownCloud.client',
+                       'com.owncCloud.finderPlugin',
+                     ]
 end

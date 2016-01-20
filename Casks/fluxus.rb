@@ -7,7 +7,7 @@ cask 'fluxus' do
   homepage 'http://www.pawfal.org/fluxus/'
   license :gpl
 
-  container :nested => "fluxus-#{version}.mac_intel.10.5.dmg"
+  container nested: "fluxus-#{version}.mac_intel.10.5.dmg"
 
   app 'Fluxus.app'
 end

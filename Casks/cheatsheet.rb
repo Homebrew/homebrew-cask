@@ -4,7 +4,7 @@ cask 'cheatsheet' do
 
   url "https://mediaatelier.com/CheatSheet/CheatSheet_#{version}.zip"
   appcast 'https://mediaatelier.com/CheatSheet/feed.php',
-          :sha256 => 'f6349cacc2bc850b37ad4d8a0a9b4e59f1491793ac0bb6b85081a550ca40455f'
+          checkpoint: '0912c51e295fc1eea483ec13e13960092fe4161eb7a2b7b08857e69e3219b776'
   name 'CheatSheet'
   homepage 'https://www.cheatsheetapp.com/CheatSheet/'
   license :gratis

@@ -9,5 +9,5 @@ cask 'astrill' do
 
   pkg 'Astrill Setup.mpkg'
 
-  uninstall :pkgutil => 'com.Astrill.app'
+  uninstall pkgutil: 'com.Astrill.app'
 end

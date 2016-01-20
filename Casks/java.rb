@@ -1,11 +1,11 @@
 cask 'java' do
-  version '1.8.0_66-b17'
-  sha256 'cd416de4f41f9f0a6984c456481437681674a717da62259740c54732f174fa08'
+  version '1.8.0_71-b15'
+  sha256 '72ccd63efb1775b3e4351f7b8c27d4f473d3c7bb098cb76c8d901517b3a7a506'
 
   url "http://download.oracle.com/otn-pub/java/jdk/#{version.sub(%r{^\d+\.(\d+).*?_(.*)$}, '\1u\2')}/jdk-#{version.sub(%r{^\d+\.(\d+).*?_(\d+)-.*$}, '\1u\2')}-macosx-x64.dmg",
-      :cookies => {
-                    'oraclelicense' => 'accept-securebackup-cookie'
-                  }
+      cookies: {
+                 'oraclelicense' => 'accept-securebackup-cookie',
+               }
   name 'Java Standard Edition Development Kit'
   homepage "http://www.oracle.com/technetwork/java/javase/downloads/jdk#{version.split('.')[1]}-downloads-2133151.html"
   license :gratis
@@ -35,37 +35,37 @@ cask 'java' do
     end
   end
 
-  uninstall :pkgutil   => [
-                            "com.oracle.jdk#{version.sub(%r{^\d+\.(\d+).*?_(\d+)-.*$}, '\1u\2')}",
-                            'com.oracle.jre',
-                          ],
-            :launchctl => [
-                            'com.oracle.java.Helper-Tool',
-                            'com.oracle.java.Java-Updater',
-                          ],
-            :quit      => [
-                            'com.oracle.java.Java-Updater',
-                            'net.java.openjdk.cmd', # Java Control Panel
-                          ],
-            :delete    => [
-                            '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin',
-                            "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents",
-                            '/Library/PreferencePanes/JavaControlPanel.prefPane',
-                            '/Library/Java/Home',
-                            if MacOS.release <= :mavericks
-                              [
-                                '/usr/lib/java/libjdns_sd.jnilib',
-                                '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK',
-                              ]
-                            end,
-                          ].keep_if { |v| !v.nil? }
-
-  zap       :delete => [
-                         '~/Library/Application Support/Oracle/Java',
-                         '~/Library/Caches/com.oracle.java.Java-Updater',
-                         '~/Library/Caches/net.java.openjdk.cmd',
+  uninstall pkgutil:   [
+                         "com.oracle.jdk#{version.sub(%r{^\d+\.(\d+).*?_(\d+)-.*$}, '\1u\2')}",
+                         'com.oracle.jre',
                        ],
-            :rmdir  => '~/Library/Application Support/Oracle/'
+            launchctl: [
+                         'com.oracle.java.Helper-Tool',
+                         'com.oracle.java.Java-Updater',
+                       ],
+            quit:      [
+                         'com.oracle.java.Java-Updater',
+                         'net.java.openjdk.cmd', # Java Control Panel
+                       ],
+            delete:    [
+                         '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin',
+                         "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents",
+                         '/Library/PreferencePanes/JavaControlPanel.prefPane',
+                         '/Library/Java/Home',
+                         if MacOS.release <= :mavericks
+                           [
+                             '/usr/lib/java/libjdns_sd.jnilib',
+                             '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK',
+                           ]
+                         end,
+                       ].keep_if { |v| !v.nil? }
+
+  zap       delete: [
+                      '~/Library/Application Support/Oracle/Java',
+                      '~/Library/Caches/com.oracle.java.Java-Updater',
+                      '~/Library/Caches/net.java.openjdk.cmd',
+                    ],
+            rmdir:  '~/Library/Application Support/Oracle/'
 
   caveats <<-EOS.undent
     This Cask makes minor modifications to the JRE to prevent issues with

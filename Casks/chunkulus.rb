@@ -7,7 +7,7 @@ cask 'chunkulus' do
   homepage 'http://presstube.com/blog/2011/chunkulus/'
   license :cc
 
-  depends_on :cask => 'adobe-air'
+  depends_on cask: 'adobe-air'
 
   screen_saver 'presstube-chunkulus.app/Contents/Resources/Presstube - Chunkulus.saver'
 

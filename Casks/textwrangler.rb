@@ -5,7 +5,7 @@ cask 'textwrangler' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/BBSW-download/TextWrangler_#{version}.dmg"
   appcast 'https://versioncheck.barebones.com/TextWrangler.xml',
-          :sha256 => '8f6727cab0d906edadf8e6860ca81df08c743845296321b6b4e98bde03852096'
+          checkpoint: '8f6727cab0d906edadf8e6860ca81df08c743845296321b6b4e98bde03852096'
   name 'TextWrangler'
   homepage 'http://www.barebones.com/products/textwrangler'
   license :gratis

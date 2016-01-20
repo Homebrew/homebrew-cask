@@ -9,5 +9,5 @@ cask 'avidcodecsle' do
 
   pkg 'AvidCodecsLE.pkg'
 
-  uninstall :pkgutil => 'com.avid.avidcodecsle'
+  uninstall pkgutil: 'com.avid.avidcodecsle'
 end

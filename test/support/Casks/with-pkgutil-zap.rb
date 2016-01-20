@@ -7,7 +7,7 @@ test_cask 'with-pkgutil-zap' do
 
   pkg 'Fancy.pkg'
 
-  zap :pkgutil   => 'my.fancy.package.*',
-      :kext      => 'my.fancy.package.kernelextension',
-      :launchctl => 'my.fancy.package.service'
+  zap pkgutil:   'my.fancy.package.*',
+      kext:      'my.fancy.package.kernelextension',
+      launchctl: 'my.fancy.package.service'
 end

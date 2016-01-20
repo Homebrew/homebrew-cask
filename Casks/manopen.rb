@@ -9,5 +9,5 @@ cask 'manopen' do
 
   app 'ManOpen.app'
   binary 'openman'
-  artifact 'openman.1', :target => '/usr/local/share/man/man1/openman.1'
+  artifact 'openman.1', target: '/usr/local/share/man/man1/openman.1'
 end

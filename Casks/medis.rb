@@ -5,7 +5,7 @@ cask 'medis' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/luin/medis/releases/download/v#{version}/Medis.for.OS.X.zip"
   appcast 'https://github.com/luin/medis/releases.atom',
-          :sha256 => '7a7879837d68b67ab464837bed94b4eb68a71be82b497b33daeb564f00f5a8bb'
+          checkpoint: '7a7879837d68b67ab464837bed94b4eb68a71be82b497b33daeb564f00f5a8bb'
   name 'Medis'
   homepage 'http://getmedis.com'
   license :mit

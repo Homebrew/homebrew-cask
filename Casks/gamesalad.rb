@@ -4,7 +4,7 @@ cask 'gamesalad' do
 
   url "http://releases.gamesalad.com/creator/#{version}/GameSalad-Creator-#{version}.dmg"
   appcast 'https://gamesalad.com/download/studioUpdates',
-          :sha256 => 'afbb3a8596b9569dd86f59cfd8d44a4837d2a54a7cbd7eb2b29b651dbf98d014'
+          checkpoint: 'afdcd138c9353dbaa9e60f0bd50efd78e10558744d2e40834f2eca4e04697f15'
   name 'GameSalad'
   homepage 'https://gamesalad.com/'
   license :commercial

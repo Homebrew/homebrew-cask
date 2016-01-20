@@ -9,16 +9,16 @@ cask 'mozyhome' do
 
   pkg 'MozyHome Installer.pkg'
 
-  uninstall :pkgutil => [
-                          'com.mozy.backup.pkg',
-                          'com.mozy.configpane',
-                          'com.mozy.status.pkg',
-                        ]
+  uninstall pkgutil: [
+                       'com.mozy.backup.pkg',
+                       'com.mozy.configpane',
+                       'com.mozy.status.pkg',
+                     ]
 
-  zap :delete => [
-                   '/Library/Application Support/MozyHome',
-                   '/Library/Caches/MozyHome',
-                   '~/Library/Preferences/com.mozy.decrypt.plist',
-                   '~/Library/Preferences/com.mozy.status.plist',
-                 ]
+  zap delete: [
+                '/Library/Application Support/MozyHome',
+                '/Library/Caches/MozyHome',
+                '~/Library/Preferences/com.mozy.decrypt.plist',
+                '~/Library/Preferences/com.mozy.status.plist',
+              ]
 end

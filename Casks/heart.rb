@@ -7,7 +7,7 @@ cask 'heart' do
   homepage 'http://presstube.com/blog/2011/heart/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  depends_on :cask => 'adobe-air'
+  depends_on cask: 'adobe-air'
 
   screen_saver 'presstube-heart.app/Contents/Resources/Presstube - Heart.saver'
 

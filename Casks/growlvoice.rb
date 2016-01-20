@@ -4,7 +4,7 @@ cask 'growlvoice' do
 
   url "http://www.growlvoice.com/trials/growlvoice-#{version}.zip"
   appcast 'http://www.growlvoice.com/trials/appcast.xml',
-          :sha256 => 'fe1d26972a9184bbe452eba1334f74e22b55fde54975a835c118532e243f7e92'
+          checkpoint: '415d7e6dcc19144b6f776d979521815c7d3768764d32a16c408890454d66ab83'
   name 'GrowlVoice'
   homepage 'http://www.growlvoice.com/'
   license :commercial

@@ -4,7 +4,7 @@ cask 'frizzix' do
 
   url "http://frizzix.de/downloads/Frizzix_#{version}.dmg"
   appcast 'http://frizzix.de/downloads/FrizzixUpdate.xml',
-          :sha256 => '424843fa7b6b19b0ca3ba17ff4042e751a56cbef122b6dc008b9cb903164606d'
+          checkpoint: '1e452fb9339f33941d46d3195b9d8b4a2e90c2ccd63d42fcbf303151247175f4'
   name 'Frizzix'
   homepage 'http://mac.frizzix.de/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

@@ -8,7 +8,7 @@ cask 'jaspersoft-studio' do
   homepage 'https://community.jaspersoft.com/project/jaspersoft-studio'
   license :oss
 
-  depends_on :arch => :x86_64
+  depends_on arch: :x86_64
 
   app "Jaspersoft Studio #{version}.final/Jaspersoft Studio.app"
 end

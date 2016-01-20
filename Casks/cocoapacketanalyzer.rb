@@ -4,7 +4,7 @@ cask 'cocoapacketanalyzer' do
 
   url "http://tastycocoabytes.com/_downloads/CPA_#{version.delete('.')}.dmg"
   appcast 'http://www.tastycocoabytes.com/cpa/updates/appcasting.php',
-          :sha256 => 'e5471a829511ba4c4dd1cbf89bc2ea091fe5f27cc5eaae19fecffc94f8384f8a'
+          checkpoint: '01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b'
   name 'Cocoa Packet Analyzer'
   homepage 'http://www.tastycocoabytes.com/cpa/'
   license :gratis

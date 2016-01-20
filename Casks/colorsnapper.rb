@@ -5,18 +5,18 @@ cask 'colorsnapper' do
   # amazonaws.com is the official download host per the appcast feed
   url "https://s3.amazonaws.com/cs2-binaries/ColorSnapper2-#{version.gsub('.', '_')}.zip"
   appcast 'http://colorsnapper.com/app/appcast.xml',
-          :sha256 => '9daf5dda4d8111b524b89f4a79ecf489793151f8c62d6d5c31aa64a663512957'
+          checkpoint: '7be12d5557005c859548ed40e93e5ce57147f9cab7b4cb50a1a88e3bb01e4a33'
   name 'ColorSnapper 2'
   homepage 'http://colorsnapper.com/'
   license :commercial
 
   app 'ColorSnapper2.app'
 
-  uninstall :quit => 'com.koolesache.ColorSnapper2'
+  uninstall quit: 'com.koolesache.ColorSnapper2'
 
-  zap :delete => [
-                   '~/Library/Application Support/ColorSnapper2',
-                   '~/Library/Caches/com.koolesache.ColorSnapper2',
-                   '~/Library/Preferences/com.koolesache.ColorSnapper2.plist',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/ColorSnapper2',
+                '~/Library/Caches/com.koolesache.ColorSnapper2',
+                '~/Library/Preferences/com.koolesache.ColorSnapper2.plist',
+              ]
 end

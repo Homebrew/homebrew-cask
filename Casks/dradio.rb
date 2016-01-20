@@ -4,7 +4,7 @@ cask 'dradio' do
 
   url "http://dradio.me/updates/dRadio-#{version.sub(%r{.*_}, '')}.zip"
   appcast 'http://dradio.me/updates/appcast.xml',
-          :sha256 => 'e46ae0c86e7204db96da7b950845ab145151c646eb060972bf2920b77173ab0d'
+          checkpoint: '8015cab2f43ad05aeff7b6cab2151b77878ec30663079b9c61abce71fa2b617d'
   name 'dRadio'
   homepage 'http://dradio.me'
   license :gratis

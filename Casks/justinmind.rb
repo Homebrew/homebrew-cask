@@ -10,5 +10,5 @@ cask 'justinmind' do
 
   pkg 'Justinmind.pkg'
 
-  uninstall :pkgutil => 'com.justinmind.justinmindprototyper631.pkg'
+  uninstall pkgutil: 'com.justinmind.justinmindprototyper631.pkg'
 end

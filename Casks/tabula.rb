@@ -4,7 +4,7 @@ cask 'tabula' do
 
   url "https://github.com/jazzido/tabula/releases/download/v#{version}/tabula-mac-#{version}.zip"
   appcast 'https://github.com/jazzido/tabula/releases.atom',
-          :sha256 => '2e20dc186a93930ca4b59fe694ba278c4171776a19c6942273d1b6510d05755d'
+          checkpoint: '7f31dc12d85d261d05d3b57f1e432f24a3d8dacc0986f16e266db6cd4941a57d'
   name 'Tabula'
   homepage 'http://tabula.technology/'
   license :mit

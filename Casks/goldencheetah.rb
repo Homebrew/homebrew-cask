@@ -12,7 +12,7 @@ cask 'goldencheetah' do
   end
 
   appcast 'https://github.com/GoldenCheetah/GoldenCheetah/releases.atom',
-          :sha256 => 'e62261f0cf3a43f5ae3c8c7211ef22016d2d271025b7bbc31f8d9b3da0867f5d'
+          checkpoint: 'e62261f0cf3a43f5ae3c8c7211ef22016d2d271025b7bbc31f8d9b3da0867f5d'
   name 'GoldenCheetah'
   homepage 'http://www.goldencheetah.org/'
   license :gpl

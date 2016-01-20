@@ -4,12 +4,12 @@ cask 'power-manager' do
 
   url "http://www.dssw.co.uk/powermanager/dsswpowermanager-#{version.no_dots}.dmg"
   appcast 'https://version.dssw.co.uk/powermanager/application',
-          :sha256 => '6264d35d55220a128a1025cd50d3b22f70eeb15bbaf09b40ceacb50971a047fc'
+          checkpoint: '968a2262cc5e5bc817682cceb4d75d18ea2f8efc8e829b2ef812b2f9fedda081'
   name 'Power Manager'
   homepage 'https://www.dssw.co.uk/powermanager'
   license :commercial
 
   pkg 'DssW Power Manager.pkg'
 
-  uninstall :script => '/Library/Application Support/Power Manager/Remove Power Manager.app/Contents/Resources/Remove Power Manager.sh'
+  uninstall script: '/Library/Application Support/Power Manager/Remove Power Manager.app/Contents/Resources/Remove Power Manager.sh'
 end

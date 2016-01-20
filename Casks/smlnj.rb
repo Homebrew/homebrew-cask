@@ -10,5 +10,5 @@ cask 'smlnj' do
 
   pkg "smlnj-x86-#{version}.pkg"
 
-  uninstall :pkgutil => 'org.smlnj.x86.pkg'
+  uninstall pkgutil: 'org.smlnj.x86.pkg'
 end

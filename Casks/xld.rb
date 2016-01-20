@@ -5,7 +5,7 @@ cask 'xld' do
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/xld/xld-#{version.no_dots}.dmg"
   appcast 'https://svn.code.sf.net/p/xld/code/appcast/xld-appcast_e.xml',
-          :sha256 => 'e3e922ec70236a3fb605e6ed01e3d312fe3cf0c8e59943e5f9b00fbb3b3051ca'
+          checkpoint: 'c4658828a87e26aad584edf9c0d6414ca45037c7219fb3d5889cac3e2578da33'
   name 'X Lossless Decoder'
   name 'XLD'
   homepage 'http://tmkk.undo.jp/xld/index_e.html'
@@ -13,10 +13,10 @@ cask 'xld' do
 
   app 'XLD.app'
 
-  zap :delete => [
-                   '~/Library/Application Support/XLD',
-                   '~/Library/Preferences/jp.tmkk.XLD.plist',
-                   '~/Library/Caches/jp.tmkk.XLD',
-                   '~/Library/Saved Application State/jp.tmkk.XLD.savedState',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/XLD',
+                '~/Library/Preferences/jp.tmkk.XLD.plist',
+                '~/Library/Caches/jp.tmkk.XLD',
+                '~/Library/Saved Application State/jp.tmkk.XLD.savedState',
+              ]
 end

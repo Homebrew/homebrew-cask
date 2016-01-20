@@ -4,7 +4,7 @@ cask 'cookie' do
 
   url 'https://sweetpproductions.com/products/cookie/Cookie.dmg'
   appcast 'https://sweetpproductions.com/products/cookie/appcast.xml',
-          :sha256 => '21c4d103e45e35c8b5a75e851b9981cf75ccafa2acabc4cc2667b3f378a5cc61'
+          checkpoint: 'eb19a184c68b0c976ee0aeb3f454b32246b3bc47a54564264356fe7a8a21d3d7'
   name 'Cookie'
   homepage 'https://sweetpproductions.com/'
   license :commercial

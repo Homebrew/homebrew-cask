@@ -5,7 +5,7 @@ cask 'hachidori' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/chikorita157/hachidori/releases/download/#{version}/Hachidori-#{version}.zip"
   appcast 'https://github.com/chikorita157/hachidori/releases.atom',
-          :sha256 => 'b77dc40831d44d712e81693e73217f9f6d43accb5ae7552709a3bf4b8be1b9a6'
+          checkpoint: 'b77dc40831d44d712e81693e73217f9f6d43accb5ae7552709a3bf4b8be1b9a6'
   name 'Hachidori'
   homepage 'http://hachidori.ateliershiori.moe'
   license :bsd

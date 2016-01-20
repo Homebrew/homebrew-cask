@@ -4,12 +4,12 @@ cask 'menucalendarclock-ical' do
 
   url "http://www.objectpark.net/download/MenuCalendarClock-#{version}.dmg.gz"
   appcast 'http://www.objectpark.net/appcasts/MCC3.xml',
-          :sha256 => 'd257aeaf7c2b2e59f845dedd8fa65e2fb715b7750211b66a5c471582ab9dcf67'
+          checkpoint: '9f4c08ee81336e11eaf2d0dcced9e15ed31b37657401453d6059eda571371c1c'
   name 'MenuCalendarClock'
   homepage 'http://www.objectpark.net/en/mcc.html'
   license :freemium
 
-  container :nested => "menucalendarclock-ical-#{version}"
+  container nested: "menucalendarclock-ical-#{version}"
 
   app 'MenuCalendarClock iCal.app'
 end

@@ -10,15 +10,15 @@ cask 'gdal-framework' do
   pkg 'GDAL Complete.pkg'
   pkg 'Numpy.pkg'
 
-  uninstall :pkgutil => [
-                          'org.maptools.proj-framework-snow',
-                          'org.sqlite.sqlite3b-framework-snow',
-                          'com.kyngchaos.UnixImageIO-framework-E-lion',
-                          'org.gdal.gdal111-framework-lion',
-                          'net.refractions.geos-framework-snow',
-                          'org.scipy.numpy-lion',
-                          'org.scipy.numpy-snow',
-                        ]
+  uninstall pkgutil: [
+                       'org.maptools.proj-framework-snow',
+                       'org.sqlite.sqlite3b-framework-snow',
+                       'com.kyngchaos.UnixImageIO-framework-E-lion',
+                       'org.gdal.gdal111-framework-lion',
+                       'net.refractions.geos-framework-snow',
+                       'org.scipy.numpy-lion',
+                       'org.scipy.numpy-snow',
+                     ]
 
   caveats do
     depends_on_java

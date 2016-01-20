@@ -4,7 +4,7 @@ cask 'activity-audit' do
 
   url "https://www.dssw.co.uk/activityaudit/dsswactivityaudit-#{version.delete('.')}.dmg"
   appcast 'https://version.dssw.co.uk/activityaudit/standard',
-          :sha256 => 'ac63a66d06ecf116f7ad04b5b680b12f0534e07685e6eb9dfe4e13f9b03ce508'
+          checkpoint: '5f9d1cbe7a9b3b1024fe88c4cc561d48c5eb2b93e5e912fa06ab0bf80c2e53d8'
   name 'Activity Audit'
   homepage 'https://www.dssw.co.uk/activityaudit'
   license :commercial

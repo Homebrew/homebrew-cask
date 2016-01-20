@@ -9,5 +9,5 @@ cask 'eye-fi' do
 
   pkg 'Eye-Fi.mpkg'
 
-  uninstall :pkgutil => 'fi.eye.*'
+  uninstall pkgutil: 'fi.eye.*'
 end

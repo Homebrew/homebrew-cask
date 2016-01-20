@@ -4,7 +4,7 @@ cask 'acorn' do
 
   url 'https://secure.flyingmeat.com/download/Acorn.zip'
   appcast 'http://www.flyingmeat.com/download/acorn5update.xml',
-          :sha256 => '8b69771372799594671232942d939bbaa4feeeaf02ef632fe1269eb6768b5576'
+          checkpoint: 'b2909976dfa2c42442e2ab18fb5477c1622eb468361c77e4cfa705b58338269c'
   name 'Acorn'
   homepage 'http://flyingmeat.com/acorn/'
   license :commercial

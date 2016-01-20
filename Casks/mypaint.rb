@@ -10,5 +10,5 @@ cask 'mypaint' do
 
   pkg "MyPaint-#{version}.pkg"
 
-  uninstall :pkgutil => 'com.mypaint.*'
+  uninstall pkgutil: 'com.mypaint.*'
 end

@@ -9,15 +9,15 @@ cask 'heroku-toolbelt' do
 
   pkg 'heroku-toolbelt.pkg'
 
-  uninstall :pkgutil => 'com.heroku.toolbelt',
-            :delete  => [
-                          '/usr/local/heroku',
-                          '/usr/bin/heroku',
-                          '/usr/local/foreman',
-                          '/usr/bin/foreman',
-                        ]
+  uninstall pkgutil: 'com.heroku.toolbelt',
+            delete:  [
+                       '/usr/local/heroku',
+                       '/usr/bin/heroku',
+                       '/usr/local/foreman',
+                       '/usr/bin/foreman',
+                     ]
 
-  zap       :delete => '~/.heroku'
+  zap       delete: '~/.heroku'
 
   caveats do
     files_in_usr_local

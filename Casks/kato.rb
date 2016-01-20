@@ -9,5 +9,5 @@ cask 'kato' do
 
   pkg 'Kato.pkg'
 
-  uninstall :pkgutil => 'Kato'
+  uninstall pkgutil: 'Kato'
 end

@@ -7,9 +7,9 @@ cask 'puppet' do
   homepage 'https://puppetlabs.com/'
   license :apache
 
-  depends_on :cask => 'facter'
+  depends_on cask: 'facter'
 
   pkg "puppet-#{version}.pkg"
 
-  uninstall :pkgutil => 'com.puppetlabs.puppet'
+  uninstall pkgutil: 'com.puppetlabs.puppet'
 end

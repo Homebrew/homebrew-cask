@@ -4,7 +4,7 @@ cask 'piglet' do
 
   url "https://github.com/jenslind/piglet/releases/download/v#{version}/Piglet.zip"
   appcast 'https://github.com/jenslind/piglet/releases.atom',
-          :sha256 => '31ffbcc1c5530ecf7e8e19caff41265c1631197b38bc873d9410800cbfbf7910'
+          checkpoint: '31ffbcc1c5530ecf7e8e19caff41265c1631197b38bc873d9410800cbfbf7910'
   name 'Piglet'
   homepage 'https://github.com/jenslind/piglet'
   license :mit

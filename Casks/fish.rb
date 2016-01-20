@@ -9,5 +9,5 @@ cask 'fish' do
 
   pkg 'fish.pkg'
 
-  uninstall :pkgutil => 'com.ridiculousfish.fish-shell-pkg'
+  uninstall pkgutil: 'com.ridiculousfish.fish-shell-pkg'
 end

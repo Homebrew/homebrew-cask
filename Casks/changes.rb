@@ -5,7 +5,7 @@ cask 'changes' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://bitbq_changes.s3.amazonaws.com/changes-#{version}.zip"
   appcast 'https://bitbq_changes.s3.amazonaws.com/changes-production.xml',
-          :sha256 => 'c1224334faffe115ed11ff3e69edcfde305e28687f48d18e870b65289e6136df'
+          checkpoint: '524b59ed2fd0b0cb7829bfa7d4729769d169dc6e391a113550082d44fd831806'
   name 'Changes'
   homepage 'http://martiancraft.com/products/changes.html'
   license :commercial
@@ -13,9 +13,9 @@ cask 'changes' do
   app 'Changes.app'
   binary 'Changes.app/Contents/Resources/chdiff'
 
-  zap :delete => [
-                   '~/Library/Preferences/com.bitbq.Changes.plist',
-                   '~/Library/Application Support/Changes',
-                   '~/Library/Caches/com.bitbq.Changes',
-                 ]
+  zap delete: [
+                '~/Library/Preferences/com.bitbq.Changes.plist',
+                '~/Library/Application Support/Changes',
+                '~/Library/Caches/com.bitbq.Changes',
+              ]
 end

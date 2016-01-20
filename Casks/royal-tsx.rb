@@ -4,7 +4,7 @@ cask 'royal-tsx' do
 
   url "http://v2.royaltsx.com/updates/royaltsx_#{version}.dmg"
   appcast 'http://v2.royaltsx.com/updates_beta.php',
-          :sha256 => '51ac7cd5b6f296d5b28d6d8f959e4e01d29ca28d4742eebe25c061d18f5d649c'
+          checkpoint: '0241765a554d894e57fab64b53395091bcb575003ebaed65da1f119ad4fbee40'
   name 'Royal TSX'
   homepage 'http://www.royaltsx.com'
   license :freemium

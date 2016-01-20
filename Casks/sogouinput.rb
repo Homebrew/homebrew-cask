@@ -8,7 +8,7 @@ cask 'sogouinput' do
   homepage 'http://pinyin.sogou.com/mac/'
   license :gratis
 
-  installer :manual => '安装搜狗输入法.app'
+  installer manual: '安装搜狗输入法.app'
 
-  uninstall :delete => '/Library/Input Methods/SogouInput.app'
+  uninstall delete: '/Library/Input Methods/SogouInput.app'
 end

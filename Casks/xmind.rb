@@ -7,12 +7,12 @@ cask 'xmind' do
   homepage 'https://www.xmind.net'
   license :freemium
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
   app 'XMind.app'
 
-  zap :delete => [
-                   '~/Library/XMind',
-                   '~/Library/Saved Application State/org.xmind.cathy.application.savedState',
-                 ]
+  zap delete: [
+                '~/Library/XMind',
+                '~/Library/Saved Application State/org.xmind.cathy.application.savedState',
+              ]
 end

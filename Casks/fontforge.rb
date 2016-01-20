@@ -4,12 +4,12 @@ cask 'fontforge' do
 
   url "https://github.com/fontforge/fontforge/releases/download/#{version.delete('-')}/Fontforge-#{version}-Terminal_only.dmg"
   appcast 'https://github.com/fontforge/fontforge/releases.atom',
-          :sha256 => '798b4528144c6f8a7bb3ae6644029f45c3006382cbcdcdd49e95fb5e6bfba96f'
+          checkpoint: '798b4528144c6f8a7bb3ae6644029f45c3006382cbcdcdd49e95fb5e6bfba96f'
   name 'FontForge'
   homepage 'https://fontforge.github.io/en-US/'
   license :bsd
 
-  depends_on :x11 => true
+  depends_on x11: true
 
   app 'FontForge.app'
 

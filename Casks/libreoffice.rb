@@ -14,7 +14,7 @@ cask 'libreoffice' do
   homepage 'https://www.libreoffice.org/'
   license :mpl
   gpg "#{url}.asc",
-      :key_id => 'c2839ecad9408fbe9531c3e9f434a1efafeeaea3'
+      key_id: 'c2839ecad9408fbe9531c3e9f434a1efafeeaea3'
 
   app 'LibreOffice.app'
   binary 'LibreOffice.app/Contents/MacOS/gengal'

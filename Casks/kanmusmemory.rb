@@ -4,7 +4,7 @@ cask 'kanmusmemory' do
 
   url "http://relog.xii.jp/download/kancolle/KanmusuMemory-#{version}-mac.dmg"
   appcast 'https://github.com/ioriayane/KanmusuMemory/releases.atom',
-          :sha256 => 'f8cddbd8afc99bff82204851ed915bf9f8246499cc870ee7481ec24135e29faa'
+          checkpoint: 'f8cddbd8afc99bff82204851ed915bf9f8246499cc870ee7481ec24135e29faa'
   name 'KanmusuMemory'
   homepage 'http://relog.xii.jp/mt5r/2013/08/post-349.html'
   license :apache

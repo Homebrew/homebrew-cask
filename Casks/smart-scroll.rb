@@ -7,7 +7,7 @@ cask 'smart-scroll' do
   homepage 'http://www.marcmoini.com/sx_en.html'
   license :commercial
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
   prefpane "Smart Scroll #{version}.prefPane"
 end

@@ -8,8 +8,8 @@ cask 'logmein-hamachi' do
   homepage 'https://vpn.net'
   license :freemium
 
-  installer :script => 'LogMeInHamachiInstaller.app/Contents/MacOS/Lili',
-            :args   => ['-s']
+  installer script: 'LogMeInHamachiInstaller.app/Contents/MacOS/Lili',
+            args:   ['-s']
 
-  uninstall :script => '/Applications/LogMeIn Hamachi/HamachiUninstaller.app/Contents/Resources/uninstaller.sh'
+  uninstall script: '/Applications/LogMeIn Hamachi/HamachiUninstaller.app/Contents/Resources/uninstaller.sh'
 end

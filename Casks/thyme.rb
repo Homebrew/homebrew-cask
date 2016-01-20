@@ -4,7 +4,7 @@ cask 'thyme' do
 
   url "https://github.com/joaomoreno/thyme/releases/download/#{version}/Thyme.#{version}.dmg"
   appcast 'https://github.com/joaomoreno/thyme/releases.atom',
-          :sha256 => '05388198ae32566498217e07231e5908c53127ed33ac2152c629ca867c6c1fda'
+          checkpoint: '05388198ae32566498217e07231e5908c53127ed33ac2152c629ca867c6c1fda'
   name 'Thyme'
   homepage 'https://joaomoreno.github.io/thyme/'
   license :mit

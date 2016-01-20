@@ -17,18 +17,18 @@ cask 'wkhtmltopdf' do
   homepage 'http://wkhtmltopdf.org/'
   license :gpl
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
-  uninstall :pkgutil => 'org.wkhtmltopdf.wkhtmltox',
-            :delete  => [
-                          '/usr/local/include/wkhtmltox',
-                          '/usr/local/lib/libwkhtmltox.dylib',
-                          "/usr/local/lib/libwkhtmltox.#{version.to_i}.dylib",
-                          "/usr/local/lib/libwkhtmltox.#{version.to_f}.dylib",
-                          "/usr/local/lib/libwkhtmltox.#{version.sub(%r{-.*$}, '')}.dylib",
-                          '/usr/local/bin/wkhtmltoimage',
-                          '/usr/local/bin/wkhtmltopdf',
-                        ]
+  uninstall pkgutil: 'org.wkhtmltopdf.wkhtmltox',
+            delete:  [
+                       '/usr/local/include/wkhtmltox',
+                       '/usr/local/lib/libwkhtmltox.dylib',
+                       "/usr/local/lib/libwkhtmltox.#{version.to_i}.dylib",
+                       "/usr/local/lib/libwkhtmltox.#{version.to_f}.dylib",
+                       "/usr/local/lib/libwkhtmltox.#{version.sub(%r{-.*$}, '')}.dylib",
+                       '/usr/local/bin/wkhtmltoimage',
+                       '/usr/local/bin/wkhtmltopdf',
+                     ]
 
   caveats do
     files_in_usr_local

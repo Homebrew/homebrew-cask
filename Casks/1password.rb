@@ -16,8 +16,8 @@ cask '1password' do
 
     app "1Password #{version.major}.app"
   else
-    version '6.0'
-    sha256 '15a70e05fb57b34fcea301758c1d33023129d5aeac2b99e2436b9c92098eb8cb'
+    version '6.0.1'
+    sha256 '5e89ae6264f7551f38fab79ad7974048a6b30a60a99d33b8d215f9f9c34ee7a8'
 
     # cloudfront.net is the official download host per the vendor homepage
     url "https://d13itkw33a7sus.cloudfront.net/dist/1P/mac4/1Password-#{version}.zip"
@@ -31,10 +31,10 @@ cask '1password' do
 
   auto_updates true
 
-  zap :delete => [
-                   '~/Library/Application Scripts/2BUA8C4S2C.com.agilebits.onepassword-osx-helper',
-                   '~/Library/Containers/2BUA8C4S2C.com.agilebits.onepassword-osx-helper',
-                   '~/Library/Containers/com.agilebits.onepassword-osx',
-                   '~/Library/Group Containers/2BUA8C4S2C.com.agilebits',
-                 ]
+  zap delete: [
+                '~/Library/Application Scripts/2BUA8C4S2C.com.agilebits.onepassword-osx-helper',
+                '~/Library/Containers/2BUA8C4S2C.com.agilebits.onepassword-osx-helper',
+                '~/Library/Containers/com.agilebits.onepassword-osx',
+                '~/Library/Group Containers/2BUA8C4S2C.com.agilebits',
+              ]
 end

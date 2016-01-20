@@ -4,16 +4,16 @@ cask 'aluxian-messenger' do
 
   url "https://github.com/Aluxian/Facebook-Messenger-Desktop/releases/download/v#{version}/Messenger.dmg"
   appcast 'https://github.com/Aluxian/Facebook-Messenger-Desktop/releases.atom',
-          :sha256 => '6bb7e2550d9aa55a8d7dbe828a9e9b8f8444a236734107be8eebe6c1b25ea0e3'
+          checkpoint: '6bb7e2550d9aa55a8d7dbe828a9e9b8f8444a236734107be8eebe6c1b25ea0e3'
   name 'Messenger'
   homepage 'http://messengerfordesktop.com/'
   license :oss
 
   app 'Messenger.app'
 
-  zap :delete => [
-                   '~/Library/Preferences/com.aluxian.messengerfordesktop.plist',
-                   '~/Library/Application Support/Messenger/',
-                   '~/Library/Saved Application State/com.aluxian.messengerfordesktop.savedState/',
-                 ]
+  zap delete: [
+                '~/Library/Preferences/com.aluxian.messengerfordesktop.plist',
+                '~/Library/Application Support/Messenger/',
+                '~/Library/Saved Application State/com.aluxian.messengerfordesktop.savedState/',
+              ]
 end

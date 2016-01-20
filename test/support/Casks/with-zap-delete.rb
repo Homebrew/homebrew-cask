@@ -7,10 +7,10 @@ test_cask 'with-zap-delete' do
 
   pkg 'Fancy.pkg'
 
-  zap :delete => [
-                   '/permissible/absolute/path',
-                   '~/permissible/path/with/tilde',
-                   'impermissible/relative/path',
-                   '/another/impermissible/../relative/path',
-                 ]
+  zap delete: [
+                '/permissible/absolute/path',
+                '~/permissible/path/with/tilde',
+                'impermissible/relative/path',
+                '/another/impermissible/../relative/path',
+              ]
 end

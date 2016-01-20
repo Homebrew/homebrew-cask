@@ -30,7 +30,7 @@ cask 'textexpander' do
 
     url "https://dl.smilesoftware.com/com.smileonmymac.textexpander/#{version.sub(%r{-.*}, '')}/#{version.sub(%r{.*-}, '')}/TextExpander-#{version.sub(%r{-.*}, '')}.zip"
     appcast 'https://updates.smilesoftware.com/com.smileonmymac.textexpander.xml',
-            :sha256 => '65f23f21d5b01119e939eef7bcedb5453b80e27e4076cbb4991e68bfce0db636'
+            checkpoint: 'cc78825ef59a9e785f64f78178d19f840495eec3e564a6b3ca8661cac4d2029b'
   end
 
   name 'TextExpander'
@@ -42,7 +42,7 @@ cask 'textexpander' do
 
   app 'TextExpander.app'
 
-  uninstall :login_item => 'TextExpander'
+  uninstall login_item: 'TextExpander'
 
-  zap :delete => '~/Library/Application Support/TextExpander/'
+  zap delete: '~/Library/Application Support/TextExpander/'
 end

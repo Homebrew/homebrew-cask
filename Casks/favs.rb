@@ -5,7 +5,7 @@ cask 'favs' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3-eu-west-1.amazonaws.com/bucket.apperdeck.com/favsapp/Favs_#{version}.zip"
   appcast 'http://www.apperdeck.com/shine/appcast_favs.php',
-          :sha256 => 'ee1fd47740641e80ff66fe8f6f456cc5c1a8b5202f9045f8e3ee3b023fbbc89c'
+          checkpoint: '3dcf55592e3461830c5d2d5b2ea875afafb684d483822f2894ea356dfe8dabc3'
   name 'Favs'
   homepage 'http://www.favsapp.com'
   license :commercial

@@ -4,7 +4,7 @@ cask 'mjolnir' do
 
   url "https://github.com/sdegutis/mjolnir/releases/download/#{version}/Mjolnir-#{version}.tgz"
   appcast 'https://github.com/sdegutis/mjolnir/releases.atom',
-          :sha256 => 'bcbd84dc837113b342a6f780109b23825f3d6c6c208c7b68a193560eab832d80'
+          checkpoint: 'bcbd84dc837113b342a6f780109b23825f3d6c6c208c7b68a193560eab832d80'
   name 'Mjolnir'
   homepage 'http://mjolnir.io'
   license :mit

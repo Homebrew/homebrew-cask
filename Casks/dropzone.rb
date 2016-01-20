@@ -4,7 +4,7 @@ cask 'dropzone' do
 
   url "https://aptonic.com/dropzone3/sparkle/Dropzone-#{version}.zip"
   appcast 'https://aptonic.com/dropzone3/sparkle/updates.xml',
-          :sha256 => 'e8758519f737d337f770f7c1983bc477e6aac4d004301f66994c08ef8b851160'
+          checkpoint: 'bcf0cbe0e40b87a1111c8bc0254588ab7ab4c9c4db77db4cf94ee46aa3c1db3e'
   name 'Dropzone'
   homepage 'https://aptonic.com'
   license :commercial

@@ -4,7 +4,7 @@ cask 'super-otr' do
 
   url "http://apfel-a.macbay.de/wordpress/wp-content/plugins/download-monitor/download.php?id=Super-OTR-#{version}.zip"
   appcast 'http://apfel-a.macbay.de/software/superotr/appcast-superotr.xml',
-          :sha256 => '191fa832fae581006bbc419d37acbb59121a3aefcdebefe0364a6f8e216bcca2'
+          checkpoint: 'e6b1c672d73b888eb2a8533258b7c8b9dcb093d92c55ac5adc84838edb2b33ab'
   name 'Super OTR'
   homepage 'http://apfel-a.macbay.de/super-otr/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

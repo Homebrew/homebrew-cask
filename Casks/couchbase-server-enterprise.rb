@@ -4,7 +4,7 @@ cask 'couchbase-server-enterprise' do
 
   url "http://packages.couchbase.com/releases/#{version}/couchbase-server-enterprise_#{version}-macos_x86_64.zip"
   appcast 'http://appcast.couchbase.com/membasex.xml',
-          :sha256 => 'f05312af8660b51401dd70cd55ddedeb6de551d5b92372ab155906bc597c9ec7'
+          checkpoint: '92ed75092bb887de84b8e2204a44794e18992f8191383cc32d60eae68bf44cd3'
   name 'Couchbase Server'
   homepage 'http://www.couchbase.com/'
   license :apache

@@ -5,14 +5,14 @@ cask 'pandoc' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/jgm/pandoc/releases/download/#{version.major_minor}/pandoc-#{version}-osx.pkg"
   appcast 'https://github.com/jgm/pandoc/releases.atom',
-          :sha256 => '4c31cd4d0b9cb39fac7c6fa9d4a3d5ee99e622a84097cd9d57d7f3130241bf00'
+          checkpoint: '7b51379fd131045dda0f2bf5edddaa2428c3b1db7f331a3a48d4e6eafb9b5922'
   name 'Pandoc'
   homepage 'http://pandoc.org/'
   license :gpl
 
-  conflicts_with :formula => 'pandoc'
+  conflicts_with formula: 'pandoc'
 
   pkg "pandoc-#{version}-osx.pkg"
 
-  uninstall :pkgutil => 'net.johnmacfarlane.pandoc'
+  uninstall pkgutil: 'net.johnmacfarlane.pandoc'
 end

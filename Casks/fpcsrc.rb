@@ -10,5 +10,5 @@ cask 'fpcsrc' do
 
   pkg "fpcsrc-#{version}.pkg"
 
-  uninstall :pkgutil => 'org.freepascal.fpc.source'
+  uninstall pkgutil: 'org.freepascal.fpc.source'
 end

@@ -4,7 +4,7 @@ cask 'hands-off' do
 
   url "https://www.oneperiodic.com/files/Hands%20Off!%20v#{version}.dmg"
   appcast "http://www.oneperiodic.com/handsoff#{version.major}.xml",
-          :sha256 => 'ee501580e9352c394f080d3f7ca98715a9ee0ec5c6e1fdb578fe8ad527aa274a'
+          checkpoint: '3a5f3878cc4cd3a658d3969d4778222e027aefe2dd65a4836cd64ff4f671cd0e'
   name 'Hands Off!'
   homepage 'https://www.oneperiodic.com/products/handsoff/'
   license :commercial
@@ -15,5 +15,5 @@ cask 'hands-off' do
     suppress_move_to_applications
   end
 
-  zap :delete => '~/Library/Preferences/com.metakine.handsoff.plist'
+  zap delete: '~/Library/Preferences/com.metakine.handsoff.plist'
 end

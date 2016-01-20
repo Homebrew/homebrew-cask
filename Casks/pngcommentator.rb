@@ -4,7 +4,7 @@ cask 'pngcommentator' do
 
   url "http://www.echomist.co.uk/software/downloads/PNGCommentator_#{version}.dmg"
   appcast 'http://www.echomist.co.uk/Sparkle/PNGCommentator.xml',
-          :sha256 => 'db3af91a76bdb1ed47e62c7ab150e7dbb0917ba3c040c6dba6b891c0ac0bb0f6'
+          checkpoint: 'db3af91a76bdb1ed47e62c7ab150e7dbb0917ba3c040c6dba6b891c0ac0bb0f6'
   name 'PNGCommentator'
   homepage 'http://www.echomist.co.uk/software/PNGCommentator.html'
   license :gratis

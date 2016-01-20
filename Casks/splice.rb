@@ -5,21 +5,21 @@ cask 'splice' do
   # amazonaws.com is the official download host per the appcast feed
   url "https://s3-us-west-1.amazonaws.com/spliceosx/Splice.app-#{version}.zip"
   appcast 'https://splice.com/appcast.xml',
-          :sha256 => 'aa13ed8622cf3aaa5a58590cc6fb7fa5493b7c2c400a60e07c6bf284124152d1'
+          checkpoint: 'aa13ed8622cf3aaa5a58590cc6fb7fa5493b7c2c400a60e07c6bf284124152d1'
   name 'Splice'
   homepage 'https://splice.com/'
   license :gratis
 
-  installer :script => 'Splice Installer.app/Contents/MacOS/Splice Installer',
-            :args   => ['-q'],
-            :sudo   => false
+  installer script: 'Splice Installer.app/Contents/MacOS/Splice Installer',
+            args:   ['-q'],
+            sudo:   false
 
-  uninstall :quit   => 'com.splice.Splice',
-            :delete => '/Applications/Splice.app'
+  uninstall quit:   'com.splice.Splice',
+            delete: '/Applications/Splice.app'
 
-  zap :delete => [
-                   '~/Library/Application Support/*Splice*',
-                   '~/Library/Caches/com.splice*',
-                   '~/Library/Preferences/com.splice*',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/*Splice*',
+                '~/Library/Caches/com.splice*',
+                '~/Library/Preferences/com.splice*',
+              ]
 end

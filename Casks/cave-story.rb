@@ -11,5 +11,5 @@ cask 'cave-story' do
   license :closed
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
-  app 'Doukutsu.app', :target => 'Cave Story.app'
+  app 'Doukutsu.app', target: 'Cave Story.app'
 end

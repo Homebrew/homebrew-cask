@@ -9,5 +9,5 @@ cask 'osirix-quicklook' do
 
   pkg 'OsiriXQuickLookInstaller.pkg'
 
-  uninstall :pkgutil => 'com.pixmeo.osirix.osirixQuicklookPlugin.OsiriXQuickLookPlugin.pkg'
+  uninstall pkgutil: 'com.pixmeo.osirix.osirixQuicklookPlugin.OsiriXQuickLookPlugin.pkg'
 end

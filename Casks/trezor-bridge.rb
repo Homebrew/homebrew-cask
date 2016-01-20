@@ -10,6 +10,6 @@ cask 'trezor-bridge' do
 
   pkg "trezor-bridge-#{version}.pkg"
 
-  uninstall :pkgutil   => 'com.bitcointrezor.pkg.TREZORBridge',
-            :launchctl => 'com.bitcointrezor.trezorBridge.trezord'
+  uninstall pkgutil:   'com.bitcointrezor.pkg.TREZORBridge',
+            launchctl: 'com.bitcointrezor.trezorBridge.trezord'
 end

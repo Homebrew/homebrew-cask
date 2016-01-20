@@ -4,7 +4,7 @@ cask 'tokens' do
 
   url "http://resources.usetokens.com/download/#{version}/Tokens.app.zip"
   appcast 'http://api.usetokens.com/updates/stable',
-          :sha256 => '51d915b42a68a23d614eaae84a85dad1067414f0d1af9833569dc4936bd10d92'
+          checkpoint: '2f4bd11922727463342201da26c6bbd71487f33774fd2d12b439c21238622a36'
   name 'Tokens'
   homepage 'http://usetokens.com/'
   license :closed

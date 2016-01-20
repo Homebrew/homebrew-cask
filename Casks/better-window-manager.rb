@@ -4,12 +4,12 @@ cask 'better-window-manager' do
 
   url "https://gngrwzrd.com/BetterWindowManager-#{version}.zip"
   appcast 'https://www.gngrwzrd.com/betterwindowmanager-appcast.xml',
-          :sha256 => 'db3d611bb08871b390bd7d609db9e2d62ef23c22fd9906dfa1368138196aceec'
+          checkpoint: '2931f2c377563320bfc052fa3afd887340263a1a22c0d11bdedde710d9156353'
   name 'Better Window Manager'
   homepage 'https://www.gngrwzrd.com/better-window-manager/'
   license :commercial
 
-  depends_on :macos => '>= 10.10'
+  depends_on macos: '>= 10.10'
 
   app 'Better Window Manager.app'
 end

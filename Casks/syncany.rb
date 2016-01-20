@@ -9,5 +9,5 @@ cask 'syncany' do
 
   app 'Syncany.app'
 
-  zap :delete => '~/.config/syncany'
+  zap delete: '~/.config/syncany'
 end

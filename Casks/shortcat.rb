@@ -4,7 +4,7 @@ cask 'shortcat' do
 
   url "https://files.shortcatapp.com/v#{version}/Shortcat.zip"
   appcast 'https://shortcatapp.com/changelog.html',
-          :sha256 => 'c63b2b590d976d5fb83ebacb974a19052c4e56d21627fdf773685bcad192816f'
+          checkpoint: 'c63b2b590d976d5fb83ebacb974a19052c4e56d21627fdf773685bcad192816f'
   name 'Sproutcube Shortcat'
   homepage 'https://shortcatapp.com/'
   license :commercial

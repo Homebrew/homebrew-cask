@@ -8,10 +8,10 @@ cask 'inkscape' do
   homepage 'https://inkscape.org/'
   license :gpl
 
-  depends_on :x11 => true
+  depends_on x11: true
 
   app 'Inkscape.app'
   binary 'Inkscape.app/Contents/Resources/bin/inkscape'
 
-  zap :delete => '~/.inkscape-etc'
+  zap delete: '~/.inkscape-etc'
 end

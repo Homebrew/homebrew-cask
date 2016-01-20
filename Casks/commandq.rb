@@ -4,7 +4,7 @@ cask 'commandq' do
 
   url "http://dl.clickontyler.com/commandq/commandq_#{version}.zip"
   appcast 'https://shine.clickontyler.com/appcast.php?id=16',
-          :sha256 => 'aded9f4d5543c963c0989f53ba18c35b2053703b543b10a54c61a6b42b53dd50'
+          checkpoint: '5e0f2d62c65b64c0fffa677040a4bd02213ed65c7f37908d055b900a4d40e646'
   name 'CommandQ'
   homepage 'https://clickontyler.com/commandq/'
   license :commercial

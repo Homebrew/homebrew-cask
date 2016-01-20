@@ -3,7 +3,7 @@
 set -o pipefail
 
 readonly program="$(basename "$0")"
-skip_curl_head=0
+skip_curl_verify=0
 verbose=0
 
 syntax_error() {
@@ -12,11 +12,26 @@ syntax_error() {
   exit 1
 }
 
+depends_on() {
+  formula="$1"
+  [[ "$#" -eq 2 ]] && cmd="$2" || cmd=$(basename "${formula}")
+
+  if [[ ! $(which ${cmd}) ]]; then
+    echo -e "$(tput setaf 1)
+      This script depends on '${cmd}'.
+      If you have [Homebrew](http://brew.sh), you can install it with 'brew install ${formula}'.
+    $(tput sgr0)" | sed -E 's/ {6}//' >&2
+    exit 1
+  fi
+}
+
+depends_on 'tsparber/tiny-scripts/curl-check-url'
+
 usage() {
   echo "
     This script changes the url, appcast and homepage stanzas to https
 
-    After changing to https a http head request is performed to verify if the url is reachable.
+    After changing to https a HTTP GET request is performed to verify if the url is reachable.
     If the https url is not reachable it is reverted to the previous version.
 
     Known Issues: If multiple url/appcast stanzas are present, all urls are changed but only
@@ -26,7 +41,7 @@ usage() {
 
     usage: $program [options] [<cask_name>]
     options:
-      -s, --skip-verify  Skip checking for a HTTP 200 Status Code using curl head.
+      -s, --skip-verify  Skip checking for a HTTP 200 Status Code using curl.
       --verbose          Show more verbose output.
       -h, --help         Show this help.
 
@@ -42,7 +57,7 @@ while [[ "$1" ]]; do
       exit 0
       ;;
     -s | --skip-verify)
-      skip_curl_head=1
+      skip_curl_verify=1
       ;;
     --verbose)
       verbose=1
@@ -65,23 +80,12 @@ check_url_for_https() {
   [[ ${verbose} -ne 0 ]] && verbose_option="-v "
 
   # check if the URL sends a 200 HTTP code, else abort
-  browser_headers="User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.152 Safari/537.36"
-  cask_status=$(curl --silent ${verbose_option} --head --max-time 10 --proto =https --location --header "${browser_headers}" --write-out '%{http_code}' "${cask_url}" -o '/dev/null')
+  curl-check-url ${verbose_option} "${cask_url}" > /dev/null
   exit_code=$?
 
   if [[ exit_code -ne 0 ]]; then
     echo "curl returned ${exit_code}: FAIL for ${cask_url}"
     return 1
-  fi
-
-  if [[ "${cask_status}" != '200' ]]; then
-    if [[ -z "${cask_status}" ]]; then
-      echo "URL ${cask_url} is not reachable!"
-      return 2
-    else
-      echo "Download URL returned ${cask_status}"
-      return 3
-    fi
   fi
 
   return 0
@@ -124,7 +128,7 @@ fi
 # exit if no argument was given: Run in current directory
 if [[ -z "$1" ]]; then
   options=""
-  [[ ${skip_curl_head} -ne 0 ]] && options+=" --skip-verify"
+  [[ ${skip_curl_verify} -ne 0 ]] && options+=" --skip-verify"
   [[ ${verbose} -ne 0 ]] && options+=" --verbose"
 
   for file in *.rb;
@@ -165,14 +169,14 @@ for stanza in url appcast homepage; do
 
   replace_protocol_of_stanza ${cask_file} ${stanza} "http" "https"
 
-  if [[ ${skip_curl_head} -eq 0 ]]; then
+  if [[ ${skip_curl_verify} -eq 0 ]]; then
     check_url_for_https $(brew cask _stanza ${stanza} "${cask_name}")
   else
     true
   fi
 
   if [[ $? -ne 0 ]]; then
-    echo "Restored original value for stanza ${stanza} as curl head failed"
+    echo "Restored original value for stanza ${stanza} as curl check failed"
     replace_protocol_of_stanza ${cask_file} ${stanza} "https" "http"
   else
     updated_stanzas=$((updated_stanzas+1))

@@ -9,5 +9,5 @@ cask 'petite-chez-scheme' do
 
   pkg "pcsv#{version}-ta6osx-1.pkg"
 
-  uninstall :pkgutil => 'com.scheme.chezscheme'
+  uninstall pkgutil: 'com.scheme.chezscheme'
 end

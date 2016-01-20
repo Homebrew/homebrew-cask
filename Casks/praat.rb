@@ -10,11 +10,11 @@ cask 'praat' do
   end
 
   appcast 'https://github.com/praat/praat/releases.atom',
-          :sha256 => '70a27d1b503c65fb7e517864b19e56e53e90162f990bbb68bb8948f7667d06e4'
+          checkpoint: '70a27d1b503c65fb7e517864b19e56e53e90162f990bbb68bb8948f7667d06e4'
   name 'Praat'
   homepage 'http://www.fon.hum.uva.nl/praat/'
   license :gpl
 
   app 'Praat.app'
-  binary 'Praat.app/Contents/MacOS/Praat', :target => 'praat'
+  binary 'Praat.app/Contents/MacOS/Praat', target: 'praat'
 end

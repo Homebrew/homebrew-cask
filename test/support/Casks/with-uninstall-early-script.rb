@@ -7,5 +7,5 @@ test_cask 'with-uninstall-early-script' do
 
   pkg 'MyFancyPkg/Fancy.pkg'
 
-  uninstall :early_script => { :executable => 'MyFancyPkg/FancyUninstaller.tool', :args => %w[--please] }
+  uninstall early_script: { executable: 'MyFancyPkg/FancyUninstaller.tool', args: %w[--please] }
 end

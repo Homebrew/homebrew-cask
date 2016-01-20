@@ -5,7 +5,7 @@ cask 'difffork' do
   # amazonaws.com is the official download host per the vendor homepage
   url 'https://dotfork.s3.amazonaws.com/DiffFork.app.zip'
   appcast 'http://www.dotfork.com/difffork/appcast.xml',
-          :sha256 => 'e415fa377e3ea812e61e0d8a4695a42eafa96e9610f8f56d257a340f099d547e'
+          checkpoint: 'e2169213947077fcec5f5a3cb756854df8ba53292f45aa7f06637d041372d79c'
   name 'DiffFork'
   homepage 'http://www.dotfork.com/difffork/'
   license :commercial

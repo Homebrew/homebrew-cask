@@ -12,10 +12,10 @@ cask 'haskell-platform' do
   homepage 'https://www.haskell.org/platform/'
   license :bsd
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
   pkg "Haskell Platform #{version} 64bit-signed.pkg"
 
-  uninstall :script  => { :executable => '/Library/Haskell/bin/uninstall-hs', :args => %w[all --remove] },
-            :pkgutil => 'org.haskell.HaskellPlatform.*'
+  uninstall script:  { executable: '/Library/Haskell/bin/uninstall-hs', args: %w[all --remove] },
+            pkgutil: 'org.haskell.HaskellPlatform.*'
 end

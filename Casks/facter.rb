@@ -9,5 +9,5 @@ cask 'facter' do
 
   pkg "facter-#{version}.pkg"
 
-  uninstall :pkgutil => 'com.puppetlabs.facter'
+  uninstall pkgutil: 'com.puppetlabs.facter'
 end

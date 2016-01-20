@@ -4,7 +4,7 @@ cask 'piezo' do
 
   url "https://rogueamoeba.com/legacy/downloads/Piezo-#{version.no_dots}.zip"
   appcast 'https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&bundleid=com.rogueamoeba.Piezo',
-          :sha256 => 'f9a8903cc1e07056cd541257e6d61e65fc4fe653b91d5e732ce8870a46e39f45'
+          checkpoint: 'f9a8903cc1e07056cd541257e6d61e65fc4fe653b91d5e732ce8870a46e39f45'
   name 'Piezo'
   homepage 'https://rogueamoeba.com/piezo/'
   license :commercial

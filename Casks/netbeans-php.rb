@@ -9,5 +9,5 @@ cask 'netbeans-php' do
 
   pkg "NetBeans #{version}.pkg"
 
-  uninstall :delete => '/Applications/NetBeans'
+  uninstall delete: '/Applications/NetBeans'
 end

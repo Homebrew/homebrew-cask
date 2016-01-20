@@ -8,10 +8,10 @@ cask 'squirrel' do
   homepage 'http://rime.im/download/'
   license :gpl
 
-  depends_on :macos => '>= :lion'
+  depends_on macos: '>= :lion'
 
   pkg 'Squirrel.pkg'
 
-  uninstall :pkgutil => 'com.googlecode.rimeime.Squirrel.pkg',
-            :delete  => '/Library/Input Methods/Squirrel.app'
+  uninstall pkgutil: 'com.googlecode.rimeime.Squirrel.pkg',
+            delete:  '/Library/Input Methods/Squirrel.app'
 end

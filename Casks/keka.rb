@@ -4,12 +4,12 @@ cask 'keka' do
 
   url "http://www.kekaosx.com/release/Keka-#{version}-intel.dmg"
   appcast 'http://update.kekaosx.com',
-          :sha256 => '7d5bf4d33a9c889b33bc5ba8e168deeb86abed84b1fd3deaebe4d85f34a80a32'
+          checkpoint: '5e7c70cd27e0d1ced74d1e06bac8c7766a11fe8e9be7b29f1d40c73931b0537c'
   name 'Keka'
   homepage 'http://kekaosx.com/'
   license :gratis
 
   app 'Keka.app'
 
-  zap :delete => '~/Library/Preferences/com.aone.keka.plist'
+  zap delete: '~/Library/Preferences/com.aone.keka.plist'
 end

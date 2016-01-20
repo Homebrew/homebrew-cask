@@ -9,5 +9,5 @@ cask 'grandperspective' do
 
   app 'GrandPerspective.app'
 
-  zap :delete => '~/Library/Preferences/net.sourceforge.grandperspectiv.plist'
+  zap delete: '~/Library/Preferences/net.sourceforge.grandperspectiv.plist'
 end

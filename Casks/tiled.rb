@@ -5,7 +5,7 @@ cask 'tiled' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/bjorn/tiled/releases/download/v#{version}/tiled-#{version}.dmg"
   appcast 'https://github.com/bjorn/tiled/releases.atom',
-          :sha256 => '60e520726ca5b51ec8c04b48ec5829ee258b92bbefc19e9750618ab9c738a972'
+          checkpoint: 'e727cf43bf4077687753338e5864f3e6819a684c1df955d879e95e5e98d4dd3d'
   name 'Tiled'
   homepage 'http://www.mapeditor.org/'
   license :gpl

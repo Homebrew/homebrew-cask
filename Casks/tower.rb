@@ -5,7 +5,7 @@ cask 'tower' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://fournova-app-updates.s3.amazonaws.com/apps/tower#{version.major}-mac/#{version.sub(%r{^.*?-}, '')}/Tower-#{version.to_i}-#{version.sub(%r{-[^-]*$}, '')}.zip"
   appcast "https://updates.fournova.com/updates/tower#{version.major}-mac/stable",
-          :sha256 => '6e791750c2767ef3bccacbb9c1b273d4bd8003cf62cd6c1997e8964ddf10e777'
+          checkpoint: '27fe49ac98891e95b5c22a650e4273697b665dd0fc7193c708491451de88a5fd'
   name 'Tower'
   homepage 'https://www.git-tower.com/'
   license :commercial
@@ -13,11 +13,11 @@ cask 'tower' do
   app 'Tower.app'
   binary 'Tower.app/Contents/MacOS/gittower'
 
-  zap :delete => [
-                   "~/Library/Application Support/com.fournova.Tower#{version.major}",
-                   "~/Library/Caches/com.fournova.Tower#{version.major}",
-                   "~/Library/Preferences/com.fournova.Tower#{version.major}.plist",
-                 ]
+  zap delete: [
+                "~/Library/Application Support/com.fournova.Tower#{version.major}",
+                "~/Library/Caches/com.fournova.Tower#{version.major}",
+                "~/Library/Preferences/com.fournova.Tower#{version.major}.plist",
+              ]
 
   caveats do
     files_in_usr_local

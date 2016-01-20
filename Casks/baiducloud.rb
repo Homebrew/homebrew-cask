@@ -11,11 +11,11 @@ cask 'baiducloud' do
 
   app '百度云同步盘.app'
 
-  uninstall :quit => 'com.baidu.netdiskmac'
+  uninstall quit: 'com.baidu.netdiskmac'
 
-  zap :delete => [
-                   '~/Library/Application Support/百度云同步盘',
-                   '~/Library/Preferences/com.baidu.netdiskmac.plist',
-                   '~/Library/Caches/com.baidu.netdiskmac',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/百度云同步盘',
+                '~/Library/Preferences/com.baidu.netdiskmac.plist',
+                '~/Library/Caches/com.baidu.netdiskmac',
+              ]
 end

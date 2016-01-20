@@ -4,7 +4,7 @@ cask 'mp3gain-express' do
 
   url "http://projects.sappharad.com/mp3gain/mp3gain_mac#{version.delete('.')}.zip"
   appcast 'http://projects.sappharad.com/mp3gain/updates.xml',
-          :sha256 => '6a52d90a7579ad97a666c68c1344d2d5d57634e6d3cdc794be5e71c11aef0fe0'
+          checkpoint: '15244c931d367a3cd64768c7a89a7ad73f53f7ae3a10fa238ea84060d52d908f'
   name 'MP3Gain Express'
   homepage 'http://projects.sappharad.com/mp3gain/'
   license :oss

@@ -9,10 +9,10 @@ cask 'microsoft-lync-plugin' do
 
   pkg 'LWAPluginInstaller.pkg'
 
-  uninstall :pkgutil => [
-                          'Lync.Client.LwaPluginInstaller.*.LwaPlugin.pkg',
-                          'Lync.Client.Plugin',
-                        ]
+  uninstall pkgutil: [
+                       'Lync.Client.LwaPluginInstaller.*.LwaPlugin.pkg',
+                       'Lync.Client.Plugin',
+                     ]
 
   caveats do
     discontinued

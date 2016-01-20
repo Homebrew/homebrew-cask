@@ -7,5 +7,5 @@ test_cask 'with-zap-rmdir' do
 
   pkg 'MyFancyPkg/Fancy.pkg'
 
-  zap :rmdir => TestHelper.local_binary_path('empty_directory')
+  zap rmdir: TestHelper.local_binary_path('empty_directory')
 end

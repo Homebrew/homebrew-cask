@@ -8,13 +8,13 @@ cask 'noise-machine' do
     sha256 '501415e60204b77e8e15b46ea08c3f8526cfeb28e6ca11c647b7bffb1f3b9d28'
     url 'http://www.publicspace.net/download/NoiseMachine_Snow_Leopard.dmg'
   else
-    version :latest
-    sha256 :no_check
+    version '1.12'
+    sha256 '393738585ec7bb90bc2f43ac30a63c8699e4fcaffc567135635a549893d7e9b9'
     url 'http://www.publicspace.net/download/NoiseMachine.dmg'
   end
 
   appcast 'http://www.publicspace.net/app/nm.xml',
-          :sha256 => '17dd1be13846b0c1ea527b93783fa7f8312d95e41c0d57c5bcbe897b7876beba'
+          checkpoint: '376e68d3f535814a7205c1e5131bf3ef411e1bf022712fde098d3020304ad710'
   name 'Noise Machine'
   homepage 'http://www.publicspace.net/NoiseMachine'
   license :commercial

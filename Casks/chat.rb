@@ -5,7 +5,7 @@ cask 'chat' do
   # devmate.com is the official download host per the appcast feed
   url "https://dl.devmate.com/com.perma.chat/#{version.sub(%r{-.*$}, '')}/#{version.sub(%r{.*?-}, '')}/Chat-#{version.sub(%r{-.*$}, '')}.zip"
   appcast 'http://updateinfo.devmate.com/com.perma.chat/updates.xml',
-          :sha256 => '8009a30326218077e451fc3e3096eb37c7eaa1c667d32f5beccdece99c6c8a4b'
+          checkpoint: 'd6f08b16a849fac36038aff4d15fa764f0e71ba531992c3770b9347d39a4dc48'
   name 'Chat'
   homepage 'https://chatformac.com/'
   license :gratis

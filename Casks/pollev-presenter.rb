@@ -5,7 +5,7 @@ cask 'pollev-presenter' do
   # amazonaws.com is the official download host per the appcast feed
   url "https://polleverywhere-app.s3.amazonaws.com/mac-beta/v#{version}/pollev.dmg"
   appcast 'https://polleverywhere-app.s3.amazonaws.com/mac-beta/appcast.xml',
-          :sha256 => 'bac5223a873f18bff951df7e9e03ef192c0ff6334b38c9553f77c4e32c8e3108'
+          checkpoint: 'c5d6b4e6dc85970130996a41079bd95dadbbe00fcc7d121ca541efc9d490894b'
   name 'PollEv Presenter'
   homepage 'https://www.polleverywhere.com/'
   license :gratis

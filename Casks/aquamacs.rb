@@ -10,7 +10,7 @@ cask 'aquamacs' do
     # github.com is the official download host per the vendor homepage
     url "https://github.com/davidswelt/aquamacs-emacs-pre2015/releases/download/Aquamacs-#{version}/Aquamacs-Emacs-#{version}.dmg"
     appcast 'https://github.com/davidswelt/aquamacs-emacs/releases.atom',
-            :sha256 => '485aed222707fa3dd41af2afd106ada6abc1766abbb8977ad17af91d56392cee'
+            checkpoint: '485aed222707fa3dd41af2afd106ada6abc1766abbb8977ad17af91d56392cee'
   end
 
   name 'Aquamacs'
@@ -19,5 +19,5 @@ cask 'aquamacs' do
 
   app 'Aquamacs.app'
 
-  zap :delete => '~/Library/Caches/Aquamacs Emacs'
+  zap delete: '~/Library/Caches/Aquamacs Emacs'
 end

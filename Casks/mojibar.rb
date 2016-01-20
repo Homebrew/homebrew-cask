@@ -4,7 +4,7 @@ cask 'mojibar' do
 
   url "https://github.com/muan/mojibar/releases/download/#{version}/mojibar.zip"
   appcast 'https://github.com/muan/mojibar/releases.atom',
-          :sha256 => '8e8ac6049328e2a5ebd84c48dc697bb45f9e76fc9adae1d54e639130b903df4e'
+          checkpoint: '8e8ac6049328e2a5ebd84c48dc697bb45f9e76fc9adae1d54e639130b903df4e'
   name 'Mojibar'
   homepage 'https://github.com/muan/mojibar'
   license :mit

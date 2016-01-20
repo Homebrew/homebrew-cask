@@ -7,20 +7,20 @@ cask 'jenkins' do
   homepage 'https://jenkins-ci.org/'
   license :mit
 
-  conflicts_with :formula => %w[
-                               jenkins
-                               homebrew/versions/jenkins-lts
-                             ],
-                 :cask    => 'caskroom/versions/jenkins-lts'
+  conflicts_with formula: %w[
+                            jenkins
+                            homebrew/versions/jenkins-lts
+                          ],
+                 cask:    'caskroom/versions/jenkins-lts'
 
   pkg "jenkins-#{version}.pkg"
-  binary '/Library/Application Support/Jenkins/jenkins-runner.sh', :target => 'jenkins-runner'
+  binary '/Library/Application Support/Jenkins/jenkins-runner.sh', target: 'jenkins-runner'
 
-  uninstall :script    => '/Library/Application Support/Jenkins/Uninstall.command',
-            :pkgutil   => 'org.jenkins-ci.*pkg',
-            :launchctl => 'org.jenkins-ci'
+  uninstall script:    '/Library/Application Support/Jenkins/Uninstall.command',
+            pkgutil:   'org.jenkins-ci.*pkg',
+            launchctl: 'org.jenkins-ci'
 
-  zap :delete => '/Library/Preferences/org.jenkins-ci.plist'
+  zap delete: '/Library/Preferences/org.jenkins-ci.plist'
 
   caveats do
     depends_on_java

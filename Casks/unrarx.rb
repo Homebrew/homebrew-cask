@@ -4,7 +4,7 @@ cask 'unrarx' do
 
   url "http://www.unrarx.com/files/UnRarX_#{version}.zip"
   appcast 'http://www.unrarx.com/update.xml',
-          :sha256 => '64b9cf92511cbef012dbf9b03381d7f6b883fbbf879ae04ec5899fd49507d0c4'
+          checkpoint: 'c42c5affe2dd688136eb43599d6bc91e2a6816a7be9cf063e58d81004b359ba6'
   name 'UnRarX'
   homepage 'http://www.unrarx.com'
   license :gratis

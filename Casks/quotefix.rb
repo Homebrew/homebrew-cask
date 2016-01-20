@@ -4,7 +4,7 @@ cask 'quotefix' do
 
   url "https://github.com/robertklep/quotefixformac/releases/download/v#{version}/QuoteFix-v#{version}.zip"
   appcast 'https://github.com/robertklep/quotefixformac/releases.atom',
-          :sha256 => '041d7df6ebdd0b61f92f6c58c55aeade4894d9f8f0e2ff92e05da4b676f8fb1d'
+          checkpoint: '041d7df6ebdd0b61f92f6c58c55aeade4894d9f8f0e2ff92e05da4b676f8fb1d'
   name 'QuoteFix'
   homepage 'https://github.com/robertklep/quotefixformac'
   license :oss
@@ -18,7 +18,7 @@ cask 'quotefix' do
     system 'cp', '-r', File.join(staged_path, 'QuoteFix.mailbundle'), File.expand_path('~/Library/Mail/Bundles')
   end
 
-  uninstall :delete => File.expand_path('~/Library/Mail/Bundles/QuoteFix.mailbundle')
+  uninstall delete: File.expand_path('~/Library/Mail/Bundles/QuoteFix.mailbundle')
 
   caveats 'You may need to restart Mail.app before you can use QuoteFix'
 end

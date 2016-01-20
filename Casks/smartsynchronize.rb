@@ -7,7 +7,7 @@ cask 'smartsynchronize' do
   homepage 'https://www.syntevo.com/smartsynchronize/'
   license :commercial
 
-  depends_on :macos => '>= :lion'
+  depends_on macos: '>= :lion'
 
   app 'SmartSynchronize.app'
   binary 'SmartSynchronize.app/Contents/MacOS/SmartSynchronize'

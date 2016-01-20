@@ -4,7 +4,7 @@ cask 'hots-replay-uploader' do
 
   url "https://github.com/eivindveg/HotSUploader/releases/download/v#{version}/HotS.Replay.Uploader-#{version}.dmg"
   appcast 'https://github.com/eivindveg/HotSUploader/releases.atom',
-          :sha256 => '9d895b9d85e1f2a7d29a6026c13809ef3090eca10187e31f73249bcb5685e507'
+          checkpoint: '9d895b9d85e1f2a7d29a6026c13809ef3090eca10187e31f73249bcb5685e507'
   name 'HotS Replay Uploader'
   homepage 'https://github.com/eivindveg/HotSUploader/'
   license :apache

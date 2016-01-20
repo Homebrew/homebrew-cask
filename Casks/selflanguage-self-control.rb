@@ -8,7 +8,7 @@ cask 'selflanguage-self-control' do
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Self Control.app'
-  binary 'Clean.snap', :target => '/Users/Shared/Self/Clean.snap'
+  binary 'Clean.snap', target: '/Users/Shared/Self/Clean.snap'
 
   caveats 'A clean snapshot is available in /Users/Shared/Self/Clean.snap'
 end

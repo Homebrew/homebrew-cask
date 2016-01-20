@@ -9,6 +9,6 @@ cask 'universalmailer' do
 
   pkg 'UniversalMailer.pkg'
 
-  uninstall :pkgutil => 'it.noware.universalmailer.pkg',
-            :delete  => '/Library/Mail/Bundles/UniversalMailer.mailbundle'
+  uninstall pkgutil: 'it.noware.universalmailer.pkg',
+            delete:  '/Library/Mail/Bundles/UniversalMailer.mailbundle'
 end

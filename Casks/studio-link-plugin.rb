@@ -5,12 +5,12 @@ cask 'studio-link-plugin' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/Studio-Link-v2/backend/releases/download/#{version}/studio-link-osx.zip"
   appcast 'https://github.com/Studio-Link-v2/backend/releases.atom',
-          :sha256 => 'abd00cdc82b7db10f419108d6cc44b83f7f1dcbac1ec579ef5aade18408c2694'
+          checkpoint: 'a11fcbad52d77a933c9566c083325007b9a652ed95bc5d56a6a40207d46cb6ab'
   name 'Studio Link Plugin'
   homepage 'https://doku.studio-link.de/plugin/installation-plugin.html'
   license :bsd
 
   audio_unit_plugin 'StudioLink.component'
 
-  zap :delete => '~/.studio-link-plugin'
+  zap delete: '~/.studio-link-plugin'
 end

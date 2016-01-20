@@ -5,16 +5,16 @@ cask 'enjoy' do
   # amazonaws.com is the official download host per the appcast feed
   url "https://s3.amazonaws.com/nongraphical/releases/Enjoy2-#{version}.zip"
   appcast 'https://s3.amazonaws.com/nongraphical/enjoy2/Enjoy2Appcast.xml',
-          :sha256 => '69c8ae10d7c6bc87efcb2d6d354ef7c8a073f3b010045043a2c26bd4986d864a'
+          checkpoint: 'cf19c8a0dc17a555a5dc370bc77e8eafd5f3adfb5aeb33406e06fc8e638e0984'
   name 'Enjoy2'
   homepage 'https://github.com/fyhuang/enjoy2/'
   license :mit
 
   app 'Enjoy2.app'
 
-  zap :delete => [
-                   '~/Library/Application Support/Enjoy2',
-                   '~/Library/Preferences/net.tunah.Enjoy2.plist',
-                   '~/Library/Saved Application State/net.tunah.Enjoy2.savedState',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Enjoy2',
+                '~/Library/Preferences/net.tunah.Enjoy2.plist',
+                '~/Library/Saved Application State/net.tunah.Enjoy2.savedState',
+              ]
 end

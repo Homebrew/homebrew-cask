@@ -9,5 +9,5 @@ cask 'garmin-express' do
 
   pkg 'Install Garmin Express.pkg'
 
-  uninstall :pkgutil => 'com.garmin.renu.client'
+  uninstall pkgutil: 'com.garmin.renu.client'
 end

@@ -8,7 +8,7 @@ cask 'cmpl' do
   license :gpl
 
   # linking into ~/Applications breaks Cmpl, due to hardcoded paths
-  suite 'Cmpl', :target => '/Applications/Cmpl'
+  suite 'Cmpl', target: '/Applications/Cmpl'
   binary 'Cmpl/bin/cmpl'
   binary 'Cmpl/coliop'
   binary 'Cmpl/pyCmpl/scripts/Unix/cmplServer'

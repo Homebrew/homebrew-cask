@@ -10,8 +10,8 @@ cask 'injection' do
 
   pkg "InjectionPluginV#{version}.pkg"
 
-  uninstall :pkgutil => 'com.injectionforxcode.injectionPluginForXcode.InjectionPlugin.pkg',
-            :quit    => 'com.johnholdsworth.InjectionPluginIII'
+  uninstall pkgutil: 'com.injectionforxcode.injectionPluginForXcode.InjectionPlugin.pkg',
+            quit:    'com.johnholdsworth.InjectionPluginIII'
 
-  zap       :delete => '~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/InjectionPlugin.xcplugin'
+  zap       delete: '~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/InjectionPlugin.xcplugin'
 end

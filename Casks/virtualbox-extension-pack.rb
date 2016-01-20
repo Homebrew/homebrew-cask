@@ -7,8 +7,8 @@ cask 'virtualbox-extension-pack' do
   homepage 'https://www.virtualbox.org'
   license :closed
 
-  depends_on :cask => 'virtualbox'
-  container :type => :naked
+  depends_on cask: 'virtualbox'
+  container type: :naked
 
   stage_only true
 

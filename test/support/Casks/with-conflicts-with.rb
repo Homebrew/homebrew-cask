@@ -5,7 +5,7 @@ test_cask 'with-conflicts-with' do
   url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/with-conflicts-with'
 
-  conflicts_with :formula => 'unar'
+  conflicts_with formula: 'unar'
 
   app 'Caffeine.app'
 end

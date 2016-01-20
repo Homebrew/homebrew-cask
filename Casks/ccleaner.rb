@@ -9,10 +9,10 @@ cask 'ccleaner' do
 
   app 'CCleaner.app'
 
-  zap :delete => [
-                   '~/Library/Application Support/CCleaner',
-                   '~/Library/Caches/com.piriform.ccleaner',
-                   '~/Library/Preferences/com.piriform.ccleaner.plist',
-                   '~/Library/Saved Application State/com.piriform.ccleaner.savedState',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/CCleaner',
+                '~/Library/Caches/com.piriform.ccleaner',
+                '~/Library/Preferences/com.piriform.ccleaner.plist',
+                '~/Library/Saved Application State/com.piriform.ccleaner.savedState',
+              ]
 end

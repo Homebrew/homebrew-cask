@@ -5,5 +5,5 @@ test_cask 'with-installer-manual' do
   url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/local-caffeine'
 
-  installer :manual => 'Caffeine.app'
+  installer manual: 'Caffeine.app'
 end

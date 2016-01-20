@@ -9,10 +9,10 @@ cask 'microsoft-intellitype' do
 
   pkg 'Microsoft Desktop Installer.app/Contents/Resources/Microsoft Desktop.mpkg/Contents/Packages/Microsoft Keyboard.pkg'
 
-  uninstall :pkgutil => 'com.microsoft.keyboard.installer',
-            :kext    => [
-                          'com.microsoft.driver.MicrosoftKeyboard',
-                          'com.microsoft.driver.MicrosoftKeyboardBluetooth',
-                          'com.microsoft.driver.MicrosoftKeyboardUSB',
-                        ]
+  uninstall pkgutil: 'com.microsoft.keyboard.installer',
+            kext:    [
+                       'com.microsoft.driver.MicrosoftKeyboard',
+                       'com.microsoft.driver.MicrosoftKeyboardBluetooth',
+                       'com.microsoft.driver.MicrosoftKeyboardUSB',
+                     ]
 end

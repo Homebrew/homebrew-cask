@@ -5,7 +5,7 @@ test_cask 'invalid-depends-on-macos-bad-release' do
   url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/invalid-depends-on-macos-bad-release'
 
-  depends_on :macos => :no_such_release
+  depends_on macos: :no_such_release
 
   app 'Caffeine.app'
 end

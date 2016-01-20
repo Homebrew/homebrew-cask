@@ -7,5 +7,5 @@ cask 'dwarf-fortress' do
   homepage 'http://www.bay12games.com/dwarves/'
   license :gratis
 
-  suite 'df_osx', :target => 'Dwarf Fortress'
+  suite 'df_osx', target: 'Dwarf Fortress'
 end

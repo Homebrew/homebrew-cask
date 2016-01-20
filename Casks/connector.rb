@@ -4,7 +4,7 @@ cask 'connector' do
 
   url "http://update.mediaware.sk/numpad/connector-#{version}.zip"
   appcast 'http://update.mediaware.sk/numpad.xml',
-          :sha256 => 'fb7b0006076a235eb297f1e1db7dc80b3cbc3d6eed6fb53b55be38d3ffc4a3ae'
+          checkpoint: '5b1a1cf2f25f2eee0068ece16536ffe97337fbeae6315018e6842ee64a1bb7c5'
   name 'Connector'
   homepage 'http://mediaware.sk/connector'
   license :gratis

@@ -4,12 +4,12 @@ cask 'barxtemp' do
 
   url "https://github.com/Gabriele91/barXtemp/releases/download/#{version}/barXtemp.app.zip"
   appcast 'https://github.com/Gabriele91/barXtemp/releases.atom',
-          :sha256 => '9b7756a504b6ce274e2efde312990f95bb831589f9bf6a21cb1ccfe5a7f55c86'
+          checkpoint: '9b7756a504b6ce274e2efde312990f95bb831589f9bf6a21cb1ccfe5a7f55c86'
   name 'barXtemp'
   homepage 'https://gabriele91.github.io/barXtemp/'
   license :mit
 
-  depends_on :macos => '>= :mountain_lion'
+  depends_on macos: '>= :mountain_lion'
 
   app 'barXtemp.app'
 end

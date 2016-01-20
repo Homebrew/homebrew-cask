@@ -10,5 +10,5 @@ cask 'resolume-avenue' do
 
   pkg "Resolume Avenue #{version} Installer.pkg"
 
-  uninstall :pkgutil => 'com.resolume.*'
+  uninstall pkgutil: 'com.resolume.*'
 end

@@ -5,7 +5,7 @@ cask 'postgres' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/PostgresApp/PostgresApp/releases/download/#{version}/Postgres-#{version}.zip"
   appcast 'https://github.com/PostgresApp/PostgresApp/releases.atom',
-          :sha256 => '82d9410d35e28afa763963fbed2e2b845328e2ce82a665adbf5f9473d8d885e3'
+          checkpoint: '82d9410d35e28afa763963fbed2e2b845328e2ce82a665adbf5f9473d8d885e3'
   name 'Postgres'
   homepage 'http://postgresapp.com/'
   license :oss

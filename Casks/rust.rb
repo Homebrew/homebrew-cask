@@ -9,5 +9,5 @@ cask 'rust' do
 
   pkg "rust-#{version}-x86_64-apple-darwin.pkg"
 
-  uninstall :pkgutil => 'org.rust-lang.rust'
+  uninstall pkgutil: 'org.rust-lang.rust'
 end

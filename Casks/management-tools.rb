@@ -4,14 +4,14 @@ cask 'management-tools' do
 
   url "https://github.com/univ-of-utah-marriott-library-apple/management_tools/releases/download/#{version}/Management_Tools_#{version}.dmg"
   appcast 'https://github.com/univ-of-utah-marriott-library-apple/management_tools/releases.atom',
-          :sha256 => '760b5de7eb53ece08af96b8f1a27b3e96b287ad7d3e5c51b1bd684317ea5eb52'
+          checkpoint: '760b5de7eb53ece08af96b8f1a27b3e96b287ad7d3e5c51b1bd684317ea5eb52'
   name 'Management Tools'
   homepage 'https://github.com/univ-of-utah-marriott-library-apple/management_tools'
   license :mit
 
-  depends_on :macos => '>= :mountain_lion'
+  depends_on macos: '>= :mountain_lion'
 
   pkg "Management Tools [#{version}].pkg"
 
-  uninstall :pkgutil => 'edu.utah.scl.management-tools'
+  uninstall pkgutil: 'edu.utah.scl.management-tools'
 end

@@ -12,8 +12,8 @@ cask 'go' do
     url "https://storage.googleapis.com/golang/go#{version}.darwin-amd64-osx10.8.pkg"
     pkg "go#{version}.darwin-amd64-osx10.8.pkg"
   else
-    version '1.5.2'
-    sha256 '8450aacd05302ad663fa00c2bdbec88bb41cc41cff0b3b10de90f1193c1cc48f'
+    version '1.5.3'
+    sha256 '2948a0778cb8f493165ab51ede4fefb36d93df50722fd66ec35adf01e571f38b'
 
     url "https://storage.googleapis.com/golang/go#{version}.darwin-amd64.pkg"
     pkg "go#{version}.darwin-amd64.pkg"
@@ -23,7 +23,7 @@ cask 'go' do
   homepage 'https://golang.org/'
   license :bsd
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
-  uninstall :pkgutil => 'com.googlecode.go'
+  uninstall pkgutil: 'com.googlecode.go'
 end

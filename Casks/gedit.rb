@@ -7,7 +7,7 @@ cask 'gedit' do
   homepage 'https://wiki.gnome.org/Apps/Gedit'
   license :gpl
 
-  depends_on :formula => 'libxml2'
+  depends_on formula: 'libxml2'
 
   app 'gedit.app'
 

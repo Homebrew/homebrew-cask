@@ -5,15 +5,15 @@ cask 'hazel' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/Noodlesoft/Hazel-#{version}.dmg"
   appcast 'http://update.noodlesoft.com/Products/Hazel/changelog.php',
-          :sha256 => 'ea87190add8dce6bca682ac10c71e86dc3becfe6bd6e06dbdf58245c0210289e'
+          checkpoint: 'ea87190add8dce6bca682ac10c71e86dc3becfe6bd6e06dbdf58245c0210289e'
   name 'Hazel'
   homepage 'https://www.noodlesoft.com/hazel.php'
   license :freemium
 
   prefpane 'Hazel.prefPane'
 
-  zap :delete => [
-                   '~/Library/Application Support/Hazel',
-                   '~/Library/Preferences/com.noodlesoft.Hazel.plist',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Hazel',
+                '~/Library/Preferences/com.noodlesoft.Hazel.plist',
+              ]
 end

@@ -5,7 +5,7 @@ cask 'roboto' do
   # amazonaws.com is the official download host per the vendor homepage
   url 'https://s3-eu-west-1.amazonaws.com/electric-kangaroo-roboto/worker/Roboto.zip'
   appcast 'https://roboto.build/mac/app-cast.xml',
-          :sha256 => '1064548b24bc5f2bf024af4a597c90f196d23a8c67cb5771a65fc1328e9df4e1'
+          checkpoint: 'fdf33b58c671046665bd88507682b2965d7532dd21aa3ffe4215489db27f3c6b'
   name 'Roboto'
   homepage 'https://roboto.build/'
   license :gratis

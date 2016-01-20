@@ -9,7 +9,7 @@ cask 'selfcontrol' do
 
   url "http://downloads.selfcontrolapp.com/SelfControl-#{version}.zip"
   appcast 'https://selfcontrolapp.com/SelfControlAppcast.xml',
-          :sha256 => '459ee4aef328efbefef3c2ee721b373a483ad11ee4b6d6b4b68bbbc018a05272'
+          checkpoint: '9b80d1a6ec2e150de89529f67cacff96f6459801f7f3744125d2e06745500571'
   name 'SelfControl'
   homepage 'https://selfcontrolapp.com/'
   license :gpl
@@ -18,5 +18,5 @@ cask 'selfcontrol' do
 
   app 'SelfControl.app'
 
-  zap :delete => '~/Library/Preferences/org.eyebeam.SelfControl.plist'
+  zap delete: '~/Library/Preferences/org.eyebeam.SelfControl.plist'
 end

@@ -4,12 +4,12 @@ cask 'grandtotal' do
 
   url "https://mediaatelier.com/GrandTotal4/GrandTotal_#{version}.zip"
   appcast 'https://mediaatelier.com/GrandTotal4/feed.php',
-          :sha256 => 'e0021023a0e17d686d6dc52f57766f3bf8266cea9f2086dbcdd58252ec5724fb'
+          checkpoint: '647c49767388d5e565b4afb47d64dfc88a2d59dfe28e661c610cad3e3a75dcf7'
   name 'GrandTotal'
   homepage 'https://www.mediaatelier.com/GrandTotal4/'
   license :commercial
 
-  depends_on :macos => '>= :mountain_lion'
+  depends_on macos: '>= :mountain_lion'
 
   app 'GrandTotal.app'
 end

@@ -10,5 +10,5 @@ cask 'mongo-management-studio' do
 
   pkg "mms-v#{version}-community-darwin.pkg"
 
-  uninstall :pkgutil => 'de.litixsoft.mongoManagementStudio.MongoManagementStudio.pkg'
+  uninstall pkgutil: 'de.litixsoft.mongoManagementStudio.MongoManagementStudio.pkg'
 end

@@ -4,7 +4,7 @@ cask 'data-rescue' do
 
   url "https://downloads.prosofteng.com/drmac/Data_Rescue_#{version}.dmg"
   appcast 'https://www.prosofteng.com/resources/dr4/dr4_appcast.xml',
-          :sha256 => 'bf199865d7e920ed125bacaaa7a180cc8f782f9bf4373f7f9d925d064d94338c'
+          checkpoint: 'e6be130a3e96ae353a272f459a7558251c4ba69585efc708f1730470d3bc9411'
   name 'Data Rescue 4'
   homepage 'https://www.prosofteng.com/products/data_rescue.php'
   license :commercial

@@ -10,5 +10,5 @@ cask 'andy' do
 
   pkg "Andy_OSX_v#{version}.pkg"
 
-  uninstall :pkgutil => 'net.andyroid.andy.player.osx'
+  uninstall pkgutil: 'net.andyroid.andy.player.osx'
 end

@@ -8,5 +8,5 @@ cask 'bitcoin-core' do
   license :mit
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
-  app 'Bitcoin-Qt.app', :target => 'Bitcoin Core.app'
+  app 'Bitcoin-Qt.app', target: 'Bitcoin Core.app'
 end

@@ -8,7 +8,7 @@ cask 'minecraft-server' do
   homepage 'https://minecraft.net/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  container :type => :naked
+  container type: :naked
 
   binary 'minecraft-server'
 

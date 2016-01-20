@@ -5,7 +5,7 @@ cask 'airfile' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/airfile-static/__apps__/airfile/AirFile-#{version}.zip"
   appcast 'https://s3.amazonaws.com/airfile-static/__apps__/airfile/appcast.xml',
-          :sha256 => '8593304382bcd34bfbf85efe09f2cc7f00bac0955258decdf46edd4f57a0db38'
+          checkpoint: '0ce8f8b0bc9cfef1a125876fd721167b2457e63f7abae2f5d959686b6ed61a3e'
   name 'AirFile'
   homepage 'http://airfileapp.tumblr.com/'
   license :commercial

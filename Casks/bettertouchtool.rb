@@ -11,7 +11,7 @@ cask 'bettertouchtool' do
 
     url "https://boastr.net/releases/btt#{version}.zip"
     appcast 'http://appcast.boastr.net',
-            :sha256 => '52653a90c3c0940803325ac01aca538f7f8b431e4bca9dfa664489a16bc83d4f'
+            checkpoint: '57933e0a8a060d4faf90e994ca83375fb1cb6f6e60d9281d2d8773c8c968724d'
   end
 
   name 'BetterTouchTool'
@@ -23,10 +23,10 @@ cask 'bettertouchtool' do
 
   app 'BetterTouchTool.app'
 
-  uninstall :login_item => 'BetterTouchTool'
+  uninstall login_item: 'BetterTouchTool'
 
-  zap :delete => [
-                   '~/Library/Preferences/com.hegenberg.BetterTouchTool.plist',
-                   '~/Library/Application Support/BetterTouchTool',
-                 ]
+  zap delete: [
+                '~/Library/Preferences/com.hegenberg.BetterTouchTool.plist',
+                '~/Library/Application Support/BetterTouchTool',
+              ]
 end

@@ -5,7 +5,7 @@ test_cask 'invalid-conflicts-with-key' do
   url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/invalid-conflicts-with-key'
 
-  conflicts_with :no_such_key => 'unar'
+  conflicts_with no_such_key: 'unar'
 
   app 'Caffeine.app'
 end

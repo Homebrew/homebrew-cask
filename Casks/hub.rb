@@ -4,7 +4,7 @@ cask 'hub' do
 
   url "https://github.com/github/hub/releases/download/v#{version}/hub-darwin-amd64-#{version}.tgz"
   appcast 'https://github.com/github/hub/releases.atom',
-          :sha256 => 'eec9baedadcccad08f996cc9f3767e77318e7936d0190ae45320bdc6208450e3'
+          checkpoint: 'eec9baedadcccad08f996cc9f3767e77318e7936d0190ae45320bdc6208450e3'
   name 'hub'
   homepage 'https://github.com/github/hub'
   license :mit

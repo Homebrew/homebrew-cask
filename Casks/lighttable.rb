@@ -4,7 +4,7 @@ cask 'lighttable' do
 
   url "https://github.com/LightTable/LightTable/releases/download/#{version}/lighttable-#{version}-mac.tar.gz"
   appcast 'https://github.com/LightTable/LightTable/releases.atom',
-          :sha256 => 'b6820b0bdd9b59b3c875b5a40c49c527cdb5f2ae1a17c80f50f095303985f904'
+          checkpoint: 'b6820b0bdd9b59b3c875b5a40c49c527cdb5f2ae1a17c80f50f095303985f904'
   name 'Light Table'
   homepage 'http://www.lighttable.com/'
   license :mit
@@ -12,9 +12,9 @@ cask 'lighttable' do
   app "lighttable-#{version}-mac/LightTable.app"
   binary "lighttable-#{version}-mac/light"
 
-  zap :delete => [
-                   '~/Library/Application Support/LightTable/plugins',
-                   '~/Library/Application Support/LightTable/settings',
-                   '~/Library/Preferences/com.kodowa.LightTable.plist',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/LightTable/plugins',
+                '~/Library/Application Support/LightTable/settings',
+                '~/Library/Preferences/com.kodowa.LightTable.plist',
+              ]
 end

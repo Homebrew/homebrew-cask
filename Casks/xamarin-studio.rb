@@ -4,7 +4,7 @@ cask 'xamarin-studio' do
 
   url "https://download.xamarin.com/studio/Mac/XamarinStudio-#{version}.dmg"
   appcast 'https://static.xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
-          :sha256 => '9fd357039968b833cd2b2e0f0acd276a8eb30059a240765f4a18d5045565f704'
+          checkpoint: '9fd357039968b833cd2b2e0f0acd276a8eb30059a240765f4a18d5045565f704'
   name 'Xamarin Studio'
   homepage 'https://xamarin.com/studio'
   license :gpl

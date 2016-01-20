@@ -9,5 +9,5 @@ cask 'twindocs' do
 
   pkg 'Twindocs tools.pkg'
 
-  uninstall :pkgutil => 'com.twindocs.ambassador'
+  uninstall pkgutil: 'com.twindocs.ambassador'
 end

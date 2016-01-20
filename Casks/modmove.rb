@@ -4,7 +4,7 @@ cask 'modmove' do
 
   url "https://github.com/keith/modmove/releases/download/#{version}/ModMove.app.zip"
   appcast 'https://github.com/keith/modmove/releases.atom',
-          :sha256 => '827b0314616db7d97a0c5f9cfc2252097a815781673ccf4bcc87aec34a691667'
+          checkpoint: '827b0314616db7d97a0c5f9cfc2252097a815781673ccf4bcc87aec34a691667'
   name 'ModMove'
   homepage 'https://github.com/keith/modmove'
   license :mit

@@ -8,13 +8,13 @@ cask 'dbvisualizer' do
   license :commercial
 
   app 'DbVisualizer.app'
-  installer :script => 'DbVisualizer Installer.app/Contents/MacOS/JavaApplicationStub',
-            :args   => ['-q', '-dir', staged_path.to_s],
-            :sudo   => false
+  installer script: 'DbVisualizer Installer.app/Contents/MacOS/JavaApplicationStub',
+            args:   ['-q', '-dir', staged_path.to_s],
+            sudo:   false
 
-  uninstall :signal => [['TERM', 'com.dbvis.DbVisualizer']]
+  uninstall signal: [['TERM', 'com.dbvis.DbVisualizer']]
 
-  zap :delete => '~/.dbvis'
+  zap delete: '~/.dbvis'
 
   caveats do
     depends_on_java('8')

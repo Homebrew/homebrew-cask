@@ -5,7 +5,7 @@ cask 'vox' do
   # devmate.com is the official download host per the vendor homepage
   url "https://dl.devmate.com/com.coppertino.Vox/#{version.before_comma}/#{version.after_comma}/Vox-#{version.before_comma}.zip"
   appcast 'https://updates.devmate.com/com.coppertino.Vox.xml',
-          :sha256 => '0cfc7f00b1751d101b149ed9bab71c8d6469ebef5b841d420d00049d9c64f676'
+          checkpoint: 'c1cb1cf6ccd4174f3371313c0eb8517f1810e98ffaab9ae239826c129e68ba82'
   name 'VOX'
   homepage 'https://coppertino.com/vox/mac'
   license :freemium

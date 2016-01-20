@@ -7,12 +7,12 @@ cask 'little-snitch' do
   homepage 'https://www.obdev.at/products/littlesnitch/'
   license :commercial
 
-  installer :manual => 'Little Snitch Installer.app'
+  installer manual: 'Little Snitch Installer.app'
 
-  zap :delete => [
-                   '~/Library/Preferences/at.obdev.LittleSnitchNetworkMonitor.plist',
-                   '~/Library/Application Support/Little Snitch/rules.usr.xpl',
-                   '~/Library/Application Support/Little Snitch/configuration.xpl',
-                   '~/Library/Application Support/Little Snitch/configuration.user.xpl',
-                 ]
+  zap delete: [
+                '~/Library/Preferences/at.obdev.LittleSnitchNetworkMonitor.plist',
+                '~/Library/Application Support/Little Snitch/rules.usr.xpl',
+                '~/Library/Application Support/Little Snitch/configuration.xpl',
+                '~/Library/Application Support/Little Snitch/configuration.user.xpl',
+              ]
 end

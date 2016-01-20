@@ -10,7 +10,7 @@ cask 'cloudfoundry-cli' do
 
   pkg 'installer-osx-amd64.pkg'
 
-  uninstall :pkgutil => 'com.pivotal.cloudfoundry.pkg'
+  uninstall pkgutil: 'com.pivotal.cloudfoundry.pkg'
 
   caveats do
     files_in_usr_local

@@ -4,7 +4,7 @@ cask 'audiobook-builder' do
 
   url "http://www.splasm.com/downloads/audiobookbuilder/Audiobook%20Builder%20#{version}.dmg"
   appcast 'http://www.splasm.com/versions/audiobookbuilder_sparkle.xml',
-          :sha256 => '368a969cda2bd66baa7b8c24c7b861cee29c86d2fb7a8e9392bcddc87ac65e2b'
+          checkpoint: 'e82ec1ee1623b4d41d69458b6af46fba041259f3cc2ed161c88c5cff6722c43f'
   name 'Audiobook Builder'
   homepage 'http://www.splasm.com/audiobookbuilder/'
   license :commercial

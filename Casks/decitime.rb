@@ -8,7 +8,7 @@ cask 'decitime' do
   homepage 'http://www.tinbert.com/DeciTimeMac/'
   license :oss
 
-  container :nested => 'DeciTime101.dmg'
+  container nested: 'DeciTime101.dmg'
 
   app 'DeciTime.app'
 

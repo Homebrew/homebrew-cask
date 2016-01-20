@@ -4,7 +4,7 @@ cask 'skim' do
 
   url "http://downloads.sourceforge.net/project/skim-app/Skim/Skim-#{version}/Skim-#{version}.dmg"
   appcast 'http://skim-app.sourceforge.net/skim.xml',
-          :sha256 => '8e83499de8f3a6836350fe0e5938ab83d925849a3f51e767b55cc8aca98e929d'
+          checkpoint: '9441300e6f5beb35c617348432832f602295984e4a06dd071edab85b892af2e1'
   name 'Skim'
   homepage 'http://skim-app.sourceforge.net/'
   license :bsd
@@ -14,5 +14,5 @@ cask 'skim' do
   binary 'Skim.app/Contents/SharedSupport/skimnotes'
   binary 'Skim.app/Contents/SharedSupport/skimpdf'
 
-  zap :delete => '~/Library/Preferences/net.sourceforge.skim-app.skim.plist'
+  zap delete: '~/Library/Preferences/net.sourceforge.skim-app.skim.plist'
 end

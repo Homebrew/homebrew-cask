@@ -5,7 +5,7 @@ cask 'intensify-pro' do
   # amazonaws.com is the official download host per the appcast feed
   url "https://creativekit.s3.amazonaws.com/IntensifyCK/IntensifyCK_Distribution_v#{version.dots_to_underscores}.zip"
   appcast 'http://cdn.macphun.com/updates/IntensifyPro/appcast.xml',
-          :sha256 => '70bf0d5286ced8a50518463ad7580371f86360767feeaf94a694b73632da7049'
+          checkpoint: 'a617011d8dbc7e3223a1cefafbe1ab1a83ec9f7adea37827da2f8115519ec1f8'
   name 'Intensify Pro'
   homepage 'https://macphun.com/intensify'
   license :commercial

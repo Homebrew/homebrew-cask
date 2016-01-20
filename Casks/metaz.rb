@@ -4,7 +4,7 @@ cask 'metaz' do
 
   url "https://github.com/griff/metaz/releases/download/v#{version}/MetaZ-#{version}.zip"
   appcast 'https://github.com/griff/metaz/releases.atom',
-          :sha256 => '09398a3fc2ea1e0f87a9cb88df0c63d55553ddd5435a0d55a13ae5b06c9d8bad'
+          checkpoint: '09398a3fc2ea1e0f87a9cb88df0c63d55553ddd5435a0d55a13ae5b06c9d8bad'
   name 'MetaZ'
   homepage 'https://griff.github.io/metaz/'
   license :mit

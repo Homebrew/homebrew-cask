@@ -9,5 +9,5 @@ cask 'rbtools' do
 
   pkg "RBTools-#{version}.pkg"
 
-  uninstall :pkgutil => 'org.reviewboard.rbtools'
+  uninstall pkgutil: 'org.reviewboard.rbtools'
 end

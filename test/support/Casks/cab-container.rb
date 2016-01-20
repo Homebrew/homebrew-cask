@@ -5,7 +5,7 @@ test_cask 'cab-container' do
   url TestHelper.local_binary_url('cabcontainer.cab')
   homepage 'http://example.com/cab-container'
 
-  depends_on :formula => 'cabextract'
+  depends_on formula: 'cabextract'
 
   app 'cabcontainer/Application.app'
 end

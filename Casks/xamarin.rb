@@ -7,11 +7,11 @@ cask 'xamarin' do
   homepage 'https://xamarin.com/platform'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  installer :manual => 'Install Xamarin.app'
+  installer manual: 'Install Xamarin.app'
 
-  uninstall :delete => '/Applications/Xamarin Studio.app'
+  uninstall delete: '/Applications/Xamarin Studio.app'
 
-  zap       :delete => '~/Library/Developer/Xamarin'
+  zap       delete: '~/Library/Developer/Xamarin'
 
   caveats do
     depends_on_java

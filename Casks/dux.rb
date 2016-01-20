@@ -5,15 +5,15 @@ cask 'dux' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/abhibeckert/Dux/releases/download/#{version}/Dux-#{version}.zip"
   appcast 'https://github.com/abhibeckert/Dux/releases.atom',
-          :sha256 => '0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5'
+          checkpoint: '7515bf959b73b956ceb967351c7e299cbb3668a53d35f9c770eb72e00d93ced6'
   name 'Dux'
   homepage 'http://duxapp.com/'
   license :public_domain
 
   app 'Dux.app'
 
-  zap :delete => [
-                   '~/Library/Preferences/com.duxapp.Dux.plist',
-                   '~/Library/Application Support/Dux/',
-                 ]
+  zap delete: [
+                '~/Library/Preferences/com.duxapp.Dux.plist',
+                '~/Library/Application Support/Dux/',
+              ]
 end

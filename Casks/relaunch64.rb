@@ -9,7 +9,7 @@ cask 'relaunch64' do
   homepage 'http://www.popelganda.de/relaunch64.html'
   license :gpl
 
-  depends_on :arch => :x86_64
+  depends_on arch: :x86_64
 
   app 'Relaunch64.app'
 end

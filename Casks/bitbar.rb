@@ -4,7 +4,7 @@ cask 'bitbar' do
 
   url "https://github.com/matryer/bitbar/releases/download/v1.4.0/BitBar-v#{version}.zip"
   appcast 'https://github.com/matryer/bitbar/releases.atom',
-          :sha256 => '673113d15e2cb3a7ef261a53b1d5b465f414ca8f000be9e0229a8bece5314094'
+          checkpoint: '673113d15e2cb3a7ef261a53b1d5b465f414ca8f000be9e0229a8bece5314094'
   name 'BitBar'
   homepage 'https://github.com/matryer/bitbar/'
   license :mit

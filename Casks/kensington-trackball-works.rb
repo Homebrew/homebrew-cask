@@ -10,11 +10,11 @@ cask 'kensington-trackball-works' do
 
   pkg 'Kensington TrackballWorks.pkg'
 
-  uninstall :pkgutil   => 'com.kensington.trackballworks.driver.installer',
-            :kext      => 'com.kensington.trackballworks.driver',
-            :launchctl => [
-                            'com.kensington.slimblade.agent',
-                            'com.kensington.slimblade.guiagent.plist',
-                          ],
-            :quit      => 'com.kensington.trackballworks.helper'
+  uninstall pkgutil:   'com.kensington.trackballworks.driver.installer',
+            kext:      'com.kensington.trackballworks.driver',
+            launchctl: [
+                         'com.kensington.slimblade.agent',
+                         'com.kensington.slimblade.guiagent.plist',
+                       ],
+            quit:      'com.kensington.trackballworks.helper'
 end

@@ -4,12 +4,12 @@ cask 'menuola' do
 
   url "https://geocom.co.nz/downloads/Menuolav#{version.to_i}.dmg.zip"
   appcast 'https://www.geocom.co.nz/menuola.xml',
-          :sha256 => 'e18b081046702171648c929872c692adc2d1b816f5e9aff93b0612a11a3ea362'
+          checkpoint: 'f63f98d9f170a4b50412465aac5b1fffa599ca5a0ebfe9e6c95ada321c8211af'
   name 'Menuola'
   homepage 'https://www.geocom.co.nz'
   license :gratis
 
-  container :nested => 'Menuola.dmg'
+  container nested: 'Menuola.dmg'
 
   app 'Menuola.app'
 end

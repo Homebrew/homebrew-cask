@@ -272,4 +272,36 @@ module Hbc::Utils
     (numstr.size - 3).step(1, -3) { |i| numstr.insert(i, ",") }
     numstr
   end
+
+  # originally from Homebrew
+  def self.install_gem_setup_path!(gem_name, version = nil, executable = gem_name)
+    require "rubygems"
+    ENV["PATH"] = "#{Gem.user_dir}/bin:#{ENV["PATH"]}"
+
+    if Gem::Specification.find_all_by_name(gem_name, version).empty?
+      ohai "Installing or updating '#{gem_name}' gem"
+      install_args = %W[--no-ri --no-rdoc --user-install #{gem_name}]
+      install_args << "--version" << version if version
+
+      # Do `gem install [...]` without having to spawn a separate process or
+      # having to find the right `gem` binary for the running Ruby interpreter.
+      require "rubygems/commands/install_command"
+      install_cmd = Gem::Commands::InstallCommand.new
+      install_cmd.handle_options(install_args)
+      exit_code = 1 # Should not matter as `install_cmd.execute` always throws.
+      begin
+        install_cmd.execute
+      rescue Gem::SystemExitException => e
+        exit_code = e.exit_code
+      end
+      raise Hbc::CaskError.new("Failed to install/update the '#{gem_name}' gem.") if exit_code != 0
+    end
+
+    unless which executable
+      raise Hbc::CaskError.new(<<-EOS.undent)
+        The '#{gem_name}' gem is installed but couldn't find '#{executable}' in the PATH:
+        #{ENV["PATH"]}
+      EOS
+    end
+  end
 end

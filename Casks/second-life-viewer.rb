@@ -7,12 +7,12 @@ cask 'second-life-viewer' do
   homepage 'https://secondlife.com/'
   license :gpl
 
-  depends_on :macos => '>= :lion'
+  depends_on macos: '>= :lion'
 
   app 'Second Life Viewer.app'
 
-  zap :delete => [
-                   '~/Library/Application Support/SecondLife',
-                   '~/Library/Caches/SecondLife',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/SecondLife',
+                '~/Library/Caches/SecondLife',
+              ]
 end

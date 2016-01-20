@@ -9,5 +9,5 @@ cask 'astah-community' do
 
   pkg "astah community ver #{version.gsub('.', '_')}.pkg"
 
-  uninstall :pkgutil => 'com.change-vision.astahcommunity.astahcommunity.pkg'
+  uninstall pkgutil: 'com.change-vision.astahcommunity.astahcommunity.pkg'
 end

@@ -16,6 +16,7 @@ require 'hbc/cli/info'
 require 'hbc/cli/install'
 require 'hbc/cli/list'
 require 'hbc/cli/search'
+require 'hbc/cli/style'
 require 'hbc/cli/uninstall'
 require 'hbc/cli/update'
 require 'hbc/cli/zap'
@@ -112,7 +113,7 @@ class Hbc::CLI
     command_string, *rest = *arguments
     rest = process_options(rest)
     Hbc.init
-    command = lookup_command(command_string)
+    command = Hbc.help ? 'help' : lookup_command(command_string)
     run_command(command, *rest)
   rescue Hbc::CaskError, Hbc::CaskSha256MismatchError => e
     msg = e.message
@@ -200,6 +201,9 @@ class Hbc::CLI
       end
       opts.on("--outdated") do |v|
         Hbc.cleanup_outdated = true
+      end
+      opts.on("--help") do |v|
+        Hbc.help = true
       end
       opts.on("--version") do |v|
         raise OptionParser::InvalidOption # override default handling of --version

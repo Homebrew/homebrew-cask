@@ -9,5 +9,5 @@ cask 'fing' do
 
   pkg "overlook-fing-#{version}.pkg"
 
-  uninstall :pkgutil => 'com.Overlook.Fing'
+  uninstall pkgutil: 'com.Overlook.Fing'
 end

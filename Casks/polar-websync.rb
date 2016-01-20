@@ -9,9 +9,9 @@ cask 'polar-websync' do
 
   # cannot be installed automatically, because it presents a choice
   # See more: https://github.com/caskroom/homebrew-cask/pull/11040#issuecomment-100454926
-  installer :manual => 'Polar WebSync.pkg'
+  installer manual: 'Polar WebSync.pkg'
 
-  uninstall :pkgutil => 'fi.polar.websync.pkg',
-            :quit    => 'fi.polar.WebSync',
-            :delete  => '/Applications/WebSync.app'
+  uninstall pkgutil: 'fi.polar.websync.pkg',
+            quit:    'fi.polar.WebSync',
+            delete:  '/Applications/WebSync.app'
 end

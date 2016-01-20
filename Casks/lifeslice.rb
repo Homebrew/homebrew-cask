@@ -5,7 +5,7 @@ cask 'lifeslice' do
   # wanderingstan.com is the official download host per the vendor homepage
   url 'http://www.wanderingstan.com/apps/lifeslice/LifeSlice_701.zip'
   appcast 'http://wanderingstan.com/apps/lifeslice/lifeslice_appcast.xml',
-          :sha256 => '57aa727b84ce1ac250eb00aa1eb3954f6e733e9d7b7baee9221c49efc8ddaf06'
+          checkpoint: '67f1a993754ab3372dc8e007d534afef2455c2348ad40972039e5f72b356162d'
   name 'LifeSlice'
   homepage 'https://wanderingstan.github.io/Lifeslice/'
   license :oss

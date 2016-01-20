@@ -4,7 +4,7 @@ cask 'pdf-converter-master' do
 
   url "http://www.lightenpdf.com/download/download.aspx?file=PDF-Converter-Master-#{version.delete('.')}.zip"
   appcast 'http://www.lightenpdf.com/xml/PDF-Converter-Mac.xml',
-          :sha256 => '727005e9425435c21808330d88b54bf4df4269db290f8c4ddcc9ed49b2d4ca53'
+          checkpoint: '0be82ad8f453568c2d79fd1b40c8d751e594ed9872adf2cbd6e40605b6049b2a'
   name 'PDF Converter Master'
   homepage 'http://www.lightenpdf.com/pdf-converter-mac.html'
   license :commercial

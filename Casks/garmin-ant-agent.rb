@@ -9,6 +9,6 @@ cask 'garmin-ant-agent' do
 
   pkg 'Install Garmin ANT Agent.pkg'
 
-  uninstall :quit    => 'com.garmin.AntAgent',
-            :pkgutil => 'com.garmin.garminANTAgent.pkg'
+  uninstall quit:    'com.garmin.AntAgent',
+            pkgutil: 'com.garmin.garminANTAgent.pkg'
 end

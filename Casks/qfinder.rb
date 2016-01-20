@@ -9,5 +9,5 @@ cask 'qfinder' do
 
   pkg 'Qfinder.pkg'
 
-  uninstall :pkgutil => 'qnap.com.qfinder.*'
+  uninstall pkgutil: 'qnap.com.qfinder.*'
 end

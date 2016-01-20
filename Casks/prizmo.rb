@@ -4,12 +4,12 @@ cask 'prizmo' do
 
   url "http://www.creaceed.com/downloads/prizmo#{version.to_i}_#{version}.zip"
   appcast 'http://www.creaceed.com/appcasts/prizmo3.xml',
-          :sha256 => '4a028abca428192ba0a1eb313c5d2ca40ab641f8a429d0a48513ac02faaf0fb1'
+          checkpoint: 'eba03521a0016bc7a527a9e113835a0baef743cfc011dc4d54b6dc52079011e5'
   name 'Prizmo'
   homepage 'http://www.creaceed.com/prizmo'
   license :freemium
 
-  depends_on :macos => '>= :yosemite'
+  depends_on macos: '>= :yosemite'
 
   app 'Prizmo.app'
 end

@@ -4,7 +4,7 @@ cask 'cloudy' do
 
   url 'https://github.com/calebd/cloudy/releases/download/v5/Cloudy.zip'
   appcast 'https://github.com/calebd/cloudy/releases.atom',
-          :sha256 => 'e4dabdd103758cca09814f6d68675e887c6775390e18d334e221fceb0a362818'
+          checkpoint: 'e4dabdd103758cca09814f6d68675e887c6775390e18d334e221fceb0a362818'
   name 'Cloudy'
   homepage 'https://github.com/calebd/cloudy'
   license :mit

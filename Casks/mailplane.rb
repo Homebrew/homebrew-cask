@@ -13,5 +13,5 @@ cask 'mailplane' do
     suppress_move_to_applications
   end
 
-  zap :delete => '~/Library/Preferences/com.mailplaneapp.Mailplane.plist'
+  zap delete: '~/Library/Preferences/com.mailplaneapp.Mailplane.plist'
 end

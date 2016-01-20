@@ -10,5 +10,5 @@ cask 'hyper' do
 
   pkg 'hyper-mac.pkg'
 
-  uninstall :script => '/opt/hyper/bin/uninstall-hyper.sh'
+  uninstall script: '/opt/hyper/bin/uninstall-hyper.sh'
 end

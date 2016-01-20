@@ -27,15 +27,15 @@ cask 'mailfollowup' do
   homepage 'https://www.cs.unc.edu/~welch/MailFollowup/'
   license :gratis
 
-  container :nested => "MailFollowUp_#{version}.dmg"
+  container nested: "MailFollowUp_#{version}.dmg"
 
   pkg 'Install MailFollowUp.pkg'
 
-  uninstall :quit    => 'com.apple.mail',
-            :pkgutil => [
-                          'net.welchwold.mailfollowup',
-                          'net.welchwold.mailfollowup.*',
-                        ]
+  uninstall quit:    'com.apple.mail',
+            pkgutil: [
+                       'net.welchwold.mailfollowup',
+                       'net.welchwold.mailfollowup.*',
+                     ]
 
-  zap       :delete => '~/Library/Mail/Bundles/MailFollowUp.mailbundle/'
+  zap       delete: '~/Library/Mail/Bundles/MailFollowUp.mailbundle/'
 end

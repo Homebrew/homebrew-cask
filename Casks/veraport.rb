@@ -9,6 +9,6 @@ cask 'veraport' do
 
   pkg 'veraport.pkg'
 
-  uninstall :pkgutil => 'com.wizvera.veraport.veraport.*',
-            :rmdir   => '/Applications/Veraport'
+  uninstall pkgutil: 'com.wizvera.veraport.veraport.*',
+            rmdir:   '/Applications/Veraport'
 end

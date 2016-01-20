@@ -8,7 +8,7 @@ cask 'thumbsup' do
   homepage 'http://www.devontechnologies.com/products/freeware.html#c966'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  container :nested => 'ThumbsUp.dmg'
+  container nested: 'ThumbsUp.dmg'
 
   app 'ThumbsUp.app'
 end

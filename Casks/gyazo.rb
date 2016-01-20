@@ -10,10 +10,10 @@ cask 'gyazo' do
   app 'Gyazo.app'
   app 'Gyazo GIF.app'
 
-  zap :delete => [
-                   '~/Library/Caches/com.gyazo.gif',
-                   '~/Library/Caches/com.gyazo.mac',
-                   '~/Library/Preferences/com.gyazo.gif.plist',
-                   '~/Library/Preferences/com.gyazo.mac.plist',
-                 ]
+  zap delete: [
+                '~/Library/Caches/com.gyazo.gif',
+                '~/Library/Caches/com.gyazo.mac',
+                '~/Library/Preferences/com.gyazo.gif.plist',
+                '~/Library/Preferences/com.gyazo.mac.plist',
+              ]
 end

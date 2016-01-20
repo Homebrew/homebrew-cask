@@ -4,7 +4,7 @@ cask 'sumbolon' do
 
   url "https://www.rwe-uk.com/uploads/updates/Sumbolon%20#{version}.zip"
   appcast 'https://www.rwe-uk.com/sparkle/sumbolon',
-          :sha256 => '3570d9e02c0145a825373c078dd60e80ea32dbc2b2019285a6023802320ba431'
+          checkpoint: '1ab26599d2ec9b77f21d2a90e9b251a2d2a451b59bb94d91e65ae093637d1cbf'
   name 'Sumbolon'
   homepage 'https://www.rwe-uk.com/app/sumbolon'
   license :commercial

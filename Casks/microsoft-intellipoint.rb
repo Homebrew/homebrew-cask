@@ -9,10 +9,10 @@ cask 'microsoft-intellipoint' do
 
   pkg 'Microsoft Mouse Installer.app/Contents/Resources/Microsoft Mouse.pkg'
 
-  uninstall :pkgutil => 'com.microsoft.mouse.installer',
-            :kext    => [
-                          'com.microsoft.driver.MicrosoftMouse',
-                          'com.microsoft.driver.MicrosoftMouseBluetooth',
-                          'com.microsoft.driver.MicrosoftMouseUSB',
-                        ]
+  uninstall pkgutil: 'com.microsoft.mouse.installer',
+            kext:    [
+                       'com.microsoft.driver.MicrosoftMouse',
+                       'com.microsoft.driver.MicrosoftMouseBluetooth',
+                       'com.microsoft.driver.MicrosoftMouseUSB',
+                     ]
 end

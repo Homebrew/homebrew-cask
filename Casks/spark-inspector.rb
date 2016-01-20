@@ -4,12 +4,12 @@ cask 'spark-inspector' do
 
   url 'http://sparkinspector.com/downloads/sparkinspector.dmg'
   appcast 'http://sparkinspector.com/sparkle/feed.xml',
-          :sha256 => '2669f1830c624ab24321bf9a4571b9d7b3fa330e5d27e02907aaf4ea9f2bfefd'
+          checkpoint: 'e15b687f8582273670e742a0622c153b41460c79a6c47585defba6dbdc470d8f'
   name 'Spark Inspector'
   homepage 'http://sparkinspector.com/'
   license :commercial
 
-  depends_on :macos => '>= :mountain_lion'
+  depends_on macos: '>= :mountain_lion'
 
   app 'Spark Inspector.app'
 end

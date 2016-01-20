@@ -10,5 +10,5 @@ cask 'splashtop-streamer' do
 
   pkg 'Splashtop Streamer.pkg'
 
-  uninstall :pkgutil => 'com.splashtop.splashtopStreamer.*'
+  uninstall pkgutil: 'com.splashtop.splashtopStreamer.*'
 end

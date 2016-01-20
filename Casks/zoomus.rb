@@ -9,7 +9,7 @@ cask 'zoomus' do
 
   pkg 'zoomusInstaller.pkg'
 
-  uninstall :delete => '/Applications/zoom.us.app'
+  uninstall delete: '/Applications/zoom.us.app'
 
-  zap       :delete => '~/Desktop/Zoom'
+  zap       delete: '~/Desktop/Zoom'
 end

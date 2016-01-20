@@ -9,8 +9,8 @@ cask 'inky' do
 
   app 'Inky.app'
 
-  zap :delete => [
-                   '~/Library/Application Support/Arcode',
-                   '~/Library/Caches/com.arcode.inky',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Arcode',
+                '~/Library/Caches/com.arcode.inky',
+              ]
 end

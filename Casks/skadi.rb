@@ -4,7 +4,7 @@ cask 'skadi' do
 
   url "https://github.com/redcapital/skadi/releases/download/v#{version}/skadi-v#{version}.zip"
   appcast 'https://github.com/redcapital/skadi/releases.atom',
-          :sha256 => 'b00910f5e8c35f0a86770fe939be395d38e2d59375882d7d52e240abfcb6d829'
+          checkpoint: 'b00910f5e8c35f0a86770fe939be395d38e2d59375882d7d52e240abfcb6d829'
   name 'skadi'
   homepage 'https://github.com/redcapital/skadi'
   license :gpl

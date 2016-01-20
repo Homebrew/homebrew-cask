@@ -8,7 +8,7 @@ cask 'sococo' do
   homepage 'https://www.sococo.com/'
   license :freemium
 
-  depends_on :macos => '>= :lion'
+  depends_on macos: '>= :lion'
 
   app 'Sococo.app'
 end

@@ -9,11 +9,11 @@ cask 'phpstorm' do
 
   app 'PhpStorm.app'
 
-  zap :delete => [
-                   '~/Library/Application Support/WebIde100',
-                   '~/Library/Preferences/WebIde100',
-                   '~/Library/Preferences/com.jetbrains.PhpStorm.plist',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/WebIde100',
+                '~/Library/Preferences/WebIde100',
+                '~/Library/Preferences/com.jetbrains.PhpStorm.plist',
+              ]
 
   caveats do
     depends_on_java

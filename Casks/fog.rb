@@ -4,19 +4,19 @@ cask 'fog' do
 
   url "https://github.com/vitorgalvao/fog/releases/download/v#{version}/Fog-osx-#{version}.zip"
   appcast 'https://github.com/vitorgalvao/fog/releases.atom',
-          :sha256 => '64ab0e0ac8e90e8a3fb133259aa6dec69bd14efbbabc21a0cec9cc1aad67af3c'
+          checkpoint: '64ab0e0ac8e90e8a3fb133259aa6dec69bd14efbbabc21a0cec9cc1aad67af3c'
   name 'Fog'
   homepage 'https://github.com/vitorgalvao/fog'
   license :public_domain
 
   app 'Fog.app'
 
-  uninstall :quit => 'com.vitorgalvao.fog'
+  uninstall quit: 'com.vitorgalvao.fog'
 
-  zap :delete => [
-                   '~/Library/Application Support/Fog',
-                   '~/Library/Caches/Fog',
-                   '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vitorgalvao.fog.sfl',
-                   '~/Library/Saved Application State/com.vitorgalvao.fog.savedState',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Fog',
+                '~/Library/Caches/Fog',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vitorgalvao.fog.sfl',
+                '~/Library/Saved Application State/com.vitorgalvao.fog.savedState',
+              ]
 end

@@ -9,5 +9,5 @@ cask 'busycontacts' do
 
   pkg 'BusyContacts Installer.pkg'
 
-  uninstall :pkgutil => 'com.busymac.busycontacts.pkg'
+  uninstall pkgutil: 'com.busymac.busycontacts.pkg'
 end

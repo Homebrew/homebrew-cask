@@ -4,7 +4,7 @@ cask 'qnapi' do
 
   url "https://github.com/QNapi/qnapi/releases/download/#{version}/QNapi-#{version}.dmg"
   appcast 'https://github.com/QNapi/qnapi/releases.atom',
-          :sha256 => 'a1e48985ce0947d205899e896a1659ce1f4e4ba55d21b5ce59f37bb09bfe9d35'
+          checkpoint: 'a1e48985ce0947d205899e896a1659ce1f4e4ba55d21b5ce59f37bb09bfe9d35'
   name 'QNapi'
   homepage 'https://qnapi.github.io/'
   license :gpl

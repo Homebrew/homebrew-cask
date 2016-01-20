@@ -4,7 +4,7 @@ cask 'midikeys' do
 
   url "http://www.manyetas.com/creed/MidiKeys_#{version}.zip"
   appcast 'http://immosw.com/versions/midikeys/appcast.xml',
-          :sha256 => '87a8ce2e45af98924bfa75dcd851579a1096a0e7d5b5d92498ec77df2d4cf283'
+          checkpoint: '888de7cb3a3c985bc0038785f887384cdbb2d94bc0a25b4d291b4ccca7f28691'
   name 'MidiKeys'
   homepage 'http://www.manyetas.com/creed/midikeys.html'
   license :gratis

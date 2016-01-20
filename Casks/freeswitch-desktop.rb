@@ -4,7 +4,7 @@ cask 'freeswitch-desktop' do
 
   url "https://github.com/pablote/fs-mgmt/releases/download/v#{version}/freeswitch-desktop-osx64.zip"
   appcast 'https://github.com/pablote/fs-mgmt/releases.atom',
-          :sha256 => '62ecd504db1602a8c21584e7a71b0d9616f38909fc9ef16ab9cd21b85042213c'
+          checkpoint: '62ecd504db1602a8c21584e7a71b0d9616f38909fc9ef16ab9cd21b85042213c'
   name 'Freeswitch Desktop'
   homepage 'https://github.com/pablote/fs-mgmt'
   license :apache

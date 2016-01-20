@@ -10,22 +10,22 @@ cask 'citrix-receiver' do
 
   pkg 'Install Citrix Receiver.pkg'
 
-  uninstall :launchctl => [
-                            'com.citrix.AuthManager_Mac',
-                            'com.citrix.ReceiverHelper',
-                            'com.citrix.ServiceRecords',
-                          ],
-            :quit      => [
-                            'Citrix.ServiceRecords',
-                            'com.citrix.ReceiverHelper',
-                          ],
-            :pkgutil   => 'com.citrix.ICAClient'
+  uninstall launchctl: [
+                         'com.citrix.AuthManager_Mac',
+                         'com.citrix.ReceiverHelper',
+                         'com.citrix.ServiceRecords',
+                       ],
+            quit:      [
+                         'Citrix.ServiceRecords',
+                         'com.citrix.ReceiverHelper',
+                       ],
+            pkgutil:   'com.citrix.ICAClient'
 
-  zap :delete => [
-                   '~/Library/Application Support/Citrix Receiver',
-                   '~/Library/Preferences/com.citrix.receiver.nomas.plist',
-                   '~/Library/Preferences/com.citrix.receiver.nomas.plist.lockfile',
-                   '~/Library/Preferences/com.citrix.ReceiverFTU.AccountRecords.plist',
-                   '~/Library/Preferences/com.citrix.ReceiverFTU.AccountRecords.plist.lockfile',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Citrix Receiver',
+                '~/Library/Preferences/com.citrix.receiver.nomas.plist',
+                '~/Library/Preferences/com.citrix.receiver.nomas.plist.lockfile',
+                '~/Library/Preferences/com.citrix.ReceiverFTU.AccountRecords.plist',
+                '~/Library/Preferences/com.citrix.ReceiverFTU.AccountRecords.plist.lockfile',
+              ]
 end

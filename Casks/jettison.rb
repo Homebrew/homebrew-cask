@@ -4,7 +4,7 @@ cask 'jettison' do
 
   url "https://www.stclairsoft.com/download/Jettison-#{version}.dmg"
   appcast 'https://www.stclairsoft.com/cgi-bin/sparkle.cgi?JT',
-          :sha256 => '57acc380eea827a3f0325ca5df9a697f9d5c27999ffc4780aa553ae8543c33ce'
+          checkpoint: 'fa83610c6373410e200e1cce210b5611575968e883aa33772bf91b17aaccdc7f'
   name 'Jettison'
   homepage 'https://www.stclairsoft.com/Jettison/'
   license :freemium

@@ -7,7 +7,7 @@ cask 'massreplaceit' do
   homepage 'http://www.hexmonkeysoftware.com/'
   license :gratis
 
-  container :nested => 'MassReplaceIt.dmg'
+  container nested: 'MassReplaceIt.dmg'
 
   app 'MassReplaceIt.app'
 end

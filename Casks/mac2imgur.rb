@@ -5,15 +5,15 @@ cask 'mac2imgur' do
   # mileswd.com is the official download host per the vendor homepage
   url 'https://mileswd.com/mac2imgur/latest'
   appcast 'https://mileswd.com/mac2imgur/update',
-          :sha256 => '6a6b8ba83cf7d03f1d8a03ba95ff4802eb4ff6f7486e1625b1bc1c8d5c5a9dab'
+          checkpoint: '44cb757471fd9b77cbf244f8b32220f46975a2047455c70b8a3a92f3f9462149'
   name 'mac2imgur'
   homepage 'https://github.com/mileswd/mac2imgur'
   license :gpl
 
   app 'mac2imgur.app'
 
-  zap :delete => [
-                   '~/Library/Caches/com.mileswd.mac2imgur',
-                   '~/Library/Preferences/com.mileswd.mac2imgur.plist',
-                 ]
+  zap delete: [
+                '~/Library/Caches/com.mileswd.mac2imgur',
+                '~/Library/Preferences/com.mileswd.mac2imgur.plist',
+              ]
 end

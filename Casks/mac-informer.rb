@@ -9,5 +9,5 @@ cask 'mac-informer' do
 
   app 'Mac Informer.app'
 
-  zap :delete => '~/Library/Application Support/MacInformer'
+  zap delete: '~/Library/Application Support/MacInformer'
 end

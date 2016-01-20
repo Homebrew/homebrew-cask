@@ -10,5 +10,5 @@ cask 'makerbot-desktop' do
 
   pkg "MakerBot Bundle BETA #{version}.pkg"
 
-  uninstall :pkgutil => 'com.makerbot.*'
+  uninstall pkgutil: 'com.makerbot.*'
 end

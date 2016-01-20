@@ -4,7 +4,7 @@ cask 'colorschemer-studio' do
 
   url 'http://www.colorschemer.com/colorschemerstudio.dmg'
   appcast "http://www.colorschemer.com/appcast/studio#{version.major}_mac.xml",
-          :sha256 => '9fd3d9a786da408e992218d8042820cd2d0aac551316dc91c4b8225c99fcd183'
+          checkpoint: '8faf423e6e94caef34de09fc83c720ef2473d1a37bf4777a95717a814f73a722'
   name 'ColorSchemer Studio'
   homepage 'https://www.colorschemer.com'
   license :commercial
