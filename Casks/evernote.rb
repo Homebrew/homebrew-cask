@@ -15,5 +15,7 @@ cask 'evernote' do
   homepage 'https://evernote.com/'
   license :gratis
 
+  auto_updates true
+
   app 'Evernote.app'
 end
