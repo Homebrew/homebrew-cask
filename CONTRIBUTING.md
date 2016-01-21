@@ -66,7 +66,7 @@ cask 'shuttle' do
 end
 ```
 
-And here is one for `gateblu`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check` (necessary since the checksum will change when a new distribution is made available). This combination of `version :latest` and `sha256 :no_check` is currently the preferred mechanism when a versioned download URL is not available. Also note the comment above `url`, which is needed when [the url and homepage hostnames differ](doc/CASK_LANGUAGE_REFERENCE.md#when-url-and-homepage-hostnames-differ-add-a-comment):
+And here is one for `gateblu`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check` (necessary since the checksum will change when a new distribution is made available). This combination of `version :latest` and `sha256 :no_check` is currently the preferred mechanism when a versioned download URL is not available. Also note the comment above `url`, which is needed when [the url and homepage hostnames differ](doc/cask_language_reference/stanzas/url.md#when-url-and-homepage-hostnames-differ-add-a-comment):
 
 ```ruby
 cask 'gateblu' do
@@ -187,23 +187,23 @@ Fill in the following stanzas for your Cask:
 | name               | value       |
 | ------------------ | ----------- |
 | `version`          | application version; give the value `:latest` if only an unversioned download is available
-| `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`. Can be suppressed by using the special value `:no_check`. (see [Checksum Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#checksum-stanza-details))
-| `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application. A [comment](doc/CASK_LANGUAGE_REFERENCE.md#when-url-and-homepage-hostnames-differ-add-a-comment) should be added if the hostnames in the `url` and `homepage` stanzas differ (see [URL Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#url-stanza-details))
-| `name`             | the full and proper name defined by the vendor, and any useful alternate names (see [Name Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#name-stanza-details))
+| `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`. Can be suppressed by using the special value `:no_check`. (see [sha256](doc/cask_language_reference/stanzas/sha256.md))
+| `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application. A [comment](doc/cask_language_reference/stanzas/url.md#when-url-and-homepage-hostnames-differ-add-a-comment) should be added if the hostnames in the `url` and `homepage` stanzas differ (see [URL Stanza Details](doc/cask_language_reference/stanzas/url.md))
+| `name`             | the full and proper name defined by the vendor, and any useful alternate names (see [Name Stanza Details](doc/cask_language_reference/stanzas/name.md))
 | `homepage`         | application homepage; used for the `brew cask home` command
-| `license`          | a symbol identifying the license for the application. Valid category licenses include `:oss`, `:closed`, and `:unknown`. It is OK to leave as `:unknown`. (see [License Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#license-stanza-details))
-| `app`              | relative path to an `.app` bundle that should be linked into the `~/Applications` folder on installation (see [App Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#app-stanza-details))
+| `license`          | a symbol identifying the license for the application. Valid category licenses include `:oss`, `:closed`, and `:unknown`. It is OK to leave as `:unknown`. (see [License Stanza Details](doc/cask_language_reference/stanzas/license.md))
+| `app`              | relative path to an `.app` bundle that should be linked into the `~/Applications` folder on installation (see [App Stanza Details](doc/cask_language_reference/stanzas/app.md))
 
 Other commonly-used stanzas are:
 
 | name               | value       |
 | ------------------ | ----------- |
 | `appcast`          | a URL providing an appcast feed to find updates for this Cask. (see [Appcast Stanza Details](#appcast-stanza-details))
-| `pkg`              | relative path to a `.pkg` file containing the distribution (see [Pkg Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#pkg-stanza-details))
-| `caveats`          | a string or Ruby block providing the user with Cask-specific information at install time (see [Caveats Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#caveats-stanza-details))
-| `uninstall`        | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see [Uninstall Stanza Details](doc/CASK_LANGUAGE_REFERENCE.md#uninstall-stanza-details))
+| `pkg`              | relative path to a `.pkg` file containing the distribution (see [Pkg Stanza Details](doc/cask_language_reference/stanzas/pkg.md))
+| `caveats`          | a string or Ruby block providing the user with Cask-specific information at install time (see [Caveats Stanza Details](doc/cask_language_reference/stanzas/caveats.md))
+| `uninstall`        | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see [Uninstall Stanza Details](doc/cask_language_reference/stanzas/uninstall.md))
 
-Additional `artifact` stanzas you might need for special use-cases can be found [here](doc/CASK_LANGUAGE_REFERENCE.md#at-least-one-artifact-stanza-is-also-required). Even more special-use stanzas are listed at [Optional Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#optional-stanzas) and [Legacy Stanzas](doc/CASK_LANGUAGE_REFERENCE.md#legacy-stanzas).
+Additional `artifact` stanzas you might need for special use-cases can be found [here](doc/cask_language_reference/all_stanzas.md#at-least-one-artifact-stanza-is-also-required). Even more special-use stanzas are listed at [Optional Stanzas](doc/cask_language_reference/all_stanzas.md#optional-stanzas).
 
 ### SourceForge/OSDN URLs
 
@@ -268,7 +268,7 @@ Example:
 
 ### Style guide
 
-All Casks and code in the homebrew-cask project should be indented using two spaces (never tabs). There should not be any extraneous comments - the only comments that should be used are the ones explicitly defined in the [Cask Language Reference](doc/CASK_LANGUAGE_REFERENCE.md).
+All Casks and code in the homebrew-cask project should be indented using two spaces (never tabs). There should not be any extraneous comments - the only comments that should be used are the ones explicitly defined in the [Cask Language Reference](doc/cask_language_reference).
 
 If relevant, you may also use string manipulations to improve the maintainability of your Cask. (See [`version` methods](#version-methods)) Here’s an example from `Lynkeos.app`:
 
