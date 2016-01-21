@@ -1,6 +1,6 @@
 cask 'rekordbox' do
-  version '3.2.2'
-  sha256 'f12cafb0764177bafbb267342c3bd367572c42cc9e340081a0e84ef2bf7ed433'
+  version '4.0.5'
+  sha256 'c74d5d099092e7fd7c2bc24920d26be836f73e34a217100b1d41cab117c40072'
 
   url "https://rekordbox.com/_app/files/Install_rekordbox_#{version.gsub('.', '_')}.pkg.zip"
   name 'rekordbox'
@@ -10,5 +10,5 @@ cask 'rekordbox' do
   pkg "Install_rekordbox_#{version.gsub('.', '_')}.pkg"
 
   uninstall pkgutil: 'com.pioneer.rekordbox.*',
-            delete:  '/Applications/rekordbox 3/'
+            delete:  '/Applications/rekordbox 4/'
 end
