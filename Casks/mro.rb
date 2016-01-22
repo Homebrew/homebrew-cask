@@ -24,13 +24,13 @@ cask 'mro' do
                      ]
 
   zap       delete: [
-                       '~/.R',
-                       '~/.RData',
-                       '~/.Rapp.history',
-                       '~/.Rhistory',
-                       '~/.Rprofile',
-                       '~/Library/R',
-                       '~/Library/Caches/org.R-project.R',
+                      '~/.R',
+                      '~/.RData',
+                      '~/.Rapp.history',
+                      '~/.Rhistory',
+                      '~/.Rprofile',
+                      '~/Library/R',
+                      '~/Library/Caches/org.R-project.R',
                     ]
 
   caveats do
