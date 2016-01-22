@@ -1,8 +1,8 @@
 cask 'pagico' do
   version '7.4.1868'
-  sha256 '77244bef8628daac7ed5ee12e78e2e8084946c5b901b15757670c76364c0e9ba'
+  sha256 'f98b5b2278ae01229c52517de23413df8bc7a5638615ac75a1fed36c9cd1d704'
 
-  url "https://www.pagico.com/downloads/Pagico_Desktop_r#{version.split('.')[2]}.dmg"
+  url "https://www.pagico.com/downloads/Pagico_Desktop_r#{version.patch}.dmg"
   name 'Pagico'
   homepage 'https://www.pagico.com/'
   license :commercial
