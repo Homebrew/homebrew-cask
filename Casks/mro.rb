@@ -22,6 +22,7 @@ cask 'mro' do
                        '/Library/Frameworks/R.Framework/Versions/Current',
                        '/Library/Frameworks/R.Framework/Versions/3.2',
                      ]
+
   zap       delete: [
                      '~/.R',
                      '~/.RData',
@@ -30,7 +31,7 @@ cask 'mro' do
                      '~/.Rprofile',
                      '~/Library/R',
                      '~/Library/Caches/org.R-project.R',
-                   ]
+                    ]
 
   caveats do
     files_in_usr_local
