@@ -1,6 +1,6 @@
 cask 'osxfuse' do
-  version '2.8.2'
-  sha256 'c0cc4066642136fdd4f5fead10bed2e495f636f86f451deee85dbb5aa95fa7fa'
+  version '2.8.3'
+  sha256 'b0f05fa6e74372b73417e89bfd103a46a0b968239f03832755e424bec09051e6'
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/osxfuse/osxfuse-#{version}/osxfuse-#{version}.dmg"

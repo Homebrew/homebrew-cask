@@ -23,7 +23,7 @@ The token itself should be:
 * Suitable for use as a filename
 * Mnemonic
 
-Details of software names and brands will inevitably be lost in the conversion to a minimal token. To capture the vendor’s full name for a distribution, use the [`name`](CASK_LANGUAGE_REFERENCE.md#name-stanza-details) within a Cask. `name` accepts an unrestricted UTF-8 string.
+Details of software names and brands will inevitably be lost in the conversion to a minimal token. To capture the vendor’s full name for a distribution, use the [`name`](https://github.com/caskroom/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/name.md) within a Cask. `name` accepts an unrestricted UTF-8 string.
 
 ## Finding the Simplified Name of the Vendor’s Distribution
 
