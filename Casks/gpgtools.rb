@@ -11,6 +11,8 @@ cask 'gpgtools' do
   gpg "#{url}.sig",
       key_url: 'https://gpgtools.org/GPGTools%2000D026C4.asc'
 
+  auto_updates true
+
   pkg 'Install.pkg'
 
   # todo, remove all ENV variables
