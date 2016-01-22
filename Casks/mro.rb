@@ -11,10 +11,9 @@ cask 'mro' do
   pkg "MRO-#{version}-OSX.pkg"
 
   uninstall pkgutil: [
-                       'com.mygreatcompany.pkg.untitled_package_1',
-                       'com.mygreatcompany.pkg.untitled-package',
-                       'org.R-project.R',
-                       'org.r-project.R-framework',
+                       'com.microsoft.pkg.untitled_package',
+                       'com.microsoft.rservices.mro2',
+                       'com.microsoft.rservices.mro1',
                      ],
             delete:  [
                        '/usr/bin/R',
