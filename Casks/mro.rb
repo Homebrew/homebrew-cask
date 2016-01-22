@@ -2,10 +2,37 @@ cask 'mro' do
   version '3.2.3'
   sha256 'c15ba6cd1f9fb910ef964e571c890c4a5db4f3d4c7850db5008802226c834ef0'
 
-  url "https://mran.revolutionanalytics.com/install/mro/3.2.3/MRO-#{version}-OSX.pkg"
+  url "https://mran.revolutionanalytics.com/install/mro/#{version}/MRO-#{version}-OSX.pkg"
+  name 'Microsoft R Open'
   name 'MRO'
   homepage 'https://mran.revolutionanalytics.com'
-  license :gpl # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
-  app 'Microsoft R Open.app'
+  pkg "MRO-#{version}-OSX.pkg"
+
+  uninstall pkgutil: [
+                       'com.mygreatcompany.pkg.untitled_package_1',
+                       'com.mygreatcompany.pkg.untitled-package',
+                       'org.R-project.R',
+                       'org.r-project.R-framework',
+                     ],
+            delete:  [
+                       '/usr/bin/R',
+                       '/usr/bin/Rscript',
+                       '/Library/Frameworks/R.Framework/Versions/Current',
+                       '/Library/Frameworks/R.Framework/Versions/3.2',
+                     ]
+  zap       delete: [
+                     '~/.R',
+                     '~/.RData',
+                     '~/.Rapp.history',
+                     '~/.Rhistory',
+                     '~/.Rprofile',
+                     '~/Library/R',
+                     '~/Library/Caches/org.R-project.R',
+                   ]
+
+  caveats do
+    files_in_usr_local
+  end
 end
