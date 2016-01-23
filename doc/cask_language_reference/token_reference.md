@@ -35,27 +35,27 @@ Details of software names and brands will inevitably be lost in the conversion t
 
 * Remove `.app` from the end.
 
-* Remove from the end: the string “app”, if the vendor styles the name like “Software App.app”. Exception: when “app” is an inseparable part of the name, without which the name would be inherently nonsensical, as in [rcdefaultapp.rb](../Casks/rcdefaultapp.rb).
+* Remove from the end: the string “app”, if the vendor styles the name like “Software App.app”. Exception: when “app” is an inseparable part of the name, without which the name would be inherently nonsensical, as in [rcdefaultapp.rb](../../Casks/rcdefaultapp.rb).
 
-* Remove from the end: version numbers or incremental release designations such as “alpha”, “beta”, or “release candidate”. Strings which distinguish different capabilities or codebases such as “Community Edition” are currently accepted. Exception: when a number is not an incremental release counter, but a differentiator for a different product from a different vendor, as in [pgadmin3.rb](../Casks/pgadmin3.rb).
+* Remove from the end: version numbers or incremental release designations such as “alpha”, “beta”, or “release candidate”. Strings which distinguish different capabilities or codebases such as “Community Edition” are currently accepted. Exception: when a number is not an incremental release counter, but a differentiator for a different product from a different vendor, as in [pgadmin3.rb](../../Casks/pgadmin3.rb).
 
-* If the version number is arranged to occur in the middle of the App name, it should also be removed. Example: [IntelliJ IDEA 13 CE.app](../Casks/intellij-idea-ce.rb).
+* If the version number is arranged to occur in the middle of the App name, it should also be removed. Example: [IntelliJ IDEA 13 CE.app](../../Casks/intellij-idea-ce.rb).
 
 * Remove from the end: “Launcher”, “Quick Launcher”.
 
-* Remove from the end: strings such as “Mac”, “for Mac”, “for OS X”. These terms are generally added to ported software such as “MAME OS X.app”. Exception: when the software is not a port, and “Mac” is an inseparable part of the name, without which the name would be inherently nonsensical, as in [PlayOnMac.app](../Casks/playonmac.rb).
+* Remove from the end: strings such as “Mac”, “for Mac”, “for OS X”. These terms are generally added to ported software such as “MAME OS X.app”. Exception: when the software is not a port, and “Mac” is an inseparable part of the name, without which the name would be inherently nonsensical, as in [PlayOnMac.app](../../Casks/playonmac.rb).
 
 * Remove from the end: hardware designations such as “for x86”, “32-bit”, “ppc”.
 
-* Remove from the end: software framework names such as “Cocoa”, “Qt”, “Gtk”, “Wx”, “Java”, “Oracle JVM”, etc. Exception: the framework is the product being Casked: [java.rb](../Casks/java.rb).
+* Remove from the end: software framework names such as “Cocoa”, “Qt”, “Gtk”, “Wx”, “Java”, “Oracle JVM”, etc. Exception: the framework is the product being Casked: [java.rb](../../Casks/java.rb).
 
 * Remove from the end: localization strings such as “en-US”.
 
 * If the result of that process is a generic term, such as “Macintosh Installer”, try prepending the name of the vendor or developer, followed by a hyphen. If that doesn’t work, then just create the best name you can, based on the vendor’s web page.
 
-* If the result conflicts with the name of an existing Cask, make yours unique by prepending the name of the vendor or developer, followed by a hyphen. Example: [unison.rb](../Casks/unison.rb) and [panic-unison.rb](../Casks/panic-unison.rb).
+* If the result conflicts with the name of an existing Cask, make yours unique by prepending the name of the vendor or developer, followed by a hyphen. Example: [unison.rb](../../Casks/unison.rb) and [panic-unison.rb](../../Casks/panic-unison.rb).
 
-* Inevitably, there are a small number of exceptions not covered by the rules. Don’t hesitate to [contact the maintainers](../../../issues) if you have a problem.
+* Inevitably, there are a small number of exceptions not covered by the rules. Don’t hesitate to [contact the maintainers](../../../../issues) if you have a problem.
 
 ### Converting to ASCII
 
@@ -122,6 +122,6 @@ App Name on Disk       | Simplified App Name | Cask Token       | Filename
 
 # Token Overlap
 
-When the token for a new Cask would otherwise conflict with the token of an already existing Cask, the nature of that overlap dictates the token (for possibly both Casks). See [Finding a Home For Your Cask](https://github.com/caskroom/homebrew-cask/blob/master/CONTRIBUTING.md#finding-a-home-for-your-cask) for information on how to proceed.
+When the token for a new Cask would otherwise conflict with the token of an already existing Cask, the nature of that overlap dictates the token (for possibly both Casks). See [Finding a Home For Your Cask](../development/adding_a_cask.md#finding-a-home-for-your-cask) for information on how to proceed.
 
 # <3 THANK YOU TO ALL CONTRIBUTORS! <3

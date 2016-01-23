@@ -108,7 +108,7 @@ The first non-comment line in a Cask follows the form:
 cask '<cask-token>' do
 ```
 
-`<cask-token>` should match the Cask filename, without the `.rb` extension,
+[`<cask-token>`](token_reference.md) should match the Cask filename, without the `.rb` extension,
 enclosed in single quotes.
 
 The header line is not entirely strict Ruby: no comma is required after the Cask token.

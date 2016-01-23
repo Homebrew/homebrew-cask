@@ -39,7 +39,7 @@ $ open ~/Applications/"Google Chrome.app"
 
 * Find basic documentation on using homebrew-cask in [USAGE.md](USAGE.md)
 * Want to contribute a Cask? Awesome! See [CONTRIBUTING.md](CONTRIBUTING.md)
-* Want to hack on our code? Also awesome! See [hacking.md](doc/hacking.md)
+* Want to hack on our code? Also awesome! See [hacking.md](doc/development/hacking.md)
 * More project-related details and discussion are available in the [documentation](doc)
 
 ## Questions? Wanna chat?
