@@ -39,7 +39,7 @@ If there is a more complicated change, or there is a case where `cask-repair` fa
 
 ## Adding a Cask
 
-Notice an application that's not in Homebrew-Cask yet?
+Notice an application that's not in Homebrew-Cask yet? Make sure it's not yet in [Homebrew-Versions](https://github.com/caskroom/homebrew-versions) (can be searched from the Github repository page) or [Homebrew](https://github.com/Homebrew/homebrew) (can be searched with `brew search`).
 
 With a bit of work, you can create a Cask for it. [This document](doc/development/adding_a_cask.md) will walk you through creating a new Cask, testing it, and submitting it to us.
 
