@@ -50,7 +50,9 @@ Some style guidelines:
     
 * All Casks and code should be indented using two spaces (never tabs)
 * There should not be any extraneous comments - the only comments that should be used are the ones explicitly defined in the [Cask Language Reference](doc/cask_language_reference)
+* The stanza order and position of newlines is important to make things easier (See [Stanza order](doc/cask_language_reference/#stanza-order))
 * Use string manipulations to improve the maintainability of your Cask (See [`version` methods](doc/cask_language_reference/stanzas/version.md#version-methods))
+* Test your cask using `brew cask audit/style` (See [testing](doc/development/adding_a_cask.md#testing-your-new-cask))
 * Make one Pull Request per Cask change
 * Squash commits after updating a Pull Request
 * Use descriptive commit messages - mention app name and version (ie. `Upgrade Transmission.app to v2.82`)
