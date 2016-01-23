@@ -1,6 +1,6 @@
 cask 'kkbox' do
-  version '5.2.80-80ddc30'
-  sha256 '6c8094410d428ce9dfcf41039b8d8008cf8571cd622dbcaa3e4b9ddb103f92ac'
+  version '5.2.82-93733c9'
+  sha256 '0cbf23a9efd190a22f6c523d3ed1e5efda44b1da0a667d2724c1b7b31b7d0550'
 
   url "https://download.kkbox.com/files/KKBOX-#{version}.dmg"
   name 'KKBOX'
