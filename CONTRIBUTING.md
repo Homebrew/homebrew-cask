@@ -48,9 +48,9 @@ With a bit of work, you can create a Cask for it. [This document](doc/developmen
 
 Some style guidelines:
     
-    - All Casks and code should be indented using two spaces (never tabs)
-    - There should not be any extraneous comments - the only comments that should be used are the ones explicitly defined in the [Cask Language Reference](doc/cask_language_reference)
-    - Use string manipulations to improve the maintainability of your Cask. (See [`version` methods](#version-methods))
-    - Make one Pull Request per Cask change
-    - Squash commits after updating a Pull Request
-    - Use descriptive commit messages - mention app name and version (ie. `Upgrade Transmission.app to v2.82`)
+* All Casks and code should be indented using two spaces (never tabs)
+* There should not be any extraneous comments - the only comments that should be used are the ones explicitly defined in the [Cask Language Reference](doc/cask_language_reference)
+* Use string manipulations to improve the maintainability of your Cask (See [`version` methods](doc/cask_language_reference/stanzas/version.md#version-methods))
+* Make one Pull Request per Cask change
+* Squash commits after updating a Pull Request
+* Use descriptive commit messages - mention app name and version (ie. `Upgrade Transmission.app to v2.82`)
