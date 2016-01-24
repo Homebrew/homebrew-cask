@@ -13,6 +13,8 @@ cask 'skype' do
   homepage 'https://www.skype.com'
   license :gratis
 
+  auto_updates true
+
   app 'Skype.app'
 
   zap delete: [

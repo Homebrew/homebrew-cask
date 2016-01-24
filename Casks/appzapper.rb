@@ -9,5 +9,7 @@ cask 'appzapper' do
   homepage 'http://www.appzapper.com/'
   license :commercial
 
+  auto_updates true
+
   app 'AppZapper.app'
 end

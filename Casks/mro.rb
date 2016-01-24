@@ -1,20 +1,19 @@
-cask 'rro' do
-  version '3.2.2'
-  sha256 'd7d096f5e258a6b1945235aefcdf9c52b3e63daaa515d39305a864f6a3a7b640'
+cask 'mro' do
+  version '3.2.3'
+  sha256 'c15ba6cd1f9fb910ef964e571c890c4a5db4f3d4c7850db5008802226c834ef0'
 
-  url "https://mran.revolutionanalytics.com/install/RRO-#{version}-OSX.pkg"
-  name 'Revolution R Open'
-  name 'RRO'
-  homepage 'http://www.revolutionanalytics.com'
+  url "https://mran.revolutionanalytics.com/install/mro/#{version}/MRO-#{version}-OSX.pkg"
+  name 'Microsoft R Open'
+  name 'MRO'
+  homepage 'https://mran.revolutionanalytics.com'
   license :gpl
 
-  pkg "RRO-#{version}-OSX.pkg"
+  pkg "MRO-#{version}-OSX.pkg"
 
   uninstall pkgutil: [
-                       'com.mygreatcompany.pkg.untitled_package_1',
-                       'com.mygreatcompany.pkg.untitled-package',
-                       'org.R-project.R',
-                       'org.r-project.R-framework',
+                       'com.microsoft.pkg.untitled_package',
+                       'com.microsoft.rservices.mro2',
+                       'com.microsoft.rservices.mro1',
                      ],
             delete:  [
                        '/usr/bin/R',

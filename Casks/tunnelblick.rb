@@ -9,6 +9,7 @@ cask 'tunnelblick' do
   homepage 'https://www.tunnelblick.net'
   license :gpl
 
+  auto_updates true
   depends_on macos: '>= :tiger'
 
   app 'Tunnelblick.app'

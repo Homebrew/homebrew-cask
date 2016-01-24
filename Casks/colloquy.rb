@@ -9,6 +9,8 @@ cask 'colloquy' do
   homepage 'http://colloquy.info/'
   license :gpl
 
+  auto_updates true
+
   app 'Colloquy.app'
 
   postflight do

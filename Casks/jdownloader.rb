@@ -12,6 +12,8 @@ cask 'jdownloader' do
   homepage 'http://jdownloader.org/'
   license :gpl
 
+  auto_updates true
+
   app 'JDownloader 2.0/JDownloader2.app'
 
   preflight do

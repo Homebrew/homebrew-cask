@@ -1,10 +1,10 @@
 cask 'magicprefs' do
-  version '2.4.2'
-  sha256 '6d7bd768404bc522e76f69369f79d389b253f4c9486985ca5872aa670970a493'
+  version '2.4.3'
+  sha256 '59b993388787a80c831d4824766b646d0d65bd2e7c4cd1f9ae7d2b875400f49d'
 
   url 'http://magicprefs.com/MagicPrefs.app.zip'
   appcast 'http://magicprefs.com/appcast.xml',
-          checkpoint: '515d0495170164ccda0bee47cd69646298fe0ac0943c95defee79fc4f01cb207'
+          checkpoint: 'e22851bcd95863680a5edae619f083b742748a72cc5b0828fa7d5148e9532b80'
   name 'MagicPrefs'
   homepage 'http://magicprefs.com/'
   license :gratis

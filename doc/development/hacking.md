@@ -39,7 +39,7 @@ However, very little backend code is shared between the two projects. The Homebr
 
 Homebrew Formulae deal with many different build processes, and often include arbitrary Ruby code.
 
-Casks, by contrast, only need to support the few installation methods used by apps, pkg installers, and so on, making them suitable for a [declarative DSL](https://github.com/caskroom/homebrew-cask/blob/master/doc/cask_language_reference/).
+Casks, by contrast, only need to support the few installation methods used by apps, pkg installers, and so on, making them suitable for a [declarative DSL](../cask_language_reference/).
 
 We encourage Cask authors to use the DSL as much as possible, since that makes things easier for everyone: from maintainers who review pull requests, to first-time contributors, to people who are unfamiliar with Ruby but would like to help.
 
@@ -116,11 +116,11 @@ Homebrew-Cask requires a Ruby interpreter version 2.0 or above. This is the defa
 
 ### Submitting Your Changes
 
-See [the relevant section in `CONTRIBUTING.md`](../CONTRIBUTING.md#submitting-your-changes).
+See [the relevant section in `adding_a_cask.md`](adding_a_cask.md#submitting-your-changes).
 
 #### Commit Messages
 
-The first line of a commit message (the summary line) is like the subject line of an email. (See [CONTRIBUTING.md](../CONTRIBUTING.md#commit-messages)). A short but complete summary line helps the maintainers respond to your pull request more quickly.
+The first line of a commit message (the summary line) is like the subject line of an email. (See [`adding_a_cask.md`](adding_a_cask.md#commit-messages)). A short but complete summary line helps the maintainers respond to your pull request more quickly.
 
 #### Mind the test suite!
 

@@ -5,18 +5,21 @@ cask 'bettertouchtool' do
 
     # bettertouchtool.com is the official download host per the vendor homepage
     url "https://bettertouchtool.net/btt#{version}.zip"
+
+    license :gratis
   else
-    version '1.5b'
-    sha256 'f6408c0ba48588cd547bef4abdcfd723af5133af141f9f7a146d9ee7721f86e6'
+    version '1.52b'
+    sha256 '261465cdbb91a539717c0291dcc02d00cf479fe2fea57c0b24acaa644f3c1b01'
 
     url "https://boastr.net/releases/btt#{version}.zip"
     appcast 'http://appcast.boastr.net',
-            checkpoint: '57933e0a8a060d4faf90e994ca83375fb1cb6f6e60d9281d2d8773c8c968724d'
+            checkpoint: '9a5c29f3574c81104f5becc3831cc0b96a43c3b7a11a6fc7b608fccbed4f4704'
+
+    license :commercial
   end
 
   name 'BetterTouchTool'
   homepage 'https://boastr.net/'
-  license :gratis
 
   auto_updates true
   accessibility_access true

@@ -7,6 +7,8 @@ cask 'skitch' do
   homepage 'https://evernote.com/skitch/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
+  auto_updates true
+
   app 'Skitch.app'
 
   zap delete: [

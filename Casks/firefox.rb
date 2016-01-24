@@ -7,6 +7,8 @@ cask 'firefox' do
   homepage 'https://www.mozilla.org/en-US/firefox/'
   license :mpl
 
+  auto_updates true
+
   app 'Firefox.app'
 
   zap delete: [

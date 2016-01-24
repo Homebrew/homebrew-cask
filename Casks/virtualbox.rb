@@ -3,14 +3,16 @@ cask 'virtualbox' do
     version '4.3.32-103443'
     sha256 'dcfbd1d3014ab393dc5944a9474eeabf8b33471e7d95cb4c94070dc7acab772c'
   else
-    version '5.0.12-104815'
-    sha256 'e74a078780377133789e3f984e3f75324bdb5e57bf3b920a036bf52a403a5aa0'
+    version '5.0.14-105127'
+    sha256 '4de41068712eb819749b5376c90dca47f9a1d6eecf4c516d83269ac12add2aa4'
   end
 
   url "http://download.virtualbox.org/virtualbox/#{version.sub(%r{-.*}, '')}/VirtualBox-#{version}-OSX.dmg"
   name 'Oracle VirtualBox'
   homepage 'https://www.virtualbox.org'
   license :gpl
+
+  auto_updates true
 
   pkg 'VirtualBox.pkg'
 
