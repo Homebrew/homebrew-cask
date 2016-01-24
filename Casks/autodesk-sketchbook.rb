@@ -8,4 +8,7 @@ cask 'autodesk-sketchbook' do
   license :unknown
 
   pkg 'SketchBook_v8.0_mac.pkg'
+
+  uninstall quit: 'com.autodesk.SketchBook',
+            pkgutil: '.*SketchBook.*'
 end
