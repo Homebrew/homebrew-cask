@@ -6,9 +6,9 @@ cask 'strongvpn-client' do
   url "https://mirror2.reliablehosting.com/mac/StrongVPN_Mac_#{version}.zip"
   appcast 'https://colomovers.com/mac.xml',
           checkpoint: 'd0d7858e5914ce9a1791c7c5719d4d4826bffecfead63c26e99fd44f325af46b'
-  name 'StrongVPN Client'
+  name 'StrongVPN'
   homepage 'https://strongvpn.com/vpnclient.shtml'
   license :closed
 
-  app 'StrongVPN Client.app'
+  app 'StrongVPN.app'
 end
