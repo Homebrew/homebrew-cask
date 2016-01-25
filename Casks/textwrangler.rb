@@ -10,6 +10,8 @@ cask 'textwrangler' do
   homepage 'http://www.barebones.com/products/textwrangler'
   license :gratis
 
+  depends_on macos: '>= :mountain_lion'
+
   app 'TextWrangler.app'
   binary 'TextWrangler.app/Contents/Helpers/edit'
   binary 'TextWrangler.app/Contents/Helpers/twdiff'
