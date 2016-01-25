@@ -1,6 +1,6 @@
 cask 'azure-cli' do
-  version '0.9.10'
-  sha256 '4e219aad00040520e780fba42d9b715761dc0d3ee590a8c8bc7a83119cb3b79b'
+  version '0.9.14'
+  sha256 'c497548622661609192dfd4a60da4991b754461a13fb7a7a4e215f50e52fdf11'
 
   # azuresdkscu.blob.core.windows.net is the official download host per the vendor homepage
   url "https://azuresdkscu.blob.core.windows.net/downloads04/azure-cli.#{version}.dmg"
