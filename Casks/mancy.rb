@@ -4,6 +4,7 @@ cask 'mancy' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/princejwesley/Mancy/releases/download/v#{version}/Mancy-darwin-x64.zip"
+  appcast 'https://github.com/princejwesley/Mancy/releases.atom'
   name 'Mancy'
   homepage 'http://www.mancy-re.pl/'
   license :mit
