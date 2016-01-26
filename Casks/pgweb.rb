@@ -1,10 +1,10 @@
 cask 'pgweb' do
-  version '0.9.0'
-  sha256 '7d077aa6d4bed88ba8dc867654369aaddc477ce4e222a8eb3495d57c0dcad9ed'
+  version '0.9.1'
+  sha256 '4d62aca5946459318e7c27eee3c4e21e03aee8b87780aeeeb967e9d2112534b5'
 
   url "https://github.com/sosedoff/pgweb/releases/download/v#{version}/pgweb_darwin_amd64.zip"
   appcast 'https://github.com/sosedoff/pgweb/releases.atom',
-          checkpoint: '108721904f9db9935331f4299f220c340b3086b4126d2330acea53e02b79ed76'
+          checkpoint: '3081c417435d8fafd3e62d63d8a7911ecfcb15bedc6415e6d186f32b4a7e41b3'
   name 'pgweb'
   homepage 'https://github.com/sosedoff/pgweb'
   license :mit
