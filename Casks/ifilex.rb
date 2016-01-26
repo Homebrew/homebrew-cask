@@ -1,4 +1,4 @@
-cask :v1 => 'ifilex' do
+cask 'ifilex' do
   version :latest
   sha256 :no_check
 

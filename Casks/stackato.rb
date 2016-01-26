@@ -1,6 +1,6 @@
-cask :v1 => 'stackato' do
-  version '3.2.3'
-  sha256 '000d43816fc9b65616c234c6fc01c02ff626fa2f4bc6d57dc5c84b433cc22c50'
+cask 'stackato' do
+  version '3.2.4'
+  sha256 'e1d940509d46bc1ec4829998c736b802f77c01971e661d43456fe7574b16e48f'
 
   url "https://downloads.stackato.com/client/v#{version}/stackato-#{version}-macosx10.5-i386-x86_64.zip"
   name 'Stackato'

@@ -1,4 +1,4 @@
-cask :v1 => 'bino' do
+cask 'bino' do
   version '1.6.1'
 
   if MacOS.release <= :leopard

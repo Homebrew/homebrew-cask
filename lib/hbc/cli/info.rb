@@ -23,7 +23,7 @@ class Hbc::CLI::Info < Hbc::CLI::Base
     # todo completely reformat the info report
     <<-PURPOSE
 #{cask}: #{cask.version}
-#{formatted_full_name(cask) }
+#{formatted_name(cask) }
 #{cask.homepage or 'No Homepage'}
 #{installation}
 #{github_info(cask) or 'No GitHub URL'}
@@ -31,9 +31,9 @@ class Hbc::CLI::Info < Hbc::CLI::Base
 PURPOSE
   end
 
-  def self.formatted_full_name(cask)
+  def self.formatted_name(cask)
     # todo transitional: make name a required stanza, and then stop substituting cask.token here
-    cask.full_name.empty? ? cask.token : cask.full_name.join(', ')
+    cask.name.empty? ? cask.token : cask.name.join(', ')
   end
 
   def self.github_info(cask)
@@ -58,7 +58,7 @@ PURPOSE
 
   def self.artifact_info(cask)
     retval = ''
-    Hbc::DSL::ClassMethods.ordinary_artifact_types.each do |type|
+    Hbc::DSL::ORDINARY_ARTIFACT_TYPES.each do |type|
       if cask.artifacts[type].length > 0
         retval = "#{Tty.blue.bold}==>#{Tty.reset.bold} Contents#{Tty.reset}\n" unless retval.length > 0
         cask.artifacts[type].each do |artifact|

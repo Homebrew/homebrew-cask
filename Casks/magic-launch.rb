@@ -1,4 +1,4 @@
-cask :v1 => 'magic-launch' do
+cask 'magic-launch' do
   version '1.4.3'
   sha256 'f209f58e22c5881dc226b294181cc324a9e446425548b5de35c6f26bab1c7a4d'
 
@@ -9,5 +9,5 @@ cask :v1 => 'magic-launch' do
 
   prefpane 'Magic Launch.prefPane'
 
-  zap :delete => '~/Library/Preferences/com.metakine.magic-launch.agent.plist'
+  zap delete: '~/Library/Preferences/com.metakine.magic-launch.agent.plist'
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'macports' do
+cask 'macports' do
   version '2.3.4'
 
   if MacOS.release <= :mountain_lion
@@ -19,12 +19,13 @@ cask :v1 => 'macports' do
     pkg "MacPorts-#{version}-10.11-ElCapitan.pkg"
   end
 
-  gpg "#{url}.asc",
-      :key_id => '01ff673fb4aae6cd'
   name 'MacPorts'
-  homepage 'http://www.macports.org'
+  homepage 'https://www.macports.org'
   license :bsd
+  gpg "#{url}.asc",
+      key_id: '01ff673fb4aae6cd'
 
-  uninstall :pkgutil => 'org.macports.MacPorts'
-  zap       :delete  => '~/.macports'
+  uninstall pkgutil: 'org.macports.MacPorts'
+
+  zap       delete: '~/.macports'
 end

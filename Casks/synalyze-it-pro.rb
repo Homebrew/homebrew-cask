@@ -1,12 +1,12 @@
-cask :v1 => 'synalyze-it-pro' do
-  version '1.13'
-  sha256 '64cdee281ae9c5829e5e4cf6734088414a776d46d282b6edae6a7e08ce7290f3'
+cask 'synalyze-it-pro' do
+  version '1.14'
+  sha256 '25899c87a55d39d728ec945bce60fae4cf55e28092dc028010d2a3987ea5bb3f'
 
   # it.com is the official download host per the vendor homepage
   url "http://www.synalyze-it.com/Downloads/SynalyzeItProTA_#{version}.zip"
-  name 'Synalyze It! Pro'
   appcast 'http://www.synalyze-it.com/SynalyzeItPro/appcast.xml',
-          :sha256 => 'eb77fa31623bdba61dfa091dd8a191ae46d9cc10a5c93a0e3cd28bb151b7d887'
+          checkpoint: 'e74f18b3880f12d6e0a895948fc61949ea3e91fbb285421045f1aeab3c06db87'
+  name 'Synalyze It! Pro'
   homepage 'https://www.synalysis.net/'
   license :commercial
 

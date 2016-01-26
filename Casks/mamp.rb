@@ -1,6 +1,6 @@
-cask :v1_1 => 'mamp' do
-  version '3.4'
-  sha256 '4351c048f770b99bc69da6d5240e7b1cff2dbaef485dec7e04327187f3d8df55'
+cask 'mamp' do
+  version '3.5'
+  sha256 '9961cc2a96cb23388a64e48e0bda7a2d5c4d555c16801e15571f548b185438d9'
 
   url "https://downloads.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}.pkg"
   name 'MAMP'
@@ -13,9 +13,9 @@ cask :v1_1 => 'mamp' do
     set_ownership ['/Applications/MAMP', '/Applications/MAMP PRO']
   end
 
-  uninstall :pkgutil => 'de.appsolute.installer.(mamp|mampacticon|mampendinstall|mamppro).pkg',
-            :delete  => [
-                         '/Applications/MAMP',
-                         '/Applications/MAMP PRO',
-                        ]
+  uninstall pkgutil: 'de.appsolute.installer.(mamp|mampacticon|mampendinstall|mamppro).pkg',
+            delete:  [
+                       '/Applications/MAMP',
+                       '/Applications/MAMP PRO',
+                     ]
 end

@@ -1,4 +1,4 @@
-cask :v1_1 => 'temperature-monitor' do
+cask 'temperature-monitor' do
   version :latest
   sha256 :no_check
 
@@ -9,8 +9,8 @@ cask :v1_1 => 'temperature-monitor' do
   license :commercial
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
-  app 'TemperatureMonitor.app', :target => 'TemperatureMonitor.app'
-  app 'TemperaturMonitorLite.app', :target => 'Temperature Monitor Lite.app'
+  app 'TemperatureMonitor.app', target: 'TemperatureMonitor.app'
+  app 'TemperaturMonitorLite.app', target: 'Temperature Monitor Lite.app'
 
   caveats do
     discontinued

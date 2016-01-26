@@ -1,4 +1,4 @@
-cask :v1 => 'amazon-workspaces' do
+cask 'amazon-workspaces' do
   version :latest
   sha256 :no_check
 
@@ -10,5 +10,5 @@ cask :v1 => 'amazon-workspaces' do
 
   pkg 'WorkSpaces.pkg'
 
-  uninstall :pkgutil => 'com.amazon.workspaces'
+  uninstall pkgutil: 'com.amazon.workspaces'
 end

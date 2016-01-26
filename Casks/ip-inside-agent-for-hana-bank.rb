@@ -1,4 +1,4 @@
-cask :v1 => 'ip-inside-agent-for-hana-bank' do
+cask 'ip-inside-agent-for-hana-bank' do
   version :latest
   sha256 :no_check
 
@@ -9,6 +9,6 @@ cask :v1 => 'ip-inside-agent-for-hana-bank' do
 
   pkg 'IPinsideAgent.pkg'
 
-  uninstall :pkgutil => 'I3GManager.Plugin.ipinsideAgent.*',
-            :rmdir => '/Applications/IPinside'
+  uninstall pkgutil: 'I3GManager.Plugin.ipinsideAgent.*',
+            rmdir:   '/Applications/IPinside'
 end

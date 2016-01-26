@@ -1,4 +1,4 @@
-cask :v1 => 'interarchy' do
+cask 'interarchy' do
   if MacOS.release <= 10.9
     version '10.0.5'
     sha256 'f2ee4d644dd423b6d3abad960db44af85ca9b8338030ecbea3a5d8665e7be33f'

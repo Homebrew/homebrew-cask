@@ -1,4 +1,4 @@
-cask :v1 => 'brogue' do
+cask 'brogue' do
   version '1.7.4'
   sha256 '37d21caecb8ced7e984638227937d0285df3742b6a34a7ca6c7a60355d0e9026'
 

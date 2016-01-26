@@ -1,4 +1,4 @@
-cask :v1 => 'easytether' do
+cask 'easytether' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'easytether' do
 
   pkg 'EasyTetherUSBEthernet.pkg'
 
-  uninstall :pkgutil => 'com.mobile-stream.pkg.EasyTether'
+  uninstall pkgutil: 'com.mobile-stream.pkg.EasyTether'
 end

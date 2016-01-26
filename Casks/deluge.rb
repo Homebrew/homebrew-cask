@@ -1,4 +1,4 @@
-cask :v1 => 'deluge' do
+cask 'deluge' do
   version '1.3.12'
   sha256 'e8fd74918ada2ebc6994e9c0f52efbabe509147f0ede63ab6954f4811de8afdb'
 

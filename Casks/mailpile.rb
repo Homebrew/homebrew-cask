@@ -1,4 +1,4 @@
-cask :v1 => 'mailpile' do
+cask 'mailpile' do
   version '0.5.2'
   sha256 '05745ca69c6fa22a2e7df70a46ce7aca3d8b089685a8156734545e8f3453547a'
 

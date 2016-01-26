@@ -1,4 +1,4 @@
-cask :v1 => 'mmex' do
+cask 'mmex' do
   version '1.2.2'
   sha256 'c9da531544af256490ec5d1a62080535c1440b10f80f3600c250c7cbd0afd269'
 
@@ -10,9 +10,9 @@ cask :v1 => 'mmex' do
 
   app 'mmex.app'
 
-  zap :delete => [
-                  '~/Library/Application Support/mmex',
-                  '~/Library/Caches/com.yourcompany.MMEX',
-                  '~/Library/Preferences/com.yourcompany.MMEX.plist',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/mmex',
+                '~/Library/Caches/com.yourcompany.MMEX',
+                '~/Library/Preferences/com.yourcompany.MMEX.plist',
+              ]
 end

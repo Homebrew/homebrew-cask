@@ -1,4 +1,4 @@
-cask :v1 => 'configure-application-dock-tile' do
+cask 'configure-application-dock-tile' do
   version '1.0'
   sha256 '064f5c24ad7e26aa80c9c82b7c6049d96cd7396d53035fb4276fa638dc7d28c5'
 

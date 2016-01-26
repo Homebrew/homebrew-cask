@@ -382,11 +382,11 @@ def report
   puts "Proposed Simplified App name: #{simplified_app_name}" if $debug
   puts "Proposed token:               #{cask_token}"
   puts "Proposed file name:           #{cask_file_name}"
-  puts "Cask Header Line:             cask :v1 => '#{cask_token}' do"
+  puts "Cask Header Line:             cask '#{cask_token}' do"
   if warnings.length > 0
-    STDERR.puts "\n"
-    STDERR.puts warnings
-    STDERR.puts "\n"
+    $stderr.puts "\n"
+    $stderr.puts warnings
+    $stderr.puts "\n"
     exit 1
   end
 end

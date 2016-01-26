@@ -1,10 +1,10 @@
-cask :v1 => 'hands-off' do
-  version '2.3.6'
-  sha256 '79243a6c23c1fec384b5a491e4a3b94e5d81284661257a360dfbbc6ce89dee0b'
+cask 'hands-off' do
+  version '3.0.2'
+  sha256 'e954858da72a6f05194feb8cc193e3a2a10d33de38381f461b8894be95bde56e'
 
   url "https://www.oneperiodic.com/files/Hands%20Off!%20v#{version}.dmg"
-  appcast 'http://www.metakine.com/sparkle/handsoff2/checkupdate.php',
-          :sha256 => '9703b6f8692548abcb336829cb0aabdbfdb40c047a3256f23ddfa63b5c01bdfa'
+  appcast "http://www.oneperiodic.com/handsoff#{version.major}.xml",
+          checkpoint: '3a5f3878cc4cd3a658d3969d4778222e027aefe2dd65a4836cd64ff4f671cd0e'
   name 'Hands Off!'
   homepage 'https://www.oneperiodic.com/products/handsoff/'
   license :commercial
@@ -15,5 +15,5 @@ cask :v1 => 'hands-off' do
     suppress_move_to_applications
   end
 
-  zap :delete => '~/Library/Preferences/com.metakine.handsoff.plist'
+  zap delete: '~/Library/Preferences/com.metakine.handsoff.plist'
 end

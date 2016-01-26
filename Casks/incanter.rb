@@ -1,4 +1,4 @@
-cask :v1 => 'incanter' do
+cask 'incanter' do
   version :latest
   sha256 :no_check
 

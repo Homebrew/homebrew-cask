@@ -1,4 +1,4 @@
-cask :v1 => 'stella' do
+cask 'stella' do
   version '4.6.6'
   sha256 'afbe3bf9f5564c18720f59a8336d20e920120a5219e49a6b7373be7475841cb9'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'busycal' do
+cask 'busycal' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'busycal' do
 
   pkg 'BusyCal Installer.pkg'
 
-  uninstall :pkgutil => 'com.busymac.busycal2.pkg'
+  uninstall pkgutil: 'com.busymac.busycal2.pkg'
 end

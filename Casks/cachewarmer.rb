@@ -1,4 +1,4 @@
-cask :v1 => 'cachewarmer' do
+cask 'cachewarmer' do
   version '13'
   sha256 '97f9d743a41c4a38ea3b2af5c33716e72b02e9e11b0fed3000d0a3c584f104f3'
 
@@ -10,12 +10,12 @@ cask :v1 => 'cachewarmer' do
 
   pkg "CacheWarmer-#{version}.pkg"
 
-  uninstall :pkgutil => 'net.glencode.CacheWarmer',
-            :launchctl => 'net.glencode.CacheWarmer',
-            :delete => [
-                        '/etc/newsyslog.d/net.glencode.CacheWarmer.conf',
-                        '/usr/local/bin/CacheWarmer',
-                        '/Library/LaunchDaemons/net.glencode.CacheWarmer.plist',
-                        '/Library/Application Support/net.glencode.CacheWarmer'
+  uninstall pkgutil:   'net.glencode.CacheWarmer',
+            launchctl: 'net.glencode.CacheWarmer',
+            delete:    [
+                         '/etc/newsyslog.d/net.glencode.CacheWarmer.conf',
+                         '/usr/local/bin/CacheWarmer',
+                         '/Library/LaunchDaemons/net.glencode.CacheWarmer.plist',
+                         '/Library/Application Support/net.glencode.CacheWarmer',
                        ]
 end

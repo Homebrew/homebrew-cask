@@ -1,4 +1,4 @@
-cask :v1 => 'gambit-c' do
+cask 'gambit-c' do
   version '4.7.3'
 
   if Hardware::CPU.is_32_bit?
@@ -17,10 +17,11 @@ cask :v1 => 'gambit-c' do
   homepage 'http://gambitscheme.org/'
   license :apache
 
-  uninstall :pkgutil => 'marc.feeley.gambc',
-            :script => {
-                        :executable => "/Library/Gambit-C/v#{version}/bin/uninstall-gambc",
-                        :args => ["v#{version}"]
-                       }
-  zap       :delete => '~/.gambc_history'
+  uninstall pkgutil: 'marc.feeley.gambc',
+            script:  {
+                       executable: "/Library/Gambit-C/v#{version}/bin/uninstall-gambc",
+                       args:       ["v#{version}"],
+                     }
+
+  zap       delete: '~/.gambc_history'
 end

@@ -1,11 +1,11 @@
-cask :v1 => 'sqlitebrowser' do
-  version '3.7.0'
-  sha256 '421dc0d64a61f393bee6a482bc32fbdce4b4cdab6f5be10e9214624604079bbb'
+cask 'sqlitebrowser' do
+  version '3.8.0v5'
+  sha256 'b32597066279442e67e363dab9d89cf2533a6624f3a769b0d2681e22552ed3eb'
 
   # github.com is the official download host per the vendor homepage
-  url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v#{version}/sqlitebrowser-#{version}.dmg"
-  appcast 'https://github.com/sqlitebrowser/sqlitebrowser/releases.atom'
-  name 'DB Browser for SQLite'
+  url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v#{version.major_minor_patch}/sqlitebrowser-#{version}.dmg"
+  appcast 'https://github.com/sqlitebrowser/sqlitebrowser/releases.atom',
+          checkpoint: '9ca8a0972b220d498013af3dd25125a370d2da38a9d8487f6e76ed55f4e8c68f'
   name 'SQLite Database Browser'
   homepage 'http://sqlitebrowser.org'
   license :oss

@@ -1,4 +1,4 @@
-cask :v1 => 'liclipse' do
+cask 'liclipse' do
   version '2.1.0'
   sha256 '3b6077e3208d92ac313f685f05fd20aee6705df9461db88a9141899969a7b623'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'inklet' do
+cask 'inklet' do
   version :latest
   sha256 :no_check
 

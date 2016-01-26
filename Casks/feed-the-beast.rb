@@ -1,4 +1,4 @@
-cask :v1 => 'feed-the-beast' do
+cask 'feed-the-beast' do
   version :latest
   sha256 :no_check
 
@@ -10,8 +10,7 @@ cask :v1 => 'feed-the-beast' do
 
   app 'Feed The Beast.app'
 
-  caveats <<-EOS.undent
-    #{token} requires Java. You can install the latest version with
-      brew cask install java
-  EOS
+  caveats do
+    depends_on_java
+  end
 end

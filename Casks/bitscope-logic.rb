@@ -1,4 +1,4 @@
-cask :v1 => 'bitscope-logic' do
+cask 'bitscope-logic' do
   version '1.2.DJ20B'
   sha256 'e0093f292209f6ad306873911c3551bdafa201e09ed634c9080e3b58e9bf6196'
 

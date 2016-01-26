@@ -1,4 +1,5 @@
 require 'open3'
+require 'shellwords'
 
 class Hbc::SystemCommand
   def self.run(executable, options={})
@@ -6,6 +7,8 @@ class Hbc::SystemCommand
     odebug "Executing: #{command.utf8_inspect}"
     processed_stdout = ''
     processed_stderr = ''
+
+    command[0] = Shellwords.shellescape(command[0]) if command.size == 1
 
     raw_stdin, raw_stdout, raw_stderr, raw_wait_thr =
       Open3.popen3(*command.map { |arg| arg.respond_to?(:to_path) ? File.absolute_path(arg) : String(arg) })
@@ -90,7 +93,7 @@ class Hbc::SystemCommand::Result
     external = File.basename(command.first)
     lines = garbage.strip.split("\n")
     opoo "Non-XML stdout from #{external}:"
-    STDERR.puts lines.map {|l| "    #{l}"}
+    $stderr.puts lines.map {|l| "    #{l}"}
   end
 
   def self._parse_plist(command, output)

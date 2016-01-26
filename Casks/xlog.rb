@@ -1,4 +1,4 @@
-cask :v1 => 'xlog' do
+cask 'xlog' do
   version :latest
   sha256 :no_check
 

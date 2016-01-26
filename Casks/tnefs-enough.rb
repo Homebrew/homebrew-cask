@@ -1,4 +1,4 @@
-cask :v1 => 'tnefs-enough' do
+cask 'tnefs-enough' do
   if MacOS.release <= :tiger
     version '2.0'
     sha256 '555ba1f181023f0a48014e1b2fe0168fbb6e58731042c57509506ddf37512c5c'

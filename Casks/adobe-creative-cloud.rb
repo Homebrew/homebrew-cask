@@ -1,4 +1,4 @@
-cask :v1 => 'adobe-creative-cloud' do
+cask 'adobe-creative-cloud' do
   version :latest
   sha256 :no_check
 
@@ -7,5 +7,5 @@ cask :v1 => 'adobe-creative-cloud' do
   homepage 'https://creative.adobe.com/products/creative-cloud'
   license :commercial
 
-  installer :manual => 'Creative Cloud Installer.app'
+  installer manual: 'Creative Cloud Installer.app'
 end

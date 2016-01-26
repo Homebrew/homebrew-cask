@@ -1,4 +1,4 @@
-cask :v1 => 'zeroinstall' do
+cask 'zeroinstall' do
   version '2.8'
   sha256 'ab0fbf7fc43c5ff6429d5686bde3ecef01c78894c46c8bd554c2f4a1f0e10e66'
 
@@ -10,5 +10,5 @@ cask :v1 => 'zeroinstall' do
 
   pkg 'ZeroInstall.pkg'
 
-  uninstall :pkgutil => 'net.0install.pkg'
+  uninstall pkgutil: 'net.0install.pkg'
 end

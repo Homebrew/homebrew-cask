@@ -1,4 +1,4 @@
-cask :v1 => 'lovewallpaper' do
+cask 'lovewallpaper' do
   version :latest
   sha256 :no_check
 

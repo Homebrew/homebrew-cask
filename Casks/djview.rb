@@ -1,4 +1,4 @@
-cask :v1 => 'djview' do
+cask 'djview' do
   version '4.10.2'
   sha256 '71023ad00941f7d3a01f273db4dc2e5c9c12b621954d877b9fe34a9ecf4bf149'
 

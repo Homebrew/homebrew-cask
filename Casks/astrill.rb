@@ -1,4 +1,4 @@
-cask :v1 => 'astrill' do
+cask 'astrill' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'astrill' do
 
   pkg 'Astrill Setup.mpkg'
 
-  uninstall :pkgutil => 'com.Astrill.app'
+  uninstall pkgutil: 'com.Astrill.app'
 end

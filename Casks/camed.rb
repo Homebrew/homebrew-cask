@@ -1,4 +1,4 @@
-cask :v1 => 'camed' do
+cask 'camed' do
   version '3.2'
   sha256 '7956c929a3518102a5364982e1ba978930228169d4d1eedb68c2db62fc4a86f1'
 

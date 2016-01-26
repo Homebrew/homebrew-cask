@@ -1,4 +1,4 @@
-cask :v1 => 'izip' do
+cask 'izip' do
   version :latest
   sha256 :no_check
 

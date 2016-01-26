@@ -1,13 +1,11 @@
-cask :v1 => 'warsow' do
-  version '1.51'
-  sha256 '4d1a95f94769e0ec9dc70a000a3b461a0968cb5d8e45f5b6850607a99a058449'
+cask 'warsow' do
+  version '2.01'
+  sha256 '1a144b59dd7b642d86eb4530e6dc6388c6acb30a1cce28b31b16dfea269e0790'
 
-  url "http://update.warsow.net/mirror/warsow_#{version}.dmg.zip"
+  url "https://www.warsow.gg/download?dl=warsow#{version.delete('.')}mac"
   name 'Warsow'
   homepage 'http://www.warsow.net/'
   license :gpl
 
-  container :nested => "Warsow #{version}.dmg"
-
-  app "Warsow #{version}.app"
+  app 'Warsow.app'
 end

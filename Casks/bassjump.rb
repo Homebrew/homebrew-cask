@@ -1,11 +1,10 @@
-cask :v1 => 'bassjump' do
+cask 'bassjump' do
   if MacOS.release <= :mountain_lion
     version '2.0.3'
     sha256 '8e4dffa6bb3b532b994f379d19d70903f59fc019916f10cba9d01b8075d69a7f'
 
     # rackcdn.com is the official download host per the vendor homepage
     url "http://ffe82a399885f9f28605-66638985576304cbe11c530b9b932f18.r24.cf2.rackcdn.com/BassJumpSoundSystem-#{version}-249-ML.mpkg.zip"
-    name 'BassJump'
 
     pkg "BassJump Sound System-#{version}-249-ML.mpkg"
   else
@@ -15,19 +14,20 @@ cask :v1 => 'bassjump' do
     # rackcdn.com is the official download host per the vendor homepage
     url "http://ffe82a399885f9f28605-66638985576304cbe11c530b9b932f18.r24.cf2.rackcdn.com/BassJumpInstaller_#{version}.dmg.zip"
 
-    container :nested => "BassJumpInstaller_#{version}.dmg"
+    container nested: "BassJumpInstaller_#{version}.dmg"
     pkg 'BassJumpInstaller.pkg'
   end
 
+  name 'BassJump'
   homepage 'https://www.twelvesouth.com/product/bassjump-2-for-macbook'
   license :gratis
 
-  uninstall :pkgutil => [
-                         'com.twelvesouth.bassjump.installer.halplugin',
-                         'com.twelvesouth.bassjump.installer.overridekext',
-                         'com.twelvesouth.bassjump.installer.prefpane',
-                        ],
-            :kext => 'com.twelvesouth.driver.BassJumpOverrideDriver'
+  uninstall pkgutil: [
+                       'com.twelvesouth.bassjump.installer.halplugin',
+                       'com.twelvesouth.bassjump.installer.overridekext',
+                       'com.twelvesouth.bassjump.installer.prefpane',
+                     ],
+            kext:    'com.twelvesouth.driver.BassJumpOverrideDriver'
 
   caveats do
     reboot

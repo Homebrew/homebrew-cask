@@ -1,15 +1,14 @@
-cask :v1 => 'cmpl' do
-  version '1.10.0'
-  sha256 'f893ca2537d971682df9a4a08d34505732b40f58ee58037ad4fe736607d8953e'
+cask 'cmpl' do
+  version '1.10.1'
+  sha256 '62367f5d08f802725216542f6d2482a5635cbefe7c2ca843059525d7077445d0'
 
-  url "http://www.coliop.org/_download/Cmpl-#{version.gsub('.','-')}-osx.tar.gz"
+  url "http://www.coliop.org/_download/Cmpl-#{version.gsub('.', '-')}-osx.zip"
   name 'CMPL'
   homepage 'http://www.coliop.org/'
   license :gpl
 
   # linking into ~/Applications breaks Cmpl, due to hardcoded paths
-  suite 'Cmpl', :target => '/Applications/Cmpl'
-
+  suite 'Cmpl', target: '/Applications/Cmpl'
   binary 'Cmpl/bin/cmpl'
   binary 'Cmpl/coliop'
   binary 'Cmpl/pyCmpl/scripts/Unix/cmplServer'

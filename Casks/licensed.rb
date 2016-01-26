@@ -1,4 +1,4 @@
-cask :v1 => 'licensed' do
+cask 'licensed' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'copy' do
+cask 'copy' do
   version :latest
   sha256 :no_check
 

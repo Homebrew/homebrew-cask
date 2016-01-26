@@ -1,4 +1,4 @@
-cask :v1 => 'padbury-clock' do
+cask 'padbury-clock' do
   version :latest
   sha256 :no_check
 

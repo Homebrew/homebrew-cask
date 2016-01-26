@@ -1,4 +1,4 @@
-cask :v1 => 'id3-editor' do
+cask 'id3-editor' do
   version '1.21.25'
   sha256 '9d11840530236e9f746f8d050ef3c2b5690e5b48283e711af16cb5ff08914131'
 

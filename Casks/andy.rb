@@ -1,4 +1,4 @@
-cask :v1 => 'andy' do
+cask 'andy' do
   version '43'
   sha256 'ed55fb3a389a0afa62043fbdbe31e418aa96b789a743d987903a817fe4a8c75b'
 
@@ -10,5 +10,5 @@ cask :v1 => 'andy' do
 
   pkg "Andy_OSX_v#{version}.pkg"
 
-  uninstall :pkgutil => 'net.andyroid.andy.player.osx'
+  uninstall pkgutil: 'net.andyroid.andy.player.osx'
 end

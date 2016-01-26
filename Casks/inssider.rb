@@ -1,12 +1,12 @@
-cask :v1 => 'inssider' do
-  version :latest
-  sha256 :no_check
+cask 'inssider' do
+  version '4.2.2'
+  sha256 '4fa595ea3598543ed2f6027d18012266a86944622f5d87ea8f90f7b3ed28efd7'
 
   # metageek.net is the official download host per the vendor homepage
-  url 'http://files.metageek.net/downloads/inSSIDer4-installer.dmg'
+  url "http://files.metageek.net/downloads/inSSIDer#{version.major}-installer.dmg"
+  appcast 'http://www.metageek.com/misc/versions/MacSSIDer/MacSSIDer_appcast.xml',
+          checkpoint: 'fd7b7d1cff572bf9567cb87524e4db3e6c01115d52ab70ceca9523d04bb17c26'
   name 'inSSIDer'
-  appcast 'http://metageek.net/misc/versions/MacSSIDer/MacSSIDer_appcast.xml',
-          :sha256 => 'b65b8fe01f8d74b162e1e7f411acb7be2db17fe650e2485d0534f101de72ba17'
   homepage 'http://www.inssider.com/'
   license :commercial
 

@@ -44,6 +44,17 @@ class Hbc::CaskAlreadyInstalledError < Hbc::CaskError
   end
 end
 
+class Hbc::CaskAutoUpdatesError < Hbc::CaskError
+  attr_reader :token
+  def initialize(token)
+    @token = token
+  end
+
+  def to_s
+    %Q{A Cask for #{token} is already installed and using auto-updates. Add the "--force" option to force re-install.}
+  end
+end
+
 class Hbc::CaskCommandFailedError < Hbc::CaskError
   def initialize(cmd, output, status)
     @cmd = cmd
@@ -112,6 +123,12 @@ class Hbc::CaskInvalidError < Hbc::CaskError
 
   def to_s
     "Cask '#{token}' definition is invalid" + (submsg.length > 0 ? ": #{submsg}" : '')
+  end
+end
+
+class Hbc::CaskTokenDoesNotMatchError < Hbc::CaskInvalidError
+  def initialize(token, header_token)
+    super(token, "Bad header line: '#{header_token}' does not match file name")
   end
 end
 

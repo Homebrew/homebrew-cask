@@ -1,13 +1,14 @@
-cask :v1 => 'knock' do
-  version :latest
-  sha256 :no_check
+cask 'knock' do
+  version '2.1.5'
+  sha256 '6dc272cc18e44ef06e27c4a7fc5a37f231904f3a436fdfd9e455c74829117426'
 
-  url 'http://knocktounlock.com/download'
-  name 'Knock'
+  # amazonaws.com is the official download host per the vendor homepage
+  url 'https://knock-updates.s3.amazonaws.com/Knock.zip'
   appcast 'https://knock-updates.s3.amazonaws.com/Knock.xml',
-          :sha256 => 'c1976fb467cc420bf5e6d5137f01ca70baa3b758dcf8c23860c019bf6dd882c6'
+          checkpoint: '1cb349afe8e53755921e251360b8b41ab6ecb5897ca503be959822c623672bb8'
+  name 'Knock'
   homepage 'http://knocktounlock.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Knock.app'
 end

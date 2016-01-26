@@ -1,4 +1,4 @@
-cask :v1 => 'managenameext' do
+cask 'managenameext' do
   version :latest
   sha256 :no_check
 
@@ -6,7 +6,7 @@ cask :v1 => 'managenameext' do
   url 'http://tom.25.free.fr/prg/Xojo/ManageNameExt_c.zip'
   name 'ManageNameExt'
   homepage 'http://throb.pagesperso-orange.fr/site/ind_JS.html?Prg_S.html&Prg_AutresRB.html#ManageNameExt'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'ManageNameExt.app'
 end

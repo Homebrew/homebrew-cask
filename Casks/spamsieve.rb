@@ -1,5 +1,4 @@
-cask :v1 => 'spamsieve' do
-
+cask 'spamsieve' do
   if MacOS.release <= :tiger
     version '2.9.6'
     sha256 'f060af29ab260450f0c0a906ada3e60408c9b6cd871e1df272dde2521bafeed3'

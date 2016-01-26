@@ -1,4 +1,4 @@
-cask :v1 => 'integrity' do
+cask 'integrity' do
   version :latest
   sha256 :no_check
 

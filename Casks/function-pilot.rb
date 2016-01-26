@@ -1,4 +1,4 @@
-cask :v1 => 'function-pilot' do
+cask 'function-pilot' do
   version :latest
   sha256 :no_check
 
@@ -9,8 +9,8 @@ cask :v1 => 'function-pilot' do
 
   app 'Function Pilot.app'
 
-  zap :delete => [
-    '~/Library/Application Support/FunctionPilot',
-    '~/Library/Caches/com.tinybird.functionpilot'
-  ]
+  zap delete: [
+                '~/Library/Application Support/FunctionPilot',
+                '~/Library/Caches/com.tinybird.functionpilot',
+              ]
 end

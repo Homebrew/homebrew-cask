@@ -1,4 +1,4 @@
-cask :v1 => 'psequel' do
+cask 'psequel' do
   version '1.3.4'
   sha256 '795fa5c7999eb80f19cf7ca6532c5c134b76c42a57b78312c5db5cb9857ac413'
 

@@ -1,10 +1,10 @@
-cask :v1 => 'ganttproject' do
-  version '2.7-r1891'
-  sha256 '987b0b5b4d342584602efc0425450d372363adcdf5a1b0548a8ffaf2d6d8b20f'
+cask 'ganttproject' do
+  version '2.7.1-r1924'
+  sha256 '4a7775ae3547858ca5cce91b734bb429a7e04718433e925f60da89fc1d2d154b'
 
-  url "https://dl.ganttproject.biz/ganttproject-#{version.sub(%r{-.*},'')}/ganttproject-#{version}.dmg"
+  url "https://dl.ganttproject.biz/ganttproject-#{version.sub(%r{-.*}, '')}/ganttproject-#{version}.dmg"
   name 'GanttProject'
-  homepage 'http://www.ganttproject.biz'
+  homepage 'https://www.ganttproject.biz'
   license :oss
 
   app 'GanttProject.app'

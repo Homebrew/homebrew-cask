@@ -1,4 +1,4 @@
-cask :v1 => 'lmms' do
+cask 'lmms' do
   if MacOS.release <= :snow_leopard
     version '1.0.99'
     sha256 '2ce390337a2ee372f76812b5c308ac8f3faad6981d99f0eb3b843149e3ebc98c'
@@ -13,7 +13,8 @@ cask :v1 => 'lmms' do
     url "https://github.com/LMMS/lmms/releases/download/v#{version}/lmms-#{version}-mac10.7.dmg"
   end
 
-  appcast 'https://github.com/LMMS/lmms/releases.atom'
+  appcast 'https://github.com/LMMS/lmms/releases.atom',
+          checkpoint: 'abb66fd3a0288d819436d8dd1cea01cd2c3d2690d99766d2fa6f90ae6ae35bd1'
   name 'LMMS'
   homepage 'https://lmms.io'
   license :gpl

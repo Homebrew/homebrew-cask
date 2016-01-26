@@ -1,4 +1,4 @@
-cask :v1 => 'busycontacts' do
+cask 'busycontacts' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'busycontacts' do
 
   pkg 'BusyContacts Installer.pkg'
 
-  uninstall :pkgutil => 'com.busymac.busycontacts.pkg'
+  uninstall pkgutil: 'com.busymac.busycontacts.pkg'
 end

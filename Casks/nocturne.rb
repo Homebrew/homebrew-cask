@@ -1,10 +1,12 @@
-cask :v1 => 'nocturne' do
-  version '2.0.0'
-  sha256 '062ae6b4619ab518650b2f502aaeb7a864bf69e45ce08dec8b5a3f34a027a347'
+cask 'nocturne' do
+  version '3.0'
+  sha256 '895ac0c5493b3877cf1cc6d62dfb5c0fee3c6bd41d44bd3c87554e52a0cf1462'
 
-  url "https://blacktree-nocturne.googlecode.com/files/Nocturne.#{version}.zip"
+  url "https://github.com/Daij-Djan/nocturne/blob/master/Dist/#{version}.zip?raw=true"
+  appcast 'https://raw.githubusercontent.com/Daij-Djan/nocturne/master/README.md',
+          checkpoint: '42900d719a13664d71d37c0e46a270ba87796613c7154a53afde9938d6cc9dc8'
   name 'Nocturne'
-  homepage 'https://code.google.com/p/blacktree-nocturne/'
+  homepage 'https://github.com/Daij-Djan/nocturne'
   license :oss
 
   app 'Nocturne.app'

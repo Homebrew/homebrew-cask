@@ -1,4 +1,4 @@
-cask :v1 => 'minecraft-server' do
+cask 'minecraft-server' do
   version '1.8.8'
   sha256 '39aef720dc5309476f56f2e96a516f3dd3041bbbf442cbfd47d63acbd06af31e'
 
@@ -6,9 +6,11 @@ cask :v1 => 'minecraft-server' do
   url "https://s3.amazonaws.com/Minecraft.Download/versions/#{version}/minecraft_server.#{version}.jar"
   name 'Minecraft Server'
   homepage 'https://minecraft.net/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  container :type => :naked
+  container type: :naked
+
+  binary 'minecraft-server'
 
   preflight do
     FileUtils.touch "#{staged_path}/minecraft-server"
@@ -20,14 +22,12 @@ cask :v1 => 'minecraft-server' do
     minecraft_server.close
   end
 
-  binary 'minecraft-server'
-
   postflight do
     set_permissions "#{staged_path}/minecraft-server", '+x'
     system 'minecraft-server'
 
     file_name = "#{staged_path}/EULA.txt"
-    contents = File.read(file_name).gsub(/false/, 'true')
+    contents = File.read(file_name).gsub(%r{false}, 'true')
     File.open(file_name, 'w') { |file| file.puts contents }
   end
 

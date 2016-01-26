@@ -1,4 +1,4 @@
-cask :v1 => 'qbittorrent' do
+cask 'qbittorrent' do
   version '3.3.0'
   sha256 'fc4b23c48ccb3bff9595c2e5c90709c4fec419a0f0e4ea3a568d1f39664a0767'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'heimdall-suite' do
+cask 'heimdall-suite' do
   version '1.4.0'
   sha256 '4b283fc7bc331f8ec84031c939ef9d2aa71bb8fe6be6d3434dd268d76f7c0e60'
 
@@ -10,13 +10,13 @@ cask :v1 => 'heimdall-suite' do
 
   pkg "Heimdall Suite #{version}.pkg"
 
-  uninstall :pkgutil => 'au.com.glassechidna.HeimdallSuite',
-            :kext    => 'au.com.glassechidna.heimdall_usb_shield'
+  uninstall pkgutil: 'au.com.glassechidna.HeimdallSuite',
+            kext:    'au.com.glassechidna.heimdall_usb_shield'
 
-  zap :delete => [
-    '~/Library/Preferences/com.yourcompany.heimdall-frontend.plist',
-    '~/Library/Saved Application State/com.yourcompany.heimdall-frontend.savedState'
-  ]
+  zap delete: [
+                '~/Library/Preferences/com.yourcompany.heimdall-frontend.plist',
+                '~/Library/Saved Application State/com.yourcompany.heimdall-frontend.savedState',
+              ]
 
   caveats do
     reboot

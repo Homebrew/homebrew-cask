@@ -1,9 +1,9 @@
-cask :v1 => 'rodeo' do
-  version '1.1.19'
-  sha256 '7c91c88715e05cebf6ce2f64551c26d560c1675d786c7f1b5ff6bee03b5fcc79'
+cask 'rodeo' do
+  version '1.2.1'
+  sha256 '0d9bfac3ede8d7f1f1f4c10c5fdf7cb2be37bdc46c2b43a2e9f3f4b400ea75fe'
 
   # amazonaws.com is the official download host per the vendor homepage
-  url "http://rodeo-releases.s3.amazonaws.com/#{version}/Rodeo-v#{version}-darwin_64.dmg"
+  url "https://rodeo-releases.s3.amazonaws.com/#{version}/Rodeo-v#{version}-darwin_64.dmg"
   name 'Rodeo'
   homepage 'http://rodeo.yhat.com/'
   license :closed

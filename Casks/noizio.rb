@@ -1,4 +1,4 @@
-cask :v1 => 'noizio' do
+cask 'noizio' do
   version '1.1'
   sha256 '555ecd5dfba0cf20d962455a693c2f07cbe220574a2b16a37190ac16ca584467'
 

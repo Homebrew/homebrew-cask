@@ -1,4 +1,4 @@
-cask :v1 => 'flirc' do
+cask 'flirc' do
   version :latest
   sha256 :no_check
 

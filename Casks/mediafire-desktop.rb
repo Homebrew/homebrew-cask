@@ -1,4 +1,4 @@
-cask :v1 => 'mediafire-desktop' do
+cask 'mediafire-desktop' do
   version :latest
   sha256 :no_check
 

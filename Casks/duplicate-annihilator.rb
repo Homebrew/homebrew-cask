@@ -1,4 +1,4 @@
-cask :v1 => 'duplicate-annihilator' do
+cask 'duplicate-annihilator' do
   version :latest
   sha256 :no_check
 
@@ -7,6 +7,7 @@ cask :v1 => 'duplicate-annihilator' do
   homepage 'http://brattoo.com/propaganda/'
   license :commercial
 
-  container :nested => 'Duplicate Annihilator.dmg'
+  container nested: 'Duplicate Annihilator.dmg'
+
   app 'Duplicate Annihilator.app'
 end

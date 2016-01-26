@@ -1,4 +1,4 @@
-cask :v1 => 'mail-designer' do
+cask 'mail-designer' do
   version '2.3.1'
   sha256 'ea4052960959f7a9fdc2033441eaba2267b0d0df01a7c70da57f747ee5438afd'
 

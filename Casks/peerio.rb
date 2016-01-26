@@ -1,4 +1,4 @@
-cask :v1 => 'peerio' do
+cask 'peerio' do
   version :latest
   sha256 :no_check
 

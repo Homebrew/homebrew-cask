@@ -1,4 +1,4 @@
-cask :v1 => 'bluej' do
+cask 'bluej' do
   version '3.1.6'
   sha256 'b53cb1ce8384845767074480b26b2795aecf7d0f0e9027747c0106918a7471a6'
 

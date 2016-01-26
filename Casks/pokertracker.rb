@@ -1,4 +1,4 @@
-cask :v1 => 'pokertracker' do
+cask 'pokertracker' do
   version '4.14.7'
   sha256 'e112d03806915ae737cc3c3ba035ec17149f742cf4e45946033af181e156de94'
 

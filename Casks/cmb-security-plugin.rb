@@ -1,4 +1,4 @@
-cask :v1 => 'cmb-security-plugin' do
+cask 'cmb-security-plugin' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'cmb-security-plugin' do
 
   pkg 'CMB Security Plugin.pkg'
 
-  uninstall :pkgutil => 'com.cmbchina.CMBSecurityPlugin.pkg'
+  uninstall pkgutil: 'com.cmbchina.CMBSecurityPlugin.pkg'
 end

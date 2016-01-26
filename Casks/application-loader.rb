@@ -1,4 +1,4 @@
-cask :v1 => 'application-loader' do
+cask 'application-loader' do
   version '3.0'
   sha256 '529ad05c1c2e093607cbd017e45fc258c2bcde207bb73192b5db6411b78e5c62'
 
@@ -8,5 +8,6 @@ cask :v1 => 'application-loader' do
   license :gratis
 
   pkg 'ApplicationLoader.pkg'
-  uninstall :pkgutil => 'com.apple.pkg.ApplicationLoader'
+
+  uninstall pkgutil: 'com.apple.pkg.ApplicationLoader'
 end

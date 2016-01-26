@@ -1,4 +1,4 @@
-cask :v1 => 'cubicsdr' do
+cask 'cubicsdr' do
   version '0.1.4'
   sha256 '839b44d38e57b8f5931654d9bf119e0a3ef958575a22b16814d11cf68144db5b'
 

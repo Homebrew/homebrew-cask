@@ -1,4 +1,4 @@
-cask :v1 => 'fuze' do
+cask 'fuze' do
   version :latest
   sha256 :no_check
 
@@ -8,5 +8,5 @@ cask :v1 => 'fuze' do
   homepage 'https://www.fuze.com/'
   license :commercial
 
-  installer :manual => 'Fuze_39e32182.app'
+  installer manual: 'Fuze_39e32182.app'
 end

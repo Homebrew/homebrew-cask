@@ -1,4 +1,4 @@
-cask :v1 => 'web-sharing' do
+cask 'web-sharing' do
   version '1.0'
   sha256 '54115af3de0b36f25b42834e52704490f0a4a85aed3a77e5b46a1a4e61592097'
 

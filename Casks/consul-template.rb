@@ -1,4 +1,4 @@
-cask :v1 => 'consul-template' do
+cask 'consul-template' do
   version '0.11.1'
   sha256 '6915e16969533ef27964199ff4194155cfa6deb43d1a863287d02c0c1b3067ff'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'rescuetime' do
+cask 'rescuetime' do
   version :latest
   sha256 :no_check
 

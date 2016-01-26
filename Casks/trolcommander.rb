@@ -1,4 +1,4 @@
-cask :v1 => 'trolcommander' do
+cask 'trolcommander' do
   version '0.9.6'
   sha256 '2378192a989c83e73ffad84a93b281ba2d0f8aeaac5763a454c3d66308423904'
 

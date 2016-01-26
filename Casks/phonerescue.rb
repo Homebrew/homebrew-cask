@@ -1,4 +1,4 @@
-cask :v1 => 'phonerescue' do
+cask 'phonerescue' do
   version :latest
   sha256 :no_check
 

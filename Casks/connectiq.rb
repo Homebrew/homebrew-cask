@@ -1,4 +1,4 @@
-cask :v1 => 'connectiq' do
+cask 'connectiq' do
   version '1.2.1'
   sha256 '37461e01e41697c9abe794772649a9f144d358c6da56b1dd39f0c533f3a29198'
 

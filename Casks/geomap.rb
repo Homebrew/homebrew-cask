@@ -1,4 +1,4 @@
-cask :v1 => 'geomap' do
+cask 'geomap' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'geomap' do
 
   app 'GeoMapApp.app'
 
-  zap :delete => '~/.GMA'
+  zap delete: '~/.GMA'
 end

@@ -1,5 +1,4 @@
-cask :v1 => 'idisplay' do
-
+cask 'idisplay' do
   if MacOS.release <= :leopard
     version '1.1.12'
     sha256 'ea0f9dd2c488762169c0bab2218ee628b6eff658a814dfca583e4563b99b7c6c'

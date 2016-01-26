@@ -1,4 +1,4 @@
-cask :v1 => 'maciasl' do
+cask 'maciasl' do
   if MacOS.release == :lion
     version '1.3'
     sha256 '6ba1eafbdf8d954f3c72fc4d5d9e06e15b101522ac253772a06c8579c45675de'
@@ -15,7 +15,7 @@ cask :v1 => 'maciasl' do
   homepage 'http://sourceforge.net/projects/maciasl/'
   license :gpl
 
-  app 'MaciASL.app'
+  depends_on macos: '>= :lion'
 
-  depends_on :macos => '>= :lion'
+  app 'MaciASL.app'
 end

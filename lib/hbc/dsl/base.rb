@@ -21,6 +21,6 @@ class Hbc::DSL::Base
   end
 
   def staged_path
-    caskroom_path.join(@cask.version.to_s)
+    caskroom_path.join(@cask.version)
   end
 end

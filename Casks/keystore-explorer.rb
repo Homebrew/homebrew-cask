@@ -1,4 +1,4 @@
-cask :v1 => 'keystore-explorer' do
+cask 'keystore-explorer' do
   version '5.1.1'
   sha256 'd4c8ce7acbe1e0fc1e05dfbe61fd6d6de083b4cd9bb30ee604b7a7775cb62332'
 

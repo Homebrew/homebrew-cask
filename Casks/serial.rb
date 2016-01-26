@@ -1,4 +1,4 @@
-cask :v1 => 'serial' do
+cask 'serial' do
   version '1.2.2'
   sha256 '683e9cff5962f8871909315ed0f8b56d2e710046c054343866f84ef4dac1e486'
 

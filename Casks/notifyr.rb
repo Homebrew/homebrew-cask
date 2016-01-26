@@ -1,11 +1,11 @@
-cask :v1 => 'notifyr' do
-  version :latest
-  sha256 :no_check
+cask 'notifyr' do
+  version '1.0.5'
+  sha256 '6ca121656f22d079c5f45a617d16a31a40ce3137d9e2a11f05a620719de90500'
 
-  url 'http://getnotifyr.com/app/Notifyr.zip'
-  name 'Notifyr'
+  url "http://getnotifyr.com/app/Notifyr#{version.no_dots}.zip"
   appcast 'http://getnotifyr.com/app/appcast.xml',
-          :sha256 => 'ed45021ad3a68300749e070acdd41a52506ca14f9743d438058463c1c9c9e803'
+          checkpoint: '4cbac0fcae6af8a1c00bbc8e5a8c499ab5e4cd18a5126d518205924705fb3ab4'
+  name 'Notifyr'
   homepage 'http://getnotifyr.com'
   license :gratis
 

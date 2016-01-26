@@ -1,15 +1,15 @@
-cask :v1 => 'espionage' do
-  version :latest
-  sha256 :no_check
+cask 'espionage' do
+  version '3.62'
+  sha256 '4e6ddb3a51adca6a81a42d56d855eea35ca15590bc41c92d41067d5537eaf129'
 
   url 'https://www.espionageapp.com/Espionage.dmg'
-  gpg "#{url}.sig",
-      :key_url => 'https://www.taoeffect.com/other/A884B988.asc'
+  appcast "https://updates.taoeffect.com/espionage#{version.major}/appcast.xml",
+          checkpoint: '52e10849eb03fa552293aca733797366418af5fb28eb7da166d557f3fec41abf'
   name 'Espionage'
-  appcast 'https://updates.taoeffect.com/espionage3/appcast.xml',
-          :sha256 => '47bca65264d0dce5ac4f065c2f6312727123a5b6cb83e5d1bfdedea2a0b3a80e'
   homepage 'https://www.espionageapp.com/'
   license :commercial
+  gpg "#{url}.sig",
+      key_url: 'https://www.taoeffect.com/other/A884B988.asc'
 
   app 'Espionage.app'
 end

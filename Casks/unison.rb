@@ -1,4 +1,4 @@
-cask :v1 => 'unison' do
+cask 'unison' do
   if MacOS.release <= :mountain_lion
     version '2.40.69'
     sha256 '2bcc460511f2b43fa1613cc5f9ba4dd59bb12d40b5b9fb2e9f21adaf854bcf3b'
@@ -13,11 +13,11 @@ cask :v1 => 'unison' do
     url "http://alan.petitepomme.net/unison/assets/Unison-OS-X-#{version}.zip"
   end
 
-  name 'Unison'
+  name 'Panic Unison'
   homepage 'https://www.cis.upenn.edu/~bcpierce/unison/'
   license :gpl
 
-  app 'Unison.app'
+  depends_on arch: :x86_64
 
-  depends_on :arch => :x86_64
+  app 'Unison.app'
 end

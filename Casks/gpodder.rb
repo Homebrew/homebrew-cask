@@ -1,4 +1,4 @@
-cask :v1 => 'gpodder' do
+cask 'gpodder' do
   version '3.8.3_0'
   sha256 '57fe1f006a691487452f80d924fa60fbadd865dbfb4cde2000aaf46db76d3065'
 
@@ -8,7 +8,7 @@ cask :v1 => 'gpodder' do
   homepage 'http://gpodder.org/'
   license :gpl
 
-  depends_on :x11 => true
+  depends_on x11: true
 
   app 'gPodder.app'
 end

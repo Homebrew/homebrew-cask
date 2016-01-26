@@ -1,4 +1,4 @@
-cask :v1 => 'piskel' do
+cask 'piskel' do
   version '0.5.5.1'
   sha256 '88a8f90bdbd852c4b9d957b02f9af67fd8c076ababdf4009ad8b4985a90f38e3'
 

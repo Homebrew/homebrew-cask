@@ -1,4 +1,4 @@
-cask :v1 => 'screencat' do
+cask 'screencat' do
   version '2.0.0'
   sha256 'd0587d3c7c926825019d296ad677c4469fa6cdf47ab434f556d74c372e5a18e6'
 

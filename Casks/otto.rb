@@ -1,6 +1,6 @@
-cask :v1 => 'otto' do
-  version '0.1.2'
-  sha256 'ffdcb201227dd878361777336ea6387f7bdf5193d4a5ad65a3955f3e18e2a2b6'
+cask 'otto' do
+  version '0.2.0'
+  sha256 '411d99f1e682ca8d3c817104e3f4f215a7bb65016124c10e4333682c752ba09e'
 
   # hashicorp.com is the official download host per the vendor homepage
   url "https://releases.hashicorp.com/otto/#{version}/otto_#{version}_darwin_amd64.zip"

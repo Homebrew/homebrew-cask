@@ -52,6 +52,11 @@ class Hbc::Installer
 
   def install(force=false, skip_cask_deps=false)
     odebug "Hbc::Installer.install"
+
+    if @cask.installed? && @cask.auto_updates && !force
+      raise Hbc::CaskAutoUpdatesError.new(@cask)
+    end
+
     if @cask.installed? && !force
       raise Hbc::CaskAlreadyInstalledError.new(@cask)
     end
@@ -92,7 +97,7 @@ class Hbc::Installer
   end
 
   def verify
-    Hbc::Verify.all(@downloaded_path, @cask)
+    Hbc::Verify.all(@cask, @downloaded_path)
   end
 
   def extract_primary_container
@@ -104,7 +109,7 @@ class Hbc::Installer
        Hbc::Container.for_path(@downloaded_path, @command)
     end
     unless container
-      raise Hbc::CaskError.new "Uh oh, could not identify primary container for '#{@downloaded_path}'"
+      raise Hbc::CaskError.new "Uh oh, could not figure out how to unpack '#{@downloaded_path}'"
     end
     odebug "Using container class #{container} for #{@downloaded_path}"
     container.new(@cask, @downloaded_path, @command).extract

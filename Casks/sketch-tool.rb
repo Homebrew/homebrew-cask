@@ -1,4 +1,4 @@
-cask :v1 => 'sketch-tool' do
+cask 'sketch-tool' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'sketch-tool' do
 
   binary 'sketchtool/bin/sketchtool'
   binary 'sketchtool/bin/sketchmigrate'
-  artifact 'sketchtool/share/sketchtool/resources.bundle', :target => '/usr/local/share/sketchtool/resources.bundle'
+  artifact 'sketchtool/share/sketchtool/resources.bundle', target: '/usr/local/share/sketchtool/resources.bundle'
 end

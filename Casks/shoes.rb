@@ -1,6 +1,6 @@
-cask :v1 => 'shoes' do
-  version '3.2.25'
-  sha256 'd466803c01640a220c50d28db6d08e8bb1c012e0363badc13c2b488438e1568c'
+cask 'shoes' do
+  version '3.3.0'
+  sha256 '3046ef61a59cad94f4a4c9931514db730a5a2910d3d3530afd32e841077a65d4'
 
   # mvmanila.com is the official download host per the vendor homepage
   url "http://shoes.mvmanila.com/public/shoes/shoes-#{version}-osx-10.9.tgz"

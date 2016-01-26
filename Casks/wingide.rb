@@ -1,8 +1,8 @@
-cask :v1 => 'wingide' do
-  version '5.1.8-1'
-  sha256 'e3f12e467fd0a17160406010cc6d6fd2b7c84e725848cce4694307706a8eb6c8'
+cask 'wingide' do
+  version '5.1.9-1'
+  sha256 'f8daa6cb6e76b878da78873b90ad55b4a8e45909e82ff6eeb9f7727ad10454a4'
 
-  url "http://wingware.com/pub/wingide/#{version.sub(%r{-\d+},'')}/wingide-#{version}.dmg"
+  url "https://wingware.com/pub/wingide/#{version.sub(%r{-\d+}, '')}/wingide-#{version}.dmg"
   name 'WingIDE'
   homepage 'http://www.wingware.com/'
   license :commercial

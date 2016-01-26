@@ -1,6 +1,6 @@
-cask :v1 => 'phpstorm' do
-  version '10.0.2'
-  sha256 '2035db0610f8e08a4083df986bc26eb4bdd8478caf5fbdadc7549aad73f28dcd'
+cask 'phpstorm' do
+  version '10.0.3'
+  sha256 'bd7d28974ef5587524389659dd27516c1067c35aebeee040821c638a18439e52'
 
   url "https://download.jetbrains.com/webide/PhpStorm-#{version}-custom-jdk-bundled.dmg"
   name 'PhpStorm'
@@ -9,9 +9,13 @@ cask :v1 => 'phpstorm' do
 
   app 'PhpStorm.app'
 
-  zap :delete => [
-                  '~/Library/Application Support/WebIde100',
-                  '~/Library/Preferences/WebIde100',
-                  '~/Library/Preferences/com.jetbrains.PhpStorm.plist',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/WebIde100',
+                '~/Library/Preferences/WebIde100',
+                '~/Library/Preferences/com.jetbrains.PhpStorm.plist',
+              ]
+
+  caveats do
+    depends_on_java
+  end
 end

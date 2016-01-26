@@ -1,12 +1,12 @@
-cask :v1 => 'dfontsplitter' do
+cask 'dfontsplitter' do
   version '0.4.1'
   sha256 'd9345ffe0e9be0c096e65114be21fc3aac676a9a3a53e84f1d6cebff0b7796b3'
 
-  url "http://peter.upfold.org.uk/files/dfontsplitter/dfontsplitter-#{version}-mac.zip"
-  appcast 'http://apps.upfold.org.uk/appupdate/dfontsplitter.xml',
-          :sha256 => 'b7a3ed81f5e160a4888afdb5810d97f5b2ed828ecec4569dc1d1a6bd825bcc59'
+  url "https://peter.upfold.org.uk/files/dfontsplitter/dfontsplitter-#{version}-mac.zip"
+  appcast 'https://apps.upfold.org.uk/appupdate/dfontsplitter.xml',
+          checkpoint: '8dfb0eca113f48d162fc12aae8c7b2c77d62f9958491bd8d6a3c5c9881567aba'
   name 'DfontSplitter'
-  homepage 'http://peter.upfold.org.uk/projects/dfontsplitter'
+  homepage 'https://peter.upfold.org.uk/projects/dfontsplitter'
   license :gpl
 
   app 'DfontSplitter.app'

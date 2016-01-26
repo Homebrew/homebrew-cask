@@ -1,11 +1,11 @@
-cask :v1 => 'batchmod' do
+cask 'batchmod' do
   version '1.6.3'
   sha256 '6b42b4226414ff3dbd48395e77f97901ccef0ddc04984014b5cf6c39cc3dd249'
 
   url "https://www.lagentesoft.com/resources/batchmod_#{version.delete('.')}.zip"
-  name 'BatChmod'
   appcast 'http://www.macchampion.com/arbysoft/batchmodappcast.xml',
-          :sha256 => '662efa5d638efa4844f4e661b8922c571c9772f2486b57b4dea020cc34f680e3'
+          checkpoint: '7cfd47a5e18fba5b39592454a7b97f8feef2239a33b7c15450b4ba73903dfaaf'
+  name 'BatChmod'
   homepage 'https://www.lagentesoft.com/batchmod/'
   license :gratis
 

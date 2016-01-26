@@ -1,4 +1,4 @@
-cask :v1 => 'th-makerx' do
+cask 'th-makerx' do
   version '3.6.0'
   sha256 '7b45203fc92355a4c1714a85c48bc6ac5ab9d9ee3762fa500c94cd68c6d60792'
 
@@ -9,8 +9,8 @@ cask :v1 => 'th-makerx' do
 
   app "Th-MakerX_#{version.delete('.')}/Th-MakerX.app"
 
-  zap :delete => [
-                  '~/Library/Preferences/jp.ne.wind.miko.ThMakerX3.plist',
-                  '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jp.ne.wind.miko.thmakerx3.sfl'
-                 ]
+  zap delete: [
+                '~/Library/Preferences/jp.ne.wind.miko.ThMakerX3.plist',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jp.ne.wind.miko.thmakerx3.sfl',
+              ]
 end

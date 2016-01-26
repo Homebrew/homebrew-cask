@@ -1,4 +1,4 @@
-cask :v1 => 'coteditor' do
+cask 'coteditor' do
   if MacOS.release <= :snow_leopard
     version '1.3.1'
     sha256 '5c871bd9de30fc3c76fc66acb4ea258d4d3762ae341181d65a7ef1f8de4751c5'
@@ -10,15 +10,16 @@ cask :v1 => 'coteditor' do
     # github.com is the official download host per the vendor homepage
     url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   else
-    version '2.3.1'
-    sha256 '6bc370aa879aaef4da4ac70cce50f118727e4cfc7656a2fdef86eb22692badc4'
+    version '2.3.4'
+    sha256 '837cadeb4ac7d444e3eedc0894a5b2f174b9a704b0aa532a76ac807579faac3b'
     # github.com is the official download host per the vendor homepage
     url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   end
 
-  appcast 'https://github.com/coteditor/CotEditor/releases.atom'
+  appcast 'https://github.com/coteditor/CotEditor/releases.atom',
+          checkpoint: '651fbd129f3ec69fe965b3088279d3dd31196f8c6ed26c8f69fa193ab4a79a19'
   name 'CotEditor'
-  homepage 'http://coteditor.com/'
+  homepage 'https://coteditor.com/'
   license :gpl
 
   app 'CotEditor.app'

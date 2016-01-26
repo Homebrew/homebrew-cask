@@ -1,4 +1,4 @@
-cask :v1 => 'quicksync' do
+cask 'quicksync' do
   version '3.3'
   sha256 'e3e64020e952dee692811119f966e1cf62bfc48c5ef110a39e5d92a20e9d0a3a'
 

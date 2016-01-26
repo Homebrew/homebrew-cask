@@ -1,4 +1,4 @@
-cask :v1 => 'digital' do
+cask 'digital' do
   version '1.1'
   sha256 '94fb4a2d4829cd4b717d5c250167cbe79cccf7870335c1fd4694462211c98802'
 

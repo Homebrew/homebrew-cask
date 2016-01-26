@@ -1,27 +1,20 @@
+require 'forwardable'
+
 require 'hbc/dsl'
 
 class Hbc::Cask
-  include Hbc::DSL
-
-  def self.token
-    # todo removeme: prepending KlassPrefix is transitional as we move away from representing Casks as classes
-    self.name.sub(/^KlassPrefix/,'').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').gsub(/([a-zA-Z\d])([A-Z])/,'\1-\2').downcase
-  end
+  extend Forwardable
 
   attr_reader :token, :sourcefile_path
-  def initialize(sourcefile_path=nil)
+  def initialize(token, sourcefile_path: nil, dsl: nil, &block)
+    @token = token
     @sourcefile_path = sourcefile_path
-    @token = self.class.token
+    @dsl = dsl || Hbc::DSL.new(@token)
+    @dsl.instance_eval(&block) if block_given?
   end
 
-  def caskroom_path
-    Hbc.caskroom.join(token)
-  end
-
-  # todo: move to staged.rb ?
-  def staged_path
-    cask_version = version ? version : :unknown
-    caskroom_path.join(cask_version.to_s)
+  Hbc::DSL::DSL_METHODS.each do |method_name|
+    define_method(method_name) { @dsl.send(method_name) }
   end
 
   METADATA_SUBDIR = '.metadata'
@@ -84,13 +77,12 @@ class Hbc::Cask
       odebug "Cask instance dumps in YAML:"
       odebug "Cask instance toplevel:", self.to_yaml
       [
-       :full_name,
+       :name,
        :homepage,
        :url,
        :appcast,
        :version,
        :license,
-       :tags,
        :sha256,
        :artifacts,
        :caveats,
@@ -99,10 +91,9 @@ class Hbc::Cask
        :container,
        :gpg,
        :accessibility_access,
+       :auto_updates
       ].each do |method|
-        printable_method = method.to_s
-        printable_method = "name" if printable_method == "full_name"
-        odebug "Cask instance method '#{printable_method}':", self.send(method).to_yaml
+        odebug "Cask instance method '#{method}':", self.send(method).to_yaml
       end
     end
   end

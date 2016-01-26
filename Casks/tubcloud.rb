@@ -1,4 +1,4 @@
-cask :v1 => 'tubcloud' do
+cask 'tubcloud' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'tubcloud' do
 
   pkg 'tubcloud-latest-macos.pkg'
 
-  uninstall :pkgutil => 'de.tu-berlin.tubit.owncloud'
+  uninstall pkgutil: 'de.tu-berlin.tubit.owncloud'
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'elasticwolf' do
+cask 'elasticwolf' do
   version '5.1.6'
   sha256 '32eccff8e2cff1187fbf4b8c614e61056ae9c371ebdba3174e021b413b973542'
 

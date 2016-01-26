@@ -1,4 +1,4 @@
-cask :v1 => 'sizzlingkeys' do
+cask 'sizzlingkeys' do
   version :latest
   sha256 :no_check
 

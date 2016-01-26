@@ -1,4 +1,4 @@
-cask :v1 => 'time-lapse-assembler' do
+cask 'time-lapse-assembler' do
   version :latest
   sha256 :no_check
 

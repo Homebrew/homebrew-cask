@@ -1,4 +1,4 @@
-cask :v1 => 'valentina-studio' do
+cask 'valentina-studio' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'teeworlds' do
+cask 'teeworlds' do
   version '0.6.3'
   sha256 '9ed35bd8d537b3d499f129ab6e8643f16786217dd552527a53edcc85d650c2cd'
 

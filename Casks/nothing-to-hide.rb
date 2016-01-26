@@ -1,4 +1,4 @@
-cask :v1 => 'nothing-to-hide' do
+cask 'nothing-to-hide' do
   version :latest
   sha256 :no_check
 

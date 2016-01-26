@@ -1,4 +1,4 @@
-cask :v1 => 'qgis' do
+cask 'qgis' do
   version '2.12.0-1'
   sha256 'b398f12904f7762ee74a1d9ddebd1fd44eef85007488320dcd4899aebefc6089'
 
@@ -6,12 +6,13 @@ cask :v1 => 'qgis' do
   name 'QGIS'
   homepage 'http://www.kyngchaos.com/software/qgis'
   license :gpl
+
+  depends_on cask: 'gdal-framework'
+  depends_on formula: 'matplotlib'
+
   pkg 'Install QGIS.pkg'
 
-  uninstall :pkgutil => 'org.qgis.qgis-*'
-
-  depends_on :cask => 'gdal-framework'
-  depends_on :formula => 'matplotlib'
+  uninstall pkgutil: 'org.qgis.qgis-*'
 
   caveats <<-EOS.undent
     #{token} requires matplotlib in a specific location. Please run the following to finish install:

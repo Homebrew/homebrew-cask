@@ -1,4 +1,4 @@
-cask :v1 => 'story-writer' do
+cask 'story-writer' do
   version '1.3.1'
 
   if Hardware::CPU.is_32_bit?

@@ -1,4 +1,4 @@
-cask :v1 => 'kega-fusion' do
+cask 'kega-fusion' do
   version '3.63i'
   sha256 'f329d3c700a4b1f66e49753f91d27182b1e67bdd0e9bd16c6347f989aa7131ba'
 
@@ -9,9 +9,9 @@ cask :v1 => 'kega-fusion' do
 
   app 'Kega Fusion.app'
 
-  zap :delete => [
-                  '~/Library/Application Support/Kega Fusion',
-                  '~/Library/Preferences/uk.co.reptilia-design.Kega_Fusion.plist',
-                  '~/Library/Saved Application State/uk.co.reptilia-design.Kega_Fusion.savedState'
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Kega Fusion',
+                '~/Library/Preferences/uk.co.reptilia-design.Kega_Fusion.plist',
+                '~/Library/Saved Application State/uk.co.reptilia-design.Kega_Fusion.savedState',
+              ]
 end

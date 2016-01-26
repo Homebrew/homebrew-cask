@@ -1,6 +1,6 @@
-cask :v1 => 'consul-web-ui' do
-  version '0.6.0'
-  sha256 '73c5e7ee50bb4a2efe56331d330e6d7dbf46335599c028344ccc4031c0c32eb0'
+cask 'consul-web-ui' do
+  version '0.6.1'
+  sha256 'afccdd540b166b778c7c0483becc5e282bbbb1ee52335bfe94bf757df8c55efc'
 
   # hashicorp.com is the official download host per the vendor homepage
   url "https://releases.hashicorp.com/consul/#{version}/consul_#{version}_web_ui.zip"
@@ -8,10 +8,11 @@ cask :v1 => 'consul-web-ui' do
   homepage 'https://www.consul.io/intro/getting-started/ui.html'
   license :mpl
 
+  depends_on cask: 'consul'
+
   stage_only true
 
-  depends_on :cask => 'consul'
   caveats do
-    "Invoke consul with '-ui-dir #{staged_path}/dist'"
+    "Invoke consul with '-ui-dir #{staged_path}'"
   end
 end

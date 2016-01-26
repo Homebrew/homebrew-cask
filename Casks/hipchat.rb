@@ -1,14 +1,16 @@
-cask :v1 => 'hipchat' do
-  version '3.3.6-202'
-  sha256 '1d98ba1f6b6f67f62c38bd200e8c5a29d2ee47fcf3c6fa574c741771eb1a8d83'
+cask 'hipchat' do
+  version '4.0-349'
+  sha256 '8244696fc29b98e4249daef20fec8b890ecbe7eb20a770a3fb48ca35a4b65e7c'
 
   # amazonaws.com is the official download host per the vendor homepage
-  url 'https://s3.amazonaws.com/uploads.hipchat.com/10804/1699248/dZxE36RSiZCYmKe/HipChat.zip'
+  url "https://s3.amazonaws.com/downloads.hipchat.com/osx/HipChat-#{version}.zip"
   appcast 'https://www.hipchat.com/release_notes/appcast/mac',
-          :sha256 => 'f4a0980dea0e8ebb79155bc70134cec830076ca24d221041f130a9505e4a9357'
+          checkpoint: '425d77527f50f4c489ab41cb67cfb9f0b2c0d2808df011e19f7926a19c0b0b01'
   name 'HipChat'
   homepage 'https://www.hipchat.com/'
   license :freemium
+
+  auto_updates true
 
   app 'HipChat.app'
 
@@ -16,14 +18,14 @@ cask :v1 => 'hipchat' do
     suppress_move_to_applications
   end
 
-  zap :delete => [
-                  # todo expand/glob for '~/Library/<userid>/HipChat/'
-                  '~/Library/Application Support/HipChat',
-                  '~/Library/Caches/com.hipchat.HipChat',
-                  '~/Library/HipChat',
-                  '~/Library/Logs/HipChat',
-                  '~/Library/Preferences/com.hipchat.HipChat.plist',
-                  '~/Library/Saved Application State/com.hipchat.HipChat.savedState',
-                  '~/Library/chat.hipchat.com',
-                 ]
+  zap delete: [
+                # TODO: expand/glob for '~/Library/<userid>/HipChat/'
+                '~/Library/Application Support/HipChat',
+                '~/Library/Caches/com.hipchat.HipChat',
+                '~/Library/HipChat',
+                '~/Library/Logs/HipChat',
+                '~/Library/Preferences/com.hipchat.HipChat.plist',
+                '~/Library/Saved Application State/com.hipchat.HipChat.savedState',
+                '~/Library/chat.hipchat.com',
+              ]
 end

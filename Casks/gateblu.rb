@@ -1,4 +1,4 @@
-cask :v1 => 'gateblu' do
+cask 'gateblu' do
   version :latest
   sha256 :no_check
 
@@ -10,6 +10,6 @@ cask :v1 => 'gateblu' do
 
   pkg 'Gateblu Installer.pkg'
 
-  uninstall :pkgutil => 'com.octoblu.*',
-            :delete => '/Applications/Gateblu.app'
+  uninstall pkgutil: 'com.octoblu.*',
+            delete:  '/Applications/Gateblu.app'
 end

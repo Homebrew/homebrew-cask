@@ -1,4 +1,4 @@
-cask :v1 => 'cantata' do
+cask 'cantata' do
   version '1.5.2'
   sha256 '564eec8b60d7e46670b8c67686db8a69210f540626bdbaf8c837b48c0bd2ffc8'
 

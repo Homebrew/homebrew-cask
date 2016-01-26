@@ -1,4 +1,4 @@
-cask :v1 => 'fdt' do
+cask 'fdt' do
   version :latest
   sha256 :no_check
 

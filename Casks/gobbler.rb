@@ -1,4 +1,4 @@
-cask :v1 => 'gobbler' do
+cask 'gobbler' do
   version :latest
   sha256 :no_check
 
@@ -7,9 +7,10 @@ cask :v1 => 'gobbler' do
   homepage 'https://app.gobbler.com'
   license :gratis
 
-  installer :manual => 'Gobbler.app'
-  uninstall :script  => {
-                          :executable => '/Library/Gobbler/Uninstaller/uninstall_gobbler.sh',
-                          :args => ['-f'],
-                        }
+  installer manual: 'Gobbler.app'
+
+  uninstall script: {
+                      executable: '/Library/Gobbler/Uninstaller/uninstall_gobbler.sh',
+                      args:       ['-f'],
+                    }
 end

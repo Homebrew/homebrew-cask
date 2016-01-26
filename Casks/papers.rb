@@ -1,10 +1,10 @@
-cask :v1 => 'papers' do
-  version '3.4.1-407'
-  sha256 '9a1d3f9d2e6cfc55881ac69882c3b362c89aaa471449fd001a59dceb8730189b'
+cask 'papers' do
+  version '3.4.2,439'
+  sha256 '6e22159c30cab70f9157ead8097bff8ec06bdad0e966e4c6bd33d4229b04ffce'
 
-  url "http://appcaster.papersapp.com/apps/mac/production/download/#{version.sub(%r{^.*-},'')}/papers_#{version.delete('.').sub('-','_')}.dmg"
+  url "http://appcaster.papersapp.com/apps/mac/production/download/#{version.after_comma}/papers_#{version.before_comma.no_dots}_#{version.after_comma}.dmg"
   appcast 'http://appcaster.papersapp.com/apps/mac/production/appcast.xml',
-          :sha256 => '681469fc04bc4690c6af360d9cc4d7af1c03626b9c26e1af105b2f4290114caf'
+          checkpoint: '700e9e2f2a2b4a90b0c3bc5c346fb8aaf6c1ddee1367571cbdc972522ed1824f'
   name 'Papers'
   homepage 'http://www.papersapp.com/'
   license :commercial

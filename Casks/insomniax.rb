@@ -1,11 +1,11 @@
-cask :v1 => 'insomniax' do
+cask 'insomniax' do
   version '2.1.8'
   sha256 'abbf4b27e86da934042a1dcedd339ffb59e16c4aa8e0c0d44534533be42e3efb'
 
   url "http://insomniax.semaja2.net/InsomniaX-#{version}.tgz"
-  name 'InsomniaX'
   appcast 'http://insomniax.semaja2.net/profile/profileInfo.php',
-          :sha256 => '834f8bedbd0037f7e65a47c62939f2073f6b1efc5014ddd3f3d6e37650c246cb'
+          checkpoint: 'ffe4389e2a4f837fbe48aef4017ed326d203fd23068d30dde3b6ae8c5fa80842'
+  name 'InsomniaX'
   homepage 'https://semaja2.net/projects/insomniaxinfo/'
   license :gratis
 

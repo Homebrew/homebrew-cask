@@ -1,4 +1,4 @@
-cask :v1 => 'itools' do
+cask 'itools' do
   version '2.7.0'
   sha256 'b05fdfd3820ffe3f35947cfb17e65a75cf17e1f6e57717f0eb5e05f4d951588b'
 

@@ -11,6 +11,9 @@ describe Hbc::Artifact::Binary do
   let(:expected_path) {
     Hbc.binarydir.join('binary')
   }
+  before(:each) {
+    Hbc.binarydir.mkpath
+  }
   after(:each) {
     if expected_path.exist?
       FileUtils.rm expected_path

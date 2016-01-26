@@ -1,4 +1,4 @@
-cask :v1 => 'goldencheetah' do
+cask 'goldencheetah' do
   version '3.2.0'
 
   if Hardware::CPU.is_32_bit?
@@ -11,7 +11,8 @@ cask :v1 => 'goldencheetah' do
     url "https://github.com/GoldenCheetah/GoldenCheetah/releases/download/V#{version.to_f}/GoldenCheetah_#{version}_QT5_64bit.dmg"
   end
 
-  appcast 'https://github.com/GoldenCheetah/GoldenCheetah/releases.atom'
+  appcast 'https://github.com/GoldenCheetah/GoldenCheetah/releases.atom',
+          checkpoint: 'e62261f0cf3a43f5ae3c8c7211ef22016d2d271025b7bbc31f8d9b3da0867f5d'
   name 'GoldenCheetah'
   homepage 'http://www.goldencheetah.org/'
   license :gpl

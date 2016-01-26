@@ -1,4 +1,4 @@
-cask :v1 => 'fullcontact' do
+cask 'fullcontact' do
   version '1.0'
   sha256 'e828f62a6546d901dd3a8d11979541cdaaae2cda6d6010ebba7e9b954c700859'
 

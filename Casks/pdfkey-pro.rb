@@ -1,4 +1,4 @@
-cask :v1 => 'pdfkey-pro' do
+cask 'pdfkey-pro' do
   version :latest
   sha256 :no_check
 

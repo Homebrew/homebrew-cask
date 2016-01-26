@@ -1,13 +1,14 @@
-cask :v1 => 'mongohub' do
-  version :latest
-  sha256 :no_check
+cask 'mongohub' do
+  version '3.1.4'
+  sha256 '9fdeb27aa87004f6c9c35c7736836ad952f11e1d678cda6e6215a8bdd617bbd3'
 
+  # amazonaws.com is the official download host per the vendor homepage
   url 'https://mongohub.s3.amazonaws.com/MongoHub.zip'
+  appcast 'https://github.com/jeromelebel/MongoHub-Mac/releases.atom',
+          checkpoint: '6f591d790da4f6d9683753e2966899fe5efebd5c9b11d0ee91f1dd66ff2c4884'
   name 'MongoHub'
-  appcast 'https://mongohub.s3.amazonaws.com/mongohub_su_feed.xml',
-          :sha256 => 'c5c16c0ca7331624f6e8f6154b88bb16648ee66706d613c5fc0f4863ff7f1eb3'
   homepage 'https://github.com/jeromelebel/MongoHub-Mac'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'MongoHub.app'
 end

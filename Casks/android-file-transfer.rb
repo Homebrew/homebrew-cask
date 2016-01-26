@@ -1,4 +1,4 @@
-cask :v1 => 'android-file-transfer' do
+cask 'android-file-transfer' do
   version :latest
   sha256 :no_check
 
@@ -10,6 +10,6 @@ cask :v1 => 'android-file-transfer' do
 
   app 'Android File Transfer.app'
 
-  zap :delete => '~/Library/Application Support/Google/Android File Transfer',
-      :rmdir  => '~/Library/Application Support/Google/'
+  zap delete: '~/Library/Application Support/Google/Android File Transfer',
+      rmdir:  '~/Library/Application Support/Google/'
 end

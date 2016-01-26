@@ -1,4 +1,4 @@
-cask :v1 => 'packages' do
+cask 'packages' do
   version '1.1.3'
   sha256 'fb9baad763db3a1767b047ab7b634ae764f22e94f0e8285d143d9c34e72c1672'
 
@@ -9,5 +9,5 @@ cask :v1 => 'packages' do
 
   pkg 'packages/Packages.pkg'
 
-  uninstall :script => 'Extras/uninstall.sh'
+  uninstall script: 'Extras/uninstall.sh'
 end

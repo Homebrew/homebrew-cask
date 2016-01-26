@@ -1,4 +1,4 @@
-cask :v1 => 'jdownloader' do
+cask 'jdownloader' do
   version :latest
   sha256 :no_check
 
@@ -12,6 +12,10 @@ cask :v1 => 'jdownloader' do
   homepage 'http://jdownloader.org/'
   license :gpl
 
+  auto_updates true
+
+  app 'JDownloader 2.0/JDownloader2.app'
+
   preflight do
     system "\"#{staged_path}/JDownloader Installer.app/Contents/MacOS/JavaApplicationStub\" " \
            "-dir \"#{staged_path}\" " \
@@ -23,11 +27,7 @@ cask :v1 => 'jdownloader' do
            '> /dev/null 2>&1'
   end
 
-  caveats <<-EOS.undent
-    #{token} requires Java 6+, you can install the latest Java using
-
-      brew cask install java
-  EOS
-
-  app 'JDownloader 2.0/JDownloader2.app'
+  caveats do
+    depends_on_java
+  end
 end

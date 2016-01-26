@@ -1,4 +1,4 @@
-cask :v1 => 'basictex' do
+cask 'basictex' do
   version :latest
   sha256 :no_check
 
@@ -10,10 +10,10 @@ cask :v1 => 'basictex' do
 
   pkg 'BasicTeX.pkg'
 
-  uninstall :pkgutil => 'org.tug.mactex.basictex2015',
-            :delete  => [
-                         '/Library/PreferencePanes/TeXDistPrefPane.prefPane',
-                         '/etc/paths.d/TeX',
-                         '/etc/manpaths.d/TeX'
-                        ]
+  uninstall pkgutil: 'org.tug.mactex.basictex2015',
+            delete:  [
+                       '/Library/PreferencePanes/TeXDistPrefPane.prefPane',
+                       '/etc/paths.d/TeX',
+                       '/etc/manpaths.d/TeX',
+                     ]
 end

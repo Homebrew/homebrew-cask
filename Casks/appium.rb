@@ -1,4 +1,4 @@
-cask :v1 => 'appium' do
+cask 'appium' do
   version '1.4.13'
   sha256 'c26fcd668c872b1f015d1c216a3883c7ccce16e399ffd29d7abef135fda6cbba'
 

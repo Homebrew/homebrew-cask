@@ -1,6 +1,6 @@
-cask :v1 => 'quip' do
-  version '4.2'
-  sha256 'b1277eec2ffee0559f80d67840718f7c60e38ae29f9a1faf8a1ca1ffdc86151b'
+cask 'quip' do
+  version '4.4'
+  sha256 'ce1e192a74faaf19990db00bbe224217ea59f172abefe8b39259c7e3c04d4042'
 
   # cloudfront.net is the official download host per the vendor homepage
   url "https://d2i1pl9gz4hwa7.cloudfront.net/macosx_#{version}.dmg"

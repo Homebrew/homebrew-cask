@@ -1,5 +1,4 @@
-cask :v1 => 'istumbler' do
-
+cask 'istumbler' do
   if MacOS.release <= :mountain_lion
     version '99'
     sha256 'ac30e44fe86132c93a5b33699de00e86628e2f51a42015d2225b91521a198b63'
@@ -14,11 +13,11 @@ cask :v1 => 'istumbler' do
     url "https://istumbler.net/downloads/istumbler-#{version}.dmg"
   end
 
-  name 'iStumbler'
   appcast 'https://istumbler.net/feeds/appcast.rss',
-          :sha256 => '6f5814a0cd44fb1825657a2cca3e91dd1038bd1a4796c79f40de5ec82105ab2d'
+          checkpoint: '34a8b8cf15c866c8e7e3484b5eb894f178a68fb1dde20b47b6ce6d841f976403'
+  name 'iStumbler'
   homepage 'https://istumbler.net/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'iStumbler.app'
 end

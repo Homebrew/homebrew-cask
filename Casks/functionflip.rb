@@ -1,4 +1,4 @@
-cask :v1 => 'functionflip' do
+cask 'functionflip' do
   version '2.2.3'
   sha256 '2c0613e173522b5baff5e321ab1ae551c8a4acc223a0901ef423671baded92af'
 

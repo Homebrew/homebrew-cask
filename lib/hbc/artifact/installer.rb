@@ -26,10 +26,12 @@ class Hbc::Artifact::Installer < Hbc::Artifact::Base
                                                                         "#{self.class.artifact_dsl_key}",
                                                                         {:must_succeed => true, :sudo => true},
                                                                         {:print_stdout => true}
-                                                                        )
+                                                                       )
         ohai "Running #{self.class.artifact_dsl_key} script #{executable}"
         raise Hbc::CaskInvalidError.new(@cask, "#{self.class.artifact_dsl_key} missing executable") if executable.nil?
-        @command.run(@cask.staged_path.join(executable), script_arguments)
+        executable_path = @cask.staged_path.join(executable)
+        @command.run('/bin/chmod', :args => ['+x', executable_path]) if File.exists?(executable_path)
+        @command.run(executable_path, script_arguments)
       end
     end
   end

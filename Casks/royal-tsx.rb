@@ -1,10 +1,10 @@
-cask :v1 => 'royal-tsx' do
-  version '2.2.1.1'
-  sha256 '5041be5501b87612070677efe0b3752e6051833033a95c9f0ba99a72833ef34e'
+cask 'royal-tsx' do
+  version '2.2.1.1000'
+  sha256 '5622c6d7f3593c5b0f6056614f1afe45bceb9143ca05cb14867f8581de017a47'
 
   url "http://v2.royaltsx.com/updates/royaltsx_#{version}.dmg"
   appcast 'http://v2.royaltsx.com/updates_beta.php',
-          :sha256 => '326f26d7c0d628d5fbccfdb4986593a5da5288b26d71bbfa7e504747cb08d309'
+          checkpoint: '0241765a554d894e57fab64b53395091bcb575003ebaed65da1f119ad4fbee40'
   name 'Royal TSX'
   homepage 'http://www.royaltsx.com'
   license :freemium

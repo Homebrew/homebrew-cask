@@ -1,4 +1,4 @@
-cask :v1 => 'svgcleaner' do
+cask 'svgcleaner' do
   version '0.6.2'
   sha256 '11a46910991b81aab8dc4f18859be9c518c62e1d03b2db2684f87f74de9edcf7'
 
@@ -10,5 +10,5 @@ cask :v1 => 'svgcleaner' do
 
   app 'SVGCleaner.app'
 
-  zap :delete => '~/Library/Saved Application State/com.yourcompany.SVGCleaner.savedState'
+  zap delete: '~/Library/Saved Application State/com.yourcompany.SVGCleaner.savedState'
 end

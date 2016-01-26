@@ -1,10 +1,10 @@
-cask :v1 => 'livechat' do
+cask 'livechat' do
   version :latest
   sha256 :no_check
 
   url 'http://www.livechatinc.com/download/Mac/LiveChat.dmg'
   name 'LiveChat'
-  homepage 'http://livechatinc.com'
+  homepage 'https://livechatinc.com'
   license :commercial
 
   app 'LiveChat.app'

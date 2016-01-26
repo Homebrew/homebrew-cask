@@ -1,20 +1,20 @@
-cask :v1 => 'firefox' do
-  version '42.0'
-  sha256 '83a41b8a427038e668759fd80ab3d6019cd1fe67dbe866fd31ef9be68c4ea084'
+cask 'firefox' do
+  version '43.0.4'
+  sha256 'f984a275f978aaec7b66af860fbf9f74c457b173475429363cadb1bc6e3c2be8'
 
   url "https://ftp.mozilla.org/pub/firefox/releases/#{version}/mac/en-US/Firefox%20#{version}.dmg"
-  name 'Firefox'
   name 'Mozilla Firefox'
   homepage 'https://www.mozilla.org/en-US/firefox/'
   license :mpl
-  tags :vendor => 'Mozilla'
+
+  auto_updates true
 
   app 'Firefox.app'
 
-  zap :delete => [
-                  '~/Library/Application Support/Firefox',
-                  '~/Library/Caches/Firefox',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Firefox',
+                '~/Library/Caches/Firefox',
+              ]
 
   caveats <<-EOS.undent
   The Mac App Store version of 1Password won't work with a Homebrew-cask-linked Mozilla Firefox. To bypass this limitation, you need to either:

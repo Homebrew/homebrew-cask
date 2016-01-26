@@ -1,4 +1,4 @@
-cask :v1 => '0ad' do
+cask '0ad' do
   version '0.0.19-alpha'
   sha256 '83f75a2702daec6195bea7a2c705aa2929fcd1b0b0507afc59d0ecfa15301ba9'
 

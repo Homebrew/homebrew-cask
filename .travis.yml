@@ -1,69 +1,52 @@
 language: objective-c
 
-# todo
-#
-# test with Ruby 2.1, but allow failure
-#
+sudo: false
 
-# "Current" is dependent on OS X release.  At the time of writing, it
-# is always either 1.8 or 2.0
 env:
-  matrix:
-    - CASK_RUBY_TEST_VERSION="2.0"
-    - CASK_RUBY_TEST_VERSION="Current"
+  global:
+    - LANG=en_US.UTF-8
+    - LANGUAGE=en_US.UTF-8
+    - LC_ALL=en_US.UTF-8
 
-# permit "Current" to fail without affecting our badge
 matrix:
-  allow_failures:
-    - env: CASK_RUBY_TEST_VERSION="Current"
+  include:
+    - env: OSX=10.11 HOMEBREW_RUBY=2.0.0
+      os: osx
+      osx_image: xcode7.2
+      rvm: system
+    - env: OSX=10.10 HOMEBREW_RUBY=2.0.0
+      os: osx
+      osx_image: xcode7.1
+      rvm: system
+    - env: OSX=10.9 HOMEBREW_RUBY=2.0.0
+      os: osx
+      osx_image: beta-xcode6.2
+      rvm: system
   fast_finish: true
 
-# before_install steps
-# * turn off RVM
-# * set PATH according to env matrix
-# * update Homebrew
-# * informational feedback
+branches:
+  only:
+    - master
+
+cache:
+  directories:
+    - /usr/local
+    - $HOME/.gem
+
 before_install:
-  - rvm use system
-  - export PATH="/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin":"$PATH"
-  - brew update
-  - printenv PATH
-  - /usr/bin/which ruby
-  - ruby --version
-  - /usr/bin/which rake
-  - rake --version
-  - echo ls_ruby_bindir; ls "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin"
+  - . ci/travis/before_install.sh
 
-# install steps
-# * brew Formulae without which some tests will be skipped
-# * bundler gem
-# * Ruby gems required for brew-cask
 install:
-  - brew install cabextract
-  - brew install unar
-  - echo gem_install_bundler; sudo "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin/gem" install bundler --bindir="/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin"
-  - echo bundle; sudo "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin/bundle" --system
+  - . ci/travis/install.sh
 
-# informational feedback
 before_script:
-  - printenv PATH
-  - /usr/bin/which ruby
-  - ruby --version
-  - /usr/bin/which bundle
-  - bundle --version
-  - /usr/bin/which rake
-  - rake --version
-  - echo ls_ruby_bindir; ls "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin"
+  - . ci/travis/before_script.sh
 
-# the test itself
-# path-quoting is different here due to YAML constraints
-# @@@ todo: setting the --seed here is an ugly temporary hack, to remain only until test-suite glitches are fixed.
 script:
-  - /System/Library/Frameworks/Ruby.framework/Versions/"${CASK_RUBY_TEST_VERSION}"/usr/bin/bundle exec "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin/rake" test TESTOPTS="--seed=14830"
-  - /System/Library/Frameworks/Ruby.framework/Versions/"${CASK_RUBY_TEST_VERSION}"/usr/bin/bundle exec "/System/Library/Frameworks/Ruby.framework/Versions/${CASK_RUBY_TEST_VERSION}/usr/bin/rake" rubocop
-  - developer/bin/audit_modified_casks "${TRAVIS_BRANCH}..${TRAVIS_COMMIT}"
+  - . ci/travis/script.sh
 
 notifications:
+  email: false
   irc:
     channels:
       - "chat.freenode.net#homebrew-cask"
@@ -71,4 +54,9 @@ notifications:
       - "(%{repository_name}) %{build_number}: %{branch}@%{commit} %{author} -> %{message} %{build_url}"
     use_notice: true
     skip_join: true
-  email: false
+  webhooks:
+    urls:
+      - "https://webhooks.gitter.im/e/712d699360b239db14a5"
+    on_success: change
+    on_failure: always
+    on_start: never

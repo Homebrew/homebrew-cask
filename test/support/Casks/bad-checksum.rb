@@ -1,4 +1,4 @@
-cask :v1test => 'bad-checksum' do
+test_cask 'bad-checksum' do
   version '1.2.3'
   sha256 'badbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadb'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'inkscape' do
+cask 'inkscape' do
   version '0.91-1'
   sha256 '66c9af880f87d5b64006391fc8dd2d3f546d93d6d91235eba7856deacba29862'
 
@@ -8,11 +8,10 @@ cask :v1 => 'inkscape' do
   homepage 'https://inkscape.org/'
   license :gpl
 
+  depends_on x11: true
+
   app 'Inkscape.app'
-  # NOTE: running inkscape on the command line requires absolute paths to files
   binary 'Inkscape.app/Contents/Resources/bin/inkscape'
 
-  zap :delete => '~/.inkscape-etc'
-
-  depends_on :x11 => true
+  zap delete: '~/.inkscape-etc'
 end

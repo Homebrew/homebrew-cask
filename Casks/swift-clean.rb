@@ -1,4 +1,4 @@
-cask :v1 => 'swift-clean' do
+cask 'swift-clean' do
   version :latest
   sha256 :no_check
 

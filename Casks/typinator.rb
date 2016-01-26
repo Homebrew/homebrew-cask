@@ -1,4 +1,4 @@
-cask :v1 => 'typinator' do
+cask 'typinator' do
   version :latest
   sha256 :no_check
 
@@ -7,7 +7,7 @@ cask :v1 => 'typinator' do
   homepage 'http://www.ergonis.com/'
   license :commercial
 
-  app 'Typinator.app'
-
   accessibility_access true
+
+  app 'Typinator.app'
 end

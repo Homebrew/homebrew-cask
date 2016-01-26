@@ -1,4 +1,4 @@
-cask :v1 => 'lazarus' do
+cask 'lazarus' do
   version '1.4.2-20150711'
   sha256 'a63ae1e6206044f60b7ab1640a33b7fb0de58a7e26c32efb17d15d94cbd7120c'
 
@@ -10,5 +10,5 @@ cask :v1 => 'lazarus' do
 
   pkg 'lazarus.pkg'
 
-  uninstall :pkgutil => 'org.freepascal.lazarus.www'
+  uninstall pkgutil: 'org.freepascal.lazarus.www'
 end

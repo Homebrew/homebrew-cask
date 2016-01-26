@@ -1,4 +1,4 @@
-cask :v1 => 'fuzzyclock' do
+cask 'fuzzyclock' do
   version :latest
   sha256 :no_check
 

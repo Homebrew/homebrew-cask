@@ -1,19 +1,19 @@
-cask :v1 => 'wacom-graphire4-tablet' do
+cask 'wacom-graphire4-tablet' do
   version '5.3.0-3'
   sha256 '0299398282cf86d56bd8f0701ef9c3140e901b8ea72ec6821a00871acdd25e76'
 
-  url "http://cdn.wacom.com/U/Drivers/Mac/Consumer/#{version.sub(%r{-.*},'').delete('.')}/PenTablet_#{version}.dmg"
+  url "http://cdn.wacom.com/U/Drivers/Mac/Consumer/#{version.sub(%r{-.*}, '').delete('.')}/PenTablet_#{version}.dmg"
   name 'Graphire4 (CTE) Legacy Driver'
-  homepage 'http://us.wacom.com/en/support/legacy-drivers/'
+  homepage 'https://us.wacom.com/en/support/legacy-drivers/'
   license :gratis
 
   pkg 'Install Bamboo.pkg'
 
-  uninstall :launchctl => 'com.wacom.pentablet',
-            :quit => [
-                      'com.wacom.TabletDriver',
-                      'com.wacom.PenTabletDriver',
-                      'com.wacom.ConsumerTouchDriver'
-                     ],
-           :pkgutil => 'com.wacom.installpentablet'
+  uninstall launchctl: 'com.wacom.pentablet',
+            quit:      [
+                         'com.wacom.TabletDriver',
+                         'com.wacom.PenTabletDriver',
+                         'com.wacom.ConsumerTouchDriver',
+                       ],
+            pkgutil:   'com.wacom.installpentablet'
 end

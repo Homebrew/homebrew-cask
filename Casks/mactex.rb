@@ -1,4 +1,4 @@
-cask :v1 => 'mactex' do
+cask 'mactex' do
   version :latest
   sha256 :no_check
 
@@ -9,15 +9,15 @@ cask :v1 => 'mactex' do
 
   pkg 'MacTeX.pkg'
 
-  uninstall :pkgutil => [
-                         'org.tug.mactex.ghostscript9.16',
-                         'org.tug.mactex.gui2015',
-                         'org.tug.mactex.texlive2015'
-                        ],
-            :delete  => [
-                         '/Applications/TeX',
-                         '/Library/PreferencePanes/TeXDistPrefPane.prefPane',
-                         '/etc/paths.d/TeX',
-                         '/etc/manpaths.d/TeX'
-                        ]
+  uninstall pkgutil: [
+                       'org.tug.mactex.ghostscript9.16',
+                       'org.tug.mactex.gui2015',
+                       'org.tug.mactex.texlive2015',
+                     ],
+            delete:  [
+                       '/Applications/TeX',
+                       '/Library/PreferencePanes/TeXDistPrefPane.prefPane',
+                       '/etc/paths.d/TeX',
+                       '/etc/manpaths.d/TeX',
+                     ]
 end

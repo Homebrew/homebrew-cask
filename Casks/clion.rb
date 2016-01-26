@@ -1,6 +1,6 @@
-cask :v1 => 'clion' do
-  version '1.2.1'
-  sha256 'df4eaef4a0d4cf5609025849f656e5d2e484ceb122af3dd9c5292ce55fd62d58'
+cask 'clion' do
+  version '1.2.4'
+  sha256 'e476eb093fc4624090f941d5767dc20edbcd12aca98bc388d8482606691452b9'
 
   url "https://download.jetbrains.com/cpp/CLion-#{version}-custom-jdk-bundled.dmg"
   name 'CLion'
@@ -9,11 +9,11 @@ cask :v1 => 'clion' do
 
   app 'CLion.app'
 
-  zap :delete => [
-                  '~/Library/Preferences/com.jetbrains.CLion.plist',
-                  '~/Library/Preferences/clion12',
-                  '~/Library/Application Support/clion12',
-                  '~/Library/Caches/clion12',
-                  '~/Library/Logs/clion12',
-                 ]
+  zap delete: [
+                '~/Library/Preferences/com.jetbrains.CLion.plist',
+                '~/Library/Preferences/clion12',
+                '~/Library/Application Support/clion12',
+                '~/Library/Caches/clion12',
+                '~/Library/Logs/clion12',
+              ]
 end

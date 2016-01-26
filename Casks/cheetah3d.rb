@@ -1,4 +1,4 @@
-cask :v1 => 'cheetah3d' do
+cask 'cheetah3d' do
   version :latest
   sha256 :no_check
 

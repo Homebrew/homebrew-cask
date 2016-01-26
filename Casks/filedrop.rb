@@ -1,4 +1,4 @@
-cask :v1 => 'filedrop' do
+cask 'filedrop' do
   version :latest
   sha256 :no_check
 

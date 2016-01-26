@@ -1,11 +1,11 @@
-cask :v1 => 'monodraw' do
-  version :latest
-  sha256 :no_check
+cask 'monodraw' do
+  version 'b83'
+  sha256 '4aa030c5d55451d5fb4625ae931b7ae061dd888a82762cd43471e60cef211c6c'
 
-  url 'http://updates.helftone.com/monodraw/downloads/Monodraw-latest.zip'
-  name 'Monodraw'
+  url "http://updates.helftone.com/monodraw/downloads/Monodraw-#{version}.zip"
   appcast 'http://updates.helftone.com/monodraw/appcast-beta.xml',
-          :sha256 => 'b15571cccfb97339f5762eff8a74a4f6fd4a0a1006f41071ab05a7d5e65193cd'
+          checkpoint: '5830ff9786d7be63384f29a25ca50d0cd90a857c93beb607abee08518de09c1f'
+  name 'Monodraw'
   homepage 'http://monodraw.helftone.com'
   license :commercial
 
@@ -15,8 +15,8 @@ cask :v1 => 'monodraw' do
     suppress_move_to_applications
   end
 
-  zap :delete => [
-                  '~/Library/Preferences/com.helftone.monodraw.plist',
-                  '~/Library/Caches/com.helftone.monodraw',
-                 ]
+  zap delete: [
+                '~/Library/Preferences/com.helftone.monodraw.plist',
+                '~/Library/Caches/com.helftone.monodraw',
+              ]
 end

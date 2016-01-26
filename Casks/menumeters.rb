@@ -1,4 +1,4 @@
-cask :v1 => 'menumeters' do
+cask 'menumeters' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'menumeters' do
 
   prefpane 'MenuMeters Installer.app/Contents/Resources/MenuMeters.prefPane'
 
-  zap :delete => '~/Library/Preferences/com.ragingmenace.MenuMeters.plist'
+  zap delete: '~/Library/Preferences/com.ragingmenace.MenuMeters.plist'
 end

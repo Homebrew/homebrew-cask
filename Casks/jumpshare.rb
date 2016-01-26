@@ -1,4 +1,4 @@
-cask :v1 => 'jumpshare' do
+cask 'jumpshare' do
   version '2.1.2'
   sha256 '4745d9aa6902c902dd81eefdb1977b59da6687ce4040b0f3840f9c47ae0a3d48'
 

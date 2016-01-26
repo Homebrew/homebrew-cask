@@ -1,4 +1,4 @@
-cask :v1 => 'amazon-workdocs' do
+cask 'amazon-workdocs' do
   version :latest
   sha256 :no_check
 
@@ -10,5 +10,5 @@ cask :v1 => 'amazon-workdocs' do
 
   pkg 'Amazon WorkDocs.pkg'
 
-  uninstall :pkgutil => 'com.amazon.aws.AmazonWorkDocs'
+  uninstall pkgutil: 'com.amazon.aws.AmazonWorkDocs'
 end

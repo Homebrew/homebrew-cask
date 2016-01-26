@@ -1,14 +1,16 @@
-cask :v1 => 'cdock' do
-  version '0.9.8'
-  sha256 'b3de2eb88db355f28a22adb2fb173c28086c438b582b2d2f0e59c3d937fd12f4'
+cask 'cdock' do
+  version '0.9.11'
+  sha256 'da1657f0c92dac0b3d12c129f420b53471231da180d2ef2b6019ce5665f91b18'
 
   url "https://github.com/w0lfschild/cDock2/releases/download/v#{version}/cDock.zip"
   appcast 'https://github.com/w0lfschild/cDock2/releases.atom',
-          :sha256 => '962f344212a4dfdfb421854d1151dbab96336c87fda9f9105748b4d1a5770392'
+          checkpoint: '8b23380512d766d9773b145642876ab353987f2efe47efa2b42168ba7154aab3'
   name 'cDock2'
-  name 'cDock'
-  homepage 'http://w0lfschild.github.io/cdock'
+  homepage 'https://w0lfschild.github.io/cdock'
   license :bsd
+
+  depends_on cask: 'easysimbl'
+  depends_on macos: '>= :mavericks'
 
   app 'cDock.app'
 
@@ -16,7 +18,4 @@ cask :v1 => 'cdock' do
     #{token} will only run from within /Applications,
     and will request to be moved at launch.
   EOS
-
-  depends_on :cask => 'easysimbl'
-  depends_on :macos => '>= :mavericks'
 end

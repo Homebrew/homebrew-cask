@@ -1,4 +1,4 @@
-cask :v1 => 'amadeus-pro' do
+cask 'amadeus-pro' do
   version :latest
   sha256 :no_check
 

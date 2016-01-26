@@ -1,4 +1,4 @@
-cask :v1 => 'omnipresence' do
+cask 'omnipresence' do
   version '1.4'
   sha256 '9a8752fa8e4ee4d82bd435f624635f1157f7c1538b96622af361ef43d95f2e02'
 
@@ -7,7 +7,7 @@ cask :v1 => 'omnipresence' do
   homepage 'https://www.omnigroup.com/omnipresence'
   license :commercial
 
-  app 'OmniPresence.app'
+  depends_on macos: '>= :yosemite'
 
-  depends_on :macos => '>= :yosemite'
+  app 'OmniPresence.app'
 end

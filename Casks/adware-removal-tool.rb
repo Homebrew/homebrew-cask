@@ -1,4 +1,4 @@
-cask :v1 => 'adware-removal-tool' do
+cask 'adware-removal-tool' do
   version :latest
   sha256 :no_check
 
@@ -9,8 +9,8 @@ cask :v1 => 'adware-removal-tool' do
 
   app 'Adware Removal Tool.app'
 
-  zap :trash => [
-    '~/Library/Preferences/com.bitdefender.com.bitdefender.Adware-Removal-Tool.plist',
-    '~/Library/Saved Application State/com.com.bitdefender.Adware-Removal-Tool.savedState'
-  ]
+  zap trash: [
+               '~/Library/Preferences/com.bitdefender.com.bitdefender.Adware-Removal-Tool.plist',
+               '~/Library/Saved Application State/com.com.bitdefender.Adware-Removal-Tool.savedState',
+             ]
 end

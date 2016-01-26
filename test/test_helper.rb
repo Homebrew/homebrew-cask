@@ -1,16 +1,16 @@
 require 'bundler'
 require 'bundler/setup'
-require 'coveralls'
+require 'pathname'
 
-Coveralls.wear_merged!
+if ENV['COVERAGE']
+  require 'coveralls'
+  Coveralls.wear_merged!
+end
 
 # just in case
 if RUBY_VERSION.to_i < 2
   raise 'brew-cask: Ruby 2.0 or greater is required.'
 end
-
-# force some environment variables
-ENV['HOMEBREW_NO_EMOJI']='1'
 
 # add homebrew-cask lib to load path
 brew_cask_path = Pathname.new(File.expand_path(__FILE__+'/../../'))
@@ -18,9 +18,12 @@ casks_path = brew_cask_path.join('Casks')
 lib_path = brew_cask_path.join('lib')
 $:.push(lib_path)
 
-# require homebrew testing env
 # todo: removeme, this is transitional
 require 'vendor/homebrew-fork/testing_env'
+
+# force some environment variables
+ENV['HOMEBREW_NO_EMOJI'] = '1'
+ENV['HOMEBREW_CASK_OPTS'] = nil
 
 # todo temporary, copied from old Homebrew, this method is now moved inside a class
 def shutup
@@ -40,14 +43,18 @@ def shutup
   end
 end
 
+def sudo(*args)
+  %w[/usr/bin/sudo -E --] + Array(args).flatten
+end
+
 # making homebrew's cache dir allows us to actually download Casks in tests
 HOMEBREW_CACHE.mkpath
 HOMEBREW_CACHE.join('Casks').mkpath
 
 # must be called after testing_env so at_exit hooks are in proper order
 require 'minitest/autorun'
-# todo, re-enable minitest-colorize, broken under current test environment for unknown reasons
-# require 'minitest-colorize'
+require 'minitest/reporters'
+Minitest::Reporters.use! Minitest::Reporters::DefaultReporter.new(color: true)
 
 # Force mocha to patch MiniTest since we have both loaded thanks to homebrew's testing_env
 require 'mocha/api'
@@ -80,7 +87,7 @@ class TestHelper
   end
 
   def self.test_cask
-    Hbc.load('basic-cask')
+    @test_cask ||= Hbc.load('basic-cask')
   end
 
   def self.fake_fetcher
@@ -117,6 +124,10 @@ class TestHelper
     end
   end
 end
+
+# Extend MiniTest API with support for RSpec-style shared examples
+require 'support/shared_examples'
+require 'support/shared_examples/staged.rb'
 
 require 'support/fake_fetcher'
 require 'support/fake_dirs'

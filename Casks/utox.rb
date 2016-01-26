@@ -1,4 +1,4 @@
-cask :v1 => 'utox' do
+cask 'utox' do
   version '0.4.4'
   sha256 'e18e9f02b22f837d284c6669c552fa1634ed319d353e3605d92f9412666c8fa9'
 

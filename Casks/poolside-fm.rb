@@ -1,4 +1,4 @@
-cask :v1 => 'poolside-fm' do
+cask 'poolside-fm' do
   version :latest
   sha256 :no_check
 

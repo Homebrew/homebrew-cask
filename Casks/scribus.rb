@@ -1,6 +1,6 @@
-cask :v1 => 'scribus' do
-  version '1.4.5'
-  sha256 '2cae3e4afa552e2db4209e3e3efae816202bb3055857b57bdcd60e1b2eca410c'
+cask 'scribus' do
+  version '1.4.6'
+  sha256 'db818ae3a69ca16c1b3fb873b55903062f7b81f42d7adcc64a61ee93bf95727e'
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/scribus/scribus/#{version}/scribus-#{version}.dmg"

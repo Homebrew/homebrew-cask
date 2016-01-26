@@ -1,4 +1,4 @@
-cask :v1 => 'dayone-cli' do
+cask 'dayone-cli' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'dayone-cli' do
 
   pkg 'dayone-cli.pkg'
 
-  uninstall :pkgutil => 'com.dayoneapp.dayOneCliTool.dayone.pkg'
+  uninstall pkgutil: 'com.dayoneapp.dayOneCliTool.dayone.pkg'
 end

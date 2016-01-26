@@ -1,4 +1,4 @@
-cask :v1 => 'paraview' do
+cask 'paraview' do
   version '4.3.1'
 
   if MacOS.release == :snow_leopard
@@ -13,8 +13,8 @@ cask :v1 => 'paraview' do
   homepage 'http://www.paraview.org/'
   license :bsd
 
-  app 'paraview.app'
+  depends_on arch: :x86_64
+  depends_on macos: '>= :snow_leopard'
 
-  depends_on :arch => :x86_64
-  depends_on :macos => '>= :snow_leopard'
+  app 'paraview.app'
 end
