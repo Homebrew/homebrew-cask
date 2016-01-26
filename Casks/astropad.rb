@@ -2,7 +2,6 @@ cask 'astropad' do
   version '1.3.5'
   sha256 'd3f85f8a565d8335928ae1f4ea20be525de0f203ac0b323576d34d7958d7e41a'
 
-  # amazonaws.com is the official download host per the appcast feed
   url "http://astropad.com/downloads/Astropad-#{version}.zip"
   appcast 'http://astropad.com/downloads/sparkle.xml',
           checkpoint: '9863ff6ac45b686f673c9eb2ffa4c65eb4ec0370e9fd0904c36d1c2b79f9d804'
