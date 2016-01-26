@@ -1,17 +1,17 @@
 cask 'saoimage-ds9' do
-  version '7.4'
+  version '7.4.1'
 
   if MacOS.release <= :mountain_lion
-    sha256 '74e5a43788dc294c8f0c7f023f41ab3dec8aa63f994c097084d7b768009fc056'
+    sha256 '91bf399b974a5e5d12d09e7f9f4a8acf826813eb1b05d865c0ac070fab58aca3'
     url "http://ds9.si.edu/download/macosxmountainlion/SAOImage%20DS9%20#{version}.dmg"
   elsif MacOS.release <= :mavericks
-    sha256 '245643e0d4d7e4470db8eb479b5e437d223ed9af315ff03a93bae2d7438f4b19'
+    sha256 '35767c2e6116e49b9569180847ceb90fb1bf0d6379254b8834709b67e8e65e8d'
     url "http://ds9.si.edu/download/macosxmavericks/SAOImage%20DS9%20#{version}.dmg"
   elsif MacOS.release <= :yosemite
-    sha256 '89fbedaa85fe420a9f26a36d86dce9470829ab68963f01512f6eaae979d379f2'
+    sha256 '6ff7b79f2b0e3b07b990b467fcecfdc35ba0cc6aa7575d97102b21791e9f3bf0'
     url "http://ds9.si.edu/download/macosxyosemite/SAOImage%20DS9%20#{version}.dmg"
   else
-    sha256 '07555075ba697458c5f7e5d0d28fb8f4c466723cc20b773d7dcc87ceb263bd4c'
+    sha256 'a013cd1e2917e8457dbd41b07d831f532bac9c77620bf5bcde8392bca3184b1a'
     url "http://ds9.si.edu/download/macosxelcapitan/SAOImage%20DS9%20#{version}.dmg"
   end
 
