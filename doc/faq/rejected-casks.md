@@ -10,6 +10,7 @@ Common reasons to reject a cask entirely:
 + The app is both open-source and CLI-only (i.e. it only uses the `binary` artifact). In that case, and [in the spirit of deduplication](https://github.com/caskroom/homebrew-cask/issues/15603), submit it first to [Homebrew](https://github.com/Homebrew/homebrew). If it is rejected there, you may then try again in Homebrew-Cask (link us to the issue on Homebrew so we can see their reasoning for rejection).
   + Similarly, the app already exists in Homebrew, and the Homebrew-Cask version wouldn’t add anything to it.
 + The app has been rejected before due to an issue we cannot fix, and this new submission doesn’t fix that . An example would be [the first submission of `soapui`](https://github.com/caskroom/homebrew-cask/pull/4939), whose installation problems were not fixed in the two subsequent submissions ([#9969](https://github.com/caskroom/homebrew-cask/pull/9969), [#10606](https://github.com/caskroom/homebrew-cask/pull/10606)).
++ The cask is a duplicate. These submissions mostly occur when the [token reference](../cask_language_reference/token_reference.md) was not followed.
 
 Common reasons to reject a cask from the main repo:
 
