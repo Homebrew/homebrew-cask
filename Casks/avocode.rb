@@ -8,4 +8,12 @@ cask 'avocode' do
   license :commercial
 
   app 'Avocode.app'
+
+  zap delete: [
+                '~/Library/Preferences/com.madebysource.avocode.plist',
+                '~/Library/Application Support/Avocode',
+                '~/Library/Saved Application State/com.madebysource.avocode.savedState',
+                '~/Library/Caches/Avocode',
+                '~/.avcd',
+              ]
 end
