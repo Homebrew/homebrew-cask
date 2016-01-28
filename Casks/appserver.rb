@@ -5,7 +5,7 @@ cask 'appserver' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/appserver-io/appserver/releases/download/#{version.sub(%r{-.*}, '')}/appserver-dist_#{version}_x86_64.pkg"
   appcast 'https://github.com/appserver-io/appserver/releases.atom',
-          checkpoint: '059721ccf749495aeefc607cefc77680a376ce6417f6d4755a7be8771cec9431'
+          checkpoint: '4506dc23e7647bedf5082d4ff317c6da782dfc965984dd0433b2884c84bbf37c'
   name 'appserver.io'
   homepage 'http://www.appserver.io'
   license :oss
