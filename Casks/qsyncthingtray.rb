@@ -9,7 +9,7 @@ cask 'qsyncthingtray' do
   homepage 'https://github.com/sieren/QSyncthingTray'
   license :gpl
 
-  depends_on formula: 'syncthing'
+  depends_on cask: 'syncthing'
 
   app 'QSyncthingTray.app'
 
