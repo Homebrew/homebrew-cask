@@ -4,7 +4,7 @@ cask 'blocs' do
 
   url 'http://blocsapp.com/trial-app/BlocsApp.zip'
   appcast 'https://uistore.io/blocs/info.xml',
-          checkpoint: '3bcc61938a92444d95bac04365dcb3276f7b54f4c551055f02eef60df3743bb7'
+          checkpoint: '9b50145fe34ffdaa2bd3aaba7dca5e94463dbdc4cbc8db252553036ff8f904e0'
   name 'Blocs'
   homepage 'http://blocsapp.com/'
   license :commercial
