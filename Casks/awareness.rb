@@ -9,5 +9,5 @@ cask 'awareness' do
 
   app 'Awareness.app'
 
-  zap :delete => '~/Library/Preferences/com.futureproof.awareness.plist'
+  zap delete: '~/Library/Preferences/com.futureproof.awareness.plist'
 end
