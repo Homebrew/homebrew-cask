@@ -1,11 +1,11 @@
 cask 'audiomate' do
-  version '2.2.3,122'
-  sha256 '7065294d5ccbc72ba7da3b0c23a3ba52aa9a051e7c94694b96e6e3b422168eb6'
+  version '2.2.4'
+  sha256 '0d4f6d62cd4f1f243274cbd0a616bd5167dad2e07b643d8a49eb8ebfeeab76e1'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url "https://s3.amazonaws.com/downloads.9labs.io/audiomate/#{version.before_comma}/#{version.after_comma}/AudioMate-v#{version.before_comma}.dmg"
+  # 9labs.io is the official download host per the vendor homepage
+  url "http://backend.9labs.io/download/audiomate?version=#{version}"
   appcast 'https://backend.9labs.io/appcast/audiomate',
-          checkpoint: '1328554408450507f383168376c4e94bc83fbabf3aa05266cb32a704cbb130bb'
+          checkpoint: '73b92ba105eb409bdb74c55639bb038cafffada73a144a9b89887588e721ad05'
   name 'AudioMate'
   homepage 'https://audiomateapp.com/'
   license :mit
