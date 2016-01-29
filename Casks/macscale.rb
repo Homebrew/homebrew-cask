@@ -5,7 +5,7 @@ cask 'macscale' do
   # brinscall.com is the official download host per the vendor homepage
   url 'https://www.brinscall.com/MacScale.zip'
   appcast 'https://www.brinscall.com/updates/MacScale.xml',
-          checkpoint: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b856'
+          checkpoint: '9ac0360388703648f6f640fa03b06fa1d466a5202ed239b274b3d37e1759bf73'
   name 'MacScale'
   homepage 'http://www.macscale.com'
   license :closed
