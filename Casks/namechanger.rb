@@ -1,10 +1,10 @@
 cask 'namechanger' do
-  version '3.1.0'
-  sha256 'd48d92e5a103bf0afcb7c77a3d4277bc7de59eba48cfeca162bbcc752b4d32d5'
+  version '3.1.1'
+  sha256 '5ce678736e3e6fd2eb33bf2a9901e582b53612b5705ac7882ec86bc5a4a188cb'
 
   url "https://www.mrrsoftware.com/Downloads/NameChanger/Updates/NameChanger-#{version.dots_to_underscores}.zip"
   appcast 'https://mrrsoftware.com/Downloads/NameChanger/Updates/NameChangerSoftwareUpdates.xml',
-          checkpoint: '956049f10a3580026ae9185c2f2ac59c04ed8035b6a06e4df868f6027ca86ef8'
+          checkpoint: '29fac0db826f5168a5171a31a8c32b6d714e5b9673b03dab21325325ee1b18c2'
   name 'NameChanger'
   homepage 'https://mrrsoftware.com/namechanger/'
   license :gratis
