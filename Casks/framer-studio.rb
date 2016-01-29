@@ -4,8 +4,6 @@ cask 'framer-studio' do
 
   # devmate.com is the official download host per the vendor homepage
   url 'https://dl.devmate.com/com.motif.framer/FramerStudio.zip'
-  appcast 'https://rink.hockeyapp.net/apps/cf6ed17136c869e3604eb59fc900515f',
-          checkpoint: '5a36995103ee49612210ed96654e9101fa64396ed4872a5f429f8b557d24a3e8'
   name 'Framer Studio'
   homepage 'http://framerjs.com/'
   license :commercial
