@@ -4,7 +4,7 @@ cask 'keka' do
 
   url "http://www.kekaosx.com/release/Keka-#{version}-intel.dmg"
   appcast 'http://update.kekaosx.com',
-          checkpoint: '5e7c70cd27e0d1ced74d1e06bac8c7766a11fe8e9be7b29f1d40c73931b0537c'
+          checkpoint: '40bf3dfa927e2b377a98177f0362d459b39e96c60c45c5f0cfd53d305f01cbe3'
   name 'Keka'
   homepage 'http://kekaosx.com/'
   license :gratis
