@@ -4,7 +4,7 @@ cask 'quickbooks' do
 
   url "https://http-download.intuit.com/http.intuit/CMO/apple_web/sample/static/qbomac/releases/QuickBooks_#{version}/QuickBooks.QBOWeb.dmg"
   appcast 'https://http-download.intuit.com/http.intuit/CMO/apple_web/sample/static/qbomac/rssfeeds/Staged/QuickBooks.QBOWeb.Release.xml',
-          checkpoint: '46d6ab6978ca32d998be566f644a162772192670b8a89baba7595116e967db5e'
+          checkpoint: 'b1cac239df406c8c310adf9eac5b06efacc152774f39269c23bf7e0fbcac0da8'
   name 'QuickBooks'
   homepage 'https://qbo.intuit.com/'
   license :gratis
