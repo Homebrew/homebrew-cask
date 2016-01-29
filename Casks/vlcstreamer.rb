@@ -1,10 +1,10 @@
 cask 'vlcstreamer' do
-  version '4.31'
-  sha256 '722eef665e44a81880723f25c2bc9d42800d2259f22dd48a0c16518fe45909b1'
+  version '5.00'
+  sha256 '1d5c17af0b2b17d4ba73c9eb03ba8499b53fe1e4e0131ec6c4efa807293029c2'
 
   url "http://hobbyistsoftware.com/Downloads/VLCStreamer/Versions/VLCStreamer_#{version}.dmg"
   appcast 'http://hobbyistsoftware.com/Downloads/VLCStreamer/vlcStreamerVersions.xml',
-          checkpoint: 'f6e93c6c3700e6fb73bf154e016a814f6ee3fbb44bc1e22dac095c6bc14b6f6d'
+          checkpoint: 'd5e4b5b398851b83a028449091b4e5efaa6b04037b5c9ceec849efde96246e73'
   name 'VLC Streamer'
   homepage 'http://hobbyistsoftware.com/vlcstreamer'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
