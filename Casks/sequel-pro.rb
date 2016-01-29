@@ -1,6 +1,6 @@
 cask 'sequel-pro' do
-  version '1.1'
-  sha256 'dfefd39b64a78084db88210e2ea365effbaeb8903173f3dfd55b60421ee461fa'
+  version '1.1.0.1'
+  sha256 '9b9de84daefb258e57695d035971c2a8fb985c206a8f136de57d3badbf51718d'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/sequelpro/sequelpro/releases/download/release-#{version}/sequel-pro-#{version}.dmg"
