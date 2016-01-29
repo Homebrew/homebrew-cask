@@ -1,10 +1,10 @@
 cask 'pocketcast' do
-  version '1.2.2'
-  sha256 'e24dd60e04fa7258522e62cf871c241e55685ed03ff76057f5c2926cf848151d'
+  version '1.25'
+  sha256 '01091dfc5f6819a800c5da51230e272dbecfdbac8a93d12124820a0cd0bb74b7'
 
-  url "https://github.com/mortenjust/PocketCastsOSX/releases/download/#{version}/PocketCast#{version}.zip"
+  url "https://github.com/mortenjust/PocketCastsOSX/releases/download/#{version}/PocketCast#{version.no_dots}.zip"
   appcast 'https://github.com/mortenjust/PocketCastsOSX/releases.atom',
-          checkpoint: 'ee704890c820b78f10af822f5a0824af3f308124e6836deddcfbe680ee9680a5'
+          checkpoint: '6f976b988d5d821d25489abdcaa28adc5193d8fec545f95821838a458f1e195e'
   name 'Pocket Casts for Mac'
   homepage 'https://github.com/mortenjust/PocketCastsOSX'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
