@@ -4,7 +4,7 @@ cask 'recordit' do
 
   url 'http://recordit.co/latest'
   appcast 'https://rink.hockeyapp.net/api/2/apps/5fcda0b48f1dcf0c938b289b9ab57790',
-          checkpoint: 'f67825692615a37a3362571c3d25ec0e84afc414dec9848a07379e756d92fa15'
+          checkpoint: '392e12827798791e63fbed1555cc7e83f07c0834a1f79d33d787ca0c88e75dde'
   name 'RecordIt'
   homepage 'http://recordit.co/'
   license :gratis
