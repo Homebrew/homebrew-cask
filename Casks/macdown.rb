@@ -1,11 +1,11 @@
 cask 'macdown' do
-  version '0.5.3'
-  sha256 '1225f0c93f9a54b8df2e0348ed2cfc32eb0ee74bef8ba4006805cd3014ef0af7'
+  version '0.5.5'
+  sha256 '79d051fb03e953cdc27ae2a45f32cc956fa1471b8031e7284dee01fd19ad22c5'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/uranusjr/macdown/releases/download/v#{version}/MacDown.app.zip"
   appcast 'https://github.com/uranusjr/macdown/releases.atom',
-          checkpoint: 'c64fa486514c00101c5a44e92a8562f270bb5474e0e4587e085add5cb0a64e70'
+          checkpoint: 'f9e7f793b7bce3bbdbf6c8fc69036c0fad9d5dd30f934733f449df820fd23c8e'
   name 'MacDown'
   homepage 'http://macdown.uranusjr.com/'
   license :mit

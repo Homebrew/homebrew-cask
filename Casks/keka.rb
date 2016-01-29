@@ -3,8 +3,8 @@ cask 'keka' do
   sha256 '0075741ed52e2c86d7749dfe2baf54c8b6dad75a780b4b51ca5fb14337124701'
 
   url "http://www.kekaosx.com/release/Keka-#{version}-intel.dmg"
-  appcast 'http://update.kekaosx.com',
-          checkpoint: '5e7c70cd27e0d1ced74d1e06bac8c7766a11fe8e9be7b29f1d40c73931b0537c'
+  appcast 'http://www.kekaosx.com/update/keka.xml',
+          checkpoint: '40bf3dfa927e2b377a98177f0362d459b39e96c60c45c5f0cfd53d305f01cbe3'
   name 'Keka'
   homepage 'http://kekaosx.com/'
   license :gratis

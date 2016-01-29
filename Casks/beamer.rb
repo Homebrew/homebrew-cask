@@ -4,7 +4,7 @@ cask 'beamer' do
 
   url "https://beamer-app.com/resources/downloads/Beamer-#{version}.zip"
   appcast 'https://beamer-app.com/beamer3-appcast.xml',
-          checkpoint: '7c647419df11529623465506dc3bb6250680a2573a4af88b0dd8c55b33a53d37'
+          checkpoint: '6b21339753ec4647971b70c0679f4037f4351e006ffed86b31dde7b4b185f454'
   name 'Beamer'
   homepage 'https://beamer-app.com/'
   license :commercial
