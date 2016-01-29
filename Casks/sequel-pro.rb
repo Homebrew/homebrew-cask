@@ -3,7 +3,7 @@ cask 'sequel-pro' do
   sha256 '9b9de84daefb258e57695d035971c2a8fb985c206a8f136de57d3badbf51718d'
 
   # github.com is the official download host per the vendor homepage
-  url "https://github.com/sequelpro/sequelpro/releases/download/release-#{version}/sequel-pro-#{version}.dmg"
+  url "https://github.com/sequelpro/sequelpro/releases/download/#{version}/sequel-pro-#{version}.dmg"
   appcast 'https://github.com/sequelpro/sequelpro/releases.atom',
           checkpoint: '13a9846bd10fcf63a777fb854cdbdff4b370055c8004f73c31efba32644ea595'
   name 'Sequel Pro'
