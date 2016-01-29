@@ -18,6 +18,5 @@ cask 'gitkraken' do
                 '~/Library/Caches/com.axosoft.gitkraken',
                 '~/Library/Preferences/com.axosoft.gitkraken.plist',
                 '~/Library/Saved Application State/com.axosoft.gitkraken.savedState',
-                '/private/var/db/BootCaches/C5359B82-55B6-4CFA-94F8-EAC7F0CD3AAE/app.com.axosoft.gitkraken.playlist',
               ]
 end
