@@ -7,5 +7,5 @@ cask 'diskmaker-x' do
   homepage 'http://diskmakerx.com/'
   license :gratis
 
-  app 'DiskMaker X.app'
+  app 'DiskMaker X 5.app'
 end
