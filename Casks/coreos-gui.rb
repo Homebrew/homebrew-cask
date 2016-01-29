@@ -1,10 +1,10 @@
 cask 'coreos-gui' do
-  version '1.1.5'
-  sha256 'a5f1f3b97458e8317cbbbf39d0c31a7d6abd18ec136b032afa2404221598dbcf'
+  version '1.2.0'
+  sha256 '93ee0098bf7235780ea8cc160e749edee980a37d7b6a7012b46a67acd10fcaab'
 
   url "https://github.com/TheNewNormal/coreos-osx/releases/download/v#{version}/CoreOS_v#{version}.dmg"
   appcast 'https://github.com/TheNewNormal/coreos-osx/releases.atom',
-          checkpoint: '803e6564c8bdcc9fee6326216de865e39bfece0e87d9d38c3b34c4f90382aa06'
+          checkpoint: 'be32adcbbef68fab1273b33eafd03858c4559338885830cf48e8ddb275f699cd'
   name 'CoreOS GUI'
   homepage 'https://github.com/TheNewNormal/coreos-osx'
   license :apache
