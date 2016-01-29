@@ -4,7 +4,7 @@ cask 'firefox' do
 
   url "https://ftp.mozilla.org/pub/firefox/releases/#{version}/mac/en-US/Firefox%20#{version}.dmg"
   appcast 'https://www.mozilla.org/en-US/firefox/releases/',
-          checkpoint: '6ceee6cb3f7e6540cfa1975b3f5e92a31e78680e15b6212e630a57de73ca453f'
+          checkpoint: '4a7b21fc652376f84ccc008bb33f7b59cd90aed812ee9c2eccf6c3e7a450601e'
   name 'Mozilla Firefox'
   homepage 'https://www.mozilla.org/en-US/firefox/'
   license :mpl
