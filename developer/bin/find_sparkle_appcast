@@ -1,11 +1,5 @@
 #!/bin/bash
-#
-# find_sparkle_appcast
-#
 
-###
-### functions
-###
 
 usage() {
   local program exit_status
@@ -32,10 +26,6 @@ appcast_found_error() {
 
   exit 1
 }
-
-###
-### main
-###
 
 # exit if no argument (or more than one) was given
 if [[ -z "$1" ]] || [[ -n "$2" ]]; then
