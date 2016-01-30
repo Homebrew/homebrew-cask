@@ -1,16 +1,16 @@
 cask 'cloudfoundry-cli' do
-  version '6.12.1'
-  sha256 '4810c0dc3427db8f1c81c3f658dd5e6265120ae109ea438d1969ba7b96b6db84'
+  version '6.15.0'
+  sha256 '3cf02b7c61d6a7478af7babe7ffb6ddb223d700a17d24e90505cdadbc1c156cd'
 
   # amazonaws.com is the official download host per the vendor homepage
-  url "http://go-cli.s3-website-us-east-1.amazonaws.com/releases/v#{version}/installer-osx-amd64.pkg"
+  url "http://go-cli.s3-website-us-east-1.amazonaws.com/releases/v#{version}/cf-cli-installer_#{version}_osx.pkg"
   name 'Cloud Foundry CLI'
   homepage 'https://github.com/cloudfoundry/cli'
   license :apache
 
-  pkg 'installer-osx-amd64.pkg'
+  pkg "cf-cli-installer_#{version}_osx.pkg"
 
-  uninstall pkgutil: 'com.pivotal.cloudfoundry.pkg'
+  uninstall pkgutil: 'com.cloudfoundry.cli.pkg'
 
   caveats do
     files_in_usr_local
