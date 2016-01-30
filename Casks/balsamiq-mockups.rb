@@ -14,7 +14,7 @@ cask 'balsamiq-mockups' do
                 # TODO: expand/glob for '~/Library/Saved Application State/BalsamiqMockups#{version.major}.*',
               ],
       trash:  [
-                '~/Library/Preferences/BalsamiqMockups#{version.major}',
+                '~/Library/Preferences/BalsamiqMockups3',
                 # TODO: expand/glob for '~/Library/Preferences/BalsamiqMockups#{version.major}.*',
               ]
 end
