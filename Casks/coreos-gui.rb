@@ -9,5 +9,5 @@ cask 'coreos-gui' do
   homepage 'https://github.com/TheNewNormal/coreos-osx'
   license :apache
 
-  app 'CoreOS GUI.app'
+  app 'CoreOS.app'
 end
