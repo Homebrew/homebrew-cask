@@ -4,7 +4,7 @@ cask 'techstoreclub-simple-comic' do
 
   url "https://github.com/techstoreclub/Simple-Comic/releases/download/#{version}/SimpleComic_#{version}.zip"
   appcast 'https://github.com/techstoreclub/Simple-Comic/releases.atom',
-          checkpoint: '51602143066b8f43001ad350ae99d1e53418c4af4a443127f8a1b9f233c3bea2'
+          checkpoint: '3bb3b59bebce4cb396c2f0debeb04510261b6d9e0d0a071bef6de9a8d076fdb5'
   name 'Simple Comic'
   homepage 'https://github.com/techstoreclub/Simple-Comic'
   license :mit
