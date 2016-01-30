@@ -4,7 +4,7 @@ cask 'things' do
 
   url "http://culturedcode.cachefly.net/things/Things_#{version}.zip"
   appcast 'https://downloads.culturedcode.com/things/download/Things_Updates.php',
-          checkpoint: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b856'
+          checkpoint: 'cd06fe3a9cbcc04efdaa8d0fb4184a50ceb7e42e5b647e66b13ac9f9eca922f9'
   name 'Things'
   homepage 'https://culturedcode.com/things/'
   license :commercial
