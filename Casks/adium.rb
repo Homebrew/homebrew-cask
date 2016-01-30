@@ -1,10 +1,10 @@
 cask 'adium' do
-  version '1.5.10'
-  sha256 'bca3ac81d33265b71c95a3984be80715fbd98f38d7c463d0441d43a335ed399a'
+  version '1.5.10.1'
+  sha256 '12001b38428fa2441c8a31f45f7ca14fb086776de40aaccc9634f84fd28931f5'
 
   url "http://download.adium.im/Adium_#{version}.dmg"
   appcast 'https://www.adium.im/sparkle/appcast-release.xml',
-          checkpoint: '68f97f3be089aa85b1073dc0ee0bd452402c83248ad2b9ff2f976f94f7df1917'
+          checkpoint: 'ec41726e4a4c4384d79f4cd336708b71e362c1b275ba82d605db9ef7ef80d2ee'
   name 'Adium'
   homepage 'https://www.adium.im/'
   license :gpl

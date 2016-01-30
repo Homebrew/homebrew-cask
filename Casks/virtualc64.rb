@@ -1,11 +1,11 @@
 cask 'virtualc64' do
   # note: "64" is not a version number, but an intrinsic part of the product name
-  version '1.4.1'
-  sha256 'bc63006146e7d7710e5da0dce24e1c4df893f0aa412e9b0ba850630357693431'
+  version '1.4.2'
+  sha256 '8a000f9f4e16e6583901f9e19e9c6a5173d8cc13e7ed015b18eaf480cb05c616'
 
   url "http://www.dirkwhoffmann.de/virtualc64/VirtualC64_#{version}.zip"
   appcast 'http://dirkwhoffmann.de/virtualc64/VirtualC64Appcast.xml',
-          checkpoint: 'fa0960f713d6a5d9270dcffaca7697a9ef8f744e1cea376076885e8ab279f20e'
+          checkpoint: 'c373cf6bb4ab35205b9b4b31f928a4f1e21eeb840831ef649583b9c1b420ba5c'
   name 'Virtual C64'
   homepage 'http://www.dirkwhoffmann.de/virtualc64/'
   license :gpl

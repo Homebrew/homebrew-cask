@@ -4,7 +4,7 @@ cask 'docker' do
 
   url "https://get.docker.com/builds/Darwin/x86_64/docker-#{version}"
   appcast 'https://github.com/docker/docker/releases.atom',
-          checkpoint: '9d1288f2e3ad3cb8390ca011b3538630394c1fe7cf4c9e88bbdcb9eef332ae34'
+          checkpoint: '057bec10255c7a3886033ad55fbfe8635bc744239f60fff832fde9044c803efa'
   name 'Docker Engine Client'
   homepage 'https://docs.docker.com/engine/userguide/'
   license :apache

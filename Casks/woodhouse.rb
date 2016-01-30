@@ -4,7 +4,7 @@ cask 'woodhouse' do
 
   url "https://github.com/downloads/phinze/woodhouse/Woodhouse-#{version}.dmg"
   appcast 'https://phinze.github.com/woodhouse/appcast.xml',
-          checkpoint: 'bd9df047d51943acc4bc6cf55d88edb5b6785a53337ee2a0f74dd521aedde87d'
+          checkpoint: '13325232ccfc9574fe890e370d05c4edf0255fb49a4785b242e94f97fb24fc14'
   name 'Woodhouse'
   homepage 'https://github.com/phinze/woodhouse/'
   license :mit

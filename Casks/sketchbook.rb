@@ -9,6 +9,6 @@ cask 'sketchbook' do
 
   pkg "SketchBook_v#{version}_mac.pkg"
 
-  uninstall quit: 'com.autodesk.SketchBook',
+  uninstall quit:    'com.autodesk.SketchBook',
             pkgutil: '.*SketchBook.*'
 end
