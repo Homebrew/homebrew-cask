@@ -5,7 +5,7 @@ cask 'audiomate' do
   # 9labs.io is the official download host per the vendor homepage
   url "http://backend.9labs.io/download/audiomate?version=#{version}"
   appcast 'https://backend.9labs.io/appcast/audiomate',
-          checkpoint: '73b92ba105eb409bdb74c55639bb038cafffada73a144a9b89887588e721ad05'
+          checkpoint: '900ba3a202f24f436a8e6f53e2c8b457c6c188fa6893d3db3ea2e7f4aeb5ea36'
   name 'AudioMate'
   homepage 'https://audiomateapp.com/'
   license :mit
