@@ -5,7 +5,7 @@ cask 'track-o-bot' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/stevschmid/track-o-bot/releases/download/#{version}/Track-o-Bot_#{version}.dmg"
   appcast 'https://github.com/stevschmid/track-o-bot/releases.atom',
-          checkpoint: '4917f6aa88f1777d953ae1c428ba3a215f7e949140fd060404602154b40eaec3'
+          checkpoint: '3004dffd237755437d82652db98224baa8c4da856c9558b7b29212ea79b0b775'
   name 'Track-o-Bot'
   homepage 'https://trackobot.com/'
   license :gpl
