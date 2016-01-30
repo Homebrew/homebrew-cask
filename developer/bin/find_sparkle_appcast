@@ -60,7 +60,7 @@ appcast_checkpoint=$(curl --silent --compressed "${appcast_url}" | sed 's|<pubDa
 echo "A Sparkle appcast was found. You should add it to your cask as
 
   appcast '${appcast_url}',
-          :checkpoint => '${appcast_checkpoint}'
+          checkpoint: '${appcast_checkpoint}'
 
 You should likely also add 'auto_updates true'"
 
