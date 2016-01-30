@@ -5,7 +5,7 @@ cask 'tomighty' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/ccidral/tomighty-osx/releases/download/v#{version}/Tomighty-#{version}.dmg"
   appcast 'https://github.com/ccidral/tomighty-osx/releases.atom',
-          checkpoint: '36e70540bb834b720535ad938017acbee8f126c13ea062f20b9c00fc5ad50989'
+          checkpoint: '3ccc1006f6bdba0a3fb7314c23e8089d5acc0edac9e8955315e25a1c56e19d8f'
   name 'Tomighty'
   homepage 'http://www.tomighty.org/'
   license :apache
