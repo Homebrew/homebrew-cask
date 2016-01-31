@@ -1,10 +1,10 @@
 cask 'metadatics' do
-  version '1.5.3'
-  sha256 '65ce4d052ac526e73705350e1bafefca7cde5d5fb3872b14a08cc6d9c62f8e96'
+  version '1.5.4'
+  sha256 'e002dd0bd0e50ce1a4c0db13eea64c959b1e01df5fda5a6ec19e3abca4103db5'
 
   url 'http://www.markvapps.com/applications/metadatics/Metadatics.zip'
   appcast 'http://www.markvapps.com/applications/metadatics/metadatics_appcast.xml',
-          checkpoint: '02ccedda9536d6f20470fb2e8e97dfeb6152a7b804e33dceef804b6626431db3'
+          checkpoint: '690a7e2c2a65941963e309318a5937da26eecb825e86cb1f4bb2f4a2521b08d2'
   name 'Metadatics'
   homepage 'http://markvapps.com/metadatics'
   license :commercial
