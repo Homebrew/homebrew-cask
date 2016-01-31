@@ -4,6 +4,7 @@ cask 'clementine' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/clementine-player/Clementine/releases/download/#{version}/clementine-#{version}.dmg"
+  # github.com verified as official when first introduced to the cask
   appcast 'https://github.com/clementine-player/Clementine/releases.atom',
           checkpoint: '460ea33daaedccd5c58ce4cda1ace8c86827ba3533dac9a5d0ca0df5e1e1f875'
   name 'Clementine'
