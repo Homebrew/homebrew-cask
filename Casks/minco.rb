@@ -4,6 +4,7 @@ cask 'minco' do
 
   # webpack.com is the official download host per the appcast feed
   url "https://ssl.webpack.de/celmaro.com/updates/minco2/Minco#{version.no_dots}.zip"
+  # webpack.de verified as official when first introduced to the cask
   appcast 'https://ssl.webpack.de/celmaro.com/updates/minco2/minco.xml',
           checkpoint: '71a03b6bcbcc68442a391fc8b17a87c8b8341739c35875d9cb3621258344d6b2'
   name 'Minco'
