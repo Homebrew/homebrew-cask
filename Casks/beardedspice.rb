@@ -4,6 +4,7 @@ cask 'beardedspice' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/beardedspice/beardedspice/releases/download/v#{version}/BeardedSpice-#{version}.zip"
+  # github.com verified as official when first introduced to the cask
   appcast 'https://github.com/beardedspice/beardedspice/releases.atom',
           checkpoint: '506993fb1eae07aa873bea676aba8eea37d37e36be2900a96ea9b02a0c475305'
   name 'BeardedSpice'
