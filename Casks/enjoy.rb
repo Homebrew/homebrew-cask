@@ -4,6 +4,7 @@ cask 'enjoy' do
 
   # amazonaws.com is the official download host per the appcast feed
   url "https://s3.amazonaws.com/nongraphical/releases/Enjoy2-#{version}.zip"
+  # amazonaws.com verified as official when first introduced to the cask
   appcast 'https://s3.amazonaws.com/nongraphical/enjoy2/Enjoy2Appcast.xml',
           checkpoint: 'cf19c8a0dc17a555a5dc370bc77e8eafd5f3adfb5aeb33406e06fc8e638e0984'
   name 'Enjoy2'
