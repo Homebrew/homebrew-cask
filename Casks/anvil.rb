@@ -4,6 +4,7 @@ cask 'anvil' do
 
   # amazonaws.com is the official download host as per the vendor homepage
   url "https://s3.amazonaws.com/sparkler_versions/versions/uploads/000/000/120/original/Anvil_#{version}.zip"
+  # herokuapp.com verified as official when first introduced to the cask
   appcast 'https://sparkler.herokuapp.com/apps/3/updates.xml',
           checkpoint: 'b5cb65926ab494ff667e2bc7b090173019719feed3ffde02dbf888aaf5dcc015'
   name 'Anvil'
