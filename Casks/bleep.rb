@@ -4,6 +4,7 @@ cask 'bleep' do
 
   # utorrent.com is the official download host per the vendor homepage
   url 'https://download-new.utorrent.com/endpoint/bleep/os/osx/track/stable/'
+  # bittorrent.com verified as official when first introduced to the cask
   appcast 'https://bleeposx.bittorrent.com/appcast.xml',
           checkpoint: '11a834244e4ca4c4fce08580760fb77c05304f670d72755604e45cea460bc81e'
   name 'BitTorrent Bleep'
