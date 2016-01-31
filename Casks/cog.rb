@@ -4,6 +4,7 @@ cask 'cog' do
 
   # the stable package on sourceforge is a bzip-inside-bzip that we can't handle
   url "http://cogx.org/nightly_builds/cog-#{version}.tbz"
+  # mamburu.net verified as official when first introduced to the cask
   appcast 'http://mamburu.net/cog/stable.xml',
           checkpoint: 'f5770d73ad0c4a19af24cf25195c01d1cc05b937a79416fe82ead0949beee62e'
   name 'Cog'
