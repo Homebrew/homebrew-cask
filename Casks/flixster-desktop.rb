@@ -4,6 +4,7 @@ cask 'flixster-desktop' do
 
   # cloudfront.net is the official download host per the vendor homepage
   url 'https://dtmmt9rxsy2no.cloudfront.net/desktop/mac/FlixsterDesktop.zip'
+  # cloudfront.net verified as official when first introduced to the cask
   appcast 'https://dtmmt9rxsy2no.cloudfront.net/desktop/mac/FlixsterDesktopMacAppcast.xml',
           checkpoint: 'ed42b9935d8dab11e2acb5502ccd1076c9c1e3d1d477a99c9dc569cfbd3a9706'
   name 'Flixster Desktop for Mac'
