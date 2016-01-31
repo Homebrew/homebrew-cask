@@ -4,6 +4,7 @@ cask 'daemon-tools-lite' do
 
   # web-search-home.com is the official download host per the appcast feed
   url 'http://web-search-home.com/download/dtLiteMac'
+  # web-search-home.com verified as official when first introduced to the cask
   appcast 'http://resources.web-search-home.com/xml/DAEMONToolsLite-appcast.xml',
           checkpoint: '48410ce70ce912cd51c297e22da0ebdb2cf4b97c6f330b61a9fe91d389ed2e9b'
   name 'DAEMON Tools Lite'
