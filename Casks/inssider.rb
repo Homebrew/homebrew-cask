@@ -4,6 +4,7 @@ cask 'inssider' do
 
   # metageek.net is the official download host per the vendor homepage
   url "http://files.metageek.net/downloads/inSSIDer#{version.major}-installer.dmg"
+  # metageek.com verified as official when first introduced to the cask
   appcast 'http://www.metageek.com/misc/versions/MacSSIDer/MacSSIDer_appcast.xml',
           checkpoint: 'fd7b7d1cff572bf9567cb87524e4db3e6c01115d52ab70ceca9523d04bb17c26'
   name 'inSSIDer'
