@@ -4,6 +4,7 @@ cask 'connected-desktop' do
 
   # connecteddata.com is the official download host per the vendor homepage
   url "https://secure.connecteddata.com/mac/2.4/software/Connected_Desktop_#{version}.dmg"
+  # connecteddata.com verified as official when first introduced to the cask
   appcast 'http://appsoftware.connecteddata.com/mac/2.0/Appcast.xml',
           checkpoint: 'bafddaa3600663a31955344669f580ccff86ca00da43768edffae3a8842a5c89'
   name 'Connected Desktop'
