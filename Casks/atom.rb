@@ -4,6 +4,7 @@ cask 'atom' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/atom/atom/releases/download/v#{version}/atom-mac.zip"
+  # github.com verified as official when first introduced to the cask
   appcast 'https://github.com/atom/atom/releases.atom',
           checkpoint: 'ce646677e7049b0adc3aacf827d010649c52948e32a4d00df973db946f79add4'
   name 'Github Atom'
