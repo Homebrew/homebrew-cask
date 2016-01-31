@@ -4,6 +4,7 @@ cask 'hex-fiend' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/ridiculousfish/HexFiend/releases/download/v#{version}/Hex.Fiend.app.zip"
+  # github.com verified as official when first introduced to the cask
   appcast 'https://github.com/ridiculousfish/HexFiend/releases.atom',
           checkpoint: '2d09b3a576fc111777c4d5988be2d595651e163ee6f1b5d7dd12d608078d0a8c'
   name 'Hex Fiend'
