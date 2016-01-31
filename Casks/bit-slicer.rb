@@ -4,6 +4,7 @@ cask 'bit-slicer' do
 
   # bitbucket.org is the official download host per the vendor homepage
   url "https://bitbucket.org/zorgiepoo/bit-slicer/downloads/Bit%20Slicer%20#{version}.zip"
+  # zgcoder.net verified as official when first introduced to the cask
   appcast 'https://zgcoder.net/bitslicer/update/appcast.xml',
           checkpoint: '98f4404442be353240a8e8f1c6172d008119e9d0ab1987cd973e9ebec3480bfa'
   name 'Bit Slicer'
