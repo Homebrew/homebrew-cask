@@ -1,6 +1,6 @@
 cask 'datagrip' do
-  version '1.0.1'
-  sha256 'ffc07b732b7798d70fd1c75fe8c448dead93b1b6d3dc7934000e188a63d17f90'
+  version '1.0.2'
+  sha256 '91585f6d83fb0f5673f9f6b3748c0201b14501e4cd23681eb10ef7d7a6ed565c'
 
   url "https://download.jetbrains.com/datagrip/datagrip-#{version}-custom-jdk-bundled.dmg"
   name 'DataGrip'
