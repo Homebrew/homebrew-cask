@@ -2,7 +2,9 @@ cask 'flashlight' do
   version '1.0.1'
   sha256 'b1d6172d1fb7901fdb50c7d4b2fc185ea324df8ae86158669c635babbfb85aec'
 
+  # github.com verified as official when first introduced to the cask
   url "https://github.com/nate-parrott/Flashlight/releases/download/v#{version}/Flashlight.zip"
+  # github.com verified as official when first introduced to the cask
   appcast 'https://github.com/nate-parrott/Flashlight/releases.atom',
           checkpoint: '8c5e2c28b99d28496b74bd58b778ef895bb143f19bc6eaee21d8e0eeb55c0309'
   name 'Flashlight'
