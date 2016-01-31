@@ -13,8 +13,4 @@ cask 'rubymine' do
                 "~/Library/Application Support/RubyMine#{version.delete('.')}",
                 "~/Library/Preferences/RubyMine#{version.delete('.')}",
               ]
-
-  caveats do
-    depends_on_java
-  end
 end
