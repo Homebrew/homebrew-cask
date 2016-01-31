@@ -4,6 +4,7 @@ cask 'feeds' do
 
   # googleapis.com is the official download host per the vendor homepage
   url "https://storage.googleapis.com/feeds-releases/Feeds-#{version}.zip"
+  # googleapis.com verified as official when first introduced to the cask
   appcast 'https://storage.googleapis.com/feeds-releases/appcast.xml',
           checkpoint: '7af76d6014097647a2c5bf89bf8fc50019bd86c68c3eea60288eaf20c1a5c7f5'
   name 'Feeds'
