@@ -3,6 +3,7 @@ cask 'opendns-updater' do
   sha256 '64ad7b55cc8a62739815a806c077df0751ecbbc6c4a71c01792c2f71dc7fd8cc'
 
   url 'https://www.opendns.com/download/mac/'
+  # appspot.com verified as official when first introduced to the cask
   appcast 'https://opendnsupdate.appspot.com/macupdatecheck/ipupdater/AppCast.xml',
           checkpoint: '3585aa32b22700303af09058c569daf7c2726a4c2f90ec581f4014464371b833'
   name 'OpenDNS Updater'
