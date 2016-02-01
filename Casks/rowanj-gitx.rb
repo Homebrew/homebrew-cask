@@ -11,8 +11,8 @@ cask 'rowanj-gitx' do
   end
 
   url "https://github.com/rowanj/gitx/releases/download/builds%2F#{version.sub(%r{\.\d+$}, '')}%2F#{version.sub(%r{.+\.}, '')}/GitX-dev-#{version.sub(%r{.+\.}, '')}.dmg"
-  appcast 'https://s3.amazonaws.com/builds.phere.net/GitX/development/GitX-dev.xml',
-          checkpoint: '5038df68d0212f12285fecbc6e0014c48d7c79ef4e9926d048de33b1be3da4e7'
+  appcast 'https://github.com/rowanj/gitx/releases.atom',
+          checkpoint: 'b1e11ef3e13e74f84a51bfd6169db61f9c37fe5df851bb8c5f131c1981f8fdc0'
   name 'GitX-dev'
   homepage 'https://rowanj.github.io/gitx/'
   license :gpl
