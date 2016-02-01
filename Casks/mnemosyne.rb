@@ -4,6 +4,8 @@ cask 'mnemosyne' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/mnemosyne-proj/mnemosyne/mnemosyne-#{version}/Mnemosyne-#{version}.dmg"
+  appcast 'http://sourceforge.net/p/mnemosyne-proj/activity/feed?source=project_activity',
+          checkpoint: 'a8f3a1d3ec76cfbc00c91c8957abb728e742e61860bc694c355421e3f8f0d8bc'
   name 'Mnemosyne'
   homepage 'http://mnemosyne-proj.org/'
   license :gpl
@@ -19,11 +21,11 @@ cask 'mnemosyne' do
     Mnemosyne looks for LaTeX in the $PATH environment variable, however OS X does not set
     $PATH for applications launched via Finder.
 
-    You can set environment variables for specific apps via Launch Services, by setting the
+    You can set environment variables for specific apps via Launch Services by setting the
     LSEnvironment key in the app's Info.plist file within the app bundle. You must update the
     Launch Services registry after doing this, or the changes will not be recognised.
 
-    For example, (substituting for the location of your LaTeX installation):
+    For example (substituting for the location of your LaTeX installation):
 
       plutil -insert LSEnvironment -json "{\\"PATH\\":\\"$PATH:/Library/TeX/texbin\\"}" #{staged_path}/Mnemosyne.app/Contents/Info.plist
       /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -v -f #{staged_path}/Mnemosyne.app
