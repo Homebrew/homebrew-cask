@@ -2,8 +2,8 @@ cask 'xquartz' do
   version '2.7.8'
   sha256 '17a4c2da1ab3b676fdf80d1a0714c6bfd22183a604e823b4fd8329fdb4432c2a'
 
-  # macosforge.org is the official download host per the vendor homepage
-  url "https://xquartz.macosforge.org/downloads/SL/XQuartz-#{version}.dmg"
+  # bintray.com/xquartz was verified as official when first introduced to the cask
+  url "https://dl.bintray.com/xquartz/legacy-downloads/SL/XQuartz-#{version}.dmg"
   appcast 'https://xquartz-dl.macosforge.org/sparkle/release.xml',
           checkpoint: 'b0acd11079391e97a302227b526f39a60050b7ccd79f59e232ff6079737f889c'
   name 'XQuartz'
