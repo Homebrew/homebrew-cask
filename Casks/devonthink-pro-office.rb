@@ -4,7 +4,6 @@ cask 'devonthink-pro-office' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/#{version}/DEVONthink_Pro_Office.dmg.zip"
-  # devon-technologies.com verified as official when first introduced to the cask
   appcast 'http://www.devon-technologies.com/fileadmin/templates/filemaker/sparkle.php?product=300125739&format=xml',
           checkpoint: '5756d0fcd4818843817f63b8527e4f3a4fbc5f56554cd6e52ba9bac9da1e960f'
   name 'DEVONthink Pro Office'

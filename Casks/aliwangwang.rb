@@ -4,7 +4,6 @@ cask 'aliwangwang' do
 
   # alicdn.com is the official download host per the vendor homepage
   url "https://dbison.alicdn.com/updates/macww-nosandbox-#{version}.dmg"
-  # etao.com verified as official when first introduced to the cask
   appcast 'https://update.labs.etao.com/macww/updates.xml',
           checkpoint: '7178027350d87155dbcf2f2ebcc454262ae5d807fdf75f3688003ea5fccdb1b1'
   name 'Ali Wangwang'

@@ -4,7 +4,6 @@ cask 'multifirefox' do
 
   # amazonaws.com is the official download host per the appcast feed
   url "http://s3.amazonaws.com/mff_sparkle/MultiFirefox_#{version}.zip"
-  # amazonaws.com verified as official when first introduced to the cask
   appcast 'https://s3.amazonaws.com/mff_sparkle/MultiFirefoxAppcast2.xml',
           checkpoint: 'fc4c1e122aa26f0f081158d044aa9dc51e70655b265682902e925f7c11782090'
   name 'MultiFirefox'

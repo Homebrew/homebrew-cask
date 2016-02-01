@@ -4,7 +4,6 @@ cask 'macdown' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/uranusjr/macdown/releases/download/v#{version}/MacDown.app.zip"
-  # github.com verified as official when first introduced to the cask
   appcast 'https://github.com/uranusjr/macdown/releases.atom',
           checkpoint: '29f4a235beeda5f90f4c8c133aa02cebd355de416beae8e074ad1b7f86942866'
   name 'MacDown'

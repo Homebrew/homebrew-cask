@@ -4,7 +4,6 @@ cask 'macpaw-gemini' do
 
   # devmate.com is the official download host per the appcast feed
   url "https://dl.devmate.com/com.macpaw.site.Gemini/#{version.before_comma}/#{version.after_comma}/MacPawGemini-#{version.before_comma}.zip"
-  # devmate.com verified as official when first introduced to the cask
   appcast 'https://updates.devmate.com/com.macpaw.site.Gemini.xml',
           checkpoint: 'c5e98cb5ad6b531a34850e48b6cb29611cd504e6ee3c7d970cf651c6fe571baf'
   name 'MacPaw Gemini'

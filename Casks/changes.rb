@@ -4,7 +4,6 @@ cask 'changes' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://bitbq_changes.s3.amazonaws.com/changes-#{version}.zip"
-  # amazonaws.com verified as official when first introduced to the cask
   appcast 'https://bitbq_changes.s3.amazonaws.com/changes-production.xml',
           checkpoint: '524b59ed2fd0b0cb7829bfa7d4729769d169dc6e391a113550082d44fd831806'
   name 'Changes'
