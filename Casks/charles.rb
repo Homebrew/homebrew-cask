@@ -13,5 +13,4 @@ cask 'charles' do
                 '~/Library/Application Support/Charles',
                 '~/Library/Preferences/com.xk72.charles.config',
               ]
-
 end
