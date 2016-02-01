@@ -4,6 +4,7 @@ cask 'night-owl' do
 
   # null.net is the official download host per the vendor homepage
   url 'https://aki-null.net/yf/NightOwl.zip'
+  # null.net verified as official when first introduced to the cask
   appcast 'https://aki-null.net/yf/distribution/changelog_sl_en.html',
           checkpoint: '766f5fa2993d8d1e306449dac998b5620f30d4798e379564e0837e9eab963794'
   name 'NightOwl'
