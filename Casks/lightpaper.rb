@@ -4,7 +4,6 @@ cask 'lightpaper' do
 
   # hockeyapp.net is the official download host per the vendor homepage
   url 'https://rink.hockeyapp.net/api/2/apps/789cfa8846464727ae0fdb176ec8d3c8?format=zip'
-  # ashokgelal.com verified as official when first introduced to the cask
   appcast 'http://links.ashokgelal.com/lp-mac-update-feed',
           checkpoint: '5bb2bc21c40cb1c424eb1fcdf8def3489a5195c1e1dc75f7f4d8eca22d6c957c'
   name 'LightPaper'

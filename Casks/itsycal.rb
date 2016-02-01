@@ -4,7 +4,6 @@ cask 'itsycal' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/itsycal/Itsycal-#{version}.zip"
-  # amazonaws.com verified as official when first introduced to the cask
   appcast 'https://s3.amazonaws.com/itsycal/itsycal.xml',
           checkpoint: 'd7fa19383d434d948de626620d167f19692999ffe7cd57c46627abf6a6e19747'
   name 'Itsycal'

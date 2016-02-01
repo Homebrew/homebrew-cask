@@ -4,7 +4,6 @@ cask 'lifeslice' do
 
   # wanderingstan.com is the official download host per the vendor homepage
   url 'http://www.wanderingstan.com/apps/lifeslice/LifeSlice_701.zip'
-  # wanderingstan.com verified as official when first introduced to the cask
   appcast 'http://wanderingstan.com/apps/lifeslice/lifeslice_appcast.xml',
           checkpoint: '67f1a993754ab3372dc8e007d534afef2455c2348ad40972039e5f72b356162d'
   name 'LifeSlice'

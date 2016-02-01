@@ -4,7 +4,6 @@ cask 'identify' do
 
   # dropbox.com is the official download host per the appcast feed
   url "http://dl.dropbox.com/u/1495067/iDentifySparkle/iDentifyLite#{version}.zip"
-  # dropboxusercontent.com verified as official when first introduced to the cask
   appcast 'https://dl.dropboxusercontent.com/u/1495067/iDentifySparkle/iDentifyAppcast.xml',
           checkpoint: '703a63799a0a8ed68a772bf9514779c45d02707690ac45fb4355a3fd666ddcba'
   name 'iDentify'

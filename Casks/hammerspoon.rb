@@ -4,7 +4,6 @@ cask 'hammerspoon' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/Hammerspoon/hammerspoon/releases/download/#{version}/Hammerspoon-#{version}.zip"
-  # github.com verified as official when first introduced to the cask
   appcast 'https://github.com/Hammerspoon/hammerspoon/releases.atom',
           checkpoint: 'e977818cc6c0525dc00dcc8302d517143659c2deac33dde70e850090f148bed0'
   name 'Hammerspoon'

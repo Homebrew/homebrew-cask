@@ -4,7 +4,6 @@ cask 'beotsmusic' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/kiding/beotsmusic/releases/download/#{version}/BeotsMusic.dmg"
-  # github.com verified as official when first introduced to the cask
   appcast 'https://github.com/kiding/beotsmusic/releases.atom',
           checkpoint: '58053ecb7f438e794ec2a78ea671f29736a54098d0847a91cf5c67f4e5b7eccf'
   name 'BeotsMusic'

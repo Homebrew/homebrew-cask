@@ -4,7 +4,6 @@ cask 'clipmenu' do
 
   # dropbox.com is the official download host per the vendor homepage
   url "https://dl.dropbox.com/u/1140644/clipmenu/ClipMenu_#{version}.dmg"
-  # feedburner.com verified as official when first introduced to the cask
   appcast 'https://feeds.feedburner.com/clipmenu-appcast',
           checkpoint: 'bcd91bd0f5da24998cbdb2ac0be516c156a60105a9504aedc05ae2a7a4165647'
   name 'ClipMenu'

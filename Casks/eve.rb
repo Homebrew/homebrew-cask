@@ -4,7 +4,6 @@ cask 'eve' do
 
   # amazonaws.com is the official download host per the vendor homepage
   url 'https://s3.amazonaws.com/hotkeyeve/Downloads/EVE-latest.zip'
-  # amazonaws.com verified as official when first introduced to the cask
   appcast 'https://s3.amazonaws.com/hotkeyeve/hotkeyEVEappcast.xml',
           checkpoint: '93943cfb0ee6329879ca6aa563be493c2c30a8a461ae839c02de678463e01d53'
   name 'EVE'

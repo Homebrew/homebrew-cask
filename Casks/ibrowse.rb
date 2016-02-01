@@ -4,7 +4,6 @@ cask 'ibrowse' do
 
   # macroplant.com is the official download host per the vendor homepage
   url "https://www.macroplant.com/release/iBrowse-#{version}.dmg"
-  # macroplant.com verified as official when first introduced to the cask
   appcast 'https://www.macroplant.com/ibrowse/ib-appcast.xml',
           checkpoint: '7a32b83ef758e12e91441397c895e9afb894248277c4ebc9d67466a43e9730fc'
   name 'iBrowse'

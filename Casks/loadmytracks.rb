@@ -4,7 +4,6 @@ cask 'loadmytracks' do
 
   # cluetrust.com is the official download host per the product homepage
   url "http://www.cluetrust.com/Downloads/LoadMyTracks_#{version.after_comma}.dmg"
-  # cluetrust.com verified as official when first introduced to the cask
   appcast 'https://www.cluetrust.com/AppCasts/LoadMyTracks.xml',
           checkpoint: 'bef86b055707d407eb2835db82e07d615968d344450417515cae5719fd97cefd'
   name 'LoadMyTracks'
