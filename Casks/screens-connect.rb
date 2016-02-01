@@ -1,12 +1,9 @@
 cask 'screens-connect' do
-  version '3.6_b930'
-  sha256 '23570864f111c8eb610f61ad6cb35ed4a9f11cd9836a7c606d89ba87daf2f01b'
+  version '3.6.1'
+  sha256 '18bb65623aadff7f931456598f12ba33f5c54bad9c1f7f2a3b10f9585f8bc771'
 
-  # edovia.com is the official download host per the appcast feed
-  # Original discussion: https://github.com/caskroom/homebrew-cask/pull/8816
-  url "http://download.edovia.com/screensconnect/screensconnect_#{version}.dmg"
-  appcast 'https://screensconnect.com/sparkle/appcast.xml',
-          checkpoint: '34a8603709c7b8d1eab7f39e99ff49bbe71172dcce5b8d6fe4edd543c224f3cc'
+  # evodia.com was verified as official when first introduced to the cask
+  url "http://download.edovia.com/screensconnect/screensconnect%20#{version}.dmg"
   name 'Screens Connect'
   homepage 'https://screensconnect.com'
   license :gratis
