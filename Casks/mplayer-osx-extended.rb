@@ -4,6 +4,7 @@ cask 'mplayer-osx-extended' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/sttz/MPlayer-OSX-Extended/releases/download/#{version}/MPlayer-OSX-Extended_#{version}.zip"
+  # github.com verified as official when first introduced to the cask
   appcast 'https://github.com/sttz/MPlayer-OSX-Extended/releases.atom',
           checkpoint: '97a7842a97b15d35ed296f0917e0c6ebdf9f5c54f978e15bf419134bac7bf232'
   name 'MPlayer OSX Extended'
