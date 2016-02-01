@@ -4,6 +4,7 @@ cask 'mongodb' do
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/gcollazo/mongodbapp/releases/download/#{version}/MongoDB.zip"
+  # github.com verified as official when first introduced to the cask
   appcast 'https://github.com/gcollazo/mongodbapp/releases.atom',
           checkpoint: '503ea07055eaccc3f5bdec48c64686c599ed5a43606fed448a03ded37af753e8'
   name 'MongoDB'
