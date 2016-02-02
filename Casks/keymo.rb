@@ -1,10 +1,10 @@
 cask 'keymo' do
-  version '1.2.2'
-  sha256 '6da934a395dd4064c59a9e235505337d6b45a24f4e1eacd1810fdff55f985216'
+  version '1.2.3'
+  sha256 '0c89580ad1b805fa6a4854059b6a3f82990f899c8649cd641f7dbd36590d073c'
 
   url 'https://manytricks.com/download/keymo'
   appcast 'https://manytricks.com/keymo/appcast.xml',
-          checkpoint: '0fada217a8b17fe20397e043c45a94fa984b8928877efb59ffa88997c5b2939a'
+          checkpoint: '41b6f949a406b86dd6cbe11d7cadfb9f4242525c209d1b881a5a3c027957976c'
   name 'Keymo'
   homepage 'https://manytricks.com/keymo'
   license :commercial
