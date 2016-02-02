@@ -1,6 +1,6 @@
 cask 'sqlectron' do
-  version '1.3.0'
-  sha256 '547426384db31510d196bdecc5ee626cbc305192dc70cc69bc6977716fba45d2'
+  version '1.4.0'
+  sha256 '36c4a65b7692a72bb173e4d3bad6ec1a01a975e7a6208a398f40d14e94376e6c'
 
   url "https://github.com/sqlectron/sqlectron-gui/releases/download/v#{version}/Sqlectron-darwin-x64.zip"
   appcast 'https://github.com/sqlectron/sqlectron-gui/releases.atom',
