@@ -34,6 +34,7 @@ cask 'git-annex' do
                       :mountain_lion
                       :mavericks
                       :yosemite
+                      :el_capitan
                     ]
 
   app 'git-annex.app'
