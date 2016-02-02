@@ -1,11 +1,11 @@
 cask 'powerphotos' do
-  version '1.1.5'
-  sha256 '22060b46e26526eeb9e11d4b753050a7901af4c5aa1ea5f0c0e880dba145ae50'
+  version '1.1.6'
+  sha256 'aed1f6fe169b821c422d437f7df6d1e4a34c5be652793300394789180daff0a7'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/fatcatsoftware/powerphotos/PowerPhotos_#{version.no_dots}.zip"
   appcast 'http://www.fatcatsoftware.com/powerphotos/powerphotos_appcast.xml',
-          checkpoint: '715794b08d328f86e432494cee70f297d05764be4c8f8bc345d5cc63fb259eff'
+          checkpoint: 'ce5f10cdbd431465c99689133d0c1cf97c8069d0413c55834fee0703c5b55089'
   name 'PowerPhotos'
   homepage 'http://www.fatcatsoftware.com/powerphotos/'
   license :commercial

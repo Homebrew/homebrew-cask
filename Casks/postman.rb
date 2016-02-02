@@ -1,6 +1,6 @@
 cask 'postman' do
-  version '3.2.10.1'
-  sha256 'b6ab622c6e54f87c3d1222b28fd2dbc1f39cbd4add65638aef1f34cc29991e64'
+  version '3.2.14.1'
+  sha256 '2d466c1e777caa30808a69ae6f144f483b7280cae2e3dfffac6573627ea6bec9'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/postman-electron-builds/mac/postman-osx-#{version}.zip"

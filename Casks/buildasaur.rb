@@ -1,10 +1,10 @@
 cask 'buildasaur' do
   version '0.8.0'
-  sha256 'c8f16247d78a3c404d585082bfae829b2a8c59f88b21bd5c831638f9be5ea0fc'
+  sha256 'e96a86a6bbf5620a34b0583249bd8440759523a6681fccead76d134021ecec6a'
 
   url "https://github.com/czechboy0/Buildasaur/releases/download/v#{version}/Buildasaur.app.zip"
   appcast 'https://github.com/czechboy0/Buildasaur/releases.atom',
-          checkpoint: '29ab69a55849cc65744f71c471baf1f9ea61cc66041207b8a726810d49b653be'
+          checkpoint: 'c4d58f593577f48ef77686e7a779a023887b46f17c3667f4750c38e73ac476ea'
   name 'Buildasaur'
   homepage 'https://github.com/czechboy0/Buildasaur'
   license :mit

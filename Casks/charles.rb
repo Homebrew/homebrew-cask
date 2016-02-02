@@ -13,8 +13,4 @@ cask 'charles' do
                 '~/Library/Application Support/Charles',
                 '~/Library/Preferences/com.xk72.charles.config',
               ]
-
-  caveats do
-    depends_on_java
-  end
 end

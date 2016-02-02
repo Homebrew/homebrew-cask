@@ -4,7 +4,7 @@ cask 'gog-downloader' do
 
   url "https://static.gog.com/download/d3/mac-stable/GOG_Downloader_#{version}.zip"
   appcast 'https://api.gog.com/en/downloader2/status/mac-stable',
-          checkpoint: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b856'
+          checkpoint: 'a3c972e56f751b534b16c9c63930e6e663c0643123a09f9cc6ec921a7b4d1afb'
   name 'GOG Downloader'
   homepage 'https://www.gog.com/downloader'
   license :gratis

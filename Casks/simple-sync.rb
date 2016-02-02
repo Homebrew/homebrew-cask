@@ -1,11 +1,11 @@
 cask 'simple-sync' do
-  version '3.1.1-265'
-  sha256 '81477b8c7b06fd3bd63b20033a5e2b383c54026b2dcaa7cb731c833a4fe21807'
+  version '3.2.1-283'
+  sha256 '18108c06846933f22281d060db129e45194d2341e43f9b68e5fab793b0f48217'
 
   # roomieremote.com is the official download host per the vendor homepage
   url "https://www.roomieremote.com/b/SimpleSync-#{version.no_dots}.zip"
   appcast 'https://www.roomieremote.com/b/Simple-SyncAppcast.xml',
-          checkpoint: 'd3549933d7ea5b37b1710863330a6b0d4e5bd83a6be90d03dd5a2a6e4393bc19'
+          checkpoint: '163f6cac5b18c68cc26f53cce7cbf4f1bff4cf2bed17c7583cd4c295928ac102'
   name 'Simple Sync'
   homepage 'https://simplecontrol.com/simple-sync'
   license :commercial

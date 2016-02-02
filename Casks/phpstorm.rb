@@ -14,8 +14,4 @@ cask 'phpstorm' do
                 '~/Library/Preferences/WebIde100',
                 '~/Library/Preferences/com.jetbrains.PhpStorm.plist',
               ]
-
-  caveats do
-    depends_on_java
-  end
 end

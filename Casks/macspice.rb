@@ -4,7 +4,7 @@ cask 'macspice' do
 
   url "http://www.macspice.com/mirror/binaries/v#{version}/MacSpice3f5.dmg"
   appcast 'http://www.macspice.com/AppCast-v2.xml',
-          checkpoint: '79d1e2a5a03f4bf6cbf99da2055d762f9607579a40db686f9e283993d3569a70'
+          checkpoint: 'ad5ccb1f63ee40273acf297e470ea23af20cd194e2e148ec663824ed9d2ec3b8'
   name 'MacSpice'
   homepage 'http://www.macspice.com/'
   license :closed

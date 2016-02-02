@@ -1,10 +1,9 @@
 cask 'minbox' do
   version '2.0.12'
-  sha256 'a0e03e13c67af129432a5e4e463e83cfd958bd4b036035f5dcb2b3bb1944d388'
+  sha256 '3c5a6bd1888453ef6de902da9bf29f873516572d4f7ff7d7d096c5425ae9dcd2'
 
-  # amazonaws.com is the official download host per the appcast feed
-  url "https://minbox-public.s3.amazonaws.com/osx/Minbox#{version}.zip"
-  appcast 'https://s3.amazonaws.com/minbox-public/osx/updates.xml',
+  url 'https://minbox.com/download'
+  appcast 'https://minbox.com/updates.xml',
           checkpoint: 'd6f20222f6fca106398c29a026237661e4805106af60d373f71f17948aa5d425'
   name 'Minbox'
   homepage 'https://minbox.com'
