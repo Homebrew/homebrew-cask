@@ -5,7 +5,7 @@ cask 'darktable' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/darktable-org/darktable/releases/download/release-#{version}/darktable-#{version}.dmg"
   appcast 'https://github.com/darktable-org/darktable/releases.atom',
-          checkpoint: 'db63bd878b86eeabbf524a936fb843661b9778d2a3f17b022a7a83de7cc3b076'
+          checkpoint: '18dea15754fab00cacb838cdee76e76b08b252d18c424034e1ebd9d47a423772'
   name 'darktable'
   homepage 'https://www.darktable.org/'
   license :gpl
