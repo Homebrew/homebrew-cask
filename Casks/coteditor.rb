@@ -17,7 +17,7 @@ cask 'coteditor' do
   end
 
   appcast 'https://github.com/coteditor/CotEditor/releases.atom',
-          checkpoint: '651fbd129f3ec69fe965b3088279d3dd31196f8c6ed26c8f69fa193ab4a79a19'
+          checkpoint: '2ee73f85c1ca53a0a4df984e4a65b274a82417b9aa14ac4f63a4811b00b13dec'
   name 'CotEditor'
   homepage 'https://coteditor.com/'
   license :gpl
