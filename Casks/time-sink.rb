@@ -1,10 +1,10 @@
 cask 'time-sink' do
-  version '1.2.4'
-  sha256 'ebca992aa70f12d85dfafcbf0d6753bbd6c36daa6bc280c8a2b3316ae51be225'
+  version '1.2.5'
+  sha256 'e8742770f9fe7944bbf60c9f692127c3b00dba96b0bcc2ed0b80563eb525a08c'
 
   url 'https://manytricks.com/download/timesink'
   appcast 'https://manytricks.com/timesink/appcast.xml',
-          checkpoint: '9d3f4080a3b044f321311ca0649f5d8a3f409d7232a52d9a85638103808ee67e'
+          checkpoint: 'f6886239162de22ba1b755eb14603ef514d5d00ab59b75969b3761ac1beadbaa'
   name 'Time Sink'
   homepage 'https://manytricks.com/timesink/'
   license :commercial

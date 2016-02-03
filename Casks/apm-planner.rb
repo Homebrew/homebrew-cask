@@ -4,7 +4,7 @@ cask 'apm-planner' do
 
   url "http://firmware.diydrones.com/Tools/APMPlanner/apm_planner_#{version}_osx.dmg"
   appcast 'http://firmware.diydrones.com/Tools/APMPlanner/apm_planner_version.json',
-          checkpoint: '8c6a4943f94db128bd1c7989639608864fa4bd41186d8abba18a800f04de42ea'
+          checkpoint: 'd2cb3943ca1caab20f434168ae1f95f1e21e5b0a2bb6ee959cc64cabaf6067dd'
   name 'APM Planner'
   homepage 'http://planner2.ardupilot.com/'
   license :gpl

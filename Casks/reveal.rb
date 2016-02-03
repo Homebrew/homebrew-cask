@@ -1,10 +1,10 @@
 cask 'reveal' do
-  version '1.6.2'
-  sha256 'e245d592e2397e7fd056ba47ac4b197335081302be98ee17d46249dbbcd3fa5c'
+  version '1.6.3'
+  sha256 '61312d50b822c4f37460f61c17cb091d3c10dae5ab446abd27d402976e2ed539'
 
   url "http://download.revealapp.com/Reveal.app-#{version}.zip"
   appcast 'http://download.revealapp.com/reveal-release.xml',
-          checkpoint: '7d3b89ebb18c4a7384a3b919c7b89e146d7d1e72fa58bf2139417909b1c12511'
+          checkpoint: '59912bbc29ae92bde4c523d54cc1a76babadc134b8a37c512bb32f72762eaa76'
   name 'Reveal'
   homepage 'http://revealapp.com/'
   license :commercial
