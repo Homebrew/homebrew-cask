@@ -5,7 +5,7 @@ cask 'obs' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/jp9000/obs-studio/releases/download/#{version}/obs-#{version}-installer.dmg"
   appcast 'https://github.com/jp9000/obs-studio/releases.atom',
-          checkpoint: 'c87ca1fc1e061340c20b3260e95f028919ba5706b171ac9b5158365586c8d519'
+          checkpoint: '82cb34bbf6cf01794d81bb4331badac74d610f60d29901200d37530cf7b9d435'
   name 'OBS'
   homepage 'https://obsproject.com/'
   license :gpl
