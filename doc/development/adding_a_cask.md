@@ -1,6 +1,6 @@
 ## Adding a Cask
 
-Making a new Cask is easy. Follow the directions in [Getting Set Up To Contribute] to begin.
+Making a new Cask is easy. Follow the directions in [Getting Set Up To Contribute](../../CONTRIBUTING.md#getting-set-up-to-contribute) to begin.
 
 ### Examples
 
