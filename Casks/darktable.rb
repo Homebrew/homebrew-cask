@@ -1,11 +1,11 @@
 cask 'darktable' do
-  version '2.0.0'
-  sha256 '1019646522c3fde81ce0de905220a88b506c7cec37afe010af7d458980dd08bd'
+  version '2.0.1'
+  sha256 '580d1feb356e05d206eb74d7c134f0ffca4202943388147385c5b8466fc1eada'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/darktable-org/darktable/releases/download/release-#{version}/darktable-#{version}.dmg"
   appcast 'https://github.com/darktable-org/darktable/releases.atom',
-          checkpoint: '18dea15754fab00cacb838cdee76e76b08b252d18c424034e1ebd9d47a423772'
+          checkpoint: '2e8a1bcf85f0aeb99f456964160657ad8f24f9ad57ef324c9a651b840c231543'
   name 'darktable'
   homepage 'https://www.darktable.org/'
   license :gpl

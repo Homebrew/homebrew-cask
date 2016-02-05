@@ -6,8 +6,8 @@ cask 'cleanapp' do
     version '4.0.8'
     sha256 'e77359586731e1ae863351846afc9fd34a7b9774625122001c0d92593a340ff1'
   else
-    version '5.0.1'
-    sha256 '7d306172c00ccc7f11281cb855d845a67e52457bc9b673a4a1690c8c2f1b343b'
+    version '5.0.2'
+    sha256 'fb2fc773a51567ff0b002724ae692671572a60ea5d305467551fe6cf01a6d3a2'
   end
 
   url "https://download.syniumsoftware.com/CleanApp/CleanApp%20#{version}.dmg"

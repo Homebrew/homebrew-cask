@@ -38,6 +38,7 @@ Label | Description | Issues | Pull Requests
 **bug** | Something isn’t working as expected. A modification/addition/removal. Must always be accompanied by **cask** or **core** | &#x2713; | &#x2713;
 **cask** | Relates directly to a cask. Must always be accompanied by **bug** or **enhancement**. | &#x2713; | &#x2713;
 **cask request** | Either a request for a new cask or a call for correction in an existing one. | &#x2713; |
+**outdated appcast** | An automated label, handled by the various scripts geared towards updating casks with outdated appcasts. Should never be applied manually. | &#x2713; | &#x2713;
 **chief bug** | When multiple people open new issues for the same bug, the main issue where its progression is being tracked should have this label. Every other one should be marked **duplicate** and closed. | &#x2713; |
 **core** | Relates directly to the code of the core, homebrew-cask itself. Must always be accompanied by **bug** or **enhancement**. | &#x2713; | &#x2713;
 **discussion** | A matter that benefits from discussion before a decision is to be made. Any opinion should be given by users and maintainers alike, even if that opinion is “I have no strong feelings on the matter”. | &#x2713; |
