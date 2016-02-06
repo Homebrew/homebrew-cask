@@ -16,5 +16,5 @@ cask 'datagrip' do
                 '~/Library/Application Support/DataGrip10',
                 '~/Library/Caches/DataGrip10',
                 '~/Library/Logs/DataGrip10',
-  ]
+              ]
 end
