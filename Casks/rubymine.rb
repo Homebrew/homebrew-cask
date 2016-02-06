@@ -10,7 +10,11 @@ cask 'rubymine' do
   app 'RubyMine.app'
 
   zap delete: [
-                "~/Library/Application Support/RubyMine#{version.delete('.')}",
-                "~/Library/Preferences/RubyMine#{version.delete('.')}",
+                "~/Library/Application Support/RubyMine80",
+                "~/Library/Preferences/RubyMine80",
+                "~/.RubyMine80",
+                "~/Library/Preferences/com.jetbrains.RubyMine.plist",
+                "~/Library/Caches/RubyMine80",
+                "~/Library/Logs/RubyMine80",
               ]
 end
