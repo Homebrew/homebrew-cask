@@ -10,6 +10,9 @@ cask 'intellij-idea' do
   app 'IntelliJ IDEA 15.app'
 
   zap delete: [
+                '~/.IntelliJIdea15',
+                '~/Library/Caches/IntelliJIdea15',
+                '~/Library/Logs/IntelliJIdea15',
                 '~/Library/Application Support/IntelliJIdea15',
                 '~/Library/Preferences/IntelliJIdea15',
                 '~/Library/Preferences/com.jetbrains.intellij.plist',
