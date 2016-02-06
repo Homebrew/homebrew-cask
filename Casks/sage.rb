@@ -13,7 +13,7 @@ cask 'sage' do
     version '7.1.beta2'
     sha256 '8e90498fb42136777c609b032933ab14ccffb79b9cd1dfb2c3f7762f32c6249b'
     # go-parts.com/sage was verified as official when first introduced to the cask
-    url "http://mirrors.mit.edu/sage/osx/intel/sage-#{version}-OSX_10.11.2-x86_64.app.dmg"
+    url "http://mirrors-usa.go-parts.com/sage/sagemath/osx/intel/sage-#{version}-OSX_10.11.3-x86_64.app.dmg"
   end
 
   name 'Sage'
