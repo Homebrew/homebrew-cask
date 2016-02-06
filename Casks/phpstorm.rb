@@ -10,6 +10,9 @@ cask 'phpstorm' do
   app 'PhpStorm.app'
 
   zap delete: [
+                '~/.WebIde100',
+                '~/Library/Caches/WebIde100',
+                '~/Library/Logs/WebIde100',
                 '~/Library/Application Support/WebIde100',
                 '~/Library/Preferences/WebIde100',
                 '~/Library/Preferences/com.jetbrains.PhpStorm.plist',
