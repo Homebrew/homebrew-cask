@@ -11,7 +11,7 @@ cask 'sage' do
     url "http://mirrors.mit.edu/sage/osx/intel/sage-#{version}-x86_64-Darwin-OSX_10.10_x86_64-app.dmg"
   else
     version '7.1.beta2'
-    sha256 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+    sha256 '8e90498fb42136777c609b032933ab14ccffb79b9cd1dfb2c3f7762f32c6249b'
     # go-parts.com/sage was verified as official when first introduced to the cask
     url "http://mirrors.mit.edu/sage/osx/intel/sage-#{version}-OSX_10.11.2-x86_64.app.dmg"
   end
