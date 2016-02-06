@@ -7,5 +7,5 @@ cask 'sassquatch' do
   homepage 'http://sassquatch.thoughtbot.com'
   license :commercial
 
-  app 'Sassquatch.app'
+  app 'Sassquatch/Sassquatch.app', :target => 'Sassquatch.app'
 end
