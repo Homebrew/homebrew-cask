@@ -8,4 +8,13 @@ cask 'pycharm' do
   license :commercial
 
   app 'PyCharm.app'
+
+  zap delete: [
+                '~/.PyCharm50',
+                '~/Library/Preferences/com.jetbrains.PyCharm.plist',
+                '~/Library/Preferences/PyCharm50',
+                '~/Library/Application Support/PyCharm50',
+                '~/Library/Caches/PyCharm50',
+                '~/Library/Logs/PyCharm50',
+  ]
 end
