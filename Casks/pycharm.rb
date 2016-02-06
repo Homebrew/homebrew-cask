@@ -16,5 +16,5 @@ cask 'pycharm' do
                 '~/Library/Application Support/PyCharm50',
                 '~/Library/Caches/PyCharm50',
                 '~/Library/Logs/PyCharm50',
-  ]
+              ]
 end
