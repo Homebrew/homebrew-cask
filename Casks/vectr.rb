@@ -7,5 +7,5 @@ cask 'vectr' do
   homepage 'https://vectr.com'
   license :gratis
 
-  app 'Vectr.app'
+  app "vectr-mac-#{version}/Vectr.app"
 end
