@@ -10,11 +10,11 @@ cask 'pycharm' do
   app 'PyCharm.app'
 
   zap delete: [
-                '~/.PyCharm50',
+                "~/.PyCharm#{version.major_minor.no_dots}",
                 '~/Library/Preferences/com.jetbrains.PyCharm.plist',
-                '~/Library/Preferences/PyCharm50',
-                '~/Library/Application Support/PyCharm50',
-                '~/Library/Caches/PyCharm50',
-                '~/Library/Logs/PyCharm50',
+                "~/Library/Preferences/PyCharm#{version.major_minor.no_dots}",
+                "~/Library/Application Support/PyCharm#{version.major_minor.no_dots}",
+                "~/Library/Caches/PyCharm#{version.major_minor.no_dots}",
+                "~/Library/Logs/PyCharm#{version.major_minor.no_dots}",
               ]
 end
