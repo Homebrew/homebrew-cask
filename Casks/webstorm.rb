@@ -10,11 +10,11 @@ cask 'webstorm' do
   app 'WebStorm.app'
 
   zap delete: [
-                '~/.WebStorm11',
+                "~/.WebStorm#{version.major}",
                 '~/Library/Preferences/com.jetbrains.webstorm.plist',
-                '~/Library/Preferences/WebStorm11',
-                '~/Library/Application Support/WebStorm11',
-                '~/Library/Caches/WebStorm11',
-                '~/Library/Logs/WebStorm11',
+                "~/Library/Preferences/WebStorm#{version.major}",
+                "~/Library/Application Support/WebStorm#{version.major}",
+                "~/Library/Caches/WebStorm#{version.major}",
+                "~/Library/Logs/WebStorm#{version.major}",
               ]
 end
