@@ -18,4 +18,10 @@ cask 'virtualbox' do
 
   uninstall script:  { executable: 'VirtualBox_Uninstall.tool', args: %w[--unattended] },
             pkgutil: 'org.virtualbox.pkg.*'
+
+  zap delete: [
+                '/Library/Application Support/VirtualBox',
+                '~/Library/VirtualBox',
+              ],
+      rmdir:  '~/VirtualBox VMs'
 end
