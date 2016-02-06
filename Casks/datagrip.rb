@@ -8,4 +8,13 @@ cask 'datagrip' do
   license :commercial
 
   app 'DataGrip.app'
+
+  zap delete: [
+                '~/.DataGrip10',
+                '~/Library/Preferences/com.jetbrains.DataGrip.plist',
+                '~/Library/Preferences/DataGrip10',
+                '~/Library/Application Support/DataGrip10',
+                '~/Library/Caches/DataGrip10',
+                '~/Library/Logs/DataGrip10',
+  ]
 end
