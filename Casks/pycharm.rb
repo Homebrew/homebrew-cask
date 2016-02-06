@@ -8,4 +8,13 @@ cask 'pycharm' do
   license :commercial
 
   app 'PyCharm.app'
+
+  zap delete: [
+                "~/.PyCharm#{version.major_minor.no_dots}",
+                '~/Library/Preferences/com.jetbrains.PyCharm.plist',
+                "~/Library/Preferences/PyCharm#{version.major_minor.no_dots}",
+                "~/Library/Application Support/PyCharm#{version.major_minor.no_dots}",
+                "~/Library/Caches/PyCharm#{version.major_minor.no_dots}",
+                "~/Library/Logs/PyCharm#{version.major_minor.no_dots}",
+              ]
 end
