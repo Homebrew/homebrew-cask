@@ -1,9 +1,9 @@
 cask 'utox' do
-  version '0.4.4'
-  sha256 'e18e9f02b22f837d284c6669c552fa1634ed319d353e3605d92f9412666c8fa9'
+  version '0.5.0'
+  sha256 '5aa04ac5454c1786388f18bde60a355b704860debca17faa82eb9c1ecf9846ae'
 
   # zodiaclabs.org is the official download host per the vendor homepage
-  url "https://zodiaclabs.org/storage/c1/uTox-#{version}.dmg"
+  url "https://zodiaclabs.org/storage/c1/uTox-mac-#{version}.dmg"
   name 'uTox'
   homepage 'https://www.tox.chat'
   license :oss
