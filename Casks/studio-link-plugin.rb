@@ -1,11 +1,11 @@
 cask 'studio-link-plugin' do
-  version '15.12.2-beta'
-  sha256 '3b83c27e7b91764ad11c8cf2a0a6ac6d55132123e8a8594f38ce25c83b0f3342'
+  version '16.02.0-beta'
+  sha256 '6fd085a2f420e6ea584c6fac374070488e2cbf59cd743fb71de8ba9f3eab944b'
 
   # github.com is the official download host per the vendor homepage
-  url "https://github.com/Studio-Link-v2/backend/releases/download/#{version}/studio-link-osx.zip"
+  url "https://github.com/Studio-Link-v2/backend/releases/download/v#{version}/studio-link-plugin-osx.zip"
   appcast 'https://github.com/Studio-Link-v2/backend/releases.atom',
-          checkpoint: '284425a11bad52cf7f6ea23d36abe94058fdda30871a2af95d292b43c173dc01'
+          checkpoint: '9afde3059f8be79f95dee629fe161573f616d6eb9f39e22f13ac2ec9bd9f56f0'
   name 'Studio Link Plugin'
   homepage 'https://doku.studio-link.de/plugin/installation-plugin.html'
   license :bsd
