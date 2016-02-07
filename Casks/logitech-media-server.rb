@@ -10,7 +10,7 @@ cask 'logitech-media-server' do
 
   pkg "LogitechMediaServer-#{version}.pkg"
 
-  uninstall :pkgutil => 'com.logitech.music.Squeezebox'
+  uninstall pkgutil: 'com.logitech.music.Squeezebox'
 
-  zap :delete => '~/Library/Preferences/com.slimdevices.slim.plist'
+  zap delete: '~/Library/Preferences/com.slimdevices.slim.plist'
 end

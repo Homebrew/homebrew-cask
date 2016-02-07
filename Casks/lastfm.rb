@@ -4,10 +4,10 @@ cask 'lastfm' do
 
   url "http://cdn.last.fm/client/Mac/Last.fm-#{version}.zip"
   appcast 'http://cdn.last.fm/client/Mac/updates.xml',
-          :sha256 => '5ce3a6697f1c24a83e632ad5d9d00e4a5613d3ba713d0bec58531feb0bf75dd3'
+          checkpoint: '6cc2826bd38f16b11c2c2d2d2b5011c19bb9b99e274aed42c1ed70edf242caf5'
   name 'Last.fm Scrobbler'
   homepage 'http://www.last.fm/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Last.fm.app'
 end

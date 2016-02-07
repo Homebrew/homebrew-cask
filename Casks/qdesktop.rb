@@ -5,7 +5,7 @@ cask 'qdesktop' do
   # bitbucket.org is the official download host per the vendor homepage
   url "https://bitbucket.org/qvacua/qvacua/downloads/Qdesktop-#{version}.zip"
   appcast 'http://qvacua.com/qdesktop/appcast.xml',
-          :sha256 => '9714a19fae1e50cfdc06a1f300dae791d400b4c64a0f679b29d633ea8a59b46b'
+          checkpoint: '0b0de69503c4c5c113458705f0ca13e91bc87c0ca91e8a395ca25d5d80d39384'
   name 'Qdesktop'
   homepage 'http://qvacua.com'
   license :gpl

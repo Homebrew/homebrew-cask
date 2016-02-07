@@ -1,6 +1,6 @@
 cask 'photo-supreme-single-user' do
   version '3'
-  sha256 :no_check   # required as upstream package is updated in place
+  sha256 :no_check # required as upstream package is updated in place
 
   url 'http://www.idimager.com/Trial/PhotoSupreme_V3.pkg'
   name 'Photo Supreme Single User'
@@ -9,5 +9,5 @@ cask 'photo-supreme-single-user' do
 
   pkg 'PhotoSupreme_V3.pkg'
 
-  uninstall :pkgutil => 'com.idimager.idimagersu'
+  uninstall pkgutil: 'com.idimager.idimagersu'
 end

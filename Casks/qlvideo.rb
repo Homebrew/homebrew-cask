@@ -4,12 +4,12 @@ cask 'qlvideo' do
 
   url "https://github.com/Marginal/QLVideo/releases/download/rel-#{version.delete('.')}/QLVideo_#{version.delete('.')}.pkg"
   appcast 'https://github.com/Marginal/QLVideo/releases.atom',
-          :sha256 => 'c199d34c99e519d672963a4de75f75a7b1a0cc12333f21382e09c4297670737f'
+          checkpoint: 'c199d34c99e519d672963a4de75f75a7b1a0cc12333f21382e09c4297670737f'
   name 'QuickLook Video'
   homepage 'https://github.com/Marginal/QLVideo'
   license :gpl
 
   pkg "QLVideo_#{version.delete('.')}.pkg"
 
-  uninstall :pkgutil => 'uk.org.marginal.qlvideo'
+  uninstall pkgutil: 'uk.org.marginal.qlvideo'
 end

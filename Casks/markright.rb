@@ -4,7 +4,7 @@ cask 'markright' do
 
   url "https://github.com/dvcrn/markright/releases/download/#{version}/MarkRight_Mac.dmg"
   appcast 'https://github.com/dvcrn/markright/releases.atom',
-          :sha256 => '617a2e63a4457ba76ff82dcd25ed979cab07607ef6ef0521a725570c1a1e9944'
+          checkpoint: '617a2e63a4457ba76ff82dcd25ed979cab07607ef6ef0521a725570c1a1e9944'
   name 'MarkRight'
   homepage 'https://github.com/dvcrn/markright'
   license :gpl

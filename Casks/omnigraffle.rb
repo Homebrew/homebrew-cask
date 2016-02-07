@@ -19,5 +19,5 @@ cask 'omnigraffle' do
 
   app 'OmniGraffle.app'
 
-  zap :delete => '~/Library/Application Support/The Omni Group/OmniGraffle'
+  zap delete: '~/Library/Application Support/The Omni Group/OmniGraffle'
 end

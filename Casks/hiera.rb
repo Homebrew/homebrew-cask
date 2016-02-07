@@ -5,9 +5,9 @@ cask 'hiera' do
   url "https://downloads.puppetlabs.com/mac/hiera-#{version}.dmg"
   name 'Puppet Labs Hiera'
   homepage 'https://projects.puppetlabs.com/projects/hiera'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :apache
 
   pkg "hiera-#{version}.pkg"
 
-  uninstall :pkgutil => 'com.puppetlabs.hiera'
+  uninstall pkgutil: 'com.puppetlabs.hiera'
 end

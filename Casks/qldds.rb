@@ -4,12 +4,12 @@ cask 'qldds' do
 
   url "https://github.com/Marginal/QLdds/releases/download/rel-#{version.delete('.')}/QLdds_#{version.delete('.')}.pkg"
   appcast 'https://github.com/Marginal/QLdds/releases.atom',
-          :sha256 => '78e822e4270104b1744c55a0da9f77e4bf113e7ba095cb2e84215b99d751b963'
+          checkpoint: '78e822e4270104b1744c55a0da9f77e4bf113e7ba095cb2e84215b99d751b963'
   name 'QuickLook DDS'
   homepage 'https://github.com/Marginal/QLdds'
   license :gpl
 
   pkg "QLdds_#{version.delete('.')}.pkg"
 
-  uninstall :pkgutil => 'uk.org.marginal.qldds'
+  uninstall pkgutil: 'uk.org.marginal.qldds'
 end

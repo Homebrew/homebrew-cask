@@ -8,6 +8,7 @@ cask 'avogadro' do
   homepage 'http://avogadro.openmolecules.net/'
   license :gpl
 
-  container :nested => "Avogadro-#{version}.dmg"
+  container nested: "Avogadro-#{version}.dmg"
+
   app 'Avogadro.app'
 end

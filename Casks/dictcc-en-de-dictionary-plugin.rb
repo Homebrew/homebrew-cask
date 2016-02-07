@@ -9,5 +9,5 @@ cask 'dictcc-en-de-dictionary-plugin' do
 
   pkg 'macosx10.6_dict.cc_dictionary.pkg'
 
-  uninstall :pkgutil => 'org.lipflip.dictcccDeutschenglischDictionary..*'
+  uninstall pkgutil: 'org.lipflip.dictcccDeutschenglischDictionary..*'
 end

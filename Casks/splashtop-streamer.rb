@@ -6,9 +6,9 @@ cask 'splashtop-streamer' do
   url "https://d17kmd0va0f0mp.cloudfront.net/mac/Splashtop_Streamer_MAC_v#{version}.dmg"
   name 'Splashtop Streamer'
   homepage 'http://www.splashtop.com/downloads'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Splashtop Streamer.pkg'
 
-  uninstall :pkgutil => 'com.splashtop.splashtopStreamer.*'
+  uninstall pkgutil: 'com.splashtop.splashtopStreamer.*'
 end

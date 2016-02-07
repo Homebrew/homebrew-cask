@@ -1,6 +1,6 @@
 cask 'terraform' do
-  version '0.6.8'
-  sha256 '71fd8ff20f657a4c7d82794756d55c55b0686516a8253356b8edd1a728230577'
+  version '0.6.11'
+  sha256 '9802b1d56576bea86e34fd3800e100eb043ab6de5a5fa40f7f05a0a44f364dd2'
 
   # hashicorp.com is the official download host per the vendor homepage
   url "https://releases.hashicorp.com/terraform/#{version}/terraform_#{version}_darwin_amd64.zip"
@@ -12,6 +12,8 @@ cask 'terraform' do
   binary 'terraform-provider-atlas'
   binary 'terraform-provider-aws'
   binary 'terraform-provider-azure'
+  binary 'terraform-provider-azurerm'
+  binary 'terraform-provider-chef'
   binary 'terraform-provider-cloudflare'
   binary 'terraform-provider-cloudstack'
   binary 'terraform-provider-consul'
@@ -23,14 +25,17 @@ cask 'terraform' do
   binary 'terraform-provider-google'
   binary 'terraform-provider-heroku'
   binary 'terraform-provider-mailgun'
+  binary 'terraform-provider-mysql'
   binary 'terraform-provider-null'
   binary 'terraform-provider-openstack'
   binary 'terraform-provider-packet'
+  binary 'terraform-provider-postgresql'
   binary 'terraform-provider-rundeck'
   binary 'terraform-provider-statuscake'
   binary 'terraform-provider-template'
   binary 'terraform-provider-terraform'
   binary 'terraform-provider-tls'
+  binary 'terraform-provider-vcd'
   binary 'terraform-provider-vsphere'
   binary 'terraform-provisioner-chef'
   binary 'terraform-provisioner-file'

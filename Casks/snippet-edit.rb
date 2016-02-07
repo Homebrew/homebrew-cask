@@ -4,7 +4,7 @@ cask 'snippet-edit' do
 
   url "http://cocoaholic.com/downloads/snippet_edit/Snippet_Edit_#{version}.zip"
   appcast 'http://cocoaholic.com/sparkle/snippet_edit/sparkle.xml',
-          :sha256 => 'a32af024b5e43f5bd6fef837808d8130359000c2f7f975f38abc46aecf17e113'
+          checkpoint: 'd8bcf3fc1b2c9648af174988789d2034662d047cf3f9a860f4ccf05fca665f59'
   name 'Snippet Edit'
   homepage 'http://cocoaholic.com/snippet_edit/'
   license :gratis

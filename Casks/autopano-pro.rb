@@ -9,11 +9,11 @@ cask 'autopano-pro' do
 
   pkg "Autopano Pro #{version}.pkg"
 
-  uninstall :pkgutil => [
-                         'com.kolor.pkg.AutopanoPro.*',
-                         'com.kolor.pkg.Aperture_plugin',
-                         'com.kolor.pkg.Bridge_plugin',
-                         'com.kolor.pkg.Lightroom_plugin',
-                         'com.kolor.pkg.plugin.picasa',
-                        ]
+  uninstall pkgutil: [
+                       'com.kolor.pkg.AutopanoPro.*',
+                       'com.kolor.pkg.Aperture_plugin',
+                       'com.kolor.pkg.Bridge_plugin',
+                       'com.kolor.pkg.Lightroom_plugin',
+                       'com.kolor.pkg.plugin.picasa',
+                     ]
 end

@@ -9,5 +9,5 @@ cask 'texmacs' do
 
   app "TeXmacs-#{version}.app"
 
-  zap :delete => '~/.TeXmacs'
+  zap delete: '~/.TeXmacs'
 end

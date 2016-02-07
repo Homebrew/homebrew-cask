@@ -4,7 +4,7 @@ cask 'bandage' do
 
   url "https://github.com/rrwick/Bandage/releases/download/v#{version}/Bandage_Mac_v#{version}.zip"
   appcast 'https://github.com/rrwick/Bandage/releases.atom',
-          :sha256 => 'db58afd366df0db3617e877dec3e018d1eb3f962f156d7047c8787208d6b7244'
+          checkpoint: 'db58afd366df0db3617e877dec3e018d1eb3f962f156d7047c8787208d6b7244'
   name 'Bandage'
   homepage 'https://rrwick.github.io/Bandage/'
   license :gpl

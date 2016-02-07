@@ -14,7 +14,7 @@ cask 'virtual-ii' do
   license :freemium
 
   # There is no sub-folder in the DMG; the root *is* the folder
-  suite '.', :target => 'Virtual ]['
+  suite '.', target: 'Virtual ]['
 
   caveats <<-EOS.undent
     This app requires a ROM image, which must be downloaded and installed

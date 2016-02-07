@@ -6,7 +6,7 @@ cask 'tongbu' do
   url "http://qd.appdown.info/qd/zsmacqd/Tongbu_mac_v#{version}_baidupinzhuan.dmg"
   name 'Tongbu'
   homepage 'http://www.tongbu.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Tongbu.app'
 end

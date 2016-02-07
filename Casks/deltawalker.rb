@@ -8,7 +8,7 @@ cask 'deltawalker' do
   homepage 'http://www.deltawalker.com/'
   license :commercial
 
-  depends_on :macos => '>= :tiger'
+  depends_on macos: '>= :tiger'
 
   app 'DeltaWalker.app'
 end

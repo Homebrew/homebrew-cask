@@ -7,5 +7,5 @@ cask 'adobe-creative-cloud' do
   homepage 'https://creative.adobe.com/products/creative-cloud'
   license :commercial
 
-  installer :manual => 'Creative Cloud Installer.app'
+  installer manual: 'Creative Cloud Installer.app'
 end

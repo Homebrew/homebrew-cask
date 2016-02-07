@@ -5,12 +5,12 @@ cask 'gitbox' do
   # cloudfront.net is the official download host per the vendor homepage
   url "https://d1oa71y4zxyi0a.cloudfront.net/gitbox-#{version}-ml.zip"
   appcast 'http://gitboxapp.com/updates.xml',
-          :sha256 => '4a771aa4d35cd0bf9f821fbf1e60741cb1d9ee3724ff66550e46fba98bace8c1'
+          checkpoint: 'd22fec338fe94f98556990084e8f11ab1c4378e8d4b6b2430544a857adc6215e'
   name 'Gitbox'
   homepage 'http://gitboxapp.com/'
   license :commercial
 
   app 'Gitbox.app'
 
-  zap :delete => '~/Library/Preferences/com.oleganza.gitbox.plist'
+  zap delete: '~/Library/Preferences/com.oleganza.gitbox.plist'
 end

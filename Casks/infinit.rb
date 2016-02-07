@@ -9,10 +9,10 @@ cask 'infinit' do
 
   app 'Infinit.app'
 
-  zap :delete => [
-                  '~/Library/Application Support/Infinit',
-                  '~/Library/Application Support/InfinitApplication',
-                  '~/Library/Caches/io.infinit.InfinitApplication',
-                  '~/Library/Preferences/io.infinit.InfinitApplication.plist',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Infinit',
+                '~/Library/Application Support/InfinitApplication',
+                '~/Library/Caches/io.infinit.InfinitApplication',
+                '~/Library/Preferences/io.infinit.InfinitApplication.plist',
+              ]
 end

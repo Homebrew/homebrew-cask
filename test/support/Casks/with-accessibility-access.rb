@@ -5,7 +5,7 @@ test_cask 'with-accessibility-access' do
   url 'http://example.com/TestCask.dmg'
   homepage 'http://example.com/'
 
-  app 'TestCask.app'
-
   accessibility_access true
+
+  app 'TestCask.app'
 end

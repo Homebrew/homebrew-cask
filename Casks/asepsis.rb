@@ -9,5 +9,5 @@ cask 'asepsis' do
 
   pkg 'Asepsis.pkg'
 
-  uninstall :pkgutil => 'com.binaryage.pkg.asepsis'
+  uninstall pkgutil: 'com.binaryage.pkg.asepsis'
 end

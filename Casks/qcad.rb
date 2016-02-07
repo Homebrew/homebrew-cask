@@ -7,8 +7,8 @@ cask 'qcad' do
   homepage 'http://www.qcad.org/'
   license :gpl
 
-  depends_on :macos => '>= :snow_leopard'
-  depends_on :arch => :intel
+  depends_on macos: '>= :snow_leopard'
+  depends_on arch: :intel
 
   app 'QCAD.app'
 end

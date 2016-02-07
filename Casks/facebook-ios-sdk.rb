@@ -5,9 +5,9 @@ cask 'facebook-ios-sdk' do
   url "https://developers.facebook.com/resources/facebook-ios-sdk-#{version}.pkg"
   name 'Facebook SDK for iOS'
   homepage 'https://developers.facebook.com/docs/ios'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "facebook-ios-sdk-#{version}.pkg"
 
-  uninstall :pkgutil => 'com.facebook.sdk.pkg'
+  uninstall pkgutil: 'com.facebook.sdk.pkg'
 end

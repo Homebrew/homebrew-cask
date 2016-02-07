@@ -1,11 +1,11 @@
 cask 'diskmaker-x' do
-  version '5.0.1'
-  sha256 '69f2d57392f56fbc1fa9cccc0d1d2be57b8ff4d39bcfeb1cb6770fbf702fb3df'
+  version :latest
+  sha256 :no_check
 
-  url "http://diskmakerx.com/downloads/DiskMaker_X_#{version.to_i}.dmg"
+  url 'http://diskmakerx.com/downloads/DiskMaker_X.dmg'
   name 'DiskMaker X'
   homepage 'http://diskmakerx.com/'
   license :gratis
 
-  app "DiskMaker X #{version.to_i}.app"
+  app 'DiskMaker X 5.app'
 end

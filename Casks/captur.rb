@@ -8,6 +8,7 @@ cask 'captur' do
   homepage 'http://cambhlumbulunk.blogspot.co.uk/p/captur.html'
   license :gratis
 
-  container :nested => "captur-#{version}.dmg"
+  container nested: "captur-#{version}.dmg"
+
   app '64 Bit/Captur.app'
 end

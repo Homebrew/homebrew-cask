@@ -9,9 +9,9 @@ cask 'kega-fusion' do
 
   app 'Kega Fusion.app'
 
-  zap :delete => [
-                  '~/Library/Application Support/Kega Fusion',
-                  '~/Library/Preferences/uk.co.reptilia-design.Kega_Fusion.plist',
-                  '~/Library/Saved Application State/uk.co.reptilia-design.Kega_Fusion.savedState'
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Kega Fusion',
+                '~/Library/Preferences/uk.co.reptilia-design.Kega_Fusion.plist',
+                '~/Library/Saved Application State/uk.co.reptilia-design.Kega_Fusion.savedState',
+              ]
 end

@@ -5,5 +5,5 @@ test_cask 'with-alt-target' do
   url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/local-caffeine'
 
-  app 'Caffeine.app', :target => 'AnotherName.app'
+  app 'Caffeine.app', target: 'AnotherName.app'
 end

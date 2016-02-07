@@ -9,6 +9,6 @@ cask 'rethinkdb' do
 
   pkg "rethinkdb-#{version}.pkg"
 
-  uninstall :script  => { :executable => 'uninstall-rethinkdb.sh' },
-            :pkgutil => 'rethinkdb'
+  uninstall script:  { executable: 'uninstall-rethinkdb.sh' },
+            pkgutil: 'rethinkdb'
 end

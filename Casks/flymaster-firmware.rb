@@ -3,8 +3,8 @@ cask 'flymaster-firmware' do
   sha256 :no_check
 
   url 'http://downloads.flymaster.net/FirmwareInstaller.dmg'
-  homepage 'http://www.flymaster-avionics.com'
   name 'Flymaster Firmware Installer'
+  homepage 'http://www.flymaster-avionics.com'
   license :gratis
 
   app 'Firmware Installer.app'

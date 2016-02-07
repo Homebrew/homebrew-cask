@@ -4,7 +4,7 @@ cask 'hyperdock' do
 
   url "https://bahoom.com/hyperdock/#{version}/HyperDock-#{version}.dmg"
   appcast 'https://bahoom.com/hyperdock/appcast.xml',
-          :sha256 => '22d00db14142a74fce6466bde7dd590ee7f3c3ec277e59b31a637885f97c9542'
+          checkpoint: 'decb0617147a1284fec1cd626e8353dedf9daf49d61478ca87040216182a1ac3'
   name 'HyperDock'
   homepage 'http://hyperdock.bahoom.com/'
   license :commercial

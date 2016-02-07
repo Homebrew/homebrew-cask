@@ -7,8 +7,9 @@ cask 'canon-imagerunner-printer-driver-ufrii' do
   homepage 'https://www.usa.canon.com/cusa/sna/office/color_imagerunner_advance/imagerunner_advance_c5030/imagerunner_advance_c5030#DriversAndSoftware'
   license :gratis
 
-  container :nested => "UFRII_v#{version}_MAC.dmg"
+  container nested: "UFRII_v#{version}_MAC.dmg"
+
   pkg 'UFRII_LT_LIPS_LX_Installer.pkg'
 
-  uninstall :pkgutil => 'jp.co.canon.CUPSPrinter.*'
+  uninstall pkgutil: 'jp.co.canon.CUPSPrinter.*'
 end

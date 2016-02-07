@@ -9,5 +9,5 @@ cask 'qtspim' do
 
   pkg 'QtSpim.mpkg'
 
-  uninstall :pkgutil => 'org.larusstone.pkg.QtSpim'
+  uninstall pkgutil: 'org.larusstone.pkg.QtSpim'
 end

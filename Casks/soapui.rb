@@ -29,8 +29,8 @@ cask 'soapui' do
   # And refer to the install4j command line options for additional information
   #   http://resources.ej-technologies.com/install4j/help/doc/index.html
   #
-  installer :script => "SoapUI #{version} Installer.app/Contents/MacOS/JavaApplicationStub",
-            :args => [
+  installer script: "SoapUI #{version} Installer.app/Contents/MacOS/JavaApplicationStub",
+            args:   [
                       '-q',
                       '-Vsys.adminRights$Boolean=true',
                       '-Vsys.programGroupDisabled$Boolean=true',
@@ -42,9 +42,9 @@ cask 'soapui' do
                       '-VshowFileAction$Boolean=false',
                       '-Vsys.installationDir=/Applications',
                       '-VexecutionLauncherAction$Boolean=false',
-                      '-Vsys.component.714$Boolean=true'
+                      '-Vsys.component.714$Boolean=true',
                     ],
-            :sudo => false
+            sudo:   false
 
-  uninstall :delete => "/Applications/SoapUI-#{version}.app"
+  uninstall delete: "/Applications/SoapUI-#{version}.app"
 end

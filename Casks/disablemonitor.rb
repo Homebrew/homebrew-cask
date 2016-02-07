@@ -4,7 +4,7 @@ cask 'disablemonitor' do
 
   url "https://github.com/Eun/DisableMonitor/releases/download/G#{version}/DisableMonitor-G#{version}.zip"
   appcast 'https://github.com/Eun/DisableMonitor/releases.atom',
-          :sha256 => 'fe771d9958403ea039c1ffa4e8edbc69dee465e1cff42456c18780d1dcbd91af'
+          checkpoint: 'fe771d9958403ea039c1ffa4e8edbc69dee465e1cff42456c18780d1dcbd91af'
   name 'DisableMonitor'
   homepage 'https://github.com/Eun/DisableMonitor'
   license :gpl

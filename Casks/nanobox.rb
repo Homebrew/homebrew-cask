@@ -8,10 +8,9 @@ cask 'nanobox' do
   homepage 'https://www.nanobox.io/'
   license :mpl
 
-  depends_on :cask => 'virtualbox'
-  depends_on :cask => 'vagrant'
-
-  container :type => :naked
+  depends_on cask: 'virtualbox'
+  depends_on cask: 'vagrant'
+  container type: :naked
 
   binary 'nanobox'
 
@@ -19,8 +18,8 @@ cask 'nanobox' do
     set_permissions "#{staged_path}/nanobox", '755'
   end
 
-  zap :delete => [
-                    '~/.nanobox',
-                    '/opt/nanobox',
-                ]
+  zap delete: [
+                '~/.nanobox',
+                '/opt/nanobox',
+              ]
 end

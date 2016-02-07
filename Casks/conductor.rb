@@ -4,12 +4,12 @@ cask 'conductor' do
 
   url "https://github.com/keith/conductor/releases/download/#{version}/Conductor.app.zip"
   appcast 'https://github.com/keith/conductor/releases.atom',
-          :sha256 => 'e9db5592440216e156b93dfe69a597508047dbda993e3ad8f528a5b54d448d00'
+          checkpoint: 'e9db5592440216e156b93dfe69a597508047dbda993e3ad8f528a5b54d448d00'
   name 'Conductor'
   homepage 'https://github.com/keith/conductor'
   license :mit
 
-  app 'Conductor.app'
-
   accessibility_access true
+
+  app 'Conductor.app'
 end

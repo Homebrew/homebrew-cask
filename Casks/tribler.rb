@@ -5,7 +5,7 @@ cask 'tribler' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/Tribler/tribler/releases/download/v#{version}/Tribler-#{version}.dmg"
   appcast 'https://github.com/Tribler/tribler/releases.atom',
-          :sha256 => '6dc37806e7e565d4cbaa8cf7a6961cd411d6906454ce511cd79b0145462f6949'
+          checkpoint: '62a894b29b04881b8cd7f993ae2b2ae2a82afec3660a7d4e5b0f47c4be645db2'
   name 'Tribler'
   homepage 'https://www.tribler.org'
   license :gpl

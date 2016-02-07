@@ -7,6 +7,7 @@ cask 'ntfsmounter' do
   homepage 'http://ntfsmounter.com/'
   license :gratis
 
-  container :nested => "NTFS Mounter #{version}.dmg"
+  container nested: "NTFS Mounter #{version}.dmg"
+
   app 'ntfsMounter.app'
 end

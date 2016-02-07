@@ -10,5 +10,5 @@ cask 'bitcasa' do
 
   pkg "InstallBitcasa.#{version}.pkg"
 
-  uninstall :pkgutil => 'com.bitcasa.AutoLaunch|com.bitcasa.Bitcasa'
+  uninstall pkgutil: 'com.bitcasa.AutoLaunch|com.bitcasa.Bitcasa'
 end

@@ -7,9 +7,9 @@ cask 'thebrain' do
   homepage 'https://www.thebrain.com/'
   license :commercial
 
-  installer :script => 'TheBrain Installer.app/Contents/MacOS/JavaApplicationStub',
-            :args => [ '-q' ],
-            :sudo => false
+  installer script: 'TheBrain Installer.app/Contents/MacOS/JavaApplicationStub',
+            args:   ['-q'],
+            sudo:   false
 
-  uninstall :delete => '/Applications/TheBrain.app'
+  uninstall delete: '/Applications/TheBrain.app'
 end

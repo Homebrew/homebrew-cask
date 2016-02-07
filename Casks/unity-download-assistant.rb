@@ -7,7 +7,7 @@ cask 'unity-download-assistant' do
   homepage 'https://unity3d.com/unity/'
   license :commercial
 
-  installer :manual => 'Unity Download Assistant.app'
+  installer manual: 'Unity Download Assistant.app'
 
-  uninstall :pkgutil => 'com.unity3d.*'
+  uninstall pkgutil: 'com.unity3d.*'
 end

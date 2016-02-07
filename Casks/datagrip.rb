@@ -1,6 +1,6 @@
 cask 'datagrip' do
-  version '1.0'
-  sha256 '32640fd394c57b4c5625e254971d423e84b3e39c0dede63cad17620be52ca155'
+  version '1.0.2'
+  sha256 '91585f6d83fb0f5673f9f6b3748c0201b14501e4cd23681eb10ef7d7a6ed565c'
 
   url "https://download.jetbrains.com/datagrip/datagrip-#{version}-custom-jdk-bundled.dmg"
   name 'DataGrip'
@@ -8,4 +8,13 @@ cask 'datagrip' do
   license :commercial
 
   app 'DataGrip.app'
+
+  zap delete: [
+                "~/.DataGrip#{version.major_minor.no_dots}",
+                '~/Library/Preferences/com.jetbrains.DataGrip.plist',
+                "~/Library/Preferences/DataGrip#{version.major_minor.no_dots}",
+                "~/Library/Application Support/DataGrip#{version.major_minor.no_dots}",
+                "~/Library/Caches/DataGrip#{version.major_minor.no_dots}",
+                "~/Library/Logs/DataGrip#{version.major_minor.no_dots}",
+              ]
 end

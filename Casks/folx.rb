@@ -4,7 +4,7 @@ cask 'folx' do
 
   url "http://www.eltima.com/download/folx-update/downloader_mac_#{version}.dmg"
   appcast 'http://mac.eltima.com/download/folx-updater/folx.xml',
-          :sha256 => 'de2426e47846323fec85726df21cdddc7eaa85c0409a48a66344dfaf2c8c1b66'
+          checkpoint: '5842b05fba51144ad903c431987cb91de8876703065f3ab6801e2de0f7eb2a88'
   name 'Folx'
   homepage 'http://mac.eltima.com/download-manager.html'
   license :freemium

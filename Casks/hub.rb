@@ -1,10 +1,10 @@
 cask 'hub' do
-  version '2.2.2'
-  sha256 '570664fdb22c5c40b16f0d17eb33d881332601ac289f724fe3aceab0c610a2a6'
+  version '2.2.3'
+  sha256 '42454bb2e4733938dfb3a50fb73c462e898132dafd6bd83a5a17908e4c6f1646'
 
   url "https://github.com/github/hub/releases/download/v#{version}/hub-darwin-amd64-#{version}.tgz"
   appcast 'https://github.com/github/hub/releases.atom',
-          :sha256 => 'eec9baedadcccad08f996cc9f3767e77318e7936d0190ae45320bdc6208450e3'
+          checkpoint: '0f62a4c284813725a5b5ef3c724340adb4dff89f7fb83904632bc94fe524cf82'
   name 'hub'
   homepage 'https://github.com/github/hub'
   license :mit

@@ -9,5 +9,5 @@ cask 'menumeters' do
 
   prefpane 'MenuMeters Installer.app/Contents/Resources/MenuMeters.prefPane'
 
-  zap :delete => '~/Library/Preferences/com.ragingmenace.MenuMeters.plist'
+  zap delete: '~/Library/Preferences/com.ragingmenace.MenuMeters.plist'
 end

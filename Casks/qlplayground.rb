@@ -4,7 +4,7 @@ cask 'qlplayground' do
 
   url "https://github.com/norio-nomura/qlplayground/releases/download/#{version}/qlplayground.qlgenerator-#{version}.zip"
   appcast 'https://github.com/norio-nomura/qlplayground/releases.atom',
-          :sha256 => 'e5ee7b5098fe9d72bcdc8b6e36d2fb43c340c7c5a72e4af0b52c17138c9c21a3'
+          checkpoint: 'e5ee7b5098fe9d72bcdc8b6e36d2fb43c340c7c5a72e4af0b52c17138c9c21a3'
   name 'qlplayground'
   homepage 'https://github.com/norio-nomura/qlplayground'
   license :mit

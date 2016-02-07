@@ -11,11 +11,11 @@ cask 'lego-mindstorms-ev3' do
 
   pkg 'LEGO MINDSTORMS EV3 Home Edition.pkg'
 
-  uninstall :pkgutil => [
-              "com.ni.pkg.lego.ev3.Eng.#{version}",
-              "com.ni.pkg.lego.x3.#{version}.core",
-              "com.ni.pkg.lego.x3.#{version}.update"
-            ]
+  uninstall pkgutil: [
+                       "com.ni.pkg.lego.ev3.Eng.#{version}",
+                       "com.ni.pkg.lego.x3.#{version}.core",
+                       "com.ni.pkg.lego.x3.#{version}.update",
+                     ]
 
-  zap :pkgutil => 'com.ni.pkg.legodriver'
+  zap pkgutil: 'com.ni.pkg.legodriver'
 end

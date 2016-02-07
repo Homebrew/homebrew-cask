@@ -5,7 +5,7 @@ cask 'recovery-disk-assistant' do
   url 'https://support.apple.com/downloads/DL1433/en_US/RecoveryDiskAssistant.dmg'
   name 'Recovery Disk Assistant'
   homepage 'https://support.apple.com/kb/HT4848'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Recovery Disk Assistant.app'
 end

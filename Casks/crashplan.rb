@@ -9,6 +9,6 @@ cask 'crashplan' do
 
   pkg 'Install CrashPlan.pkg'
 
-  uninstall :script  => 'Uninstall.app/Contents/Resources/uninstall.sh',
-            :pkgutil => 'com.crashplan.app.pkg'
+  uninstall script:  'Uninstall.app/Contents/Resources/uninstall.sh',
+            pkgutil: 'com.crashplan.app.pkg'
 end

@@ -8,7 +8,7 @@ cask 'au-wifi-connect' do
   homepage 'http://www.au.kddi.com/mobile/service/smartphone/wifi/wifi-spot/usage/mac/'
   license :gratis
 
-  container :nested => 'au-wifi-connect-latest'
+  container nested: 'au-wifi-connect-latest'
 
   app 'au Wi-Fi接続ツール.app'
 end

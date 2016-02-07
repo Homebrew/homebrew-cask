@@ -4,7 +4,7 @@ cask 'todotxt' do
 
   url "https://github.com/mjdescy/TodoTxtMac/releases/download/#{version}/TodoTxtMac.app.zip"
   appcast 'https://github.com/mjdescy/TodoTxtMac/releases.atom',
-          :sha256 => 'b4201f8617518c5754b85898a1a488b2388d99bea7f25d02ed82e05cf3fc391f'
+          checkpoint: 'b4201f8617518c5754b85898a1a488b2388d99bea7f25d02ed82e05cf3fc391f'
   name 'TodoTxtMac'
   homepage 'https://mjdescy.github.io/TodoTxtMac/'
   license :mit

@@ -5,9 +5,9 @@ cask 'garmin-training-center' do
   url "https://www8.garmin.com/software/TrainingCenterforMac_#{version.delete('.')}.dmg"
   name 'Garmin Training Center'
   homepage 'http://www.garmin.com/garmin/cms/intosports/training_center'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Garmin Training Center.pkg'
 
-  uninstall :pkgutil => 'com.garmin.garminTrainingCenter.*pkg'
+  uninstall pkgutil: 'com.garmin.garminTrainingCenter.*pkg'
 end

@@ -5,7 +5,7 @@ cask 'psychopy' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/psychopy/psychopy/releases/download/#{version}/StandalonePsychoPy-#{version}-OSX_64bit.dmg"
   appcast 'https://github.com/psychopy/psychopy/releases.atom',
-          :sha256 => '84e7f9c46db10e75cab1462602102b57e182c77df92ed703ef75d44625184cef'
+          checkpoint: '84e7f9c46db10e75cab1462602102b57e182c77df92ed703ef75d44625184cef'
   name 'PsychoPy'
   homepage 'http://www.psychopy.org/'
   license :oss

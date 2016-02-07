@@ -14,7 +14,7 @@ cask 'git-annex' do
     preflight do
       system '/bin/mv', '--', staged_path.join('git-annex-latest'), staged_path.join('git-annex-latest.dmg')
     end
-    container :nested => 'git-annex-latest.dmg'
+    container nested: 'git-annex-latest.dmg'
   elsif MacOS.release == :mavericks
     # kitenet.net is the official download host per the vendor homepage
     url 'https://downloads.kitenet.net/git-annex/OSX/current/10.9_Mavericks/git-annex.dmg'
@@ -23,24 +23,25 @@ cask 'git-annex' do
     url 'https://downloads.kitenet.net/git-annex/OSX/current/10.10_Yosemite/git-annex.dmg'
   end
 
-  gpg "#{url}.sig",
-      :key_url => 'https://downloads.kitenet.net/git-annex/gpg-pubkey.asc'
   name 'git-annex'
   homepage 'https://git-annex.branchable.com/'
   license :gpl
+  gpg "#{url}.sig",
+      key_url: 'https://downloads.kitenet.net/git-annex/gpg-pubkey.asc'
+
+  depends_on macos: %w[
+                      :lion
+                      :mountain_lion
+                      :mavericks
+                      :yosemite
+                      :el_capitan
+                    ]
 
   app 'git-annex.app'
   binary 'git-annex.app/Contents/MacOS/git-annex'
   binary 'git-annex.app/Contents/MacOS/git-annex-shell'
 
-  uninstall :launchctl => 'com.branchable.git-annex.assistant'
-
-  depends_on :macos => %w{
-                          :lion
-                          :mountain_lion
-                          :mavericks
-                          :yosemite
-                         }
+  uninstall launchctl: 'com.branchable.git-annex.assistant'
 
   caveats do
     files_in_usr_local

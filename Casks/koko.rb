@@ -4,7 +4,7 @@ cask 'koko' do
 
   url "https://github.com/noraesae/koko/releases/download/v#{version}/koko-mac.zip"
   appcast 'https://github.com/noraesae/koko/releases.atom',
-          :sha256 => '7c97c79db2e5cef29e780c7af796647068e85aeab9c0e93130bad2783762c272'
+          checkpoint: '7c97c79db2e5cef29e780c7af796647068e85aeab9c0e93130bad2783762c272'
   name 'Koko'
   homepage 'https://github.com/noraesae/koko'
   license :mit

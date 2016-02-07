@@ -5,9 +5,9 @@ cask 'intel-xdk' do
   url "https://download.xdk.intel.com/xdk/xdk_web_mac_master_#{version}.dmg"
   name 'Intel XDK'
   homepage 'http://xdk-software.intel.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "xdk_full_#{version}.pkg"
 
-  uninstall :pkgutil => 'com.intel.pkg.xdk_new'
+  uninstall pkgutil: 'com.intel.pkg.xdk_new'
 end

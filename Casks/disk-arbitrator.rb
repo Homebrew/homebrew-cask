@@ -10,8 +10,8 @@ cask 'disk-arbitrator' do
 
   app 'Disk Arbitrator.app'
 
-  uninstall :launchctl => 'us.burghardt.Disk-Arbitrator',
-            :quit => 'us.burghardt.Disk-Arbitrator'
+  uninstall launchctl: 'us.burghardt.Disk-Arbitrator',
+            quit:      'us.burghardt.Disk-Arbitrator'
 
-  zap :delete => '~/Library/Preferences/us.burghardt.Disk-Arbitrator.plist'
+  zap delete: '~/Library/Preferences/us.burghardt.Disk-Arbitrator.plist'
 end

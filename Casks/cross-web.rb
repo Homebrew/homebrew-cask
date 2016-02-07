@@ -9,5 +9,5 @@ cask 'cross-web' do
 
   pkg 'npCrossWeb_Mac.pkg'
 
-  uninstall :pkgutil => 'kr.co.iniline.pkg.CrossWebPackage'
+  uninstall pkgutil: 'kr.co.iniline.pkg.CrossWebPackage'
 end

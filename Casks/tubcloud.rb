@@ -9,5 +9,5 @@ cask 'tubcloud' do
 
   pkg 'tubcloud-latest-macos.pkg'
 
-  uninstall :pkgutil => 'de.tu-berlin.tubit.owncloud'
+  uninstall pkgutil: 'de.tu-berlin.tubit.owncloud'
 end

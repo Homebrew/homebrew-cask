@@ -10,5 +10,5 @@ cask 'emby-server' do
 
   pkg 'Emby.Server.Mac.pkg'
 
-  uninstall :pkgutil => 'com.MediaBrowser.MediaBrowser.Server.Mac'
+  uninstall pkgutil: 'com.MediaBrowser.MediaBrowser.Server.Mac'
 end

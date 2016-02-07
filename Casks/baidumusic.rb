@@ -3,8 +3,8 @@ cask 'baidumusic' do
   sha256 :no_check
 
   url 'http://music.baidu.com/player/mac/baidumusic_mac.dmg'
-  name '百度音乐'
   name 'Baidu Music'
+  name '百度音乐'
   homepage 'http://music.baidu.com/'
   license :gratis
 

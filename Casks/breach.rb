@@ -4,7 +4,7 @@ cask 'breach' do
 
   url "https://raw.githubusercontent.com/breach/releases/master/v#{version}/breach-v#{version}-darwin-ia32.tar.gz"
   name 'Breach'
-  homepage 'http://breach.github.io/breach_core/'
+  homepage 'https://breach.github.io/breach_core/'
   license :mit
 
   app "breach-v#{version}-darwin-ia32/Breach.app"

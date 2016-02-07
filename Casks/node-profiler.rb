@@ -9,5 +9,5 @@ cask 'node-profiler' do
 
   pkg "node-profiler-v#{version}.pkg"
 
-  uninstall :pkgutil => 'com.aliyun.nodeprofiler.pkg'
+  uninstall pkgutil: 'com.aliyun.nodeprofiler.pkg'
 end

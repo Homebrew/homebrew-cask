@@ -1,8 +1,8 @@
 cask 'viewit' do
-  version '2.52'
-  sha256 '66813bb951b2bc015c094069f602600d4e8475ba08d9b2a44d758c483cebfd81'
+  version '2.54'
+  sha256 'ef4d73ab25352aa34de1cac8dc300819e2639c97d035babafbc020e63741eaeb'
 
-  url "http://www.hexcat.com/downloads/ViewIt-#{version}.dmg"
+  url "http://www.hexcat.com/downloads/ViewIt-#{version}.zip"
   name 'ViewIt'
   homepage 'http://www.hexcat.com/viewit/'
   license :commercial

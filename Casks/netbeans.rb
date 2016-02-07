@@ -8,6 +8,7 @@ cask 'netbeans' do
   license :oss
 
   pkg "NetBeans #{version}.pkg"
+
   # Theoretically this uninstall could conflict with a separate GlassFish
   # installation.
   #
@@ -28,6 +29,6 @@ cask 'netbeans' do
   # the OS X installer, so it's insufficient to just delete the paths exposed
   # by pkgutil, hence the additional ":delete" option below.
 
-  uninstall :pkgutil => 'org.netbeans.ide.*|glassfish-.*',
-            :delete => '/Applications/NetBeans'
+  uninstall pkgutil: 'org.netbeans.ide.*|glassfish-.*',
+            delete:  '/Applications/NetBeans'
 end

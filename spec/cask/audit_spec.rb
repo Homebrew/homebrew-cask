@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Hbc::Audit do
   include AuditMatchers
 
-  let(:cask) { Hbc::Cask.new }
+  let(:cask) { instance_double(Hbc::Cask) }
   let(:download) { false }
   let(:audit) { Hbc::Audit.new(cask, download) }
 
@@ -80,17 +80,17 @@ describe Hbc::Audit do
 
     describe "appcast checks" do
       context "when appcast has no sha256" do
-        let(:cask_token) { 'appcast-missing-sha256' }
-        it { should fail_with('a sha256 is required for appcast') }
+        let(:cask_token) { 'appcast-missing-checkpoint' }
+        it { should fail_with('a checkpoint sha256 is required for appcast') }
       end
 
-      context "when appcast sha256 is not a string of 64 hexadecimal characters" do
-        let(:cask_token) { 'appcast-invalid-sha256' }
+      context "when appcast checkpoint is not a string of 64 hexadecimal characters" do
+        let(:cask_token) { 'appcast-invalid-checkpoint' }
         it { should fail_with('sha256 string must be of 64 hexadecimal characters') }
       end
 
-      context "when appcast sha256 is sha256 for empty string" do
-        let(:cask_token) { 'appcast-sha256-for-empty-string' }
+      context "when appcast checkpoint is sha256 for empty string" do
+        let(:cask_token) { 'appcast-checkpoint-sha256-for-empty-string' }
         it { should fail_with(/cannot use the sha256 for an empty string/) }
       end
     end
@@ -125,7 +125,8 @@ describe Hbc::Audit do
     end
 
     describe "audit of downloads" do
-      let(:cask) { Hbc::Cask.new }
+      let(:cask_token) { 'with-binary' }
+      let(:cask) { Hbc.load(cask_token) }
       let(:download) { instance_double(Hbc::Download) }
       let(:verify) { class_double(Hbc::Verify).as_stubbed_const }
       let(:error_msg) { "Download Failed" }

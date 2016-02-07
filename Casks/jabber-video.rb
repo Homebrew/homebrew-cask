@@ -16,11 +16,11 @@ cask 'jabber-video' do
     system '/bin/rm', '--', "#{staged_path}/Jabber Video.app/Contents/Resources/ForcedConfig.plist"
   end
 
-  zap :delete => [
-                  '/Library/Preferences/com.cisco.JabberVideo.plist',
-                  '~/Library/Preferences/com.cisco.JabberVideo.plist',
-                  '~/Library/Application Support/Jabber Video',
-                  '~/Library/Logs/Jabber Video',
-                  ],
-      :script => 'Jabber Video.app/Contents/SharedSupport/remove_user_data.sh'
+  zap delete: [
+                '/Library/Preferences/com.cisco.JabberVideo.plist',
+                '~/Library/Preferences/com.cisco.JabberVideo.plist',
+                '~/Library/Application Support/Jabber Video',
+                '~/Library/Logs/Jabber Video',
+              ],
+      script: 'Jabber Video.app/Contents/SharedSupport/remove_user_data.sh'
 end

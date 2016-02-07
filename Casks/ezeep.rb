@@ -5,7 +5,7 @@ cask 'ezeep' do
   url 'https://packages.ezeep.com/osx/ezeep-latest.dmg'
   name 'ezeep'
   homepage 'https://www.ezeep.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'ezeep.app'
 end

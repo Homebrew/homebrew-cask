@@ -5,7 +5,7 @@ cask 'hedgewars' do
   # gna.org is the official download host per the vendor homepage
   url "http://download.gna.org/hedgewars/Hedgewars-#{version}.dmg"
   appcast 'http://www.hedgewars.org/download/appcast.xml',
-          :sha256 => '7df122cbe90fc78850944eefe1c95d79e3896d30ec21e10eca9621f29a8357eb'
+          checkpoint: 'b568efa383a1243786b557c0d85dc0b3612afebcd310c77d91b5ec3c288a3264'
   name 'Hedgewars'
   homepage 'http://hedgewars.org'
   license :gpl

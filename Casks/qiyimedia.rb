@@ -9,7 +9,7 @@ cask 'qiyimedia' do
 
   app '爱奇艺.app'
 
-  zap :delete => [
-                  '~/Library/Containers/com.iqiyi.yingyin',
-                 ]
+  zap delete: [
+                '~/Library/Containers/com.iqiyi.yingyin',
+              ]
 end

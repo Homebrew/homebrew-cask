@@ -4,7 +4,7 @@ cask 'airserver' do
 
   url "http://dl.airserver.com/mac/AirServer-#{version}.dmg"
   appcast 'https://www.airserver.com/downloads/mac/appcast.xml',
-          :sha256 => '9a8cf6d84b044351c28a4c5e3e1f38eef70a81e6e74ff5aff38298ba55c45631'
+          checkpoint: '589941c7321e53292e19f449569944dd44a83a280e70d8243865145ce380876d'
   name 'AirServer'
   homepage 'https://www.airserver.com'
   license :commercial

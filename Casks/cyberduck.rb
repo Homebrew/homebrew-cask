@@ -4,15 +4,15 @@ cask 'cyberduck' do
 
   url "https://update.cyberduck.io/Cyberduck-#{version}.zip"
   appcast 'https://version.cyberduck.io/changelog.rss',
-          :sha256 => '50f62db7f41c6b0fa8b48d82acb18e8d473291c4ee36be3e608c95961c284894'
+          checkpoint: '30331340ad8d1dd1d9ea92f663dee6a2721bf916c0f83c4999a4b2c4e985f3fa'
   name 'Cyberduck'
   homepage 'https://cyberduck.io/'
   license :gpl
 
   app 'Cyberduck.app'
 
-  zap :delete => [
-                  '~/Library/Application Support/Cyberduck',
-                  '~/Library/Preferences/ch.sudo.cyberduck.plist',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Cyberduck',
+                '~/Library/Preferences/ch.sudo.cyberduck.plist',
+              ]
 end

@@ -5,7 +5,7 @@ cask 'simpless' do
   url "http://wearekiss.com/files/SimpLESS-#{version}-mac.zip"
   name 'SimpLESS'
   homepage 'http://wearekiss.com/simpless'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'SimpLESS.app'
 end

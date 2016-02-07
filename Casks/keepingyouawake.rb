@@ -4,7 +4,7 @@ cask 'keepingyouawake' do
 
   url "https://github.com/newmarcel/KeepingYouAwake/releases/download/#{version}/KeepingYouAwake-#{version}.zip"
   appcast 'https://github.com/newmarcel/KeepingYouAwake/releases.atom',
-          :sha256 => 'c1a4bfb912ac9901b347144703da997c934be8f23bb669666c92213dc070fb3e'
+          checkpoint: 'c1a4bfb912ac9901b347144703da997c934be8f23bb669666c92213dc070fb3e'
   name 'KeepingYouAwake'
   homepage 'https://github.com/newmarcel/KeepingYouAwake'
   license :mit

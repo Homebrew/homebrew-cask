@@ -9,6 +9,6 @@ cask 'ip-inside-agent-for-hana-bank' do
 
   pkg 'IPinsideAgent.pkg'
 
-  uninstall :pkgutil => 'I3GManager.Plugin.ipinsideAgent.*',
-            :rmdir => '/Applications/IPinside'
+  uninstall pkgutil: 'I3GManager.Plugin.ipinsideAgent.*',
+            rmdir:   '/Applications/IPinside'
 end

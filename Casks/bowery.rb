@@ -9,5 +9,5 @@ cask 'bowery' do
 
   pkg 'bowery.pkg'
 
-  uninstall :pkgutil => 'com.bowery.desktop'
+  uninstall pkgutil: 'com.bowery.desktop'
 end

@@ -9,8 +9,12 @@ cask 'rubymine' do
 
   app 'RubyMine.app'
 
-  zap :delete => [
-                  "~/Library/Application Support/RubyMine#{version.delete('.')}",
-                  "~/Library/Preferences/RubyMine#{version.delete('.')}",
-                 ]
+  zap delete: [
+                "~/Library/Application Support/RubyMine#{version.major_minor.no_dots}",
+                "~/Library/Preferences/RubyMine#{version.major_minor.no_dots}",
+                "~/.RubyMine#{version.major_minor.no_dots}",
+                '~/Library/Preferences/com.jetbrains.RubyMine.plist',
+                "~/Library/Caches/RubyMine#{version.major_minor.no_dots}",
+                "~/Library/Logs/RubyMine#{version.major_minor.no_dots}",
+              ]
 end

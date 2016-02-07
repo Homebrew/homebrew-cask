@@ -10,12 +10,12 @@ cask 'duelystlauncher' do
 
   app 'DuelystLauncher.app'
 
-  uninstall :delete => '~/.counterplay'
+  uninstall delete: '~/.counterplay'
 
-  zap :delete => [
-                  '~/Library/Application Support/Duelyst',
-                  '~/Library/Application Support/DuelystLauncher',
-                  '~/Library/Preferences/com.electron.duelyst.plist',
-                  '~/Library/Preferences/com.electron.duelystlauncher.plist',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Duelyst',
+                '~/Library/Application Support/DuelystLauncher',
+                '~/Library/Preferences/com.electron.duelyst.plist',
+                '~/Library/Preferences/com.electron.duelystlauncher.plist',
+              ]
 end

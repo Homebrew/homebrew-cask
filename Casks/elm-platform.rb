@@ -9,6 +9,6 @@ cask 'elm-platform' do
 
   pkg "Elm-Platform-#{version}.pkg"
 
-  uninstall :pkgutil => 'org.elm-lang.*',
-            :delete => '/usr/local/share/elm'
+  uninstall pkgutil: 'org.elm-lang.*',
+            delete:  '/usr/local/share/elm'
 end

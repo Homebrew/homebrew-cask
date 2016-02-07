@@ -4,7 +4,7 @@ cask 'debookee' do
 
   url 'https://www.iwaxx.com/debookee/debookee.zip'
   appcast 'https://www.iwaxx.com/debookee/appcast.php',
-          :sha256 => '42d6b8de182952c1b32fbc12614a3690d125688c97f47618b26cc7aa192b761b'
+          checkpoint: 'ea3aa67c11fb8c9b419c2adae34c3cedcee88f41e035b48eb6984dff07effaed'
   name 'Debookee'
   homepage 'https://www.iwaxx.com/debookee/'
   license :commercial

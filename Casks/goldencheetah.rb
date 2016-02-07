@@ -1,18 +1,11 @@
 cask 'goldencheetah' do
-  version '3.2.0'
+  version '3.3.0'
+  sha256 'a32d917ead989fe491b1083f45efe758dcddaa912a7630904090c8c562f241e3'
 
-  if Hardware::CPU.is_32_bit?
-    sha256 'db408f128ed4e7f20f122d2f6e92cad2accc9b145825e5658b37662db1f64cbe'
-    # github.com is the official download host per the vendor homepage
-    url "https://github.com/GoldenCheetah/GoldenCheetah/releases/download/V#{version.to_f}/GoldenCheetah_#{version}_QT4_32bit.dmg"
-  else
-    sha256 '77a4dc1e73af42390b8eee94646a81a8990e11302fe1b70f50e48ad26c678f49'
-    # github.com is the official download host per the vendor homepage
-    url "https://github.com/GoldenCheetah/GoldenCheetah/releases/download/V#{version.to_f}/GoldenCheetah_#{version}_QT5_64bit.dmg"
-  end
-
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/GoldenCheetah/GoldenCheetah/releases/download/V#{version.to_f}/GoldenCheetah_#{version}_QT5_64bit.dmg"
   appcast 'https://github.com/GoldenCheetah/GoldenCheetah/releases.atom',
-          :sha256 => 'e62261f0cf3a43f5ae3c8c7211ef22016d2d271025b7bbc31f8d9b3da0867f5d'
+          checkpoint: '5207cf9305b817784235c4b12a81a77d6e22a23d096cb878fc409771b259339a'
   name 'GoldenCheetah'
   homepage 'http://www.goldencheetah.org/'
   license :gpl

@@ -11,5 +11,5 @@ cask 'nodeclipse' do
   # Renamed for clarity: app name is inconsistent with its branding.
   # Also renamed to avoid conflict with other eclipse Casks.
   # Original discussion: https://github.com/caskroom/homebrew-cask/pull/8183
-  app 'Eclipse.app', :target => 'Nodeclipse.app'
+  app 'Eclipse.app', target: 'Nodeclipse.app'
 end

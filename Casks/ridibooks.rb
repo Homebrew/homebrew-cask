@@ -10,8 +10,8 @@ cask 'ridibooks' do
 
   app 'Ridibooks.app'
 
-  zap :delete => [
-                  '~/Library/Application Support/RIDI',
-                  '~/Library/Preferences/com.ridibooks.Ridibooks.plist',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/RIDI',
+                '~/Library/Preferences/com.ridibooks.Ridibooks.plist',
+              ]
 end

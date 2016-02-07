@@ -4,8 +4,8 @@ cask 'thunder' do
 
   # sandai.net is the official download host per the vendor homepage
   url "http://down.sandai.net/mac/thunder_dl#{version}_Beta.dmg"
-  name '迅雷'
   name 'Thunder'
+  name '迅雷'
   homepage 'http://mac.xunlei.com/'
   license :commercial
 

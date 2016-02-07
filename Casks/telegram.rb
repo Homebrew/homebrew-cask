@@ -1,12 +1,10 @@
 cask 'telegram' do
-  version '0.9.15'
-  sha256 '68716e849af816a76c4ca91b27635fbc927d5952055e3813f8429b6f8d1a4512'
+  version '0.9.18'
+  sha256 '5faefc8544f5f6aa0b680fc6276183f8c12f9247ad1bfaf78e2e31e812513f3e'
 
   # tdesktop.com is the official download host per the vendor homepage
   url "https://updates.tdesktop.com/tmac/tsetup.#{version}.dmg"
-  name 'Telegram'
   name 'Telegram Desktop'
-  name 'tdesktop'
   homepage 'https://desktop.telegram.org/'
   license :gpl
 

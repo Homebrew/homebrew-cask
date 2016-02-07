@@ -126,6 +126,12 @@ class Hbc::CaskInvalidError < Hbc::CaskError
   end
 end
 
+class Hbc::CaskTokenDoesNotMatchError < Hbc::CaskInvalidError
+  def initialize(token, header_token)
+    super(token, "Bad header line: '#{header_token}' does not match file name")
+  end
+end
+
 class Hbc::CaskSha256MissingError < ArgumentError
 end
 

@@ -7,6 +7,7 @@ cask 'anonym' do
   homepage 'http://www.hanynet.com/anonym/'
   license :oss
 
-  container :nested => "Anonym #{version}.dmg"
+  container nested: "Anonym #{version}.dmg"
+
   app 'Anonym.app'
 end

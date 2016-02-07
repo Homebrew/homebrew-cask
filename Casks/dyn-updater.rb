@@ -10,7 +10,6 @@ cask 'dyn-updater' do
   end
 
   name 'Dyn Updater'
-  name 'Dyn Updater App'
   homepage 'https://dyn.com/apps/updater/'
   license :gratis
 

@@ -1,11 +1,10 @@
 cask 'framer-studio' do
-  version '1.11.188'
-  sha256 'b1fff971456a4af5ad88661344dbad079d5ba08e25dfc2c6f252824d1916206b'
+  version '50'
+  sha256 '1649c2768d66c0e0c45345a05f43e095852bc26a2c54bc0df7ef6b08d023bdc1'
 
-  url "http://studio.update.framerjs.com/static/downloads/Framer%20Studio-#{version}.zip"
+  # devmate.com is the official download host per the vendor homepage
+  url 'https://dl.devmate.com/com.motif.framer/FramerStudio.zip'
   name 'Framer Studio'
-  appcast 'http://studio.update.framerjs.com/appcast.xml',
-          :sha256 => '2d6e82bb3d57ecf9d7dcb339efea422f6feaed924b73a15b550b69f07b8b9172'
   homepage 'http://framerjs.com/'
   license :commercial
 

@@ -9,5 +9,5 @@ cask 'digikam' do
 
   pkg "digikam-#{version}-Yosemite.pkg"
 
-  uninstall :pkgutil => 'org.freedesktop.digikam'
+  uninstall pkgutil: 'org.freedesktop.digikam'
 end

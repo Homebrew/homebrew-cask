@@ -9,5 +9,5 @@ cask 'bloom' do
 
   pkg 'Bloom.pkg'
 
-  uninstall :pkgutil => 'com.sadcatsoft.bloom.Bloom.pkg'
+  uninstall pkgutil: 'com.sadcatsoft.bloom.Bloom.pkg'
 end

@@ -5,9 +5,9 @@ test_cask 'invalid-gpg-multiple-stanzas' do
   url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/invalid-gpg-multiple-stanzas'
   gpg 'http://example.com/gpg-signature.asc',
-      :key_id => '01234567'
+      key_id: '01234567'
   gpg 'http://example.com/gpg-signature.asc',
-      :key_id => '01234567'
+      key_id: '01234567'
 
   app 'Caffeine.app'
 end

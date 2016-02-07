@@ -93,7 +93,7 @@ class Hbc::SystemCommand::Result
     external = File.basename(command.first)
     lines = garbage.strip.split("\n")
     opoo "Non-XML stdout from #{external}:"
-    STDERR.puts lines.map {|l| "    #{l}"}
+    $stderr.puts lines.map {|l| "    #{l}"}
   end
 
   def self._parse_plist(command, output)

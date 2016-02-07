@@ -20,11 +20,11 @@ cask 'vmware-fusion' do
     set_ownership "#{staged_path}/VMware Fusion.app"
   end
 
-  zap :delete => [
-                  # note: '~/Library/Application Support/VMware Fusion' is not safe
-                  # to delete. In older versions, VM images were located there.
-                  '~/Library/Caches/com.vmware.fusion',
-                  '~/Library/Logs/VMware',
-                  '~/Library/Logs/VMware Fusion',
-                 ]
+  zap delete: [
+                # note: '~/Library/Application Support/VMware Fusion' is not safe
+                # to delete. In older versions, VM images were located there.
+                '~/Library/Caches/com.vmware.fusion',
+                '~/Library/Logs/VMware',
+                '~/Library/Logs/VMware Fusion',
+              ]
 end

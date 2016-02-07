@@ -7,7 +7,7 @@ cask 'ninjablocks' do
   url "https://dl.dropboxusercontent.com/u/428557/NinjaBlocks-#{version}.dmg"
   name 'NinjaBlocks'
   homepage 'https://discuss.ninjablocks.com/t/ninja-osx-client/1449'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'NinjaBlocks.app'
 end

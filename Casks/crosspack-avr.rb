@@ -5,9 +5,10 @@ cask 'crosspack-avr' do
   url "https://www.obdev.at/downloads/crosspack/CrossPack-AVR-#{version.delete('-')}.dmg"
   name 'CrossPack'
   homepage 'https://www.obdev.at/products/crosspack/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'CrossPack-AVR.pkg'
+
   uninstall_postflight do
     IO.popen('/usr/bin/yes | /usr/bin/sudo -E -- /usr/local/CrossPack-AVR/uninstall && /usr/bin/sudo -- /usr/sbin/pkgutil --forget at.obdev.CrossPack-AVR', 'r+') do |pipe|
       pipe.close_write

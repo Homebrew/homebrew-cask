@@ -4,7 +4,7 @@ cask 'corsixth' do
 
   url "https://github.com/CorsixTH/CorsixTH/releases/download/v#{version}/CorsixTH-#{version}-OSX.dmg"
   appcast 'https://github.com/CorsixTH/CorsixTH/releases.atom',
-          :sha256 => '414fc9fbb5bdd4e2de63d29328229ded46e3fc904b11c54bd82df97b061e83c1'
+          checkpoint: '414fc9fbb5bdd4e2de63d29328229ded46e3fc904b11c54bd82df97b061e83c1'
   name 'CorsixTH'
   homepage 'https://github.com/CorsixTH/CorsixTH'
   license :mit

@@ -6,7 +6,7 @@ cask 'everweb' do
   url 'https://www.ragesw.com/downloads/everweb/everweb.zip'
   name 'EverWeb'
   homepage 'http://www.everwebapp.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'EverWeb.app'
 end

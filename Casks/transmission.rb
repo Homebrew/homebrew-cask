@@ -5,7 +5,7 @@ cask 'transmission' do
   # cachefly.net is the official download host per the vendor homepage
   url "https://transmission.cachefly.net/Transmission-#{version}.dmg"
   appcast 'https://update.transmissionbt.com/appcast.xml',
-          :sha256 => 'f7177b7ad0bc07a74b484e0033dbf356e112cd1225c8050657b1e21aeaf7bdd3'
+          checkpoint: '430a5151b1e38fd2d6f544c8877b2cdd4deda6dc4b3cc6a6620550de4a8fdfec'
   name 'Transmission'
   homepage 'http://www.transmissionbt.com/'
   license :gpl
@@ -14,10 +14,10 @@ cask 'transmission' do
 
   app 'Transmission.app'
 
-  zap :delete => [
-                  '~/Library/Application Support/Transmission',
-                  '~/Library/Preferences/org.m0k.transmission.plist',
-                  '~/Library/Preferences/org.m0k.transmission.LSSharedFileList.plist',
-                  '~/Library/Caches/org.m0k.transmission',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Transmission',
+                '~/Library/Preferences/org.m0k.transmission.plist',
+                '~/Library/Preferences/org.m0k.transmission.LSSharedFileList.plist',
+                '~/Library/Caches/org.m0k.transmission',
+              ]
 end

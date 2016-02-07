@@ -1,10 +1,10 @@
 cask 'neofinder' do
-  version :latest
-  sha256 :no_check
+  version '6.8'
+  sha256 'b410f7a14fc248a6de5f27bcdc5116a35e50c0b5f47204e4e2efb3284b54326b'
 
   url 'http://www.cdfinder.de/neofinder.zip'
   appcast 'http://www.wfs-apps.de/updates/neofinder-appcast-64.xml',
-          :sha256 => '3434aae6fbc46a5d36590690c03a938e4cdda3af262bab47f4cfb3e60db42832'
+          checkpoint: '61a7348103f1c225a1dca738efd97d0a10a614854f57fbf667c55480dcbe10b7'
   name 'NeoFinder'
   homepage 'http://www.cdfinder.de'
   license :commercial

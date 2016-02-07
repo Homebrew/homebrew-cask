@@ -4,14 +4,14 @@ cask 'onlabs' do
 
   url "https://github.com/lalyos/onlabs/releases/download/v#{version}/onlabs_darwin_amd64"
   appcast 'https://github.com/lalyos/onlabs/releases.atom',
-          :sha256 => 'c04cfded371be6d1f1df7ac96d6ff95dc3e75ab4203d67c8f5ae480a081effa6'
+          checkpoint: 'c04cfded371be6d1f1df7ac96d6ff95dc3e75ab4203d67c8f5ae480a081effa6'
   name 'onlabs'
   homepage 'https://github.com/lalyos/onlabs'
   license :mit
 
-  container :type => :naked
+  container type: :naked
 
-  binary 'onlabs_darwin_amd64', :target => 'onlabs'
+  binary 'onlabs_darwin_amd64', target: 'onlabs'
 
   postflight do
     set_permissions "#{staged_path}/onlabs_darwin_amd64", '755'

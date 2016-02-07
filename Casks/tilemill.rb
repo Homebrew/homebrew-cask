@@ -5,7 +5,7 @@ cask 'tilemill' do
   # amazonaws.com is the official download host per the vendor homepage
   url "https://tilemill.s3.amazonaws.com/latest/TileMill-#{version}.zip"
   appcast 'https://www.mapbox.com/tilemill/platforms/osx/appcast2.xml/',
-          :sha256 => '839122af3c2d526d97557078a0f84dc6c3c146bd35bcba915949c671be79ac02'
+          checkpoint: '2a8c33291658fba8f69f408cf102ca063fa709e301f399b2f2b1a4a93b7516b5'
   name 'TileMill'
   homepage 'https://www.mapbox.com/tilemill/'
   license :bsd

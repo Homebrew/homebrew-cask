@@ -4,7 +4,7 @@ cask 'honer' do
 
   url "https://github.com/puffnfresh/Honer.app/releases/download/v#{version}/Honer-6e3863f2.zip"
   appcast 'https://github.com/puffnfresh/Honer.app/releases.atom',
-          :sha256 => 'aaa12bc1107d3de9d0152ddfeb3f1a69427f394ca3254db9e04535d5f52f86be'
+          checkpoint: 'aaa12bc1107d3de9d0152ddfeb3f1a69427f394ca3254db9e04535d5f52f86be'
   name 'Honer'
   homepage 'https://github.com/puffnfresh/Honer.app'
   license :mit

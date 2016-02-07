@@ -1,16 +1,16 @@
 require 'bundler'
 require 'bundler/setup'
-require 'coveralls'
+require 'pathname'
 
-Coveralls.wear_merged!
+if ENV['COVERAGE']
+  require 'coveralls'
+  Coveralls.wear_merged!
+end
 
 # just in case
 if RUBY_VERSION.to_i < 2
   raise 'brew-cask: Ruby 2.0 or greater is required.'
 end
-
-# force some environment variables
-ENV['HOMEBREW_NO_EMOJI']='1'
 
 # add homebrew-cask lib to load path
 brew_cask_path = Pathname.new(File.expand_path(__FILE__+'/../../'))
@@ -18,9 +18,12 @@ casks_path = brew_cask_path.join('Casks')
 lib_path = brew_cask_path.join('lib')
 $:.push(lib_path)
 
-# require homebrew testing env
 # todo: removeme, this is transitional
 require 'vendor/homebrew-fork/testing_env'
+
+# force some environment variables
+ENV['HOMEBREW_NO_EMOJI'] = '1'
+ENV['HOMEBREW_CASK_OPTS'] = nil
 
 # todo temporary, copied from old Homebrew, this method is now moved inside a class
 def shutup
@@ -38,6 +41,10 @@ def shutup
       $stdout.reopen tmpout
     end
   end
+end
+
+def sudo(*args)
+  %w[/usr/bin/sudo -E --] + Array(args).flatten
 end
 
 # making homebrew's cache dir allows us to actually download Casks in tests
@@ -80,7 +87,7 @@ class TestHelper
   end
 
   def self.test_cask
-    Hbc.load('basic-cask')
+    @test_cask ||= Hbc.load('basic-cask')
   end
 
   def self.fake_fetcher

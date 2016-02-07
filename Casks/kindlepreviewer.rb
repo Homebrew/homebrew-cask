@@ -6,9 +6,9 @@ cask 'kindlepreviewer' do
   url 'https://kindlepreviewer.s3.amazonaws.com/KindlePreviewer.zip'
   name 'Kindle Previewer'
   homepage 'https://www.amazon.com/gp/feature.html/?docId=1000765261'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'KindlePreviewer.pkg'
 
-  uninstall :pkgutil => 'Amazon.Kindle.Previewer.pkg'
+  uninstall pkgutil: 'Amazon.Kindle.Previewer.pkg'
 end

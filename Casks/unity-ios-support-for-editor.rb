@@ -7,9 +7,9 @@ cask 'unity-ios-support-for-editor' do
   homepage 'https://unity3d.com/unity/'
   license :commercial
 
-  depends_on :cask => 'unity'
+  depends_on cask: 'unity'
 
   pkg "UnitySetup-iOS-Support-for-Editor-#{version}.pkg"
 
-  uninstall :pkgutil => 'com.unity3d.iOSSupport'
+  uninstall pkgutil: 'com.unity3d.iOSSupport'
 end

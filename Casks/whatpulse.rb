@@ -9,6 +9,6 @@ cask 'whatpulse' do
 
   pkg "WhatPulse #{version}.mpkg"
 
-  uninstall :pkgutil => 'com.lostdomain.whatpulse',
-            :quit   => 'com.whatpulse.mac'
+  uninstall pkgutil: 'com.lostdomain.whatpulse',
+            quit:    'com.whatpulse.mac'
 end

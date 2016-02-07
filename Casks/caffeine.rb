@@ -9,5 +9,5 @@ cask 'caffeine' do
 
   app 'Caffeine.app'
 
-  zap :delete => '~/Library/Preferences/com.lightheadsw.Caffeine.plist'
+  zap delete: '~/Library/Preferences/com.lightheadsw.Caffeine.plist'
 end

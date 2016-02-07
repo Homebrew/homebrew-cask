@@ -9,5 +9,5 @@ cask 'konica-minolta-bizhub-c220-c280-c360-driver' do
 
   pkg 'bizhub_C360_109.pkg'
 
-  uninstall :pkgutil => 'jp.konicaminolta.print.package.C360'
+  uninstall pkgutil: 'jp.konicaminolta.print.package.C360'
 end

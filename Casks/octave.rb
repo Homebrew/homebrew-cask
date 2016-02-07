@@ -10,12 +10,13 @@ cask 'octave' do
 
   pkg "Octave-#{version}.mpkg"
 
-  uninstall :quit    => 'org.octave.Octave',
-            :pkgutil => [
-                         'org.macports.octave-next',
-                         'org.octave.cli-app',
-                         'org.octave.gui-app'
-                        ],
-            :delete  => "/usr/local/octave/#{version.sub(/-.*/,'')}"
-  zap       :rmdir   => '/usr/local/octave'
+  uninstall quit:    'org.octave.Octave',
+            pkgutil: [
+                       'org.macports.octave-next',
+                       'org.octave.cli-app',
+                       'org.octave.gui-app',
+                     ],
+            delete:  "/usr/local/octave/#{version.sub(%r{-.*}, '')}"
+
+  zap       rmdir: '/usr/local/octave'
 end

@@ -4,7 +4,7 @@ cask 'aerial' do
 
   url "https://github.com/JohnCoates/Aerial/releases/download/v#{version}/Aerial.zip"
   appcast 'https://github.com/JohnCoates/Aerial/releases.atom',
-          :sha256 => '05c9cbb19ad4349b46d4aad95ec7e6391dc43dbebc378e2671c050f442058150'
+          checkpoint: '05c9cbb19ad4349b46d4aad95ec7e6391dc43dbebc378e2671c050f442058150'
   name 'Aerial Screensaver'
   homepage 'https://github.com/JohnCoates/Aerial'
   license :mit

@@ -8,7 +8,7 @@ cask 'timeedition' do
   homepage 'https://www.timeedition.com/old/en/'
   license :gpl
 
-  container :nested => "timeEdition#{version}-macosx.dmg"
+  container nested: "timeEdition#{version}-macosx.dmg"
 
   app "timeEdition #{version}/timeEdition.app"
 

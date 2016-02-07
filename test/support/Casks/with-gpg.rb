@@ -5,7 +5,7 @@ test_cask 'with-gpg' do
   url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/with-gpg'
   gpg 'http://example.com/gpg-signature.asc',
-      :key_id => '01234567'
+      key_id: '01234567'
 
   app 'Caffeine.app'
 end

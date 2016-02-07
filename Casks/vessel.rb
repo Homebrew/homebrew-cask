@@ -4,7 +4,7 @@ cask 'vessel' do
 
   url "https://github.com/awvessel/vessel/releases/download/#{version}/Vessel-#{version}.zip"
   appcast 'https://github.com/awvessel/vessel/releases.atom',
-          :sha256 => 'eed47ee87455b8096b127fc21903aface6f597750ed856d441569450adb4f38e'
+          checkpoint: 'eed47ee87455b8096b127fc21903aface6f597750ed856d441569450adb4f38e'
   name 'Vessel'
   homepage 'https://awvessel.github.io'
   license :bsd

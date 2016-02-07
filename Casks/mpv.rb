@@ -5,7 +5,7 @@ cask 'mpv' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/mpv-player/mpv/releases/download/v#{version}/mpv_#{version}_mac.tar.bz2"
   appcast 'https://github.com/mpv-player/mpv/releases.atom',
-          :sha256 => '36931e63138ed1389a1f3f9d64fe074a8eb70e273eff849f025e2bddf648e3f7'
+          checkpoint: 'e77b889c1619cabd01a6fc7b9046c6c238a0e73e5089f474c92bfe880f97fd16'
   name 'mpv'
   homepage 'https://mpv.io/'
   license :gpl
@@ -19,20 +19,20 @@ cask 'mpv' do
     system '/bin/ln', '-nsf', '--', staged_path.join('mpv.app/Contents/Resources/fonts.conf'), File.expand_path('~/.config/mpv/fonts.conf')
   end
 
-  zap :delete => [
-                  '~/.mpv/channels.conf',
-                  '~/.mpv/config',
-                  '~/.mpv/input.conf',
-                  '~/.mpv/fonts.conf',
-                  '~/.config/mpv/channels.conf',
-                  '~/.config/mpv/mpv.conf',
-                  '~/.config/mpv/input.conf',
-                  '~/.config/mpv/fonts.conf',
-                 ],
-      :rmdir  => [
-                  '~/.mpv',
-                  '~/.config/mpv'
-                 ]
+  zap delete: [
+                '~/.mpv/channels.conf',
+                '~/.mpv/config',
+                '~/.mpv/input.conf',
+                '~/.mpv/fonts.conf',
+                '~/.config/mpv/channels.conf',
+                '~/.config/mpv/mpv.conf',
+                '~/.config/mpv/input.conf',
+                '~/.config/mpv/fonts.conf',
+              ],
+      rmdir:  [
+                '~/.mpv',
+                '~/.config/mpv',
+              ]
 
   caveats do
     files_in_usr_local

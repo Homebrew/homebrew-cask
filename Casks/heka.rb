@@ -1,6 +1,6 @@
 cask 'heka' do
-  version '0.9.2'
-  sha256 '5fef4af06b97bf926fbec7ecb5c7983eed80601d56b2bedac02dad6b8677a094'
+  version '0.10.0'
+  sha256 '9416e6ce0e3fe56926df86607d8e0c286cd0e9773d9038c80887558ae6f41c55'
 
   url "https://github.com/mozilla-services/heka/releases/download/v#{version}/heka-#{version.gsub('.', '_')}-darwin-amd64.dmg"
   name 'Mozilla heka'
@@ -9,5 +9,5 @@ cask 'heka' do
 
   pkg "heka-#{version.gsub('.', '_')}-darwin-amd64.pkg"
 
-  uninstall :pkgutil => 'com.Mozilla.heka'
+  uninstall pkgutil: 'com.Mozilla.heka'
 end

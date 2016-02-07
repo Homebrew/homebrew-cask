@@ -7,19 +7,19 @@ cask 'sencha' do
   homepage 'https://www.sencha.com/products/sencha-cmd/'
   license :freemium
 
-  installer :script => "SenchaCmd-#{version}-osx.app/Contents/MacOS/JavaApplicationStub",
-            :args => ['-Djava.awt.headless=true', '-q', '-dir', "/opt/Sencha/Cmd/#{version}"],
-            :sudo => true
-
-  uninstall :script => {
-                         :executable => "/opt/Sencha/Cmd/#{version}/.install4j/Sencha Cmd Uninstaller.app/Contents/MacOS/JavaApplicationStub",
-                         :args => ['-Djava.awt.headless=true', '-q'],
-                         :sudo => true
-                       }
+  installer script: "SenchaCmd-#{version}-osx.app/Contents/MacOS/JavaApplicationStub",
+            args:   ['-Djava.awt.headless=true', '-q', '-dir', "/opt/Sencha/Cmd/#{version}"],
+            sudo:   true
 
   postflight do
     set_ownership '/opt/Sencha'
   end
+
+  uninstall script: {
+                      executable: "/opt/Sencha/Cmd/#{version}/.install4j/Sencha Cmd Uninstaller.app/Contents/MacOS/JavaApplicationStub",
+                      args:       ['-Djava.awt.headless=true', '-q'],
+                      sudo:       true,
+                    }
 
   caveats do
     <<-EOS.undent

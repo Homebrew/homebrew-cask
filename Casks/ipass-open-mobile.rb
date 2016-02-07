@@ -9,6 +9,6 @@ cask 'ipass-open-mobile' do
 
   pkg 'iPassOpenMobile.pkg'
 
-  uninstall :quit    => 'com.iPass.iPass-Open-Mobile',
-            :pkgutil => 'com.ipass.ipassOpenMobile.pkg'
+  uninstall quit:    'com.iPass.iPass-Open-Mobile',
+            pkgutil: 'com.ipass.ipassOpenMobile.pkg'
 end

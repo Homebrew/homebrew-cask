@@ -2,10 +2,10 @@ cask 'flowdock' do
   version '1.2.7'
   sha256 '80cce5d7062ca5e24189d268bb6b0c08ce732c5039156bbe393c0bdecec5eadd'
 
-  # amazonaws.com is the official download host per the appcast feed
+  # amazonaws.com/flowdock-resources was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/flowdock-resources/mac/#{version}/Flowdock.zip"
   appcast 'https://s3.amazonaws.com/flowdock-resources/mac/appcast.xml',
-          :sha256 => '04a4168eee2add871c4341aeea910c8b58f9bed3dc2e0ba3d8c3bc020e125299'
+          checkpoint: '05c0917ea74ed402ec6f41dac60a62549f062e7a2f983f410a860d324cdcf976'
   name 'Flowdock'
   homepage 'https://www.flowdock.com/'
   license :gratis

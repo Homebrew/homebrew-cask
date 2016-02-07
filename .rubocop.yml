@@ -1,35 +1,17 @@
-inherit_from: .rubocop_todo.yml
-
-require: rubocop-cask
-
 AllCops:
   Exclude:
     - '**/Gemfile'
     - '**/Rakefile'
     - '**/brew-cask.rb'
+    - '**/invalid-header-format.rb'
+    - '**/spec/*.rb'
+    - '**/spec/support/*.rb'
+    - '**/test/*.rb'
+    - '**/test/support/*.rb'
     - 'developer/**/*'
     - 'lib/**/*'
-    - 'spec/**/*'
-    - 'test/**/*'
-
-Metrics/LineLength:
-  Exclude:
-    - Casks/**/*
-
-Performance/StringReplacement:
-  Exclude:
-    - Casks/**/*
-
-Style/BarePercentLiterals:
-  EnforcedStyle: percent_q
-
-Style/ExtraSpacing:
-  Exclude:
-    - Casks/**/*
-
-Style/FileName:
-  Exclude:
-    - Casks/**/*
-
-Style/HashSyntax:
-  EnforcedStyle: hash_rockets
+    - 'spec/cask/**/*'
+    - 'test/cask/**/*'
+    - 'test/Casks/**/*'
+    - 'test/plist/**/*'
+    - 'test/support/shared_examples/**/*'

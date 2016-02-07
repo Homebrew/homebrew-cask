@@ -8,7 +8,7 @@ cask 'sabnzbd' do
   homepage 'https://sabnzbd.org/'
   license :gpl
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
   if MacOS.release == :snow_leopard
     app 'Snow Leopard/SABnzbd.app'
@@ -18,8 +18,8 @@ cask 'sabnzbd' do
     app 'SABnzbd.app'
   end
 
-  zap :delete => [
-                  '~/Library/Application Support/SABnzbd/sabnzbd.ini',
-                  '~/Library/Application Support/SABnzbd/admin/rss_data.sab',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/SABnzbd/sabnzbd.ini',
+                '~/Library/Application Support/SABnzbd/admin/rss_data.sab',
+              ]
 end

@@ -10,19 +10,17 @@ cask 'cocoaspell' do
 
   pkg 'cocoAspell.pkg'
 
-  uninstall :pkgutil => 'net.leuski.cocoaspell.*',
-            :delete  => [
-                         '/Application Support/cocoAspell/aspell6-en-6.0-0',
-                         '/Library/PreferencePanes/Spelling.prefPane',
-                        ]
-  zap :delete => [
-                 '~/.aspell.conf',
-                 '~/.aspell.en.prepl',
-                 # Debatable. The Pws holds user-created content, though typically
-                 # created through the application, and the user is not likely aware
-                 # of this particular file.
-                 # '~/.aspell.en.pws',
-                ]
+  uninstall pkgutil: 'net.leuski.cocoaspell.*',
+            delete:  [
+                       '/Application Support/cocoAspell/aspell6-en-6.0-0',
+                       '/Library/PreferencePanes/Spelling.prefPane',
+                     ]
+
+  zap delete: [
+                '~/.aspell.conf',
+                '~/.aspell.en.prepl',
+                '~/.aspell.en.pws',
+              ]
 
   caveats <<-EOS.undent
     Non-English dictionaries must be installed separately.  For more information, see

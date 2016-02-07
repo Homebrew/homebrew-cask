@@ -8,5 +8,5 @@ cask 'ps3-media-server' do
   homepage 'http://www.ps3mediaserver.org/'
   license :gpl
 
-  installer :manual => 'PS3 Media Server Setup.app'
+  installer manual: 'PS3 Media Server Setup.app'
 end

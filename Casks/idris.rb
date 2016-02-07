@@ -9,5 +9,5 @@ cask 'idris' do
 
   pkg 'idris-current.pkg'
 
-  uninstall :pkgutil => 'org.idris-lang'
+  uninstall pkgutil: 'org.idris-lang'
 end

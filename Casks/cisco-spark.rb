@@ -7,16 +7,17 @@ cask 'cisco-spark' do
   homepage 'https://www.webex.com/projectsquared/'
   license :gratis
 
-  depends_on :macos => '>= :mavericks'
+  depends_on macos: '>= :mavericks'
 
   app 'Spark.app'
 
-  uninstall :signal => [
-                        ['TERM', 'Cisco-Systems.Spark']
-                       ]
-  zap :delete => [
-                   '~/Library/Preferences/Cisco-Systems.Spark.plist',
-                   '~/Library/Caches/Cisco-Systems.Spark',
-                   '~/Library/Logs/Spark',
-                  ]
+  uninstall signal: [
+                      ['TERM', 'Cisco-Systems.Spark'],
+                    ]
+
+  zap delete: [
+                '~/Library/Preferences/Cisco-Systems.Spark.plist',
+                '~/Library/Caches/Cisco-Systems.Spark',
+                '~/Library/Logs/Spark',
+              ]
 end

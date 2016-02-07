@@ -4,7 +4,7 @@ cask 'soundflower' do
 
   url "https://github.com/mattingalls/Soundflower/releases/download/#{version}/Soundflower-#{version}.dmg"
   appcast 'https://github.com/mattingalls/Soundflower/releases.atom',
-          :sha256 => '5782759ffb2d6994cb222c88476011dee82680de40bef5011adcc36df6cdca49'
+          checkpoint: '5782759ffb2d6994cb222c88476011dee82680de40bef5011adcc36df6cdca49'
   name 'Soundflower'
   homepage 'https://github.com/mattingalls/Soundflower'
   license :oss
@@ -13,16 +13,16 @@ cask 'soundflower' do
 
   postflight do
     system '/usr/bin/sudo', '-E', '--',
-      '/sbin/kextload', '-b', 'com.Cycling74.driver.Soundflower'
+           '/sbin/kextload', '-b', 'com.Cycling74.driver.Soundflower'
   end
 
   # early_script is a workaround for a slowly unloading kext, see private-eye Cask
-  uninstall :early_script => {
-              :executable => '/sbin/kextunload',
-              :args => ['-b', 'com.Cycling74.driver.Soundflower'],
-              :must_succeed => false,
-            },
-            :pkgutil => 'com.cycling74.soundflower.*',
-            :delete => '/Applications/Soundflower',
-            :kext => 'com.Cycling74.driver.Soundflower'
+  uninstall early_script: {
+                            executable:   '/sbin/kextunload',
+                            args:         ['-b', 'com.Cycling74.driver.Soundflower'],
+                            must_succeed: false,
+                          },
+            pkgutil:      'com.cycling74.soundflower.*',
+            delete:       '/Applications/Soundflower',
+            kext:         'com.Cycling74.driver.Soundflower'
 end

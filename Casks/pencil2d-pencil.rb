@@ -4,8 +4,6 @@ cask 'pencil2d-pencil' do
 
   # bitbucket.org is the official download host per the vendor homepage
   url "https://bitbucket.org/chchwy/pencil2d/downloads/Pencil2D-dev-#{version}-mac.zip"
-  name 'Pencil'
-  name 'Pencil2D'
   name 'Pencil2D Animation'
   homepage 'http://www.pencil2d.org/'
   license :gpl

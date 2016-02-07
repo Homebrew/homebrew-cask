@@ -5,7 +5,7 @@ cask 'ionu' do
   url 'https://prod1.ionu.com/release/OSX/IONU.dmg'
   name 'IONU'
   homepage 'https://ionu.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'IONU.app'
 end

@@ -17,10 +17,11 @@ cask 'gambit-c' do
   homepage 'http://gambitscheme.org/'
   license :apache
 
-  uninstall :pkgutil => 'marc.feeley.gambc',
-            :script => {
-                        :executable => "/Library/Gambit-C/v#{version}/bin/uninstall-gambc",
-                        :args => ["v#{version}"]
-                       }
-  zap       :delete => '~/.gambc_history'
+  uninstall pkgutil: 'marc.feeley.gambc',
+            script:  {
+                       executable: "/Library/Gambit-C/v#{version}/bin/uninstall-gambc",
+                       args:       ["v#{version}"],
+                     }
+
+  zap       delete: '~/.gambc_history'
 end

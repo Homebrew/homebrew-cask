@@ -1,11 +1,11 @@
 cask 'spillo' do
-  version '1.6.3'
-  sha256 'a6193dd3b3cd8283fbeb1d5b92255e4c82073b5befc8638ba95397f98b4a2ecf'
+  version '1.7'
+  sha256 '094ddc32856d82163ab7b370cc595b1ddbda75c3c4573fb877313ac038b58c87'
 
   url "http://bananafishsoftware.com/software/spillo/app/spillo-#{version}.zip"
-  name 'Spillo'
   appcast 'http://bananafishsoftware.com/feeds/spillo.xml',
-          :sha256 => '1e7e2f8bbaede766bef1157ee3d33758b2a09a10de2fb00aa1a5157cdc0f9035'
+          checkpoint: '88672b6d012108caab3144e6985bbe0760b4ce25dc4c9b93966ce414708b5c94'
+  name 'Spillo'
   homepage 'http://bananafishsoftware.com/products/spillo/'
   license :commercial
 

@@ -7,10 +7,10 @@ cask 'gobbler' do
   homepage 'https://app.gobbler.com'
   license :gratis
 
-  installer :manual => 'Gobbler.app'
+  installer manual: 'Gobbler.app'
 
-  uninstall :script  => {
-                          :executable => '/Library/Gobbler/Uninstaller/uninstall_gobbler.sh',
-                          :args => ['-f'],
-                        }
+  uninstall script: {
+                      executable: '/Library/Gobbler/Uninstaller/uninstall_gobbler.sh',
+                      args:       ['-f'],
+                    }
 end

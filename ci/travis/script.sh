@@ -12,21 +12,15 @@ enter_build_step
 
 header 'Running script.sh...'
 
-# @@@ todo: setting the --seed here is an ugly temporary hack, to remain only
-#     until test-suite glitches are fixed.
-run bundle exec rake test TESTOPTS='--seed=14830'
-
-run bundle exec rake rubocop
-
-if [[ "$TRAVIS_PULL_REQUEST" != "false" ]]; then
-  TRAVIS_BRANCH_COMMIT="$(git rev-parse --verify -q "${TRAVIS_BRANCH}")"
-  TRAVIS_COMMIT_RANGE="${TRAVIS_BRANCH_COMMIT}..${TRAVIS_COMMIT}"
-else
-  TRAVIS_LAST_COMMIT="$(git rev-parse --verify -q "${TRAVIS_COMMIT}^")"
-  TRAVIS_COMMIT_RANGE="${TRAVIS_LAST_COMMIT}..${TRAVIS_COMMIT}"
+if any_casks_modified; then
+  modified_casks=($(modified_cask_files))
+  run developer/bin/audit_modified_casks "${TRAVIS_COMMIT_RANGE}"
+  run brew cask style "${modified_casks[@]}"
 fi
 
-# audit any modified casks (download if version, sha256, or url changed)
-run developer/bin/audit_modified_casks "${TRAVIS_COMMIT_RANGE}"
+if must_run_tests; then
+  run bundle exec rake test:coverage
+  run bundle exec rake coveralls:push || true # in case of networking errors
+fi
 
 exit_build_step

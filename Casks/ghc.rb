@@ -4,10 +4,10 @@ cask 'ghc' do
 
   url "https://github.com/ghcformacosx/ghc-dot-app/releases/download/v#{version}/ghc-#{version}.zip"
   appcast 'https://github.com/ghcformacosx/ghc-dot-app/releases.atom',
-          :sha256 => '135574a1f7a6be02316f69400e55e467d1b9daec428ec380942efd791f387c23'
+          checkpoint: '135574a1f7a6be02316f69400e55e467d1b9daec428ec380942efd791f387c23'
   name 'GHC'
   homepage 'https://ghcformacosx.github.io/'
   license :oss
 
-  app "ghc-#{version.sub(/-.+/,'')}.app"
+  app "ghc-#{version.sub(%r{-.+}, '')}.app"
 end

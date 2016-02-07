@@ -4,16 +4,16 @@ cask 'unofficialwhatsapp' do
 
   url "https://github.com/Aluxian/WhatsApp-Desktop/releases/download/v#{version}/UnofficialWhatsApp.dmg"
   appcast 'https://github.com/Aluxian/WhatsApp-Desktop/releases.atom',
-          :sha256 => 'cc6a39b5f8d6f92e83bd040fdaea2991aa2f2b2b655461f657b3d9b77cd01731'
+          checkpoint: 'cc6a39b5f8d6f92e83bd040fdaea2991aa2f2b2b655461f657b3d9b77cd01731'
   name 'Unofficial WhatsApp for Desktop'
   homepage 'https://github.com/Aluxian/WhatsApp-Desktop'
   license :mit
 
   app 'UnofficialWhatsApp.app'
 
-  zap :delete => [
-                  '~/Library/Preferences/com.aluxian.whatsappfordesktop.plist',
-                  '~/Library/Application Support/UnofficialWhatsApp/',
-                  '~/Library/Saved Application State/com.aluxian.whatsappfordesktop.savedState/'
-                 ]
+  zap delete: [
+                '~/Library/Preferences/com.aluxian.whatsappfordesktop.plist',
+                '~/Library/Application Support/UnofficialWhatsApp/',
+                '~/Library/Saved Application State/com.aluxian.whatsappfordesktop.savedState/',
+              ]
 end

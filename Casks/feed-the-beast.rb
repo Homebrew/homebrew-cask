@@ -10,8 +10,7 @@ cask 'feed-the-beast' do
 
   app 'Feed The Beast.app'
 
-  caveats <<-EOS.undent
-    #{token} requires Java. You can install the latest version with
-      brew cask install java
-  EOS
+  caveats do
+    depends_on_java
+  end
 end

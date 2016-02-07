@@ -7,7 +7,7 @@ cask 'switch' do
   homepage 'http://www.nch.com.au/switch/'
   license :closed
 
-  container :nested => 'Switch_i.dmg'
+  container nested: 'Switch_i.dmg'
 
   app 'Switch.app'
 end

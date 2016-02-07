@@ -8,6 +8,7 @@ cask 'uberpov' do
   license :affero
 
   app 'Uberpov_Mac/UberPOV.app'
+
   caveats do
     <<-EOS.undent
       The standard UberPOV include path is:

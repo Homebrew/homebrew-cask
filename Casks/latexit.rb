@@ -4,12 +4,12 @@ cask 'latexit' do
 
   url "http://www.chachatelier.fr/latexit/downloads/LaTeXiT-#{version.gsub('.', '_')}.dmg"
   appcast 'http://pierre.chachatelier.fr/latexit/downloads/latexit-sparkle-en.rss',
-          :sha256 => '34cab0a120226e056f8ea3f24afa7e252429e487b522345adf862365986b2d66'
+          checkpoint: 'b2acb7c6fa3a029c8711308da5b2bc6835fb878cfa1ec374159c4d7e2e69f3f2'
   name 'LaTeXiT'
   homepage 'http://www.chachatelier.fr/latexit'
   license :oss
 
   app 'LaTeXiT.app'
 
-  zap :delete => '~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist'
+  zap delete: '~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist'
 end

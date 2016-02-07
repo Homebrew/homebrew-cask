@@ -4,7 +4,7 @@ cask 'firebird' do
 
   url "https://github.com/nspire-emus/firebird/releases/download/v#{version}/firebird-mac.dmg"
   appcast 'https://github.com/nspire-emus/firebird/releases.atom',
-          :sha256 => '815103264eeb275c1836c2bc31770f422caac1395fca2f7c93f3b22348694879'
+          checkpoint: '815103264eeb275c1836c2bc31770f422caac1395fca2f7c93f3b22348694879'
   name 'firebird'
   homepage 'https://github.com/nspire-emus/firebird'
   license :cc

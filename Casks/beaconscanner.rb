@@ -4,7 +4,7 @@ cask 'beaconscanner' do
 
   url "https://github.com/mlwelles/BeaconScanner/releases/download/#{version}/BeaconScanner-#{version}.zip"
   appcast 'https://github.com/mlwelles/BeaconScanner/releases.atom',
-          :sha256 => '30fe0b1aa49f79e64712d6e1b72eff566685639aa58a45c9910768ffd3235e0f'
+          checkpoint: '30fe0b1aa49f79e64712d6e1b72eff566685639aa58a45c9910768ffd3235e0f'
   name 'BeaconScanner'
   homepage 'https://github.com/mlwelles/BeaconScanner/'
   license :mit

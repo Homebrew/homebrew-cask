@@ -9,10 +9,10 @@ cask 'quiterss' do
 
   app 'Quiterss.app'
 
-  zap :delete => [
-    '~/.config/QuiteRss',
-    '~/Library/Caches/QuiteRss',
-    '~/Library/Application Support/QuiteRss',
-    '~/Library/Preferences/org.quiterss.QuiteRSS.plist'
-  ]
+  zap delete: [
+                '~/.config/QuiteRss',
+                '~/Library/Caches/QuiteRss',
+                '~/Library/Application Support/QuiteRss',
+                '~/Library/Preferences/org.quiterss.QuiteRSS.plist',
+              ]
 end

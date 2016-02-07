@@ -4,7 +4,7 @@ cask 'cuppa' do
 
   url "http://www.nathanatos.com/software/downloads/Cuppa-#{version}.zip"
   appcast 'http://www.nathanatos.com/software/cuppa.xml',
-          :sha256 => 'c56a222270948c5ec17b264f400492ed651b87a21bf3cc89c09fbc874031b7bb'
+          checkpoint: '684713a16bfa5ac60dcb4df35ef970cd48286ed1667da960fe448be05cb17aa4'
   name 'Cuppa'
   homepage 'http://www.nathanatos.com/software'
   license :bsd

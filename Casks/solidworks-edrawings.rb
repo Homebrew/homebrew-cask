@@ -4,7 +4,6 @@ cask 'solidworks-edrawings' do
 
   # solidworks.com is the official download host per the vendor homepage
   url 'http://dl-ak.solidworks.com/nonsecure/edrawings/e2014sp05/14.5.0.0008/mac/eDrawings%202014%20SP05.dmg'
-  name 'eDrawings'
   name 'eDrawings Viewer'
   homepage 'http://www.edrawingsviewer.com/ed/edrawings-mac.htm'
   license :gratis

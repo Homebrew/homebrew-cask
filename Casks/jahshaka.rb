@@ -9,5 +9,5 @@ cask 'jahshaka' do
 
   pkg "jahshaka-#{version}.mpkg"
 
-  uninstall :script => '/usr/bin/jahshaka-uninstall'
+  uninstall script: '/usr/bin/jahshaka-uninstall'
 end

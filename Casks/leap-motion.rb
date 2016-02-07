@@ -9,5 +9,5 @@ cask 'leap-motion' do
 
   pkg 'Leap Motion.pkg'
 
-  uninstall :script => '/Applications/Leap Motion.app/Contents/MacOS/uninstall'
+  uninstall script: '/Applications/Leap Motion.app/Contents/MacOS/uninstall'
 end

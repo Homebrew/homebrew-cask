@@ -6,7 +6,7 @@ cask 'screenstagram' do
   url "https://screenstagram.s3.amazonaws.com/screenstagram_#{version}.dmg"
   name 'Screenstagram'
   homepage 'https://screenstagram.s3.amazonaws.com/download.html'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   screen_saver 'Screenstagram 2.saver'
 end

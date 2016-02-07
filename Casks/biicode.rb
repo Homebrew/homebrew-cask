@@ -10,5 +10,5 @@ cask 'biicode' do
 
   pkg "bii-macos-64_#{version.gsub('.', '_')}.pkg"
 
-  uninstall :pkgutil => 'biicode'
+  uninstall pkgutil: 'biicode'
 end

@@ -10,5 +10,5 @@ cask 'doomsday-engine' do
 
   pkg 'Doomsday.pkg'
 
-  uninstall :pkgutil => 'net.dengine.doomsday.*'
+  uninstall pkgutil: 'net.dengine.doomsday.*'
 end

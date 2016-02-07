@@ -4,7 +4,7 @@ cask 'shimeike-formulatepro' do
 
   url 'https://github.com/shimeike/formulatepro/releases/download/v0.0.6a/FormulatePro-0.0.6.dmg'
   appcast 'https://github.com/shimeike/formulatepro/releases.atom',
-          :sha256 => '5577b6aea342f35701fb94c0eff888f0536b01cdfe21978fded979d44835b082'
+          checkpoint: '5577b6aea342f35701fb94c0eff888f0536b01cdfe21978fded979d44835b082'
   name 'FormulatePro'
   homepage 'https://github.com/shimeike/formulatepro'
   license :gpl

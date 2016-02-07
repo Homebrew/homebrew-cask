@@ -4,7 +4,6 @@ cask 'xaos' do
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/xaos/xaos-#{version}-macosx.dmg"
-  name 'XaoS'
   name 'GNU XaoS'
   homepage 'http://matek.hu/xaos'
   license :gpl

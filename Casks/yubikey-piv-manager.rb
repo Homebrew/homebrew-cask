@@ -9,5 +9,5 @@ cask 'yubikey-piv-manager' do
 
   pkg "yubikey-piv-manager-#{version}-mac.pkg"
 
-  uninstall :pkgutil => 'com.yubico.pkg.YubiKeyPIVManager'
+  uninstall pkgutil: 'com.yubico.pkg.YubiKeyPIVManager'
 end
