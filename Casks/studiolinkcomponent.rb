@@ -1,4 +1,4 @@
-cask 'studio-link-plugin' do
+cask 'studiolinkcomponent' do
   version '16.02.0-beta'
   sha256 '6fd085a2f420e6ea584c6fac374070488e2cbf59cd743fb71de8ba9f3eab944b'
 
