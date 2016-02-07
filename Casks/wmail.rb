@@ -1,10 +1,10 @@
 cask 'wmail' do
-  version '1.1.3'
-  sha256 'dd34f54ac6ddf9ba880684c0c4a167a5c6431cddedc08450580efb25d3c68925'
+  version '1.2.0'
+  sha256 '44a3fe2a414c08412085b4d058aba8eb79c48ca1f20eb562770f2a54e7fa5da3'
 
-  url "https://github.com/Thomas101/wmail/releases/download/v#{version}/WMail_#{version.dots_to_underscores}.zip"
+  url "https://github.com/Thomas101/wmail/releases/download/v#{version}/WMail_#{version.dots_to_underscores}_osx.zip"
   appcast 'https://github.com/Thomas101/wmail/releases.atom',
-          checkpoint: '29ae09cb121149b32f59e351b2ebcd7e9803a0f772dd1165d90f648e844dd390'
+          checkpoint: 'a62fd9749579f45c20dd388777f94864c3f85f476008b3cdcc73262ee0fa0065'
   name 'WMail'
   homepage 'https://github.com/Thomas101/wmail'
   license :mit
