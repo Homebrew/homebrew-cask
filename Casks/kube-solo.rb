@@ -4,7 +4,7 @@ cask 'kube-solo' do
 
   url "https://github.com/TheNewNormal/kube-solo-osx/releases/download/v#{version}/Kube-Solo_v#{version}.dmg"
   appcast 'https://github.com/TheNewNormal/kube-solo-osx/releases.atom',
-          checkpoint: '8144852c33d886de52d57e282106f175d44414e53bc11e0735dfe991d19f8f27'
+          checkpoint: '3c247fdef0a9eeb3bc012d0ed61a01a69c0040adc83dfa85a42a73539ba9c95f'
   name 'Kube-Solo'
   homepage 'https://github.com/TheNewNormal/kube-solo-osx'
   license :apache
