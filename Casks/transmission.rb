@@ -15,6 +15,7 @@ cask 'transmission' do
   app 'Transmission.app'
 
   zap delete: [
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.m0k.transmission.sfl',
                 '~/Library/Application Support/Transmission',
                 '~/Library/Preferences/org.m0k.transmission.plist',
                 '~/Library/Preferences/org.m0k.transmission.LSSharedFileList.plist',
