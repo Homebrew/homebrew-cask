@@ -10,7 +10,7 @@ cask 'aquamacs' do
     # github.com is the official download host per the vendor homepage
     url "https://github.com/davidswelt/aquamacs-emacs-pre2015/releases/download/Aquamacs-#{version}/Aquamacs-Emacs-#{version}.dmg"
     appcast 'https://github.com/davidswelt/aquamacs-emacs/releases.atom',
-            checkpoint: '0f58d00d6bd13857e90563da96a9fa65e489162f34ed6d79146517e0ac63397c'
+            checkpoint: '293e1215263d78aaa2e5300356ccbfc97e6150a3db21c299a4f0de62a0028762'
   end
 
   name 'Aquamacs'
