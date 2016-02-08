@@ -10,4 +10,9 @@ cask 'torbrowser' do
       key_id: 'ef6e286dda85ea2a4ba7de684e2c6e8793298290'
 
   app 'TorBrowser.app'
+
+  zap delete: [
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.tor browser.sfl',
+                '~/Library/Preferences/org.mozilla.tor browser.plist',
+              ]
 end
