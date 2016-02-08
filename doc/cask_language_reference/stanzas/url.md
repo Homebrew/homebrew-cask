@@ -25,12 +25,14 @@ Example of using `:referer`: [rrootage.rb](https://github.com/caskroom/homebrew-
 When the hostnames of `url` and `homepage` differ, the discrepancy should be documented with a comment of the form:
 
 ```
-# URL_HOSTNAME is the official download host per the vendor homepage
+# URL_HOSTNAME verified as official when first introduced to the cask
 ```
 
-Examples can be seen in [visit.rb](https://github.com/caskroom/homebrew-cask/blob/cafcd7cf7922022ea607c5811c63d45863c7ed36/Casks/visit.rb#L5) and [vistrails.rb](https://github.com/caskroom/homebrew-cask/blob/cafcd7cf7922022ea607c5811c63d45863c7ed36/Casks/vistrails.rb#L5).
+Examples can be seen in [insert examples].
 
-These comments must be added so a user auditing the cask knows the URL is the one provided by the vendor, even though it may look unofficial or suspicious. It is our responsibility as Homebrew-Cask maintainers to verify both the `url` and `homepage` information when first added (or subsequently modified, apart from versioning). The exception to this rule is a `homepage` of `github.io` with a `url` of `github.com`, since we know this pair of hostnames is connected.
+These comments must be added so a user auditing the cask knows the URL was verified by the Homebrew-Cask team as the one provided by the vendor, even though it may look unofficial or suspicious. It is our responsibility as Homebrew-Cask maintainers to verify both the `url` and `homepage` information when first added (or subsequently modified, apart from versioning). The exception to this rule is a `homepage` of `github.io` with a `url` of `github.com`, since we know this pair of hostnames is connected.
+
+The comment doesn’t mean you should trust the source blindly, but we only approve casks in which users can easily verify its authenticity, either by visiting the `homepage` or inspecting the `appcast`. Cases where such quick verification isn’t possible (e.g. when the download URL is behind a registration wall) are [treated in a stricter way](../../development/adding-a-cask.md#unofficial-vendorless-and-walled-builds).
 
 ## Difficulty Finding a URL
 
