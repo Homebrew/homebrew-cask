@@ -5,7 +5,7 @@ cask 'docker-compose' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/docker/compose/releases/download/#{version}/docker-compose-Darwin-x86_64"
   appcast 'https://github.com/docker/compose/releases.atom',
-          checkpoint: '9fa9199b9e819531cefe656982dca5b6f5407d8a36189926d75161f5a1d69527'
+          checkpoint: '39024892fb12271c05fcd403bb07be01ab1f259d0ba6409a2c9537e0140a3b20'
   name 'Docker Compose'
   homepage 'https://docs.docker.com/compose'
   license :apache
