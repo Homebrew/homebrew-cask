@@ -13,5 +13,10 @@ cask 'dropbox' do
 
   uninstall login_item: 'Dropbox'
 
-  zap delete: '~/.dropbox'
+  zap delete: [
+                '~/.dropbox',
+                '~/Library/Caches/com.getdropbox.dropbox',
+                '~/Library/Containers/com.getdropbox.dropbox.garcon',
+                '~/Library/Group Containers/com.getdropbox.dropbox.garcon',
+              ]
 end
