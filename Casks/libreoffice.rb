@@ -29,4 +29,9 @@ cask 'libreoffice' do
   binary 'LibreOffice.app/Contents/MacOS/urelibs'
   binary 'LibreOffice.app/Contents/MacOS/uri-encode'
   binary 'LibreOffice.app/Contents/MacOS/xpdfimport'
+  
+  zap delete: [
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.libreoffice.script.sfl',
+                '~/Library/Application Support/LibreOffice',
+              ]
 end
