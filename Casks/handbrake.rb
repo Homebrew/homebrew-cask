@@ -9,5 +9,7 @@ cask 'handbrake' do
   homepage 'https://handbrake.fr'
   license :oss
 
+  auto_updates true
+
   app 'HandBrake.app'
 end
