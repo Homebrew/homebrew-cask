@@ -9,5 +9,7 @@ cask 'platypus' do
   homepage 'http://sveinbjorn.org/platypus'
   license :bsd
 
+  auto_updates true
+
   app "Platypus-#{version}/Platypus.app"
 end
