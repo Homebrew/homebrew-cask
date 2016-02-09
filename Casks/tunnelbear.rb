@@ -15,4 +15,9 @@ cask 'tunnelbear' do
   postflight do
     suppress_move_to_applications
   end
+
+  uninstall quit:      'com.tunnelbear.mac.TunnelBear',
+            launchctl: 'com.tunnelbear.mac.tbeard'
+
+  zap delete: '~/Library/Preferences/com.tunnelbear.mac.TunnelBear.plist'
 end
