@@ -39,7 +39,7 @@ Details of software names and brands will inevitably be lost in the conversion t
 
 * Remove from the end: version numbers or incremental release designations such as “alpha”, “beta”, or “release candidate”. Strings which distinguish different capabilities or codebases such as “Community Edition” are currently accepted. Exception: when a number is not an incremental release counter, but a differentiator for a different product from a different vendor, as in [pgadmin3.rb](../../Casks/pgadmin3.rb).
 
-* If the version number is arranged to occur in the middle of the App name, it should also be removed.
+* If the version number is arranged to occur in the middle of the App name, it should also be removed. Example: [IntelliJ IDEA 13 CE.app](../../../../../homebrew-versions/tree/master/Casks/intellij-idea-ce.rb).
 
 * Remove from the end: “Launcher”, “Quick Launcher”.
 
