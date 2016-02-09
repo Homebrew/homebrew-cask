@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "HOMEBREW\-CASK" "1" "January 2016" "Homebrew-cask" "brew-cask"
+.TH "HOMEBREW\-CASK" "1" "January 2016" "Homebrew-Cask" "brew-cask"
 .
 .SH "NAME"
 \fBhomebrew\-cask\fR \- A friendly binary installer for OS X
@@ -104,7 +104,7 @@ Check the given Casks for correct style using RuboCop Cask \fIhttps://github\.co
 Uninstall the given Cask\. With \fB\-\-force\fR, uninstall even if the Cask does not appear to be present\.
 .
 .IP
-Note that \fBuninstall \-\-force\fR is currently imperfect\. It will follow the \fBuninstall\fR instructions from \fInewest\fR Cask definition, even if the given Cask has changed since you installed it\. The result is that \fBuninstall \-\-force\fR will always succeed in removing relevant files under \fB/opt/homebrew\-cask\fR, but will sometimes fail to remove relevant installed files outside of \fB/opt/homebrew\-cask\fR\. This issue is being addressed\.
+Note that \fBuninstall \-\-force\fR is currently imperfect\. It will follow the \fBuninstall\fR instructions from the \fInewest\fR Cask definition, even if the given Cask has changed since you installed it\. The result is that \fBuninstall \-\-force\fR will always succeed in removing relevant files under \fB/opt/homebrew\-cask\fR, but will sometimes fail to remove relevant installed files outside of \fB/opt/homebrew\-cask\fR\. This issue is being addressed\.
 .
 .IP
 \fBuninstall\fR without \fB\-\-force\fR is also imperfect\. It may be unable to perform an \fBuninstall\fR operation if the given Cask has changed since you installed it\. This issue is being addressed\.
@@ -193,11 +193,11 @@ Target location for Screen Saver links\. The default value is \fB~/Library/Scree
 .
 .TP
 \fB\-\-no\-binaries\fR
-Do not link “helper” executables to \fB/usr/local/bin\fR\.
+Do not link `helper' executables to \fB/usr/local/bin\fR\.
 .
 .TP
 \fB\-\-binarydir=<path>\fR
-Target location for “helper” executable links\. The default value is \fB/usr/local/bin\fR\.
+Target location for `helper' executable links\. The default value is \fB/usr/local/bin\fR\.
 .
 .TP
 \fB\-\-debug\fR
