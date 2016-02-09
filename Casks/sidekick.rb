@@ -9,6 +9,8 @@ cask 'sidekick' do
   homepage 'http://oomphalot.com/sidekick/'
   license :commercial
 
+  auto_updates true
+
   app 'Sidekick.app'
 
   postflight do
