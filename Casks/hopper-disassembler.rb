@@ -9,6 +9,7 @@ cask 'hopper-disassembler' do
   homepage 'http://www.hopperapp.com/'
   license :commercial
 
+  auto_updates true
   depends_on macos: '>= :lion'
 
   app "Hopper Disassembler v#{version.major}.app"
