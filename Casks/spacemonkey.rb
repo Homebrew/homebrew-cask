@@ -9,5 +9,7 @@ cask 'spacemonkey' do
   homepage 'https://www.spacemonkey.com'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
+  auto_updates true
+
   app 'SpaceMonkey.app'
 end
