@@ -1,15 +1,15 @@
 # Homebrew-Cask
 
-#### Important December update: Homebrew-Cask will now be kept up to date together with Homebrew (see [#15381](https://github.com/caskroom/homebrew-cask/pull/15381) for details). If you haven’t yet, run `brew uninstall --force brew-cask; brew update` to switch to the new system.
+#### Important December 2015 update: Homebrew-Cask will now be kept up to date together with Homebrew (see [#15381](https://github.com/caskroom/homebrew-cask/pull/15381) for details). If you haven’t yet, run `brew uninstall --force brew-cask; brew update` to switch to the new system.
 
-#### Important: At some point in the future Homebrew-cask will change its behaviour from linking apps to moving them. See [issue #13201](https://github.com/caskroom/homebrew-cask/issues/13201) for details.
+#### Important: At some point in the future Homebrew-Cask will change its behaviour from linking apps to moving them. See [issue #13201](https://github.com/caskroom/homebrew-cask/issues/13201) for details.
 ---
 
 _“To install, drag this icon…” no more!_
 
 Homebrew-Cask extends [Homebrew](http://brew.sh) and brings its elegance, simplicity, and speed to the installation and management of GUI Mac applications such as Google Chrome and Adium.
 
-We do this by providing a friendly homebrew-style CLI workflow for the administration of Mac applications distributed as binaries.
+We do this by providing a friendly Homebrew-style CLI workflow for the administration of Mac applications distributed as binaries.
 
 It’s implemented as a `homebrew` [external command](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/External-Commands.md) called `cask`.
 
@@ -37,7 +37,7 @@ $ open ~/Applications/"Google Chrome.app"
 
 ## Learn More
 
-* Find basic documentation on using homebrew-cask in [USAGE.md](USAGE.md)
+* Find basic documentation on using Homebrew-Cask in [USAGE.md](USAGE.md)
 * Want to contribute a Cask? Awesome! See [CONTRIBUTING.md](CONTRIBUTING.md)
 * Want to hack on our code? Also awesome! See [hacking.md](doc/development/hacking.md)
 * More project-related details and discussion are available in the [documentation](doc)
@@ -57,9 +57,9 @@ We’re really rather friendly! Here are the best places to talk about the proje
 
 We still have bugs — and we are busy fixing them!  If you have a problem, don’t be shy about [reporting it][bug_report_template] on our [GitHub issues page](https://github.com/caskroom/homebrew-cask/issues?state=open). Always search for your issue before posting a new one.
 
-When reporting bugs, remember that homebrew-cask is an independent project from Homebrew. Do your best to direct bug reports to the appropriate project. If your command-line started with `brew cask`, bring the bug to us first!
+When reporting bugs, remember that Homebrew-Cask is an independent project from Homebrew. Do your best to direct bug reports to the appropriate project. If your command-line started with `brew cask`, bring the bug to us first!
 
-Before reporting a bug, make sure you have the latest versions of homebrew, homebrew-cask, and all Taps by running the following command:
+Before reporting a bug, make sure you have the latest versions of Homebrew, Homebrew-Cask, and all Taps by running the following command:
 
 ```bash
 $ brew update; brew cleanup; brew cask cleanup
