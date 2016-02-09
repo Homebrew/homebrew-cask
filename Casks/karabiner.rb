@@ -9,6 +9,8 @@ cask 'karabiner' do
   homepage 'https://pqrs.org/osx/karabiner/'
   license :public_domain
 
+  auto_updates true
+
   pkg 'Karabiner.sparkle_guided.pkg'
   binary '/Applications/Karabiner.app/Contents/Library/vendor/bin/blueutil'
   binary '/Applications/Karabiner.app/Contents/Library/utilities/bin/warp-mouse-cursor-position'
