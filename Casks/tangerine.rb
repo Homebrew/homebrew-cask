@@ -9,6 +9,8 @@ cask 'tangerine' do
   homepage 'https://www.karelia.com/products/tangerine/'
   license :commercial
 
+  auto_updates true
+
   app 'Tangerine!.app'
 
   postflight do
