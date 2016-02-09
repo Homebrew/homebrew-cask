@@ -39,7 +39,7 @@ Details of software names and brands will inevitably be lost in the conversion t
 
 * Remove from the end: version numbers or incremental release designations such as “alpha”, “beta”, or “release candidate”. Strings which distinguish different capabilities or codebases such as “Community Edition” are currently accepted. Exception: when a number is not an incremental release counter, but a differentiator for a different product from a different vendor, as in [pgadmin3.rb](../../Casks/pgadmin3.rb).
 
-* If the version number is arranged to occur in the middle of the App name, it should also be removed. Example: [IntelliJ IDEA 13 CE.app](../../Casks/intellij-idea-ce.rb).
+* If the version number is arranged to occur in the middle of the App name, it should also be removed.
 
 * Remove from the end: “Launcher”, “Quick Launcher”.
 
@@ -47,7 +47,7 @@ Details of software names and brands will inevitably be lost in the conversion t
 
 * Remove from the end: hardware designations such as “for x86”, “32-bit”, “ppc”.
 
-* Remove from the end: software framework names such as “Cocoa”, “Qt”, “Gtk”, “Wx”, “Java”, “Oracle JVM”, etc. Exception: the framework is the product being Casked: [java.rb](../../Casks/java.rb).
+* Remove from the end: software framework names such as “Cocoa”, “Qt”, “Gtk”, “Wx”, “Java”, “Oracle JVM”, etc. Exception: the framework is the product being Casked, as in [java.rb](../../Casks/java.rb).
 
 * Remove from the end: localization strings such as “en-US”.
 
@@ -78,7 +78,7 @@ Details of software names and brands will inevitably be lost in the conversion t
 
 ### Simplified Names of non-App Software
 
-* Currently, rules for generating a token are not well-defined for Preference Panes, QuickLook plugins, and several other types of software installable by homebrew-cask. Just create the best name you can, based on the filename on disk or the vendor’s web page. Watch out for duplicates.
+* Currently, rules for generating a token are not well-defined for Preference Panes, QuickLook plugins, and several other types of software installable by Homebrew-Cask. Just create the best name you can, based on the filename on disk or the vendor’s web page. Watch out for duplicates.
 
   Non-app tokens should become more standardized in the future.
 
