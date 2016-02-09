@@ -166,7 +166,7 @@ We maintain separate Taps for different types of binaries. Our nomenclature is:
 + **Beta, Development, Unstable**: Subsequent versions to **stable**, yet incomplete and under development, aiming to eventually become the new **stable**.
 + **Nightly**: Constantly up-to-date versions of the current development state.
 + **Legacy**: Any **stable** version that is not the most recent.
-+ **Alternative**: Alternative edition of an existing app, by the same vendor (developer editions, community editions, pro editions, etc.).
++ **Alternative**: Alternative edition of an existing app, by the same vendor (developer editions, community editions, pro editions, ...).
 + **Regional, Localized**: Any version that isn’t the US English one, when that exists.
 + **Trial**: Date-limited version that stops working entirely after it expires, requiring payment to lift the limitation.
 + **Freemium**: Gratis version that works indefinitely but with limitations that can be removed by paying.
@@ -205,7 +205,7 @@ Please submit these to [caskroom/homebrew-unofficial](http://github.com/caskroom
 
 ### Fonts
 
-Font Casks live in the [caskroom/homebrew-fonts](https://github.com/caskroom/homebrew-fonts) repository. See the font repo [CONTRIBUTING.md](https://github.com/caskroom/homebrew-fonts/blob/master/CONTRIBUTING.md)
+Font Casks live in the [caskroom/homebrew-fonts](https://github.com/caskroom/homebrew-fonts) repository. See the font repo [CONTRIBUTING.md](../../../../../homebrew-fonts/blob/master/CONTRIBUTING.md)
 for details.
 
 ## Submitting Your Changes
