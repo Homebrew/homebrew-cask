@@ -10,6 +10,8 @@ cask 'duet' do
   homepage 'http://www.duetdisplay.com/'
   license :gratis
 
+  auto_updates true
+
   app 'duet.app'
 
   uninstall kext: 'com.karios.driver.DuetDisplay'
