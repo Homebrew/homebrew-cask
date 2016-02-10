@@ -23,7 +23,7 @@ Example use: some distributions are contained in archive formats such as `7z` wh
 depends_on formula: 'unar'
 ```
 
-## depends_on :macos
+## depends_on macos:
 
 ### Requiring an Exact OS X Release
 
@@ -66,7 +66,7 @@ depends_on macos: '>= 10.9'
 
 A comparison expression cannot be combined with any other form of `depends_on macos:`.
 
-## depends_on :arch
+## depends_on arch:
 
 The value for `depends_on arch:` may be a symbol or an array of symbols, listing the hardware compatibility requirements for a Cask. The requirement is satisfied at install time if any one of multiple `arch:` value matches the user’s hardware.
 
