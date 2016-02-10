@@ -16,8 +16,8 @@ cask '1password' do
 
     app "1Password #{version.major}.app"
   else
-    version '6.0.1'
-    sha256 '5e89ae6264f7551f38fab79ad7974048a6b30a60a99d33b8d215f9f9c34ee7a8'
+    version '6.0.2'
+    sha256 '28b79691e3985c15ea34cd0e25987971766cdd478c3cbe276aff476ab16bc922'
 
     # cloudfront.net is the official download host per the vendor homepage
     url "https://d13itkw33a7sus.cloudfront.net/dist/1P/mac4/1Password-#{version}.zip"
