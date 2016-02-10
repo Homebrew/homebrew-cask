@@ -166,7 +166,7 @@ We maintain separate Taps for different types of binaries. Our nomenclature is:
 + **Beta, Development, Unstable**: Subsequent versions to **stable**, yet incomplete and under development, aiming to eventually become the new **stable**.
 + **Nightly**: Constantly up-to-date versions of the current development state.
 + **Legacy**: Any **stable** version that is not the most recent.
-+ **Alternative**: Alternative edition of an existing app, by the same vendor (developer editions, community editions, pro editions, …).
++ **Alternative**: Alternative edition of an existing app, by the same vendor (developer editions, community editions, pro editions, ...).
 + **Regional, Localized**: Any version that isn’t the US English one, when that exists.
 + **Trial**: Date-limited version that stops working entirely after it expires, requiring payment to lift the limitation.
 + **Freemium**: Gratis version that works indefinitely but with limitations that can be removed by paying.
@@ -245,7 +245,7 @@ See [a note about git commit messages](http://tbaggery.com/2008/04/19/a-note-abo
 
 The first line of a commit message becomes the **title** of a pull request on GitHub, like the subject line of an email. Including the key info in the first line will help us respond faster to your pull.
 
-For Cask commits in the Homebrew-Cask project, we like to include the Application name, version number (or `:latest`), and purpose of the commit in the first line.
+For Cask commits in the Homebrew-Cask project, we like to include the application name, version number (or `:latest`), and purpose of the commit in the first line.
 
 Examples of good, clear commit summaries:
 
