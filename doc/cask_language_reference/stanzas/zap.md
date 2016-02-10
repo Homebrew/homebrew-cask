@@ -19,6 +19,6 @@ $ brew cask zap td-toolbelt             # also removes org.ruby-lang.installer
 
 ## zap Stanza Syntax
 
-The form of `zap` stanza follows the [`uninstall` stanza](uninstall.md). All of the same directives are available. Unlike with `uninstall`, however, `:delete` is not discouraged in `zap`.
+The form of `zap` stanza follows the [`uninstall` stanza](uninstall.md). All of the same directives are available. Unlike with `uninstall`, however, `delete:` is not discouraged in `zap`.
 
-Example: [injection.rb](https://github.com/caskroom/homebrew-cask/blob/3a56867b39be1095f1247e4bad3f77eb4eb52ede/Casks/injection.rb#L16)
+Example: [injection.rb](https://github.com/caskroom/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/injection.rb#L16)
