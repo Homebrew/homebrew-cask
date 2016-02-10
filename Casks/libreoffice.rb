@@ -1,12 +1,12 @@
 cask 'libreoffice' do
   if Hardware::CPU.is_32_bit? || MacOS.release < :mountain_lion
     version '4.3.7'
-    sha256 'b0537db77524c0b6fa27d2b1b8715658fda56396bd28593d6a75302e38ff6d12'
+    sha256 '2964a952ab633426df402de2f128cf788354ac622b7c30b25209d185d17617ec'
     # documentfoundation.org is the official download host per the vendor homepage
     url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86/LibreOffice_#{version}_MacOS_x86.dmg"
   else
     version '5.1.0'
-    sha256 '2455e5dead1caffa3120b2604c57e3e532405bfab4069da6141029f07d6e4e58'
+    sha256 'b0537db77524c0b6fa27d2b1b8715658fda56396bd28593d6a75302e38ff6d12'
     # documentfoundation.org is the official download host per the vendor homepage
     url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg"
   end
