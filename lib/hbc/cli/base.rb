@@ -14,4 +14,8 @@ class Hbc::CLI::Base
   def self.help
     "No help available for the #{command_name} command"
   end
+
+  def self.needs_init?
+    false
+  end
 end

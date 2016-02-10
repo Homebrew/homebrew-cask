@@ -73,6 +73,10 @@ class Hbc::CLI
     raise unless e.to_s.include? path
   end
 
+  def self.should_init?(command)
+    (command.is_a? Class) && (command < Hbc::CLI::Base) && command.needs_init?
+  end
+
   def self.run_command(command, *rest)
     if command.respond_to?(:run)
       # usual case: built-in command verb
@@ -112,8 +116,8 @@ class Hbc::CLI
   def self.process(arguments)
     command_string, *rest = *arguments
     rest = process_options(rest)
-    Hbc.init
     command = Hbc.help ? 'help' : lookup_command(command_string)
+    Hbc.init if should_init?(command)
     run_command(command, *rest)
   rescue Hbc::CaskError, Hbc::CaskSha256MismatchError => e
     msg = e.message
