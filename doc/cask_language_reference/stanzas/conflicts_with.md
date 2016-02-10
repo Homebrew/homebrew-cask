@@ -6,9 +6,9 @@ Several keys are accepted by `conflicts_with`, but none of them are yet enforced
 
 | key        | description |
 | ---------- | ----------- |
-| `:formula` | *stub - not yet functional*
-| `:cask`    | *stub - not yet functional*
-| `:macos`   | *stub - not yet functional*
-| `:arch`    | *stub - not yet functional*
-| `:x11`     | *stub - not yet functional*
-| `:java`    | *stub - not yet functional*
+| `formula:` | *stub - not yet functional*
+| `cask:`    | *stub - not yet functional*
+| `macos:`   | *stub - not yet functional*
+| `arch:`    | *stub - not yet functional*
+| `x11:`     | *stub - not yet functional*
+| `java:`    | *stub - not yet functional*
