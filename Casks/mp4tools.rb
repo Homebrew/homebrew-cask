@@ -1,6 +1,6 @@
 cask 'mp4tools' do
-  version '3.4.5'
-  sha256 'b42382c36a69078d3cdc9d4b3b98c4618efdd24ddcba55f5e3ccc5389367d532'
+  version '3.5.3'
+  sha256 '06c64b6c79a15bd98a57be2614848e6b122f5d11ed9b4fe41497462e76f431db'
 
   url "http://www.emmgunn.com/downloads/mp4tools#{version}.zip",
       referer: 'http://www.emmgunn.com/mp4tools-home/mp4tools-downloads/'
