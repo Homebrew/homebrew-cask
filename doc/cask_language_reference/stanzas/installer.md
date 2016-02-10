@@ -1,6 +1,6 @@
 # installer
 
-The `installer` stanza takes a series of key-value pairs, the first key of which must be `:manual` or `:script`.
+The `installer` stanza takes a series of key-value pairs, the first key of which must be `manual:` or `script:`.
 
 ## installer manual:
 
