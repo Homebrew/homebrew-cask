@@ -9,5 +9,7 @@ cask 'sumbolon' do
   homepage 'https://www.rwe-uk.com/app/sumbolon'
   license :commercial
 
+  auto_updates true
+
   app 'Sumbolon.app'
 end

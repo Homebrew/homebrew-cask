@@ -7,5 +7,7 @@ cask 'shimo' do
   homepage 'https://www.feingeist.io/shimo/'
   license :commercial
 
+  auto_updates true
+
   app 'Shimo.app'
 end

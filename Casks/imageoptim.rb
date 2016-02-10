@@ -9,6 +9,8 @@ cask 'imageoptim' do
   homepage 'https://imageoptim.com/'
   license :gpl
 
+  auto_updates true
+
   app 'ImageOptim.app'
 
   zap delete: [

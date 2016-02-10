@@ -9,5 +9,7 @@ cask 'codekit' do
   homepage 'https://incident57.com/codekit/'
   license :commercial
 
+  auto_updates true
+
   app 'CodeKit.app'
 end

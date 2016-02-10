@@ -9,5 +9,7 @@ cask 'ripit' do
   homepage 'http://thelittleappfactory.com/ripit/'
   license :commercial
 
+  auto_updates true
+
   app 'RipIt.app'
 end

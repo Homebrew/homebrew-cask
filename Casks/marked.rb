@@ -9,5 +9,7 @@ cask 'marked' do
   homepage 'http://marked2app.com'
   license :commercial
 
+  auto_updates true
+
   app 'Marked 2.app'
 end
