@@ -10,15 +10,15 @@ When a plain URL string is insufficient to fetch a file, additional information 
 
 | key                | value       |
 | ------------------ | ----------- |
-| `:using`           | the symbol `:post` is the only legal value
-| `:cookies`         | a hash of cookies to be set in the download request
-| `:referer`         | a string holding the URL to set as referrer in the download request
-| `:user_agent`      | a string holding the user agent to set for the download request. Can also be set to the symbol `:fake`, which will use a generic Browser-like user agent string. We prefer `:fake` when the server does not require a specific user agent.
-| `:data`            | a hash of parameters to be set in the POST request
+| `using:`           | the symbol `:post` is the only legal value
+| `cookies:`         | a hash of cookies to be set in the download request
+| `referer:`         | a string holding the URL to set as referrer in the download request
+| `user_agent:`      | a string holding the user agent to set for the download request. Can also be set to the symbol `:fake`, which will use a generic Browser-like user agent string. We prefer `:fake` when the server does not require a specific user agent.
+| `data:`            | a hash of parameters to be set in the POST request
 
-Example of using `:cookies`: [java.rb](https://github.com/caskroom/homebrew-cask/blob/b78fb320fc303fc503386aa6fac47fdd105ecbfb/Casks/java.rb#L5#L8)
+Example of using `cookies:`: [java.rb](https://github.com/caskroom/homebrew-cask/blob/472930df191d66747a57d5c96c0d00511d56e21b/Casks/java.rb#L5#L8)
 
-Example of using `:referer`: [rrootage.rb](https://github.com/caskroom/homebrew-cask/blob/992d34fec0a12193207a91d57b92bfcfb25174ea/Casks/rrootage.rb#L5)
+Example of using `referer:`: [rrootage.rb](https://github.com/caskroom/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/rrootage.rb#L5)
 
 ## When URL and Homepage Hostnames Differ, Add a Comment
 
@@ -28,7 +28,7 @@ When the hostnames of `url` and `homepage` differ, the discrepancy should be doc
 # URL_HOSTNAME is the official download host per the vendor homepage
 ```
 
-Examples can be seen in [visit.rb](https://github.com/caskroom/homebrew-cask/blob/cafcd7cf7922022ea607c5811c63d45863c7ed36/Casks/visit.rb#L5) and [vistrails.rb](https://github.com/caskroom/homebrew-cask/blob/cafcd7cf7922022ea607c5811c63d45863c7ed36/Casks/vistrails.rb#L5).
+Examples can be seen in [visit.rb](https://github.com/caskroom/homebrew-cask/blob/4f15921803cd696838eb7b2ea49357dbb0b757a5/Casks/visit.rb#L5) and [vistrails.rb](https://github.com/caskroom/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/vistrails.rb#L5).
 
 These comments must be added so a user auditing the cask knows the URL is the one provided by the vendor, even though it may look unofficial or suspicious. It is our responsibility as Homebrew-Cask maintainers to verify both the `url` and `homepage` information when first added (or subsequently modified, apart from versioning). The exception to this rule is a `homepage` of `github.io` with a `url` of `github.com`, since we know this pair of hostnames is connected.
 
@@ -46,9 +46,9 @@ In rare cases, a distribution may not be available over ordinary HTTP/S. Subvers
 
 | key                | value       |
 | ------------------ | ----------- |
-| `:using`           | the symbol `:svn` is the only legal value
-| `:revision`        | a string identifying the subversion revision to download
-| `:trust_cert`      | set to `true` to automatically trust the certificate presented by the server (avoiding an interactive prompt)
+| `using:`           | the symbol `:svn` is the only legal value
+| `revision:`        | a string identifying the subversion revision to download
+| `trust_cert:`      | set to `true` to automatically trust the certificate presented by the server (avoiding an interactive prompt)
 
 ## SourceForge/OSDN URLs
 
