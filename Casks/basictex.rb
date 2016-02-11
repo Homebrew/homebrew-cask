@@ -2,8 +2,7 @@ cask 'basictex' do
   version :latest
   sha256 :no_check
 
-  # ctan.org is the official download host per the vendor homepage
-  url 'http://mirror.ctan.org/systems/mac/mactex/BasicTeX.pkg'
+  url 'http://tug.org/cgi-bin/mactex-download/BasicTeX.pkg'
   name 'BasicTeX'
   homepage 'https://www.tug.org/mactex/morepackages.html'
   license :oss
