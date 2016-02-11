@@ -9,6 +9,8 @@ cask 'keymo' do
   homepage 'https://manytricks.com/keymo'
   license :commercial
 
+  auto_updates true
+
   app 'Keymo.app'
 
   zap delete: '~/Library/Preferences/com.manytricks.Keymo.plist'
