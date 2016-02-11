@@ -4,7 +4,7 @@ cask 'sketch' do
 
   url 'http://www.sketchapp.com/static/download/sketch.zip'
   appcast "http://www.sketchapp.com/appcast#{version.major}.xml",
-          checkpoint: 'c9f08a2d76447a3f3fac479f053fb2612441c214454f151b85c460b9f726390d'
+          checkpoint: '82ac5b87a049c3659d1c00438e0fa013fdbbfde5414fbc6381948bf1abd51c11'
   name 'Sketch'
   homepage 'http://www.sketchapp.com/'
   license :commercial
