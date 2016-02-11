@@ -2,7 +2,7 @@ cask 'airfoil' do
   version :latest
   sha256 :no_check
 
-  # cloudfront.net is the official download host per the vendor homepage
+  # d2oxtzozd38ts8.cloudfront.net was verified as official when first introduced to the cask
   url 'https://d2oxtzozd38ts8.cloudfront.net/airfoil/download/Airfoil.zip'
   name 'Airfoil'
   homepage 'https://www.rogueamoeba.com/airfoil/mac/'
