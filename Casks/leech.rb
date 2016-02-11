@@ -9,5 +9,7 @@ cask 'leech' do
   homepage 'https://manytricks.com/leech/'
   license :commercial
 
+  auto_updates true
+
   app 'Leech.app'
 end
