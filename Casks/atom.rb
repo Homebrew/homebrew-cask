@@ -2,7 +2,7 @@ cask 'atom' do
   version '1.5.1'
   sha256 'd84a82bdef492c3c2b03a8a24d503aa9f9f064162b4717ecfbd33d007a61b1ed'
 
-  # github.com is the official download host per the vendor homepage
+  # github.com/atom/atom was verified as official when first introduced to the cask
   url "https://github.com/atom/atom/releases/download/v#{version}/atom-mac.zip"
   appcast 'https://github.com/atom/atom/releases.atom',
           checkpoint: '7c6bb3198412ffbfd27f602a87595297f4a4422bf7d056c4a9abf0c91dfaa5f2'
