@@ -2,7 +2,7 @@ cask 'cachewarmer' do
   version '13'
   sha256 '97f9d743a41c4a38ea3b2af5c33716e72b02e9e11b0fed3000d0a3c584f104f3'
 
-  # amazonaws.com is the official download host per the vendor homepage
+  # amazonaws.com/glencode_downloads was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/glencode_downloads/CacheWarmer-#{version}.pkg"
   name 'CacheWarmer'
   homepage 'https://assetcache.io/cachewarmer/'
