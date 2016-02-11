@@ -9,5 +9,7 @@ cask 'butler' do
   homepage 'https://manytricks.com/butler/'
   license :commercial
 
+  auto_updates true
+
   app 'Butler.app'
 end
