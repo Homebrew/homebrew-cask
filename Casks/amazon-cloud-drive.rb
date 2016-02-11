@@ -2,7 +2,7 @@ cask 'amazon-cloud-drive' do
   version :latest
   sha256 :no_check
 
-  # cloudfront.net is the official download host per the vendor homepage
+  # d29x207vrinatv.cloudfront.net was verified as official when first introduced to the cask
   url 'https://d29x207vrinatv.cloudfront.net/mac/AmazonCloudDriveInstaller.dmg'
   name 'Amazon Cloud Drive App'
   homepage 'https://www.amazon.com/clouddrive/home/'
