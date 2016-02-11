@@ -2,8 +2,7 @@ cask 'battle-net' do
   version :latest
   sha256 :no_check
 
-  # blizzard.com is the official download host per the vendor homepage
-  url 'http://dist.blizzard.com/downloads/bna-installers/322d5bb9ae0318de3d4cde7641c96425/retail.1/Battle.net-Setup-enUS.zip'
+  url 'http://www.battle.net/download/getInstallerForGame?os=mac&locale=enUS&version=LIVE&gameProgram=BATTLENET_APP'
   name 'Blizzard Battle.net'
   homepage 'http://us.battle.net/en/'
   license :commercial
