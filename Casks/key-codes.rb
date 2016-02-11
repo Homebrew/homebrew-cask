@@ -9,5 +9,7 @@ cask 'key-codes' do
   homepage 'https://manytricks.com/keycodes/'
   license :gratis
 
+  auto_updates true
+
   app 'Key Codes.app'
 end
