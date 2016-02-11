@@ -3,8 +3,8 @@ cask 'filezilla' do
     version '3.8.1'
     sha256 '86c725246e2190b04193ce8e7e5ea89d5b9318e9f20f5b6f9cdd45b6f5c2d283'
   else
-    version '3.15.0.1'
-    sha256 '26aba2d8098096bcef32fa48b2ba48c1c6a3f16560f59a7b951f5a9d6cf98f7e'
+    version '3.15.0.2'
+    sha256 'f86d9479026a731ef682707fe4a1372d0c1aae09bd81f5c1a564c3fa934d2858'
   end
 
   # sourceforge.net is the official download host per the vendor homepage
