@@ -2,7 +2,7 @@ cask 'aliwangwang' do
   version '3.5.0-4428'
   sha256 'b1ea86f576833084c17ba1d6d66dc31e7941e239cc4474fe9d61e473169c434e'
 
-  # alicdn.com is the official download host per the vendor homepage
+  # dbison.alicdn.com was verified as official when first introduced to the cask
   url "https://dbison.alicdn.com/updates/macww-nosandbox-#{version}.dmg"
   appcast 'https://update.labs.etao.com/macww/updates.xml',
           checkpoint: '7178027350d87155dbcf2f2ebcc454262ae5d807fdf75f3688003ea5fccdb1b1'
