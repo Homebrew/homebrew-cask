@@ -2,7 +2,7 @@ cask 'axure-rp-pro' do
   version :latest
   sha256 :no_check
 
-  # cachefly.net is the official download host per the vendor homepage
+  # axure.cachefly.net was verified as official when first introduced to the cask
   url 'https://axure.cachefly.net/AxureRP-Pro-Setup.dmg'
   name 'Axure RP'
   homepage 'https://www.axure.com/'
