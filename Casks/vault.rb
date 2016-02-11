@@ -1,6 +1,6 @@
 cask 'vault' do
-  version '0.4.1'
-  sha256 'cdf4f8bb863550e6b29aa44254ed00968f69c9e6b7e9e8c83d70151fe905bd99'
+  version '0.5.0'
+  sha256 '8f5ca5927f876737566a23442f098afa1ed3dc9d5b238c3c8f7563e06ab6c64c'
 
   # hashicorp.com is the official download host per the vendor homepage
   url "https://releases.hashicorp.com/vault/#{version}/vault_#{version}_darwin_amd64.zip"
