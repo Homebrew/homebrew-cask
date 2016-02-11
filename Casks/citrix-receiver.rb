@@ -1,9 +1,8 @@
 cask 'citrix-receiver' do
-  version :latest
-  sha256 :no_check
+  version '12.1'
+  sha256 '86d376b1b3fdf3a5b53c1c9129b2cbf11087e0c190514a3da24c4f69aa8fa150'
 
-  # edgesuite.net is the official download host per the vendor homepage
-  url 'http://downloadplugins.citrix.com.edgesuite.net/Mac/CitrixReceiverWeb.dmg'
+  url "https://downloads.citrix.com/10820/CitrixReceiver#{version}.dmg?__gda__=1455232474_2e6dd1faf0ad4d99a5361e3ea75af357"
   name 'Citrix Receiver'
   homepage 'https://www.citrix.com/receiver'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
