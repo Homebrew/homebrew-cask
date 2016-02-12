@@ -71,13 +71,13 @@ In addition, if you haven’t yet, run the following once to [switch to the new 
 $ brew uninstall --force brew-cask; brew update
 ```
 
-Finally, if it's been a while since you last updated Homebrew-Cask, you may still have the old `phinze/cask` tap installed. Run the following to clean up, then try your command again:
+If it's been a while since you last updated Homebrew-Cask, you may still have the old `phinze/cask` tap installed. Run the following to clean up, then try your command again:
 
 ```bash
 $ brew untap phinze/cask; brew untap caskroom/cask; brew update
 ```
 
-If the issue persists, please use our [bug report template][bug_report_template] to report the output of running the problematic command with the `--verbose` flag, along with the output of `brew cask doctor`.
+Finally, if the issue persists, please use our [bug report template][bug_report_template] to report the output of running the problematic command with the `--verbose` flag, along with the output of `brew cask doctor`.
 
 ## License
 Code is under the [BSD 2 Clause (NetBSD) license](LICENSE)
