@@ -71,7 +71,7 @@ In addition, if you haven’t yet, run the following once to [switch to the new 
 $ brew uninstall --force brew-cask; brew update
 ```
 
-Finally, if it's been a while since you last updated Homebrew-Cask, you may still have the old `phinze/cask` tap installed. Run the following to clean up, then try your command again:
+If it's been a while since you last updated Homebrew-Cask, you may still have the old `phinze/cask` tap installed. Run the following to clean up, then try your command again:
 
 ```bash
 $ brew untap phinze/cask; brew untap caskroom/cask; brew update
