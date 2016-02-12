@@ -8,4 +8,8 @@ cask 'geneious' do
   license :commercial
 
   app 'Geneious.app'
+  
+  caveats do
+    depends_on_java('6')
+  end
 end
