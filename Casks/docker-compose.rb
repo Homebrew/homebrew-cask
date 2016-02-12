@@ -2,7 +2,7 @@ cask 'docker-compose' do
   version '1.6.0'
   sha256 '1c0f652a061e32b1acabf1741b255b22702b575ffc6f8e8fae91e9888c96edfc'
 
-  # github.com is the official download host per the vendor homepage
+  # github.com/docker/compose was verified as official when first introduced to the cask
   url "https://github.com/docker/compose/releases/download/#{version}/docker-compose-Darwin-x86_64"
   appcast 'https://github.com/docker/compose/releases.atom',
           checkpoint: '39024892fb12271c05fcd403bb07be01ab1f259d0ba6409a2c9537e0140a3b20'
