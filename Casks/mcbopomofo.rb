@@ -9,5 +9,5 @@ cask 'mcbopomofo' do
 
   installer manual: 'McBopomofoInstaller.app'
 
-  zap delete: '~/Library/Input Methods/McBopomofo.app'
+  uninstall delete: '~/Library/Input Methods/McBopomofo.app'
 end
