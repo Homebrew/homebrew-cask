@@ -1,10 +1,10 @@
 cask 'docker' do
-  version '1.10.0'
-  sha256 'f8dc0c7ef2a7efbe0e062017822066e55a40c752b9e92a636359f59ef562d79f'
+  version '1.10.1'
+  sha256 '206da6eb979f7d06ca4c9c9f07f825ec3a0759a5aa3abee3c101c555aa493787'
 
   url "https://get.docker.com/builds/Darwin/x86_64/docker-#{version}"
   appcast 'https://github.com/docker/docker/releases.atom',
-          checkpoint: '6f0904fe8a632ba9adba98b66ff6af7e64bb8575a2fb3b494d9a0797377fe496'
+          checkpoint: '7f6fe11ddf41d2f66badd6744e712f48b91a34bc99a48554f426083046412989'
   name 'Docker Engine Client'
   homepage 'https://docs.docker.com/engine/userguide/'
   license :apache
