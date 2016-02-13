@@ -1,6 +1,6 @@
 cask 'fish' do
-  version '2.1.1'
-  sha256 '257c112d1d200b8a4af556678fea62be286be76e96db5abe626fac0182870997'
+  version '2.2.0'
+  sha256 '8e430d1cadec82aa0c3c757ec6ee24abc18aa5d432ccf435dd9f8a58588970bc'
 
   url "http://fishshell.com/files/#{version}/fish.pkg"
   name 'Fish Shell'

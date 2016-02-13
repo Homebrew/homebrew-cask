@@ -1,10 +1,11 @@
 cask 'radiant-player' do
-  version '1.6.2'
-  sha256 '41fe94faeb571c0393a80751b15fa86b73906ada515b3c12dbd71353b4426429'
+  version '1.7.0'
+  sha256 'f039f0686becb15cd48d8c5c4bb3996539d3cad91ce3f8493e09e14ba1e34374'
 
+  # github.com/radiant-player/radiant-player-mac was verified as official when first introduced to the cask
   url "https://github.com/radiant-player/radiant-player-mac/releases/download/v#{version}/radiant-player-v#{version}.zip"
   appcast 'https://github.com/radiant-player/radiant-player-mac/releases.atom',
-          checkpoint: 'fd476d1c9ce75b9b33de45259ccd6f45095ef5e0702219333edccd6aac6a06ab'
+          checkpoint: '696e99f5a05ecf176d8a45185cfa2d7f4cadd462aec5a23554a6c66c01d3b055'
   name 'Radiant Player'
   homepage 'https://radiant-player.github.io/radiant-player-mac/'
   license :mit

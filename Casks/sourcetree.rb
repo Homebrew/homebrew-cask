@@ -15,6 +15,8 @@ cask 'sourcetree' do
   homepage 'https://www.sourcetreeapp.com/'
   license :gratis
 
+  auto_updates true
+
   app 'SourceTree.app'
   binary 'SourceTree.app/Contents/Resources/stree'
 

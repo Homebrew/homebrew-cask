@@ -2,7 +2,7 @@ cask 'osxfuse' do
   version '2.8.3'
   sha256 'b0f05fa6e74372b73417e89bfd103a46a0b968239f03832755e424bec09051e6'
 
-  # sourceforge.net is the official download host per the vendor homepage
+  # sourceforge.net/project/osxfuse was verified as official when first introduced to the cask
   url "http://downloads.sourceforge.net/project/osxfuse/osxfuse-#{version}/osxfuse-#{version}.dmg"
   name 'OSXFUSE'
   homepage 'https://osxfuse.github.io/'

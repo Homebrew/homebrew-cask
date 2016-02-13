@@ -16,6 +16,8 @@ cask 'witch' do
   homepage 'https://manytricks.com/witch/'
   license :commercial
 
+  auto_updates true
+
   prefpane 'Witch.prefPane'
 
   zap delete: '~/Library/Preferences/com.manytricks.Witch.plist'

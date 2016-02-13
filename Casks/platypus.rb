@@ -1,13 +1,15 @@
 cask 'platypus' do
-  version '5.0'
-  sha256 'a14c9f2360feff9f07d5db5eeee238fbc602dccf574c3ebd1ce875fede43bdb1'
+  version '5.1'
+  sha256 '14a3595cc4e61f3e4e3051ddd0dde813119b6d2d2f19fa6271c259320b5b9d17'
 
   url "http://sveinbjorn.org/files/software/platypus/platypus#{version}.zip"
   appcast 'http://www.sveinbjorn.org/files/appcasts/PlatypusAppcast.xml',
-          checkpoint: 'f914f92e7f1f83a2d1d3e5e7e53a4aa8b5c54acc454c223415d5705e04f45f15'
+          checkpoint: 'b94ebed3f158d89018eed4d08e74323dcae50bc9e0273804a84c24899cd29e9d'
   name 'Platypus'
   homepage 'http://sveinbjorn.org/platypus'
   license :bsd
+
+  auto_updates true
 
   app "Platypus-#{version}/Platypus.app"
 end

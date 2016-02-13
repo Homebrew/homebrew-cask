@@ -2,7 +2,7 @@ cask 'airtool' do
   version '1.2.2'
   sha256 'faa93364724f3544be52f4bec04836a58cc63fd94b6b6f03424058c4e61ee076'
 
-  # amazonaws.com is the official download host per the vendor homepage
+  # amazonaws.com/adriangranados was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/adriangranados/airtool_#{version}.pkg"
   appcast 'https://www.adriangranados.com/appcasts/airtoolcast.xml',
           checkpoint: '9744ed49ec6bf20d5eb90bdc0fffdc79383f4660a6ba22effd4399b5297feb36'

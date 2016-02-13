@@ -9,6 +9,7 @@ cask 'resolutionator' do
   homepage 'https://manytricks.com/resolutionator/'
   license :gratis
 
+  auto_updates true
   depends_on macos: '>= :mountain_lion'
 
   app 'Resolutionator.app'

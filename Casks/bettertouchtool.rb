@@ -3,7 +3,7 @@ cask 'bettertouchtool' do
     version '0.939'
     sha256 'fad5e9d36259c379bdb33188cf15d179fd9ff73023035c98f5734e7e3e13bb75'
 
-    # bettertouchtool.com is the official download host per the vendor homepage
+    # bettertouchtool.net was verified as official when first introduced to the cask
     url "https://bettertouchtool.net/btt#{version}.zip"
 
     license :gratis

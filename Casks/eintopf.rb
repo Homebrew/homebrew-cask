@@ -1,11 +1,11 @@
 cask 'eintopf' do
-  version '1.2.0'
-  sha256 'a4484461049d7751309f757aca4d14ef8edeb478cc297d490c559eb3f6931d84'
+  version '1.2.1'
+  sha256 '0dd958d2bb1f6cf34b771fa0e81ac675ae32b37a02998b291d2fe16aa7e2cdd2'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/mazehall/eintopf/releases/download/#{version}/eintopf_#{version}-x64.dmg"
   appcast 'https://github.com/mazehall/eintopf/releases.atom',
-          checkpoint: 'c882e86a3d473fba193ff78e1e46cb74d81eb77ef5b0fff428001c93c440c84c'
+          checkpoint: 'f347573bfec651714fbcd749b0d3a09a497f1f224d2175b1fd2778433a244f52'
   name 'Eintopf'
   homepage 'https://eintopf.io'
   license :mit

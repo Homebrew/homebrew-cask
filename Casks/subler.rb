@@ -10,6 +10,8 @@ cask 'subler' do
   homepage 'https://subler.org/'
   license :gpl
 
+  auto_updates true
+
   app 'Subler.app'
 
   zap delete: [

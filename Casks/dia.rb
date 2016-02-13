@@ -2,7 +2,7 @@ cask 'dia' do
   version '0.97.2-7'
   sha256 '9d3038c01347716800688830eaf52204deb78affe74a5f0c6e0a48fd414d44be'
 
-  # sourceforge.net is the official download host per the vendor homepage
+  # sourceforge.net/dia-installer/dia was verified as official when first introduced to the cask
   url "http://downloads.sourceforge.net/dia-installer/dia/#{version.sub(%r{-.*}, '')}/Dia-#{version}.dmg"
   name 'Dia'
   homepage 'http://dia-installer.de/'

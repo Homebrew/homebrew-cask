@@ -1,6 +1,6 @@
 cask 'icecat' do
-  version '38.5.2'
-  sha256 '87792c64b4b1e815db3c95406dcae3920932c76dd51ed678112e4fcdc3cd6e2b'
+  version '38.6.0'
+  sha256 '13e9146814ca4ec728b9cb54496d58a5021221a7708d8e3da24e095b1f51bd5f'
 
   url "https://ftp.gnu.org/gnu/gnuzilla/#{version}/icecat-#{version}.en-US.mac64.dmg"
   name 'IceCat'

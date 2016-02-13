@@ -2,7 +2,7 @@ cask 'chefdk' do
   version '0.10.0-1'
   sha256 '8d2b7f1dfde97e8120393288bb230547fc80e9cca518afcec46026c5288a5952'
 
-  # amazonaws is the official download host per the vendor homepage
+  # opscode-omnibus-packages.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.11/x86_64/chefdk-#{version}.dmg"
   name 'Chef Development Kit'
   name 'ChefDK'
@@ -11,7 +11,7 @@ cask 'chefdk' do
 
   pkg "chefdk-#{version}.pkg"
 
-  # When updating this formula, please verify the list of paths to delete (and
+  # When updating this cask, please verify the list of paths to delete (and
   # add to it if necessary):
   #  find /usr/local/bin -lname '/opt/chefdk/*'
   # (Source: https://docs.chef.io/install_dk.html#mac-os-x)

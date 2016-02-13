@@ -9,6 +9,8 @@ cask 'moom' do
   homepage 'https://manytricks.com/moom/'
   license :commercial
 
+  auto_updates true
+
   app 'Moom.app'
 
   zap delete: [

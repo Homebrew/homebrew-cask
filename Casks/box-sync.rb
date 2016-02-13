@@ -2,7 +2,7 @@ cask 'box-sync' do
   version :latest
   sha256 :no_check
 
-  # boxcdn.net is the official download host per the vendor homepage
+  # boxcdn.net was verified as official when first introduced to the cask
   url 'https://e3.boxcdn.net/box-installers/sync/Sync+4+External/Box%20Sync%20Installer.dmg'
   name 'Box Sync'
   homepage 'https://sites.box.com/sync4/'

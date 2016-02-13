@@ -9,5 +9,7 @@ cask 'name-mangler' do
   homepage 'https://manytricks.com/namemangler/'
   license :freemium
 
+  auto_updates true
+
   app 'Name Mangler.app'
 end

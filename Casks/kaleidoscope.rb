@@ -9,6 +9,8 @@ cask 'kaleidoscope' do
   homepage 'http://www.kaleidoscopeapp.com/'
   license :commercial
 
+  auto_updates true
+
   app 'Kaleidoscope.app'
   binary 'Kaleidoscope.app/Contents/Resources/bin/ksdiff'
 

@@ -3,7 +3,7 @@ cask '1password' do
     version '3.8.22'
     sha256 '3afd75f1bddf791dc7dbc9a7d92ab6eb91ee891407d750cedb7b5aff5fe8bf17'
 
-    # cloudfront.net is the official download host per the vendor homepage
+    # d13itkw33a7sus.cloudfront.net was verified as official when first introduced to the cask
     url "https://d13itkw33a7sus.cloudfront.net/dist/1P/mac/1Password-#{version}.zip"
 
     app '1Password.app'
@@ -11,15 +11,15 @@ cask '1password' do
     version '4.4.3'
     sha256 '6657fc9192b67dde63fa9f67b344dc3bc6b7ff3e501d3dbe0f5712a41d8ee428'
 
-    # cloudfront.net is the official download host per the vendor homepage
+    # d13itkw33a7sus.cloudfront.net was verified as official when first introduced to the cask
     url "https://d13itkw33a7sus.cloudfront.net/dist/1P/mac4/1Password-#{version}.zip"
 
     app "1Password #{version.major}.app"
   else
-    version '6.0.1'
-    sha256 '5e89ae6264f7551f38fab79ad7974048a6b30a60a99d33b8d215f9f9c34ee7a8'
+    version '6.0.2'
+    sha256 '28b79691e3985c15ea34cd0e25987971766cdd478c3cbe276aff476ab16bc922'
 
-    # cloudfront.net is the official download host per the vendor homepage
+    # d13itkw33a7sus.cloudfront.net was verified as official when first introduced to the cask
     url "https://d13itkw33a7sus.cloudfront.net/dist/1P/mac4/1Password-#{version}.zip"
 
     app "1Password #{version.major}.app"

@@ -9,5 +9,7 @@ cask 'time-sink' do
   homepage 'https://manytricks.com/timesink/'
   license :commercial
 
+  auto_updates true
+
   app 'Time Sink.app'
 end
