@@ -13,6 +13,7 @@ cask 'minecraft-server' do
   binary 'minecraft-server'
 
   preflight do
+    # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
     FileUtils.touch "#{staged_path}/minecraft-server"
     minecraft_server = File.open "#{staged_path}/minecraft-server", 'w'
     minecraft_server.puts '#!/bin/bash'
