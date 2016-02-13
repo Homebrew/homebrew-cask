@@ -7,6 +7,6 @@ cask 'blender' do
   homepage 'https://www.blender.org/'
   license :gpl
 
-  app "blender-#{version}-OSX_10.6-x86_64/Blender.app"
-  app "blender-#{version}-OSX_10.6-x86_64/BlenderPlayer.app"
+  app "blender-#{version}-OSX_10.6-x86_64/blender.app"
+  app "blender-#{version}-OSX_10.6-x86_64/blenderplayer.app"
 end
