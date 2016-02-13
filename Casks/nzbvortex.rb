@@ -1,5 +1,5 @@
 cask 'nzbvortex' do
-  version '2.11.10'
+  version '3.2.3'
   sha256 'bef3d0a6297bb4fff98361d4108061b7fff0c8d6ab1f2e2d88a56e67d9fa00b8'
 
   url 'http://www.nzbvortex.com/downloads/NZBVortex.dmg'
