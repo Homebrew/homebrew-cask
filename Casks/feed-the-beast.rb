@@ -2,7 +2,7 @@ cask 'feed-the-beast' do
   version :latest
   sha256 :no_check
 
-  # cursecdn.com is the official download host per the vendor homepage
+  # ftb.cursecdn.com was verified as official when first introduced to the cask
   url 'http://ftb.cursecdn.com/FTB2/launcher/FTB_Launcher.zip'
   name 'Feed the Beast'
   homepage 'http://www.feed-the-beast.com/'
