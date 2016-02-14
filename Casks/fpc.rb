@@ -2,7 +2,7 @@ cask 'fpc' do
   version '2.6.4'
   sha256 '0ae534c83c2cfd25f4bfc856dd54e5f1f89c3f5e5cf7089bd0b62be2f5b9a83b'
 
-  # sourceforge.net is the official download host per the vendor homepage
+  # sourceforge.net/freepascal was verified as official when first introduced to the cask
   url "http://downloads.sourceforge.net/freepascal/fpc-#{version}.intel-macosx.dmg"
   name 'Free Pascal'
   homepage 'http://www.freepascal.org/'
