@@ -1,10 +1,10 @@
 cask 'marked' do
-  version '2.5.4915'
-  sha256 '35f305d124b92724cc7a9140561580949f2d06e0747d4124d860412cb62dbe79'
+  version '2.5.4916'
+  sha256 '57f3c418aecbdbb07828f802c2ed13bc20d5b6fb0d3756540ae174f98168b04c'
 
   url 'http://marked2app.com/download/Marked.zip'
   appcast 'http://abyss.designheresy.com/marked/marked.xml',
-          checkpoint: 'fac95d3b4091df5d80910403d0f78c0944b908a1098642fcb43b332b930c285c'
+          checkpoint: 'f62cde7197f9ed9158949acd45079dabe3de5a8a5ec8633c8d4a116333dd187c'
   name 'Marked'
   homepage 'http://marked2app.com'
   license :commercial
