@@ -1,10 +1,10 @@
 cask 'pester' do
-  version '1.1b20'
-  sha256 'da6dc523e6c1df281ba99a947e30a55c8b2fbacb51110f67bd5a504edf53317e'
+  version '1.1b21'
+  sha256 'a1923d0b330f9e054c1c7215b35322508f03c29294660df9b73bebf6411be283'
 
   url "http://sabi.net/nriley/software/Pester-#{version}.dmg"
   appcast 'http://sabi.net/nriley/software/Pester/updates.xml',
-          checkpoint: '1c4278beca107b0a9be13abbbd1a2bb2b3c09c2e6e83f5465432aa3e55e1ad2c'
+          checkpoint: '80c01b621ac7672ce1866445703e2c11532f79b1c6120aa568b33af0bce9289e'
   name 'Pester'
   homepage 'http://sabi.net/nriley/software/index.html#pester'
   license :bsd
