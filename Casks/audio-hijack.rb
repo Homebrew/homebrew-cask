@@ -1,10 +1,10 @@
 cask 'audio-hijack' do
-  version '3.2.2'
-  sha256 '13258602ddec5de906aa0289b9ead4c3500026248f15c9f51d2e089c2d31ae21'
+  version '3.2.3'
+  sha256 'f4fe5c5bd8cadc03ba940dd52a43e65b99e48eadfae115c81b23b96c9ef183c5'
 
   url 'https://rogueamoeba.com/audiohijack/download/AudioHijack.zip'
   appcast 'https://www.rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&bundleid=com.rogueamoeba.audiohijack3',
-          checkpoint: '88a5345bcaab07cedfd1e619e8ed99c19987d29ec433d928bd9b7a96b93da2be'
+          checkpoint: '0fbaba7942a36504e2e27180648f83864ce020532a49f76673d3ca6a1dbd2a01'
   name 'Audio Hijack'
   homepage 'https://www.rogueamoeba.com/audiohijack/'
   license :commercial
