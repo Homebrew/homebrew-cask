@@ -12,8 +12,8 @@ cask 'appcleaner' do
   app 'AppCleaner.app'
 
   zap delete: [
-                '~/Library/Caches/com.freemacsoft.AppCleaner',
-                '~/Library/Preferences/com.freemacsoft.AppCleaner.plist',
-                '~/Library/Saved Application State/com.freemacsoft.AppCleaner.savedState',
+                '~/Library/Caches/net.freemacsoft.AppCleaner',
+                '~/Library/Preferences/net.freemacsoft.AppCleaner.plist',
+                '~/Library/Saved Application State/net.freemacsoft.AppCleaner.savedState',
               ]
 end
