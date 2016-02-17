@@ -10,5 +10,5 @@ cask 'dropshare' do
   homepage 'https://getdropsha.re/'
   license :commercial
 
-  app 'Dropshare.app'
+  app 'Dropshare 4.app'
 end
