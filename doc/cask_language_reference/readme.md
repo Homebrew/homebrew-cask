@@ -126,7 +126,7 @@ sha256
 
 url
 appcast,
-  :sha256 # shown here as it is required with `appcast`
+  checkpoint: # shown here as it is required with `appcast`
 name
 homepage
 license

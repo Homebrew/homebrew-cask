@@ -1,10 +1,10 @@
 cask 'grandtotal' do
-  version '4.1.5'
-  sha256 '743cc137ab369c8f214fab85753f5b4b0e75a7e82a90995dbfc51e7ff0270a70'
+  version '4.1.6'
+  sha256 'e5999f32d16737d3867f1b22d6cba54f024c83cab0d96f82c2c8b2f0559dbb41'
 
   url "https://mediaatelier.com/GrandTotal4/GrandTotal_#{version}.zip"
   appcast 'https://mediaatelier.com/GrandTotal4/feed.php',
-          checkpoint: '2ad2d018d5f19091c0dd9d6d6f3cbe0eb033ab2dcc8cbfc044d9bf75d33d4859'
+          checkpoint: 'e8ccc71638e5a4177a334d8c1a9a13c14f04382088f93e1e2dee2414560c0a7e'
   name 'GrandTotal'
   homepage 'https://www.mediaatelier.com/GrandTotal4/'
   license :commercial

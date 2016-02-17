@@ -1,6 +1,6 @@
 cask 'logitech-media-server' do
-  version '7.7.5'
-  sha256 '760e4347b84f040710afe3da8e40cf3aefb499003cf9372028a9e84419402305'
+  version '7.8.0'
+  sha256 '1dfe181821c6ebef5bcc53e433cc87f0777ab22b4eab1eec157fe70c1e556523'
 
   # slimdevices.com is the official download host per the vendor homepage
   url "http://downloads.slimdevices.com/LogitechMediaServer_v#{version}/LogitechMediaServer-#{version}.pkg"

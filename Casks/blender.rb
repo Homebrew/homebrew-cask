@@ -7,6 +7,19 @@ cask 'blender' do
   homepage 'https://www.blender.org/'
   license :gpl
 
-  app "blender-#{version}-OSX_10.6-x86_64/Blender.app"
-  app "blender-#{version}-OSX_10.6-x86_64/BlenderPlayer.app"
+  app "blender-#{version}-OSX_10.6-x86_64/blender.app"
+  app "blender-#{version}-OSX_10.6-x86_64/blenderplayer.app"
+  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/blenderwrapper"
+  binary shimscript, target: 'blender'
+
+  preflight do
+    pythonversion = '3.4'
+    File.open(shimscript, 'w') do |f|
+      f.puts '#!/bin/bash'
+      f.puts "export PYTHONHOME=#{staged_path}/blender-#{version}-OSX_10.6-x86_64/blender.app/Contents/Resources/#{version}/python/lib/python#{pythonversion}"
+      f.puts "#{staged_path}/blender-#{version}-OSX_10.6-x86_64/blender.app/Contents/MacOS/blender $@"
+      FileUtils.chmod '+x', f
+    end
+  end
 end
