@@ -3,11 +3,11 @@ cask 'controlplane' do
     version '1.2.3'
     sha256 '37f93d3a3a17a6e2f24447f0bc74c7e89ec1581ca52e5970960544858c86f909'
   else
-    version '1.6.3'
-    sha256 'eadc105a5cbc108200b5acf89e4e78650e58771208d53e3c276fa8fd5c3d14db'
+    version '1.6.4'
+    sha256 '5050f48212390aa7fd4d22677db3a5e1b14db1289ddef52867748a3e1a841ed5'
 
     appcast 'http://www.controlplaneapp.com/appcast.xml',
-            checkpoint: '3f5235e5d5b788336468a8b61b00ecc9c61ae6b38225aa5f47f2ad907298e9e1'
+            checkpoint: 'c9b44eb0ea2d2c7dd1cde14d60fd00a7cf8b4b6bc5b7b5b75cc4ec836b43aed3'
   end
 
   url "http://www.controlplaneapp.com/download/#{version}"
