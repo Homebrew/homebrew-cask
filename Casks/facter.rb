@@ -1,6 +1,6 @@
 cask 'facter' do
-  version '2.4.4'
-  sha256 '84212e09e30e174a84ac77227496055f6708eb853fb34a02ad290e6bb4cf9e34'
+  version '2.4.6'
+  sha256 'b90ee538e36c0a9838de60bb78dd132fd60971a71228d222d5106f8f84332817'
 
   url "https://downloads.puppetlabs.com/mac/facter-#{version}.dmg"
   name 'Facter'
