@@ -1,9 +1,9 @@
 cask 'visual-studio-code' do
-  version '0.10.6-release'
-  sha256 '78d333e1e7ae9bffc84fa1c6a0dbc3e8530d85b62c3b318e6687eefec2b3ddf9'
+  version '0.10.9-release'
+  sha256 '45d69357c9eb068dd8e624f5b0fe461cd2078d88'
 
   # vo.msecnd.net is the official download host per the vendor homepage
-  url "https://az764295.vo.msecnd.net/public/#{version}/VSCode-darwin.zip"
+  url "https://az764295.vo.msecnd.net/stable/#{sha256}/VSCode-darwin.zip"
   name 'Microsoft Visual Studio Code'
   name 'VS Code'
   homepage 'https://code.visualstudio.com/'
