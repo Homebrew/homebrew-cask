@@ -8,12 +8,12 @@ cask 'bettertouchtool' do
 
     license :gratis
   else
-    version '1.55'
-    sha256 'ca5abf05ef6f12a1a0a137eeb1fde636d85703b597878ca885f6e3ba5221ebdc'
+    version '1.56'
+    sha256 'f805e9976c235071a982ee5ce3dd40a2b6498f1328d2f6c065552e68fc3266c6'
 
     url "https://boastr.net/releases/btt#{version}.zip"
     appcast 'http://appcast.boastr.net',
-            checkpoint: '2c3dfff592a79367230fde4045616f3b8b4707644e34c00977633e94026903d3'
+            checkpoint: '2af0b4ec634b0086d255ea9715388bf454a9c8d1ad352b0e47ffd5a676b2a0e4'
 
     license :commercial
   end
