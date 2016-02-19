@@ -1,6 +1,6 @@
 cask 'chefdk' do
-  version '0.10.0-1'
-  sha256 '8d2b7f1dfde97e8120393288bb230547fc80e9cca518afcec46026c5288a5952'
+  version '0.11.0-1'
+  sha256 'adb38bb270ae577a43decb938034eec45e6b4dfea4b489bac76be95448b9dbc2'
 
   # opscode-omnibus-packages.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.11/x86_64/chefdk-#{version}.dmg"
@@ -24,15 +24,11 @@ cask 'chefdk' do
                        '/usr/local/bin/chef-client',
                        '/usr/local/bin/chef-shell',
                        '/usr/local/bin/chef-solo',
-                       '/usr/local/bin/chef-zero',
                        '/usr/local/bin/fauxhai',
                        '/usr/local/bin/foodcritic',
                        '/usr/local/bin/kitchen',
                        '/usr/local/bin/knife',
                        '/usr/local/bin/ohai',
                        '/usr/local/bin/rubocop',
-                       '/usr/local/bin/shef',
-                       '/usr/local/bin/strain',
-                       '/usr/local/bin/strainer',
                      ]
 end
