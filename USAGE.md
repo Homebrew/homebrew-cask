@@ -145,9 +145,9 @@ The primary Homebrew-Cask Tap includes most of the Casks that a typical user wil
 
 | Tap name | description |
 | -------- | ----------- |
-| [caskroom/versions](https://github.com/caskroom/homebrew-versions)     | contains alternate versions of Casks (e.g. betas, nightly releases, old versions)
-| [caskroom/fonts](https://github.com/caskroom/homebrew-fonts)           | contains Casks that install fonts, which are kept separate so we can educate users about the different licensing landscape around font installation/usage
-| [caskroom/eid](https://github.com/caskroom/homebrew-eid)           | contains Casks that install electronic identity card software of various countries
+| [caskroom/versions](https://github.com/caskroom/homebrew-versions) | contains alternate versions of Casks (e.g. betas, nightly releases, old versions)
+| [caskroom/fonts](https://github.com/caskroom/homebrew-fonts)       | contains Casks that install fonts, which are kept separate so we can educate users about the different licensing landscape around font installation/usage
+| [caskroom/ied](https://github.com/caskroom/homebrew-ied)           | contains Casks that install electronic identity card software of various countries
 
 You can tap any of the above with a `brew tap` command:
 
