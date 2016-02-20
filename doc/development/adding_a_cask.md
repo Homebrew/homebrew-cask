@@ -201,7 +201,7 @@ Forks should have the vendor’s name as a prefix on the Cask’s file name and 
 
 ### Unofficial, Vendorless, and Walled Builds
 
-Please submit these to [caskroom/homebrew-unofficial](http://github.com/caskroom/homebrew-unofficial). If you’ve made an unofficial build and need a place to host it, contact our sister project [alehouse](https://github.com/alehouse).
+We do not accept these casks since they offer a higher-than-normal security risk. [alehouse/homebrew-unofficial](https://github.com/alehouse/homebrew-unofficial) is a sister repo where you may wish to submit your cask.
 
 ### Fonts
 

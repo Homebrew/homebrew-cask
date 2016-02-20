@@ -3,7 +3,7 @@
 IFS=$'\n'
 
 readonly caskroom_repos_dir='/tmp/caskroom_repos'
-readonly caskroom_repos=(homebrew-cask homebrew-versions homebrew-fonts homebrew-eid homebrew-unofficial)
+readonly caskroom_repos=(homebrew-cask homebrew-versions homebrew-fonts homebrew-eid)
 
 if [[ ! $(which 'ghi') ]] || ! security find-internet-password -s github.com -l 'ghi token' &> /dev/null; then
   echo -e "$(tput setaf 1)
