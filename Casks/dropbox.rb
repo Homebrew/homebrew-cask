@@ -18,5 +18,6 @@ cask 'dropbox' do
                 '~/Library/Caches/com.getdropbox.dropbox',
                 '~/Library/Containers/com.getdropbox.dropbox.garcon',
                 '~/Library/Group Containers/com.getdropbox.dropbox.garcon',
+                '/Library/DropboxHelperTools',
               ]
 end
