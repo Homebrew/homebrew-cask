@@ -3,11 +3,11 @@ cask 'spectacle' do
     version '0.8.6'
     sha256 '3e367d2d7e6fe7d5f41d717d49cb087ba7432624b71ddd91c0cfa9d5a5459b7c'
   else
-    version '1.0.2'
-    sha256 '7c63ebe77cb39fdde04c5bdfb822972e06b4715356127886367822ed5829c4b2'
+    version '1.0.3'
+    sha256 '6686e2b409e1a44db0c1421c06dd8cbf4be9c95dcf7e934552faf5734ccee9b6'
 
     appcast 'https://www.spectacleapp.com/updates/appcast.xml',
-            checkpoint: 'd7f2ed9a0414484b687dede58fdb8c2d774f50a01c35bad593aead7a5fc4dcc3'
+            checkpoint: '7e818cf270c24f8b39a9593afae4fab044c6a885a1ba695d81652e56b27c3320'
   end
 
   # amazonaws.com is the official download host per the vendor homepage
