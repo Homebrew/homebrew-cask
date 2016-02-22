@@ -13,4 +13,14 @@ cask 'nylas-n1' do
   auto_updates true
 
   app 'Nylas N1.app'
+
+  zap delete: [
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nylas.nylas-mail.sfl',
+                '~/Library/Application Support/com.nylas.nylas-mail.ShipIt',
+                '~/Library/Application Support/Nylas N1',
+                '~/Library/Caches/com.nylas.nylas-mail',
+                '~/Library/Caches/Nylas N1',
+                '~/Library/Preferences/com.nylas.nylas-mail.plist',
+                '~/Library/Saved Application State/com.nylas.nylas-mail.savedState',
+              ]
 end
