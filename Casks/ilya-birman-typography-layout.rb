@@ -2,7 +2,7 @@ cask 'ilya-birman-typography-layout' do
   version '3.4.1'
   sha256 'a4d830a490e2dbdc82c8f38e613391aeb62856bae3ed85774e3d939224de8af8'
 
-  url "http://ilyabirman.ru/download/ilya-birman-typolayout-#{version}-mac.dmg"
+  url "http://ilyabirman.ru/projects/typography-layout/download/ilya-birman-typolayout-#{version}-mac.dmg"
   name 'Ilya Birman typography layout'
   homepage 'http://ilyabirman.ru/projects/typography-layout/'
   license :oss

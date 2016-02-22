@@ -1,10 +1,10 @@
 cask 'hyperswitch' do
-  version '0.2.555-dev'
-  sha256 'ed3f8cb1706c9a43df17f1b020d11ea02c49dc3281efbefb72d2b8c593f1d200'
+  version '0.2.563-dev'
+  sha256 '4e13fe57253e93b1fca7d3d088f4cc70c013ea1b3149ce24c92652687a47659b'
 
   url "https://bahoom.com/hyperswitch/#{version}/HyperSwitch.zip"
   appcast 'https://bahoom.com/hyperswitch/appcast.xml',
-          checkpoint: '208dcaff84a5601fb5336b5a89ec5e9f5d19fecee38bfce436f12028f4afdedc'
+          checkpoint: '9c4c83505f3e4a056f0784ae11883f99efc75f750aa525d0191a75f2c04a91c6'
   name 'HyperSwitch'
   homepage 'https://bahoom.com/hyperswitch/'
   license :gratis

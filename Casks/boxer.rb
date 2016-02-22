@@ -1,11 +1,11 @@
 cask 'boxer' do
-  version '1.3.2-20120713'
-  sha256 'e96bd463d185d7d6a6f670b3d498ffa61c6f4ae226a535bfa24bad95faea21a1'
+  version '1.4.0'
+  sha256 'a75f9149612f90fa78f1016a6edef34ed600334f7170d624b083a310ae4c904e'
 
-  # github.com/downloads/alunbestor/Boxer was verified as official when first introduced to the cask
-  url "https://github.com/downloads/alunbestor/Boxer/boxer-#{version}.1.zip"
+  # github.com/alunbestor/Boxer was verified as official when first introduced to the cask
+  url "https://github.com/alunbestor/Boxer/releases/download/v#{version}/boxer-#{version}.zip"
   appcast 'http://boxerapp.com/appcast',
-          checkpoint: '32266a266d972174dbe91c9c840460bee8a734486ff7289ac38adb11dd66e058'
+          checkpoint: 'a8d19705429ced354ead57abc45060f504368fd7def6038fb2f54e77a8a22c21'
   name 'Boxer'
   homepage 'http://boxerapp.com/'
   license :gpl

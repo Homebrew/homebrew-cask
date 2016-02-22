@@ -4,7 +4,7 @@ cask 'borgbackup' do
 
   url "https://github.com/borgbackup/borg/releases/download/#{version}/borg-macosx64"
   appcast 'https://github.com/borgbackup/borg/releases.atom',
-          checkpoint: '3a1f90365ac69b9ddfff6d162927b9a3ce9b42d176f5adf467e3b7378dd69909'
+          checkpoint: 'aa2777f9a7969845e2719c9b8d50ca70819486c59701b9c23035dfabddc62832'
   name 'BorgBackup'
   homepage 'https://borgbackup.readthedocs.org/en/stable/'
   license :bsd
