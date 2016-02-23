@@ -9,7 +9,7 @@ cask 'apogee-duet' do
 
   depends_on macos: '>= :mavericks'
 
-  pkg 'Duet.pkg'
+  pkg 'Duet Software Installer.pkg'
 
   uninstall pkgutil: 'com.apogee.pkg.*'
 
