@@ -7,7 +7,7 @@ cask 'studiolinkstandalone' do
   appcast 'https://github.com/Studio-Link-v2/backend/releases.atom',
           checkpoint: '9afde3059f8be79f95dee629fe161573f616d6eb9f39e22f13ac2ec9bd9f56f0'
   name 'Studio Link Standalone'
-  homepage 'https://doku.studio-link.de/plugin/installation-plugin.html'
+  homepage 'https://doku.studio-link.de/standalone/installation-standalone.html'
   license :bsd
 
   app 'StudioLinkStandalone.app'
