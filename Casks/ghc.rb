@@ -1,11 +1,11 @@
 cask 'ghc' do
-  version '7.10.2-r0'
-  sha256 'b581a90ca6b6cf3c6f94304aac8b9018d95fa15e7b18c168efa434def1a249e5'
+  version '7.10.3-r0'
+  sha256 '51080b4c4df722497ec5e48138fff2f461e2eee32539889fdedf99b16f485096'
 
   # github.com/ghcformacosx/ghc-dot-app was verified as official when first introduced to the cask
   url "https://github.com/ghcformacosx/ghc-dot-app/releases/download/v#{version}/ghc-#{version}.zip"
   appcast 'https://github.com/ghcformacosx/ghc-dot-app/releases.atom',
-          checkpoint: '135574a1f7a6be02316f69400e55e467d1b9daec428ec380942efd791f387c23'
+          checkpoint: '9de76eb2e6ad24851c66c3f4c1ecd28a484755d2712630ebff0d957b7e1d60e5'
   name 'GHC'
   homepage 'https://ghcformacosx.github.io/'
   license :oss
