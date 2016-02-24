@@ -3,14 +3,14 @@ cask 'sourcetree' do
     version '1.8.1'
     sha256 '37a42f2d83940cc7e1fbd573a70c3c74a44134c956ac3305f6b153935dc01b80'
   else
-    version '2.2'
-    sha256 'bec6a371c144c7733e3b706b12b7533459fd8884021339c636e37e17a9d6ad22'
+    version '2.2.2'
+    sha256 'c78e51115f7438198ac547f924417af93eed440c22428c6260553c252a1e33b3'
   end
 
   # atlassian.com is the official download host per the vendor homepage
   url "https://downloads.atlassian.com/software/sourcetree/SourceTree_#{version}.dmg"
   appcast 'https://www.sourcetreeapp.com/update/SparkleAppcast.xml',
-          checkpoint: 'd1b4f4cb63aafd67821535900087ded0bc91e5261c9f2291c2b5904ca451ae6b'
+          checkpoint: '0ed548e55a55471e451ed92017bee7b40ff9f2d7b6ef4edcba0abb4eeac207de'
   name 'Atlassian SourceTree'
   homepage 'https://www.sourcetreeapp.com/'
   license :gratis

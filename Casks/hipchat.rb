@@ -1,6 +1,6 @@
 cask 'hipchat' do
-  version '4.0.3-519'
-  sha256 '35ce7608f3b0f4276c02caa74af5df4a71c356b8360f32e587b73e7647cd3189'
+  version '4.0.4-539'
+  sha256 '6a781bfb7ebb89dbf4aa299e6d291f1f4de0a8b604521c316cd4e41a0fdbff75'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/downloads.hipchat.com/osx/HipChat-#{version}.zip"

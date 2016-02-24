@@ -1,11 +1,11 @@
 cask 'redis' do
-  version '3.0.7-build.1'
-  sha256 'c0a94b34f913f40cf595dd3b954ab6949ad98c1a83d0b79fa1c95e6ec8366847'
+  version '3.0.7-build.2'
+  sha256 'df9e7b0202a3c8ba7a68688580452875814e4f3ec9f2cc6521cd8786832b11f7'
 
   # github.com/jpadilla/redisapp was verified as official when first introduced to the cask
   url "https://github.com/jpadilla/redisapp/releases/download/#{version}/Redis.zip"
   appcast 'https://github.com/jpadilla/redisapp/releases.atom',
-          checkpoint: '108664e2e870fcb286105d432b866666d4ebca39783f2d179ce9a9bab883a39d'
+          checkpoint: 'ae15c3ec4aaf960ca647527ad0e8447c5edb1c3b3ece4784bd4da45d43eafc9e'
   name 'Redis'
   homepage 'https://jpadilla.github.io/redisapp/'
   license :mit
