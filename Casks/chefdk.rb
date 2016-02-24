@@ -1,6 +1,6 @@
 cask 'chefdk' do
-  version '0.11.0-1'
-  sha256 'adb38bb270ae577a43decb938034eec45e6b4dfea4b489bac76be95448b9dbc2'
+  version '0.11.2-1'
+  sha256 '56899eab322cacac7f445a24d3159af34fccb5910642f4535eff4ee47321fe56'
 
   # opscode-omnibus-packages.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.11/x86_64/chefdk-#{version}.dmg"
