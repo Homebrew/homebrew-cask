@@ -8,4 +8,9 @@ cask 'emacs' do
   license :oss
 
   app 'Emacs.app'
+  binary 'Emacs.app/Contents/MacOS/bin/emacsclient', target: 'emacsclient'
+  binary 'Emacs.app/Contents/MacOS/bin/ctags', target: 'ctags'
+  binary 'Emacs.app/Contents/MacOS/bin/grep-changelog', target: 'grep-changelog'
+  binary 'Emacs.app/Contents/MacOS/bin/ebrowse', target: 'ebrowse'
+  binary 'Emacs.app/Contents/MacOS/bin/etags', target: 'etags'
 end
