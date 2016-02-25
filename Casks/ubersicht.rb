@@ -10,4 +10,11 @@ cask 'ubersicht' do
   license :gpl
 
   app 'Übersicht.app'
+
+  zap delete: [
+                '~/Library/Application Support/tracesOf.Uebersicht',
+                '~/Library/Application Support/Übersicht',
+                '~/Library/Caches/tracesOf.Uebersicht',
+                '~/Library/Preferences/tracesOf.Uebersicht.plist',
+              ]
 end
