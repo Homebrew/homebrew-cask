@@ -1,6 +1,6 @@
 cask 'wxdebugger' do
-  version '0.2.0,20160122'
-  sha256 '84a3af9a7752f5e9b2f04733a95ccf3b17a1306af665eb95e0ece94124d4d792'
+  version '0.3.0,20160222'
+  sha256 '69aea6832240dad7ac01af39d81a20969fe5289742e7613adf9120a7ddfbd2a0'
 
   url "http://dldir1.qq.com/WechatWebDev/#{version.after_comma}/wxdebugger_#{version.before_comma}.dmg"
   name 'wxdebugger'
