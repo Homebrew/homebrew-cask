@@ -9,6 +9,8 @@ cask 'sizeup' do
   homepage 'https://www.irradiatedsoftware.com/sizeup/'
   license :commercial
 
+  accessibility_access true
+
   app 'SizeUp.app'
 
   zap delete: [
