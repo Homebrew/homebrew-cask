@@ -1,10 +1,10 @@
 cask 'ivpn' do
-  version '7.4.1'
-  sha256 'b1e1803fe7b2f1232a3bfc4c5fddd682cc92d147ab57cab48f6391358716df2c'
+  version '7.4.2'
+  sha256 '1b3bf872999aa88f98451420f0fc00f6c3926fa7e58bea99d37508d89b915a4d'
 
   url "https://macserve.org.uk/downloads/ivpn/iVPN_#{version}.zip"
   appcast 'http://macserve.org.uk:8090/profileInfo.php',
-          checkpoint: '7184e0158d170544ee95a29762c4aa6fe0f96782862894814c0832ac91d7fba9'
+          checkpoint: 'fe87e733a838d6bfe7bc43484f914dc489ea595ad40c61e85bd376cf3ad8945a'
   name 'iVPN'
   homepage 'https://macserve.org.uk/projects/ivpn/'
   license :commercial
