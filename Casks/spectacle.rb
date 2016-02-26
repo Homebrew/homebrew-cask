@@ -16,6 +16,8 @@ cask 'spectacle' do
   homepage 'https://spectacleapp.com/'
   license :mit
 
+  accessibility_access true
+
   app 'Spectacle.app'
 
   uninstall login_item: 'Spectacle'
