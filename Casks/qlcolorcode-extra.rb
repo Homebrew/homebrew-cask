@@ -1,6 +1,6 @@
 cask 'qlcolorcode-extra' do
   version :latest
-  sha256 "387db591a94ad8e1ff438b93aeae3433b0ac850e969b27a1d74cbcb4f7004b6a"
+  sha256 :no_check
 
   url "https://github.com/BrianGilbert/QLColorCode-extra/archive/master.zip"
   name 'QLColorCode-extra'
