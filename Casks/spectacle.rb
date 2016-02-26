@@ -15,7 +15,7 @@ cask 'spectacle' do
   name 'Spectacle'
   homepage 'https://spectacleapp.com/'
   license :mit
-  
+
   accessibility_access true
 
   app 'Spectacle.app'

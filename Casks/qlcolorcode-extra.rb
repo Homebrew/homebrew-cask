@@ -2,7 +2,7 @@ cask 'qlcolorcode-extra' do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/BrianGilbert/QLColorCode-extra/archive/master.zip"
+  url 'https://github.com/BrianGilbert/QLColorCode-extra/archive/master.zip'
   name 'QLColorCode-extra'
   homepage 'https://github.com/BrianGilbert/QLColorCode-extra/'
   license :oss
