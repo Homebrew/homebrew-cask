@@ -1,11 +1,11 @@
 cask 'cloudfoundry-cli' do
-  version '6.16.0'
-  sha256 '5a6d5c231a1e89783ac756ff1af01fa740544a74c26d3053dec5c130bc307844'
+  version '6.16.1'
+  sha256 'b949e6412ea19c63ad2e18b47d406f2a76329a7233da206c6c2fdebc24292e49'
 
   # go-cli.s3-website-us-east-1.amazonaws.com was verified as official when first introduced to the cask
   url "http://go-cli.s3-website-us-east-1.amazonaws.com/releases/v#{version}/cf-cli-installer_#{version}_osx.pkg"
   appcast 'https://github.com/cloudfoundry/cli/releases.atom',
-          checkpoint: '1a10c380a1ebc2e415fb7e3a34f9c4ae4712bd06a670efb39f3a6a45f38a2c91'
+          checkpoint: '4496f341b3beef3dca4d0a1b358f2607a0122bcfb99eba29c72b65efaafb9d04'
   name 'Cloud Foundry CLI'
   homepage 'https://github.com/cloudfoundry/cli'
   license :apache
