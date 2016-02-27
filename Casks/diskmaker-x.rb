@@ -4,7 +4,7 @@ cask 'diskmaker-x' do
 
   url "http://diskmakerx.com/downloads/DiskMaker_X_#{version.no_dots}.dmg"
   appcast 'http://diskmakerx.com/feed/',
-          checkpoint: '65c41b1c32cf72f4cccd0f467d903ed768dedc407936bf1a64ec90764deb7da1'
+          checkpoint: '5d051b2e28d20d4aac4f16feabb309616b1a4279251b23e3fa167ad8bb914630'
   name 'DiskMaker X'
   homepage 'http://diskmakerx.com/'
   license :gratis
