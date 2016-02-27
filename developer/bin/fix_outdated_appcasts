@@ -2,8 +2,11 @@
 
 IFS=$'\n'
 
+readonly caskroom_online='https://github.com/caskroom'
 readonly caskroom_repos_dir='/tmp/caskroom_repos'
-readonly caskroom_repos=(homebrew-cask homebrew-versions homebrew-fonts homebrew-eid)
+readonly caskroom_repos=(homebrew-eid homebrew-fonts homebrew-versions homebrew-cask)
+outdated_appcasts_issue_number=''
+outdated_appcasts=()
 
 if [[ ! $(which 'ghi') ]] || ! security find-internet-password -s github.com -l 'ghi token' &> /dev/null; then
   echo -e "$(tput setaf 1)
@@ -26,6 +29,20 @@ function message {
   echo "${1}"
 }
 
+function error_message {
+  local error_message="${1}"
+
+  echo -e "\n$(tput setaf 1)$(message "${error_message}")$(tput sgr0)\n"
+}
+
+function abort {
+  message "Stopping script and updating issue…"
+  update_outdated_appcasts_issue
+  exit 1
+}
+
+trap 'abort' SIGINT # cleanup if aborted with ⌃C
+
 function go_to_repos_dir {
   [[ ! -d "${caskroom_repos_dir}" ]] && mkdir -p "${caskroom_repos_dir}"
   cd "${caskroom_repos_dir}" || exit 1
@@ -42,7 +59,7 @@ function go_to_repo_and_update {
     go_to_repos_dir
 
     message "Cloning ${repo_name}…"
-    git clone "https://github.com/caskroom/${repo_name}.git" --quiet
+    git clone "${caskroom_online}/${repo_name}.git" --quiet
 
     cd "${casks_dir}" || exit 1
   else
@@ -53,26 +70,95 @@ function go_to_repo_and_update {
   fi
 }
 
+function set_outdated_appcasts_issue_number {
+  outdated_appcasts_issue_number="$(ghi list --state open --no-pulls --label 'outdated appcast' | tail -1 | perl -pe 's/^\s+(\d+).*/\1/')"
+}
+
+function issue_text_to_outdated_appcasts {
+  local issue_number issue_text outdated_appcasts_list
+
+  issue_number="${1}"
+
+  issue_text="$(ghi show "${issue_number}" | tail +5 | sed -E '/^[[:digit:]]+ comments?:$/,$d')"
+  outdated_appcasts_list="$(perl -pe 's/^\s+//;s/\n//;s/\+/\n+/g' <<< "${issue_text}" | sed '/^$/d')" # fixes formatting
+
+  for line in ${outdated_appcasts_list}; do
+    outdated_appcasts+=("${line}")
+  done
+}
+
+function exists_outdated_appcast_issue {
+  [[ "$(ghi list --state open --no-pulls --label 'outdated appcast' | tail -1)" != 'None.' ]]
+}
+
+function is_outdated_appcasts_issue_assigned {
+  [[ "$(ghi show "${outdated_appcasts_issue_number}" | grep 'is assigned.')" ]]
+}
+
+function issue_assignment {
+  local assignment_type issue_number
+
+  assignment_type="${1}"
+  issue_number="${2}"
+
+  if [[ "${assignment_type}" == 'unassign' ]]; then
+    ghi assign --no-assignee "${issue_number}" 1>/dev/null
+  elif [[ "${assignment_type}" == 'assign_self' ]]; then
+    ghi assign "${issue_number}" 1>/dev/null
+  fi
+}
+
+function update_outdated_appcasts_issue {
+  local message_text
+
+  message_text="$(echo 'List of outdated appcasts' && printf '%s\n' "${outdated_appcasts[@]}")"
+
+  if [[ "${#outdated_appcasts[@]}" -eq 0 ]]; then
+    ghi close "${outdated_appcasts_issue_number}" 1>/dev/null
+    message 'All done. Closed issue.'
+  else
+    ghi edit --message "${message_text}" "${outdated_appcasts_issue_number}" 1>/dev/null
+  fi
+
+  issue_assignment unassign "${outdated_appcasts_issue_number}"
+}
+
 function fix_outdated_appcasts {
-  local issue_number cask_name pr_number
+  local cask_name
 
-  for line in $(ghi list --state open --no-pulls --label 'outdated appcast' --reverse | tail -n +2); do
-    [[ "${line}" == 'None.' ]] && break # exit early if there are no relevant issues in repo
+  for line in "${outdated_appcasts[@]}"; do
+    cask_name="$(perl -pe 's/^\+ \[([^\]]+)\].*/\1/' <<< "${line}")"
 
-    issue_number="$(awk '{print $1}' <<< "${line}")"
-    cask_name="$(awk '{print $4}' <<< "${line}")"
-
-    cask-repair --pull origin --push origin --open-appcast --closes-issue "${issue_number}" --blind-submit "${cask_name}"
+    cask-repair --pull origin --push origin --open-appcast --blind-submit "${cask_name}"
 
     if [[ "$?" -eq 0 ]]; then
+      # remove first element from array
+      unset outdated_appcasts[0]
+      outdated_appcasts=("${outdated_appcasts[@]}")
+
       pr_number="$(ghi list --pulls --creator | sed -n 2p | awk '{print $1}')"
       ghi edit --label 'outdated appcast' "${pr_number}" &>/dev/null
-      ghi comment --close --message "Closing in favour of #${pr_number}." "${issue_number}" &>/dev/null
     fi
   done
 }
 
 for repo in "${caskroom_repos[@]}"; do
   go_to_repo_and_update "${repo}"
+
+  if exists_outdated_appcast_issue; then
+    set_outdated_appcasts_issue_number
+    if is_outdated_appcasts_issue_assigned; then
+      message 'Another maintainer is already working on this for this repo. Trying next one…'
+      continue
+    else
+      issue_assignment assign_self "${outdated_appcasts_issue_number}"
+    fi
+  else
+    error_message "There’s no issue on this repo listing outdated appcasts."
+    continue
+  fi
+
+  issue_text_to_outdated_appcasts "${outdated_appcasts_issue_number}"
   fix_outdated_appcasts
+  update_outdated_appcasts_issue
 done

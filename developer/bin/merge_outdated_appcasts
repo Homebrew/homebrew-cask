@@ -4,7 +4,7 @@ IFS=$'\n'
 
 readonly caskroom_online='https://github.com/caskroom'
 readonly caskroom_repos_dir='/tmp/caskroom_repos'
-readonly caskroom_repos=(homebrew-cask homebrew-versions homebrew-fonts homebrew-eid)
+readonly caskroom_repos=(homebrew-eid homebrew-fonts homebrew-versions homebrew-cask)
 
 if [[ ! $(which 'ghi') ]] || ! security find-internet-password -s github.com -l 'ghi token' &> /dev/null; then
   echo -e "$(tput setaf 1)
@@ -43,7 +43,7 @@ function go_to_repo_and_update {
     go_to_repos_dir
 
     message "Cloning ${repo_name}…"
-    git clone "https://github.com/caskroom/${repo_name}.git" --quiet
+    git clone "${caskroom_online}/${repo_name}.git" --quiet
 
     cd "${casks_dir}" || exit 1
   else
