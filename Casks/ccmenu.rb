@@ -4,7 +4,7 @@ cask 'ccmenu' do
 
   url "https://github.com/erikdoe/ccmenu/releases/download/v#{version}/CCMenu.app.zip"
   appcast 'https://github.com/erikdoe/ccmenu/releases.atom',
-          checkpoint: '91d810c7e4430bf642184dddf0ee54c47897ca5c23ab5d189467b071d9dad371'
+          checkpoint: 'f044462d834337a16b7a80d3ea038ba44d746890836eb8a9b9db9b6bc053f0e2'
   name 'CCMenu'
   homepage 'http://ccmenu.org/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
