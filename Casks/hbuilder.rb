@@ -2,7 +2,7 @@ cask 'hbuilder' do
   version '6.8.2'
   sha256 '5ed6f94b2a4049971289b46ed0ecabdae186677b5ff35fc8c458a9568c820e02'
 
-  # net.cn is the official download host per the vendor homepage
+  # download.dcloud.net.cn was verified as official when first introduced to the cask
   url "http://download.dcloud.net.cn/HBuilder.#{version}.macosx_64.tar.gz"
   name 'HBuilder'
   homepage 'http://dcloud.io/'

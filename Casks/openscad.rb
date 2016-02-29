@@ -1,6 +1,6 @@
 cask 'openscad' do
   version '2015.03-3'
-  sha256 'f7de286f2f3e5b625946e93ea27f65ecb59b552da1f33b5e29f29e5ddcbce633'
+  sha256 '1f2e8e52e04bbb6d3b2c8699d314d1ca28d2fcf68164eca7d0a20e248cee01a7'
 
   url "http://files.openscad.org/OpenSCAD-#{version}.dmg"
   appcast 'http://files.openscad.org/appcast.xml',

@@ -1,6 +1,6 @@
 cask 'bose-soundtouch' do
-  version '9.0.41.11243'
-  sha256 '3eb78048bc8aa46b9d2613ff28d760fa7e47133384aca74f44aab4bc10c95f8a'
+  version '10.0.13.12393'
+  sha256 'b2bfaee92c30bada8d3e7c28cd829996415b0b0a1560536c8b1caf56b4141f5e'
 
   url "https://worldwide.bose.com/downloads/assets/updates/soundtouch_app-m/SoundTouch-#{version}-osx-10.9-installer.app.dmg"
   name 'Bose Soundtouch Controller App'
