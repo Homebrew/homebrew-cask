@@ -12,6 +12,7 @@ Common reasons to reject a Cask entirely:
 + The app has been rejected before due to an issue we cannot fix, and this new submission doesn’t fix that . An example would be [the first submission of `soapui`](https://github.com/caskroom/homebrew-cask/pull/4939), whose installation problems were not fixed in the two subsequent submissions ([#9969](https://github.com/caskroom/homebrew-cask/pull/9969), [#10606](https://github.com/caskroom/homebrew-cask/pull/10606)).
 + The Cask is a duplicate. These submissions mostly occur when the [token reference](../cask_language_reference/token_reference.md) was not followed.
 + The download URL for the app is both behind a login/registration form and from a host that differs from the homepage, meaning users can’t easily verify its authenticity. [alehouse/homebrew-unofficial](https://github.com/alehouse/homebrew-unofficial) is a sister repo where you may wish to submit your cask.
++ The author has [specifically asked us not to include it](https://github.com/caskroom/homebrew-cask/pull/5342).
 
 Common reasons to reject a Cask from the main repo:
 
