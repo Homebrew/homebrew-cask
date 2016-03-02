@@ -4,7 +4,7 @@ cask 'focus' do
 
   url "https://heyfocus.com/releases/Focus-#{version}.zip"
   appcast 'https://heyfocus.com/appcast.xml',
-          checkpoint: '9256c6667585c7748e52d911502d9b6d17e6ab2be4c87d84af88753a58db1e4c'
+          checkpoint: '250a501501d4e891c7ed828cf8f6f7f3aea2c8609052d0f6dd5919bb3d9892e6'
   name 'Focus'
   homepage 'https://heyfocus.com/'
   license :commercial
