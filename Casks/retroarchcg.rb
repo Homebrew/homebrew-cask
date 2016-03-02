@@ -1,4 +1,4 @@
-cask 'retroarch' do
+cask 'retroarchcg' do
   version '1.3.0'
   sha256 'b898de82953092f24a66332e682d456652f195168e73ce5e0c0d1bc596636782'
 
@@ -7,5 +7,5 @@ cask 'retroarch' do
   homepage 'https://www.libretro.com/'
   license :gpl
 
-  app 'RetroArch.app'
+  app 'RetroArchCg.app'
 end
