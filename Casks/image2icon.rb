@@ -1,6 +1,6 @@
 cask 'image2icon' do
-  version '2.2'
-  sha256 'b4f0ddf283c3f134d832ee9510921bb3aebd3920588bb3a718b3e9ac1e526aaa'
+  version '2.5'
+  sha256 '2235b15fb5810cedbf2084e2e450a9aa388727f8afc139ad9368d04d195a6ca9'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://sf-applications.s3.amazonaws.com/Image2Icon/app-releases/Image2icon#{version}.zip"
