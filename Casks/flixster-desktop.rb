@@ -5,7 +5,7 @@ cask 'flixster-desktop' do
   # d1rtylazwb77ux.cloudfront.net was verified as official when first introduced to the cask
   url 'https://d1rtylazwb77ux.cloudfront.net/desktop/mac/FlixsterDesktop.zip'
   appcast 'https://d1rtylazwb77ux.cloudfront.net/desktop/mac/FlixsterDesktopMacAppcast.xml',
-          checkpoint: 'ed42b9935d8dab11e2acb5502ccd1076c9c1e3d1d477a99c9dc569cfbd3a9706'
+          checkpoint: '507f4bf227962190e023b4427d6a6c521a61b7db1a175467256546afd91a2240'
   name 'Flixster Desktop for Mac'
   homepage 'https://www.flixster.com/about/ultraviolet/'
   license :gratis
