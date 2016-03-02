@@ -20,5 +20,6 @@ cask 'gitkraken' do
                 '~/Library/Caches/com.axosoft.gitkraken',
                 '~/Library/Preferences/com.axosoft.gitkraken.plist',
                 '~/Library/Saved Application State/com.axosoft.gitkraken.savedState',
+                '~/.gitkraken',
               ]
 end
