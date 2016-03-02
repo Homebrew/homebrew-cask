@@ -1,8 +1,8 @@
 cask 'gitkraken' do
-  version '0.8.0'
-  sha256 '68b3c5fab1edc9f6703ca7e9fe54ca88db7e8a1574ecac2e416c86d8fe10d8f1'
+  version :latest
+  sha256 :no_check
 
-  url "http://release.gitkraken.com/darwin/v#{version}.zip"
+  url "https://release.gitkraken.com/darwin/installGitKraken.dmg"
   appcast 'https://release.gitkraken.com/darwin/RELEASES',
           checkpoint: '5e37758cec9f0dd8b619f8cc40a257bd1ac1635fd1b2d28e0bd651bf2864dd6d'
   name 'GitKraken'
