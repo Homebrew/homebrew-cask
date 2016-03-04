@@ -1,7 +1,5 @@
 language: objective-c
 
-sudo: false
-
 env:
   global:
     - LANG=en_US.UTF-8
