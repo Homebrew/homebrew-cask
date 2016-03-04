@@ -1,10 +1,10 @@
 cask 'paw' do
-  version '2.3'
-  sha256 '0da3d65788486f985dfbca5b2e1a587720ad61ddc7c19d94a106f54e10fd5308'
+  version '2.3.1'
+  sha256 '0d357eb96c28ee17114ad09dc82370f9d1620e98ea9ae8a7641afc369751e585'
 
   url "https://luckymarmot.com/paw/download/#{version}"
-  appcast 'https://luckymarmot.com/api/v2/updates/appcast',
-          checkpoint: 'cf9d5904df2610cb09823bd2a77fbe6bce8c15b4772a41f9892533ca82f72047'
+  appcast "https://luckymarmot.com/api/v#{version.major}/updates/appcast",
+          checkpoint: '125bec971b3e45197be8cd1d2f2c6c2df13ef36d175ffed53c9021f8865a7575'
   name 'Paw'
   homepage 'https://luckymarmot.com/paw'
   license :commercial
