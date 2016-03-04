@@ -8,5 +8,5 @@ cask 'magicavoxel' do
   homepage 'https://ephtracy.github.io/'
   license :gpl
 
-  app 'MagicaVoxel_mac.app'
+  app "MagicaVoxel-#{version}/MagicaVoxel-mac.app"
 end
