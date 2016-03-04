@@ -1,6 +1,6 @@
 cask 'ax88179' do
-  version '2.6.1_20160128'
-  sha256 '278f6a0688e4c08f701e9e31a8c8d04d1f7a91dfa30d7916d71589b85a181314'
+  version '2.7.0'
+  sha256 '8b12ecad1407e65a2bd89f055cfe7f2be102b3623b0b207b55f7f9eac54253e9'
 
   module Utils
     def self.basename(version)
@@ -15,7 +15,7 @@ cask 'ax88179' do
 
   container nested: "#{Utils.basename(version)}/AX88179_178A.dmg"
 
-  pkg "AX88179_178A_v#{version[0..-10]}.pkg"
+  pkg "AX88179_178A_v#{version}.pkg"
 
   uninstall script: { executable: 'AX88179_178A_Uninstall_v140' }
 end
