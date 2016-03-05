@@ -6,11 +6,11 @@ cask 'daisydisk' do
     appcast 'https://daisydiskapp.com/downloads/appcastFeed.php',
             checkpoint: '5f9960cd3d158636268aeae712f959bde3407efc4db59b7615e4ab08938d566a'
   else
-    version '4.0.3'
-    sha256 'e856927eeadd74a254e3a4ff535cb40aa9eaf58d6812cd39a0137be9bb4fea55'
+    version '4.1.1'
+    sha256 'bdd566b7f4223b52942780e0c4ce3714954c8add4ce84a4c4e20831ec62504ed'
     url 'https://www.daisydiskapp.com/downloads/DaisyDisk.zip'
     appcast 'https://daisydiskapp.com/downloads/appcastFeed.php?osVersion=10.11',
-            checkpoint: '9ac3f3c8d274d32539aeacb76bdc8cf3a690263886e6fd85eefb5ee9b86fbcab'
+            checkpoint: 'eb9a3380e25550149c02932b0b5d79e17c1417fce90aaca1b0f721987361f7a8'
   end
 
   name 'DaisyDisk'

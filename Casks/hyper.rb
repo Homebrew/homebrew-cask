@@ -2,7 +2,7 @@ cask 'hyper' do
   version :latest
   sha256 :no_check
 
-  # amazonaws.com is the official download host per the vendor homepage
+  # hyper-install.s3.amazonaws.com was verified as official when first introduced to the cask
   url 'https://hyper-install.s3.amazonaws.com/hyper-mac.pkg'
   name 'Hyper'
   homepage 'https://hyper.sh/'

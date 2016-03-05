@@ -1,10 +1,10 @@
 cask 'extrabuildphase' do
-  version '0.3.2'
-  sha256 'a2181e7bdc78851f336752091ae30b23ede348f06dc6d3ab9980725e2cacbf64'
+  version '0.3.3'
+  sha256 '4c033b5b9eed44d190a9c21c33f368f8074d71a5c88db989b239a2cc05c1667f'
 
   url "https://github.com/norio-nomura/ExtraBuildPhase/releases/download/#{version}/ExtraBuildPhase.xcplugin-#{version}.zip"
   appcast 'https://github.com/norio-nomura/ExtraBuildPhase/releases.atom',
-          checkpoint: '7b9d29c0defc4b1ee1ac0099372ee35f67599a04dfc1dd0339b37fa06adc87be'
+          checkpoint: '9f72773c36855fad2a5b93967c06a4595c61af80bf7ee81bc9aef7924c2dddb0'
   name 'ExtraBuildPhase'
   homepage 'https://github.com/norio-nomura/ExtraBuildPhase'
   license :mit

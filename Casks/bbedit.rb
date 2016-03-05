@@ -4,7 +4,7 @@ cask 'bbedit' do
 
   url "http://pine.barebones.com/files/BBEdit_#{version}.dmg"
   appcast 'https://versioncheck.barebones.com/BBEdit.xml',
-          checkpoint: '0f2cd59a1b9307d7b8eb2a758ca788f10c7682b9a9e9b45fa4f0b539e13b28ad'
+          checkpoint: '38540ae3740f30447d6470ba25669380229a56f1d663720ba21641162d88dad7'
   name 'BBEdit'
   homepage 'http://www.barebones.com/products/bbedit/'
   license :commercial

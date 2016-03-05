@@ -10,6 +10,8 @@ cask 'slate' do
   homepage 'https://github.com/jigish/slate'
   license :gpl
 
+  accessibility_access true
+
   app 'Slate.app'
 
   zap delete: [

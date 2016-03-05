@@ -4,9 +4,9 @@ cask 'vitalsource-bookshelf' do
     sha256 'bf5873bb39ff76421a55c9ab769007bb1af64b21dabf6630a4087bbc29c27d55'
     url "http://downloads.vitalbook.com/vsti/bookshelf/#{version}/MAC/Bookshelf/VitalSource_Bookshelf_#{version}.zip"
   else
-    version '6.6'
-    sha256 '216cae475c4507a0de553e3fbde72575589f407aa1a2d48334a49804a00ac4c3'
-    url "http://downloads.vitalbook.com/vsti/bookshelf/#{version}/Mac/Bookshelf/VitalSource_Bookshelf_#{version}.zip"
+    version '6.8'
+    sha256 '01153395bb01f79cf11bc5091568c35b3d5de6a0725254bce8b39e0b57a5b031'
+    url "http://downloads.vitalbook.com/vsti/bookshelf/#{version}/MAC/BOOKSHELF/VitalSource_Bookshelf_#{version}.zip"
   end
 
   appcast 'https://services.vitalbook.com/version/check',
