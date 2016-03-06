@@ -9,5 +9,7 @@ cask 'shortcat' do
   homepage 'https://shortcatapp.com/'
   license :commercial
 
+  accessibility_access true
+
   app 'Shortcat.app'
 end
