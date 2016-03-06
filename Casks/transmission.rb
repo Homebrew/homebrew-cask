@@ -1,10 +1,10 @@
 cask 'transmission' do
-  version '2.91'
-  sha256 '8d0c36540406022a47e9b9bc64190f9e852b2b6f45fe4c0d2853ac2c604b062b'
+  version '2.92'
+  sha256 '926a878cac007e591cfcea987048abc0689d77e7729a28255b9ea7b73f22d693'
 
   url "https://download.transmissionbt.com/files/Transmission-#{version}.dmg"
   appcast 'https://update.transmissionbt.com/appcast.xml',
-          checkpoint: '30717111f950e563702a12fe28cfe37b35fc5a9648e13ccb84389d5615f372e1'
+          checkpoint: 'ed805c55e04d818af6b4b0ac8f17382261a2e1b02fcb82e685dbbd703c721a64'
   name 'Transmission'
   homepage 'https://www.transmissionbt.com/'
   license :gpl
