@@ -7,7 +7,7 @@ cask 'usb-overdrive' do
     sha256 '5be1d46596f1e98e29a5634655f36fc3070ac08542c36cef77d8f516c883f6d7'
   end
 
-  # senlick.com is the official download host per the vendor homepage
+  # senlick.com was verified as official when first introduced to the cask
   url "http://www.senlick.com/macsw/USB-Overdrive-#{version.delete('.')}.dmg"
   name 'USB Overdrive'
   homepage 'http://www.usboverdrive.com/'
