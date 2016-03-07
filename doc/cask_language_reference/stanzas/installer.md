@@ -1,6 +1,6 @@
 # installer
 
-This stanza must always be accompanied by (`uninstall`)[uninstall.md].
+This stanza must always be accompanied by [`uninstall`](uninstall.md).
 
 The `installer` stanza takes a series of key-value pairs, the first key of which must be `manual:` or `script:`.
 
