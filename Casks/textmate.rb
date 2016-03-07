@@ -1,6 +1,6 @@
 cask 'textmate' do
-  version '2.0-beta.8.5'
-  sha256 '18ef15feea960cff6034c9cbe5e3cb38cbf0fcd0d57e4b8c78656a392dd5dc07'
+  version '2.0-beta.9'
+  sha256 'f22dee89bb8e80ad6379fb4766a931d5e73f9d56df4392e75afee831eec1778e'
 
   # textmate.org is the official download host per the vendor homepage
   url "https://api.textmate.org/downloads/TextMate_#{version}.tbz"
