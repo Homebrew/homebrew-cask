@@ -1,21 +1,22 @@
-cask :v1 => 'docker-compose' do
-  version '1.2.0'
-  sha256 '24a5d284f3e85f5a42701afc3c9959a29aa2d874dc122fa711de5f710d0a01d8'
+cask 'docker-compose' do
+  version '1.6.2'
+  sha256 'baac029d69581bab8d100a5c4fb73bd8e23a828245f7374f89560a66337d441c'
 
-  # github.com is the official download host per the vendor homepage
+  # github.com/docker/compose was verified as official when first introduced to the cask
   url "https://github.com/docker/compose/releases/download/#{version}/docker-compose-Darwin-x86_64"
-  appcast 'https://github.com/docker/compose/releases.atom'
+  appcast 'https://github.com/docker/compose/releases.atom',
+          checkpoint: 'c1382c6b1ccbd709013f9930ec94a0d7b201aeb5ba24cd1191057a5aab22650d'
   name 'Docker Compose'
   homepage 'https://docs.docker.com/compose'
   license :apache
 
-  container :type => :naked
-  binary 'docker-compose-Darwin-x86_64', :target => 'docker-compose'
+  depends_on cask: 'docker'
+  depends_on arch: :x86_64
+  container type: :naked
+
+  binary 'docker-compose-Darwin-x86_64', target: 'docker-compose'
 
   postflight do
-    system '/bin/chmod', '--', '0755', "#{staged_path}/docker-compose-Darwin-x86_64"
+    set_permissions "#{staged_path}/docker-compose-Darwin-x86_64", '0755'
   end
-
-  depends_on :formula => 'docker'
-  depends_on :arch => :x86_64
 end

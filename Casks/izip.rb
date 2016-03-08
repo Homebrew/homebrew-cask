@@ -1,11 +1,11 @@
-cask :v1 => 'izip' do
+cask 'izip' do
   version :latest
   sha256 :no_check
 
   url 'http://www.izip.com/izip.dmg'
   name 'iZip'
   homepage 'http://www.izip.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'iZip.app'
 end

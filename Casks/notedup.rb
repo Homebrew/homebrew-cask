@@ -1,10 +1,11 @@
-cask :v1 => 'notedup' do
+cask 'notedup' do
   version '2014031401'
-  sha256 '15080c58484a9f8c7a7a00a94eae777791ab75ecd0c257e73f76398fb5a8a96e'
+  sha256 '827eb67e58fa6e529bb54c934d7cd21f46c6ba1e8efaedeeb996cae9f333c973'
 
-  url 'https://app.yinxiang.com/shard/s10/sh/a2d0903c-f751-48fd-a5c0-68d7bcd0c450/ce188822309c0124ba328248e1bed420/res/03724cac-da8f-4981-ac1d-946bb46fa19c/NoteDup_Mac_2014031401.zip'
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/ppyyf/notedup-bin/blob/master/#{version}/NoteDup_Mac_#{version}.zip?raw=true"
   name 'NoteDup'
-  homepage 'http://appcenter.yinxiang.com/app/notedup/mac/'
+  homepage 'https://appcenter.yinxiang.com/app/notedup/mac/'
   license :closed
 
   app 'NoteDup.app'

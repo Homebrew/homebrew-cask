@@ -1,11 +1,11 @@
-cask :v1 => 'focuswriter' do
+cask 'focuswriter' do
   version :latest
   sha256 :no_check
 
   url 'http://gottcode.org/focuswriter/download/?os=mac'
   name 'FocusWriter'
   homepage 'http://gottcode.org/focuswriter/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'FocusWriter.app'
 end

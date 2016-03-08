@@ -1,9 +1,8 @@
-cask :v1 => 'flightgear' do
-  version '3.2.0'
-  sha256 '1d2721c74e46869b3d13bc9c3d1f8e086f8771f23586c92ce156d0f3d076699b'
+cask 'flightgear' do
+  version '3.4.0'
+  sha256 '17ac1c274d0256a17229b5cd7c77a44cdaa521e555a474301754e72d17c735cb'
 
-  # utwente.nl is the official download host per the vendor homepage
-  url "http://ftp.snt.utwente.nl/pub/software/flightgear/ftp/MacOSX/FlightGear-#{version}.dmg"
+  url "http://download.flightgear.org/flightgear/MacOSX/FlightGear-#{version}.dmg"
   name 'FlightGear'
   homepage 'http://www.flightgear.org/'
   license :gpl

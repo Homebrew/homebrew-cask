@@ -1,11 +1,10 @@
-cask :v1 => 'cvc4' do
-
+cask 'cvc4' do
   if MacOS.release <= :mountain_lion
     version '1.4'
     sha256 '436ebe16872a08bb41270cb1302c4258a7ccd187bf8e68ad8301300e49fb7718'
 
     # Mountain Lion package might work on older releases, per homepage
-    url "http://cvc4.cs.nyu.edu/builds/macos/cvc4-#{version}.MacOs85.MountainLion.mpkg"
+    url "https://cvc4.cs.nyu.edu/builds/macos/cvc4-#{version}.MacOs85.MountainLion.mpkg"
 
     pkg "cvc4-#{version}.MacOs85.MountainLion.mpkg"
   else
@@ -13,16 +12,16 @@ cask :v1 => 'cvc4' do
     sha256 'e3a0da4cf3187a58c9cc36e24623ac0ddbfd7ac18b389b7c8cca1a4d3fcbc03f'
 
     # Mavericks package appears to work on Yosemite
-    url "http://cvc4.cs.nyu.edu/builds/macos/cvc4-#{version}.MacOs9.Mavericks.mpkg"
+    url "https://cvc4.cs.nyu.edu/builds/macos/cvc4-#{version}.MacOs9.Mavericks.mpkg"
 
     pkg "cvc4-#{version}.MacOs9.Mavericks.mpkg"
   end
 
   name 'CVC4'
-  homepage 'http://cvc4.cs.nyu.edu/'
+  homepage 'https://cvc4.cs.nyu.edu/'
   license :oss
 
-  uninstall :pkgutil => 'org.macports.cvc4'
+  uninstall pkgutil: 'org.macports.cvc4'
 
   caveats do
     path_environment_variable('/opt/local/bin')

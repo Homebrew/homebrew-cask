@@ -1,11 +1,11 @@
-cask :v1 => 'ivolume' do
+cask 'ivolume' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.mani.de/download/ivolume/iVolume3Mac.dmg'
+  url 'https://www.mani.de/download/ivolume/iVolume3Mac.dmg'
   name 'iVolume'
-  homepage 'http://www.mani.de/en/ivolume/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.mani.de/en/ivolume/'
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'iVolume.app'
 end

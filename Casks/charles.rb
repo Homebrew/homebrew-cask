@@ -1,16 +1,16 @@
-cask :v1 => 'charles' do
-  version '3.10.1'
-  sha256 '5d94f04d4936dd1dd9293f406457f13a825422dc28c5146f19581de2f8e76c9d'
+cask 'charles' do
+  version '3.11.4'
+  sha256 '82195ef507dd7d3921d24dd787c51704e2cd9cb559f55e975b089ab3c7e7bfeb'
 
-  url "http://www.charlesproxy.com/assets/release/#{version}/charles-proxy-#{version}.dmg"
+  url "https://www.charlesproxy.com/assets/release/#{version}/charles-proxy-#{version}.dmg"
   name 'Charles'
-  homepage 'http://www.charlesproxy.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.charlesproxy.com/'
+  license :commercial
 
   app 'Charles.app'
 
-  zap :delete => [
-                  '~/Library/Application Support/Charles',
-                  '~/Library/Preferences/com.xk72.charles.config',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Charles',
+                '~/Library/Preferences/com.xk72.charles.config',
+              ]
 end

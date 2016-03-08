@@ -1,6 +1,6 @@
-cask :v1 => 'asepsis' do
-  version '1.5'
-  sha256 'b7bf18dfe58612de89f744e11e25f6eb6bb708a48941fc975d55a614716e1436'
+cask 'asepsis' do
+  version '1.5.2'
+  sha256 'b7c101fd216364423d7de9009aa9e82934042f0403479746fbe604a8b5f3883b'
 
   url "http://downloads.binaryage.com/Asepsis-#{version}.dmg"
   name 'Asepsis'
@@ -9,5 +9,5 @@ cask :v1 => 'asepsis' do
 
   pkg 'Asepsis.pkg'
 
-  uninstall :pkgutil => 'com.binaryage.pkg.asepsis'
+  uninstall pkgutil: 'com.binaryage.pkg.asepsis'
 end

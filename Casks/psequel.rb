@@ -1,11 +1,11 @@
-cask :v1 => 'psequel' do
-  version :latest
-  sha256 :no_check
+cask 'psequel' do
+  version '1.4.2'
+  sha256 '3c9919b67de1f152cd9442c37a7f6a33cad38c268d40c439fd749c65f9461eb7'
 
-  url 'http://www.psequel.com/download'
+  url "http://www.psequel.com/download?version=#{version}"
   name 'PSequel'
   homepage 'http://www.psequel.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :closed
 
   app 'PSequel.app'
 end

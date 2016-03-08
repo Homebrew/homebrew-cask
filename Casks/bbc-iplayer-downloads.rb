@@ -1,10 +1,10 @@
-cask :v1 => 'bbc-iplayer-downloads' do
-  version :latest
-  sha256 :no_check
+cask 'bbc-iplayer-downloads' do
+  version '1.14.2'
+  sha256 'feb02a935380805598b211a94c28466f0e064bfc938767ddc084a37a8c4719ee'
 
-  url 'https://www.bbc.co.uk/iplayer/dm/downloads/mac/latest'
+  # bbci.co.uk was verified as official when first introduced to the cask
+  url "https://a.files.bbci.co.uk/iplayer/downloads/BBC-iPlayer-Downloads-#{version}.dmg"
   name 'BBC iPlayer Downloads'
-  appcast 'http://ipd-hq.cloud.bbc.co.uk/downloads/update.xml'
   homepage 'http://www.bbc.co.uk/iplayer/install'
   license :gratis
 

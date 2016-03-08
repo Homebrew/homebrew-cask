@@ -1,0 +1,50 @@
+require: rubocop-cask
+
+Metrics/LineLength:
+  Enabled: false
+
+Performance/StringReplacement:
+  Enabled: false
+
+Style/AlignHash:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+
+Style/BarePercentLiterals:
+  EnforcedStyle: percent_q
+
+Style/Documentation:
+  Enabled: false
+
+Style/EmptyElse:
+  Enabled: false
+
+Style/FileName:
+  Enabled: false
+
+Style/HashSyntax:
+  EnforcedStyle: ruby19_no_mixed_keys
+
+Style/IndentArray:
+  EnforcedStyle: align_brackets
+
+Style/IndentHash:
+  EnforcedStyle: align_braces
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%':  '{}'
+    '%i': '{}'
+    '%q': '{}'
+    '%Q': '{}'
+    '%r': '{}'
+    '%s': '()'
+    '%w': '[]'
+    '%W': '[]'
+    '%x': '()'
+
+Style/RegexpLiteral:
+  EnforcedStyle: percent_r
+
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: comma

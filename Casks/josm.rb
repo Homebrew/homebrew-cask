@@ -1,11 +1,11 @@
-cask :v1 => 'josm' do
-  version :latest
-  sha256 :no_check
+cask 'josm' do
+  version '9900'
+  sha256 '33ee382336c8f26b4fa4de99515e8d95278d80b54bc460a368b0281fe0f5a38f'
 
-  url 'https://josm.openstreetmap.de/download/macosx/josm-macosx.zip'
+  url "https://josm.openstreetmap.de/download/macosx/josm-macosx-#{version}.zip"
   name 'JOSM'
-  homepage 'http://josm.openstreetmap.de'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://josm.openstreetmap.de'
+  license :gpl
 
   app 'JOSM.app'
 end

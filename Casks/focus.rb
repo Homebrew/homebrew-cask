@@ -1,12 +1,23 @@
-cask :v1 => 'focus' do
-  version :latest
-  sha256 :no_check
+cask 'focus' do
+  version '1.4.11'
+  sha256 '22524abb327ce17d70ab50ffc9de4d8911fd30bf84490d14c28383c8fd8d45ed'
 
-  url 'http://www.heyfocus.com/releases/Focus-latest.zip'
-  appcast 'http://www.heyfocus.com/appcast.xml'
+  url "https://heyfocus.com/releases/Focus-#{version}.zip"
+  appcast 'https://heyfocus.com/appcast.xml',
+          checkpoint: '250a501501d4e891c7ed828cf8f6f7f3aea2c8609052d0f6dd5919bb3d9892e6'
   name 'Focus'
-  homepage 'http://www.heyfocus.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://heyfocus.com/'
+  license :commercial
+
+  depends_on macos: '>= :mavericks'
 
   app 'Focus.app'
+
+  uninstall quit: 'BradJasper.focus'
+
+  zap delete: [
+                '~/Library/Caches/BradJasper.focus/',
+                '~/Library/Application Support/Focus/',
+                '~/Library/Preferences/BradJasper.focus.plist',
+              ]
 end

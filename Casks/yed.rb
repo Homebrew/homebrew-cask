@@ -1,14 +1,13 @@
-cask :v1 => 'yed' do
-  version '3.14.1'
-  sha256 '1db07a4e108c13ed4e28ebec30d6acf4fe7b593a78ceeeed3e5a1c9d1132c512'
+cask 'yed' do
+  version '3.14.4'
+  sha256 '616a193585abf959cdb89a9f0154883ecd96eac64b165f49c7b1a6e7b655162a'
 
   url "https://www.yworks.com/products/yed/demo/yEd-#{version}_with-JRE8.dmg"
-  name 'yEd'
-  homepage 'http://www.yworks.com/en/products/yfiles/yed/'
+  name 'yWorks yEd'
+  homepage 'https://www.yworks.com/en/products/yfiles/yed/'
   license :gratis
-  tags :vendor => 'yWorks'
+
+  depends_on macos: '>= 10.8'
 
   app 'yEd.app'
-
-  depends_on :macos => '>= 10.8'
 end

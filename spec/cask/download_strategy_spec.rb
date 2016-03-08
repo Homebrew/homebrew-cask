@@ -4,7 +4,7 @@ describe 'download strategies' do
   let(:url) { 'http://example.com/cask.dmg' }
   let(:url_options) { Hash.new }
   let(:cask) {
-    class_double(Hbc::Cask,
+    instance_double(Hbc::Cask,
       :token => 'some-cask',
       :url => Hbc::URL.new(url, url_options),
       :version => '1.2.3.4'
@@ -64,7 +64,7 @@ describe 'download strategies' do
 
         shutup { downloader.fetch }
 
-        expect(curl_args.each_cons(2)).to include(['-A', 'Chrome/32.0.1000.00'])
+        expect(curl_args.each_cons(2)).to include(['-A', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10) http://caskroom.io'])
       end
     end
 

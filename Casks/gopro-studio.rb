@@ -1,13 +1,13 @@
-cask :v1 => 'gopro-studio' do
-  version '2.5.4.514'
-  sha256 '8db476dc843306cff510b29bf16367717fabb09cfcebbae8d287f17724585fd7'
+cask 'gopro-studio' do
+  version '2.5.7.321'
+  sha256 '63d875d8b6a2a715ada3224a5b81cb79d82199195f6f22e908c4c1455a3829c9'
 
-  url "http://software.gopro.com/Mac/GoProStudio-#{version}.dmg"
+  url "https://software.gopro.com/Mac/GoProStudio-#{version}.dmg"
   name 'GoPro Studio'
-  homepage 'http://shop.gopro.com/APAC/softwareandapp/gopro-studio/GoPro-Studio.html#/start=1'
+  homepage 'https://shop.gopro.com/APAC/softwareandapp/gopro-studio/GoPro-Studio.html#/start=1'
   license :commercial
 
   pkg 'GoPro Studio.pkg'
 
-  uninstall :pkgutil => 'com.GoPro.pkg.GoProStudio'
+  uninstall pkgutil: 'com.GoPro.pkg.GoProStudio'
 end

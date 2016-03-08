@@ -1,11 +1,13 @@
-cask :v1 => 'rawtherapee' do
-  version '4.2.21'
-
+cask 'rawtherapee' do
   if MacOS.release <= :mavericks
-    sha256 '4daddff5fbb6cc8c3cca80dd1c25bf2adb42ff8068e6d79db040690113a22539'
+    version '4.2.171'
+    sha256 'c898fd7fa1b0e588bc811f38345b39441ddad71cc0238d568e7407ae4e8b32c8'
+
     url "http://rawtherapee.com/releases_head/mac/RawTherapee_OSX_10.6_64_#{version}.zip"
   else
-    sha256 'b7c2a0614c849cdfb206b06eb967d6ceefc674a8e6bade1c1db7bac2f096bd13'
+    version '4.2.270'
+    sha256 'de237c5d0c8ad6137d60c7c2d7de795a8c5ef17d37c87b8dbef6a473d4919477'
+
     url "http://rawtherapee.com/releases_head/mac/RawTherapee_OSX_10.10_64_#{version}.zip"
   end
 
@@ -14,12 +16,12 @@ cask :v1 => 'rawtherapee' do
   license :gpl
 
   if MacOS.release <= :mavericks
-    container :nested => "RawTherapee_OSX_10.6_64_#{version}.dmg"
+    container nested: "RawTherapee_OSX_10.6_64_#{version}.dmg"
   else
-    container :nested => "RawTherapee_OSX_10.10_64_#{version}.dmg"
+    container nested: "RawTherapee_OSX_10.10_64_#{version}.dmg"
   end
-  app 'RawTherapee.app'
+  depends_on macos: '>= :snow_leopard',
+             arch:  :x86_64
 
-  depends_on :macos => '>= :snow_leopard',
-             :arch => :x86_64
+  app 'RawTherapee.app'
 end

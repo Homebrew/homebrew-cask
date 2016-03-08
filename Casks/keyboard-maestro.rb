@@ -1,11 +1,14 @@
-cask :v1 => 'keyboard-maestro' do
-  version :latest
-  sha256 :no_check
+cask 'keyboard-maestro' do
+  version '7.0.3'
+  sha256 '36cc4b09d344a874c8d7c183b3f078f5c699fe37596dd53f00c433618bc28743'
 
-  url 'http://www.keyboardmaestro.com/action/download?km-kmi-2-b'
+  # stairways.com is the official download host per the vendor homepage
+  url "https://files.stairways.com/keyboardmaestro-#{version.delete('.')}.zip"
   name 'Keyboard Maestro'
-  homepage 'http://www.keyboardmaestro.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.keyboardmaestro.com/'
+  license :commercial
+
+  depends_on macos: '>= :yosemite'
 
   app 'Keyboard Maestro.app'
 end

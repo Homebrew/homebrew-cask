@@ -1,8 +1,9 @@
-cask :v1 => 'twine' do
-  version '1.4.1'
-  sha256 '717e0f7849f8216a7bae68c66656cf0e3cd0496c8a9d95e3c61e175d56f010e4'
+cask 'twine' do
+  version '2.0.10'
+  sha256 '3d073a624bd56817438105732e0e808b2ae9ff5bfebb455b70133cff80b0134f'
 
-  url "http://twinery.org/downloads/twine_#{version}_osx.zip"
+  # bitbucket.org is the official download host per the vendor homepage
+  url "https://bitbucket.org/klembot/twinejs/downloads/twine_#{version}_osx.zip"
   name 'Twine'
   homepage 'http://twinery.org/'
   license :gpl

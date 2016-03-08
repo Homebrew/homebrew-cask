@@ -1,12 +1,13 @@
-cask :v1 => 'glyphish-gallery' do
-  version '2.0'
-  sha256 'c5f224d44ecf4a853a51105d1fce8b4e3eab099ddc16791ce412a7a679b104a7'
+cask 'glyphish-gallery' do
+  version '2.1'
+  sha256 '86edda062a651799517990cc96e7f23f38818ecd3f0194e3ad040de0fa82f2d2'
 
   url "https://github.com/glyphish/gallery/releases/download/v#{version}/v#{version}.zip"
-  appcast 'https://github.com/glyphish/gallery/releases.atom'
+  appcast 'https://github.com/glyphish/gallery/releases.atom',
+          checkpoint: '5080b2af02fb290471ab0346ec602571e3773498b15f468e34a3b1fd98d33318'
   name 'Glyphish Gallery'
   homepage 'https://github.com/glyphish/gallery'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :oss
 
   app 'Glyphish Gallery.app'
 end

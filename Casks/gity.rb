@@ -1,12 +1,11 @@
-cask :v1 => 'gity' do
+cask 'gity' do
   version :latest
   sha256 :no_check
 
-  url 'http://gityapp.com/Gity.zip'
-  appcast 'http://gityapp.com/gity.xml'
+  url 'http://gityapp.com/gityapp/Gity.zip'
   name 'Gity'
-  homepage 'http://gityapp.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'http://gityapp.com/gityapp/'
+  license :gpl
 
   app 'Gity.app'
 end

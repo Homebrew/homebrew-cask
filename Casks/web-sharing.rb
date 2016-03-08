@@ -1,11 +1,11 @@
-cask :v1 => 'web-sharing' do
-  version :latest
-  sha256 :no_check
+cask 'web-sharing' do
+  version '1.0'
+  sha256 '54115af3de0b36f25b42834e52704490f0a4a85aed3a77e5b46a1a4e61592097'
 
-  url 'https://clickontyler.com/web-sharing/download/'
+  url "http://dl.clickontyler.com/web-sharing/websharing_#{version}.zip"
   name 'Web Sharing'
-  homepage 'http://clickontyler.com/web-sharing/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://clickontyler.com/web-sharing/'
+  license :gratis
 
   prefpane 'Web Sharing.prefPane'
 end

@@ -1,13 +1,11 @@
-cask :v1 => 'eqmac' do
-  version '1.3.2-b1'
-  sha256 '4e810e2956f3c46b13f3a7024c58676fd54a1f2d02e63252f946c53479ce43a1'
+cask 'eqmac' do
+  version '2.0.0beta3'
+  sha256 '892bfb439f4ee4fdb009ce4b1d802d997e0675976cc8c8434506d95b994acdc4'
 
-  url "http://eqmac.hulse.id.au/sites/default/files/downloads/Mount-#{version}.app_.zip"
+  url "http://eqmac.hulse.id.au/sites/default/files/downloads/EQMac-#{version}.zip"
   name 'EQMac'
   homepage 'http://eqmac.hulse.id.au/'
-  license :unknown
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  # Renamed for clarity: app name is inconsistent with the branding on the website, and will be corrected in the next version.
-  # Original discussion: https://github.com/caskroom/homebrew-cask/pull/8438
-  app "Mount-#{version}.app", :target => 'EQMac.app'
+  app "EQMac-#{version}.app"
 end

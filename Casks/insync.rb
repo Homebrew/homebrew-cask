@@ -1,6 +1,6 @@
-cask :v1 => 'insync' do
-  version '1.2.7.35123'
-  sha256 '11078c45706b1a0a9da4b80a672c75f3605bbff957c9144ce91ec2ee3d6b7a6e'
+cask 'insync' do
+  version '1.2.16.35181'
+  sha256 'a80f07bd191228ba283a5b975326cf4d62dce28c600753ecadf66f00d361a22f'
 
   url "http://s.insynchq.com/builds/Insync-#{version}.dmg"
   name 'Insync'

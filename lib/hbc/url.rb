@@ -1,7 +1,7 @@
 require 'forwardable'
 
 class Hbc::URL
-  FAKE_USER_AGENT = 'Chrome/32.0.1000.00'
+  FAKE_USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10) http://caskroom.io'
 
   attr_reader :using, :revision, :trust_cert, :uri, :cookies, :referer, :data
 

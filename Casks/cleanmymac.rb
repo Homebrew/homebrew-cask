@@ -1,58 +1,71 @@
-cask :v1 => 'cleanmymac' do
-  version :latest
-  sha256 :no_check
-
+cask 'cleanmymac' do
   if MacOS.release <= :snow_leopard
-    # devmate.com is the official download host per the vendor homepage
-    url 'http://dl.devmate.com/com.macpaw.CleanMyMac/CleanMyMacClassic.dmg'
-    appcast 'http://updates.devmate.com/com.macpaw.CleanMyMac.xml'
+    version '1.11,1417522595'
+    sha256 'ac5d4bf36882dd34bdb0a68eb384a6b3aba355be896d03dfa40a120c6bef4a0d'
+
+    # devmate.com/com.macpaw.CleanMyMac was verified as official when first introduced to the cask
+    url "https://dl.devmate.com/com.macpaw.CleanMyMac/#{version.major_minor}/#{version.after_comma}/CleanMyMacClassic-#{version.major_minor}.zip"
+    appcast 'https://updates.devmate.com/com.macpaw.CleanMyMac.xml',
+            checkpoint: 'd9ac93bf9f995dc0903a668b357dadbe7cb187bc1382f6183bc40e5d79a26802'
     app 'CleanMyMac.app'
-    # todo: add uninstall and zap stanzas for legacy app
+    # TODO: add uninstall and zap stanzas for legacy app
   elsif MacOS.release <= :lion
-    # devmate.com is the official download host per the vendor homepage
-    url 'http://dl.devmate.com/com.macpaw.CleanMyMac2/CleanMyMac2.dmg'
-    appcast 'http://updates.devmate.com/com.macpaw.CleanMyMac2.xml'
-    app 'CleanMyMac 2.app'
+    version '2.4,1443544143'
+    sha256 '0d08f4d9b36493359f6ca3ff2f96a9b769a8eed4ea017ecbb2d5644f75aafad0'
 
-    uninstall :launchctl => 'com.macpaw.CleanMyMac2.Agent'
+    # devmate.com/com.macpaw.CleanMyMac2 was verified as official when first introduced to the cask
+    url "https://dl.devmate.com/com.macpaw.CleanMyMac2/#{version.major_minor_patch}/#{version.after_comma}/CleanMyMac#{version.to_i}-#{version.major_minor_patch}.zip"
+    appcast "https://updates.devmate.com/com.macpaw.CleanMyMac#{version.major}.xml",
+            checkpoint: 'd9ac93bf9f995dc0903a668b357dadbe7cb187bc1382f6183bc40e5d79a26802'
+    app "CleanMyMac #{version.major}.app"
 
-    zap :delete => [
-      '/Library/LaunchDaemons/com.macpaw.CleanMyMac2.Agent.plist',
-      '/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac2.Agent',
-      '/Users/Shared/CleanMyMac 2',
-      '/private/var/run/com.macpaw.CleanMyMac2.Agent.socket',
-      '~/Library/Application Support/CleanMyMac 2',
-      '~/Library/Caches/CleanMyMac 2',
-      '~/Library/Logs/CleanMyMac 2.log',
-      '~/Library/Preferences/com.macpaw.CleanMyMac-2-Helper.plist',
-      '~/Library/Preferences/com.macpaw.CleanMyMac2.KnowledgeBase.plist',
-      '~/Library/Preferences/com.macpaw.CleanMyMac2.plist',
-    ]
+    uninstall launchctl: "com.macpaw.CleanMyMac#{version.major}.Agent"
+
+    zap delete: [
+                  "/Library/LaunchDaemons/com.macpaw.CleanMyMac#{version.major}.Agent.plist",
+                  "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac#{version.major}.Agent",
+                  "/Users/Shared/CleanMyMac #{version.major}",
+                  "/private/var/run/com.macpaw.CleanMyMac#{version.major}.Agent.socket",
+                  "~/Library/Application Support/CleanMyMac #{version.major}",
+                  "~/Library/Caches/CleanMyMac #{version.major}",
+                  "~/Library/Logs/CleanMyMac #{version.major}.log",
+                  "~/Library/Preferences/com.macpaw.CleanMyMac-#{version.major}-Helper.plist",
+                  "~/Library/Preferences/com.macpaw.CleanMyMac#{version.major}.KnowledgeBase.plist",
+                  "~/Library/Preferences/com.macpaw.CleanMyMac#{version.major}.plist",
+                ]
   else
-    # devmate.com is the official download host per the vendor homepage
-    url 'http://dl.devmate.com/com.macpaw.CleanMyMac3/CleanMyMac3.dmg'
-    appcast 'http://updateinfo.devmate.com/com.macpaw.CleanMyMac3/updates.xml'
-    app 'CleanMyMac 3.app'
+    version '3.3.2,1456417010'
+    sha256 'bd534ba0204a2dce17acd7a755e2220fbf3cdebce4fbecc338aabf32dd26e274'
 
-    uninstall :launchctl => 'com.macpaw.CleanMyMac3.Agent'
+    # devmate.com/com.macpaw.CleanMyMac3 was verified as official when first introduced to the cask
+    url "https://dl.devmate.com/com.macpaw.CleanMyMac#{version.major}/#{version.major_minor_patch}/#{version.after_comma}/CleanMyMac3-#{version.major_minor_patch}.zip"
+    appcast "https://updates.devmate.com/com.macpaw.CleanMyMac#{version.major}.xml",
+            checkpoint: 'b94082006b22f506a6427d617df432c55db6358400e6b90b551b73bcec770c05'
+    app "CleanMyMac #{version.major}.app"
 
-    zap :delete => [
-      '/Library/LaunchDaemons/com.macpaw.CleanMyMac3.Agent.plist',
-      '/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac3.Agent',
-      '/Users/Shared/CleanMyMac 3',
-      '/private/var/run/com.macpaw.CleanMyMac3.Agent.socket',
-      '~/Library/Application Support/CleanMyMac 3',
-      '~/Library/Application Support/CleanMyMac 3 Menu',
-      '~/Library/Caches/CleanMyMac 3',
-      '~/Library/Logs/CleanMyMac 3.log',
-      '~/Library/Preferences/com.macpaw.CleanMyMac-3-Helper.plist',
-      '~/Library/Preferences/com.macpaw.CleanMyMac3.KnowledgeBase.plist',
-      '~/Library/Preferences/com.macpaw.cleanmymac3.menu.plist',
-      '~/Library/Preferences/com.macpaw.CleanMyMac3.plist',
-    ]
+    postflight do
+      suppress_move_to_applications
+    end
+
+    uninstall launchctl: "com.macpaw.CleanMyMac#{version.major}.Agent"
+
+    zap delete: [
+                  "/Library/LaunchDaemons/com.macpaw.CleanMyMac#{version.major}.Agent.plist",
+                  "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac#{version.major}.Agent",
+                  "/Users/Shared/CleanMyMac #{version.major}",
+                  "/private/var/run/com.macpaw.CleanMyMac#{version.major}.Agent.socket",
+                  "~/Library/Application Support/CleanMyMac #{version.major}",
+                  "~/Library/Application Support/CleanMyMac #{version.major} Menu",
+                  "~/Library/Caches/CleanMyMac #{version.major}",
+                  "~/Library/Logs/CleanMyMac #{version.major}.log",
+                  "~/Library/Preferences/com.macpaw.CleanMyMac-#{version.major}-Helper.plist",
+                  "~/Library/Preferences/com.macpaw.CleanMyMac#{version.major}.KnowledgeBase.plist",
+                  "~/Library/Preferences/com.macpaw.cleanmymac#{version.major}.menu.plist",
+                  "~/Library/Preferences/com.macpaw.CleanMyMac#{version.major}.plist",
+                ]
   end
 
   name 'CleanMyMac'
-  homepage 'http://macpaw.com/cleanmymac'
+  homepage 'https://macpaw.com/cleanmymac'
   license :commercial
 end

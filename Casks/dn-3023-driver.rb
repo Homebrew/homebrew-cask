@@ -1,4 +1,4 @@
-cask :v1 => 'dn-3023-driver' do
+cask 'dn-3023-driver' do
   version '20140926'
   sha256 'baa5d20f17cd322b2c53e0bd82c444d1648eefabd5ec383d15f9a16f99810b10'
 
@@ -7,9 +7,10 @@ cask :v1 => 'dn-3023-driver' do
   homepage 'http://www.digitus.info/en/products/network/gigabit-ethernet-network/network-interface-cards/r-gigabit-ethernet-usb-30-adapter-dn-3023/'
   license :gratis
 
-  container :type => :zip,
-            :nested => 'DN-3023_Driver_MAC/AX88179_178A.dmg'
+  container type:   :zip,
+            nested: 'DN-3023_Driver_MAC/AX88179_178A.dmg'
+
   pkg 'AX88179_178A_v2.2.0.pkg'
 
-  uninstall :script => 'AX88179_178A_Uninstall_v140'
+  uninstall script: 'AX88179_178A_Uninstall_v140'
 end

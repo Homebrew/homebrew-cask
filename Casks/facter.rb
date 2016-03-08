@@ -1,6 +1,6 @@
-cask :v1 => 'facter' do
-  version '2.4.1'
-  sha256 'd1a5bd1dce79878096f089facecae7e7d4114ca2253db4d4e93345b96705a25d'
+cask 'facter' do
+  version '2.4.6'
+  sha256 'b90ee538e36c0a9838de60bb78dd132fd60971a71228d222d5106f8f84332817'
 
   url "https://downloads.puppetlabs.com/mac/facter-#{version}.dmg"
   name 'Facter'
@@ -9,5 +9,5 @@ cask :v1 => 'facter' do
 
   pkg "facter-#{version}.pkg"
 
-  uninstall :pkgutil => 'com.puppetlabs.facter'
+  uninstall pkgutil: 'com.puppetlabs.facter'
 end

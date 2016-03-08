@@ -1,4 +1,4 @@
-cask :v1 => 'sketchupviewer' do
+cask 'sketchupviewer' do
   version :latest
   sha256 :no_check
 
@@ -6,8 +6,8 @@ cask :v1 => 'sketchupviewer' do
   # downloads can be found at http://www.sketchup.com/download/all
   url 'https://dl.trimble.com/sketchup/SketchUpViewer-en.dmg'
   name 'SketchUpViewer'
-  homepage 'http://www.sketchup.com/products/sketchup-viewer'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.sketchup.com/products/sketchup-viewer'
+  license :gratis
 
   app 'SketchUpViewer.app'
 end

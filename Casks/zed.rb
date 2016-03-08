@@ -1,4 +1,4 @@
-cask :v1 => 'zed' do
+cask 'zed' do
   version '1.1.0'
   sha256 '16b1660baeadb64a0e82ab57d0e2d5e09e3674d5d609f26b94a7f194881e3f35'
 

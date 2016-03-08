@@ -1,6 +1,6 @@
-cask :v1 => 'packet-peeper' do
-  version '2014-05-11'
-  sha256 'ed7d287b2dcd42ec9658c0623d97146821e386f59a67c0759252ea7d7e3f2ba3'
+cask 'packet-peeper' do
+  version '2014-06-15'
+  sha256 'b562a9eaf38d6e668135505799829588b212d65270d3d24bff93a9b3128a0c44'
 
   # bitbucket is the official download host per the vendor homepage
   url "https://bitbucket.org/choll/packetpeeper/downloads/PacketPeeper_#{version}.dmg"

@@ -1,9 +1,8 @@
-cask :v1 => 'djv' do
-  version '1.0.4'
-  sha256 '9607814fe120eecd875ed73eb05f97df2b0869b5412b23bbc0f7c4ea6b86d200'
+cask 'djv' do
+  version '1.1.0'
+  sha256 'b922fc5d94e57d436779aa912d3f07746f541124149d5f4d8198d4ef0e2e8fd5'
 
   url "http://downloads.sourceforge.net/project/djv/djv-stable/#{version}/djv-#{version}-OSX-64.dmg"
-  name 'DJV'
   name 'DJV Imaging'
   homepage 'http://djv.sourceforge.net'
   license :bsd

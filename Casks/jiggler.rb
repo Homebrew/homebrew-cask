@@ -1,4 +1,4 @@
-cask :v1 => 'jiggler' do
+cask 'jiggler' do
   version :latest
   sha256 :no_check
 

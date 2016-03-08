@@ -14,8 +14,9 @@ describe "Repo layout" do
                     ..
                     .DS_Store
                     .bundle
-                    .ruby-version
+                    .rubocop.yml
                     .rubocop_todo.yml
+                    .ruby-version
                     coverage
                    }
 
@@ -27,15 +28,19 @@ describe "Repo layout" do
   TOPLEVEL_DIRS = %w{
                      .git
                      Casks
-                     bin
+                     ci
+                     cmd
                      developer
                      doc
                      lib
+                     man
                      spec
                      test
                     }
 
   TOPLEVEL_FILES = %w{
+                      .editorconfig
+                      .gitattributes
                       .gitignore
                       .rspec
                       .rubocop.yml

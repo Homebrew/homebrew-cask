@@ -1,13 +1,17 @@
-cask :v1 => 'manico' do
-  version '1.4.3'
-  sha256 '8116d5906d97d3725dd3b6ebcf19f992db093da4e236adee2b47b0ed6fc2d6ea'
+cask 'manico' do
+  version '2.0.1'
+  sha256 '14171ca3d2b0dcebdbc63f2c3b905f54b1134455d835f3ba1dfebeca8bfa0f1b'
 
   url "http://manico.im/static/Manico_#{version}.dmg"
-  appcast 'http://manico.im/static/manico-appcast.xml',
-          :sha256 => 'cbdf604b5078b58c559ed17759f2db444a5ec417bc8e663e024df735bc9d96fb'
+  appcast 'http://manico.im/static/manico-official-appcast.xml',
+          checkpoint: '0c20ba7f38321babd46cde6d61497690aa17068ebb5d03b8e678240413a04f97'
   name 'Manico'
   homepage 'http://manico.im/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Manico.app'
+
+  zap delete: [
+                '~/Library/Containers/im.manico.Manico',
+              ]
 end

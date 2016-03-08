@@ -1,12 +1,13 @@
-cask :v1 => 'ghostlab' do
-  version :latest
-  sha256 :no_check
+cask 'ghostlab' do
+  version '2.0.10'
+  sha256 '1174edf1e0496b2dff3b1a9c17fd31690259afb48227baa478e55e96c522821a'
 
-  url 'http://awesome.vanamco.com/downloads/ghostlab/Ghostlab.dmg'
-  appcast 'http://awesome.vanamco.com/update/ghostlab-cast.xml'
+  url "https://awesome.vanamco.com/Ghostlab2/update/packages/mac/Ghostlab2-#{version}.zip"
+  appcast 'https://awesome.vanamco.com/Ghostlab2/update/ghostlab2-cast.xml?vco=trkd',
+          checkpoint: '3832edcaffbdc3adf5dcc3112095bf4ae69fe8628e89d548059a99417626aa2b'
   name 'Ghostlab'
-  homepage 'http://vanamco.com/ghostlab/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://vanamco.com/ghostlab/'
+  license :commercial
 
-  app 'Ghostlab.app'
+  app 'Ghostlab2.app'
 end

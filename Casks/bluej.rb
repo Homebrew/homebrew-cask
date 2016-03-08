@@ -1,8 +1,8 @@
-cask :v1 => 'bluej' do
-  version '3.1.4'
-  sha256 '507ce17037010e7a52684f97b32a07a391aca8fb1fa194748d35036242c87f80'
+cask 'bluej' do
+  version '3.1.6'
+  sha256 'b53cb1ce8384845767074480b26b2795aecf7d0f0e9027747c0106918a7471a6'
 
-  url "http://www.bluej.org/download/files/BlueJ-#{version.gsub('.', '')}.zip"
+  url "http://www.bluej.org/download/files/BlueJ-#{version.delete('.')}.zip"
   name 'BlueJ'
   homepage 'http://www.bluej.org'
   license :gpl

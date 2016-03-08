@@ -1,11 +1,11 @@
-cask :v1 => 'inform' do
-  version '7.6L02'
-  sha256 '182134881d44b1c096af979d9cff195d33ec51d7c1f81f59a7c25d5a917d8987'
+cask 'inform' do
+  version '6M62'
+  sha256 'e3c9cbbd7fd3933e7585a0a89596c0c736e89d8bb5a9f297edfd6ad7d0f97c8c'
 
-  url "http://inform7.com/download/content/6L02/I#{version.gsub('.','-')}-OSX.dmg"
+  url "http://inform7.com/download/content/#{version}/I7-#{version}-OSX.dmg"
   name 'Inform'
   homepage 'http://inform7.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :oss
 
   app 'Inform.app'
 end

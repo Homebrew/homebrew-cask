@@ -1,10 +1,10 @@
-cask :v1 => 'birdfont' do
-  version '1.9'
-  sha256 'a32b41608250bcba58572be36591a8a9c0907d8d724f31c6e6d18fc8137e5903'
+cask 'birdfont' do
+  version '2.10.5'
+  sha256 'e1bb495069d6f68664d32386d90f1b7d128467307754a2e9315efd9f2b477428'
 
-  url "http://birdfont.org/download/birdfont-#{version}-free.dmg"
+  url "https://birdfont.org/download/birdfont-#{version}-free.dmg"
   name 'BirdFont'
-  homepage 'http://birdfont.org/'
+  homepage 'https://birdfont.org/'
   license :freemium
 
   app 'BirdFont.app'

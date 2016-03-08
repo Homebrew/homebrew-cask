@@ -1,4 +1,4 @@
-cask :v1 => 'juliastudio' do
+cask 'juliastudio' do
   version '0.4.4'
 
   if MacOS.release <= :snow_leopard
@@ -12,8 +12,8 @@ cask :v1 => 'juliastudio' do
   end
 
   name 'Julia Studio'
-  homepage 'http://forio.com/labs/julia-studio/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://forio.com/labs/julia-studio/'
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'JuliaStudio.app'
 end

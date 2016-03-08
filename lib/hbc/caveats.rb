@@ -77,6 +77,31 @@ class Hbc::CaveatsDSL
     end
   end
 
+  def depends_on_java(java_version = 'any')
+    if java_version == 'any'
+      puts <<-EOS.undent
+      #{@cask} requires Java. You can install the latest version with
+
+        brew cask install java
+
+      EOS
+    elsif java_version =~ /8/ || java_version =~ /\+/
+      puts <<-EOS.undent
+      #{@cask} requires Java #{java_version}. You can install the latest version with
+
+        brew cask install java
+
+      EOS
+    else
+      puts <<-EOS.undent
+      #{@cask} requires Java #{java_version}. You can install it with
+
+        brew cask install caskroom/versions/java#{java_version}
+
+      EOS
+    end
+  end
+
   def logout
     puts <<-EOS.undent
     You must log out and log back in for the installation of #{@cask}
@@ -88,6 +113,22 @@ class Hbc::CaveatsDSL
   def reboot
     puts <<-EOS.undent
     You must reboot for the installation of #{@cask} to take effect.
+
+    EOS
+  end
+
+  def discontinued
+    puts <<-EOS.undent
+    #{@cask} has been officially discontinued upstream.
+    It may stop working correctly (or at all) in recent versions of OS X.
+
+    EOS
+  end
+
+  def free_license(web_page)
+    puts <<-EOS.undent
+    The vendor offers a free license for #{@cask} at
+      #{web_page}
 
     EOS
   end

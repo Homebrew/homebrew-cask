@@ -1,32 +1,37 @@
-cask :v1 => 'sencha' do
-  version '5.1.1.39'
-  sha256 'bb3de716b825fe9f8908f96a3f7570499ffbf41bac860a16f57f680b3cd341ad'
+cask 'sencha' do
+  version '6.0.2.14'
+  sha256 '7d131f333585ed74a31c4c4efa9ecc5176cf5d5410eeddb631c974a847216cec'
 
-  url "http://cdn.sencha.com/cmd/#{version}/SenchaCmd-#{version}-osx.app.zip"
+  url "https://cdn.sencha.com/cmd/#{version}/jre/SenchaCmd-#{version}-osx.app.zip"
   name 'Sencha Cmd'
-  homepage 'http://www.sencha.com/products/sencha-cmd/'
+  homepage 'https://www.sencha.com/products/sencha-cmd/'
   license :freemium
 
-  installer :script => "SenchaCmd-#{version}-osx.app/Contents/MacOS/installbuilder.sh",
-            :args   => ['--mode', 'unattended', '--prefix', '/opt']
+  installer script: "SenchaCmd-#{version}-osx.app/Contents/MacOS/JavaApplicationStub",
+            args:   ['-Djava.awt.headless=true', '-q', '-dir', "/opt/Sencha/Cmd/#{version}"],
+            sudo:   true
 
-  uninstall :script => {
-                         :executable => "/opt/Sencha/Cmd/#{version}/uninstall.app/Contents/MacOS/installbuilder.sh",
-                         :args => ['--mode', 'unattended']
-                       }
+  postflight do
+    set_ownership '/opt/Sencha'
+  end
+
+  uninstall script: {
+                      executable: "/opt/Sencha/Cmd/#{version}/.install4j/Sencha Cmd Uninstaller.app/Contents/MacOS/JavaApplicationStub",
+                      args:       ['-Djava.awt.headless=true', '-q'],
+                      sudo:       true,
+                    }
 
   caveats do
     <<-EOS.undent
       Installing this Cask means you have AGREED to the Sencha Cmd License
 
-        http://www.sencha.com/legal/sencha-cmd-license
+        http://www.sencha.com/legal/sencha-tools-software-license-agreement/
 
-      Sencha Cmd adds two changes to your ~/.bashrc file:
+      Sencha Cmd appends 1 line to your ~/.bash_profile or ~/.profile file:
 
-        export PATH=/opt/Sencha/Cmd/#{version}:$PATH
-        export SENCHA_CMD_3_0_0="/opt/Sencha/Cmd/#{version}"
+        export PATH="/opt/Sencha/Cmd:$PATH"
 
-      If you are a zshell user, copy at the end of your .zshrc file both lines.
+      If you are a zshell user, append both lines to your .zshrc file.
     EOS
   end
 end

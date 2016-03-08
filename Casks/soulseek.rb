@@ -1,6 +1,6 @@
-cask :v1 => 'soulseek' do
-  version '2014-12-19'
-  sha256 'e0a3a3aee96fa1d5f98033b8d749f6d87419d7d68edef2035e03042d176bc943'
+cask 'soulseek' do
+  version '2015-8-21'
+  sha256 '16a1ac9e4a6ff243f4f8874cf9a64637a6e7e4edfcbd8598b118d03a97c8220e'
 
   url "http://www.soulseekqt.net/SoulseekQt/Mac/SoulseekQt-#{version}.dmg"
   name 'Soulseek'

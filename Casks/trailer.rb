@@ -1,12 +1,12 @@
-cask :v1 => 'trailer' do
-  version '1.3.1'
-  sha256 '7be6fb7479d51d31ff535bc5c61a2a2532149a0caf866788014d5ee12938ed1e'
+cask 'trailer' do
+  version '1.3.14'
+  sha256 '414c814c16f1436f21145e14cb692a266936721494300624c1e1a79ce34d9f76'
 
-  url "http://ptsochantaris.github.io/trailer/trailer#{version.gsub('.','')}.zip"
-  appcast 'http://ptsochantaris.github.io/trailer/appcast.xml',
-          :sha256 => '0d255433261dc91f1d07b812c96cc48268370ce748f39fbc2bcbcc08796a6675'
+  url "https://ptsochantaris.github.io/trailer/trailer#{version.no_dots}.zip"
+  appcast 'https://ptsochantaris.github.io/trailer/appcast.xml',
+          checkpoint: 'cb810367436cbe85c82ea0e642b9e678f9bd7ead9ab4cbed8a97fa49be240ab8'
   name 'Trailer'
-  homepage 'http://ptsochantaris.github.io/trailer/'
+  homepage 'https://ptsochantaris.github.io/trailer/'
   license :mit
 
   app 'Trailer.app'

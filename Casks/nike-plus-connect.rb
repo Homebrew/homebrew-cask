@@ -1,4 +1,4 @@
-cask :v1 => 'nike-plus-connect' do
+cask 'nike-plus-connect' do
   version :latest
   sha256 :no_check
 
@@ -9,8 +9,8 @@ cask :v1 => 'nike-plus-connect' do
 
   pkg 'Nike+Connect_new.pkg'
 
-  uninstall :pkgutil => [
-                         'com.nike.nikeplusconnect.*',
-                         'com.nike.sportwatch',
-                        ]
+  uninstall pkgutil: [
+                       'com.nike.nikeplusconnect.*',
+                       'com.nike.sportwatch',
+                     ]
 end

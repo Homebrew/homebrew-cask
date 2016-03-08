@@ -1,4 +1,4 @@
-cask :v1 => 'emin-webpquicklook' do
+cask 'emin-webpquicklook' do
   version :latest
   sha256 :no_check
 

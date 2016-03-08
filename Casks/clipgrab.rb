@@ -1,6 +1,6 @@
-cask :v1 => 'clipgrab' do
-  version '3.4.10'
-  sha256 '36f241edd2b0894782e8ef3229779fa565078832c5cb29646ca219d51c2e0889'
+cask 'clipgrab' do
+  version '3.5.5'
+  sha256 '35a0a25ffaea11a4795e0564711d816f443e6c3ad6d2f8aa6de749d796220ade'
 
   url "http://download.clipgrab.de/ClipGrab-#{version}.dmg"
   name 'ClipGrab'
@@ -9,5 +9,5 @@ cask :v1 => 'clipgrab' do
 
   app 'ClipGrab.app'
 
-  zap :delete => '~/Library/Preferences/de.clipgrab.ClipGrab.plist'
+  zap delete: '~/Library/Preferences/de.clipgrab.ClipGrab.plist'
 end

@@ -1,20 +1,21 @@
-cask :v1 => 'tunnelblick' do
-  version '3.5.0_build_4265'
-  sha256 '3ed4b749f85924937e41f5c78d84db2cdaf52cb60b5528d5e019468be7a1ad04'
+cask 'tunnelblick' do
+  version '3.5.7_build_4270.4517'
+  sha256 'bd8a3d21b7921970adc76ceed412cab410c2b8ae193c7c3413b4350931d8591f'
 
-  # sourceforge.net is the official download host per the vendor homepage
-  url "http://downloads.sourceforge.net/project/tunnelblick/All%20files/Tunnelblick_#{version}.dmg"
+  url "https://www.tunnelblick.net/release/Tunnelblick_#{version}.dmg"
   appcast 'https://www.tunnelblick.net/appcast.rss',
-          :sha256 => '7fa119cda4d782dc61cb75895c70b3572652df737c908270c48a09d67a874592'
-  homepage 'https://code.google.com/p/tunnelblick/'
+          checkpoint: '91e22e98032e0143efb02618a5ea3cb1927c40d7e877bc609b2287da09da7a5c'
+  name 'Tunnelblick'
+  homepage 'https://www.tunnelblick.net'
   license :gpl
+
+  auto_updates true
+  depends_on macos: '>= :tiger'
 
   app 'Tunnelblick.app'
 
-  uninstall :launchctl => 'net.tunnelblick.tunnelblick.LaunchAtLogin',
-            :quit      => 'net.tunnelblick.tunnelblick'
-
-  depends_on :macos => '>= :tiger'
+  uninstall launchctl: 'net.tunnelblick.tunnelblick.LaunchAtLogin',
+            quit:      'net.tunnelblick.tunnelblick'
 
   caveats <<-EOS.undent
     For security reasons, #{token} must be installed to /Applications,

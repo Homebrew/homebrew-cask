@@ -1,18 +1,18 @@
-cask :v1 => 'iojs' do
-  version '1.8.1'
-  sha256 '9729b4a78c683767cbffd75efcf85e92393414911c599c82d75473a13d048618'
+cask 'iojs' do
+  version '2.4.0'
+  sha256 '7d842eb47b4208f8eb1e9fd7d34e8c1d8b5cde70ba731c2d7565c76f2629b98f'
 
   url "https://iojs.org/dist/v#{version}/iojs-v#{version}.pkg"
   name 'io.js'
   homepage 'https://iojs.org'
   license :oss
 
+  conflicts_with formula: 'iojs'
+
   pkg "iojs-v#{version}.pkg"
 
-  uninstall :pkgutil => [
-                         'com.nodesource.iojs.npm.pkg',
-                         'com.nodesource.iojs.pkg'
-                        ]
-
-  conflicts_with :formula => 'iojs'
+  uninstall pkgutil: [
+                       'com.nodesource.iojs.npm.pkg',
+                       'com.nodesource.iojs.pkg',
+                     ]
 end

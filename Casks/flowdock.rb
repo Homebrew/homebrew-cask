@@ -1,13 +1,14 @@
-cask :v1 => 'flowdock' do
-  version :latest
-  sha256 :no_check
+cask 'flowdock' do
+  version '1.2.7'
+  sha256 '80cce5d7062ca5e24189d268bb6b0c08ce732c5039156bbe393c0bdecec5eadd'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url 'https://flowdock-resources.s3.amazonaws.com/mac/Flowdock.zip'
-  appcast 'https://s3.amazonaws.com/flowdock-resources/mac/appcast.xml'
+  # amazonaws.com/flowdock-resources was verified as official when first introduced to the cask
+  url "https://s3.amazonaws.com/flowdock-resources/mac/#{version}/Flowdock.zip"
+  appcast 'https://s3.amazonaws.com/flowdock-resources/mac/appcast.xml',
+          checkpoint: '05c0917ea74ed402ec6f41dac60a62549f062e7a2f983f410a860d324cdcf976'
   name 'Flowdock'
   homepage 'https://www.flowdock.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   app 'Flowdock.app'
 end

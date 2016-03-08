@@ -1,12 +1,11 @@
-cask :v1 => 'navicat-for-oracle' do
-  version '11.1.12'   # navicat-premium.rb and navicat-for-* should be upgraded together
-  sha256 'efe3b7edf8f3bb83731950934e40b530c9d2b8c288955b462af2da0abe22e0bb'
+cask 'navicat-for-oracle' do
+  version '11.2.9'
+  sha256 '91a8254a992c1cb6d2a066359bd961648867e7cdedc65859f437c313b243f42c'
 
-  url "http://download.navicat.com/download/navicat#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}_ora_en.dmg"
+  url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_ora_en.dmg"
   name 'Navicat for Oracle'
   homepage 'http://www.navicat.com/products/navicat-for-oracle'
   license :commercial
-  tags :vendor => 'Navicat'
 
   app 'Navicat for Oracle.app'
 end

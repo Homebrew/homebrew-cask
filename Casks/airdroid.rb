@@ -1,10 +1,10 @@
-cask :v1 => 'airdroid' do
-  version '3.1.0'
-  sha256 '32272e2b938453ccadd3130895689f6d527128ddc716d95df5741d334e88ff59'
+cask 'airdroid' do
+  version '3.3.0'
+  sha256 '979a5b85dab87af5d4ee27d9f089816bc9a871c956a4139b92dc5624d559c2d6'
 
   url "http://dl.airdroid.com/AirDroid_Desktop_Client_#{version}.dmg"
   name 'AirDroid'
-  homepage 'http://airdroid.com'
+  homepage 'https://www.airdroid.com/'
   license :closed
 
   app 'AirDroid.app'

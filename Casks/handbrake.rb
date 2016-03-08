@@ -1,13 +1,15 @@
-cask :v1 => 'handbrake' do
-  version '0.10.1'
-  sha256 '7c6f231889433d932d3d483df8f4f90fab517386987376542176dd8d2d032bd2'
+cask 'handbrake' do
+  version '0.10.5'
+  sha256 'a2f1cacfb508e5ebe2489c64fa15204f15578aaf5e7f8a5ae9ab1fdccde51222'
 
   url "http://download.handbrake.fr/releases/#{version}/HandBrake-#{version}-MacOSX.6_GUI_x86_64.dmg"
-  appcast 'http://handbrake.fr/appcast.x86_64.xml',
-          :sha256 => 'f0e700c39b76c16dba12ff8b931ae75ae4d764f1e8d1f5b2deb9231e5a445390'
+  appcast 'https://handbrake.fr/appcast.x86_64.xml',
+          checkpoint: '701d8c213ba3c05ca2e6f71b26bff2badaae1bed2f19902184c7877c179d3a1f'
   name 'HandBrake'
   homepage 'https://handbrake.fr'
   license :oss
+
+  auto_updates true
 
   app 'HandBrake.app'
 end

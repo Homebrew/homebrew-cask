@@ -1,14 +1,15 @@
-cask :v1 => 'menuola' do
+cask 'menuola' do
   version '2.0'
   sha256 'd97170adab805f1a52fef6c59287724783d80b5b23821dd97c0a85b4a72261dd'
 
-  url "http://geocom.co.nz/downloads/Menuolav#{version.to_i}.dmg.zip"
-  appcast 'http://www.geocom.co.nz/menuola.xml',
-          :sha256 => 'e18b081046702171648c929872c692adc2d1b816f5e9aff93b0612a11a3ea362'
+  url "https://geocom.co.nz/downloads/Menuolav#{version.to_i}.dmg.zip"
+  appcast 'https://www.geocom.co.nz/menuola.xml',
+          checkpoint: 'f63f98d9f170a4b50412465aac5b1fffa599ca5a0ebfe9e6c95ada321c8211af'
   name 'Menuola'
-  homepage 'http://www.geocom.co.nz'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.geocom.co.nz'
+  license :gratis
 
-  container :nested => 'Menuola.dmg'
+  container nested: 'Menuola.dmg'
+
   app 'Menuola.app'
 end

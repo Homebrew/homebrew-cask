@@ -1,6 +1,6 @@
-cask :v1 => 'elm-platform' do
-  version '0.15'
-  sha256 'cb4a6a6510a231cf1c0109b892b2aea1f0139d6454c93b1568d3dfcf8df9def0'
+cask 'elm-platform' do
+  version '0.16'
+  sha256 '8d87aa2737c4c9950fdbdb1f8f1b154b28fd5c27e7b1bfb3e0bdbcc5fc6cc603'
 
   url "http://install.elm-lang.org/Elm-Platform-#{version}.pkg"
   name 'Elm'
@@ -9,6 +9,6 @@ cask :v1 => 'elm-platform' do
 
   pkg "Elm-Platform-#{version}.pkg"
 
-  uninstall :pkgutil => 'org.elm-lang.*',
-            :delete => '/usr/local/share/elm'
+  uninstall pkgutil: 'org.elm-lang.*',
+            delete:  '/usr/local/share/elm'
 end

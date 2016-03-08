@@ -1,10 +1,10 @@
-cask :v1 => 'zotero' do
-  version '4.0.26.2'
-  sha256 '7aeaf0997e27b23c7af2217275f80487e07d2988e814a9c35401e493b25cff14'
+cask 'zotero' do
+  version '4.0.28.8'
+  sha256 'c7e9aa8e8dbd4b447ec291ce0d0814740a3b1e42f9241fe0bdc0298ee8d7645e'
 
   url "https://download.zotero.org/standalone/#{version}/Zotero-#{version}.dmg"
   name 'Zotero'
-  homepage 'http://www.zotero.org/'
+  homepage 'https://www.zotero.org/'
   license :affero
 
   app 'Zotero.app'

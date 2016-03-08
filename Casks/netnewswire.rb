@@ -1,10 +1,10 @@
-cask :v1 => 'netnewswire' do
-  version '4.0.0-166'
-  sha256 '94bbf93cc820be06f32fc80ff1ce065e5e5e219a0587fee948355a72140d05f3'
+cask 'netnewswire' do
+  version '4.0.1-335'
+  sha256 'b5240f104c23f93eacf05a900992db2cd4b3fcb8c2dbdc7a0a504dd4cb8fcb7b'
 
   url "http://cdn.netnewswireapp.com/releases/NetNewsWire-#{version}.zip"
   appcast 'https://updates.blackpixel.com/updates?app=nnw',
-          :sha256 => '33564e80110c0e5bc562bf65f09046d95afcbab79d0e9c49617c2b8548a64cc2'
+          checkpoint: 'cee1d039a2ffc06b54fb22d46af75f49ecbf8c48fd84068ff92aabcab48744c8'
   name 'NetNewsWire'
   homepage 'http://netnewswireapp.com/'
   license :commercial

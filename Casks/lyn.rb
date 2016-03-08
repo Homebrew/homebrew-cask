@@ -1,13 +1,13 @@
-cask :v1 => 'lyn' do
-  version '1.5.2'
-  sha256 'a4200b35eb4e51c3932a9e7cd40e1be3291a26921da350d396d337fa667798f6'
+cask 'lyn' do
+  version '1.6'
+  sha256 '08dc85f2b245c22fab96fa52873a5088084301d08c65b0dec3f2d1e240164198'
 
   url "http://www.lynapp.com/downloads/Lyn-#{version}.dmg"
   appcast 'http://www.lynapp.com/lyn/update.xml',
-          :sha256 => '76e8a68df36fb35893e5ad0c5fd464ec0feb0b6a6f857d6b57792e3c7eb82fb5'
+          checkpoint: 'ad4e4b4ee65adc7e515ed577d5a76646c7df6a47ec5fd30e46ed09501577e6ca'
   name 'Lyn'
   homepage 'http://www.lynapp.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'Lyn.app'
 end

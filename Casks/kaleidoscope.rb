@@ -1,13 +1,15 @@
-cask :v1 => 'kaleidoscope' do
-  version '2.1.0-134'
-  sha256 'e16360273fb6d37560c7974b95728d82a0482268641753c49f903bf36445d35b'
+cask 'kaleidoscope' do
+  version '2.1.1-219'
+  sha256 '660b105e03391e93a8dffe584cd5b26326b431786adcbaabbb60aa00afc5c8c7'
 
   url "http://cdn.kaleidoscopeapp.com/releases/Kaleidoscope-#{version}.zip"
   appcast 'https://updates.blackpixel.com/updates?app=ks',
-          :sha256 => '80eafc0b115e6f9ad4ec0cdec87809f21a3fc7ff1c540722f74d86dad64da158'
+          checkpoint: '7227f778900aa4f17dab7b1984cf58e19325d131e71a6e38cd19bb363812730a'
   name 'Kaleidoscope'
   homepage 'http://www.kaleidoscopeapp.com/'
   license :commercial
+
+  auto_updates true
 
   app 'Kaleidoscope.app'
   binary 'Kaleidoscope.app/Contents/Resources/bin/ksdiff'
@@ -15,6 +17,15 @@ cask :v1 => 'kaleidoscope' do
   postflight do
     suppress_move_to_applications
   end
+
+  zap delete: [
+                '~/Library/Application Support/Kaleidoscope',
+                '~/Library/Caches/com.blackpixel.kaleidoscope',
+                '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.blackpixel.kaleidoscope',
+                '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.blackpixel.kaleidoscope/queued_reports',
+                '~/Library/Preferences/com.blackpixel.kaleidoscope.plist',
+                '~/Library/Saved Application State/com.blackpixel.kaleidoscope.savedState',
+              ]
 
   caveats do
     files_in_usr_local

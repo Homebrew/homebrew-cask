@@ -1,17 +1,17 @@
-cask :v1 => 'picasa' do
+cask 'picasa' do
   version '3.9'
-  sha256 '59a2549913f523dac5a51859de135d92e434c1801ca571eb2d74664d19d6b627'
+  sha256 'df84018272ecf0f56e78e73cb6eb8f7c08911f6e24294fdc811e362a35dace9c'
 
-  url "https://dl.google.com/photos/picasamac#{version.gsub('.', '')}.dmg"
+  url "https://dl.google.com/photos/picasamac#{version.delete('.')}.dmg"
   name 'Picasa'
-  homepage 'http://picasa.google.com/'
+  homepage 'https://picasa.google.com/'
   license :gratis
 
   app 'Picasa.app'
 
-  zap :delete => [
-                  '~/Library/Preferences/com.google.picasa.plist',
-                  '~/Library/Application Support/Google/Picasa3',
-                  '~/Library/Saved Application State/com.google.picasa.savedState'
-                 ]
+  zap delete: [
+                '~/Library/Preferences/com.google.picasa.plist',
+                '~/Library/Application Support/Google/Picasa3',
+                '~/Library/Saved Application State/com.google.picasa.savedState',
+              ]
 end

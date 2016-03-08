@@ -1,11 +1,11 @@
-cask :v1 => 'slic3r' do
-  version '1.1.7'
-  sha256 '41ae1c3c5ee7ddeb2431698b63f6e4112c68b830de9f024730388a1eb062f80b'
+cask 'slic3r' do
+  version '1.2.9'
+  sha256 '2e8579791192332bb2ee6dce860d78edd4bb010ff06d0d7692dedee641a1bc1c'
 
   url "http://dl.slic3r.org/mac/slic3r-osx-uni-#{version.gsub('.', '-')}-stable.dmg"
   name 'Slic3r'
   homepage 'http://slic3r.org/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :affero
 
   app 'Slic3r.app'
 end

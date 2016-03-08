@@ -1,13 +1,13 @@
-cask :v1 => 'hermes' do
-  version '1.2.5'
-  sha256 '786e20040bdd6e943b646f74d7cc9a460b37444272c4a7af8d1f5ef77a7d2f2f'
+cask 'hermes' do
+  version '1.2.6'
+  sha256 '3735d1bbae0e3ef773e0a2d169ca7f838f3e3510fe7b6fa59546c01fccbb9aa8'
 
-  # amazonaws.com is the official download host per the vendor homepage
+  # amazonaws.com/hermesmacapp is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/hermesmacapp/Hermes-#{version}.zip"
-  appcast 'http://hermesapp.org/versions.xml',
-          :sha256 => 'cc89f8c651e0335c91d52bb120f769ca4c418c13144155476c572ca5da21fb0e'
+  appcast 'https://hermesapp.org/versions.xml',
+          checkpoint: 'b165a9588985b8fb3305878405782c17504466276f2a1ecd3715fe0bd4a92205'
   name 'Hermes'
-  homepage 'http://hermesapp.org/'
+  homepage 'https://hermesapp.org/'
   license :mit
 
   app 'Hermes.app'

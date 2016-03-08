@@ -1,11 +1,11 @@
-cask :v1 => 'typewriter' do
+cask 'typewriter' do
   version :latest
   sha256 :no_check
 
-  url 'http://llllll.li/typewriter/download/Typewriter.zip'
+  url 'https://typewriter.llllll.li/download/Typewriter.zip'
   name 'Typewriter'
-  homepage 'http://llllll.li/typewriter'
-  license :mit
+  homepage 'https://typewriter.llllll.li'
+  license :public_domain
 
   app 'Typewriter.app'
 end

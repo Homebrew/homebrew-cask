@@ -1,14 +1,14 @@
-cask :v1 => 'sunvox' do
-  version '1.8.1'
-  sha256 'd1631d8744593763a6ce1c2459f95798ec494abe7068c5c692d45028db06f7e2'
+cask 'sunvox' do
+  version '1.9.1'
+  sha256 'b03d79483c7fff705e5373dc9c1853c521208f7318f21032a809aae8f186a77d'
 
   url "http://www.warmplace.ru/soft/sunvox/sunvox-#{version}.zip"
   name 'SunVox'
   homepage 'http://www.warmplace.ru/soft/sunvox/'
   license :gratis
 
-  app 'sunvox/sunvox/osx/SunVox.app'
+  depends_on arch:  :x86_64,
+             macos: '>= 10.6'
 
-  depends_on :arch => :x86_64,
-             :macos => '>= 10.6'
+  app 'sunvox/sunvox/osx/SunVox.app'
 end

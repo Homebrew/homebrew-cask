@@ -1,11 +1,12 @@
-cask :v1 => 'prepros' do
-  version '4.0.1'
-  sha256 '84510d1252274898b0fc4f95828b60e29a2c946a158bbf7d3188611c62dcd3b1'
+cask 'prepros' do
+  version '5.9.5'
+  sha256 'f892d1ce768c7e71820b005f77a27648aa1d3025a43669b621c4a31d667716e8'
 
-  url "http://download.alphapixels.com/Prepros-#{version}.zip"
+  # amazonaws.com is the official download host per the vendor homepage
+  url "http://prepros.io.s3.amazonaws.com/installers/Prepros-Mac-#{version}.zip"
   name 'Prepros'
-  homepage 'http://alphapixels.com/prepros/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://prepros.io/'
+  license :commercial
 
   app 'Prepros.app'
 end

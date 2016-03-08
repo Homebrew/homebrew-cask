@@ -1,11 +1,13 @@
-cask :v1 => 'bitwig-studio' do
-  version '1.0.14'
-  sha256 'f968118c93c3449310d48c32f545e83d0f918c8e312e5a4b54cd30467e860b1e'
+cask 'bitwig-studio' do
+  version '1.3.5'
+  sha256 'f15404e9a2a84fbd0165243af49629da1846252ed5915db4853f212a43daecf1'
 
-  url "http://packs.bitwig.com/downloads/Bitwig%20Studio%20#{version}.dmg"
+  url "https://downloads.bitwig.com/stable/#{version}/Bitwig%20Studio%20#{version}.dmg"
   name 'Bitwig Studio'
   homepage 'https://www.bitwig.com'
   license :commercial
+
+  auto_updates true
 
   app 'Bitwig Studio.app'
 end

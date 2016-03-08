@@ -1,10 +1,10 @@
-cask :v1 => 'katawa-shoujo' do
-  version '1.2.1'
-  sha256 'ff5b047b50be99e04a132b938c7cca209149c775b29776c95eec89870869b480'
+cask 'katawa-shoujo' do
+  version '1.3.1'
+  sha256 '49ce41025a49b1f7e370dad9f3e554de7ec6d740e8a832909ff95e1c35b7d98f'
 
-  url 'http://dl.katawa-shoujo.com/gold_1.2/%5b4ls%5d_katawa_shoujo_1.2.1-%5bmac%5d%5b1FDB1D61%5d.dmg'
-  name 'かたわ少女'
+  url "http://dl.katawa-shoujo.com/gold_#{version}/%5B4ls%5D_katawa_shoujo_#{version}-%5Bmac%5D%5B1DFC84A6%5D.dmg"
   name 'Katawa Shoujo'
+  name 'かたわ少女'
   homepage 'http://katawa-shoujo.com/'
   license :cc
 

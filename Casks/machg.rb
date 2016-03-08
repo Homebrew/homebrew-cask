@@ -1,13 +1,13 @@
-cask :v1 => 'machg' do
-  version '0.9.25'
-  sha256 '4eaf4abf4a8c52ce0bf4075a3aae7b0b94c8f551340245b3cb72d2a97fb93531'
+cask 'machg' do
+  version '1.0.2'
+  sha256 'af15173111c1d350ba5b62edf6fe5ab3a186cc8bdb6302455c4fb04f2a809305'
 
   url "http://jasonfharris.com/machg/downloads/assets/MacHg#{version}.zip"
   appcast 'http://jasonfharris.com/machg/machg_appcast.xml',
-          :sha256 => 'f562cfb2d9a8c7a5cf603529dfbc79f3782614795d85d54a107961d96242203b'
+          checkpoint: 'ced63dd31eb43a5e633c300d344cdea5cd15a01a539bceb6b1bcc3599581ffec'
   name 'MacHg'
   homepage 'http://jasonfharris.com/machg/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :bsd
 
   app 'MacHg.app'
 end

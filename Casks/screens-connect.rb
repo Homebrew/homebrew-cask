@@ -1,28 +1,22 @@
-cask :v1 => 'screens-connect' do
-  version '3.2.3'
-  sha256 'bdffd7b7e750d5bcb23d2895588b5d14c8d0cdd5211391d537ee781b43321afc'
+cask 'screens-connect' do
+  version '3.6.1'
+  sha256 '18bb65623aadff7f931456598f12ba33f5c54bad9c1f7f2a3b10f9585f8bc771'
 
-  # edovia.com is the official download host per the appcast feed
-  # Original discussion: https://github.com/caskroom/homebrew-cask/pull/8816
-  url "http://download.edovia.com/screensconnect/screensconnect_#{version}.dmg"
-  appcast 'https://screensconnect.com/sparkle/appcast.xml'
+  # evodia.com was verified as official when first introduced to the cask
+  url "http://download.edovia.com/screensconnect/screensconnect%20#{version}.dmg"
   name 'Screens Connect'
   homepage 'https://screensconnect.com'
   license :gratis
 
-  pkg 'Screens Connect.pkg'
+  depends_on macos: '>= :mountain_lion'
 
-  depends_on :macos => '>= :mountain_lion'
+  pkg 'Screens Connect.pkg'
 
   # Uninstall script can fail when trying to remove legacy PKGIDS
   # Original discussion: https://github.com/caskroom/homebrew-cask/pull/8833
-  uninstall :script => {
-              :executable => 'Uninstall Screens Connect.app/Contents/Resources/sc-uninstaller.tool',
-              :must_succeed => false
-              },
-            :pkgutil => 'com.edovia.pkg.screens.connect.*'
-
-  uninstall_preflight do
-    system '/bin/chmod', '+x', "#{staged_path}/Uninstall Screens Connect.app/Contents/Resources/sc-uninstaller.tool"
-  end
+  uninstall script:  {
+                       executable:   'Uninstall Screens Connect.app/Contents/Resources/sc-uninstaller.tool',
+                       must_succeed: false,
+                     },
+            pkgutil: 'com.edovia.pkg.screens.connect.*'
 end

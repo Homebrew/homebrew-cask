@@ -1,8 +1,8 @@
-cask :v1 => 'freecol' do
-  version '0.10.7'
-  sha256 'eb05ea179df6adc6bcf4234ce3809c48b8c2d5597da20a10910ded677f2b6a2d'
+cask 'freecol' do
+  version '0.11.3'
+  sha256 'bf3dffc26689470f8a9c6fdccd079603ce86c4ed4360042db199b57e658e2de4'
 
-  # sourceforge.net is the official download host per the vendor homepage
+  # sourceforge.net/sourceforge/freecol was verified as official when first introduced to the cask
   url "http://downloads.sourceforge.net/sourceforge/freecol/freecol-#{version}-mac.tar.bz2"
   name 'FreeCol'
   homepage 'http://freecol.org'

@@ -1,9 +1,9 @@
-cask :v1 => 'beaker' do
-  version '1.2.1-0-g7dc8ced'
-  sha256 '20dc08ed14bf177f300bb31457faa068898fe4bc1fa6e805f72fc13129804959'
+cask 'beaker' do
+  version '1.5.1-0-g6e6bdd3'
+  sha256 '5ce78888b799b7b39d532b99d63a83301586ede2ccf91b7b2e8fe8ecb1ae7bbf'
 
-  # cloudfront.net is the official download host per the vendor homepage
-  url "http://d299yghl10frh5.cloudfront.net/beaker-notebook-v#{version}-mac.dmg"
+  # d299yghl10frh5.cloudfront.net was verified as official when first introduced to the cask
+  url "https://d299yghl10frh5.cloudfront.net/beaker-notebook-#{version}-mac.dmg"
   name 'Beaker'
   homepage 'http://beakernotebook.com/'
   license :apache

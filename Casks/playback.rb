@@ -1,10 +1,11 @@
-cask :v1 => 'playback' do
-  version '1.3.0'
-  sha256 'e161c0589f57f840428e946f3d12301377cdcb9aaba79a5f39c1a5048314b944'
+cask 'playback' do
+  version '1.6.0'
+  sha256 '32588de0f9f8c6281cae11e4f64f5f4e4d3919f5d8b94d03be4d8552fbd8f0a8'
 
-  # github.com is the official download host per the vendor homepage
+  # github.com/mafintosh/playback was verified as official when first introduced to the cask
   url "https://github.com/mafintosh/playback/releases/download/v#{version}/Playback.app.zip"
-  appcast 'https://github.com/mafintosh/playback/releases.atom'
+  appcast 'https://github.com/mafintosh/playback/releases.atom',
+          checkpoint: '7ad205703ce9b96d1788c7c5c69d653e0882d9311b8abbb1229a358db2f73dce'
   name 'Playback'
   homepage 'https://mafintosh.github.io/playback/'
   license :mit

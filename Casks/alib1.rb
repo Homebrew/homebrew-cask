@@ -1,4 +1,4 @@
-cask :v1 => 'alib1' do
+cask 'alib1' do
   # note: "1" is not a version number, but an intrinsic part of the product name
   version :latest
   sha256 :no_check
@@ -6,13 +6,13 @@ cask :v1 => 'alib1' do
   url 'http://presstube.com/screensavers/Presstube-ALib1-mac.zip'
   name 'ALib1'
   homepage 'http://presstube.com/blog/2011/alib1/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
+
+  depends_on cask: 'adobe-air'
 
   screen_saver 'Presstube-ALib1.app/Contents/Resources/Presstube - ALib1.saver'
 
   postflight do
     system '/usr/libexec/PlistBuddy', '-c', 'Set :CFBundleName ALib1 (Presstube)', "#{staged_path}/presstube-alib1.app/Contents/Resources/Presstube - ALib1.saver/Contents/Info.plist"
   end
-
-  depends_on :cask => 'adobe-air'
 end

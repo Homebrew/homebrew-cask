@@ -23,14 +23,14 @@ describe Hbc::CLI::Home do
   it 'opens the homepage for the specified Cask' do
     Hbc::CLI::Home.run('alfred')
     Hbc::CLI::Home.system_commands.must_equal [
-      ['/usr/bin/open', '--', 'http://www.alfredapp.com/']
+      ['/usr/bin/open', '--', 'https://www.alfredapp.com/']
     ]
   end
 
   it 'works for multiple Casks' do
     Hbc::CLI::Home.run('alfred', 'adium')
     Hbc::CLI::Home.system_commands.must_equal [
-      ['/usr/bin/open', '--', 'http://www.alfredapp.com/'],
+      ['/usr/bin/open', '--', 'https://www.alfredapp.com/'],
       ['/usr/bin/open', '--', 'https://www.adium.im/']
     ]
   end

@@ -1,17 +1,27 @@
-cask :v1 => 'virtualbox' do
-  version '4.3.26-98988'
-  sha256 '3efddddbed7648d5bdfe11a7a341591d05135cda7298792d93334a5faa83d124'
+cask 'virtualbox' do
+  if MacOS.release <= :lion
+    version '4.3.32-103443'
+    sha256 'dcfbd1d3014ab393dc5944a9474eeabf8b33471e7d95cb4c94070dc7acab772c'
+  else
+    version '5.0.16-105871'
+    sha256 '0e1fa0155ba219378951c0b08083a679a77df5d2c4e81313bc7e9d7c808f3425'
+  end
 
-  url "http://download.virtualbox.org/virtualbox/#{version.sub(/-.*$/, '')}/VirtualBox-#{version}-OSX.dmg"
-  name 'VirtualBox'
-  homepage 'http://www.virtualbox.org'
+  url "http://download.virtualbox.org/virtualbox/#{version.sub(%r{-.*}, '')}/VirtualBox-#{version}-OSX.dmg"
+  name 'Oracle VirtualBox'
+  homepage 'https://www.virtualbox.org'
   license :gpl
-  tags :vendor => 'Oracle'
+
+  auto_updates true
 
   pkg 'VirtualBox.pkg'
-  binary '/Applications/VirtualBox.app/Contents/MacOS/VBoxManage'
-  binary '/Applications/VirtualBox.app/Contents/MacOS/VBoxHeadless'
 
-  uninstall :script => { :executable => 'VirtualBox_Uninstall.tool', :args => %w[--unattended] },
-            :pkgutil => 'org.virtualbox.pkg.*'
+  uninstall script:  { executable: 'VirtualBox_Uninstall.tool', args: %w[--unattended] },
+            pkgutil: 'org.virtualbox.pkg.*'
+
+  zap delete: [
+                '/Library/Application Support/VirtualBox',
+                '~/Library/VirtualBox',
+              ],
+      rmdir:  '~/VirtualBox VMs'
 end

@@ -1,11 +1,14 @@
-cask :v1 => 'audacity' do
-  version '2.1.0'
-  sha256 '0485ab70a86ab6d500b9365b24d279f10971b9260f0b537142b48832f8f84389'
+cask 'audacity' do
+  version '2.1.2-1453294898'
+  sha256 '2e4b7d608ecc0d2f79bf16663f085d383075e488f7d50bf7d74c0b69173defe7'
 
-  url "http://downloads.sourceforge.net/project/audacity/audacity/#{version}/audacity-macosx-ub-#{version}.dmg"
+  # oldfoss.com:81/download/Audacity was verified as official when first introduced to the cask
+  url "http://app.oldfoss.com:81/download/Audacity/audacity_macosx_ub_#{version.dots_to_underscores}.dmg"
   name 'Audacity'
-  homepage 'http://audacity.sourceforge.net/'
+  homepage 'http://audacityteam.org'
   license :gpl
 
   app 'Audacity/Audacity.app'
+
+  zap delete: '~/Library/Application Support/audacity'
 end

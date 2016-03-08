@@ -1,6 +1,6 @@
-cask :v1 => 'netbeans' do
-  version '8.0.2'
-  sha256 'a256360136918001b17a6f5ad9fedc0b7ea8a094701cba37718568bc2cbb4c01'
+cask 'netbeans' do
+  version '8.1'
+  sha256 'adc3963891a62e7d716d4b2ee195bc57f7e42150dabfe684d0a8eedfc9b6c99a'
 
   url "http://download.netbeans.org/netbeans/#{version}/final/bundles/netbeans-#{version}-macosx.dmg"
   name 'NetBeans IDE'
@@ -8,6 +8,7 @@ cask :v1 => 'netbeans' do
   license :oss
 
   pkg "NetBeans #{version}.pkg"
+
   # Theoretically this uninstall could conflict with a separate GlassFish
   # installation.
   #
@@ -28,6 +29,6 @@ cask :v1 => 'netbeans' do
   # the OS X installer, so it's insufficient to just delete the paths exposed
   # by pkgutil, hence the additional ":delete" option below.
 
-  uninstall :pkgutil => 'org.netbeans.ide.*|glassfish-.*',
-            :delete => '/Applications/NetBeans'
+  uninstall pkgutil: 'org.netbeans.ide.*|glassfish-.*',
+            delete:  '/Applications/NetBeans'
 end

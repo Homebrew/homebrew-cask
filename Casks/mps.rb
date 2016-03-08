@@ -1,12 +1,16 @@
-cask :v1 => 'mps' do
-  version '3.2'
-  sha256 '1e015f575ad740a0f5849e2d511ac8e82a1656ceeded5b06cb2b7f3fb542b3ca'
+cask 'mps' do
+  version '3.3.2'
+  sha256 '70e43db0263dbfaf0175245e4abd17381b73998b90dfdd3d7dc3b04ca7d1b820'
 
-  url "http://download-cf.jetbrains.com/mps/#{version.tr('.','')}/MPS-#{version}-macos.dmg"
-  name 'MPS'
+  url "http://download-cf.jetbrains.com/mps/#{version.major_minor.no_dots}/MPS-#{version}-macos-jdk-bundled.dmg"
   name 'JetBrains MPS'
   homepage 'https://www.jetbrains.com/mps'
   license :apache
 
-  app "MPS #{version}.app"
+  app "MPS #{version.major_minor}.app"
+
+  zap delete: [
+                "~/Library/Application Support/MPS#{version.tr('.', '')[0, 2]}",
+                "~/Library/Preferences/MPS#{version.tr('.', '')[0, 2]}",
+              ]
 end

@@ -1,6 +1,6 @@
-cask :v1 => 'syncany' do
-  version '0.4.4-alpha'
-  sha256 'a3174e873993e130252aa03bfa94c8afd24433945ebfe4f4d61288364676bc90'
+cask 'syncany' do
+  version '0.4.6-alpha'
+  sha256 '6ff3f4eadf716616e4f91402779d77734194071ff191bba4eb2f30352c161f90'
 
   url "https://get.syncany.org/dist/releases/syncany-#{version}-x86_64.app.zip"
   name 'Syncany'
@@ -9,5 +9,5 @@ cask :v1 => 'syncany' do
 
   app 'Syncany.app'
 
-  zap :delete => '~/.config/syncany'
+  zap delete: '~/.config/syncany'
 end

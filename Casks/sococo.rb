@@ -1,11 +1,14 @@
-cask :v1 => 'sococo' do
-  version '3.2.7'
-  sha256 '6772f2c2ef5c7b046612de408b79a71ed0936041fb9286785af69d862f653d1f'
+cask 'sococo' do
+  version '0.2.3-7127'
+  sha256 'a87e533f63567d3334491e475bfc1ead15eb44f87b0700f2076d623df05a65a1'
 
-  url "http://download.sococo.com/10069/Sococo_#{version.gsub('.','_')}_10069.dmg"
+  # amazonaws.com is the official download host per the vendor homepage
+  url "http://s.sococo.com.s3-website-us-east-1.amazonaws.com/rs/client/mac/Sococo-#{version}.dmg"
   name 'Sococo'
-  homepage 'http://www.sococo.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.sococo.com/'
+  license :freemium
+
+  depends_on macos: '>= :lion'
 
   app 'Sococo.app'
 end

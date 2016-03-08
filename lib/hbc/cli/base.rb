@@ -8,10 +8,14 @@ class Hbc::CLI::Base
   end
 
   def self.cask_tokens_from(args)
-    args.reject { |a| a.chars.first == '-' }
+    args.reject { |a| a.empty? || a.chars.first == '-' }
   end
 
   def self.help
     "No help available for the #{command_name} command"
+  end
+
+  def self.needs_init?
+    false
   end
 end

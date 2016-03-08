@@ -1,18 +1,14 @@
-cask :v1 => 'eclipse-ptp' do
-  version '4.4.2'
+cask 'eclipse-ptp' do
+  version '4.5.2'
+  sha256 'ca5b762715346f2a40a5c64bf355d1f6916afe73c2ecf2e6070b2c380c2d0a34'
 
-  if Hardware::CPU.is_32_bit?
-    sha256 'fb911562252d666053c75b56420f53bb35e80cdb820ab323e866cca279650fcd'
-    url 'http://download.eclipse.org/technology/epp/downloads/release/luna/SR2/eclipse-parallel-luna-SR2-macosx-cocoa.tar.gz'
-  else
-    sha256 '03bfcd97156101c9763a2ccb189dc66a597c97c101ff345793cd07f7fc2dee3a'
-    url 'http://download.eclipse.org/technology/epp/downloads/release/luna/SR2/eclipse-parallel-luna-SR2-macosx-cocoa-x86_64.tar.gz'
-  end
-
-  name 'Eclipse'
+  url 'https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/2/eclipse-parallel-mars-2-macosx-cocoa-x86_64.tar.gz&r=1'
   name 'Eclipse Parallel Tools Platform'
-  homepage 'http://eclipse.org/'
+  homepage 'https://eclipse.org/'
   license :eclipse
 
-  app 'eclipse/Eclipse.app'
+  depends_on macos: '>= :leopard'
+  depends_on arch: :x86_64
+
+  app 'Eclipse.app'
 end

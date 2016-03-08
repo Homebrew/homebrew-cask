@@ -1,8 +1,8 @@
-cask :v1 => 'keystore-explorer' do
-  version '5.0.1'
-  sha256 '64932fc5a26bd4de32d952b73431307c9a7c3100c1b11e76ab9f55e2a2cf7d49'
+cask 'keystore-explorer' do
+  version '5.1.1'
+  sha256 'd4c8ce7acbe1e0fc1e05dfbe61fd6d6de083b4cd9bb30ee604b7a7775cb62332'
 
-  url "http://downloads.sourceforge.net/project/keystore-explorer/KSE%20#{version}/kse-#{version.gsub('.','')}.dmg"
+  url "http://downloads.sourceforge.net/project/keystore-explorer/KSE%20#{version}/kse-#{version.delete('.')}.dmg"
   name 'KeyStore Explorer'
   homepage 'http://keystore-explorer.sourceforge.net/'
   license :gpl

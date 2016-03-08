@@ -1,6 +1,6 @@
-cask :v1 => 'leksah' do
-  version '0.14.4.0-ghc-7.8.3'
-  sha256 '921ac4eb7bbc17e76baf9f870d9b99006418fba21f2161907040ed240d3324fc'
+cask 'leksah' do
+  version '0.15.2.0-ghc-7.10.3'
+  sha256 'f94fff34c37367ddd5081e9f8561f1579b2875840e80d647dd6d7af469c542bf'
 
   url "http://www.leksah.org/packages/leksah-#{version}.dmg"
   name 'Leksah'

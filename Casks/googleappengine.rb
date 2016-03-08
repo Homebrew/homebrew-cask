@@ -1,11 +1,11 @@
-cask :v1 => 'googleappengine' do
-  version '1.9.19'
-  sha256 '11482519a7ad8b4d5dac51dc8e33f2486d3925af2856803910abbba3b2abf891'
+cask 'googleappengine' do
+  version '1.9.32'
+  sha256 '5e4a4cef55ab565852ddff3466d189157cfa78edc67191fb6159016290bbb8e0'
 
-  # googleapis.com is the official download host per the vendor homepage
+  # storage.googleapis.com/appengine-sdks was verified as official when first introduced to the cask
   url "https://storage.googleapis.com/appengine-sdks/featured/GoogleAppEngineLauncher-#{version}.dmg"
   appcast 'https://storage.googleapis.com/appengine-sdks',
-          :sha256 => '5b5ecde4e5248662ad27a8fd0da55132be78826ad51e7458dfe7b20d65a83d89'
+          checkpoint: '6c1bbd3ea2d83a655d18daf2fa7cd0118298aaca4ec7418674df85ed2cf59315'
   name 'Google App Engine'
   homepage 'https://developers.google.com/appengine/'
   license :apache

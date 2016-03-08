@@ -116,6 +116,14 @@ describe Hbc::CLI do
     end
   end
 
+  describe "--help" do
+    it "sets the Cask help method to true" do
+      Hbc::CLI.process_options %w{foo --help}
+      Hbc.help.must_equal true
+      Hbc.help = false
+    end
+  end
+
   after do
     ENV['HOMEBREW_CASK_OPTS'] = nil
   end

@@ -1,4 +1,4 @@
-cask :v1 => 'bonjour-browser' do
+cask 'bonjour-browser' do
   version :latest
   sha256 :no_check
 

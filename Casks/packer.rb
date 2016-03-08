@@ -1,44 +1,12 @@
-cask :v1 => 'packer' do
-  version '0.7.5'
-  sha256 'c0e149c4515fe548c1daeafabec3b4a091f2aa0c6936723382b3f6fe5a617880'
+cask 'packer' do
+  version '0.9.0'
+  sha256 'bd5f8ce38ceb866c3f1db2eb3d51091184dd021dd785d05bb47177b223fea9df'
 
-  # bintray.com is the official download host per the vendor homepage
-  url "https://dl.bintray.com/mitchellh/packer/packer_#{version}_darwin_amd64.zip"
+  # hashicorp.com is the official download host per the vendor homepage
+  url "https://releases.hashicorp.com/packer/#{version}/packer_#{version}_darwin_amd64.zip"
   name 'Packer'
-  homepage 'http://www.packer.io/'
+  homepage 'https://www.packer.io/'
   license :oss
 
   binary 'packer'
-  binary 'packer-builder-amazon-chroot'
-  binary 'packer-builder-amazon-ebs'
-  binary 'packer-builder-amazon-instance'
-  binary 'packer-builder-digitalocean'
-  binary 'packer-builder-docker'
-  binary 'packer-builder-googlecompute'
-  binary 'packer-builder-null'
-  binary 'packer-builder-openstack'
-  binary 'packer-builder-parallels-iso'
-  binary 'packer-builder-parallels-pvm'
-  binary 'packer-builder-qemu'
-  binary 'packer-builder-virtualbox-iso'
-  binary 'packer-builder-virtualbox-ovf'
-  binary 'packer-builder-vmware-iso'
-  binary 'packer-builder-vmware-vmx'
-  binary 'packer-post-processor-atlas'
-  binary 'packer-post-processor-compress'
-  binary 'packer-post-processor-docker-import'
-  binary 'packer-post-processor-docker-push'
-  binary 'packer-post-processor-docker-save'
-  binary 'packer-post-processor-docker-tag'
-  binary 'packer-post-processor-vagrant'
-  binary 'packer-post-processor-vagrant-cloud'
-  binary 'packer-post-processor-vsphere'
-  binary 'packer-provisioner-ansible-local'
-  binary 'packer-provisioner-chef-client'
-  binary 'packer-provisioner-chef-solo'
-  binary 'packer-provisioner-file'
-  binary 'packer-provisioner-puppet-masterless'
-  binary 'packer-provisioner-puppet-server'
-  binary 'packer-provisioner-salt-masterless'
-  binary 'packer-provisioner-shell'
 end

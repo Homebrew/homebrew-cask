@@ -1,11 +1,10 @@
-cask :v1 => 'desmume' do
-  version '0.9.10'
-  sha256 '5124a3ea2c64e55bf6b31bb8eb3408d3157e3fa739021dba16e39801388fbb2d'
+cask 'desmume' do
+  version '0.9.11'
+  sha256 'c3ff7024e0905f1c1da390d0fa793a3dc42d026ceded333958f3b79243a11db1'
 
-  # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/sourceforge/desmume/desmume-#{version}-mac.dmg"
   name 'DeSmuME'
-  homepage 'http://www.desmume.org'
+  homepage 'https://sourceforge.net/projects/desmume/'
   license :gpl
 
   app 'DeSmuME.app'

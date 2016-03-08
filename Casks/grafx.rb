@@ -1,11 +1,11 @@
-cask :v1 => 'grafx' do
+cask 'grafx' do
   version :latest
   sha256 :no_check
 
   url 'http://pulkomandy.tk/projects/GrafX2/downloads/24'
   name 'GrafX2'
   homepage 'http://pulkomandy.tk/projects/GrafX2'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gpl
 
   app 'Grafx2.app'
 end

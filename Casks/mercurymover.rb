@@ -1,13 +1,13 @@
-cask :v1 => 'mercurymover' do
+cask 'mercurymover' do
   version :latest
   sha256 :no_check
 
   url 'http://www.heliumfoot.com/files/release/mercurymover/MercuryMover.dmg'
   name 'MercuryMover'
   homepage 'http://www.heliumfoot.com/mercurymover'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   prefpane 'MercuryMover.prefPane'
 
-  zap :delete => '~/Library/Preferences/com.heliumfoot.MyWiAgent.plist'
+  zap delete: '~/Library/Preferences/com.heliumfoot.MyWiAgent.plist'
 end

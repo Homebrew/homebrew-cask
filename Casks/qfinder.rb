@@ -1,14 +1,13 @@
-cask :v1 => 'qfinder' do
+cask 'qfinder' do
   version :latest
   sha256 :no_check
 
-  name 'Qfinder'
-  url 'http://download.qnap.com/webstart/QNAPQfinder_Mac.dmg'
-  homepage 'http://www.qnap.com/i/in/utility/#block_1'
+  url 'https://download.qnap.com/webstart/QNAPQfinder_Mac.dmg'
+  name 'Qnap Qfinder'
+  homepage 'https://www.qnap.com/i/in/utility/#block_1'
   license :gratis
-  tags :vendor => 'Qnap'
 
   pkg 'Qfinder.pkg'
 
-  uninstall :pkgutil => 'qnap.com.qfinder.*'
+  uninstall pkgutil: 'qnap.com.qfinder.*'
 end

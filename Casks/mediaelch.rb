@@ -1,6 +1,6 @@
-cask :v1 => 'mediaelch' do
-  version '2.1.2'
-  sha256 '6387b815a81de7526521811b90cc9f7b3f56821f6c01b22f25cae3f3b5d46efe'
+cask 'mediaelch' do
+  version '2.4'
+  sha256 '56697eaad8ee5000d83ee1c262abc381b4dae06b1352893b9223422167eb7744'
 
   url "http://www.kvibes.de/releases/mediaelch/#{version}/MediaElch-#{version}.dmg"
   name 'MediaElch'

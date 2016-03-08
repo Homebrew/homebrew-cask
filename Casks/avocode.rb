@@ -1,6 +1,6 @@
-cask :v1 => 'avocode' do
-  version '2.0.0'
-  sha256 '29d4d79c6b7f719cf1f945e1747c150a71fc368758b38f25ad4390f7bc4493b5'
+cask 'avocode' do
+  version '2.5.3'
+  sha256 'd22f9417f3582bc677d6c7df8ec0ddf65e0962196f2402a481d118b7a0ad3bab'
 
   url "http://mediacdn.avocode.com/download/avocode-app/#{version}/avocode-app-mac-#{version}.zip"
   name 'Avocode'
@@ -8,4 +8,12 @@ cask :v1 => 'avocode' do
   license :commercial
 
   app 'Avocode.app'
+
+  zap delete: [
+                '~/Library/Preferences/com.madebysource.avocode.plist',
+                '~/Library/Application Support/Avocode',
+                '~/Library/Saved Application State/com.madebysource.avocode.savedState',
+                '~/Library/Caches/Avocode',
+                '~/.avcd',
+              ]
 end

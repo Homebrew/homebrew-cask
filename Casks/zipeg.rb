@@ -1,11 +1,11 @@
-cask :v1 => 'zipeg' do
+cask 'zipeg' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.zipeg.net/downloads/zipeg_mac.dmg'
+  url 'https://www.zipeg.net/downloads/zipeg_mac.dmg'
   name 'Zipeg'
-  homepage 'http://www.zipeg.net/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.zipeg.net/'
+  license :gratis
 
   app 'Zipeg.app'
 end

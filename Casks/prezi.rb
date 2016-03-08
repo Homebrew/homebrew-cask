@@ -1,12 +1,12 @@
-cask :v1 => 'prezi' do
-  version '5.2.7'
-  sha256 '4ed9c0cc71edd5946bd186cd7fe2f9dda3fcbd1cb39d10584f8510171b0af3b5'
+cask 'prezi' do
+  version '5.2.8'
+  sha256 '99add0a7c00546a27c19bf6fb2a408fd0e28ceb5ac00c52e435308eb62e4b72a'
 
   # akamaihd.net is the official download host per the vendor homepage
   url "https://prezi-a.akamaihd.net/desktop/Prezi#{version}.dmg"
   name 'Prezi'
-  homepage 'http://www.prezi.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://prezi.com/'
+  license :gratis
 
   app 'Prezi.app'
 end

@@ -1,11 +1,12 @@
-cask :v1 => 'kivy' do
-  version '1.9.0'
-  sha256 '1efeb880e13c4bed97bd96bcaac6e57f18ea6dde21ea1ae3ab1eddf713430ab5'
+cask 'kivy' do
+  version '1.9.0-rev3'
+  sha256 'c142114acd4859665cb7daa238194e09984519120d5756e8ab23e3ba7893ce44'
 
-  url "http://kivy.org/downloads/#{version}/Kivy-#{version}-osx.dmg"
+  url "https://kivy.org/downloads/#{version.split('-').first}/Kivy-#{version}-osx.dmg"
   name 'Kivy'
   homepage 'http://kivy.org'
   license :mit
 
   app 'Kivy.app'
+  binary 'Kivy.app/Contents/Resources/script', target: 'kivy'
 end

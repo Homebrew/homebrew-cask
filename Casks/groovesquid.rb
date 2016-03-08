@@ -1,11 +1,11 @@
-cask :v1 => 'groovesquid' do
+cask 'groovesquid' do
   version :latest
   sha256 :no_check
 
-  url 'http://groovesquid.com/download.php?file=Groovesquid.dmg'
+  url 'https://groovesquid.com/download.php?file=Groovesquid.dmg'
   name 'Groovesquid'
-  homepage 'http://groovesquid.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://groovesquid.com/'
+  license :gratis
 
   app 'Groovesquid.app'
 end

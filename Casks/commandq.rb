@@ -1,11 +1,13 @@
-cask :v1 => 'commandq' do
-  version :latest
-  sha256 :no_check
+cask 'commandq' do
+  version '1.0.4'
+  sha256 '1183a2baf3775bd47851c94636ebe41356e4b53fce1dd35b4b70b9298294a107'
 
-  url 'https://clickontyler.com/commandq/download/'
+  url "http://dl.clickontyler.com/commandq/commandq_#{version}.zip"
+  appcast 'https://shine.clickontyler.com/appcast.php?id=16',
+          checkpoint: '5e0f2d62c65b64c0fffa677040a4bd02213ed65c7f37908d055b900a4d40e646'
   name 'CommandQ'
-  homepage 'http://clickontyler.com/commandq/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://clickontyler.com/commandq/'
+  license :commercial
 
   app 'CommandQ.app'
 end

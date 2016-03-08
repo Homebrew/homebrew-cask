@@ -1,9 +1,10 @@
-cask :v1 => 'subsurface' do
-  version '4.1'
-  sha256 'b4eef933e507ffb5a56501a249c1dfcf389edd3cdfb82f5ac0448183c4b8113c'
+cask 'subsurface' do
+  version '4.5.3'
+  sha256 '498629d001cefc6b54c4b604a9fdebb4cff33bef457df509566d07c99fbfcc3a'
 
-  url "https://subsurface.hohndel.org/downloads/Subsurface-#{version}.dmg"
-  homepage 'http://subsurface.hohndel.org/'
+  url "https://subsurface-divelog.org/downloads/Subsurface-#{version}.dmg"
+  name 'Subsurface'
+  homepage 'https://subsurface-divelog.org'
   license :gpl
 
   app 'Subsurface.app'

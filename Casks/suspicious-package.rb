@@ -1,13 +1,14 @@
-cask :v1 => 'suspicious-package' do
+cask 'suspicious-package' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.mothersruin.com/software/downloads/SuspiciousPackage.pkg'
+  url 'http://www.mothersruin.com/software/downloads/SuspiciousPackage.xip'
   name 'Suspicious Package'
   homepage 'http://www.mothersruin.com/software/SuspiciousPackage/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
-  pkg 'SuspiciousPackage.pkg'
+  depends_on formula: 'unar'
+  container type: :generic_unar
 
-  uninstall :pkgutil => 'com.mothersruin.pkg.SuspiciousPackagePlugin'
+  qlplugin 'Suspicious Package.qlgenerator'
 end

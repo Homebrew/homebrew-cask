@@ -33,6 +33,8 @@ class Hbc::CLI::InternalStanza < Hbc::CLI::InternalUseBase
                        :binary,
                        :input_method,
                        :internet_plugin,
+                       :audio_unit_plugin,
+                       :vst_plugin,
                        :screen_saver,
                        :pkg,
                        :installer,
@@ -69,7 +71,6 @@ class Hbc::CLI::InternalStanza < Hbc::CLI::InternalUseBase
 
   def self.print_stanzas(stanza, format=nil, table=nil, quiet=nil, *cask_tokens)
     count = 0
-    stanza = :full_name if stanza == :name
     if ARTIFACTS.include?(stanza)
       artifact_name = stanza
       stanza = :artifacts

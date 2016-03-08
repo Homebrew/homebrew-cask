@@ -1,4 +1,4 @@
-cask :v1 => 'boom' do
+cask 'boom' do
   version :latest
   sha256 :no_check
 
@@ -7,12 +7,12 @@ cask :v1 => 'boom' do
   homepage 'http://www.globaldelight.com/boom/'
   license :commercial
 
+  depends_on macos: '>= :yosemite'
+
   app 'Boom 2.app'
 
   postflight do
     # Delete the background image so that it will launch
     system '/bin/rm', '--', "#{staged_path}/.DMG_Background_new.png"
   end
-
-  depends_on :macos => '>= :yosemite'
 end

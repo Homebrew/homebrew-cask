@@ -1,19 +1,20 @@
-cask :v1 => 'lighttable' do
-  version '0.7.2'
-  sha256 '236bb18d6715ce3095c975871b7c7f495f306a086dce8a50ff35f267a25c5163'
+cask 'lighttable' do
+  version '0.8.1'
+  sha256 '423e9caf6db4dfe26a0167ea6ba998d747f233e2cd9cd97b7fee027c5c0c3992'
 
-  # cloudfront.net is the official download host per the vendor homepage
-  url "https://d35ac8ww5dfjyg.cloudfront.net/playground/bins/#{version}/LightTableMac.zip"
+  url "https://github.com/LightTable/LightTable/releases/download/#{version}/lighttable-#{version}-mac.tar.gz"
+  appcast 'https://github.com/LightTable/LightTable/releases.atom',
+          checkpoint: '6195e1333c6a146c67861a8c7269e8c8405f04d628a0aa4742e159d3bfe98600'
   name 'Light Table'
   homepage 'http://www.lighttable.com/'
   license :mit
 
-  app 'LightTable/LightTable.app'
-  binary 'LightTable/light'
+  app "lighttable-#{version}-mac/LightTable.app"
+  binary "lighttable-#{version}-mac/light"
 
-  zap :delete => [
-                  '~/Library/Application Support/LightTable/plugins',
-                  '~/Library/Application Support/LightTable/settings',
-                  '~/Library/Preferences/com.kodowa.LightTable.plist',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/LightTable/plugins',
+                '~/Library/Application Support/LightTable/settings',
+                '~/Library/Preferences/com.kodowa.LightTable.plist',
+              ]
 end

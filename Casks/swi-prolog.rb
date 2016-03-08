@@ -1,6 +1,6 @@
-cask :v1 => 'swi-prolog' do
-  version '6.6.6'
-  sha256 '9b76ac4e9ee9b5e0fe507aacb5ca7f2253e0c9f8fc7be91aeb112212001300d6'
+cask 'swi-prolog' do
+  version '7.2.2'
+  sha256 'e960065f70409995ccc846f2a4238c7fbdd5c8a23918db37d0d2e5eb2c81045f'
 
   url "http://www.swi-prolog.org/download/stable/bin/SWI-Prolog-#{version}.dmg"
   name 'SWI-Prolog'

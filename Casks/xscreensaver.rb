@@ -1,10 +1,10 @@
-cask :v1 => 'xscreensaver' do
-  version '5.32'
-  sha256 'f76f6e3af04cb12541f04a31ef4f7e567703ccb5df78f0bdb5a78fb231f7cb66'
+cask 'xscreensaver' do
+  version '5.33'
+  sha256 'ba83ae56a7c011c9bd39824b94679e1082375e7d0bc2ebe0afe813147fe38c11'
 
-  url "http://www.jwz.org/xscreensaver/xscreensaver-#{version}.dmg"
+  url "https://www.jwz.org/xscreensaver/xscreensaver-#{version}.dmg"
   name 'XScreenSaver'
-  homepage 'http://www.jwz.org/xscreensaver/'
+  homepage 'https://www.jwz.org/xscreensaver/'
   license :bsd
 
   screen_saver 'Screen Savers/Abstractile.saver'
@@ -168,6 +168,7 @@ cask :v1 => 'xscreensaver' do
   screen_saver 'Screen Savers/RDbomb.saver'
   screen_saver 'Screen Savers/Ripples.saver'
   screen_saver 'Screen Savers/Rocks.saver'
+  screen_saver 'Screen Savers/RomanBoy.saver'
   screen_saver 'Screen Savers/Rorschach.saver'
   screen_saver 'Screen Savers/RotZoomer.saver'
   screen_saver 'Screen Savers/Rubik.saver'
@@ -182,6 +183,7 @@ cask :v1 => 'xscreensaver' do
   screen_saver 'Screen Savers/Sonar.saver'
   screen_saver 'Screen Savers/SpeedMine.saver'
   screen_saver 'Screen Savers/Spheremonics.saver'
+  screen_saver 'Screen Savers/SplitFlap.saver'
   screen_saver 'Screen Savers/Spotlight.saver'
   screen_saver 'Screen Savers/Sproingies.saver'
   screen_saver 'Screen Savers/Squiral.saver'

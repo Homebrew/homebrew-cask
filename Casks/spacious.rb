@@ -1,11 +1,11 @@
-cask :v1 => 'spacious' do
+cask 'spacious' do
   version :latest
   sha256 :no_check
 
-  url 'http://static.iospirit.com/static/objectfiles/file/159/Spacious.zip'
+  url 'https://www.iospirit.com/static/objectfiles/file/159/Spacious.zip'
   name 'Spacious'
-  homepage 'http://www.iospirit.com/products/spacious'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.iospirit.com/products/spacious'
+  license :commercial
 
   app 'Spacious.app'
 end

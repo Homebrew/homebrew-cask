@@ -1,22 +1,20 @@
-cask :v1 => 'webstorm' do
-  version '10.0.2'
-  sha256 '33232ea4ec1007a93d835b18419b20becdf700c7fcec8742a2bfc251b8da533f'
+cask 'webstorm' do
+  version '11.0.3'
+  sha256 'b868b926cdc8138de1de9a2b6665d532df9cc16c383ee28d124590e5c2ec406f'
 
-  url "http://download-cf.jetbrains.com/webstorm/WebStorm-#{version}.dmg"
+  url "https://download.jetbrains.com/webstorm/WebStorm-#{version}-custom-jdk-bundled.dmg"
   name 'WebStorm'
-  homepage 'http://www.jetbrains.com/webstorm/'
+  homepage 'https://www.jetbrains.com/webstorm/'
   license :commercial
 
   app 'WebStorm.app'
 
-  caveats <<-EOS.undent
-    #{token} requires Java 6 like any other IntelliJ-based IDE.
-    You can install it with
-
-      brew cask install caskroom/homebrew-versions/java6
-
-    The vendor (JetBrains) doesn't support newer versions of Java (yet)
-    due to several critical issues, see details at
-    https://intellij-support.jetbrains.com/entries/27854363
-  EOS
+  zap delete: [
+                "~/.WebStorm#{version.major}",
+                '~/Library/Preferences/com.jetbrains.webstorm.plist',
+                "~/Library/Preferences/WebStorm#{version.major}",
+                "~/Library/Application Support/WebStorm#{version.major}",
+                "~/Library/Caches/WebStorm#{version.major}",
+                "~/Library/Logs/WebStorm#{version.major}",
+              ]
 end

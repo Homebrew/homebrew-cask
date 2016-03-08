@@ -1,6 +1,6 @@
-cask :v1 => 'ngrok' do
-  version '2.0.15'
-  sha256 '5dbe5411c36654441c8a6d561194bed7a37d662ac55c9de5e8d6b56b839badf6'
+cask 'ngrok' do
+  version '2.0.19'
+  sha256 'ec307920b86778db4c632434cb9fff01ead9edd7438618aab87f5e891791f799'
 
   url "https://dl.ngrok.com/ngrok_#{version}_darwin_amd64.zip"
   name 'ngrok'
@@ -9,6 +9,5 @@ cask :v1 => 'ngrok' do
 
   binary 'ngrok'
 
-  # todo verify that this does not contain user-created content
-  # zap :delete => '~/.ngrok'
+  zap delete: '~/.ngrok2'
 end

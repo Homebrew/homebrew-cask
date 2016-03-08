@@ -1,15 +1,15 @@
-cask :v1 => 'arranger' do
-  version '1.5'
-  sha256 'dff93bacfa3f0a00ecde23c55abd7124efe7bcf7f5980bb347f87b9c9f6b62b6'
+cask 'arranger' do
+  version '1.6'
+  sha256 'cc52b300a999b1b10bfc35cbd2846fc99ef1ded69b4d385971bf9ac499b3515f'
 
-  url 'http://bucketomac.de/wp-content/plugins/download-monitor/download.php?id=5'
-  name 'Arranger'
+  url "http://bucketomac.de/downloads/Arranger#{version}.zip"
   appcast 'http://bucketomac.de/appcast/arrangercast.xml',
-          :sha256 => '07eedcf0ac71ee0102ff9061dce7146552c6667f7e6770bdaf0c2f502fe49319'
+          checkpoint: 'c6938ca1a2301d4d20f70f1012fd7d244e71d42f06bebb126dd8ee126bac3930'
+  name 'Arranger'
   homepage 'http://bucketomac.de/arranger/arranger/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
-
-  app 'Arranger.app'
+  license :gratis
 
   accessibility_access true
+
+  app 'Arranger.app'
 end

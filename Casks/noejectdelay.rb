@@ -1,6 +1,6 @@
-cask :v1 => 'noejectdelay' do
-  version '5.4.0'
-  sha256 '7b480ade6537a2d98924ad1dabf87b8f3d396c2035addfd032839c2473659c21'
+cask 'noejectdelay' do
+  version '6.0.0'
+  sha256 '52c478ccb9977a66fd9a6ba76b02e229521f70ee22c88c436581e8e46aa20807'
 
   url "https://pqrs.org/macosx/keyremap4macbook/files/NoEjectDelay-#{version}.dmg"
   name 'NoEjectDelay'
@@ -9,6 +9,6 @@ cask :v1 => 'noejectdelay' do
 
   pkg 'NoEjectDelay.pkg'
 
-  uninstall :kext => 'org.pqrs.driver.NoEjectDelay',
-            :pkgutil => 'org.pqrs.driver.NoEjectDelay'
+  uninstall kext:    'org.pqrs.driver.NoEjectDelay',
+            pkgutil: 'org.pqrs.driver.NoEjectDelay'
 end
