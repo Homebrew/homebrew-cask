@@ -29,7 +29,7 @@ class Hbc::Artifact::Symlinked < Hbc::Artifact::Base
     altnames = %Q{(#{altnames})}
 
     # Some packges are shipped as u=rx (e.g. Bitcoin Core)
-    @command.run!('/bin/chmod', :args => ['u=rwx', source])
+    @command.run!('/bin/chmod', :args => ['--', 'u=rwx', source])
 
     @command.run!('/usr/bin/xattr',
                   :args => ['-w', attribute, altnames, target],
