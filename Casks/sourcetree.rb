@@ -7,7 +7,7 @@ cask 'sourcetree' do
     sha256 '152e2de3ef1e9f808476118ed4021cd057e3702dc6825cf5d3b1b4ca80360c2b'
   end
 
-  # atlassian.com is the official download host per the vendor homepage
+  # atlassian.com was verified as official when first introduced to the cask
   url "https://downloads.atlassian.com/software/sourcetree/SourceTree_#{version}.dmg"
   appcast 'https://www.sourcetreeapp.com/update/SparkleAppcast.xml',
           checkpoint: '0b0699844a3d0c191294f5b610c856975bc38495be87db1f57109a2853714da5'
