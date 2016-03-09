@@ -9,7 +9,7 @@ cask 'geotag' do
 
   url "http://www.snafu.org/GeoTag/GeoTag-#{version}.dmg"
   appcast 'http://www.snafu.org/GeoTag/',
-          checkpoint: 'dd2955d0beafa2a1ef44d005a32cbe54f4c12a9fdfc3a6a92533f96d01fa2142'
+          checkpoint: '3897de33682ce31d502a350f2b9563c754f702bf4df1a84fede46592a2971db8'
   name 'GeoTag'
   homepage 'http://www.snafu.org/GeoTag/'
   license :cc
