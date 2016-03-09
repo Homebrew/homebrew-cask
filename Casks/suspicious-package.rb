@@ -10,5 +10,6 @@ cask 'suspicious-package' do
   depends_on formula: 'unar'
   container type: :generic_unar
 
-  qlplugin 'Suspicious Package.qlgenerator'
+  app 'Suspicious Package.app'
+  qlplugin 'Suspicious Package.app/Contents/Library/QuickLook/Suspicious Package.qlgenerator'
 end
