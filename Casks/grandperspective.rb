@@ -4,7 +4,7 @@ cask 'grandperspective' do
 
   url "http://downloads.sourceforge.net/project/grandperspectiv/grandperspective/#{version}/GrandPerspective-#{version.dots_to_underscores}.dmg"
   appcast 'http://sourceforge.net/projects/grandperspectiv/rss?path=/grandperspective',
-          checkpoint: 'aa3a708f08a2b7f02fd269062bdda983d17c36007bb5fe46b1e11ab3dea07769'
+          checkpoint: 'd2bb25d2c58ed420ca3c69c157db9702d1a626f2bea14a48a13dc7d9ad6538d2'
   name 'GrandPerspective'
   homepage 'http://grandperspectiv.sourceforge.net/'
   license :gpl
