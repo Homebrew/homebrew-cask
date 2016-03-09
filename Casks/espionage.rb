@@ -4,7 +4,7 @@ cask 'espionage' do
 
   url 'https://www.espionageapp.com/Espionage.dmg'
   appcast "https://updates.taoeffect.com/espionage#{version.major}/appcast.xml",
-          checkpoint: 'd94be02d853880f35202a58bb6720ca74d58054cbbaa380548b13410dd6a0ab9'
+          checkpoint: '6b50d23fa6c6aedc1ae312faceed9987c856fd854b7638da0cc691f19d87092c'
   name 'Espionage'
   homepage 'https://www.espionageapp.com/'
   license :commercial
