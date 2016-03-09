@@ -4,7 +4,7 @@ cask 'glyphs' do
 
   url "https://updates.glyphsapp.com/Glyphs#{version}.zip"
   appcast "https://updates.glyphsapp.com/appcast#{version.major}.xml",
-          checkpoint: 'b10745997b8d99117a86978cac37c88e487665b034df6835aac106679a22750a'
+          checkpoint: '2980985be44b73e6c8e61916f1b56bf2c431a4376ca71a38474dd3ce9db5697b'
   name 'Glyphs'
   homepage 'https://www.glyphsapp.com'
   license :commercial
