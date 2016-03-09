@@ -1,4 +1,4 @@
-cask :v1 => 'ti-connect-ce' do
+cask 'ti-connect-ce' do
   version '5.1.0.68'
   sha256 'e65815ad16ece77236cae631cfdca44626f6b9cfb08e3b184cc94fd9b607c52f'
 

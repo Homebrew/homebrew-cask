@@ -1,9 +1,10 @@
-cask :v1 => 'bzflag' do
-  version '2.4.2'
-  sha256 '4ce7f007cb7c78a5243ced84d310c37637a2aa8fe9569231edd2dbc45286e293'
+cask 'bzflag' do
+  version '2.4.4'
+  sha256 'c832896a65cd3a0bdca62fce8a0fff800c15970dfde75e9f8285e49a01dafc77'
 
-  # sourceforge.net is the official download host per the vendor homepage
-  url "http://downloads.sourceforge.net/sourceforge/bzflag/BZFlag-#{version}.zip"
+  url "https://download.bzflag.org/bzflag/osx/#{version}/BZFlag-#{version}-MacOSX.zip"
+  appcast 'https://github.com/BZFlag-Dev/bzflag/releases.atom',
+          checkpoint: '214bb5dcb4b504706b4fd195305b4967cc8f13c492bb62e9aae9f325b7c14030'
   name 'BZFlag'
   homepage 'http://bzflag.org/'
   license :gpl

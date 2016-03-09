@@ -1,14 +1,14 @@
-cask :v1 => 'eclipse-php' do
-  version '4.5.1'
-  sha256 '142fdeeedf091149a6d72e0aacf28f6937fe6bef01d83cbf141be4d847172492'
+cask 'eclipse-php' do
+  version '4.5.2'
+  sha256 '8198b5826bba50ed93ed7dfbaa8f46bd30bbe06ec9817a4c0ebbcd2c196eea91'
 
-  url 'https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/1/eclipse-php-mars-1-macosx-cocoa-x86_64.tar.gz&r=1'
-  name 'Eclipse'
+  url 'https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/2/eclipse-php-mars-2-macosx-cocoa-x86_64.tar.gz&r=1'
   name 'Eclipse for PHP Developers'
   homepage 'https://eclipse.org/'
   license :eclipse
-  depends_on :macos => '>= :leopard'
-  depends_on :arch => :x86_64
+
+  depends_on macos: '>= :leopard'
+  depends_on arch: :x86_64
 
   app 'Eclipse.app'
 end

@@ -1,20 +1,20 @@
-cask :v1 => 'adium' do
-  version '1.5.10'
-  sha256 'bca3ac81d33265b71c95a3984be80715fbd98f38d7c463d0441d43a335ed399a'
+cask 'adium' do
+  version '1.5.10.1'
+  sha256 '12001b38428fa2441c8a31f45f7ca14fb086776de40aaccc9634f84fd28931f5'
 
   url "http://download.adium.im/Adium_#{version}.dmg"
-  name 'Adium'
   appcast 'https://www.adium.im/sparkle/appcast-release.xml',
-          :sha256 => '5d05831689494b3059ddf31580438579dee1d1b2a34f24a018b86fcaadd46e53'
+          checkpoint: '7ffdd8960794fcc5a942f23991410c27a496a2a0eda06275efacc98970e9cd61'
+  name 'Adium'
   homepage 'https://www.adium.im/'
   license :gpl
 
   app 'Adium.app'
 
-  zap :delete => [
-                  '~/Library/Application Support/Adium 2.0',
-                  '~/Library/Caches/Adium',
-                  '~/Library/Caches/com.adiumX.adiumX',
-                  '~/Library/Preferences/com.adiumX.adiumX.plist',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Adium 2.0',
+                '~/Library/Caches/Adium',
+                '~/Library/Caches/com.adiumX.adiumX',
+                '~/Library/Preferences/com.adiumX.adiumX.plist',
+              ]
 end

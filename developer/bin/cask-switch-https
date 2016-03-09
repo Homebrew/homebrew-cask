@@ -1,0 +1,190 @@
+#!/bin/bash
+
+set -o pipefail
+
+readonly program="$(basename "$0")"
+skip_curl_verify=0
+verbose=0
+
+syntax_error() {
+  echo "$program: $1" >&2
+  echo "Try \`$program --help\` for more information." >&2
+  exit 1
+}
+
+depends_on() {
+  formula="$1"
+  [[ "$#" -eq 2 ]] && cmd="$2" || cmd=$(basename "${formula}")
+
+  if [[ ! $(which ${cmd}) ]]; then
+    echo -e "$(tput setaf 1)
+      This script depends on '${cmd}'.
+      If you have [Homebrew](http://brew.sh), you can install it with 'brew install ${formula}'.
+    $(tput sgr0)" | sed -E 's/ {6}//' >&2
+    exit 1
+  fi
+}
+
+depends_on 'tsparber/tiny-scripts/curl-check-url'
+
+usage() {
+  echo "
+    This script changes the url, appcast and homepage stanzas to https
+
+    After changing to https a HTTP GET request is performed to verify if the url is reachable.
+    If the https url is not reachable it is reverted to the previous version.
+
+    Known Issues: If multiple url/appcast stanzas are present, all urls are changed but only
+                  those for the current os are verified.
+
+    If no cask name is given the current work directory is scanned with the given options.
+
+    usage: $program [options] [<cask_name>]
+    options:
+      -s, --skip-verify  Skip checking for a HTTP 200 Status Code using curl.
+      --verbose          Show more verbose output.
+      -h, --help         Show this help.
+
+    Based on: https://github.com/vitorgalvao/tiny-scripts/blob/master/cask-repair
+  " | sed -E 's/^ {4}//'
+}
+
+# available flags
+while [[ "$1" ]]; do
+  case "$1" in
+    -h | --help)
+      usage
+      exit 0
+      ;;
+    -s | --skip-verify)
+      skip_curl_verify=1
+      ;;
+    --verbose)
+      verbose=1
+      ;;
+    -*)
+      syntax_error "unrecognized option: $1"
+      ;;
+    *)
+      break
+      ;;
+  esac
+  shift
+done
+
+# define function to check if given URL exists and is reachable using HTTPS
+check_url_for_https() {
+  cask_url="$1"
+  verbose_option=""
+
+  [[ ${verbose} -ne 0 ]] && verbose_option="-v "
+
+  # check if the URL sends a 200 HTTP code, else abort
+  curl-check-url ${verbose_option} "${cask_url}" > /dev/null
+  exit_code=$?
+
+  if [[ exit_code -ne 0 ]]; then
+    echo "curl returned ${exit_code}: FAIL for ${cask_url}"
+    return 1
+  fi
+
+  return 0
+}
+
+# define function to modify part of stanza
+replace_protocol_of_stanza() {
+  cask_file="$1"
+  stanza="$2"
+  old_value="$3"
+  new_value="$4"
+
+  sed "s|${stanza} \(['\"]\)${old_value}://|${stanza} \1${new_value}://|g" "${cask_file}" > tmpfile
+  mv tmpfile "${cask_file}"
+}
+
+# define abort function, that will reset the state
+finish() {
+  # show message
+  if [[ "$1" == 'abort' ]]; then
+    echo -e "$(tput setaf 1)$2$(tput sgr0)\n"
+    [[ ! -z "${cask_file}" ]] && git checkout -- "${cask_file}"
+    exit 1
+  elif [[ "$1" == 'success' ]]; then
+    echo -e "$(tput setaf 2)Updated: ${cask_name} is now using HTTPS$(tput sgr0)\n"
+    exit 0
+  fi
+}
+
+# cleanup if aborted with ⌃C
+trap 'finish abort "You aborted"' SIGINT
+
+# exit if not inside a 'homebrew-*/Casks' directory
+casks_dir=$(pwd | perl -ne 'print m{homebrew-[^/]+/Casks}')
+if [[ -z "${casks_dir}" ]]; then
+  echo -e "\n$(tput setaf 1)You need to be inside a '/homebrew-*/Casks' directory$(tput sgr0)\n"
+  exit 1
+fi
+
+# exit if no argument was given: Run in current directory
+if [[ -z "$1" ]]; then
+  options=""
+  [[ ${skip_curl_verify} -ne 0 ]] && options+=" --skip-verify"
+  [[ ${verbose} -ne 0 ]] && options+=" --verbose"
+
+  for file in *.rb;
+  do
+    "$0" ${options} ${file}
+  done
+
+  exit 0
+fi
+
+# clean the cask's name, and check if it is valid
+cask_name="$1"
+[[ "${cask_name}" == *'.rb' ]] && cask_name=$(echo "${cask_name}" | sed 's|\.rb$||')
+cask_file="./${cask_name}.rb"
+[[ ! -f "${cask_file}" ]] && finish abort 'There is no such cask'
+
+# initial tasks
+git checkout -- "${cask_file}"
+
+# check if a http url exists
+cask_contains_http=$(grep "['\"]http://" "${cask_file}")
+if [[ -z ${cask_contains_http} ]]; then
+  echo -e "Skipped ${cask_name} no http found\n"
+  exit 0
+fi
+
+updated_stanzas=0
+for stanza in url appcast homepage; do
+  # Check if the stanza exists
+  stanza_contained=$(grep "${stanza} ['\"]" "${cask_file}")
+  [[ -z ${stanza_contained} ]] && continue
+
+  stanza_contains_https=$(grep "${stanza} ['\"]http://" "${cask_file}")
+  if [[ -z ${stanza_contains_https} ]]; then
+#    echo "Skipped stanza ${stanza} in ${cask_name} no http url found"
+    continue
+  fi
+
+  replace_protocol_of_stanza ${cask_file} ${stanza} "http" "https"
+
+  if [[ ${skip_curl_verify} -eq 0 ]]; then
+    check_url_for_https $(brew cask _stanza ${stanza} "${cask_name}")
+  else
+    true
+  fi
+
+  if [[ $? -ne 0 ]]; then
+    echo "Restored original value for stanza ${stanza} as curl check failed"
+    replace_protocol_of_stanza ${cask_file} ${stanza} "https" "http"
+  else
+    updated_stanzas=$((updated_stanzas+1))
+  fi
+done
+
+if [[ ${updated_stanzas} -ne 0 ]]; then
+  finish success
+else
+  finish abort "no updated stanzas after verify for ${cask_name}"
+fi

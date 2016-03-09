@@ -1,12 +1,12 @@
-cask :v1 => 'itsycal' do
-  version '0.10.7'
-  sha256 '8a0edc32f9188deec40a8d778014cbe65791d3172812543d7364eaca0130c898'
+cask 'itsycal' do
+  version '0.10.10'
+  sha256 '3452b19d10e91c441ef0f218629961bbb98c41ba2b29bff14759306967551253'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/itsycal/Itsycal-#{version}.zip"
-  name 'Itsycal'
   appcast 'https://s3.amazonaws.com/itsycal/itsycal.xml',
-          :sha256 => '7d51e019a96d671f4ae91c94d78ad2c166c2ed8163316bf5a8301ffc95816d00'
+          checkpoint: '98c525b55275fb02b4fdb4896ae2198f89fff858679b67cf031691bbd157ba72'
+  name 'Itsycal'
   homepage 'http://www.mowglii.com/itsycal/'
   license :gratis
 

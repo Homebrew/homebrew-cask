@@ -5,7 +5,8 @@ module Hbc::Scopes
 
   module ClassMethods
     def all
-      all_tokens.map { |c| self.load c }
+      @all_casks ||= {}
+      all_tokens.map { |t| @all_casks[t] ||= self.load(t) }
     end
 
     def all_tapped_cask_dirs
@@ -35,12 +36,13 @@ module Hbc::Scopes
         c = c.split('/').last 4
         # => ["caskroom", "example-tap", "Casks", "example"]
         c.delete_at(-2)
-        # => ["example-tap", "example"]
+        # => ["caskroom", "example-tap", "example"]
         c = c.join '/'
       }
     end
 
     def installed
+      @installed ||= {}
       installed_cask_dirs = Pathname.glob(caskroom.join("*"))
       # Hbc.load has some DWIM which is slow.  Optimize here
       # by spoon-feeding Hbc.load fully-qualified paths.
@@ -52,9 +54,9 @@ module Hbc::Scopes
           tap_dir.join("#{cask_token}.rb").exist?
         end
         if path_to_cask
-          Hbc.load(path_to_cask.join("#{cask_token}.rb"))
+          @installed[cask_token] ||= Hbc.load(path_to_cask.join("#{cask_token}.rb"))
         else
-          Hbc.load(cask_token)
+          @installed[cask_token] ||= Hbc.load(cask_token)
         end
       end
     end

@@ -1,4 +1,4 @@
-cask :v1 => 'timer' do
+cask 'timer' do
   version :latest
   sha256 :no_check
 
@@ -9,8 +9,8 @@ cask :v1 => 'timer' do
 
   app 'Timer.app'
 
-  zap :delete => [
-                  '~/Library/Preferences/Apimac',
-                  '~/Library/Application Support/Apimac',
-                 ]
+  zap delete: [
+                '~/Library/Preferences/Apimac',
+                '~/Library/Application Support/Apimac',
+              ]
 end

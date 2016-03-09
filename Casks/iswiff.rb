@@ -1,4 +1,4 @@
-cask :v1 => 'iswiff' do
+cask 'iswiff' do
   version :latest
   sha256 :no_check
 

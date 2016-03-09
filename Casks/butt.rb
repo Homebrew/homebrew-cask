@@ -1,4 +1,4 @@
-cask :v1 => 'butt' do
+cask 'butt' do
   version '0.1.14'
   sha256 'f12eac6ad2af8bc38717cccde3f7f139d426b6d098ef94f7dcd6ae7d1225f6ad'
 

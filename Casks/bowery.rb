@@ -1,4 +1,4 @@
-cask :v1 => 'bowery' do
+cask 'bowery' do
   version '3.6.0'
   sha256 'ecdb5efe10dcf39a309e5f910d0a3712fe23147200b958a88d43c8bacf8ab1e1'
 
@@ -9,5 +9,5 @@ cask :v1 => 'bowery' do
 
   pkg 'bowery.pkg'
 
-  uninstall :pkgutil => 'com.bowery.desktop'
+  uninstall pkgutil: 'com.bowery.desktop'
 end

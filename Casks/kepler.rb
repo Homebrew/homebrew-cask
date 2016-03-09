@@ -1,4 +1,4 @@
-cask :v1 => 'kepler' do
+cask 'kepler' do
   version '2.4'
   sha256 'efb0147bb93b7333269b2b71aae29a22c2c02b7a121091ac188aa3ca8de60760'
 

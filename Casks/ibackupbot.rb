@@ -1,4 +1,4 @@
-cask :v1 => 'ibackupbot' do
+cask 'ibackupbot' do
   version :latest
   sha256 :no_check
 

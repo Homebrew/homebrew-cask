@@ -1,13 +1,12 @@
-cask :v1 => 'cycling74-max' do
-  version '7.0.6_150930'
-  sha256 '8498d56b174e214808e8ddfa05fa02c0e5b7f51b34182ab6cfe5eb9d60ef1697'
+cask 'cycling74-max' do
+  version '7.2_160301'
+  sha256 'fdeddac5ad65c70258b554e83ed884ad99716b2f1184bdd2329bc45acbe1b637'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url "https://akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com/Max#{version.delete('.')}.dmg"
-  name 'Max'
+  # akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com was verified as official when first introduced to the cask
+  url "https://akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com/Max#{version.no_dots}.dmg"
+  name 'Cycling ‘74 Max'
   homepage 'https://cycling74.com/'
   license :commercial
-  tags :vendor => 'Cycling ‘74'
 
   app 'Max.app'
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'maintenance' do
+cask 'maintenance' do
   version :latest
   sha256 :no_check
 
@@ -16,6 +16,9 @@ cask :v1 => 'maintenance' do
     url 'http://www.titanium.free.fr/download/109/Maintenance.dmg'
   elsif MacOS.release == :yosemite
     url 'http://www.titanium.free.fr/download/1010/Maintenance.dmg'
+  elsif MacOS.release == :el_capitan
+    # pagesperso-orange.fr is the official download host per the vendor homepage
+    url 'http://joel.barriere.pagesperso-orange.fr/download/1011/Maintenance.dmg'
   else
     # Unusual case: there is no fall-through.  The software will stop
     # working, or is dangerous to run, on the next OS X release.
@@ -25,17 +28,18 @@ cask :v1 => 'maintenance' do
   homepage 'http://www.titanium.free.fr/maintenance.html'
   license :gratis
 
-  app 'Maintenance.app'
+  depends_on macos: %w[
+                      :tiger
+                      :leopard
+                      :snow_leopard
+                      :lion
+                      :mountain_lion
+                      :mavericks
+                      :yosemite
+                      :el_capitan
+                    ]
 
-  depends_on :macos => %w{
-                          :tiger
-                          :leopard
-                          :snow_leopard
-                          :lion
-                          :mountain_lion
-                          :mavericks
-                          :yosemite
-                         }
+  app 'Maintenance.app'
 
   caveats do
     if [:leopard, :tiger].include?(MacOS.release.to_sym)

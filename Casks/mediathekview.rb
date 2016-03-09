@@ -1,4 +1,4 @@
-cask :v1 => 'mediathekview' do
+cask 'mediathekview' do
   version '10'
   sha256 '6118fb5362f08f8204c56f52864ae030c05e4212de96330e8bcc40c5cea5d319'
 

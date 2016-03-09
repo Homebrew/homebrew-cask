@@ -1,23 +1,24 @@
-cask :v1 => 'aliwangwang' do
-  version '3.4.3-4340'
-  sha256 '3f3017c534ffdb3a5c1135eed0bf97623bb5036dc125b19066d6ec93b864d261'
+cask 'aliwangwang' do
+  version '3.5.0-4428'
+  sha256 'b1ea86f576833084c17ba1d6d66dc31e7941e239cc4474fe9d61e473169c434e'
 
-  # alicdn.com is the official download host per the vendor homepage
+  # dbison.alicdn.com was verified as official when first introduced to the cask
   url "https://dbison.alicdn.com/updates/macww-nosandbox-#{version}.dmg"
+  appcast 'https://update.labs.etao.com/macww/updates.xml',
+          checkpoint: '7178027350d87155dbcf2f2ebcc454262ae5d807fdf75f3688003ea5fccdb1b1'
   name 'Ali Wangwang'
-  appcast 'http://update.labs.etao.com/macww/updates.xml'
-  homepage 'http://wangwang.taobao.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://wangwang.taobao.com'
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'AliWangwang.app'
 
-  uninstall :quit => 'com.taobao.aliwangwang'
+  uninstall quit: 'com.taobao.aliwangwang'
 
-  zap :delete => [
-                  '~/Library/Caches/com.taobao.aliwangwang',
-                  '~/Library/Containers/com.taobao.aliwangwang',
-                  '~/Library/Internet Plug-Ins/WangwangPlugin.plugin',
-                  '~/Library/Preferences/com.taobao.aliwangwang.plist',
-                  '~/Library/Saved Application State/com.taobao.aliwangwang.savedState'
-                 ]
+  zap delete: [
+                '~/Library/Caches/com.taobao.aliwangwang',
+                '~/Library/Containers/com.taobao.aliwangwang',
+                '~/Library/Internet Plug-Ins/WangwangPlugin.plugin',
+                '~/Library/Preferences/com.taobao.aliwangwang.plist',
+                '~/Library/Saved Application State/com.taobao.aliwangwang.savedState',
+              ]
 end

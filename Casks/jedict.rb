@@ -1,4 +1,4 @@
-cask :v1 => 'jedict' do
+cask 'jedict' do
   version '4.9.6'
   sha256 '99dc7bd641a708c4d09e975e136c0dd05597620f2f47a77817b4604fc1731b9b'
 

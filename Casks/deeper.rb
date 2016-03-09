@@ -1,4 +1,4 @@
-cask :v1 => 'deeper' do
+cask 'deeper' do
   version :latest
   sha256 :no_check
 
@@ -16,6 +16,9 @@ cask :v1 => 'deeper' do
     url 'http://www.titanium.free.fr/download/109/Deeper.dmg'
   elsif MacOS.release == :yosemite
     url 'http://www.titanium.free.fr/download/1010/Deeper.dmg'
+  elsif MacOS.release == :el_capitan
+    # joel.barriere.pagesperso-orange.fr was verified as official when first introduced to the cask
+    url 'http://joel.barriere.pagesperso-orange.fr/download/1011/Deeper.dmg'
   else
     # Unusual case: there is no fall-through.  The software will stop
     # working, or is dangerous to run, on the next OS X release.
@@ -25,17 +28,18 @@ cask :v1 => 'deeper' do
   homepage 'http://www.titanium.free.fr/deeper.html'
   license :gratis
 
-  app 'Deeper.app'
+  depends_on macos: %w[
+                      :tiger
+                      :leopard
+                      :snow_leopard
+                      :lion
+                      :mountain_lion
+                      :mavericks
+                      :yosemite
+                      :el_capitan
+                    ]
 
-  depends_on :macos => %w{
-                          :tiger
-                          :leopard
-                          :snow_leopard
-                          :lion
-                          :mountain_lion
-                          :mavericks
-                          :yosemite
-                         }
+  app 'Deeper.app'
 
   caveats do
     if [:leopard, :tiger].include?(MacOS.release.to_sym)

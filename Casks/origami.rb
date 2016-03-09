@@ -1,15 +1,16 @@
-cask :v1 => 'origami' do
-  version '2.1.2'
-  sha256 '23a73555ccf1153e3e556a376f29c8b1b7b331629d3909b243d4eb4e0345df25'
+cask 'origami' do
+  version '2.1.3'
+  sha256 'e97e9106d14c1beeb7a05019040b0a6f31691e4b0d1c8d3fb94e0de1b8110f72'
 
+  # origami.facebook.com was verified as official when first introduced to the cask
   url "https://origami.facebook.com/download/Origami-#{version}.zip"
   appcast 'https://facebook.github.io/origami/update/updates.xml.rss',
-          :sha256 => '8a5e0d9a2aa5d536927e08deaace15988410dd5062145af230094298259836bd'
+          checkpoint: '3545a46eb237f2628d404bfe845987a4411e937e95bd6d6cd3b1e679a0e332b3'
   name 'Origami'
   homepage 'https://facebook.github.io/origami'
   license :gratis
 
   pkg "Origami #{version}.pkg"
 
-  uninstall :pkgutil => 'com.facebook.origami.*'
+  uninstall pkgutil: 'com.facebook.origami.*'
 end

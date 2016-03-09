@@ -6,7 +6,7 @@
 #  production_brew_cask
 #
 
-called_as="$(basename $0)"
+called_as="$(basename "$0")"
 
 ###
 ### settings
@@ -20,17 +20,19 @@ shopt -s nocasematch # case-insensitive regular expressions
 ### configurable global variables
 ###
 
-tap_subdir="Library/Taps/caskroom/homebrew-cask"
+taps_subdir="Library/Taps"
+cask_tap_subdir="caskroom/homebrew-cask"
+dev_links=("cmd" "lib" "Casks")
 
 ###
 ### functions
 ###
 
 warn () {
-    local message="$@"
+    local message="$*"
     message="${message//\\t/$'\011'}"
     message="${message//\\n/$'\012'}"
-    message="${message%"${message##*[![:space:]]}"}"
+    message="${message%${message##*[![:space:]]}}"
     printf "%s\n" "$message" 1>&2
 }
 
@@ -40,22 +42,23 @@ die () {
 }
 
 cd_to_project_root () {
-    local script_dir="$(/usr/bin/dirname "$0")"
+    local script_dir git_root
+    script_dir="$(/usr/bin/dirname "$0")"
     cd "$script_dir"
-    local git_root="$(git rev-parse --show-toplevel)"
+    git_root="$(git rev-parse --show-toplevel)"
     if [[ -z "$git_root" ]]; then
         die "ERROR: Could not find git project root"
     fi
     cd "$git_root"
 }
 
-cd_to_version_dir () {
-    local cellar_dir="$1"
-    local version_dir="$2"
-    if [[ -z "$version_dir" ]]; then
-        die "ERROR: Could not find version dir under $cellar_dir/"
+cd_to_tap_dir () {
+    local taps_dir="$1"
+    local tap_dir="$2"
+    if [[ ! -d "$tap_dir" ]]; then
+        die "ERROR: Could not find tap dir under $taps_dir/"
     fi
-    cd "$cellar_dir/$version_dir"
+    cd "$tap_dir"
 }
 
 not_inside_homebrew () {
@@ -67,32 +70,33 @@ not_inside_homebrew () {
 }
 
 remove_dev_links () {
-    local tap_dir="$1"
-    /bin/rm -- rubylib Casks
-    /bin/mv -- production_rubylib rubylib
-    /bin/mv -- production_Casks   Casks
-    cd "$tap_dir"
-    /bin/rm -- lib Casks
-    /bin/mv -- production_lib   lib
-    /bin/mv -- production_Casks Casks
+    for link_name in "${dev_links[@]}"; do
+        remove_dev_link "$link_name"
+    done
     printf "brew-cask is now in production mode\n"
     printf "It is safe to run 'brew update' if you are in production mode for all Caskroom repos.\n"
 }
 
 create_dev_links () {
-    local tap_dir="$1"
-    local git_root="$2"
-    /bin/mv -- rubylib production_rubylib
-    /bin/mv -- Casks   production_Casks
-    /bin/ln -s -- "$git_root/Casks" .
-    /bin/ln -s -- "$git_root/lib"   rubylib
-    cd "$tap_dir"
-    /bin/mv -- lib   production_lib
-    /bin/mv -- Casks production_Casks
-    /bin/ln -s -- "$git_root/Casks" .
-    /bin/ln -s -- "$git_root/lib"   .
+    local git_root="$1"
+    for link_name in "${dev_links[@]}"; do
+        create_dev_link "$git_root" "$link_name"
+    done
     printf "brew-cask is now in development mode\n"
     printf "Note: it is not safe to run 'brew update' while in development mode\n"
+}
+
+remove_dev_link () {
+    local link_name="$1"
+    /bin/rm -- "$link_name"
+    /bin/mv -- "production_$link_name" "$link_name"
+}
+
+create_dev_link () {
+    local git_root="$1"
+    local link_name="$2"
+    /bin/mv -- "$link_name" "production_$link_name"
+    /bin/ln -s -- "$git_root/$link_name" .
 }
 
 ###
@@ -104,11 +108,11 @@ _develop_brew_cask_develop_action () {
 }
 
 _develop_brew_cask_production_action () {
-    create_dev_links "$tap_dir" "$git_root"
+    create_dev_links "$git_root"
 }
 
 _production_brew_cask_develop_action () {
-    remove_dev_links "$tap_dir"
+    remove_dev_links
 }
 
 _production_brew_cask_production_action () {
@@ -116,21 +120,21 @@ _production_brew_cask_production_action () {
 }
 
 _main () {
+    local git_root brew_repository taps_dir tap_dir
 
     # initialization
     cd_to_project_root
-    local git_root="$(/bin/pwd)"
-    local brew_repository="$(brew --repository)"
-    local cellar_dir="$brew_repository/Cellar/brew-cask"
-    local version_dir="$(/bin/ls -- "$cellar_dir/" | /usr/bin/sort | /usr/bin/tail -1)"
-    local tap_dir="$brew_repository/$tap_subdir"
+    git_root="$(/bin/pwd)"
+    brew_repository="$(brew --repository)"
+    taps_dir="$brew_repository/$taps_subdir"
+    tap_dir="$taps_dir/$cask_tap_subdir"
 
     # sanity check
     not_inside_homebrew "$tap_dir" "$git_root"
 
     # action
-    cd_to_version_dir "$cellar_dir" "$version_dir"
-    if [[ -e "production_rubylib" ]]; then
+    cd_to_tap_dir "$taps_dir" "$tap_dir"
+    if [[ -e "production_lib" ]]; then
         eval "_${called_as}_develop_action"
     else
         eval "_${called_as}_production_action"

@@ -1,4 +1,4 @@
-cask :v1 => 'sabnzbd' do
+cask 'sabnzbd' do
   version '0.7.20'
   sha256 'f7c13afe87ad91ab2f12fb6384feef79ae07bf2417395304b3d8961513d23611'
 
@@ -8,7 +8,7 @@ cask :v1 => 'sabnzbd' do
   homepage 'https://sabnzbd.org/'
   license :gpl
 
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
   if MacOS.release == :snow_leopard
     app 'Snow Leopard/SABnzbd.app'
@@ -18,8 +18,8 @@ cask :v1 => 'sabnzbd' do
     app 'SABnzbd.app'
   end
 
-  zap :delete => [
-                  '~/Library/Application Support/SABnzbd/sabnzbd.ini',
-                  '~/Library/Application Support/SABnzbd/admin/rss_data.sab',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/SABnzbd/sabnzbd.ini',
+                '~/Library/Application Support/SABnzbd/admin/rss_data.sab',
+              ]
 end

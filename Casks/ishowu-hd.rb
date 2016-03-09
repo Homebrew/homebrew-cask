@@ -1,4 +1,4 @@
-cask :v1 => 'ishowu-hd' do
+cask 'ishowu-hd' do
   version :latest
   sha256 :no_check
 

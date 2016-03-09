@@ -1,4 +1,4 @@
-cask :v1 => 'switch' do
+cask 'switch' do
   version :latest
   sha256 :no_check
 
@@ -7,7 +7,7 @@ cask :v1 => 'switch' do
   homepage 'http://www.nch.com.au/switch/'
   license :closed
 
-  container :nested => 'Switch_i.dmg'
+  container nested: 'Switch_i.dmg'
 
   app 'Switch.app'
 end

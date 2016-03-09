@@ -1,4 +1,4 @@
-cask :v1 => 'prepros' do
+cask 'prepros' do
   version '5.9.5'
   sha256 'f892d1ce768c7e71820b005f77a27648aa1d3025a43669b621c4a31d667716e8'
 

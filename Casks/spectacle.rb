@@ -1,27 +1,30 @@
-cask :v1 => 'spectacle' do
-
+cask 'spectacle' do
   if MacOS.release <= :mountain_lion
     version '0.8.6'
     sha256 '3e367d2d7e6fe7d5f41d717d49cb087ba7432624b71ddd91c0cfa9d5a5459b7c'
   else
-    version '1.0.1'
-    sha256 '8b41469acb8ae5bc845f1441c2cf630f72f0fc14ad324e78336b0cb4268216d7'
+    version '1.0.3'
+    sha256 '6686e2b409e1a44db0c1421c06dd8cbf4be9c95dcf7e934552faf5734ccee9b6'
 
-    appcast 'http://spectacleapp.com/updates/appcast.xml',
-            :sha256 => 'd79bb2db04e7e53a7bb9184f9c048e4dde76a06e1be1232a9761f60db3836084'
+    appcast 'https://www.spectacleapp.com/updates/appcast.xml',
+            checkpoint: '7e818cf270c24f8b39a9593afae4fab044c6a885a1ba695d81652e56b27c3320'
   end
 
-  # amazonaws.com is the official download host per the vendor homepage
+  # amazonaws.com/spectacle was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/spectacle/downloads/Spectacle+#{version}.zip"
   name 'Spectacle'
-  homepage 'http://spectacleapp.com/'
+  homepage 'https://spectacleapp.com/'
   license :mit
+
+  accessibility_access true
 
   app 'Spectacle.app'
 
-  zap :delete => [
-                  '~/Library/Caches/com.divisiblebyzero.Spectacle',
-                  '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.divisiblebyzero.Spectacle',
-                  '~/Library/Preferences/com.divisiblebyzero.Spectacle.plist',
-                 ]
+  uninstall login_item: 'Spectacle'
+
+  zap delete: [
+                '~/Library/Caches/com.divisiblebyzero.Spectacle',
+                '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.divisiblebyzero.Spectacle',
+                '~/Library/Preferences/com.divisiblebyzero.Spectacle.plist',
+              ]
 end

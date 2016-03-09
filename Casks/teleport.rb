@@ -1,11 +1,11 @@
-cask :v1 => 'teleport' do
-  version :latest
-  sha256 :no_check
+cask 'teleport' do
+  version '1.2.1'
+  sha256 '9b193b300cedd7d52cdf5e76c85afe5ad24709e6308c90afec19216627eb3476'
 
-  url 'http://www.abyssoft.com/software/teleport/downloads/teleport.zip'
-  name 'teleport'
+  url "http://abyssoft.com/software/teleport/downloads/teleport#{version.no_dots}.zip"
   appcast 'http://www.abyssoft.com/software/teleport/versions.xml',
-          :sha256 => 'c56815ad8028891f56f8ae5643e9e68b6ca59f2c31c49064e32f9822cc111533'
+          checkpoint: 'b7b68db7e36eab08273f35394eaa245b60ec48525a23c6f35a4daf7478e707c8'
+  name 'teleport'
   homepage 'http://www.abyssoft.com/software/teleport/'
   license :gratis
 

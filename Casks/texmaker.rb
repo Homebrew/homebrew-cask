@@ -1,4 +1,4 @@
-cask :v1 => 'texmaker' do
+cask 'texmaker' do
   version :latest
   sha256 :no_check
 

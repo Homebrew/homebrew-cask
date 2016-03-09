@@ -1,9 +1,10 @@
-cask :v1 => 'qtpass' do
-  version '1.0.4'
-  sha256 'cb5eb74ba37ded2a36d3362cc85e4a3c45aad095be7fe77252eab885f7d32c86'
+cask 'qtpass' do
+  version '1.1.0'
+  sha256 '3425bd777af74b116c071f7b04dabfda788844cbf01f6bdf435015e586e6bbfa'
 
   url "https://github.com/IJHack/qtpass/releases/download/v#{version}/qtpass-#{version}.dmg"
-  appcast 'https://github.com/IJHack/qtpass/releases.atom'
+  appcast 'https://github.com/IJHack/qtpass/releases.atom',
+          checkpoint: '4d3beffb4da142bc793177247060f7c3f8712a09ccb43f08de930b80c8f2eb98'
   name 'QtPass'
   homepage 'https://qtpass.org/'
   license :gpl

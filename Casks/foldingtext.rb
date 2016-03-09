@@ -1,12 +1,12 @@
-cask :v1 => 'foldingtext' do
-  version '2.1'
-  sha256 '007e882d1d09273accf84d95ed15e89db056da9bebf81258098d3efb38ce6df2'
+cask 'foldingtext' do
+  version '2.1.2'
+  sha256 '8d5adf4332d79e734ec147f0bad9b765210b168cf3e3dc75cdcb0781af231136'
 
-  # amazonaws.com is the official download host per the appcast feed
-  url "http://foldingtext.s3.amazonaws.com/FoldingText-#{version}.dmg"
-  name 'FoldingText'
+  # amazonaws.com/foldingtext was verified as official when first introduced to the cask
+  url 'https://s3.amazonaws.com/foldingtext/FoldingText.dmg'
   appcast 'https://foldingtext.s3.amazonaws.com/FoldingText.rss',
-          :sha256 => 'edb29d497e4b36ad241ff05f35fcafb4c3712c8b1062b22a1dbd3ed8cb0354df'
+          checkpoint: '52831575716556573cb50ca39c4425cbd407e945d8cab642b76964dc3a616cab'
+  name 'FoldingText'
   homepage 'http://www.foldingtext.com'
   license :commercial
 

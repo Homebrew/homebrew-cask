@@ -1,4 +1,4 @@
-cask :v1 => 'wireframe-sketcher' do
+cask 'wireframe-sketcher' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'moneydance' do
+cask 'moneydance' do
   version :latest
   sha256 :no_check
 

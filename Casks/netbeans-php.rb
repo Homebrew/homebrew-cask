@@ -1,4 +1,4 @@
-cask :v1 => 'netbeans-php' do
+cask 'netbeans-php' do
   version '8.1'
   sha256 '40d95d31f0f3b87c9d79964c0faa0303f2ae91d9a92a405d7f396857a10bfef1'
 
@@ -9,5 +9,5 @@ cask :v1 => 'netbeans-php' do
 
   pkg "NetBeans #{version}.pkg"
 
-  uninstall :delete => '/Applications/NetBeans'
+  uninstall delete: '/Applications/NetBeans'
 end

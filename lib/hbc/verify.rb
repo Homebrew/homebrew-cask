@@ -1,25 +1,33 @@
-require 'digest'
+module Hbc::Verify; end
+
+require 'hbc/verify/checksum'
+require 'hbc/verify/gpg'
 
 module Hbc::Verify
-  def self.all(path, cask)
-    checksum(path, cask)
+  extend self
+
+  def verifications
+    [
+      Hbc::Verify::Checksum
+      # todo: Hbc::Verify::Gpg
+    ]
   end
 
-  def self.checksum(path, cask)
-    begin
-      expected = cask.sha256
-    rescue RuntimeError => e
+  def all(cask, downloaded_path)
+    odebug 'Verifying download'
+    verifications = for_cask(cask)
+    odebug "#{verifications.size} verifications defined", verifications
+    verifications.each do |verification|
+      odebug "Running verification of class #{verification}"
+      verification.new(cask, downloaded_path).verify
     end
-    return if expected == :no_check
-    computed = Digest::SHA2.file(path).hexdigest
-    if expected.nil? or expected.empty?
-      raise Hbc::CaskSha256MissingError.new("sha256 required: sha256 '#{computed}'")
-    end
-    if expected == computed
-      odebug "SHA256 checksums match"
-    else
-      ohai 'Note: running "brew update" may fix sha256 checksum errors'
-      raise Hbc::CaskSha256MismatchError.new(path, expected, computed)
+  end
+
+  def for_cask(cask)
+    odebug "Determining which verifications to run for Cask #{cask}"
+    verifications.select do |verification|
+      odebug "Checking for verification class #{verification}"
+      verification.me?(cask)
     end
   end
 end

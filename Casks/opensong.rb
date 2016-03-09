@@ -1,4 +1,4 @@
-cask :v1 => 'opensong' do
+cask 'opensong' do
   version '2.1.2'
   sha256 '5ed3da5801c2539b87c3ce8125a1b440a6d50129b675182685892e1c46d0ad1b'
 

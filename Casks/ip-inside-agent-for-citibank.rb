@@ -1,4 +1,4 @@
-cask :v1 => 'ip-inside-agent-for-citibank' do
+cask 'ip-inside-agent-for-citibank' do
   version :latest
   sha256 :no_check
 
@@ -9,10 +9,10 @@ cask :v1 => 'ip-inside-agent-for-citibank' do
 
   pkg 'IPinsideAgent.pkg'
 
-  uninstall :pkgutil => [
-                         'INTEREZEN Internet Plug-in Launch',
-                         'INTEREZEN Internet Plug-in Uninstaller',
-                         'INTEREZEN Internet Plug-in'
-                        ],
-            :rmdir => '/Applications/IPinside'
+  uninstall pkgutil: [
+                       'INTEREZEN Internet Plug-in Launch',
+                       'INTEREZEN Internet Plug-in Uninstaller',
+                       'INTEREZEN Internet Plug-in',
+                     ],
+            rmdir:   '/Applications/IPinside'
 end

@@ -1,120 +1,153 @@
-#!/bin/bash
+#!/usr/bin/env ruby
 #
 # audit_modified_casks
 #
 
 ###
-### settings
+### dependencies
 ###
 
-set -o errexit
-set +o histexpand
+require 'pathname'
+require 'open3'
+
+$LOAD_PATH.unshift(Pathname(__FILE__).realpath.join('../../../lib'))
+
+require 'vendor/homebrew-fork/global'
+require 'hbc'
 
 ###
-### global variables
+### constants
 ###
 
-commit_range=''
-cask_dir='Casks'
-bin_dir='bin'
-brew_cask="$bin_dir/brew-cask"
+CASK_DIR = Pathname(__FILE__).realpath.join('../../../Casks')
+RELEVANT_STANZAS = %i{version sha256 url}
 
 ###
-### functions
+### methods
 ###
 
-warn () {
-    local message="$*"
-    message="${message//\\t/$'\011'}"
-    message="${message//\\n/$'\012'}"
-    message="${message%${message##*[![:space:]]}}"
-    printf "%s\n" "$message" 1>&2
-}
+def cd_to_project_root
+  Dir.chdir Pathname(__FILE__).realpath.dirname
+  @git_root ||= git(*%w[rev-parse --show-toplevel])
+  Dir.chdir @git_root
+end
 
-die () {
-    warn "$@"
-    exit 1
-}
+def die(msg, status=1)
+  onoe msg
+  exit status
+end
 
-usage () {
-    printf "audit_casks_modified_in_range <commit range>
+def main
+  cd_to_project_root
+  modified_cask_files.zip(modified_casks).each do |cask_file, cask|
+    audit(cask, cask_file)
+  end
+  report_failures
+end
 
-Given a range of Git commits, find any Casks that were modified
-and run \`brew cask audit\` on them. If one or both of the \`url\`
-or \`sha256\` stanzas were modified, run with the \`--download\`
-flag to verify the hash.
+def commit_range
+  $commit_range
+end
 
-"
-}
+def modified_cask_files
+  return @modified_cask_files if defined? @modified_cask_files
+  out = git(*%w[diff --name-only --diff-filter=AM], commit_range,
+            '--', "#{CASK_DIR}/*.rb")
+  @modified_cask_files = out.split("\n")
+end
 
-cd_to_project_root () {
-    local script_dir git_root
-    script_dir="$(/usr/bin/dirname "$0")"
-    cd "$script_dir"
-    git_root="$(git rev-parse --show-toplevel)"
-    if [[ -z "$git_root" ]]; then
-        die 'ERROR: Could not find git project root'
-    fi
-    cd "$git_root"
-}
+def modified_casks
+  return @modified_casks if defined? @modified_casks
+  @modified_casks = modified_cask_files.map { |f| Hbc.load(f) }
+  if @modified_casks.any?
+    num_modified = @modified_casks.size
+    ohai "#{num_modified} modified #{pluralize('cask', num_modified)}: " \
+      "#{@modified_casks.join(' ')}"
+  end
+  @modified_casks
+end
 
-audit_cask () {
-    local cask_file="$1"
-    if needs_verification "$cask_file"; then
-        "$brew_cask" audit --download "$cask_file"
-    else
-        "$brew_cask" audit "$cask_file"
-    fi
-}
+def audit(cask, cask_file)
+  audit_download = audit_download?(cask, cask_file)
+  success = Hbc::Auditor.audit(cask, audit_download: audit_download)
+  failed_casks << cask unless success
+end
 
-needs_verification () {
-    local cask_file="$1"
-    is_sha256_checked "$cask_file" &&
-    is_relevant_stanza_modified "$cask_file"
-}
+def failed_casks
+  @failed_casks ||= []
+end
 
-is_sha256_checked () {
-    local cask_file="$1"
-    ! grep -q 'sha256\s*:no_check' "$cask_file"
-}
+def audit_download?(cask, cask_file)
+  cask.sha256 != :no_check && relevant_stanza_modified?(cask_file)
+end
 
-is_relevant_stanza_modified () {
-    local cask_file="$1"
-    file_diff "$cask_file" | grep -Eq '^\+\s*(url|sha256|version)'
-}
+def relevant_stanza_modified?(cask_file)
+  out = git('diff', commit_range, '--', cask_file)
+  out =~ /^\+\s*(#{RELEVANT_STANZAS.join('|')})/
+end
 
-file_diff () {
-    local cask_file="$1"
-    git diff "$commit_range" -- "$cask_file"
-}
+def git(*args)
+  ohai ['git', *args].join(' ') if $debug
+  out, err, status = Open3.capture3('git', *args)
+  return out.chomp if status.success?
+  die err.chomp, status.exitstatus
+end
 
-modified_casks () {
-    modified_files | grep "^$cask_dir/"
-}
+def report_failures
+  return if failed_casks.empty?
+  num_failed = failed_casks.size
+  cask_pluralized = pluralize('cask', num_failed)
+  die "audit failed for #{num_failed} #{cask_pluralized}: " \
+    "#{failed_casks.join(' ')}"
+end
 
-modified_files () {
-    git diff --name-only --diff-filter=AM "$commit_range" --
-}
+def pluralize(str, num)
+  num == 1 ?  str : "#{str}s"
+end
+
+def cleanup
+  Hbc::CLI::Cleanup.run if $clean_cache
+end
 
 ###
 ### main
 ###
 
-_audit_modified_casks () {
-    commit_range="$1"
-    cd_to_project_root
-    while read -r cask_file; do
-        audit_cask "$cask_file"
-    done < <(modified_casks)
-}
+usage = <<-EOS
+Usage: audit_modified_casks [options...] <commit range>
 
-# process args
-if [[ $1 =~ ^-+h(elp)?$ || -z "$1" ]]; then
-    usage
-    exit
-fi
+Given a range of Git commits, find any Casks that were modified and run `brew
+cask audit' on them. If the `url', `version', or `sha256' stanzas were modified,
+run with the `--download' flag to verify the hash.
 
-# dispatch main
-_audit_modified_casks "$@"
+Options:
+  -c, --clean-cache
+    Remove all cached downloads. Use with care.
+  -d, --debug
+    Enable debugging output.
+  -h, --help
+    Display usage and exit.
+EOS
 
-#
+while ARGV.any? do
+  case ARGV.first
+  when /^-+h(elp)?$/i
+    puts usage
+    exit 0
+  when /^-+d(ebug)?$/i
+    $debug = 1
+    ARGV.shift
+  when /^-+c(lean-cache)?$/i
+    $clean_cache = 1
+    ARGV.shift
+  else
+    die usage if $commit_range
+    $commit_range = ARGV.shift
+  end
+end
+
+die usage unless $commit_range
+
+at_exit { cleanup }
+
+main

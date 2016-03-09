@@ -1,4 +1,4 @@
-cask :v1 => 'touch-unlock' do
+cask 'touch-unlock' do
   version '1.0.7'
   sha256 '34ab779b6532928520118b28f72168d7095a3b4fc870c886755b307d45a5731f'
 
@@ -9,7 +9,7 @@ cask :v1 => 'touch-unlock' do
 
   app 'Touch Unlock for Mac.app'
 
-  zap :delete => [
-                  '~/Library/Caches/com.reconditorium.Touch-Unlock-for-Mac',
-                 ]
+  zap delete: [
+                '~/Library/Caches/com.reconditorium.Touch-Unlock-for-Mac',
+              ]
 end

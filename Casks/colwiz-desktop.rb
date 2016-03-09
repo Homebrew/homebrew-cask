@@ -1,4 +1,4 @@
-cask :v1 => 'colwiz-desktop' do
+cask 'colwiz-desktop' do
   version :latest
   sha256 :no_check
 

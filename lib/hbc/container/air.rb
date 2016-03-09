@@ -1,11 +1,15 @@
 class Hbc::Container::Air < Hbc::Container::Base
+  INSTALLER_PATHNAME =
+    Pathname('/Applications/Utilities/Adobe AIR Application Installer.app' \
+             '/Contents/MacOS/Adobe AIR Application Installer')
+
   def self.me?(criteria)
     %w[.air].include?(criteria.path.extname)
   end
 
   def self.installer_cmd
     @installer_cmd ||= if installer_exist?
-      _installer_pathname
+      INSTALLER_PATHNAME
     else
       raise Hbc::CaskError.new <<-ERRMSG.undent
         Adobe AIR runtime not present, try installing it via
@@ -17,11 +21,7 @@ class Hbc::Container::Air < Hbc::Container::Base
   end
 
   def self.installer_exist?
-    _installer_pathname.exist?
-  end
-
-  def self._installer_pathname
-    @_installer_pathname ||= Pathname.new('/Applications/Utilities/Adobe AIR Application Installer.app/Contents/MacOS/Adobe AIR Application Installer')
+    INSTALLER_PATHNAME.exist?
   end
 
   def extract

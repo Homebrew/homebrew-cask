@@ -1,6 +1,6 @@
-cask :v1 => 'nodebox' do
-  version '3.0.43'
-  sha256 '3c0f93ad72d0bb1fba3a517515b38a7a6bd24cffe0d5560395b3fbaebdc72444'
+cask 'nodebox' do
+  version '3.0.44'
+  sha256 '9181a1b886c4a02bc0d94f62b49865b5f1c1ea473ec5c8a7b93f1b9d95535b5a'
 
   url "https://secure.nodebox.net/downloads/NodeBox-#{version}.zip"
   name 'NodeBox'

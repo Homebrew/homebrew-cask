@@ -1,4 +1,4 @@
-cask :v1 => 'simplifyextras' do
+cask 'simplifyextras' do
   version '1.0'
   sha256 '03c940561d265c02ccc7782cf9b2a0be592b233d074bb691775656642fed9455'
 

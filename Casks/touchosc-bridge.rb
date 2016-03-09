@@ -1,4 +1,4 @@
-cask :v1 => 'touchosc-bridge' do
+cask 'touchosc-bridge' do
   version '1.3.0'
   sha256 'cf6ae2a29e16a22e347b76fb02d2a524d143b958b9db1ea604a5ad49f9c55567'
 

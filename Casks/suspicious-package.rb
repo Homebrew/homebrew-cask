@@ -1,4 +1,4 @@
-cask :v1 => 'suspicious-package' do
+cask 'suspicious-package' do
   version :latest
   sha256 :no_check
 
@@ -7,8 +7,8 @@ cask :v1 => 'suspicious-package' do
   homepage 'http://www.mothersruin.com/software/SuspiciousPackage/'
   license :gratis
 
-  depends_on :formula => 'unar'
+  depends_on formula: 'unar'
+  container type: :generic_unar
 
-  container :type => :generic_unar
   qlplugin 'Suspicious Package.qlgenerator'
 end

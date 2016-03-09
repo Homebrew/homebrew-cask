@@ -1,19 +1,19 @@
-cask :v1 => 'appcleaner' do
-  version '3.1.1'
-  sha256 '2b9b184e270fd3ea7e16327c495aaf809aa1136d6288fc183bc13f74726c70a1'
+cask 'appcleaner' do
+  version '3.3'
+  sha256 'a856e3e08af2ae972582c3a75403086413295d1a38d86a3e2d5f6abff7505fdd'
 
-  url "http://www.freemacsoft.net/downloads/AppCleaner_#{version}.zip"
+  url "https://www.freemacsoft.net/downloads/AppCleaner_#{version}.zip"
+  appcast 'https://freemacsoft.net/appcleaner/Updates.xml',
+          checkpoint: '63e0e7e6bfabfe3edef0e5e2ce454b6abf25a3145494007bfb4f20c2f873b051'
   name 'AppCleaner'
-  appcast 'http://www.freemacsoft.net/appcleaner/Updates.xml',
-          :sha256 => '65439f2e1faab26ff1e45b0f49456b94a5b186f361df0f57f3a9571070693916'
-  homepage 'http://www.freemacsoft.net/appcleaner/'
+  homepage 'https://www.freemacsoft.net/appcleaner/'
   license :gratis
 
   app 'AppCleaner.app'
 
-  zap :delete => [
-                  '~/Library/Caches/com.freemacsoft.AppCleaner',
-                  '~/Library/Preferences/com.freemacsoft.AppCleaner.plist',
-                  '~/Library/Saved Application State/com.freemacsoft.AppCleaner.savedState',
-                 ]
+  zap delete: [
+                '~/Library/Caches/net.freemacsoft.AppCleaner',
+                '~/Library/Preferences/net.freemacsoft.AppCleaner.plist',
+                '~/Library/Saved Application State/net.freemacsoft.AppCleaner.savedState',
+              ]
 end

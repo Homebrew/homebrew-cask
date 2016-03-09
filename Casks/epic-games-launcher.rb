@@ -1,4 +1,4 @@
-cask :v1 => 'epic-games-launcher' do
+cask 'epic-games-launcher' do
   version '2.3.0-2604750'
   sha256 'e9e2d4d2753a9d3fee021df6ff421b1340d947e05c542a69ea08146160c82d94'
 
@@ -6,7 +6,6 @@ cask :v1 => 'epic-games-launcher' do
   name 'Epic Games Launcher'
   homepage 'https://www.unrealengine.com/what-is-unreal-engine-4'
   license :commercial
-  tags :vendor => 'EpicGames'
 
   app 'Epic Games Launcher.app'
 end

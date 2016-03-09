@@ -1,6 +1,6 @@
-cask :v1 => 'seafile-client' do
-  version '4.4.2'
-  sha256 'b6f821002f6466ff6a0ec6b6743c484fb8edb38e8052cbca8003d27aea4cbcf7'
+cask 'seafile-client' do
+  version '5.0.3'
+  sha256 '612d8f00fffe208f0bda559c02013685d546f174e06c5107c2abd1c4c698f1c1'
 
   # bintray.com is the official download host per the vendor homepage
   url "https://bintray.com/artifact/download/seafile-org/seafile/seafile-client-#{version}.dmg"

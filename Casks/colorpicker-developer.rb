@@ -1,4 +1,4 @@
-cask :v1 => 'colorpicker-developer' do
+cask 'colorpicker-developer' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'retro-virtual-machine' do
+cask 'retro-virtual-machine' do
   version '1.0.1'
   sha256 '2144c713889780fcc1b4f9e994f4466514f9434974c942406f966145adaf899d'
 

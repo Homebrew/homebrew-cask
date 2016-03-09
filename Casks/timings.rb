@@ -1,20 +1,21 @@
-cask :v1 => 'timings' do
-  version '2.4.4'
-  sha256 '35627d1c6a46f600555fbefcfac8e2422932a651ec36717a2934146ac3acd719'
+cask 'timings' do
+  version '2.4.5'
+  sha256 'c3278597431f8043e82e48263185832c123baa2c7e7fb97c7377b4fd2fe28f06'
 
-  url "http://mediaatelier.com/Timings2/Timings_#{version}.zip"
-  appcast 'http://mediaatelier.com/Timings2/feed.php',
-          :sha256 => '1d13902682950cfe77c621cde054c08502903b0effca0e09703b562da5d9e683'
+  url "https://mediaatelier.com/Timings2/Timings_#{version}.zip"
+  appcast 'https://mediaatelier.com/Timings2/feed.php',
+          checkpoint: '30e7d30ed16d5be28b3f84beb494badad506a175041cedb45a56e4b4e989e735'
   name 'Timings'
   homepage 'http://mediaatelier.com/Timings'
   license :commercial
-  depends_on :macos => '>= :mavericks'
+
+  depends_on macos: '>= :mavericks'
 
   app 'Timings.app'
 
-  zap :delete => [
-                  '~/Library/Preferences/com.mediaateller.Timings.plist',
-                  '~/Library/Application Support/Timings',
-                  '~/Library/Caches/com.mediaateller.timings',
-                 ]
+  zap delete: [
+                '~/Library/Preferences/com.mediaateller.Timings.plist',
+                '~/Library/Application Support/Timings',
+                '~/Library/Caches/com.mediaateller.timings',
+              ]
 end

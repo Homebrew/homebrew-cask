@@ -1,4 +1,4 @@
-cask :v1test => 'tarball' do
+test_cask 'tarball' do
   version '1.2.3'
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'sandvox' do
+cask 'sandvox' do
   version :latest
   sha256 :no_check
 

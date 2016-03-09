@@ -1,5 +1,4 @@
-cask :v1 => 'monolingual' do
-
+cask 'monolingual' do
   if MacOS.release <= :tiger
     version '1.3.9'
     sha256 '7bf1ec8642ec8674443945dec12cf9c991306912e1e27c305c6db4776e037b16'
@@ -17,8 +16,10 @@ cask :v1 => 'monolingual' do
     sha256 '29350c6926ff25d22074e62cf1db3a4dcb3940150fead7733276cbf6d4d67d91'
   end
 
+  # github.com/IngmarStein/Monolingual was verified as official when first introduced to the cask
   url "https://github.com/IngmarStein/Monolingual/releases/download/v#{version}/Monolingual-#{version}.dmg"
-  appcast 'https://github.com/IngmarStein/Monolingual/releases.atom'
+  appcast 'https://github.com/IngmarStein/Monolingual/releases.atom',
+          checkpoint: '2221ceaa8409caa6edcd05b3a8c3e70357e5c9210a41c112f0c510856495d9f7'
   name 'Monolingual'
   homepage 'https://ingmarstein.github.io/Monolingual/'
   license :gpl

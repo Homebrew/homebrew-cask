@@ -1,12 +1,11 @@
-cask :v1 => 'audiobookbinder' do
+cask 'audiobookbinder' do
   version '2.1'
   sha256 'ed0e722cbbbcad8ea305faa10e1f5f08c7719991118d015af132bb9d41f84170'
 
   url "http://bluezbox.com/audiobookbinder/AudiobookBinder-#{version}.dmg"
-  name 'Audiobook Binder'
-  name 'AudiobookBinder'
   appcast 'http://bluezbox.com/audiobookbinder/appcast.xml',
-          :sha256 => '11938c904098f5a6dd0dbf6a607cdde44be5d7f1a0d7fdeb5e54965320c0f441'
+          checkpoint: '5513a6cc78863fd79e2779794a0767d241a066e1b4bd5cce19ecf5daa34c2306'
+  name 'Audiobook Binder'
   homepage 'http://bluezbox.com/audiobookbinder.html'
   license :oss
 

@@ -1,4 +1,4 @@
-cask :v1 => 'udig' do
+cask 'udig' do
   version '1.4.0'
   sha256 '1364245d9e6f62a3ec4f21b5a0eb4046a0423ca778d3d550b348d5bb20706fa2'
 

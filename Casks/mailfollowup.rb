@@ -1,4 +1,4 @@
-cask :v1 => 'mailfollowup' do
+cask 'mailfollowup' do
   if MacOS.release <= :tiger
     version '1.1'
     sha256 '1f345ae0c814cbdc7adad9d5b20003fbad2cdf4da0a9f9de4936fc2d2c65067d'
@@ -17,23 +17,28 @@ cask :v1 => 'mailfollowup' do
   elsif MacOS.release <= :mavericks
     version '1.6.5'
     sha256 '45d8a2f1791a517e40bd63ecbc67afc6dae70287f6e04f810b452b2e90097f42'
-  else
+  elsif MacOS.release <= :yosemite
     version '1.7.3'
     sha256 '1fe25c718b71e7a8b164058c5638c7e0ffc4a24c35a97daf53221c2543593fd4'
+  else
+    version '1.7.6'
+    sha256 '428db2462147c5e461f65c2c1b488015e5295754bd36af08fcb8517543addffe'
   end
 
   url "https://www.cs.unc.edu/~welch/MailFollowup/media/MailFollowUp_#{version}.dmg.zip"
   name 'MailFollowUp'
-  homepage 'http://www.cs.unc.edu/~welch/MailFollowup/'
+  homepage 'https://www.cs.unc.edu/~welch/MailFollowup/'
   license :gratis
 
-  container :nested => "MailFollowUp_#{version}.dmg"
+  container nested: "MailFollowUp_#{version}.dmg"
+
   pkg 'Install MailFollowUp.pkg'
 
-  uninstall :quit  => 'com.apple.mail',
-            :pkgutil => [
-                        'net.welchwold.mailfollowup',
-                        'net.welchwold.mailfollowup.*',
-                        ]
-  zap       :delete => '~/Library/Mail/Bundles/MailFollowUp.mailbundle/'
+  uninstall quit:    'com.apple.mail',
+            pkgutil: [
+                       'net.welchwold.mailfollowup',
+                       'net.welchwold.mailfollowup.*',
+                     ]
+
+  zap       delete: '~/Library/Mail/Bundles/MailFollowUp.mailbundle/'
 end

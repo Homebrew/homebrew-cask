@@ -1,11 +1,11 @@
-cask :v1 => 'principle' do
-  version '0.0.80'
-  sha256 '2d6ce166a974a2668e7327daa66137506bc7b67733bee136c1137515001ad1bc'
+cask 'principle' do
+  version '1.0.0'
+  sha256 '1ce7ad65a04e781d0727a280dbc7b4fd4becd4ea81ef745478a559e3f5f95eb4'
 
   # dropboxusercontent.com is the official download host per the vendor homepage
-  url "https://dl.dropboxusercontent.com/u/13897407/Principle_#{version.gsub('.','_')}.zip"
+  url "https://dl.dropboxusercontent.com/u/13897407/Principle_#{version.dots_to_underscores}.zip"
   appcast 'https://dl.dropboxusercontent.com/u/13897407/buildTrain-601A6666-57A4-4C19-BDD3-1387B3CB9719.xml',
-          :sha256 => '230fcd3610a9ccbe327ee4ebffb27b3fa2d88e915317404019b93070ae78de3d'
+          checkpoint: '0b715ad200cff614b6e6dd9462db682dfd116dad5001bef175509f0b8aba3a51'
   name 'Principle'
   homepage 'http://principleformac.com/'
   license :commercial

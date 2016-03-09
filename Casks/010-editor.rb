@@ -1,4 +1,4 @@
-cask :v1 => '010-editor' do
+cask '010-editor' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => '010-editor' do
 
   pkg '010 Editor.pkg'
 
-  uninstall :pkgutil => 'com.SweetScape.010Editor.pkg'
+  uninstall pkgutil: 'com.SweetScape.010Editor.pkg'
 end

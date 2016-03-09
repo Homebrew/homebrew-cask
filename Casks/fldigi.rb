@@ -1,6 +1,6 @@
-cask :v1 => 'fldigi' do
-  version '3.23.04'
-  sha256 '162bff2fa2abd62230286eedfa627e4e3199a4c8c68a26094dd6075925026e69'
+cask 'fldigi' do
+  version '3.23.06'
+  sha256 '559763738e6a57eb9d8665fe68a45abe612ee2264a89293c9ac8c84daa9dfeec'
 
   url "http://downloads.sourceforge.net/project/fldigi/fldigi/fldigi-#{version}_i386.dmg"
   name 'fldigi'

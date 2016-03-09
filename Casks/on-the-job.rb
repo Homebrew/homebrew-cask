@@ -1,12 +1,11 @@
-cask :v1 => 'on-the-job' do
-  version :latest
-  sha256 :no_check
+cask 'on-the-job' do
+  version '3.0.9'
+  sha256 '08ef2e932ec200f65376b401a9311f8cd5fc1548ef462ebb2963232ac8dceec4'
 
-  url 'http://stuntsoftware.com/downloads/OnTheJob.zip'
+  # amazonaws.com is the official download host per the vendor homepage
+  url "https://stunt.s3.amazonaws.com/onthejob_#{version}.zip"
   name 'On The Job'
-  appcast 'http://stuntsoftware.com/PHP/sparkle/onthejob.php',
-          :sha256 => 'dc68765c1d326ba50aeda9af4ed46c208c6c0b9a85379eb71be0ba3a92887bd0'
-  homepage 'http://stuntsoftware.com/onthejob/'
+  homepage 'https://stuntsoftware.com/onthejob/'
   license :commercial
 
   app 'On The Job.app'

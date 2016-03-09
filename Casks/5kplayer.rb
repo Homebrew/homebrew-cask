@@ -1,4 +1,4 @@
-cask :v1 => '5kplayer' do
+cask '5kplayer' do
   version :latest
   sha256 :no_check
 

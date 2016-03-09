@@ -1,4 +1,4 @@
-cask :v1 => 'librecad' do
+cask 'librecad' do
   version '2.0.8'
 
   if MacOS.release <= :mavericks

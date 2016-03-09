@@ -1,10 +1,10 @@
-cask :v1 => 'icecat' do
-  version '31.8.0'
-  sha256 'd5ec5308bba40f8498f89cd70c5bfb2ce51370543a326c0e9697cbeb5c41c0c9'
+cask 'icecat' do
+  version '38.6.0'
+  sha256 '13e9146814ca4ec728b9cb54496d58a5021221a7708d8e3da24e095b1f51bd5f'
 
-  url "https://ftp.gnu.org/gnu/gnuzilla/#{version}/icecat-#{version}.en-US.mac.dmg"
+  url "https://ftp.gnu.org/gnu/gnuzilla/#{version}/icecat-#{version}.en-US.mac64.dmg"
   name 'IceCat'
-  homepage 'http://www.gnu.org/software/gnuzilla/'
+  homepage 'https://www.gnu.org/software/gnuzilla/'
   license :gpl
 
   app 'IceCat.app'

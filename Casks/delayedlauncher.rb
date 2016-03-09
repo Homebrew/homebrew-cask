@@ -1,10 +1,10 @@
-cask :v1 => 'delayedlauncher' do
-  version :latest
-  sha256 :no_check
+cask 'delayedlauncher' do
+  version '2.2.1'
+  sha256 '959657ad408d3ffea0b4abd44e84dd6c0ed64b2d5b69e7a1d742af3602f56cbe'
 
-  url 'http://www.taoeffect.com/delayedlauncher/DelayedLauncher.zip'
+  url 'https://www.taoeffect.com/delayedlauncher/DelayedLauncher.zip'
   appcast 'https://www.taoeffect.com/delayedlauncher/appcast.xml',
-          :sha256 => '7890874b09454101e7af04a798fea7a6daea3c18f820b628ce51c12c9d4b2f00'
+          checkpoint: 'eac79b7a9a9a11236d6813c182f8468821349b6562d31bbdbd6003d4807e2a9d'
   name 'DelayedLauncher'
   homepage 'https://www.taoeffect.com/blog/2010/03/delayedlauncher-2-0/'
   license :bsd

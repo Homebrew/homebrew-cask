@@ -16,6 +16,7 @@ require 'hbc/cli/info'
 require 'hbc/cli/install'
 require 'hbc/cli/list'
 require 'hbc/cli/search'
+require 'hbc/cli/style'
 require 'hbc/cli/uninstall'
 require 'hbc/cli/update'
 require 'hbc/cli/zap'
@@ -72,13 +73,16 @@ class Hbc::CLI
     raise unless e.to_s.include? path
   end
 
+  def self.should_init?(command)
+    (command.is_a? Class) && (command < Hbc::CLI::Base) && command.needs_init?
+  end
+
   def self.run_command(command, *rest)
     if command.respond_to?(:run)
       # usual case: built-in command verb
       command.run(*rest)
     elsif require? Hbc::Utils.which("brewcask-#{command}.rb").to_s
       # external command as Ruby library on PATH, Homebrew-style
-      exit 0
     elsif command.to_s.include?('/') and require? command.to_s
       # external command as Ruby library with literal path, useful
       # for development and troubleshooting
@@ -93,7 +97,6 @@ class Hbc::CLI
         klass.run(*rest)
       else
         # other Ruby libraries must do everything via "require"
-        exit 0
       end
     elsif Hbc::Utils.which "brewcask-#{command}"
       # arbitrary external executable on PATH, Homebrew-style
@@ -113,17 +116,19 @@ class Hbc::CLI
   def self.process(arguments)
     command_string, *rest = *arguments
     rest = process_options(rest)
-    Hbc.init
-    command = lookup_command(command_string)
+    command = Hbc.help ? 'help' : lookup_command(command_string)
+    Hbc.init if should_init?(command)
     run_command(command, *rest)
   rescue Hbc::CaskError, Hbc::CaskSha256MismatchError => e
-    onoe e
-    $stderr.puts e.backtrace if Hbc.debug
+    msg = e.message
+    msg << e.backtrace.join("\n") if Hbc.debug
+    onoe msg
     exit 1
   rescue StandardError, ScriptError, NoMemoryError => e
-    onoe e
-    puts Hbc::Utils.error_message_with_suggestions
-    puts e.backtrace
+    msg = e.message
+    msg << Hbc::Utils.error_message_with_suggestions
+    msg << e.backtrace.join("\n")
+    onoe msg
     exit 1
   end
 
@@ -179,6 +184,12 @@ class Hbc::CLI
       opts.on("--internet_plugindir=MANDATORY") do |v|
         Hbc.internet_plugindir = Pathname(v).expand_path
       end
+      opts.on("--audio_unit_plugindir=MANDATORY") do |v|
+        Hbc.audio_unit_plugindir = Pathname(v).expand_path
+      end
+      opts.on("--vst_plugindir=MANDATORY") do |v|
+        Hbc.vst_plugindir = Pathname(v).expand_path
+      end
       opts.on("--screen_saverdir=MANDATORY") do |v|
        Hbc.screen_saverdir = Pathname(v).expand_path
       end
@@ -194,6 +205,12 @@ class Hbc::CLI
       end
       opts.on("--outdated") do |v|
         Hbc.cleanup_outdated = true
+      end
+      opts.on("--help") do |v|
+        Hbc.help = true
+      end
+      opts.on("--version") do |v|
+        raise OptionParser::InvalidOption # override default handling of --version
       end
     end
   end
@@ -229,15 +246,13 @@ class Hbc::CLI
 
     def run(*args)
       if args.include?('--version') or @attempted_verb == '--version'
-        puts HBC_VERSION
+        puts Hbc.full_version
       else
         purpose
-        if @attempted_verb and @attempted_verb != "help"
-          puts "!! "
-          puts "!! no command verb: #{@attempted_verb}"
-          puts "!! \n\n"
-        end
         usage
+        unless @attempted_verb.to_s.strip.empty? || @attempted_verb == "help"
+          raise Hbc::CaskError.new("Unknown command: #{@attempted_verb}")
+        end
       end
     end
 

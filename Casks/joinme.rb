@@ -1,4 +1,4 @@
-cask :v1 => 'joinme' do
+cask 'joinme' do
   version :latest
   sha256 :no_check
 

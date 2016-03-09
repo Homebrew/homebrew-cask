@@ -1,11 +1,12 @@
-cask :v1 => 'cheatsheet' do
-  version '1.2.2'
-  sha256 '41cfec767f761e2400d5ad700c936339c8c2e80a9dfbaf44b66375e63192763c'
+cask 'cheatsheet' do
+  version '1.2.3'
+  sha256 'cd89c3e247c93bc4574d5527a55464a8bac15af7f0be466c756684601ab5a2f9'
 
-  url "http://mediaatelier.com/CheatSheet/CheatSheet_#{version}.zip"
-  appcast 'http://mediaatelier.com/CheatSheet/feed.php'
+  url "https://mediaatelier.com/CheatSheet/CheatSheet_#{version}.zip"
+  appcast 'https://mediaatelier.com/CheatSheet/feed.php',
+          checkpoint: '18270e7f33e3c4d49637eae97a805ebb1beabe28b027bd83a3731b687b2acf80'
   name 'CheatSheet'
-  homepage 'http://www.cheatsheetapp.com/CheatSheet/'
+  homepage 'https://www.cheatsheetapp.com/CheatSheet/'
   license :gratis
 
   app 'CheatSheet.app'

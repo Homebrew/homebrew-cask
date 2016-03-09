@@ -1,4 +1,4 @@
-cask :v1 => 'sslmate' do
+cask 'sslmate' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'sslmate' do
 
   pkg 'SSLMate-latest.pkg'
 
-  uninstall :pkgutil => 'com.sslmate.client'
+  uninstall pkgutil: 'com.sslmate.client'
 end

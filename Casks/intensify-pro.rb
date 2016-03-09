@@ -1,13 +1,14 @@
-cask :v1 => 'intensify-pro' do
-  version '1.0.5_708'
-  sha256 'b7133a5e5bab8cfd4f8d576686be17528aef5a84b18256b9ba6654d67eff0c55'
+cask 'intensify-pro' do
+  version '1.2.2_867'
+  sha256 '6f259029ea928f92efdafe98706d341bd6418d8195374183758ab4cbc6a665c5'
 
-  url "http://cdn.macphun.com/updates/IntensifyPro/IntensifyPro_Distribution_v#{version.gsub('.','_')}.zip"
-  name 'Intensify Pro'
+  # amazonaws.com/IntensifyCK was verified as official when first introduced to the cask
+  url "https://creativekit.s3.amazonaws.com/IntensifyCK/IntensifyCK_Distribution_v#{version.dots_to_underscores}.zip"
   appcast 'http://cdn.macphun.com/updates/IntensifyPro/appcast.xml',
-          :sha256 => '1478fc12d15d86c890f76810c70d58ce7b1f2086c6ddf8f302a06e97404f133d'
-  homepage 'http://macphun.com/intensify'
+          checkpoint: 'a617011d8dbc7e3223a1cefafbe1ab1a83ec9f7adea37827da2f8115519ec1f8'
+  name 'Intensify Pro'
+  homepage 'https://macphun.com/intensify'
   license :commercial
 
-  app 'Intensify Pro.app'
+  app 'Intensify CK.app'
 end

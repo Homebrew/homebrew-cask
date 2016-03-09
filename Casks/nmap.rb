@@ -1,6 +1,6 @@
-cask :v1 => 'nmap' do
-  version '6.47'
-  sha256 'eb277f24d4d77d323400c23c5e0b4296143524dc2e4ddbe844cc3c4c7fc878d2'
+cask 'nmap' do
+  version '7.01'
+  sha256 'c121b30d0bb3296d3c89ba9df7c89c7624f2b112e4092130da30a87ede2f7243'
 
   url "https://nmap.org/dist/nmap-#{version}.dmg"
   name 'Nmap'
@@ -9,5 +9,5 @@ cask :v1 => 'nmap' do
 
   pkg "nmap-#{version}.mpkg"
 
-  uninstall :pkgutil => 'org.insecure.nmap*.pkg'
+  uninstall pkgutil: 'org.insecure.nmap*.pkg'
 end

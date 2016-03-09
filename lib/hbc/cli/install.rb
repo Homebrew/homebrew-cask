@@ -22,6 +22,9 @@ class Hbc::CLI::Install < Hbc::CLI::Base
        rescue Hbc::CaskAlreadyInstalledError => e
          opoo e.message
          count += 1
+       rescue Hbc::CaskAutoUpdatesError => e
+         opoo e.message
+         count += 1
       rescue Hbc::CaskUnavailableError => e
         warn_unavailable_with_suggestion cask_token, e
       end
@@ -42,5 +45,9 @@ class Hbc::CLI::Install < Hbc::CLI::Base
 
   def self.help
     "installs the given Cask"
+  end
+
+  def self.needs_init?
+    true
   end
 end

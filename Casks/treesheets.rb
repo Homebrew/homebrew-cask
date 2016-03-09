@@ -1,4 +1,4 @@
-cask :v1 => 'treesheets' do
+cask 'treesheets' do
   version :latest
   sha256 :no_check
 

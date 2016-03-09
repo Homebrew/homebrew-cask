@@ -1,4 +1,4 @@
-cask :v1 => 'shellhere' do
+cask 'shellhere' do
   version :latest
   sha256 :no_check
 

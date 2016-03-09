@@ -1,4 +1,4 @@
-cask :v1 => 'phototrans' do
+cask 'phototrans' do
   version :latest
   sha256 :no_check
 

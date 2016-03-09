@@ -1,4 +1,4 @@
-cask :v1 => 'speeds-at-ver' do
+cask 'speeds-at-ver' do
   version :latest
   sha256 :no_check
 

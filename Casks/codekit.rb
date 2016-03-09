@@ -1,13 +1,15 @@
-cask :v1 => 'codekit' do
-  version '2.5.1-19076'
-  sha256 '7e41f7a0e3b36607fb33a758d21f1f51ea3902888448facd26ddf009b4c79f70'
+cask 'codekit' do
+  version '2.7.1-19115'
+  sha256 '67dcf28c247311710eef252f8c2a035fbaa3e964046bd6756d4d89ec7654f182'
 
-  url "https://incident57.com/codekit/files/codekit-#{version.sub(%r{.*-},'')}.zip"
+  url "https://incident57.com/codekit/files/codekit-#{version.sub(%r{.*-}, '')}.zip"
   appcast 'https://incident57.com/codekit/appcast/ck2appcast.xml',
-          :sha256 => '72fc08fe815cb3faf6a6fb19dfcb4f0c4f0494bbdb7b1e8da8b87772db5dd88c'
+          checkpoint: '5169ca1e43e720ea9da655f7c2027a6a3ab5ad7978ae8d2e7c16aed12030d874'
   name 'CodeKit'
   homepage 'https://incident57.com/codekit/'
   license :commercial
+
+  auto_updates true
 
   app 'CodeKit.app'
 end

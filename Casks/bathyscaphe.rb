@@ -1,6 +1,6 @@
-cask :v1 => 'bathyscaphe' do
-  version '253-v826'
-  sha256 '63d2327293362ba707cd963668cb3225ab8a51bb361ad2a6e2a5f298feea9892'
+cask 'bathyscaphe' do
+  version '270-v900'
+  sha256 'ca65c250dad51d54ab8dc45c13a8dce74f50b0bc84b0d2dba50596e6cd7d5cf2'
 
   url "https://bitbucket.org/bathyscaphe/public/downloads/BathyScaphe-#{version}.dmg"
   name 'BathyScaphe'

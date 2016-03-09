@@ -1,15 +1,16 @@
-cask :v1 => 'resolutionator' do
-  version :latest
-  sha256 :no_check
+cask 'resolutionator' do
+  version '1.0.3'
+  sha256 'fd94d101e41c135be4563d7500ba851e79deed5f288f2e8659876ac5d6afbd5c'
 
-  url 'http://manytricks.com/download/resolutionator'
+  url 'https://manytricks.com/download/resolutionator'
+  appcast 'https://manytricks.com/resolutionator/appcast.xml',
+          checkpoint: 'bac0c680fdbe621215de014bfe7533d9bb87a8550743e2a9a75a004cf6ea362d'
   name 'Resolutionator'
-  appcast 'http://manytricks.com/resolutionator/appcast.xml',
-          :sha256 => 'daf1d476cf2235d77b3f0303b5f2672cafff7b713914a50a28d68c6747fece2f'
-  homepage 'http://manytricks.com/resolutionator/'
+  homepage 'https://manytricks.com/resolutionator/'
   license :gratis
 
-  depends_on :macos => '>= :mountain_lion'
+  auto_updates true
+  depends_on macos: '>= :mountain_lion'
 
   app 'Resolutionator.app'
 end

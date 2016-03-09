@@ -1,4 +1,4 @@
-cask :v1 => 'cutesdr' do
+cask 'cutesdr' do
   version '1.19'
   sha256 '41bd2ee10bc9dad3da8d3d541452f594b928823946d7a4c52f03164b9af84341'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'vyprvpn' do
+cask 'vyprvpn' do
   version '2.7.5.3042'
   sha256 '7a5caf62bad58ed52715de9e9a4f69a901ee70ae98bbc7432fc2ae4e34cc70d4'
 

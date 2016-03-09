@@ -1,4 +1,4 @@
-cask :v1 => 'onyx' do
+cask 'onyx' do
   version :latest
   sha256 :no_check
 
@@ -26,18 +26,18 @@ cask :v1 => 'onyx' do
   homepage 'http://www.titanium.free.fr/onyx.html'
   license :gratis
 
-  app 'OnyX.app'
+  depends_on macos: %w[
+                      :tiger
+                      :leopard
+                      :snow_leopard
+                      :lion
+                      :mountain_lion
+                      :mavericks
+                      :yosemite
+                      :el_capitan
+                    ]
 
-  depends_on :macos => %w{
-                          :tiger
-                          :leopard
-                          :snow_leopard
-                          :lion
-                          :mountain_lion
-                          :mavericks
-                          :yosemite
-                          :el_capitan
-                         }
+  app 'OnyX.app'
 
   caveats do
     if [:leopard, :tiger].include?(MacOS.release.to_sym)

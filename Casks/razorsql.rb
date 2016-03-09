@@ -1,4 +1,4 @@
-cask :v1 => 'razorsql' do
+cask 'razorsql' do
   version '6.3.26'
 
   if Hardware::CPU.is_32_bit? || MacOS.release <= :snow_leopard
@@ -10,10 +10,10 @@ cask :v1 => 'razorsql' do
   end
 
   name 'RazorSQL'
-  homepage 'http://razorsql.com/download_mac.html'
+  homepage 'https://razorsql.com/download_mac.html'
   license :commercial
 
   app 'RazorSQL.app'
 
-  zap :delete => '~/.razorsql'
+  zap delete: '~/.razorsql'
 end

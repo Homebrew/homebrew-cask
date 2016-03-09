@@ -1,4 +1,4 @@
-cask :v1 => 'bookends' do
+cask 'bookends' do
   version :latest
   sha256 :no_check
 

@@ -1,4 +1,4 @@
-cask :v1 => 'nodeclipse' do
+cask 'nodeclipse' do
   version '0.17'
   sha256 '674991d7c22ea05975a76800e6e9fe9231064a09a2a2412e6ec0448676bfa2e8'
 
@@ -11,5 +11,5 @@ cask :v1 => 'nodeclipse' do
   # Renamed for clarity: app name is inconsistent with its branding.
   # Also renamed to avoid conflict with other eclipse Casks.
   # Original discussion: https://github.com/caskroom/homebrew-cask/pull/8183
-  app 'Eclipse.app', :target => 'Nodeclipse.app'
+  app 'Eclipse.app', target: 'Nodeclipse.app'
 end

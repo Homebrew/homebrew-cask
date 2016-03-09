@@ -1,4 +1,4 @@
-cask :v1 => 'xecureweb-unified' do
+cask 'xecureweb-unified' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'xecureweb-unified' do
 
   pkg 'xw_unified_install_mac_universal.pkg'
 
-  uninstall :pkgutil => 'com.softforum.xecurewebunifiedclient'
+  uninstall pkgutil: 'com.softforum.xecurewebunifiedclient'
 end

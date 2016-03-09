@@ -1,4 +1,4 @@
-cask :v1 => 'lantern' do
+cask 'lantern' do
   version :latest
   sha256 :no_check
 
@@ -9,10 +9,10 @@ cask :v1 => 'lantern' do
 
   app 'Lantern.app'
 
-  uninstall :quit => 'com.getlantern.lantern'
+  uninstall quit: 'com.getlantern.lantern'
 
-  zap :delete => [
-                  '~/Library/Application Support/Lantern',
-                  '~/Library/Logs/Lantern'
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Lantern',
+                '~/Library/Logs/Lantern',
+              ]
 end

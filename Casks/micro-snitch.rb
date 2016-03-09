@@ -1,4 +1,4 @@
-cask :v1 => 'micro-snitch' do
+cask 'micro-snitch' do
   version '1.2'
   sha256 '7749a1bbc88a7a4bcb246d9f6d8b4d46b4faabfb95f7a8706be28570dcc09115'
 

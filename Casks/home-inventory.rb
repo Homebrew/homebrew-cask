@@ -1,4 +1,4 @@
-cask :v1 => 'home-inventory' do
+cask 'home-inventory' do
   version :latest
   sha256 :no_check
 
@@ -7,7 +7,7 @@ cask :v1 => 'home-inventory' do
   homepage 'http://binaryformations.com/products/home-inventory/'
   license :commercial
 
-  depends_on :macos => '>= 10.7'
+  depends_on macos: '>= 10.7'
 
   app 'Home Inventory.app'
 

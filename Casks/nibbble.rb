@@ -1,4 +1,4 @@
-cask :v1 => 'nibbble' do
+cask 'nibbble' do
   if MacOS.release <= :lion
     version :latest
     sha256 :no_check

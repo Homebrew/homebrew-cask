@@ -1,4 +1,4 @@
-cask :v1 => 'hue-topia' do
+cask 'hue-topia' do
   version :latest
   sha256 :no_check
 

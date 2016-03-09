@@ -1,19 +1,20 @@
-cask :v1 => 'docker' do
-  version '1.9.0'
-  sha256 '91a8701e41a479def5371a333657c58c36478602e1f5eb1835457a3880232a2e'
+cask 'docker' do
+  version '1.10.2'
+  sha256 '29249598587ad8f8597235bbeb11a11888fffb977b8089ea80b5ac5267ba9f2e'
 
   url "https://get.docker.com/builds/Darwin/x86_64/docker-#{version}"
-  appcast 'https://github.com/docker/machine/releases.atom'
+  appcast 'https://github.com/docker/docker/releases.atom',
+          checkpoint: '381d14023e84bd8f0212bc6fca04776a865c74b61e7e49e43ed8e38acfa78337'
   name 'Docker Engine Client'
-  homepage 'http://docs.docker.com/engine/userguide/'
+  homepage 'https://docs.docker.com/engine/userguide/'
   license :apache
 
-  container :type => :naked
-  binary "docker-#{version}", :target => 'docker'
+  depends_on arch: :x86_64
+  container type: :naked
+
+  binary "docker-#{version}", target: 'docker'
 
   postflight do
     set_permissions "#{staged_path}/docker-#{version}", '0755'
   end
-
-  depends_on :arch => :x86_64
 end

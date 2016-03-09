@@ -1,10 +1,10 @@
-cask :v1 => 'skim' do
-  version '1.4.15'
-  sha256 '049b44000a0636aaadf0cf61f9db08ef7d0c7f99a97d60d8ef2f410347f7c0b0'
+cask 'skim' do
+  version '1.4.18'
+  sha256 'be371b4d4cc6c94818a5396883d5d9f9fe5fde32f61734b70c454009cf85590e'
 
   url "http://downloads.sourceforge.net/project/skim-app/Skim/Skim-#{version}/Skim-#{version}.dmg"
   appcast 'http://skim-app.sourceforge.net/skim.xml',
-          :sha256 => '9cc2f44deaa4cbdc53665595a059de90428b3f558e91c5cc599d06e577af047c'
+          checkpoint: '4e90b49f9dd366419174763d95bc55d5f5236bd29662c9c5fd23c6dc9aa0d019'
   name 'Skim'
   homepage 'http://skim-app.sourceforge.net/'
   license :bsd
@@ -14,5 +14,5 @@ cask :v1 => 'skim' do
   binary 'Skim.app/Contents/SharedSupport/skimnotes'
   binary 'Skim.app/Contents/SharedSupport/skimpdf'
 
-  zap :delete => '~/Library/Preferences/net.sourceforge.skim-app.skim.plist'
+  zap delete: '~/Library/Preferences/net.sourceforge.skim-app.skim.plist'
 end

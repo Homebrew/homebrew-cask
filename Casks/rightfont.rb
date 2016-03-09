@@ -1,15 +1,15 @@
-cask :v1 => 'rightfont' do
-  version '2.2.3'
-  sha256 '9c2bc13f0975e83259c60bd3f6818d3a4cf74fa80d4e9c5a99f347ea6d2426da'
+cask 'rightfont' do
+  version '3.2.0'
+  sha256 '21e4d9b203a49fbafa09cf04218b72a9511c3713604f3783f660bbf724a1b9bf'
 
   url "http://rightfontapp.com/downloads/#{version}/rightfont.zip"
   appcast 'http://rightfontapp.com/update/appcast.xml',
-          :sha256 => 'f6af8fbf31481112c7382f2917c30a1481c39f94caf8f10f06df8e5ac8517cb6'
+          checkpoint: 'ee63bef61fdff2f19b7802547db2eb5e594d12e3e045eb548e18cc89b7d8bccc'
   name 'RightFont'
   homepage 'http://rightfontapp.com/'
   license :commercial
 
-  depends_on :macos => '>= :yosemite'
+  depends_on macos: '>= :yosemite'
 
   app 'RightFont.app'
 end

@@ -1,13 +1,12 @@
-cask :v1 => 'glyphs' do
-  version '2.2.2-822'
-  sha256 '13e71a8edae377cdb5a8773829cc17e599114ab9e8c3502a305cc1d9ea6c02db'
+cask 'glyphs' do
+  version '2.2.2-827'
+  sha256 'd568094e9061c76cc84a11f271f33abf0e3b4d135e57a4430ac972f996722732'
 
   url "https://updates.glyphsapp.com/Glyphs#{version}.zip"
+  appcast "https://updates.glyphsapp.com/appcast#{version.major}.xml",
+          checkpoint: 'b10745997b8d99117a86978cac37c88e487665b034df6835aac106679a22750a'
   name 'Glyphs'
   homepage 'https://www.glyphsapp.com'
-  appcast "http://updates.glyphsapp.com/appcast#{version.to_i}.xml",
-          :sha256 => '0a9a4017b75917044ab9b33428ee6b6b9123cab29ab9c8229eeecc005e9c75e1',
-          :format => :sparkle
   license :commercial
 
   app 'Glyphs.app'

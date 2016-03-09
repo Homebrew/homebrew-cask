@@ -1,6 +1,6 @@
-cask :v1_1 => 'unifi-controller' do
-  version '4.7.6'
-  sha256 'e8aa26d00e93e653146f706b7ce25fc18eff532e99f123025109fddaf043e81e'
+cask 'unifi-controller' do
+  version '4.8.12'
+  sha256 '88b596331761ac373a3bdb7a3442e8c665dfa3f2748e80f0bcd89c4bfa8fd88d'
 
   url "https://dl.ubnt.com/unifi/#{version}/UniFi.pkg"
   name 'UniFi Controller'
@@ -13,5 +13,5 @@ cask :v1_1 => 'unifi-controller' do
     set_ownership '~/Library/Application Support/UniFi'
   end
 
-  uninstall :pkgutil => 'com.ubnt.UniFi'
+  uninstall pkgutil: 'com.ubnt.UniFi'
 end

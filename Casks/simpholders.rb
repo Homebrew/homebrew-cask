@@ -1,12 +1,12 @@
-cask :v1 => 'simpholders' do
-  version '2.0'
-  sha256 'f98517e2dc3eee2a564409d1bb0e59239a4221048102b67477c3f754436596bb'
+cask 'simpholders' do
+  version '2.1'
+  sha256 '68472926b108bc46b84fd2b6c1083b9fd1810f5fb70fc0924818d60f5bb8e668'
 
-  url "http://simpholders.com/site/assets/files/1115/simpholders_#{version.gsub('.','_')}.dmg"
+  url "https://simpholders.com/site/assets/files/1115/simpholders_#{version.gsub('.', '_')}.dmg"
   appcast 'http://kfi-apps.com/appcasts/simpholders/',
-          :sha256 => 'baa9148ebfb168d1c86480da0863b89a9eeb7b70e8d8e1e5806c7f7e1a0fdec2'
+          checkpoint: '07be0732567d5bc05c651e17af1276e2b29ab16f29b61dce3be4ee606833da92'
   name 'SimPholders'
-  homepage 'http://simpholders.com/'
+  homepage 'https://simpholders.com/'
   license :commercial
 
   app 'SimPholders.app'

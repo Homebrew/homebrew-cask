@@ -5,16 +5,15 @@ describe Hbc::DSL do
     test_cask = Hbc.load('basic-cask')
     test_cask.url.to_s.must_equal 'http://example.com/TestCask.dmg'
     test_cask.homepage.must_equal 'http://example.com/'
-    test_cask.version.must_equal '1.2.3'
+    test_cask.version.to_s.must_equal '1.2.3'
   end
 
   describe "when a Cask includes an unknown method" do
-    UnexpectedMethodCask = Class.new(Hbc::Cask)
     attempt_unknown_method = nil
 
     before do
       attempt_unknown_method = lambda {
-        UnexpectedMethodCask.class_eval do
+        Hbc::Cask.new('unexpected-method-cask') do
           future_feature :not_yet_on_your_machine
         end
       }
@@ -27,9 +26,9 @@ describe Hbc::DSL do
         .*
         Unexpected method 'future_feature' called on Cask unexpected-method-cask\\.
         .*
-        brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
+        brew update; brew cleanup; brew cask cleanup
         .*
-        https://github.com/caskroom/homebrew-cask/issues
+        https://github.com/caskroom/homebrew-cask#reporting-bugs
       EOREGEX
 
       TestHelper.must_output(self, attempt_unknown_method, expected)
@@ -48,128 +47,112 @@ describe Hbc::DSL do
     it "requires a valid header format" do
       err = lambda {
         invalid_cask = Hbc.load('invalid/invalid-header-format')
-      }.must_raise(Hbc::CaskInvalidError)
-      err.message.must_include 'Bad header line: parse failed'
+      }.must_raise(SyntaxError)
     end
 
     it "requires the header token to match the file name" do
       err = lambda {
         invalid_cask = Hbc.load('invalid/invalid-header-token-mismatch')
-      }.must_raise(Hbc::CaskInvalidError)
+      }.must_raise(Hbc::CaskTokenDoesNotMatchError)
       err.message.must_include 'Bad header line:'
       err.message.must_include 'does not match file name'
     end
 
-    it "requires a valid minimum DSL version in the header" do
-      err = lambda {
-        invalid_cask = Hbc.load('invalid/invalid-header-version')
-      }.must_raise(Hbc::CaskInvalidError)
-      err.message.must_include 'Bad header line:'
-      err.message.must_include 'is less than required minimum version'
+    it "does not require a DSL version in the header" do
+      test_cask = Hbc.load('no-dsl-version')
+      test_cask.url.to_s.must_equal 'http://example.com/TestCask.dmg'
+      test_cask.homepage.must_equal 'http://example.com/'
+      test_cask.version.to_s.must_equal '1.2.3'
     end
   end
 
   describe "name stanza" do
     it "lets you set the full name via a name stanza" do
-      NameCask = Class.new(Hbc::Cask)
-      NameCask.class_eval do
+      cask = Hbc::Cask.new('name-cask') do
         name 'Proper Name'
       end
-      instance = NameCask.new
-      instance.full_name.must_equal [
-                                     'Proper Name',
-                                    ]
+
+      cask.name.must_equal [
+                             'Proper Name',
+                           ]
     end
 
     it "Accepts an array value to the name stanza" do
-      ArrayNameCask = Class.new(Hbc::Cask)
-      ArrayNameCask.class_eval do
+      cask = Hbc::Cask.new('array-name-cask') do
         name ['Proper Name', 'Alternate Name']
       end
-      instance = ArrayNameCask.new
-      instance.full_name.must_equal [
-                                     'Proper Name',
-                                     'Alternate Name',
-                                    ]
+
+      cask.name.must_equal [
+                             'Proper Name',
+                             'Alternate Name',
+                           ]
     end
 
     it "Accepts multiple name stanzas" do
-      MultiNameCask = Class.new(Hbc::Cask)
-      MultiNameCask.class_eval do
+      cask = Hbc::Cask.new('multi-name-cask') do
         name 'Proper Name'
         name 'Alternate Name'
       end
-      instance = MultiNameCask.new
-      instance.full_name.must_equal [
-                                     'Proper Name',
-                                     'Alternate Name',
-                                    ]
+
+      cask.name.must_equal [
+                             'Proper Name',
+                             'Alternate Name',
+                           ]
     end
   end
 
   describe "sha256 stanza" do
     it "lets you set checksum via sha256" do
-      ChecksumCask = Class.new(Hbc::Cask)
-      ChecksumCask.class_eval do
+      cask = Hbc::Cask.new('checksum-cask') do
         sha256 'imasha2'
       end
-      instance = ChecksumCask.new
-      instance.sha256.must_equal 'imasha2'
+
+      cask.sha256.must_equal 'imasha2'
     end
   end
 
   describe "app stanza" do
     it "allows you to specify app stanzas" do
-      CaskWithApps = Class.new(Hbc::Cask)
-      CaskWithApps.class_eval do
+      cask = Hbc::Cask.new('cask-with-apps') do
         app 'Foo.app'
         app 'Bar.app'
       end
 
-      instance = CaskWithApps.new
-      Array(instance.artifacts[:app]).must_equal [['Foo.app'], ['Bar.app']]
+      Array(cask.artifacts[:app]).must_equal [['Foo.app'], ['Bar.app']]
     end
 
     it "allow app stanzas to be empty" do
-      CaskWithNoApps = Class.new(Hbc::Cask)
-
-      instance = CaskWithNoApps.new
-      Array(instance.artifacts[:app]).must_equal %w[]
+      cask = Hbc::Cask.new('cask-with-no-apps')
+      Array(cask.artifacts[:app]).must_equal %w[]
     end
   end
 
   describe "caveats stanza" do
     it "allows caveats to be specified via a method define" do
-      PlainCask = Class.new(Hbc::Cask)
+      cask = Hbc::Cask.new('plain-cask')
 
-      instance = PlainCask.new
+      cask.caveats.must_be :empty?
 
-      instance.caveats.must_be :empty?
-
-      CaskWithCaveats = Class.new(Hbc::Cask)
-      CaskWithCaveats.class_eval do
+      cask = Hbc::Cask.new('cask-with-caveats') do
         def caveats; <<-EOS.undent
           When you install this Cask, you probably want to know this.
           EOS
         end
       end
 
-      instance = CaskWithCaveats.new
 
-      instance.caveats.must_equal "When you install this Cask, you probably want to know this.\n"
+      cask.caveats.must_equal "When you install this Cask, you probably want to know this.\n"
     end
   end
 
   describe "pkg stanza" do
     it "allows installable pkgs to be specified" do
-      CaskWithPkgs = Class.new(Hbc::Cask)
-      CaskWithPkgs.class_eval do
+      cask = Hbc::Cask.new('cask-with-pkgs') do
         pkg 'Foo.pkg'
         pkg 'Bar.pkg'
       end
 
-      instance = CaskWithPkgs.new
-      Array(instance.artifacts[:pkg]).must_equal [['Foo.pkg'], ['Bar.pkg']]
+      Array(cask.artifacts[:pkg]).must_equal [['Foo.pkg'], ['Bar.pkg']]
     end
   end
 
@@ -216,12 +199,6 @@ describe Hbc::DSL do
     it "refuses to load invalid appcast URLs" do
       err = lambda {
         invalid_cask = Hbc.load('invalid/invalid-appcast-url')
-      }.must_raise(Hbc::CaskInvalidError)
-    end
-
-    it "refuses to load if appcast :format is invalid" do
-      err = lambda {
-        invalid_cask = Hbc.load('invalid/invalid-appcast-format')
       }.must_raise(Hbc::CaskInvalidError)
     end
   end
@@ -408,26 +385,6 @@ describe Hbc::DSL do
     end
   end
 
-  describe "tags stanza" do
-    it "allows tags stanza to be specified" do
-      cask = Hbc.load('with-tags')
-      cask.tags.to_s.must_match %r{\S}
-    end
-
-    it "prevents specifying tags multiple times" do
-      err = lambda {
-        invalid_cask = Hbc.load('invalid/invalid-tags-multiple')
-      }.must_raise(Hbc::CaskInvalidError)
-      err.message.must_include "'tags' stanza may only appear once"
-    end
-
-    it "refuses to load if tags key is invalid" do
-      err = lambda {
-        invalid_cask = Hbc.load('invalid/invalid-tags-key')
-      }.must_raise(Hbc::CaskInvalidError)
-    end
-  end
-
   describe "stage_only stanza" do
     it "allows stage_only stanza to be specified" do
       cask = Hbc.load('stage-only')
@@ -439,6 +396,13 @@ describe Hbc::DSL do
         invalid_cask = Hbc.load('invalid/invalid-stage-only-conflict')
       }.must_raise(Hbc::CaskInvalidError)
       err.message.must_include "'stage_only' must be the only activatable artifact"
+    end
+  end
+
+  describe "auto_updates stanza" do
+    it "allows auto_updates stanza to be specified" do
+      cask = Hbc.load('auto-updates')
+      cask.auto_updates.must_equal true
     end
   end
 end

@@ -1,14 +1,14 @@
-cask :v1 => 'amazon-workspaces' do
+cask 'amazon-workspaces' do
   version :latest
   sha256 :no_check
 
-  # cloudfront.net is the official download host per the vendor homepage
+  # d2td7dqidlhjx7.cloudfront.net was verified as official when first introduced to the cask
   url 'https://d2td7dqidlhjx7.cloudfront.net/prod/global/osx/WorkSpaces.pkg'
   name 'Amazon Workspaces'
-  homepage 'https://aws.amazon.com/workspaces/'
+  homepage 'https://clients.amazonworkspaces.com/'
   license :gratis
 
   pkg 'WorkSpaces.pkg'
 
-  uninstall :pkgutil => 'com.amazon.workspaces'
+  uninstall pkgutil: 'com.amazon.workspaces'
 end

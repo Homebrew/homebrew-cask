@@ -1,4 +1,4 @@
-cask :v1 => 'tap-bpm' do
+cask 'tap-bpm' do
   version :latest
   sha256 :no_check
 

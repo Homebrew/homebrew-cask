@@ -1,4 +1,4 @@
-cask :v1 => 'twindocs' do
+cask 'twindocs' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'twindocs' do
 
   pkg 'Twindocs tools.pkg'
 
-  uninstall :pkgutil => 'com.twindocs.ambassador'
+  uninstall pkgutil: 'com.twindocs.ambassador'
 end

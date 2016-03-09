@@ -1,4 +1,4 @@
-cask :v1 => 'hts-inet' do
+cask 'hts-inet' do
   version :latest
   sha256 :no_check
 

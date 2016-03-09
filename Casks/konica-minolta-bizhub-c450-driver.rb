@@ -1,4 +1,4 @@
-cask :v1 => 'konica-minolta-bizhub-c450-driver' do
+cask 'konica-minolta-bizhub-c450-driver' do
   version '2.9.0'
   sha256 '3d970bba6e838cb1c88058c1eb653a00987f4a3a10689d250819f7a691820138'
 
@@ -6,9 +6,8 @@ cask :v1 => 'konica-minolta-bizhub-c450-driver' do
   name 'Konica Minolta Bizhub C450 Driver'
   homepage 'http://www.biz.konicaminolta.com/download/'
   license :gratis
-  tags :vendor => 'Konica Minolta'
 
   pkg 'KONICAMINOLTA_C450_109.pkg'
 
-  uninstall :pkgutil => 'jp.konicaminolta.print.package.C450'
+  uninstall pkgutil: 'jp.konicaminolta.print.package.C450'
 end

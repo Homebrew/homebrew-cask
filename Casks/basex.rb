@@ -1,4 +1,4 @@
-cask :v1 => 'basex' do
+cask 'basex' do
   version '8.1.1'
   sha256 '89e02ebbbb9df544157dd6d896d6c65de47731b45ca67a490e269499614def15'
 
