@@ -5,7 +5,7 @@ cask 'goldencheetah' do
   # github.com/GoldenCheetah/GoldenCheetah was verified as official when first introduced to the cask
   url "https://github.com/GoldenCheetah/GoldenCheetah/releases/download/V#{version.to_f}/GoldenCheetah_#{version}_QT5_64bit.dmg"
   appcast 'https://github.com/GoldenCheetah/GoldenCheetah/releases.atom',
-          checkpoint: '5207cf9305b817784235c4b12a81a77d6e22a23d096cb878fc409771b259339a'
+          checkpoint: 'a4226cfbc097a916290ed1e22f1a8a2c5e03afe7e6ba59f850e0b83620684c89'
   name 'GoldenCheetah'
   homepage 'http://www.goldencheetah.org/'
   license :gpl
