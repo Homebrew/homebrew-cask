@@ -17,7 +17,7 @@ cask 'totalspaces' do
 
     url "http://downloads.binaryage.com/TotalSpaces2-#{version}.dmg"
     appcast 'http://updates-s3.binaryage.com/totalspaces2.xml',
-            checkpoint: 'f52e1870289fb95d89b1cab7c42da7c824cbc582b0ea46d8bd3e9c47be81a69a'
+            checkpoint: '82186203303e73e7ba337d007f3e75babbfe94b7ac204f68979072e59ce26131'
 
     installer manual: 'TotalSpaces2.app'
 
