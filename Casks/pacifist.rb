@@ -12,7 +12,7 @@ cask 'pacifist' do
 
   url "https://www.charlessoft.com/pacifist_download/Pacifist_#{version}.dmg"
   appcast 'https://www.charlessoft.com/cgi-bin/pacifist_sparkle.cgi',
-          checkpoint: '3e805dad238bf54e22be12f150f77c1c4629bb5b610fdc18e1c38d29340752d8'
+          checkpoint: '10a07c4a5369252470ab87e571d98d69352bf7e0826eae63c5fd4cc8349d2e08'
   name 'Pacifist'
   homepage 'https://www.charlessoft.com/'
   license :commercial
