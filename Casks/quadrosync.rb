@@ -2,7 +2,7 @@ cask 'quadrosync' do
   version :latest
   sha256 :no_check
 
-  # amazonaws.com is the official download host per the vendor homepage.
+  # amazonaws.com/quadro-downloads was verified as official when first introduced to the cask
   url 'https://s3-eu-west-1.amazonaws.com/quadro-downloads/daemon/mac/QuadroSync_mac.dmg'
   name 'QuadroSync'
   homepage 'http://quadro.me/sync'
