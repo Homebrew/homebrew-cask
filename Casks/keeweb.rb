@@ -5,7 +5,7 @@ cask 'keeweb' do
   # github.com/antelle/keeweb was verified as official when first introduced to the cask
   url "https://github.com/antelle/keeweb/releases/download/v#{version}/KeeWeb.mac.dmg"
   appcast 'https://github.com/antelle/keeweb/releases.atom',
-          checkpoint: '0965ecdd66940028eb050c2611afebcfffe597e7be516b8871d4d26830a17be7'
+          checkpoint: '2cf6db62b2d464a986adec12773a06b79764527a7dfdef20458ed1379c18e33e'
   name 'KeeWeb'
   homepage 'https://keeweb.info'
   license :mit
