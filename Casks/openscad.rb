@@ -4,7 +4,7 @@ cask 'openscad' do
 
   url "http://files.openscad.org/OpenSCAD-#{version}.dmg"
   appcast 'http://files.openscad.org/appcast.xml',
-          checkpoint: 'af4d9b1bfa3e626d8a4916afbc3db629a00080c26d36e0453c46e0a0f7c21595'
+          checkpoint: '1a0eefd0abc2d841c405c946a5fab130cf3e5f539b0d445f95210fc0d46202ed'
   name 'OpenSCAD'
   homepage 'http://www.openscad.org/'
   license :gpl
