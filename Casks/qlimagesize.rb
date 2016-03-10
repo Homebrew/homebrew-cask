@@ -2,7 +2,7 @@ cask 'qlimagesize' do
   version :latest
   sha256 :no_check
 
-  # whine.fr is the official download host per the vendor homepage
+  # repo.whine.fr was verified as official when first introduced to the cask
   url 'https://repo.whine.fr/qlImageSize.pkg'
   name 'qlImageSize'
   homepage 'https://github.com/Nyx0uf/qlImageSize'
