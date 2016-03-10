@@ -4,7 +4,7 @@ cask 'picturesque' do
 
   url "http://www.acqualia.com/files/sparkle/picturesque_#{version}.zip"
   appcast 'http://www.acqualia.com/picturesque/appcast/appcast3.xml',
-          checkpoint: '7db4a3309234e776218d3191220b897233e1c8c05ea7e69a11ceb2338c1be23f'
+          checkpoint: '4f16d575498f0b7dc3a8b4704ee41d32dbcb90b15083bee02ce52b754338e3e5'
   name 'Picturesque'
   homepage 'http://www.acqualia.com/picturesque/'
   license :commercial
