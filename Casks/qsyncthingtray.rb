@@ -4,7 +4,7 @@ cask 'qsyncthingtray' do
 
   url "https://github.com/sieren/QSyncthingTray/releases/download/#{version}/QSyncthingTray_#{version}_MAC.dmg.dmg"
   appcast 'https://github.com/sieren/QSyncthingTray/releases.atom',
-          checkpoint: 'e4db8c7be32730339cabfcf052cdbfc43cf0c7b41b118fccb937db6f642f6cf9'
+          checkpoint: '805caeb73ae7ae3e5d739a190fcb9aa1a3fc41d4fcd344dc65e27bbf6a708ddd'
   name 'QSyncthingTray'
   homepage 'https://github.com/sieren/QSyncthingTray'
   license :gpl
