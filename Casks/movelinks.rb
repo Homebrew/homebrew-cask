@@ -5,7 +5,7 @@ cask 'movelinks' do
   # d1c229iib3zm7m.cloudfront.net was verified as official when first introduced to the cask
   url "https://d1c229iib3zm7m.cloudfront.net/mac/Moveslink2_#{version.dots_to_underscores}.dmg"
   appcast 'https://d1c229iib3zm7m.cloudfront.net/mac/appcast.xml',
-          checkpoint: 'b628c933441bef876271f84cf5cc14d229a3b4b7c0ce053cefcf5dbe338effcf'
+          checkpoint: 'fb749b7e304f3bda8311b2eb06f1b272f945638225272fe9cf664d587704de39'
   name 'Movelinks'
   homepage 'http://www.movescount.com/connect/moveslinkmac/Suunto_Ambit'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
