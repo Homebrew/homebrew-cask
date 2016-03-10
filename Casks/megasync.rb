@@ -2,11 +2,10 @@ cask 'megasync' do
   version :latest
   sha256 :no_check
 
-  # mega.nz is the official download host per the vendor homepage
   url 'https://mega.nz/MEGAsyncSetup.dmg'
   name 'MEGAsync'
-  homepage 'https://mega.co.nz'
-  license :gratis
+  homepage 'https://mega.nz'
+  license :oss
 
   app 'MEGAsync.app'
 
