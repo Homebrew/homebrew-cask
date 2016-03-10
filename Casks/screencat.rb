@@ -5,7 +5,7 @@ cask 'screencat' do
   # github.com/maxogden/screencat was verified as official when first introduced to the cask
   url "https://github.com/maxogden/screencat/releases/download/#{version}/ScreenCat.zip"
   appcast 'https://github.com/maxogden/screencat/releases.atom',
-          checkpoint: 'cad4deaaf999a2f37aafd2f361108821d3da0074646a81b62694ada3eca0135c'
+          checkpoint: 'ab6d5b16172351803d8ad9bd1d3200abade4df0c9abc60341d5a07f0d5ec3488'
   name 'ScreenCat'
   homepage 'https://maxogden.github.io/screencat/'
   license :oss
