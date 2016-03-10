@@ -1,6 +1,6 @@
 cask 'alfred' do
-  version '2.8.2_432'
-  sha256 'f9c923b6c854132824423d6c3330dff38100e23fc750c8212b09a7356db0a59a'
+  version '2.8.3_435'
+  sha256 'd3ff9dd4a3a889cf689f817feed6bc06b49346cfcf4985cf6a3b4c1639fb2c55'
 
   url "https://cachefly.alfredapp.com/Alfred_#{version}.zip"
   name 'Alfred'

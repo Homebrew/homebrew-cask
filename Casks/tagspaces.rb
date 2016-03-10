@@ -8,7 +8,7 @@ cask 'tagspaces' do
     sha256 '912e97396cec629a0ed1bd8e50204bafd699e13c18d927c6ce9489648cf17d41'
     url "http://www.tagspaces.org/downloads/tagspaces-#{version}-osx64.zip"
     appcast 'https://github.com/tagspaces/tagspaces/releases.atom',
-            checkpoint: 'b0f0a3390df3bbbf67b4f1f9252263d932fdbe1c54eb80ab11dc87b96495543e'
+            checkpoint: '131248cf9fab7c55e92223fdc1b4ad4eb5b44229f6fdbb133d485d7717f507af'
   end
 
   name 'TagSpaces'

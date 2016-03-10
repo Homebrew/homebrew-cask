@@ -10,7 +10,7 @@ cask 'qgis' do
   depends_on cask: 'gdal-framework'
   depends_on formula: 'matplotlib'
 
-  pkg 'Install QGIS.pkg'
+  pkg '4 Install QGIS.pkg'
 
   uninstall pkgutil: 'org.qgis.qgis-*'
 

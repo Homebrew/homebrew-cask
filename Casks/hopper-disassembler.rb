@@ -1,10 +1,10 @@
 cask 'hopper-disassembler' do
-  version '3.11.10'
-  sha256 '3624ec98e92f8224cffaf59b8e4226786ee4ed50eec3db7afa628ef91197358c'
+  version '3.11.12'
+  sha256 '4faf5d9b2f399c02c28aa233d637ebda520a054d813369123c91cca76b1e73f7'
 
   url "http://www.hopperapp.com/HopperWeb/downloads/Hopper-#{version}.zip"
   appcast "http://www.hopperapp.com/HopperWeb/appcast_v#{version.major}.php",
-          checkpoint: '97de3ef0ead76c60ec0c259fe6150d509567611170e3c3050a468b4c0cfbfa33'
+          checkpoint: '17eb719d067b7922c0b0824767da8426a332a0f72509acc141a1c41a8360fcb0'
   name 'Hopper Disassembler'
   homepage 'http://www.hopperapp.com/'
   license :commercial

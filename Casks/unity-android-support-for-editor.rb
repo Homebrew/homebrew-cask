@@ -9,7 +9,7 @@ cask 'unity-android-support-for-editor' do
 
   depends_on cask: 'unity'
 
-  pkg "UnitySetup-Android-Support-for-Editor-#{version}.pkg"
+  pkg "UnitySetup-Android-Support-for-Editor-#{version.before_comma}.pkg"
 
   uninstall pkgutil: 'com.unity3d.AndroidSupport'
 end

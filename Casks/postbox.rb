@@ -2,7 +2,7 @@ cask 'postbox' do
   version '4.0.8'
   sha256 '3c6e036e5dcd7f655295ceb21daf6000e0e5fb2168d887f32db46091a5a3ee54'
 
-  # amazonaws.com is the official download host per the vendor homepage
+  # amazonaws.com/download.getpostbox.com was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/download.getpostbox.com/installers/#{version}/1_6adf8a6160ac58891fe0f1b1485534368a9837ca/postbox-#{version}-mac64.dmg"
   name 'Postbox'
   homepage 'https://www.postbox-inc.com/'

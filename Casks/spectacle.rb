@@ -10,7 +10,7 @@ cask 'spectacle' do
             checkpoint: '7e818cf270c24f8b39a9593afae4fab044c6a885a1ba695d81652e56b27c3320'
   end
 
-  # amazonaws.com is the official download host per the vendor homepage
+  # amazonaws.com/spectacle was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/spectacle/downloads/Spectacle+#{version}.zip"
   name 'Spectacle'
   homepage 'https://spectacleapp.com/'

@@ -9,7 +9,7 @@ cask 'unity-ios-support-for-editor' do
 
   depends_on cask: 'unity'
 
-  pkg "UnitySetup-iOS-Support-for-Editor-#{version}.pkg"
+  pkg "UnitySetup-iOS-Support-for-Editor-#{version.before_comma}.pkg"
 
   uninstall pkgutil: 'com.unity3d.iOSSupport'
 end

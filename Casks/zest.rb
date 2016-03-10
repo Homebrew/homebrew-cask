@@ -1,10 +1,10 @@
 cask 'zest' do
-  version '0.1.0-alpha2'
-  sha256 '04bbe71994c7f14d4efcdfa81aac382cc75da75a98aaa875a5ccf964837daf7c'
+  version '0.1.1'
+  sha256 '9405fecb40731b47bb357e87714711afe6d1f6a9c3a4fa9d01b0109da9c3f947'
 
-  url "https://github.com/zestdocs/zest/releases/download/v#{version}/zest-v#{version}-pre.dmg"
+  url "https://github.com/zestdocs/zest/releases/download/v#{version}/zest-v#{version}.dmg"
   appcast 'https://github.com/zestdocs/zest/releases.atom',
-          checkpoint: '187df1ed00ba73066526f98ea399c644b19f78c49792ebbcd8e1eb8627206d1a'
+          checkpoint: '070f49a40e5db4448424a7ab4305fd05ecfee703f14e99b76c776961a760eed5'
   name 'Zest'
   homepage 'https://zestdocs.org/'
   license :mit

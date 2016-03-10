@@ -4,7 +4,7 @@ cask 'ctivo' do
 
   url "https://github.com/dscottbuch/cTiVo/releases/download/#{version}/cTiVo.zip"
   appcast 'https://github.com/dscottbuch/cTiVo/releases.atom',
-          checkpoint: 'cb03c22983029d71e906857b50ab0300c786c20900d99a32af9460931d573733'
+          checkpoint: '8407d89c51f12725b959b13dc17f5823ee2cf96d1a7d646de8ee035c11f07f8c'
   name 'cTiVo'
   homepage 'https://github.com/dscottbuch/cTiVo'
   license :oss

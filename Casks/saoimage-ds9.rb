@@ -11,7 +11,7 @@ cask 'saoimage-ds9' do
     sha256 '6ff7b79f2b0e3b07b990b467fcecfdc35ba0cc6aa7575d97102b21791e9f3bf0'
     url "http://ds9.si.edu/download/macosxyosemite/SAOImage%20DS9%20#{version}.dmg"
   else
-    sha256 'a013cd1e2917e8457dbd41b07d831f532bac9c77620bf5bcde8392bca3184b1a'
+    sha256 'b935e9f90d667dc6f53d325d55bf2fc535fb1dd03ac65bcb63bf925dde25d804'
     url "http://ds9.si.edu/download/macosxelcapitan/SAOImage%20DS9%20#{version}.dmg"
   end
 

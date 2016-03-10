@@ -5,7 +5,7 @@ cask 'devonthink-pro-office' do
   # amazonaws.com/DTWebsiteSupport was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/#{version}/DEVONthink_Pro_Office.dmg.zip"
   appcast 'http://www.devon-technologies.com/fileadmin/templates/filemaker/sparkle.php?product=300125739&format=xml',
-          checkpoint: 'c0cfabbb0845d48e192c3170ca54d5ec57a6975c12e198e7c478bfb9c3db4c87'
+          checkpoint: 'dcff8944a25e070e6ea9629b3c6e4794e7322dd6777ae07e3fd1b35b6d00ff94'
   name 'DEVONthink Pro Office'
   homepage 'http://www.devontechnologies.com/products/devonthink/devonthink-pro-office.html'
   license :commercial

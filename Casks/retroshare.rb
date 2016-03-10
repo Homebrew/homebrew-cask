@@ -1,11 +1,11 @@
 cask 'retroshare' do
-  version '0.6.0,20160206-7ded128b'
-  sha256 '132f7bbe3f1be47a0f544a4829f3f2bff4dbe0281cddaeb01af0db7ecbd6fc77'
+  version '0.6.0,20160209-4033f35f'
+  sha256 'f568f399a3f2956be0e0137d16fc654af4942a112ba6d297395e07989bd01f92'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/RetroShare/RetroShare/releases/download/v#{version.before_comma}/Retroshare-#{version.before_comma}-OSX-#{version.after_comma}.dmg"
   appcast 'https://github.com/RetroShare/RetroShare/releases.atom',
-          checkpoint: '5096dde24860ff369e466ff1818b643a8ded3ca5923165d2ea395d9c925b1b5d'
+          checkpoint: '42336e0b3033221bde5f0dd6caf5eb6e08fbe72fe3f8efb67e232946a9f86cd8'
   name 'RetroShare'
   homepage 'http://retroshare.sourceforge.net/'
   license :gpl

@@ -2,7 +2,7 @@ cask 'temperature-monitor' do
   version :latest
   sha256 :no_check
 
-  # bresink.eu is the official download host per the vendor homepage
+  # bresink.eu was verified as official when first introduced to the cask
   url 'http://www.bresink.eu/Downloads/TemperatureMonitor.dmg'
   name 'Temperature Monitor'
   homepage 'http://www.bresink.com/osx/LegacyProducts.html'

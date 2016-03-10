@@ -8,7 +8,7 @@ cask 'google-cloud-sdk' do
   license :apache
 
   installer script: 'google-cloud-sdk/install.sh',
-            args:   %w[--usage-reporting false --bash-completion false --path-update false --rc-path false],
+            args:   %w[--usage-reporting false --bash-completion false --path-update false --rc-path false --quiet],
             sudo:   false
   binary 'google-cloud-sdk/bin/bq'
   binary 'google-cloud-sdk/bin/gcloud'

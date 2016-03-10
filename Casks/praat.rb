@@ -10,7 +10,7 @@ cask 'praat' do
   end
 
   appcast 'https://github.com/praat/praat/releases.atom',
-          checkpoint: '962c0be2b39dbe200c8f7c2c2c46c63e08f7a5581b5dd3f92b08193e841e48c8'
+          checkpoint: '1b78e5b9e71d4c11e2c76e0d9367a64ed50315cb35264e3f86c681b8648c1459'
   name 'Praat'
   homepage 'http://www.fon.hum.uva.nl/praat/'
   license :gpl
