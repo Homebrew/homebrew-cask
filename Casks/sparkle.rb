@@ -5,7 +5,7 @@ cask 'sparkle' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/sparkle-project/Sparkle/releases/download/#{version}/Sparkle-#{version}.tar.bz2"
   appcast 'https://github.com/sparkle-project/Sparkle/releases.atom',
-          checkpoint: 'f9aa708e34e51822a1744be663a93b608a887c3fe9e7928fc3af4f93233dbe15'
+          checkpoint: '8f68a29a2350121ea839e3bbc4137e0164eed6ddd55fbf396941786e65d1e5cd'
   name 'Sparkle'
   homepage 'http://sparkle-project.org/'
   license :mit
