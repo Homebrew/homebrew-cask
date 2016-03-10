@@ -1,10 +1,10 @@
 cask 'near-lock' do
-  version '3.2'
-  sha256 'ff252ecfe5e32c8bed7d287715397812b23fc42caf50bc088a4447191a0dad25'
+  version '3.4.0'
+  sha256 'df699f4244f86e827da2e24d547a8413061e8ad8b3451fb759acaef3f7e1886e'
 
   url 'http://nearlock.me/downloads/nearlock.dmg'
   appcast 'http://nearlock.me/downloads/nearlock.xml',
-          checkpoint: '404bbbd3d12a196754ad79c93d252402f998fe4fad15e0b9e1af19090632c69d'
+          checkpoint: '4a70ed81b4ef1f93921752ef010374ad0beae717b08c52651c00ed4503a70b47'
   name 'Near Lock'
   homepage 'http://nearlock.me/'
   license :gratis
