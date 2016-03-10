@@ -5,7 +5,7 @@ cask 'wmail' do
   # github.com/Thomas101/wmail was verified as official when first introduced to the cask
   url "https://github.com/Thomas101/wmail/releases/download/v#{version}/WMail_#{version.dots_to_underscores}_osx.zip"
   appcast 'https://github.com/Thomas101/wmail/releases.atom',
-          checkpoint: 'a62fd9749579f45c20dd388777f94864c3f85f476008b3cdcc73262ee0fa0065'
+          checkpoint: 'd55ffc1892a3164e00a8d018a4d317f59638f9cd688b4a6028995de7c438cdc9'
   name 'WMail'
   homepage 'https://thomas101.github.io/wmail/'
   license :mit
