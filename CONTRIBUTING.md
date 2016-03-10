@@ -17,7 +17,10 @@
 ```bash
 $ github_user='<my-github-username>'
 $ cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
+$ # if you use HTTPS to access GitHub:
 $ git remote add "$github_user" "https://github.com/$github_user/homebrew-cask"
+$ # or if you use SSH to access GitHub:
+$ git remote add "$github_user" "git@github.com:$github_user/homebrew-cask.git"
 ```
 
 ## Updating a Cask
