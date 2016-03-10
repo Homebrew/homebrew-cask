@@ -4,7 +4,7 @@ cask 'nulloy' do
 
   url "https://github.com/nulloy/nulloy/releases/download/#{version}/Nulloy-#{version}-x86_64.dmg"
   appcast 'https://github.com/nulloy/nulloy/releases.atom',
-          checkpoint: '086275a938536614041c3aceb18bc294562b8ccba7eac4c189b90cc6c222214f'
+          checkpoint: '6b12d536ceefb813d7e269dc5943e5fa1efca77de4f1e9b9b5eb700ee9d0a3ff'
   name 'Nulloy'
   homepage 'http://nulloy.com/'
   license :gpl
