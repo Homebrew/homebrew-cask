@@ -1,10 +1,10 @@
 cask 'amidst' do
-  version '4.0'
-  sha256 '921300b83acf3a09f72b9adc1abeea6ce9975438b42814ae40c27e9debf13262'
+  version '4.1'
+  sha256 '1947e62afcfd492d77fe121d1f56c67be52411adf225db45834a3a1423a64747'
 
   url "https://github.com/toolbox4minecraft/amidst/releases/download/v#{version}/amidst-v#{version.dots_to_hyphens}.zip"
   appcast 'https://github.com/toolbox4minecraft/amidst/releases.atom',
-          checkpoint: '84beb95511a46c011ddd2f72ab75c6cf56624d6baf59b85288ab19830620a864'
+          checkpoint: 'e1d27d503a5438a4442f5eb1f7975c1872c58e856b7c44d061bccd82a781a1fe'
   name 'amidst'
   homepage 'https://github.com/toolbox4minecraft/amidst'
   license :gpl
