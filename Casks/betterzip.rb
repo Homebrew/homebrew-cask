@@ -4,7 +4,7 @@ cask 'betterzip' do
 
   url "http://macitbetter.com/dl/BetterZip-#{version}.zip"
   appcast 'http://macitbetter.com/BetterZip3.rss',
-          checkpoint: 'e9083065f10327fb1ab34dc0ba1f8ca5eb33e08dc173e1774b5bf3437d0856ef'
+          checkpoint: 'a2c1846067eb9a819bb9f19f036ac32ed65df0061357a89f6f53e563b2f518d7'
   name 'BetterZip'
   homepage 'http://macitbetter.com'
   license :commercial
