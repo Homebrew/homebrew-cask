@@ -5,7 +5,7 @@ cask 'consul' do
   # hashicorp.com was verified as official when first introduced to the cask
   url "https://releases.hashicorp.com/consul/#{version}/consul_#{version}_darwin_amd64.zip"
   appcast 'https://github.com/hashicorp/consul/releases.atom',
-          checkpoint: 'd38501c339d670687ee0932f150bb1fce20249745583dba1b3fc4a39623fcd03'
+          checkpoint: '5ac89b32dd4234f5a7af642046cf8b053e704559b522e11c4672550638e5fbda'
   name 'Consul'
   homepage 'https://www.consul.io/'
   license :mpl
