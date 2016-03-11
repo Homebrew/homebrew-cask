@@ -4,7 +4,7 @@ cask 'firefox' do
 
   url "https://ftp.mozilla.org/pub/firefox/releases/#{version.major_minor}/mac/en-US/Firefox%20#{version.major_minor}.dmg"
   appcast "https://aus5.mozilla.org/update/3/Firefox/#{version}/0/Darwin_x86_64-gcc3-u-i386-x86_64/en-US/release/Darwin%2015.3.0/default/default/update.xml?force=1",
-          checkpoint: '1b68aabaa3b98f6a16e510bb5ea680cd2c8647a8680668b5430b98e9c84d1c3f'
+          checkpoint: 'c82e11d0ac89e159a538cb614d4ae90e9232e9f761910222c92c3fa8938dcfbe'
   name 'Mozilla Firefox'
   homepage 'https://www.mozilla.org/en-US/firefox/'
   license :mpl
