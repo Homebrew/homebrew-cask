@@ -332,7 +332,7 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
     ohai "Running uninstall script #{executable}"
     raise Hbc::CaskInvalidError.new(@cask, "#{stanza} :#{directive_name} without :executable.") if executable.nil?
     executable_path = @cask.staged_path.join(executable)
-    @command.run('/bin/chmod', :args => ['+x', '--', executable_path]) if File.exists?(executable_path)
+    @command.run('/bin/chmod', :args => ['--', '+x', executable_path]) if File.exists?(executable_path)
     @command.run(executable_path, script_arguments)
     sleep 1
   end

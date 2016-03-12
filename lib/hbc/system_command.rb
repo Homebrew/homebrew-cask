@@ -4,14 +4,16 @@ require 'shellwords'
 class Hbc::SystemCommand
   def self.run(executable, options={})
     command = _process_options(executable, options)
-    odebug "Executing: #{command.utf8_inspect}"
     processed_stdout = ''
     processed_stderr = ''
 
     command[0] = Shellwords.shellescape(command[0]) if command.size == 1
 
-    raw_stdin, raw_stdout, raw_stderr, raw_wait_thr =
-      Open3.popen3(*command.map { |arg| arg.respond_to?(:to_path) ? File.absolute_path(arg) : String(arg) })
+    to_exec = command.map { |arg| arg.respond_to?(:to_path) ? File.absolute_path(arg) : String(arg) }
+
+    odebug "Executing: #{to_exec.utf8_inspect}"
+
+    raw_stdin, raw_stdout, raw_stderr, raw_wait_thr = Open3.popen3(*to_exec)
 
     if options[:input]
       Array(options[:input]).each { |line| raw_stdin.puts line }
