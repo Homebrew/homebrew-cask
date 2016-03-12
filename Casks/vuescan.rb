@@ -1,5 +1,5 @@
 cask 'vuescan' do
-  version '9.5.19'
+  version '9.5.41'
   sha256 :no_check # required as upstream package is updated in-place
 
   if Hardware::CPU.is_32_bit?
