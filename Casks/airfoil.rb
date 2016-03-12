@@ -1,11 +1,11 @@
 cask 'airfoil' do
-  version '5.0.1'
-  sha256 'b8eae684f18afeee4bcd619d3149c140e1d8b9b7a9e5a4b5dda3a7daeddf6a8b'
+  version '5.0.2'
+  sha256 '87aebc5284eaced85a3441efc57d1d4a51dd65dc00b068c6e21988c776f1f6d9'
 
   # d2oxtzozd38ts8.cloudfront.net was verified as official when first introduced to the cask
   url 'https://d2oxtzozd38ts8.cloudfront.net/airfoil/download/Airfoil.zip'
   appcast 'https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&bundleid=com.rogueamoeba.Airfoil&platform=osx',
-          checkpoint: 'e7b157a9a776dc4f72b31940e2096dfca02d2accb758cbe430a0ecbf042a1fcc'
+          checkpoint: 'aaf36799bceac10c5b282aed1c7eec0c25606f236e27243b19b196f1be85b74d'
   name 'Airfoil'
   homepage 'https://www.rogueamoeba.com/airfoil/mac/'
   license :commercial
