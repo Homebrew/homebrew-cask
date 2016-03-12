@@ -1,6 +1,6 @@
 cask 'the-escapers-flux' do
-  version '5.6.15'
-  sha256 '01e2eeaa6259df5d0443d589fb0cb989d4fdfb79d55a535352f9deac534b9466'
+  version '6.0.16'
+  sha256 '9e2a0a1ae4483a2842b6d7ca5df3dbb89a07c5e192a7c35b35c2d380b60f019e'
 
   # amazonaws.com/Flux was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/Flux/FluxV#{version.major}.zip"
