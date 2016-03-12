@@ -10,5 +10,5 @@ cask 'retroshare' do
   homepage 'http://retroshare.sourceforge.net/'
   license :gpl
 
-  app 'Retroshare.app'
+  app "Retroshare#{version.major_minor.no_dots}.app"
 end
