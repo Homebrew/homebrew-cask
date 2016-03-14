@@ -271,7 +271,7 @@ describe Hbc::Artifact::Uninstall do
       let(:script_pathname) { cask.staged_path.join('MyFancyPkg','FancyUninstaller.tool') }
 
       it 'can uninstall' do
-        Hbc::FakeSystemCommand.expects_command(%w[/bin/chmod +x --] + [script_pathname])
+        Hbc::FakeSystemCommand.expects_command(%w[/bin/chmod -- +x] + [script_pathname])
 
         Hbc::FakeSystemCommand.expects_command(
           sudo(cask.staged_path.join('MyFancyPkg','FancyUninstaller.tool'), '--please'))
@@ -285,7 +285,7 @@ describe Hbc::Artifact::Uninstall do
       let(:script_pathname) { cask.staged_path.join('MyFancyPkg','FancyUninstaller.tool') }
 
       it 'can uninstall' do
-        Hbc::FakeSystemCommand.expects_command(%w[/bin/chmod +x --] + [script_pathname])
+        Hbc::FakeSystemCommand.expects_command(%w[/bin/chmod -- +x] + [script_pathname])
 
         Hbc::FakeSystemCommand.expects_command(
           sudo(cask.staged_path.join('MyFancyPkg','FancyUninstaller.tool'), '--please'))

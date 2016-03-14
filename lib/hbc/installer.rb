@@ -321,7 +321,7 @@ class Hbc::Installer
           #      slash.  This should do the right thing, but is fragile.
           @command.run!('/usr/bin/chflags', :args => ['-R', '--', '000',   path])
           @command.run!('/bin/chmod',       :args => ['-R', '--', 'u+rwx', path])
-          @command.run!('/bin/chmod',       :args => ['-R', '-N',          path])
+          @command.run!('/bin/chmod',       :args => ['-R', '-N', '--',    path])
           tried_permissions = true
           retry # rmtree
         end

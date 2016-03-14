@@ -5,7 +5,7 @@ cask 'plover' do
   # github.com is the official download host per the vendor homepage
   url "https://github.com/openstenoproject/plover/releases/download/v#{version}/Plover.dmg"
   appcast 'https://github.com/openstenoproject/plover/releases.atom',
-          checkpoint: '0582513980293190a9d89ee25fb5a38ac4a50580df8f2a801d3483eb5ac2ef34'
+          checkpoint: 'f94793545aa832111ad2fb2ec54728f1a2dcaf8915f691a50f42a4705c01e776'
   name 'Plover'
   homepage 'http://stenoknight.com/wiki/Main_Page'
   license :gpl
