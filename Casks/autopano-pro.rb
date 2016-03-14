@@ -7,7 +7,7 @@ cask 'autopano-pro' do
   homepage 'http://www.kolor.com/panorama-software-autopano-pro.html'
   license :commercial
 
-  pkg "Autopano Pro #{version}.pkg"
+  pkg "Autopano Pro 4.2.pkg"
 
   uninstall pkgutil: [
                        'com.kolor.pkg.AutopanoPro.*',
