@@ -1,6 +1,6 @@
 cask 'linphone' do
-  version '3.8.5'
-  sha256 '250d6b0b8ca3fd5029185b479199ae47b5d8c57062007a2bbb864ca63034a5de'
+  version '3.9.1'
+  sha256 '0f45bb9cc2d2ea32631c0e8dedc28b2139d5cb0d55a007704c133b2ef41ffbe2'
 
   # gnu.org is the official download host per the vendor homepage
   url "http://download-mirror.savannah.gnu.org/releases/linphone/#{version.sub(%r{\d+$}, '')}x/macos/linphone-#{version}.pkg"
