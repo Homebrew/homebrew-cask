@@ -11,5 +11,4 @@ cask 'suspicious-package' do
   container type: :generic_unar
 
   app 'Suspicious Package.app'
-  qlplugin 'Suspicious Package.app/Contents/Library/QuickLook/Suspicious Package.qlgenerator'
 end
