@@ -1,6 +1,6 @@
 cask 'screens' do
-  version '3.6.9b4770'
-  sha256 '818c2598dedd12a37827f27d0ecf111102739ec595be183bb487d281da969366'
+  version '3.6.11b4828'
+  sha256 'c62417cb0b41cbd1122a24ec10e3c1d6706224527c6d20518b4c52b5be6d4568'
 
   url "http://download.edovia.com/screens/Screens%20#{version}.zip"
   name 'Screens'
