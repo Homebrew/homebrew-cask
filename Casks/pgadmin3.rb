@@ -1,7 +1,7 @@
 cask 'pgadmin3' do
   # note: "3" is not a version number, but indicates a different vendor
-  version '1.22.0'
-  sha256 'b2819efad4f835ee48251a330f43fd701cf2c45d895de01cb809b5931fc162b6'
+  version '1.22.1'
+  sha256 'fa34b5baf09cf597850101b2806fdf80490c88d6fbf652da3750856423051603'
 
   # postgresql.org is the official download host per the vendor homepage
   url "https://ftp.postgresql.org/pub/pgadmin3/release/v#{version}/osx/pgadmin3-#{version}.dmg"
