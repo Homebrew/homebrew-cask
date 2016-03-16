@@ -9,5 +9,5 @@ cask 'chrome-devtools' do
   homepage 'https://github.com/auchenberg/chrome-devtools-app'
   license :mit
 
-  app 'Chrome DevTools.app'
+  app 'Chrome DevTools App.app'
 end
