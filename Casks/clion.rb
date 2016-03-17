@@ -1,8 +1,8 @@
 cask 'clion' do
-  version '1.2.4'
-  sha256 'e476eb093fc4624090f941d5767dc20edbcd12aca98bc388d8482606691452b9'
+  version '2016.1'
+  sha256 'c791636f23c273dd07bbcab4f2495a3532501ec2ec3975c7c80cc3b915686be4'
 
-  url "https://download.jetbrains.com/cpp/CLion-#{version}-custom-jdk-bundled.dmg"
+  url "https://download.jetbrains.com/cpp/CLion-#{version}.dmg"
   name 'CLion'
   homepage 'https://www.jetbrains.com/clion'
   license :commercial
@@ -10,11 +10,10 @@ cask 'clion' do
   app 'CLion.app'
 
   zap delete: [
-                "~/.CLion#{version.major_minor.no_dots}",
                 '~/Library/Preferences/com.jetbrains.CLion.plist',
-                "~/Library/Preferences/clion#{version.major_minor.no_dots}",
-                "~/Library/Application Support/clion#{version.major_minor.no_dots}",
-                "~/Library/Caches/clion#{version.major_minor.no_dots}",
-                "~/Library/Logs/clion#{version.major_minor.no_dots}",
+                "~/Library/Preferences/CLion#{version}",
+                "~/Library/Application Support/CLion#{version}",
+                "~/Library/Caches/CLion#{version}",
+                "~/Library/Logs/CLion#{version}",
               ]
 end
