@@ -11,6 +11,8 @@ cask 'iterm2' do
   license :gpl
 
   auto_updates true
+  depends_on macos: '>= :lion'
+  depends_on arch: :intel
 
   app 'iTerm.app'
 

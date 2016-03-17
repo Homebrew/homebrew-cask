@@ -1,6 +1,6 @@
 cask 'nomad' do
-  version '0.2.1'
-  sha256 '7f40f24c7c386bff4f97fad89c258ca7549d9629260d319a71a27fbb9e9ba31f'
+  version '0.3.1'
+  sha256 'c300a3b5c195fbccf26dfcdb756b4c953ca0e5e566a41fce1d10ef1947ec4279'
 
   # hashicorp.com is the official download host per the vendor homepage
   url "https://releases.hashicorp.com/nomad/#{version}/nomad_#{version}_darwin_amd64.zip"
