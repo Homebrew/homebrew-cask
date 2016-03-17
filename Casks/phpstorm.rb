@@ -10,11 +10,9 @@ cask 'phpstorm' do
   app 'PhpStorm.app'
 
   zap delete: [
-                "~/.WebIde#{version.major_minor.no_dots}",
-                "~/Library/Caches/WebIde#{version.major_minor.no_dots}",
-                "~/Library/Logs/WebIde#{version.major_minor.no_dots}",
-                "~/Library/Application Support/WebIde#{version.major_minor.no_dots}",
-                "~/Library/Preferences/WebIde#{version.major_minor.no_dots}",
-                '~/Library/Preferences/com.jetbrains.PhpStorm.plist',
-              ]
+    "~/Library/Caches/#{name}#{version}",
+    "~/Library/Logs/#{name}#{version}",
+    "~/Library/Application Support/#{name}#{version}",
+    "~/Library/Preferences/#{name}#{version}",
+  ]
 end
