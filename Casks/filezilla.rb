@@ -3,8 +3,8 @@ cask 'filezilla' do
     version '3.8.1'
     sha256 '86c725246e2190b04193ce8e7e5ea89d5b9318e9f20f5b6f9cdd45b6f5c2d283'
   else
-    version '3.16.0'
-    sha256 'bbf7fbb3b16ee0669352bb2087fcc039ac038f09f6e4f3c87a4b0f4b8bd70118'
+    version '3.16.1'
+    sha256 '61c47e2d3e76f6c38e93a2a85d2bfe62c309e887188c5f07d1e8cf1ca6947692'
   end
 
   # sourceforge.net/project/filezilla was verified as official when first introduced to the cask
