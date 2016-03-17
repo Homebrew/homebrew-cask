@@ -10,7 +10,6 @@ cask 'clion' do
   app 'CLion.app'
 
   zap delete: [
-                # "~/.CLion#{version.major_minor.no_dots}", Deprecated?
                 '~/Library/Preferences/com.jetbrains.CLion.plist',
                 "~/Library/Preferences/CLion#{version}",
                 "~/Library/Application Support/CLion#{version}",
