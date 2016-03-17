@@ -1,6 +1,6 @@
 cask 'pikopixel' do
-  version '1.0b4'
-  sha256 'bf024db394bfd6031f02f75313a591f949decea0cad80ec07357c0f32e34fa92'
+  version '1.0b5'
+  sha256 '939c1ca666a0fa442e0f378e8bfe2f7b1946468b113bfef183d04b730fedf84f'
 
   url "http://twilightedge.com/downloads/PikoPixel#{version}.dmg",
       user_agent: :fake
