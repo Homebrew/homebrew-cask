@@ -20,7 +20,7 @@ cask 'coteditor' do
           checkpoint: '1628004e59ec855cd21ba3a1164ade66c105eed940f839adefd23326ff17b719'
   name 'CotEditor'
   homepage 'https://coteditor.com/'
-  license :gpl
+  license :apache
 
   app 'CotEditor.app'
 end
