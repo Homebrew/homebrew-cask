@@ -10,7 +10,6 @@ cask 'intellij-idea' do
   app 'IntelliJ IDEA.app'
 
   zap delete: [
-                "~/.IntelliJIdea#{version.major}",
                 "~/Library/Caches/IntelliJIdea#{version}",
                 "~/Library/Logs/IntelliJIdea#{version}",
                 "~/Library/Application Support/IntelliJIdea#{version}",
