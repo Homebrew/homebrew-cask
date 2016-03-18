@@ -12,6 +12,7 @@ cask 'vlc' do
       key_id: '65f7c6b4206bd057a7eb73787180713be58d1adc'
 
   app 'VLC.app'
+  binary 'VLC.app/Contents/MacOS/VLC'
 
   zap delete: [
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.videolan.vlc.sfl',
