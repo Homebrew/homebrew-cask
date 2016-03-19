@@ -5,10 +5,10 @@ cask 'copay' do
   # github.com/bitpay/copay was verified as official when first introduced to the cask
   url "https://github.com/bitpay/copay/releases/download/v#{version}/Copay-osx.dmg"
   appcast 'https://github.com/bitpay/copay/releases.atom',
-      checkpoint: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+          checkpoint: 'e90d26d6e83ea860901ccf76a0e676dda85fbc213db8923c3fd559fcbef9b7a7'
   name 'Copay'
   homepage 'https://copay.io'
-  license :oss 
+  license :oss
 
   app 'Copay.app'
 end
