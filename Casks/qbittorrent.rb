@@ -8,5 +8,6 @@ cask 'qbittorrent' do
   homepage 'http://www.qbittorrent.org'
   license :gpl
 
-  app 'qBittorrent.app'
+  # Renamed for consistency: app name is different in the Finder and in a shell.
+  app 'qbittorrent.app', target: 'qBittorrent.app'
 end
