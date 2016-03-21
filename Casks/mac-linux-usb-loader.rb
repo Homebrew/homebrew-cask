@@ -1,11 +1,11 @@
 cask 'mac-linux-usb-loader' do
-  version '3.2'
-  sha256 '3448f9eeac1ec8c68d172f0943014c0fe478359584bcd71c88986fcd0f830514'
+  version '3.2.1'
+  sha256 '2737e1757e86a1a618c2e6af3f5fae9b07ab00f70fe5e12d30bb4c8ff54c8946'
 
   # github.com/SevenBits/Mac-Linux-USB-Loader was verified as official when first introduced to the cask
   url "https://github.com/SevenBits/Mac-Linux-USB-Loader/releases/download/v#{version}/Mac.Linux.USB.Loader.zip"
   appcast 'https://github.com/SevenBits/Mac-Linux-USB-Loader/releases.atom',
-          checkpoint: 'addb377ff01e0526a5167d297fc8d98ea52f8108d421b4f4cbc84f980d53f9d3'
+          checkpoint: '2d602d2daeae4f879366ea3dcb0622670d53f6d6b37e0c6f92095d23c6853404'
   name 'Mac Linux USB Loader'
   homepage 'https://sevenbits.github.io/Mac-Linux-USB-Loader/'
   license :bsd
