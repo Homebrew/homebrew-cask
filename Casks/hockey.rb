@@ -1,10 +1,10 @@
 cask 'hockey' do
-  version '2.0.14'
-  sha256 '4cd6dc945378a520818ace687c89dd1356d5f975731a7848e37cad2e12278a31'
+  version '2.0.15'
+  sha256 'f2a5f3e1b6ff047dc030e78a93572e54d6afb2901c190b1841489e1289dc22d3'
 
   url 'https://rink.hockeyapp.net/api/2/apps/67503a7926431872c4b6c1549f5bd6b1/app_versions/396?format=zip'
   appcast 'https://rink.hockeyapp.net/api/2/apps/67503a7926431872c4b6c1549f5bd6b1',
-          checkpoint: 'b27878765070c937cc053e44afa37680cf48c554506f8ddc72ec83cd4487bd9f'
+          checkpoint: '924c8019247e3ab7c5c039aefa46eaff3353473ec3d3760650a39c62c6f20781'
   name 'HockeyApp'
   homepage 'http://hockeyapp.net/releases/mac/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
