@@ -7,7 +7,7 @@ cask 'limechat' do
     sha256 '708d10591784e5beb7ed80236d809d5cd4f992c133483bc2a82775acdc6f1f0f'
   end
 
-  # sourceforge.net is the official download host per the vendor homepage
+  # sourceforge.net/project/limechat was verified as official when first introduced to the cask
   url "http://downloads.sourceforge.net/project/limechat/limechat/LimeChat_#{version}.tbz"
   appcast 'http://limechat.net/mac/appcast.xml',
           checkpoint: '73cc22d3e73c2070a39994285ffa411cf4bc9d11e9d6782f16e5dc4a3b0c5175'

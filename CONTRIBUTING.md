@@ -35,7 +35,7 @@ cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Casks"
 cask-repair --pull origin --push $github_user $outdated_cask
 ```
 
-If there is a more complicated change, or there is a case where `cask-repair` fails, you can also follow the steps in [Adding a Cask](doc/development/adding_a_cask.md) to do the same thing manually.
+If there is a more complicated change, or there is a case where `cask-repair` fails, you can also follow the steps in [Adding a Cask](doc/development/adding_a_cask.md) to do the same thing manually. Remember to update the `version` and `shasum` values, as well as the appcast [`checkpoint`](doc/cask_language_reference/stanzas/appcast.md), if there is one.
 
 ## Adding a Cask
 

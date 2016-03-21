@@ -10,12 +10,9 @@ cask 'splice' do
   homepage 'https://splice.com/'
   license :gratis
 
-  installer script: 'Splice Installer.app/Contents/MacOS/Splice Installer',
-            args:   ['-q'],
-            sudo:   false
+  app 'Splice.app'
 
-  uninstall quit:   'com.splice.Splice',
-            delete: '/Applications/Splice.app'
+  uninstall quit:   'com.splice.Splice'
 
   zap delete: [
                 '~/Library/Application Support/*Splice*',
