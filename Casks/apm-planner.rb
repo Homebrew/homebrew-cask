@@ -1,10 +1,10 @@
 cask 'apm-planner' do
-  version '2.0.18'
-  sha256 'e1ed3884f676c5a5d8ff14a24acddae4bbfe671bd178315477da2c69c3a0b9be'
+  version '2.0.20'
+  sha256 '2635f4d66dc4290a0f816bad7e6a029ab453385710fff428128f4bbf6926ced8'
 
   url "http://firmware.diydrones.com/Tools/APMPlanner/apm_planner_#{version}_osx.dmg"
   appcast 'http://firmware.diydrones.com/Tools/APMPlanner/apm_planner_version.json',
-          checkpoint: 'd2cb3943ca1caab20f434168ae1f95f1e21e5b0a2bb6ee959cc64cabaf6067dd'
+          checkpoint: '3abbf4b7115646de8e41d974731c2697b59c34c0a6761de7220aaaa3c82d2d73'
   name 'APM Planner'
   homepage 'http://planner2.ardupilot.com/'
   license :gpl
