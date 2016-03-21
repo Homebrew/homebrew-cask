@@ -2,10 +2,10 @@ cask 'mailmate' do
   version :latest
   sha256 :no_check
 
-  # app.com is the official download host per the vendor homepage
+  # mailmate-app.com was verified as official when first introduced to the cask
   url 'http://dl.mailmate-app.com/MailMate.tbz'
   name 'MailMate'
-  homepage 'http://freron.com/'
+  homepage 'https://freron.com/'
   license :commercial
 
   app 'MailMate.app'

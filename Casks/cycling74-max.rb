@@ -5,6 +5,7 @@ cask 'cycling74-max' do
   # akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com/Max#{version.no_dots}.dmg"
   name 'Cycling ‘74 Max'
+  name 'Ableton Max for Live'
   homepage 'https://cycling74.com/'
   license :commercial
 
