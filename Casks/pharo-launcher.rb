@@ -8,6 +8,6 @@ cask 'pharo-launcher' do
   homepage 'http://smalltalkhub.com/#!/~Pharo/PharoLauncher/'
   license :mit
 
-  # Renamed to avoid conflict with pharo
+  # Renamed to avoid conflict with pharo.
   app 'Pharo.app', target: 'Pharo Launcher.app'
 end
