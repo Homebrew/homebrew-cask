@@ -4,6 +4,8 @@ cask 'nomad' do
 
   # hashicorp.com/nomad was verified as official when first introduced to the cask
   url "https://releases.hashicorp.com/nomad/#{version}/nomad_#{version}_darwin_amd64.zip"
+  appcast 'https://github.com/hashicorp/nomad/releases.atom',
+          checkpoint: '7dbb430f88706ed39867506dc3da084838475e27de7570f524a202b3f73fa4c1'
   name 'Nomad'
   homepage 'https://nomadproject.io/'
   license :mpl
