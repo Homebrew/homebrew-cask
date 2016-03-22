@@ -1,11 +1,11 @@
 cask 'pollev-presenter' do
-  version '2.6.9'
-  sha256 'b250f3e614a061fd7613aa739a4c44533d9e783cbee7f301a11ab5c8930d9820'
+  version '2.7.3'
+  sha256 '3890f7256347d08267a18d1c66025d1548e62ab68a6b602e23a645c1383f8bf0'
 
   # amazonaws.com/polleverywhere-app was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/polleverywhere-app/mac-beta/pollev.dmg'
   appcast 'https://polleverywhere-app.s3.amazonaws.com/mac-beta/appcast.xml',
-          checkpoint: 'c5d6b4e6dc85970130996a41079bd95dadbbe00fcc7d121ca541efc9d490894b'
+          checkpoint: 'fbd5e6cffe98117aa86d01bc23d0b90efbda8efa4e0613ecc37c61161a775047'
   name 'PollEv Presenter'
   homepage 'https://www.polleverywhere.com/'
   license :gratis
