@@ -1,6 +1,6 @@
 cask 'adafruit-arduino' do
-  version '1.6.3'
-  sha256 'c964acbe728b616f0595517b21bbf97c88b8ee92379c06943a2862399d0196e2'
+  version '1.6.4'
+  sha256 'f68f8d6397b2eca277fecb3638e4f2f4c44bab0285f89adcc9ca237333eb4edd'
 
   # amazonaws.com/adafruit-download was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/adafruit-download/adafruit-arduino-#{version}-macosx.zip"
