@@ -4,6 +4,8 @@ cask 'otto' do
 
   # hashicorp.com is the official download host per the vendor homepage
   url "https://releases.hashicorp.com/otto/#{version}/otto_#{version}_darwin_amd64.zip"
+  appcast 'https://github.com/hashicorp/otto/releases.atom',
+          checkpoint: '046259c2cdb9af18491ccd60ad06023717ef958404b77a4845138e75cb053fe7'
   name 'Otto'
   homepage 'https://www.ottoproject.io/'
   license :mpl

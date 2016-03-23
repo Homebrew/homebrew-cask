@@ -1,10 +1,10 @@
 cask 'xscope' do
-  version '4.1.4'
-  sha256 'd9f1eab342b885277344829eb7b10fa636b76991a9367fb2319f32a48a386ea2'
+  version '4.2'
+  sha256 'f976a94801caaccd445fa9a5afe6f794e4caa95cd39c5e1bf790931b1710adf8'
 
   url "https://iconfactory.com/assets/software/xscope/xScope-#{version}.zip"
   appcast 'https://iconfactory.com/appcasts/xScope/appcast.xml',
-          checkpoint: '8ca24804a212a277f857ed92478701e5433753f7c7e41299b7d6dc56e6dbdd38'
+          checkpoint: '6eec33a8cd45abf63e706e6292d25c0ae4cbbf273cafece2ffe3b73992c74cb0'
   name 'xScope'
   homepage 'http://iconfactory.com/software/xscope'
   license :commercial

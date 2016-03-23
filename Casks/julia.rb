@@ -1,6 +1,6 @@
 cask 'julia' do
-  version '0.4.3'
-  sha256 '1d9010af32a2bb6cf58b20d4fb21165edd8d15399dd4ffdde7934b5fedd1a2ac'
+  version '0.4.5'
+  sha256 'b253c035b846bbf120695306a5d8bc5d204e8287a5d3d3721a12408e1c990539'
 
   # s3.amazonaws.com/julialang was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/julialang/bin/osx/x64/#{version.sub(%r{\.\d+$}, '')}/julia-#{version}-osx10.7+.dmg"

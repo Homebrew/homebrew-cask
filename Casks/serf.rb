@@ -4,6 +4,8 @@ cask 'serf' do
 
   # hashicorp.com/serf was verified as official when first introduced to the cask
   url "https://releases.hashicorp.com/serf/#{version}/serf_#{version}_darwin_amd64.zip"
+  appcast 'https://github.com/hashicorp/serf/releases.atom',
+          checkpoint: 'ddc3f79c2b3e97a00f88d514dda17428961eccefd74afeb8470a0e458af33c7d'
   name 'Serf'
   homepage 'https://www.serfdom.io/'
   license :mpl
