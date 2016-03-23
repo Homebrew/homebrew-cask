@@ -1,8 +1,8 @@
 cask 'pycharm' do
-  version '5.0.4'
-  sha256 'b6ce56e16077247f4e236a1e628c1d2498583b95ab6a5783857e789ffa219200'
+  version '2016.1'
+  sha256 'a07eab762373b5e119157eb3ffbfc6f8f7f754f80f01cf6249c997694c85cb1e'
 
-  url "https://download.jetbrains.com/python/pycharm-professional-#{version}-jdk-bundled.dmg"
+  url "https://download.jetbrains.com/python/pycharm-professional-#{version}.dmg"
   name 'PyCharm'
   homepage 'https://www.jetbrains.com/pycharm/'
   license :commercial
@@ -10,11 +10,10 @@ cask 'pycharm' do
   app 'PyCharm.app'
 
   zap delete: [
-                "~/.PyCharm#{version.major_minor.no_dots}",
                 '~/Library/Preferences/com.jetbrains.PyCharm.plist',
-                "~/Library/Preferences/PyCharm#{version.major_minor.no_dots}",
-                "~/Library/Application Support/PyCharm#{version.major_minor.no_dots}",
-                "~/Library/Caches/PyCharm#{version.major_minor.no_dots}",
-                "~/Library/Logs/PyCharm#{version.major_minor.no_dots}",
+                "~/Library/Preferences/PyCharm#{version}",
+                "~/Library/Application Support/PyCharm#{version}",
+                "~/Library/Caches/PyCharm#{version}",
+                "~/Library/Logs/PyCharm#{version}",
               ]
 end
