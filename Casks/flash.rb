@@ -1,6 +1,6 @@
 cask 'flash' do
-  version '21.0.0.182'
-  sha256 '342ebd92ebc651f62c9cd621b1a84d4f2ed01b73aa49b647a5b881dd5652871d'
+  version '21.0.0.197'
+  sha256 '50d7277ba473e413d70d6d5dc5ec50fe486f1ac40d3641d88cd4c1d32ff9d4cf'
 
   # macromedia.com was verified as official when first introduced to the cask
   url "http://fpdownload.macromedia.com/get/flashplayer/pdc/#{version}/install_flash_player_osx.dmg"
