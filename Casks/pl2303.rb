@@ -1,6 +1,6 @@
 cask 'pl2303' do
-  version '1.6.0_20151022'
-  sha256 'ed0d7965c57e6d855e1909e0af7228372bedb0ae47247a00c5eea519b5dde6bb'
+  version '1.6.1_20160309'
+  sha256 '14868e4a3c38904760d3445c37bbb5ca2f1024498547645147abbabfcb52eb87'
 
   url "http://www.prolific.com.tw/UserFiles/files/PL2303_MacOSX_#{version.gsub('.', '_')}.zip"
   name 'Prolific USB-Serial Cable driver'
