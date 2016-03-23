@@ -1,6 +1,6 @@
 cask 'mps' do
-  version '3.3.2'
-  sha256 '70e43db0263dbfaf0175245e4abd17381b73998b90dfdd3d7dc3b04ca7d1b820'
+  version '3.3.4'
+  sha256 '406cf308aacf9dee407c8cf34e7ffbd5ebaabd5ea4217ff0fef78ecc319dd2a4'
 
   url "http://download-cf.jetbrains.com/mps/#{version.major_minor.no_dots}/MPS-#{version}-macos-jdk-bundled.dmg"
   name 'JetBrains MPS'
