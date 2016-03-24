@@ -1,11 +1,12 @@
 cask 'ngrok' do
-  version '2.0.19'
-  sha256 'ec307920b86778db4c632434cb9fff01ead9edd7438618aab87f5e891791f799'
+  version '2.0.24'
+  sha256 '62fb342cd1d177415a1b4dba1b40f542e25caa5ea119604981e474a0003c6aa1'
 
-  url "https://dl.ngrok.com/ngrok_#{version}_darwin_amd64.zip"
+  # bin.equinox.io was verified as official when first introduced to the cask
+  url 'https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-darwin-amd64.zip'
   name 'ngrok'
   homepage 'https://ngrok.com/'
-  license :apache
+  license :freemium
 
   binary 'ngrok'
 
