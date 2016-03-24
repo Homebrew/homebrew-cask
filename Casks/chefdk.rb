@@ -1,12 +1,12 @@
 cask 'chefdk' do
-  version '0.11.2-1'
-  sha256 '56899eab322cacac7f445a24d3159af34fccb5910642f4535eff4ee47321fe56'
+  version '0.12.0-1'
+  sha256 '8c347cd8c27def1dde2f05160befcdce4ac5be35de12c480fa305a3576b7f3fd'
 
   # opscode-omnibus-packages.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.11/x86_64/chefdk-#{version}.dmg"
   name 'Chef Development Kit'
   name 'ChefDK'
-  homepage 'https://downloads.getchef.com/chef-dk/'
+  homepage 'https://downloads.chef.io/chef-dk/'
   license :apache
 
   pkg "chefdk-#{version}.pkg"
