@@ -1,10 +1,10 @@
 cask 'plug' do
-  version '2.0.7'
-  sha256 'e716a0b86dbc0fa56c124cfb71a0245ca4ec829b2a6244a1b175006cbb02b773'
+  version '2.0.8'
+  sha256 '1f1e954e4b11dcdc8bda2e36a4996b17d47f9d70f8a94a9253c4de4355c34843'
 
   url 'https://www.plugformac.com/updates/plug2/Plug-latest.dmg'
   appcast 'https://www.plugformac.com/updates/plug2/sparklecast.xml',
-          checkpoint: 'd2a69b4209eac9d130dc8df70bb97dd2457df2b851eddc9349550ba7d7e784b9'
+          checkpoint: '043da4a5ff0038a6080ce16676ad48334b7afba1451463aca2d270938b3f6595'
   name 'Plug'
   homepage 'https://www.plugformac.com/'
   license :gratis
