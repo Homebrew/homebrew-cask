@@ -7,8 +7,9 @@ cask 'blender' do
   homepage 'https://www.blender.org/'
   license :gpl
 
-  app "blender-#{version}-OSX_10.6-x86_64/blender.app"
-  app "blender-#{version}-OSX_10.6-x86_64/blenderplayer.app"
+  # Renamed for consistency: app name is different in the Finder and in a shell.
+  app 'blender.app', target: 'Blender.app'
+  app 'blenderplayer.app', target: 'Blenderplayer.app'
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/blenderwrapper"
   binary shimscript, target: 'blender'
