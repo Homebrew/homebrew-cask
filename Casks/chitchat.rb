@@ -1,12 +1,12 @@
 cask 'chitchat' do
-  version '1.5'
-  sha256 'dbcfe1698d6d4cd9239480f757e821f7a784f7ac89a0bd26b32a0b9014999db0'
+  version '2.2'
+  sha256 '62e3e6a17808b7c5b77b127acf98a04cbabe73770f2aa1be2b984d6f20a2e93f'
 
-  url "https://github.com/stonesam92/ChitChat/releases/download/v#{version}/ChitChat.zip"
-  appcast 'https://github.com/stonesam92/ChitChat/releases.atom',
-          checkpoint: '5aab4cfa3ff23c6b9d0706df5deb9cf0c251a272555c57e3b35cdaeb2ba8796e'
+  url "https://github.com/Neo11/ChitChat/releases/download/v#{version}/ChitChat.zip"
+  appcast 'https://github.com/Neo11/ChitChat/releases.atom',
+          checkpoint: 'cd10198c6fc8df02488556674ecc3f7e76ffe17128c0b5919259b6d2e2029c21'
   name 'ChitChat'
-  homepage 'https://github.com/stonesam92/ChitChat'
+  homepage 'https://github.com/Neo11/ChitChat'
   license :oss
 
   app 'ChitChat.app'
