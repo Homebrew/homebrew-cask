@@ -100,7 +100,7 @@ $ brew install homebrew/completions/brew-cask-completion
 For `zsh` completion support, simply run:
 
 ```bash
-$ brew install `zsh-completions`
+$ brew install zsh-completions
 ```
 
 ## Inspecting Installed Casks
