@@ -1,18 +1,23 @@
-cask :v1 => 'tunnelbear' do
-  version '2.5.6'
-  sha256 '28f77ee1387999d4deb82983b78ca825b9d1caab143a683af19df025333a0376'
+cask 'tunnelbear' do
+  version '2.5.9'
+  sha256 '469ac53e2ddefe2573a1231c22709a548ff8cb76ec4dae2cac02acacfac30316'
 
-  # amazonaws.com is the official download host per the vendor homepage
+  # tunnelbear.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://tunnelbear.s3.amazonaws.com/downloads/mac/TunnelBear-#{version}.zip"
   appcast 'https://s3.amazonaws.com/tunnelbear/downloads/mac/appcast.xml',
-          :sha256 => '9a437f3b3c02ce7947c7563ce9fa1f0f431d0f8fc00b398513e0f2d33312ae89'
+          checkpoint: '527f5dcf48d78bcb6c36f65df0a48fd03538be4c63bb6dff6b47823542a63432'
   name 'TunnelBear'
   homepage 'https://www.tunnelbear.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'TunnelBear.app'
 
   postflight do
     suppress_move_to_applications
   end
+
+  uninstall quit:      'com.tunnelbear.mac.TunnelBear',
+            launchctl: 'com.tunnelbear.mac.tbeard'
+
+  zap delete: '~/Library/Preferences/com.tunnelbear.mac.TunnelBear.plist'
 end

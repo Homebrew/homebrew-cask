@@ -1,4 +1,4 @@
-cask :v1 => 'tvmobili' do
+cask 'tvmobili' do
   version :latest
   sha256 :no_check
 
@@ -9,9 +9,9 @@ cask :v1 => 'tvmobili' do
 
   pkg 'tvmobili-yosemite-universal.2.1.4693.pkg'
 
-  uninstall :pkgutil   => 'com.tvmobili.tvmobilisvcd',
-            :launchctl => [
-                           'com.tvmobili.artwork',
-                           'com.tvmobili.tvmobilisvcd',
-                          ]
+  uninstall pkgutil:   'com.tvmobili.tvmobilisvcd',
+            launchctl: [
+                         'com.tvmobili.artwork',
+                         'com.tvmobili.tvmobilisvcd',
+                       ]
 end

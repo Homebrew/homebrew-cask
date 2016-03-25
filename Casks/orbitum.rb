@@ -1,4 +1,4 @@
-cask :v1 => 'orbitum' do
+cask 'orbitum' do
   version :latest
   sha256 :no_check
 

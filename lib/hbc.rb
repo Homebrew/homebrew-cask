@@ -50,9 +50,6 @@ module Hbc
   ::Hardware = Hbc::Hardware
 
   def self.init
-    # todo: Creating directories should be deferred until needed.
-    #       Currently this fire and even asks for sudo password
-    #       if a first-time user simply runs "brew cask --help".
     odebug 'Creating directories'
     HOMEBREW_CACHE.mkpath unless HOMEBREW_CACHE.exist?
     HOMEBREW_CACHE_CASKS.mkpath unless HOMEBREW_CACHE_CASKS.exist?

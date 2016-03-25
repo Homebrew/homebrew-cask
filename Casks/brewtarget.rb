@@ -1,8 +1,8 @@
-cask :v1 => 'brewtarget' do
-  version '2.1.0'
-  sha256 '5bd3542db7dd44e7e95759c68ad6002046ad145ddee35adefa43bfab1ada3fe2'
+cask 'brewtarget' do
+  version '2.3.0'
+  sha256 'f1b3b33029f7d7cd873a1cdbf0741da22085f53dcefa2943dcfa8d35eda89fdd'
 
-  url "https://launchpad.net/brewtarget/trunk/#{version}/+download/Brewtarget-#{version}-installer.dmg"
+  url "https://launchpad.net/brewtarget/trunk/#{version}/+download/Brewtarget-#{version}.dmg"
   name 'brewtarget'
   homepage 'http://www.brewtarget.org/'
   license :oss

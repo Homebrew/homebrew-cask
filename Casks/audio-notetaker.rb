@@ -1,4 +1,4 @@
-cask :v1 => 'audio-notetaker' do
+cask 'audio-notetaker' do
   version :latest
   sha256 :no_check
 

@@ -1,14 +1,13 @@
-cask :v1 => 'hiera' do
+cask 'hiera' do
   version '1.3.4'
   sha256 'f0c5342b09b6f48c727ded033e03d207313d3ebf12d41b50b0f2f71fd1c411e9'
 
   url "https://downloads.puppetlabs.com/mac/hiera-#{version}.dmg"
-  name 'Hiera'
+  name 'Puppet Labs Hiera'
   homepage 'https://projects.puppetlabs.com/projects/hiera'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
-  tags :vendor => 'Puppet Labs'
+  license :apache
 
   pkg "hiera-#{version}.pkg"
 
-  uninstall :pkgutil => 'com.puppetlabs.hiera'
+  uninstall pkgutil: 'com.puppetlabs.hiera'
 end

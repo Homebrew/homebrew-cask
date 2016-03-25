@@ -1,4 +1,4 @@
-cask :v1 => 'intermission' do
+cask 'intermission' do
   version :latest
   sha256 :no_check
 

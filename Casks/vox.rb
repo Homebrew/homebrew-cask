@@ -1,14 +1,14 @@
-cask :v1 => 'vox' do
-  version :latest
-  sha256 :no_check
+cask 'vox' do
+  version '2750.1,1458727468'
+  sha256 '30f1ff0c7f75c596e348de027115531935cce8febc53c5924b11d4d231acf956'
 
-  # devmate.com is the official download host per the vendor homepage
-  url 'https://dl.devmate.com/com.coppertino.Vox/Vox.dmg'
+  # devmate.com/com.coppertino.Vox was verified as official when first introduced to the cask
+  url "https://dl.devmate.com/com.coppertino.Vox/#{version.before_comma}/#{version.after_comma}/Vox-#{version.before_comma}.zip"
+  appcast 'https://updates.devmate.com/com.coppertino.Vox.xml',
+          checkpoint: 'f6a4a28a53b4470bfb866cdf0c150795c787bb539352f063f4ec6942906c79cb'
   name 'VOX'
-  appcast 'http://updates.devmate.com/com.coppertino.Vox.xml',
-          :sha256 => '20c1ab602462b7fc0d5b4cbd555cacf127b69a07a737579598ebcbc0f5b21319'
   homepage 'https://coppertino.com/vox/mac'
   license :freemium
 
-  app 'VOX.app'
+  app 'Vox.app'
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'protant' do
+cask 'protant' do
   version '1.0.0'
   sha256 '98906ca80b98ce8fc7ec11eea6bba29f629a072752bb1c2f9ba07a1355effee1'
 

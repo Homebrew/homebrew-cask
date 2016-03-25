@@ -1,13 +1,13 @@
-cask :v1 => 'whiskey' do
-  version :latest
-  sha256 :no_check
+cask 'whiskey' do
+  version '0.4.0'
+  sha256 '27fa0798ac0c10821d5066ccc1f240714964d931548f61bca5da355277af6402'
 
   url 'http://usewhiskey.com/latest'
-  name 'Whiskey'
   appcast 'http://usewhiskey.com/appcast.xml',
-          :sha256 => '96dea545ba04bfa604924f6e2d995d3a71ca2ef16997f494724543f8c0b60ef4'
+          checkpoint: 'ff368e0830b2e1d82aef590436356472d4a98fdf3b99babdd2938cd128b05a00'
+  name 'Whiskey'
   homepage 'http://usewhiskey.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Whiskey.app'
 end

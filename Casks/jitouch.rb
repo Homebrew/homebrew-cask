@@ -1,4 +1,4 @@
-cask :v1 => 'jitouch' do
+cask 'jitouch' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'jitouch' do
 
   prefpane 'jitouch/Jitouch.prefPane'
 
-  zap :delete => '~/Library/Preferences/com.jitouch.Jitouch.plist'
+  zap delete: '~/Library/Preferences/com.jitouch.Jitouch.plist'
 end

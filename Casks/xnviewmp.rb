@@ -1,4 +1,4 @@
-cask :v1 => 'xnviewmp' do
+cask 'xnviewmp' do
   version :latest
   sha256 :no_check
 

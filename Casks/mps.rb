@@ -1,28 +1,16 @@
-cask :v1 => 'mps' do
-  version '3.2.3'
-  sha256 'cf6e842fbfe28035f2ab6fc4c39e97d82609ca72d5d6ffc486026772b5ddf35e'
+cask 'mps' do
+  version '3.3.4'
+  sha256 '406cf308aacf9dee407c8cf34e7ffbd5ebaabd5ea4217ff0fef78ecc319dd2a4'
 
-  url "http://download-cf.jetbrains.com/mps/#{version.tr('.','')[0,2]}/MPS-#{version}-macos.dmg"
-  name 'MPS'
+  url "http://download-cf.jetbrains.com/mps/#{version.major_minor.no_dots}/MPS-#{version}-macos-jdk-bundled.dmg"
   name 'JetBrains MPS'
   homepage 'https://www.jetbrains.com/mps'
   license :apache
 
-  app "MPS #{version[0,3]}.app"
+  app "MPS #{version.major_minor}.app"
 
-  zap :delete => [
-                  "~/Library/Application Support/MPS#{version.tr('.','')[0,2]}",
-                  "~/Library/Preferences/MPS#{version.tr('.','')[0,2]}",
-                 ]
-
-  caveats <<-EOS.undent
-    #{token} requires Java 6 like any other IntelliJ-based IDE.
-    You can install it with
-
-      brew cask install caskroom/homebrew-versions/java6
-
-    The vendor (JetBrains) doesn't support newer versions of Java (yet)
-    due to several critical issues, see details at
-    https://intellij-support.jetbrains.com/entries/27854363
-  EOS
+  zap delete: [
+                "~/Library/Application Support/MPS#{version.tr('.', '')[0, 2]}",
+                "~/Library/Preferences/MPS#{version.tr('.', '')[0, 2]}",
+              ]
 end

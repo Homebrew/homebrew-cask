@@ -1,6 +1,6 @@
-cask :v1 => 'sweet-home3d' do
-  version '5.1'
-  sha256 'b28ebb6816181561846a1f9dd828036f4830a1206c35358979fe3308a1f6a486'
+cask 'sweet-home3d' do
+  version '5.2'
+  sha256 'd9450ac52ead59cd24a69616aa7d613a568d841295f56bee3a993c4ed066e2da'
 
   # sourceforge.net is the official download host per the vendor homepage
   url "http://downloads.sourceforge.net/project/sweethome3d/SweetHome3D/SweetHome3D-#{version}/SweetHome3D-#{version}-macosx.dmg"

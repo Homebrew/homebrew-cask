@@ -1,4 +1,4 @@
-cask :v1 => 'magican' do
+cask 'magican' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'magican' do
 
   pkg 'Magican.pkg'
 
-  uninstall :pkgutil => 'com.magican.*'
+  uninstall pkgutil: 'com.magican.*'
 end

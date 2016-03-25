@@ -1,4 +1,4 @@
-cask :v1 => 'sugarsync' do
+cask 'sugarsync' do
   version :latest
   sha256 :no_check
 

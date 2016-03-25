@@ -1,4 +1,4 @@
-cask :v1 => 'istopmotion' do
+cask 'istopmotion' do
   version '3.6-15980'
   sha256 '403f912d218da3868718cb1435bcd9919bfffbe587f37efca5182ef3a2770c62'
 

@@ -1,4 +1,4 @@
-cask :v1 => 'sococo' do
+cask 'sococo' do
   version '0.2.3-7127'
   sha256 'a87e533f63567d3334491e475bfc1ead15eb44f87b0700f2076d623df05a65a1'
 
@@ -8,7 +8,7 @@ cask :v1 => 'sococo' do
   homepage 'https://www.sococo.com/'
   license :freemium
 
-  app 'Sococo.app'
+  depends_on macos: '>= :lion'
 
-  depends_on :macos => '>= :lion'
+  app 'Sococo.app'
 end

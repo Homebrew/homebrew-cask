@@ -1,4 +1,4 @@
-cask :v1 => 'pdfexpert' do
+cask 'pdfexpert' do
   version :latest
   sha256 :no_check
 

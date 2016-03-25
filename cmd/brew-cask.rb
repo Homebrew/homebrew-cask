@@ -28,4 +28,3 @@ rescue Interrupt => e
   puts
   exit 130
 end
-exit 0

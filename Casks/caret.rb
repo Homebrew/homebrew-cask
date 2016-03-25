@@ -1,4 +1,4 @@
-cask :v1 => 'caret' do
+cask 'caret' do
   version :latest
   sha256 :no_check
 

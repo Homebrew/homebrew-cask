@@ -1,13 +1,13 @@
-cask :v1 => 'xact' do
-  version '2.36'
-  sha256 '8b25b05bdcbee23f58866df3c69ea8d3d14236643a802316423c10c3e058e80f'
+cask 'xact' do
+  version '2.37'
+  sha256 '3d0fcc4f35ec515f39230d6e30cb87e899a9a6a09f36984da1781ecdf0535e45'
 
   url "http://xact.scottcbrown.org/xACT#{version}.zip"
-  name 'xACT'
   appcast 'http://xactupdate.scottcbrown.org/xACT.xml',
-          :sha256 => 'cb5df4e8d11f77927b2ebc9dd0281426252f7feb8abb5ec62fa3819748344a45'
+          checkpoint: 'f1f3ab3baf3119dd35478f31dfcac338cd707499821491961dc1f0c7649fbe77'
+  name 'xACT'
   homepage 'http://xact.scottcbrown.org'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app "xACT #{version}/xACT.app"
 end

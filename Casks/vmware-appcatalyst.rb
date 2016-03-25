@@ -1,4 +1,4 @@
-cask :v1 => 'vmware-appcatalyst' do
+cask 'vmware-appcatalyst' do
   version 'August-2015'
   sha256 '343e6259ee4f60e5c077a080d5d3a550ea105d25c6e2762c2eaa151820c8a4dd'
 
@@ -6,9 +6,8 @@ cask :v1 => 'vmware-appcatalyst' do
   name 'VMware AppCatalyst'
   homepage 'http://getappcatalyst.com/'
   license :commercial
-  tags :vendor => 'VMware'
 
-  depends_on :macos => '>= :mavericks'
+  depends_on macos: '>= :mavericks'
 
   pkg 'Install VMware AppCatalyst.pkg'
   binary '/opt/vmware/appcatalyst/bin/appcatalyst'
@@ -17,10 +16,10 @@ cask :v1 => 'vmware-appcatalyst' do
   binary '/opt/vmware/appcatalyst/libexec/vmnet-cli'
   binary '/opt/vmware/appcatalyst/libexec/vmnet-cfgcli'
 
-  uninstall :pkgutil => 'com.vmware.pkg.AppCatalyst'
+  uninstall pkgutil: 'com.vmware.pkg.AppCatalyst'
 
-  zap :delete => [
-                  '~/.appcatalyst.conf',
-                  '~/Library/Logs/VMware',
-                 ]
+  zap delete: [
+                '~/.appcatalyst.conf',
+                '~/Library/Logs/VMware',
+              ]
 end

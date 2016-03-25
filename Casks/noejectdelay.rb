@@ -1,4 +1,4 @@
-cask :v1 => 'noejectdelay' do
+cask 'noejectdelay' do
   version '6.0.0'
   sha256 '52c478ccb9977a66fd9a6ba76b02e229521f70ee22c88c436581e8e46aa20807'
 
@@ -9,6 +9,6 @@ cask :v1 => 'noejectdelay' do
 
   pkg 'NoEjectDelay.pkg'
 
-  uninstall :kext => 'org.pqrs.driver.NoEjectDelay',
-            :pkgutil => 'org.pqrs.driver.NoEjectDelay'
+  uninstall kext:    'org.pqrs.driver.NoEjectDelay',
+            pkgutil: 'org.pqrs.driver.NoEjectDelay'
 end

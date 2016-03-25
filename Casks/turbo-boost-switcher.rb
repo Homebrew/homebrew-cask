@@ -1,4 +1,4 @@
-cask :v1_2 => 'turbo-boost-switcher' do
+cask 'turbo-boost-switcher' do
   version '1.2.0'
   sha256 'c1b42d0aac3114a0bef8bfcdbfc948387738fd333210e58563c0c161d29dcb9a'
 
@@ -10,9 +10,9 @@ cask :v1_2 => 'turbo-boost-switcher' do
 
   app 'Turbo Boost Switcher.app'
 
-  uninstall :quit => 'rugarciap.com.Turbo-Boost-Switcher',
-            :kext => 'com.rugarciap.DisableTurboBoost',
-            :login_item => 'Turbo Boost Switcher'
+  uninstall quit:       'rugarciap.com.Turbo-Boost-Switcher',
+            kext:       'com.rugarciap.DisableTurboBoost',
+            login_item: 'Turbo Boost Switcher'
 
-  zap :delete => '~/Library/Preferences/rugarciap.com.Turbo-Boost-Switcher.plist'
+  zap delete: '~/Library/Preferences/rugarciap.com.Turbo-Boost-Switcher.plist'
 end

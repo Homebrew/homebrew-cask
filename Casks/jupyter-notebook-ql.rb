@@ -1,4 +1,4 @@
-cask :v1 => 'jupyter-notebook-ql' do
+cask 'jupyter-notebook-ql' do
   version '0.1'
   sha256 '42706eedadb56c1bbe739cef480ecc919028b2c60857dad97369577613bd67fa'
 

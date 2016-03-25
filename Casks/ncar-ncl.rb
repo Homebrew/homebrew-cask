@@ -1,4 +1,4 @@
-cask :v1 => 'ncar-ncl' do
+cask 'ncar-ncl' do
   version '6.3.0'
 
   if MacOS.release == :mountain_lion
@@ -7,11 +7,9 @@ cask :v1 => 'ncar-ncl' do
   elsif MacOS.release == :mavericks
     sha256 'abe78b6830c43f8056cad02f5fbcbf4de82c4948b95b757b0d8a72d4776cbbf6'
     url 'https://www.earthsystemgrid.org/download/fileDownload.htm?logicalFileId=e0849384-cd9a-11e4-bb80-00c0f03d5b7c'
-  elsif MacOS.release == :yosemite
+  else
     sha256 'b0a7a02d1044380b6f33d274ccd0e870e06f11fbb98e72a58844eee98c98ff8d'
     url 'https://www.earthsystemgrid.org/download/fileDownload.htm?logicalFileId=e085cc06-cd9a-11e4-bb80-00c0f03d5b7c'
-  else
-    # Unusual case: there is no fall-through.  The software will likely not run on the next OS X release.
   end
 
   name 'NCAR Command Language'
@@ -19,14 +17,14 @@ cask :v1 => 'ncar-ncl' do
   homepage 'https://www.ncl.ucar.edu/'
   license :oss
 
-  depends_on :cask => 'xquartz'
-  depends_on :formula => 'gcc'
-  depends_on :macos => ['10.8', '10.9', '10.10']
-  depends_on :arch => :x86_64
+  depends_on cask: 'xquartz'
+  depends_on formula: 'gcc'
+  depends_on macos: ['10.8', '10.9', '10.10']
+  depends_on arch: :x86_64
 
-  artifact 'include', :target => '/usr/local/ncl-6.3.0/include'
-  artifact 'bin', :target => '/usr/local/ncl-6.3.0/bin'
-  artifact 'lib', :target => '/usr/local/ncl-6.3.0/lib'
+  artifact 'include', target: '/usr/local/ncl-6.3.0/include'
+  artifact 'bin', target: '/usr/local/ncl-6.3.0/bin'
+  artifact 'lib', target: '/usr/local/ncl-6.3.0/lib'
 
   caveats do
     <<-EOS.undent

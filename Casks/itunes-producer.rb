@@ -1,4 +1,4 @@
-cask :v1 => 'itunes-producer' do
+cask 'itunes-producer' do
   if MacOS.release <= :mavericks
     version '2.9.1'
 
@@ -11,12 +11,13 @@ cask :v1 => 'itunes-producer' do
     sha256 'c4b98602635757f4f40867585962b5283c89c7efea84f315a3d0d435b475f343'
   end
 
-  homepage 'https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/ra/ng/resources_page'
   name 'iTunes Producer'
+  homepage 'https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/ra/ng/resources_page'
   license :closed
+
+  depends_on macos: '>= :snow_leopard'
+
   pkg 'iTunesProducer.pkg'
 
-  depends_on :macos => '>= :snow_leopard'
-
-  uninstall :pkgutil => 'com.apple.pkg.iTunesProducer'
+  uninstall pkgutil: 'com.apple.pkg.iTunesProducer'
 end

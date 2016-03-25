@@ -1,10 +1,10 @@
-cask :v1 => 'displaperture' do
-  version :latest
-  sha256 :no_check
+cask 'displaperture' do
+  version '1.4'
+  sha256 'ce6d01fbb300d32f81ff1123d20804ac6eeb5b6b650c1d80e09105c58679db72'
 
   url 'http://manytricks.com/download/displaperture'
   name 'Displaperture'
-  homepage 'http://manytricks.com/displaperture'
+  homepage 'https://manytricks.com/displaperture'
   license :gratis
 
   app 'Displaperture.app'

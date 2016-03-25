@@ -1,4 +1,4 @@
-cask :v1 => 'back-in-time' do
+cask 'back-in-time' do
   version :latest
   sha256 :no_check
 

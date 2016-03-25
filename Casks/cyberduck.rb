@@ -1,18 +1,18 @@
-cask :v1 => 'cyberduck' do
-  version '4.7.3'
-  sha256 '38ad2ed10ecba59bf27489b9ef0e5338d8066e3f1c27d0445d414f92d9e84f93'
+cask 'cyberduck' do
+  version '4.8.4.19355'
+  sha256 'a1a2f8390988fd0d147c399171987124330d886d9b93e40e8e533d02b6acfa93'
 
   url "https://update.cyberduck.io/Cyberduck-#{version}.zip"
   appcast 'https://version.cyberduck.io/changelog.rss',
-          :sha256 => '50f62db7f41c6b0fa8b48d82acb18e8d473291c4ee36be3e608c95961c284894'
+          checkpoint: '9425b08abea0028053d2b15988ec3d63a6d60b425b53b1fe08f646d52e38bd1b'
   name 'Cyberduck'
   homepage 'https://cyberduck.io/'
   license :gpl
 
   app 'Cyberduck.app'
 
-  zap :delete => [
-                  '~/Library/Application Support/Cyberduck',
-                  '~/Library/Preferences/ch.sudo.cyberduck.plist',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Cyberduck',
+                '~/Library/Preferences/ch.sudo.cyberduck.plist',
+              ]
 end

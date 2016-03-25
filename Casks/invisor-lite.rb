@@ -1,11 +1,11 @@
-cask :v1 => 'invisor-lite' do
-  version '3.5.1'
-  sha256 '77f481352cbabd583aec22d73273a5952c2febdb53bf16b6be3a5bbf3b9f879a'
+cask 'invisor-lite' do
+  version '3.6.1'
+  sha256 'cd4eaff45916f0a50708583097b9133f7f9dff8b76bc78caa9b78e649f3ef155'
 
   url "http://www.pozdeev.com/invisor/download/InvisorLite-#{version}.dmg"
-  name 'Invisor Lite'
   appcast 'http://www.pozdeev.com/invisor/appcast_lite.xml',
-          :sha256 => '5ee8734a04088fd9d05e1c3222035ea7315f42446e5e925d2cc7d1fb389e0b90'
+          checkpoint: 'd82498730df0759063b6d56e424b34bcfd2fb5a4bd35b3dab91d0e4260394713'
+  name 'Invisor Lite'
   homepage 'http://www.pozdeev.com/invisor/'
   license :gratis
 

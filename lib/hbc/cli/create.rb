@@ -25,14 +25,14 @@ class Hbc::CLI::Create < Hbc::CLI::Base
 
   def self.template(cask_token)
     <<-EOS.undent
-      cask :v1 => '#{cask_token}' do
+      cask '#{cask_token}' do
         version ''
         sha256 ''
 
         url 'https://'
         name ''
         homepage ''
-        license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+        license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
         app ''
       end

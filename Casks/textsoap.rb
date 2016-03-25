@@ -1,16 +1,16 @@
-cask :v1 => 'textsoap' do
-  version :latest
-  sha256 :no_check
+cask 'textsoap' do
+  version '7.4.3'
+  sha256 'ecb88cb6c2cc6fe873a1fccdd38fb6040f2721e3440f98f513b376a360d91f20'
 
   # amazonaws.com is the official download host per the vendor homepage
-  url 'https://unmarked.s3.amazonaws.com/textsoap7.zip'
+  url "https://unmarked.s3.amazonaws.com/textsoap#{version.major}.zip"
+  appcast "https://unmarked.s3.amazonaws.com/appcast/textsoap#{version.major}.xml",
+          checkpoint: 'ddbb0073e1116c64c75620c2fe43bd7af1befc07e82459a3cb614c92a294579d'
   name 'TextSoap'
-  appcast 'https://unmarked.s3.amazonaws.com/appcast/textsoap7.xml',
-          :sha256 => '37211786d3aca6f891665256f383906a337bea31958b4b7a2ff0fbbaae98709e'
   homepage 'http://www.unmarked.com/textsoap/'
   license :commercial
 
-  app 'textsoap7.app'
+  app "textsoap#{version.major}.app"
 
   postflight do
     suppress_move_to_applications

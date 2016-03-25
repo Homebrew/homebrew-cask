@@ -1,4 +1,4 @@
-cask :v1 => 'vmware-horizon-client' do
+cask 'vmware-horizon-client' do
   version '3.5.2-3151577'
   sha256 '52254a1203706ed8a7700b888f9d88b0754ff053698d21313d4f7683fcfff48c'
 

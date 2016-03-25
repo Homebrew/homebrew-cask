@@ -1,11 +1,11 @@
-cask :v1 => 'macdown' do
-  version '0.5.3'
-  sha256 '1225f0c93f9a54b8df2e0348ed2cfc32eb0ee74bef8ba4006805cd3014ef0af7'
+cask 'macdown' do
+  version '0.6'
+  sha256 '2f129112df7393b5987c811f0001c0e0c8a4612566db1fcbbb4170367bc781f8'
 
-  # github.com is the official download host per the vendor homepage
+  # github.com/uranusjr/macdown was verified as official when first introduced to the cask
   url "https://github.com/uranusjr/macdown/releases/download/v#{version}/MacDown.app.zip"
   appcast 'https://github.com/uranusjr/macdown/releases.atom',
-          :sha256 => 'c64fa486514c00101c5a44e92a8562f270bb5474e0e4587e085add5cb0a64e70'
+          checkpoint: 'dc94fe807286a33b5e4c89895fa58c1a01fb217d9e5ea5966143570be98bcbff'
   name 'MacDown'
   homepage 'http://macdown.uranusjr.com/'
   license :mit
@@ -13,6 +13,6 @@ cask :v1 => 'macdown' do
   app 'MacDown.app'
   binary 'MacDown.app/Contents/SharedSupport/bin/macdown'
 
-  zap :delete => ['~/Library/Preferences/com.uranusjr.macdown.plist',
-                  '~/Library/Application Support/MacDown']
+  zap delete: ['~/Library/Preferences/com.uranusjr.macdown.plist',
+               '~/Library/Application Support/MacDown']
 end

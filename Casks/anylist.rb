@@ -1,4 +1,4 @@
-cask :v1 => 'anylist' do
+cask 'anylist' do
   version :latest
   sha256 :no_check
 

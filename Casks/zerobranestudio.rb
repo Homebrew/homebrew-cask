@@ -1,6 +1,6 @@
-cask :v1 => 'zerobranestudio' do
-  version '1.20'
-  sha256 '1ad9bc8b4c636f4a2c8bf6adb55ba0b4327c134ced0058744496ac6accc8265e'
+cask 'zerobranestudio' do
+  version '1.30'
+  sha256 '167324cdbae91e0d191515d272599936ef3319484e88110a9c3e81f4b82342e7'
 
   url "https://download.zerobrane.com/ZeroBraneStudioEduPack-#{version}-macos.dmg"
   name 'ZeroBrane Studio'

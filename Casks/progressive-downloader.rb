@@ -1,4 +1,4 @@
-cask :v1 => 'progressive-downloader' do
+cask 'progressive-downloader' do
   version '1.11'
   sha256 'ec6417e6bdc132eefbbc60577146d7b3b413ab539d00048c146406d78c9405a6'
 

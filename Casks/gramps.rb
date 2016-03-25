@@ -1,9 +1,11 @@
-cask :v1 => 'gramps' do
-  version '4.2.1-1'
-  sha256 '9672a1cdde835ccdd1ab130019f2a71877991e0b75d3b6f02eb4b5fc68e3dec6'
+cask 'gramps' do
+  version '4.2.2-4'
+  sha256 '433d18b0cd1ec88048b39b33a76f1f56d6124b91c9feb63b139b2a449870a3eb'
 
-  # sourceforge.net is the official download host per the vendor homepage
-  url "http://downloads.sourceforge.net/project/gramps/Stable/#{version.sub(%r{-\d},'')}/Gramps-Intel-#{version}.dmg"
+  # github.com/gramps-project/gramps was verified as official when first introduced to the cask
+  url "https://github.com/gramps-project/gramps/releases/download/v#{version.major_minor_patch}/Gramps-Intel-#{version}.dmg"
+  appcast 'https://github.com/gramps-project/gramps/releases.atom',
+          checkpoint: 'a69e86f46795f5baab0de0272814a5fcd5e0ad1a139f316189802184425dfb43'
   name 'Gramps'
   homepage 'https://gramps-project.org/'
   license :gpl

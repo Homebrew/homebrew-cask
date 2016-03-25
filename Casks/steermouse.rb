@@ -1,4 +1,4 @@
-cask :v1 => 'steermouse' do
+cask 'steermouse' do
   version '4.2.6'
   sha256 '4bbe779fcbfc69d9ebb196e888789cb088459cd3f944c3978a55c061d7d9f819'
 
@@ -9,6 +9,6 @@ cask :v1 => 'steermouse' do
 
   pkg 'SteerMouse Installer.app/Contents/Resources/SteerMouse.pkg'
 
-  uninstall :pkgutil => 'jp.plentycom.SteerMouse.pkg.*',
-            :kext    => 'com.cyberic.SmoothMouse'
+  uninstall pkgutil: 'jp.plentycom.SteerMouse.pkg.*',
+            kext:    'com.cyberic.SmoothMouse'
 end

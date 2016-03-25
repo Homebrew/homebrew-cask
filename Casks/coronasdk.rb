@@ -1,6 +1,6 @@
-cask :v1 => 'coronasdk' do
-  version '2015.2731'
-  sha256 '6eaa5bb4745d88d2dd548816a24ee4583a9bd5b6e41659aac151d7a1653db686'
+cask 'coronasdk' do
+  version '2016.2830'
+  sha256 'f90837a24e378c90300a32aaef9440bce904a491780c919ddc9dec22f3699aee'
 
   url "https://developer.coronalabs.com/sites/default/files/CoronaSDK-#{version}.dmg"
   name 'Corona SDK'

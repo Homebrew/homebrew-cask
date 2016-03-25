@@ -1,13 +1,15 @@
-cask :v1 => 'marked' do
-  version '2.5.3910'
-  sha256 'd3c9193fff0c349e0efaf5f14fd9c44d18545044e469d27340ef2c44864f02de'
+cask 'marked' do
+  version '2.5.4916'
+  sha256 '57f3c418aecbdbb07828f802c2ed13bc20d5b6fb0d3756540ae174f98168b04c'
 
-  # abyss.designheresy.com is the official download host per the appcast feed
-  url "http://abyss.designheresy.com/marked/Marked#{version}.zip"
-  appcast 'http://abyss.designheresy.com/marked/marked.xml'
+  url 'http://marked2app.com/download/Marked.zip'
+  appcast 'http://abyss.designheresy.com/marked/marked.xml',
+          checkpoint: 'f62cde7197f9ed9158949acd45079dabe3de5a8a5ec8633c8d4a116333dd187c'
   name 'Marked'
   homepage 'http://marked2app.com'
   license :commercial
+
+  auto_updates true
 
   app 'Marked 2.app'
 end

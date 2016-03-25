@@ -1,11 +1,11 @@
-cask :v1 => 'sloth' do
-  version '1.5'
-  sha256 '01f8f9fec88d5bc0cb0edcf7391d5ed0ac085f7fa8dcb6682059a238d7786165'
+cask 'sloth' do
+  version '1.6'
+  sha256 '00dd34e9f1624a9afd8a97f77075e06fe9ad26bf3e9b48548bd6c559d004ae64'
 
   url 'http://sveinbjorn.org/files/software/sloth.zip'
   name 'Sloth'
   homepage 'http://sveinbjorn.org/sloth'
   license :gpl
 
-  app "Sloth-#{version}/Sloth.app"
+  app 'Sloth.app'
 end

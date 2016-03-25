@@ -1,4 +1,4 @@
-cask :v1 => 'golly' do
+cask 'golly' do
   if MacOS.release <= :mountain_lion
     version '2.6'
     sha256 '6fee35e8e4f63ee2c1b0913b7e8009b2548c4e4469050f9c31791900e1e97f16'

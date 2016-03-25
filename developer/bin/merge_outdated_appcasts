@@ -1,0 +1,99 @@
+#!/bin/bash
+
+IFS=$'\n'
+
+readonly caskroom_online='https://github.com/caskroom'
+readonly caskroom_repos_dir='/tmp/caskroom_repos'
+readonly caskroom_repos=(homebrew-cask homebrew-versions homebrew-fonts homebrew-eid)
+
+if [[ ! $(which 'ghi') ]] || ! security find-internet-password -s github.com -l 'ghi token' &> /dev/null; then
+  echo -e "$(tput setaf 1)
+    This script requires 'ghi' installed and configured.
+    If you have [Homebrew](http://brew.sh), you can install it with 'brew install ghi'.
+    To configure it, run 'ghi config --auth <username>'. Your Github password will be required, but is never stored.
+  $(tput sgr0)" | sed -E 's/ {4}//' >&2
+  exit 1
+fi
+
+if [[ ! $(which 'fastmerge') ]]; then
+  echo -e "$(tput setaf 1)
+    This script requires 'fastmerge'.
+    If you have [Homebrew](http://brew.sh), you can install it with 'brew install vitorgalvao/tiny-scripts/fastmerge'.
+  $(tput sgr0)" | sed -E 's/ {4}//' >&2
+  exit 1
+fi
+
+function message {
+  echo "${1}"
+}
+
+function go_to_repos_dir {
+  [[ ! -d "${caskroom_repos_dir}" ]] && mkdir -p "${caskroom_repos_dir}"
+  cd "${caskroom_repos_dir}" || exit 1
+}
+
+function go_to_repo_and_update {
+  local repo_name repo_dir casks_dir
+
+  repo_name="${1}"
+  repo_dir="${caskroom_repos_dir}/${repo_name}"
+  casks_dir="${repo_dir}/Casks"
+
+  if [[ ! -d "${repo_dir}" ]]; then
+    go_to_repos_dir
+
+    message "Cloning ${repo_name}…"
+    git clone "https://github.com/caskroom/${repo_name}.git" --quiet
+
+    cd "${casks_dir}" || exit 1
+  else
+    cd "${casks_dir}" || exit 1
+
+    message "Updating ${repo_name}…"
+    git pull --rebase origin master --quiet
+  fi
+}
+
+function delete_current_branch {
+  local current_branch
+
+  current_branch="$(git rev-parse --abbrev-ref HEAD)"
+  git checkout master --quiet
+  git branch -D "${current_branch}" --quiet
+}
+
+function delete_cask_repair_branches {
+  [[ $(ghi list --state open --pulls --label 'outdated appcast' | tail -1) == 'None.' ]] && cask-repair --push origin --delete-branches
+}
+
+function merge_outdated_appcasts {
+  local repo_name pr_number cask_name pr_url last_commit
+
+  repo_name="${1}"
+
+  for line in $(ghi list --state open --pulls --label 'outdated appcast' --reverse | tail -n +2); do
+    [[ "${line}" == 'None.' ]] && break # exit early if there are no relevant issues in repo
+
+    pr_number="$(awk '{print $1}' <<< "${line}")"
+    cask_name="$(awk '{print $3}' <<< "${line}")"
+    pr_url="${caskroom_online}/${repo_name}/pull/${pr_number}"
+
+    hub checkout "${pr_url}" &>/dev/null
+    last_commit="$(git log -n 1 --pretty=format:'%H')"
+    delete_current_branch
+
+    if [[ "$(hub ci-status "${last_commit}")" == 'success' ]]; then
+      message "Merging pull request for ${cask_name}…"
+      fastmerge --maintainer --remote origin "${pr_url}"
+    else
+      continue
+    fi
+  done
+}
+
+for repo in "${caskroom_repos[@]}"; do
+  go_to_repo_and_update "${repo}"
+  merge_outdated_appcasts "${repo}"
+  delete_cask_repair_branches
+  git gc
+done

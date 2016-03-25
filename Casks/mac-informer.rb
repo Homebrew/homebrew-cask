@@ -1,4 +1,4 @@
-cask :v1 => 'mac-informer' do
+cask 'mac-informer' do
   version :latest
   sha256 :no_check
 
@@ -8,4 +8,6 @@ cask :v1 => 'mac-informer' do
   license :gratis
 
   app 'Mac Informer.app'
+
+  zap delete: '~/Library/Application Support/MacInformer'
 end

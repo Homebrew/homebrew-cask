@@ -1,8 +1,8 @@
-cask :v1 => 'fpc' do
-  version '2.6.4'
-  sha256 '0ae534c83c2cfd25f4bfc856dd54e5f1f89c3f5e5cf7089bd0b62be2f5b9a83b'
+cask 'fpc' do
+  version '3.0.0'
+  sha256 '6bbacb26b9155fb1a60253be299ce4ef957379b91cc204c247357796ef823809'
 
-  # sourceforge.net is the official download host per the vendor homepage
+  # sourceforge.net/freepascal was verified as official when first introduced to the cask
   url "http://downloads.sourceforge.net/freepascal/fpc-#{version}.intel-macosx.dmg"
   name 'Free Pascal'
   homepage 'http://www.freepascal.org/'
@@ -10,5 +10,5 @@ cask :v1 => 'fpc' do
 
   pkg "fpc-#{version}.intel-macosx.pkg"
 
-  uninstall :pkgutil => 'org.freepascal.freePascalCompiler262.fpcinst386.pkg'
+  uninstall pkgutil: 'org.freepascal.freePascalCompiler262.fpcinst386.pkg'
 end

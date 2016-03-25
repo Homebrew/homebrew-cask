@@ -5,14 +5,15 @@ class Hbc::CLI::Fetch < Hbc::CLI::Base
     force = args.include? '--force'
 
     cask_tokens.each do |cask_token|
-      ohai "Fetching resources for Cask #{cask_token}"
+      ohai "Downloading external files for Cask #{cask_token}"
       cask = Hbc.load(cask_token)
-      @downloaded_path = Hbc::Download.new(cask).perform force
-      ohai "Success! Downloaded to -> #{@downloaded_path}"
+      downloaded_path = Hbc::Download.new(cask, force).perform
+      Hbc::Verify.all(cask, downloaded_path)
+      ohai "Success! Downloaded to -> #{downloaded_path}"
     end
   end
 
   def self.help
-    "downloads Cask resources to local cache"
+    "downloads remote application files to local cache"
   end
 end

@@ -1,14 +1,17 @@
-cask :v1 => 'keymo' do
-  version '1.2.1'
-  sha256 '6ae33f5287e8be279c87f0bb5d22e77f806b9e2438f826935de5d6df34641d67'
+cask 'keymo' do
+  version '1.2.3'
+  sha256 '0c89580ad1b805fa6a4854059b6a3f82990f899c8649cd641f7dbd36590d073c'
 
-  url "http://manytricks.com/download/_do_not_hotlink_/keymo#{version.delete('.')}.dmg"
-  appcast 'http://manytricks.com/keymo/appcast.xml'
+  url 'https://manytricks.com/download/keymo'
+  appcast 'https://manytricks.com/keymo/appcast.xml',
+          checkpoint: '41b6f949a406b86dd6cbe11d7cadfb9f4242525c209d1b881a5a3c027957976c'
   name 'Keymo'
-  homepage 'http://manytricks.com/keymo'
+  homepage 'https://manytricks.com/keymo'
   license :commercial
+
+  auto_updates true
 
   app 'Keymo.app'
 
-  zap :delete => '~/Library/Preferences/com.manytricks.Keymo.plist'
+  zap delete: '~/Library/Preferences/com.manytricks.Keymo.plist'
 end

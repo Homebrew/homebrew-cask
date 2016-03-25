@@ -1,4 +1,4 @@
-cask :v1 => 'wavtap' do
+cask 'wavtap' do
   version '0.3.0'
   sha256 'b114703e407ce269070165421a81f74e64ac1730a85d829c148325b4ac1a18f6'
 
@@ -9,6 +9,6 @@ cask :v1 => 'wavtap' do
 
   pkg "WavTap.#{version}.pkg"
 
-  uninstall :pkgutil => 'com.wavtap.*',
-            :kext => 'com.wavtap.driver.WavTap'
+  uninstall pkgutil: 'com.wavtap.*',
+            kext:    'com.wavtap.driver.WavTap'
 end

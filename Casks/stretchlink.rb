@@ -1,11 +1,11 @@
-cask :v1 => 'stretchlink' do
-  version :latest
-  sha256 :no_check
+cask 'stretchlink' do
+  version '1.0.3-105'
+  sha256 'a12b8199207009a4906d5bc54992bdccc91ff9c877c4d2b8730a2153d04c8180'
 
   url 'http://stretchlinkapp.com/download/StretchLink.zip'
-  name 'StretchLink'
   appcast 'http://abyss.designheresy.com/stretchlink/stretchlink.xml',
-          :sha256 => 'e9f19089d6229af9ca9647511e76068ca8f08e990b1d85bc6922933c7dd8a497'
+          checkpoint: '50db6bf7a27a9a4fe0b3c7f802913be1dfd54cbb85c9f42c7513184c9014f0c9'
+  name 'StretchLink'
   homepage 'http://stretchlinkapp.com/'
   license :commercial
 

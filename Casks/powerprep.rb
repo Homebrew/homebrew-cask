@@ -1,4 +1,4 @@
-cask :v1 => 'powerprep' do
+cask 'powerprep' do
   version '2.2'
   sha256 'dc3f81b50084337d44a9c4531449d8f0167f653e3233ad52308ca2f79295f440'
 
@@ -9,6 +9,6 @@ cask :v1 => 'powerprep' do
 
   pkg "PowerPrepIIV#{version.gsub('.', '_')}.pkg"
 
-  uninstall :pkgutil => 'org.ets.GrePowerprepII.Applications.pkg',
-            :delete => '/Applications/POWERPREP II'
+  uninstall pkgutil: 'org.ets.GrePowerprepII.Applications.pkg',
+            delete:  '/Applications/POWERPREP II'
 end

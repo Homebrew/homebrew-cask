@@ -1,8 +1,8 @@
-cask :v1 => 'cloud' do
-  version '3.6.1'
-  sha256 '8a877c5503d5c390d01c029c1f8a2e8510455b9871da738ac957c6821cc1bdb4'
+cask 'cloud' do
+  version '3.8.2'
+  sha256 'e23e9ec5859a90d013e7f5eecfb0ae89d50efb47d2c5c6a2b36642f3c3aaecb1'
 
-  # amazonaws.com is the official download host per the vendor homepage
+  # amazonaws.com/downloads.getcloudapp.com was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/downloads.getcloudapp.com/mac/CloudApp-#{version}.dmg"
   name 'CloudApp'
   homepage 'https://getcloudapp.com/'
@@ -10,5 +10,5 @@ cask :v1 => 'cloud' do
 
   app 'CloudApp.app'
 
-  zap :delete => '~/Library/Preferences/com.linebreak.CloudAppMacOSX.plist'
+  zap delete: '~/Library/Preferences/com.linebreak.CloudAppMacOSX.plist'
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'maintenance' do
+cask 'maintenance' do
   version :latest
   sha256 :no_check
 
@@ -28,18 +28,18 @@ cask :v1 => 'maintenance' do
   homepage 'http://www.titanium.free.fr/maintenance.html'
   license :gratis
 
-  app 'Maintenance.app'
+  depends_on macos: %w[
+                      :tiger
+                      :leopard
+                      :snow_leopard
+                      :lion
+                      :mountain_lion
+                      :mavericks
+                      :yosemite
+                      :el_capitan
+                    ]
 
-  depends_on :macos => %w{
-                          :tiger
-                          :leopard
-                          :snow_leopard
-                          :lion
-                          :mountain_lion
-                          :mavericks
-                          :yosemite
-                          :el_capitan
-                         }
+  app 'Maintenance.app'
 
   caveats do
     if [:leopard, :tiger].include?(MacOS.release.to_sym)

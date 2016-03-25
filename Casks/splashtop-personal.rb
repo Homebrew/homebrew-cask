@@ -1,4 +1,4 @@
-cask :v1 => 'splashtop-personal' do
+cask 'splashtop-personal' do
   version '2.6.2.1'
   sha256 '9b0733ece58b9e36b5d4f566bbcf80e0e207ba751f0a0b188807738ba79cbbed'
 
@@ -6,9 +6,9 @@ cask :v1 => 'splashtop-personal' do
   url "https://d17kmd0va0f0mp.cloudfront.net/macclient/STP/Splashtop_Personal_v#{version}.dmg"
   name 'Splashtop Personal'
   homepage 'http://www.splashtop.com/personal'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Splashtop Personal.pkg'
 
-  uninstall :pkgutil => 'com.splashtop.stp.*'
+  uninstall pkgutil: 'com.splashtop.stp.*'
 end

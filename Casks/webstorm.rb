@@ -1,20 +1,20 @@
-cask :v1 => 'webstorm' do
-  version '11.0.2'
-  sha256 '43e0352fee07fa5b92dd22e557cb1d050ccde0cf97273e02f694930695b15134'
+cask 'webstorm' do
+  version '2016.1'
+  sha256 '0f7264f20ea845d6d4702945739d9832f6b349cc2711c1c1ba36e66403a08e5e'
 
-  url "https://download.jetbrains.com/webstorm/WebStorm-#{version}-custom-jdk-bundled.dmg"
+  url "https://download.jetbrains.com/webstorm/WebStorm-#{version}.dmg"
   name 'WebStorm'
-  homepage 'http://www.jetbrains.com/webstorm/'
+  homepage 'https://www.jetbrains.com/webstorm/'
   license :commercial
 
   app 'WebStorm.app'
 
-  zap :delete => [
-                  '~/.WebStorm11',
-                  '~/Library/Preferences/com.jetbrains.webstorm.plist',
-                  '~/Library/Preferences/WebStorm11',
-                  '~/Library/Application Support/WebStorm11',
-                  '~/Library/Caches/WebStorm11',
-                  '~/Library/Logs/WebStorm11',
-                 ]
+  zap delete: [
+                "~/.WebStorm#{version.major_minor}",
+                '~/Library/Preferences/com.jetbrains.webstorm.plist',
+                "~/Library/Preferences/WebStorm#{version.major_minor}",
+                "~/Library/Application Support/WebStorm#{version.major_minor}",
+                "~/Library/Caches/WebStorm#{version.major_minor}",
+                "~/Library/Logs/WebStorm#{version.major_minor}",
+              ]
 end

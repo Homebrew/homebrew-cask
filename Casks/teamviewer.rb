@@ -1,4 +1,4 @@
-cask :v1 => 'teamviewer' do
+cask 'teamviewer' do
   version :latest
   sha256 :no_check
 
@@ -9,17 +9,18 @@ cask :v1 => 'teamviewer' do
 
   pkg 'Install TeamViewer.pkg'
 
-  uninstall :pkgutil   => 'com.teamviewer.*',
-            :launchctl => 'com.teamviewer.service',
-            :delete    => [
-                            '/Aplications/TeamViewer.app',
-                            '/Library/LaunchAgents/com.teamviewer.teamviewer_desktop.plist',
-                            '/Library/LaunchAgents/com.teamviewer.teamviewer.plist',
-                            '/Library/LaunchDaemons/com.teamviewer.Helper.plist',
-                            '/Library/LaunchDaemons/com.teamviewer.teamviewer_service.plist',
-                          ]
-  zap       :delete    => [
-                           '~/Library/Caches/com.teamviewer.TeamViewer',
-                           '~/Library/Logs/TeamViewer',
-                          ]
+  uninstall pkgutil:   'com.teamviewer.*',
+            launchctl: 'com.teamviewer.service',
+            delete:    [
+                         '/Aplications/TeamViewer.app',
+                         '/Library/LaunchAgents/com.teamviewer.teamviewer_desktop.plist',
+                         '/Library/LaunchAgents/com.teamviewer.teamviewer.plist',
+                         '/Library/LaunchDaemons/com.teamviewer.Helper.plist',
+                         '/Library/LaunchDaemons/com.teamviewer.teamviewer_service.plist',
+                       ]
+
+  zap       delete: [
+                      '~/Library/Caches/com.teamviewer.TeamViewer',
+                      '~/Library/Logs/TeamViewer',
+                    ]
 end

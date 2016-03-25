@@ -1,4 +1,4 @@
-cask :v1 => 'screen-blacker' do
+cask 'screen-blacker' do
   version :latest
   sha256 :no_check
 

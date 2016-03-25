@@ -1,4 +1,4 @@
-cask :v1 => 'openttd' do
+cask 'openttd' do
   version '1.5.3'
   sha256 'c00610d1c480367c1aede611e97fa0886bec1d4b4318a87e4b80b7bd558830cb'
 

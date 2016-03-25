@@ -1,4 +1,4 @@
-cask :v1 => 'korean-spelling-checker' do
+cask 'korean-spelling-checker' do
   version '1.4.1'
   sha256 'f38e74be69f86c4c56aa60dfccb189e666979f519f69acbc0f5700442447661f'
 
@@ -10,7 +10,7 @@ cask :v1 => 'korean-spelling-checker' do
 
   service "Korean-Spelling-Checker-Workflow-#{version}/✔ 선택한 글의 한국어 맞춤법 검사하기.workflow"
 
-  uninstall :delete => '~/Library/Services/✔ 선택한 글의 한국어 맞춤법 검사하기.workflow'
+  uninstall delete: '~/Library/Services/✔ 선택한 글의 한국어 맞춤법 검사하기.workflow'
 
   caveats do
     <<-EOS.undent

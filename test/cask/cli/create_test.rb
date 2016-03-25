@@ -36,14 +36,14 @@ describe Hbc::CLI::Create do
     Hbc::CLI::Create.run('new-cask')
     template = File.read(Hbc.path('new-cask'))
     template.must_equal <<-TEMPLATE.undent
-      cask :v1 => 'new-cask' do
+      cask 'new-cask' do
         version ''
         sha256 ''
 
         url 'https://'
         name ''
         homepage ''
-        license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+        license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
         app ''
       end

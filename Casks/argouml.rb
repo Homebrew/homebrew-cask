@@ -1,4 +1,4 @@
-cask :v1 => 'argouml' do
+cask 'argouml' do
   version '0.34'
   sha256 '42a2e7659c4c4b4fcae4e093f65d83b13ff363c9594920c7c044601fcbb0cf24'
 
@@ -7,11 +7,9 @@ cask :v1 => 'argouml' do
   homepage 'http://argouml.tigris.org/'
   license :oss
 
-  caveats <<-EOS.undent
-    #{token} requires Java 6. You can install it with
-
-      brew cask install caskroom/homebrew-versions/java6
-  EOS
-
   app 'ArgoUML.app'
+
+  caveats do
+    depends_on_java('6')
+  end
 end

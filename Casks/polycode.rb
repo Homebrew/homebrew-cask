@@ -1,4 +1,4 @@
-cask :v1 => 'polycode' do
+cask 'polycode' do
   version '0.8.4'
   sha256 '9dfc56255fde79684376d5955142578f0ff7e36d1b59e97f58e243e27c24d698'
 
@@ -7,8 +7,8 @@ cask :v1 => 'polycode' do
   homepage 'http://polycode.org/'
   license :mit
 
-  app 'Darwin/Polycode.app'
+  depends_on macos: '>= :lion'
+  depends_on arch: :x86_64
 
-  depends_on :macos => '>= :lion'
-  depends_on :arch => :x86_64
+  app 'Darwin/Polycode.app'
 end

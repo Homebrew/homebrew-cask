@@ -1,12 +1,11 @@
-cask :v1 => 'data-science-studio' do
-  version '2.0.0'
-  sha256 '97a2e10d14a26d337ba71170ddc5e4ad6e2b3eafe36adcd02048c7da2d402774'
+cask 'data-science-studio' do
+  version '2.2.2'
+  sha256 '4644cf19ba15acfadedfed1f005d9ac9a8970a829e4fdb0c8b7f7246f69ddaef'
 
-  url "https://downloads.dataiku.com/public/studio/Data%20Science%20Studio%20#{version}.dmg"
-  name 'Data Science Studio'
+  url "https://downloads.dataiku.com/public/studio/#{version}/Data%20Science%20Studio%20#{version}.dmg"
+  name 'Dataiku Data Science Studio'
   homepage 'https://www.dataiku.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
-  tags :vendor => 'Dataiku'
+  license :gratis
 
   app 'DataScienceStudio.app'
 end

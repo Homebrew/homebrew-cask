@@ -1,11 +1,11 @@
-cask :v1 => 'loading' do
-  version :latest
-  sha256 :no_check
+cask 'loading' do
+  version '1.2.4'
+  sha256 'fe741c2a4c64cce0aa795eace1fcb2fe08c5bf3333e097406f45b52aa6f8d86c'
 
   url 'http://bonzaiapps.com/loading/Loading.zip'
-  name 'Loading'
   appcast 'http://bonzaiapps.com/loading/update.xml',
-          :sha256 => '4914e37120428d0f85c54959b027cb0ae3e9b50f9c70a1eb00b985b672756c9e'
+          checkpoint: 'b6555c1e1088889ff982cabfeaa5d7dec877b8ef4a1cd2828a08d51f58ba726b'
+  name 'Loading'
   homepage 'http://bonzaiapps.com/loading/'
   license :bsd
 

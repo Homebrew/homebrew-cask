@@ -1,6 +1,6 @@
-cask :v1 => '4k-video-downloader' do
-  version '3.7'
-  sha256 '4fc9d184adb4fa348c9008fbe81e59c24d706a6cb1d2e3d5619f4f7a3b01ca8b'
+cask '4k-video-downloader' do
+  version '3.8'
+  sha256 '2c3f3a8ff66ae73417779422b7f6784d8e45f0ead8a6d331ec27acda7b9fb17f'
 
   url "http://downloads.4kdownload.com/app/4kvideodownloader_#{version}.dmg"
   name '4K Video Downloader'

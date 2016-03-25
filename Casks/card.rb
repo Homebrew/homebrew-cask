@@ -1,4 +1,4 @@
-cask :v1 => 'card' do
+cask 'card' do
   version :latest
   sha256 :no_check
 

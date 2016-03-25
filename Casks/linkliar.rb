@@ -1,4 +1,4 @@
-cask :v1 => 'linkliar' do
+cask 'linkliar' do
   version :latest
   sha256 :no_check
 

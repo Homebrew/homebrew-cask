@@ -1,4 +1,4 @@
-cask :v1 => 'popmaker' do
+cask 'popmaker' do
   version '0.1'
   sha256 '2c24014bdca713969d49227ed6eceae0072a933421d8d60f7162f4bd4c5ac947'
 

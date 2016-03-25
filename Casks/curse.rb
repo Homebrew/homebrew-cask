@@ -1,4 +1,4 @@
-cask :v1 => 'curse' do
+cask 'curse' do
   version :latest
   sha256 :no_check
 

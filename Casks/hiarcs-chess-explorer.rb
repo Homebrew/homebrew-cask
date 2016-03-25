@@ -1,4 +1,4 @@
-cask :v1 => 'hiarcs-chess-explorer' do
+cask 'hiarcs-chess-explorer' do
   version '1.8e'
   sha256 '53dc3f7db266c1400dc2d5aab3a05eb8c503a50b4cdbc18e57d3d6d9ae0ce129'
 
@@ -9,6 +9,6 @@ cask :v1 => 'hiarcs-chess-explorer' do
 
   pkg "HIARCS-Chess-Explorer-Installer-v#{version}.pkg"
 
-  uninstall :signal => ['TERM', 'com.hiarcs.chessexplorer'],
-            :pkgutil => 'com.hiarcs.*'
+  uninstall signal:  ['TERM', 'com.hiarcs.chessexplorer'],
+            pkgutil: 'com.hiarcs.*'
 end

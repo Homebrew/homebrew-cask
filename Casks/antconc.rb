@@ -1,5 +1,4 @@
-cask :v1 => 'antconc' do
-
+cask 'antconc' do
   if MacOS.release <= :snow_leopard
     version '3.4.1'
     sha256 '03c353c059b8c0762b01d9be83f435321f5396cbf203bd8b36c6a56682b6a240'

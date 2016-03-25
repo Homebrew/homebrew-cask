@@ -1,8 +1,8 @@
-cask :v1 => 'ssh-tunnel-manager' do
-  version '2.1.3'
-  sha256 '33bf922e76c8784361814abac245920be5fd5648ec1e150f01c0b6b655d36faa'
+cask 'ssh-tunnel-manager' do
+  version '2.2'
+  sha256 '0ccd88cb309f9215c53c0cf1a133439710af15c985314d0afa20053495e6d08c'
 
-  url "http://projects.tynsoe.org/downloads/SSH%20Tunnel%20Manager-#{version}.zip"
+  url "https://ssl.tynsoe.org/stm/SSHTunnelManager-#{version}.zip"
   name 'SSH Tunnel Manager'
   homepage 'http://projects.tynsoe.org/en/stm/'
   license :gratis

@@ -1,4 +1,4 @@
-cask :v1 => 'x2goclient' do
+cask 'x2goclient' do
   version :latest
   sha256 :no_check
 

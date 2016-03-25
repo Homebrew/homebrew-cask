@@ -1,4 +1,4 @@
-cask :v1 => 'fog-burner' do
+cask 'fog-burner' do
   version :latest
   sha256 :no_check
 
@@ -7,7 +7,7 @@ cask :v1 => 'fog-burner' do
   homepage 'http://fogburner.tofumatt.com/'
   license :oss
 
-  app 'Fog Burner.app'
+  depends_on macos: '>= 10.9'
 
-  depends_on :macos => '>= 10.9'
+  app 'Fog Burner.app'
 end

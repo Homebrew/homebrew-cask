@@ -1,4 +1,4 @@
-cask :v1 => 'tateditor' do
+cask 'tateditor' do
   version :latest
   sha256 :no_check
 

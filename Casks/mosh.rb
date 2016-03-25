@@ -1,4 +1,4 @@
-cask :v1 => 'mosh' do
+cask 'mosh' do
   version '1.2.5'
   sha256 '8a590ba81edd6f706f2d0afe1cb882bd8ff8860e395b7c6ac7285306f4f12209'
 
@@ -9,5 +9,5 @@ cask :v1 => 'mosh' do
 
   pkg "mosh-#{version}.pkg"
 
-  uninstall :pkgutil => 'edu.mit.mosh.mosh.pkg'
+  uninstall pkgutil: 'edu.mit.mosh.mosh.pkg'
 end

@@ -1,9 +1,9 @@
-cask :v1 => 'trolcommander' do
-  version '0.9.6'
-  sha256 '2378192a989c83e73ffad84a93b281ba2d0f8aeaac5763a454c3d66308423904'
+cask 'trolcommander' do
+  version '0.9.7'
+  sha256 'd67cdf6c195e3885daf7d22243e4596b39dbbeb45f67c465ed3f34b2468110bd'
 
-  # github.com is the official download host per the vendor homepage
-  url "https://github.com/trol73/trol-commander-dist/blob/master/#{version}/trolcommander-#{version.gsub('.', '_')}.app.tar.gz?raw=true"
+  # github.com/trol73/mucommander was verified as official when first introduced to the cask
+  url "https://github.com/trol73/mucommander/releases/download/v#{version}/trolcommander-#{version.dots_to_underscores}.app.tar.gz?raw=true"
   name 'trolCommander'
   homepage 'http://trolsoft.ru/en/soft/trolcommander'
   license :gpl

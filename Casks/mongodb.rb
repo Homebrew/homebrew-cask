@@ -1,18 +1,19 @@
-cask :v1 => 'mongodb' do
-  version '3.2.0-build.1449793677'
-  sha256 '43fa50505f757e8f7d6e7134b456d0633ece563831b49e9962489ac2f88059d1'
+cask 'mongodb' do
+  version '3.2.4-build.1'
+  sha256 'baae264c3dd2620b399681d7e1819e766239fe21da87bda66e780ad092a474af'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/gcollazo/mongodbapp/releases/download/#{version}/MongoDB.zip"
-  appcast 'https://github.com/gcollazo/mongodbapp/releases.atom'
+  appcast 'https://github.com/gcollazo/mongodbapp/releases.atom',
+          checkpoint: '21f3d7df471a8d6ebafe2bb113cb0b35e730298dddbd077db581a4049cec612c'
   name 'MongoDB'
-  homepage 'http://elweb.co/mongodb-app/'
+  homepage 'https://elweb.co/mongodb-app/'
   license :mit
 
   app 'MongoDB.app'
 
-  zap :delete => [
-                  '~/Library/Caches/io.blimp.MongoDB',
-                  '~/Library/Preferences/io.blimp.MongoDB.plist'
-                 ]
+  zap delete: [
+                '~/Library/Caches/io.blimp.MongoDB',
+                '~/Library/Preferences/io.blimp.MongoDB.plist',
+              ]
 end

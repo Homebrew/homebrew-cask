@@ -1,10 +1,11 @@
-cask :v1 => 'purescript' do
-  version '0.7.6.1'
-  sha256 'a98ec09df6512c46ee96557bd0cf4a7937e4aabd6adf81177e7a5b4cdf061763'
+cask 'purescript' do
+  version '0.8.2'
+  sha256 '74d1c270fa7b47222c50b8937563348b129c81c237aeb35a01a5fa54aff90867'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/purescript/purescript/releases/download/v#{version}/macos.tar.gz"
-  appcast 'https://github.com/purescript/purescript/releases.atom'
+  appcast 'https://github.com/purescript/purescript/releases.atom',
+          checkpoint: '4af76b3b642bad5a57a49ecafc167e3ea928be5bd441c8269479c9e31754300f'
   name 'PureScript'
   homepage 'http://purescript.org'
   license :mit

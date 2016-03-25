@@ -1,4 +1,4 @@
-cask :v1 => 'komanda' do
+cask 'komanda' do
   version :latest
   sha256 :no_check
 

@@ -1,8 +1,10 @@
-cask :v1 => 'wordpresscom' do
-  version '1.1'
-  sha256 '2ee6503a319180895f7e75e4ff3ba06a695524e34152bdb5f6d6f39aa6c7c50c'
+cask 'wordpresscom' do
+  version '1.2.7'
+  sha256 'a7f833fee1385746eab108c58b44ff7b44a20d0cfbaf0f8ac006b420b74166a9'
 
-  url "https://public-api.wordpress.com/rest/v#{version}/desktop/osx/download?type=dmg"
+  url "https://public-api.wordpress.com/rest/v1.1/desktop/osx/download?type=app&ref=update&version=#{version}"
+  appcast 'https://public-api.wordpress.com/rest/v1.1/desktop/osx/version?compare=0.1.0&channel=stable',
+          checkpoint: 'b844f8153ce9bfff987d870b4864155a201f266dbf27fee00e61ca87a9ac3655'
   name 'WordPress.com'
   homepage 'https://desktop.wordpress.com/'
   license :gpl

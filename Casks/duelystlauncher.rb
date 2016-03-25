@@ -1,8 +1,8 @@
-cask :v1 => 'duelystlauncher' do
-  version '0.0.5'
-  sha256 'ec38c906b05a8ac74560ac0d96c4c8189876c579d485bc3af4a6ceac4ee6baad'
+cask 'duelystlauncher' do
+  version '0.0.9'
+  sha256 '76ae51672348abb779e852a831f0b1bedb289d097ebf3d6e8aea337fc65b4619'
 
-  # netdna-ssl.com is the official download host per the vendor homepage
+  # downloads-counterplaygames.netdna-ssl.com was verified as official when first introduced to the cask
   url "https://downloads-counterplaygames.netdna-ssl.com/launcher/v#{version}/DuelystLauncher-v#{version}.dmg"
   name 'Duelyst'
   homepage 'https://updates.counterplay.co/launcher'
@@ -10,12 +10,12 @@ cask :v1 => 'duelystlauncher' do
 
   app 'DuelystLauncher.app'
 
-  uninstall :delete => '~/.counterplay'
+  uninstall delete: '~/.counterplay'
 
-  zap :delete => [
-                  '~/Library/Application Support/Duelyst',
-                  '~/Library/Application Support/DuelystLauncher',
-                  '~/Library/Preferences/com.electron.duelyst.plist',
-                  '~/Library/Preferences/com.electron.duelystlauncher.plist',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Duelyst',
+                '~/Library/Application Support/DuelystLauncher',
+                '~/Library/Preferences/com.electron.duelyst.plist',
+                '~/Library/Preferences/com.electron.duelystlauncher.plist',
+              ]
 end

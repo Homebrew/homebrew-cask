@@ -1,4 +1,4 @@
-cask :v1 => 'veraport' do
+cask 'veraport' do
   version :latest
   sha256 :no_check
 
@@ -9,6 +9,6 @@ cask :v1 => 'veraport' do
 
   pkg 'veraport.pkg'
 
-  uninstall :pkgutil => 'com.wizvera.veraport.veraport.*',
-            :rmdir => '/Applications/Veraport'
+  uninstall pkgutil: 'com.wizvera.veraport.veraport.*',
+            rmdir:   '/Applications/Veraport'
 end
