@@ -1,5 +1,5 @@
 cask 'reaper' do
-  version '5.16'
+  version '5.17'
 
   if Hardware::CPU.is_32_bit?
     sha256 '1bc4ff54ee2e18bbf07dc59fc92ba0d6745f1e061162981e17225142eda2887e'
