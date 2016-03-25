@@ -10,11 +10,10 @@ cask 'vmware-fusion' do
   auto_updates true
 
   app 'VMware Fusion.app'
-  binary 'VMware Fusion.app/Contents/Library/vmnet-cfgcli'
-  binary 'VMware Fusion.app/Contents/Library/vmnet-cli'
-  binary 'VMware Fusion.app/Contents/Library/vmrun'
-  binary 'VMware Fusion.app/Contents/Library/vmware-vdiskmanager'
-  binary 'VMware Fusion.app/Contents/Library/VMware OVF Tool/ovftool'
+
+  %w[vmnet-bridge vmnet-cfgcli vmnet-cli vmnet-dhcpd vmnet-natd vmnet-netifup vmnet-sniffer vmrun vmss2core vmware-aewp vmware-authd vmware-cloneBootCamp vmware-id vmware-ntfs vmware-rawdiskAuthTool vmware-rawdiskCreator vmware-remotemks vmware-usbarbitrator vmware-vdiskmanager vmware-vmdkserver vmware-vmx vmware-vmx-debug vmware-vmx-stats VMware\ OVF\ Tool/ovftool].each do |binary|
+    binary "VMware Fusion.app/Contents/Library/#{binary}"
+  end
 
   uninstall_preflight do
     set_ownership "#{staged_path}/VMware Fusion.app"
