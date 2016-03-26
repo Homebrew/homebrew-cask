@@ -12,6 +12,19 @@ cask 'parallels-desktop' do
   postflight do
     # Set the file to visible, since it was hidden in the dmg
     system '/usr/bin/SetFile', '-a', 'v', staged_path.join('Parallels Desktop.app')
+    
+    # Run the initialization script
+    system '/usr/bin/sudo', '-E', '--',
+            staged_path.join('Parallels Desktop.app/Contents/MacOS/inittool'), 
+            'init', '-b', staged_path.join('Parallels Desktop.app')
+    
+    # Set the correct permissions on the link - remove after #13201 is solved 
+    system '/usr/bin/sudo', '-E', '--',
+            'chown', '-h', 'root:wheel', Hbc.appdir.join('Parallels Desktop.app')
+  end
+
+  uninstall_preflight do
+    set_ownership staged_path.join('Parallels Desktop.app')
   end
 
   uninstall delete: [
