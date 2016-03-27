@@ -13,7 +13,16 @@ cask 'bitcoin-xt' do
           checkpoint: '843d6ef3717eaf20b2e88f78e3eacae10dc745a0c134f34187acfdbfcfdb4d8d'
   name 'Bitcoin XT'
   homepage 'https://bitcoinxt.software/'
-  license :oss
+  license :mit
+
+  conflicts_with cask: 'bitcoin-core'
+  container type: :dmg
+
+  zap delete: '~/Library/Application Support/Bitcoin/'
+      delete: '~/Library/Preferences/org.bitcoin.Bitcoin-Qt.plist'
+
+  caveats "#{token} and Bitcoin Core will try to operate on the same Blockchain, it is not advised to run them simulatneously."
+          "Your Wallet will be deleted when use brew cask zap #{token} OR bitcoin-core. Please move wallet.dat out of ~/Library/Application Support/Bitcoin/ or use File>Backup Wallet... beforehand. If wallet.dat got lost try to recover it with Time Machine or any other System Backup existend."
 
   app 'Bitcoin-XT.app'
 end
