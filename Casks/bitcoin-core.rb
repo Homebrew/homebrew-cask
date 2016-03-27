@@ -8,14 +8,14 @@ cask 'bitcoin-core' do
   license :mit
 
   conflicts_with cask: 'bitcoin-xt'
-  container type: :dmg
-
-  zap delete: '~/Library/Application Support/Bitcoin/'
-      delete: '~/Library/Preferences/org.bitcoin.Bitcoin-Qt.plist'
-
-  caveats "#{token} and Bitcoin XT will try to operate on the same Blockchain, it is not advised to run these simulatneously."
-          "Your Wallet will be deleted when use brew cask zap #{token} OR bitcoin-xt. Please move wallet.dat out of ~/Library/Application Support/Bitcoin/ or use File>Backup Wallet... beforehand. If wallet.dat got lost try to recover it with Time Machine or any other System Backup existend."
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app 'Bitcoin-Qt.app', target: 'Bitcoin Core.app'
+
+  zap delete: [
+                '~/Library/Application Support/Bitcoin/',
+                '~/Library/Preferences/org.bitcoin.Bitcoin-Qt.plist',
+              ]
+
+  caveats "Your Wallet will be deleted when use brew cask zap #{token} OR bitcoin-xt. Please move wallet.dat out of ~/Library/Application Support/Bitcoin/ or use File>Backup Wallet... beforehand. If wallet.dat got lost try to recover it with Time Machine or any other System Backup existend."
 end
