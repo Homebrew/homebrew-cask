@@ -1,6 +1,6 @@
 cask 'dmhy' do
-  version '1.3'
-  sha256 '8c41c2b0a28f846495e550d0ffbade5d23e295491f4d04a26daa0d6f2cb9d153'
+  version '1.5-beta'
+  sha256 'f0150353409fd824545346e407a40c2b651ee3c9efbfe030763968bbcef76f6d'
 
   url "https://github.com/yaqinking/DMHY/releases/download/v#{version}/DMHY.app.zip"
   appcast 'https://github.com/yaqinking/DMHY/releases.atom',
