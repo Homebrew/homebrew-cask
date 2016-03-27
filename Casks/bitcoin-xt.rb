@@ -4,16 +4,20 @@ cask 'bitcoin-xt' do
 
   # github.com/bitcoinxt/bitcoinxt was verified as official when first introduced to the cask
   url "https://github.com/bitcoinxt/bitcoinxt/releases/download/v#{version}/BitcoinXT-#{version}.dmg",
-      referer: 'https://github.com/bitcoinxt/bitcoinxt/releases/',
       cookies: {
                  'i_follow_redirects' => 'yes',
-                 'logged_in'          => 'no',
                }
   appcast 'https://github.com/bitcoinxt/bitcoinxt/releases.atom',
           checkpoint: '843d6ef3717eaf20b2e88f78e3eacae10dc745a0c134f34187acfdbfcfdb4d8d'
   name 'Bitcoin XT'
   homepage 'https://bitcoinxt.software/'
-  license :oss
+  license :mit
+
+  conflicts_with cask: 'bitcoin-core'
 
   app 'Bitcoin-XT.app'
+
+  zap delete: [
+                '~/Library/Preferences/org.bitcoin.Bitcoin-Qt.plist',
+              ]
 end

@@ -7,6 +7,12 @@ cask 'bitcoin-core' do
   homepage 'https://bitcoin.org/'
   license :mit
 
+  conflicts_with cask: 'bitcoin-xt'
+
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app 'Bitcoin-Qt.app', target: 'Bitcoin Core.app'
+
+  zap delete: [
+                '~/Library/Preferences/org.bitcoin.Bitcoin-Qt.plist',
+              ]
 end
