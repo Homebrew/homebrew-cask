@@ -1,11 +1,11 @@
 cask 'medis' do
-  version '0.2.1'
-  sha256 '222226a17c0a2902be6b91e2296e74f9c3b0bce6f58932b989449376dec3ee2e'
+  version '0.3.0'
+  sha256 'bbf189533a4fdd8454445fbd9d0abb7fb18f44fd6d0d064d0dfb32778e6974de'
 
   # github.com/luin/medis was verified as official when first introduced to the cask
   url "https://github.com/luin/medis/releases/download/v#{version}/medis-v#{version}-mac-x64.zip"
   appcast 'https://github.com/luin/medis/releases.atom',
-          checkpoint: 'e80efcbecdeaa3ad3edf97c013b96e2f2a1656a2486de2200d52bb568f697055'
+          checkpoint: '206fef0808fa2ddef710f8e61e4cebce087266ce00568563693505af88df84e5'
   name 'Medis'
   homepage 'http://getmedis.com/'
   license :mit
