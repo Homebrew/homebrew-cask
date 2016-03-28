@@ -1,11 +1,11 @@
 cask 'edgeview' do
-  version '0.9998'
-  sha256 'ee59450920a169ff64b6ff8c258648f1e4ee294242401d1769bd7fd36dc228e4'
+  version '0.9999'
+  sha256 '25ad46a6e90d97f89d80a3b24ffd1ac361004772990880c531f9095d6976bada'
 
   # dropboxusercontent.com/u/168552 was verified as official when first introduced to the cask
   url "https://dl.dropboxusercontent.com/u/168552/edgeViewUpdate/files/EdgeView_#{version.minor}.zip"
   appcast 'https://dl.dropboxusercontent.com/u/168552/edgeViewUpdate/edgeView_update.xml',
-          checkpoint: '3e1af95c9d64ba5e39f004d61ddb4da416171a04bc45a2fa5cf9e3489e1771ab'
+          checkpoint: '4bc735f9b4042e6bc67067de3ef236c30c831e375f9ad99cd780790bcbf8e94b'
   name 'EdgeView'
   homepage 'https://edgehigh.wordpress.com'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
