@@ -9,11 +9,14 @@ cask 'intellij-idea' do
 
   app 'IntelliJ IDEA.app'
 
+  uninstall delete: '/usr/local/bin/idea'
+
   zap delete: [
-                "~/Library/Caches/IntelliJIdea#{version}",
-                "~/Library/Logs/IntelliJIdea#{version}",
-                "~/Library/Application Support/IntelliJIdea#{version}",
-                "~/Library/Preferences/IntelliJIdea#{version}",
-                '~/Library/Preferences/com.jetbrains.intellij.plist',
+                "~/.IntelliJIdea#{version.major_minor}",
+                "~/Library/Caches/IntelliJIdea#{version.major_minor}",
+                "~/Library/Logs/IntelliJIdea#{version.major_minor}",
+                "~/Library/Application Support/IntelliJIdea#{version.major_minor}",
+                "~/Library/Preferences/IntelliJIdea#{version.major_minor}",
+                # TODO: expand/glob for '~/Library/Preferences/jetbrains.intellij.*.plist',
               ]
 end
