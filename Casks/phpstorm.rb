@@ -9,10 +9,14 @@ cask 'phpstorm' do
 
   app 'PhpStorm.app'
 
+  uninstall delete: '/usr/local/bin/pstorm'
+
   zap delete: [
-                "~/Library/Preferences/PhpStorm#{version}",
-                "~/Library/Caches/PhpStorm#{version}",
-                "~/Library/Logs/PhpStorm#{version}",
-                "~/Library/Application Support/PhpStorm#{version}",
+                "~/.PhpStorm#{version.major_minor}",
+                "~/Library/Preferences/PhpStorm#{version.major_minor}",
+                "~/Library/Caches/PhpStorm#{version.major_minor}",
+                "~/Library/Logs/PhpStorm#{version.major_minor}",
+                "~/Library/Application Support/PhpStorm#{version.major_minor}",
+                # TODO: expand/glob for '~/Library/Preferences/jetbrains.phpstorm.*.plist',
               ]
 end
