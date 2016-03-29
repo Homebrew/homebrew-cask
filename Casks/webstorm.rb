@@ -9,9 +9,11 @@ cask 'webstorm' do
 
   app 'WebStorm.app'
 
+  uninstall delete: '/usr/local/bin/wstorm'
+
   zap delete: [
                 "~/.WebStorm#{version.major_minor}",
-                '~/Library/Preferences/com.jetbrains.webstorm.plist',
+                # TODO: expand/glob for '~/Library/Preferences/jetbrains.webstorm.*.plist',
                 "~/Library/Preferences/WebStorm#{version.major_minor}",
                 "~/Library/Application Support/WebStorm#{version.major_minor}",
                 "~/Library/Caches/WebStorm#{version.major_minor}",
