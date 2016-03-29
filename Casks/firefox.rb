@@ -1,8 +1,8 @@
 cask 'firefox' do
   version '45.0.1'
-  sha256 '2eb674c00e35357dcb18a5642f19422cf086e72d42562346ae48aa1e3f29802a'
+  sha256 '4ffe9b87c5474555d6ca29e4b44725b2d1f71a873b84e4883119516d8657cac4'
 
-  url "https://ftp.mozilla.org/pub/firefox/releases/#{version.major_minor}/mac/en-US/Firefox%20#{version.major_minor}.dmg"
+  url "https://ftp.mozilla.org/pub/firefox/releases/#{version}/mac/en-US/Firefox%20#{version}.dmg"
   appcast "https://aus5.mozilla.org/update/3/Firefox/#{version}/0/Darwin_x86_64-gcc3-u-i386-x86_64/en-US/release/Darwin%2015.3.0/default/default/update.xml?force=1",
           checkpoint: '9aa94b34be9931f59c0d24a5b9088a886f6fae79095a6ba880c673a236f22457'
   name 'Mozilla Firefox'
