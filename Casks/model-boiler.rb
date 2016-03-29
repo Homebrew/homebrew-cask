@@ -1,10 +1,10 @@
 cask 'model-boiler' do
-  version '2.1.2'
-  sha256 '8169af020a1354ee1ee688da28d5dcde741e342dff73ab17a1fa94dcfa7d4d1e'
+  version '2.1.4'
+  sha256 'b011941c628ae91db76c54558ad57d07bdbe13e8770971f40ce6d368d597ce55'
 
   url "https://github.com/nodes-ios/ModelBoiler/releases/download/#{version}/Model.Boiler.app.zip"
   appcast 'https://github.com/nodes-ios/ModelBoiler/releases.atom',
-          checkpoint: '9f66dbb98f73f69f4a1759d4bdb8d2552060d599548427740e239ca45185fe5c'
+          checkpoint: 'caab25cfbcd8bee242b06520f21023b847400a1fbd62db9b342480a1352b9b0e'
   name 'ModelBoiler'
   homepage 'https://github.com/nodes-ios/ModelBoiler'
   license :mit
