@@ -31,7 +31,5 @@ cask 'google-nik-collection' do
                 '/Library/Preferences/Google/Sharpener Pro 3',
                 '/Library/Preferences/Google/Silver Efex Pro 2',
               ],
-      rmdir:  [
-                '/Library/Preferences/Google',
-              ]
+      rmdir:  '/Library/Preferences/Google'
 end
