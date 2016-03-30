@@ -31,7 +31,7 @@ cask-repair --help
 
 # use to update <outdated_cask>
 outdated_cask='<the-cask-i-want-to-update>'
-github_user='<your-github-user>'
+github_user='<my-github-username>'
 cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Casks"
 
 # Fork homebrew-cask to your account
