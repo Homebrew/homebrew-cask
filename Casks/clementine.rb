@@ -1,13 +1,16 @@
-class Clementine < Cask
+cask 'clementine' do
   version '1.2.2'
   sha256 '7e3dac7fb184058e69afbf9cf68850debbbacdfbbd3023fbcdce7c159a2eed75'
 
+  # github.com/clementine-player/Clementine was verified as official when first introduced to the cask
   url "https://github.com/clementine-player/Clementine/releases/download/#{version}/clementine-#{version}.dmg"
-  appcast 'https://clementine-data.appspot.com/sparkle',
-          :sha256 => 'aa4ef8bb841b9eea028181b5a884073fe51893f4a15d7061eb84f117ff161383'
-  homepage 'http://www.clementine-player.org/'
-  license :oss
+  appcast 'https://github.com/clementine-player/Clementine/releases.atom',
+          checkpoint: '460ea33daaedccd5c58ce4cda1ace8c86827ba3533dac9a5d0ca0df5e1e1f875'
+  name 'Clementine'
+  homepage 'https://www.clementine-player.org/'
+  license :gpl
 
   app 'clementine.app'
-  zap :delete => '~/Library/Preferences/org.clementine-player.Clementine.plist'
+
+  zap delete: '~/Library/Preferences/org.clementine-player.Clementine.plist'
 end

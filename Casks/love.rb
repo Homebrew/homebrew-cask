@@ -1,10 +1,13 @@
-class Love < Cask
-  version '0.9.1'
-  sha256 '40dfeb1069f6c056b06d0e87c64f3950fd1b1523a9e19af2b03912a5d5c03b13'
+cask 'love' do
+  version '0.10.1'
+  sha256 '8412f6c451a60118527a42423a99e4583da79b5ff4dd18900755f97527ac1725'
 
+  # bitbucket.org/rude/love was verified as official when first introduced to the cask
   url "https://bitbucket.org/rude/love/downloads/love-#{version}-macosx-x64.zip"
-  homepage 'http://love2d.org'
+  name 'LÖVE'
+  homepage 'https://love2d.org/'
   license :oss
 
   app 'love.app'
+  binary 'love.app/Contents/MacOS/love'
 end

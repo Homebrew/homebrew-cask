@@ -1,12 +1,14 @@
-class Biicode < Cask
-  version '1.10.1'
-  sha256 'd7d040c7f39618d032620dbc6011cdc824443e93c2c6a6528e263c4351656de1'
+cask 'biicode' do
+  version '3.3'
+  sha256 'ada000955e41d6267f61305d9744c75769e087b1972f8ae6d2c25cdb38960ea5'
 
-  # amazonaws is the official download host per the vendor homepage
+  # amazonaws.com/biibinaries was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/biibinaries/release/#{version}/bii-macos-64_#{version.gsub('.', '_')}.pkg"
-  homepage 'http://www.biicode.com'
+  name 'Biicode'
+  homepage 'https://www.biicode.com/'
   license :closed
 
   pkg "bii-macos-64_#{version.gsub('.', '_')}.pkg"
-  uninstall :pkgutil => 'biicode'
+
+  uninstall pkgutil: 'biicode'
 end

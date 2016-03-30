@@ -1,10 +1,11 @@
-class Virustotaluploader < Cask
-  version '1.1'
-  sha256 'e757f8eb49592dfe67169a5582bcc3cca01c8ecc6634853398813a2aa92f24a7'
+cask 'virustotaluploader' do
+  version '1.3'
+  sha256 '6009c81e0d87b64f56e64ff3137f37fe61ae3b9b792b3700b37e4c55473da5d4'
 
   url "https://www.virustotal.com/static/bin/VirusTotalUploader_#{version}.dmg"
+  name 'VirusTotalUploader'
   homepage 'https://www.virustotal.com/'
-  license :unknown
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'VirusTotalUploader.app'
 end

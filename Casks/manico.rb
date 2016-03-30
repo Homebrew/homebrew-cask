@@ -1,12 +1,17 @@
-class Manico < Cask
-  version '1.4.1'
-  sha256 'e29c4b0ccba830f0296fbec27122b2016c6dae0f76d5635d5d080d2031fe2d88'
+cask 'manico' do
+  version '2.0.1'
+  sha256 '14171ca3d2b0dcebdbc63f2c3b905f54b1134455d835f3ba1dfebeca8bfa0f1b'
 
   url "http://manico.im/static/Manico_#{version}.dmg"
-  appcast 'http://manico.im/static/manico-appcast.xml',
-          :sha256 => 'c42b1494a355c603ad4eadbc229af7b12814989f6e760e2d67dbdebcbb121178'
+  appcast 'http://manico.im/static/manico-official-appcast.xml',
+          checkpoint: '0c20ba7f38321babd46cde6d61497690aa17068ebb5d03b8e678240413a04f97'
+  name 'Manico'
   homepage 'http://manico.im/'
-  license :unknown
+  license :commercial
 
   app 'Manico.app'
+
+  zap delete: [
+                '~/Library/Containers/im.manico.Manico',
+              ]
 end

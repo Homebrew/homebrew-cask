@@ -1,9 +1,9 @@
-class Pingendo < Cask
-  version '0.9.8'
-  sha256 '225fff0bdcceba47f2a070f288e9cd050457b4c0fd6338ca6ae0ed39704652cf'
+cask 'pingendo' do
+  version :latest
+  sha256 :no_check
 
-  # rackcdn is the official download host per the vendor homepage
-  url 'http://4fc04c8ebf126ab04f53-f320bffcc167100f6f16c7bb13352e54.r56.cf2.rackcdn.com/Pingendo.dmg'
+  url 'http://pingendo.com/Pingendo.dmg'
+  name 'Pingendo'
   homepage 'http://www.pingendo.com/'
   license :closed
 

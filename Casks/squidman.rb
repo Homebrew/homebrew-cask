@@ -1,10 +1,11 @@
-class Squidman < Cask
-  version '3.51'
-  sha256 '0bbbe1c8f26902450e62fe47e17f68f278b033355311ef295d52951feb3b6820'
+cask 'squidman' do
+  version '3.6'
+  sha256 '26544fbad48dc29dd7ea154cd48e02fa08f673bda3ff173557b8f04f1c334e43'
 
   url "http://squidman.net/resources/downloads/SquidMan#{version}.dmg"
+  name 'SquidMan'
   homepage 'http://squidman.net/squidman/'
-  license :unknown
+  license :gratis
 
   app 'SquidMan.app'
 end

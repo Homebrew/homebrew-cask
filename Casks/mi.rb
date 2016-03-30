@@ -1,10 +1,11 @@
-class Mi < Cask
-  version '2.1.12r3'
-  sha256 'e70fa0ee864d78848633acc332e96c20310f87ee50ee541a4b07eaa87cb2165b'
+cask 'mi' do
+  version '2.1.12r5'
+  sha256 'f594e33451fd70cf16c36af205f59294609d910836a91c877e9d2f74261b5d38'
 
   url "http://www.mimikaki.net/download/mi#{version}.dmg"
-  homepage 'http://www.mimikaki.net/'
-  license :unknown
+  name 'Mi'
+  homepage 'http://www.mimikaki.net/en/index.html'
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'mi.app'
 end

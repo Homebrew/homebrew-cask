@@ -1,19 +1,19 @@
-class P4v < Cask
-  version '2014.1-888424'
+cask 'p4v' do
+  version '2015.2-1312139'
+  sha256 '6f64cca4e84d344c5f420e58a72bd07c4fbf5f3eb9665b165acd8baa36c18eb9'
 
-  if Hardware::CPU.is_32_bit?
-    sha256 '03b716dde2c39f4214c1b9b016e151225d8830e2e555b30234c5f9c1d2940a78'
-    url "http://filehost.perforce.com/perforce/r#{version.sub(%r{\A20(\d\d\.\d+).*},'\1')}/bin.macosx106x86/P4V.dmg"
-  else
-    sha256 'c5d05d78596fe9b4f83193a11805a027b2652fdf87365de1321e671286fdca3f'
-    url "http://filehost.perforce.com/perforce/r#{version.sub(%r{\A20(\d\d\.\d+).*},'\1')}/bin.macosx106x86_64/P4V.dmg"
-  end
-
-  homepage 'http://www.perforce.com/product/components/perforce-visual-client'
-  license :unknown
+  url "http://filehost.perforce.com/perforce/r#{version.sub(%r{\A20(\d\d\.\d+).*}, '\1')}/bin.macosx107x86_64/P4V.dmg"
+  name 'Perforce Visual Client'
+  name 'P4V'
+  homepage 'https://www.perforce.com/product/components/perforce-visual-client'
+  license :gratis
 
   app 'p4v.app'
   binary 'p4vc'
 
-  caveats 'p4merge is in a separate Cask'
+  zap delete: [
+                '~/Library/Preferences/com.perforce.p4v',
+                '~/Library/Preferences/com.perforce.p4v.plist',
+                '~/Library/Saved Application State/com.perforce.p4v.savedState',
+              ]
 end

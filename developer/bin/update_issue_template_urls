@@ -1,0 +1,106 @@
+#!/usr/bin/env bash
+#
+# update_issue_template_urls
+#
+
+###
+### settings
+###
+
+set -e                # exit on uncaught error
+set +o histexpand     # don't expand history expressions
+shopt -s nocasematch  # case-insensitive regular expressions
+
+###
+### constants
+###
+
+script_subdir='developer/bin'
+template_subdir='doc/issue_templates'
+generate_url_script='generate_issue_template_urls'
+files_to_update=('README.md')
+
+###
+### functions
+###
+
+warn () {
+    local message="$*"
+    message="${message//\\t/$'\011'}"
+    message="${message//\\n/$'\012'}"
+    message="${message%${message##*[![:space:]]}}"
+    printf "%s\n" "$message" 1>&2
+}
+
+die () {
+    warn "$@"
+    exit 1
+}
+
+usage () {
+    printf "update_issue_template_urls
+
+Regenerate issue template URLs and update them in relevant files.
+
+Note: docs using issue template URLs must use a specific format.
+If the template file is called 'bug_report.md', the URL must be
+referenced in the doc as follows:
+
+  [Some link text][bug_report_template]
+
+  ...
+
+  [bug_report_template]: (auto-generated-url)
+
+"
+}
+
+cd_to_project_root () {
+    local script_dir git_root
+    script_dir="$(/usr/bin/dirname "$0")"
+    cd "$script_dir"
+    git_root="$(git rev-parse --show-toplevel)"
+    if [[ -z "$git_root" ]]; then
+        die "ERROR: Could not find git project root"
+    fi
+    cd "$git_root"
+}
+
+generate_template_url () {
+    local template_file="$1"
+    "$script_subdir/$generate_url_script" "$template_file"
+}
+
+update_template_url () {
+    local template_name="$1"
+    local template_url="$2"
+    local escaped_template_url="${template_url/&/\\&}"
+
+    /usr/bin/sed -i '' \
+                 -e "s|^\\(\\[${template_name}_template\\]: \\).*$|\\1${escaped_template_url}|g" \
+                 -- "${files_to_update[@]}"
+}
+
+###
+### main
+###
+
+_update_issue_template_urls () {
+    local template_file template_name template_url
+    cd_to_project_root
+    for template_file in ./$template_subdir/*; do
+        template_name="${template_file##*/}"
+        template_name="${template_name%%.*}"
+        template_url="$(generate_template_url "$template_file")"
+        update_template_url "$template_name" "$template_url"
+    done
+}
+
+# process args
+if [[ $1 =~ ^-+h(elp)?$ ]]; then
+    usage
+    exit
+fi
+
+# dispatch main
+_update_issue_template_urls

@@ -1,14 +1,22 @@
-class Pycharm < Cask
-  version '3.4.1'
-  sha256 'f2af3859b0376927f591d5eac3b8d2c8196d712af811f27cc269965a03324a78'
+cask 'pycharm' do
+  version '2016.1'
+  sha256 'a07eab762373b5e119157eb3ffbfc6f8f7f754f80f01cf6249c997694c85cb1e'
 
-  url "http://download.jetbrains.com/python/pycharm-professional-#{version}.dmg"
-  homepage 'http://www.jetbrains.com/pycharm/'
-  license :unknown
+  url "https://download.jetbrains.com/python/pycharm-professional-#{version}.dmg"
+  name 'PyCharm'
+  homepage 'https://www.jetbrains.com/pycharm/'
+  license :commercial
 
   app 'PyCharm.app'
 
-  postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{destination_path}/PyCharm.app/Contents/Info.plist"
-  end
+  uninstall delete: '/usr/local/bin/charm'
+
+  zap delete: [
+                "~/.PyCharm#{version.major_minor}",
+                # TODO: expand/glob for '~/Library/Preferences/jetbrains.pycharm.*.plist',
+                "~/Library/Preferences/PyCharm#{version.major_minor}",
+                "~/Library/Application Support/PyCharm#{version.major_minor}",
+                "~/Library/Caches/PyCharm#{version.major_minor}",
+                "~/Library/Logs/PyCharm#{version.major_minor}",
+              ]
 end

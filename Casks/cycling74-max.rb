@@ -1,12 +1,13 @@
-class Cycling74Max < Cask
-  version '6.1.7-140421'
-  sha256 'deb3070e0161e074c7ee91861e06cfeec2c1dc85eb715e476797d026821c32c9'
+cask 'cycling74-max' do
+  version '7.2.1_160310'
+  sha256 '6bf08e7c526b0bfe267a172155df695b73cd449a349867250c76729c9e48f6e6'
 
-  url "https://akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com/Max#{version.sub('-','_').gsub('.','')}.dmg"
-  homepage 'http://cycling74.com'
-  license :unknown
+  # akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com was verified as official when first introduced to the cask
+  url "https://akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com/Max#{version.no_dots}.dmg"
+  name 'Cycling ‘74 Max'
+  name 'Ableton Max for Live'
+  homepage 'https://cycling74.com/'
+  license :commercial
 
-  pkg "Max #{version.sub(%r{^(\d+\.\d+).*},'\1')} Installer.pkg"
-  uninstall :pkgutil => 'com.cycling74.Max*',
-            :delete  => '/Applications/Max 6.1'
+  app 'Max.app'
 end

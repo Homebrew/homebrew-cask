@@ -1,10 +1,13 @@
-class Openscad < Cask
-  version '2014.03'
-  sha256 'c324c19c2d36f21517b602f8ae2ec04fa14c90896c91fc8dbb37aed5b3ba16bd'
+cask 'openscad' do
+  version '2015.03-3'
+  sha256 '1f2e8e52e04bbb6d3b2c8699d314d1ca28d2fcf68164eca7d0a20e248cee01a7'
 
   url "http://files.openscad.org/OpenSCAD-#{version}.dmg"
+  appcast 'http://files.openscad.org/appcast.xml',
+          checkpoint: '1a0eefd0abc2d841c405c946a5fab130cf3e5f539b0d445f95210fc0d46202ed'
+  name 'OpenSCAD'
   homepage 'http://www.openscad.org/'
-  license :unknown
+  license :gpl
 
   app 'OpenSCAD.app'
 end

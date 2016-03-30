@@ -1,14 +1,16 @@
-class Wireshark < Cask
-  version '1.12.1'
-  sha256 '3ce749efbcf89dd72b4e1c2336f4edd7111e05ce9cad8da2df189ac4e56fa1b7'
+cask 'wireshark' do
+  version '2.0.2'
+  sha256 'd0f175b8e49611940e9e069aafdec84f1337385ee0edb4b5346f307291deb593'
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
-  homepage 'http://www.wireshark.org'
-  license :unknown
+  name 'Wireshark'
+  homepage 'https://www.wireshark.org/'
+  license :gpl
 
   pkg "Wireshark #{version} Intel 64.pkg"
+
   postflight do
-    if Process.euid == 0 then
+    if Process.euid == 0
       ohai 'Note:'
       puts <<-EOS.undent
         You executed 'brew cask' as the superuser.
@@ -21,25 +23,21 @@ class Wireshark < Cask
     end
   end
 
-  uninstall :script  => {
-                         :executable => '/usr/sbin/dseditgroup',
-                         :args => ['-o', 'delete', 'access_bpf'],
-                        },
-            :pkgutil => 'org.wireshark.*',
-            :delete  => [
-                         '/usr/local/bin/capinfos',
-                         '/usr/local/bin/dftest',
-                         '/usr/local/bin/dumpcap',
-                         '/usr/local/bin/editcap',
-                         '/usr/local/bin/mergecap',
-                         '/usr/local/bin/randpkt',
-                         '/usr/local/bin/rawshark',
-                         '/usr/local/bin/text2pcap',
-                         '/usr/local/bin/tshark',
-                         '/usr/local/bin/wireshark',
-                        ]
-
-  caveats do
-    x11_required
-  end
+  uninstall script:  {
+                       executable: '/usr/sbin/dseditgroup',
+                       args:       ['-o', 'delete', 'access_bpf'],
+                     },
+            pkgutil: 'org.wireshark.*',
+            delete:  [
+                       '/usr/local/bin/capinfos',
+                       '/usr/local/bin/dftest',
+                       '/usr/local/bin/dumpcap',
+                       '/usr/local/bin/editcap',
+                       '/usr/local/bin/mergecap',
+                       '/usr/local/bin/randpkt',
+                       '/usr/local/bin/rawshark',
+                       '/usr/local/bin/text2pcap',
+                       '/usr/local/bin/tshark',
+                       '/usr/local/bin/wireshark',
+                     ]
 end

@@ -1,10 +1,12 @@
-class Jedit < Cask
-  version '5.1.0'
-  sha256 '29922afea1411631436f5f1154e45ddf8d3f6db53c9e41b832cefe86f8b81446'
+cask 'jedit' do
+  version '5.3.0'
+  sha256 '9ef706449951c8904ed7504294c3d854aaaf73f3fd8059dd8d4803036829f9f7'
 
-  url "https://downloads.sourceforge.net/sourceforge/jedit/jedit#{version}install.dmg"
+  # sourceforge.net/sourceforge/jedit was verified as official when first introduced to the cask
+  url "http://downloads.sourceforge.net/sourceforge/jedit/jedit#{version}install.dmg"
+  name 'jEdit'
   homepage 'http://www.jedit.org'
-  license :oss
+  license :gpl
 
   app 'jEdit.app'
 end

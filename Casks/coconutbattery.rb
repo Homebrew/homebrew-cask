@@ -1,23 +1,30 @@
-class Coconutbattery < Cask
-
-  if MacOS.version < :leopard
+cask 'coconutbattery' do
+  if MacOS.release <= :tiger
     version '2.6.6'
     sha256 '8d235b237e42754ceda26af2babc160fd23f890d0fe6d7780b86a8e9c6effe42'
-    url "http://www.coconut-flavour.com/downloads/coconutBattery_#{version}.zip"
-  elsif MacOS.version < :lion
+    url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version}.zip"
+  elsif MacOS.release <= :snow_leopard
     version '2.8'
     sha256 'fcfc81214ff26afff9f5c6c7cdc455b23ac898b6918f864b641a9e31526692d4'
-    url "http://www.coconut-flavour.com/downloads/coconutBattery_#{version}.zip"
+    url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version}.zip"
   else
-    version '3.1.2'
-    sha256 'c055686223771c3a719f59518c46f18a4ca36d6e114700c6880394ce7e0e28ba'
-    url "http://www.coconut-flavour.com/downloads/coconutBattery_#{version.gsub('.','_')}.zip"
+    version '3.3.1'
+    sha256 '8eed5b5ae5b8aad993e152fd69c23d1617590eb705b66576b33fc2d252c99a15'
+    url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version.dots_to_underscores}.zip"
     appcast 'http://updates.coconut-flavour.com/coconutBatteryIntel.xml',
-            :sha256 => '37968aee16f6fb0a705d68bfa2418083dd9768a4b5477ce8ec6e6b74ef26704c'
+            checkpoint: 'd15fe1f11c580ed4820cb60bf16adbc2c2e5fc45c3b6190fc41566198f1931aa'
   end
 
-  homepage 'http://www.coconut-flavour.com/coconutbattery/'
-  license :unknown
+  name 'coconutBattery'
+  homepage 'https://www.coconut-flavour.com/coconutbattery/'
+  license :bsd
 
   app 'coconutBattery.app'
+
+  zap delete: [
+                '~/Library/Application Support/coconutBattery',
+                '~/Library/Caches/com.coconut-flavour.coconutBattery',
+                '~/Library/Preferences/com.coconut-flavour.coconutBattery.plist',
+                '~/Library/Saved Application State/com.coconut-flavour.coconutBattery.savedState',
+              ]
 end

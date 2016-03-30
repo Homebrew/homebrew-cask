@@ -1,10 +1,11 @@
-class Teensy < Cask
-  version '1.17'
-  sha256 'da5a499303fb8f7ba95ff9f9a69b96f65280870ccff8f71d4dded00a5770f502'
+cask 'teensy' do
+  version '1.21'
+  sha256 '8a273dc915afa5752b9283168819dc0191462d4bd7eb990748a87e90d4b9baa8'
 
   url 'https://www.pjrc.com/teensy/teensy.dmg'
-  homepage 'http://pjrc.com/teensy/loader_mac.html'
-  license :unknown
+  name 'Teensy'
+  homepage 'https://pjrc.com/teensy/loader_mac.html'
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'teensy.app'
 end

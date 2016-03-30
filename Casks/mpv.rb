@@ -1,20 +1,38 @@
-class Mpv < Cask
-  version '0.5.3'
-  sha256 'f0d89bec6265165b84279e200af2ad09e6784ed2966df91ce6d757f3cbe93bb9'
+cask 'mpv' do
+  version '0.14.0'
+  sha256 '1ab1e2dafd117041e0d1d766285d8ee76bdc6d4c151ef9fb11d3ec0652762eb6'
 
+  # github.com is the official download host per the vendor homepage
   url "https://github.com/mpv-player/mpv/releases/download/v#{version}/mpv_#{version}_mac.tar.bz2"
-  homepage 'http://mpv.io/'
+  appcast 'https://github.com/mpv-player/mpv/releases.atom',
+          checkpoint: '1dc7e5fbbb50bd58a73b9e7284e99fe76f328f9971d50a22e340ef8dd842c4f3'
+  name 'mpv'
+  homepage 'https://mpv.io/'
   license :gpl
 
   app 'mpv.app'
   binary 'mpv.app/Contents/MacOS/mpv'
 
-  zap :delete => [
-                  '~/.mpv/channels.conf',
-                  '~/.mpv/config',
-                  '~/.mpv/input.conf',
-                 ],
-      :rmdir  => '~/.mpv'
+  # Symlink fonts.conf to user dir so mpv doesn't show errors while used as CLI app.
+  # Original discussion: https://github.com/mpv-player/mpv/issues/1391
+  postflight do
+    system '/bin/ln', '-nsf', '--', staged_path.join('mpv.app/Contents/Resources/fonts.conf'), File.expand_path('~/.config/mpv/fonts.conf')
+  end
+
+  zap delete: [
+                '~/.mpv/channels.conf',
+                '~/.mpv/config',
+                '~/.mpv/input.conf',
+                '~/.mpv/fonts.conf',
+                '~/.config/mpv/channels.conf',
+                '~/.config/mpv/mpv.conf',
+                '~/.config/mpv/input.conf',
+                '~/.config/mpv/fonts.conf',
+              ],
+      rmdir:  [
+                '~/.mpv',
+                '~/.config/mpv',
+              ]
 
   caveats do
     files_in_usr_local

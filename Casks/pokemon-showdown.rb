@@ -1,10 +1,11 @@
-class PokemonShowdown < Cask
+cask 'pokemon-showdown' do
   version :latest
   sha256 :no_check
 
-  url 'http://pokemonshowdown.com/files/pokemonshowdown-mac.zip'
+  url 'https://pokemonshowdown.com/files/pokemonshowdown-mac.zip'
+  name 'Pokémon Showdown'
   homepage 'http://pokemonshowdown.com'
-  license :unknown
+  license :mit
 
   app 'Pokemon Showdown.app'
 end

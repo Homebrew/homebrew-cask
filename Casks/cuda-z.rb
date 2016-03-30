@@ -1,10 +1,11 @@
-class CudaZ < Cask
-  version '0.8.207'
-  sha256 '5dcb79ada1fe872cf849e050e5c60471fca9ba18178ecf5819859e6990e96196'
+cask 'cuda-z' do
+  version '0.10.251'
+  sha256 '552081ce1f632a72231dedeb6c3ddb02b352d0b19eea45f9ae27d930ee9d7c35'
 
-  url "https://downloads.sourceforge.net/sourceforge/cuda-z/CUDA-Z-#{version}.dmg"
+  url "http://downloads.sourceforge.net/sourceforge/cuda-z/CUDA-Z-#{version}.dmg"
+  name 'CUDA-Z'
   homepage 'http://cuda-z.sourceforge.net'
-  license :oss
+  license :gpl
 
-  app 'Cuda-Z.app'
+  app 'CUDA-Z.app'
 end

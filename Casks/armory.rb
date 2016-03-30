@@ -1,8 +1,9 @@
-class Armory < Cask
-  version '0.92.3'
-  sha256 '25aac165bcdfc326ca36e630e9676dd1b116b246209e7bc9b646001977deb947'
+cask 'armory' do
+  version '0.93.3'
+  sha256 'ecadb37e43f86a06815f0bc0cec8708b64fd3b53d9c01d7c939d2c941a5e8e91'
 
-  url "https://s3.amazonaws.com/bitcoinarmory-releases/armory_#{version}_osx.tar.gz"
+  url "https://www.bitcoinarmory.com/downloads/bitcoinarmory-releases/armory_#{version}_osx.tar.gz"
+  name 'Armory'
   homepage 'https://bitcoinarmory.com/'
   license :affero
 

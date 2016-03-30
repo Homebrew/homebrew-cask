@@ -1,4 +1,4 @@
-class MissingChecksum < TestCask
+test_cask 'missing-checksum' do
   version '1.2.3'
 
   url TestHelper.local_binary_url('caffeine.zip')

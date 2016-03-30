@@ -8,9 +8,9 @@
 #
 
 command_name = ARGV.shift
-cask_name = ARGV.shift
+cask_token = ARGV.shift
 
-cask = Cask.load(cask_name)
+cask = Hbc.load(cask_token)
 
-Cask.debug = true
+Hbc.debug = true
 cask.dumpcask

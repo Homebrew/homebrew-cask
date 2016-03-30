@@ -1,17 +1,18 @@
-class LittleSnitch < Cask
-  version '3.4.2'
-  sha256 'ddb2e739334d759508bb356ae7b18a3228664fd5a6d5aff39d355f8c0d23e8b3'
+cask 'little-snitch' do
+  version '3.6.3'
+  sha256 'ea490f6ed187e2989a59706891527b9dce67d12d39d97f96777dc2474d2f0933'
 
-  url "http://www.obdev.at/downloads/LittleSnitch/LittleSnitch-#{version}.dmg"
-  homepage 'http://www.obdev.at/products/littlesnitch/index.html'
-  license :unknown
+  url "https://www.obdev.at/downloads/littlesnitch/LittleSnitch-#{version}.dmg"
+  name 'Little Snitch'
+  homepage 'https://www.obdev.at/products/littlesnitch/'
+  license :commercial
 
-  installer :manual => 'Little Snitch Installer.app'
+  installer manual: 'Little Snitch Installer.app'
 
-  zap :delete => [
-                  '~/Library/Preferences/at.obdev.LittleSnitchNetworkMonitor.plist',
-                  '~/Library/Application Support/Little Snitch/rules.usr.xpl',
-                  '~/Library/Application Support/Little Snitch/configuration.xpl',
-                  '~/Library/Application Support/Little Snitch/configuration.user.xpl',
-                 ]
+  zap delete: [
+                '~/Library/Preferences/at.obdev.LittleSnitchNetworkMonitor.plist',
+                '~/Library/Application Support/Little Snitch/rules.usr.xpl',
+                '~/Library/Application Support/Little Snitch/configuration.xpl',
+                '~/Library/Application Support/Little Snitch/configuration.user.xpl',
+              ]
 end

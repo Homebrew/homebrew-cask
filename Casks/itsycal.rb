@@ -1,10 +1,14 @@
-class Itsycal < Cask
-  version '0.8.10'
-  sha256 '2cfa08066722a13b994559f45b9d01bba1ff02e98c6797f2fc7c93344747093b'
+cask 'itsycal' do
+  version '0.10.10'
+  sha256 '3452b19d10e91c441ef0f218629961bbb98c41ba2b29bff14759306967551253'
 
+  # s3.amazonaws.com/itsycal was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/itsycal/Itsycal-#{version}.zip"
+  appcast 'https://s3.amazonaws.com/itsycal/itsycal.xml',
+          checkpoint: '98c525b55275fb02b4fdb4896ae2198f89fff858679b67cf031691bbd157ba72'
+  name 'Itsycal'
   homepage 'http://www.mowglii.com/itsycal/'
-  license :unknown
+  license :gratis
 
-  app "Itsycal #{version}/Itsycal.app"
+  app 'Itsycal.app'
 end

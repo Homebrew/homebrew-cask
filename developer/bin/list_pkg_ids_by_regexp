@@ -63,7 +63,7 @@ if [[ $1 =~ ^-+h(elp)?$ || $# -ne 1 ]]; then
 Print pkg receipt IDs for installed packages matching a regular
 expression, which may be useful in a Cask uninstall stanza, eg
 
-    uninstall :pkgutil => 'pkg.regexp.goes.here'
+    uninstall pkgutil: 'pkg.regexp.goes.here'
 
 Unlike most other scripts in this directory, package IDs attributed to
 Apple are NOT excluded from the output.  This is to avoid uninstalling
@@ -71,7 +71,7 @@ essential system files due to an exuberant regexp.
 
 For more information, see
 
-    https://github.com/caskroom/homebrew-cask/blob/master/doc/CASK_LANGUAGE_REFERENCE.md#uninstall-stanza-details
+    https://github.com/caskroom/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/uninstall.md
 
 "
     exit

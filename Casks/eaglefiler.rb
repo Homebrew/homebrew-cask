@@ -1,10 +1,11 @@
-class Eaglefiler < Cask
-  version '1.6.2'
-  sha256 '0c16140443b863df4847da18ec3f22c86529ea0bcdf8d53b90702f4e49bcaa93'
+cask 'eaglefiler' do
+  version '1.6.5'
+  sha256 '1b1c714be59f3e8ea3ed1fd2322672c08d217f8360b61172feeb4ea952f382b7'
 
-  url "http://c-command.com/downloads/EagleFiler-#{version}.dmg"
-  homepage 'http://c-command.com/eaglefiler/'
-  license :unknown
+  url "https://c-command.com/downloads/EagleFiler-#{version}.dmg"
+  name 'EagleFiler'
+  homepage 'https://c-command.com/eaglefiler/'
+  license :commercial
 
   app 'EagleFiler.app'
 end

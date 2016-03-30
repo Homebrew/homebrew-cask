@@ -1,11 +1,20 @@
-# encoding: UTF-8
-class Qqmusic < Cask
-  version '1.3.0'
-  sha256 '2f1198f9b3e1407822a771fcdfdd643b65f35f6b51cc0af8c6b11fa11fc30a0d'
+cask 'qqmusic' do
+  version '3.1.1Build02'
+  sha256 '1a08e970fc8f6b68eb7a4034615fb8fc16ae06758a6e8b09e82824f2c0814359'
 
-  url "http://dldir1.qq.com/music/clntupate/QQMusicForMacV#{version}.dmg"
-  homepage 'http://y.qq.com'
-  license :unknown
+  url "http://dldir1.qq.com/music/clntupate/mac/QQMusic#{version}.dmg"
+  name 'QQ音乐'
+  homepage 'https://y.qq.com'
+  license :commercial
 
-  app 'QQ音乐.app'
+  app 'QQMusic.app'
+
+  uninstall quit: 'com.tencent.QQMusicMac'
+
+  zap delete: [
+                '~/Library/Caches/com.tencent.QQMusicMac',
+                '~/Library/Application Support/com.tencent.QQMusicMac',
+                '~/Library/Preferences/com.tencent.QQMusicMac.plist',
+                '~/Library/Saved Application State/com.tencent.QQMusicMac.savedState',
+              ]
 end

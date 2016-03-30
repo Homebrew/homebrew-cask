@@ -1,10 +1,12 @@
-class Preform < Cask
-  version '1.7.5'
-  sha256 '1cba63d07ac8d872d76e7df7a3a3c727cfbcdd42e77260ffc47b636d315a5b83'
+cask 'preform' do
+  version '1.8.1_1'
+  sha256 '51ed43f83821c9ba10a50d315990aa59ede13a64e46bda438a3e113a93385209'
 
-  url "https://s3.amazonaws.com/FormlabsReleases/Release/#{version.sub(%r{\.(\d+)$},'')}/PreForm_#{version.sub(%r{\.(\d+)$},'_\1')}.dmg"
+  # amazonaws.com is the official download host per the vendor homepage
+  url "https://s3.amazonaws.com/FormlabsReleases/Release/#{version.sub(%r{_.*}, '')}/PreForm_#{version}.dmg"
+  name 'PreForm'
   homepage 'http://formlabs.com/en/products/preform/'
-  license :unknown
+  license :gratis
 
   app 'PreForm.app'
 end

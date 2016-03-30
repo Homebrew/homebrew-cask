@@ -1,12 +1,13 @@
-class Slender < Cask
-  version '2.1.1'
-  sha256 '6235751e4510df2095ebae8e3588ed32d858d2f4612b5f020aea7efd4ff60cf0'
+cask 'slender' do
+  version '2.2.2'
+  sha256 '7d3486efb8d6b4cdce8179b423616642238081e510292d215a9c78210913afb5'
 
-  url "http://downloads.dragonforged.com/slender#{version.gsub('.','')}.zip"
+  url "http://downloads.dragonforged.com/slender#{version.delete('.')}.zip"
   appcast 'http://dragonforged.com/slender/sparkle/?bundleId=com.dfsw.Slender',
-          :sha256 => '05b8cc1837ad290486bac9bb9c1bf194b2e2c208c968f1e55bae47ce33c56141'
+          checkpoint: '1ece434f3b6a656a5f0106b147ecc9fbbc1e9e731a34d531b37c42a9db8c6675'
+  name 'Slender'
   homepage 'http://dragonforged.com/slender/'
-  license :unknown
+  license :commercial
 
   app 'Slender.app'
 end

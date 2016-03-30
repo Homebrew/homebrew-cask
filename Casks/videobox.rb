@@ -1,9 +1,10 @@
-class Videobox < Cask
-  version '4.1.2'
-  sha256 'bd9e6ae942b729b02c40ad076814be7c5e2f966325c9c5e982070d03443408c5'
+cask 'videobox' do
+  version '4.2.2'
+  sha256 '8f884ce3cf57b6d9e7b022bcd03e666b2a98cfc42ef51df03246772f9a344fb3'
 
-  url 'http://download.tastyapps.com/videobox_4.1.2.dmg'
-  homepage 'http://www.tastyapps.com/videobox/'
+  url "https://download.tastyapps.com/videobox_#{version}.dmg"
+  name 'Videobox'
+  homepage 'https://www.tastyapps.com/videobox/'
   license :closed
 
   app 'Videobox.app'

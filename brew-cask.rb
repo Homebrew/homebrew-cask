@@ -1,22 +1,24 @@
-require 'pathname'
-require 'formula'
-
-require Pathname(__FILE__).realpath.dirname.join('lib', 'cask', 'version')
-
 class BrewCask < Formula
-  homepage 'https://github.com/caskroom/homebrew-cask/'
-  url 'https://github.com/caskroom/homebrew-cask.git', :tag => "v#{HOMEBREW_CASK_VERSION}"
+  homepage "https://github.com/caskroom/homebrew-cask/"
+  url "https://github.com/caskroom/homebrew-cask.git", :tag => "v0.60.1"
 
-  head 'https://github.com/caskroom/homebrew-cask.git', :branch => 'master'
+  depends_on :ruby => "2.0"
 
-  skip_clean 'bin'
+  UNINSTALL_MSG = <<-EOS.undent
+    You must uninstall this formula. It is no longer needed to stay up to date,
+    as Homebrew now takes care of that automatically.
+  EOS
 
   def install
-    man1.install 'doc/man/brew-cask.1'
-    prefix.install 'lib' => 'rubylib'
-    inreplace 'bin/brew-cask.rb', '/lib', '/rubylib'
+    (buildpath/"UPGRADE").write UNINSTALL_MSG
+    prefix.install "UPGRADE"
+  end
 
-    prefix.install 'Casks', 'bin'
-    (bin+'brew-cask.rb').chmod 0755
+  def caveats
+    UNINSTALL_MSG
+  end
+
+  test do
+    system "brew", "cask", "info", "google-chrome"
   end
 end

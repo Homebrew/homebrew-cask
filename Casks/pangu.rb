@@ -1,10 +1,12 @@
-class Pangu < Cask
-  version '1.1'
-  sha256 'aa09673355f11a2b0974757f88b61e497156020bf551afde556ce11d843e2a54'
+cask 'pangu' do
+  version '1.0.0'
+  sha256 '910c2fcc6bbaea54f2944eb275de9674bc4613bf79f1f60dbf8ad0064269a252'
 
-  url "http://dl.pangu.25pp.com/jb/Pangu_v#{version}.dmg"
-  homepage 'http://en.pangu.io/'
-  license :unknown
+  # 25pp.com is the official download host per the vendor homepage
+  url "http://dl.pangu.25pp.com/jb/Pangu8_v#{version}.dmg"
+  name 'Pangu8'
+  homepage 'https://en.pangu.io/'
+  license :gratis
 
-  app 'pangu.app'
+  app 'pangu8.app'
 end

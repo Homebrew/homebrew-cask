@@ -1,16 +1,18 @@
-class Pandoc < Cask
-  version '1.13.1'
-  sha256 'd82547f5a6838074381a8e97f0f27984bbdb527e211320fc78791d9a64479b2f'
+cask 'pandoc' do
+  version '1.17.0.2'
+  sha256 '79aa0bdbcc5df8c87041a5497f1dc090ea6d993a9788f650d53abf96c68228bd'
 
+  # github.com is the official download host per the vendor homepage
   url "https://github.com/jgm/pandoc/releases/download/#{version}/pandoc-#{version}-osx.pkg"
-  homepage 'http://johnmacfarlane.net/pandoc'
+  appcast 'https://github.com/jgm/pandoc/releases.atom',
+          checkpoint: '2b4cb56d54977995bf215de6b8caf7964b9d5dbbeb79ef19c971e398e345b49b'
+  name 'Pandoc'
+  homepage 'http://pandoc.org/'
   license :gpl
 
+  conflicts_with formula: 'pandoc'
+
   pkg "pandoc-#{version}-osx.pkg"
-  uninstall :pkgutil => 'net.johnmacfarlane.pandoc'
-  caveats <<-EOS.undent
-    Note that homebrew also provides a compiled pandoc Formula that links its
-    binary to /usr/local/bin/pandoc. It's not recommended to install both the
-    Cask and the Formula of Pandoc.
-  EOS
+
+  uninstall pkgutil: 'net.johnmacfarlane.pandoc'
 end

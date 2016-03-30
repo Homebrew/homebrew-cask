@@ -1,10 +1,11 @@
-class Proxifier < Cask
+cask 'proxifier' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.proxifier.com/distr/ProxifierMac.zip'
-  homepage 'http://www.proxifier.com/mac/'
-  license :unknown
+  url 'https://www.proxifier.com/distr/ProxifierMac.zip'
+  name 'Proxifier'
+  homepage 'https://www.proxifier.com/mac/'
+  license :commercial
 
   app 'Proxifier.app'
 end

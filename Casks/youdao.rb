@@ -1,12 +1,11 @@
-# encoding: UTF-8
-class Youdao < Cask
+cask 'youdao' do
   version :latest
   sha256 :no_check
 
-  url 'http://cidian.youdao.com/download/YoudaoDictForMac.dmg'
-  appcast 'http://cidian.youdao.com/apps/macupdate/update.xml'
-  homepage 'http://cidian.youdao.com/mac/'
-  license :unknown
+  url 'http://codown.youdao.com/cidian/download/MacDict.dmg'
+  name '有道词典'
+  homepage 'http://cidian.youdao.com/index-mac.html'
+  license :commercial
 
   app '有道词典.app'
 end

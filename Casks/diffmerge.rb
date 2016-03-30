@@ -1,16 +1,19 @@
-class Diffmerge < Cask
-  version '4.2.0.697'
-  sha256 '2c6368653af2440bb4460aef9bb1b2b5d8b84b5a3f47994c4abafc4d7ddbff9e'
+cask 'diffmerge' do
+  version '4.2.1.1013'
+  sha256 '1f19897513fb7af8fc7d3b40643bd6dee80e401c7245a0ed774e8211fd48e388'
 
-  url "http://download-us.sourcegear.com/DiffMerge/4.2.0/DiffMerge.#{version}.intel.stable.dmg"
-  homepage 'http://www.sourcegear.com/diffmerge'
-  license :unknown
+  url "http://download.sourcegear.com/DiffMerge/#{version.sub(%r{\.\d+$}, '')}/DiffMerge.#{version}.intel.stable.pkg"
+  name 'DiffMerge'
+  homepage 'https://www.sourcegear.com/diffmerge'
+  license :commercial
 
-  app 'DiffMerge.app'
-  binary 'DiffMerge.app/Contents/MacOS/DiffMerge', :target => 'diffmerge'
+  pkg "DiffMerge.#{version}.intel.stable.pkg"
 
-  caveats <<-EOS.undent
-    Use "diffmerge --nosplash" to hide the splash screen when using
-    diffmerge with external tools such as git.
-  EOS
+  uninstall pkgutil: 'com.sourcegear.DiffMerge'
+
+  zap       delete: [
+                      '~/Library/Preferences/com.sourcegear.DiffMerge.plist',
+                      '~/Library/Preferences/SourceGear DiffMerge Preferences',
+                      '~/Library/Saved Application State/com.sourcegear.DiffMerge.savedState',
+                    ]
 end

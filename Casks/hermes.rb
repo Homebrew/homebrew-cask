@@ -1,12 +1,14 @@
-class Hermes < Cask
-  version '1.2.2'
-  sha256 'f03963ce4fdb8461c269882080beebc56101158bce13e13d3f1adce8b20fd5d2'
+cask 'hermes' do
+  version '1.2.6'
+  sha256 '3735d1bbae0e3ef773e0a2d169ca7f838f3e3510fe7b6fa59546c01fccbb9aa8'
 
-  url "https://s3.amazonaws.com/alexcrichton-hermes/Hermes-#{version}.zip"
-  appcast 'http://hermesapp.org/versions.xml',
-          :sha256 => '2fddeaa4e839650ce49be65b8cac2b9fb5906f641a63b4ee7960ca0570efc79d'
-  homepage 'http://hermesapp.org/'
-  license :unknown
+  # s3.amazonaws.com/hermesmacapp was verified as official when first introduced to the cask
+  url "https://s3.amazonaws.com/hermesmacapp/Hermes-#{version}.zip"
+  appcast 'https://hermesapp.org/versions.xml',
+          checkpoint: 'b165a9588985b8fb3305878405782c17504466276f2a1ecd3715fe0bd4a92205'
+  name 'Hermes'
+  homepage 'https://hermesapp.org/'
+  license :mit
 
   app 'Hermes.app'
 end

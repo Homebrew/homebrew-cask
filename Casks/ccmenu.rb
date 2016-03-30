@@ -1,12 +1,13 @@
-class Ccmenu < Cask
-  version '1.7'
-  sha256 '974a2022dbc9494958334ee8f02e08df7ed184e1f421a53d623dfbeaadf08a2c'
+cask 'ccmenu' do
+  version '1.10.3'
+  sha256 'bf5a5326e2168ff28fd5db3beffb2277bca017d2253a2a8fe0734cd8aad5844d'
 
-  url "https://downloads.sourceforge.net/project/ccmenu/CCMenu/#{version}/ccmenu-#{version}-b.dmg"
-  appcast 'http://ccmenu.sourceforge.net/update-stable.xml',
-          :sha256 => 'a72951f416906d309cb7ec8d233bf5546540641efa99332e0f1bdde119b51cac'
-  homepage 'http://ccmenu.sourceforge.net/'
-  license :oss
+  url "https://github.com/erikdoe/ccmenu/releases/download/v#{version}/CCMenu.app.zip"
+  appcast 'https://github.com/erikdoe/ccmenu/releases.atom',
+          checkpoint: 'f044462d834337a16b7a80d3ea038ba44d746890836eb8a9b9db9b6bc053f0e2'
+  name 'CCMenu'
+  homepage 'http://ccmenu.org/'
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'CCMenu.app'
 end

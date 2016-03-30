@@ -1,27 +1,26 @@
 require 'test_helper'
 
-describe Cask::Artifact::App do
+describe Hbc::Artifact::App do
   let(:local_two_apps_caffeine) {
-    Cask.load('with-two-apps-correct').tap do |cask|
+    Hbc.load('with-two-apps-correct').tap do |cask|
       TestHelper.install_without_artifacts(cask)
     end
   }
 
-  describe 'install multiple apps' do
+  describe 'multiple apps' do
     it "activates both apps using the proper target directory" do
       cask = local_two_apps_caffeine
 
       shutup do
-        Cask::Artifact::App.new(cask).install_phase
+        Hbc::Artifact::App.new(cask).install_phase
       end
 
-      TestHelper.valid_alias?(Cask.appdir/'Caffeine.app').must_equal true
-      TestHelper.valid_alias?(Cask.appdir/'AnotherName.app').must_equal true
+      TestHelper.valid_alias?(Hbc.appdir.join('Caffeine.app')).must_equal true
+      TestHelper.valid_alias?(Hbc.appdir.join('AnotherName.app')).must_equal true
     end
 
     it "works with an application in a subdir" do
-      AltSubDirTwoAppsCask = Class.new(Cask)
-      AltSubDirTwoAppsCask.class_eval do
+      subdir_cask = Hbc::Cask.new('alt-subdir-two-apps') do
         url TestHelper.local_binary_url('caffeine.zip')
         homepage 'http://example.com/local-caffeine'
         version '1.2.3'
@@ -31,23 +30,21 @@ describe Cask::Artifact::App do
       end
 
       begin
-        subdir_cask = AltSubDirTwoAppsCask.new.tap do |cask|
-          TestHelper.install_without_artifacts(cask)
-        end
+        TestHelper.install_without_artifacts(subdir_cask)
 
-        appsubdir = (subdir_cask.staged_path/'subdir').tap(&:mkpath)
-        FileUtils.mv((subdir_cask.staged_path/'Caffeine.app'), appsubdir)
+        appsubdir = subdir_cask.staged_path.join('subdir').tap(&:mkpath)
+        FileUtils.mv(subdir_cask.staged_path.join('Caffeine.app'), appsubdir)
 
         shutup do
-          Cask::Artifact::App.new(subdir_cask).install_phase
+          Hbc::Artifact::App.new(subdir_cask).install_phase
         end
 
-        TestHelper.valid_alias?(Cask.appdir/'Caffeine.app').must_equal true
-        TestHelper.valid_alias?(Cask.appdir/'AnotherName.app').must_equal true
+        TestHelper.valid_alias?(Hbc.appdir.join('Caffeine.app')).must_equal true
+        TestHelper.valid_alias?(Hbc.appdir.join('AnotherName.app')).must_equal true
       ensure
         if defined?(subdir_cask)
           shutup do
-            Cask::Installer.new(subdir_cask).uninstall
+            Hbc::Installer.new(subdir_cask).uninstall
           end
         end
       end
@@ -61,71 +58,71 @@ describe Cask::Artifact::App do
     #   FileUtils.cp_r app_path, app_path.sub('Caffeine.app', 'CaffeineAgain.app')
     #
     #   shutup do
-    #     Cask::Artifact::App.new(cask).install_phase
+    #     Hbc::Artifact::App.new(cask).install_phase
     #   end
     #
-    #   TestHelper.valid_alias?(Cask.appdir/'AnotherName.app').must_equal true
-    #   TestHelper.valid_alias?(Cask.appdir/'AnotherNameAgain.app').must_equal false
+    #   TestHelper.valid_alias?(Hbc.appdir.join('AnotherName.app')).must_equal true
+    #   TestHelper.valid_alias?(Hbc.appdir.join('AnotherNameAgain.app').must_equal false
     # end
 
     it "avoids clobbering an existing app by linking over it (link 1)" do
       cask = local_two_apps_caffeine
 
-      (Cask.appdir/'Caffeine.app').mkpath
+      Hbc.appdir.join('Caffeine.app').mkpath
 
       TestHelper.must_output(self, lambda {
-        Cask::Artifact::App.new(cask).install_phase
+        Hbc::Artifact::App.new(cask).install_phase
       }, <<-MESSAGE.undent.chomp)
-         ==> It seems there is already an App at '#{Cask.appdir.join('Caffeine.app')}'; not linking.
-         ==> Symlinking App 'Caffeine.app' to '#{Cask.appdir.join('AnotherName.app')}'
+         ==> It seems there is already an App at '#{Hbc.appdir.join('Caffeine.app')}'; not linking.
+         ==> Symlinking App 'Caffeine.app' to '#{Hbc.appdir.join('AnotherName.app')}'
          MESSAGE
 
-      (Cask.appdir/'Caffeine.app').wont_be :symlink?
+      Hbc.appdir.join('Caffeine.app').wont_be :symlink?
     end
 
     it "avoids clobbering an existing app by linking over it (link 2)" do
       cask = local_two_apps_caffeine
 
-      (Cask.appdir/'AnotherName.app').mkpath
+      Hbc.appdir.join('AnotherName.app').mkpath
 
       TestHelper.must_output(self, lambda {
-        Cask::Artifact::App.new(cask).install_phase
+        Hbc::Artifact::App.new(cask).install_phase
       }, <<-MESSAGE.undent.chomp)
-         ==> Symlinking App 'Caffeine.app' to '#{Cask.appdir.join('Caffeine.app')}'
-         ==> It seems there is already an App at '#{Cask.appdir.join('AnotherName.app')}'; not linking.
+         ==> Symlinking App 'Caffeine.app' to '#{Hbc.appdir.join('Caffeine.app')}'
+         ==> It seems there is already an App at '#{Hbc.appdir.join('AnotherName.app')}'; not linking.
          MESSAGE
 
-      (Cask.appdir/'AnotherName.app').wont_be :symlink?
+      Hbc.appdir.join('AnotherName.app').wont_be :symlink?
     end
 
     it "happily clobbers an existing symlink (link 1)" do
       cask = local_two_apps_caffeine
 
-      (Cask.appdir/'Caffeine.app').make_symlink('/tmp')
+      Hbc.appdir.join('Caffeine.app').make_symlink('/tmp')
 
       TestHelper.must_output(self, lambda {
-        Cask::Artifact::App.new(cask).install_phase
+        Hbc::Artifact::App.new(cask).install_phase
       }, <<-MESSAGE.undent.chomp)
-         ==> Symlinking App 'Caffeine.app' to '#{Cask.appdir.join('Caffeine.app')}'
-         ==> Symlinking App 'Caffeine.app' to '#{Cask.appdir.join('AnotherName.app')}'
+         ==> Symlinking App 'Caffeine.app' to '#{Hbc.appdir.join('Caffeine.app')}'
+         ==> Symlinking App 'Caffeine.app' to '#{Hbc.appdir.join('AnotherName.app')}'
          MESSAGE
 
-      File.readlink(Cask.appdir/'Caffeine.app').wont_equal '/tmp'
+      File.readlink(Hbc.appdir.join('Caffeine.app')).wont_equal '/tmp'
     end
 
     it "happily clobbers an existing symlink (link 2)" do
       cask = local_two_apps_caffeine
 
-      (Cask.appdir/'AnotherName.app').make_symlink('/tmp')
+      Hbc.appdir.join('AnotherName.app').make_symlink('/tmp')
 
       TestHelper.must_output(self, lambda {
-        Cask::Artifact::App.new(cask).install_phase
+        Hbc::Artifact::App.new(cask).install_phase
       }, <<-MESSAGE.undent.chomp)
-         ==> Symlinking App 'Caffeine.app' to '#{Cask.appdir.join('Caffeine.app')}'
-         ==> Symlinking App 'Caffeine.app' to '#{Cask.appdir.join('AnotherName.app')}'
+         ==> Symlinking App 'Caffeine.app' to '#{Hbc.appdir.join('Caffeine.app')}'
+         ==> Symlinking App 'Caffeine.app' to '#{Hbc.appdir.join('AnotherName.app')}'
          MESSAGE
 
-      File.readlink(Cask.appdir/'AnotherName.app').wont_equal '/tmp'
+      File.readlink(Hbc.appdir.join('AnotherName.app')).wont_equal '/tmp'
     end
   end
 end

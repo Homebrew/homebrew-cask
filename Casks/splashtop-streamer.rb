@@ -1,11 +1,14 @@
-class SplashtopStreamer < Cask
-  version '2.4.5.3'
-  sha256 '07fd11f7c19ce0c7c29e65d5182532940f74e6e4512b696c19e58389d5e86357'
+cask 'splashtop-streamer' do
+  version '2.6.2.7'
+  sha256 'e676b87ff0452af0b2462d911e6d03d9987ba7616e165c3adcfee14852ce4b76'
 
+  # cloudfront.net is the official download host per the vendor homepage
   url "https://d17kmd0va0f0mp.cloudfront.net/mac/Splashtop_Streamer_MAC_v#{version}.dmg"
+  name 'Splashtop Streamer'
   homepage 'http://www.splashtop.com/downloads'
-  license :unknown
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Splashtop Streamer.pkg'
-  uninstall :pkgutil => 'com.splashtop.splashtopStreamer.*'
+
+  uninstall pkgutil: 'com.splashtop.splashtopStreamer.*'
 end

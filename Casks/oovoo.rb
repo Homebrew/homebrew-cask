@@ -1,10 +1,11 @@
-class Oovoo < Cask
+cask 'oovoo' do
   version :latest
   sha256 :no_check
 
   url 'http://download.cdn.oovoo.com/download/ooVoo.dmg'
-  homepage 'http://www.oovoo.com'
-  license :unknown
+  name 'ooVoo'
+  homepage 'https://www.oovoo.com'
+  license :gratis
 
   app 'Oovoo.app'
 end

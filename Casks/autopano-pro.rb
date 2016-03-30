@@ -1,17 +1,19 @@
-class AutopanoPro < Cask
-  version '3.6'
-  sha256 '8bf8840b9d3126c3f64dcef6a9ccf4115c6f23779f563b6cfa4c7a8f663cc088'
+cask 'autopano-pro' do
+  version '4.2.3'
+  sha256 '07fb35d00fa7f8926e00ede0031ef1c56a6e0e89d1f3d7485b4fa00da765fb99'
 
   url 'http://download.kolor.com/app/stable/macleopard'
+  name 'Autopano Pro'
   homepage 'http://www.kolor.com/panorama-software-autopano-pro.html'
   license :commercial
 
-  pkg "Autopano Pro #{version}.pkg"
-  uninstall :pkgutil => [
-                         'com.kolor.pkg.AutopanoPro.*',
-                         'com.kolor.pkg.Aperture_plugin',
-                         'com.kolor.pkg.Bridge_plugin',
-                         'com.kolor.pkg.Lightroom_plugin',
-                         'com.kolor.pkg.plugin.picasa',
-                        ]
+  pkg "Autopano Pro #{version.major_minor}.pkg"
+
+  uninstall pkgutil: [
+                       'com.kolor.pkg.AutopanoPro.*',
+                       'com.kolor.pkg.Aperture_plugin',
+                       'com.kolor.pkg.Bridge_plugin',
+                       'com.kolor.pkg.Lightroom_plugin',
+                       'com.kolor.pkg.plugin.picasa',
+                     ]
 end

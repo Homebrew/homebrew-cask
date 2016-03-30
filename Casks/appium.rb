@@ -1,10 +1,12 @@
-class Appium < Cask
-  version '1.2.2'
-  sha256 'fb7b96244e6dbcdf4d580eae0262b2dec38c008e39ddee4654bb488037f24971'
+cask 'appium' do
+  version '1.4.13'
+  sha256 'c26fcd668c872b1f015d1c216a3883c7ccce16e399ffd29d7abef135fda6cbba'
 
+  # bitbucket.org/appium/appium.app was verified as official when first introduced to the cask
   url "https://bitbucket.org/appium/appium.app/downloads/appium-#{version}.dmg"
+  name 'Appium'
   homepage 'http://appium.io'
-  license :oss
+  license :apache
 
   app 'Appium.app'
 end

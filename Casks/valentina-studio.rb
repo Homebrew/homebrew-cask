@@ -1,10 +1,11 @@
-class ValentinaStudio < Cask
+cask 'valentina-studio' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.valentina-db.com/download/release/mac_32/vstudio_5_mac.dmg'
-  homepage 'http://www.valentina-db.com/'
-  license :unknown
+  url 'https://www.valentina-db.com/en/all-downloads/vstudio/current/vstudio_mac_64?format=raw'
+  name 'Valentina Studio'
+  homepage 'https://www.valentina-db.com/en/valentina-studio-overview'
+  license :freemium
 
   app 'Valentina Studio.app'
 end

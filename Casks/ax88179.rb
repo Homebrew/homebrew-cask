@@ -1,18 +1,21 @@
-class Ax88179 < Cask
-  version '2.2.0_20140724'
-  sha256 '075cdf5cb5a6ed0e8a4d59ff470a32f5e869f3b2f2b08f268120cbae30c61329'
+cask 'ax88179' do
+  version '2.7.0'
+  sha256 '8b12ecad1407e65a2bd89f055cfe7f2be102b3623b0b207b55f7f9eac54253e9'
 
   module Utils
-    def self.basename
-      "AX88179_178A_Macintosh_10.6_to_10.10_Driver_Installer_v#{Ax88179.version}"
+    def self.basename(version)
+      "AX88179_178A_Macintosh_10.6_to_10.11_Driver_Installer_v#{version}"
     end
   end
 
-  url "http://www.asix.com.tw/FrootAttach/driver/#{Utils.basename}.zip"
+  url "http://www.asix.com.tw/FrootAttach/driver/#{Utils.basename(version)}.zip"
+  name 'AX88179'
   homepage 'http://www.asix.com.tw/products.php?op=pItemdetail&PItemID=131;71;112&PLine=71'
-  license :unknown
+  license :gratis
 
-  container :nested => "#{Utils.basename}/AX88179_178A.dmg"
-  pkg "AX88179_178A_v#{version[0..-10]}.pkg"
-  uninstall :script => { :executable => 'AX88179_178A_Uninstall_v140' }
+  container nested: "#{Utils.basename(version)}/AX88179_178A.dmg"
+
+  pkg "AX88179_178A_v#{version}.pkg"
+
+  uninstall script: { executable: 'AX88179_178A_Uninstall_v140' }
 end

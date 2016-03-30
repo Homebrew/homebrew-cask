@@ -1,10 +1,12 @@
-class Haroopad < Cask
-  version '0.12.2'
-  sha256 'f8fe84ec70090c7517b4ef9f8c2896a4dedb9774d0a87800fdd98f706a64929b'
+cask 'haroopad' do
+  version '0.13.1'
+  sha256 '97ea132dfb1efa5492d98ee3b7de4beda79796ac75ce293c57e8300e11b1f694'
 
-  url "https://bitbucket.org/rhiokim/haroopad-download/downloads/haroopad-v#{version}.dmg"
+  # bitbucket.org/rhiokim/haroopad-download was verified as official when first introduced to the cask
+  url "https://bitbucket.org/rhiokim/haroopad-download/downloads/Haroopad-v#{version}-x64.dmg"
+  name 'Haroopad'
   homepage 'http://pad.haroopress.com/'
-  license :oss
+  license :gratis
 
-  app 'haroopad.app'
+  app 'Haroopad.app'
 end

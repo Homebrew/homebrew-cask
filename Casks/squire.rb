@@ -1,11 +1,14 @@
-class Squire < Cask
-  version '0.91'
-  sha256 'd37f2cdf5f08ed85e5a1f10a66c70a964e51e3a64e7c7335d97c50b1a7a1691e'
+cask 'squire' do
+  version '1.5.7'
+  sha256 'a543f006ee04630397f1316a5599d5944445f0bf232239fa50c791a33cc387c9'
 
-  url "https://s3.amazonaws.com/Squire_Mac_Builds/Squire_#{version}.zip"
-  appcast 'http://www.sylion.com/squireapp/sparkle/SquireMac/appcastMac.xml'
+  # amazonaws.com/squire was verified as official when first introduced to the cask
+  url 'https://s3.amazonaws.com/squire/builds/Squire.dmg'
+  appcast 'http://www.sylion.com/squireapp/sparkle/SquireMac/appcastSquireMac.xml',
+          checkpoint: '4f7ea01207cca2fa14f1b6c82e6eb35500715ddeaa15258a5dccdbb05f0edb72'
+  name 'Squire'
   homepage 'http://squireapp.com'
-  license :unknown
+  license :commercial
 
   app 'Squire.app'
 end

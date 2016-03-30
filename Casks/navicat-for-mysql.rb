@@ -1,8 +1,9 @@
-class NavicatForMysql < Cask
-  version '11.1.5'
-  sha256 '415ab48ff1f90fe090460a501ed1c1102d7e1876a7d54e815d57e3ec22a69eb2'
+cask 'navicat-for-mysql' do
+  version '11.2.9'
+  sha256 '1f5f4169b7de642ad3ae05189486edbab5e3850f9e83d9e01901f715198ea818'
 
-  url "http://download.navicat.com/download/navicat#{version.sub(%r{^(\d+)\.(\d+).*},'\1\2')}_mysql_en.dmg"
+  url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_mysql_en.dmg"
+  name 'Navicat for MySQL'
   homepage 'http://www.navicat.com/products/navicat-for-mysql'
   license :commercial
 

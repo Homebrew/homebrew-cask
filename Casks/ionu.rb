@@ -1,11 +1,11 @@
-class Ionu < Cask
+cask 'ionu' do
   version :latest
   sha256 :no_check
 
-  url 'https://isis.ionu.nu/release/OSX/IONU.dmg'
-  appcast 'https://isis.ionu.nu/release/OSX/appcast.xml'
+  url 'https://prod1.ionu.com/release/OSX/IONU.dmg'
+  name 'IONU'
   homepage 'https://ionu.com'
-  license :unknown
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'IONU.app'
 end

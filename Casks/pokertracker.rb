@@ -1,10 +1,12 @@
-class Pokertracker < Cask
-  version '4.10.6'
-  sha256 '913b47d2593dab9ecde628a754677acdeff2992e1f20d428ce6913f3a74af4d9'
+cask 'pokertracker' do
+  version '4.14.7'
+  sha256 'e112d03806915ae737cc3c3ba035ec17149f742cf4e45946033af181e156de94'
 
+  # ptrackupdate.com is the official download host per the vendor homepage
   url "http://s3-us1.ptrackupdate.com/releases/PT-Install-v#{version}.dmg"
+  name 'PokerTracker'
   homepage 'https://www.pokertracker.com'
-  license :unknown
+  license :commercial
 
-  app 'PokerTracker 4.app'
+  app "PokerTracker #{version.to_i}.app"
 end

@@ -1,11 +1,13 @@
-class Pgloader < Cask
-  version '3.0.99'
-  sha256 'df64c17a3b2aa62b9cdaab48c078e9a9ecb0580d660db036e11f1d63c4bee8ac'
+cask 'pgloader' do
+  version '3.2.0'
+  sha256 '5054434145931fa26c416ae00e259e3741c247ac6dc9c8452bf9b0d51deeacc9'
 
   url "http://pgloader.io/files/pgloader-#{version}.pkg"
+  name 'Pgloader'
   homepage 'http://pgloader.io'
-  license :unknown
+  license :oss
 
   pkg "pgloader-#{version}.pkg"
-  uninstall :pkgutil => 'org.tapoueh.pgloader'
+
+  uninstall pkgutil: 'org.tapoueh.pgloader'
 end

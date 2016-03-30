@@ -1,10 +1,11 @@
-class Scribbleton < Cask
+cask 'scribbleton' do
   version :latest
   sha256 :no_check
 
-  url 'http://scribbleton.com/download/mac'
-  homepage 'http://scribbleton.com/'
-  license :unknown
+  url 'https://scribbleton.com/initiate_download/mac'
+  name 'Scribbleton'
+  homepage 'https://scribbleton.com/'
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Scribbleton.app'
 end

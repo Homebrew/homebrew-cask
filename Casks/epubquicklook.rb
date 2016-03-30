@@ -1,11 +1,13 @@
-class Epubquicklook < Cask
-  version :latest
-  sha256 :no_check
+cask 'epubquicklook' do
+  version '1.8'
+  sha256 '923b2ebcbffc4ee1da42550c2239b41bad088d61956b22b1a92b293329ef6fe5'
 
-  url 'http://people.ict.usc.edu/~leuski/programming/EPUBQuickLookPlugin.dmg'
-  homepage 'http://people.ict.usc.edu/~leuski/programming/epub-quickview.php'
-  license :unknown
+  url "https://github.com/jaketmp/ePub-quicklook/releases/download/v#{version}/epub.qlgenerator.zip"
+  appcast 'https://github.com/jaketmp/ePub-quicklook/releases.atom',
+          checkpoint: 'f4b69e735f425ff4f6d8e4cc4c2f2a9daee6140c0988176f64626d4c7b61eb78'
+  name 'EPUB QuickLook'
+  homepage 'https://github.com/jaketmp/ePub-quicklook'
+  license :bsd
 
-  pkg 'EpubQuickLook.pkg'
-  uninstall :pkgutil => 'net.leuski.epubQuicklookPlugin.epub.pkg'
+  qlplugin 'epub.qlgenerator'
 end

@@ -1,12 +1,18 @@
-class Trickster < Cask
-  version '2.2.1'
-  sha256 '6a6531e8c8c7672bf422c496a478ee26f184f1c63036d7f1125913d69a067292'
+cask 'trickster' do
+  if MacOS.release <= :lion
+    version '2.1.1'
+    sha256 'cddc4a27c3c2a016f86d1688ef9708d3e8c605cfe06302470471309ccdc241db'
+  else
+    version '2.4.1'
+    sha256 'e3369f481cca71a4efb6ff55bee47bd6d4c8726e2518a8f945e3fcb6605873b0'
+  end
 
   url "http://dl.apparentsoft.com/Trickster_#{version}.zip"
   appcast 'http://dl.apparentsoft.com/trickster.rss',
-          :sha256 => '86fca660fb6674d67a5b5f3285e2fa463401c36c79bbaa65cc6f15091070a58d'
+          checkpoint: '181a1e87bbcf217f045cff10f30f33ebb5bcacd35b894737484507c28e6f5a31'
+  name 'Trickster'
   homepage 'http://www.apparentsoft.com/trickster/'
-  license :unknown
+  license :commercial
 
   app 'Trickster.app'
 end

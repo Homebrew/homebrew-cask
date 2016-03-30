@@ -1,10 +1,11 @@
-class Liquifile < Cask
-  version :latest
-  sha256 :no_check
+cask 'liquifile' do
+  version '1.8'
+  sha256 '81e8a0583af77fe9a2fbafa3433e73a5cb8567fdd53e37119b431c4ea6ce242d'
 
   url 'http://www.liquifile.info/Liquifile.dmg'
+  name 'Liquifile'
   homepage 'http://www.liquifile.info/'
-  license :unknown
+  license :commercial
 
-  app 'Liquifile_1_8.app'
+  app "Liquifile_#{version.gsub('.', '_')}.app"
 end

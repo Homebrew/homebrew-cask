@@ -1,30 +1,22 @@
-class IntellijIdea < Cask
-  version '14'
-  sha256 '9695bedfe145d70010b853cc67d7dc07bf2768e38b5b9034d1f6a00b0b9a15a7'
+cask 'intellij-idea' do
+  version '2016.1'
+  sha256 '551f9696facb94bf3b593bfdb8ba59423acd7df9241b3b8e8cf93db75098196c'
 
-  url "http://download.jetbrains.com/idea/ideaIU-#{version}.dmg"
-  homepage 'https://www.jetbrains.com/idea/index.html'
-  license :oss
+  url "https://download.jetbrains.com/idea/ideaIU-#{version}.dmg"
+  name 'IntelliJ IDEA'
+  homepage 'https://www.jetbrains.com/idea/'
+  license :commercial
 
-  app 'IntelliJ IDEA 14.app'
+  app 'IntelliJ IDEA.app'
 
-  postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{destination_path}/IntelliJ IDEA 14.app/Contents/Info.plist"
-  end
+  uninstall delete: '/usr/local/bin/idea'
 
-  zap :delete => [
-                  '~/Library/Application Support/IntelliJIdea14',
-                  '~/Library/Preferences/IntelliJIdea14',
-                 ]
-
-  caveats <<-EOS.undent
-    #{title} may require Java 7 (an older version) available from the
-    caskroom-versions repository via
-
-      brew cask install caskroom/versions/java7
-
-    Alternatively, #{title} can be modified to use Java 8 as described in
-
-      https://github.com/caskroom/homebrew-cask/issues/4500#issuecomment-43955932
-  EOS
+  zap delete: [
+                "~/.IntelliJIdea#{version.major_minor}",
+                "~/Library/Caches/IntelliJIdea#{version.major_minor}",
+                "~/Library/Logs/IntelliJIdea#{version.major_minor}",
+                "~/Library/Application Support/IntelliJIdea#{version.major_minor}",
+                "~/Library/Preferences/IntelliJIdea#{version.major_minor}",
+                # TODO: expand/glob for '~/Library/Preferences/jetbrains.intellij.*.plist',
+              ]
 end

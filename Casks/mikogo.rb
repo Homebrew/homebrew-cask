@@ -1,10 +1,13 @@
-class Mikogo < Cask
+cask 'mikogo' do
   version :latest
   sha256 :no_check
 
-  url 'http://download.mikogo4.com/mikogo.dmg'
-  homepage 'http://www.mikogo.com/'
-  license :unknown
+  # mikogo4.com was verified as official when first introduced to the cask
+  url 'https://download.mikogo4.com/mikogo.dmg'
+  name 'Mikogo'
+  homepage 'https://www.mikogo.com/'
+  license :gratis
 
-  app 'Mikogo.app'
+  # Renamed for clarity: app name is inconsistent with its branding
+  app 'Mikogo-host.app', target: 'Mikogo.app'
 end

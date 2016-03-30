@@ -1,10 +1,11 @@
-class Omnidisksweeper < Cask
+cask 'omnidisksweeper' do
   version :latest
   sha256 :no_check
 
   url 'https://www.omnigroup.com/download/latest/OmniDiskSweeper'
-  homepage 'http://www.omnigroup.com/products/omnidisksweeper/'
-  license :unknown
+  name 'OmniDiskSweeper'
+  homepage 'https://www.omnigroup.com/products/omnidisksweeper/'
+  license :gratis
 
   app 'OmniDiskSweeper.app'
 end

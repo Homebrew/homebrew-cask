@@ -1,10 +1,17 @@
-class Schnapps < Cask
-  version '1.0'
-  sha256 '93beb5d29311f692e1eb1b2843d0ae8cce8a8b7beb200bea50d021f163190cc5'
+cask 'schnapps' do
+  version '1.2'
+  sha256 'aa47011ead3fd64f3263641fe93f6fdf52945763df39295c3abf6aa5ae7f5fe0'
 
-  url "http://d15xn61otjv90c.cloudfront.net/download/Schnapps_v#{version}.zip"
+  url "http://www.schnappsformac.com/download/Schnapps_v#{version}.zip"
+  appcast 'http://schnappsformac.com/download/appcast.xml',
+          checkpoint: '9d8006fdd5db72e9f79ee2814bb794c4aa775710243bf5f96655bfad562664f0'
+  name 'Schnapps'
   homepage 'http://schnappsformac.com/'
-  license :unknown
+  license :commercial
 
   app 'Schnapps.app'
+
+  postflight do
+    suppress_move_to_applications
+  end
 end

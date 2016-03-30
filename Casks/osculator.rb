@@ -1,10 +1,11 @@
-class Osculator < Cask
-  version '2.13.1'
-  sha256 '3565e9044b541149630235326a441369012ac6d98c54231c23975a53dc69dca5'
+cask 'osculator' do
+  version '2.13.3-12-g5f24bc9'
+  sha256 '30563bcb6f80a9498cf25d38a41c0baba3631f6bcec21a8733cbb267b1e67dfc'
 
-  url "http://dl.osculator.net/releases/osculator-#{version}-20-g81f7dd4.dmg"
+  url "http://dl.osculator.net/releases/osculator-#{version}.dmg"
+  name 'OSCulator'
   homepage 'http://www.osculator.net'
-  license :unknown
+  license :commercial
 
   app 'OSCulator ƒ/OSCulator.app'
 end

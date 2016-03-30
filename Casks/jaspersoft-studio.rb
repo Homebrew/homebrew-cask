@@ -1,13 +1,14 @@
-class JaspersoftStudio < Cask
-  version '5.6.1'
-  sha256 '339222ba8c1d640f90d6339b9f5ce5292e620c2bc256a09f75b6f413acd061d2'
+cask 'jaspersoft-studio' do
+  version '6.1.0'
+  sha256 '71ff620a24071115d90e84aff9a5642c73e0c65e9411e869ae8879355c0bdba1'
 
-  url "https://downloads.sourceforge.net/project/jasperstudio/JaspersoftStudio-#{version}/jaspersoftstudio-#{version}.final-mac-x86_64.dmg"
-  homepage 'http://community.jaspersoft.com/project/jaspersoft-studio'
+  # downloads.sourceforge.net/project/jasperstudio was verified as official when first introduced to the cask
+  url "http://downloads.sourceforge.net/project/jasperstudio/JaspersoftStudio-#{version}/TIBCOJaspersoftStudio-#{version}.final-mac-x86_64.dmg"
+  name 'Jaspersoft Studio'
+  homepage 'https://community.jaspersoft.com/project/jaspersoft-studio'
   license :oss
 
+  depends_on arch: :x86_64
+
   app "Jaspersoft Studio #{version}.final/Jaspersoft Studio.app"
-  caveats do
-    arch_only 'intel-64'
-  end
 end

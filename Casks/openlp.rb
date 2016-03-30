@@ -1,10 +1,11 @@
-class Openlp < Cask
-  version '2.0.4'
-  sha256 '24850da1e2d75b17d76cf102721d4c5e56d8faaa97ce1194577264c8edc6cc70'
+cask 'openlp' do
+  version '2.2'
+  sha256 'c031fbffc0cf8542df893c5d79b8c827b6a7eac865ff0f5155b0d20ca9f4ab0a'
 
-  url "http://builds.openlp.org/OpenLP-#{version}.dmg"
-  homepage 'http://openlp.org'
-  license :unknown
+  url "https://get.openlp.org/#{version}/OpenLP-#{version}.dmg"
+  name 'OpenLP'
+  homepage 'https://openlp.org'
+  license :gpl
 
   app 'OpenLP.app'
 end

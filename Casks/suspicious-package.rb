@@ -1,11 +1,14 @@
-class SuspiciousPackage < Cask
+cask 'suspicious-package' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.mothersruin.com/software/downloads/SuspiciousPackage.pkg'
+  url 'http://www.mothersruin.com/software/downloads/SuspiciousPackage.xip'
+  name 'Suspicious Package'
   homepage 'http://www.mothersruin.com/software/SuspiciousPackage/'
-  license :unknown
+  license :gratis
 
-  pkg 'SuspiciousPackage.pkg'
-  uninstall :pkgutil => 'com.mothersruin.pkg.SuspiciousPackagePlugin'
+  depends_on formula: 'unar'
+  container type: :generic_unar
+
+  app 'Suspicious Package.app'
 end

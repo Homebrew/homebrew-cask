@@ -1,10 +1,11 @@
-class Slimboat < Cask
+cask 'slimboat' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.slimboat.com/release/slimboat.dmg'
-  homepage 'http://www.slimboat.com'
-  license :unknown
+  url 'https://www.slimboat.com/release/slimboat.dmg'
+  name 'SlimBoat'
+  homepage 'https://www.slimboat.com'
+  license :gratis
 
   app 'SlimBoat.app'
 end

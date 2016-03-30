@@ -1,9 +1,10 @@
-class Splitshow < Cask
-  version '0.9.1'
-  sha256 'd82b4f4d69dec6307901747018841e4617bfaa411acc83e43af75ca7d8b80a04'
+cask 'splitshow' do
+  version '0.9.6-alpha'
+  sha256 '3625368cd798f8d7ed2c2bc6e850f8a6bce7430de06f9e5e2ab65e3a552d96ac'
 
-  url "https://splitshow.googlecode.com/files/SplitShow_v#{version}.dmg"
-  homepage 'https://code.google.com/p/splitshow/'
+  url "https://github.com/mpflanzer/splitshow/releases/download/#{version}/SplitShow.app.zip"
+  name 'SplitShow'
+  homepage 'https://github.com/mpflanzer/splitshow'
   license :mit
 
   app 'SplitShow.app'

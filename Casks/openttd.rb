@@ -1,10 +1,11 @@
-class Openttd < Cask
-  version '1.4.2'
-  sha256 '4ea6b4fa1baf03edafa30c6475dc3f9f219239d04840bf5d4a3228bf3f6f33ff'
+cask 'openttd' do
+  version '1.5.3'
+  sha256 'c00610d1c480367c1aede611e97fa0886bec1d4b4318a87e4b80b7bd558830cb'
 
   url "http://binaries.openttd.org/releases/#{version}/openttd-#{version}-macosx-universal.zip"
+  name 'OpenTTD'
   homepage 'http://openttd.org'
-  license :unknown
+  license :gpl
 
   app 'OpenTTD.app'
 end

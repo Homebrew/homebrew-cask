@@ -1,10 +1,12 @@
-class Itools < Cask
-  version '2.4.2'
-  sha256 'd927a4e6d4f96b1641e48ce09c083d7cba92ba00694eb96a9907bd1c4a7b2a9e'
+cask 'itools' do
+  version '2.8.7'
+  sha256 'f49b075991705f57de4e46cdb6ae9ca5f7d995dba8d528c5c48f1cc31ff23dc3'
 
-  url "http://dl2.itools.hk/dl/iTools_#{version}.dmg"
-  homepage 'http://pro.itools.cn/mac'
-  license :unknown
+  # dl2.itools.hk/dl was verified as official when first introduced to the cask
+  url "http://dl2.itools.hk/dl/iTools64_#{version}.dmg"
+  name 'iTools'
+  homepage 'http://pro.itools.cn/mac/english'
+  license :gratis
 
   app 'iTools.app'
 end

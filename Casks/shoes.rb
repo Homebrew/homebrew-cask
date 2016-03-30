@@ -1,9 +1,10 @@
-class Shoes < Cask
-  version '3.2.16'
-  sha256 'dab8e717bc49e5c33654fde487cf1f0bef9dc6832df31dc54d084e8c5843532a'
+cask 'shoes' do
+  version '3.3.0'
+  sha256 '3046ef61a59cad94f4a4c9931514db730a5a2910d3d3530afd32e841077a65d4'
 
-  # mvmanila is the official download host per the vendor homepage
+  # mvmanila.com is the official download host per the vendor homepage
   url "http://shoes.mvmanila.com/public/shoes/shoes-#{version}-osx-10.9.tgz"
+  name 'Shoes'
   homepage 'http://shoesrb.com/'
   license :oss
 

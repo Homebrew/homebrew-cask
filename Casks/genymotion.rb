@@ -1,11 +1,19 @@
-class Genymotion < Cask
-  version '2.3.0'
-  sha256 'a9af8f9ec2793daa1c53edc13af211367762960e3a3cffc444d7516d1df3c984'
+cask 'genymotion' do
+  version '2.6.0'
+  sha256 '9d12ae904761d76b15a556262d7eb32d1f5031fe60690224d7b0a70303cf8d39'
 
   url "http://files2.genymotion.com/genymotion/genymotion-#{version}/genymotion-#{version}.dmg"
-  homepage 'http://www.genymotion.com/'
-  license :unknown
+  name 'Genymotion'
+  homepage 'https://www.genymotion.com/'
+  license :commercial
+
+  depends_on cask: 'virtualbox'
 
   app 'Genymotion.app'
   app 'Genymotion Shell.app'
+  binary 'Genymotion Shell.app/Contents/MacOS/genyshell'
+
+  caveats do
+    files_in_usr_local
+  end
 end

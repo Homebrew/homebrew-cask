@@ -1,11 +1,13 @@
-class Bowery < Cask
-  version '3.2.11'
-  sha256 'dbdbad37b8d17e72c227858037b67aa531e3c8b8031c314166a275121fd73468'
+cask 'bowery' do
+  version '3.6.0'
+  sha256 'ecdb5efe10dcf39a309e5f910d0a3712fe23147200b958a88d43c8bacf8ab1e1'
 
   url "http://desktop.bowery.io/#{version}_darwin_amd64.zip"
+  name 'Bowery'
   homepage 'http://bowery.io/'
-  license :unknown
+  license :freemium
 
   pkg 'bowery.pkg'
-  uninstall :pkgutil => 'com.bowery.desktop'
+
+  uninstall pkgutil: 'com.bowery.desktop'
 end

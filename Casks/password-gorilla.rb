@@ -1,12 +1,15 @@
-class PasswordGorilla < Cask
-  version '1.5.3.7.2'
-  sha256 '4d026a5fa088fe9622cbe00c5811da2f360949c7cfb46ce6e4899a09645cb83a'
+cask 'password-gorilla' do
+  version '1.5.3.7.3'
+  sha256 '51c443fb58a3628c2a45bd3160096abb9b017f33e6a08628636168f996ad0414'
 
-  url "http://zdia.de/downloads/gorilla/gorilla#{version.gsub('.','')}.zip"
+  # dp100.com is the official download host per the vendor homepage
+  url "http://gorilla.dp100.com/downloads/gorilla.mac.#{version.delete('.')}.zip"
+  name 'Password Gorilla'
   homepage 'https://github.com/zdia/gorilla'
-  license :oss
+  license :gpl
 
   app 'Password Gorilla.app'
+
   caveats <<-EOS.undent
     Password Gorilla must be run in 32-bit mode.
     Gatekeeper may need to be temporarily disabled for the first launch.

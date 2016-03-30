@@ -1,11 +1,12 @@
-class Thaiwitter < Cask
+cask 'thaiwitter' do
   version :latest
   sha256 :no_check
 
-  # dropbox is the official download host per the vendor homepage
+  # dropbox.com/u/25097375 was verified as official when first introduced to the cask
   url 'https://dl.dropbox.com/u/25097375/thaiWitter/Builds/thaiWitter3.app.zip'
+  name 'thaiWitter'
   homepage 'https://tw3.herokuapp.com/'
-  license :unknown
+  license :mpl
 
   app 'thaiWitter3.app'
 end

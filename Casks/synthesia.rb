@@ -1,11 +1,12 @@
-class Synthesia < Cask
-  version '9.0'
-  sha256 '4b3ed729994c4a76ca0bb777516f0737f218eb033d9e02e8af2a5a1a531f6ce8'
+cask 'synthesia' do
+  version '10.2'
+  sha256 'e36602bc84d1b923c7879f0e9716b30ba8f5892ee7bd062bd57bbcb8dc38d920'
 
+  # synthesia.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://synthesia.s3.amazonaws.com/files/Synthesia-#{version}.dmg"
-  homepage 'http://www.synthesiagame.com'
-  license :unknown
+  name 'Synthesia'
+  homepage 'https://www.synthesiagame.com/'
+  license :freemium
 
   app 'Synthesia.app'
-  app 'SynthesiaConfig.app'
 end

@@ -1,16 +1,16 @@
-class Vuescan < Cask
-  version '9.4.51'
+cask 'vuescan' do
+  version '9.5.41'
+  sha256 :no_check # required as upstream package is updated in-place
 
   if Hardware::CPU.is_32_bit?
-    sha256 'a5d371974e895cf37555d4616afd0d08949ab1e5ce57dc4cc6d00b5cef64e15b'
-    url 'http://www.hamrick.com/files/vuex3294.dmg'
+    url "http://www.hamrick.com/files/vuex32#{version.sub(%r{^(\d+)\.(\d+).*}, '\1\2')}.dmg"
   else
-    sha256 'be0300ff6de7ea83a0453021237e643c80b21264ebc881992028942637bc4fab'
-    url 'http://www.hamrick.com/files/vuex6494.dmg'
+    url "http://www.hamrick.com/files/vuex64#{version.sub(%r{^(\d+)\.(\d+).*}, '\1\2')}.dmg"
   end
 
-  homepage 'http://www.hamrick.com'
-  license :unknown
+  name 'VueScan'
+  homepage 'https://www.hamrick.com'
+  license :commercial
 
   app 'VueScan.app'
 end

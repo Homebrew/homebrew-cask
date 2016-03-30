@@ -1,22 +1,25 @@
-class Mactex < Cask
-  version '20140525'
-  sha256 '4e7fc21dbddae436f604dbeb3db2dc13c44aa9e2dd827a669a170418e84fc7e6'
+cask 'mactex' do
+  version '20150613'
+  sha256 'c5f5b0fd853a17dab6e844fb5e893804af78d938fa18ee94ec3b257611a95c12'
 
-  url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version}.pkg"
-  homepage 'http://www.tug.org/mactex/'
-  license :unknown
+  url 'http://tug.org/cgi-bin/mactex-download/MacTeX.pkg'
+  appcast 'http://www.tug.org/mactex/downloading.html#checksum',
+          checkpoint: 'ef3bd331dbea7053d322e153a6a2c2db98ab93f70e0689e9eef5cf57220606ce'
+  name 'MacTeX'
+  homepage 'https://www.tug.org/mactex/'
+  license :oss
 
-  pkg "mactex-#{version}.pkg"
-  uninstall :pkgutil => [
-                         'org.tug.mactex.ghostscript9.10',
-                         'org.tug.mactex.gui2014',
-                         'org.tug.mactex.texlive2014'
-                        ],
-            :delete  => [
-                         '/Applications/TeX',
-                         '/etc/paths.d/TeX',
-                        ]
-  caveats do
-    zsh_path_helper '/usr/texbin'
-  end
+  pkg 'MacTeX.pkg'
+
+  uninstall pkgutil: [
+                       'org.tug.mactex.ghostscript9.16',
+                       'org.tug.mactex.gui2015',
+                       'org.tug.mactex.texlive2015',
+                     ],
+            delete:  [
+                       '/Applications/TeX',
+                       '/Library/PreferencePanes/TeXDistPrefPane.prefPane',
+                       '/etc/paths.d/TeX',
+                       '/etc/manpaths.d/TeX',
+                     ]
 end

@@ -1,12 +1,13 @@
-class Coccinellida < Cask
-  version '0.6.1'
-  sha256 'bd590bf54667b85b4c14dae95d727bfa44cc893a75f231490b48a4a65049d8df'
+cask 'coccinellida' do
+  version '0.7'
+  sha256 '9eb8376fa3764e406433aff969fb5aa9f8ba78886948d013ea690cf979baaf88'
 
-  url "https://downloads.sourceforge.net/project/coccinellida/Coccinellida-#{version}.zip"
-  appcast 'http://coccinellida.sourceforge.net/sparkle.xml',
-          :sha256 => '8d868a49b014c2ccee0289d54a0a22883c6eadc20e2246f58c49939ad00b55a1'
+  url "http://downloads.sourceforge.net/project/coccinellida/Coccinellida-#{version}.zip"
+  appcast 'https://raw.githubusercontent.com/troydm/coccinellida/master/sparkle.xml',
+          checkpoint: '1e698171f549f46d602c94c37a07fc8862c24c30849a793c15e29ce9bb19f8fb'
+  name 'Coccinellida'
   homepage 'http://coccinellida.sourceforge.net/'
-  license :oss
+  license :gpl
 
   app 'Coccinellida.app'
 end

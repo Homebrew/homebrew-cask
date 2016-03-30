@@ -1,12 +1,12 @@
-class Toad < Cask
-  version '1.0.8'
-  sha256 'd02861e2319197730b16d112134f46f75b263d79ba6be29f6d9e33837c031fb9'
+cask 'toad' do
+  version '2.3.6'
+  sha256 '012b866e16a33293dc3ff73a4864f5ae19213b7e6f3032b37df1f712a2c0f898'
 
-  url "http://community-downloads.quest.com/toadsoft/toadmacedition/ToadMacEdition_#{version.gsub('.','')}.pkg"
-  homepage 'http://www.toadworld.com/products/toad-mac-edition/default.aspx'
-  license :unknown
+  # http://community-downloads.quest.com/toadsoft/ was verified as official when first introduced to the cask
+  url "http://community-downloads.quest.com/toadsoft/toadmacedition/ToadMacEdition_#{version.no_dots}.zip"
+  name 'Toad'
+  homepage 'https://www.toadworld.com/products/toad-mac-edition'
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  pkg 'ToadMacEdition_108.pkg'
-  uninstall :pkgutil => 'com.dell.Toad',
-            :delete => '/Applications/Toad.app'
+  app 'Toad.app'
 end
