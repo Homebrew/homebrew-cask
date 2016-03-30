@@ -10,5 +10,7 @@ cask 'hammerspoon' do
   homepage 'http://www.hammerspoon.org/'
   license :mit
 
+  accessibility_access true
+
   app 'Hammerspoon.app'
 end
