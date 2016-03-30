@@ -10,4 +10,8 @@ cask 'carbon-copy-cloner' do
   license :commercial
 
   app 'Carbon Copy Cloner.app'
+
+  postflight do
+    suppress_move_to_applications
+  end
 end
