@@ -1,10 +1,13 @@
-class Instabridge < Cask
-  version '1.0'
-  sha256 '62fa0d8766e1be5f21404c5d530c87c3c7351cced0a43c1176aefffee0c2c788'
+cask 'instabridge' do
+  version '1.2.1'
+  sha256 '7f316d42b649eb8d5dcde590540de4c135554026144577c680214b4e082b0a50'
 
-  url 'http://cdn.instabridge.com/mac/instabridge-osx.dmg'
-  homepage 'http://instabridge.com/'
-  license :unknown
+  url "http://cdn.instabridge.com/mac/Instabridge-#{version}.zip"
+  appcast 'http://cdn.instabridge.com/mac/updates.xml',
+          checkpoint: '860721ee59fe4a833dd8a4af45b9c889911b65421acc4cc87c13656d245d8891'
+  name 'Instabridge'
+  homepage 'https://instabridge.com/'
+  license :gratis
 
   app 'Instabridge.app'
 end

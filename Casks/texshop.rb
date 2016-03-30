@@ -1,12 +1,13 @@
-class Texshop < Cask
-  version '3.45'
-  sha256 '63afb1141ae41277dc40c3f6f8130e104d89cac2be85c21373a2087aaa25a4eb'
+cask 'texshop' do
+  version '3.61'
+  sha256 '5adedc5486cbd72ba7acd162d0e0230c2c228a153658fd98df7fcce1fd5c5323'
 
-  url "http://pages.uoregon.edu/koch/texshop/texshop-64/texshop#{version.gsub('.','')}.zip"
+  url "http://pages.uoregon.edu/koch/texshop/texshop-64/texshop#{version.sub('.', '')}.zip"
   appcast 'http://pages.uoregon.edu/koch/texshop/texshop-64/texshopappcast.xml',
-          :sha256 => '2ac3386dd338df8178ee8a007ebf9f9db649120307b71c35f5a1b3eeedaa92c6'
+          checkpoint: 'd58cf14129f8aecf5a01b498362d69959effdf64a7db8953c75f0b5319ce4d22'
+  name 'TeXShop'
   homepage 'http://pages.uoregon.edu/koch/texshop'
-  license :unknown
+  license :gpl
 
-  app 'TexShop.app'
+  app 'TeXShop.app'
 end

@@ -1,9 +1,9 @@
 require 'test_helper'
 
-describe Cask::Pkg do
+describe Hbc::Pkg do
   describe 'uninstall' do
     it 'removes files and dirs referenced by the pkg' do
-      pkg = Cask::Pkg.new('my.fake.pkg', Cask::NeverSudoSystemCommand)
+      pkg = Hbc::Pkg.new('my.fake.pkg', Hbc::NeverSudoSystemCommand)
 
       some_files = Array.new(3) { Pathname(Tempfile.new('testfile').path) }
       pkg.stubs(:pkgutil_bom_files).returns some_files
@@ -23,19 +23,19 @@ describe Cask::Pkg do
     end
 
     it 'forgets the pkg' do
-      pkg = Cask::Pkg.new('my.fake.pkg', Cask::FakeSystemCommand)
+      pkg = Hbc::Pkg.new('my.fake.pkg', Hbc::FakeSystemCommand)
 
-      Cask::FakeSystemCommand.stubs_command(
+      Hbc::FakeSystemCommand.stubs_command(
         ['/usr/sbin/pkgutil', '--only-files', '--files', 'my.fake.pkg']
       )
-      Cask::FakeSystemCommand.stubs_command(
+      Hbc::FakeSystemCommand.stubs_command(
         ['/usr/sbin/pkgutil', '--only-dirs', '--files', 'my.fake.pkg']
                                             )
-      Cask::FakeSystemCommand.stubs_command(
+      Hbc::FakeSystemCommand.stubs_command(
         ['/usr/sbin/pkgutil',                '--files', 'my.fake.pkg']
       )
 
-      Cask::FakeSystemCommand.expects_command(
+      Hbc::FakeSystemCommand.expects_command(
         ['/usr/bin/sudo', '-E', '--', '/usr/sbin/pkgutil', '--forget', 'my.fake.pkg']
       )
 
@@ -43,7 +43,7 @@ describe Cask::Pkg do
     end
 
     it 'cleans broken symlinks, but leaves AOK symlinks' do
-      pkg = Cask::Pkg.new('my.fake.pkg', Cask::NeverSudoSystemCommand)
+      pkg = Hbc::Pkg.new('my.fake.pkg', Hbc::NeverSudoSystemCommand)
 
       fake_dir  = Pathname(Dir.mktmpdir)
       fake_file = fake_dir.join('ima_file').tap { |path| FileUtils.touch(path) }
@@ -64,7 +64,7 @@ describe Cask::Pkg do
     end
 
     it 'snags permissions on ornery dirs, but returns them afterwords' do
-      pkg = Cask::Pkg.new('my.fake.pkg', Cask::NeverSudoSystemCommand)
+      pkg = Hbc::Pkg.new('my.fake.pkg', Hbc::NeverSudoSystemCommand)
 
       fake_dir  = Pathname(Dir.mktmpdir)
 

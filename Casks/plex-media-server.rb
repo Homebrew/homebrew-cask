@@ -1,10 +1,13 @@
-class PlexMediaServer < Cask
-  version '0.9.9.14.531-7eef8c6'
-  sha256 '7cd91e89f74569409b12f8151d66c731ca8658e6df61aaaac41accf6e6cba337'
+cask 'plex-media-server' do
+  version '0.9.16.3.1840-cece46d'
+  sha256 'fd196e32ce5d4280dcb146eea0fb1c41c7ada59b4d142714a0daea15e1228f1a'
 
-  url "http://downloads.plexapp.com/plex-media-server/#{version}/PlexMediaServer-#{version}-OSX.zip"
+  url "https://downloads.plex.tv/plex-media-server/#{version}/PlexMediaServer-#{version}-OSX.zip"
+  name 'Plex Media Server'
   homepage 'https://plex.tv/'
-  license :unknown
+  license :freemium
+
+  depends_on macos: '>= :snow_leopard'
 
   app 'Plex Media Server.app'
 end

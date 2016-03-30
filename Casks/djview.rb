@@ -1,11 +1,17 @@
-class Djview < Cask
-  version '4.5'
-  sha256 'eec2efee86136725ae0a7164f80e2cea428c647fe987e3b6843b81280c7c7664'
+cask 'djview' do
+  version '4.10.6'
+  sha256 '9b98acbd420eb10b3020b5d6e4ce144fe214461103a263c1d900f61797e92ef8'
 
-  url "https://downloads.sourceforge.net/sourceforge/djvu/djvulibre-3.5.22%2Bdjview-#{version}-intel-3.zip"
+  url "https://downloads.sourceforge.net/sourceforge/djvu/DjVuLibre-3.5.27%2BDjView-#{version}-intel64.dmg"
+  name 'DjView'
   homepage 'http://djvu.sourceforge.net/'
-  license :oss
+  license :gpl
 
-  container :nested => "djvulibre-3.5.22+djview-#{version}-intel.dmg"
   app 'DjView.app'
+
+  zap delete: [
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.djvu.djview.sfl',
+                '~/Library/Preferences/org.djvu.DjView.plist',
+                '~/Library/Saved Application State/org.djvu.DjView.savedState',
+              ]
 end

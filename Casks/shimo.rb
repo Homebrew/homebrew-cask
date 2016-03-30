@@ -1,11 +1,13 @@
-class Shimo < Cask
-  version :latest
-  sha256 :no_check
+cask 'shimo' do
+  version '4.0.5_7199'
+  sha256 'e413fedd9dcb0161986433eb26599de07428ef1a2c443b0e9448bb8bc86af504'
 
-  url 'http://www.chungwasoft.com/files/Shimo_latest.zip'
-  appcast 'http://www.chungwasoft.com/library/appcasts/Shimo3/shimocast.php'
-  homepage 'http://www.chungwasoft.com/shimo/'
-  license :unknown
+  url "https://www.feingeist.io/fg-library/appcasts/Shimo4/Shimo_#{version}.zip"
+  name 'Shimo'
+  homepage 'https://www.feingeist.io/shimo/'
+  license :commercial
+
+  auto_updates true
 
   app 'Shimo.app'
 end

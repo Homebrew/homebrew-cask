@@ -1,11 +1,13 @@
-class Dmm < Cask
-  version '1.1.3'
-  sha256 'a903754cfa215bea8b041f67269525ba29a9fe34875f819c41d0bd65e5e1628f'
+cask 'dmm' do
+  version :latest
+  sha256 :no_check
 
-  url 'https://www.dmm.co.jp/transfer/-/dmmviewer/=/device=mac/'
+  url 'https://www.dmm.com/transfer/-/dmmviewer/=/device=mac/'
+  name 'DMMViewer'
   homepage 'http://www.dmm.com/dc/book/'
-  license :unknown
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'DMMViewer.pkg'
-  uninstall :pkgutil => 'jp.co.cyphertec.installer.app.ImageViewer'
+
+  uninstall pkgutil: 'jp.co.cyphertec.installer.app.ImageViewer'
 end

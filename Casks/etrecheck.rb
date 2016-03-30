@@ -1,10 +1,11 @@
-class Etrecheck < Cask
+cask 'etrecheck' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.etresoft.com/download/EtreCheck.zip'
-  homepage 'http://www.etresoft.com/etrecheck'
-  license :unknown
+  url 'https://www.etresoft.com/download/EtreCheck.zip'
+  name 'EtreCheck'
+  homepage 'https://www.etresoft.com/etrecheck'
+  license :gpl
 
   app 'EtreCheck.app'
 end

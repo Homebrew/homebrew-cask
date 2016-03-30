@@ -1,10 +1,11 @@
-class Id3Editor < Cask
+cask 'id3-editor' do
   version '1.21.25'
   sha256 '9d11840530236e9f746f8d050ef3c2b5690e5b48283e711af16cb5ff08914131'
 
   url "http://www.pa-software.com/release/ID3Editor.ub.#{version}.dmg"
+  name 'ID3 Editor'
   homepage 'http://www.pa-software.com/id3editor/'
-  license :unknown
+  license :commercial
 
   app 'ID3 Editor.app'
 end

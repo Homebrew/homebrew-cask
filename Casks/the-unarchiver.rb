@@ -1,9 +1,10 @@
-class TheUnarchiver < Cask
-  version '3.9.1'
-  sha256 '34fa3410237e17b2cdceb801a84ed8db93c74ac0db551ffe65913c2134ebbf05'
+cask 'the-unarchiver' do
+  version '3.10.1'
+  sha256 '945570d11c40592fecf98461e224928afe594fd2d178c8bd81b1f880fd616770'
 
-  url "https://theunarchiver.googlecode.com/files/TheUnarchiver#{version}.zip"
-  homepage 'http://unarchiver.c3.cx/'
+  url "http://unarchiver.c3.cx/downloads/TheUnarchiver#{version}.dmg"
+  name 'The Unarchiver'
+  homepage 'https://unarchiver.c3.cx/unarchiver'
   license :oss
 
   app 'The Unarchiver.app'

@@ -1,9 +1,10 @@
-class Actprinter < Cask
-  version '3.1.4'
-  sha256 '7f92b093be3ddc08f5ce00cd19b3edb13c01a4c4626948b204c484123d3e25e8'
+cask 'actprinter' do
+  version '3.2.2'
+  sha256 '6e49ac75f8a660e33b3f0d3033bf9788cfeef5a0838faad93f06b21af0efb2ee'
 
   url "http://www.actprinter.com/mac/ACTPrinter%20for%20Mac%20#{version}.zip"
-  homepage 'http://houdah.com/ACTPrinter/'
+  name 'ACTPrinter'
+  homepage 'http://www.actprinter.com'
   license :gratis
 
   app 'ACTPrinter for Mac.app'

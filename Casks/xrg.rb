@@ -1,10 +1,11 @@
-class Xrg < Cask
-  version '1.7.3'
-  sha256 '972ee45e202dee87aa5a696d2393f5eece21c8e6a54368ab6fefb6a371187063'
+cask 'xrg' do
+  version '2.0.0'
+  sha256 '9c963b1ab5ddd4dba49e0e085e63e84b31613eff3e155f5e3dbb55c0abcfbe46'
 
   url "http://download.gauchosoft.com/xrg/XRG-release-#{version}.zip"
+  name 'XRG'
   homepage 'http://www.gauchosoft.com/Products/XRG/'
-  license :unknown
+  license :gpl
 
   app 'XRG.app'
 end

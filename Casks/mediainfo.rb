@@ -1,10 +1,11 @@
-class Mediainfo < Cask
-  version '0.7.66'
-  sha256 'c96dc8998fa323d04d82ee146a7aeee63b32a6e67c5750ba099f79900788a442'
+cask 'mediainfo' do
+  version '0.7.82'
+  sha256 'b35594a95adbe11636db9bdc1a2ed122de1a5f6cfcda1591845e477b6e3142f8'
 
   url "https://mediaarea.net/download/binary/mediainfo-gui/#{version}/MediaInfo_GUI_#{version}_Mac.dmg"
-  homepage 'http://mediaarea.net/en/MediaInfo'
-  license :unknown
+  name 'MediaInfo'
+  homepage 'https://mediaarea.net/en/MediaInfo'
+  license :bsd
 
   app 'MediaInfo.app'
 end

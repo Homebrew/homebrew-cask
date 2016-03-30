@@ -1,12 +1,13 @@
-class Fake < Cask
-  version '1.8.9.1'
-  sha256 'a350b00e17e690077feb05c3b26a6ca173a21bfbe39d51d8db1cd5689a4574c5'
+cask 'fake' do
+  version '1.9'
+  sha256 '3ecba6de4eb729e77b452501efb087bc33bd248dd89407b4d69c9b219e2b4b54'
 
   url "http://fakeapp.com/dist/Fake_#{version}.zip"
   appcast 'http://fakeapp.com/appcast/fake.rss',
-          :sha256 => '286ba147f304651cfbb44b03a1b5fd6b5f131cde3b04530a42cd4c5504e54b8a'
+          checkpoint: 'fcd79673ec64706f2ba888d965fb89c6120641d3687e09cc5484ca5964374c25'
+  name 'Fake'
   homepage 'http://fakeapp.com/'
-  license :unknown
+  license :commercial
 
   app 'Fake.app'
 end

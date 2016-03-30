@@ -1,18 +1,22 @@
-class Launchbar < Cask
-  version '6.1.3'
-  sha256 'e5d52b87fa3c5c72062a3115cf300618e9a60d99958160a4c35a0b9365db5c43'
+cask 'launchbar' do
+  if MacOS.release <= :mountain_lion
+    version '5.6.4'
+    sha256 '22a1ec0c10de940e5efbcccd18b8b048d95fb7c63213a01c7976a76d6be69a4d'
+    url "https://www.obdev.at/downloads/launchbar/legacy/LaunchBar-#{version}.dmg"
+  else
+    version '6.5'
+    sha256 '6b92bfaadcb46956220343bd6b6741a3b30e66817a2060471cd1e5551209e071'
+    url "https://www.obdev.at/downloads/launchbar/LaunchBar-#{version}.dmg"
+  end
 
-  url "http://www.obdev.at/downloads/launchbar/LaunchBar-#{version}.dmg"
-  homepage 'http://www.obdev.at/products/launchbar/'
-  license :unknown
+  name 'LaunchBar'
+  homepage 'https://www.obdev.at/products/launchbar/'
+  license :commercial
 
   app 'LaunchBar.app'
-  zap :delete => [
-                  '~/Library/Preferences/at.obdev.LaunchBar.plist',
-                  '~/Library/Application Support/LaunchBar/Configuration.plist',
-                  '~/Library/Application Support/LaunchBar/CustomShortcuts.plist',
-                  # todo unsure if these contain user-created content
-                  # '~/Library/Application Support/LaunchBar/Actions',
-                  # '~/Library/Application Support/LaunchBar/Snippets',
-                 ]
+
+  zap delete: [
+                '~/Library/Preferences/at.obdev.LaunchBar.plist',
+                '~/Library/Application Support/LaunchBar',
+              ]
 end

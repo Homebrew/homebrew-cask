@@ -1,10 +1,16 @@
-class Jubler < Cask
-  version '5.0.1'
-  sha256 '295d23433a88a26c113529e6eb15548b260525acc2d86fec1b90cbfbf9572b1e'
+cask 'jubler' do
+  version '5.0.5'
+  sha256 '363f272cc1e15e02cf3e28935b9b2fdd91c43b93b2d1afef281e500c158b8bcd'
 
+  # downloads.sourceforge.net/sourceforge/jubler was verified as official when first introduced to the cask
   url "http://downloads.sourceforge.net/sourceforge/jubler/Jubler-#{version}.dmg"
+  name 'Jubler'
   homepage 'http://www.jubler.org/'
-  license :oss
+  license :gpl
 
   app 'Jubler.app'
+
+  caveats do
+    depends_on_java
+  end
 end

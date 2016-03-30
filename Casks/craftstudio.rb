@@ -1,20 +1,18 @@
-class Craftstudio < Cask
+cask 'craftstudio' do
   version :latest
   sha256 :no_check
 
   url 'http://craftstud.io/files/OSX/CraftStudio.pkg'
+  name 'CraftStudio'
   homepage 'http://craftstud.io'
-  license :unknown
+  license :commercial
+
+  depends_on cask: 'mono-mre'
 
   pkg 'CraftStudio.pkg'
 
-  uninstall :quit => 'com.sparklinlabs.CraftStudioLauncher',
-            :pkgutil => 'com.sparklinlabs.CraftStudioLauncher'
-  zap       :delete => '~/Library/CraftStudio'
+  uninstall quit:    'com.sparklinlabs.CraftStudioLauncher',
+            pkgutil: 'com.sparklinlabs.CraftStudioLauncher'
 
-  caveats <<-EOS.undent
-    #{title} requires mono-mre, available via
-
-      brew cask install mono-mre
-  EOS
+  zap       delete: '~/Library/CraftStudio'
 end

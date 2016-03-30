@@ -1,10 +1,15 @@
-class Corsixth < Cask
-  version '0.30'
-  sha256 '2d9fbe47ac31955643ee1de0e53fd30ddac9e64d5a1c205c46ecd3bfda1929b4'
+cask 'corsixth' do
+  version '0.40'
+  sha256 'd4f3a289954fc2eb400615114f0a8bd729e38b310beedf20dbe97a0e1cecb127'
 
   url "https://github.com/CorsixTH/CorsixTH/releases/download/v#{version}/CorsixTH-#{version}-OSX.dmg"
-  homepage 'http://th.corsix.org'
-  license :oss
+  appcast 'https://github.com/CorsixTH/CorsixTH/releases.atom',
+          checkpoint: '414fc9fbb5bdd4e2de63d29328229ded46e3fc904b11c54bd82df97b061e83c1'
+  name 'CorsixTH'
+  homepage 'https://github.com/CorsixTH/CorsixTH'
+  license :mit
 
-  app 'CorsixTH.app'
+  app 'CorsixTH/CorsixTH.app'
+  app 'CorsixTH/AnimView.app'
+  app 'CorsixTH/MapEdit.app'
 end

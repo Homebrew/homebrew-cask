@@ -1,10 +1,14 @@
-class PayeTools < Cask
-  version '14.0.14098.109'
-  sha256 'b31a99d9b968bb1810819ede9eabe871e555dcb5fddaf20f4e3faa6856248040'
+cask 'paye-tools' do
+  version '15.1.15162.94'
+  sha256 '45ff2d53221ca7b0948faf58a0e0bc78a939107a0ba8b602f5c8f56139e6b9f7'
 
   url "https://www.gov.uk/government/uploads/uploaded/hmrc/payetools-rti-#{version}-osx.zip"
-  homepage 'http://www.hmrc.gov.uk/payerti/payroll/bpt/paye-tools.htm'
-  license :unknown
+  name 'Basic PAYE Tools'
+  homepage 'https://www.hmrc.gov.uk/payerti/payroll/bpt/paye-tools.htm'
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  installer :manual => "payetools-rti-#{version}-osx.app"
+  installer script: "payetools-rti-#{version}-osx.app/Contents/MacOS/osx-intel",
+            args:   ['--mode', 'unattended']
+
+  uninstall quit: 'uk.gov.hmrc.bptrti'
 end

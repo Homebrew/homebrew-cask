@@ -1,14 +1,22 @@
-class Webstorm < Cask
-  version '9.0'
-  sha256 '278b1692c9aa17b44d15a801a50714624ab7dea9aedda364f08fa45b7ff66766'
+cask 'webstorm' do
+  version '2016.1'
+  sha256 '0f7264f20ea845d6d4702945739d9832f6b349cc2711c1c1ba36e66403a08e5e'
 
-  url "http://download-cf.jetbrains.com/webstorm/WebStorm-#{version}.dmg"
-  homepage 'http://www.jetbrains.com/webstorm/'
-  license :unknown
+  url "https://download.jetbrains.com/webstorm/WebStorm-#{version}.dmg"
+  name 'WebStorm'
+  homepage 'https://www.jetbrains.com/webstorm/'
+  license :commercial
 
   app 'WebStorm.app'
 
-  postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{destination_path}/WebStorm.app/Contents/Info.plist"
-  end
+  uninstall delete: '/usr/local/bin/wstorm'
+
+  zap delete: [
+                "~/.WebStorm#{version.major_minor}",
+                # TODO: expand/glob for '~/Library/Preferences/jetbrains.webstorm.*.plist',
+                "~/Library/Preferences/WebStorm#{version.major_minor}",
+                "~/Library/Application Support/WebStorm#{version.major_minor}",
+                "~/Library/Caches/WebStorm#{version.major_minor}",
+                "~/Library/Logs/WebStorm#{version.major_minor}",
+              ]
 end

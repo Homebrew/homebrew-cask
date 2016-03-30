@@ -1,10 +1,14 @@
-class FramerStudio < Cask
-  version '1.9.9'
-  sha256 '87ef1a7cf363e772a1c0cbc2dd6ca6dceb41d677b547b0cac28a8c982557650f'
+cask 'framer-studio' do
+  version '57'
+  sha256 'e0a896c2f16a9995a113a106dad919176d5747d3f0d6a9626163ecbb92244c9d'
 
-  url "http://studio.update.framerjs.com/static/downloads/Framer%20Studio-#{version}.zip"
+  # devmate.com/com.motif.framer was verified as official when first introduced to the cask
+  url 'https://dl.devmate.com/com.motif.framer/FramerStudio.zip'
+  appcast 'https://updates.devmate.com/com.motif.framer.xml',
+          checkpoint: '23ceb0e9b17e3db34b9810426b34c8b9bd10ed1a95ec2b4bfcea80398dbefc4a'
+  name 'Framer Studio'
   homepage 'http://framerjs.com/'
-  license :unknown
+  license :commercial
 
   app 'Framer Studio.app'
 end

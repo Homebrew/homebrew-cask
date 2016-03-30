@@ -1,10 +1,11 @@
-class Fliqlo < Cask
-  version '1.5.2'
-  sha256 '132f760525e2b1956e708c99676b1f1a6d30c10d64eda912a669c0a25c38ad46'
+cask 'fliqlo' do
+  version '1.7.0'
+  sha256 '06896669fe0ba54df2b6f89c069c08afe97237240a8c54b834198b86b7d15ac3'
 
-  url "http://fliqlo.com/download/fliqlo_#{version.gsub('.','')}.dmg", :referer => 'http://fliqlo.com/#about'
+  url "http://fliqlo.com/download/fliqlo_#{version.delete('.')}.dmg", referer: 'http://fliqlo.com/#about'
+  name 'Fliqlo'
   homepage 'http://fliqlo.com/'
-  license :unknown
+  license :gratis
 
   screen_saver 'Fliqlo.saver'
 end

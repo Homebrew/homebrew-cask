@@ -1,10 +1,12 @@
-class Prezi < Cask
-  version '5.1.1'
-  sha256 'cd77adf228b237f24407a4a7c8e57463b27ad98d9885451e42cc7416484cce56'
+cask 'prezi' do
+  version '5.2.8'
+  sha256 '99add0a7c00546a27c19bf6fb2a408fd0e28ceb5ac00c52e435308eb62e4b72a'
 
+  # akamaihd.net is the official download host per the vendor homepage
   url "https://prezi-a.akamaihd.net/desktop/Prezi#{version}.dmg"
-  homepage 'http://www.prezi.com/'
-  license :unknown
+  name 'Prezi'
+  homepage 'https://prezi.com/'
+  license :gratis
 
   app 'Prezi.app'
 end

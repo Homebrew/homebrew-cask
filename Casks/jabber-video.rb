@@ -1,15 +1,26 @@
-class JabberVideo < Cask
-  version '4.8.6'
-  sha256 '9f0436cdfe65ebd3955a33eefac72af03def89075acd28280e27b0a6dd12738a'
+cask 'jabber-video' do
+  version '4.8.8.18390'
+  sha256 '571375bb9fa9f01994633a9e395ec42c4b1869e28d5f5559678f9981c4af4a9c'
 
-  url "http://collaboration.iu.edu/service-request/software/JabberVideo-#{version.sub(%r{\.(\d+)$},'')}.dmg"
-  homepage 'https://www.ciscojabbervideo.com/'
-  license :unknown
+  url "http://sjc1-movi-pr-download-vip.ciscojabbervideo.com/JabberVideo_#{version}.dmg"
+  name 'Cisco Systems Jabber Video'
+  homepage 'https://www.ciscojabbervideo.com/home'
+  license :closed
 
   app 'Jabber Video.app'
 
-  # todo what is the reason for this?
   postflight do
-    system '/bin/rm', '--', "#{destination_path}/Jabber Video.app/Contents/Resources/ForcedConfig.plist"
+    # Remove ForcedConfig.plist from App bundle. This plist prevents us from editing the internal, external servers and Sip domain
+    # See Cisco Jabber Video for Telepresence 4.8 Administrator Guide for more details
+    # https://www.cisco.com/c/en/us/td/docs/telepresence/endpoint/Jabber_Video/4_8/CJAB_BK_J4DBC2E7_00_jabber-video-admin-guide-4-8/CJAB_BK_J4DBC2E7_00_jabber-video-admin-guide-4-8_chapter_011.html#CJAB_TP_P465596C_00
+    system '/bin/rm', '--', "#{staged_path}/Jabber Video.app/Contents/Resources/ForcedConfig.plist"
   end
+
+  zap delete: [
+                '/Library/Preferences/com.cisco.JabberVideo.plist',
+                '~/Library/Preferences/com.cisco.JabberVideo.plist',
+                '~/Library/Application Support/Jabber Video',
+                '~/Library/Logs/Jabber Video',
+              ],
+      script: 'Jabber Video.app/Contents/SharedSupport/remove_user_data.sh'
 end

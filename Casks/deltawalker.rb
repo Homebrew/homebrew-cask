@@ -1,10 +1,14 @@
-class Deltawalker < Cask
-  version '2.0.1'
-  sha256 'eae3127fb05d84885c91e7ce5da5277aaaf128fd53225d1721d66456719b82fa'
+cask 'deltawalker' do
+  version '2.3.0'
+  sha256 '567b17366dbc33518a6a914e140699485a37b840bf99acf8f7e5b1a86c83d664'
 
+  # amazonaws.com/deltawalker was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/deltawalker/DeltaWalker-#{version}_64.dmg"
-  homepage 'http://www.deltopia.com/compare-merge-sync/macosx/'
-  license :unknown
+  name 'DeltaWalker'
+  homepage 'http://www.deltawalker.com/'
+  license :commercial
+
+  depends_on macos: '>= :tiger'
 
   app 'DeltaWalker.app'
 end

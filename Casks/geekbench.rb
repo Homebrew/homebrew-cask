@@ -1,12 +1,13 @@
-class Geekbench < Cask
-  version '3.2.2'
-  sha256 'c4891501fe720981e1baca7311241bbd036b82b8d540bc5ad1016465ee40ebe1'
+cask 'geekbench' do
+  version '3.4.1'
+  sha256 '9f2730472bba9fd39554290f465d37c32792debc5b20c9840efd1f79d40ca94c'
 
-  url "https://d34wv75roto0rl.cloudfront.net/Geekbench-#{version}-Mac.zip"
+  url "http://cdn.primatelabs.com/Geekbench-#{version}-Mac.zip"
   appcast 'http://www.primatelabs.com/appcast/geekbench3.xml',
-          :sha256 => 'e16473af8653e0c163f02ad054e9e6b7b3c5e99c4768da123d8e21c8f8ffeeaf'
+          checkpoint: '23877fa30558eada7e7beeefee4fa307c7a7ac3fad79b3c250fa09f4c68081c9'
+  name 'Geekbench'
   homepage 'http://www.primatelabs.com/geekbench/'
-  license :unknown
+  license :commercial
 
   app 'Geekbench 3.app'
 end

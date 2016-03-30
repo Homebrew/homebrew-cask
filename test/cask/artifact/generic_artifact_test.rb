@@ -1,21 +1,21 @@
 require 'test_helper'
 
-describe Cask::Artifact::Artifact do
+describe Hbc::Artifact::Artifact do
   let(:cask) {
-    Cask.load('with-generic-artifact').tap do |cask|
+    Hbc.load('with-generic-artifact').tap do |cask|
       TestHelper.install_without_artifacts(cask)
     end
   }
   let(:expected_path) {
     # todo 'artifact' should be changed to require a :target, in
-    #      which case it will no longer default to Cask.appdir
+    #      which case it will no longer default to Hbc.appdir
     #      as below
-    Cask.appdir.join('Caffeine.app')
+    Hbc.appdir.join('Caffeine.app')
   }
 
   it "links the artifact to the proper directory" do
     shutup do
-      Cask::Artifact::Artifact.new(cask).install_phase
+      Hbc::Artifact::Artifact.new(cask).install_phase
     end
 
     TestHelper.valid_alias?(expected_path).must_equal true
@@ -25,7 +25,7 @@ describe Cask::Artifact::Artifact do
     FileUtils.touch expected_path
 
     shutup do
-      Cask::Artifact::Artifact.new(cask).install_phase
+      Hbc::Artifact::Artifact.new(cask).install_phase
     end
 
     expected_path.wont_be :symlink?
@@ -35,7 +35,7 @@ describe Cask::Artifact::Artifact do
     expected_path.make_symlink('/tmp')
 
     shutup do
-      Cask::Artifact::Artifact.new(cask).install_phase
+      Hbc::Artifact::Artifact.new(cask).install_phase
     end
 
     File.readlink(expected_path).wont_equal '/tmp'

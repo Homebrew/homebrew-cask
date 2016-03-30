@@ -1,0 +1,283 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "HOMEBREW\-CASK" "1" "February 2016" "Homebrew-cask" "brew-cask"
+.
+.SH "NAME"
+\fBhomebrew\-cask\fR \- A friendly binary installer for OS X
+.
+.SH "SYNOPSIS"
+\fBbrew cask\fR command [options] [\fItoken\fR \.\.\.]
+.
+.SH "DESCRIPTION"
+Homebrew\-Cask is a tool for installing precompiled OS X binaries (such as Applications) from the command line\. The user is never required to use the graphical user interface\.
+.
+.SH "ALPHA\-QUALITY SOFTWARE"
+Homebrew\-Cask works robustly enough that we welcome new users, but the project is still in early development\. That means command names, option names, and other aspects of this manual are still subject to change\.
+.
+.SH "FREQUENTLY USED COMMANDS"
+.
+.TP
+\fBinstall [\-\-force]\fR \fItoken\fR [ \fItoken\fR \.\.\. ]
+Install Cask identified by \fItoken\fR\.
+.
+.TP
+\fBuninstall [\-\-force]\fR \fItoken\fR [ \fItoken\fR \.\.\. ]
+Uninstall Cask identified by \fItoken\fR\.
+.
+.TP
+\fBsearch\fR \fItext\fR | /\fIregexp\fR/
+Perform a substring search of known Cask tokens for \fItext\fR\. If the text is delimited by slashes, it is interpreted as a Ruby regular expression\.
+.
+.IP
+The tokens returned by \fBsearch\fR are suitable as arguments for most other commands, such as \fBinstall\fR or \fBuninstall\fR\.
+.
+.SH "COMMANDS"
+.
+.TP
+\fBaudit\fR [ \fItoken\fR \.\.\. ]
+Check the given Casks for installability\. If no tokens are given on the command line, all Casks are audited\.
+.
+.TP
+\fBcat\fR \fItoken\fR [ \fItoken\fR \.\.\. ]
+Dump the given Cask definition file to the standard output\.
+.
+.TP
+\fBcleanup\fR [\-\-outdated]
+Clean up cached downloads and tracker symlinks\. With \fB\-\-outdated\fR, only clean up cached downloads older than 10 days old\.
+.
+.TP
+\fBcreate\fR \fItoken\fR
+Generate a Cask definition file for the Cask identified by \fItoken\fR and open a template for it in your favorite editor\.
+.
+.TP
+\fBdoctor\fR or \fBdr\fR
+Check for configuration issues\. Can be useful to upload as a gist for developers along with a bug report\.
+.
+.TP
+\fBedit\fR \fItoken\fR
+Open the given Cask definition file for editing\.
+.
+.TP
+\fBfetch\fR [\-\-force] \fItoken\fR [ \fItoken\fR \.\.\. ]
+Download remote application files for the given Cask to the local cache\. With \fB\-\-force\fR, force re\-download even if the files are already cached\.
+.
+.TP
+\fBhome\fR or \fBhomepage\fR [ \fItoken\fR \.\.\. ]
+Display the homepage associated with a given Cask in a browser\.
+.
+.IP
+With no arguments, display the project page \fIhttp://caskroom\.io\fR\.
+.
+.TP
+\fBinfo\fR or \fBabv\fR \fItoken\fR [ \fItoken\fR \.\.\. ]
+Display information about the given Cask\.
+.
+.TP
+\fBinstall [\-\-force]\fR \fItoken\fR [ \fItoken\fR \.\.\. ]
+Install the given Cask\. With \fB\-\-force\fR, re\-install even if the Cask appears to be already present\.
+.
+.IP
+\fItoken\fR is usually the ID of a Cask as returned by \fBbrew cask search\fR, but see \fIOTHER WAYS TO SPECIFY A CASK\fR for variations\.
+.
+.TP
+\fBlist\fR or \fBls\fR [\-1 | \-l] [ \fItoken\fR \.\.\. ]
+Without any arguments, list all installed Casks\. With \fB\-1\fR, always format the output in a single column\. With \fB\-l\fR, give a more detailed listing\.
+.
+.IP
+If \fItoken\fR is given, summarize the staged files associated with the given Cask\.
+.
+.TP
+\fBsearch\fR or \fB\-S\fR
+Display all Casks available for install\.
+.
+.TP
+\fBsearch\fR or \fB\-S\fR \fItext\fR | /\fIregexp\fR/
+Perform a substring search of known Cask tokens for \fItext\fR\. If the text is delimited by slashes, it is interpreted as a Ruby regular expression\.
+.
+.TP
+\fBstyle\fR [\-\-fix] [ \fItoken\fR \.\.\. ]
+Check the given Casks for correct style using RuboCop Cask \fIhttps://github\.com/caskroom/rubocop\-cask\fR\. If no tokens are given on the command line, all Casks are checked\. With \fB\-\-fix\fR, auto\-correct any style errors if possible\.
+.
+.TP
+\fBuninstall [\-\-force]\fR or \fBrm\fR or \fBremove\fR \fItoken\fR [ \fItoken\fR \.\.\. ]
+Uninstall the given Cask\. With \fB\-\-force\fR, uninstall even if the Cask does not appear to be present\.
+.
+.IP
+Note that \fBuninstall \-\-force\fR is currently imperfect\. It will follow the \fBuninstall\fR instructions from \fInewest\fR Cask definition, even if the given Cask has changed since you installed it\. The result is that \fBuninstall \-\-force\fR will always succeed in removing relevant files under \fB/opt/homebrew\-cask\fR, but will sometimes fail to remove relevant installed files outside of \fB/opt/homebrew\-cask\fR\. This issue is being addressed\.
+.
+.IP
+\fBuninstall\fR without \fB\-\-force\fR is also imperfect\. It may be unable to perform an \fBuninstall\fR operation if the given Cask has changed since you installed it\. This issue is being addressed\.
+.
+.TP
+\fBupdate\fR
+For convenience\. \fBbrew cask update\fR is a synonym for \fBbrew update\fR\.
+.
+.TP
+\fBzap\fR \fItoken\fR [ \fItoken\fR \.\.\. ]
+Unconditionally remove \fIall\fR files associated with the given Cask\.
+.
+.IP
+Implicitly performs all actions associated with \fBuninstall\fR, even if the Cask does not appear to be currently installed\.
+.
+.IP
+Removes all staged versions of the Cask distribution found under \fB/opt/homebrew\-cask/Caskroom/<token>\fR\.
+.
+.IP
+If the Cask definition contains a \fBzap\fR stanza, performs additional \fBzap\fR actions as defined there, such as removing local preference files\. \fBzap\fR actions are variable, depending on the level of detail defined by the Cask author\.
+.
+.IP
+\fB\fBzap\fR may remove files which are shared between applications\.\fR
+.
+.SH "OPTIONS"
+To make these options persistent, see the ENVIRONMENT section, below\.
+.
+.P
+Some of these (such as \fB\-\-prefpanedir\fR) may be subject to removal in a future version\.
+.
+.TP
+\fB\-\-force\fR
+Force an install to proceed even when a previously\-existing install is detected\.
+.
+.TP
+\fB\-\-caskroom=<path>\fR
+Location of the Caskroom, where all binaries are stored\. The default value is: \fB/opt/homebrew\-cask/Caskroom\fR\.
+.
+.TP
+\fB\-\-verbose\fR
+Give additional feedback during installation\.
+.
+.TP
+\fB\-\-appdir=<path>\fR
+Target location for Application links\. The default value is \fB~/Applications\fR\.
+.
+.TP
+\fB\-\-colorpickerdir=<path>\fR
+Target location for Color Picker links\. The default value is \fB~/Library/Color Pickers\fR\.
+.
+.TP
+\fB\-\-prefpanedir=<path>\fR
+Target location for Preference Pane links\. The default value is \fB~/Library/Preference Panes\fR\.
+.
+.TP
+\fB\-\-qlplugindir=<path>\fR
+Target location for QuickLook Plugin links\. The default value is \fB~/Library/QuickLook\fR\.
+.
+.TP
+\fB\-\-fontdir=<path>\fR
+Target location for Font links\. The default value is \fB~/Library/Fonts\fR\.
+.
+.TP
+\fB\-\-servicedir=<path>\fR
+Target location for Service links\. The default value is \fB~/Library/Services\fR\.
+.
+.TP
+\fB\-\-input_methoddir=<path>\fR
+Target location for Input Method links\. The default value is \fB~/Library/Input Methods\fR\.
+.
+.TP
+\fB\-\-internet_plugindir=<path>\fR
+Target location for Internet Plugin links\. The default value is \fB~/Library/Internet Plug\-Ins\fR\.
+.
+.TP
+\fB\-\-audio_unit_plugindir=<path>\fR
+Target location for Audio Unit Plugin links\. The default value is \fB~/Library/Audio/Plug\-Ins/Components\fR\.
+.
+.TP
+\fB\-\-vst_plugindir=<path>\fR
+Target location for VST Plugin links\. The default value is \fB~/Library/Audio/Plug\-Ins/VST\fR\.
+.
+.TP
+\fB\-\-screen_saverdir=<path>\fR
+Target location for Screen Saver links\. The default value is \fB~/Library/Screen Savers\fR\.
+.
+.TP
+\fB\-\-no\-binaries\fR
+Do not link "helper" executables to \fB/usr/local/bin\fR\.
+.
+.TP
+\fB\-\-binarydir=<path>\fR
+Target location for "helper" executable links\. The default value is \fB/usr/local/bin\fR\.
+.
+.TP
+\fB\-\-debug\fR
+Output debugging information of use to Cask authors and developers\.
+.
+.SH "INTERACTION WITH HOMEBREW"
+Homebrew\-Cask is implemented as a external command for Homebrew\. That means this project is entirely built upon the Homebrew infrastructure\. For example, upgrades to the Homebrew\-Cask tool are received through Homebrew:
+.
+.IP "" 4
+.
+.nf
+
+brew update; brew cleanup; brew cask cleanup
+.
+.fi
+.
+.IP "" 0
+.
+.P
+And updates to individual Cask definitions are received whenever you issue the Homebrew command:
+.
+.IP "" 4
+.
+.nf
+
+brew update
+.
+.fi
+.
+.IP "" 0
+.
+.SH "OTHER WAYS TO SPECIFY A CASK"
+Most Homebrew\-Cask commands can accept a Cask token as an argument\. As described above, the argument can take the form of:
+.
+.IP "\(bu" 4
+A token as returned by \fBbrew cask search\fR, \fIeg\fR \fBgoogle\-chrome\fR
+.
+.IP "" 0
+.
+.P
+Homebrew\-Cask also accepts three other forms in place of plain tokens:
+.
+.IP "\(bu" 4
+A fully\-qualified token which includes the Tap name, \fIeg\fR \fBcaskroom/fonts/font\-symbola\fR
+.
+.IP "\(bu" 4
+A fully\-qualified pathname to a Cask file, \fIeg\fR \fB/usr/local/Library/Taps/caskroom/homebrew\-cask/Casks/google\-chrome\.rb\fR
+.
+.IP "\(bu" 4
+A \fBcurl\fR\-retrievable URI to a Cask file, \fIeg\fR \fBhttps://raw\.githubusercontent\.com/caskroom/homebrew\-cask/f25b6babcd398abf48e33af3d887b2d00de1d661/Casks/google\-chrome\.rb\fR
+.
+.IP "" 0
+.
+.SH "ENVIRONMENT"
+Homebrew\-Cask respects many of the environment variables used by the parent command \fBbrew\fR\. Please refer to the \fBbrew\fR(1) man page for more information\.
+.
+.P
+Environment variables specific to Homebrew\-Cask:
+.
+.TP
+HOMEBREW_CASK_OPTS
+This variable may contain any arguments normally used as options on the command\-line\. This is particularly useful to make options persistent\. For example, you might add to your \.bash_profile or \.zshenv something like: \fBexport HOMEBREW_CASK_OPTS=\'\-\-appdir=/Applications \-\-caskroom=/etc/Caskroom\'\fR\.
+.
+.SH "SEE ALSO"
+The Homebrew\-Cask home page: \fIhttp://caskroom\.io\fR\.
+.
+.P
+The Homebrew\-Cask GitHub page: \fIhttps://github\.com/caskroom/homebrew\-cask\fR\.
+.
+.P
+\fBbrew\fR(1), \fBcurl\fR(1)
+.
+.SH "AUTHORS"
+Paul Hinze and Contributors\.
+.
+.P
+Man page format based on \fBbrew\.1\.md\fR from Homebrew\.
+.
+.SH "BUGS"
+We still have bugs — and we are busy fixing them! If you have a problem, don’t be shy about reporting it on our GitHub issues page \fIhttps://github\.com/caskroom/homebrew\-cask/issues?state=open\fR\.
+.
+.P
+When reporting bugs, remember that Homebrew\-Cask is an independent project from Homebrew\. Do your best to direct bug reports to the appropriate project\. If your command\-line started with \fBbrew cask\fR, bring the bug to us first!

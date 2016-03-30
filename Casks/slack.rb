@@ -1,12 +1,16 @@
-class Slack < Cask
-  version '0.44.2'
-  sha256 '2b24fa40d0c928bd1cba82263dbb34b12cf9486e7b6dfff5d24216a6b89d4584'
+cask 'slack' do
+  version '2.0.1'
+  sha256 'a903dd21f72c7808803de0f59705411602d3411750eee829a26d3834dad7694b'
 
-  url 'https://rink.hockeyapp.net/api/2/apps/38e415752d573e7e78e06be8daf5acc1/app_versions/2?format=zip&amp;avtoken=b79aac107b7fda6c56fc5af6052bbc1713da870e'
+  # slack-ssb-updates.global.ssl.fastly.net was verified as official when first introduced to the cask
+  url "https://slack-ssb-updates.global.ssl.fastly.net/mac_public_releases/slack-#{version}.zip"
   appcast 'https://rink.hockeyapp.net/api/2/apps/38e415752d573e7e78e06be8daf5acc1',
-          :sha256 => '0bfbef89c2b420d7485baf482cdd82d84f5e529c92cca653996e15ca5e6ba3c6'
-  homepage 'http://slack.com'
-  license :unknown
+          checkpoint: '7e1af97cb3a2246ca102a102c9a7460ff22639f8dbb5e6e8f2435f2cec73dea6'
+  name 'Slack'
+  homepage 'https://slack.com/'
+  license :gratis
 
-  app "Slack #{version}.app"
+  auto_updates true
+
+  app 'Slack.app'
 end

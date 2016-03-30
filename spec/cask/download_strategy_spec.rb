@@ -4,25 +4,24 @@ describe 'download strategies' do
   let(:url) { 'http://example.com/cask.dmg' }
   let(:url_options) { Hash.new }
   let(:cask) {
-    class_double(Cask,
-      :title => 'some-cask',
-      :url => Cask::URL.new(url, url_options),
+    instance_double(Hbc::Cask,
+      :token => 'some-cask',
+      :url => Hbc::URL.new(url, url_options),
       :version => '1.2.3.4'
     )
   }
 
-  describe Cask::CurlDownloadStrategy do
-    let(:downloader) { Cask::CurlDownloadStrategy.new(cask) }
+  describe Hbc::CurlDownloadStrategy do
+    let(:downloader) { Hbc::CurlDownloadStrategy.new(cask) }
 
     before do
       allow(downloader.temporary_path).to receive(:rename)
     end
 
-    it 'properly assigns a name and Resource based on the Cask' do
+    it 'properly assigns a name and uri based on the Cask' do
       expect(downloader.name).to eq('some-cask')
-      expect(downloader.resource.name).to eq('some-cask')
-      expect(downloader.resource.url).to eq('http://example.com/cask.dmg')
-      expect(downloader.resource.version.to_s).to eq('1.2.3.4')
+      expect(downloader.url).to eq('http://example.com/cask.dmg')
+      expect(downloader.version.to_s).to eq('1.2.3.4')
     end
 
     it 'calls curl with default arguments for a simple Cask' do
@@ -33,7 +32,7 @@ describe 'download strategies' do
       end
 
       expect(downloader).to have_received(:curl).with(
-        cask.url,
+        cask.url.to_s,
         '-C', 0,
         '-o', kind_of(Pathname)
       )
@@ -65,7 +64,7 @@ describe 'download strategies' do
 
         shutup { downloader.fetch }
 
-        expect(curl_args.each_cons(2)).to include(['-A', 'Chrome/32.0.1000.00'])
+        expect(curl_args.each_cons(2)).to include(['-A', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10) http://caskroom.io'])
       end
     end
 
@@ -103,8 +102,8 @@ describe 'download strategies' do
     end
   end
 
-  describe Cask::CurlPostDownloadStrategy do
-    let(:downloader) { Cask::CurlPostDownloadStrategy.new(cask) }
+  describe Hbc::CurlPostDownloadStrategy do
+    let(:downloader) { Hbc::CurlPostDownloadStrategy.new(cask) }
 
     before do
       allow(downloader.temporary_path).to receive(:rename)
@@ -145,12 +144,12 @@ describe 'download strategies' do
     end
   end
 
-  describe Cask::SubversionDownloadStrategy do
+  describe Hbc::SubversionDownloadStrategy do
     let(:url_options) {{
       :using => :svn
     }}
-    let(:fake_system_command) { class_double(Cask::SystemCommand) }
-    let(:downloader) { Cask::SubversionDownloadStrategy.new(cask, fake_system_command) }
+    let(:fake_system_command) { class_double(Hbc::SystemCommand) }
+    let(:downloader) { Hbc::SubversionDownloadStrategy.new(cask, fake_system_command) }
     before do
       allow(fake_system_command).to receive(:run!)
     end
@@ -272,8 +271,8 @@ describe 'download strategies' do
   # does not work yet, because (for unknown reasons), the tar command
   # returns an error code when running under the test suite
   # it 'creates a tarball matching the expected checksum' do
-  #   cask = Cask.load('svn-download-check-cask')
-  #   downloader = Cask::SubversionDownloadStrategy.new(cask)
+  #   cask = Hbc.load('svn-download-check-cask')
+  #   downloader = Hbc::SubversionDownloadStrategy.new(cask)
   #   # special mocking required for tar to have something to work with
   #   def downloader.fetch_repo(target, url, revision=nil, ignore_externals=false)
   #     target.mkpath
@@ -281,7 +280,7 @@ describe 'download strategies' do
   #     File.utime(1000,1000,target.join('empty_file.txt'))
   #   end
   #   expect(shutup { downloader.fetch }).to equal(downloader.tarball_path)
-  #   d = Cask::Download.new(cask)
+  #   d = Hbc::Download.new(cask)
   #   d.send(:_check_sums, downloader.tarball_path, cask.sums)
   # end
 end

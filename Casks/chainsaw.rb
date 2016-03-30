@@ -1,12 +1,15 @@
-class Chainsaw < Cask
-  version '2.1.0'
-  sha256 '3449c1d0fca70f78b656a151dabaf5c8149e1dbec2854b7a662b7f242ce299d2'
+cask 'chainsaw' do
+  version :latest
+  sha256 :no_check
 
-  url "http://people.apache.org/~sdeboy/apache-chainsaw-#{version}-SNAPSHOT.dmg"
-  homepage 'http://logging.apache.org/chainsaw/'
-  license :unknown
+  url 'https://logging.apache.org/chainsaw/webstart/chainsaw.dmg'
+  name 'Chainsaw'
+  homepage 'https://logging.apache.org/chainsaw/'
+  license :apache
+
+  depends_on arch: :ppc
 
   app 'Chainsaw.app'
 
-  zap :delete => '~/.chainsaw'
+  zap delete: '~/.chainsaw'
 end

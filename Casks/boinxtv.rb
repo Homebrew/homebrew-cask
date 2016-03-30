@@ -1,10 +1,14 @@
-class Boinxtv < Cask
-  version '1.9.9-17091'
-  sha256 'aeb95fc09c80975e25bd2a584807b408bb219bf39c099d6730bc8983cfedf7b6'
+cask 'boinxtv' do
+  version '1.9.11-17138'
+  sha256 'ae9b4e245172665e198313ef7bbf46289fd56795258a49b7b9b05727a2d62f21'
 
   url "https://cdn.boinx.com/software/boinxtv/Boinx_BoinxTV_#{version}.app.zip"
-  homepage 'http://boinx.com/boinxtv/'
+  name 'BoinxTV'
+  homepage 'https://boinx.com/boinxtv/'
   license :commercial
+
+  depends_on macos: '>= :lion'
+  depends_on arch: :intel
 
   app 'BoinxTV.app'
 end

@@ -1,4 +1,4 @@
-class Tarball < TestCask
+test_cask 'tarball' do
   version '1.2.3'
   sha256 :no_check
 

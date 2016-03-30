@@ -1,12 +1,11 @@
-class Garagesale < Cask
-  version '6.6.6'
-  sha256 '2a740647b5eafc543bc3b2ba604ece8921fb59ee3b096edb4d13193642bc4897'
+cask 'garagesale' do
+  version '6.9.5'
+  sha256 'a4ab4d956f93fec438d3f3881b76e98e203a4c06ac6e46845180e35bcf9adae2'
 
-  url "http://www.iwascoding.de/downloads/GarageSale_#{version}.dmg"
-  appcast 'http://www.iwascoding.com/GarageSale/AppCast.php',
-          :sha256 => '3bc0ac9ead57616b1261263671045ca70cedc5061047da72e536c266cc6a2f4d'
-  homepage 'http://www.iwascoding.com/GarageSale/index.html'
-  license :unknown
+  url "https://downloads.iwascoding.com/downloads/GarageSale_#{version}.dmg"
+  name 'GarageSale'
+  homepage 'https://www.iwascoding.com/GarageSale/'
+  license :commercial
 
   app 'GarageSale.app'
 end

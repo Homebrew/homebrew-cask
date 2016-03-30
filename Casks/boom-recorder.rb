@@ -1,8 +1,9 @@
-class BoomRecorder < Cask
-  version '8.4.0'
-  sha256 '6090543358b142d4d14197ef810f9e3641e10c6e1309ac5f8c18c486ab1258a7'
+cask 'boom-recorder' do
+  version '8.6.2'
+  sha256 '1c7efe9f216d5d02490828215d6ed170c90097a6cca313c009946d76984d051f'
 
   url "http://www.vosgames.nl/media/downloads/Boom%20Recorder-#{version}.dmg"
+  name 'Boom Recorder'
   homepage 'http://www.vosgames.nl/products/BoomRecorder/'
   license :commercial
 

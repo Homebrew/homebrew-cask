@@ -1,10 +1,11 @@
-class Stella < Cask
-  version '3.9.3'
-  sha256 '83870088368be20224ed51f52e9babe53a75575495279adc596203f123e8477c'
+cask 'stella' do
+  version '4.6.6'
+  sha256 'afbe3bf9f5564c18720f59a8336d20e920120a5219e49a6b7373be7475841cb9'
 
-  url "https://downloads.sourceforge.net/project/stella/stella/#{version}/Stella-#{version}_intel-macosx.dmg"
+  url "http://downloads.sourceforge.net/project/stella/stella/#{version}/Stella-#{version}-macosx.dmg"
+  name 'Stella'
   homepage 'http://stella.sourceforge.net'
-  license :oss
+  license :gpl
 
   app 'Stella.app'
 end

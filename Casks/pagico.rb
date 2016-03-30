@@ -1,12 +1,16 @@
-class Pagico < Cask
-  version '6.8.1637'
-  sha256 '55df590853906fe6590f6526b2f8c2663f90f4b76c5baf2976f722d203383ddd'
+cask 'pagico' do
+  version '7.4.1868'
+  sha256 'f98b5b2278ae01229c52517de23413df8bc7a5638615ac75a1fed36c9cd1d704'
 
-  url "http://pagico.com/downloads/Pagico_Desktop_r#{version.sub(%r{^.*\.},'')}.dmg"
-  homepage 'http://pagico.com/'
-  license :unknown
+  url "https://www.pagico.com/downloads/Pagico_Desktop_r#{version.patch}.dmg"
+  name 'Pagico'
+  homepage 'https://www.pagico.com/'
+  license :commercial
+
+  depends_on macos: '>= :lion'
 
   pkg 'Install Pagico.pkg'
-  uninstall :pkgutil => 'com.pagico.*',
-            :delete => '/Applications/Pagico'
+
+  uninstall pkgutil: 'com.pagico.*',
+            delete:  '/Applications/Pagico'
 end

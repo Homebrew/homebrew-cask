@@ -1,10 +1,12 @@
-class Camerabag < Cask
-  version '2.5.06'
-  sha256 'cbc34e49c94dfe0e9434c4495e970808b8498bdd7a62251dadcdb192595aff58'
+cask 'camerabag' do
+  version '2.7.01'
+  sha256 'e120208a17692ebcc5ad7c7c3fc27125fe9870530174b2872a2a3b3fdaff6163'
 
-  url "http://downloads.nevercenter.com.s3.amazonaws.com/CameraBag_Mac_#{version.gsub('.','_')}.dmg"
-  homepage 'http://nevercenter.com/camerabag/desktop/'
-  license :unknown
+  # downloads.nevercenter.com.s3.amazonaws.com was verified as official when first introduced to the cask
+  url "http://downloads.nevercenter.com.s3.amazonaws.com/CameraBag_Mac_#{version.gsub('.', '_')}.dmg"
+  name 'CameraBag'
+  homepage 'https://nevercenter.com/camerabag/desktop/'
+  license :commercial
 
   app 'CameraBag 2.app'
 end

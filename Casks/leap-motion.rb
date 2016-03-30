@@ -1,11 +1,13 @@
-class LeapMotion < Cask
-  version '2.1.5'
-  sha256 '472d1e535bf21ffd847ff5a872ac23bbb042c955a5e1a9351f52dc7fbb2b85b0'
+cask 'leap-motion' do
+  version '2.3.1,4184'
+  sha256 '77e15a08f122f9fc88a0a3f032f0421f9993b8b7c24f5252b478db955d777cd6'
 
-  url 'https://warehouse.leapmotion.com/apps/3720/download'
+  url "https://warehouse.leapmotion.com/apps/#{version.after_comma}/download"
+  name 'Leap Motion'
   homepage 'https://www.leapmotion.com/setup'
-  license :unknown
+  license :gratis
 
   pkg 'Leap Motion.pkg'
-  uninstall :script => '/Applications/Leap Motion.app/Contents/MacOS/uninstall'
+
+  uninstall script: '/Applications/Leap Motion.app/Contents/MacOS/uninstall'
 end

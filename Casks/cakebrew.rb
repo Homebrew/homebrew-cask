@@ -1,11 +1,12 @@
-class Cakebrew < Cask
-  version '1.0.9'
-  sha256 'e60ad4e04ff74483b41c28585350d0b9935f3143fbb4b34eb3d72869da9c0e9b'
+cask 'cakebrew' do
+  version '1.2'
+  sha256 '2d9de51fbca270abaf69a7b7fd822fe52790478508ab71401430d13d2bbcd098'
 
-  url "https://www.cakebrew.com/files/cakebrew-#{version}.dmg"
-  appcast 'http://www.cakebrew.com/appcast/profileInfo.php',
-          :sha256 => '71b9cf1256459d4565b4efe6bd505a56dd29a50d51e3fed2ed6c20c4ad88dd75'
-  homepage 'http://www.cakebrew.com'
+  url "https://www.cakebrew.com/files/cakebrew-#{version}.zip"
+  appcast 'https://www.cakebrew.com/appcast/profileInfo.php',
+          checkpoint: 'b21892747ea8b7924813c3c08cd52da136332886961dfef3d52cf53eb5b0de2a'
+  name 'Cakebrew'
+  homepage 'https://www.cakebrew.com/'
   license :gpl
 
   app 'Cakebrew.app'

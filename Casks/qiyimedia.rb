@@ -1,11 +1,15 @@
-# encoding: UTF-8
-class Qiyimedia < Cask
-  version '3.1.14'
-  sha256 'bab6c18060eabb2ae3326c562de6e33041ab6a0476817ae7fc1f39d2265734b5'
+cask 'qiyimedia' do
+  version :latest
+  sha256 :no_check
 
-  url 'http://static.qiyi.com/ext/common/QIYImedia_Mac_5.dmg'
-  homepage 'http://www.iqiyi.com'
-  license :unknown
+  url 'http://static.qiyi.com/ext/common/iQIYIMedia_005.dmg'
+  name '爱奇艺视频'
+  homepage 'https://www.iqiyi.com'
+  license :gratis
 
-  app '爱奇艺视频.app'
+  app '爱奇艺.app'
+
+  zap delete: [
+                '~/Library/Containers/com.iqiyi.yingyin',
+              ]
 end

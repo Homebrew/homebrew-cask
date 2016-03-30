@@ -1,10 +1,14 @@
-class Musescore < Cask
-  version '1.3'
-  sha256 'fcd106ec700f14053c9b4f3fd411d2335915c040f9071ea6da8d109e6827c3a5'
+cask 'musescore' do
+  version '2.0.2'
+  sha256 '7c32ca882d4dfed6866a13ade88662a8ce882a98ead6f3cb6f80307a91ea8bd7'
 
+  # osuosl.org is the official download host per the vendor homepage.
   url "http://ftp.osuosl.org/pub/musescore/releases/MuseScore-#{version}/MuseScore-#{version}.dmg"
-  homepage 'http://musescore.org/'
-  license :unknown
+  name 'MuseScore'
+  homepage 'https://musescore.org/'
+  license :gpl
 
-  app 'MuseScore.app'
+  depends_on macos: '>= :lion'
+
+  app "MuseScore #{version.to_i}.app"
 end

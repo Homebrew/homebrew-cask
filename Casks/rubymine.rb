@@ -1,22 +1,20 @@
-class Rubymine < Cask
-  version '6.3.3'
-  sha256 'c79216de02f2564ea60592420342ab9fb5014da7e7c96f92e2856dc49f2090dd'
+cask 'rubymine' do
+  version '8.0.3'
+  sha256 'b1e6a328ac9f97224df6d71fb8cf20fc92df6fb1579f008be8611dc97c51a2a3'
 
-  url "http://download-cf.jetbrains.com/ruby/RubyMine-#{version}.dmg"
-  homepage 'http://www.jetbrains.com/ruby/'
-  license :unknown
+  url "https://download.jetbrains.com/ruby/RubyMine-#{version}-custom-jdk-bundled.dmg"
+  name 'RubyMine'
+  homepage 'https://www.jetbrains.com/ruby/'
+  license :commercial
 
   app 'RubyMine.app'
 
-  postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :JVMOptions:JVMVersion 1.6+', "#{destination_path}/RubyMine.app/Contents/Info.plist"
-  end
-  zap :delete => [
-                  '~/Library/Application Support/RubyMine40',
-                  '~/Library/Preferences/RubyMine40',
-                  '~/Library/Application Support/RubyMine50',
-                  '~/Library/Preferences/RubyMine50',
-                  '~/Library/Application Support/RubyMine60',
-                  '~/Library/Preferences/RubyMine60',
-                 ]
+  zap delete: [
+                "~/Library/Application Support/RubyMine#{version.major_minor.no_dots}",
+                "~/Library/Preferences/RubyMine#{version.major_minor.no_dots}",
+                "~/.RubyMine#{version.major_minor.no_dots}",
+                '~/Library/Preferences/com.jetbrains.RubyMine.plist',
+                "~/Library/Caches/RubyMine#{version.major_minor.no_dots}",
+                "~/Library/Logs/RubyMine#{version.major_minor.no_dots}",
+              ]
 end

@@ -1,13 +1,27 @@
-class Tunnelblick < Cask
-  version '3.4.1_r3054'
-  sha256 '44a9b1986c100698c82186c4ce404d5acf34f292d08c5f8528c33e22646f955a'
+cask 'tunnelblick' do
+  if MacOS.release <= :snow_leopard
+    version '3.5.8_build_4270.4530'
+    sha256 'd634a9a5fd06f95c7325987197fb7890119bf0a40a3958284814958a14c20ce3'
+  else
+    version '3.6.0a_build_4543.4546'
+    sha256 '0850dffd539cc60097d29fdb8a8e6b1cf83eeec7ea8bc7c4a821df69fe817441'
+  end
 
-  url "https://downloads.sourceforge.net/project/tunnelblick/All%20files/Tunnelblick_#{version}.dmg"
-  appcast 'https://www.tunnelblick.net/appcast.rss',
-          :sha256 => '7fa119cda4d782dc61cb75895c70b3572652df737c908270c48a09d67a874592'
-  homepage 'https://code.google.com/p/tunnelblick/'
-  license :oss
+  url "https://www.tunnelblick.net/release/Tunnelblick_#{version}.dmg"
+  name 'Tunnelblick'
+  homepage 'https://www.tunnelblick.net'
+  license :gpl
+
+  auto_updates true
+  depends_on macos: '>= :tiger'
 
   app 'Tunnelblick.app'
-  caveats 'For security reasons, Tunnelblick must be installed to /Applications and will request to be moved at launch.'
+
+  uninstall launchctl: 'net.tunnelblick.tunnelblick.LaunchAtLogin',
+            quit:      'net.tunnelblick.tunnelblick'
+
+  caveats <<-EOS.undent
+    For security reasons, #{token} must be installed to /Applications,
+    and will request to be moved at launch.
+  EOS
 end

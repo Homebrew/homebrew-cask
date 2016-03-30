@@ -1,14 +1,18 @@
-class Pokerstars < Cask
+cask 'pokerstars' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.pokerstars.com/PokerStars.app.zip'
-  homepage 'http://www.pokerstars.com/'
-  license :unknown
+  url 'https://www.pokerstars.com/PokerStars.app.zip'
+  name 'PokerStars'
+  homepage 'https://www.pokerstars.com/'
+  license :freemium
+
+  auto_updates true
 
   app 'PokerStars.app'
-  zap :delete => [
-                  '~/Library/Preferences/com.pokerstars.user.ini',
-                  '~/Library/Preferences/com.pokerstars.PokerStars.plist',
-                 ]
+
+  zap delete: [
+                '~/Library/Preferences/com.pokerstars.user.ini',
+                '~/Library/Preferences/com.pokerstars.PokerStars.plist',
+              ]
 end

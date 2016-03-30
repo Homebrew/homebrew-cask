@@ -1,10 +1,11 @@
-class Djv < Cask
-  version '0.9.0'
-  sha256 '201a3220d6ddce30af49add669fc5e663edf4fdd458ff48b12ba24c2ad7a2a46'
+cask 'djv' do
+  version '1.1.0'
+  sha256 'b922fc5d94e57d436779aa912d3f07746f541124149d5f4d8198d4ef0e2e8fd5'
 
-  url "http://downloads.sourceforge.net/project/djv/djv-stable/#{version}/djv-#{version}_osx-x64.dmg"
+  url "http://downloads.sourceforge.net/project/djv/djv-stable/#{version}/djv-#{version}-OSX-64.dmg"
+  name 'DJV Imaging'
   homepage 'http://djv.sourceforge.net'
-  license :oss
+  license :bsd
 
-  app "djv-#{version}.app"
+  app "djv-#{version}-OSX-64.app"
 end

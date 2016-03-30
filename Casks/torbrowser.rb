@@ -1,12 +1,18 @@
-class Torbrowser < Cask
-  version '4.0.1'
-  sha256 '2388eaabbe81bdc767ce3fbbbe0247853eb4b0f018b341fc9d5017791f00f02b'
+cask 'torbrowser' do
+  version '5.5.4'
+  sha256 '7dd8ba199d08b725e74ef5af33ecb2600e9abe33d859b2d975a102d74aed7a63'
 
-  url "https://www.torproject.org/dist/torbrowser/#{version}/TorBrowser-#{version}-osx32_en-US.dmg"
-  gpg "#{url}.asc",
-      :key_id => '416f061063fee659'
+  url "https://dist.torproject.org/torbrowser/#{version}/TorBrowser-#{version}-osx64_en-US.dmg"
+  name 'Tor Browser'
   homepage 'https://www.torproject.org/projects/torbrowser.html'
-  license :unknown
+  license :oss
+  gpg "#{url}.asc",
+      key_id: 'ef6e286dda85ea2a4ba7de684e2c6e8793298290'
 
   app 'TorBrowser.app'
+
+  zap delete: [
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.tor browser.sfl',
+                '~/Library/Preferences/org.mozilla.tor browser.plist',
+              ]
 end

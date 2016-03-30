@@ -1,10 +1,25 @@
-class Jabref < Cask
-  version '2.10'
-  sha256 'c63a49e47a43bdb026dde7fb695210d9a3f8c0e71445af7d6736c5379b23baa2'
+cask 'jabref' do
+  version '3.2'
+  sha256 'ddde9938c3d5092ffe2ba2ecd127439de4ae304d783b5e33056951f449a185b5'
 
-  url "https://downloads.sourceforge.net/project/jabref/jabref/#{version}/JabRef-#{version}-OSX.zip"
-  homepage 'http://jabref.sourceforge.net/'
-  license :oss
+  # sourceforge.net/project/jabref was verified as official when first introduced to the cask
+  url "http://downloads.sourceforge.net/project/jabref/v#{version}/JabRef_macos_#{version.dots_to_underscores}.dmg"
+  appcast 'https://github.com/JabRef/jabref/releases.atom',
+          checkpoint: '397228862c29af39b57e97e0a4337508d56fadd96289ecf54a8369955c9d2e21'
+  name 'JabRef'
+  homepage 'http://www.jabref.org/'
+  license :gpl
 
-  app 'JabRef.app'
+  installer script: 'JabRef Installer.app/Contents/MacOS/JavaApplicationStub',
+            args:   [
+                      '-q',
+                      '-VcreateDesktopLinkAction$Boolean=false',
+                      '-VaddToDockAction$Boolean=false',
+                      '-VshowFileAction$Boolean=false',
+                      '-Vsys.installationDir=/Applications',
+                      '-VexecutionLauncherAction$Boolean=false',
+                    ],
+            sudo:   false
+
+  uninstall delete: '/Applications/JabRef.app'
 end

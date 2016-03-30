@@ -1,12 +1,15 @@
-class FitbitConnect < Cask
-  version '1.0.3.5510'
-  sha256 '14ffe8fdc6040cbcb17e551e04cdbe1dabcff99641eed6a2495631d2b83ffc0f'
+cask 'fitbit-connect' do
+  version '20151109_2.0.1.6761'
+  sha256 'ec813ffde89caa535350613808dee9c45a72fa24f98b1012459b877a7f0f9e2c'
 
-  url "http://cache.fitbit.com/FitbitConnect/FitbitConnect_Mac_20140519_#{version}.dmg"
-  homepage 'http://www.fitbit.com/'
-  license :unknown
+  url "http://cache.fitbit.com/FitbitConnect/FitbitConnect_Mac_#{version}.dmg"
+  name 'Fitbit Connect'
+  homepage 'https://www.fitbit.com/'
+  license :gratis
 
   pkg 'Install Fitbit Connect.pkg'
-  uninstall :script => { :executable => 'Uninstall Fitbit Connect.app/Contents/Resources/uninstall.sh' },
-            :pkgutil => 'com.fitbit.pkg.GalileoInstaller'
+
+  uninstall script:  { executable: 'Uninstall Fitbit Connect.app/Contents/Resources/uninstall.sh',
+                       sudo:       true },
+            pkgutil: 'com.fitbit.pkg.GalileoInstaller'
 end

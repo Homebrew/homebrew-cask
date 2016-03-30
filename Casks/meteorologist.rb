@@ -1,8 +1,9 @@
-class Meteorologist < Cask
-  version '1.6.1'
-  sha256 '15243a845062d87bf67e6a26b8da011e00c50a5f24def460cc685532d7d720a4'
+cask 'meteorologist' do
+  version '2.0.4'
+  sha256 '1ee14b352c7302ac8e1d71f22c106c02e05572f54050aee6ef804433f0886f21'
 
-  url "https://downloads.sourceforge.net/heat-meteo/Meteorologist-#{version}.dmg"
+  url "http://downloads.sourceforge.net/heat-meteo/Meteorologist-#{version}.dmg"
+  name 'Meteorologist'
   homepage 'http://heat-meteo.sourceforge.net/'
   license :oss
 

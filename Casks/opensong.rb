@@ -1,10 +1,12 @@
-class Opensong < Cask
-  version '2.1.1'
-  sha256 '7663e04a1ae46aec948fad9e80cd8966c5a006744b9da42bc85cca4bb4dda4bc'
+cask 'opensong' do
+  version '2.1.2'
+  sha256 '5ed3da5801c2539b87c3ce8125a1b440a6d50129b675182685892e1c46d0ad1b'
 
-  url "https://downloads.sourceforge.net/sourceforge/opensong/OpenSongOSX-V#{version}.dmg"
+  # sourceforge.net is the official download host per the vendor homepage
+  url "http://downloads.sourceforge.net/sourceforge/opensong/OpenSongOSX-V#{version}.dmg"
+  name 'OpenSong'
   homepage 'http://www.opensong.org/'
-  license :oss
+  license :gpl
 
   app "OpenSong V#{version}/OpenSongOSX-Cocoa.app"
   app "Opensong V#{version}/OpenSongOSX.app"

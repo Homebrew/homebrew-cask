@@ -1,10 +1,14 @@
-class AdafruitArduino < Cask
-  version '1.0.5'
-  sha256 'de1c64233c8a2c6b039f9eddd4c417e594afee51558cd9f2f335a831580e2d42'
+cask 'adafruit-arduino' do
+  version '1.6.4'
+  sha256 'f68f8d6397b2eca277fecb3638e4f2f4c44bab0285f89adcc9ca237333eb4edd'
 
-  url "http://adafruit-download.s3.amazonaws.com/Adafruit%20Arduino%20#{version}%20-%20Mac%2011-8-13.zip"
-  homepage 'http://adafruit.com'
-  license :unknown
+  # amazonaws.com/adafruit-download was verified as official when first introduced to the cask
+  url "https://s3.amazonaws.com/adafruit-download/adafruit-arduino-#{version}-macosx.zip"
+  name 'Adafruit Arduino'
+  homepage 'https://adafruit.com'
+  license :gpl
 
-  app "Adafruit Arduino #{version}.app"
+  conflicts_with cask: 'arduino'
+
+  app 'Arduino.app'
 end

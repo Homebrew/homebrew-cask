@@ -1,10 +1,11 @@
-class Nodebox < Cask
-  version '3.0.39'
-  sha256 '44620d6554c467863c0d68d5e90ff3edf0c7f9ab6c5614cdef2fcb54f9044fb4'
+cask 'nodebox' do
+  version '3.0.44'
+  sha256 '9181a1b886c4a02bc0d94f62b49865b5f1c1ea473ec5c8a7b93f1b9d95535b5a'
 
   url "https://secure.nodebox.net/downloads/NodeBox-#{version}.zip"
-  homepage 'http://nodebox.net/node/'
-  license :unknown
+  name 'NodeBox'
+  homepage 'https://www.nodebox.net/node/'
+  license :gpl
 
   app 'NodeBox.app'
 end

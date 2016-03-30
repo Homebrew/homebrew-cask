@@ -1,11 +1,13 @@
-class Chronosync < Cask
+cask 'chronosync' do
   version :latest
   sha256 :no_check
 
   url 'http://downloads.econtechnologies.com/CS4_Download.dmg'
-  homepage 'http://www.econtechnologies.com'
-  license :unknown
+  name 'ChronoSync'
+  homepage 'https://www.econtechnologies.com'
+  license :commercial
 
   pkg 'Install.pkg'
-  uninstall :pkgutil => 'com.econtechnologies.pkg.ChronoSyncApplication'
+
+  uninstall pkgutil: 'com.econtechnologies.pkg.ChronoSyncApplication'
 end

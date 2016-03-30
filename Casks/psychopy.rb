@@ -1,8 +1,12 @@
-class Psychopy < Cask
-  version '1.79.01'
-  sha256 'a2b174aee30ca4a8858238404adfd9271da9ec14243aa30be0b7f9a6abb047b8'
+cask 'psychopy' do
+  version '1.83.04'
+  sha256 '01a4fdf1d087d408b195d7a10cc406030623bbfce72bd85e6b9647ace9084960'
 
-  url "https://downloads.sourceforge.net/sourceforge/psychpy/StandalonePsychoPy-#{version}-OSX.dmg"
+  # github.com is the official download host per the vendor homepage
+  url "https://github.com/psychopy/psychopy/releases/download/#{version}/StandalonePsychoPy-#{version}-OSX_64bit.dmg"
+  appcast 'https://github.com/psychopy/psychopy/releases.atom',
+          checkpoint: '4ac792f495a147dd3403885a57c06b9bc939906113a22df48cd24517d3c2877f'
+  name 'PsychoPy'
   homepage 'http://www.psychopy.org/'
   license :oss
 

@@ -1,10 +1,11 @@
-class Ganttproject < Cask
-  version '2.6.2-r1544'
-  sha256 '8db9b2da23c581f4907ec091db07b7d19e784f4fcbc7fd7cea03d5ab0de23f70'
+cask 'ganttproject' do
+  version '2.7.1-r1924'
+  sha256 '4a7775ae3547858ca5cce91b734bb429a7e04718433e925f60da89fc1d2d154b'
 
-  url "https://ganttproject.googlecode.com/files/ganttproject-#{version}.dmg"
-  homepage 'http://www.ganttproject.biz'
+  url "https://dl.ganttproject.biz/ganttproject-#{version.sub(%r{-.*}, '')}/ganttproject-#{version}.dmg"
+  name 'GanttProject'
+  homepage 'https://www.ganttproject.biz'
   license :oss
 
-  app 'GanttProject 2.6.2.app'
+  app 'GanttProject.app'
 end

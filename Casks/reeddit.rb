@@ -1,10 +1,14 @@
-class Reeddit < Cask
-  version '1.9'
-  sha256 '7bb465aa5a8c80adfb6f73430caee9cc977afae77d2a55be97371b9516aa01a7'
+cask 'reeddit' do
+  version '1.9.6'
+  sha256 'b3e6af1576994b199642d832142cff3fb49713006ab9e0f87e1cbf9ded32cca9'
 
+  # github.com/berbaquero/Reeddit-app was verified as official when first introduced to the cask
   url "https://github.com/berbaquero/Reeddit-app/releases/download/v#{version}/Reeddit.app.zip"
-  homepage 'http://mac.reedditapp.com'
-  license :oss
+  appcast 'https://github.com/berbaquero/Reeddit-app/releases.atom',
+          checkpoint: '6c029ef230f82c430494d258b46ce49cd74a73ebb21214ed856b1e007b3fbd7d'
+  name 'Reeddit'
+  homepage 'http://mac.reedditapp.com/'
+  license :mit
 
   app 'Reeddit.app'
 end

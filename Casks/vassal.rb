@@ -1,10 +1,12 @@
-class Vassal < Cask
-  version '3.2.13'
-  sha256 'f9840fe23a48611307a1e42919fc4dcd6ff79165eeda2da61b834f81ab7bf7f6'
+cask 'vassal' do
+  version '3.2.15'
+  sha256 '936f7eeda9ee19c78708102e647aa43b91bfd70690da2552c72a28d5fbd10541'
 
-  url "https://downloads.sourceforge.net/project/vassalengine/VASSAL-current/VASSAL-#{version}/VASSAL-#{version}-macosx.dmg"
-  homepage 'http://www.vassalengine.org'
-  license :oss
+  # sourceforge.net/project/vassalengine was verified as official when first introduced to the cask
+  url "http://downloads.sourceforge.net/project/vassalengine/VASSAL-current/VASSAL-#{version}/VASSAL-#{version}-macosx.dmg"
+  name 'VASSAL'
+  homepage 'http://www.vassalengine.org/'
+  license :gpl
 
   app 'VASSAL.app'
 end

@@ -1,10 +1,22 @@
-class Ubersicht < Cask
-  version '0.2.7'
-  sha256 '84a104490c06806205a30008472df92a983855f2bf8fba55ad4312d53518a362'
+cask 'ubersicht' do
+  version '0.8.36'
+  sha256 'd22eb580578e30b3353fef05c35b37e0fac95b986b9bd7d268485e5ed83ec752'
 
   url "http://tracesof.net/uebersicht/releases/Uebersicht-#{version}.app.zip"
+  appcast 'http://tracesof.net/uebersicht/updates.xml.rss',
+          checkpoint: '584d7e2f46b097a52df3d036e7ea15b49546e9ba325ca1ae6a55c4e50a477104'
+  name 'Übersicht'
   homepage 'http://tracesof.net/uebersicht'
-  license :unknown
+  license :gpl
 
   app 'Übersicht.app'
+
+  uninstall login_item: 'Übersicht'
+
+  zap delete: [
+                '~/Library/Application Support/tracesOf.Uebersicht',
+                '~/Library/Application Support/Übersicht',
+                '~/Library/Caches/tracesOf.Uebersicht',
+                '~/Library/Preferences/tracesOf.Uebersicht.plist',
+              ]
 end

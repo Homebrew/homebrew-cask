@@ -1,8 +1,9 @@
-class Bluej < Cask
-  version '3.1.1'
-  sha256 '63be0772de6d35d3627db9c8ea1b26efbee08ba3e105ca51fd3a9809f09f8c39'
+cask 'bluej' do
+  version '3.1.6'
+  sha256 'b53cb1ce8384845767074480b26b2795aecf7d0f0e9027747c0106918a7471a6'
 
-  url "http://www.bluej.org/download/files/BlueJ-#{version.gsub('.', '')}.zip"
+  url "http://www.bluej.org/download/files/BlueJ-#{version.delete('.')}.zip"
+  name 'BlueJ'
   homepage 'http://www.bluej.org'
   license :gpl
 

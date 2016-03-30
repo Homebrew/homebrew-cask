@@ -1,11 +1,16 @@
-class Munki < Cask
-  version '2.0.1'
-  sha256 'f4b586c254fcd47f54d4b58ea7c43308ee1472b41f03e7b59ceb9fd6605a54b8'
+cask 'munki' do
+  version '2.5.1.2630'
+  sha256 'cf2c50078f1bf02225ac886536cca0448455a0926bc3aa5e53ea0bac2261f7fa'
 
-  url "https://github.com/munki/munki/releases/download/v#{version}/munkitools-#{version}.2253.pkg"
-  homepage 'http://munki.github.io/munki/'
-  license :oss
+  # github.com/munki/munki was verified as official when first introduced to the cask
+  url "https://github.com/munki/munki/releases/download/v#{version.sub(%r{^(\d+\.\d+.\d+).*}, '\1')}/munkitools-#{version}.pkg"
+  appcast 'https://github.com/munki/munki/releases.atom',
+          checkpoint: 'babf25ad250efca9b32499be3b45401d6ae3a2358614a87dc5278f5f8c4cd244'
+  name 'Munki'
+  homepage 'https://www.munki.org/munki/'
+  license :apache
 
-  pkg "munkitools-#{version}.2253.pkg"
-  uninstall :pkgutil => 'com.googlecode.munki.*'
+  pkg "munkitools-#{version}.pkg"
+
+  uninstall pkgutil: 'com.googlecode.munki.*'
 end

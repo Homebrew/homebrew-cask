@@ -1,12 +1,18 @@
-class Macdown < Cask
-  version '0.2.5.1'
-  sha256 '4929637cf1997809dc3070037b5e52b039561751e47118ea3aa436fecf6d4a90'
+cask 'macdown' do
+  version '0.6'
+  sha256 '2f129112df7393b5987c811f0001c0e0c8a4612566db1fcbbb4170367bc781f8'
 
-  url "http://macdown.uranusjr.com/download/v#{version}/"
-  appcast 'http://macdown.uranusjr.com/sparkle/macdown/appcast.xml',
-          :sha256 => 'fa671c25b375b36486df979070ec4bdece1e9ef8b281893d3bebf683d89cdba3'
+  # github.com/uranusjr/macdown was verified as official when first introduced to the cask
+  url "https://github.com/uranusjr/macdown/releases/download/v#{version}/MacDown.app.zip"
+  appcast 'https://github.com/uranusjr/macdown/releases.atom',
+          checkpoint: 'dc94fe807286a33b5e4c89895fa58c1a01fb217d9e5ea5966143570be98bcbff'
+  name 'MacDown'
   homepage 'http://macdown.uranusjr.com/'
-  license :unknown
+  license :mit
 
   app 'MacDown.app'
+  binary 'MacDown.app/Contents/SharedSupport/bin/macdown'
+
+  zap delete: ['~/Library/Preferences/com.uranusjr.macdown.plist',
+               '~/Library/Application Support/MacDown']
 end

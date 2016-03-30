@@ -1,12 +1,14 @@
-class Rethinkdb < Cask
-  version '1.15.1'
-  sha256 'f16ec6cd619d704913e93ac3800d1c7ce1fe7390dd9ae81fb7a964d3b58a04f2'
+cask 'rethinkdb' do
+  version '2.0.1'
+  sha256 'd5bdab6e7d347aa00b7733dc87e08a876406dee675eaae830f9d37c283350466'
 
-  url "http://download.rethinkdb.com/osx/rethinkdb-#{version}.dmg"
-  homepage 'http://www.rethinkdb.com'
+  url "https://download.rethinkdb.com/osx/rethinkdb-#{version}.dmg"
+  name 'RethinkDB'
+  homepage 'https://www.rethinkdb.com'
   license :affero
 
   pkg "rethinkdb-#{version}.pkg"
-  uninstall :script  => { :executable => 'uninstall-rethinkdb.sh' },
-            :pkgutil => 'rethinkdb'
+
+  uninstall script:  { executable: 'uninstall-rethinkdb.sh' },
+            pkgutil: 'rethinkdb'
 end

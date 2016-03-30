@@ -1,12 +1,14 @@
-class JenkinsMenu < Cask
-  version '0.1.1'
-  sha256 'c53e72473ff1d64b0b63b28ebd6297553cd6045c383b48e15887041487b588fb'
+cask 'jenkins-menu' do
+  version '0.2.0'
+  sha256 'dc2b69ab27b99ed0b0c165ade90b504b7c8201213b5334c6d927affd8cf106b4'
 
-  url "https://bitbucket.org/qvacua/qvacua/downloads/JenkinsMenu-#{version}.zip"
+  # github.com/qvacua/jenkins-menu was verified as official when first introduced to the cask
+  url "https://github.com/qvacua/jenkins-menu/releases/download/v#{version}/Jenkins.Menu-#{version}.zip"
   appcast 'http://qvacua.com/jenkinsmenu/appcast.xml',
-          :sha256 => '420aaafc9de36c174ba1b43d1dfd4719603808f1754da8b7bb2a4ef1e934429d'
+          checkpoint: '7d022aadeae3d7bafc6a0b580f4159b4b14d15fe24d08f360835557d5e2c5156'
+  name 'Jenkins Menu'
   homepage 'http://qvacua.com'
-  license :oss
+  license :gpl
 
   app 'Jenkins Menu.app'
 end

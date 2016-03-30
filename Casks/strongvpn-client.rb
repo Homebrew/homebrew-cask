@@ -1,12 +1,14 @@
-class StrongvpnClient < Cask
-  version '1.0.4'
-  sha256 'cacf4f7a94b1601bae2cf19fe94b6dbae827ed531e05ff0f91723aea5b3845b9'
+cask 'strongvpn-client' do
+  version '1.1.8'
+  sha256 '060b0a22a180866df18ba8771b3110d8e790ede7dfb980253bbfbc4af8409b88'
 
-  url "https://mirror2.reliablehosting.com/mac/StrongVPN_Mac_#{version}.dmg"
+  # reliablehosting.com is the official download host per the vendor homepage
+  url "https://mirror2.reliablehosting.com/mac/StrongVPN_Mac_#{version}.zip"
   appcast 'https://colomovers.com/mac.xml',
-          :sha256 => 'd3d2168154069fbcd2ca42eb7167cf9b411230d3c58ac4367b46139011c0415f'
-  homepage 'http://strongvpn.com/vpnclient.shtml'
-  license :unknown
+          checkpoint: 'd0d7858e5914ce9a1791c7c5719d4d4826bffecfead63c26e99fd44f325af46b'
+  name 'StrongVPN'
+  homepage 'https://strongvpn.com/vpnclient.shtml'
+  license :closed
 
-  app 'StrongVPN Client.app'
+  app 'StrongVPN.app'
 end

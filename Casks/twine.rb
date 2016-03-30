@@ -1,10 +1,12 @@
-class Twine < Cask
-  version '1.4.1'
-  sha256 '717e0f7849f8216a7bae68c66656cf0e3cd0496c8a9d95e3c61e175d56f010e4'
+cask 'twine' do
+  version '2.0.11'
+  sha256 '360d7b72b538d622e01d5fdac059bf6ddeac97619fdf5002fae736ca4b4eca19'
 
-  url "http://twinery.org/downloads/twine_#{version}_osx.zip"
+  # bitbucket.org is the official download host per the vendor homepage
+  url "https://bitbucket.org/klembot/twinejs/downloads/twine_#{version}_osx.zip"
+  name 'Twine'
   homepage 'http://twinery.org/'
-  license :unknown
+  license :gpl
 
   app 'Twine.app'
 end

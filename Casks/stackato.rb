@@ -1,10 +1,11 @@
-class Stackato < Cask
-  version '3.1.1'
-  sha256 '79b34288416e2adac24c30c8eacd0b1177f8c3985d355af16e13b7b9dd17259d'
+cask 'stackato' do
+  version '3.2.4'
+  sha256 'e1d940509d46bc1ec4829998c736b802f77c01971e661d43456fe7574b16e48f'
 
-  url "http://downloads.activestate.com/stackato/client/v#{version}/stackato-#{version}-macosx10.5-i386-x86_64.zip"
-  homepage 'http://docs.stackato.com/user/client/index.html'
-  license :unknown
+  url "https://downloads.stackato.com/client/v#{version}/stackato-#{version}-macosx10.5-i386-x86_64.zip"
+  name 'Stackato'
+  homepage 'https://docs.stackato.com/user/client/'
+  license :apache
 
   binary "stackato-#{version}-macosx10.5-i386-x86_64/stackato"
 end

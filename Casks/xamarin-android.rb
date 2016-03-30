@@ -1,14 +1,15 @@
-class XamarinAndroid < Cask
-  version '4.18.0-34'
-  sha256 '012f7266b123a1cc8cc189db8c3aea24c5daa8912df684525336fabc86e279e7'
+cask 'xamarin-android' do
+  version '6.0.2-1'
+  sha256 '2f6425b2dc808cd9cd044b3b5ba2e2026d5a97dd47efbf0eba319280c4b8cac3'
 
-  url "http://download.xamarin.com/MonoforAndroid/Mac/mono-android-#{version}.pkg"
-  appcast 'http://xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
-          :sha256 => '713f272a1e36262f1b2c5a06f4ed1b1eb8987d240018347a51312dfedeeafcf3',
-          :format => :unknown
-  homepage 'http://xamarin.com/android'
-  license :unknown
+  url "https://download.xamarin.com/MonoforAndroid/Mac/mono-android-#{version}.pkg"
+  appcast 'https://static.xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
+          checkpoint: '14727c4cd976ca3d96a7a9c362bebd064a49c4f24d32296d33767e3a76b4a685'
+  name 'Xamarin.Android'
+  homepage 'https://xamarin.com/android'
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "mono-android-#{version}.pkg"
-  uninstall :pkgutil => 'com.xamarin.android.pkg'
+
+  uninstall pkgutil: 'com.xamarin.android.pkg'
 end

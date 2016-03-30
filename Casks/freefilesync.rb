@@ -1,10 +1,12 @@
-class Freefilesync < Cask
-  version '6.10'
-  sha256 'f0a1a52ef8e1a011b522af98afe64e9474f68f98eb0ab7c3a3dafb3fb6d0a6bf'
+cask 'freefilesync' do
+  version '8.0'
+  sha256 '8d7579f7e1d006417158b73310b82d15bf83daf54526ad63448b406505d26f3c'
 
-  url "http://downloads.sourceforge.net/project/freefilesync/FreeFileSync/#{version}/FreeFileSync_#{version}_Mac_OS_X_64-bit.zip"
-  homepage 'http://freefilesync.sourceforge.net/'
-  license :oss
+  url "http://www.freefilesync.org/download/2d658dgdjcnbthd/FreeFileSync_#{version}_Mac_OS_X_64-bit.zip",
+      referer: 'http://www.freefilesync.org/download.php'
+  name 'FreeFileSync'
+  homepage 'http://www.freefilesync.org'
+  license :gpl
 
   app 'FreeFileSync.app'
   app 'RealtimeSync.app'

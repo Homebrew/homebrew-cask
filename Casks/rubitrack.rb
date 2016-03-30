@@ -1,12 +1,16 @@
-class Rubitrack < Cask
-  version '3.4.5'
-  sha256 '1069a99e1c5faa5565fa89fa6f886298ab6e695f2942a3fc91895c5792d20be6'
+cask 'rubitrack' do
+  version '4.3.2'
+  sha256 '1882f768befd9de165399efa52e460ea0fc883be442415da00e32aaccec9154c'
 
   url "http://www.rubitrack.com/files/rubiTrack-#{version}.dmg"
-  appcast 'http://www.rubitrack.com/autoupdate/sparkle3.xml',
-          :sha256 => 'c7aca0d98b52caa1e7d54cf7b44cdf06317fab2cf982f1e29f4034fe419175e7'
+  appcast "http://www.rubitrack.com/autoupdate/sparkle#{version.to_i}.xml",
+          checkpoint: 'd4e42f775f02e02c344b6119aa5995fa09fad6b78dda2c7d51ba307d21a38459'
+  name 'rubiTrack'
   homepage 'http://www.rubitrack.com/'
-  license :unknown
+  license :commercial
+
+  depends_on macos: '>= :yosemite'
+  depends_on arch: :x86_64
 
   app "rubiTrack #{version.to_i}.app"
 end

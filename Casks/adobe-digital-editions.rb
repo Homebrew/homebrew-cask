@@ -1,11 +1,13 @@
-class AdobeDigitalEditions < Cask
-  version '4.0'
-  sha256 '359f62e8fc2d89d6aa411fc4ed69a5be9e19d433226640b3ddbaec35e66f646c'
+cask 'adobe-digital-editions' do
+  version '4.5'
+  sha256 :no_check # required as upstream package is updated in-place
 
   url "http://download.adobe.com/pub/adobe/digitaleditions/ADE_#{version}_Installer.dmg"
-  homepage 'http://www.adobe.com/pt/products/digital-editions.html'
-  license :unknown
+  name 'Adobe Digital Editions'
+  homepage 'https://www.adobe.com/solutions/ebook/digital-editions.html'
+  license :gratis
 
   pkg "Digital Editions #{version} Installer.pkg"
-  uninstall :pkgutil => 'com.adobe.adobedigitaleditions.app'
+
+  uninstall pkgutil: 'com.adobe.adobedigitaleditions.app'
 end

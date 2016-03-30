@@ -1,10 +1,18 @@
-class Quiterss < Cask
-  version '0.16.1'
-  sha256 'b452fe75c3b825ae3074d4cc70ee29e18b445fb9a7cbccc2901b076bdfe41a07'
+cask 'quiterss' do
+  version '0.17.7'
+  sha256 '7967cd729044152b1e876eba9492fbfc307104b259dbb2bb664d486836cda3dd'
 
-  url "http://quiterss.org/files/#{version}/QuiteRSS-#{version}.dmg"
-  homepage 'http://quiterss.org/'
-  license :unknown
+  url "https://quiterss.org/files/#{version}/QuiteRSS-#{version}.dmg"
+  name 'QuiteRSS'
+  homepage 'https://quiterss.org/'
+  license :gpl
 
   app 'Quiterss.app'
+
+  zap delete: [
+                '~/.config/QuiteRss',
+                '~/Library/Caches/QuiteRss',
+                '~/Library/Application Support/QuiteRss',
+                '~/Library/Preferences/org.quiterss.QuiteRSS.plist',
+              ]
 end

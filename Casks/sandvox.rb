@@ -1,10 +1,11 @@
-class Sandvox < Cask
+cask 'sandvox' do
   version :latest
   sha256 :no_check
 
   url 'http://www.karelia.com/files/8/Sandvox.dmg'
-  homepage 'http://www.karelia.com/products/sandvox/'
-  license :unknown
+  name 'Sandvox'
+  homepage 'https://www.karelia.com/products/sandvox/'
+  license :freemium
 
   app 'Sandvox.app'
 end

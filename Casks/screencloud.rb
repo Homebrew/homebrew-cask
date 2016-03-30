@@ -1,10 +1,11 @@
-class Screencloud < Cask
-  version '1.1.6'
-  sha256 '0858d973388be02514a7756233d06fabd8d9d44fb2d17a2859129337c03dc0d1'
+cask 'screencloud' do
+  version '1.2.0'
+  sha256 'e1a1a569a77fa1f92d27df2c55e60c7c0fe73a03904ae2eb67bb01c68188ffd5'
 
   url "https://screencloud.net/files/mac/ScreenCloud-#{version}.dmg"
+  name 'ScreenCloud'
   homepage 'https://screencloud.net/'
-  license :unknown
+  license :gratis
 
   app 'ScreenCloud.app'
 end

@@ -1,12 +1,15 @@
-class Handbrake < Cask
-  version '0.9.9'
-  sha256 '050f9d0d3a126b25d24cb4971062d66f4f975317b6586f8c288795c17a0c05f9'
+cask 'handbrake' do
+  version '0.10.5'
+  sha256 'a2f1cacfb508e5ebe2489c64fa15204f15578aaf5e7f8a5ae9ab1fdccde51222'
 
-  url "http://handbrake.fr/rotation.php?file=HandBrake-#{version}-MacOSX.6_GUI_x86_64.dmg"
-  appcast 'http://handbrake.fr/appcast.x86_64.xml',
-          :sha256 => 'f0e700c39b76c16dba12ff8b931ae75ae4d764f1e8d1f5b2deb9231e5a445390'
-  homepage 'http://handbrake.fr/'
+  url "http://download.handbrake.fr/releases/#{version}/HandBrake-#{version}-MacOSX.6_GUI_x86_64.dmg"
+  appcast 'https://handbrake.fr/appcast.x86_64.xml',
+          checkpoint: '4a7758883f991b677ada503d54925f0182da7b9c66557495e1bd204a859d9b03'
+  name 'HandBrake'
+  homepage 'https://handbrake.fr'
   license :oss
+
+  auto_updates true
 
   app 'HandBrake.app'
 end

@@ -1,10 +1,11 @@
-class Imitone < Cask
-  version '0.6.0'
-  sha256 '20b262c59d770de364a6ebc4c6e8e38a25a9fcdd691345b4acb4041ce25e397f'
+cask 'imitone' do
+  version '0.8.1'
+  sha256 'ae12d7efe41abc9d1dc1ea3430ced38c85394b364c576b6ce70d900fb7759f4a'
 
-  url "http://imitone.com/beta/imitone-#{version}.dmg"
-  homepage 'http://imitone.com/'
-  license :unknown
+  url "https://imitone.com/beta/imitone-#{version}.dmg"
+  name 'imitone'
+  homepage 'https://imitone.com/'
+  license :commercial
 
   app 'imitone.app'
 end

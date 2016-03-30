@@ -1,0 +1,74 @@
+#!/usr/bin/env ruby
+#
+# generate_issue_template_urls
+#
+
+###
+### dependencies
+###
+
+require 'erb'
+
+###
+### constants
+###
+
+BASE_URL = 'https://github.com/caskroom/homebrew-cask/issues/new'
+
+###
+### methods
+###
+
+def main(args)
+  args.each do |file|
+    File.read(file).scan(/(.*?)\n(.*)/m) do |title, body|
+      puts generate_url(title, body)
+    end
+  end
+end
+
+def generate_url(title, body)
+  encoded_title = url_encode(title)
+  encoded_body = url_encode(body)
+  if $debug
+    puts "Encoded title: #{encoded_title}"
+    puts "Encoded body: #{encoded_body}"
+  end
+  "#{BASE_URL}?title=#{encoded_title}&body=#{encoded_body}"
+end
+
+def url_encode(unencoded_str)
+  ERB::Util.url_encode(unencoded_str)
+end
+
+###
+### main
+###
+
+usage = <<-EOS
+Usage: generate_issue_template_urls <issue_template.md> ...
+
+Given one or more GitHub issue template files, generate encoded URLs for each
+and print, separated by newlines. The first line of a template file should be
+the issue title.
+
+With -debug, print out the encoded title and body individually as well.
+
+EOS
+
+if ARGV.first =~ %r{^-+h(elp)?$}i
+  puts usage
+  exit 0
+end
+
+if ARGV.first =~ %r{^-+debug?$}i
+  $debug = 1
+  ARGV.shift
+end
+
+if ARGV.empty?
+  puts usage
+  exit 1
+end
+
+main(ARGV)

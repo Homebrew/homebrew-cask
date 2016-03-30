@@ -1,10 +1,11 @@
-class Fetch < Cask
-  version '5.7.3'
-  sha256 'fd75b4ab78211cc067906341576657e41e130080ce05a1f20947a6acbb816ea3'
+cask 'fetch' do
+  version '5.7.5'
+  sha256 '8f154a7e353dc6ab672d794b019fa5f298010a366379eda3cfa9a1c1c9d71e0d'
 
   url "http://fetchsoftworks.com/fetch/download/Fetch_#{version}.dmg?direct=1"
-  homepage 'http://fetchsoftworks.com/'
-  license :unknown
+  name 'Fetch'
+  homepage 'http://fetchsoftworks.com/fetch/'
+  license :commercial
 
   app 'Fetch.app'
 end

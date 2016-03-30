@@ -1,10 +1,11 @@
-class Coqide < Cask
-  version '8.4pl4'
-  sha256 'b476b95b60940f347f515decf4e5d4d35499ffa5080df9027395b47c9561b9b0'
+cask 'coqide' do
+  version '8.5'
+  sha256 'fe5cf6326b34f70b84fe7ad1d8fa6aab41fb2439478844ecda641528da3d1951'
 
-  url "http://coq.inria.fr/distrib/V#{version}/files/coqide-#{version}.dmg"
-  homepage 'http://coq.inria.fr/'
+  url "https://coq.inria.fr/distrib/V#{version}/files/CoqIDE_#{version}.dmg"
+  name 'Coq'
+  homepage 'https://coq.inria.fr/'
   license :oss
 
-  app "CoqIde_#{version}.app"
+  app "CoqIDE_#{version}.app"
 end

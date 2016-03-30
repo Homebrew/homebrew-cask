@@ -1,17 +1,22 @@
-class Flash < Cask
-  version '15.0.0.189'
-  sha256 'e9fba4902df0abaa6054c7e4572841abf25564de6ffdf6d30416fb7e3f30ab27'
+cask 'flash' do
+  version '21.0.0.197'
+  sha256 '50d7277ba473e413d70d6d5dc5ec50fe486f1ac40d3641d88cd4c1d32ff9d4cf'
 
-  url "http://fpdownload.macromedia.com/get/flashplayer/current/licensing/mac/install_flash_player_#{version.to_i}_osx_pkg.dmg"
-  homepage 'https://www.adobe.com/products/flashplayer/distribution3.html'
-  license :unknown
+  # macromedia.com was verified as official when first introduced to the cask
+  url "http://fpdownload.macromedia.com/get/flashplayer/pdc/#{version}/install_flash_player_osx.dmg"
+  appcast 'http://fpdownload2.macromedia.com/get/flashplayer/update/current/xml/version_en_mac_pl.xml',
+          checkpoint: '32a4cb768f58a0ef3b080ca467ef06046eeead4b3d122e8e57646d1fef6829cf'
+  name 'Adobe Flash Player'
+  homepage 'https://get.adobe.com/flashplayer'
+  license :gratis
 
-  pkg 'Install Adobe Flash Player.pkg'
+  pkg 'Install Adobe Flash Player.app/Contents/Resources/Adobe Flash Player.pkg'
 
-  uninstall :pkgutil => 'com.adobe.pkg.FlashPlayer',
-            :delete  => '/Library/Internet Plug-Ins/Flash Player.plugin'
-  zap       :delete => [
-                        '~/Library/Caches/Adobe/Flash Player',
-                        '~/Library/Logs/FlashPlayerInstallManager.log',
-                       ]
+  uninstall pkgutil: 'com.adobe.pkg.FlashPlayer',
+            delete:  '/Library/Internet Plug-Ins/Flash Player.plugin'
+
+  zap       delete: [
+                      '~/Library/Caches/Adobe/Flash Player',
+                      '~/Library/Logs/FlashPlayerInstallManager.log',
+                    ]
 end

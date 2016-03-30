@@ -1,10 +1,12 @@
-class Bill < Cask
+cask 'bill' do
   version :latest
   sha256 :no_check
 
-  url 'http://myownapp.com/downloads/Bill.zip'
+  # myownapp.com was verified as official when first introduced to the cask
+  url 'http://myownapp.com/downloads/Bill2.zip'
+  name 'Bill'
   homepage 'http://billtheapp.com/'
-  license :unknown
+  license :commercial
 
-  app 'Bill.app'
+  app 'Bill 2.app'
 end

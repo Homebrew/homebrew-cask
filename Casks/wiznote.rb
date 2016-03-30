@@ -1,10 +1,12 @@
-class Wiznote < Cask
-  version '2.1.13'
-  sha256 '5735502f06e93013f1350df89dd0423c1c250da798d7e5970d18a67034bb032f'
+cask 'wiznote' do
+  version '2015-12-03'
+  sha256 'b1db69a400712c9e750bde91fab7382935ac6cb95d081c8cac1872b2e59e26a1'
 
-  url 'http://release.wiz.cn/wiznote-macos-2014-09-25.dmg'
+  # wiz.cn is the official download host per the vendor homepage
+  url "http://release.wiz.cn/wiznote-macos-#{version}.dmg"
+  name 'WizNote'
   homepage 'http://www.wiznote.com/'
-  license :unknown
+  license :gratis
 
   app 'WizNote.app'
 end

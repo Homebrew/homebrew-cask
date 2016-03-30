@@ -1,10 +1,14 @@
-class Sigil < Cask
-  version '0.8.0'
-  sha256 'cafe9a942f787d4588445bf9fc5cbbd62531724e955cb7eec2f714a745fa82b3'
+cask 'sigil' do
+  version '0.9.5'
+  sha256 'a077c9ef7e0ddb30abee1059fea887add9ebc1c6e9cacb7388677c90c06991e6'
 
-  url "https://github.com/user-none/Sigil/releases/download/#{version}/Sigil-#{version}-Mac-Package.dmg"
-  homepage 'http://code.google.com/p/sigil/'
-  license :oss
+  # github.com/Sigil-Ebook/Sigil was verified as official when first introduced to the cask
+  url "https://github.com/Sigil-Ebook/Sigil/releases/download/#{version}/Sigil-#{version}-Mac-Package.dmg"
+  appcast 'https://github.com/Sigil-Ebook/Sigil/releases.atom',
+          checkpoint: '03bcf3d7439a69121211df3de5214aa6d2d58890de76ccff4f11bae25d5c0921'
+  name 'Sigil'
+  homepage 'https://sigil-ebook.com/'
+  license :gpl
 
   app 'Sigil.app'
 end

@@ -1,8 +1,9 @@
-class BatteryTimeRemaining < Cask
-  version '2.0.2'
-  sha256 '4975e8e293e4e6b2114cdbbf64d046b3255c62d981e25f0044229348c4f92a87'
+cask 'battery-time-remaining' do
+  version '3.0'
+  sha256 '55765d8543b23512953dc80f12f3717a9e6b2053f6097fac3d3624e72763a8d4'
 
   url "http://yap.nu/battery-time-remaining/download/Battery%20Time%20Remaining%202-#{version}.zip"
+  name 'Battery Time Remaining'
   homepage 'http://yap.nu/battery-time-remaining/'
   license :apache
 
