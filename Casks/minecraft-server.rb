@@ -1,6 +1,6 @@
 cask 'minecraft-server' do
-  version '1.9'
-  sha256 '38a797f50c71f55202e2135a30302cf3a5c8cb494c6d225b88599542957d3a7d'
+  version '1.9.2'
+  sha256 'a972d127be3b9d5fafe5bd610a173563cb24331b6664a3dc5f73b3cc76d77081'
 
   # amazonaws.com is the official download host per the vendor homepage
   url "https://s3.amazonaws.com/Minecraft.Download/versions/#{version}/minecraft_server.#{version}.jar"
