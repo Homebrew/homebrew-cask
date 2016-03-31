@@ -12,5 +12,8 @@ cask 'gmail-notifr' do
 
   app 'Gmail Notifr.app'
 
-  zap delete: '~/Library/Preferences/com.ashchan.GmailNotifr.plist'
+  zap delete: [
+                '~/Library/Preferences/com.ashchan.GmailNotifr.plist',
+                '~/Library/Caches/com.ashchan.GmailNotifr',
+              ]
 end
