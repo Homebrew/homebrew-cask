@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "Turning OFF Brew Cask Development and going back to normal"
+./developer/bin/production_brew_cask
