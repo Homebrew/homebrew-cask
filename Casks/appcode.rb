@@ -1,8 +1,8 @@
 cask 'appcode' do
-  version '3.3.3'
-  sha256 'bbc586779ec7c082eca46e266ac3799c6bebdbd8205250f075f04973caafaf54'
+  version '2016.1'
+  sha256 'dec7447da549f6c2033e6bea8587413888e881f0019a436a711ed07fc42c2b58'
 
-  url "https://download.jetbrains.com/objc/AppCode-#{version}-custom-jdk-bundled.dmg"
+  url "https://download.jetbrains.com/objc/AppCode-#{version}.dmg"
   name 'AppCode'
   homepage 'https://www.jetbrains.com/objc/'
   license :commercial

@@ -1,11 +1,11 @@
 cask 'vagrant-manager' do
-  version '2.5.3'
-  sha256 'c2780c3560f7f27a0a87fa01983ec329ed13b7cb139515cf70415ae959b99562'
+  version '2.5.4'
+  sha256 '9ad9d9f5d6eca2ef0f4493004f06acc6862701b1b731fe20ddbc7c5970079824'
 
   # github.com/lanayotech/vagrant-manager was verified as official when first introduced to the cask
   url "https://github.com/lanayotech/vagrant-manager/releases/download/#{version}/vagrant-manager-#{version}.dmg"
   appcast 'https://github.com/lanayotech/vagrant-manager/releases.atom',
-          checkpoint: '1a416ac6a40fa013b7876d9d02acbe17c7a0988b780bca0baafd8d6fcba45099'
+          checkpoint: '0d60d80f827a3ed3b2e1eed81dd899deb5a26a25ea8173c8a02dd144abe4f915'
   name 'Vagrant Manager'
   homepage 'http://vagrantmanager.com/'
   license :mit

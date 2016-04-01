@@ -1,11 +1,11 @@
 cask 'rabbitmq' do
-  version '3.6.0-build.3'
-  sha256 '19c9166bad6846cdee92b29f8e22e868a9db41e18565cb6117b20f2b217188ae'
+  version '3.6.1-build.1'
+  sha256 '1838afcece704ab1d23645d5d44953b809474f1f67ec4b18f3f98d440e5b5aad'
 
   # github.com/jpadilla/rabbitmqapp was verified as official when first introduced to the cask
   url "https://github.com/jpadilla/rabbitmqapp/releases/download/#{version}/RabbitMQ.zip"
   appcast 'https://github.com/jpadilla/rabbitmqapp/releases.atom',
-          checkpoint: '6e24822f2cfabc40b9fe388b22860205d537226b356b10226272d56a7851ee49'
+          checkpoint: '90cec6b712cb208b42599676a94d9462a60e92c7501884e49eb9a01284dcd3a3'
   name 'RabbitMQ'
   homepage 'https://jpadilla.github.io/rabbitmqapp/'
   license :mit

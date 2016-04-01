@@ -10,10 +10,11 @@ cask 'clion' do
   app 'CLion.app'
 
   zap delete: [
-                '~/Library/Preferences/com.jetbrains.CLion.plist',
-                "~/Library/Preferences/CLion#{version}",
-                "~/Library/Application Support/CLion#{version}",
-                "~/Library/Caches/CLion#{version}",
-                "~/Library/Logs/CLion#{version}",
+                "~/.CLion#{version.major_minor}",
+                # TODO: expand/glob for '~/Library/Preferences/jetbrains.clion.*.plist',
+                "~/Library/Preferences/CLion#{version.major_minor}",
+                "~/Library/Application Support/CLion#{version.major_minor}",
+                "~/Library/Caches/CLion#{version.major_minor}",
+                "~/Library/Logs/CLion#{version.major_minor}",
               ]
 end

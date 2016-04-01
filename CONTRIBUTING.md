@@ -2,13 +2,41 @@
 
 :+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
 
-* [Getting Set Up To Contribute](#getting-set-up-to-contribute)
 * [Updating a Cask](#updating-a-cask)
+* [Getting Set Up To Contribute](#getting-set-up-to-contribute)
 * [Adding a Cask](#adding-a-cask)
 * [Style guide](#style-guide)
 * [Reporting Bugs](README.md#reporting-bugs)
 
+
+## Updating a Cask
+
+Notice an application that's out-of-date in Homebrew-Cask? In most cases, it's very simple to update it. We have a [script](https://github.com/vitorgalvao/tiny-scripts/blob/master/cask-repair) that will ask for the new version number, and take care of updating the Cask file and submitting a pull request to us:
+
+```bash
+# install and setup script - only needed once
+brew install vitorgalvao/tiny-scripts/cask-repair
+cask-repair --help
+
+# fork homebrew-cask to your account - only needed once
+cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Casks"
+hub fork
+
+# use to update <outdated_cask>
+outdated_cask='<the-cask-i-want-to-update>'
+github_user='<my-github-username>'
+cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Casks"
+
+
+cask-repair --pull origin --push $github_user $outdated_cask
+```
+
+If there is a more complicated change, or there is a case where `cask-repair` fails, you can also follow the steps in [Adding a Cask](doc/development/adding_a_cask.md) to do the same thing manually. Remember to update the `version` and `shasum` values, as well as the appcast [`checkpoint`](doc/cask_language_reference/stanzas/appcast.md), if there is one.
+
+
 ## Getting Set Up To Contribute
+
+For manual updates, you'll need to fork the repository and add your copy as a remote (can also be done with `hub fork`).
 
 1. Fork the repository in GitHub with the `Fork` button.
 
@@ -20,22 +48,8 @@ $ cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
 $ git remote add "$github_user" "https://github.com/$github_user/homebrew-cask"
 ```
 
-## Updating a Cask
+3. Switch to a new branch (ie. `new-feature`), and work from there: `git checkout -b new-feature`
 
-Notice an application that's out-of-date in Homebrew-Cask? In most cases, it's very simple to update it. We have a [script](https://github.com/vitorgalvao/tiny-scripts/blob/master/cask-repair) that will ask for the new version number, and take care of updating the Cask file and submitting a pull request to us:
-
-```bash
-# install and setup script - only needed once
-brew install vitorgalvao/tiny-scripts/cask-repair
-cask-repair --help
-
-# use to update <outdated_cask>
-outdated_cask='<the-cask-i-want-to-update>'
-cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Casks"
-cask-repair --pull origin --push $github_user $outdated_cask
-```
-
-If there is a more complicated change, or there is a case where `cask-repair` fails, you can also follow the steps in [Adding a Cask](doc/development/adding_a_cask.md) to do the same thing manually. Remember to update the `version` and `shasum` values, as well as the appcast [`checkpoint`](doc/cask_language_reference/stanzas/appcast.md), if there is one.
 
 ## Adding a Cask
 

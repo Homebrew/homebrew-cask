@@ -1,10 +1,10 @@
 cask 'lastfm' do
-  version '2.1.36'
-  sha256 'd61d4947117080998937c0d63148caf693f1bed5ec768d86feeb3a86f84d1ff9'
+  version '2.1.37'
+  sha256 'dc46e58111f8555fc0b1d6d2bd11e8fd4e4c45c6c7e953d106e07be8d6d8b448'
 
   url "http://cdn.last.fm/client/Mac/Last.fm-#{version}.zip"
   appcast 'http://cdn.last.fm/client/Mac/updates.xml',
-          checkpoint: '6cc2826bd38f16b11c2c2d2d2b5011c19bb9b99e274aed42c1ed70edf242caf5'
+          checkpoint: '7a9b0239c6af0128a3eff20c46c3893cee1f3a57786f6c2fca8a8df8e8993280'
   name 'Last.fm Scrobbler'
   homepage 'http://www.last.fm/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
