@@ -12,11 +12,11 @@ cask 'appcode' do
   app 'AppCode.app'
 
   zap delete: [
-                "~/.Appcode#{version.major_minor.no_dots}",
-                '~/Library/Preferences/com.jetbrains.AppCode.plist',
-                "~/Library/Preferences/AppCode#{version.major_minor.no_dots}",
-                "~/Library/Application Support/AppCode#{version.major_minor.no_dots}",
-                "~/Library/Caches/AppCode#{version.major_minor.no_dots}",
-                "~/Library/Logs/AppCode#{version.major_minor.no_dots}",
+                "~/.Appcode#{version.major_minor}",
+                # TODO: expand/glob for '~/Library/Preferences/jetbrains.appcode.*.plist',
+                "~/Library/Preferences/AppCode#{version.major_minor}",
+                "~/Library/Application Support/AppCode#{version.major_minor}",
+                "~/Library/Caches/AppCode#{version.major_minor}",
+                "~/Library/Logs/AppCode#{version.major_minor}",
               ]
 end
