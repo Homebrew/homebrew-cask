@@ -1,6 +1,7 @@
 ### Instructions
 
 - Delete every part of this placeholder text irrelevant to your submission, including these instructions.
+- If [using `cask-repair`](https://github.com/caskroom/homebrew-cask/blob/master/CONTRIBUTING.md#updating-a-cask), delete everything since checks are performed automatically.
 - `{{cask_file}}` is used a placeholder to the actual cask you’re submitting/editing (if applicable).
 - If there’s a checkbox you can’t complete for any reason, that’s OK. Just explain in detail why you weren’t able to do so.
 
