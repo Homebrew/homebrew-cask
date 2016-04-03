@@ -1,8 +1,8 @@
 cask 'geektool' do
-  version '3.1.3'
-  sha256 'f881d212dff433b302146ce3325cdcc79e73b8a7e871f9de8cd6d69173e33ec7'
+  version '3.1.9'
+  sha256 'b8f4584b43816b3c96ac6f0224a679242f84999b06074f35500607874335ae6c'
 
-  url "http://download.tynsoe.org/GeekTool-#{version}.zip"
+  url 'https://dl.devmate.com/org.tynsoe.GeekTool/GeekTool.zip'
   name 'GeekTool'
   homepage 'http://projects.tynsoe.org/en/geektool/'
   license :mit
