@@ -11,7 +11,7 @@ Homebrew-Cask extends [Homebrew](http://brew.sh) and brings its elegance, simpli
 
 We do this by providing a friendly Homebrew-style CLI workflow for the administration of Mac applications distributed as binaries.
 
-It’s implemented as a `homebrew` [external command](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/External-Commands.md) called `cask`.
+It’s implemented as a `homebrew` [external command](https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/External-Commands.md) called `cask`.
 
 [![Build Status](https://img.shields.io/travis/caskroom/homebrew-cask/master.svg)](https://travis-ci.org/caskroom/homebrew-cask)
 [![Code Climate](https://img.shields.io/codeclimate/github/caskroom/homebrew-cask.svg)](https://codeclimate.com/github/caskroom/homebrew-cask)
