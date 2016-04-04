@@ -27,6 +27,7 @@ describe "Repo layout" do
 
   TOPLEVEL_DIRS = %w{
                      .git
+                     .github
                      Casks
                      ci
                      cmd
