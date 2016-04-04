@@ -7,7 +7,7 @@ cask 'synology-cloud-station' do
   homepage 'https://www.synology.com/'
   license :gratis
 
-  pkg "Install\ Cloud\ Station\ Drive.pkg"
+  pkg 'Install\ Cloud\ Station\ Drive.pkg'
 
   uninstall pkgutil:   'com.synology.CloudStation',
             launchctl: 'com.synology.Synology Cloud Station'
