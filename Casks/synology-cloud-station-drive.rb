@@ -1,4 +1,4 @@
-cask 'synology-cloud-station' do
+cask 'synology-cloud-station-drive' do
   version '4.0-4203'
   sha256 '4e4d705e77faec58d04d816d3d6eeb0fd081345490c0fd338184e06243cd22ca'
 
