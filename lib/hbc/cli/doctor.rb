@@ -72,7 +72,7 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
       end
       if homebrew_origin !~ %r{\S}
         homebrew_origin = "#{none_string} #{error_string}"
-      elsif homebrew_origin !~ %r{(mxcl|Homebrew)/homebrew(\.git)?\Z}
+      elsif homebrew_origin !~ %r{(mxcl|Homebrew)/(home)?brew(\.git)?\Z}
         homebrew_origin.concat " #{error_string 'warning: nonstandard origin'}"
       end
     rescue StandardError
