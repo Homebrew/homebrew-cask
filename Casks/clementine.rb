@@ -10,7 +10,14 @@ cask 'clementine' do
   homepage 'https://www.clementine-player.org/'
   license :gpl
 
-  app 'clementine.app'
+  conflicts_with cask: 'caskroom/versions/clementine-rc'
 
-  zap delete: '~/Library/Preferences/org.clementine-player.Clementine.plist'
+  app 'Clementine.app'
+
+  zap delete: [
+                '~/Library/Application Support/Clementine',
+                '~/Library/Caches/org.clementine-player.Clementine',
+                '~/Library/Preferences/org.clementine-player.Clementine.plist',
+                '~/Library/Saved Application State/org.clementine-player.Clementine.savedState',
+              ]
 end
