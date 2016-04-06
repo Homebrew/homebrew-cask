@@ -1,6 +1,6 @@
 # pkg
 
-This stanza must always be accompanied by (`uninstall`)[uninstall.md]
+This stanza must always be accompanied by [`uninstall`](uninstall.md)
 
 The first argument to the `pkg` stanza should be a relative path to the `.pkg` file to be installed. For example:
 
