@@ -1,5 +1,5 @@
 cask 'calibre' do
-  if MacOS.release < :mountain_lion
+  if MacOS.release <= :lion
     version '1.48.0'
     sha256 '0533283965fbc9a6618d0b27c85bdf3671fe75ff0e89eeff406fe1457ee61b14'
   else
