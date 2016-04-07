@@ -1,5 +1,5 @@
 cask 'cleartext' do
-  version '1.3.1'
+  version '1.31'
   sha256 'c53860370de86d59d81eb1164df1ea17a7824333be4eb2beb52843663dbb5b27'
 
   url "https://github.com/mortenjust/cleartext-mac/releases/download/#{version}/Cleartext#{version}.zip"
