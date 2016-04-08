@@ -8,7 +8,7 @@ cask 'downie' do
   name 'Downie'
   homepage 'http://software.charliemonroe.net/downie.php'
   license :commercial
-
   depends_on macos: '>= :yosemite'
+
   app 'Downie.app'
 end
