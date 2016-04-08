@@ -1,6 +1,6 @@
 cask 'teensy' do
-  version '1.21'
-  sha256 '8a273dc915afa5752b9283168819dc0191462d4bd7eb990748a87e90d4b9baa8'
+  version '1.26'
+  sha256 'fe8fd6ff99a1f3e05989637f2cc35aa2d9dc03b4aeb7daee2fbcf2c1160337bd'
 
   url 'https://www.pjrc.com/teensy/teensy.dmg'
   name 'Teensy'
