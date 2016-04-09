@@ -1,10 +1,10 @@
 cask 'dmhy' do
-  version '1.3'
-  sha256 '8c41c2b0a28f846495e550d0ffbade5d23e295491f4d04a26daa0d6f2cb9d153'
+  version '1.5.1'
+  sha256 '5e431c5f9ce12cddbb50350c9d4d705a17cf040c38bc557337fd646e09c37398'
 
   url "https://github.com/yaqinking/DMHY/releases/download/v#{version}/DMHY.app.zip"
   appcast 'https://github.com/yaqinking/DMHY/releases.atom',
-          checkpoint: '104bcebf25f187893ccc5caa7b1ea3fa25fd79e0b1b3cd2473481d9d5ec21fc3'
+          checkpoint: 'fefb45e80d368d7035813e55faba631b69e2e36f8879bb676404eeebbfcc9379'
   name 'DMHY'
   homepage 'https://github.com/yaqinking/DMHY'
   license :mit
