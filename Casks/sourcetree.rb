@@ -20,6 +20,10 @@ cask 'sourcetree' do
   app 'SourceTree.app'
   binary 'SourceTree.app/Contents/Resources/stree'
 
+  postflight do
+    suppress_move_to_applications
+  end
+
   uninstall launchctl: 'com.atlassian.SourceTreePrivilegedHelper2'
 
   zap delete: [
