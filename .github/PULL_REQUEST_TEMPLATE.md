@@ -1,7 +1,6 @@
 ##### Instructions
 
 - Look for and complete the section relevant to your submission. Delete the others, including these `Instructions`.
-- If [using `cask-repair`](https://github.com/caskroom/homebrew-cask/blob/master/CONTRIBUTING.md#updating-a-cask), checks are performed automatically and this template won’t show.
 - `{{cask_file}}` is used a placeholder to the actual cask you’re submitting/editing (if applicable).
 - If there’s a checkbox you can’t complete for any reason, that’s OK. Just explain in detail why you weren’t able to do so.
 
