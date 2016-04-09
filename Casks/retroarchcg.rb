@@ -1,11 +1,13 @@
 cask 'retroarchcg' do
-  version '1.3.0'
-  sha256 'b898de82953092f24a66332e682d456652f195168e73ce5e0c0d1bc596636782'
+  version '1.3.3'
+  sha256 '59410f57518353076fa17afa8b3c1a8076c5fd25829f52f2ff3712bdb0513abe'
 
-  url "http://buildbot.libretro.com/stable/#{version}/apple/osx/x86_64/RetroArch-v#{version}-osx-x86_64-OSX10.7.zip"
-  name 'RetroArch'
+  url "http://buildbot.libretro.com/stable/#{version}/apple/osx/x86_64/RetroArch_CG.dmg"
+  # Renamed to avoid conflict with RetroArch (non-CG).
+  name 'RetroArch CG'
   homepage 'https://www.libretro.com/'
   license :gpl
 
-  app 'RetroArchCg.app'
+  # Renamed to avoid conflict with RetroArch (non-CG).
+  app 'RetroArch.app', target: 'RetroArchCG.app'
 end
