@@ -1,11 +1,11 @@
 cask 'keeweb' do
-  version '1.1.0'
-  sha256 '79dea060d7e61c9febc5f513017aa0ed89aafdb19c73ccd0ee23188b51303744'
+  version '1.1.1'
+  sha256 '5517999291f4271e5f3cd27cb49b5cc4dddc80349f1d29fc4a5621066e5261ae'
 
   # github.com/antelle/keeweb was verified as official when first introduced to the cask
   url "https://github.com/antelle/keeweb/releases/download/v#{version}/KeeWeb.mac.dmg"
   appcast 'https://github.com/antelle/keeweb/releases.atom',
-          checkpoint: '9234ff5b4d71a1dd9909cd3fe022d29f7989cd628c18817cbe03a97a331b00e4'
+          checkpoint: '4361b6d5d12e006c73e276d75049cf4aef0da4eaaa869714b1ee827d30cdd82c'
   name 'KeeWeb'
   homepage 'https://keeweb.info'
   license :mit
