@@ -7,7 +7,6 @@ cask 'retroarch-cg' do
   homepage 'http://www.libretro.com/'
   license :gpl
 
-  # Renamed for clarity: 2 versions of RetroArch exists for MacOS X.
-  # There is RetroArch (non-CG) and this version.
+  # Renamed to avoid conflict with retroarch.
   app 'RetroArch.app', target: 'RetroArch CG.app'
 end
