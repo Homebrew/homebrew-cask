@@ -46,8 +46,4 @@ class Hbc::CLI::Install < Hbc::CLI::Base
   def self.help
     "installs the given Cask"
   end
-
-  def self.needs_init?
-    true
-  end
 end
