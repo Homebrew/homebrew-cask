@@ -1,22 +1,22 @@
 cask 'fontforge' do
-  version '2015-08-24'
-  sha256 '49d7f59350155b29ac0979987e35066beb8d4f30c6b79a87bc79b9b1f87c5bca'
+  version '2016-04-04'
+  sha256 '71da3bfad5c20b6746b5e619484b45f208b9e699924de82e8cc9ab709f5e13bb'
 
   # github.com/fontforge/fontforge was verified as official when first introduced to the cask
-  url "https://github.com/fontforge/fontforge/releases/download/#{version.delete('-')}/Fontforge-#{version}-Terminal_only.dmg"
+  url "https://github.com/fontforge/fontforge/releases/download/#{version.delete('-')}/FontForge-#{version}-Mac.app.dmg.zip"
   appcast 'https://github.com/fontforge/fontforge/releases.atom',
-          checkpoint: '798b4528144c6f8a7bb3ae6644029f45c3006382cbcdcdd49e95fb5e6bfba96f'
+          checkpoint: 'dcb2587675266e30c2ac1530982c66f170a27a962d77708f8862d5f469ff8102'
   name 'FontForge'
   homepage 'https://fontforge.github.io/en-US/'
   license :bsd
 
   depends_on x11: true
+  depends_on macos: '>= :yosemite'
 
   app 'FontForge.app'
 
   caveats <<-EOS.undent
-    Version '2015-08-24' of #{token} has an issue that requires it to be launched from a terminal.
-
-    Read more: https://github.com/fontforge/fontforge/releases/tag/20150824
+    #{token} will only run from within /Applications,
+    and will request to be moved at launch.
   EOS
 end
