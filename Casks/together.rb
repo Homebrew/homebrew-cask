@@ -5,7 +5,7 @@ cask 'together' do
   url "http://reinventedsoftware.com/together/downloads/Together_#{version}.dmg"
   appcast "https://reinventedsoftware.com/together/downloads/Together#{version.major}.xml",
           checkpoint: '9d707f8da1a99bf4e85bdd61274b8310ee4578434146ba9d6fce778062aba7b9'
-  name "Together #{version.major}"
+  name 'Together'
   homepage 'http://reinventedsoftware.com/together/'
   license :commercial
 
