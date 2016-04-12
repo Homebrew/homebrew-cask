@@ -6,6 +6,10 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
     "cleans up cached downloads and tracker symlinks"
   end
 
+  def self.needs_init?
+    true
+  end
+
   def self.run(*_ignored)
     cleanup_size = default.disk_cleanup_size
     default.cleanup!

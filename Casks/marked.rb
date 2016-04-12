@@ -1,6 +1,6 @@
 cask 'marked' do
-  version '2.5.4916'
-  sha256 '57f3c418aecbdbb07828f802c2ed13bc20d5b6fb0d3756540ae174f98168b04c'
+  version '2.5.5921'
+  sha256 '665d9f9094dec4597ebc103c5f8237d6b1ae65bf6f02fbd7a57c8a3033995020'
 
   url 'http://marked2app.com/download/Marked.zip'
   appcast 'http://abyss.designheresy.com/marked/marked.xml',

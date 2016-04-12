@@ -1,8 +1,8 @@
 cask 'vivaldi' do
-  version '1.0.403.24'
-  sha256 :no_check # required as upstream package is updated in-place
+  version '1.0.435.42'
+  sha256 'd8b3149b77bc7ea1c8d9192de7fdec101eaa1b92ae0104bf86c62c9f22f0dde0'
 
-  url "https://vivaldi.com/download/stable/Vivaldi.#{version}.dmg"
+  url "https://download.vivaldi.com/stable/Vivaldi.#{version}.dmg"
   name 'Vivaldi'
   homepage 'https://vivaldi.com'
   license :gratis
