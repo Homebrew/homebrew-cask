@@ -1,10 +1,10 @@
 cask 'expandrive' do
-  version '5.1.8'
-  sha256 '3bd175284b226fa7713039c8d4c35f3bf9a1a2fa5490db5e5f38e3e8f7cabd60'
+  version '5.1.9'
+  sha256 '424d8ebceeddf54ede46c39310723cfba6335e553daa2a148fae1de1e9a301aa'
 
   url "http://updates.expandrive.com/apps/expandrive/v/#{version.dots_to_hyphens}/download.dmg"
   appcast 'http://updates.expandrive.com/appcast/expandrive.xml?version=3',
-          checkpoint: 'f7259a5e6d01d01de57031e33232c4950aca3854850e23e53cbc4fd062e0e2f5'
+          checkpoint: 'ff6d5e798375459a2ffc3a7996108c6f78b6ce05637728213854b705be4dc70a'
   name 'ExpanDrive'
   homepage 'https://www.expandrive.com/expandrive'
   license :commercial

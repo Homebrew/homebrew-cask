@@ -1,10 +1,10 @@
 cask 'neo11-chitchat' do
-  version '2.2'
-  sha256 '62e3e6a17808b7c5b77b127acf98a04cbabe73770f2aa1be2b984d6f20a2e93f'
+  version '2.3'
+  sha256 'c56ad3d84a1dbb01de45f2148c83ee6007d6e18e94817de8a23a42743f381247'
 
   url "https://github.com/Neo11/ChitChat/releases/download/v#{version}/ChitChat.zip"
   appcast 'https://github.com/Neo11/ChitChat/releases.atom',
-          checkpoint: 'cd10198c6fc8df02488556674ecc3f7e76ffe17128c0b5919259b6d2e2029c21'
+          checkpoint: '1d331c02c9dbecc82e852ae9069473b63ad1384c46b183be5d0e83259a954383'
   name 'ChitChat'
   homepage 'https://github.com/Neo11/ChitChat'
   license :oss
