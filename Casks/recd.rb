@@ -5,7 +5,7 @@ cask 'recd' do
   url "https://github.com/aeewhite/Recd/releases/download/v#{version}/Rec.d-Mac-v#{version}.dmg"
   appcast 'https://github.com/aeewhite/recd/releases.atom',
           checkpoint: '89f7f967ccc169b05f8de72236c0c360c8516635ce710aa3d52c0c345486d207'
-  name "Rec'd"
+  name 'Rec\'d'
   homepage 'https://github.com/aeewhite/Recd'
   license :oss
 
