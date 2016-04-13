@@ -8,6 +8,7 @@ cask 'docker-for-mac' do
   license :gratis
 
   auto_updates false
+
   app 'Docker.app'
 
   uninstall_preflight do
