@@ -1,6 +1,6 @@
 cask 'docker-for-mac' do
   version :latest
-  sha256 "34320ebfdef2620c93fb6d959750ab527327b34405ab9f013edb96b8ad62dc54"
+  sha256 :no_check
 
   url 'https://dyhfha9j6srsj.cloudfront.net/Docker.dmg'
   name 'Docker For Mac'
