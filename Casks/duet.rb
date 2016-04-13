@@ -1,6 +1,6 @@
 cask 'duet' do
-  version '1.5.2.4'
-  sha256 '8b8e64779bee391e4aed9c7539745c7bdcf2ddcd38d945d108a506e8b3daf169'
+  version '1.5.4.9'
+  sha256 'ee6334cb41f2d0a3d164b5c1de61d40f70d4cd9c829a35beba437ba9f6919d55'
 
   # d2ycb980mbr5lq.cloudfront.net was verified as official when first introduced to the cask
   url "https://d2ycb980mbr5lq.cloudfront.net/#{version.dots_to_underscores}/duet-#{version.dots_to_hyphens}.zip"

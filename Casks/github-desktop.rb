@@ -1,10 +1,10 @@
 cask 'github-desktop' do
-  version '217'
-  sha256 'ce74276821bc338b400975494d40eecc4cfd88e819963c6090d564b6c13059ad'
+  version '219'
+  sha256 '646c9b96e6b99c2d7c683feb3355d4aee4023d5c57af336531bcbc143f4920b0'
 
   url "https://mac-installer.github.com/mac/GitHub%20Desktop%20#{version}.zip"
   appcast 'https://central.github.com/mac/appcast.xml',
-          checkpoint: '7344dfebee3fb3b078e7659cae776884286bd08a92b05267dfd3ef6ae8593429'
+          checkpoint: '9267f5934fc34a3b02bf7950e1f313c2b88adff06215111260a123d040330284'
   name 'GitHub Desktop'
   homepage 'https://desktop.github.com/'
   license :gratis

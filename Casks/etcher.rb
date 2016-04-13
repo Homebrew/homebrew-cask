@@ -5,7 +5,7 @@ cask 'etcher' do
   # resin-production-downloads.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://resin-production-downloads.s3.amazonaws.com/etcher/#{version}/Etcher-darwin-x64.dmg"
   name 'Etcher'
-  homepage 'https://etcher.io/'
+  homepage 'http://www.etcher.io/'
   license :apache
 
   app 'etcher.app'
