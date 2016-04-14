@@ -1,6 +1,6 @@
 cask 'bilibili' do
   version '2.40'
-  sha256 'ac201a1913d5daf472ab159cfb3e45e4ce6e3bd8e2435261a72aac3a3582c59e'
+  sha256 'a4965d6368d80456047e4d8ecf79ee12768b7a7d4ec5d4b50b1f6f4ce9590250'
 
   url "https://github.com/typcn/bilibili-mac-client/releases/download/#{version}/Bilibili.dmg.zip"
   appcast 'https://github.com/typcn/bilibili-mac-client/releases.atom',
