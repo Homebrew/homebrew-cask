@@ -1,6 +1,6 @@
 cask 'telegram' do
-  version '0.9.40'
-  sha256 'a55ac6141b5ff76036d7ed7472ffb822cd09ec3f56f72feafe4dc7dcfed924fb'
+  version '0.9.42'
+  sha256 '0a9f4187641f5e2963ca39d106f11ea204a2ff986a72b29e7b7bd5f8f28601c3'
 
   # tdesktop.com is the official download host per the vendor homepage
   url "https://updates.tdesktop.com/tmac/tsetup.#{version}.dmg"

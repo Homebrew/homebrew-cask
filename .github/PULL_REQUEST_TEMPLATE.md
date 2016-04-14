@@ -1,7 +1,7 @@
 ##### Instructions
 
 - Look for and complete the section relevant to your submission. Delete the others, including these `Instructions`.
-- `{{cask_file}}` is used a placeholder to the actual cask you’re submitting/editing (if applicable).
+- `{{cask_file}}` represents the cask file you’re submitting/editing (if applicable).
 - If there’s a checkbox you can’t complete for any reason, that’s OK. Just explain in detail why you weren’t able to do so.
 
 ### Changes to a cask
