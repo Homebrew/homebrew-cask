@@ -1,11 +1,11 @@
 cask 'docker-compose' do
-  version '1.6.2'
-  sha256 'baac029d69581bab8d100a5c4fb73bd8e23a828245f7374f89560a66337d441c'
+  version '1.7.0'
+  sha256 'c68245483befd3c36027feaf61c17cecf86a19cefb0159fd60c5c17de1ff0c2b'
 
   # github.com/docker/compose was verified as official when first introduced to the cask
   url "https://github.com/docker/compose/releases/download/#{version}/docker-compose-Darwin-x86_64"
   appcast 'https://github.com/docker/compose/releases.atom',
-          checkpoint: 'c1382c6b1ccbd709013f9930ec94a0d7b201aeb5ba24cd1191057a5aab22650d'
+          checkpoint: '1784fe2c74b1e94040aa6e60c19db18ca947c1ca18041c166a6a9535c84993b5'
   name 'Docker Compose'
   homepage 'https://docs.docker.com/compose'
   license :apache
