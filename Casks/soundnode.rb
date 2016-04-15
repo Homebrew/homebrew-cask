@@ -7,5 +7,5 @@ cask 'soundnode' do
   homepage 'http://www.soundnodeapp.com/'
   license :oss
 
-  app 'Soundnode-App.app'
+  app 'Soundnode.app'
 end
