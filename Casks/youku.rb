@@ -9,4 +9,3 @@ cask 'youku' do
 
   app '优酷.app'
 end
-
