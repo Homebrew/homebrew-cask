@@ -1,5 +1,5 @@
 cask 'sencha' do
-  version '6.1.2'
+  version '6.1.2.15'
   sha256 '8b8ef41800055722698229561575db5d7c62359c87556f3b0a8b77a9b426dc89'
 
   url "https://cdn.sencha.com/cmd/#{version}/jre/SenchaCmd-#{version}-osx.app.zip"
@@ -7,7 +7,7 @@ cask 'sencha' do
   homepage 'https://www.sencha.com/products/sencha-cmd/'
   license :freemium
 
-  installer script: "SenchaCmd-#{version}.15-osx.app/Contents/MacOS/JavaApplicationStub",
+  installer script: "SenchaCmd-#{version}-osx.app/Contents/MacOS/JavaApplicationStub",
             args:   ['-Djava.awt.headless=true', '-q', '-dir', "/opt/Sencha/Cmd/#{version}"],
             sudo:   true
 
