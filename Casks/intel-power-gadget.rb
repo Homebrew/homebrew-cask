@@ -1,4 +1,3 @@
-# coding: utf-8
 cask 'intel-power-gadget' do
   version '3.0.3'
   sha256 '93f052f5c1306272fceab7af5740d2837656242ab879436a6ce9e573ed9a274e'
