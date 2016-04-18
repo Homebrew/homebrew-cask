@@ -1,10 +1,9 @@
 cask 'franz' do
-  github_version '2.0'
   version '0.9.10'
   sha256 'bac5896e5cad84d4018e9486cd580a04548c0a0b350ade506b82192175306570'
 
   # github.com/imprecision/franz-app was verified as official when first introduced to the cask
-  url "https://github.com/imprecision/franz-app/releases/download/#{github_version}/Franz-darwin-x64-#{version}.dmg"
+  url "https://storage.googleapis.com/meetfranzdownloads/downloads/#{version}/Franz-darwin-x64-#{version}.dmg"
   appcast 'https://github.com/imprecision/franz-app/releases.atom',
           checkpoint: 'bfe803c6957cf9d530b954061370b590edebfc24eb3c6dd0afdce97fc1642e68'
   name 'Franz'
