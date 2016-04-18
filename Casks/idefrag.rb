@@ -1,6 +1,6 @@
 cask 'idefrag' do
-  version '5.1.1'
-  sha256 '430adf1d3460265aaa6112aab7e20a2227f877caac7dd5b619f9438e38f06a6e'
+  version '5.1.2'
+  sha256 '65eddc90c80213069ad2fbfafa055ca948059b4f7b8889faa3a817ca7026718f'
 
   url "https://coriolis-systems.com/downloads/iDefrag-#{version}.dmg"
   name 'iDefrag'
