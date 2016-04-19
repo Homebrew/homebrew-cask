@@ -1,11 +1,11 @@
 cask 'cocoapods' do
-  version '1.0.0.beta.5'
-  sha256 '953f5ac33908b97fb5a370d6ab3db0b82e61f455875315bde95c6be7f45dda5a'
+  version '1.0.0.beta.8'
+  sha256 'c44dbd0e1715e0b1a151a3079ec5f10a77d26a52126a5fcca2161939eab60f9b'
 
   # github.com/CocoaPods/CocoaPods was verified as official when first introduced to the cask
   url "https://github.com/CocoaPods/CocoaPods-app/releases/download/#{version}/CocoaPods.app-#{version}.tar.bz2"
   appcast 'https://app.cocoapods.org/sparkle',
-          checkpoint: '86d4ca53997c3bcbfb74629080800a32769c96fc5c186e8d89bd34c0ae9f6633'
+          checkpoint: 'cb512219facb44a86380de606d798c597226706d5fd2615d452c6164bf7baf2c'
   name 'CocoaPods.app'
   homepage 'https://cocoapods.org/'
   license :mit
