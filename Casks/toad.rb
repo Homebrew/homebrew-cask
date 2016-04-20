@@ -8,5 +8,7 @@ cask 'toad' do
   homepage 'https://www.toadworld.com/products/toad-mac-edition'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  app 'Toad.app'
+  pkg "ToadMacEdition_AppStore_#{version.no_dots}.pkg"
+
+  uninstall pkgutil: 'com.dell.Toad'
 end
