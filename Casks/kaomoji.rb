@@ -1,6 +1,6 @@
 cask 'kaomoji' do
-  version :latest
-  sha256 :no_check
+  version '1.8'
+  sha256 'e887e30493d87c8cef9d4b0352d0bbc82232e31e37b6b883e77422eba2987410'
 
   url 'http://www.kaomojiapp.com/download/Kaomoji.zip'
   appcast 'http://kaomojiapp.com/download/kaomojiupdate.xml',
