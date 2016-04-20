@@ -1,6 +1,6 @@
 cask 'java' do
-  version '1.8.0_77-b03'
-  sha256 'b7464e3876b0b58b97288ce801a8317d71fca802fc1d3b2177e4b514ddc0088c'
+  version '1.8.0_91-b14'
+  sha256 'eebf9ef013d7f14ca6080da347eae2114587f8d10a0a7cecff21e47a71ff62b8'
 
   url "http://download.oracle.com/otn-pub/java/jdk/#{version.sub(%r{^\d+\.(\d+).*?_(.*)$}, '\1u\2')}/jdk-#{version.sub(%r{^\d+\.(\d+).*?_(\d+)-.*$}, '\1u\2')}-macosx-x64.dmg",
       cookies: {
