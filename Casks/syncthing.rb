@@ -1,10 +1,10 @@
 cask 'syncthing' do
-  version '0.12.21'
-  sha256 'f2a4dbc5fd3956baa1f3b1a9cd98dbaf20b8d497a243ad20e78826002a2eb98c'
+  version '0.12.22'
+  sha256 '148bb90e5991648e4ca9588c5bb202a707aa5e4e2e65299232294d418110fa7d'
 
   url "https://github.com/syncthing/syncthing/releases/download/v#{version}/syncthing-macosx-amd64-v#{version}.tar.gz"
   appcast 'https://github.com/syncthing/syncthing/releases.atom',
-          checkpoint: '5e649b62f810f550dd2458ea026a7c7ff75810b1a9a905b3a73f92cdc8601ee8'
+          checkpoint: '8a5025eca40c16d75bca0d671ffe17ae51cddc72af77ec7a6ec4b89cb0cd1d74'
   name 'Syncthing'
   homepage 'https://syncthing.net/'
   license :mpl
