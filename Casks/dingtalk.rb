@@ -1,6 +1,6 @@
 cask 'dingtalk' do
-  version '1.6.2'
-  sha256 '6012119cf6304affe21d25ee5a5786903f7f492792f3b8bf5e41addcaa6932c1'
+  version '1.8.2'
+  sha256 'd471acf63d2e505d9b5cb1141ff18688b9ff101a011401b5b4a09c1880f12858'
 
   # taobaocdn.com/dingtalk-desktop was verified as official when first introduced to the cask
   url "http://download.taobaocdn.com/dingtalk-desktop/Release/install/DingTalk_v#{version}.dmg"
