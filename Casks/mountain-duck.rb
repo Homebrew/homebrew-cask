@@ -1,10 +1,10 @@
 cask 'mountain-duck' do
-  version '1.2.2.3623'
-  sha256 'fd78fdb3035450303d20b09244c694fe7c927e26401f24380b013b7389e9510b'
+  version '1.3.1.3743'
+  sha256 '735bd8444c37b7f72c8d36aee5d49873319a63e0a619fd2d645acab81a166c7e'
 
   url "https://dist.mountainduck.io/Mountain%20Duck-#{version}.zip"
   appcast 'https://version.mountainduck.io/changelog.rss',
-          checkpoint: 'f091cee0b05b1a1e40092f762d033fbd56ba4665c1979ce1bdb9293b9e596972'
+          checkpoint: '148b8fdc7730b288726b2a0c86d706567af586331859e227505d16cf9a20ab44'
   name 'Mountain Duck'
   homepage 'https://mountainduck.io/'
   license :commercial
