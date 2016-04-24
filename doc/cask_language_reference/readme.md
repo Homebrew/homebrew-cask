@@ -153,6 +153,7 @@ screen_saver
 service
 audio_unit_plugin
 vst_plugin
+vst3_plugin
 artifact, target: # :target shown here as is required with `artifact`
 stage_only
 

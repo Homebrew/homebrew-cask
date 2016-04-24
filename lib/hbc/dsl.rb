@@ -33,7 +33,8 @@ class Hbc::DSL
     :service,
     :stage_only,
     :suite,
-    :vst_plugin
+    :vst_plugin,
+    :vst3_plugin
   ]
 
   ACTIVATABLE_ARTIFACT_TYPES = [:installer, *ORDINARY_ARTIFACT_TYPES] - [:stage_only]

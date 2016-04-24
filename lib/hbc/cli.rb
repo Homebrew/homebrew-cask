@@ -190,6 +190,9 @@ class Hbc::CLI
       opts.on("--vst_plugindir=MANDATORY") do |v|
         Hbc.vst_plugindir = Pathname(v).expand_path
       end
+      opts.on("--vst3_plugindir=MANDATORY") do |v|
+        Hbc.vst3_plugindir = Pathname(v).expand_path
+      end
       opts.on("--screen_saverdir=MANDATORY") do |v|
        Hbc.screen_saverdir = Pathname(v).expand_path
       end

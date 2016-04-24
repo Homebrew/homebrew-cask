@@ -35,6 +35,7 @@ class Hbc::CLI::InternalStanza < Hbc::CLI::InternalUseBase
                        :internet_plugin,
                        :audio_unit_plugin,
                        :vst_plugin,
+                       :vst3_plugin,
                        :screen_saver,
                        :pkg,
                        :installer,
