@@ -9,5 +9,5 @@ cask 'aseprite' do
   homepage 'http://www.aseprite.org'
   license :gpl
 
-  app 'aseprite.app'
+  app 'Aseprite.app'
 end
