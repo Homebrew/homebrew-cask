@@ -100,6 +100,14 @@ module Hbc::Locations
       @vst_plugindir = _vst_plugindir
     end
 
+    def vst3_plugindir
+      @vst3_plugindir ||= Pathname.new('~/Library/Audio/Plug-Ins/VST3').expand_path
+    end
+
+    def vst3_plugindir=(_vst3_plugindir)
+      @vst3_plugindir = _vst3_plugindir
+    end
+
     def screen_saverdir
       @screen_saverdir ||= Pathname.new('~/Library/Screen Savers').expand_path
     end
