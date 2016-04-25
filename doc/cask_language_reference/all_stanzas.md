@@ -32,7 +32,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install).
 | `service`          | yes                           | relative path to a Service that should be linked into the `~/Library/Services` folder on installation
 | `audio_unit_plugin`| yes                           | relative path to an Audio Unit plugin that should be linked into the `~/Library/Audio/Components` folder on installation
 | `vst_plugin`       | yes                           | relative path to a VST Plugin that should be linked into the `~/Library/Audio/VST` folder on installation
-| `vst3_plugin`       | yes                           | relative path to a VST3 Plugin that should be linked into the `~/Library/Audio/VST3` folder on installation
+| `vst3_plugin`      | yes                           | relative path to a VST3 Plugin that should be linked into the `~/Library/Audio/VST3` folder on installation
 | `suite`            | yes                           | relative path to a containing directory that should be linked into the `~/Applications` folder on installation (see also [Suite Stanza Details](stanzas/suite.md))
 | `artifact`         | yes                           | relative path to an arbitrary path that should be symlinked on installation. This is only for unusual cases. The `app` stanza is strongly preferred when linking `.app` bundles.
 | `installer`        | yes                           | describes an executable which must be run to complete the installation (see [Installer Stanza Details](stanzas/installer.md))
