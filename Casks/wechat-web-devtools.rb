@@ -1,4 +1,4 @@
-cask 'wechat_web_devtools' do
+cask 'wechat-web-devtools' do
   version '0.5.0'
   sha256 '74bf1cf84616ac5abb7df91f2c64b23c6370d8a5eeca178c64f148e9b0a8ff15'
 
