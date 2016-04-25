@@ -1,6 +1,6 @@
 cask 'sketch' do
-  version '3.7.1'
-  sha256 'a6aae446bb5b0a1ac883f55ef01a5e32ef7dc21000b861f114200025cfc96e8d'
+  version '3.7.2'
+  sha256 'cf07466d5c8aaffb3e0c6d6242c3f2367b4f84d293d01064e1a7ee1a503c3429'
 
   url 'http://www.sketchapp.com/static/download/sketch.zip'
   appcast "http://www.sketchapp.com/appcast#{version.major}.xml",
