@@ -8,4 +8,6 @@ cask 'brainworx-bxmegasingle' do
   license :commercial
 
   pkg 'bx_megasingle.pkg'
+
+  uninstall pkgutil: 'com.plugin-alliance.plugins.pkg.BXMegasingle*'
 end
