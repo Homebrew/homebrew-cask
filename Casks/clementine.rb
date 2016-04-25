@@ -1,11 +1,11 @@
 cask 'clementine' do
-  version '1.3.0'
-  sha256 '250fbe972a29c6c122245d4b56ce14ee53b41a0671f5bd4cf6158228f4b28a20'
+  version '1.3.1'
+  sha256 '825aa66996237e1d3ea2723b24188ead203f298d0bec89f4c3bc6582d9e63e3a'
 
   # github.com/clementine-player/Clementine was verified as official when first introduced to the cask
-  url "https://github.com/clementine-player/Clementine/releases/download/#{version.major_minor}/clementine-#{version}.dmg"
+  url "https://github.com/clementine-player/Clementine/releases/download/#{version}/clementine-#{version}.dmg"
   appcast 'https://github.com/clementine-player/Clementine/releases.atom',
-          checkpoint: '8ac60de3463361a7cd9b77923e4110140d1c3392406f42762d71c29a31d767e9'
+          checkpoint: '4a73a16fbd870e168e0ade5d7680dd1382c59b531ac2969a9868974eea70bbcb'
   name 'Clementine'
   homepage 'https://www.clementine-player.org/'
   license :gpl
