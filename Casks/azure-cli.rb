@@ -1,6 +1,6 @@
 cask 'azure-cli' do
-  version '0.9.14'
-  sha256 'c497548622661609192dfd4a60da4991b754461a13fb7a7a4e215f50e52fdf11'
+  version '0.9.20'
+  sha256 '2fdb64650709dae1c4aa0fe1493dc46aed43f45fb0ac88824e24f1203c16fabc'
 
   # azuresdkscu.blob.core.windows.net was verified as official when first introduced to the cask
   url "https://azuresdkscu.blob.core.windows.net/downloads04/azure-cli.#{version}.dmg"
