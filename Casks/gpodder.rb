@@ -1,6 +1,6 @@
 cask 'gpodder' do
-  version '3.8.5_0'
-  sha256 '20e2ae8d5b703fa5b6e68495a33daed0a894efe408ef7f72b7f265e21718d7b9'
+  version '3.9.0_0'
+  sha256 'c8bbf5175b43d8def73f46c5d0d23950d12a524d686fdb9b8fe5d5a910dd6378'
 
   # downloads.sourceforge.net/sourceforge/gpodder was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/sourceforge/gpodder/gPodder-#{version}.zip"
