@@ -7,7 +7,7 @@ cask 'paraphrasis-au' do
   homepage 'http://virtualanalogy.com/'
   license :gpl
 
-  pkg 'Paraphrasis_#{version.no_dots}.pkg'
+  pkg "Paraphrasis_#{version.no_dots}.pkg"
 
   uninstall pkgutil: 'com.virtualanalogy.pkg.paraphrasis'
 end
