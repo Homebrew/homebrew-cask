@@ -1,13 +1,25 @@
-cask 'quickcal' do
-  version '3.1.5'
-  sha256 '00566df05bc81755a7f8e3586d06a348fd4b3ef83a1deef5a64c7d6542b599b1'
+cask :v1 => 'quickcal' do
+  version :latest
+  sha256 :no_check
 
-  url "http://quickcalapp.com/app/quickcal-#{version}.zip"
-  appcast 'http://quickcalapp.com/app/appcast.xml',
-          checkpoint: 'c91adfc59ed46e93e1383f0b2de7638f6e5625076f9fcacc1b36b480bbac8fc4'
+  url 'http://quickcalapp.com/app/quickcal-latest.zip'
   name 'QuickCal'
   homepage 'http://quickcalapp.com/'
-  license :commercial
+  license :commercial 
 
   app 'QuickCal.app'
 end
+||||||| merged common ancestors
+=======
+cask :v1 => 'quickcal' do
+  version :latest
+  sha256 :no_check
+
+  url 'http://quickcalapp.com/app/quickcal-latest.zip'
+  name 'QuickCal'
+  homepage 'http://quickcalapp.com/'
+  license :commercial 
+
+  app 'QuickCal.app'
+end
+>>>>>>> 5441a0928b2608588c357ad67e3067c8911cfeb3
