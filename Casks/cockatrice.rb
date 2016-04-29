@@ -12,7 +12,7 @@ cask 'cockatrice' do
 
   #container nested: "Cockatrice-#{version.after_comma}-osx.dmg"
   # This is a typo on their part, and needs to be corrected upstream
-  container nested: "Cockatrice-Gatewaterchers-osx.dmg"
+  container nested: 'Cockatrice-Gatewaterchers-osx.dmg'
 
   app 'cockatrice.app'
   app 'oracle.app'
