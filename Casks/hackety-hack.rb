@@ -11,4 +11,10 @@ cask 'hackety-hack' do
   license :mit
 
   app 'Hackety Hack.app'
+
+  zap delete: [
+                '~/.hacketyhack',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.hackety.hacketyhack.sfl',
+                '~/Library/Caches/org.hackety.hacketyhack',
+              ]
 end
