@@ -1,6 +1,6 @@
 cask 'wireshark' do
-  version '2.0.2'
-  sha256 'd0f175b8e49611940e9e069aafdec84f1337385ee0edb4b5346f307291deb593'
+  version '2.0.3'
+  sha256 'a64dc77117a4408b48235297215032017e77822885ce3e19cd1065bfbea0ae57'
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
   name 'Wireshark'
