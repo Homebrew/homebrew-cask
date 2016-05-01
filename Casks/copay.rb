@@ -1,11 +1,11 @@
 cask 'copay' do
-  version '1.11.0'
-  sha256 '948f2da206d82a3f4f18b5f5e34d448dfc910d6a3c291791fae79d7195fff14a'
+  version '1.12.1'
+  sha256 '2c3181c5985dd7165e563c2702ec927947a8e0f601583204bdecaf897fa3ebdc'
 
   # github.com/bitpay/copay was verified as official when first introduced to the cask
   url "https://github.com/bitpay/copay/releases/download/v#{version}/Copay-osx.dmg"
   appcast 'https://github.com/bitpay/copay/releases.atom',
-          checkpoint: 'e572dd3166b0654d71e7f8f9f7713dd830f9a995e32d54c1cd504977f56bcfbb'
+          checkpoint: 'b28d35e6e29c6811be0e5d9531a95fed474b69d0cb783c1bcf48c7b22977f71e'
   name 'Copay'
   homepage 'https://copay.io'
   license :oss
