@@ -1,11 +1,11 @@
-cask 'safe-in-cloud' do
+cask 'safeincloud' do
   version :latest
   sha256 :no_check
 
-  url 'https://www.safe-in-cloud.com/images/downloads/SafeInCloud.app.dmg'
+  url 'https://www.safe-in-cloud.com/download/SafeInCloud.app.dmg'
   name 'SafeInCloud Password Manager'
   homepage 'https://www.safe-in-cloud.com'
   license :gratis
 
-  app 'Safe In Cloud.app'
+  app 'SafeInCloud.app'
 end
