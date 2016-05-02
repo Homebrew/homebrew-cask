@@ -1,6 +1,6 @@
 cask 'visit' do
-  version '2.10.1'
-  sha256 '29304fabd934da5f6445962c3ee32de725d2c0e6ef693525c4d97cdfa2d9c4a7'
+  version '2.10.2'
+  sha256 'fc621ff86a81a04d92535a268a87e66206c21ae011a2fa91d94020c981d4a3cf'
 
   # nersc.gov is the official download host per the vendor homepage
   url "https://portal.nersc.gov/project/visit/releases/#{version}/VisIt-#{version}.dmg"
