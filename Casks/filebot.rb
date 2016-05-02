@@ -1,6 +1,6 @@
 cask 'filebot' do
-  version '4.6.1'
-  sha256 'eed87622fe833a53fed2db816c08b5b5d68f663ef4356835e7b8f9ff3ad1d471'
+  version '4.7'
+  sha256 '4f61524ccbfa1be65e3818ba37d983599af67af32cc2dcfd4c8f45d74b394cb2'
 
   # sourceforge.net/project/filebot was verified as official when first introduced to the cask
   url "http://downloads.sourceforge.net/project/filebot/filebot/FileBot_#{version}/FileBot_#{version}-brew.tar.bz2"
