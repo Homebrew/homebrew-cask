@@ -2,7 +2,7 @@ cask 'quitter' do
   version :latest
   sha256 :no_check
 
-  url 'http://marco.org/appcasts/Quitter.zip'
+  url 'https://marco.org/appcasts/Quitter.zip'
   name 'Quitter'
   homepage 'https://marco.org/apps#quitter'
   license :gratis
