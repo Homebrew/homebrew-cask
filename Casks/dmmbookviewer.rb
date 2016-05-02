@@ -11,5 +11,5 @@ cask 'dmmbookviewer' do
   pkg "DMMViewerSetup_Mac_#{version}.pkg"
 
   uninstall pkgutil: 'com.dmm.DMMbookviewer',
-            rmdir: '/Applications/DMMbookviewer.app'
+            delete:  '/Applications/DMMbookviewer.app'
 end
