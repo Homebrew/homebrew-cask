@@ -9,5 +9,6 @@ cask 'dmmbookviewer' do
 
   pkg "DMMViewerSetup_Mac_#{version}.pkg"
 
-  uninstall pkgutil: 'jp.co.cyphertec.installer.app.ImageViewer'
+  uninstall pkgutil: 'com.dmm.DMMbookviewer',
+            rmdir: '/Applications/DMMbookviewer.app'
 end
