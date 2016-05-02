@@ -1,5 +1,5 @@
 cask 'datadog-agent' do
-  version :5.7.4-1
+  version '5.7.4-1'
   sha256 :no_check
 
   # amazonaws.com/dd-agent is the official download host as per vendor documentation/install script (https://github.com/DataDog/dd-agent/blob/master/packaging/osx/install.sh)
