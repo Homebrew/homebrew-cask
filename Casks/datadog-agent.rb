@@ -1,8 +1,8 @@
 cask 'datadog-agent' do
   version '5.7.4-1'
-  sha256 :no_check
+  sha256 'fa6f2b50da3c97696e1e72098fe7feaa802654f592e5f6954b1bf96332b78819'
 
-  # amazonaws.com/dd-agent is the official download host as per vendor documentation/install script (https://github.com/DataDog/dd-agent/blob/master/packaging/osx/install.sh)
+  # s3.amazonaws.com/dd-agent was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/dd-agent/datadogagent.dmg'
   name 'Datadog Agent'
   homepage 'https://www.datadoghq.com/'
