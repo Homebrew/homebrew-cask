@@ -1,11 +1,15 @@
 cask 'quitter' do
-  version :latest
-  sha256 :no_check
+  version '1.0'
+  sha256 'ea9a8261a2c2b349a89334b32e9f678881761132fbe19c4f7c9e8ca51716eb96'
 
   url 'https://marco.org/appcasts/Quitter.zip'
+  appcast 'https://marco.org/appcasts/quitter.xml',
+          checkpoint: '86758bd410d5ae1bc3e1b0042bd75e4d55f74417c2af8ed4c299017e273cfbec'
   name 'Quitter'
   homepage 'https://marco.org/apps#quitter'
   license :gratis
+
+  auto_updates true
 
   app 'Quitter.app'
 
