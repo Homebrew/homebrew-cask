@@ -1,6 +1,6 @@
 cask 'sbrowserq' do
-  version '3.0'
-  sha256 '32d996a6e1044ea639b3e1f92f20df3a938872f95fc7837beb2231bbe9fd7a13'
+  version '3.2'
+  sha256 '5b3b45acc9a5c9cc15c129fc8ca3b298a1017426941124ebf5d84180ba78a753'
 
   url "http://park.geocities.jp/sbrowser_q/SbrowserQ_V#{version}_mac.zip"
   name 'SbrowserQ'
