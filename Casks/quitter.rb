@@ -1,6 +1,6 @@
 cask 'quitter' do
-  version :latest
-  sha256 :no_check
+  version '1.0'
+  sha256 'ea9a8261a2c2b349a89334b32e9f678881761132fbe19c4f7c9e8ca51716eb96'
 
   url 'https://marco.org/appcasts/Quitter.zip'
   appcast 'https://marco.org/appcasts/quitter.xml',
