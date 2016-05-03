@@ -7,6 +7,8 @@ cask 'quitter' do
   homepage 'https://marco.org/apps#quitter'
   license :gratis
 
+  auto_updates true
+
   app 'Quitter.app'
 
   postflight do
