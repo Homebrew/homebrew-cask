@@ -8,4 +8,5 @@ cask 'voxengo-span-vst' do
   license :gratis
 
   vst_plugin 'SPAN.vst'
+  vst3_plugin 'SPAN.vst3'
 end
