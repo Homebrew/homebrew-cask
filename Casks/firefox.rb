@@ -1,6 +1,6 @@
 cask 'firefox' do
-  version '46.0'
-  sha256 'f54b7e3e6bb330754ef4df7f96516fd7279a9fb01aad3db7fd2eadd25d8a279f'
+  version '46.0.1'
+  sha256 '7ab6508b098023840d63ec622beb9f8ff4c68922f11aa769acf351dae5baa231'
 
   url "https://ftp.mozilla.org/pub/firefox/releases/#{version}/mac/en-US/Firefox%20#{version}.dmg"
   appcast "https://aus5.mozilla.org/update/3/Firefox/#{version}/0/Darwin_x86_64-gcc3-u-i386-x86_64/en-US/release/Darwin%2015.3.0/default/default/update.xml?force=1",
