@@ -1,8 +1,8 @@
 cask 'flightgear' do
-  version '3.4.0'
-  sha256 '17ac1c274d0256a17229b5cd7c77a44cdaa521e555a474301754e72d17c735cb'
+  version '2016.1.1'
+  sha256 '223b8a50ff050e45b7039b6537a2ef62ea1f9efc78ce214b15d05be49c78a688'
 
-  url "http://download.flightgear.org/flightgear/MacOSX/FlightGear-#{version}.dmg"
+  url "http://downloads.sourceforge.net/sourceforge/flightgear/FlightGear-#{version}.dmg"
   name 'FlightGear'
   homepage 'http://www.flightgear.org/'
   license :gpl
