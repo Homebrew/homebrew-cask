@@ -1,11 +1,11 @@
 cask 'min' do
-  version '1.1.2'
-  sha256 'fe353c6808018485eed39c0e138ab3ed443055f648d0694889713f54d0835545'
+  version '1.2.0'
+  sha256 'aa6e234f11918911c0a07a2bd17c0314fa7c187630ac9878aab1df5283b18f1b'
 
   # github.com/PalmerAL/min was verified as official when first introduced to the cask
   url "https://github.com/PalmerAL/min/releases/download/v#{version}/Min-v#{version}-darwin-x64.zip"
   appcast 'https://github.com/PalmerAL/min/releases.atom',
-          checkpoint: 'b02a6d4a9ac21cce8119a6ff6064cfd82becb17c2ce713410d9c27ccc4780555'
+          checkpoint: '07e8b6671a4f0006dd4bcdab21e3fb2bea2df5a9909ba76132e2c54ae5c07f7e'
   name 'Min'
   homepage 'https://palmeral.github.io/min'
   license :oss
