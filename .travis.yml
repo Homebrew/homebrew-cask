@@ -39,6 +39,9 @@ before_script:
 script:
   - . ci/travis/script.sh
 
+after_script:
+  - sleep 3
+
 notifications:
   email: false
   irc:
