@@ -10,7 +10,7 @@ cask 'hazel' do
   homepage 'https://www.noodlesoft.com/hazel.php'
   license :freemium
 
-  prefpane 'Hazel.prefPane'
+  prefpane 'Install Hazel.app/Contents/Resources/Hazel.prefPane'
 
   zap delete: [
                 '~/Library/Application Support/Hazel',
