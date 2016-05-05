@@ -1,6 +1,6 @@
 cask 'paye-tools' do
-  version '15.1.15162.94'
-  sha256 '45ff2d53221ca7b0948faf58a0e0bc78a939107a0ba8b602f5c8f56139e6b9f7'
+  version '16.0.16076.450'
+  sha256 'ae488dd53a7d6787fe17fbd8b699fc62ad1441f49a35c1a7baf3015e14a0e34f'
 
   url "https://www.gov.uk/government/uploads/uploaded/hmrc/payetools-rti-#{version}-osx.zip"
   name 'Basic PAYE Tools'
