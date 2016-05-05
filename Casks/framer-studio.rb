@@ -5,7 +5,7 @@ cask 'framer-studio' do
   # devmate.com/com.motif.framer was verified as official when first introduced to the cask
   url 'https://dl.devmate.com/com.motif.framer/FramerStudio.zip'
   appcast 'https://updates.devmate.com/com.motif.framer.xml',
-          checkpoint: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+          checkpoint: '92e25f0645ee8eff1dda9e7064c9d4ae1059f66ad9b02825482d0cee57d441e1'
   name 'Framer Studio'
   homepage 'http://framerjs.com/'
   license :commercial
