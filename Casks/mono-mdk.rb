@@ -1,5 +1,5 @@
 cask 'mono-mdk' do
-  version '4.2.1.102'
+  version '4.4.0.142'
   sha256 :no_check # required as upstream package is updated in-place
 
   url "http://download.mono-project.com/archive/#{version.sub(%r{\.[^.]*$}, '')}/macos-10-universal/MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
