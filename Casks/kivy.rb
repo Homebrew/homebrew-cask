@@ -10,6 +10,6 @@ cask 'kivy' do
   depends_on formula: 'unar'
 
   # Renamed as suggested by developer: https://kivy.org/docs/installation/installation-osx.html#installation-on-os-x
-  app 'Kivy2.app', target: 'Kivy.app'
-  binary 'Kivy2.app/Contents/Resources/script', target: 'kivy'
+  app 'Kivy3.app', target: 'Kivy.app'
+  binary 'Kivy3.app/Contents/Resources/script', target: 'kivy'
 end
