@@ -178,6 +178,9 @@ in a future version.
   * `--vst_plugindir=<path>`:
     Target location for VST Plugin links. The default value is `~/Library/Audio/Plug-Ins/VST`.
 
+  * `--vst3_plugindir=<path>`:
+    Target location for VST3 Plugin links. The default value is `~/Library/Audio/Plug-Ins/VST3`.
+
   * `--screen_saverdir=<path>`:
     Target location for Screen Saver links. The default value is `~/Library/Screen Savers`.
 

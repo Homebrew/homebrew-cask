@@ -2,6 +2,9 @@ cask 'sourcetree' do
   if MacOS.release <= :snow_leopard
     version '1.8.1'
     sha256 '37a42f2d83940cc7e1fbd573a70c3c74a44134c956ac3305f6b153935dc01b80'
+  elsif MacOS.release <= :mountain_lion
+    version '2.0.5.5'
+    sha256 'f23129587703a706a37d5fdd9b2390875305b482a2b4e4b0e34bd49cba9b63c9'
   else
     version '2.2.4'
     sha256 '068b594ca1612a08c575545baa363741a1024b67e3d3a86747c84f52a0c4e032'

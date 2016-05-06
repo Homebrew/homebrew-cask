@@ -1,10 +1,10 @@
 cask 'screenhero' do
-  version '2.3.6.0'
-  sha256 'b89302e56554f79cb342e54273df99d2319638dc2e1fb68c6772a05eaed8d2dd'
+  version '2.3.7.0'
+  sha256 '7f642ca6294c136192d4afbc52bf95f843b4c10749b2ee6dc39cf871c49f125a'
 
   url "https://secure.screenhero.com/update/screenhero/Screenhero-#{version}.dmg"
   appcast 'https://d3hb26arjl8wb7.cloudfront.net/jsherwani/public/update/mac/screenhero/sparkle.xml',
-          checkpoint: '971582489e19086e79213cf7ef32dd9b2f5da8e1fa24c31d9dda71558226ba4e'
+          checkpoint: 'deae936563576f81f73b4ab3e74b3843a71dd5cdf50b8540632ea2520c1263b7'
   name 'Screenhero'
   homepage 'https://screenhero.com/'
   license :commercial

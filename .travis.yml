@@ -1,4 +1,4 @@
-language: objective-c
+language: ruby
 
 sudo: false
 
@@ -25,9 +25,7 @@ branches:
     - master
 
 cache:
-  directories:
-    - /usr/local
-    - $HOME/.gem
+  - bundler
 
 before_install:
   - . ci/travis/before_install.sh
@@ -40,6 +38,9 @@ before_script:
 
 script:
   - . ci/travis/script.sh
+
+after_script:
+  - sleep 3
 
 notifications:
   email: false
