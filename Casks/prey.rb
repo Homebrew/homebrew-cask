@@ -2,7 +2,7 @@ cask 'prey' do
   version '1.5.1'
   sha256 '8c9e69c21d2bfb101745681fd935df308899828effda21e28be8da3ffb174746'
 
-  # amazonaws.com is the official download host per the vendor homepage
+  # prey-releases.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://prey-releases.s3.amazonaws.com/node-client/#{version}/prey-mac-#{version}-x86.pkg"
   name 'Prey'
   homepage 'https://preyproject.com'
