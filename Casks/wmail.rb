@@ -10,5 +10,5 @@ cask 'wmail' do
   homepage 'https://thomas101.github.io/wmail/'
   license :mit
 
-  app 'WMail.app'
+  app 'WMail-darwin-x64/WMail.app'
 end
