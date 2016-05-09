@@ -1,6 +1,6 @@
 cask 'dolphin' do
-  version '4.0-9230'
-  sha256 'fd193bf0bc204d50d79e9cfc0df5a41fe81f43f8d6cfae61eeb24141a12a484b'
+  version '4.0-9285'
+  sha256 '224867c89306c77affdd012152e4b50b14422c17207ebce936ca6176e2b04a82'
 
   url "https://dl.dolphin-emu.org/builds/dolphin-master-#{version}.dmg"
   name 'Dolphin'

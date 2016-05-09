@@ -1,14 +1,14 @@
 cask 'prey' do
-  version '1.5.0'
-  sha256 '5068c388797ef45f03494d2da92423c6372abf3a4ca3b95001978a19b2603b01'
+  version '1.5.1'
+  sha256 '8c9e69c21d2bfb101745681fd935df308899828effda21e28be8da3ffb174746'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url "https://prey-releases.s3.amazonaws.com/node-client/#{version}/prey-mac-#{version}-x64.pkg"
+  # prey-releases.s3.amazonaws.com was verified as official when first introduced to the cask
+  url "https://prey-releases.s3.amazonaws.com/node-client/#{version}/prey-mac-#{version}-x86.pkg"
   name 'Prey'
   homepage 'https://preyproject.com'
   license :gpl
 
-  pkg "prey-mac-#{version}-x64.pkg"
+  pkg "prey-mac-#{version}-x86.pkg"
 
   uninstall pkgutil:   'com.prey.agent',
             launchctl: 'com.prey.agent'

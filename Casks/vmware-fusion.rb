@@ -42,8 +42,17 @@ cask 'vmware-fusion' do
   zap delete: [
                 # note: '~/Library/Application Support/VMware Fusion' is not safe
                 # to delete. In older versions, VM images were located there.
+                '/Library/Preferences/VMware Fusion',
                 '~/Library/Caches/com.vmware.fusion',
                 '~/Library/Logs/VMware',
                 '~/Library/Logs/VMware Fusion',
+                '~/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist',
+                '~/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist.lockfile',
+                '~/Library/Preferences/com.vmware.fusion.plist',
+                '~/Library/Preferences/com.vmware.fusion.plist.lockfile',
+                '~/Library/Preferences/com.vmware.fusionDaemon.plist',
+                '~/Library/Preferences/com.vmware.fusionDaemon.plist.lockfile',
+                '~/Library/Preferences/com.vmware.fusionStartMenu.plist',
+                '~/Library/Preferences/com.vmware.fusionStartMenu.plist.lockfile',
               ]
 end
