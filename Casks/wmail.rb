@@ -1,11 +1,11 @@
 cask 'wmail' do
-  version '1.3.0'
-  sha256 'b41ae52ae40c8d8ee26cb5dccbb90ecb39a0170b14dc13d0c2d31f743767926c'
+  version '1.3.1'
+  sha256 '2b8c14ed9b2616e1c32a33601293edc585e1fa0a1b16c1c07798ffdd590fbcfb'
 
   # github.com/Thomas101/wmail was verified as official when first introduced to the cask
   url "https://github.com/Thomas101/wmail/releases/download/v#{version}/WMail_#{version.dots_to_underscores}_osx.zip"
   appcast 'https://github.com/Thomas101/wmail/releases.atom',
-          checkpoint: '4706edc43ece366d048bc158cb97b78951cf6062bb9baf2df15a2cc5c93d9554'
+          checkpoint: '88a65d3952c7868e1f5f5bdb974a2ac84dad1e55393a8751f170e95ae5d1ba1f'
   name 'WMail'
   homepage 'https://thomas101.github.io/wmail/'
   license :mit
