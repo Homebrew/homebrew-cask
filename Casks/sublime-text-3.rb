@@ -10,9 +10,9 @@ cask 'sublime-text-3' do
   app 'Sublime Text.app'
 
   zap delete: [
-     '~/Library/Application Support/Sublime Text 3', 
-     '~/Library/Preferences/com.sublimetext.3.plist',
-     '~/Library/Caches/com.sublimetext.3',
-     '~/Library/Saved Application State/com.sublimetext.3.savedState',
-  ]  
+                '~/Library/Application Support/Sublime Text 3',
+                '~/Library/Preferences/com.sublimetext.3.plist',
+                '~/Library/Caches/com.sublimetext.3',
+                '~/Library/Saved Application State/com.sublimetext.3.savedState',
+              ]
 end
