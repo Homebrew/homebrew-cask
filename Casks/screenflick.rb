@@ -1,10 +1,10 @@
 cask 'screenflick' do
-  version '2.7.13'
-  sha256 'ea833fbbb12d3bcc2d767e3171f5fc7c8b562ed65b12f9878009d685dc73f3cf'
+  version '2.7.14'
+  sha256 '0b7437d03691440985c4d020abacb73ba1a4d6674ad79eb31637c3068baef6b5'
 
   url "https://store.araelium.com/screenflick/downloads/versions/Screenflick#{version}.zip"
   appcast 'https://arweb-assets.s3.amazonaws.com/downloads/screenflick/screenflick2.xml',
-          checkpoint: 'f8edb9b54c1d2374b43ef9a374ae11fe7d3001a05b177c9c5671ee7c303b18d0'
+          checkpoint: 'ab7e8ff3a604e0bd5bd73d0b08ff4adf7405d828cc6712a4661b613091d08d06'
   name 'Screenflick'
   homepage 'http://www.araelium.com/screenflick/'
   license :commercial
