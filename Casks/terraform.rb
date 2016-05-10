@@ -1,6 +1,6 @@
 cask 'terraform' do
-  version '0.6.15'
-  sha256 '9cb305ac00b85e2575da3c71504f3fdd3f7ef61f35457af999c7b88802143311'
+  version '0.6.16'
+  sha256 '23feb79263126877e6128a03c600cd626f6691a118a474694c5ad45cc5da9366'
 
   # hashicorp.com/terraform was verified as official when first introduced to the cask
   url "https://releases.hashicorp.com/terraform/#{version}/terraform_#{version}_darwin_amd64.zip"
@@ -19,6 +19,7 @@ cask 'terraform' do
   binary 'terraform-provider-clc'
   binary 'terraform-provider-cloudflare'
   binary 'terraform-provider-cloudstack'
+  binary 'terraform-provider-cobbler'
   binary 'terraform-provider-consul'
   binary 'terraform-provider-datadog'
   binary 'terraform-provider-digitalocean'
@@ -26,10 +27,12 @@ cask 'terraform' do
   binary 'terraform-provider-dnsimple'
   binary 'terraform-provider-docker'
   binary 'terraform-provider-dyn'
+  binary 'terraform-provider-fastly'
   binary 'terraform-provider-github'
   binary 'terraform-provider-google'
   binary 'terraform-provider-heroku'
   binary 'terraform-provider-influxdb'
+  binary 'terraform-provider-librato'
   binary 'terraform-provider-mailgun'
   binary 'terraform-provider-mysql'
   binary 'terraform-provider-null'
@@ -38,6 +41,7 @@ cask 'terraform' do
   binary 'terraform-provider-postgresql'
   binary 'terraform-provider-powerdns'
   binary 'terraform-provider-rundeck'
+  binary 'terraform-provider-softlayer'
   binary 'terraform-provider-statuscake'
   binary 'terraform-provider-template'
   binary 'terraform-provider-terraform'
