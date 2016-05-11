@@ -9,6 +9,8 @@ cask 'gislook' do
 
   pkg 'GISLook_GISMeta.pkg'
 
-  uninstall delete: '/Library/QuickLook/GISLook.qlgenerator',
-            delete: '/Library/Spotlight/GISMeta.mdimporter'
+  uninstall delete: [
+             '/Library/QuickLook/GISLook.qlgenerator',
+             '/Library/Spotlight/GISMeta.mdimporter',
+           ]
 end
