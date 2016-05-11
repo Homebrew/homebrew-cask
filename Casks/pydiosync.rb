@@ -10,7 +10,7 @@ cask 'pydiosync' do
   pkg 'PydioSync-Setup.pkg'
 
   uninstall pkgutil: 'io.pyd.sync.installer.PydioSync',
-            delete: '/Applications/PydioSync.app'
+            delete:  '/Applications/PydioSync.app'
 
   zap delete: '~/Pydio'
 end
