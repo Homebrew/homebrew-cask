@@ -13,5 +13,4 @@ cask 'pydiosync' do
             delete: '/Applications/PydioSync.app'
 
   zap delete: '~/Pydio'
-
 end
