@@ -1,6 +1,6 @@
 cask 'qgis' do
-  version '2.14.0-1'
-  sha256 '0a37531ae4dcf966752d728885b8dc84f45b89e296c89a223e1826f49394f88e'
+  version '2.14.2-1'
+  sha256 '1fe672d2fc4fb332266929317db9a53b94b45a84961f493c3125191859aaeec8'
 
   url "http://www.kyngchaos.com/files/software/qgis/QGIS-#{version}.dmg"
   name 'QGIS'
