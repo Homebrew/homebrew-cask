@@ -10,7 +10,7 @@ cask 'gislook' do
   pkg 'GISLook_GISMeta.pkg'
 
   uninstall pkgutil: [
-             'ch.bernhardjenny.gislook.pkg',
-             'ch.bernhardjenny.gismeta.pkg',
-           ]
+                       'ch.bernhardjenny.gislook.pkg',
+                       'ch.bernhardjenny.gismeta.pkg',
+                     ]
 end
