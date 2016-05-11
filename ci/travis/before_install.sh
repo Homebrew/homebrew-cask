@@ -46,9 +46,6 @@ run export PATH="${GEM_BINDIR}:${SYSTEM_GEM_BINDIR}:${SYSTEM_RUBY_BINDIR}:$PATH"
 # ensure that brew uses the ruby we want it to
 run export HOMEBREW_RUBY_PATH="${SYSTEM_RUBY_BINDIR}/ruby"
 
-# force install bundler
-run gem install bundler
-
 run which ruby
 run ruby --version
 
