@@ -7,7 +7,7 @@ cask 'whatsapp' do
           checkpoint: 'b2e9cfbbe2e5e492553e5fdd8d8415ed0911d981d21fbced08152269b9cb43c4'
   name 'WhatsApp'
   homepage 'https://www.whatsapp.com/'
-  license :closed
+  license :gratis
 
   app 'WhatsApp.app'
 
