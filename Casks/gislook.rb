@@ -9,8 +9,8 @@ cask 'gislook' do
 
   pkg 'GISLook_GISMeta.pkg'
 
-  uninstall delete: [
-             '/Library/QuickLook/GISLook.qlgenerator',
-             '/Library/Spotlight/GISMeta.mdimporter',
+  uninstall pkgutil: [
+             'ch.bernhardjenny.gislook.pkg',
+             'ch.bernhardjenny.gismeta.pkg',
            ]
 end
