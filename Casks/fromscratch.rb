@@ -5,7 +5,7 @@ cask 'fromscratch' do
   # github.com/Kilian/fromscratch was verified as official when first introduced to the cask
   url 'https://github.com/Kilian/fromscratch/releases/download/v1.0.0/FromScratch-darwin-x64-1.0.1.zip'
   appcast 'https://github.com/Kilian/fromscratch/releases.atom',
-          checkpoint: '43642ecb7de1681a3c2c9d39a8e99474168cb10d'
+          checkpoint: '6141270b2639d2ed6e1f86949c323492f181badfe6a5b877372b525fdebf04a6'
   name 'FromScratch'
   homepage 'https://fromscratch.rocks/'
   license :mit
