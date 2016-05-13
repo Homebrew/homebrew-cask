@@ -16,5 +16,6 @@ cask 'bluesense' do
                 '~/Library/Preferences/com.inspira.bluesense.plist',
                 '~/Library/Application Scripts/com.inspira.bluesense',
                 '~/Library/Application Support/BlueSense',
+                '~/Library/Caches/com.inspira.bluesense',
               ]
 end
