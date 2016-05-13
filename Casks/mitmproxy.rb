@@ -1,8 +1,8 @@
 cask 'mitmproxy' do
-  version '0.15'
-  sha256 'b071e758be27005f10e580e3ca7b194d475fe8e57b971f36b44275234a7617d6'
+  version '0.17.1'
+  sha256 'dd5b2779f078c3208c02c673ee6343bf7aedf1c1759df20f8103241147d833ea'
 
-  url "https://mitmproxy.org/download/osx-mitmproxy-#{version}.tgz"
+  url "https://github.com/mitmproxy/mitmproxy/releases/download/v#{version}/mitmproxy-#{version}-osx.tar.gz"
   name 'mitmproxy'
   homepage 'https://mitmproxy.org/'
   license :mit
