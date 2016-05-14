@@ -1,6 +1,6 @@
 cask 'show-my-screen' do
-  version '0.4.4-20160403'
-  sha256 '3433006686b9b428467f183c5cf45d7aab5f291698ab69f4b23a60f94219d192'
+  version '0.4.5-20160513'
+  sha256 '57667b9ff52def7d5e53047bac7cda397f6be8afd00749d608265ddd1f868fd1'
 
   url "https://www.show-my-screen.com/downloads/sms-v#{version}.dmg"
   name 'Show My Screen'
