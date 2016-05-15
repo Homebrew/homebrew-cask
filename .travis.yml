@@ -27,6 +27,8 @@ branches:
 cache:
   directories:
     - $HOME/.gem
+    - /usr/local
+    - /opt/homebrew-cask/Caskroom
 
 before_install:
   - . ci/travis/before_install.sh
