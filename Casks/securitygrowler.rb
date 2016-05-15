@@ -10,7 +10,6 @@ cask 'securitygrowler' do
   homepage 'https://github.com/pirate/security-growler'
   license :public_domain
 
-  auto_updates true
   depends_on macos: '>= :mountain_lion'
 
   app 'Security Growler.app'
