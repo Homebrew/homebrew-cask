@@ -4,7 +4,8 @@ cask 'securitygrowler' do
 
   # github.com/pirate/security-growler/ was verified as official when first introduced to the cask
   url "https://github.com/pirate/security-growler/releases/download/v#{version}/Security.Growler.app.zip"
-  appcast 'https://github.com/pirate/security-growler/releases.atom', checkpoint: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+  appcast 'https://github.com/pirate/security-growler/releases.atom', 
+    checkpoint: 'f871b12f5e054e01460055a896e6fce7117c2c647b5cfef8acd7a1ae39ec25be'
   name 'Security Growler'
   homepage 'https://github.com/pirate/security-growler'
   license :public_domain
