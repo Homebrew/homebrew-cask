@@ -14,8 +14,9 @@ cask 'prey' do
             launchctl: 'com.prey.agent'
 
   caveats <<-EOS.undent
-    To complete installation, Prey requires an API key. It may be set
-    as an environment variable as follows:
+    Prey requires your API key, found in the bottom-left corner of
+    the Prey web account Settings page, to complete installation.
+    The API key may be set as an environment variable as follows:
 
       API_KEY="abcdef123456" brew cask install prey
   EOS
