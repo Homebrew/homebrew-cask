@@ -1,5 +1,5 @@
 cask 'munki' do
-  version '2.6.1.2684'
+  version '2.7.0.2753'
   sha256 'ad177547c2ebfb8332bfb929bb976b1a61d802d57a4a4d701a606506e48c2b21'
 
   # github.com/munki/munki was verified as official when first introduced to the cask
