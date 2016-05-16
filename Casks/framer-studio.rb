@@ -10,5 +10,5 @@ cask 'framer-studio' do
   homepage 'http://framerjs.com/'
   license :commercial
 
-  app 'Framer Studio.app'
+  app 'Framer.app'
 end
