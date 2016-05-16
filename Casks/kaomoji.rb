@@ -1,10 +1,10 @@
 cask 'kaomoji' do
-  version '1.8'
-  sha256 'e887e30493d87c8cef9d4b0352d0bbc82232e31e37b6b883e77422eba2987410'
+  version '1.9'
+  sha256 '04f7e6dc47b469eb90a74d5c569959f2218cc8f3b354edf85117b9f52574b071'
 
-  url 'http://www.kaomojiapp.com/download/Kaomoji.zip'
-  appcast 'http://kaomojiapp.com/download/kaomojiupdate.xml',
-          checkpoint: 'ee7867ed4bb1bfa148641764904b2664097b29cc51ca8d32fb0c956c09c3ac7e'
+  url 'https://kaomojiformac.github.io/download/Kaomoji.zip'
+  appcast 'https://kaomojiformac.github.io/download/kaomojiupdate.xml',
+          checkpoint: 'c80344948d450636c79b58d95d7397f42cdb337e0130b5b9f85f5038f4505af9'
   name 'Kaomoji'
   homepage 'http://www.kaomojiapp.com/'
   license :freemium
