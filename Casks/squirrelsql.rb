@@ -14,6 +14,7 @@ cask 'squirrelsql' do
   installoptions = "#{staged_path}/install-options.xml"
 
   preflight do
+    # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
     File.open(installoptions, 'w') do |f|
       f.print <<EOS.undent
         <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -71,7 +72,7 @@ EOS
   end
 
   postflight do
-    system 'java', '-jar', "#{staged_path}/squirrel-sql-#{version}-MACOSX-install.jar", @installoptions.to_s
+    system 'java', '-jar', "#{staged_path}/squirrel-sql-#{version}-MACOSX-install.jar", installoptions.to_s
   end
 
   uninstall_postflight do
