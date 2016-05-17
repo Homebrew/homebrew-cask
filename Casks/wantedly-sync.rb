@@ -1,4 +1,4 @@
-cask 'sync-messenger' do
+cask 'wantedly-sync' do
   version '1.10.2'
   sha256 'fb9f550d60fa21e91489f735f0c3f2fc3049118c698b2b3df35c4dad632fdb38'
 
