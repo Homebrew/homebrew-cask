@@ -1,6 +1,6 @@
 cask 'gmvault' do
-  version '1.9'
-  sha256 'a48fb7fb90a7286a47d255a289e7636b1ac8f22f990fa5ce782e6077a6c9a45e'
+  version '1.9.1'
+  sha256 'c13f9b2a156fc3d663db9fd4c3246bd341b78d790f7ae938be7c5361237ea52e'
 
   # bitbucket.org/gaubert/gmvault-official-download was verified as official when first introduced to the cask
   url "https://bitbucket.org/gaubert/gmvault-official-download/downloads/gmvault-v#{version}-macosx-intel.tar.gz"
