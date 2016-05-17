@@ -1,6 +1,6 @@
 cask 'the-unarchiver' do
-  version '3.10.1'
-  sha256 '945570d11c40592fecf98461e224928afe594fd2d178c8bd81b1f880fd616770'
+  version '3.11'
+  sha256 '586e4a3cc3e3da146a184bee9966134df23a4854975e0e749494f1b4b44eeee1'
 
   url "http://unarchiver.c3.cx/downloads/TheUnarchiver#{version}.dmg"
   name 'The Unarchiver'
