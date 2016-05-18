@@ -1,12 +1,17 @@
 cask 'dwarf-fortress' do
   module Utils
     def self.update_sdl(name, url, path)
-      ohai "Replacing #{name}.framework from libsdl.org"
-      system 'curl', '-ksL', "https://www.libsdl.org/#{url}", '-o', "/tmp/#{name}.dmg"
-      system 'hdiutil', 'attach', "/tmp/#{name}.dmg"
-      system 'rm', '-rf', "#{path}/df_osx/libs/#{name}.framework"
-      system 'cp', '-r', "/Volumes/#{name}/#{name}.framework", "#{path}/df_osx/libs"
-      system 'hdiutil', 'detach', "/Volumes/#{name}"
+      File.open("#{path}/update_sdl", 'a') do |f|
+        f.puts(<<-EOF)
+#!/bin/sh
+curl -ksL 'https://www.libsdl.org/#{url}' -o /tmp/#{name}.dmg
+hdiutil attach /tmp/#{name}.dmg
+rm -rf '#{path}/df_osx/libs/#{name}.framework'
+cp -r '/Volumes/#{name}/#{name}.framework' '#{path}/df_osx/libs'
+hdiutil detach /Volumes/#{name}
+        EOF
+        FileUtils.chmod '+x', f
+      end
     end
   end
 
@@ -33,5 +38,6 @@ cask 'dwarf-fortress' do
     # http://dwarffortresswiki.org/index.php/DF2014:Installation#Mac
     Utils.update_sdl 'SDL_ttf', 'projects/SDL_ttf/release/SDL_ttf-2.0.11.dmg', staged_path
     Utils.update_sdl 'SDL', 'release/SDL-1.2.15.dmg', staged_path
+    ohai "Run #{staged_path}/update_sdl to fetch and replace DF's SDL libraries"
   end
 end
