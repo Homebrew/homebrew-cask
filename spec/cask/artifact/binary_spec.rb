@@ -68,4 +68,23 @@ describe Hbc::Artifact::Binary do
 
     expect(expected_path.exist?).to be true
   end
+
+  context "binary is inside an app package" do
+    let(:cask) {
+      Hbc.load('with-embedded-binary').tap do |cask|
+        shutup do
+          InstallHelper::install_without_artifacts(cask)
+        end
+      end
+    }
+
+    it "links the binary to the proper directory" do
+      shutup do
+        Hbc::Artifact::App.new(cask).install_phase
+        Hbc::Artifact::Binary.new(cask).install_phase
+      end
+
+      expect(FileHelper.valid_alias?(expected_path)).to be true
+    end
+  end
 end
