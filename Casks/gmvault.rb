@@ -8,5 +8,5 @@ cask 'gmvault' do
   homepage 'http://gmvault.org'
   license :gpl
 
-  binary "gmvault-v#{version}/bin/gmvault"
+  binary "gmvault-v#{version}/gmvault"
 end
