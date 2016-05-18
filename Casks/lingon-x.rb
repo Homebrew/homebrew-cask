@@ -1,5 +1,5 @@
 cask 'lingon-x' do
-  version '4.0.1'
+  version '4.0.2'
   sha256 '551f06c903b6e606aead136457b638664fea8e09a461ea7d948ece7c092056e6'
 
   url "https://www.peterborgapps.com/downloads/LingonX#{version.major}.zip"
