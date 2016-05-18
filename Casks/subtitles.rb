@@ -1,10 +1,10 @@
 cask 'subtitles' do
-  version '3.2.8'
-  sha256 'b49d76be6d7b6720ee0024a6bdd9dae946520c24a7adc1be2e9ffc6959b70f1b'
+  version '3.2.9'
+  sha256 '72b68d998834ec3e6d5f03a1897766b7714cab712ccd5469ce9367b6cacd264c'
 
   url "http://subtitlesapp.com/download/Subtitles-mac-#{version}.zip"
   appcast 'http://subtitlesapp.com/updates.xml',
-          checkpoint: 'a5a1ef9ee94168d9522dbd922d5e292af79766e9dca5f79f1772bc548085b2a9'
+          checkpoint: '1851499d9b99765244ec22db7faf583a82dd1d6e4e63aa04e7d0d1f28106c2ce'
   name 'Subtitles'
   homepage 'http://subtitlesapp.com'
   license :commercial

@@ -1,11 +1,11 @@
 cask 'cocoarestclient' do
-  version '1.3.10'
-  sha256 'a57933614eb8758fc4ef6d8f24ba8c27d545763c57f396c65260d421aa24b8c0'
+  version '1.3.12'
+  sha256 'fa22885d0786d502b2def77efe4d0c50c83870bd8e398dd9ba448de190705342'
 
   # github.com/mmattozzi/cocoa-rest-client was verified as official when first introduced to the cask
   url "https://github.com/mmattozzi/cocoa-rest-client/releases/download/#{version}/CocoaRestClient-#{version}.dmg"
   appcast 'https://github.com/mmattozzi/cocoa-rest-client/releases.atom',
-          checkpoint: 'cff443ebe4b177855551ffa7f9cca8afe0ec367ba29f2cdbc70b8b3df030cca4'
+          checkpoint: 'cda663322ec0372dd95b7d777adfbfb3bd83b2e5d05d9aa0d3da3a3ada07f37e'
   name 'CocoaRestClient'
   homepage 'https://mmattozzi.github.io/cocoa-rest-client/'
   license :bsd

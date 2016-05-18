@@ -1,6 +1,6 @@
 cask 'neteasemusic' do
-  version '1.4.2_444'
-  sha256 'cf05f5225ca91d5d7f0e1f0fe37e1e37c4c92963f8d5ee0ba71a3ad7727bbc59'
+  version '1.4.4_470'
+  sha256 'a6608fc78c89e82b030e3b1e779e2782cb3d84bc73db6bb1f5e04e5c70f418cc'
 
   # 126.net is the official download host per the vendor homepage
   url "http://s1.music.126.net/download/osx/NeteaseMusic_#{version}_web.dmg"

@@ -7,7 +7,7 @@ cask 'battle-net' do
   homepage 'http://us.battle.net/en/'
   license :commercial
 
-  installer manual: 'Battle.net-Setup-enUS.app'
+  installer manual: 'Battle.net-Setup.app'
 
   uninstall delete: '/Applications/Battle.net.app'
 

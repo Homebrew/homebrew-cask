@@ -1,6 +1,6 @@
 cask 'airflow' do
-  version '1.0.0-beta6'
-  sha256 'fc97c76c90232ed1a5f18134a4f4d5be1da622ea9c823b5f5290204269f077fa'
+  version '1.0.0-beta7'
+  sha256 '2231ab369188a8de83ddf7cda95b89e5198f0d43655b58d0e9f1aa9a0c6169bd'
 
   # amazonaws.com/Airflow was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/Airflow/Download/Airflow%20#{version}.dmg"

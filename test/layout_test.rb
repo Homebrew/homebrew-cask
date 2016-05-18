@@ -18,6 +18,7 @@ describe "Repo layout" do
                     .rubocop_todo.yml
                     .ruby-version
                     coverage
+                    vendor
                    }
 
   # the developer has hopefully gitignored these
@@ -27,6 +28,7 @@ describe "Repo layout" do
 
   TOPLEVEL_DIRS = %w{
                      .git
+                     .github
                      Casks
                      ci
                      cmd

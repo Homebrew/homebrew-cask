@@ -1,10 +1,10 @@
 cask 'simpholders' do
-  version '2.1'
-  sha256 '68472926b108bc46b84fd2b6c1083b9fd1810f5fb70fc0924818d60f5bb8e668'
+  version '2.2'
+  sha256 '0f12b0076f2bef08cd3129916a6fbe6f92bd7601a96bc787bfc0c5feda4b4d4a'
 
-  url "https://simpholders.com/site/assets/files/1115/simpholders_#{version.gsub('.', '_')}.dmg"
-  appcast 'http://kfi-apps.com/appcasts/simpholders/',
-          checkpoint: '07be0732567d5bc05c651e17af1276e2b29ab16f29b61dce3be4ee606833da92'
+  url "https://simpholders.com/downloads/SimPholders_#{version}.dmg"
+  appcast 'https://simpholders.com/updates/releases.xml',
+          checkpoint: '582a16dc0509a7294f58ac01668342159bcdcb3edb01a61a172d7fe8376a96c1'
   name 'SimPholders'
   homepage 'https://simpholders.com/'
   license :commercial

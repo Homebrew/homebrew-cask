@@ -1,11 +1,11 @@
 cask 'munki' do
-  version '2.5.1.2630'
-  sha256 'cf2c50078f1bf02225ac886536cca0448455a0926bc3aa5e53ea0bac2261f7fa'
+  version '2.7.0.2753'
+  sha256 '35a87553f920ca5c212612be961addd794b80a58a488bf952eff768bd833ea6b'
 
   # github.com/munki/munki was verified as official when first introduced to the cask
   url "https://github.com/munki/munki/releases/download/v#{version.sub(%r{^(\d+\.\d+.\d+).*}, '\1')}/munkitools-#{version}.pkg"
   appcast 'https://github.com/munki/munki/releases.atom',
-          checkpoint: 'babf25ad250efca9b32499be3b45401d6ae3a2358614a87dc5278f5f8c4cd244'
+          checkpoint: '5bdf6a4f554207e18e92943533e141d2bf2ab178d23fa57be43521df2c3fa1ff'
   name 'Munki'
   homepage 'https://www.munki.org/munki/'
   license :apache

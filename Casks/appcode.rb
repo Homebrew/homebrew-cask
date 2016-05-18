@@ -1,8 +1,8 @@
 cask 'appcode' do
-  version '3.3.3'
-  sha256 'bbc586779ec7c082eca46e266ac3799c6bebdbd8205250f075f04973caafaf54'
+  version '2016.1.2'
+  sha256 '24188b9b99f2d5afa85665711b33cf8cfc439916d5f822e41d7dba31115060c9'
 
-  url "https://download.jetbrains.com/objc/AppCode-#{version}-custom-jdk-bundled.dmg"
+  url "https://download.jetbrains.com/objc/AppCode-#{version}.dmg"
   name 'AppCode'
   homepage 'https://www.jetbrains.com/objc/'
   license :commercial
@@ -12,11 +12,11 @@ cask 'appcode' do
   app 'AppCode.app'
 
   zap delete: [
-                "~/.Appcode#{version.major_minor.no_dots}",
-                '~/Library/Preferences/com.jetbrains.AppCode.plist',
-                "~/Library/Preferences/AppCode#{version.major_minor.no_dots}",
-                "~/Library/Application Support/AppCode#{version.major_minor.no_dots}",
-                "~/Library/Caches/AppCode#{version.major_minor.no_dots}",
-                "~/Library/Logs/AppCode#{version.major_minor.no_dots}",
+                "~/.Appcode#{version.major_minor}",
+                # TODO: expand/glob for '~/Library/Preferences/jetbrains.appcode.*.plist',
+                "~/Library/Preferences/AppCode#{version.major_minor}",
+                "~/Library/Application Support/AppCode#{version.major_minor}",
+                "~/Library/Caches/AppCode#{version.major_minor}",
+                "~/Library/Logs/AppCode#{version.major_minor}",
               ]
 end

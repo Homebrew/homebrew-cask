@@ -1,9 +1,9 @@
 cask 'android-studio' do
-  version '1.5.1.0_2456560'
-  sha256 '2fe2ab35d9be1780269f6ade2cf097c5b5dc494ef44fbdd6ce84008609576430'
+  version '2.1.1.0,143.2821654'
+  sha256 '084c42d9deca47f285cf161f82772e3f94eb22181fb6546ae8f7f5ea5c884941'
 
   # google.com/dl/android/studio was verified as official when first introduced to the cask
-  url "https://dl.google.com/dl/android/studio/ide-zips/#{version.sub(%r{_.*}, '')}/android-studio-ide-141.#{version.sub(%r{.*_}, '')}-mac.zip"
+  url "https://dl.google.com/dl/android/studio/ide-zips/#{version.before_comma}/android-studio-ide-#{version.after_comma}-mac.zip"
   name 'Android Studio'
   homepage 'https://developer.android.com/sdk/'
   license :apache
@@ -11,11 +11,11 @@ cask 'android-studio' do
   app 'Android Studio.app'
 
   zap delete: [
-                '~/Library/Preferences/AndroidStudio*',
+                "~/Library/Preferences/AndroidStudio#{version.major_minor}",
                 '~/Library/Preferences/com.google.android.studio.plist',
-                '~/Library/Application Support/AndroidStudio*',
-                '~/Library/Logs/AndroidStudio*',
-                '~/Library/Caches/AndroidStudio*',
+                "~/Library/Application Support/AndroidStudio#{version.major_minor}",
+                "~/Library/Logs/AndroidStudio#{version.major_minor}",
+                "~/Library/Caches/AndroidStudio#{version.major_minor}",
               ],
       rmdir:  '~/AndroidStudioProjects'
 

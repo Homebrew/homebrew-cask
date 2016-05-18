@@ -1,6 +1,6 @@
 cask 'keyboard-maestro' do
-  version '7.0.3'
-  sha256 '36cc4b09d344a874c8d7c183b3f078f5c699fe37596dd53f00c433618bc28743'
+  version '7.1.1'
+  sha256 '332525f85f6cb4e487edd6edf16b87855d2907d367bd806efda2e3bc0326422e'
 
   # stairways.com is the official download host per the vendor homepage
   url "https://files.stairways.com/keyboardmaestro-#{version.delete('.')}.zip"

@@ -1,4 +1,4 @@
-language: objective-c
+language: ruby
 
 sudo: false
 
@@ -12,7 +12,7 @@ matrix:
   include:
     - env: OSX=10.11 HOMEBREW_RUBY=2.0.0
       os: osx
-      osx_image: xcode7.2
+      osx_image: xcode7.3
       rvm: system
     - env: OSX=10.10 HOMEBREW_RUBY=2.0.0
       os: osx
@@ -26,8 +26,9 @@ branches:
 
 cache:
   directories:
-    - /usr/local
     - $HOME/.gem
+    - /usr/local
+    - /opt/homebrew-cask/Caskroom
 
 before_install:
   - . ci/travis/before_install.sh

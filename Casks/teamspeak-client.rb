@@ -1,6 +1,6 @@
 cask 'teamspeak-client' do
-  version '3.0.18.2'
-  sha256 '57cdbb8a85bc4d0ade6b2ae297b030e5ae5110b39abafc3ab8a21ab8588c1d99'
+  version '3.0.19'
+  sha256 'c22852c1633f82e99adcf363c1b917f21f8edaf7bc69ed7099a676c4a6ea371f'
 
   # 4players.de is the official download host per the vendor homepage
   url "http://dl.4players.de/ts/releases/#{version}/TeamSpeak3-Client-macosx-#{version}.dmg"

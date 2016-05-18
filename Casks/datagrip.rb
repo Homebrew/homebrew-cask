@@ -1,8 +1,8 @@
 cask 'datagrip' do
-  version '1.0.3'
-  sha256 '8aa557c3eef9749f82ada203af3f8f51e2601230cb169589da26c2d2449534bd'
+  version '2016.1.1'
+  sha256 '78976fcf73155e3e4b0f0defae550ddf7af6517d656d199e53f7f10dd89e02fb'
 
-  url "https://download.jetbrains.com/datagrip/datagrip-#{version}-custom-jdk-bundled.dmg"
+  url "https://download.jetbrains.com/datagrip/datagrip-#{version}.dmg"
   name 'DataGrip'
   homepage 'https://www.jetbrains.com/datagrip/'
   license :commercial

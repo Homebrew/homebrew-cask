@@ -1,12 +1,12 @@
 cask 'calibre' do
-  if MacOS.release < :mountain_lion
+  if MacOS.release <= :lion
     version '1.48.0'
     sha256 '0533283965fbc9a6618d0b27c85bdf3671fe75ff0e89eeff406fe1457ee61b14'
   else
-    version '2.53.0'
-    sha256 '06978acf409638ebd2de54f741dbe472081b095e69b8f443b5451d5c6bed7015'
+    version '2.56.0'
+    sha256 'f5621313114222224ff269c44ea69885d16c32c21bfed8ad2fe72a4022738e10'
     appcast 'https://github.com/kovidgoyal/calibre/releases.atom',
-            checkpoint: '284c25225cd186f76639e01006fc453c44aa5a160b532bcdf8e9a340a30fdb91'
+            checkpoint: 'bf7f6aa44690316651c92fcbcc9e8e23ade6390be8371495c9188c11595bb1d9'
   end
 
   url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"

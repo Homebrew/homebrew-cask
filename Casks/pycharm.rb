@@ -1,6 +1,6 @@
 cask 'pycharm' do
-  version '2016.1'
-  sha256 'a07eab762373b5e119157eb3ffbfc6f8f7f754f80f01cf6249c997694c85cb1e'
+  version '2016.1.3'
+  sha256 'd0e414a10d53ff4d74fcd6450c9fcbe3904bd345d2cfe42c95dc6647cc783889'
 
   url "https://download.jetbrains.com/python/pycharm-professional-#{version}.dmg"
   name 'PyCharm'
@@ -9,11 +9,14 @@ cask 'pycharm' do
 
   app 'PyCharm.app'
 
+  uninstall delete: '/usr/local/bin/charm'
+
   zap delete: [
-                '~/Library/Preferences/com.jetbrains.PyCharm.plist',
-                "~/Library/Preferences/PyCharm#{version}",
-                "~/Library/Application Support/PyCharm#{version}",
-                "~/Library/Caches/PyCharm#{version}",
-                "~/Library/Logs/PyCharm#{version}",
+                "~/.PyCharm#{version.major_minor}",
+                # TODO: expand/glob for '~/Library/Preferences/jetbrains.pycharm.*.plist',
+                "~/Library/Preferences/PyCharm#{version.major_minor}",
+                "~/Library/Application Support/PyCharm#{version.major_minor}",
+                "~/Library/Caches/PyCharm#{version.major_minor}",
+                "~/Library/Logs/PyCharm#{version.major_minor}",
               ]
 end

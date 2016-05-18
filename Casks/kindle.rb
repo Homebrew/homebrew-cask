@@ -1,6 +1,6 @@
 cask 'kindle' do
-  version '41015'
-  sha256 '1c15ce4df69044dc9d2d3562b7f5a8589b65efa5b8e64bc2bcdd7ed41c05df38'
+  version '44033'
+  sha256 'f411c7ca8a7078c6fabb28884761101544208e658394e3fde313745382e66748'
 
   url "http://kindleformac.amazon.com/#{version}/KindleForMac-#{version}.dmg"
   name 'Kindle for Mac'

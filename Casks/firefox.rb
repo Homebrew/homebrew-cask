@@ -1,10 +1,10 @@
 cask 'firefox' do
-  version '45.0.0'
-  sha256 '2eb674c00e35357dcb18a5642f19422cf086e72d42562346ae48aa1e3f29802a'
+  version '46.0.1'
+  sha256 '7ab6508b098023840d63ec622beb9f8ff4c68922f11aa769acf351dae5baa231'
 
-  url "https://ftp.mozilla.org/pub/firefox/releases/#{version.major_minor}/mac/en-US/Firefox%20#{version.major_minor}.dmg"
+  url "https://ftp.mozilla.org/pub/firefox/releases/#{version}/mac/en-US/Firefox%20#{version}.dmg"
   appcast "https://aus5.mozilla.org/update/3/Firefox/#{version}/0/Darwin_x86_64-gcc3-u-i386-x86_64/en-US/release/Darwin%2015.3.0/default/default/update.xml?force=1",
-          checkpoint: 'c82e11d0ac89e159a538cb614d4ae90e9232e9f761910222c92c3fa8938dcfbe'
+          checkpoint: '81b10965246c46c5a6569f8d777c38b6a5835e02481414a6c951cc39dc533ef7'
   name 'Mozilla Firefox'
   homepage 'https://www.mozilla.org/en-US/firefox/'
   license :mpl

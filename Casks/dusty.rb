@@ -1,10 +1,10 @@
 cask 'dusty' do
-  version '0.7.0'
-  sha256 '1212c080c71cd0339362eaf37926bdf66d480960c4e9961ef415d155d2e336e4'
+  version '0.7.1'
+  sha256 '210489ae281460ab4c90e1c66998bbee8887020c73da699e356df6f26a482cb6'
 
   url "https://github.com/gamechanger/dusty/releases/download/#{version}/dusty.tar.gz"
   appcast 'https://github.com/gamechanger/dusty/releases.atom',
-          checkpoint: 'f7aaaf6b9c8543438143ec998bf516166081c0cfb1c0e096b2d6804b8b32d2e9'
+          checkpoint: 'f91aefdc855b9b5f5534fb9c411311bad195cecb0df2796a43c79c66a6453abc'
   name 'Dusty'
   homepage 'https://github.com/gamechanger/dusty'
   license :mit

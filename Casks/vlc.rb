@@ -1,10 +1,10 @@
 cask 'vlc' do
-  version '2.2.2'
-  sha256 '0a68188a9d193a4d4614d28366a052355289a064571b79d0890e045caba5384a'
+  version '2.2.3'
+  sha256 'c64e42f64674f1455d29c726b646991410c883fefadaf6884ea8c2caf02899c9'
 
   url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}.dmg"
   appcast 'http://update.videolan.org/vlc/sparkle/vlc-intel64.xml',
-          checkpoint: '473cf8f5c4d23aec6524e2d50b4b2e4ab736db718bb350f4decbf6dd969e2741'
+          checkpoint: '01543595515ba6449e20124ddf92dec314d5ef60a246af8d9460de01a0977b31'
   name 'VLC media player'
   homepage 'https://www.videolan.org/vlc/'
   license :oss
@@ -12,7 +12,16 @@ cask 'vlc' do
       key_id: '65f7c6b4206bd057a7eb73787180713be58d1adc'
 
   app 'VLC.app'
-  binary 'VLC.app/Contents/MacOS/VLC', target: 'vlc'
+  shimscript = "#{staged_path}/vlcwrapper"
+  binary shimscript, target: 'vlc'
+
+  preflight do
+    File.open(shimscript, 'w') do |f|
+      f.puts '#! /bin/bash'
+      f.puts "#{staged_path}/VLC.app/Contents/MacOS/VLC \"$@\""
+      FileUtils.chmod '+x', f
+    end
+  end
 
   zap delete: [
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.videolan.vlc.sfl',

@@ -1,10 +1,10 @@
 cask 'ghostlab' do
-  version '2.0.10'
-  sha256 '1174edf1e0496b2dff3b1a9c17fd31690259afb48227baa478e55e96c522821a'
+  version '2.1.1'
+  sha256 '3f62bcfa28d556183a6578f884769d9b5ecf1c5b391e15aed01fa7bcbda907b7'
 
   url "https://awesome.vanamco.com/Ghostlab2/update/packages/mac/Ghostlab2-#{version}.zip"
   appcast 'https://awesome.vanamco.com/Ghostlab2/update/ghostlab2-cast.xml?vco=trkd',
-          checkpoint: '3832edcaffbdc3adf5dcc3112095bf4ae69fe8628e89d548059a99417626aa2b'
+          checkpoint: '97bf0f608f618d26c958a6b8214c3d05073b2da61cc88c70e9c4ece3b3f1a696'
   name 'Ghostlab'
   homepage 'https://vanamco.com/ghostlab/'
   license :commercial

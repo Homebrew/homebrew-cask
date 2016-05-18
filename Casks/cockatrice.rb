@@ -1,18 +1,25 @@
 cask 'cockatrice' do
-  version :latest
-  sha256 :no_check
+  version '2016-05-06,The_Shadows'
+  sha256 'd59f7778f6ad153478716209f480e79ada3b0fd4a3ec3902a9650dff82e4ada0'
 
-  url 'http://www.woogerworks.com/files/cockatrice_weeklybuilds/Cockatrice-MacClient.dmg'
+  # github.com/Cockatrice/Cockatrice was verified as official when first introduced to the cask
+  url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.before_comma}-Release/Cockatrice_#{version.after_comma}_osx.dmg.zip"
+  appcast 'https://github.com/Cockatrice/Cockatrice/releases.atom',
+          checkpoint: '5a119ae4ed3c642e334614763aabe442631ddfa3594e99f5a3419518805d5a90'
   name 'Cockatrice'
   homepage 'http://www.woogerworks.com/'
   license :gpl
 
+  container nested: "Cockatrice_#{version.after_comma}_osx.dmg"
+
   app 'cockatrice.app'
   app 'oracle.app'
+  app 'servatrice.app'
 
   uninstall quit: [
                     'com.cockatrice.cockatrice',
                     'com.cockatrice.oracle',
+                    'com.cockatrice.servatrice',
                   ]
 
   zap delete: [

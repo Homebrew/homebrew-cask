@@ -185,7 +185,7 @@ When an App is only available as beta, development, or unstable versions, or in 
 
 ### Beta, Unstable, Development, Nightly, Legacy, or Alternative Versions
 
-When an App’s principal stable version already exists in the main repo, alternative versions should be submitted to [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
+When an App has a principal stable version, alternative versions should be submitted to [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
 
 ### Regional and Localized
 

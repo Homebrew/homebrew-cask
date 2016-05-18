@@ -1,8 +1,8 @@
 cask 'rubymine' do
-  version '8.0.3'
-  sha256 'b1e6a328ac9f97224df6d71fb8cf20fc92df6fb1579f008be8611dc97c51a2a3'
+  version '2016.1.1'
+  sha256 '9fa6bb7a95acd5821bab2c43f9e83a95e68508be250f1fae05288414716094c5'
 
-  url "https://download.jetbrains.com/ruby/RubyMine-#{version}-custom-jdk-bundled.dmg"
+  url "https://download.jetbrains.com/ruby/RubyMine-#{version}.dmg"
   name 'RubyMine'
   homepage 'https://www.jetbrains.com/ruby/'
   license :commercial
