@@ -11,4 +11,14 @@ cask 'knock' do
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Knock.app'
+
+  zap delete: [
+                '~/Library/Preferences/com.knock.mac.plist',
+                '~/Library/Logs/Knock',
+                '~/Library/Caches/com.knock.mac',
+                '~/Library/Caches/com.crashlytics.data/com.knock.mac',
+              ],
+      rmdir:  [
+                '~/Library/Caches/com.crashlytics.data',
+              ]
 end
