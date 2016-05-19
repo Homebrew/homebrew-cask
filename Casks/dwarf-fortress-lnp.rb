@@ -4,7 +4,7 @@ cask 'dwarf-fortress-lnp' do
 
   # dffd.bay12games.com was verified as official when first introduced to the cask
   url "http://dffd.bay12games.com/download.php?id=11412&f=Macnewbie_#{version.minor}.#{version.patch}.dmg"
-  name 'Dwarf Fortress: Macnewbie Pack v0.10.3a w/ DF 42.04'
+  name 'Dwarf Fortress LNP (Macnewbie)'
   homepage 'http://www.bay12forums.com/smf/index.php?topic=128960.0'
   license :gratis
 
