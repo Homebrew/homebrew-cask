@@ -1,6 +1,6 @@
 cask 'alfred' do
-  version '2.8.4_437'
-  sha256 'def068cc763213aba11c07c18cd432740c81026deb31711699f7545e757846b5'
+  version '3.0_652'
+  sha256 '01f0c1d83eeff378af071f446a9782320ab20503b588a0aff4a2daba5de12d45'
 
   url "https://cachefly.alfredapp.com/Alfred_#{version}.zip"
   name 'Alfred'
@@ -10,7 +10,7 @@ cask 'alfred' do
   auto_updates true
   accessibility_access true
 
-  app 'Alfred 2.app'
+  app 'Alfred 3.app'
 
   postflight do
     suppress_move_to_applications key: 'suppressMoveToApplications'
@@ -20,11 +20,16 @@ cask 'alfred' do
             login_item: 'Alfred 2'
 
   zap delete: [
+                '~/Library/Application Support/Alfred 3',
                 '~/Library/Application Support/Alfred 2',
+                '~/Library/Caches/com.runningwithcrayons.Alfred-3',
                 '~/Library/Caches/com.runningwithcrayons.Alfred-2',
                 '~/Library/Caches/com.runningwithcrayons.Alfred-Preferences',
+                '~/Library/Preferences/com.runningwithcrayons.Alfred-3.plist',
                 '~/Library/Preferences/com.runningwithcrayons.Alfred-2.plist',
+                '~/Library/Preferences/com.runningwithcrayons.Alfred-Preferences-3.plist',
                 '~/Library/Preferences/com.runningwithcrayons.Alfred-Preferences.plist',
+                '~/Library/Saved Application State/com.runningwithcrayons.Alfred-Preferences-3.savedState',
                 '~/Library/Saved Application State/com.runningwithcrayons.Alfred-Preferences.savedState',
               ]
 end
