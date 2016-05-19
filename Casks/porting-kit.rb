@@ -21,6 +21,5 @@ cask 'porting-kit' do
                 '~/Library/Saved Application State/edu.ufrj.vitormm.Porting-Kit.savedState',
                 '~/Library/Caches/edu.ufrj.vitormm.Porting-Kit',
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/edu.ufrj.vitormm.porting-kit.sfl',
-              ],
-      rmdir:  '~/Applications/Porting Kit.app'
+              ]
 end
