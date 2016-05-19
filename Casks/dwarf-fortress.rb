@@ -39,6 +39,7 @@ hdiutil detach /Volumes/#{name}
     # http://dwarffortresswiki.org/index.php/DF2014:Installation#Mac
     Utils.update_sdl 'SDL_ttf', 'projects/SDL_ttf/release/SDL_ttf-2.0.11.dmg', staged_path
     Utils.update_sdl 'SDL', 'release/SDL-1.2.15.dmg', staged_path
-    ohai "Run #{staged_path}/update_sdl to fetch and replace DF's SDL libraries"
   end
+
+  caveats "Run #{staged_path}/update_sdl to fetch and replace DF's SDL libraries"
 end
