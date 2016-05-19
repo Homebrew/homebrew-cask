@@ -7,5 +7,5 @@ cask 'mongochef' do
   homepage 'https://3t.io/mongochef/'
   license :other
 
-  app '3T MongoChef.app'
+  app 'MongoChef.app'
 end
