@@ -8,5 +8,6 @@ cask 'dwarf-fortress-lnp' do
   homepage 'http://www.bay12forums.com/smf/index.php?topic=128960.0'
   license :gratis
 
-  suite 'Macnewbie'
+  # Renamed for clarity: suite name is inconsistent with branding
+  suite 'Macnewbie', target: 'Dwarf Fortress LNP'
 end
