@@ -23,6 +23,7 @@ hdiutil detach /Volumes/#{name}
   homepage 'http://www.bay12games.com/dwarves/'
   license :gratis
 
+  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/df_wrapper"
   binary shimscript, target: Hbc.homebrew_prefix.join('bin/df_osx')
 
