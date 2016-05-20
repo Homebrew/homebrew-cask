@@ -10,5 +10,5 @@ cask 'abricotine' do
   homepage 'http://abricotine.brrd.fr'
   license :gpl
 
-  app 'Abricotine.app'
+  app 'Abricotine-darwin-x64/Abricotine.app'
 end
