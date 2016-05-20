@@ -1,8 +1,6 @@
 # Homebrew-Cask
 
-#### Important December 2015 update: Homebrew-Cask will now be kept up to date together with Homebrew (see [#15381](https://github.com/caskroom/homebrew-cask/pull/15381) for details). If you haven’t yet, run `brew uninstall --force brew-cask; brew update` to switch to the new system.
-
-#### Important: At some point in the future Homebrew-Cask will change its behaviour from linking apps to moving them. See [issue #13201](https://github.com/caskroom/homebrew-cask/issues/13201) for details.
+#### Important: Soon, Homebrew-Cask will change its behaviour from linking apps to moving them. See the relevant [issue ](https://github.com/caskroom/homebrew-cask/issues/13201) and [pull request](https://github.com/caskroom/homebrew-cask/pull/13966) for details.
 ---
 
 _“To install, drag this icon…” no more!_
