@@ -6,8 +6,10 @@ class Hbc::CLI::Uninstall < Hbc::CLI::Base
     cask_tokens.each do |cask_token|
       odebug "Uninstalling Cask #{cask_token}"
       cask = Hbc.load(cask_token)
-      raise Hbc::CaskNotInstalledError.new(cask) unless cask.installed? or force
-      Hbc::Installer.new(cask).uninstall(force)
+      unless cask.installed? || force
+        raise Hbc::CaskNotInstalledError.new(cask)
+      end
+      Hbc::Installer.new(cask, force: force).uninstall
     end
   end
 

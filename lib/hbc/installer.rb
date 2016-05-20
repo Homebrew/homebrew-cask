@@ -14,11 +14,15 @@ class Hbc::Installer
   include Hbc::Staged
   include Hbc::Verify
 
+  attr_reader :force, :skip_cask_deps
+
   PERSISTENT_METADATA_SUBDIRS = [ 'gpg' ]
 
-  def initialize(cask, command=Hbc::SystemCommand)
+  def initialize(cask, options={})
     @cask = cask
-    @command = command
+    @command = options.fetch(:command, Hbc::SystemCommand)
+    @force = options.fetch(:force, false)
+    @skip_cask_deps = options.fetch(:skip_cask_deps, false)
   end
 
   def self.print_caveats(cask)
@@ -50,7 +54,7 @@ class Hbc::Installer
     output
   end
 
-  def install(force=false, skip_cask_deps=false)
+  def install
     odebug "Hbc::Installer.install"
 
     if @cask.installed? && @cask.auto_updates && !force
@@ -64,12 +68,12 @@ class Hbc::Installer
     print_caveats
 
     begin
-      satisfy_dependencies(skip_cask_deps)
+      satisfy_dependencies
       download
       verify
       extract_primary_container
       install_artifacts
-      save_caskfile force
+      save_caskfile
       enable_accessibility_access
     rescue StandardError => e
       purge_versioned_files
@@ -90,7 +94,7 @@ class Hbc::Installer
 
   def download
     odebug "Downloading"
-    download = Hbc::Download.new(@cask)
+    download = Hbc::Download.new(@cask, force: false)
     @downloaded_path = download.perform
     odebug "Downloaded to -> #{@downloaded_path}"
     @downloaded_path
@@ -128,7 +132,7 @@ class Hbc::Installer
   # todo move dependencies to a separate class
   #      dependencies should also apply for "brew cask stage"
   #      override dependencies with --force or perhaps --force-deps
-  def satisfy_dependencies(skip_cask_deps=false)
+  def satisfy_dependencies
     if @cask.depends_on
       ohai 'Satisfying dependencies'
       macos_dependencies
@@ -205,7 +209,8 @@ class Hbc::Installer
       if dep.installed?
         puts "already installed"
       else
-        Hbc::Installer.new(dep).install(false, true)
+        Hbc::Installer.new(dep,
+          force: false, skip_cask_deps: true).install
         puts "done"
       end
     end
@@ -258,7 +263,7 @@ class Hbc::Installer
     end
   end
 
-  def save_caskfile(force=false)
+  def save_caskfile
     timestamp = :now
     create    = true
     savedir   = @cask.metadata_subdir('Casks', timestamp, create)
@@ -274,7 +279,7 @@ class Hbc::Installer
     FileUtils.copy(@cask.sourcefile_path, savedir) if @cask.sourcefile_path
   end
 
-  def uninstall(force=false)
+  def uninstall
     odebug "Hbc::Installer.uninstall"
     disable_accessibility_access
     uninstall_artifacts

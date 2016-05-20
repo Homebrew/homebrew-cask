@@ -220,11 +220,11 @@ describe Hbc::Installer do
     it "allows already-installed Casks which auto-update to be installed if force is provided" do
       auto_updates = Hbc.load('auto-updates')
       auto_updates.installed?.must_equal false
-      installer = Hbc::Installer.new(auto_updates)
 
-      shutup { installer.install }
+      shutup { Hbc::Installer.new(auto_updates).install }
+
       shutup {
-        installer.install(true)
+        Hbc::Installer.new(auto_updates, force: true).install
       } # wont_raise
     end
 
@@ -243,11 +243,11 @@ describe Hbc::Installer do
     it "allows already-installed Casks to be installed if force is provided" do
       transmission = Hbc.load('local-transmission')
       transmission.installed?.must_equal false
-      installer = Hbc::Installer.new(transmission)
 
-      shutup { installer.install }
+      shutup { Hbc::Installer.new(transmission).install }
+
       shutup {
-        installer.install(true)
+        Hbc::Installer.new(transmission, force: true).install
       } # wont_raise
     end
 
@@ -329,11 +329,10 @@ describe Hbc::Installer do
 
     it "uninstalls all versions if force is set" do
       caffeine = Hbc.load('local-caffeine')
-      installer = Hbc::Installer.new(caffeine)
       mutated_version = caffeine.version + '.1'
 
       shutup do
-        installer.install
+        Hbc::Installer.new(caffeine).install
       end
 
       Hbc.caskroom.join('local-caffeine',caffeine.version).must_be :directory?
@@ -343,7 +342,7 @@ describe Hbc::Installer do
       Hbc.caskroom.join('local-caffeine',mutated_version).must_be  :directory?
 
       shutup do
-        installer.uninstall(true)
+        Hbc::Installer.new(caffeine, force: true).uninstall
       end
 
       Hbc.caskroom.join('local-caffeine',caffeine.version).wont_be :directory?
