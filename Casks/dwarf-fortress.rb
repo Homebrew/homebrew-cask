@@ -35,4 +35,7 @@ cask 'dwarf-fortress' do
     end
   end
 
+  uninstall_preflight do
+    system 'cp', '-r', "#{staged_path}/df_osx/data/save", '/tmp/dwarf-fortress-save/'
+  end
 end
