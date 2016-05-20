@@ -125,7 +125,8 @@ class Hbc::Installer
     odebug "#{artifacts.length} artifact/s defined", artifacts
     artifacts.each do |artifact|
       odebug "Installing artifact of class #{artifact}"
-      artifact.new(@cask, @command).install_phase
+      options = { command: @command, force: force }
+      artifact.new(@cask, options).install_phase
     end
   end
 
@@ -293,7 +294,8 @@ class Hbc::Installer
     odebug "#{artifacts.length} artifact/s defined", artifacts
     artifacts.each do |artifact|
       odebug "Un-installing artifact of class #{artifact}"
-      artifact.new(@cask, @command).uninstall_phase
+      options = { command: @command, force: force }
+      artifact.new(@cask, options).uninstall_phase
     end
   end
 
