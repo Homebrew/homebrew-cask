@@ -1,9 +1,9 @@
 cask 'jansi' do
-  version '10.4'
-  sha256 '7e2e3b1979f87f0aa50ff37f8ff8d1d0f62ef3771d5308bdd160e6c5d57a17b2'
+  version :latest
+  sha256 :no_check
 
   # dl.dropbox.com/u/43721500 was verified as official when first introduced to the cask
-  url "http://dl.dropbox.com/u/43721500/JANSI-MacOSX#{version}.zip"
+  url 'http://dl.dropbox.com/u/43721500/JANSI-MacOSX10.4.zip'
   name 'Japanese ANSI'
   name 'JANSI'
   homepage 'http://kenie33-jansi.blogspot.jp/'
@@ -11,6 +11,6 @@ cask 'jansi' do
 
   depends_on macos: '>= :tiger'
 
-  artifact "JANSI-MacOSX#{version}/JANSI.icns", target: "#{ENV['HOME']}/Library/Keyboard Layouts/JANSI.icns"
-  artifact "JANSI-MacOSX#{version}/JANSI.keylayout", target: "#{ENV['HOME']}/Library/Keyboard Layouts/JANSI.keylayout"
+  artifact 'JANSI-MacOSX10.4/JANSI.icns', target: "#{ENV['HOME']}/Library/Keyboard Layouts/JANSI.icns"
+  artifact 'JANSI-MacOSX10.4/JANSI.keylayout', target: "#{ENV['HOME']}/Library/Keyboard Layouts/JANSI.keylayout"
 end
