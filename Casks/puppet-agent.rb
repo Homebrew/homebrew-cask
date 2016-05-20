@@ -1,12 +1,11 @@
 cask 'puppet-agent' do
+  version '1.4.2'
+
   if MacOS.release == :el_capitan
-    version '1.4.2'
     sha256 'bb94f785c253614edd2e82e89fdbb4dabe800f0dc009b5658e0d42e11e875ff9'
   elsif MacOS.release == :yosemite
-    version '1.4.2'
     sha256 '90d9188dc75748171cc920159724877a60d6e3d9c8792d288cbac0acebe1af43'
   elsif MacOS.release == :mavericks
-    version '1.4.2'
     sha256 'c119526e30fa93917c327109e45d0297bec2c2f443ede1f80d5ce694db1d64b7'
   end
 
