@@ -1,20 +1,4 @@
 cask 'dwarf-fortress' do
-  module Utils
-    def self.update_sdl(name, url, path)
-      File.open("#{path}/update_sdl", 'a') do |f|
-        f.puts(<<-EOF)
-#!/bin/sh
-curl -ksL 'https://www.libsdl.org/#{url}' -o /tmp/#{name}.dmg
-hdiutil attach /tmp/#{name}.dmg
-rm -rf '#{path}/df_osx/libs/#{name}.framework'
-cp -r '/Volumes/#{name}/#{name}.framework' '#{path}/df_osx/libs'
-hdiutil detach /Volumes/#{name}
-        EOF
-        FileUtils.chmod '+x', f
-      end
-    end
-  end
-
   version '0.43.01'
   sha256 '7fe378b7aeee67f10a1f88a2341b8724edbf91795fd928506f01dfb403304d43'
 
@@ -26,6 +10,8 @@ hdiutil detach /Volumes/#{name}
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/df_wrapper"
   binary shimscript, target: Hbc.homebrew_prefix.join('bin/df_osx')
+  depends_on cask: 'sdl-framework'
+  depends_on cask: 'sdl-ttf-framework'
 
   preflight do
     File.open(shimscript, 'w') do |f|
@@ -36,10 +22,16 @@ hdiutil detach /Volumes/#{name}
   end
 
   postflight do
-    # http://dwarffortresswiki.org/index.php/DF2014:Installation#Mac
-    Utils.update_sdl 'SDL_ttf', 'projects/SDL_ttf/release/SDL_ttf-2.0.11.dmg', staged_path
-    Utils.update_sdl 'SDL', 'release/SDL-1.2.15.dmg', staged_path
+    Dir.chdir("#{staged_path}/df_osx/libs") do
+      [
+        ['SDL', 'sdl-framework'],
+        ['SDL_ttf', 'sdl-ttf-framework'],
+      ].each do |args|
+        name = "#{args[0]}.framework"
+        File.rename(name, "#{name}.orig")
+        File.symlink(Hbc.load(args[1]).staged_path.join(name), name)
+      end
+    end
   end
 
-  caveats "Run #{staged_path}/update_sdl to fetch and replace DF's SDL libraries"
 end
