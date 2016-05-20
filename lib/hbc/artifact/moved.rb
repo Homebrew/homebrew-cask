@@ -22,6 +22,7 @@ class Hbc::Artifact::Moved < Hbc::Artifact::Base
     each_artifact do |artifact|
       load_specification(artifact)
       next unless preflight_checks
+      delete if File.exist?(target)
       move
     end
   end
@@ -64,14 +65,28 @@ class Hbc::Artifact::Moved < Hbc::Artifact::Base
 
   def preflight_checks
     if target.exist?
-      ohai "It seems there is already #{self.class.artifact_english_article} #{english_name} at '#{target}'; not moving."
-      return false
+      if force
+        ohai(warning_target_exists { |s| s << 'overwriting.' })
+      else
+        ohai(warning_target_exists { |s| s << 'not moving.' })
+        return false
+      end
     end
     unless source.exist?
       message = "It seems the #{english_name} source is not there: '#{source}'"
       raise Hbc::CaskError.new(message)
     end
     true
+  end
+
+  def warning_target_exists
+    message_parts = [
+      "It seems there is already #{
+        self.class.artifact_english_article} #{english_name
+        } at '#{target}'"
+    ]
+    yield(message_parts) if block_given?
+    message_parts.join('; ')
   end
 
   def delete

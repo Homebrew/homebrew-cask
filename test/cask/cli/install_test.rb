@@ -39,7 +39,7 @@ describe Hbc::CLI::Install do
 
     TestHelper.must_output(self, lambda {
       Hbc::CLI::Install.run('local-transmission', '--force')
-    }, %r{==> Success! local-transmission staged at '#{Hbc.caskroom}/local-transmission/2.61' \(487 files, 11M\)})
+    }, %r{==> Success! local-transmission staged at '#{Hbc.caskroom}/local-transmission/2.61' \(0B\)})
   end
 
   it "properly handles Casks that are not present" do
