@@ -7,7 +7,7 @@ class Hbc::CLI::Fetch < Hbc::CLI::Base
     cask_tokens.each do |cask_token|
       ohai "Downloading external files for Cask #{cask_token}"
       cask = Hbc.load(cask_token)
-      downloaded_path = Hbc::Download.new(cask, force).perform
+      downloaded_path = Hbc::Download.new(cask, force: force).perform
       Hbc::Verify.all(cask, downloaded_path)
       ohai "Success! Downloaded to -> #{downloaded_path}"
     end

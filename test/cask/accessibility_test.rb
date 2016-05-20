@@ -5,7 +5,8 @@ require 'test_helper'
 describe "Accessibility Access" do
   before do
     cask = Hbc.load('with-accessibility-access')
-    @installer = Hbc::Installer.new(cask, Hbc::FakeSystemCommand)
+    with_fake_command = { command: Hbc::FakeSystemCommand }
+    @installer = Hbc::Installer.new(cask, with_fake_command)
   end
 
   describe "install" do
