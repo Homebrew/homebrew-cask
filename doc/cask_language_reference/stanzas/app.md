@@ -20,7 +20,7 @@ from a source file such as:
 
 ## Renaming the Target
 
-You can rename the target which appears in your `~/Applications` directory by adding a `target:` key to `app`. Example (from [scala-ide.rb](https://github.com/caskroom/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/scala-ide.rb#L21)):
+You can rename the target which appears in your `/Applications` directory by adding a `target:` key to `app`. Example (from [scala-ide.rb](https://github.com/caskroom/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/scala-ide.rb#L21)):
 
 ```ruby
 app 'eclipse/Eclipse.app', target: 'Scala IDE.app'

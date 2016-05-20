@@ -53,7 +53,7 @@ Easy peasy:
 $ brew cask uninstall google-chrome
 ```
 
-This will both uninstall the Cask and remove applications which were moved to `~/Applications`.
+This will both uninstall the Cask and remove applications which were moved to `/Applications`.
 
 To uninstall all versions of a Cask, use `--force`:
 
@@ -177,7 +177,7 @@ You can also modify the default installation locations used when issuing `brew c
 Should be handled with care — setting it outside `/opt` or your home directory might mess up your system.
 Default is `/opt/homebrew-cask/Caskroom`
 * `--appdir=/my/path` changes the path where the applications (above)
-will be moved. Default is `~/Applications`.
+will be moved. Default is `/Applications`.
 * `--prefpanedir=/my/path` changes the path for PreferencePane symlinks.
 Default is `~/Library/PreferencePanes`
 * `--qlplugindir=/my/path` changes the path for Quicklook Plugin symlinks.
@@ -195,15 +195,15 @@ To make these settings persistent, you might want to add the following line to y
 
 ```bash
 # Specify your defaults in this environment variable
-export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/etc/Caskroom"
+export HOMEBREW_CASK_OPTS="--appdir=~/Applications --caskroom=/etc/Caskroom"
 ```
 
 Note that you still can override the environment variable `HOMEBREW_CASK_OPTS` by _explicitly_ providing options in the command line:
 
 ```bash
-# Will force the Chrome app to be linked to ~/Applications
-# even though HOMEBREW_CASK_OPTS specified /Applications
-$ brew cask install --appdir="~/Applications" google-chrome
+# Will force the Chrome app to be linked to /Applications
+# even though HOMEBREW_CASK_OPTS specified ~/Applications
+$ brew cask install --appdir="/Applications" google-chrome
 ```
 
 ## Advanced Searching
