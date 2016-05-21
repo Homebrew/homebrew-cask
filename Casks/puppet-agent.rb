@@ -9,6 +9,7 @@ cask 'puppet-agent' do
     sha256 'c119526e30fa93917c327109e45d0297bec2c2f443ede1f80d5ce694db1d64b7'
   end
 
+  # downloads.puppetlabs.com was verified as official when first introduced to the cask
   url "https://downloads.puppetlabs.com/mac/#{MacOS.release}/PC1/x86_64/puppet-agent-#{version}-1.osx#{MacOS.release}.dmg"
   name 'Puppet Agent'
   homepage 'https://docs.puppet.com/puppet/4.4/reference/about_agent.html'
