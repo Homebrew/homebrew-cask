@@ -1,8 +1,8 @@
 cask 'the-unarchiver' do
-  version '3.11'
-  sha256 '586e4a3cc3e3da146a184bee9966134df23a4854975e0e749494f1b4b44eeee1'
+  version '3.11.1'
+  sha256 '2b9e1c0f6bcad958c19bfa0b5b1c59ad0681574100918004c0bcad2e43dc0761'
 
-  url "http://unarchiver.c3.cx/downloads/TheUnarchiver#{version}.dmg"
+  url "https://unarchiver.c3.cx/downloads/TheUnarchiver#{version}.dmg"
   name 'The Unarchiver'
   homepage 'https://unarchiver.c3.cx/unarchiver'
   license :oss
