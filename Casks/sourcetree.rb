@@ -27,11 +27,15 @@ cask 'sourcetree' do
     suppress_move_to_applications
   end
 
-  uninstall launchctl: 'com.atlassian.SourceTreePrivilegedHelper2'
+  uninstall launchctl: 'com.atlassian.SourceTreePrivilegedHelper2',
+            quit:      'com.torusknot.SourceTreeNotMAS'
 
   zap delete: [
                 '~/Library/Application Support/SourceTree',
                 '~/Library/Caches/com.torusknot.SourceTreeNotMAS',
+                '~/Library/Preferences/com.torusknot.SourceTreeNotMAS.plist',
+                '~/Library/Preferences/com.torusknot.SourceTreeNotMAS.LSSharedFileList.plist',
+                '~/Library/Saved Application State/com.torusknot.SourceTreeNotMAS.savedState',
               ]
 
   caveats do
