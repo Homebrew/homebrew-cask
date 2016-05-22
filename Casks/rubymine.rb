@@ -10,11 +10,11 @@ cask 'rubymine' do
   app 'RubyMine.app'
 
   zap delete: [
-                "~/Library/Application Support/RubyMine#{version.major_minor.no_dots}",
-                "~/Library/Preferences/RubyMine#{version.major_minor.no_dots}",
-                "~/.RubyMine#{version.major_minor.no_dots}",
+                "~/Library/Application Support/RubyMine#{version.major_minor}",
+                "~/Library/Preferences/RubyMine#{version.major_minor}",
+                "~/.RubyMine#{version.major_minor}",
                 '~/Library/Preferences/com.jetbrains.RubyMine.plist',
-                "~/Library/Caches/RubyMine#{version.major_minor.no_dots}",
-                "~/Library/Logs/RubyMine#{version.major_minor.no_dots}",
+                "~/Library/Caches/RubyMine#{version.major_minor}",
+                "~/Library/Logs/RubyMine#{version.major_minor}",
               ]
 end
