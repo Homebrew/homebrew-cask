@@ -1,6 +1,6 @@
 cask 'openbazaar' do
-  version '1.1.4'
-  sha256 'ec5367ce0b9c8c4601432745848507591671f75a51595c0f402163d8fcf0efca'
+  version '1.1.5'
+  sha256 '1da6c90497980d1865d6c22701293bea7794661fc2b6fc1f4307a3a52876fa20'
 
   # github.com/OpenBazaar/OpenBazaar-Installer was verified as official when first introduced to the cask
   url "https://github.com/OpenBazaar/OpenBazaar-Installer/releases/download/v#{version}/OpenBazaar-#{version}.dmg"
