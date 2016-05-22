@@ -20,5 +20,5 @@ cask 'puppet-agent' do
   uninstall launchctl: %w[puppet pxp-agent mcollective],
             pkgutil:   'com.puppetlabs.puppet-agent'
 
-  zap trash: '~/.puppetlabs'
+  zap delete: '~/.puppetlabs'
 end
