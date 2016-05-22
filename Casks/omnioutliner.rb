@@ -1,6 +1,6 @@
 cask 'omnioutliner' do
-  version '4.5.2'
-  sha256 '3e17b59171a3a75ee8f4dcf412c7001e0ffdcfefffeec5b613749a9113216b7f'
+  version '4.5.3'
+  sha256 'df2db6c5e79c28978a2471d68585b41219d4aa12ea142e66e0d67b62001c8da7'
 
   url "http://downloads.omnigroup.com/software/MacOSX/10.10/OmniOutliner-#{version}.dmg"
   name 'OmniOutliner'
