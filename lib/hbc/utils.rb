@@ -159,6 +159,49 @@ module Hbc::Utils
     end
   end
 
+  def self.permissions_rmtree(path, options = {})
+    command = options.fetch(:command, Hbc::SystemCommand)
+    if path.respond_to?(:rmtree) and path.exist?
+      tried_permissions = false
+      tried_ownership = false
+      begin
+        path.rmtree
+      rescue StandardError => e
+        # in case of permissions problems
+        unless tried_permissions
+          # todo Better handling for the case where path is a symlink.
+          #      The -h and -R flags cannot be combined, and behavior is
+          #      dependent on whether the file argument has a trailing
+          #      slash.  This should do the right thing, but is fragile.
+          command.run('/usr/bin/chflags', must_succeed: false,
+            args: ['-R', '--', '000',     path])
+          command.run('/bin/chmod',       must_succeed: false,
+            args: ['-R', '--', 'u+rwx',   path])
+          command.run('/bin/chmod',       must_succeed: false,
+            args: ['-R', '-N',            path])
+          tried_permissions = true
+          retry # rmtree
+        end
+        unless tried_ownership
+          # in case of ownership problems
+          # todo Further examine files to see if ownership is the problem
+          #      before using sudo+chown
+          ohai "Using sudo to gain ownership of path '#{path}'"
+          command.run('/usr/sbin/chown', :args => ['-R', '--', current_user, path],
+                                         :sudo => true)
+          tried_ownership = true
+          # retry chflags/chmod after chown
+          tried_permissions = false
+          retry # rmtree
+        end
+      end
+    end
+  end
+
+  def self.current_user
+    Etc.getpwuid(Process.euid).name
+  end
+
   # originally from Homebrew abv
   def self.cabv(dir)
     output = ''

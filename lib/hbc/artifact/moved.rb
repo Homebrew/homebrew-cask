@@ -22,7 +22,7 @@ class Hbc::Artifact::Moved < Hbc::Artifact::Base
     each_artifact do |artifact|
       load_specification(artifact)
       next unless preflight_checks
-      delete if File.exist?(target)
+      delete if File.exist?(target) && force
       move
     end
   end
@@ -91,7 +91,15 @@ class Hbc::Artifact::Moved < Hbc::Artifact::Base
 
   def delete
     ohai "Removing #{english_name}: '#{target}'"
-    target.rmtree
+    case
+    when Hbc::MacOS.undeletable?(target)
+      raise Hbc::CaskError.new(
+        "Cannot remove undeletable #{english_name}")
+    when force
+      Hbc::Utils.permissions_rmtree(target, command: @command)
+    else
+      target.rmtree
+    end
   end
 
   def summarize_artifact(artifact_spec)

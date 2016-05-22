@@ -67,19 +67,114 @@ describe Hbc::Artifact::App do
       File.exist?(cask.staged_path.join('CaffeineAgain.app')).must_equal true
     end
 
-    it "avoids clobbering an existing app" do
-      cask = local_caffeine
+    describe "when the target already exists" do
+      let(:target_path) {
+        target_path = Hbc.appdir.join('Caffeine.app')
+        target_path.mkpath
+        target_path
+      }
 
-      existing_app_path = Hbc.appdir.join('Caffeine.app')
-      existing_app_path.mkpath
+      it "avoids clobbering an existing app" do
+        cask = local_caffeine
 
-      TestHelper.must_output(self, lambda {
-        Hbc::Artifact::App.new(cask).install_phase
-      }, "==> It seems there is already an App at '#{existing_app_path}'; not moving.")
+        TestHelper.must_output(self, lambda {
+          Hbc::Artifact::App.new(cask).install_phase
+        }, "==> It seems there is already an App at '#{target_path}'; not moving.")
 
-      source_path = cask.staged_path.join('Caffeine.app')
+        source_path = cask.staged_path.join('Caffeine.app')
 
-      File.identical?(source_path, existing_app_path).must_equal false
+        File.identical?(source_path, target_path).must_equal false
+
+        contents_path = target_path.join('Contents/Info.plist')
+        File.exist?(contents_path).must_equal false
+      end
+
+      describe "given the force option" do
+        let(:install_phase) {
+          lambda { |given_options = {}|
+            options = { force: true }.merge(given_options)
+            Hbc::Artifact::App.new(local_caffeine, options).install_phase
+          }
+        }
+
+        let(:chmod_cmd) {
+          ['/bin/chmod', '-R', '--', 'u+rwx', target_path]
+        }
+
+        let(:chmod_n_cmd) {
+          ['/bin/chmod', '-R', '-N', target_path]
+        }
+
+        let(:chflags_cmd) {
+          ['/usr/bin/chflags', '-R', '--', '000', target_path]
+        }
+
+        before do
+          Hbc::Utils.stubs(current_user: 'fake_user')
+        end
+
+        describe "target is both writable and user-owned" do
+          it "overwrites the existing app" do
+            cask = local_caffeine
+
+            expected = [
+              "==> It seems there is already an App at '#{target_path}'; overwriting.",
+              "==> Removing App: '#{target_path}'",
+              "==> Moving App 'Caffeine.app' to '#{target_path}'"
+            ]
+            TestHelper.must_output(self, install_phase,
+              expected.join("\n"))
+
+            source_path = cask.staged_path.join('Caffeine.app')
+
+            File.exist?(source_path).must_equal false
+            File.ftype(target_path).must_equal 'directory'
+
+            contents_path = target_path.join('Contents/Info.plist')
+            File.exist?(contents_path).must_equal true
+          end
+        end
+
+        describe "target is user-owned but contains read-only files" do
+          before do
+            system '/usr/bin/touch', '--', "#{ target_path }/foo"
+            system '/bin/chmod', '--', '0555', target_path
+          end
+
+          it "tries to make the target world-writable" do
+            Hbc::FakeSystemCommand.expect_and_pass_through(chflags_cmd)
+            Hbc::FakeSystemCommand.expect_and_pass_through(chmod_cmd)
+            Hbc::FakeSystemCommand.expect_and_pass_through(chmod_n_cmd)
+            shutup do
+              install_phase.call(command: Hbc::FakeSystemCommand)
+            end
+          end
+
+          it "overwrites the existing app" do
+            cask = local_caffeine
+
+            expected = [
+              "==> It seems there is already an App at '#{target_path}'; overwriting.",
+              "==> Removing App: '#{target_path}'",
+              "==> Moving App 'Caffeine.app' to '#{target_path}'"
+            ]
+            TestHelper.must_output(self, install_phase,
+              expected.join("\n"))
+
+            source_path = cask.staged_path.join('Caffeine.app')
+
+            File.exist?(source_path).must_equal false
+            File.ftype(target_path).must_equal 'directory'
+
+            contents_path = target_path.join('Contents/Info.plist')
+            File.exist?(contents_path).must_equal true
+          end
+
+          after do
+            system '/bin/chmod', '--', '0755', target_path
+          end
+        end
+      end
     end
 
     it "gives a warning if the source doesn't exist" do
