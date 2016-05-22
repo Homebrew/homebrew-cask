@@ -41,7 +41,7 @@ module Hbc::Staged
   end
 
   def current_user
-    Etc.getpwuid(Process.euid).name
+    Hbc::Utils.current_user
   end
 
   private
