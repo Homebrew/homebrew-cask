@@ -178,17 +178,17 @@ Should be handled with care — setting it outside `/opt` or your home directory
 Default is `/opt/homebrew-cask/Caskroom`
 * `--appdir=/my/path` changes the path where the applications (above)
 will be moved. Default is `/Applications`.
-* `--prefpanedir=/my/path` changes the path for PreferencePane symlinks.
+* `--prefpanedir=/my/path` changes the path for PreferencePanes.
 Default is `~/Library/PreferencePanes`
-* `--qlplugindir=/my/path` changes the path for Quicklook Plugin symlinks.
+* `--qlplugindir=/my/path` changes the path for Quicklook Plugins.
 Default is `~/Library/QuickLook`
-* `--fontdir=/my/path` changes the path for Fonts symlinks.
+* `--fontdir=/my/path` changes the path for Fonts.
 Default is `~/Library/Fonts`
 * `--binarydir=/my/path` changes the path for Binary symlinks.
 Default is `/usr/local/bin`
-* `--input_methoddir=/my/path` changes the path for Input Methods symlinks.
+* `--input_methoddir=/my/path` changes the path for Input Methods.
 Default is `~/Library/Input Methods`
-* `--screen_saverdir=/my/path` changes the path for Screen Saver symlinks.
+* `--screen_saverdir=/my/path` changes the path for Screen Savers.
 Default is `~/Library/Screen Savers`
 
 To make these settings persistent, you might want to add the following line to your `.bash_profile` or `.zshenv`:
