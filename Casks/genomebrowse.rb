@@ -1,6 +1,6 @@
 cask 'genomebrowse' do
-  version '2.1.1'
-  sha256 '8f24f384dfc14df5cc6076eb2e200b4dfc0df74d25928718082076ae7eec2161'
+  version :latest
+  sha256 :no_check
 
   url 'http://www.goldenhelix.com/download/GenomeBrowse/GenomeBrowse-MacOSX.dmg'
   name 'Genome Browse'
