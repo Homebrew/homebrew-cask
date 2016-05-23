@@ -41,16 +41,17 @@ describe Hbc::CLI::List do
 
     caffeine, transmission = casks
 
-    # App Symlinks sections are empty below because the expected links
-    # aren't created under the test harness. Todo: managed links should
-    # be fully mocked and confirmed here.
+    shutup { Hbc::Artifact::App.new(transmission).install_phase }
+
     lambda {
       Hbc::CLI::List.run('local-transmission', 'local-caffeine')
     }.must_output <<-OUTPUT.gsub(/^ */, '')
-      ==> App Symlinks managed by brew-cask:
+      ==> Apps managed by brew-cask:
+      '#{Hbc.appdir.join('Transmission.app')}'
       ==> Staged content:
-      #{transmission.staged_path} (489 files)
-      ==> App Symlinks managed by brew-cask:
+      #{transmission.staged_path} (0 files)
+      ==> Apps managed by brew-cask:
+      Missing App: '#{Hbc.appdir.join('Caffeine.app')}'
       ==> Staged content:
       #{caffeine.staged_path} (13 files)
     OUTPUT

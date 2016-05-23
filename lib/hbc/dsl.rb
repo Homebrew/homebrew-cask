@@ -69,6 +69,7 @@ class Hbc::DSL
     :staged_path,
     :url,
     :version,
+    :appdir,
     *ORDINARY_ARTIFACT_TYPES,
     *ACTIVATABLE_ARTIFACT_TYPES,
     *SPECIAL_ARTIFACT_TYPES,
@@ -278,6 +279,10 @@ class Hbc::DSL
     rescue StandardError => e
       raise Hbc::CaskInvalidError.new(self.token, e)
     end
+  end
+
+  def appdir
+    Hbc.appdir
   end
 
   SPECIAL_ARTIFACT_TYPES.each do |type|

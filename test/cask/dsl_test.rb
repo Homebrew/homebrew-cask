@@ -405,4 +405,11 @@ describe Hbc::DSL do
       cask.auto_updates.must_equal true
     end
   end
+
+  describe "appdir" do
+    it "allows interpolation of the appdir value in stanzas" do
+      cask = Hbc.load('appdir-interpolation')
+      cask.artifacts[:binary].first.must_equal ["#{Hbc.appdir}/some/path"]
+    end
+  end
 end
