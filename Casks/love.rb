@@ -9,5 +9,5 @@ cask 'love' do
   license :oss
 
   app 'love.app'
-  binary 'love.app/Contents/MacOS/love'
+  binary "#{appdir}/love.app/Contents/MacOS/love"
 end

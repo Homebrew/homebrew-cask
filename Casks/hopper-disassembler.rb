@@ -13,7 +13,7 @@ cask 'hopper-disassembler' do
   depends_on macos: '>= :lion'
 
   app "Hopper Disassembler v#{version.major}.app"
-  binary "Hopper Disassembler v#{version.major}.app/Contents/MacOS/hopper"
+  binary "#{appdir}/Hopper Disassembler v#{version.major}.app/Contents/MacOS/hopper"
 
   zap delete: [
                 '~/Library/Application Support/Hopper',

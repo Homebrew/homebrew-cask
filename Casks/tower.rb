@@ -11,7 +11,7 @@ cask 'tower' do
   license :commercial
 
   app 'Tower.app'
-  binary 'Tower.app/Contents/MacOS/gittower'
+  binary "#{appdir}/Tower.app/Contents/MacOS/gittower"
 
   zap delete: [
                 "~/Library/Application Support/com.fournova.Tower#{version.major}",

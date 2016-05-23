@@ -8,7 +8,7 @@ cask 'arduino' do
   license :gpl
 
   app 'Arduino.app'
-  binary 'Arduino.app/Contents/Java/arduino-builder'
+  binary "#{appdir}/Arduino.app/Contents/Java/arduino-builder"
 
   caveats do
     depends_on_java

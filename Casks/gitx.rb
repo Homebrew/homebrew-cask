@@ -15,7 +15,7 @@ cask 'gitx' do
                        ]
 
   app 'GitX.app'
-  binary 'GitX.app/Contents/Resources/gitx'
+  binary "#{appdir}/GitX.app/Contents/Resources/gitx"
 
   zap delete: [
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/nl.frim.gitx.sfl',

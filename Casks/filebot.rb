@@ -9,7 +9,7 @@ cask 'filebot' do
   license :gpl
 
   app 'FileBot.app'
-  binary 'FileBot.app/Contents/MacOS/filebot.sh', target: 'filebot'
+  binary "#{appdir}/FileBot.app/Contents/MacOS/filebot.sh", target: 'filebot'
 
   caveats do
     depends_on_java('8')

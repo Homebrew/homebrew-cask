@@ -8,6 +8,6 @@ cask 'swi-prolog' do
   license :oss
 
   app 'SWI-Prolog.app'
-  binary 'SWI-Prolog.app/Contents/MacOS/swipl'
-  binary 'SWI-Prolog.app/Contents/MacOS/swipl-ld'
+  binary "#{appdir}/SWI-Prolog.app/Contents/MacOS/swipl"
+  binary "#{appdir}/SWI-Prolog.app/Contents/MacOS/swipl-ld"
 end

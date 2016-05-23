@@ -9,7 +9,7 @@ cask 'kdiff3' do
   license :gpl
 
   app 'kdiff3.app'
-  binary 'kdiff3.app/Contents/MacOS/kdiff3'
+  binary "#{appdir}/kdiff3.app/Contents/MacOS/kdiff3"
 
   zap delete: '~/.kdiff3rc'
 end

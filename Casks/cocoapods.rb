@@ -13,7 +13,7 @@ cask 'cocoapods' do
   container type: :tar
 
   app 'CocoaPods.app'
-  binary 'CocoaPods.app/Contents/Helpers/pod'
+  binary "#{appdir}/CocoaPods.app/Contents/Helpers/pod"
 
   postflight do
     # Because Homebrew-Cask symlinks the binstub directly, stop the app from asking the user to install the binstub.

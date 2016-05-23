@@ -11,5 +11,5 @@ cask 'vimr' do
   license :gpl
 
   app 'VimR.app'
-  binary 'VimR.app/Contents/Resources/vimr'
+  binary "#{appdir}/VimR.app/Contents/Resources/vimr"
 end
