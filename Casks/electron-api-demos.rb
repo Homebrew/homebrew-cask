@@ -1,10 +1,10 @@
 cask 'electron-api-demos' do
-  version '1.0.0'
-  sha256 '8975ddc64581e16b6e5003f443a945902507d73cf22b5574f20ef23e58756112'
+  version '1.0.1'
+  sha256 '330de49fc6825e3f046203648f64adb418dcae2c12f0825251c703d2b3b889e5'
 
   url "https://github.com/electron/electron-api-demos/releases/download/v#{version}/electron-api-demos-mac.zip"
   appcast 'https://github.com/electron/electron-api-demos/releases.atom',
-          checkpoint: 'a081ea1760868e5450df42ef26ef396cb534e89ba4490da2fb1a80266a5494fa'
+          checkpoint: 'e6677e8aa7d5b0638a7a7c4addd9e4f37d6632e8926f2d99a24622df1813046d'
   name 'Electron API Demos'
   homepage 'https://github.com/electron/electron-api-demos'
   license :unknown
