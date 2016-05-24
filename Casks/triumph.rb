@@ -8,5 +8,4 @@ cask 'triumph' do
   license :commercial
 
   app 'Triumph.app'
-  app 'Triumph.app/Contents/Applications/DDP Player.app'
 end
