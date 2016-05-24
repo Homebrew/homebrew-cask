@@ -1,14 +1,22 @@
 cask 'hermes' do
-  version '1.2.6'
-  sha256 '3735d1bbae0e3ef773e0a2d169ca7f838f3e3510fe7b6fa59546c01fccbb9aa8'
+  version '1.2.7'
+  sha256 'e83ca1aa6cdf6ff9dde7ef177859f6e1c4b988075ce6665502267c0f1a1f7085'
 
-  # s3.amazonaws.com/hermesmacapp was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/hermesmacapp/Hermes-#{version}.zip"
-  appcast 'https://hermesapp.org/versions.xml',
-          checkpoint: 'b165a9588985b8fb3305878405782c17504466276f2a1ecd3715fe0bd4a92205'
+  # github.com/HermesApp/Hermes was verified as official when first introduced to the cask
+  url "https://github.com/HermesApp/Hermes/releases/download/v#{version}/Hermes-#{version}.zip"
+  appcast 'https://raw.githubusercontent.com/HermesApp/HermesApp.github.io/master/versions.xml',
+          checkpoint: 'db9ec99a507fb4c28aaf718830be2a2679d895e52a4f8476e7074bcfadc6e270'
   name 'Hermes'
   homepage 'https://hermesapp.org/'
   license :mit
 
+  auto_updates true
+
   app 'Hermes.app'
+
+  zap delete: [
+                '~/Library/Application Support/Hermes',
+                '~/Library/Caches/com.alexcrichton.Hermes',
+                '~/Library/Preferences/com.alexcrichton.Hermes.plist',
+              ]
 end

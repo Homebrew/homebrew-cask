@@ -1,6 +1,6 @@
 cask 'rubymine' do
-  version '2016.1'
-  sha256 'c587ec3e282802c93be5826be79fddb003a6842b861f5c9a885c6c0c9638106d'
+  version '2016.1.1'
+  sha256 '9fa6bb7a95acd5821bab2c43f9e83a95e68508be250f1fae05288414716094c5'
 
   url "https://download.jetbrains.com/ruby/RubyMine-#{version}.dmg"
   name 'RubyMine'
@@ -10,11 +10,11 @@ cask 'rubymine' do
   app 'RubyMine.app'
 
   zap delete: [
-                "~/Library/Application Support/RubyMine#{version.major_minor.no_dots}",
-                "~/Library/Preferences/RubyMine#{version.major_minor.no_dots}",
-                "~/.RubyMine#{version.major_minor.no_dots}",
+                "~/Library/Application Support/RubyMine#{version.major_minor}",
+                "~/Library/Preferences/RubyMine#{version.major_minor}",
+                "~/.RubyMine#{version.major_minor}",
                 '~/Library/Preferences/com.jetbrains.RubyMine.plist',
-                "~/Library/Caches/RubyMine#{version.major_minor.no_dots}",
-                "~/Library/Logs/RubyMine#{version.major_minor.no_dots}",
+                "~/Library/Caches/RubyMine#{version.major_minor}",
+                "~/Library/Logs/RubyMine#{version.major_minor}",
               ]
 end

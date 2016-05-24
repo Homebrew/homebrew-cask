@@ -1,6 +1,6 @@
 cask 'arduino' do
-  version '1.6.8'
-  sha256 '81d4866b1bbb49156796f75f1b242251a923625154bd86178b0fde55a58d6c48'
+  version '1.6.9'
+  sha256 'decf316e2bf27f8d839b386845852e94a8cbbfeffbe1e8a8afea96f651ac55fc'
 
   url "https://downloads.arduino.cc/arduino-#{version}-macosx.zip"
   name 'Arduino'
