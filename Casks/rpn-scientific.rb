@@ -15,11 +15,4 @@ cask 'rpn-scientific' do
                 '~/Library/Preferences/com.IndustriousE!.RPNScientific.plist',
                 "~/Library/Preferences/com.IndustriousE!.RPNScientificV#{version.major_minor}.data.plist",
               ]
-
-  caveats <<-EOS.undent
-    Installing the Cask means you have AGREED to the Freeware License Agreement
-    for RPN Scientific Calculator at
-
-      http://rpnscientific.freehostia.com/About.html
-  EOS
 end
