@@ -10,7 +10,7 @@ cask 'deco' do
   homepage 'https://www.decosoftware.com'
   license :affero
 
-  installer manual: 'Deco-#{version}.pkg'
+  installer manual: "Deco-#{version}.pkg"
 
   uninstall pkgutil: 'com.decosoftware.deco'
 
