@@ -1,6 +1,6 @@
 cask 'phpstorm' do
-  version '2016.1.1'
-  sha256 '1c88786b44d14d87878fb905ce3db4105bb60d1680643f90406608a945aed4eb'
+  version '2016.1.2'
+  sha256 '8c2151b95903105d19d9a6d60aa4fd10ae7159c75680f1071dce8bd2fb900e4d'
 
   url "https://download.jetbrains.com/webide/PhpStorm-#{version}.dmg"
   name 'PhpStorm'
