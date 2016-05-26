@@ -104,7 +104,7 @@ DEPENDENCIES
   rake
   ronn (= 0.7.3)
   rspec (~> 3.0.0)
-  rubocop-cask (~> 0.6.0)
+  rubocop-cask (~> 0.6.1)
 
 BUNDLED WITH
    1.12.5
