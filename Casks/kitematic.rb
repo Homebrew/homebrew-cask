@@ -1,11 +1,11 @@
 cask 'kitematic' do
-  version '0.10.3'
-  sha256 '87d73a101cd6bfe5cfe0dda68ed114e8529496370447188617bc064e2888d502'
+  version '0.10.4'
+  sha256 'a07400550902ff041c4ac13cc2e640c39a4b8f490287297a2ce13aa5560f6d7b'
 
   # github.com is the official download host per the vendor homepage
   url "https://github.com/kitematic/kitematic/releases/download/v#{version}/Kitematic-#{version}-Mac.zip"
   appcast 'https://github.com/kitematic/kitematic/releases.atom',
-          checkpoint: '99a114dd6c566e0d39d4fc1fa2715588c0d405427555613f696e53d7847e12a6'
+          checkpoint: 'cce36ca3e5cbd6f7372eb9fbc494cef9450d199d6975345d5a9ac2ee2839fda6'
   name 'Kitematic'
   homepage 'https://kitematic.com/'
   license :apache
