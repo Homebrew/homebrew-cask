@@ -1,6 +1,11 @@
 cask 'amethyst' do
-  version '0.10'
-  sha256 'e154fd5cea7430d3d98c21d3e1f820812c0cb8e0345d49e8823fb5f784dba33c'
+  if MacOS.release == :mavericks
+    version '0.9.10'
+    sha256 '82adf42ce6031ab59a3072e607788e73f594ad5f21c7118aabc6c5dafe3d0b47'
+  else
+    version '0.10.1'
+    sha256 '9fd1ac2cfb8159b2945a4482046ee6d365353df617f4edbabc4e8cadc448c1e7'
+  end
 
   url "https://ianyh.com/amethyst/versions/Amethyst-#{version}.zip"
   appcast 'https://ianyh.com/amethyst/appcast.xml',
