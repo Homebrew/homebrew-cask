@@ -1,11 +1,11 @@
 cask 'qblocker' do
-  version '17,1462960827'
-  sha256 '70a23a8609eaeaa92f58f341a17052f7031b19fbc352243bef951405a97e090f'
+  version '18,1464250428'
+  sha256 '2cccdc9ab01981982d26a19d5d91d3f5f941c8f1014290d582ba23856a08def3'
 
   # devmate.com/uk.co.wearecocoon.QBlocker was verified as official when first introduced to the cask
   url "https://dl.devmate.com/uk.co.wearecocoon.QBlocker/#{version.before_comma}/#{version.after_comma}/QBlocker-#{version.before_comma}.zip"
   appcast 'https://updates.devmate.com/uk.co.wearecocoon.QBlocker.xml',
-          checkpoint: '0a5f77b06b549d6bf58541780e5b5943c8a9c4673a11928b0112e21b97adfb7d'
+          checkpoint: '45fcc52df3d3a6c3ff05902820872a8eb9e47328cbbd31f90d5a5893fca2f873'
   name 'QBlocker'
   homepage 'http://qblocker.com/'
   license :oss
