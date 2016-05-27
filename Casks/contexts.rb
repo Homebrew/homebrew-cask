@@ -1,10 +1,10 @@
 cask 'contexts' do
-  version '2.1.0'
-  sha256 'ca4f21daadd52193f2de5df8a75e50c4cb6ecbd7745b294555dc32d8ab16318b'
+  version '2.2.0'
+  sha256 'c58bb8a22d645f045de2b7d9e3fc51be3fcee5908d6960892e429aa800d9eced'
 
   url "https://contexts.co/releases/Contexts-#{version}.zip"
   appcast 'https://contexts.co/appcasts/stable.xml',
-          checkpoint: '12ded76840338df70516ef2515f9b0d56d22da7f7a93646771f524c85cf3df67'
+          checkpoint: '95b64ebe3ff0d7b86cd96ad72fbce30707e3470b71e2859530b21412938b4bc0'
   name 'Contexts'
   homepage 'https://contexts.co'
   license :commercial
