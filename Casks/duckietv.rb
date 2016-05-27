@@ -9,8 +9,6 @@ cask 'duckietv' do
   homepage 'https://schizoduckie.github.io/DuckieTV/'
   license :oss
 
-  container type: :pkg
-
   pkg "DuckieTV-#{version}-OSX-x64.pkg", allow_untrusted: true
 
   uninstall pkgutil: 'tv.duckie.base.pkg',
