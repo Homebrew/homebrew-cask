@@ -24,13 +24,13 @@ cask 'dwarf-fortress' do
 
   postflight do
     Dir.chdir("#{staged_path}/df_osx/libs") do
-      [
-        ['SDL', 'sdl-framework'],
-        ['SDL_ttf', 'sdl-ttf-framework'],
-      ].each do |args|
-        name = "#{args[0]}.framework"
+      {
+        'SDL'     => 'sdl-framework',
+        'SDL_ttf' => 'sdl-ttf-framework',
+      }.each do |key, value|
+        name = "#{key}.framework"
         File.rename(name, "#{name}.orig")
-        File.symlink(Hbc.load(args[1]).staged_path.join(name), name)
+        File.symlink(Hbc.load(value).staged_path.join(name), name)
       end
     end
   end
