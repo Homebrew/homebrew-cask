@@ -7,6 +7,8 @@ cask 'pycharm' do
   homepage 'https://www.jetbrains.com/pycharm/'
   license :commercial
 
+  conflicts_with cask: 'pycharm-eap'
+
   app 'PyCharm.app'
 
   uninstall delete: '/usr/local/bin/charm'
