@@ -7,11 +7,12 @@ cask 'clion' do
   homepage 'https://www.jetbrains.com/clion'
   license :commercial
 
+  conflicts_with cask: 'clion-eap'
+
   app 'CLion.app'
 
   zap delete: [
                 "~/.CLion#{version.major_minor}",
-                # TODO: expand/glob for '~/Library/Preferences/jetbrains.clion.*.plist',
                 "~/Library/Preferences/CLion#{version.major_minor}",
                 "~/Library/Application Support/CLion#{version.major_minor}",
                 "~/Library/Caches/CLion#{version.major_minor}",
