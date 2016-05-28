@@ -7,6 +7,8 @@ cask 'intellij-idea' do
   homepage 'https://www.jetbrains.com/idea/'
   license :commercial
 
+  conflicts_with cask: 'intellij-idea-eap'
+
   app 'IntelliJ IDEA.app'
 
   uninstall delete: '/usr/local/bin/idea'
@@ -17,6 +19,5 @@ cask 'intellij-idea' do
                 "~/Library/Logs/IntelliJIdea#{version.major_minor}",
                 "~/Library/Application Support/IntelliJIdea#{version.major_minor}",
                 "~/Library/Preferences/IntelliJIdea#{version.major_minor}",
-                # TODO: expand/glob for '~/Library/Preferences/jetbrains.intellij.*.plist',
               ]
 end
