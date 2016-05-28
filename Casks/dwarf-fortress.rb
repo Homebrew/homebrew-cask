@@ -12,7 +12,7 @@ cask 'dwarf-fortress' do
   depends_on cask: 'sdl-framework'
   depends_on cask: 'sdl-ttf-framework'
 
-  binary shimscript, target: Hbc.homebrew_prefix.join('bin/dwarf-fortress')
+  binary shimscript, target: 'dwarf-fortress'
 
   preflight do
     File.open(shimscript, 'w') do |f|
