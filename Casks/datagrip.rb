@@ -7,14 +7,15 @@ cask 'datagrip' do
   homepage 'https://www.jetbrains.com/datagrip/'
   license :commercial
 
+  conflicts_with cask: 'datagrip-eap'
+
   app 'DataGrip.app'
 
   zap delete: [
-                "~/.DataGrip#{version.major_minor.no_dots}",
-                '~/Library/Preferences/com.jetbrains.DataGrip.plist',
-                "~/Library/Preferences/DataGrip#{version.major_minor.no_dots}",
-                "~/Library/Application Support/DataGrip#{version.major_minor.no_dots}",
-                "~/Library/Caches/DataGrip#{version.major_minor.no_dots}",
-                "~/Library/Logs/DataGrip#{version.major_minor.no_dots}",
+                "~/.DataGrip#{version.major_minor}",
+                "~/Library/Preferences/DataGrip#{version.major_minor}",
+                "~/Library/Application Support/DataGrip#{version.major_minor}",
+                "~/Library/Caches/DataGrip#{version.major_minor}",
+                "~/Library/Logs/DataGrip#{version.major_minor}",
               ]
 end
