@@ -7,10 +7,16 @@ cask 'mps' do
   homepage 'https://www.jetbrains.com/mps'
   license :apache
 
+  conflicts_with cask: 'mps-eap'
+
   app "MPS #{version.major_minor}.app"
 
   zap delete: [
-                "~/Library/Application Support/MPS#{version.tr('.', '')[0, 2]}",
-                "~/Library/Preferences/MPS#{version.tr('.', '')[0, 2]}",
+                "~/.MPS#{version.major_minor.no_dots}",
+                "~/MPSSamples.#{version}",
+                "~/Library/Application Support/MPS#{version.major_minor.no_dots}",
+                "~/Library/Preferences/MPS#{version.major_minor.no_dots}",
+                "~/Library/Caches/MPS#{version.major_minor.no_dots}",
+                "~/Library/Logs/MPS#{version.major_minor.no_dots}",
               ]
 end
