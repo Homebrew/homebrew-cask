@@ -42,7 +42,7 @@ describe Hbc::Installer do
     end
 
     it "works with cab-based Casks" do
-      skip unless Hbc.homebrew_prefix.join('bin/cabextract').exist?
+      skip('cabextract not installed') unless Hbc.homebrew_prefix.join('bin','cabextract').exist?
       cab_container = Hbc.load('cab-container')
       empty = stub(:formula => [], :cask => [], :macos => nil, :arch => nil, :x11 => nil)
       cab_container.stubs(:depends_on).returns(empty)
@@ -58,7 +58,7 @@ describe Hbc::Installer do
     end
 
     it "works with Adobe AIR-based Casks" do
-      skip unless Hbc::Container::Air.installer_exist?
+      skip('Adobe AIR not installed') unless Hbc::Container::Air.installer_exist?
       air_container = Hbc.load('adobe-air-container')
       shutup do
         Hbc::Installer.new(air_container).install
@@ -70,7 +70,7 @@ describe Hbc::Installer do
     end
 
     it "works with 7z-based Casks" do
-      skip unless Hbc.homebrew_prefix.join('bin','unar').exist?
+      skip('unar not installed') unless Hbc.homebrew_prefix.join('bin','unar').exist?
       sevenzip_container = Hbc.load('sevenzip-container')
       empty = stub(:formula => [], :cask => [], :macos => nil, :arch => nil, :x11 => nil)
       sevenzip_container.stubs(:depends_on).returns(empty)
@@ -99,7 +99,7 @@ describe Hbc::Installer do
     end
 
     it "works with Stuffit-based Casks" do
-      skip unless Hbc.homebrew_prefix.join('bin','unar').exist?
+      skip('unar not installed') unless Hbc.homebrew_prefix.join('bin','unar').exist?
       stuffit_container = Hbc.load('stuffit-container')
       empty = stub(:formula => [], :cask => [], :macos => nil, :arch => nil, :x11 => nil)
       stuffit_container.stubs(:depends_on).returns(empty)
@@ -115,7 +115,7 @@ describe Hbc::Installer do
     end
 
     it "works with RAR-based Casks" do
-      skip unless Hbc.homebrew_prefix.join('bin','unar').exist?
+      skip('unar not installed') unless Hbc.homebrew_prefix.join('bin','unar').exist?
       rar_container = Hbc.load('rar-container')
       empty = stub(:formula => [], :cask => [], :macos => nil, :arch => nil, :x11 => nil)
       rar_container.stubs(:depends_on).returns(empty)

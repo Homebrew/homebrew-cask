@@ -1,6 +1,6 @@
 cask 'tortoisehg' do
-  version '3.7.3'
-  sha256 '35279c4fc18a9ac9fe1ff3688c6cd0929c58404de6a19b18d6678617e55eee35'
+  version '3.8.1'
+  sha256 '0a2b781a108fc4f94f94352d8595047aeb5f9b7ee7c53069fa17293035fcb489'
 
   url "https://bitbucket.org/tortoisehg/files/downloads/TortoiseHg-#{version}-mac-x64.dmg"
   name 'TortoiseHg'

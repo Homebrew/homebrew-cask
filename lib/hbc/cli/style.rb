@@ -19,7 +19,7 @@ class Hbc::CLI::Style < Hbc::CLI::Base
     $?.success?
   end
 
-  RUBOCOP_CASK_VERSION = '~> 0.6.0'
+  RUBOCOP_CASK_VERSION = '~> 0.6.1'
 
   def install_rubocop
     Hbc::Utils.install_gem_setup_path! 'rubocop-cask', RUBOCOP_CASK_VERSION, 'rubocop'
