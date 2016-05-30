@@ -10,5 +10,11 @@ cask 'rocket-chat' do
   homepage 'https://rocket.chat/'
   license :mit
 
-  app 'Rocket.Chat.app'
+  app 'Rocket.Chat+.app'
+
+  zap delete: [
+                '~/Library/Application Support/Rocket.Chat+',
+                '~/Library/Caches/Rocket.Chat+',
+                '~/Library/Preferences/chat.rocket.plist',
+              ]
 end
