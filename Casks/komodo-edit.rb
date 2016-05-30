@@ -1,6 +1,6 @@
 cask 'komodo-edit' do
-  version '9.3.0-16396'
-  sha256 'f1c5a0c3542754b7f96db86547871b6fb70d205c2274a906a696b23194c75080'
+  version '9.3.2-16460'
+  sha256 'a6163361094615efb5d6f8ca3c0057cdb0be8a4bdd46eb916254cd36169c4083'
 
   # activestate.com/Komodo was verified as official when first introduced to the cask
   url "https://downloads.activestate.com/Komodo/releases/#{version.sub(%r{-.*}, '')}/Komodo-Edit-#{version}-macosx-x86_64.dmg"
