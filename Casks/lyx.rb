@@ -1,8 +1,8 @@
 cask 'lyx' do
-  version '2.1.4'
-  sha256 'a89e0c90cf0fe5e974ec3eaa241403b1074878430f2f81552e62fb8f3b157597'
+  version '2.2.0'
+  sha256 '3fdeb815c4fc0b9a46d3f02201710eaeaf94b8f2c9c6bc30253dbeca2b71439f'
 
-  url "ftp://ftp.lyx.org/pub/lyx/bin/#{version}/LyX-#{version}+qt4-cocoa.dmg"
+  url "ftp://ftp.lyx.org/pub/lyx/bin/#{version}/LyX-#{version}+qt5-x86_64-cocoa.dmg"
   name 'LyX'
   homepage 'https://www.lyx.org'
   license :gpl
