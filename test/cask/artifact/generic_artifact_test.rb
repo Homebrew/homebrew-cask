@@ -7,11 +7,19 @@ describe Hbc::Artifact::Artifact do
     end
   }
   let(:expected_path) {
-    # todo 'artifact' should be changed to require a :target, in
-    #      which case it will no longer default to Hbc.appdir
-    #      as below
     Hbc.appdir.join('Caffeine.app')
   }
+
+  it "fails to install with no target" do
+    no_target = Hbc.load('with-generic-artifact-no-target')
+    TestHelper.install_without_artifacts(no_target)
+
+    lambda {
+      shutup do
+        Hbc::Artifact::Artifact.new(no_target).install_phase
+      end
+    }.must_raise(Hbc::CaskInvalidError)
+  end
 
   it "links the artifact to the proper directory" do
     shutup do
