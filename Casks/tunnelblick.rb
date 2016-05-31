@@ -19,9 +19,4 @@ cask 'tunnelblick' do
 
   uninstall launchctl: 'net.tunnelblick.tunnelblick.LaunchAtLogin',
             quit:      'net.tunnelblick.tunnelblick'
-
-  caveats <<-EOS.undent
-    For security reasons, #{token} must be installed to /Applications,
-    and will request to be moved at launch.
-  EOS
 end
