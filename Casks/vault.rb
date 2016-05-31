@@ -5,7 +5,7 @@ cask 'vault' do
   # hashicorp.com/vault was verified as official when first introduced to the cask
   url "https://releases.hashicorp.com/vault/#{version}/vault_#{version}_darwin_amd64.zip"
   appcast 'https://github.com/hashicorp/vault/releases.atom',
-          checkpoint: '42046119b424a397ec33ae94799992d07609c3ac8f6362b843b8bf38c9e01ac5'
+          checkpoint: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
   name 'Vault'
   homepage 'https://www.vaultproject.io/'
   license :mpl
