@@ -8,5 +8,4 @@ cask 'maltego-classic' do
   license :closed
 
   app "Maltego Classic v#{version.major_minor_patch}.app"
-
 end
