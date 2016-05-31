@@ -1,4 +1,4 @@
-cask 'maltego' do
+cask 'maltego-classic' do
   version '4.0.0.8846'
   sha256 '1fd90f884f40a6b2a7530b8e081b6b9f7d21cdaf53a52a6dc800034a85af84be'
 
