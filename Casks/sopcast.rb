@@ -8,7 +8,7 @@ cask 'sopcast' do
   license :gratis
 
   app 'SopCast.app'
-  binary 'SopCast.app/Contents/Resources/binaries/m32/sp-sc-auth'
+  binary "#{appdir}/SopCast.app/Contents/Resources/binaries/m32/sp-sc-auth"
 
   caveats do
     files_in_usr_local

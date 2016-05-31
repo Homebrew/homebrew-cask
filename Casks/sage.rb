@@ -25,10 +25,10 @@ cask 'sage' do
 
   if MacOS.release <= :yosemite
     app "Sage-#{version}.app"
-    binary "Sage-#{version}.app/Contents/Resources/sage/sage"
+    binary "#{appdir}/Sage-#{version}.app/Contents/Resources/sage/sage"
   else
     app "SageMath-#{version}.app"
-    binary "SageMath-#{version}.app/Contents/Resources/sage/sage"
+    binary "#{appdir}/SageMath-#{version}.app/Contents/Resources/sage/sage"
   end
 
   zap delete: [

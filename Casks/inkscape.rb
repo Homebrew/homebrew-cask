@@ -11,7 +11,7 @@ cask 'inkscape' do
   depends_on x11: true
 
   app 'Inkscape.app'
-  binary 'Inkscape.app/Contents/Resources/bin/inkscape'
+  binary "#{appdir}/Inkscape.app/Contents/Resources/bin/inkscape"
 
   zap delete: '~/.inkscape-etc'
 end

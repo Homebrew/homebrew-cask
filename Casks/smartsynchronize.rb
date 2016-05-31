@@ -10,7 +10,7 @@ cask 'smartsynchronize' do
   depends_on macos: '>= :lion'
 
   app 'SmartSynchronize.app'
-  binary 'SmartSynchronize.app/Contents/MacOS/SmartSynchronize'
+  binary "#{appdir}/SmartSynchronize.app/Contents/MacOS/SmartSynchronize"
 
   caveats do
     files_in_usr_local

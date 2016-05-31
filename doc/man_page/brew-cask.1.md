@@ -149,7 +149,7 @@ in a future version.
     Give additional feedback during installation.
 
   * `--appdir=<path>`:
-    Target location for Application links. The default value is `~/Applications`.
+    Target location for Application links. The default value is `/Applications`.
 
   * `--colorpickerdir=<path>`:
     Target location for Color Picker links. The default value is `~/Library/Color Pickers`.

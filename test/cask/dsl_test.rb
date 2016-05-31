@@ -405,4 +405,26 @@ describe Hbc::DSL do
       cask.auto_updates.must_equal true
     end
   end
+
+  describe "appdir" do
+    it "allows interpolation of the appdir value in stanzas" do
+      cask = Hbc.load('appdir-interpolation')
+      cask.artifacts[:binary].first.must_equal ["#{Hbc.appdir}/some/path"]
+    end
+
+    it "does not include a trailing slash" do
+      original_appdir = Hbc.appdir
+      Hbc.appdir = "#{original_appdir}/"
+
+      begin
+        cask = Hbc::Cask.new('appdir-trailing-slash') do
+          binary "#{appdir}/some/path"
+        end
+
+        cask.artifacts[:binary].first.must_equal ["#{original_appdir}/some/path"]
+      ensure
+        Hbc.appdir = original_appdir
+      end
+    end
+  end
 end

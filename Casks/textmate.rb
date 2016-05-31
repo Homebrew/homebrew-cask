@@ -9,7 +9,7 @@ cask 'textmate' do
   license :gpl
 
   app 'TextMate.app'
-  binary 'TextMate.app/Contents/Resources/mate'
+  binary "#{appdir}/TextMate.app/Contents/Resources/mate"
 
   zap delete: [
                 '~/Library/Application Support/Avian',

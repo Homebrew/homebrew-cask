@@ -10,7 +10,7 @@ cask 'github-desktop' do
   license :gratis
 
   app 'GitHub Desktop.app'
-  binary 'GitHub Desktop.app/Contents/MacOS/github_cli', target: 'github'
+  binary "#{appdir}/GitHub Desktop.app/Contents/MacOS/github_cli", target: 'github'
 
   postflight do
     suppress_move_to_applications

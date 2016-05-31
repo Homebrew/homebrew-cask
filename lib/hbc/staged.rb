@@ -3,7 +3,7 @@ module Hbc::Staged
     index =  0 if index == :first
     index =  1 if index == :second
     index = -1 if index == :last
-    @cask.staged_path.join(@cask.artifacts[:app].to_a.at(index).first, 'Contents', 'Info.plist')
+    Hbc.appdir.join(@cask.artifacts[:app].to_a.at(index).first, 'Contents', 'Info.plist')
   end
 
   def plist_exec(cmd)
@@ -41,7 +41,7 @@ module Hbc::Staged
   end
 
   def current_user
-    Etc.getpwuid(Process.euid).name
+    Hbc::Utils.current_user
   end
 
   private

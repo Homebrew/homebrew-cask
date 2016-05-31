@@ -9,13 +9,16 @@ describe Hbc::Artifact::Suite do
   let(:expected_path) {
     Hbc.appdir.join('caffeine_suite')
   }
+  let(:source_path) { cask.staged_path.join('caffeine_suite') }
 
-  it "links the suite to the proper directory" do
+  it "moves the suite to the proper directory" do
     shutup do
       Hbc::Artifact::Suite.new(cask).install_phase
     end
 
-    TestHelper.valid_alias?(expected_path).must_equal true
+    expected_path.must_be :directory?
+    TestHelper.valid_alias?(expected_path).must_equal false
+    File.exist?(source_path).must_equal false
   end
 
   it "creates a suite containing the expected app" do
@@ -26,23 +29,13 @@ describe Hbc::Artifact::Suite do
     expected_path.join('Caffeine.app').must_be :exist?
   end
 
-  it "avoids clobbering an existing suite by linking over it" do
+  it "avoids clobbering an existing suite by moving over it" do
     FileUtils.touch expected_path
 
     shutup do
       Hbc::Artifact::Suite.new(cask).install_phase
     end
 
-    expected_path.wont_be :symlink?
-  end
-
-  it "clobbers an existing symlink" do
-    expected_path.make_symlink('/tmp')
-
-    shutup do
-      Hbc::Artifact::Suite.new(cask).install_phase
-    end
-
-    File.readlink(expected_path).wont_equal '/tmp'
+    File.identical?(source_path, expected_path).must_equal false
   end
 end

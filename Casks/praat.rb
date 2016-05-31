@@ -16,5 +16,5 @@ cask 'praat' do
   license :gpl
 
   app 'Praat.app'
-  binary 'Praat.app/Contents/MacOS/Praat', target: 'praat'
+  binary "#{appdir}/Praat.app/Contents/MacOS/Praat", target: 'praat'
 end

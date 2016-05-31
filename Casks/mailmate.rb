@@ -9,7 +9,7 @@ cask 'mailmate' do
   license :commercial
 
   app 'MailMate.app'
-  binary 'MailMate.app/Contents/Resources/emate'
+  binary "#{appdir}/MailMate.app/Contents/Resources/emate"
 
   caveats do
     files_in_usr_local

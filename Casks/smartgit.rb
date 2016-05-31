@@ -8,7 +8,7 @@ cask 'smartgit' do
   license :commercial
 
   app 'SmartGit.app'
-  binary 'SmartGit.app/Contents/MacOS/SmartGit'
+  binary "#{appdir}/SmartGit.app/Contents/MacOS/SmartGit"
 
   caveats do
     files_in_usr_local

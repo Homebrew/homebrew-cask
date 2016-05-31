@@ -20,7 +20,7 @@ cask 'textwrangler' do
   depends_on macos: '>= :snow_leopard'
 
   app 'TextWrangler.app'
-  binary 'TextWrangler.app/Contents/Helpers/edit'
-  binary 'TextWrangler.app/Contents/Helpers/twdiff'
-  binary 'TextWrangler.app/Contents/Helpers/twfind'
+  binary "#{appdir}/TextWrangler.app/Contents/Helpers/edit"
+  binary "#{appdir}/TextWrangler.app/Contents/Helpers/twdiff"
+  binary "#{appdir}/TextWrangler.app/Contents/Helpers/twfind"
 end

@@ -11,7 +11,7 @@ cask 'sublime-text' do
   license :closed
 
   app 'Sublime Text 2.app'
-  binary 'Sublime Text 2.app/Contents/SharedSupport/bin/subl'
+  binary "#{appdir}/Sublime Text 2.app/Contents/SharedSupport/bin/subl"
 
   zap delete: [
                 '~/Library/Application Support/Sublime Text 2',

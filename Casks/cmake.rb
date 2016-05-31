@@ -10,10 +10,10 @@ cask 'cmake' do
   conflicts_with formula: 'cmake'
 
   app 'CMake.app'
-  binary 'CMake.app/Contents/bin/cmake'
-  binary 'CMake.app/Contents/bin/ccmake'
-  binary 'CMake.app/Contents/bin/cmakexbuild'
-  binary 'CMake.app/Contents/bin/cpack'
-  binary 'CMake.app/Contents/bin/ctest'
-  binary 'CMake.app/Contents/bin/cmake-gui'
+  binary "#{appdir}/CMake.app/Contents/bin/cmake"
+  binary "#{appdir}/CMake.app/Contents/bin/ccmake"
+  binary "#{appdir}/CMake.app/Contents/bin/cmakexbuild"
+  binary "#{appdir}/CMake.app/Contents/bin/cpack"
+  binary "#{appdir}/CMake.app/Contents/bin/ctest"
+  binary "#{appdir}/CMake.app/Contents/bin/cmake-gui"
 end

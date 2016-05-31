@@ -21,7 +21,7 @@ shared_examples_for Hbc::Staged do
   end
 
   it "can get the Info.plist file for the primary app" do
-    staged.info_plist_file.to_s.must_include 'basic-cask/1.2.3/TestCask.app/Contents/Info.plist'
+    staged.info_plist_file.to_s.must_include Hbc.appdir.join('TestCask.app/Contents/Info.plist')
   end
 
   it "can execute commands on the Info.plist file" do

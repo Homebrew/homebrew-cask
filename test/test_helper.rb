@@ -98,12 +98,15 @@ class TestHelper
     Hbc::FakeFetcher.fake_response_for(*args)
   end
 
-  def self.must_output(test, lambda, expected)
+  def self.must_output(test, lambda, expected = nil)
     out, err = test.capture_subprocess_io do
       lambda.call
     end
 
-    if expected.is_a? Regexp
+    case
+    when block_given?
+      yield (out+err).chomp
+    when expected.is_a?(Regexp)
       (out+err).chomp.must_match expected
     else
       (out+err).chomp.must_equal expected.gsub(/^ */, '')

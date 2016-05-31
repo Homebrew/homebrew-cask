@@ -17,18 +17,18 @@ cask 'libreoffice' do
       key_id: 'c2839ecad9408fbe9531c3e9f434a1efafeeaea3'
 
   app 'LibreOffice.app'
-  binary 'LibreOffice.app/Contents/MacOS/gengal'
-  binary 'LibreOffice.app/Contents/MacOS/regmerge'
-  binary 'LibreOffice.app/Contents/MacOS/regview'
-  binary 'LibreOffice.app/Contents/MacOS/senddoc'
-  binary 'LibreOffice.app/Contents/MacOS/soffice'
-  binary 'LibreOffice.app/Contents/MacOS/ui-previewer'
-  binary 'LibreOffice.app/Contents/MacOS/uno'
-  binary 'LibreOffice.app/Contents/MacOS/unoinfo'
-  binary 'LibreOffice.app/Contents/MacOS/unopkg'
-  binary 'LibreOffice.app/Contents/MacOS/urelibs'
-  binary 'LibreOffice.app/Contents/MacOS/uri-encode'
-  binary 'LibreOffice.app/Contents/MacOS/xpdfimport'
+  binary "#{appdir}/LibreOffice.app/Contents/MacOS/gengal"
+  binary "#{appdir}/LibreOffice.app/Contents/MacOS/regmerge"
+  binary "#{appdir}/LibreOffice.app/Contents/MacOS/regview"
+  binary "#{appdir}/LibreOffice.app/Contents/MacOS/senddoc"
+  binary "#{appdir}/LibreOffice.app/Contents/MacOS/soffice"
+  binary "#{appdir}/LibreOffice.app/Contents/MacOS/ui-previewer"
+  binary "#{appdir}/LibreOffice.app/Contents/MacOS/uno"
+  binary "#{appdir}/LibreOffice.app/Contents/MacOS/unoinfo"
+  binary "#{appdir}/LibreOffice.app/Contents/MacOS/unopkg"
+  binary "#{appdir}/LibreOffice.app/Contents/MacOS/urelibs"
+  binary "#{appdir}/LibreOffice.app/Contents/MacOS/uri-encode"
+  binary "#{appdir}/LibreOffice.app/Contents/MacOS/xpdfimport"
 
   zap delete: [
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.libreoffice.script.sfl',

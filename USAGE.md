@@ -53,7 +53,7 @@ Easy peasy:
 $ brew cask uninstall google-chrome
 ```
 
-This will both uninstall the Cask and remove symlinks which were created in `~/Applications`.
+This will both uninstall the Cask and remove applications which were moved to `/Applications`.
 
 To uninstall all versions of a Cask, use `--force`:
 
@@ -176,35 +176,34 @@ You can also modify the default installation locations used when issuing `brew c
 * `--caskroom=/my/path` determines where the actual applications will be located.
 Should be handled with care — setting it outside `/opt` or your home directory might mess up your system.
 Default is `/opt/homebrew-cask/Caskroom`
-* `--appdir=/my/path` changes the path where the symlinks to the applications (above)
-will be generated. This is commonly used to create the links in the _root_ Applications directory
-instead of the _home_ Applications directory by specifying `--appdir=/Applications`. Default is `~/Applications`.
-* `--prefpanedir=/my/path` changes the path for PreferencePane symlinks.
+* `--appdir=/my/path` changes the path where the applications (above)
+will be moved. Default is `/Applications`.
+* `--prefpanedir=/my/path` changes the path for PreferencePanes.
 Default is `~/Library/PreferencePanes`
-* `--qlplugindir=/my/path` changes the path for Quicklook Plugin symlinks.
+* `--qlplugindir=/my/path` changes the path for Quicklook Plugins.
 Default is `~/Library/QuickLook`
-* `--fontdir=/my/path` changes the path for Fonts symlinks.
+* `--fontdir=/my/path` changes the path for Fonts.
 Default is `~/Library/Fonts`
 * `--binarydir=/my/path` changes the path for Binary symlinks.
 Default is `/usr/local/bin`
-* `--input_methoddir=/my/path` changes the path for Input Methods symlinks.
+* `--input_methoddir=/my/path` changes the path for Input Methods.
 Default is `~/Library/Input Methods`
-* `--screen_saverdir=/my/path` changes the path for Screen Saver symlinks.
+* `--screen_saverdir=/my/path` changes the path for Screen Savers.
 Default is `~/Library/Screen Savers`
 
 To make these settings persistent, you might want to add the following line to your `.bash_profile` or `.zshenv`:
 
 ```bash
 # Specify your defaults in this environment variable
-export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/etc/Caskroom"
+export HOMEBREW_CASK_OPTS="--appdir=~/Applications --caskroom=/etc/Caskroom"
 ```
 
 Note that you still can override the environment variable `HOMEBREW_CASK_OPTS` by _explicitly_ providing options in the command line:
 
 ```bash
-# Will force the Chrome app to be linked to ~/Applications
-# even though HOMEBREW_CASK_OPTS specified /Applications
-$ brew cask install --appdir="~/Applications" google-chrome
+# Will force the Chrome app to be linked to /Applications
+# even though HOMEBREW_CASK_OPTS specified ~/Applications
+$ brew cask install --appdir="/Applications" google-chrome
 ```
 
 ## Advanced Searching

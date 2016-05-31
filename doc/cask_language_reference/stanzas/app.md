@@ -1,18 +1,18 @@
 # app
 
-In the simple case of a string argument to `app`, a symlink is created in the target `~/Applications` directory using the same basename as the source file. For example:
+In the simple case of a string argument to `app`, the source file is moved to the target `~/Applications` directory. For example:
 
 ```ruby
 app 'Alfred 2.app'
 ```
 
-causes the creation of this symlink:
+moves the source to:
 
 ```bash
 ~/Applications/Alfred 2.app
 ```
 
-which points to a source file such as:
+from a source file such as:
 
 ```bash
 /opt/homebrew-cask/Caskroom/alfred/2.8.2_431/Alfred 2.app
@@ -20,7 +20,7 @@ which points to a source file such as:
 
 ## Renaming the Target
 
-You can rename the target link which appears in your `~/Applications` directory by adding a `target:` key to `app`. Example (from [scala-ide.rb](https://github.com/caskroom/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/scala-ide.rb#L21)):
+You can rename the target which appears in your `/Applications` directory by adding a `target:` key to `app`. Example (from [scala-ide.rb](https://github.com/caskroom/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/scala-ide.rb#L21)):
 
 ```ruby
 app 'eclipse/Eclipse.app', target: 'Scala IDE.app'

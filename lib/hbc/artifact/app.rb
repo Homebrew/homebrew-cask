@@ -1,2 +1,2 @@
-class Hbc::Artifact::App < Hbc::Artifact::Symlinked
+class Hbc::Artifact::App < Hbc::Artifact::Moved
 end

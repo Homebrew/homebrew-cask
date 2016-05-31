@@ -11,5 +11,5 @@ cask 'kivy' do
 
   # Renamed as suggested by developer: https://kivy.org/docs/installation/installation-osx.html#installation-on-os-x
   app 'Kivy3.app', target: 'Kivy.app'
-  binary 'Kivy3.app/Contents/Resources/script', target: 'kivy'
+  binary "#{appdir}/Kivy3.app/Contents/Resources/script", target: 'kivy'
 end
