@@ -59,6 +59,7 @@ class Hbc::HbCurlDownloadStrategy < Hbc::AbstractDownloadStrategy
 
   def fetch
     ohai "Downloading #{@url}"
+    puts "The cache path for download: #{tarball_path}"
     unless tarball_path.exist?
       had_incomplete_download = temporary_path.exist?
       begin
