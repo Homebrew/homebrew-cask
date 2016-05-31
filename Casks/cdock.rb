@@ -14,9 +14,4 @@ cask 'cdock' do
   depends_on macos: '>= :mavericks'
 
   app 'cDock.app'
-
-  caveats <<-EOS.undent
-    #{token} will only run from within /Applications,
-    and will request to be moved at launch.
-  EOS
 end
