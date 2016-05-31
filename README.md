@@ -1,6 +1,6 @@
 # Homebrew-Cask
 
-#### Important: Soon, Homebrew-Cask will change its behaviour from linking apps to moving them. See the relevant [issue](https://github.com/caskroom/homebrew-cask/issues/13201) and [pull request](https://github.com/caskroom/homebrew-cask/pull/13966) for details.
+#### Important: Homebrew-Cask changed its behaviour from linking apps to moving them. See the relevant [issue](https://github.com/caskroom/homebrew-cask/issues/13201) and [pull request](https://github.com/caskroom/homebrew-cask/pull/13966) for details.
 ---
 
 _“To install, drag this icon…” no more!_
@@ -23,7 +23,7 @@ To start using Homebrew-Cask, you just need [Homebrew](http://brew.sh/) installe
 ```bash
 $ brew cask install google-chrome
 ==> Downloading https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
-==> Symlinking App 'Google Chrome.app' to '/Users/Your_Account_Name/Applications/Google Chrome.app'
+==> Moving App 'Google Chrome.app' to '/Applications/Google Chrome.app'
 🍺  google-chrome staged at '/opt/homebrew-cask/Caskroom/google-chrome/latest' (208 files, 184M)
 ```
 
