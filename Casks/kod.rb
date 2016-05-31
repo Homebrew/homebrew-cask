@@ -9,5 +9,5 @@ cask 'kod' do
   license :oss
 
   app 'Kod.app'
-  binary 'Kod.app/Contents/SharedSupport/kod'
+  binary "#{appdir}/Kod.app/Contents/SharedSupport/kod"
 end

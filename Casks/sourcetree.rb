@@ -21,7 +21,7 @@ cask 'sourcetree' do
   auto_updates true
 
   app 'SourceTree.app'
-  binary 'SourceTree.app/Contents/Resources/stree'
+  binary "#{appdir}/SourceTree.app/Contents/Resources/stree"
 
   postflight do
     suppress_move_to_applications

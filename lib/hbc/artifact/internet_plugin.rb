@@ -1,3 +1,3 @@
-class Hbc::Artifact::InternetPlugin < Hbc::Artifact::Symlinked
+class Hbc::Artifact::InternetPlugin < Hbc::Artifact::Moved
 
 end

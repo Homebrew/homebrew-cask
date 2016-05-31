@@ -23,5 +23,5 @@ cask 'rowanj-gitx' do
   depends_on arch: :intel
 
   app 'GitX.app'
-  binary 'GitX.app/Contents/Resources/gitx'
+  binary "#{appdir}/GitX.app/Contents/Resources/gitx"
 end

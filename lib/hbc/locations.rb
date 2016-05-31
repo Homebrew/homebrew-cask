@@ -13,7 +13,7 @@ module Hbc::Locations
     end
 
     def appdir
-      @appdir ||= Pathname.new('~/Applications').expand_path
+      @appdir ||= Pathname.new('/Applications').expand_path
     end
 
     def appdir=(_appdir)

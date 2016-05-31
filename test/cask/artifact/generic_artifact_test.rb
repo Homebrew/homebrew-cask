@@ -21,31 +21,24 @@ describe Hbc::Artifact::Artifact do
     }.must_raise(Hbc::CaskInvalidError)
   end
 
-  it "links the artifact to the proper directory" do
+  it "moves the artifact to the proper directory" do
     shutup do
       Hbc::Artifact::Artifact.new(cask).install_phase
     end
 
-    TestHelper.valid_alias?(expected_path).must_equal true
+    File.ftype(Hbc.appdir.join('Caffeine.app')).must_equal 'directory'
+    File.exist?(cask.staged_path.join('Caffeine.app')).must_equal false
   end
 
-  it "avoids clobbering an existing artifact by linking over it" do
+  it "avoids clobbering an existing artifact" do
     FileUtils.touch expected_path
 
     shutup do
       Hbc::Artifact::Artifact.new(cask).install_phase
     end
 
-    expected_path.wont_be :symlink?
-  end
+    source_path = cask.staged_path.join('Caffeine.app')
 
-  it "clobbers an existing symlink" do
-    expected_path.make_symlink('/tmp')
-
-    shutup do
-      Hbc::Artifact::Artifact.new(cask).install_phase
-    end
-
-    File.readlink(expected_path).wont_equal '/tmp'
+    File.identical?(source_path, expected_path).must_equal false
   end
 end

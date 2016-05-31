@@ -11,7 +11,7 @@ cask 'changes' do
   license :commercial
 
   app 'Changes.app'
-  binary 'Changes.app/Contents/Resources/chdiff'
+  binary "#{appdir}/Changes.app/Contents/Resources/chdiff"
 
   zap delete: [
                 '~/Library/Preferences/com.bitbq.Changes.plist',

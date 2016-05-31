@@ -36,9 +36,9 @@ describe Hbc::CLI::Uninstall do
     end
 
     caffeine.wont_be :installed?
-    Hbc.appdir.join('Transmission.app').wont_be :symlink?
+    File.exist?(Hbc.appdir.join('Transmission.app')).must_equal false
     transmission.wont_be :installed?
-    Hbc.appdir.join('Caffeine.app').wont_be :symlink?
+    File.exist?(Hbc.appdir.join('Caffeine.app')).must_equal false
   end
 
   describe "when Casks have been renamed" do

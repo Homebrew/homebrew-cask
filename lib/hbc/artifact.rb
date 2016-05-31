@@ -4,6 +4,7 @@ require 'hbc/artifact/base'
 require 'hbc/artifact/uninstall_base'
 require 'hbc/artifact/symlinked'
 require 'hbc/artifact/hardlinked'
+require 'hbc/artifact/moved'
 
 require 'hbc/artifact/app'
 require 'hbc/artifact/artifact'        # generic 'artifact' stanza
