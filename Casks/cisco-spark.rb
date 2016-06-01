@@ -9,7 +9,7 @@ cask 'cisco-spark' do
 
   depends_on macos: '>= :mavericks'
 
-  app 'Spark.app'
+  app 'Cisco Spark.app'
 
   uninstall signal: [
                       ['TERM', 'Cisco-Systems.Spark'],
