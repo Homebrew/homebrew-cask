@@ -11,7 +11,7 @@ describe Hbc::Installer do
 
       dest_path = Hbc.caskroom.join('local-caffeine',caffeine.version)
       dest_path.must_be :directory?
-      application = dest_path.join('Caffeine.app')
+      application = Hbc.appdir.join('Caffeine.app')
       application.must_be :directory?
     end
 
@@ -24,7 +24,7 @@ describe Hbc::Installer do
 
       dest_path = Hbc.caskroom.join('local-transmission',transmission.version)
       dest_path.must_be :directory?
-      application = dest_path.join('Transmission.app')
+      application = Hbc.appdir.join('Transmission.app')
       application.must_be :directory?
     end
 
@@ -37,12 +37,12 @@ describe Hbc::Installer do
 
       dest_path = Hbc.caskroom.join('tarball',tarball.version)
       dest_path.must_be :directory?
-      application = dest_path.join('Tarball.app')
+      application = Hbc.appdir.join('Tarball.app')
       application.must_be :directory?
     end
 
     it "works with cab-based Casks" do
-      skip unless Hbc.homebrew_prefix.join('bin/cabextract').exist?
+      skip('cabextract not installed') unless Hbc.homebrew_prefix.join('bin','cabextract').exist?
       cab_container = Hbc.load('cab-container')
       empty = stub(:formula => [], :cask => [], :macos => nil, :arch => nil, :x11 => nil)
       cab_container.stubs(:depends_on).returns(empty)
@@ -53,24 +53,24 @@ describe Hbc::Installer do
 
       dest_path = Hbc.caskroom.join('cab-container',cab_container.version)
       dest_path.must_be :directory?
-      application = dest_path.join('cabcontainer','Application.app')
+      application = Hbc.appdir.join('Application.app')
       application.must_be :directory?
     end
 
     it "works with Adobe AIR-based Casks" do
-      skip unless Hbc::Container::Air.installer_exist?
+      skip('Adobe AIR not installed') unless Hbc::Container::Air.installer_exist?
       air_container = Hbc.load('adobe-air-container')
       shutup do
         Hbc::Installer.new(air_container).install
       end
       dest_path = Hbc.caskroom.join('adobe-air-container',air_container.version)
       dest_path.must_be :directory?
-      application = dest_path.join('GMDesk.app')
+      application = Hbc.appdir.join('GMDesk.app')
       application.must_be :directory?
     end
 
     it "works with 7z-based Casks" do
-      skip unless Hbc.homebrew_prefix.join('bin','unar').exist?
+      skip('unar not installed') unless Hbc.homebrew_prefix.join('bin','unar').exist?
       sevenzip_container = Hbc.load('sevenzip-container')
       empty = stub(:formula => [], :cask => [], :macos => nil, :arch => nil, :x11 => nil)
       sevenzip_container.stubs(:depends_on).returns(empty)
@@ -81,7 +81,7 @@ describe Hbc::Installer do
 
       dest_path = Hbc.caskroom.join('sevenzip-container',sevenzip_container.version)
       dest_path.must_be :directory?
-      application = dest_path.join('sevenzipcontainer','Application.app')
+      application = Hbc.appdir.join('Application.app')
       application.must_be :directory?
     end
 
@@ -94,12 +94,12 @@ describe Hbc::Installer do
 
       dest_path = Hbc.caskroom.join('xar-container',xar_container.version)
       dest_path.must_be :directory?
-      application = dest_path.join('xarcontainer','Application.app')
+      application = Hbc.appdir.join('Application.app')
       application.must_be :directory?
     end
 
     it "works with Stuffit-based Casks" do
-      skip unless Hbc.homebrew_prefix.join('bin','unar').exist?
+      skip('unar not installed') unless Hbc.homebrew_prefix.join('bin','unar').exist?
       stuffit_container = Hbc.load('stuffit-container')
       empty = stub(:formula => [], :cask => [], :macos => nil, :arch => nil, :x11 => nil)
       stuffit_container.stubs(:depends_on).returns(empty)
@@ -110,12 +110,12 @@ describe Hbc::Installer do
 
       dest_path = Hbc.caskroom.join('stuffit-container',stuffit_container.version)
       dest_path.must_be :directory?
-      application = dest_path.join('sheldonmac','v1.0')
+      application = Hbc.appdir.join('sheldonmac','v1.0')
       application.must_be :directory?
     end
 
     it "works with RAR-based Casks" do
-      skip unless Hbc.homebrew_prefix.join('bin','unar').exist?
+      skip('unar not installed') unless Hbc.homebrew_prefix.join('bin','unar').exist?
       rar_container = Hbc.load('rar-container')
       empty = stub(:formula => [], :cask => [], :macos => nil, :arch => nil, :x11 => nil)
       rar_container.stubs(:depends_on).returns(empty)
@@ -126,7 +126,7 @@ describe Hbc::Installer do
 
       dest_path = Hbc.caskroom.join('rar-container',rar_container.version)
       dest_path.must_be :directory?
-      application = dest_path.join('rarcontainer','Application.app')
+      application = Hbc.appdir.join('Application.app')
       application.must_be :directory?
     end
 
@@ -139,7 +139,7 @@ describe Hbc::Installer do
 
       dest_path = Hbc.caskroom.join('bzipped-asset',asset.version)
       dest_path.must_be :directory?
-      file = dest_path.join("bzipped-asset-#{asset.version}")
+      file = Hbc.appdir.join("bzipped-asset-#{asset.version}")
       file.must_be :file?
     end
 
@@ -152,7 +152,7 @@ describe Hbc::Installer do
 
       dest_path = Hbc.caskroom.join('gzipped-asset',asset.version)
       dest_path.must_be :directory?
-      file = dest_path.join("gzipped-asset-#{asset.version}")
+      file = Hbc.appdir.join("gzipped-asset-#{asset.version}")
       file.must_be :file?
     end
 
@@ -220,11 +220,11 @@ describe Hbc::Installer do
     it "allows already-installed Casks which auto-update to be installed if force is provided" do
       auto_updates = Hbc.load('auto-updates')
       auto_updates.installed?.must_equal false
-      installer = Hbc::Installer.new(auto_updates)
 
-      shutup { installer.install }
+      shutup { Hbc::Installer.new(auto_updates).install }
+
       shutup {
-        installer.install(true)
+        Hbc::Installer.new(auto_updates, force: true).install
       } # wont_raise
     end
 
@@ -243,11 +243,11 @@ describe Hbc::Installer do
     it "allows already-installed Casks to be installed if force is provided" do
       transmission = Hbc.load('local-transmission')
       transmission.installed?.must_equal false
-      installer = Hbc::Installer.new(transmission)
 
-      shutup { installer.install }
+      shutup { Hbc::Installer.new(transmission).install }
+
       shutup {
-        installer.install(true)
+        Hbc::Installer.new(transmission, force: true).install
       } # wont_raise
     end
 
@@ -283,7 +283,7 @@ describe Hbc::Installer do
       end
 
       dest_path = Hbc.appdir.join('MyNestedApp.app')
-      TestHelper.valid_alias?(dest_path).must_equal true
+      File.ftype(dest_path).must_equal 'directory'
     end
 
     it "generates and finds a timestamped metadata directory for an installed Cask" do
@@ -329,11 +329,10 @@ describe Hbc::Installer do
 
     it "uninstalls all versions if force is set" do
       caffeine = Hbc.load('local-caffeine')
-      installer = Hbc::Installer.new(caffeine)
       mutated_version = caffeine.version + '.1'
 
       shutup do
-        installer.install
+        Hbc::Installer.new(caffeine).install
       end
 
       Hbc.caskroom.join('local-caffeine',caffeine.version).must_be :directory?
@@ -343,7 +342,7 @@ describe Hbc::Installer do
       Hbc.caskroom.join('local-caffeine',mutated_version).must_be  :directory?
 
       shutup do
-        installer.uninstall(true)
+        Hbc::Installer.new(caffeine, force: true).uninstall
       end
 
       Hbc.caskroom.join('local-caffeine',caffeine.version).wont_be :directory?

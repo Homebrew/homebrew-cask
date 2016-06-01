@@ -1,11 +1,13 @@
 cask 'pycharm' do
-  version '2016.1.2'
-  sha256 '7af26088b8191bdc5360ec36fead1bbad57cc463b1b18cc67b0e64c0d1285de2'
+  version '2016.1.4'
+  sha256 '2f395a34f2e799eebd034a77fd895f20c1a2c2e8bfa9c85b07f848dc216192b4'
 
   url "https://download.jetbrains.com/python/pycharm-professional-#{version}.dmg"
   name 'PyCharm'
   homepage 'https://www.jetbrains.com/pycharm/'
   license :commercial
+
+  conflicts_with cask: 'pycharm-eap'
 
   app 'PyCharm.app'
 
@@ -13,7 +15,6 @@ cask 'pycharm' do
 
   zap delete: [
                 "~/.PyCharm#{version.major_minor}",
-                # TODO: expand/glob for '~/Library/Preferences/jetbrains.pycharm.*.plist',
                 "~/Library/Preferences/PyCharm#{version.major_minor}",
                 "~/Library/Application Support/PyCharm#{version.major_minor}",
                 "~/Library/Caches/PyCharm#{version.major_minor}",

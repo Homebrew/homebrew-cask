@@ -1,13 +1,20 @@
 cask 'electron' do
-  version '0.37.8'
-  sha256 'd2e662b8bbcab34827495553ff139d144c8c6c02f7c6fa75d037ca76f454b523'
+  version '1.2.0'
+  sha256 '1ec63d384eaa3494bba8f3c18b9dc764b680764664749f8a1f3f2da6d8198fa4'
 
   url "https://github.com/atom/electron/releases/download/v#{version}/electron-v#{version}-darwin-x64.zip"
   appcast 'https://github.com/atom/electron/releases.atom',
-          checkpoint: '9c67fddd3ec1be4675c32dc6078380d100a379a5bd6de9f34bcf4d4052e66301'
+          checkpoint: '0002ed6bec765224b555b4c1214eec1756a99aabcf9d49c430d19f5d433c0473'
   name 'Electron'
   homepage 'http://electron.atom.io/'
   license :mit
 
   app 'Electron.app'
+
+  zap delete: [
+                '~/Library/Application Support/Electron',
+                '~/Library/Caches/Electron',
+                '~/Library/Preferences/com.github.electron.helper.plist',
+                '~/Library/Preferences/com.github.electron.plist',
+              ]
 end

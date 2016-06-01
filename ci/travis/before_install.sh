@@ -22,7 +22,10 @@ run 'env | sort'
 run export BRANCH_COMMIT="${TRAVIS_COMMIT_RANGE##*.}"
 run export TARGET_COMMIT="${TRAVIS_COMMIT_RANGE%%.*}"
 # shellcheck disable=SC2016
-run 'MERGE_BASE="$(git merge-base "${BRANCH_COMMIT}" "${TARGET_COMMIT}")"'
+if ! run 'MERGE_BASE="$(git merge-base "${BRANCH_COMMIT}" "${TARGET_COMMIT}")"'; then
+  run git fetch --unshallow
+  run 'MERGE_BASE="$(git merge-base "${BRANCH_COMMIT}" "${TARGET_COMMIT}")"'
+fi
 run export MERGE_BASE="${MERGE_BASE}"
 run export TRAVIS_COMMIT_RANGE="${MERGE_BASE}...${BRANCH_COMMIT}"
 
@@ -45,9 +48,6 @@ run export PATH="${GEM_BINDIR}:${SYSTEM_GEM_BINDIR}:${SYSTEM_RUBY_BINDIR}:$PATH"
 
 # ensure that brew uses the ruby we want it to
 run export HOMEBREW_RUBY_PATH="${SYSTEM_RUBY_BINDIR}/ruby"
-
-# force install bundler
-run gem install bundler
 
 run which ruby
 run ruby --version

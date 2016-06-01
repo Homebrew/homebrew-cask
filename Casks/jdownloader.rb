@@ -16,8 +16,6 @@ cask 'jdownloader' do
 
   auto_updates true
 
-  app 'JDownloader 2.0/JDownloader2.app'
-
   preflight do
     system "\"#{staged_path}/JDownloader Installer.app/Contents/MacOS/JavaApplicationStub\" " \
            "-dir \"#{staged_path}\" " \
@@ -28,6 +26,8 @@ cask 'jdownloader' do
            '-VaddToDockAction\$Boolean=false ' \
            '> /dev/null 2>&1'
   end
+
+  uninstall delete: '/Applications/JDownloader2.app'
 
   caveats do
     depends_on_java

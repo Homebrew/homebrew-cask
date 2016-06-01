@@ -1,6 +1,6 @@
 cask 'tuneinstructor' do
   version '3.6'
-  sha256 'b5bc95a37d86af57ac607949e9eeeaa878d62031199438e6f70ebfbc485218c0'
+  sha256 '7354d7423d19d75aa590f338596fc17da8d1c9f341c55bd7da592d5aa1b18a8e'
 
   url "http://www.tune-instructor.de/resources/downloads/TuneInstructor#{version}.dmg"
   name 'Tune•Instructor'

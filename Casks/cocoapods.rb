@@ -1,11 +1,11 @@
 cask 'cocoapods' do
-  version '1.0.0.rc.1'
-  sha256 'f1013f95294580c7cd10292cbc0930dd37dcf59f7132d66d4d44da577110ecbc'
+  version '1.0.0'
+  sha256 '92e41c869650cf46e42ad3011a75afa8c846cbbd7da552b85a43537061526067'
 
   # github.com/CocoaPods/CocoaPods was verified as official when first introduced to the cask
   url "https://github.com/CocoaPods/CocoaPods-app/releases/download/#{version}/CocoaPods.app-#{version}.tar.bz2"
   appcast 'https://app.cocoapods.org/sparkle',
-          checkpoint: '21534ce10fb9187d8fc4bfc9ba85919e5417733d76e9dee838d3ee0ce4c194a4'
+          checkpoint: '1c438660a09e131d1c8fe292712cb2ff797fe60fc4fc283d0d7aa59f3a9a6792'
   name 'CocoaPods.app'
   homepage 'https://cocoapods.org/'
   license :mit
@@ -13,7 +13,7 @@ cask 'cocoapods' do
   container type: :tar
 
   app 'CocoaPods.app'
-  binary 'CocoaPods.app/Contents/Helpers/pod'
+  binary "#{appdir}/CocoaPods.app/Contents/Helpers/pod"
 
   postflight do
     # Because Homebrew-Cask symlinks the binstub directly, stop the app from asking the user to install the binstub.

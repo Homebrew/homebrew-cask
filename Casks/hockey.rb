@@ -10,7 +10,7 @@ cask 'hockey' do
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'HockeyApp.app'
-  binary 'HockeyApp.app/Contents/Resources/puck'
+  binary "#{appdir}/HockeyApp.app/Contents/Resources/puck"
 
   postflight do
     suppress_move_to_applications

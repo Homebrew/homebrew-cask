@@ -12,7 +12,7 @@ cask 'kaleidoscope' do
   auto_updates true
 
   app 'Kaleidoscope.app'
-  binary 'Kaleidoscope.app/Contents/Resources/bin/ksdiff'
+  binary "#{appdir}/Kaleidoscope.app/Contents/Resources/bin/ksdiff"
 
   postflight do
     suppress_move_to_applications

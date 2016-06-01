@@ -14,11 +14,15 @@ class Hbc::Installer
   include Hbc::Staged
   include Hbc::Verify
 
+  attr_reader :force, :skip_cask_deps
+
   PERSISTENT_METADATA_SUBDIRS = [ 'gpg' ]
 
-  def initialize(cask, command=Hbc::SystemCommand)
+  def initialize(cask, options={})
     @cask = cask
-    @command = command
+    @command = options.fetch(:command, Hbc::SystemCommand)
+    @force = options.fetch(:force, false)
+    @skip_cask_deps = options.fetch(:skip_cask_deps, false)
   end
 
   def self.print_caveats(cask)
@@ -50,7 +54,7 @@ class Hbc::Installer
     output
   end
 
-  def install(force=false, skip_cask_deps=false)
+  def install
     odebug "Hbc::Installer.install"
 
     if @cask.installed? && @cask.auto_updates && !force
@@ -64,12 +68,12 @@ class Hbc::Installer
     print_caveats
 
     begin
-      satisfy_dependencies(skip_cask_deps)
+      satisfy_dependencies
       download
       verify
       extract_primary_container
       install_artifacts
-      save_caskfile force
+      save_caskfile
       enable_accessibility_access
     rescue StandardError => e
       purge_versioned_files
@@ -90,7 +94,7 @@ class Hbc::Installer
 
   def download
     odebug "Downloading"
-    download = Hbc::Download.new(@cask)
+    download = Hbc::Download.new(@cask, force: false)
     @downloaded_path = download.perform
     odebug "Downloaded to -> #{@downloaded_path}"
     @downloaded_path
@@ -121,14 +125,15 @@ class Hbc::Installer
     odebug "#{artifacts.length} artifact/s defined", artifacts
     artifacts.each do |artifact|
       odebug "Installing artifact of class #{artifact}"
-      artifact.new(@cask, @command).install_phase
+      options = { command: @command, force: force }
+      artifact.new(@cask, options).install_phase
     end
   end
 
   # todo move dependencies to a separate class
   #      dependencies should also apply for "brew cask stage"
   #      override dependencies with --force or perhaps --force-deps
-  def satisfy_dependencies(skip_cask_deps=false)
+  def satisfy_dependencies
     if @cask.depends_on
       ohai 'Satisfying dependencies'
       macos_dependencies
@@ -205,7 +210,8 @@ class Hbc::Installer
       if dep.installed?
         puts "already installed"
       else
-        Hbc::Installer.new(dep).install(false, true)
+        Hbc::Installer.new(dep,
+          force: false, skip_cask_deps: true).install
         puts "done"
       end
     end
@@ -258,7 +264,7 @@ class Hbc::Installer
     end
   end
 
-  def save_caskfile(force=false)
+  def save_caskfile
     timestamp = :now
     create    = true
     savedir   = @cask.metadata_subdir('Casks', timestamp, create)
@@ -274,7 +280,7 @@ class Hbc::Installer
     FileUtils.copy(@cask.sourcefile_path, savedir) if @cask.sourcefile_path
   end
 
-  def uninstall(force=false)
+  def uninstall
     odebug "Hbc::Installer.uninstall"
     disable_accessibility_access
     uninstall_artifacts
@@ -288,7 +294,8 @@ class Hbc::Installer
     odebug "#{artifacts.length} artifact/s defined", artifacts
     artifacts.each do |artifact|
       odebug "Un-installing artifact of class #{artifact}"
-      artifact.new(@cask, @command).uninstall_phase
+      options = { command: @command, force: force }
+      artifact.new(@cask, options).uninstall_phase
     end
   end
 
@@ -305,41 +312,8 @@ class Hbc::Installer
     purge_caskroom_path
   end
 
-  # this feels like a class method, but uses @command
   def permissions_rmtree(path)
-    if path.respond_to?(:rmtree) and path.exist?
-      tried_permissions = false
-      tried_ownership = false
-      begin
-        path.rmtree
-      rescue StandardError => e
-        # in case of permissions problems
-        unless tried_permissions
-          # todo Better handling for the case where path is a symlink.
-          #      The -h and -R flags cannot be combined, and behavior is
-          #      dependent on whether the file argument has a trailing
-          #      slash.  This should do the right thing, but is fragile.
-          @command.run!('/usr/bin/chflags', :args => ['-R', '--', '000',   path])
-          @command.run!('/bin/chmod',       :args => ['-R', '--', 'u+rwx', path])
-          @command.run!('/bin/chmod',       :args => ['-R', '-N',          path])
-          tried_permissions = true
-          retry # rmtree
-        end
-        unless tried_ownership
-          # in case of ownership problems
-          # todo Further examine files to see if ownership is the problem
-          #      before using sudo+chown
-          ohai "Using sudo to gain ownership of path '#{path}'"
-          current_user = Etc.getpwuid(Process.euid).name
-          @command.run('/usr/sbin/chown', :args => ['-R', '--', current_user, path],
-                                          :sudo => true)
-          tried_ownership = true
-          # retry chflags/chmod after chown
-          tried_permissions = false
-          retry # rmtree
-        end
-      end
-    end
+    Hbc::Utils.permissions_rmtree(path, command: @command)
   end
 
   def purge_versioned_files

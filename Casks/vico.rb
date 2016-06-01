@@ -10,5 +10,5 @@ cask 'vico' do
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Vico.app'
-  binary 'Vico.app/Contents/MacOS/vicotool', target: 'vico'
+  binary "#{appdir}/Vico.app/Contents/MacOS/vicotool", target: 'vico'
 end

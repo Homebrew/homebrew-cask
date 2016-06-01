@@ -1,6 +1,6 @@
 cask 'chefdk' do
-  version '0.13.21-1'
-  sha256 '283b2c6f70bc2bea0ad460df331bd2b16c4a04442b102d2beb882bd43faaf463'
+  version '0.14.25-1'
+  sha256 '4dd60d4d30881157cecf0683b84eb35a8a818e5dffe63de9b9cc6e9be435e88c'
 
   url "https://packages.chef.io/stable/mac_os_x/10.11/chefdk-#{version}.dmg"
   name 'Chef Development Kit'

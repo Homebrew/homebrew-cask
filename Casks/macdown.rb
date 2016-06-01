@@ -5,13 +5,13 @@ cask 'macdown' do
   # github.com/uranusjr/macdown was verified as official when first introduced to the cask
   url "https://github.com/uranusjr/macdown/releases/download/v#{version}/MacDown.app.zip"
   appcast 'https://github.com/uranusjr/macdown/releases.atom',
-          checkpoint: 'dc94fe807286a33b5e4c89895fa58c1a01fb217d9e5ea5966143570be98bcbff'
+          checkpoint: '5ddaf175fa2d01fa631675802a747b2a051e9effaaa989c71987b8888ee2de83'
   name 'MacDown'
   homepage 'http://macdown.uranusjr.com/'
   license :mit
 
   app 'MacDown.app'
-  binary 'MacDown.app/Contents/SharedSupport/bin/macdown'
+  binary "#{appdir}/MacDown.app/Contents/SharedSupport/bin/macdown"
 
   zap delete: ['~/Library/Preferences/com.uranusjr.macdown.plist',
                '~/Library/Application Support/MacDown']

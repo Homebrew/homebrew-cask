@@ -26,6 +26,13 @@ class Hbc::FakeSystemCommand
     expectations[command] = times
   end
 
+  def self.expect_and_pass_through(command, times=1)
+    pass_through = lambda do |command, options|
+      Hbc::SystemCommand.run(command, options)
+    end
+    expects_command(command, pass_through, times)
+  end
+
   def self.verify_expectations!
     expectations.each do |command, times|
       unless system_calls[command] == times
@@ -34,13 +41,19 @@ class Hbc::FakeSystemCommand
     end
   end
 
-  def self.run(command, options={})
-    command = Hbc::SystemCommand._process_options(command, options)
+  def self.run(command_string, options={})
+    command = Hbc::SystemCommand._process_options(command_string, options)
     unless responses.key?(command)
       fail("no response faked for #{command.inspect}, faked responses are: #{responses.inspect}")
     end
     system_calls[command] += 1
-    Hbc::SystemCommand::Result.new(command, responses[command], '', 0)
+
+    response = responses[command]
+    if response.respond_to?(:call)
+      response.call(command_string, options)
+    else
+      Hbc::SystemCommand::Result.new(command, response, '', 0)
+    end
   end
 
   def self.run!(command, options={})
