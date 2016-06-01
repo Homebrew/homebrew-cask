@@ -149,40 +149,40 @@ in a future version.
     Give additional feedback during installation.
 
   * `--appdir=<path>`:
-    Target location for Application links. The default value is `/Applications`.
+    Target location for Applications. The default value is `/Applications`.
 
   * `--colorpickerdir=<path>`:
-    Target location for Color Picker links. The default value is `~/Library/Color Pickers`.
+    Target location for Color Pickers. The default value is `~/Library/Color Pickers`.
 
   * `--prefpanedir=<path>`:
-    Target location for Preference Pane links. The default value is `~/Library/Preference Panes`.
+    Target location for Preference Panes. The default value is `~/Library/Preference Panes`.
 
   * `--qlplugindir=<path>`:
-    Target location for QuickLook Plugin links. The default value is `~/Library/QuickLook`.
+    Target location for QuickLook Plugins. The default value is `~/Library/QuickLook`.
 
   * `--fontdir=<path>`:
-    Target location for Font links. The default value is `~/Library/Fonts`.
+    Target location for Fonts. The default value is `~/Library/Fonts`.
 
   * `--servicedir=<path>`:
-    Target location for Service links. The default value is `~/Library/Services`.
+    Target location for Services. The default value is `~/Library/Services`.
 
   * `--input_methoddir=<path>`:
-    Target location for Input Method links. The default value is `~/Library/Input Methods`.
+    Target location for Input Methods. The default value is `~/Library/Input Methods`.
 
   * `--internet_plugindir=<path>`:
-    Target location for Internet Plugin links. The default value is `~/Library/Internet Plug-Ins`.
+    Target location for Internet Plugins. The default value is `~/Library/Internet Plug-Ins`.
 
   * `--audio_unit_plugindir=<path>`:
-    Target location for Audio Unit Plugin links. The default value is `~/Library/Audio/Plug-Ins/Components`.
+    Target location for Audio Unit Plugins. The default value is `~/Library/Audio/Plug-Ins/Components`.
 
   * `--vst_plugindir=<path>`:
-    Target location for VST Plugin links. The default value is `~/Library/Audio/Plug-Ins/VST`.
+    Target location for VST Plugins. The default value is `~/Library/Audio/Plug-Ins/VST`.
 
   * `--vst3_plugindir=<path>`:
-    Target location for VST3 Plugin links. The default value is `~/Library/Audio/Plug-Ins/VST3`.
+    Target location for VST3 Plugins. The default value is `~/Library/Audio/Plug-Ins/VST3`.
 
   * `--screen_saverdir=<path>`:
-    Target location for Screen Saver links. The default value is `~/Library/Screen Savers`.
+    Target location for Screen Savers. The default value is `~/Library/Screen Savers`.
 
   * `--no-binaries`:
     Do not link "helper" executables to `/usr/local/bin`.
