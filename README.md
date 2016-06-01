@@ -24,7 +24,7 @@ To start using Homebrew-Cask, you just need [Homebrew](http://brew.sh/) installe
 $ brew cask install google-chrome
 ==> Downloading https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
 ==> Moving App 'Google Chrome.app' to '/Applications/Google Chrome.app'
-🍺  google-chrome staged at '/opt/homebrew-cask/Caskroom/google-chrome/latest' (208 files, 184M)
+🍺  google-chrome staged at '/opt/homebrew-cask/Caskroom/google-chrome/latest' (3 files, 288K)
 ```
 
 And there we have it. Google Chrome installed with a few quick commands: no clicking, no dragging, no dropping.

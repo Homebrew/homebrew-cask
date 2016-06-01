@@ -42,7 +42,7 @@ The command `brew cask install` accepts a Cask token as returned by `brew cask s
 $ brew cask install google-chrome
 ==> Downloading https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
 ==> Moving App 'Google Chrome.app' to '/Applications/Google Chrome.app'
-🍺  google-chrome staged at '/opt/homebrew-cask/Caskroom/google-chrome/latest' (208 files, 184M)
+🍺  google-chrome staged at '/opt/homebrew-cask/Caskroom/google-chrome/latest' (3 files, 288K)
 ```
 
 ## Uninstalling Casks
