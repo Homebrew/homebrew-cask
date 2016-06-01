@@ -1,13 +1,11 @@
 cask 'cog' do
-  version 'r2051'
-  sha256 '1cc55f718a15810cccc5141312c01079e1da230a2412e4bc66c172de7aee36fe'
+  version '4fdbf35'
+  sha256 '3239ba84b1dd65edbfa816695ffaa0af7ad6dbf6fdc3d77d9807ec2454095cbf'
 
-  # the stable package on sourceforge is a bzip-inside-bzip that we can't handle
-  url "http://cogx.org/nightly_builds/cog-#{version}.tbz"
-  appcast 'http://mamburu.net/cog/stable.xml',
-          checkpoint: 'f5770d73ad0c4a19af24cf25195c01d1cc05b937a79416fe82ead0949beee62e'
+  # The abandoned cog code has been forked and is not maintained again
+  url "https://www.kode54.net/cog/mercury_builds/Cog-#{version}.zip"
   name 'Cog'
-  homepage 'http://cogx.org'
+  homepage 'https://kode54.net/cog/'
   license :gpl
 
   app 'Cog.app'
