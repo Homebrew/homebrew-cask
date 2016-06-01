@@ -42,7 +42,7 @@ The command `brew cask install` accepts a Cask token as returned by `brew cask s
 $ brew cask install google-chrome
 ==> Downloading https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
 ==> Moving App 'Google Chrome.app' to '/Applications/Google Chrome.app'
-🍺  google-chrome staged at '/opt/homebrew-cask/Caskroom/google-chrome/latest' (208 files, 184M)
+🍺  google-chrome staged at '/opt/homebrew-cask/Caskroom/google-chrome/latest' (3 files, 288K)
 ```
 
 ## Uninstalling Casks
@@ -201,7 +201,7 @@ export HOMEBREW_CASK_OPTS="--appdir=~/Applications --caskroom=/etc/Caskroom"
 Note that you still can override the environment variable `HOMEBREW_CASK_OPTS` by _explicitly_ providing options in the command line:
 
 ```bash
-# Will force the Chrome app to be linked to /Applications
+# Will force the Chrome app to be moved to /Applications
 # even though HOMEBREW_CASK_OPTS specified ~/Applications
 $ brew cask install --appdir="/Applications" google-chrome
 ```
