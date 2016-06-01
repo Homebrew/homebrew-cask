@@ -35,7 +35,7 @@ cask 'cleanmymac' do
                 ]
   else
     version '3.3.6'
-    sha256 'ef45c2b145e250ede8484d179b6fda3ae6d2701c'
+    sha256 '6e72e8ac50c8fed469e2e1975201e47fa3f27d1287c863128ecba9ea84be59ef'
 
     # devmate.com/com.macpaw.CleanMyMac3 was verified as official when first introduced to the cask
     url "http://dl.devmate.com/com.macpaw.CleanMyMac3/CleanMyMac3.dmg"
