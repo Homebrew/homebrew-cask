@@ -1,5 +1,5 @@
 cask 'toad' do
-  version '2.3.8'
+  version '2.4.0'
   sha256 '2b0c98ea6d8306175ea6478f32ae656891e58a8b410c36d3ab84894ded584daf'
 
   # http://community-downloads.quest.com/toadsoft/ was verified as official when first introduced to the cask
