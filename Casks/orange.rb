@@ -7,6 +7,5 @@ cask 'orange' do
   homepage 'http://orange.biolab.si/'
   license :gpl
 
-  app 'Orange3.app', target: 'Orange.app'
-  # Target for consistency, old versions did not include "3" in the App name and would not be overwritten.
+  app 'Orange3.app'
 end
