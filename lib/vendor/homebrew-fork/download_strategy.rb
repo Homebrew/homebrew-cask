@@ -59,7 +59,6 @@ class Hbc::HbCurlDownloadStrategy < Hbc::AbstractDownloadStrategy
 
   def fetch
     ohai "Downloading #{@url}"
-    puts "The cache path for download: #{tarball_path}"
     unless tarball_path.exist?
       had_incomplete_download = temporary_path.exist?
       begin
@@ -77,6 +76,8 @@ class Hbc::HbCurlDownloadStrategy < Hbc::AbstractDownloadStrategy
             msg = "File does not exist: #{@url.sub(%r[^file://], "")}"
           else
             msg = "Download failed: #{@url}"
+            msg << "\nThe desired cache filepath is #{tarball_path}, maybe you can download it by other tool,"
+            msg << "add move to the cache filepath, then run the install command again"
           end
           raise Hbc::CurlDownloadStrategyError, msg
         end
