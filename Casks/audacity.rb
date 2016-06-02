@@ -8,7 +8,7 @@ cask 'audacity' do
   homepage 'http://audacityteam.org'
   license :gpl
 
-  app 'Audacity/Audacity.app'
+  suite 'Audacity'
 
   zap delete: '~/Library/Application Support/audacity'
 end
