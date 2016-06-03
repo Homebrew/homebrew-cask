@@ -10,6 +10,7 @@ cask 'gitup' do
   homepage 'http://gitup.co'
   license :gpl
 
+  auto_updates true
   depends_on macos: '>= :mountain_lion'
 
   app 'GitUp.app'
