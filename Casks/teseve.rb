@@ -1,11 +1,11 @@
 cask 'teseve' do
-  version '0.5.2'
-  sha256 'c99a2032b0415eceba4938fa38d88fb1b27080ab27617ee2d5ed1dfb18570d87'
+  version '0.5.3'
+  sha256 '6f6ae56e101c973d6662afab6d5fd707b03e8853ecb92a49c04b9d5b4ce40c2f'
 
   # github.com/teseve/teseve was verified as official when first introduced to the cask
   url "https://github.com/teseve/teseve/releases/download/#{version}/Teseve-#{version}-mac-x64.zip"
   appcast 'https://github.com/teseve/teseve/releases.atom',
-          checkpoint: '1792d451f9e91344138508bead99715324bc7b3288d73a3192245fdaf5979865'
+          checkpoint: '23472e9f0783ef2271a383cb743e7af2d5253225510c84d83a8408bbb25ccf42'
   name 'Tèsèvè'
   homepage 'http://teseve.github.io/'
   license :public_domain
