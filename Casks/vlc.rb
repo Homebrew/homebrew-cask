@@ -12,6 +12,8 @@ cask 'vlc' do
       key_id: '65f7c6b4206bd057a7eb73787180713be58d1adc'
 
   app 'VLC.app'
+
+  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/vlcwrapper"
   binary shimscript, target: 'vlc'
 
