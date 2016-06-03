@@ -11,6 +11,6 @@ cask 'jxplorer' do
   app "jxplorer-#{version}.app"
 
   postflight do
-    set_permissions "#{staged_path}/jxplorer-#{version}.app/Contents/MacOS/jxplorer", 'a+x'
+    set_permissions "#{appdir}/jxplorer-#{version}.app/Contents/MacOS/jxplorer", 'a+x'
   end
 end
