@@ -13,7 +13,7 @@ cask 'hex-fiend' do
   app 'Hex Fiend.app'
 
   postflight do
-    set_permissions "#{staged_path}/Hex Fiend.app/Contents/Frameworks/Sparkle.framework", 'og=u'
+    set_permissions "#{appdir}/Hex Fiend.app/Contents/Frameworks/Sparkle.framework", 'og=u'
   end
 
   zap delete: [
