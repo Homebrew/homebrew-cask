@@ -18,8 +18,8 @@ cask 'blender' do
     pythonversion = '3.4'
     File.open(shimscript, 'w') do |f|
       f.puts '#!/bin/bash'
-      f.puts "export PYTHONHOME=#{Hbc.appdir}/blender.app/Contents/Resources/#{version}/python/lib/python#{pythonversion}"
-      f.puts "#{Hbc.appdir}/blender.app/Contents/MacOS/blender $@"
+      f.puts "export PYTHONHOME=#{appdir}/blender.app/Contents/Resources/#{version}/python/lib/python#{pythonversion}"
+      f.puts "#{appdir}/blender.app/Contents/MacOS/blender $@"
       FileUtils.chmod '+x', f
     end
   end
