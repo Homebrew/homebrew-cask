@@ -11,6 +11,6 @@ cask 'pd-extended' do
   app 'Pd-extended.app'
 
   postflight do
-    set_permissions "#{staged_path}/Pd-extended.app", 'u+w'
+    set_permissions "#{Hbc.appdir}/Pd-extended.app", 'u+w'
   end
 end
