@@ -152,10 +152,10 @@ in a future version.
     Target location for Applications. The default value is `/Applications`.
 
   * `--colorpickerdir=<path>`:
-    Target location for Color Pickers. The default value is `~/Library/Color Pickers`.
+    Target location for Color Pickers. The default value is `~/Library/ColorPickers`.
 
   * `--prefpanedir=<path>`:
-    Target location for Preference Panes. The default value is `~/Library/Preference Panes`.
+    Target location for Preference Panes. The default value is `~/Library/PreferencePanes`.
 
   * `--qlplugindir=<path>`:
     Target location for QuickLook Plugins. The default value is `~/Library/QuickLook`.
