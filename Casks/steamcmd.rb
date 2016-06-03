@@ -10,6 +10,7 @@ cask 'steamcmd' do
 
   auto_updates true
 
+  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/__cask_wrapper.sh"
   binary shimscript, target: 'steamcmd'
 
