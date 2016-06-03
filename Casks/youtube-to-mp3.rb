@@ -1,5 +1,5 @@
 cask 'youtube-to-mp3' do
-  version '3.9.7'
+  version :latest
   sha256 :no_check
 
   url 'http://www.mediahuman.com/files/YouTubeToMP3.dmg'
