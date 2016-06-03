@@ -8,7 +8,7 @@ cask 'datadog-agent' do
   homepage 'https://www.datadoghq.com/'
   license :bsd
 
-  pkg 'datadogagent-5.8.0-1.pkg'
+  pkg "datadogagent-#{version}.pkg"
 
   preflight do
     require 'etc'
