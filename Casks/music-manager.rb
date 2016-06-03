@@ -11,5 +11,5 @@ cask 'music-manager' do
   # Original discussion: https://github.com/caskroom/homebrew-cask/pull/4282
   app 'MusicManager.app', target: 'Music Manager.app'
 
-  uninstall delete: '~/Library/Preference Panes/MusicManager.prefPane'
+  uninstall delete: '~/Library/PreferencePanes/MusicManager.prefPane'
 end
