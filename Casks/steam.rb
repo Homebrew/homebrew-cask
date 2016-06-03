@@ -2,6 +2,7 @@ cask 'steam' do
   version :latest
   sha256 :no_check
 
+  # steamcdn-a.akamaihd.net was verified as official when first introduced to the cask
   url 'https://steamcdn-a.akamaihd.net/client/installer/steam.dmg'
   name 'Steam'
   homepage 'http://store.steampowered.com/about/'
