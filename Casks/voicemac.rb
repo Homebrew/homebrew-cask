@@ -12,6 +12,6 @@ cask 'voicemac' do
   app 'VoiceMac/VoiceMac.app'
 
   postflight do
-    set_permissions "#{staged_path}/VoiceMac/VoiceMac.app/Contents/Info.plist", 'a+r'
+    set_permissions "#{appdir}/VoiceMac.app/Contents/Info.plist", 'a+r'
   end
 end
