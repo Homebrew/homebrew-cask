@@ -10,8 +10,8 @@ cask 'rawtherapee' do
 
     url "http://rawtherapee.com/releases_head/mac/RawTherapee_OSX_10.10_64_#{version}.zip"
   else
-    version '4.2.753'
-    sha256 'd2210c78a2ca377f0729bf773bb97028d531ab32367e8d935e1c6bfb64192f4d'
+    version '4.2.876'
+    sha256 '40feb4419bab29d8e822ac5577fdcc80683ebbf5a6acce40bf51acfbc4b387f5'
 
     url "http://rawtherapee.com/releases_head/mac/RawTherapee_OSX_10.11_64_#{version.sub(%r{^(\d+)\.(\d+).(\d+).*}, '\1.\2-\3')}_master.zip"
   end
