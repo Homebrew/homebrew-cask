@@ -64,9 +64,14 @@ GEM
     rspec-expectations (3.0.4)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.0.0)
+    rspec-its (1.2.0)
+      rspec-core (>= 3.0.0)
+      rspec-expectations (>= 3.0.0)
     rspec-mocks (3.0.4)
       rspec-support (~> 3.0.0)
     rspec-support (3.0.4)
+    rspec-wait (0.0.8)
+      rspec (>= 2.11, < 3.5)
     rubocop (0.40.0)
       parser (>= 2.3.1.0, < 3.0)
       powerpack (~> 0.1)
@@ -104,6 +109,8 @@ DEPENDENCIES
   rake
   ronn (= 0.7.3)
   rspec (~> 3.0.0)
+  rspec-its
+  rspec-wait
   rubocop-cask (~> 0.6.1)
 
 BUNDLED WITH

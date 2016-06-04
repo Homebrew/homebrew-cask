@@ -42,7 +42,7 @@ class Hbc::FakeSystemCommand
   end
 
   def self.run(command_string, options={})
-    command = Hbc::SystemCommand._process_options(command_string, options)
+    command = Hbc::SystemCommand.new(command_string, options).command
     unless responses.key?(command)
       fail("no response faked for #{command.inspect}, faked responses are: #{responses.inspect}")
     end

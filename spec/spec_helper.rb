@@ -1,4 +1,6 @@
 require 'pathname'
+require 'rspec/its'
+require 'rspec/wait'
 
 if ENV['COVERAGE']
   require 'coveralls'
