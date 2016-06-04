@@ -8,4 +8,9 @@ cask 'smart-converter' do
   license :commercial
 
   app 'SmartConverter.app'
+
+  zap delete: [
+                '~/Library/Containers/com.shedworx.smartconverter',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.shedworx.smartconverter.sfl',
+              ]
 end
