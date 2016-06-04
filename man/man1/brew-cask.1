@@ -18,7 +18,7 @@ Homebrew\-Cask works robustly enough that we welcome new users, but the project 
 .SH "FREQUENTLY USED COMMANDS"
 .
 .TP
-\fBinstall [\-\-force]\fR \fItoken\fR [ \fItoken\fR \.\.\. ]
+\fBinstall [\-\-force] [\-\-skip\-cask\-deps]\fR \fItoken\fR [ \fItoken\fR \.\.\. ]
 Install Cask identified by \fItoken\fR\.
 .
 .TP
@@ -74,8 +74,8 @@ With no arguments, display the project page \fIhttp://caskroom\.io\fR\.
 Display information about the given Cask\.
 .
 .TP
-\fBinstall [\-\-force]\fR \fItoken\fR [ \fItoken\fR \.\.\. ]
-Install the given Cask\. With \fB\-\-force\fR, re\-install even if the Cask appears to be already present\.
+\fBinstall [\-\-force] [\-\-skip\-cask\-deps]\fR \fItoken\fR [ \fItoken\fR \.\.\. ]
+Install the given Cask\. With \fB\-\-force\fR, re\-install even if the Cask appears to be already present\. With \fB\-\-skip\-cask\-deps\fR, skip any Cask dependencies\.
 .
 .IP
 \fItoken\fR is usually the ID of a Cask as returned by \fBbrew cask search\fR, but see \fIOTHER WAYS TO SPECIFY A CASK\fR for variations\.
@@ -138,6 +138,10 @@ Some of these (such as \fB\-\-prefpanedir\fR) may be subject to removal in a fut
 .TP
 \fB\-\-force\fR
 Force an install to proceed even when a previously\-existing install is detected\.
+.
+.TP
+\fB\-\-skip\-cask\-deps\fR
+Skip Cask dependencies when installing\.
 .
 .TP
 \fB\-\-caskroom=<path>\fR
