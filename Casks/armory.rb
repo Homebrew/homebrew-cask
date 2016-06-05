@@ -1,11 +1,11 @@
 cask 'armory' do
-  version '0.93.3'
-  sha256 'ecadb37e43f86a06815f0bc0cec8708b64fd3b53d9c01d7c939d2c941a5e8e91'
+  version '0.94.1'
+  sha256 'e1a977de35840d969bdf4039a0d5ddb466866ee793e9c178b0650ebbbf93af5c'
 
-  url "https://www.bitcoinarmory.com/downloads/bitcoinarmory-releases/armory_#{version}_osx.tar.gz"
+  url "https://github.com/goatpig/BitcoinArmory/releases/download/v#{version}/armory_#{version}_osx.tar.gz"
   name 'Armory'
-  homepage 'https://bitcoinarmory.com/'
-  license :affero
+  homepage 'https://github.com/goatpig/BitcoinArmory'
+  license :oss
 
   app 'Armory.app'
 end
