@@ -18,7 +18,7 @@ cask 'ax88179' do
   pkg "AX88179_178A_v#{version}.pkg"
 
   uninstall script: {
-                      executable: 'AX88179_178A_Uninstall_v140'
+                      executable: 'AX88179_178A_Uninstall_v140',
                       sudo:       false,
                     }
 end
