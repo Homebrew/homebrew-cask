@@ -11,7 +11,10 @@ cask 'logitech-options' do
 
   pkg 'LogiMgr Installer.app/Contents/Resources/LogiMgr.mpkg'
 
-  uninstall script:  '/Applications/Utilities/LogiMgr Uninstaller.app/Contents/Resources/Uninstaller',
+  uninstall script:  {
+                       executable: '/Applications/Utilities/LogiMgr Uninstaller.app/Contents/Resources/Uninstaller',
+                       sudo:       false,
+                     },
             pkgutil: [
                        'com.logitech.manager.pkg',
                        'com.Logitech.signedKext.pkg',
