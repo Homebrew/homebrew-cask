@@ -17,6 +17,7 @@ class Hbc::Audit
     check_sha256
     check_appcast
     check_url
+    check_https_or_sha
     check_generic_artifacts
     check_download
     self
@@ -137,6 +138,12 @@ class Hbc::Audit
     bad_url_format?(/osd/, [
       %r{\Ahttps?://[^/]+\.osdn\.jp/},
     ])
+  end
+
+  def check_https_or_sha
+    if not cask.url.to_s.start_with? "https://" and cask.sha256 == :no_check
+      add_warning "http used without sha256"
+    end
   end
 
   def check_generic_artifacts
