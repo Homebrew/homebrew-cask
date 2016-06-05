@@ -16,7 +16,10 @@ cask 'jenkins' do
   pkg "jenkins-#{version}.pkg"
   binary '/Library/Application Support/Jenkins/jenkins-runner.sh', target: 'jenkins-runner'
 
-  uninstall script:    '/Library/Application Support/Jenkins/Uninstall.command',
+  uninstall script:    {
+                         executable: '/Library/Application Support/Jenkins/Uninstall.command',
+                         sudo:       true,
+                       },
             pkgutil:   'org.jenkins-ci.*pkg',
             launchctl: 'org.jenkins-ci'
 
