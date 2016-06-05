@@ -9,7 +9,11 @@ cask 'logmein-hamachi' do
   license :freemium
 
   installer script: 'LogMeInHamachiInstaller.app/Contents/MacOS/Lili',
-            args:   ['-s']
+            args:   ['-s'],
+            sudo:   true
 
-  uninstall script: '/Applications/LogMeIn Hamachi/HamachiUninstaller.app/Contents/Resources/uninstaller.sh'
+  uninstall script: {
+                      executable: '/Applications/LogMeIn Hamachi/HamachiUninstaller.app/Contents/Resources/uninstaller.sh',
+                      sudo:       true,
+                    }
 end
