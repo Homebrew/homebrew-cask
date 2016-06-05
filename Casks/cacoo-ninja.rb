@@ -16,5 +16,6 @@ cask 'cacoo-ninja' do
   uninstall script: {
                       executable: Hbc::Container::Air::INSTALLER_PATHNAME,
                       args:       %w[-uninstall -silent /Applications/Cacoo\ Ninja.app],
+                      sudo:       true,
                     }
 end
