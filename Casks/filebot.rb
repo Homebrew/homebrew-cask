@@ -8,8 +8,8 @@ cask 'filebot' do
   homepage 'https://www.filebot.net/'
   license :gpl
 
-  app 'FileBot.app'
-  binary "#{appdir}/FileBot.app/Contents/MacOS/filebot.sh", target: 'filebot'
+  app 'FileBot.app', target: 'FileBot-brew.app'
+  binary "#{appdir}/FileBot-brew.app/Contents/MacOS/filebot.sh", target: 'filebot'
 
   caveats do
     depends_on_java('8')
