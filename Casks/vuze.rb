@@ -8,7 +8,8 @@ cask 'vuze' do
   license :gpl
 
   installer script: 'Vuze Installer.app/Contents/MacOS/JavaApplicationStub',
-            args:   ['-q']
+            args:   ['-q'],
+            sudo:   true
 
   uninstall delete: '/Applications/Vuze.app'
 
