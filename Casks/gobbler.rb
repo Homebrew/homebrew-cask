@@ -12,5 +12,6 @@ cask 'gobbler' do
   uninstall script: {
                       executable: '/Library/Gobbler/Uninstaller/uninstall_gobbler.sh',
                       args:       ['-f'],
+                      sudo:       true,
                     }
 end
