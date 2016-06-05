@@ -16,5 +16,6 @@ cask 'scratch' do
   uninstall script: {
                       executable: Hbc::Container::Air::INSTALLER_PATHNAME,
                       args:       %w[-uninstall -silent /Applications/Scratch\ 2.app],
+                      sudo:       true,
                     }
 end
