@@ -8,7 +8,8 @@ cask 'paye-tools' do
   license :gratis
 
   installer script: "payetools-rti-#{version}-osx.app/Contents/MacOS/osx-intel",
-            args:   ['--mode', 'unattended']
+            args:   ['--mode', 'unattended'],
+            sudo:   true
 
   uninstall quit: 'uk.gov.hmrc.bptrti'
 end
