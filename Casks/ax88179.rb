@@ -19,6 +19,6 @@ cask 'ax88179' do
 
   uninstall script: {
                       executable: 'AX88179_178A_Uninstall_v140'
-                      sudo:       false
+                      sudo:       false,
                     }
 end
