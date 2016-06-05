@@ -76,8 +76,7 @@ class Hbc::HbCurlDownloadStrategy < Hbc::AbstractDownloadStrategy
             msg = "File does not exist: #{@url.sub(%r[^file://], "")}"
           else
             msg = "Download failed: #{@url}"
-            msg << "\nThe desired cache filepath is #{tarball_path}, maybe you can download it by other tool,"
-            msg << "add move to the cache filepath, then run the install command again"
+            msg << "\nThe incomplete download is cached at #{tarball_path}"
           end
           raise Hbc::CurlDownloadStrategyError, msg
         end
