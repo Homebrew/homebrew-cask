@@ -1,10 +1,10 @@
 cask 'mactex' do
-  version '20150613'
-  sha256 'c5f5b0fd853a17dab6e844fb5e893804af78d938fa18ee94ec3b257611a95c12'
+  version '20160604'
+  sha256 '2dde37de09e2ae33132044749204841127c1d7d2eb3b6da72c1e02673a1a5ec6'
 
   url 'http://tug.org/cgi-bin/mactex-download/MacTeX.pkg'
   appcast 'http://www.tug.org/mactex/downloading.html#checksum',
-          checkpoint: 'ef3bd331dbea7053d322e153a6a2c2db98ab93f70e0689e9eef5cf57220606ce'
+          checkpoint: '14b52a4b06fa7259d2665c2a26f41dde0ee15fb61cb9b69c707ad916e9dd8073'
   name 'MacTeX'
   homepage 'https://www.tug.org/mactex/'
   license :oss
