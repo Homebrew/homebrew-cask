@@ -1,8 +1,9 @@
 cask 'sqlpro-for-mysql' do
-  version :latest
-  sha256 :no_check
+  version '1.0.20'
+  sha256 '078d78fad1d998b808f927715939bf343a13c4088c9c2ec6244ae33b62522186'
 
-  url 'http://www.mysqlui.com/download.php'
+  # d3fwkemdw8spx3.cloudfront.net/mysql was verified as official when first introduced to the cask
+  url "https://d3fwkemdw8spx3.cloudfront.net/mysql/SQLProMySQL.#{version}.app.zip"
   name 'SQLPro for MySQL'
   homepage 'http://www.mysqlui.com'
   license :commercial
@@ -11,6 +12,6 @@ cask 'sqlpro-for-mysql' do
 
   zap delete: [
                 '~/Library/Containers/com.hankinsoft.osx.mysql',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.mysql.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsof$
               ]
 end
