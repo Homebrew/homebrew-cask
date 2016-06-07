@@ -1,11 +1,11 @@
 cask 'jabref' do
-  version '3.3'
-  sha256 '949bd9a1a3bb0c71dccfa73e6f9c62627071534250db79bdd051f79f75a3c2a8'
+  version '3.4'
+  sha256 '5315e66a3e9b7b606a1c514d5c332c7ca9b41daba2f0150df4558bf8ad84c0f2'
 
   # sourceforge.net/project/jabref was verified as official when first introduced to the cask
   url "http://downloads.sourceforge.net/project/jabref/v#{version}/JabRef_macos_#{version.dots_to_underscores}.dmg"
   appcast 'https://github.com/JabRef/jabref/releases.atom',
-          checkpoint: 'd4d445db221bf7ac2889bb5abbec4ca933cf2c533bdebcdf716d2c22c11776e0'
+          checkpoint: '251d98301098322e1887babb12dcd77b296c21eb6956f6111a1f969112c7e173'
   name 'JabRef'
   homepage 'http://www.jabref.org/'
   license :gpl
