@@ -12,7 +12,6 @@ cask 'clion' do
   app 'CLion.app'
 
   zap delete: [
-                "~/.CLion#{version.major_minor}",
                 "~/Library/Preferences/CLion#{version.major_minor}",
                 "~/Library/Application Support/CLion#{version.major_minor}",
                 "~/Library/Caches/CLion#{version.major_minor}",

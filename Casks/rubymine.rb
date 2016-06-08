@@ -16,7 +16,6 @@ cask 'rubymine' do
   zap delete: [
                 "~/Library/Application Support/RubyMine#{version.major_minor}",
                 "~/Library/Preferences/RubyMine#{version.major_minor}",
-                "~/.RubyMine#{version.major_minor}",
                 "~/Library/Caches/RubyMine#{version.major_minor}",
                 "~/Library/Logs/RubyMine#{version.major_minor}",
               ]
