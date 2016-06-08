@@ -1,6 +1,6 @@
 cask 'wwdc' do
-  version '4.1'
-  sha256 '388d626d4af3d3207a021a28830a8c4f0ca974c5a3d55b04eda64d9277f36734'
+  version '4.1.1'
+  sha256 '505b8764774c7293f96eaf2904ae41361a086836bc1796c7335b330f5269feab'
 
   url "https://github.com/insidegui/WWDC/releases/download/#{version}/WWDC_v#{version}.zip"
   appcast 'https://github.com/insidegui/WWDC/releases.atom',
