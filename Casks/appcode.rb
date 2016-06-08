@@ -12,7 +12,6 @@ cask 'appcode' do
   app 'AppCode.app'
 
   zap delete: [
-                "~/.Appcode#{version.major_minor}",
                 "~/Library/Preferences/AppCode#{version.major_minor}",
                 "~/Library/Application Support/AppCode#{version.major_minor}",
                 "~/Library/Caches/AppCode#{version.major_minor}",

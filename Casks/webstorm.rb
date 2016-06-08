@@ -14,7 +14,6 @@ cask 'webstorm' do
   uninstall delete: '/usr/local/bin/wstorm'
 
   zap delete: [
-                "~/.WebStorm#{version.major_minor}",
                 "~/Library/Preferences/WebStorm#{version.major_minor}",
                 "~/Library/Application Support/WebStorm#{version.major_minor}",
                 "~/Library/Caches/WebStorm#{version.major_minor}",
