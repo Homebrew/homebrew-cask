@@ -8,6 +8,8 @@ cask 'veracrypt' do
   homepage 'https://veracrypt.codeplex.com/'
   license :oss
 
+  depends_on cask: 'osxfuse'
+
   pkg 'VeraCrypt_Installer.pkg'
 
   uninstall pkgutil: 'com.idrix.pkg.veracrypt'
