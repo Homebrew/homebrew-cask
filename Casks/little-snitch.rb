@@ -10,9 +10,13 @@ cask 'little-snitch' do
   installer manual: 'Little Snitch Installer.app'
 
   zap delete: [
+                '/Library/Application Support/Objective Development/Little Snitch',
+                '~/Library/Application Support/Little Snitch',
+                '~/Library/Preferences/at.obdev.LittleSnitchConfiguration.plist',
                 '~/Library/Preferences/at.obdev.LittleSnitchNetworkMonitor.plist',
-                '~/Library/Application Support/Little Snitch/rules.usr.xpl',
-                '~/Library/Application Support/Little Snitch/configuration.xpl',
-                '~/Library/Application Support/Little Snitch/configuration.user.xpl',
+                '~/Library/Preferences/at.obdev.LittleSnitchInstaller.plist',
+              ],
+      rmdir:  [
+                '/Library/Application Support/Objective Development',
               ]
 end
