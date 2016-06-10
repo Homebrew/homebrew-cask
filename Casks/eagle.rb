@@ -1,6 +1,6 @@
 cask 'eagle' do
-  version '7.5.0'
-  sha256 '1abad61ebd8dd42dca64c289dccb38f39c2fe9c67d3313d53ec31e6bad74870b'
+  version '7.6.0'
+  sha256 'e4ee203fcb7deb4f8ce992df614b246f6c4332bba42dbefd5da8d2410427a7de'
 
   # cadsoft.de was verified as official when first introduced to the cask
   url "http://web.cadsoft.de/ftp/eagle/program/#{version.sub(%r{\.\d+$}, '')}/eagle-mac64-#{version}.zip"
