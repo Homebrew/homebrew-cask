@@ -1,6 +1,6 @@
 cask 'aliwangwang' do
-  version '3.5.0-4428'
-  sha256 'b1ea86f576833084c17ba1d6d66dc31e7941e239cc4474fe9d61e473169c434e'
+  version '7.00.02-7243'
+  sha256 '78f3a632cfb8bc6835131ed8a434b09cef90a29a8fd5051f7c6d87a3306d5b85'
 
   # dbison.alicdn.com was verified as official when first introduced to the cask
   url "https://dbison.alicdn.com/updates/macww-nosandbox-#{version}.dmg"
