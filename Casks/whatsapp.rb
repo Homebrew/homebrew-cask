@@ -4,7 +4,7 @@ cask 'whatsapp' do
 
   url "https://web.whatsapp.com/desktop/mac/files/release-#{version}.zip"
   appcast 'https://web.whatsapp.com/desktop/mac/releases?platform=darwin&arch=x64',
-          checkpoint: 'b2e9cfbbe2e5e492553e5fdd8d8415ed0911d981d21fbced08152269b9cb43c4'
+          checkpoint: 'c434dd74d97e36a00ec4aab4c2e4cb04c2cb983f9ee922934c33c5f02d575580'
   name 'WhatsApp'
   homepage 'https://www.whatsapp.com/'
   license :gratis
