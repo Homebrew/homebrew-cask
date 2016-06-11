@@ -104,7 +104,7 @@ Check the given Casks for correct style using RuboCop Cask \fIhttps://github\.co
 Uninstall the given Cask\. With \fB\-\-force\fR, uninstall even if the Cask does not appear to be present\.
 .
 .IP
-Note that \fBuninstall \-\-force\fR is currently imperfect\. It will follow the \fBuninstall\fR instructions from \fInewest\fR Cask definition, even if the given Cask has changed since you installed it\. The result is that \fBuninstall \-\-force\fR will always succeed in removing relevant files under \fB/opt/homebrew\-cask\fR, but will sometimes fail to remove relevant installed files outside of \fB/opt/homebrew\-cask\fR\. This issue is being addressed\.
+Note that \fBuninstall \-\-force\fR is currently imperfect\. It will follow the \fBuninstall\fR instructions from \fInewest\fR Cask definition, even if the given Cask has changed since you installed it\. The result is that \fBuninstall \-\-force\fR will always succeed in removing relevant files under \fB<Caskroom_path>\fR, but will sometimes fail to remove relevant installed files outside of it\. This issue is being addressed\.
 .
 .IP
 \fBuninstall\fR without \fB\-\-force\fR is also imperfect\. It may be unable to perform an \fBuninstall\fR operation if the given Cask has changed since you installed it\. This issue is being addressed\.
@@ -121,7 +121,7 @@ Unconditionally remove \fIall\fR files associated with the given Cask\.
 Implicitly performs all actions associated with \fBuninstall\fR, even if the Cask does not appear to be currently installed\.
 .
 .IP
-Removes all staged versions of the Cask distribution found under \fB/opt/homebrew\-cask/Caskroom/<token>\fR\.
+Removes all staged versions of the Cask distribution found under \fB<Caskroom_path>/<token>\fR\.
 .
 .IP
 If the Cask definition contains a \fBzap\fR stanza, performs additional \fBzap\fR actions as defined there, such as removing local preference files\. \fBzap\fR actions are variable, depending on the level of detail defined by the Cask author\.
@@ -145,7 +145,7 @@ Skip Cask dependencies when installing\.
 .
 .TP
 \fB\-\-caskroom=<path>\fR
-Location of the Caskroom, where all binaries are stored\. The default value is: \fB/opt/homebrew\-cask/Caskroom\fR\.
+Location of the Caskroom, where all binaries are stored\. The default value is: \fB$(brew \-\-repository)/Caskroom\fR\.
 .
 .TP
 \fB\-\-verbose\fR

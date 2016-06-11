@@ -105,8 +105,8 @@ names, and other aspects of this manual are still subject to change.
     the `uninstall` instructions from *newest* Cask definition, even if
     the given Cask has changed since you installed it. The result is that
     `uninstall --force` will always succeed in removing relevant files
-    under `/opt/homebrew-cask`, but will sometimes fail to remove relevant
-    installed files outside of `/opt/homebrew-cask`. This issue is being
+    under `<Caskroom_path>`, but will sometimes fail to remove relevant
+    installed files outside of it. This issue is being
     addressed.
 
     `uninstall` without `--force` is also imperfect. It may be unable to
@@ -123,7 +123,7 @@ names, and other aspects of this manual are still subject to change.
     the Cask does not appear to be currently installed.
 
     Removes all staged versions of the Cask distribution found under
-    `/opt/homebrew-cask/Caskroom/<token>`.
+    `<Caskroom_path>/<token>`.
 
     If the Cask definition contains a `zap` stanza, performs additional
     `zap` actions as defined there, such as removing local preference
@@ -147,7 +147,7 @@ in a future version.
     Skip Cask dependencies when installing.
 
   * `--caskroom=<path>`:
-    Location of the Caskroom, where all binaries are stored. The default value is: `/opt/homebrew-cask/Caskroom`.
+    Location of the Caskroom, where all binaries are stored. The default value is: `$(brew --repository)/Caskroom`.
 
   * `--verbose`:
     Give additional feedback during installation.
