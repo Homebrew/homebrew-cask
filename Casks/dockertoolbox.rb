@@ -5,7 +5,7 @@ cask 'dockertoolbox' do
   # github.com/docker/toolbox was verified as official when first introduced to the cask
   url "https://github.com/docker/toolbox/releases/download/v#{version}/DockerToolbox-#{version}.pkg"
   appcast 'https://github.com/docker/toolbox/releases.atom',
-          checkpoint: 'fa681fba18bd832f7a34fcfb6b8970c527d01ec0b194fbadf260a25286c0b030'
+          checkpoint: 'd1f05896b28c4c17ba081e09a3801c2811acbe193a98f951342835994111d7ee'
   name 'Docker Toolbox'
   homepage 'https://www.docker.com/toolbox'
   license :apache
