@@ -4,8 +4,6 @@ cask 'aliwangwang' do
 
   # dbison.alicdn.com was verified as official when first introduced to the cask
   url "https://dbison.alicdn.com/updates/macww-nosandbox-#{version}.dmg"
-  appcast 'https://update.labs.etao.com/macww/updates.xml',
-          checkpoint: '7178027350d87155dbcf2f2ebcc454262ae5d807fdf75f3688003ea5fccdb1b1'
   name 'Ali Wangwang'
   homepage 'https://wangwang.taobao.com'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
