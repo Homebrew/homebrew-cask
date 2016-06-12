@@ -312,21 +312,23 @@ class Hbc::Installer
     purge_caskroom_path
   end
 
-  def permissions_rmtree(path)
-    Hbc::Utils.permissions_rmtree(path, command: @command)
+  def gain_permissions_remove(path)
+    Hbc::Utils.gain_permissions_remove(path, command: @command)
   end
 
   def purge_versioned_files
     odebug "Purging files for version #{@cask.version} of Cask #{@cask}"
 
     # versioned staged distribution
-    permissions_rmtree(@cask.staged_path)
+    gain_permissions_remove(@cask.staged_path)
 
     # Homebrew-cask metadata
     if @cask.metadata_versioned_container_path.respond_to?(:children) and
         @cask.metadata_versioned_container_path.exist?
       @cask.metadata_versioned_container_path.children.each do |subdir|
-        permissions_rmtree subdir unless PERSISTENT_METADATA_SUBDIRS.include?(subdir.basename)
+        unless PERSISTENT_METADATA_SUBDIRS.include?(subdir.basename)
+          gain_permissions_remove(subdir)
+        end
       end
     end
     Hbc::Utils.rmdir_if_possible(@cask.metadata_versioned_container_path)
@@ -338,6 +340,6 @@ class Hbc::Installer
 
   def purge_caskroom_path
     odebug "Purging all staged versions of Cask #{@cask}"
-    permissions_rmtree(@cask.caskroom_path)
+    gain_permissions_remove(@cask.caskroom_path)
   end
 end
