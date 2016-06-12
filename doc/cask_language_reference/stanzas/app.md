@@ -9,13 +9,13 @@ app 'Alfred 2.app'
 moves the source to:
 
 ```bash
-~/Applications/Alfred 2.app
+/Applications/Alfred 2.app
 ```
 
 from a source file such as:
 
 ```bash
-/opt/homebrew-cask/Caskroom/alfred/2.8.2_431/Alfred 2.app
+/usr/local/Caskroom/alfred/2.8.2_431/Alfred 2.app
 ```
 
 ## Renaming the Target
