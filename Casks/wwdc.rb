@@ -1,13 +1,15 @@
 cask 'wwdc' do
-  version '4.1.1'
-  sha256 '505b8764774c7293f96eaf2904ae41361a086836bc1796c7335b330f5269feab'
+  version '4.1.3'
+  sha256 'a6f4e0e1a7a8aca193e8f71f2d5be04670df4b0eafe1621f3bf5af7747b8b2fa'
 
   url "https://github.com/insidegui/WWDC/releases/download/#{version}/WWDC_v#{version}.zip"
   appcast 'https://github.com/insidegui/WWDC/releases.atom',
-          checkpoint: '7ea1df07bc8b6108e8ef68ddbbd5c5140d3528c32706c3600aebea26b19ec799'
+          checkpoint: 'c4590058344b062805fa729b74f7197ab7cc83e52f137839f0790da80b804dca'
   name 'WWDC'
   homepage 'https://github.com/insidegui/WWDC'
   license :bsd
+
+  auto_updates true
 
   app 'WWDC.app'
 end
