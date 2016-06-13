@@ -25,11 +25,11 @@ depends_on formula: 'unar'
 
 ## depends_on macos:
 
-### Requiring an Exact OS X Release
+### Requiring an Exact macOS Release
 
-The value for `depends_on macos:` may be a symbol, string, or an array, listing the exact compatible OS X releases.
+The value for `depends_on macos:` may be a symbol, string, or an array, listing the exact compatible macOS releases.
 
-The available values for OS X releases are:
+The available values for macOS releases are:
 
 | symbol             | corresponding string
 | -------------------|----------------------
@@ -45,8 +45,9 @@ The available values for OS X releases are:
 | `:mavericks`       | `'10.9'`
 | `:yosemite`        | `'10.10'`
 | `:el_capitan`      | `'10.11'`
+| `:sierra`          | `'10.12'`
 
-Only major releases are covered (version numbers containing a single dot). The symbol form is preferred for readability. The following are all valid ways to enumerate the exact OS X release requirements for a Cask:
+Only major releases are covered (version numbers containing a single dot). The symbol form is preferred for readability. The following are all valid ways to enumerate the exact macOS release requirements for a Cask:
 
 ```ruby
 depends_on macos: :yosemite
@@ -55,9 +56,9 @@ depends_on macos: '10.9'
 depends_on macos: ['10.9', '10.10']
 ```
 
-### Setting a Minimum OS X Release
+### Setting a Minimum macOS Release
 
-`depends_on macos:` can also accept a string starting with a comparison operator such as `>=`, followed by an OS X release in the form above. The following are both valid expressions meaning “at least OS X 10.9”:
+`depends_on macos:` can also accept a string starting with a comparison operator such as `>=`, followed by an macOS release in the form above. The following are both valid expressions meaning “at least macOS 10.9”:
 
 ```ruby
 depends_on macos: '>= :mavericks'
@@ -102,7 +103,7 @@ depends_on arch: :x86_64
 | ---------- | ----------- |
 | `formula:` | a Homebrew Formula
 | `cask:`    | a Cask token
-| `macos:`   | a symbol, string, array, or comparison expression defining OS X release requirements
+| `macos:`   | a symbol, string, array, or comparison expression defining macOS release requirements
 | `arch:`    | a symbol or array defining hardware requirements
 | `x11:`     | a Boolean indicating a dependency on X11
 | `java:`    | *stub - not yet functional*

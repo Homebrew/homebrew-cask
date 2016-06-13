@@ -61,7 +61,7 @@ _list_url_attributes_on_file () {
 if [[ $1 =~ ^-+h(elp)?$ || -z "$1" ]]; then
     printf "list_url_attributes_on_file <file>
 
-Given a downloaded file, extract possible sources from OS X extended
+Given a downloaded file, extract possible sources from macOS extended
 attributes, which may be useful in a Cask url stanza.
 
 Currently the only attribute examined is

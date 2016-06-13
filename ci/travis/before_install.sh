@@ -29,7 +29,7 @@ fi
 run export MERGE_BASE="${MERGE_BASE}"
 run export TRAVIS_COMMIT_RANGE="${MERGE_BASE}...${BRANCH_COMMIT}"
 
-# print detailed OSX version info
+# print detailed macOS version info
 run sw_vers
 
 # capture system ruby and gem locations
