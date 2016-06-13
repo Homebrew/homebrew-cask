@@ -1,6 +1,6 @@
 cask 'lyrics-master' do
-  version '2.4.6'
-  sha256 '31d3a4bf83b3daca84a96e5816bfc142c83c78e82af3943069f96250fd27afc9'
+  version '2.4.7'
+  sha256 '1f53315fe24e4d1d18fa4b3dc0e0c9bfb45ecaa068af72f57237c538ebc2220b'
 
   url "http://www.kenichimaehashi.com/lyricsmaster/download/LyricsMaster#{version.delete('.')}0.dmg"
   name 'Lyrics Master'
