@@ -21,7 +21,7 @@ cask 'deeper' do
     url 'http://joel.barriere.pagesperso-orange.fr/download/1011/Deeper.dmg'
   else
     # Unusual case: there is no fall-through.  The software will stop
-    # working, or is dangerous to run, on the next OS X release.
+    # working, or is dangerous to run, on the next macOS release.
   end
 
   name 'Deeper'

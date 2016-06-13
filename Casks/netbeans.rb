@@ -13,7 +13,7 @@ cask 'netbeans' do
   # installation.
   #
   # In practice, it appears that the normal GlassFish installation process does
-  # not use the OS X installer and so isn't in the pkgutil receipts database.
+  # not use the macOS installer and so isn't in the pkgutil receipts database.
   #
   # https://glassfish.java.net/docs/4.0/installation-guide.pdf
   #
@@ -26,7 +26,7 @@ cask 'netbeans' do
   # to a separate "zap" stanza.
   #
   # The NetBeans installer does some postflight unpacking of paths installed by
-  # the OS X installer, so it's insufficient to just delete the paths exposed
+  # the macOS installer, so it's insufficient to just delete the paths exposed
   # by pkgutil, hence the additional ":delete" option below.
 
   uninstall pkgutil: 'org.netbeans.ide.*|glassfish-.*',

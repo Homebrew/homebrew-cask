@@ -80,7 +80,7 @@ cask 'wireshark-chmodbpf' do
     devices at boot to allow unpriviledged packet captures.
     This cask is not required if installing the Wireshark cask. It is meant to
     support Wireshark installed from homebrew or other cases where unpriviledged
-    access to OS X packet capture devices is desired without installing the binary
+    access to macOS packet capture devices is desired without installing the binary
     distribution of Wireshark.
 
     The user account used to install this cask will be added to the access_bpf
