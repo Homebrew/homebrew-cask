@@ -4,7 +4,7 @@ If you’d like to hack on the Ruby code that drives this project, please join u
 
 ## Goals, Design, and Philosophy
 
-Homebrew-Cask is an attempt to make a Linux-style package manager for precompiled OS X software. Homebrew-Cask is not yet as featureful as `apt` or `yum`, but we are trying to be as close as we can get to those tools from the user’s point of view.
+Homebrew-Cask is an attempt to make a Linux-style package manager for precompiled macOS software. Homebrew-Cask is not yet as featureful as `apt` or `yum`, but we are trying to be as close as we can get to those tools from the user’s point of view.
 
 We manage installed files via the “symlink farm” method, like [GNU Stow](http://www.gnu.org/software/stow/) and [Homebrew](http://brew.sh/). Similarly, we try to avoid `sudo` where possible.
 
@@ -100,7 +100,7 @@ $ brew cask /usr/local/Library/Taps/caskroom/homebrew-cask/lib/hbc/cli/info.rb g
 
 This form can also be combined with a specific Ruby interpreter as above.
 
-### Forcing a Specific OS X Release
+### Forcing a Specific macOS Release
 
 The environment variable `$MACOS_RELEASE` can be overridden at the command line for test purposes:
 

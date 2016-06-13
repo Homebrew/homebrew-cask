@@ -61,7 +61,7 @@ $ ./developer/bin/list_pkg_ids_by_regexp <regular-expression>
 
 ## List Files Associated With a pkg Id
 
-Once you know the ID for an installed package, (above), you can list all files on your system associated with that package ID using the OS X command:
+Once you know the ID for an installed package, (above), you can list all files on your system associated with that package ID using the macOS command:
 
 ```bash
 $ pkgutil --files <package.id.goes.here>
