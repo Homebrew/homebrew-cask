@@ -22,6 +22,8 @@ module Hbc::Locations
             Caskroom at #{legacy_caskroom}, add the following to your HOMEBREW_CASK_OPTS:
 
               --caskroom=#{legacy_caskroom}
+
+            For more details on each of those options, see https://github.com/caskroom/homebrew-cask/issues/21913.
           EOS
           legacy_caskroom
         else
