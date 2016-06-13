@@ -1,6 +1,6 @@
 cask 'skyfonts' do
-  version '5.0.0.0'
-  sha256 '937f64f4f935f95d0f2f777470f79830acafd96c647072c3e0bbda8e81af5a70'
+  version '5.5.0.0'
+  sha256 '8b79798e79f2529a9e30438a9126ab577859a6ee27c56d733cbbd793f9eabfb0'
 
   # skyfonts.com is the official download host per the vendor homepage
   url "http://cdn1.skyfonts.com/client/Monotype_SkyFonts_Mac64_#{version}.dmg"
