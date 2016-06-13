@@ -1,4 +1,4 @@
-homebrew-cask(1) - A friendly binary installer for OS X
+homebrew-cask(1) - A friendly binary installer for macOS
 ========================================================
 
 ## SYNOPSIS
@@ -7,7 +7,7 @@ homebrew-cask(1) - A friendly binary installer for OS X
 
 ## DESCRIPTION
 
-Homebrew-Cask is a tool for installing precompiled OS X binaries (such as
+Homebrew-Cask is a tool for installing precompiled macOS binaries (such as
 Applications) from the command line. The user is never required to use the
 graphical user interface.
 
