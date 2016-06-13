@@ -8,5 +8,12 @@ cask 'skyfonts' do
   homepage 'https://www.fonts.com/web-fonts/google'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  app 'SkyFonts.app'
+  installer manual: 'SkyFonts.app'
+
+  uninstall quit:      [
+                         'com.mti.Monotype-SkyFonts',
+                         'com.mti.Monotype-SkyFontsHelper',
+                       ],
+            launchctl: 'com.mti.Monotype-SkyFontsHelper',
+            delete:    '/Applications/Skyfonts'
 end
