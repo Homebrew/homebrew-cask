@@ -10,5 +10,5 @@ cask 'ghost' do
   homepage 'https://ghost.org/downloads'
   license :mit
 
-  app "#{version}/Ghost.app"
+  app "ghost-#{version}-SIGNED/Ghost.app"
 end
