@@ -79,7 +79,7 @@ class Hbc::Pkg
 
   def _with_full_permissions(path, &block)
     original_mode = (path.stat.mode % 01000).to_s(8)
-    # todo: similarly read and restore OS X flags (cf man chflags)
+    # todo: similarly read and restore macOS flags (cf man chflags)
     @command.run!('/bin/chmod', :args => ['--', '777', path], :sudo => true)
     block.call
   ensure

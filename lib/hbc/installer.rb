@@ -150,15 +150,15 @@ class Hbc::Installer
     if @cask.depends_on.macos.first.is_a?(Array)
       operator, release = @cask.depends_on.macos.first
       unless MacOS.release.send(operator, release)
-        raise Hbc::CaskError.new "Cask #{@cask} depends on OS X release #{operator} #{release}, but you are running release #{MacOS.release}."
+        raise Hbc::CaskError.new "Cask #{@cask} depends on macOS release #{operator} #{release}, but you are running release #{MacOS.release}."
       end
     elsif @cask.depends_on.macos.length > 1
       unless @cask.depends_on.macos.include?(Gem::Version.new(MacOS.release.to_s))
-        raise Hbc::CaskError.new "Cask #{@cask} depends on OS X release being one of: #{@cask.depends_on.macos(&:to_s).inspect}, but you are running release #{MacOS.release}."
+        raise Hbc::CaskError.new "Cask #{@cask} depends on macOS release being one of: #{@cask.depends_on.macos(&:to_s).inspect}, but you are running release #{MacOS.release}."
       end
     else
       unless MacOS.release == @cask.depends_on.macos.first
-        raise Hbc::CaskError.new "Cask #{@cask} depends on OS X release #{@cask.depends_on.macos.first}, but you are running release #{MacOS.release}."
+        raise Hbc::CaskError.new "Cask #{@cask} depends on macOS release #{@cask.depends_on.macos.first}, but you are running release #{MacOS.release}."
       end
     end
   end
@@ -259,7 +259,7 @@ class Hbc::Installer
     else
       opoo <<-EOS.undent
         Accessibility access was enabled for #{@cask}, but it is not safe to disable
-        automatically on this version of OS X.  See System Preferences.
+        automatically on this version of macOS.  See System Preferences.
       EOS
     end
   end
