@@ -45,6 +45,7 @@ The available values for macOS releases are:
 | `:mavericks`       | `'10.9'`
 | `:yosemite`        | `'10.10'`
 | `:el_capitan`      | `'10.11'`
+| `:sierra`          | `'10.12'`
 
 Only major releases are covered (version numbers containing a single dot). The symbol form is preferred for readability. The following are all valid ways to enumerate the exact macOS release requirements for a Cask:
 
