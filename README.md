@@ -1,6 +1,6 @@
 # Homebrew-Cask
 
-#### Important: Homebrew-Cask changed its default Caskroom location. See the relevant [issue](https://github.com/caskroom/homebrew-cask/issues/21603) and [pull request](https://github.com/caskroom/homebrew-cask/pull/21857) for details. If you have been bitten by this change, please [see this](https://github.com/caskroom/homebrew-cask/issues/21894#issuecomment-225464059) before commenting or opening an issue.
+#### Important: Homebrew-Cask changed its default Caskroom location. See the relevant [issue](https://github.com/caskroom/homebrew-cask/issues/21603) and [pull request](https://github.com/caskroom/homebrew-cask/pull/21857) for details. If you are getting a warning about this and are unsure how to proceed, see [this issue](https://github.com/caskroom/homebrew-cask/issues/21913) for a brief explanation of each option.
 
 #### Important: Homebrew-Cask changed its behaviour from linking apps to moving them. See the relevant [issue](https://github.com/caskroom/homebrew-cask/issues/13201) and [pull request](https://github.com/caskroom/homebrew-cask/pull/13966) for details.
 ---
