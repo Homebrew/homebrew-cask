@@ -78,8 +78,8 @@ REMOVE_TRAILING_PATS = [
                         %r{\bapp}i,
                         %r{\b(?:quick[\s-]*)?launcher}i,
 
-                        # "mac", "for mac", "for OS X".
-                        %r{\b(?:for)?[\s-]*mac(?:intosh)?}i,
+                        # "mac", "for mac", "for OS X", "macOS", "for macOS".
+                        %r{\b(?:for)?[\s-]*mac(?:intosh|OS)?}i,
                         %r{\b(?:for)?[\s-]*os[\s-]*x}i,
 
                         # hardware designations such as "for x86", "32-bit", "ppc"
