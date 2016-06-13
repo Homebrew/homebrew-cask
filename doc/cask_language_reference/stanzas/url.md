@@ -70,7 +70,7 @@ http://$STRING.osdn.jp/$PROJECTNAME/$RELEASEID/$FILENAME.$EXT
 
 `$STRING` is typically of the form `dl` or `$USER.dl`.
 
-If these formats are not available, and the application is Mac-exclusive (otherwise a command-line download defaults to the Windows version) we prefer the use of this format:
+If these formats are not available, and the application is macOS-exclusive (otherwise a command-line download defaults to the Windows version) we prefer the use of this format:
 
 ```
 http://sourceforge.net/projects/$PROJECTNAME/files/latest/download
