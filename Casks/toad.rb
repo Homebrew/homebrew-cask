@@ -1,6 +1,6 @@
 cask 'toad' do
-  version '2.3.8'
-  sha256 '2b0c98ea6d8306175ea6478f32ae656891e58a8b410c36d3ab84894ded584daf'
+  version '2.4.0'
+  sha256 '74f7d6a26c0bd5eaec2c3d2e02994fe9e89131e3f1baa8742416f9dc6222e4af'
 
   # http://community-downloads.quest.com/toadsoft/ was verified as official when first introduced to the cask
   url "http://community-downloads.quest.com/toadsoft/toadmacedition/ToadMacEdition_#{version.no_dots}.zip"

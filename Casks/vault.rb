@@ -1,11 +1,11 @@
 cask 'vault' do
-  version '0.5.2'
-  sha256 '48bf1d66cc3b81293186fd458f63fc2b02344aec5f1490c9b9a2915831c13d33'
+  version '0.5.3'
+  sha256 '31e7eff07c202cf2166ac63457054da59a1f4f49e7ad079b38316efadbb79e32'
 
   # hashicorp.com/vault was verified as official when first introduced to the cask
   url "https://releases.hashicorp.com/vault/#{version}/vault_#{version}_darwin_amd64.zip"
   appcast 'https://github.com/hashicorp/vault/releases.atom',
-          checkpoint: '42046119b424a397ec33ae94799992d07609c3ac8f6362b843b8bf38c9e01ac5'
+          checkpoint: 'fabfbc13ad5b116e52ef86ca252eb4d102c3c634fb6d30258eef007656ddb35c'
   name 'Vault'
   homepage 'https://www.vaultproject.io/'
   license :mpl

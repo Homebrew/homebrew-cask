@@ -1,25 +1,39 @@
 cask 'mactex' do
-  version '20150613'
-  sha256 'c5f5b0fd853a17dab6e844fb5e893804af78d938fa18ee94ec3b257611a95c12'
+  version '20160603'
+  sha256 '34e5c48846a674e0025e92bf1ab7bb43a1108f729b4c26c61edcda24fa5383e3'
 
-  url 'http://tug.org/cgi-bin/mactex-download/MacTeX.pkg'
-  appcast 'http://www.tug.org/mactex/downloading.html#checksum',
-          checkpoint: 'ef3bd331dbea7053d322e153a6a2c2db98ab93f70e0689e9eef5cf57220606ce'
+  # mirror.ctan.org/systems/mac/mactex was verified as official when first introduced to the cask
+  url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version}.pkg"
+  appcast 'http://www.tug.org/mactex/downloading.html',
+          checkpoint: '14b52a4b06fa7259d2665c2a26f41dde0ee15fb61cb9b69c707ad916e9dd8073'
   name 'MacTeX'
   homepage 'https://www.tug.org/mactex/'
   license :oss
 
-  pkg 'MacTeX.pkg'
+  pkg "mactex-#{version}.pkg"
 
   uninstall pkgutil: [
-                       'org.tug.mactex.ghostscript9.16',
-                       'org.tug.mactex.gui2015',
-                       'org.tug.mactex.texlive2015',
+                       'org.tug.mactex.ghostscript9.19',
+                       'org.tug.mactex.gui2016',
+                       'org.tug.mactex.texlive2016',
                      ],
             delete:  [
+                       '/usr/local/texlive/2016',
                        '/Applications/TeX',
                        '/Library/PreferencePanes/TeXDistPrefPane.prefPane',
                        '/etc/paths.d/TeX',
                        '/etc/manpaths.d/TeX',
                      ]
+
+  zap delete: [
+                '/usr/local/texlive/texmf-local',
+                '~/Library/texlive/2016',
+                '~/Library/Application Support/TeXShop',
+                '~/Library/Application Support/TeX Live Utility',
+                '~/Library/TeXShop',
+              ],
+      rmdir:  [
+                '/usr/local/texlive',
+                '~/Library/texlive',
+              ]
 end

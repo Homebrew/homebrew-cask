@@ -18,7 +18,10 @@ cask 'logitech-control-center' do
 
   pkg 'LCC Installer.app/Contents/Resources/Logitech Control Center.mpkg'
 
-  uninstall script:  'LCC Installer.app/Contents/Resources/LCC Uninstaller Tool',
+  uninstall script:  {
+                       executable: 'LCC Installer.app/Contents/Resources/LCC Uninstaller Tool',
+                       sudo:       false,
+                     },
             pkgutil: [
                        'com.Logitech.Control Center.pkg',
                        'com.Logitech.Unifying Software.pkg',

@@ -1,6 +1,6 @@
 cask 'paye-tools' do
-  version '16.0.16076.450'
-  sha256 'ae488dd53a7d6787fe17fbd8b699fc62ad1441f49a35c1a7baf3015e14a0e34f'
+  version '16.1.16125.489'
+  sha256 'a188f5b122a99bb4c944835c2b0bfb6da89e1e4405245212ccd4e8f34f79186d'
 
   url "https://www.gov.uk/government/uploads/uploaded/hmrc/payetools-rti-#{version}-osx.zip"
   name 'Basic PAYE Tools'
@@ -8,7 +8,8 @@ cask 'paye-tools' do
   license :gratis
 
   installer script: "payetools-rti-#{version}-osx.app/Contents/MacOS/osx-intel",
-            args:   ['--mode', 'unattended']
+            args:   ['--mode', 'unattended'],
+            sudo:   true
 
   uninstall quit: 'uk.gov.hmrc.bptrti'
 end

@@ -7,14 +7,13 @@ cask 'cmpl' do
   homepage 'http://www.coliop.org/'
   license :gpl
 
-  # linking into ~/Applications breaks Cmpl, due to hardcoded paths
-  suite 'Cmpl', target: '/Applications/Cmpl'
+  suite 'Cmpl'
   binary 'Cmpl/bin/cmpl'
   binary 'Cmpl/coliop'
   binary 'Cmpl/pyCmpl/scripts/Unix/cmplServer'
   binary 'Cmpl/pyCmpl/scripts/Unix/pyCmpl'
 
   postflight do
-    system '/bin/rm', '-f', '--', "#{staged_path}/Cmpl/install", "#{staged_path}/Cmpl/deinstall"
+    system '/bin/rm', '-f', '--', "#{appdir}/Cmpl/install", "#{appdir}/Cmpl/deinstall"
   end
 end

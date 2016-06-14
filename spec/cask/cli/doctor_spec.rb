@@ -5,7 +5,7 @@ describe Hbc::CLI::Doctor do
   it 'displays some nice info about the environment' do
     expect {
       Hbc::CLI::Doctor.run
-    }.to output(/\A==> OS X Release:/).to_stdout
+    }.to output(/\A==> macOS Release:/).to_stdout
   end
 
   it "raises an exception when arguments are given" do

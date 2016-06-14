@@ -1,6 +1,6 @@
 cask 'appcode' do
-  version '2016.1.2b'
-  sha256 'f724bc1db8d47e934bae1010ac8abc18445a5a41d162cf8f1d0504ebc8808ece'
+  version '2016.1.3'
+  sha256 'b0de414b7785cf89f680bc8f413c5ebdb66430cebb20f0395c4c49590c4d3f09'
 
   url "https://download.jetbrains.com/objc/AppCode-#{version}.dmg"
   name 'AppCode'
@@ -12,7 +12,6 @@ cask 'appcode' do
   app 'AppCode.app'
 
   zap delete: [
-                "~/.Appcode#{version.major_minor}",
                 "~/Library/Preferences/AppCode#{version.major_minor}",
                 "~/Library/Application Support/AppCode#{version.major_minor}",
                 "~/Library/Caches/AppCode#{version.major_minor}",

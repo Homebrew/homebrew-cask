@@ -1,8 +1,8 @@
 cask 'wireshark-chmodbpf' do
-  version '2.0.3'
-  sha256 'a64dc77117a4408b48235297215032017e77822885ce3e19cd1065bfbea0ae57'
+  version '2.0.4'
+  sha256 'b78531be77099f4d4b08a1a0fea6dbb777b739ee82255cc83f7de47137ef1627'
 
-  url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
+  url "https://www.wireshark.org/download/osx/all-versions/Wireshark%20#{version}%20Intel%2064.dmg"
   name 'Wireshark-ChmodBPF'
   homepage 'https://www.wireshark.org/'
   license :gpl
@@ -80,7 +80,7 @@ cask 'wireshark-chmodbpf' do
     devices at boot to allow unpriviledged packet captures.
     This cask is not required if installing the Wireshark cask. It is meant to
     support Wireshark installed from homebrew or other cases where unpriviledged
-    access to OS X packet capture devices is desired without installing the binary
+    access to macOS packet capture devices is desired without installing the binary
     distribution of Wireshark.
 
     The user account used to install this cask will be added to the access_bpf

@@ -22,7 +22,7 @@ class Hbc::Artifact::Moved < Hbc::Artifact::Base
     each_artifact do |artifact|
       load_specification(artifact)
       next unless preflight_checks
-      delete if File.exist?(target) && force
+      delete if Hbc::Utils.path_occupied?(target) && force
       move
     end
   end
@@ -64,7 +64,7 @@ class Hbc::Artifact::Moved < Hbc::Artifact::Base
   end
 
   def preflight_checks
-    if target.exist?
+    if Hbc::Utils.path_occupied?(target)
       if force
         ohai(warning_target_exists { |s| s << 'overwriting.' })
       else
@@ -96,7 +96,7 @@ class Hbc::Artifact::Moved < Hbc::Artifact::Base
       raise Hbc::CaskError.new(
         "Cannot remove undeletable #{english_name}")
     when force
-      Hbc::Utils.permissions_rmtree(target, command: @command)
+      Hbc::Utils.gain_permissions_remove(target, command: @command)
     else
       target.rmtree
     end

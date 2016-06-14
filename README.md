@@ -1,13 +1,15 @@
 # Homebrew-Cask
 
+#### Important: Homebrew-Cask changed its default Caskroom location. See the relevant [issue](https://github.com/caskroom/homebrew-cask/issues/21603) and [pull request](https://github.com/caskroom/homebrew-cask/pull/21857) for details. If you are getting a warning about this and are unsure how to proceed, see [this issue](https://github.com/caskroom/homebrew-cask/issues/21913) for a brief explanation of each option.
+
 #### Important: Homebrew-Cask changed its behaviour from linking apps to moving them. See the relevant [issue](https://github.com/caskroom/homebrew-cask/issues/13201) and [pull request](https://github.com/caskroom/homebrew-cask/pull/13966) for details.
 ---
 
 _“To install, drag this icon…” no more!_
 
-Homebrew-Cask extends [Homebrew](http://brew.sh) and brings its elegance, simplicity, and speed to the installation and management of GUI Mac applications such as Google Chrome and Adium.
+Homebrew-Cask extends [Homebrew](http://brew.sh) and brings its elegance, simplicity, and speed to the installation and management of GUI macOS applications such as Google Chrome and Adium.
 
-We do this by providing a friendly Homebrew-style CLI workflow for the administration of Mac applications distributed as binaries.
+We do this by providing a friendly Homebrew-style CLI workflow for the administration of macOS applications distributed as binaries.
 
 It’s implemented as a `homebrew` [external command](https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/External-Commands.md) called `cask`.
 
@@ -24,7 +26,7 @@ To start using Homebrew-Cask, you just need [Homebrew](http://brew.sh/) installe
 $ brew cask install google-chrome
 ==> Downloading https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
 ==> Moving App 'Google Chrome.app' to '/Applications/Google Chrome.app'
-🍺  google-chrome staged at '/opt/homebrew-cask/Caskroom/google-chrome/latest' (208 files, 184M)
+🍺  google-chrome staged at '/usr/local/Caskroom/google-chrome/latest' (3 files, 288K)
 ```
 
 And there we have it. Google Chrome installed with a few quick commands: no clicking, no dragging, no dropping.

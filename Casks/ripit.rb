@@ -1,10 +1,10 @@
 cask 'ripit' do
-  version '1.6.8'
-  sha256 '2631ccd1baea182af28eb319626dd77b0a6fbf36c6df9dde8a1dbe787d94b104'
+  version '1.6.9'
+  sha256 '76a3450016db2ba93a4b74271327b19246794813b8ad5916752eb9817c2ad0bc'
 
   url 'https://files.thelittleappfactory.com/ripit/RipIt.zip'
   appcast 'https://files.thelittleappfactory.com/ripit/appcast.xml',
-          checkpoint: 'aa863b2bfc1c52d17c857baca0a3b861a2d094dc4e8259aa20f21c4076712cd5'
+          checkpoint: '689348dedb5f144b5195071b4ef1c03ba437986a6a1b58bebcb26e7006481979'
   name 'RipIt'
   homepage 'http://thelittleappfactory.com/ripit/'
   license :commercial
