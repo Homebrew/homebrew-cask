@@ -1,4 +1,8 @@
+# Audacity does not provide a fixed URL
+# Their download URL points to a html page that generates a temporary URL embedded within an iframe
+# 'open-uri' is required to open that page and grab the temporary URL
 require 'open-uri'
+
 cask 'audacity' do
   version '2.1.2'
   sha256 '2e4b7d608ecc0d2f79bf16663f085d383075e488f7d50bf7d74c0b69173defe7'
