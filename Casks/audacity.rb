@@ -6,12 +6,11 @@ cask 'audacity' do
   # Current official URL as proposed on http://www.audacityteam.org/download/mac/
   # must be parsed to extract temporary url embedded in iframe
   iframe_src_protected_url = nil
-  open("http://www.fosshub.com/Audacity.html/audacity-macosx-ub-#{version}.dmg") { |io|
+  open("http://www.fosshub.com/Audacity.html/audacity-macosx-ub-#{version}.dmg") do |io|
     content = io.read
-    iframe_src_protected_url = /^\<iframe.*src=\"(http.*\.dmg)\".*>/.match(content)[1].to_s
-  }
+    iframe_src_protected_url = %r{^\<iframe.*src=\"(http.*\.dmg)\".*>}.match(content)[1].to_s
+  end
   url iframe_src_protected_url
-  
   name 'Audacity'
   homepage 'http://audacityteam.org'
   license :gpl
