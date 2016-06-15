@@ -2,7 +2,7 @@ require 'tmpdir'
 
 class Hbc::Container::Tar < Hbc::Container::Base
   def self.me?(criteria)
-    criteria.file.include? 'application/x-tar'
+    criteria.file.include?('application/x-tar') || criteria.tarball?
   end
 
   def extract

@@ -30,12 +30,12 @@ class Hbc::Container
       Hbc::Container::Dmg,
       Hbc::Container::SevenZip,
       Hbc::Container::Sit,
-      Hbc::Container::Tar,     # or compressed tar
       Hbc::Container::Rar,
       Hbc::Container::Zip,
       Hbc::Container::Bzip2,
       Hbc::Container::Gzip,    # pure gzip, not tar/gzip
       Hbc::Container::Xar,
+      Hbc::Container::Tar,     # or compressed tar
     ]
     # for explicit use only (never autodetected):
     # Hbc::Container::Naked
