@@ -2,7 +2,7 @@ require 'tmpdir'
 
 class Hbc::Container::Xar < Hbc::Container::Base
   def self.me?(criteria)
-    criteria.magic_number(4, 'xar!'.unpack('C*'))
+    criteria.magic_number(0, 4, 'xar!')
   end
 
   def extract

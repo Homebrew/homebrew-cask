@@ -2,7 +2,7 @@ require 'tmpdir'
 
 class Hbc::Container::Bzip2 < Hbc::Container::Base
   def self.me?(criteria)
-    criteria.file.include? 'compressed-encoding=application/x-bzip2;'
+    criteria.file.include?('application/x-bzip2;')
   end
 
   def extract

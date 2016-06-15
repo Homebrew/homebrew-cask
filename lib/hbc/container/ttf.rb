@@ -1,10 +1,9 @@
 class Hbc::Container::Ttf < Hbc::Container::Naked
   def self.me?(criteria)
-    (criteria.extension 'ttf' and
-     (criteria.file.include? 'application/x-font-ttf' or
-      criteria.magic_number(4, 'true'.unpack('C*')))) or
-
-    (criteria.extension 'ttc' and
-      criteria.magic_number(4, 'ttcf'.unpack('C*')))
+    (criteria.extension('ttf') &&
+     (criteria.file.include?('application/x-font-ttf') ||
+      criteria.magic_number(0, 4, 'true'))) ||
+      (criteria.extension('ttc') &&
+       criteria.magic_number(0, 4, 'ttcf'))
   end
 end

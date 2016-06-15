@@ -43,10 +43,11 @@ class Hbc::Container::Criteria
     path.extname.sub(%r{\A\.}, '').downcase == test.downcase
   end
 
-  def magic_number(num, test)
-    File.open(path, "rb") do |file|
-      bytes = file.read(num).unpack('C*')
-      bytes == test
-    end
+  def magic_number(position, length, test, stream = nil)
+    stream = File.open(path, "rb") if stream.nil?
+    stream.read(position)
+    bytes = stream.read(length)
+    stream.close
+    bytes == test
   end
 end
