@@ -1,10 +1,10 @@
 cask 'leech' do
-  version '3.0'
-  sha256 'd19b25a52180a62d4f50d6fddab15b4ac8dba565ad2a685b03e8aacaf6416e12'
+  version '3.1'
+  sha256 'e8553da6c6eaca569e87b0188b7c0bb6eab64dbc874c8c151768c6bf96c2470e'
 
   url 'http://manytricks.com/download/leech'
   appcast 'https://manytricks.com/leech/appcast.xml',
-          checkpoint: 'ca5e473eb98ee7850dc118636de64c9946a0373236fe78e7433d3aef0b0ae77d'
+          checkpoint: 'b0bc47dfb3d94fa3a2b7b4dad2538b2026803578283b3c106d48692b18d47c99'
   name 'Leech'
   homepage 'https://manytricks.com/leech/'
   license :commercial
