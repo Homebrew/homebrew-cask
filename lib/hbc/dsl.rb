@@ -12,6 +12,7 @@ require 'hbc/dsl/installer'
 require 'hbc/dsl/license'
 require 'hbc/dsl/postflight'
 require 'hbc/dsl/preflight'
+require 'hbc/dsl/stanza_proxy'
 require 'hbc/dsl/uninstall_postflight'
 require 'hbc/dsl/uninstall_preflight'
 require 'hbc/dsl/version'
@@ -94,13 +95,14 @@ class Hbc::DSL
     @homepage ||= homepage
   end
 
-  def url(*args)
-    return @url if args.empty?
-    if @url && !args.empty?
+  def url(*args, &block)
+    url_given = !args.empty? || block_given?
+    return @url unless url_given
+    if @url && url_given
       raise Hbc::CaskInvalidError.new(self.token, "'url' stanza may only appear once")
     end
     @url ||= begin
-      Hbc::URL.new(*args)
+      Hbc::URL.from(*args, &block)
     rescue StandardError => e
       raise Hbc::CaskInvalidError.new(self.token, "'url' stanza failed with: #{e}")
     end
