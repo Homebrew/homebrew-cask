@@ -64,6 +64,23 @@ class Hbc::Cask
     subdir
   end
 
+  def version_comparator
+    Proc.new do |x, y|
+      begin
+        x_version  =  Gem::Version.new(x)
+        x_version <=> Gem::Version.new(y)
+      rescue ArgumentError => e
+        x <=> y
+      end
+    end
+  end
+
+  def versions
+    Pathname.glob(metadata_master_container_path.join('*'))
+      .map { |p| p.basename.to_s }
+      .sort &version_comparator
+  end
+
   def installed?
     staged_path.exist?
   end
