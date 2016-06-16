@@ -71,7 +71,7 @@ function merge_outdated_appcasts {
 
   repo_name="${1}"
 
-  for line in $(ghi list --state open --pulls --label 'outdated appcast' --reverse | tail -n +2); do
+  for line in $(ghi list --state open --pulls --label 'outdated appcast' --reverse | tail +2); do
     [[ "${line}" == 'None.' ]] && break # exit early if there are no relevant issues in repo
 
     pr_number="$(awk '{print $1}' <<< "${line}")"
