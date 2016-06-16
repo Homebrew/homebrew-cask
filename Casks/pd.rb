@@ -10,6 +10,6 @@ cask 'pd' do
   app "Pd-#{version}-64bit.app"
 
   postflight do
-    set_permissions "#{appdir}/Pd-#{version}-64bit.app", 'u+w'
+    set_permissions "#{Hbc.appdir}/Pd-#{version}-64bit.app", 'u+w'
   end
 end
