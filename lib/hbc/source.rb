@@ -23,6 +23,7 @@ module Hbc::Source
 
   def self.for_query(query)
     odebug "Translating '#{query}' into a valid Cask source"
+    raise Hbc::CaskUnavailableError.new(query) if query.to_s =~ /^\s*$/
     source = sources.find do |s|
       odebug "Testing source class #{s}"
       s.me?(query)
