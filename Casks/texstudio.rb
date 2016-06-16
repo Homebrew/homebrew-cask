@@ -7,5 +7,5 @@ cask 'texstudio' do
   homepage 'http://texstudio.sourceforge.net/'
   license :gpl
 
-  app 'texstudio.app'
+  app 'TeXstudio.app'
 end
