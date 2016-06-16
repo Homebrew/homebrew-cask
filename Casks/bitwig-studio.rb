@@ -7,7 +7,5 @@ cask 'bitwig-studio' do
   homepage 'https://www.bitwig.com'
   license :commercial
 
-  auto_updates true
-
   app 'Bitwig Studio.app'
 end
