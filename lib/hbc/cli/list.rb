@@ -24,13 +24,17 @@ class Hbc::CLI::List < Hbc::CLI::Base
     count = 0
     cask_tokens.each do |cask_token|
       odebug "Listing files for Cask #{cask_token}"
-      cask = Hbc.load(cask_token)
-      if cask.installed?
-        count += 1
-        list_artifacts(cask)
-        list_files(cask)
-      else
-        opoo "#{cask} is not installed"
+      begin
+        cask = Hbc.load(cask_token)
+        if cask.installed?
+          count += 1
+          list_artifacts(cask)
+          list_files(cask)
+        else
+          opoo "#{cask} is not installed"
+        end
+      rescue Hbc::CaskUnavailableError => e
+        onoe e
       end
     end
     count == 0 ? nil : count == cask_tokens.length
