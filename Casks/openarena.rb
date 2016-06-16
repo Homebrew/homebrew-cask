@@ -10,6 +10,6 @@ cask 'openarena' do
   app "openarena-#{version}/OpenArena.app"
 
   postflight do
-    set_permissions "#{appdir}/OpenArena.app/Contents/MacOS/openarena.ub", '755'
+    set_permissions "#{Hbc.appdir}/OpenArena.app/Contents/MacOS/openarena.ub", '755'
   end
 end
