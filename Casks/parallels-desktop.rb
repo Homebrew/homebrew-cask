@@ -12,12 +12,12 @@ cask 'parallels-desktop' do
   postflight do
     # Run the initialization script
     system '/usr/bin/sudo', '-E', '--',
-           "#{appdir}/Parallels Desktop.app/Contents/MacOS/inittool",
-           'init', '-b', "#{appdir}/Parallels Desktop.app"
+           "#{Hbc.appdir}/Parallels Desktop.app/Contents/MacOS/inittool",
+           'init', '-b', "#{Hbc.appdir}/Parallels Desktop.app"
   end
 
   uninstall_preflight do
-    set_ownership "#{appdir}/Parallels Desktop.app"
+    set_ownership "#{Hbc.appdir}/Parallels Desktop.app"
   end
 
   uninstall delete: [
