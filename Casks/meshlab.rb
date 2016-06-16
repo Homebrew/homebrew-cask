@@ -11,7 +11,7 @@ cask 'meshlab' do
 
   postflight do
     # workaround for bug which breaks the app on case-sensitive filesystems
-    Dir.chdir("#{appdir}/meshlab.app/Contents/MacOS") do
+    Dir.chdir("#{Hbc.appdir}/meshlab.app/Contents/MacOS") do
       File.symlink('meshlab', 'MeshLab') unless File.exist? 'MeshLab'
     end
   end
