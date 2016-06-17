@@ -5,7 +5,7 @@ require 'tmpdir'
 
 class Hbc::Container::Gzip < Hbc::Container::Base
   def self.me?(criteria)
-    criteria.file.include? 'compressed-encoding=application/x-gzip;'
+    criteria.file.include? 'application/x-gzip;'
   end
 
   def extract
