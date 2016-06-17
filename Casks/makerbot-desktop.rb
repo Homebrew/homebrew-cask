@@ -1,9 +1,8 @@
 cask 'makerbot-desktop' do
-  version '3.7.0.148'
-  sha256 '1012556c76df6220640606bb1041a6cf6cc28975ffba6b75b653228512b9da91'
+  version '3.9.1.1346'
+  sha256 '3ab82fcf397d1fe2ea9781054a47f85a96899f7362946a475bba5312c4a54970'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url "https://s3.amazonaws.com/downloads-makerbot-com/makerware/MakerBot%20Bundle%20BETA%20#{version}.dmg"
+  url "https://downloads.makerbot.com/makerware/MakerBot%20Bundle%20BETA%20#{version}.dmg"
   name 'MakerBot Desktop'
   homepage 'https://www.makerbot.com/desktop'
   license :gratis
