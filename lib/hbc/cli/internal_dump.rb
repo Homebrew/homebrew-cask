@@ -6,7 +6,7 @@ class Hbc::CLI::InternalDump < Hbc::CLI::InternalUseBase
     # retval is ternary: true/false/nil
     if retval.nil?
       raise Hbc::CaskError.new("nothing to dump")
-    elsif ! retval
+    elsif !retval
       raise Hbc::CaskError.new("dump incomplete")
     end
   end

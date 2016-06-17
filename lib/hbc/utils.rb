@@ -15,17 +15,9 @@ Tty = Hbc::Utils::Tty
 # monkeypatch Object - not a great idea
 class Object
   def utf8_inspect
-    if not defined?(Encoding)
-      self.inspect
-    else
-      if self.respond_to?(:map)
-        self.map do |sub_elt|
-          sub_elt.utf8_inspect
-        end
-      else
-        self.inspect.force_encoding('UTF-8').sub(%r{\A"(.*)"\Z}, '\1')
-      end
-    end
+    return self.inspect unless defined?(Encoding)
+    return self.map(&:utf8_inspect) if self.respond_to?(:map)
+    self.inspect.force_encoding('UTF-8').sub(%r{\A"(.*)"\Z}, '\1')
   end
 end
 
@@ -60,9 +52,9 @@ def onoe(error)
 end
 
 def odebug(title, *sput)
-  if Hbc.respond_to?(:debug) and Hbc.debug
+  if Hbc.respond_to?(:debug) && Hbc.debug
     width = Tty.width * 4 - 6
-    if $stdout.tty? and title.to_s.length > width
+    if $stdout.tty? && title.to_s.length > width
       title = title.to_s[0, width - 3] + '...'
     end
     puts "#{Tty.magenta.bold}==>#{Tty.reset.bold} #{title}#{Tty.reset}"
@@ -147,8 +139,7 @@ module Hbc::Utils
       dirpath.rmdir
       true
     rescue Errno::ENOTEMPTY
-      if (ds_store = dirpath.join('.DS_Store')).exist? and
-        dirpath.children.length == 1
+      if (ds_store = dirpath.join('.DS_Store')).exist? && dirpath.children.length == 1
         ds_store.unlink
         retry
       else
@@ -160,7 +151,7 @@ module Hbc::Utils
   end
 
   def self.gain_permissions_remove(path, options = {})
-    if path.respond_to?(:rmtree) and path.exist?
+    if path.respond_to?(:rmtree) && path.exist?
       gain_permissions(path, ['-R'], options) do |path|
         path.rmtree
       end
@@ -231,12 +222,12 @@ module Hbc::Utils
   def self.file_is_descendant(file, dir)
     file = Pathname.new(file)
     dir  = Pathname.new(dir)
-    return false unless file.exist? and dir.exist?
+    return false unless file.exist? && dir.exist?
     unless dir.directory?
       onoe "Argument must be a directory: '#{dir}'"
       return false
     end
-    unless file.absolute? and dir.absolute?
+    unless file.absolute? && dir.absolute?
       onoe "Both arguments must be absolute: '#{file}', '#{dir}'"
       return false
     end

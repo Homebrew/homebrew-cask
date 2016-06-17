@@ -9,7 +9,7 @@ class Hbc::HbVCSDownloadStrategy < Hbc::AbstractDownloadStrategy
 
   def extract_ref
     key = REF_TYPES.find do |type|
-      uri_object.respond_to?(type) and uri_object.send(type)
+      uri_object.respond_to?(type) && uri_object.send(type)
     end
     return key, key ? uri_object.send(key) : nil
   end
@@ -126,9 +126,9 @@ class Hbc::HbSubversionDownloadStrategy < Hbc::HbVCSDownloadStrategy
     @url = @url.sub(/^svn\+/, '') if @url =~ %r[^svn\+http://]
     ohai "Checking out #{@url}"
 
-    clear_cache unless @url.chomp("/") == repo_url or quiet_system 'svn', 'switch', @url, @clone
+    clear_cache unless @url.chomp("/") == repo_url || quiet_system('svn', 'switch', @url, @clone)
 
-    if @clone.exist? and not repo_valid?
+    if @clone.exist? && !repo_valid?
       puts "Removing invalid SVN repo from cache"
       clear_cache
     end

@@ -11,11 +11,11 @@ class Hbc::CLI::List < Hbc::CLI::Base
       retval = list_installed
     end
     # retval is ternary: true/false/nil
-    if retval.nil? and not arguments.any?
+    if retval.nil? && !arguments.any?
       opoo "nothing to list"  # special case: avoid exit code
     elsif retval.nil?
       raise Hbc::CaskError.new("nothing to list")
-    elsif ! retval
+    elsif !retval
       raise Hbc::CaskError.new("listing incomplete")
     end
   end

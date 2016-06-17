@@ -64,38 +64,33 @@ class Hbc::Utils::Tty
       deferred_emit(to_background_code color)
     end
 
+    def to_color_code(space, color)
+      return unless num = to_color_number(color)
+      num < space ? space + num : num > space ? space + 9 : num
+    end
+
     def to_foreground_code(color)
-      space = 30
-      if (num = to_color_number(color))
-        num = space + num if num < space
-        num = space + 9   if num > space + 9
-        num
-      end
+      to_color_code(30, color)
     end
 
     def to_background_code(color)
-      space = 40
-      if (num = to_color_number(color))
-        num = space + num if num < space
-        num = space + 9   if num > space + 9
-        num
-      end
+      to_color_code(40, color)
     end
 
     def to_color_number(color)
-      COLORS[color] or
+      COLORS[color] ||
         color.kind_of?(Integer) ? color : nil
     end
 
     def to_attribute_number(attribute)
-      ATTRIBUTES[attribute] or
+      ATTRIBUTES[attribute] ||
         attribute.kind_of?(Integer) ? attribute : nil
     end
 
     def sanitize_integer(arg)
       return arg.to_i if arg.kind_of?(Integer)
       return 0        if arg.to_s.match('^0+$')
-      if arg.respond_to?(:to_i) and (int = arg.to_i) > 0
+      if arg.respond_to?(:to_i) && (int = arg.to_i) > 0
         return int
       end
       $stderr.puts "Warning: bad Tty code #{arg}"
