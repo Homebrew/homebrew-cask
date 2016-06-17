@@ -14,6 +14,6 @@ cask 'cmpl' do
   binary 'Cmpl/pyCmpl/scripts/Unix/pyCmpl'
 
   postflight do
-    system '/bin/rm', '-f', '--', "#{Hbc.appdir}/Cmpl/install", "#{Hbc.appdir}/Cmpl/deinstall"
+    system '/bin/rm', '-f', '--', "#{appdir}/Cmpl/install", "#{appdir}/Cmpl/deinstall"
   end
 end
