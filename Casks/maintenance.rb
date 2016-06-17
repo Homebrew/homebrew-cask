@@ -2,7 +2,6 @@ cask 'maintenance' do
   version :latest
   sha256 :no_check
 
-  if MacOS.release == :tiger
     url 'http://www.titanium.free.fr/download/104/Maintenance.dmg'
   elsif MacOS.release == :leopard
     url 'http://www.titanium.free.fr/download/105/Maintenance.dmg'
