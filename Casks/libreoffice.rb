@@ -21,7 +21,6 @@ cask 'libreoffice' do
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/regmerge"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/regview"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/senddoc"
-  binary "#{appdir}/LibreOffice.app/Contents/MacOS/soffice"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/ui-previewer"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/uno"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/unoinfo"
@@ -29,6 +28,17 @@ cask 'libreoffice' do
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/urelibs"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/uri-encode"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/xpdfimport"
+  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/sofficewrapper"
+  binary shimscript, target: 'soffice'
+
+  preflight do
+    File.open(shimscript, 'w') do |f|
+      f.puts '#!/usr/bin/env bash'
+      f.puts "#{appdir}/LibreOffice.app/Contents/MacOS/soffice \"$@\""
+      FileUtils.chmod '+x', f
+    end
+  end
 
   zap delete: [
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.libreoffice.script.sfl',
