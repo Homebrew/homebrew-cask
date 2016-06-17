@@ -35,7 +35,7 @@ cask 'libreoffice' do
   preflight do
     File.open(shimscript, 'w') do |f|
       f.puts '#!/usr/bin/env bash'
-      f.puts "#{Hbc.appdir}/LibreOffice.app/Contents/MacOS/soffice \"$@\""
+      f.puts "#{appdir}/LibreOffice.app/Contents/MacOS/soffice \"$@\""
       FileUtils.chmod '+x', f
     end
   end
