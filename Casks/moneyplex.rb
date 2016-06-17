@@ -2,7 +2,7 @@ cask 'moneyplex' do
   version :latest
   sha256 :no_check
 
-  # matrica.com is the official download host per the vendor homepage
+  # matrica.com was verified as official when first introduced to the cask
   url 'http://www.matrica.com/download/mac/moneyplex.dmg'
   name 'moneyplex'
   homepage 'http://www.matrica.de/'
