@@ -1,12 +1,16 @@
 require "test_helper"
 
 describe Hbc::DSL::UninstallPreflight do
-  before do
-    cask = Hbc.load('basic-cask')
-    @dsl = Hbc::DSL::UninstallPreflight.new(cask, Hbc::FakeSystemCommand)
-  end
+  let(:cask) { Hbc.load('basic-cask') }
+  let(:dsl) { Hbc::DSL::UninstallPreflight.new(cask, Hbc::FakeSystemCommand) }
 
   it_behaves_like Hbc::Staged do
-    let(:staged) { @dsl }
+    let(:staged) { dsl }
+  end
+
+  it "supports the appdir method" do
+    result = dsl.instance_eval { appdir }
+
+    result.must_equal Hbc.appdir
   end
 end

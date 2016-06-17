@@ -13,6 +13,6 @@ cask 'gedit' do
 
   postflight do
     library = Dir.glob("#{`brew --cellar`.chomp}/libxml2/**/libxml2.2.dylib").first
-    system 'cp', '-f', library, "#{Hbc.appdir}/gedit.app/Contents/Resources/lib/"
+    system 'cp', '-f', library, "#{appdir}/gedit.app/Contents/Resources/lib/"
   end
 end

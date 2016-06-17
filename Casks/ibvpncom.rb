@@ -11,6 +11,6 @@ cask 'ibvpncom' do
   app 'ibvpn.com.app'
 
   uninstall_preflight do
-    set_permissions "#{Hbc.appdir}/ibvpn.com.app", '0777'
+    set_permissions "#{appdir}/ibvpn.com.app", '0777'
   end
 end

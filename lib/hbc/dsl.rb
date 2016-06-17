@@ -281,10 +281,6 @@ class Hbc::DSL
     end
   end
 
-  def appdir
-    Hbc.appdir.sub(/\/$/, "")
-  end
-
   SPECIAL_ARTIFACT_TYPES.each do |type|
     define_method(type) do |*args|
       artifacts[type].merge(args)
@@ -300,5 +296,13 @@ class Hbc::DSL
   def method_missing(method, *args)
     Hbc::Utils.method_missing_message(method, self.token)
     return nil
+  end
+
+  def appdir
+    self.class.appdir
+  end
+
+  def self.appdir
+    Hbc.appdir.sub(/\/$/, "")
   end
 end
