@@ -6,7 +6,7 @@ module Hbc::UnderscoreSupportingURI
     URI.parse(maybe_uri)
   rescue URI::InvalidURIError => e
     scheme, host, path = simple_parse(maybe_uri)
-    if path and host =~ /\_/
+    if path && host =~ /\_/
       URI.parse(without_host_underscores(scheme, host, path)).tap { |uri|
         uri.instance_variable_set('@host', host)
       }

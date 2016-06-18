@@ -88,7 +88,7 @@ class Hbc::DSL
   end
 
   def homepage(homepage=nil)
-    if @homepage and !homepage.nil?
+    if @homepage && !homepage.nil?
       raise Hbc::CaskInvalidError.new(self.token, "'homepage' stanza may only appear once")
     end
     @homepage ||= homepage
@@ -96,7 +96,7 @@ class Hbc::DSL
 
   def url(*args)
     return @url if args.empty?
-    if @url and !args.empty?
+    if @url && !args.empty?
       raise Hbc::CaskInvalidError.new(self.token, "'url' stanza may only appear once")
     end
     @url ||= begin
@@ -108,7 +108,7 @@ class Hbc::DSL
 
   def appcast(*args)
     return @appcast if args.empty?
-    if @appcast and !args.empty?
+    if @appcast && !args.empty?
       raise Hbc::CaskInvalidError.new(self.token, "'appcast' stanza may only appear once")
     end
     @appcast ||= begin
@@ -120,7 +120,7 @@ class Hbc::DSL
 
   def gpg(*args)
     return @gpg if args.empty?
-    if @gpg and !args.empty?
+    if @gpg && !args.empty?
       raise Hbc::CaskInvalidError.new(self.token, "'gpg' stanza may only appear once")
     end
     @gpg ||= begin
@@ -132,7 +132,7 @@ class Hbc::DSL
 
   def container(*args)
     return @container if args.empty?
-    if @container and !args.empty?
+    if @container && !args.empty?
       # todo: remove this constraint, and instead merge multiple container stanzas
       raise Hbc::CaskInvalidError.new(self.token, "'container' stanza may only appear once")
     end
@@ -142,7 +142,7 @@ class Hbc::DSL
       raise Hbc::CaskInvalidError.new(self.token, e)
     end
     # todo: remove this backward-compatibility section after removing nested_container
-    if @container and @container.nested
+    if @container && @container.nested
       artifacts[:nested_container] << @container.nested
     end
     @container
@@ -157,7 +157,7 @@ class Hbc::DSL
       return @version
     elsif @version
       raise Hbc::CaskInvalidError.new(self.token, "'version' stanza may only appear once")
-    elsif !arg.is_a?(String) and !SYMBOLIC_VERSIONS.include?(arg)
+    elsif !arg.is_a?(String) && !SYMBOLIC_VERSIONS.include?(arg)
       raise Hbc::CaskInvalidError.new(self.token, "invalid 'version' value: '#{arg.inspect}'")
     end
     @version ||= Hbc::DSL::Version.new(arg)
@@ -172,7 +172,7 @@ class Hbc::DSL
       return @sha256
     elsif @sha256
       raise Hbc::CaskInvalidError.new(self.token, "'sha256' stanza may only appear once")
-    elsif !arg.is_a?(String) and !SYMBOLIC_SHA256S.include?(arg)
+    elsif !arg.is_a?(String) && !SYMBOLIC_SHA256S.include?(arg)
       raise Hbc::CaskInvalidError.new(self.token, "invalid 'sha256' value: '#{arg.inspect}'")
     end
     @sha256 ||= arg
@@ -180,7 +180,7 @@ class Hbc::DSL
 
   def license(arg=nil)
     return @license if arg.nil?
-    if @license and !arg.nil?
+    if @license && !arg.nil?
       raise Hbc::CaskInvalidError.new(self.token, "'license' stanza may only appear once")
     end
     @license ||= begin
@@ -203,7 +203,7 @@ class Hbc::DSL
   end
 
   def conflicts_with(*args)
-    if @conflicts_with and !args.empty?
+    if @conflicts_with && !args.empty?
       # todo: remove this constraint, and instead merge multiple conflicts_with stanzas
       raise Hbc::CaskInvalidError.new(self.token, "'conflicts_with' stanza may only appear once")
     end
@@ -242,14 +242,14 @@ class Hbc::DSL
   end
 
   def accessibility_access(accessibility_access=nil)
-    if @accessibility_access and !accessibility_access.nil?
+    if @accessibility_access && !accessibility_access.nil?
       raise Hbc::CaskInvalidError.new(self.token, "'accessibility_access' stanza may only appear once")
     end
     @accessibility_access ||= accessibility_access
   end
 
   def auto_updates(auto_updates=nil)
-    if @auto_updates and !auto_updates.nil?
+    if @auto_updates && !auto_updates.nil?
       raise Hbc::CaskInvalidError.new(self.token, "'auto_updates' stanza may only appear once")
     end
     @auto_updates ||= auto_updates
@@ -257,13 +257,12 @@ class Hbc::DSL
 
   ORDINARY_ARTIFACT_TYPES.each do |type|
     define_method(type) do |*args|
-      if type == :stage_only and args != [true]
+      if type == :stage_only && args != [true]
         raise Hbc::CaskInvalidError.new(self.token, "'stage_only' takes a single argument: true")
       end
       artifacts[type] << args
-      if artifacts.key?(:stage_only) and
-        artifacts.keys.count > 1 and
-        ! (artifacts.keys & ACTIVATABLE_ARTIFACT_TYPES).empty?
+      if artifacts.key?(:stage_only) && artifacts.keys.count > 1 &&
+           !(artifacts.keys & ACTIVATABLE_ARTIFACT_TYPES).empty?
         raise Hbc::CaskInvalidError.new(self.token, "'stage_only' must be the only activatable artifact")
       end
     end

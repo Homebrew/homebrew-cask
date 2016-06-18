@@ -8,7 +8,7 @@ class Hbc::CLI::Audit < Hbc::CLI::Base
     # retval is ternary: true/false/nil
     if retval.nil?
       raise Hbc::CaskError.new("audit failed")
-    elsif ! retval
+    elsif !retval
       raise Hbc::CaskError.new("some audits failed")
     end
   end

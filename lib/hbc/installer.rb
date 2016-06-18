@@ -84,7 +84,7 @@ class Hbc::Installer
   end
 
   def summary
-    s = if MacOS.release >= :lion and not ENV['HOMEBREW_NO_EMOJI']
+    s = if MacOS.release >= :lion && !ENV['HOMEBREW_NO_EMOJI']
       (ENV['HOMEBREW_INSTALL_BADGE'] || "\xf0\x9f\x8d\xba") + '  '
     else
       "#{Tty.blue.bold}==>#{Tty.reset.bold} Success!#{Tty.reset} "
@@ -107,7 +107,7 @@ class Hbc::Installer
   def extract_primary_container
     odebug "Extracting primary container"
     FileUtils.mkdir_p @cask.staged_path
-    container = if @cask.container and @cask.container.type
+    container = if @cask.container && @cask.container.type
        Hbc::Container.from_type(@cask.container.type)
     else
        Hbc::Container.for_path(@downloaded_path, @command)
@@ -183,7 +183,7 @@ class Hbc::Installer
   end
 
   def formula_dependencies
-    return unless @cask.depends_on.formula and not @cask.depends_on.formula.empty?
+    return unless @cask.depends_on.formula && !@cask.depends_on.formula.empty?
     ohai 'Installing Formula dependencies from Homebrew'
     @cask.depends_on.formula.each do |dep_name|
       print "#{dep_name} ... "
@@ -201,7 +201,7 @@ class Hbc::Installer
   end
 
   def cask_dependencies
-    return unless @cask.depends_on.cask and not @cask.depends_on.cask.empty?
+    return unless @cask.depends_on.cask && !@cask.depends_on.cask.empty?
     ohai "Installing Cask dependencies: #{@cask.depends_on.cask.join(', ')}"
     deps = Hbc::CaskDependencies.new(@cask)
     deps.sorted.each do |dep_token|
@@ -323,8 +323,8 @@ class Hbc::Installer
     gain_permissions_remove(@cask.staged_path)
 
     # Homebrew-cask metadata
-    if @cask.metadata_versioned_container_path.respond_to?(:children) and
-        @cask.metadata_versioned_container_path.exist?
+    if @cask.metadata_versioned_container_path.respond_to?(:children) &&
+         @cask.metadata_versioned_container_path.exist?
       @cask.metadata_versioned_container_path.children.each do |subdir|
         unless PERSISTENT_METADATA_SUBDIRS.include?(subdir.basename)
           gain_permissions_remove(subdir)
