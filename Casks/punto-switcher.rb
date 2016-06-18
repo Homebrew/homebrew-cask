@@ -2,10 +2,10 @@ cask 'punto-switcher' do
   version :latest
   sha256 :no_check
 
-  # yandex.net is the official download host per the vendor homepage
-  url 'https://cache-default02d.cdn.yandex.net/download.cdn.yandex.net/punto/mac/PuntoSwitcher.zip'
+  # cache-default03d.cdn.yandex.net was verified as official when first introduced to the cask
+  url 'https://cache-default03d.cdn.yandex.net/download.cdn.yandex.net/punto/mac/PuntoSwitcher.zip'
   name 'Punto Switcher'
-  homepage 'https://punto.yandex.ru'
+  homepage 'https://yandex.ru/soft/punto/'
   license :gratis
 
   pkg 'PuntoSwitcher Installer.pkg'
