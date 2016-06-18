@@ -3,7 +3,7 @@ cask 'pgadmin3' do
   version '1.22.1'
   sha256 'fa34b5baf09cf597850101b2806fdf80490c88d6fbf652da3750856423051603'
 
-  # postgresql.org is the official download host per the vendor homepage
+  # ftp.postgresql.org/pub/pgadmin3 was verified as official when first introduced to the cask
   url "https://ftp.postgresql.org/pub/pgadmin3/release/v#{version}/osx/pgadmin3-#{version}.dmg"
   name 'pgAdmin'
   homepage 'http://pgadmin.org'
