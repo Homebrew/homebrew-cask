@@ -2,7 +2,7 @@ cask 'textmate' do
   version '2.0-beta.9.2'
   sha256 '7ab6f15623330f40e5e022273438099b80a1c0160385f55dadb449b39d899a79'
 
-  # textmate.org is the official download host per the vendor homepage
+  # textmate.org was verified as official when first introduced to the cask
   url "https://api.textmate.org/downloads/TextMate_#{version}.tbz"
   name 'TextMate'
   homepage 'https://macromates.com/'
