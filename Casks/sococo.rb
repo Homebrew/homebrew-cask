@@ -1,9 +1,8 @@
 cask 'sococo' do
-  version '0.2.3-7127'
-  sha256 'a87e533f63567d3334491e475bfc1ead15eb44f87b0700f2076d623df05a65a1'
+  version '0.3.9-9509'
+  sha256 'ff7123c64b062739d07906947482cf6e6bdfd7098f6846fb0578499f52daa50a'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url "http://s.sococo.com.s3-website-us-east-1.amazonaws.com/rs/client/mac/Sococo-#{version}.dmg"
+  url "https://s.sococo.com/rs/client/mac/Sococo-#{version}.dmg"
   name 'Sococo'
   homepage 'https://www.sococo.com/'
   license :freemium
