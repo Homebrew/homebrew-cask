@@ -1,10 +1,5 @@
 # Homebrew-Cask
 
-#### Important: Homebrew-Cask changed its default Caskroom location. See the relevant [issue](https://github.com/caskroom/homebrew-cask/issues/21603) and [pull request](https://github.com/caskroom/homebrew-cask/pull/21857) for details. If you are getting a warning about this and are unsure how to proceed, see [this issue](https://github.com/caskroom/homebrew-cask/issues/21913) for a brief explanation of each option.
-
-#### Important: Homebrew-Cask changed its behaviour from linking apps to moving them. See the relevant [issue](https://github.com/caskroom/homebrew-cask/issues/13201) and [pull request](https://github.com/caskroom/homebrew-cask/pull/13966) for details.
----
-
 _“To install, drag this icon…” no more!_
 
 Homebrew-Cask extends [Homebrew](http://brew.sh) and brings its elegance, simplicity, and speed to the installation and management of GUI macOS applications such as Google Chrome and Adium.
