@@ -3,14 +3,14 @@ cask 'unison' do
     version '2.40.69'
     sha256 '2bcc460511f2b43fa1613cc5f9ba4dd59bb12d40b5b9fb2e9f21adaf854bcf3b'
 
-    # petitepomme.net is the official download host per the vendor homepage
-    url "http://alan.petitepomme.net/unison/assets/Unison-#{version}_x64.dmg"
+    # unison-binaries.inria.fr was verified as official when first introduced to the cask
+    url "http://unison-binaries.inria.fr/files/Unison-#{version}_x64.dmg"
   else
-    version '2.48.6'
-    sha256 '123976cbcc8537a09da5ebf3bcea98d87315d0ce09566796d9fb50b981e30912'
+    version '2.48.15'
+    sha256 '89894d14c9ff3c4d6195cb6a8065a2849e6ad55951799eedf8879e1a257d3e11'
 
-    # petitepomme.net is the official download host per the vendor homepage
-    url "http://alan.petitepomme.net/unison/assets/Unison-OS-X-#{version}.zip"
+    # unison-binaries.inria.fr was verified as official when first introduced to the cask
+    url "http://unison-binaries.inria.fr/files/Unison-OS-X-#{version}.zip"
   end
 
   name 'Panic Unison'
