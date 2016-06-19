@@ -2,7 +2,7 @@ cask 'tcl' do
   version '8.6.4.1.299124'
   sha256 '6dff63e0250a059f64cd1b7b2ceb4bb1dff58571345c8ebdfbae1ebfef39d760'
 
-  # activestate.com is the official download host per the vendor homepage
+  # downloads.activestate.com/ActiveTcl was verified as official when first introduced to the cask
   url "https://downloads.activestate.com/ActiveTcl/releases/#{version.sub(%r{\.\d+$}, '')}/ActiveTcl#{version}-macosx10.5-i386-x86_64-threaded.dmg"
   name 'ActiveTcl'
   homepage 'https://tcl.tk/'
