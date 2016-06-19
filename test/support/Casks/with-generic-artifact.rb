@@ -5,5 +5,5 @@ test_cask 'with-generic-artifact' do
   url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/with-generic-artifact'
 
-  artifact 'Caffeine.app'
+  artifact 'Caffeine.app', target: "#{Hbc.appdir}/Caffeine.app"
 end

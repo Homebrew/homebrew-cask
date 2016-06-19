@@ -7,9 +7,9 @@ describe Hbc::CLI::Install do
     end
 
     Hbc.load('local-transmission').must_be :installed?
-    Hbc.appdir.join('Transmission.app').must_be :symlink?
+    Hbc.appdir.join('Transmission.app').must_be :directory?
     Hbc.load('local-caffeine').must_be :installed?
-    Hbc.appdir.join('Caffeine.app').must_be :symlink?
+    Hbc.appdir.join('Caffeine.app').must_be :directory?
   end
 
   it "skips double install (without nuking existing installation)" do
@@ -39,8 +39,18 @@ describe Hbc::CLI::Install do
 
     TestHelper.must_output(self, lambda {
       Hbc::CLI::Install.run('local-transmission', '--force')
-    }, %r{==> Success! local-transmission staged at '#{Hbc.caskroom}/local-transmission/2.61' \(487 files, 11M\)})
+    }, %r{==> Success! local-transmission staged at '#{Hbc.caskroom}/local-transmission/2.61' \(0B\)})
   end
+
+  it "skips dependencies with --skip-cask-deps" do
+    shutup do
+      Hbc::CLI::Install.run('with-depends-on-cask-multiple', '--skip-cask-deps')
+    end
+    Hbc.load('with-depends-on-cask-multiple').must_be :installed?
+    Hbc.load('local-caffeine').wont_be :installed?
+    Hbc.load('local-transmission').wont_be :installed?
+  end
+
 
   it "properly handles Casks that are not present" do
     lambda {
@@ -83,6 +93,10 @@ describe Hbc::CLI::Install do
 
     describe "with --force" do
       with_options.call(['--force'])
+    end
+
+    describe "with --skip-cask-deps" do
+      with_options.call(['--skip-cask-deps'])
     end
 
     describe "with an invalid option" do

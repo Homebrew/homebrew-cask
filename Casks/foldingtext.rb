@@ -1,11 +1,11 @@
 cask 'foldingtext' do
-  version '2.1.2'
-  sha256 '8d5adf4332d79e734ec147f0bad9b765210b168cf3e3dc75cdcb0781af231136'
+  version '2.2'
+  sha256 '59bd73b1c72c228c1c9e95c441b9e5422eb6f32481d609acb5716131ccab55ec'
 
   # amazonaws.com/foldingtext was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/foldingtext/FoldingText.dmg'
   appcast 'https://foldingtext.s3.amazonaws.com/FoldingText.rss',
-          checkpoint: '52831575716556573cb50ca39c4425cbd407e945d8cab642b76964dc3a616cab'
+          checkpoint: '5335e89ce209b69d8c69be935456c2708f5188f35f0a780c2282d948cefd0a4a'
   name 'FoldingText'
   homepage 'http://www.foldingtext.com'
   license :commercial

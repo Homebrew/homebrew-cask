@@ -1,13 +1,13 @@
 cask 'min' do
-  version '1.1.1'
-  sha256 '841da2609660a6fbb4c3cad70cf4170b3251cd78a708e4c1a53a5715007db61b'
+  version '1.2.2'
+  sha256 '07be7b054795fa180089dd13178e84e4e2591c56d5dcc2b371df10351c56175f'
 
-  # github.com/PalmerAL/min was verified as official when first introduced to the cask
-  url "https://github.com/PalmerAL/min/releases/download/v#{version}/Min-v#{version}-darwin-x64.zip"
-  appcast 'https://github.com/PalmerAL/min/releases.atom',
-          checkpoint: '550a199aeefd280611b3eb03afe317920f25e220bb200134d3c1766b9ee03898'
+  # github.com/minbrowser/min was verified as official when first introduced to the cask
+  url "https://github.com/minbrowser/min/releases/download/v#{version}/Min-v#{version}-darwin-x64.zip"
+  appcast 'https://github.com/minbrowser/min/releases.atom',
+          checkpoint: '6e229c2d781525c30ce5ba66c4269a83568675e38634171667fed5f48dad31dd'
   name 'Min'
-  homepage 'https://palmeral.github.io/min'
+  homepage 'https://minbrowser.github.io/min'
   license :oss
 
   app 'Min.app'

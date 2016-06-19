@@ -1,10 +1,10 @@
 cask 'sabnzbd' do
-  version '1.0.0'
-  sha256 'ce6b278ededf8634f9bdce7d0a617ee2944ac6e3055ddc35802ef001eb4613a3'
+  version '1.0.3'
+  sha256 '0120f71189601a4b64e2309b671ddf892da8f50a4ad9716146d36baf83c6aae6'
 
   url "https://github.com/sabnzbd/sabnzbd/releases/download/#{version}/SABnzbd-#{version}-osx.dmg"
   appcast 'https://github.com/sabnzbd/sabnzbd/releases.atom',
-          checkpoint: '16c6cbf03c32e221a45eb757b68f8cc429e233bf74d67dfe42598c1a7894dd49'
+          checkpoint: '81fa1b34972d021823c7043bbff2d4dbaf3d38716177552a6d3ceaa7a71d90e2'
   name 'SABnzbd'
   homepage 'https://sabnzbd.org/'
   license :gpl

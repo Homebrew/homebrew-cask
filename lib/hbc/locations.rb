@@ -4,8 +4,32 @@ module Hbc::Locations
   end
 
   module ClassMethods
+    def legacy_caskroom
+      @@legacy_caskroom ||= Pathname.new('/opt/homebrew-cask/Caskroom')
+    end
+
+    def default_caskroom
+      @@default_caskroom ||= homebrew_repository.join('Caskroom')
+    end
+
     def caskroom
-      @@caskroom ||= Pathname('/opt/homebrew-cask/Caskroom')
+      @@caskroom ||= begin
+        if Hbc::Utils.path_occupied?(legacy_caskroom)
+          opoo <<-EOS.undent
+            The default Caskroom location has moved to #{default_caskroom}.
+
+            Please migrate your Casks to the new location, or if you would like to keep your
+            Caskroom at #{legacy_caskroom}, add the following to your HOMEBREW_CASK_OPTS:
+
+              --caskroom=#{legacy_caskroom}
+
+            For more details on each of those options, see https://github.com/caskroom/homebrew-cask/issues/21913.
+          EOS
+          legacy_caskroom
+        else
+          default_caskroom
+        end
+      end
     end
 
     def caskroom=(caskroom)
@@ -13,7 +37,7 @@ module Hbc::Locations
     end
 
     def appdir
-      @appdir ||= Pathname.new('~/Applications').expand_path
+      @appdir ||= Pathname.new('/Applications').expand_path
     end
 
     def appdir=(_appdir)
@@ -98,6 +122,14 @@ module Hbc::Locations
 
     def vst_plugindir=(_vst_plugindir)
       @vst_plugindir = _vst_plugindir
+    end
+
+    def vst3_plugindir
+      @vst3_plugindir ||= Pathname.new('~/Library/Audio/Plug-Ins/VST3').expand_path
+    end
+
+    def vst3_plugindir=(_vst3_plugindir)
+      @vst3_plugindir = _vst3_plugindir
     end
 
     def screen_saverdir

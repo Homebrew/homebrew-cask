@@ -24,6 +24,8 @@ class Hbc::Artifact::Base
      cask.artifacts[self.artifact_dsl_key].any?
   end
 
+  attr_reader :force
+
   def zap_phase
     odebug "Nothing to do. The #{self.class.artifact_name} artifact has no zap phase."
   end
@@ -76,8 +78,9 @@ class Hbc::Artifact::Base
     {}
   end
 
-  def initialize(cask, command=Hbc::SystemCommand)
+  def initialize(cask, options={})
     @cask = cask
-    @command = command
+    @command = options.fetch(:command, Hbc::SystemCommand)
+    @force = options.fetch(:force, false)
   end
 end

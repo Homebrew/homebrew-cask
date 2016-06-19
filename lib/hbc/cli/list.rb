@@ -11,11 +11,11 @@ class Hbc::CLI::List < Hbc::CLI::Base
       retval = list_installed
     end
     # retval is ternary: true/false/nil
-    if retval.nil? and not arguments.any?
+    if retval.nil? && !arguments.any?
       opoo "nothing to list"  # special case: avoid exit code
     elsif retval.nil?
       raise Hbc::CaskError.new("nothing to list")
-    elsif ! retval
+    elsif !retval
       raise Hbc::CaskError.new("listing incomplete")
     end
   end
@@ -24,13 +24,17 @@ class Hbc::CLI::List < Hbc::CLI::Base
     count = 0
     cask_tokens.each do |cask_token|
       odebug "Listing files for Cask #{cask_token}"
-      cask = Hbc.load(cask_token)
-      if cask.installed?
-        count += 1
-        list_artifacts(cask)
-        list_files(cask)
-      else
-        opoo "#{cask} is not installed"
+      begin
+        cask = Hbc.load(cask_token)
+        if cask.installed?
+          count += 1
+          list_artifacts(cask)
+          list_files(cask)
+        else
+          opoo "#{cask} is not installed"
+        end
+      rescue Hbc::CaskUnavailableError => e
+        onoe e
       end
     end
     count == 0 ? nil : count == cask_tokens.length
@@ -55,7 +59,7 @@ class Hbc::CLI::List < Hbc::CLI::Base
     if @options[:one]
       puts columns
     elsif @options[:versions]
-      installed_casks.each { |cask| puts "#{cask} #{cask.version}" }
+      installed_casks.each { |cask| puts "#{cask} #{cask.versions.reverse.join(', ')}" }
     elsif @options[:long]
       puts Hbc::SystemCommand.run!("/bin/ls", :args => ["-l", Hbc.caskroom]).stdout
     else

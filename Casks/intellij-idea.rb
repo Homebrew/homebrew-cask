@@ -1,22 +1,22 @@
 cask 'intellij-idea' do
-  version '2016.1.1'
-  sha256 '07cd308fbe0e5ede2ac2278398e665d580d03b7ce55d201cc72c3d2b79e9f2b4'
+  version '2016.1.3'
+  sha256 '6da532f34b77a285f91756740cd548ab985bd5350f15e8de87c5bdfb6cc590dd'
 
   url "https://download.jetbrains.com/idea/ideaIU-#{version}.dmg"
   name 'IntelliJ IDEA'
   homepage 'https://www.jetbrains.com/idea/'
   license :commercial
 
+  conflicts_with cask: 'intellij-idea-eap'
+
   app 'IntelliJ IDEA.app'
 
   uninstall delete: '/usr/local/bin/idea'
 
   zap delete: [
-                "~/.IntelliJIdea#{version.major_minor}",
                 "~/Library/Caches/IntelliJIdea#{version.major_minor}",
                 "~/Library/Logs/IntelliJIdea#{version.major_minor}",
                 "~/Library/Application Support/IntelliJIdea#{version.major_minor}",
                 "~/Library/Preferences/IntelliJIdea#{version.major_minor}",
-                # TODO: expand/glob for '~/Library/Preferences/jetbrains.intellij.*.plist',
               ]
 end

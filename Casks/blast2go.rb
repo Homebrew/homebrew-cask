@@ -8,7 +8,8 @@ cask 'blast2go' do
   license :freemium
 
   installer script: 'Blast2GO Installer.app/Contents/MacOS/JavaApplicationStub',
-            args:   ['-q']
+            args:   ['-q'],
+            sudo:   false
 
   uninstall delete: '/Applications/Blast2GO'
 

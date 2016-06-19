@@ -1,11 +1,11 @@
 cask 'mplayerx' do
-  version '1.1.1-1887'
-  sha256 '684dac670035dfd6e8dc539aabbf9cf35c537355b2fea1679e104c776398a055'
+  version '1.1.3-1913'
+  sha256 'd48abb4b42ecbde2ba99b6afcb0ae14cf3d5a160b758eeb3cb9c533ebe7bda58'
 
-  # sourceforge.net is the official download host per the vendor homepage
+  # downloads.sourceforge.net/project/mplayerx-osx was verified as official when first introduced to the cask
   url "http://downloads.sourceforge.net/project/mplayerx-osx/MPlayerX-#{version}.zip"
   appcast 'https://raw.githubusercontent.com/niltsh/MPlayerX-Deploy/master/appcast.xml',
-          checkpoint: '8ce5a2bbcecf8e9955e161b91618ca840a24dfd5615671953cb3e70554d0bf76'
+          checkpoint: '7700102d2f188a738b2e3f2524a2fcbd510c25708ea58bb2e8953ef337bc7355'
   name 'MPlayerX'
   homepage 'http://mplayerx.org/'
   license :oss

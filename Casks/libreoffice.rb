@@ -2,12 +2,12 @@ cask 'libreoffice' do
   if Hardware::CPU.is_32_bit? || MacOS.release < :mountain_lion
     version '4.3.7.2'
     sha256 '2964a952ab633426df402de2f128cf788354ac622b7c30b25209d185d17617ec'
-    # documentfoundation.org is the official download host per the vendor homepage
+    # documentfoundation.org was verified as official when first introduced to the cask
     url "https://downloadarchive.documentfoundation.org/libreoffice/old/#{version}/mac/x86/LibreOffice_#{version}_MacOS_x86.dmg"
   else
-    version '5.1.2'
-    sha256 '833852a4cd5b62163561a95a632217b235c6abe50939eed007be7abb24b2901c'
-    # documentfoundation.org is the official download host per the vendor homepage
+    version '5.1.3'
+    sha256 '969597335139d626a2fff98089fd3e2d4d7bd8ddd6753b355ec7a9d8889f4b5b'
+    # documentfoundation.org was verified as official when first introduced to the cask
     url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg"
   end
   name 'LibreOffice'
@@ -17,18 +17,28 @@ cask 'libreoffice' do
       key_id: 'c2839ecad9408fbe9531c3e9f434a1efafeeaea3'
 
   app 'LibreOffice.app'
-  binary 'LibreOffice.app/Contents/MacOS/gengal'
-  binary 'LibreOffice.app/Contents/MacOS/regmerge'
-  binary 'LibreOffice.app/Contents/MacOS/regview'
-  binary 'LibreOffice.app/Contents/MacOS/senddoc'
-  binary 'LibreOffice.app/Contents/MacOS/soffice'
-  binary 'LibreOffice.app/Contents/MacOS/ui-previewer'
-  binary 'LibreOffice.app/Contents/MacOS/uno'
-  binary 'LibreOffice.app/Contents/MacOS/unoinfo'
-  binary 'LibreOffice.app/Contents/MacOS/unopkg'
-  binary 'LibreOffice.app/Contents/MacOS/urelibs'
-  binary 'LibreOffice.app/Contents/MacOS/uri-encode'
-  binary 'LibreOffice.app/Contents/MacOS/xpdfimport'
+  binary "#{appdir}/LibreOffice.app/Contents/MacOS/gengal"
+  binary "#{appdir}/LibreOffice.app/Contents/MacOS/regmerge"
+  binary "#{appdir}/LibreOffice.app/Contents/MacOS/regview"
+  binary "#{appdir}/LibreOffice.app/Contents/MacOS/senddoc"
+  binary "#{appdir}/LibreOffice.app/Contents/MacOS/ui-previewer"
+  binary "#{appdir}/LibreOffice.app/Contents/MacOS/uno"
+  binary "#{appdir}/LibreOffice.app/Contents/MacOS/unoinfo"
+  binary "#{appdir}/LibreOffice.app/Contents/MacOS/unopkg"
+  binary "#{appdir}/LibreOffice.app/Contents/MacOS/urelibs"
+  binary "#{appdir}/LibreOffice.app/Contents/MacOS/uri-encode"
+  binary "#{appdir}/LibreOffice.app/Contents/MacOS/xpdfimport"
+  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/sofficewrapper"
+  binary shimscript, target: 'soffice'
+
+  preflight do
+    File.open(shimscript, 'w') do |f|
+      f.puts '#!/usr/bin/env bash'
+      f.puts "#{appdir}/LibreOffice.app/Contents/MacOS/soffice \"$@\""
+      FileUtils.chmod '+x', f
+    end
+  end
 
   zap delete: [
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.libreoffice.script.sfl',

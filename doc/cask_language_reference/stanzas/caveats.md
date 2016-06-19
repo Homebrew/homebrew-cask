@@ -9,8 +9,8 @@ When `caveats` is a string, it is evaluated at compile time. The following metho
 | `token`            | the Cask token
 | `version`          | the Cask version
 | `homepage`         | the Cask homepage
-| `caskroom_path`    | the containing directory for all staged Casks, typically `/opt/homebrew-cask/Caskroom` (only available with block form)
-| `staged_path`      | the staged location for this Cask, including version number, *eg* `/opt/homebrew-cask/Caskroom/adium/1.5.10` (only available with block form)
+| `caskroom_path`    | the containing directory for all staged Casks, typically `/usr/local/Caskroom` (only available with block form)
+| `staged_path`      | the staged location for this Cask, including version number, *eg* `/usr/local/Caskroom/adium/1.5.10` (only available with block form)
 
 Example:
 

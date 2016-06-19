@@ -4,9 +4,9 @@ require 'hbc/verify'
 class Hbc::Download
   attr_reader :cask
 
-  def initialize(cask, force=false)
+  def initialize(cask, options={})
     @cask = cask
-    @force = force
+    @force = options.fetch(:force, false)
   end
 
   def perform

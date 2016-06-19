@@ -7,5 +7,5 @@ test_cask 'stuffit-container' do
 
   depends_on formula: 'unar'
 
-  artifact 'sheldonmac/v1.0'
+  artifact 'sheldonmac/v1.0', target: "#{Hbc.appdir}/sheldonmac/v1.0"
 end

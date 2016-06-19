@@ -3,7 +3,7 @@ cask 'p5' do
   version '0.5.10'
   sha256 '52d7abe71a9613c9ef694adeede7a0a9dfa78ff0a11602783fe0187c476bc25b'
 
-  # github.com is the official download host per the vendor homepage
+  # github.com/processing/p5.js-editor was verified as official when first introduced to the cask
   url "https://github.com/processing/p5.js-editor/releases/download/v#{version}/p5-mac.zip"
   appcast 'https://github.com/processing/p5.js-editor/releases.atom',
           checkpoint: '15242dba0ba4ed40a22e23cdfc0b93d64781d229fcb05b0f2517aa2ef97588f3'

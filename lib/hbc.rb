@@ -54,12 +54,12 @@ module Hbc
     HOMEBREW_CACHE.mkpath unless HOMEBREW_CACHE.exist?
     HOMEBREW_CACHE_CASKS.mkpath unless HOMEBREW_CACHE_CASKS.exist?
     unless caskroom.exist?
-      ohai "We need to make Caskroom for the first time at #{caskroom}"
-      ohai "We'll set permissions properly so we won't need sudo in the future"
-      current_user = Etc.getpwuid(Process.euid).name
+      ohai "Creating Caskroom at #{caskroom}"
+      current_user = Hbc::Utils.current_user
       if caskroom.parent.writable?
         system '/bin/mkdir', '--', caskroom
       else
+        ohai "We'll set permissions properly so we won't need sudo in the future"
         toplevel_dir = caskroom
         toplevel_dir = toplevel_dir.parent until toplevel_dir.parent.root?
         unless toplevel_dir.directory?

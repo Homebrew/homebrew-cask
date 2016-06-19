@@ -1,10 +1,10 @@
 cask 'piezo' do
-  version '1.2.2'
-  sha256 '6be59b8b525ddb049a4ee24f40bce06beba5d98c2a6ada6826b9783bad28fb3b'
+  version '1.5.0'
+  sha256 'd125a0186210efd645995aec7fc630285a12afc4aee57560932a6ce6135cbc8c'
 
-  url "https://rogueamoeba.com/legacy/downloads/Piezo-#{version.no_dots}.zip"
-  appcast 'https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&bundleid=com.rogueamoeba.Piezo',
-          checkpoint: 'f9a8903cc1e07056cd541257e6d61e65fc4fe653b91d5e732ce8870a46e39f45'
+  url 'https://rogueamoeba.com/piezo/download/Piezo.zip'
+  appcast 'https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&bundleid=com.rogueamoeba.Piezo&system=10114',
+          checkpoint: '77b548e102d35c380b8ac61c23ae51d061d801110f30dff1cf68b0db772d45e3'
   name 'Piezo'
   homepage 'https://rogueamoeba.com/piezo/'
   license :commercial

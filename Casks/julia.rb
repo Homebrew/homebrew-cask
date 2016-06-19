@@ -11,7 +11,7 @@ cask 'julia' do
   depends_on macos: '>= :lion'
 
   app "Julia-#{version}.app"
-  binary "Julia-#{version}.app/Contents/Resources/julia/bin/julia"
+  binary "#{appdir}/Julia-#{version}.app/Contents/Resources/julia/bin/julia"
 
   zap delete: '~/.julia'
 end

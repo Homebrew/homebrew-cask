@@ -83,7 +83,7 @@ class Hbc::CLI
       command.run(*rest)
     elsif require? Hbc::Utils.which("brewcask-#{command}.rb").to_s
       # external command as Ruby library on PATH, Homebrew-style
-    elsif command.to_s.include?('/') and require? command.to_s
+    elsif command.to_s.include?('/') && require?(command.to_s)
       # external command as Ruby library with literal path, useful
       # for development and troubleshooting
       sym = Pathname.new(command.to_s).basename('.rb').to_s.capitalize
@@ -101,9 +101,9 @@ class Hbc::CLI
     elsif Hbc::Utils.which "brewcask-#{command}"
       # arbitrary external executable on PATH, Homebrew-style
       exec "brewcask-#{command}", *ARGV[1..-1]
-    elsif Pathname.new(command.to_s).executable? and
-          command.to_s.include?('/')             and
-          not command.to_s.match(%{\.rb$})
+    elsif Pathname.new(command.to_s).executable? &&
+            command.to_s.include?('/') &&
+              !command.to_s.match(%{\.rb$})
       # arbitrary external executable with literal path, useful
       # for development and troubleshooting
       exec command, *ARGV[1..-1]
@@ -190,6 +190,9 @@ class Hbc::CLI
       opts.on("--vst_plugindir=MANDATORY") do |v|
         Hbc.vst_plugindir = Pathname(v).expand_path
       end
+      opts.on("--vst3_plugindir=MANDATORY") do |v|
+        Hbc.vst3_plugindir = Pathname(v).expand_path
+      end
       opts.on("--screen_saverdir=MANDATORY") do |v|
        Hbc.screen_saverdir = Pathname(v).expand_path
       end
@@ -234,7 +237,7 @@ class Hbc::CLI
     end
 
     # for compat with Homebrew, not certain if this is desirable
-    Hbc.verbose = true if !ENV['VERBOSE'].nil? or !ENV['HOMEBREW_VERBOSE'].nil?
+    Hbc.verbose = true if !ENV['VERBOSE'].nil? || !ENV['HOMEBREW_VERBOSE'].nil?
 
     remaining
   end
@@ -245,7 +248,7 @@ class Hbc::CLI
     end
 
     def run(*args)
-      if args.include?('--version') or @attempted_verb == '--version'
+      if args.include?('--version') || @attempted_verb == '--version'
         puts Hbc.full_version
       else
         purpose
@@ -259,7 +262,7 @@ class Hbc::CLI
     def purpose
       puts <<-PURPOSE.undent
         brew-cask provides a friendly homebrew-style CLI workflow for the
-        administration of Mac applications distributed as binaries.
+        administration of macOS applications distributed as binaries.
 
       PURPOSE
     end

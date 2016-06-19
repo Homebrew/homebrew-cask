@@ -1,4 +1,4 @@
-homebrew-cask(1) - A friendly binary installer for OS X
+homebrew-cask(1) - A friendly binary installer for macOS
 ========================================================
 
 ## SYNOPSIS
@@ -7,7 +7,7 @@ homebrew-cask(1) - A friendly binary installer for OS X
 
 ## DESCRIPTION
 
-Homebrew-Cask is a tool for installing precompiled OS X binaries (such as
+Homebrew-Cask is a tool for installing precompiled macOS binaries (such as
 Applications) from the command line. The user is never required to use the
 graphical user interface.
 
@@ -19,7 +19,7 @@ names, and other aspects of this manual are still subject to change.
 
 ## FREQUENTLY USED COMMANDS
 
-  * `install [--force]` <token> [ <token> ... ]:
+  * `install [--force] [--skip-cask-deps]` <token> [ <token> ... ]:
     Install Cask identified by <token>.
 
   * `uninstall [--force]` <token> [ <token> ... ]:
@@ -69,9 +69,10 @@ names, and other aspects of this manual are still subject to change.
   * `info` or `abv` <token> [ <token> ... ]:
     Display information about the given Cask.
 
-  * `install [--force]` <token> [ <token> ... ]:
+  * `install [--force] [--skip-cask-deps]` <token> [ <token> ... ]:
     Install the given Cask. With `--force`, re-install even if the Cask
-    appears to be already present.
+    appears to be already present. With `--skip-cask-deps`, skip any Cask
+    dependencies.
 
     <token> is usually the ID of a Cask as returned by `brew cask search`,
     but see [OTHER WAYS TO SPECIFY A CASK][] for variations.
@@ -104,8 +105,8 @@ names, and other aspects of this manual are still subject to change.
     the `uninstall` instructions from *newest* Cask definition, even if
     the given Cask has changed since you installed it. The result is that
     `uninstall --force` will always succeed in removing relevant files
-    under `/opt/homebrew-cask`, but will sometimes fail to remove relevant
-    installed files outside of `/opt/homebrew-cask`. This issue is being
+    under `<Caskroom_path>`, but will sometimes fail to remove relevant
+    installed files outside of it. This issue is being
     addressed.
 
     `uninstall` without `--force` is also imperfect. It may be unable to
@@ -122,7 +123,7 @@ names, and other aspects of this manual are still subject to change.
     the Cask does not appear to be currently installed.
 
     Removes all staged versions of the Cask distribution found under
-    `/opt/homebrew-cask/Caskroom/<token>`.
+    `<Caskroom_path>/<token>`.
 
     If the Cask definition contains a `zap` stanza, performs additional
     `zap` actions as defined there, such as removing local preference
@@ -142,44 +143,50 @@ in a future version.
     Force an install to proceed even when a previously-existing install
     is detected.
 
+  * `--skip-cask-deps`:
+    Skip Cask dependencies when installing.
+
   * `--caskroom=<path>`:
-    Location of the Caskroom, where all binaries are stored. The default value is: `/opt/homebrew-cask/Caskroom`.
+    Location of the Caskroom, where all binaries are stored. The default value is: `$(brew --repository)/Caskroom`.
 
   * `--verbose`:
     Give additional feedback during installation.
 
   * `--appdir=<path>`:
-    Target location for Application links. The default value is `~/Applications`.
+    Target location for Applications. The default value is `/Applications`.
 
   * `--colorpickerdir=<path>`:
-    Target location for Color Picker links. The default value is `~/Library/Color Pickers`.
+    Target location for Color Pickers. The default value is `~/Library/ColorPickers`.
 
   * `--prefpanedir=<path>`:
-    Target location for Preference Pane links. The default value is `~/Library/Preference Panes`.
+    Target location for Preference Panes. The default value is `~/Library/PreferencePanes`.
 
   * `--qlplugindir=<path>`:
-    Target location for QuickLook Plugin links. The default value is `~/Library/QuickLook`.
+    Target location for QuickLook Plugins. The default value is `~/Library/QuickLook`.
 
   * `--fontdir=<path>`:
-    Target location for Font links. The default value is `~/Library/Fonts`.
+    Target location for Fonts. The default value is `~/Library/Fonts`.
 
   * `--servicedir=<path>`:
-    Target location for Service links. The default value is `~/Library/Services`.
+    Target location for Services. The default value is `~/Library/Services`.
 
   * `--input_methoddir=<path>`:
-    Target location for Input Method links. The default value is `~/Library/Input Methods`.
+    Target location for Input Methods. The default value is `~/Library/Input Methods`.
 
   * `--internet_plugindir=<path>`:
-    Target location for Internet Plugin links. The default value is `~/Library/Internet Plug-Ins`.
+    Target location for Internet Plugins. The default value is `~/Library/Internet Plug-Ins`.
 
   * `--audio_unit_plugindir=<path>`:
-    Target location for Audio Unit Plugin links. The default value is `~/Library/Audio/Plug-Ins/Components`.
+    Target location for Audio Unit Plugins. The default value is `~/Library/Audio/Plug-Ins/Components`.
 
   * `--vst_plugindir=<path>`:
-    Target location for VST Plugin links. The default value is `~/Library/Audio/Plug-Ins/VST`.
+    Target location for VST Plugins. The default value is `~/Library/Audio/Plug-Ins/VST`.
+
+  * `--vst3_plugindir=<path>`:
+    Target location for VST3 Plugins. The default value is `~/Library/Audio/Plug-Ins/VST3`.
 
   * `--screen_saverdir=<path>`:
-    Target location for Screen Saver links. The default value is `~/Library/Screen Savers`.
+    Target location for Screen Savers. The default value is `~/Library/Screen Savers`.
 
   * `--no-binaries`:
     Do not link "helper" executables to `/usr/local/bin`.

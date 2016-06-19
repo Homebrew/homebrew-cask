@@ -1,6 +1,6 @@
 cask 'focus' do
-  version '1.4.11'
-  sha256 '22524abb327ce17d70ab50ffc9de4d8911fd30bf84490d14c28383c8fd8d45ed'
+  version '1.4.20'
+  sha256 'a5b5746760237cd8d5ab1c7ea5fabb42857e288d64b397304595a0c15e970010'
 
   url "https://heyfocus.com/releases/Focus-#{version}.zip"
   appcast 'https://heyfocus.com/appcast.xml',

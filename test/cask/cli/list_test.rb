@@ -14,6 +14,19 @@ describe Hbc::CLI::List do
     OUTPUT
   end
 
+  it 'lists the installed Casks and all their installed versions' do
+    casks = %w[local-caffeine local-transmission].map { |c| Hbc.load(c) }
+
+    casks.each { |c| TestHelper.install_with_caskfile(c) }
+
+    lambda {
+      Hbc::CLI::List.run('--versions')
+    }.must_output <<-OUTPUT.gsub(/^ */, '')
+      local-caffeine 1.2.3
+      local-transmission 2.61
+    OUTPUT
+  end
+
   describe 'when Casks have been renamed' do
     before do
       @renamed_path = Hbc.caskroom.join('ive-been-renamed','latest','Renamed.app').tap(&:mkpath)
@@ -33,7 +46,6 @@ describe Hbc::CLI::List do
     end
   end
 
-
   it 'given a set of installed Casks, lists the installed files for those Casks' do
     casks = %w[local-caffeine local-transmission].map { |c| Hbc.load(c) }
 
@@ -41,16 +53,17 @@ describe Hbc::CLI::List do
 
     caffeine, transmission = casks
 
-    # App Symlinks sections are empty below because the expected links
-    # aren't created under the test harness. Todo: managed links should
-    # be fully mocked and confirmed here.
+    shutup { Hbc::Artifact::App.new(transmission).install_phase }
+
     lambda {
       Hbc::CLI::List.run('local-transmission', 'local-caffeine')
     }.must_output <<-OUTPUT.gsub(/^ */, '')
-      ==> App Symlinks managed by brew-cask:
+      ==> Apps managed by brew-cask:
+      '#{Hbc.appdir.join('Transmission.app')}'
       ==> Staged content:
-      #{transmission.staged_path} (489 files)
-      ==> App Symlinks managed by brew-cask:
+      #{transmission.staged_path} (0 files)
+      ==> Apps managed by brew-cask:
+      Missing App: '#{Hbc.appdir.join('Caffeine.app')}'
       ==> Staged content:
       #{caffeine.staged_path} (13 files)
     OUTPUT

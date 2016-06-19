@@ -7,6 +7,8 @@ cask 'menumeters' do
   homepage 'http://www.ragingmenace.com/software/menumeters/'
   license :gpl
 
+  depends_on macos: '<= :yosemite'
+
   prefpane 'MenuMeters Installer.app/Contents/Resources/MenuMeters.prefPane'
 
   zap delete: '~/Library/Preferences/com.ragingmenace.MenuMeters.plist'

@@ -7,5 +7,5 @@ cask 'devcenter' do
   homepage 'https://www.datastax.com/what-we-offer/products-services/devcenter'
   license :gratis
 
-  app 'devcenter/DevCenter.app'
+  suite 'DevCenter'
 end

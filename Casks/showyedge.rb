@@ -1,10 +1,10 @@
 cask 'showyedge' do
-  version '3.0.0'
-  sha256 '4a6b16970cb77a9b3e77031e74cf8907a09106ffff1e430eec9c41790579008c'
+  version '3.1.0'
+  sha256 'abe481108cfa2803ffbbea1d19418377c529086ed8955b8dc09d56723fa387e6'
 
   url "https://pqrs.org/osx/ShowyEdge/files/ShowyEdge-#{version}.dmg"
   appcast 'https://pqrs.org/osx/ShowyEdge/files/appcast.xml',
-          checkpoint: '7a3bf959137962755dedbbd897ece4f09dc078ba6d4115cc4c3c7bf65e98abd3'
+          checkpoint: 'a70a969aafa5c0a857871907ede6af76016e98aaaa87a827a38fa3550d5073d6'
   name 'ShowyEdge'
   homepage 'https://pqrs.org/osx/ShowyEdge/'
   license :public_domain

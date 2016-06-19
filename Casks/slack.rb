@@ -1,11 +1,11 @@
 cask 'slack' do
-  version '2.0.1'
-  sha256 'a903dd21f72c7808803de0f59705411602d3411750eee829a26d3834dad7694b'
+  version '2.0.3'
+  sha256 '0859a1742d339a1ae46fd5d68ff259da2efd649acdde1231f06a3d4e43810d47'
 
   # slack-ssb-updates.global.ssl.fastly.net was verified as official when first introduced to the cask
   url "https://slack-ssb-updates.global.ssl.fastly.net/mac_public_releases/slack-#{version}.zip"
   appcast 'https://rink.hockeyapp.net/api/2/apps/38e415752d573e7e78e06be8daf5acc1',
-          checkpoint: '7e1af97cb3a2246ca102a102c9a7460ff22639f8dbb5e6e8f2435f2cec73dea6'
+          checkpoint: '16fdeec6794f180b946510dab4b4a5d844182d2631c81219f4601a931db4d104'
   name 'Slack'
   homepage 'https://slack.com/'
   license :gratis
@@ -13,4 +13,14 @@ cask 'slack' do
   auto_updates true
 
   app 'Slack.app'
+
+  zap delete: [
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tinyspeck.slackmacgap.sfl',
+                '~/Library/Application Support/Slack',
+                '~/Library/Caches/com.tinyspeck.slackmacgap',
+                '~/Library/Containers/com.tinyspeck.slackmacgap.SlackCallsService',
+                '~/Library/Cookies/com.tinyspeck.slackmacgap.binarycookies',
+                '~/Library/Preferences/com.tinyspeck.slackmacgap.plist',
+                '~/Library/Saved Application State/com.tinyspeck.slackmacgap.savedState',
+              ]
 end

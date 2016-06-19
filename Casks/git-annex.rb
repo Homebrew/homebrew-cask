@@ -38,8 +38,8 @@ cask 'git-annex' do
                     ]
 
   app 'git-annex.app'
-  binary 'git-annex.app/Contents/MacOS/git-annex'
-  binary 'git-annex.app/Contents/MacOS/git-annex-shell'
+  binary "#{appdir}/git-annex.app/Contents/MacOS/git-annex"
+  binary "#{appdir}/git-annex.app/Contents/MacOS/git-annex-shell"
 
   uninstall launchctl: 'com.branchable.git-annex.assistant'
 

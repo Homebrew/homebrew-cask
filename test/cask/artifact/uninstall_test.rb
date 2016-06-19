@@ -2,7 +2,10 @@ require 'test_helper'
 
 describe Hbc::Artifact::Uninstall do
   let(:cask) { Hbc.load('with-installable') }
-  let(:uninstall_artifact) { Hbc::Artifact::Uninstall.new(cask, Hbc::FakeSystemCommand) }
+
+  let(:uninstall_artifact) do
+    Hbc::Artifact::Uninstall.new(cask, command: Hbc::FakeSystemCommand)
+  end
 
   before {
     shutup do

@@ -57,7 +57,7 @@ if MacOS.release <= :mavericks     # symbolic name
 if MacOS.release <= '10.9'         # version string
 ```
 
-The available symbols for OS X versions are: `:cheetah`, `:puma`, `:jaguar`, `:panther`, `:tiger`, `:leopard`, `:snow_leopard`, `:lion`, `:mountain_lion`, `:mavericks`, `:yosemite`, and `:el_capitan`. The corresponding numeric version strings should given as major releases containing a single dot.
+The available symbols for macOS versions are: `:cheetah`, `:puma`, `:jaguar`, `:panther`, `:tiger`, `:leopard`, `:snow_leopard`, `:lion`, `:mountain_lion`, `:mavericks`, `:yosemite`, `:el_capitan`, and `:sierra`. The corresponding numeric version strings should given as major releases containing a single dot.
 
 ### Always Fall Through to the Newest Case
 
@@ -153,6 +153,7 @@ screen_saver
 service
 audio_unit_plugin
 vst_plugin
+vst3_plugin
 artifact, target: # :target shown here as is required with `artifact`
 stage_only
 

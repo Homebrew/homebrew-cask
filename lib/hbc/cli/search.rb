@@ -4,7 +4,7 @@ class Hbc::CLI::Search < Hbc::CLI::Base
   end
 
   def self.extract_regexp(string)
-    if %r{^/(.*)/$}.match(string) then
+    if %r{^/(.*)/$}.match(string)
       $1
     else
       false
@@ -32,7 +32,7 @@ class Hbc::CLI::Search < Hbc::CLI::Base
   end
 
   def self.render_results(exact_match, partial_matches, search_term)
-    if ! exact_match and partial_matches.empty?
+    if !exact_match && partial_matches.empty?
       puts "No Cask found for \"#{search_term}\"."
       return
     end

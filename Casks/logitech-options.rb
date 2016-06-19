@@ -1,6 +1,6 @@
 cask 'logitech-options' do
-  version '5.40.22'
-  sha256 '7761222d349dc5fe9cb94b12ae517cfab0d5419d10ab2e92f7e8d172d81c8670'
+  version '5.50.9'
+  sha256 'c4f497f42805c73fdf76653d36b6a7f5a539521f4faa686d701395e75c711a08'
 
   url "http://www.logitech.com/pub/techsupport/options/Options_#{version}.zip"
   name 'Logitech Options'
@@ -11,7 +11,10 @@ cask 'logitech-options' do
 
   pkg 'LogiMgr Installer.app/Contents/Resources/LogiMgr.mpkg'
 
-  uninstall script:  '/Applications/Utilities/LogiMgr Uninstaller.app/Contents/Resources/Uninstaller',
+  uninstall script:  {
+                       executable: '/Applications/Utilities/LogiMgr Uninstaller.app/Contents/Resources/Uninstaller',
+                       sudo:       false,
+                     },
             pkgutil: [
                        'com.logitech.manager.pkg',
                        'com.Logitech.signedKext.pkg',

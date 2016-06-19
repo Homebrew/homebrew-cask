@@ -12,8 +12,8 @@ cask 'go' do
     url "https://storage.googleapis.com/golang/go#{version}.darwin-amd64-osx10.8.pkg"
     pkg "go#{version}.darwin-amd64-osx10.8.pkg"
   else
-    version '1.6'
-    sha256 'cabae263fe1a8c3bb42539943348a69f94e3f96b5310a96e24df29ff745aaf5c'
+    version '1.6.2'
+    sha256 '3acb72fc5da5b6b12b683a4cd13b5be2f6e976b0342436844d881bf7fc50dcc9'
 
     url "https://storage.googleapis.com/golang/go#{version}.darwin-amd64.pkg"
     pkg "go#{version}.darwin-amd64.pkg"

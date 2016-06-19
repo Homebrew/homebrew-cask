@@ -98,12 +98,15 @@ class TestHelper
     Hbc::FakeFetcher.fake_response_for(*args)
   end
 
-  def self.must_output(test, lambda, expected)
+  def self.must_output(test, lambda, expected = nil)
     out, err = test.capture_subprocess_io do
       lambda.call
     end
 
-    if expected.is_a? Regexp
+    case
+    when block_given?
+      yield (out+err).chomp
+    when expected.is_a?(Regexp)
       (out+err).chomp.must_match expected
     else
       (out+err).chomp.must_equal expected.gsub(/^ */, '')
@@ -120,6 +123,14 @@ class TestHelper
       shutup do
         i.download
         i.extract_primary_container
+      end
+    end
+  end
+
+  def self.install_with_caskfile(cask)
+    Hbc::Installer.new(cask).tap do |i|
+      shutup do
+        i.save_caskfile
       end
     end
   end

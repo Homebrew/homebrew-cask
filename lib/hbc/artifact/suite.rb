@@ -1,4 +1,4 @@
-class Hbc::Artifact::Suite < Hbc::Artifact::Symlinked
+class Hbc::Artifact::Suite < Hbc::Artifact::Moved
   def self.artifact_english_name
     'App Suite'
   end

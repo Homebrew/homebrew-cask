@@ -1,2 +1,2 @@
-class Hbc::Artifact::Service < Hbc::Artifact::Symlinked
+class Hbc::Artifact::Service < Hbc::Artifact::Moved
 end

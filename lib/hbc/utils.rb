@@ -15,17 +15,9 @@ Tty = Hbc::Utils::Tty
 # monkeypatch Object - not a great idea
 class Object
   def utf8_inspect
-    if not defined?(Encoding)
-      self.inspect
-    else
-      if self.respond_to?(:map)
-        self.map do |sub_elt|
-          sub_elt.utf8_inspect
-        end
-      else
-        self.inspect.force_encoding('UTF-8').sub(%r{\A"(.*)"\Z}, '\1')
-      end
-    end
+    return self.inspect unless defined?(Encoding)
+    return self.map(&:utf8_inspect) if self.respond_to?(:map)
+    self.inspect.force_encoding('UTF-8').sub(%r{\A"(.*)"\Z}, '\1')
   end
 end
 
@@ -60,9 +52,9 @@ def onoe(error)
 end
 
 def odebug(title, *sput)
-  if Hbc.respond_to?(:debug) and Hbc.debug
+  if Hbc.respond_to?(:debug) && Hbc.debug
     width = Tty.width * 4 - 6
-    if $stdout.tty? and title.to_s.length > width
+    if $stdout.tty? && title.to_s.length > width
       title = title.to_s[0, width - 3] + '...'
     end
     puts "#{Tty.magenta.bold}==>#{Tty.reset.bold} #{title}#{Tty.reset}"
@@ -147,8 +139,7 @@ module Hbc::Utils
       dirpath.rmdir
       true
     rescue Errno::ENOTEMPTY
-      if (ds_store = dirpath.join('.DS_Store')).exist? and
-        dirpath.children.length == 1
+      if (ds_store = dirpath.join('.DS_Store')).exist? && dirpath.children.length == 1
         ds_store.unlink
         retry
       else
@@ -157,6 +148,60 @@ module Hbc::Utils
     rescue Errno::EACCES, Errno::ENOENT
       false
     end
+  end
+
+  def self.gain_permissions_remove(path, options = {})
+    if path.respond_to?(:rmtree) && path.exist?
+      gain_permissions(path, ['-R'], options) do |path|
+        path.rmtree
+      end
+    elsif File.symlink?(path)
+      gain_permissions(path, ['-h'], options) do |path|
+        FileUtils.rm_f(path)
+      end
+    end
+  end
+
+  def self.gain_permissions(path, command_args, options = {})
+    command = options.fetch(:command, Hbc::SystemCommand)
+    tried_permissions = false
+    tried_ownership = false
+    begin
+      yield path
+    rescue StandardError => e
+      # in case of permissions problems
+      unless tried_permissions
+        # todo Better handling for the case where path is a symlink.
+        #      The -h and -R flags cannot be combined, and behavior is
+        #      dependent on whether the file argument has a trailing
+        #      slash.  This should do the right thing, but is fragile.
+        command.run('/usr/bin/chflags', must_succeed: false,
+          args: command_args + ['--', '000',     path])
+        command.run('/bin/chmod',       must_succeed: false,
+          args: command_args + ['--', 'u+rwx',   path])
+        command.run('/bin/chmod',       must_succeed: false,
+          args: command_args + ['-N',            path])
+        tried_permissions = true
+        retry # rmtree
+      end
+      unless tried_ownership
+        # in case of ownership problems
+        # todo Further examine files to see if ownership is the problem
+        #      before using sudo+chown
+        ohai "Using sudo to gain ownership of path '#{path}'"
+        command.run('/usr/sbin/chown',
+          :args => command_args + ['--', current_user, path],
+          :sudo => true)
+        tried_ownership = true
+        # retry chflags/chmod after chown
+        tried_permissions = false
+        retry # rmtree
+      end
+    end
+  end
+
+  def self.current_user
+    Etc.getpwuid(Process.euid).name
   end
 
   # originally from Homebrew abv
@@ -177,12 +222,12 @@ module Hbc::Utils
   def self.file_is_descendant(file, dir)
     file = Pathname.new(file)
     dir  = Pathname.new(dir)
-    return false unless file.exist? and dir.exist?
+    return false unless file.exist? && dir.exist?
     unless dir.directory?
       onoe "Argument must be a directory: '#{dir}'"
       return false
     end
-    unless file.absolute? and dir.absolute?
+    unless file.absolute? && dir.absolute?
       onoe "Both arguments must be absolute: '#{file}', '#{dir}'"
       return false
     end
@@ -191,6 +236,10 @@ module Hbc::Utils
       file = file.parent
     end
     return false
+  end
+
+  def self.path_occupied?(path)
+    File.exist?(path) || File.symlink?(path)
   end
 
   def self.error_message_with_suggestions

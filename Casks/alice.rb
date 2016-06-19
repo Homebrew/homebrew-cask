@@ -10,6 +10,6 @@ cask 'alice' do
   app 'Alice.app'
 
   caveats do
-    path_environment_variable("#{staged_path}/Alice.app/Contents/Resources/bin")
+    path_environment_variable("#{appdir}/Alice.app/Contents/Resources/bin")
   end
 end

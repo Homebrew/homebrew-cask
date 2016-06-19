@@ -1,4 +1,6 @@
 require 'pathname'
+require 'rspec/its'
+require 'rspec/wait'
 
 if ENV['COVERAGE']
   require 'coveralls'
@@ -37,6 +39,7 @@ Hbc.homebrew_prefix = Pathname.new(TEST_TMPDIR).join('prefix')
 Hbc.homebrew_repository = Hbc.homebrew_prefix
 Hbc.homebrew_tapspath = nil
 Hbc.binarydir = Hbc.homebrew_prefix.join('binarydir').join('bin')
+Hbc.appdir = Pathname.new(TEST_TMPDIR).join('appdir')
 
 # making homebrew's cache dir allows us to actually download Casks in tests
 HOMEBREW_CACHE.mkpath

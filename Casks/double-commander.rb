@@ -1,6 +1,6 @@
 cask 'double-commander' do
-  version '0.7.1-6739'
-  sha256 '62070f1be008f65e3298a0bc3f9bd65cac8ed8225f91a95b09326514167562e3'
+  version '0.7.2-6850'
+  sha256 'ab2604af151e50e133d7af423a4008dd27de699e759231608f3f00f696269118'
 
   url "http://downloads.sourceforge.net/sourceforge/doublecmd/doublecmd-#{version}.qt.x86_64.dmg"
   name 'Double Commander'

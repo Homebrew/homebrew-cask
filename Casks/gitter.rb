@@ -1,10 +1,10 @@
 cask 'gitter' do
-  version '1.162'
-  sha256 'faeeba7c607a0faff20c613ffbaf3f98bde88de0e1c73a638dc20e6e915ba81c'
+  version '1.177'
+  sha256 '0ca1c0d52c342548afbea8d3501282a4ccf494058aa2e23af27e09198a7a30a4'
 
   url "https://update.gitter.im/osx/Gitter-#{version}.dmg"
   appcast 'https://update.gitter.im/osx/appcast.xml',
-          checkpoint: '2ede75afab8a6d0ee210863c3ac4b61381d899aff068a3e343d703ac84ece7e5'
+          checkpoint: '2e66cc6fbae814070ed373eed07831c2aaf2bcd88f53dd410e8043df4f8ef52b'
   name 'Gitter'
   homepage 'https://gitter.im/'
   license :freemium

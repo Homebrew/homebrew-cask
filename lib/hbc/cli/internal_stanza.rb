@@ -35,6 +35,7 @@ class Hbc::CLI::InternalStanza < Hbc::CLI::InternalUseBase
                        :internet_plugin,
                        :audio_unit_plugin,
                        :vst_plugin,
+                       :vst3_plugin,
                        :screen_saver,
                        :pkg,
                        :installer,
@@ -63,7 +64,7 @@ class Hbc::CLI::InternalStanza < Hbc::CLI::InternalUseBase
     if retval.nil?
       exit 1 if quiet
       raise Hbc::CaskError.new("nothing to print")
-    elsif ! retval
+    elsif !retval
       exit 1 if quiet
       raise Hbc::CaskError.new("print incomplete")
     end
@@ -102,7 +103,7 @@ class Hbc::CLI::InternalStanza < Hbc::CLI::InternalUseBase
         next
       end
 
-      if artifact_name and not value.key?(artifact_name)
+      if artifact_name && !value.key?(artifact_name)
         opoo "no such stanza '#{artifact_name}' on Cask '#{cask_token}'" unless quiet
         puts ''
         next
@@ -115,7 +116,7 @@ class Hbc::CLI::InternalStanza < Hbc::CLI::InternalUseBase
       if format
         puts value.send(format)
       else
-        if artifact_name or value.is_a?(Symbol)
+        if artifact_name || value.is_a?(Symbol)
           puts value.inspect
         else
           puts value.to_s

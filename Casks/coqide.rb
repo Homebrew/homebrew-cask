@@ -1,6 +1,6 @@
 cask 'coqide' do
-  version '8.5'
-  sha256 'fe5cf6326b34f70b84fe7ad1d8fa6aab41fb2439478844ecda641528da3d1951'
+  version '8.5pl1'
+  sha256 '4760d90a004bd01be48b1a361314927e9a629eace8b599243e8d64a912acd6df'
 
   url "https://coq.inria.fr/distrib/V#{version}/files/CoqIDE_#{version}.dmg"
   name 'Coq'

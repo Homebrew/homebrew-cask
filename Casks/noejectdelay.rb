@@ -1,13 +1,13 @@
 cask 'noejectdelay' do
-  version '6.0.0'
-  sha256 '52c478ccb9977a66fd9a6ba76b02e229521f70ee22c88c436581e8e46aa20807'
+  version '7.1.0'
+  sha256 'cfaeed50aa7ed9eac04716ab0e34c5ef10658802e691732f7589f9454e96aa94'
 
-  url "https://pqrs.org/macosx/keyremap4macbook/files/NoEjectDelay-#{version}.dmg"
+  url "https://pqrs.org/osx/karabiner/files/NoEjectDelay-#{version}.dmg"
   name 'NoEjectDelay'
-  homepage 'https://pqrs.org/macosx/keyremap4macbook/noejectdelay.html.en'
+  homepage 'https://pqrs.org/osx/karabiner/noejectdelay.html.en'
   license :public_domain
 
-  pkg 'NoEjectDelay.pkg'
+  pkg 'NoEjectDelay.sparkle_guided.pkg'
 
   uninstall kext:    'org.pqrs.driver.NoEjectDelay',
             pkgutil: 'org.pqrs.driver.NoEjectDelay'

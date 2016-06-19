@@ -1,2 +1,2 @@
-class Hbc::Artifact::InputMethod < Hbc::Artifact::Symlinked
+class Hbc::Artifact::InputMethod < Hbc::Artifact::Moved
 end

@@ -1,13 +1,15 @@
 cask 'coreos' do
-  version '1.2.4'
-  sha256 'c25c550d97e20400dec14597f5b9ca4f920b14a232c2afded883514a3fe1721d'
+  version '1.2.9'
+  sha256 '3d59b7af835f2d643a0d0ec56d21be1d4b0822afb5be3f8c5a3bb86ffa71bf03'
 
   url "https://github.com/TheNewNormal/coreos-osx/releases/download/v#{version}/CoreOS_v#{version}.dmg"
   appcast 'https://github.com/TheNewNormal/coreos-osx/releases.atom',
-          checkpoint: '88c495bbd5b8b1050b7fa793e97f1545b808d632e5eccecbc130492dc6a88b0a'
+          checkpoint: '4702a0df004b01e142f337970ce12439b3558866923bdbb60a64e900909ea1e0'
   name 'CoreOS VM'
   homepage 'https://github.com/TheNewNormal/coreos-osx'
   license :apache
 
   app 'CoreOS.app'
+
+  zap delete: '~/coreos-osx'
 end

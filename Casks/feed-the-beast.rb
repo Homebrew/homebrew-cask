@@ -8,7 +8,11 @@ cask 'feed-the-beast' do
   homepage 'http://www.feed-the-beast.com/'
   license :apache
 
+  auto_updates true
+
   app 'Feed The Beast.app'
+
+  zap delete: '~/Library/Application Support/ftblauncher'
 
   caveats do
     depends_on_java

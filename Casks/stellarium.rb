@@ -9,4 +9,6 @@ cask 'stellarium' do
   license :gpl
 
   app 'Stellarium.app'
+
+  zap delete: '~/Library/Preferences/Stellarium'
 end

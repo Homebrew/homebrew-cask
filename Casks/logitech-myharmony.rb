@@ -1,6 +1,6 @@
 cask 'logitech-myharmony' do
   version '1.0'
-  sha256 '537a11f2174dc748c27aff02bf01569b5bb2c93539b339c6fd61a7da07bb059f'
+  sha256 'de3c4d3a6d71dcccf45acf92fca496558bab95f70461c8466ba4ade3f5986740'
 
   url "https://app.myharmony.com/prod/mac/#{version}/MyHarmony-App.dmg"
   name 'MyHarmony'

@@ -1,11 +1,11 @@
 cask 'airtool' do
-  version '1.3.1'
-  sha256 '93506b2d02650d91174669a389d27c4ec7f458e990d72c5fb3a3f542b66c32d6'
+  version '1.3.3'
+  sha256 '2758ca885c6ca7717cf319d4ca1e321a32fc9f193f030493791b7c219fed0976'
 
   # amazonaws.com/adriangranados was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/adriangranados/airtool_#{version}.pkg"
   appcast 'https://www.adriangranados.com/appcasts/airtoolcast.xml',
-          checkpoint: '717a2856bb3d239314cd11958feae648b5175fe46879c9e146694355f1dd7718'
+          checkpoint: '258758112e6ced219b9a4e2bc82b2213be623a80146a1079929cbba3fe703992'
   name 'Airtool'
   homepage 'http://www.adriangranados.com/apps/airtool'
   license :gratis

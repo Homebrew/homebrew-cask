@@ -1,11 +1,11 @@
 cask 'openbazaar' do
-  version '1.1.2'
-  sha256 'c85f8241d08d537191722ec2871fe5f9f3294a47b94d4582ad826513ceff9cda'
+  version '1.1.5'
+  sha256 '1da6c90497980d1865d6c22701293bea7794661fc2b6fc1f4307a3a52876fa20'
 
   # github.com/OpenBazaar/OpenBazaar-Installer was verified as official when first introduced to the cask
   url "https://github.com/OpenBazaar/OpenBazaar-Installer/releases/download/v#{version}/OpenBazaar-#{version}.dmg"
   appcast 'https://github.com/OpenBazaar/OpenBazaar-Installer/releases.atom',
-          checkpoint: '9b54c1811b424a4182081ae3ea249ab1aad7d7481264878eab6c5990048a84f0'
+          checkpoint: 'abb16a0a9005fdaa8c78bd8baacccc4ce9cea4574d7d028516cb8451f1b08653'
   name 'OpenBazaar'
   homepage 'https://openbazaar.org/'
   license :mit

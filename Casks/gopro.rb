@@ -1,6 +1,6 @@
 cask 'gopro' do
-  version '1.0.0.2474'
-  sha256 '146d239ada6d4503bd9e1dc9d62c4750e18c1dd6bf650f4ee9c40dd9128e5cd4'
+  version '1.3.0.3078'
+  sha256 'b4926626362cbd12f20c782fcba945e2b5670fe175d592fb501dd84b471a4d95'
 
   url "https://software.gopro.com/Mac/GoPro-MacInstaller-#{version}.dmg"
   name 'GoPro Desktop'

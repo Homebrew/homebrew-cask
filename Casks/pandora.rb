@@ -1,6 +1,6 @@
 cask 'pandora' do
-  version '2.0.8'
-  sha256 '9ac216fd51bb063f020a86c6f5d250989dfa033a2d6a3d703124c2f4bfa510d8'
+  version '2.0.10'
+  sha256 'ca467e668cbb0584b85184ca9ef55ad8e1ddaaabdab157c8556ff8fb7168582b'
 
   url "https://www.pandora.com/static/desktop_app/pandora_#{version.gsub('.', '_')}.air"
   name 'Pandora'

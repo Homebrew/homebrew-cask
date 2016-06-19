@@ -4,6 +4,7 @@ require 'hbc/artifact/base'
 require 'hbc/artifact/uninstall_base'
 require 'hbc/artifact/symlinked'
 require 'hbc/artifact/hardlinked'
+require 'hbc/artifact/moved'
 
 require 'hbc/artifact/app'
 require 'hbc/artifact/artifact'        # generic 'artifact' stanza
@@ -15,6 +16,7 @@ require 'hbc/artifact/installer'
 require 'hbc/artifact/internet_plugin'
 require 'hbc/artifact/audio_unit_plugin'
 require 'hbc/artifact/vst_plugin'
+require 'hbc/artifact/vst3_plugin'
 require 'hbc/artifact/nested_container'
 require 'hbc/artifact/pkg'
 require 'hbc/artifact/postflight_block'
@@ -53,6 +55,7 @@ module Hbc::Artifact
       Hbc::Artifact::InternetPlugin,
       Hbc::Artifact::AudioUnitPlugin,
       Hbc::Artifact::VstPlugin,
+      Hbc::Artifact::Vst3Plugin,
       Hbc::Artifact::ScreenSaver,
       Hbc::Artifact::Uninstall,
       Hbc::Artifact::PostflightBlock,

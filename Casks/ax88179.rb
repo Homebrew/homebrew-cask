@@ -1,6 +1,6 @@
 cask 'ax88179' do
-  version '2.7.0'
-  sha256 '8b12ecad1407e65a2bd89f055cfe7f2be102b3623b0b207b55f7f9eac54253e9'
+  version '2.8.0'
+  sha256 '4231136a1756f864dfad506497703dd48a2d95503a91914d98f9a12c129ef3a1'
 
   module Utils
     def self.basename(version)
@@ -17,5 +17,8 @@ cask 'ax88179' do
 
   pkg "AX88179_178A_v#{version}.pkg"
 
-  uninstall script: { executable: 'AX88179_178A_Uninstall_v140' }
+  uninstall script: {
+                      executable: 'AX88179_178A_Uninstall_v140',
+                      sudo:       false,
+                    }
 end

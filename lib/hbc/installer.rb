@@ -14,11 +14,15 @@ class Hbc::Installer
   include Hbc::Staged
   include Hbc::Verify
 
+  attr_reader :force, :skip_cask_deps
+
   PERSISTENT_METADATA_SUBDIRS = [ 'gpg' ]
 
-  def initialize(cask, command=Hbc::SystemCommand)
+  def initialize(cask, options={})
     @cask = cask
-    @command = command
+    @command = options.fetch(:command, Hbc::SystemCommand)
+    @force = options.fetch(:force, false)
+    @skip_cask_deps = options.fetch(:skip_cask_deps, false)
   end
 
   def self.print_caveats(cask)
@@ -50,7 +54,7 @@ class Hbc::Installer
     output
   end
 
-  def install(force=false, skip_cask_deps=false)
+  def install
     odebug "Hbc::Installer.install"
 
     if @cask.installed? && @cask.auto_updates && !force
@@ -64,12 +68,12 @@ class Hbc::Installer
     print_caveats
 
     begin
-      satisfy_dependencies(skip_cask_deps)
+      satisfy_dependencies
       download
       verify
       extract_primary_container
       install_artifacts
-      save_caskfile force
+      save_caskfile
       enable_accessibility_access
     rescue StandardError => e
       purge_versioned_files
@@ -80,7 +84,7 @@ class Hbc::Installer
   end
 
   def summary
-    s = if MacOS.release >= :lion and not ENV['HOMEBREW_NO_EMOJI']
+    s = if MacOS.release >= :lion && !ENV['HOMEBREW_NO_EMOJI']
       (ENV['HOMEBREW_INSTALL_BADGE'] || "\xf0\x9f\x8d\xba") + '  '
     else
       "#{Tty.blue.bold}==>#{Tty.reset.bold} Success!#{Tty.reset} "
@@ -90,7 +94,7 @@ class Hbc::Installer
 
   def download
     odebug "Downloading"
-    download = Hbc::Download.new(@cask)
+    download = Hbc::Download.new(@cask, force: false)
     @downloaded_path = download.perform
     odebug "Downloaded to -> #{@downloaded_path}"
     @downloaded_path
@@ -103,7 +107,7 @@ class Hbc::Installer
   def extract_primary_container
     odebug "Extracting primary container"
     FileUtils.mkdir_p @cask.staged_path
-    container = if @cask.container and @cask.container.type
+    container = if @cask.container && @cask.container.type
        Hbc::Container.from_type(@cask.container.type)
     else
        Hbc::Container.for_path(@downloaded_path, @command)
@@ -121,14 +125,15 @@ class Hbc::Installer
     odebug "#{artifacts.length} artifact/s defined", artifacts
     artifacts.each do |artifact|
       odebug "Installing artifact of class #{artifact}"
-      artifact.new(@cask, @command).install_phase
+      options = { command: @command, force: force }
+      artifact.new(@cask, options).install_phase
     end
   end
 
   # todo move dependencies to a separate class
   #      dependencies should also apply for "brew cask stage"
   #      override dependencies with --force or perhaps --force-deps
-  def satisfy_dependencies(skip_cask_deps=false)
+  def satisfy_dependencies
     if @cask.depends_on
       ohai 'Satisfying dependencies'
       macos_dependencies
@@ -145,15 +150,15 @@ class Hbc::Installer
     if @cask.depends_on.macos.first.is_a?(Array)
       operator, release = @cask.depends_on.macos.first
       unless MacOS.release.send(operator, release)
-        raise Hbc::CaskError.new "Cask #{@cask} depends on OS X release #{operator} #{release}, but you are running release #{MacOS.release}."
+        raise Hbc::CaskError.new "Cask #{@cask} depends on macOS release #{operator} #{release}, but you are running release #{MacOS.release}."
       end
     elsif @cask.depends_on.macos.length > 1
       unless @cask.depends_on.macos.include?(Gem::Version.new(MacOS.release.to_s))
-        raise Hbc::CaskError.new "Cask #{@cask} depends on OS X release being one of: #{@cask.depends_on.macos(&:to_s).inspect}, but you are running release #{MacOS.release}."
+        raise Hbc::CaskError.new "Cask #{@cask} depends on macOS release being one of: #{@cask.depends_on.macos(&:to_s).inspect}, but you are running release #{MacOS.release}."
       end
     else
       unless MacOS.release == @cask.depends_on.macos.first
-        raise Hbc::CaskError.new "Cask #{@cask} depends on OS X release #{@cask.depends_on.macos.first}, but you are running release #{MacOS.release}."
+        raise Hbc::CaskError.new "Cask #{@cask} depends on macOS release #{@cask.depends_on.macos.first}, but you are running release #{MacOS.release}."
       end
     end
   end
@@ -178,7 +183,7 @@ class Hbc::Installer
   end
 
   def formula_dependencies
-    return unless @cask.depends_on.formula and not @cask.depends_on.formula.empty?
+    return unless @cask.depends_on.formula && !@cask.depends_on.formula.empty?
     ohai 'Installing Formula dependencies from Homebrew'
     @cask.depends_on.formula.each do |dep_name|
       print "#{dep_name} ... "
@@ -196,7 +201,7 @@ class Hbc::Installer
   end
 
   def cask_dependencies
-    return unless @cask.depends_on.cask and not @cask.depends_on.cask.empty?
+    return unless @cask.depends_on.cask && !@cask.depends_on.cask.empty?
     ohai "Installing Cask dependencies: #{@cask.depends_on.cask.join(', ')}"
     deps = Hbc::CaskDependencies.new(@cask)
     deps.sorted.each do |dep_token|
@@ -205,7 +210,8 @@ class Hbc::Installer
       if dep.installed?
         puts "already installed"
       else
-        Hbc::Installer.new(dep).install(false, true)
+        Hbc::Installer.new(dep,
+          force: false, skip_cask_deps: true).install
         puts "done"
       end
     end
@@ -253,12 +259,12 @@ class Hbc::Installer
     else
       opoo <<-EOS.undent
         Accessibility access was enabled for #{@cask}, but it is not safe to disable
-        automatically on this version of OS X.  See System Preferences.
+        automatically on this version of macOS.  See System Preferences.
       EOS
     end
   end
 
-  def save_caskfile(force=false)
+  def save_caskfile
     timestamp = :now
     create    = true
     savedir   = @cask.metadata_subdir('Casks', timestamp, create)
@@ -274,7 +280,7 @@ class Hbc::Installer
     FileUtils.copy(@cask.sourcefile_path, savedir) if @cask.sourcefile_path
   end
 
-  def uninstall(force=false)
+  def uninstall
     odebug "Hbc::Installer.uninstall"
     disable_accessibility_access
     uninstall_artifacts
@@ -288,7 +294,8 @@ class Hbc::Installer
     odebug "#{artifacts.length} artifact/s defined", artifacts
     artifacts.each do |artifact|
       odebug "Un-installing artifact of class #{artifact}"
-      artifact.new(@cask, @command).uninstall_phase
+      options = { command: @command, force: force }
+      artifact.new(@cask, options).uninstall_phase
     end
   end
 
@@ -297,7 +304,7 @@ class Hbc::Installer
     uninstall_artifacts
     if Hbc::Artifact::Zap.me?(@cask)
       ohai "Dispatching zap stanza"
-      Hbc::Artifact::Zap.new(@cask, @command).zap_phase
+      Hbc::Artifact::Zap.new(@cask, command: @command).zap_phase
     else
       opoo "No zap stanza present for Cask '#{@cask}'"
     end
@@ -305,54 +312,23 @@ class Hbc::Installer
     purge_caskroom_path
   end
 
-  # this feels like a class method, but uses @command
-  def permissions_rmtree(path)
-    if path.respond_to?(:rmtree) and path.exist?
-      tried_permissions = false
-      tried_ownership = false
-      begin
-        path.rmtree
-      rescue StandardError => e
-        # in case of permissions problems
-        unless tried_permissions
-          # todo Better handling for the case where path is a symlink.
-          #      The -h and -R flags cannot be combined, and behavior is
-          #      dependent on whether the file argument has a trailing
-          #      slash.  This should do the right thing, but is fragile.
-          @command.run!('/usr/bin/chflags', :args => ['-R', '--', '000',   path])
-          @command.run!('/bin/chmod',       :args => ['-R', '--', 'u+rwx', path])
-          @command.run!('/bin/chmod',       :args => ['-R', '-N',          path])
-          tried_permissions = true
-          retry # rmtree
-        end
-        unless tried_ownership
-          # in case of ownership problems
-          # todo Further examine files to see if ownership is the problem
-          #      before using sudo+chown
-          ohai "Using sudo to gain ownership of path '#{path}'"
-          current_user = Etc.getpwuid(Process.euid).name
-          @command.run('/usr/sbin/chown', :args => ['-R', '--', current_user, path],
-                                          :sudo => true)
-          tried_ownership = true
-          # retry chflags/chmod after chown
-          tried_permissions = false
-          retry # rmtree
-        end
-      end
-    end
+  def gain_permissions_remove(path)
+    Hbc::Utils.gain_permissions_remove(path, command: @command)
   end
 
   def purge_versioned_files
     odebug "Purging files for version #{@cask.version} of Cask #{@cask}"
 
     # versioned staged distribution
-    permissions_rmtree(@cask.staged_path)
+    gain_permissions_remove(@cask.staged_path)
 
     # Homebrew-cask metadata
-    if @cask.metadata_versioned_container_path.respond_to?(:children) and
-        @cask.metadata_versioned_container_path.exist?
+    if @cask.metadata_versioned_container_path.respond_to?(:children) &&
+         @cask.metadata_versioned_container_path.exist?
       @cask.metadata_versioned_container_path.children.each do |subdir|
-        permissions_rmtree subdir unless PERSISTENT_METADATA_SUBDIRS.include?(subdir.basename)
+        unless PERSISTENT_METADATA_SUBDIRS.include?(subdir.basename)
+          gain_permissions_remove(subdir)
+        end
       end
     end
     Hbc::Utils.rmdir_if_possible(@cask.metadata_versioned_container_path)
@@ -364,6 +340,6 @@ class Hbc::Installer
 
   def purge_caskroom_path
     odebug "Purging all staged versions of Cask #{@cask}"
-    permissions_rmtree(@cask.caskroom_path)
+    gain_permissions_remove(@cask.caskroom_path)
   end
 end
