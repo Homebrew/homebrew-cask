@@ -2,8 +2,8 @@ cask 'metanota' do
   version '2.4.1'
   sha256 'baac3496d1fe723ef6cb905aca9a718aac828c56ef4b64cde171bac340bbc124'
 
-  # ge.tt is the official download host per the vendor homepage
-  url "http://w092697.blob1.ge.tt/streams/6GNd4cW/Metanota.app%20-%20#{version}.zip?sig=-Ur6rw4x_7U7VV2rwCx9mMSFkaAWOXvBsNQ&type=download"
+  # ge.tt/gett/6GNd4cW was verified as official when first introduced to the cask
+  url "http://b2.ge.tt/gett/6GNd4cW/Metanota.app+-+#{version}.zip?index=8&user=user-0VCoSxwzs2zU7LJobQRprdIkhlyNVdCR8TaCFkLR-&download="
   appcast 'https://s3.amazonaws.com/sparkle.metanota.com/appcast.xml',
           checkpoint: 'f54b59d67499e8add469cbec7d5bd206718048837d47df403e6e6c412ab93ca7'
   name 'Metanota'
