@@ -21,6 +21,7 @@ cask-repair --help
 # fork homebrew-cask to your account - only needed once
 cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Casks"
 hub fork
+git fetch --unshallow
 
 # use to update <outdated_cask>
 outdated_cask='<the-cask-i-want-to-update>'
@@ -45,6 +46,7 @@ For manual updates, you'll need to fork the repository and add your copy as a re
 $ github_user='<my-github-username>'
 $ cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
 $ git remote add "$github_user" "https://github.com/$github_user/homebrew-cask"
+$ git fetch --unshallow
 ```
 
 3. Switch to a new branch (ie. `new-feature`), and work from there: `git checkout -b new-feature`
