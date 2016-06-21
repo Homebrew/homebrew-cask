@@ -1,3 +1,5 @@
+require 'zlib'
+
 class Hbc::Container::Criteria
   attr_reader :path
 
@@ -10,47 +12,26 @@ class Hbc::Container::Criteria
     @file ||= @command.run('/usr/bin/file', :args => ['-Izb', '--', path]).stdout
   end
 
+  def tar?
+    Proc.new do |tar|
+      tar.read(257)
+      bytes = tar.read(6)
+      bytes ? bytes.unpack('C*') == "ustar\0".unpack('C*') : false
+    end
+  end
+
   def tar_bz2?
     return @tar_bz2 unless @tar_bz2.nil?
     return (@tar_bz2 = false) if @tar_gz == true
     @tar_bz2 = file.include?('application/x-bzip2;') &&
-      IO.pipe do |r, w|
-        spawn('/usr/bin/bunzip2', '-c', @path.to_s, out: w, err: w)
-
-        tries = @path.size < 1000 ? 1000 : 10000
-        position = 257
-        bytes = ''
-
-        begin
-          while position > 0
-            r.read_nonblock(1)
-            position -= 1
-          end
-
-          while bytes.length < 6
-            bytes << r.read_nonblock(6)
-          end
-
-          bytes ? bytes.unpack('C*') == "ustar\0".unpack('C*') : false
-        rescue IO::WaitReadable
-          if (tries -= 1) >= 0
-            sleep(0.0001)
-            retry
-          end
-          false
-        end
-      end
+      IO.popen(['/usr/bin/bunzip2', '-c', @path.to_s, err: [:child, :out]], &tar?)
   end
 
   def tar_gz?
     return @tar_gz unless @tar_gz.nil?
     return (@tar_gz = false) if @tar_bz2 == true
     @tar_gz = file.include?('application/x-gzip;') &&
-      Zlib::GzipReader.open(@path) do |gzip|
-        gzip.read(257)
-        bytes = gzip.read(6)
-        bytes ? bytes.unpack('C*') == "ustar\0".unpack('C*') : false
-      end
+      Zlib::GzipReader.open(@path, &tar?)
   end
 
   def tarball?

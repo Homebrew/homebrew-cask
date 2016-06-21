@@ -2,7 +2,6 @@
 # for pure gzip only, not tar-gzip (.tgz or .tar.gz)
 
 require 'tmpdir'
-require 'zlib'
 
 class Hbc::Container::Gzip < Hbc::Container::Base
   def self.me?(criteria)
