@@ -9,6 +9,8 @@ cask 'flux' do
   homepage 'https://justgetflux.com/'
   license :gratis
 
+  auto_updates true
+
   app 'Flux.app'
 
   postflight do
