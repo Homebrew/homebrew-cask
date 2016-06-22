@@ -1,6 +1,6 @@
 cask 'adobe-dng-converter' do
-  version '9.5.1'
-  sha256 '4465231586b5a55f7cf1b56843ec7fb30f73a0f9aff177d0e9a65e951796a348'
+  version '9.6'
+  sha256 '631e8ffd2d893de09c4d2e306e1917ab45c5faecf2f44d9a1d80b6ba7e8efa59'
 
   url "http://download.adobe.com/pub/adobe/dng/mac/DNGConverter_#{version.dots_to_underscores}.dmg"
   name 'Adobe Camera Raw and DNG Converter'
