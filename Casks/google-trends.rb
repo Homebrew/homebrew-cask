@@ -1,4 +1,4 @@
-cask 'google-trends-screensaver' do
+cask 'google-trends' do
   version :latest
   sha256 :no_check
 
