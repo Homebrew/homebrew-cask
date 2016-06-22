@@ -6,6 +6,6 @@ cask 'desktoputility' do
   name 'DesktopUtility'
   homepage 'https://sweetpproductions.com'
   license :commercial
-  
+
   app 'DesktopUtility.app'
 end
