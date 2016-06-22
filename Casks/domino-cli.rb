@@ -12,11 +12,14 @@ cask 'domino-cli' do
   installer script: 'Domino Installer.app/Contents/MacOS/JavaApplicationStub',
             args:   %w[-q -c -overwrite],
             sudo:   true
-  binary '/Applications/domino/domino'
 
   uninstall script: {
                       executable: '/Applications/domino/Domino Uninstaller.app/Contents/MacOS/JavaApplicationStub',
                       args:       %w[-q -c],
                       sudo:       true,
                     }
+
+  caveats do
+    path_environment_variable '/Applications/domino'
+  end
 end
