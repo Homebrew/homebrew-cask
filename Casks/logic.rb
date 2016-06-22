@@ -1,6 +1,6 @@
 cask 'logic' do
-  version '1.2.9'
-  sha256 '8c85ad2aa05b86974351b0b573f41f68c42bb1835d531c2a2e288df5a335fe55'
+  version '1.2.10'
+  sha256 '02042d0527069581b4f4cf6d5dbd7d16312ae2219d2787d53ad677ddd6fa26b4'
 
   url "http://downloads.saleae.com/logic/#{version}/Logic-#{version}-Darwin.dmg"
   name 'Logic'
