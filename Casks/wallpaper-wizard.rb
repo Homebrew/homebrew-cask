@@ -1,9 +1,9 @@
 cask 'wallpaper-wizard' do
-  version '1.5.1'
-  sha256 '5f6d190cff7af60050357d993ee34b9544fe15672b535769766ab783cbd09f99'
+  version :latest
+  sha256 :no_check
 
-  # coppertino.com is the official download host per the vendor homepage
-  url "http://cloud.coppertino.com/wallwiz/wallpaperwizard_#{version}.dmg"
+  # dl.devmate.com/com.wallwiz was verified as official when first introduced to the cask
+  url 'https://dl.devmate.com/com.wallwiz/WallpaperWizard.dmg'
   name 'Wallpaper Wizard'
   homepage 'http://wallwiz.com'
   license :freemium

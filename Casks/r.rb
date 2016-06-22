@@ -2,14 +2,14 @@ cask 'r' do
   if MacOS.release < :mavericks
     version '3.2.1'
     sha256 '88b9a20af00a916f3902ccac83098643b95a2801eb4775d38130b26871323a3f'
-    # rstudio.com is the official download host per the vendor homepage
-    url "https://cran.rstudio.com/bin/macosx/R-#{version}-snowleopard.pkg"
+    # cran.cnr.berkeley.edu was verified as official when first introduced to the cask
+    url "https://cran.cnr.berkeley.edu/bin/macosx/R-#{version}-snowleopard.pkg"
     pkg "R-#{version}-snowleopard.pkg"
   else
     version '3.3.0'
     sha256 '5b447d9d3369ecece719bf5e15a586eb6392a2159ffcccb756d5914eb7989cbe'
-    # rstudio.com is the official download host per the vendor homepage
-    url "https://cran.rstudio.com/bin/macosx/R-#{version}.pkg"
+    # cran.cnr.berkeley.edu was verified as official when first introduced to the cask
+    url "https://cran.cnr.berkeley.edu/bin/macosx/R-#{version}.pkg"
     pkg "R-#{version}.pkg"
   end
 

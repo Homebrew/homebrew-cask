@@ -14,6 +14,19 @@ describe Hbc::CLI::List do
     OUTPUT
   end
 
+  it 'lists the installed Casks and all their installed versions' do
+    casks = %w[local-caffeine local-transmission].map { |c| Hbc.load(c) }
+
+    casks.each { |c| TestHelper.install_with_caskfile(c) }
+
+    lambda {
+      Hbc::CLI::List.run('--versions')
+    }.must_output <<-OUTPUT.gsub(/^ */, '')
+      local-caffeine 1.2.3
+      local-transmission 2.61
+    OUTPUT
+  end
+
   describe 'when Casks have been renamed' do
     before do
       @renamed_path = Hbc.caskroom.join('ive-been-renamed','latest','Renamed.app').tap(&:mkpath)
@@ -32,7 +45,6 @@ describe Hbc::CLI::List do
       OUTPUT
     end
   end
-
 
   it 'given a set of installed Casks, lists the installed files for those Casks' do
     casks = %w[local-caffeine local-transmission].map { |c| Hbc.load(c) }

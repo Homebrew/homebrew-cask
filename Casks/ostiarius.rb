@@ -1,8 +1,8 @@
 cask 'ostiarius' do
-  version '1.0.1'
-  sha256 '7f4c3cea1d0a8fc00d64e9781be27f36ea92de3ef2533bbfcbf2781aef525565'
+  version '1.1.0'
+  sha256 '32b1e0071985ba804a6ca3131504f0d8d789e89950110a8919995c607e447dce'
 
-  # bitbucket.org is the official download host per the vendor homepage
+  # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/Ostiarius_#{version}.zip"
   name 'Ostiarius'
   homepage 'https://objective-see.com/products/ostiarius.html'

@@ -19,7 +19,7 @@ cask 'vlc' do
   preflight do
     File.open(shimscript, 'w') do |f|
       f.puts '#!/bin/bash'
-      f.puts "#{Hbc.appdir}/VLC.app/Contents/MacOS/VLC \"$@\""
+      f.puts "#{appdir}/VLC.app/Contents/MacOS/VLC \"$@\""
       FileUtils.chmod '+x', f
     end
   end

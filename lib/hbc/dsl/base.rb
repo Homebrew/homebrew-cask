@@ -23,4 +23,8 @@ class Hbc::DSL::Base
   def staged_path
     caskroom_path.join(@cask.version)
   end
+
+  def appdir
+    Hbc::DSL.appdir
+  end
 end

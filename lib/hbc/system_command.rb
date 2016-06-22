@@ -50,7 +50,7 @@ class Hbc::SystemCommand
     options[:print_stderr] = true   if !options.key?(:print_stderr)
     @command.unshift(*bsexec_prefix) if  options[:bsexec]
     @command.unshift(*sudo_prefix)   if  options[:sudo]
-    @command.concat(options[:args])  if  options.key?(:args) and !options[:args].empty?
+    @command.concat(options[:args])  if  options.key?(:args) && !options[:args].empty?
     if @command.size == 1
       @command[0] = Shellwords.shellescape(@command[0])
     end
@@ -154,7 +154,7 @@ class Hbc::SystemCommand::Result
       output.sub!(%r{(<\s*/\s*plist\s*>)(.*?)\Z}m, '\1')
       _warn_plist_garbage(command, $2)
       xml = Plist::parse_xml(output)
-      unless xml.respond_to?(:keys) and xml.keys.size > 0
+      unless xml.respond_to?(:keys) && xml.keys.size > 0
         raise Hbc::CaskError.new(<<-ERRMSG)
 Empty result parsing plist output from command.
   command was:

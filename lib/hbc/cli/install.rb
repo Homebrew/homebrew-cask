@@ -8,7 +8,7 @@ class Hbc::CLI::Install < Hbc::CLI::Base
     # retval is ternary: true/false/nil
     if retval.nil?
       raise Hbc::CaskError.new("nothing to install")
-    elsif ! retval
+    elsif !retval
       raise Hbc::CaskError.new("install incomplete")
     end
   end

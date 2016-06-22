@@ -27,8 +27,8 @@ module Hbc::QualifiedToken
   end
 
   def self.parse(arg)
-    return nil if ! arg.kind_of?(String)
-    return nil if ! arg.downcase.match(%r{^#{qualified_token_regexp}$})
+    return nil if !arg.kind_of?(String)
+    return nil if !arg.downcase.match(%r{^#{qualified_token_regexp}$})
     path_elements = arg.downcase.split('/')
     if path_elements.count == 2
       # eg phinze-cask/google-chrome.
@@ -36,7 +36,7 @@ module Hbc::QualifiedToken
       token = path_elements[1]
       dash_elements = path_elements[0].split('-')
       repo = dash_elements.pop
-      dash_elements.pop if dash_elements.count > 1 and dash_elements[-1] + '-' == repo_prefix
+      dash_elements.pop if dash_elements.count > 1 && dash_elements[-1] + '-' == repo_prefix
       user = dash_elements.join('-')
     else
       # eg caskroom/cask/google-chrome

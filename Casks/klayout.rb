@@ -1,9 +1,9 @@
 cask 'klayout' do
-  version '0.23.2'
-  sha256 '96ce3fdead710248ed2ed4f25c9a94859949466d42eaa4f87881c17567dc1f15'
+  version '0.24.7'
+  sha256 'c986ede1d0950294b1c3f94fe174927cfee2af82fe21ac03a5b15d5abc6b6385'
 
-  # 178.77.72.242 is the official download host per the vendor homepage
-  url "http://178.77.72.242/downloads/klayout.#{version}.pkg"
+  # klayout.org was verified as official when first introduced to the cask
+  url "http://www.klayout.org/downloads/klayout-#{version}-MacOSX-Yosemite-1-Qt487mp.dmg.bz2"
   name 'KLayout'
   homepage 'http://www.klayout.de/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

@@ -1,10 +1,10 @@
 cask 'kube-solo' do
-  version '0.6.3'
-  sha256 '3b9ced3e21b82a0982acb4258263083b6441cf30179377ed7a95d57bab2320b9'
+  version '0.6.6'
+  sha256 'aafdf20cc17eee7fcfe6d3758f9282895bb62b4b43c07ed01347184cf7d3e88d'
 
   url "https://github.com/TheNewNormal/kube-solo-osx/releases/download/v#{version}/Kube-Solo_v#{version}.dmg"
   appcast 'https://github.com/TheNewNormal/kube-solo-osx/releases.atom',
-          checkpoint: '129a51caa8e617adbc554fc2f7140facf7b44691103debea7341316243f0421d'
+          checkpoint: 'f09238d409b0a7906c53832a67bd656003fe363c9cf0c54301bdf8e4fbb98ea8'
   name 'Kube-Solo'
   homepage 'https://github.com/TheNewNormal/kube-solo-osx'
   license :apache

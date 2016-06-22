@@ -1,6 +1,6 @@
 cask 'dymo-label' do
-  version '8.5.2'
-  sha256 '8cd8e0d135613d48ddb41189ff352eb53214390d149c5afcb6c25f419518c54e'
+  version '8.5.3'
+  sha256 '6810594fa0cae1b5906aae11bf9c6cd298f18758238b88319c964e93720d8a78'
 
   url "http://download.dymo.com/dymo/Software/Mac/DLS#{version.to_i}Setup.#{version}.dmg"
   name 'Dymo Label'

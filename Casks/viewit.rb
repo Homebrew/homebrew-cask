@@ -1,6 +1,6 @@
 cask 'viewit' do
-  version '2.55'
-  sha256 '0adeb4a7bb436c4082d86b78e316e9dfb312b4499a43421d8548873c107afb3d'
+  version '2.56'
+  sha256 'e831e59851bcf57d32614bf41084806250dccbd56f098eb6b8107420b834d56a'
 
   url "http://www.hexcat.com/downloads/ViewIt-#{version}.zip"
   name 'ViewIt'

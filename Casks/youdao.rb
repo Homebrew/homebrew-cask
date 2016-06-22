@@ -5,7 +5,7 @@ cask 'youdao' do
     url 'http://codown.youdao.com/cidian/download/MacDict1.4.1.dmg'
   else
     version '2.0.1'
-    sha256 '1d823f77a4b188bc8eccfdf71b422c5f6b1cc6f3c593e4a15108e4a0cc697d78'
+    sha256 '45cdb8676e0bd73eaa9a613fe8528c99c27a2745f40da395ac8ce4e94d07b69b'
     url 'http://codown.youdao.com/cidian/download/MacDict.dmg'
     appcast 'http://cidian.youdao.com/apps/macupdate/update.xml',
             checkpoint: 'ab00c1a82410a13cf7b7f69e14f5f5a57bc854bf05da6f6e41e3d549e4c8dfc1'
