@@ -1,6 +1,6 @@
 cask 'robomongo' do
-  version '0.9.0-rc8,c113244'
-  sha256 '30f7666e0e25bfd2504e018221fa7686922aeaf116ee61a06a41f24adf3b5e81'
+  version '0.9.0-rc9,0bb5668'
+  sha256 'bffbbc16971af6caeff81c6a3f132dc3ee6be03b9766449e1b9b78847edc3a2b'
 
   url "https://download.robomongo.org/#{version.before_comma}/osx/robomongo-#{version.before_comma}-darwin-x86_64-#{version.after_comma}.dmg"
   name 'Robomongo'
