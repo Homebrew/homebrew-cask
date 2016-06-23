@@ -97,13 +97,31 @@ module Hbc::Utils
     return cmd_pn
   end
 
-  def self.exec_editor(*args)
-    editor = [
-              *ENV.values_at('HOMEBREW_EDITOR', 'VISUAL', 'EDITOR'),
-              *%w{mate edit vim /usr/bin/vim}.map{ |x| which(x) }
-             ].compact.first.to_s
-    exec(*editor.split.concat(args))
-  end
+def self.which_editor
+  editor = ENV.values_at("HOMEBREW_EDITOR", "VISUAL", "EDITOR").compact.first
+  return editor unless editor.nil?
+
+  # Find Textmate
+  editor = "mate" if which "mate"
+  # Find BBEdit / TextWrangler
+  editor ||= "edit" if which "edit"
+  # Find vim
+  editor ||= "vim" if which "vim"
+  # Default to standard vim
+  editor ||= "/usr/bin/vim"
+
+  opoo <<-EOS.undent
+    Using #{editor} because no editor was set in the environment.
+    This may change in the future, so we recommend setting EDITOR, VISUAL,
+    or HOMEBREW_EDITOR to your preferred text editor.
+  EOS
+
+  editor
+end
+
+def self.exec_editor(*args)
+  safe_exec(which_editor, *args)
+end
 
   # originally from Homebrew puts_columns
   def self.stringify_columns items, star_items=[]
