@@ -12,7 +12,7 @@ class Hbc::DSL::Installer
       raise Hbc::CaskInvalidError.new(self.token, "'installer' stanza requires an argument")
     end
     parameters = Hash.new().merge(*parameters)
-    if parameters.key?(:script) and ! parameters[:script].respond_to?(:key?)
+    if parameters.key?(:script) && !parameters[:script].respond_to?(:key?)
       if parameters.key?(:executable)
         raise Hbc::CaskInvalidError.new(self.token, "'installer' stanza gave arguments for both :script and :executable")
       end

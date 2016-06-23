@@ -12,7 +12,6 @@ cask 'mps' do
   app "MPS #{version.major_minor}.app"
 
   zap delete: [
-                "~/.MPS#{version.major_minor.no_dots}",
                 "~/MPSSamples.#{version}",
                 "~/Library/Application Support/MPS#{version.major_minor.no_dots}",
                 "~/Library/Preferences/MPS#{version.major_minor.no_dots}",

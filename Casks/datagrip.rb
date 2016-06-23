@@ -12,7 +12,6 @@ cask 'datagrip' do
   app 'DataGrip.app'
 
   zap delete: [
-                "~/.DataGrip#{version.major_minor}",
                 "~/Library/Preferences/DataGrip#{version.major_minor}",
                 "~/Library/Application Support/DataGrip#{version.major_minor}",
                 "~/Library/Caches/DataGrip#{version.major_minor}",

@@ -1,6 +1,6 @@
 cask 'dbeaver-enterprise' do
-  version '3.6.9'
-  sha256 'a4500ee5e0301d87474e6073cfca33317a1b1a23254a73700d0f0b8ed61016b2'
+  version '3.6.10'
+  sha256 '5c19c5f38a7dd8575a6fc3a4d97c2df80e305338057e2e870d2527c3a46ebe40'
 
   url "http://dbeaver.jkiss.org/files/#{version}/dbeaver-ee-#{version}-macos.dmg"
   name 'DBeaver Enterprise Edition'

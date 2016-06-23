@@ -141,6 +141,24 @@ describe Hbc::Audit do
       end
     end
 
+    describe "url checks" do
+      context "given a block" do
+        let(:cask_token) { 'booby-trap' }
+
+        context "when loading the cask" do
+          it "does not evaluate the block" do
+            expect { cask }.to_not raise_error
+          end
+        end
+
+        context "when doing the audit" do
+          it "evaluates the block" do
+            expect { subject }.to raise_error("Boom")
+          end
+        end
+      end
+    end
+
     describe "audit of downloads" do
       let(:cask_token) { 'with-binary' }
       let(:cask) { Hbc.load(cask_token) }

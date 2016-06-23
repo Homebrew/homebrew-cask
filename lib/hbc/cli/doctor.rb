@@ -1,7 +1,7 @@
 class Hbc::CLI::Doctor < Hbc::CLI::Base
   def self.run
-    ohai 'OS X Release:',                                    render_with_none_as_error( MacOS.release )
-    ohai 'OS X Release with Patchlevel:',                    render_with_none_as_error( MacOS.release_with_patchlevel )
+    ohai 'macOS Release:',                                   render_with_none_as_error( MacOS.release )
+    ohai 'macOS Release with Patchlevel:',                   render_with_none_as_error( MacOS.release_with_patchlevel )
     ohai "Hardware Architecture:",                           render_with_none_as_error( "#{Hardware::CPU.type}-#{Hardware::CPU.bits}" )
     ohai 'Ruby Version:',                                    render_with_none_as_error( "#{RUBY_VERSION}-p#{RUBY_PATCHLEVEL}" )
     ohai 'Ruby Path:',                                       render_with_none_as_error( RbConfig.ruby )
@@ -147,21 +147,19 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
   end
 
   def self.render_with_none(string)
-    (string.nil? or not string.respond_to?(:to_s) or string.to_s.length == 0) ?
-      none_string :
-      string
+    return string if !string.nil? && string.respond_to?(:to_s) && string.to_s.length > 0
+    none_string
   end
 
   def self.render_with_none_as_error(string)
-    (string.nil? or not string.respond_to?(:to_s) or string.to_s.length == 0) ?
-      "#{none_string} #{error_string}" :
-       string
+    return string if !string.nil? && string.respond_to?(:to_s) && string.to_s.length > 0
+    "#{none_string} #{error_string}"
   end
 
   def self.render_tap_paths(paths)
     paths = [ paths ] unless paths.respond_to?(:each)
     paths.collect do |dir|
-      if (dir.nil? or dir.to_s.length == 0) then
+      if dir.nil? || dir.to_s.length == 0
         none_string
       elsif dir.to_s.match(legacy_tap_pattern)
         dir.to_s.concat(" #{error_string 'Warning: legacy tap path'}")
@@ -205,9 +203,7 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
   end
 
   def self.render_load_path(paths)
-    if paths.nil? or paths.size == 0
-      return "#{none_string} #{error_string}"
-    end
+    return "#{none_string} #{error_string}" if paths.nil? || paths.size == 0
     copy = Array.new(paths)
     unless Hbc::Utils.file_is_descendant(copy[0], homebrew_taps)
       copy[0] = "#{copy[0]} #{error_string %Q{error: should be descendant of Homebrew taps directory}}"

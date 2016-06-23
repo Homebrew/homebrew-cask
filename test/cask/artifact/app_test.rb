@@ -177,6 +177,61 @@ describe Hbc::Artifact::App do
       end
     end
 
+    describe "when the target is a broken symlink" do
+      let(:target_path) {
+        Hbc.appdir.join('Caffeine.app')
+      }
+
+      let(:deleted_path) {
+        local_caffeine.staged_path.join(
+          'Deleted.app')
+      }
+
+      before do
+        deleted_path.mkdir
+        File.symlink(deleted_path, target_path)
+        deleted_path.rmdir
+      end
+
+      it "leaves the target alone" do
+        cask = local_caffeine
+        TestHelper.must_output(self, lambda {
+          Hbc::Artifact::App.new(cask).install_phase
+        }, "==> It seems there is already an App at '#{target_path}'; not moving.")
+
+        File.symlink?(target_path).must_equal true
+      end
+
+      describe "given the force option" do
+        let(:install_phase) {
+          lambda {
+            Hbc::Artifact::App.new(
+              local_caffeine, force: true).install_phase
+          }
+        }
+
+        it "overwrites the existing app" do
+          cask = local_caffeine
+
+          expected = [
+            "==> It seems there is already an App at '#{target_path}'; overwriting.",
+            "==> Removing App: '#{target_path}'",
+            "==> Moving App 'Caffeine.app' to '#{target_path}'"
+          ]
+          TestHelper.must_output(self, install_phase,
+            expected.join("\n"))
+
+          source_path = cask.staged_path.join('Caffeine.app')
+
+          File.exist?(source_path).must_equal false
+          File.ftype(target_path).must_equal 'directory'
+
+          contents_path = target_path.join('Contents/Info.plist')
+          File.exist?(contents_path).must_equal true
+        end
+      end
+    end
+
     it "gives a warning if the source doesn't exist" do
       cask = local_caffeine
       staged_app_path = cask.staged_path.join('Caffeine.app')

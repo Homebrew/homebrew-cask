@@ -30,7 +30,7 @@ class Hbc::Cask
 
   def metadata_path(timestamp=:latest, create=false)
     return nil unless metadata_versioned_container_path.respond_to?(:join)
-    if create and timestamp == :latest
+    if create && timestamp == :latest
       raise Hbc::CaskError.new('Cannot create metadata path when timestamp is :latest')
     end
     if timestamp == :latest
@@ -48,10 +48,10 @@ class Hbc::Cask
   end
 
   def metadata_subdir(leaf, timestamp=:latest, create=false)
-    if create and timestamp == :latest
+    if create && timestamp == :latest
       raise Hbc::CaskError.new('Cannot create metadata subdir when timestamp is :latest')
     end
-    unless leaf.respond_to?(:length) and leaf.length > 0
+    unless leaf.respond_to?(:length) && leaf.length > 0
       raise Hbc::CaskError.new('Cannot create metadata subdir for empty leaf')
     end
     parent = metadata_path(timestamp, create)
@@ -64,6 +64,23 @@ class Hbc::Cask
     subdir
   end
 
+  def version_comparator
+    Proc.new do |x, y|
+      begin
+        x_version  =  Gem::Version.new(x)
+        x_version <=> Gem::Version.new(y)
+      rescue ArgumentError => e
+        x <=> y
+      end
+    end
+  end
+
+  def versions
+    Pathname.glob(metadata_master_container_path.join('*'))
+      .map { |p| p.basename.to_s }
+      .sort &version_comparator
+  end
+
   def installed?
     staged_path.exist?
   end
@@ -73,7 +90,7 @@ class Hbc::Cask
   end
 
   def dumpcask
-    if Hbc.respond_to?(:debug) and Hbc.debug
+    if Hbc.respond_to?(:debug) && Hbc.debug
       odebug "Cask instance dumps in YAML:"
       odebug "Cask instance toplevel:", self.to_yaml
       [

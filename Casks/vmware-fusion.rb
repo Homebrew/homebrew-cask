@@ -36,7 +36,7 @@ cask 'vmware-fusion' do
   binary "#{appdir}/VMware Fusion.app/Contents/Library/VMware OVF Tool/ovftool"
 
   uninstall_preflight do
-    set_ownership "#{Hbc.appdir}/VMware Fusion.app"
+    set_ownership "#{appdir}/VMware Fusion.app"
   end
 
   zap delete: [

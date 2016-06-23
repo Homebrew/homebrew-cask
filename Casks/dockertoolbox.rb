@@ -1,11 +1,11 @@
 cask 'dockertoolbox' do
-  version '1.11.1b'
-  sha256 'a69389b9140e90e5e32a47cd197f17ceb11c87f335ea154d7cbce7d40d6f3db6'
+  version '1.11.2'
+  sha256 'c5635b4ee6b5db33f543e5b10fb576f417ee8354f7c30ca769163bc64fe9bbd6'
 
   # github.com/docker/toolbox was verified as official when first introduced to the cask
   url "https://github.com/docker/toolbox/releases/download/v#{version}/DockerToolbox-#{version}.pkg"
   appcast 'https://github.com/docker/toolbox/releases.atom',
-          checkpoint: 'fa681fba18bd832f7a34fcfb6b8970c527d01ec0b194fbadf260a25286c0b030'
+          checkpoint: 'd1f05896b28c4c17ba081e09a3801c2811acbe193a98f951342835994111d7ee'
   name 'Docker Toolbox'
   homepage 'https://www.docker.com/toolbox'
   license :apache

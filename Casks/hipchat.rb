@@ -1,6 +1,6 @@
 cask 'hipchat' do
-  version '4.0.10-645'
-  sha256 'a62c063c6fc707dfa0665cdd11d4e7e3673b0da312c9670f041058627de2ce7e'
+  version '4.0.12-667'
+  sha256 '62afdb2fbabe5c927dd7666b491280688f24e8a49f2bed8322fcf1c36c44c9a1'
 
   # amazonaws.com/downloads.hipchat.com/osx was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/downloads.hipchat.com/osx/HipChat-#{version}.zip"

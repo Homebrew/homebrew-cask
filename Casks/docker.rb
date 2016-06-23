@@ -1,20 +1,15 @@
 cask 'docker' do
-  version '1.10.3'
-  sha256 '054330d838816989400c0bd11533691ce59a230d694e871204d2eee37298054e'
+  version '1.12.0.9493'
+  sha256 'cb21128f5c566770325ada5c20b6d6aefdc5e97c993ea816c49a83ecc5e45f85'
 
-  url "https://get.docker.com/builds/Darwin/x86_64/docker-#{version}"
-  appcast 'https://github.com/docker/docker/releases.atom',
-          checkpoint: 'ed067a0c9a4021acb5e59e866192bea0f3dc7e454360a8530b7fa80fe4f0d2b0'
-  name 'Docker Engine Client'
-  homepage 'https://docs.docker.com/engine/userguide/'
-  license :apache
+  url "https://download.docker.com/mac/beta/#{version}/Docker.dmg"
+  appcast 'https://download.docker.com/mac/beta/appcast.xml',
+          checkpoint: '222a90faff341487a2f3d96c764dc9f8007f8442c0bac907299ba402cf06fdfe'
+  name 'Docker for Mac'
+  homepage 'https://www.docker.com/products/docker'
+  license :mit
 
-  depends_on arch: :x86_64
-  container type: :naked
+  auto_updates true
 
-  binary "docker-#{version}", target: 'docker'
-
-  postflight do
-    set_permissions "#{staged_path}/docker-#{version}", '0755'
-  end
+  app 'Docker.app'
 end

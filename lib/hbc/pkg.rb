@@ -23,7 +23,7 @@ class Hbc::Pkg
     end
     odebug "Deleting pkg directories"
     _deepest_path_first(pkgutil_bom_dirs).each do |dir|
-      if dir.exist? and !Hbc::MacOS.undeletable?(dir)
+      if dir.exist? && !Hbc::MacOS.undeletable?(dir)
         _with_full_permissions(dir) do
           _clean_broken_symlinks(dir)
           _clean_ds_store(dir)
@@ -79,7 +79,7 @@ class Hbc::Pkg
 
   def _with_full_permissions(path, &block)
     original_mode = (path.stat.mode % 01000).to_s(8)
-    # todo: similarly read and restore OS X flags (cf man chflags)
+    # todo: similarly read and restore macOS flags (cf man chflags)
     @command.run!('/bin/chmod', :args => ['--', '777', path], :sudo => true)
     block.call
   ensure
@@ -111,6 +111,6 @@ class Hbc::Pkg
   end
 
   def _broken_symlink?(path)
-    path.symlink? and !path.exist?
+    path.symlink? && !path.exist?
   end
 end

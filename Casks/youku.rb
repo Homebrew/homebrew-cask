@@ -1,6 +1,6 @@
 cask 'youku' do
-  version '1.0.4.4121'
-  sha256 '433a243f769ee05517c5d49d6548b26b25dc6c2074d1ed00ca1369ddb4a4d17e'
+  version '1.0.5.5031'
+  sha256 'b7d9ff08bd87150dfa9a52a891d57002e0cbc3f73d181240adfa86a076793d55'
 
   url "http://desktop.youku.com/ugc/youkumac_#{version}.dmg"
   name '优酷Mac客户端'

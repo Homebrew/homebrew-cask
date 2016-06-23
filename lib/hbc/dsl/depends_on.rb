@@ -56,15 +56,15 @@ class Hbc::DSL::DependsOn
 
   def self.coerce_os_release(arg)
 
-    @osx_symbols ||= MacOS::Release::SYMBOLS
-    @inverted_osx_symbols ||= @osx_symbols.invert
+    @macos_symbols ||= MacOS::Release::SYMBOLS
+    @inverted_macos_symbols ||= @macos_symbols.invert
 
     begin
       if arg.is_a?(Symbol)
-        Gem::Version.new(@osx_symbols.fetch(arg))
+        Gem::Version.new(@macos_symbols.fetch(arg))
       elsif arg =~ %r{^\s*:?([a-z]\S+)\s*$}i
-        Gem::Version.new(@osx_symbols.fetch($1.downcase.to_sym))
-      elsif @inverted_osx_symbols.has_key?(arg)
+        Gem::Version.new(@macos_symbols.fetch($1.downcase.to_sym))
+      elsif @inverted_macos_symbols.has_key?(arg)
         Gem::Version.new(arg)
       else
         raise

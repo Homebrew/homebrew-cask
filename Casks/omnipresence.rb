@@ -1,6 +1,6 @@
 cask 'omnipresence' do
-  version '1.4'
-  sha256 '9a8752fa8e4ee4d82bd435f624635f1157f7c1538b96622af361ef43d95f2e02'
+  version '1.4.1'
+  sha256 '409bf272e7c4dc488f68abadb3e2ef15d4accde10f8ee9babd8b23f522bfe323'
 
   url "https://downloads.omnigroup.com/software/MacOSX/10.10/OmniPresence-#{version}.dmg"
   name 'OmniPresence'

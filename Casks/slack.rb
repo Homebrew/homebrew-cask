@@ -13,4 +13,17 @@ cask 'slack' do
   auto_updates true
 
   app 'Slack.app'
+
+  uninstall quit: 'com.tinyspeck.slackmacgap'
+
+  zap delete: [
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tinyspeck.slackmacgap.sfl',
+                '~/Library/Application Support/Slack',
+                '~/Library/Caches/com.tinyspeck.slackmacgap',
+                '~/Library/Containers/com.tinyspeck.slackmacgap',
+                '~/Library/Containers/com.tinyspeck.slackmacgap.SlackCallsService',
+                '~/Library/Cookies/com.tinyspeck.slackmacgap.binarycookies',
+                '~/Library/Preferences/com.tinyspeck.slackmacgap.plist',
+                '~/Library/Saved Application State/com.tinyspeck.slackmacgap.savedState',
+              ]
 end

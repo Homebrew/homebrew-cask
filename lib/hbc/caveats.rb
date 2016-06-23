@@ -120,7 +120,7 @@ class Hbc::CaveatsDSL
   def discontinued
     puts <<-EOS.undent
     #{@cask} has been officially discontinued upstream.
-    It may stop working correctly (or at all) in recent versions of OS X.
+    It may stop working correctly (or at all) in recent versions of macOS.
 
     EOS
   end

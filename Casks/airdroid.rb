@@ -1,6 +1,6 @@
 cask 'airdroid' do
-  version '3.3.1'
-  sha256 'a939073b317fd05538f7c57e67dd4f6ebdb33ac400abe67ebbe0b3d3d6db84a6'
+  version '3.3.2'
+  sha256 '81eb39bb434d10cd6611617fe77ba1f0218c9b01b449ca8fdbf79beee227b075'
 
   url "http://dl.airdroid.com/AirDroid_Desktop_Client_#{version}.dmg"
   name 'AirDroid'

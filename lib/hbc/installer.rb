@@ -84,7 +84,7 @@ class Hbc::Installer
   end
 
   def summary
-    s = if MacOS.release >= :lion and not ENV['HOMEBREW_NO_EMOJI']
+    s = if MacOS.release >= :lion && !ENV['HOMEBREW_NO_EMOJI']
       (ENV['HOMEBREW_INSTALL_BADGE'] || "\xf0\x9f\x8d\xba") + '  '
     else
       "#{Tty.blue.bold}==>#{Tty.reset.bold} Success!#{Tty.reset} "
@@ -107,7 +107,7 @@ class Hbc::Installer
   def extract_primary_container
     odebug "Extracting primary container"
     FileUtils.mkdir_p @cask.staged_path
-    container = if @cask.container and @cask.container.type
+    container = if @cask.container && @cask.container.type
        Hbc::Container.from_type(@cask.container.type)
     else
        Hbc::Container.for_path(@downloaded_path, @command)
@@ -150,15 +150,15 @@ class Hbc::Installer
     if @cask.depends_on.macos.first.is_a?(Array)
       operator, release = @cask.depends_on.macos.first
       unless MacOS.release.send(operator, release)
-        raise Hbc::CaskError.new "Cask #{@cask} depends on OS X release #{operator} #{release}, but you are running release #{MacOS.release}."
+        raise Hbc::CaskError.new "Cask #{@cask} depends on macOS release #{operator} #{release}, but you are running release #{MacOS.release}."
       end
     elsif @cask.depends_on.macos.length > 1
       unless @cask.depends_on.macos.include?(Gem::Version.new(MacOS.release.to_s))
-        raise Hbc::CaskError.new "Cask #{@cask} depends on OS X release being one of: #{@cask.depends_on.macos(&:to_s).inspect}, but you are running release #{MacOS.release}."
+        raise Hbc::CaskError.new "Cask #{@cask} depends on macOS release being one of: #{@cask.depends_on.macos(&:to_s).inspect}, but you are running release #{MacOS.release}."
       end
     else
       unless MacOS.release == @cask.depends_on.macos.first
-        raise Hbc::CaskError.new "Cask #{@cask} depends on OS X release #{@cask.depends_on.macos.first}, but you are running release #{MacOS.release}."
+        raise Hbc::CaskError.new "Cask #{@cask} depends on macOS release #{@cask.depends_on.macos.first}, but you are running release #{MacOS.release}."
       end
     end
   end
@@ -183,7 +183,7 @@ class Hbc::Installer
   end
 
   def formula_dependencies
-    return unless @cask.depends_on.formula and not @cask.depends_on.formula.empty?
+    return unless @cask.depends_on.formula && !@cask.depends_on.formula.empty?
     ohai 'Installing Formula dependencies from Homebrew'
     @cask.depends_on.formula.each do |dep_name|
       print "#{dep_name} ... "
@@ -201,7 +201,7 @@ class Hbc::Installer
   end
 
   def cask_dependencies
-    return unless @cask.depends_on.cask and not @cask.depends_on.cask.empty?
+    return unless @cask.depends_on.cask && !@cask.depends_on.cask.empty?
     ohai "Installing Cask dependencies: #{@cask.depends_on.cask.join(', ')}"
     deps = Hbc::CaskDependencies.new(@cask)
     deps.sorted.each do |dep_token|
@@ -259,7 +259,7 @@ class Hbc::Installer
     else
       opoo <<-EOS.undent
         Accessibility access was enabled for #{@cask}, but it is not safe to disable
-        automatically on this version of OS X.  See System Preferences.
+        automatically on this version of macOS.  See System Preferences.
       EOS
     end
   end
@@ -312,21 +312,23 @@ class Hbc::Installer
     purge_caskroom_path
   end
 
-  def permissions_rmtree(path)
-    Hbc::Utils.permissions_rmtree(path, command: @command)
+  def gain_permissions_remove(path)
+    Hbc::Utils.gain_permissions_remove(path, command: @command)
   end
 
   def purge_versioned_files
     odebug "Purging files for version #{@cask.version} of Cask #{@cask}"
 
     # versioned staged distribution
-    permissions_rmtree(@cask.staged_path)
+    gain_permissions_remove(@cask.staged_path)
 
     # Homebrew-cask metadata
-    if @cask.metadata_versioned_container_path.respond_to?(:children) and
-        @cask.metadata_versioned_container_path.exist?
+    if @cask.metadata_versioned_container_path.respond_to?(:children) &&
+         @cask.metadata_versioned_container_path.exist?
       @cask.metadata_versioned_container_path.children.each do |subdir|
-        permissions_rmtree subdir unless PERSISTENT_METADATA_SUBDIRS.include?(subdir.basename)
+        unless PERSISTENT_METADATA_SUBDIRS.include?(subdir.basename)
+          gain_permissions_remove(subdir)
+        end
       end
     end
     Hbc::Utils.rmdir_if_possible(@cask.metadata_versioned_container_path)
@@ -338,6 +340,6 @@ class Hbc::Installer
 
   def purge_caskroom_path
     odebug "Purging all staged versions of Cask #{@cask}"
-    permissions_rmtree(@cask.caskroom_path)
+    gain_permissions_remove(@cask.caskroom_path)
   end
 end
