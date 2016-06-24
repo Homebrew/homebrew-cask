@@ -1,6 +1,6 @@
 cask 'yubikey-piv-manager' do
-  version '1.1.1'
-  sha256 'b21953f5b992aef9295d91f8a534dedd19fcc2a8caf8501c4e3125d82eb3bfbc'
+  version '1.2.1'
+  sha256 'fd1604247655b359645fe84c7659f5d60e0d6b0ef0aba52f983e9c0b0d18c0c7'
 
   url "https://developers.yubico.com/yubikey-piv-manager/Releases/yubikey-piv-manager-#{version}-mac.pkg"
   name 'YubiKey PIV Manager'
