@@ -1,8 +1,9 @@
 cask 'ssh-tunnel-manager' do
-  version '2.2'
-  sha256 '0ccd88cb309f9215c53c0cf1a133439710af15c985314d0afa20053495e6d08c'
+  version '221.003,1455813213'
+  sha256 '2daf9406d9107961011c3d845841be751a27623e08211f837cd80a445f477aa7'
 
-  url "https://ssl.tynsoe.org/stm/SSHTunnelManager-#{version}.zip"
+  # dl.devmate.com/org.tynsoe.sshtunnelmanager was verified as official when first introduced to the cask
+  url "https://dl.devmate.com/org.tynsoe.sshtunnelmanager/#{version.before_comma}/#{version.after_comma}/SSHTunnelManager-#{version.before_comma}.zip"
   name 'SSH Tunnel Manager'
   homepage 'http://projects.tynsoe.org/en/stm/'
   license :gratis
