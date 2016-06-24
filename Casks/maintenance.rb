@@ -2,32 +2,20 @@ cask 'maintenance' do
   version :latest
   sha256 :no_check
 
-  if MacOS.release == :tiger
-    url 'http://www.titanium.free.fr/download/104/Maintenance.dmg'
-  elsif MacOS.release == :leopard
-    url 'http://www.titanium.free.fr/download/105/Maintenance.dmg'
-  elsif MacOS.release == :snow_leopard
-    url 'http://www.titanium.free.fr/download/106/Maintenance.dmg'
-  elsif MacOS.release == :lion
-    url 'http://www.titanium.free.fr/download/107/Maintenance.dmg'
-  elsif MacOS.release == :mountain_lion
-    url 'http://www.titanium.free.fr/download/108/Maintenance.dmg'
-  elsif MacOS.release == :mavericks
-    url 'http://www.titanium.free.fr/download/109/Maintenance.dmg'
-  elsif MacOS.release == :yosemite
-    url 'http://www.titanium.free.fr/download/1010/Maintenance.dmg'
-  elsif MacOS.release == :el_capitan
-    # joel.barriere.pagesperso-orange.fr was verified as official when first introduced to the cask
-    url 'http://joel.barriere.pagesperso-orange.fr/download/1011/Maintenance.dmg'
+  macos_release = MacOS.release.to_s.delete('.')
+
+  if MacOS.release <= :yosemite
+    url "http://www.titanium.free.fr/download/#{macos_release}/Maintenance.dmg"
   else
-    # Unusual case: there is no fall-through.  The software will stop
-    # working, or is dangerous to run, on the next macOS release.
+    # joel.barriere.pagesperso-orange.fr was verified as official when first introduced to the cask
+    url "http://joel.barriere.pagesperso-orange.fr/download/#{macos_release}/Maintenance.dmg"
   end
 
   name 'Maintenance'
   homepage 'http://www.titanium.free.fr/maintenance.html'
   license :gratis
 
+  # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
   depends_on macos: %w[
                       :tiger
                       :leopard
