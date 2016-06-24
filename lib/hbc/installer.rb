@@ -154,7 +154,7 @@ class Hbc::Installer
       end
     elsif @cask.depends_on.macos.length > 1
       unless @cask.depends_on.macos.include?(Gem::Version.new(MacOS.release.to_s))
-        raise Hbc::CaskError.new "Cask #{@cask} depends on macOS release being one of: #{@cask.depends_on.macos(&:to_s).inspect}, but you are running release #{MacOS.release}."
+        raise Hbc::CaskError.new "Cask #{@cask} depends on macOS release being one of [#{@cask.depends_on.macos.map(&:to_s).join(', ')}], but you are running release #{MacOS.release}."
       end
     else
       unless MacOS.release == @cask.depends_on.macos.first
@@ -172,7 +172,7 @@ class Hbc::Installer
                          (Hardware::CPU.intel? ? :x86_64 : :ppc_64)
                       ]
     return unless Array(@cask.depends_on.arch & @current_arch).empty?
-    raise Hbc::CaskError.new "Cask #{@cask} depends on hardware architecture being one of #{@cask.depends_on.arch.inspect}, but you are running #{@current_arch.inspect}"
+    raise Hbc::CaskError.new "Cask #{@cask} depends on hardware architecture being one of [#{@cask.depends_on.arch.map(&:to_s).join(', ')}], but you are running #{@current_arch.inspect}"
   end
 
   def x11_dependencies
