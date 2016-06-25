@@ -1,7 +1,6 @@
 cask 'tuneup' do
   version '2.5.3.0'
   sha256 '8a2722d8719323d692c4a14935d945a3e42946aa9abd8a772fbd3737e4698b5d'
-  malware '27013246'
 
   # dvk2ozaytrec6.cloudfront.net was verified as official when first introduced to the cask
   url "https://dvk2ozaytrec6.cloudfront.net/mac4/Sparkle/TuneUp-Installer-#{version.major_minor}.0.zip"
@@ -12,4 +11,7 @@ cask 'tuneup' do
   license :commercial
 
   installer manual: 'TuneUp-Installer.app'
+  caveats do
+    malware(27013246)
+  end
 end
