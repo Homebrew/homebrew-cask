@@ -18,8 +18,9 @@ module Hbc::Locations
           opoo <<-EOS.undent
             The default Caskroom location has moved to #{default_caskroom}.
 
-            Please migrate your Casks to the new location, or if you would like to keep your
-            Caskroom at #{legacy_caskroom}, add the following to your HOMEBREW_CASK_OPTS:
+            Please migrate your Casks to the new location and delete #{legacy_caskroom},
+            or if you would like to keep your Caskroom at #{legacy_caskroom}, add the
+            following to your HOMEBREW_CASK_OPTS:
 
               --caskroom=#{legacy_caskroom}
 
