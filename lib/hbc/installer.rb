@@ -69,6 +69,7 @@ class Hbc::Installer
 
     begin
       satisfy_dependencies
+      verify_has_sha if Hbc.require_sha
       download
       verify
       extract_primary_container
@@ -98,6 +99,12 @@ class Hbc::Installer
     @downloaded_path = download.perform
     odebug "Downloaded to -> #{@downloaded_path}"
     @downloaded_path
+  end
+
+  def verify_has_sha
+    odebug "Checking cask has checksum"
+    return unless @cask.sha256 == :no_check
+    raise Hbc::CaskNoShasumError.new (@cask)
   end
 
   def verify

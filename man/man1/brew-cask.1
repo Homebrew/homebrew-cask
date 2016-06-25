@@ -18,7 +18,7 @@ Homebrew\-Cask works robustly enough that we welcome new users, but the project 
 .SH "FREQUENTLY USED COMMANDS"
 .
 .TP
-\fBinstall [\-\-force] [\-\-skip\-cask\-deps]\fR \fItoken\fR [ \fItoken\fR \.\.\. ]
+\fBinstall [\-\-force] [\-\-skip\-cask\-deps] [\-\-require\-sha]\fR \fItoken\fR [ \fItoken\fR \.\.\. ]
 Install Cask identified by \fItoken\fR\.
 .
 .TP
@@ -74,8 +74,8 @@ With no arguments, display the project page \fIhttp://caskroom\.io\fR\.
 Display information about the given Cask\.
 .
 .TP
-\fBinstall [\-\-force] [\-\-skip\-cask\-deps]\fR \fItoken\fR [ \fItoken\fR \.\.\. ]
-Install the given Cask\. With \fB\-\-force\fR, re\-install even if the Cask appears to be already present\. With \fB\-\-skip\-cask\-deps\fR, skip any Cask dependencies\.
+\fBinstall [\-\-force] [\-\-skip\-cask\-deps] [\-\-require\-sha]\fR \fItoken\fR [ \fItoken\fR \.\.\. ]
+Install the given Cask\. With \fB\-\-force\fR, re\-install even if the Cask appears to be already present\. With \fB\-\-skip\-cask\-deps\fR, skip any Cask dependencies\. \fB\-\-require\-sha\fR will abort installation if the Cask does not have a checksum defined\.
 .
 .IP
 \fItoken\fR is usually the ID of a Cask as returned by \fBbrew cask search\fR, but see \fIOTHER WAYS TO SPECIFY A CASK\fR for variations\.
@@ -142,6 +142,10 @@ Force an install to proceed even when a previously\-existing install is detected
 .TP
 \fB\-\-skip\-cask\-deps\fR
 Skip Cask dependencies when installing\.
+.
+.TP
+\fB\-\-require\-sha\fR
+Abort Cask installation if the Cask does not have a checksum defined\.
 .
 .TP
 \fB\-\-caskroom=<path>\fR

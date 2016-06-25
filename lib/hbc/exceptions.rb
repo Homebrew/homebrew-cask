@@ -150,6 +150,20 @@ class Hbc::CaskSha256MismatchError < RuntimeError
       Actual: #{actual}
       File: #{path}
       To retry an incomplete download, remove the file above.
-      EOS
+    EOS
+  end
+end
+
+class Hbc::CaskNoShasumError < Hbc::CaskError
+  attr_reader :token
+  def initialize(token)
+    @token = token
+  end
+
+  def to_s
+    <<-EOS.undent
+      Cask '#{token}' does not have a sha256 checksum defined and was not installed.
+      This means you have the '--require-sha' option set, perhaps in your HOMEBREW_CASK_OPTS.
+    EOS
   end
 end
