@@ -9,5 +9,5 @@ cask 'emojify' do
   homepage 'https://github.com/Haroenv/emojify-service'
   license :apache
 
-  service 'Emojify.workflow'
+  service "emojify-service-#{version}/Emojify.workflow"
 end
