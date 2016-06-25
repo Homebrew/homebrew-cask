@@ -43,5 +43,13 @@ module Hbc::Options
     def help=(_help)
       @help = _help
     end
+
+    def require_sha
+      @require_sha ||= false
+    end
+
+    def require_sha=(_require_sha)
+      @require_sha = _require_sha
+    end
   end
 end

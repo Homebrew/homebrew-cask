@@ -28,6 +28,9 @@ class Hbc::CLI::Install < Hbc::CLI::Base
          count += 1
       rescue Hbc::CaskUnavailableError => e
         warn_unavailable_with_suggestion cask_token, e
+      rescue Hbc::CaskNoShasumError => e
+        opoo e.message
+        count += 1
       end
     end
     count == 0 ? nil : count == cask_tokens.length

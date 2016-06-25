@@ -197,6 +197,9 @@ class Hbc::CLI
        Hbc.screen_saverdir = Pathname(v).expand_path
       end
 
+      opts.on("--require-sha") do |v|
+        Hbc.require_sha = true
+      end
       opts.on("--no-binaries") do |v|
         Hbc.no_binaries = true
       end
