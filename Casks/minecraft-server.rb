@@ -1,6 +1,6 @@
 cask 'minecraft-server' do
-  version '1.9.4'
-  sha256 '13fea7aa10d804dd14ed7ebde2493dc64c7d3c8173369309bd7f6ea4c0ea40ad'
+  version '1.10.2'
+  sha256 '195f468227c5f9218f3919538b9b16ba34adced67fc7d7b652c508a5e8d07a21'
 
   # s3.amazonaws.com/Minecraft.Download was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/Minecraft.Download/versions/#{version}/minecraft_server.#{version}.jar"
@@ -28,7 +28,7 @@ cask 'minecraft-server' do
     system 'minecraft-server'
 
     file_name = "#{staged_path}/EULA.txt"
-    contents = File.read(file_name).gsub(%r{false}, 'true')
+    contents = File.read(file_name).gsub(%r{false}, 'TRUE')
     File.open(file_name, 'w') { |file| file.puts contents }
   end
 
