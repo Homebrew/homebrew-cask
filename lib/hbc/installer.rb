@@ -23,6 +23,7 @@ class Hbc::Installer
     @command = options.fetch(:command, Hbc::SystemCommand)
     @force = options.fetch(:force, false)
     @skip_cask_deps = options.fetch(:skip_cask_deps, false)
+    @require_sha = options.fetch(:require_sha, false)
   end
 
   def self.print_caveats(cask)
@@ -69,7 +70,7 @@ class Hbc::Installer
 
     begin
       satisfy_dependencies
-      verify_has_sha if Hbc.require_sha
+      verify_has_sha if @require_sha && !@force
       download
       verify
       extract_primary_container
