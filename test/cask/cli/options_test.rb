@@ -124,14 +124,6 @@ describe Hbc::CLI do
     end
   end
 
-  describe "--require-sha" do
-    it "sets the Cask require_sha method to true" do
-        Hbc::CLI.process_options %w{foo --require-sha}
-        Hbc.require_sha.must_equal true
-        Hbc.require_sha = false
-    end
-  end
-
   after do
     ENV['HOMEBREW_CASK_OPTS'] = nil
   end

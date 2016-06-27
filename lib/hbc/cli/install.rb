@@ -4,7 +4,8 @@ class Hbc::CLI::Install < Hbc::CLI::Base
     raise Hbc::CaskUnspecifiedError if cask_tokens.empty?
     force = args.include? '--force'
     skip_cask_deps = args.include? '--skip-cask-deps'
-    retval = install_casks cask_tokens, force, skip_cask_deps
+    require_sha = args.include? '--require-sha'
+    retval = install_casks cask_tokens, force, skip_cask_deps, require_sha
     # retval is ternary: true/false/nil
     if retval.nil?
       raise Hbc::CaskError.new("nothing to install")
@@ -13,12 +14,13 @@ class Hbc::CLI::Install < Hbc::CLI::Base
     end
   end
 
-  def self.install_casks(cask_tokens, force, skip_cask_deps)
+  def self.install_casks(cask_tokens, force, skip_cask_deps, require_sha)
     count = 0
     cask_tokens.each do |cask_token|
       begin
         cask = Hbc.load(cask_token)
-        Hbc::Installer.new(cask, force: force, skip_cask_deps: skip_cask_deps).install
+        options = { force: force, skip_cask_deps: skip_cask_deps, require_sha: require_sha }
+        Hbc::Installer.new(cask, options).install
         count += 1
        rescue Hbc::CaskAlreadyInstalledError => e
          opoo e.message

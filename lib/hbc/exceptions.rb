@@ -163,7 +163,7 @@ class Hbc::CaskNoShasumError < Hbc::CaskError
   def to_s
     <<-EOS.undent
       Cask '#{token}' does not have a sha256 checksum defined and was not installed.
-      This means you have the '--require-sha' option set, perhaps in your HOMEBREW_CASK_OPTS.
+      This means you have the "--require-sha" option set, perhaps in your HOMEBREW_CASK_OPTS.
     EOS
   end
 end

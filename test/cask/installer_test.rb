@@ -182,6 +182,21 @@ describe Hbc::Installer do
       no_checksum.must_be :installed?
     end
 
+    it "fails to install if sha256 :no_check is used with --require-sha" do
+      no_checksum = Hbc.load('no-checksum')
+      lambda {
+        Hbc::Installer.new(no_checksum, require_sha: true).install
+      }.must_raise(Hbc::CaskNoShasumError)
+    end
+
+    it "installs fine if sha256 :no_check is used with --require-sha and --force" do
+      no_checksum = Hbc.load('no-checksum')
+      shutup do
+        Hbc::Installer.new(no_checksum, require_sha: true, force: true).install
+      end
+      no_checksum.must_be :installed?
+    end
+
     it "prints caveats if they're present" do
       with_caveats = Hbc.load('with-caveats')
       TestHelper.must_output(self, lambda {
