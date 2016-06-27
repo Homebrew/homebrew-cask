@@ -76,6 +76,8 @@ class Hbc::Installer
       install_artifacts
       save_caskfile
       enable_accessibility_access
+    rescue Hbc::CaskGpgVerificationFailedError => e
+      raise e
     rescue StandardError => e
       purge_versioned_files
       raise e

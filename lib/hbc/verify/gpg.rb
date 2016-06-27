@@ -3,12 +3,13 @@ class Hbc::Verify::Gpg
     cask.gpg
   end
 
-  attr_reader :cask, :downloaded_path
+  attr_reader :cask, :downloaded_path, :force_fetch
 
-  def initialize(cask, downloaded_path, command=Hbc::SystemCommand)
+  def initialize(cask, downloaded_path, force_fetch=false, command=Hbc::SystemCommand)
     @command = command
     @cask = cask
     @downloaded_path = downloaded_path
+    @force_fetch = force_fetch
   end
 
   def available?
@@ -17,22 +18,28 @@ class Hbc::Verify::Gpg
   end
 
   def installed?
-    cmd = @command.run('/usr/bin/type',
-                       :args => ['-p', 'gpg'])
+    gpg_bin_path = @command.run('/usr/bin/type',
+                                :args => ['-p', 'gpg'])
 
-    # if `gpg` is found, return its absolute path
-    cmd.success? ? cmd.stdout : false
+    gpg_bin_path.success? ? gpg_bin_path.stdout : false
   end
 
+  def retrieve_signature
+    maybe_dir = cask.metadata_subdir('gpg')
+    versioned_cask = cask.version.is_a?(String)
 
-  def fetch_sig(force=false)
-    unversioned_cask = cask.version.is_a?(Symbol)
-    cached = cask.metadata_subdir('gpg') unless unversioned_cask
+    # maybe_dir may be:
+    # - nil, in the absence of a parent metadata directory;
+    # - the path to a non-existent /gpg subdir of the metadata directory,
+    #   if the most recent metadata directory was not created by GpgCheck;
+    # - the path to an existing /gpg subdir, where a signature was previously
+    #   saved.
+    cached = maybe_dir if versioned_cask && maybe_dir && maybe_dir.exist?
 
     meta_dir = cached || cask.metadata_subdir('gpg', :now, true)
-    sig_path = meta_dir.join("signature.asc")
+    sig_path = meta_dir.join('signature.asc')
 
-    curl(cask.gpg.signature, '-o', sig_path.to_s) unless cached || force
+    curl(cask.gpg.signature, '-o', sig_path) if !cached || !sig_path.exist? || force_fetch
 
     sig_path
   end
@@ -43,18 +50,31 @@ class Hbc::Verify::Gpg
            when cask.gpg.key_url then ['--fetch-key', cask.gpg.key_url.to_s]
            end
 
-    @command.run!('gpg', :args => args)
+    import = @command.run('gpg', :args => args,
+                                 :print_stderr => true)
+    unless import.success?
+      raise CaskError.new("GPG failed to retrieve the #{cask} signing key: #{cask.gpg.key_id || cask.gpg.key_url}")
+    end
   end
 
   def verify
-    return unless available?
+    unless available?
+      opoo <<-EOS.undent
+        Skipping GPG signature for #{cask} because gpg is not available.
+        To enable GPG signature verification, install gpg with:
+
+          brew install gpg
+      EOS
+      return
+    end
+
     import_key
-    sig = fetch_sig
+    signature = retrieve_signature
 
     ohai "Verifying GPG signature for #{cask}"
+    check = @command.run('gpg', :args => ['--verify', signature, downloaded_path],
+                                :print_stdout => true)
 
-    @command.run!('gpg',
-                  :args => ['--verify', sig, downloaded_path],
-                  :print_stdout => true)
+    raise Hbc::CaskGpgVerificationFailedError.new(cask.token, downloaded_path, signature) unless check.success?
   end
 end

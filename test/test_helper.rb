@@ -82,8 +82,16 @@ class TestHelper
     File.expand_path(File.join(File.dirname(__FILE__), 'support', 'binaries', name))
   end
 
+  def self.local_support_path(name)
+    File.expand_path(File.join(File.dirname(__FILE__), 'support', name))
+  end
+
   def self.local_binary_url(name)
     'file://' + local_binary_path(name)
+  end
+
+  def self.local_support_url(name)
+    'file://' + local_support_path(name)
   end
 
   def self.test_cask
@@ -167,6 +175,7 @@ end
 FileUtils.ln_s '/usr/local/bin/cabextract', Hbc.homebrew_prefix.join('bin/cabextract')
 FileUtils.ln_s '/usr/local/bin/unar', Hbc.homebrew_prefix.join('bin/unar')
 FileUtils.ln_s '/usr/local/bin/lsar', Hbc.homebrew_prefix.join('bin/lsar')
+FileUtils.ln_s '/usr/local/bin/gpg', Hbc.homebrew_prefix.join('bin/gpg')
 
 # also jack in some test Casks
 FileUtils.ln_s project_root.join('test', 'support'), taps_dest.join('homebrew-testcasks')
