@@ -13,7 +13,7 @@ Possible reasons:
 
 If the error output includes something like
 
-```bash
+```
 curl: (22) The requested URL returned error: 403 Forbidden
 ```
 
