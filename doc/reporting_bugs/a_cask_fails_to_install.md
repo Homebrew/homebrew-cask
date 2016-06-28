@@ -38,7 +38,7 @@ Error: Permission denied - (/usr/local/Caskroom/someapp/0.1/Someapp.app, /Applic
 
 the problem isn’t with Homebrew-Cask itself, but some permissions on your system.
 
-[Continue to the fix](permission_denied_error_fix.md)
+[Continue to the fix](permission_denied_error_fix_appdir.md)
 
 ---
 
