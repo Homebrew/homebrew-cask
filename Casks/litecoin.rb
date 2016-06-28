@@ -10,4 +10,12 @@ cask 'litecoin' do
       key_id: 'dc380da43082f16378c97414c37e4723969276f5'
 
   app 'Litecoin-Qt.app'
+
+  preflight do
+    set_permissions "#{staged_path}/Litecoin-Qt.app", '0755'
+  end
+
+  postflight do
+    set_permissions "#{appdir}/Litecoin-Qt.app", '0555'
+  end
 end
