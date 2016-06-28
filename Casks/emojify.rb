@@ -1,6 +1,6 @@
 cask 'emojify' do
-  version '0.1.0'
-  sha256 '2ca93bf5707dfa67e4be8f1f27384ac1cb0d2644154999c7904b5d8b303ba18c'
+  version '0.1.1'
+  sha256 '780635f2bbc54ce7c8d61d35fbdae3a064ec6e120f88afaeaa2e2b647dcb02ab'
 
   url "https://github.com/Haroenv/emojify-service/archive/v#{version}.zip"
   appcast 'https://github.com/Haroenv/emojify-service/releases.atom',
