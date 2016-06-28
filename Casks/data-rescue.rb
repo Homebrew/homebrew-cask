@@ -1,10 +1,10 @@
 cask 'data-rescue' do
-  version '4.2.2'
-  sha256 '5ddf5c7b4b634ba84e4dd1733edc06ce049eb99eb233952174d062ef365e38ed'
+  version '4.2.3'
+  sha256 '1b2502bcba662ee01f59b9f118e7332d0d4f9d59a0b44f00abe0bdbfb37bb53f'
 
   url "https://downloads.prosofteng.com/drmac/Data_Rescue_#{version}.dmg"
   appcast 'https://www.prosofteng.com/resources/dr4/dr4_appcast.xml',
-          checkpoint: '3ed55e1cee84f1b9c91a7977f1fec67fc6c37194ba8b78abdd7a917f0029d0dc'
+          checkpoint: '178efedbf100f9e99fcc8ca74d53a6017033559af1ab62b14a82b2ee620aa226'
   name 'Data Rescue 4'
   homepage 'https://www.prosofteng.com/products/data_rescue.php'
   license :commercial
