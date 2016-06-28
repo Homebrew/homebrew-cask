@@ -6,4 +6,4 @@ Start by diagnosing your connection (try to download other casks, go around the 
 
 If you’re sure the issue is not with your connection, contact the app’s vendor and let them know their link is down, so they can fix it.
 
-**Do not open an issue**.
+**Do not open an issue.**
