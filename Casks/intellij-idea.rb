@@ -7,6 +7,8 @@ cask 'intellij-idea' do
   homepage 'https://www.jetbrains.com/idea/'
   license :commercial
 
+  auto_updates true
+
   app 'IntelliJ IDEA.app'
 
   uninstall delete: '/usr/local/bin/idea'
