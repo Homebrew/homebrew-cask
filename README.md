@@ -44,6 +44,7 @@ Like most pieces of software, Homebrew-Cask has bugs — and we are busy fixing 
 If your issue persists, follow these instructions to the appropriate course of action:
 
 * [A cask fails to install](doc/reporting_bugs/a_cask_fails_to_install.md)
+* [`brew cask list` shows wrong information](doc/reporting_bugs/brew_cask_list_shows_wrong_information.md)
 * [My problem isn’t listed][bug_report_template]
 
 ## Requests
