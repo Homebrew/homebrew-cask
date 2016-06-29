@@ -30,7 +30,7 @@ the problem was with the downloading itself (see how the error came from `curl`)
 
 #### `Permission denied` error:
 
-If the output includes something like
+If the error output includes something like
 
 ```
 Error: Permission denied - (/usr/local/Caskroom/someapp/0.1/Someapp.app, /Applications/Someapp.app)
