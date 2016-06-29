@@ -5,6 +5,7 @@
 Possible reasons:
 
 * [`curl` error](#curl-error)
+* [`Permission denied` error](#permission-denied-error)
 * [Unlisted reason](#unlisted-reason)
 
 ---
@@ -13,7 +14,7 @@ Possible reasons:
 
 If the error output includes something like
 
-```bash
+```
 curl: (22) The requested URL returned error: 403 Forbidden
 ```
 
@@ -24,6 +25,20 @@ the problem was with the downloading itself (see how the error came from `curl`)
 3. A problem in your setup or connection.
 
 [Continue to the fix](curl_error_fix_curlrc.md)
+
+---
+
+#### `Permission denied` error:
+
+If the output includes something like
+
+```
+Error: Permission denied - (/usr/local/Caskroom/someapp/0.1/Someapp.app, /Applications/Someapp.app)
+```
+
+the problem isn’t with Homebrew-Cask itself, but some permissions on your system.
+
+[Continue to the fix](permission_denied_error_fix_appdir.md)
 
 ---
 
