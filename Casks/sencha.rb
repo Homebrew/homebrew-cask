@@ -16,7 +16,7 @@ cask 'sencha' do
   end
 
   uninstall script: {
-                      executable: "/opt/Sencha/Cmd/#{version}/.install4j/Sencha Cmd Uninstaller.app/Contents/MacOS/JavaApplicationStub",
+                      executable: "/opt/Sencha/Cmd/#{version}/Sencha Cmd Uninstaller.app/Contents/MacOS/JavaApplicationStub",
                       args:       ['-Djava.awt.headless=true', '-q'],
                       sudo:       true,
                     }
