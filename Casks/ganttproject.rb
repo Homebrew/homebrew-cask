@@ -1,6 +1,6 @@
 cask 'ganttproject' do
-  version '2.7.1-r1924'
-  sha256 '4a7775ae3547858ca5cce91b734bb429a7e04718433e925f60da89fc1d2d154b'
+  version '2.7.2-r1954'
+  sha256 'eeacb2011c4cf1a0ca255bff9f1ba5b4f213aba233bb9a830e1f46d7aa1ca5eb'
 
   url "https://dl.ganttproject.biz/ganttproject-#{version.sub(%r{-.*}, '')}/ganttproject-#{version}.dmg"
   name 'GanttProject'
