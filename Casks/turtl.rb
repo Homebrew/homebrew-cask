@@ -1,8 +1,8 @@
 cask 'turtl' do
-  version :latest
-  sha256 :no_check
+  version '0.6.4'
+  sha256 '610741dc2a6387ee29518e31524eabb2c30d6862c2348664277b020942e55547'
 
-  url 'https://turtl.it/releases/desktop/turtl-osx-0.6.4.dmg'
+  url "https://turtl.it/releases/desktop/turtl-osx-#{version}.dmg"
   name 'turtl'
   homepage 'https://turtl.it/'
   license :oss
