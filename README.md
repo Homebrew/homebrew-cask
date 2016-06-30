@@ -39,11 +39,12 @@ $ open /Applications/"Google Chrome.app"
 
 ## Reporting bugs
 
-Like most pieces of software, Homebrew-Cask has bugs — and we are busy fixing them! If you find a new bug tell us about it, but before you do make sure it really is a bug, by following [this guide](doc/reporting_bugs/pre_bug_report.md).
+Like most pieces of software, Homebrew-Cask has bugs — and we are busy fixing them! If you find a new bug tell us about it, but before you do make sure the problem isn’t simply an outdated setup on your side, by following [this guide](doc/reporting_bugs/pre_bug_report.md).
 
 If your issue persists, follow these instructions to the appropriate course of action:
 
 * [A cask fails to install](doc/reporting_bugs/a_cask_fails_to_install.md)
+* [`brew cask list` shows wrong information](doc/reporting_bugs/brew_cask_list_shows_wrong_information.md)
 * [My problem isn’t listed][bug_report_template]
 
 ## Requests

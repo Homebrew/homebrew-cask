@@ -1,9 +1,11 @@
-<sup><sub>[Go back](curl_error_fix_vendor.md)</sup></sub>
+<sup><sub>[Go back](sha256_mismatch_error_fix_icomplete.md)</sup></sub>
 
-Since the download started, it likely means the cask is outdated. Lets fix it:
+Lets bring the cask up to date. It’ll likely need a new version, but it’s possible the version has remained the same (happens occasionally when the vendor updates the app in place).
 
-1. Look around the app’s website and find out what the latest version is. It will likely be expressed in the URL used to download it.
-2. Take a look at the cask’s version (`brew cask _stanza version {{cask_name}}`) and verify it is indeed outdated.
+1. Got to the vendor’s website (`brew cask home {{cask_name}}`).
+  * Alternatively, if it has an `appcast`, read that (`curl "$(brew cask _stanza appcast {{cask_name}})"`).
+2. Find out what the latest version is. It will likely be expressed in the URL used to download it.
+3. Take a look at the cask’s version (`brew cask _stanza version {{cask_name}}`) and verify it is indeed outdated.
     * If the app’s version is `latest`, it means the `url` itself is outdated. It will need to be changed to the new one.
 
 If it is outdated, start by trying to [submit a fix](../../CONTRIBUTING.md#updating-a-cask). If you’re having trouble, [open an issue][issue_outdated_cask] explaining your steps so far and why you’re having trouble submitting the update.

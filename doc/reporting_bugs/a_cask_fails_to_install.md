@@ -5,6 +5,8 @@
 Possible reasons:
 
 * [`curl` error](#curl-error)
+* [`Permission denied` error](#permission-denied-error)
+* [`sha256 mismatch` error](#sha256-mismatch-error)
 * [Unlisted reason](#unlisted-reason)
 
 ---
@@ -13,7 +15,7 @@ Possible reasons:
 
 If the error output includes something like
 
-```bash
+```
 curl: (22) The requested URL returned error: 403 Forbidden
 ```
 
@@ -24,6 +26,36 @@ the problem was with the downloading itself (see how the error came from `curl`)
 3. A problem in your setup or connection.
 
 [Continue to the fix](curl_error_fix_curlrc.md)
+
+---
+
+#### `Permission denied` error:
+
+If the error output includes something like
+
+```
+Error: Permission denied - (/usr/local/Caskroom/someapp/0.1/Someapp.app, /Applications/Someapp.app)
+```
+
+the problem isn’t with Homebrew-Cask itself, but some permissions on your system.
+
+[Continue to the fix](permission_denied_error_fix_appdir.md)
+
+---
+
+#### `sha256 mismatch` error
+
+If the error output includes something like
+
+```
+Error: sha256 mismatch
+Expected: 3dbc6c2205af35db5370c7642b9a2b833668880569b9c64a7f5a670bf9911130
+Actual: 526d747d99a93b760f7965e25a57ed61de9b93d566a0ba0c5f1c7e83719b20fd
+```
+
+Either your download was incomplete/corrupt or the cask is outdated.
+
+[Continue to the fix](sha256_mismatch_error_fix_icomplete.md)
 
 ---
 
