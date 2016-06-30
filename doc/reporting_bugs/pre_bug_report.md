@@ -12,4 +12,4 @@ $ brew uninstall --force brew-cask; brew update
 $ brew untap phinze/cask; brew untap caskroom/cask; brew update
 ```
 
-Retry your failing command. If the issue persists, [go back](../../README.md#reporting-bugs) and pick `My problem isn’t listed` to fill our bug report template.
+Retry your failing command. If the issue persists, [go back](../../README.md#reporting-bugs) and pick the appropriate instructions for your problem.
