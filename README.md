@@ -17,18 +17,24 @@ It’s implemented as a `homebrew` [external command](https://github.com/Homebre
 
 To start using Homebrew-Cask, you just need [Homebrew](http://brew.sh/) installed.
 
-```bash
-$ brew cask install google-chrome
-==> Downloading https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
-==> Moving App 'Google Chrome.app' to '/Applications/Google Chrome.app'
-🍺  google-chrome staged at '/usr/local/Caskroom/google-chrome/latest' (3 files, 288K)
+<img src="https://i.imgur.com/oxHnF7I.gif" width="450px" alt="Installing Atom (animated gif)">
+
+Slower, now:
+
+```
+$ brew cask install atom
+==> Satisfying dependencies
+complete
+==> Downloading https://github.com/atom/atom/releases/download/v1.8.0/atom-mac.zip
+######################################################################## 100.0%
+==> Verifying checksum for Cask atom
+==> Moving App 'Atom.app' to '/Applications/Atom.app'
+==> Symlinking Binary 'apm' to '/usr/local/bin/apm'
+==> Symlinking Binary 'atom.sh' to '/usr/local/bin/atom'
+🍺  atom staged at '/opt/homebrew-cask/Caskroom/atom/1.8.0' (0B)
 ```
 
-And there we have it. Google Chrome installed with a few quick commands: no clicking, no dragging, no dropping.
-
-```bash
-$ open /Applications/"Google Chrome.app"
-```
+And there we have it. Atom installed with one quick command: no clicking, no dragging, no dropping.
 
 ## Learn More
 
