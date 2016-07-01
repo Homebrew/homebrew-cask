@@ -2,7 +2,6 @@ cask 'betwixt' do
   version '1.6.1'
   sha256 'a97f893e8bc7611dfde66ae75775a829c4d25959b946276aacf32cc8485c4054'
 
-  # github.com/officert/mongotron was verified as official when first introduced to the cask
   url "https://github.com/kdzwinel/betwixt/releases/download/#{version}/Betwixt-darwin-x64.zip"
   appcast 'https://github.com/kdzwinel/betwixt/releases.atom',
           checkpoint: 'aadc0f2daec367d8458d56f331b51ba89682ba2cb260b318faa73ad3d30e5f16'
