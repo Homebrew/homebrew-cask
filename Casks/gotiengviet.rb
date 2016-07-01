@@ -7,5 +7,9 @@ cask 'gotiengviet' do
   homepage 'http://www.trankynam.com/gotv/'
   license :freemium
 
+  accessibility_access true
+
   app 'GoTiengViet.app'
+
+  uninstall login_item: 'GoTiengViet'
 end
