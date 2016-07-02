@@ -5,7 +5,7 @@ class Hbc::Verify::Gpg
 
   attr_reader :cask, :downloaded_path
 
-  def initialize(cask, downloaded_path, command=Hbc::SystemCommand)
+  def initialize(cask, downloaded_path, command = Hbc::SystemCommand)
     @command = command
     @cask = cask
     @downloaded_path = downloaded_path
@@ -17,33 +17,33 @@ class Hbc::Verify::Gpg
   end
 
   def installed?
-    cmd = @command.run('/usr/bin/type',
-                       :args => ['-p', 'gpg'])
+    cmd = @command.run("/usr/bin/type",
+                       args: ["-p", "gpg"])
 
     # if `gpg` is found, return its absolute path
     cmd.success? ? cmd.stdout : false
   end
 
-
-  def fetch_sig(force=false)
+  def fetch_sig(force = false)
     unversioned_cask = cask.version.is_a?(Symbol)
-    cached = cask.metadata_subdir('gpg') unless unversioned_cask
+    cached = cask.metadata_subdir("gpg") unless unversioned_cask
 
-    meta_dir = cached || cask.metadata_subdir('gpg', :now, true)
+    meta_dir = cached || cask.metadata_subdir("gpg", :now, true)
     sig_path = meta_dir.join("signature.asc")
 
-    curl(cask.gpg.signature, '-o', sig_path.to_s) unless cached || force
+    curl(cask.gpg.signature, "-o", sig_path.to_s) unless cached || force
 
     sig_path
   end
 
   def import_key
-    args = case
-           when cask.gpg.key_id  then ['--recv-keys', cask.gpg.key_id]
-           when cask.gpg.key_url then ['--fetch-key', cask.gpg.key_url.to_s]
+    args = if cask.gpg.key_id
+             ["--recv-keys", cask.gpg.key_id]
+           elsif cask.gpg.key_url
+             ["--fetch-key", cask.gpg.key_url.to_s]
            end
 
-    @command.run!('gpg', :args => args)
+    @command.run!("gpg", args: args)
   end
 
   def verify
@@ -53,8 +53,8 @@ class Hbc::Verify::Gpg
 
     ohai "Verifying GPG signature for #{cask}"
 
-    @command.run!('gpg',
-                  :args => ['--verify', sig, downloaded_path],
-                  :print_stdout => true)
+    @command.run!("gpg",
+                  args:         ["--verify", sig, downloaded_path],
+                  print_stdout: true)
   end
 end

@@ -1,10 +1,10 @@
 require 'test_helper'
 
-# todo: this test should be named after the corresponding class, once
-# that class is abstracted from installer.rb
+# TODO: this test should be named after the corresponding class, once
+#       that class is abstracted from installer.rb
 describe "Satisfy Dependencies and Requirements" do
 
-  # todo: test that depends_on :formula invokes Homebrew
+  # TODO: test that depends_on :formula invokes Homebrew
   #
   # describe "depends_on :formula" do
   #   it "" do

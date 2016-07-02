@@ -1,7 +1,7 @@
 require 'test_helper'
 
-# todo: this test should be named after the corresponding class, once
-# that class is abstracted from installer.rb.
+# TODO: this test should be named after the corresponding class, once
+#       that class is abstracted from installer.rb.
 describe "Accessibility Access" do
   before do
     cask = Hbc.load('with-accessibility-access')

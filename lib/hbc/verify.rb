@@ -1,20 +1,20 @@
 module Hbc::Verify; end
 
-require 'hbc/verify/checksum'
-require 'hbc/verify/gpg'
+require "hbc/verify/checksum"
+require "hbc/verify/gpg"
 
 module Hbc::Verify
-  extend self
+  module_function
 
   def verifications
     [
       Hbc::Verify::Checksum
-      # todo: Hbc::Verify::Gpg
+      # TODO: Hbc::Verify::Gpg
     ]
   end
 
   def all(cask, downloaded_path)
-    odebug 'Verifying download'
+    odebug "Verifying download"
     verifications = for_cask(cask)
     odebug "#{verifications.size} verifications defined", verifications
     verifications.each do |verification|

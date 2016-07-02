@@ -1,4 +1,4 @@
-require 'hbc/topological_hash'
+require "hbc/topological_hash"
 
 class Hbc::CaskDependencies
   attr_reader :cask, :graph, :sorted
@@ -10,14 +10,13 @@ class Hbc::CaskDependencies
   end
 
   def graph_dependencies
-    deps_in = lambda { |csk| csk.depends_on ? csk.depends_on.cask || [] : [] }
+    deps_in = ->(csk) { csk.depends_on ? csk.depends_on.cask || [] : [] }
     walk = lambda do |acc, deps|
       deps.each do |dep|
-        unless acc.key?(dep)
-          succs = deps_in.call Hbc.load(dep)
-          acc[dep] = succs
-          walk.call(acc, succs)
-        end
+        next if acc.key?(dep)
+        succs = deps_in.call Hbc.load(dep)
+        acc[dep] = succs
+        walk.call(acc, succs)
       end
       acc
     end
@@ -27,10 +26,8 @@ class Hbc::CaskDependencies
   end
 
   def sort
-    begin
-      sorted = @graph.tsort
-    rescue TSort::Cyclic
-      raise Hbc::CaskCyclicCaskDependencyError.new(@cask.token)
-    end
+    @graph.tsort
+  rescue TSort::Cyclic
+    raise Hbc::CaskCyclicCaskDependencyError, @cask.token
   end
 end

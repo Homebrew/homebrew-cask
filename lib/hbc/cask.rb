@@ -1,6 +1,6 @@
-require 'forwardable'
+require "forwardable"
 
-require 'hbc/dsl'
+require "hbc/dsl"
 
 class Hbc::Cask
   extend Forwardable
@@ -17,7 +17,7 @@ class Hbc::Cask
     define_method(method_name) { @dsl.send(method_name) }
   end
 
-  METADATA_SUBDIR = '.metadata'
+  METADATA_SUBDIR = ".metadata".freeze
 
   def metadata_master_container_path
     caskroom_path.join(METADATA_SUBDIR)
@@ -28,18 +28,18 @@ class Hbc::Cask
     metadata_master_container_path.join(cask_version.to_s)
   end
 
-  def metadata_path(timestamp=:latest, create=false)
+  def metadata_path(timestamp = :latest, create = false)
     return nil unless metadata_versioned_container_path.respond_to?(:join)
     if create && timestamp == :latest
-      raise Hbc::CaskError.new('Cannot create metadata path when timestamp is :latest')
+      raise Hbc::CaskError, "Cannot create metadata path when timestamp is :latest"
     end
-    if timestamp == :latest
-      path = Pathname.glob(metadata_versioned_container_path.join('*')).sort.last
-    elsif timestamp == :now
-      path = Hbc::Utils.nowstamp_metadata_path(metadata_versioned_container_path)
-    else
-      path = metadata_versioned_container_path.join(timestamp)
-    end
+    path = if timestamp == :latest
+             Pathname.glob(metadata_versioned_container_path.join("*")).sort.last
+           elsif timestamp == :now
+             Hbc::Utils.nowstamp_metadata_path(metadata_versioned_container_path)
+           else
+             metadata_versioned_container_path.join(timestamp)
+           end
     if create
       odebug "Creating metadata directory #{path}"
       FileUtils.mkdir_p path
@@ -47,12 +47,12 @@ class Hbc::Cask
     path
   end
 
-  def metadata_subdir(leaf, timestamp=:latest, create=false)
+  def metadata_subdir(leaf, timestamp = :latest, create = false)
     if create && timestamp == :latest
-      raise Hbc::CaskError.new('Cannot create metadata subdir when timestamp is :latest')
+      raise Hbc::CaskError, "Cannot create metadata subdir when timestamp is :latest"
     end
-    unless leaf.respond_to?(:length) && leaf.length > 0
-      raise Hbc::CaskError.new('Cannot create metadata subdir for empty leaf')
+    unless leaf.respond_to?(:length) && !leaf.empty?
+      raise Hbc::CaskError, "Cannot create metadata subdir for empty leaf"
     end
     parent = metadata_path(timestamp, create)
     return nil unless parent.respond_to?(:join)
@@ -65,20 +65,20 @@ class Hbc::Cask
   end
 
   def version_comparator
-    Proc.new do |x, y|
+    proc do |x, y|
       begin
         x_version  =  Gem::Version.new(x)
         x_version <=> Gem::Version.new(y)
-      rescue ArgumentError => e
+      rescue ArgumentError
         x <=> y
       end
     end
   end
 
   def versions
-    Pathname.glob(metadata_master_container_path.join('*'))
-      .map { |p| p.basename.to_s }
-      .sort &version_comparator
+    Pathname.glob(metadata_master_container_path.join("*"))
+            .map { |p| p.basename.to_s }
+            .sort(&version_comparator)
   end
 
   def installed?
@@ -92,25 +92,25 @@ class Hbc::Cask
   def dumpcask
     if Hbc.respond_to?(:debug) && Hbc.debug
       odebug "Cask instance dumps in YAML:"
-      odebug "Cask instance toplevel:", self.to_yaml
+      odebug "Cask instance toplevel:", to_yaml
       [
-       :name,
-       :homepage,
-       :url,
-       :appcast,
-       :version,
-       :license,
-       :sha256,
-       :artifacts,
-       :caveats,
-       :depends_on,
-       :conflicts_with,
-       :container,
-       :gpg,
-       :accessibility_access,
-       :auto_updates
+        :name,
+        :homepage,
+        :url,
+        :appcast,
+        :version,
+        :license,
+        :sha256,
+        :artifacts,
+        :caveats,
+        :depends_on,
+        :conflicts_with,
+        :container,
+        :gpg,
+        :accessibility_access,
+        :auto_updates,
       ].each do |method|
-        odebug "Cask instance method '#{method}':", self.send(method).to_yaml
+        odebug "Cask instance method '#{method}':", send(method).to_yaml
       end
     end
   end

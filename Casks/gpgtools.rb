@@ -15,7 +15,7 @@ cask 'gpgtools' do
 
   pkg 'Install.pkg'
 
-  # todo, remove all ENV variables
+  # TODO: remove all ENV variables
   postflight do
     system '/usr/bin/sudo', '-E', '--',
            '/usr/local/MacGPG2/libexec/fixGpgHome', Etc.getpwuid(Process.euid).name,

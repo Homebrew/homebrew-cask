@@ -1,17 +1,16 @@
 class Hbc::DSL::Gpg
-
   KEY_PARAMETERS = Set.new [
-                            :key_id,
-                            :key_url,
+                             :key_id,
+                             :key_url,
                            ]
 
-  VALID_PARAMETERS = Set.new [ ]
+  VALID_PARAMETERS = Set.new []
   VALID_PARAMETERS.merge KEY_PARAMETERS
 
-  attr_accessor *VALID_PARAMETERS
+  attr_accessor(*VALID_PARAMETERS)
   attr_accessor :signature
 
-  def initialize(signature, parameters={})
+  def initialize(signature, parameters = {})
     @parameters = parameters
     @signature = Hbc::UnderscoreSupportingURI.parse(signature)
     parameters.each do |hkey, hvalue|
@@ -21,14 +20,13 @@ class Hbc::DSL::Gpg
       valid_id?(hvalue) if hkey == :key_id
       send(writer_method, hvalue)
     end
-    unless KEY_PARAMETERS.intersection(parameters.keys).length == 1
-      raise "'gpg' stanza must include exactly one of: '#{KEY_PARAMETERS.to_a}'"
-    end
+    return if KEY_PARAMETERS.intersection(parameters.keys).length == 1
+    raise "'gpg' stanza must include exactly one of: '#{KEY_PARAMETERS.to_a}'"
   end
 
   def valid_id?(id)
     legal_lengths = Set.new [8, 16, 40]
-    is_valid = id.kind_of?(String) && legal_lengths.include?(id.length) && id[/^[0-9a-f]+$/i]
+    is_valid = id.is_a?(String) && legal_lengths.include?(id.length) && id[%r{^[0-9a-f]+$}i]
     raise "invalid ':key_id' value: '#{id.inspect}'" unless is_valid
 
     is_valid

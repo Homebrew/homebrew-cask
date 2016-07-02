@@ -1,4 +1,4 @@
-require 'digest'
+require "digest"
 
 class Hbc::Verify::Checksum
   def self.me?(cask)
@@ -31,9 +31,9 @@ class Hbc::Verify::Checksum
   end
 
   def verify_checksum
-    if expected.nil? || expected.empty?
-      raise Hbc::CaskSha256MissingError.new("sha256 required: sha256 '#{computed}'")
-    elsif expected == computed
+    raise Hbc::CaskSha256MissingError, "sha256 required: sha256 '#{computed}'" if expected.nil? || expected.empty?
+
+    if expected == computed
       odebug "SHA256 checksums match"
     else
       ohai 'Note: running "brew update" may fix sha256 checksum errors'

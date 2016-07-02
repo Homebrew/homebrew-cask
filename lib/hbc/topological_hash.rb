@@ -1,4 +1,4 @@
-require 'tsort'
+require "tsort"
 
 # a basic topologically sortable hashmap
 class Hbc::TopologicalHash < Hash

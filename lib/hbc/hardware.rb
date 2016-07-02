@@ -1,3 +1,3 @@
 module Hbc::Hardware; end
 
-require 'hbc/hardware/cpu'
+require "hbc/hardware/cpu"

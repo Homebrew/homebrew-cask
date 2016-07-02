@@ -1,14 +1,13 @@
 class Hbc::DSL::Container
-
   VALID_KEYS = Set.new [
-                        :type,
-                        :nested,
+                         :type,
+                         :nested,
                        ]
 
-  attr_accessor *VALID_KEYS
+  attr_accessor(*VALID_KEYS)
   attr_accessor :pairs
 
-  def initialize(pairs={})
+  def initialize(pairs = {})
     @pairs = pairs
     pairs.each do |key, value|
       raise "invalid container key: '#{key.inspect}'" unless VALID_KEYS.include?(key)
