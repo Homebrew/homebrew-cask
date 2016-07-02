@@ -20,7 +20,7 @@ cask 'programmer-dvorak' do
             delete:  [
                        '/Library/Keyboard Layouts/Programmer Dvorak.bundle/',
                        # TODO: expand/glob for '/Library/Caches/com.apple.IntlDataCache*',
-                       # todo expand/glob for '/System/Library/Caches/com.apple.IntlDataCache.le*',
-                       # todo expand/glob for '/private/var/folders/*/*/-Caches-/com.apple.IntlDataCache.le*',
+                       # TODO: expand/glob for '/System/Library/Caches/com.apple.IntlDataCache.le*',
+                       # TODO: expand/glob for '/private/var/folders/*/*/-Caches-/com.apple.IntlDataCache.le*',
                      ]
 end

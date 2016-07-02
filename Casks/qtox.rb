@@ -1,7 +1,7 @@
 cask 'qtox' do
   version '1.4.1.1'
   sha256 'e0dd8ecab2dc39bba1e6f34e44927e7bee9ca0f55f4c433f16079d4ba5cf4ab8'
-  
+
   # https://github.com/tux3/qTox/ was verified as official when first introduced to the cask
   url "https://github.com/tux3/qTox/releases/download/v#{version}/qTox.dmg"
   appcast 'https://github.com/tux3/qtox/releases.atom',

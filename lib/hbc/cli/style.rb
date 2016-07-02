@@ -1,11 +1,13 @@
+require "english"
+
 class Hbc::CLI::Style < Hbc::CLI::Base
   def self.help
-    'checks Cask style using RuboCop'
+    "checks Cask style using RuboCop"
   end
 
   def self.run(*args)
     retval = new(args).run
-    raise Hbc::CaskError.new("style check failed") unless retval
+    raise Hbc::CaskError, "style check failed" unless retval
   end
 
   attr_reader :args
@@ -15,24 +17,24 @@ class Hbc::CLI::Style < Hbc::CLI::Base
 
   def run
     install_rubocop
-    system 'rubocop', *rubocop_args, '--', *cask_paths
-    $?.success?
+    system "rubocop", *rubocop_args, "--", *cask_paths
+    $CHILD_STATUS.success?
   end
 
-  RUBOCOP_CASK_VERSION = '~> 0.7.0'
+  RUBOCOP_CASK_VERSION = "~> 0.7.0".freeze
 
   def install_rubocop
-    Hbc::Utils.install_gem_setup_path! 'rubocop-cask', RUBOCOP_CASK_VERSION, 'rubocop'
+    Hbc::Utils.install_gem_setup_path! "rubocop-cask", RUBOCOP_CASK_VERSION, "rubocop"
   end
 
   def cask_paths
     @cask_paths ||= if cask_tokens.empty?
-      Hbc.all_tapped_cask_dirs
-    elsif cask_tokens.any? { |file| File.exist?(file) }
-      cask_tokens
-    else
-      cask_tokens.map { |token| Hbc.path(token) }
-    end
+                      Hbc.all_tapped_cask_dirs
+                    elsif cask_tokens.any? { |file| File.exist?(file) }
+                      cask_tokens
+                    else
+                      cask_tokens.map { |token| Hbc.path(token) }
+                    end
   end
 
   def cask_tokens
@@ -44,11 +46,11 @@ class Hbc::CLI::Style < Hbc::CLI::Base
   end
 
   def default_args
-    ['--format', 'simple', '--force-exclusion', '--config', rubocop_config]
+    ["--format", "simple", "--force-exclusion", "--config", rubocop_config]
   end
 
   def autocorrect_args
-    default_args + ['--auto-correct']
+    default_args + ["--auto-correct"]
   end
 
   def rubocop_config
@@ -56,6 +58,6 @@ class Hbc::CLI::Style < Hbc::CLI::Base
   end
 
   def fix?
-    args.any? { |arg| arg =~ /--(fix|(auto-?)?correct)/ }
+    args.any? { |arg| arg =~ %r{--(fix|(auto-?)?correct)} }
   end
 end

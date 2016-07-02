@@ -25,7 +25,7 @@ cask 'totalspaces' do
               script:  {
                          executable: 'TotalSpaces2 Uninstaller.app/Contents/MacOS/TotalSpaces2 Uninstaller',
                          args:       %w[--headless],
-                         sudo:       true
+                         sudo:       true,
                        },
               quit:    'com.binaryage.TotalSpaces2'
   end

@@ -1,16 +1,16 @@
 class Hbc::DSL::Version < ::String
-  DIVIDERS = %w[. - _ /]
+  DIVIDERS = %w[. - _ /].freeze
 
   PLURAL_DIVIDER_NAMES = {
-    '.' => :dots,
-    '-' => :hyphens,
-    '_' => :underscores,
-    '/' => :slashes
-  }
+                           "." => :dots,
+                           "-" => :hyphens,
+                           "_" => :underscores,
+                           "/" => :slashes,
+                         }.freeze
 
-  DIVIDER_REGEX = /(#{DIVIDERS.map { |v| Regexp.quote(v) }.join('|')})/
+  DIVIDER_REGEX = %r{(#{DIVIDERS.map { |v| Regexp.quote(v) }.join('|')})}
 
-  MAJOR_MINOR_PATCH_REGEX = /^(\d+)(?:\.(\d+)(?:\.(\d+))?)?/
+  MAJOR_MINOR_PATCH_REGEX = %r{^(\d+)(?:\.(\d+)(?:\.(\d+))?)?}
 
   class << self
     private
@@ -66,7 +66,7 @@ class Hbc::DSL::Version < ::String
   end
 
   def latest?
-    to_s == 'latest'
+    to_s == "latest"
   end
 
   def major
@@ -82,37 +82,37 @@ class Hbc::DSL::Version < ::String
   end
 
   def major_minor
-    version { [major, minor].reject(&:empty?).join('.') }
+    version { [major, minor].reject(&:empty?).join(".") }
   end
 
   def major_minor_patch
-    version { [major, minor, patch].reject(&:empty?).join('.') }
+    version { [major, minor, patch].reject(&:empty?).join(".") }
   end
 
   def before_comma
-    version { split(',', 2)[0] }
+    version { split(",", 2)[0] }
   end
 
   def after_comma
-    version { split(',', 2)[1] }
+    version { split(",", 2)[1] }
   end
 
   def before_colon
-    version { split(':', 2)[0] }
+    version { split(":", 2)[0] }
   end
 
   def after_colon
-    version { split(':', 2)[1] }
+    version { split(":", 2)[1] }
   end
 
   def no_dividers
-    version { gsub(DIVIDER_REGEX, '') }
+    version { gsub(DIVIDER_REGEX, "") }
   end
 
   private
 
-  def version(&block)
+  def version
     return self if empty? || latest?
-    self.class.new(block.call)
+    self.class.new(yield)
   end
 end

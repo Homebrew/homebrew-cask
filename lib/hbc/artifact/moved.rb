@@ -1,5 +1,5 @@
 class Hbc::Artifact::Moved < Hbc::Artifact::Base
-  ALT_NAME_ATTRIBUTE = 'com.apple.metadata:kMDItemAlternateNames'
+  ALT_NAME_ATTRIBUTE = "com.apple.metadata:kMDItemAlternateNames".freeze
 
   attr_reader :source, :target
 
@@ -13,8 +13,8 @@ class Hbc::Artifact::Moved < Hbc::Artifact::Base
     end - [nil]
 
     {
-      :english_description => "#{english_name}s managed by brew-cask:",
-      :contents => contents
+      english_description: "#{english_name}s managed by brew-cask:",
+      contents:            contents,
     }
   end
 
@@ -66,36 +66,32 @@ class Hbc::Artifact::Moved < Hbc::Artifact::Base
   def preflight_checks
     if Hbc::Utils.path_occupied?(target)
       if force
-        ohai(warning_target_exists { |s| s << 'overwriting.' })
+        ohai(warning_target_exists { |s| s << "overwriting." })
       else
-        ohai(warning_target_exists { |s| s << 'not moving.' })
+        ohai(warning_target_exists { |s| s << "not moving." })
         return false
       end
     end
     unless source.exist?
       message = "It seems the #{english_name} source is not there: '#{source}'"
-      raise Hbc::CaskError.new(message)
+      raise Hbc::CaskError, message
     end
     true
   end
 
   def warning_target_exists
     message_parts = [
-      "It seems there is already #{
-        self.class.artifact_english_article} #{english_name
-        } at '#{target}'"
-    ]
+                      "It seems there is already #{self.class.artifact_english_article} #{english_name} at '#{target}'",
+                    ]
     yield(message_parts) if block_given?
-    message_parts.join('; ')
+    message_parts.join("; ")
   end
 
   def delete
     ohai "Removing #{english_name}: '#{target}'"
-    case
-    when Hbc::MacOS.undeletable?(target)
-      raise Hbc::CaskError.new(
-        "Cannot remove undeletable #{english_name}")
-    when force
+    if Hbc::MacOS.undeletable?(target)
+      raise Hbc::CaskError, "Cannot remove undeletable #{english_name}"
+    elsif force
       Hbc::Utils.gain_permissions_remove(target, command: @command)
     else
       target.rmtree

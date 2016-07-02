@@ -19,6 +19,6 @@ cask 'ax88772' do
 
   uninstall script: {
                       executable: 'AX88772C_772B_772A_760_772_Uninstall_v130',
-                      sudo:        false,
+                      sudo:       false,
                     }
 end

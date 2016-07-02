@@ -1,4 +1,4 @@
-require 'cgi'
+require "cgi"
 
 # We abuse Homebrew's download strategies considerably here.
 # * Our downloader instances only invoke the fetch and
@@ -9,12 +9,12 @@ require 'cgi'
 class Hbc::AbstractDownloadStrategy
   attr_reader :cask, :name, :url, :uri_object, :version
 
-  def initialize(cask, command=Hbc::SystemCommand)
+  def initialize(cask, command = Hbc::SystemCommand)
     @cask       = cask
     @command    = command
-    # todo this excess of attributes is a function of integrating
-    # with Homebrew's classes. Later we should be able to remove
-    # these in favor of @cask
+    # TODO: this excess of attributes is a function of integrating
+    #       with Homebrew's classes. Later we should be able to remove
+    #       these in favor of @cask
     @name       = cask.token
     @url        = cask.url.to_s
     @uri_object = cask.url
@@ -23,14 +23,15 @@ class Hbc::AbstractDownloadStrategy
 
   # All download strategies are expected to implement these methods
   def fetch; end
+
   def cached_location; end
+
   def clear_cache; end
 end
 
-require 'vendor/homebrew-fork/download_strategy'
+require "vendor/homebrew-fork/download_strategy"
 
 class Hbc::CurlDownloadStrategy < Hbc::HbCurlDownloadStrategy
-
   def _fetch
     odebug "Calling curl with args #{curl_args.utf8_inspect}"
     curl(*curl_args)
@@ -52,12 +53,12 @@ class Hbc::CurlDownloadStrategy < Hbc::HbCurlDownloadStrategy
   end
 
   def default_curl_args
-    [url, '-C', downloaded_size, '-o', temporary_path]
+    [url, "-C", downloaded_size, "-o", temporary_path]
   end
 
   def user_agent_args
     if uri_object.user_agent
-      ['-A', uri_object.user_agent]
+      ["-A", uri_object.user_agent]
     else
       []
     end
@@ -66,11 +67,13 @@ class Hbc::CurlDownloadStrategy < Hbc::HbCurlDownloadStrategy
   def cookies_args
     if uri_object.cookies
       [
-        '-b',
+        "-b",
         # sort_by is for predictability between Ruby versions
-        uri_object.cookies.sort_by{ |key, value| key.to_s }.map do |key, value|
-          "#{CGI.escape(key.to_s)}=#{CGI.escape(value.to_s)}"
-        end.join(';')
+        uri_object
+          .cookies
+          .sort_by(&:to_s)
+          .map { |key, value| "#{CGI.escape(key.to_s)}=#{CGI.escape(value.to_s)}" }
+          .join(";"),
       ]
     else
       []
@@ -79,7 +82,7 @@ class Hbc::CurlDownloadStrategy < Hbc::HbCurlDownloadStrategy
 
   def referer_args
     if uri_object.referer
-      ['-e',  uri_object.referer]
+      ["-e", uri_object.referer]
     else
       []
     end
@@ -87,7 +90,6 @@ class Hbc::CurlDownloadStrategy < Hbc::HbCurlDownloadStrategy
 end
 
 class Hbc::CurlPostDownloadStrategy < Hbc::CurlDownloadStrategy
-
   def curl_args
     super
     default_curl_args.concat(post_args)
@@ -96,17 +98,18 @@ class Hbc::CurlPostDownloadStrategy < Hbc::CurlDownloadStrategy
   def post_args
     if uri_object.data
       # sort_by is for predictability between Ruby versions
-      uri_object.data.sort_by{ |key, value| key.to_s }.map do |key, value|
-        ['-d', "#{CGI.escape(key.to_s)}=#{CGI.escape(value.to_s)}"]
-      end.flatten()
+      uri_object
+        .data
+        .sort_by(&:to_s)
+        .map { |key, value| ["-d", "#{CGI.escape(key.to_s)}=#{CGI.escape(value.to_s)}"] }
+        .flatten
     else
-      ['-X', 'POST']
+      ["-X", "POST"]
     end
   end
 end
 
 class Hbc::SubversionDownloadStrategy < Hbc::HbSubversionDownloadStrategy
-
   # super does not provide checks for already-existing downloads
   def fetch
     if tarball_path.exist?
@@ -122,31 +125,31 @@ class Hbc::SubversionDownloadStrategy < Hbc::HbSubversionDownloadStrategy
   # option, controllable from the Cask definition. We also force
   # consistent timestamps.  The rest of this method is similar to
   # Homebrew's, but translated to local idiom.
-  def fetch_repo target, url, revision=uri_object.revision, ignore_externals=false
+  def fetch_repo(target, url, revision = uri_object.revision, ignore_externals = false)
     # Use "svn up" when the repository already exists locally.
     # This saves on bandwidth and will have a similar effect to verifying the
     # cache as it will make any changes to get the right revision.
-    svncommand = target.directory? ? 'up' : 'checkout'
+    svncommand = target.directory? ? "up" : "checkout"
     args = [svncommand]
 
     # SVN shipped with XCode 3.1.4 can't force a checkout.
-    args << '--force' unless MacOS.release == :leopard
+    args << "--force" unless MacOS.release == :leopard
 
     # make timestamps consistent for checksumming
     args.concat(%w[--config-option config:miscellany:use-commit-times=yes])
 
     if uri_object.trust_cert
-      args << '--trust-server-cert'
-      args << '--non-interactive'
+      args << "--trust-server-cert"
+      args << "--non-interactive"
     end
 
     args << url unless target.directory?
     args << target
-    args << '-r' << revision if revision
-    args << '--ignore-externals' if ignore_externals
-    @command.run!('/usr/bin/svn',
-                  :args => args,
-                  :print_stderr => false)
+    args << "-r" << revision if revision
+    args << "--ignore-externals" if ignore_externals
+    @command.run!("/usr/bin/svn",
+                  args:         args,
+                  print_stderr: false)
   end
 
   def tarball_path
@@ -176,8 +179,9 @@ class Hbc::SubversionDownloadStrategy < Hbc::HbSubversionDownloadStrategy
 
   def compress
     Dir.chdir(cached_location) do
-      @command.run!('/usr/bin/tar', :args => ['-s/^\.//', '--exclude', '.svn', '-cf', Pathname.new(tarball_path), '--', '.'],
-                                    :print_stderr => false)
+      @command.run!("/usr/bin/tar",
+                    args:         ['-s/^\.//', "--exclude", ".svn", "-cf", Pathname.new(tarball_path), "--", "."],
+                    print_stderr: false)
     end
     clear_cache
   end
