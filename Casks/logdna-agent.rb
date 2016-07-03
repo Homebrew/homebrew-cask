@@ -17,9 +17,9 @@ cask 'logdna-agent' do
 
   caveats <<-EOS.undent
     When you first start logdna-agent, you must set your LogDNA API key with the command:
-    sudo logdna-agent -k <api-key>
+      sudo logdna-agent -k <api-key>
 
     To always run logdna-agent in the background, use the command:
-    sudo launchctl load -w /Library/LaunchDaemons/com.logdna.logdna-agent.plist
+      sudo launchctl load -w /Library/LaunchDaemons/com.logdna.logdna-agent.plist
   EOS
 end
