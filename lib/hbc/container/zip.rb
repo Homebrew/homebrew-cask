@@ -1,6 +1,6 @@
 class Hbc::Container::Zip < Hbc::Container::Base
   def self.me?(criteria)
-    criteria.file.include? 'compressed-encoding=application/zip;'
+    criteria.file.include? 'application/zip;'
   end
 
   def extract
