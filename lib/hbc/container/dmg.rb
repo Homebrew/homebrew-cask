@@ -1,6 +1,6 @@
 class Hbc::Container::Dmg < Hbc::Container::Base
   def self.me?(criteria)
-    criteria.imageinfo != ''
+    !criteria.imageinfo.empty?
   end
 
   attr_reader :mounts
@@ -13,43 +13,40 @@ class Hbc::Container::Dmg < Hbc::Container::Base
     mount!
     assert_mounts_found
     @mounts.each do |mount|
-      @command.run('/usr/bin/ditto',
-                   # todo
-                   # per https://github.com/caskroom/homebrew-cask/issues/6382, ditto
-                   # complains to stderr about unreadable .Trashes directories, so all
-                   # stderr output is silenced for now.  But better solutions would be
-                   # - use the --bom option to ditto to selectively avoid certain files
-                   #   - .Trashes
-                   #   - symlinks to Applications
-                   # - or support some type of text filter to be passed to
-                   #   :print_stderr instead of true/false
-                   :print_stderr => false,
-                   :args => ['--', mount, @cask.staged_path])
+      @command.run("/usr/bin/ditto",
+                   # TODO: per https://github.com/caskroom/homebrew-cask/issues/6382, ditto
+                   #       complains to stderr about unreadable .Trashes directories, so all
+                   #       stderr output is silenced for now.  But better solutions would be
+                   #       - use the --bom option to ditto to selectively avoid certain files
+                   #         - .Trashes
+                   #         - symlinks to Applications
+                   #       - or support some type of text filter to be passed to
+                   #         :print_stderr instead of true/false
+                   print_stderr: false,
+                   args:         ["--", mount, @cask.staged_path])
     end
   ensure
     eject!
   end
 
   def mount!
-    plist = @command.run('/usr/bin/hdiutil',
-      # realpath is a failsafe against unusual filenames
-      :args => %w[mount -plist -nobrowse -readonly -noidme -mountrandom /tmp] + [Pathname.new(@path).realpath],
-      :input => %w[y]
-    ).plist
+    plist = @command.run("/usr/bin/hdiutil",
+                         # realpath is a failsafe against unusual filenames
+                         args:  %w[mount -plist -nobrowse -readonly -noidme -mountrandom /tmp] + [Pathname.new(@path).realpath],
+                         input: %w[y])
+                    .plist
     @mounts = mounts_from_plist(plist)
   end
 
   def mounts_from_plist(plist)
     return [] unless plist.respond_to?(:fetch)
-    plist.fetch('system-entities', []).map do |entity|
-      entity['mount-point']
+    plist.fetch("system-entities", []).map do |entity|
+      entity["mount-point"]
     end.compact
   end
 
   def assert_mounts_found
-    if @mounts.empty?
-      raise Hbc::CaskError.new %Q{No mounts found in '#{@path}'; perhaps it is a bad DMG?}
-    end
+    raise Hbc::CaskError, "No mounts found in '#{@path}'; perhaps it is a bad DMG?" if @mounts.empty?
   end
 
   def eject!
@@ -57,16 +54,16 @@ class Hbc::Container::Dmg < Hbc::Container::Base
       # realpath is a failsafe against unusual filenames
       mountpath = Pathname.new(mount).realpath
       next unless mountpath.exist?
-      @command.run('/usr/sbin/diskutil',
-                   :args => ['eject', mountpath],
-                   :print_stderr => false)
+      @command.run("/usr/sbin/diskutil",
+                   args:         ["eject", mountpath],
+                   print_stderr: false)
       next unless mountpath.exist?
       sleep 1
-      @command.run('/usr/sbin/diskutil',
-                   :args => ['eject', mountpath],
-                   :print_stderr => false)
+      @command.run("/usr/sbin/diskutil",
+                   args:         ["eject", mountpath],
+                   print_stderr: false)
       next unless mountpath.exist?
-      raise Hbc::CaskError.new "Failed to eject #{mountpath}"
+      raise Hbc::CaskError, "Failed to eject #{mountpath}"
     end
   end
 end

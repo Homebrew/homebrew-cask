@@ -1,17 +1,50 @@
+require: 'rubocop-cask'
+
 AllCops:
+  TargetRubyVersion: 2.0
   Exclude:
-    - '**/Gemfile'
-    - '**/Rakefile'
-    - '**/brew-cask.rb'
-    - '**/invalid-header-format.rb'
+    - '**/Casks/**/*'
     - '**/spec/*.rb'
     - '**/spec/support/*.rb'
     - '**/test/*.rb'
     - '**/test/support/*.rb'
     - 'developer/**/*'
-    - 'lib/**/*'
+    - 'lib/vendor/**/*'
     - 'spec/cask/**/*'
     - 'test/cask/**/*'
-    - 'test/Casks/**/*'
     - 'test/plist/**/*'
     - 'test/support/shared_examples/**/*'
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/ClassLength:
+    Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Metrics/ModuleLength:
+  CountComments: false
+  Exclude:
+    - 'lib/hbc/locations.rb'
+    - 'lib/hbc/macos.rb'
+    - 'lib/hbc/utils.rb'
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+
+Style/PredicateName:
+  NameWhitelist: is_32_bit?, is_64_bit?
+
+Style/RaiseArgs:
+  EnforcedStyle: exploded
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes

@@ -1,3 +1,4 @@
+require 'english'
 require 'spec_helper'
 
 describe Hbc::CLI::Style do
@@ -41,7 +42,7 @@ describe Hbc::CLI::Style do
                                      system: nil,
                                      rubocop_args: nil,
                                      cask_paths: nil)
-      allow($?).to receive(:success?).and_return(success)
+      allow($CHILD_STATUS).to receive(:success?).and_return(success)
     end
 
     context 'when rubocop succeeds' do

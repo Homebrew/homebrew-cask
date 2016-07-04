@@ -1,22 +1,18 @@
 class Hbc::CLI::List < Hbc::CLI::Base
   def self.run(*arguments)
-    @options = Hash.new
-    @options[:one] = true if arguments.delete('-1')
-    @options[:long] = true if arguments.delete('-l')
-    @options[:versions] = true if arguments.delete('--versions')
+    @options = {}
+    @options[:one] = true if arguments.delete("-1")
+    @options[:long] = true if arguments.delete("-l")
+    @options[:versions] = true if arguments.delete("--versions")
 
-    if arguments.any?
-      retval = list_casks(*arguments)
-    else
-      retval = list_installed
-    end
+    retval = arguments.any? ? list_casks(*arguments) : list_installed
     # retval is ternary: true/false/nil
     if retval.nil? && !arguments.any?
-      opoo "nothing to list"  # special case: avoid exit code
+      opoo "nothing to list" # special case: avoid exit code
     elsif retval.nil?
-      raise Hbc::CaskError.new("nothing to list")
+      raise Hbc::CaskError, "nothing to list"
     elsif !retval
-      raise Hbc::CaskError.new("listing incomplete")
+      raise Hbc::CaskError, "listing incomplete"
     end
   end
 
@@ -61,7 +57,7 @@ class Hbc::CLI::List < Hbc::CLI::Base
     elsif @options[:versions]
       installed_casks.each { |cask| puts "#{cask} #{cask.versions.reverse.join(', ')}" }
     elsif @options[:long]
-      puts Hbc::SystemCommand.run!("/bin/ls", :args => ["-l", Hbc.caskroom]).stdout
+      puts Hbc::SystemCommand.run!("/bin/ls", args: ["-l", Hbc.caskroom]).stdout
     else
       puts_columns columns
     end

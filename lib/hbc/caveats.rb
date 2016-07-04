@@ -13,10 +13,9 @@ class Hbc::CaveatsDSL
   # block in the context of the DSL
   def initialize(cask, block)
     @cask = cask
-    retval = instance_eval &block
-    unless retval.nil?
-      puts retval.to_s.sub(/[\r\n \t]*\Z/, "\n\n")
-    end
+    retval = instance_eval(&block)
+    return if retval.nil?
+    puts retval.to_s.sub(%r{[\r\n \t]*\Z}, "\n\n")
   end
 
   # helpers
@@ -66,26 +65,25 @@ class Hbc::CaveatsDSL
   end
 
   def files_in_usr_local
-    localpath = '/usr/local'
-    if Hbc.homebrew_prefix.to_s.downcase.index(localpath) == 0
-      puts <<-EOS.undent
-      Cask #{@cask} installs files under "#{localpath}".  The presence of such
-      files can cause warnings when running "brew doctor", which is considered
-      to be a bug in homebrew-cask.
+    localpath = "/usr/local"
+    return unless Hbc.homebrew_prefix.to_s.downcase.start_with?(localpath)
+    puts <<-EOS.undent
+    Cask #{@cask} installs files under "#{localpath}".  The presence of such
+    files can cause warnings when running "brew doctor", which is considered
+    to be a bug in homebrew-cask.
 
-      EOS
-    end
+    EOS
   end
 
-  def depends_on_java(java_version = 'any')
-    if java_version == 'any'
+  def depends_on_java(java_version = "any")
+    if java_version == "any"
       puts <<-EOS.undent
       #{@cask} requires Java. You can install the latest version with
 
         brew cask install java
 
       EOS
-    elsif java_version =~ /8/ || java_version =~ /\+/
+    elsif java_version.include?("8") || java_version.include?("+")
       puts <<-EOS.undent
       #{@cask} requires Java #{java_version}. You can install the latest version with
 
@@ -149,8 +147,8 @@ class Hbc::CaveatsDSL
     EOS
   end
 
-  def method_missing(method, *args)
-    Hbc::Utils.method_missing_message(method, @cask.to_s, 'caveats')
-    return nil
+  def method_missing(method, *)
+    Hbc::Utils.method_missing_message(method, @cask.to_s, "caveats")
+    nil
   end
 end

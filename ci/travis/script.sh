@@ -19,6 +19,7 @@ if any_casks_modified; then
 fi
 
 if must_run_tests; then
+  run bundle exec rake rubocop
   run bundle exec rake test:coverage
   run bundle exec rake coveralls:push || true # in case of networking errors
 fi

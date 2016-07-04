@@ -1,63 +1,60 @@
 class Hbc::CLI::Doctor < Hbc::CLI::Base
   def self.run
-    ohai 'macOS Release:',                                   render_with_none_as_error( MacOS.release )
-    ohai 'macOS Release with Patchlevel:',                   render_with_none_as_error( MacOS.release_with_patchlevel )
-    ohai "Hardware Architecture:",                           render_with_none_as_error( "#{Hardware::CPU.type}-#{Hardware::CPU.bits}" )
-    ohai 'Ruby Version:',                                    render_with_none_as_error( "#{RUBY_VERSION}-p#{RUBY_PATCHLEVEL}" )
-    ohai 'Ruby Path:',                                       render_with_none_as_error( RbConfig.ruby )
-    # todo: consider removing most Homebrew constants from doctor output
-    ohai 'Homebrew Version:',                                render_with_none_as_error( homebrew_version )
-    ohai 'Homebrew Executable Path:',                        render_with_none_as_error( Hbc.homebrew_executable )
-    ohai 'Homebrew Cellar Path:',                            render_with_none_as_error( homebrew_cellar )
-    ohai 'Homebrew Repository Path:',                        render_with_none_as_error( homebrew_repository )
-    ohai 'Homebrew Origin:',                                 render_with_none_as_error( homebrew_origin )
-    ohai 'Homebrew-cask Version:',                           render_with_none_as_error( Hbc.full_version )
-    ohai 'Homebrew-cask Install Location:',                    render_install_location( HBC_VERSION )
-    ohai 'Homebrew-cask Staging Location:',                    render_staging_location( Hbc.caskroom )
-    ohai 'Homebrew-cask Cached Downloads:',                     render_cached_downloads
-    ohai 'Homebrew-cask Default Tap Path:',                           render_tap_paths( fq_default_tap )
-    ohai 'Homebrew-cask Alternate Cask Taps:',                        render_tap_paths( alt_taps )
-    ohai 'Homebrew-cask Default Tap Cask Count:',            render_with_none_as_error( default_cask_count )
-    ohai 'Contents of $LOAD_PATH:',                                   render_load_path( $LOAD_PATH )
-    ohai 'Contents of $RUBYLIB Environment Variable:',                  render_env_var( 'RUBYLIB' )
-    ohai 'Contents of $RUBYOPT Environment Variable:',                  render_env_var( 'RUBYOPT' )
-    ohai 'Contents of $RUBYPATH Environment Variable:',                 render_env_var( 'RUBYPATH' )
-    ohai 'Contents of $RBENV_VERSION Environment Variable:',            render_env_var( 'RBENV_VERSION' )
-    ohai 'Contents of $CHRUBY_VERSION Environment Variable:',           render_env_var( 'CHRUBY_VERSION' )
-    ohai 'Contents of $GEM_HOME Environment Variable:',                 render_env_var( 'GEM_HOME' )
-    ohai 'Contents of $GEM_PATH Environment Variable:',                 render_env_var( 'GEM_PATH' )
-    ohai 'Contents of $BUNDLE_PATH Environment Variable:',              render_env_var( 'BUNDLE_PATH' )
-    ohai 'Contents of $PATH Environment Variable:',                     render_env_var( 'PATH' )
-    ohai 'Contents of $SHELL Environment Variable:',                    render_env_var( 'SHELL' )
-    ohai 'Contents of Locale Environment Variables:',                 render_with_none( locale_variables )
-    ohai 'Running As Privileged User:',                      render_with_none_as_error( privileged_uid )
+    ohai "macOS Release:", render_with_none_as_error(MacOS.release)
+    ohai "macOS Release with Patchlevel:", render_with_none_as_error(MacOS.release_with_patchlevel)
+    ohai "Hardware Architecture:", render_with_none_as_error("#{Hardware::CPU.type}-#{Hardware::CPU.bits}")
+    ohai "Ruby Version:", render_with_none_as_error("#{RUBY_VERSION}-p#{RUBY_PATCHLEVEL}")
+    ohai "Ruby Path:", render_with_none_as_error(RbConfig.ruby)
+    # TODO: consider removing most Homebrew constants from doctor output
+    ohai "Homebrew Version:", render_with_none_as_error(homebrew_version)
+    ohai "Homebrew Executable Path:", render_with_none_as_error(Hbc.homebrew_executable)
+    ohai "Homebrew Cellar Path:", render_with_none_as_error(homebrew_cellar)
+    ohai "Homebrew Repository Path:", render_with_none_as_error(homebrew_repository)
+    ohai "Homebrew Origin:", render_with_none_as_error(homebrew_origin)
+    ohai "Homebrew-cask Version:", render_with_none_as_error(Hbc.full_version)
+    ohai "Homebrew-cask Install Location:", render_install_location
+    ohai "Homebrew-cask Staging Location:", render_staging_location(Hbc.caskroom)
+    ohai "Homebrew-cask Cached Downloads:", render_cached_downloads
+    ohai "Homebrew-cask Default Tap Path:", render_tap_paths(fq_default_tap)
+    ohai "Homebrew-cask Alternate Cask Taps:", render_tap_paths(alt_taps)
+    ohai "Homebrew-cask Default Tap Cask Count:", render_with_none_as_error(default_cask_count)
+    ohai "Contents of $LOAD_PATH:", render_load_path($LOAD_PATH)
+    ohai "Contents of $RUBYLIB Environment Variable:", render_env_var("RUBYLIB")
+    ohai "Contents of $RUBYOPT Environment Variable:", render_env_var("RUBYOPT")
+    ohai "Contents of $RUBYPATH Environment Variable:", render_env_var("RUBYPATH")
+    ohai "Contents of $RBENV_VERSION Environment Variable:", render_env_var("RBENV_VERSION")
+    ohai "Contents of $CHRUBY_VERSION Environment Variable:", render_env_var("CHRUBY_VERSION")
+    ohai "Contents of $GEM_HOME Environment Variable:", render_env_var("GEM_HOME")
+    ohai "Contents of $GEM_PATH Environment Variable:", render_env_var("GEM_PATH")
+    ohai "Contents of $BUNDLE_PATH Environment Variable:", render_env_var("BUNDLE_PATH")
+    ohai "Contents of $PATH Environment Variable:", render_env_var("PATH")
+    ohai "Contents of $SHELL Environment Variable:", render_env_var("SHELL")
+    ohai "Contents of Locale Environment Variables:", render_with_none(locale_variables)
+    ohai "Running As Privileged User:", render_with_none_as_error(privileged_uid)
   end
 
   def self.fq_default_tap
     return @fq_default_tap if @fq_default_tap
+    @fq_default_tap = homebrew_repository.join "Library", "Taps", Hbc.default_tap
+  rescue StandardError
     @fq_default_tap = notfound_string
-    begin
-      @fq_default_tap = homebrew_repository.join 'Library', 'Taps', Hbc.default_tap
-    rescue StandardError; end
-    @fq_default_tap
   end
 
   def self.alt_taps
-    alt_taps = notfound_string
-    begin
-      alt_taps = Pathname.glob(homebrew_repository.join 'Library', 'Taps', '*', '*', 'Casks').map(&:dirname) -
-                 [fq_default_tap]
-      alt_taps = nil unless alt_taps.length > 0
-    rescue StandardError; end
-    alt_taps
+    alt_taps = Pathname.glob(homebrew_repository
+                       .join("Library", "Taps", "*", "*", "Casks"))
+                       .map(&:dirname) - [fq_default_tap]
+    nil if alt_taps.empty?
+  rescue StandardError
+    notfound_string
   end
 
   def self.default_cask_count
     default_cask_count = notfound_string
     begin
-      default_cask_count = homebrew_repository.join(fq_default_tap, 'Casks').children.count(&:file?)
+      default_cask_count = homebrew_repository.join(fq_default_tap, "Casks").children.count(&:file?)
     rescue StandardError
-      default_cask_count = "0 #{error_string %Q{Error reading #{fq_default_tap}}}"
+      default_cask_count = "0 #{error_string "Error reading #{fq_default_tap}"}"
     end
     default_cask_count
   end
@@ -66,9 +63,9 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
     homebrew_origin = notfound_string
     begin
       Dir.chdir(homebrew_repository) do
-        homebrew_origin = Hbc::SystemCommand.run('git',
-                                                  :args => %w{config --get remote.origin.url},
-                                                  :print_stderr => false).stdout.strip
+        homebrew_origin = Hbc::SystemCommand.run("git",
+                                                 args:         %w[config --get remote.origin.url],
+                                                 print_stderr: false).stdout.strip
       end
       if homebrew_origin !~ %r{\S}
         homebrew_origin = "#{none_string} #{error_string}"
@@ -76,27 +73,27 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
         homebrew_origin.concat " #{error_string 'warning: nonstandard origin'}"
       end
     rescue StandardError
-      homebrew_origin = error_string 'Not Found - Error running git'
+      homebrew_origin = error_string "Not Found - Error running git"
     end
     homebrew_origin
   end
 
   def self.homebrew_repository
-    homebrew_constants('repository')
+    homebrew_constants("repository")
   end
 
   def self.homebrew_cellar
-    homebrew_constants('cellar')
+    homebrew_constants("cellar")
   end
 
   def self.homebrew_version
-    homebrew_constants('version')
+    homebrew_constants("version")
   end
 
   def self.homebrew_taps
     @homebrew_taps ||= if homebrew_repository.respond_to?(:join)
-      homebrew_repository.join('Library', 'Taps')
-    end
+                         homebrew_repository.join("Library", "Taps")
+                       end
   end
 
   def self.homebrew_constants(name)
@@ -105,33 +102,33 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
     @homebrew_constants[name] = notfound_string
     begin
       @homebrew_constants[name] = Hbc::SystemCommand.run!(Hbc.homebrew_executable,
-                                                          :args => [ "--#{name}" ],
-                                                          :print_stderr => false).stdout.strip
+                                                          args:         ["--#{name}"],
+                                                          print_stderr: false)
+                                                    .stdout
+                                                    .strip
       if @homebrew_constants[name] !~ %r{\S}
         @homebrew_constants[name] = "#{none_string} #{error_string}"
       end
       path = Pathname.new(@homebrew_constants[name])
       @homebrew_constants[name] = path if path.exist?
     rescue StandardError
-      @homebrew_constants[name] = error_string 'Not Found - Error running brew'
+      @homebrew_constants[name] = error_string "Not Found - Error running brew"
     end
     @homebrew_constants[name]
   end
 
   def self.locale_variables
-    ENV.keys.grep(/^(?:LC_\S+|LANG|LANGUAGE)\Z/).collect { |v| %Q{#{v}="#{ENV[v]}"} }.sort.join("\n")
+    ENV.keys.grep(%r{^(?:LC_\S+|LANG|LANGUAGE)\Z}).collect { |v| %Q{#{v}="#{ENV[v]}"} }.sort.join("\n")
   end
 
   def self.privileged_uid
-    privileged_uid = notfound_string
-    begin
-      privileged_uid = Process.euid == 0 ? "Yes #{error_string 'warning: not recommended'}" : 'No'
-    rescue StandardError; end
-    privileged_uid
+    Process.euid == 0 ? "Yes #{error_string 'warning: not recommended'}" : "No"
+  rescue StandardError
+    notfound_string
   end
 
   def self.none_string
-    '<NONE>'
+    "<NONE>"
   end
 
   def self.legacy_tap_pattern
@@ -142,24 +139,24 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
     "#{Tty.red.underline}Not Found - Unknown Error#{Tty.reset}"
   end
 
-  def self.error_string(string='Error')
+  def self.error_string(string = "Error")
     "#{Tty.red.underline}(#{string})#{Tty.reset}"
   end
 
   def self.render_with_none(string)
-    return string if !string.nil? && string.respond_to?(:to_s) && string.to_s.length > 0
+    return string if !string.nil? && string.respond_to?(:to_s) && !string.to_s.empty?
     none_string
   end
 
   def self.render_with_none_as_error(string)
-    return string if !string.nil? && string.respond_to?(:to_s) && string.to_s.length > 0
+    return string if !string.nil? && string.respond_to?(:to_s) && !string.to_s.empty?
     "#{none_string} #{error_string}"
   end
 
   def self.render_tap_paths(paths)
-    paths = [ paths ] unless paths.respond_to?(:each)
+    paths = [paths] unless paths.respond_to?(:each)
     paths.collect do |dir|
-      if dir.nil? || dir.to_s.length == 0
+      if dir.nil? || dir.to_s.empty?
         none_string
       elsif dir.to_s.match(legacy_tap_pattern)
         dir.to_s.concat(" #{error_string 'Warning: legacy tap path'}")
@@ -180,13 +177,13 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
   # This could be done by calling into Homebrew, but the situation
   # where "doctor" is needed is precisely the situation where such
   # things are less dependable.
-  def self.render_install_location(current_version)
-    locations = Dir.glob(homebrew_cellar.join('brew-cask', '*')).reverse
+  def self.render_install_location
+    locations = Dir.glob(homebrew_cellar.join("brew-cask", "*")).reverse
     if locations.empty?
       none_string
     else
       locations.collect do |l|
-        %Q{#{l} #{error_string %Q{error: legacy install. Run "brew uninstall --force brew-cask".}}}
+        "#{l} #{error_string 'error: legacy install. Run "brew uninstall --force brew-cask".'}"
       end
     end
   end
@@ -194,19 +191,19 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
   def self.render_staging_location(path)
     path = Pathname.new(path)
     if !path.exist?
-      %Q{#{path} #{error_string %Q{error: path does not exist}}}
+      "#{path} #{error_string 'error: path does not exist'}}"
     elsif !path.writable?
-      %Q{#{path} #{error_string %Q{error: not writable by current user}}}
+      "#{path} #{error_string 'error: not writable by current user'}"
     else
       path
     end
   end
 
   def self.render_load_path(paths)
-    return "#{none_string} #{error_string}" if paths.nil? || paths.size == 0
+    return "#{none_string} #{error_string}" if paths.nil? || paths.empty?
     copy = Array.new(paths)
     unless Hbc::Utils.file_is_descendant(copy[0], homebrew_taps)
-      copy[0] = "#{copy[0]} #{error_string %Q{error: should be descendant of Homebrew taps directory}}"
+      copy[0] = "#{copy[0]} #{error_string 'error: should be descendant of Homebrew taps directory'}"
     end
     copy
   end

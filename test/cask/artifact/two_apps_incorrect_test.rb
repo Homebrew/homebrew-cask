@@ -6,7 +6,7 @@ describe Hbc::Artifact::App do
      Hbc.load('two-apps-incorrect')
    rescue => e
    end
-    # todo: later give the user a nice exception for this case and check for it here
+    # TODO: later give the user a nice exception for this case and check for it here
     e.must_be_kind_of Exception
   end
 end

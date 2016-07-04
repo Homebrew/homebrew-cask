@@ -14,6 +14,6 @@ class Hbc::Source::Gone
   end
 
   def to_s
-    ''
+    ""
   end
 end

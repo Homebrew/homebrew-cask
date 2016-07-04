@@ -2,7 +2,7 @@ class Hbc::CLI::Fetch < Hbc::CLI::Base
   def self.run(*args)
     cask_tokens = cask_tokens_from(args)
     raise Hbc::CaskUnspecifiedError if cask_tokens.empty?
-    force = args.include? '--force'
+    force = args.include? "--force"
 
     cask_tokens.each do |cask_token|
       ohai "Downloading external files for Cask #{cask_token}"

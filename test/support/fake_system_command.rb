@@ -41,7 +41,7 @@ class Hbc::FakeSystemCommand
     end
   end
 
-  def self.run(command_string, options={})
+  def self.run(command_string, options = {})
     command = Hbc::SystemCommand.new(command_string, options).command
     unless responses.key?(command)
       fail("no response faked for #{command.inspect}, faked responses are: #{responses.inspect}")
@@ -56,7 +56,7 @@ class Hbc::FakeSystemCommand
     end
   end
 
-  def self.run!(command, options={})
+  def self.run!(command, options = {})
     run(command, options.merge(:must_succeed => true))
   end
 end

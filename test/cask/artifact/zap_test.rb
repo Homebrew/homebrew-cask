@@ -1,7 +1,6 @@
 require 'test_helper'
 
-# todo
-# - test that zap removes an alternate version of the same Cask
+# TODO: test that zap removes an alternate version of the same Cask
 describe Hbc::Artifact::Zap do
   let(:cask) { Hbc.load('with-installable') }
 

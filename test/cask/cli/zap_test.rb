@@ -30,9 +30,8 @@ describe Hbc::CLI::Zap do
     Hbc.appdir.join('Caffeine.app').wont_be :symlink?
   end
 
-  # todo
-  # Explicit test that both zap and uninstall directives get dispatched.
-  # The above tests that implicitly.
+  # TODO: Explicit test that both zap and uninstall directives get dispatched.
+  #       The above tests that implicitly.
   #
   # it "dispatches both uninstall and zap stanzas" do
   #   with_zap = Hbc.load('with-zap')

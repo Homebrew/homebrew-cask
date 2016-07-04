@@ -12,7 +12,7 @@ module MiniTest::Spec::SharedExamples
 
   def it_behaves_like(desc, *args, &block)
     self.instance_exec *args, &MiniTest::Spec.shared_examples[desc]
-    self.instance_eval &block if block_given?
+    self.instance_eval(&block) if block_given?
   end
 end
 
