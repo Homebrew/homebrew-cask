@@ -3,6 +3,7 @@ require 'rake/testtask'
 require 'rspec/core/rake_task'
 require 'rubocop/rake_task'
 
+$LOAD_PATH.unshift(File.expand_path('../../../../Homebrew', __FILE__))
 $LOAD_PATH.unshift(File.expand_path('../lib', __FILE__))
 
 namespace :test do
