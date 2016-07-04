@@ -17,7 +17,7 @@ It’s implemented as a `homebrew` [external command](https://github.com/Homebre
 
 To start using Homebrew-Cask, you just need [Homebrew](http://brew.sh/) installed.
 
-<img src="https://i.imgur.com/oxHnF7I.gif" width="450px" alt="Installing Atom (animated gif)">
+<img src="https://i.imgur.com/IPSmy1y.gif" width="450px" alt="Installing Atom (animated gif)">
 
 Slower, now:
 
