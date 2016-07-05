@@ -16,7 +16,7 @@ class Hbc::Source::URI
     odebug "Download target -> #{path.to_s}"
     begin
       curl(uri, '-o', path.to_s)
-    rescue Hbc::ErrorDuringExecution
+    rescue ErrorDuringExecution
       raise Hbc::CaskUnavailableError.new uri
     end
     Hbc::Source::PathSlashOptional.new(path).load
