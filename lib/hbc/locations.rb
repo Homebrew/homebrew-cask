@@ -126,7 +126,7 @@ module Hbc::Locations
     end
 
     def path(query)
-      query.sub!(%r{\.rb$}i, "")
+      query = query.sub(%r{\.rb$}i, "")
       token_with_tap = if query.include?("/")
                          query
                        else
