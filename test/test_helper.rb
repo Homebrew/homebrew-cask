@@ -2,8 +2,8 @@ require 'bundler'
 require 'bundler/setup'
 require 'pathname'
 
-homebrew_library_path = Pathname.new(File.expand_path(__FILE__+'/../../../../../Homebrew'))
-$:.push(homebrew_library_path)
+homebrew_repo = `brew --repository`
+$LOAD_PATH.unshift(File.expand_path("#{homebrew_repo.chomp}/Library/Homebrew"))
 
 if ENV['COVERAGE']
   require 'coveralls'
