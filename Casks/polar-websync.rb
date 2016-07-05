@@ -2,6 +2,7 @@ cask 'polar-websync' do
   version '2.8.2'
   sha256 '287230ee323cca9887f31e448cbac759c770448e25c31c164b87f69bb3ead9b9'
 
+  # polarpersonaltrainer.com was verified as official when first introduced to the cask
   url "https://www.polarpersonaltrainer.com/downloads/websync_#{version}.dmg"
   name 'Polar WebSync Software'
   homepage 'https://www.polar.com/us-en/support/downloads/Polar_WebSync_Software'
