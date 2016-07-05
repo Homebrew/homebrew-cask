@@ -1,5 +1,4 @@
-cask 'gemini2' do
-  # note: "2" is not a version number, but an intrinsic part of the product name
+cask 'gemini' do
   version '2.1.0,1464094756'
   sha256 '63453274fcda09cfa34b2032c1c779cf6d80f31209eaa115ac512b4631b90349'
 
@@ -11,7 +10,7 @@ cask 'gemini2' do
   homepage 'https://macpaw.com/gemini'
   license :commercial
 
-  app 'Gemini 2.app'
+  app "Gemini #{version.major}.app"
 
   zap delete: [
                 '~/Library/Application Support/Gemini 2',
