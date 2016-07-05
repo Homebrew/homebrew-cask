@@ -1,4 +1,4 @@
-require "english"
+require "English"
 
 class Hbc::CLI::Style < Hbc::CLI::Base
   def self.help

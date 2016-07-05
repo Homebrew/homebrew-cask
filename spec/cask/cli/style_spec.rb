@@ -1,4 +1,4 @@
-require 'english'
+require 'English'
 require 'spec_helper'
 
 describe Hbc::CLI::Style do
