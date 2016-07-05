@@ -1,6 +1,6 @@
 cask 'ax88772' do
-  version '2.4.0_20151117'
-  sha256 'cc336a77ed35ab6b9972f76fb2a4c77650072c2844fd1632a1875b035a311c6f'
+  version '2.4.1_20160202'
+  sha256 'b7fadf39110b7ad8c4792bfd04767bb24027db2fe99948d7af4c097817e9afb1'
 
   module Utils
     def self.basename(version)
@@ -11,7 +11,7 @@ cask 'ax88772' do
   url "http://www.asix.com.tw/FrootAttach/driver/#{Utils.basename(version)}.zip"
   name 'AX88772'
   homepage 'http://www.asix.com.tw/products.php?op=pItemdetail&PItemID=86;71;101&PLine=71'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   container nested: "#{Utils.basename(version)}/AX88772.dmg"
 
@@ -19,6 +19,6 @@ cask 'ax88772' do
 
   uninstall script: {
                       executable: 'AX88772C_772B_772A_760_772_Uninstall_v130',
-                      sudo:        false,
+                      sudo:       false,
                     }
 end
