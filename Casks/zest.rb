@@ -18,4 +18,8 @@ cask 'zest' do
                 '~/Library/Preferences/org.zestdocs.plist',
                 '~/Library/Saved Application State/org.zestdocs.savedState',
               ]
+
+  caveats do
+    discontinued
+  end
 end
