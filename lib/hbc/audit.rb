@@ -1,14 +1,16 @@
 require 'hbc/checkable'
 require 'hbc/download'
+require 'digest'
 
 class Hbc::Audit
   include Hbc::Checkable
 
   attr_reader :cask, :download
 
-  def initialize(cask, download = false)
+  def initialize(cask, download = false, command = Hbc::SystemCommand)
     @cask = cask
     @download = download
+    @command = command
   end
 
   def run!
@@ -75,7 +77,7 @@ class Hbc::Audit
     odebug "Verifying #{stanza} string is a legal SHA-256 digest"
     if sha256.kind_of?(String)
       unless sha256.length == 64 && sha256[/^[0-9a-f]+$/i]
-        add_error "sha256 string must be of 64 hexadecimal characters"
+        add_error "#{stanza} string must be of 64 hexadecimal characters"
       end
     end
   end
@@ -84,7 +86,7 @@ class Hbc::Audit
     odebug "Verifying #{stanza} is not a known invalid value"
     empty_sha256 = 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
     if sha256 == empty_sha256
-      add_error "cannot use the sha256 for an empty string: #{empty_sha256}"
+      add_error "cannot use the sha256 for an empty string in #{stanza}: #{empty_sha256}"
     end
   end
 
@@ -95,11 +97,42 @@ class Hbc::Audit
     return unless cask.appcast.checkpoint
     check_sha256_actually_256(sha256: cask.appcast.checkpoint, stanza: 'appcast :checkpoint')
     check_sha256_invalid(sha256: cask.appcast.checkpoint, stanza: 'appcast :checkpoint')
+    return unless download
+    check_appcast_http_code
+    check_appcast_checkpoint_accuracy
   end
 
   def check_appcast_has_checkpoint
-    odebug 'Verifying appcast has :sha256 key'
+    odebug 'Verifying appcast has :checkpoint key'
     add_error 'a checkpoint sha256 is required for appcast' unless cask.appcast.checkpoint
+  end
+
+  def check_appcast_http_code
+    odebug 'Verifying appcast returns 200 HTTP response code'
+    result = @command.run('curl', args: ['--compressed', '--location', '--output', '/dev/null', '--write-out', '%{http_code}', cask.appcast], print_stderr: false)
+    if result.success?
+      http_code = result.stdout.chomp
+      add_warning "unexpected HTTP response code retrieving appcast: #{http_code}" unless http_code == '200'
+    else
+      add_warning "error retrieving appcast: #{result.stderr}"
+    end
+  end
+
+  def check_appcast_checkpoint_accuracy
+    odebug 'Verifying appcast checkpoint is accurate'
+    result = @command.run('curl', args: ['--compressed', '--location', cask.appcast], print_stderr: false)
+    if result.success?
+      processed_appcast_text = result.stdout.gsub(%r{<pubDate>[^<]*</pubDate>}, '')
+      expected = cask.appcast.checkpoint
+      actual = Digest::SHA2.hexdigest(processed_appcast_text)
+      add_warning <<-EOS.undent unless expected == actual
+        appcast checkpoint mismatch
+        Expected: #{expected}
+        Actual: #{actual}
+      EOS
+    else
+      add_warning "error retrieving appcast: #{result.stderr}"
+    end
   end
 
   def check_url
@@ -150,7 +183,7 @@ class Hbc::Audit
   end
 
   def check_download
-    return unless download
+    return unless download && cask.url
     odebug "Auditing download"
     downloaded_path = download.perform
     Hbc::Verify.all(cask, downloaded_path)
