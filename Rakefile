@@ -23,6 +23,14 @@ namespace :test do
     ENV['COVERAGE'] = '1'
     Rake::Task[:test].invoke
   end
+
+  desc '[DEBUG] Run test case for `zap`'
+  task :zap do
+    ENV['TEST'] = 'test/cask/cli/zap_test'
+    ENV['TESTOPTS'] =
+      "-n'/dispatches both uninstall and zap stanzas/' -v"
+    Rake::Task[:test].invoke    
+  end
 end
 
 desc 'Run tests for minitest and RSpec'
