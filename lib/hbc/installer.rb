@@ -88,7 +88,7 @@ class Hbc::Installer
         else
           "#{Tty.blue.bold}==>#{Tty.reset.bold} Success!#{Tty.reset} "
         end
-    s << "#{@cask} staged at '#{@cask.staged_path}' (#{Hbc::Utils.cabv(@cask.staged_path)})"
+    s << "#{@cask} was successfully installed!"
   end
 
   def download

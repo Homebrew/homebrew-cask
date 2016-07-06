@@ -39,7 +39,7 @@ describe Hbc::CLI::Install do
 
     TestHelper.must_output(self, lambda {
       Hbc::CLI::Install.run('local-transmission', '--force')
-    }, %r{==> Success! local-transmission staged at '#{Hbc.caskroom}/local-transmission/2.61' \(0B\)})
+    }, %r{==> Success! local-transmission was successfully installed!})
   end
 
   it "skips dependencies with --skip-cask-deps" do
