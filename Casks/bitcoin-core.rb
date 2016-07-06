@@ -7,6 +7,8 @@ cask 'bitcoin-core' do
   homepage 'https://bitcoin.org/'
   license :mit
 
+  depends_on macos: '>= :lion'
+
   conflicts_with cask: 'bitcoin-xt'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
