@@ -7,5 +7,5 @@ cask 'polar-clock' do
   homepage 'http://blog.pixelbreaker.com/polarclock'
   license :unknown
 
-  screen_saver 'PolarClock 3.0.saver'
+  screen_saver 'PolarClock #{version}.saver'
 end
