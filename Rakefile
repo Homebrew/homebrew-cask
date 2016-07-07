@@ -3,8 +3,8 @@ require "rake/testtask"
 require "rspec/core/rake_task"
 require "rubocop/rake_task"
 
-homebrew_repo = `brew --repository`
-$LOAD_PATH.unshift(File.expand_path("#{homebrew_repo.chomp}/Library/Homebrew"))
+homebrew_repo = `brew --repository`.chomp
+$LOAD_PATH.unshift(File.expand_path("#{homebrew_repo}/Library/Homebrew"))
 $LOAD_PATH.unshift(File.expand_path("../lib", __FILE__))
 
 namespace :test do
