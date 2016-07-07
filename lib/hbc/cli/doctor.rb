@@ -213,7 +213,7 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
     files = cleanup.all_cache_files
     count = files.size
     size = cleanup.disk_cleanup_size
-    size_msg = "#{Hbc::Utils.number_readable(count)} files, #{Hbc::Utils.disk_usage_readable(size)}"
+    size_msg = "#{number_readable(count)} files, #{disk_usage_readable(size)}"
     warn_msg = error_string('warning: run "brew cask cleanup"')
     size_msg << " #{warn_msg}" if count > 0
     [HOMEBREW_CACHE, HOMEBREW_CACHE_CASKS, size_msg]

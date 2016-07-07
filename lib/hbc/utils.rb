@@ -33,22 +33,34 @@ class Buffer < StringIO
 end
 
 # global methods
-
-# originally from Homebrew
-def ohai(title, *sput)
-  title = Tty.truncate(title) if $stdout.tty? && !Hbc.verbose
-  puts "#{Tty.blue.bold}==>#{Tty.reset.bold} #{title}#{Tty.reset}"
-  puts sput unless sput.empty?
+# TODO: delete
+def system cmd, *args
+  puts "#{cmd} #{args*' '}" if Hbc.verbose
+  pid = fork do
+    yield if block_given?
+    args.collect!{|arg| arg.to_s}
+    exec(cmd, *args) rescue nil
+    exit! 1 # never gets here unless exec failed
+  end
+  Process.wait(pid)
+  $?.success?
 end
 
-# originally from Homebrew
-def opoo(warning)
-  $stderr.puts "#{Tty.yellow.underline}Warning#{Tty.reset}: #{warning}"
+# Kernel.system but with exceptions
+# TODO: delete
+def safe_system cmd, *args
+  system(cmd, *args) or raise ErrorDuringExecution.new(cmd, args)
 end
 
-# originally from Homebrew
-def onoe(error)
-  $stderr.puts "#{Tty.red.underline}Error#{Tty.reset}: #{error}"
+# prints no output
+# TODO: delete
+def quiet_system cmd, *args
+  system(cmd, *args) do
+    # Redirect output streams to `/dev/null` instead of closing as some programs
+    # will fail to execute if they can't write to an open stream.
+    $stdout.reopen('/dev/null')
+    $stderr.reopen('/dev/null')
+  end
 end
 
 def odebug(title, *sput)
@@ -65,6 +77,22 @@ end
 def puts_columns(items, star_items = [])
   return if items.empty?
   puts Hbc::Utils.stringify_columns(items, star_items)
+end
+
+def curl *args
+  curl = Pathname.new '/usr/bin/curl'
+  raise "#{curl} is not executable" unless curl.exist? && curl.executable?
+
+  flags = HOMEBREW_CURL_ARGS
+  flags = flags.delete("#") if Hbc.verbose
+
+  args = [flags, HOMEBREW_USER_AGENT, *args]
+  # See https://github.com/Homebrew/homebrew/issues/6103
+  args << "--insecure" if MacOS.release < "10.6"
+  args << "--verbose" if ENV['HOMEBREW_CURL_VERBOSE']
+  args << "--silent" unless $stdout.tty?
+
+  safe_system curl, *args
 end
 
 module Hbc::Utils
@@ -94,29 +122,6 @@ module Hbc::Utils
     end
     return nil unless cmd_pn.file?
     cmd_pn
-  end
-
-  # originally from Homebrew
-  def self.which_editor
-    editor = ENV.values_at("HOMEBREW_EDITOR", "VISUAL", "EDITOR").compact.first
-    return editor unless editor.nil?
-
-    # Find Textmate
-    editor = "mate" if which "mate"
-    # Find BBEdit / TextWrangler
-    editor ||= "edit" if which "edit"
-    # Find vim
-    editor ||= "vim" if which "vim"
-    # Default to standard vim
-    editor ||= "/usr/bin/vim"
-
-    opoo <<-EOS.undent
-      Using #{editor} because no editor was set in the environment.
-      This may change in the future, so we recommend setting EDITOR, VISUAL,
-      or HOMEBREW_EDITOR to your preferred text editor.
-    EOS
-
-    editor
   end
 
   # originally from Homebrew
@@ -283,16 +288,6 @@ module Hbc::Utils
     opoo(poo.join(" ") + "\n" + error_message_with_suggestions)
   end
 
-  # originally from Homebrew
-  def self.ignore_interrupts(opt = nil)
-    std_trap = trap("INT") do
-      puts "One sec, just cleaning up" unless opt == :quietly
-    end
-    yield
-  ensure
-    trap("INT", std_trap)
-  end
-
   def self.nowstamp_metadata_path(container_path)
     @timenow ||= Time.now.gmtime
     if container_path.respond_to?(:join)
@@ -306,37 +301,6 @@ module Hbc::Utils
 
   def self.size_in_bytes(files)
     Array(files).reduce(0) { |a, e| a + (File.size?(e) || 0) }
-  end
-
-  # originally from Homebrew
-  def self.disk_usage_readable(size_in_bytes)
-    if size_in_bytes >= 1_073_741_824
-      size = size_in_bytes.to_f / 1_073_741_824
-      unit = "G"
-    elsif size_in_bytes >= 1_048_576
-      size = size_in_bytes.to_f / 1_048_576
-      unit = "M"
-    elsif size_in_bytes >= 1_024
-      size = size_in_bytes.to_f / 1_024
-      unit = "K"
-    else
-      size = size_in_bytes
-      unit = "B"
-    end
-
-    # avoid trailing zero after decimal point
-    if (size * 10).to_i % 10 == 0
-      "#{size.to_i}#{unit}"
-    else
-      "#{format('%.1f', size)}#{unit}"
-    end
-  end
-
-  # originally from Homebrew
-  def self.number_readable(number)
-    numstr = number.to_i.to_s
-    (numstr.size - 3).step(1, -3) { |i| numstr.insert(i, ",") }
-    numstr
   end
 
   # originally from Homebrew
