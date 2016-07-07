@@ -1,5 +1,8 @@
 # Require this file to build a testing environment.
 
+homebrew_repo = `brew --repository`.chomp
+$LOAD_PATH.unshift(File.expand_path("#{homebrew_repo}/Library/Homebrew"))
+
 require 'vendor/homebrew-fork/monkeypatch_pathname'
 require 'vendor/homebrew-fork/utils'
 require 'tmpdir'

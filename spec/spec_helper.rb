@@ -2,9 +2,6 @@ require 'pathname'
 require 'rspec/its'
 require 'rspec/wait'
 
-homebrew_repo = `brew --repository`.chomp
-$LOAD_PATH.unshift(File.expand_path("#{homebrew_repo}/Library/Homebrew"))
-
 if ENV['COVERAGE']
   require 'coveralls'
   Coveralls.wear_merged!
