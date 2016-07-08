@@ -15,7 +15,7 @@ cask 'puppet-agent' do
   homepage 'https://docs.puppet.com/puppet/4.5/reference/about_agent.html'
   license :oss # all Apache 2 except for the vendored OpenSSL + Ruby
 
-  pkg 'puppet-agent-${version}-installer.pkg'
+  pkg "puppet-agent-#{version}-installer.pkg"
 
   uninstall launchctl: %w[puppet pxp-agent mcollective],
             pkgutil:   'com.puppetlabs.puppet-agent'
