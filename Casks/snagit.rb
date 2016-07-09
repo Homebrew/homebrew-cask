@@ -1,10 +1,12 @@
 cask 'snagit' do
 #Mac OS version check
+=begin
   if MacOS.release <= :lion #for 10.6 and 10.7 (10.6 and before cannot run brew)
     version '2.1.7'
     sha256 :no_check
     url "http://download.techsmith.com/snagitmac/enu/217/snagit.dmg"
   else
+=end
     if MacOS.release <= :mountain_lion #for 10.8
       version '3.2.3'
       sha256 :no_check
