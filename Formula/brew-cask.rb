@@ -10,7 +10,7 @@ class BrewCask < Formula
   EOS
 
   def install
-    (buildpath/"UPGRADE").write UNINSTALL_MSG
+    (buildpath / "UPGRADE").write UNINSTALL_MSG
     prefix.install "UPGRADE"
   end
 

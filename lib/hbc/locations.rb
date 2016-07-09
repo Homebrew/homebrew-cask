@@ -5,21 +5,22 @@ module Hbc::Locations
 
   module ClassMethods
     def legacy_caskroom
-      @@legacy_caskroom ||= Pathname.new('/opt/homebrew-cask/Caskroom')
+      @legacy_caskroom ||= Pathname.new("/opt/homebrew-cask/Caskroom")
     end
 
     def default_caskroom
-      @@default_caskroom ||= homebrew_repository.join('Caskroom')
+      @default_caskroom ||= homebrew_repository.join("Caskroom")
     end
 
     def caskroom
-      @@caskroom ||= begin
+      @caskroom ||= begin
         if Hbc::Utils.path_occupied?(legacy_caskroom)
           opoo <<-EOS.undent
             The default Caskroom location has moved to #{default_caskroom}.
 
-            Please migrate your Casks to the new location, or if you would like to keep your
-            Caskroom at #{legacy_caskroom}, add the following to your HOMEBREW_CASK_OPTS:
+            Please migrate your Casks to the new location and delete #{legacy_caskroom},
+            or if you would like to keep your Caskroom at #{legacy_caskroom}, add the
+            following to your HOMEBREW_CASK_OPTS:
 
               --caskroom=#{legacy_caskroom}
 
@@ -33,119 +34,91 @@ module Hbc::Locations
     end
 
     def caskroom=(caskroom)
-      @@caskroom = caskroom
+      @caskroom = caskroom
     end
+
+    attr_writer :appdir
 
     def appdir
-      @appdir ||= Pathname.new('/Applications').expand_path
+      @appdir ||= Pathname.new("/Applications").expand_path
     end
 
-    def appdir=(_appdir)
-      @appdir = _appdir
-    end
+    attr_writer :prefpanedir
 
     def prefpanedir
-      @prefpanedir ||= Pathname.new('~/Library/PreferencePanes').expand_path
+      @prefpanedir ||= Pathname.new("~/Library/PreferencePanes").expand_path
     end
 
-    def prefpanedir=(_prefpanedir)
-      @prefpanedir = _prefpanedir
-    end
+    attr_writer :qlplugindir
 
     def qlplugindir
-      @qlplugindir ||= Pathname.new('~/Library/QuickLook').expand_path
+      @qlplugindir ||= Pathname.new("~/Library/QuickLook").expand_path
     end
 
-    def qlplugindir=(_qlplugindir)
-      @qlplugindir = _qlplugindir
-    end
+    attr_writer :fontdir
 
     def fontdir
-      @fontdir ||= Pathname.new('~/Library/Fonts').expand_path
+      @fontdir ||= Pathname.new("~/Library/Fonts").expand_path
     end
 
-    def fontdir=(_fontdir)
-      @fontdir = _fontdir
-    end
+    attr_writer :colorpickerdir
 
     def colorpickerdir
-      @colorpickerdir ||= Pathname.new('~/Library/ColorPickers').expand_path
+      @colorpickerdir ||= Pathname.new("~/Library/ColorPickers").expand_path
     end
 
-    def colorpickerdir=(_colorpickerdir)
-      @colorpickerdir = _colorpickerdir
-    end
+    attr_writer :servicedir
 
     def servicedir
-      @servicedir ||= Pathname.new('~/Library/Services').expand_path
+      @servicedir ||= Pathname.new("~/Library/Services").expand_path
     end
 
-    def servicedir=(_servicedir)
-      @servicedir = _servicedir
-    end
+    attr_writer :binarydir
 
     def binarydir
-      @binarydir ||= Pathname.new('/usr/local/bin').expand_path
+      @binarydir ||= Pathname.new("/usr/local/bin").expand_path
     end
 
-    def binarydir=(_binarydir)
-      @binarydir = _binarydir
-    end
+    attr_writer :input_methoddir
 
     def input_methoddir
-      @input_methoddir ||= Pathname.new('~/Library/Input Methods').expand_path
+      @input_methoddir ||= Pathname.new("~/Library/Input Methods").expand_path
     end
 
-    def input_methoddir=(_input_methoddir)
-      @input_methoddir = _input_methoddir
-    end
+    attr_writer :internet_plugindir
 
     def internet_plugindir
-      @internet_plugindir ||= Pathname.new('~/Library/Internet Plug-Ins').expand_path
+      @internet_plugindir ||= Pathname.new("~/Library/Internet Plug-Ins").expand_path
     end
 
-    def internet_plugindir=(_internet_plugindir)
-      @internet_plugindir = _internet_plugindir
-    end
+    attr_writer :audio_unit_plugindir
 
     def audio_unit_plugindir
-      @audio_unit_plugindir ||= Pathname.new('~/Library/Audio/Plug-Ins/Components').expand_path
+      @audio_unit_plugindir ||= Pathname.new("~/Library/Audio/Plug-Ins/Components").expand_path
     end
 
-    def audio_unit_plugindir=(_audio_unit_plugindir)
-      @audio_unit_plugindir = _audio_unit_plugindir
-    end
+    attr_writer :vst_plugindir
 
     def vst_plugindir
-      @vst_plugindir ||= Pathname.new('~/Library/Audio/Plug-Ins/VST').expand_path
+      @vst_plugindir ||= Pathname.new("~/Library/Audio/Plug-Ins/VST").expand_path
     end
 
-    def vst_plugindir=(_vst_plugindir)
-      @vst_plugindir = _vst_plugindir
-    end
+    attr_writer :vst3_plugindir
 
     def vst3_plugindir
-      @vst3_plugindir ||= Pathname.new('~/Library/Audio/Plug-Ins/VST3').expand_path
+      @vst3_plugindir ||= Pathname.new("~/Library/Audio/Plug-Ins/VST3").expand_path
     end
 
-    def vst3_plugindir=(_vst3_plugindir)
-      @vst3_plugindir = _vst3_plugindir
-    end
+    attr_writer :screen_saverdir
 
     def screen_saverdir
-      @screen_saverdir ||= Pathname.new('~/Library/Screen Savers').expand_path
+      @screen_saverdir ||= Pathname.new("~/Library/Screen Savers").expand_path
     end
 
-    def screen_saverdir=(_screen_saverdir)
-      @screen_saverdir = _screen_saverdir
-    end
+    attr_writer :default_tap
 
     def default_tap
-      @default_tap ||= 'caskroom/homebrew-cask'
-    end
-
-    def default_tap=(_tap)
-      @default_tap = _tap
+      @default_tap ||= "caskroom/homebrew-cask"
     end
 
     def default_tappath
@@ -153,44 +126,43 @@ module Hbc::Locations
     end
 
     def path(query)
-      query = query.sub(/\.rb$/i, '')
-      if query.include?('/')
-        token_with_tap = query
-      else
-        token_with_tap = all_tokens.detect do |tap_and_token|
-          user, repo, token = tap_and_token.split('/')
-          token == query
-        end
-      end
+      query = query.sub(%r{\.rb$}i, "")
+      token_with_tap = if query.include?("/")
+                         query
+                       else
+                         all_tokens.detect do |tap_and_token|
+                           tap_and_token.split("/")[2] == query
+                         end
+                       end
 
       if token_with_tap
-        user, repo, token = token_with_tap.split('/')
-        # bug/todo: handle old-style 1-slash form: phinze-cask/token
-        repo = 'homebrew-' + repo unless repo.match(/^homebrew-/)
-        homebrew_tapspath.join(user, repo, 'Casks', "#{token}.rb")
+        user, repo, token = token_with_tap.split("/")
+        # FIXME/TODO: handle old-style 1-slash form: phinze-cask/token
+        repo = "homebrew-" + repo unless repo =~ %r{^homebrew-}
+        homebrew_tapspath.join(user, repo, "Casks", "#{token}.rb")
       else
-        homebrew_tapspath.join(default_tap, 'Casks', "#{query}.rb")
+        homebrew_tapspath.join(default_tap, "Casks", "#{query}.rb")
       end
     end
 
     def tcc_db
-      @tcc_db ||= Pathname.new('/Library/Application Support/com.apple.TCC/TCC.db')
+      @tcc_db ||= Pathname.new("/Library/Application Support/com.apple.TCC/TCC.db")
     end
 
     def pre_mavericks_accessibility_dotfile
-      @pre_mavericks_accessibility_dotfile ||= Pathname.new('/private/var/db/.AccessibilityAPIEnabled')
+      @pre_mavericks_accessibility_dotfile ||= Pathname.new("/private/var/db/.AccessibilityAPIEnabled")
     end
 
     def x11_executable
-      @x11_executable ||= Pathname.new('/usr/X11/bin/X')
+      @x11_executable ||= Pathname.new("/usr/X11/bin/X")
     end
 
     def x11_libpng
-      @x11_libpng ||= [ Pathname.new('/opt/X11/lib/libpng.dylib'), Pathname.new('/usr/X11/lib/libpng.dylib') ]
+      @x11_libpng ||= [Pathname.new("/opt/X11/lib/libpng.dylib"), Pathname.new("/usr/X11/lib/libpng.dylib")]
     end
 
     def homebrew_executable
-      @homebrew_executable ||= Pathname(ENV['HOMEBREW_BREW_FILE'] || Hbc::Utils.which('brew') || '/usr/local/bin/brew')
+      @homebrew_executable ||= Pathname(ENV["HOMEBREW_BREW_FILE"] || Hbc::Utils.which("brew") || "/usr/local/bin/brew")
     end
 
     def homebrew_prefix
@@ -212,7 +184,7 @@ module Hbc::Locations
     end
 
     def homebrew_tapspath
-      @homebrew_tapspath ||= homebrew_repository.join *%w{Library Taps}
+      @homebrew_tapspath ||= homebrew_repository.join(*%w[Library Taps])
     end
 
     def homebrew_tapspath=(arg)

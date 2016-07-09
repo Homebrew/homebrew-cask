@@ -1,18 +1,17 @@
 class Hbc::DSL::ConflictsWith
-
   VALID_KEYS = Set.new [
-                        :formula,
-                        :cask,
-                        :macos,
-                        :arch,
-                        :x11,
-                        :java,
+                         :formula,
+                         :cask,
+                         :macos,
+                         :arch,
+                         :x11,
+                         :java,
                        ]
 
-  attr_accessor *VALID_KEYS
+  attr_accessor(*VALID_KEYS)
   attr_accessor :pairs
 
-  def initialize(pairs={})
+  def initialize(pairs = {})
     @pairs = pairs
     pairs.each do |key, value|
       raise "invalid conflicts_with key: '#{key.inspect}'" unless VALID_KEYS.include?(key)

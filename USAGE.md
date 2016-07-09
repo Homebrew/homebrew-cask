@@ -133,11 +133,7 @@ It is generally safe to run updates from within an application.
 
 ## Updating/Upgrading the Homebrew-Cask Tool
 
-When a new version Homebrew-Cask is released, it will appear in the output of `brew outdated` after running `brew update`. You can upgrade it via the normal Homebrew `brew upgrade` workflow:
-
-```bash
-$ brew update; brew cleanup; brew cask cleanup
-```
+Homebrew [automatically taps and keeps Homebrew-Cask updated](https://github.com/caskroom/homebrew-cask/pull/15381). `brew update` is all that is required.
 
 ## Additional Taps (optional)
 
@@ -170,6 +166,7 @@ $ brew cask install caskroom/fonts/font-symbola
 * `--version`: print version and exit
 * `--debug`: output debug information
 * `--no-binaries`: skip symlinking executable binaries into `/usr/local/bin`
+* `--require-sha`: abort installation of cask if no checksum is defined
 
 You can also modify the default installation locations used when issuing `brew cask install`:
 

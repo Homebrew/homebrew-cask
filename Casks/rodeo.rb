@@ -1,11 +1,11 @@
 cask 'rodeo' do
-  version '2.0.2'
-  sha256 '26bda274e10111db1ca60995552dd3f955de49dcc2c3907a1033c7ac34286df3'
+  version '2.0.5'
+  sha256 'ffb36e53f718ebee50451fe93fa440a84e39692d9f40e3bf1ead6ab9603ddc58'
 
   # github.com/yhat/rodeo was verified as official when first introduced to the cask
   url "https://github.com/yhat/rodeo/releases/download/v#{version}/Rodeo-#{version}.dmg"
   appcast 'https://github.com/yhat/rodeo/releases.atom',
-          checkpoint: '83e57ee8349297372a8315a725b8782734863e8a92a05ac10ac0e9fc66e3807c'
+          checkpoint: '83769d9e154d934184378c2426b5adfd1d88205daace94ef57fc8c530afd570c'
   name 'Rodeo'
   homepage 'http://rodeo.yhat.com/'
   license :affero

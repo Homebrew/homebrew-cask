@@ -1,9 +1,9 @@
 class Hbc::Container::Zip < Hbc::Container::Base
   def self.me?(criteria)
-    criteria.file.include? 'compressed-encoding=application/zip;'
+    criteria.file.include? "compressed-encoding=application/zip;"
   end
 
   def extract
-    @command.run!('/usr/bin/ditto', :args => ['-xk', '--', @path, @cask.staged_path])
+    @command.run!("/usr/bin/ditto", args: ["-xk", "--", @path, @cask.staged_path])
   end
 end

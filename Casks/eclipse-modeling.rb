@@ -1,8 +1,8 @@
 cask 'eclipse-modeling' do
-  version '4.5.2'
-  sha256 'd413e761c3c009edce3c8aac0af6b4c63939623d41c2ab20228417d618e9f7d9'
+  version '4.6.0'
+  sha256 'dcd7ab2331f45b8c9df5324209bf304a7eb7de8e0f7eaa843009aba51ee62ca6'
 
-  url 'https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/2/eclipse-modeling-mars-2-macosx-cocoa-x86_64.tar.gz&r=1'
+  url 'https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/neon/R/eclipse-modeling-neon-R-macosx-cocoa-x86_64.tar.gz&r=1'
   name 'Eclipse Modeling Tools'
   homepage 'https://eclipse.org/'
   license :eclipse

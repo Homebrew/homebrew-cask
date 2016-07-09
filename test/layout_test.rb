@@ -3,60 +3,60 @@ require 'test_helper'
 describe "Repo layout" do
   project_root = Pathname.new(File.expand_path("#{File.dirname(__FILE__)}/../"))
 
-  # todo: a more clever way to do this would be to dispense with
+  # TODO: a more clever way to do this would be to dispense with
   #       the imperfect IGNORE lists and read the actual repo
   #       contents by reading the output of "git ls-files"
 
   # dot dirs are always a project of Dir.entries
   # other files are items that the developer hopefully has gitignored
-  IGNORE_FILES = %w{
-                    .
-                    ..
-                    .DS_Store
-                    .bundle
-                    .rubocop.yml
-                    .rubocop_todo.yml
-                    .ruby-version
-                    coverage
-                   }
+  IGNORE_FILES = %w[
+                     .
+                     ..
+                     .DS_Store
+                     .bundle
+                     .rubocop.yml
+                     .rubocop_todo.yml
+                     .ruby-version
+                     coverage
+                   ]
 
   # the developer has hopefully gitignored these
   IGNORE_REGEXPS = [
-                    %r{~$},      # emacs
+                     %r{~$}, # emacs
                    ]
 
-  TOPLEVEL_DIRS = %w{
-                     .git
-                     .github
-                     Casks
-                     ci
-                     cmd
-                     developer
-                     doc
-                     lib
-                     man
-                     spec
-                     test
-                    }
+  TOPLEVEL_DIRS = %w[
+                      .git
+                      .github
+                      Casks
+                      Formula
+                      ci
+                      cmd
+                      developer
+                      doc
+                      lib
+                      man
+                      spec
+                      test
+                    ]
 
-  TOPLEVEL_FILES = %w{
-                      .editorconfig
-                      .gitattributes
-                      .gitignore
-                      .rspec
-                      .rubocop.yml
-                      .simplecov
-                      .travis.yml
-                      CONDUCT.md
-                      CONTRIBUTING.md
-                      Gemfile
-                      Gemfile.lock
-                      LICENSE
-                      README.md
-                      Rakefile
-                      USAGE.md
-                      brew-cask.rb
-                     }
+  TOPLEVEL_FILES = %w[
+                       .editorconfig
+                       .gitattributes
+                       .gitignore
+                       .rspec
+                       .rubocop.yml
+                       .simplecov
+                       .travis.yml
+                       CONDUCT.md
+                       CONTRIBUTING.md
+                       Gemfile
+                       Gemfile.lock
+                       LICENSE
+                       README.md
+                       Rakefile
+                       USAGE.md
+                     ]
 
   describe "toplevel dir" do
     it "finds some files at the top level" do

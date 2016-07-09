@@ -13,8 +13,8 @@ cask 'araxis-merge' do
     sha256 '18208f885f645347ae5956a81aa1d1ef78fbc5dd5f5da0ed5a02efab004293cf'
     url "http://www.araxis.com/download/Merge#{version}-OSX10.10.dmg"
   else
-    version '2016.4750'
-    sha256 'efd2ec4fa98988022eaedda40c12fb7abd5d1720d8422f25ff279cd8daac8279'
+    version '2016.4774'
+    sha256 'e43f6ed8ff962c7136f3f354076a1f543abdfc2137fcd5776e5e66435adfd392'
     url "http://www.araxis.com/download/Merge#{version}-OSX10.11.dmg"
   end
 
@@ -24,17 +24,17 @@ cask 'araxis-merge' do
   depends_on macos: '>= :mountain_lion'
 
   app 'Araxis Merge.app'
-  binary 'Utilities/araxisgitdiff'
-  binary 'Utilities/araxisopendiff'
-  binary 'Utilities/araxissvndiff'
-  binary 'Utilities/compare'
-  binary 'Utilities/araxisgitmerge'
-  binary 'Utilities/araxisp4diff'
-  binary 'Utilities/araxissvndiff3'
-  binary 'Utilities/compare2'
-  binary 'Utilities/araxishgmerge'
-  binary 'Utilities/araxisp4winmrg'
-  binary 'Utilities/araxissvnmerge'
+  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisgitdiff"
+  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisopendiff"
+  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxissvndiff"
+  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/compare"
+  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisgitmerge"
+  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisp4diff"
+  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxissvndiff3"
+  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/compare2"
+  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxishgmerge"
+  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisp4winmrg"
+  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxissvnmerge"
 
   zap delete: [
                 '~/Library/Preferences/com.araxis.merge.LSSharedFileList.plist',

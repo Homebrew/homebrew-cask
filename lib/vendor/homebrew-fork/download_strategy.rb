@@ -63,7 +63,7 @@ class Hbc::HbCurlDownloadStrategy < Hbc::AbstractDownloadStrategy
       had_incomplete_download = temporary_path.exist?
       begin
         _fetch
-      rescue Hbc::ErrorDuringExecution
+      rescue ErrorDuringExecution
         # 33 == range not supported
         # try wiping the incomplete download and retrying once
         if $?.exitstatus == 33 && had_incomplete_download
@@ -78,14 +78,14 @@ class Hbc::HbCurlDownloadStrategy < Hbc::AbstractDownloadStrategy
             msg = "Download failed: #{@url}"
             msg << "\nThe incomplete download is cached at #{tarball_path}"
           end
-          raise Hbc::CurlDownloadStrategyError, msg
+          raise CurlDownloadStrategyError, msg
         end
       end
       Hbc::Utils.ignore_interrupts { temporary_path.rename(tarball_path) }
     else
       puts "Already downloaded: #{tarball_path}"
     end
-  rescue Hbc::CurlDownloadStrategyError
+  rescue CurlDownloadStrategyError
     raise if mirrors.empty?
     puts "Trying a mirror..."
     @url = mirrors.shift

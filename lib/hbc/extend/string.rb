@@ -1,5 +1,5 @@
 class String
   def undent
-    gsub(/^.{#{(slice(/^ +/) || '').length}}/, '')
+    gsub(%r{^.{#{(slice(%r{^ +}) || '').length}}}, "")
   end
 end

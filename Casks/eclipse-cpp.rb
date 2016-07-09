@@ -1,8 +1,8 @@
 cask 'eclipse-cpp' do
-  version '4.5.2'
-  sha256 '894726b6d85794af3a17b3d499c9143683a0a27074c9ff734146d81c5b4b631e'
+  version '4.6.0'
+  sha256 '200144b4ca54d0e77572c66d249c3138e4186bb22f9404988c2cc6ea79d98f16'
 
-  url 'https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/2/eclipse-cpp-mars-2-macosx-cocoa-x86_64.tar.gz&r=1'
+  url 'https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/neon/R/eclipse-cpp-neon-R-macosx-cocoa-x86_64.tar.gz&r=1'
   name 'Eclipse IDE for C/C++ Developers'
   homepage 'https://eclipse.org/'
   license :eclipse

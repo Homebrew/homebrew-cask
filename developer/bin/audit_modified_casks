@@ -10,6 +10,7 @@
 require 'pathname'
 require 'open3'
 
+$LOAD_PATH.unshift(Pathname(`brew --repository`.chomp).realpath.join('Library/Homebrew'))
 $LOAD_PATH.unshift(Pathname(__FILE__).realpath.join('../../../lib'))
 
 require 'vendor/homebrew-fork/global'

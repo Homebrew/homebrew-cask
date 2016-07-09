@@ -1,8 +1,8 @@
 cask 'gcc-arm-embedded' do
-  version '5_2-2015q4,20151219'
-  sha256 '41056ffeba4bcb5bbea13185461a1269613ac13321fbda3e7dc59ee664ee3f06'
+  version '5_4-2016q2,20160622'
+  sha256 'e175a0eb7ee312013d9078a5031a14bf14dff82c7e697549f04b22e6084264c8'
 
-  url "https://launchpad.net/gcc-arm-embedded/5.0/5-2015-q4-major/+download/gcc-arm-none-eabi-#{version.before_comma}-#{version.after_comma}-mac.tar.bz2"
+  url "https://launchpad.net/gcc-arm-embedded/5.0/5-2016-q2-update/+download/gcc-arm-none-eabi-#{version.before_comma}-#{version.after_comma}-mac.tar.bz2"
   name 'GCC ARM Embedded'
   homepage 'https://launchpad.net/gcc-arm-embedded'
   license :gpl

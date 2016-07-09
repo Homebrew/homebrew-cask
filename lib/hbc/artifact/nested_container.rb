@@ -11,7 +11,7 @@ class Hbc::Artifact::NestedContainer < Hbc::Artifact::Base
     source = @cask.staged_path.join(container_relative_path)
     container = Hbc::Container.for_path(source, @command)
     unless container
-      raise Hbc::CaskError.new "Aw dang, could not identify nested container at '#{source}'"
+      raise Hbc::CaskError, "Aw dang, could not identify nested container at '#{source}'"
     end
     ohai "Extracting nested container #{source.basename}"
     container.new(@cask, source, @command).extract

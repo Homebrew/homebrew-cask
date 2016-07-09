@@ -1,8 +1,8 @@
 cask 'eclipse-ide' do
-  version '4.5.2'
-  sha256 '70edececaf847a262e6bb5e5b952344155699adf8d267f98cb700f21e1f2c1e0'
+  version '4.6.0'
+  sha256 '8a8a07e3cd597ffc937f7074eb60713343217976a8f167645d1ed3bd543bcf97'
 
-  url 'https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/2/eclipse-committers-mars-2-macosx-cocoa-x86_64.tar.gz&r=1'
+  url 'https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/neon/R/eclipse-committers-neon-R-macosx-cocoa-x86_64.tar.gz&r=1'
   name 'Eclipse IDE for Eclipse Committers'
   homepage 'https://eclipse.org/'
   license :eclipse

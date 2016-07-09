@@ -36,4 +36,4 @@ end
 
 upgradable_casks = Hbc.upgradable
 
-puts upgradable_casks.length == 0 && 'No outdated packages' || upgradable_casks
+puts upgradable_casks.empty? && 'No outdated packages' || upgradable_casks

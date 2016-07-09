@@ -6,8 +6,8 @@ cask 'r' do
     url "https://cran.cnr.berkeley.edu/bin/macosx/R-#{version}-snowleopard.pkg"
     pkg "R-#{version}-snowleopard.pkg"
   else
-    version '3.3.0'
-    sha256 '5b447d9d3369ecece719bf5e15a586eb6392a2159ffcccb756d5914eb7989cbe'
+    version '3.3.1'
+    sha256 'ecef7e7ee7ee5a43076537b8ef7246e451d6170874e3036a46d5b807cdf7b8de'
     # cran.cnr.berkeley.edu was verified as official when first introduced to the cask
     url "https://cran.cnr.berkeley.edu/bin/macosx/R-#{version}.pkg"
     pkg "R-#{version}.pkg"

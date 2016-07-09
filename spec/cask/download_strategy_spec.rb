@@ -274,7 +274,7 @@ describe 'download strategies' do
   #   cask = Hbc.load('svn-download-check-cask')
   #   downloader = Hbc::SubversionDownloadStrategy.new(cask)
   #   # special mocking required for tar to have something to work with
-  #   def downloader.fetch_repo(target, url, revision=nil, ignore_externals=false)
+  #   def downloader.fetch_repo(target, url, revision = nil, ignore_externals=false)
   #     target.mkpath
   #     FileUtils.touch(target.join('empty_file.txt'))
   #     File.utime(1000,1000,target.join('empty_file.txt'))
