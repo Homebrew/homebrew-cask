@@ -17,6 +17,8 @@ cask 'audacity' do
   homepage 'http://audacityteam.org'
   license :gpl
 
+  depends_on macos: '>= :snow_leopard'
+
   suite 'Audacity'
 
   zap delete: '~/Library/Application Support/audacity'
