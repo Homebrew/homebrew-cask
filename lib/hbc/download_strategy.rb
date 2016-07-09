@@ -32,7 +32,7 @@ end
 class Hbc::HbVCSDownloadStrategy < Hbc::AbstractDownloadStrategy
   REF_TYPES = [:branch, :revision, :revisions, :tag].freeze
 
-  def initialize(cask,command=Hbc::SystemCommand)
+  def initialize(cask, command = Hbc::SystemCommand)
     super
     @ref_type, @ref = extract_ref
     @clone = HOMEBREW_CACHE.join(cache_filename)
@@ -42,7 +42,7 @@ class Hbc::HbVCSDownloadStrategy < Hbc::AbstractDownloadStrategy
     key = REF_TYPES.find do |type|
       uri_object.respond_to?(type) && uri_object.send(type)
     end
-    return key, key ? uri_object.send(key) : nil
+    [key, key ? uri_object.send(key) : nil]
   end
 
   def cache_filename
@@ -85,7 +85,7 @@ class Hbc::CurlDownloadStrategy < Hbc::AbstractDownloadStrategy
   end
 
   def downloaded_size
-    temporary_path.size? or 0
+    temporary_path.size? || 0
   end
 
   def _fetch
@@ -95,31 +95,29 @@ class Hbc::CurlDownloadStrategy < Hbc::AbstractDownloadStrategy
 
   def fetch
     ohai "Downloading #{@url}"
-    unless tarball_path.exist?
+    if tarball_path.exist?
+      puts "Already downloaded: #{tarball_path}"
+    else
       had_incomplete_download = temporary_path.exist?
       begin
         _fetch
       rescue ErrorDuringExecution
         # 33 == range not supported
         # try wiping the incomplete download and retrying once
-        if $?.exitstatus == 33 && had_incomplete_download
+        if $CHILD_STATUS.exitstatus == 33 && had_incomplete_download
           ohai "Trying a full download"
           temporary_path.unlink
           had_incomplete_download = false
           retry
+        elsif @url =~ %r{^file://}
+          msg = "File does not exist: #{@url.sub(%r{^file://}, '')}"
         else
-          if @url =~ %r[^file://]
-            msg = "File does not exist: #{@url.sub(%r[^file://], "")}"
-          else
-            msg = "Download failed: #{@url}"
-            msg << "\nThe incomplete download is cached at #{tarball_path}"
-          end
-          raise CurlDownloadStrategyError, msg
+          msg = "Download failed: #{@url}"
+          msg << "\nThe incomplete download is cached at #{tarball_path}"
         end
+        raise CurlDownloadStrategyError, msg
       end
       Hbc::Utils.ignore_interrupts { temporary_path.rename(tarball_path) }
-    else
-      puts "Already downloaded: #{tarball_path}"
     end
     tarball_path
   rescue CurlDownloadStrategyError
@@ -178,7 +176,7 @@ class Hbc::CurlDownloadStrategy < Hbc::AbstractDownloadStrategy
   def ext
     # We need a Pathname because we've monkeypatched extname to support double
     # extensions (e.g. tar.gz). -- todo actually that monkeypatch has been removed
-    Pathname.new(@url).extname[/[^?]+/]
+    Pathname.new(@url).extname[%r{[^?]+}]
   end
 end
 
@@ -203,7 +201,6 @@ class Hbc::CurlPostDownloadStrategy < Hbc::CurlDownloadStrategy
 end
 
 class Hbc::SubversionDownloadStrategy < Hbc::HbVCSDownloadStrategy
-
   def cache_tag
     # TODO: pass versions as symbols, support :head here
     version == "head" ? "svn-HEAD" : "svn"
@@ -214,7 +211,7 @@ class Hbc::SubversionDownloadStrategy < Hbc::HbVCSDownloadStrategy
   end
 
   def repo_url
-    `svn info '#{@clone}' 2>/dev/null`.strip[/^URL: (.+)$/, 1]
+    `svn info '#{@clone}' 2>/dev/null`.strip[%r{^URL: (.+)$}, 1]
   end
 
   # super does not provide checks for already-existing downloads
@@ -222,10 +219,10 @@ class Hbc::SubversionDownloadStrategy < Hbc::HbVCSDownloadStrategy
     if tarball_path.exist?
       puts "Already downloaded: #{tarball_path}"
     else
-      @url = @url.sub(/^svn\+/, '') if @url =~ %r[^svn\+http://]
+      @url = @url.sub(%r{^svn\+}, "") if @url =~ %r{^svn\+http://}
       ohai "Checking out #{@url}"
 
-      clear_cache unless @url.chomp("/") == repo_url || quiet_system('svn', 'switch', @url, @clone)
+      clear_cache unless @url.chomp("/") == repo_url || quiet_system("svn", "switch", @url, @clone)
 
       if @clone.exist? && !repo_valid?
         puts "Removing invalid SVN repo from cache"
@@ -233,18 +230,18 @@ class Hbc::SubversionDownloadStrategy < Hbc::HbVCSDownloadStrategy
       end
 
       case @ref_type
-        when :revision
-          fetch_repo @clone, @url, @ref
-        when :revisions
-          # nil is OK for main_revision, as fetch_repo will then get latest
-          main_revision = @ref[:trunk]
-          fetch_repo @clone, @url, main_revision, true
+      when :revision
+        fetch_repo @clone, @url, @ref
+      when :revisions
+        # nil is OK for main_revision, as fetch_repo will then get latest
+        main_revision = @ref[:trunk]
+        fetch_repo @clone, @url, main_revision, true
 
-          get_externals do |external_name, external_url|
-            fetch_repo @clone+external_name, external_url, @ref[external_name], true
-          end
-        else
-          fetch_repo @clone, @url
+        fetch_externals do |external_name, external_url|
+          fetch_repo @clone + external_name, external_url, @ref[external_name], true
+        end
+      else
+        fetch_repo @clone, @url
       end
       compress
     end
@@ -289,12 +286,12 @@ class Hbc::SubversionDownloadStrategy < Hbc::HbVCSDownloadStrategy
   def shell_quote(str)
     # Oh god escaping shell args.
     # See http://notetoself.vrensk.com/2008/08/escaping-single-quotes-in-ruby-harder-than-expected/
-    str.gsub(/\\|'/) { |c| "\\#{c}" }
+    str.gsub(%r{\\|'}) { |c| "\\#{c}" }
   end
 
-  def get_externals
+  def fetch_externals
     `svn propget svn:externals '#{shell_quote(@url)}'`.chomp.each_line do |line|
-      name, url = line.split(/\s+/)
+      name, url = line.split(%r{\s+})
       yield name, url
     end
   end
