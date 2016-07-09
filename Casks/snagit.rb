@@ -3,7 +3,11 @@ cask 'snagit' do
     version '1.0.4'
     sha256 :no_check
     url 'http://download.techsmith.com/snagitmac/enu/104/snagit.dmg'
-  elsif MacOS.release == :snow_leopard || :lion
+  elsif MacOS.release == :snow_leopard
+    version '2.1.7'
+    sha256 :no_check
+    url 'http://download.techsmith.com/snagitmac/enu/217/snagit.dmg'
+  elsif MacOS.release == :lion
     version '2.1.7'
     sha256 :no_check
     url 'http://download.techsmith.com/snagitmac/enu/217/snagit.dmg'
