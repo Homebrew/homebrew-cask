@@ -7,22 +7,22 @@ cask 'snagit' do
     url "http://download.techsmith.com/snagitmac/enu/217/snagit.dmg"
   else
 =end
-    if MacOS.release <= :mountain_lion #for 10.8
-      version '3.2.3'
-      sha256 :no_check
-      url 'http://download.techsmith.com/snagitmac/enu/323/snagit.dmg'
+
+cask 'appcleaner' do
+  if MacOS.release <= :lion
+    version '3.2.3'
+    url "http://download.techsmith.com/snagitmac/enu/323/snagit.dmg"
+  else
+    if MacOS.release <= :mavericks
+      version '3.3.7'
+      sha256 '69da212e2972e23e361c93049e4b4505d7f226aff8652192125f078be7eecf7f'
+      url "http://download.techsmith.com/snagitmac/enu/337/snagit.dmg"
     else
-      if MacOS.release <= :mavericks #for 10.9
-        version '3.3.7'
-        sha256 :no_check
-        url 'http://download.techsmith.com/snagitmac/enu/337/snagit.dmg'
-      else #for 10.10 and above (soon, 10.10 will be removed)
-        version :latest
-        sha256 :no_check
-  
-        url 'http://download.techsmith.com/snagitmac/enu/Snagit.dmg'
-      end
-#Name for app
+      version :latest
+      sha256 :no_check
+      url "http://download.techsmith.com/snagitmac/enu/337/snagit.dmg"
+  end
+
     name 'Snagit'
     homepage 'https://www.techsmith.com/snagit.html'
     license :commercial
