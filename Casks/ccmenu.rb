@@ -1,11 +1,11 @@
 cask 'ccmenu' do
-  version '12.0'
-  sha256 'b7fde5ece32172e31da448bcf75efeb8858a439e8885a8dcbd1082ffc51b08bd'
+  version '12.1'
+  sha256 '3b9f226f57159bf395a4e76cd958f1f90c7a5c9b181c16fad64a96cff8f19c2e'
 
   # github.com/erikdoe/ccmenu was verified as official when first introduced to the cask
   url "https://github.com/erikdoe/ccmenu/releases/download/v#{version}/CCMenu.app.zip"
   appcast 'https://github.com/erikdoe/ccmenu/releases.atom',
-          checkpoint: 'c65d96892edc5dc76f09b4a2db610009e6ea1131b73e66cc1b7f4bcd653695b6'
+          checkpoint: '359155ebbd8e2ed24cfd5d3af31cc0ceebb7b44d5f63bc52a74b45e261bd8035'
   name 'CCMenu'
   homepage 'http://ccmenu.org/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
