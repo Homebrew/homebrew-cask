@@ -1,10 +1,10 @@
 cask 'ubersicht' do
-  version '0.9.40'
-  sha256 '71d633399e3817e4d1e005378249e6bed29392b72f587af9734c70e9b0a8084a'
+  version '1.0.42'
+  sha256 '31baf65820b4245b96958f1cf517f98174bae353814d0b9c6656653b54bc4c6d'
 
   url "http://tracesof.net/uebersicht/releases/Uebersicht-#{version}.app.zip"
   appcast 'http://tracesof.net/uebersicht/updates.xml.rss',
-          checkpoint: '6089429ff1a97110824b60443b27e15e2b1bed339810795180bfb787c1a3a75b'
+          checkpoint: 'b1a6b808a92601bb7d13ecf7dd679b504b17ed9e644fcba4aff7f285b07dfb66'
   name 'Übersicht'
   homepage 'http://tracesof.net/uebersicht'
   license :gpl
