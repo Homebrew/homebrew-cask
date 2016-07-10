@@ -1,4 +1,4 @@
-cask 'iridium-browser-extra' do
+cask 'iridium-extra' do
   version '51.1.0'
   sha256 'b0de307fef0bc1ac1123ac8f480c4a2178b6ba2849578f38d6c10dad35c04d6d'
 
