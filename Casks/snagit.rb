@@ -3,7 +3,7 @@ cask 'snagit' do
     version '1.0.4'
     sha256 'bfefc1c351485bffa01b7961685120306eb7624ec3ef63ba2b6d8049c846cd07'
     url "http://download.techsmith.com/snagitmac/enu/#{version.no_dots}/snagit.dmg"
-  elsif MacOS.release == :snow_leopard || MacOS.release == :lion
+  elsif MacOS.release <= :lion
     version '2.1.7'
     sha256 'c10e9eefc76addfe559809044bf47b600da2f19bb007ff0ed099a383fbd551a7'
     url "http://download.techsmith.com/snagitmac/enu/#{version.no_dots}/snagit.dmg"
