@@ -1,10 +1,10 @@
 cask 'qlvideo' do
-  version '1.86'
-  sha256 '62dc1e1870a3d939fbbd2b75632fbc96cd408a7e99fba75d9ac4b2d66abf857e'
+  version '1.87'
+  sha256 '0f21d994715fa409a858b5f04a76708975b4109dd9ac4e820dbccb7caaf61ded'
 
   url "https://github.com/Marginal/QLVideo/releases/download/rel-#{version.delete('.')}/QLVideo_#{version.delete('.')}.pkg"
   appcast 'https://github.com/Marginal/QLVideo/releases.atom',
-          checkpoint: '48a93dd1fbc6e44b588225e3e9208d3edf44f37a6cda773f19a87d24e1416e41'
+          checkpoint: '713bd661578004751e39a156591fe651e8494f44247e8a9fd31b4a882c98e7ee'
   name 'QuickLook Video'
   homepage 'https://github.com/Marginal/QLVideo'
   license :gpl
