@@ -1,8 +1,6 @@
-class Hbc::Artifact::Moved < Hbc::Artifact::Base
-  ALT_NAME_ATTRIBUTE = "com.apple.metadata:kMDItemAlternateNames".freeze
+require "hbc/artifact/relocated"
 
-  attr_reader :source, :target
-
+class Hbc::Artifact::Moved < Hbc::Artifact::Relocated
   def summary
     contents = @cask.artifacts[self.class.artifact_dsl_key].map do |artifact|
       summarize_artifact(artifact)
@@ -44,19 +42,7 @@ class Hbc::Artifact::Moved < Hbc::Artifact::Base
     ohai "Moving #{self.class.artifact_english_name} '#{source.basename}' to '#{target}'"
     target.dirname.mkpath
     FileUtils.move(source, target)
-  end
-
-  def load_specification(artifact_spec)
-    source_string, target_hash = artifact_spec
-    raise Hbc::CaskInvalidError if source_string.nil?
-    @source = @cask.staged_path.join(source_string)
-    if target_hash
-      raise Hbc::CaskInvalidError unless target_hash.respond_to?(:keys)
-      target_hash.assert_valid_keys(:target)
-      @target = Hbc.send(self.class.artifact_dirmethod).join(target_hash[:target])
-    else
-      @target = Hbc.send(self.class.artifact_dirmethod).join(source.basename)
-    end
+    add_altname_metadata target, source.basename.to_s
   end
 
   def preflight_checks
