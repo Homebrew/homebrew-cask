@@ -29,6 +29,7 @@ describe "Repo layout" do
                       .git
                       .github
                       Casks
+                      Formula
                       ci
                       cmd
                       developer
@@ -55,7 +56,6 @@ describe "Repo layout" do
                        README.md
                        Rakefile
                        USAGE.md
-                       brew-cask.rb
                      ]
 
   describe "toplevel dir" do
