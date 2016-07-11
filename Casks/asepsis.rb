@@ -10,4 +10,26 @@ cask 'asepsis' do
   pkg 'Asepsis.pkg'
 
   uninstall pkgutil: 'com.binaryage.pkg.asepsis'
+
+  if MacOS.release >= :el_capitan
+    caveats <<-EOS.undent
+      In order to use this on El Capitan and later, it must be
+      installed while System Integrity Protection is disabled.
+
+      Perform the following steps:
+        - Restart your machine and hold CMD-R to boot into
+          RecoveryOS
+        - Choose Utilities - Terminal
+        - Enter the command: csrutil disable
+        - Restart your machine and hold SHIFT to boot in
+          Safe Mode (no other programs running while your
+          machine is in a less-secure state, optional)
+        - Re-install this package
+        - Restart your machine into RecoveryOS Terminal again,
+          and enter the command: csrutil enable
+        - Restart your machine
+
+      Uninstallation requires the same.
+    EOS
+  end
 end
