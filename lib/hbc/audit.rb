@@ -118,6 +118,8 @@ class Hbc::Audit
     result = @command.run("curl", args: ["--compressed", "--location", cask.appcast], print_stderr: false)
     if result.success?
       processed_appcast_text = result.stdout.gsub(%r{<pubDate>[^<]*</pubDate>}, "")
+      # This step is necessary to replicate running `sed` from the command line
+      processed_appcast_text << "\n" unless processed_appcast_text.end_with?("\n")
       expected = cask.appcast.checkpoint
       actual = Digest::SHA2.hexdigest(processed_appcast_text)
       add_warning <<-EOS.undent unless expected == actual
