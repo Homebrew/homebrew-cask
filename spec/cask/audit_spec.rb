@@ -157,7 +157,8 @@ describe Hbc::Audit do
 
           before do
             allow(fake_curl_result).to receive(:stdout).and_return(appcast_text)
-            allow(appcast_text).to receive(:gsub)
+            allow(appcast_text).to receive(:gsub).and_return(appcast_text)
+            allow(appcast_text).to receive(:end_with?).with("\n").and_return(true)
             allow(Digest::SHA2).to receive(:hexdigest).and_return(actual_checkpoint)
           end
 
