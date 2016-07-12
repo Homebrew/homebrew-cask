@@ -1,14 +1,12 @@
 class Hbc::DSL::Version < ::String
-  DIVIDERS = %w[. - _ /].freeze
+  DIVIDERS = {
+               "." => :dots,
+               "-" => :hyphens,
+               "_" => :underscores,
+               "/" => :slashes,
+             }.freeze
 
-  PLURAL_DIVIDER_NAMES = {
-                           "." => :dots,
-                           "-" => :hyphens,
-                           "_" => :underscores,
-                           "/" => :slashes,
-                         }.freeze
-
-  DIVIDER_REGEX = %r{(#{DIVIDERS.map { |v| Regexp.quote(v) }.join('|')})}
+  DIVIDER_REGEX = %r{(#{DIVIDERS.keys.map { |v| Regexp.quote(v) }.join('|')})}
 
   MAJOR_MINOR_PATCH_REGEX = %r{^(\d+)(?:\.(\d+)(?:\.(\d+))?)?}
 
@@ -28,12 +26,11 @@ class Hbc::DSL::Version < ::String
     end
 
     def deletion_method_name(divider)
-      plural_divider_name = plural_divider_name(divider)
-      "no_#{plural_divider_name}"
+      "no_#{DIVIDERS[divider]}"
     end
 
     def define_divider_conversion_methods(left_divider)
-      (DIVIDERS - [left_divider]).each do |right_divider|
+      (DIVIDERS.keys - [left_divider]).each do |right_divider|
         define_divider_conversion_method(left_divider, right_divider)
       end
     end
@@ -46,17 +43,11 @@ class Hbc::DSL::Version < ::String
     end
 
     def conversion_method_name(left_divider, right_divider)
-      plural_left_divider_name = plural_divider_name(left_divider)
-      plural_right_divider_name = plural_divider_name(right_divider)
-      "#{plural_left_divider_name}_to_#{plural_right_divider_name}"
-    end
-
-    def plural_divider_name(divider)
-      PLURAL_DIVIDER_NAMES[divider]
+      "#{DIVIDERS[left_divider]}_to_#{DIVIDERS[right_divider]}"
     end
   end
 
-  DIVIDERS.each { |divider| define_divider_methods(divider) }
+  DIVIDERS.keys.each { |divider| define_divider_methods(divider) }
 
   attr_reader :raw_version
 

@@ -10,4 +10,8 @@ cask 'asepsis' do
   pkg 'Asepsis.pkg'
 
   uninstall pkgutil: 'com.binaryage.pkg.asepsis'
+
+  caveats do
+    discontinued
+  end
 end

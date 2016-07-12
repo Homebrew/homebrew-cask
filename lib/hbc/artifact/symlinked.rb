@@ -1,4 +1,6 @@
-class Hbc::Artifact::Symlinked < Hbc::Artifact::Base
+require "hbc/artifact/linked"
+
+class Hbc::Artifact::Symlinked < Hbc::Artifact::Linked
   def self.islink?(path)
     path.symlink?
   end
@@ -10,59 +12,7 @@ class Hbc::Artifact::Symlinked < Hbc::Artifact::Base
   def create_filesystem_link(source, target)
     Pathname.new(target).dirname.mkpath
     @command.run!("/bin/ln", args: ["-hfs", "--", source, target])
-    add_altname_metadata source, target
-  end
-
-  # Try to make the asset searchable under the target name.  Spotlight
-  # respects this attribute for many filetypes, but ignores it for App
-  # bundles.  Alfred 2.2 respects it even for App bundles.
-  def add_altname_metadata(source, target)
-    attribute = "com.apple.metadata:kMDItemAlternateNames"
-    return if source.basename.to_s.casecmp(target.basename).zero?
-    odebug "Adding #{attribute} metadata"
-    altnames = @command.run("/usr/bin/xattr",
-                            args:         ["-p", attribute, target],
-                            print_stderr: false).stdout.sub(%r{\A\((.*)\)\Z}, '\1')
-    odebug "Existing metadata is: '#{altnames}'"
-    altnames.concat(", ") unless altnames.empty?
-    altnames.concat(%Q{"#{target.basename}"})
-    altnames = "(#{altnames})"
-
-    # Some packges are shipped as u=rx (e.g. Bitcoin Core)
-    @command.run!("/bin/chmod", args: ["--", "u=rwx", source])
-
-    @command.run!("/usr/bin/xattr",
-                  args:         ["-w", attribute, altnames, target],
-                  print_stderr: false)
-  end
-
-  def summary
-    {
-      english_description: "#{self.class.artifact_english_name} #{self.class.link_type_english_name}s managed by brew-cask:",
-      contents:            @cask.artifacts[self.class.artifact_dsl_key].map(&method(:summarize_one_link)) - [nil],
-    }
-  end
-
-  attr_reader :source, :target
-
-  def load_specification(artifact_spec)
-    source_string, target_hash = artifact_spec
-    raise Hbc::CaskInvalidError if source_string.nil?
-    @source = @cask.staged_path.join(source_string)
-    if target_hash
-      raise Hbc::CaskInvalidError unless target_hash.respond_to?(:keys)
-      target_hash.assert_valid_keys(:target)
-      @target = Hbc.send(self.class.artifact_dirmethod).join(target_hash[:target])
-    else
-      @target = Hbc.send(self.class.artifact_dirmethod).join(source.basename)
-    end
-  end
-
-  def link(artifact_spec)
-    load_specification artifact_spec
-    return unless preflight_checks(source, target)
-    ohai "#{self.class.link_type_english_name}ing #{self.class.artifact_english_name} '#{source.basename}' to '#{target}'"
-    create_filesystem_link(source, target)
+    add_altname_metadata source, target.basename.to_s
   end
 
   def summarize_one_link(artifact_spec)
@@ -71,31 +21,5 @@ class Hbc::Artifact::Symlinked < Hbc::Artifact::Base
     link_description = target.exist? ? "" : "#{Tty.red.underline}Broken Link#{Tty.reset}: "
     printable_target = "'#{target}'".sub(%r{^'#{ENV['HOME']}/*}, "~/'")
     "#{link_description}#{printable_target} -> '#{target.readlink}'"
-  end
-
-  def unlink(artifact_spec)
-    load_specification artifact_spec
-    return unless self.class.islink?(target)
-    ohai "Removing #{self.class.artifact_english_name} #{self.class.link_type_english_name.downcase}: '#{target}'"
-    target.delete
-  end
-
-  def install_phase
-    @cask.artifacts[self.class.artifact_dsl_key].each { |artifact| link(artifact) }
-  end
-
-  def uninstall_phase
-    @cask.artifacts[self.class.artifact_dsl_key].each { |artifact| unlink(artifact) }
-  end
-
-  def preflight_checks(source, target)
-    if target.exist? && !self.class.islink?(target)
-      ohai "It seems there is already #{self.class.artifact_english_article} #{self.class.artifact_english_name} at '#{target}'; not linking."
-      return false
-    end
-    unless source.exist?
-      raise Hbc::CaskError, "It seems the #{self.class.link_type_english_name.downcase} source is not there: '#{source}'"
-    end
-    true
   end
 end
