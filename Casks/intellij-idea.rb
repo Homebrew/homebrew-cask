@@ -8,7 +8,6 @@ cask 'intellij-idea' do
   license :commercial
 
   auto_updates true
-  conflicts_with cask: 'intellij-idea-eap'
 
   app 'IntelliJ IDEA.app'
 
