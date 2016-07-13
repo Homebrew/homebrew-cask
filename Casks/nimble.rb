@@ -1,11 +1,11 @@
 cask 'nimble' do
-  version '1.2.0'
-  sha256 '359c8a5cb03a1765c8c19a8d1cf32572add70fe125667ecd8096291e82214236'
+  version '1.2.1'
+  sha256 '0bc516b2fd70a92328d7f9c731b077efe16ba071c1f2a51dbcb3d5be4edbd769'
 
   # github.com/madebybright/Nimble was verified as official when first introduced to the cask
   url "https://github.com/madebybright/Nimble/releases/download/#{version}/Nimble-v#{version}.dmg"
   appcast 'https://github.com/madebybright/Nimble/releases.atom',
-          checkpoint: '76808af114e5f97ddf988bbee9f1fa2d08920f9920b3daa4e288ed4fb3a8d327'
+          checkpoint: '86e8ca1d6c2bd442cc6c87bd4a22abda3903df6a931983159edd4121894efa00'
   name 'Nimble'
   homepage 'http://madebybright.com'
   license :mit
