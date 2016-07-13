@@ -10,11 +10,11 @@ env:
 
 matrix:
   include:
-    - env: OSX=10.11 HOMEBREW_RUBY=2.0.0
+    - env: OSX=10.11 HOMEBREW_RUBY=2.0.0 HOMEBREW_OSX_VERSION=$OSX
       os: osx
       osx_image: xcode7.3
       rvm: system
-    - env: OSX=10.10 HOMEBREW_RUBY=2.0.0
+    - env: OSX=10.10 HOMEBREW_RUBY=2.0.0 HOMEBREW_OSX_VERSION=$OSX
       os: osx
       osx_image: xcode7.1
       rvm: system
