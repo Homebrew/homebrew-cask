@@ -12,6 +12,9 @@ enter_build_step
 
 header 'Running before_install.sh...'
 
+# https://github.com/rvm/rvm/pull/3627
+run rvm get head
+
 # unset rvm hook functions
 run unset -f cd gem
 
