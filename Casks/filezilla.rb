@@ -4,7 +4,7 @@ cask 'filezilla' do
     sha256 '86c725246e2190b04193ce8e7e5ea89d5b9318e9f20f5b6f9cdd45b6f5c2d283'
   else
     version '3.19.0'
-    sha256 'e92f48055131f5b3cea24a0862e319be158feac27f1c918e3c1e17c2665aeccf'
+    sha256 '818a4b8bbcb50878a8b1b9f71b4274d242ab46bf860c74676e98dec1d0248821'
   end
 
   # sourceforge.net/project/filezilla was verified as official when first introduced to the cask
