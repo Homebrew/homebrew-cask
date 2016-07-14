@@ -9,5 +9,5 @@ cask 'devrant' do
     homepage 'https://devrant.io/'
     license :gpl
     
-    app 'devRant.io-darwin-x64/devrant.io.app'
+    app 'devrant.app'
 end
