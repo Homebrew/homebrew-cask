@@ -8,8 +8,6 @@
 # shellcheck disable=SC1090
 . "${TRAVIS_BUILD_DIR}/ci/travis/helpers.sh"
 
-enter_build_step
-
 header 'Running before_install.sh...'
 
 # https://github.com/rvm/rvm/pull/3627
@@ -69,5 +67,3 @@ run mkdir -p "${CASK_TAP_DIR}"
 run rsync -az --delete "${TRAVIS_BUILD_DIR}/" "${CASK_TAP_DIR}/"
 run export TRAVIS_BUILD_DIR="${CASK_TAP_DIR}"
 run cd "${CASK_TAP_DIR}" || exit 1
-
-exit_build_step

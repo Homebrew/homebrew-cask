@@ -8,8 +8,6 @@
 # shellcheck disable=SC1090
 . "${TRAVIS_BUILD_DIR}/ci/travis/helpers.sh"
 
-enter_build_step
-
 header 'Running install.sh...'
 
 # install bundler and project dependencies in $GEM_HOME
@@ -26,5 +24,3 @@ if must_run_tests; then
   brew_install unar
   run brew cask install Casks/adobe-air.rb
 fi
-
-exit_build_step
