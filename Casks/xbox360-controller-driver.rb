@@ -1,10 +1,10 @@
 cask 'xbox360-controller-driver' do
-  version '0.16.1'
-  sha256 '676ace81cd91da316433eae915c4755941864ee0ea20f331ed4c1fd952385fee'
+  version '0.16.2'
+  sha256 '18bd53a80d5567e4dd7745e4f1817aae8de0f57fc14ceecd06ce9dc1d2147403'
 
   url "https://github.com/360Controller/360Controller/releases/download/v#{version}/360ControllerInstall_#{version}.dmg"
   appcast 'https://github.com/360Controller/360Controller/releases.atom',
-          checkpoint: '9aab5799b0f3b8983fa65f31c89326549a342f47b00421c0d0738351b6e217ad'
+          checkpoint: '8afd944881d571b31051d74515cd2260e48815369bf4c40974294f01b8e33d48'
   name 'TattieBogle Xbox 360 Controller Driver (with improvements)'
   homepage 'https://github.com/360Controller/360Controller'
   license :gpl
