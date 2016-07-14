@@ -104,7 +104,8 @@ class Hbc::Audit
 
   def check_appcast_http_code
     odebug "Verifying appcast returns 200 HTTP response code"
-    result = @command.run("curl", args: ["--compressed", "--location", "--output", "/dev/null", "--write-out", "%{http_code}", cask.appcast], print_stderr: false)
+    curl_args = default_curl_args + user_agent_curl_args + http_code_curl_args
+    result = @command.run("curl", args: curl_args, print_stderr: false)
     if result.success?
       http_code = result.stdout.chomp
       add_warning "unexpected HTTP response code retrieving appcast: #{http_code}" unless http_code == "200"
@@ -115,7 +116,8 @@ class Hbc::Audit
 
   def check_appcast_checkpoint_accuracy
     odebug "Verifying appcast checkpoint is accurate"
-    result = @command.run("curl", args: ["--compressed", "--location", cask.appcast], print_stderr: false)
+    curl_args = default_curl_args + user_agent_curl_args
+    result = @command.run("curl", args: curl_args, print_stderr: false)
     if result.success?
       processed_appcast_text = result.stdout.gsub(%r{<pubDate>[^<]*</pubDate>}, "")
       # This step is necessary to replicate running `sed` from the command line
@@ -130,6 +132,18 @@ class Hbc::Audit
     else
       add_warning "error retrieving appcast: #{result.stderr}"
     end
+  end
+
+  def default_curl_args
+    [cask.appcast, "--compressed", "--location"]
+  end
+
+  def user_agent_curl_args
+    cask.appcast.user_agent ? ["--user-agent", cask.appcast.user_agent] : []
+  end
+
+  def http_code_curl_args
+    ["--output", "/dev/null", "--write-out", "%{http_code}"]
   end
 
   def check_url

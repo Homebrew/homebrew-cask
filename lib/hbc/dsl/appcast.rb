@@ -5,6 +5,15 @@ class Hbc::DSL::Appcast
     @parameters     = parameters
     @uri            = Hbc::UnderscoreSupportingURI.parse(uri)
     @checkpoint     = @parameters[:checkpoint]
+    @user_agent     = @parameters[:user_agent]
+  end
+
+  def user_agent
+    if @user_agent == :fake
+      Hbc::URL::FAKE_USER_AGENT
+    else
+      @user_agent
+    end
   end
 
   def to_yaml
