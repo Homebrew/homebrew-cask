@@ -8,8 +8,6 @@
 # shellcheck disable=SC1090
 . "${TRAVIS_BUILD_DIR}/ci/travis/helpers.sh"
 
-enter_build_step
-
 header 'Running script.sh...'
 
 if any_casks_modified; then
@@ -23,5 +21,3 @@ if must_run_tests; then
   run bundle exec rake test:coverage
   run bundle exec rake coveralls:push || true # in case of networking errors
 fi
-
-exit_build_step

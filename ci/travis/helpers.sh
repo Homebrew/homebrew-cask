@@ -50,16 +50,6 @@ brew_upgrade () {
   fi
 }
 
-# disallow unbound variables during build step
-enter_build_step () {
-  set -o nounset
-}
-
-# allow unbound variables so Travis doesn't get mad at us
-exit_build_step () {
-  set +o nounset
-}
-
 modified_cask_files () {
   if [[ -z "${MODIFIED_CASK_FILES+defined}" ]]; then
     MODIFIED_CASK_FILES="$(git diff --name-only --diff-filter=AM "${TRAVIS_COMMIT_RANGE}" -- Casks/*.rb)"
