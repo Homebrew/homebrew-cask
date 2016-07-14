@@ -7,6 +7,7 @@ The value of the `appcast` stanza is a string, holding the URL for an appcast wh
 | key           | value       |
 | ------------- | ----------- |
 | `checkpoint:` | a string holding a custom checksum of the most recent appcast which matches the current Cask versioning. Use `curl --compressed --location "{{appcast_url}}" | sed 's|<pubDate>[^<]*</pubDate>||g' | shasum --algorithm 256` to calculate it.
+| `user_agent:` | a string holding the user agent to set for the download request. Can also be set to the symbol :fake, which will use a generic Browser-like user agent string. We prefer :fake when the server does not require a specific user agent.
 
 Example: [`atom`](https://github.com/caskroom/homebrew-cask/blob/161f85b605e160ff96e7dd11732d85609e13dc51/Casks/atom.rb#L7L8)
 
