@@ -33,7 +33,7 @@ class Buffer < StringIO
 end
 
 # global methods
-# TODO: delete
+# TODO: delete when ARGV is fixed
 def system(cmd, *args)
   puts "#{cmd} #{args * ' '}" if Hbc.verbose
   pid = fork do
@@ -51,13 +51,13 @@ def system(cmd, *args)
 end
 
 # Kernel.system but with exceptions
-# TODO: delete
+# TODO: delete when ARGV is fixed
 def safe_system(cmd, *args)
   system(cmd, *args) || raise(ErrorDuringExecution.new(cmd, args))
 end
 
 # prints no output
-# TODO: delete
+# TODO: delete when ARGV is fixed
 def quiet_system(cmd, *args)
   system(cmd, *args) do
     # Redirect output streams to `/dev/null` instead of closing as some programs
@@ -83,6 +83,7 @@ def puts_columns(items, star_items = [])
   puts Hbc::Utils.stringify_columns(items, star_items)
 end
 
+# TODO: delete when reference to curl_args in brew is fixed
 def curl(*args)
   curl = Pathname.new "/usr/bin/curl"
   raise "#{curl} is not executable" unless curl.exist? && curl.executable?
