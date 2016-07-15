@@ -14,7 +14,7 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
     cleanup_size = default.disk_cleanup_size
     default.cleanup!
     return unless cleanup_size > 0
-    disk_space = Hbc::Utils.disk_usage_readable(cleanup_size)
+    disk_space = disk_usage_readable(cleanup_size)
     ohai "This operation has freed approximately #{disk_space} of disk space."
   end
 
@@ -46,7 +46,7 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
       incomplete_file = Dir.chdir cache_location do
         f = symlink.readlink
         f = f.realpath if f.exist?
-        Pathname.new(f.to_s.concat('.incomplete'))
+        Pathname.new(f.to_s.concat(".incomplete"))
       end
       incomplete_file = nil unless incomplete_file.exist?
       incomplete_file = nil if outdated_only && incomplete_file && incomplete_file.stat.mtime > OUTDATED_TIMESTAMP
@@ -55,7 +55,7 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
   end
 
   def cache_completes
-    cache_symlinks.collect do |symlink|
+    completes = cache_symlinks.collect do |symlink|
       file = Dir.chdir cache_location do
         f = symlink.readlink
         f.exist? ? f.realpath : f
@@ -65,8 +65,12 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
         file = nil
         symlink = nil
       end
-      [ symlink, file ]
-    end.flatten.compact.sort { |x,y| x.to_s.count(File::SEPARATOR) <=> y.to_s.count(File::SEPARATOR) }
+      [symlink, file]
+    end
+    completes
+      .flatten
+      .compact
+      .sort { |x, y| x.to_s.count(File::SEPARATOR) <=> y.to_s.count(File::SEPARATOR) }
   end
 
   # will include dead symlinks if they aren't handled separately

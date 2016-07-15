@@ -1,6 +1,6 @@
 class Hbc::Source::URI
   def self.me?(query)
-    !!(query.to_s =~ URI.regexp)
+    !(query.to_s =~ URI.regexp).nil?
   end
 
   attr_reader :uri
@@ -13,11 +13,11 @@ class Hbc::Source::URI
     HOMEBREW_CACHE_CASKS.mkpath
     path = HOMEBREW_CACHE_CASKS.join(File.basename(uri))
     ohai "Downloading #{uri}"
-    odebug "Download target -> #{path.to_s}"
+    odebug "Download target -> #{path}"
     begin
-      curl(uri, '-o', path.to_s)
-    rescue Hbc::ErrorDuringExecution
-      raise Hbc::CaskUnavailableError.new uri
+      curl(uri, "-o", path.to_s)
+    rescue ErrorDuringExecution
+      raise Hbc::CaskUnavailableError, uri
     end
     Hbc::Source::PathSlashOptional.new(path).load
   end

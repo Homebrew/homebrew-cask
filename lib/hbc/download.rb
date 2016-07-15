@@ -1,10 +1,10 @@
-require 'fileutils'
-require 'hbc/verify'
+require "fileutils"
+require "hbc/verify"
 
 class Hbc::Download
   attr_reader :cask
 
-  def initialize(cask, options={})
+  def initialize(cask, options = {})
     @cask = cask
     @force = options.fetch(:force, false)
   end
@@ -23,10 +23,13 @@ class Hbc::Download
 
   def downloader
     @downloader ||= case cask.url.using
-    when :svn then Hbc::SubversionDownloadStrategy.new(cask)
-    when :post then Hbc::CurlPostDownloadStrategy.new(cask)
-    else Hbc::CurlDownloadStrategy.new(cask)
-    end
+                    when :svn
+                      Hbc::SubversionDownloadStrategy.new(cask)
+                    when :post
+                      Hbc::CurlPostDownloadStrategy.new(cask)
+                    else
+                      Hbc::CurlDownloadStrategy.new(cask)
+                    end
   end
 
   def clear_cache
@@ -36,7 +39,7 @@ class Hbc::Download
   def fetch
     self.downloaded_path = downloader.fetch
   rescue StandardError => e
-    raise Hbc::CaskError.new("Download failed on Cask '#{cask}' with message: #{e}")
+    raise Hbc::CaskError, "Download failed on Cask '#{cask}' with message: #{e}"
   end
 
   # this symlink helps track which downloads are ours

@@ -62,7 +62,7 @@ class Hbc::CaskCommandFailedError < Hbc::CaskError
     @status = status
   end
 
-  def to_s;
+  def to_s
     <<-EOS
 Command failed to execute!
 
@@ -118,11 +118,11 @@ class Hbc::CaskInvalidError < Hbc::CaskError
   attr_reader :token, :submsg
   def initialize(token, *submsg)
     @token = token
-    @submsg = submsg.join(' ')
+    @submsg = submsg.join(" ")
   end
 
   def to_s
-    "Cask '#{token}' definition is invalid" + (submsg.length > 0 ? ": #{submsg}" : '')
+    "Cask '#{token}' definition is invalid" + (!submsg.empty? ? ": #{submsg}" : "")
   end
 end
 
@@ -150,6 +150,20 @@ class Hbc::CaskSha256MismatchError < RuntimeError
       Actual: #{actual}
       File: #{path}
       To retry an incomplete download, remove the file above.
-      EOS
+    EOS
+  end
+end
+
+class Hbc::CaskNoShasumError < Hbc::CaskError
+  attr_reader :token
+  def initialize(token)
+    @token = token
+  end
+
+  def to_s
+    <<-EOS.undent
+      Cask '#{token}' does not have a sha256 checksum defined and was not installed.
+      This means you have the "--require-sha" option set, perhaps in your HOMEBREW_CASK_OPTS.
+    EOS
   end
 end

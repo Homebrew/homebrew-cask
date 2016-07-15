@@ -1,6 +1,6 @@
 cask 'razer-synapse' do
-  version '1.51'
-  sha256 'be4f52b6f743d2dd7c06271b6d434197985fa65e5abc53832c1a88c9ba2e6459'
+  version '1.53'
+  sha256 '161af2595e69462095be676850b2b0ff60c304d3604c0b96cf76f969023a9660'
 
   url "http://dl.razerzone.com/drivers/Synapse2/mac/Razer_Synapse_Mac_Driver_v#{version}.dmg"
   name 'Razer Synapse'

@@ -1,75 +1,76 @@
 class Hbc::CLI; end
 
-require 'optparse'
-require 'shellwords'
+require "optparse"
+require "shellwords"
 
-require 'hbc/cli/base'
-require 'hbc/cli/audit'
-require 'hbc/cli/cat'
-require 'hbc/cli/cleanup'
-require 'hbc/cli/create'
-require 'hbc/cli/doctor'
-require 'hbc/cli/edit'
-require 'hbc/cli/fetch'
-require 'hbc/cli/home'
-require 'hbc/cli/info'
-require 'hbc/cli/install'
-require 'hbc/cli/list'
-require 'hbc/cli/search'
-require 'hbc/cli/style'
-require 'hbc/cli/uninstall'
-require 'hbc/cli/update'
-require 'hbc/cli/zap'
+require "hbc/cli/base"
+require "hbc/cli/audit"
+require "hbc/cli/cat"
+require "hbc/cli/cleanup"
+require "hbc/cli/create"
+require "hbc/cli/doctor"
+require "hbc/cli/edit"
+require "hbc/cli/fetch"
+require "hbc/cli/home"
+require "hbc/cli/info"
+require "hbc/cli/install"
+require "hbc/cli/list"
+require "hbc/cli/search"
+require "hbc/cli/style"
+require "hbc/cli/uninstall"
+require "hbc/cli/update"
+require "hbc/cli/zap"
 
-require 'hbc/cli/internal_use_base'
-require 'hbc/cli/internal_checkurl'
-require 'hbc/cli/internal_dump'
-require 'hbc/cli/internal_help'
-require 'hbc/cli/internal_stanza'
+require "hbc/cli/internal_use_base"
+require "hbc/cli/internal_audit_modified_casks"
+require "hbc/cli/internal_checkurl"
+require "hbc/cli/internal_dump"
+require "hbc/cli/internal_help"
+require "hbc/cli/internal_stanza"
 
 class Hbc::CLI
-
   ALIASES = {
-             'ls'             => 'list',
-             'homepage'       => 'home',
-             '-S'             => 'search',    # verb starting with "-" is questionable
-             'up'             => 'update',
-             'instal'         => 'install',   # gem does the same
-             'rm'             => 'uninstall',
-             'remove'         => 'uninstall',
-             'abv'            => 'info',
-             'dr'             => 'doctor',
-             # aliases from Homebrew that we don't (yet) support
-             # 'ln'           => 'link',
-             # 'configure'    => 'diy',
-             # '--repo'       => '--repository',
-             # 'environment'  => '--env',
-             # '-c1'          => '--config',
-            }
+              "ls"       => "list",
+              "homepage" => "home",
+              "-S"       => "search",    # verb starting with "-" is questionable
+              "up"       => "update",
+              "instal"   => "install",   # gem does the same
+              "rm"       => "uninstall",
+              "remove"   => "uninstall",
+              "abv"      => "info",
+              "dr"       => "doctor",
+              # aliases from Homebrew that we don't (yet) support
+              # 'ln'          => 'link',
+              # 'configure'   => 'diy',
+              # '--repo'      => '--repository',
+              # 'environment' => '--env',
+              # '-c1'         => '--config',
+            }.freeze
 
   def self.command_classes
-    @@command_classes ||= Hbc::CLI.constants.
-                          map    { |sym| Hbc::CLI.const_get sym }.
-                          select { |sym| sym.respond_to?(:run)   }
+    @command_classes ||= Hbc::CLI.constants
+                                 .map(&Hbc::CLI.method(:const_get))
+                                 .select { |sym| sym.respond_to?(:run) }
   end
 
   def self.commands
-    @@commands ||= command_classes.map { |sym| sym.command_name }
+    @commands ||= command_classes.map(&:command_name)
   end
 
   def self.lookup_command(command_string)
-    @@lookup ||= Hash[commands.zip(command_classes)]
+    @lookup ||= Hash[commands.zip(command_classes)]
     command_string = ALIASES.fetch(command_string, command_string)
-    @@lookup.fetch(command_string, command_string)
+    @lookup.fetch(command_string, command_string)
   end
 
   # modified from Homebrew
-  def self.require? path
+  def self.require?(path)
     require path
-    true    # OK if already loaded
+    true # OK if already loaded
   rescue LoadError => e
-    # HACK :( because we should raise on syntax errors but
-    # not if the file doesn't exist. TODO make robust!
+    # HACK: :( because we should raise on syntax errors
+    #       but not if the file doesn't exist.
+    # TODO: make robust!
     raise unless e.to_s.include? path
   end
 
@@ -83,13 +84,13 @@ class Hbc::CLI
       command.run(*rest)
     elsif require? Hbc::Utils.which("brewcask-#{command}.rb").to_s
       # external command as Ruby library on PATH, Homebrew-style
-    elsif command.to_s.include?('/') && require?(command.to_s)
+    elsif command.to_s.include?("/") && require?(command.to_s)
       # external command as Ruby library with literal path, useful
       # for development and troubleshooting
-      sym = Pathname.new(command.to_s).basename('.rb').to_s.capitalize
+      sym = Pathname.new(command.to_s).basename(".rb").to_s.capitalize
       klass = begin
                 Hbc::CLI.const_get(sym)
-              rescue NameError => e
+              rescue NameError
                 nil
               end
       if klass.respond_to?(:run)
@@ -102,8 +103,8 @@ class Hbc::CLI
       # arbitrary external executable on PATH, Homebrew-style
       exec "brewcask-#{command}", *ARGV[1..-1]
     elsif Pathname.new(command.to_s).executable? &&
-            command.to_s.include?('/') &&
-              !command.to_s.match(%{\.rb$})
+          command.to_s.include?("/") &&
+          !command.to_s.match(%r{\.rb$})
       # arbitrary external executable with literal path, useful
       # for development and troubleshooting
       exec command, *ARGV[1..-1]
@@ -116,7 +117,7 @@ class Hbc::CLI
   def self.process(arguments)
     command_string, *rest = *arguments
     rest = process_options(rest)
-    command = Hbc.help ? 'help' : lookup_command(command_string)
+    command = Hbc.help ? "help" : lookup_command(command_string)
     Hbc.init if should_init?(command)
     run_command(command, *rest)
   rescue Hbc::CaskError, Hbc::CaskSha256MismatchError => e
@@ -135,17 +136,17 @@ class Hbc::CLI
   def self.nice_listing(cask_list)
     cask_taps = {}
     cask_list.each do |c|
-      user, repo, token = c.split '/'
-      repo.sub!(/^homebrew-/i, '')
+      user, repo, token = c.split "/"
+      repo.sub!(%r{^homebrew-}i, "")
       cask_taps[token] ||= []
       cask_taps[token].push "#{user}/#{repo}"
     end
     list = []
-    cask_taps.each do |token,taps|
+    cask_taps.each do |token, taps|
       if taps.length == 1
         list.push token
       else
-        taps.each { |r| list.push [r,token].join '/' }
+        taps.each { |r| list.push [r, token].join "/" }
       end
     end
     list.sort
@@ -194,32 +195,32 @@ class Hbc::CLI
         Hbc.vst3_plugindir = Pathname(v).expand_path
       end
       opts.on("--screen_saverdir=MANDATORY") do |v|
-       Hbc.screen_saverdir = Pathname(v).expand_path
+        Hbc.screen_saverdir = Pathname(v).expand_path
       end
 
-      opts.on("--no-binaries") do |v|
+      opts.on("--no-binaries") do
         Hbc.no_binaries = true
       end
-      opts.on("--debug") do |v|
+      opts.on("--debug") do
         Hbc.debug = true
       end
-      opts.on("--verbose") do |v|
+      opts.on("--verbose") do
         Hbc.verbose = true
       end
-      opts.on("--outdated") do |v|
+      opts.on("--outdated") do
         Hbc.cleanup_outdated = true
       end
-      opts.on("--help") do |v|
+      opts.on("--help") do
         Hbc.help = true
       end
-      opts.on("--version") do |v|
+      opts.on("--version") do
         raise OptionParser::InvalidOption # override default handling of --version
       end
     end
   end
 
   def self.process_options(args)
-    all_args = Shellwords.shellsplit(ENV['HOMEBREW_CASK_OPTS'] || "") + args
+    all_args = Shellwords.shellsplit(ENV["HOMEBREW_CASK_OPTS"] || "") + args
     remaining = []
     until all_args.empty?
       begin
@@ -229,15 +230,14 @@ class Hbc::CLI
         remaining << head
         retry
       rescue OptionParser::MissingArgument
-        raise Hbc::CaskError.new("The option '#{head}' requires an argument")
+        raise Hbc::CaskError, "The option '#{head}' requires an argument"
       rescue OptionParser::AmbiguousOption
-        raise Hbc::CaskError.new(
-          "There is more than one possible option that starts with '#{head}'")
+        raise Hbc::CaskError, "There is more than one possible option that starts with '#{head}'"
       end
     end
 
     # for compat with Homebrew, not certain if this is desirable
-    Hbc.verbose = true if !ENV['VERBOSE'].nil? || !ENV['HOMEBREW_VERBOSE'].nil?
+    Hbc.verbose = true if !ENV["VERBOSE"].nil? || !ENV["HOMEBREW_VERBOSE"].nil?
 
     remaining
   end
@@ -248,13 +248,13 @@ class Hbc::CLI
     end
 
     def run(*args)
-      if args.include?('--version') || @attempted_verb == '--version'
+      if args.include?("--version") || @attempted_verb == "--version"
         puts Hbc.full_version
       else
         purpose
         usage
         unless @attempted_verb.to_s.strip.empty? || @attempted_verb == "help"
-          raise Hbc::CaskError.new("Unknown command: #{@attempted_verb}")
+          raise Hbc::CaskError, "Unknown command: #{@attempted_verb}"
         end
       end
     end
@@ -279,7 +279,7 @@ class Hbc::CLI
     end
 
     def help
-      ''
+      ""
     end
 
     def _help_for(klass)

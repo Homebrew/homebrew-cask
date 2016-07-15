@@ -13,7 +13,7 @@ cask 'sourcetree' do
   # atlassian.com was verified as official when first introduced to the cask
   url "https://downloads.atlassian.com/software/sourcetree/SourceTree_#{version}.zip"
   appcast 'https://www.sourcetreeapp.com/update/SparkleAppcast.xml',
-          checkpoint: '281824c0f503c7db534e0ba7684606ab2e3810787154f91096bcf203d344596b'
+          checkpoint: '096494e7aef3f14c99700663b0397571b19f2af17e18a8fa63c757409cf79708'
   name 'Atlassian SourceTree'
   homepage 'https://www.sourcetreeapp.com/'
   license :gratis

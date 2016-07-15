@@ -1,10 +1,10 @@
 cask 'exiftool' do
-  version '10.20'
-  sha256 '8b45837e9f72a3da8726c130e7597377e5507f880fe4fa8eedac103e7ccf33c9'
+  version '10.22'
+  sha256 '501f172319df35b424aab5746ff2e48e85ad6485686cccd012c651080977bc39'
 
   url "http://owl.phy.queensu.ca/~phil/exiftool/ExifTool-#{version}.dmg"
   appcast 'http://owl.phy.queensu.ca/~phil/exiftool/rss.xml',
-          checkpoint: '01830791e3904c8bb1f955a14ae86c639fac5e2742dbb3ba875e6baa041feab4'
+          checkpoint: '5da3fec21f38f7321fd343769e329aba52b94493be1af6c84c4588141e52cdce'
   name 'ExifTool by Phil Harvey'
   homepage 'http://www.sno.phy.queensu.ca/~phil/exiftool/'
   license :gpl

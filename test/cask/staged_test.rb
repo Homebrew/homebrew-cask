@@ -1,8 +1,8 @@
 require 'test_helper'
 
-# todo: this test should be named after the corresponding class, once
-# that class is abstracted from installer.rb.  It makes little sense
-# to be invoking bundle_identifier off of the installer instance.
+# TODO: this test should be named after the corresponding class, once
+#       that class is abstracted from installer.rb.  It makes little sense
+#       to be invoking bundle_identifier off of the installer instance.
 describe "Operations on staged Casks" do
   describe "bundle ID" do
     it "fetches the bundle ID from a staged cask" do

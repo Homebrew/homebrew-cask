@@ -11,4 +11,8 @@ cask 'tuneup' do
   license :commercial
 
   installer manual: 'TuneUp-Installer.app'
+
+  caveats do
+    malware '27013246'
+  end
 end

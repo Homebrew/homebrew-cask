@@ -9,6 +9,10 @@ cask 'gimp' do
 
   app 'GIMP.app'
 
+  postflight do
+    set_permissions "#{appdir}/GIMP.app/Contents/MacOS/GIMP", 'a+rx'
+  end
+
   zap delete: [
                 '~/Library/Application Support/GIMP',
                 '~/Library/Saved Application State/org.gnome.gimp.savedState',

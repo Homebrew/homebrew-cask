@@ -13,7 +13,7 @@ cask 'ableton-live' do
   homepage 'https://ableton.com/en/live'
   license :commercial
 
-  app "Ableton Live #{version.to_i} Trial.app"
+  app "Ableton Live #{version.major} Trial.app"
 
   zap delete: '~/Library/*/*[Aa]bleton*',
       rmdir:  '~/Music/Ableton/Factory Packs'

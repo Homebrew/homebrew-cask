@@ -1,11 +1,11 @@
 cask 'fromscratch' do
-  version '1.0.1'
-  sha256 '6c3d25a26bca0ab018f808856afb09adfbb14c622e7aff69e47f6d26e6912036'
+  version '1.1.1'
+  sha256 'eb39b0ba128fe9352ceb4d2cb2701a4cd7ef772083ad97ce7de62a2f14bdad02'
 
   # github.com/Kilian/fromscratch was verified as official when first introduced to the cask
-  url 'https://github.com/Kilian/fromscratch/releases/download/v1.0.0/FromScratch-darwin-x64-1.0.1.zip'
+  url "https://github.com/Kilian/fromscratch/releases/download/v#{version}/FromScratch-darwin-x64-#{version}.zip"
   appcast 'https://github.com/Kilian/fromscratch/releases.atom',
-          checkpoint: '6141270b2639d2ed6e1f86949c323492f181badfe6a5b877372b525fdebf04a6'
+          checkpoint: 'bc6fd4aea1849757ce946f7daaeaf22a1f47c838346af321cdb877e9b256f47e'
   name 'FromScratch'
   homepage 'https://fromscratch.rocks/'
   license :mit

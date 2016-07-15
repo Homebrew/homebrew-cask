@@ -1,19 +1,15 @@
 cask 'real-vnc' do
-  version '5.3.0'
-  sha256 '940d1871e587e9135f957ab879ac5fc479721e47b4d8122152e5d2e92c30e231'
+  version '5.3.2'
+  sha256 'ed075ad1bec0d3d6ae9c446fbdec211798853d79f14c7a98520819f22fe991d3'
 
-  url 'https://www.realvnc.com/download/binary/1775/'
+  url "https://www.realvnc.com/download/file/vnc.files/VNC-#{version}-MacOSX-x86_64.pkg"
   name 'Real VNC'
   homepage 'https://www.realvnc.com'
   license :freemium
 
   container type: :naked
 
-  pkg "VNC-#{version}-MacOSX.pkg"
-
-  preflight do
-    system '/bin/mv', '--', staged_path.join('1775'), staged_path.join("VNC-#{version}-MacOSX.pkg")
-  end
+  pkg "VNC-#{version}-MacOSX-x86_64.pkg"
 
   uninstall script: '/Applications/RealVNC/Advanced.localized/Uninstall VNC Viewer.app/Contents/Resources/uninstaller.sh'
 end

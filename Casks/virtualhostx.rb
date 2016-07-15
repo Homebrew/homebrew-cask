@@ -1,11 +1,11 @@
 cask 'virtualhostx' do
-  version '7.1.5,7_14'
-  sha256 'c10caf8a5136f488b2a9e83f6652b3df4a176a7de1b8bd4e20f62a964d0ba069'
+  version '7.1.8,7_17'
+  sha256 '2a65b4084ab2441086c68d27bde1b379283fe692a3e62ab8c5d2ec873db76bd8'
 
   # downloads-clickonideas.netdna-ssl.com/virtualhostx was verified as official when first introduced to the cask
   url "https://downloads-clickonideas.netdna-ssl.com/virtualhostx/virtualhostx#{version.after_comma}.zip"
   appcast 'https://shine.clickontyler.com/appcast.php?id=33',
-          checkpoint: '9fcdd34cbd1959eef76922a33cc03ac5abbbbb814e60797cd15552ed9f8b1df8'
+          checkpoint: 'cd403bc5d3f6916355bffb40a544dff83241b66391b0b2bc54f0dac4fa91ee7b'
   name 'VirtualHostX'
   homepage 'https://clickontyler.com/virtualhostx/'
   license :commercial

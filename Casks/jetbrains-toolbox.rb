@@ -1,6 +1,6 @@
 cask 'jetbrains-toolbox' do
-  version '1.0.1483'
-  sha256 'a0bc1684553ecf8d73836728566d80b13d9a818e50b6770a143a6954dec3e168'
+  version '1.0.1569'
+  sha256 '5e47e404f7b9aa6e5d500eceb59801a9c1dc4da104e29fe1e392956188369b71'
 
   url "https://download.jetbrains.com/toolbox/jetbrains-toolbox-#{version}.dmg"
   name 'JetBrains Toolbox'

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-readonly browser_headers=(--header 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.152 Safari/537.36')
+readonly user_agent=(--user-agent 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.152 Safari/537.36')
 
 usage() {
   local program exit_status
@@ -51,10 +51,10 @@ if [[ -z "${appcast_url}" ]]; then
 fi
 
 # validate appcast
-appcast_http_response="$(curl --silent --head "${browser_headers[@]}" --write-out '%{http_code}' "${appcast_url}" -o /dev/null)"
+appcast_http_response="$(curl --silent --head "${user_agent[@]}" --write-out '%{http_code}' "${appcast_url}" -o /dev/null)"
 [[ "${appcast_http_response}" != '200' ]] && appcast_found_error "returned a non-200 (OK) HTTP response code (${appcast_http_response})"
 
-appcast_checkpoint=$(curl --silent --compressed --location "${browser_headers[@]}" "${appcast_url}" | sed 's|<pubDate>[^<]*</pubDate>||g' | shasum --algorithm 256 | awk '{ print $1 }')
+appcast_checkpoint=$(curl --silent --compressed --location "${user_agent[@]}" "${appcast_url}" | sed 's|<pubDate>[^<]*</pubDate>||g' | shasum --algorithm 256 | awk '{ print $1 }')
 [[ "${appcast_checkpoint}" == 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855' ]] && appcast_found_error 'seems to be empty'
 
 # output appcast
