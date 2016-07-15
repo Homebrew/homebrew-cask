@@ -8,7 +8,7 @@ cask 'riffworkst4' do
   homepage 'https://www.sonomawireworks.com/T4/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  pkg "RiffWorksT4V#{version.gsub('.', '_')}.pkg"
+  pkg "RiffWorksT4V#{version.dots_to_underscores}.pkg"
 
   uninstall pkgutil: 'com.sonomawireworks.riffworkst4'
 end

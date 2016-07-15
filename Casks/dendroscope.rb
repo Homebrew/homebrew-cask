@@ -1,9 +1,9 @@
 cask 'dendroscope' do
-  version '3.3.2'
-  sha256 '21eccfc97aba6400ecb9d81f1bc02a1f8fc9c4cd07e6c09b5f310d414b00c7e2'
+  version '3.5.7'
+  sha256 '9da20a38eff7588c19cb7521fc10fea0a1d3bfe038e1c11774018659ac0d7eca'
 
   # ab.inf.uni-tuebingen.de/data/software/dendroscope3 was verified as official when first introduced to the cask
-  url "http://ab.inf.uni-tuebingen.de/data/software/dendroscope3/download/Dendroscope_macos_#{version.gsub('.', '_')}.dmg"
+  url "http://ab.inf.uni-tuebingen.de/data/software/dendroscope3/download/Dendroscope_macos_#{version.dots_to_underscores}.dmg"
   name 'Dendroscope'
   homepage 'http://dendroscope.org/'
   license :gpl

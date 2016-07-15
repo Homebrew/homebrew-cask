@@ -9,5 +9,5 @@ cask 'peakhour' do
   homepage 'https://www.peakhourapp.com'
   license :commercial
 
-  app "PeakHour #{version.to_i}.app"
+  app "PeakHour #{version.major}.app"
 end
