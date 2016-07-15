@@ -117,7 +117,7 @@ class Hbc::CurlDownloadStrategy < Hbc::AbstractDownloadStrategy
         end
         raise CurlDownloadStrategyError, msg
       end
-      Hbc::Utils.ignore_interrupts { temporary_path.rename(tarball_path) }
+      ignore_interrupts { temporary_path.rename(tarball_path) }
     end
     tarball_path
   rescue CurlDownloadStrategyError

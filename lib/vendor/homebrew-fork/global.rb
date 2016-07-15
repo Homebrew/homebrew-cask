@@ -1,6 +1,6 @@
 require 'exceptions'
-require 'vendor/homebrew-fork/monkeypatch_pathname'
-require 'vendor/homebrew-fork/utils'
+require 'extend/pathname'
+require 'utils'
 
 def cache
   if ENV['HOMEBREW_CACHE']

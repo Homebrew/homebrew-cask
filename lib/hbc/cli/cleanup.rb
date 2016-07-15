@@ -14,7 +14,7 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
     cleanup_size = default.disk_cleanup_size
     default.cleanup!
     return unless cleanup_size > 0
-    disk_space = Hbc::Utils.disk_usage_readable(cleanup_size)
+    disk_space = disk_usage_readable(cleanup_size)
     ohai "This operation has freed approximately #{disk_space} of disk space."
   end
 
