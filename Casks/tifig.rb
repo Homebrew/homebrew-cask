@@ -1,6 +1,6 @@
 cask 'tifig' do
-  version '0.2.0-201606021314'
-  sha256 '83b1add057e8789349c2f55b28dcd1d8454c23e58b417339e6ffaa7b91e15563'
+  version '0.3.0-201607151151'
+  sha256 '694a1ae486b716e5afaf2ba5244987a672d7aa04432de82383002a43d74164c6'
 
   # tifig-downloads.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://tifig-downloads.s3.amazonaws.com/tifig-#{version}-macosx.cocoa.x86_64.tar.gz"
