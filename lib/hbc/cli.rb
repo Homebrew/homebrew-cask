@@ -22,6 +22,7 @@ require "hbc/cli/update"
 require "hbc/cli/zap"
 
 require "hbc/cli/internal_use_base"
+require "hbc/cli/internal_audit_modified_casks"
 require "hbc/cli/internal_checkurl"
 require "hbc/cli/internal_dump"
 require "hbc/cli/internal_help"
