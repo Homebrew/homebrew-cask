@@ -11,5 +11,5 @@ cask 'hype' do
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   # Original discussion: https://github.com/caskroom/homebrew-cask/pull/15762
-  app 'Hype2.app', target: "Hype #{version.to_i}.app"
+  app 'Hype2.app', target: "Hype #{version.major}.app"
 end

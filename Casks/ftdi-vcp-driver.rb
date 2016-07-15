@@ -9,7 +9,7 @@ cask 'ftdi-vcp-driver' do
     pkg 'FTDIUSBSerial.pkg'
   end
 
-  url "http://www.ftdichip.com/Drivers/VCP/MacOSX/FTDIUSBSerialDriver_v#{version.gsub('.', '_')}.dmg"
+  url "http://www.ftdichip.com/Drivers/VCP/MacOSX/FTDIUSBSerialDriver_v#{version.dots_to_underscores}.dmg"
   name 'FTDI VCP Driver'
   homepage 'http://www.ftdichip.com/Drivers/VCP.htm'
   license :gratis
