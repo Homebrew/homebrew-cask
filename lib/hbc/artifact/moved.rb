@@ -87,7 +87,7 @@ class Hbc::Artifact::Moved < Hbc::Artifact::Relocated
 
     unless target.exist?
       warning = "Missing #{self.class.artifact_english_name}"
-      warning = "#{Tty.red.underline}#{warning}#{Tty.reset}: "
+      warning = "#{Hbc::Utils::Tty.red.underline}#{warning}#{Hbc::Utils::Tty.reset}: "
     end
 
     "#{warning}#{printable_target}"

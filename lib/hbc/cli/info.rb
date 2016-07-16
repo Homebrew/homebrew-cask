@@ -60,7 +60,7 @@ PURPOSE
     retval = ""
     Hbc::DSL::ORDINARY_ARTIFACT_TYPES.each do |type|
       next if cask.artifacts[type].empty?
-      retval = "#{Tty.blue.bold}==>#{Tty.reset.bold} Contents#{Tty.reset}\n" if retval.empty?
+      retval = "#{Hbc::Utils::Tty.blue.bold}==>#{Hbc::Utils::Tty.reset.bold} Contents#{Hbc::Utils::Tty.reset}\n" if retval.empty?
       cask.artifacts[type].each do |artifact|
         activatable_item = type == :stage_only ? "<none>" : artifact.first
         retval.concat "  #{activatable_item} (#{type})\n"

@@ -18,7 +18,7 @@ class Hbc::Artifact::Symlinked < Hbc::Artifact::Linked
   def summarize_one_link(artifact_spec)
     load_specification artifact_spec
     return unless self.class.islink?(target)
-    link_description = target.exist? ? "" : "#{Tty.red.underline}Broken Link#{Tty.reset}: "
+    link_description = target.exist? ? "" : "#{Hbc::Utils::Tty.red.underline}Broken Link#{Hbc::Utils::Tty.reset}: "
     printable_target = "'#{target}'".sub(%r{^'#{ENV['HOME']}/*}, "~/'")
     "#{link_description}#{printable_target} -> '#{target.readlink}'"
   end
