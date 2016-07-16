@@ -9,9 +9,6 @@ require "hbc/utils/tty"
 UPDATE_CMD = "brew uninstall --force brew-cask; brew untap phinze/cask; brew untap caskroom/cask; brew update; brew cleanup; brew cask cleanup".freeze
 ISSUES_URL = "https://github.com/caskroom/homebrew-cask#reporting-bugs".freeze
 
-# TODO: temporary
-Tty = Hbc::Utils::Tty
-
 # monkeypatch Object - not a great idea
 class Object
   def utf8_inspect
@@ -69,11 +66,11 @@ end
 
 def odebug(title, *sput)
   if Hbc.respond_to?(:debug) && Hbc.debug
-    width = Tty.width * 4 - 6
+    width = Hbc::Utils::Tty.width * 4 - 6
     if $stdout.tty? && title.to_s.length > width
       title = title.to_s[0, width - 3] + "..."
     end
-    puts "#{Tty.magenta.bold}==>#{Tty.reset.bold} #{title}#{Tty.reset}"
+    puts "#{Hbc::Utils::Tty.magenta.bold}==>#{Hbc::Utils::Tty.reset.bold} #{title}#{Hbc::Utils::Tty.reset}"
     puts sput unless sput.empty?
   end
 end
@@ -272,14 +269,14 @@ module Hbc::Utils
 
   def self.error_message_with_suggestions
     <<-EOS.undent
-    #{Tty.reset.bold}
+    #{Hbc::Utils::Tty.reset.bold}
       Most likely, this means you have an outdated version of homebrew-cask. Please run:
 
-          #{Tty.green.normal}#{UPDATE_CMD}
+          #{Hbc::Utils::Tty.green.normal}#{UPDATE_CMD}
 
-      #{Tty.reset.bold}If this doesn’t fix the problem, please report this bug:
+      #{Hbc::Utils::Tty.reset.bold}If this doesn’t fix the problem, please report this bug:
 
-          #{Tty.underline}#{ISSUES_URL}#{Tty.reset}
+          #{Hbc::Utils::Tty.underline}#{ISSUES_URL}#{Hbc::Utils::Tty.reset}
 
     EOS
   end

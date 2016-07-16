@@ -100,7 +100,7 @@ class Hbc::Utils::Tty
 
     def deferred_emit(*codes)
       @sequence.concat Array(*codes).map(&method(:sanitize_integer))
-      Tty
+      Hbc::Utils::Tty
     end
 
     def to_s
