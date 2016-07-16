@@ -10,4 +10,14 @@ cask 'plex-media-server' do
   depends_on macos: '>= :mountain_lion'
 
   app 'Plex Media Server.app'
+
+  uninstall quit:      'com.plexapp.plexmediaserver',
+            launchctl: 'com.plexapp.mediaserver'
+
+  zap delete: [
+                '~/Library/Application Support/Plex Media Server/',
+                '~/Library/Caches/PlexMediaServer/',
+                '~/Library/Logs/Plex Media Server/',
+                '~/Library/Preferences/com.plexapp.plexmediaserver.plist',
+              ]
 end
