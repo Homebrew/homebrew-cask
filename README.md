@@ -31,7 +31,7 @@ complete
 ==> Moving App 'Atom.app' to '/Applications/Atom.app'
 ==> Symlinking Binary 'apm' to '/usr/local/bin/apm'
 ==> Symlinking Binary 'atom.sh' to '/usr/local/bin/atom'
-🍺  atom staged at '/usr/local/Caskroom/atom/1.8.0' (0B)
+🍺  atom was successfully installed!
 ```
 
 And there we have it. Atom installed with one quick command: no clicking, no dragging, no dropping.
