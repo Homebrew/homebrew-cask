@@ -21,7 +21,7 @@ class Hbc::CLI::Style < Hbc::CLI::Base
     $CHILD_STATUS.success?
   end
 
-  RUBOCOP_CASK_VERSION = "~> 0.8.2".freeze
+  RUBOCOP_CASK_VERSION = "~> 0.8.3".freeze
 
   def install_rubocop
     Hbc::Utils.install_gem_setup_path! "rubocop-cask", RUBOCOP_CASK_VERSION, "rubocop"
