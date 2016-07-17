@@ -1,15 +1,13 @@
-require 'spec_helper'
+require "spec_helper"
 
-describe 'download strategies' do
-  let(:url) { 'http://example.com/cask.dmg' }
+describe "download strategies" do
+  let(:url) { "http://example.com/cask.dmg" }
   let(:url_options) { Hash.new }
-  let(:cask) {
-    instance_double(Hbc::Cask,
-      :token => 'some-cask',
-      :url => Hbc::URL.new(url, url_options),
-      :version => '1.2.3.4'
-    )
-  }
+  let(:cask) do
+    instance_double(Hbc::Cask, token:   "some-cask",
+                               url:     Hbc::URL.new(url, url_options),
+                               version: "1.2.3.4")
+  end
 
   describe Hbc::CurlDownloadStrategy do
     let(:downloader) { Hbc::CurlDownloadStrategy.new(cask) }
@@ -18,13 +16,13 @@ describe 'download strategies' do
       allow(downloader.temporary_path).to receive(:rename)
     end
 
-    it 'properly assigns a name and uri based on the Cask' do
-      expect(downloader.name).to eq('some-cask')
-      expect(downloader.url).to eq('http://example.com/cask.dmg')
-      expect(downloader.version.to_s).to eq('1.2.3.4')
+    it "properly assigns a name and uri based on the Cask" do
+      expect(downloader.name).to eq("some-cask")
+      expect(downloader.url).to eq("http://example.com/cask.dmg")
+      expect(downloader.version.to_s).to eq("1.2.3.4")
     end
 
-    it 'calls curl with default arguments for a simple Cask' do
+    it "calls curl with default arguments for a simple Cask" do
       allow(downloader).to receive(:curl)
 
       shutup do
@@ -33,71 +31,67 @@ describe 'download strategies' do
 
       expect(downloader).to have_received(:curl).with(
         cask.url.to_s,
-        '-C', 0,
-        '-o', kind_of(Pathname)
+        "-C", 0,
+        "-o", kind_of(Pathname)
       )
     end
 
-    context 'with an explicit user agent' do
-      let(:url_options) {{
-        :user_agent => 'Mozilla/25.0.1'
-      }}
+    context "with an explicit user agent" do
+      let(:url_options) { { user_agent: "Mozilla/25.0.1" } }
 
-      it 'adds the appropriate curl args' do
+      it "adds the appropriate curl args" do
         curl_args = []
         allow(downloader).to receive(:curl) { |*args| curl_args = args }
 
         shutup { downloader.fetch }
 
-        expect(curl_args.each_cons(2)).to include(['-A', 'Mozilla/25.0.1'])
+        expect(curl_args.each_cons(2)).to include(["-A", "Mozilla/25.0.1"])
       end
     end
 
-    context 'with a generalized fake user agent' do
-      let(:url_options) {{
-        :user_agent => :fake
-      }}
+    context "with a generalized fake user agent" do
+      let(:url_options) { { user_agent: :fake } }
 
-      it 'adds the appropriate curl args' do
+      it "adds the appropriate curl args" do
         curl_args = []
         allow(downloader).to receive(:curl) { |*args| curl_args = args }
 
         shutup { downloader.fetch }
 
-        expect(curl_args.each_cons(2)).to include(['-A', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10) http://caskroom.io'])
+        expect(curl_args.each_cons(2)).to include(["-A", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10) http://caskroom.io"])
       end
     end
 
-    context 'with cookies set' do
-      let(:url_options) {{
-        :cookies => {
-          :coo => 'kie',
-          :mon => 'ster'
+    context "with cookies set" do
+      let(:url_options) do
+        {
+          cookies: {
+                     coo: "kie",
+                     mon: "ster",
+                   },
         }
-      }}
+      end
 
-      it 'adds curl args for cookies' do
+      it "adds curl args for cookies" do
         curl_args = []
         allow(downloader).to receive(:curl) { |*args| curl_args = args }
 
         shutup { downloader.fetch }
 
-        expect(curl_args.each_cons(2)).to include(['-b', 'coo=kie;mon=ster'])
+        expect(curl_args.each_cons(2)).to include(["-b", "coo=kie;mon=ster"])
       end
     end
 
-    context 'with referer set' do
-      let(:url_options) {{
-        :referer => 'http://somehost/also'
-      }}
+    context "with referer set" do
+      let(:url_options) { { referer: "http://somehost/also" } }
 
-      it 'adds curl args for referer' do
+      it "adds curl args for referer" do
         curl_args = []
         allow(downloader).to receive(:curl) { |*args| curl_args = args }
 
         shutup { downloader.fetch }
 
-        expect(curl_args.each_cons(2)).to include(['-e', 'http://somehost/also'])
+        expect(curl_args.each_cons(2)).to include(["-e", "http://somehost/also"])
       end
     end
   end
@@ -109,52 +103,51 @@ describe 'download strategies' do
       allow(downloader.temporary_path).to receive(:rename)
     end
 
-    context 'with :using and :data specified' do
-      let(:url_options) {{
-        :using => :post,
-        :data => {
-          :form => 'data',
-          :is => 'good'
+    context "with :using and :data specified" do
+      let(:url_options) do
+        {
+          using: :post,
+          data:  {
+                   form: "data",
+                   is:   "good",
+                 },
         }
-      }}
-      it 'adds curl args for post arguments' do
+      end
+
+      it "adds curl args for post arguments" do
         curl_args = []
         allow(downloader).to receive(:curl) { |*args| curl_args = args }
 
         shutup { downloader.fetch }
 
-        expect(curl_args.each_cons(2)).to include(['-d', 'form=data'])
-        expect(curl_args.each_cons(2)).to include(['-d', 'is=good'])
+        expect(curl_args.each_cons(2)).to include(["-d", "form=data"])
+        expect(curl_args.each_cons(2)).to include(["-d", "is=good"])
       end
     end
 
-    context 'with :using but no :data' do
-      let(:url_options) {{
-        :using => :post
-      }}
+    context "with :using but no :data" do
+      let(:url_options) { { using: :post } }
 
-      it 'adds curl args for a POST request' do
+      it "adds curl args for a POST request" do
         curl_args = []
         allow(downloader).to receive(:curl) { |*args| curl_args = args }
 
         shutup { downloader.fetch }
 
-        expect(curl_args.each_cons(2)).to include(['-X', 'POST'])
+        expect(curl_args.each_cons(2)).to include(["-X", "POST"])
       end
     end
   end
 
   describe Hbc::SubversionDownloadStrategy do
-    let(:url_options) {{
-      :using => :svn
-    }}
+    let(:url_options) { { using: :svn } }
     let(:fake_system_command) { class_double(Hbc::SystemCommand) }
     let(:downloader) { Hbc::SubversionDownloadStrategy.new(cask, fake_system_command) }
     before do
       allow(fake_system_command).to receive(:run!)
     end
 
-    it 'returns a tarball path on fetch' do
+    it "returns a tarball path on fetch" do
       allow(downloader).to receive(:compress)
       allow(downloader).to receive(:fetch_repo)
 
@@ -163,7 +156,7 @@ describe 'download strategies' do
       expect(retval).to equal(downloader.tarball_path)
     end
 
-    it 'calls fetch_repo with default arguments for a simple Cask' do
+    it "calls fetch_repo with default arguments for a simple Cask" do
       allow(downloader).to receive(:compress)
       allow(downloader).to receive(:fetch_repo)
 
@@ -175,77 +168,83 @@ describe 'download strategies' do
       )
     end
 
-    it 'calls svn with default arguments for a simple Cask' do
+    it "calls svn with default arguments for a simple Cask" do
       allow(downloader).to receive(:compress)
 
       shutup { downloader.fetch }
 
       expect(fake_system_command).to have_received(:run!).with(
-        '/usr/bin/svn',
-        hash_including(:args => [
-          'checkout',
-          '--force',
-          '--config-option',
-          'config:miscellany:use-commit-times=yes',
-          cask.url.to_s,
-          downloader.cached_location]))
-
+        "/usr/bin/svn",
+        hash_including(args: [
+                               "checkout",
+                               "--force",
+                               "--config-option",
+                               "config:miscellany:use-commit-times=yes",
+                               cask.url.to_s,
+                               downloader.cached_location,
+                             ])
+      )
     end
 
-    context 'with trust_cert set on the URL' do
-      let(:url_options) {{
-        :using => :svn,
-        :trust_cert => true
-      }}
+    context "with trust_cert set on the URL" do
+      let(:url_options) do
+        {
+          using:      :svn,
+          trust_cert: true,
+        }
+      end
 
-      it 'adds svn arguments for :trust_cert' do
+      it "adds svn arguments for :trust_cert" do
         allow(downloader).to receive(:compress)
 
         shutup { downloader.fetch }
 
         expect(fake_system_command).to have_received(:run!).with(
-          '/usr/bin/svn',
-          hash_including(:args => [
-          'checkout',
-          '--force',
-          '--config-option',
-          'config:miscellany:use-commit-times=yes',
-          '--trust-server-cert',
-          '--non-interactive',
-          cask.url.to_s,
-          downloader.cached_location,
-        ]))
+          "/usr/bin/svn",
+          hash_including(args: [
+                                 "checkout",
+                                 "--force",
+                                 "--config-option",
+                                 "config:miscellany:use-commit-times=yes",
+                                 "--trust-server-cert",
+                                 "--non-interactive",
+                                 cask.url.to_s,
+                                 downloader.cached_location,
+                               ])
+        )
       end
     end
 
-    context 'with :revision set on url' do
-      let(:url_options) {{
-        :using => :svn,
-        :revision => '10'
-      }}
+    context "with :revision set on url" do
+      let(:url_options) do
+        {
+          using:    :svn,
+          revision: "10",
+        }
+      end
 
-      it 'adds svn arguments for :revision' do
+      it "adds svn arguments for :revision" do
         allow(downloader).to receive(:compress)
 
         shutup { downloader.fetch }
 
         expect(fake_system_command).to have_received(:run!).with(
-          '/usr/bin/svn',
-          hash_including(:args => [
-          'checkout',
-          '--force',
-          '--config-option',
-          'config:miscellany:use-commit-times=yes',
-          cask.url.to_s,
-          downloader.cached_location,
-          '-r',
-          '10',
-        ]))
-
+          "/usr/bin/svn",
+          hash_including(args: [
+                                 "checkout",
+                                 "--force",
+                                 "--config-option",
+                                 "config:miscellany:use-commit-times=yes",
+                                 cask.url.to_s,
+                                 downloader.cached_location,
+                                 "-r",
+                                 "10",
+                               ])
+        )
       end
     end
 
-    it 'runs tar to serialize svn downloads' do
+    it "runs tar to serialize svn downloads" do
       # sneaky stub to remake the directory, since homebrew code removes it
       # before tar is called
       allow(downloader).to receive(:fetch_repo) {
@@ -255,16 +254,17 @@ describe 'download strategies' do
       shutup { downloader.fetch }
 
       expect(fake_system_command).to have_received(:run!).with(
-        '/usr/bin/tar',
-        hash_including(:args => [
-        '-s/^\\.//',
-        '--exclude',
-        '.svn',
-        '-cf',
-        downloader.tarball_path,
-        '--',
-        '.',
-      ]))
+        "/usr/bin/tar",
+        hash_including(args: [
+                               '-s/^\\.//',
+                               "--exclude",
+                               ".svn",
+                               "-cf",
+                               downloader.tarball_path,
+                               "--",
+                               ".",
+                             ])
+      )
     end
   end
 

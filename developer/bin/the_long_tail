@@ -15,49 +15,49 @@
 ### dependencies
 ###
 
-require 'open3'
-require 'set'
+require "open3"
+require "set"
 
 ###
 ### configurable constants
 ###
 
 BINS = [
-        (1..10).to_a,
-        100,
-        1000,
+         (1..10).to_a,
+         100,
+         1000,
        ].flatten
 
 OCCASIONAL_CUTOFF = 5
 
-CASK_PATH = 'Casks'
+CASK_PATH = "Casks".freeze
 
 # all maintainers, past and present
 MAINTAINERS = %w[
-                  paul.t.hinze@gmail.com
-                  fanquake@users.noreply.github.com
-                  fanquake@gmail.com
-                  kevin@suttle.io
-                  leoj3n@gmail.com
-                  nano@fdp.io
-                  nanoid.xd@gmail.com
-                  me@passcod.name
-                  walker@pobox.com
-                  info@vitorgalvao.com
-                  calebcenter@live.com
-                  ndr@qef.io
-                  josh@joshbutts.com
-                  goxberry@gmail.com
-                  radek.simko@gmail.com
-                  federicobond@gmail.com
-                  claui@users.noreply.github.com
-                  amorymeltzer@gmail.com
-                  hagins.josh@gmail.com
-                  dragon.vctr@gmail.com
-                  mail@sebastianroeder.de
-                  github@adityadalal.com
-                  adityadalal924@users.noreply.github.com
-                 ]
+                paul.t.hinze@gmail.com
+                fanquake@users.noreply.github.com
+                fanquake@gmail.com
+                kevin@suttle.io
+                leoj3n@gmail.com
+                nano@fdp.io
+                nanoid.xd@gmail.com
+                me@passcod.name
+                walker@pobox.com
+                info@vitorgalvao.com
+                calebcenter@live.com
+                ndr@qef.io
+                josh@joshbutts.com
+                goxberry@gmail.com
+                radek.simko@gmail.com
+                federicobond@gmail.com
+                claui@users.noreply.github.com
+                amorymeltzer@gmail.com
+                hagins.josh@gmail.com
+                dragon.vctr@gmail.com
+                mail@sebastianroeder.de
+                github@adityadalal.com
+                adityadalal924@users.noreply.github.com
+              ].freeze
 
 ###
 ### git methods
@@ -66,8 +66,8 @@ MAINTAINERS = %w[
 def cd_to_project_root
   Dir.chdir File.dirname(File.expand_path(__FILE__))
   @git_root ||= Open3.popen3(*%w[
-                                 git rev-parse --show-toplevel
-                                ]) do |stdin, stdout, stderr|
+                                git rev-parse --show-toplevel
+                              ]) do |_stdin, stdout, _stderr|
     begin
       stdout.gets.chomp
     rescue
@@ -79,8 +79,8 @@ end
 
 def authors
   @authors ||= Open3.popen3(*%w[
-                                git log --no-merges --format=%ae --
-                               ]) do |stdin, stdout, stderr|
+                               git log --no-merges --format=%ae --
+                             ]) do |_stdin, stdout, _stderr|
     h = {}
     stdout.each_line do |line|
       line.chomp!
@@ -93,14 +93,14 @@ end
 
 def casks_by_author
   @casks_by_author ||= Open3.popen3(*%w[
-                                        git log --no-merges --name-only --format=%ae --
-                                       ],
-                                    CASK_PATH) do |stdin, stdout, stderr|
+                                       git log --no-merges --name-only --format=%ae --
+                                     ],
+                                    CASK_PATH) do |_stdin, stdout, _stderr|
     email = nil
     h = {}
-    stdout.each_line.to_a.join('').split("\n\n").each do |paragraph|
-      if paragraph.include?('Casks/')
-        lines=paragraph.split("\n")
+    stdout.each_line.to_a.join("").split("\n\n").each do |paragraph|
+      if paragraph.include?("Casks/")
+        lines = paragraph.split("\n")
         email = lines.pop
         h[email] ||= Set.new
         h[email].merge(lines.compact)
@@ -109,7 +109,7 @@ def casks_by_author
       end
     end
     h
-   end
+  end
 end
 
 ###
@@ -117,10 +117,9 @@ end
 ###
 
 def all_casks
-  @all_casks ||= Open3.popen3('/usr/bin/find',
-                               CASK_PATH,
-                               *%w[-type f -name *.rb]
-                              ) do |stdin, stdout, stderr|
+  @all_casks ||= Open3.popen2("/usr/bin/find",
+                              CASK_PATH,
+                              *%w[-type f -name *.rb]) do |_stdin, stdout|
     stdout.each_line.map(&:chomp)
   end
 end
@@ -131,13 +130,11 @@ end
 
 def histogram
   if @histogram.nil?
-    @histogram = Hash[*BINS.map{ |elt| [elt, 0] }.flatten]
-    authors.each do |name, num_commits|
+    @histogram = Hash[*BINS.map { |elt| [elt, 0] }.flatten]
+    authors.each do |_name, num_commits|
       bottom = 0
       BINS.each do |top|
-        if num_commits >= bottom and num_commits < top
-          @histogram[bottom] += 1
-        end
+        @histogram[bottom] += 1 if num_commits >= bottom && num_commits < top
         bottom = top
       end
     end
@@ -149,7 +146,7 @@ def historic_occasional_cask_set
   @historic_occasional_cask_set = authors.each.collect do |name, num_commits|
     if num_commits > OCCASIONAL_CUTOFF
       nil
-    elsif ! casks_by_author.key?(name)
+    elsif !casks_by_author.key?(name)
       nil
     else
       casks_by_author[name].to_a
@@ -163,7 +160,7 @@ def extant_occasional_cask_count
 end
 
 def historic_nonmaintainer_cask_set
-  @historic_nonmaintainer_cask_set = authors.each.collect do |name, num_commits|
+  @historic_nonmaintainer_cask_set = authors.each.collect do |name, _num_commits|
     if MAINTAINERS.include?(name)
       nil
     else
@@ -203,7 +200,7 @@ end
 def occasional_author_percentage
   # why is it so hard to slice a hash?
   @occasional_author_percentage ||= (100 *
-                                 (1 .. OCCASIONAL_CUTOFF).to_a.collect{ |bin| histogram[bin] }.reduce(:+) /
+                                 (1..OCCASIONAL_CUTOFF).to_a.collect { |bin| histogram[bin] }.reduce(:+) /
                                  authors.length).to_i
 end
 
@@ -227,14 +224,14 @@ end
 
 def print_table
   BINS.each do |bin|
-    plural = (bin % 10) == 0 ? "'s" : ''
-    graph = '.' * ((histogram[bin]/graph_normalization) * graph_width)
+    plural = (bin % 10) == 0 ? "'s" : ""
+    graph = "." * ((histogram[bin] / graph_normalization) * graph_width)
     puts "#{bin}#{plural}\t#{histogram[bin]}\t#{graph}"
   end
 end
 
 def print_footer
-  puts %Q[\n#{occasional_author_percentage}% of contributors are "occasional" (with <= #{OCCASIONAL_CUTOFF} commits)]
+  puts %Q{\n#{occasional_author_percentage}% of contributors are "occasional" (with <= #{OCCASIONAL_CUTOFF} commits)}
   puts "\n#{onetime_author_percentage}% of contributors commit only once"
   puts "\n#{extant_occasional_cask_percentage}% - #{historic_occasional_cask_percentage}% of Casks depend on an occasional contributor"
   puts "\n#{extant_nonmaintainer_cask_percentage}% - #{historic_nonmaintainer_cask_percentage}% of Casks depend on a contributor who is not a maintainer"

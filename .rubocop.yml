@@ -4,16 +4,8 @@ AllCops:
   TargetRubyVersion: 2.0
   Exclude:
     - '**/Casks/**/*'
-    - '**/spec/*.rb'
-    - '**/spec/support/*.rb'
-    - '**/test/*.rb'
-    - '**/test/support/*.rb'
     - 'developer/**/*'
     - 'lib/vendor/**/*'
-    - 'spec/cask/**/*'
-    - 'test/cask/**/*'
-    - 'test/plist/**/*'
-    - 'test/support/shared_examples/**/*'
 
 Metrics/AbcSize:
   Enabled: false

@@ -1,7 +1,7 @@
-require 'test_helper'
+require "test_helper"
 
 describe Plist do
-  it 'parses some hdiutil output okay' do
+  it "parses some hdiutil output okay" do
     hdiutil_output = <<-HDIUTILOUTPUT
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -50,16 +50,16 @@ describe Plist do
 
     parsed = Plist.parse_xml(hdiutil_output)
 
-    parsed.keys.must_equal ['system-entities']
-    parsed['system-entities'].length.must_equal 3
-    parsed['system-entities'].map { |e| e['dev-entry'] }.must_equal %w[
-      /dev/disk3s1
-      /dev/disk3
-      /dev/disk3s2
-    ]
+    parsed.keys.must_equal ["system-entities"]
+    parsed["system-entities"].length.must_equal 3
+    parsed["system-entities"].map { |e| e["dev-entry"] }.must_equal %w[
+                                                                      /dev/disk3s1
+                                                                      /dev/disk3
+                                                                      /dev/disk3s2
+                                                                    ]
   end
 
-  it 'can ignore garbage output before xml starts' do
+  it "can ignore garbage output before xml starts" do
     hdiutil_output = <<-HDIUTILOUTPUT
 Hello there! I am in no way XML am I?!?!
 
@@ -96,11 +96,11 @@ Hopefully <not> explode!
 
     parsed = Plist.parse_xml(hdiutil_output)
 
-    parsed.keys.must_equal ['system-entities']
-    parsed['system-entities'].length.must_equal 1
+    parsed.keys.must_equal ["system-entities"]
+    parsed["system-entities"].length.must_equal 1
   end
 
-  it 'does not choke on empty input' do
-    Plist.parse_xml('').must_equal {}
+  it "does not choke on empty input" do
+    Plist.parse_xml("").must_equal {}
   end
 end

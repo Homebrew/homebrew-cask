@@ -1,13 +1,13 @@
-require 'test_helper'
+require "test_helper"
 
 describe Hbc::Artifact::App do
-  let(:local_caffeine) {
-    Hbc.load('local-caffeine').tap do |cask|
+  let(:local_caffeine) do
+    Hbc.load("local-caffeine").tap do |cask|
       TestHelper.install_without_artifacts(cask)
     end
-  }
+  end
 
-  describe 'install_phase' do
+  describe "install_phase" do
     it "installs the given apps using the proper target directory" do
       cask = local_caffeine
 
@@ -15,31 +15,31 @@ describe Hbc::Artifact::App do
         Hbc::Artifact::App.new(cask).install_phase
       end
 
-      File.ftype(Hbc.appdir.join('Caffeine.app')).must_equal 'directory'
-      File.exist?(cask.staged_path.join('Caffeine.app')).must_equal false
+      File.ftype(Hbc.appdir.join("Caffeine.app")).must_equal "directory"
+      File.exist?(cask.staged_path.join("Caffeine.app")).must_equal false
     end
 
     it "works with an application in a subdir" do
-      subdir_cask = Hbc::Cask.new('subdir') do
-        url TestHelper.local_binary_url('caffeine.zip')
-        homepage 'http://example.com/local-caffeine'
-        version '1.2.3'
-        sha256 '9203c30951f9aab41ac294bbeb1dcef7bed401ff0b353dcb34d68af32ea51853'
-        app 'subdir/Caffeine.app'
+      subdir_cask = Hbc::Cask.new("subdir") do
+        url TestHelper.local_binary_url("caffeine.zip")
+        homepage "http://example.com/local-caffeine"
+        version "1.2.3"
+        sha256 "9203c30951f9aab41ac294bbeb1dcef7bed401ff0b353dcb34d68af32ea51853"
+        app "subdir/Caffeine.app"
       end
 
       begin
         TestHelper.install_without_artifacts(subdir_cask)
 
-        appsubdir = subdir_cask.staged_path.join('subdir').tap(&:mkpath)
-        FileUtils.mv(subdir_cask.staged_path.join('Caffeine.app'), appsubdir)
+        appsubdir = subdir_cask.staged_path.join("subdir").tap(&:mkpath)
+        FileUtils.mv(subdir_cask.staged_path.join("Caffeine.app"), appsubdir)
 
         shutup do
           Hbc::Artifact::App.new(subdir_cask).install_phase
         end
 
-        File.ftype(Hbc.appdir.join('Caffeine.app')).must_equal 'directory'
-        File.exist?(appsubdir.join('Caffeine.app')).must_equal false
+        File.ftype(Hbc.appdir.join("Caffeine.app")).must_equal "directory"
+        File.exist?(appsubdir.join("Caffeine.app")).must_equal false
       ensure
         if defined?(subdir_cask)
           shutup do
@@ -52,65 +52,65 @@ describe Hbc::Artifact::App do
     it "only uses apps when they are specified" do
       cask = local_caffeine
 
-      staged_app_path = cask.staged_path.join('Caffeine.app')
-      staged_app_copy = staged_app_path.sub('Caffeine.app', 'CaffeineAgain.app')
+      staged_app_path = cask.staged_path.join("Caffeine.app")
+      staged_app_copy = staged_app_path.sub("Caffeine.app", "CaffeineAgain.app")
       FileUtils.cp_r staged_app_path, staged_app_copy
 
       shutup do
         Hbc::Artifact::App.new(cask).install_phase
       end
 
-      File.ftype(Hbc.appdir.join('Caffeine.app')).must_equal 'directory'
+      File.ftype(Hbc.appdir.join("Caffeine.app")).must_equal "directory"
       File.exist?(staged_app_path).must_equal false
 
-      File.exist?(Hbc.appdir.join('CaffeineAgain.app')).must_equal false
-      File.exist?(cask.staged_path.join('CaffeineAgain.app')).must_equal true
+      File.exist?(Hbc.appdir.join("CaffeineAgain.app")).must_equal false
+      File.exist?(cask.staged_path.join("CaffeineAgain.app")).must_equal true
     end
 
     describe "when the target already exists" do
-      let(:target_path) {
-        target_path = Hbc.appdir.join('Caffeine.app')
+      let(:target_path) do
+        target_path = Hbc.appdir.join("Caffeine.app")
         target_path.mkpath
         target_path
-      }
+      end
 
       it "avoids clobbering an existing app" do
         cask = local_caffeine
 
-        TestHelper.must_output(self, lambda {
+        TestHelper.must_output(self, lambda do
           Hbc::Artifact::App.new(cask).install_phase
-        }, "==> It seems there is already an App at '#{target_path}'; not moving.")
+        end, "==> It seems there is already an App at '#{target_path}'; not moving.")
 
-        source_path = cask.staged_path.join('Caffeine.app')
+        source_path = cask.staged_path.join("Caffeine.app")
 
         File.identical?(source_path, target_path).must_equal false
 
-        contents_path = target_path.join('Contents/Info.plist')
+        contents_path = target_path.join("Contents/Info.plist")
         File.exist?(contents_path).must_equal false
       end
 
       describe "given the force option" do
-        let(:install_phase) {
-          lambda { |given_options = {}|
+        let(:install_phase) do
+          lambda do |given_options = {}|
             options = { force: true }.merge(given_options)
             Hbc::Artifact::App.new(local_caffeine, options).install_phase
-          }
-        }
+          end
+        end
 
-        let(:chmod_cmd) {
-          ['/bin/chmod', '-R', '--', 'u+rwx', target_path]
-        }
+        let(:chmod_cmd) do
+          ["/bin/chmod", "-R", "--", "u+rwx", target_path]
+        end
 
-        let(:chmod_n_cmd) {
-          ['/bin/chmod', '-R', '-N', target_path]
-        }
+        let(:chmod_n_cmd) do
+          ["/bin/chmod", "-R", "-N", target_path]
+        end
 
-        let(:chflags_cmd) {
-          ['/usr/bin/chflags', '-R', '--', '000', target_path]
-        }
+        let(:chflags_cmd) do
+          ["/usr/bin/chflags", "-R", "--", "000", target_path]
+        end
 
         before do
-          Hbc::Utils.stubs(current_user: 'fake_user')
+          Hbc::Utils.stubs(current_user: "fake_user")
         end
 
         describe "target is both writable and user-owned" do
@@ -118,27 +118,27 @@ describe Hbc::Artifact::App do
             cask = local_caffeine
 
             expected = [
-              "==> It seems there is already an App at '#{target_path}'; overwriting.",
-              "==> Removing App: '#{target_path}'",
-              "==> Moving App 'Caffeine.app' to '#{target_path}'"
-            ]
+                         "==> It seems there is already an App at '#{target_path}'; overwriting.",
+                         "==> Removing App: '#{target_path}'",
+                         "==> Moving App 'Caffeine.app' to '#{target_path}'",
+                       ]
             TestHelper.must_output(self, install_phase,
-              expected.join("\n"))
+                                   expected.join("\n"))
 
-            source_path = cask.staged_path.join('Caffeine.app')
+            source_path = cask.staged_path.join("Caffeine.app")
 
             File.exist?(source_path).must_equal false
-            File.ftype(target_path).must_equal 'directory'
+            File.ftype(target_path).must_equal "directory"
 
-            contents_path = target_path.join('Contents/Info.plist')
+            contents_path = target_path.join("Contents/Info.plist")
             File.exist?(contents_path).must_equal true
           end
         end
 
         describe "target is user-owned but contains read-only files" do
           before do
-            system '/usr/bin/touch', '--', "#{ target_path }/foo"
-            system '/bin/chmod', '--', '0555', target_path
+            system "/usr/bin/touch", "--", "#{target_path}/foo"
+            system "/bin/chmod", "--", "0555", target_path
           end
 
           it "tries to make the target world-writable" do
@@ -154,38 +154,39 @@ describe Hbc::Artifact::App do
             cask = local_caffeine
 
             expected = [
-              "==> It seems there is already an App at '#{target_path}'; overwriting.",
-              "==> Removing App: '#{target_path}'",
-              "==> Moving App 'Caffeine.app' to '#{target_path}'"
-            ]
+                         "==> It seems there is already an App at '#{target_path}'; overwriting.",
+                         "==> Removing App: '#{target_path}'",
+                         "==> Moving App 'Caffeine.app' to '#{target_path}'",
+                       ]
             TestHelper.must_output(self, install_phase,
-              expected.join("\n"))
+                                   expected.join("\n"))
 
-            source_path = cask.staged_path.join('Caffeine.app')
+            source_path = cask.staged_path.join("Caffeine.app")
 
             File.exist?(source_path).must_equal false
-            File.ftype(target_path).must_equal 'directory'
+            File.ftype(target_path).must_equal "directory"
 
-            contents_path = target_path.join('Contents/Info.plist')
+            contents_path = target_path.join("Contents/Info.plist")
             File.exist?(contents_path).must_equal true
           end
 
           after do
-            system '/bin/chmod', '--', '0755', target_path
+            system "/bin/chmod", "--", "0755", target_path
           end
         end
       end
     end
 
     describe "when the target is a broken symlink" do
-      let(:target_path) {
-        Hbc.appdir.join('Caffeine.app')
-      }
+      let(:target_path) do
+        Hbc.appdir.join("Caffeine.app")
+      end
 
-      let(:deleted_path) {
+      let(:deleted_path) do
         local_caffeine.staged_path.join(
-          'Deleted.app')
-      }
+          "Deleted.app"
+        )
+      end
 
       before do
         deleted_path.mkdir
@@ -195,38 +196,39 @@ describe Hbc::Artifact::App do
 
       it "leaves the target alone" do
         cask = local_caffeine
-        TestHelper.must_output(self, lambda {
+        TestHelper.must_output(self, lambda do
           Hbc::Artifact::App.new(cask).install_phase
-        }, "==> It seems there is already an App at '#{target_path}'; not moving.")
+        end, "==> It seems there is already an App at '#{target_path}'; not moving.")
 
         File.symlink?(target_path).must_equal true
       end
 
       describe "given the force option" do
-        let(:install_phase) {
-          lambda {
+        let(:install_phase) do
+          lambda do
             Hbc::Artifact::App.new(
-              local_caffeine, force: true).install_phase
-          }
-        }
+              local_caffeine, force: true
+            ).install_phase
+          end
+        end
 
         it "overwrites the existing app" do
           cask = local_caffeine
 
           expected = [
-            "==> It seems there is already an App at '#{target_path}'; overwriting.",
-            "==> Removing App: '#{target_path}'",
-            "==> Moving App 'Caffeine.app' to '#{target_path}'"
-          ]
+                       "==> It seems there is already an App at '#{target_path}'; overwriting.",
+                       "==> Removing App: '#{target_path}'",
+                       "==> Moving App 'Caffeine.app' to '#{target_path}'",
+                     ]
           TestHelper.must_output(self, install_phase,
-            expected.join("\n"))
+                                 expected.join("\n"))
 
-          source_path = cask.staged_path.join('Caffeine.app')
+          source_path = cask.staged_path.join("Caffeine.app")
 
           File.exist?(source_path).must_equal false
-          File.ftype(target_path).must_equal 'directory'
+          File.ftype(target_path).must_equal "directory"
 
-          contents_path = target_path.join('Contents/Info.plist')
+          contents_path = target_path.join("Contents/Info.plist")
           File.exist?(contents_path).must_equal true
         end
       end
@@ -234,7 +236,7 @@ describe Hbc::Artifact::App do
 
     it "gives a warning if the source doesn't exist" do
       cask = local_caffeine
-      staged_app_path = cask.staged_path.join('Caffeine.app')
+      staged_app_path = cask.staged_path.join("Caffeine.app")
       staged_app_path.rmtree
 
       installation = -> { Hbc::Artifact::App.new(cask).install_phase }
@@ -254,7 +256,7 @@ describe Hbc::Artifact::App do
         Hbc::Artifact::App.new(cask).uninstall_phase
       end
 
-      app_path = Hbc.appdir.join('Caffeine.app')
+      app_path = Hbc.appdir.join("Caffeine.app")
       File.exist?(app_path).must_equal false
     end
   end
@@ -265,7 +267,7 @@ describe Hbc::Artifact::App do
 
       description = Hbc::Artifact::App.new(cask).summary[:english_description]
 
-      description.must_equal 'Apps managed by brew-cask:'
+      description.must_equal "Apps managed by brew-cask:"
     end
 
     describe "app is correctly installed" do
@@ -274,7 +276,7 @@ describe Hbc::Artifact::App do
         shutup { Hbc::Artifact::App.new(cask).install_phase }
 
         contents = Hbc::Artifact::App.new(cask).summary[:contents]
-        app_path = Hbc.appdir.join('Caffeine.app')
+        app_path = Hbc.appdir.join("Caffeine.app")
 
         contents.must_equal ["'#{app_path}'"]
       end
@@ -285,10 +287,10 @@ describe Hbc::Artifact::App do
         cask = local_caffeine
 
         contents = Hbc::Artifact::App.new(cask).summary[:contents]
-        app_path = Hbc.appdir.join('Caffeine.app')
+        app_path = Hbc.appdir.join("Caffeine.app")
 
         contents.size.must_equal 1
-        contents[0].must_match(/.*Missing App.*: '#{app_path}'/)
+        contents[0].must_match(%r{.*Missing App.*: '#{app_path}'})
       end
     end
   end

@@ -1,9 +1,9 @@
-require 'spec_helper'
+require "spec_helper"
 
 describe Hbc::SystemCommand do
   describe "when the exit code is 0" do
     describe "its result" do
-      subject { described_class.run('/usr/bin/true') }
+      subject { described_class.run("/usr/bin/true") }
 
       it { is_expected.to be_a_success }
       its(:exit_status) { is_expected.to eq(0) }
@@ -11,13 +11,13 @@ describe Hbc::SystemCommand do
   end
 
   describe "when the exit code is 1" do
-    let(:command) { '/usr/bin/false' }
+    let(:command) { "/usr/bin/false" }
 
     describe "and the command must succeed" do
       it "throws an error" do
-        expect {
+        expect do
           described_class.run!(command)
-        }.to raise_error(Hbc::CaskCommandFailedError)
+        end.to raise_error(Hbc::CaskCommandFailedError)
       end
     end
 
@@ -32,10 +32,10 @@ describe Hbc::SystemCommand do
   end
 
   describe "given a pathname" do
-    let(:command) { '/bin/ls' }
+    let(:command) { "/bin/ls" }
     let(:path)    { Pathname(Dir.mktmpdir) }
 
-    before { FileUtils.touch(path.join('somefile')) }
+    before { FileUtils.touch(path.join("somefile")) }
 
     describe "its result" do
       subject { described_class.run(command, args: [path]) }
@@ -46,12 +46,12 @@ describe Hbc::SystemCommand do
   end
 
   describe "with both STDOUT and STDERR output from upstream" do
-    let(:command) { '/bin/bash' }
+    let(:command) { "/bin/bash" }
     let(:options) do
       { args: [
-        '-c',
-        'for i in $(seq 1 2 5); do echo $i; echo $(($i + 1)) >&2; done'
-      ] }
+                "-c",
+                "for i in $(seq 1 2 5); do echo $i; echo $(($i + 1)) >&2; done",
+              ] }
     end
 
     shared_examples "it returns '1 2 3 4 5 6'" do
@@ -66,9 +66,10 @@ describe Hbc::SystemCommand do
 
     describe "with default options" do
       it "echoes only STDERR" do
-        expected = [2, 4, 6].map { |i| "==> #{ i }\n" }.join('')
-        expect { described_class.run(command, options)
-          }.to output(expected).to_stdout
+        expected = [2, 4, 6].map { |i| "==> #{i}\n" }.join("")
+        expect do
+          described_class.run(command, options)
+        end.to output(expected).to_stdout
       end
 
       include_examples("it returns '1 2 3 4 5 6'")
@@ -79,8 +80,9 @@ describe Hbc::SystemCommand do
 
       it "echoes both STDOUT and STDERR" do
         (1..6).each do |i|
-          expect { described_class.run(command, options)
-            }.to output(/==> #{ i }/).to_stdout
+          expect do
+            described_class.run(command, options)
+          end.to output(%r{==> #{ i }}).to_stdout
         end
       end
 
@@ -91,8 +93,9 @@ describe Hbc::SystemCommand do
       before { options.merge!(print_stderr: false) }
 
       it "echoes nothing" do
-        expect { described_class.run(command, options)
-          }.to output('').to_stdout
+        expect do
+          described_class.run(command, options)
+        end.to output("").to_stdout
       end
 
       include_examples("it returns '1 2 3 4 5 6'")
@@ -104,9 +107,10 @@ describe Hbc::SystemCommand do
       end
 
       it "echoes only STDOUT" do
-        expected = [1, 3, 5].map { |i| "==> #{ i }\n" }.join('')
-        expect { described_class.run(command, options)
-          }.to output(expected).to_stdout
+        expected = [1, 3, 5].map { |i| "==> #{i}\n" }.join("")
+        expect do
+          described_class.run(command, options)
+        end.to output(expected).to_stdout
       end
 
       include_examples("it returns '1 2 3 4 5 6'")
@@ -114,18 +118,18 @@ describe Hbc::SystemCommand do
   end
 
   describe "with a very long STDERR output" do
-    let(:command) { '/bin/bash' }
+    let(:command) { "/bin/bash" }
     let(:options) do
       { args: [
-        '-c',
-        'for i in $(seq 1 2 100000); do echo $i; echo $(($i + 1)) >&2; done'
-      ] }
+                "-c",
+                "for i in $(seq 1 2 100000); do echo $i; echo $(($i + 1)) >&2; done",
+              ] }
     end
 
     it "returns without deadlocking" do
-      wait(10).for {
+      wait(10).for do
         shutup { described_class.run(command, options) }
-      }.to be_a_success
+      end.to be_a_success
     end
   end
 end
