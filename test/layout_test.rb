@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 describe "Repo layout" do
   project_root = Pathname.new(File.expand_path("#{File.dirname(__FILE__)}/../"))
@@ -10,53 +10,53 @@ describe "Repo layout" do
   # dot dirs are always a project of Dir.entries
   # other files are items that the developer hopefully has gitignored
   IGNORE_FILES = %w[
-                     .
-                     ..
-                     .DS_Store
-                     .bundle
-                     .rubocop.yml
-                     .rubocop_todo.yml
-                     .ruby-version
-                     coverage
-                   ]
+                   .
+                   ..
+                   .DS_Store
+                   .bundle
+                   .rubocop.yml
+                   .rubocop_todo.yml
+                   .ruby-version
+                   coverage
+                 ].freeze
 
   # the developer has hopefully gitignored these
   IGNORE_REGEXPS = [
                      %r{~$}, # emacs
-                   ]
+                   ].freeze
 
   TOPLEVEL_DIRS = %w[
-                      .git
-                      .github
-                      Casks
-                      Formula
-                      ci
-                      cmd
-                      developer
-                      doc
-                      lib
-                      man
-                      spec
-                      test
-                    ]
+                    .git
+                    .github
+                    Casks
+                    Formula
+                    ci
+                    cmd
+                    developer
+                    doc
+                    lib
+                    man
+                    spec
+                    test
+                  ].freeze
 
   TOPLEVEL_FILES = %w[
-                       .editorconfig
-                       .gitattributes
-                       .gitignore
-                       .rspec
-                       .rubocop.yml
-                       .simplecov
-                       .travis.yml
-                       CONDUCT.md
-                       CONTRIBUTING.md
-                       Gemfile
-                       Gemfile.lock
-                       LICENSE
-                       README.md
-                       Rakefile
-                       USAGE.md
-                     ]
+                     .editorconfig
+                     .gitattributes
+                     .gitignore
+                     .rspec
+                     .rubocop.yml
+                     .simplecov
+                     .travis.yml
+                     CONDUCT.md
+                     CONTRIBUTING.md
+                     Gemfile
+                     Gemfile.lock
+                     LICENSE
+                     README.md
+                     Rakefile
+                     USAGE.md
+                   ].freeze
 
   describe "toplevel dir" do
     it "finds some files at the top level" do
@@ -75,12 +75,12 @@ describe "Repo layout" do
 
   describe "Casks dir" do
     it "finds some files in the Casks dir" do
-      entries = Dir.entries(project_root.join('Casks'))
+      entries = Dir.entries(project_root.join("Casks"))
       entries.length.must_be :>, 0
     end
 
     it "only finds .rb files in the Casks dir" do
-      entries = Dir.entries(project_root.join('Casks')) - IGNORE_FILES
+      entries = Dir.entries(project_root.join("Casks")) - IGNORE_FILES
       IGNORE_REGEXPS.each do |regexp|
         entries.reject! { |elt| elt.match(regexp) }
       end

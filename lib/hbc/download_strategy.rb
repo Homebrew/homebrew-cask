@@ -39,9 +39,9 @@ class Hbc::HbVCSDownloadStrategy < Hbc::AbstractDownloadStrategy
   end
 
   def extract_ref
-    key = REF_TYPES.find do |type|
+    key = REF_TYPES.find { |type|
       uri_object.respond_to?(type) && uri_object.send(type)
-    end
+    }
     [key, key ? uri_object.send(key) : nil]
   end
 

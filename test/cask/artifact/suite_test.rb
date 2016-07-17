@@ -1,15 +1,15 @@
-require 'test_helper'
+require "test_helper"
 
 describe Hbc::Artifact::Suite do
   let(:cask) {
-    Hbc.load('with-suite').tap do |cask|
+    Hbc.load("with-suite").tap do |cask|
       TestHelper.install_without_artifacts(cask)
     end
   }
   let(:expected_path) {
-    Hbc.appdir.join('caffeine_suite')
+    Hbc.appdir.join("caffeine_suite")
   }
-  let(:source_path) { cask.staged_path.join('caffeine_suite') }
+  let(:source_path) { cask.staged_path.join("caffeine_suite") }
 
   it "moves the suite to the proper directory" do
     shutup do
@@ -26,7 +26,7 @@ describe Hbc::Artifact::Suite do
       Hbc::Artifact::Suite.new(cask).install_phase
     end
 
-    expected_path.join('Caffeine.app').must_be :exist?
+    expected_path.join("Caffeine.app").must_be :exist?
   end
 
   it "avoids clobbering an existing suite by moving over it" do

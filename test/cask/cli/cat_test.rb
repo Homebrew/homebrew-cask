@@ -1,7 +1,7 @@
-require 'test_helper'
+require "test_helper"
 
 describe Hbc::CLI::Cat do
-  describe 'given a basic Cask' do
+  describe "given a basic Cask" do
     before do
       @expected_output = <<-CLIOUTPUT.undent
         test_cask 'basic-cask' do
@@ -16,43 +16,43 @@ describe Hbc::CLI::Cat do
       CLIOUTPUT
     end
 
-    it 'displays the Cask file content about the specified Cask' do
+    it "displays the Cask file content about the specified Cask" do
       lambda {
-        Hbc::CLI::Cat.run('basic-cask')
+        Hbc::CLI::Cat.run("basic-cask")
       }.must_output(@expected_output)
     end
 
-    it 'throws away additional Cask arguments and uses the first' do
+    it "throws away additional Cask arguments and uses the first" do
       lambda {
-        Hbc::CLI::Cat.run('basic-cask', 'local-caffeine')
+        Hbc::CLI::Cat.run("basic-cask", "local-caffeine")
       }.must_output(@expected_output)
     end
 
-    it 'throws away stray options' do
+    it "throws away stray options" do
       lambda {
-        Hbc::CLI::Cat.run('--notavalidoption', 'basic-cask')
+        Hbc::CLI::Cat.run("--notavalidoption", "basic-cask")
       }.must_output(@expected_output)
     end
   end
 
-  it 'raises an exception when the Cask does not exist' do
+  it "raises an exception when the Cask does not exist" do
     lambda {
-      Hbc::CLI::Cat.run('notacask')
+      Hbc::CLI::Cat.run("notacask")
     }.must_raise Hbc::CaskUnavailableError
   end
 
-  describe 'when no Cask is specified' do
-    it 'raises an exception' do
+  describe "when no Cask is specified" do
+    it "raises an exception" do
       lambda {
-        Hbc::CLI::Cat.run()
+        Hbc::CLI::Cat.run
       }.must_raise Hbc::CaskUnspecifiedError
     end
   end
 
-  describe 'when no Cask is specified, but an invalid option' do
-    it 'raises an exception' do
+  describe "when no Cask is specified, but an invalid option" do
+    it "raises an exception" do
       lambda {
-        Hbc::CLI::Cat.run('--notavalidoption')
+        Hbc::CLI::Cat.run("--notavalidoption")
       }.must_raise Hbc::CaskUnspecifiedError
     end
   end
