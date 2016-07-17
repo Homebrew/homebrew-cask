@@ -1,6 +1,9 @@
 class Hbc::Container::Dmg < Hbc::Container::Base
   def self.me?(criteria)
-    !criteria.imageinfo.empty?
+    !criteria.command.run("/usr/bin/hdiutil",
+                          # realpath is a failsafe against unusual filenames
+                          args:         ["imageinfo", Pathname.new(criteria.path).realpath],
+                          print_stderr: false).stdout.empty?
   end
 
   attr_reader :mounts
@@ -16,7 +19,7 @@ class Hbc::Container::Dmg < Hbc::Container::Base
       @command.run("/usr/bin/ditto",
                    # TODO: per https://github.com/caskroom/homebrew-cask/issues/6382, ditto
                    #       complains to stderr about unreadable .Trashes directories, so all
-                   #       stderr output is silenced for now.  But better solutions would be
+                   #       stderr output is silenced for now. But better solutions would be
                    #       - use the --bom option to ditto to selectively avoid certain files
                    #         - .Trashes
                    #         - symlinks to Applications

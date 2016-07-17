@@ -17,6 +17,7 @@ require "hbc/container/tar"
 require "hbc/container/ttf"
 require "hbc/container/rar"
 require "hbc/container/xar"
+require "hbc/container/xz"
 require "hbc/container/zip"
 
 class Hbc::Container
@@ -30,11 +31,12 @@ class Hbc::Container
       Hbc::Container::Dmg,
       Hbc::Container::SevenZip,
       Hbc::Container::Sit,
-      Hbc::Container::Tar, # or compressed tar
       Hbc::Container::Rar,
       Hbc::Container::Zip,
-      Hbc::Container::Bzip2,
-      Hbc::Container::Gzip, # pure gzip, not tar/gzip
+      Hbc::Container::Tar,   # or compressed tar (bzip2/gzip/lzma/xz)
+      Hbc::Container::Bzip2, # pure bzip2
+      Hbc::Container::Gzip,  # pure gzip
+      Hbc::Container::Xz,    # pure xz
       Hbc::Container::Xar,
     ]
     # for explicit use only (never autodetected):
