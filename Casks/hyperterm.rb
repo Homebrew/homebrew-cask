@@ -1,11 +1,11 @@
 cask 'hyperterm' do
-  version '0.4.5'
-  sha256 '06b9ebf6dbc8c3cc277b3fede2a7945778edce950586bbd87745d5d9a370601a'
+  version '0.6.0'
+  sha256 '279a31f15e40b812b50bb9e780699bea4561d069569a848d14ca7a082407f80c'
 
   # github.com/zeit/hyperterm was verified as official when first introduced to the cask
   url "https://github.com/zeit/hyperterm/releases/download/#{version}/hyperterm-macos-x64-#{version}.zip"
   appcast 'https://github.com/zeit/hyperterm/releases.atom',
-          checkpoint: 'b20d3078e20ad18ec51c9edb1fc35a6c283d08787a2f6728d0eed77c53545a5b'
+          checkpoint: 'aed09c86c110b7a6c917da84c0add9ca600f6be11d76690f11476635e07cd7e4'
   name 'HyperTerm'
   homepage 'https://hyperterm.org/'
   license :mit
