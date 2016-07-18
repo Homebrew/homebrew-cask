@@ -7,7 +7,7 @@ cask 'flash' do
   appcast 'http://fpdownload2.macromedia.com/get/flashplayer/update/current/xml/version_en_mac_pl.xml',
           checkpoint: '54401f2d7472607f78e82281850b6285d7c711865009bc717e21bb4611b5fe3f'
   name 'Adobe Flash Player'
-  homepage 'https://get.adobe.com/flashplayer'
+  homepage 'https://get.adobe.com/nl/flashplayer/'
   license :gratis
 
   pkg 'Install Adobe Flash Player.app/Contents/Resources/Adobe Flash Player.pkg'
