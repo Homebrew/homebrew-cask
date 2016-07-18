@@ -6,7 +6,7 @@ cask 'hopper-disassembler' do
   appcast "http://www.hopperapp.com/HopperWeb/appcast_v#{version.major}.php",
           checkpoint: 'd24be268fb583328fac49d963e6ae4f93bc92c0ce49a744757752bba82352489'
   name 'Hopper Disassembler'
-  homepage 'http://www.hopperapp.com/'
+  homepage 'https://www.hopperapp.com/'
   license :commercial
 
   auto_updates true
