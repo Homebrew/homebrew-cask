@@ -22,7 +22,7 @@ cask 'graphviz' do
   end
 
   name 'Graphviz'
-  homepage 'http://www.graphviz.org/'
+  homepage ''
   license :eclipse
 
   depends_on macos: '>= :leopard'
