@@ -60,7 +60,7 @@ With a bit of work, you can create a Cask for it. [This document](doc/developmen
 ## Style guide
 
 Some style guidelines:
-    
+
 * All Casks and code should be indented using two spaces (never tabs)
 * There should not be any extraneous comments - the only comments that should be used are the ones explicitly defined in the [Cask Language Reference](doc/cask_language_reference)
 * The stanza order and position of newlines is important to make things easier (See [Stanza order](doc/cask_language_reference/#stanza-order))
