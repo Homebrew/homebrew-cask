@@ -57,16 +57,19 @@ class Hbc::Container::Dmg < Hbc::Container::Base
       # realpath is a failsafe against unusual filenames
       mountpath = Pathname.new(mount).realpath
       next unless mountpath.exist?
-      @command.run("/usr/sbin/diskutil",
-                   args:         ["eject", mountpath],
-                   print_stderr: false)
-      next unless mountpath.exist?
-      sleep 1
-      @command.run("/usr/sbin/diskutil",
-                   args:         ["eject", mountpath],
-                   print_stderr: false)
-      next unless mountpath.exist?
-      raise Hbc::CaskError, "Failed to eject #{mountpath}"
+
+      begin
+        tries ||= 2
+        @command.run("/usr/sbin/diskutil",
+                     args:         ["eject", mountpath],
+                     print_stderr: false)
+
+        raise Hbc::CaskError, "Failed to eject #{mountpath}" if mountpath.exist?
+      rescue Hbc::CaskError => e
+        raise e if (tries -= 1).zero?
+        sleep 1
+        retry
+      end
     end
   end
 end
