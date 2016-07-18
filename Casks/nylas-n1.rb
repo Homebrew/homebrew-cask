@@ -7,7 +7,7 @@ cask 'nylas-n1' do
   appcast 'https://edgehill.nylas.com/update-check?platform=darwin&arch=64',
           checkpoint: '2c50861ecacabfac6e9bcd47940dd523da2f94825466f1ff06f4f0d794c81264'
   name 'Nylas N1'
-  homepage 'https://www.nylas.com/n1'
+  homepage 'https://www.nylas.com/'
   license :gpl
 
   auto_updates true
