@@ -1,3 +1,5 @@
+require "tempfile"
+
 class Hbc::Container::Dmg < Hbc::Container::Base
   def self.me?(criteria)
     !criteria.command.run("/usr/bin/hdiutil",
@@ -16,17 +18,17 @@ class Hbc::Container::Dmg < Hbc::Container::Base
     mount!
     assert_mounts_found
     @mounts.each do |mount|
-      @command.run("/usr/bin/ditto",
-                   # TODO: per https://github.com/caskroom/homebrew-cask/issues/6382, ditto
-                   #       complains to stderr about unreadable .Trashes directories, so all
-                   #       stderr output is silenced for now. But better solutions would be
-                   #       - use the --bom option to ditto to selectively avoid certain files
-                   #         - .Trashes
-                   #         - symlinks to Applications
-                   #       - or support some type of text filter to be passed to
-                   #         :print_stderr instead of true/false
-                   print_stderr: false,
-                   args:         ["--", mount, @cask.staged_path])
+      Tempfile.open(["", ".bom"]) do |bomfile|
+        bomfile.close
+
+        Tempfile.open(["", ".list"]) do |filelist|
+          filelist.write(bom_filelist_from_path(mount))
+          filelist.close
+
+          @command.run("/usr/bin/mkbom", args: ["-s", "-i", filelist.path, "--", bomfile.path])
+          @command.run("/usr/bin/ditto", args: ["--bom", bomfile.path, "--", mount, @cask.staged_path])
+        end
+      end
     end
   ensure
     eject!
@@ -39,17 +41,6 @@ class Hbc::Container::Dmg < Hbc::Container::Base
                          input: %w[y])
                     .plist
     @mounts = mounts_from_plist(plist)
-  end
-
-  def mounts_from_plist(plist)
-    return [] unless plist.respond_to?(:fetch)
-    plist.fetch("system-entities", []).map { |entity|
-      entity["mount-point"]
-    }.compact
-  end
-
-  def assert_mounts_found
-    raise Hbc::CaskError, "No mounts found in '#{@path}'; perhaps it is a bad DMG?" if @mounts.empty?
   end
 
   def eject!
@@ -71,5 +62,50 @@ class Hbc::Container::Dmg < Hbc::Container::Base
         retry
       end
     end
+  end
+
+  private
+
+  def bom_filelist_from_path(mount)
+    mountpath = Pathname.new(mount).realpath
+
+    paths = Dir.glob(mountpath.join("**", "*"), File::FNM_DOTMATCH)
+               .map { |path| Pathname.new(path).relative_path_from(mountpath) }
+
+    paths = paths.reject { |path|
+      path = mountpath.join(path.sub(%r{/.*}, ""))
+
+      # unnecessary DMG metadata
+      %w[
+        .background
+        .com.apple.timemachine.donotpresent
+        .DocumentRevisions-V100
+        .DS_Store
+        .fseventsd
+        .Spotlight-V100
+        .TemporaryItems
+        .Trashes
+        .VolumeIcon.icns
+      ].include?(path.basename.to_s) ||
+
+        # symlinks to system directories (commonly to /Applications)
+        (path.symlink? &&
+         Hbc::MacOS::SYSTEM_DIRS.include?(Pathname.new(File.readlink(path))))
+    }
+
+    paths.map(&:to_s)
+         .map { |path| path.prepend(path == "." ? "" : "./").concat("\n") }
+         .join
+  end
+
+  def mounts_from_plist(plist)
+    return [] unless plist.respond_to?(:fetch)
+    plist.fetch("system-entities", []).map { |entity|
+      entity["mount-point"]
+    }.compact
+  end
+
+  def assert_mounts_found
+    raise Hbc::CaskError, "No mounts found in '#{@path}'; perhaps it is a bad DMG?" if @mounts.empty?
   end
 end
