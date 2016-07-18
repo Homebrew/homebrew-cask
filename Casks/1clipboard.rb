@@ -4,8 +4,8 @@ cask '1clipboard' do
 
   url 'http://1clipboard.io/download/darwin/1Clipboard.dmg'
   name '1Clipboard'
-  homepage 'https://1clipboard.io/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'http://1clipboard.io/'
+  license :mit
 
   depends_on macos: '>= :mountain_lion'
 
