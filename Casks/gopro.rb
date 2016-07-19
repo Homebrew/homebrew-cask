@@ -4,7 +4,7 @@ cask 'gopro' do
 
   url "https://software.gopro.com/Mac/GoPro-MacInstaller-#{version}.dmg"
   name 'GoPro Desktop'
-  homepage 'http://shop.gopro.com/softwareandapp/gopro-app-%7C-desktop/GoPro-Desktop-App.html'
+  homepage 'https://shop.gopro.com/EMEA/softwareandapp/gopro-app-%7C-desktop/GoPro-Desktop-App.html'
   license :commercial
 
   conflicts_with cask: 'gopro-studio'
