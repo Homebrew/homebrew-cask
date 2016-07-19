@@ -7,7 +7,7 @@ cask 'tickeys' do
   appcast 'https://github.com/yingDev/Tickeys/releases.atom',
           checkpoint: 'f117f9e2ff4e81efc166189e65f61d9fc89f4cb010fff7aa0cbf7859cf63174b'
   name 'Tickeys'
-  homepage 'http://www.yingdev.com/projects/tickeys'
+  homepage ''
   license :mit
 
   app 'Tickeys.app'
