@@ -4,7 +4,7 @@ cask 'plain-clip' do
 
   url 'https://www.bluem.net/files/Plain-Clip.dmg'
   name 'Plain Clip'
-  homepage 'http://www.bluem.net/en/mac/plain-clip/'
+  homepage 'https://www.bluem.net/en/mac/plain-clip'
   license :gratis
 
   app 'Plain Clip.app'
