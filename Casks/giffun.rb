@@ -5,7 +5,7 @@ cask 'giffun' do
   # dl.dropbox.com/u/2000860 was verified as official when first introduced to the cask
   url "https://dl.dropbox.com/u/2000860/GIFfun-#{version}.dmg"
   name 'GIFfun'
-  homepage 'https://www.stone.com/GIFfun/'
+  homepage 'http://www.stone.com/GIFfun/'
   license :oss
 
   app 'GIFfun.app'
