@@ -1,12 +1,12 @@
-require 'test_helper'
+require "test_helper"
 
 describe Hbc::Artifact::PostflightBlock do
-  describe 'install_phase' do
-    it 'calls the specified block after installing, passing a Cask mini-dsl' do
+  describe "install_phase" do
+    it "calls the specified block after installing, passing a Cask mini-dsl" do
       called      = false
       yielded_arg = nil
 
-      cask = Hbc::Cask.new('with-postflight') do
+      cask = Hbc::Cask.new("with-postflight") do
         postflight do |c|
           called = true
           yielded_arg = c
@@ -20,12 +20,12 @@ describe Hbc::Artifact::PostflightBlock do
     end
   end
 
-  describe 'uninstall_phase' do
-    it 'calls the specified block after uninstalling, passing a Cask mini-dsl' do
+  describe "uninstall_phase" do
+    it "calls the specified block after uninstalling, passing a Cask mini-dsl" do
       called      = false
       yielded_arg = nil
 
-      cask = Hbc::Cask.new('with-uninstall-postflight') do
+      cask = Hbc::Cask.new("with-uninstall-postflight") do
         uninstall_postflight do |c|
           called = true
           yielded_arg = c

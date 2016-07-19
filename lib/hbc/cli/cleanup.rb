@@ -42,7 +42,7 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
   end
 
   def cache_incompletes
-    cache_symlinks.collect do |symlink|
+    cache_symlinks.collect { |symlink|
       incomplete_file = Dir.chdir cache_location do
         f = symlink.readlink
         f = f.realpath if f.exist?
@@ -51,11 +51,11 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
       incomplete_file = nil unless incomplete_file.exist?
       incomplete_file = nil if outdated_only && incomplete_file && incomplete_file.stat.mtime > OUTDATED_TIMESTAMP
       incomplete_file
-    end.compact
+    }.compact
   end
 
   def cache_completes
-    completes = cache_symlinks.collect do |symlink|
+    completes = cache_symlinks.collect { |symlink|
       file = Dir.chdir cache_location do
         f = symlink.readlink
         f.exist? ? f.realpath : f
@@ -66,7 +66,7 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
         symlink = nil
       end
       [symlink, file]
-    end
+    }
     completes
       .flatten
       .compact

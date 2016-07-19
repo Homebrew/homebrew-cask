@@ -45,7 +45,10 @@ class Hbc::CLI::InternalAuditModifiedCasks < Hbc::CLI::InternalUseBase
   end
 
   def run
-    at_exit { cleanup }
+    at_exit do
+      cleanup
+    end
+
     Dir.chdir git_root do
       modified_cask_files.zip(modified_casks).each do |cask_file, cask|
         audit(cask, cask_file)

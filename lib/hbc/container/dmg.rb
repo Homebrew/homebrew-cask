@@ -40,9 +40,9 @@ class Hbc::Container::Dmg < Hbc::Container::Base
 
   def mounts_from_plist(plist)
     return [] unless plist.respond_to?(:fetch)
-    plist.fetch("system-entities", []).map do |entity|
+    plist.fetch("system-entities", []).map { |entity|
       entity["mount-point"]
-    end.compact
+    }.compact
   end
 
   def assert_mounts_found

@@ -30,9 +30,9 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
   end
 
   def self.remove_relative_path_strings(action, path_strings)
-    relative = path_strings.map do |path_string|
+    relative = path_strings.map { |path_string|
       path_string if %r{/\.\.(?:/|\Z)}.match(path_string) || !%r{\A/}.match(path_string)
-    end.compact
+    }.compact
     relative.each do |path_string|
       opoo "Skipping #{action} for relative path #{path_string}"
     end
@@ -40,9 +40,9 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
   end
 
   def self.remove_undeletable_path_strings(action, path_strings)
-    undeletable = path_strings.map do |path_string|
+    undeletable = path_strings.map { |path_string|
       path_string if Hbc::MacOS.undeletable?(Pathname.new(path_string))
-    end.compact
+    }.compact
     undeletable.each do |path_string|
       opoo "Skipping #{action} for undeletable path #{path_string}"
     end

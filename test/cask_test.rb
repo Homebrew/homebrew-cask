@@ -1,32 +1,32 @@
-require 'test_helper'
+require "test_helper"
 
 describe "Cask" do
   describe "load" do
     it "returns an instance of the Cask for the given token" do
       c = Hbc.load("adium")
       c.must_be_kind_of(Hbc::Cask)
-      c.token.must_equal('adium')
+      c.token.must_equal("adium")
     end
 
     it "returns an instance of the Cask from a specific file location" do
-      location = File.expand_path('./Casks/dia.rb')
+      location = File.expand_path("./Casks/dia.rb")
       c = Hbc.load(location)
       c.must_be_kind_of(Hbc::Cask)
-      c.token.must_equal('dia')
+      c.token.must_equal("dia")
     end
 
     it "returns an instance of the Cask from a url" do
-      url = "file://" + File.expand_path('./Casks/dia.rb')
+      url = "file://" + File.expand_path("./Casks/dia.rb")
       c = shutup do
         Hbc.load(url)
       end
       c.must_be_kind_of(Hbc::Cask)
-      c.token.must_equal('dia')
+      c.token.must_equal("dia")
     end
 
     it "raises an error when failing to download a Cask from a url" do
       lambda {
-        url = "file://" + File.expand_path('./Casks/notacask.rb')
+        url = "file://" + File.expand_path("./Casks/notacask.rb")
         shutup do
           Hbc.load(url)
         end
@@ -36,12 +36,12 @@ describe "Cask" do
     it "returns an instance of the Cask from a relative file location" do
       c = Hbc.load("./Casks/bbedit.rb")
       c.must_be_kind_of(Hbc::Cask)
-      c.token.must_equal('bbedit')
+      c.token.must_equal("bbedit")
     end
 
     it "uses exact match when loading by token" do
-      Hbc.load('test-opera').token.must_equal('test-opera')
-      Hbc.load('test-opera-mail').token.must_equal('test-opera-mail')
+      Hbc.load("test-opera").token.must_equal("test-opera")
+      Hbc.load("test-opera-mail").token.must_equal("test-opera-mail")
     end
 
     it "raises an error when attempting to load a Cask that doesn't exist" do
@@ -63,7 +63,7 @@ describe "Cask" do
     it "proposes a versioned metadata directory name for each instance" do
       cask_token = "adium"
       c = Hbc.load(cask_token)
-      metadata_path = Hbc.caskroom.join(cask_token, '.metadata', c.version)
+      metadata_path = Hbc.caskroom.join(cask_token, ".metadata", c.version)
       c.metadata_versioned_container_path.to_s.must_equal(metadata_path.to_s)
     end
   end

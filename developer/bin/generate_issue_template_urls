@@ -7,13 +7,13 @@
 ### dependencies
 ###
 
-require 'erb'
+require "erb"
 
 ###
 ### constants
 ###
 
-BASE_URL = 'https://github.com/caskroom/homebrew-cask/issues/new'
+BASE_URL = "https://github.com/caskroom/homebrew-cask/issues/new".freeze
 
 ###
 ### methods
@@ -21,7 +21,7 @@ BASE_URL = 'https://github.com/caskroom/homebrew-cask/issues/new'
 
 def main(args)
   args.each do |file|
-    File.read(file).scan(/(.*?)\n(.*)/m) do |title, body|
+    File.read(file).scan(%r{(.*?)\n(.*)}m) do |title, body|
       puts generate_url(title, body)
     end
   end
