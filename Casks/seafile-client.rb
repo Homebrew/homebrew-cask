@@ -1,6 +1,6 @@
 cask 'seafile-client' do
-  version '5.1.1'
-  sha256 '9b24efc4e26cc587fd7e69f5d2dc9f3f447071460996d511b132c68e5521b019'
+  version '5.1.3'
+  sha256 '520162d9e2e2eae2f31f6e575772c48094a9198964ba8a7da22cd77c331bf7a8'
 
   # bintray.com/artifact/download/seafile-org was verified as official when first introduced to the cask
   url "https://bintray.com/artifact/download/seafile-org/seafile/seafile-client-#{version}.dmg"
