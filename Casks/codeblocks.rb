@@ -5,7 +5,7 @@ cask 'codeblocks' do
   # sourceforge.net/project/codeblocks was verified as official when first introduced to the cask
   url "http://downloads.sourceforge.net/project/codeblocks/Binaries/#{version}/MacOS/CodeBlocks-#{version}-mac.zip"
   name 'Code::Blocks'
-  homepage 'http://www.codeblocks.org'
+  homepage 'https://sourceforge.net/projects/codeblocks/'
   license :gpl
 
   app 'CodeBlocks.app'
