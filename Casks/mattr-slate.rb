@@ -10,9 +10,7 @@ cask 'mattr-slate' do
   license :gpl
 
   auto_updates true
-
   accessibility_access true
-
   conflicts_with cask: 'slate'
 
   app 'Slate.app'
