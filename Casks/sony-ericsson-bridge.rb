@@ -6,7 +6,7 @@ cask 'sony-ericsson-bridge' do
   appcast 'https://dl-desktop-macapps.sonyericsson.com/production/Bridge/Databases_Prod/appcast.xml',
           checkpoint: '19afba9490a22b44de4cf61bfc08b98aeec6dbb8cf1be89456ae03e0ddf90782'
   name 'Sony Ericsson Bridge for Mac'
-  homepage 'https://support.sonymobile.com/au/tools/bridge-for-mac/'
+  homepage ''
   license :gratis
 
   app 'Sony Ericsson Bridge for Mac.app'
