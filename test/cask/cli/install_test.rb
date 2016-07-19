@@ -27,9 +27,9 @@ describe Hbc::CLI::Install do
       Hbc::CLI::Install.run("local-transmission")
     end
 
-    TestHelper.must_output(self, lambda do
+    TestHelper.must_output(self, lambda {
       Hbc::CLI::Install.run("local-transmission", "")
-    end, %r{Warning: A Cask for local-transmission is already installed. Add the "--force" option to force re-install.})
+    }, %r{Warning: A Cask for local-transmission is already installed. Add the "--force" option to force re-install.})
   end
 
   it "allows double install with --force" do
@@ -37,9 +37,9 @@ describe Hbc::CLI::Install do
       Hbc::CLI::Install.run("local-transmission")
     end
 
-    TestHelper.must_output(self, lambda do
+    TestHelper.must_output(self, lambda {
       Hbc::CLI::Install.run("local-transmission", "--force")
-    end, %r{==> Success! local-transmission was successfully installed!})
+    }, %r{==> Success! local-transmission was successfully installed!})
   end
 
   it "skips dependencies with --skip-cask-deps" do
@@ -52,11 +52,11 @@ describe Hbc::CLI::Install do
   end
 
   it "properly handles Casks that are not present" do
-    lambda do
+    lambda {
       shutup do
         Hbc::CLI::Install.run("notacask")
       end
-    end.must_raise Hbc::CaskError
+    }.must_raise Hbc::CaskError
   end
 
   it "returns a suggestion for a misspelled Cask" do
@@ -84,9 +84,9 @@ describe Hbc::CLI::Install do
   describe "when no Cask is specified" do
     with_options = lambda do |options|
       it "raises an exception" do
-        lambda do
+        lambda {
           Hbc::CLI::Install.run(*options)
-        end.must_raise Hbc::CaskUnspecifiedError
+        }.must_raise Hbc::CaskUnspecifiedError
       end
     end
 

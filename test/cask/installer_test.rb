@@ -60,9 +60,11 @@ describe Hbc::Installer do
     it "works with Adobe AIR-based Casks" do
       skip("Adobe AIR not installed") unless Hbc::Container::Air.installer_exist?
       air_container = Hbc.load("adobe-air-container")
+
       shutup do
         Hbc::Installer.new(air_container).install
       end
+
       dest_path = Hbc.caskroom.join("adobe-air-container", air_container.version)
       dest_path.must_be :directory?
       application = Hbc.appdir.join("GMDesk.app")
@@ -158,66 +160,72 @@ describe Hbc::Installer do
 
     it "blows up on a bad checksum" do
       bad_checksum = Hbc.load("bad-checksum")
-      lambda do
+      lambda {
         shutup do
           Hbc::Installer.new(bad_checksum).install
         end
-      end.must_raise(Hbc::CaskSha256MismatchError)
+      }.must_raise(Hbc::CaskSha256MismatchError)
     end
 
     it "blows up on a missing checksum" do
       missing_checksum = Hbc.load("missing-checksum")
-      lambda do
+      lambda {
         shutup do
           Hbc::Installer.new(missing_checksum).install
         end
-      end.must_raise(Hbc::CaskSha256MissingError)
+      }.must_raise(Hbc::CaskSha256MissingError)
     end
 
     it "installs fine if sha256 :no_check is used" do
       no_checksum = Hbc.load("no-checksum")
+
       shutup do
         Hbc::Installer.new(no_checksum).install
       end
+
       no_checksum.must_be :installed?
     end
 
     it "fails to install if sha256 :no_check is used with --require-sha" do
       no_checksum = Hbc.load("no-checksum")
-      lambda do
+      lambda {
         Hbc::Installer.new(no_checksum, require_sha: true).install
-      end.must_raise(Hbc::CaskNoShasumError)
+      }.must_raise(Hbc::CaskNoShasumError)
     end
 
     it "installs fine if sha256 :no_check is used with --require-sha and --force" do
       no_checksum = Hbc.load("no-checksum")
+
       shutup do
         Hbc::Installer.new(no_checksum, require_sha: true, force: true).install
       end
+
       no_checksum.must_be :installed?
     end
 
     it "prints caveats if they're present" do
       with_caveats = Hbc.load("with-caveats")
-      TestHelper.must_output(self, lambda do
+      TestHelper.must_output(self, lambda {
         Hbc::Installer.new(with_caveats).install
-      end, %r{Here are some things you might want to know})
+      }, %r{Here are some things you might want to know})
       with_caveats.must_be :installed?
     end
 
     it "prints installer :manual instructions when present" do
       with_installer_manual = Hbc.load("with-installer-manual")
-      TestHelper.must_output(self, lambda do
+      TestHelper.must_output(self, lambda {
         Hbc::Installer.new(with_installer_manual).install
-      end, %r{To complete the installation of Cask with-installer-manual, you must also\nrun the installer at\n\n  '#{with_installer_manual.staged_path.join('Caffeine.app')}'})
+      }, %r{To complete the installation of Cask with-installer-manual, you must also\nrun the installer at\n\n  '#{with_installer_manual.staged_path.join('Caffeine.app')}'})
       with_installer_manual.must_be :installed?
     end
 
     it "does not extract __MACOSX directories from zips" do
       with_macosx_dir = Hbc.load("with-macosx-dir")
+
       shutup do
         Hbc::Installer.new(with_macosx_dir).install
       end
+
       with_macosx_dir.staged_path.join("__MACOSX").wont_be :directory?
     end
 
@@ -226,17 +234,22 @@ describe Hbc::Installer do
       auto_updates.installed?.must_equal false
       installer = Hbc::Installer.new(auto_updates)
 
-      shutup { installer.install }
-      lambda do
+      shutup do
         installer.install
-      end.must_raise(Hbc::CaskAutoUpdatesError)
+      end
+
+      lambda {
+        installer.install
+      }.must_raise(Hbc::CaskAutoUpdatesError)
     end
 
     it "allows already-installed Casks which auto-update to be installed if force is provided" do
       auto_updates = Hbc.load("auto-updates")
       auto_updates.installed?.must_equal false
 
-      shutup { Hbc::Installer.new(auto_updates).install }
+      shutup do
+        Hbc::Installer.new(auto_updates).install
+      end
 
       shutup do
         Hbc::Installer.new(auto_updates, force: true).install
@@ -249,17 +262,22 @@ describe Hbc::Installer do
       transmission.installed?.must_equal false
       installer = Hbc::Installer.new(transmission)
 
-      shutup { installer.install }
-      lambda do
+      shutup do
         installer.install
-      end.must_raise(Hbc::CaskAlreadyInstalledError)
+      end
+
+      lambda {
+        installer.install
+      }.must_raise(Hbc::CaskAlreadyInstalledError)
     end
 
     it "allows already-installed Casks to be installed if force is provided" do
       transmission = Hbc.load("local-transmission")
       transmission.installed?.must_equal false
 
-      shutup { Hbc::Installer.new(transmission).install }
+      shutup do
+        Hbc::Installer.new(transmission).install
+      end
 
       shutup do
         Hbc::Installer.new(transmission, force: true).install

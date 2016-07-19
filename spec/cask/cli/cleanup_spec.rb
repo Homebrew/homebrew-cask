@@ -6,16 +6,19 @@ describe Hbc::CLI::Cleanup do
   let(:cleanup_outdated) { false }
 
   subject { described_class.new(cache_location, cleanup_outdated) }
-  after { homebrew_cache_location.rmtree }
+
+  after do
+    homebrew_cache_location.rmtree
+  end
 
   describe "cleanup!" do
     it "removes dead symlinks" do
       bad_symlink = cache_location.join("bad_symlink")
       bad_symlink.make_symlink("../does_not_exist")
 
-      expect do
+      expect {
         subject.cleanup!
-      end.to output(<<-OUTPUT.undent).to_stdout
+      }.to output(<<-OUTPUT.undent).to_stdout
         ==> Removing dead symlinks
         #{bad_symlink}
         ==> Removing cached downloads
@@ -32,9 +35,9 @@ describe Hbc::CLI::Cleanup do
       cached_download_symlink = cache_location.join("SomeDownload.dmg")
       cached_download_symlink.make_symlink(cached_download)
 
-      expect do
+      expect {
         subject.cleanup!
-      end.to output(<<-OUTPUT.undent).to_stdout
+      }.to output(<<-OUTPUT.undent).to_stdout
         ==> Removing dead symlinks
         Nothing to do
         ==> Removing cached downloads
@@ -56,9 +59,9 @@ describe Hbc::CLI::Cleanup do
         cached_download_symlink = cache_location.join("SomeNewDownload.dmg")
         cached_download_symlink.make_symlink(cached_download)
 
-        expect do
+        expect {
           subject.cleanup!
-        end.to output(<<-OUTPUT.undent).to_stdout
+        }.to output(<<-OUTPUT.undent).to_stdout
           ==> Removing dead symlinks
           Nothing to do
           ==> Removing cached downloads older than 10 days old

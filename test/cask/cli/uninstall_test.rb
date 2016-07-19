@@ -2,15 +2,15 @@ require "test_helper"
 
 describe Hbc::CLI::Uninstall do
   it "shows an error when a bad Cask is provided" do
-    lambda do
+    lambda {
       Hbc::CLI::Uninstall.run("notacask")
-    end.must_raise Hbc::CaskUnavailableError
+    }.must_raise Hbc::CaskUnavailableError
   end
 
   it "shows an error when a Cask is provided that's not installed" do
-    lambda do
+    lambda {
       Hbc::CLI::Uninstall.run("anvil")
-    end.must_raise Hbc::CaskNotInstalledError
+    }.must_raise Hbc::CaskNotInstalledError
   end
 
   it "tries anyway on a non-present Cask when --force is given" do
@@ -62,17 +62,17 @@ describe Hbc::CLI::Uninstall do
 
   describe "when no Cask is specified" do
     it "raises an exception" do
-      lambda do
+      lambda {
         Hbc::CLI::Uninstall.run
-      end.must_raise Hbc::CaskUnspecifiedError
+      }.must_raise Hbc::CaskUnspecifiedError
     end
   end
 
   describe "when no Cask is specified, but an invalid option" do
     it "raises an exception" do
-      lambda do
+      lambda {
         Hbc::CLI::Uninstall.run("--notavalidoption")
-      end.must_raise Hbc::CaskUnspecifiedError
+      }.must_raise Hbc::CaskUnspecifiedError
     end
   end
 end

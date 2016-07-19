@@ -43,7 +43,9 @@ describe "download strategies" do
         curl_args = []
         allow(downloader).to receive(:curl) { |*args| curl_args = args }
 
-        shutup { downloader.fetch }
+        shutup do
+          downloader.fetch
+        end
 
         expect(curl_args.each_cons(2)).to include(["-A", "Mozilla/25.0.1"])
       end
@@ -56,7 +58,9 @@ describe "download strategies" do
         curl_args = []
         allow(downloader).to receive(:curl) { |*args| curl_args = args }
 
-        shutup { downloader.fetch }
+        shutup do
+          downloader.fetch
+        end
 
         expect(curl_args.each_cons(2)).to include(["-A", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10) http://caskroom.io"])
       end
@@ -76,7 +80,9 @@ describe "download strategies" do
         curl_args = []
         allow(downloader).to receive(:curl) { |*args| curl_args = args }
 
-        shutup { downloader.fetch }
+        shutup do
+          downloader.fetch
+        end
 
         expect(curl_args.each_cons(2)).to include(["-b", "coo=kie;mon=ster"])
       end
@@ -89,7 +95,9 @@ describe "download strategies" do
         curl_args = []
         allow(downloader).to receive(:curl) { |*args| curl_args = args }
 
-        shutup { downloader.fetch }
+        shutup do
+          downloader.fetch
+        end
 
         expect(curl_args.each_cons(2)).to include(["-e", "http://somehost/also"])
       end
@@ -118,7 +126,9 @@ describe "download strategies" do
         curl_args = []
         allow(downloader).to receive(:curl) { |*args| curl_args = args }
 
-        shutup { downloader.fetch }
+        shutup do
+          downloader.fetch
+        end
 
         expect(curl_args.each_cons(2)).to include(["-d", "form=data"])
         expect(curl_args.each_cons(2)).to include(["-d", "is=good"])
@@ -132,7 +142,9 @@ describe "download strategies" do
         curl_args = []
         allow(downloader).to receive(:curl) { |*args| curl_args = args }
 
-        shutup { downloader.fetch }
+        shutup do
+          downloader.fetch
+        end
 
         expect(curl_args.each_cons(2)).to include(["-X", "POST"])
       end
@@ -160,7 +172,9 @@ describe "download strategies" do
       allow(downloader).to receive(:compress)
       allow(downloader).to receive(:fetch_repo)
 
-      shutup { downloader.fetch }
+      shutup do
+        downloader.fetch
+      end
 
       expect(downloader).to have_received(:fetch_repo).with(
         downloader.cached_location,
@@ -171,7 +185,9 @@ describe "download strategies" do
     it "calls svn with default arguments for a simple Cask" do
       allow(downloader).to receive(:compress)
 
-      shutup { downloader.fetch }
+      shutup do
+        downloader.fetch
+      end
 
       expect(fake_system_command).to have_received(:run!).with(
         "/usr/bin/svn",
@@ -197,7 +213,9 @@ describe "download strategies" do
       it "adds svn arguments for :trust_cert" do
         allow(downloader).to receive(:compress)
 
-        shutup { downloader.fetch }
+        shutup do
+          downloader.fetch
+        end
 
         expect(fake_system_command).to have_received(:run!).with(
           "/usr/bin/svn",
@@ -226,7 +244,9 @@ describe "download strategies" do
       it "adds svn arguments for :revision" do
         allow(downloader).to receive(:compress)
 
-        shutup { downloader.fetch }
+        shutup do
+          downloader.fetch
+        end
 
         expect(fake_system_command).to have_received(:run!).with(
           "/usr/bin/svn",
@@ -251,7 +271,9 @@ describe "download strategies" do
         downloader.cached_location.mkdir
       }
 
-      shutup { downloader.fetch }
+      shutup do
+        downloader.fetch
+      end
 
       expect(fake_system_command).to have_received(:run!).with(
         "/usr/bin/tar",

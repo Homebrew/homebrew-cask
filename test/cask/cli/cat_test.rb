@@ -17,43 +17,43 @@ describe Hbc::CLI::Cat do
     end
 
     it "displays the Cask file content about the specified Cask" do
-      lambda do
+      lambda {
         Hbc::CLI::Cat.run("basic-cask")
-      end.must_output(@expected_output)
+      }.must_output(@expected_output)
     end
 
     it "throws away additional Cask arguments and uses the first" do
-      lambda do
+      lambda {
         Hbc::CLI::Cat.run("basic-cask", "local-caffeine")
-      end.must_output(@expected_output)
+      }.must_output(@expected_output)
     end
 
     it "throws away stray options" do
-      lambda do
+      lambda {
         Hbc::CLI::Cat.run("--notavalidoption", "basic-cask")
-      end.must_output(@expected_output)
+      }.must_output(@expected_output)
     end
   end
 
   it "raises an exception when the Cask does not exist" do
-    lambda do
+    lambda {
       Hbc::CLI::Cat.run("notacask")
-    end.must_raise Hbc::CaskUnavailableError
+    }.must_raise Hbc::CaskUnavailableError
   end
 
   describe "when no Cask is specified" do
     it "raises an exception" do
-      lambda do
+      lambda {
         Hbc::CLI::Cat.run
-      end.must_raise Hbc::CaskUnspecifiedError
+      }.must_raise Hbc::CaskUnspecifiedError
     end
   end
 
   describe "when no Cask is specified, but an invalid option" do
     it "raises an exception" do
-      lambda do
+      lambda {
         Hbc::CLI::Cat.run("--notavalidoption")
-      end.must_raise Hbc::CaskUnspecifiedError
+      }.must_raise Hbc::CaskUnspecifiedError
     end
   end
 end

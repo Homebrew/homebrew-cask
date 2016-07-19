@@ -77,9 +77,9 @@ describe Hbc::Artifact::App do
       it "avoids clobbering an existing app" do
         cask = local_caffeine
 
-        TestHelper.must_output(self, lambda do
+        TestHelper.must_output(self, lambda {
           Hbc::Artifact::App.new(cask).install_phase
-        end, "==> It seems there is already an App at '#{target_path}'; not moving.")
+        }, "==> It seems there is already an App at '#{target_path}'; not moving.")
 
         source_path = cask.staged_path.join("Caffeine.app")
 
@@ -145,6 +145,7 @@ describe Hbc::Artifact::App do
             Hbc::FakeSystemCommand.expect_and_pass_through(chflags_cmd)
             Hbc::FakeSystemCommand.expect_and_pass_through(chmod_cmd)
             Hbc::FakeSystemCommand.expect_and_pass_through(chmod_n_cmd)
+
             shutup do
               install_phase.call(command: Hbc::FakeSystemCommand)
             end
@@ -196,9 +197,9 @@ describe Hbc::Artifact::App do
 
       it "leaves the target alone" do
         cask = local_caffeine
-        TestHelper.must_output(self, lambda do
+        TestHelper.must_output(self, lambda {
           Hbc::Artifact::App.new(cask).install_phase
-        end, "==> It seems there is already an App at '#{target_path}'; not moving.")
+        }, "==> It seems there is already an App at '#{target_path}'; not moving.")
 
         File.symlink?(target_path).must_equal true
       end
@@ -273,7 +274,10 @@ describe Hbc::Artifact::App do
     describe "app is correctly installed" do
       it "returns the path to the app" do
         cask = local_caffeine
-        shutup { Hbc::Artifact::App.new(cask).install_phase }
+
+        shutup do
+          Hbc::Artifact::App.new(cask).install_phase
+        end
 
         contents = Hbc::Artifact::App.new(cask).summary[:contents]
         app_path = Hbc.appdir.join("Caffeine.app")

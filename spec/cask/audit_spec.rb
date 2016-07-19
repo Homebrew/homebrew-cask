@@ -13,12 +13,18 @@ describe Hbc::Audit do
     subject { audit.result }
 
     context "when there are errors" do
-      before { audit.add_error "bad" }
+      before do
+        audit.add_error "bad"
+      end
+
       it { should match(%r{failed}) }
     end
 
     context "when there are warnings" do
-      before { audit.add_warning "eh" }
+      before do
+        audit.add_warning "eh"
+      end
+
       it { should match(%r{warning}) }
     end
 
@@ -117,7 +123,9 @@ describe Hbc::Audit do
         context "when curl succeeds" do
           let(:success) { true }
 
-          before { allow(fake_curl_result).to receive(:stdout).and_return(stdout) }
+          before do
+            allow(fake_curl_result).to receive(:stdout).and_return(stdout)
+          end
 
           context "when HTTP code is 200" do
             let(:stdout) { "200" }
@@ -132,7 +140,11 @@ describe Hbc::Audit do
 
         context "when curl fails" do
           let(:success) { false }
-          before { allow(fake_curl_result).to receive(:stderr).and_return("Some curl error") }
+
+          before do
+            allow(fake_curl_result).to receive(:stderr).and_return("Some curl error")
+          end
+
           it { should warn_with(curl_error_msg) }
         end
       end
@@ -177,7 +189,10 @@ describe Hbc::Audit do
 
         context "when appcast download fails" do
           let(:success) { false }
-          before { allow(fake_curl_result).to receive(:stderr).and_return("Some curl error") }
+
+          before do
+            allow(fake_curl_result).to receive(:stderr).and_return("Some curl error")
+          end
 
           it { should warn_with(curl_error_msg) }
         end

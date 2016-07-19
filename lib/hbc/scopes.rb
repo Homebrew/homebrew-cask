@@ -50,9 +50,9 @@ module Hbc::Scopes
       # TODO: ability to specify expected source when calling Hbc.load (minor perf benefit)
       installed_cask_dirs.map do |install_dir|
         cask_token = install_dir.basename.to_s
-        path_to_cask = all_tapped_cask_dirs.find do |tap_dir|
+        path_to_cask = all_tapped_cask_dirs.find { |tap_dir|
           tap_dir.join("#{cask_token}.rb").exist?
-        end
+        }
         @installed[cask_token] ||= if path_to_cask
                                      Hbc.load(path_to_cask.join("#{cask_token}.rb"))
                                    else

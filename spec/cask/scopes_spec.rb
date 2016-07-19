@@ -7,7 +7,10 @@ describe Hbc::Scopes do
     before do
       allow(Hbc).to receive(:caskroom) { fake_caskroom }
     end
-    after { fake_caskroom.rmtree }
+
+    after do
+      fake_caskroom.rmtree
+    end
 
     it "returns a list installed Casks by loading Casks for all the dirs that exist in the caskroom" do
       allow(Hbc).to receive(:load) { |token| "loaded-#{token}" }

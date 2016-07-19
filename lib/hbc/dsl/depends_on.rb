@@ -92,19 +92,19 @@ class Hbc::DSL::DependsOn
               [[operator, release]]
             else
               raise "'depends_on :macos' comparison expressions cannot be combined" if @macos.first.is_a?(Symbol)
-              Array(*arg).map do |elt|
+              Array(*arg).map { |elt|
                 self.class.coerce_os_release(elt)
-              end.sort
+              }.sort
             end
     @macos.concat(macos)
   end
 
   def arch=(*arg)
     @arch ||= []
-    arches = Array(*arg).map do |elt|
+    arches = Array(*arg).map { |elt|
       elt = elt.to_s.downcase.sub(%r{^:}, "").tr("-", "_").to_sym
       ARCH_SYNONYMS.key?(elt) ? ARCH_SYNONYMS[elt] : elt
-    end
+    }
     invalid_arches = arches - VALID_ARCHES
     raise "invalid 'depends_on :arch' values: #{invalid_arches.inspect}" unless invalid_arches.empty?
     @arch.concat(arches)

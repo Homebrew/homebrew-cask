@@ -2,9 +2,9 @@ require "test_helper"
 
 describe Hbc::CLI::Search do
   it "lists the available Casks that match the search term" do
-    lambda do
+    lambda {
       Hbc::CLI::Search.run("photoshop")
-    end.must_output <<-OUTPUT.gsub(%r{^ *}, "")
+    }.must_output <<-OUTPUT.gsub(%r{^ *}, "")
       ==> Partial matches
       adobe-photoshop-cc
       adobe-photoshop-lightroom
@@ -12,9 +12,9 @@ describe Hbc::CLI::Search do
   end
 
   it "shows that there are no Casks matching a search term that did not result in anything" do
-    lambda do
+    lambda {
       Hbc::CLI::Search.run("foo-bar-baz")
-    end.must_output("No Cask found for \"foo-bar-baz\".\n")
+    }.must_output("No Cask found for \"foo-bar-baz\".\n")
   end
 
   it "lists all available Casks with no search term" do
@@ -42,9 +42,9 @@ describe Hbc::CLI::Search do
   end
 
   it "accepts a regexp argument" do
-    lambda do
+    lambda {
       Hbc::CLI::Search.run("/^google-c[a-z]rome$/")
-    end.must_output "==> Regexp matches\ngoogle-chrome\n"
+    }.must_output "==> Regexp matches\ngoogle-chrome\n"
   end
 
   it "Returns both exact and partial matches" do

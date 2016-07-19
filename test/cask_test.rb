@@ -25,12 +25,12 @@ describe "Cask" do
     end
 
     it "raises an error when failing to download a Cask from a url" do
-      lambda do
+      lambda {
         url = "file://" + File.expand_path("./Casks/notacask.rb")
         shutup do
           Hbc.load(url)
         end
-      end.must_raise(Hbc::CaskUnavailableError)
+      }.must_raise(Hbc::CaskUnavailableError)
     end
 
     it "returns an instance of the Cask from a relative file location" do
@@ -45,9 +45,9 @@ describe "Cask" do
     end
 
     it "raises an error when attempting to load a Cask that doesn't exist" do
-      lambda do
+      lambda {
         Hbc.load("notacask")
-      end.must_raise(Hbc::CaskUnavailableError)
+      }.must_raise(Hbc::CaskUnavailableError)
     end
   end
 

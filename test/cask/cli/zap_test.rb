@@ -2,9 +2,9 @@ require "test_helper"
 
 describe Hbc::CLI::Zap do
   it "shows an error when a bad Cask is provided" do
-    lambda do
+    lambda {
       Hbc::CLI::Zap.run("notacask")
-    end.must_raise Hbc::CaskUnavailableError
+    }.must_raise Hbc::CaskUnavailableError
   end
 
   it "can zap and unlink multiple Casks at once" do
@@ -59,17 +59,17 @@ describe Hbc::CLI::Zap do
 
   describe "when no Cask is specified" do
     it "raises an exception" do
-      lambda do
+      lambda {
         Hbc::CLI::Zap.run
-      end.must_raise Hbc::CaskUnspecifiedError
+      }.must_raise Hbc::CaskUnspecifiedError
     end
   end
 
   describe "when no Cask is specified, but an invalid option" do
     it "raises an exception" do
-      lambda do
+      lambda {
         Hbc::CLI::Zap.run("--notavalidoption")
-      end.must_raise Hbc::CaskUnspecifiedError
+      }.must_raise Hbc::CaskUnspecifiedError
     end
   end
 end

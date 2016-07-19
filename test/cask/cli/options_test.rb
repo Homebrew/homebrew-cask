@@ -94,17 +94,17 @@ describe Hbc::CLI do
 
   describe "when a mandatory argument is missing" do
     it "shows a user-friendly error message" do
-      lambda do
+      lambda {
         Hbc::CLI.process_options %w[install -f]
-      end.must_raise Hbc::CaskError
+      }.must_raise Hbc::CaskError
     end
   end
 
   describe "given an ambiguous option" do
     it "shows a user-friendly error message" do
-      lambda do
+      lambda {
         Hbc::CLI.process_options %w[edit -c]
-      end.must_raise Hbc::CaskError
+      }.must_raise Hbc::CaskError
     end
   end
 

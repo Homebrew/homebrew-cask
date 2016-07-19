@@ -73,9 +73,9 @@ describe Hbc::Artifact::App do
       existing_app_path = Hbc.appdir.join("AnotherName.app")
       existing_app_path.mkpath
 
-      TestHelper.must_output(self, lambda do
+      TestHelper.must_output(self, lambda {
         Hbc::Artifact::App.new(cask).install_phase
-      end, "==> It seems there is already an App at '#{existing_app_path}'; not moving.")
+      }, "==> It seems there is already an App at '#{existing_app_path}'; not moving.")
 
       source_path = cask.staged_path.join("Caffeine.app")
 

@@ -53,26 +53,26 @@ describe Hbc::CLI::Fetch do
   end
 
   it "properly handles Casks that are not present" do
-    lambda do
+    lambda {
       shutup do
         Hbc::CLI::Fetch.run("notacask")
       end
-    end.must_raise Hbc::CaskUnavailableError
+    }.must_raise Hbc::CaskUnavailableError
   end
 
   describe "when no Cask is specified" do
     it "raises an exception" do
-      lambda do
+      lambda {
         Hbc::CLI::Fetch.run
-      end.must_raise Hbc::CaskUnspecifiedError
+      }.must_raise Hbc::CaskUnspecifiedError
     end
   end
 
   describe "when no Cask is specified, but an invalid option" do
     it "raises an exception" do
-      lambda do
+      lambda {
         Hbc::CLI::Fetch.run("--notavalidoption")
-      end.must_raise Hbc::CaskUnspecifiedError
+      }.must_raise Hbc::CaskUnspecifiedError
     end
   end
 end

@@ -36,7 +36,9 @@ describe Hbc::DSL do
 
     it "will simply warn, not throw an exception" do
       begin
-        capture_subprocess_io { attempt_unknown_method.call }
+        capture_subprocess_io do
+          attempt_unknown_method.call
+        end
       rescue StandardError => e
         flunk("Wanted unexpected method to simply warn, but got exception #{e}")
       end
@@ -45,15 +47,15 @@ describe Hbc::DSL do
 
   describe "header line" do
     it "requires a valid header format" do
-      lambda do
+      lambda {
         Hbc.load("invalid/invalid-header-format")
-      end.must_raise(SyntaxError)
+      }.must_raise(SyntaxError)
     end
 
     it "requires the header token to match the file name" do
-      err = lambda do
+      err = lambda {
         Hbc.load("invalid/invalid-header-token-mismatch")
-      end.must_raise(Hbc::CaskTokenDoesNotMatchError)
+      }.must_raise(Hbc::CaskTokenDoesNotMatchError)
       err.message.must_include "Bad header line:"
       err.message.must_include "does not match file name"
     end
@@ -157,27 +159,27 @@ describe Hbc::DSL do
 
   describe "url stanza" do
     it "prevents defining multiple urls" do
-      err = lambda do
+      err = lambda {
         Hbc.load("invalid/invalid-two-url")
-      end.must_raise(Hbc::CaskInvalidError)
+      }.must_raise(Hbc::CaskInvalidError)
       err.message.must_include "'url' stanza may only appear once"
     end
   end
 
   describe "homepage stanza" do
     it "prevents defining multiple homepages" do
-      err = lambda do
+      err = lambda {
         Hbc.load("invalid/invalid-two-homepage")
-      end.must_raise(Hbc::CaskInvalidError)
+      }.must_raise(Hbc::CaskInvalidError)
       err.message.must_include "'homepage' stanza may only appear once"
     end
   end
 
   describe "version stanza" do
     it "prevents defining multiple versions" do
-      err = lambda do
+      err = lambda {
         Hbc.load("invalid/invalid-two-version")
-      end.must_raise(Hbc::CaskInvalidError)
+      }.must_raise(Hbc::CaskInvalidError)
       err.message.must_include "'version' stanza may only appear once"
     end
   end
@@ -189,16 +191,16 @@ describe Hbc::DSL do
     end
 
     it "prevents defining multiple appcasts" do
-      err = lambda do
+      err = lambda {
         Hbc.load("invalid/invalid-appcast-multiple")
-      end.must_raise(Hbc::CaskInvalidError)
+      }.must_raise(Hbc::CaskInvalidError)
       err.message.must_include "'appcast' stanza may only appear once"
     end
 
     it "refuses to load invalid appcast URLs" do
-      lambda do
+      lambda {
         Hbc.load("invalid/invalid-appcast-url")
-      end.must_raise(Hbc::CaskInvalidError)
+      }.must_raise(Hbc::CaskInvalidError)
     end
   end
 
@@ -214,56 +216,56 @@ describe Hbc::DSL do
     end
 
     it "prevents specifying gpg stanza multiple times" do
-      err = lambda do
+      err = lambda {
         Hbc.load("invalid/invalid-gpg-multiple-stanzas")
-      end.must_raise(Hbc::CaskInvalidError)
+      }.must_raise(Hbc::CaskInvalidError)
       err.message.must_include "'gpg' stanza may only appear once"
     end
 
     it "prevents missing gpg key parameters" do
-      err = lambda do
+      err = lambda {
         Hbc.load("invalid/invalid-gpg-missing-key")
-      end.must_raise(Hbc::CaskInvalidError)
+      }.must_raise(Hbc::CaskInvalidError)
       err.message.must_include "'gpg' stanza must include exactly one"
     end
 
     it "prevents conflicting gpg key parameters" do
-      err = lambda do
+      err = lambda {
         Hbc.load("invalid/invalid-gpg-conflicting-keys")
-      end.must_raise(Hbc::CaskInvalidError)
+      }.must_raise(Hbc::CaskInvalidError)
       err.message.must_include "'gpg' stanza must include exactly one"
     end
 
     it "refuses to load invalid gpg signature URLs" do
-      lambda do
+      lambda {
         Hbc.load("invalid/invalid-gpg-signature-url")
-      end.must_raise(Hbc::CaskInvalidError)
+      }.must_raise(Hbc::CaskInvalidError)
     end
 
     it "refuses to load invalid gpg key URLs" do
-      lambda do
+      lambda {
         Hbc.load("invalid/invalid-gpg-key-url")
-      end.must_raise(Hbc::CaskInvalidError)
+      }.must_raise(Hbc::CaskInvalidError)
     end
 
     it "refuses to load invalid gpg key IDs" do
-      lambda do
+      lambda {
         Hbc.load("invalid/invalid-gpg-key-id")
-      end.must_raise(Hbc::CaskInvalidError)
+      }.must_raise(Hbc::CaskInvalidError)
     end
 
     it "refuses to load if gpg parameter is unknown" do
-      lambda do
+      lambda {
         Hbc.load("invalid/invalid-gpg-parameter")
-      end.must_raise(Hbc::CaskInvalidError)
+      }.must_raise(Hbc::CaskInvalidError)
     end
   end
 
   describe "depends_on stanza" do
     it "refuses to load with an invalid depends_on key" do
-      lambda do
+      lambda {
         Hbc.load("invalid/invalid-depends-on-key")
-      end.must_raise(Hbc::CaskInvalidError)
+      }.must_raise(Hbc::CaskInvalidError)
     end
   end
 
@@ -297,14 +299,14 @@ describe Hbc::DSL do
       cask.depends_on.macos.wont_be_nil
     end
     it "refuses to load with an invalid depends_on :macos value" do
-      lambda do
+      lambda {
         Hbc.load("invalid/invalid-depends-on-macos-bad-release")
-      end.must_raise(Hbc::CaskInvalidError)
+      }.must_raise(Hbc::CaskInvalidError)
     end
     it "refuses to load with conflicting depends_on :macos forms" do
-      lambda do
+      lambda {
         Hbc.load("invalid/invalid-depends-on-macos-conflicting-forms")
-      end.must_raise(Hbc::CaskInvalidError)
+      }.must_raise(Hbc::CaskInvalidError)
     end
   end
 
@@ -314,9 +316,9 @@ describe Hbc::DSL do
       cask.depends_on.arch.wont_be_nil
     end
     it "refuses to load with an invalid depends_on :arch value" do
-      lambda do
+      lambda {
         Hbc.load("invalid/invalid-depends-on-arch-value")
-      end.must_raise(Hbc::CaskInvalidError)
+      }.must_raise(Hbc::CaskInvalidError)
     end
   end
 
@@ -326,9 +328,9 @@ describe Hbc::DSL do
       cask.depends_on.x11.wont_be_nil
     end
     it "refuses to load with an invalid depends_on :x11 value" do
-      lambda do
+      lambda {
         Hbc.load("invalid/invalid-depends-on-x11-value")
-      end.must_raise(Hbc::CaskInvalidError)
+      }.must_raise(Hbc::CaskInvalidError)
     end
   end
 
@@ -339,9 +341,9 @@ describe Hbc::DSL do
     end
 
     it "refuses to load invalid conflicts_with key" do
-      lambda do
+      lambda {
         Hbc.load("invalid/invalid-conflicts-with-key")
-      end.must_raise(Hbc::CaskInvalidError)
+      }.must_raise(Hbc::CaskInvalidError)
     end
   end
 
@@ -357,16 +359,16 @@ describe Hbc::DSL do
     end
 
     it "prevents defining multiple license stanzas" do
-      err = lambda do
+      err = lambda {
         Hbc.load("invalid/invalid-license-multiple")
-      end.must_raise(Hbc::CaskInvalidError)
+      }.must_raise(Hbc::CaskInvalidError)
       err.message.must_include "'license' stanza may only appear once"
     end
 
     it "refuses to load on invalid license value" do
-      lambda do
+      lambda {
         Hbc.load("invalid/invalid-license-value")
-      end.must_raise(Hbc::CaskInvalidError)
+      }.must_raise(Hbc::CaskInvalidError)
     end
   end
 
@@ -391,9 +393,9 @@ describe Hbc::DSL do
     end
 
     it "prevents specifying stage_only with other activatables" do
-      err = lambda do
+      err = lambda {
         Hbc.load("invalid/invalid-stage-only-conflict")
-      end.must_raise(Hbc::CaskInvalidError)
+      }.must_raise(Hbc::CaskInvalidError)
       err.message.must_include "'stage_only' must be the only activatable artifact"
     end
   end

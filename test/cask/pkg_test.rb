@@ -18,8 +18,13 @@ describe Hbc::Pkg do
 
       pkg.uninstall
 
-      some_files.each { |file| file.wont_be :exist? }
-      some_dirs.each  { |dir| dir.wont_be :exist? }
+      some_files.each do |file|
+        file.wont_be :exist?
+      end
+
+      some_dirs.each do |dir|
+        dir.wont_be :exist?
+      end
     end
 
     it "forgets the pkg" do

@@ -12,7 +12,7 @@ raise "brew-cask: Ruby 2.0 or greater is required." if RUBY_VERSION.to_i < 2
 
 project_root = Pathname(File.expand_path("../..", __FILE__))
 
-Dir["#{project_root}/spec/support/*.rb"].each { |f| require f }
+Dir["#{project_root}/spec/support/*.rb"].each(&method(:require))
 
 # TODO: removeme, this is transitional
 include HomebrewTestingEnvironment

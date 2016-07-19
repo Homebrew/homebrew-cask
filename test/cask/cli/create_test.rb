@@ -16,7 +16,9 @@ class Hbc::CLI::Create
 end
 
 describe Hbc::CLI::Create do
-  before { Hbc::CLI::Create.reset! }
+  before do
+    Hbc::CLI::Create.reset!
+  end
 
   after do
     %w[new-cask additional-cask another-cask yet-another-cask feine].each do |cask|
@@ -65,9 +67,9 @@ describe Hbc::CLI::Create do
   end
 
   it "raises an exception when the Cask already exists" do
-    lambda do
+    lambda {
       Hbc::CLI::Create.run("caffeine")
-    end.must_raise Hbc::CaskAlreadyCreatedError
+    }.must_raise Hbc::CaskAlreadyCreatedError
   end
 
   it "allows creating Casks that are substrings of existing Casks" do
@@ -79,17 +81,17 @@ describe Hbc::CLI::Create do
 
   describe "when no Cask is specified" do
     it "raises an exception" do
-      lambda do
+      lambda {
         Hbc::CLI::Create.run
-      end.must_raise Hbc::CaskUnspecifiedError
+      }.must_raise Hbc::CaskUnspecifiedError
     end
   end
 
   describe "when no Cask is specified, but an invalid option" do
     it "raises an exception" do
-      lambda do
+      lambda {
         Hbc::CLI::Create.run("--notavalidoption")
-      end.must_raise Hbc::CaskUnspecifiedError
+      }.must_raise Hbc::CaskUnspecifiedError
     end
   end
 end

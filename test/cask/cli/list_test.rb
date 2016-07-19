@@ -4,11 +4,13 @@ describe Hbc::CLI::List do
   it "lists the installed Casks in a pretty fashion" do
     casks = %w[local-caffeine local-transmission].map { |c| Hbc.load(c) }
 
-    casks.each { |c| TestHelper.install_without_artifacts(c) }
+    casks.each do |c|
+      TestHelper.install_without_artifacts(c)
+    end
 
-    lambda do
+    lambda {
       Hbc::CLI::List.run
-    end.must_output <<-OUTPUT.gsub(%r{^ *}, "")
+    }.must_output <<-OUTPUT.gsub(%r{^ *}, "")
       local-caffeine
       local-transmission
     OUTPUT
@@ -17,11 +19,13 @@ describe Hbc::CLI::List do
   it "lists the installed Casks and all their installed versions" do
     casks = %w[local-caffeine local-transmission].map { |c| Hbc.load(c) }
 
-    casks.each { |c| TestHelper.install_with_caskfile(c) }
+    casks.each do |c|
+      TestHelper.install_with_caskfile(c)
+    end
 
-    lambda do
+    lambda {
       Hbc::CLI::List.run("--versions")
-    end.must_output <<-OUTPUT.gsub(%r{^ *}, "")
+    }.must_output <<-OUTPUT.gsub(%r{^ *}, "")
       local-caffeine 1.2.3
       local-transmission 2.61
     OUTPUT
@@ -38,9 +42,9 @@ describe Hbc::CLI::List do
     end
 
     it "lists installed Casks without backing ruby files (due to renames or otherwise)" do
-      lambda do
+      lambda {
         Hbc::CLI::List.run
-      end.must_output <<-OUTPUT.gsub(%r{^ *}, "")
+      }.must_output <<-OUTPUT.gsub(%r{^ *}, "")
         ive-been-renamed (!)
       OUTPUT
     end
@@ -49,15 +53,19 @@ describe Hbc::CLI::List do
   it "given a set of installed Casks, lists the installed files for those Casks" do
     casks = %w[local-caffeine local-transmission].map { |c| Hbc.load(c) }
 
-    casks.each { |c| TestHelper.install_without_artifacts(c) }
+    casks.each do |c|
+      TestHelper.install_without_artifacts(c)
+    end
 
     caffeine, transmission = casks
 
-    shutup { Hbc::Artifact::App.new(transmission).install_phase }
+    shutup do
+      Hbc::Artifact::App.new(transmission).install_phase
+    end
 
-    lambda do
+    lambda {
       Hbc::CLI::List.run("local-transmission", "local-caffeine")
-    end.must_output <<-OUTPUT.gsub(%r{^ *}, "")
+    }.must_output <<-OUTPUT.gsub(%r{^ *}, "")
       ==> Apps managed by brew-cask:
       '#{Hbc.appdir.join('Transmission.app')}'
       ==> Staged content:

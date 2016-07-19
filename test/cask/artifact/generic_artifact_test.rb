@@ -14,11 +14,11 @@ describe Hbc::Artifact::Artifact do
     no_target = Hbc.load("with-generic-artifact-no-target")
     TestHelper.install_without_artifacts(no_target)
 
-    lambda do
+    lambda {
       shutup do
         Hbc::Artifact::Artifact.new(no_target).install_phase
       end
-    end.must_raise(Hbc::CaskInvalidError)
+    }.must_raise(Hbc::CaskInvalidError)
   end
 
   it "moves the artifact to the proper directory" do

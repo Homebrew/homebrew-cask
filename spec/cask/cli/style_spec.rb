@@ -66,7 +66,9 @@ describe Hbc::CLI::Style do
     end
 
     shared_examples "executable availability" do
-      before { allow(Hbc::Utils).to receive(:which).and_return(which_retval) }
+      before do
+        allow(Hbc::Utils).to receive(:which).and_return(which_retval)
+      end
 
       context "when rubocop is available on the PATH" do
         let(:which_retval) { true }
@@ -126,17 +128,25 @@ describe Hbc::CLI::Style do
   describe "#cask_paths" do
     subject { cli.cask_paths }
 
-    before { allow(cli).to receive(:cask_tokens).and_return(tokens) }
+    before do
+      allow(cli).to receive(:cask_tokens).and_return(tokens)
+    end
 
     context "when no cask tokens are given" do
       let(:tokens) { [] }
-      before { allow(Hbc).to receive(:all_tapped_cask_dirs).and_return(%w[Casks MoreCasks]) }
+
+      before do
+        allow(Hbc).to receive(:all_tapped_cask_dirs).and_return(%w[Casks MoreCasks])
+      end
+
       it { is_expected.to eq(%w[Casks MoreCasks]) }
     end
 
     context "when at least one cask token is a path that exists" do
       let(:tokens) { ["adium", "Casks/dropbox.rb"] }
-      before { allow(File).to receive(:exist?).and_return(false, true) }
+      before do
+        allow(File).to receive(:exist?).and_return(false, true)
+      end
 
       it "treats all tokens as paths" do
         expect(subject).to eq(tokens)
@@ -145,7 +155,9 @@ describe Hbc::CLI::Style do
 
     context "when no cask tokens are paths that exist" do
       let(:tokens) { %w[adium dropbox] }
-      before { allow(File).to receive(:exist?).and_return(false) }
+      before do
+        allow(File).to receive(:exist?).and_return(false)
+      end
 
       it "tries to find paths for all tokens" do
         expect(Hbc).to receive(:path).twice
@@ -209,7 +221,9 @@ describe Hbc::CLI::Style do
   describe "#default_args" do
     subject { cli.default_args }
     let(:rubocop_config) { ".rubocop.yml" }
-    before { allow(cli).to receive(:rubocop_config).and_return(rubocop_config) }
+    before do
+      allow(cli).to receive(:rubocop_config).and_return(rubocop_config)
+    end
 
     it { is_expected.to include("--format", "simple", "--force-exclusion", "--config", rubocop_config) }
   end

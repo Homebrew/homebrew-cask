@@ -65,9 +65,9 @@ describe Hbc::Artifact::App do
 
       Hbc.appdir.join("Caffeine.app").mkpath
 
-      TestHelper.must_output(self, lambda do
+      TestHelper.must_output(self, lambda {
         Hbc::Artifact::App.new(cask).install_phase
-      end, <<-MESSAGE.undent.chomp)
+      }, <<-MESSAGE.undent.chomp)
          ==> Moving App 'Caffeine-2.app' to '#{Hbc.appdir.join('Caffeine-2.app')}'
          ==> It seems there is already an App at '#{Hbc.appdir.join('Caffeine.app')}'; not moving.
          MESSAGE
@@ -82,9 +82,9 @@ describe Hbc::Artifact::App do
 
       Hbc.appdir.join("Caffeine-2.app").mkpath
 
-      TestHelper.must_output(self, lambda do
+      TestHelper.must_output(self, lambda {
         Hbc::Artifact::App.new(cask).install_phase
-      end, <<-MESSAGE.undent.chomp)
+      }, <<-MESSAGE.undent.chomp)
          ==> It seems there is already an App at '#{Hbc.appdir.join('Caffeine-2.app')}'; not moving.
          ==> Moving App 'Caffeine.app' to '#{Hbc.appdir.join('Caffeine.app')}'
          MESSAGE

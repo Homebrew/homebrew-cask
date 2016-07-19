@@ -14,11 +14,11 @@ describe "Satisfy Dependencies and Requirements" do
   describe "depends_on :cask" do
     it "raises an exception when depends_on :cask is cyclic" do
       dep_cask = Hbc.load("with-depends-on-cask-cyclic")
-      lambda do
+      lambda {
         shutup do
           Hbc::Installer.new(dep_cask).install
         end
-      end.must_raise(Hbc::CaskCyclicCaskDependencyError)
+      }.must_raise(Hbc::CaskCyclicCaskDependencyError)
     end
 
     it "installs the dependency of a Cask and the Cask itself" do
@@ -64,11 +64,11 @@ describe "Satisfy Dependencies and Requirements" do
 
     it "raises an exception when depends_on :macos is not satisfied" do
       macos_cask = Hbc.load("with-depends-on-macos-failure")
-      lambda do
+      lambda {
         shutup do
           Hbc::Installer.new(macos_cask).install
         end
-      end.must_raise(Hbc::CaskError)
+      }.must_raise(Hbc::CaskError)
     end
   end
 
@@ -82,11 +82,11 @@ describe "Satisfy Dependencies and Requirements" do
 
     it "raises an exception when depends_on :arch is not satisfied" do
       arch_cask = Hbc.load("with-depends-on-arch-failure")
-      lambda do
+      lambda {
         shutup do
           Hbc::Installer.new(arch_cask).install
         end
-      end.must_raise(Hbc::CaskError)
+      }.must_raise(Hbc::CaskError)
     end
   end
 
@@ -101,11 +101,11 @@ describe "Satisfy Dependencies and Requirements" do
     it "raises an exception when depends_on :x11 is not satisfied" do
       x11_cask = Hbc.load("with-depends-on-x11")
       Hbc.stubs(:x11_libpng).returns([Pathname.new("/usr/path/does/not/exist")])
-      lambda do
+      lambda {
         shutup do
           Hbc::Installer.new(x11_cask).install
         end
-      end.must_raise(Hbc::CaskX11DependencyError)
+      }.must_raise(Hbc::CaskX11DependencyError)
     end
 
     it "never raises when depends_on :x11 => false" do
