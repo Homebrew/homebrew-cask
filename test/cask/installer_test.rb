@@ -158,6 +158,38 @@ describe Hbc::Installer do
       file.must_be :file?
     end
 
+    it "works with xz-based Casks" do
+      skip("unxz not installed") unless Hbc.homebrew_prefix.join("bin", "unxz").exist?
+      asset = Hbc.load("xzipped-asset")
+      empty = stub(formula: [], cask: [], macos: nil, arch: nil, x11: nil)
+      asset.stubs(:depends_on).returns(empty)
+
+      shutup do
+        Hbc::Installer.new(asset).install
+      end
+
+      dest_path = Hbc.caskroom.join("xzipped-asset", asset.version)
+      dest_path.must_be :directory?
+      file = Hbc.appdir.join("xzipped-asset-#{asset.version}")
+      file.must_be :file?
+    end
+
+    it "works with lzma-based Casks" do
+      skip("unlzma not installed") unless Hbc.homebrew_prefix.join("bin", "unlzma").exist?
+      asset = Hbc.load("lzma-asset")
+      empty = stub(formula: [], cask: [], macos: nil, arch: nil, x11: nil)
+      asset.stubs(:depends_on).returns(empty)
+
+      shutup do
+        Hbc::Installer.new(asset).install
+      end
+
+      dest_path = Hbc.caskroom.join("lzma-asset", asset.version)
+      dest_path.must_be :directory?
+      file = Hbc.appdir.join("lzma-asset-#{asset.version}")
+      file.must_be :file?
+    end
+
     it "blows up on a bad checksum" do
       bad_checksum = Hbc.load("bad-checksum")
       lambda {

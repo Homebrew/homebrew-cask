@@ -1,11 +1,8 @@
-
-# for pure gzip only, not tar-gzip (.tgz or .tar.gz)
-
 require "tmpdir"
 
 class Hbc::Container::Gzip < Hbc::Container::Base
   def self.me?(criteria)
-    criteria.file.include? "compressed-encoding=application/x-gzip;"
+    criteria.magic_number(%r{^\037\213}n)
   end
 
   def extract
