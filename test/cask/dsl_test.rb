@@ -269,65 +269,65 @@ describe Hbc::DSL do
     end
   end
 
-  describe "depends_on :formula" do
-    it "allows depends_on :formula to be specified" do
+  describe "depends_on formula" do
+    it "allows depends_on formula to be specified" do
       cask = Hbc.load("with-depends-on-formula")
       cask.depends_on.formula.wont_be_nil
     end
 
-    it "allows multiple depends_on :formula to be specified" do
+    it "allows multiple depends_on formula to be specified" do
       cask = Hbc.load("with-depends-on-formula-multiple")
       cask.depends_on.formula.wont_be_nil
     end
   end
 
-  describe "depends_on :cask" do
-    it "allows depends_on :cask to be specified" do
+  describe "depends_on cask" do
+    it "allows depends_on cask to be specified" do
       cask = Hbc.load("with-depends-on-cask")
       cask.depends_on.cask.wont_be_nil
     end
 
-    it "allows multiple depends_on :cask to be specified" do
+    it "allows multiple depends_on cask to be specified" do
       cask = Hbc.load("with-depends-on-cask-multiple")
       cask.depends_on.cask.wont_be_nil
     end
   end
 
-  describe "depends_on :macos" do
-    it "allows depends_on :macos to be specified" do
+  describe "depends_on macos" do
+    it "allows depends_on macos to be specified" do
       cask = Hbc.load("with-depends-on-macos-string")
       cask.depends_on.macos.wont_be_nil
     end
-    it "refuses to load with an invalid depends_on :macos value" do
+    it "refuses to load with an invalid depends_on macos value" do
       lambda {
         Hbc.load("invalid/invalid-depends-on-macos-bad-release")
       }.must_raise(Hbc::CaskInvalidError)
     end
-    it "refuses to load with conflicting depends_on :macos forms" do
+    it "refuses to load with conflicting depends_on macos forms" do
       lambda {
         Hbc.load("invalid/invalid-depends-on-macos-conflicting-forms")
       }.must_raise(Hbc::CaskInvalidError)
     end
   end
 
-  describe "depends_on :arch" do
-    it "allows depends_on :arch to be specified" do
+  describe "depends_on arch" do
+    it "allows depends_on arch to be specified" do
       cask = Hbc.load("with-depends-on-arch")
       cask.depends_on.arch.wont_be_nil
     end
-    it "refuses to load with an invalid depends_on :arch value" do
+    it "refuses to load with an invalid depends_on arch value" do
       lambda {
         Hbc.load("invalid/invalid-depends-on-arch-value")
       }.must_raise(Hbc::CaskInvalidError)
     end
   end
 
-  describe "depends_on :x11" do
-    it "allows depends_on :x11 to be specified" do
+  describe "depends_on x11" do
+    it "allows depends_on x11 to be specified" do
       cask = Hbc.load("with-depends-on-x11")
       cask.depends_on.x11.wont_be_nil
     end
-    it "refuses to load with an invalid depends_on :x11 value" do
+    it "refuses to load with an invalid depends_on x11 value" do
       lambda {
         Hbc.load("invalid/invalid-depends-on-x11-value")
       }.must_raise(Hbc::CaskInvalidError)
@@ -373,14 +373,14 @@ describe Hbc::DSL do
   end
 
   describe "installer stanza" do
-    it "allows installer :script to be specified" do
+    it "allows installer script to be specified" do
       cask = Hbc.load("with-installer-script")
       cask.artifacts[:installer].first.script[:executable].must_equal "/usr/bin/true"
       cask.artifacts[:installer].first.script[:args].must_equal ["--flag"]
       cask.artifacts[:installer].to_a[1].script[:executable].must_equal "/usr/bin/false"
       cask.artifacts[:installer].to_a[1].script[:args].must_equal ["--flag"]
     end
-    it "allows installer :manual to be specified" do
+    it "allows installer manual to be specified" do
       cask = Hbc.load("with-installer-manual")
       cask.artifacts[:installer].first.manual.must_equal "Caffeine.app"
     end

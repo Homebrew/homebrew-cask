@@ -21,7 +21,7 @@ Given an Application (app) bundle directory on disk, find all
 login items associated with that app, which you can use in a
 Cask uninstall stanza, eg
 
-    uninstall :login_item => 'login item name'
+    uninstall login_item: 'login item name'
 
 Note that you will likely need to have opened the app at least
 once for any login items to be present.
