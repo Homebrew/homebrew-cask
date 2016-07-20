@@ -160,6 +160,7 @@ class Hbc::TestCask < Hbc::Cask; end
 # jack in some optional utilities
 FileUtils.ln_s "/usr/local/bin/cabextract", Hbc.homebrew_prefix.join("bin/cabextract")
 FileUtils.ln_s "/usr/local/bin/unar", Hbc.homebrew_prefix.join("bin/unar")
+FileUtils.ln_s "/usr/local/bin/unlzma", Hbc.homebrew_prefix.join("bin/unlzma")
 FileUtils.ln_s "/usr/local/bin/unxz", Hbc.homebrew_prefix.join("bin/unxz")
 FileUtils.ln_s "/usr/local/bin/lsar", Hbc.homebrew_prefix.join("bin/lsar")
 

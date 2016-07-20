@@ -8,6 +8,7 @@ require "hbc/container/criteria"
 require "hbc/container/dmg"
 require "hbc/container/generic_unar"
 require "hbc/container/gzip"
+require "hbc/container/lzma"
 require "hbc/container/naked"
 require "hbc/container/otf"
 require "hbc/container/pkg"
@@ -36,6 +37,7 @@ class Hbc::Container
       Hbc::Container::Tar,   # or compressed tar (bzip2/gzip/lzma/xz)
       Hbc::Container::Bzip2, # pure bzip2
       Hbc::Container::Gzip,  # pure gzip
+      Hbc::Container::Lzma,  # pure lzma
       Hbc::Container::Xz,    # pure xz
       Hbc::Container::Xar,
     ]
