@@ -34,7 +34,7 @@ list_running_app_ids [ -t <bundle-id> ]
 Print a list of currently running Applications and associated
 Bundle IDs, which may be useful in a Cask uninstall stanza, eg
 
-    uninstall :quit => 'bundle.id.goes.here'
+    uninstall quit: 'bundle.id.goes.here'
 
 Applications attributed to Apple are excluded from the output.
 

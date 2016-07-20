@@ -69,7 +69,7 @@ class Hbc::DSL::DependsOn
         raise
       end
     rescue StandardError
-      raise "invalid 'depends_on :macos' value: #{arg.inspect}"
+      raise "invalid 'depends_on macos' value: #{arg.inspect}"
     end
   end
 
@@ -86,12 +86,12 @@ class Hbc::DSL::DependsOn
   def macos=(*arg)
     @macos ||= []
     macos = if arg.count == 1 && arg.first =~ %r{^\s*(<|>|[=<>]=)\s*(\S+)\s*$}
-              raise "'depends_on :macos' comparison expressions cannot be combined" unless @macos.empty?
+              raise "'depends_on macos' comparison expressions cannot be combined" unless @macos.empty?
               operator = Regexp.last_match[1].to_sym
               release = self.class.coerce_os_release(Regexp.last_match[2])
               [[operator, release]]
             else
-              raise "'depends_on :macos' comparison expressions cannot be combined" if @macos.first.is_a?(Symbol)
+              raise "'depends_on macos' comparison expressions cannot be combined" if @macos.first.is_a?(Symbol)
               Array(*arg).map { |elt|
                 self.class.coerce_os_release(elt)
               }.sort
@@ -106,12 +106,12 @@ class Hbc::DSL::DependsOn
       ARCH_SYNONYMS.key?(elt) ? ARCH_SYNONYMS[elt] : elt
     }
     invalid_arches = arches - VALID_ARCHES
-    raise "invalid 'depends_on :arch' values: #{invalid_arches.inspect}" unless invalid_arches.empty?
+    raise "invalid 'depends_on arch' values: #{invalid_arches.inspect}" unless invalid_arches.empty?
     @arch.concat(arches)
   end
 
   def x11=(arg)
-    raise "invalid depends_on :x11 value: #{arg.inspect}" unless [true, false].include?(arg)
+    raise "invalid 'depends_on x11' value: #{arg.inspect}" unless [true, false].include?(arg)
     @x11 = arg
   end
 
