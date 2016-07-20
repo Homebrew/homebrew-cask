@@ -1,31 +1,15 @@
 class Hbc::DSL::Base
+  extend Forwardable
+
   def initialize(cask, command = Hbc::SystemCommand)
     @cask = cask
     @command = command
   end
 
+  def_delegators :@cask, :token, :version, :caskroom_path, :staged_path, :appdir
+
   def system_command(executable, options = {})
     @command.run!(executable, options)
-  end
-
-  def token
-    @cask.token
-  end
-
-  def version
-    @cask.version
-  end
-
-  def caskroom_path
-    @cask.caskroom_path
-  end
-
-  def staged_path
-    caskroom_path.join(@cask.version)
-  end
-
-  def appdir
-    Hbc::DSL.appdir
   end
 
   def method_missing(method, *)

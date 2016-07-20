@@ -16,4 +16,6 @@ module MiniTest::Spec::SharedExamples
   end
 end
 
-Object.class_eval { include(MiniTest::Spec::SharedExamples) }
+Object.class_eval do
+  include(MiniTest::Spec::SharedExamples)
+end
