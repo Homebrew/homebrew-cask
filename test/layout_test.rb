@@ -55,6 +55,7 @@ describe "Repo layout" do
                      LICENSE
                      README.md
                      Rakefile
+                     tap_migrations.json
                      USAGE.md
                    ].freeze
 
