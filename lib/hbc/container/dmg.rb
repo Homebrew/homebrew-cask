@@ -1,3 +1,4 @@
+require "set"
 require "tempfile"
 
 class Hbc::Container::Dmg < Hbc::Container::Base
@@ -17,28 +18,16 @@ class Hbc::Container::Dmg < Hbc::Container::Base
   def extract
     mount!
     assert_mounts_found
-    @mounts.each do |mount|
-      Tempfile.open(["", ".bom"]) do |bomfile|
-        bomfile.close
-
-        Tempfile.open(["", ".list"]) do |filelist|
-          filelist.write(bom_filelist_from_path(mount))
-          filelist.close
-
-          @command.run("/usr/bin/mkbom", args: ["-s", "-i", filelist.path, "--", bomfile.path])
-          @command.run("/usr/bin/ditto", args: ["--bom", bomfile.path, "--", mount, @cask.staged_path])
-        end
-      end
-    end
+    extract_mounts
   ensure
     eject!
   end
 
   def mount!
-    plist = @command.run("/usr/bin/hdiutil",
-                         # realpath is a failsafe against unusual filenames
-                         args:  %w[mount -plist -nobrowse -readonly -noidme -mountrandom /tmp] + [Pathname.new(@path).realpath],
-                         input: %w[y])
+    plist = @command.run!("/usr/bin/hdiutil",
+                          # realpath is a failsafe against unusual filenames
+                          args:  %w[mount -plist -nobrowse -readonly -noidme -mountrandom /tmp] + [Pathname.new(@path).realpath],
+                          input: %w[y])
                     .plist
     @mounts = mounts_from_plist(plist)
   end
@@ -66,36 +55,58 @@ class Hbc::Container::Dmg < Hbc::Container::Base
 
   private
 
+  def extract_mounts
+    @mounts.each(&method(:extract_mount))
+  end
+
+  def extract_mount(mount)
+    Tempfile.open(["", ".bom"]) do |bomfile|
+      bomfile.close
+
+      Tempfile.open(["", ".list"]) do |filelist|
+        filelist.write(bom_filelist_from_path(mount))
+        filelist.close
+
+        @command.run!("/usr/bin/mkbom", args: ["-s", "-i", filelist.path, "--", bomfile.path])
+        @command.run!("/usr/bin/ditto", args: ["--bom", bomfile.path, "--", mount, @cask.staged_path])
+      end
+    end
+  end
+
   def bom_filelist_from_path(mount)
-    mountpath = Pathname.new(mount).realpath
-
-    paths = Dir.glob(mountpath.join("**", "*"), File::FNM_DOTMATCH)
-               .map { |path| Pathname.new(path).relative_path_from(mountpath) }
-
-    paths = paths.reject { |path|
-      path = mountpath.join(path.sub(%r{/.*}, ""))
-
-      # unnecessary DMG metadata
-      %w[
-        .background
-        .com.apple.timemachine.donotpresent
-        .DocumentRevisions-V100
-        .DS_Store
-        .fseventsd
-        .Spotlight-V100
-        .TemporaryItems
-        .Trashes
-        .VolumeIcon.icns
-      ].include?(path.basename.to_s) ||
-
-        # symlinks to system directories (commonly to /Applications)
-        (path.symlink? &&
-         Hbc::MacOS::SYSTEM_DIRS.include?(Pathname.new(File.readlink(path))))
+    Dir.chdir(mount) {
+      Dir.glob("**/*", File::FNM_DOTMATCH).map { |path|
+        next if skip_path?(Pathname(path))
+        path == "." ? path : path.prepend("./")
+      }.compact.join("\n").concat("\n")
     }
+  end
 
-    paths.map(&:to_s)
-         .map { |path| path.prepend(path == "." ? "" : "./").concat("\n") }
-         .join
+  def skip_path?(path)
+    dmg_metadata?(path) || system_dir_symlink?(path)
+  end
+
+  # unnecessary DMG metadata
+  DMG_METADATA_FILES = %w[
+                         .background
+                         .com.apple.timemachine.donotpresent
+                         .DocumentRevisions-V100
+                         .DS_Store
+                         .fseventsd
+                         .Spotlight-V100
+                         .TemporaryItems
+                         .Trashes
+                         .VolumeIcon.icns
+                       ].to_set.freeze
+
+  def dmg_metadata?(path)
+    relative_root = path.sub(%r{/.*}, "")
+    DMG_METADATA_FILES.include?(relative_root.basename.to_s)
+  end
+
+  def system_dir_symlink?(path)
+    # symlinks to system directories (commonly to /Applications)
+    path.symlink? && Hbc::MacOS.system_dir?(path.readlink)
   end
 
   def mounts_from_plist(plist)
