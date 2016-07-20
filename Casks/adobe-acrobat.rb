@@ -1,6 +1,6 @@
 cask 'adobe-acrobat' do
   version '2015'
-  sha256 'ffe890d946c5011c96436375e3072c58afc838c450e342f2b1cfc27f5a2ade99'
+  sha256 '4745a7a21e502d1f13ac6a433274c291107c1506c3c690cbc4a788e157622643'
 
   url "http://trials3.adobe.com/AdobeProducts/APRO/Acrobat_HelpX/osx10/Acrobat_#{version}_Web_WWMUI.dmg",
       user_agent: :fake,
