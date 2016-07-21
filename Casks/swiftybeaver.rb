@@ -1,10 +1,10 @@
 cask 'swiftybeaver' do
-  version '0.9.0'
-  sha256 '83906b1238c248052fcd3b7c00bab32425d25506194406874194b761425f7e0c'
+  version '1.0.0'
+  sha256 '587fff6681e03dbdbb732b6c81dd9ca87ca75b07d595603d9e458d8d438b4253'
 
   url "https://cdn.swiftybeaver.com/SBMac-#{version}.zip"
   appcast 'https://cdn.swiftybeaver.com/sbmac-appcast.xml',
-          checkpoint: '22085079da1922de2930d9467a7b9c7c31fe57c612abc1dafe6f53ac86db0f90'
+          checkpoint: 'bb1cf2e9e32ff3abd9801baa33c1de197b050bdd7d49f9ec9896083d5c6efced'
   name 'SwiftyBeaver'
   homepage 'https://swiftybeaver.com/'
   license :mit
