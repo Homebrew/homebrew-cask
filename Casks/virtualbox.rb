@@ -3,8 +3,8 @@ cask 'virtualbox' do
     version '4.3.32-103443'
     sha256 'dcfbd1d3014ab393dc5944a9474eeabf8b33471e7d95cb4c94070dc7acab772c'
   else
-    version '5.1.0-108711'
-    sha256 '410100a2019eee0af805b05f836df3486cf944016eee7015f1b3dc24289d6686'
+    version '5.1.2-108956'
+    sha256 '0e21615b6e1d1e2a030174b524939a34a91a268d436c3b913af14098acf23b44'
   end
 
   url "http://download.virtualbox.org/virtualbox/#{version.sub(%r{-.*}, '')}/VirtualBox-#{version}-OSX.dmg"
