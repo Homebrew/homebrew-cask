@@ -10,6 +10,9 @@ cask 'parallels-desktop' do
   app 'Parallels Desktop.app'
 
   postflight do
+    # Unhide the application
+    system '/usr/bin/sudo', '-E', '--', 'chflags', 'nohidden', "#{appdir}/Parallels Desktop.app"
+
     # Run the initialization script
     system '/usr/bin/sudo', '-E', '--',
            "#{appdir}/Parallels Desktop.app/Contents/MacOS/inittool",
