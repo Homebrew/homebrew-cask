@@ -2,7 +2,7 @@ cask 'avira-vpn' do
   version :latest
   sha256 :no_check
 
-  # avira-update.com is the official download link
+  # Verified install.avira-update.com/package/vpn/osx/int/vpn.pkg as the official download link.
   url 'https://install.avira-update.com/package/vpn/osx/int/vpn.pkg'
   name 'Avira VPN'
   homepage 'http://www.avira.com/en/avira-phantom-vpn'
