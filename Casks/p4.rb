@@ -10,7 +10,7 @@ cask 'p4' do
   url "http://filehost.perforce.com/perforce/r#{version.sub(%r{\A20(\d\d\.\d+).*}, '\1')}/bin.macosx105x86#{'_64' unless Hardware::CPU.is_32_bit?}/p4"
   name 'Perforce Command-Line Client'
   name 'p4'
-  homepage 'https://www.perforce.com/product/components/perforce-visual-client'
+  homepage 'https://www.perforce.com/product/components/perforce-commandline-client'
   license :gratis
 
   container type: :naked
