@@ -13,5 +13,7 @@ cask 'p4' do
   homepage 'https://www.perforce.com/product/components/perforce-visual-client'
   license :gratis
 
+  container type: :naked
+
   binary 'p4'
 end
