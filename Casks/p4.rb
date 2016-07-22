@@ -17,4 +17,8 @@ cask 'p4' do
   container type: :naked
 
   binary 'p4'
+
+  postflight do
+    set_permissions "#{staged_path}/p4", '0755'
+  end
 end
