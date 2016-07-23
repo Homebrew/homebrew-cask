@@ -10,5 +10,5 @@ cask 'qobuz-desktop' do
   pkg 'QobuzDesktopInstaller.pkg'
 
   uninstall pkgutil: 'com.qobuz.QobuzDesktop.*',
-            delete: '/Applications/Qobuz Desktop.app'
+            delete:  '/Applications/Qobuz Desktop.app'
 end
