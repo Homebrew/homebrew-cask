@@ -2,8 +2,7 @@ cask 'sketch' do
   version '39'
   sha256 '6a320f0468bc0d8802028b6dc09eff255cf03767f2e8d674048300906ad13a87'
 
-  # bohemiancoding.com was verified as official when first introduced to the cask
-  url "http://bohemiancoding.com/static/download/sketch-#{version}.zip"
+  url "http://download.sketchapp.com/sketch-#{version}.zip"
   appcast 'http://www.sketchapp.com/appcast3.xml',
           checkpoint: '76373c6f54c56a67720872d8aa766a3b175f4422a89f82786d201ae0a59807d7'
   name 'Sketch'
