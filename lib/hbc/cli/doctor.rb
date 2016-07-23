@@ -63,7 +63,7 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
     homebrew_origin = notfound_string
     begin
       Dir.chdir(homebrew_repository) do
-        homebrew_origin = Hbc::SystemCommand.run("git",
+        homebrew_origin = Hbc::SystemCommand.run("/usr/bin/git",
                                                  args:         %w[config --get remote.origin.url],
                                                  print_stderr: false).stdout.strip
       end

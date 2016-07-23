@@ -7,7 +7,7 @@ class Hbc::Fetcher
     if url.to_s =~ %r{googlecode}
       googlecode_fake_head(url)
     else
-      Hbc::SystemCommand.run("curl",
+      Hbc::SystemCommand.run("/usr/bin/curl",
                              args: ["--max-time", TIMEOUT, "--silent", "--location", "--head", url]).stdout
     end
   end
