@@ -1,11 +1,11 @@
 cask 'memoryanalyzer' do
-  version '1.5.0.20150527'
-  sha256 'e7b2fbb156d8b61c449778756c20a6cf1567c48f7e446752b9fba8e479cd3d4e'
+  version '1.6.0.20160531'
+  sha256 '300e151bc6bc7e34b196fc50803269f3ce23ad49b0cda9d8335d8861d13ccb64'
 
-  url "http://www.eclipse.org/downloads/download.php?file=/mat/#{version.major_minor}/rcp/MemoryAnalyzer-#{version}-macosx.cocoa.x86_64.zip&r=1"
+  url "http://www.eclipse.org/downloads/download.php?r=1&file=/mat/#{version.major_minor}/rcp/MemoryAnalyzer-#{version}-macosx.cocoa.x86_64.zip"
   name 'Eclipse Memory Analyzer'
   homepage 'https://www.eclipse.org/mat/'
   license :eclipse
 
-  app 'mat/MemoryAnalyzer.app'
+  app 'mat.app'
 end
