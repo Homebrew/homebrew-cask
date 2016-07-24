@@ -16,8 +16,6 @@ cask 'qobuz-desktop' do
                       '~/Library/Application Support/QobuzDesktop',
                       '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.qobuz.QobuzDesktop',
                       '~/Library/Caches/com.qobuz.QobuzDesktop',
-                      '~/Library/Caches/Homebrew/Casks/qobuz-desktop-latest.pkg',
-                      '~/Library/Caches/Homebrew/qobuz-desktop-latest.pkg',
                       '~/Library/Logs/QobuzDesktop',
                       '~/Library/Preferences/com.qobuz.QobuzDesktop.plist',
                     ]
