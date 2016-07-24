@@ -56,9 +56,10 @@ class Hbc::CaskAutoUpdatesError < Hbc::CaskError
 end
 
 class Hbc::CaskCommandFailedError < Hbc::CaskError
-  def initialize(cmd, output, status)
+  def initialize(cmd, stdout, stderr, status)
     @cmd = cmd
-    @output = output
+    @stdout = stdout
+    @stderr = stderr
     @status = status
   end
 
@@ -69,8 +70,11 @@ Command failed to execute!
 ==> Failed command:
 #{@cmd}
 
-==> Output of failed command:
-#{@output}
+==> Standard Output of failed command:
+#{@stdout}
+
+==> Standard Error of failed command:
+#{@stderr}
 
 ==> Exit status of failed command:
 #{@status.inspect}
