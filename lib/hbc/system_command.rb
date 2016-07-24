@@ -56,7 +56,7 @@ class Hbc::SystemCommand
 
   def assert_success
     return if processed_status && processed_status.success?
-    raise Hbc::CaskCommandFailedError.new(command.utf8_inspect, processed_output[:stdout], processed_status)
+    raise Hbc::CaskCommandFailedError.new(command.utf8_inspect, processed_output[:stdout], processed_output[:stderr], processed_status)
   end
 
   def expanded_command
