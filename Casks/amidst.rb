@@ -4,7 +4,7 @@ cask 'amidst' do
 
   url "https://github.com/toolbox4minecraft/amidst/releases/download/v#{version}/amidst-v#{version.dots_to_hyphens}.zip"
   appcast 'https://github.com/toolbox4minecraft/amidst/releases.atom',
-          checkpoint: 'e1d27d503a5438a4442f5eb1f7975c1872c58e856b7c44d061bccd82a781a1fe'
+          checkpoint: '7c3d717bce58f93817928daaee850630f6d3237fe79c1d41a57958961b859eb9'
   name 'amidst'
   homepage 'https://github.com/toolbox4minecraft/amidst'
   license :gpl
