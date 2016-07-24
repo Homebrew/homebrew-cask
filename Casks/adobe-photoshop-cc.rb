@@ -10,26 +10,28 @@ cask 'adobe-photoshop-cc' do
   license :commercial
 
   preflight do
-    file = File.open "#{staged_path}/uninstall.xml", 'w'
-    file.puts '<?xml version="1.0" encoding="utf-8"?>
-<Deployment>
-    <Properties>
-        <Property name="removeUserPrefs">0</Property>
-        <Property name="mediaSignature">{2614BC86-757D-4293-9E25-E4E16F370A9E}</Property>
-    </Properties>
-    <Payloads>
-        <Payload adobeCode="{2614BC86-757D-4293-9E25-E4E16F370A9E}">
-            <Action>remove</Action>
-        </Payload>
-    </Payloads>
-</Deployment>'
-    file.close
-
     system '/usr/bin/sudo', '-E', '--', "#{staged_path}/Adobe Photoshop CC 2015/Install.app/Contents/MacOS/Install", '--mode=silent', "--deploymentFile=#{staged_path}/Adobe\ Photoshop\ CC\ 2015/Deployment/en_US_Deployment.xml"
   end
 
   uninstall_preflight do
-    system '/usr/bin/sudo', '-E', '--', "#{staged_path}/Adobe Photoshop CC 2015/Install.app/Contents/MacOS/Install", '--mode=silent', "--deploymentFile=#{staged_path}/uninstall.xml"
+    uninstall_xml = "#{staged_path}/uninstall.xml"
+
+    IO.write uninstall_xml, <<-EOF.undent
+      <?xml version="1.0" encoding="utf-8"?>
+      <Deployment>
+        <Properties>
+          <Property name="removeUserPrefs">0</Property>
+          <Property name="mediaSignature">{2614BC86-757D-4293-9E25-E4E16F370A9E}</Property>
+        </Properties>
+        <Payloads>
+          <Payload adobeCode="{2614BC86-757D-4293-9E25-E4E16F370A9E}">
+            <Action>remove</Action>
+          </Payload>
+        </Payloads>
+      </Deployment>
+    EOF
+
+    system '/usr/bin/sudo', '-E', '--', "#{staged_path}/Adobe Photoshop CC 2015/Install.app/Contents/MacOS/Install", '--mode=silent', "--deploymentFile=#{uninstall_xml}"
   end
 
   uninstall rmdir: '/Applications/Utilities/Adobe Installers'
