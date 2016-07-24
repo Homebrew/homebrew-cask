@@ -1,3 +1,4 @@
+require "hbc/extend/io"
 require "open3"
 require "shellwords"
 
@@ -89,7 +90,11 @@ class Hbc::SystemCommand
       readable_sources = IO.select(sources)[0]
       readable_sources.delete_if(&:eof?).first(1).each do |source|
         type = (source == sources[0] ? :stdout : :stderr)
-        yield(type, source.gets || "")
+        begin
+          yield(type, source.readline_nonblock || "")
+        rescue IO::WaitReadable, EOFError
+          next
+        end
       end
       break if readable_sources.empty?
     end
