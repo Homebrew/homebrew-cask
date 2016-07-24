@@ -93,6 +93,7 @@ class Hbc::Container::Dmg < Hbc::Container::Base
                          .DocumentRevisions-V100
                          .DS_Store
                          .fseventsd
+                         .MobileBackups
                          .Spotlight-V100
                          .TemporaryItems
                          .Trashes
