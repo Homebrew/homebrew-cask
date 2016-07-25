@@ -11,4 +11,9 @@ cask 'master-password' do
 
   uninstall quit:      'com.lyndir.lhunath.MasterPassword.Mac',
             launchctl: 'com.lyndir.lhunath.MasterPassword.Mac.LoginHelper'
+
+  zap delete: [
+                '~/Library/Containers/com.lyndir.lhunath.MasterPassword.Mac',
+                '~/Library/Containers/com.lyndir.lhunath.MasterPassword.Mac.LoginHelper',
+              ]
 end
