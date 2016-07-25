@@ -5,7 +5,7 @@ cask 'hyperterm' do
   # github.com/zeit/hyperterm was verified as official when first introduced to the cask
   url "https://github.com/zeit/hyperterm/releases/download/#{version}/hyperterm-macos-x64-#{version}.zip"
   appcast 'https://github.com/zeit/hyperterm/releases.atom',
-          checkpoint: 'aed09c86c110b7a6c917da84c0add9ca600f6be11d76690f11476635e07cd7e4'
+          checkpoint: '9e58794ae9c2216e9c587aa49c86f46b8b70b2d2f0de0478690f623e5a70a4c3'
   name 'HyperTerm'
   homepage 'https://hyperterm.org/'
   license :mit
