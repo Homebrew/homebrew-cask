@@ -347,7 +347,7 @@ def escaped_cask_file_extension
 end
 
 def simplified_app_name
-  @simplified_app_name ||= AppName.new(ARGV.first.to_s.force_encoding("UTF-8")).simplified
+  @simplified_app_name ||= AppName.new(ARGV.first.dup.force_encoding("UTF-8")).simplified
 end
 
 def cask_file_name
