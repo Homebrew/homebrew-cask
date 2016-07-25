@@ -4,7 +4,7 @@ cask 'pullover' do
 
   url "https://github.com/cgrossde/Pullover/releases/download/#{version}/Pullover_#{version}.dmg"
   appcast 'https://github.com/cgrossde/Pullover/releases.atom',
-          checkpoint: 'cea85f2af6fbb6955998acd1eb7a483d96ff366768eac6404776b9efb2d37f57'
+          checkpoint: 'f0341f0f19e6aac6aa57ad4c64a7188a307fcf7943344dac262f2f6818dba753'
   name 'Pullover'
   homepage 'https://github.com/cgrossde/Pullover'
   license :gpl
