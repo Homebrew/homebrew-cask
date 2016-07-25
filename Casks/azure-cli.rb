@@ -10,7 +10,8 @@ cask 'azure-cli' do
 
   pkg 'Install Command Line Interface.pkg'
 
-  uninstall script: '/usr/local/bin/azure-uninstall'
+  uninstall pkgutil: 'com.microsoft.azure.microsoftAzureSdk.postflight.pkg',
+            script:  '/usr/local/bin/azure-uninstall'
 
   zap delete: '~/.azure'
 end
