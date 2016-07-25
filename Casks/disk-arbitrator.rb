@@ -1,11 +1,11 @@
 cask 'disk-arbitrator' do
-  version '0.5'
-  sha256 'dcc05e6579a7ef3835cb06beb4c9e1dcc64f01128e91fc00cfc7e3a00876fd2a'
+  version '0.6.0'
+  sha256 '6e8deeb682e54475d3aef501031336a63feb9ea7c585d3bfe3f722a6a2dc8b81'
 
   # kainjow.com was verified as official when first introduced to the cask
-  url "https://kainjow.com/downloads/Disk%20Arbitrator-#{version}.dmg"
+  url "https://github.com/aburgh/Disk-Arbitrator/releases/download/v#{version}/Disk.Arbitrator-#{version.major_minor}.dmg"
   appcast 'https://github.com/aburgh/Disk-Arbitrator/releases.atom',
-          checkpoint: 'acc92a7976b5adbe49f46a6846d5ee744aa528731105997d935898e697de143b'
+          checkpoint: '821fe9fe87d8d201c0e724e03cb5425a09ec52890e076e58d7aa37662bf30ad3'
   name 'Disk Arbitrator'
   homepage 'https://github.com/aburgh/Disk-Arbitrator'
   license :bsd
