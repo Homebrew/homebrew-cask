@@ -10,5 +10,5 @@ cask 'pdfsam-basic' do
   homepage 'http://www.pdfsam.org/'
   license :gpl
 
-  app "PDFsam.app"
+  app 'PDFsam.app'
 end
