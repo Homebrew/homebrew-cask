@@ -4,7 +4,7 @@ cask 'klatexformula' do
 
   url "http://downloads.sourceforge.net/project/klatexformula/klatexformula/klatexformula-#{version}/klatexformula-#{version}-macosx.dmg"
   appcast 'https://sourceforge.net/projects/klatexformula/rss?path=/klatexformula',
-          checkpoint: 'cd0d0e88a5c1fe433a1ade7d4bb6d052271db9496204353e77ca2f5307a871a5'
+          checkpoint: 'd03dfb386990dae34c456202e67d3d0976ef346c05a59e8c0c3c68a37d05ad2d'
   name 'KLatexFormula'
   homepage 'http://klatexformula.sourceforge.net'
   license :gpl
