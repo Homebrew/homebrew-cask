@@ -10,7 +10,5 @@ cask 'master-password' do
   app 'Master Password.app'
 
   uninstall quit:      'com.lyndir.lhunath.MasterPassword.Mac',
-            launchctl: 'com.lyndir.lhunath.MasterPassword.Mac.LoginHelper',
-            pkgutil:   'com.lyndir.lhunath.MasterPassword.*',
-            delete:    '/Applications/Master Password.app'
+            launchctl: 'com.lyndir.lhunath.MasterPassword.Mac.LoginHelper'
 end
