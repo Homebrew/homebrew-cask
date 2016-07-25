@@ -4,7 +4,7 @@ cask 'dash' do
 
   url "http://kapeli.com/downloads/v#{version.major}/Dash.zip"
   appcast "https://kapeli.com/Dash#{version.major}.xml",
-          checkpoint: '251fb0cd5499990c4d8deda47997f08b6b4963e9e4f0e7e4c83045fd6e6915c7'
+          checkpoint: '972fcc13e87725cfaaefe411a97a98e606d321c4f9332ecf91789734e6e9782c'
   name 'Dash'
   homepage 'https://kapeli.com/dash'
   license :commercial
