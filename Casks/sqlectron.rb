@@ -1,11 +1,11 @@
 cask 'sqlectron' do
-  version '1.11.2'
-  sha256 '461e9d421b173d69f0471de32201b49de830bf97ae7302b1bc28f2f646b7275d'
+  version '1.12.0'
+  sha256 '8e7ed3dbdd7471de6e92258411fab158eae107cb2eec92ab1aa78c547df4b7b5'
 
   # github.com/sqlectron/sqlectron-gui was verified as official when first introduced to the cask
   url "https://github.com/sqlectron/sqlectron-gui/releases/download/v#{version}/Sqlectron-#{version}-mac.zip"
   appcast 'https://github.com/sqlectron/sqlectron-gui/releases.atom',
-          checkpoint: 'ca2b5e37d42b2a9fa138cd519253c112b979388352481e2796a159eae52aaf32'
+          checkpoint: '6f7428258d1bbff6290df25181b4371bd2a7eb8019094d21d568f9d3acdc26be'
   name 'Sqlectron'
   homepage 'https://sqlectron.github.io/'
   license :mit
