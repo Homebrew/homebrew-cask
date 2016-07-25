@@ -1,4 +1,4 @@
-cask 'memoryanalyzer' do
+cask 'mat' do
   version '1.6.0.20160531'
   sha256 '300e151bc6bc7e34b196fc50803269f3ce23ad49b0cda9d8335d8861d13ccb64'
 
