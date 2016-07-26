@@ -1,6 +1,6 @@
 cask 'cycling74-max' do
-  version '7.2.3_160517'
-  sha256 '3a62fe49e09b0b1344a27ebbb26eab365c6c6d8053f0464a749ee0182178a482'
+  version '7.2.4_160725'
+  sha256 '1b828aae6105f33cc1c3662c956f97d66f668aef6efbbe37468565946ffc1175'
 
   # akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com/Max#{version.no_dots}.dmg"
