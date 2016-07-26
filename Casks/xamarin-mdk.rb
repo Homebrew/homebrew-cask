@@ -9,7 +9,7 @@ cask 'xamarin-mdk' do
   homepage 'https://xamarin.com/platform'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  pkg "MonoFramework-MDK-#{version}.macos10.xamarin.x86.pkg"
+  pkg "MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
 
   uninstall pkgutil: 'com.xamarin.mono-MDK.pkg'
 end
