@@ -5,7 +5,7 @@ cask 'docker-compose' do
   # github.com/docker/compose was verified as official when first introduced to the cask
   url "https://github.com/docker/compose/releases/download/#{version}/docker-compose-Darwin-x86_64"
   appcast 'https://github.com/docker/compose/releases.atom',
-          checkpoint: '80025e14cfc0909ca58469a99ea3431e590da739682975ca72bbbc5127059d31'
+          checkpoint: '4806fe59d342505008234bc772b4566005c0c8828df2146fd15d0503827b35fc'
   name 'Docker Compose'
   homepage 'https://docs.docker.com/compose'
   license :apache
