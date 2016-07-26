@@ -4,7 +4,7 @@ cask 'fluid' do
 
   url "http://fluidapp.com/dist/Fluid_#{version}.zip"
   appcast 'http://fluidapp.com/appcast/fluid1.rss',
-          checkpoint: '0db21720ba6bb7d289f452e7719f48e5ad0deb9e52ee9efc521857838e58416c'
+          checkpoint: 'a4f30ede491c600675f005416f7c76dd2945daeb71d5ecb1f7621bedc0416e30'
   name 'Fluid'
   homepage 'http://fluidapp.com/'
   license :freemium
