@@ -1,6 +1,6 @@
 cask 'azure-cli' do
-  version '0.9.20'
-  sha256 '2fdb64650709dae1c4aa0fe1493dc46aed43f45fb0ac88824e24f1203c16fabc'
+  version '0.10.2'
+  sha256 '924f95d3adeee1fb199876f0fecba416dd7a9cf819661d2338f4f7e398658fa4'
 
   # azuresdkscu.blob.core.windows.net was verified as official when first introduced to the cask
   url "https://azuresdkscu.blob.core.windows.net/downloads04/azure-cli.#{version}.dmg"
@@ -10,7 +10,8 @@ cask 'azure-cli' do
 
   pkg 'Install Command Line Interface.pkg'
 
-  uninstall script: '/usr/local/bin/azure-uninstall'
+  uninstall pkgutil: 'com.microsoft.azure.microsoftAzureSdk.postflight.pkg',
+            script:  '/usr/local/bin/azure-uninstall'
 
   zap delete: '~/.azure'
 end

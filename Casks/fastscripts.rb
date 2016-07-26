@@ -4,7 +4,7 @@ cask 'fastscripts' do
 
   url "https://www.red-sweater.com/fastscripts/FastScripts#{version}.zip"
   appcast 'https://red-sweater.com/fastscripts/appcast2.php',
-          checkpoint: '44643e3750e319d38302eff95ecfa7926d7bd18216626db5f90d9432ef8e121a'
+          checkpoint: '4c4fb4dadf4dc1bf7e31df38ddf494d1acbb0fceecaf3e01e5cb01dcba6086af'
   name 'FastScripts'
   homepage 'https://red-sweater.com/fastscripts/'
   license :freemium

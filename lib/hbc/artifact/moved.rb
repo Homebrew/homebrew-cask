@@ -2,9 +2,9 @@ require "hbc/artifact/relocated"
 
 class Hbc::Artifact::Moved < Hbc::Artifact::Relocated
   def summary
-    contents = @cask.artifacts[self.class.artifact_dsl_key].map do |artifact|
+    contents = @cask.artifacts[self.class.artifact_dsl_key].map { |artifact|
       summarize_artifact(artifact)
-    end - [nil]
+    }.compact
 
     {
       english_description: "#{self.class.artifact_english_name}s managed by brew-cask:",
@@ -87,7 +87,7 @@ class Hbc::Artifact::Moved < Hbc::Artifact::Relocated
 
     unless target.exist?
       warning = "Missing #{self.class.artifact_english_name}"
-      warning = "#{Tty.red.underline}#{warning}#{Tty.reset}: "
+      warning = "#{Hbc::Utils::Tty.red.underline}#{warning}#{Hbc::Utils::Tty.reset}: "
     end
 
     "#{warning}#{printable_target}"

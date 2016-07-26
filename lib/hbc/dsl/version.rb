@@ -47,7 +47,9 @@ class Hbc::DSL::Version < ::String
     end
   end
 
-  DIVIDERS.keys.each { |divider| define_divider_methods(divider) }
+  DIVIDERS.keys.each do |divider|
+    define_divider_methods(divider)
+  end
 
   attr_reader :raw_version
 

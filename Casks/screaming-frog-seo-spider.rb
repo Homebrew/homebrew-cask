@@ -3,8 +3,8 @@ cask 'screaming-frog-seo-spider' do
     version '2.40'
     sha256 'f37a517cb1ddb13a0621ae2ef98eba148027b3a2b5ce56b6e6b4ca756e40329b'
   else
-    version '5.1'
-    sha256 'bd4ccf73c8ee99e4da893a832bf85155820659cc5a61f72df33d39871fcc7b66'
+    version '6.0'
+    sha256 '843b0e38d09bc6e0057850e35cc5c9b17ee9a474b5d3de99429723ef0b06d8bb'
   end
 
   url "https://www.screamingfrog.co.uk/products/seo-spider/ScreamingFrogSEOSpider-#{version}.dmg"

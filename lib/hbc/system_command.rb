@@ -1,3 +1,4 @@
+require "hbc/extend/io"
 require "open3"
 require "shellwords"
 
@@ -56,17 +57,17 @@ class Hbc::SystemCommand
 
   def assert_success
     return if processed_status && processed_status.success?
-    raise Hbc::CaskCommandFailedError.new(command.utf8_inspect, processed_output[:stdout], processed_status)
+    raise Hbc::CaskCommandFailedError.new(command.utf8_inspect, processed_output[:stdout], processed_output[:stderr], processed_status)
   end
 
   def expanded_command
-    @expanded_command ||= command.map do |arg|
+    @expanded_command ||= command.map { |arg|
       if arg.respond_to?(:to_path)
         File.absolute_path(arg)
       else
         String(arg)
       end
-    end
+    }
   end
 
   def each_output_line(&b)
@@ -89,7 +90,11 @@ class Hbc::SystemCommand
       readable_sources = IO.select(sources)[0]
       readable_sources.delete_if(&:eof?).first(1).each do |source|
         type = (source == sources[0] ? :stdout : :stderr)
-        yield(type, source.gets || "")
+        begin
+          yield(type, source.readline_nonblock || "")
+        rescue IO::WaitReadable, EOFError
+          next
+        end
       end
       break if readable_sources.empty?
     end

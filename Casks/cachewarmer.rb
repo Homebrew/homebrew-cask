@@ -1,6 +1,6 @@
 cask 'cachewarmer' do
-  version '15'
-  sha256 'd0625271486829505e4512033fa61648429a1ba9356f6c9671a7e44ea664a9a2'
+  version '16'
+  sha256 'cdbff051ac20e68e761ee73258059b47c4ef2864330dafbc46d2bfd407d4ad94'
 
   # amazonaws.com/glencode_downloads was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/glencode_downloads/CacheWarmer-#{version}.pkg"

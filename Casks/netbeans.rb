@@ -22,7 +22,7 @@ cask 'netbeans' do
   # receipts database that would be a bug upstream with NetBeans not prefixing
   # its GlassFish package with "org.netbeans."
   #
-  # If this ever becomes an issue, :pkgutil => 'glassfish-.*' could be moved
+  # If this ever becomes an issue, pkgutil: 'glassfish-.*' could be moved
   # to a separate "zap" stanza.
   #
   # The NetBeans installer does some postflight unpacking of paths installed by

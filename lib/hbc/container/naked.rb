@@ -1,6 +1,6 @@
 class Hbc::Container::Naked < Hbc::Container::Base
   # Either inherit from this class and override with self.me?(criteria),
-  # or use this class directly as "container :type => :naked",
+  # or use this class directly as "container type: :naked",
   # in which case self.me? is not called.
   def self.me?(*)
     false

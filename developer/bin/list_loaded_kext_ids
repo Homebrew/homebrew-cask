@@ -29,7 +29,7 @@ if [[ $1 =~ ^-+h(elp)?$ ]]; then
 Print Bundle IDs for currently loaded Kernel Extensions (kexts)
 which may be useful in a Cask uninstall stanza, eg
 
-    uninstall :kext => 'kext.bundle.id.goes.here'
+    uninstall kext: 'kext.bundle.id.goes.here'
 
 Kexts attributed to Apple are excluded from the output.
 

@@ -86,7 +86,7 @@ if [[ $1 =~ ^-+h(elp)?$ || -z "$1" ]]; then
 Given a package file, extract a list of candidate Package IDs
 which may be useful in a Cask uninstall stanza, eg
 
-    uninstall :pkgutil => 'package.id.goes.here'
+    uninstall pkgutil: 'package.id.goes.here'
 
 The given package file need not be installed.
 

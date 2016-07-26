@@ -63,7 +63,7 @@ if [[ $1 =~ ^-+h(elp)?$ ]]; then
 List IDs for currently-loaded launchctl jobs, which may be useful
 in a Cask uninstall stanza, eg
 
-    uninstall :launchctl => 'job.id.goes.here'
+    uninstall launchctl: 'job.id.goes.here'
 
 If this command is not run as the superuser, you will be prompted
 for a password to run a subcommand using 'sudo'.  The password is

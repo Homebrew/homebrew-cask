@@ -4,7 +4,7 @@ cask 'black-ink' do
 
   url "https://red-sweater.com/blackink/BlackInk#{version}.zip"
   appcast 'https://red-sweater.com/blackink/appcast1.php',
-          checkpoint: '624f73d7fe9e633c5c716c76f9b018ae850f1e2b00918a2427aeda0f948d769b'
+          checkpoint: '58b59ee30e736fb9a698fd2c79e649b87d92c2bc26441e451071f9daf5fac056'
   name 'Black Ink'
   homepage 'https://red-sweater.com/blackink/'
   license :commercial

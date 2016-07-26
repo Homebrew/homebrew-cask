@@ -1,6 +1,6 @@
 cask 'adobe-acrobat' do
   version '2015'
-  sha256 'ffe890d946c5011c96436375e3072c58afc838c450e342f2b1cfc27f5a2ade99'
+  sha256 :no_check # required as upstream package is updated in-place
 
   url "http://trials3.adobe.com/AdobeProducts/APRO/Acrobat_HelpX/osx10/Acrobat_#{version}_Web_WWMUI.dmg",
       user_agent: :fake,

@@ -7,7 +7,7 @@ cask 'zest' do
   appcast 'https://github.com/zestdocs/zest/releases.atom',
           checkpoint: '070f49a40e5db4448424a7ab4305fd05ecfee703f14e99b76c776961a760eed5'
   name 'Zest'
-  homepage 'https://zestdocs.org/'
+  homepage 'http://zestdocs.org/'
   license :mit
 
   app 'Zest.app'

@@ -11,7 +11,7 @@ class Hbc::CaskDependencies
 
   def graph_dependencies
     deps_in = ->(csk) { csk.depends_on ? csk.depends_on.cask || [] : [] }
-    walk = lambda do |acc, deps|
+    walk = lambda { |acc, deps|
       deps.each do |dep|
         next if acc.key?(dep)
         succs = deps_in.call Hbc.load(dep)
@@ -19,7 +19,7 @@ class Hbc::CaskDependencies
         walk.call(acc, succs)
       end
       acc
-    end
+    }
 
     graphed = walk.call({}, @cask.depends_on.cask)
     Hbc::TopologicalHash[graphed]

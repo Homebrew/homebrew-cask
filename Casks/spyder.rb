@@ -5,7 +5,7 @@ cask 'spyder' do
   # bitbucket.org/spyder-ide/ was verified as official when first introduced to the cask
   url "https://bitbucket.org/spyder-ide/spyderlib/downloads/spyder-#{version}-py3.5.dmg"
   appcast 'https://github.com/spyder-ide/spyder/releases.atom',
-          checkpoint: 'cb54582f0a53c1226fa89099b928c7137f8465a66bac39c750e8b4b7714faca3'
+          checkpoint: 'b4b7ce3814df1fa1f3f9a3bf2ee33df9e5d486c051ef2049177a325f56d0986d'
   name 'Spyder-Py3'
   homepage 'https://github.com/spyder-ide/spyder'
   license :mit

@@ -2,7 +2,7 @@ cask 'blender' do
   version '2.77a'
   sha256 'be2c935e38f8ac9e836b97e41d55e2db7a9ecd067c049b9ff685f36a2870d066'
 
-  url "https://download.blender.org/release/Blender#{version.to_f}/blender-#{version}-OSX_10.6-x86_64.zip"
+  url "https://download.blender.org/release/Blender#{version.major_minor}/blender-#{version}-OSX_10.6-x86_64.zip"
   name 'Blender'
   homepage 'https://www.blender.org/'
   license :gpl

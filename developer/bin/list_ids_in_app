@@ -138,7 +138,7 @@ Given a Application (app) bundle directory on disk, extract the
 associated app Bundle ID, which may be useful in a Cask uninstall
 stanza, eg
 
-    uninstall :quit => 'app.id.goes.here'
+    uninstall quit: 'app.id.goes.here'
 
 The app need not be running for this script to work.
 

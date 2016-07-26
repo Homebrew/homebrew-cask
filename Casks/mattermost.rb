@@ -5,7 +5,7 @@ cask 'mattermost' do
   # github.com/mattermost/desktop was verified as official when first introduced to the cask
   url "https://github.com/mattermost/desktop/releases/download/v#{version}/mattermost-desktop-#{version}-osx.tar.gz"
   appcast 'https://github.com/mattermost/desktop/releases.atom',
-          checkpoint: 'd1634fe4476a496b2a93f98bb075e5d5ef20b0433aab6e985fc404cc3c41722d'
+          checkpoint: 'b66c144e4563f67deb6d0fbb37ee707fa428442c2dfbb038e761707e5e78371f'
   name 'Mattermost'
   homepage 'http://www.mattermost.org/'
   license :mit

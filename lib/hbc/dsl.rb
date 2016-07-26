@@ -4,6 +4,7 @@ class Hbc::DSL; end
 
 require "hbc/dsl/appcast"
 require "hbc/dsl/base"
+require "hbc/dsl/caveats"
 require "hbc/dsl/conflicts_with"
 require "hbc/dsl/container"
 require "hbc/dsl/depends_on"
