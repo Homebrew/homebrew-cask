@@ -1,10 +1,10 @@
 cask 'iexplorer' do
-  version '3.9.11.0'
-  sha256 '87b71208d3fe4495b18d4486a85d12e57ef0b42c752b9f5585701e193b84e0f2'
+  version '3.9.12.0'
+  sha256 '1f2b2673fefc68d7c6b688064a9be2e422b9a8d763110fe457390b75c683a3b3'
 
   url "https://www.macroplant.com/release/iExplorer-#{version}.dmg"
   appcast 'https://www.macroplant.com/iexplorer/ie3-appcast.xml',
-          checkpoint: '07a02e60e8e19133f4d7836f6c56cc633f89062f66ae085ceae9ac950b9c7658'
+          checkpoint: '32e405c41cba17c409278a142f0afbf86daf9b0ced5ec803e9b05eb99a6b91ee'
   name 'iExplorer'
   homepage 'https://www.macroplant.com/iexplorer/'
   license :freemium
