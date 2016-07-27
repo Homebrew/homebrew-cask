@@ -5,9 +5,9 @@ cask 'plug' do
     url "http://plugformac.com/files/Plug-#{version}.dmg"
   else
     version '2.0.11'
-    sha256 'a7a5add9f4b56ed539ccfd370e0b95cfb81d6fe64cfbbdebb8b8e39c10571192'
+    sha256 '9542bbae3beadca999246012cc5ede97ae6e992fdd622c482f1c1bf0145a7f8d'
     appcast "https://www.plugformac.com/updates/plug#{version.major}/sparklecast.xml",
-            checkpoint: 'e3fa03fc84247f62e4cc51f751f70f159a83dd82538144ed34b7a64318b6fad2'
+            checkpoint: '9bf2e94dd7486633b9dd622d7dbc631f346ec6304744ec157da2a476886e9b03'
     url 'https://www.plugformac.com/updates/plug2/Plug-latest.dmg'
   end
 
