@@ -17,8 +17,10 @@ class Hbc::CLI::Install < Hbc::CLI::Base
     cask_tokens.each do |cask_token|
       begin
         cask = Hbc.load(cask_token)
-        options = { force: force, skip_cask_deps: skip_cask_deps, require_sha: require_sha }
-        Hbc::Installer.new(cask, options).install
+        Hbc::Installer.new(cask,
+                           force:          force,
+                           skip_cask_deps: skip_cask_deps,
+                           require_sha:    require_sha).install
         count += 1
       rescue Hbc::CaskAlreadyInstalledError => e
         opoo e.message

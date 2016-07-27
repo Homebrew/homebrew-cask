@@ -17,12 +17,12 @@ class Hbc::Installer
 
   PERSISTENT_METADATA_SUBDIRS = ["gpg"].freeze
 
-  def initialize(cask, options = {})
+  def initialize(cask, command: Hbc::SystemCommand, force: false, skip_cask_deps: false, require_sha: false)
     @cask = cask
-    @command = options.fetch(:command, Hbc::SystemCommand)
-    @force = options.fetch(:force, false)
-    @skip_cask_deps = options.fetch(:skip_cask_deps, false)
-    @require_sha = options.fetch(:require_sha, false)
+    @command = command
+    @force = force
+    @skip_cask_deps = skip_cask_deps
+    @require_sha = require_sha
   end
 
   def self.print_caveats(cask)

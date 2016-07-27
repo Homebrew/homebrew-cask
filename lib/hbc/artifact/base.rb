@@ -71,9 +71,9 @@ class Hbc::Artifact::Base
     {}
   end
 
-  def initialize(cask, options = {})
+  def initialize(cask, command: Hbc::SystemCommand, force: false)
     @cask = cask
-    @command = options.fetch(:command, Hbc::SystemCommand)
-    @force = options.fetch(:force, false)
+    @command = command
+    @force = force
   end
 end
