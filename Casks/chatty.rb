@@ -10,7 +10,8 @@ cask 'chatty' do
   homepage 'https://chatty.github.io'
   license :mit
 
-  app 'Chatty.jar'
+  # There is no sub-folder in the ZIP; the root *is* the folder
+  suite '.', target: 'Chatty'
 
   zap delete: '~/.chatty'
 
