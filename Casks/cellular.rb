@@ -9,4 +9,6 @@ cask 'cellular' do
   license :unknown
 
   suite 'Cellular'
+  
+  zap   delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/au.edu.monash.infotech.cellular.sfl'
 end
