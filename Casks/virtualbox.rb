@@ -11,6 +11,8 @@ cask 'virtualbox' do
   end
 
   url "http://download.virtualbox.org/virtualbox/#{version.sub(%r{-.*}, '')}/VirtualBox-#{version}-OSX.dmg"
+  appcast 'http://download.virtualbox.org/virtualbox/LATEST.TXT',
+          checkpoint: '0c9a9d43610d66f4cc3f42da08cae044483de25894a9daf9dc6a76ff75ca9327'
   name 'Oracle VirtualBox'
   homepage 'https://www.virtualbox.org'
   license :gpl
