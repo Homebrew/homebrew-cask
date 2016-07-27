@@ -1,13 +1,11 @@
 cask 'fish' do
   version '2.3.1'
-  sha256 '0993fcb0b10b1d2609f0d4533836f43f66ae2cba2f59f279208f603cdf7fd770'
+  sha256 'd42bfd0137043a7f372590b78354a6a0153987bad2ddfdd38401ef192b5bf6cd'
 
-  url "http://fishshell.com/files/#{version}/fish-#{version}.pkg"
-  name 'Fish Shell'
+  url "http://fishshell.com/files/#{version}/fish-#{version}.app.zip"
+  name 'Fish App'
   homepage 'http://fishshell.com'
   license :gpl
 
-  pkg 'fish.pkg'
-
-  uninstall pkgutil: 'com.ridiculousfish.fish-shell-pkg'
+  app 'fish.app'
 end
