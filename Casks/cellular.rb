@@ -8,5 +8,5 @@ cask 'cellular' do
   homepage 'http://www.flipt.org/#cellular'
   license :unknown
 
-  app 'Cellular'
+  suite 'Cellular'
 end
