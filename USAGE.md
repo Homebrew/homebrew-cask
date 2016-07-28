@@ -180,8 +180,6 @@ Default is `~/Library/PreferencePanes`
 Default is `~/Library/QuickLook`
 * `--fontdir=/my/path` changes the path for Fonts.
 Default is `~/Library/Fonts`
-* `--binarydir=/my/path` changes the path for Binary symlinks.
-Default is `/usr/local/bin`
 * `--input_methoddir=/my/path` changes the path for Input Methods.
 Default is `~/Library/Input Methods`
 * `--screen_saverdir=/my/path` changes the path for Screen Savers.
