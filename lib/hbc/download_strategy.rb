@@ -73,7 +73,7 @@ class Hbc::CurlDownloadStrategy < Hbc::AbstractDownloadStrategy
   end
 
   def temporary_path
-    @temporary_path ||= Pathname.new("#{tarball_path}.incomplete")
+    @temporary_path ||= tarball_path.sub(%r{$}, ".incomplete")
   end
 
   def cached_location
