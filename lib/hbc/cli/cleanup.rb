@@ -33,6 +33,7 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
   end
 
   def cache_files
+    return [] unless cache_location.exist?
     cache_location.children
                   .map(&method(:Pathname))
                   .reject(&method(:outdated?))
