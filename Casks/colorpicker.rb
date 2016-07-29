@@ -4,7 +4,7 @@ cask 'colorpicker' do
 
   url "http://www.northernspysoftware.com/download/ColorPicker_#{version}.dmg"
   appcast 'http://www.northernspysoftware.com/feed/colorpicker.xml',
-          :sha256 => '52d78504cf610c23eb719c689cc997d5836d85b0a7e5d8cc5c5998af8190d5bd'
+          checkpoint: '0c5eb8f736ccd0ae1594d61d09ed4b44c7bb84e2c1aef4e32fcc5ffe6cce56bb'
   name 'ColorPicker'
   homepage 'http://www.northernspysoftware.com/software/colorpicker'
   license :gratis

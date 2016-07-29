@@ -1,15 +1,15 @@
 cask 'xamarin-mdk' do
-  version '4.0.2.5'
-  sha256 '5b8c4a9fee009a644769a88ab480aa3032fda9777df043543d8df5f430fc491d'
+  version '4.4.1.0'
+  sha256 '451602bbb5f06442c4fc11d8593ebc3904a814260bba312a033ef31395459491'
 
-  url "https://download.xamarin.com/MonoFrameworkMDK/Macx86/MonoFramework-MDK-#{version}.macos10.xamarin.x86.pkg"
+  url "https://download.xamarin.com/MonoFrameworkMDK/Macx86/MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
+  appcast 'https://static.xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
+          checkpoint: '2cb6260bf1f5348e125fe9cab2effe9862fe76f0706f146dd91c827827cdda6b'
   name 'Xamarin Mono MDK'
-  appcast 'https://xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
-          :sha256 => '79c309d6dbe6f08f1d022c9376a4678cc94f57be084007df90c5a12839b35cdd'
   homepage 'https://xamarin.com/platform'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  pkg "MonoFramework-MDK-#{version}.macos10.xamarin.x86.pkg"
+  pkg "MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
 
-  uninstall :pkgutil => 'com.xamarin.mono-MDK.pkg'
+  uninstall pkgutil: 'com.xamarin.mono-MDK.pkg'
 end

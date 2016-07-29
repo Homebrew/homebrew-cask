@@ -4,36 +4,34 @@ module Hbc::Options
   end
 
   module ClassMethods
+    attr_writer :no_binaries
+
     def no_binaries
       @no_binaries ||= false
     end
 
-    def no_binaries=(_no_binaries)
-      @no_binaries = _no_binaries
-    end
+    attr_writer :debug
 
     def debug
       @debug ||= false
     end
 
-    def debug=(_debug)
-      @debug = _debug
-    end
+    attr_writer :verbose
 
     def verbose
       @verbose ||= false
     end
 
-    def verbose=(_verbose)
-      @verbose = _verbose
-    end
+    attr_writer :cleanup_outdated
 
     def cleanup_outdated
       @cleanup_outdated ||= false
     end
 
-    def cleanup_outdated=(_cleanup_outdated)
-      @cleanup_outdated = _cleanup_outdated
+    attr_writer :help
+
+    def help
+      @help ||= false
     end
   end
 end

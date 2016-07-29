@@ -5,6 +5,6 @@ test_cask 'invalid-stage-only-conflict' do
   url TestHelper.local_binary_url('transmission-2.61.dmg')
   homepage 'http://example.com/invalid-stage-only-conflict'
 
-  stage_only true
   app 'Transmission.app'
+  stage_only true
 end

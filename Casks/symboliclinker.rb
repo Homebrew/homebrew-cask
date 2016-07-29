@@ -4,7 +4,7 @@ cask 'symboliclinker' do
 
   url "https://github.com/nickzman/symboliclinker/releases/download/v#{version}/SymbolicLinker#{version}.dmg"
   appcast 'https://github.com/nickzman/symboliclinker/releases.atom',
-          :sha256 => 'bcd2b4693b166b4a9e6ed00b6b293f4f8d11796b4c8d9db77cdcd1439b50685b'
+          checkpoint: 'bcd2b4693b166b4a9e6ed00b6b293f4f8d11796b4c8d9db77cdcd1439b50685b'
   name 'SymbolicLinker'
   homepage 'https://github.com/nickzman/symboliclinker'
   license :bsd

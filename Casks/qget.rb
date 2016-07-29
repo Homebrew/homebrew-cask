@@ -9,5 +9,5 @@ cask 'qget' do
 
   pkg 'Qget.pkg'
 
-  uninstall :pkgutil => 'qnap.com.qget'
+  uninstall pkgutil: 'qnap.com.qget'
 end

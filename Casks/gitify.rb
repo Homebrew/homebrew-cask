@@ -1,10 +1,10 @@
 cask 'gitify' do
-  version '0.0.18'
-  sha256 '5916a5054f5ed70660e3118bd43ec72d3f592337d091b2883a203bb4ab5173e6'
+  version '1.0.0'
+  sha256 'c5dd7d775564fe2beae3283fd9925b5c32882cd97735014c127f40f06d588ea6'
 
   url "https://github.com/ekonstantinidis/gitify/releases/download/#{version}/gitify-osx.zip"
   appcast 'https://github.com/ekonstantinidis/gitify/releases.atom',
-          :sha256 => '9b0ecec304e3a04b1ea8a2f7a872a025a3e44b5d7e0e15dc84d8e3d3771ee3b6'
+          checkpoint: '3f8d4b86e6ff77bea861765a37b52b18ce82e632b2193c06331b88b403fc1317'
   name 'Gitify'
   homepage 'https://github.com/ekonstantinidis/gitify'
   license :oss

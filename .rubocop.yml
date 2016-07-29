@@ -1,35 +1,89 @@
-inherit_from: .rubocop_todo.yml
-
-require: rubocop-cask
+require: 'rubocop-cask'
 
 AllCops:
+  TargetRubyVersion: 2.0
   Exclude:
-    - '**/Gemfile'
-    - '**/Rakefile'
-    - '**/brew-cask.rb'
+    - '**/Casks/**/*'
     - 'developer/**/*'
-    - 'lib/**/*'
-    - 'spec/**/*'
-    - 'test/**/*'
+    - 'lib/vendor/**/*'
 
-Metrics/LineLength:
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/ClassLength:
+    Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Metrics/ModuleLength:
+  CountComments: false
   Exclude:
-    - Casks/**/*
+    - 'lib/hbc/locations.rb'
+    - 'lib/hbc/macos.rb'
+    - 'lib/hbc/utils.rb'
 
-Performance/StringReplacement:
-  Exclude:
-    - Casks/**/*
+Style/BlockDelimiters:
+  EnforcedStyle: semantic
+  FunctionalMethods:
+    - expect
+    - let
+    - let!
+    - subject
+    - watch
+    - inject
+    - map
+    - map!
+    - collect
+    - collect!
+    - reject
+    - reject!
+    - delete_if
+    - with_object
+  ProceduralMethods:
+    - after
+    - at_exit
+    - before
+    - benchmark
+    - bm
+    - bmbm
+    - capture_io
+    - capture_output
+    - capture_subprocess_io
+    - chdir
+    - context
+    - create
+    - each_with_object
+    - fork
+    - measure
+    - new
+    - open
+    - realtime
+    - shutup
+    - tap
+    - each
+    - reverse_each
+  IgnoredMethods:
+    - it
+    - its
+    - lambda
+    - proc
 
-Style/BarePercentLiterals:
-  EnforcedStyle: percent_q
 
-Style/ExtraSpacing:
-  Exclude:
-    - Casks/**/*
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
 
-Style/FileName:
-  Exclude:
-    - Casks/**/*
+Style/PredicateName:
+  NameWhitelist: is_32_bit?, is_64_bit?
 
-Style/HashSyntax:
-  EnforcedStyle: hash_rockets
+Style/RaiseArgs:
+  EnforcedStyle: exploded
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes

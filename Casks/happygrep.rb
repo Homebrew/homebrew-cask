@@ -4,7 +4,7 @@ cask 'happygrep' do
 
   url "https://github.com/happypeter/happygrep/releases/download/v#{version}/happygrep.zip"
   appcast 'https://github.com/happypeter/happygrep/releases.atom',
-          :sha256 => 'dd376ec81022a1df74322c83907d48ce2c8430da66cc9becc72a9c808ae1aae8'
+          checkpoint: 'dd376ec81022a1df74322c83907d48ce2c8430da66cc9becc72a9c808ae1aae8'
   name 'happygrep'
   homepage 'https://github.com/happypeter/happygrep'
   license :mit

@@ -1,7 +1,10 @@
 # Require this file to build a testing environment.
 
-require 'vendor/homebrew-fork/monkeypatch_pathname'
-require 'vendor/homebrew-fork/utils'
+homebrew_repo = `brew --repository`.chomp
+$LOAD_PATH.unshift(File.expand_path("#{homebrew_repo}/Library/Homebrew"))
+
+require 'extend/pathname'
+require 'utils'
 require 'tmpdir'
 
 TEST_TMPDIR = Dir.mktmpdir("homebrew_tests")

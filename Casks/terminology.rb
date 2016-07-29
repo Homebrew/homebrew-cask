@@ -7,7 +7,7 @@ cask 'terminology' do
   homepage 'https://agiletortoise.com/terminology/mac/'
   license :gratis
 
-  installer :script => 'Terminology-for-OS-X/Install.command', :sudo => false
+  installer script: 'Terminology-for-OS-X/Install.command', sudo: false
 
-  uninstall :delete => Pathname.new(File.expand_path('~')).join('Library/Dictionaries/Terminology.dictionary')
+  uninstall delete: Pathname.new(File.expand_path('~')).join('Library/Dictionaries/Terminology.dictionary')
 end

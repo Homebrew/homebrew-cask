@@ -4,7 +4,7 @@ cask 'anybar' do
 
   url "https://github.com/tonsky/AnyBar/releases/download/#{version}/AnyBar-#{version}.zip"
   appcast 'https://github.com/tonsky/AnyBar/releases.atom',
-          :sha256 => 'c2decd7b28c47c41117ecfaba8fb40681e474900acca99219479ccb4d881b5b4'
+          checkpoint: 'c2decd7b28c47c41117ecfaba8fb40681e474900acca99219479ccb4d881b5b4'
   name 'AnyBar'
   homepage 'https://github.com/tonsky/AnyBar'
   license :eclipse

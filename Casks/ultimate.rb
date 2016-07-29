@@ -7,7 +7,7 @@ cask 'ultimate' do
   homepage 'http://www.epubor.com'
   license :commercial
 
-  container :nested => "epubor_ultimate/Ultimate_v#{version}.dmg"
+  container nested: "epubor_ultimate/Ultimate_v#{version}.dmg"
 
   app 'Ultimate.app'
 end

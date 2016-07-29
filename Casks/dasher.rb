@@ -9,5 +9,5 @@ cask 'dasher' do
 
   app 'Dasher.app'
 
-  zap :delete => '~/Library/Application Support/Dasher'
+  zap delete: '~/Library/Application Support/Dasher'
 end

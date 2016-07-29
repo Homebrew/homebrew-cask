@@ -9,5 +9,5 @@ cask 'save-as-wwf' do
 
   pkg 'SAVE_AS_WWF_1.0.pkg'
 
-  uninstall :pkgutil => 'de.wwf.saveAsWwf.SAVEASWWF.pkg'
+  uninstall pkgutil: 'de.wwf.saveAsWwf.SAVEASWWF.pkg'
 end

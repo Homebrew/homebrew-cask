@@ -1,8 +1,8 @@
 cask 'azure-cli' do
-  version '0.9.10'
-  sha256 '4e219aad00040520e780fba42d9b715761dc0d3ee590a8c8bc7a83119cb3b79b'
+  version '0.10.2'
+  sha256 '924f95d3adeee1fb199876f0fecba416dd7a9cf819661d2338f4f7e398658fa4'
 
-  # azuresdkscu.blob.core.windows.net is the official download host per the vendor homepage
+  # azuresdkscu.blob.core.windows.net was verified as official when first introduced to the cask
   url "https://azuresdkscu.blob.core.windows.net/downloads04/azure-cli.#{version}.dmg"
   name 'Microsoft Azure CLI'
   homepage 'https://azure.microsoft.com/en-us/documentation/articles/xplat-cli/'
@@ -10,7 +10,8 @@ cask 'azure-cli' do
 
   pkg 'Install Command Line Interface.pkg'
 
-  uninstall :script => '/usr/local/bin/azure-uninstall'
+  uninstall pkgutil: 'com.microsoft.azure.microsoftAzureSdk.postflight.pkg',
+            script:  '/usr/local/bin/azure-uninstall'
 
-  zap :delete => '~/.azure'
+  zap delete: '~/.azure'
 end

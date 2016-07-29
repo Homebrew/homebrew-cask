@@ -1,71 +1,59 @@
-require 'test_helper'
+require "test_helper"
 
 describe Hbc::CLI::Search do
   it "lists the available Casks that match the search term" do
     lambda {
-      Hbc::CLI::Search.run('intellij')
-    }.must_output <<-OUTPUT.gsub(/^ */, '')
+      Hbc::CLI::Search.run("photoshop")
+    }.must_output <<-OUTPUT.gsub(%r{^ *}, "")
       ==> Partial matches
-      intellij-idea
-      intellij-idea-ce
+      adobe-photoshop-cc
+      adobe-photoshop-lightroom
     OUTPUT
   end
 
   it "shows that there are no Casks matching a search term that did not result in anything" do
     lambda {
-      Hbc::CLI::Search.run('foo-bar-baz')
+      Hbc::CLI::Search.run("foo-bar-baz")
     }.must_output("No Cask found for \"foo-bar-baz\".\n")
   end
 
   it "lists all available Casks with no search term" do
-    out, err = capture_io do
-      Hbc::CLI::Search.run
-    end
-    out.must_match(/google-chrome/)
+    out = capture_io { Hbc::CLI::Search.run }[0]
+    out.must_match(%r{google-chrome})
     out.length.must_be :>, 1000
   end
 
   it "ignores hyphens in search terms" do
-    out, err = capture_io do
-      Hbc::CLI::Search.run('goo-gle-chrome')
-    end
-    out.must_match(/google-chrome/)
+    out = capture_io { Hbc::CLI::Search.run("goo-gle-chrome") }[0]
+    out.must_match(%r{google-chrome})
     out.length.must_be :<, 100
   end
 
   it "ignores hyphens in Cask tokens" do
-    out, err = capture_io do
-      Hbc::CLI::Search.run('googlechrome')
-    end
-    out.must_match(/google-chrome/)
+    out = capture_io { Hbc::CLI::Search.run("googlechrome") }[0]
+    out.must_match(%r{google-chrome})
     out.length.must_be :<, 100
   end
 
   it "accepts multiple arguments" do
-    out, err = capture_io do
-      Hbc::CLI::Search.run('google chrome')
-    end
-    out.must_match(/google-chrome/)
+    out = capture_io { Hbc::CLI::Search.run("google chrome") }[0]
+    out.must_match(%r{google-chrome})
     out.length.must_be :<, 100
   end
 
   it "accepts a regexp argument" do
     lambda {
-      Hbc::CLI::Search.run('/^google-c[a-z]rome$/')
+      Hbc::CLI::Search.run("/^google-c[a-z]rome$/")
     }.must_output "==> Regexp matches\ngoogle-chrome\n"
   end
 
   it "Returns both exact and partial matches" do
-    out, err = capture_io do
-      Hbc::CLI::Search.run('mnemosyne')
-    end
-    out.must_match(/^==> Exact match\nmnemosyne\n==> Partial matches\nsubclassed-mnemosyne/)
+    out = capture_io { Hbc::CLI::Search.run("mnemosyne") }[0]
+    out.must_match(%r{^==> Exact match\nmnemosyne\n==> Partial matches\nsubclassed-mnemosyne})
   end
 
   it "does not search the Tap name" do
-    out, err = capture_io do
-      Hbc::CLI::Search.run('caskroom')
-    end
-    out.must_match(/^No Cask found for "caskroom"\.\n/)
+    out = capture_io { Hbc::CLI::Search.run("caskroom") }[0]
+    out.must_match(%r{^No Cask found for "caskroom"\.\n})
   end
 end

@@ -6,9 +6,10 @@ cask 'invisorql' do
   name 'Invisor QuickLook Plug-In'
   homepage 'http://www.pozdeev.com/invisor/'
   license :gratis
-  depends_on :macos => '>= :lion'
-  depends_on :arch => :x86_64
-  depends_on :cask => 'invisor-lite'
+
+  depends_on macos: '>= :lion'
+  depends_on arch: :x86_64
+  depends_on cask: 'invisor-lite'
 
   qlplugin 'InvisorQL.qlgenerator'
 end

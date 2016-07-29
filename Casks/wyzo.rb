@@ -5,7 +5,7 @@ cask 'wyzo' do
   url "http://download.wyzo.com/files/mac/WyzoSetup-#{version}.dmg"
   name 'Wyzo'
   homepage 'http://wyzo.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Wyzo.app'
 end

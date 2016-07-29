@@ -3,15 +3,15 @@ cask 'milkmaid' do
   sha256 'a96702396cf80cff9d447844141648f4bbc967302dccf2a709a5b8664fc42450'
 
   url "https://github.com/downloads/jgallen23/MilkMaid/MilkMaid-#{version}.tar.gz"
-  name 'MilkMaid'
   appcast 'https://raw.githubusercontent.com/jgallen23/MilkMaid/master/appcast.xml',
-          :sha256 => '6572d842384814eaa54ec88ba2467221aa4bd8e01ca22a00ec2b610526ee0e97'
+          checkpoint: 'cc637868a5ba18ec3d36e9b72e59200678784646ec7fb1b84a319872c525ff1f'
+  name 'MilkMaid'
   homepage 'https://github.com/jgallen23/MilkMaid'
   license :mit
 
   app 'MilkMaid.app'
 
-  zap :delete => '~/Library/Preferences/com.jga.MilkMaid.plist'
+  zap delete: '~/Library/Preferences/com.jga.MilkMaid.plist'
 
   caveats do
     discontinued

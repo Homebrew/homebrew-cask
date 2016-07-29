@@ -4,7 +4,7 @@ cask 'gawker' do
 
   url "http://downloads.sourceforge.net/sourceforge/gawker/Gawker_#{version}.zip"
   appcast 'http://gawker.sourceforge.net/appcast.xml',
-          :sha256 => '18c8cde51b40d42c16f8cb38cd169b6abbd8a779efd840ef4087f3557b484771'
+          checkpoint: '5a8f2adae2f10e3bff78ed21aec5fd8f96fbd6abf3be641a3257e6de3b62ac52'
   name 'Gawker'
   homepage 'http://gawker.sourceforge.net/Gawker.html'
   license :gpl

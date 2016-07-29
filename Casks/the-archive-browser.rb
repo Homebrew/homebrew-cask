@@ -1,6 +1,6 @@
 cask 'the-archive-browser' do
-  version '1.10.1'
-  sha256 '6bdb2ff4af904bd5228b0c399ce6d285807a3674e54bbc3a887a26ab1282d0cc'
+  version '1.11.1'
+  sha256 '67bd39f6951179653e25fa8d63eef5c85e4921b702b01b228091bfc7a8e98a5d'
 
   url "https://wakaba.c3.cx/releases/TheArchiveBrowser/TheArchiveBrowser#{version}.zip"
   name 'The Archive Browser'

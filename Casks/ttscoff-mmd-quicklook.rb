@@ -4,7 +4,7 @@ cask 'ttscoff-mmd-quicklook' do
 
   url "https://github.com/ttscoff/MMD-QuickLook/releases/download/#{version}/MMD-QuickLook#{version}.zip"
   appcast 'https://github.com/ttscoff/mmd-quicklook/releases.atom',
-          :sha256 => '51232f49e048e4e56c62c34f4207c4bc2f38c2ac410dd422975bc779e272168d'
+          checkpoint: '51232f49e048e4e56c62c34f4207c4bc2f38c2ac410dd422975bc779e272168d'
   name 'MMD-QuickLook'
   homepage 'https://github.com/ttscoff/mmd-quicklook'
   license :oss

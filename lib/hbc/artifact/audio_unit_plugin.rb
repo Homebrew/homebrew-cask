@@ -1,3 +1,2 @@
-class Hbc::Artifact::AudioUnitPlugin < Hbc::Artifact::Symlinked
-
+class Hbc::Artifact::AudioUnitPlugin < Hbc::Artifact::Moved
 end

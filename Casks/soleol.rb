@@ -5,7 +5,7 @@ cask 'soleol' do
   url 'http://eduo.info/soleol-support/releases/SolEol-Mac.zip'
   name 'SolEol'
   homepage 'http://eduo.info/apps/soleol'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'SolEol/SolEol.app'
 end

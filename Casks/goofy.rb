@@ -1,12 +1,12 @@
 cask 'goofy' do
-  version '2.2.4'
-  sha256 '95c85fb48a89d5f8e0e54ecfd24f3e1829d0cd63758cb2119cefe8e827293e81'
+  version '2.2.6'
+  sha256 '7408f4d5870d54c13a5557c7a403da39a3c1c71850c5d6b6cca9a840152374f1'
 
-  # github.com is the official download host per the appcast feed
+  # github.com/danielbuechele/goofy was verified as official when first introduced to the cask
   url "https://github.com/danielbuechele/goofy/releases/download/v#{version}/Goofy.app.zip"
-  name 'Goofy'
   appcast 'https://github.com/danielbuechele/goofy/releases.atom',
-          :sha256 => 'fb33fcb13e310a06a718c63cffc9ef70f18859d4c058d3714dd5a50c56080e91'
+          checkpoint: '487c3d4a6f8520f7773e38341fc8fac04a556ce6ae5c3565d096a74ee5b96888'
+  name 'Goofy'
   homepage 'http://www.goofyapp.com/'
   license :mit
 

@@ -1,11 +1,11 @@
-require 'hbc/checkable'
+require "hbc/checkable"
 
 class Hbc::UrlChecker
   attr_accessor :cask, :response_status, :headers
 
   include Hbc::Checkable
 
-  def initialize(cask, fetcher=Hbc::Fetcher)
+  def initialize(cask, fetcher = Hbc::Fetcher)
     @cask = cask
     @fetcher = fetcher
     @headers = {}
@@ -22,22 +22,21 @@ class Hbc::UrlChecker
   end
 
   HTTP_RESPONSES = [
-    'HTTP/1.0 200 OK',
-    'HTTP/1.1 200 OK',
-    'HTTP/1.1 302 Found'
-  ]
+                     "HTTP/1.0 200 OK",
+                     "HTTP/1.1 200 OK",
+                     "HTTP/1.1 302 Found",
+                   ].freeze
 
   OK_RESPONSES = {
-    'http'  => HTTP_RESPONSES,
-    'https' => HTTP_RESPONSES,
-    'ftp'   => [ 'OK' ]
-  }
+                   "http"  => HTTP_RESPONSES,
+                   "https" => HTTP_RESPONSES,
+                   "ftp"   => ["OK"],
+                 }.freeze
 
   def _check_response_status
     ok = OK_RESPONSES[cask.url.scheme]
-    unless ok.include?(@response_status)
-      add_error "unexpected http response, expecting #{ok.map(&:utf8_inspect).join(' or ')}, got #{@response_status.utf8_inspect}"
-    end
+    return if ok.include?(@response_status)
+    add_error "unexpected http response, expecting #{ok.map(&:utf8_inspect).join(' or ')}, got #{@response_status.utf8_inspect}"
   end
 
   def _get_data_from_request
@@ -51,24 +50,24 @@ class Hbc::UrlChecker
     response_lines = response.split("\n").map(&:chomp)
 
     case cask.url.scheme
-    when 'http', 'https' then
-      @response_status = response_lines.grep(/^HTTP/).last
+    when "http", "https" then
+      @response_status = response_lines.grep(%r{^HTTP}).last
       if @response_status.respond_to?(:strip)
         @response_status.strip!
         unless response_lines.index(@response_status).nil?
-          http_headers = response_lines[(response_lines.index(@response_status)+1)..-1]
-          http_headers.each { |line|
-            header_name, header_value = line.split(': ')
+          http_headers = response_lines[(response_lines.index(@response_status) + 1)..-1]
+          http_headers.each do |line|
+            header_name, header_value = line.split(": ")
             @headers[header_name] = header_value
-          }
+          end
         end
       end
-    when 'ftp' then
-      @response_status = 'OK'
-      response_lines.each { |line|
-        header_name, header_value = line.split(': ')
+    when "ftp" then
+      @response_status = "OK"
+      response_lines.each do |line|
+        header_name, header_value = line.split(": ")
         @headers[header_name] = header_value
-      }
+      end
     else
       add_error "unknown scheme for #{cask.url}"
     end

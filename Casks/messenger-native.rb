@@ -4,7 +4,7 @@ cask 'messenger-native' do
 
   url "https://github.com/imton/MessengerNative/releases/download/#{version}/Mac64_MessengerNative#{version}.zip"
   appcast 'https://github.com/imton/MessengerNative/releases.atom',
-          :sha256 => '24d213d471d0f1535ff73b30079a54fa471e9ce0aa5472ac047eafa7f28a69e3'
+          checkpoint: '24d213d471d0f1535ff73b30079a54fa471e9ce0aa5472ac047eafa7f28a69e3'
   name 'Messenger Native'
   homepage 'https://github.com/imton/MessengerNative'
   license :mit

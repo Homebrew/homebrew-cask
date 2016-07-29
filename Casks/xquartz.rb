@@ -1,11 +1,11 @@
 cask 'xquartz' do
-  version '2.7.8'
-  sha256 '17a4c2da1ab3b676fdf80d1a0714c6bfd22183a604e823b4fd8329fdb4432c2a'
+  version '2.7.9'
+  sha256 'f1a8c055e37f6c508ec471dd94d0aadc0fc69601cbbc97abe78abbb2dbee2f5c'
 
-  # macosforge.org is the official download host per the vendor homepage
-  url "https://xquartz.macosforge.org/downloads/SL/XQuartz-#{version}.dmg"
-  appcast 'https://xquartz-dl.macosforge.org/sparkle/release.xml',
-          :sha256 => '0b2c7d4e0b101eefc0a3efb000b779b3ec7246fcb5d14a0540e85f540f26a9e6'
+  # bintray.com/xquartz was verified as official when first introduced to the cask
+  url "https://dl.bintray.com/xquartz/downloads/XQuartz-#{version}.dmg"
+  appcast 'https://www.xquartz.org/releases/sparkle/release.xml',
+          checkpoint: '74e4ffc811e99d388086551e256abc9259b9200d23a90eb380811516ae6f501a'
   name 'XQuartz'
   homepage 'http://www.xquartz.org/'
   license :oss
@@ -22,18 +22,20 @@ cask 'xquartz' do
     system '/bin/launchctl', 'load', '/Library/LaunchAgents/org.macosforge.xquartz.startx.plist'
   end
 
-  uninstall :quit => 'org.macosforge.xquartz.X11',
-            :launchctl => 'org.macosforge.xquartz.startx',
-            :pkgutil => 'org.macosforge.xquartz.pkg',
-            :delete => '/opt/X11/'
-  zap       :delete => [
-                        '~/Library/Caches/org.macosforge.xquartz.X11',
-                        '~/Library/Logs/X11',
-                        '~/Library/Logs/X11.org.macosforge.xquartz.log',
-                        '~/Library/Logs/X11.org.macosforge.xquartz.log.old',
-                        '~/Library/Preferences/org.macosforge.xquartz.X11.plist',
-                        '~/Library/Saved Application State/org.macosforge.xquartz.X11.savedState',
-                        '~/.Xauthority',
-                       ],
-            :rmdir => '~/.fonts'
+  uninstall quit:      'org.macosforge.xquartz.X11',
+            launchctl: 'org.macosforge.xquartz.startx',
+            pkgutil:   'org.macosforge.xquartz.pkg',
+            delete:    '/opt/X11/'
+
+  zap       delete: [
+                      '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.macosforge.xquartz.x11.sfl',
+                      '~/Library/Caches/org.macosforge.xquartz.X11',
+                      '~/Library/Logs/X11',
+                      '~/Library/Logs/X11.org.macosforge.xquartz.log',
+                      '~/Library/Logs/X11.org.macosforge.xquartz.log.old',
+                      '~/Library/Preferences/org.macosforge.xquartz.X11.plist',
+                      '~/Library/Saved Application State/org.macosforge.xquartz.X11.savedState',
+                      '~/.Xauthority',
+                    ],
+            rmdir:  '~/.fonts'
 end

@@ -9,8 +9,8 @@ cask 'function-pilot' do
 
   app 'Function Pilot.app'
 
-  zap :delete => [
-    '~/Library/Application Support/FunctionPilot',
-    '~/Library/Caches/com.tinybird.functionpilot'
-  ]
+  zap delete: [
+                '~/Library/Application Support/FunctionPilot',
+                '~/Library/Caches/com.tinybird.functionpilot',
+              ]
 end

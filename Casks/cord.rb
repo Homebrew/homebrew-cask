@@ -4,12 +4,12 @@ cask 'cord' do
 
   url "http://downloads.sourceforge.net/sourceforge/cord/CoRD_#{version}.zip"
   appcast 'http://cord.sourceforge.net/sparkle.xml',
-          :sha256 => '891e1675b678f03d7f050ecb426c28362dab3c92da1592fce8a36afcb7606b69'
+          checkpoint: 'b95960f88d2b092cc0748a60dbffb498d5b3852023565c1abcdce076cc44f249'
   name 'CoRD'
   homepage 'http://cord.sourceforge.net/'
   license :gpl
 
   app 'CoRD.app'
 
-  zap :delete => '~/Library/Application Support/CoRD'
+  zap delete: '~/Library/Application Support/CoRD'
 end

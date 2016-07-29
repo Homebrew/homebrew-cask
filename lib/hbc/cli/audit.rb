@@ -1,16 +1,14 @@
 class Hbc::CLI::Audit < Hbc::CLI::Base
   def self.help
-    'verifies installability of Casks'
+    "verifies installability of Casks"
   end
 
   def self.run(*args)
     retval = new(args, Hbc::Auditor).run
     # retval is ternary: true/false/nil
-    if retval.nil?
-      raise Hbc::CaskError.new("audit failed")
-    elsif ! retval
-      raise Hbc::CaskError.new("some audits failed")
-    end
+
+    raise Hbc::CaskError, "audit failed" if retval.nil?
+    raise Hbc::CaskError, "some audits failed" unless retval
   end
 
   def initialize(args, auditor)
@@ -28,11 +26,11 @@ class Hbc::CLI::Audit < Hbc::CLI::Base
 
   def audit(cask)
     odebug "Auditing Cask #{cask}"
-    @auditor.audit(cask, :audit_download => audit_download?)
+    @auditor.audit(cask, audit_download: audit_download?)
   end
 
   def audit_download?
-    @args.include?('--download')
+    @args.include?("--download")
   end
 
   def casks_to_audit
@@ -44,6 +42,6 @@ class Hbc::CLI::Audit < Hbc::CLI::Base
   end
 
   def cask_tokens
-    @cask_tokens ||= @args.reject { |a| a == '--download' }
+    @cask_tokens ||= @args.reject { |a| a == "--download" }
   end
 end

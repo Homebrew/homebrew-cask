@@ -1,6 +1,6 @@
-require 'vendor/homebrew-fork/monkeypatch_pathname'
-require 'vendor/homebrew-fork/exceptions'
-require 'vendor/homebrew-fork/utils'
+require 'exceptions'
+require 'extend/pathname'
+require 'utils'
 
 def cache
   if ENV['HOMEBREW_CACHE']
@@ -9,7 +9,7 @@ def cache
     # we do this for historic reasons, however the cache *should* be the same
     # directory whichever user is used and whatever instance of brew is executed
     home_cache = Pathname.new("~/Library/Caches/Homebrew").expand_path
-    if home_cache.directory? and home_cache.writable_real?
+    if home_cache.directory? && home_cache.writable_real?
       home_cache
     else
       Pathname.new("/Library/Caches/Homebrew").extend Module.new {

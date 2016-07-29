@@ -9,6 +9,6 @@ cask 'wavtap' do
 
   pkg "WavTap.#{version}.pkg"
 
-  uninstall :pkgutil => 'com.wavtap.*',
-            :kext => 'com.wavtap.driver.WavTap'
+  uninstall pkgutil: 'com.wavtap.*',
+            kext:    'com.wavtap.driver.WavTap'
 end

@@ -1,23 +1,25 @@
 class Hbc::Container; end
 
-require 'hbc/container/base'
-require 'hbc/container/air'
-require 'hbc/container/bzip2'
-require 'hbc/container/cab'
-require 'hbc/container/criteria'
-require 'hbc/container/dmg'
-require 'hbc/container/generic_unar'
-require 'hbc/container/gzip'
-require 'hbc/container/naked'
-require 'hbc/container/otf'
-require 'hbc/container/pkg'
-require 'hbc/container/seven_zip'
-require 'hbc/container/sit'
-require 'hbc/container/tar'
-require 'hbc/container/ttf'
-require 'hbc/container/rar'
-require 'hbc/container/xar'
-require 'hbc/container/zip'
+require "hbc/container/base"
+require "hbc/container/air"
+require "hbc/container/bzip2"
+require "hbc/container/cab"
+require "hbc/container/criteria"
+require "hbc/container/dmg"
+require "hbc/container/generic_unar"
+require "hbc/container/gzip"
+require "hbc/container/lzma"
+require "hbc/container/naked"
+require "hbc/container/otf"
+require "hbc/container/pkg"
+require "hbc/container/seven_zip"
+require "hbc/container/sit"
+require "hbc/container/tar"
+require "hbc/container/ttf"
+require "hbc/container/rar"
+require "hbc/container/xar"
+require "hbc/container/xz"
+require "hbc/container/zip"
 
 class Hbc::Container
   def self.autodetect_containers
@@ -30,11 +32,13 @@ class Hbc::Container
       Hbc::Container::Dmg,
       Hbc::Container::SevenZip,
       Hbc::Container::Sit,
-      Hbc::Container::Tar,     # or compressed tar
       Hbc::Container::Rar,
       Hbc::Container::Zip,
-      Hbc::Container::Bzip2,
-      Hbc::Container::Gzip,    # pure gzip, not tar/gzip
+      Hbc::Container::Tar,   # or compressed tar (bzip2/gzip/lzma/xz)
+      Hbc::Container::Bzip2, # pure bzip2
+      Hbc::Container::Gzip,  # pure gzip
+      Hbc::Container::Lzma,  # pure lzma
+      Hbc::Container::Xz,    # pure xz
       Hbc::Container::Xar,
     ]
     # for explicit use only (never autodetected):
@@ -54,7 +58,7 @@ class Hbc::Container
   def self.from_type(type)
     odebug "Determining which containers to use based on 'container :type'"
     begin
-      Hbc::Container.const_get(type.to_s.split('_').map(&:capitalize).join)
+      Hbc::Container.const_get(type.to_s.split("_").map(&:capitalize).join)
     rescue NameError
       false
     end

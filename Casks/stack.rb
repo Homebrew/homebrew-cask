@@ -1,15 +1,21 @@
 cask 'stack' do
-  version '1.0.0'
-  sha256 '921575d26ce4e2fcc195e135f279fc5f19b9e3ce7f79e2e13ac38e6507350457'
+  version '2.1.3.0'
+  sha256 '21437c146af18b7865d691b26c5a0fb2282e1873b22fa08d0f702ed15d71ce15'
 
-  url "https://github.com/commercialhaskell/stack/releases/download/v#{version}/stack-#{version}-osx-x86_64.tar.gz"
-  appcast 'https://github.com/commercialhaskell/stack/releases.atom',
-          :sha256 => '79b1cd5fd94d82709b0a685f16e2d5710d1444167dc8624d1a2625093fddfb6b'
-  name 'stack'
-  homepage 'https://github.com/commercialhaskell/stack'
-  license :bsd
+  # transip.net/stack was verified as official when first introduced to the cask
+  url "https://mirror.transip.net/stack/software/osx/stack-#{version}.pkg"
+  name 'STACK'
+  homepage 'https://transip.nl/stack'
+  license :gratis
 
-  binary "stack-#{version}-osx-x86_64/stack"
+  pkg "stack-#{version}.pkg"
 
-  depends_on :arch => :x86_64
+  uninstall login_item: 'stack',
+            signal:     ['TERM', 'nl.transip.stack'],
+            pkgutil:    'nl.transip.stack'
+
+  zap delete: [
+                '~/Library/Caches/nl.transip.stack',
+                '~/Library/Application Support/STACK/',
+              ]
 end

@@ -6,12 +6,14 @@ test_cask 'with-zap' do
   homepage 'http://example.com/fancy-pkg'
 
   pkg 'MyFancyPkg/Fancy.pkg'
-  uninstall :quit => 'my.fancy.package.app.from.uninstall'
-  zap :script => {
-                  :executable => 'MyFancyPkg/FancyUninstaller.tool',
-                  :args => %w[--please]
+
+  uninstall quit: 'my.fancy.package.app.from.uninstall'
+
+  zap script:     {
+                    executable: 'MyFancyPkg/FancyUninstaller.tool',
+                    args:       %w[--please],
                   },
-      :quit => 'my.fancy.package.app',
-      :login_item => 'Fancy',
-      :delete => '~/Library/Preferences/my.fancy.app.plist'
+      quit:       'my.fancy.package.app',
+      login_item: 'Fancy',
+      delete:     '~/Library/Preferences/my.fancy.app.plist'
 end

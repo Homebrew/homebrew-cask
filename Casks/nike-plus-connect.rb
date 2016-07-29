@@ -9,8 +9,8 @@ cask 'nike-plus-connect' do
 
   pkg 'Nike+Connect_new.pkg'
 
-  uninstall :pkgutil => [
-                         'com.nike.nikeplusconnect.*',
-                         'com.nike.sportwatch',
-                        ]
+  uninstall pkgutil: [
+                       'com.nike.nikeplusconnect.*',
+                       'com.nike.sportwatch',
+                     ]
 end

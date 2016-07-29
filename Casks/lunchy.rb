@@ -4,7 +4,7 @@ cask 'lunchy' do
 
   url "https://github.com/sosedoff/lunchy-go/releases/download/v#{version}/#{version}_darwin_amd64.zip"
   appcast 'https://github.com/sosedoff/lunchy-go/releases.atom',
-          :sha256 => '80d451b40d7c21b6d205d7d6e8be643c7bf4754ebb1ea52556472c61a5dabaaf'
+          checkpoint: '80d451b40d7c21b6d205d7d6e8be643c7bf4754ebb1ea52556472c61a5dabaaf'
   name 'Lunchy'
   homepage 'https://github.com/sosedoff/lunchy-go'
   license :mit

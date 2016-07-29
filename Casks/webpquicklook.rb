@@ -4,7 +4,7 @@ cask 'webpquicklook' do
 
   url "https://github.com/dchest/webp-quicklook/releases/download/v#{version}/WebP-#{version}.qlgenerator.zip"
   appcast 'https://github.com/dchest/webp-quicklook/releases.atom',
-          :sha256 => 'ff7b9b8d5b1588c93785eee60ad68949987e788aef7c9820378082ecb475e442'
+          checkpoint: 'ff7b9b8d5b1588c93785eee60ad68949987e788aef7c9820378082ecb475e442'
   name 'WebP QuickLook Plugin'
   homepage 'https://github.com/dchest/webp-quicklook'
   license :mit

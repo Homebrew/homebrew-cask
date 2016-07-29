@@ -9,5 +9,5 @@ cask 'mosh' do
 
   pkg "mosh-#{version}.pkg"
 
-  uninstall :pkgutil => 'edu.mit.mosh.mosh.pkg'
+  uninstall pkgutil: 'edu.mit.mosh.mosh.pkg'
 end

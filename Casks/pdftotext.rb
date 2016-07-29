@@ -4,12 +4,12 @@ cask 'pdftotext' do
 
   url 'https://www.bluem.net/files/pdftotext.dmg'
   name 'pdftotext'
-  homepage 'https://www.bluem.net/en/mac/packages/'
+  homepage 'https://www.bluem.net/en/mac/'
   license :gpl
 
   pkg 'Installer.pkg'
 
-  uninstall :pkgutil => 'net.bluem.pdftotext.pkg'
+  uninstall pkgutil: 'net.bluem.pdftotext.pkg'
 
   caveats do
     discontinued

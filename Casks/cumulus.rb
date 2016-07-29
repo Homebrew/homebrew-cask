@@ -1,20 +1,21 @@
 cask 'cumulus' do
-  version '0.5.4'
-  sha256 'cb0a6c6ae579e4877c634b72db3a5425d975f91bd4353c7c3ccd63d05aa8713f'
+  version '0.7.1'
+  sha256 '43cc394b342e56d4dfbdfcded4f98fcdaaf92fd0097d7a6fa4cabc46794156e7'
 
-  url "https://github.com/gillesdemey/Cumulus/releases/download/v#{version}/Cumulus-#{version}-osx.zip"
+  # github.com/gillesdemey/Cumulus was verified as official when first introduced to the cask
+  url "https://github.com/gillesdemey/Cumulus/releases/download/v#{version}/Cumulus-#{version}-osx.dmg"
   appcast 'https://github.com/gillesdemey/Cumulus/releases.atom',
-          :sha256 => '97c90bfc6b090a781a3096907cf90ab0fa2b5c8b5eb1146a6207272840671e27'
+          checkpoint: '8ad60dd31679946c1c03a8d6afa4b6a14fa45760b98fb06924e2ed4491790c54'
   name 'Cumulus'
   homepage 'https://gillesdemey.github.io/Cumulus/'
   license :oss
 
   app 'Cumulus.app'
 
-  zap :delete => [
-                  '~/Library/Application Support/Cumulus',
-                  '~/Library/Caches/Cumulus',
-                  '~/Library/Preferences/com.gillesdemey.cumulus.plist',
-                  '~/Library/Saved Application State/com.gillesdemey.cumulus.savedState'
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Cumulus',
+                '~/Library/Caches/Cumulus',
+                '~/Library/Preferences/com.gillesdemey.cumulus.plist',
+                '~/Library/Saved Application State/com.gillesdemey.cumulus.savedState',
+              ]
 end

@@ -4,13 +4,13 @@ cask 'ginbox' do
 
   url "https://github.com/chenasraf/gInbox/releases/download/#{version}/gInbox-#{version}.zip"
   appcast 'https://github.com/chenasraf/gInbox/releases.atom',
-          :sha256 => '78f329dc444e0861e35f0e6fa2010f86e2db3bde1e2588e16735684db04acc51'
+          checkpoint: '78f329dc444e0861e35f0e6fa2010f86e2db3bde1e2588e16735684db04acc51'
   name 'gInbox'
   name 'Inbox by Google'
   homepage 'https://github.com/chenasraf/gInbox'
   license :apache
 
-  depends_on :macos => '>= :mavericks'
+  depends_on macos: '>= :mavericks'
 
   app 'Inbox by Google.app'
 end

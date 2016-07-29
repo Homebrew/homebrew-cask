@@ -1,11 +1,13 @@
 cask 'nomad' do
-  version '0.2.1'
-  sha256 '7f40f24c7c386bff4f97fad89c258ca7549d9629260d319a71a27fbb9e9ba31f'
+  version '0.3.2'
+  sha256 '96808b9b8056490026327bdc6614e1813cee7d42978676e0024085709fd3fcac'
 
-  # hashicorp.com is the official download host per the vendor homepage
+  # hashicorp.com/nomad was verified as official when first introduced to the cask
   url "https://releases.hashicorp.com/nomad/#{version}/nomad_#{version}_darwin_amd64.zip"
+  appcast 'https://github.com/hashicorp/nomad/releases.atom',
+          checkpoint: 'b65196b74ce907895afc4e8fc5bc4e4545d431edb2477cf743a21bb2b953b140'
   name 'Nomad'
-  homepage 'https://nomadproject.io/'
+  homepage 'https://www.nomadproject.io/'
   license :mpl
 
   binary 'nomad'

@@ -8,4 +8,8 @@ cask 'visualvm' do
   license :gpl
 
   app 'VisualVM.app'
+
+  caveats do
+    depends_on_java
+  end
 end

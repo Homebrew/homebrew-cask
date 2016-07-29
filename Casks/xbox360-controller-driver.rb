@@ -1,28 +1,27 @@
 cask 'xbox360-controller-driver' do
-  version '0.14'
-  sha256 'a7efe48fae89aa592e904d1dc3ba9a73b2d644362eac88feb5e73a774e3fcf88'
+  version '0.16.3'
+  sha256 '43ddccb21801088a3bfe745f0b1c8be17296e83dc93813da68ab9b6662dcd3bd'
 
-  url "https://github.com/360Controller/360Controller/releases/download/v#{version}-unofficial/360ControllerInstall_#{version}_unofficial.dmg"
+  url "https://github.com/360Controller/360Controller/releases/download/v#{version}/360ControllerInstall_#{version}.dmg"
   appcast 'https://github.com/360Controller/360Controller/releases.atom',
-          :sha256 => 'cbedc24b52358fbe5f0bd72f4d02ee96eac271ac3b544e8a37f42d9cfe9eccf1'
-  name 'XBox 360 Controller driver for Mac OS X'
-  name 'TattieBogle Xbox 360 Driver with improvements'
+          checkpoint: '00296f3a9712ec64c07be2eef0c28f968a83ddb683dcbd1f3f3b73d0f9050634'
+  name 'TattieBogle Xbox 360 Controller Driver (with improvements)'
   homepage 'https://github.com/360Controller/360Controller'
   license :gpl
 
-  pkg 'Install 360 Controller.pkg'
+  pkg 'Install360Controller.pkg'
 
-  uninstall :pkgutil   => 'com.mice.pkg.Xbox360controller',
-            :launchctl => 'com.mice.360Daemon',
-            :kext      => [
-                           'com.mice.Xbox360ControllerForceFeedback',
-                           'com.mice.driver.Xbox360Controller',
-                           'com.mice.driver.Wireless360Controller',
-                           'com.mice.driver.WirelessGamingReceiver'
-                          ],
+  uninstall pkgutil:   'com.mice.pkg.Xbox360controller',
+            launchctl: 'com.mice.360Daemon',
+            kext:      [
+                         'com.mice.Xbox360ControllerForceFeedback',
+                         'com.mice.driver.Xbox360Controller',
+                         'com.mice.driver.Wireless360Controller',
+                         'com.mice.driver.WirelessGamingReceiver',
+                       ],
             # Symlink to kext in /Library/Extensions is not removed
             # during :pkgutil phase of uninstall, so we delete it here.
-            :delete    => '/System/Library/Extensions/360Controller.kext'
+            delete:    '/System/Library/Extensions/360Controller.kext'
 
   caveats do
     reboot

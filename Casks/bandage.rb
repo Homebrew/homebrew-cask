@@ -1,10 +1,11 @@
 cask 'bandage' do
-  version '0.7.1'
-  sha256 '29f88973388f27fa6456065c7659d5250dd0e825f184c3604621baacd440452f'
+  version '0.8.0'
+  sha256 '154863b16bc9ecdf7b53aa9ecc22e7b34b980959ceb1105b3aefbd229b29ee0b'
 
-  url "https://github.com/rrwick/Bandage/releases/download/v#{version}/Bandage_Mac_v#{version}.zip"
+  # github.com/rrwick/Bandage was verified as official when first introduced to the cask
+  url "https://github.com/rrwick/Bandage/releases/download/v#{version}/Bandage_Mac_v#{version.dots_to_underscores}.zip"
   appcast 'https://github.com/rrwick/Bandage/releases.atom',
-          :sha256 => 'db58afd366df0db3617e877dec3e018d1eb3f962f156d7047c8787208d6b7244'
+          checkpoint: 'd70dfd9fbcd8219576c2ef2b68c53b85ef95c0fb3db13a5134cc50403d97776f'
   name 'Bandage'
   homepage 'https://rrwick.github.io/Bandage/'
   license :gpl

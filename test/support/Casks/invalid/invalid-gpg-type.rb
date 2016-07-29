@@ -5,7 +5,7 @@ test_cask 'invalid-gpg-type' do
   url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/invalid-gpg-type'
   gpg 'http://example.com/gpg-signature.asc',
-      :no_such_parameter => :value
+      no_such_parameter: :value
 
   app 'Caffeine.app'
 end

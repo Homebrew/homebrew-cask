@@ -1,17 +1,17 @@
 cask 'flash-player' do
-  version '20.0.0.267'
-  sha256 '8c8e3dcd01668c4d59850b52e6add1d09658aa01754e5e363422fe526387bbf0'
+  version '22.0.0.209'
+  sha256 '791dd70fb49dadb0963317a44e410cfb3071c241711052e8db2527999d0f8eac'
 
-  # macromedia.com is the official download host per the vendor homepage
-  url "https://fpdownload.macromedia.com/pub/flashplayer/updaters/#{version.to_i}/flashplayer_#{version.to_i}_sa.dmg"
+  # macromedia.com was verified as official when first introduced to the cask
+  url "https://fpdownload.macromedia.com/pub/flashplayer/updaters/#{version.major}/flashplayer_#{version.major}_sa.dmg"
   name 'Adobe Flash Player'
   homepage 'https://www.adobe.com/support/flashplayer/downloads.html'
   license :gratis
 
   app 'Flash Player.app'
 
-  zap :delete => [
-                  '~/Library/Caches/Adobe/Flash Player',
-                  '~/Library/Logs/FlashPlayerInstallManager.log',
-                 ]
+  zap delete: [
+                '~/Library/Caches/Adobe/Flash Player',
+                '~/Library/Logs/FlashPlayerInstallManager.log',
+              ]
 end

@@ -9,5 +9,5 @@ cask 'zerotier-one' do
 
   pkg 'ZeroTier One.pkg'
 
-  uninstall :pkgutil => 'com.zerotier.*'
+  uninstall pkgutil: 'com.zerotier.*'
 end

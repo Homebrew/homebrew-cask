@@ -1,12 +1,12 @@
 cask 'hbuilder' do
-  version '6.8.2'
-  sha256 '5ed6f94b2a4049971289b46ed0ecabdae186677b5ff35fc8c458a9568c820e02'
+  version '7.3.0'
+  sha256 '2721f2280e0e21960bf92c601cd2b435c309c7948a2f2cba5c41b769a1e4cc2f'
 
-  # net.cn is the official download host per the vendor homepage
+  # download.dcloud.net.cn was verified as official when first introduced to the cask
   url "http://download.dcloud.net.cn/HBuilder.#{version}.macosx_64.tar.gz"
   name 'HBuilder'
   homepage 'http://dcloud.io/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'HBuilder.app'
 end

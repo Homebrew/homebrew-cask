@@ -18,18 +18,17 @@ cask 'gnubg' do
   end
 
   name 'Gnu Backgammon'
-  depends_on :x11 => true
   homepage 'http://gnubg.org/'
   license :gpl
+
+  depends_on x11: true
+
   app 'gnubg.app'
 
   caveats do
     <<-EOS.undent
       #{token} only works if called from /Applications, so you may need to install it with
         brew cask --appdir=/Applications install #{token}
-
-      Alternatively, you can create a symbolic link in /Applications after installing and upgrading:
-        ln -sf '#{staged_path}/gnubg.app' '/Applications/gnubg.app'
     EOS
   end
 end

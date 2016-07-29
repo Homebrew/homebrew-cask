@@ -2,10 +2,10 @@ cask 'logmein-client' do
   version :latest
   sha256 :no_check
 
-  url 'https://secure.logmein.com/welcome/labs/LogMeInIgnition.dmg'
+  url 'https://secure.logmein.com/LogMeInClientMac.dmg'
   name 'LogMeIn Client'
   homepage 'https://secure.logmein.com/products/pro/learnmore/desktopapp.aspx'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'LogMeIn Client.app'
 end

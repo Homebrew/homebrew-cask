@@ -6,10 +6,11 @@ test_cask 'with-caveats' do
   homepage 'http://example.com/local-caffeine'
 
   app 'Caffeine.app'
+
   # simple string is evaluated at compile-time
   caveats <<-EOS.undent
     Here are some things you might want to know.
-    EOS
+  EOS
   # do block is evaluated at install-time
   caveats do
     "Cask token: #{token}"

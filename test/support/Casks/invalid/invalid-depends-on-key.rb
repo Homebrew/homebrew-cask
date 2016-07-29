@@ -5,7 +5,7 @@ test_cask 'invalid-depends-on-key' do
   url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/invalid-depends-on-key'
 
-  depends_on :no_such_key => 'unar'
+  depends_on no_such_key: 'unar'
 
   app 'Caffeine.app'
 end

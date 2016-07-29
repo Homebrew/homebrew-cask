@@ -1,3 +1,2 @@
-class Hbc::Artifact::ScreenSaver < Hbc::Artifact::Symlinked
-
+class Hbc::Artifact::ScreenSaver < Hbc::Artifact::Moved
 end

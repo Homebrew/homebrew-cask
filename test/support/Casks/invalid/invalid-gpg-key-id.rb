@@ -5,7 +5,7 @@ test_cask 'invalid-gpg-key-id' do
   url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/invalid-gpg-key-id'
   gpg 'http://example.com/gpg-signature.asc',
-      :key_id => '012'
+      key_id: '012'
 
   app 'Caffeine.app'
 end

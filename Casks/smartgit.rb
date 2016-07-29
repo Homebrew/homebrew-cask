@@ -1,14 +1,15 @@
 cask 'smartgit' do
-  version '7.0.4'
-  sha256 '56d8b06cd42b796bfabd98486fd97a9cb34996244b5811d97510cf4a5b7b12d7'
+  version '7.1.3'
+  sha256 'f885ba36e6ac9a5e0ab649448c29fc5aa1519c5bcbfcc11dae29a63b0efb6618'
 
-  url "https://www.syntevo.com/downloads/smartgit/smartgit-macosx-#{version.gsub('.', '_')}.dmg"
+  url "https://www.syntevo.com/downloads/smartgit/smartgit-macosx-#{version.dots_to_underscores}.dmg"
   name 'SmartGit'
   homepage 'https://www.syntevo.com/smartgit/'
   license :commercial
 
   app 'SmartGit.app'
-  binary 'SmartGit.app/Contents/MacOS/SmartGit'
+  binary "#{appdir}/SmartGit.app/Contents/MacOS/SmartGit"
+
   caveats do
     files_in_usr_local
   end

@@ -7,7 +7,7 @@ cask 'tn5250' do
   homepage 'http://mochasoft.dk'
   license :commercial
 
-  container :nested => 'tn5250.dmg'
+  container nested: 'tn5250.dmg'
 
   app 'tn5250.app'
 end

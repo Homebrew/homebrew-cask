@@ -4,7 +4,6 @@ cask 'synth1-vst' do
 
   url "http://www.geocities.jp/daichi1969/softsynth/Synth1macvst#{version.delete('.')}.zip"
   name 'Synth1 (VST)'
-  name 'Synth 1 (VST)'
   homepage 'http://www.geocities.jp/daichi1969/softsynth/'
   license :gratis
 

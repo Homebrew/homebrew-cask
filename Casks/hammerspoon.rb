@@ -1,14 +1,16 @@
 cask 'hammerspoon' do
-  version '0.9.43'
-  sha256 'c0ae3646f944c3f0f38561dfd54a4d9cdfdc512c3e980c2ea3053d2b732c5f15'
+  version '0.9.46'
+  sha256 '20f7e81624b6f007d6fdd8944cab3d9ba48c36fd0b4f1405a590526b5d4859bc'
 
-  # github.com is the official download host per the vendor homepage
+  # github.com/Hammerspoon/hammerspoon was verified as official when first introduced to the cask
   url "https://github.com/Hammerspoon/hammerspoon/releases/download/#{version}/Hammerspoon-#{version}.zip"
   appcast 'https://github.com/Hammerspoon/hammerspoon/releases.atom',
-          :sha256 => 'bab80d4d4a6fe6ad8956053b0e1e51a16dcb010e866dc328a7cc34463eaa7bf9'
+          checkpoint: '05766d2bc98e45972168b97d57c250b60c6450a49fba54ea55e8ea74cab6cdbf'
   name 'Hammerspoon'
   homepage 'http://www.hammerspoon.org/'
   license :mit
+
+  accessibility_access true
 
   app 'Hammerspoon.app'
 end

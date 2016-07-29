@@ -1,4 +1,4 @@
-require 'pathname'
+require "pathname"
 
 class Pathname
   # https://bugs.ruby-lang.org/issues/9915

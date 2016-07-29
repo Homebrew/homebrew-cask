@@ -1,4 +1,4 @@
-language: objective-c
+language: ruby
 
 sudo: false
 
@@ -10,22 +10,22 @@ env:
 
 matrix:
   include:
-    - env: OSX=10.11 HOMEBREW_RUBY=2.0.0
+    - env: OSX=10.11 HOMEBREW_RUBY=2.0.0 HOMEBREW_OSX_VERSION=$OSX
       os: osx
-      osx_image: xcode7.2
+      osx_image: xcode7.3
       rvm: system
-    - env: OSX=10.10 HOMEBREW_RUBY=2.0.0
+    - env: OSX=10.10 HOMEBREW_RUBY=2.0.0 HOMEBREW_OSX_VERSION=$OSX
       os: osx
       osx_image: xcode7.1
       rvm: system
-    - env: OSX=10.9 HOMEBREW_RUBY=2.0.0
-      os: osx
-      osx_image: beta-xcode6.2
-      rvm: system
+  fast_finish: true
+
+branches:
+  only:
+    - master
 
 cache:
   directories:
-    - /usr/local
     - $HOME/.gem
 
 before_install:
@@ -41,6 +41,7 @@ script:
   - . ci/travis/script.sh
 
 notifications:
+  email: false
   irc:
     channels:
       - "chat.freenode.net#homebrew-cask"
@@ -48,4 +49,9 @@ notifications:
       - "(%{repository_name}) %{build_number}: %{branch}@%{commit} %{author} -> %{message} %{build_url}"
     use_notice: true
     skip_join: true
-  email: false
+  webhooks:
+    urls:
+      - "https://webhooks.gitter.im/e/712d699360b239db14a5"
+    on_success: change
+    on_failure: always
+    on_start: never

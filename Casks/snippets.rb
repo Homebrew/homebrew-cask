@@ -4,7 +4,7 @@ cask 'snippets' do
 
   url 'http://snippets.me/download/mac/Snippets-468.zip'
   appcast 'https://snippets.me/mac/appcast.xml',
-          :sha256 => '4158b1f63ea202992e9ffdcf231e7c21323cc1a0ed52305e69effc0858b902d3'
+          checkpoint: 'b67b5cd59bfee4398a81f157dec126b982f120f757ec24a4ea1396f459ed19d0'
   name 'Snippets'
   homepage 'http://snippets.me/'
   license :gratis

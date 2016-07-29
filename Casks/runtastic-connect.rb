@@ -1,10 +1,10 @@
 cask 'runtastic-connect' do
-  version :latest
-  sha256 :no_check
+  version '1.1.0'
+  sha256 '325e957b0b6cc8eba79e6a3fd01e13773dabfb13d2571c2feb9729f603c2a89f'
 
-  url 'http://download.runtastic.com/connect/mac/runtasticConnect.dmg'
+  url "http://download.runtastic.com/connect/mac/Connect_#{version}.zip"
   appcast 'http://download.runtastic.com/connect/mac/appcast.xml',
-          :sha256 => '27a7f2b9d26e2ad4a46ebc4cc7c6ea2a9d4bceb5e25d36abc2a882fa206d723c'
+          checkpoint: '5a12c0d1453700ef2b9e284e3c5ea80649c2ef21aa0a6f8308629c91ea85fc8f'
   name 'Runtastic Connect'
   homepage 'https://www.runtastic.com/connect'
   license :gratis

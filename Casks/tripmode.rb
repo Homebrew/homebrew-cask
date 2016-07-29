@@ -1,19 +1,19 @@
 cask 'tripmode' do
-  version :latest
-  sha256 :no_check
+  version '1.0.6-249'
+  sha256 'f828a6a9a0fbc9d9d0905d8fdfecd2dd631e4cffcfa9426151376c73f8e429dc'
 
-  url 'https://tripmode.ch/TripMode.pkg'
-  name 'TripMode'
+  url "https://www.tripmode.ch/app/TripMode-#{version}.dmg"
   appcast 'http://updates.tripmode.ch/app/appcast.xml',
-          :sha256 => '61c10ba3fec1b0cc235bb907ef1fe820856da2d151ab01dd92caafb546729623'
+          checkpoint: 'ba476a0313b9dc5cb8bbc00dde0f623186979214092c592a9ffab925d354a618'
+  name 'TripMode'
   homepage 'https://www.tripmode.ch/'
   license :freemium
 
+  depends_on macos: '>= :yosemite'
+
   pkg 'TripMode.pkg'
 
-  depends_on :macos => '>= :yosemite'
+  uninstall pkgutil: 'ch.tripmode.pkg.TripMode'
 
-  uninstall :pkgutil => 'ch.tripmode.pkg.TripMode'
-
-  zap :delete => '~/Library/Preferences/ch.tripmode.TripMode.plist'
+  zap delete: '~/Library/Preferences/ch.tripmode.TripMode.plist'
 end

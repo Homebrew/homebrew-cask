@@ -1,6 +1,6 @@
 cask 'wireshark' do
-  version '2.0.1'
-  sha256 '8c84d745bb8ab930a8f47fd1e4388300def9afbea90aed449558c8189508b9ea'
+  version '2.0.4'
+  sha256 'b78531be77099f4d4b08a1a0fea6dbb777b739ee82255cc83f7de47137ef1627'
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
   name 'Wireshark'
@@ -8,6 +8,7 @@ cask 'wireshark' do
   license :gpl
 
   pkg "Wireshark #{version} Intel 64.pkg"
+
   postflight do
     if Process.euid == 0
       ohai 'Note:'
@@ -22,21 +23,21 @@ cask 'wireshark' do
     end
   end
 
-  uninstall :script  => {
-                         :executable => '/usr/sbin/dseditgroup',
-                         :args => ['-o', 'delete', 'access_bpf'],
-                        },
-            :pkgutil => 'org.wireshark.*',
-            :delete  => [
-                         '/usr/local/bin/capinfos',
-                         '/usr/local/bin/dftest',
-                         '/usr/local/bin/dumpcap',
-                         '/usr/local/bin/editcap',
-                         '/usr/local/bin/mergecap',
-                         '/usr/local/bin/randpkt',
-                         '/usr/local/bin/rawshark',
-                         '/usr/local/bin/text2pcap',
-                         '/usr/local/bin/tshark',
-                         '/usr/local/bin/wireshark',
-                        ]
+  uninstall script:  {
+                       executable: '/usr/sbin/dseditgroup',
+                       args:       ['-o', 'delete', 'access_bpf'],
+                     },
+            pkgutil: 'org.wireshark.*',
+            delete:  [
+                       '/usr/local/bin/capinfos',
+                       '/usr/local/bin/dftest',
+                       '/usr/local/bin/dumpcap',
+                       '/usr/local/bin/editcap',
+                       '/usr/local/bin/mergecap',
+                       '/usr/local/bin/randpkt',
+                       '/usr/local/bin/rawshark',
+                       '/usr/local/bin/text2pcap',
+                       '/usr/local/bin/tshark',
+                       '/usr/local/bin/wireshark',
+                     ]
 end

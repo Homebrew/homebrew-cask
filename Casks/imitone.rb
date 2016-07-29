@@ -1,6 +1,6 @@
 cask 'imitone' do
-  version '0.8.0'
-  sha256 '965f52c4cb43d0331033b8be3b9578ef46a54e4a3b8eb93feb322bbfc2714eaa'
+  version '0.8.2'
+  sha256 'b3604a2e64736a2b9fb884cc4633c67898c01d8f216809192d371f46d430164a'
 
   url "https://imitone.com/beta/imitone-#{version}.dmg"
   name 'imitone'

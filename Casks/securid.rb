@@ -9,5 +9,5 @@ cask 'securid' do
 
   pkg "RSASecurIDTokenAutoMac#{version.delete('.')}x64.pkg"
 
-  uninstall :pkgutil => 'com.rsa.pkg.securidsoftwaretoken'
+  uninstall pkgutil: 'com.rsa.pkg.securidsoftwaretoken'
 end

@@ -1,8 +1,8 @@
 cask 'shoes' do
-  version '3.2.25'
-  sha256 'd466803c01640a220c50d28db6d08e8bb1c012e0363badc13c2b488438e1568c'
+  version '3.3.1'
+  sha256 'f30a01d1e5dadc7dd775d140de9f04bf12a5046e4f2d5931ea7b67372ebe56fa'
 
-  # mvmanila.com is the official download host per the vendor homepage
+  # shoes.mvmanila.com/public/shoes was verified as official when first introduced to the cask
   url "http://shoes.mvmanila.com/public/shoes/shoes-#{version}-osx-10.9.tgz"
   name 'Shoes'
   homepage 'http://shoesrb.com/'

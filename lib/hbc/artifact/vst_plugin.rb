@@ -1,3 +1,2 @@
-class Hbc::Artifact::VstPlugin < Hbc::Artifact::Symlinked
-
+class Hbc::Artifact::VstPlugin < Hbc::Artifact::Moved
 end

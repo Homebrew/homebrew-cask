@@ -4,7 +4,7 @@ cask 'kyoku' do
 
   url "https://github.com/cheeaun/kyoku/releases/download/#{version}/Kyoku.app.zip"
   appcast 'https://github.com/cheeaun/kyoku/releases.atom',
-          :sha256 => 'bd656a19e78074b9b0878f3d413a1da6317ad72b8b2cb98ef9ca6e4e602013d2'
+          checkpoint: 'bd656a19e78074b9b0878f3d413a1da6317ad72b8b2cb98ef9ca6e4e602013d2'
   name 'Kyoku'
   homepage 'https://github.com/cheeaun/kyoku'
   license :mit

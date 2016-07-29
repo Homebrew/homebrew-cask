@@ -7,7 +7,7 @@ cask 'doomrl' do
   homepage 'http://doom.chaosforge.org'
   license :gratis
 
-  depends_on :arch => :x86_64
+  depends_on arch: :x86_64
 
   app 'DoomRL.app'
 end

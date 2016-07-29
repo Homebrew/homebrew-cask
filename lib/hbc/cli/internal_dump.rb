@@ -4,15 +4,13 @@ class Hbc::CLI::InternalDump < Hbc::CLI::InternalUseBase
     raise Hbc::CaskUnspecifiedError if cask_tokens.empty?
     retval = dump_casks(*cask_tokens)
     # retval is ternary: true/false/nil
-    if retval.nil?
-      raise Hbc::CaskError.new("nothing to dump")
-    elsif ! retval
-      raise Hbc::CaskError.new("dump incomplete")
-    end
+
+    raise Hbc::CaskError, "nothing to dump" if retval.nil?
+    raise Hbc::CaskError, "dump incomplete" unless retval
   end
 
   def self.dump_casks(*cask_tokens)
-    Hbc.debug = true            # Yuck. At the moment this is the only way to make dumps visible
+    Hbc.debug = true # Yuck. At the moment this is the only way to make dumps visible
     count = 0
     cask_tokens.each do |cask_token|
       begin

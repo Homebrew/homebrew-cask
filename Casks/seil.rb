@@ -1,26 +1,38 @@
 cask 'seil' do
-  version '12.0.0'
-  sha256 'ebfcc6b8a709048cb4aa81fc7a020112f77282934c4b30aedae8448d6534d65d'
+  if MacOS.release <= :mountain_lion
+    version '10.11.0'
+    sha256 '4ee777bf0a7f023abadb1f6a836b08484cfc2db2a19dd0b28d8942a2b638f8e5'
+  elsif MacOS.release <= :yosemite
+    version '11.3.0'
+    sha256 '5fd57db4f96b833c4f1005b3d68711bb9ea52f0db8e98a0793eb2a9ff5d290b2'
+  else
+    version '12.1.0'
+    sha256 'fddd1883d8cb28084c66fa284d1b58f0f4717022d1b794d1fded8219f1d9c85f'
+  end
 
   url "https://pqrs.org/osx/karabiner/files/Seil-#{version}.dmg"
   appcast 'https://pqrs.org/osx/karabiner/files/seil-appcast.xml',
-          :sha256 => '4c31a2e65806980f97638ce979d8a7654fef3664af921c0ae43eb5fbf5f418b5'
+          checkpoint: 'bf1be761638c151d1780c80db40ecb489899e055f4fdd3ddfa56b8f5692c3912'
   name 'Seil'
   homepage 'https://pqrs.org/osx/karabiner/seil.html'
   license :public_domain
 
-  pkg 'Seil.sparkle_guided.pkg'
+  depends_on macos: '>= :mountain_lion'
 
-  uninstall :quit => 'org.pqrs.Seil',
-            :kext => 'org.pqrs.driver.Seil',
-            :pkgutil => 'org.pqrs.driver.Seil'
+  if MacOS.release <= :mountain_lion
+    pkg 'Seil.pkg'
+  else
+    pkg 'Seil.sparkle_guided.pkg'
+  end
 
-  zap       :delete => [
-                        '~/Library/Caches/org.pqrs.PCKeyboardHack',
-                        '~/Library/Caches/org.pqrs.Seil',
-                        '~/Library/Preferences/org.pqrs.PCKeyboardHack.plist',
-                        '~/Library/Preferences/org.pqrs.Seil.plist',
-                       ]
+  uninstall quit:    'org.pqrs.Seil',
+            kext:    'org.pqrs.driver.Seil',
+            pkgutil: 'org.pqrs.driver.Seil'
 
-  depends_on :macos => '>= :el_capitan'
+  zap       delete: [
+                      '~/Library/Caches/org.pqrs.PCKeyboardHack',
+                      '~/Library/Caches/org.pqrs.Seil',
+                      '~/Library/Preferences/org.pqrs.PCKeyboardHack.plist',
+                      '~/Library/Preferences/org.pqrs.Seil.plist',
+                    ]
 end

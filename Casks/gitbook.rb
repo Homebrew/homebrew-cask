@@ -4,7 +4,7 @@ cask 'gitbook' do
 
   url "https://github.com/GitbookIO/editor-legacy/releases/download/#{version}/gitbook-mac.dmg"
   appcast 'https://github.com/GitbookIO/editor-legacy/releases.atom',
-          :sha256 => 'b806b02a23685e3befbb4bd51bc30e6744fae1c070f950a1df9ea64d8d5636a0'
+          checkpoint: 'b806b02a23685e3befbb4bd51bc30e6744fae1c070f950a1df9ea64d8d5636a0'
   name 'GitBook'
   homepage 'https://github.com/GitbookIO/editor-legacy'
   license :apache

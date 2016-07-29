@@ -13,7 +13,7 @@ cask 'supersync' do
   homepage 'https://supersync.com/'
   license :commercial
 
-  depends_on :arch => :intel
+  depends_on arch: :intel
 
   app 'SuperSync.app'
 end

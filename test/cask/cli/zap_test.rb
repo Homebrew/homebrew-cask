@@ -1,15 +1,15 @@
-require 'test_helper'
+require "test_helper"
 
 describe Hbc::CLI::Zap do
   it "shows an error when a bad Cask is provided" do
     lambda {
-      Hbc::CLI::Zap.run('notacask')
+      Hbc::CLI::Zap.run("notacask")
     }.must_raise Hbc::CaskUnavailableError
   end
 
   it "can zap and unlink multiple Casks at once" do
-    caffeine = Hbc.load('local-caffeine')
-    transmission = Hbc.load('local-transmission')
+    caffeine = Hbc.load("local-caffeine")
+    transmission = Hbc.load("local-transmission")
 
     shutup do
       Hbc::Installer.new(caffeine).install
@@ -20,19 +20,18 @@ describe Hbc::CLI::Zap do
     transmission.must_be :installed?
 
     shutup do
-      Hbc::CLI::Zap.run('--notavalidoption',
-        'local-caffeine', 'local-transmission')
+      Hbc::CLI::Zap.run("--notavalidoption",
+                        "local-caffeine", "local-transmission")
     end
 
     caffeine.wont_be :installed?
-    Hbc.appdir.join('Transmission.app').wont_be :symlink?
+    Hbc.appdir.join("Transmission.app").wont_be :symlink?
     transmission.wont_be :installed?
-    Hbc.appdir.join('Caffeine.app').wont_be :symlink?
+    Hbc.appdir.join("Caffeine.app").wont_be :symlink?
   end
 
-  # todo
-  # Explicit test that both zap and uninstall directives get dispatched.
-  # The above tests that implicitly.
+  # TODO: Explicit test that both zap and uninstall directives get dispatched.
+  #       The above tests that implicitly.
   #
   # it "dispatches both uninstall and zap stanzas" do
   #   with_zap = Hbc.load('with-zap')
@@ -61,7 +60,7 @@ describe Hbc::CLI::Zap do
   describe "when no Cask is specified" do
     it "raises an exception" do
       lambda {
-        Hbc::CLI::Zap.run()
+        Hbc::CLI::Zap.run
       }.must_raise Hbc::CaskUnspecifiedError
     end
   end
@@ -69,7 +68,7 @@ describe Hbc::CLI::Zap do
   describe "when no Cask is specified, but an invalid option" do
     it "raises an exception" do
       lambda {
-        Hbc::CLI::Zap.run('--notavalidoption')
+        Hbc::CLI::Zap.run("--notavalidoption")
       }.must_raise Hbc::CaskUnspecifiedError
     end
   end

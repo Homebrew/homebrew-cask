@@ -6,7 +6,7 @@ test_cask 'with-depends-on-arch-failure' do
   homepage 'http://example.com/with-depends-on-arch-failure'
 
   # guarantee mismatched hardware
-  depends_on :arch => Hardware::CPU.intel? ? :ppc : :intel
+  depends_on arch: Hardware::CPU.intel? ? :ppc : :intel
 
   app 'Caffeine.app'
 end

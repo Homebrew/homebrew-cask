@@ -4,7 +4,7 @@ cask 'machg' do
 
   url "http://jasonfharris.com/machg/downloads/assets/MacHg#{version}.zip"
   appcast 'http://jasonfharris.com/machg/machg_appcast.xml',
-          :sha256 => 'f562cfb2d9a8c7a5cf603529dfbc79f3782614795d85d54a107961d96242203b'
+          checkpoint: 'ced63dd31eb43a5e633c300d344cdea5cd15a01a539bceb6b1bcc3599581ffec'
   name 'MacHg'
   homepage 'http://jasonfharris.com/machg/'
   license :bsd

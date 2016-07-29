@@ -2,12 +2,13 @@ cask 'dymo-stamps' do
   version :latest
   sha256 :no_check
 
+  # endicia.com/dymostamps was verified as official when first introduced to the cask
   url 'http://download.endicia.com/dymostamps/dymostamps.dmg'
   name 'Dymo Stamps'
   homepage 'https://www.dymo.com/en-US/online-support'
   license :gratis
 
-  app 'DYMO Stamps.app'
+  depends_on cask: 'dymo-label'
 
-  depends_on :cask => 'dymo-label'
+  app 'DYMO Stamps.app'
 end

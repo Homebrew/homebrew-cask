@@ -5,6 +5,7 @@ test_cask 'with-depends-on-cask' do
   url TestHelper.local_binary_url('caffeine.zip')
   homepage 'http://example.com/with-depends-on-cask'
 
-  depends_on :cask => 'local-transmission'
+  depends_on cask: 'local-transmission'
+
   app 'Caffeine.app'
 end

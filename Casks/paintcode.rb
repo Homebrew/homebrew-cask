@@ -1,11 +1,8 @@
 cask 'paintcode' do
-  version :latest
-  sha256 :no_check
+  version '2.4.1'
+  sha256 'd3669953482e92c5a7ae35907d0273e22b801496d85ba1cadf02a310cb3a236f'
 
-  # pixelcut.com is the official download host per the appcast feed
-  url 'https://www.pixelcut.com/paintcode/paintcode.zip'
-  appcast 'https://www.pixelcut.com/paintcode/appcast.xml',
-          :sha256 => 'eeecc5760ba2d0c726cb7e1b23264314f99defc16832e0e7b6881af1cd97540f'
+  url "http://www.paintcodeapp.com/content/versions/#{version}/paintcode-trial.zip"
   name 'PaintCode'
   homepage 'http://www.paintcodeapp.com/'
   license :commercial

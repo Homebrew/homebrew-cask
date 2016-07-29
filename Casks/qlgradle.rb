@@ -4,7 +4,7 @@ cask 'qlgradle' do
 
   url "https://github.com/Urucas/QLGradle/releases/download/#{version}/QLGradle.qlgenerator.zip"
   appcast 'https://github.com/Urucas/QLGradle/releases.atom',
-          :sha256 => 'ea552ca1b91e1834fc259e47343925b314e1c6133e4c47a9273b6c4bdf8fd24b'
+          checkpoint: 'ea552ca1b91e1834fc259e47343925b314e1c6133e4c47a9273b6c4bdf8fd24b'
   name 'qlgradle'
   homepage 'https://github.com/Urucas/QLGradle'
   license :mit

@@ -1,12 +1,14 @@
 cask 'stellarium' do
-  version '0.14.0'
-  sha256 '1b7350a0a84f6c0056c53bc432c384f1501e3935c6118b64d87a365eb035982b'
+  version '0.14.3'
+  sha256 'f8d0c80abbde2d9e76a222ff3fc0e0bd63b4cdb661688794fb241d055e274acf'
 
-  # sourceforge.net is the official download host per the vendor homepage
+  # sourceforge.net/sourceforge/stellarium was verified as official when first introduced to the cask
   url "http://downloads.sourceforge.net/sourceforge/stellarium/Stellarium-#{version}.dmg"
   name 'Stellarium'
-  homepage 'http://stellarium.org'
+  homepage 'http://stellarium.org/'
   license :gpl
 
   app 'Stellarium.app'
+
+  zap delete: '~/Library/Preferences/Stellarium'
 end

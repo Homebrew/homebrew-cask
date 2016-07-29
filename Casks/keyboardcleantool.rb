@@ -2,10 +2,10 @@ cask 'keyboardcleantool' do
   version :latest
   sha256 :no_check
 
-  # bettertouchtool.net is the official download host per the vendor homepage
+  # bettertouchtool.net was verified as official when first introduced to the cask
   url 'http://bettertouchtool.net/KeyboardCleanTool.zip'
   name 'KeyboardCleanTool'
-  homepage 'http://blog.boastr.net/keyboardcleantool/'
+  homepage 'https://blog.boastr.net/keyboardcleantool/'
   license :gratis
 
   app 'KeyboardCleanTool.app'

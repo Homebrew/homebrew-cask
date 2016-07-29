@@ -4,7 +4,7 @@ cask 'subl' do
 
   url "https://github.com/dhoulb/subl/releases/download/v#{version}/Subl.app.zip"
   appcast 'https://github.com/dhoulb/subl/releases.atom',
-          :sha256 => 'a237016bdb1c69984c9ebb903b7f7cffd5aaeab29d50df167c4fce0afb66787e'
+          checkpoint: 'a237016bdb1c69984c9ebb903b7f7cffd5aaeab29d50df167c4fce0afb66787e'
   name 'subl:// URL handler'
   homepage 'https://github.com/dhoulb/subl'
   license :oss

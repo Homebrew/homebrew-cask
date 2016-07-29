@@ -4,7 +4,7 @@ cask 'gisto' do
 
   url "http://download.gistoapp.com/Gisto-#{version}-OSX_x86_64.dmg"
   appcast 'http://www.gistoapp.com/GistoAppCast.xml',
-          :sha256 => '7915863e691012959616711ab3cee3413e718fca73bf780f1edba5ad69bca080'
+          checkpoint: 'c959dc4ada9c64029566aa4b1174818e360df84444da255d9626c2bef41f9cf3'
   name 'Gisto'
   homepage 'http://www.gistoapp.com/'
   license :mit

@@ -1,15 +1,10 @@
 class Hbc::DSL::Appcast
+  attr_reader :parameters, :checkpoint
 
-  # todo  :latest_version is considered experimental
-  #       and may be removed
-
-  attr_reader :parameters, :sha256, :latest_version
-
-  def initialize(uri, parameters={})
+  def initialize(uri, parameters = {})
     @parameters     = parameters
     @uri            = Hbc::UnderscoreSupportingURI.parse(uri)
-    @sha256         = @parameters[:sha256]
-    @latest_version = @parameters[:latest_version]    # experimental
+    @checkpoint     = @parameters[:checkpoint]
   end
 
   def to_yaml

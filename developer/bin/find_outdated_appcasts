@@ -1,0 +1,121 @@
+#!/bin/bash
+
+readonly caskroom_online='https://github.com/caskroom'
+readonly caskroom_repos_dir='/tmp/caskroom_repos'
+readonly caskroom_repos=(homebrew-cask homebrew-versions homebrew-fonts homebrew-eid)
+readonly curl_flags=(--silent --location --header 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.152 Safari/537.36')
+inaccessible_appcasts=()
+
+if [[ ! $(which 'ghi') ]] || ! security find-internet-password -s github.com -l 'ghi token' &> /dev/null; then
+  echo -e "$(tput setaf 1)
+    This script requires 'ghi' installed and configured.
+    If you have [Homebrew](http://brew.sh), you can install it with 'brew install ghi'.
+    To configure it, run 'ghi config --auth <username>'. Your Github password will be required, but is never stored.
+  $(tput sgr0)" | sed -E 's/ {4}//' >&2
+  exit 1
+fi
+
+function message {
+  echo "${1}"
+}
+
+function go_to_repos_dir {
+  [[ ! -d "${caskroom_repos_dir}" ]] && mkdir -p "${caskroom_repos_dir}"
+  cd "${caskroom_repos_dir}" || exit 1
+}
+
+function go_to_repo_and_update {
+  local repo_name repo_dir casks_dir
+
+  repo_name="${1}"
+  repo_dir="${caskroom_repos_dir}/${repo_name}"
+  casks_dir="${repo_dir}/Casks"
+
+  if [[ ! -d "${repo_dir}" ]]; then
+    go_to_repos_dir
+
+    message "Cloning ${repo_name}…"
+    git clone "https://github.com/caskroom/${repo_name}.git" --quiet
+
+    cd "${casks_dir}" || exit 1
+  else
+    cd "${casks_dir}" || exit 1
+
+    message "Updating ${repo_name}…"
+    git pull --rebase origin master --quiet
+  fi
+}
+
+function open_issue {
+  local repo_name cask_name cask_url version appcast_url issue_number
+
+  repo_name="${1}"
+  cask_name="${2}"
+  cask_url="${caskroom_online}/${repo_name}/blob/master/Casks/${cask_name}.rb"
+  version="${3}"
+  appcast_url="${4}"
+
+  message="$(echo "Outdated cask: ${cask_name}
+
+    Outdated cask: [\`${cask_name}\`](${cask_url}).
+
+    Info:
+    + version: \`${version}\`.
+    + appcast url: ${appcast_url}.
+  " | sed -E 's/^ {4}//')"
+
+  issue_number=$(ghi open --label 'outdated appcast' --message "${message}" | head -1 | perl -pe 's/^#(\d+): .*/\1/')
+  message "Opened issue: https://github.com/caskroom/${repo_name}/issues/${issue_number}."
+}
+
+function is_appcast_available {
+  local appcast_url
+
+  appcast_url="${1}"
+
+  http_status="$(curl "${curl_flags[@]}" --head --write-out '%{http_code}' "${appcast_url}" -o '/dev/null')"
+
+  [[ "${http_status}" == 200 ]]
+}
+
+function report_outdated_appcasts {
+  local repo_name cask_name appcast_url current_checkpoint new_checkpoint version
+
+  repo_name="${1}"
+
+  for cask_file in ./*; do
+    appcast_url="$(brew cask _stanza appcast "${cask_file}")"
+    [[ -z "${appcast_url}" ]] && continue # skip early if there is no appcast
+
+    cask_name="$(basename "${cask_file%.*}")"
+
+    message "Verifying appcast checkpoint for ${cask_name}…"
+
+    if is_appcast_available "${appcast_url}"; then
+      current_checkpoint="$(brew cask _stanza --yaml appcast "${cask_file}" | grep '^- :checkpoint' | awk '{print $3}')"
+      new_checkpoint="$(curl "${curl_flags[@]}" --compressed "${appcast_url}" | sed 's|<pubDate>[^<]*</pubDate>||g' | shasum --algorithm 256 | awk '{ print $1 }')"
+    else
+      message "There was an error checking the appcast for ${cask_name}."
+      inaccessible_appcasts+=("${repo_name}/${cask_name}")
+      continue
+    fi
+
+    if [[ "${current_checkpoint}" != "${new_checkpoint}" ]]; then
+      version="$(brew cask _stanza version "${cask_file}")"
+
+      message "${cask_name} is outdated. Opening issue in ${repo_name}…"
+      open_issue "${repo_name}" "${cask_name}" "${version}" "${appcast_url}"
+    fi
+  done
+}
+
+for repo in "${caskroom_repos[@]}"; do
+  go_to_repo_and_update "${repo}"
+  report_outdated_appcasts "${repo}"
+done
+
+if [[ ${#inaccessible_appcasts[@]} -gt 0 ]];then
+  echo # empty line
+  message 'Some casks have appcasts that errored out, and may need to be rechecked:'
+  printf '%s\n' "${inaccessible_appcasts[@]}"
+fi

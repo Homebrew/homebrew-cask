@@ -3,7 +3,7 @@ cask 'lackeyccg' do
   sha256 :no_check
 
   url 'http://www.lackeyccg.com/LackeyCCGMac.zip',
-      :user_agent => :fake
+      user_agent: :fake
   name 'LackeyCCG'
   homepage 'http://www.lackeyccg.com/'
   license :gratis

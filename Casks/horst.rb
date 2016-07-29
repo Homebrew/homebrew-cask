@@ -7,7 +7,7 @@ cask 'horst' do
   homepage 'http://penck.de/horst/'
   license :freemium
 
-  depends_on :macos => '>= :lion'
+  depends_on macos: '>= :lion'
 
   app 'Horst.app'
 end

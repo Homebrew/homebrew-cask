@@ -1,10 +1,11 @@
 cask 'subsmarine' do
-  version '1.2.2'
-  sha256 'b6533f4fa1f3d477a7474a7c5f3baeb8c0c06b8da0d83ca8acddd138cfd1aeb1'
+  version '1.2.3'
+  sha256 '8cdaec741029dec8a45fe55679009fa4a30ede35704b313888388618c331f000'
 
-  url "http://www.cocoawithchurros.com/downloads/SubsMarine.#{version}.zip"
-  appcast 'http://www.cocoawithchurros.com/shine/appcast.php?id=7',
-          :sha256 => '9659830b134ac12326639e1b3f7ba06945cc18db343890e06a4c7f9d9dce8912'
+  # amazonaws.com/cwcbucket/subsmarine was verified as official when first introduced to the cask
+  url "https://s3-us-west-2.amazonaws.com/cwcbucket/subsmarine/subsmarine.#{version}.zip"
+  appcast 'https://www.cocoawithchurros.com/shine/appcast.php?id=7',
+          checkpoint: '3f99aeebb0ac8611031f46340560ecf733977801f85d3d663ad2e812b3846701'
   name 'SubsMarine'
   homepage 'http://www.cocoawithchurros.com/subsmarine.php'
   license :commercial

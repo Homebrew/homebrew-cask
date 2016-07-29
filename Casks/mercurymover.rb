@@ -9,5 +9,5 @@ cask 'mercurymover' do
 
   prefpane 'MercuryMover.prefPane'
 
-  zap :delete => '~/Library/Preferences/com.heliumfoot.MyWiAgent.plist'
+  zap delete: '~/Library/Preferences/com.heliumfoot.MyWiAgent.plist'
 end

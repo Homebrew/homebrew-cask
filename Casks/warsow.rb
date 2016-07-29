@@ -1,10 +1,10 @@
 cask 'warsow' do
-  version '2.01'
-  sha256 '1a144b59dd7b642d86eb4530e6dc6388c6acb30a1cce28b31b16dfea269e0790'
+  version '2.1'
+  sha256 '347c47b029dc706ab43b754ec7422c3766dde2b2ed9a3ce0f40cd0d52c64f94d'
 
-  url "https://www.warsow.gg/download?dl=warsow#{version.delete('.')}mac"
+  url "https://www.warsow.gg/download?dl=warsow#{version.no_dots}mac"
   name 'Warsow'
-  homepage 'http://www.warsow.net/'
+  homepage 'http://www.warsow.gg/'
   license :gpl
 
   app 'Warsow.app'

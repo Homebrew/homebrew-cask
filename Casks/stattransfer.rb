@@ -9,5 +9,5 @@ cask 'stattransfer' do
 
   pkg "st_installer_v#{version}.pkg"
 
-  uninstall :pkgutil => 'com.circlesys.pkg'
+  uninstall pkgutil: 'com.circlesys.pkg'
 end

@@ -1,18 +1,20 @@
 cask 'moom' do
-  version '3.2.2'
-  sha256 '8f9a5ce372ce6b8c992a123c4a531bcfac2483ca90fd9818475ac4eabe33ade2'
+  version '3.2.5'
+  sha256 'c6ba0b0d1b02893dfa88b79524039129e3d4c7cb4688420e159d7b6bddf3fe61'
 
-  url "https://manytricks.com/download/_do_not_hotlink_/moom#{version.gsub('.','')}.dmg"
+  url 'https://manytricks.com/download/moom'
   appcast 'https://manytricks.com/moom/appcast.xml',
-          :sha256 => '9d25269c3dfe53866ec4dc2622566f628110472b3c980b0582d24f691a02205c'
+          checkpoint: '9794a3f60d93e39cd1ea56d157635e881db492abcafdd13704cd6b8b58efeb4c'
   name 'Moom'
   homepage 'https://manytricks.com/moom/'
   license :commercial
 
+  auto_updates true
+
   app 'Moom.app'
 
-  zap :delete => [
-                  '~/Library/Preferences/com.manytricks.Moom.plist',
-                  '~/Library/Application Support/Many Tricks',
-                 ]
+  zap delete: [
+                '~/Library/Preferences/com.manytricks.Moom.plist',
+                '~/Library/Application Support/Many Tricks',
+              ]
 end

@@ -1,15 +1,15 @@
 cask 'soundcast' do
-  version '1.6'
-  sha256 '470098b66a9d48c7c0fada09cc8bf27190d09015eaee9be74c8c4f01d29f84ef'
+  version '1.7'
+  sha256 '39385f89007d65d3085720d8bbe4c4383d5ddedc60b6547e086122965618b7cd'
 
   url "https://github.com/andresgottlieb/soundcast/releases/download/v#{version}/Soundcast_v#{version}.zip"
   appcast 'https://github.com/andresgottlieb/soundcast/releases.atom',
-          :sha256 => '3a10b331d63d7abebfb4feb78415e09cbc42c918458e0a717edcfb876f8425ab'
+          checkpoint: 'ab04e3e3fb6927ccf9c59c5b0e09ed59909cdaac6a81a407fed4c605e2597be8'
   name 'Soundcast'
   homepage 'https://github.com/andresgottlieb/soundcast'
   license :mit
 
-  depends_on :cask => 'soundflower'
+  depends_on cask: 'soundflower'
 
   app 'soundcast.app'
 end

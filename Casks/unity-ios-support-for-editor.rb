@@ -1,15 +1,15 @@
 cask 'unity-ios-support-for-editor' do
-  version '5.3.1f1'
-  sha256 '8de18e8b4703ea4b3f71c8e83d3751f1f568a680a8460cd134c1c6f22a323908'
+  version '5.3.5f1,960ebf59018a'
+  sha256 '61f8773248aabfd4659d2b9aebe0c31a120f82d8dbd0b18b5376aca2276a5df6'
 
-  url "http://netstorage.unity3d.com/unity/cc9cbbcc37b4/MacEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-#{version}.pkg"
+  url "http://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-#{version.before_comma}.pkg"
   name 'Unity iOS Build Support'
   homepage 'https://unity3d.com/unity/'
   license :commercial
 
-  depends_on :cask => 'unity'
+  depends_on cask: 'unity'
 
-  pkg "UnitySetup-iOS-Support-for-Editor-#{version}.pkg"
+  pkg "UnitySetup-iOS-Support-for-Editor-#{version.before_comma}.pkg"
 
-  uninstall :pkgutil => 'com.unity3d.iOSSupport'
+  uninstall pkgutil: 'com.unity3d.iOSSupport'
 end

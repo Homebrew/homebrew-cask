@@ -5,7 +5,7 @@ cask 'livestation' do
   url "http://updates.livestation.com/releases/Livestation-#{version}.dmg"
   name 'Livestation'
   homepage 'https://www.livestation.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Livestation.app'
 end

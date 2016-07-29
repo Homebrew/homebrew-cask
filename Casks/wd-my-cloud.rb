@@ -9,6 +9,6 @@ cask 'wd-my-cloud' do
 
   pkg 'Install WD My Cloud.pkg'
 
-  uninstall  :pkgutil => 'com.wdc.wdMyCloud.*',
-             :rmdir => '/Applications/WD My Cloud'
+  uninstall  pkgutil: 'com.wdc.wdMyCloud.*',
+             rmdir:   '/Applications/WD My Cloud'
 end

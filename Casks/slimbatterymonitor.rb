@@ -4,7 +4,7 @@ cask 'slimbatterymonitor' do
 
   url "http://quux.orange-carb.org/dist/SlimBatteryMonitor-#{version}.dmg"
   appcast 'http://www.orange-carb.org/SBM/updates/sbm.xml',
-          :sha256 => 'd0e455439ba8f1a4dc1e575a0e990836beed2ffc175e61f0a0674c238a84b9bf'
+          checkpoint: '8aa20ac38c28f3a2118653d4cb71ee33a56bfcc95954202eb440dbb7a0bd8738'
   name 'SlimBatteryMonitor'
   homepage 'http://www.orange-carb.org/SBM/'
   license :gratis

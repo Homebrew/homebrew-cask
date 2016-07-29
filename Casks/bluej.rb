@@ -1,10 +1,10 @@
 cask 'bluej' do
-  version '3.1.6'
-  sha256 'b53cb1ce8384845767074480b26b2795aecf7d0f0e9027747c0106918a7471a6'
+  version '3.1.7'
+  sha256 'b693557212b61de537299519bcb40d7b5ac00c2ba60b9c88e900dced80c8c363'
 
-  url "http://www.bluej.org/download/files/BlueJ-#{version.delete('.')}.zip"
+  url "https://www.bluej.org/download/files/BlueJ-#{version.delete('.')}.zip"
   name 'BlueJ'
-  homepage 'http://www.bluej.org'
+  homepage 'https://www.bluej.org'
   license :gpl
 
   app "BlueJ #{version}/BlueJ.app"

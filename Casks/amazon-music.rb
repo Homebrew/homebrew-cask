@@ -1,29 +1,30 @@
 cask 'amazon-music' do
-  version '20151215_033955b5fb'
-  sha256 'c430be9914fe81c4c1162290e8665632b98962d8c7837a60b67afe671f4d53f8'
+  version '20160616,2001549f34'
+  sha256 'd13a1ac00bdaf03a982231f27a9067610fb4675990db058ab15ddec055ba9569'
 
-  url "https://images-na.ssl-images-amazon.com/images/G/01/digital/music/morpho/installers/#{version.sub(%r{_.*},'')}/#{version.sub(%r{.*_},'')}/AmazonMusicInstaller.dmg"
+  # ssl-images-amazon.com was verified as official when first introduced to the cask
+  url "https://images-na.ssl-images-amazon.com/images/G/01/digital/music/morpho/installers/#{version.before_comma}/#{version.after_comma}/AmazonMusicInstaller.dmg"
   name 'Amazon Music'
-  homepage 'http://www.amazon.com/gp/feature.html/?ie=UTF8&docId=1001067901'
+  homepage 'https://www.amazon.com/gp/feature.html/?ie=UTF8&docId=1001067901'
   license :gratis
 
-  installer :script => 'Amazon Music Installer.app/Contents/MacOS/osx-intel',
-            :args => [ '--unattendedmodeui', 'none' ],
-            :sudo => true
+  installer script: 'Amazon Music Installer.app/Contents/MacOS/osx-intel',
+            args:   ['--unattendedmodeui', 'none'],
+            sudo:   true
 
-  uninstall :quit => [
-              'com.amazon.music',
-              'com.amazon.music-renderer'
-            ],
-            :delete => [
-              '/Applications/Amazon Music.app'
-            ],
-            :launchctl => 'com.amazon.music'
+  uninstall quit:      [
+                         'com.amazon.music',
+                         'com.amazon.music-renderer',
+                       ],
+            delete:    [
+                         '/Applications/Amazon Music.app',
+                       ],
+            launchctl: 'com.amazon.music'
 
-  zap :delete => [
-                  '~/Library/Preferences/com.amazon.music.plist',
-                  '~/Library/Application Support/Amazon Music/'
-                ]
+  zap delete: [
+                '~/Library/Preferences/com.amazon.music.plist',
+                '~/Library/Application Support/Amazon Music/',
+              ]
 
   caveats <<-EOS.undent
     If the app won't launch after installation, try

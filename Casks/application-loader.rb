@@ -9,5 +9,5 @@ cask 'application-loader' do
 
   pkg 'ApplicationLoader.pkg'
 
-  uninstall :pkgutil => 'com.apple.pkg.ApplicationLoader'
+  uninstall pkgutil: 'com.apple.pkg.ApplicationLoader'
 end

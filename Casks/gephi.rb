@@ -1,10 +1,11 @@
 cask 'gephi' do
-  version '0.9.0'
-  sha256 '359301e7720f50bee26fa2df86044f9aa9b284c34bd5734f9434f4db4d55632f'
+  version '0.9.1'
+  sha256 'c2a2f5c84f822303a3b314d43bc18f183dfa1d15545050bd8125d32a84e64f94'
 
+  # github.com/gephi/gephi was verified as official when first introduced to the cask
   url "https://github.com/gephi/gephi/releases/download/v#{version}/gephi-#{version}-macos.dmg"
   appcast 'https://github.com/gephi/gephi/releases.atom',
-          :sha256 => '35c743eda7cc503f5acdcecdf505a53450971bed680c1851bff42f15d9057ebc'
+          checkpoint: 'd1feebc671a218ea171e3c8c521cc6450e09d556f29a086649c94f4339e6e1e5'
   name 'Gephi'
   homepage 'https://gephi.github.io/'
   license :oss

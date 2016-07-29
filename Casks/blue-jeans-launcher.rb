@@ -7,13 +7,13 @@ cask 'blue-jeans-launcher' do
   homepage 'https://bluejeans.com/'
   license :gratis
 
-  installer :manual => 'Blue Jeans Launcher.app'
+  depends_on macos: '>= 10.6'
 
-  uninstall :signal => [
-                         ['TERM', 'com.bluejeans.nw.app'],
-                         ['TERM', 'com.bluejeans.nw.helper']
-                       ],
-            :delete => '~/Applications/Blue Jeans.app'
+  installer manual: 'Blue Jeans Launcher.app'
 
-  depends_on :macos => '>= 10.6'
+  uninstall signal: [
+                      ['TERM', 'com.bluejeans.nw.app'],
+                      ['TERM', 'com.bluejeans.nw.helper'],
+                    ],
+            delete: '~/Applications/Blue Jeans.app'
 end

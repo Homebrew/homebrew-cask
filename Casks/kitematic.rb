@@ -1,19 +1,19 @@
 cask 'kitematic' do
-  version '0.9.5'
-  sha256 'a8b078cea9f77129fee63df810bc80faf3f56f4c1e6b724397c06ef77fae5e19'
+  version '0.10.5'
+  sha256 '1142b3b3934a36cff3ecc322f0773c1fc390219773a21a71fc35b3255bc4a15c'
 
-  # github.com is the official download host per the vendor homepage
-  url "https://github.com/kitematic/kitematic/releases/download/v#{version}/Kitematic-#{version}-Mac.zip"
-  appcast 'https://github.com/kitematic/kitematic/releases.atom',
-          :sha256 => '44025e7a855b6afc4c645971e90cd49b576aa4772ce1de8bec35f7b092596594'
+  # github.com/docker/kitematic was verified as official when first introduced to the cask
+  url "https://github.com/docker/kitematic/releases/download/v#{version}/Kitematic-#{version}-Mac.zip"
+  appcast 'https://github.com/docker/kitematic/releases.atom',
+          checkpoint: '5aca7decc78f2f3182693847a31919d53099b53aa17012c77517180838f8a467'
   name 'Kitematic'
   homepage 'https://kitematic.com/'
   license :apache
 
   app 'Kitematic (Beta).app'
 
-  zap :delete => [
-    '~/Library/Application Support/Kitematic',
-    '~/Kitematic'
-  ]
+  zap delete: [
+                '~/Library/Application Support/Kitematic',
+                '~/Kitematic',
+              ]
 end

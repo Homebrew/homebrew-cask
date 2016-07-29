@@ -9,9 +9,9 @@ cask 'kebrum' do
 
   pkg 'Kebrum.pkg'
 
-  uninstall :pkgutil => 'com.kebrum.vpn',
-            :quit    => 'com.kebrum.vpn',
-            :delete  => '/Applications/Kebrum.app'
+  uninstall pkgutil: 'com.kebrum.vpn',
+            quit:    'com.kebrum.vpn',
+            delete:  '/Applications/Kebrum.app'
 
-  zap :delete => '~/Library/Saved Application State/com.kebrum.vpn.savedState'
+  zap delete: '~/Library/Saved Application State/com.kebrum.vpn.savedState'
 end

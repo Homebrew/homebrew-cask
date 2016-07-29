@@ -1,31 +1,31 @@
 cask 'ivpn' do
-  version '7.4.1'
-  sha256 'b1e1803fe7b2f1232a3bfc4c5fddd682cc92d147ab57cab48f6391358716df2c'
+  version '7.4.2'
+  sha256 '1b3bf872999aa88f98451420f0fc00f6c3926fa7e58bea99d37508d89b915a4d'
 
   url "https://macserve.org.uk/downloads/ivpn/iVPN_#{version}.zip"
   appcast 'http://macserve.org.uk:8090/profileInfo.php',
-          :sha256 => 'fcaa1830a2c5a2731b724ac9dfdd25dc5bd9a7bfd10f56b4b48fd79d6e8d87f3'
+          checkpoint: 'fe87e733a838d6bfe7bc43484f914dc489ea595ad40c61e85bd376cf3ad8945a'
   name 'iVPN'
   homepage 'https://macserve.org.uk/projects/ivpn/'
   license :commercial
 
   app 'iVPN.app'
 
-  uninstall :quit      => [
-                            'com.MacServe.iVPN',
-                            'com.MacServe.iVPN-Monitor'
-                          ],
-            :launchctl => [
-                           'com.MacServe.ivpnHelper',
-                           'com.macserve.ivpn',
-                           'com.macserve.ppp.l2tp',
-                           'com.macserve.ppp.pptp'
-                          ]
+  uninstall quit:      [
+                         'com.MacServe.iVPN',
+                         'com.MacServe.iVPN-Monitor',
+                       ],
+            launchctl: [
+                         'com.MacServe.ivpnHelper',
+                         'com.macserve.ivpn',
+                         'com.macserve.ppp.l2tp',
+                         'com.macserve.ppp.pptp',
+                       ]
 
-  zap       :delete    => [
-                           '~/Library/Preferences/com.MacServe.iVPN.plist',
-                           '/Library/LaunchDaemons/com.macserve.ppp.l2tp.plist',
-                           '/Library/LaunchDaemons/com.macserve.ppp.pptp.plist',
-                           '/private/etc/ppp/'
-                          ]
+  zap       delete: [
+                      '~/Library/Preferences/com.MacServe.iVPN.plist',
+                      '/Library/LaunchDaemons/com.macserve.ppp.l2tp.plist',
+                      '/Library/LaunchDaemons/com.macserve.ppp.pptp.plist',
+                      '/private/etc/ppp/',
+                    ]
 end

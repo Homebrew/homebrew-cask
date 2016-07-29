@@ -5,7 +5,7 @@ cask 'plycounter' do
   url 'https://www.plycount.com/plycounter/downloads/PlyCounter.dmg'
   name 'PlyCounter'
   homepage 'http://www.plycount.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'PlyCounter.app'
 end

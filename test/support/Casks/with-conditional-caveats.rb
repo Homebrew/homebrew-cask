@@ -6,8 +6,9 @@ test_cask 'with-conditional-caveats' do
   homepage 'http://example.com/local-caffeine'
 
   app 'Caffeine.app'
+
   # a do block may print and use a DSL
   caveats do
-    puts 'This caveat is conditional' if false
+    puts 'This caveat is conditional' if false # rubocop:disable Lint/LiteralInCondition
   end
 end

@@ -2,11 +2,11 @@ cask 'entropy' do
   version '1.6.0'
   sha256 '62ae4d0607a0637d404fef709494951610a13a8d02d8f2d887e6501f98c55591'
 
-  # amazonaws.com is the official download host per the vendor homepage
+  # eigenlogik.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://eigenlogik.s3.amazonaws.com/releases/entropy/Entropy-#{version}.zip"
-  name 'Entropy'
   appcast 'http://hyperion.eigenlogik.com/appcast/feed/entropy/',
-          :sha256 => '27177d5fa935d8cf5058c1d372557071e18c79496e9015b171c360743f628b95'
+          checkpoint: '37ce31b04dfe7736a4062e166c5f6d56d40a8e8a76aae070e05e9be44ffae087'
+  name 'Entropy'
   homepage 'http://www.eigenlogik.com/entropy/'
   license :commercial
 

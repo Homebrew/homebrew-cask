@@ -4,7 +4,7 @@ cask 'neu' do
 
   url "http://downloads.elegantchaos.com/neu/neu-v#{version}.zip"
   appcast 'http://sparkle.elegantchaos.com/neu/appcast.xml',
-          :sha256 => 'fcf80e031459b0c87d4ce0c66ea1b1616278666a9c9be71d014baa61b449c55d'
+          checkpoint: 'fcf80e031459b0c87d4ce0c66ea1b1616278666a9c9be71d014baa61b449c55d'
   name 'Neu'
   homepage 'http://www.elegantchaos.com/neu/'
   license :freemium

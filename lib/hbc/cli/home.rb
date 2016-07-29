@@ -2,12 +2,12 @@ class Hbc::CLI::Home < Hbc::CLI::Base
   def self.run(*cask_tokens)
     if cask_tokens.empty?
       odebug "Opening project homepage"
-      system "/usr/bin/open", '--', 'http://caskroom.io/'
+      system "/usr/bin/open", "--", "http://caskroom.io/"
     else
       cask_tokens.each do |cask_token|
         odebug "Opening homepage for Cask #{cask_token}"
         cask = Hbc.load(cask_token)
-        system "/usr/bin/open", '--', cask.homepage
+        system "/usr/bin/open", "--", cask.homepage
       end
     end
   end

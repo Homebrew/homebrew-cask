@@ -5,7 +5,7 @@ test_cask 'auto-updates' do
   url TestHelper.local_binary_url('transmission-2.61.dmg')
   homepage 'http://example.com/auto-updates'
 
-  app 'Transmission.app'
-
   auto_updates true
+
+  app 'Transmission.app'
 end

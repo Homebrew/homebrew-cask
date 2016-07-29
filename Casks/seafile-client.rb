@@ -1,8 +1,8 @@
 cask 'seafile-client' do
-  version '4.4.2'
-  sha256 'b6f821002f6466ff6a0ec6b6743c484fb8edb38e8052cbca8003d27aea4cbcf7'
+  version '5.1.3'
+  sha256 '520162d9e2e2eae2f31f6e575772c48094a9198964ba8a7da22cd77c331bf7a8'
 
-  # bintray.com is the official download host per the vendor homepage
+  # bintray.com/artifact/download/seafile-org was verified as official when first introduced to the cask
   url "https://bintray.com/artifact/download/seafile-org/seafile/seafile-client-#{version}.dmg"
   name 'Seafile Client'
   homepage 'http://seafile.com/'

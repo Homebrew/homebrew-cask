@@ -1,14 +1,13 @@
 cask 'minbox' do
-  version :latest
-  sha256 :no_check
+  version '2.0.12'
+  sha256 '3c5a6bd1888453ef6de902da9bf29f873516572d4f7ff7d7d096c5425ae9dcd2'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url 'https://minbox-public.s3.amazonaws.com/osx/Minbox.zip'
+  url 'https://minbox.com/download'
   appcast 'https://minbox.com/updates.xml',
-          :sha256 => '76eae055966fda30faa71181eef5f48f5951aedc1d0b4ee920808d4eac3c22a3'
+          checkpoint: 'd6f20222f6fca106398c29a026237661e4805106af60d373f71f17948aa5d425'
   name 'Minbox'
   homepage 'https://minbox.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Minbox.app'
 end

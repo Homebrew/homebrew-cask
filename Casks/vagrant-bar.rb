@@ -4,7 +4,7 @@ cask 'vagrant-bar' do
 
   url "https://github.com/BipSync/VagrantBar/releases/download/#{version}/Vagrant.Bar.zip"
   appcast 'https://github.com/BipSync/VagrantBar/releases.atom',
-          :sha256 => '52ae5bf709f27c99b8e8d32329aa784a002ea430c076dcaba28903c88d90c51a'
+          checkpoint: '52ae5bf709f27c99b8e8d32329aa784a002ea430c076dcaba28903c88d90c51a'
   name 'Vagrant Bar'
   homepage 'https://github.com/BipSync/VagrantBar'
   license :oss

@@ -5,7 +5,7 @@ cask 'zterm' do
   url "http://www.dalverson.com/zterm/ZTerm#{version}.dmg"
   name 'ZTerm'
   homepage 'http://www.dalverson.com/zterm/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'ZTerm.app'
 end

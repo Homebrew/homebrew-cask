@@ -4,7 +4,7 @@ cask 'dropletmanager' do
 
   url "https://github.com/deivuh/DODropletManager-OSX/releases/download/v#{version}/DropletManager.v#{version}.zip"
   appcast 'https://github.com/deivuh/DODropletManager-OSX/releases.atom',
-          :sha256 => '225847ad07f81ba7841e04106f2b91c851d366d99509929a134b0476688871cf'
+          checkpoint: '225847ad07f81ba7841e04106f2b91c851d366d99509929a134b0476688871cf'
   name 'DigitalOcean Droplets Manager'
   homepage 'https://github.com/deivuh/DODropletManager-OSX'
   license :gpl

@@ -4,11 +4,11 @@ cask 'bob' do
 
   url "https://github.com/casperstorm/Bob/releases/download/#{version}/backup-bob.app.zip"
   appcast 'https://github.com/casperstorm/Bob/releases.atom',
-          :sha256 => '6559ed43d7584e608ddb571531d12b73690eb00b675a5b3ab112e02d7db526cb'
+          checkpoint: '6559ed43d7584e608ddb571531d12b73690eb00b675a5b3ab112e02d7db526cb'
   name 'Bob'
   homepage 'https://github.com/casperstorm/Bob'
   license :mit
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
-  app 'backup-bob.app', :target => 'Bob.app'
+  app 'backup-bob.app', target: 'Bob.app'
 end

@@ -1,6 +1,6 @@
 cask 'davmail' do
-  version '4.7.0-2408'
-  sha256 'f755137b4a066ac8408a9c59cfd7fc26df51e7132f7b68a5fe094cce34126309'
+  version '4.7.2-2427'
+  sha256 'd7f54f83bf1b757f09349dc8621a3d501ee7b14d7b51a806aaa7901e33c92724'
 
   url "http://downloads.sourceforge.net/sourceforge/davmail/DavMail-MacOSX-#{version}.app.zip"
   name 'DavMail'
@@ -9,8 +9,7 @@ cask 'davmail' do
 
   app 'DavMail.app'
 
-  caveats <<-EOS.undent
-    #{token} requires Java. You can install the latest version with
-      brew cask install java
-  EOS
+  caveats do
+    depends_on_java
+  end
 end

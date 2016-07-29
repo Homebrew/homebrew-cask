@@ -9,5 +9,5 @@ cask 'busycal' do
 
   pkg 'BusyCal Installer.pkg'
 
-  uninstall :pkgutil => 'com.busymac.busycal2.pkg'
+  uninstall pkgutil: 'com.busymac.busycal2.pkg'
 end

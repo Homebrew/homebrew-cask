@@ -1,22 +1,22 @@
 cask 'cryptol' do
-  version '2.2.6'
-  sha256 'ab6fc7167772f7a403df559626360c58b0162a48545657162758103ea0c86f3c'
+  version '2.4.0'
+  sha256 'a643ba63920cb4a7f119cc9432ac1de6e8c309c0656f984dd5826b19c7b48963'
 
-  # github.com is the official download host per the vendor homepage
-  url "https://github.com/GaloisInc/cryptol/releases/download/v#{version}/cryptol-#{version}-MacOSX-64.tar.gz"
+  # github.com/GaloisInc/cryptol was verified as official when first introduced to the cask
+  url "https://github.com/GaloisInc/cryptol/releases/download/#{version}/cryptol-#{version}-MacOSX-64.tar.gz"
   appcast 'https://github.com/GaloisInc/cryptol/releases.atom',
-          :sha256 => 'a297a208be4d6a81e6bf0675fd8d204eb99ad3254b4c886d382d0707824c0a03'
-  gpg "#{url}.sig",
-      :key_url => 'http://cryptol.net/files/Galois.asc'
+          checkpoint: '40789a770eae4e9c8ddde82cc49f2f9c9a0117192dd478249acf7e12cf588275'
   name 'Cryptol'
   homepage 'http://cryptol.net/'
   license :bsd
+  gpg "#{url}.sig",
+      key_url: 'http://cryptol.net/files/Galois.asc'
+
+  depends_on cask: 'cvc4'
 
   binary "cryptol-#{version}-MacOSX-64/bin/cryptol"
 
-  zap :delete => '~/.cryptol'
-
-  depends_on :cask => 'cvc4'
+  zap delete: '~/.cryptol'
 
   caveats do
     files_in_usr_local

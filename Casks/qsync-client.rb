@@ -9,5 +9,5 @@ cask 'qsync-client' do
 
   pkg 'Qsync Client.pkg'
 
-  uninstall :pkgutil => 'com.qnap.qsync.*'
+  uninstall pkgutil: 'com.qnap.qsync.*'
 end

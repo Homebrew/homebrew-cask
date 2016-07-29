@@ -9,5 +9,5 @@ cask 'utc-menu-clock' do
 
   pkg "UTCMenuClock_#{version}_installer.pkg"
 
-  uninstall :pkgutil => 'net.retina.utcmenuclock.*'
+  uninstall pkgutil: 'net.retina.utcmenuclock.*'
 end

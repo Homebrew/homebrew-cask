@@ -1,13 +1,13 @@
 cask 'tribler' do
-  version '6.4.3'
-  sha256 '74b79421a91e755518c16a941f8646968d94b167d38f9a911a8f97f91de29cae'
+  version '6.5.2'
+  sha256 '16b89648e63f944beba94b4520b37bb1c83398cbd1e0739e371061626c46601c'
 
-  # github.com is the official download host per the vendor homepage
+  # github.com/Tribler/tribler was verified as official when first introduced to the cask
   url "https://github.com/Tribler/tribler/releases/download/v#{version}/Tribler-#{version}.dmg"
   appcast 'https://github.com/Tribler/tribler/releases.atom',
-          :sha256 => '6dc37806e7e565d4cbaa8cf7a6961cd411d6906454ce511cd79b0145462f6949'
+          checkpoint: 'b56dba965e57c2cd11ecf021983be4dd465285c44871d2bfc396036c33dfe6d8'
   name 'Tribler'
-  homepage 'https://www.tribler.org'
+  homepage 'https://www.tribler.org/'
   license :gpl
 
   app 'Tribler.app'

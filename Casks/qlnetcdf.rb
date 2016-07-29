@@ -4,7 +4,7 @@ cask 'qlnetcdf' do
 
   url "https://github.com/tobeycarman/QLNetcdf/releases/download/v#{version}/QLNetcdf.qlgenerator.zip"
   appcast 'https://github.com/tobeycarman/QLNetcdf/releases.atom',
-          :sha256 => '1f462ff39ea0307daf5aee204f2fdf3cd527b08b6fe127f07864fc8bde34a921'
+          checkpoint: '1f462ff39ea0307daf5aee204f2fdf3cd527b08b6fe127f07864fc8bde34a921'
   name 'QLNetcdf'
   homepage 'https://github.com/tobeycarman/QLNetcdf/'
   license :mit

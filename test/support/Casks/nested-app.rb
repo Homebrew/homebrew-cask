@@ -5,6 +5,7 @@ test_cask 'nested-app' do
   url TestHelper.local_binary_url('NestedApp.dmg.zip')
   homepage 'http://example.com/nested-app'
 
-  container :nested => 'NestedApp.dmg'
+  container nested: 'NestedApp.dmg'
+
   app 'MyNestedApp.app'
 end

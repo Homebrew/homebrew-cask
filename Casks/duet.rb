@@ -1,16 +1,18 @@
 cask 'duet' do
-  version '1.5.1.1'
-  sha256 'dc3e7adc8b07f1d921944403b0356815b9df84bd8de9524fd3e7d63878a14496'
+  version '1.5.4.9'
+  sha256 'ee6334cb41f2d0a3d164b5c1de61d40f70d4cd9c829a35beba437ba9f6919d55'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url "https://s3-us-west-1.amazonaws.com/duetmac/#{version.dots_to_underscores}/duet_#{version.dots_to_underscores}.zip"
+  # d2ycb980mbr5lq.cloudfront.net was verified as official when first introduced to the cask
+  url "https://d2ycb980mbr5lq.cloudfront.net/#{version.dots_to_underscores}/duet-#{version.dots_to_hyphens}.zip"
+  appcast 'http://updates.duetdisplay.com/checkMacUpdates',
+          checkpoint: '01a04fe0630a818640a6e9fa9040113791192369529cb757f570a03e19b257f0'
   name 'Duet'
-  appcast "https://s3-us-west-1.amazonaws.com/duetmac/#{version.dots_to_underscores}/DuetDisplayAppcast.xml",
-          :sha256 => '8e020dd515c9693fe4eda510d5330e1bc873caa8d2b562a4197afe14b5ef7ed3'
   homepage 'http://www.duetdisplay.com/'
   license :gratis
 
+  auto_updates true
+
   app 'duet.app'
 
-  uninstall :kext => 'com.karios.driver.DuetDisplay'
+  uninstall kext: 'com.karios.driver.DuetDisplay'
 end

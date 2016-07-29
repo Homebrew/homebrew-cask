@@ -4,7 +4,7 @@ cask 'gargoyle' do
 
   url "https://github.com/garglk/garglk/releases/download/stable-#{version}/gargoyle-#{version}-mac.dmg"
   appcast 'https://github.com/garglk/garglk/releases.atom',
-          :sha256 => '856917364d871777ed008dee26d61fa23a131d5deed11202b338014102e93cf8'
+          checkpoint: '856917364d871777ed008dee26d61fa23a131d5deed11202b338014102e93cf8'
   name 'Gargoyle'
   homepage 'https://github.com/garglk/garglk'
   license :oss

@@ -9,5 +9,5 @@ cask 'sketch-tool' do
 
   binary 'sketchtool/bin/sketchtool'
   binary 'sketchtool/bin/sketchmigrate'
-  artifact 'sketchtool/share/sketchtool/resources.bundle', :target => '/usr/local/share/sketchtool/resources.bundle'
+  artifact 'sketchtool/share/sketchtool/resources.bundle', target: '/usr/local/share/sketchtool/resources.bundle'
 end

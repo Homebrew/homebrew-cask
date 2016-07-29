@@ -2,7 +2,7 @@ cask 'virtual-ii' do
   if MacOS.release <= :leopard
     version '6.3.7'
     sha256 '518c40b94039db64a26664cd8644e0e06dc71e7e8c72ca65294c01836464b770'
-    url "http://virtualii.com/VirtualII_#{version.gsub('.', '_')}.dmg"
+    url "http://virtualii.com/VirtualII_#{version.dots_to_underscores}.dmg"
   else
     version :latest
     sha256 :no_check
@@ -14,7 +14,7 @@ cask 'virtual-ii' do
   license :freemium
 
   # There is no sub-folder in the DMG; the root *is* the folder
-  suite '.', :target => 'Virtual ]['
+  suite '.', target: 'Virtual ]['
 
   caveats <<-EOS.undent
     This app requires a ROM image, which must be downloaded and installed

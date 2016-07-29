@@ -9,8 +9,8 @@ cask 'namecoin' do
 
   app 'Namecoin-Qt.app'
 
-  zap :delete => [
-                  '~/Library/Application Support/Namecoin',
-                  '~/Library/Preferences/Namecoin-Qt.plist'
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Namecoin',
+                '~/Library/Preferences/Namecoin-Qt.plist',
+              ]
 end

@@ -1,6 +1,6 @@
 cask 'fldigi' do
-  version '3.23.06'
-  sha256 '559763738e6a57eb9d8665fe68a45abe612ee2264a89293c9ac8c84daa9dfeec'
+  version '3.23.09'
+  sha256 '930d749518287a6c8ced9b5f90c79f7b6abae660cb2d0bff8318a41e9453c03c'
 
   url "http://downloads.sourceforge.net/project/fldigi/fldigi/fldigi-#{version}_i386.dmg"
   name 'fldigi'

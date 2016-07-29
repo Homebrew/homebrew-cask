@@ -4,7 +4,7 @@ cask 'icons' do
 
   url "https://github.com/exherb/icons/releases/download/#{version}/icons-v#{version}-macos-x64.zip"
   appcast 'https://github.com/exherb/icons/releases.atom',
-          :sha256 => 'd3d15bf97bb0434698713d65b0b5fcb3919411c932a580d9d0974e8544408b58'
+          checkpoint: 'd3d15bf97bb0434698713d65b0b5fcb3919411c932a580d9d0974e8544408b58'
   name 'Icons'
   homepage 'https://github.com/exherb/icons'
   license :mit

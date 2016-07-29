@@ -1,6 +1,6 @@
 cask 'rust' do
-  version '1.3.0'
-  sha256 '26dfc4ec42b89aaac4d5db1bbb688e22fe6a276dc40e8c7c6da795b61b6d3ffa'
+  version '1.10.0'
+  sha256 'fa9849790170fb13f4e1b10bbc56cd87591f9e64bece25ee88d208bc4b270f84'
 
   url "https://static.rust-lang.org/dist/rust-#{version}-x86_64-apple-darwin.pkg"
   name 'Rust'
@@ -9,5 +9,5 @@ cask 'rust' do
 
   pkg "rust-#{version}-x86_64-apple-darwin.pkg"
 
-  uninstall :pkgutil => 'org.rust-lang.rust'
+  uninstall pkgutil: 'org.rust-lang.rust'
 end

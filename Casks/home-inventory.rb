@@ -7,7 +7,7 @@ cask 'home-inventory' do
   homepage 'http://binaryformations.com/products/home-inventory/'
   license :commercial
 
-  depends_on :macos => '>= 10.7'
+  depends_on macos: '>= 10.7'
 
   app 'Home Inventory.app'
 

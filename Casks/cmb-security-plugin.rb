@@ -9,5 +9,5 @@ cask 'cmb-security-plugin' do
 
   pkg 'CMB Security Plugin.pkg'
 
-  uninstall :pkgutil => 'com.cmbchina.CMBSecurityPlugin.pkg'
+  uninstall pkgutil: 'com.cmbchina.CMBSecurityPlugin.pkg'
 end

@@ -9,5 +9,5 @@ cask 'aquaterm' do
 
   pkg 'AquaTermInstaller.pkg'
 
-  uninstall :pkgutil => 'net.sourceforge.aquaterm.aquaterm.*'
+  uninstall pkgutil: 'net.sourceforge.aquaterm.aquaterm.*'
 end

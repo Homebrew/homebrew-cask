@@ -9,5 +9,5 @@ cask 'pgloader' do
 
   pkg "pgloader-#{version}.pkg"
 
-  uninstall :pkgutil => 'org.tapoueh.pgloader'
+  uninstall pkgutil: 'org.tapoueh.pgloader'
 end

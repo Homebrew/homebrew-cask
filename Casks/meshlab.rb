@@ -8,9 +8,10 @@ cask 'meshlab' do
   license :gpl
 
   app 'meshlab.app'
+
   postflight do
     # workaround for bug which breaks the app on case-sensitive filesystems
-    Dir.chdir("#{staged_path}/meshlab.app/Contents/MacOS") do
+    Dir.chdir("#{appdir}/meshlab.app/Contents/MacOS") do
       File.symlink('meshlab', 'MeshLab') unless File.exist? 'MeshLab'
     end
   end
