@@ -21,5 +21,5 @@ cask 'git' do
     system "/usr/bin/yes yes | #{staged_path}/uninstall.sh"
   end
 
-  uninstall pkgutil: "GitOSX.Installer.git#{version.delete('.')}Universal.*pkg"
+  uninstall pkgutil: "GitOSX.Installer.git#{version.no_dots}Universal.*pkg"
 end
