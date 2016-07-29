@@ -1,6 +1,6 @@
 cask 'adapter' do
-  version '2.1.5'
-  sha256 '4daf1ce7ecabb4e2f8b5c3f2c04ff1d8ebee4e5b058acc6d8b0fe5c238dd73eb'
+  version '2.1.6'
+  sha256 'ef2de9f0795cd446d26a4de1180b2580402abe8e5f13368e42d8da39eadde729'
 
   url "http://downloads.macroplant.com/Adapter-#{version}.dmg"
   appcast 'https://www.macroplant.com/adapter/adapterAppcast.xml',
