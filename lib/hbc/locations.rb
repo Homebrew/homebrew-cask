@@ -37,14 +37,6 @@ module Hbc::Locations
       @caskroom = caskroom
     end
 
-    def legacy_cache
-      @legacy_cache ||= HOMEBREW_CACHE.join("Casks")
-    end
-
-    def cache
-      @cache ||= HOMEBREW_CACHE.join("Cask")
-    end
-
     attr_writer :appdir
 
     def appdir

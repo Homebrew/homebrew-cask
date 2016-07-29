@@ -12,6 +12,7 @@ class Hbc::Download
   def perform
     clear_cache
     fetch
+    create_cache_symlink
     downloaded_path
   end
 
@@ -39,5 +40,11 @@ class Hbc::Download
     self.downloaded_path = downloader.fetch
   rescue StandardError => e
     raise Hbc::CaskError, "Download failed on Cask '#{cask}' with message: #{e}"
+  end
+
+  # this symlink helps track which downloads are ours
+  def create_cache_symlink
+    symlink_path = HOMEBREW_CACHE_CASKS.join(downloaded_path.basename)
+    FileUtils.ln_sf downloaded_path, symlink_path
   end
 end

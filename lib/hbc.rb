@@ -1,3 +1,5 @@
+HOMEBREW_CACHE_CASKS = HOMEBREW_CACHE.join("Casks")
+
 module Hbc; end
 
 require "hbc/extend"
@@ -49,23 +51,8 @@ module Hbc
 
   def self.init
     odebug "Creating directories"
-
-    # cache
-    Hbc.cache.mkpath unless Hbc.cache.exist?
-    if Hbc.legacy_cache.exist?
-      ohai "Migrating #{HOMEBREW_CACHE} to #{Hbc.cache}…"
-
-      Hbc.legacy_cache.children.each do |symlink|
-        file = symlink.realpath
-        puts file
-        FileUtils.mv(file, Hbc.cache, force: true)
-        FileUtils.rm(symlink, force: true)
-      end
-
-      FileUtils.remove_entry_secure(Hbc.legacy_cache)
-    end
-
-    # caskroom
+    HOMEBREW_CACHE.mkpath unless HOMEBREW_CACHE.exist?
+    HOMEBREW_CACHE_CASKS.mkpath unless HOMEBREW_CACHE_CASKS.exist?
     unless caskroom.exist?
       ohai "Creating Caskroom at #{caskroom}"
       current_user = Hbc::Utils.current_user

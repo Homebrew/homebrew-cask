@@ -69,7 +69,7 @@ class Hbc::CurlDownloadStrategy < Hbc::AbstractDownloadStrategy
   end
 
   def tarball_path
-    @tarball_path ||= Hbc.cache.join("#{name}--#{version}#{ext}")
+    @tarball_path ||= Pathname.new("#{HOMEBREW_CACHE}/#{name}-#{version}#{ext}")
   end
 
   def temporary_path
@@ -174,7 +174,8 @@ class Hbc::CurlDownloadStrategy < Hbc::AbstractDownloadStrategy
   end
 
   def ext
-    # support for double extensions (e.g. tar.gz)
+    # We need a Pathname because we've monkeypatched extname to support double
+    # extensions (e.g. tar.gz). -- todo actually that monkeypatch has been removed
     Pathname.new(@url).extname[%r{[^?]+}]
   end
 end
