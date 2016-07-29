@@ -49,6 +49,30 @@ class Hbc::CLI
               # '-c1'         => '--config',
             }.freeze
 
+  OPTIONS = {
+              "--caskroom="             => :caskroom=,
+              "--appdir="               => :appdir=,
+              "--colorpickerdir="       => :colorpickerdir=,
+              "--prefpanedir="          => :prefpanedir=,
+              "--qlplugindir="          => :qlplugindir=,
+              "--fontdir="              => :fontdir=,
+              "--servicedir="           => :servicedir=,
+              "--input_methoddir="      => :input_methoddir=,
+              "--internet_plugindir="   => :internet_plugindir=,
+              "--audio_unit_plugindir=" => :audio_unit_plugindir=,
+              "--vst_plugindir="        => :vst_plugindir=,
+              "--vst3_plugindir="       => :vst3_plugindir=,
+              "--screen_saverdir="      => :screen_saverdir=,
+            }.freeze
+
+  FLAGS = {
+            "--no-binaries" => :no_binaries=,
+            "--debug"       => :debug=,
+            "--verbose"     => :verbose=,
+            "--outdated"    => :cleanup_outdated=,
+            "--help"        => :help=,
+          }.freeze
+
   def self.command_classes
     @command_classes ||= Hbc::CLI.constants
                                  .map(&Hbc::CLI.method(:const_get))
@@ -157,39 +181,23 @@ class Hbc::CLI
   def self.parser
     # If you modify these arguments, please update USAGE.md
     @parser ||= OptionParser.new do |opts|
-      opts.on("--caskroom=MANDATORY",             Pathname, &Hbc.public_method(:caskroom=))
-      opts.on("--appdir=MANDATORY",               Pathname, &Hbc.public_method(:appdir=))
-      opts.on("--colorpickerdir=MANDATORY",       Pathname, &Hbc.public_method(:colorpickerdir=))
-      opts.on("--prefpanedir=MANDATORY",          Pathname, &Hbc.public_method(:prefpanedir=))
-      opts.on("--qlplugindir=MANDATORY",          Pathname, &Hbc.public_method(:qlplugindir=))
-      opts.on("--fontdir=MANDATORY",              Pathname, &Hbc.public_method(:fontdir=))
-      opts.on("--servicedir=MANDATORY",           Pathname, &Hbc.public_method(:servicedir=))
-      opts.on("--binarydir=MANDATORY",            Pathname, &Hbc.public_method(:binarydir=))
-      opts.on("--input_methoddir=MANDATORY",      Pathname, &Hbc.public_method(:input_methoddir=))
-      opts.on("--internet_plugindir=MANDATORY",   Pathname, &Hbc.public_method(:internet_plugindir=))
-      opts.on("--audio_unit_plugindir=MANDATORY", Pathname, &Hbc.public_method(:audio_unit_plugindir=))
-      opts.on("--vst_plugindir=MANDATORY",        Pathname, &Hbc.public_method(:vst_plugindir=))
-      opts.on("--vst3_plugindir=MANDATORY",       Pathname, &Hbc.public_method(:vst3_plugindir=))
-      opts.on("--screen_saverdir=MANDATORY",      Pathname, &Hbc.public_method(:screen_saverdir=))
-
-      opts.on("--no-binaries") do
-        Hbc.no_binaries = true
+      OPTIONS.each do |option, method|
+        opts.on("#{option}" "PATH", Pathname) do |path|
+          Hbc.public_send(method, path)
+        end
       end
 
-      opts.on("--debug") do
-        Hbc.debug = true
+      opts.on("--binarydir=PATH") do
+        opoo <<-EOF.undent
+          Option --binarydir is deprecated!
+          Homebrew Cask now uses whatever your Hombrew install uses.
+        EOF
       end
 
-      opts.on("--verbose") do
-        Hbc.verbose = true
-      end
-
-      opts.on("--outdated") do
-        Hbc.cleanup_outdated = true
-      end
-
-      opts.on("--help") do
-        Hbc.help = true
+      FLAGS.each do |flag, method|
+        opts.on(flag) do
+          Hbc.public_send(method, true)
+        end
       end
 
       opts.on("--version") do
