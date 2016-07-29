@@ -3,6 +3,8 @@ class Hbc::CLI; end
 require "optparse"
 require "shellwords"
 
+require "hbc/extend/optparse"
+
 require "hbc/cli/base"
 require "hbc/cli/audit"
 require "hbc/cli/cat"
@@ -155,64 +157,41 @@ class Hbc::CLI
   def self.parser
     # If you modify these arguments, please update USAGE.md
     @parser ||= OptionParser.new do |opts|
-      opts.on("--caskroom=MANDATORY") do |v|
-        Hbc.caskroom = Pathname(v).expand_path
-      end
-      opts.on("--appdir=MANDATORY") do |v|
-        Hbc.appdir = Pathname(v).expand_path
-      end
-      opts.on("--colorpickerdir=MANDATORY") do |v|
-        Hbc.colorpickerdir = Pathname(v).expand_path
-      end
-      opts.on("--prefpanedir=MANDATORY") do |v|
-        Hbc.prefpanedir = Pathname(v).expand_path
-      end
-      opts.on("--qlplugindir=MANDATORY") do |v|
-        Hbc.qlplugindir = Pathname(v).expand_path
-      end
-      opts.on("--fontdir=MANDATORY") do |v|
-        Hbc.fontdir = Pathname(v).expand_path
-      end
-      opts.on("--servicedir=MANDATORY") do |v|
-        Hbc.servicedir = Pathname(v).expand_path
-      end
-      opts.on("--binarydir=MANDATORY") do
-        opoo "Option --binarydir is deprecated, Homebrew Cask now uses whatever your Hombrew install uses."
-      end
-      opts.on("--input_methoddir=MANDATORY") do |v|
-        Hbc.input_methoddir = Pathname(v).expand_path
-      end
-      opts.on("--internet_plugindir=MANDATORY") do |v|
-        Hbc.internet_plugindir = Pathname(v).expand_path
-      end
-      opts.on("--audio_unit_plugindir=MANDATORY") do |v|
-        Hbc.audio_unit_plugindir = Pathname(v).expand_path
-      end
-      opts.on("--vst_plugindir=MANDATORY") do |v|
-        Hbc.vst_plugindir = Pathname(v).expand_path
-      end
-      opts.on("--vst3_plugindir=MANDATORY") do |v|
-        Hbc.vst3_plugindir = Pathname(v).expand_path
-      end
-      opts.on("--screen_saverdir=MANDATORY") do |v|
-        Hbc.screen_saverdir = Pathname(v).expand_path
-      end
+      opts.on("--caskroom=MANDATORY",             Pathname, &Hbc.public_method(:caskroom=))
+      opts.on("--appdir=MANDATORY",               Pathname, &Hbc.public_method(:appdir=))
+      opts.on("--colorpickerdir=MANDATORY",       Pathname, &Hbc.public_method(:colorpickerdir=))
+      opts.on("--prefpanedir=MANDATORY",          Pathname, &Hbc.public_method(:prefpanedir=))
+      opts.on("--qlplugindir=MANDATORY",          Pathname, &Hbc.public_method(:qlplugindir=))
+      opts.on("--fontdir=MANDATORY",              Pathname, &Hbc.public_method(:fontdir=))
+      opts.on("--servicedir=MANDATORY",           Pathname, &Hbc.public_method(:servicedir=))
+      opts.on("--binarydir=MANDATORY",            Pathname, &Hbc.public_method(:binarydir=))
+      opts.on("--input_methoddir=MANDATORY",      Pathname, &Hbc.public_method(:input_methoddir=))
+      opts.on("--internet_plugindir=MANDATORY",   Pathname, &Hbc.public_method(:internet_plugindir=))
+      opts.on("--audio_unit_plugindir=MANDATORY", Pathname, &Hbc.public_method(:audio_unit_plugindir=))
+      opts.on("--vst_plugindir=MANDATORY",        Pathname, &Hbc.public_method(:vst_plugindir=))
+      opts.on("--vst3_plugindir=MANDATORY",       Pathname, &Hbc.public_method(:vst3_plugindir=))
+      opts.on("--screen_saverdir=MANDATORY",      Pathname, &Hbc.public_method(:screen_saverdir=))
 
       opts.on("--no-binaries") do
         Hbc.no_binaries = true
       end
+
       opts.on("--debug") do
         Hbc.debug = true
       end
+
       opts.on("--verbose") do
         Hbc.verbose = true
       end
+
       opts.on("--outdated") do
         Hbc.cleanup_outdated = true
       end
+
       opts.on("--help") do
         Hbc.help = true
       end
+
       opts.on("--version") do
         raise OptionParser::InvalidOption # override default handling of --version
       end
