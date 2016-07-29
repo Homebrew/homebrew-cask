@@ -211,7 +211,7 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
   def self.render_cached_downloads
     cleanup = Hbc::CLI::Cleanup.default
     files = cleanup.all_cache_files
-    count = files.size
+    count = files.count
     size = cleanup.disk_cleanup_size
     size_msg = "#{number_readable(count)} files, #{disk_usage_readable(size)}"
     warn_msg = error_string('warning: run "brew cask cleanup"')
