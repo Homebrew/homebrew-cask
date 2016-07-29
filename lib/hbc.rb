@@ -55,15 +55,11 @@ module Hbc
     if Hbc.legacy_cache.exist?
       ohai "Migrating #{HOMEBREW_CACHE} to #{Hbc.cache}…"
 
-      Hbc.legacy_cache.children.select(&:symlink?).each do |symlink|
-        file = symlink.readlink
-
-        if file.exist?
-          puts file
-          FileUtils.mv(file, Hbc.cache)
-        end
-
-        FileUtils.rm(symlink)
+      Hbc.legacy_cache.children.each do |symlink|
+        file = symlink.realpath
+        puts file
+        FileUtils.mv(file, Hbc.cache, force: true)
+        FileUtils.rm(symlink, force: true)
       end
 
       FileUtils.remove_entry_secure(Hbc.legacy_cache)
