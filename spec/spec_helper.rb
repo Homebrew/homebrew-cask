@@ -47,14 +47,13 @@ Hbc.homebrew_tapspath = nil
 Hbc.binarydir = Hbc.homebrew_prefix.join("binarydir", "bin")
 Hbc.appdir = Pathname.new(TEST_TMPDIR).join("appdir")
 
-# making homebrew's cache dir allows us to actually download Casks in tests
-HOMEBREW_CACHE = Pathname.new(TEST_TMPDIR).join("cache")
-HOMEBREW_CACHE.mkpath
-HOMEBREW_CACHE.join("Casks").mkpath
-
 # Look for Casks in testcasks by default.  It is elsewhere required that
 # the string "test" appear in the directory name.
 Hbc.default_tap = project_root.join("spec", "support")
+
+# create cache directory
+HOMEBREW_CACHE = Pathname.new(TEST_TMPDIR).join("cache")
+Hbc.cache.mkpath
 
 # our own testy caskroom
 Hbc.caskroom = Hbc.homebrew_prefix.join("TestCaskroom")

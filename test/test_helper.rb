@@ -53,11 +53,6 @@ at_exit do
   FileUtils.remove_entry(TEST_TMPDIR)
 end
 
-# making homebrew's cache dir allows us to actually download Casks in tests
-HOMEBREW_CACHE = Pathname.new(TEST_TMPDIR).join("cache")
-HOMEBREW_CACHE.mkpath
-HOMEBREW_CACHE.join("Casks").mkpath
-
 # must be called after testing_env so at_exit hooks are in proper order
 require "minitest/autorun"
 require "minitest/reporters"
@@ -79,6 +74,10 @@ Hbc.homebrew_tapspath = nil
 # Look for Casks in testcasks by default.  It is elsewhere required that
 # the string "test" appear in the directory name.
 Hbc.default_tap = "caskroom/homebrew-testcasks"
+
+# create cache directory
+HOMEBREW_CACHE = Pathname.new(TEST_TMPDIR).join("cache")
+Hbc.cache.mkpath
 
 # our own testy caskroom
 Hbc.caskroom = Hbc.homebrew_prefix.join("TestCaskroom")

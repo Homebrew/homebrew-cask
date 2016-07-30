@@ -35,7 +35,7 @@ class Hbc::HbVCSDownloadStrategy < Hbc::AbstractDownloadStrategy
   def initialize(cask, command = Hbc::SystemCommand)
     super
     @ref_type, @ref = extract_ref
-    @clone = HOMEBREW_CACHE.join(cache_filename)
+    @clone = Hbc.cache.join(cache_filename)
   end
 
   def extract_ref
@@ -69,7 +69,7 @@ class Hbc::CurlDownloadStrategy < Hbc::AbstractDownloadStrategy
   end
 
   def tarball_path
-    @tarball_path ||= HOMEBREW_CACHE.join("#{name}-#{version}#{ext}")
+    @tarball_path ||= Hbc.cache.join("#{name}-#{version}#{ext}")
   end
 
   def temporary_path

@@ -19,79 +19,47 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
   end
 
   def self.default
-    @default ||= new(HOMEBREW_CACHE_CASKS, Hbc.cleanup_outdated)
+    @default ||= new(Hbc.cache, Hbc.cleanup_outdated)
   end
 
   attr_reader :cache_location, :outdated_only
   def initialize(cache_location, outdated_only)
-    @cache_location = Pathname(cache_location)
+    @cache_location = Pathname.new(cache_location)
     @outdated_only = outdated_only
   end
 
   def cleanup!
-    remove_dead_symlinks
     remove_all_cache_files
   end
 
-  def cache_symlinks
-    cache_location.children.select(&:symlink?)
+  def cache_files
+    return [] unless cache_location.exist?
+    cache_location.children
+                  .map(&method(:Pathname))
+                  .reject(&method(:outdated?))
   end
 
-  def dead_symlinks
-    cache_symlinks.reject(&:exist?)
+  def outdated?(file)
+    outdated_only && file && file.stat.mtime > OUTDATED_TIMESTAMP
   end
 
   def cache_incompletes
-    cache_symlinks.collect { |symlink|
-      incomplete_file = Dir.chdir cache_location do
-        f = symlink.readlink
-        f = f.realpath if f.exist?
-        Pathname.new(f.to_s.concat(".incomplete"))
-      end
-      incomplete_file = nil unless incomplete_file.exist?
-      incomplete_file = nil if outdated_only && incomplete_file && incomplete_file.stat.mtime > OUTDATED_TIMESTAMP
-      incomplete_file
-    }.compact
+    cache_files.select { |file| file.extname == ".incomplete" }
   end
 
   def cache_completes
-    completes = cache_symlinks.collect { |symlink|
-      file = Dir.chdir cache_location do
-        f = symlink.readlink
-        f.exist? ? f.realpath : f
-      end
-      file = nil unless file.exist?
-      if outdated_only && file && file.stat.mtime > OUTDATED_TIMESTAMP
-        file = nil
-        symlink = nil
-      end
-      [symlink, file]
-    }
-    completes
-      .flatten
-      .compact
-      .sort { |x, y| x.to_s.count(File::SEPARATOR) <=> y.to_s.count(File::SEPARATOR) }
-  end
-
-  # will include dead symlinks if they aren't handled separately
-  def all_cache_files
-    cache_incompletes + cache_completes
+    cache_files.reject { |file| file.extname == ".incomplete" }
   end
 
   def disk_cleanup_size
-    Hbc::Utils.size_in_bytes(all_cache_files)
-  end
-
-  def remove_dead_symlinks
-    ohai "Removing dead symlinks"
-    delete_paths(dead_symlinks)
+    Hbc::Utils.size_in_bytes(cache_files)
   end
 
   def remove_all_cache_files
     message = "Removing cached downloads"
     message.concat " older than #{OUTDATED_DAYS} days old" if outdated_only
     ohai message
-    delete_paths(all_cache_files)
+    delete_paths(cache_files)
   end
 
   def delete_paths(paths)
