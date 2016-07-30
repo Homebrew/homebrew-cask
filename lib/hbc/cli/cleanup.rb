@@ -43,12 +43,16 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
     outdated_only && file && file.stat.mtime > OUTDATED_TIMESTAMP
   end
 
+  def incomplete?(file)
+    file.extname == ".incomplete"
+  end
+
   def cache_incompletes
-    cache_files.select { |file| file.extname == ".incomplete" }
+    cache_files.select(&method(:incomplete?))
   end
 
   def cache_completes
-    cache_files.reject { |file| file.extname == ".incomplete" }
+    cache_files.reject(&method(:incomplete?))
   end
 
   def disk_cleanup_size
