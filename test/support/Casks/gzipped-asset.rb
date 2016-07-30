@@ -5,5 +5,5 @@ test_cask 'gzipped-asset' do
   url TestHelper.local_binary_url('gzipped_asset.gz')
   homepage 'http://example.com/gzipped-asset'
 
-  app 'gzipped-asset-1.2.3'
+  app 'gzipped-asset--1.2.3'
 end

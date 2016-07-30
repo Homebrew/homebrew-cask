@@ -7,5 +7,5 @@ test_cask 'lzma-asset' do
 
   depends_on formula: 'lzma'
 
-  app 'lzma-asset-1.2.3'
+  app 'lzma-asset--1.2.3'
 end
