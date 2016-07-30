@@ -6,13 +6,13 @@ cask 'itsycal' do
     # s3.amazonaws.com/itsycal was verified as official when first introduced to the cask
     url "https://s3.amazonaws.com/itsycal/Itsycal-#{version}.zip"
   else
-    version '0.10.12'
-    sha256 '0ce81c7e932decb9faa8050fb6c6c713d5d30b57173b97dc51b5120d63fa7631'
+    version '0.10.13'
+    sha256 '08fa28192c4aabb9da59df02aaadc7f70718bb91a91639150d135fe76b3138cb'
 
     # s3.amazonaws.com/itsycal was verified as official when first introduced to the cask
     url "https://s3.amazonaws.com/itsycal/Itsycal-#{version}.zip"
     appcast 'https://s3.amazonaws.com/itsycal/itsycal.xml',
-            checkpoint: '477514c570b5abeafcf1c5326b28d0cfe298033d78610b9d5d04d4efce263546'
+            checkpoint: 'f33285bc60a693035323edc3351994a6c58a1516647d4c246669d83abf1e8458'
   end
 
   name 'Itsycal'
