@@ -189,8 +189,8 @@ class Hbc::CLI
 
       opts.on("--binarydir=PATH") do
         opoo <<-EOF.undent
-          Option --binarydir is deprecated!
-          Homebrew Cask now uses whatever your Hombrew install uses.
+          Option --binarydir is obsolete!
+          Homebrew Cask now uses the same location as your Homebrew installation for executable links.
         EOF
       end
 
