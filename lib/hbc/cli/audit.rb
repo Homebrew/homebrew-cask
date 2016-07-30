@@ -44,4 +44,8 @@ class Hbc::CLI::Audit < Hbc::CLI::Base
   def cask_tokens
     @cask_tokens ||= @args.reject { |a| a == "--download" }
   end
+
+  def self.needs_init?
+    true
+  end
 end
