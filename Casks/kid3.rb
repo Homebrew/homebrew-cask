@@ -9,6 +9,5 @@ cask 'kid3' do
   license :gpl
 
   app 'kid3.app'
-  binary "#{appdir}/kid3.app/Contents/MacOS/kid3"
   binary "#{appdir}/kid3.app/Contents/MacOS/kid3-cli"
 end
