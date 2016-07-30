@@ -69,7 +69,7 @@ class Hbc::CurlDownloadStrategy < Hbc::AbstractDownloadStrategy
   end
 
   def tarball_path
-    @tarball_path ||= Pathname.new("#{HOMEBREW_CACHE}/#{name}-#{version}#{ext}")
+    @tarball_path ||= HOMEBREW_CACHE.join("#{name}-#{version}#{ext}")
   end
 
   def temporary_path
