@@ -177,7 +177,7 @@ class Hbc::CLI
         Hbc.servicedir = Pathname(v).expand_path
       end
       opts.on("--binarydir=MANDATORY") do
-        opoo "Option --binarydir is deprecated, Homebrew Cask now uses whatever your Hombrew install uses."
+        opoo "Option --binarydir is obsolete. Homebrew Cask uses whichever location your Homebrew installation uses for executable links."
       end
       opts.on("--input_methoddir=MANDATORY") do |v|
         Hbc.input_methoddir = Pathname(v).expand_path
