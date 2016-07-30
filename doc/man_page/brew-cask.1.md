@@ -195,9 +195,6 @@ in a future version.
   * `--no-binaries`:
     Do not link "helper" executables to `/usr/local/bin`.
 
-  * `--binarydir=<path>`:
-    Target location for "helper" executable links. The default value is `/usr/local/bin`.
-
   * `--debug`:
     Output debugging information of use to Cask authors and developers.
 
