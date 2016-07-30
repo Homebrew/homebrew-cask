@@ -69,7 +69,7 @@ class Hbc::CurlDownloadStrategy < Hbc::AbstractDownloadStrategy
   end
 
   def tarball_path
-    @tarball_path ||= Hbc.cache.join("#{name}-#{version}#{ext}")
+    @tarball_path ||= Hbc.cache.join("#{name}--#{version}#{ext}")
   end
 
   def temporary_path
