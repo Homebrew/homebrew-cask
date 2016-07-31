@@ -2,8 +2,8 @@ cask 'osxfuse' do
   version '2.8.3'
   sha256 'b0f05fa6e74372b73417e89bfd103a46a0b968239f03832755e424bec09051e6'
 
-  # sourceforge.net/sourceforge/osxfuse was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/sourceforge/osxfuse/osxfuse-#{version}.dmg"
+  # sourceforge.net/osxfuse was verified as official when first introduced to the cask
+  url "https://downloads.sourceforge.net/osxfuse/osxfuse-#{version}.dmg"
   name 'OSXFUSE'
   homepage 'https://osxfuse.github.io/'
   license :bsd
