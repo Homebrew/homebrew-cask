@@ -154,9 +154,8 @@ class Hbc::Audit
   def bad_sourceforge_url?
     bad_url_format?(%r{sourceforge},
                     [
-                      %r{\Ahttps?://sourceforge\.net/projects/[^/]+/files/latest/download\Z},
-                      %r{\Ahttps?://downloads\.sourceforge\.net/},
-                      %r{\Ahttps?://[^/]+\.sourceforge\.jp/},
+                      %r{\Ahttps://sourceforge\.net/projects/[^/]+/files/latest/download\Z},
+                      %r{\Ahttps://downloads\.sourceforge\.net/(?!(project|sourceforge)\/)},
                       # special cases: cannot find canonical format URL
                       %r{\Ahttps?://brushviewer\.sourceforge\.net/brushviewql\.zip\Z},
                       %r{\Ahttps?://doublecommand\.sourceforge\.net/files/},
@@ -165,7 +164,7 @@ class Hbc::Audit
   end
 
   def bad_osdn_url?
-    bad_url_format?(%r{osd}, [%r{\Ahttps?://[^/]+\.osdn\.jp/}])
+    bad_url_format?(%r{osd}, [%r{\Ahttps?://([^/]+.)?dl\.osdn\.jp/}])
   end
 
   def check_generic_artifacts
