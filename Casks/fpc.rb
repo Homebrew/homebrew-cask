@@ -3,7 +3,7 @@ cask 'fpc' do
   sha256 '6bbacb26b9155fb1a60253be299ce4ef957379b91cc204c247357796ef823809'
 
   # sourceforge.net/freepascal was verified as official when first introduced to the cask
-  url "http://downloads.sourceforge.net/freepascal/fpc-#{version}.intel-macosx.dmg"
+  url "https://downloads.sourceforge.net/freepascal/fpc-#{version}.intel-macosx.dmg"
   name 'Free Pascal'
   homepage 'http://www.freepascal.org/'
   license :gpl

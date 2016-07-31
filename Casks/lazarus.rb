@@ -3,7 +3,7 @@ cask 'lazarus' do
   sha256 'f939418addf454b6d9835f48f079077b55905ba173f27a1bea4c1fae1467df56'
 
   # downloads.sourceforge.net/lazarus was verified as official when first introduced to the cask
-  url "http://downloads.sourceforge.net/lazarus/lazarus-#{version}-i686-macosx.dmg"
+  url "https://downloads.sourceforge.net/lazarus/lazarus-#{version}-i686-macosx.dmg"
   name 'Lazarus'
   homepage 'http://lazarus.freepascal.org/'
   license :gpl

@@ -8,7 +8,7 @@ cask 'limechat' do
   end
 
   # sourceforge.net/project/limechat was verified as official when first introduced to the cask
-  url "http://downloads.sourceforge.net/project/limechat/limechat/LimeChat_#{version}.tbz"
+  url "https://downloads.sourceforge.net/project/limechat/limechat/LimeChat_#{version}.tbz"
   appcast 'http://limechat.net/mac/appcast.xml',
           checkpoint: '73cc22d3e73c2070a39994285ffa411cf4bc9d11e9d6782f16e5dc4a3b0c5175'
   name 'LimeChat'

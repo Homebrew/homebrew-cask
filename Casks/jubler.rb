@@ -3,7 +3,7 @@ cask 'jubler' do
   sha256 '363f272cc1e15e02cf3e28935b9b2fdd91c43b93b2d1afef281e500c158b8bcd'
 
   # downloads.sourceforge.net/sourceforge/jubler was verified as official when first introduced to the cask
-  url "http://downloads.sourceforge.net/sourceforge/jubler/Jubler-#{version}.dmg"
+  url "https://downloads.sourceforge.net/sourceforge/jubler/Jubler-#{version}.dmg"
   name 'Jubler'
   homepage 'http://www.jubler.org/'
   license :gpl

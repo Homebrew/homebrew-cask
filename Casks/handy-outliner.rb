@@ -2,7 +2,7 @@ cask 'handy-outliner' do
   version '1.1.6.2'
   sha256 'a67a21650d29114c058e1f50bce3675e7c7b427abdd67a60e49098a31046d14d'
 
-  url "http://downloads.sourceforge.net/handyoutlinerfo/handyoutliner_#{version}.zip"
+  url "https://downloads.sourceforge.net/handyoutlinerfo/handyoutliner_#{version}.zip"
   name 'HandyOutliner for DjVu and PDF'
   homepage 'http://handyoutlinerfo.sourceforge.net'
   license :gpl
