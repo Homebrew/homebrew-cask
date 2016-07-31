@@ -16,7 +16,7 @@ There are a few different ways the `appcast` can be determined:
 
  * The popular update framework [Sparkle](http://sparkle-project.org) generally uses the `SUFeedURL` property in `Contents/Info.plist` inside `.app` bundles. You can use the script [`find_sparkle_appcast`](https://github.com/caskroom/homebrew-cask/blob/master/developer/bin/find_sparkle_appcast) to add this automatically. (Example Cask: [`glyphs`](https://github.com/caskroom/homebrew-cask/blob/161f85b605e160ff96e7dd11732d85609e13dc51/Casks/glyphs.rb#L6L7))
 
-* Sourceforge projects follow the form `http://downloads.sourceforge.net/projects/{{project_name}}/rss`. A more specific page can be used as needed, pointing to a specific directory structure: `http://sourceforge.net/projects/{{project_name}}/rss?path=/{{path_here}}`. (Example Cask: [`seashore`](https://github.com/caskroom/homebrew-cask/blob/bcff548278a6776fc57439603442a8b23c76bd8b/Casks/seashore.rb#L6L7))
+* Sourceforge projects follow the form `https://downloads.sourceforge.net/projects/{{project_name}}/rss`. A more specific page can be used as needed, pointing to a specific directory structure: `https://sourceforge.net/projects/{{project_name}}/rss?path=/{{path_here}}`. (Example Cask: [`seashore`](https://github.com/caskroom/homebrew-cask/blob/bcff548278a6776fc57439603442a8b23c76bd8b/Casks/seashore.rb#L6L7))
 
 * HockeyApp URLs are of the form `https://rink.hockeyapp.net/api/2/apps/HEXADECIMAL_STRING<SOMETHING_ELSE>`. For the `appcast`, remove `<SOMETHING_ELSE>` (ending up with `https://rink.hockeyapp.net/api/2/apps/HEXADECIMAL_STRING`. (Example Cask: [`iconjar`](https://github.com/caskroom/homebrew-cask/blob/bcff548278a6776fc57439603442a8b23c76bd8b/Casks/iconjar.rb#L7L8))
 
