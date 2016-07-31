@@ -4,6 +4,8 @@ cask 'jxplorer' do
 
   # sourceforge.net/jxplorer was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/jxplorer/jxplorer/version%20#{version}/jxplorer-#{version}-osx.zip"
+  appcast 'https://sourceforge.net/projects/jxplorer/rss?path=/jxplorer',
+          checkpoint: '678e62f7056c41d31dfb73b2b60039755a4759e842cd71fabddc92efe3262ca3'
   name 'JXplorer'
   homepage 'http://jxplorer.org/'
   license :apache

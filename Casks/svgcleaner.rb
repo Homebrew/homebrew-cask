@@ -4,6 +4,8 @@ cask 'svgcleaner' do
 
   # sourceforge.net/svgcleaner was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/svgcleaner/SVGCleaner.app_#{version}.zip"
+  appcast 'https://sourceforge.net/projects/svgcleaner/rss',
+          checkpoint: 'ebd92be4f922b949564c492e25195ae6c30f58aea615e886e20586a67394aaf6'
   name 'SVGCleaner'
   homepage 'https://github.com/RazrFalcon/SVGCleaner/'
   license :gpl

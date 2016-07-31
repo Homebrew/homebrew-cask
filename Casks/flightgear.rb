@@ -4,6 +4,8 @@ cask 'flightgear' do
 
   # sourceforge.net/flightgear was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/flightgear/FlightGear-#{version}.dmg"
+  appcast 'https://sourceforge.net/projects/flightgear/rss',
+          checkpoint: '924d166598e1d9b00b8ea57fe8c05aceb389f1612ac22f08b68296dada6050ed'
   name 'FlightGear'
   homepage 'http://www.flightgear.org/'
   license :gpl

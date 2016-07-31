@@ -4,6 +4,8 @@ cask 'glcplayer' do
 
   # sourceforge.net/glc-player was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/glc-player/glc_player_#{version}.dmg"
+  appcast 'https://sourceforge.net/projects/glc-player/rss',
+          checkpoint: '39bad240808145d93ae00f0ec8009c69f74b5696dfb854967d7a0c7396161407'
   name 'GLC_Player'
   homepage 'http://www.glc-player.net'
   license :oss

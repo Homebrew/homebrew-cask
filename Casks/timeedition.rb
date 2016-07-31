@@ -4,6 +4,8 @@ cask 'timeedition' do
 
   # sourceforge.net/timeedition was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/timeedition/timeEdition#{version}-macosx.dmg.zip"
+  appcast 'https://sourceforge.net/projects/timeedition/rss',
+          checkpoint: 'cec11e55eba60ac1f7da63f1f81d7924a0d72ad68640011d5db9fb56547d2d8d'
   name 'timeEdition'
   homepage 'https://www.timeedition.com/old/en/'
   license :gpl
