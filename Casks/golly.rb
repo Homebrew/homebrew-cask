@@ -12,8 +12,8 @@ cask 'golly' do
     sha256 'ebcbea756ffaafb1b2e122ebe81781cbbe3f8245ae36387437653b8e9c8b8272'
 
     url "https://downloads.sourceforge.net/golly/golly/golly-#{version}/golly-#{version}-mac109.zip"
-    appcast 'https://sourceforge.net/projects/golly/rss',
-            checkpoint: 'caa56eb8c7b5d761c6f921f2a52e6cfdf0c9cb571437148762190380b0d75e7a'
+    appcast 'https://sourceforge.net/projects/golly/rss?path=/golly',
+            checkpoint: '658c22e83fac956a08f1ba59395266d4daea9eb81e65c5bd7c297efd25471dfb'
 
     app "golly-#{version}-mac109/Golly.app"
     binary "golly-#{version}-mac109/bgolly"

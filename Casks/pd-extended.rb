@@ -4,7 +4,7 @@ cask 'pd-extended' do
 
   # sourceforge.net/pure-data was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/pure-data/pd-extended/#{version}/Pd-#{version}-extended-macosx105-i386.dmg"
-  appcast 'https://sourceforge.net/projects/pure-data/rss',
+  appcast 'https://sourceforge.net/projects/pure-data/rss?path=/pd-extended',
           checkpoint: '1cce97ff42748325b3ca1ae4dd873a866f04215cb6b2253e15fd5cf6211a33e8'
   name 'Pd-extended'
   homepage 'http://puredata.info/downloads/pd-extended'

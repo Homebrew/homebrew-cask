@@ -3,8 +3,8 @@ cask 'chessx' do
   sha256 'cd019f5ad61ea6b7b0488e7a50ffb8012c3f65f11fb0367205e2a342c2eb4d20'
 
   url "https://downloads.sourceforge.net/chessx/chessx/#{version}/chessx-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/chessx/rss',
-          checkpoint: '29b30b79e75985654c3e665b328185cc98a87fd7b1a24735bed214fc669632bd'
+  appcast 'https://sourceforge.net/projects/chessx/rss?path=/chessx',
+          checkpoint: '187624a5facb26d8a25469c10df522977b166f22de979bb9d2889efb2619c7c8'
   name 'ChessX'
   homepage 'http://chessx.sourceforge.net/'
   license :gpl

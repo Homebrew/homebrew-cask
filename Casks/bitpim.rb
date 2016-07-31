@@ -4,8 +4,8 @@ cask 'bitpim' do
 
   # sourceforge.net/bitpim was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/bitpim/bitpim/#{version}/LEOPARD-bitpim-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/bitpim/rss',
-          checkpoint: '5b66ec1dba689cf920501a21d932b7cee313c5b17eb840804aef2f41897b614e'
+  appcast 'https://sourceforge.net/projects/bitpim/rss?path=/bitpim',
+          checkpoint: '66382187ace01bc30d808ef6b6654ed241d3bb90c21021dbf48c11cea5ea1b89'
   name 'BitPim'
   homepage 'http://www.bitpim.org/'
   license :gpl
