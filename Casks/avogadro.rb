@@ -4,6 +4,8 @@ cask 'avogadro' do
 
   # sourceforge.net/avogadro was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/avogadro/Avogadro-#{version}.dmg.zip"
+  appcast 'https://sourceforge.net/projects/avogadro/rss',
+          checkpoint: 'b4c194124e797b2c1962828bbbb16c54c624c9f38191bebcb6770259739208df'
   name 'Avogadro'
   homepage 'http://avogadro.openmolecules.net/'
   license :gpl

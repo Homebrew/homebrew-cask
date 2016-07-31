@@ -4,6 +4,8 @@ cask 'polyphone' do
 
   # sourceforge.net/polyphone was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/polyphone/polyphone-#{version}.dmg"
+  appcast 'https://sourceforge.net/projects/polyphone/rss',
+          checkpoint: 'ebaabb829363b6f03af5a5326b64c8011082ec8ee1561e3704f0e1df4df868e8'
   name 'Polyphone'
   homepage 'http://polyphone.fr'
   license :gpl

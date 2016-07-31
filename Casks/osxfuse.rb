@@ -4,6 +4,8 @@ cask 'osxfuse' do
 
   # sourceforge.net/osxfuse was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/osxfuse/osxfuse-#{version}.dmg"
+  appcast 'https://sourceforge.net/projects/osxfuse/rss',
+          checkpoint: 'd137ba68265d71c31ce6124b0db2918543b38d6deb4afdf42f13097420c00b6e'
   name 'OSXFUSE'
   homepage 'https://osxfuse.github.io/'
   license :bsd

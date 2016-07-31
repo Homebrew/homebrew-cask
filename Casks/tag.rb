@@ -4,6 +4,8 @@ cask 'tag' do
 
   # sourceforge.net/tagosx was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/tagosx/Tag-#{version}.zip"
+  appcast 'https://sourceforge.net/projects/tagosx/rss',
+          checkpoint: 'b5357cef243912765a97a2fb4294dba43b823045143608244feb4afb3500785e'
   name 'Tag'
   homepage 'http://sbooth.org/Tag/'
   license :gpl
