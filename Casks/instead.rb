@@ -4,8 +4,8 @@ cask 'instead' do
 
   # sourceforge.net/instead was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/instead/instead/#{version}/Instead-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/instead/rss',
-          checkpoint: '30d9a7421211eee34e6ef971d4e69f0f1fc36e710afba6c8d1ba966b8e16bb37'
+  appcast 'https://sourceforge.net/projects/instead/rss?path=/instead',
+          checkpoint: '6941875157d2644ec6dac6163e6c4a60b130a585f6b38e1e79de46d8d0307d0a'
   name 'INSTEAD'
   homepage 'https://instead.syscall.ru/'
   license :mit

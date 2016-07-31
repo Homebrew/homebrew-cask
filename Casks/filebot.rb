@@ -4,8 +4,8 @@ cask 'filebot' do
 
   # sourceforge.net/filebot was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/filebot/filebot/FileBot_#{version}/FileBot_#{version}-brew.tar.bz2"
-  appcast 'https://sourceforge.net/projects/filebot/rss',
-          checkpoint: 'bc5364d5836beb0b5396ce27c1bb9c28a3502094c2645ae8e97e738bc20bb1cc'
+  appcast 'https://sourceforge.net/projects/filebot/rss?path=/filebot',
+          checkpoint: '099c11dd4063a56f9dd1ed4ed9cb3e63052e6503e9f14424279bcd497bb18a0b'
   name 'FileBot'
   homepage 'https://www.filebot.net/'
   license :gpl

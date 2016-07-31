@@ -9,8 +9,8 @@ cask 'filezilla' do
 
   # sourceforge.net/filezilla was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/filezilla/FileZilla_Client/#{version}/FileZilla_#{version}_macosx-x86.app.tar.bz2"
-  appcast 'https://sourceforge.net/projects/filezilla/rss',
-          checkpoint: '9412f72cce58674623dfcabdc997b5a28c2300f4d1914f2080f82017587dec0a'
+  appcast 'https://sourceforge.net/projects/filezilla/rss?path=/FileZilla_Client',
+          checkpoint: 'fad65f2a14b751dcf902e73f96c41ab7d56dcbba553c4f0cf7197cba07d78419'
   name 'FileZilla'
   homepage 'https://filezilla-project.org/'
   license :gpl

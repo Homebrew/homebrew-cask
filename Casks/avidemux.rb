@@ -4,7 +4,7 @@ cask 'avidemux' do
 
   # sourceforge.net/avidemux was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/avidemux/avidemux/#{version}/Avidemux_#{version}_ML_64Bits_Qt5.dmg"
-  appcast 'https://sourceforge.net/projects/avidemux/rss',
+  appcast 'https://sourceforge.net/projects/avidemux/rss?path=/avidemux',
           checkpoint: 'e6aa5bb57e6809631178c37bf241d59932eb3c87d904fee0722117968489e500'
   name 'Avidemux'
   homepage 'http://www.avidemux.org/'

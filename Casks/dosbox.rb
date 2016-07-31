@@ -4,8 +4,8 @@ cask 'dosbox' do
 
   # sourceforge.net/dosbox was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/dosbox/dosbox/#{version}/DOSBox-#{version}-1_Universal.dmg"
-  appcast 'https://sourceforge.net/projects/dosbox/rss',
-          checkpoint: 'a14402b380285489ccca7bc6b540fb7db44bad3080bbed957e22964cbae55f76'
+  appcast 'https://sourceforge.net/projects/dosbox/rss?path=/dosbox',
+          checkpoint: '929b955f2dc9eee4862c52b43d2d188232028bc8878f89ad1b7ad8a790dc3ba1'
   name 'DOSBox'
   homepage 'http://www.dosbox.com'
   license :gpl

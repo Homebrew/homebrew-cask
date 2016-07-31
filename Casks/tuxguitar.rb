@@ -4,7 +4,7 @@ cask 'tuxguitar' do
 
   # sourceforge.net/tuxguitar was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/tuxguitar/TuxGuitar/TuxGuitar-#{version}/tuxguitar-#{version}-macosx10.5-cocoa-64.dmg"
-  appcast 'https://sourceforge.net/projects/tuxguitar/rss',
+  appcast 'https://sourceforge.net/projects/tuxguitar/rss?path=TuxGuitar',
           checkpoint: 'fe05b4d205c52ad0b80ae2e874ea6e2f12f41b887a844c0c2ed3bc787bcef3f9'
   name 'TuxGuitar'
   homepage 'http://www.tuxguitar.com.ar/'
