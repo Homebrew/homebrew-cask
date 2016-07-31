@@ -3,7 +3,7 @@ cask 'svgcleaner' do
   sha256 '11a46910991b81aab8dc4f18859be9c518c62e1d03b2db2684f87f74de9edcf7'
 
   # sourceforge.net/sourceforge/svgcleaner was verified as official when first introduced to the cask
-  url "http://downloads.sourceforge.net/sourceforge/svgcleaner/SVGCleaner.app_#{version}.zip"
+  url "https://downloads.sourceforge.net/sourceforge/svgcleaner/SVGCleaner.app_#{version}.zip"
   name 'SVGCleaner'
   homepage 'https://github.com/RazrFalcon/SVGCleaner/'
   license :gpl

@@ -3,7 +3,7 @@ cask 'invisiblix' do
   sha256 '528328a0e7c3f0a72e763ea766324d491dfe20d6f18a2882eefda1a5a2c4d68e'
 
   # sourceforge.net/project/invisiblix was verified as official when first introduced to the cask
-  url "http://downloads.sourceforge.net/project/invisiblix/invisibliX-#{version}.zip"
+  url "https://downloads.sourceforge.net/project/invisiblix/invisibliX-#{version}.zip"
   appcast 'http://www.read-write.fr/invisiblix/appcast.xml',
           checkpoint: 'f4ec5f8c4ef92d17aafde286acd8c3d35058da7e2bce93d2da8ee059dbdea4b6'
   name 'invisibliX'
