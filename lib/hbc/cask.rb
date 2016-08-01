@@ -20,7 +20,7 @@ class Hbc::Cask
   METADATA_SUBDIR = ".metadata".freeze
 
   def metadata_master_container_path
-    caskroom_path.join(METADATA_SUBDIR)
+    @metadata_master_container_path ||= caskroom_path.join(METADATA_SUBDIR)
   end
 
   def metadata_versioned_container_path
@@ -79,7 +79,14 @@ class Hbc::Cask
   end
 
   def installed?
-    staged_path.exist?
+    return false unless caskroom_path.exist?
+
+    if metadata_master_container_path.exist?
+      !(metadata_master_container_path.children.map(&:basename) &
+        caskroom_path.children.map(&:basename)).empty?
+    else
+      !caskroom_path.children.empty?
+    end
   end
 
   def to_s

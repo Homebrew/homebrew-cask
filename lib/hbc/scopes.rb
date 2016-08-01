@@ -42,23 +42,24 @@ module Hbc::Scopes
     end
 
     def installed
-      @installed ||= {}
-      installed_cask_dirs = Pathname.glob(caskroom.join("*"))
       # Hbc.load has some DWIM which is slow.  Optimize here
       # by spoon-feeding Hbc.load fully-qualified paths.
       # TODO: speed up Hbc::Source::Tapped (main perf drag is calling Hbc.all_tokens repeatedly)
       # TODO: ability to specify expected source when calling Hbc.load (minor perf benefit)
-      installed_cask_dirs.map do |install_dir|
-        cask_token = install_dir.basename.to_s
-        path_to_cask = all_tapped_cask_dirs.find { |tap_dir|
-          tap_dir.join("#{cask_token}.rb").exist?
-        }
-        @installed[cask_token] ||= if path_to_cask
-                                     Hbc.load(path_to_cask.join("#{cask_token}.rb"))
-                                   else
-                                     Hbc.load(cask_token)
-                                   end
-      end
+      Pathname.glob(caskroom.join("*"))
+              .map { |dir| Hbc::Cask.new(dir.basename) }
+              .select(&:installed?)
+              .map { |cask|
+                path_to_cask = all_tapped_cask_dirs.find { |tap_dir|
+                  tap_dir.join("#{cask.token}.rb").exist?
+                }
+
+                if path_to_cask
+                  Hbc.load(path_to_cask.join("#{cask.token}.rb"))
+                else
+                  Hbc.load(cask.token)
+                end
+              }
     end
   end
 end
