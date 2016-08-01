@@ -12,7 +12,7 @@ class Hbc::Container::Criteria
 
   def magic_number(regex)
     # 262: length of the longest regex (currently: Hbc::Container::Tar)
-    @magic_number ||= File.open(path, "rb") { |f| f.read(262) }
+    @magic_number ||= File.open(@path, "rb") { |f| f.read(262) }
     @magic_number =~ regex
   end
 end

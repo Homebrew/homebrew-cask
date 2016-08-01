@@ -174,9 +174,7 @@ class Hbc::CurlDownloadStrategy < Hbc::AbstractDownloadStrategy
   end
 
   def ext
-    # We need a Pathname because we've monkeypatched extname to support double
-    # extensions (e.g. tar.gz). -- todo actually that monkeypatch has been removed
-    Pathname.new(@url).extname[%r{[^?]+}]
+    Pathname.new(@url).extname
   end
 end
 
