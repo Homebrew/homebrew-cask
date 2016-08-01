@@ -4,6 +4,8 @@ cask 'qutebrowser' do
 
   # github.com/The-Compiler/qutebrowser was verified as official when first introduced to the cask
   url "https://github.com/The-Compiler/qutebrowser/releases/download/v#{version}/qutebrowser-#{version}.dmg"
+  appcast 'https://github.com/The-Compiler/qutebrowser/releases.atom',
+          checkpoint: 'f43d2512e2ced0ecd3cfae96424c614fd7ca1370f4e07d49c191a413e7475aac'
   name 'qutebrowser'
   homepage 'https://www.qutebrowser.org/'
   license :gpl
