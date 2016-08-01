@@ -11,5 +11,10 @@ cask 'boot2docker' do
 
   pkg "Boot2Docker-#{version}.pkg"
 
-  uninstall pkgutil: ['io.boot2docker.pkg.boot2docker', 'io.boot2docker.pkg.boot2dockerapp', 'io.boot2dockeriso.pkg.boot2dockeriso', 'io.docker.pkg.docker']
+  uninstall pkgutil: [
+                       'io.boot2docker.pkg.boot2docker',
+                       'io.boot2docker.pkg.boot2dockerapp',
+                       'io.boot2dockeriso.pkg.boot2dockeriso',
+                       'io.docker.pkg.docker',
+                     ]
 end

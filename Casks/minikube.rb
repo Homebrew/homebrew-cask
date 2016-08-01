@@ -1,10 +1,10 @@
 cask 'minikube' do
-  version '0.7.0'
-  sha256 '67af90d31c02e26bdb5a1af96a67b00feb288f20f96b4a67f7c4f1a40b382e99'
+  version '0.7.1'
+  sha256 'fc8365148be19bd020432d8ddc85c06b7aab3953300b16b24f20fcd8393de449'
 
   url "https://github.com/kubernetes/minikube/releases/download/v#{version}/minikube-darwin-amd64"
   appcast 'https://github.com/kubernetes/minikube/releases.atom',
-          checkpoint: '8da4878cdfb90f5ef2f7de0ae9b5bb3070b855634b1733a370ccb9bd36da03f7'
+          checkpoint: '0bc485e67d85822e27770f13ab05f33a20c4d9bf2439af6cbd3aed8a3f0a052c'
   name 'Minikube'
   homepage 'https://github.com/kubernetes/minikube'
   license :apache

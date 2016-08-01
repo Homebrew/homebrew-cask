@@ -174,16 +174,15 @@ module Hbc::Utils
     end
   end
 
-  def self.gain_permissions_remove(path, options = {})
+  def self.gain_permissions_remove(path, command: Hbc::SystemCommand)
     if path.respond_to?(:rmtree) && path.exist?
-      gain_permissions(path, ["-R"], options, &:rmtree)
+      gain_permissions(path, ["-R"], command, &:rmtree)
     elsif File.symlink?(path)
-      gain_permissions(path, ["-h"], options, &FileUtils.method(:rm_f))
+      gain_permissions(path, ["-h"], command, &FileUtils.method(:rm_f))
     end
   end
 
-  def self.gain_permissions(path, command_args, options = {})
-    command = options.fetch(:command, Hbc::SystemCommand)
+  def self.gain_permissions(path, command_args, command)
     tried_permissions = false
     tried_ownership = false
     begin

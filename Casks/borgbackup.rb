@@ -14,5 +14,5 @@ cask 'borgbackup' do
 
   container type: :naked
 
-  binary 'borg-darwin64', target: 'borg'
+  binary 'borg-macosx64', target: 'borg'
 end

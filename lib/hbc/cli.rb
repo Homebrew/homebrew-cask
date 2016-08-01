@@ -3,6 +3,8 @@ class Hbc::CLI; end
 require "optparse"
 require "shellwords"
 
+require "hbc/extend/optparse"
+
 require "hbc/cli/base"
 require "hbc/cli/audit"
 require "hbc/cli/cat"
@@ -46,6 +48,30 @@ class Hbc::CLI
               # 'environment' => '--env',
               # '-c1'         => '--config',
             }.freeze
+
+  OPTIONS = {
+              "--caskroom="             => :caskroom=,
+              "--appdir="               => :appdir=,
+              "--colorpickerdir="       => :colorpickerdir=,
+              "--prefpanedir="          => :prefpanedir=,
+              "--qlplugindir="          => :qlplugindir=,
+              "--fontdir="              => :fontdir=,
+              "--servicedir="           => :servicedir=,
+              "--input_methoddir="      => :input_methoddir=,
+              "--internet_plugindir="   => :internet_plugindir=,
+              "--audio_unit_plugindir=" => :audio_unit_plugindir=,
+              "--vst_plugindir="        => :vst_plugindir=,
+              "--vst3_plugindir="       => :vst3_plugindir=,
+              "--screen_saverdir="      => :screen_saverdir=,
+            }.freeze
+
+  FLAGS = {
+            "--no-binaries" => :no_binaries=,
+            "--debug"       => :debug=,
+            "--verbose"     => :verbose=,
+            "--outdated"    => :cleanup_outdated=,
+            "--help"        => :help=,
+          }.freeze
 
   def self.command_classes
     @command_classes ||= Hbc::CLI.constants
@@ -155,64 +181,25 @@ class Hbc::CLI
   def self.parser
     # If you modify these arguments, please update USAGE.md
     @parser ||= OptionParser.new do |opts|
-      opts.on("--caskroom=MANDATORY") do |v|
-        Hbc.caskroom = Pathname(v).expand_path
-      end
-      opts.on("--appdir=MANDATORY") do |v|
-        Hbc.appdir = Pathname(v).expand_path
-      end
-      opts.on("--colorpickerdir=MANDATORY") do |v|
-        Hbc.colorpickerdir = Pathname(v).expand_path
-      end
-      opts.on("--prefpanedir=MANDATORY") do |v|
-        Hbc.prefpanedir = Pathname(v).expand_path
-      end
-      opts.on("--qlplugindir=MANDATORY") do |v|
-        Hbc.qlplugindir = Pathname(v).expand_path
-      end
-      opts.on("--fontdir=MANDATORY") do |v|
-        Hbc.fontdir = Pathname(v).expand_path
-      end
-      opts.on("--servicedir=MANDATORY") do |v|
-        Hbc.servicedir = Pathname(v).expand_path
-      end
-      opts.on("--binarydir=MANDATORY") do |v|
-        Hbc.binarydir = Pathname(v).expand_path
-      end
-      opts.on("--input_methoddir=MANDATORY") do |v|
-        Hbc.input_methoddir = Pathname(v).expand_path
-      end
-      opts.on("--internet_plugindir=MANDATORY") do |v|
-        Hbc.internet_plugindir = Pathname(v).expand_path
-      end
-      opts.on("--audio_unit_plugindir=MANDATORY") do |v|
-        Hbc.audio_unit_plugindir = Pathname(v).expand_path
-      end
-      opts.on("--vst_plugindir=MANDATORY") do |v|
-        Hbc.vst_plugindir = Pathname(v).expand_path
-      end
-      opts.on("--vst3_plugindir=MANDATORY") do |v|
-        Hbc.vst3_plugindir = Pathname(v).expand_path
-      end
-      opts.on("--screen_saverdir=MANDATORY") do |v|
-        Hbc.screen_saverdir = Pathname(v).expand_path
+      OPTIONS.each do |option, method|
+        opts.on("#{option}" "PATH", Pathname) do |path|
+          Hbc.public_send(method, path)
+        end
       end
 
-      opts.on("--no-binaries") do
-        Hbc.no_binaries = true
+      opts.on("--binarydir=PATH") do
+        opoo <<-EOF.undent
+          Option --binarydir is obsolete!
+          Homebrew Cask now uses the same location as your Homebrew installation for executable links.
+        EOF
       end
-      opts.on("--debug") do
-        Hbc.debug = true
+
+      FLAGS.each do |flag, method|
+        opts.on(flag) do
+          Hbc.public_send(method, true)
+        end
       end
-      opts.on("--verbose") do
-        Hbc.verbose = true
-      end
-      opts.on("--outdated") do
-        Hbc.cleanup_outdated = true
-      end
-      opts.on("--help") do
-        Hbc.help = true
-      end
+
       opts.on("--version") do
         raise OptionParser::InvalidOption # override default handling of --version
       end

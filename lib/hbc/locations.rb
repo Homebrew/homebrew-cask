@@ -76,7 +76,7 @@ module Hbc::Locations
     attr_writer :binarydir
 
     def binarydir
-      @binarydir ||= Pathname.new("/usr/local/bin").expand_path
+      @binarydir ||= homebrew_prefix.join("bin")
     end
 
     attr_writer :input_methoddir

@@ -15,12 +15,14 @@ cask 'blender' do
   binary shimscript, target: 'blender'
 
   preflight do
-    pythonversion = '3.4'
-    File.open(shimscript, 'w') do |f|
-      f.puts '#!/bin/bash'
-      f.puts "export PYTHONHOME=#{appdir}/Blender.app/Contents/Resources/#{version}/python/lib/python#{pythonversion}"
-      f.puts "#{appdir}/Blender.app/Contents/MacOS/blender $@"
-      FileUtils.chmod '+x', f
-    end
+    # make __pycache__ directories writable, otherwise uninstall fails
+    FileUtils.chmod 'u+w', Dir.glob("#{staged_path}/*.app/**/__pycache__")
+
+    IO.write shimscript, <<-EOF.undent
+      #!/bin/bash
+      '#{appdir}/Blender.app/Contents/MacOS/blender' $@
+    EOF
+
+    FileUtils.chmod '+x', shimscript
   end
 end
