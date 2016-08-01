@@ -282,7 +282,7 @@ class Hbc::Installer
     odebug "Hbc::Installer.uninstall"
     disable_accessibility_access
     uninstall_artifacts
-    purge_versioned_files
+    purge_versioned_files if @cask.installed?
     purge_caskroom_path if force
   end
 
