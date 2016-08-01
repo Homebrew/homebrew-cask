@@ -10,4 +10,8 @@ cask 'playgroundmdimporter' do
   license :mit
 
   artifact 'Playground.mdimporter', target: "#{ENV['HOME']}/Library/Spotlight/Playground.mdimporter"
+
+  postflight do
+    system 'mdimport', '-r', "#{ENV['HOME']}/Library/Spotlight/Playground.mdimporter"
+  end
 end
