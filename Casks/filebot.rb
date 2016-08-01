@@ -1,17 +1,17 @@
 cask 'filebot' do
-  version '4.7'
-  sha256 '4f61524ccbfa1be65e3818ba37d983599af67af32cc2dcfd4c8f45d74b394cb2'
+  version '4.7.1'
+  sha256 'a2bb68355f542ce36e562e5f8f4dbccc0d053c4a5a296e85a09f44ca6967e629'
 
   # sourceforge.net/filebot was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/filebot/filebot/FileBot_#{version}/FileBot_#{version}-brew.tar.bz2"
   appcast 'https://sourceforge.net/projects/filebot/rss?path=/filebot',
-          checkpoint: '099c11dd4063a56f9dd1ed4ed9cb3e63052e6503e9f14424279bcd497bb18a0b'
+          checkpoint: 'b4e8425a3bd238b782cb08efa8793e17a29e76d0cc7e5d6880db4e628ef4630a'
   name 'FileBot'
   homepage 'https://www.filebot.net/'
   license :gpl
 
-  app 'FileBot.app'
-  binary "#{appdir}/FileBot.app/Contents/MacOS/filebot.sh", target: 'filebot'
+  app "FileBot_#{version}-brew.app", target: 'FileBot-brew.app'
+  binary "#{appdir}/FileBot-brew.app/Contents/MacOS/filebot.sh", target: 'filebot'
 
   caveats do
     depends_on_java('8')
