@@ -1,11 +1,11 @@
 cask 'paw' do
-  version '3.0.4'
-  sha256 'dc915bc860d3496d365d578e042e87bccea4d24246fa099c73cc61a31e22e822'
+  version '3.0.5'
+  sha256 '5f5cfd5b9d8a7422016998831c81c5cf146992d7810a5628e42b01a9482dba9e'
 
   # d3hevc2w7wq7nj.cloudfront.net/paw was verified as official when first introduced to the cask
-  url "https://d3hevc2w7wq7nj.cloudfront.net/paw/Paw-#{version}-#{version.major}00000#{version.patch}000.zip"
+  url "https://d3hevc2w7wq7nj.cloudfront.net/paw/Paw-#{version}-#{version.major}00#{version.minor}00#{version.patch}000.zip"
   appcast 'https://paw.cloud/api/v2/updates/appcast',
-          checkpoint: 'f77b6d10fdaa56ea3d982e983c730fe0bedc6413d58a5519ba1c0efce39af00b'
+          checkpoint: 'c2ee1714f942d27157895db83b1cb1d535de4ffb9fee160f6dd62210f552b2f0'
   name 'Paw'
   homepage 'https://paw.cloud'
   license :commercial
