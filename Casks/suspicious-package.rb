@@ -7,8 +7,5 @@ cask 'suspicious-package' do
   homepage 'http://www.mothersruin.com/software/SuspiciousPackage/'
   license :gratis
 
-  depends_on formula: 'unar'
-  container type: :generic_unar
-
   app 'Suspicious Package.app'
 end

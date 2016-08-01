@@ -18,6 +18,7 @@ require "hbc/container/tar"
 require "hbc/container/ttf"
 require "hbc/container/rar"
 require "hbc/container/xar"
+require "hbc/container/xip"
 require "hbc/container/xz"
 require "hbc/container/zip"
 
@@ -34,12 +35,13 @@ class Hbc::Container
       Hbc::Container::Sit,
       Hbc::Container::Rar,
       Hbc::Container::Zip,
+      Hbc::Container::Xip,   # needs to be before xar as this is a cpio inside a gzip inside a xar
+      Hbc::Container::Xar,   # need to be before tar as tar can also list xar
       Hbc::Container::Tar,   # or compressed tar (bzip2/gzip/lzma/xz)
       Hbc::Container::Bzip2, # pure bzip2
       Hbc::Container::Gzip,  # pure gzip
       Hbc::Container::Lzma,  # pure lzma
       Hbc::Container::Xz,    # pure xz
-      Hbc::Container::Xar,
     ]
     # for explicit use only (never autodetected):
     # Hbc::Container::Naked
