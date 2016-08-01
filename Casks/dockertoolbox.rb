@@ -1,4 +1,4 @@
-cask 'docker-toolbox' do
+cask 'dockertoolbox' do
   version '1.12.0'
   sha256 'b06cfd858b805dd5e2bfd88cf780953ba6f326d69c4e689ad69c6d49e6cc694f'
 
