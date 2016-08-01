@@ -8,7 +8,7 @@ cask 'snes9x' do
   homepage 'http://www.snes9x.com/'
   license :other
 
-  container nested: "snes9x-#{version}"
+  container nested: "#{token}-#{version}.dmg"
 
   app 'Snes9x.app'
 end

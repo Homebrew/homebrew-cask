@@ -8,7 +8,9 @@ cask 'klayout' do
   homepage 'http://www.klayout.de/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  pkg "klayout.#{version}.pkg"
+  container nested: "#{token}-#{version}.dmg"
+
+  suite '.', target: 'KLayout'
 
   uninstall pkgutil: 'klayout.de',
             quit:    'klayout.de'

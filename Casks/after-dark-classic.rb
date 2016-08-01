@@ -7,13 +7,9 @@ cask 'after-dark-classic' do
   homepage 'http://en.infinisys.co.jp/product/afterdarkclassicset/index.shtml'
   license :commercial
 
-  container nested: "after-dark-classic-#{version}.dmg"
+  container nested: "#{token}-#{version}.dmg"
 
   pkg 'ClassicSet.pkg'
-
-  preflight do
-    system '/bin/mv', '--', staged_path.join("after-dark-classic-#{version}"), staged_path.join("after-dark-classic-#{version}.dmg")
-  end
 
   uninstall delete: [
                       '/Library/Screen Savers/Boris.saver',
