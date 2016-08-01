@@ -1,4 +1,3 @@
-require "hbc/extend/io"
 require "open3"
 require "shellwords"
 

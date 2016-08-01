@@ -1,3 +1,5 @@
+require "hbc/container/base"
+
 class Hbc::Container::Air < Hbc::Container::Base
   INSTALLER_PATHNAME =
     Pathname("/Applications/Utilities/Adobe AIR Application Installer.app" \

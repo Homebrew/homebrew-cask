@@ -1,5 +1,7 @@
 require "tmpdir"
 
+require "hbc/container/base"
+
 class Hbc::Container::GenericUnar < Hbc::Container::Base
   def self.me?(criteria)
     lsar = Hbc.homebrew_prefix.join("bin", "lsar")

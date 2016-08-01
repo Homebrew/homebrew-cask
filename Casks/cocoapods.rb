@@ -10,14 +10,16 @@ cask 'cocoapods' do
   homepage 'https://cocoapods.org/'
   license :mit
 
-  container type: :tar
-
   app 'CocoaPods.app'
   binary "#{appdir}/CocoaPods.app/Contents/Helpers/pod"
 
   postflight do
     # Because Homebrew-Cask symlinks the binstub directly, stop the app from asking the user to install the binstub.
-    system 'defaults write org.cocoapods.CocoaPods CPDoNotRequestCLIToolInstallationAgain YES'
+    system 'defaults', 'write', 'org.cocoapods.CocoaPods', 'CPDoNotRequestCLIToolInstallationAgain', '-bool', 'true'
     suppress_move_to_applications
   end
+
+  zap delete: [
+                '~/Library/Preferences/org.cocoapods.CocoaPods.plist',
+              ]
 end

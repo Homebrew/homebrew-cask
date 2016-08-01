@@ -1,3 +1,5 @@
+require "hbc/artifact/base"
+
 class Hbc::Artifact::Relocated < Hbc::Artifact::Base
   ALT_NAME_ATTRIBUTE = "com.apple.metadata:kMDItemAlternateNames".freeze
 
