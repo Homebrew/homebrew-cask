@@ -9,7 +9,5 @@ cask 'frappe' do
   homepage 'https://github.com/niftylettuce/frappe'
   license :mit
 
-  container nested: 'Frappé.dmg'
-
   app 'Frappe.app'
 end

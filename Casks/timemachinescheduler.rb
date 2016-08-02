@@ -9,7 +9,5 @@ cask 'timemachinescheduler' do
   homepage 'http://www.klieme.com/TimeMachineScheduler.html'
   license :gratis
 
-  container nested: 'TimeMachineScheduler3_Installer.dmg'
-
   prefpane 'TimeMachineScheduler3_Installer.app/Contents/Resources/TimeMachineScheduler.prefPane'
 end

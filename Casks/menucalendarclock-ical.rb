@@ -9,7 +9,5 @@ cask 'menucalendarclock-ical' do
   homepage 'http://www.objectpark.net/en/mcc.html'
   license :freemium
 
-  container nested: "#{token}-#{version}.dmg"
-
   app 'MenuCalendarClock iCal.app'
 end

@@ -7,8 +7,6 @@ cask 'canon-imagerunner-printer-driver-ufrii' do
   homepage 'https://www.usa.canon.com/internet/portal/us/home/support/details/copiers-mfps-fax-machines/support-multifunction/imagerunner-2018'
   license :gratis
 
-  container nested: "UFRII_v#{version}_MAC.dmg"
-
   pkg 'UFRII_LT_LIPS_LX_Installer.pkg'
 
   uninstall pkgutil: 'jp.co.canon.CUPSPrinter.*'

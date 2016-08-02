@@ -10,7 +10,5 @@ cask 'fenix' do
   homepage 'http://fenixwebserver.com/'
   license :gpl
 
-  container nested: "Fenix_#{version}.dmg"
-
   app 'Fenix.app'
 end

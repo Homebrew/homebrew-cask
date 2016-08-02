@@ -1,6 +1,6 @@
 cask 'smart-trash' do
   version '2.0.5'
-  sha256 'ee1fa4ddfb954b024de02fc84ca8adb316242d0836edf904c0e22120cb7a6021'
+  sha256 'c3e3dd27985446efb9874ea58818dd9c0d8a5a2f1a20ce0d91c0b30b875e91e6'
 
   url 'https://www.hyperbolicsoftware.com/programs/SmartTrash2.zip'
   appcast 'https://www.hyperbolicsoftware.com/Receipts/Smart_Trash/SmartTrashUpdate.xml',
@@ -8,8 +8,6 @@ cask 'smart-trash' do
   name 'Smart Trash'
   homepage 'https://www.hyperbolicsoftware.com/SmartTrash.html'
   license :commercial
-
-  container nested: 'SmartTrash2.dmg'
 
   app 'Smart Trash.app'
 end

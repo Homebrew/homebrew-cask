@@ -7,8 +7,6 @@ cask 'after-dark-classic' do
   homepage 'http://en.infinisys.co.jp/product/afterdarkclassicset/index.shtml'
   license :commercial
 
-  container nested: "#{token}-#{version}.dmg"
-
   pkg 'ClassicSet.pkg'
 
   uninstall delete: [
