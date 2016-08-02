@@ -1,5 +1,5 @@
 class Hbc::CLI::InternalAuditModifiedCasks < Hbc::CLI::InternalUseBase
-  RELEVANT_STANZAS = %i{version sha256 url}.freeze
+  RELEVANT_STANZAS = %i{version sha256 url appcast}.freeze
 
   class << self
     def run(*args)
