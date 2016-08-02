@@ -10,5 +10,5 @@ cask 'mattermost' do
   homepage 'http://www.mattermost.org/'
   license :mit
 
-  app "mattermost-desktop-#{version}-osx/Mattermost.app"
+  app 'mattermost-desktop-osx/Mattermost.app'
 end
