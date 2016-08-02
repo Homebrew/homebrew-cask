@@ -7,14 +7,13 @@ cask 'decitime' do
   homepage 'http://www.tinbert.com/DeciTimeMac/'
   license :oss
 
-  container nested: 'DeciTime101.dmg'
+  container nested: (nested_container = "DeciTime#{version.no_dots}.dmg")
 
   app 'DeciTime.app'
 
   # fix wonky DMG by mounting it once read-write per discussion at
   # https://github.com/caskroom/homebrew-cask/pull/2654
   preflight do
-    # TODO: the nested_container hack must be revised when container :nested stops being an alias around 0.50.0
-    system %Q{/usr/bin/hdiutil eject "$(/usr/bin/hdiutil mount -readwrite -noidme -nobrowse -mountrandom /tmp #{staged_path.join(artifacts[:nested_container].first)} | /usr/bin/cut -f3 -- - | /usr/bin/grep -- '.' -)" >/dev/null 2>&1}
+    system %Q{/usr/bin/hdiutil eject "$(/usr/bin/hdiutil mount -readwrite -noidme -nobrowse -mountrandom /tmp #{staged_path.join(nested_container)} | /usr/bin/cut -f3 -- - | /usr/bin/grep -- '.' -)" >/dev/null 2>&1}
   end
 end
