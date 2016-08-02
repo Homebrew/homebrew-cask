@@ -10,9 +10,8 @@ cask 'filebot' do
   homepage 'https://www.filebot.net/'
   license :gpl
 
-  # Renamed for consistency: app name is different in the Finder and in a shell.
-  app "FileBot_#{version}-brew.app", target: 'FileBot.app'
-  binary "#{appdir}/FileBot.app/Contents/MacOS/filebot.sh", target: 'filebot'
+  app "FileBot_#{version}-brew.app"
+  binary "#{appdir}/FileBot_#{version}-brew.app/Contents/MacOS/filebot.sh", target: 'filebot'
 
   caveats do
     depends_on_java('8')
