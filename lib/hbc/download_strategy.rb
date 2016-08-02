@@ -89,8 +89,8 @@ class Hbc::CurlDownloadStrategy < Hbc::AbstractDownloadStrategy
   end
 
   def _fetch
-    odebug "Calling curl with args #{curl_args.utf8_inspect}"
-    curl(*curl_args)
+    odebug "Calling curl with args #{cask_curl_args.utf8_inspect}"
+    curl(*cask_curl_args)
   end
 
   def fetch
@@ -129,7 +129,7 @@ class Hbc::CurlDownloadStrategy < Hbc::AbstractDownloadStrategy
 
   private
 
-  def curl_args
+  def cask_curl_args
     default_curl_args.tap do |args|
       args.concat(user_agent_args)
       args.concat(cookies_args)
@@ -179,7 +179,7 @@ class Hbc::CurlDownloadStrategy < Hbc::AbstractDownloadStrategy
 end
 
 class Hbc::CurlPostDownloadStrategy < Hbc::CurlDownloadStrategy
-  def curl_args
+  def cask_curl_args
     super
     default_curl_args.concat(post_args)
   end

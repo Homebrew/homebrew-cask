@@ -13,15 +13,16 @@ unless RUBY_VERSION.split(".").first.to_i >= 2
   exec alt_ruby, "-W0", "-I#{HOMEBREW_LIBRARY_PATH}", "-rglobal", __FILE__, *ARGV
 end
 
-require "pathname"
+require "English"
 
-$LOAD_PATH.unshift(File.expand_path("../../lib", Pathname.new(__FILE__).realpath))
+(HOMEBREW_LIBRARY / "Taps/caskroom/homebrew-cask").cd do
+  ENV["HOMEBREW_NO_ANALYTICS_THIS_RUN"] = "1"
 
-require "hbc"
+  Homebrew.install_gem_setup_path! "bundler"
+  unless quiet_system("bundle", "check")
+    system "bundle", "install", "--path", "vendor/bundle"
+  end
 
-begin
-  Hbc::CLI.process(ARGV)
-rescue Interrupt
-  puts
-  exit 130
+  system "bundle", "exec", "rake", "test:coverage"
+  Homebrew.failed = !$CHILD_STATUS.success?
 end

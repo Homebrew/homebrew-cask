@@ -10,13 +10,17 @@ end
 # just in case
 raise "brew-cask: Ruby 2.0 or greater is required." if RUBY_VERSION.to_i < 2
 
+# add homebrew to load path
+homebrew_repo = `brew --repository`.chomp
+$LOAD_PATH.unshift(File.expand_path("#{homebrew_repo}/Library/Homebrew"))
+
+require "global"
+require "extend/pathname"
+
 # add homebrew-cask lib to load path
 brew_cask_path = Pathname.new(File.expand_path(__FILE__ + "/../../"))
 lib_path = brew_cask_path.join("lib")
 $LOAD_PATH.push(lib_path)
-
-# TODO: removeme, this is transitional
-require "vendor/homebrew-fork/testing_env"
 
 # force some environment variables
 ENV["HOMEBREW_NO_EMOJI"] = "1"
@@ -44,7 +48,13 @@ def sudo(*args)
   %w[/usr/bin/sudo -E --] + Array(args).flatten
 end
 
+TEST_TMPDIR = Dir.mktmpdir("homebrew_cask_tests")
+at_exit do
+  FileUtils.remove_entry(TEST_TMPDIR)
+end
+
 # making homebrew's cache dir allows us to actually download Casks in tests
+HOMEBREW_CACHE = Pathname.new(TEST_TMPDIR).join("cache")
 HOMEBREW_CACHE.mkpath
 HOMEBREW_CACHE.join("Casks").mkpath
 

@@ -1,5 +1,6 @@
 # toplevel
 /.bundle/
+/bin/
 
 # anywhere in the tree
 *~
