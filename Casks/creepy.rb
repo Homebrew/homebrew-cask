@@ -10,7 +10,5 @@ cask 'creepy' do
   homepage 'http://www.geocreepy.com/'
   license :gpl
 
-  container nested: "cree.py #{version.major_minor}.dmg"
-
   app 'cree.py.app'
 end

@@ -7,8 +7,6 @@ cask 'nanostudio' do
   homepage 'http://www.blipinteractive2.co.uk/'
   license :commercial
 
-  container nested: "NanoStudio-#{version}.dmg"
-
   app 'NanoStudio.app'
   app 'NanoStudio-Phone.app'
   app 'NanoStudio-Tablet.app'

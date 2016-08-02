@@ -7,7 +7,5 @@ cask 'virtual-mix-rack' do
   homepage 'http://www.slatedigital.com/products/virtual-mix-rack/'
   license :commercial
 
-  container nested: "Slate Digital - VMR Complete Bundle Installer - #{version} - Mac.dmg"
-
   pkg 'Install Virtual Mix Rack.pkg'
 end

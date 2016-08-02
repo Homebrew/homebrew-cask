@@ -7,8 +7,6 @@ cask 'calq' do
   homepage 'http://www.katoemba.net/makesnosenseatall/calq/'
   license :gratis
 
-  container nested: "#{token}-#{version}.dmg"
-
   app 'Calq.app'
 
   zap delete: '~/Library/Preferences/com.katoemba.calq.plist'

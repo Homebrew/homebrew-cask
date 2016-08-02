@@ -7,9 +7,6 @@ cask 'intel-power-gadget' do
   homepage 'https://software.intel.com/en-us/articles/intel-power-gadget-20'
   license :gratis
 
-  # this bogus-looking character accurately reflects an upstream error
-  container nested: "Intel® Power Gadget v#{version}.dmg"
-
   pkg 'Install Intel Power Gadget.pkg'
 
   uninstall pkgutil: 'com.intel.pkg.PowerGadget.*'

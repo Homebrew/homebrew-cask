@@ -9,7 +9,5 @@ cask 'menuola' do
   homepage 'https://www.geocom.co.nz'
   license :gratis
 
-  container nested: 'Menuola.dmg'
-
   app 'Menuola.app'
 end
