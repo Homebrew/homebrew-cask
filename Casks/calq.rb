@@ -7,7 +7,7 @@ cask 'calq' do
   homepage 'http://www.katoemba.net/makesnosenseatall/calq/'
   license :gratis
 
-  container nested: "Calq-#{version}.dmg"
+  container nested: "#{token}--#{version}.dmg"
 
   app 'Calq.app'
 
