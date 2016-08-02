@@ -14,14 +14,19 @@ project_root = Pathname(File.expand_path("../..", __FILE__))
 
 Dir["#{project_root}/spec/support/*.rb"].each(&method(:require))
 
-# TODO: removeme, this is transitional
-include HomebrewTestingEnvironment
-
 # force some environment variables
+ENV["HOMEBREW_NO_EMOJI"] = "1"
 ENV["HOMEBREW_CASK_OPTS"] = nil
 
 # from Homebrew. Provides expects method.
 require "mocha/api"
+
+# add homebrew to load path
+homebrew_repo = `brew --repository`.chomp
+$LOAD_PATH.unshift(File.expand_path("#{homebrew_repo}/Library/Homebrew"))
+
+require "global"
+require "extend/pathname"
 
 # add homebrew-cask lib to load path
 $LOAD_PATH.push(project_root.join("lib").to_s)
@@ -29,6 +34,11 @@ $LOAD_PATH.push(project_root.join("lib").to_s)
 require "hbc"
 
 class Hbc::TestCask < Hbc::Cask; end
+
+TEST_TMPDIR = Dir.mktmpdir("homebrew_cask_tests")
+at_exit do
+  FileUtils.remove_entry(TEST_TMPDIR)
+end
 
 # override Homebrew locations
 Hbc.homebrew_prefix = Pathname.new(TEST_TMPDIR).join("prefix")
@@ -38,6 +48,7 @@ Hbc.binarydir = Hbc.homebrew_prefix.join("binarydir", "bin")
 Hbc.appdir = Pathname.new(TEST_TMPDIR).join("appdir")
 
 # making homebrew's cache dir allows us to actually download Casks in tests
+HOMEBREW_CACHE = Pathname.new(TEST_TMPDIR).join("cache")
 HOMEBREW_CACHE.mkpath
 HOMEBREW_CACHE.join("Casks").mkpath
 
