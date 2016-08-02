@@ -7,8 +7,6 @@ cask 'real-vnc' do
   homepage 'https://www.realvnc.com'
   license :freemium
 
-  container type: :naked
-
   pkg "VNC-#{version}-MacOSX-x86_64.pkg"
 
   uninstall script: '/Applications/RealVNC/Advanced.localized/Uninstall VNC Viewer.app/Contents/Resources/uninstaller.sh'
