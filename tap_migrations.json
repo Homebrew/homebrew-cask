@@ -1,3 +1,4 @@
 {
+  "cryptol": "homebrew/core",
   "gedit": "homebrew/core"
 }
