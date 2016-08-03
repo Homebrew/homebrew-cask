@@ -1,3 +1,4 @@
 {
+  "consul": "homebrew/core",
   "gedit": "homebrew/core"
 }
