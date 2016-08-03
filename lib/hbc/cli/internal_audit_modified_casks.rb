@@ -2,6 +2,10 @@ class Hbc::CLI::InternalAuditModifiedCasks < Hbc::CLI::InternalUseBase
   RELEVANT_STANZAS = %i{version sha256 url appcast}.freeze
 
   class << self
+    def needs_init?
+      true
+    end
+
     def run(*args)
       commit_range = commit_range(args)
       cleanup = args.any? { |a| a =~ %r{^-+c(leanup)?$}i }
