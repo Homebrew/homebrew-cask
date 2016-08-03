@@ -30,8 +30,6 @@ cask 'mailfollowup' do
   homepage 'https://www.cs.unc.edu/~welch/MailFollowup/'
   license :gratis
 
-  container nested: "MailFollowUp_#{version}.dmg"
-
   pkg 'Install MailFollowUp.pkg'
 
   uninstall quit:    'com.apple.mail',

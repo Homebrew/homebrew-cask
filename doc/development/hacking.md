@@ -127,8 +127,7 @@ The first line of a commit message (the summary line) is like the subject line o
 If you’re making changes - please write some tests for them! Install dependencies and run the whole test suite with:
 
 ```bash
-bundle install
-bundle exec rake test
+brew cask-tests
 ```
 
 Be sure to run the test suite before submitting. If you forget, Travis-CI will do that for you and embarrass you in front of all your friends. :)
@@ -142,7 +141,7 @@ You may also use a set of environment variables to increase verbosity:
 Example of a very verbose output:
 
 ```shell
-TESTOPTS='-v' SPEC_OPTS='-fd' VERBOSE_TESTS=1 bundle exec rake test
+TESTOPTS='-v' SPEC_OPTS='-fd' VERBOSE_TESTS=1 brew cask-tests
 ```
 
 #### External Commands

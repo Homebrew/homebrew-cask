@@ -10,8 +10,8 @@ class Hbc::Source::URI
   end
 
   def load
-    HOMEBREW_CACHE_CASKS.mkpath
-    path = HOMEBREW_CACHE_CASKS.join(File.basename(uri))
+    Hbc.cache.mkpath
+    path = Hbc.cache.join(File.basename(uri))
     ohai "Downloading #{uri}"
     odebug "Download target -> #{path}"
     begin

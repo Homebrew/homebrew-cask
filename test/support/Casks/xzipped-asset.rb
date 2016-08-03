@@ -7,5 +7,5 @@ test_cask 'xzipped-asset' do
 
   depends_on formula: 'xz'
 
-  app 'xzipped-asset-1.2.3'
+  app 'xzipped-asset--1.2.3'
 end
