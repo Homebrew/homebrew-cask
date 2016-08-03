@@ -3,6 +3,7 @@
   "consul-template": "homebrew/core",
   "cryptol": "homebrew/core",
   "dmd": "homebrew/core",
+  "docker-compose": "homebrew/core",
   "gedit": "homebrew/core",
   "go": "homebrew/core"
 }
