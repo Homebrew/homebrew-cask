@@ -109,12 +109,10 @@ class Hbc::CurlDownloadStrategy < Hbc::AbstractDownloadStrategy
           temporary_path.unlink
           had_incomplete_download = false
           retry
-        elsif @url =~ %r{^file://}
-          msg = "File does not exist: #{@url.sub(%r{^file://}, '')}"
-        else
-          msg = "Download failed: #{@url}"
-          msg << "\nThe incomplete download is cached at #{tarball_path}"
         end
+
+        msg = @url
+        msg.concat("\nThe incomplete download is cached at #{temporary_path}") if temporary_path.exist?
         raise CurlDownloadStrategyError, msg
       end
       ignore_interrupts { temporary_path.rename(tarball_path) }
