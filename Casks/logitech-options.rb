@@ -9,7 +9,7 @@ cask 'logitech-options' do
 
   depends_on macos: '>= :mavericks'
 
-  pkg 'LogiMgr Installer #{version}.app/Contents/Resources/LogiMgr.mpkg'
+  pkg 'LogiMgr Installer 6.00.3356.app/Contents/Resources/LogiMgr.mpkg'
 
   uninstall script:  {
                        executable: '/Applications/Utilities/Logitech Options Uninstaller.app/Contents/Resources/Uninstaller',
