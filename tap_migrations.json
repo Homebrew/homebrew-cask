@@ -1,5 +1,6 @@
 {
   "consul": "homebrew/core",
+  "consul-template": "homebrew/core",
   "cryptol": "homebrew/core",
   "dmd": "homebrew/core",
   "gedit": "homebrew/core"
