@@ -2,6 +2,7 @@
   "consul": "homebrew/core",
   "consul-template": "homebrew/core",
   "cryptol": "homebrew/core",
+  "cups-pdf": "homebrew/core",
   "dmd": "homebrew/core",
   "docker-compose": "homebrew/core",
   "gedit": "homebrew/core",
