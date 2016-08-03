@@ -1,3 +1,4 @@
 {
+  "cups-pdf": "homebrew/core",
   "gedit": "homebrew/core"
 }
