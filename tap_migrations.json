@@ -1,4 +1,5 @@
 {
+  "cryptol": "homebrew/core",
   "dmd": "homebrew/core",
   "gedit": "homebrew/core"
 }
