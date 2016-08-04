@@ -141,7 +141,7 @@ describe Hbc::Installer do
 
       dest_path = Hbc.caskroom.join("bzipped-asset", asset.version)
       dest_path.must_be :directory?
-      file = Hbc.appdir.join("bzipped-asset-#{asset.version}")
+      file = Hbc.appdir.join("bzipped-asset--#{asset.version}")
       file.must_be :file?
     end
 
@@ -154,7 +154,7 @@ describe Hbc::Installer do
 
       dest_path = Hbc.caskroom.join("gzipped-asset", asset.version)
       dest_path.must_be :directory?
-      file = Hbc.appdir.join("gzipped-asset-#{asset.version}")
+      file = Hbc.appdir.join("gzipped-asset--#{asset.version}")
       file.must_be :file?
     end
 
@@ -170,7 +170,7 @@ describe Hbc::Installer do
 
       dest_path = Hbc.caskroom.join("xzipped-asset", asset.version)
       dest_path.must_be :directory?
-      file = Hbc.appdir.join("xzipped-asset-#{asset.version}")
+      file = Hbc.appdir.join("xzipped-asset--#{asset.version}")
       file.must_be :file?
     end
 
@@ -186,7 +186,7 @@ describe Hbc::Installer do
 
       dest_path = Hbc.caskroom.join("lzma-asset", asset.version)
       dest_path.must_be :directory?
-      file = Hbc.appdir.join("lzma-asset-#{asset.version}")
+      file = Hbc.appdir.join("lzma-asset--#{asset.version}")
       file.must_be :file?
     end
 

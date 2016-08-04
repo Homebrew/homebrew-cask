@@ -7,7 +7,5 @@ cask 'capsee' do
   homepage 'http://www.threemagination.com/capsee/'
   license :gratis
 
-  container nested: "CapSee#{version.no_dots}.dmg"
-
   app 'CapSee.app'
 end

@@ -1,5 +1,7 @@
 require "tmpdir"
 
+require "hbc/container/base"
+
 class Hbc::Container::Cab < Hbc::Container::Base
   def self.me?(criteria)
     cabextract = Hbc.homebrew_prefix.join("bin", "cabextract")

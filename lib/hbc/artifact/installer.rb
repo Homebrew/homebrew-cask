@@ -1,3 +1,5 @@
+require "hbc/artifact/base"
+
 class Hbc::Artifact::Installer < Hbc::Artifact::Base
   # TODO: for backward compatibility, removeme
   def install

@@ -40,7 +40,6 @@ desc "Open a REPL for debugging and experimentation"
 task :console do
   require "pry"
   require "pry-byebug"
-  require "vendor/homebrew-fork/global"
   require "hbc"
   ARGV.clear
   Hbc.pry

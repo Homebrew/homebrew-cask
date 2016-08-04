@@ -9,7 +9,7 @@ cask 'dusty' do
   homepage 'https://github.com/gamechanger/dusty'
   license :mit
 
-  depends_on cask: 'dockertoolbox'
+  depends_on cask: 'docker-toolbox'
   container type: :tar
 
   installer script:       'brew-install.sh',

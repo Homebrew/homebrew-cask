@@ -1,3 +1,5 @@
+require "hbc/artifact/base"
+
 class Hbc::Artifact::PreflightBlock < Hbc::Artifact::Base
   def self.me?(cask)
     cask.artifacts[:preflight].any? ||

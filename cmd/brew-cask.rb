@@ -17,9 +17,6 @@ require "pathname"
 
 $LOAD_PATH.unshift(File.expand_path("../../lib", Pathname.new(__FILE__).realpath))
 
-# TODO: remove internal Homebrew dependencies and remove this line
-require "vendor/homebrew-fork/global"
-
 require "hbc"
 
 begin

@@ -14,7 +14,6 @@ cask 'bassjump' do
     # ffe82a399885f9f28605-66638985576304cbe11c530b9b932f18.r24.cf2.rackcdn.com was verified as official when first introduced to the cask
     url "http://ffe82a399885f9f28605-66638985576304cbe11c530b9b932f18.r24.cf2.rackcdn.com/BassJumpInstaller_#{version}.dmg.zip"
 
-    container nested: "BassJumpInstaller_#{version}.dmg"
     pkg 'BassJumpInstaller.pkg'
   end
 
@@ -22,12 +21,14 @@ cask 'bassjump' do
   homepage 'https://www.twelvesouth.com/product/bassjump-2-for-macbook'
   license :gratis
 
-  uninstall pkgutil: [
-                       'com.twelvesouth.bassjump.installer.halplugin',
-                       'com.twelvesouth.bassjump.installer.overridekext',
-                       'com.twelvesouth.bassjump.installer.prefpane',
-                     ],
-            kext:    'com.twelvesouth.driver.BassJumpOverrideDriver'
+  uninstall pkgutil:    [
+                          'com.twelvesouth.bassjump.installer.halplugin',
+                          'com.twelvesouth.bassjump.installer.overridekext',
+                          'com.twelvesouth.bassjump.installer.prefpane',
+                        ],
+            kext:       'com.twelvesouth.driver.BassJumpOverrideDriver',
+            login_item: 'BassJumpMenuExtra',
+            quit:       'com.twelvesouth.BassJumpMenuExtra'
 
   caveats do
     reboot

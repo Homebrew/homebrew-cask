@@ -64,21 +64,15 @@ class Hbc::Cask
     subdir
   end
 
-  def version_comparator
-    proc do |x, y|
-      begin
-        x_version  =  Gem::Version.new(x)
-        x_version <=> Gem::Version.new(y)
-      rescue ArgumentError
-        x <=> y
-      end
-    end
+  def timestamped_versions
+    Pathname.glob(metadata_master_container_path.join("*", "*"))
+            .map { |p| p.relative_path_from(metadata_master_container_path) }
+            .sort_by(&:basename) # sort by timestamp
+            .map(&:split)
   end
 
   def versions
-    Pathname.glob(metadata_master_container_path.join("*"))
-            .map { |p| p.basename.to_s }
-            .sort(&version_comparator)
+    timestamped_versions.map(&:first).uniq
   end
 
   def installed?

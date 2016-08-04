@@ -35,7 +35,7 @@ class Hbc::HbVCSDownloadStrategy < Hbc::AbstractDownloadStrategy
   def initialize(cask, command = Hbc::SystemCommand)
     super
     @ref_type, @ref = extract_ref
-    @clone = HOMEBREW_CACHE.join(cache_filename)
+    @clone = Hbc.cache.join(cache_filename)
   end
 
   def extract_ref
@@ -69,11 +69,11 @@ class Hbc::CurlDownloadStrategy < Hbc::AbstractDownloadStrategy
   end
 
   def tarball_path
-    @tarball_path ||= Pathname.new("#{HOMEBREW_CACHE}/#{name}-#{version}#{ext}")
+    @tarball_path ||= Hbc.cache.join("#{name}--#{version}#{ext}")
   end
 
   def temporary_path
-    @temporary_path ||= Pathname.new("#{tarball_path}.incomplete")
+    @temporary_path ||= tarball_path.sub(%r{$}, ".incomplete")
   end
 
   def cached_location
@@ -89,8 +89,8 @@ class Hbc::CurlDownloadStrategy < Hbc::AbstractDownloadStrategy
   end
 
   def _fetch
-    odebug "Calling curl with args #{curl_args.utf8_inspect}"
-    curl(*curl_args)
+    odebug "Calling curl with args #{cask_curl_args.utf8_inspect}"
+    curl(*cask_curl_args)
   end
 
   def fetch
@@ -109,12 +109,10 @@ class Hbc::CurlDownloadStrategy < Hbc::AbstractDownloadStrategy
           temporary_path.unlink
           had_incomplete_download = false
           retry
-        elsif @url =~ %r{^file://}
-          msg = "File does not exist: #{@url.sub(%r{^file://}, '')}"
-        else
-          msg = "Download failed: #{@url}"
-          msg << "\nThe incomplete download is cached at #{tarball_path}"
         end
+
+        msg = @url
+        msg.concat("\nThe incomplete download is cached at #{temporary_path}") if temporary_path.exist?
         raise CurlDownloadStrategyError, msg
       end
       ignore_interrupts { temporary_path.rename(tarball_path) }
@@ -129,7 +127,7 @@ class Hbc::CurlDownloadStrategy < Hbc::AbstractDownloadStrategy
 
   private
 
-  def curl_args
+  def cask_curl_args
     default_curl_args.tap do |args|
       args.concat(user_agent_args)
       args.concat(cookies_args)
@@ -174,14 +172,12 @@ class Hbc::CurlDownloadStrategy < Hbc::AbstractDownloadStrategy
   end
 
   def ext
-    # We need a Pathname because we've monkeypatched extname to support double
-    # extensions (e.g. tar.gz). -- todo actually that monkeypatch has been removed
-    Pathname.new(@url).extname[%r{[^?]+}]
+    Pathname.new(@url).extname
   end
 end
 
 class Hbc::CurlPostDownloadStrategy < Hbc::CurlDownloadStrategy
-  def curl_args
+  def cask_curl_args
     super
     default_curl_args.concat(post_args)
   end

@@ -8,7 +8,6 @@ cask 'murus' do
   license :freemium
 
   depends_on macos: '>= :mavericks'
-  container nested: "Murus #{version}.dmg"
 
   app 'Murus.app'
 end

@@ -10,8 +10,6 @@ cask 'cockatrice' do
   homepage 'http://www.woogerworks.com/'
   license :gpl
 
-  container nested: "Cockatrice_#{version.after_comma}_osx.dmg"
-
   app 'cockatrice.app'
   app 'oracle.app'
   app 'servatrice.app'

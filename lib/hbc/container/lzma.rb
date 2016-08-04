@@ -1,5 +1,7 @@
 require "tmpdir"
 
+require "hbc/container/base"
+
 class Hbc::Container::Lzma < Hbc::Container::Base
   def self.me?(criteria)
     criteria.magic_number(%r{^\]\000\000\200\000}n)

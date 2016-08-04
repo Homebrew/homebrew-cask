@@ -55,7 +55,7 @@ class Hbc::CLI::List < Hbc::CLI::Base
     if @options[:one]
       puts columns
     elsif @options[:versions]
-      installed_casks.each { |cask| puts "#{cask} #{cask.versions.reverse.join(', ')}" }
+      installed_casks.each { |cask| puts "#{cask} #{cask.versions.join(' ')}" }
     elsif @options[:long]
       puts Hbc::SystemCommand.run!("/bin/ls", args: ["-l", Hbc.caskroom]).stdout
     else
