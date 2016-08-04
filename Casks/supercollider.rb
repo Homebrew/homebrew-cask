@@ -7,7 +7,7 @@ cask 'supercollider' do
   appcast 'https://github.com/supercollider/supercollider/releases.atom',
           checkpoint: '792cf265121b3358432cd35be470055b7fdaa01ad547ef1b3d1618c61c0e689e'
   name 'SuperCollider'
-  homepage 'http://supercollider.github.io/'
+  homepage 'https://supercollider.github.io/'
   license :gpl
 
   app 'SuperCollider/SuperCollider.app'

@@ -14,7 +14,7 @@ cask 'maciasl' do
   end
 
   name 'MaciASL'
-  homepage 'http://sourceforge.net/projects/maciasl/'
+  homepage 'https://sourceforge.net/projects/maciasl/'
   license :gpl
 
   depends_on macos: '>= :lion'

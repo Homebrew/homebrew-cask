@@ -6,7 +6,7 @@ cask 'lazpaint' do
   appcast 'https://sourceforge.net/projects/lazpaint/rss',
           checkpoint: 'd52c7f467dc51331ce7ad24785f9e4eb3d7e386bf17e98ecfd8454ec0ca68a0a'
   name 'LazPaint'
-  homepage 'http://sourceforge.net/projects/lazpaint/'
+  homepage 'https://sourceforge.net/projects/lazpaint/'
   license :gpl
 
   app 'LazPaint.app'
