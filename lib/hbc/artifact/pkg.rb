@@ -1,3 +1,5 @@
+require "hbc/artifact/base"
+
 class Hbc::Artifact::Pkg < Hbc::Artifact::Base
   attr_reader :pkg_relative_path
 

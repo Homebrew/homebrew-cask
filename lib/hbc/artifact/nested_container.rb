@@ -1,3 +1,5 @@
+require "hbc/artifact/base"
+
 class Hbc::Artifact::NestedContainer < Hbc::Artifact::Base
   def install_phase
     @cask.artifacts[:nested_container].each { |container| extract(container) }

@@ -1,3 +1,5 @@
+require "hbc/container/base"
+
 class Hbc::Container::Naked < Hbc::Container::Base
   # Either inherit from this class and override with self.me?(criteria),
   # or use this class directly as "container type: :naked",

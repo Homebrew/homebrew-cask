@@ -21,12 +21,14 @@ cask 'bassjump' do
   homepage 'https://www.twelvesouth.com/product/bassjump-2-for-macbook'
   license :gratis
 
-  uninstall pkgutil: [
-                       'com.twelvesouth.bassjump.installer.halplugin',
-                       'com.twelvesouth.bassjump.installer.overridekext',
-                       'com.twelvesouth.bassjump.installer.prefpane',
-                     ],
-            kext:    'com.twelvesouth.driver.BassJumpOverrideDriver'
+  uninstall pkgutil:    [
+                          'com.twelvesouth.bassjump.installer.halplugin',
+                          'com.twelvesouth.bassjump.installer.overridekext',
+                          'com.twelvesouth.bassjump.installer.prefpane',
+                        ],
+            kext:       'com.twelvesouth.driver.BassJumpOverrideDriver',
+            login_item: 'BassJumpMenuExtra',
+            quit:       'com.twelvesouth.BassJumpMenuExtra'
 
   caveats do
     reboot

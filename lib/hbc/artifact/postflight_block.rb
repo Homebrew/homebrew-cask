@@ -1,3 +1,5 @@
+require "hbc/artifact/base"
+
 class Hbc::Artifact::PostflightBlock < Hbc::Artifact::Base
   def self.me?(cask)
     cask.artifacts[:postflight].any? ||

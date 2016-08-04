@@ -1,3 +1,5 @@
+require "hbc/container/naked"
+
 class Hbc::Container::Ttf < Hbc::Container::Naked
   def self.me?(criteria)
     # TrueType Font

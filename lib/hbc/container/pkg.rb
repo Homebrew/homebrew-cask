@@ -1,3 +1,5 @@
+require "hbc/container/naked"
+
 class Hbc::Container::Pkg < Hbc::Container::Naked
   def self.me?(criteria)
     criteria.extension(%r{m?pkg$}) &&
