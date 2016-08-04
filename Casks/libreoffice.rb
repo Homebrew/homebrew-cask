@@ -5,8 +5,8 @@ cask 'libreoffice' do
     # documentfoundation.org was verified as official when first introduced to the cask
     url "https://downloadarchive.documentfoundation.org/libreoffice/old/#{version}/mac/x86/LibreOffice_#{version}_MacOS_x86.dmg"
   else
-    version '5.1.4'
-    sha256 '877da41273f0db176230162b2901572a99c80642b933b75afdbb6867935b8364'
+    version '5.2.0'
+    sha256 '4de9ed18496a8983ffa2e906f0fdd216741a93a26261d5bf7ebc4c71bb7d7c24'
     # documentfoundation.org was verified as official when first introduced to the cask
     url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg"
   end
