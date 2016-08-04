@@ -7,7 +7,7 @@ cask 'graphicconverter' do
   appcast 'http://www.lemkesoft.org/files/graphicconverter/graphicconverter9.xml',
           checkpoint: 'eb62cdcced7681f47360d3b7c39e7b18db3a3cf96ffa8c93945bf5a0fe55151f'
   name 'GraphicConverter'
-  homepage 'http://www.lemkesoft.de/en/products/graphicconverter/'
+  homepage 'https://www.lemkesoft.de/en/products/graphicconverter/'
   license :commercial
 
   app "GraphicConverter #{version.major}.app"

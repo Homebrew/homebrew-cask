@@ -7,7 +7,7 @@ cask 'tag' do
   appcast 'https://sourceforge.net/projects/tagosx/rss',
           checkpoint: 'b5357cef243912765a97a2fb4294dba43b823045143608244feb4afb3500785e'
   name 'Tag'
-  homepage 'http://sbooth.org/Tag/'
+  homepage 'https://sbooth.org/Tag/'
   license :gpl
 
   app "Tag-#{version}/Tag.app"

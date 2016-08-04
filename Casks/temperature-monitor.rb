@@ -5,7 +5,7 @@ cask 'temperature-monitor' do
   # bresink.eu was verified as official when first introduced to the cask
   url 'http://www.bresink.eu/Downloads/TemperatureMonitor.dmg'
   name 'Temperature Monitor'
-  homepage 'http://www.bresink.com/osx/LegacyProducts.html'
+  homepage 'https://www.bresink.com/osx/LegacyProducts.html'
   license :commercial
 
   # Renamed for consistency: app name is different in the Finder and in a shell.

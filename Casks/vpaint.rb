@@ -7,7 +7,7 @@ cask 'vpaint' do
   appcast 'https://github.com/dalboris/vpaint/releases.atom',
           checkpoint: '1acbd6f7b3b66e2e10fe2cc38a8a2051cd6d198e4a3593bfa2dc74d081dc009d'
   name 'VPaint'
-  homepage 'http://www.vpaint.org/'
+  homepage 'https://www.vpaint.org/'
   license :mit
 
   app 'vpaint.app'

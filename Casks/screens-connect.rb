@@ -3,7 +3,7 @@ cask 'screens-connect' do
   sha256 '18bb65623aadff7f931456598f12ba33f5c54bad9c1f7f2a3b10f9585f8bc771'
 
   # edovia.com was verified as official when first introduced to the cask
-  url "http://download.edovia.com/screensconnect/screensconnect%20#{version}.dmg"
+  url "https://download.edovia.com/screensconnect/screensconnect%20#{version}.dmg"
   name 'Screens Connect'
   homepage 'https://screensconnect.com'
   license :gratis

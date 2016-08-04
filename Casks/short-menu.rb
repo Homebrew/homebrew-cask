@@ -5,7 +5,7 @@ cask 'short-menu' do
   # dl.devmate.com/com.floschliep.Short-Menu was verified as official when first introduced to the cask
   url 'https://dl.devmate.com/com.floschliep.Short-Menu/ShortMenu.zip'
   name 'Short Menu'
-  homepage 'http://appiculous.com/short-menu-mac/'
+  homepage 'https://appiculous.com/short-menu-mac/'
   license :commercial
 
   app 'Short Menu.app'

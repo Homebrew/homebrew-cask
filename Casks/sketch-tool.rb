@@ -2,7 +2,7 @@ cask 'sketch-tool' do
   version :latest
   sha256 :no_check
 
-  url 'http://sketchtool.bohemiancoding.com/sketchtool-latest.zip'
+  url 'https://sketchtool.bohemiancoding.com/sketchtool-latest.zip'
   name 'SketchTool'
   homepage 'https://bohemiancoding.com/sketch/tool/'
   license :gratis

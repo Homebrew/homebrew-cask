@@ -22,7 +22,7 @@ cask 'snagit' do
   else
     version :latest
     sha256 :no_check
-    url 'http://download.techsmith.com/snagitmac/enu/Snagit.dmg'
+    url 'https://download.techsmith.com/snagitmac/enu/Snagit.dmg'
   end
 
   name 'Snagit'
