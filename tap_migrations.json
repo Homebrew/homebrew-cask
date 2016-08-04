@@ -3,5 +3,6 @@
   "consul-template": "homebrew/core",
   "cryptol": "homebrew/core",
   "dmd": "homebrew/core",
+  "fpc": "homebrew/core",
   "gedit": "homebrew/core"
 }
