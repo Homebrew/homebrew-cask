@@ -1,3 +1,4 @@
 {
+  "dmd": "homebrew/core",
   "gedit": "homebrew/core"
 }
