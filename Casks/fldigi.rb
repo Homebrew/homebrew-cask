@@ -6,7 +6,7 @@ cask 'fldigi' do
   appcast 'https://sourceforge.net/projects/fldigi/rss?path=/fldigi',
           checkpoint: 'cf5589963f2f67d76bfe7f1fff77028d071fd026d4f30c9c031f7b34ba0deeef'
   name 'fldigi'
-  homepage 'http://sourceforge.net/projects/fldigi/files/fldigi/'
+  homepage 'https://sourceforge.net/projects/fldigi/files/fldigi/'
   license :gpl
 
   app "fldigi-#{version}.app"

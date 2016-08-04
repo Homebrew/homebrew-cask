@@ -8,7 +8,7 @@ cask 'grip' do
           checkpoint: '12cb4d50279babdf1bc6d6a65cd8906f69fdf0f12d8cf8f9c978cc9bac94e4bd'
   name 'GRIP Computer Vision Engine'
   name 'GRIP'
-  homepage 'http://wpiroboticsprojects.github.io/GRIP/'
+  homepage 'https://wpiroboticsprojects.github.io/GRIP/'
   license :oss
 
   app 'GRIP.app'

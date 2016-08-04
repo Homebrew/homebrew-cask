@@ -6,7 +6,7 @@ cask 'simpletag' do
   appcast 'https://sourceforge.net/projects/simpletag/rss',
           checkpoint: '7ce71edc7aec04c948ba801d49132b164d164c7d4c9dc019275ae8ad2b254288'
   name 'SimpleTAG'
-  homepage 'http://sourceforge.net/projects/simpletag/'
+  homepage 'https://sourceforge.net/projects/simpletag/'
   license :gpl
 
   app "simpletag-gui-jface-#{version}/SimpleTAG-GUI.app"
