@@ -2,7 +2,7 @@ cask 'td-toolbelt' do
   version :latest
   sha256 :no_check
 
-  url 'http://toolbelt.treasuredata.com/mac'
+  url 'https://toolbelt.treasuredata.com/mac'
   name 'Treasure Data Toolbelt'
   homepage 'https://toolbelt.treasuredata.com/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

@@ -5,7 +5,7 @@ cask 'ocrkit' do
   # exactcode.de was verified as official when first introduced to the cask
   url "http://dl.exactcode.de/tmp/#{version.after_comma}/OCRKit-#{version.before_comma}.dmg"
   name 'OCRKit'
-  homepage 'http://ocrkit.com/'
+  homepage 'https://ocrkit.com/'
   license :freemium
 
   app 'OCRKit.app'

@@ -7,7 +7,7 @@ cask 'sequel-pro' do
   appcast 'https://github.com/sequelpro/sequelpro/releases.atom',
           checkpoint: 'dab1d8d845c8ced586958bc4ded12de724c9ec3013313ff3c2a4babc7cdd74fb'
   name 'Sequel Pro'
-  homepage 'http://www.sequelpro.com/'
+  homepage 'https://www.sequelpro.com/'
   license :mit
 
   depends_on macos: '>= :leopard'

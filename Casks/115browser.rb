@@ -5,7 +5,7 @@ cask '115browser' do
   url "http://down.115.com/client/mac/115br_v#{version}.dmg"
   name '115Browser'
   name '115浏览器'
-  homepage 'http://pc.115.com/mac.html'
+  homepage 'https://pc.115.com/mac.html'
   license :gratis
 
   app '115Browser.app'

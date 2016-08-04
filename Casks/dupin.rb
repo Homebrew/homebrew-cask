@@ -6,7 +6,7 @@ cask 'dupin' do
     version '2.10.2'
     sha256 '060d469593e33e453eeeab46942f0a832042b32175e61377c99f19c2f11cbe57'
 
-    appcast 'http://dougscripts.com/itunes/itinfo/dupin_appcast.xml',
+    appcast 'https://dougscripts.com/itunes/itinfo/dupin_appcast.xml',
             checkpoint: '2c663ac368987af0eca9b16cf3a4621227d894e362621b230c7b7bdeae0a59d9'
   end
 

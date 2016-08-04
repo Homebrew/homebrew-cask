@@ -4,7 +4,7 @@ cask 'busycal' do
 
   url 'http://www.busymac.com/download/BusyCal.zip'
   name 'BusyCal'
-  homepage 'http://busymac.com/busycal/index.html'
+  homepage 'https://busymac.com/busycal/index.html'
   license :commercial
 
   pkg 'BusyCal Installer.pkg'

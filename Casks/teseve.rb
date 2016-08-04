@@ -7,7 +7,7 @@ cask 'teseve' do
   appcast 'https://github.com/teseve/teseve/releases.atom',
           checkpoint: '23472e9f0783ef2271a383cb743e7af2d5253225510c84d83a8408bbb25ccf42'
   name 'Tèsèvè'
-  homepage 'http://teseve.github.io/'
+  homepage 'https://teseve.github.io/'
   license :public_domain
 
   auto_updates true

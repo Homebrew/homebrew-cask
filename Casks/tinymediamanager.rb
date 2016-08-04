@@ -4,7 +4,7 @@ cask 'tinymediamanager' do
 
   url "http://release.tinymediamanager.org/dist/tmm_#{version}_mac.zip"
   name 'tinyMediaManager'
-  homepage 'http://www.tinymediamanager.org/'
+  homepage 'https://www.tinymediamanager.org/'
   license :apache
 
   app 'tinyMediaManager.app'

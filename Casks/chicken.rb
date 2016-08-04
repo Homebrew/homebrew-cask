@@ -6,7 +6,7 @@ cask 'chicken' do
   appcast 'http://chicken.sourceforge.net/chicken.xml',
           checkpoint: '7dc47253417a3a5a34bbb32d25563b49cdec2c3d34f06893402349e1d19362e0'
   name 'Chicken'
-  homepage 'http://sourceforge.net/projects/chicken/'
+  homepage 'https://sourceforge.net/projects/chicken/'
   license :gpl
 
   app 'Chicken.app'

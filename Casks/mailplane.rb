@@ -2,7 +2,7 @@ cask 'mailplane' do
   version :latest
   sha256 :no_check
 
-  url 'http://update.mailplaneapp.com/mailplane_3.php'
+  url 'https://update.mailplaneapp.com/mailplane_3.php'
   name 'Mailplane'
   homepage 'http://mailplaneapp.com'
   license :commercial
