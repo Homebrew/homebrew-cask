@@ -4,7 +4,7 @@ cask 'kivy' do
 
   url "https://kivy.org/downloads/#{version}/Kivy-#{version}-osx-python3.7z"
   name 'Kivy'
-  homepage 'http://kivy.org'
+  homepage 'https://kivy.org'
   license :mit
 
   depends_on formula: 'unar'

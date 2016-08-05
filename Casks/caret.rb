@@ -7,7 +7,7 @@ cask 'caret' do
   appcast 'https://github.com/careteditor/caret/releases.atom',
           checkpoint: 'cec541f4991c7b7ff7a5e437a61ae8c3227df5076397988481b3990ad1ace8b4'
   name 'Caret'
-  homepage 'http://caret.io/'
+  homepage 'https://caret.io/'
   license :commercial
 
   app 'Caret.app'

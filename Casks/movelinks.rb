@@ -7,7 +7,7 @@ cask 'movelinks' do
   appcast 'https://d1c229iib3zm7m.cloudfront.net/mac/appcast.xml',
           checkpoint: '529dbb191756744a2304e8693f7044c6310d6d36a9b9b7a0196487fc10b80d4a'
   name 'Movelinks'
-  homepage 'http://www.movescount.com/connect/moveslinkmac/Suunto_Ambit'
+  homepage 'https://www.movescount.com/connect/moveslinkmac/Suunto_Ambit'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   auto_updates true

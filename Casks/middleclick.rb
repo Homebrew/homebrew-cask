@@ -7,7 +7,7 @@ cask 'middleclick' do
   appcast 'https://github.com/cl3m/MiddleClick/releases.atom',
           checkpoint: '56cc9aa7f59fd6d6db671678ff4b72a5289becb98dbe32ce1587cc746d411db9'
   name 'MiddleClick'
-  homepage 'http://rouge41.com/labs/'
+  homepage 'https://rouge41.com/labs/'
   license :gpl
 
   app 'MiddleClick.app'

@@ -4,7 +4,7 @@ cask 'fmod-studio' do
 
   url "http://www.fmod.org/download/fmodstudio/tool/Mac/fmodstudio#{version}mac-installer.dmg"
   name 'FMOD Studio'
-  homepage 'http://www.fmod.org/products/'
+  homepage 'https://www.fmod.org/products/'
   license :commercial
 
   app 'FMOD Studio/FMOD Studio.app'

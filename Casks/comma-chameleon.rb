@@ -7,7 +7,7 @@ cask 'comma-chameleon' do
   appcast 'https://github.com/theodi/comma-chameleon/releases.atom',
           checkpoint: 'c86edf15837b16ad7457a3be1388f5d7a5ba35dcdfdc12796a559fe8279f8ea1'
   name 'Comma Chameleon'
-  homepage 'http://comma-chameleon.io/'
+  homepage 'https://comma-chameleon.io/'
   license :mit
 
   app 'comma-chameleon-darwin-x64/comma-chameleon.app'

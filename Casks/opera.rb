@@ -4,7 +4,7 @@ cask 'opera' do
 
   url "https://get.geo.opera.com/pub/opera/desktop/#{version}/mac/Opera_#{version}_Setup.dmg"
   name 'Opera'
-  homepage 'http://www.opera.com/'
+  homepage 'https://www.opera.com/'
   license :gratis
 
   app 'Opera.app'

@@ -7,7 +7,7 @@ cask 'mplayer-osx-extended' do
   appcast 'https://github.com/sttz/MPlayer-OSX-Extended/releases.atom',
           checkpoint: '97a7842a97b15d35ed296f0917e0c6ebdf9f5c54f978e15bf419134bac7bf232'
   name 'MPlayer OSX Extended'
-  homepage 'http://www.mplayerosx.ch/'
+  homepage 'https://mplayerosx.ch/'
   license :gpl
 
   app 'MPlayer OSX Extended.app'

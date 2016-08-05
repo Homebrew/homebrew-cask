@@ -7,7 +7,7 @@ cask 'abricotine' do
   appcast 'https://github.com/brrd/Abricotine/releases.atom',
           checkpoint: '1ea84fd733feb1f4bf458b884fa6c3ec46240ee159f002877cc3c1242882e6b6'
   name 'abricotine'
-  homepage 'http://abricotine.brrd.fr'
+  homepage 'https://abricotine.brrd.fr'
   license :gpl
 
   app 'Abricotine-darwin-x64/Abricotine.app'

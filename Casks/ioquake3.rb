@@ -3,9 +3,9 @@ cask 'ioquake3' do
   version '1.36'
   sha256 'ff310471aa641cc27980055691b3e3cf5496ac262f10967c9d5052fd3815a3fc'
 
-  url "http://ioquake3.org/files/#{version}/ioquake3%20#{version}.dmg"
+  url "https://ioquake3.org/files/#{version}/ioquake3%20#{version}.dmg"
   name 'ioquake3'
-  homepage 'http://ioquake3.org/'
+  homepage 'https://ioquake3.org/'
   license :gpl
 
   suite 'ioquake3'
