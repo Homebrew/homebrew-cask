@@ -2,7 +2,7 @@ cask 'plug' do
   if MacOS.release <= :mavericks
     version '0.10.5'
     sha256 'd8eed07bd1f84d6f1daa7a0699617f2e21c01df2e68924945bcb4889d1251d01'
-    url "http://plugformac.com/files/Plug-#{version}.dmg"
+    url "https://plugformac.com/files/Plug-#{version}.dmg"
   else
     version '2.0.11'
     sha256 '9542bbae3beadca999246012cc5ede97ae6e992fdd622c482f1c1bf0145a7f8d'

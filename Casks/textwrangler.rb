@@ -3,7 +3,7 @@ cask 'textwrangler' do
     version '4.5.12'
     sha256 'f25ce90a54570ee4fe2287cdbe5c8b2a57188423a3693becacfa0533f02e0aa2'
 
-    url "http://pine.barebones.com/files/TextWrangler_#{version}.dmg"
+    url "https://pine.barebones.com/files/TextWrangler_#{version}.dmg"
   else
     version '5.5.1'
     sha256 '000f69d1433886e31c9e12168e3d4d7cd0d9c06873016f487f8dbbb7bfba425a'
