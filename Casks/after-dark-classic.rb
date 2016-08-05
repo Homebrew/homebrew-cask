@@ -9,11 +9,11 @@ cask 'after-dark-classic' do
 
   pkg 'ClassicSet.pkg'
 
-  uninstall delete: [
-                      '/Library/Screen Savers/Boris.saver',
-                      '/Library/Screen Savers/Flying Toasters.saver',
-                      '/Library/Screen Savers/Mowing Man.saver',
-                    ]
+  uninstall pkgutil: [
+                       'jp.co.infinisys.flyingToastersmowingmanAndBoris.Boris.pkg',
+                       'jp.co.infinisys.flyingToastersmowingmanAndBoris.FlyingToasters.pkg',
+                       'jp.co.infinisys.flyingToastersmowingmanAndBoris.MowingMan.pkg',
+                     ]
 
   zap delete: [
                 '~/Library/Preferences/ByHost/jp.co.infinisys.boris.*.plist',
