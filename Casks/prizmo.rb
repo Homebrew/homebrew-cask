@@ -6,7 +6,7 @@ cask 'prizmo' do
   appcast 'http://www.creaceed.com/appcasts/prizmo3.xml',
           checkpoint: '7c791245da47c68259dd99f9fe0cd5962d51b5e1aa042b948f5090f8ec17520e'
   name 'Prizmo'
-  homepage 'http://www.creaceed.com/prizmo'
+  homepage 'https://www.creaceed.com/prizmo'
   license :freemium
 
   depends_on macos: '>= :yosemite'
