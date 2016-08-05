@@ -7,7 +7,7 @@ cask 'qblocker' do
   appcast 'https://updates.devmate.com/uk.co.wearecocoon.QBlocker.xml',
           checkpoint: '9e2b0dd2a34cf6bb9349ed7671a9fd1926f574e38aebbf95266663866f6708bf'
   name 'QBlocker'
-  homepage 'http://qblocker.com/'
+  homepage 'https://qblocker.com/'
   license :oss
 
   accessibility_access true

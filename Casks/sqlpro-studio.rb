@@ -5,7 +5,7 @@ cask 'sqlpro-studio' do
   # d3fwkemdw8spx3.cloudfront.net/studio was verified as official when first introduced to the cask
   url "https://d3fwkemdw8spx3.cloudfront.net/studio/SQLProStudio.#{version}.app.zip"
   name 'SQLPro Studio'
-  homepage 'http://www.sqlprostudio.com'
+  homepage 'https://www.sqlprostudio.com'
   license :commercial
 
   app 'SQLPro Studio.app'

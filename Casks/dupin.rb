@@ -10,7 +10,7 @@ cask 'dupin' do
             checkpoint: '2c663ac368987af0eca9b16cf3a4621227d894e362621b230c7b7bdeae0a59d9'
   end
 
-  url "http://dougscripts.com/itunes/scrx/dupinv#{version.no_dots}.zip"
+  url "https://dougscripts.com/itunes/scrx/dupinv#{version.no_dots}.zip"
   name 'Dupin'
   homepage 'http://dougscripts.com/apps/dupinapp.php'
   license :commercial

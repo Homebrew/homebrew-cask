@@ -4,7 +4,7 @@ cask 'logitech-unifying' do
 
   url "http://www.logitech.com/pub/controldevices/unifying/unifying#{version}_mac.zip"
   name 'Logitech Unifying Software'
-  homepage 'http://www.logitech.com/en-us/promotions/6072'
+  homepage 'https://www.logitech.com/en-us/promotions/6072'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Unifying Installer.app/Contents/Resources/Logitech Unifying Signed.mpkg'

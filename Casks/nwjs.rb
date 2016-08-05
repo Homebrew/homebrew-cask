@@ -11,13 +11,13 @@ cask 'nwjs' do
   else
     sha256 '416747be34ad3bbae008ac6121551fda1505dfac55169cbd025558b29a40faf4'
 
-    url "http://dl.nwjs.io/v#{version}/nwjs-v#{version}-osx-x64.zip"
+    url "https://dl.nwjs.io/v#{version}/nwjs-v#{version}-osx-x64.zip"
 
     binary "nwjs-v#{version}-osx-x64/nwjc"
     app "nwjs-v#{version}-osx-x64/nwjs.app"
   end
 
   name 'NW.js'
-  homepage 'http://nwjs.io'
+  homepage 'https://nwjs.io'
   license :mit
 end

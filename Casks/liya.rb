@@ -4,7 +4,7 @@ cask 'liya' do
 
   url 'https://cutedgesystems.com/downloads/Liya.zip'
   name 'Liya'
-  homepage 'http://cutedgesystems.com/software/liya/'
+  homepage 'https://cutedgesystems.com/software/liya/'
   license :gratis
 
   app 'Liya.app'
