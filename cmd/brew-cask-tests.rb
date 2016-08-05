@@ -23,6 +23,12 @@ require "English"
     system "bundle", "install", "--path", "vendor/bundle"
   end
 
-  system "bundle", "exec", "rake", "test:coverage"
+  test_task = "test"
+  %w[rspec minitest coverage].each do |subtask|
+    next unless ARGV.flag?("--#{subtask}")
+    test_task = "test:#{subtask}"
+  end
+
+  system "bundle", "exec", "rake", test_task
   Homebrew.failed = !$CHILD_STATUS.success?
 end
