@@ -6,7 +6,7 @@ cask 'connector' do
   appcast 'https://update.mediaware.sk/numpad.xml',
           checkpoint: '5b1a1cf2f25f2eee0068ece16536ffe97337fbeae6315018e6842ee64a1bb7c5'
   name 'Connector'
-  homepage 'http://mediaware.sk/connector'
+  homepage 'https://mediaware.sk/connector'
   license :gratis
 
   app 'Connector.app'

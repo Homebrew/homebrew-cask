@@ -6,7 +6,7 @@ cask 'downie' do
   appcast 'https://trial.charliemonroe.net/downie/updates_2.3.xml',
           checkpoint: '69c1ec419557f5101dfcca6b5036fede6b6ce7cd3da7ec9d95435b44ade45e15'
   name 'Downie'
-  homepage 'http://software.charliemonroe.net/downie.php'
+  homepage 'https://software.charliemonroe.net/downie.php'
   license :commercial
 
   depends_on macos: '>= :yosemite'

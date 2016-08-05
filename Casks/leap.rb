@@ -4,7 +4,7 @@ cask 'leap' do
 
   url 'https://www.ironicsoftware.com/downloads/Leap.zip'
   name 'Ironic Software Leap'
-  homepage 'http://www.ironicsoftware.com/leap/'
+  homepage 'https://www.ironicsoftware.com/leap/'
   license :commercial
 
   app 'Leap.app'

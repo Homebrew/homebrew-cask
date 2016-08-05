@@ -4,7 +4,7 @@ cask 'connectiq' do
 
   url "https://developer.garmin.com/downloads/connect-iq/sdks/connectiq-sdk-mac-#{version}.zip"
   name 'Garmin Connect IQ SDK'
-  homepage 'http://developer.garmin.com/connect-iq'
+  homepage 'https://developer.garmin.com/connect-iq/overview'
   license :other
 
   app 'bin/ConnectIQ.app'

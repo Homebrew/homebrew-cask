@@ -4,7 +4,7 @@ cask 'qupzilla' do
 
   url 'https://www.qupzilla.com/startdownload?mac'
   name 'QupZilla'
-  homepage 'http://www.qupzilla.com'
+  homepage 'https://www.qupzilla.com/'
   license :gpl
 
   app 'QupZilla.app'

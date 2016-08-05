@@ -6,7 +6,7 @@ cask 'm3unify' do
   appcast 'https://dougscripts.com/itunes/itinfo/m3unify_appcast.xml',
           checkpoint: '18a6929c547c19989a8ead8ead2bc8da131f45fe1e22639e6b2a8493b4ac30eb'
   name 'M3Unify'
-  homepage 'http://dougscripts.com/itunes/itinfo/m3unify.php'
+  homepage 'https://dougscripts.com/apps/m3unifyapp.php'
   license :commercial
 
   app 'M3Unify.app'

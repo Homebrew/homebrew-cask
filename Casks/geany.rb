@@ -4,7 +4,7 @@ cask 'geany' do
 
   url "https://download.geany.org/geany-#{version}_osx.dmg"
   name 'Geany'
-  homepage 'http://www.geany.org'
+  homepage 'https://www.geany.org/'
   license :gpl
 
   depends_on macos: '>= :lion'

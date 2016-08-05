@@ -6,7 +6,7 @@ cask 'audiobookbinder' do
   appcast 'https://bluezbox.com/audiobookbinder/appcast.xml',
           checkpoint: '5513a6cc78863fd79e2779794a0767d241a066e1b4bd5cce19ecf5daa34c2306'
   name 'Audiobook Binder'
-  homepage 'http://bluezbox.com/audiobookbinder.html'
+  homepage 'https://bluezbox.com/audiobookbinder.html'
   license :oss
 
   app 'AudioBookBinder.app'

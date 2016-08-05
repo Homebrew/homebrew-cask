@@ -7,7 +7,7 @@ cask 'jabref' do
   appcast 'https://github.com/JabRef/jabref/releases.atom',
           checkpoint: '5529a3b6efe55446a7621c7de9727fdcdcebf06cf4a078738ce12b70b1ba1312'
   name 'JabRef'
-  homepage 'http://www.jabref.org/'
+  homepage 'https://www.jabref.org/'
   license :gpl
 
   installer script: 'JabRef Installer.app/Contents/MacOS/JavaApplicationStub',

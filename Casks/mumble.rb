@@ -10,7 +10,7 @@ cask 'mumble' do
   homepage 'https://www.mumble.info/'
   license :bsd
   gpg "#{url}.sig",
-      key_url: 'http://mumble.info/gpg/mumble-auto-build-2015.asc'
+      key_url: 'https://mumble.info/gpg/mumble-auto-build-2015.asc'
 
   app 'Mumble.app'
 end

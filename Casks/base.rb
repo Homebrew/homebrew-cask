@@ -6,7 +6,7 @@ cask 'base' do
   appcast 'https://update.menial.co.uk/software/base/',
           checkpoint: '02f44fba8418545d1abdbcae6dd50fc20d8740eaac1f4b18a4d0aef23e5291ce'
   name 'Menial Base'
-  homepage 'http://menial.co.uk/base/'
+  homepage 'https://menial.co.uk/base/'
   license :commercial
 
   app 'Base.app'

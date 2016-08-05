@@ -4,7 +4,7 @@ cask 'simplifyextras' do
 
   url "https://mmth.us/simplify/prefpane/updates/#{version}.zip"
   name 'Simplify Extras'
-  homepage 'http://mmth.us/simplify/extras/'
+  homepage 'https://mmth.us/simplify/extras/'
   license :gratis
 
   prefpane 'SimplifyExtras.prefPane'

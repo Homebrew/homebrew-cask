@@ -6,7 +6,7 @@ cask 'join-together' do
   appcast 'https://dougscripts.com/itunes/itinfo/jointogether_appcast.xml',
           checkpoint: '388d83cd36ba376add48ffd5627cbfec629374e9555b96ea94a10727076c50a4'
   name 'Join Together'
-  homepage 'http://dougscripts.com/itunes/itinfo/jointogether.php'
+  homepage 'https://dougscripts.com/apps/jointogetherapp.php'
   license :commercial
 
   app 'Join Together.app'

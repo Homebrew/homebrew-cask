@@ -4,7 +4,7 @@ cask 'duplicate-annihilator' do
 
   url 'https://brattoo.com/propaganda/downloadDa.php'
   name 'Duplicate Annihilator'
-  homepage 'http://brattoo.com/propaganda/'
+  homepage 'https://brattoo.com/propaganda/'
   license :commercial
 
   app 'Duplicate Annihilator.app'

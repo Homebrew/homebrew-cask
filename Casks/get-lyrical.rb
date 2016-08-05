@@ -4,7 +4,7 @@ cask 'get-lyrical' do
 
   url 'https://shullian.com/files/getlyrical.zip'
   name 'Get Lyrical'
-  homepage 'http://shullian.com/get_lyrical.php'
+  homepage 'https://shullian.com/get_lyrical.php'
   license :gratis
 
   app 'Get Lyrical/Get Lyrical.app'

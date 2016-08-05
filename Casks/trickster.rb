@@ -11,7 +11,7 @@ cask 'trickster' do
   appcast 'https://dl.apparentsoft.com/trickster.rss',
           checkpoint: '0a6c6015159cd8037e6e3f9464d3ed10c9ec05aa3ea063d012913b90be2aa218'
   name 'Trickster'
-  homepage 'http://www.apparentsoft.com/trickster/'
+  homepage 'https://www.apparentsoft.com/trickster/'
   license :commercial
 
   app 'Trickster.app'

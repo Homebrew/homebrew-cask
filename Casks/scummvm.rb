@@ -4,7 +4,7 @@ cask 'scummvm' do
 
   url "https://scummvm.org/frs/scummvm/#{version}/scummvm-#{version}-macosx.dmg"
   name 'ScummVM'
-  homepage 'http://scummvm.org/'
+  homepage 'https://scummvm.org/'
   license :gpl
 
   app 'ScummVM.app'

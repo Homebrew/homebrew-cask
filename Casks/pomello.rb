@@ -4,7 +4,7 @@ cask 'pomello' do
 
   url 'https://pomelloapp.com/download/mac'
   name 'Pomello'
-  homepage 'http://pomelloapp.com/'
+  homepage 'https://pomelloapp.com/'
   license :closed
 
   app 'Pomello.app'
