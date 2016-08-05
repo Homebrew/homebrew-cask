@@ -257,7 +257,7 @@ describe Hbc::Audit do
 
         context "when doing the audit" do
           it "evaluates the block" do
-            expect { subject }.to raise_error("Boom")
+            expect(subject).to fail_with(%r{Boom})
           end
         end
       end
@@ -295,6 +295,15 @@ describe Hbc::Audit do
 
         it { should fail_with(%r{#{error_msg}}) }
       end
+    end
+
+    context "when an exception is raised" do
+      let(:cask) { instance_double(Hbc::Cask) }
+      before do
+        cask.expects(:version).raises(StandardError.new)
+      end
+
+      it { should fail_with(%r{exception while auditing}) }
     end
   end
 end
