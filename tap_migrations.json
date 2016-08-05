@@ -7,5 +7,6 @@
   "docker-compose": "homebrew/core",
   "fpc": "homebrew/core",
   "gedit": "homebrew/core",
-  "go": "homebrew/core"
+  "go": "homebrew/core",
+  "python": "homebrew/core"
 }
