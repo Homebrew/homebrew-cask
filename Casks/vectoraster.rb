@@ -2,9 +2,9 @@ cask 'vectoraster' do
   version '6.2.5'
   sha256 '363bf4c718e0be1fc130e8c00b8e61630b332dc173272fcfce5408c080db2c87'
 
-  url "http://www.lostminds.com/downloads/dl.php?vectoraster#{version.major}.zip"
+  url "https://www.lostminds.com/downloads/dl.php?vectoraster#{version.major}.zip"
   name 'Vectoraster'
-  homepage 'http://www.lostminds.com/content/product.php?vectoraster6'
+  homepage 'https://www.lostminds.com/content/product.php?vectoraster6'
   license :commercial
 
   app "Vectoraster #{version.major}/Vectoraster.app"
