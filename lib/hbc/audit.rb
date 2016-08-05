@@ -22,6 +22,10 @@ class Hbc::Audit
     check_generic_artifacts
     check_download
     self
+  rescue StandardError => e
+    odebug "#{e.message}\n#{e.backtrace.join("\n")}"
+    add_error "exception while auditing #{cask}: #{e.message}"
+    self
   end
 
   def success?
