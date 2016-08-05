@@ -18,6 +18,7 @@ describe "Repo layout" do
                    .rubocop_todo.yml
                    .ruby-version
                    coverage
+                   vendor
                  ].freeze
 
   # the developer has hopefully gitignored these
