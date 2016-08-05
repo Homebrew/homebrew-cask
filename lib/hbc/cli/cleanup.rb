@@ -11,11 +11,7 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
   end
 
   def self.run(*_ignored)
-    cleanup_size = default.disk_cleanup_size
     default.cleanup!
-    return unless cleanup_size > 0
-    disk_space = disk_usage_readable(cleanup_size)
-    ohai "This operation has freed approximately #{disk_space} of disk space."
   end
 
   def self.default
@@ -66,11 +62,26 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
     delete_paths(cache_files)
   end
 
+  def locked?(file)
+    !File.open(file).flock(File::LOCK_EX | File::LOCK_NB)
+  rescue
+    true
+  end
+
   def delete_paths(paths)
-    puts "Nothing to do" if paths.empty?
+    cleanup_size = 0
     paths.each do |item|
+      next if locked?(item)
       puts item
+      cleanup_size += File.size?(item)
       item.unlink
+    end
+
+    if cleanup_size.zero?
+      puts "Nothing to do"
+    else
+      disk_space = disk_usage_readable(cleanup_size)
+      ohai "This operation has freed approximately #{disk_space} of disk space."
     end
   end
 end
