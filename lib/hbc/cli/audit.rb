@@ -4,11 +4,9 @@ class Hbc::CLI::Audit < Hbc::CLI::Base
   end
 
   def self.run(*args)
-    retval = new(args, Hbc::Auditor).run
-    # retval is ternary: true/false/nil
-
-    raise Hbc::CaskError, "audit failed" if retval.nil?
-    raise Hbc::CaskError, "some audits failed" unless retval
+    failed_casks = new(args, Hbc::Auditor).run
+    return if failed_casks.empty?
+    raise Hbc::CaskError, "audit failed for casks: #{failed_casks.join(' ')}"
   end
 
   def initialize(args, auditor)
@@ -17,11 +15,9 @@ class Hbc::CLI::Audit < Hbc::CLI::Base
   end
 
   def run
-    count = 0
-    casks_to_audit.each do |cask|
-      count += 1 if audit(cask)
+    casks_to_audit.each_with_object([]) do |cask, failed|
+      failed << cask unless audit(cask)
     end
-    count == 0 ? nil : count == casks_to_audit.length
   end
 
   def audit(cask)
