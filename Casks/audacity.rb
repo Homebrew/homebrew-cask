@@ -9,8 +9,8 @@ cask 'audacity' do
     require 'open-uri'
     # fosshub.com/Audacity.html was verified as official when first introduced to the cask
     open("http://www.fosshub.com/Audacity.html/audacity-macosx-ub-#{version}.dmg") do |io|
-      content = io.read
-      %r{^\<iframe.*src=\"(http.*\.dmg)\".*>}.match(content)[1].to_s
+      content = io.read || ''
+      content.scan(%r{^\<iframe.*src=\"(http.*\.dmg)\".*>})[0].to_s
     end
   end
   name 'Audacity'
