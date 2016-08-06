@@ -11,5 +11,6 @@
   "go": "homebrew/core",
   "hub": "homebrew/core",
   "python": "homebrew/core",
+  "python3": "homebrew/core",
   "rust": "homebrew/core"
 }
