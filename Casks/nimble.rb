@@ -1,11 +1,11 @@
 cask 'nimble' do
-  version '1.3.2'
-  sha256 'cda59180d1cb7a0561121ef6f7a18f9646101ec4ffe3d17112787d1cd84c69c1'
+  version '1.3.3'
+  sha256 'ce669fc631ac88033d153b0096dbaef7809666ff8a6d7b4c932af83756207641'
 
   # github.com/Maybulb/Nimble was verified as official when first introduced to the cask
   url "https://github.com/Maybulb/Nimble/releases/download/#{version}/Nimble-#{version}.dmg"
   appcast 'https://github.com/Maybulb/Nimble/releases.atom',
-          checkpoint: '9d4b6d88196ed6314eee4821af48b6fe3d0b461343641103e15c56354a83da9a'
+          checkpoint: '1fbfbe392a526e27648c7a354ccde21e759d7da604afb196c90453974df23e69'
   name 'Nimble'
   homepage 'http://maybulb.com'
   license :mit
