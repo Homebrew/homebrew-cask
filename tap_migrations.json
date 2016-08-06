@@ -14,6 +14,7 @@
   "phantomjs": "homebrew/core",
   "python": "homebrew/core",
   "python3": "homebrew/core",
+  "racket": "homebrew/core",
   "rust": "homebrew/core",
   "srclib": "homebrew/core",
   "volatility": "homebrew/core"
