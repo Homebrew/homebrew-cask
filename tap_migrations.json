@@ -5,6 +5,7 @@
   "cups-pdf": "homebrew/core",
   "dmd": "homebrew/core",
   "docker-compose": "homebrew/core",
+  "exiftool": "homebrew/core",
   "fpc": "homebrew/core",
   "gedit": "homebrew/core",
   "go": "homebrew/core",
