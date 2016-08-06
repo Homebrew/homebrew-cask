@@ -13,5 +13,6 @@
   "packer": "homebrew/core",
   "python": "homebrew/core",
   "python3": "homebrew/core",
-  "rust": "homebrew/core"
+  "rust": "homebrew/core",
+  "srclib": "homebrew/core"
 }
