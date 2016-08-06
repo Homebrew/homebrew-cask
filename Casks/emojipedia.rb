@@ -12,7 +12,7 @@ cask 'emojipedia' do
   artifact 'Emojipedia.dictionary', target: "#{ENV['HOME']}/Library/Dictionaries/Emojipedia.dictionary"
 
   caveats <<-EOS.undent
-    Open OS X Dictionary app (in Applications folder)
+    Open macOS Dictionary app (in Applications folder)
     Enable "#{token}" in preferences to activate.
   EOS
 end
