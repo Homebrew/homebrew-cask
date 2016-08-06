@@ -1,6 +1,6 @@
 cask 'mongochef' do
-  version '4.0.4'
-  sha256 '2aca68eb9108a244b344eb2bb03d31a3d823df278cad64f6e74a9a36ffc3bbaa'
+  version '4.1.0'
+  sha256 'b4f1c3ad195284bf09e3ece56a6f613c3be2cb8bf7a5bdda9d5149465311d6b8'
 
   url "https://cdn.3t.io/mongochef-core/mac/#{version}/MongoChef.dmg"
   name 'MongoChef'

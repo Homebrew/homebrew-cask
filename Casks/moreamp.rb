@@ -6,7 +6,7 @@ cask 'moreamp' do
   appcast 'https://sourceforge.net/projects/moreamp/rss?path=/moreamp',
           checkpoint: '78520db7d651591c8e6b701cb3d88151c0ebd9dd0c7eb3e56cce8f728df66810'
   name 'MoreAmp'
-  homepage 'http://sourceforge.net/projects/moreamp/'
+  homepage 'https://sourceforge.net/projects/moreamp/'
   license :gpl
 
   app 'MoreAmp.app'

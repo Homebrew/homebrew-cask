@@ -1,3 +1,5 @@
+require "hbc/artifact/moved"
+
 class Hbc::Artifact::Qlplugin < Hbc::Artifact::Moved
   def self.artifact_english_name
     "QuickLook Plugin"

@@ -7,7 +7,7 @@ cask 'witch' do
     version '3.9.8'
     sha256 '6a290c9fcc6354044fb077d8ae3a6a7221cd5d4e19bf3a872ff09da95b9a7509'
 
-    url 'http://manytricks.com/download/witch'
+    url 'https://manytricks.com/download/witch'
     appcast 'https://manytricks.com/witch/appcast.xml',
             checkpoint: '239d72b3fac6a2c8ba69e8028cb3bed7de7d4065c5335f907183457a8db2e114'
   end

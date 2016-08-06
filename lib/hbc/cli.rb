@@ -3,8 +3,6 @@ class Hbc::CLI; end
 require "optparse"
 require "shellwords"
 
-require "hbc/extend/optparse"
-
 require "hbc/cli/base"
 require "hbc/cli/audit"
 require "hbc/cli/cat"

@@ -56,7 +56,7 @@ function go_to_repo_and_update {
 function fix_outdated_appcasts {
   local issue_number cask_name pr_number
 
-  for line in $(ghi list --state open --no-pulls --label 'outdated appcast' --reverse | tail -n +2); do
+  for line in $(ghi list --state open --no-pulls --label 'outdated appcast' --reverse | tail +2); do
     [[ "${line}" == 'None.' ]] && break # exit early if there are no relevant issues in repo
 
     issue_number="$(awk '{print $1}' <<< "${line}")"

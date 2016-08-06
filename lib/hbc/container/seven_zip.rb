@@ -1,3 +1,5 @@
+require "hbc/container/generic_unar"
+
 class Hbc::Container::SevenZip < Hbc::Container::GenericUnar
   def self.me?(criteria)
     # TODO: cover self-extracting archives

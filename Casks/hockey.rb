@@ -6,7 +6,7 @@ cask 'hockey' do
   appcast 'https://rink.hockeyapp.net/api/2/apps/67503a7926431872c4b6c1549f5bd6b1',
           checkpoint: '8802b612ed27a271b0c50c4b56c4882c6b24a9914b39d7b6058ec8b40ffc943f'
   name 'HockeyApp'
-  homepage 'http://hockeyapp.net/releases/mac/'
+  homepage 'https://hockeyapp.net/releases/mac/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'HockeyApp.app'

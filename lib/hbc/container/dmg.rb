@@ -1,6 +1,8 @@
 require "set"
 require "tempfile"
 
+require "hbc/container/base"
+
 class Hbc::Container::Dmg < Hbc::Container::Base
   def self.me?(criteria)
     !criteria.command.run("/usr/bin/hdiutil",

@@ -1,13 +1,13 @@
 require "hbc/artifact/linked"
 
 class Hbc::Artifact::Hardlinked < Hbc::Artifact::Linked
+  def self.link_type_english_name
+    "Hardlink"
+  end
+
   def self.islink?(path)
     return false unless path.respond_to?(:stat)
     path.stat.nlink > 1
-  end
-
-  def self.link_type_english_name
-    "Hardlink"
   end
 
   def create_filesystem_link(source, target)

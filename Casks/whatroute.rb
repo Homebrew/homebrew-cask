@@ -4,7 +4,7 @@ cask 'whatroute' do
 
   url "http://www.whatroute.net/software/whatroute-#{version}.dmg"
   name 'WhatRoute'
-  homepage 'http://www.whatroute.net'
+  homepage 'https://www.whatroute.net'
   license :gratis
 
   app 'WhatRoute.app'

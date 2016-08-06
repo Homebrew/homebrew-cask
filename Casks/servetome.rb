@@ -4,7 +4,7 @@ cask 'servetome' do
 
   url "http://downloads.zqueue.com/ServeToMe-v#{version}.dmg"
   name 'ServeToMe'
-  homepage 'http://zqueue.com/servetome/'
+  homepage 'https://zqueue.com/servetome/'
   license :gratis
 
   app 'ServeToMe.app'

@@ -29,7 +29,7 @@ module Hbc::Scopes
 
     def all_tokens
       cask_tokens = all_tapped_cask_dirs.map { |d| Dir.glob d.join("*.rb") }.flatten
-      cask_tokens.map do |c|
+      cask_tokens.map { |c|
         # => "/usr/local/Library/Taps/caskroom/example-tap/Casks/example.rb"
         c.sub!(%r{\.rb$}, "")
         # => ".../example"
@@ -38,7 +38,7 @@ module Hbc::Scopes
         c.delete_at(-2)
         # => ["caskroom", "example-tap", "example"]
         c.join "/"
-      end
+      }
     end
 
     def installed

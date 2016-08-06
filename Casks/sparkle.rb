@@ -7,7 +7,7 @@ cask 'sparkle' do
   appcast 'https://github.com/sparkle-project/Sparkle/releases.atom',
           checkpoint: 'a1192bf5b07dbc6d763bca7b5aa137e068a915ed53a462b7d87a73c9b66404ce'
   name 'Sparkle'
-  homepage 'http://sparkle-project.org/'
+  homepage 'https://sparkle-project.org/'
   license :mit
 
   app 'Sparkle Test App.app'

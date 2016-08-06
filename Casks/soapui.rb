@@ -27,7 +27,7 @@ cask 'soapui' do
   #   /Applications/SoapUI-${version}.app/Contents/java/app/.install4j/response.varfile
   #
   # And refer to the install4j command line options for additional information
-  #   http://resources.ej-technologies.com/install4j/help/doc/index.html
+  #   https://resources.ej-technologies.com/install4j/help/doc/index.html
   #
   installer script: "SoapUI #{version} Installer.app/Contents/MacOS/JavaApplicationStub",
             args:   [

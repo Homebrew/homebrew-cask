@@ -1,3 +1,5 @@
+require "hbc/artifact/moved"
+
 class Hbc::Artifact::Artifact < Hbc::Artifact::Moved
   def self.artifact_english_name
     "Generic artifact"

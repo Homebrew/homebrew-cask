@@ -5,7 +5,7 @@ cask 'ryver' do
   # d3vkb1nw20iqfq.cloudfront.net was verified as official when first introduced to the cask
   url "https://d3vkb1nw20iqfq.cloudfront.net/mac/Ryver-#{version}.dmg"
   name 'Ryver'
-  homepage 'http://www.ryver.com'
+  homepage 'https://www.ryver.com/'
   license :unknown
 
   app 'Ryver.app'

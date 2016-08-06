@@ -14,6 +14,6 @@ cask 'couchbase-server-community' do
   end
 
   name 'Couchbase Server'
-  homepage 'http://www.couchbase.com/'
+  homepage 'https://www.couchbase.com/'
   license :apache
 end
