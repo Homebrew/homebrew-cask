@@ -25,6 +25,28 @@ describe Hbc::CLI::Cleanup do
       expect(cached_download.exist?).to eq(false)
     end
 
+    it "does not removed locked files" do
+      cached_download = cache_location.join("SomeDownload.dmg")
+      FileUtils.touch(cached_download)
+
+      expect {
+        File.new(cached_download).flock(File::LOCK_EX | File::LOCK_NB)
+      }.to eq(0)
+
+      expect {
+        subject.cleanup!
+      }.to output(<<-OUTPUT.undent).to_stdout
+        ==> Removing cached downloads
+        Nothing to do
+      OUTPUT
+
+      expect {
+        File.new(cached_download).flock(File::LOCK_UN | File::LOCK_NB)
+      }.to eq(0)
+
+      expect(cached_download.exist?).to eq(true)
+    end
+
     context "when cleanup_outdated is specified" do
       let(:cleanup_outdated) { true }
 
