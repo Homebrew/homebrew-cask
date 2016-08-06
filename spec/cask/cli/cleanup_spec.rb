@@ -37,7 +37,7 @@ describe Hbc::CLI::Cleanup do
         subject.cleanup!
       }.to output(<<-OUTPUT.undent).to_stdout
         ==> Removing cached downloads
-        Nothing to do
+        skipping: #{cached_download} is locked
       OUTPUT
 
       expect {
