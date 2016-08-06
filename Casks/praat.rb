@@ -1,5 +1,5 @@
 cask 'praat' do
-  if Hardware::CPU.is_32_bit? || MacOS.release <= :leopard
+  if Hardware::CPU.is_32_bit? || MacOS.version <= :leopard
     version '6.0.16'
     sha256 'cd9d7b8c5d48e2d7f0673e0aa13e82e198f66e958d173d679e38a94abb1b2435'
     url "http://www.fon.hum.uva.nl/praat/old/#{version.no_dots}/praat#{version.no_dots}_mac32.dmg"

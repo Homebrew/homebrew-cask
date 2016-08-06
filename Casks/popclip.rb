@@ -1,5 +1,5 @@
 cask 'popclip' do
-  if MacOS.release <= :mountain_lion
+  if MacOS.version <= :mountain_lion
     version '1.5.4'
     sha256 '8046452efc41988aa20ec0af31bc73aaceba5dd3d68bb4f56dc51959a2966349'
   else

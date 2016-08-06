@@ -44,7 +44,6 @@ module Hbc
   include Hbc::Utils
 
   # TODO: restrict visibility of this to the DSL
-  ::MacOS = Hbc::MacOS
   ::Hardware = Hbc::Hardware
 
   def self.init

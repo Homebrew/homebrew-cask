@@ -43,7 +43,7 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
 
   def self.remove_undeletable_path_strings(action, path_strings)
     undeletable = path_strings.map { |path_string|
-      path_string if Hbc::MacOS.undeletable?(Pathname.new(path_string))
+      path_string if MacOS.undeletable?(Pathname.new(path_string))
     }.compact
     undeletable.each do |path_string|
       opoo "Skipping #{action} for undeletable path #{path_string}"

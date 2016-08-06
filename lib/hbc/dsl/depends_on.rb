@@ -55,7 +55,7 @@ class Hbc::DSL::DependsOn
   end
 
   def self.coerce_os_release(arg)
-    @macos_symbols ||= MacOS::Release::SYMBOLS
+    @macos_symbols ||= MacOS::Version::SYMBOLS
     @inverted_macos_symbols ||= @macos_symbols.invert
 
     begin

@@ -83,7 +83,7 @@ class Hbc::Installer
   end
 
   def summary
-    s = if MacOS.release >= :lion && !ENV["HOMEBREW_NO_EMOJI"]
+    s = if MacOS.version >= :lion && !ENV["HOMEBREW_NO_EMOJI"]
           (ENV["HOMEBREW_INSTALL_BADGE"] || "\xf0\x9f\x8d\xba") + "  "
         else
           "#{Hbc::Utils::Tty.blue.bold}==>#{Hbc::Utils::Tty.reset.bold} Success!#{Hbc::Utils::Tty.reset} "
@@ -154,16 +154,16 @@ class Hbc::Installer
     return unless @cask.depends_on.macos
     if @cask.depends_on.macos.first.is_a?(Array)
       operator, release = @cask.depends_on.macos.first
-      unless MacOS.release.send(operator, release)
-        raise Hbc::CaskError, "Cask #{@cask} depends on macOS release #{operator} #{release}, but you are running release #{MacOS.release}."
+      unless MacOS.version.send(operator, release)
+        raise Hbc::CaskError, "Cask #{@cask} depends on macOS release #{operator} #{release}, but you are running release #{MacOS.version}."
       end
     elsif @cask.depends_on.macos.length > 1
-      unless @cask.depends_on.macos.include?(Gem::Version.new(MacOS.release.to_s))
-        raise Hbc::CaskError, "Cask #{@cask} depends on macOS release being one of [#{@cask.depends_on.macos.map(&:to_s).join(', ')}], but you are running release #{MacOS.release}."
+      unless @cask.depends_on.macos.include?(Gem::Version.new(MacOS.version.to_s))
+        raise Hbc::CaskError, "Cask #{@cask} depends on macOS release being one of [#{@cask.depends_on.macos.map(&:to_s).join(', ')}], but you are running release #{MacOS.version}."
       end
     else
-      unless MacOS.release == @cask.depends_on.macos.first
-        raise Hbc::CaskError, "Cask #{@cask} depends on macOS release #{@cask.depends_on.macos.first}, but you are running release #{MacOS.release}."
+      unless MacOS.version == @cask.depends_on.macos.first
+        raise Hbc::CaskError, "Cask #{@cask} depends on macOS release #{@cask.depends_on.macos.first}, but you are running release #{MacOS.version}."
       end
     end
   end
@@ -225,11 +225,11 @@ class Hbc::Installer
   def enable_accessibility_access
     return unless @cask.accessibility_access
     ohai "Enabling accessibility access"
-    if MacOS.release <= :mountain_lion
+    if MacOS.version <= :mountain_lion
       @command.run!("/usr/bin/touch",
                     args: [Hbc.pre_mavericks_accessibility_dotfile],
                     sudo: true)
-    elsif MacOS.release <= :yosemite
+    elsif MacOS.version <= :yosemite
       @command.run!("/usr/bin/sqlite3",
                     args: [
                             Hbc.tcc_db,
@@ -248,7 +248,7 @@ class Hbc::Installer
 
   def disable_accessibility_access
     return unless @cask.accessibility_access
-    if MacOS.release >= :mavericks
+    if MacOS.version >= :mavericks
       ohai "Disabling accessibility access"
       @command.run!("/usr/bin/sqlite3",
                     args: [

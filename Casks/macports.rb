@@ -1,15 +1,15 @@
 cask 'macports' do
   version '2.3.4'
 
-  if MacOS.release <= :mountain_lion
+  if MacOS.version <= :mountain_lion
     sha256 '43c9b56dda623f897854d88c3f7747bd9ae4287fa12b16b1d5eb32f45417b2da'
     url "https://distfiles.macports.org/MacPorts/MacPorts-#{version}-10.8-MountainLion.pkg"
     pkg "MacPorts-#{version}-10.8-MountainLion.pkg"
-  elsif MacOS.release <= :mavericks
+  elsif MacOS.version <= :mavericks
     sha256 '4b0fd713e3887c5a0f2fa975f90b6818aeb35ec909931d0905c181085abef7f4'
     url "https://distfiles.macports.org/MacPorts/MacPorts-#{version}-10.9-Mavericks.pkg"
     pkg "MacPorts-#{version}-10.9-Mavericks.pkg"
-  elsif MacOS.release <= :yosemite
+  elsif MacOS.version <= :yosemite
     sha256 '453125fffb358c9547aab70fa39dc5404acc037c18d7b1d7488256e9e4374138'
     url "https://distfiles.macports.org/MacPorts/MacPorts-#{version}-10.10-Yosemite.pkg"
     pkg "MacPorts-#{version}-10.10-Yosemite.pkg"

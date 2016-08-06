@@ -1,7 +1,6 @@
 class Hbc::CLI::Doctor < Hbc::CLI::Base
   def self.run
-    ohai "macOS Release:", render_with_none_as_error(MacOS.release)
-    ohai "macOS Release with Patchlevel:", render_with_none_as_error(MacOS.release_with_patchlevel)
+    ohai "macOS Release:", render_with_none_as_error(MacOS.full_version)
     ohai "Hardware Architecture:", render_with_none_as_error("#{Hardware::CPU.type}-#{Hardware::CPU.bits}")
     ohai "Ruby Version:", render_with_none_as_error("#{RUBY_VERSION}-p#{RUBY_PATCHLEVEL}")
     ohai "Ruby Path:", render_with_none_as_error(RbConfig.ruby)
