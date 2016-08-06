@@ -62,19 +62,13 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
     delete_paths(cache_files)
   end
 
-  def locked?(file)
-    !File.open(file).flock(File::LOCK_EX | File::LOCK_NB)
-  rescue
-    true
-  end
-
   def delete_paths(paths)
     cleanup_size = 0
     processed_files = 0
     paths.each do |item|
       next unless item.exist?
       processed_files += 1
-      if locked?(item)
+      if Hbc::Utils.file_locked?(item)
         puts "skipping: #{item} is locked"
         next
       end

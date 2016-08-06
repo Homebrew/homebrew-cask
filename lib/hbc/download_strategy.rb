@@ -83,8 +83,7 @@ class Hbc::CurlDownloadStrategy < Hbc::AbstractDownloadStrategy
   def clear_cache
     [cached_location, temporary_path].each do |f|
       next unless f.exist?
-      locked = !File.new(f).flock(File::LOCK_EX | File::LOCK_NB)
-      raise CurlDownloadStrategyError, "#{f} is in use by another process" if locked
+      raise CurlDownloadStrategyError, "#{f} is in use by another process" if Hbc::Utils.file_locked?(f)
       f.unlink
     end
   end
