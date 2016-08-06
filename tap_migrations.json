@@ -14,5 +14,6 @@
   "python": "homebrew/core",
   "python3": "homebrew/core",
   "rust": "homebrew/core",
+  "sickbeard": "homebrew/core",
   "srclib": "homebrew/core"
 }
