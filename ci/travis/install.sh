@@ -16,6 +16,8 @@ run which bundle
 run bundle --version
 run bundle install --path="${GEM_HOME%/*/*}" --without=debug release test
 
+brew_install phantomjs
+
 if must_run_tests; then
   run bundle install --path="${GEM_HOME%/*/*}" --with=test
 
