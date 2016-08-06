@@ -4,6 +4,7 @@ require "yaml"
 require "open3"
 require "stringio"
 
+require "hbc/utils/file"
 require "hbc/utils/tty"
 
 UPDATE_CMD = "brew uninstall --force brew-cask; brew untap phinze/cask; brew untap caskroom/cask; brew update; brew cleanup; brew cask cleanup".freeze
