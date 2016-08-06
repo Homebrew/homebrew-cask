@@ -71,9 +71,11 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
   def delete_paths(paths)
     cleanup_size = 0
     paths.each do |item|
+      next unless item.exist?
       next if locked?(item)
       puts item
-      cleanup_size += File.size?(item)
+      item_size = File.size?(item)
+      cleanup_size += item_size unless item_size.nil?
       item.unlink
     end
 
