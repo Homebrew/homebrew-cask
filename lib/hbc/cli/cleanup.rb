@@ -70,6 +70,7 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
 
   def delete_paths(paths)
     cleanup_size = 0
+    files_removed = 0
     paths.each do |item|
       next unless item.exist?
       next if locked?(item)
@@ -77,9 +78,10 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
       item_size = File.size?(item)
       cleanup_size += item_size unless item_size.nil?
       item.unlink
+      files_removed += 1
     end
 
-    if cleanup_size.zero?
+    if files_removed.zero?
       puts "Nothing to do"
     else
       disk_space = disk_usage_readable(cleanup_size)
