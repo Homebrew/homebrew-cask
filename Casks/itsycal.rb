@@ -16,7 +16,7 @@ cask 'itsycal' do
   end
 
   name 'Itsycal'
-  homepage 'http://www.mowglii.com/itsycal/'
+  homepage 'https://www.mowglii.com/itsycal/'
   license :gratis
 
   depends_on macos: '>= :mountain_lion'

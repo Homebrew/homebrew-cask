@@ -6,7 +6,7 @@ cask 'bzflag' do
   appcast 'https://github.com/BZFlag-Dev/bzflag/releases.atom',
           checkpoint: 'f6f94afd10f51ff5510ceb84f4d04c707e5a74aa722f0443267d694c9a7c32c0'
   name 'BZFlag'
-  homepage 'http://bzflag.org/'
+  homepage 'https://bzflag.org/'
   license :gpl
 
   app "BZFlag-#{version}.app"

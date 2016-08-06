@@ -6,7 +6,7 @@ cask 'reflector' do
   appcast 'https://updates.airsquirrels.com/Reflector2/Mac/Reflector2.xml',
           checkpoint: '7df2adb37396c4abb61918bae56e48a7d4daa89a2e95bb7e38682b53a839cf38'
   name 'Reflector 2'
-  homepage 'http://www.airsquirrels.com/reflector/'
+  homepage 'https://www.airsquirrels.com/reflector/'
   license :commercial
 
   depends_on macos: '>= :mountain_lion'

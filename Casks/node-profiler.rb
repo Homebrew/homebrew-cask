@@ -5,7 +5,7 @@ cask 'node-profiler' do
   # profiler.oss-cn-hangzhou.aliyuncs.com was verified as official when first introduced to the cask
   url "https://profiler.oss-cn-hangzhou.aliyuncs.com/node-profiler-v#{version}.pkg"
   name 'node-profiler'
-  homepage 'http://alinode.aliyun.com/'
+  homepage 'https://alinode.aliyun.com/'
   license :mit
 
   pkg "node-profiler-v#{version}.pkg"

@@ -4,7 +4,7 @@ cask 'nook' do
 
   url 'http://images.barnesandnoble.com/PResources/download/ereader2/bn/mac/NOOKforMac.dmg.zip'
   name 'NOOK for Mac'
-  homepage 'http://www.barnesandnoble.com/u/nook-for-mac/379003592/'
+  homepage 'https://www.barnesandnoble.com/u/nook-for-mac/379003592/'
   license :gratis
 
   app 'NookForMac.app'

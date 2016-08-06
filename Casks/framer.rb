@@ -7,7 +7,7 @@ cask 'framer' do
   appcast 'https://updates.devmate.com/com.motif.framer.xml',
           checkpoint: 'f79709418c2e56f08bf4c0572788d5756ae7a29dcc63d80ab1f3991f72b209eb'
   name 'Framer'
-  homepage 'http://framerjs.com/'
+  homepage 'https://framerjs.com/'
   license :commercial
 
   app 'Framer.app'
