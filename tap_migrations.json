@@ -12,6 +12,7 @@
   "hub": "homebrew/core",
   "packer": "homebrew/core",
   "phantomjs": "homebrew/core",
+  "purescript": "homebrew/core",
   "python": "homebrew/core",
   "python3": "homebrew/core",
   "racket": "homebrew/core",
