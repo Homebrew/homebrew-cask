@@ -11,6 +11,7 @@
   "go": "homebrew/core",
   "hub": "homebrew/core",
   "packer": "homebrew/core",
+  "pandoc": "homebrew/core",
   "phantomjs": "homebrew/core",
   "purescript": "homebrew/core",
   "python": "homebrew/core",
