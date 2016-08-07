@@ -10,9 +10,8 @@ end
 # just in case
 raise "brew-cask: Ruby 2.0 or greater is required." if RUBY_VERSION.to_i < 2
 
-# add homebrew to load path
-homebrew_repo = `brew --repository`.chomp
-$LOAD_PATH.unshift(File.expand_path("#{homebrew_repo}/Library/Homebrew"))
+# add Homebrew to load path
+$LOAD_PATH.unshift(File.expand_path("#{ENV['HOMEBREW_REPOSITORY']}/Library/Homebrew"))
 
 require "global"
 require "extend/pathname"
