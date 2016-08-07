@@ -10,6 +10,7 @@
   "gedit": "homebrew/core",
   "go": "homebrew/core",
   "hub": "homebrew/core",
+  "mitmproxy": "homebrew/core",
   "packer": "homebrew/core",
   "pandoc": "homebrew/core",
   "phantomjs": "homebrew/core",
