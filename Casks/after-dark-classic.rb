@@ -7,19 +7,13 @@ cask 'after-dark-classic' do
   homepage 'http://en.infinisys.co.jp/product/afterdarkclassicset/index.shtml'
   license :commercial
 
-  container nested: "after-dark-classic-#{version}.dmg"
-
   pkg 'ClassicSet.pkg'
 
-  preflight do
-    system '/bin/mv', '--', staged_path.join("after-dark-classic-#{version}"), staged_path.join("after-dark-classic-#{version}.dmg")
-  end
-
-  uninstall delete: [
-                      '/Library/Screen Savers/Boris.saver',
-                      '/Library/Screen Savers/Flying Toasters.saver',
-                      '/Library/Screen Savers/Mowing Man.saver',
-                    ]
+  uninstall pkgutil: [
+                       'jp.co.infinisys.flyingToastersmowingmanAndBoris.Boris.pkg',
+                       'jp.co.infinisys.flyingToastersmowingmanAndBoris.FlyingToasters.pkg',
+                       'jp.co.infinisys.flyingToastersmowingmanAndBoris.MowingMan.pkg',
+                     ]
 
   zap delete: [
                 '~/Library/Preferences/ByHost/jp.co.infinisys.boris.*.plist',

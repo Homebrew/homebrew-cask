@@ -1,8 +1,8 @@
 cask 'deezer' do
-  version '1.1.3_4211'
-  sha256 '2ac3bc4c631773b2de9214eff5fc0a0b67362d08d4fc1237e673e67aa9aa388e'
+  version '1.1.3,4308'
+  sha256 '244530cb29c232c8464660153ddd052d81c7c6e0a6317288544f3225f55d79e5'
 
-  url "http://e-cdn-content.deezer.com/builds/mac/Deezer_#{version.sub(%r{.*_}, '')}.dmg"
+  url "http://e-cdn-content.deezer.com/builds/mac/Deezer_#{version.after_comma}.dmg"
   name 'Deezer'
   homepage 'https://www.deezer.com/formac'
   license :gratis

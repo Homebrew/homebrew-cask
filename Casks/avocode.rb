@@ -4,7 +4,7 @@ cask 'avocode' do
 
   url "http://mediacdn.avocode.com/download/avocode-app/#{version}/avocode-app-mac-#{version}.zip"
   name 'Avocode'
-  homepage 'http://avocode.com/'
+  homepage 'https://avocode.com/'
   license :commercial
 
   app 'Avocode.app'

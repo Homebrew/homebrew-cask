@@ -7,7 +7,7 @@
 ### dependencies
 ###
 
-require 'open3'
+require "open3"
 
 ###
 ### methods
@@ -21,7 +21,7 @@ Given an Application (app) bundle directory on disk, find all
 login items associated with that app, which you can use in a
 Cask uninstall stanza, eg
 
-    uninstall :login_item => 'login item name'
+    uninstall login_item: 'login item name'
 
 Note that you will likely need to have opened the app at least
 once for any login items to be present.
@@ -32,7 +32,7 @@ EOS
 end
 
 def process_args
-  if ARGV.first =~ /^-+h(?:elp)?$/
+  if ARGV.first =~ %r{^-+h(?:elp)?$}
     puts usage
     exit 0
   elsif ARGV.length == 1
@@ -45,7 +45,7 @@ end
 
 def list_login_items_for_app(app_path)
   out, err, status = Open3.capture3(
-    '/usr/bin/osascript', '-e',
+    "/usr/bin/osascript", "-e",
     "tell application \"System Events\" to get the name of every login item " \
     "whose path contains \"#{File.basename(app_path)}\""
   )
@@ -53,7 +53,7 @@ def list_login_items_for_app(app_path)
     $stderr.puts err
     exit status.exitstatus
   end
-  puts out.gsub(', ', "\n")
+  puts out.gsub(", ", "\n")
 end
 
 ###

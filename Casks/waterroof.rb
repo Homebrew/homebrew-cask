@@ -7,7 +7,5 @@ cask 'waterroof' do
   homepage 'http://www.hanynet.com/waterroof/'
   license :oss
 
-  container nested: "WaterRoof #{version}.dmg"
-
   app 'WaterRoof.app'
 end

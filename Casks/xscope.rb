@@ -6,7 +6,7 @@ cask 'xscope' do
   appcast 'https://iconfactory.com/appcasts/xScope/appcast.xml',
           checkpoint: '6eec33a8cd45abf63e706e6292d25c0ae4cbbf273cafece2ffe3b73992c74cb0'
   name 'xScope'
-  homepage 'http://iconfactory.com/software/xscope'
+  homepage 'https://iconfactory.com/software/xscope'
   license :commercial
 
   app 'xScope.app'

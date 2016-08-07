@@ -5,8 +5,8 @@ cask 'pirateplayer' do
   url "http://pirateplay.se/static/pirateplayer_archive/pirateplayer-#{version.dots_to_underscores}.dmg"
   appcast 'https://github.com/jackuess/pirateplayer/releases.atom',
           checkpoint: 'f61d3c35b95a7581000877e4294b6f38fefa60a16646684f32aa08f3372ceabe'
-  name 'pirateplayer'
-  homepage 'https://pirateplay.se'
+  name 'Pirateplayer'
+  homepage 'http://pirateplay.se/'
   license :gpl
 
   auto_updates true

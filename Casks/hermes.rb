@@ -7,7 +7,7 @@ cask 'hermes' do
   appcast 'https://raw.githubusercontent.com/HermesApp/HermesApp.github.io/master/versions.xml',
           checkpoint: 'f02de008d4f279cd956d828a0b36386af81947a2b6cba42f5a79915c978318ab'
   name 'Hermes'
-  homepage 'https://hermesapp.org/'
+  homepage 'http://hermesapp.org/'
   license :mit
 
   auto_updates true

@@ -2,9 +2,9 @@ cask 'geany' do
   version '1.27'
   sha256 'ce629ba35aebbd71e054c3cd32984abc41f368f0d578864a2c1b3662f9b00ecc'
 
-  url "http://download.geany.org/geany-#{version}_osx.dmg"
+  url "https://download.geany.org/geany-#{version}_osx.dmg"
   name 'Geany'
-  homepage 'http://www.geany.org'
+  homepage 'https://www.geany.org/'
   license :gpl
 
   depends_on macos: '>= :lion'

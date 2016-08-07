@@ -4,7 +4,7 @@ cask 'focuswriter' do
 
   url 'http://gottcode.org/focuswriter/download/?os=mac'
   name 'FocusWriter'
-  homepage 'http://gottcode.org/focuswriter/'
+  homepage 'https://gottcode.org/focuswriter/'
   license :gpl
 
   app 'FocusWriter.app'

@@ -4,7 +4,7 @@ cask 'coda' do
 
   url "https://download.panic.com/coda/Coda%20#{version}.zip"
   name 'Panic Coda'
-  homepage 'https://panic.com/Coda/'
+  homepage 'https://panic.com/coda/'
   license :commercial
 
   depends_on macos: '>= :lion'

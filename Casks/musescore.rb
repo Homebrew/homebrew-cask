@@ -10,5 +10,5 @@ cask 'musescore' do
 
   depends_on macos: '>= :lion'
 
-  app "MuseScore #{version.to_i}.app"
+  app "MuseScore #{version.major}.app"
 end

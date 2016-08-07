@@ -1,12 +1,10 @@
 class Hbc::DSL::Appcast
+  attr_reader :parameters, :checkpoint
 
-  attr_reader :parameters, :checkpoint, :sha256
-
-  def initialize(uri, parameters={})
+  def initialize(uri, parameters = {})
     @parameters     = parameters
     @uri            = Hbc::UnderscoreSupportingURI.parse(uri)
     @checkpoint     = @parameters[:checkpoint]
-    @sha256         = @parameters[:sha256] # DEPRECATED
   end
 
   def to_yaml

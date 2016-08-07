@@ -11,5 +11,8 @@ cask 'zoomus' do
 
   uninstall delete: '/Applications/zoom.us.app'
 
-  zap       delete: '~/Desktop/Zoom'
+  zap       delete: [
+                      '~/Desktop/Zoom',
+                      '~/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin',
+                    ]
 end

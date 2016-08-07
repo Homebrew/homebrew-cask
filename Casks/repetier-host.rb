@@ -1,12 +1,12 @@
 cask 'repetier-host' do
-  version '0.56'
-  sha256 '0d4b43ec7bec5ac85133d00e1a2cf61956ef90abc255c253029e0ef26160adfa'
+  version '1.0.1'
+  sha256 '14e7cb94e9078df23c2b8ac96e559187062b6b159b351cc8c7eb3254cb89a706'
 
-  url "http://www.repetier.com/updates/rhm/Repetier-Host-Mac_#{version.gsub('.', '_')}.dmg"
-  appcast 'http://www.repetier.com/updates/rhm/rhm-appcast.xml',
-          checkpoint: '465e0b22421fa56a9da4c564d409da1242eb5ceee6789c040ceb5e75db5ffe85'
+  url "https://download1.repetier.com/files/host-mac/Repetier-Host-Mac_#{version.dots_to_underscores}.dmg"
+  appcast 'https://www.repetier.com/updates/rhm/rhm-appcast.xml',
+          checkpoint: 'ed6e7e102c9f09b9a6e53b4047779bb31bfd2ba71e47f1528f5f13471ba78492'
   name 'Repetier-Host'
-  homepage 'http://www.repetier.com/'
+  homepage 'https://www.repetier.com/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Repetier-Host Mac.app'

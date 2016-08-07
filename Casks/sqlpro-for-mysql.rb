@@ -5,7 +5,7 @@ cask 'sqlpro-for-mysql' do
   # d3fwkemdw8spx3.cloudfront.net/mysql was verified as official when first introduced to the cask
   url "https://d3fwkemdw8spx3.cloudfront.net/mysql/SQLProMySQL.#{version}.app.zip"
   name 'SQLPro for MySQL'
-  homepage 'http://www.mysqlui.com'
+  homepage 'https://www.mysqlui.com'
   license :commercial
 
   app 'SQLPro for MySQL.app'

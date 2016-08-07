@@ -4,7 +4,7 @@ cask 'launchrocket' do
 
   url "https://github.com/jimbojsb/launchrocket/releases/download/v#{version}/LaunchRocket.prefPane.zip"
   appcast 'https://github.com/jimbojsb/launchrocket/releases.atom',
-          checkpoint: 'f188364a9d817e1b0287d98a9966450735f0b29fc55ec7da05950391988e89cc'
+          checkpoint: '43d4921c43c512fb24d966f1811be784503dbe7244c498eab38ef5cdb5a30223'
   name 'LaunchRocket'
   homepage 'https://github.com/jimbojsb/launchrocket'
   license :mit

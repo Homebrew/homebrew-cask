@@ -27,9 +27,8 @@ cask 'minecraft-server' do
     set_permissions "#{staged_path}/minecraft-server", '+x'
     system 'minecraft-server'
 
-    file_name = "#{staged_path}/EULA.txt"
-    contents = File.read(file_name).gsub(%r{false}, 'TRUE')
-    File.open(file_name, 'w') { |file| file.puts contents }
+    eula_file = "#{staged_path}/eula.txt"
+    IO.write(eula_file, File.read(eula_file).gsub('false', 'TRUE'))
   end
 
   caveats do

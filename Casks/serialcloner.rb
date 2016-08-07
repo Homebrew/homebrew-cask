@@ -7,5 +7,5 @@ cask 'serialcloner' do
   homepage 'http://serialbasics.free.fr/Serial_Cloner.html'
   license :gratis
 
-  app "SerialCloner#{version.sub(%r{^(\d+)\.(\d+).*}, '\1-\2')}/SerialCloner #{version.gsub('.', '-')}.app"
+  app "SerialCloner#{version.sub(%r{^(\d+)\.(\d+).*}, '\1-\2')}/SerialCloner #{version.dots_to_hyphens}.app"
 end

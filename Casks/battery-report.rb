@@ -1,10 +1,10 @@
 cask 'battery-report' do
   version '1.2.0'
-  sha256 'd77969d003b940fbce8ca6c7899f1d8911b972a75f61c8ea12df2c42346b6fda'
+  sha256 '1ad72dc7c73c2a9e0d85b7ee6836348714fe00b51bd6c49352b0c01e40425015'
 
-  url 'https://www.dssw.co.uk/batteryreport/dsswbatteryreport.dmg'
+  url "https://www.dssw.co.uk/batteryreport/dsswbatteryreport-#{version.no_dots}.dmg"
   appcast 'https://version.dssw.co.uk/batteryreport/standard',
-          checkpoint: '0cfa65130f06fcfc93184858c4dde3337cea3175e8aaecf7a4f8664f600b171d'
+          checkpoint: '18be1911eb53fa3d0a20abfaa0ba2a74992eed5bb9bb3fc39b64184537ffb674'
   name 'Battery Report'
   homepage 'https://www.dssw.co.uk/batteryreport'
   license :commercial

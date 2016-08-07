@@ -1,10 +1,11 @@
 cask 'clipy' do
-  version '1.0.10'
-  sha256 '526b875be7770b2d8fde600fed663c4138ebf756935e2fa0f95763f22a3c791a'
+  version '1.1.0'
+  sha256 '8a3e55e455457f9d7b763b38a30e69049576789ee39a8e501c3d099d2f377fc4'
 
+  # github.com/Clipy/Clipy was verified as official when first introduced to the cask
   url "https://github.com/Clipy/Clipy/releases/download/#{version}/Clipy_#{version}.dmg"
   appcast 'https://clipy-app.com/appcast.xml',
-          checkpoint: '44203442d251e8975e00bbd8fc79ecb31ebf5e20c3251b95fb965280c6d1cff6'
+          checkpoint: 'dab5e440914f665d688d11716ae191474fcb65042a68d65840df2626a80823de'
   name 'Clipy'
   homepage 'https://clipy-app.com/'
   license :mit

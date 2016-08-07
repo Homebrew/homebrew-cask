@@ -4,7 +4,7 @@ cask 'launchcontrol' do
 
   url "http://www.soma-zone.com/download/files/LaunchControl_#{version}.tar.bz2"
   appcast 'http://www.soma-zone.com/LaunchControl/a/appcast.xml',
-          checkpoint: '1fe46ef5cdc8804c5aeb8040993669617af155db2d7c5e2e7f9679e4a592a294'
+          checkpoint: '9fd1cdaa0f71541425a7944d91d698983100016b76631663b7ab9bef8e68b0e8'
   name 'LaunchControl'
   homepage 'http://www.soma-zone.com/LaunchControl/'
   license :commercial

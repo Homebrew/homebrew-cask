@@ -8,6 +8,7 @@ cask 'google-chrome' do
   license :gratis
 
   auto_updates true
+  depends_on macos: '>= :mavericks'
 
   app 'Google Chrome.app'
 

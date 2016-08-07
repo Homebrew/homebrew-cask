@@ -17,7 +17,7 @@ cask 'sage' do
   end
 
   name 'Sage'
-  homepage 'http://www.sagemath.org/'
+  homepage 'https://www.sagemath.org/'
   license :gpl
 
   depends_on macos: '>= :lion'

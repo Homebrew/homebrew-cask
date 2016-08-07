@@ -8,9 +8,10 @@
 # shellcheck disable=SC1090
 . "${TRAVIS_BUILD_DIR}/ci/travis/helpers.sh"
 
-enter_build_step
-
 header 'Running before_install.sh...'
+
+# https://github.com/rvm/rvm/pull/3627
+run rvm get head
 
 # unset rvm hook functions
 run unset -f cd gem
@@ -61,10 +62,8 @@ run brew update
 run brew uninstall --force brew-cask
 
 # mirror the repo as a tap, then run the build from there
-run export CASK_TAP_DIR='/usr/local/Library/Taps/caskroom/homebrew-cask'
+run export CASK_TAP_DIR="/usr/local/Library/Taps/${TRAVIS_REPO_SLUG}"
 run mkdir -p "${CASK_TAP_DIR}"
 run rsync -az --delete "${TRAVIS_BUILD_DIR}/" "${CASK_TAP_DIR}/"
 run export TRAVIS_BUILD_DIR="${CASK_TAP_DIR}"
 run cd "${CASK_TAP_DIR}" || exit 1
-
-exit_build_step

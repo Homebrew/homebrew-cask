@@ -8,5 +8,5 @@ cask 'pokertracker' do
   homepage 'https://www.pokertracker.com'
   license :commercial
 
-  app "PokerTracker #{version.to_i}.app"
+  app "PokerTracker #{version.major}.app"
 end

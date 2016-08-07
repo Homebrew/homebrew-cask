@@ -12,7 +12,7 @@ cask 'clementine' do
 
   conflicts_with cask: 'caskroom/versions/clementine-rc'
 
-  app 'Clementine.app'
+  app 'clementine.app'
 
   zap delete: [
                 '~/Library/Application Support/Clementine',

@@ -7,5 +7,5 @@ cask 'treemaker' do
   homepage 'http://www.langorigami.com/article/treemaker'
   license :gpl
 
-  app "TreeMaker #{version.to_i}.app"
+  app "TreeMaker #{version.major}.app"
 end

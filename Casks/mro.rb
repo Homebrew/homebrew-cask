@@ -1,6 +1,6 @@
 cask 'mro' do
-  version '3.2.3'
-  sha256 '86637ae5a19067a61c2a190e90ebd8b5fe1d895069975ca67cfee0fbadda50ef'
+  version '3.2.4'
+  sha256 'bd3e42607b59d98b51cf5896d359580872e5971c05bfa82f83930e4fbfbc5c16'
 
   url "https://mran.revolutionanalytics.com/install/mro/#{version}/MRO-#{version}-OSX.pkg"
   name 'Microsoft R Open'

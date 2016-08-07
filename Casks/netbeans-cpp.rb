@@ -1,6 +1,6 @@
 cask 'netbeans-cpp' do
   version '8.1'
-  sha256 'c74d57fce7161b0d98e4b90757e63b76aefd59a89c40077945d48e9f40a53a5c'
+  sha256 'b955f2bf13e5392bb190eb70b22c496f8aa924841e3a0056722e1e98dd64b2f6'
 
   url "http://download.netbeans.org/netbeans/#{version}/final/bundles/netbeans-#{version}-cpp-macosx.dmg"
   name 'NetBeans IDE for C/C++'

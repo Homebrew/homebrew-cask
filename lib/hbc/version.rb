@@ -1,4 +1,4 @@
-HBC_VERSION = '0.60.0'
+HBC_VERSION = "0.60.0".freeze
 
 module Hbc
   def self.full_version

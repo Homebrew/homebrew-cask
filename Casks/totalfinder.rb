@@ -7,6 +7,8 @@ cask 'totalfinder' do
   homepage 'http://totalfinder.binaryage.com'
   license :commercial
 
+  depends_on macos: '>= :mavericks'
+
   pkg 'TotalFinder.pkg'
 
   uninstall pkgutil: 'com.binaryage.pkg.totalfinder.app',

@@ -4,7 +4,7 @@ cask 'circle-wavetable-generator' do
 
   url 'http://futureaudioworkshop.com/downloads/extras/Circle-Wavetable-Generator.dmg'
   name 'Future Audio Workshop Circle Wavetable Generator'
-  homepage 'http://www.futureaudioworkshop.com/circle/downloads/'
+  homepage 'https://www.futureaudioworkshop.com/circle/downloads/'
   license :commercial
 
   app 'Circle Wavetable Generator.app'

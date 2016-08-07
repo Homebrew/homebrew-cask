@@ -4,7 +4,7 @@ cask 'paye-tools' do
 
   url "https://www.gov.uk/government/uploads/uploaded/hmrc/payetools-rti-#{version}-osx.zip"
   name 'Basic PAYE Tools'
-  homepage 'https://www.hmrc.gov.uk/payerti/payroll/bpt/paye-tools.htm'
+  homepage 'https://www.gov.uk/basic-paye-tools'
   license :gratis
 
   installer script: "payetools-rti-#{version}-osx.app/Contents/MacOS/osx-intel",

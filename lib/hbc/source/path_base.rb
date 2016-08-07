@@ -1,13 +1,11 @@
-require 'rubygems'
+require "rubygems"
 
 class Hbc::Source::PathBase
-
   # derived classes must define method self.me?
 
   def self.path_for_query(query)
-    path_string = "#{query}"
-    path_string.concat('.rb') unless path_string.match(%r{\.rb\Z}i)
-    Pathname.new(path_string)
+    query_string = query.to_s
+    Pathname.new(query_string.end_with?(".rb") ? query_string : query_string + ".rb")
   end
 
   attr_reader :path
@@ -17,9 +15,9 @@ class Hbc::Source::PathBase
   end
 
   def load
-    raise Hbc::CaskError.new "File '#{path}' does not exist"      unless path.exist?
-    raise Hbc::CaskError.new "File '#{path}' is not readable"     unless path.readable?
-    raise Hbc::CaskError.new "File '#{path}' is not a plain file" unless path.file?
+    raise Hbc::CaskError, "File '#{path}' does not exist"      unless path.exist?
+    raise Hbc::CaskError, "File '#{path}' is not readable"     unless path.readable?
+    raise Hbc::CaskError, "File '#{path}' is not a plain file" unless path.file?
     load_cask
   end
 
@@ -38,10 +36,10 @@ class Hbc::Source::PathBase
   end
 
   def cask_contents
-    File.open(path, 'rb') do |handle|
+    File.open(path, "rb") do |handle|
       contents = handle.read
       if defined?(Encoding)
-        contents.force_encoding('UTF-8')
+        contents.force_encoding("UTF-8")
       else
         contents
       end
@@ -62,6 +60,6 @@ class Hbc::Source::PathBase
   end
 
   def cask_token
-    path.basename.to_s.sub(/\.rb/, '')
+    path.basename.to_s.sub(%r{\.rb}, "")
   end
 end

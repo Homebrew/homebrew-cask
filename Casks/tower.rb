@@ -1,11 +1,11 @@
 cask 'tower' do
-  version '2.3.4-305-ab500cf4'
-  sha256 '30fc4460975cb6bc37b7abb1cb742c59172cc672c90708f9d7d08fc6c4a32dd8'
+  version '2.4.0-315-880ab34c'
+  sha256 '20a0aff8acad6bffe84914601ded9a39143aee86db2ca4a84d01951ee0e0367b'
 
-  # amazonaws.com/apps/tower2-mac was verified as official when first introduced to the cask
-  url "https://fournova-app-updates.s3.amazonaws.com/apps/tower#{version.major}-mac/#{version.sub(%r{^.*?-}, '')}/Tower-#{version.to_i}-#{version.sub(%r{-[^-]*$}, '')}.zip"
+  # fournova-app-updates.s3.amazonaws.com was verified as official when first introduced to the cask
+  url "https://fournova-app-updates.s3.amazonaws.com/apps/tower#{version.major}-mac/#{version.sub(%r{^[^\-]+\-}, '')}/Tower-#{version.major}-#{version.sub(%r{-[^-]+$}, '')}.zip"
   appcast "https://updates.fournova.com/updates/tower#{version.major}-mac/stable",
-          checkpoint: '496cf7abea4426c9fd7396b64e0a717e8a2b67eb258e89a0a0a05a2a6bd390a7'
+          checkpoint: '208d32f8a573315ceffcd490e4524ff3d389781289df8a9cd2cf3779cd8f88e3'
   name 'Tower'
   homepage 'https://www.git-tower.com/'
   license :commercial

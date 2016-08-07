@@ -1,5 +1,7 @@
+require "hbc/artifact/moved"
+
 class Hbc::Artifact::Prefpane < Hbc::Artifact::Moved
   def self.artifact_english_name
-    'Preference Pane'
+    "Preference Pane"
   end
 end

@@ -1,6 +1,6 @@
 cask 'microsoft-lync' do
-  version '14.3.3_160216'
-  sha256 '1ba21101c1ba318608f75cfc312ad3886ceb6a82102144678a2f195c49eed11d'
+  version '14.4.1_160608'
+  sha256 '8aa4dd7d17d82f454b78da41c7be9344b49d9b9e8734094fc61faf362bc89291'
 
   url "https://download.microsoft.com/download/5/0/0/500C7E1F-3235-47D4-BC11-95A71A1BA3ED/lync_#{version}.dmg"
   name 'Microsoft Lync 2011'

@@ -12,6 +12,7 @@ cask 'sts' do
     end
   end
 
+  # springsource.com was verified as official when first introduced to the cask
   url "http://dist.springsource.com/release/STS/#{version}/dist/e#{Utils.eclipse_version_major_minor}/spring-tool-suite-#{version}-e#{Utils.eclipse_version}-macosx-cocoa-x86_64.tar.gz"
   name 'Spring Tool Suite'
   homepage 'https://spring.io/tools/sts'

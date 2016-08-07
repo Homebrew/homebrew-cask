@@ -25,10 +25,10 @@ cask 'displaylink' do
                          'com.displaylink.displaylinkdriverunsigned',
                        ],
             # 'kextunload -b com.displaylink.driver.DisplayLinkDriver' causes kernel panic
-            # :kext => [
-            #            'com.displaylink.driver.DisplayLinkDriver',
-            #            'com.displaylink.dlusbncm'
-            #           ],
+            # kext:      [
+            #              'com.displaylink.driver.DisplayLinkDriver',
+            #              'com.displaylink.dlusbncm'
+            #            ],
             launchctl: [
                          'com.displaylink.useragent-prelogin',
                          'com.displaylink.useragent',

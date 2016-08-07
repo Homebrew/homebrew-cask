@@ -1,9 +1,9 @@
-require 'test_helper'
+require "test_helper"
 
 describe Hbc::Container::Dmg do
   describe "mount!" do
     it "does not store nil mounts for dmgs with extra data" do
-      transmission = Hbc.load('local-transmission')
+      transmission = Hbc.load("local-transmission")
 
       dmg = Hbc::Container::Dmg.new(
         transmission,

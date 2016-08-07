@@ -1,8 +1,8 @@
 cask 'blast2go' do
-  version '3.1'
-  sha256 '7160b1973437474508a1522cce9bee74e5ddd8f109fc17ddca81e3b914e819d6'
+  version '3.3'
+  sha256 'af181ff39556e15dc012a45a07744475f284e730095f39cc892d30d7342aa2e9'
 
-  url "http://download.blast2go.com/html/software/blast2go/latest/#{version.gsub('.', '_')}/Blast2GO_macos_#{version.gsub('.', '_')}.dmg"
+  url "http://download.blast2go.com/html/software/blast2go/latest/#{version.dots_to_underscores}/Blast2GO_macos_#{version.dots_to_underscores}.dmg"
   name 'Blast2GO'
   homepage 'https://www.blast2go.com/'
   license :freemium

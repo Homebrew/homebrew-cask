@@ -5,14 +5,14 @@ cask 'textwrangler' do
 
     url "http://pine.barebones.com/files/TextWrangler_#{version}.dmg"
   else
-    version '5.0.2'
-    sha256 '29484008bc95aee2e2731781b514cd60ca1e19fdb5a4b575ac5dbbf79472c346'
+    version '5.5.1'
+    sha256 '000f69d1433886e31c9e12168e3d4d7cd0d9c06873016f487f8dbbb7bfba425a'
 
     # amazonaws.com/BBSW-download was verified as official when first introduced to the cask
     url "https://s3.amazonaws.com/BBSW-download/TextWrangler_#{version}.dmg"
   end
   appcast 'https://versioncheck.barebones.com/TextWrangler.xml',
-          checkpoint: '8f6727cab0d906edadf8e6860ca81df08c743845296321b6b4e98bde03852096'
+          checkpoint: '02c975f56071265422e1b0b0f0ae42dd26c88c3e6135b0938d14ed8dbb9744c5'
   name 'TextWrangler'
   homepage 'http://www.barebones.com/products/textwrangler/'
   license :gratis

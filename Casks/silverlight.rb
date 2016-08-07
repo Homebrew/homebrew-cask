@@ -1,8 +1,8 @@
 cask 'silverlight' do
-  version '5.1.41212.0'
+  version '5.1.50428.0'
   sha256 :no_check # required as upstream package is updated in-place
 
-  url 'https://download.microsoft.com/download/5/3/D/53D3880B-25F8-4714-A4AC-E463A492F96E/41212.00/Silverlight.dmg'
+  url 'https://download.microsoft.com/download/1/F/6/1F637DB3-8EF9-4D96-A8F1-909DFD7C5E69/50428.00/Silverlight.dmg'
   name 'Silverlight'
   homepage 'https://www.microsoft.com/silverlight/'
   license :gratis

@@ -59,21 +59,21 @@ SourceForge and OSDN (formerly SourceForge.JP) projects are common ways to distr
 We prefer URLs of this format:
 
 ```
-http://downloads.sourceforge.net/sourceforge/$PROJECTNAME/$FILENAME.$EXT
+https://downloads.sourceforge.net/{{project_name}}/{{filename}}.{{ext}}
 ```
 
 Or, if it’s from [OSDN](https://osdn.jp/):
 
 ```
-http://$STRING.osdn.jp/$PROJECTNAME/$RELEASEID/$FILENAME.$EXT
+http://{{subdomain}}.osdn.jp/{{project_name}}/{{release_id}}/{{filename}}.{{ext}}
 ```
 
-`$STRING` is typically of the form `dl` or `$USER.dl`.
+`{{subdomain}}` is typically of the form `dl` or `{{user}}.dl`.
 
 If these formats are not available, and the application is macOS-exclusive (otherwise a command-line download defaults to the Windows version) we prefer the use of this format:
 
 ```
-http://sourceforge.net/projects/$PROJECTNAME/files/latest/download
+https://sourceforge.net/projects/{{project_name}}/files/latest/download
 ```
 
 ## Personal Hosting Such as Dropbox
