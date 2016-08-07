@@ -1,11 +1,11 @@
-cask :v1 => 'bill' do
+cask 'bill' do
   version :latest
   sha256 :no_check
 
-  # myownapp.com is the official download host per the vendor homepage
-  url 'http://myownapp.com/downloads/Bill2.zip'
+  # myownapp.com was verified as official when first introduced to the cask
+  url 'https://myownapp.com/downloads/Bill2.zip'
   name 'Bill'
-  homepage 'http://billtheapp.com/'
+  homepage 'https://billtheapp.com/'
   license :commercial
 
   app 'Bill 2.app'

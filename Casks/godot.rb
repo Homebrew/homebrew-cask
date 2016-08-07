@@ -1,9 +1,11 @@
-cask :v1 => 'godot' do
-  version '1.1'
-  sha256 'b09dc985b08fa979a8ee830806e2fae2cf0b8a1c3b0da80f6881c3451f670f3d'
+cask 'godot' do
+  version '2.0.3'
+  sha256 '477ef5de5909a4b42fb408327554252ce8da2ede8ba522f36f724d7cca1cdc4b'
 
-  # bintray.com is the official download host per the vendor homepage is not found anymore
-  url "https://bintray.com/artifact/download/punto/godot-relese/GodotOSX32-#{version}stable.zip"
+  # downloads.tuxfamily.org/godotengine was verified as official when first introduced to the cask
+  url "https://downloads.tuxfamily.org/godotengine/#{version}/Godot_v#{version}_stable_osx64.zip"
+  appcast 'https://github.com/godotengine/godot/releases.atom',
+          checkpoint: 'eb4ed6f28e234b348b78db937c4ee160150dd41b7a12e13b85d8a04207107afe'
   name 'Godot Engine'
   homepage 'http://www.godotengine.org/'
   license :mit

@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 # monkeypatch for testing
 class Hbc::CLI::Home
@@ -20,25 +20,25 @@ describe Hbc::CLI::Home do
     Hbc::CLI::Home.reset!
   end
 
-  it 'opens the homepage for the specified Cask' do
-    Hbc::CLI::Home.run('alfred')
+  it "opens the homepage for the specified Cask" do
+    Hbc::CLI::Home.run("alfred")
     Hbc::CLI::Home.system_commands.must_equal [
-      ['/usr/bin/open', '--', 'http://www.alfredapp.com/']
-    ]
+                                                ["/usr/bin/open", "--", "https://www.alfredapp.com/"],
+                                              ]
   end
 
-  it 'works for multiple Casks' do
-    Hbc::CLI::Home.run('alfred', 'adium')
+  it "works for multiple Casks" do
+    Hbc::CLI::Home.run("alfred", "adium")
     Hbc::CLI::Home.system_commands.must_equal [
-      ['/usr/bin/open', '--', 'http://www.alfredapp.com/'],
-      ['/usr/bin/open', '--', 'https://www.adium.im/']
-    ]
+                                                ["/usr/bin/open", "--", "https://www.alfredapp.com/"],
+                                                ["/usr/bin/open", "--", "https://www.adium.im/"],
+                                              ]
   end
 
   it "opens the project page when no Cask is specified" do
     Hbc::CLI::Home.run
     Hbc::CLI::Home.system_commands.must_equal [
-      ['/usr/bin/open', '--', 'http://caskroom.io/'],
-    ]
+                                                ["/usr/bin/open", "--", "http://caskroom.io/"],
+                                              ]
   end
 end

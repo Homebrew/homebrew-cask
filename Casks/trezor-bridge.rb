@@ -1,8 +1,8 @@
-cask :v1 => 'trezor-bridge' do
-  version '1.1.0'
-  sha256 '7002758ec4615130a163b8b0046fa63d7c0ac8ce67aa4ffc1a5dc0e07af6bf72'
+cask 'trezor-bridge' do
+  version '1.1.3'
+  sha256 'f7c80f87c2e7cdc6fcc066d01800360a704bb1ef7a00aff020fed858131838f7'
 
-  # amazonaws.com is the official download host per the vendor homepage
+  # mytrezor.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://mytrezor.s3.amazonaws.com/bridge/#{version}/trezor-bridge-#{version}.pkg"
   name 'TREZOR Bridge'
   homepage 'https://mytrezor.com/'
@@ -10,9 +10,6 @@ cask :v1 => 'trezor-bridge' do
 
   pkg "trezor-bridge-#{version}.pkg"
 
-  uninstall :pkgutil   => 'com.bitcointrezor.pkg.TREZORBridge',
-            :launchctl => 'com.bitcointrezor.trezorBridge.trezord'
-
-  depends_on :formula => 'protobuf'
-  depends_on :formula => 'libmicrohttpd'
+  uninstall pkgutil:   'com.bitcointrezor.pkg.TREZORBridge',
+            launchctl: 'com.bitcointrezor.trezorBridge.trezord'
 end

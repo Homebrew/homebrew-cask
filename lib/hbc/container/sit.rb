@@ -1,8 +1,8 @@
+require "hbc/container/generic_unar"
+
 class Hbc::Container::Sit < Hbc::Container::GenericUnar
   def self.me?(criteria)
-    criteria.file.include? 'application/x-stuffit' and
-      ! criteria.lsar.nil? and
-        criteria.lsar.split("\n").first.split(':').last.include?('StuffIt') and
-          super
+    criteria.magic_number(%r{^StuffIt}n) &&
+      super
   end
 end

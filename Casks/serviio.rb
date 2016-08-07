@@ -1,6 +1,6 @@
-cask :v1 => 'serviio' do
-  version '1.5.1'
-  sha256 '65964602b8ea1ddc29dfefa1452610b84884caa996c02342cc9ba35d5a34d0f4'
+cask 'serviio' do
+  version '1.6'
+  sha256 'c6305ef40bb39653a46adb35341511a15a17133c6145e8cce74bae9a96010ebd'
 
   url "http://download.serviio.org/releases/serviio-#{version}-osx.tar.gz"
   name 'Serviio'

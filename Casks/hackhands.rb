@@ -1,8 +1,8 @@
-cask :v1 => 'hackhands' do
+cask 'hackhands' do
   version '1.4.11'
-  sha256 '915269b78f2f3fa25bfbd878cdbaccef69420b5c6d3b7f07a0b3219ead782dd7'
+  sha256 '638d4726d721592b4147403402b4b51bcdc848621f83d665320c03d44457c616'
 
-  # amazonaws.com is the official download host per the vendor homepage
+  # desktop.hackhands.com.s3-website-us-west-1.amazonaws.com was verified as official when first introduced to the cask
   url "http://desktop.hackhands.com.s3-website-us-west-1.amazonaws.com/osx/#{version}/HackHands.zip"
   name 'HackHands'
   homepage 'https://hackhands.com/desktop'

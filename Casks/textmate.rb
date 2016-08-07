@@ -1,23 +1,25 @@
-cask :v1 => 'textmate' do
-  version '2.0-beta.8'
-  sha256 'd3a55811439bb9878ce591e906c3540bf5ef18e6f46b224a57640c55d303c4f0'
+cask 'textmate' do
+  version '2.0-beta.11.12'
+  sha256 '451dc7b097e6167e51ebff692e60817c4c7668d8614fd2ec7dfe451a7923edf8'
 
-  # textmate.org is the official download host per the vendor homepage
-  url "https://api.textmate.org/downloads/TextMate_#{version}.tbz"
+  # github.com/textmate/textmate was verified as official when first introduced to the cask
+  url "https://github.com/textmate/textmate/releases/download/v#{version}/TextMate_#{version}.tbz"
+  appcast 'https://github.com/textmate/textmate/releases.atom',
+          checkpoint: 'c678b636579580a930dc6b261d7036cbacf031ba75c07d5c5699195872e1c721'
   name 'TextMate'
-  homepage 'http://macromates.com/'
+  homepage 'https://macromates.com/'
   license :gpl
 
   app 'TextMate.app'
-  binary 'TextMate.app/Contents/Resources/mate'
+  binary "#{appdir}/TextMate.app/Contents/Resources/mate"
 
-  zap :delete => [
-                  '~/Library/Application Support/Avian',
-                  '~/Library/Application Support/TextMate',
-                  '~/Library/Preferences/com.macromates.TextMate.preview.LSSharedFileList.plist',
-                  '~/Library/Preferences/com.macromates.TextMate.preview.plist',
-                  '~/Library/Preferences/com.macromates.textmate.webpreview.plist',
-                  '~/Library/Preferences/com.macromates.textmate.plist',
-                  '~/Library/Preferences/com.macromates.textmate.latex_config.plist',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Avian',
+                '~/Library/Application Support/TextMate',
+                '~/Library/Preferences/com.macromates.TextMate.preview.LSSharedFileList.plist',
+                '~/Library/Preferences/com.macromates.TextMate.preview.plist',
+                '~/Library/Preferences/com.macromates.textmate.webpreview.plist',
+                '~/Library/Preferences/com.macromates.textmate.plist',
+                '~/Library/Preferences/com.macromates.textmate.latex_config.plist',
+              ]
 end

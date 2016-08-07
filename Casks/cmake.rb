@@ -1,19 +1,19 @@
-cask :v1 => 'cmake' do
-  version '3.2.2'
-  sha256 '430b9f94a363ff19d5f66eacc5d6bc55bd9dac75d6fc6bcb813d8b451c1475c4'
+cask 'cmake' do
+  version '3.6.1'
+  sha256 'bcf1dc55040de3a2a16b040c3c2c82bffe08d6a7bc8406903444061fe869d6bc'
 
-  url "http://www.cmake.org/files/v#{version.sub(%r{\.\d+$},'')}/cmake-#{version}-Darwin-x86_64.dmg"
+  url "https://www.cmake.org/files/v#{version.major_minor}/cmake-#{version}-Darwin-x86_64.dmg"
   name 'CMake'
-  homepage 'http://cmake.org'
+  homepage 'https://cmake.org'
   license :bsd
 
-  app 'CMake.app'
-  binary 'CMake.app/Contents/bin/cmake'
-  binary 'CMake.app/Contents/bin/ccmake'
-  binary 'CMake.app/Contents/bin/cmakexbuild'
-  binary 'CMake.app/Contents/bin/cpack'
-  binary 'CMake.app/Contents/bin/ctest'
-  binary 'CMake.app/Contents/bin/cmake-gui'
+  conflicts_with formula: 'cmake'
 
-  conflicts_with :formula => 'cmake'
+  app 'CMake.app'
+  binary "#{appdir}/CMake.app/Contents/bin/cmake"
+  binary "#{appdir}/CMake.app/Contents/bin/ccmake"
+  binary "#{appdir}/CMake.app/Contents/bin/cmakexbuild"
+  binary "#{appdir}/CMake.app/Contents/bin/cpack"
+  binary "#{appdir}/CMake.app/Contents/bin/ctest"
+  binary "#{appdir}/CMake.app/Contents/bin/cmake-gui"
 end

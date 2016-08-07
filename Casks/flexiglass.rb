@@ -1,16 +1,16 @@
-cask :v1 => 'flexiglass' do
-  version '1.6-12312'
-  sha256 '1fbe8aeac30254487cf69ccc556f8a214acfdcc340edc885697e4d0618a95641'
+cask 'flexiglass' do
+  version '1.6.1-12795'
+  sha256 'e929497301312054866b809fbe64ff06a33ad6bc188e4cb64da980aa6085496f'
 
-  url "http://downloads.nulana.com/flexiglass/Flexiglass-#{version}.zip"
-  appcast 'http://downloads.nulana.com/flexiglass/appcast.xml',
-          :sha256 => 'f70568526030303c5d319daa0823eb80b24715e9abbcfb7952ad3b716fd6276b'
+  url "https://downloads.nulana.com/flexiglass/Flexiglass-#{version}.zip"
+  appcast 'https://downloads.nulana.com/flexiglass/appcast.xml',
+          checkpoint: '9f2f95c38e5d941d943e25e0b4f5b6649005a33818299de43c28d98935152b48'
   name 'Flexiglass'
-  homepage 'http://nulana.com/flexiglass/'
+  homepage 'https://nulana.com/flexiglass/'
   license :commercial
 
-  depends_on :macos => '>= :snow_leopard'
-  depends_on :arch => :intel
+  depends_on macos: '>= :snow_leopard'
+  depends_on arch: :intel
 
   app 'Flexiglass.app'
 end

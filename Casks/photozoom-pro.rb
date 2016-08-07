@@ -1,4 +1,4 @@
-cask :v1 => 'photozoom-pro' do
+cask 'photozoom-pro' do
   version :latest
   sha256 :no_check
 

@@ -1,10 +1,10 @@
-cask :v1 => 'xscreensaver' do
-  version '5.33'
-  sha256 'ba83ae56a7c011c9bd39824b94679e1082375e7d0bc2ebe0afe813147fe38c11'
+cask 'xscreensaver' do
+  version '5.35'
+  sha256 '6ad392df82005b7a6915ebe18eb340e2fc8e1e1dc7d8e0e8a2822be1377f23b7'
 
-  url "http://www.jwz.org/xscreensaver/xscreensaver-#{version}.dmg"
+  url "https://www.jwz.org/xscreensaver/xscreensaver-#{version}.dmg"
   name 'XScreenSaver'
-  homepage 'http://www.jwz.org/xscreensaver/'
+  homepage 'https://www.jwz.org/xscreensaver/'
   license :bsd
 
   screen_saver 'Screen Savers/Abstractile.saver'
@@ -62,7 +62,9 @@ cask :v1 => 'xscreensaver' do
   screen_saver 'Screen Savers/Distort.saver'
   screen_saver 'Screen Savers/DNAlogo.saver'
   screen_saver 'Screen Savers/Drift.saver'
+  screen_saver 'Screen Savers/DymaxionMap.saver'
   screen_saver 'Screen Savers/Endgame.saver'
+  screen_saver 'Screen Savers/EnergyStream.saver'
   screen_saver 'Screen Savers/Engine.saver'
   screen_saver 'Screen Savers/Epicycle.saver'
   screen_saver 'Screen Savers/Eruption.saver'
@@ -105,6 +107,7 @@ cask :v1 => 'xscreensaver' do
   screen_saver 'Screen Savers/Hexadrop.saver'
   screen_saver 'Screen Savers/Hilbert.saver'
   screen_saver 'Screen Savers/Hopalong.saver'
+  screen_saver 'Screen Savers/Hydrostat.saver'
   screen_saver 'Screen Savers/Hypertorus.saver'
   screen_saver 'Screen Savers/Hypnowheel.saver'
   screen_saver 'Screen Savers/IFS.saver'
@@ -165,6 +168,7 @@ cask :v1 => 'xscreensaver' do
   screen_saver 'Screen Savers/Qix.saver'
   screen_saver 'Screen Savers/QuasiCrystal.saver'
   screen_saver 'Screen Savers/Queens.saver'
+  screen_saver 'Screen Savers/RaverHoop.saver'
   screen_saver 'Screen Savers/RDbomb.saver'
   screen_saver 'Screen Savers/Ripples.saver'
   screen_saver 'Screen Savers/Rocks.saver'
@@ -205,6 +209,7 @@ cask :v1 => 'xscreensaver' do
   screen_saver 'Screen Savers/TronBit.saver'
   screen_saver 'Screen Savers/Truchet.saver'
   screen_saver 'Screen Savers/Twang.saver'
+  screen_saver 'Screen Savers/Unicrud.saver'
   screen_saver 'Screen Savers/UnknownPleasures.saver'
   screen_saver 'Screen Savers/Vermiculate.saver'
   screen_saver 'Screen Savers/Voronoi.saver'

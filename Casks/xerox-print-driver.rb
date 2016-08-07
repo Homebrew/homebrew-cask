@@ -1,8 +1,7 @@
-cask :v1 => 'xerox-print-driver' do
+cask 'xerox-print-driver' do
   name 'Xerox Print Driver'
   homepage 'http://www.support.xerox.com/support/colorqube-8900/downloads'
   license :gratis
-  tags :vendor => 'Xerox'
 
   if MacOS.release <= :leopard
     version '2.94.3'
@@ -22,13 +21,13 @@ cask :v1 => 'xerox-print-driver' do
     url "http://download.support.xerox.com/pub/drivers/CQ8570/drivers/macosx1010/ar/XeroxPrintDriver.#{version}.dmg"
   end
 
-  pkg "Xerox Print Driver #{version.sub(/_.*/,'')}.pkg"
+  pkg "Xerox Print Driver #{version.sub(%r{_.*}, '')}.pkg"
 
-  uninstall :pkgutil => [
-                         'com.xerox.installer.addprintqueue',
-                         'com.xerox.installer.finishup',
-                         'com.xerox.print.xeroxPrinter.pkg'
-                        ]
+  uninstall pkgutil: [
+                       'com.xerox.installer.addprintqueue',
+                       'com.xerox.installer.finishup',
+                       'com.xerox.print.xeroxPrinter.pkg',
+                     ]
 
-  zap :rmdir => '/Library/Application Support/Xerox'
+  zap rmdir: '/Library/Application Support/Xerox'
 end

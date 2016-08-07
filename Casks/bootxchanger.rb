@@ -1,10 +1,10 @@
-cask :v1 => 'bootxchanger' do
+cask 'bootxchanger' do
   version '2.0'
   sha256 'cfb05680ab6a7d0b1793a33135dd15562a7b5fd59bb1ebf3ad6067c2c9fad6c1'
 
   url "http://namedfork.net/_media/bootxchanger_#{version}.dmg"
   appcast 'http://swupdate.namedfork.net/bootxchanger.xml',
-          :sha256 => 'afbae3b2a378ebb18f1668c062ba48436e956cad840fcc86cba610d351931187'
+          checkpoint: '1c3c0913f51c0d8dd6b8320460e3be60f9541f62dab75f56e5befb690a7566dc'
   name 'BootXChanger'
   homepage 'http://namedfork.net/bootxchanger'
   license :gpl

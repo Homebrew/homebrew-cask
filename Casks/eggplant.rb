@@ -1,4 +1,4 @@
-cask :v1 => 'eggplant' do
+cask 'eggplant' do
   version :latest
   sha256 :no_check
 

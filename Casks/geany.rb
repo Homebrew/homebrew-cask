@@ -1,13 +1,13 @@
-cask :v1 => 'geany' do
-  version '1.25'
-  sha256 '4b1fbe9a3abfe0c40da90542ca7fadac6c1147f73263f1f5118cc94fc4d2b85d'
+cask 'geany' do
+  version '1.27'
+  sha256 'ce629ba35aebbd71e054c3cd32984abc41f368f0d578864a2c1b3662f9b00ecc'
 
-  url "http://download.geany.org/geany-#{version}_osx.dmg"
+  url "https://download.geany.org/geany-#{version}_osx.dmg"
   name 'Geany'
-  homepage 'http://www.geany.org'
+  homepage 'https://www.geany.org/'
   license :gpl
 
-  app 'Geany.app'
+  depends_on macos: '>= :lion'
 
-  depends_on :macos => '>= :lion'
+  app 'Geany.app'
 end

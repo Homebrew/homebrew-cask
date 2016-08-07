@@ -1,9 +1,10 @@
-cask :v1 => 'fauxpas' do
-  version '1.5'
-  sha256 'ce985584daba2c5f98a66f03af6c8176247edd93332dec37b52938db4b49489a'
+cask 'fauxpas' do
+  version '1.6.2'
+  sha256 '2723b5a420d2ec37debe1511ef058370f356ec3decfb6bd74c10e28de192028a'
 
   url "http://files.fauxpasapp.com/FauxPas-#{version}.tar.bz2"
-  appcast 'http://api.fauxpasapp.com/appcast'
+  appcast 'http://files.fauxpasapp.com/appcast.xml',
+          checkpoint: '4ed08adb98070de7a9889ed57106241b073b01fb107d2a22adfd86e995b1feb9'
   name 'Faux Pas'
   homepage 'http://fauxpasapp.com'
   license :commercial

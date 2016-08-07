@@ -1,10 +1,10 @@
-cask :v1 => 'opera' do
-  version '32.0.1948.69'
-  sha256 'ab4e724b505b346bd310bb7e8b5dc0be53d3c6b569b76cf922e32b4d7c8ad7cd'
+cask 'opera' do
+  version '39.0.2256.43'
+  sha256 'decc544ad2e76cb4fb8e1d7968fe4dc973d30a9c4cd1678e9b11479ec543433a'
 
-  url "http://get.geo.opera.com/pub/opera/desktop/#{version}/mac/Opera_#{version}_Setup.dmg"
+  url "https://get.geo.opera.com/pub/opera/desktop/#{version}/mac/Opera_#{version}_Setup.dmg"
   name 'Opera'
-  homepage 'http://www.opera.com/'
+  homepage 'https://www.opera.com/'
   license :gratis
 
   app 'Opera.app'

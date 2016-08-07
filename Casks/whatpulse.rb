@@ -1,6 +1,6 @@
-cask :v1 => 'whatpulse' do
-  version '2.6'
-  sha256 '90fecfd945d78b2b38900765a16f0a6d1114badd636629b45cf0f59d585b130b'
+cask 'whatpulse' do
+  version '2.7.1'
+  sha256 '1fba8223d08056cc0ba6d7a3b647cbd581cd8808bf4e2d91ac666a6ee39f9747'
 
   url "http://amcdn.whatpulse.org/files/whatpulse-mac-#{version}.dmg"
   name 'WhatPulse'
@@ -9,6 +9,6 @@ cask :v1 => 'whatpulse' do
 
   pkg "WhatPulse #{version}.mpkg"
 
-  uninstall :pkgutil => 'com.lostdomain.whatpulse',
-            :quit   => 'com.whatpulse.mac'
+  uninstall pkgutil: 'com.lostdomain.whatpulse',
+            quit:    'com.whatpulse.mac'
 end

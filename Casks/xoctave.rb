@@ -1,4 +1,4 @@
-cask :v1 => 'xoctave' do
+cask 'xoctave' do
   version :latest
   sha256 :no_check
 
@@ -9,7 +9,7 @@ cask :v1 => 'xoctave' do
 
   app 'Xoctave.app'
 
-  uninstall :quit => 'org.magnifier.magnifier'
+  uninstall quit: 'org.magnifier.magnifier'
 
-  zap :delete => '~/xoctave'
+  zap delete: '~/xoctave'
 end

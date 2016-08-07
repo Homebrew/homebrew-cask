@@ -1,4 +1,4 @@
-cask :v1 => 'minimalclock' do
+cask 'minimalclock' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'minimalclock' do
 
   pkg ' .pkg'
 
-  uninstall :pkgutil => 'com.ilovecolorz.minimalclockScreenSaver.*'
+  uninstall pkgutil: 'com.ilovecolorz.minimalclockScreenSaver.*'
 end

@@ -1,11 +1,11 @@
-cask :v1 => '115browser' do
-  version '5.1.1.31.20150614'
-  sha256 'b87cc832bb11a90a087273be093f923e8f219f6a8b50fe890d031fdb912f7ba0'
+cask '115browser' do
+  version '7.2.0.17'
+  sha256 '637bd783f324fb666cb040d7dfad82c7eb34cca59dae9cd35e01dcc235465144'
 
-  url "http://down.115.com/client/mac/115Browser_v#{version}.dmg"
-  name '115浏览器'
+  url "http://down.115.com/client/mac/115br_v#{version}.dmg"
   name '115Browser'
-  homepage 'http://pc.115.com/mac.html'
+  name '115浏览器'
+  homepage 'https://pc.115.com/mac.html'
   license :gratis
 
   app '115Browser.app'

@@ -1,4 +1,4 @@
-cask :v1 => 'tn5250' do
+cask 'tn5250' do
   version :latest
   sha256 :no_check
 
@@ -6,8 +6,6 @@ cask :v1 => 'tn5250' do
   name 'TN5250'
   homepage 'http://mochasoft.dk'
   license :commercial
-
-  container :nested => 'tn5250.dmg'
 
   app 'tn5250.app'
 end

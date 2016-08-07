@@ -1,10 +1,10 @@
-cask :v1 => 'horos' do
-  version '1.0.7'
-  sha256 '5d21c4eeaeeca2caeabb795b22bd8e0aa89d4c1aef70c10f9e39a0f68b37ea66'
+cask 'horos' do
+  version '2.0.0'
+  sha256 '1af3252b5166bfb48769b93eeba64fc42f79bbf6a88625df96ec4a359d117f51'
 
-  url "http://www.horosproject.org/downloads/Horos#{version}.dmg"
+  url "https://www.horosproject.org/wp-content/uploads/downloads/Horos#{version}.dmg"
   name 'Horos – Free, open medical image viewer'
-  homepage 'http://www.horosproject.org'
+  homepage 'https://www.horosproject.org/'
   license :gpl
 
   app 'Horos.app'

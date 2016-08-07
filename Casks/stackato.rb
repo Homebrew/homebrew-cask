@@ -1,8 +1,8 @@
-cask :v1 => 'stackato' do
-  version '3.2.2'
-  sha256 '12bbc6ce6bd4b142c13a02cbfa97c10a4a1759e416d9906064224d757765ef05'
+cask 'stackato' do
+  version '3.2.4'
+  sha256 'e1d940509d46bc1ec4829998c736b802f77c01971e661d43456fe7574b16e48f'
 
-  url "https://downloads.activestate.com/stackato/client/v#{version}/stackato-#{version}-macosx10.5-i386-x86_64.zip"
+  url "http://downloads.stackato.com/client/v#{version}/stackato-#{version}-macosx10.5-i386-x86_64.zip"
   name 'Stackato'
   homepage 'https://docs.stackato.com/user/client/'
   license :apache

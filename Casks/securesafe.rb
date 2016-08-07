@@ -1,8 +1,8 @@
-cask :v1 => 'securesafe' do
+cask 'securesafe' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.securesafe.com/en/assets/sync-client/SecureSafe.dmg'
+  url 'https://www.securesafe.com/en/assets/sync-client/SecureSafe.dmg'
   name 'SecureSafe'
   homepage 'https://www.securesafe.com/'
   license :gratis

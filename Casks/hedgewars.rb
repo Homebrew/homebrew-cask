@@ -1,13 +1,13 @@
-cask :v1 => 'hedgewars' do
-  version '0.9.21'
-  sha256 '61ca4d3a709143927559e33fa935620ca32467e0adf0728f9214cba9a6fe6966'
+cask 'hedgewars' do
+  version '0.9.22'
+  sha256 'adc0b6dd3b47de115e85db1cb72841836444c0ebc77caee8139bfd6561e28fe8'
 
-  # gna.org is the official download host per the vendor homepage
+  # download.gna.org/hedgewars was verified as official when first introduced to the cask
   url "http://download.gna.org/hedgewars/Hedgewars-#{version}.dmg"
-  appcast 'http://www.hedgewars.org/download/appcast.xml',
-          :sha256 => 'bb5344972d01c4007ab4d8193fc2aaaebe68c4048213a10ba6b4cbc61210747f'
+  appcast 'https://www.hedgewars.org/download/appcast.xml',
+          checkpoint: 'b568efa383a1243786b557c0d85dc0b3612afebcd310c77d91b5ec3c288a3264'
   name 'Hedgewars'
-  homepage 'http://hedgewars.org'
+  homepage 'https://hedgewars.org/'
   license :gpl
 
   app 'Hedgewars.app'

@@ -1,4 +1,4 @@
-cask :v1 => 'alarm-clock' do
+cask 'alarm-clock' do
   version '2.4.5'
   sha256 '285d277572be83c632c696d565a8413c2d5149a460392177e9e1b601ffce8778'
 

@@ -1,37 +1,36 @@
-cask :v1 => 'github-desktop' do
-  version '212'
-  sha256 '4a6477d6397150a9374ef7e3f674e852adf36b8e0b5e57978e10741c490678d1'
+cask 'github-desktop' do
+  version '220'
+  sha256 '497182f4cf85f0c674f599cec22986b76dd2fdb6de3e54ee5efee86025be314c'
 
-  # cloudfront.net is the official download host per the vendor homepage
-  url "https://d4hwcs1zqtwzs.cloudfront.net/mac/GitHub%20Desktop%20#{version}.zip"
+  url "https://mac-installer.github.com/mac/GitHub%20Desktop%20#{version}.zip"
   appcast 'https://central.github.com/mac/appcast.xml',
-          :sha256 => 'bad3f308d30fa64b22c44071823db7245e92123abfc6a702606b7edf43cc0369'
+          checkpoint: '1052f76811839a303d1e477a4834589ecf6ce2b5b30e680e03c8f61506e7db63'
   name 'GitHub Desktop'
   homepage 'https://desktop.github.com/'
   license :gratis
 
   app 'GitHub Desktop.app'
-  binary 'GitHub Desktop.app/Contents/MacOS/github_cli', :target => 'github'
+  binary "#{appdir}/GitHub Desktop.app/Contents/MacOS/github_cli", target: 'github'
 
   postflight do
     suppress_move_to_applications
   end
 
-  uninstall :launchctl => [
-                           'com.github.GitHub.Conduit',
-                           'com.github.GitHub.GHInstallCLI'
-                          ]
+  uninstall launchctl: [
+                         'com.github.GitHub.Conduit',
+                         'com.github.GitHub.GHInstallCLI',
+                       ]
 
-  zap :delete => [
-                  '~/Library/Application Support/GitHub for Mac',
-                  '~/Library/Application Support/ShipIt_stderr.log',
-                  '~/Library/Application Support/ShipIt_stdout.log',
-                  '~/Library/Application Support/com.github.GitHub',
-                  '~/Library/Application Support/com.github.GitHub.ShipIt',
-                  '~/Library/Caches/GitHub for Mac',
-                  '~/Library/Caches/com.github.GitHub',
-                  '~/Library/Containers/com.github.GitHub.Conduit',
-                  '~/Library/Preferences/com.github.GitHub.LSSharedFileList.plist',
-                  '~/Library/Preferences/com.github.GitHub.plist',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/GitHub for Mac',
+                '~/Library/Application Support/ShipIt_stderr.log',
+                '~/Library/Application Support/ShipIt_stdout.log',
+                '~/Library/Application Support/com.github.GitHub',
+                '~/Library/Application Support/com.github.GitHub.ShipIt',
+                '~/Library/Caches/GitHub for Mac',
+                '~/Library/Caches/com.github.GitHub',
+                '~/Library/Containers/com.github.GitHub.Conduit',
+                '~/Library/Preferences/com.github.GitHub.LSSharedFileList.plist',
+                '~/Library/Preferences/com.github.GitHub.plist',
+              ]
 end

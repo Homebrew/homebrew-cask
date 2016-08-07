@@ -1,16 +1,12 @@
 class Hbc::CLI::Audit < Hbc::CLI::Base
   def self.help
-    'verifies installability of Casks'
+    "verifies installability of Casks"
   end
 
   def self.run(*args)
-    retval = new(args, Hbc::Auditor).run
-    # retval is ternary: true/false/nil
-    if retval.nil?
-      raise Hbc::CaskError.new("audit failed")
-    elsif ! retval
-      raise Hbc::CaskError.new("some audits failed")
-    end
+    failed_casks = new(args, Hbc::Auditor).run
+    return if failed_casks.empty?
+    raise Hbc::CaskError, "audit failed for casks: #{failed_casks.join(' ')}"
   end
 
   def initialize(args, auditor)
@@ -19,20 +15,18 @@ class Hbc::CLI::Audit < Hbc::CLI::Base
   end
 
   def run
-    count = 0
-    casks_to_audit.each do |cask|
-      count += 1 if audit(cask)
+    casks_to_audit.each_with_object([]) do |cask, failed|
+      failed << cask unless audit(cask)
     end
-    count == 0 ? nil : count == casks_to_audit.length
   end
 
   def audit(cask)
     odebug "Auditing Cask #{cask}"
-    @auditor.audit(cask, :audit_download => audit_download?)
+    @auditor.audit(cask, audit_download: audit_download?)
   end
 
   def audit_download?
-    @args.include?('--download')
+    @args.include?("--download")
   end
 
   def casks_to_audit
@@ -44,6 +38,10 @@ class Hbc::CLI::Audit < Hbc::CLI::Base
   end
 
   def cask_tokens
-    @cask_tokens ||= @args.reject { |a| a == '--download' }
+    @cask_tokens ||= @args.reject { |a| a == "--download" }
+  end
+
+  def self.needs_init?
+    true
   end
 end

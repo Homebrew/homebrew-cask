@@ -1,4 +1,4 @@
-cask :v1 => 'cocoasplit' do
+cask 'cocoasplit' do
   version :latest
   sha256 :no_check
 

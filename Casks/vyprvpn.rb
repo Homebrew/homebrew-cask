@@ -1,6 +1,6 @@
-cask :v1 => 'vyprvpn' do
-  version '2.7.5.3042'
-  sha256 '7a5caf62bad58ed52715de9e9a4f69a901ee70ae98bbc7432fc2ae4e34cc70d4'
+cask 'vyprvpn' do
+  version '2.11.0.4583'
+  sha256 '54ee2233f097b891af6e6b2da54940a8e838cba887dcec834219d1476bff099c'
 
   url "https://www.goldenfrog.com/downloads/vyprvpn/desktop/mac/production/#{version}/VyprVPN_v#{version}.dmg"
   name 'VyprVPN'

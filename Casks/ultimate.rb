@@ -1,4 +1,4 @@
-cask :v1 => 'ultimate' do
+cask 'ultimate' do
   version '3.0.4.41'
   sha256 'c49e7f55f427e23b55949f0debdda828e56e3eb4a0a666708f037f12224be776'
 
@@ -7,7 +7,7 @@ cask :v1 => 'ultimate' do
   homepage 'http://www.epubor.com'
   license :commercial
 
-  container :nested => "epubor_ultimate/Ultimate_v#{version}.dmg"
+  container nested: "epubor_ultimate/Ultimate_v#{version}.dmg"
 
   app 'Ultimate.app'
 end

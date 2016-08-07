@@ -1,11 +1,20 @@
-cask :v1 => 'whatsapp' do
-  version '0.1.0'
-  sha256 '1c85878b726a84de33b04e2fa7139c71c6804a08a3b14bdd99b400d2f7bbea49'
+cask 'whatsapp' do
+  version '0.2.1061'
+  sha256 'e73e64c2d91b5de46b31429004878e3a7f24599073b27655290b075d3f4fbe13'
 
-  url "https://github.com/anatolinicolae/whatsapp/releases/download/v#{version}/WhatsApp-v#{version}.zip"
+  url "https://web.whatsapp.com/desktop/mac/files/release-#{version}.zip"
+  appcast 'https://web.whatsapp.com/desktop/mac/releases?platform=darwin&arch=x64',
+          checkpoint: '39bbc795dd9d357ae42a8b15f8ee747e19f1b50fce86e36f2e7e260a9d80f7fd'
   name 'WhatsApp'
-  homepage 'https://github.com/anatolinicolae/whatsapp'
-  license :mit
+  homepage 'https://www.whatsapp.com/'
+  license :gratis
 
   app 'WhatsApp.app'
+
+  zap delete: [
+                '~/Library/Application Support/WhatsApp',
+                '~/Library/Application Support/WhatsApp.ShipIt',
+                '~/Library/Caches/WhatsApp',
+                '~/Library/Preferences/WhatsApp.plist',
+              ]
 end

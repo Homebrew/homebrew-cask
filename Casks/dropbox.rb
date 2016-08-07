@@ -1,4 +1,4 @@
-cask :v1 => 'dropbox' do
+cask 'dropbox' do
   version :latest
   sha256 :no_check
 
@@ -7,7 +7,17 @@ cask :v1 => 'dropbox' do
   homepage 'https://www.dropbox.com/'
   license :gratis
 
+  auto_updates true
+
   app 'Dropbox.app'
 
-  zap :delete => '~/.dropbox'
+  uninstall login_item: 'Dropbox'
+
+  zap delete: [
+                '~/.dropbox',
+                '~/Library/Caches/com.getdropbox.dropbox',
+                '~/Library/Containers/com.getdropbox.dropbox.garcon',
+                '~/Library/Group Containers/com.getdropbox.dropbox.garcon',
+                '/Library/DropboxHelperTools',
+              ]
 end

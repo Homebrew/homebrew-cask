@@ -1,4 +1,4 @@
-cask :v1 => 'alice' do
+cask 'alice' do
   version '1.4'
   sha256 '0d6259bdff7fd0309b532188445d0dd4f7ea4d50f5570e9b46d282fbade74ce1'
 
@@ -10,6 +10,6 @@ cask :v1 => 'alice' do
   app 'Alice.app'
 
   caveats do
-    path_environment_variable("#{staged_path}/Alice.app/Contents/Resources/bin")
+    path_environment_variable("#{appdir}/Alice.app/Contents/Resources/bin")
   end
 end

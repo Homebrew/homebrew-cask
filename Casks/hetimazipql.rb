@@ -1,4 +1,4 @@
-cask :v1 => 'hetimazipql' do
+cask 'hetimazipql' do
   version '1.0.1'
   sha256 '3c8c426e3a6385317e64c11c8ab912f50ed96708e686f01da48deac5b6dc9158'
 
@@ -7,7 +7,7 @@ cask :v1 => 'hetimazipql' do
   homepage 'http://hetima.com/hetimazipql/'
   license :oss # zlib License
 
-  qlplugin "HetimaZip.qlgenerator#{version}/HetimaZip.qlgenerator"
+  depends_on macos: '>= :mountain_lion'
 
-  depends_on :macos => '>= :mountain_lion'
+  qlplugin "HetimaZip.qlgenerator#{version}/HetimaZip.qlgenerator"
 end

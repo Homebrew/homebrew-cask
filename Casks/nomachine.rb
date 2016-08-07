@@ -1,6 +1,6 @@
-cask :v1 => 'nomachine' do
-  version '4.6.16_1'
-  sha256 'd837380a5cf91e8c4331558784a96df66652d66b60f9362791d2047d610fa3a5'
+cask 'nomachine' do
+  version '5.1.26_1'
+  sha256 '837d4cc8049ddccef287ad9fec29c4c009f426f56a32b8c8b1396ced2e80b6f8'
 
   url "http://download.nomachine.com/download/#{version.split('.')[0..1].join('.')}/MacOSX/nomachine_#{version}.dmg"
   name 'NoMachine'
@@ -8,20 +8,22 @@ cask :v1 => 'nomachine' do
   license :gratis
 
   pkg 'NoMachine.pkg'
+
   # a launchctl job ordinarily manages uninstall once the app bundle is removed
 
-  uninstall :delete => '/Applications/NoMachine.app'
+  uninstall delete: '/Applications/NoMachine.app'
+
   # however, we duplicate the uninstall process manually in the zap stanza just in case
-  zap :early_script => {
-                        :executable  => '/bin/rm',
-                        :args        => ['-f', '--', '/Library/Application Support/NoMachine/nxuninstall.sh']
-                       },
-              :quit => 'com.nomachine.nxdock',
-              :kext => [
-                        'com.nomachine.driver.nxau',
-                        'com.nomachine.driver.nxtun',
-                        'com.nomachine.kext.nxfs',
-                       ],
-           :pkgutil => 'com.nomachine.nomachine.NoMachine.*',
-         :launchctl => 'com.nomachine.uninstall'
+  zap early_script: {
+                      executable: '/bin/rm',
+                      args:       ['-f', '--', '/Library/Application Support/NoMachine/nxuninstall.sh'],
+                    },
+      quit:         'com.nomachine.nxdock',
+      kext:         [
+                      'com.nomachine.driver.nxau',
+                      'com.nomachine.driver.nxtun',
+                      'com.nomachine.kext.nxfs',
+                    ],
+      pkgutil:      'com.nomachine.nomachine.NoMachine.*',
+      launchctl:    'com.nomachine.uninstall'
 end

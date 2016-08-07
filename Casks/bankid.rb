@@ -1,18 +1,13 @@
-cask :v1 => 'bankid' do
-  version :latest
-  sha256 :no_check
+cask 'bankid' do
+  version '7.2.0'
+  sha256 '9a3768cb9ea240faee5d4958679e17b73e5ffeb62765f3fdb2e34275ca0beb1a'
 
-  url 'https://install.bankid.com/FileDownloader?fileId=Mac'
+  url "https://install.bankid.com/Repository/BankID_installation_#{version.dots_to_underscores}.pkg"
   name 'BankID'
-  homepage 'https://www.bankid.com/'
+  homepage 'https://install.bankid.com/'
   license :gratis
 
-  container :type => :naked
-  preflight do
-    system '/bin/mv', '--', staged_path.join('FileDownloader'), staged_path.join('bankid-latest.pkg')
-  end
+  pkg "BankID_installation_#{version.dots_to_underscores}.pkg"
 
-  pkg 'bankid-latest.pkg'
-
-  uninstall :pkgutil => 'com.bankid.bankid.BankID.pkg'
+  uninstall pkgutil: 'com.bankid.bankid.BankID.pkg'
 end

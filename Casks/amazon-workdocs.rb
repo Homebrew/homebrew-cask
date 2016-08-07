@@ -1,8 +1,8 @@
-cask :v1 => 'amazon-workdocs' do
+cask 'amazon-workdocs' do
   version :latest
   sha256 :no_check
 
-  # cloudfront.net is the official download host per the vendor homepage
+  # d28gdqadgmua23.cloudfront.net was verified as official when first introduced to the cask
   url 'https://d28gdqadgmua23.cloudfront.net/mac/Amazon%20WorkDocs.pkg'
   name 'Amazon WorkDocs'
   homepage 'https://aws.amazon.com/workdocs/'
@@ -10,5 +10,5 @@ cask :v1 => 'amazon-workdocs' do
 
   pkg 'Amazon WorkDocs.pkg'
 
-  uninstall :pkgutil => 'com.amazon.aws.AmazonWorkDocs'
+  uninstall pkgutil: 'com.amazon.aws.AmazonWorkDocs'
 end

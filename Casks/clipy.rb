@@ -1,16 +1,16 @@
-cask :v1 => 'clipy' do
-  version '1.0.4'
-  sha256 '83d75507b4747fd2559b5e497c0dd8ac2ef9b10dd1edd9e946abac1ce0c8ba47'
+cask 'clipy' do
+  version '1.1.0'
+  sha256 '8a3e55e455457f9d7b763b38a30e69049576789ee39a8e501c3d099d2f377fc4'
 
+  # github.com/Clipy/Clipy was verified as official when first introduced to the cask
   url "https://github.com/Clipy/Clipy/releases/download/#{version}/Clipy_#{version}.dmg"
-  appcast 'http://clipy-app.com/appcast.xml',
-          :sha256 => 'eb94a69d168e032b04684d5a68d91641ff0b585bed299a29020052b811d6cd63',
-          :format => :sparkle
+  appcast 'https://clipy-app.com/appcast.xml',
+          checkpoint: 'dab5e440914f665d688d11716ae191474fcb65042a68d65840df2626a80823de'
   name 'Clipy'
-  homepage 'http://clipy-app.com/'
+  homepage 'https://clipy-app.com/'
   license :mit
 
-  depends_on :macos => '>= :mavericks'
+  depends_on macos: '>= :mavericks'
 
   app 'Clipy.app'
 end

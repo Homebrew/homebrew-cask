@@ -1,13 +1,13 @@
-cask :v1 => 'cycling74-max' do
-  version '7.0.5_150727'
-  sha256 '61d5d5e0a4ca4d56a1bffbc49343b5624c02f0a707bfed943e8c0eb15c91c557'
+cask 'cycling74-max' do
+  version '7.2.4_160725'
+  sha256 '1b828aae6105f33cc1c3662c956f97d66f668aef6efbbe37468565946ffc1175'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url "https://akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com/Max#{version.delete('.')}.dmg"
-  name 'Max'
+  # akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com was verified as official when first introduced to the cask
+  url "https://akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com/Max#{version.no_dots}.dmg"
+  name 'Cycling ‘74 Max'
+  name 'Ableton Max for Live'
   homepage 'https://cycling74.com/'
   license :commercial
-  tags :vendor => 'Cycling ‘74'
 
   app 'Max.app'
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'kext-utility' do
+cask 'kext-utility' do
   version '2.6.4'
   sha256 '45d8705872adaba89137a99465ac4d423dc70e6b297515ced03f66f05deb19e8'
 

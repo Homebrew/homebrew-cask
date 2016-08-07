@@ -1,12 +1,13 @@
-cask :v1 => 'armory' do
-  version '0.93.2'
-  sha256 '1b8c36433802087e772594335c55f1a08acfc9a0571157d874c13268eb4362f6'
+cask 'armory' do
+  version '0.94.1'
+  sha256 'e1a977de35840d969bdf4039a0d5ddb466866ee793e9c178b0650ebbbf93af5c'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url "https://s3.amazonaws.com/bitcoinarmory-releases/armory_#{version}_osx.tar.gz"
+  url "https://github.com/goatpig/BitcoinArmory/releases/download/v#{version}/armory_#{version}_osx.tar.gz"
+  appcast 'https://github.com/goatpig/BitcoinArmory/releases.atom',
+          checkpoint: '50b50e2071c2cb4f05c0564cc0019d7fdd621ccc225953cdf4c1d93e40abba12'
   name 'Armory'
-  homepage 'https://bitcoinarmory.com/'
-  license :affero
+  homepage 'https://github.com/goatpig/BitcoinArmory'
+  license :oss
 
   app 'Armory.app'
 end

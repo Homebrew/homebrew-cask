@@ -1,6 +1,6 @@
-cask :v1 => 'isabelle' do
-  version '2015'
-  sha256 '350ed097785edb35bb653510a9021e90983b06cd94899093e7c3e6c0300815ee'
+cask 'isabelle' do
+  version '2016'
+  sha256 '3c9a3659d4f7b8f5429e2216efc0c7065288c7b8c7a0e0224450142619705c71'
 
   url "https://www.cl.cam.ac.uk/research/hvg/Isabelle/dist/Isabelle#{version}.dmg"
   name 'Isabelle'

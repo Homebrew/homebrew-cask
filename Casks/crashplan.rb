@@ -1,14 +1,15 @@
-cask :v1 => 'crashplan' do
-  version '4.4.1'
-  sha256 'd8110a9e65b93d3fc52c661453d9e997526ea57c40e1fcc4f41430476135447c'
+cask 'crashplan' do
+  version '4.7.0'
+  sha256 'ea138c87bb158fa47ba2aa5c7f5bcd43cccb9a7db9d83ace4a6954d1ae678d55'
 
-  url "http://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_#{version}_Mac.dmg"
+  # crashplan.com was verified as official when first introduced to the cask
+  url "https://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_#{version}_Mac.dmg"
   name 'CrashPlan'
   homepage 'https://www.code42.com/crashplan/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :gratis
 
   pkg 'Install CrashPlan.pkg'
 
-  uninstall :script  => 'Uninstall.app/Contents/Resources/uninstall.sh',
-            :pkgutil => 'com.crashplan.app.pkg'
+  uninstall script:  'Uninstall.app/Contents/Resources/uninstall.sh',
+            pkgutil: 'com.crashplan.app.pkg'
 end

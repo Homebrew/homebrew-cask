@@ -1,25 +1,29 @@
-cask :v1 => 'bartender' do
-  version '2.0.3'
-  sha256 'd8c1b46b620d62f58ee5401424996a3bfeb8e1797600e9e495509b50dbb3fdd1'
+cask 'bartender' do
+  version '2.0.7'
+  sha256 'e96ee3ab2fe6bca413a16899cd1388e69a58ac00ab87e597138163d0632a1689'
 
-  url "http://macbartender.com/B2/updates/#{version.gsub('.', '-')}/Bartender%202.zip",
-      :referer => 'http://www.macbartender.com'
+  url "https://macbartender.com/B2/updates/#{version.dots_to_hyphens}/Bartender%20#{version.major}.zip",
+      referer: 'http://www.macbartender.com'
+  appcast 'https://www.macbartender.com/B2/updates/updates.php',
+          checkpoint: 'e659a2a6c64eb2bddda4027c34538e146ae46775dae606c391b6da19e5013b4c'
   name 'Bartender'
-  appcast 'http://www.macbartender.com/B2/updates/updates.php',
-          :sha256 => '4241604566ed5fd406f76c3f09eada5a313274fb3170127c5def5d15e84a42c6'
-  homepage 'http://www.macbartender.com/'
+  homepage 'https://www.macbartender.com/'
   license :commercial
 
-  app 'Bartender 2.app'
+  auto_updates true
+
+  app "Bartender #{version.major}.app"
 
   postflight do
     suppress_move_to_applications
   end
 
-  zap :delete => [
-                  '/Library/ScriptingAdditions/BartenderHelper.osax',
-                  '~/Library/Preferences/com.surteesstudios.Bartender.plist',
-                  '/Library/PrivilegedHelperTools/com.surteesstudios.Bartender.BartenderInstallHelper',
-                  '/System/Library/ScriptingAdditions/BartenderSystemHelper.osax'
-                 ]
+  uninstall login_item: 'Bartender 2'
+
+  zap delete: [
+                '/Library/ScriptingAdditions/BartenderHelper.osax',
+                '~/Library/Preferences/com.surteesstudios.Bartender.plist',
+                '/Library/PrivilegedHelperTools/com.surteesstudios.Bartender.BartenderInstallHelper',
+                '/System/Library/ScriptingAdditions/BartenderSystemHelper.osax',
+              ]
 end

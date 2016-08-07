@@ -1,9 +1,8 @@
+require "hbc/container/generic_unar"
+
 class Hbc::Container::Rar < Hbc::Container::GenericUnar
   def self.me?(criteria)
-    (criteria.file.include? 'application/x-rar;' or
-     criteria.file.include? 'application/octet-stream;') and
-       ! criteria.lsar.nil? and
-         criteria.lsar.split("\n").first.split(':').last.include?('RAR') and
-           super
+    criteria.magic_number(%r{^Rar!}n) &&
+      super
   end
 end

@@ -1,16 +1,16 @@
-cask :v1 => 'deezer' do
-  version '1.1_4191'
-  sha256 'f9d491fb8d4b055a60b3d4a13a4e8b19e4b9b8d70dc8740df734afeee5482a34'
+cask 'deezer' do
+  version '1.1.3,4308'
+  sha256 '244530cb29c232c8464660153ddd052d81c7c6e0a6317288544f3225f55d79e5'
 
-  url "https://cdns-content.deezer.com/builds/mac/Deezer_#{version.sub(%r{^[^_]*_(\d+)},'\1')}.dmg"
+  url "http://e-cdn-content.deezer.com/builds/mac/Deezer_#{version.after_comma}.dmg"
   name 'Deezer'
   homepage 'https://www.deezer.com/formac'
   license :gratis
 
   app 'Deezer.app'
 
-  zap :delete => [
-                  '~/Library/Application Support/Deezer',
-                  '~/Library/Preferences/com.deezer.Deezer.plist',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Deezer',
+                '~/Library/Preferences/com.deezer.Deezer.plist',
+              ]
 end

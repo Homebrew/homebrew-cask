@@ -1,22 +1,22 @@
-cask :v1 => 'pycharm' do
-  version '4.5.4'
-  sha256 '4bc042c0726fbe4ac738dd34cc3a59d52b14404ae5d32420b736ada57737017b'
+cask 'pycharm' do
+  version '2016.2'
+  sha256 'e072f026460f6e122de2645cc2d18bd9f2e5ea63649b4b8688110fb5b3027e76'
 
   url "https://download.jetbrains.com/python/pycharm-professional-#{version}.dmg"
   name 'PyCharm'
   homepage 'https://www.jetbrains.com/pycharm/'
   license :commercial
 
+  conflicts_with cask: 'pycharm-eap'
+
   app 'PyCharm.app'
 
-  caveats <<-EOS.undent
-    #{token} requires Java 6 like any other IntelliJ-based IDE.
-    You can install it with
+  uninstall delete: '/usr/local/bin/charm'
 
-      brew cask install caskroom/homebrew-versions/java6
-
-    The vendor (JetBrains) doesn't support newer versions of Java (yet)
-    due to several critical issues, see details at
-    https://intellij-support.jetbrains.com/entries/27854363
-  EOS
+  zap delete: [
+                "~/Library/Preferences/PyCharm#{version.major_minor}",
+                "~/Library/Application Support/PyCharm#{version.major_minor}",
+                "~/Library/Caches/PyCharm#{version.major_minor}",
+                "~/Library/Logs/PyCharm#{version.major_minor}",
+              ]
 end

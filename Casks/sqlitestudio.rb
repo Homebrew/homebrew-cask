@@ -1,11 +1,16 @@
-cask :v1 => 'sqlitestudio' do
-  version '3.0.6'
-  sha256 '15a2687efc657ecf27766c6153a952aab17adaaefaf94636567032d0d6df2f5a'
+cask 'sqlitestudio' do
+  version '3.1.0'
+  sha256 '73476703fa4a67f5588aca0d5b44ede7a9d7d4ccd261754bc8e73b5c1c4f5794'
 
   url "http://sqlitestudio.pl/files/sqlitestudio3/complete/macosx/sqlitestudio-#{version}.dmg"
+  appcast 'http://sqlitestudio.pl/rss.rvt',
+          checkpoint: '758d9f5ef56c89b6c28109c924cae4763ce9539f9f98bb2cbd58450e4bd7bb5f'
   name 'SQLiteStudio'
   homepage 'http://sqlitestudio.pl'
   license :gpl
 
   app 'SQLiteStudio.app'
+
+  zap delete: '~/Library/Saved Application State/com.yourcompany.SQLiteStudio.savedState',
+      trash:  '~/.config/sqlitestudio'
 end

@@ -1,20 +1,35 @@
-cask :v1 => 'jdownloader' do
+cask 'jdownloader' do
   version :latest
   sha256 :no_check
 
-  url 'http://installer.jdownloader.org/JDownloader09Setup_mac.dmg'
-  name 'JDownloader'
+  if MacOS.release <= :snow_leopard
+    url 'http://installer.jdownloader.org/clean/JD2Setup_10_6_or_lower.dmg',
+        user_agent: 'HomebrewCask/1.0 (Macintosh; Intel Mac OS X) (+http://caskroom.io)'
+  else
+    url 'http://installer.jdownloader.org/clean/JD2Setup.dmg',
+        user_agent: 'HomebrewCask/1.0 (Macintosh; Intel Mac OS X) (+http://caskroom.io)'
+  end
+
+  name 'JDownloader 2'
   homepage 'http://jdownloader.org/'
   license :gpl
 
-  installer :script => 'JDownloader Installer.app/Contents/MacOS/JavaApplicationStub',
-            :args => [ '-q' ]
+  auto_updates true
 
-  caveats <<-EOS.undent
-    #{token} requires Java 6+, you can install the latest Java using
+  preflight do
+    system "\"#{staged_path}/JDownloader Installer.app/Contents/MacOS/JavaApplicationStub\" " \
+           "-dir \"#{staged_path}\" " \
+           '-q ' \
+           '-Dinstall4j.suppressStdout=true ' \
+           '-Dinstall4j.debug=false ' \
+           '-VcreateDesktopLinkAction\$Boolean=false ' \
+           '-VaddToDockAction\$Boolean=false ' \
+           '> /dev/null 2>&1'
+  end
 
-      brew cask install java
-  EOS
+  uninstall delete: '/Applications/JDownloader2.app'
 
-  uninstall :delete => '/Applications/JDownloader.app'
+  caveats do
+    depends_on_java
+  end
 end

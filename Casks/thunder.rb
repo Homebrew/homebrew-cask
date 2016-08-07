@@ -1,11 +1,11 @@
-cask :v1 => 'thunder' do
-  version '2.6.7.1706'
-  sha256 '974de57f80e110f1a2001b7bf0b2e60edc28fd6a2234f8f2574ea49c8c6598ff'
+cask 'thunder' do
+  version '2.7.1.2006'
+  sha256 'cef50062e35fad33bce7eeef8a3c1dc5605cc74b0e496ff178ed2894af386d4c'
 
-  # sandai.net is the official download host per the vendor homepage
+  # down.sandai.net was verified as official when first introduced to the cask
   url "http://down.sandai.net/mac/thunder_dl#{version}_Beta.dmg"
-  name '迅雷'
   name 'Thunder'
+  name '迅雷'
   homepage 'http://mac.xunlei.com/'
   license :commercial
 

@@ -1,4 +1,4 @@
-cask :v1 => 'e-tax2014' do
+cask 'e-tax2014' do
   version '1'
   sha256 '740410f77b0a41f4666293ecd5b0d6cb9a824ac56c2673ae2ed1b8fcf4ad8af1'
 
@@ -9,5 +9,5 @@ cask :v1 => 'e-tax2014' do
 
   pkg 'etax2014_1.pkg'
 
-  uninstall :pkgutil => 'au.gov.ato.etax2014'
+  uninstall pkgutil: 'au.gov.ato.etax2014'
 end

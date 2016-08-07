@@ -1,13 +1,14 @@
-cask :v1 => 'shimo' do
-  version :latest
-  sha256 :no_check
+cask 'shimo' do
+  version '4.1_8209'
+  sha256 '6b2183851540a31fcbf9c887c90195ed08eaa2ed76d23a5cfd8294d8f2499dd8'
 
-  url 'http://www.feingeist.io/fg-library/download.php?appName=Shimo4'
-  appcast 'http://www.feingeist.io/fg-library/appcast.php',
-          :format => :sparkle
+  # shimo.s3.amazonaws.com was verified as official when first introduced to the cask
+  url "https://shimo.s3.amazonaws.com/Shimo_#{version}.zip"
   name 'Shimo'
-  homepage 'http://www.feingeist.io/shimo-vpn-client-for-mac/'
+  homepage 'https://www.feingeist.io/shimo/'
   license :commercial
+
+  auto_updates true
 
   app 'Shimo.app'
 end

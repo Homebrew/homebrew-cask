@@ -1,10 +1,10 @@
-cask :v1 => 'phonetrans' do
+cask 'phonetrans' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.imobie.com/product/phonetrans-mac.dmg'
+  url 'https://www.imobie.com/product/phonetrans-mac.dmg'
   name 'PhoneTrans'
-  homepage 'http://www.imobie.com/phonetrans'
+  homepage 'https://www.imobie.com/phonetrans'
   license :gratis
 
   app 'PhoneTrans.app'

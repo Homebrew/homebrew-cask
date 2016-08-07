@@ -1,35 +1,33 @@
+require "hbc/container/base"
+
 class Hbc::Container::Air < Hbc::Container::Base
+  INSTALLER_PATHNAME =
+    Pathname("/Applications/Utilities/Adobe AIR Application Installer.app" \
+             "/Contents/MacOS/Adobe AIR Application Installer")
+
   def self.me?(criteria)
     %w[.air].include?(criteria.path.extname)
   end
 
   def self.installer_cmd
-    @installer_cmd ||= if installer_exist?
-      _installer_pathname
-    else
-      raise Hbc::CaskError.new <<-ERRMSG.undent
-        Adobe AIR runtime not present, try installing it via
+    return @installer_cmd ||= INSTALLER_PATHNAME if installer_exist?
+    raise Hbc::CaskError, <<-ERRMSG.undent
+      Adobe AIR runtime not present, try installing it via
 
-            brew cask install adobe-air
+          brew cask install adobe-air
 
-        ERRMSG
-    end
+    ERRMSG
   end
 
   def self.installer_exist?
-    _installer_pathname.exist?
-  end
-
-  def self._installer_pathname
-    @_installer_pathname ||= Pathname.new('/Applications/Utilities/Adobe AIR Application Installer.app/Contents/MacOS/Adobe AIR Application Installer')
+    INSTALLER_PATHNAME.exist?
   end
 
   def extract
     install = @command.run(self.class.installer_cmd,
-                           :args => ['-silent', '-location', @cask.staged_path, Pathname.new(@path).realpath])
+                           args: ["-silent", "-location", @cask.staged_path, Pathname.new(@path).realpath])
 
-    if install.exit_status == 9 then
-      raise Hbc::CaskError.new "Adobe AIR application #{@cask} already exists on the system, and cannot be reinstalled."
-    end
+    return unless install.exit_status == 9
+    raise Hbc::CaskError, "Adobe AIR application #{@cask} already exists on the system, and cannot be reinstalled."
   end
 end

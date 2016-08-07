@@ -1,4 +1,4 @@
-cask :v1 => 'zipcleaner' do
+cask 'zipcleaner' do
   version :latest
   sha256 :no_check
 

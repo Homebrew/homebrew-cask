@@ -1,14 +1,13 @@
-cask :v1 => 'lightning' do
-  version '1.6'
-  sha256 '1858d69a34521273ca8f82dd78a65a4d016f33750b8f2ddf4b7ea81d3485c258'
+cask 'lightning' do
+  version '1.8.3'
+  sha256 '3ececcf522275b458257295d58738b48f98c6c2e66ea1d611952455c853dafb3'
 
   url "http://downloads.filewave.com/lightning/FileWave_Lightning-#{version}.dmg"
   name 'FileWave Lightning'
   homepage 'https://www.filewave.com/products/imaging/lightning-thunderbolt'
   license :gratis
-  tags :vendor => 'FileWave'
 
-  depends_on :macos => '>= :lion'
+  depends_on macos: '>= :lion'
 
   app 'Lightning.app'
 end

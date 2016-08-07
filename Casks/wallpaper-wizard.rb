@@ -1,14 +1,12 @@
-cask :v1 => 'wallpaper-wizard' do
-  version '1.5.1'
-  sha256 '5f6d190cff7af60050357d993ee34b9544fe15672b535769766ab783cbd09f99'
+cask 'wallpaper-wizard' do
+  version :latest
+  sha256 :no_check
 
-  # coppertino.com is the official download host per the vendor homepage
-  url "http://cloud.coppertino.com/wallwiz/wallpaperwizard_#{version}.dmg"
+  # dl.devmate.com/com.wallwiz was verified as official when first introduced to the cask
+  url 'https://dl.devmate.com/com.wallwiz/WallpaperWizard.dmg'
   name 'Wallpaper Wizard'
-  appcast 'http://update.coppertino.com/wpw/appcast.xml',
-          :sha256 => '7a10ac07828ce38b72b86bb6003de0430f5a545cdc61e25d865f7ef0db05d6c4'
   homepage 'http://wallwiz.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :freemium
 
   app 'Wallpaper Wizard.app'
 end

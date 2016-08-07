@@ -1,18 +1,17 @@
-cask :v1 => 'hear' do
-  version '1.2.4'
-  sha256 '54bd28a771cd26813a9177bbd41879694a3998bf712ca6b94b18c45895bc79e6'
+cask 'hear' do
+  version '1.3.1'
+  sha256 '2711fbc44e318db8647afdb3f81f0d117946ecbe5e4d39b81732e1518dcfdcd8'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url "https://s3.amazonaws.com/prosoft-engineering/hear/Hear_#{version}.dmg"
+  url "https://downloads.prosofteng.com/hear/Hear_#{version}.dmg"
   appcast 'https://www.prosofteng.com/resources/sparkle/sparkle.php?psProduct=Hear',
-          :sha256 => '70719bdb2692b7d14ac2e410c4c9b75a2849519169b819fd85f6cf99a8caaf13'
+          checkpoint: 'fda2626909b97d07dd5ff26d881b7df42ebf51fcf112d29437819b42c62a56c3'
   name 'Hear'
   homepage 'https://www.prosofteng.com/hear/'
   license :commercial
 
   app 'Hear.app'
 
-  # todo: an uninstall stanza should be provided, and this message removed
+  # TODO: an uninstall stanza should be provided, and this message removed
   caveats <<-EOS.undent
     To uninstall, open Hear.app and choose the menu item "Hear > Uninstall"
   EOS

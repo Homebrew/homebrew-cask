@@ -1,6 +1,6 @@
-cask :v1 => 'context-free' do
-  version '3.0.8'
-  sha256 'fc7e66a7477838b462342b1195ae306bc1b5a74b5c7526a0b1cdf4a2f3b3cd39'
+cask 'context-free' do
+  version '3.0.9'
+  sha256 '718719843a72f16f2e0706091141da0ce0f7c42afafb7564ca0551e5784a116a'
 
   url "http://www.contextfreeart.org/download/ContextFree#{version}.dmg"
   name 'Context Free'

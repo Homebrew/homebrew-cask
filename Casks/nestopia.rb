@@ -1,4 +1,4 @@
-cask :v1 => 'nestopia' do
+cask 'nestopia' do
   version :latest
   sha256 :no_check
 
@@ -9,9 +9,9 @@ cask :v1 => 'nestopia' do
 
   app 'Nestopia.app'
 
-  zap :delete => [
-                  '~/Library/Application Support/Bannister/Nestopia',
-                  '~/Library/Preferences/com.bannister.nestopia.plist',
-                  '~/Library/Saved Application State/com.bannister.nestopia.savedState'
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Bannister/Nestopia',
+                '~/Library/Preferences/com.bannister.nestopia.plist',
+                '~/Library/Saved Application State/com.bannister.nestopia.savedState',
+              ]
 end

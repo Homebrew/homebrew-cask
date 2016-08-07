@@ -1,4 +1,4 @@
-cask :v1 => 'boom-recorder' do
+cask 'boom-recorder' do
   version '8.6.2'
   sha256 '1c7efe9f216d5d02490828215d6ed170c90097a6cca313c009946d76984d051f'
 

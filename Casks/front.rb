@@ -1,4 +1,4 @@
-cask :v1 => 'front' do
+cask 'front' do
   version :latest
   sha256 :no_check
 

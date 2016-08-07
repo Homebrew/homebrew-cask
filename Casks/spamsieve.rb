@@ -1,5 +1,4 @@
-cask :v1 => 'spamsieve' do
-
+cask 'spamsieve' do
   if MacOS.release <= :tiger
     version '2.9.6'
     sha256 'f060af29ab260450f0c0a906ada3e60408c9b6cd871e1df272dde2521bafeed3'
@@ -11,8 +10,8 @@ cask :v1 => 'spamsieve' do
 
     url "https://c-command.com/downloads/SpamSieve-#{version}-leopard.dmg"
   else
-    version '2.9.21'
-    sha256 '485158e1baeb3d10083fa218d826c4264e97d45595125ebbc9864c0ee2fe54f1'
+    version '2.9.24'
+    sha256 '3d097a43396c3c9ba75f3a6f12092562372b7538ac58e8c42e95b39f06d1725f'
 
     url "https://c-command.com/downloads/SpamSieve-#{version}.dmg"
   end

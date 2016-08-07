@@ -1,2 +1,4 @@
-class Hbc::Artifact::App < Hbc::Artifact::Symlinked
+require "hbc/artifact/moved"
+
+class Hbc::Artifact::App < Hbc::Artifact::Moved
 end

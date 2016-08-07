@@ -1,4 +1,4 @@
-cask :v1 => 'chainsaw' do
+cask 'chainsaw' do
   version :latest
   sha256 :no_check
 
@@ -7,9 +7,9 @@ cask :v1 => 'chainsaw' do
   homepage 'https://logging.apache.org/chainsaw/'
   license :apache
 
+  depends_on arch: :ppc
+
   app 'Chainsaw.app'
 
-  zap :delete => '~/.chainsaw'
-
-  depends_on :arch => :ppc
+  zap delete: '~/.chainsaw'
 end

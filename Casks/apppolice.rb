@@ -1,4 +1,4 @@
-cask :v1 => 'apppolice' do
+cask 'apppolice' do
   version :latest
   sha256 :no_check
 

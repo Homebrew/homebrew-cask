@@ -1,11 +1,22 @@
-cask :v1 => 'webstorm' do
-  version '10.0.4'
-  sha256 '0e444910001fc74b401c3b12738abedb823cc8064af53a304ce8e8c4d9d0ca6a'
+cask 'webstorm' do
+  version '2016.2.1'
+  sha256 '46de59244f97e6cbe9c378cd11402fcf0fbf41b2f7e12a1f877894c6d1d8f820'
 
-  url "http://download-cf.jetbrains.com/webstorm/WebStorm-#{version}.dmg"
+  url "https://download.jetbrains.com/webstorm/WebStorm-#{version}.dmg"
   name 'WebStorm'
-  homepage 'http://www.jetbrains.com/webstorm/'
+  homepage 'https://www.jetbrains.com/webstorm/'
   license :commercial
 
+  conflicts_with cask: 'webstorm-eap'
+
   app 'WebStorm.app'
+
+  uninstall delete: '/usr/local/bin/wstorm'
+
+  zap delete: [
+                "~/Library/Preferences/WebStorm#{version.major_minor}",
+                "~/Library/Application Support/WebStorm#{version.major_minor}",
+                "~/Library/Caches/WebStorm#{version.major_minor}",
+                "~/Library/Logs/WebStorm#{version.major_minor}",
+              ]
 end

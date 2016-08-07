@@ -8,12 +8,12 @@ class Hbc::Source::Tapped
     # brew cask list, but memoizing the value might cause breakage
     # elsewhere, given that installation and tap status is permitted
     # to change during the course of an invocation.
-    token_with_tap = Hbc.all_tokens.find { |t| t.split('/').last == query.sub(/\.rb$/i,'') }
+    token_with_tap = Hbc.all_tokens.find { |t| t.split("/").last == query.sub(%r{\.rb$}i, "") }
     if token_with_tap
-      user, repo, token = token_with_tap.split('/')
-      Hbc.homebrew_tapspath.join(user, repo, 'Casks', "#{token}.rb")
+      user, repo, token = token_with_tap.split("/")
+      Hbc.homebrew_tapspath.join(user, repo, "Casks", "#{token}.rb")
     else
-      Hbc.homebrew_tapspath.join(Hbc.default_tap, 'Casks', "#{query.sub(/\.rb$/i,'')}.rb")
+      Hbc.homebrew_tapspath.join(Hbc.default_tap, "Casks", "#{query.sub(%r{\.rb$}i, '')}.rb")
     end
   end
 

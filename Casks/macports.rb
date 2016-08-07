@@ -1,26 +1,31 @@
-cask :v1 => 'macports' do
-  version '2.3.3'
+cask 'macports' do
+  version '2.3.4'
 
   if MacOS.release <= :mountain_lion
-    sha256 'd4648634b571ada1f81cdc5583a48d0ceed1ef55ce5a2de0bdaaaf4b570b77f0'
+    sha256 '43c9b56dda623f897854d88c3f7747bd9ae4287fa12b16b1d5eb32f45417b2da'
     url "https://distfiles.macports.org/MacPorts/MacPorts-#{version}-10.8-MountainLion.pkg"
     pkg "MacPorts-#{version}-10.8-MountainLion.pkg"
   elsif MacOS.release <= :mavericks
-    sha256 'e47cab9b36543a4f9a1f8ea99ef34558bed08b8f8f5dc619b278a061c9daf3af'
+    sha256 '4b0fd713e3887c5a0f2fa975f90b6818aeb35ec909931d0905c181085abef7f4'
     url "https://distfiles.macports.org/MacPorts/MacPorts-#{version}-10.9-Mavericks.pkg"
     pkg "MacPorts-#{version}-10.9-Mavericks.pkg"
-  else
-    sha256 '7eb27ccbdf5cb61840494d954e8b56a9ee96c250d6c6c6ac887f0d80836d2d17'
+  elsif MacOS.release <= :yosemite
+    sha256 '453125fffb358c9547aab70fa39dc5404acc037c18d7b1d7488256e9e4374138'
     url "https://distfiles.macports.org/MacPorts/MacPorts-#{version}-10.10-Yosemite.pkg"
     pkg "MacPorts-#{version}-10.10-Yosemite.pkg"
+  else
+    sha256 '8c0b492032c796d766b76da3d1fda8dea732a6cc9056633a3509e3ff06b5e8d8'
+    url "https://distfiles.macports.org/MacPorts/MacPorts-#{version}-10.11-ElCapitan.pkg"
+    pkg "MacPorts-#{version}-10.11-ElCapitan.pkg"
   end
 
-  gpg "#{url}.asc",
-      :key_id => '01ff673fb4aae6cd'
   name 'MacPorts'
-  homepage 'http://www.macports.org'
+  homepage 'https://www.macports.org'
   license :bsd
+  gpg "#{url}.asc",
+      key_id: '01ff673fb4aae6cd'
 
-  uninstall :pkgutil => 'org.macports.MacPorts'
-  zap       :delete  => '~/.macports'
+  uninstall pkgutil: 'org.macports.MacPorts'
+
+  zap       delete: '~/.macports'
 end

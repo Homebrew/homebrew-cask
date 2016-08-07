@@ -1,8 +1,9 @@
-cask :v1 => 'freefilesync' do
-  version '7.5'
-  sha256 '3da2b42915733d0da4ba53a059cfb7c191a9a3a1d6c656c66965111da70776cc'
+cask 'freefilesync' do
+  version '8.3'
+  sha256 '1148cff841216da38a2d07b522d32709b6274760aa47dea9760ba4e3dd93f3c3'
 
-  url "http://www.freefilesync.org/download/m9fd99e69p2a6j6/FreeFileSync_#{version}_Mac_OS_X_64-bit.zip", :referer => 'http://www.freefilesync.org/download.php'
+  url "http://www.freefilesync.org/download/FreeFileSync_#{version}_Mac_OS_X.zip",
+      referer: 'http://www.freefilesync.org/download.php'
   name 'FreeFileSync'
   homepage 'http://www.freefilesync.org'
   license :gpl

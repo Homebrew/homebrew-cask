@@ -1,13 +1,13 @@
-cask :v1 => 'lyx' do
-  version '2.1.4'
-  sha256 'a89e0c90cf0fe5e974ec3eaa241403b1074878430f2f81552e62fb8f3b157597'
+cask 'lyx' do
+  version '2.2.1'
+  sha256 'a4049525dda1b06035c12d575d512920b230393032658f8085710a926d1f3a36'
 
-  url "ftp://ftp.lyx.org/pub/lyx/bin/#{version}/LyX-#{version}+qt4-cocoa.dmg"
-  gpg "#{url}.sig",
-      :key_id => 'de7a44fac7fb382d'
+  url "ftp://ftp.lyx.org/pub/lyx/bin/#{version}/LyX-#{version}+qt5-x86_64-cocoa.dmg"
   name 'LyX'
-  homepage 'http://www.lyx.org'
+  homepage 'https://www.lyx.org'
   license :gpl
+  gpg "#{url}.sig",
+      key_id: 'de7a44fac7fb382d'
 
   app 'LyX.app'
 end

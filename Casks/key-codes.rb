@@ -1,12 +1,15 @@
-cask :v1 => 'key-codes' do
-  version '2.0.1'
-  sha256 '1b7b4de0d15dfd483811b913821b722afab181cad031a5d0c1172e981a0dc6bd'
+cask 'key-codes' do
+  version '2.1'
+  sha256 '60ec4c0cef5e97943c91e4ed317434bcaddd4cdbce93368d8bca9db9d45c60e2'
 
-  url 'http://manytricks.com/download/keycodes'
-  appcast 'http://manytricks.com/keycodes/appcast.xml'
+  url 'https://manytricks.com/download/keycodes'
+  appcast 'https://manytricks.com/keycodes/appcast.xml',
+          checkpoint: 'c83453117309b3ee87694a729ce8ff72bb2d862fd33054fa8916af01e1a0adaa'
   name 'Key Codes'
-  homepage 'http://manytricks.com/keycodes/'
+  homepage 'https://manytricks.com/keycodes/'
   license :gratis
+
+  auto_updates true
 
   app 'Key Codes.app'
 end

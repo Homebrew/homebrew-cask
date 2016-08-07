@@ -1,4 +1,4 @@
-cask :v1 => 'markdown-service-tools' do
+cask 'markdown-service-tools' do
   version '2.12'
   sha256 'bb20b982d3f1525d78aebc82b78067e926f4d526fb377565d2e34e2b99afa135'
 

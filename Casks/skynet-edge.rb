@@ -1,10 +1,10 @@
-cask :v1 => 'skynet-edge' do
+cask 'skynet-edge' do
   version :latest
   sha256 :no_check
 
-  url 'http://joinskynet.com/ignition/v2/skynet/macosx/Skynet%20Edge.app.zip'
+  url 'https://joinskynet.com/ignition/v2/skynet/macosx/Skynet%20Edge.app.zip'
   name 'Skynet'
-  homepage 'http://joinskynet.com/'
+  homepage 'https://joinskynet.com/'
   license :freemium
 
   app 'Skynet Edge.app'

@@ -1,65 +1,114 @@
-require 'open3'
+require "open3"
+require "shellwords"
 
 class Hbc::SystemCommand
-  def self.run(executable, options={})
-    command = _process_options(executable, options)
-    odebug "Executing: #{command.utf8_inspect}"
-    processed_stdout = ''
-    processed_stderr = ''
+  attr_reader :command
 
-    raw_stdin, raw_stdout, raw_stderr, raw_wait_thr =
-      Open3.popen3(*command.map { |arg| arg.respond_to?(:to_path) ? File.absolute_path(arg) : String(arg) })
-
-    if options[:input]
-      Array(options[:input]).each { |line| raw_stdin.puts line }
-    end
-    raw_stdin.close_write
-
-    while line = raw_stdout.gets
-      processed_stdout << line
-      ohai line.chomp if options[:print_stdout]
-    end
-
-    while line = raw_stderr.gets
-      processed_stderr << line
-      ohai line.chomp if options[:print_stderr]
-    end
-
-    raw_stdout.close_read
-    raw_stderr.close_read
-
-    processed_status = raw_wait_thr.value
-
-    _assert_success(processed_status, command, processed_stdout) if options[:must_succeed]
-
-    Hbc::SystemCommand::Result.new(command, processed_stdout, processed_stderr, processed_status.exitstatus)
+  def self.run(executable, options = {})
+    new(executable, options).run!
   end
 
-  def self.run!(command, options={})
-    run(command, options.merge(:must_succeed => true))
+  def self.run!(command, options = {})
+    run(command, options.merge(must_succeed: true))
   end
 
-  def self._process_options(executable, options)
+  def run!
+    @processed_output = { stdout: "", stderr: "" }
+    odebug "Executing: #{expanded_command.utf8_inspect}"
+
+    each_output_line do |type, line|
+      case type
+      when :stdout
+        processed_output[:stdout] << line
+        ohai line.chomp if options[:print_stdout]
+      when :stderr
+        processed_output[:stderr] << line
+        ohai line.chomp if options[:print_stderr]
+      end
+    end
+
+    assert_success if options[:must_succeed]
+    result
+  end
+
+  def initialize(executable, options)
+    @executable = executable
+    @options = options
+    process_options!
+  end
+
+  private
+
+  attr_reader :executable, :options, :processed_output, :processed_status
+
+  def process_options!
     options.assert_valid_keys :input, :print_stdout, :print_stderr, :args, :must_succeed, :sudo, :bsexec
-    sudo_prefix = %w{/usr/bin/sudo -E --}
-    bsexec_prefix = [ '/bin/launchctl', 'bsexec',  options[:bsexec]  == :startup ? '/' : options[:bsexec] ]
-    command = [executable]
-    options[:print_stderr] = true   if !options.key?(:print_stderr)
-    command.unshift(*bsexec_prefix) if  options[:bsexec]
-    command.unshift(*sudo_prefix)   if  options[:sudo]
-    command.concat(options[:args])  if  options.key?(:args) and !options[:args].empty?
-    command
+    sudo_prefix = %w[/usr/bin/sudo -E --]
+    bsexec_prefix = ["/bin/launchctl", "bsexec", options[:bsexec] == :startup ? "/" : options[:bsexec]]
+    @command = [executable]
+    options[:print_stderr] = true    unless options.key?(:print_stderr)
+    @command.unshift(*bsexec_prefix) if  options[:bsexec]
+    @command.unshift(*sudo_prefix)   if  options[:sudo]
+    @command.concat(options[:args])  if  options.key?(:args) && !options[:args].empty?
+    @command[0] = Shellwords.shellescape(@command[0]) if @command.size == 1
+    nil
   end
 
-  def self._assert_success(status, command, output)
-    unless status and status.success?
-      raise Hbc::CaskCommandFailedError.new(command.utf8_inspect, output, status)
+  def assert_success
+    return if processed_status && processed_status.success?
+    raise Hbc::CaskCommandFailedError.new(command.utf8_inspect, processed_output[:stdout], processed_output[:stderr], processed_status)
+  end
+
+  def expanded_command
+    @expanded_command ||= command.map { |arg|
+      if arg.respond_to?(:to_path)
+        File.absolute_path(arg)
+      else
+        String(arg)
+      end
+    }
+  end
+
+  def each_output_line(&b)
+    raw_stdin, raw_stdout, raw_stderr, raw_wait_thr =
+      Open3.popen3(*expanded_command)
+
+    write_input_to(raw_stdin) if options[:input]
+    raw_stdin.close_write
+    each_line_from [raw_stdout, raw_stderr], &b
+
+    @processed_status = raw_wait_thr.value
+  end
+
+  def write_input_to(raw_stdin)
+    Array(options[:input]).each { |line| raw_stdin.puts line }
+  end
+
+  def each_line_from(sources)
+    loop do
+      readable_sources = IO.select(sources)[0]
+      readable_sources.delete_if(&:eof?).first(1).each do |source|
+        type = (source == sources[0] ? :stdout : :stderr)
+        begin
+          yield(type, source.readline_nonblock || "")
+        rescue IO::WaitReadable, EOFError
+          next
+        end
+      end
+      break if readable_sources.empty?
     end
+    sources.each(&:close_read)
+  end
+
+  def result
+    Hbc::SystemCommand::Result.new(command,
+                                   processed_output[:stdout],
+                                   processed_output[:stderr],
+                                   processed_status.exitstatus)
   end
 end
 
 class Hbc::SystemCommand::Result
-
   attr_accessor :command, :stdout, :stderr, :exit_status
 
   def initialize(command, stdout, stderr, exit_status)
@@ -90,29 +139,28 @@ class Hbc::SystemCommand::Result
     external = File.basename(command.first)
     lines = garbage.strip.split("\n")
     opoo "Non-XML stdout from #{external}:"
-    STDERR.puts lines.map {|l| "    #{l}"}
+    $stderr.puts lines.map { |l| "    #{l}" }
   end
 
   def self._parse_plist(command, output)
-    begin
-      raise Hbc::CaskError.new("Empty plist input") unless output =~ %r{\S}
-      output.sub!(%r{\A(.*?)(<\?\s*xml)}m, '\2')
-      _warn_plist_garbage(command, $1) if Hbc.debug
-      output.sub!(%r{(<\s*/\s*plist\s*>)(.*?)\Z}m, '\1')
-      _warn_plist_garbage(command, $2)
-      xml = Plist::parse_xml(output)
-      unless xml.respond_to?(:keys) and xml.keys.size > 0
-        raise Hbc::CaskError.new(<<-ERRMSG)
+    raise Hbc::CaskError, "Empty plist input" unless output =~ %r{\S}
+    output.sub!(%r{\A(.*?)(<\?\s*xml)}m, '\2')
+    _warn_plist_garbage(command, Regexp.last_match[1]) if Hbc.debug
+    output.sub!(%r{(<\s*/\s*plist\s*>)(.*?)\Z}m, '\1')
+    _warn_plist_garbage(command, Regexp.last_match[2])
+    xml = Plist.parse_xml(output)
+    unless xml.respond_to?(:keys) && !xml.keys.empty?
+      raise Hbc::CaskError, <<-ERRMSG
 Empty result parsing plist output from command.
   command was:
   #{command.utf8_inspect}
   output we attempted to parse:
   #{output}
-        ERRMSG
-      end
-      xml
-    rescue Plist::ParseError => e
-      raise Hbc::CaskError.new(<<-ERRMSG)
+      ERRMSG
+    end
+    xml
+  rescue Plist::ParseError => e
+    raise Hbc::CaskError, <<-ERRMSG
 Error parsing plist output from command.
   command was:
   #{command.utf8_inspect}
@@ -120,7 +168,6 @@ Error parsing plist output from command.
   #{e}
   output we attempted to parse:
   #{output}
-        ERRMSG
-    end
+    ERRMSG
   end
 end

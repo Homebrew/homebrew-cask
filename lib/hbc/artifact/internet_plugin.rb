@@ -1,3 +1,4 @@
-class Hbc::Artifact::InternetPlugin < Hbc::Artifact::Symlinked
+require "hbc/artifact/moved"
 
+class Hbc::Artifact::InternetPlugin < Hbc::Artifact::Moved
 end

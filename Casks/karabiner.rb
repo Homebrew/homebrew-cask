@@ -1,28 +1,34 @@
-cask :v1 => 'karabiner' do
-  version '10.11.0'
-  sha256 'fb23658f7be3c5650724c46a48ba3ca36bb71dd66ae8b594a301cb85b0b1ed00'
+cask 'karabiner' do
+  version '10.21.0'
+  sha256 '4b4815e139ef2579144b66f33f20a6ab57c6bf76b06f217cd23b5d2482261636'
 
   url "https://pqrs.org/osx/karabiner/files/Karabiner-#{version}.dmg"
   appcast 'https://pqrs.org/osx/karabiner/files/appcast.xml',
-          :sha256 => 'a2e51c1773f2a62fd2f8475ec854caca7464389a373013a60804d6bd1f344c09'
+          checkpoint: '291a5570aeda093e72ab0948ae70790a964887fcf03b156402ff0daf3768f58f'
   name 'Karabiner'
-  name 'KeyRemap4MacBook'
   homepage 'https://pqrs.org/osx/karabiner/'
   license :public_domain
+
+  auto_updates true
 
   pkg 'Karabiner.sparkle_guided.pkg'
   binary '/Applications/Karabiner.app/Contents/Library/vendor/bin/blueutil'
   binary '/Applications/Karabiner.app/Contents/Library/utilities/bin/warp-mouse-cursor-position'
 
-  uninstall :quit => 'org.pqrs.Karabiner',
-            :pkgutil => 'org.pqrs.driver.Karabiner',
-            :kext => 'org.pqrs.driver.Karabiner'
-  zap       :delete => [
-                        '~/Library/Application Support/Karabiner',
-                        '~/Library/Application Support/KeyRemap4MacBook',
-                        '~/Library/Caches/org.pqrs.KeyRemap4MacBook',
-                        '~/Library/Preferences/org.pqrs.Karabiner-AXNotifier.plist',
-                        '~/Library/Preferences/org.pqrs.Karabiner.multitouchextension.plist',
-                        '~/Library/Preferences/org.pqrs.Karabiner.plist',
-                       ]
+  uninstall quit:    'org.pqrs.Karabiner',
+            pkgutil: 'org.pqrs.driver.Karabiner',
+            kext:    'org.pqrs.driver.Karabiner'
+
+  zap       delete: [
+                      '~/Library/Application Support/Karabiner',
+                      '~/Library/Application Support/KeyRemap4MacBook',
+                      '~/Library/Caches/org.pqrs.KeyRemap4MacBook',
+                      '~/Library/Preferences/org.pqrs.Karabiner-AXNotifier.plist',
+                      '~/Library/Preferences/org.pqrs.Karabiner.multitouchextension.plist',
+                      '~/Library/Preferences/org.pqrs.Karabiner.plist',
+                      '~/Library/Preferences/org.pqrs.Karabiner.EventViewer.plist',
+                      '~/Library/Caches/org.pqrs.Karabiner',
+                      '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.pqrs.karabine.sfl',
+                      '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.pqrs.karabine.eventviewer.sfl',
+                    ]
 end

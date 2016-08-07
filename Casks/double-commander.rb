@@ -1,8 +1,10 @@
-cask :v1 => 'double-commander' do
-  version '0.6.2-6025'
-  sha256 '4c55f266d99d5610e95626b5319b4c3cd7a2ad6068fe9dfb4d9faf44d62cdf4b'
+cask 'double-commander' do
+  version '0.7.3-6979'
+  sha256 '4997a727f869abb54d5bda5a236c436c46071eed6ee7035aa6bbd60732971f6e'
 
-  url "http://downloads.sourceforge.net/sourceforge/doublecmd/doublecmd-#{version}.qt.x86_64.dmg"
+  url "https://downloads.sourceforge.net/doublecmd/doublecmd-#{version}.qt.x86_64.dmg"
+  appcast 'https://sourceforge.net/projects/doublecmd/rss',
+          checkpoint: '00ced36cc115fcf027be30c59f246333500b25c5feed96a391b4ffbbeb0781c2'
   name 'Double Commander'
   homepage 'http://doublecmd.sourceforge.net/'
   license :gpl

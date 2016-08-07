@@ -1,15 +1,14 @@
-cask :v1 => 'resolume-avenue' do
-  version '4.2.1'
-  sha256 '996306b9ff0b4ec99e8b5338e8153c07e5ff194ae3ec7f350d791b8b336deb95'
+cask 'resolume-avenue' do
+  version '5.0.4'
+  sha256 '44e668b89916d7a27498c269ee165a6796b78860f23f7815098fcb9e506aa2df'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url "http://download.resolume.com.s3.amazonaws.com/Resolume_Avenue_#{version.gsub('.','_')}_Installer.dmg"
-  name 'Resolume'
+  # d19j6z4lvv1vde.cloudfront.net was verified as official when first introduced to the cask
+  url "https://d19j6z4lvv1vde.cloudfront.net/Resolume_Arena_#{version.dots_to_underscores}_Installer.dmg"
   name 'Resolume Avenue'
   homepage 'https://resolume.com'
   license :freemium
 
   pkg "Resolume Avenue #{version} Installer.pkg"
 
-  uninstall :pkgutil => 'com.resolume.*'
+  uninstall pkgutil: 'com.resolume.*'
 end

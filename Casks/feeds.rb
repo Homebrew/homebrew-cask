@@ -1,20 +1,20 @@
-cask :v1 => 'feeds' do
-  version '2.1.1'
-  sha256 '098dc0ceec2ca1ef26e6ff9f3a7ab4fd7c71877a7fc698584c986525a2204fdf'
+cask 'feeds' do
+  version '2.1.2'
+  sha256 'a9b1476dae52fef2abc9f8427c106412ca726b873c469ae23553818660eb7fdc'
 
-  # googleapis.com is the official download host per the vendor homepage
+  # storage.googleapis.com/feeds-releases was verified as official when first introduced to the cask
   url "https://storage.googleapis.com/feeds-releases/Feeds-#{version}.zip"
   appcast 'https://storage.googleapis.com/feeds-releases/appcast.xml',
-          :sha256 => '2c1c1e58c342c3975126181da367f8bbd342fc6586832ac5b0f4d84a0f17042c'
+          checkpoint: '4450c36d30006bb4b85fa047d9062a3ce22d3d170824eea73db3db01acb0a880'
   name 'Feeds'
   homepage 'http://www.feedsapp.com/'
   license :mit
 
   app 'Feeds.app'
 
-  zap :delete => [
-    '~/Library/Caches/com.feedsapp.Feeds',
-    '~/Library/Logs/Feeds',
-    '~/Library/Preferences/com.feedsapp.Feeds.plist'
-  ]
+  zap delete: [
+                '~/Library/Caches/com.feedsapp.Feeds',
+                '~/Library/Logs/Feeds',
+                '~/Library/Preferences/com.feedsapp.Feeds.plist',
+              ]
 end

@@ -1,4 +1,4 @@
-cask :v1 => 'stockbarjp' do
+cask 'stockbarjp' do
   version :latest
   sha256 :no_check
 

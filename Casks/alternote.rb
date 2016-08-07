@@ -1,15 +1,15 @@
-cask :v1 => 'alternote' do
-  version '1.0.5_1005'
-  sha256 'f507742ca0a1cd4a6239bbf5096e62ed8960e575d9ff5be82c2645951f9bb1b5'
+cask 'alternote' do
+  version '1.0.10,1010'
+  sha256 '5d72b8d6d687ad2aa4a8dec64424b4d4292b16b7d1c9b41f4c9be078368686a7'
 
-  url "http://alternoteapp.com/assets/downloads/Alternote#{version.sub(%r{.*_},'')}.zip"
+  url "http://alternoteapp.com/assets/downloads/Alternote#{version.after_comma}.zip"
   appcast 'http://alternoteapp.com/assets/appcast.xml',
-          :sha256 => '0cbfc55527716eeab37a3cd8b2ce4fcb91209fdb4a6ecc238a4a44046ce6bfd4'
+          checkpoint: '1b523b50485c377b875d00ac3b182ed7283a27ec6c4b356e6d117def11b3c836'
   name 'Alternote'
   homepage 'http://alternoteapp.com/'
   license :commercial
 
   app 'Alternote.app'
 
-  uninstall :quit => 'com.Alternote'
+  uninstall quit: 'com.Alternote'
 end

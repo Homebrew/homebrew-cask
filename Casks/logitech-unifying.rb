@@ -1,14 +1,16 @@
-cask :v1 => 'logitech-unifying' do
-  version '1.10.421'
-  sha256 'd9e196411cc4c0aec72fd01575eaffed228f95bc7d7ededc532d53f8602caa03'
+cask 'logitech-unifying' do
+  version '1.2.315'
+  sha256 '9106336cc0f640d17a8352a2376652f6e16fd02be584f9c33d41999dfc00d0a8'
 
-  url "http://www.logitech.com/pub/controldevices/unifying/unifying#{version}.dmg"
+  url "http://www.logitech.com/pub/controldevices/unifying/unifying#{version}_mac.zip"
   name 'Logitech Unifying Software'
-  homepage 'http://www.logitech.com/en-us/promotions/6072'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
-  tags :vendor => 'Logitech'
+  homepage 'https://www.logitech.com/en-us/promotions/6072'
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  pkg 'Logitech Unifying Software.mpkg'
+  pkg 'Unifying Installer.app/Contents/Resources/Logitech Unifying Signed.mpkg'
 
-  uninstall :pkgutil => 'com.Logitech.*pkg'
+  uninstall pkgutil: [
+                       'com.Logitech.Unifying Software.pkg',
+                       'com.Logitech.Updater.pkg',
+                     ]
 end

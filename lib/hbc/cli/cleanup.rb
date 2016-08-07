@@ -6,90 +6,83 @@ class Hbc::CLI::Cleanup < Hbc::CLI::Base
     "cleans up cached downloads and tracker symlinks"
   end
 
+  def self.needs_init?
+    true
+  end
+
   def self.run(*_ignored)
     default.cleanup!
   end
 
   def self.default
-    new(HOMEBREW_CACHE_CASKS, Hbc.cleanup_outdated)
+    @default ||= new(Hbc.cache, Hbc.cleanup_outdated)
   end
 
-  attr_reader :cache_location, :cleanup_outdated
-  def initialize(cache_location, cleanup_outdated)
-    @cache_location = Pathname(cache_location)
-    @cleanup_outdated = cleanup_outdated
+  attr_reader :cache_location, :outdated_only
+  def initialize(cache_location, outdated_only)
+    @cache_location = Pathname.new(cache_location)
+    @outdated_only = outdated_only
   end
 
   def cleanup!
-    remove_dead_symlinks
     remove_all_cache_files
   end
 
-  def cache_symlinks
-    cache_location.children.select(&:symlink?)
+  def cache_files
+    return [] unless cache_location.exist?
+    cache_location.children
+                  .map(&method(:Pathname))
+                  .reject(&method(:outdated?))
   end
 
-  def dead_symlinks
-    cache_symlinks.reject(&:exist?)
+  def outdated?(file)
+    outdated_only && file && file.stat.mtime > OUTDATED_TIMESTAMP
   end
 
-  def cache_incompletes(outdated=nil)
-    cache_symlinks.collect do |symlink|
-      incomplete_file = Dir.chdir cache_location do
-        f = symlink.readlink
-        f = f.realpath if f.exist?
-        Pathname.new(f.to_s.concat('.incomplete'))
-      end
-      incomplete_file = nil unless incomplete_file.exist?
-      incomplete_file = nil if outdated and incomplete_file and incomplete_file.stat.mtime > OUTDATED_TIMESTAMP
-      incomplete_file
-    end.compact
+  def incomplete?(file)
+    file.extname == ".incomplete"
   end
 
-  def cache_completes(outdated=nil)
-    cache_symlinks.collect do |symlink|
-      file = Dir.chdir cache_location do
-        f = symlink.readlink
-        f.exist? ? f.realpath : f
-      end
-      file = nil unless file.exist?
-      if outdated and file and file.stat.mtime > OUTDATED_TIMESTAMP
-        file = nil
-        symlink = nil
-      end
-      [ symlink, file ]
-    end.flatten.compact.sort { |x,y| x.to_s.count(File::SEPARATOR) <=> y.to_s.count(File::SEPARATOR) }
+  def cache_incompletes
+    cache_files.select(&method(:incomplete?))
   end
 
-  # will include dead symlinks if they aren't handled separately
-  def all_cache_files(outdated=nil)
-    cache_incompletes(outdated) + cache_completes(outdated)
+  def cache_completes
+    cache_files.reject(&method(:incomplete?))
   end
 
-  def space_in_megs(files)
-    bytes = files.map { |f| begin File.size(f); rescue; 0; end }.reduce(&:+) || 0
-    sprintf '%0.2f', bytes / (1024.0 * 1024.0)
-  end
-
-  def remove_dead_symlinks
-    ohai "Removing dead symlinks"
-    to_delete = dead_symlinks
-    puts "Nothing to do" unless to_delete.count > 0
-    to_delete.each do |item|
-      puts item
-      item.unlink
-    end
+  def disk_cleanup_size
+    Hbc::Utils.size_in_bytes(cache_files)
   end
 
   def remove_all_cache_files
     message = "Removing cached downloads"
-    message.concat " older than #{OUTDATED_DAYS} days old" if cleanup_outdated
+    message.concat " older than #{OUTDATED_DAYS} days old" if outdated_only
     ohai message
-    to_delete = all_cache_files(cleanup_outdated)
-    puts "Nothing to do" unless to_delete.count > 0
-    to_delete.each do |item|
+    delete_paths(cache_files)
+  end
+
+  def delete_paths(paths)
+    cleanup_size = 0
+    processed_files = 0
+    paths.each do |item|
+      next unless item.exist?
+      processed_files += 1
+      if Hbc::Utils.file_locked?(item)
+        puts "skipping: #{item} is locked"
+        next
+      end
       puts item
+      item_size = File.size?(item)
+      cleanup_size += item_size unless item_size.nil?
       item.unlink
+    end
+
+    if processed_files.zero?
+      puts "Nothing to do"
+    else
+      disk_space = disk_usage_readable(cleanup_size)
+      ohai "This operation has freed approximately #{disk_space} of disk space."
     end
   end
 end

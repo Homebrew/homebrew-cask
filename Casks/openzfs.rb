@@ -1,25 +1,22 @@
-cask :v1 => 'openzfs' do
-  version '1.4.2'
-  sha256 '189fc9bfe231cf51b65dac2665cecb65f632979fd13bcafa3f4e3b486880237f'
+cask 'openzfs' do
+  version '1.5.2'
+  sha256 '185d20242bacd14cd609ccfb8f89736e1ea0ca6dec6475fd9eb7703c17ab5413'
 
-  url "https://openzfsonosx.org/w/images/0/0f/OpenZFS_on_OS_X_#{version}.dmg"
+  url "https://openzfsonosx.org/w/images/6/6b/OpenZFS_on_OS_X_#{version}.dmg"
   name 'OpenZFS on OS X'
   homepage 'https://openzfsonosx.org'
   license :oss
 
-  # OpenZFS on OSX has no version below Mountain Lion.
+  # OpenZFS on OS X has no version below Mountain Lion.
   if MacOS.release == :mountain_lion
-    pkg "OpenZFS on OS X #{version.sub(%r{-.*},'')} Mountain Lion.pkg"
+    pkg "OpenZFS on OS X #{version.sub(%r{-.*}, '')} Mountain Lion.pkg"
   elsif MacOS.release == :mavericks
-    pkg "OpenZFS on OS X #{version.sub(%r{-.*},'')} Mavericks.pkg"
-  elsif MacOS.release >= :yosemite
-    pkg "OpenZFS on OS X #{version.sub(%r{-.*},'')} Yosemite or higher.pkg"
+    pkg "OpenZFS on OS X #{version.sub(%r{-.*}, '')} Mavericks.pkg"
+  elsif MacOS.release == :yosemite
+    pkg "OpenZFS on OS X #{version.sub(%r{-.*}, '')} Yosemite.pkg"
+  elsif MacOS.release >= :el_capitan
+    pkg "OpenZFS on OS X #{version.sub(%r{-.*}, '')} El Capitan or higher.pkg"
   end
 
-  caveats <<-EOS.undent
-    #{token} requires SIP to be disabled on El Capitan, see
-      https://openzfsonosx.org/wiki/Install for further details.
-  EOS
-
-  uninstall :pkgutil => 'net.lundman.openzfs.*'
+  uninstall pkgutil: 'net.lundman.openzfs.*'
 end

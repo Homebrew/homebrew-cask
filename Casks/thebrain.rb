@@ -1,11 +1,15 @@
-cask :v1 => 'thebrain' do
-  version '8.0.1.8'
-  sha256 'c8bac038d1aa041f03868dc9e1436e12935b467398b40f8dd9188d8b1f9ab751'
+cask 'thebrain' do
+  version '8.0.2.2'
+  sha256 '4832c6b703ee0f24069953627f175e0bba84974427806454d75097befcbfb04c'
 
-  url "http://assets.thebrain.com/downloads/TheBrain_macos_JRE_#{version.gsub('.', '_')}.dmg"
+  url "http://assets.thebrain.com/downloads/TheBrain_macos_JRE_#{version.dots_to_underscores}.dmg"
   name 'TheBrain'
   homepage 'https://www.thebrain.com/'
   license :commercial
 
-  app 'TheBrain.app'
+  installer script: 'TheBrain Installer.app/Contents/MacOS/JavaApplicationStub',
+            args:   ['-q'],
+            sudo:   false
+
+  uninstall delete: '/Applications/TheBrain.app'
 end

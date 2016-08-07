@@ -1,11 +1,11 @@
-cask :v1 => 'mdrp' do
-  version :latest
-  sha256 :no_check
+cask 'mdrp' do
+  version '6.0.2'
+  sha256 'da63b71ef31ba9d705e6a65e3edb3cd5108dfbeb9abc8f8322c6078e4d30c9ce'
 
-  url 'http://www.macdvdripperpro.com/download/'
-  name 'Mac DVDRipper Pro'
+  url "http://www.macdvdripperpro.com/MDRP_v#{version.no_dots}.zip"
   appcast 'https://www.macdvdripperpro.com/mdrp_sparkle5.xml',
-          :sha256 => '8e4f7c395dda29438cf1f4a931a626d484886109a01ea9ee733fa6d7c24f4634'
+          checkpoint: '011bc89c3f06f1dfdcfdaff97822eac93434f1cb4188391aa5b0abd7eb0c6e83'
+  name 'Mac DVDRipper Pro'
   homepage 'https://www.macdvdripperpro.com/'
   license :commercial
 

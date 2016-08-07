@@ -1,10 +1,11 @@
-cask :v1 => 'screensteps' do
-  version '2.9.6'
-  sha256 'e48082731531198d8c22e5218a7aa59500843e4fd4fd7f44161688aebcfc621b'
+cask 'screensteps' do
+  version '4.0.108'
+  sha256 '40678ddc531032950108e47976e9f54cd4e1660b22bfd4e5d16c06e15ac52c5b'
 
-  url 'http://www.bluemangolearning.com/download/screensteps/2_0/release/ScreenSteps.dmg'
+  # bluemangolearning.com was verified as official when first introduced to the cask
+  url "https://www.bluemangolearning.com/download/screensteps/#{version.major_minor.dots_to_underscores}/beta/ScreenSteps.dmg"
   name 'ScreenSteps'
-  homepage 'http://www.bluemangolearning.com/screensteps'
+  homepage 'http://www.screensteps.com/'
   license :commercial
 
   app 'ScreenSteps.app'

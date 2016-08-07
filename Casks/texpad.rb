@@ -1,26 +1,20 @@
-cask :v1 => 'texpad' do
-
-  if MacOS.release >= :mavericks
-    version '1.7.16'
-    sha256 '65281263e1a4f8d28405fafaa042d5c76fdbe982c411321256aaf8d3c9e61961'
-    url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.gsub('.','_')}.zip"
-  elsif MacOS.release <= :mountain_lion && MacOS.release >= :snow_leopard
-    version '1.6.14'
-    sha256 '18fcbe93e77e5b5bc848172546962fcde397a26fd543efcc1054004369192f7e'
-    url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.gsub('.','_')}.zip"
+cask 'texpad' do
+  if MacOS.release <= :mountain_lion
+    version '1.7.21'
+    sha256 'cae312b89d25752917bf66572fd1c6b6722097b651abe9a1a1b399dc36493512'
   else
-    # If the app is used on MacOS lower than Snow Leopard,
-    # unexpected behaviour or failures can occur.
+    version '1.7.28'
+    sha256 'f59a83923c70dd60ee2ad0acb07814b04ccc9b2ecea6d33d2340f49c54df70cc'
   end
 
-  depends_on :macos => '>= :snow_leopard'
-
+  url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.dots_to_underscores}.zip"
   appcast 'https://www.texpadapp.com/static-collected/upgrades/texpadappcast.xml',
-          :sha256 => 'c2ea6567dd4d3af33e44ac393906d034461124468c47cd05dc03f80e5d844bfb'
-
+          checkpoint: 'cfcc73295708a553ca7a637d5d465c038cd1b547fc604a0cebb2d05df70816dc'
   name 'Texpad'
   homepage 'https://www.texpadapp.com/osx'
   license :commercial
+
+  depends_on macos: '>= :snow_leopard'
 
   app 'Texpad.app'
 end

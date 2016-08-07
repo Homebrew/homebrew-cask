@@ -1,7 +1,9 @@
+require "hbc/container/naked"
+
 class Hbc::Container::Pkg < Hbc::Container::Naked
   def self.me?(criteria)
-    (criteria.extension 'pkg' or criteria.extension 'mpkg') and
-      (criteria.file.include? 'application/x-directory' or
-       criteria.magic_number(4, 'xar!'.unpack('C*')))
+    criteria.extension(%r{m?pkg$}) &&
+      (criteria.path.directory? ||
+       criteria.magic_number(%r{^xar!}n))
   end
 end

@@ -1,14 +1,15 @@
-cask :v1 => 'drobo-dashboard' do
-  version '2.6.9_74648'
-  sha256 '7a54e0c63424aa01090ccf069ca458596a9afb5f0f71ab1ca00bbd7c9c206218'
+cask 'drobo-dashboard' do
+  version '2.8.1_80644'
+  sha256 '680c9e9db80dc7f1555ce85eb34723cf8f01447794347cdf850352095ff2d5e4'
 
-  url "http://files.drobo.com/webrelease/dashboard/Drobo-Dashboard-#{version.sub(%r{_.*},'')}.dmg"
+  url "http://files.drobo.com/webrelease/dashboard/Drobo-Dashboard-#{version.sub(%r{_.*}, '')}.dmg"
   name 'Drobo Dashboard'
   homepage 'http://www.drobo.com'
   license :gratis
 
   pkg "Install.app/Contents/Drobo_Dashboard_Installer_#{version}.pkg"
 
-  uninstall :script => 'Uninstall.app/Contents/Resources/Scripts/Drobo_Dashboard_uninstall.sh',
-            :pkgutil => 'com.datarobotics.drobodashboard'
+  uninstall script:  { executable: 'Uninstall.app/Contents/Resources/Scripts/Drobo_Dashboard_uninstall.sh',
+                       sudo:       true },
+            pkgutil: 'com.datarobotics.drobodashboard'
 end

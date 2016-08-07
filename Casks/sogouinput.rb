@@ -1,14 +1,14 @@
-cask :v1 => 'sogouinput' do
-  version '3.3.0.74249'
-  sha256 'b9d80a202f5c7143ea7640015d9d73cf67b5e379f296af9f8c406edb233873c7'
+cask 'sogouinput' do
+  version '3.4.0.78196'
+  sha256 'ff0f9008dc3f4af2112f714b0ce45105a9606241f794c3734f9a5ac2c954e76d'
 
-  url 'http://download.ime.sogou.com/1443062217/sogou_mac_33d.dmg'
-  name '搜狗输入法'
+  url 'http://download.ime.sogou.com/1453172459/sogou_mac_34.dmg'
   name 'Sogou Input Method'
+  name '搜狗输入法'
   homepage 'http://pinyin.sogou.com/mac/'
   license :gratis
 
-  installer :manual => '安装搜狗输入法.app'
+  installer manual: '安装搜狗输入法.app'
 
-  uninstall :delete => '/Library/Input Methods/SogouInput.app'
+  uninstall delete: '/Library/Input Methods/SogouInput.app'
 end

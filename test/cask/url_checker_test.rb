@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 describe Hbc::UrlChecker do
   describe "request processing" do
@@ -11,7 +11,7 @@ describe Hbc::UrlChecker do
     end
 
     it "properly populates the response code and headers from an http response" do
-      TestHelper.fake_response_for(TestHelper.test_cask.url, <<-RESPONSE.gsub(/^ */, ''))
+      TestHelper.fake_response_for(TestHelper.test_cask.url, <<-RESPONSE.gsub(%r{^ *}, ""))
         HTTP/1.1 200 OK
         Content-Type: application/x-apple-diskimage
         ETag: "b4208f3e84967be4b078ecaa03fba941"
@@ -21,13 +21,11 @@ describe Hbc::UrlChecker do
 
       checker = Hbc::UrlChecker.new(TestHelper.test_cask, TestHelper.fake_fetcher)
       checker.run
-      checker.response_status.must_equal 'HTTP/1.1 200 OK'
-      checker.headers.must_equal({
-        'Content-Type' => 'application/x-apple-diskimage',
-        'ETag' => '"b4208f3e84967be4b078ecaa03fba941"',
-        'Content-Length' => '23726161',
-        'Last-Modified' => 'Sun, 12 Aug 2012 21:17:21 GMT'
-      })
+      checker.response_status.must_equal "HTTP/1.1 200 OK"
+      checker.headers.must_equal("Content-Type"   => "application/x-apple-diskimage",
+                                 "ETag"           => '"b4208f3e84967be4b078ecaa03fba941"',
+                                 "Content-Length" => "23726161",
+                                 "Last-Modified"  => "Sun, 12 Aug 2012 21:17:21 GMT")
     end
   end
 end

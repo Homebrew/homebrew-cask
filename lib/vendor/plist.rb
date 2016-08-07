@@ -5,7 +5,7 @@
 # Distributed under the MIT License
 #
 
-# Plist parses Mac OS X xml property list files into ruby data structures.
+# Plist parses macOS xml property list files into ruby data structures.
 #
 # === Load a plist file
 # This is the main point of the library:

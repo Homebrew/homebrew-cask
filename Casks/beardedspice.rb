@@ -1,13 +1,20 @@
-cask :v1 => 'beardedspice' do
-  version '1.2'
-  sha256 '0498f7259dce39003221fe0de2080aac3b9d7306d2da6fff6c2bf04d340ae7c6'
+cask 'beardedspice' do
+  version '2.0.0'
+  sha256 'f2e29501c40c94642431f2442a5aea2607593471b6aa4db2acf9b0aea873ee85'
 
-  # github.com is the official download host per the vendor homepage
   url "https://github.com/beardedspice/beardedspice/releases/download/v#{version}/BeardedSpice-#{version}.zip"
-  appcast 'https://github.com/beardedspice/beardedspice/releases.atom'
+  appcast 'https://github.com/beardedspice/beardedspice/releases.atom',
+          checkpoint: '6ad07b284ab37c83d87e1f44149e46910649f8901f49b78288a66c11ef8d793f'
   name 'BeardedSpice'
-  homepage 'http://www.beardedspice.com'
+  homepage 'https://github.com/beardedspice/beardedspice/'
   license :oss
 
+  auto_updates true
+
   app 'BeardedSpice.app'
+
+  zap delete: [
+                '~/Library/Caches/com.beardedspice.BeardedSpice',
+                '~/Library/Preferences/com.beardedspice.BeardedSpice.plist',
+              ]
 end

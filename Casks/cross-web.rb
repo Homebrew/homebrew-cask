@@ -1,4 +1,4 @@
-cask :v1 => 'cross-web' do
+cask 'cross-web' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'cross-web' do
 
   pkg 'npCrossWeb_Mac.pkg'
 
-  uninstall :pkgutil => 'kr.co.iniline.pkg.CrossWebPackage'
+  uninstall pkgutil: 'kr.co.iniline.pkg.CrossWebPackage'
 end

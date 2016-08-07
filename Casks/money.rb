@@ -1,4 +1,4 @@
-cask :v1 => 'money' do
+cask 'money' do
   version '4.6'
   sha256 'd012fd407a083f01cae851bdc43caf311e85b6cedaf0c05b44a0539711a4a47c'
 

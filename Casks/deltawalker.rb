@@ -1,14 +1,14 @@
-cask :v1 => 'deltawalker' do
-  version '2.1.2'
-  sha256 '4ce4f47347df1c475fd631b52c246b1486aa92645fd6345acd8941d9f186afb0'
+cask 'deltawalker' do
+  version '2.3.0'
+  sha256 '567b17366dbc33518a6a914e140699485a37b840bf99acf8f7e5b1a86c83d664'
 
-  # amazonaws.com is the official download host per the vendor homepage
+  # amazonaws.com/deltawalker was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/deltawalker/DeltaWalker-#{version}_64.dmg"
   name 'DeltaWalker'
   homepage 'http://www.deltawalker.com/'
   license :commercial
 
-  depends_on :macos => '>= :tiger'
+  depends_on macos: '>= :tiger'
 
   app 'DeltaWalker.app'
 end

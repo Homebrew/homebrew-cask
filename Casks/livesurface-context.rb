@@ -1,4 +1,4 @@
-cask :v1 => 'livesurface-context' do
+cask 'livesurface-context' do
   version '1.1.718'
   sha256 '9165447a29b5a0cc098a44b5569b6dbdd15da411c5da352ebe980e8561e2e027'
 
@@ -9,5 +9,5 @@ cask :v1 => 'livesurface-context' do
 
   app 'LiveSurface Context.app'
 
-  zap :delete => '~/Library/*/*[Ll]ive[Ss]urface*'
+  zap delete: '~/Library/*/*[Ll]ive[Ss]urface*'
 end

@@ -5,9 +5,7 @@ class Hbc::FakeFetcher
 
   def self.head(url)
     @responses ||= {}
-    unless @responses.key?(url)
-      fail("no response faked for #{url.inspect}")
-    end
+    raise("no response faked for #{url.inspect}") unless @responses.key?(url)
     @responses[url]
   end
 

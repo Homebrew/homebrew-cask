@@ -1,4 +1,4 @@
-cask :v1 => 'mercurymover' do
+cask 'mercurymover' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'mercurymover' do
 
   prefpane 'MercuryMover.prefPane'
 
-  zap :delete => '~/Library/Preferences/com.heliumfoot.MyWiAgent.plist'
+  zap delete: '~/Library/Preferences/com.heliumfoot.MyWiAgent.plist'
 end

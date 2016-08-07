@@ -1,20 +1,20 @@
-cask :v1 => 'vienna' do
-  version '3.0.8'
-  sha256 'dbb6510500539718955718567cb246901b0508c8bda804020e5026119c288c19'
+cask 'vienna' do
+  version '3.1.5'
+  sha256 '4349280123e341e99c6ac6af59779233e058251196f37e7809cc874ddddd2118'
 
-  # bintray.com is the official download host per the appcast feed
-  url "https://dl.bintray.com/viennarss/vienna-rss/Vienna#{version}.tgz"
-  appcast 'http://vienna-rss.org/changelog.xml',
-          :sha256 => '15433a536e85cb65749a8e93baeffc56b8dec68610031eca0492dbddb5d0d74b'
+  # bintray.com/viennarss was verified as official when first introduced to the cask
+  url "https://dl.bintray.com/viennarss/vienna-rss/Vienna#{version}.tar.gz"
+  appcast 'https://viennarss.github.io/sparkle-files/changelog.xml',
+          checkpoint: '226ebcf4e7e000b5a30ada91aa54e58574f5352b0bedba7d2721691b1fc34b18'
   name 'Vienna'
   homepage 'http://www.vienna-rss.org'
   license :apache
 
   app 'Vienna.app'
 
-  zap :delete => [
-                  '~/Library/Application Support/Vienna',
-                  '~/Library/Caches/uk.co.opencommunity.vienna2',
-                  '~/Library/Preferences/uk.co.opencommunity.vienna2.plist',
-                  ]
+  zap delete: [
+                '~/Library/Application Support/Vienna',
+                '~/Library/Caches/uk.co.opencommunity.vienna2',
+                '~/Library/Preferences/uk.co.opencommunity.vienna2.plist',
+              ]
 end

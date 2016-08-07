@@ -1,18 +1,19 @@
-cask :v1 => 'appserver' do
-  version '1.0.6-21'
-  sha256 '33bd22f0b8852f37c6bbfcc1c9aa9e63a4916e12821642260a5054304916267b'
+cask 'appserver' do
+  version '1.1.2-188'
+  sha256 '4e35ab705e51d976071a9b5612da0a1c611fe628fb7daebfc93a2ec4ab729eeb'
 
-  # github.com is the official download host per the vendor homepage
-  url "https://github.com/appserver-io/appserver/releases/download/#{version.sub(/-.*/, '')}/appserver-dist_#{version}_x86_64.pkg"
-  appcast 'https://github.com/appserver-io/appserver/releases.atom'
+  # github.com/appserver-io/appserver was verified as official when first introduced to the cask
+  url "https://github.com/appserver-io/appserver/releases/download/#{version.sub(%r{-.*}, '')}/appserver-dist_#{version}_x86_64.pkg"
+  appcast 'https://github.com/appserver-io/appserver/releases.atom',
+          checkpoint: 'aae37e43a351d3a37cffb369933b45ee9c3fc4127675ac48a76e333a3f31e229'
   name 'appserver.io'
   homepage 'http://www.appserver.io'
   license :oss
 
   pkg "appserver-dist_#{version}_x86_64.pkg"
 
-  uninstall :pkgutil => [
-                         'com.techdivision.appserver-io.runtime',
-                         'com.techdivision.appserver-io.source'
-                        ]
+  uninstall pkgutil: [
+                       'com.techdivision.appserver-io.runtime',
+                       'com.techdivision.appserver-io.source',
+                     ]
 end

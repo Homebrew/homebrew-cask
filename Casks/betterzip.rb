@@ -1,15 +1,15 @@
-cask :v1 => 'betterzip' do
-  version '3.0.3'
-  sha256 '5bcce666ff501957cf535d13d156ef7e5da79f7af283a2f911ef7e959c847594'
+cask 'betterzip' do
+  version '3.1.2'
+  sha256 'eaf686e95876fd2b064cc1a6aba984c7b40b74710c5894c28130ed53a428f049'
 
-  url "http://macitbetter.com/dl/BetterZip-#{version}.zip"
+  url "https://macitbetter.com/dl/BetterZip-#{version}.zip"
+  appcast 'https://macitbetter.com/BetterZip3.rss',
+          checkpoint: 'cc8f405304c66c96a64702a7806bef9e5c5a3f0b393560c95130e1730a38d79f'
   name 'BetterZip'
-  appcast 'http://macitbetter.com/BetterZip3.rss',
-          :sha256 => 'e219c96ec87b7df24d997134efc056f027523021ff4f26b033286d1dd884abe0'
-  homepage 'http://macitbetter.com'
+  homepage 'https://macitbetter.com'
   license :commercial
 
   app 'BetterZip.app'
 
-  zap :delete => '~/Library/Preferences/com.macitbetter.betterzip.plist'
+  zap delete: '~/Library/Preferences/com.macitbetter.betterzip.plist'
 end

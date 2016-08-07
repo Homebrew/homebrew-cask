@@ -1,6 +1,6 @@
-cask :v1 => 'quassel' do
-  version '0.12.2'
-  sha256 '4dd932e5e7a0908886427fc012886a76bbf1691cdd8832a67cdbc11a10be3682'
+cask 'quassel' do
+  version '0.12.4'
+  sha256 'ac4e4e5f644f6fa9c1d7ed31f54060b3c676a6b327019d2e069d3172a362645d'
 
   url "http://quassel-irc.org/pub/QuasselMono_MacOSX-x86_64_#{version}.dmg"
   name 'Quassel IRC'

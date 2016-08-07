@@ -1,12 +1,15 @@
-cask :v1 => 'dash-dash' do
-  version '0.12.0.53'
-  sha256 'a49b9a5f0bd098b5013895541d72842367de9490f30b784c555b4ea742327e51'
+cask 'dash-dash' do
+  version '0.12.0.58'
+  sha256 '09af72ac52e3c5a62a4eb735a0cd3609c90808a54663b0fe1e5bd6a5f9a7745c'
 
-  url "https://www.dashpay.io/binaries/dash-#{version}-osx.dmg"
+  url "https://www.dash.org/binaries/dash-#{version}-osx.dmg"
   name 'Dash'
-  name 'Dash Core'
-  homepage 'https://www.dashpay.io/'
+  homepage 'https://www.dash.org/'
   license :mit
 
   app 'Dash-Qt.app'
+
+  preflight do
+    set_permissions "#{staged_path}/Dash-Qt.app", '0755'
+  end
 end

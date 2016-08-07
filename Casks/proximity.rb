@@ -1,11 +1,15 @@
-cask :v1 => 'proximity' do
-  version '1.5'
-  sha256 '3ac0e90ffee62a6fadf2bb697393442f3cd87f4084ffdccf9cccf10cb86b3203'
+cask 'proximity' do
+  version '1.0.1'
+  sha256 '836d209bb83cd144780e200aad7ea6dda2581b20c5be316208337996532f0d51'
 
-  url "https://reduxcomputing-proximity.googlecode.com/files/Proximity%20#{version}.zip"
+  # kvraudio.com was verified as official when first introduced to the cask
+  url "https://static.kvraudio.com/files/1451/proximity_v#{version.dots_to_underscores}-mac.zip"
   name 'Proximity'
-  homepage 'https://code.google.com/p/reduxcomputing-proximity/'
-  license :oss
+  homepage 'http://www.tokyodawn.net/proximity/'
+  license :gratis
 
-  app 'Proximity.app'
+  container nested: 'macOS/Proximity-VST-AU.dmg'
+
+  audio_unit_plugin 'Proximity.component'
+  vst_plugin 'Proximity.vst'
 end

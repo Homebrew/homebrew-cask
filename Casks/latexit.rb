@@ -1,15 +1,16 @@
-cask :v1 => 'latexit' do
-  version '2.8.0'
-  sha256 '74258cbf8673ef17fb6ce8fbfdc630ea98002fb2a7012c251429299cf9b68489'
+cask 'latexit' do
+  version '2.8.1'
+  sha256 'ab2ccbadfd57b4f60b7f6e1a81ae1294db901c805676badff9535cc483f9efca'
 
-  url "http://www.chachatelier.fr/latexit/downloads/LaTeXiT-#{version.gsub('.', '_')}.dmg"
-  appcast 'http://pierre.chachatelier.fr/latexit/downloads/latexit-sparkle-en.rss',
-          :sha256 => '34cab0a120226e056f8ea3f24afa7e252429e487b522345adf862365986b2d66'
+  url "https://www.chachatelier.fr/latexit/downloads/LaTeXiT-#{version.dots_to_underscores}.dmg",
+      user_agent: :fake
+  appcast 'https://pierre.chachatelier.fr/latexit/downloads/latexit-sparkle-en.rss',
+          checkpoint: '90d5bc582ecba92ccf740e0a9793fa8f08441d3c9586eeddcb8baf003cdc023c'
   name 'LaTeXiT'
   homepage 'http://www.chachatelier.fr/latexit'
   license :oss
 
   app 'LaTeXiT.app'
 
-  zap :delete => '~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist'
+  zap delete: '~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist'
 end

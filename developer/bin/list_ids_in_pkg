@@ -32,9 +32,7 @@ bundle_id_source_1 () {
 
 bundle_id_source_2 () {
     /usr/bin/find "$pkgdir" -name Info.plist -print0 |                                 \
-    "$xargs" -0 /usr/bin/plutil -convert xml1 -o - -- 2> /dev/null |                   \
-    /usr/bin/perl -0777 -ne                                                            \
-      'while (m{<key>\s*CFBundleIdentifier\s*</key>\s*<string>([^<]+?)</string>}sg) { print "$1\n" }'
+    "$xargs" -0 -I {} /usr/libexec/PlistBuddy {} -c 'Print :CFBundleIdentifier'
 }
 
 merge_sources () {
@@ -88,7 +86,7 @@ if [[ $1 =~ ^-+h(elp)?$ || -z "$1" ]]; then
 Given a package file, extract a list of candidate Package IDs
 which may be useful in a Cask uninstall stanza, eg
 
-    uninstall :pkgutil => 'package.id.goes.here'
+    uninstall pkgutil: 'package.id.goes.here'
 
 The given package file need not be installed.
 

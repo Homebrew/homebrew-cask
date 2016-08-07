@@ -1,4 +1,4 @@
-cask :v1 => 'plex-home-theater' do
+cask 'plex-home-theater' do
   version '1.4.1.469-47a90f01'
 
   if Hardware::CPU.is_32_bit?

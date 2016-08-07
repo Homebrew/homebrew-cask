@@ -1,4 +1,4 @@
-cask :v1 => 'caffeine' do
+cask 'caffeine' do
   version '1.1.1'
   sha256 '9203c30951f9aab41ac294bbeb1dcef7bed401ff0b353dcb34d68af32ea51853'
 
@@ -9,5 +9,5 @@ cask :v1 => 'caffeine' do
 
   app 'Caffeine.app'
 
-  zap :delete => '~/Library/Preferences/com.lightheadsw.Caffeine.plist'
+  zap delete: '~/Library/Preferences/com.lightheadsw.Caffeine.plist'
 end

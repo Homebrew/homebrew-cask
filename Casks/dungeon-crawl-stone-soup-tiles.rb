@@ -1,10 +1,10 @@
-cask :v1 => 'dungeon-crawl-stone-soup-tiles' do
-  version '0.16.1'
-  sha256 '3fb69a2de46b051da86ad7c038ef91b8364a3c79ec8699c6120d2d041fe8bd6a'
+cask 'dungeon-crawl-stone-soup-tiles' do
+  version '0.18.1'
+  sha256 'b6d8b39f1940b71e16c6e2e9cd1a7cf51bfd4306296c3b421bd6b3e0a0104336'
 
-  url "https://crawl.develz.org/release/stone_soup-#{version}-tiles-macos.zip"
+  url "https://crawl.develz.org/release/stone_soup-#{version}-tiles-macosx.zip"
   name 'Dungeon Crawl Stone Soup'
-  homepage 'http://crawl.develz.org'
+  homepage 'https://crawl.develz.org'
   license :gpl
 
   app 'Dungeon Crawl Stone Soup - Tiles.app'

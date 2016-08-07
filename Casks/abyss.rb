@@ -1,10 +1,10 @@
-cask :v1 => 'abyss' do
+cask 'abyss' do
   version 'x1'
-  sha256 '63b0b8d6420a0f65899ea1fa7827f04c8c8b3fa444a9f6361054d6605cf13fed'
+  sha256 '56d2a51ad4a0b5788f89907ad1b4df6106bd2515906aee7e62466b8aa52bccd6'
 
-  url 'http://www.aprelium.com/data/abwsx1.dmg'
+  url 'https://aprelium.com/data/abwsx1.dmg'
   name 'Abyss Web Server'
-  homepage 'http://www.aprelium.com/abyssws'
+  homepage 'https://aprelium.com/abyssws/'
   license :gratis
 
   app 'Abyss Web Server/Abyss Web Server.app'

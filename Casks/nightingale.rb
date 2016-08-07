@@ -1,9 +1,11 @@
-cask :v1 => 'nightingale' do
-  version '1.12-2432'
-  sha256 '854b02a22f2846284618dc8d3a64a766e8e7a34e65cf35934f6b357f4bc1000e'
+cask 'nightingale' do
+  version '1.12.1-2454'
+  sha256 'f1a07e5bb6e069ac2f9fdc89c7708d3badb3b41e27199920a6d55b462764c454'
 
-  # sourceforge.net is the official download host per the vendor homepage
-  url "http://downloads.sourceforge.net/ngale/Nightingale_#{version}_macosx-i686.dmg"
+  # github.com/nightingale-media-player/nightingale-hacking was verified as official when first introduced to the cask
+  url "https://github.com/nightingale-media-player/nightingale-hacking/releases/download/nightingale-#{version.major_minor_patch}/Nightingale_#{version}_macosx-i686.dmg"
+  appcast 'https://github.com/nightingale-media-player/nightingale-hacking/releases.atom',
+          checkpoint: '4b1ee6d24b9052faa6389f2deb6c63c05a8b544229ba72fed3de43ff59f316c8'
   name 'Nightingale'
   homepage 'http://getnightingale.com/'
   license :oss

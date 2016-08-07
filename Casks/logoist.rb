@@ -1,4 +1,4 @@
-cask :v1 => 'logoist' do
+cask 'logoist' do
   version :latest
   sha256 :no_check
 

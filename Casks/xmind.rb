@@ -1,19 +1,18 @@
-cask :v1 => 'xmind' do
-  version '3.5.3.201506180105'
-  sha256 '94f6850bc82c06ba075e8eac338c5fe8ad60609fe31748bab5c9b99d105019c4'
+cask 'xmind' do
+  version '3.6.1'
+  sha256 '028b64584ad213484032fff8741a477de69cdafe4fa6ac060acb4c301bdedf59'
 
-  url "http://dl3.xmind.net/xmind-macosx-#{version}.dmg"
+  url 'http://dl2.xmind.net/xmind-downloads/xmind-7-update1-macosx.dmg'
   name 'XMind'
-  homepage 'http://www.xmind.net'
+  homepage 'https://www.xmind.net'
   license :freemium
-  tags :vendor => 'XMind'
 
-  zap :delete => [
-    '~/Library/XMind',
-    '~/Library/Saved Application State/org.xmind.cathy.application.savedState'
-  ]
-
-  depends_on :macos => '>= :snow_leopard'
+  depends_on macos: '>= :snow_leopard'
 
   app 'XMind.app'
+
+  zap delete: [
+                '~/Library/XMind',
+                '~/Library/Saved Application State/org.xmind.cathy.application.savedState',
+              ]
 end

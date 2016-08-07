@@ -1,9 +1,9 @@
-cask :v1 => 'itools' do
-  version '2.7.0'
-  sha256 'b05fdfd3820ffe3f35947cfb17e65a75cf17e1f6e57717f0eb5e05f4d951588b'
+cask 'itools' do
+  version '2.8.7'
+  sha256 'f49b075991705f57de4e46cdb6ae9ca5f7d995dba8d528c5c48f1cc31ff23dc3'
 
-  # itools.hk is the official download host per the vendor homepage
-  url "http://dl2.itools.hk/dl/iTools_#{version}.dmg"
+  # dl2.itools.hk/dl was verified as official when first introduced to the cask
+  url "http://dl2.itools.hk/dl/iTools64_#{version}.dmg"
   name 'iTools'
   homepage 'http://pro.itools.cn/mac/english'
   license :gratis

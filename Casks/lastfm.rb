@@ -1,13 +1,13 @@
-cask :v1 => 'lastfm' do
-  version '2.1.36'
-  sha256 'd61d4947117080998937c0d63148caf693f1bed5ec768d86feeb3a86f84d1ff9'
+cask 'lastfm' do
+  version '2.1.37'
+  sha256 'dc46e58111f8555fc0b1d6d2bd11e8fd4e4c45c6c7e953d106e07be8d6d8b448'
 
-  url "http://cdn.last.fm/client/Mac/Last.fm-#{version}.zip"
-  appcast 'http://cdn.last.fm/client/Mac/updates.xml'
+  url "https://cdn.last.fm/client/Mac/Last.fm-#{version}.zip"
+  appcast 'https://cdn.last.fm/client/Mac/updates.xml',
+          checkpoint: '7a9b0239c6af0128a3eff20c46c3893cee1f3a57786f6c2fca8a8df8e8993280'
   name 'Last.fm Scrobbler'
-  homepage 'http://www.last.fm/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
-  tags :vendor => 'Last.fm'
+  homepage 'https://www.last.fm/'
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Last.fm.app'
 end

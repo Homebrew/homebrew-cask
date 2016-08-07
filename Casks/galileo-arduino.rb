@@ -1,11 +1,11 @@
-cask :v1 => 'galileo-arduino' do
-  version '1.5.3'
-  sha256 '8fafc626fb7d0918d7f4ddb98d59823c0fcc9b3aeb8e1d252ae9688b4095c153'
+cask 'galileo-arduino' do
+  version '1.6.0'
+  sha256 '529a8b71aa21fc1e8621d562f1e51fd9d5e36afb0610ccb6905ecef41d209d14'
 
-  url "http://downloadmirror.intel.com/23171/eng/Intel_Galileo_Arduino_SW_#{version}_on_MacOSX%20_v1.0.0.zip"
+  url "https://downloadmirror.intel.com/24355/eng/IntelArduino-#{version}-OSX.zip"
   name 'Intel Galileo Arduino SW'
-  homepage 'https://communities.intel.com/docs/DOC-22226'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://downloadcenter.intel.com/download/24355/Intel-Galileo-Board-Software-Package'
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Arduino.app'
 end

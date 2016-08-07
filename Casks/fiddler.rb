@@ -1,16 +1,14 @@
-cask :v1 => 'fiddler' do
+cask 'fiddler' do
   version :latest
   sha256 :no_check
 
+  # ericlawrence.com was verified as official when first introduced to the cask
   url 'http://ericlawrence.com/dl/InstallFiddler.dmg'
   name 'Telerik Fiddler Proxy'
-  name 'Fiddler Proxy'
-  name 'Fiddler'
-  homepage 'http://www.telerik.com/fiddler'
+  homepage 'https://www.telerik.com/fiddler'
   license :commercial
-  tags :vendor => 'Telerik'
 
-  depends_on :cask => 'mono-mdk'
+  depends_on cask: 'mono-mdk'
 
   app 'Fiddler.app'
 end

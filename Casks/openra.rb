@@ -1,15 +1,16 @@
-cask :v1 => 'openra' do
-  version '20150919'
-  sha256 '395ab15e92cec263ca6fda3f97b3593fd7e42ab9e7b3ca23f302bc4809605761'
+cask 'openra' do
+  version '20160508'
+  sha256 '2992357757c8882ebda97ae5239a4e8e435e06c58575f4230de45647414c6bd1'
 
-  # github.com is the official download host per the vendor homepage
+  # github.com/OpenRA/OpenRA was verified as official when first introduced to the cask
   url "https://github.com/OpenRA/OpenRA/releases/download/release-#{version}/OpenRA-release-#{version}.zip"
-  appcast 'https://github.com/OpenRA/OpenRA/releases.atom'
+  appcast 'https://github.com/OpenRA/OpenRA/releases.atom',
+          checkpoint: 'e6787d8d0cafc3da4c192de3f532e331173134ac2cb043ba67be65e09cb66462'
   name 'OpenRA'
-  homepage 'http://www.openra.net/'
+  homepage 'http://www.openra.net'
   license :gpl
 
-  depends_on :cask => 'mono-mdk'
+  depends_on cask: 'mono-mdk'
 
   app 'OpenRA.app'
 end

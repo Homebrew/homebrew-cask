@@ -1,6 +1,6 @@
-cask :v1 => 'yubikey-piv-manager' do
-  version '1.0.2'
-  sha256 '2011c13b747c6bb51a87fce5c1df65a36f8afbfcf110c5c870a960cf84acdcdc'
+cask 'yubikey-piv-manager' do
+  version '1.2.1'
+  sha256 'fd1604247655b359645fe84c7659f5d60e0d6b0ef0aba52f983e9c0b0d18c0c7'
 
   url "https://developers.yubico.com/yubikey-piv-manager/Releases/yubikey-piv-manager-#{version}-mac.pkg"
   name 'YubiKey PIV Manager'
@@ -9,5 +9,5 @@ cask :v1 => 'yubikey-piv-manager' do
 
   pkg "yubikey-piv-manager-#{version}-mac.pkg"
 
-  uninstall :pkgutil => 'com.yubico.pkg.YubiKeyPIVManager'
+  uninstall pkgutil: 'com.yubico.pkg.YubiKeyPIVManager'
 end

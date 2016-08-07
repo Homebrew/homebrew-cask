@@ -1,4 +1,4 @@
-cask :v1 => 'nutstore' do
+cask 'nutstore' do
   version :latest
   sha256 :no_check
 

@@ -1,14 +1,13 @@
-cask :v1 => 'geniego' do
+cask 'geniego' do
   version :latest
   sha256 :no_check
 
+  # directv.vo.llnwd.net was verified as official when first introduced to the cask
   url 'http://directv.vo.llnwd.net/e4/nomad/MACOS-client.dmg'
   name 'DIRECTV GenieGO'
-  name 'GenieGO'
-  name 'Nomad'
   homepage 'http://www.directv.com/technology/geniego'
   license :closed
 
   # Renamed for clarity: app name is inconsistent with its branding.
-  app 'Nomad.app', :target => 'GenieGO.app'
+  app 'Nomad.app', target: 'GenieGO.app'
 end

@@ -1,11 +1,13 @@
-cask :v1 => 'nomad' do
-  version '0.1.0'
-  sha256 'bea96ca7fcb4e6ce446ab86c26770f4b2dbaf936e299355831e9a383d67b4849'
+cask 'nomad' do
+  version '0.3.2'
+  sha256 '96808b9b8056490026327bdc6614e1813cee7d42978676e0024085709fd3fcac'
 
-  # bintray.com is the official download host per the vendor homepage
-  url "https://dl.bintray.com/mitchellh/nomad/nomad_#{version}_darwin_amd64.zip"
+  # hashicorp.com/nomad was verified as official when first introduced to the cask
+  url "https://releases.hashicorp.com/nomad/#{version}/nomad_#{version}_darwin_amd64.zip"
+  appcast 'https://github.com/hashicorp/nomad/releases.atom',
+          checkpoint: 'b65196b74ce907895afc4e8fc5bc4e4545d431edb2477cf743a21bb2b953b140'
   name 'Nomad'
-  homepage 'https://nomadproject.io/'
+  homepage 'https://www.nomadproject.io/'
   license :mpl
 
   binary 'nomad'

@@ -1,74 +1,68 @@
-require 'spec_helper'
+require "spec_helper"
 
 describe Hbc::CLI::Cleanup do
-  let(:homebrew_cache_location) { Pathname(Dir.mktmpdir).realpath }
-  let(:cache_location) { homebrew_cache_location.join('Casks').tap(&:mkdir) }
+  let(:cache_location) { Pathname.new(Dir.mktmpdir).realpath }
   let(:cleanup_outdated) { false }
 
   subject { described_class.new(cache_location, cleanup_outdated) }
-  after { homebrew_cache_location.rmtree }
 
-  describe 'cleanup!' do
-    it 'removes dead symlinks' do
-      bad_symlink = cache_location.join('bad_symlink')
-      bad_symlink.make_symlink('../does_not_exist')
+  after do
+    cache_location.rmtree
+  end
 
-      expect {
-        subject.cleanup!
-      }.to output(<<-OUTPUT.undent).to_stdout
-        ==> Removing dead symlinks
-        #{bad_symlink}
-        ==> Removing cached downloads
-        Nothing to do
-      OUTPUT
-
-      expect(bad_symlink.symlink?).to eq(false)
-    end
-
-    it 'removes cached downloads' do
-      cached_download = homebrew_cache_location.join('SomeDownload.dmg')
+  describe "cleanup!" do
+    it "removes cached downloads" do
+      cached_download = cache_location.join("SomeDownload.dmg")
       FileUtils.touch(cached_download)
-
-      cached_download_symlink = cache_location.join('SomeDownload.dmg')
-      cached_download_symlink.make_symlink(cached_download)
+      cleanup_size = subject.disk_cleanup_size
 
       expect {
         subject.cleanup!
       }.to output(<<-OUTPUT.undent).to_stdout
-        ==> Removing dead symlinks
-        Nothing to do
         ==> Removing cached downloads
         #{cached_download}
-        #{cached_download_symlink}
+        ==> This operation has freed approximately #{disk_usage_readable(cleanup_size)} of disk space.
       OUTPUT
 
       expect(cached_download.exist?).to eq(false)
-      expect(cached_download_symlink.symlink?).to eq(false)
     end
 
-    context 'when cleanup_outdated is specified' do
+    it "does not removed locked files" do
+      cached_download = cache_location.join("SomeDownload.dmg")
+      FileUtils.touch(cached_download)
+      cleanup_size = subject.disk_cleanup_size
+
+      File.new(cached_download).flock(File::LOCK_EX | File::LOCK_NB)
+
+      expect(Hbc::Utils).to be_file_locked(cached_download)
+
+      expect {
+        subject.cleanup!
+      }.to output(<<-OUTPUT.undent).to_stdout
+        ==> Removing cached downloads
+        skipping: #{cached_download} is locked
+        ==> This operation has freed approximately #{disk_usage_readable(cleanup_size)} of disk space.
+      OUTPUT
+
+      expect(cached_download.exist?).to eq(true)
+    end
+
+    context "when cleanup_outdated is specified" do
       let(:cleanup_outdated) { true }
 
-      it 'does not remove cache files newer than 10 days old' do
-        cached_download = homebrew_cache_location.join('SomeNewDownload.dmg')
+      it "does not remove cache files newer than 10 days old" do
+        cached_download = cache_location.join("SomeNewDownload.dmg")
         FileUtils.touch(cached_download)
-
-        cached_download_symlink = cache_location.join('SomeNewDownload.dmg')
-        cached_download_symlink.make_symlink(cached_download)
 
         expect {
           subject.cleanup!
         }.to output(<<-OUTPUT.undent).to_stdout
-          ==> Removing dead symlinks
-          Nothing to do
           ==> Removing cached downloads older than 10 days old
           Nothing to do
         OUTPUT
 
         expect(cached_download.exist?).to eq(true)
-        expect(cached_download_symlink.symlink?).to eq(true)
       end
     end
   end
 end
-

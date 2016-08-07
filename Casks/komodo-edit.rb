@@ -1,9 +1,9 @@
-cask :v1 => 'komodo-edit' do
-  version '9.1.0-15798'
-  sha256 '8b5e549813f9990beb77430c92f11ac246e19edb63e4bfce51e1609dceac76b7'
+cask 'komodo-edit' do
+  version '9.3.2-16460'
+  sha256 'a6163361094615efb5d6f8ca3c0057cdb0be8a4bdd46eb916254cd36169c4083'
 
-  # activestate.com is the official download host per the vendor homepage
-  url "https://downloads.activestate.com/Komodo/releases/#{version.sub(%r{-.*},'')}/Komodo-Edit-#{version}-macosx-x86_64.dmg"
+  # activestate.com/Komodo was verified as official when first introduced to the cask
+  url "https://downloads.activestate.com/Komodo/releases/#{version.sub(%r{-.*}, '')}/Komodo-Edit-#{version}-macosx-x86_64.dmg"
   name 'Komodo Edit'
   homepage 'http://komodoide.com/komodo-edit'
   license :mpl

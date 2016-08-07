@@ -1,8 +1,8 @@
-cask :v1 => 'multipatch' do
-  version '1.4'
-  sha256 'ce95baacf8d4d323e144fa31e52c80519c0f81a59a8f3239c25c0da4b927fcf5'
+cask 'multipatch' do
+  version '1.5'
+  sha256 'd69af49969f035ae0eb4bebe55bb6bca78ebe816ee32eccdf0060e8bd3d1c893'
 
-  url "http://projects.sappharad.com/tools/multipatch#{version.delete('.')}.zip"
+  url "http://projects.sappharad.com/tools/multipatch#{version.no_dots}.zip"
   name 'MultiPatch'
   homepage 'http://projects.sappharad.com/tools/multipatch.html'
   license :gpl

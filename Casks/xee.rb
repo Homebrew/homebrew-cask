@@ -1,11 +1,11 @@
-cask :v1 => 'xee' do
-  version '3.4'
-  sha256 'e9d47feb6fd1365333958e04372bbc02d3bc098ba7a14695a0c91957dfb1fb99'
+cask 'xee' do
+  version '3.5.2'
+  sha256 '43e22dc738f9c6d08ccea094acfe66fa0bf89fda1cc69dbf8ec6e6c6aceb63b2'
 
-  url "http://wakaba.c3.cx/releases/Xee/Xee#{version}.dmg"
+  url "http://xee.c3.cx/downloads/Xee#{version}.dmg"
   name 'Xee³'
-  homepage 'http://xee.c3.cx/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://xee.c3.cx/'
+  license :commercial
 
   app 'Xee³.app'
 end

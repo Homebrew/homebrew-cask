@@ -1,6 +1,6 @@
-cask :v1 => 'qq' do
-  version '4.0.4'
-  sha256 '8d55ab564ead24e451b21f20f04b7bfdafda5d3273276ae5710b9a240f2e6e8f'
+cask 'qq' do
+  version '5.0.2'
+  sha256 '7b04127567b0480be43595a80455a6016a814150c1dd42023f92178176d35731'
 
   url "http://dldir1.qq.com/qqfile/QQforMac/QQ_V#{version}.dmg"
   name 'QQ'
@@ -9,11 +9,11 @@ cask :v1 => 'qq' do
 
   app 'QQ.app'
 
-  uninstall :quit => 'com.tencent.qq'
+  uninstall quit: 'com.tencent.qq'
 
-  zap :delete => [
-                  '~/Library/Containers/com.tencent.qq',
-                  '~/Library/Containers/com.tencent.localserver',
-                  '~/Library/Containers/com.tencent.ScreenCapture'
-                 ]
+  zap delete: [
+                '~/Library/Containers/com.tencent.qq',
+                '~/Library/Containers/com.tencent.localserver',
+                '~/Library/Containers/com.tencent.ScreenCapture',
+              ]
 end

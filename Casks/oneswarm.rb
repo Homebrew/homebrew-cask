@@ -1,4 +1,4 @@
-cask :v1 => 'oneswarm' do
+cask 'oneswarm' do
   version :latest
   sha256 :no_check
 

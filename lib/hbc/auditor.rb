@@ -1,14 +1,9 @@
 class Hbc::Auditor
-  def self.audit(cask, options = {})
-    audit = Hbc::Audit.new(cask)
-
-    retval = if options.fetch(:audit_download, false)
-      audit.run!(Hbc::Download.new(cask))
-    else
-      audit.run!
-    end
-
+  def self.audit(cask, audit_download: false)
+    download = audit_download && Hbc::Download.new(cask)
+    audit = Hbc::Audit.new(cask, download)
+    audit.run!
     puts audit.summary
-    retval
+    audit.success?
   end
 end

@@ -1,27 +1,21 @@
-cask :v1 => 'phpstorm' do
-  version '9.0.2'
-  sha256 '7995e951d442cb9203ed1e8ae491407a1b514828cef10bb9c7840880cbfacec2'
+cask 'phpstorm' do
+  version '2016.2'
+  sha256 '3b431f0fb4f3446b9b6aa808af1606929a65dc4329165b1d2fccad9b2e79ee90'
 
   url "https://download.jetbrains.com/webide/PhpStorm-#{version}.dmg"
-  name 'PhpStorm'
+  name 'JetBrains PhpStorm'
   homepage 'https://www.jetbrains.com/phpstorm/'
   license :commercial
 
   app 'PhpStorm.app'
 
-  zap :delete => [
-                  '~/Library/Application Support/WebIde90',
-                  '~/Library/Preferences/WebIde90',
-                  '~/Library/Preferences/com.jetbrains.PhpStorm.plist',
-                 ]
-  caveats <<-EOS.undent
-    #{token} requires Java 6 like any other IntelliJ-based IDE.
-    You can install it with
+  uninstall delete: '/usr/local/bin/pstorm'
 
-      brew cask install caskroom/homebrew-versions/java6
-
-    The vendor (JetBrains) doesn't support newer versions of Java (yet)
-    due to several critical issues, see details at
-    https://intellij-support.jetbrains.com/entries/27854363
-  EOS
+  zap delete: [
+                "~/Library/Preferences/PhpStorm#{version.major_minor}",
+                "~/Library/Caches/PhpStorm#{version.major_minor}",
+                "~/Library/Logs/PhpStorm#{version.major_minor}",
+                "~/Library/Application Support/PhpStorm#{version.major_minor}",
+                # TODO: expand/glob for '~/Library/Preferences/jetbrains.phpstorm.*.plist',
+              ]
 end

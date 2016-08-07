@@ -1,4 +1,4 @@
-cask :v1 => 'bloom' do
+cask 'bloom' do
   version :latest
   sha256 :no_check
 
@@ -9,5 +9,5 @@ cask :v1 => 'bloom' do
 
   pkg 'Bloom.pkg'
 
-  uninstall :pkgutil => 'com.sadcatsoft.bloom.Bloom.pkg'
+  uninstall pkgutil: 'com.sadcatsoft.bloom.Bloom.pkg'
 end

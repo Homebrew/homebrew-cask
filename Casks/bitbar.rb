@@ -1,10 +1,12 @@
-cask :v1 => 'bitbar' do
-  version '1.2.0'
-  sha256 '1a5f3d72ed5f8225b2cd822ec84bb42778c178725871e5868cfc3bf473d56408'
+cask 'bitbar' do
+  version '1.9.1'
+  sha256 '72350013b295ef1fa4beb1374bd3d2bdc5a7335c42666e8592b574799f9ced65'
 
-  url "https://github.com/stretchr/bitbar/releases/download/#{version}/BitBar.zip"
+  url "https://github.com/matryer/bitbar/releases/download/v#{version}/BitBar-v#{version}.zip"
+  appcast 'https://github.com/matryer/bitbar/releases.atom',
+          checkpoint: '67f819a46652dbf13da6178d1e9374a2d600893d7a828a28e372ce3ce7a4c8e3'
   name 'BitBar'
-  homepage 'https://github.com/stretchr/bitbar/'
+  homepage 'https://github.com/matryer/bitbar/'
   license :mit
 
   app 'BitBar.app'

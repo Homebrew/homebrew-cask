@@ -1,10 +1,10 @@
-cask :v1 => 'podtrans' do
+cask 'podtrans' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.imobie.com/product/podtrans-mac.dmg'
+  url 'https://www.imobie.com/product/podtrans-mac.dmg'
   name 'PodTrans'
-  homepage 'http://www.imobie.com/podtrans'
+  homepage 'https://www.imobie.com/podtrans'
   license :gratis
 
   app 'PodTrans.app'

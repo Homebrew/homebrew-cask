@@ -1,10 +1,10 @@
+require "hbc/container/naked"
+
 class Hbc::Container::Ttf < Hbc::Container::Naked
   def self.me?(criteria)
-    (criteria.extension 'ttf' and
-     (criteria.file.include? 'application/x-font-ttf' or
-      criteria.magic_number(4, 'true'.unpack('C*')))) or
-
-    (criteria.extension 'ttc' and
-      criteria.magic_number(4, 'ttcf'.unpack('C*')))
+    # TrueType Font
+    criteria.magic_number(%r{^\000\001\000\000\000}n) ||
+      # Truetype Font Collection
+      criteria.magic_number(%r{^ttcf}n)
   end
 end

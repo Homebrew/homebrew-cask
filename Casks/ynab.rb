@@ -1,12 +1,12 @@
-cask :v1 => 'ynab' do
-  version '4.3.655'
-  sha256 '0635c56582a1367c2ca3a8ab88805ec89625f2c5042497e7f13081726b2238a3'
+cask 'ynab' do
+  version '4.3.855'
+  sha256 '05dd388122e49a131c76adf265620b2fafac589f9b92ad8b622720e0752a1eb6'
 
   url "https://www.youneedabudget.com/CDNOrigin/download/ynab4/liveCaptive/Mac/YNAB4_LiveCaptive_#{version}.dmg"
-  name 'YNAB'
   name 'You Need A Budget'
+  name 'YNAB'
   homepage 'https://www.youneedabudget.com/'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :commercial
 
   app 'YNAB 4.app'
 end

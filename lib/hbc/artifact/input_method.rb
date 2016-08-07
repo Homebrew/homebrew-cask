@@ -1,2 +1,4 @@
-class Hbc::Artifact::InputMethod < Hbc::Artifact::Symlinked
+require "hbc/artifact/moved"
+
+class Hbc::Artifact::InputMethod < Hbc::Artifact::Moved
 end

@@ -1,11 +1,14 @@
-cask :v1 => 'supertuxkart' do
-  version '0.8.1'
-  sha256 'e3205788a42dd830cc1fb2deb100e305bd247d730ddd53bbd9e6601ea0e2a0d0'
+cask 'supertuxkart' do
+  version '0.9.2'
+  sha256 'ad0dc0169098c340cf4be203ce6038f4bbe8b7fe616c2af14690a7b30595a202'
 
-  url "http://downloads.sourceforge.net/sourceforge/supertuxkart/supertuxkart-#{version}-osx.dmg"
+  # sourceforge.net/supertuxkart was verified as official when first introduced to the cask
+  url "https://downloads.sourceforge.net/supertuxkart/SuperTuxKart-#{version}-osx.dmg"
+  appcast 'https://sourceforge.net/projects/supertuxkart/rss?path=/SuperTuxKart',
+          checkpoint: '6e14ee842c36c4476dc38cbcc4996d6632f5bf8a4bf796a69d108441d810fdb4'
   name 'SuperTuxKart'
-  homepage 'http://supertuxkart.sourceforge.net'
+  homepage 'https://supertuxkart.net'
   license :gpl
 
-  app 'Supertuxkart.app'
+  app 'SuperTuxKart.app'
 end

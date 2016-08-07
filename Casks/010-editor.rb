@@ -1,4 +1,4 @@
-cask :v1 => '010-editor' do
+cask '010-editor' do
   version :latest
   sha256 :no_check
 
@@ -7,7 +7,5 @@ cask :v1 => '010-editor' do
   homepage 'http://www.sweetscape.com/'
   license :commercial
 
-  pkg '010 Editor.pkg'
-
-  uninstall :pkgutil => 'com.SweetScape.010Editor.pkg'
+  app '010 Editor.app'
 end

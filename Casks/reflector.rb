@@ -1,14 +1,15 @@
-cask :v1 => 'reflector' do
-  version '2.2.1'
-  sha256 '5f5f5fa619939ece736f59b7fa581c24766dd2f4acac6ae37ae34d6df7f181f1'
+cask 'reflector' do
+  version '2.5.1'
+  sha256 'de2ccf9612cb49fb7ef3870611ab0c63abc2df750c0f5f5b7183c407b2faae3e'
 
-  url "http://download.airsquirrels.com/Reflector2/Mac/Reflector-#{version}.dmg"
-  appcast 'https://updates.airsquirrels.com/Reflector2/Mac/Reflector2.xml'
+  url "https://download.airsquirrels.com/Reflector2/Mac/Reflector-#{version}.dmg"
+  appcast 'https://updates.airsquirrels.com/Reflector2/Mac/Reflector2.xml',
+          checkpoint: '7df2adb37396c4abb61918bae56e48a7d4daa89a2e95bb7e38682b53a839cf38'
   name 'Reflector 2'
-  homepage 'http://www.airsquirrels.com/reflector/'
+  homepage 'https://www.airsquirrels.com/reflector/'
   license :commercial
 
-  depends_on :macos => '>= :mountain_lion'
+  depends_on macos: '>= :mountain_lion'
 
   app 'Reflector 2.app'
 end

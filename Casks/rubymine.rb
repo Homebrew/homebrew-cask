@@ -1,27 +1,22 @@
-cask :v1 => 'rubymine' do
-  version '7.1.4'
-  sha256 'ec503be6a441850702c5e332c459ccb2ed71e1a337f82b01587377f76a4f379e'
+cask 'rubymine' do
+  version '2016.2'
+  sha256 '0c5f92a343fddf8f6e3c694d122c255c2b1cc6405c1a027d6b1777c67eb04091'
 
-  url "http://download-cf.jetbrains.com/ruby/RubyMine-#{version}.dmg"
+  url "https://download.jetbrains.com/ruby/RubyMine-#{version}.dmg"
   name 'RubyMine'
   homepage 'https://www.jetbrains.com/ruby/'
   license :commercial
 
+  conflicts_with cask: 'rubymine-eap'
+
   app 'RubyMine.app'
 
-  zap :delete => [
-                  "~/Library/Application Support/RubyMine#{version.delete('.')}",
-                  "~/Library/Preferences/RubyMine#{version.delete('.')}",
-                 ]
+  uninstall delete: '/usr/local/bin/mine'
 
-  caveats <<-EOS.undent
-    #{token} requires Java 6 like any other IntelliJ-based IDE.
-    You can install it with
-
-      brew cask install caskroom/homebrew-versions/java6
-
-    The vendor (JetBrains) doesn't support newer versions of Java (yet)
-    due to several critical issues, see details at
-    https://intellij-support.jetbrains.com/entries/27854363
-  EOS
+  zap delete: [
+                "~/Library/Application Support/RubyMine#{version.major_minor}",
+                "~/Library/Preferences/RubyMine#{version.major_minor}",
+                "~/Library/Caches/RubyMine#{version.major_minor}",
+                "~/Library/Logs/RubyMine#{version.major_minor}",
+              ]
 end

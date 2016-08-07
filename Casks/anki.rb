@@ -1,11 +1,10 @@
-cask :v1 => 'anki' do
-
+cask 'anki' do
   if MacOS.release <= :snow_leopard
-    version '2.0.32.qt47'
-    sha256 '6e1f8ef67c9180b11779931f73770bb0e8fd3907c1aad7cdfde5b57d27309505'
+    version '2.0.34.qt47'
+    sha256 '83b008ad8ebb20247a673de3e37908d96cbb8573e5257b826176f5649a4ef6b7'
   else
-    version '2.0.32'
-    sha256 'fe0bdbb675f7c5fda9abdf48f24b0bb8f58c2d33b5b32eb9953faedb9e4d5235'
+    version '2.0.36'
+    sha256 '4e229ace72b11b93186af31183ae365bb24c5f14d098b7c4bb564d16c3dfbc3c'
   end
 
   url "http://ankisrs.net/download/mirror/anki-#{version}.dmg"
@@ -13,7 +12,7 @@ cask :v1 => 'anki' do
   homepage 'http://ankisrs.net/'
   license :affero
 
-  depends_on :arch => :intel
+  depends_on arch: :intel
 
   app 'Anki.app'
 end

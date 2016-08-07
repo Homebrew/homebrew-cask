@@ -1,16 +1,16 @@
-cask :v1 => 'inky' do
-  version :latest
-  sha256 :no_check
+cask 'inky' do
+  version '3.0.7_38'
+  sha256 '04ce74b7c30cd55f22b1a83ce7952605371c6b1a0d197bf328c8a70ef897358e'
 
-  url 'https://inky.com/mail/InkyInstall.dmg'
+  url "https://download.inky.com/InkyInstall_osx_#{version}.dmg"
   name 'Inky'
   homepage 'http://inky.com'
-  license :unknown    # todo: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Inky.app'
 
-  zap :delete => [
-                  '~/Library/Application Support/Arcode',
-                  '~/Library/Caches/com.arcode.inky',
-                 ]
+  zap delete: [
+                '~/Library/Application Support/Arcode',
+                '~/Library/Caches/com.arcode.inky',
+              ]
 end

@@ -1,11 +1,11 @@
-cask :v1 => 'inboard' do
-  version '1.0.4-276'
-  sha256 '51e950163423f6131d7e3b5c2c61493398a05decc1c4467acd647e07bd92a892'
+cask 'inboard' do
+  version '1.0.8-285'
+  sha256 'aa787c9a3c75788499ba530bc5377523b59ea76e109899c843ba9def7f37cf46'
 
   url "http://inboardapp.com/trial/Inboard-#{version}.zip"
-  name 'Inboard'
   appcast 'http://inboardapp.com/appcast.xml',
-          :sha256 => 'd8e40af66ec5e41d5f88c2b4d1f17aa92757ae2f9c91fb9f4612a4a05f7a30ab'
+          checkpoint: 'e53ad34aa629142245d50f2d35f51cf5c262013afe9007337ec9613b972e8d8c'
+  name 'Inboard'
   homepage 'http://inboardapp.com'
   license :commercial
 

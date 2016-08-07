@@ -1,22 +1,18 @@
-cask :v1 => 'megasync' do
+cask 'megasync' do
   version :latest
   sha256 :no_check
 
-  # mega.nz is the official download host per the vendor homepage
   url 'https://mega.nz/MEGAsyncSetup.dmg'
   name 'MEGAsync'
-  homepage 'https://mega.co.nz'
-  license :gratis
+  homepage 'https://mega.nz'
+  license :oss
 
   app 'MEGAsync.app'
 
   caveats do
     <<-EOS.undent
       #{token} only works if called from /Applications, so you may need to install it with
-        brew cask --appdir=/Applications install #{token}
-
-      Alternatively, you can create an extra link in /Applications, after installing
-        ln -s '#{staged_path}/MEGAsync.app' '/Applications/MEGAsync.app'
+        brew cask install --appdir=/Applications #{token}
     EOS
   end
 end

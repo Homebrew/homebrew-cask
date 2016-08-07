@@ -1,13 +1,14 @@
-cask :v1 => 'postico' do
-  version '0.28'
-  sha256 '42d5247cb9d8757bf0e5f7f5a523dc5474b8ed76a36e1a0a0b36229f06639c83'
+cask 'postico' do
+  version '1.0.9'
+  sha256 '19ef3bab73b5764e327e3d62c1c11894915ab9f00019dd6e6bd4427eb18812a1'
 
-  url "https://eggerapps.at/postico/download/postico-#{version}.zip"
+  # amazonaws.com/eggerapps-downloads was verified as official when first introduced to the cask
+  url "https://s3-eu-west-1.amazonaws.com/eggerapps-downloads/postico-#{version}.zip"
   name 'Postico'
   homepage 'https://eggerapps.at/postico/'
   license :freemium
 
-  app 'Postico.app'
+  depends_on macos: '>= :mavericks'
 
-  depends_on :macos => '>= :mavericks'
+  app 'Postico.app'
 end

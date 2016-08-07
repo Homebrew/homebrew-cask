@@ -1,14 +1,14 @@
-cask :v1 => 'visit' do
-  version '2.9.2'
-  sha256 '9dc908c9d298f65ba4be58b5772338c92bc771043054e8eb2979c77a8a56f865'
+cask 'visit' do
+  version '2.10.2'
+  sha256 'fc621ff86a81a04d92535a268a87e66206c21ae011a2fa91d94020c981d4a3cf'
 
-  # nersc.gov is the official download host per the vendor homepage
-  url "http://portal.nersc.gov/project/visit/releases/#{version}/VisIt-#{version}.dmg"
+  # portal.nersc.gov/project/visit was verified as official when first introduced to the cask
+  url "https://portal.nersc.gov/project/visit/releases/#{version}/VisIt-#{version}.dmg"
   name 'VisIt'
   homepage 'https://wci.llnl.gov/simulation/computer-codes/visit'
   license :bsd
 
-  app 'VisIt.app'
+  depends_on macos: '>= :mountain_lion'
 
-  depends_on :macos => '>= :mountain_lion'
+  app 'VisIt.app'
 end

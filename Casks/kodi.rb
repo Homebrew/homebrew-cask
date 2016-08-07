@@ -1,10 +1,9 @@
-cask :v1 => 'kodi' do
-  version '15.1'
-  sha256 'dc4e113d4315809d8b279fa0e4331e386b7690ae099b3cfb93e27b97331f2770'
+cask 'kodi' do
+  version '16.1'
+  sha256 '315ec1f3d64f6d5d7b55ecd80f839d0702326f6bbe80b64e94da4ae21ae44bca'
 
-  url "http://mirrors.kodi.tv/releases/osx/x86_64/kodi-#{version}-Isengard-x86_64.dmg"
+  url "http://mirrors.kodi.tv/releases/osx/x86_64/kodi-#{version}-Jarvis-x86_64.dmg"
   name 'Kodi'
-  name 'XBMC' # former
   homepage 'https://kodi.tv/'
   license :gpl
 

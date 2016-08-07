@@ -1,6 +1,6 @@
-cask :v1 => 'gurps-character-sheet' do
-  version '4.1.1'
-  sha256 'e5b397384730affe350e26a80a0db57f4dcd636711de6de93fe3acedaca5b5d6'
+cask 'gurps-character-sheet' do
+  version '4.4.1'
+  sha256 '60dade1ab02a478158ec9926ac5b8b1e08f316a08344da415aa947563c6074df'
 
   url "http://gurpscharactersheet.com/downloads/#{version}/gcs-#{version}-mac.zip"
   name 'GURPS Character Sheet'

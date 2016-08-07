@@ -1,4 +1,4 @@
-cask :v1 => 'isyncr-desktop' do
+cask 'isyncr-desktop' do
   version '5.1.3'
   sha256 'c258905a72cdfcd05ae45bf53c5939946adb7268fe6575a11661e2e11a88edb2'
 
@@ -9,6 +9,6 @@ cask :v1 => 'isyncr-desktop' do
 
   pkg "iSyncr Desktop #{version}.pkg"
 
-  uninstall :pkgutil => 'com.test.iSyncr.pkg',
-            :quit    => 'com.JRTStudio.iSyncrWiFi'
+  uninstall pkgutil: 'com.test.iSyncr.pkg',
+            quit:    'com.JRTStudio.iSyncrWiFi'
 end
