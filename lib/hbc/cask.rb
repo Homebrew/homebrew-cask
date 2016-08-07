@@ -72,7 +72,10 @@ class Hbc::Cask
   end
 
   def versions
-    timestamped_versions.map(&:first).uniq
+    timestamped_versions.map(&:first)
+                        .reverse
+                        .uniq
+                        .reverse
   end
 
   def installed?
