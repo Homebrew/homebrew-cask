@@ -38,11 +38,11 @@ module Hbc::Locations
     end
 
     def legacy_cache
-      @legacy_cache ||= HOMEBREW_CACHE.join("Casks")
+      @legacy_cache ||= homebrew_cache.join("Casks")
     end
 
     def cache
-      @cache ||= HOMEBREW_CACHE.join("Cask")
+      @cache ||= homebrew_cache.join("Cask")
     end
 
     attr_writer :appdir
@@ -169,34 +169,42 @@ module Hbc::Locations
       @x11_libpng ||= [Pathname.new("/opt/X11/lib/libpng.dylib"), Pathname.new("/usr/X11/lib/libpng.dylib")]
     end
 
+    def homebrew_cache
+      @homebrew_cache ||= HOMEBREW_CACHE
+    end
+
+    def homebrew_cache=(path)
+      @homebrew_cache = path ? Pathname.new(path) : path
+    end
+
     def homebrew_executable
-      @homebrew_executable ||= Pathname(ENV["HOMEBREW_BREW_FILE"] || Hbc::Utils.which("brew") || "/usr/local/bin/brew")
+      @homebrew_executable ||= HOMEBREW_BREW_FILE
     end
 
     def homebrew_prefix
       # where Homebrew links
-      @homebrew_prefix ||= homebrew_executable.dirname.parent
+      @homebrew_prefix ||= HOMEBREW_PREFIX
     end
 
-    def homebrew_prefix=(arg)
-      @homebrew_prefix = arg ? Pathname(arg) : arg
+    def homebrew_prefix=(path)
+      @homebrew_prefix = path ? Pathname.new(path) : path
     end
 
     def homebrew_repository
       # where Homebrew's .git dir is found
-      @homebrew_repository ||= homebrew_executable.realpath.dirname.parent
+      @homebrew_repository ||= HOMEBREW_REPOSITORY
     end
 
-    def homebrew_repository=(arg)
-      @homebrew_repository = arg ? Pathname(arg) : arg
+    def homebrew_repository=(path)
+      @homebrew_repository = path ? Pathname.new(path) : path
     end
 
     def homebrew_tapspath
       @homebrew_tapspath ||= homebrew_repository.join(*%w[Library Taps])
     end
 
-    def homebrew_tapspath=(arg)
-      @homebrew_tapspath = arg ? Pathname(arg) : arg
+    def homebrew_tapspath=(path)
+      @homebrew_tapspath = path ? Pathname.new(path) : path
     end
   end
 end
