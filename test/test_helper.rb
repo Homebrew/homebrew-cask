@@ -75,7 +75,7 @@ Hbc.homebrew_tapspath = nil
 Hbc.default_tap = "caskroom/homebrew-testcasks"
 
 # create cache directory
-HOMEBREW_CACHE = Pathname.new(TEST_TMPDIR).join("cache")
+Hbc.homebrew_cache = Pathname.new(TEST_TMPDIR).join("cache")
 Hbc.cache.mkpath
 
 # our own testy caskroom
