@@ -1,5 +1,5 @@
 cask 'textwrangler' do
-  if MacOS.release <= :lion
+  if MacOS.version <= :lion
     version '4.5.12'
     sha256 'f25ce90a54570ee4fe2287cdbe5c8b2a57188423a3693becacfa0533f02e0aa2'
 

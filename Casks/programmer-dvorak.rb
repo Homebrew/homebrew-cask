@@ -9,7 +9,7 @@ cask 'programmer-dvorak' do
 
   pkg "Programmer Dvorak v#{version.sub(%r{b.*}, '')}.pkg"
 
-  if MacOS.release >= :mavericks
+  if MacOS.version >= :mavericks
     postflight do
       # clear the layout cache before new layouts are recognized
       File.delete(*Dir.glob('/System/Library/Caches/com.apple.IntlDataCache.le*'))

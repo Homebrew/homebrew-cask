@@ -109,7 +109,7 @@ class Hbc::Container::Dmg < Hbc::Container::Base
 
   def system_dir_symlink?(path)
     # symlinks to system directories (commonly to /Applications)
-    path.symlink? && Hbc::MacOS.system_dir?(path.readlink)
+    path.symlink? && MacOS.system_dir?(path.readlink)
   end
 
   def mounts_from_plist(plist)

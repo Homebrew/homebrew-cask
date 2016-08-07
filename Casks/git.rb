@@ -1,5 +1,5 @@
 cask 'git' do
-  if MacOS.release <= :mountain_lion
+  if MacOS.version <= :mountain_lion
     version '2.3.5'
     sha256 '9dc62be67359298914c37cb7464b349daece3f06a903630f8a0f37a6a39c0728'
 

@@ -1,5 +1,5 @@
 cask 'geotag' do
-  if MacOS.release <= :mountain_lion
+  if MacOS.version <= :mountain_lion
     version '2.2'
     sha256 'c5553af3b37903b7e4f402d8c9fbeced63492295c6bdd25987dd70ab367c32e9'
   else

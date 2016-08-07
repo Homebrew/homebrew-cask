@@ -1,14 +1,14 @@
 cask 'araxis-merge' do
   name 'Araxis Merge'
-  if MacOS.release <= :mountain_lion
+  if MacOS.version <= :mountain_lion
     version '2014.4459'
     sha256 '7945e0fd583880bf4bbb65899c7184692d683f247764e73f435e0685954028f0'
     url "http://www.araxis.com/download/Merge#{version}-OSX10.8.dmg"
-  elsif MacOS.release <= :mavericks
+  elsif MacOS.version <= :mavericks
     version '2016.4750'
     sha256 '9f3f4d3ba4931f69f75fd315e6823b19c5bb3938a5734b59b6aa92ec715ed00f'
     url "http://www.araxis.com/download/Merge#{version}-OSX10.9.dmg"
-  elsif MacOS.release <= :yosemite
+  elsif MacOS.version <= :yosemite
     version '2016.4750'
     sha256 '18208f885f645347ae5956a81aa1d1ef78fbc5dd5f5da0ed5a02efab004293cf'
     url "http://www.araxis.com/download/Merge#{version}-OSX10.10.dmg"

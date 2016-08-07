@@ -1,5 +1,5 @@
 cask 'trash-it' do
-  if MacOS.release <= :snow_leopard
+  if MacOS.version <= :snow_leopard
     version '5.2'
     sha256 '2428fcf10f8641488e1a43f8d64dfa7256129aab9813c1f841c72bf75f11c821'
     url "http://nonamescriptware.com/wp-content/uploads/TrashIt#{version.no_dots}.zip"

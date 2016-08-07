@@ -1,12 +1,8 @@
-# originally from Homebrew
-
 require "set"
 
-require "hbc/macos/release"
+require "os/mac/version"
 
-module Hbc::MacOS
-  module_function
-
+module OS::Mac
   SYSTEM_DIRS = [
                   "/",
                   "/Applications",
@@ -378,14 +374,5 @@ module Hbc::MacOS
     UNDELETABLE_DIRS.any? { |u| File.identical?(u, dir) }
   end
 
-  # These Comparable instances can be compared to numerics, strings, or symbols
-  def release_with_patchlevel
-    @release_with_patchlevel ||=
-      Release.new(ENV.fetch("MACOS_RELEASE_WITH_PATCHLEVEL",
-                            `/usr/bin/sw_vers -productVersion 2>/dev/null`.chomp))
-  end
-
-  def release
-    @release ||= Release.new(ENV.fetch("MACOS_RELEASE", release_with_patchlevel.to_s[%r{10\.\d+}]))
-  end
+  alias release version
 end

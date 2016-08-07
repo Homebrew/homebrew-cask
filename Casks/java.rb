@@ -27,7 +27,7 @@ cask 'java' do
            '/bin/mkdir', '-p', '--', "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents/Home/bundle/Libraries"
     system '/usr/bin/sudo', '-E', '--',
            '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents/Home/jre/lib/server/libjvm.dylib", "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents/Home/bundle/Libraries/libserver.dylib"
-    if MacOS.release <= :mavericks
+    if MacOS.version <= :mavericks
       system '/usr/bin/sudo', '-E', '--',
              '/bin/rm', '-rf', '--', '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
       system '/usr/bin/sudo', '-E', '--',
@@ -52,7 +52,7 @@ cask 'java' do
                          "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents",
                          '/Library/PreferencePanes/JavaControlPanel.prefPane',
                          '/Library/Java/Home',
-                         if MacOS.release <= :mavericks
+                         if MacOS.version <= :mavericks
                            [
                              '/usr/lib/java/libjdns_sd.jnilib',
                              '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK',

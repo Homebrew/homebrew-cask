@@ -8,13 +8,13 @@ cask 'openzfs' do
   license :oss
 
   # OpenZFS on OS X has no version below Mountain Lion.
-  if MacOS.release == :mountain_lion
+  if MacOS.version == :mountain_lion
     pkg "OpenZFS on OS X #{version.sub(%r{-.*}, '')} Mountain Lion.pkg"
-  elsif MacOS.release == :mavericks
+  elsif MacOS.version == :mavericks
     pkg "OpenZFS on OS X #{version.sub(%r{-.*}, '')} Mavericks.pkg"
-  elsif MacOS.release == :yosemite
+  elsif MacOS.version == :yosemite
     pkg "OpenZFS on OS X #{version.sub(%r{-.*}, '')} Yosemite.pkg"
-  elsif MacOS.release >= :el_capitan
+  elsif MacOS.version >= :el_capitan
     pkg "OpenZFS on OS X #{version.sub(%r{-.*}, '')} El Capitan or higher.pkg"
   end
 

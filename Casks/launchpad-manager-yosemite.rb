@@ -1,5 +1,5 @@
 cask 'launchpad-manager-yosemite' do
-  if MacOS.release <= :mavericks
+  if MacOS.version <= :mavericks
     version :latest
     sha256 :no_check
 

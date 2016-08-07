@@ -1,5 +1,5 @@
 cask 'idisplay' do
-  if MacOS.release <= :leopard
+  if MacOS.version <= :leopard
     version '1.1.12'
     sha256 'ea0f9dd2c488762169c0bab2218ee628b6eff658a814dfca583e4563b99b7c6c'
     # shape.ag was verified as official when first introduced to the cask

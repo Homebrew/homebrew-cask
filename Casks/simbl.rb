@@ -1,5 +1,5 @@
 cask 'simbl' do
-  if MacOS.release <= :leopard
+  if MacOS.version <= :leopard
     version '0.8.2'
     sha256 'eeb0934e1ed9d3187cd0c60b0dbcab34e2cea068647a1a5076f38cc90f0ee878'
 

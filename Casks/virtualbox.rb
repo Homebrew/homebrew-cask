@@ -1,8 +1,8 @@
 cask 'virtualbox' do
-  if MacOS.release <= :lion
+  if MacOS.version <= :lion
     version '4.3.38-106717'
     sha256 'f7229f9537dc2359e2f86b2d3623e5024f11d2ce9b075fe34a71b55995897463'
-  elsif MacOS.release == :mountain_lion
+  elsif MacOS.version == :mountain_lion
     version '5.0.26-108824'
     sha256 'e8836a98adea9350917a41e754dfec4fe2df7c4a0224fd8beca72cbc5d778437'
   else
