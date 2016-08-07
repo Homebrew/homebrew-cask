@@ -81,7 +81,11 @@ class Hbc::CurlDownloadStrategy < Hbc::AbstractDownloadStrategy
   end
 
   def clear_cache
-    [cached_location, temporary_path].each { |f| f.unlink if f.exist? }
+    [cached_location, temporary_path].each do |f|
+      next unless f.exist?
+      raise CurlDownloadStrategyError, "#{f} is in use by another process" if Hbc::Utils.file_locked?(f)
+      f.unlink
+    end
   end
 
   def downloaded_size
@@ -100,7 +104,11 @@ class Hbc::CurlDownloadStrategy < Hbc::AbstractDownloadStrategy
     else
       had_incomplete_download = temporary_path.exist?
       begin
-        _fetch
+        File.open(temporary_path, "w+") do |f|
+          f.flock(File::LOCK_EX)
+          _fetch
+          f.flock(File::LOCK_UN)
+        end
       rescue ErrorDuringExecution
         # 33 == range not supported
         # try wiping the incomplete download and retrying once

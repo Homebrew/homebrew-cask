@@ -3,7 +3,7 @@ cask 'crashplan' do
   sha256 'ea138c87bb158fa47ba2aa5c7f5bcd43cccb9a7db9d83ace4a6954d1ae678d55'
 
   # crashplan.com was verified as official when first introduced to the cask
-  url "http://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_#{version}_Mac.dmg"
+  url "https://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_#{version}_Mac.dmg"
   name 'CrashPlan'
   homepage 'https://www.code42.com/crashplan/'
   license :gratis

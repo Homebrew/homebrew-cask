@@ -2,7 +2,7 @@ cask 'witch' do
   if MacOS.release == :snow_leopard
     version '3.9.1'
     sha256 '5e46508e150ff16be14b9955abdcd15098376230ef71e3de6f15a056eec75e45'
-    url "http://manytricks.com/download/witch/#{version}"
+    url "https://manytricks.com/download/witch/#{version}"
   else
     version '3.9.8'
     sha256 '6a290c9fcc6354044fb077d8ae3a6a7221cd5d4e19bf3a872ff09da95b9a7509'

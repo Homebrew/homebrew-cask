@@ -6,7 +6,7 @@ cask 'dingtalk' do
   url "http://download.taobaocdn.com/dingtalk-desktop/Release/install/DingTalk_v#{version}.dmg"
   name 'DingTalk'
   name '钉钉'
-  homepage 'http://www.dingtalk.com/'
+  homepage 'https://www.dingtalk.com/'
   license :commercial
 
   app '钉钉.app'
