@@ -1,5 +1,6 @@
 module Hbc; end
 
+require "hardware"
 require "hbc/extend"
 require "hbc/artifact"
 require "hbc/audit"
@@ -15,7 +16,6 @@ require "hbc/download"
 require "hbc/download_strategy"
 require "hbc/exceptions"
 require "hbc/fetcher"
-require "hbc/hardware"
 require "hbc/installer"
 require "hbc/locations"
 require "hbc/macos"
@@ -42,9 +42,6 @@ module Hbc
   include Hbc::Scopes
   include Hbc::Options
   include Hbc::Utils
-
-  # TODO: restrict visibility of this to the DSL
-  ::Hardware = Hbc::Hardware
 
   def self.init
     odebug "Creating directories"
