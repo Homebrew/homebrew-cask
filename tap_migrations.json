@@ -12,6 +12,7 @@
   "hub": "homebrew/core",
   "mitmproxy": "homebrew/core",
   "packer": "homebrew/core",
+  "pgloader": "homebrew/core",
   "pandoc": "homebrew/core",
   "phantomjs": "homebrew/core",
   "purescript": "homebrew/core",
