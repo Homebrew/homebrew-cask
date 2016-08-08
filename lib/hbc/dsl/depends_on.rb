@@ -10,16 +10,15 @@ class Hbc::DSL::DependsOn
                          :java,
                        ].freeze
 
-  VALID_ARCHES = [
-                   # category
-                   :intel,
-                   :ppc,
+  VALID_ARCHES = {
+                   intel:    { type: :intel, bits: [32, 64] },
+                   ppc:      { type: :ppc,   bits: [32, 64] },
                    # specific
-                   :i386,
-                   :x86_64,
-                   :ppc_7400,
-                   :ppc_64,
-                 ].freeze
+                   i386:     { type: :intel, bits: 32 },
+                   x86_64:   { type: :intel, bits: 64 },
+                   ppc_7400: { type: :ppc,   bits: 32 },
+                   ppc_64:   { type: :ppc,   bits: 64 },
+                 }.freeze
 
   # Intentionally undocumented: catch variant spellings.
   ARCH_SYNONYMS = {
@@ -105,9 +104,9 @@ class Hbc::DSL::DependsOn
       elt = elt.to_s.downcase.sub(%r{^:}, "").tr("-", "_").to_sym
       ARCH_SYNONYMS.key?(elt) ? ARCH_SYNONYMS[elt] : elt
     }
-    invalid_arches = arches - VALID_ARCHES
+    invalid_arches = arches - VALID_ARCHES.keys
     raise "invalid 'depends_on arch' values: #{invalid_arches.inspect}" unless invalid_arches.empty?
-    @arch.concat(arches)
+    @arch.concat(arches.map { |arch| VALID_ARCHES[arch] })
   end
 
   def x11=(arg)
