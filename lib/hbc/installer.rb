@@ -169,13 +169,13 @@ class Hbc::Installer
   end
 
   def arch_dependencies
-    return unless @cask.depends_on.arch
-    @current_arch ||= [
-                        Hardware::CPU.type,
-                        Hardware::CPU.arch,
-                      ]
-    return unless Array(@cask.depends_on.arch & @current_arch).empty?
-    raise Hbc::CaskError, "Cask #{@cask} depends on hardware architecture being one of [#{@cask.depends_on.arch.map(&:to_s).join(', ')}], but you are running #{@current_arch.inspect}"
+    return if @cask.depends_on.arch.nil?
+    @current_arch ||= { type: Hardware::CPU.type, bits: Hardware::CPU.bits }
+    return if @cask.depends_on.arch.any? { |arch|
+      arch[:type] == @current_arch[:type] &&
+      Array(arch[:bits]).include?(@current_arch[:bits])
+    }
+    raise Hbc::CaskError, "Cask #{@cask} depends on hardware architecture being one of [#{@cask.depends_on.arch.map(&:to_s).join(', ')}], but you are running #{@current_arch}"
   end
 
   def x11_dependencies
