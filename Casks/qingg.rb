@@ -1,6 +1,6 @@
 cask 'qingg' do
   version '2.3.8'
-  sha256 '10413622fe011c21e9e3f788ab9aded78078e6aab6072d33c0b3d9df9395a45a'    
+  sha256 '10413622fe011c21e9e3f788ab9aded78078e6aab6072d33c0b3d9df9395a45a'
 
   url "https://qingg.im/download/Qingg-#{version}.dmg"
   appcast 'https://qingg.im/sparkle/appcast.php',
