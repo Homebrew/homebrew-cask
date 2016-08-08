@@ -33,7 +33,7 @@ class Hbc::DSL::Caveats < Hbc::DSL::Base
     puts <<-EOS.undent
     Cask #{@cask} installs files under "#{localpath}".  The presence of such
     files can cause warnings when running "brew doctor", which is considered
-    to be a bug in homebrew-cask.
+    to be a bug in Homebrew-Cask.
 
     EOS
   end

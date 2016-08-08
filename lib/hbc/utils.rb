@@ -220,7 +220,7 @@ module Hbc::Utils
   def self.error_message_with_suggestions
     <<-EOS.undent
     #{Hbc::Utils::Tty.reset.bold}
-      Most likely, this means you have an outdated version of homebrew-cask. Please run:
+      Most likely, this means you have an outdated version of Homebrew-Cask. Please run:
 
           #{Hbc::Utils::Tty.green.normal}#{UPDATE_CMD}
 

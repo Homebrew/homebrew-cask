@@ -1,4 +1,4 @@
-homebrew-cask(1) - A friendly binary installer for macOS
+Homebrew-Cask(1) - A friendly binary installer for macOS
 ========================================================
 
 ## SYNOPSIS
