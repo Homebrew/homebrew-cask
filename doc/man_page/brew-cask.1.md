@@ -1,9 +1,9 @@
-Homebrew-Cask(1) - A friendly binary installer for macOS
+brew-cask(1) - a friendly binary installer for macOS
 ========================================================
 
 ## SYNOPSIS
 
-`brew cask` command [options] [<token> ...]
+`brew cask` command [options] [ <token> ... ]
 
 ## DESCRIPTION
 
