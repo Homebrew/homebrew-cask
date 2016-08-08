@@ -1,5 +1,5 @@
 cask 'icompta' do
-  if MacOS.release <= :lion
+  if MacOS.version <= :lion
     version '4.0.13'
     sha256 '8c7dcd69f4d38f2532a32ad7e14b5032811ac5b893566f46fef38b8c61a1f261'
 

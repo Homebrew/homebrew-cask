@@ -4,7 +4,7 @@ cask 'pomodone' do
 
   url 'https://app.pomodoneapp.com/PomoDone.dmg'
   name 'PomoDone'
-  homepage 'http://pomodoneapp.com/'
+  homepage 'https://pomodoneapp.com/'
   license :gratis
 
   app 'PomoDone.app'

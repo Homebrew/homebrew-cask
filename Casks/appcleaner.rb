@@ -1,10 +1,10 @@
 cask 'appcleaner' do
-  if MacOS.release <= :leopard
+  if MacOS.version <= :leopard
     version '1.2.2'
     sha256 '58972cb1b8256d6de1a11ed225c94b240c2923f1c814975ccbcb94806fc439dc'
     url "https://freemacsoft.net/downloads/AppCleaner#{version}.dmg"
   else
-    if MacOS.release <= :mavericks
+    if MacOS.version <= :mavericks
       version '2.3'
       sha256 '69da212e2972e23e361c93049e4b4505d7f226aff8652192125f078be7eecf7f'
     else

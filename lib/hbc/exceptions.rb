@@ -96,7 +96,7 @@ class Hbc::CaskX11DependencyError < Hbc::CaskError
 
       or manually, by downloading the package from
 
-        http://xquartz.macosforge.org
+        https://www.xquartz.org/
     EOS
   end
 end

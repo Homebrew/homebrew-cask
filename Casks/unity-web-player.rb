@@ -13,4 +13,8 @@ cask 'unity-web-player' do
 
   uninstall pkgutil: 'com.unity.UnityWebPlayer',
             delete:  '/Library/Internet Plug-Ins/Unity Web Player.plugin'
+
+  caveats do
+    discontinued
+  end
 end

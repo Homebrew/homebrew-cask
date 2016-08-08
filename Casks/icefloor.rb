@@ -7,7 +7,5 @@ cask 'icefloor' do
   homepage 'http://www.hanynet.com/icefloor/'
   license :oss
 
-  container nested: "IceFloor #{version}.dmg"
-
   app 'IceFloor.app'
 end

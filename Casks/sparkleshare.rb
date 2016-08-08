@@ -5,7 +5,7 @@ cask 'sparkleshare' do
   # bitbucket.org/hbons/sparkleshare was verified as official when first introduced to the cask
   url "https://bitbucket.org/hbons/sparkleshare/downloads/sparkleshare-mac-#{version}.zip"
   name 'SparkleShare'
-  homepage 'http://sparkleshare.org/'
+  homepage 'https://sparkleshare.org/'
   license :gpl
 
   app 'SparkleShare.app'

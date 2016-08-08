@@ -4,7 +4,7 @@ cask 'airmedia' do
 
   url "https://www.crestron.com/downloads/software/airmedia_guest_os_x_#{version}.dmg"
   name 'Crestron AirMedia'
-  homepage 'http://www.crestron.com/airmedia'
+  homepage 'https://www.crestron.com/microsites/airmedia-mobile-wireless-hd-presentations'
   license :gratis
 
   app 'AirMedia.app'

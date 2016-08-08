@@ -1,5 +1,5 @@
 cask 'texpad' do
-  if MacOS.release <= :mountain_lion
+  if MacOS.version <= :mountain_lion
     version '1.7.21'
     sha256 'cae312b89d25752917bf66572fd1c6b6722097b651abe9a1a1b399dc36493512'
   else

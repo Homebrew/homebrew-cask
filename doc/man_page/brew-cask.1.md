@@ -1,9 +1,9 @@
-homebrew-cask(1) - A friendly binary installer for macOS
+brew-cask(1) - a friendly binary installer for macOS
 ========================================================
 
 ## SYNOPSIS
 
-`brew cask` command [options] [<token> ...]
+`brew cask` command [options] [ <token> ... ]
 
 ## DESCRIPTION
 
@@ -194,9 +194,6 @@ in a future version.
 
   * `--no-binaries`:
     Do not link "helper" executables to `/usr/local/bin`.
-
-  * `--binarydir=<path>`:
-    Target location for "helper" executable links. The default value is `/usr/local/bin`.
 
   * `--debug`:
     Output debugging information of use to Cask authors and developers.

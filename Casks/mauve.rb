@@ -4,7 +4,7 @@ cask 'mauve' do
 
   url "https://asap.genetics.wisc.edu/software/mauve/downloads/Mauve-#{version}.dmg"
   name 'Mauve'
-  homepage 'http://asap.genetics.wisc.edu/software/mauve/'
+  homepage 'https://asap.genetics.wisc.edu/software/mauve/'
   license :gpl
 
   app 'Mauve.app'

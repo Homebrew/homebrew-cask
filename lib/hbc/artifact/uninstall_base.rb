@@ -1,5 +1,7 @@
 require "pathname"
 
+require "hbc/artifact/base"
+
 class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
   # TODO: 500 is also hardcoded in cask/pkg.rb, but much of
   #       that logic is probably in the wrong location
@@ -24,9 +26,9 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
   #       sources and should be refactored for consistency
 
   def self.expand_path_strings(path_strings)
-    path_strings.map do |path_string|
+    path_strings.map { |path_string|
       path_string.start_with?("~") ? Pathname.new(path_string).expand_path : Pathname.new(path_string)
-    end
+    }
   end
 
   def self.remove_relative_path_strings(action, path_strings)
@@ -41,7 +43,7 @@ class Hbc::Artifact::UninstallBase < Hbc::Artifact::Base
 
   def self.remove_undeletable_path_strings(action, path_strings)
     undeletable = path_strings.map { |path_string|
-      path_string if Hbc::MacOS.undeletable?(Pathname.new(path_string))
+      path_string if MacOS.undeletable?(Pathname.new(path_string))
     }.compact
     undeletable.each do |path_string|
       opoo "Skipping #{action} for undeletable path #{path_string}"

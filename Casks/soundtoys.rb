@@ -5,7 +5,7 @@ cask 'soundtoys' do
   # s3.amazonaws.com/soundtoys5 was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/soundtoys5/#{version.after_comma}/Soundtoys#{version.major}_#{version.before_comma}.#{version.after_comma}.dmg"
   name 'Soundtoys Bundle'
-  homepage "http://www.soundtoys.com/product/soundtoys-#{version.major}/"
+  homepage "https://www.soundtoys.com/product/soundtoys-#{version.major}/"
   license :gratis
 
   pkg "Install Soundtoys #{version.major}.pkg"

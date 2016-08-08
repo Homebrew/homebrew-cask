@@ -5,7 +5,7 @@ cask 'uber-network-fuser' do
   # dropbox.com/s/uytv8p2eljk6fez was verified as official when first introduced to the cask
   url "https://dl.dropbox.com/s/uytv8p2eljk6fez/ubernetfuser_#{version}.dmg"
   name 'UBER Network Fuser'
-  homepage 'http://nickapedia.com/2012/01/10/breaking-new-ground-an-uber-tool-for-the-mac/'
+  homepage 'https://thesustainableleader.com/2012/01/10/breaking-new-ground-an-uber-tool-for-the-mac/'
   license :gratis
 
   app "UBER Network Fuser #{version}.app"

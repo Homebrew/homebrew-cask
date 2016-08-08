@@ -1,5 +1,5 @@
 cask 'spectacle' do
-  if MacOS.release <= :mountain_lion
+  if MacOS.version <= :mountain_lion
     version '0.8.6'
     sha256 '3e367d2d7e6fe7d5f41d717d49cb087ba7432624b71ddd91c0cfa9d5a5459b7c'
   else

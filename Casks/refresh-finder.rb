@@ -7,7 +7,5 @@ cask 'refresh-finder' do
   homepage 'http://soderhavet.com/refresh/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  container nested: "Refresh_Finder_#{version}.dmg"
-
   app 'Refresh Finder.app'
 end

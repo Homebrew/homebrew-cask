@@ -1,5 +1,5 @@
 cask 'paraview' do
-  if MacOS.release == :snow_leopard
+  if MacOS.version == :snow_leopard
     version '4.3.1'
     sha256 'f968263782d1407c769c8d7b28872a43adb263d0820c9bebe0e0ea8cf2aaa3a0'
     url "http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v#{version.major_minor}&type=binary&os=osx&downloadFile=ParaView-#{version}-Darwin-64bit-SnowLeopard.dmg"

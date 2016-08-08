@@ -1,11 +1,17 @@
 cask 'patchblocks' do
-  version '0.3.3'
-  sha256 'd039d82a61a53b75962ebf9fb7b31426b69435271988b61f5ba23ec58001fa83'
+  version '0.5.3'
 
-  url "http://patchblocks.com/sites/default/files/Patchblocks-#{version}-Yosemite.dmg"
+  if MacOS.version <= :mountain_lion
+    sha256 '7dace0f8163ae389da4059cfbe6ea9925482f27cdd089770fe0d60e4b95a3595'
+    url "http://patchblocks.com/sites/default/files/Patchblocks-#{version}-pre10.9.dmg"
+  else
+    sha256 '9f5da1949e86002cfc82f5b1c76441be840084abe8041c97223ce955b9c71d2b'
+    url "http://patchblocks.com/sites/default/files/Patchblocks-#{version}.dmg"
+  end
+
   name 'Patchblocks'
   homepage 'http://patchblocks.com/'
   license :gratis
 
-  app "Patchblocks-#{version}.app"
+  app 'Patchblocks.app'
 end

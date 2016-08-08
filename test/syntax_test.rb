@@ -2,7 +2,7 @@ require "test_helper"
 
 describe "Syntax check" do
   project_root = Pathname.new(File.expand_path("#{File.dirname(__FILE__)}/../"))
-  backend_files = Dir[project_root.join("**", "*.rb")].reject { |f| f.match %r{/Casks/} }
+  backend_files = Dir[project_root.join("**", "*.rb")].reject { |f| f.match %r{/vendor/|/Casks/} }
   %w[2.0 2.1].each do |major_version|
     describe "under Ruby #{major_version}" do
       interpreter = Pathname.new("/System/Library/Frameworks/Ruby.framework/Versions/#{major_version}/usr/bin/ruby")

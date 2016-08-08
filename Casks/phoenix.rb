@@ -1,10 +1,10 @@
 cask 'phoenix' do
-  version '2.2.1'
-  sha256 '5249a136a5e4101552621b6945b397b4cfb7d36714546bbd6303d39cb59ba526'
+  version '2.3'
+  sha256 'f04e567a947123155ebfea56c6f9b9f27e6bc0c80e6fadc734a3774900ed39ef'
 
   url "https://github.com/kasper/phoenix/releases/download/#{version}/phoenix-#{version}.tar.gz"
   appcast 'https://github.com/kasper/phoenix/releases.atom',
-          checkpoint: 'f8c4e57773d925a23aa5f1e47db215976d36680ad9525d89f9213790cea6e2be'
+          checkpoint: 'a9458b34e1447b21ffbf7de47e94ed99451126bf2fe46884d0c4e4b9809affcd'
   name 'Phoenix'
   homepage 'https://github.com/kasper/phoenix/'
   license :mit

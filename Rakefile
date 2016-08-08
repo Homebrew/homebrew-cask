@@ -40,7 +40,6 @@ desc "Open a REPL for debugging and experimentation"
 task :console do
   require "pry"
   require "pry-byebug"
-  require "vendor/homebrew-fork/global"
   require "hbc"
   ARGV.clear
   Hbc.pry
@@ -48,6 +47,6 @@ end
 
 desc "Generate man page from Markdown source"
 task :man do
-  sh "ronn --roff --pipe --organization=Homebrew-cask --manual=brew-cask " \
+  sh "ronn --roff --pipe --organization=Homebrew-Cask --manual=brew-cask " \
      "doc/man_page/brew-cask.1.md > man/man1/brew-cask.1"
 end

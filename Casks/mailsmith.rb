@@ -2,11 +2,11 @@ cask 'mailsmith' do
   version '2.4_470'
   sha256 '5a599ceb64cb5d4410a26da3029e2e2ffa3eefd1efaf317cd33344ceccb059a2'
 
-  url "http://www.mailsmith.org/files/mailsmith-#{version.delete('.')}.dmg"
-  appcast 'http://www.mailsmith.org/files/MailsmithSUFeed.xml',
+  url "https://www.mailsmith.org/files/mailsmith-#{version.no_dots}.dmg"
+  appcast 'https://www.mailsmith.org/files/MailsmithSUFeed.xml',
           checkpoint: '8a01c594f885a7e898f802707bdf105cec9aec3390138ba851353ca80d363bf5'
   name 'Mailsmith'
-  homepage 'http://www.mailsmith.org/'
+  homepage 'https://www.mailsmith.org/'
   license :gratis
 
   app 'Mailsmith.app'

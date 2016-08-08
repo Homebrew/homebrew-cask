@@ -1,5 +1,5 @@
 cask 'youdao' do
-  if MacOS.release <= :mavericks
+  if MacOS.version <= :mavericks
     version '1.4.1'
     sha256 '4754b764a49d53b224d5e92f3f9bffb57f3e90a0ce5801bfc70d1dc341dd6ae9'
     url 'http://codown.youdao.com/cidian/download/MacDict1.4.1.dmg'

@@ -1,8 +1,8 @@
 class Hbc::Pkg
   def self.all_matching(regexp, command)
-    command.run("/usr/sbin/pkgutil", args: ["--pkgs=#{regexp}"]).stdout.split("\n").map do |package_id|
+    command.run("/usr/sbin/pkgutil", args: ["--pkgs=#{regexp}"]).stdout.split("\n").map { |package_id|
       new(package_id.chomp, command)
-    end
+    }
   end
 
   attr_reader :package_id
@@ -23,7 +23,7 @@ class Hbc::Pkg
     end
     odebug "Deleting pkg directories"
     _deepest_path_first(pkgutil_bom_dirs).each do |dir|
-      next unless dir.exist? && !Hbc::MacOS.undeletable?(dir)
+      next unless dir.exist? && !MacOS.undeletable?(dir)
       _with_full_permissions(dir) do
         _clean_broken_symlinks(dir)
         _clean_ds_store(dir)

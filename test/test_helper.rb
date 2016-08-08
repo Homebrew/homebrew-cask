@@ -10,13 +10,16 @@ end
 # just in case
 raise "brew-cask: Ruby 2.0 or greater is required." if RUBY_VERSION.to_i < 2
 
+# add Homebrew to load path
+$LOAD_PATH.unshift(File.expand_path("#{ENV['HOMEBREW_REPOSITORY']}/Library/Homebrew"))
+
+require "global"
+require "extend/pathname"
+
 # add homebrew-cask lib to load path
 brew_cask_path = Pathname.new(File.expand_path(__FILE__ + "/../../"))
 lib_path = brew_cask_path.join("lib")
 $LOAD_PATH.push(lib_path)
-
-# TODO: removeme, this is transitional
-require "vendor/homebrew-fork/testing_env"
 
 # force some environment variables
 ENV["HOMEBREW_NO_EMOJI"] = "1"
@@ -44,9 +47,10 @@ def sudo(*args)
   %w[/usr/bin/sudo -E --] + Array(args).flatten
 end
 
-# making homebrew's cache dir allows us to actually download Casks in tests
-HOMEBREW_CACHE.mkpath
-HOMEBREW_CACHE.join("Casks").mkpath
+TEST_TMPDIR = Dir.mktmpdir("homebrew_cask_tests")
+at_exit do
+  FileUtils.remove_entry(TEST_TMPDIR)
+end
 
 # must be called after testing_env so at_exit hooks are in proper order
 require "minitest/autorun"
@@ -69,6 +73,10 @@ Hbc.homebrew_tapspath = nil
 # Look for Casks in testcasks by default.  It is elsewhere required that
 # the string "test" appear in the directory name.
 Hbc.default_tap = "caskroom/homebrew-testcasks"
+
+# create cache directory
+Hbc.homebrew_cache = Pathname.new(TEST_TMPDIR).join("cache")
+Hbc.cache.mkpath
 
 # our own testy caskroom
 Hbc.caskroom = Hbc.homebrew_prefix.join("TestCaskroom")

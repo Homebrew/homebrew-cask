@@ -5,7 +5,7 @@ cask 'sqlpro-for-postgres' do
   # d3fwkemdw8spx3.cloudfront.net/postgres was verified as official when first introduced to the cask
   url "https://d3fwkemdw8spx3.cloudfront.net/postgres/SQLProPostgres.#{version}.app.zip"
   name 'SQLPro for Postgres'
-  homepage 'http://www.macpostgresclient.com/SQLProPostgres'
+  homepage 'https://www.macpostgresclient.com/SQLProPostgres'
   license :commercial
 
   app 'SQLPro for Postgres.app'

@@ -7,7 +7,7 @@ cask 'powerphotos' do
   appcast 'https://www.fatcatsoftware.com/powerphotos/powerphotos_appcast.xml',
           checkpoint: '8e20c09bbffb0e07d275479375bc9ad7d851eec1377d397074bb6f427585e4ad'
   name 'PowerPhotos'
-  homepage 'http://www.fatcatsoftware.com/powerphotos/'
+  homepage 'https://www.fatcatsoftware.com/powerphotos/'
   license :commercial
 
   auto_updates true

@@ -1,5 +1,5 @@
 cask 'virtual-ii' do
-  if MacOS.release <= :leopard
+  if MacOS.version <= :leopard
     version '6.3.7'
     sha256 '518c40b94039db64a26664cd8644e0e06dc71e7e8c72ca65294c01836464b770'
     url "http://virtualii.com/VirtualII_#{version.dots_to_underscores}.dmg"

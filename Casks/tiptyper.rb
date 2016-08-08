@@ -1,5 +1,5 @@
 cask 'tiptyper' do
-  if MacOS.release <= :snow_leopard
+  if MacOS.version <= :snow_leopard
     version '2.1.2'
     sha256 '5f862ea7d68548569c9b038f8cc8e542e07ae21b26462e75442f28ba2d4088ad'
     url "https://www.brunophilipe.com/software/tiptyper/releases/releasen-#{version}.zip"
