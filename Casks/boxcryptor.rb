@@ -1,6 +1,6 @@
 cask 'boxcryptor' do
-  version '2.1.467.718'
-  sha256 '3859a2c0976a2fa1c280e4cea26a2037f125e066041f64cdbf4c47861aa39997'
+  version '2.3.405.746'
+  sha256 '0067dad6e70041f38076fd26fa674f337e51b6532bb8e35a2ac534e7e4fb858b'
 
   # d3k3ih5otj72mn.cloudfront.net was verified as official when first introduced to the cask
   url "https://d3k3ih5otj72mn.cloudfront.net/Boxcryptor_v#{version}_Installer.dmg"
