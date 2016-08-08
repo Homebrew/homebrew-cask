@@ -18,7 +18,6 @@
   "purescript": "homebrew/core",
   "python": "homebrew/core",
   "python3": "homebrew/core",
-  "racket": "homebrew/core",
   "rust": "homebrew/core",
   "sickbeard": "homebrew/core",
   "srclib": "homebrew/core",
