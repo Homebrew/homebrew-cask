@@ -319,7 +319,7 @@ class Hbc::Installer
     # versioned staged distribution
     gain_permissions_remove(@cask.staged_path)
 
-    # Homebrew-cask metadata
+    # Homebrew-Cask metadata
     if @cask.metadata_versioned_container_path.respond_to?(:children) &&
        @cask.metadata_versioned_container_path.exist?
       @cask.metadata_versioned_container_path.children.each do |subdir|
