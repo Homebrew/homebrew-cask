@@ -21,5 +21,6 @@
   "rust": "homebrew/core",
   "sickbeard": "homebrew/core",
   "srclib": "homebrew/core",
+  "sslmate": "homebrew/core",
   "volatility": "homebrew/core"
 }
