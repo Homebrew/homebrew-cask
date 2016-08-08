@@ -91,7 +91,7 @@ cask 'myapp' do
   license :unknown
 
   url "https://#{Utils.arbitrary_method}"
-  homepage 'http://www.example.com/'
+  homepage 'https://www.example.com/'
   ...
 end
 ```
