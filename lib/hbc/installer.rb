@@ -282,7 +282,7 @@ class Hbc::Installer
     odebug "Hbc::Installer.uninstall"
     disable_accessibility_access
     uninstall_artifacts
-    purge_versioned_files if @cask.installed?
+    purge_versioned_files
     purge_caskroom_path if force
   end
 
@@ -318,7 +318,7 @@ class Hbc::Installer
     odebug "Purging files for version #{@cask.version} of Cask #{@cask}"
 
     # versioned staged distribution
-    gain_permissions_remove(@cask.staged_path)
+    gain_permissions_remove(@cask.staged_path) if @cask.staged_path.exist?
 
     # Homebrew-Cask metadata
     if @cask.metadata_versioned_container_path.respond_to?(:children) &&
