@@ -79,14 +79,7 @@ class Hbc::Cask
   end
 
   def installed?
-    return false unless caskroom_path.exist?
-
-    if metadata_master_container_path.exist?
-      !(metadata_master_container_path.children.map(&:basename) &
-        caskroom_path.children.map(&:basename)).empty?
-    else
-      !caskroom_path.children.empty?
-    end
+    !versions.empty?
   end
 
   def to_s
