@@ -9,4 +9,3 @@ cask 'notion' do
 
   app 'Notion.app'
 end
-
