@@ -67,7 +67,7 @@ describe Hbc::CLI::Style do
 
     shared_examples "executable availability" do
       before do
-        allow(Hbc::Utils).to receive(:which).and_return(which_retval)
+        allow(Homebrew).to receive(:which).and_return(which_retval)
       end
 
       context "when rubocop is available on the PATH" do
@@ -106,7 +106,7 @@ describe Hbc::CLI::Style do
       let(:returned_specs) { [[]] }
 
       before do
-        allow(Hbc::Utils).to receive(:require)
+        allow(Homebrew).to receive(:require)
         allow(fake_gem_install_cmd_class).to receive(:new).and_return(fake_install_cmd)
         allow(fake_install_cmd).to receive(:handle_options)
         allow(fake_install_cmd).to receive(:execute).and_raise(fake_system_exit_exception)
