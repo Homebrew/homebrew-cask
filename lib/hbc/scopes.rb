@@ -47,17 +47,17 @@ module Hbc::Scopes
       # TODO: speed up Hbc::Source::Tapped (main perf drag is calling Hbc.all_tokens repeatedly)
       # TODO: ability to specify expected source when calling Hbc.load (minor perf benefit)
       Pathname.glob(caskroom.join("*"))
-              .map { |dir| Hbc::Cask.new(dir.basename) }
-              .select(&:installed?)
-              .map { |cask|
+              .map { |caskroom_path|
+                token = caskroom_path.basename.to_s
+
                 path_to_cask = all_tapped_cask_dirs.find { |tap_dir|
-                  tap_dir.join("#{cask.token}.rb").exist?
+                  tap_dir.join("#{token}.rb").exist?
                 }
 
                 if path_to_cask
-                  Hbc.load(path_to_cask.join("#{cask.token}.rb"))
+                  Hbc.load(path_to_cask.join("#{token}.rb"))
                 else
-                  Hbc.load(cask.token)
+                  Hbc.load(token)
                 end
               }
     end
