@@ -5,7 +5,7 @@ describe Hbc::CLI::List do
     casks = %w[local-caffeine local-transmission].map { |c| Hbc.load(c) }
 
     casks.each do |c|
-      TestHelper.install_without_artifacts(c)
+      TestHelper.install_with_caskfile(c)
     end
 
     lambda {
