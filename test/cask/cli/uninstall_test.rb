@@ -42,27 +42,33 @@ describe Hbc::CLI::Uninstall do
   end
 
   describe "when multiple versions of a cask are installed" do
-    before do
-      @caskroom_path = Hbc.caskroom.join("versioned-cask").tap(&:mkpath)
-
+    let(:token) { "versioned-cask" }
+    let(:first_installed_version) { "1.2.3" }
+    let(:last_installed_version) { "4.5.6" }
+    let(:timestamped_versions) {
       [
-        ["1.2.3", "timestamp-1"],
-        ["4.5.6", "timestamp-2"],
-      ].each do |timestamped_version|
-        @caskroom_path.join(".metadata", *timestamped_version, "Casks").tap(&:mkpath)
-                      .join("versioned-cask.rb").open("w") do |caskfile|
-                        caskfile.puts <<-EOF.undent
-                          cask 'versioned-cask' do
-                            version '#{timestamped_version[0]}'
-                          end
-                        EOF
-                      end
-        @caskroom_path.join(timestamped_version[0]).mkpath
+        [first_installed_version, "123000"],
+        [last_installed_version,  "456000"],
+      ]
+    }
+    let(:caskroom_path) { Hbc.caskroom.join(token).tap(&:mkpath) }
+
+    before do
+      timestamped_versions.each do |timestamped_version|
+        caskroom_path.join(".metadata", *timestamped_version, "Casks").tap(&:mkpath)
+                     .join("#{token}.rb").open("w") do |caskfile|
+                       caskfile.puts <<-EOF.undent
+                         cask '#{token}' do
+                           version '#{timestamped_version[0]}'
+                         end
+                       EOF
+                     end
+        caskroom_path.join(timestamped_version[0]).mkpath
       end
     end
 
     after do
-      @caskroom_path.rmtree if @caskroom_path.exist?
+      caskroom_path.rmtree if caskroom_path.exist?
     end
 
     it "uninstalls one version at a time" do
@@ -70,16 +76,16 @@ describe Hbc::CLI::Uninstall do
         Hbc::CLI::Uninstall.run("versioned-cask")
       end
 
-      @caskroom_path.join("1.2.3").must_be :exist?
-      @caskroom_path.join("4.5.6").wont_be :exist?
-      @caskroom_path.must_be :exist?
+      caskroom_path.join(first_installed_version).must_be :exist?
+      caskroom_path.join(last_installed_version).wont_be :exist?
+      caskroom_path.must_be :exist?
 
       shutup do
         Hbc::CLI::Uninstall.run("versioned-cask")
       end
 
-      @caskroom_path.join("1.2.3").wont_be :exist?
-      @caskroom_path.wont_be :exist?
+      caskroom_path.join(first_installed_version).wont_be :exist?
+      caskroom_path.wont_be :exist?
     end
   end
 
