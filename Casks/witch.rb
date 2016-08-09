@@ -4,12 +4,12 @@ cask 'witch' do
     sha256 '5e46508e150ff16be14b9955abdcd15098376230ef71e3de6f15a056eec75e45'
     url "https://manytricks.com/download/witch/#{version}"
   else
-    version '3.9.8'
-    sha256 '6a290c9fcc6354044fb077d8ae3a6a7221cd5d4e19bf3a872ff09da95b9a7509'
+    version '3.9.9'
+    sha256 'e06e524d054fce30aa55f3031c99659e54b9b6d8d86fca20b682b2d6cf97cc8c'
 
     url 'https://manytricks.com/download/witch'
     appcast 'https://manytricks.com/witch/appcast.xml',
-            checkpoint: '239d72b3fac6a2c8ba69e8028cb3bed7de7d4065c5335f907183457a8db2e114'
+            checkpoint: 'cf6f7530e21e6431837b3950388a8474638a1ed85d6e8149267beb30dc2c3cd0'
   end
 
   name 'Witch'
