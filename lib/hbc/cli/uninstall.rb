@@ -6,12 +6,9 @@ class Hbc::CLI::Uninstall < Hbc::CLI::Base
 
     cask_tokens.each do |cask_token|
       odebug "Uninstalling Cask #{cask_token}"
-      cask = Hbc::Cask.new(cask_token)
+      cask = Hbc.load(cask_token)
 
-      unless cask.installed?
-        cask.caskroom_path.rmtree if cask.caskroom_path.exist?
-        raise Hbc::CaskNotInstalledError, cask unless force
-      end
+      raise Hbc::CaskNotInstalledError, cask unless cask.installed? || force
 
       latest_installed_version = cask.timestamped_versions.last
 
@@ -21,11 +18,7 @@ class Hbc::CLI::Uninstall < Hbc::CLI::Base
                                                "Casks", "#{cask_token}.rb")
 
         # use the same cask file that was used for installation, if possible
-        cask = if latest_installed_cask_file.exist?
-                 Hbc.load(latest_installed_cask_file)
-               else
-                 Hbc.load(cask_token)
-               end
+        cask = Hbc.load(latest_installed_cask_file) if latest_installed_cask_file.exist?
       end
 
       Hbc::Installer.new(cask, force: force).uninstall
