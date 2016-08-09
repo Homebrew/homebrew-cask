@@ -41,6 +41,48 @@ describe Hbc::CLI::Uninstall do
     File.exist?(Hbc.appdir.join("Caffeine.app")).must_equal false
   end
 
+  describe "when multiple versions of a cask are installed" do
+    before do
+      @caskroom_path = Hbc.caskroom.join("versioned-cask").tap(&:mkpath)
+
+      [
+        ["1.2.3", "timestamp-1"],
+        ["4.5.6", "timestamp-2"],
+      ].each do |timestamped_version|
+        @caskroom_path.join(".metadata", *timestamped_version, "Casks").tap(&:mkpath)
+                      .join("versioned-cask.rb").open("w") do |caskfile|
+                        caskfile.puts <<-EOF.undent
+                          cask 'versioned-cask' do
+                            version '#{timestamped_version[0]}'
+                          end
+                        EOF
+                      end
+        @caskroom_path.join(timestamped_version[0]).mkpath
+      end
+    end
+
+    after do
+      @caskroom_path.rmtree if @caskroom_path.exist?
+    end
+
+    it "uninstalls one version at a time" do
+      shutup do
+        Hbc::CLI::Uninstall.run("versioned-cask")
+      end
+
+      @caskroom_path.join("1.2.3").must_be :exist?
+      @caskroom_path.join("4.5.6").wont_be :exist?
+      @caskroom_path.must_be :exist?
+
+      shutup do
+        Hbc::CLI::Uninstall.run("versioned-cask")
+      end
+
+      @caskroom_path.join("1.2.3").wont_be :exist?
+      @caskroom_path.wont_be :exist?
+    end
+  end
+
   describe "when Casks in Taps have been renamed or removed" do
     before do
       @app = Hbc.appdir.join("ive-been-renamed.app").tap(&:mkpath)
