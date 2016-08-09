@@ -1,5 +1,5 @@
 cask 'cleanmymac' do
-  if MacOS.release <= :snow_leopard
+  if MacOS.version <= :snow_leopard
     version '1.11,1417522595'
     sha256 'ac5d4bf36882dd34bdb0a68eb384a6b3aba355be896d03dfa40a120c6bef4a0d'
 
@@ -9,7 +9,7 @@ cask 'cleanmymac' do
             checkpoint: 'd9ac93bf9f995dc0903a668b357dadbe7cb187bc1382f6183bc40e5d79a26802'
     app 'CleanMyMac.app'
     # TODO: add uninstall and zap stanzas for legacy app
-  elsif MacOS.release <= :lion
+  elsif MacOS.version <= :lion
     version '2.4,1443544143'
     sha256 '0d08f4d9b36493359f6ca3ff2f96a9b769a8eed4ea017ecbb2d5644f75aafad0'
 

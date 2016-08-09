@@ -4,7 +4,7 @@ cask 'mediathekview' do
 
   url "https://downloads.sourceforge.net/zdfmediathk/Mediathek/Mediathek%20#{version}/MediathekView_#{version}.dmg"
   appcast 'https://sourceforge.net/projects/zdfmediathk/rss?path=/Mediathek',
-          checkpoint: '2ff214f1be47690e0c043b448293a2ac54b335d7783485b2089df7da16640092'
+          checkpoint: '840b20fd071949773b6e540a9eb5783065efcc676e5084487f178b1a77627d0f'
   name 'MediathekView'
   homepage 'https://sourceforge.net/projects/zdfmediathk/'
   license :gpl

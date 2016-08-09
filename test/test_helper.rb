@@ -10,9 +10,8 @@ end
 # just in case
 raise "brew-cask: Ruby 2.0 or greater is required." if RUBY_VERSION.to_i < 2
 
-# add homebrew to load path
-homebrew_repo = `brew --repository`.chomp
-$LOAD_PATH.unshift(File.expand_path("#{homebrew_repo}/Library/Homebrew"))
+# add Homebrew to load path
+$LOAD_PATH.unshift(File.expand_path("#{ENV['HOMEBREW_REPOSITORY']}/Library/Homebrew"))
 
 require "global"
 require "extend/pathname"
@@ -76,7 +75,7 @@ Hbc.homebrew_tapspath = nil
 Hbc.default_tap = "caskroom/homebrew-testcasks"
 
 # create cache directory
-HOMEBREW_CACHE = Pathname.new(TEST_TMPDIR).join("cache")
+Hbc.homebrew_cache = Pathname.new(TEST_TMPDIR).join("cache")
 Hbc.cache.mkpath
 
 # our own testy caskroom

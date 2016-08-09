@@ -1,11 +1,11 @@
 cask 'obs' do
-  version '0.14.2'
-  sha256 '9324c8cea44c385f19dfb5dcf740090334c49d450089bd108fca95c1728b58b5'
+  version '0.15.1'
+  sha256 '68d9f52aeee05191539129afcc5fa74011293d15410acae759c8eff76e540771'
 
   # github.com/jp9000/obs-studio was verified as official when first introduced to the cask
   url "https://github.com/jp9000/obs-studio/releases/download/#{version}/obs-#{version}-installer.dmg"
   appcast 'https://github.com/jp9000/obs-studio/releases.atom',
-          checkpoint: '72e576ac4cb5b68742e19d5adc69390d4500c2eed8c74aaa11449de7f3a677d6'
+          checkpoint: '161d6077d10e27243b8b8d0134198adcda7695754fd1cd33687cc2e55b70b5ec'
   name 'OBS'
   homepage 'https://obsproject.com/'
   license :gpl

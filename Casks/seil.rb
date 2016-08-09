@@ -1,8 +1,8 @@
 cask 'seil' do
-  if MacOS.release <= :mountain_lion
+  if MacOS.version <= :mountain_lion
     version '10.11.0'
     sha256 '4ee777bf0a7f023abadb1f6a836b08484cfc2db2a19dd0b28d8942a2b638f8e5'
-  elsif MacOS.release <= :yosemite
+  elsif MacOS.version <= :yosemite
     version '11.3.0'
     sha256 '5fd57db4f96b833c4f1005b3d68711bb9ea52f0db8e98a0793eb2a9ff5d290b2'
   else
@@ -19,7 +19,7 @@ cask 'seil' do
 
   depends_on macos: '>= :mountain_lion'
 
-  if MacOS.release <= :mountain_lion
+  if MacOS.version <= :mountain_lion
     pkg 'Seil.pkg'
   else
     pkg 'Seil.sparkle_guided.pkg'

@@ -1,5 +1,5 @@
 cask 'vitalsource-bookshelf' do
-  if MacOS.release <= :lion
+  if MacOS.version <= :lion
     version '6.5.2'
     sha256 'bf5873bb39ff76421a55c9ab769007bb1af64b21dabf6630a4087bbc29c27d55'
     url "http://downloads.vitalbook.com/vsti/bookshelf/#{version}/MAC/Bookshelf/VitalSource_Bookshelf_#{version}.zip"

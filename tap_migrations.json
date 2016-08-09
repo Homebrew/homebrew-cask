@@ -10,7 +10,9 @@
   "gedit": "homebrew/core",
   "go": "homebrew/core",
   "hub": "homebrew/core",
+  "mitmproxy": "homebrew/core",
   "packer": "homebrew/core",
+  "pandoc": "homebrew/core",
   "phantomjs": "homebrew/core",
   "purescript": "homebrew/core",
   "python": "homebrew/core",
@@ -19,5 +21,6 @@
   "rust": "homebrew/core",
   "sickbeard": "homebrew/core",
   "srclib": "homebrew/core",
-  "volatility": "homebrew/core"
+  "volatility": "homebrew/core",
+  "vault": "homebrew/core"
 }

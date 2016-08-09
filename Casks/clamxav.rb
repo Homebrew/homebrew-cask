@@ -1,9 +1,9 @@
 cask 'clamxav' do
-  if MacOS.release <= :tiger
+  if MacOS.version <= :tiger
     version '2.2.1'
     sha256 'e075b21fe5154f31dcbde86e492531c87c67ab44ad75294d3063f32ae1e58278'
     url "https://www.clamxav.com/downloads/ClamXav_#{version}.dmg"
-  elsif MacOS.release <= :leopard
+  elsif MacOS.version <= :leopard
     version '2.5.1'
     sha256 '02a7529c74d11724e2d0e8226ac83a0d3cfb599afb354d02f6609632d69d9eb1'
     url "https://www.clamxav.com/downloads/ClamXav_#{version}.dmg"

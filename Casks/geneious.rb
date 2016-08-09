@@ -1,7 +1,7 @@
 cask 'geneious' do
   version '9.1.2'
 
-  if MacOS.release <= '10.6'
+  if MacOS.version <= '10.6'
     sha256 '304afaac8251594d03379737e8263f45297da822b63b306d056057a950255ff2'
 
     url "http://assets.geneious.com/installers/geneious/release/Geneious_mac64_#{version.dots_to_underscores}.dmg"

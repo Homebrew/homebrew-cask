@@ -5,7 +5,7 @@ AllCops:
   Exclude:
     - '**/Casks/**/*'
     - 'developer/**/*'
-    - 'lib/vendor/**/*'
+    - '**/vendor/**/*'
 
 Metrics/AbcSize:
   Enabled: false

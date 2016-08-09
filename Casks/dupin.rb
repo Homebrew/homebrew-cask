@@ -1,5 +1,5 @@
 cask 'dupin' do
-  if MacOS.release <= :lion
+  if MacOS.version <= :lion
     version '2.7.4'
     sha256 '4aba53f356606614627d57f6a33c1ee9cf13ddf06c13e7ac8487b930cb647b85'
   else

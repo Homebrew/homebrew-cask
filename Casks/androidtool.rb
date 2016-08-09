@@ -1,10 +1,10 @@
 cask 'androidtool' do
-  version '1.62'
-  sha256 'f40e480cc66eebae227026de7bb2c6321d28b4b60941b2123915b5462f00d41f'
+  version '1.66'
+  sha256 '4f432ad45660071a1f36c4878bd444dd8bedd520c7c70096e5d7a7907ff7c86a'
 
-  url "https://github.com/mortenjust/androidtool-mac/releases/download/#{version}/AndroidTool#{version.no_dots}.zip"
+  url "https://github.com/mortenjust/androidtool-mac/releases/download/#{version}/AndroidTool.zip"
   appcast 'https://github.com/mortenjust/androidtool-mac/releases.atom',
-          checkpoint: 'dd73f7f46e99ce17d881a45e3c0238509e0567b2f8491b4585f9c74f5fcae6f5'
+          checkpoint: '2752aeeb1eb0b820af31f62beb838089fb0299bff005119d2103d318e4e3d580'
   name 'AndroidTool'
   homepage 'https://github.com/mortenjust/androidtool-mac'
   license :apache

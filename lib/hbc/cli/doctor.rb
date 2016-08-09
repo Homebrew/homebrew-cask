@@ -1,7 +1,6 @@
 class Hbc::CLI::Doctor < Hbc::CLI::Base
   def self.run
-    ohai "macOS Release:", render_with_none_as_error(MacOS.release)
-    ohai "macOS Release with Patchlevel:", render_with_none_as_error(MacOS.release_with_patchlevel)
+    ohai "macOS Release:", render_with_none_as_error(MacOS.full_version)
     ohai "Hardware Architecture:", render_with_none_as_error("#{Hardware::CPU.type}-#{Hardware::CPU.bits}")
     ohai "Ruby Version:", render_with_none_as_error("#{RUBY_VERSION}-p#{RUBY_PATCHLEVEL}")
     ohai "Ruby Path:", render_with_none_as_error(RbConfig.ruby)
@@ -11,13 +10,13 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
     ohai "Homebrew Cellar Path:", render_with_none_as_error(homebrew_cellar)
     ohai "Homebrew Repository Path:", render_with_none_as_error(homebrew_repository)
     ohai "Homebrew Origin:", render_with_none_as_error(homebrew_origin)
-    ohai "Homebrew-cask Version:", render_with_none_as_error(Hbc.full_version)
-    ohai "Homebrew-cask Install Location:", render_install_location
-    ohai "Homebrew-cask Staging Location:", render_staging_location(Hbc.caskroom)
-    ohai "Homebrew-cask Cached Downloads:", render_cached_downloads
-    ohai "Homebrew-cask Default Tap Path:", render_tap_paths(fq_default_tap)
-    ohai "Homebrew-cask Alternate Cask Taps:", render_tap_paths(alt_taps)
-    ohai "Homebrew-cask Default Tap Cask Count:", render_with_none_as_error(default_cask_count)
+    ohai "Homebrew-Cask Version:", render_with_none_as_error(Hbc.full_version)
+    ohai "Homebrew-Cask Install Location:", render_install_location
+    ohai "Homebrew-Cask Staging Location:", render_staging_location(Hbc.caskroom)
+    ohai "Homebrew-Cask Cached Downloads:", render_cached_downloads
+    ohai "Homebrew-Cask Default Tap Path:", render_tap_paths(fq_default_tap)
+    ohai "Homebrew-Cask Alternate Cask Taps:", render_tap_paths(alt_taps)
+    ohai "Homebrew-Cask Default Tap Cask Count:", render_with_none_as_error(default_cask_count)
     ohai "Contents of $LOAD_PATH:", render_load_path($LOAD_PATH)
     ohai "Contents of $RUBYLIB Environment Variable:", render_env_var("RUBYLIB")
     ohai "Contents of $RUBYOPT Environment Variable:", render_env_var("RUBYOPT")

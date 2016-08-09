@@ -1,15 +1,15 @@
 cask 'graphviz' do
-  if MacOS.release == :leopard
+  if MacOS.version == :leopard
     version '2.28.0'
     sha256 'a2c96c9f1ec5cc59c042f53c1f26dae942a2216deda40ca606de3a10070e8a63'
 
     url "http://graphviz.org/pub/graphviz/stable/macos/leopard/graphviz-#{version}.pkg"
-  elsif MacOS.release == :snow_leopard
+  elsif MacOS.version == :snow_leopard
     version '2.38.0'
     sha256 '23303b0f4b7243a0c6588442dd1c8c56e121d0587d13a7d99045b49b2a8bb23a'
 
     url "http://graphviz.org/pub/graphviz/stable/macos/snowleopard/graphviz-#{version}.pkg"
-  elsif MacOS.release == :lion
+  elsif MacOS.version == :lion
     version '2.38.0'
     sha256 'a138b8d5c465ab51ff46114b6a36dd42f0b28ed5ec112901496ee8cf2f58b3ef'
 

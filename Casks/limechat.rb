@@ -1,5 +1,5 @@
 cask 'limechat' do
-  if MacOS.release <= :lion
+  if MacOS.version <= :lion
     version '2.38'
     sha256 '1d7bf505ce60f1bfeb809de67d9f07c996a19eaa6d43b3c5e9df3fcc76077e11'
   else

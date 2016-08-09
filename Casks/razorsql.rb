@@ -1,7 +1,7 @@
 cask 'razorsql' do
   version '6.3.26'
 
-  if Hardware::CPU.is_32_bit? || MacOS.release <= :snow_leopard
+  if Hardware::CPU.is_32_bit? || MacOS.version <= :snow_leopard
     sha256 '820deccfc41be160db3158f9ed69570bf054d4306a4a0180bf8d89d70376a3db'
     url "http://downloads.razorsql.com/downloads/#{version.dots_to_underscores}/razorsql#{version.dots_to_underscores}.dmg"
   else

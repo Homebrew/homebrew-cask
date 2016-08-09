@@ -52,7 +52,7 @@ Hbc.appdir = Pathname.new(TEST_TMPDIR).join("appdir")
 Hbc.default_tap = project_root.join("spec", "support")
 
 # create cache directory
-HOMEBREW_CACHE = Pathname.new(TEST_TMPDIR).join("cache")
+Hbc.homebrew_cache = Pathname.new(TEST_TMPDIR).join("cache")
 Hbc.cache.mkpath
 
 # our own testy caskroom

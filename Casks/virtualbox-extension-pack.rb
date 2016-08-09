@@ -1,8 +1,8 @@
 cask 'virtualbox-extension-pack' do
-  if MacOS.release <= :lion
+  if MacOS.version <= :lion
     version '4.3.38-106717'
     sha256 'ba739b8602de9eb9d9da63c730a2329dc72b454073a2525c46fa00df2b5dba1c'
-  elsif MacOS.release == :mountain_lion
+  elsif MacOS.version == :mountain_lion
     version '5.0.26-108824'
     sha256 '2f2302c7ba3d00a1258fe8e7767a6eb08dccdc3c31f6e3eeb74063c2c268b104'
   else

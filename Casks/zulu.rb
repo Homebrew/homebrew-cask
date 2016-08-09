@@ -19,7 +19,7 @@ cask 'zulu' do
            '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/zulu#{version.before_comma}.jdk", "/Library/Java/JavaVirtualMachines/zulu-#{version.minor}.jdk"
     system '/usr/bin/sudo', '-E', '--',
            '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/zulu#{version.before_comma}.jdk/Contents/Home", '/Library/Java/Home'
-    if MacOS.release <= :mavericks
+    if MacOS.version <= :mavericks
       system '/usr/bin/sudo', '-E', '--',
              '/bin/rm', '-rf', '--', '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
       system '/usr/bin/sudo', '-E', '--',
@@ -34,7 +34,7 @@ cask 'zulu' do
                        "/Library/Java/JavaVirtualMachines/zulu#{version.before_comma}.jdk",
                        "/Library/Java/JavaVirtualMachines/zulu-#{version.minor}.jdk",
                        '/Library/Java/Home',
-                       if MacOS.release <= :mavericks
+                       if MacOS.version <= :mavericks
                          [
                            '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK',
                          ]

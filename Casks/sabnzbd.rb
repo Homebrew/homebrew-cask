@@ -12,9 +12,9 @@ cask 'sabnzbd' do
 
   depends_on macos: '>= :mavericks'
 
-  if MacOS.release == :mavericks
+  if MacOS.version == :mavericks
     app 'Mavericks/SABnzbd.app'
-  elsif MacOS.release <= :yosemite
+  elsif MacOS.version <= :yosemite
     app 'Yosemite/SABnzbd.app'
   else
     app 'SABnzbd.app'

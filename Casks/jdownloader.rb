@@ -2,7 +2,7 @@ cask 'jdownloader' do
   version :latest
   sha256 :no_check
 
-  if MacOS.release <= :snow_leopard
+  if MacOS.version <= :snow_leopard
     url 'http://installer.jdownloader.org/clean/JD2Setup_10_6_or_lower.dmg',
         user_agent: 'HomebrewCask/1.0 (Macintosh; Intel Mac OS X) (+http://caskroom.io)'
   else

@@ -294,7 +294,7 @@ If you are using [GitHub two-factor authentication](https://help.github.com/arti
 
 ### Squashing
 
-If your pull request has multiple commits which revise the same lines of code, or if you make some changes after comments from one of the maintainers, it is better to [squash](http://davidwalsh.name/squash-commits-git) those commits together into one logical unit.
+If your pull request has multiple commits which revise the same lines of code, or if you make some changes after comments from one of the maintainers, it is better to [squash](https://davidwalsh.name/squash-commits-git) those commits together into one logical unit.
 
 But you don’t always have to squash — it is fine for a pull request to contain multiple commits when there is a logical reason for the separation.
 

@@ -1,5 +1,5 @@
 cask 'themeengine' do
-  if MacOS.release <= :yosemite
+  if MacOS.version <= :yosemite
     version '0.0.4'
     sha256 '35a99145577cb300e2383d3432b47c13907e5d6ca24e720c44a83f4a1f990f4a'
 

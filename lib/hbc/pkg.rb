@@ -23,7 +23,7 @@ class Hbc::Pkg
     end
     odebug "Deleting pkg directories"
     _deepest_path_first(pkgutil_bom_dirs).each do |dir|
-      next unless dir.exist? && !Hbc::MacOS.undeletable?(dir)
+      next unless dir.exist? && !MacOS.undeletable?(dir)
       _with_full_permissions(dir) do
         _clean_broken_symlinks(dir)
         _clean_ds_store(dir)

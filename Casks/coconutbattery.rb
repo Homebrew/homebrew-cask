@@ -1,9 +1,9 @@
 cask 'coconutbattery' do
-  if MacOS.release <= :tiger
+  if MacOS.version <= :tiger
     version '2.6.6'
     sha256 '8d235b237e42754ceda26af2babc160fd23f890d0fe6d7780b86a8e9c6effe42'
     url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version}.zip"
-  elsif MacOS.release <= :snow_leopard
+  elsif MacOS.version <= :snow_leopard
     version '2.8'
     sha256 'fcfc81214ff26afff9f5c6c7cdc455b23ac898b6918f864b641a9e31526692d4'
     url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version}.zip"
