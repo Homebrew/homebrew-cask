@@ -318,7 +318,7 @@ class Hbc::Installer
     odebug "Purging files for version #{@cask.version} of Cask #{@cask}"
 
     # versioned staged distribution
-    gain_permissions_remove(@cask.staged_path) if @cask.staged_path.exist?
+    gain_permissions_remove(@cask.staged_path) if !@cask.staged_path.nil? && @cask.staged_path.exist?
 
     # Homebrew-Cask metadata
     if @cask.metadata_versioned_container_path.respond_to?(:children) &&
