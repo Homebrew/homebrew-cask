@@ -1,10 +1,10 @@
 cask 'whatsapp' do
-  version '0.2.936'
-  sha256 'a0c8e2a875f1a4022f0d79d7c7cbaee6e21c6b2a50832b2e6aacc676890ba732'
+  version '0.2.1061'
+  sha256 'e73e64c2d91b5de46b31429004878e3a7f24599073b27655290b075d3f4fbe13'
 
   url "https://web.whatsapp.com/desktop/mac/files/release-#{version}.zip"
   appcast 'https://web.whatsapp.com/desktop/mac/releases?platform=darwin&arch=x64',
-          checkpoint: 'c434dd74d97e36a00ec4aab4c2e4cb04c2cb983f9ee922934c33c5f02d575580'
+          checkpoint: '39bbc795dd9d357ae42a8b15f8ee747e19f1b50fce86e36f2e7e260a9d80f7fd'
   name 'WhatsApp'
   homepage 'https://www.whatsapp.com/'
   license :gratis

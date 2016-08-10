@@ -5,7 +5,7 @@
 # (c) 2014 MIT license
 #
 
-require 'rubygems'
+require "rubygems"
 
 class Hbc
   def installed_version?
@@ -14,9 +14,13 @@ class Hbc
 
   def installed_version
     # returns latest installed version if possible
-    Pathname.glob(caskroom_path.join('*')).map(&:basename).sort{|x,y|
+
+    Pathname.glob(caskroom_path.join("*")).map(&:basename).sort do |x, y|
       Gem::Version.new(x) <=> Gem::Version.new(y) # throws exception if invalid version is provided ...
-    }.last rescue nil # ... return nil in this case
+    end.last
+  rescue
+    nil
+    # ... return nil in this case
   end
 
   def update_available?
@@ -36,4 +40,4 @@ end
 
 upgradable_casks = Hbc.upgradable
 
-puts upgradable_casks.length == 0 && 'No outdated packages' || upgradable_casks
+puts upgradable_casks.empty? && "No outdated packages" || upgradable_casks

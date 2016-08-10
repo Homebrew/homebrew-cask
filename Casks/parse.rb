@@ -1,18 +1,20 @@
 cask 'parse' do
-  version :latest
-  sha256 :no_check
+  version '3.0.5'
+  sha256 '30c305a76beb8913392b74977a6801e817c3477bd3de72ecd1887a8ca57ea888'
 
-  url 'https://parse.com/downloads/cloud_code/cli/parse-osx/latest'
+  # github.com/ParsePlatform was verified as official when first introduced to the cask
+  url "https://github.com/ParsePlatform/parse-cli/releases/download/release_#{version}/parse"
+  appcast 'https://github.com/ParsePlatform/parse-cli/releases.atom',
+          checkpoint: '07e39670b7193e99e97346f3b3e2c10d79b56285f53544f55d1b86f758d70e63'
   name 'Parse'
   homepage 'https://parse.com'
   license :bsd
 
-  depends_on formula: 'unar'
-  container type: :generic_unar
+  container type: :naked
 
-  binary 'parse-latest', target: 'parse'
+  binary 'parse'
 
   postflight do
-    set_permissions "#{staged_path}/parse-latest", '0755'
+    set_permissions "#{staged_path}/parse", '0755'
   end
 end

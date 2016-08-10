@@ -1,11 +1,11 @@
 cask 'knock' do
-  version '2.1.7'
-  sha256 '116ecc5ffd2238daa68409c3043e8d2ce5a4f3019f3af0742d7d4ef180f7e45c'
+  version '2.1.8'
+  sha256 '95dc636b7544861509cdd73ccd0356a762ab936024b20c983a7c02cb8d0508df'
 
   # knock-updates.s3.amazonaws.com was verified as official when first introduced to the cask
   url 'https://knock-updates.s3.amazonaws.com/Knock.zip'
   appcast 'https://knock-updates.s3.amazonaws.com/Knock.xml',
-          checkpoint: '6b099be08fd57bd8223621e4b10ce690954ae2871a015ffc156d920899efca9d'
+          checkpoint: 'de71f1603b967c2156132dd1ae06c6628a202be2c5990327b107d5f2e8575b69'
   name 'Knock'
   homepage 'http://knocktounlock.com/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

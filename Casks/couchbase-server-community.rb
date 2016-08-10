@@ -1,7 +1,7 @@
 cask 'couchbase-server-community' do
   version '4.0.0'
 
-  if MacOS.release <= :yosemite
+  if MacOS.version <= :yosemite
     sha256 'ff994c89abf2efcc7dafa6753cfc25c821f3cc24935dccb7a979d170ced56162'
     url "http://packages.couchbase.com/releases/#{version}/couchbase-server-community_#{version}-macos_x86_64.zip"
 
@@ -14,6 +14,6 @@ cask 'couchbase-server-community' do
   end
 
   name 'Couchbase Server'
-  homepage 'http://www.couchbase.com/'
+  homepage 'https://www.couchbase.com/'
   license :apache
 end

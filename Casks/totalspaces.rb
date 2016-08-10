@@ -1,5 +1,5 @@
 cask 'totalspaces' do
-  if MacOS.release <= :mountain_lion
+  if MacOS.version <= :mountain_lion
     version '1.2.11'
     sha256 'fd54c6ea092f6fae2035745959ff6e080953e77ec6c76715e532b4b0352235d4'
 
@@ -25,7 +25,7 @@ cask 'totalspaces' do
               script:  {
                          executable: 'TotalSpaces2 Uninstaller.app/Contents/MacOS/TotalSpaces2 Uninstaller',
                          args:       %w[--headless],
-                         sudo:       true
+                         sudo:       true,
                        },
               quit:    'com.binaryage.TotalSpaces2'
   end

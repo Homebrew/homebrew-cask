@@ -1,3 +1,4 @@
-class Hbc::Artifact::AudioUnitPlugin < Hbc::Artifact::Moved
+require "hbc/artifact/moved"
 
+class Hbc::Artifact::AudioUnitPlugin < Hbc::Artifact::Moved
 end

@@ -2,9 +2,9 @@ cask 'htc-sync-manager' do
   version '3.1.94'
   sha256 '416c0b656c13f9b878493eaabef2d02ea8c0888eeaf6efa5af092a714126990c'
 
-  url "http://dl4.htc.com/download/htc-sync-manager/setup_#{version}_htc.dmg"
+  url "https://dl4.htc.com/download/htc-sync-manager/setup_#{version}_htc.dmg"
   name 'HTC Sync Manager'
-  homepage 'http://www.htc.com/us/software/htc-sync-manager/'
+  homepage 'https://www.htc.com/us/software/htc-sync-manager/'
   license :gratis
 
   app 'HTC Sync Manager.app'

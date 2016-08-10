@@ -7,7 +7,7 @@ cask 'exa' do
   appcast 'https://github.com/ogham/exa/releases.atom',
           checkpoint: '77d34c77c2c3017137c276b6a3de91ffba51b4fe25f26c005382d934954a3e4f'
   name 'exa'
-  homepage 'http://bsago.me/exa/'
+  homepage 'https://bsago.me/exa/'
   license :mit
 
   binary 'exa-osx-x86_64', target: 'exa'

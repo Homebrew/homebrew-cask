@@ -1,5 +1,5 @@
 cask 'displaylink' do
-  if MacOS.release <= :lion
+  if MacOS.version <= :lion
     version '2.2,121'
     sha256 '5c9a97a476b5ff27811491eebb653a03c96f899562b67566c24100d8593b1daa'
   else
@@ -25,10 +25,10 @@ cask 'displaylink' do
                          'com.displaylink.displaylinkdriverunsigned',
                        ],
             # 'kextunload -b com.displaylink.driver.DisplayLinkDriver' causes kernel panic
-            # :kext => [
-            #            'com.displaylink.driver.DisplayLinkDriver',
-            #            'com.displaylink.dlusbncm'
-            #           ],
+            # kext:      [
+            #              'com.displaylink.driver.DisplayLinkDriver',
+            #              'com.displaylink.dlusbncm'
+            #            ],
             launchctl: [
                          'com.displaylink.useragent-prelogin',
                          'com.displaylink.useragent',

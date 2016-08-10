@@ -4,7 +4,7 @@ cask 'natron' do
 
   url "https://downloads.natron.fr/Mac/releases/Natron_MacOSX_x86-64bits_v#{version}.dmg"
   name 'Natron'
-  homepage 'https://natron.inria.fr/'
+  homepage 'https://natron.fr/'
   license :mpl
 
   app 'Natron.app'

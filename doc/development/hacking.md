@@ -6,7 +6,7 @@ If you’d like to hack on the Ruby code that drives this project, please join u
 
 Homebrew-Cask is an attempt to make a Linux-style package manager for precompiled macOS software. Homebrew-Cask is not yet as featureful as `apt` or `yum`, but we are trying to be as close as we can get to those tools from the user’s point of view.
 
-We manage installed files via the “symlink farm” method, like [GNU Stow](http://www.gnu.org/software/stow/) and [Homebrew](http://brew.sh/). Similarly, we try to avoid `sudo` where possible.
+We manage installed files via the “symlink farm” method, like [GNU Stow](https://www.gnu.org/software/stow/) and [Homebrew](http://brew.sh/). Similarly, we try to avoid `sudo` where possible.
 
 Homebrew-Cask is designed to work like a traditional Unix tool:
 
@@ -127,22 +127,21 @@ The first line of a commit message (the summary line) is like the subject line o
 If you’re making changes - please write some tests for them! Install dependencies and run the whole test suite with:
 
 ```bash
-bundle install
-bundle exec rake test
+brew cask-tests
 ```
 
 Be sure to run the test suite before submitting. If you forget, Travis-CI will do that for you and embarrass you in front of all your friends. :)
 
 You may also use a set of environment variables to increase verbosity:
 
-* `TESTOPTS`, `TEST` etc. for the old [minitest suites](http://www.ruby-doc.org/stdlib-2.0.0/libdoc/rake/rdoc/Rake/TestTask.html)
+* `TESTOPTS`, `TEST` etc. for the old [minitest suites](https://www.ruby-doc.org/stdlib-2.0.0/libdoc/rake/rdoc/Rake/TestTask.html)
 * `SPEC_OPTS`, `SPEC` etc. for [rspec suites](http://apidock.com/rspec/Spec/Rake/SpecTask)
 * `VERBOSE_TESTS` to see the standard output from the actual code = ignore the `shutup` helper
 
 Example of a very verbose output:
 
 ```shell
-TESTOPTS='-v' SPEC_OPTS='-fd' VERBOSE_TESTS=1 bundle exec rake test
+TESTOPTS='-v' SPEC_OPTS='-fd' VERBOSE_TESTS=1 brew cask-tests
 ```
 
 #### External Commands

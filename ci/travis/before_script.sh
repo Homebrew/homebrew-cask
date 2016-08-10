@@ -8,8 +8,6 @@
 # shellcheck disable=SC1090
 . "${TRAVIS_BUILD_DIR}/ci/travis/helpers.sh"
 
-enter_build_step
-
 header 'Running before_script.sh...'
 
 run which bundle
@@ -17,5 +15,3 @@ run bundle --version
 
 run which rake
 run rake --version
-
-exit_build_step

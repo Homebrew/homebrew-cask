@@ -21,14 +21,12 @@ class Hbc::DSL::StanzaProxy
 
   # Serialization for dumpcask
   def encode_with(coder)
-    coder['type'] = type
-    coder['resolved'] = @resolver.call
+    coder["type"] = type
+    coder["resolved"] = @resolver.call
   end
 
   def respond_to?(symbol, include_private = false)
-    if %i{encode_with proxy? to_s, type}.include?(symbol)
-      return true 
-    end
+    return true if %i{encode_with proxy? to_s type}.include?(symbol)
     return false if symbol == :to_ary
     @resolver.call.respond_to?(symbol, include_private)
   end

@@ -1,16 +1,14 @@
 class Hbc::DSL::Version < ::String
-  DIVIDERS = %w[. - _ /]
+  DIVIDERS = {
+               "." => :dots,
+               "-" => :hyphens,
+               "_" => :underscores,
+               "/" => :slashes,
+             }.freeze
 
-  PLURAL_DIVIDER_NAMES = {
-    '.' => :dots,
-    '-' => :hyphens,
-    '_' => :underscores,
-    '/' => :slashes
-  }
+  DIVIDER_REGEX = %r{(#{DIVIDERS.keys.map { |v| Regexp.quote(v) }.join('|')})}
 
-  DIVIDER_REGEX = /(#{DIVIDERS.map { |v| Regexp.quote(v) }.join('|')})/
-
-  MAJOR_MINOR_PATCH_REGEX = /^(\d+)(?:\.(\d+)(?:\.(\d+))?)?/
+  MAJOR_MINOR_PATCH_REGEX = %r{^(\d+)(?:\.(\d+)(?:\.(\d+))?)?}
 
   class << self
     private
@@ -28,12 +26,11 @@ class Hbc::DSL::Version < ::String
     end
 
     def deletion_method_name(divider)
-      plural_divider_name = plural_divider_name(divider)
-      "no_#{plural_divider_name}"
+      "no_#{DIVIDERS[divider]}"
     end
 
     def define_divider_conversion_methods(left_divider)
-      (DIVIDERS - [left_divider]).each do |right_divider|
+      (DIVIDERS.keys - [left_divider]).each do |right_divider|
         define_divider_conversion_method(left_divider, right_divider)
       end
     end
@@ -46,17 +43,13 @@ class Hbc::DSL::Version < ::String
     end
 
     def conversion_method_name(left_divider, right_divider)
-      plural_left_divider_name = plural_divider_name(left_divider)
-      plural_right_divider_name = plural_divider_name(right_divider)
-      "#{plural_left_divider_name}_to_#{plural_right_divider_name}"
-    end
-
-    def plural_divider_name(divider)
-      PLURAL_DIVIDER_NAMES[divider]
+      "#{DIVIDERS[left_divider]}_to_#{DIVIDERS[right_divider]}"
     end
   end
 
-  DIVIDERS.each { |divider| define_divider_methods(divider) }
+  DIVIDERS.keys.each do |divider|
+    define_divider_methods(divider)
+  end
 
   attr_reader :raw_version
 
@@ -66,7 +59,7 @@ class Hbc::DSL::Version < ::String
   end
 
   def latest?
-    to_s == 'latest'
+    to_s == "latest"
   end
 
   def major
@@ -82,37 +75,37 @@ class Hbc::DSL::Version < ::String
   end
 
   def major_minor
-    version { [major, minor].reject(&:empty?).join('.') }
+    version { [major, minor].reject(&:empty?).join(".") }
   end
 
   def major_minor_patch
-    version { [major, minor, patch].reject(&:empty?).join('.') }
+    version { [major, minor, patch].reject(&:empty?).join(".") }
   end
 
   def before_comma
-    version { split(',', 2)[0] }
+    version { split(",", 2)[0] }
   end
 
   def after_comma
-    version { split(',', 2)[1] }
+    version { split(",", 2)[1] }
   end
 
   def before_colon
-    version { split(':', 2)[0] }
+    version { split(":", 2)[0] }
   end
 
   def after_colon
-    version { split(':', 2)[1] }
+    version { split(":", 2)[1] }
   end
 
   def no_dividers
-    version { gsub(DIVIDER_REGEX, '') }
+    version { gsub(DIVIDER_REGEX, "") }
   end
 
   private
 
-  def version(&block)
+  def version
     return self if empty? || latest?
-    self.class.new(block.call)
+    self.class.new(yield)
   end
 end

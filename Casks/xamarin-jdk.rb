@@ -4,7 +4,7 @@ cask 'xamarin-jdk' do
 
   url "https://download.xamarin.com/Installer/MonoForAndroid/jdk-#{version.major}u#{version.minor}-macosx-x64.dmg"
   appcast 'https://static.xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
-          checkpoint: '14727c4cd976ca3d96a7a9c362bebd064a49c4f24d32296d33767e3a76b4a685'
+          checkpoint: '2cb6260bf1f5348e125fe9cab2effe9862fe76f0706f146dd91c827827cdda6b'
   name 'Xamarin Java JDK'
   homepage 'https://xamarin.com/platform'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

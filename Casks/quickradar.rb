@@ -1,10 +1,10 @@
 cask 'quickradar' do
-  version '1.0b1'
-  sha256 '4b40450a5710d9b6efc33051bc2f611b0c88e3d5f387a5fdd1a90773d28d90a8'
+  version '1.0b3'
+  sha256 '9347de5c966bae6b5c1ca0521d3d8c965afdfb184740f8c170b2e5a02f902ee0'
 
   url "http://www.quickradar.com/#{version}.zip"
   appcast 'http://www.quickradar.com/appcast.xml',
-          checkpoint: '3f381e6722f6e62a46908cf73925e498e4ba2175dc08f37623d989b08dcb7721'
+          checkpoint: '56e93a67fa6149774b3477d167300f9f15e00a362db02b5a01ff1fc7034e133a'
   name 'QuickRadar'
   homepage 'http://www.quickradar.com/'
   license :bsd

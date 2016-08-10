@@ -8,6 +8,7 @@ cask 'cargo' do
     end
   end
 
+  # rust-lang.org/cargo-dist was verified as official when first introduced to the cask
   url "https://static.rust-lang.org/cargo-dist/#{Utils.distname}.tar.gz"
   name 'Cargo'
   homepage 'https://crates.io/'

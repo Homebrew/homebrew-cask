@@ -1,9 +1,9 @@
 cask 'flash-player' do
-  version '22.0.0.192'
-  sha256 '1cdc1b3494ebbcbfc215f3ce4e84dd93ebe97e14e77d03034f70ad25fc93631b'
+  version '22.0.0.209'
+  sha256 '791dd70fb49dadb0963317a44e410cfb3071c241711052e8db2527999d0f8eac'
 
   # macromedia.com was verified as official when first introduced to the cask
-  url "https://fpdownload.macromedia.com/pub/flashplayer/updaters/#{version.to_i}/flashplayer_#{version.to_i}_sa.dmg"
+  url "https://fpdownload.macromedia.com/pub/flashplayer/updaters/#{version.major}/flashplayer_#{version.major}_sa.dmg"
   name 'Adobe Flash Player'
   homepage 'https://www.adobe.com/support/flashplayer/downloads.html'
   license :gratis

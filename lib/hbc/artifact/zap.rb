@@ -1,3 +1,5 @@
+require "hbc/artifact/uninstall_base"
+
 class Hbc::Artifact::Zap < Hbc::Artifact::UninstallBase
   def install_phase
     odebug "Nothing to do. The zap artifact has no install phase."

@@ -1,6 +1,6 @@
 # wire in a set of fake link dirs per-test
 module FakeDirHooks
-  DIRS = [:appdir, :qlplugindir, :binarydir]
+  DIRS = [:appdir, :qlplugindir, :binarydir].freeze
 
   def before_setup
     super

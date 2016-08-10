@@ -3,10 +3,10 @@ cask 'jansi' do
   sha256 :no_check
 
   # dl.dropbox.com/u/43721500 was verified as official when first introduced to the cask
-  url 'http://dl.dropbox.com/u/43721500/JANSI-MacOSX10.4.zip'
+  url 'https://dl.dropbox.com/u/43721500/JANSI-MacOSX10.4.zip'
   name 'Japanese ANSI'
   name 'JANSI'
-  homepage 'http://kenie33-jansi.blogspot.jp/'
+  homepage 'https://kenie33-jansi.blogspot.jp/'
   license :unknown
 
   depends_on macos: '>= :tiger'

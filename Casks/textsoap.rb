@@ -7,7 +7,7 @@ cask 'textsoap' do
   appcast "https://unmarked.s3.amazonaws.com/appcast/textsoap#{version.major}.xml",
           checkpoint: '36101ecd320abc8e5e48d221645187dfc983ef893b1d98d749ed8d0d5e4e52ad'
   name 'TextSoap'
-  homepage 'http://www.unmarked.com/textsoap/'
+  homepage 'https://www.unmarked.com/textsoap/'
   license :commercial
 
   app "textsoap#{version.major}.app"

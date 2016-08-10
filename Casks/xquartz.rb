@@ -4,10 +4,10 @@ cask 'xquartz' do
 
   # bintray.com/xquartz was verified as official when first introduced to the cask
   url "https://dl.bintray.com/xquartz/downloads/XQuartz-#{version}.dmg"
-  appcast 'https://xquartz-dl.macosforge.org/sparkle/release.xml',
-          checkpoint: 'b0acd11079391e97a302227b526f39a60050b7ccd79f59e232ff6079737f889c'
+  appcast 'https://www.xquartz.org/releases/sparkle/release.xml',
+          checkpoint: '74e4ffc811e99d388086551e256abc9259b9200d23a90eb380811516ae6f501a'
   name 'XQuartz'
-  homepage 'http://www.xquartz.org/'
+  homepage 'https://www.xquartz.org/'
   license :oss
 
   pkg 'XQuartz.pkg'

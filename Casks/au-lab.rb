@@ -7,7 +7,5 @@ cask 'au-lab' do
   homepage 'https://www.apple.com/itunes/mastered-for-itunes/'
   license :gratis
 
-  container nested: 'AU Lab Image.dmg'
-
   app 'AU Lab.app'
 end

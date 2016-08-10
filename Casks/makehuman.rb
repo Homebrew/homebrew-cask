@@ -1,9 +1,9 @@
 cask 'makehuman' do
-  version '1.0.2'
-  sha256 'ea74381b1fd9c0f699b2cf1a3476d7cf9447fad3beb3c48de0a4017032c44de9'
+  version '1.1.0'
+  sha256 'a16f3aa66b553a60c57e3e973dba5be559493a111251db057c38cf300a3d762b'
 
   # tuxfamily.org/makehuman was verified as official when first introduced to the cask
-  url "http://download.tuxfamily.org/makehuman/releases/#{version}/makehuman-#{version}-osx.dmg"
+  url "https://download.tuxfamily.org/makehuman/releases/#{version}/makehuman-#{version}-osx.dmg"
   name 'MakeHuman'
   homepage 'http://www.makehuman.org/'
   license :affero

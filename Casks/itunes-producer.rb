@@ -1,5 +1,5 @@
 cask 'itunes-producer' do
-  if MacOS.release <= :mavericks
+  if MacOS.version <= :mavericks
     version '2.9.1'
 
     url "https://itunesconnect.apple.com/itunesproducer/iTunesProducer_#{version}.dmg"

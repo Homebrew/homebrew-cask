@@ -1,9 +1,9 @@
-require 'test_helper'
+require "test_helper"
 
 describe Hbc::CLI::Info do
-  it 'displays some nice info about the specified Cask' do
+  it "displays some nice info about the specified Cask" do
     lambda {
-      Hbc::CLI::Info.run('local-caffeine')
+      Hbc::CLI::Info.run("local-caffeine")
     }.must_output <<-CLIOUTPUT.undent
       local-caffeine: 1.2.3
       local-caffeine
@@ -15,7 +15,7 @@ describe Hbc::CLI::Info do
     CLIOUTPUT
   end
 
-  describe 'given multiple Casks' do
+  describe "given multiple Casks" do
     before do
       @expected_output = <<-CLIOUTPUT.undent
         local-caffeine: 1.2.3
@@ -35,22 +35,22 @@ describe Hbc::CLI::Info do
       CLIOUTPUT
     end
 
-    it 'displays the info' do
+    it "displays the info" do
       lambda {
-        Hbc::CLI::Info.run('local-caffeine', 'local-transmission')
+        Hbc::CLI::Info.run("local-caffeine", "local-transmission")
       }.must_output(@expected_output)
     end
 
-    it 'throws away stray options' do
+    it "throws away stray options" do
       lambda {
-        Hbc::CLI::Info.run('--notavalidoption', 'local-caffeine', 'local-transmission')
+        Hbc::CLI::Info.run("--notavalidoption", "local-caffeine", "local-transmission")
       }.must_output(@expected_output)
     end
   end
 
-  it 'should print caveats if the Cask provided one' do
+  it "should print caveats if the Cask provided one" do
     lambda {
-      Hbc::CLI::Info.run('with-caveats')
+      Hbc::CLI::Info.run("with-caveats")
     }.must_output <<-CLIOUTPUT.undent
       with-caveats: 1.2.3
       with-caveats
@@ -75,7 +75,7 @@ describe Hbc::CLI::Info do
 
   it 'should not print "Caveats" section divider if the caveats block has no output' do
     lambda {
-      Hbc::CLI::Info.run('with-conditional-caveats')
+      Hbc::CLI::Info.run("with-conditional-caveats")
     }.must_output <<-CLIOUTPUT.undent
       with-conditional-caveats: 1.2.3
       with-conditional-caveats
@@ -90,7 +90,7 @@ describe Hbc::CLI::Info do
   describe "when no Cask is specified" do
     it "raises an exception" do
       lambda {
-        Hbc::CLI::Info.run()
+        Hbc::CLI::Info.run
       }.must_raise Hbc::CaskUnspecifiedError
     end
   end
@@ -98,7 +98,7 @@ describe Hbc::CLI::Info do
   describe "when no Cask is specified, but an invalid option" do
     it "raises an exception" do
       lambda {
-        Hbc::CLI::Info.run('--notavalidoption')
+        Hbc::CLI::Info.run("--notavalidoption")
       }.must_raise Hbc::CaskUnspecifiedError
     end
   end

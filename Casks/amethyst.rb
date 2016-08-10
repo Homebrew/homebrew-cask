@@ -1,5 +1,5 @@
 cask 'amethyst' do
-  if MacOS.release == :mavericks
+  if MacOS.version == :mavericks
     version '0.9.10'
     sha256 '82adf42ce6031ab59a3072e607788e73f594ad5f21c7118aabc6c5dafe3d0b47'
   else
@@ -9,7 +9,7 @@ cask 'amethyst' do
 
   url "https://ianyh.com/amethyst/versions/Amethyst-#{version}.zip"
   appcast 'https://ianyh.com/amethyst/appcast.xml',
-          checkpoint: 'd49ecc458c9c5528022f51c661da5d1fbad9699c30365552bde6e96340a74db6'
+          checkpoint: '92d4615302d5e3ed68a3a187b6709e78080691550517f9b171b3631a6ca45d1c'
   name 'Amethyst'
   homepage 'https://ianyh.com/amethyst'
   license :mit

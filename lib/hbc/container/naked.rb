@@ -1,13 +1,15 @@
+require "hbc/container/base"
+
 class Hbc::Container::Naked < Hbc::Container::Base
-  def self.me?(criteria)
-    # Either inherit from this class and override self.me?,
-    # or use this class directly as "container :type => :naked",
-    # in which case self.me? is not called.
+  # Either inherit from this class and override with self.me?(criteria),
+  # or use this class directly as "container type: :naked",
+  # in which case self.me? is not called.
+  def self.me?(*)
     false
   end
 
   def extract
-    @command.run!('/usr/bin/ditto', :args => ['--', @path, @cask.staged_path.join(target_file)])
+    @command.run!("/usr/bin/ditto", args: ["--", @path, @cask.staged_path.join(target_file)])
   end
 
   def target_file

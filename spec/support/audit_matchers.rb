@@ -8,9 +8,7 @@ module AuditMatchers
   end
 
   matcher :fail do
-    match do |audit|
-      audit.errors?
-    end
+    match(&:errors?)
   end
 
   matcher :warn do

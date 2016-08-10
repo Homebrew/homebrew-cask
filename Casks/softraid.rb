@@ -1,8 +1,8 @@
 cask 'softraid' do
-  version '5.1'
-  sha256 '3ce535878cb92e7401f044a683c7e6e2e6ec6576695adac85f15c10c2d9b1548'
+  version '5.5'
+  sha256 '203a980027858bc901120f0f4202db06600768029f8b4a2beeb868381aa1c775'
 
-  url "https://www.softraid.com/updates/SoftRAID%20#{version}.dmg"
+  url "https://softraid.com/updates/SoftRAID%20#{version}.dmg"
   name 'SoftRAID'
   homepage 'https://www.softraid.com/'
   license :commercial

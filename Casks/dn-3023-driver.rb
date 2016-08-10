@@ -2,6 +2,7 @@ cask 'dn-3023-driver' do
   version '20140926'
   sha256 'baa5d20f17cd322b2c53e0bd82c444d1648eefabd5ec383d15f9a16f99810b10'
 
+  # assmann.com was verified as official when first introduced to the cask
   url "http://ftp.assmann.com/pub/DN-/DN-3023___4016032318385/DN-3023_driver_driver%20Mac10.6-10.10_#{version}.zip"
   name 'USB driver for Gigabit Ethernet Adapter D-3023'
   homepage 'http://www.digitus.info/en/products/network/gigabit-ethernet-network/network-interface-cards/r-gigabit-ethernet-usb-30-adapter-dn-3023/'

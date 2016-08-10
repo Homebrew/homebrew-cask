@@ -4,7 +4,7 @@ cask 'vlc' do
 
   url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}.dmg"
   appcast 'http://update.videolan.org/vlc/sparkle/vlc-intel64.xml',
-          checkpoint: '01543595515ba6449e20124ddf92dec314d5ef60a246af8d9460de01a0977b31'
+          checkpoint: '0e71dfa9874979a8a9e6a9a3a7fdd21366a92082bce2836cbd938186ad5945fa'
   name 'VLC media player'
   homepage 'https://www.videolan.org/vlc/'
   license :oss

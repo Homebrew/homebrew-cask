@@ -4,7 +4,7 @@ cask 'couchbase-server-enterprise' do
 
   url "http://packages.couchbase.com/releases/#{version}/couchbase-server-enterprise_#{version}-macos_x86_64.zip"
   name 'Couchbase Server'
-  homepage 'http://www.couchbase.com/'
+  homepage 'https://www.couchbase.com/'
   license :apache
 
   app 'couchbase-server-enterprise_4/Couchbase Server.app'

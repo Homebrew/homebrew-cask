@@ -7,7 +7,7 @@ cask 'gnubg' do
     version '1.03.000-i386'
     sha256 'e6c7012caf77da12c539b2f50e611bc311aba92166a58396dc21df33c2da3397'
     url 'http://gnubg.org/media/macos/gnubg-1_03_000-mac-i386.dmg'
-  elsif MacOS.release <= :mavericks
+  elsif MacOS.version <= :mavericks
     version '1.03.000-x86_64'
     sha256 '90614e940a94515d265ccccabf05ae6610121207b6ba0b7ae656ac2e68c0f6ff'
     url 'http://gnubg.org/media/macos/gnubg-1_03_000-mac-x86_64.dmg'

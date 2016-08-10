@@ -1,6 +1,6 @@
 cask 'coyim' do
-  version '0.3.1'
-  sha256 'a59b45d89576546a03479dbc2ae8dc70691a495eacd362519e52c4fe3b8a2e1a'
+  version '0.3.5'
+  sha256 '04746c562bc2f9ee49d62b956fc5a3cd763661fa30980a8050845b8cb0154772'
 
   # bintray.com/twstrike/coyim was verified as official when first introduced to the cask
   url "https://dl.bintray.com/twstrike/coyim/v#{version}/mac-bundle/coyim.dmg"

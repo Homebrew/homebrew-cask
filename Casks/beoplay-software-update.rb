@@ -7,7 +7,5 @@ cask 'beoplay-software-update' do
   homepage 'http://www.beoplay.com/support/product%20support/beoplay%20updater'
   license :closed
 
-  container nested: "beoplay-product-updater_#{version}.dmg"
-
   app 'BeoPlay Software Update.app'
 end

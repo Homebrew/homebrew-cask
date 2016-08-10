@@ -1,10 +1,10 @@
 cask 'sage' do
-  if MacOS.release <= :mavericks
+  if MacOS.version <= :mavericks
     version '6.9'
     sha256 '21f460c90db2a9ee83d196937587de5daab8c6712b0f24366b6a1c15a8dd592b'
     # mit.edu/sage was verified as official when first introduced to the cask
     url "http://mirrors.mit.edu/sage/osx/intel/old/sage-#{version}-x86_64-Darwin-OSX-10.7-app.dmg"
-  elsif MacOS.release <= :yosemite
+  elsif MacOS.version <= :yosemite
     version '6.9'
     sha256 '03112bf747cf807f308d518f34c1982ca3c9599e65bf64a6782efc78136198a4'
     # mit.edu/sage was verified as official when first introduced to the cask
@@ -17,13 +17,13 @@ cask 'sage' do
   end
 
   name 'Sage'
-  homepage 'http://www.sagemath.org/'
+  homepage 'https://www.sagemath.org/'
   license :gpl
 
   depends_on macos: '>= :lion'
   depends_on arch: :x86_64
 
-  if MacOS.release <= :yosemite
+  if MacOS.version <= :yosemite
     app "Sage-#{version}.app"
     binary "#{appdir}/Sage-#{version}.app/Contents/Resources/sage/sage"
   else

@@ -1,9 +1,9 @@
-homebrew-cask(1) - A friendly binary installer for macOS
+brew-cask(1) - a friendly binary installer for macOS
 ========================================================
 
 ## SYNOPSIS
 
-`brew cask` command [options] [<token> ...]
+`brew cask` command [options] [ <token> ... ]
 
 ## DESCRIPTION
 
@@ -19,7 +19,7 @@ names, and other aspects of this manual are still subject to change.
 
 ## FREQUENTLY USED COMMANDS
 
-  * `install [--force] [--skip-cask-deps]` <token> [ <token> ... ]:
+  * `install [--force] [--skip-cask-deps] [--require-sha]` <token> [ <token> ... ]:
     Install Cask identified by <token>.
 
   * `uninstall [--force]` <token> [ <token> ... ]:
@@ -69,10 +69,11 @@ names, and other aspects of this manual are still subject to change.
   * `info` or `abv` <token> [ <token> ... ]:
     Display information about the given Cask.
 
-  * `install [--force] [--skip-cask-deps]` <token> [ <token> ... ]:
+  * `install [--force] [--skip-cask-deps] [--require-sha]` <token> [ <token> ... ]:
     Install the given Cask. With `--force`, re-install even if the Cask
     appears to be already present. With `--skip-cask-deps`, skip any Cask
-    dependencies.
+    dependencies. `--require-sha` will abort installation if the Cask does not
+    have a checksum defined.
 
     <token> is usually the ID of a Cask as returned by `brew cask search`,
     but see [OTHER WAYS TO SPECIFY A CASK][] for variations.
@@ -146,6 +147,9 @@ in a future version.
   * `--skip-cask-deps`:
     Skip Cask dependencies when installing.
 
+  *  `--require-sha`:
+    Abort Cask installation if the Cask does not have a checksum defined.
+
   * `--caskroom=<path>`:
     Location of the Caskroom, where all binaries are stored. The default value is: `$(brew --repository)/Caskroom`.
 
@@ -190,9 +194,6 @@ in a future version.
 
   * `--no-binaries`:
     Do not link "helper" executables to `/usr/local/bin`.
-
-  * `--binarydir=<path>`:
-    Target location for "helper" executable links. The default value is `/usr/local/bin`.
 
   * `--debug`:
     Output debugging information of use to Cask authors and developers.

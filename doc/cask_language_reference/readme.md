@@ -40,21 +40,21 @@ Tests on the following values are known to be acceptable:
 
 | value                       | examples
 | ----------------------------|--------------------------------------
-| `MacOS.release`             | [macports.rb](https://github.com/caskroom/homebrew-cask/blob/9eae0af0daf9b55f81a3af010cca3b0b1272e2db/Casks/macports.rb#L4#L20), [coconutbattery.rb](https://github.com/caskroom/homebrew-cask/blob/2c801af44be29fff7f3cb2996455fce5dd95d1cc/Casks/coconutbattery.rb#L3#L17)
+| `MacOS.version`             | [macports.rb](https://github.com/caskroom/homebrew-cask/blob/9eae0af0daf9b55f81a3af010cca3b0b1272e2db/Casks/macports.rb#L4#L20), [coconutbattery.rb](https://github.com/caskroom/homebrew-cask/blob/2c801af44be29fff7f3cb2996455fce5dd95d1cc/Casks/coconutbattery.rb#L3#L17)
 | `Hardware::CPU.is_32_bit?`  | [vuescan.rb](https://github.com/caskroom/homebrew-cask/blob/655bfe48b41ae94cb81b1003182b8de5fa2995ef/Casks/vuescan.rb#L5#L9)
 | `Hardware::CPU.is_64_bit?`  | none, see [Always Fall Through to the Newest Case](#always-fall-through-to-the-newest-case)
 
 ### Version Comparisons
 
-Tests against `MacOS.release` may use either symbolic names or version
+Tests against `MacOS.version` may use either symbolic names or version
 strings with numeric comparison operators:
 
 ```ruby
-if MacOS.release <= :mavericks     # symbolic name
+if MacOS.version <= :mavericks     # symbolic name
 ```
 
 ```ruby
-if MacOS.release <= '10.9'         # version string
+if MacOS.version <= '10.9'         # version string
 ```
 
 The available symbols for macOS versions are: `:cheetah`, `:puma`, `:jaguar`, `:panther`, `:tiger`, `:leopard`, `:snow_leopard`, `:lion`, `:mountain_lion`, `:mavericks`, `:yosemite`, `:el_capitan`, and `:sierra`. The corresponding numeric version strings should given as major releases containing a single dot.
@@ -64,9 +64,9 @@ The available symbols for macOS versions are: `:cheetah`, `:puma`, `:jaguar`, `:
 Conditionals should be constructed so that the default is the newest OS version or hardware type. When using an `if` statement, test for older versions, and then let the `else` statement hold the latest and greatest. This makes it more likely that the Cask will work without alteration when a new OS is released. Example (from [coconutbattery.rb](https://github.com/caskroom/homebrew-cask/blob/2c801af44be29fff7f3cb2996455fce5dd95d1cc/Casks/coconutbattery.rb)):
 
 ```ruby
-if MacOS.release <= :tiger
+if MacOS.version <= :tiger
   # ...
-elsif MacOS.release <= :snow_leopard
+elsif MacOS.version <= :snow_leopard
   # ...
 else
   # ...
@@ -91,7 +91,7 @@ cask 'myapp' do
   license :unknown
 
   url "https://#{Utils.arbitrary_method}"
-  homepage 'http://www.example.com/'
+  homepage 'https://www.example.com/'
   ...
 end
 ```

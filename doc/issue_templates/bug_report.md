@@ -1,24 +1,27 @@
 Bug report:
-(Remember to run `brew update; brew cleanup; brew cask cleanup` before reporting your issue. It usually fixes things!)
+Remember to follow the [pre bug report](https://github.com/caskroom/homebrew-cask/blob/master/doc/reporting_bugs/pre_bug_report.md) guide beforehand. Failure to do so might get your issue closed.
 
-### Description of issue
+#### Description of issue
 
+[insert a detailed description of your issue here]
 
-
-### Output of `brew cask <command> --verbose`
-
-```
-(paste output here)
-```
-
-### Output of `brew doctor`
+<details><summary>Output of `brew cask <command> --verbose`</summary>
 
 ```
-(paste output here)
+[paste output here]
 ```
+</details>
 
-### Output of `brew cask doctor`
+<details><summary>Output of `brew doctor`</summary>
 
 ```
-(paste output here)
+[paste output here]
 ```
+</details>
+
+<details><summary>Output of `brew cask doctor`</summary>
+
+```
+[paste output here]
+```
+</details>

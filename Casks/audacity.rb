@@ -8,7 +8,7 @@ cask 'audacity' do
     # 'open-uri' is required to open that page and grab the temporary URL
     require 'open-uri'
     # fosshub.com/Audacity.html was verified as official when first introduced to the cask
-    open("http://www.fosshub.com/Audacity.html/audacity-macosx-ub-#{version}.dmg") do |io|
+    open("https://www.fosshub.com/Audacity.html/audacity-macosx-ub-#{version}.dmg") do |io|
       content = io.read
       %r{^\<iframe.*src=\"(http.*\.dmg)\".*>}.match(content)[1].to_s
     end
@@ -16,6 +16,8 @@ cask 'audacity' do
   name 'Audacity'
   homepage 'http://audacityteam.org'
   license :gpl
+
+  depends_on macos: '>= :snow_leopard'
 
   suite 'Audacity'
 

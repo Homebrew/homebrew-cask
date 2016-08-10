@@ -4,16 +4,17 @@ Making a new Cask is easy. Follow the directions in [Getting Set Up To Contribut
 
 ### Examples
 
-Here’s a Cask for `shuttle` as an example:
+Here’s a Cask for `shuttle` as an example. Note the comment above `url`, which is needed when [the url and homepage hostnames differ](../cask_language_reference/stanzas/url.md#when-url-and-homepage-hostnames-differ-add-a-comment)
 
 ```ruby
 cask 'shuttle' do
-  version '1.2.5'
-  sha256 '7df182f506b80011222c0cdd470be76e0376f38e331f3fafbb6af9add3578023'
+  version '1.2.6'
+  sha256 '7b54529cd00332e423839cf768b732ac6c42e17de9325d0a093764180deeb611'
 
+  # github.com/fitztrev/shuttle was verified as official when first introduced to the cask
   url "https://github.com/fitztrev/shuttle/releases/download/v#{version}/Shuttle.zip"
   appcast 'https://github.com/fitztrev/shuttle/releases.atom',
-          checkpoint: '9f66dbb98f73f69f4a1759d4bdb8d2552060d599548427740e239ca45185fe5c'
+          checkpoint: 'c3dea2ed479b3ebba7c56ace6040901795f6dc6be92f9ffc30cc808d31723f17'
   name 'Shuttle'
   homepage 'https://fitztrev.github.io/shuttle/'
   license :mit
@@ -24,23 +25,44 @@ cask 'shuttle' do
 end
 ```
 
-And here is one for `gateblu`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check` (necessary since the checksum will change when a new distribution is made available). This combination of `version :latest` and `sha256 :no_check` is currently the preferred mechanism when a versioned download URL is not available. Also note the comment above `url`, which is needed when [the url and homepage hostnames differ](../cask_language_reference/stanzas/url.md#when-url-and-homepage-hostnames-differ-add-a-comment):
+And here is one for `airstream`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check` (necessary since the checksum will change when a new distribution is made available). This combination of `version :latest` and `sha256 :no_check` is currently the preferred mechanism when a versioned download URL is not available.
 
 ```ruby
-cask 'gateblu' do
+cask 'airstream' do
   version :latest
   sha256 :no_check
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url 'https://s3-us-west-2.amazonaws.com/gateblu/gateblu-ui/latest/Gateblu.dmg'
-  name 'Gateblu'
-  homepage 'https://gateblu.octoblu.com'
-  license :mit
+  # amazonaws.com/airstream-clients was verified as official when first introduced to the cask
+  url 'https://s3-us-west-2.amazonaws.com/airstream-clients/mac/airstream-mac.dmg'
+  name 'AirStream'
+  homepage 'http://airstream.io/download/'
+  license :gratis
 
-  pkg 'Gateblu Installer.pkg'
+  app 'AirStream.app'
 
-  uninstall pkgutil: 'com.octoblu.*',
-            delete: '/Applications/Gateblu.app'
+  caveats do
+    depends_on_java('6')
+  end
+end
+```
+
+Here is a last example for `airdisplay`, which uses a `pkg` installer to install the application instead of a stand-alone application bundle (`.app`). Note the [`uninstall pkgutil` stanza](../cask_language_reference/stanzas/uninstall.md#uninstall-key-pkgutil), which is needed to uninstall all files which were installed using the installer.
+
+```ruby
+cask 'airdisplay' do
+  version '3.0.3'
+  sha256 'db84a66fe3522929a0afa58a4fe0189977baded89df0035ead1ccd334f7b8126'
+
+  url "https://www.avatron.com/updates/software/airdisplay/ad#{version.no_dots}.zip"
+  appcast 'https://avatron.com/updates/software/airdisplay/appcast.xml',
+          checkpoint: '938bdb9fbee793dce92818366cb2c19ba84c5b0cd6853fd893897d4a40689bc2'
+  name 'Air Display'
+  homepage 'https://avatron.com/apps/air-display/'
+  license :commercial
+
+  pkg 'Air Display Installer.pkg'
+
+  uninstall pkgutil: 'com.avatron.pkg.AirDisplay'
 end
 ```
 
@@ -272,7 +294,7 @@ If you are using [GitHub two-factor authentication](https://help.github.com/arti
 
 ### Squashing
 
-If your pull request has multiple commits which revise the same lines of code, or if you make some changes after comments from one of the maintainers, it is better to [squash](http://davidwalsh.name/squash-commits-git) those commits together into one logical unit.
+If your pull request has multiple commits which revise the same lines of code, or if you make some changes after comments from one of the maintainers, it is better to [squash](https://davidwalsh.name/squash-commits-git) those commits together into one logical unit.
 
 But you don’t always have to squash — it is fine for a pull request to contain multiple commits when there is a logical reason for the separation.
 

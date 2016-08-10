@@ -2,6 +2,7 @@ cask 'flymaster-designer' do
   version :latest
   sha256 :no_check
 
+  # flymaster.net was verified as official when first introduced to the cask
   url 'http://downloads.flymaster.net/FmDesigner.dmg'
   name 'Flymaster Designer'
   name 'B2designer'

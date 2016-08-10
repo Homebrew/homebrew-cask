@@ -1,14 +1,14 @@
-require 'test_helper'
+require "test_helper"
 
 describe Hbc::Pkg do
-  describe 'uninstall' do
-    it 'removes files and dirs referenced by the pkg' do
-      pkg = Hbc::Pkg.new('my.fake.pkg', Hbc::NeverSudoSystemCommand)
+  describe "uninstall" do
+    it "removes files and dirs referenced by the pkg" do
+      pkg = Hbc::Pkg.new("my.fake.pkg", Hbc::NeverSudoSystemCommand)
 
-      some_files = Array.new(3) { Pathname(Tempfile.new('testfile').path) }
+      some_files = Array.new(3) { Pathname(Tempfile.new("testfile").path) }
       pkg.stubs(:pkgutil_bom_files).returns some_files
 
-      some_specials = Array.new(3) { Pathname(Tempfile.new('testfile').path) }
+      some_specials = Array.new(3) { Pathname(Tempfile.new("testfile").path) }
       pkg.stubs(:pkgutil_bom_specials).returns some_specials
 
       some_dirs = Array.new(3) { Pathname(Dir.mktmpdir) }
@@ -18,38 +18,43 @@ describe Hbc::Pkg do
 
       pkg.uninstall
 
-      some_files.each { |file| file.wont_be :exist? }
-      some_dirs.each  { |dir| dir.wont_be :exist? }
+      some_files.each do |file|
+        file.wont_be :exist?
+      end
+
+      some_dirs.each do |dir|
+        dir.wont_be :exist?
+      end
     end
 
-    it 'forgets the pkg' do
-      pkg = Hbc::Pkg.new('my.fake.pkg', Hbc::FakeSystemCommand)
+    it "forgets the pkg" do
+      pkg = Hbc::Pkg.new("my.fake.pkg", Hbc::FakeSystemCommand)
 
       Hbc::FakeSystemCommand.stubs_command(
-        ['/usr/sbin/pkgutil', '--only-files', '--files', 'my.fake.pkg']
+        ["/usr/sbin/pkgutil", "--only-files", "--files", "my.fake.pkg"]
       )
       Hbc::FakeSystemCommand.stubs_command(
-        ['/usr/sbin/pkgutil', '--only-dirs', '--files', 'my.fake.pkg']
-                                            )
+        ["/usr/sbin/pkgutil", "--only-dirs", "--files", "my.fake.pkg"]
+      )
       Hbc::FakeSystemCommand.stubs_command(
-        ['/usr/sbin/pkgutil',                '--files', 'my.fake.pkg']
+        ["/usr/sbin/pkgutil",                "--files", "my.fake.pkg"]
       )
 
       Hbc::FakeSystemCommand.expects_command(
-        ['/usr/bin/sudo', '-E', '--', '/usr/sbin/pkgutil', '--forget', 'my.fake.pkg']
+        ["/usr/bin/sudo", "-E", "--", "/usr/sbin/pkgutil", "--forget", "my.fake.pkg"]
       )
 
       pkg.uninstall
     end
 
-    it 'cleans broken symlinks, but leaves AOK symlinks' do
-      pkg = Hbc::Pkg.new('my.fake.pkg', Hbc::NeverSudoSystemCommand)
+    it "cleans broken symlinks, but leaves AOK symlinks" do
+      pkg = Hbc::Pkg.new("my.fake.pkg", Hbc::NeverSudoSystemCommand)
 
       fake_dir  = Pathname(Dir.mktmpdir)
-      fake_file = fake_dir.join('ima_file').tap { |path| FileUtils.touch(path) }
+      fake_file = fake_dir.join("ima_file").tap { |path| FileUtils.touch(path) }
 
-      intact_symlink = fake_dir.join('intact_symlink').tap { |path| path.make_symlink(fake_file) }
-      broken_symlink = fake_dir.join('broken_symlink').tap { |path| path.make_symlink('im_nota_file') }
+      intact_symlink = fake_dir.join("intact_symlink").tap { |path| path.make_symlink(fake_file) }
+      broken_symlink = fake_dir.join("broken_symlink").tap { |path| path.make_symlink("im_nota_file") }
 
       pkg.stubs(:pkgutil_bom_specials).returns([])
       pkg.stubs(:pkgutil_bom_files).returns([])
@@ -63,15 +68,14 @@ describe Hbc::Pkg do
       fake_dir.must_be :exist?
     end
 
-    it 'snags permissions on ornery dirs, but returns them afterwords' do
-      pkg = Hbc::Pkg.new('my.fake.pkg', Hbc::NeverSudoSystemCommand)
+    it "snags permissions on ornery dirs, but returns them afterwords" do
+      pkg = Hbc::Pkg.new("my.fake.pkg", Hbc::NeverSudoSystemCommand)
 
-      fake_dir  = Pathname(Dir.mktmpdir)
+      fake_dir = Pathname(Dir.mktmpdir)
 
-      fake_file = fake_dir.join('ima_installed_file').tap { |path| FileUtils.touch(path) }
-      other_file = fake_dir.join('ima_other_file').tap { |path| FileUtils.touch(path) }
+      fake_file = fake_dir.join("ima_installed_file").tap { |path| FileUtils.touch(path) }
 
-      fake_dir.chmod(0000)
+      fake_dir.chmod(0o000)
 
       pkg.stubs(:pkgutil_bom_specials).returns([])
       pkg.stubs(:pkgutil_bom_files).returns([fake_file])
@@ -84,7 +88,7 @@ describe Hbc::Pkg do
 
       fake_dir.must_be :directory?
       fake_file.wont_be :file?
-      (fake_dir.stat.mode % 01000).to_s(8).must_equal '0'
+      (fake_dir.stat.mode % 0o1000).to_s(8).must_equal "0"
     end
   end
 end

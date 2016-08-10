@@ -1,10 +1,10 @@
 cask 'activity-audit' do
   version '1.1.6'
-  sha256 '8c07687c52136923971ffa9a08f6597a2edf0d3a34c9cfd003ebbf98b30c3816'
+  sha256 '05ac32f70da4ecdf975b3b68507b937ba55a766c42d887367117ddad6e41b797'
 
-  url "https://www.dssw.co.uk/activityaudit/dsswactivityaudit-#{version.delete('.')}.dmg"
+  url "https://www.dssw.co.uk/activityaudit/dsswactivityaudit-#{version.no_dots}.dmg"
   appcast 'https://version.dssw.co.uk/activityaudit/standard',
-          checkpoint: '79f1a8f177c3f2bf00d051091eb742a420c2ab26729456bb3c7f6b51ec51e78e'
+          checkpoint: 'b6f660015d4a8782fd78dfb75afb6242fc4c217d8c2e2954688f8e8c12263bf6'
   name 'Activity Audit'
   homepage 'https://www.dssw.co.uk/activityaudit'
   license :commercial

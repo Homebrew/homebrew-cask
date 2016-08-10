@@ -1,8 +1,8 @@
 cask 'anonvpn' do
-  version '1.0.4.2'
-  sha256 '0be4919705d08833a6246fa9f78dbe6d90d59981dec729370dbb6cfed5d1f476'
+  version '1.0.5.5'
+  sha256 '76dfb3f3f62eb6a0739b1d4350ee20bcbd81fca5821fdaf35cfd57b3032817e2'
 
-  url "https://anonvpn.io/updater/AnonVPN-MacOSX-10.5-#{version}.dmg"
+  url "https://anonvpn.io/updater/AnonVPN-MacOSX-10.7-#{version}.dmg"
   name 'AnonVPN'
   homepage 'https://anonvpn.io/'
   license :gratis

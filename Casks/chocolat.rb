@@ -1,10 +1,10 @@
 cask 'chocolat' do
-  version '3.3'
-  sha256 'cdf2465147220ae6ffb1fc91b7581b1aa4b586142fa52c4b772bf680eb8e71e9'
+  version '3.3.1'
+  sha256 '810b34ac39818031418e9273272d6e1b00d284498599a92ec543bcf5f9b925ef'
 
   url "https://chocolatapp.com/versions/Chocolat_#{version}.zip"
   appcast 'https://chocolatapp.com/userspace/appcast/appcast_alpha.php',
-          checkpoint: '3d421c2343a71085e9e25d1fd77fef4df96fccbf77c678ad1c01db0003d9e8d9'
+          checkpoint: 'd3b552c92eb4b46f0ff609f207e62251f857ccf2ba2b3aee8c358599c1f1a855'
   name 'Chocolat'
   homepage 'https://chocolatapp.com/'
   license :commercial

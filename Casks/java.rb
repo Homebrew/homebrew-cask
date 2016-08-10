@@ -1,6 +1,6 @@
 cask 'java' do
-  version '1.8.0_92-b14'
-  sha256 '626c2d9478d07318e9e6b2c38707f73aeafc0f7a9ede575062749346a7d347ca'
+  version '1.8.0_102-b14'
+  sha256 '9f53b71af203502da4ff416b5ab1a217a655006786bcbb8f8d8ad501debda748'
 
   url "http://download.oracle.com/otn-pub/java/jdk/#{version.sub(%r{^\d+\.(\d+).*?_(.*)$}, '\1u\2')}/jdk-#{version.sub(%r{^\d+\.(\d+).*?_(\d+)-.*$}, '\1u\2')}-macosx-x64.dmg",
       cookies: {
@@ -27,7 +27,7 @@ cask 'java' do
            '/bin/mkdir', '-p', '--', "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents/Home/bundle/Libraries"
     system '/usr/bin/sudo', '-E', '--',
            '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents/Home/jre/lib/server/libjvm.dylib", "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents/Home/bundle/Libraries/libserver.dylib"
-    if MacOS.release <= :mavericks
+    if MacOS.version <= :mavericks
       system '/usr/bin/sudo', '-E', '--',
              '/bin/rm', '-rf', '--', '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
       system '/usr/bin/sudo', '-E', '--',
@@ -52,7 +52,7 @@ cask 'java' do
                          "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents",
                          '/Library/PreferencePanes/JavaControlPanel.prefPane',
                          '/Library/Java/Home',
-                         if MacOS.release <= :mavericks
+                         if MacOS.version <= :mavericks
                            [
                              '/usr/lib/java/libjdns_sd.jnilib',
                              '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK',
