@@ -4,7 +4,7 @@ cask 'chatwork' do
 
   url 'http://desktop-app.chatwork.com/installer/ChatWork-darwin-setup.zip'
   name 'ChatWork'
-  homepage 'http://www.chatwork.com'
+  homepage 'https://www.chatwork.com/'
   license :closed
 
   auto_updates true

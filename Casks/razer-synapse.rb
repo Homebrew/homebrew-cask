@@ -4,7 +4,7 @@ cask 'razer-synapse' do
 
   url "http://dl.razerzone.com/drivers/Synapse2/mac/Razer_Synapse_Mac_Driver_v#{version}.dmg"
   name 'Razer Synapse'
-  homepage 'http://www.razerzone.com/synapse/'
+  homepage 'https://www.razerzone.com/synapse/'
   license :gratis
 
   depends_on macos: '>= :lion'

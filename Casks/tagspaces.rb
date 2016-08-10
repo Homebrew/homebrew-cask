@@ -7,7 +7,7 @@ cask 'tagspaces' do
   appcast 'https://github.com/tagspaces/tagspaces/releases.atom',
           checkpoint: '933c2a514b6a87d2ebf01e7cf730c6396ab0d681663f34501ff87e85706b4869'
   name 'TagSpaces'
-  homepage 'http://www.tagspaces.org'
+  homepage 'https://www.tagspaces.org/'
   license :affero
 
   app 'TagSpaces.app'

@@ -4,7 +4,7 @@ cask 'navicat-for-sqlite' do
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_sqlite_en.dmg"
   name 'Navicat for SQLite'
-  homepage 'http://www.navicat.com/products/navicat-for-sqlite'
+  homepage 'https://www.navicat.com/products/navicat-for-sqlite'
   license :commercial
 
   app 'Navicat for SQLite.app'

@@ -5,7 +5,7 @@ cask 'dmmbookviewer' do
   # dmm.co.jp was verified as official when first introduced to the cask
   url "http://dl.aka.dmm.co.jp/dmmviewer/mac/DMMViewerSetup_Mac_#{version}.pkg"
   name 'DMMbookviewer'
-  homepage 'http://book.dmm.com/info_bookviewer.html'
+  homepage 'https://book.dmm.com/info_bookviewer.html'
   license :gratis
 
   pkg "DMMViewerSetup_Mac_#{version}.pkg"

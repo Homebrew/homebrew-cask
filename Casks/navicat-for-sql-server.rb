@@ -4,7 +4,7 @@ cask 'navicat-for-sql-server' do
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_sqlserver_en.dmg"
   name 'Navicat for SQL Server'
-  homepage 'http://www.navicat.com/products/navicat-for-sqlserver'
+  homepage 'https://www.navicat.com/products/navicat-for-sqlserver'
   license :commercial
 
   app 'Navicat For SQL Server.app'

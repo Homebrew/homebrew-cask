@@ -5,7 +5,7 @@ cask 'feed-the-beast' do
   # ftb.cursecdn.com was verified as official when first introduced to the cask
   url 'http://ftb.cursecdn.com/FTB2/launcher/FTB_Launcher.zip'
   name 'Feed the Beast'
-  homepage 'http://www.feed-the-beast.com/'
+  homepage 'https://www.feed-the-beast.com/'
   license :apache
 
   auto_updates true
