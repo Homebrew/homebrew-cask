@@ -1,11 +1,11 @@
 cask 'devonthink' do
-  version '2.9.1'
-  sha256 '466173a23136d03d6ba82284823b1eb5edd23f77d8a77cf85917f0791c157bda'
+  version '2.9.2'
+  sha256 '94b9e3110b8dd44a6bfc2a33074c3e05a31ba7b0203511847d27b9de2f1b3e8f'
 
   # amazonaws.com/DTWebsiteSupport was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/#{version}/DEVONthink_Personal.app.zip"
   appcast 'http://www.devon-technologies.com/fileadmin/templates/filemaker/sparkle.php?product=217255&format=xml',
-          checkpoint: 'cc69552454cb48c939c0fff0d3f82b77ce9686cdb2d6d9cc8fcf7467d8bce88b'
+          checkpoint: '06404a96bcd79f0967a3d6b7f598649fa5ed14a2829658940e22cd0787d89710'
   name 'DEVONthink Personal'
   homepage 'http://www.devontechnologies.com/products/devonthink/devonthink-personal.html'
   license :commercial
