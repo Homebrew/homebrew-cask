@@ -1,10 +1,10 @@
 cask 'sts' do
-  version '3.7.3.RELEASE'
-  sha256 'c64a6308f1ae75ba9bddc6b298e02673207a9b1d8f6df2bf6d2f8532b47f29e7'
+  version '3.8.1.RELEASE'
+  sha256 'e54ca0ea1c1348789629b32b0b2ab9bb9c181606449fdc5b023a36919d6df8e7'
 
   module Utils
     def self.eclipse_version
-      '4.5.2' # find eclipse version at http://spring.io/tools/sts/all
+      '4.6' # find eclipse version at http://spring.io/tools/sts/all
     end
 
     def self.eclipse_version_major_minor

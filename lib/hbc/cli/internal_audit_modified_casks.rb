@@ -76,6 +76,13 @@ class Hbc::CLI::InternalAuditModifiedCasks < Hbc::CLI::InternalUseBase
     @modified_cask_files = out.split("\n")
   end
 
+  def added_cask_files
+    return @added_cask_files if defined? @added_cask_files
+    out = git(*%w[diff --name-only --diff-filter=A], commit_range,
+              "--", "#{cask_dir}/*.rb")
+    @added_cask_files = out.split("\n")
+  end
+
   def modified_casks
     return @modified_casks if defined? @modified_casks
     @modified_casks = modified_cask_files.map { |f| Hbc.load(f) }
@@ -89,7 +96,9 @@ class Hbc::CLI::InternalAuditModifiedCasks < Hbc::CLI::InternalUseBase
 
   def audit(cask, cask_file)
     audit_download = audit_download?(cask, cask_file)
-    success = Hbc::Auditor.audit(cask, audit_download: audit_download)
+    check_token_conflicts = added_cask_files.include?(cask_file)
+    success = Hbc::Auditor.audit(cask, audit_download:        audit_download,
+                                       check_token_conflicts: check_token_conflicts)
     failed_casks << cask unless success
   end
 

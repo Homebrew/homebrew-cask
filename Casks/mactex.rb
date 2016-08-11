@@ -4,7 +4,7 @@ cask 'mactex' do
 
   # mirror.ctan.org/systems/mac/mactex was verified as official when first introduced to the cask
   url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version}.pkg"
-  appcast 'http://www.tug.org/mactex/downloading.html',
+  appcast 'https://www.tug.org/mactex/downloading.html',
           checkpoint: '14b52a4b06fa7259d2665c2a26f41dde0ee15fb61cb9b69c707ad916e9dd8073'
   name 'MacTeX'
   homepage 'https://www.tug.org/mactex/'

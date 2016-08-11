@@ -1,10 +1,10 @@
 cask 'ukelele' do
-  version '3.0.4'
-  sha256 '4a6c53aee7fb6bab4d497a56c6d84e4bbe3dff3b1107380efd5a9a1ada2ebe0d'
+  version '3.0.5'
+  sha256 'c44148785ba2b3241e1cf036f04f2e2240acd841ee75243aef74913802fd9c31'
 
   url "https://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Ukelele_#{version}&filename=Ukelele_#{version}.dmg"
   appcast 'https://dl.dropboxusercontent.com/u/60565698/Ukelele/Ukelele_appcast.xml',
-          checkpoint: '3dae9e233ecbd20e59e99a93abbf71ccb2660f2d6a330eacf708d598ea395810'
+          checkpoint: 'c3d1e33c9f14f850abbcfcba7f0ce13d5ecede09d62c78f9406c43d7294a624a'
   name 'Ukelele'
   homepage 'https://scripts.sil.org/ukelele'
   license :gratis

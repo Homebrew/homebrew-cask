@@ -1,6 +1,6 @@
 cask 'navicat-premium' do
-  version '11.2.11'
-  sha256 '736083bb1cc4f44cf0cdd7fcc18bf72de6c9067bbe28a22e90501f0f9c257380'
+  version '11.2.13'
+  sha256 '2c345c631fc1f84cded670f0accad3ad2553959eff0c628e454ad84add06be48'
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_premium_en.dmg"
   name 'Navicat Premium'

@@ -1,10 +1,10 @@
 cask 'resolutionator' do
-  version '1.0.3'
-  sha256 'fd94d101e41c135be4563d7500ba851e79deed5f288f2e8659876ac5d6afbd5c'
+  version '1.1'
+  sha256 'bb3fe019be566f2b194afe8233d2c96becd3c803f1741577511a70e848250562'
 
   url 'https://manytricks.com/download/resolutionator'
   appcast 'https://manytricks.com/resolutionator/appcast.xml',
-          checkpoint: 'bac0c680fdbe621215de014bfe7533d9bb87a8550743e2a9a75a004cf6ea362d'
+          checkpoint: '65a6bf2d102c806c0021f5f175d4ce2ad79d577784c0bd42414eb0da40f17e90'
   name 'Resolutionator'
   homepage 'https://manytricks.com/resolutionator/'
   license :gratis
