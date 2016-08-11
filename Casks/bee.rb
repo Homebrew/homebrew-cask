@@ -4,7 +4,7 @@ cask 'bee' do
 
   # bee-app.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://bee-app.s3.amazonaws.com/public/Bee-#{version}.zip"
-  appcast 'http://www.neat.io/appcasts/bee-appcast.xml',
+  appcast 'https://s3.amazonaws.com/www.neat.io/appcasts/bee-appcast.xml',
           checkpoint: '6eb1d6e34661cdf43abf831f59d615f0b95ff25ab390544fb49b8bdd3ad80d8a'
   name 'Bee'
   homepage 'http://neat.io/bee/'
