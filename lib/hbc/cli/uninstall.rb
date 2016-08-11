@@ -25,9 +25,11 @@ class Hbc::CLI::Uninstall < Hbc::CLI::Base
 
       next if (versions = cask.versions).empty?
 
+      single = versions.count == 1
+
       puts <<-EOF.undent
-        #{cask_token} #{versions.join(', ')} #{versions.count == 1 ? 'is' : 'are'} still installed.
-        Remove them all with `brew cask uninstall --force #{cask_token}`.
+        #{cask_token} #{versions.join(', ')} #{single ? 'is' : 'are'} still installed.
+        Remove #{single ? 'it' : 'them all'} with `brew cask uninstall --force #{cask_token}`.
       EOF
     end
   end

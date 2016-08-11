@@ -53,7 +53,7 @@ describe Hbc::CLI::Uninstall do
     }
     let(:caskroom_path) { Hbc.caskroom.join(token).tap(&:mkpath) }
 
-    before do
+    before(:each) do
       timestamped_versions.each do |timestamped_version|
         caskroom_path.join(".metadata", *timestamped_version, "Casks").tap(&:mkpath)
                      .join("#{token}.rb").open("w") do |caskfile|
@@ -67,7 +67,7 @@ describe Hbc::CLI::Uninstall do
       end
     end
 
-    after do
+    after(:each) do
       caskroom_path.rmtree if caskroom_path.exist?
     end
 
@@ -86,6 +86,15 @@ describe Hbc::CLI::Uninstall do
 
       caskroom_path.join(first_installed_version).wont_be :exist?
       caskroom_path.wont_be :exist?
+    end
+
+    it "displays a message when versions remain installed" do
+      out, err = capture_io do
+        Hbc::CLI::Uninstall.run("versioned-cask")
+      end
+
+      out.must_match(%r{#{token} #{first_installed_version} is still installed.})
+      err.must_be :empty?
     end
   end
 
