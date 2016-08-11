@@ -1,10 +1,10 @@
 cask 'rowmote-helper' do
-  version '4.1.5'
-  sha256 'a9fb0fbc0adf90ff45a095f3d097910cc4d990105a960a6d1c567fde519b14e9'
+  version '4.1.6'
+  sha256 '461cbe6a8d851f9d7a085868225bad6d096c32bddd85cc79f0adfb61e6b8552c'
 
   url "http://regularrateandrhythm.com/rowmote-pro/rh/rowmote-helper-#{version}.zip"
   appcast 'http://www.regularrateandrhythm.com/apps/rowmote-pro/rowmote-appcast.xml',
-          checkpoint: '329a44fb6a09bb2ef82d924fe586feaad2ed39b25af9c89f7945a97576d90a45'
+          checkpoint: 'b8e661694eed0cfc37a4030042551e881646571d1c0e17a73ceb0c7375abd15d'
   name 'Rowmote Helper'
   homepage 'http://regularrateandrhythm.com/apps/rowmote-pro/'
   license :commercial
