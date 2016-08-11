@@ -21,3 +21,5 @@ if must_run_tests; then
   run brew cask-tests --coverage
   run bundle exec rake coveralls:push || true # in case of networking errors
 fi
+
+run brew cask audit Casks/*.rb
