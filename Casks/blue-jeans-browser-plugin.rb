@@ -7,7 +7,7 @@ cask 'blue-jeans-browser-plugin' do
   homepage 'http://bluejeans.com/'
   license :gratis
 
-  container type: :xar,
+  container type:   :xar,
             nested: 'Scripts'
 
   internet_plugin "rbjninstallplugin_#{version}.plugin"

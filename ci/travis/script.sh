@@ -23,3 +23,4 @@ if must_run_tests; then
 fi
 
 run brew cask audit Casks/*.rb
+run brew cask style Casks/*.rb
