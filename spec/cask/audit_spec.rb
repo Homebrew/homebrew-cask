@@ -6,8 +6,13 @@ describe Hbc::Audit do
 
   let(:cask) { instance_double(Hbc::Cask) }
   let(:download) { false }
+  let(:check_token_conflicts) { false }
   let(:fake_system_command) { class_double(Hbc::SystemCommand) }
-  let(:audit) { Hbc::Audit.new(cask, download, fake_system_command) }
+  let(:audit) {
+    Hbc::Audit.new(cask, download:              download,
+                         check_token_conflicts: check_token_conflicts,
+                         command:               fake_system_command)
+  }
 
   describe "#result" do
     subject { audit.result }
@@ -260,6 +265,25 @@ describe Hbc::Audit do
             expect(subject).to fail_with(%r{Boom})
           end
         end
+      end
+    end
+
+    describe "token conflicts" do
+      let(:cask_token) { "with-binary" }
+      let(:check_token_conflicts) { true }
+
+      before do
+        expect(audit).to receive(:core_formula_names).and_return(formula_names)
+      end
+
+      context "when cask token conflicts with a core formula" do
+        let(:formula_names) { %w[with-binary other-formula] }
+        it { should warn_with(%r{possible duplicate}) }
+      end
+
+      context "when cask token does not conflict with a core formula" do
+        let(:formula_names) { %w[other-formula] }
+        it { should_not warn_with(%r{possible duplicate}) }
       end
     end
 

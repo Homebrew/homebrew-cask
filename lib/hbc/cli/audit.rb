@@ -22,11 +22,16 @@ class Hbc::CLI::Audit < Hbc::CLI::Base
 
   def audit(cask)
     odebug "Auditing Cask #{cask}"
-    @auditor.audit(cask, audit_download: audit_download?)
+    @auditor.audit(cask, audit_download:        audit_download?,
+                         check_token_conflicts: check_token_conflicts?)
   end
 
   def audit_download?
     @args.include?("--download")
+  end
+
+  def check_token_conflicts?
+    @args.include?("--token-conflicts")
   end
 
   def casks_to_audit
@@ -38,7 +43,7 @@ class Hbc::CLI::Audit < Hbc::CLI::Base
   end
 
   def cask_tokens
-    @cask_tokens ||= @args.reject { |a| a == "--download" }
+    @cask_tokens ||= self.class.cask_tokens_from(@args)
   end
 
   def self.needs_init?
