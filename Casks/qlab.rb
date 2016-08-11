@@ -1,10 +1,10 @@
 cask 'qlab' do
-  version '3.1.22'
-  sha256 '971e0d1b420168edd010fa235ff64f042bd482938dd5a3a6c512fc3aab340bc2'
+  version '3.1.23'
+  sha256 'bcea4d310f18895fbd94e902833cd2cbdc887d47f063214be568f8ca19d48120'
 
   url "https://figure53.com/qlab/downloads/QLab-#{version}.zip"
   appcast "https://figure53.com/qlab/downloads/appcast-v#{version.major}.php",
-          checkpoint: 'f5a48cafbcf623938901bb7e4adb43679557c252353992d66b54b884ca0bee6b'
+          checkpoint: 'dbdc85c3ec06dac60a1746c3cafb8c49d635fa24b21308c28ccb86b242b38f40'
   name 'QLab'
   homepage 'https://figure53.com/qlab/'
   license :commercial
