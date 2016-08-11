@@ -4,7 +4,7 @@ cask 'audio-notetaker' do
 
   url 'http://link.sonocent.com/AudioNotetaker/Mac/Download'
   name 'Audio Notetaker'
-  homepage 'http://www.sonocent.com/en/the_software/audio_notetaker'
+  homepage 'https://www.sonocent.com/en/the_software/audio_notetaker'
   license :commercial
 
   app 'Audio Notetaker.app'

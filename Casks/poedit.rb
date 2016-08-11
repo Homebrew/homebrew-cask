@@ -14,7 +14,7 @@ cask 'poedit' do
   end
 
   name 'Poedit'
-  homepage 'http://www.poedit.net'
+  homepage 'https://www.poedit.net/'
   license :mit
 
   app 'Poedit.app'

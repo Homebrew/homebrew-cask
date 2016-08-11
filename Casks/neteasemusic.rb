@@ -6,7 +6,7 @@ cask 'neteasemusic' do
   url "http://s1.music.126.net/download/osx/NeteaseMusic_#{version}_web.dmg"
   name 'NetEase cloud music'
   name '网易云音乐'
-  homepage 'http://music.163.com/#/download'
+  homepage 'https://music.163.com/#/download'
   license :gratis
 
   app 'NeteaseMusic.app'

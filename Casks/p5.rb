@@ -8,7 +8,7 @@ cask 'p5' do
   appcast 'https://github.com/processing/p5.js-editor/releases.atom',
           checkpoint: '06236c5ce5c6731b52368f4d7263eff97624f9c102781805daa202a7f3b46a94'
   name 'p5.js Editor'
-  homepage 'http://p5js.org/download/#editor'
+  homepage 'https://p5js.org/download/#editor'
   license :mit
 
   app 'p5.app'

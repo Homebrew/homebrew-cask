@@ -7,7 +7,7 @@ cask 'airtool' do
   appcast 'https://www.adriangranados.com/appcasts/airtoolcast.xml',
           checkpoint: '1250c87edc26c5cc7de6e290f82711c256ce786dc84c6774fd69be7b37fa8d33'
   name 'Airtool'
-  homepage 'http://www.adriangranados.com/apps/airtool'
+  homepage 'https://www.adriangranados.com/apps/airtool'
   license :gratis
 
   pkg "airtool_#{version}.pkg"

@@ -7,7 +7,7 @@ cask 'subsmarine' do
   appcast 'https://www.cocoawithchurros.com/shine/appcast.php?id=7',
           checkpoint: '3f99aeebb0ac8611031f46340560ecf733977801f85d3d663ad2e812b3846701'
   name 'SubsMarine'
-  homepage 'http://www.cocoawithchurros.com/subsmarine.php'
+  homepage 'https://www.cocoawithchurros.com/subsmarine.php'
   license :commercial
 
   app 'SubsMarine.app'

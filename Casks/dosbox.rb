@@ -7,7 +7,7 @@ cask 'dosbox' do
   appcast 'https://sourceforge.net/projects/dosbox/rss?path=/dosbox',
           checkpoint: '929b955f2dc9eee4862c52b43d2d188232028bc8878f89ad1b7ad8a790dc3ba1'
   name 'DOSBox'
-  homepage 'http://www.dosbox.com'
+  homepage 'https://www.dosbox.com/'
   license :gpl
 
   app 'DOSBox.app'

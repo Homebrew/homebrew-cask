@@ -4,7 +4,7 @@ cask 'callnote-premium' do
 
   url "http://callnote.kandasoft.com/callnote-premium-install-#{version}.pkg"
   name 'Callnote Premium'
-  homepage 'http://www.kandasoft.com/home/kanda-apps/skype-call-recorder.html'
+  homepage 'https://www.kandasoft.com/home/kanda-apps/skype-call-recorder.html'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "callnote-premium-install-#{version}.pkg", allow_untrusted: true

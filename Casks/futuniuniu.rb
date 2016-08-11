@@ -5,7 +5,7 @@ cask 'futuniuniu' do
   url "https://www.futu5.com/client/nn/mac/FTNNForMac_#{version}.dmg"
   name 'FutuNiuniu'
   name '富途牛牛'
-  homepage 'http://www.futu5.com'
+  homepage 'https://www.futu5.com/'
   license :commercial
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
