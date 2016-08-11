@@ -7,10 +7,15 @@ class Hbc::Audit
 
   attr_reader :cask, :download
 
-  def initialize(cask, download = false, command = Hbc::SystemCommand)
+  def initialize(cask, download: false, check_token_conflicts: false, command: Hbc::SystemCommand)
     @cask = cask
     @download = download
+    @check_token_conflicts = check_token_conflicts
     @command = command
+  end
+
+  def check_token_conflicts?
+    @check_token_conflicts
   end
 
   def run!
@@ -20,6 +25,7 @@ class Hbc::Audit
     check_appcast
     check_url
     check_generic_artifacts
+    check_token_conflicts
     check_download
     self
   rescue StandardError => e
@@ -179,6 +185,24 @@ class Hbc::Audit
       end
       add_error "target must be absolute path for generic artifact #{source}" unless Pathname.new(target_hash[:target]).absolute?
     end
+  end
+
+  def check_token_conflicts
+    return unless check_token_conflicts?
+    return unless core_formula_names.include?(cask.token)
+    add_warning "possible duplicate, cask token conflicts with Homebrew core formula: #{core_formula_url}"
+  end
+
+  def core_tap
+    @core_tap ||= CoreTap.instance
+  end
+
+  def core_formula_names
+    core_tap.formula_names
+  end
+
+  def core_formula_url
+    "#{core_tap.default_remote}/blob/master/Formula/#{cask.token}.rb"
   end
 
   def check_download
