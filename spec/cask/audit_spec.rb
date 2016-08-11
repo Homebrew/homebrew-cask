@@ -8,9 +8,11 @@ describe Hbc::Audit do
   let(:download) { false }
   let(:check_token_conflicts) { false }
   let(:fake_system_command) { class_double(Hbc::SystemCommand) }
-  let(:audit) { Hbc::Audit.new(cask, download: download,
-                                     check_token_conflicts: check_token_conflicts,
-                                     command: fake_system_command) }
+  let(:audit) {
+    Hbc::Audit.new(cask, download:              download,
+                         check_token_conflicts: check_token_conflicts,
+                         command:               fake_system_command)
+  }
 
   describe "#result" do
     subject { audit.result }

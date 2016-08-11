@@ -97,7 +97,7 @@ class Hbc::CLI::InternalAuditModifiedCasks < Hbc::CLI::InternalUseBase
   def audit(cask, cask_file)
     audit_download = audit_download?(cask, cask_file)
     check_token_conflicts = added_cask_files.include?(cask_file)
-    success = Hbc::Auditor.audit(cask, audit_download: audit_download,
+    success = Hbc::Auditor.audit(cask, audit_download:        audit_download,
                                        check_token_conflicts: check_token_conflicts)
     failed_casks << cask unless success
   end
