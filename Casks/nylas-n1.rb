@@ -1,11 +1,11 @@
 cask 'nylas-n1' do
-  version '0.4.45-7637265'
-  sha256 '550867275f1b72256989409ea9ef2fcfbb1eb4aa920b91b1cd0283a6bd0e173f'
+  version '0.4.47-3a2a94c'
+  sha256 '8bfba97c33cf1728b13e0a3f892acd9e2a2ba9618d29782b66f97e6ca276f11e'
 
   # edgehill.s3-us-west-2.amazonaws.com was verified as official when first introduced to the cask
   url "https://edgehill.s3-us-west-2.amazonaws.com/#{version}/darwin/x64/N1.dmg"
   appcast 'https://edgehill.nylas.com/update-check?platform=darwin&arch=64',
-          checkpoint: '2c50861ecacabfac6e9bcd47940dd523da2f94825466f1ff06f4f0d794c81264'
+          checkpoint: 'e99b9fe721977067dc220a3564d545dc43245f4c00b7cd0d0e4f45a84fc24c25'
   name 'Nylas N1'
   homepage 'https://www.nylas.com/'
   license :gpl
