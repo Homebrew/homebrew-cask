@@ -1,11 +1,11 @@
 cask 'franz' do
-  version '3.1.0'
-  sha256 '1789fb44c47fd25db123c8ad6142e24007901fa07a8494263c312dbab7708eb9'
+  version '3.1.1'
+  sha256 '9b931a40082a7ce75ef8a8f7e55cd8d893ade7229293b8c582a67cdb5577f274'
 
   # github.com/imprecision/franz-app was verified as official when first introduced to the cask
   url "https://github.com/imprecision/franz-app/releases/download/#{version}/Franz-darwin-x64-#{version}.dmg"
   appcast 'https://github.com/imprecision/franz-app/releases.atom',
-          checkpoint: '481bc974abafc69025c5907056373df7a8e5f795544a7a1949e58c3e5858de1b'
+          checkpoint: '4aa666aa2f8c24598a5c17d9f2c91ccf517a6fa5c3ede5b6a8d88e4a954357b1'
   name 'Franz'
   homepage 'http://meetfranz.com'
   license :gratis
