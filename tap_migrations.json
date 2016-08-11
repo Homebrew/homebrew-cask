@@ -22,6 +22,7 @@
   "sickbeard": "homebrew/core",
   "srclib": "homebrew/core",
   "sslmate": "homebrew/core",
+  "terraform": "homebrew/core",
   "volatility": "homebrew/core",
   "vault": "homebrew/core"
 }
