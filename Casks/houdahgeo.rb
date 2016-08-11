@@ -1,10 +1,10 @@
 cask 'houdahgeo' do
-  version '4.4.3'
-  sha256 '52d22cd9f3907dd7ddc666cdb77a0865211f920e60442d597fc0f9a7691b874d'
+  version '4.5.2'
+  sha256 '37ac95c985b6c6a9e03f4e433016f62a93345fa38956d8a1db8498f5b4af9d9f'
 
   url "https://www.houdah.com/houdahGeo/updates4/cast_assets/HoudahGeo#{version}.zip"
   appcast "https://www.houdah.com/houdahGeo/updates#{version.major}/cast.xml",
-          checkpoint: 'e12e06a5505920f7930d6a74d10ecd7a457f744377d42ca0ad27925b70e35828'
+          checkpoint: '5aa4e716671211b38c80ddbe1946c623f201f4bb0039e20e4c7046dce20ac00e'
   name 'HoudahGeo'
   homepage 'https://houdah.com/houdahGeo/'
   license :commercial
