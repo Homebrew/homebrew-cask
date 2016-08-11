@@ -10,6 +10,7 @@
   "gedit": "homebrew/core",
   "go": "homebrew/core",
   "hub": "homebrew/core",
+  "idris": "homebrew/core",
   "mitmproxy": "homebrew/core",
   "packer": "homebrew/core",
   "pgloader": "homebrew/core",
