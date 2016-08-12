@@ -32,7 +32,7 @@ describe Hbc::CLI::Cleanup do
       FileUtils.touch(cached_download)
       cleanup_size = subject.disk_cleanup_size
 
-      File.new(cached_download).flock(File::LOCK_EX | File::LOCK_NB)
+      File.new(cached_download).flock(File::LOCK_EX)
 
       expect(Hbc::Utils).to be_file_locked(cached_download)
 
