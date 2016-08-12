@@ -1,5 +1,6 @@
 require "rubygems"
 
+require "extend/pathname"
 require "hbc/cask_dependencies"
 require "hbc/staged"
 require "hbc/verify"
@@ -328,11 +329,11 @@ class Hbc::Installer
         end
       end
     end
-    Hbc::Utils.rmdir_if_possible(@cask.metadata_versioned_container_path)
-    Hbc::Utils.rmdir_if_possible(@cask.metadata_master_container_path)
+    @cask.metadata_versioned_container_path.rmdir_if_possible
+    @cask.metadata_master_container_path.rmdir_if_possible
 
     # toplevel staged distribution
-    Hbc::Utils.rmdir_if_possible(@cask.caskroom_path)
+    @cask.caskroom_path.rmdir_if_possible
   end
 
   def purge_caskroom_path

@@ -43,11 +43,6 @@ def odebug(title, *sput)
   end
 end
 
-def puts_columns(items, star_items = [])
-  return if items.empty?
-  puts Hbc::Utils.stringify_columns(items, star_items)
-end
-
 module Hbc::Utils
   def self.which(cmd, path = ENV["PATH"])
     unless File.basename(cmd) == cmd.to_s
@@ -75,54 +70,6 @@ module Hbc::Utils
     end
     return nil unless cmd_pn.file?
     cmd_pn
-  end
-
-  # originally from Homebrew
-  def self.exec_editor(*args)
-    safe_exec(which_editor, *args)
-  end
-
-  # originally from Homebrew puts_columns
-  def self.stringify_columns(items, star_items = [])
-    return if items.empty?
-
-    if star_items && star_items.any?
-      items = items.map { |item| star_items.include?(item) ? "#{item}*" : item }
-    end
-
-    return items.join("\n").concat("\n") unless $stdout.tty?
-
-    # determine the best width to display for different console sizes
-    console_width = `/bin/stty size 2>/dev/null`.chomp.split(" ").last.to_i
-    console_width = 80 if console_width <= 0
-    longest = items.sort_by(&:length).last
-    optimal_col_width = (console_width.to_f / (longest.length + 2).to_f).floor
-    cols = optimal_col_width > 1 ? optimal_col_width : 1
-    Open3.popen2("/usr/bin/pr", "-#{cols}", "-t", "-w#{console_width}") do |stdin, stdout|
-      stdin.puts(items)
-      stdin.close
-      stdout.read
-    end
-  end
-
-  # originally from Homebrew
-  # children.empty? is slow to enumerate the whole directory just
-  # to see if it is empty
-  def self.rmdir_if_possible(dir)
-    dirpath = Pathname(dir)
-    begin
-      dirpath.rmdir
-      true
-    rescue Errno::ENOTEMPTY
-      if (ds_store = dirpath.join(".DS_Store")).exist? && dirpath.children.length == 1
-        ds_store.unlink
-        retry
-      else
-        false
-      end
-    rescue Errno::EACCES, Errno::ENOENT
-      false
-    end
   end
 
   def self.gain_permissions_remove(path, command: Hbc::SystemCommand)
@@ -175,21 +122,6 @@ module Hbc::Utils
 
   def self.current_user
     Etc.getpwuid(Process.euid).name
-  end
-
-  # originally from Homebrew abv
-  def self.cabv(dir)
-    output = ""
-    count = Hbc::SystemCommand.run!("/usr/bin/find",
-                                    args:         [dir, *%w[-type f -not -name .DS_Store -print0]],
-                                    print_stderr: false).stdout.count("\000")
-
-    size = Hbc::SystemCommand.run!("/usr/bin/du",
-                                   args:         ["-hs", "--", dir],
-                                   print_stderr: false).stdout.split("\t").first.strip
-
-    output << "#{count} files, " if count > 1
-    output << size
   end
 
   # paths that "look" descendant (textually) will still
