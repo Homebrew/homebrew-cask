@@ -59,68 +59,23 @@ describe Hbc::CLI::Style do
   describe "#install_rubocop" do
     subject { cli.install_rubocop }
 
-    shared_examples "raises error with message" do |msg|
-      it "raises an error with an informative message" do
-        expect { subject }.to raise_error(Hbc::CaskError, msg)
-      end
-    end
-
-    shared_examples "executable availability" do
+    context "when installation succeeds" do
       before do
-        allow(Hbc::Utils).to receive(:which).and_return(which_retval)
+        allow(Homebrew).to receive(:install_gem_setup_path!)
       end
 
-      context "when rubocop is available on the PATH" do
-        let(:which_retval) { true }
-
-        it "exits successfully" do
-          subject
-        end
-      end
-
-      context "when rubocop is not available on the PATH" do
-        let(:which_retval) { false }
-        include_examples "raises error with message", %r{couldn't find 'rubocop'}
+      it "exits successfully" do
+        expect { subject }.to_not raise_error
       end
     end
 
-    let(:fake_gem_specification_class) { Class.new }
-    let(:fake_gem_install_cmd_class) { Class.new }
-    let(:fake_system_exit_exception_class) { Class.new(StandardError) }
-    let(:fake_install_cmd) { double }
-    let(:fake_system_exit_exception) { fake_system_exit_exception_class.new }
-
-    before do
-      stub_const("Gem::Specification", fake_gem_specification_class)
-      stub_const("Gem::Commands::InstallCommand", fake_gem_install_cmd_class)
-      stub_const("Gem::SystemExitException", fake_system_exit_exception_class)
-      allow(fake_gem_specification_class).to receive(:find_all_by_name).and_return(*returned_specs)
-    end
-
-    context "when rubocop and rubocop-cask are already installed" do
-      let(:returned_specs) { [["rubocop"], ["rubocop-cask"]] }
-      include_examples "executable availability"
-    end
-
-    context "when rubocop and rubocop-cask are not already installed" do
-      let(:returned_specs) { [[]] }
-
+    context "when installation fails" do
       before do
-        allow(Hbc::Utils).to receive(:require)
-        allow(fake_gem_install_cmd_class).to receive(:new).and_return(fake_install_cmd)
-        allow(fake_install_cmd).to receive(:handle_options)
-        allow(fake_install_cmd).to receive(:execute).and_raise(fake_system_exit_exception)
-        allow(fake_system_exit_exception).to receive(:exit_code).and_return(install_exit_code)
+        allow(Homebrew).to receive(:install_gem_setup_path!).and_raise(SystemExit)
       end
 
-      context "when installation succeeds" do
-        let(:install_exit_code) { 0 }
-        include_examples "executable availability"
-      end
-
-      context "when installation fails" do
-        let(:install_exit_code) { 1 }
-        include_examples "raises error with message", %r{Failed to install/update}
+      it "raises an error" do
+        expect { subject }.to raise_error(Hbc::CaskError)
       end
     end
   end
