@@ -255,35 +255,12 @@ module Hbc::Utils
     Array(files).reduce(0) { |a, e| a + (File.size?(e) || 0) }
   end
 
-  # originally from Homebrew
-  def self.install_gem_setup_path!(gem_name, version = nil, executable = gem_name)
-    require "rubygems"
-    ENV["PATH"] = "#{Gem.user_dir}/bin:#{ENV['PATH']}"
-
-    if Gem::Specification.find_all_by_name(gem_name, version).empty?
-      ohai "Installing or updating '#{gem_name}' gem"
-      install_args = %W[--no-ri --no-rdoc --user-install #{gem_name}]
-      install_args << "--version" << version if version
-
-      # Do `gem install [...]` without having to spawn a separate process or
-      # having to find the right `gem` binary for the running Ruby interpreter.
-      require "rubygems/commands/install_command"
-      install_cmd = Gem::Commands::InstallCommand.new
-      install_cmd.handle_options(install_args)
-      exit_code = 1 # Should not matter as `install_cmd.execute` always throws.
-      begin
-        install_cmd.execute
-      rescue Gem::SystemExitException => e
-        exit_code = e.exit_code
-      end
-      raise Hbc::CaskError, "Failed to install/update the '#{gem_name}' gem." if exit_code != 0
-    end
-
-    unless which executable
-      raise Hbc::CaskError, <<-EOS.undent
-        The '#{gem_name}' gem is installed but couldn't find '#{executable}' in the PATH:
-        #{ENV['PATH']}
-      EOS
-    end
+  def self.capture_stderr
+    previous_stderr = $stderr
+    $stderr = StringIO.new
+    yield
+    $stderr.string
+  ensure
+    $stderr = previous_stderr
   end
 end
