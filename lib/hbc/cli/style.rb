@@ -24,7 +24,7 @@ class Hbc::CLI::Style < Hbc::CLI::Base
   RUBOCOP_CASK_VERSION = "~> 0.8.3".freeze
 
   def install_rubocop
-    Hbc::Utils.install_gem_setup_path! "rubocop-cask", RUBOCOP_CASK_VERSION, "rubocop"
+    Homebrew.install_gem_setup_path! "rubocop-cask", RUBOCOP_CASK_VERSION, "rubocop"
   end
 
   def cask_paths

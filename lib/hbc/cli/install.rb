@@ -1,3 +1,4 @@
+
 class Hbc::CLI::Install < Hbc::CLI::Base
   def self.run(*args)
     cask_tokens = cask_tokens_from(args)
@@ -44,7 +45,7 @@ class Hbc::CLI::Install < Hbc::CLI::Base
     if exact_match
       errmsg.concat(". Did you mean:\n#{exact_match}")
     elsif !partial_matches.empty?
-      errmsg.concat(". Did you mean one of:\n#{Hbc::Utils.stringify_columns(partial_matches.take(20))}\n")
+      errmsg.concat(". Did you mean one of:\n#{puts_columns(partial_matches.take(20))}\n")
     end
     onoe errmsg
   end

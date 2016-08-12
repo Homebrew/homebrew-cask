@@ -16,7 +16,7 @@ class Hbc::CLI::Info < Hbc::CLI::Base
 
   def self.info(cask)
     installation = if cask.installed?
-                     "#{cask.staged_path} (#{Hbc::Utils.cabv(cask.staged_path)})"
+                     "#{cask.staged_path} (#{cask.staged_path.abv})"
                    else
                      "Not installed"
                    end
