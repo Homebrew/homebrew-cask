@@ -10,6 +10,4 @@ cask 'younity' do
   pkg 'younityInstaller-1.12.6.pkg'
 
   uninstall pkgutil: 'net.entangledmedia.younity.client.YounityClient'
-
-  # app 'Younity.app'
 end
