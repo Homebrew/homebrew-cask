@@ -99,17 +99,20 @@ describe Hbc::CLI::Uninstall do
   end
 
   describe "when Casks in Taps have been renamed or removed" do
+    let(:app) { Hbc.appdir.join("ive-been-renamed.app") }
+    let(:caskroom_path) { Hbc.caskroom.join("ive-been-renamed").tap(&:mkpath) }
+    let(:saved_caskfile) { caskroom_path.join(".metadata", "latest", "timestamp", "Casks").join("ive-been-renamed.rb") }
+
     before do
-      @app = Hbc.appdir.join("ive-been-renamed.app").tap(&:mkpath)
-      @app.join("Contents").tap(&:mkpath)
-          .join("Info.plist").tap(&FileUtils.method(:touch))
+      app.tap(&:mkpath)
+         .join("Contents").tap(&:mkpath)
+         .join("Info.plist").tap(&FileUtils.method(:touch))
 
-      @caskroom_path = Hbc.caskroom.join("ive-been-renamed").tap(&:mkpath)
+      caskroom_path.mkpath
 
-      @saved_caskfile = @caskroom_path.join(".metadata", "latest", "timestamp", "Casks").tap(&:mkpath)
-                                      .join("ive-been-renamed.rb")
+      saved_caskfile.dirname.mkpath
 
-      IO.write @saved_caskfile, <<-EOF.undent
+      IO.write saved_caskfile, <<-EOF.undent
         cask 'ive-been-renamed' do
           version :latest
 
@@ -119,8 +122,8 @@ describe Hbc::CLI::Uninstall do
     end
 
     after do
-      @app.rmtree if @app.exist?
-      @caskroom_path.rmtree if @caskroom_path.exist?
+      app.rmtree if app.exist?
+      caskroom_path.rmtree if caskroom_path.exist?
     end
 
     it "can still uninstall those Casks" do
@@ -128,8 +131,8 @@ describe Hbc::CLI::Uninstall do
         Hbc::CLI::Uninstall.run("ive-been-renamed")
       end
 
-      @app.wont_be :exist?
-      @caskroom_path.wont_be :exist?
+      app.wont_be :exist?
+      caskroom_path.wont_be :exist?
     end
   end
 
