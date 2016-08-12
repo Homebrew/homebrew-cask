@@ -6,7 +6,7 @@ cask 'adobe-bridge-cc' do
       user_agent: :fake,
       cookies:    { 'MM_TRIALS' => '1234' }
   name 'Adobe Bridge CC'
-  homepage 'http://www.adobe.com/products/bridge.html'
+  homepage 'https://www.adobe.com/products/bridge.html'
   license :gratis
 
   preflight do

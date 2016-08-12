@@ -5,7 +5,7 @@ cask 'sqlpro-for-mssql' do
   # d3fwkemdw8spx3.cloudfront.net/mssql was verified as official when first introduced to the cask
   url "https://d3fwkemdw8spx3.cloudfront.net/mssql/SQLProMSSQL.#{version}.app.zip"
   name 'SQLPro for MSSQL'
-  homepage 'http://www.macsqlclient.com'
+  homepage 'https://www.macsqlclient.com/'
   license :commercial
 
   app 'SQLPro for MSSQL.app'

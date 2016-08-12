@@ -5,7 +5,7 @@ cask 'flowsync' do
   # dngo5v6w7xama.cloudfront.net was verified as official when first introduced to the cask
   url "https://dngo5v6w7xama.cloudfront.net/connect/download/FlowSync_#{version}.pkg"
   name 'Polar FlowSync Software'
-  homepage 'http://support.polar.com/uk-en/support/flowsync'
+  homepage 'https://support.polar.com/uk-en/support/flowsync'
   license :closed
 
   pkg "FlowSync_#{version}.pkg"

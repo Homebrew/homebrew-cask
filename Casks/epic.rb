@@ -1,11 +1,11 @@
 cask 'epic' do
-  version '2462'
-  sha256 'fc8fadf78816eaad050d514b3fc9a5c524b7fe5bf5a4b779e7b373ba2c240d1f'
+  version '49.0.2575.1'
+  sha256 'a4151a95705685257c7b38a1c6d6496a9a82743c49bdc3ed9c12957cf714e67b'
 
-  # macepic-cbe.kxcdn.com was verified as official when first introduced to the cask
-  url "https://macepic-cbe.kxcdn.com/#{version}/sign/Epic.dmg"
+  # s3.amazonaws.com/epicprivacybrowser was verified as official when first introduced to the cask
+  url "https://s3.amazonaws.com/epicprivacybrowser/mac/Epic_OSX_#{version}.zip"
   appcast 'https://updates.epicbrowser.com/mac_updates/appcast.xml',
-          checkpoint: 'aac3853720066e62a3398b67df8e2250a9d0163459f1513918899bad06b566d4'
+          checkpoint: 'baa4248683b2bde4cb5124bada0f5f7330ed865ef266ef7a7014729269debdf3'
   name 'Epic Privacy Browser'
   homepage 'https://www.epicbrowser.com/'
   license :gratis

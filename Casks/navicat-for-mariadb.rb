@@ -4,7 +4,7 @@ cask 'navicat-for-mariadb' do
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_mariadb_en.dmg"
   name 'Navicat for MariaDB'
-  homepage 'http://www.navicat.com/products/navicat-for-mariadb'
+  homepage 'https://www.navicat.com/products/navicat-for-mariadb'
   license :commercial
 
   app 'Navicat for MariaDB.app'

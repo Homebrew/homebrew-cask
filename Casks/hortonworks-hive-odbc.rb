@@ -4,7 +4,7 @@ cask 'hortonworks-hive-odbc' do
 
   url "http://public-repo-1.hortonworks.com/HDP/hive-odbc/#{version}.1002/Mac_OS_X/hive-odbc-native.dmg"
   name 'Hortoworks ODBC Driver for Hive'
-  homepage 'http://www.hortonworks.com'
+  homepage 'https://hortonworks.com/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'hive-odbc-native.pkg'

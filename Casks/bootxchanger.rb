@@ -6,7 +6,7 @@ cask 'bootxchanger' do
   appcast 'http://swupdate.namedfork.net/bootxchanger.xml',
           checkpoint: '1c3c0913f51c0d8dd6b8320460e3be60f9541f62dab75f56e5befb690a7566dc'
   name 'BootXChanger'
-  homepage 'http://namedfork.net/bootxchanger'
+  homepage 'https://namedfork.net/bootxchanger'
   license :gpl
 
   app 'BootXChanger.app'

@@ -15,7 +15,8 @@ end
 
 require "English"
 
-(HOMEBREW_LIBRARY / "Taps/caskroom/homebrew-cask").cd do
+repo_root = Pathname(__FILE__).realpath.parent.parent
+repo_root.cd do
   ENV["HOMEBREW_NO_ANALYTICS_THIS_RUN"] = "1"
 
   Homebrew.install_gem_setup_path! "bundler"

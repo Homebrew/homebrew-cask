@@ -4,7 +4,7 @@ cask 'letterfix' do
 
   url "http://dl.osdn.jp/letter-fix/#{version.after_comma}/LetterFix-#{version.before_comma}.dmg"
   appcast 'https://osdn.jp/projects/letter-fix/releases/rss',
-          checkpoint: '1dac0e9046ba533558c08a414b9844454abfeadd96336d1392d706dcd3e3220d'
+          checkpoint: '7755b58dbb1d24d43b305062434fd6c24567043b06e6ea12720b52101730eb7d'
   name 'LetterFix'
   homepage 'https://osdn.jp/projects/letter-fix/'
   license :mit
