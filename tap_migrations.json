@@ -11,6 +11,7 @@
   "go": "homebrew/core",
   "hub": "homebrew/core",
   "idris": "homebrew/core",
+  "jenkins": "homebrew/core",
   "mitmproxy": "homebrew/core",
   "nmap": "homebrew/core",
   "node": "homebrew/core",
