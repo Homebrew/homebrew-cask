@@ -24,6 +24,7 @@ describe "Repo layout" do
   # the developer has hopefully gitignored these
   IGNORE_REGEXPS = [
                      %r{~$}, # emacs
+                     %r{.sublime-\w+}, # Sublime Text
                    ].freeze
 
   TOPLEVEL_DIRS = %w[
