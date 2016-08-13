@@ -32,5 +32,6 @@
   "syncthing": "homebrew/core",
   "terraform": "homebrew/core",
   "vault": "homebrew/core",
-  "volatility": "homebrew/core"
+  "volatility": "homebrew/core",
+  "wireshark": "homebrew/core"
 }
