@@ -5,8 +5,8 @@ class Hbc::CLI::Info < Hbc::CLI::Base
     cask_tokens.each do |cask_token|
       odebug "Getting info for Cask #{cask_token}"
       cask = Hbc.load(cask_token)
-      puts info(cask)
-      Hbc::Installer.print_caveats(cask)
+
+      info(cask)
     end
   end
 
@@ -15,25 +15,33 @@ class Hbc::CLI::Info < Hbc::CLI::Base
   end
 
   def self.info(cask)
-    installation = if cask.installed?
-                     "#{cask.staged_path} (#{cask.staged_path.abv})"
-                   else
-                     "Not installed"
-                   end
-    # TODO: completely reformat the info report
-    <<-PURPOSE
-#{cask}: #{cask.version}
-#{formatted_name(cask)}
-#{cask.homepage || 'No Homepage'}
-#{installation}
-#{github_info(cask) || 'No GitHub URL'}
-#{artifact_info(cask) || 'No Artifact Info'}
-PURPOSE
+    puts "#{cask.token}: #{cask.version}"
+    puts formatted_url(cask.homepage) if cask.homepage
+    installation_info(cask)
+    puts "From: #{formatted_url(github_info(cask))}" if github_info(cask)
+    name_info(cask)
+    artifact_info(cask)
+    Hbc::Installer.print_caveats(cask)
   end
 
-  def self.formatted_name(cask)
-    # TODO: transitional: make name a required stanza, and then stop substituting cask.token here
-    cask.name.empty? ? cask.token : cask.name.join(", ")
+  def self.formatted_url(url)
+    "#{Hbc::Utils::Tty.underline}#{url}#{Hbc::Utils::Tty.reset}"
+  end
+
+  def self.installation_info(cask)
+    if cask.installed?
+      cask.versions.each do |version|
+        versioned_staged_path = cask.caskroom_path.join(version)
+        puts "#{versioned_staged_path} (#{versioned_staged_path.abv})"
+      end
+    else
+      puts "Not installed"
+    end
+  end
+
+  def self.name_info(cask)
+    ohai cask.name.size > 1 ? "Names" : "Name"
+    puts cask.name.empty? ? "#{Hbc::Utils::Tty.red}None#{Hbc::Utils::Tty.reset}" : cask.name
   end
 
   def self.github_info(cask)
@@ -57,15 +65,13 @@ PURPOSE
   end
 
   def self.artifact_info(cask)
-    retval = ""
+    ohai "Artifacts"
     Hbc::DSL::ORDINARY_ARTIFACT_TYPES.each do |type|
       next if cask.artifacts[type].empty?
-      retval = "#{Hbc::Utils::Tty.blue.bold}==>#{Hbc::Utils::Tty.reset.bold} Contents#{Hbc::Utils::Tty.reset}\n" if retval.empty?
       cask.artifacts[type].each do |artifact|
         activatable_item = type == :stage_only ? "<none>" : artifact.first
-        retval.concat "  #{activatable_item} (#{type})\n"
+        puts "#{activatable_item} (#{type})"
       end
     end
-    retval.sub!(%r{\n\Z}, "")
   end
 end
