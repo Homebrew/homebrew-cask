@@ -4,35 +4,38 @@ describe Hbc::CLI::Info do
   it "displays some nice info about the specified Cask" do
     lambda {
       Hbc::CLI::Info.run("local-caffeine")
-    }.must_output <<-CLIOUTPUT.undent
+    }.must_output <<-EOS.undent
       local-caffeine: 1.2.3
-      local-caffeine
       http://example.com/local-caffeine
       Not installed
-      https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/local-caffeine.rb
-      ==> Contents
-        Caffeine.app (app)
-    CLIOUTPUT
+      From: https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/local-caffeine.rb
+      ==> Name
+      None
+      ==> Artifacts
+      Caffeine.app (app)
+    EOS
   end
 
   describe "given multiple Casks" do
     before do
-      @expected_output = <<-CLIOUTPUT.undent
+      @expected_output = <<-EOS.undent
         local-caffeine: 1.2.3
-        local-caffeine
         http://example.com/local-caffeine
         Not installed
-        https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/local-caffeine.rb
-        ==> Contents
-          Caffeine.app (app)
+        From: https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/local-caffeine.rb
+        ==> Name
+        None
+        ==> Artifacts
+        Caffeine.app (app)
         local-transmission: 2.61
-        local-transmission
         http://example.com/local-transmission
         Not installed
-        https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/local-transmission.rb
-        ==> Contents
-          Transmission.app (app)
-      CLIOUTPUT
+        From: https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/local-transmission.rb
+        ==> Name
+        None
+        ==> Artifacts
+        Transmission.app (app)
+      EOS
     end
 
     it "displays the info" do
@@ -51,14 +54,15 @@ describe Hbc::CLI::Info do
   it "should print caveats if the Cask provided one" do
     lambda {
       Hbc::CLI::Info.run("with-caveats")
-    }.must_output <<-CLIOUTPUT.undent
+    }.must_output <<-EOS.undent
       with-caveats: 1.2.3
-      with-caveats
       http://example.com/local-caffeine
       Not installed
-      https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/with-caveats.rb
-      ==> Contents
-        Caffeine.app (app)
+      From: https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/with-caveats.rb
+      ==> Name
+      None
+      ==> Artifacts
+      Caffeine.app (app)
       ==> Caveats
       Here are some things you might want to know.
 
@@ -70,21 +74,22 @@ describe Hbc::CLI::Info do
 
         export PATH=/custom/path/bin:"$PATH"
 
-    CLIOUTPUT
+    EOS
   end
 
   it 'should not print "Caveats" section divider if the caveats block has no output' do
     lambda {
       Hbc::CLI::Info.run("with-conditional-caveats")
-    }.must_output <<-CLIOUTPUT.undent
+    }.must_output <<-EOS.undent
       with-conditional-caveats: 1.2.3
-      with-conditional-caveats
       http://example.com/local-caffeine
       Not installed
-      https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/with-conditional-caveats.rb
-      ==> Contents
-        Caffeine.app (app)
-    CLIOUTPUT
+      From: https://github.com/caskroom/homebrew-testcasks/blob/master/Casks/with-conditional-caveats.rb
+      ==> Name
+      None
+      ==> Artifacts
+      Caffeine.app (app)
+    EOS
   end
 
   describe "when no Cask is specified" do
