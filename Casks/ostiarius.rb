@@ -1,6 +1,6 @@
 cask 'ostiarius' do
-  version '1.1.0'
-  sha256 '32b1e0071985ba804a6ca3131504f0d8d789e89950110a8919995c607e447dce'
+  version '1.2.0'
+  sha256 '80d67c4e090013ee3fa9d87696778ec4e6a303362147158966fe547c8c45727a'
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/Ostiarius_#{version}.zip"
