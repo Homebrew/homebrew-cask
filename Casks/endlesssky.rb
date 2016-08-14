@@ -1,11 +1,11 @@
 cask 'endlesssky' do
-  version '0.9.0'
-  sha256 '708cbfaad8448eb5208f5b85408545054c1b8744f87a4208a848e7452c1b337e'
+  version '0.9.2'
+  sha256 '73fd7c1f67318bd4b6f4dce952be16fef275988fd00e21c64efff5c4bf0c3845'
 
   # github.com/endless-sky/endless-sky was verified as official when first introduced to the cask
   url "https://github.com/endless-sky/endless-sky/releases/download/v#{version}/endless-sky-macosx-#{version}.dmg"
   appcast 'https://github.com/endless-sky/endless-sky/releases.atom',
-          checkpoint: '4bc2dcbd402ab4172d925a06522a9bc764129d4fd36825485b9f75fbee441793'
+          checkpoint: '95fdac50548fddf72f5c3f92ab847ed735bb5f82861ed11f9484cc1cc6abaafd'
   name 'Endless Sky'
   homepage 'https://endless-sky.github.io/'
   license :gpl
