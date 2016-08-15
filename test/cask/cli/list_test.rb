@@ -69,11 +69,11 @@ describe Hbc::CLI::List do
       ==> Apps managed by brew-cask:
       '#{Hbc.appdir.join('Transmission.app')}'
       ==> Staged content:
-      #{transmission.staged_path} (0 files)
+      #{transmission.staged_path} (68B)
       ==> Apps managed by brew-cask:
       Missing App: '#{Hbc.appdir.join('Caffeine.app')}'
       ==> Staged content:
-      #{caffeine.staged_path} (13 files)
+      #{caffeine.staged_path} (13 files, 378.5K)
     OUTPUT
   end
 end

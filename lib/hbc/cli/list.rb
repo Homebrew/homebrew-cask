@@ -46,7 +46,14 @@ class Hbc::CLI::List < Hbc::CLI::Base
 
   def self.list_files(cask)
     ohai "Staged content:"
-    Hbc::PrettyListing.new(cask).print
+    cask.versions.each do |version|
+      versioned_staged_path = cask.caskroom_path.join(version)
+
+      puts versioned_staged_path.to_s
+        .concat(" (")
+        .concat(versioned_staged_path.exist? ? versioned_staged_path.abv : "#{Hbc::Utils::Tty.red}does not exist#{Hbc::Utils::Tty.reset}")
+        .concat(")")
+    end
   end
 
   def self.list_installed
