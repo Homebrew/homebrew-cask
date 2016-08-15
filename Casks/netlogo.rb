@@ -1,13 +1,13 @@
 cask 'netlogo' do
-  version '5.3.0'
-  sha256 'c6cf96f6c3e788b4015d56e6679c5cb6ee46799f610d482ab8a83eff5aae6630'
+  version '5.3.1'
+  sha256 'e5013c94a95b6e6d6a2186cbcbbde51d393dfac7240f512d918ad1bcb4b8b9d3'
 
-  url "https://ccl.northwestern.edu/netlogo/#{version}/NetLogo-#{version.major_minor}.dmg"
+  url "https://ccl.northwestern.edu/netlogo/#{version}/NetLogo-#{version}.dmg"
   name 'NetLogo'
   homepage 'https://ccl.northwestern.edu/netlogo/'
   license :gpl
 
-  app "NetLogo #{version.major_minor}/NetLogo #{version.major_minor}.app"
+  suite "NetLogo #{version}"
 
   zap delete: [
                 '~/Library/Preferences/org.nlogo.netlogo.plist',
