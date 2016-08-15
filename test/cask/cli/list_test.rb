@@ -66,14 +66,10 @@ describe Hbc::CLI::List do
     lambda {
       Hbc::CLI::List.run("local-transmission", "local-caffeine")
     }.must_output <<-OUTPUT.gsub(%r{^ *}, "")
-      ==> Apps managed by brew-cask:
-      '#{Hbc.appdir.join('Transmission.app')}'
-      ==> Staged content:
-      #{transmission.staged_path} (68B)
-      ==> Apps managed by brew-cask:
-      Missing App: '#{Hbc.appdir.join('Caffeine.app')}'
-      ==> Staged content:
-      #{caffeine.staged_path} (13 files, 378.5K)
+      ==> Apps
+      #{Hbc.appdir.join('Transmission.app')}
+      ==> Apps
+      Missing App: #{Hbc.appdir.join('Caffeine.app')}
     OUTPUT
   end
 end

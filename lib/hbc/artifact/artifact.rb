@@ -2,7 +2,7 @@ require "hbc/artifact/moved"
 
 class Hbc::Artifact::Artifact < Hbc::Artifact::Moved
   def self.artifact_english_name
-    "Generic artifact"
+    "Generic Artifact"
   end
 
   def self.artifact_dirmethod
