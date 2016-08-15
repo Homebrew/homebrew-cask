@@ -13,8 +13,12 @@ cask 'virtual-ii' do
   homepage 'http://virtualii.com/'
   license :freemium
 
-  # There is no sub-folder in the DMG; the root *is* the folder
-  suite '.', target: 'Virtual ]['
+  suite 'Virtual ]['
+
+  preflight do
+    # There is no sub-folder in the DMG; the root *is* the folder
+    FileUtils.mv(staged_path.children, staged_path.join('Virtual ][').tap(&:mkpath))
+  end
 
   caveats <<-EOS.undent
     This app requires a ROM image, which must be downloaded and installed
