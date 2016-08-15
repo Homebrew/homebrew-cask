@@ -1,8 +1,9 @@
 class Hbc::Container::Base
-  def initialize(cask, path, command)
+  def initialize(cask, path, command, nested: false)
     @cask = cask
     @path = path
     @command = command
+    @nested = nested
   end
 
   def extract_nested(source)
@@ -11,7 +12,7 @@ class Hbc::Container::Base
     return false unless container
 
     ohai "Extracting nested container #{source.basename}"
-    container.new(@cask, source, @command).extract
+    container.new(@cask, source, @command, nested: true).extract
 
     true
   end
