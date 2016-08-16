@@ -12,8 +12,12 @@ cask 'displaycal' do
 
   depends_on formula: 'argyll-cms'
 
-  # There is no sub-folder in the DMG; the root *is* the folder
-  suite '.', target: 'DisplayCAL'
+  suite 'DisplayCAL'
+
+  preflight do
+    # There is no sub-folder in the DMG; the root *is* the folder
+    FileUtils.mv(staged_path.children, staged_path.join('DisplayCAL').tap(&:mkpath))
+  end
 
   zap delete: [
                 '~/Library/Application Support/dispcalGUI',

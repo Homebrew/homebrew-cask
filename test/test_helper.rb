@@ -138,6 +138,16 @@ class TestHelper
       end
     end
   end
+
+  def self.install_without_artifacts_with_caskfile(cask)
+    Hbc::Installer.new(cask).tap do |i|
+      shutup do
+        i.download
+        i.extract_primary_container
+        i.save_caskfile
+      end
+    end
+  end
 end
 
 # Extend MiniTest API with support for RSpec-style shared examples

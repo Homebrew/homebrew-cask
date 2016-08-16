@@ -7,8 +7,19 @@ cask 'cocoscreator' do
   homepage 'http://www.cocos2d-x.org/'
   license :mit
 
+  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/cocos_wrapper"
+
   app 'CocosCreator.app'
-  binary "#{appdir}/CocosCreator.app/Contents/Resources/cocos2d-x/tools/cocos2d-console/bin/cocos"
+  binary shimscript, target: 'cocos'
+
+  preflight do
+    IO.write shimscript, <<-EOF.undent
+      #!/bin/sh
+      cd '#{appdir}/CocosCreator.app/Contents/Resources/cocos2d-x/tools/cocos2d-console/bin' && ./cocos "$@"
+    EOF
+    FileUtils.chmod '+x', shimscript
+  end
 
   zap delete: [
                 '~/Library/Application Support/CocosCreator',

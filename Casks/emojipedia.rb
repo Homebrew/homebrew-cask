@@ -1,10 +1,10 @@
 cask 'emojipedia' do
-  version '20160717'
-  sha256 '00e67cbc89ccd6d9ec44920dcc6708a8acbd61c550a49437918047312c55271f'
+  version '20160808'
+  sha256 '381f34be78a050d88e4656e3864252a3e55b3f8c43c61ec6fa230142991300b4'
 
   url "https://github.com/gingerbeardman/Emojipedia/releases/download/#{version}/Emojipedia.dictionary.zip"
   appcast 'https://github.com/gingerbeardman/Emojipedia/releases.atom',
-          checkpoint: 'f4015e1b46d51a7e33926f697e5f697282c243e3331d1b8134213d527d3700ad'
+          checkpoint: '139054548a85ff087d11dd4002ff8f5e6f5bdcad320a9ffde710ef7d995019b0'
   name 'Emojipedia'
   homepage 'https://github.com/gingerbeardman/Emojipedia'
   license :mit
