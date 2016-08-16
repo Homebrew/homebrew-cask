@@ -89,19 +89,20 @@ class Hbc::DSL
     @name.concat(args.flatten)
   end
 
+  def assert_only_one_stanza_allowed(stanza, arg_given)
+    return unless instance_variable_defined?("@#{stanza}") && arg_given
+    raise Hbc::CaskInvalidError.new(token, "'#{stanza}' stanza may only appear once")
+  end
+
   def homepage(homepage = nil)
-    if @homepage && !homepage.nil?
-      raise Hbc::CaskInvalidError.new(token, "'homepage' stanza may only appear once")
-    end
+    assert_only_one_stanza_allowed :homepage, !homepage.nil?
     @homepage ||= homepage
   end
 
   def url(*args, &block)
     url_given = !args.empty? || block_given?
     return @url unless url_given
-    if @url && url_given
-      raise Hbc::CaskInvalidError.new(token, "'url' stanza may only appear once")
-    end
+    assert_only_one_stanza_allowed :url, url_given
     @url ||= begin
       Hbc::URL.from(*args, &block)
     rescue StandardError => e
@@ -111,9 +112,7 @@ class Hbc::DSL
 
   def appcast(*args)
     return @appcast if args.empty?
-    if @appcast && !args.empty?
-      raise Hbc::CaskInvalidError.new(token, "'appcast' stanza may only appear once")
-    end
+    assert_only_one_stanza_allowed :appcast, !args.empty?
     @appcast ||= begin
       Hbc::DSL::Appcast.new(*args) unless args.empty?
     rescue StandardError => e
@@ -123,9 +122,7 @@ class Hbc::DSL
 
   def gpg(*args)
     return @gpg if args.empty?
-    if @gpg && !args.empty?
-      raise Hbc::CaskInvalidError.new(token, "'gpg' stanza may only appear once")
-    end
+    assert_only_one_stanza_allowed :gpg, !args.empty?
     @gpg ||= begin
       Hbc::DSL::Gpg.new(*args) unless args.empty?
     rescue StandardError => e
@@ -135,10 +132,8 @@ class Hbc::DSL
 
   def container(*args)
     return @container if args.empty?
-    if @container && !args.empty?
-      # TODO: remove this constraint, and instead merge multiple container stanzas
-      raise Hbc::CaskInvalidError.new(token, "'container' stanza may only appear once")
-    end
+    # TODO: remove this constraint, and instead merge multiple container stanzas
+    assert_only_one_stanza_allowed :container, !args.empty?
     @container ||= begin
       Hbc::DSL::Container.new(*args) unless args.empty?
     rescue StandardError => e
@@ -157,7 +152,7 @@ class Hbc::DSL
 
   def version(arg = nil)
     return @version if arg.nil?
-    raise Hbc::CaskInvalidError.new(token, "'version' stanza may only appear once") if @version
+    assert_only_one_stanza_allowed :version, !arg.nil?
     raise Hbc::CaskInvalidError.new(token, "invalid 'version' value: '#{arg.inspect}'") if !arg.is_a?(String) && !SYMBOLIC_VERSIONS.include?(arg)
     @version ||= Hbc::DSL::Version.new(arg)
   end
@@ -168,16 +163,14 @@ class Hbc::DSL
 
   def sha256(arg = nil)
     return @sha256 if arg.nil?
-    raise Hbc::CaskInvalidError.new(token, "'sha256' stanza may only appear once") if @sha256
+    assert_only_one_stanza_allowed :sha256, !arg.nil?
     raise Hbc::CaskInvalidError.new(token, "invalid 'sha256' value: '#{arg.inspect}'") if !arg.is_a?(String) && !SYMBOLIC_SHA256S.include?(arg)
     @sha256 ||= arg
   end
 
   def license(arg = nil)
     return @license if arg.nil?
-    if @license && !arg.nil?
-      raise Hbc::CaskInvalidError.new(token, "'license' stanza may only appear once")
-    end
+    assert_only_one_stanza_allowed :license, !arg.nil?
     @license ||= begin
       Hbc::DSL::License.new(arg) unless arg.nil?
     rescue StandardError => e
@@ -198,11 +191,9 @@ class Hbc::DSL
   end
 
   def conflicts_with(*args)
-    if @conflicts_with && !args.empty?
-      # TODO: remove this constraint, and instead merge multiple conflicts_with stanzas
-      raise Hbc::CaskInvalidError.new(token, "'conflicts_with' stanza may only appear once")
-    end
     return @conflicts_with if args.empty?
+    # TODO: remove this constraint, and instead merge multiple conflicts_with stanzas
+    assert_only_one_stanza_allowed :conflicts_with, !args.empty?
     @conflicts_with ||= begin
       Hbc::DSL::ConflictsWith.new(*args) unless args.empty?
     rescue StandardError => e
@@ -235,16 +226,12 @@ class Hbc::DSL
   end
 
   def accessibility_access(accessibility_access = nil)
-    if @accessibility_access && !accessibility_access.nil?
-      raise Hbc::CaskInvalidError.new(token, "'accessibility_access' stanza may only appear once")
-    end
+    assert_only_one_stanza_allowed :accessibility_access, !accessibility_access.nil?
     @accessibility_access ||= accessibility_access
   end
 
   def auto_updates(auto_updates = nil)
-    if @auto_updates && !auto_updates.nil?
-      raise Hbc::CaskInvalidError.new(token, "'auto_updates' stanza may only appear once")
-    end
+    assert_only_one_stanza_allowed :auto_updates, !auto_updates.nil?
     @auto_updates ||= auto_updates
   end
 
