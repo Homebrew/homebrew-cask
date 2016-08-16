@@ -1,11 +1,11 @@
 cask 'hipchat' do
-  version '4.25.0-683'
-  sha256 '361499a764191894b96aea86ea6d82c9dae275f4810f98ee7e747e022c9e2436'
+  version '4.26.1-698'
+  sha256 'cc9ed1c5690a9620847ee7a42ec27d110964f33ea0fc76c4b4b5eeed6866fed8'
 
   # amazonaws.com/downloads.hipchat.com/osx was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/downloads.hipchat.com/osx/HipChat-#{version}.zip"
   appcast 'https://www.hipchat.com/release_notes/appcast/mac',
-          checkpoint: '2392e48bde509009d4bef6429bd057754d3b70e34a83ce46aaf770c9481585c4'
+          checkpoint: 'db093193a2d23e18bd8786271aa65f70946cd4e2eb214cd7de8f9bb99c09581b'
   name 'HipChat'
   homepage 'https://www.hipchat.com/'
   license :freemium
