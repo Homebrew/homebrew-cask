@@ -11,15 +11,16 @@ cask 'dotnet' do
 
   pkg "dotnet-dev-osx-x64.#{version}.pkg"
 
+  postflight do
+    ohai 'Symlinking openssl libraries to /usr/local/lib to ensure crypto works'
+    system 'mkdir', '-p', '/usr/local/lib'
+    system 'ln', '-sfv', '/usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib', '/usr/local/lib/'
+    system 'ln', '-sfv', '/usr/local/opt/openssl/lib/libssl.1.0.0.dylib', '/usr/local/lib/'
+  end
+
   uninstall pkgutil: 'com.microsoft.dotnet.*'
 
   caveats <<-EOS.undent
-    The latest version of OpenSSL is required to use .NET Core.
-    It was already installed, but you may need to link it:
-
-      ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
-      ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
-
     Zsh users may need to symlink the dotnet binary:
 
       ln -s /usr/local/share/dotnet/dotnet /usr/local/bin
