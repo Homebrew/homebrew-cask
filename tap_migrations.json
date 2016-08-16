@@ -9,6 +9,7 @@
   "fpc": "homebrew/core",
   "gedit": "homebrew/core",
   "go": "homebrew/core",
+  "graphviz": "homebrew/core",
   "hub": "homebrew/core",
   "idris": "homebrew/core",
   "jenkins": "homebrew/core",

@@ -8,7 +8,12 @@ cask 'klayout' do
   homepage 'http://www.klayout.de/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  suite '.', target: 'KLayout'
+  suite 'KLayout'
+
+  preflight do
+    # There is no sub-folder in the DMG; the root *is* the folder
+    FileUtils.mv(staged_path.children, staged_path.join('KLayout').tap(&:mkpath))
+  end
 
   uninstall pkgutil: 'klayout.de',
             quit:    'klayout.de'

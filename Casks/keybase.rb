@@ -7,5 +7,7 @@ cask 'keybase' do
   homepage 'https://keybase.io'
   license :bsd
 
+  auto_updates true
+
   app 'Keybase.app'
 end

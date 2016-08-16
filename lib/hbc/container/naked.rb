@@ -13,6 +13,7 @@ class Hbc::Container::Naked < Hbc::Container::Base
   end
 
   def target_file
+    return @path.basename if @nested
     URI.decode(File.basename(@cask.url.path))
   end
 end

@@ -12,12 +12,6 @@ class Hbc::CLI::Edit < Hbc::CLI::Base
     exec_editor cask_path
   end
 
-  # for mocking.
-  # TODO: add an :exec parameter to SystemCommand
-  def self.exec_editor(*args)
-    exec_editor(*args)
-  end
-
   def self.help
     "edits the given Cask"
   end
