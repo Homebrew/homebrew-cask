@@ -14,9 +14,14 @@ cask 'dotnet' do
   uninstall pkgutil: 'com.microsoft.dotnet.*'
 
   caveats <<-EOS.undent
-    The latest version of OpenSS is required to use .NET Core.
-    It was already installed, but you may need to link it
+    The latest version of OpenSSL is required to use .NET Core.
+    It was already installed, but you may need to link it:
 
-      brew link --force openssl
+      ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
+      ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
+
+    Zsh users may need to symlink the dotnet binary:
+
+      ln -s /usr/local/share/dotnet/dotnet /usr/local/bin
   EOS
 end
