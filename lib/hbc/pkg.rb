@@ -38,25 +38,23 @@ class Hbc::Pkg
     @command.run!("/usr/sbin/pkgutil", args: ["--forget", package_id], sudo: true)
   end
 
-  def pkgutil_bom_files
-    @command.run!("/usr/sbin/pkgutil", args: ["--only-files", "--files", package_id])
+  def pkgutil_bom(*type)
+    @command.run!("/usr/sbin/pkgutil", args: [*type, "--files", package_id].compact)
             .stdout
             .split("\n")
             .map { |path| root.join(path) }
+  end
+
+  def pkgutil_bom_files
+    @pkgutil_bom_files ||= pkgutil_bom("--only-files")
   end
 
   def pkgutil_bom_dirs
-    @command.run!("/usr/sbin/pkgutil", args: ["--only-dirs", "--files", package_id])
-            .stdout
-            .split("\n")
-            .map { |path| root.join(path) }
+    @pkgutil_bom_dirs ||= pkgutil_bom("--only-dirs")
   end
 
   def pkgutil_bom_all
-    @command.run!("/usr/sbin/pkgutil", args: ["--files", package_id])
-            .stdout
-            .split("\n")
-            .map { |path| root.join(path) }
+    @pkgutil_bom_all ||= pkgutil_bom
   end
 
   def pkgutil_bom_specials
