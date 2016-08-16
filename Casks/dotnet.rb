@@ -11,12 +11,13 @@ cask 'dotnet' do
 
   pkg "dotnet-dev-osx-x64.#{version}.pkg"
 
+  # the dotnet package ships with crypto libraries expecting to find openssl
+  # in /usr/local/lib, but it is installed keg only by homebrew
+  postflight do
+    system 'sudo', '-E', '--', 'install_name_tool', '-add_rpath',
+           '/usr/local/opt/openssl/lib',
+           '/usr/local/share/dotnet/shared/Microsoft.NETCore.App/1.0.0/System.Security.Cryptography.Native.dylib'
+  end
+
   uninstall pkgutil: 'com.microsoft.dotnet.*'
-
-  caveats <<-EOS.undent
-    The latest version of OpenSS is required to use .NET Core.
-    It was already installed, but you may need to link it
-
-      brew link --force openssl
-  EOS
 end
