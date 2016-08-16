@@ -7,8 +7,7 @@ class Hbc::Source::TappedQualified < Hbc::Source::Tapped
 
   def self.path_for_query(query)
     user, repo, token = Hbc::QualifiedToken.parse(query)
-    token.sub!(%r{\.rb$}i, "")
-    tap = "#{user}/homebrew-#{repo}"
-    Hbc.homebrew_tapspath.join(tap, "Casks", "#{token}.rb")
+    tap = "#{user}/#{Hbc::QualifiedToken::REPO_PREFIX}#{repo}"
+    Hbc.homebrew_tapspath.join(tap, "Casks", token.sub(%r{(\.rb)?$}i, ".rb"))
   end
 end
