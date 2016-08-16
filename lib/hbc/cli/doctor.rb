@@ -14,7 +14,7 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
     ohai "Homebrew-Cask Install Location:", render_install_location
     ohai "Homebrew-Cask Staging Location:", render_staging_location(Hbc.caskroom)
     ohai "Homebrew-Cask Cached Downloads:", render_cached_downloads
-    ohai "Homebrew-Cask Default Tap Path:", render_tap_paths(fq_default_tap)
+    ohai "Homebrew-Cask Default Tap Path:", render_tap_paths(Hbc.default_tap.path)
     ohai "Homebrew-Cask Alternate Cask Taps:", render_tap_paths(alt_taps)
     ohai "Homebrew-Cask Default Tap Cask Count:", render_with_none_as_error(default_cask_count)
     ohai "Contents of $LOAD_PATH:", render_load_path($LOAD_PATH)
@@ -32,28 +32,17 @@ class Hbc::CLI::Doctor < Hbc::CLI::Base
     ohai "Running As Privileged User:", render_with_none_as_error(privileged_uid)
   end
 
-  def self.fq_default_tap
-    return @fq_default_tap if @fq_default_tap
-    @fq_default_tap = homebrew_repository.join "Library", "Taps", Hbc.default_tap
-  rescue StandardError
-    @fq_default_tap = notfound_string
-  end
-
   def self.alt_taps
-    alt_taps = Pathname.glob(homebrew_repository
-                       .join("Library", "Taps", "*", "*", "Casks"))
-                       .map(&:dirname) - [fq_default_tap]
-    nil if alt_taps.empty?
-  rescue StandardError
-    notfound_string
+    Tap.select { |t| t.cask_dir.directory? && t != Hbc.default_tap }
+       .map(&:path)
   end
 
   def self.default_cask_count
     default_cask_count = notfound_string
     begin
-      default_cask_count = homebrew_repository.join(fq_default_tap, "Casks").children.count(&:file?)
+      default_cask_count = Hbc.default_tap.cask_dir.children.count(&:file?)
     rescue StandardError
-      default_cask_count = "0 #{error_string "Error reading #{fq_default_tap}"}"
+      default_cask_count = "0 #{error_string "Error reading #{Hbc.default_tap.path}"}"
     end
     default_cask_count
   end

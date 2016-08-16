@@ -60,7 +60,7 @@ class Hbc::CLI::Style < Hbc::CLI::Base
   end
 
   def rubocop_config
-    "#{Hbc.default_tappath}/Casks/.rubocop.yml"
+    Hbc.default_tap.cask_dir.join(".rubocop.yml")
   end
 
   def fix?

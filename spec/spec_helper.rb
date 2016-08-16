@@ -43,7 +43,6 @@ end
 # override Homebrew locations
 Hbc.homebrew_prefix = Pathname.new(TEST_TMPDIR).join("prefix")
 Hbc.homebrew_repository = Hbc.homebrew_prefix
-Hbc.homebrew_tapspath = nil
 Hbc.binarydir = Hbc.homebrew_prefix.join("binarydir", "bin")
 Hbc.appdir = Pathname.new(TEST_TMPDIR).join("appdir")
 

@@ -68,7 +68,6 @@ require "hbc"
 # override Homebrew locations
 Hbc.homebrew_prefix = Pathname.new(TEST_TMPDIR).join("prefix")
 Hbc.homebrew_repository = Hbc.homebrew_prefix
-Hbc.homebrew_tapspath = nil
 
 # Look for Casks in testcasks by default.  It is elsewhere required that
 # the string "test" appear in the directory name.

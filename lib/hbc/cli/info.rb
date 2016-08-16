@@ -50,7 +50,7 @@ class Hbc::CLI::Info < Hbc::CLI::Base
 
   def self.github_info(cask)
     user, repo, token = Hbc::QualifiedToken.parse(Hbc.all_tokens.detect { |t| t.split("/").last == cask.token })
-    "https://github.com/#{user}/homebrew-#{repo}/blob/master/Casks/#{token}.rb"
+    "#{Tap.fetch(user, repo).default_remote}/blob/master/Casks/#{token}.rb"
   end
 
   def self.artifact_info(cask)

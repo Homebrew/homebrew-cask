@@ -126,11 +126,7 @@ module Hbc::Locations
     attr_writer :default_tap
 
     def default_tap
-      @default_tap ||= "caskroom/homebrew-cask"
-    end
-
-    def default_tappath
-      @default_tappath ||= homebrew_tapspath.join(default_tap)
+      @default_tap ||= Tap.fetch("caskroom/homebrew-cask")
     end
 
     def path(query)
@@ -145,11 +141,9 @@ module Hbc::Locations
 
       if token_with_tap
         user, repo, token = token_with_tap.split("/")
-        # FIXME/TODO: handle old-style 1-slash form: phinze-cask/token
-        repo = "homebrew-" + repo unless repo =~ %r{^homebrew-}
-        homebrew_tapspath.join(user, repo, "Casks", "#{token}.rb")
+        Tap.fetch(user, repo).cask_dir.join("#{token}.rb")
       else
-        homebrew_tapspath.join(default_tap, "Casks", "#{query}.rb")
+        default_tap.cask_dir.join("#{query}.rb")
       end
     end
 
@@ -197,14 +191,6 @@ module Hbc::Locations
 
     def homebrew_repository=(path)
       @homebrew_repository = path ? Pathname.new(path) : path
-    end
-
-    def homebrew_tapspath
-      @homebrew_tapspath ||= homebrew_repository.join(*%w[Library Taps])
-    end
-
-    def homebrew_tapspath=(path)
-      @homebrew_tapspath = path ? Pathname.new(path) : path
     end
   end
 end
