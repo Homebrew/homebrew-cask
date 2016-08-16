@@ -5,8 +5,10 @@ require "hbc/extend"
 require "hbc/artifact"
 require "hbc/audit"
 require "hbc/auditor"
+require "hbc/cache"
 require "hbc/cask"
 require "hbc/without_source"
+require "hbc/caskroom"
 require "hbc/checkable"
 require "hbc/cli"
 require "hbc/cask_dependencies"
@@ -44,56 +46,10 @@ module Hbc
   include Hbc::Utils
 
   def self.init
-    odebug "Creating directories"
+    Hbc::Cache.ensure_cache_exists
+    Hbc::Cache.migrate_legacy_cache
 
-    # cache
-    Hbc.cache.mkpath unless Hbc.cache.exist?
-    if Hbc.legacy_cache.exist?
-      ohai "Migrating cached files to #{Hbc.cache}..."
-
-      Hbc.legacy_cache.children.select(&:symlink?).each do |symlink|
-        file = symlink.readlink
-
-        new_name = file.basename
-                       .sub(%r{\-((?:(\d|#{Hbc::DSL::Version::DIVIDER_REGEX})*\-\2*)*[^\-]+)$}x,
-                            '--\1')
-
-        renamed_file = Hbc.cache.join(new_name)
-
-        if file.exist?
-          puts "#{file} -> #{renamed_file}"
-          FileUtils.mv(file, renamed_file)
-        end
-
-        FileUtils.rm(symlink)
-      end
-
-      FileUtils.remove_entry_secure(Hbc.legacy_cache)
-    end
-
-    # caskroom
-    unless caskroom.exist?
-      ohai "Creating Caskroom at #{caskroom}"
-      current_user = Hbc::Utils.current_user
-      if caskroom.parent.writable?
-        system "/bin/mkdir", "--", caskroom
-      else
-        ohai "We'll set permissions properly so we won't need sudo in the future"
-        toplevel_dir = caskroom
-        toplevel_dir = toplevel_dir.parent until toplevel_dir.parent.root?
-        unless toplevel_dir.directory?
-          # If a toplevel dir such as '/opt' must be created, enforce standard permissions.
-          # sudo in system is rude.
-          system "/usr/bin/sudo", "--", "/bin/mkdir", "--",         toplevel_dir
-          system "/usr/bin/sudo", "--", "/bin/chmod", "--", "0775", toplevel_dir
-        end
-        # sudo in system is rude.
-        system "/usr/bin/sudo", "--", "/bin/mkdir", "-p", "--", caskroom
-        unless caskroom.parent == toplevel_dir
-          system "/usr/bin/sudo", "--", "/usr/sbin/chown", "-R", "--", "#{current_user}:staff", caskroom.parent.to_s
-        end
-      end
-    end
+    Hbc::Caskroom.ensure_caskroom_exists
   end
 
   def self.load(query)
