@@ -65,22 +65,17 @@ class Hbc::CLI::InternalAuditModifiedCasks < Hbc::CLI::InternalUseBase
     @git_root ||= git(*%w[rev-parse --show-toplevel])
   end
 
-  def cask_dir
-    @cask_dir ||= Pathname(git_root).join("Casks")
-  end
-
   def modified_cask_files
-    return @modified_cask_files if defined? @modified_cask_files
-    out = git(*%w[diff --name-only --diff-filter=AM], commit_range,
-              "--", "#{cask_dir}/*.rb")
-    @modified_cask_files = out.split("\n")
+    @modified_cask_files ||= git_filter_cask_files("AM")
   end
 
   def added_cask_files
-    return @added_cask_files if defined? @added_cask_files
-    out = git(*%w[diff --name-only --diff-filter=A], commit_range,
-              "--", "#{cask_dir}/*.rb")
-    @added_cask_files = out.split("\n")
+    @added_cask_files ||= git_filter_cask_files("A")
+  end
+
+  def git_filter_cask_files(filter)
+    git("diff", "--name-only", "--diff-filter=#{filter}", commit_range,
+        "--", Pathname.new(git_root).join("Casks", "*.rb").to_s).split("\n")
   end
 
   def modified_casks
