@@ -2,7 +2,7 @@ cask 'kaleidoscope' do
   version '2.1.1-219'
   sha256 '660b105e03391e93a8dffe584cd5b26326b431786adcbaabbb60aa00afc5c8c7'
 
-  url "http://cdn.kaleidoscopeapp.com/releases/Kaleidoscope-#{version}.zip"
+  url "https://cdn.kaleidoscopeapp.com/releases/Kaleidoscope-#{version}.zip"
   appcast 'https://updates.blackpixel.com/updates?app=ks',
           checkpoint: '7227f778900aa4f17dab7b1984cf58e19325d131e71a6e38cd19bb363812730a'
   name 'Kaleidoscope'

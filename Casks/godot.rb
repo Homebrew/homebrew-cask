@@ -7,7 +7,7 @@ cask 'godot' do
   appcast 'https://github.com/godotengine/godot/releases.atom',
           checkpoint: 'eb4ed6f28e234b348b78db937c4ee160150dd41b7a12e13b85d8a04207107afe'
   name 'Godot Engine'
-  homepage 'http://www.godotengine.org/'
+  homepage 'https://www.godotengine.org/'
   license :mit
 
   app 'Godot.app'

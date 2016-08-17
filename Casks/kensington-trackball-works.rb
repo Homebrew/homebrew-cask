@@ -5,7 +5,7 @@ cask 'kensington-trackball-works' do
   # accoblobstorageus.blob.core.windows.net was verified as official when first introduced to the cask
   url 'https://accoblobstorageus.blob.core.windows.net/software/38c915e6-ca92-406e-bd65-84e9692d4493.dmg'
   name 'Kensington TrackballWorks'
-  homepage 'http://www.kensington.com/'
+  homepage 'https://www.kensington.com/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Kensington TrackballWorks.pkg'

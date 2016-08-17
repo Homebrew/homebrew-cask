@@ -6,7 +6,7 @@ cask 'whatsize' do
   appcast 'http://www.id-design.com/software/whatsize/release/notes.xml',
           checkpoint: 'a3939b96017d292cb2c10d7b3a024db78f734bf47d522b548c41e2ff71b74909'
   name 'WhatSize'
-  homepage 'http://whatsizemac.com/'
+  homepage 'https://whatsizemac.com/'
   license :commercial
 
   app 'WhatSize.app'

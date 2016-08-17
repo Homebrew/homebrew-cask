@@ -5,7 +5,7 @@ cask 'preform' do
   # s3.amazonaws.com/FormlabsReleases was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/FormlabsReleases/Release/#{version.sub(%r{_.*}, '')}/PreForm_#{version}.dmg"
   name 'PreForm'
-  homepage 'http://formlabs.com/en/products/preform/'
+  homepage 'https://formlabs.com/products/preform/'
   license :gratis
 
   app 'PreForm.app'
