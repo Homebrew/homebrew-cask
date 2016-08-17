@@ -30,6 +30,9 @@ class Hbc::CLI::Info < Hbc::CLI::Base
 
   def self.installation_info(cask)
     if cask.installed?
+      if !cask.updated?
+        puts "Not up-to-date"
+      end
       cask.versions.each do |version|
         versioned_staged_path = cask.caskroom_path.join(version)
 

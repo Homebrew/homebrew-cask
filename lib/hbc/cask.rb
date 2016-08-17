@@ -82,6 +82,10 @@ class Hbc::Cask
     !versions.empty?
   end
 
+  def updated?
+    !versions.index{ |p| p.to_s == version }.nil?
+  end
+
   def to_s
     @token
   end
