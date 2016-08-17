@@ -10,16 +10,16 @@ end
 # just in case
 raise "brew-cask: Ruby 2.0 or greater is required." if RUBY_VERSION.to_i < 2
 
+project_root = Pathname.new(File.expand_path("../..", __FILE__))
+
 # add Homebrew to load path
 $LOAD_PATH.unshift(File.expand_path("#{ENV['HOMEBREW_REPOSITORY']}/Library/Homebrew"))
 
 require "global"
 require "extend/pathname"
 
-# add homebrew-cask lib to load path
-brew_cask_path = Pathname.new(File.expand_path(__FILE__ + "/../../"))
-lib_path = brew_cask_path.join("lib")
-$LOAD_PATH.push(lib_path)
+# add Homebrew-Cask to load path
+$LOAD_PATH.push(project_root.join("lib").to_s)
 
 # force some environment variables
 ENV["HOMEBREW_NO_EMOJI"] = "1"
@@ -68,11 +68,20 @@ require "hbc"
 # override Homebrew locations
 Hbc.homebrew_prefix = Pathname.new(TEST_TMPDIR).join("prefix")
 Hbc.homebrew_repository = Hbc.homebrew_prefix
-Hbc.homebrew_tapspath = nil
 
-# Look for Casks in testcasks by default.  It is elsewhere required that
-# the string "test" appear in the directory name.
-Hbc.default_tap = "caskroom/homebrew-testcasks"
+# Override Tap::TAP_DIRECTORY to use our test Tap directory.
+class Tap
+  send(:remove_const, :TAP_DIRECTORY)
+  TAP_DIRECTORY = Hbc.homebrew_prefix.join("Library", "Taps")
+end
+
+Hbc.default_tap = Tap.fetch("caskroom", "testcasks")
+
+# also jack in some test Casks
+FileUtils.ln_s project_root.join("test", "support"), Tap::TAP_DIRECTORY.join("caskroom").tap(&:mkpath).join("homebrew-testcasks")
+
+# pretend that the caskroom/cask Tap is installed
+FileUtils.ln_s project_root, Tap::TAP_DIRECTORY.join("caskroom").tap(&:mkpath).join("homebrew-cask")
 
 # create cache directory
 Hbc.homebrew_cache = Pathname.new(TEST_TMPDIR).join("cache")
@@ -163,15 +172,8 @@ require "support/never_sudo_system_command"
 require "tmpdir"
 require "tempfile"
 
-# pretend like we installed the homebrew-cask tap
-project_root = Pathname.new(File.expand_path("#{File.dirname(__FILE__)}/../"))
-taps_dest = Hbc.homebrew_prefix.join(*%w[Library Taps caskroom])
-
 # create directories
-FileUtils.mkdir_p taps_dest
 FileUtils.mkdir_p Hbc.homebrew_prefix.join("bin")
-
-FileUtils.ln_s project_root, taps_dest.join("homebrew-cask")
 
 # Common superclass for test Casks for when we need to filter them out
 class Hbc::TestCask < Hbc::Cask; end
@@ -182,6 +184,3 @@ FileUtils.ln_s "/usr/local/bin/unar", Hbc.homebrew_prefix.join("bin/unar")
 FileUtils.ln_s "/usr/local/bin/unlzma", Hbc.homebrew_prefix.join("bin/unlzma")
 FileUtils.ln_s "/usr/local/bin/unxz", Hbc.homebrew_prefix.join("bin/unxz")
 FileUtils.ln_s "/usr/local/bin/lsar", Hbc.homebrew_prefix.join("bin/lsar")
-
-# also jack in some test Casks
-FileUtils.ln_s project_root.join("test", "support"), taps_dest.join("homebrew-testcasks")

@@ -10,15 +10,9 @@ module Hbc::Scopes
     end
 
     def all_tapped_cask_dirs
-      return @all_tapped_cask_dirs unless @all_tapped_cask_dirs.nil?
-      fq_default_tap = Hbc.homebrew_tapspath.join(default_tap, "Casks")
-      @all_tapped_cask_dirs = Dir.glob(Hbc.homebrew_tapspath.join("*", "*", "Casks")).map { |d| Pathname.new(d) }
-      # optimization: place the default Tap first
-      if @all_tapped_cask_dirs.include? fq_default_tap
-        @all_tapped_cask_dirs -= [fq_default_tap]
-        @all_tapped_cask_dirs.unshift fq_default_tap
-      end
-      @all_tapped_cask_dirs
+      @all_tapped_cask_dirs ||= Tap.names.map(&Tap.method(:fetch)).map(&:cask_dir)
+                                   .unshift(default_tap.cask_dir) # optimization: place the default Tap first
+                                   .uniq
     end
 
     def reset_all_tapped_cask_dirs
