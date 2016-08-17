@@ -9,5 +9,20 @@ cask 'anoncoin' do
 
   app 'Anoncoin.app'
 
-  zap delete: '~/Library/Application Support/Anoncoin/'
+  zap delete: [
+                '~/Library/Application Support/Anoncoin/anoncoin.conf',
+                '~/Library/Application Support/Anoncoin/blocks',
+                '~/Library/Application Support/Anoncoin/bootstrap.dat',
+                '~/Library/Application Support/Anoncoin/chainstate',
+                '~/Library/Application Support/Anoncoin/database',
+                '~/Library/Application Support/Anoncoin/db.log',
+                '~/Library/Application Support/Anoncoin/debug.log',
+                '~/Library/Application Support/Anoncoin/fee_estimates.dat',
+                '~/Library/Application Support/Anoncoin/i2pkey.dat',
+                '~/Library/Application Support/Anoncoin/peers.dat',
+                '~/Library/Preferences/net.anoncoin.Anoncoin-Qt.plist',
+                '~/Library/Preferences/org.anoncoindotnet.Anoncoin.plist',
+                '~/Library/Saved Application State/org.anoncoindotnet.Anoncoin.savedState',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.anoncoindotnet.anoncoin.sfl',
+              ]
 end
