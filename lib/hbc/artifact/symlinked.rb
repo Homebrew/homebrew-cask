@@ -1,19 +1,16 @@
 require "hbc/artifact/relocated"
 
 class Hbc::Artifact::Symlinked < Hbc::Artifact::Relocated
-  def self.islink?(path)
-    path.symlink?
-  end
-
   def self.link_type_english_name
     "Symlink"
   end
 
-  def summary
-    {
-      english_description: "#{self.class.artifact_english_name} #{self.class.link_type_english_name}s managed by brew-cask:",
-      contents:            @cask.artifacts[self.class.artifact_dsl_key].map(&method(:summarize_one_link)) - [nil],
-    }
+  def self.english_description
+    "#{artifact_english_name} #{link_type_english_name}s"
+  end
+
+  def self.islink?(path)
+    path.symlink?
   end
 
   def link(artifact_spec)
@@ -31,11 +28,11 @@ class Hbc::Artifact::Symlinked < Hbc::Artifact::Relocated
   end
 
   def install_phase
-    @cask.artifacts[self.class.artifact_dsl_key].each { |artifact| link(artifact) }
+    @cask.artifacts[self.class.artifact_dsl_key].each(&method(:link))
   end
 
   def uninstall_phase
-    @cask.artifacts[self.class.artifact_dsl_key].each { |artifact| unlink(artifact) }
+    @cask.artifacts[self.class.artifact_dsl_key].each(&method(:unlink))
   end
 
   def preflight_checks(source, target)
@@ -55,11 +52,14 @@ class Hbc::Artifact::Symlinked < Hbc::Artifact::Relocated
     add_altname_metadata source, target.basename.to_s
   end
 
-  def summarize_one_link(artifact_spec)
+  def summarize_artifact(artifact_spec)
     load_specification artifact_spec
+
     return unless self.class.islink?(target)
-    link_description = target.exist? ? "" : "#{Hbc::Utils::Tty.red.underline}Broken Link#{Hbc::Utils::Tty.reset}: "
-    printable_target = "'#{target}'".sub(%r{^'#{ENV['HOME']}/*}, "~/'")
-    "#{link_description}#{printable_target} -> '#{target.readlink}'"
+
+    link_description = "#{Hbc::Utils::Tty.red.underline}Broken Link#{Hbc::Utils::Tty.reset}: " unless target.exist?
+    target_readlink_abv = " (#{target.readlink.abv})" if target.readlink.exist?
+
+    "#{link_description}#{printable_target} -> #{target.readlink}#{target_readlink_abv}"
   end
 end

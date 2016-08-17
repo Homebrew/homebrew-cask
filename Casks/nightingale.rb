@@ -7,7 +7,7 @@ cask 'nightingale' do
   appcast 'https://github.com/nightingale-media-player/nightingale-hacking/releases.atom',
           checkpoint: '4b1ee6d24b9052faa6389f2deb6c63c05a8b544229ba72fed3de43ff59f316c8'
   name 'Nightingale'
-  homepage 'http://getnightingale.com/'
+  homepage 'https://getnightingale.com/'
   license :oss
 
   app 'Nightingale.app'

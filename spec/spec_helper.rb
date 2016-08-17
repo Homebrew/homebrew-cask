@@ -10,26 +10,25 @@ end
 # just in case
 raise "brew-cask: Ruby 2.0 or greater is required." if RUBY_VERSION.to_i < 2
 
-project_root = Pathname(File.expand_path("../..", __FILE__))
+project_root = Pathname.new(File.expand_path("../..", __FILE__))
 
-Dir["#{project_root}/spec/support/*.rb"].each(&method(:require))
+# add Homebrew to load path
+$LOAD_PATH.unshift(File.expand_path("#{ENV['HOMEBREW_REPOSITORY']}/Library/Homebrew"))
+
+require "global"
+require "extend/pathname"
+
+# add Homebrew-Cask to load path
+$LOAD_PATH.push(project_root.join("lib").to_s)
 
 # force some environment variables
 ENV["HOMEBREW_NO_EMOJI"] = "1"
 ENV["HOMEBREW_CASK_OPTS"] = nil
 
+Dir["#{project_root}/spec/support/*.rb"].each(&method(:require))
+
 # from Homebrew. Provides expects method.
 require "mocha/api"
-
-# add homebrew to load path
-homebrew_repo = `brew --repository`.chomp
-$LOAD_PATH.unshift(File.expand_path("#{homebrew_repo}/Library/Homebrew"))
-
-require "global"
-require "extend/pathname"
-
-# add homebrew-cask lib to load path
-$LOAD_PATH.push(project_root.join("lib").to_s)
 
 require "hbc"
 
@@ -43,13 +42,20 @@ end
 # override Homebrew locations
 Hbc.homebrew_prefix = Pathname.new(TEST_TMPDIR).join("prefix")
 Hbc.homebrew_repository = Hbc.homebrew_prefix
-Hbc.homebrew_tapspath = nil
 Hbc.binarydir = Hbc.homebrew_prefix.join("binarydir", "bin")
 Hbc.appdir = Pathname.new(TEST_TMPDIR).join("appdir")
 
-# Look for Casks in testcasks by default.  It is elsewhere required that
-# the string "test" appear in the directory name.
-Hbc.default_tap = project_root.join("spec", "support")
+# Override Tap::TAP_DIRECTORY to use our test Tap directory.
+class Tap
+  send(:remove_const, :TAP_DIRECTORY)
+  TAP_DIRECTORY = Hbc.homebrew_repository.join("Library", "Taps")
+end
+
+Hbc.default_tap = Tap.fetch("caskroom", "speccasks")
+Hbc.default_tap.path.dirname.mkpath
+
+# also jack in some test Casks
+FileUtils.ln_s project_root.join("spec", "support"), Tap::TAP_DIRECTORY.join("caskroom", "homebrew-speccasks")
 
 # create cache directory
 Hbc.homebrew_cache = Pathname.new(TEST_TMPDIR).join("cache")
