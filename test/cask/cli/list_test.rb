@@ -10,70 +10,79 @@ describe Hbc::CLI::List do
 
     lambda {
       Hbc::CLI::List.run
-    }.must_output <<-OUTPUT.gsub(%r{^ *}, "")
+    }.must_output <<-EOS.undent
       local-caffeine
       local-transmission
-    OUTPUT
+    EOS
   end
 
-  it "lists the installed Casks and all their installed versions" do
-    casks = %w[local-caffeine local-transmission].map { |c| Hbc.load(c) }
+  describe "lists versions" do
+    let(:casks) { ["local-caffeine", "local-transmission"] }
+    let(:output) {
+      <<-EOS.undent
+        local-caffeine 1.2.3
+        local-transmission 2.61
+      EOS
+    }
 
-    casks.each do |c|
-      TestHelper.install_with_caskfile(c)
+    before(:each) do
+      casks.map(&Hbc.method(:load)).each(&TestHelper.method(:install_with_caskfile))
     end
 
-    lambda {
-      Hbc::CLI::List.run("--versions")
-    }.must_output <<-OUTPUT.gsub(%r{^ *}, "")
-      local-caffeine 1.2.3
-      local-transmission 2.61
-    OUTPUT
+    it "of all installed Casks" do
+      lambda {
+        Hbc::CLI::List.run("--versions")
+      }.must_output(output)
+    end
+
+    it "of given Casks" do
+      lambda {
+        Hbc::CLI::List.run("--versions", "local-caffeine", "local-transmission")
+      }.must_output(output)
+    end
   end
 
   describe "when Casks have been renamed" do
+    let(:caskroom_path) { Hbc.caskroom.join("ive-been-renamed") }
+    let(:staged_path) { caskroom_path.join("latest") }
+
     before do
-      @renamed_path = Hbc.caskroom.join("ive-been-renamed", "latest", "Renamed.app").tap(&:mkpath)
-      @renamed_path.join("Info.plist").open("w") { |f| f.puts "Oh plist" }
+      staged_path.mkpath
     end
 
     after do
-      @renamed_path.rmtree if @renamed_path.exist?
+      caskroom_path.rmtree
     end
 
     it "lists installed Casks without backing ruby files (due to renames or otherwise)" do
       lambda {
         Hbc::CLI::List.run
-      }.must_output <<-OUTPUT.gsub(%r{^ *}, "")
+      }.must_output <<-EOS.undent
         ive-been-renamed (!)
-      OUTPUT
+      EOS
     end
   end
 
-  it "given a set of installed Casks, lists the installed files for those Casks" do
-    casks = %w[local-caffeine local-transmission].map { |c| Hbc.load(c) }
+  describe "given a set of installed Casks" do
+    let(:caffeine) { Hbc.load("local-caffeine") }
+    let(:transmission) { Hbc.load("local-transmission") }
+    let(:casks) { [caffeine, transmission] }
 
-    casks.each do |c|
-      TestHelper.install_without_artifacts_with_caskfile(c)
+    it "lists the installed files for those Casks" do
+      casks.each(&TestHelper.method(:install_without_artifacts_with_caskfile))
+
+      shutup do
+        Hbc::Artifact::App.new(transmission).install_phase
+      end
+
+      lambda {
+        Hbc::CLI::List.run("local-transmission", "local-caffeine")
+      }.must_output <<-EOS.undent
+      ==> Apps
+      #{Hbc.appdir.join('Transmission.app')} (#{Hbc.appdir.join('Transmission.app').abv})
+      ==> Apps
+      Missing App: #{Hbc.appdir.join('Caffeine.app')}
+    EOS
     end
-
-    caffeine, transmission = casks
-
-    shutup do
-      Hbc::Artifact::App.new(transmission).install_phase
-    end
-
-    lambda {
-      Hbc::CLI::List.run("local-transmission", "local-caffeine")
-    }.must_output <<-OUTPUT.gsub(%r{^ *}, "")
-      ==> Apps managed by brew-cask:
-      '#{Hbc.appdir.join('Transmission.app')}'
-      ==> Staged content:
-      #{transmission.staged_path} (0 files)
-      ==> Apps managed by brew-cask:
-      Missing App: '#{Hbc.appdir.join('Caffeine.app')}'
-      ==> Staged content:
-      #{caffeine.staged_path} (13 files)
-    OUTPUT
   end
 end
