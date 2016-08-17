@@ -9,15 +9,6 @@ cask 'anoncoin' do
 
   app 'Anoncoin.app'
 
-  uninstall delete: [
-                      '~/Library/Application Support/Anoncoin/db.log',
-                      '~/Library/Application Support/Anoncoin/debug.log',
-                      '~/Library/Saved Application State/org.anoncoindotnet.Anoncoin.savedState',
-                      '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.anoncoindotnet.anoncoin.sfl',
-                    ]
-
-  # note how wallet.dat is not removed since it contains the most sensible data
-  # needed to access your coins.
   zap delete: [
                 '~/Library/Application Support/Anoncoin/anoncoin.conf',
                 '~/Library/Application Support/Anoncoin/blocks',
