@@ -5,7 +5,7 @@ cask 'pencil2d-pencil' do
   # bitbucket.org/chchwy/pencil2d was verified as official when first introduced to the cask
   url "https://bitbucket.org/chchwy/pencil2d/downloads/Pencil2D-dev-#{version}-mac.zip"
   name 'Pencil2D Animation'
-  homepage 'http://www.pencil2d.org/'
+  homepage 'https://www.pencil2d.org/'
   license :gpl
 
   app 'Pencil.app'

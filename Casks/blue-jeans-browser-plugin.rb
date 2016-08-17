@@ -4,7 +4,7 @@ cask 'blue-jeans-browser-plugin' do
 
   url "https://swdl.bluejeans.com/skinny/rbjnplugin_#{version}.pkg"
   name 'Blue Jeans Browser Plug-in'
-  homepage 'http://bluejeans.com/'
+  homepage 'https://bluejeans.com/'
   license :gratis
 
   container type:   :xar,

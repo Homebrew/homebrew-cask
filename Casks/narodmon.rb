@@ -7,7 +7,7 @@ cask 'narodmon' do
   appcast 'https://github.com/niki-timofe/NarodMonOSX/releases.atom',
           checkpoint: 'b82c47d9286acc23f2c6dce439901c2433d2cb0fb9c2856d1fb78ffc96ce3f1e'
   name 'NarodMon'
-  homepage 'http://narodmon.ru/'
+  homepage 'https://narodmon.ru/'
   license :mit
 
   app 'NarodMon.app'
