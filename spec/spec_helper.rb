@@ -7,9 +7,6 @@ if ENV["COVERAGE"]
   Coveralls.wear_merged!
 end
 
-# just in case
-raise "brew-cask: Ruby 2.0 or greater is required." if RUBY_VERSION.to_i < 2
-
 project_root = Pathname.new(File.expand_path("../..", __FILE__))
 
 # add Homebrew to load path
