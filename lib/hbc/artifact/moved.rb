@@ -1,15 +1,8 @@
 require "hbc/artifact/relocated"
 
 class Hbc::Artifact::Moved < Hbc::Artifact::Relocated
-  def summary
-    contents = @cask.artifacts[self.class.artifact_dsl_key].map { |artifact|
-      summarize_artifact(artifact)
-    }.compact
-
-    {
-      english_description: "#{self.class.artifact_english_name}s managed by brew-cask:",
-      contents:            contents,
-    }
+  def self.english_description
+    "#{artifact_english_name}s"
   end
 
   def install_phase
@@ -82,14 +75,14 @@ class Hbc::Artifact::Moved < Hbc::Artifact::Relocated
 
   def summarize_artifact(artifact_spec)
     load_specification artifact_spec
-    printable_target = "'#{target}'"
-    printable_target.sub!(%r{^'#{ENV['HOME']}/*}, "~/'")
 
-    unless target.exist?
+    if target.exist?
+      target_abv = " (#{target.abv})"
+    else
       warning = "Missing #{self.class.artifact_english_name}"
       warning = "#{Hbc::Utils::Tty.red.underline}#{warning}#{Hbc::Utils::Tty.reset}: "
     end
 
-    "#{warning}#{printable_target}"
+    "#{warning}#{printable_target}#{target_abv}"
   end
 end

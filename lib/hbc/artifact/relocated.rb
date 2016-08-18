@@ -1,6 +1,19 @@
 require "hbc/artifact/base"
 
 class Hbc::Artifact::Relocated < Hbc::Artifact::Base
+  def summary
+    {
+      english_description: self.class.english_description,
+      contents:            @cask.artifacts[self.class.artifact_dsl_key].map(&method(:summarize_artifact)).compact,
+    }
+  end
+
+  attr_reader :source, :target
+
+  def printable_target
+    target.to_s.sub(%r{^#{ENV['HOME']}(#{File::SEPARATOR}|$)}, "~/")
+  end
+
   ALT_NAME_ATTRIBUTE = "com.apple.metadata:kMDItemAlternateNames".freeze
 
   # Try to make the asset searchable under the target name.  Spotlight
@@ -24,8 +37,6 @@ class Hbc::Artifact::Relocated < Hbc::Artifact::Base
                   args:         ["-w", ALT_NAME_ATTRIBUTE, altnames, file.to_s],
                   print_stderr: false)
   end
-
-  attr_reader :source, :target
 
   def load_specification(artifact_spec)
     source_string, target_hash = artifact_spec

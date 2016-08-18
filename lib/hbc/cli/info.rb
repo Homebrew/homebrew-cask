@@ -49,23 +49,8 @@ class Hbc::CLI::Info < Hbc::CLI::Base
   end
 
   def self.github_info(cask)
-    cask_token = cask.token
-    cask_token = Hbc.all_tokens.detect { |t| t.split("/").last == cask_token } unless cask_token.include?("/")
-    return nil unless cask_token.respond_to?(:length) && !cask_token.empty?
-    path_elements = cask_token.split "/"
-    if path_elements.count == 2
-      # eg caskroom-cask/google-chrome.
-      # Not certain this form is needed, but it was supported in the past.
-      token = path_elements[1]
-      dash_elements = path_elements[0].split("-")
-      repo = dash_elements.pop
-      dash_elements.pop if dash_elements.count > 1 && dash_elements[-1] + "-" == repo_prefix
-      user = dash_elements.join("-")
-    else
-      user, repo, token = path_elements
-    end
-    repo.sub!(%r{^homebrew-}i, "")
-    "https://github.com/#{user}/homebrew-#{repo}/blob/master/Casks/#{token}.rb"
+    user, repo, token = Hbc::QualifiedToken.parse(Hbc.all_tokens.detect { |t| t.split("/").last == cask.token })
+    "#{Tap.fetch(user, repo).default_remote}/blob/master/Casks/#{token}.rb"
   end
 
   def self.artifact_info(cask)

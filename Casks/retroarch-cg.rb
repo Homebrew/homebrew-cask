@@ -4,7 +4,7 @@ cask 'retroarch-cg' do
 
   url "https://buildbot.libretro.com/stable/#{version}/apple/osx/x86_64/RetroArch_CG.dmg"
   name 'RetroArch CG'
-  homepage 'http://www.libretro.com/'
+  homepage 'https://www.libretro.com/'
   license :gpl
 
   # Renamed to avoid conflict with retroarch.

@@ -9,5 +9,8 @@ cask 'livestreamer-twitch-gui' do
   homepage 'https://github.com/bastimeyer/livestreamer-twitch-gui'
   license :mit
 
+  depends_on formula: 'livestreamer'
+  depends_on cask: 'vlc'
+
   app 'Livestreamer Twitch GUI.app'
 end

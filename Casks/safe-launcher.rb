@@ -7,7 +7,7 @@ cask 'safe-launcher' do
   appcast 'https://github.com/maidsafe/safe_launcher/releases.atom',
           checkpoint: '064e67282ae3f5468679b75c9b0ac8b2efbbcbbbd1076231bc56f6cb277ca5b7'
   name 'SAFE Launcher'
-  homepage 'http://www.maidsafe.net'
+  homepage 'https://www.maidsafe.net/'
   license :unknown
 
   pkg "safe_launcher-v#{version}-osx.pkg"

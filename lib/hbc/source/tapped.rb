@@ -11,9 +11,9 @@ class Hbc::Source::Tapped
     token_with_tap = Hbc.all_tokens.find { |t| t.split("/").last == query.sub(%r{\.rb$}i, "") }
     if token_with_tap
       user, repo, token = token_with_tap.split("/")
-      Hbc.homebrew_tapspath.join(user, repo, "Casks", "#{token}.rb")
+      Tap.fetch(user, repo).cask_dir.join("#{token}.rb")
     else
-      Hbc.homebrew_tapspath.join(Hbc.default_tap, "Casks", "#{query.sub(%r{\.rb$}i, '')}.rb")
+      Hbc.default_tap.cask_dir.join(query.sub(%r{(\.rb)?$}i, ".rb"))
     end
   end
 

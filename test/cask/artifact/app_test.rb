@@ -268,7 +268,7 @@ describe Hbc::Artifact::App do
 
       description = Hbc::Artifact::App.new(cask).summary[:english_description]
 
-      description.must_equal "Apps managed by brew-cask:"
+      description.must_equal "Apps"
     end
 
     describe "app is correctly installed" do
@@ -282,7 +282,7 @@ describe Hbc::Artifact::App do
         contents = Hbc::Artifact::App.new(cask).summary[:contents]
         app_path = Hbc.appdir.join("Caffeine.app")
 
-        contents.must_equal ["'#{app_path}'"]
+        contents.must_equal ["#{app_path} (#{app_path.abv})"]
       end
     end
 
@@ -294,7 +294,7 @@ describe Hbc::Artifact::App do
         app_path = Hbc.appdir.join("Caffeine.app")
 
         contents.size.must_equal 1
-        contents[0].must_match(%r{.*Missing App.*: '#{app_path}'})
+        contents[0].must_match(%r{.*Missing App.*: #{app_path}})
       end
     end
   end

@@ -7,7 +7,7 @@ cask 'world-of-tanks' do
   appcast 'https://wot.gcdn.co/us/files/osx/WoT_OSX_update_na.xml',
           checkpoint: '84e19ba0bf8fa534ad34ce6b844bc5682f809a935cd4f08bae376997d81f2a1f'
   name 'World Of Tanks'
-  homepage 'http://worldoftanks.com/'
+  homepage 'https://worldoftanks.com/'
   license :gratis
 
   app 'World of Tanks.app'
