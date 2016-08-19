@@ -1,0 +1,64 @@
+#!/usr/bin/env ruby
+#
+# list_login_items_for_app
+#
+
+###
+### dependencies
+###
+
+require "open3"
+
+###
+### methods
+###
+
+def usage
+  <<-EOS
+Usage: list_login_items_for_app <path.app>
+
+Given an Application (app) bundle directory on disk, find all
+login items associated with that app, which you can use in a
+Cask uninstall stanza, eg
+
+    uninstall login_item: 'login item name'
+
+Note that you will likely need to have opened the app at least
+once for any login items to be present.
+
+See CONTRIBUTING.md for more information.
+
+EOS
+end
+
+def process_args
+  if ARGV.first =~ %r{^-+h(?:elp)?$}
+    puts usage
+    exit 0
+  elsif ARGV.length == 1
+    $app_path = ARGV.first
+  else
+    puts usage
+    exit 1
+  end
+end
+
+def list_login_items_for_app(app_path)
+  out, err, status = Open3.capture3(
+    "/usr/bin/osascript", "-e",
+    "tell application \"System Events\" to get the name of every login item " \
+    "whose path contains \"#{File.basename(app_path)}\""
+  )
+  if status.exitstatus > 0
+    $stderr.puts err
+    exit status.exitstatus
+  end
+  puts out.gsub(", ", "\n")
+end
+
+###
+### main
+###
+
+process_args
+list_login_items_for_app $app_path
