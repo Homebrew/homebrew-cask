@@ -28,11 +28,7 @@ cache:
   directories:
     - $HOME/.gem
 
-before_install:
-  - . ci/travis/before_install.sh
-
-install:
-  - . ci/travis/install.sh
+install: true # skip install step
 
 before_script:
   - . ci/travis/before_script.sh
