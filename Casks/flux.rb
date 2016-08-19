@@ -19,5 +19,8 @@ cask 'flux' do
 
   uninstall login_item: 'Flux'
 
-  zap delete: '~/Library/Preferences/org.herf.Flux.plist'
+  zap delete: [
+                '~/Library/Preferences/org.herf.Flux.plist',
+                '~/Library/Caches/org.herf.Flux',
+              ]
 end
