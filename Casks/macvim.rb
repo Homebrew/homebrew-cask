@@ -14,6 +14,9 @@ cask 'macvim' do
   app 'MacVim.app'
   binary 'mvim'
 
+  executables = %w[mvimdiff mview mvimex gvim gvimdiff gview gvimex]
+  executables.each { |e| binary 'mvim', target: e }
+
   zap delete: [
                 '~/Library/Preferences/org.vim.MacVim.LSSharedFileList.plist',
                 '~/Library/Preferences/org.vim.MacVim.plist',
