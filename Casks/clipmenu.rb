@@ -15,6 +15,6 @@ cask 'clipmenu' do
   zap delete: [
                 '~/Library/Application Support/ClipMenu',
                 '~/Library/Preferences/com.naotaka.ClipMenu.plist',
-                '~/Library/Caches/com.naotaka.ClipMenu'
+                '~/Library/Caches/com.naotaka.ClipMenu',
               ]
 end
