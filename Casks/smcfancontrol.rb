@@ -10,5 +10,5 @@ cask 'smcfancontrol' do
   license :gpl
 
   app 'smcFanControl.app'
-  zap delete: '~/Library/Caches/com.eidac.smcFanControl2'
+  zap delete: "~/Library/Caches/com.eidac.smcFanControl#{version.major}"
 end
