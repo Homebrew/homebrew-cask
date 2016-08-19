@@ -30,5 +30,6 @@ cask 'vlc' do
                 '~/Library/Preferences/org.videolan.vlc',
                 '~/Library/Preferences/org.videolan.vlc.plist',
                 '~/Library/Saved Application State/org.videolan.vlc.savedState',
+                '~/Library/Caches/org.videolan.vlc',
               ]
 end
