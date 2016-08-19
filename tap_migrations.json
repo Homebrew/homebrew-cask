@@ -1,4 +1,5 @@
 {
+  "azure-cli": "homebrew/core",
   "consul": "homebrew/core",
   "consul-template": "homebrew/core",
   "cryptol": "homebrew/core",
