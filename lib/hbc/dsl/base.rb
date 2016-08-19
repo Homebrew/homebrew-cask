@@ -8,6 +8,10 @@ class Hbc::DSL::Base
 
   def_delegators :@cask, :token, :version, :caskroom_path, :staged_path, :appdir
 
+  def system(cmd, *args)
+    @command.run!(cmd, args: args)
+  end
+
   def system_command(executable, options = {})
     @command.run!(executable, options)
   end
