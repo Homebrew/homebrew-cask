@@ -52,6 +52,7 @@ If your issue persists, follow these instructions to the appropriate course of a
 * [A cask fails to install](doc/reporting_bugs/a_cask_fails_to_install.md)
 * [`brew cask list` shows wrong information](doc/reporting_bugs/brew_cask_list_shows_wrong_information.md)
 * [`uninstall` wrongly reports cask as not installed](doc/reporting_bugs/uninstall_wrongly_reports_cask_as_not_installed.md)
+* [`Error: Unknown command: cask` error](doc/reporting_bugs/error_unknown_command_cask.md)
 * [My problem isn’t listed][bug_report_template]
 
 ## Requests
