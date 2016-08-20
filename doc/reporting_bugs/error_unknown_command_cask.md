@@ -2,7 +2,7 @@
 
 # `Error: Unknown command: cask` error
 
-If you run into `Error: Unknown command: cask` while trying to use any `brew update command`, please run the below command to fix things:
+If you run into `Error: Unknown command: cask` while trying to use any `brew cask` command, please run the below command to fix things:
 
 `cd $(brew --repo); git fetch; git reset --hard origin/master; brew update`
 
