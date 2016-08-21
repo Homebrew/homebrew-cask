@@ -1,10 +1,10 @@
 cask 'astropad' do
-  version '2.0.0'
-  sha256 '6850f66e53bafe05fe1a5f93e9f2199fcfa64bd1de2d1ba7357b1b62ba9b81b3'
+  version '2.0.3'
+  sha256 '813a0042ce195238c25b76794bf27313423ac800a7c4fc0cfbf67fd5797f454b'
 
   url "http://astropad.com/downloads/Astropad-#{version}.zip"
   appcast 'http://astropad.com/downloads/sparkle.xml',
-          checkpoint: 'aab0e83165b005c4b0bac390dc063e88de2d4b38f73d1aa038b68e7e28caf1e6'
+          checkpoint: '0324b152861cfba54b2e675e64ec66a1aadfa4fe7e337478d1dc369b4819f12f'
   name 'Astropad'
   homepage 'http://astropad.com/'
   license :gratis
