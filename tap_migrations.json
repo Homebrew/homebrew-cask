@@ -27,6 +27,7 @@
   "python3": "homebrew/core",
   "r": "homebrew/science",
   "rust": "homebrew/core",
+  "serf": "homebrew/core",
   "sickbeard": "homebrew/core",
   "srclib": "homebrew/core",
   "sslmate": "homebrew/core",
