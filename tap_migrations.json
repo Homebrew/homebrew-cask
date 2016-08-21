@@ -26,6 +26,7 @@
   "python": "homebrew/core",
   "python3": "homebrew/core",
   "r": "homebrew/science",
+  "redis": "homebrew/core",
   "rust": "homebrew/core",
   "serf": "homebrew/core",
   "sickbeard": "homebrew/core",
