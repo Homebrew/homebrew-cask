@@ -11,6 +11,7 @@
   "go": "homebrew/core",
   "graphviz": "homebrew/core",
   "hub": "homebrew/core",
+  "hyper": "homebrew/core",
   "idris": "homebrew/core",
   "jenkins": "homebrew/core",
   "mitmproxy": "homebrew/core",
