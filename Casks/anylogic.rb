@@ -14,6 +14,8 @@ cask 'anylogic' do
 
   uninstall pkgutil: 'com.anylogic.AnyLogic'
 
+  zap delete: '~/Library/Caches/com.anylogic.AnyLogic'
+  
   caveats do
     depends_on_java('8')
 
@@ -22,6 +24,4 @@ cask 'anylogic' do
         http://www.anylogic.com/upload/activation-guides/AnyLogic_#{version.slice(%r{\w+})}_PLE_License.pdf
     EOS
   end
-  
-  zap delete: '~/Library/Caches/com.anylogic.AnyLogic'
 end
