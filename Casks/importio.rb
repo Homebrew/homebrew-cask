@@ -15,4 +15,6 @@ cask 'importio' do
     system '/usr/bin/tar', '-xf', "#{staged_path}/importio.pkg/Payload", '-C', staged_path
     system '/bin/rm', '-r', "#{staged_path}/importio.pkg", "#{staged_path}/install.pkg"
   end
+
+  zap delete: '~/Library/Containers/import.io'
 end
