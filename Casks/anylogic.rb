@@ -22,4 +22,6 @@ cask 'anylogic' do
         http://www.anylogic.com/upload/activation-guides/AnyLogic_#{version.slice(%r{\w+})}_PLE_License.pdf
     EOS
   end
+  
+  zap delete: '~/Library/Caches/com.anylogic.AnyLogic'
 end
