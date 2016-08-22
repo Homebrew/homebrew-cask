@@ -4,7 +4,7 @@ cask 'ramme' do
 
   url "https://github.com/terkelg/ramme/releases/download/#{version}/Ramme-osx-#{version}.zip"
   appcast 'https://github.com/terkelg/ramme/releases.atom',
-    checkpoint: '09dfb3a5d3bf1762a29a79a533b9f073be840c9457fe6fe00ed442d6fc045cb7'
+          checkpoint: '09dfb3a5d3bf1762a29a79a533b9f073be840c9457fe6fe00ed442d6fc045cb7'
   name 'Ramme'
   homepage 'https://github.com/terkelg/ramme/'
   license :mit
