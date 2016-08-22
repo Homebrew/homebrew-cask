@@ -3,9 +3,9 @@ cask 'raindrop' do
   sha256 :no_check
 
   url 'https://raindrop.io/releases/mac/Raindrop.dmg'
-  name 'Raindrop'
+  name 'Raindrop.io'
   homepage 'https://raindrop.io/'
   license :gratis
 
-  app 'Raindrop.app'
+  app 'Raindrop.io.app'
 end
