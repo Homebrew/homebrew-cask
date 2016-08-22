@@ -7,7 +7,7 @@ cask 'docker' do
           checkpoint: '0fb1705e17e1946681c0ac6f2ebe60ae8316990dacff8822ade2fd95153a7a09'
   name 'Docker for Mac'
   homepage 'https://www.docker.com/products/docker'
-  license :mit
+  license :gratis
 
   auto_updates true
 
