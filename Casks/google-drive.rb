@@ -12,5 +12,6 @@ cask 'google-drive' do
   zap delete: [
                 '~/Library/Application Support/Google/Drive',
                 '~/Library/Preferences/com.google.GoogleDrive.plist',
+                '~/Library/Caches/com.google.GoogleDrive',
               ]
 end
