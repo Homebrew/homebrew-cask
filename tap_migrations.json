@@ -2,6 +2,7 @@
   "azure-cli": "homebrew/core",
   "consul": "homebrew/core",
   "consul-template": "homebrew/core",
+  "corectl": "homebrew/core",
   "cryptol": "homebrew/core",
   "cups-pdf": "homebrew/core",
   "dmd": "homebrew/core",
