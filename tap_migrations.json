@@ -10,6 +10,7 @@
   "exiftool": "homebrew/core",
   "fpc": "homebrew/core",
   "gedit": "homebrew/core",
+  "ghc": "homebrew/core",
   "go": "homebrew/core",
   "graphviz": "homebrew/core",
   "hub": "homebrew/core",
