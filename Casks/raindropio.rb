@@ -1,4 +1,4 @@
-cask 'raindrop' do
+cask 'raindropio' do
   version :latest
   sha256 :no_check
 
