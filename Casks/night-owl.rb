@@ -5,7 +5,7 @@ cask 'night-owl' do
   # aki-null.net was verified as official when first introduced to the cask
   url 'https://aki-null.net/yf/NightOwl.zip'
   appcast 'https://aki-null.net/yf/distribution/changelog_sl_en.html',
-          checkpoint: '766f5fa2993d8d1e306449dac998b5620f30d4798e379564e0837e9eab963794'
+          checkpoint: 'b773919ea618fd977a79719e2084e056cb18da18c7ec61bde3e0cef676bff8ed'
   name 'NightOwl'
   name 'YoruFukurou'
   homepage 'https://sites.google.com/site/yorufukurou/home-en'
