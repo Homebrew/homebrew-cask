@@ -4,7 +4,7 @@ cask 'review-sherlock' do
 
   url 'http://www.rbcafe.com/download/reviewsherlock.zip'
   name 'Review Sherlock'
-  homepage 'http://www.rbcafe.com/softwares/review-sherlock/'
+  homepage 'http://www.rbcafe.com/software/review-sherlock/'
   license :commercial
 
   depends_on macos: '>= :mountain_lion'
