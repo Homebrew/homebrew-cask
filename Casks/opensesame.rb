@@ -2,7 +2,7 @@ cask 'opensesame' do
   if MacOS.version <= :snow_leopard
     version '0.26'
     sha256 'b2a37cfd1c514b2ae8ddd0be09a274844420bfa432318ef87df308fdd3b6a770'
-    url "http://files.cogsci.nl/software/opensesame/opensesame_#{version}-macos-2.zip"
+    url "https://files.cogsci.nl/software/opensesame/opensesame_#{version}-macos-2.zip"
   else
     version '3.1.2'
     sha256 'f82fd0daf576784b04152e239bfaa633d5933af6273721c01d31ffa9b715353e'

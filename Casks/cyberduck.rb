@@ -14,5 +14,6 @@ cask 'cyberduck' do
   zap delete: [
                 '~/Library/Application Support/Cyberduck',
                 '~/Library/Preferences/ch.sudo.cyberduck.plist',
+                '~/Library/Caches/ch.sudo.cyberduck',
               ]
 end

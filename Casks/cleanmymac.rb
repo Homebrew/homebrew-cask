@@ -62,6 +62,8 @@ cask 'cleanmymac' do
                   "~/Library/Preferences/com.macpaw.CleanMyMac#{version.major}.KnowledgeBase.plist",
                   "~/Library/Preferences/com.macpaw.cleanmymac#{version.major}.menu.plist",
                   "~/Library/Preferences/com.macpaw.CleanMyMac#{version.major}.plist",
+                  "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}",
+                  "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}.Menu",
                 ]
   end
 
