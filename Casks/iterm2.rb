@@ -19,5 +19,6 @@ cask 'iterm2' do
   zap delete: [
                 '~/Library/Preferences/com.googlecode.iterm2.plist',
                 '~/Library/Caches/com.googlecode.iterm2',
+                '~/Library/Application Support/iTerm',
               ]
 end
