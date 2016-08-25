@@ -11,5 +11,8 @@ cask 'smcfancontrol' do
 
   app 'smcFanControl.app'
 
-  zap delete: "~/Library/Caches/com.eidac.smcFanControl#{version.major}"
+  zap delete: [
+                "~/Library/Caches/com.eidac.smcFanControl#{version.major}",
+                '~/Library/Application Support/smcFanControl',
+              ]
 end
