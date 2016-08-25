@@ -11,8 +11,10 @@ cask 'discord' do
 
   zap delete: [
                 '~/Library/Application Support/com.hnc.Discord.ShipIt',
+                '~/Library/Application Support/discord',
                 '~/Library/Saved Application State/com.hnc.Discord.savedState',
                 '~/Library/Caches/com.hnc.Discord',
+                '~/Library/Caches/discord',
                 '~/Library/Preferences/com.hnc.Discord.plist',
               ]
 end

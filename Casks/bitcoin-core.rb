@@ -1,10 +1,11 @@
 cask 'bitcoin-core' do
-  version '0.12.1'
-  sha256 'e1bc86d24dd978d64b511ada68be31057c20789fb9a6a86c40043a32bf77cb05'
+  version '0.13.0'
+  sha256 'e7fed095f1fb833d167697c19527d735e43ab2688564887b80b76c3c349f85b0'
 
+  # bitcoin.org was verified as official when first introduced to the cask
   url "https://bitcoin.org/bin/bitcoin-core-#{version}/bitcoin-#{version}-osx.dmg"
   name 'Bitcoin Core'
-  homepage 'https://bitcoin.org/'
+  homepage 'https://bitcoincore.org/'
   license :mit
 
   conflicts_with cask: 'bitcoin-xt'

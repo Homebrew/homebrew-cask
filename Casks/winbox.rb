@@ -4,7 +4,7 @@ cask 'winbox' do
 
   url "http://joshaven.com/Winbox4Mac_#{version}.dmg"
   name 'Winbox4Mac'
-  homepage 'http://joshaven.com/resources/tools/winbox-for-mac/'
+  homepage 'https://joshaven.com/resources/tools/winbox-for-mac/'
   license :gratis
 
   app 'Winbox4Mac.app'

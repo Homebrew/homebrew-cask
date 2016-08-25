@@ -20,4 +20,6 @@ cask 'launchpad-manager-yosemite' do
   name 'Launchpad Manager'
   homepage 'http://launchpadmanager.com/'
   license :commercial
+  
+  zap delete: '~/Library/Application Support/Launchpad Manager'
 end

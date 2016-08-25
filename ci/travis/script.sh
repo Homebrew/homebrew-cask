@@ -16,8 +16,3 @@ if any_casks_modified; then
   run brew cask style "${modified_casks[@]}"
 fi
 
-if must_run_tests; then
-  run bundle exec rake rubocop
-  run brew cask-tests --coverage
-  run bundle exec rake coveralls:push || true # in case of networking errors
-fi

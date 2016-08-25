@@ -12,9 +12,22 @@ cask 'macvim' do
   conflicts_with formula: 'macvim'
 
   app 'MacVim.app'
-  binary 'mvim'
+
+  %w[
+    gview
+    gvim
+    gvimdiff
+    gvimex
+    mview
+    mvim
+    mvimdiff
+    mvimex
+  ].each do |link_name|
+    binary 'mvim', target: link_name
+  end
 
   zap delete: [
+                '~/Library/Caches/org.vim.MacVim',
                 '~/Library/Preferences/org.vim.MacVim.LSSharedFileList.plist',
                 '~/Library/Preferences/org.vim.MacVim.plist',
               ]

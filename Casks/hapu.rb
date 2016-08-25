@@ -8,4 +8,11 @@ cask 'hapu' do
   license :closed
 
   app 'HAPU.app'
+
+  zap delete: [
+                '~/Library/Caches/jp.mahdi.HAPU',
+                '~/Library/Preferences/jp.mahdi.HAPU.plist',
+                '~/Library/Cookies/jp.mahdi.HAPU.binarycookies',
+                '~/Library/Application Support/jp.mahdi.HAPU.ShipIt',
+              ]
 end

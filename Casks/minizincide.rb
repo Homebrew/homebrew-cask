@@ -7,7 +7,7 @@ cask 'minizincide' do
   appcast 'https://github.com/MiniZinc/MiniZincIDE/releases.atom',
           checkpoint: '6aae18d13995e417da3cda48e62cc6f999f6e8b7fcee6f4d2d59671276619fb1'
   name 'MiniZincIDE'
-  homepage 'http://www.minizinc.org/ide/index.html'
+  homepage 'https://www.minizinc.org/ide/index.html'
   license :mpl
 
   app 'MiniZincIDE.app'
