@@ -11,4 +11,13 @@ cask 'postman' do
   license :closed
 
   app 'Postman.app'
+
+  zap delete: [
+                '~/Library/Application Support/Postman',
+                '~/Library/Application Support/com.postmanlabs.mac.ShipIt',
+                '~/Library/Caches/Postman',
+                '~/Library/Caches/com.postmanlabs.mac',
+                '~/Library/Preferences/com.postmanlabs.mac.plist',
+                '~/Library/Saved Application State/com.postmanlabs.mac.savedState',
+              ]
 end
