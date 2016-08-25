@@ -12,5 +12,8 @@ cask 'boinc' do
 
   uninstall pkgutil: 'edu.berkeley.boinc'
 
-  zap delete: '~/Library/Caches/edu.berkeley.boinc'
+  zap delete: [
+                '~/Library/Caches/edu.berkeley.boinc',
+                '~/Library/Application Support/BOINC',
+              ]
 end
