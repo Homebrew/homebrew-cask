@@ -14,5 +14,6 @@ cask 'sketchup' do
   zap delete: [
                 '~/Library/Application Support/SketchUp 2016',
                 '~/Library/Caches/com.sketchup.SketchUp.2016',
+                '~/Library/Application Support/Trimble Connect for SketchUp',
               ]
 end
