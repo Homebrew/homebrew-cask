@@ -21,7 +21,7 @@ cask 'ftdi-vcp-driver' do
   caveats do
     reboot
 
-    <<-EOC.undent
+    <<-EOS.undent
       If you don't want to reboot, you can load the driver using the following
       command:
 
@@ -38,6 +38,6 @@ cask 'ftdi-vcp-driver' do
       NOTE: If your FTDI based cable was already connected before you installed
       the driver, you'll need to unplug the cable from the USB port and
       reconnect it for it to show up in /dev.
-    EOC
+    EOS
   end
 end

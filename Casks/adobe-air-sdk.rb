@@ -7,19 +7,19 @@ cask 'adobe-air-sdk' do
   homepage 'https://www.adobe.com/devnet/air/air-sdk-download.html'
   license :closed
 
-  binary 'bin/aasdoc.wrapper',     target: 'aasdoc'
-  binary 'bin/acompc.wrapper',     target: 'acompc'
-  binary 'bin/adl.wrapper',        target: 'adl'
-  binary 'bin/adt.wrapper',        target: 'adt'
-  binary 'bin/amxmlc.wrapper',     target: 'amxmlc'
-  binary 'bin/asdoc.wrapper',      target: 'asdoc'
-  binary 'bin/compc.wrapper',      target: 'compc'
-  binary 'bin/fdb.wrapper',        target: 'fdb'
-  binary 'bin/fontswf.wrapper',    target: 'fontswf'
-  binary 'bin/mxmlc.wrapper',      target: 'mxmlc'
-  binary 'bin/optimizer.wrapper',  target: 'optimizer'
-  binary 'bin/swcdepends.wrapper', target: 'swcdepends'
-  binary 'bin/swfdump.wrapper',    target: 'swfdump'
+  binary 'bin/aasdoc.wrapper.sh',     target: 'aasdoc'
+  binary 'bin/acompc.wrapper.sh',     target: 'acompc'
+  binary 'bin/adl.wrapper.sh',        target: 'adl'
+  binary 'bin/adt.wrapper.sh',        target: 'adt'
+  binary 'bin/amxmlc.wrapper.sh',     target: 'amxmlc'
+  binary 'bin/asdoc.wrapper.sh',      target: 'asdoc'
+  binary 'bin/compc.wrapper.sh',      target: 'compc'
+  binary 'bin/fdb.wrapper.sh',        target: 'fdb'
+  binary 'bin/fontswf.wrapper.sh',    target: 'fontswf'
+  binary 'bin/mxmlc.wrapper.sh',      target: 'mxmlc'
+  binary 'bin/optimizer.wrapper.sh',  target: 'optimizer'
+  binary 'bin/swcdepends.wrapper.sh', target: 'swcdepends'
+  binary 'bin/swfdump.wrapper.sh',    target: 'swfdump'
 
   preflight do
     %w[
@@ -37,10 +37,11 @@ cask 'adobe-air-sdk' do
       swcdepends
       swfdump
     ].each do |shimscript|
-      IO.write "#{staged_path}/bin/#{shimscript}.wrapper", <<-EOF.undent
+      # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+      IO.write "#{staged_path}/bin/#{shimscript}.wrapper.sh", <<-EOS.undent
         #!/bin/sh
         exec '#{staged_path}/bin/#{shimscript}' "$@"
-      EOF
+      EOS
     end
   end
 end

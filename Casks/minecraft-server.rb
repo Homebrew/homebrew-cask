@@ -10,21 +10,20 @@ cask 'minecraft-server' do
 
   container type: :naked
 
-  binary 'minecraft-server'
+  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/minecraft-server.wrapper.sh"
+  binary shimscript, target: 'minecraft-server'
 
   preflight do
-    # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
-    FileUtils.touch "#{staged_path}/minecraft-server"
-    minecraft_server = File.open "#{staged_path}/minecraft-server", 'w'
-    minecraft_server.puts '#!/bin/bash'
-    minecraft_server.puts 'BASEDIR=$(dirname "$(readlink -n $0)")'
-    minecraft_server.puts 'cd $BASEDIR'
-    minecraft_server.puts "java -Xmx1024M -Xms1024M -jar minecraft_server.#{version}.jar nogui"
-    minecraft_server.close
+    IO.write shimscript, <<-EOS.undent
+      #!/bin/sh
+      cd "$(dirname "$(readlink -n $0)")" && \
+        java -Xmx1024M -Xms1024M -jar 'minecraft_server.#{version}.jar' nogui
+    EOS
+    FileUtils.chmod '+x', shimscript
   end
 
   postflight do
-    set_permissions "#{staged_path}/minecraft-server", '+x'
     system 'minecraft-server'
 
     eula_file = "#{staged_path}/eula.txt"

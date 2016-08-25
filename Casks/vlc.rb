@@ -13,15 +13,15 @@ cask 'vlc' do
 
   app 'VLC.app'
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/vlcwrapper"
+  shimscript = "#{staged_path}/vlc.wrapper.sh"
   binary shimscript, target: 'vlc'
 
   preflight do
-    File.open(shimscript, 'w') do |f|
-      f.puts '#!/bin/bash'
-      f.puts "#{appdir}/VLC.app/Contents/MacOS/VLC \"$@\""
-      FileUtils.chmod '+x', f
-    end
+    IO.write shimscript, <<-EOS.undent
+      #!/bin/sh
+      '#{appdir}/VLC.app/Contents/MacOS/VLC' "$@"
+    EOS
+    FileUtils.chmod '+x', shimscript
   end
 
   zap delete: [

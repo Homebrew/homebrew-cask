@@ -11,17 +11,14 @@ cask 'steamcmd' do
   auto_updates true
 
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/__cask_wrapper.sh"
+  shimscript = "#{staged_path}/steamcmd.sh.wrapper.sh"
   binary shimscript, target: 'steamcmd'
 
   preflight do
-    set_permissions "#{staged_path}/steamcmd", '+x'
-
-    File.open(shimscript, 'w') do |f|
-      f.puts '#!/usr/bin/env bash'
-      f.puts 'cd $(dirname $(readlink $_))'
-      f.puts './steamcmd.sh "$@"'
-      FileUtils.chmod '+x', f
-    end
+    IO.write shimscript, <<-EOS.undent
+      #!/bin/sh
+      exec '#{staged_path}/steamcmd.sh' "$@"
+    EOS
+    FileUtils.chmod '+x', shimscript
   end
 end
