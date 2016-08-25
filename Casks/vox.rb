@@ -11,4 +11,9 @@ cask 'vox' do
   license :freemium
 
   app 'Vox.app'
+
+  zap delete: [
+                '~/Library/Containers/com.coppertino.Vox',
+                '~/Library/Preferences/com.coppertino.Vox.plist',
+              ]
 end
