@@ -8,15 +8,15 @@ cask 'gogs' do
   license :mit
 
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/gogs_wrapper"
+  shimscript = "#{staged_path}/gogs.wrapper.sh"
 
   binary shimscript, target: 'gogs'
 
   preflight do
-    IO.write shimscript, <<-EOF.undent
+    IO.write shimscript, <<-EOS.undent
       #!/bin/sh
       cd '#{staged_path}/gogs' && ./gogs "$@"
-    EOF
+    EOS
     FileUtils.chmod '+x', shimscript
   end
 end
