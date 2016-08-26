@@ -7,7 +7,7 @@ cask 'mysql-utilities' do
   homepage 'https://dev.mysql.com/downloads/utilities/'
   license :gpl
 
-  pkg "mysql-utilities-#{version}.pkg"
+  pkg "mysql-utilities-#{version}.pkg", allow_untrusted: true
 
   uninstall pkgutil: 'com.oracle.mysql.utilities'
 end
