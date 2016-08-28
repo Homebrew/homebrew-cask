@@ -1,11 +1,11 @@
 cask 'oryoki' do
-  version '0.0.3'
-  sha256 '51f88440e062e23abd7334bd20a9d4d0997cd6dc73f4962f02117c820e10ea54'
+  version '0.0.4'
+  sha256 '9936a9518e550297aec7add335cb56446b9eb447b5ae3bf9bf8da7492a42bd58'
 
   # github.com/thmsbfft/oryoki was verified as official when first introduced to the cask
   url "https://github.com/thmsbfft/oryoki/releases/download/#{version}/Oryoki-#{version}.zip"
   appcast 'https://github.com/thmsbfft/oryoki/releases.atom',
-          checkpoint: '2a3522a708a180e945df4fccbde22aab54bdc120398925d7ce1efcfffeede834'
+          checkpoint: '9e55a53a7930644516bb896ae8ea7be624586ebc08c8cb17d127ae3596a17107'
   name 'Oryoki'
   homepage 'http://oryoki.io/'
   license :mit
