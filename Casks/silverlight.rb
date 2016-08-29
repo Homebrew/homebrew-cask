@@ -9,7 +9,8 @@ cask 'silverlight' do
 
   pkg 'silverlight.pkg'
 
-  uninstall pkgutil: 'com.microsoft.SilverlightInstaller'
+  uninstall pkgutil: 'com.microsoft.silverlight.plugin',
+            delete:  '/Library/Internet Plug-Ins/Silverlight.plugin'
 
   zap       delete: [
                       '~/Library/Application Support/Microsoft/Silverlight',
