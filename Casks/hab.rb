@@ -8,7 +8,7 @@ cask 'hab' do
   homepage 'www.habitat.sh'
   license :apache
 
-  depends_on formula: 'docker'
+  depends_on cask: 'docker'
 
   binary "hab-#{version}-x86_64-darwin/hab"
 end
