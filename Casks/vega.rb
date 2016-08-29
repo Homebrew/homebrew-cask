@@ -1,6 +1,6 @@
 cask 'vega' do
   version :latest
-  sha256 '14f7eee1f41ef9241efeb2321731f8dda9ac0716805132c1a02f07994d86415f'
+  sha256 :no_check
 
   url 'https://dist.subgraph.com/downloads/Vega64.dmg'
   name 'Vega'
