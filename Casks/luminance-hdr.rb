@@ -10,4 +10,9 @@ cask 'luminance-hdr' do
   license :gpl
 
   app "Luminance HDR #{version}.app"
+
+  zap delete: [
+                '~/Library/Preferences/com.luminance-hdr.plist',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.luminance-hdr.sfl',
+              ]
 end
