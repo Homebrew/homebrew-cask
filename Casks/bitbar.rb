@@ -1,10 +1,10 @@
 cask 'bitbar' do
-  version '1.9.1'
-  sha256 '72350013b295ef1fa4beb1374bd3d2bdc5a7335c42666e8592b574799f9ced65'
+  version '1.9.2'
+  sha256 '9e317d58143f544ab3b2b35e4d0ef2f11b9578fe6872cec1415da961acb1aee4'
 
   url "https://github.com/matryer/bitbar/releases/download/v#{version}/BitBar-v#{version}.zip"
   appcast 'https://github.com/matryer/bitbar/releases.atom',
-          checkpoint: '67f819a46652dbf13da6178d1e9374a2d600893d7a828a28e372ce3ce7a4c8e3'
+          checkpoint: '983fa180d4b2708f1c9e7890886446c3ff4792c32b5b3ad9adbe5011f0ea5131'
   name 'BitBar'
   homepage 'https://github.com/matryer/bitbar/'
   license :mit
