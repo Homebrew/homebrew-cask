@@ -8,16 +8,16 @@ cask 'cocoscreator' do
   license :mit
 
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/cocos_wrapper"
+  shimscript = "#{staged_path}/cocos.wrapper.sh"
 
   app 'CocosCreator.app'
   binary shimscript, target: 'cocos'
 
   preflight do
-    IO.write shimscript, <<-EOF.undent
+    IO.write shimscript, <<-EOS.undent
       #!/bin/sh
       cd '#{appdir}/CocosCreator.app/Contents/Resources/cocos2d-x/tools/cocos2d-console/bin' && ./cocos "$@"
-    EOF
+    EOS
     FileUtils.chmod '+x', shimscript
   end
 

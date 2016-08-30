@@ -28,15 +28,15 @@ cask 'libreoffice' do
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/uri-encode"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/xpdfimport"
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/sofficewrapper"
+  shimscript = "#{staged_path}/soffice.wrapper.sh"
   binary shimscript, target: 'soffice'
 
   preflight do
-    File.open(shimscript, 'w') do |f|
-      f.puts '#!/usr/bin/env bash'
-      f.puts "#{appdir}/LibreOffice.app/Contents/MacOS/soffice \"$@\""
-      FileUtils.chmod '+x', f
-    end
+    IO.write shimscript, <<-EOS.undent
+      #!/bin/sh
+      '#{appdir}/LibreOffice.app/Contents/MacOS/soffice' "$@"
+    EOS
+    FileUtils.chmod '+x', shimscript
   end
 
   zap delete: [

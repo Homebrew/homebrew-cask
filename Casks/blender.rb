@@ -11,18 +11,17 @@ cask 'blender' do
   app 'blender.app', target: 'Blender.app'
   app 'blenderplayer.app', target: 'Blenderplayer.app'
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/blenderwrapper"
+  shimscript = "#{staged_path}/blender.wrapper.sh"
   binary shimscript, target: 'blender'
 
   preflight do
     # make __pycache__ directories writable, otherwise uninstall fails
     FileUtils.chmod 'u+w', Dir.glob("#{staged_path}/*.app/**/__pycache__")
 
-    IO.write shimscript, <<-EOF.undent
+    IO.write shimscript, <<-EOS.undent
       #!/bin/bash
-      '#{appdir}/Blender.app/Contents/MacOS/blender' $@
-    EOF
-
+      '#{appdir}/Blender.app/Contents/MacOS/blender' "$@"
+    EOS
     FileUtils.chmod '+x', shimscript
   end
 end
