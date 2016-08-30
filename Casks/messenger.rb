@@ -10,4 +10,10 @@ cask 'messenger' do
   license :mit
 
   app 'Messenger.app'
+
+  zap delete: [
+                '~/Library/Caches/me.rsms.fbmessenger',
+                '~/Library/Cookies/me.rsms.fbmessenger.binarycookies',
+                '~/Library/Preferences/me.rsms.fbmessenger.plist',
+              ]
 end
