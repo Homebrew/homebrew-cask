@@ -4,7 +4,7 @@ cask 'transmission' do
 
   url "https://github.com/transmission/transmission/releases/download/#{version}/transmission-#{version}.dmg"
   appcast 'https://transmissionbt.com/appcast.xml',
-          checkpoint: 'a343a07672c7f4f7988dc2635b553d383e159a45942ba3e6a8c9fffcf9559b47'
+          checkpoint: '78fb3a9cfd536d80d5a9a64da89e2e7e6281c18b8787b565450e501098bef83b'
   name 'Transmission'
   homepage 'https://www.transmissionbt.com/'
   license :gpl
