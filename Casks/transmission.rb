@@ -1,8 +1,8 @@
 cask 'transmission' do
   version '2.92'
   sha256 '926a878cac007e591cfcea987048abc0689d77e7729a28255b9ea7b73f22d693'
-  
-  # https://github.com/transmission/transmission/releases/download/ was verified as official
+
+  # github.com/transmission/transmission/releases/download/ was verified as official
 
   url "https://github.com/transmission/transmission/releases/download/#{version}/transmission-#{version}.dmg"
   appcast 'https://transmissionbt.com/appcast.xml',
