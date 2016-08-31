@@ -1,10 +1,10 @@
 cask 'mac2imgur' do
-  version '4.0'
-  sha256 '7018bba2cb68f612b535dac583f987e2ecff1e3ce924e019a476cd92d90992d4'
+  version 'b219'
+  sha256 'b554d3a2083ba88451d614f243a9b599cfc546a5c0844f02f4375f703f2f60b9'
 
   url "https://github.com/mileswd/mac2imgur/releases/download/#{version}/mac2imgur.zip"
   appcast 'https://mileswd.com/mac2imgur/update',
-          checkpoint: '8a3f98802208b7b09cae6871983287dbbf5f64e86241ac7b6bffcc7fe9a4de95'
+          checkpoint: '76c8d74c003e2fdd4c9b2062acff9f7badb863fdab3f11c86fb745be59af3d15'
   name 'mac2imgur'
   homepage 'https://github.com/mileswd/mac2imgur'
   license :gpl
