@@ -1,13 +1,13 @@
 cask 'logdna-agent' do
-  version '1.3.1'
-  sha256 '034ef3ae343db0e46a92fed8bb9ccc874135634be3bc4e2a75f0feaee6a6e3f9'
+  version '1.3.4'
+  sha256 '0f841e2cea8b3bce94f89806c2d567f24b282fdebe7c47e1201da248383b5fe0'
 
   # github.com/logdna/logdna-agent was verified as official when first introduced to the cask
   url "https://github.com/logdna/logdna-agent/releases/download/#{version}/logdna-agent.pkg"
   appcast 'https://github.com/logdna/logdna-agent/releases.atom',
-          checkpoint: '2d8fcf937fe0331d4a5d2dd2b5d2ae07eaa6e97c69e49c4f062f73009babcc21'
+          checkpoint: '84a37f85b867f410014b7caa6e46b0a1ac9a07d5f83c1ec51c9eaf848a13d475'
   name 'LogDNA Agent'
-  homepage 'https://www.logdna.com/'
+  homepage 'https://logdna.com/'
   license :mit
 
   pkg 'logdna-agent.pkg'

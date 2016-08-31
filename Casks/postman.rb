@@ -1,14 +1,23 @@
 cask 'postman' do
-  version '4.6.0'
-  sha256 '26e3499e7250a6520ec11d0bdee1be5fd780b82f158a35aaa8c013e9898b2aef'
+  version '4.6.3'
+  sha256 '81b887783895ad948fc5d252f4859971861a40cd60eee016ef1b834e08c3866c'
 
   # s3.amazonaws.com/postman-electron-builds was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/postman-electron-builds/mac/Postman-osx-#{version}.zip"
   appcast 'https://app.getpostman.com/api/electron_updates_auto',
-          checkpoint: '0f7dd72aea47d9f0c35a4ccaa172d35dccd664a4816ed2e2f96c4646147503f5'
+          checkpoint: 'a7363869df89f3f05cfd5c55f66466b7ac4263b9c90bbca91c5e34ae7006a3c0'
   name 'Postman'
   homepage 'https://www.getpostman.com/'
   license :closed
 
   app 'Postman.app'
+
+  zap delete: [
+                '~/Library/Application Support/Postman',
+                '~/Library/Application Support/com.postmanlabs.mac.ShipIt',
+                '~/Library/Caches/Postman',
+                '~/Library/Caches/com.postmanlabs.mac',
+                '~/Library/Preferences/com.postmanlabs.mac.plist',
+                '~/Library/Saved Application State/com.postmanlabs.mac.savedState',
+              ]
 end

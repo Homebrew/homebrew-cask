@@ -8,4 +8,9 @@ cask 'vnc-viewer' do
   license :freemium
 
   app 'VNC Viewer.app'
+
+  zap delete: [
+                '~/Library/Preferences/com.realvnc.vncviewer.plist',
+                '~/Library/Saved Application State/com.realvnc.vncviewer.savedState',
+              ]
 end

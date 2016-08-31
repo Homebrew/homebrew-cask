@@ -15,7 +15,12 @@ cask 'keyboard-maestro' do
   zap delete: [
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.stairways.keyboardmaestro.editor.sfl',
                 '~/Library/Application Support/Keyboard Maestro',
-                '~/Library/Application Support/Keyboard Maestro/Keyboard Maestro Clipboards.plist',
-                '~/Library/Application Support/Keyboard Maestro/Keyboard Maestro Macro Stats.plist',
+                '~/Library/Caches/com.stairways.keyboardmaestro.editor',
+                '~/Library/Caches/com.stairways.keyboardmaestro.engine',
+                '~/Library/Logs/Keyboard Maestro',
+                '~/Library/Preferences/com.stairways.keyboardmaestro.editor.plist',
+                '~/Library/Preferences/com.stairways.keyboardmaestro.engine.plist',
+                '~/Library/Preferences/com.stairways.keyboardmaestro.plist',
+                '~/Library/Saved Application State/com.stairways.keyboardmaestro.editor.savedState',
               ]
 end

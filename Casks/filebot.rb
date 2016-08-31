@@ -13,6 +13,10 @@ cask 'filebot' do
   app "FileBot_#{version}-brew.app"
   binary "#{appdir}/FileBot_#{version}-brew.app/Contents/MacOS/filebot.sh", target: 'filebot'
 
+  zap delete: [
+                '~/Library/Preferences/net.filebot.ui.plist',
+              ]
+
   caveats do
     depends_on_java('8')
   end

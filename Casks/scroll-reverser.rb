@@ -15,4 +15,6 @@ cask 'scroll-reverser' do
   license :gratis
 
   app 'Scroll Reverser.app'
+
+  zap delete: '~/Library/Caches/com.pilotmoon.scroll-reverser'
 end

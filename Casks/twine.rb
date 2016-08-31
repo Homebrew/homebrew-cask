@@ -5,7 +5,7 @@ cask 'twine' do
   # bitbucket.org/klembot/twinejs was verified as official when first introduced to the cask
   url "https://bitbucket.org/klembot/twinejs/downloads/twine_#{version}_osx.zip"
   name 'Twine'
-  homepage 'http://twinery.org/'
+  homepage 'https://twinery.org/'
   license :gpl
 
   app 'Twine.app'

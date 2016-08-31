@@ -10,7 +10,7 @@ cask 'ipswdownloader' do
   end
 
   name 'ipswDownloader'
-  homepage 'http://www.igrsoft.com/ipswdownloader/'
+  homepage 'https://www.igrsoft.com/ipswdownloader/'
   license :gratis
 
   app 'ipswDownloader.app'

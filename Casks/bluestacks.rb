@@ -21,6 +21,7 @@ cask 'bluestacks' do
                       '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks.sfl',
                       '~/Library/BlueStacks',
                       '~/Library/Caches/com.bluestacks.BlueStacks',
+                      '~/Library/Caches/com.bluestacks.BlueStacks-Support-Tool',
                       '~/Library/Caches/KSCrashReports/BlueStacks',
                       '~/Library/Logs/BlueStacks',
                       '~/Library/Preferences/com.BlueStacks.AppPlayer.DiagnosticTimestamp.txt',

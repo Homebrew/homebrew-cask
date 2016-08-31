@@ -4,7 +4,7 @@ cask 'endurance' do
 
   url 'http://enduranceapp.com/download'
   name 'Endurance'
-  homepage 'http://enduranceapp.com/'
+  homepage 'https://enduranceapp.com/'
   license :gratis
 
   app 'Endurance.app'

@@ -7,7 +7,7 @@ cask 'kompozer' do
   appcast 'https://sourceforge.net/projects/kompozer/rss?path=/current',
           checkpoint: 'bcf2fe720ea0abafaa21f240f2186752e129fa76c2474fbc4903e94cdd4b5e44'
   name 'KompoZer'
-  homepage 'http://www.kompozer.net/'
+  homepage 'https://www.kompozer.net/'
   license :oss
 
   app 'KompoZer.app'

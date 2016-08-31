@@ -5,7 +5,7 @@ cask 'jce-unlimited-strength-policy' do
   url "http://download.oracle.com/otn-pub/java/jce/#{version.split('.')[1]}/jce_policy-#{version.split('.')[1]}.zip",
       cookies: { 'oraclelicense' => 'accept-securebackup-cookie' }
   name 'Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files'
-  homepage "http://www.oracle.com/technetwork/java/javase/downloads/jce#{version.split('.')[1]}-download-2133166.html"
+  homepage "https://www.oracle.com/technetwork/java/javase/downloads/jce#{version.split('.')[1]}-download-2133166.html"
   license :gratis
 
   postflight do
