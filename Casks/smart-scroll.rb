@@ -1,8 +1,8 @@
 cask 'smart-scroll' do
   version '4.2'
-  sha256 '6f65ab53845b824e29001b62aa31f31c6d09aa4c05b88e72152c64442b859973'
+  sha256 '5ebe15dd73b708770263bb9aae1e22702539aeeae269656f72410e563fcf7ca4'
 
-  url 'http://www.marcmoini.com/SmartScroll.zip'
+  url 'http://www.marcmoini.com/SmartScroll.dmg'
   name 'Smart Scroll'
   homepage 'http://www.marcmoini.com/sx_en.html'
   license :commercial
