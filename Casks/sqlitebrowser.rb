@@ -10,5 +10,5 @@ cask 'sqlitebrowser' do
   homepage 'http://sqlitebrowser.org'
   license :oss
 
-  app 'sqlitebrowser.app'
+  app 'DB Browser for SQLite.app'
 end
