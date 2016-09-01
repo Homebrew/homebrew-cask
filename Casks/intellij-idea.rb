@@ -11,8 +11,6 @@ cask 'intellij-idea' do
 
   app 'IntelliJ IDEA.app'
 
-  uninstall delete: '/usr/local/bin/idea'
-
   zap delete: [
                 "~/Library/Caches/IntelliJIdea#{version.major_minor}",
                 "~/Library/Logs/IntelliJIdea#{version.major_minor}",
