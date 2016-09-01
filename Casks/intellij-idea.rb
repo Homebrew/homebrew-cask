@@ -1,6 +1,6 @@
 cask 'intellij-idea' do
-  version '2016.2.2'
-  sha256 '7a8541adf3e7aebfae025d6bc7980225ad65723504aad390fcd28e604b8ff05a'
+  version '2016.2.3'
+  sha256 '19955c3a22afed0471eeecea0b8fd173939e3d51a87d2d98264303f9638b99b0'
 
   url "https://download.jetbrains.com/idea/ideaIU-#{version}.dmg"
   name 'IntelliJ IDEA'
@@ -10,8 +10,6 @@ cask 'intellij-idea' do
   auto_updates true
 
   app 'IntelliJ IDEA.app'
-
-  uninstall delete: '/usr/local/bin/idea'
 
   zap delete: [
                 "~/Library/Caches/IntelliJIdea#{version.major_minor}",
