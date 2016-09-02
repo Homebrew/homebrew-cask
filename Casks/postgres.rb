@@ -7,7 +7,7 @@ cask 'postgres' do
   appcast 'https://github.com/PostgresApp/PostgresApp/releases.atom',
           checkpoint: '8f75d7d7fd811ee6135147a9caf6d4ed9807945cb83d2074aac283b458d3d1c9'
   name 'Postgres'
-  homepage 'http://postgresapp.com/'
+  homepage 'https://postgresapp.com/'
   license :oss
 
   app 'Postgres.app'

@@ -3,7 +3,7 @@ cask 'steelseries-exactmouse-tool' do
   sha256 :no_check
 
   # steelseriescdn.com was verified as official when first introduced to the cask
-  url 'http://downloads.steelseriescdn.com/drivers/tools/steelseries-exactmouse-tool.dmg'
+  url 'https://downloads.steelseriescdn.com/drivers/tools/steelseries-exactmouse-tool.dmg'
   name 'SteelSeries ExactMouse Tool'
   homepage 'https://steelseries.com/support/downloads'
   license :gratis

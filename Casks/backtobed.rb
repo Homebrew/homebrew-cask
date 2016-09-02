@@ -2,9 +2,10 @@ cask 'backtobed' do
   version :latest
   sha256 :no_check
 
-  url 'http://backtobed.dadiugames.dk/studentversion/backtobed_osx.zip'
+  # backtobed.dadiugames.dk was verified as official when first introduced to the cask
+  url 'https://backtobed.dadiugames.dk/studentversion/backtobed_osx.zip'
   name 'Back to Bed'
-  homepage 'http://backtobed.dadiugames.dk/'
+  homepage 'http://www.dadiu.dk/back-to-bed'
   license :gratis
 
   app 'BackToBed.app'
