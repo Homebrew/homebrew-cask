@@ -4,7 +4,6 @@ Delete the parts of this template that are not relevant (including these `Instru
 If there’s a checkbox you can’t complete for any reason, that’s OK. Just explain in detail why you weren’t able to do so.  
 *Note:* `{{cask_file}}` represents the cask file you’re submitting/editing.
 
-
 ### Checklist
 
 - [ ] The commit message includes the cask’s name and version.

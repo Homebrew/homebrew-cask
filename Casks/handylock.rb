@@ -5,7 +5,7 @@ cask 'handylock' do
   # s3.amazonaws.com/netputing/handyLock was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/netputing/handyLock/handyLock+v#{version}.dmg"
   name 'handyLock'
-  homepage 'http://www.netputing.com/applications/handylock/'
+  homepage 'https://www.netputing.com/applications/handylock/'
   license :gratis
 
   app 'handyLock.app'

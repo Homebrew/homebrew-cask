@@ -7,7 +7,7 @@ cask 'java' do
                  'oraclelicense' => 'accept-securebackup-cookie',
                }
   name 'Java Standard Edition Development Kit'
-  homepage "http://www.oracle.com/technetwork/java/javase/downloads/jdk#{version.split('.')[1]}-downloads-2133151.html"
+  homepage "https://www.oracle.com/technetwork/java/javase/downloads/jdk#{version.split('.')[1]}-downloads-2133151.html"
   license :gratis
 
   pkg "JDK #{version.split('.')[1]} Update #{version.sub(%r{^.*?_(\d+)-.*$}, '\1')}.pkg"
@@ -79,6 +79,6 @@ cask 'java' do
     Installing this Cask means you have AGREED to the Oracle Binary Code
     License Agreement for Java SE at
 
-      http://www.oracle.com/technetwork/java/javase/terms/license/index.html
+      https://www.oracle.com/technetwork/java/javase/terms/license/index.html
   EOS
 end
