@@ -14,4 +14,9 @@ cask 'squirrel' do
 
   uninstall pkgutil: 'com.googlecode.rimeime.Squirrel.pkg',
             delete:  '/Library/Input Methods/Squirrel.app'
+
+  zap delete: [
+                '~/Library/Caches/com.googlecode.rimeime.inputmethod.Squirrel',
+                '~/Library/Preferences/com.googlecode.rimeime.inputmethod.Squirrel.plist',
+              ]
 end

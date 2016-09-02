@@ -1,6 +1,6 @@
 cask 'discord' do
-  version '0.0.240'
-  sha256 'e6d62060d6e4d9ca88513e9ec039d803b8b472b82e5c06424a2a62c6a675932d'
+  version '0.0.246'
+  sha256 '414bd4387bace461cae1f549b9a786d7fcb5454920b48215303145724f4fd81f'
 
   url "https://cdn.discordapp.com/apps/osx/#{version}/Discord.dmg"
   name 'Discord'
@@ -11,8 +11,10 @@ cask 'discord' do
 
   zap delete: [
                 '~/Library/Application Support/com.hnc.Discord.ShipIt',
+                '~/Library/Application Support/discord',
                 '~/Library/Saved Application State/com.hnc.Discord.savedState',
                 '~/Library/Caches/com.hnc.Discord',
+                '~/Library/Caches/discord',
                 '~/Library/Preferences/com.hnc.Discord.plist',
               ]
 end

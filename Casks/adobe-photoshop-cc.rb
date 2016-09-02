@@ -16,7 +16,7 @@ cask 'adobe-photoshop-cc' do
   uninstall_preflight do
     uninstall_xml = "#{staged_path}/uninstall.xml"
 
-    IO.write uninstall_xml, <<-EOF.undent
+    IO.write uninstall_xml, <<-EOS.undent
       <?xml version="1.0" encoding="utf-8"?>
       <Deployment>
         <Properties>
@@ -29,7 +29,7 @@ cask 'adobe-photoshop-cc' do
           </Payload>
         </Payloads>
       </Deployment>
-    EOF
+    EOS
 
     system '/usr/bin/sudo', '-E', '--', "#{staged_path}/Adobe Photoshop CC 2015/Install.app/Contents/MacOS/Install", '--mode=silent', "--deploymentFile=#{uninstall_xml}"
   end

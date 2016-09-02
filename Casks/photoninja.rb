@@ -5,7 +5,7 @@ cask 'photoninja' do
   # picturecode.cachefly.net was verified as official when first introduced to the cask
   url "https://picturecode.cachefly.net/photoninja/downloads/Install_PhotoNinja_#{version}.dmg"
   name 'Photo Ninja'
-  homepage 'http://www.picturecode.com/'
+  homepage 'https://www.picturecode.com/'
   license :commercial
 
   app "PhotoNinja_#{version}.app"

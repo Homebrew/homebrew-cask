@@ -1,15 +1,13 @@
 cask 'moeditor' do
-  version '0.0.1'
-  sha256 'db2c282cdf9854c7189dcc7e1e608f2be02c5cfb88f0bebd638db8008ecb664b'
+  version '0.1.1'
+  sha256 '45dc7ac40675fa8c3c2170801450740701599f7a162a696c21f38bff4f04fc50'
 
-  url "https://github.com/Moeditor/Moeditor/releases/download/v#{version}-alpha/Moeditor-#{version}-darwin-x64.7z"
+  url "https://github.com/Moeditor/Moeditor/releases/download/v#{version}-beta/Moeditor-#{version}-darwin-x64.zip"
   appcast 'https://github.com/Moeditor/Moeditor/releases.atom',
-          checkpoint: '4d05a4ed912c3c346257a7a6f560b39c26aeaf62d94d0b1a1caef81de82e7540'
+          checkpoint: '3a0247fa7c01e7026c2fcf2d02cfc0ea4f2d073c4c39d2c0797f65ba919d41e1'
   name 'Moeditor'
   homepage 'https://github.com/Moeditor/Moeditor'
   license :gpl
 
-  depends_on formula: 'unar'
-
-  app 'Moeditor-darwin-x64/Moeditor.app'
+  app 'Moeditor.app'
 end

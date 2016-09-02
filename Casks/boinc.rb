@@ -11,4 +11,9 @@ cask 'boinc' do
   pkg "boinc_#{version}_macOSX_x86_64/BOINC Installer.app/Contents/Resources/BOINC.pkg"
 
   uninstall pkgutil: 'edu.berkeley.boinc'
+
+  zap delete: [
+                '~/Library/Caches/edu.berkeley.boinc',
+                '~/Library/Application Support/BOINC',
+              ]
 end

@@ -6,7 +6,7 @@ cask 'auganizer' do
   appcast 'https://www.auganizer.com/updates/aurora.php',
           checkpoint: 'd0a6bb843bd5b0331764c46ed08b2375142b27313b7810e680c38e3c36ab1837'
   name 'Auganizer'
-  homepage 'http://auganizer.com/'
+  homepage 'https://auganizer.com/'
   license :commercial
 
   app 'Auganizer.app'

@@ -14,5 +14,9 @@ cask 'zoomus' do
   zap       delete: [
                       '~/Desktop/Zoom',
                       '~/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin',
+                      '~/Library/Preferences/us.zoom.xos.plist',
+                      '~/Library/Application Support/zoom.us',
+                      '~/Library/Caches/us.zoom.xos',
+                      '~/Library/Logs/zoom.us',
                     ]
 end

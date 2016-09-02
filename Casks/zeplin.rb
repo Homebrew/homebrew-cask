@@ -10,4 +10,10 @@ cask 'zeplin' do
   license :gratis
 
   app 'Zeplin.app'
+
+  zap delete: [
+                '~/Library/Logs/Zeplin',
+                '~/Library/Caches/io.zeplin.osx',
+                '~/Library/Preferences/io.zeplin.osx.plist',
+              ]
 end

@@ -12,12 +12,15 @@ cask 'karabiner' do
   auto_updates true
 
   pkg 'Karabiner.sparkle_guided.pkg'
-  binary '/Applications/Karabiner.app/Contents/Library/vendor/bin/blueutil'
-  binary '/Applications/Karabiner.app/Contents/Library/utilities/bin/warp-mouse-cursor-position'
+  binary '/Applications/Karabiner.app/Contents/Library/bin/karabiner'
 
-  uninstall quit:    'org.pqrs.Karabiner',
-            pkgutil: 'org.pqrs.driver.Karabiner',
-            kext:    'org.pqrs.driver.Karabiner'
+  uninstall early_script: '/Library/Application Support/org.pqrs/Karabiner/uninstall.sh',
+            script:       {
+                            executable:   '/usr/bin/killall',
+                            args:         ['Karabiner'],
+                            must_succeed: false,
+                            sudo:         false,
+                          }
 
   zap       delete: [
                       '~/Library/Application Support/Karabiner',
