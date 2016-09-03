@@ -12,8 +12,10 @@ cask 'timemachinescheduler' do
   app 'TimeMachineScheduler.app'
 
   zap delete: [
-                '~/Library/Preferences/com.klieme.TimeMachineScheduler.plist',
+                '/Library/LaunchDaemons/com.klieme.TimeMachineScheduler.plist',
+                '/Library/Preferences/com.klieme.TimeMachineScheduler.plist',
                 '~/Library/Caches/com.klieme.TimeMachineScheduler',
-                '~/Library/Application Support/iTerm',
+                '~/Library/Preferences/com.klieme.TimeMachineScheduler.plist',
+                '~/Library/Saved Application State/com.klieme.TimeMachineScheduler.savedState',
               ]
 end
