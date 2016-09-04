@@ -13,6 +13,8 @@ cask 'reaper' do
     app 'ReaMote64.app'
   end
 
+  appcast 'http://www.reaper.fm/whatsnew.txt',
+          checkpoint: '04dd1ce205c25c4f6091a6a08a7c878d1f1049896dcdf951246c283f2e59cbdb'
   name 'REAPER'
   homepage 'http://www.reaper.fm/'
   license :commercial
