@@ -13,7 +13,6 @@ cask 'nwjs' do
 
     url "https://dl.nwjs.io/v#{version}/nwjs-v#{version}-osx-x64.zip"
 
-    binary "nwjs-v#{version}-osx-x64/nwjc"
     app "nwjs-v#{version}-osx-x64/nwjs.app"
   end
 
