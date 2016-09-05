@@ -1,10 +1,10 @@
 cask 'lego-mindstorms-ev3' do
   # note: "3" is not a version number, but an intrinsic part of the product name
-  version '1.1.1'
-  sha256 '7331e72cfff30661606387c86e8153b2526547b588525385ac2ecd272d38194a'
+  version '1.2.1'
+  sha256 '9d9aa01a6e83be37b6c99bce48758320cc9e9b186861d73ef660456c0d3293ab'
 
   # esd.lego.com.edgesuite.net/digitaldelivery/mindstorms was verified as official when first introduced to the cask
-  url 'http://esd.lego.com.edgesuite.net/digitaldelivery/mindstorms/6ecda7c2-1189-4816-b2dd-440e22d65814/public/LMS-EV3-OSX-ENUS-01-01-01-full-setup.dmg'
+  url 'http://esd.lego.com.edgesuite.net/digitaldelivery/mindstorms/6ecda7c2-1189-4816-b2dd-440e22d65814/public/LMS-EV3-OSX-ENUS-01-02-01-full-setup.dmg'
   name 'Lego Mindstorms EV3 Home Edition'
   homepage 'http://www.lego.com/en-us/mindstorms'
   license :gratis
