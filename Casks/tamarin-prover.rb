@@ -12,5 +12,5 @@ cask 'tamarin-prover' do
   depends_on arch: :x86_64
   depends_on formula: ['homebrew/science/maude', 'graphviz']
 
-  binary 'bin-dists-master/tamarin-prover-1.0.0/tamarin-prover-1.0.0-macosx', target: 'tamarin-prover'
+  binary "bin-dists-master/tamarin-prover-#{version}/tamarin-prover-#{version}-macosx", target: 'tamarin-prover'
 end
