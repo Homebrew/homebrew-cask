@@ -1,6 +1,6 @@
 cask 'linphone' do
-  version '3.9.1'
-  sha256 '0f45bb9cc2d2ea32631c0e8dedc28b2139d5cb0d55a007704c133b2ef41ffbe2'
+  version '3.10.2'
+  sha256 '5e88df179c1a238b229a4b334f6c1a94ec0a2cf9dbb62c8328f05ebab93c6eef'
 
   url "https://www.linphone.org/releases/macosx/linphone-#{version}.pkg"
   name 'Linphone'
