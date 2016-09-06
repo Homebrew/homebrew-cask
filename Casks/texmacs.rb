@@ -1,6 +1,6 @@
 cask 'texmacs' do
-  version '1.99.4'
-  sha256 '7065db07e8190c9d211dd32b6e3e711cc9c49210c51afe6fc273fe50aa9c9e3d'
+  version '1.99.5'
+  sha256 '1e753a68bc0dd3dc6d8b5bfe1a0b4a7346408eeae8c76bf60609026c20b7be75'
 
   url "http://www.texmacs.org/Download/ftp/tmftp/macos/TeXmacs-#{version}.dmg"
   name 'GNU TeXmacs'
@@ -8,6 +8,7 @@ cask 'texmacs' do
   license :gpl
 
   app "TeXmacs-#{version}.app"
+  binary "#{appdir}/TeXmacs-1.99.5.app/Contents/MacOS/TeXmacs", target: 'texmacs'
 
   zap delete: '~/.TeXmacs'
 end
