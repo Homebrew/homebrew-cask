@@ -4,7 +4,7 @@ cask 'pyfa' do
 
   url "https://github.com/pyfa-org/Pyfa/releases/download/v#{version}/pyfa-#{version}-yc.118.7-1.4-mac.zip"
   appcast 'https://github.com/pyfa-org/Pyfa/releases.atom',
-          checkpoint: '443b0342f7a4b5b342de546ecdc50a3145ac6191640a65b04ef1d0e5fcec3298'
+          checkpoint: 'eea8bb24a425814f3a83bd27bf8a690c77ac4bf058ebeb9765ac1b4415abe13d'
   name 'pyfa'
   homepage 'https://github.com/pyfa-org/Pyfa'
   license :gpl
