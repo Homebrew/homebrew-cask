@@ -8,7 +8,6 @@ cask 'texmacs' do
   license :gpl
 
   app "TeXmacs-#{version}.app"
-  binary "#{appdir}/TeXmacs-1.99.5.app/Contents/MacOS/TeXmacs", target: 'texmacs'
 
   zap delete: '~/.TeXmacs'
 end
