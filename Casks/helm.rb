@@ -1,10 +1,10 @@
 cask 'helm' do
-  version '2.0.0-alpha.3'
-  sha256 'dce339a1d418db57b884256f1f9cd01190345033ddea1c65a062b3d4bbbb1172'
+  version '2.0.0-alpha.4'
+  sha256 '4e504ca7b491609e1402bf583632516ce44fddfeadf02856b440ca5a6644eeb1'
 
-  url "https://github.com/kubernetes/helm/releases/download/v#{version}/helm-v#{version}-darwin-amd64.tar"
+  url "https://github.com/kubernetes/helm/releases/download/v#{version}/helm-v#{version}-darwin-amd64.tar.gz"
   appcast 'https://github.com/kubernetes/helm/releases.atom',
-          checkpoint: '5a928587b5595fdfd151e1725b1f7ea48ec2aa3ff154e47a4a26c96e481af949'
+          checkpoint: 'bc0b7ead6b44231cb9312dbec9a147b3c202387cdfd828cee0546f1b986d623c'
   name 'Helm'
   homepage 'https://github.com/kubernetes/helm'
   license :apache
