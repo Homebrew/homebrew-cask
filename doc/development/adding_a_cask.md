@@ -1,3 +1,5 @@
+**Note**: Before taking the time to craft a new cask, make sure it can be accepted by checking the [Rejected Casks FAQ document](https://github.com/caskroom/homebrew-cask/blob/master/doc/faq/rejected_casks.md).
+
 ## Adding a Cask
 
 Making a new Cask is easy. Follow the directions in [Getting Set Up To Contribute](../../CONTRIBUTING.md#getting-set-up-to-contribute) to begin.

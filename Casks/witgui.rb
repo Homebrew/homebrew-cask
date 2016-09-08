@@ -6,7 +6,7 @@ cask 'witgui' do
   appcast 'http://desairem.altervista.org/witgui/appcast.xml',
           checkpoint: '60bfccf453b99631b6a4aae66815564963269ebfb3e288fca34f42c9579af097'
   name 'Witgui'
-  homepage 'http://desairem.altervista.org/witgui/wordpress/'
+  homepage 'http://desairem.altervista.org/wordpress/witgui/'
   license :gratis
 
   app 'Witgui.app'

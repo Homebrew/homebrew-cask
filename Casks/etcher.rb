@@ -8,5 +8,5 @@ cask 'etcher' do
   homepage 'https://www.etcher.io/'
   license :apache
 
-  app 'etcher.app'
+  app 'Etcher.app'
 end
