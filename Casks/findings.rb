@@ -1,10 +1,10 @@
 cask 'findings' do
-  version '1.3.5,3129'
-  sha256 'e6944769e7efd3fc1cff76479a68d5b9d846d8022bca1976ba92ac05b365d217'
+  version '1.4,3453'
+  sha256 '0b2fa90a3279a9472b9fc87d50553414ac68ac5585342e561d6dc91e32112df6'
 
   url "http://downloads.findingsapp.com/Findings_#{version.after_comma}_#{version.before_comma}.zip"
   appcast 'http://downloads.findingsapp.com/appcast.xml',
-          checkpoint: '3cbab46a1ad0f13b19e89f11ee0bf93a95007c3715cf90ba1039347c60306a57'
+          checkpoint: '83411de53e31418c34f778d20de73efbb7d92f0a801c4e0f34ed586d2d04395f'
   name 'Findings'
   homepage 'http://findingsapp.com'
   license :freemium
