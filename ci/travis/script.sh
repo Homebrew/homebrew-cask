@@ -15,4 +15,3 @@ if any_casks_modified; then
   run brew cask _audit_modified_casks "${TRAVIS_COMMIT_RANGE}"
   run brew cask style "${modified_casks[@]}"
 fi
-
