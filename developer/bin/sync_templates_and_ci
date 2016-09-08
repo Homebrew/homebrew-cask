@@ -11,7 +11,7 @@ function message {
 
 function get_main_repo {
   curl --silent --location "${caskroom_online}/homebrew-cask/archive/master.zip" | ditto -xk - "${main_repo_dir}"
-  mv "${main_repo_dir}/homebrew-cask-master/"{*,.*} "${main_repo_dir}"
+  mv "${main_repo_dir}/homebrew-cask-master/"{,.[^.]}* "${main_repo_dir}"
   rmdir "${main_repo_dir}/homebrew-cask-master"
 }
 

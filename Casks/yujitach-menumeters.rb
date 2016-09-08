@@ -7,6 +7,8 @@ cask 'yujitach-menumeters' do
   homepage 'http://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/'
   license :gpl
 
+  depends_on macos: '>= :el_capitan'
+
   prefpane 'MenuMeters.prefPane'
 
   zap delete: '~/Library/Preferences/com.ragingmenace.MenuMeters.plist'
