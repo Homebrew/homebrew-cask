@@ -6,6 +6,7 @@ cask 'yujitach-menumeters' do
   name 'MenuMeters El Capitan Port'
   homepage 'http://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/'
   license :gpl
+  depends_on macos: '>= :el_capitan'
 
   prefpane 'MenuMeters.prefPane'
 
