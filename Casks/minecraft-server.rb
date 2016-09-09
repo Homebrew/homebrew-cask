@@ -27,7 +27,7 @@ cask 'minecraft-server' do
     system 'minecraft-server'
 
     eula_file = "#{staged_path}/eula.txt"
-    IO.write(eula_file, File.read(eula_file).gsub('false', 'TRUE'))
+    IO.write(eula_file, IO.read(eula_file).gsub('false', 'TRUE'))
   end
 
   caveats do
