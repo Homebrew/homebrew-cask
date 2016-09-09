@@ -208,7 +208,7 @@ When an App has a principal stable version, alternative versions should be submi
 
 ### Regional and Localized
 
-When an App exists in more than one language or has different regional editions, the US English one belongs in the main repo, and all the others in [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions). When not already part of the name of the App, a [regional identifier](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) and a [language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) are to be appended to the Cask’s token (both when available, or just the appropriate one when not).
+When an App exists in more than one language or has different regional editions, [the `language` stanza should be used to switch between languages or regions](../../../cask_language_reference/readme.md#switch-between-languages-or-egions).
 
 ### Trial and Freemium Versions
 
