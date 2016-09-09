@@ -1,10 +1,10 @@
 cask 'grandperspective' do
-  version '1.7.0'
-  sha256 '08fddd88d208f0892c7d8edcb74974a1c798e588266f406fedabb56239f38e0b'
+  version '1.8.1'
+  sha256 '0a01e38cf9344695f5bcf8309429ba72ad760ced719e65932dd3fab2d77744d0'
 
   url "https://downloads.sourceforge.net/grandperspectiv/grandperspective/#{version}/GrandPerspective-#{version.dots_to_underscores}.dmg"
   appcast 'https://sourceforge.net/projects/grandperspectiv/rss?path=/grandperspective',
-          checkpoint: 'baf67458f7cb1d3617875d37ad1c2581dc30f6d6f091ecdc065739aeecdc3d6b'
+          checkpoint: '75d46fbcab208058ffeba8810d6e95e5de2caced796d408a8abf942a50f196ba'
   name 'GrandPerspective'
   homepage 'http://grandperspectiv.sourceforge.net/'
   license :gpl
