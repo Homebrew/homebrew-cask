@@ -1,6 +1,6 @@
 cask 'intellij-idea' do
-  version '2016.2.3'
-  sha256 '19955c3a22afed0471eeecea0b8fd173939e3d51a87d2d98264303f9638b99b0'
+  version '2016.2.4'
+  sha256 '952e72b054a0972b83662c318d7c04a2226790f3c0afffb5bf578a7a133f379b'
 
   url "https://download.jetbrains.com/idea/ideaIU-#{version}.dmg"
   name 'IntelliJ IDEA'

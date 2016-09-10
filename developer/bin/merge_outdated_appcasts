@@ -43,7 +43,7 @@ function go_to_repo_and_update {
     go_to_repos_dir
 
     message "Cloning ${repo_name}…"
-    git clone "https://github.com/caskroom/${repo_name}.git" --quiet
+    git clone "${caskroom_online}/${repo_name}.git" --quiet
 
     cd "${casks_dir}" || exit 1
   else

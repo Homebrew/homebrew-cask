@@ -3,7 +3,7 @@ cask 'chromium' do
   sha256 :no_check
 
   # download-chromium.appspot.com was verified as official when first introduced to the cask
-  url 'https://download-chromium.appspot.com/dl/Mac?type=continuous'
+  url 'https://download-chromium.appspot.com/dl/Mac?type=snapshots'
   name 'Chromium'
   homepage 'https://www.chromium.org/Home'
   license :oss

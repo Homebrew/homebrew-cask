@@ -1,6 +1,6 @@
 cask 'ridibooks' do
-  version '1.8.2b'
-  sha256 'e2ce0c5886a6f071e8aa4f9fcc9576787b751eaca306121ec8098e2ccb86374b'
+  version '2.0.0'
+  sha256 '929a114a862e5785f25507f5e94a9133fc01f4da5e34c5eb39270884c1282c56'
 
   # ridicorp.com was verified as official when first introduced to the cask
   url "https://cdn.ridicorp.com/app/mac/ridibooks-#{version}.dmg"

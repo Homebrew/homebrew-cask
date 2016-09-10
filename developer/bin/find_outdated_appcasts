@@ -35,7 +35,7 @@ function go_to_repo_and_update {
     go_to_repos_dir
 
     message "Cloning ${repo_name}…"
-    git clone "https://github.com/caskroom/${repo_name}.git" --quiet
+    git clone "${caskroom_online}/${repo_name}.git" --quiet
 
     cd "${casks_dir}" || exit 1
   else
@@ -65,7 +65,7 @@ function open_issue {
   " | sed -E 's/^ {4}//')"
 
   issue_number=$(ghi open --label 'outdated appcast' --message "${message}" | head -1 | perl -pe 's/^#(\d+): .*/\1/')
-  message "Opened issue: https://github.com/caskroom/${repo_name}/issues/${issue_number}."
+  message "Opened issue: ${caskroom_online}/${repo_name}/issues/${issue_number}."
 }
 
 function is_appcast_available {
