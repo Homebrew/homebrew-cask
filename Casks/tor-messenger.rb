@@ -4,8 +4,8 @@ cask 'tor-messenger' do
 
   url "https://dist.torproject.org/tormessenger/#{version}/TorMessenger-#{version}-osx64_en-US.dmg"
   name 'Tor Messenger'
-  homepage 'https://blog.torproject.org/blog/tor-messenger-010b6-released'
+  homepage 'https://trac.torproject.org/projects/tor/wiki/doc/TorMessenger'
   license :oss
 
-  app 'Tor Messenger.app'
+  app 'TorMessenger.app'
 end
