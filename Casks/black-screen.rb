@@ -1,10 +1,10 @@
 cask 'black-screen' do
-  version '0.2.11'
-  sha256 '28edbd0f5414fbdc231932534081a28ce50baf73ee44a522e11e94c43afb1b7b'
+  version '0.2.33'
+  sha256 '2405179c995ff744c5877ff81a45ca58718bb1176d3ec5d78dcadce6114d925b'
 
   url "https://github.com/shockone/black-screen/releases/download/v#{version}/black-screen-#{version}-mac.zip"
   appcast 'https://github.com/shockone/black-screen/releases.atom',
-          checkpoint: 'b440476822f60a98c6bc00f679bad8b44dae2651b44c04b0bd9d53e1efabf62e'
+          checkpoint: 'a6f847d4a336df2c5f594a4986fa3bdac04c437720f475bfcb27f73d98b09db8'
   name 'Black Screen'
   homepage 'https://github.com/shockone/black-screen'
   license :mit
