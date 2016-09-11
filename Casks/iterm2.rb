@@ -20,5 +20,6 @@ cask 'iterm2' do
                 '~/Library/Preferences/com.googlecode.iterm2.plist',
                 '~/Library/Caches/com.googlecode.iterm2',
                 '~/Library/Application Support/iTerm',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.googlecode.iterm2.sfl',
               ]
 end
