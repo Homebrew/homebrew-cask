@@ -1,4 +1,4 @@
-cask 'okimc860' do
+cask 'oki-postscript-drivers' do
   version '2.0.2'
   sha256 'b8d5058744d93d040433eb841dcd2481848e61b659e84da459785310044857fa'
 
