@@ -11,14 +11,21 @@ cask 'ax88179' do
   url "http://www.asix.com.tw/FrootAttach/driver/#{Utils.basename(version)}.zip"
   name 'AX88179'
   homepage 'http://www.asix.com.tw/download.php?sub=driverdetail&PItemID=131'
-  license :closed
+  license :gratis
 
   container nested: "#{Utils.basename(version)}/AX88179_178A.dmg"
 
   pkg "AX88179_178A_v#{version}.pkg"
 
-  uninstall script: { executable: 'AX88179_178A_Uninstall_v140' }
+  postflight do
+    system '/usr/bin/sudo', '-E', '--',
+           '/sbin/kextload', '-b', 'com.asix.driver.ax88179-178a'
+  end
 
-  caveats "The AX88179 contains a kext module.
-  Either reboot or issue 'sudo kextload /Library/Extensions/AX88179_178A.kext' to load the driver"
+  uninstall script:  {
+                       executable: "#{staged_path}/AX88179_178A_Uninstall_v140",
+                       sudo:       false,
+                     },
+            kext:    'com.asix.driver.ax88179-178a',
+            pkgutil: 'com.asix.pkg.ax88179-178a-10.9'
 end
