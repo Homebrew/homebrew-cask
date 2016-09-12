@@ -22,10 +22,10 @@ cask 'ax88179' do
            '/sbin/kextload', '-b', 'com.asix.driver.ax88179-178a'
   end
 
-  uninstall script:  {
-                       executable: "#{staged_path}/AX88179_178A_Uninstall_v140",
-                       sudo:       false,
-                     },
-            kext:    'com.asix.driver.ax88179-178a',
-            pkgutil: 'com.asix.pkg.ax88179-178a-10.9'
+  uninstall early_script: {
+                            executable: "#{staged_path}/AX88179_178A_Uninstall_v140",
+                            sudo:       false,
+                          },
+            kext:         'com.asix.driver.ax88179-178a',
+            pkgutil:      'com.asix.pkg.ax88179-178a*'
 end
