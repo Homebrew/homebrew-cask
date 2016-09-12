@@ -1,11 +1,11 @@
 cask 'iterm2' do
   # note: "2" is not a version number, but an intrinsic part of the product name
-  version '3.0.8'
-  sha256 'fae85a7fd1c0c7706031b103dab6c2cf65bb6a82b4d0fbb0be9f75467875ae64'
+  version '3.0.9'
+  sha256 '4e4b9decbc2327c795fa114156213d95482a882eab188825dfeb8df1ed13b9ab'
 
   url "https://iterm2.com/downloads/stable/iTerm2-#{version.dots_to_underscores}.zip"
   appcast 'https://iterm2.com/appcasts/final.xml',
-          checkpoint: 'dfe543f77383d147a9bb027c0758c1217a407f3148717ee2cba6fab947f05b2f'
+          checkpoint: '79f372423ae6b3095bffb553bb5012ecf81643db5e8fa992f600670ad0f97052'
   name 'iTerm2'
   homepage 'https://www.iterm2.com/'
   license :gpl
