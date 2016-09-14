@@ -1,8 +1,8 @@
 cask 'vectr' do
-  version '0.1.9'
-  sha256 '1f5331eb0af93e49545fc7257a0901b70a80a779e26b354bb4b71e3de37a198c'
+  version '0.1.10'
+  sha256 '2fd1589a9d3eb4745b49588f54dd0758074bbbdf7aaa6379934ab9c9d8fbf0f4'
 
-  url "https://download.vectr.com/desktop/Vectr-darwin-x64-#{version}.zip"
+  url "http://download.vectr.com/desktop/#{version}/mac/Vectr-#{version}.dmg"
   name 'Vectr'
   homepage 'https://vectr.com'
   license :gratis
