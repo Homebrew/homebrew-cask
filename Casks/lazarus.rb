@@ -10,8 +10,8 @@ cask 'lazarus' do
   homepage 'http://lazarus.freepascal.org/'
   license :gpl
 
-  depends_on cask: 'fpc'
-  depends_on cask: 'fpcsrc'
+  # depends_on cask: 'fpc'
+  # depends_on cask: 'fpcsrc'
 
   pkg 'lazarus.pkg'
 
