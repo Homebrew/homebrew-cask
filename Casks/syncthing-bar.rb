@@ -4,7 +4,7 @@ cask 'syncthing-bar' do
 
   url "https://github.com/m0ppers/syncthing-bar/releases/download/#{version}/syncthing-bar-#{version}.pkg"
   appcast 'https://github.com/m0ppers/syncthing-bar/releases.atom',
-          checkpoint: '522146417fa729c40fcef7099681f702d8a6588d4c711b3f1bf7e05082bfd58b'
+          checkpoint: 'fbc5cd4a99b96d6e2b4a225fcafe621a1f94fbcde3bc479c36d42ace7cae60b6'
   name 'Syncthing bar'
   homepage 'https://github.com/m0ppers/syncthing-bar'
   license :oss
