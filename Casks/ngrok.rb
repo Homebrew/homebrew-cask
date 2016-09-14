@@ -1,9 +1,16 @@
 cask 'ngrok' do
-  version '2.1.12,4VmDzA7iaHb'
-  sha256 '10812c02fb8450bb3b5726a50251e2d2615727875fb584764bbe38cfcc5dd68a'
+  version '2.1.14,4VmDzA7iaHb'
 
-  # bin.equinox.io was verified as official when first introduced to the cask
-  url "https://bin.equinox.io/c/#{version.after_comma}/ngrok-stable-darwin-amd64.zip"
+  if Hardware::CPU.is_32_bit?
+    sha256 '5f39f69ba742c9bdbdc8390aab5c8cb1ec209920ed14ea927c7c8b4e5e74850b'
+    # bin.equinox.io was verified as official when first introduced to the cask
+    url "https://bin.equinox.io/c/#{version.after_comma}/ngrok-stable-darwin-386.zip.zip"
+  else
+    sha256 '63c9aeee01956f2e9627581f78a2e498e3364455240d663ccf7184c86d0fe6e3'
+    # bin.equinox.io was verified as official when first introduced to the cask
+    url "https://bin.equinox.io/c/#{version.after_comma}/ngrok-stable-darwin-amd64.zip"
+  end
+
   name 'ngrok'
   homepage 'https://ngrok.com/'
   license :freemium
