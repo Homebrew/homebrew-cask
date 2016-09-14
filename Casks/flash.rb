@@ -1,11 +1,11 @@
 cask 'flash' do
-  version '22.0.0.209'
-  sha256 'ec1e880e0546d8cbfe7e585c02758387a555f0d04c2a09fff83f6c8a799a1354'
+  version '23.0.0.162'
+  sha256 'f4c10d33c13fcee3f9c9cd2c742743c92269474f90f98bf47dff367932517e67'
 
   # macromedia.com was verified as official when first introduced to the cask
   url "https://fpdownload.macromedia.com/get/flashplayer/pdc/#{version}/install_flash_player_osx.dmg"
   appcast 'http://fpdownload2.macromedia.com/get/flashplayer/update/current/xml/version_en_mac_pl.xml',
-          checkpoint: '54401f2d7472607f78e82281850b6285d7c711865009bc717e21bb4611b5fe3f'
+          checkpoint: 'e6bf656907bdee3e843e649f97de873aac9aa18e19d87c111d7fb658037c4047'
   name 'Adobe Flash Player'
   homepage 'https://get.adobe.com/flashplayer'
   license :gratis
