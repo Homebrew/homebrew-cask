@@ -1,10 +1,10 @@
 cask 'syncthing-bar' do
-  version '0.0.11'
-  sha256 'eb81af00838561cfd1cb3a1b01b28ae6131730d11031fe1863b5a4189a359a6e'
+  version '0.0.12'
+  sha256 'f19f17c09786234d74a34647a11d36c5cb6b830cda041d6783593ef9d71e4ca7'
 
   url "https://github.com/m0ppers/syncthing-bar/releases/download/#{version}/syncthing-bar-#{version}.pkg"
   appcast 'https://github.com/m0ppers/syncthing-bar/releases.atom',
-          checkpoint: '2409480b802299ae5ba438d16bc26a6d50beb2eda61622225f424ffe4fe95fca'
+          checkpoint: 'fbc5cd4a99b96d6e2b4a225fcafe621a1f94fbcde3bc479c36d42ace7cae60b6'
   name 'Syncthing bar'
   homepage 'https://github.com/m0ppers/syncthing-bar'
   license :oss
