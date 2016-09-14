@@ -8,6 +8,6 @@ cask 'tsprint' do
   license :gratis
 
   pkg 'TSPrintClient.pkg'
-    
+
   uninstall quit: 'com.terminalworks.TSPrintClient', trash: '/Applications/TSPrintClient.app'
 end
