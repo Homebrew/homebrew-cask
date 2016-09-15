@@ -9,6 +9,6 @@ cask 'tsprint' do
 
   pkg 'TSPrintClient.pkg'
 
-  uninstall quit: 'com.terminalworks.TSPrintClient'
-  uninstall trash: '/Applications/TSPrintClient.app'
+  uninstall quit: 'com.terminalworks.TSPrintClient', 
+            trash: '/Applications/TSPrintClient.app'
 end
