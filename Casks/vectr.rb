@@ -7,5 +7,5 @@ cask 'vectr' do
   homepage 'https://vectr.com'
   license :gratis
 
-  app 'Vectr-darwin-x64/Vectr.app'
+  app 'Vectr.app'
 end
