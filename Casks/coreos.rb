@@ -1,6 +1,6 @@
 cask 'coreos' do
-  version '1.4.9'
-  sha256 'c0ad06ebee3500ed7d5ad594c2017298e4717f3816f88440f8a0577e07429bab'
+  version '1.5.0'
+  sha256 'd1923f1a734b2ad634f2f7aef4f9fb593041be9529bebc892ef9c824025bd765'
 
   url "https://github.com/TheNewNormal/coreos-osx/releases/download/v#{version}/CoreOS_v#{version}.dmg"
   appcast 'https://github.com/TheNewNormal/coreos-osx/releases.atom',
