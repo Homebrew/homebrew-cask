@@ -9,7 +9,7 @@ cask 'coreos' do
   homepage 'https://github.com/TheNewNormal/coreos-osx'
   license :apache
 
-  depends_on cask: 'corectl'
+  depends_on cask: 'corectl-app'
 
   app 'CoreOS.app'
 
