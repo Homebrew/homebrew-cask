@@ -1,6 +1,6 @@
 cask 'helm' do
   version '2.0.0-alpha.4'
-  sha256 '4e504ca7b491609e1402bf583632516ce44fddfeadf02856b440ca5a6644eeb1'
+  sha256 'fcba539993b7b1459a5c2e02c93e87c7f2fdb5fea941b4a0bc3367e58f85c47b'
 
   url "https://github.com/kubernetes/helm/releases/download/v#{version}/helm-v#{version}-darwin-amd64.tar.gz"
   appcast 'https://github.com/kubernetes/helm/releases.atom',
