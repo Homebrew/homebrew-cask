@@ -1,4 +1,5 @@
 cask 'gns3' do
+  # note: "3" is not a version number, but an intrinsic part of the product name
   version '1.5.2'
   sha256 'a6ef73ba5e018fb22ed88fc07d71597b993878d3cb88ba8f334226ddf23e2d16'
 
