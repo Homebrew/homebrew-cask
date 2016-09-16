@@ -4,7 +4,7 @@ cask 'typora' do
 
   url "https://www.typora.io/download/typora_#{version}.zip"
   appcast 'https://www.typora.io/download/dev_update.xml',
-          checkpoint: '2c6675ce272d71ede300210d136ce6d45e041578d07ee43acbce897359bc4c31'
+          checkpoint: 'a856ddacf753bd32120c79adbd680c2d063e35bf8d2f95ea672d0ca6f7ab4e2b'
   name 'Typora'
   homepage 'https://typora.io'
   license :gratis
