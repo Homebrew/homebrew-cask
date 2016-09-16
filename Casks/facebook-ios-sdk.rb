@@ -1,5 +1,5 @@
 cask 'facebook-ios-sdk' do
-  version :current
+  version :latest
   sha256 :no_check
 
   url 'https://origincache.facebook.com/developers/resources/?id=facebook-ios-sdk-current.zip'
