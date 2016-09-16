@@ -1,11 +1,11 @@
 cask 'things' do
-  version '2.8.4'
-  sha256 'a46b7bd62c39a381a13cdcfc2a9523ac90c0b12a6e7d5c239ef0f042a9457028'
+  version '2.8.7'
+  sha256 '70cc828451302aa3f267759a56ea2c354d16bb591bb571542e3330b6e40b4e9b'
 
   # culturedcode.cachefly.net was verified as official when first introduced to the cask
   url "https://culturedcode.cachefly.net/things/Things_#{version}.zip"
   appcast 'https://culturedcode.cachefly.net/things/sparkle/sparkle_en.xml',
-          checkpoint: '9b918aa150cd88fe2bf30879792bff1e232d20460db5f2cacb9a132924b552bc'
+          checkpoint: 'e95af743abf659ff9df566c7575fab4fade4cef05432140c77f96d6c5626e563'
   name 'Things'
   homepage 'https://culturedcode.com/things/'
   license :commercial
