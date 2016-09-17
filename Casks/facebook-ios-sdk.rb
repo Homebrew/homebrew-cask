@@ -19,7 +19,7 @@ cask 'facebook-ios-sdk' do
   artifact 'FBSDKShareKit.framework', target: "#{ENV['HOME']}/Documents/FacebookSDK"
   artifact 'FacebookSDKStrings.bundle', target: "#{ENV['HOME']}/Documents/FacebookSDK"
   artifact 'Samples', target: "#{ENV['HOME']}/Documents/FacebookSDK"
-  
+
   preflight do
     system_command '/bin/mkdir', args: ['-p', '--', "#{ENV['HOME']}/Documents/FacebookSDK"]
   end
