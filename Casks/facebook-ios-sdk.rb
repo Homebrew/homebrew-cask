@@ -7,6 +7,10 @@ cask 'facebook-ios-sdk' do
   homepage 'https://developers.facebook.com/docs/ios'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
+  preflight do
+    system_command '/bin/mkdir', args: ['-p', '--', "#{ENV['HOME']}/Documents/FacebookSDK"]
+  end
+
   artifact 'AccountKit.framework', target: "#{ENV['HOME']}/Documents/FacebookSDK"
   artifact 'AccountKitStrings.bundle', target: "#{ENV['HOME']}/Documents/FacebookSDK"
   artifact 'Bolts.framework', target: "#{ENV['HOME']}/Documents/FacebookSDK"
@@ -20,7 +24,4 @@ cask 'facebook-ios-sdk' do
   artifact 'FacebookSDKStrings.bundle', target: "#{ENV['HOME']}/Documents/FacebookSDK"
   artifact 'Samples', target: "#{ENV['HOME']}/Documents/FacebookSDK"
 
-  preflight do
-    system_command '/bin/mkdir', args: ['-p', '--', "#{ENV['HOME']}/Documents/FacebookSDK"]
-  end
 end
