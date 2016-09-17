@@ -1,10 +1,10 @@
 cask 'corectl-app' do
-  version '0.2.7'
-  sha256 '700c30151490969053835d56169b24011d2736c985c4d190bbcdf0054faf71f5'
+  version '0.2.8'
+  sha256 '3571c6fff8eb4e4787b15d2024845e517cb19384f9b6899cbd45161a0d4ffbee'
 
-  url "https://github.com/TheNewNormal/corectl.app/releases/download/v#{version}/corectl_#{version}.dmg"
+  url "https://github.com/TheNewNormal/corectl.app/releases/download/v#{version}/corectl_v#{version}.dmg"
   appcast 'https://github.com/TheNewNormal/corectl.app/releases.atom',
-          checkpoint: '67cc2c56f133796719da4a2c1e9a7fc102826bdcc6b9209f03746187281fd08f'
+          checkpoint: '1c589521e0a74974e828d2fe3f527345c7459eaeaaa8dd744f9eb6f728125109'
   name 'Corectl'
   homepage 'https://github.com/TheNewNormal/corectl.app'
   license :oss
