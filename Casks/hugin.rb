@@ -1,10 +1,10 @@
 cask 'hugin' do
-  version '2014.0.0'
-  sha256 '9d3995612aff2235a20cd53b119dde565cd6c00afb62ec48bf63203a24fa8e61'
+  version '2016.2.0'
+  sha256 '31c36dc9d8116c34f5f208a98bf1711fbf8b37f20dd82058561aa59f48d9143c'
 
   url "https://downloads.sourceforge.net/hugin/Hugin-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/hugin/rss',
-          checkpoint: 'f44b8c916caed6b9f90bbc825d204d4f30f12d38d3dd6fdc88f346f3c75c9d8d'
+          checkpoint: '00abe255c13acffec0368944669e30f1690daf513050bd4f71afb2d42a4fb490'
   name 'Hugin'
   homepage 'http://hugin.sourceforge.net/'
   license :gpl
