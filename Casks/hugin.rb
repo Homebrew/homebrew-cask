@@ -9,5 +9,5 @@ cask 'hugin' do
   homepage 'http://hugin.sourceforge.net/'
   license :gpl
 
-  app 'Hugin.app'
+  suite 'Hugin'
 end
