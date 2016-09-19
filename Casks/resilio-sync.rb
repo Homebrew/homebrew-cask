@@ -1,4 +1,4 @@
-cask 'bittorrent-sync' do
+cask 'resilio-sync' do
   version :latest
   sha256 :no_check
 
