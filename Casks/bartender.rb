@@ -1,11 +1,11 @@
 cask 'bartender' do
-  version '2.1.5'
-  sha256 '130234472a32ca4ec4df61da9b17c1083fec3197cdf1c6f885d4b55112818021'
+  version '2.1.6'
+  sha256 '013bb1f5dcc29ff1ecbc341da96b6e399dc3c85fc95bd8c7bee153ab0d8756f5'
 
   url "https://macbartender.com/B2/updates/#{version.dots_to_hyphens}/Bartender%20#{version.major}.zip",
       referer: 'https://www.macbartender.com'
   appcast 'https://www.macbartender.com/B2/updates/updates.php',
-          checkpoint: '19d1b5bfc28d61f68e7fcdb9b101d452e392ce4791d101935e4354637f37ba73'
+          checkpoint: '6d5406613e77584527da5dfcc997d13f6b2985ae81ec732f399216743fe00a16'
   name 'Bartender'
   homepage 'https://www.macbartender.com/'
   license :commercial

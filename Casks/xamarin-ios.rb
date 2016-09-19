@@ -1,10 +1,10 @@
 cask 'xamarin-ios' do
-  version '9.8.2.22'
-  sha256 'f67eef6234a7e53cda3bf716e36166d5ecc226425de4b66177a5acbb1a5fab03'
+  version '10.0.0.6'
+  sha256 '61cc32323fe34afea594aecfa7a3fc54f715a6d669499ca79b857dcac1182d36'
 
   url "https://download.xamarin.com/MonoTouch/Mac/xamarin.ios-#{version}.pkg"
   appcast 'https://static.xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
-          checkpoint: '773227b41218a95c3404b764d09eed828cc248aa4bb3aaabbe75c6ad95022b22'
+          checkpoint: 'b3b4ad91917a09091c1fee7f5aa71bab10c1c8cee5e5f2cbcdbb50e86ac31ac9'
   name 'Xamarin.iOS'
   homepage 'https://xamarin.com/ios'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder

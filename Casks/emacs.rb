@@ -1,10 +1,10 @@
 cask 'emacs' do
-  version '24.5-1'
-  sha256 'c99c3def07886c0897c7c4bfc4a19338ea3d5bbcc2986d48be98aae1401f5830'
+  version '25.1'
+  sha256 '5bd04c82d2a091a48d7b9b80a26fa31f64767f2e553440a556d12be5815e29ef'
 
   url "https://emacsformacosx.com/emacs-builds/Emacs-#{version}-universal.dmg"
   appcast 'https://emacsformacosx.com/atom/release',
-          checkpoint: 'c68a8c31a4309b66b7cf8c69e431d739866a28bd9ad77b5e86ed3e2ad76a2d27'
+          checkpoint: 'b9e7670d7a2bd49a51d282a71f739adca891cf4201a0dcae90ac4895ae403fa1'
   name 'Emacs'
   homepage 'https://emacsformacosx.com/'
   license :gpl
@@ -12,7 +12,6 @@ cask 'emacs' do
   app 'Emacs.app'
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin/emacsclient"
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin/ctags"
-  binary "#{appdir}/Emacs.app/Contents/MacOS/bin/grep-changelog"
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin/ebrowse"
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin/etags"
 end

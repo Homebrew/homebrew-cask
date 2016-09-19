@@ -1,6 +1,6 @@
 cask 'gear-player' do
-  version '2.2.29'
-  sha256 '47d3cd215198a7fc0fdb0943042a15d2abd8fd670f3388de48bdcfcf18e16f2f'
+  version '2.2.30'
+  sha256 '4723688e3c8a68dfc9079ca4692787051d69831b0f76a49fe6f78081f0c8ce04'
 
   url 'https://dl.gearmusicplayer.com/gearupdate.zip'
   appcast 'https://dl.gearmusicplayer.com/gearcast.xml',
