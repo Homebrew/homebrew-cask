@@ -1,10 +1,10 @@
 cask 'ethereum-wallet' do
-  version '0.8.2'
-  sha256 '12e43b5f321a1b94357db74d3b31abb1aea5ae3e542b19f0eaad3f966160ca13'
+  version '0.8.3'
+  sha256 'e915e66a774cd9af320b746bfd907cc9f678d0d39e75643f35488925e177fefa'
 
-  url "https://github.com/ethereum/mist/releases/download/#{version}/Ethereum-Wallet-macosx-#{version.dots_to_hyphens}.zip"
+  url "https://github.com/ethereum/mist/releases/download/#{version}/Ethereum.Wallet-#{version}.dmg"
   appcast 'https://github.com/ethereum/mist/releases.atom',
-          checkpoint: '2f1d77d72dca6079fd52c7bda5c7a42cf14eaeef9ed7eb630d99a67edf3ab70f'
+          checkpoint: 'ec95a7f9bf2bf3d94ff21dbb1b0bc6d9008b2fbacf80c46512768250a43dac93'
   name 'Ethereum Wallet'
   homepage 'https://github.com/ethereum/mist'
   license :gpl
