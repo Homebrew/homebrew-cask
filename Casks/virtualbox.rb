@@ -17,8 +17,6 @@ cask 'virtualbox' do
   homepage 'https://www.virtualbox.org'
   license :gpl
 
-  auto_updates true
-
   pkg 'VirtualBox.pkg'
 
   uninstall script:  { executable: 'VirtualBox_Uninstall.tool', args: %w[--unattended] },
