@@ -11,6 +11,8 @@ cask 'onyx' do
     url "http://joel.barriere.pagesperso-orange.fr/download/#{macos_release}/OnyX.dmg"
   end
 
+  appcast 'http://www.titanium.free.fr/release_onyx.html',
+          checkpoint: '1f565ce610d1cdb2576b7a3962ba7e5295cb7ca13b265a80db3a23ad012c5867'
   name 'OnyX'
   homepage 'http://www.titanium.free.fr/onyx.html'
   license :gratis
