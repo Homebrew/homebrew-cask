@@ -1,4 +1,4 @@
-cask 'logos-bible-software' do
+cask 'logos' do
   version :latest
   sha256 :no_check
 
