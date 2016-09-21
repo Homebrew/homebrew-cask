@@ -7,7 +7,7 @@ cask 'nvidia-web-driver' do
   homepage 'http://www.nvidia.com/download/driverResults.aspx/107369/en-us'
   license :commercial
 
-  pkg 'WebDriver-346.03.15f03.pkg'
+  pkg "WebDriver-#{version}.pkg"
 
   uninstall pkgutil: 'com.nvidia.web-driver'
 
