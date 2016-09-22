@@ -12,7 +12,7 @@ cask 'logitech-options' do
   pkg "LogiMgr Installer #{version}.app/Contents/Resources/LogiMgr.mpkg"
 
   uninstall script:  {
-                       executable: '/Applications/Utilities/Logitech Options Uninstaller.app/Contents/Resources/Uninstaller',
+                       executable: '/Applications/Utilities/LogiMgr Uninstaller.app/Contents/Resources/Uninstaller',
                        sudo:       false,
                      },
             pkgutil: [
