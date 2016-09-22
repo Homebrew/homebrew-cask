@@ -1,10 +1,10 @@
 cask 'sublime-text' do
-  version '3114'
-  sha256 '876d4e878ae00ae0c609d561e0fda0e200c8043d8bd53d4a5b22bae4339b7df7'
+  version '3124'
+  sha256 '2b7a7d2ca612b42a2ec5c78d04d981cb0dc0cc301b3d8b145dd80f4645dcdea5'
 
   url "https://download.sublimetext.com/Sublime%20Text%20Build%20#{version}.dmg"
   appcast 'https://www.sublimetext.com/updates/3/stable/appcast_osx.xml',
-          checkpoint: '9ba5c20ba4865329217cf88ef4e82cbebab1eae4d9f0af480052e93328da8f5a'
+          checkpoint: '54a3813be65fe47b481456e9b78f012e27be51743456d31c724fb4061475d511'
   name 'Sublime Text'
   homepage 'https://www.sublimetext.com/3'
   license :closed
