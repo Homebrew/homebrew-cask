@@ -37,6 +37,7 @@ cask 'markdown-service-tools' do
   service "MarkdownServiceTools#{version}/md - Paragraphs - Preserve Line Breaks.workflow"
   service "MarkdownServiceTools#{version}/md - Paragraphs - Unwrap.workflow"
   service "MarkdownServiceTools#{version}/md - Tables - Cleanup.workflow"
+  service "MarkdownServiceTools#{version}/md - Tables - Create from CSV.workflow"
   service "MarkdownServiceTools#{version}/md - Wrap - Angle Brackets.workflow"
   service "MarkdownServiceTools#{version}/md - Wrap - Parenthesis.workflow"
   service "MarkdownServiceTools#{version}/md - Wrap - Square Brackets.workflow"
