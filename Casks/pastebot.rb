@@ -10,5 +10,5 @@ cask 'pastebot' do
 
   app 'Pastebot.app'
 
-  zap delete: '~/Library/Containers/com.tapbots.Pastebot2Mac'
+  zap delete: "~/Library/Containers/com.tapbots.Pastebot#{version.major}Mac"
 end
