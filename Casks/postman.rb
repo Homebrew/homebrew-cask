@@ -1,11 +1,11 @@
 cask 'postman' do
-  version '4.7.1'
-  sha256 '5600f4c2fa39c7b9234ef603c5d5dbc6c9cb0b3cbc3cde5d20d168de944c2dbf'
+  version '4.7.2'
+  sha256 '37fe48d2a42559ce69520d089ca83a42c07a5057a18805f6a242e3841c28f562'
 
   # s3.amazonaws.com/postman-electron-builds was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/postman-electron-builds/mac/Postman-osx-#{version}.zip"
   appcast 'https://app.getpostman.com/api/electron_updates_auto',
-          checkpoint: '2d5290ad8a48e490fb6f5b7554ee59fbf8f6e5cd34456f3a38e210c5ade2e38a'
+          checkpoint: 'fc712ff9a9720e2220a7630733ee589ede1bd26f685b3ccda454f4e3cbbeba75'
   name 'Postman'
   homepage 'https://www.getpostman.com/'
   license :closed
