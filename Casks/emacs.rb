@@ -1,10 +1,10 @@
 cask 'emacs' do
-  version '25.1'
-  sha256 '5bd04c82d2a091a48d7b9b80a26fa31f64767f2e553440a556d12be5815e29ef'
+  version '25.1-1'
+  sha256 'b8a4616aa529e77637b51c3ff6bd850dcd6731ccedb40044c9ecbbb53fdc125d'
 
   url "https://emacsformacosx.com/emacs-builds/Emacs-#{version}-universal.dmg"
   appcast 'https://emacsformacosx.com/atom/release',
-          checkpoint: 'b9e7670d7a2bd49a51d282a71f739adca891cf4201a0dcae90ac4895ae403fa1'
+          checkpoint: '4867fa70191bad9cd83d3816882af1d4818443b311281a5c2b673f9e0fc2ee0e'
   name 'Emacs'
   homepage 'https://emacsformacosx.com/'
   license :gpl
