@@ -5,9 +5,7 @@ cask 'iteleport-connect' do
   url "http://www.iteleportmobile.com/download/iTeleport%20Installer.v#{version}.dmg"
   appcast 'http://www.iteleportmobile.com/connect/mac/new',
           checkpoint: 'e7df5301267b725512751f09ecd0a260586044e2b1330b4ac7ea3a8c8d5257ff'
-  name 'iTeleport Connect For Mac'
   name 'iTeleport Connect'
-  name 'iTeleport'
   homepage 'http://www.iteleportmobile.com/connect'
   license :gratis
 
