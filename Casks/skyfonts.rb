@@ -1,6 +1,6 @@
 cask 'skyfonts' do
-  version '5.5.0.0'
-  sha256 '8b79798e79f2529a9e30438a9126ab577859a6ee27c56d733cbbd793f9eabfb0'
+  version '5.6.0.0'
+  sha256 '1f96a00e1a0679102b51efbafea6a65849ccc502fb5f506ab3a9b8ac5b62dd0d'
 
   # cdn1.skyfonts.com was verified as official when first introduced to the cask
   url "http://cdn1.skyfonts.com/client/Monotype_SkyFonts_Mac64_#{version}.dmg"

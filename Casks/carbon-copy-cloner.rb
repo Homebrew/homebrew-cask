@@ -1,6 +1,6 @@
 cask 'carbon-copy-cloner' do
-  version '4.1.9.4369'
-  sha256 '448d1a12b97fefe0549fff81df2e77a648e813cd1c8d827881bff046c6d704b8'
+  version '4.1.10.4425'
+  sha256 '81ff5bc95fea7fdc066acf508a49c840d9d5377e699323ee925c31c030dde1d3'
 
   url "https://bombich.com/software/download_ccc_update.php?v=#{version}"
   appcast "https://bombich.com/software/updates/ccc.php?os_minor=11&os_bugfix=#{version.major}&ccc=#{version.after_comma}&beta=0&locale=en",

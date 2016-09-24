@@ -1,6 +1,6 @@
 cask 'citrix-receiver' do
-  version '12.2.0'
-  sha256 '2401fdd57a20c2c4874b2d3da85bf89105c705f240ead4918591846c4904e8cb'
+  version '12.3.0'
+  sha256 'cd06f5fcb6c20f807318cf9b3eada887ac9e5e59e766f1310ad25b28caea3573'
 
   # downloadplugins.citrix.com.edgesuite.net was verified as official when first introduced to the cask
   url 'http://downloadplugins.citrix.com.edgesuite.net/Mac/CitrixReceiverWeb.dmg'

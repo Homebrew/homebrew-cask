@@ -2,13 +2,7 @@
 
 # A cask fails to install
 
-Possible reasons:
-
-* [`curl` error](#curl-error)
-* [`Permission denied` error](#permission-denied-error)
-* [`sha256 mismatch` error](#sha256-mismatch-error)
-* [`source is not there` error](#source-is-not-there-error)
-* [Unlisted reason](#unlisted-reason)
+Pick the issue closest to your case, and follow the links.
 
 ---
 

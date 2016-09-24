@@ -1,11 +1,11 @@
 cask 'whatsie' do
-  version '2.0.19'
-  sha256 'f40922bfc768460c1a56212abc34e7be1659e0b30a50ff1dd7fcd3fc77dd4aa0'
+  version '2.1.0'
+  sha256 '4d8aa3155f035428ee56127f2953152a6069333e22d8d2177e746314e2c31728'
 
   # github.com/Aluxian/Whatsie was verified as official when first introduced to the cask
   url "https://github.com/Aluxian/Whatsie/releases/download/v#{version}/whatsie-#{version}-osx.dmg"
   appcast 'https://github.com/Aluxian/Whatsie/releases.atom',
-          checkpoint: 'bda4afec7f0a0fe936a3d2202f1c49370545960b5f06f5bf36ac7bfd5eb9bf59'
+          checkpoint: 'a0754f575e81d5f0b18f43758690ec50d1bae237bdbe3302283f6569b65939ef'
   name 'Whatsie'
   homepage 'https://whatsie.chat/'
   license :mit

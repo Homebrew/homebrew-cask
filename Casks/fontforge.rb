@@ -8,7 +8,7 @@ cask 'fontforge' do
           checkpoint: 'dcb2587675266e30c2ac1530982c66f170a27a962d77708f8862d5f469ff8102'
   name 'FontForge'
   homepage 'https://fontforge.github.io/en-US/'
-  license :bsd
+  license :gpl
 
   depends_on x11: true
   depends_on macos: '>= :yosemite'

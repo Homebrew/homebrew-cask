@@ -10,15 +10,22 @@ cask 'ax88179' do
 
   url "http://www.asix.com.tw/FrootAttach/driver/#{Utils.basename(version)}.zip"
   name 'AX88179'
-  homepage 'http://www.asix.com.tw/products.php?op=pItemdetail&PItemID=131;71;112&PLine=71'
+  homepage 'http://www.asix.com.tw/download.php?sub=driverdetail&PItemID=131'
   license :gratis
 
   container nested: "#{Utils.basename(version)}/AX88179_178A.dmg"
 
   pkg "AX88179_178A_v#{version}.pkg"
 
-  uninstall script: {
-                      executable: 'AX88179_178A_Uninstall_v140',
-                      sudo:       false,
-                    }
+  postflight do
+    system '/usr/bin/sudo', '-E', '--',
+           '/sbin/kextload', '-b', 'com.asix.driver.ax88179-178a'
+  end
+
+  uninstall early_script: {
+                            executable: "#{staged_path}/AX88179_178A_Uninstall_v140",
+                            sudo:       false,
+                          },
+            kext:         'com.asix.driver.ax88179-178a',
+            pkgutil:      'com.asix.pkg.ax88179-178a*'
 end

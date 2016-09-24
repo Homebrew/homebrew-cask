@@ -19,5 +19,8 @@ cask 'tunnelbear' do
   uninstall quit:      'com.tunnelbear.mac.TunnelBear',
             launchctl: 'com.tunnelbear.mac.tbeard'
 
-  zap delete: '~/Library/Preferences/com.tunnelbear.mac.TunnelBear.plist'
+  zap delete: [
+                '~/Library/Preferences/com.tunnelbear.mac.TunnelBear.plist',
+                '~/Library/Caches/com.tunnelbear.mac.TunnelBear',
+              ]
 end
