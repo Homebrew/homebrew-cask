@@ -11,4 +11,10 @@ cask 'dripcap' do
   license :mit
 
   app 'Dripcap.app'
+
+  uninstall launchctl: 'org.dripcap.DripcapHelper',
+            delete:    [
+                         '/Library/LaunchDaemons/org.dripcap.DripcapHelper.plist',
+                         '/Library/PrivilegedHelperTools/org.dripcap.DripcapHelper',
+                       ]
 end
