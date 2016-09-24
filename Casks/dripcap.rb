@@ -4,6 +4,8 @@ cask 'dripcap' do
 
   # github.com/dripcap was verified as official when first introduced to the cask
   url "https://github.com/dripcap/dripcap/releases/download/v#{version}/dripcap-darwin-amd64.dmg"
+  appcast 'https://github.com/dripcap/dripcap/releases.atom',
+          checkpoint: '2ece84a697f186a233ed4858669fbbcf76fc0b8223eac787a405868eed8be66a'
   name 'Dripcap'
   homepage 'https://dripcap.org/'
   license :mit
