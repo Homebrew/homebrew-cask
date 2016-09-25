@@ -16,4 +16,6 @@ cask 'logmein-hamachi' do
                       executable: '/Applications/LogMeIn Hamachi/HamachiUninstaller.app/Contents/Resources/uninstaller.sh',
                       sudo:       true,
                     }
+  
+  zap delete: '/Library/Application Support/LogMeIn Hamachi'
 end
