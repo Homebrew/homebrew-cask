@@ -1,6 +1,6 @@
 cask 'adobe-photoshop-lightroom' do
-  version '6.5'
-  sha256 '7ad434e0cce0c24bd8caaf81adf80d2d5a57b5348c2a75b7eaa6bb29dd06311b'
+  version '6.7'
+  sha256 '882e403e9a50df4bf46daf10bd15b7aa66cc552d066ea675563f553b3ddffd9d'
 
   url "http://swupdl.adobe.com/updates/oobe/aam20/mac/AdobeLightroom-#{version.major}.0/#{version}/setup.dmg"
   name 'Adobe Photoshop Lightroom'
