@@ -1,6 +1,6 @@
 cask 'plantronics-hub' do
-  version '3.8.2'
-  sha256 'da4265a9e65193d9c11a6a231c5c5f20822969e2f65d534d1f4844347cd1ef35'
+  version '3.8.3'
+  sha256 '033b3e177192dea333955cbfffb1f0450a2dc96a065a0650295b5febc0a0c126'
 
   url "https://www.plantronics.com/media/downloads/PlantronicsHub-#{version}.dmg"
   name 'Plantronics Hub'
