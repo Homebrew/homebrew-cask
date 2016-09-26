@@ -1,11 +1,11 @@
 cask 'hazel' do
-  version '4.0.5'
-  sha256 '7ab4d8b8195773a5c9d1ff560f1c6931abd3c4830d2b29c6fa2ef810126056bf'
+  version '4.0.6'
+  sha256 '71427d730d07fcd28fc58d358e126de14b40b1d56e573796a7c6df973004155b'
 
   # s3.amazonaws.com/Noodlesoft was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/Noodlesoft/Hazel-#{version}.dmg"
   appcast 'https://www.noodlesoft.com/Products/Hazel/generate-appcast.php',
-          checkpoint: '708d1d26e7a6cf570a21e862a9b7980ddae57883a1c8357ce87df13e72fd13eb'
+          checkpoint: 'fd5271bb5fc3644bc2048a62750a485e1c860d3926b3c5d6614815a5bd3917bf'
   name 'Hazel'
   homepage 'https://www.noodlesoft.com/hazel.php'
   license :freemium

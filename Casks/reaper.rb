@@ -1,20 +1,20 @@
 cask 'reaper' do
-  version '5.24'
+  version '5.25'
 
   if Hardware::CPU.is_32_bit?
-    sha256 'eda92fa2d494a9b249a0e6171c3e1a2e33778b8e2c9ac86a4898090436383d59'
+    sha256 '010deeaecc2780b113ab518dce270eb3222ca60d99db962204043c04898b6abd'
     url "http://www.reaper.fm/files/#{version.major}.x/reaper#{version.no_dots}_i386.dmg"
     app 'REAPER.app'
     app 'ReaMote.app'
   else
-    sha256 'ab3b4c4539a3e43bc69812d1b3e9609f1a31bdc22590e6b848aeabb41cc0c0d9'
+    sha256 '2dc452bca5ff728fa1052c07a83fe87f0b7d11b6536164163e811e88f1982a33'
     url "http://www.reaper.fm/files/#{version.major}.x/reaper#{version.no_dots}_x86_64.dmg"
     app 'REAPER64.app'
     app 'ReaMote64.app'
   end
 
   appcast 'http://www.reaper.fm/whatsnew.txt',
-          checkpoint: '3c98083581789c6787b03532c26af99c65aa4589a652c04f11312f66589b005c'
+          checkpoint: '37690b7573881618f2eef64df5e1ff48989f85428db78192c3d9ed70ba292847'
   name 'REAPER'
   homepage 'http://www.reaper.fm/'
   license :commercial

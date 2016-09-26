@@ -1,10 +1,11 @@
 cask 'fing' do
-  version '3.0'
-  sha256 '207c6f441c8edb55b4a59b57f0d5e487afcf578a637d0981e2027adb4f848ea1'
+  version '3.0,2016/09'
+  sha256 'a8497ce00d58609d8677c6c7850e479420516d94e9f37d681dbdc970359294c6'
 
-  url 'https://www.fingbox.com/download?plat=osx'
+  # 39qiv73eht2y1az3q51pykkf-wpengine.netdna-ssl.com was verified as official when first introduced to the cask
+  url "https://39qiv73eht2y1az3q51pykkf-wpengine.netdna-ssl.com/wp-content/uploads/#{version.after_comma}/overlook-fing-#{version.before_comma}.dmg_.zip"
   name 'Fing'
-  homepage 'https://www.fingbox.com/'
+  homepage 'https://www.fing.io/'
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "overlook-fing-#{version}.pkg"

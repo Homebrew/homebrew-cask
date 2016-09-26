@@ -6,9 +6,13 @@ cask 'logitech-control-center' do
   elsif MacOS.version <= :lion
     version '3.9.1.b20'
     sha256 'e2c938286c4044bc6b83a7455f659e99d5854572d308cd6a9befd39eaed57d6c'
-  else
+  elsif MacOS.version <= :mountain_lion
     version '3.9.4'
     sha256 '0be19f691ad562cf143197bfd54c02183888c55842eb19a3bd644406acb3910d'
+    url "https://www.logitech.com/pub/techsupport/mouse/mac/lcc#{version}.zip"
+  else
+    version '3.9.5'
+    sha256 '579d4263f1831e8069f9504fa626564477e04ae8bf4bfed5cf23d187e17bba96'
     url "https://www.logitech.com/pub/techsupport/mouse/mac/lcc#{version}.zip"
   end
 

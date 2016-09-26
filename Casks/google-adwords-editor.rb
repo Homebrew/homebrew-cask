@@ -1,6 +1,6 @@
 cask 'google-adwords-editor' do
-  version '11.3.3.0'
-  sha256 'ec3725c96d6e1b9f4b8d59ee9d68d0fea22acfc1926f405436ed6175b7957f0b'
+  version '11.5.9.0'
+  sha256 'f04ad235ebd7a4893623f5c26e8c073d8710b4bbaf918d437a9a118fe7bbb86f'
 
   url "https://dl.google.com/adwords_editor/#{version}/Google_AdWords_Editor.dmg"
   name 'Google AdWords Editor'
