@@ -151,7 +151,7 @@ in a future version.
     Abort Cask installation if the Cask does not have a checksum defined.
 
   * `--caskroom=<path>`:
-    Location of the Caskroom, where all binaries are stored. The default value is: `$(brew --repository)/Caskroom`.
+    Location of the Caskroom, where all binaries are stored. The default value is: `$(brew --prefix)/Caskroom`.
 
   * `--verbose`:
     Give additional feedback during installation.
