@@ -1,6 +1,6 @@
 cask 'whatsize' do
-  version '6.5.2'
-  sha256 '14abf2c48e321c63d21eb5e9adcf9f2d140859b3559d3120ffcd01df582b162e'
+  version '6.5.3'
+  sha256 'd8cdb22f3012ac443ac07b40e79cf1bd330fa6be685857a28b162384109a70a6'
 
   url 'https://www.whatsizemac.com/software/whatsize6/whatsize.dmg'
   appcast 'http://www.id-design.com/software/whatsize/release/notes.xml',
