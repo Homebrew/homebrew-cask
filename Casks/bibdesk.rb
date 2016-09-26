@@ -1,6 +1,6 @@
 cask 'bibdesk' do
-  version '1.6.6'
-  sha256 '40bdefb6a16f41952fbda990549f19eb0622f3c276055212341f616df48885da'
+  version '1.6.7'
+  sha256 'f9ba3a663f907d03326bcfa1741827ae4b639459020b5f3da14b5b17eb6562d6'
 
   url "https://downloads.sourceforge.net/bibdesk/BibDesk/BibDesk-#{version}/BibDesk-#{version}.dmg"
   appcast 'http://bibdesk.sourceforge.net/bibdesk.xml',
