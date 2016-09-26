@@ -1,8 +1,8 @@
 cask 'tuneinstructor' do
   version '3.6'
-  sha256 '7354d7423d19d75aa590f338596fc17da8d1c9f341c55bd7da592d5aa1b18a8e'
+  sha256 'f493a9361d9e14361cc38e684f4f9ab3dc772e58810120a7de518f64512bd9de'
 
-  url "https://www.tune-instructor.de/resources/downloads/TuneInstructor#{version}.dmg"
+  url 'https://www.tune-instructor.de/resources/downloads/TuneInstructor.zip'
   name 'Tune•Instructor'
   homepage 'https://www.tune-instructor.de/com/start.html'
   license :commercial
