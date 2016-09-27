@@ -172,7 +172,7 @@ $ brew cask install caskroom/fonts/font-symbola
 You can also modify the default installation locations used when issuing `brew cask install`:
 
 * `--caskroom=/my/path` determines where the actual applications will be located.
-Default is `$(brew --repository)/Caskroom`
+Default is `$(brew --prefix)/Caskroom`
 * `--appdir=/my/path` changes the path where the applications (above)
 will be moved. Default is `/Applications`.
 * `--prefpanedir=/my/path` changes the path for PreferencePanes.
