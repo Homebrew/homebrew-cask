@@ -7,12 +7,12 @@ cask 'launchpad-manager-yosemite' do
 
     app 'Launchpad Manager.app'
   else
-    version '1.0.4'
-    sha256 '5edea718d385b222037f781932b9aa4097ff1a68133ab68d1ac4aa1de461ad8b'
+    version '1.0.5'
+    sha256 'a276fb3aa0fc6259ffd3504c2c6e35c1c55c79124423d300c6ae5e6c2a12c18f'
 
     url 'http://launchpadmanager.com/download_yosemite.php/LaunchpadManagerYosemite.dmg'
     appcast 'http://launchpadmanager.com/appyos/sparkle.rss',
-            checkpoint: '9bd3cfb349d301c2e1e6316c250307d002cde68d1773daf757872f61580f9ff7'
+            checkpoint: 'b5fe97a8e3df08de3fb6aceda55ef79860d549e4a4aaa64f0d8ac29f3a6e6969'
 
     app 'Launchpad Manager Yosemite.app'
   end
@@ -20,6 +20,6 @@ cask 'launchpad-manager-yosemite' do
   name 'Launchpad Manager'
   homepage 'http://launchpadmanager.com/'
   license :commercial
-  
+
   zap delete: '~/Library/Application Support/Launchpad Manager'
 end
