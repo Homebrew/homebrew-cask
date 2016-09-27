@@ -13,7 +13,6 @@ cask 'icamsource' do
   homepage 'http://skjm.com/icam/support.php'
   license :gratis
 
-  depends_on macos: '>= :snow_leopard'
 
   app 'iCamSource.app'
 end
