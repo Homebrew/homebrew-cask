@@ -9,6 +9,8 @@ cask 'mou' do
   homepage 'http://25.io/mou/'
   license :commercial
 
+  depends_on macos: '< :sierra'
+
   app 'Mou.app'
 
   zap delete: [
