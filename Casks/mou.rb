@@ -9,7 +9,7 @@ cask 'mou' do
   homepage 'http://25.io/mou/'
   license :commercial
 
-  depends_on macos: '< :sierra'
+  depends_on macos: '<= :el_capitan'
 
   app 'Mou.app'
 
