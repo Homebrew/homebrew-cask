@@ -7,7 +7,7 @@ cask 'progressive-downloader' do
   homepage 'https://www.macpsd.net/'
   license :gratis
 
-  depends_on macos: :mavericks
+  depends_on macos: '>= :mavericks'
 
   app 'Progressive Downloader.app'
 
