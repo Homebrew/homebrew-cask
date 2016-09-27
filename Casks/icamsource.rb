@@ -13,6 +13,5 @@ cask 'icamsource' do
   homepage 'http://skjm.com/icam/support.php'
   license :gratis
 
-
   app 'iCamSource.app'
 end
