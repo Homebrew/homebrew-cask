@@ -13,7 +13,8 @@ cask 'droid4x' do
   uninstall pkgutil: [
                        'com.haiyu.Droid4X.droid4x.Droid4X.pkg',
                        'com.haiyu.Droid4X.droid4x.vbox.pkg',
-                     ]
+                     ],
+            delete:  '/Application/Droid4X.app'
 
   zap delete: [
                 '~/Documents/DXInst',
