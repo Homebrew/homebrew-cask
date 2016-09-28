@@ -1,6 +1,6 @@
 cask 'droid4x' do
-  version '0.8.3'
-  sha256 'dc1adca9cbb731cba0a213922044d2272d8562b3f1317f2919d5cf249d4a0162'
+  version :latest
+  sha256 :no_check
 
   # haima.me/download/DXDown was verified as official when first introduced to the cask
   url 'http://dl.haima.me/download/DXDown/mac/Z001/Droid4XInstaller.zip'
@@ -15,7 +15,7 @@ cask 'droid4x' do
                        'com.haiyu.Droid4X.droid4x.vbox.pkg',
                      ]
 
-  zap	delete: [
+  zap delete: [
                 '~/Documents/DXInst',
                 '~/Library/Application Support/Droid4X',
                 '~/Library/Caches/Haiyu.DXInst',
