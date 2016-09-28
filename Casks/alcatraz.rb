@@ -1,11 +1,11 @@
 cask 'alcatraz' do
-  version '1.1.19'
-  sha256 '90ec885112f72dc7f144ee346be518960bf7d287ace3f5440dda7ed5b2bab04c'
+  version '1.2.0'
+  sha256 '70a3b7bde9419142a386cbf54cc2df42fdfebcbac5780ec24fb3a945b88e7020'
 
   # github.com/alcatraz/Alcatraz was verified as official when first introduced to the cask
   url "https://github.com/alcatraz/Alcatraz/releases/download/#{version}/Alcatraz.tar.gz"
   appcast 'https://github.com/alcatraz/Alcatraz/releases.atom',
-          checkpoint: '6b2506ad26e5fcfa49df433f2aeb1de009b1f60d441feac137cd4529065aec20'
+          checkpoint: 'f2be998ba5e84649988901bab2ffa1b35a6472aa8091a63471fe30a7431347fb'
   name 'alcatraz'
   homepage 'http://alcatraz.io'
   license :mit
