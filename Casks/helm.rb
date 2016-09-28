@@ -10,5 +10,4 @@ cask 'helm' do
   license :apache
 
   binary 'darwin-amd64/helm'
-  binary 'darwin-amd64/tiller'
 end

@@ -1,6 +1,6 @@
 cask 'unifi-controller' do
-  version '5.0.7'
-  sha256 '56d40277b03c05172b202d1d170384e095c8956d8c845aad353d7043bc3a37b6'
+  version '5.2.7'
+  sha256 'c736a643a25564aeb0a927b4a309b98810b997b091055ad733167fe55f06dc1d'
 
   url "https://dl.ubnt.com/unifi/#{version}/UniFi.pkg"
   name 'UniFi Controller'

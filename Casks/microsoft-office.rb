@@ -1,13 +1,15 @@
 cask 'microsoft-office' do
-  version :latest
-  sha256 :no_check
+  version '15.26.0_160910'
+  sha256 '0936d7c66a9f99c259b2b8e13329b503b44290e56ee8d2c2512bce5a5f3bf32a'
 
-  url 'https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/OfficeMac/Microsoft_Office_2016_Installer.pkg'
+  url "https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/OfficeMac/Microsoft_Office_2016_#{version}_Installer.pkg"
   name 'Microsoft Office 2016'
   homepage 'https://www.microsoft.com/mac'
   license :commercial
 
-  pkg 'Microsoft_Office_2016_Installer.pkg'
+  auto_updates true
+
+  pkg "Microsoft_Office_2016_#{version}_Installer.pkg"
 
   uninstall pkgutil:   [
                          'com.microsoft.package.*',

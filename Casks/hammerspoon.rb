@@ -10,7 +10,19 @@ cask 'hammerspoon' do
   homepage 'http://www.hammerspoon.org/'
   license :mit
 
+  auto_updates true
   accessibility_access true
 
   app 'Hammerspoon.app'
+
+  uninstall quit:       'org.hammerspoon.Hammerspoon',
+            login_item: 'Hammerspoon'
+
+  zap delete: [
+                '~/.hammerspoon',
+                '~/Library/Application Support/com.crashlytics/org.hammerspoon.Hammerspoon',
+                '~/Library/Caches/org.hammerspoon.Hammerspoon',
+                '~/Library/Preferences/org.hammerspoon.Hammerspoon.plist',
+                '~/Library/Saved Application State/org.hammerspoon.Hammerspoon.savedState',
+              ]
 end

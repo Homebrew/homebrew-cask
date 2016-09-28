@@ -1,10 +1,10 @@
 cask 'webarchiveplayer' do
-  version '1.3.0'
-  sha256 'c805ed32f7c49e7736bbb31b92e215cdb03843af66aa72ef7c41640ca447674c'
+  version '1.4.1'
+  sha256 'dc5bc702800c913c8781f9c23074156003bc991d4c3aeffdb5add0f51e05cdb6'
 
   url "https://github.com/ikreymer/webarchiveplayer/releases/download/#{version}/webarchiveplayer.dmg"
   appcast 'https://github.com/ikreymer/webarchiveplayer/releases.atom',
-          checkpoint: 'a7e74d747990945fd55b7e097abb39918d2670fa3414bc26027cea7d6a0c9006'
+          checkpoint: 'afa19ab62477ff8a21dde5e4704c78e1ae2d6ba027c43d53d13e6d970c3a38e6'
   name 'webarchiveplayer'
   homepage 'https://github.com/ikreymer/webarchiveplayer'
   license :gpl

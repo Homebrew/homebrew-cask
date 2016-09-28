@@ -1,9 +1,9 @@
 cask 'rtunic' do
-  version '1.0.11'
-  sha256 'ece924b9e3cabbcf3170529e559af087377ef27fc4106054656e5d6bc3f1a96f'
+  version '1.0.15'
+  sha256 '223fb9debbef27924927b0a15056411dd942818c2c0db6c1fb7159b9f25d4f84'
 
   # d2c6jjk3vnoatm.cloudfront.net was verified as official when first introduced to the cask
-  url "https://d2c6jjk3vnoatm.cloudfront.net/spree/products/accessoies/159/DA017E769E0E164_macos0006-RTUNICv#{version}.zip"
+  url "https://d2c6jjk3vnoatm.cloudfront.net/spree/products/accessoies/484/0008-RTUNICv#{version}.zip"
   name 'rtunic'
   homepage 'https://www.anker.com/products/taxons/114/Connectivity'
   license :gratis
