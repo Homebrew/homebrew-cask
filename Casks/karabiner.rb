@@ -14,13 +14,7 @@ cask 'karabiner' do
   pkg 'Karabiner.sparkle_guided.pkg'
   binary '/Applications/Karabiner.app/Contents/Library/bin/karabiner'
 
-  uninstall early_script: '/Library/Application Support/org.pqrs/Karabiner/uninstall.sh',
-            script:       {
-                            executable:   '/usr/bin/killall',
-                            args:         ['Karabiner'],
-                            must_succeed: false,
-                            sudo:         false,
-                          }
+  uninstall script: '/Library/Application Support/org.pqrs/Karabiner/uninstall.sh'
 
   zap       delete: [
                       '~/Library/Application Support/Karabiner',
