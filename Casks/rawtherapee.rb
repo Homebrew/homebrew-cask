@@ -24,8 +24,7 @@ cask 'rawtherapee' do
     container nested: "RawTherapee_OSX_10.6_64_#{version}.dmg"
   elsif MacOS.version <= :yosemite
     container nested: "RawTherapee_OSX_10.10_64_#{version}.dmg"
-  else
-    container nested: "RawTherapee_OSX_10.11_64_#{version}.dmg"
+    container nested: "RawTherapee_OSX_10.11_64_#{version}/RawTherapee_OSX_10.11_64__.dmg"
   end
   depends_on macos: '>= :snow_leopard',
              arch:  :x86_64
