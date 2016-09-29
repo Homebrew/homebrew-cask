@@ -1,9 +1,5 @@
 cask 'gnubg' do
-  if Hardware::CPU.type == :ppc
-    version '1.03.000-ppc'
-    sha256 'd5a230225e9c85f7611a939b0848fe028e6834babb2fe8140013d65fa2b800fe'
-    url 'http://gnubg.org/media/macos/gnubg-1_03_000-mac-ppc.dmg'
-  elsif MacOS.version <= :mavericks
+  if MacOS.version <= :mavericks
     version '1.03.000-x86_64'
     sha256 '90614e940a94515d265ccccabf05ae6610121207b6ba0b7ae656ac2e68c0f6ff'
     url 'http://gnubg.org/media/macos/gnubg-1_03_000-mac-x86_64.dmg'
