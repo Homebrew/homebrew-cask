@@ -20,6 +20,7 @@ cask-repair --help
 
 # fork homebrew-cask to your account - only needed once
 cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Casks"
+git config hub.protocol https
 hub fork
 
 # use to update <outdated_cask>
