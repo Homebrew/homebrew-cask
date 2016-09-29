@@ -5,12 +5,9 @@ cask 'nvalt' do
     # abyss.designheresy.com/nvaltb was verified as official when first introduced to the cask
     url "http://abyss.designheresy.com/nvaltb/nvalt#{version}.zip"
   else
-    version '2.2b120'
-    sha256 'e3ebdc012d5bba6e0e46173daa7c7548eca947958355b37d6ae6040e85b79153'
-    # abyss.designheresy.com was verified as official when first introduced to the cask
-    url "http://abyss.designheresy.com/nvALT#{version.delete('b')}.zip"
-    appcast "http://abyss.designheresy.com/nvalt#{version.major}/nvalt#{version.major}main.xml",
-            checkpoint: 'e9855b4e389ddce8ad13f5c9a325cd728c85a030f43b633e36bc31303910d34e'
+    version '2.2b121'
+    sha256 '6bf8ea48195b6a64b6364f3c48a9c38d16d26696680ee6312ca8869f2d8e9b16'
+    url "http://assets.brettterpstra.com/nvALT#{version.delete('b')}.dmg"
   end
 
   name 'nvALT'
