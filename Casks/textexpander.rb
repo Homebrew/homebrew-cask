@@ -1,20 +1,5 @@
 cask 'textexpander' do
-  if Hardware::CPU.type == :ppc && MacOS.version <= :leopard
-    version '2.5'
-    sha256 'dfcb5a66fd590dc6dabd4fe8586a0d83cf7d264e23d9e309c0d77ae8cd89ad86'
-
-    url "https://cdn.smilesoftware.com/TextExpander%20#{version}.zip"
-  elsif MacOS.version <= :panther
-    version '1.3.1'
-    sha256 '1c2a94f5ee79a685f9258aeda7b27e54664a496060b0091283fbd0d80f8aa1c9'
-
-    url "https://cdn.smilesoftware.com/TextExpander%20#{version}.dmg"
-  elsif MacOS.version <= :leopard
-    version '2.8.1'
-    sha256 'ab6d15adef2b5c35766c99440ebc968c38869b299e6829645c74bd74294557a4'
-
-    url "https://cdn.smilesoftware.com/TextExpander%20#{version}.dmg"
-  elsif MacOS.version <= :snow_leopard
+  if MacOS.version <= :snow_leopard
     version '3.4.2'
     sha256 '87859d7efcbfe479e7b78686d4d3f9be9983b2c7d68a6122acea10d4efbb1bfa'
 
