@@ -18,8 +18,4 @@ cask 'android-studio' do
                 "~/Library/Caches/AndroidStudio#{version.major_minor}",
               ],
       rmdir:  '~/AndroidStudioProjects'
-
-  caveats do
-    depends_on_java
-  end
 end
