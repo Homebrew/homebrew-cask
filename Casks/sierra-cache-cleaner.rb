@@ -8,7 +8,7 @@ cask 'sierra-cache-cleaner' do
   homepage 'http://www.northernsoftworks.com/sierracachecleaner.html'
   license :commercial
 
-  depends_on macos: :sierra
+  depends_on macos: '<= :sierra'
 
   app 'Sierra Cache Cleaner.app'
 end
