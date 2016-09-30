@@ -7,7 +7,7 @@ cask 'launchpad-manager-yosemite' do
 
     app 'Launchpad Manager.app'
   else
-    version '1.0.5'
+    version '1.0.7'
     sha256 'd5bb7840076af9c2c77f875b8accf0934572777c3a9bdd06dccf3dd1ccc06aeb'
 
     url 'http://launchpadmanager.com/download_yosemite.php/LaunchpadManagerYosemite.dmg'
