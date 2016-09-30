@@ -8,11 +8,11 @@ cask 'clamxav' do
     sha256 '02a7529c74d11724e2d0e8226ac83a0d3cfb599afb354d02f6609632d69d9eb1'
     url "https://www.clamxav.com/downloads/ClamXav_#{version}.dmg"
   else
-    version '2.9.2_2478'
-    sha256 'af09fce4a929a3c90897865ffe52bd09070d5eefd802f4926603950ce108d158'
+    version '2.10_2648'
+    sha256 '37b869e9e3fb1c2e088e51387fa757b95c047743a4d81fe31f9349e2ae27ae0b'
     url "https://www.clamxav.com/downloads/ClamXav_#{version}.zip"
     appcast 'https://www.clamxav.com/sparkle/appcast.xml',
-            checkpoint: 'b703c3328bc6c965817f5c27fa186156b8b537221529b666b5927eaccd2fa3f8'
+            checkpoint: 'a7e21537f5b106e7f890edae1262108d125b755394dfdfe1aca51d348fdb45d1'
   end
 
   name 'ClamXav'
