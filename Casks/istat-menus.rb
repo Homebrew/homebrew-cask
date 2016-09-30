@@ -9,7 +9,7 @@ cask 'istat-menus' do
   license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'iStat Menus.app'
-  
+
   zap delete: [
                 '/Library/Application Support/iStat Menus 5',
                 '/Library/LaunchAgents/com.bjango.istatmenusagent.plist',
@@ -21,5 +21,5 @@ cask 'istat-menus' do
                 '~/Library/Logs/iStat Menus',
                 '~/Library/Preferences/com.bjango.istatmenus5.extras.plist',
                 '~/Library/Preferences/com.bjango.istatmenusstatus.plist',
-               ]
+              ]
 end
