@@ -38,4 +38,6 @@ cask 'chefdk' do
                        '/usr/local/bin/pushy-service-manager',
                        '/usr/local/bin/rubocop',
                      ]
+
+  zap delete: '~/.chefdk/'
 end
