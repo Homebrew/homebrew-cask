@@ -7,7 +7,8 @@ cask 'j' do
   homepage 'http://www.jsoftware.com'
   license :gpl
 
-  %w[jbrk jcon jhs jqt].each do |a|
+  apps = %w[jbrk jcon jhs jqt]
+  apps.each do |a|
     app "j64-#{version}/#{a}.app"
   end
 
@@ -20,5 +21,19 @@ cask 'j' do
   # Provide jbrk and jhs on the path too, as readme.txt specifies.
   %w[jbrk jhs].each do |b|
     binary "j64-#{version}/bin/#{b}.command", target: b
+  end
+
+  postflight do
+    # All four of the Mac apps use a relative path to launch the underlying
+    # binaries, so none of them work after homebrew-cask moves them into
+    # /Applications.
+    apps.each do |a|
+      cli = %w[jcon jhs].include? a
+      command = a == 'jcon' ? 'jconsole' : a + '.command'
+      File.write "#{@cask.appdir}/#{a}.app/Contents/MacOS/apprun", <<-EOF.gsub(/^ +/, '')
+          #!/bin/sh
+          #{'open' if cli} "#{@cask.staged_path}/j64-#{version}/bin/#{command}"
+      EOF
+    end
   end
 end
