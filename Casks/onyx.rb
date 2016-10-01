@@ -12,7 +12,7 @@ cask 'onyx' do
   end
 
   appcast 'http://www.titanium.free.fr/release_onyx.html',
-          checkpoint: '1f565ce610d1cdb2576b7a3962ba7e5295cb7ca13b265a80db3a23ad012c5867'
+          checkpoint: 'cce29a87371b8bb3059c32d9c28b2cdc20fe4f944b00fa8d3dd13b3de1c23e7c'
   name 'OnyX'
   homepage 'http://www.titanium.free.fr/onyx.html'
   license :gratis
@@ -27,6 +27,7 @@ cask 'onyx' do
                       :mavericks,
                       :yosemite,
                       :el_capitan,
+                      :sierra,
                     ]
 
   app 'OnyX.app'
