@@ -1,6 +1,6 @@
 cask 'liteide' do
   version '30.2'
-  md5 '4f4a9ba597076dfd940adce81ef7d5c8'
+  sha256 '7f4897029f2fc2671e3461ec7426b634c38b4d152c19d47cc255b0671e45907f'
 
   # sourceforge.net/liteide was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/liteide/X#{version}/liteidex#{version}.macosx-qt5.zip"
