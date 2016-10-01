@@ -14,7 +14,12 @@ cask 'adobe-air' do
   uninstall script: {
                       executable: 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
                       args:       %w[-uninstall],
-                    }
+                    },
+            rmdir:  [
+                      '/Applications/Adobe/Flash Player/AddIns',
+                      '/Applications/Adobe/Flash Player',
+                      '/Applications/Adobe',
+                    ]
 
   zap delete: [
                 '~/Library/Application Support/Adobe/AIR',
