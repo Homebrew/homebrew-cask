@@ -32,7 +32,7 @@ cask 'j' do
     apps.each do |a|
       cli = %w[jcon jhs].include? a
       command = a == 'jcon' ? 'jconsole' : a + '.command'
-      File.write "#{@cask.appdir}/#{a}.app/Contents/MacOS/apprun", <<-EOF.gsub(/^ +/, '')
+      File.write "#{@cask.appdir}/#{a}.app/Contents/MacOS/apprun", <<-EOF.gsub(%r{^ +}, '')
           #!/bin/sh
           #{'open' if cli} "#{@cask.staged_path}/j64-#{version}/bin/#{command}"
       EOF
