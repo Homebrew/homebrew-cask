@@ -27,6 +27,7 @@ cask 'onyx' do
                       :mavericks,
                       :yosemite,
                       :el_capitan,
+                      :sierra,
                     ]
 
   app 'OnyX.app'
