@@ -11,7 +11,9 @@ cask 'j' do
     app "j64-#{version}/#{a}.app"
   end
 
-  %w[jconsole].each do |b|
-    binary "j64-#{version}/bin/#{b}"
+  # We have long provided jconsole on the path. However readme.txt specifies
+  # that jconsole is available under the name jcon. Just provide both names.
+  %w[jcon jconsole].each do |b|
+    binary "j64-#{version}/bin/jconsole", target: b
   end
 end
