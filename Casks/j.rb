@@ -16,4 +16,9 @@ cask 'j' do
   %w[jcon jconsole].each do |b|
     binary "j64-#{version}/bin/jconsole", target: b
   end
+
+  # Provide jbrk and jhs on the path too, as readme.txt specifies.
+  %w[jbrk jhs].each do |b|
+    binary "j64-#{version}/bin/#{b}.command", target: b
+  end
 end
