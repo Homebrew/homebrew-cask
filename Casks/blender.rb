@@ -1,6 +1,6 @@
 cask 'blender' do
-  version '2.77a'
-  sha256 'be2c935e38f8ac9e836b97e41d55e2db7a9ecd067c049b9ff685f36a2870d066'
+  version '2.78'
+  sha256 'af5ad83dc501d4ca8b905a0cb047437f66799459fe27b168a27fbc363d0e29e0'
 
   url "https://download.blender.org/release/Blender#{version.major_minor}/blender-#{version}-OSX_10.6-x86_64.zip"
   name 'Blender'

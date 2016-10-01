@@ -1,9 +1,8 @@
 cask 'insomnia' do
-  version '3.3.2'
-  sha256 'd80949618e87c29f96d38d896317e022f79311e89c601ae71f78c42bd4651311'
+  version '3.5.3'
+  sha256 '45380184649e3c3cf95a526c24de1e1afd569117e6a8ce287860785e341f9062'
 
-  # s3.amazonaws.com/builds-insomnia-rest was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/builds-insomnia-rest/mac/Insomnia-#{version}.dmg"
+  url "https://downloads.insomnia.rest/mac/Insomnia-#{version}.dmg"
   name 'Insomnia'
   homepage 'https://insomnia.rest/'
   license :unknown
