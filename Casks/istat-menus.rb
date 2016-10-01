@@ -11,7 +11,7 @@ cask 'istat-menus' do
   app 'iStat Menus.app'
 
   zap delete: [
-                '/Library/Application Support/iStat Menus 5',
+                '/Library/Application Support/iStat Menus #{version.major}',
                 '/Library/LaunchAgents/com.bjango.istatmenusagent.plist',
                 '/Library/LaunchAgents/com.bjango.istatmenusnotifications.plist',
                 '/Library/LaunchAgents/com.bjango.istatmenusstatus.plist',
