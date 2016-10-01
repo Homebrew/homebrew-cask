@@ -5,7 +5,7 @@ cask 'eloston-chromium' do
   url "https://github.com/Eloston/ungoogled-chromium/releases/download/#{version}/ungoogled-chromium_#{version}_macos.dmg"
   appcast 'https://github.com/Eloston/ungoogled-chromium/releases.atom',
           checkpoint: 'fb8dc0c21f90efbde4e82a23c76fe559991632f0b4bcd551e11a99976be84f34'
-  name 'Ungoogled Chromium by Eloston'
+  name 'Ungoogled Chromium'
   homepage 'https://github.com/Eloston/ungoogled-chromium'
   license :oss
 
