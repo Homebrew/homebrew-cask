@@ -15,12 +15,10 @@ cask 'j' do
   installer script: "j64-#{version}/updatejqt.sh",
             sudo:   false
 
-  # We have long provided jconsole on the path. However readme.txt specifies
-  # that jconsole is available under the name jcon. Just provide both names.
+  # target names according to readme.txt
   %w[jcon jconsole].each do |b|
     binary "j64-#{version}/bin/jconsole", target: b
   end
-  # Provide jbrk, jhs, and jqt on the path too, as readme.txt specifies.
   commands = %w[jbrk jhs jqt]
   commands.each do |b|
     binary "j64-#{version}/bin/#{b}.command", target: b
@@ -30,7 +28,7 @@ cask 'j' do
     # Use `readlink` to get full path of symlinked commands.
     commands.each do |c|
       command = "#{staged_path}/j64-#{version}/bin/#{c}.command"
-      IO.write command, IO.read(command).gsub('$0', '$(readlink "$0" || echo "$0")')
+      IO.write command, IO.read(command).gsub('$0', '$(/usr/bin/readlink "$0" || /bin/echo "$0")')
     end
 
     # Fix relative paths inside App bundles.
