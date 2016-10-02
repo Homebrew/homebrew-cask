@@ -16,4 +16,8 @@ cask 'lightkey' do
                        'de.monospc.lightkey.pkg.Velleman',
                        'de.monospc.lightkey.pkg.documentation',
                      ]
+
+  zap pkgutil: [
+                 'com.FTDI.ftdiusbserialdriverinstaller.FTDIUSBSerialDriver.pkg',
+               ]
 end
