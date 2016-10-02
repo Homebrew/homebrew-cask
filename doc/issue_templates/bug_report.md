@@ -1,4 +1,4 @@
-Bug report:
+Bug report: [summarise the issue here]
 Remember to follow the [pre bug report](https://github.com/caskroom/homebrew-cask/blob/master/doc/reporting_bugs/pre_bug_report.md) guide beforehand. Failure to do so might get your issue closed.
 
 #### Description of issue
