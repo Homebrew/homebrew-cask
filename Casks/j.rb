@@ -12,18 +12,20 @@ cask 'j' do
     app "j64-#{version}/#{a}.app"
   end
 
-  installer sudo: false, script: "j64-#{version}/updatejqt.sh"
-
+  installer script: "j64-#{version}/updatejqt.sh",
+            sudo:   false
   # We have long provided jconsole on the path. However readme.txt specifies
   # that jconsole is available under the name jcon. Just provide both names.
   %w[jcon jconsole].each do |b|
     binary "j64-#{version}/bin/jconsole", target: b
   end
-
-  # Provide jbrk, jhs, and jqt on the path too, as readme.txt specifies.
+  # Provide jbrk and jhs on the path too, as readme.txt specifies.
   %w[jbrk jhs jqt].each do |b|
     binary "j64-#{version}/bin/#{b}.command", target: b
   end
+  # The provided jqt.command won't work if run through a symlink, so instead
+  # we'll symlink the script inside jqt.app into the path.
+  binary "#{appdir}/jqt.app/Contents/MacOS/apprun", target: 'jqt'
 
   postflight do
     # All four of the Mac apps use a relative path to launch the underlying
@@ -31,17 +33,11 @@ cask 'j' do
     # /Applications.
     apps.each do |a|
       cli = %w[jcon jhs].include? a
-      command = a == 'jcon' ? 'jconsole' : a + '.command'
-      File.write "#{@cask.appdir}/#{a}.app/Contents/MacOS/apprun", <<-EOF.gsub(%r{^ +}, '')
+      command = a == 'jcon' ? 'jconsole' : (a + '.command')
+      File.write "#{appdir}/#{a}.app/Contents/MacOS/apprun", <<-EOF.gsub(%r{^ +}, '')
           #!/bin/sh
-          #{'open' if cli} "#{@cask.staged_path}/j64-#{version}/bin/#{command}"
+          #{cli ? 'open ' : ''}"#{staged_path}/j64-#{version}/bin/#{command}"
       EOF
     end
-
-    # jqt.command has a similar problem: it uses dirname $0 expecting to find
-    # J's binary directory, but will find the Homebrew binary directory instead
-    # if we use a symlink to jqt.command. Instead, use a symlink to the wrapper
-    # we just generated, which uses an absolute path.
-    FileUtils.ln_sf "#{@cask.appdir}/jqt.app/Contents/MacOS/apprun", "#{Hbc.binarydir}/jqt"
   end
 end
