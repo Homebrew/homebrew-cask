@@ -9,6 +9,7 @@ cask 'chromium' do
   license :oss
 
   app 'chrome-mac/Chromium.app'
+  binary "#{appdir}/Chromium.app/Contents/MacOS/Chromium", target: 'chromium'
 
   zap delete: [
                 '~/Library/Preferences/org.chromium.Chromium.plist',
