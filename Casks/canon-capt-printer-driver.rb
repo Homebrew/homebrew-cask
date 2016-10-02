@@ -1,5 +1,5 @@
 cask 'canon-capt-printer-driver' do
-  version '3.9.0'
+  version '3.90'
   sha256 '75341c120a4cee3635780d875ee209afe6d175153596f36a176980870d6ca57e'
 
   # gdlp01.c-wss.com was verified as official when first introduced to the cask
