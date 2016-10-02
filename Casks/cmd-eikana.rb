@@ -5,7 +5,7 @@ cask 'cmd-eikana' do
   url "https://ei-kana.appspot.com/download/eikana-#{version}.app.zip"
   appcast 'https://ei-kana.appspot.com',
           checkpoint: '72ae6ad7ab527ad4713dcca309d1485716a666ff8c2636434a2c17e2102e9092'
-  name 'cmd-eikana'
+  name '⌘英かな'
   homepage 'https://ei-kana.appspot.com'
   license :mit
 
