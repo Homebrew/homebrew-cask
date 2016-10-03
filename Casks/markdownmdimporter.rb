@@ -1,4 +1,4 @@
-cask 'mdmdimporter' do
+cask 'markdownmdimporter' do
   version :latest
   sha256 :no_check
 
