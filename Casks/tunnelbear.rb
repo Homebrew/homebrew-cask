@@ -22,5 +22,14 @@ cask 'tunnelbear' do
   zap delete: [
                 '~/Library/Preferences/com.tunnelbear.mac.TunnelBear.plist',
                 '~/Library/Caches/com.tunnelbear.mac.TunnelBear',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tunnelbear.mac.tunnelbear.sfl',
+                '~/Library/Application Support/com.tunnelbear.mac.TunnelBear',
+                '~/Library/Application Support/TunnelBear',
+                '~/Library/Caches/com.crashlytics.data/com.tunnelbear.mac.TunnelBear',
+                '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.tunnelbear.mac.TunnelBear',
+                '~/Library/Caches/io.fabric.sdk.mac.data/com.tunnelbear.mac.TunnelBear',
+                '~/Library/Cookies/com.tunnelbear.mac.TunnelBear.binarycookies',
+                '~/Library/LaunchAgents/com.tunnelbear.mac.tbeara.plist',
+                '~/Library/Logs/TunnelBear',
               ]
 end
