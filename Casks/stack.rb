@@ -1,6 +1,6 @@
 cask 'stack' do
-  version '2.1.3.0'
-  sha256 '21437c146af18b7865d691b26c5a0fb2282e1873b22fa08d0f702ed15d71ce15'
+  version '2.2.3.162'
+  sha256 '9e80e5ab2d3b10432e2239500937b3213790bc91c898b1c073ce8c3910b745ae'
 
   # transip.net/stack was verified as official when first introduced to the cask
   url "https://mirror.transip.net/stack/software/osx/stack-#{version}.pkg"
