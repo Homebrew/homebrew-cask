@@ -1,4 +1,4 @@
-cask 'anonymous-vpn' do
+cask 'anonymousvpn' do
   version :latest
   sha256 :no_check
 
