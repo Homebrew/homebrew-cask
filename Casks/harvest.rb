@@ -1,10 +1,10 @@
 cask 'harvest' do
-  version '2.0.0'
-  sha256 '57c806069dc3cc42522b07b65261a553e5ec725542ea803fedbba3512810b25d'
+  version '2.0.1'
+  sha256 '1addff925c7136a9e727af5f8d0dcc246ff37d7e71dbbac2e62baa630d676ad8'
 
   url "https://www.getharvest.com/harvest/mac/Harvest.#{version}.zip"
   appcast 'https://www.getharvest.com/harvest/mac/appcast.xml',
-          checkpoint: '91f5f75d61635f6b395b42d6b261c7eddcdb4bc6625dc10d1266f6cae2fe6165'
+          checkpoint: '3ff20ca06678903097db234f916dff84419c76f954d64c4903f4210836974f6f'
   name 'Harvest'
   homepage 'https://www.getharvest.com/mac'
   license :gratis
