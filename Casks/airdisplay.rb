@@ -11,5 +11,8 @@ cask 'airdisplay' do
 
   pkg 'Air Display Installer.pkg'
 
-  uninstall pkgutil: 'com.avatron.pkg.AirDisplay'
+  uninstall pkgutil: [
+                       'com.avatron.pkg.AirDisplay',
+                       'com.avatron.pkg.AirDisplayHost2',
+                     ]
 end
