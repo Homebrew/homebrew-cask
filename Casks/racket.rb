@@ -1,6 +1,6 @@
 cask 'racket' do
   version '6.6'
-  sha256 'c044cebdedfd2a66827d5b5707f1684bd8b4bd03de8de295df20d979d0c86987'
+  sha256 '95f2ca4c39b70cfd02324f0668a377a9c176f297f046842ed3c227cd7e388778'
 
   url "https://mirror.racket-lang.org/releases/#{version}/installers/racket-#{version}-x86_64-macosx.dmg"
   name 'Racket'
