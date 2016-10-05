@@ -116,7 +116,7 @@ There are currently some arbitrary limitations on Cask tokens which are in the p
 
 ## Stanza order
 
-Having a common order for stanzas makes Casks easier to update and parse. Below is the the complete stanza sequence (no Cask will have all stanzas). The empty lines shown here are also important, as they help to visually delineate information.
+Having a common order for stanzas makes Casks easier to update and parse. Below is the complete stanza sequence (no Cask will have all stanzas). The empty lines shown here are also important, as they help to visually delineate information.
 
 ```
 version
