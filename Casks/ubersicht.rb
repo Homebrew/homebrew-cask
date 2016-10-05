@@ -18,5 +18,6 @@ cask 'ubersicht' do
                 '~/Library/Application Support/Übersicht',
                 '~/Library/Caches/tracesOf.Uebersicht',
                 '~/Library/Preferences/tracesOf.Uebersicht.plist',
+                '~/Library/WebKit/tracesOf.Uebersicht',
               ]
 end
