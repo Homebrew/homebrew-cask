@@ -17,8 +17,10 @@ cask 'transmission' do
   zap delete: [
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.m0k.transmission.sfl',
                 '~/Library/Application Support/Transmission',
+                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/org.m0k.transmission.help',
+                '~/Library/Caches/org.m0k.transmission',
+                '~/Library/Cookies/org.m0k.transmission.binarycookies',
                 '~/Library/Preferences/org.m0k.transmission.plist',
                 '~/Library/Preferences/org.m0k.transmission.LSSharedFileList.plist',
-                '~/Library/Caches/org.m0k.transmission',
               ]
 end
