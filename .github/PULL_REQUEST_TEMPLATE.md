@@ -6,7 +6,7 @@ After making all changes to the cask:
 - [ ] `brew cask style --fix {{cask_file}}` reports no offenses.
 - [ ] The commit message includes the cask’s name and version.
 
-Aditionally, **if adding a new cask**:
+Additionally, **if adding a new cask**:
 
 - [ ] Named the cask according to the [token reference].
 - [ ] `brew cask install {{cask_file}}` worked successfully.
