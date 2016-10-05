@@ -15,9 +15,12 @@ cask 'dropbox' do
 
   zap delete: [
                 '~/.dropbox',
+                '~/Library/Application Scripts/com.getdropbox.dropbox.garcon',
+                '~/Library/Caches/CloudKit/com.apple.bird/iCloud.com.getdropbox.Dropbox',
                 '~/Library/Caches/com.getdropbox.dropbox',
                 '~/Library/Containers/com.getdropbox.dropbox.garcon',
                 '~/Library/Group Containers/com.getdropbox.dropbox.garcon',
+                '~/Library/Logs/Dropbox_debug.log',
                 '/Library/DropboxHelperTools',
               ]
 end
