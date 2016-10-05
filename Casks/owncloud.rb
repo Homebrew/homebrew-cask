@@ -1,6 +1,6 @@
 cask 'owncloud' do
-  version '2.2.3.3601'
-  sha256 '43c2b75b041b7000fdd12aafdacfcfe51e5b9615600351b934e55ec45f0b8748'
+  version '2.2.4.3709'
+  sha256 'da05a0294754c2a6a45662f765d9352114980d108f34ceac7f7eee6202c4d65e'
 
   url "https://download.owncloud.com/desktop/stable/ownCloud-#{version}.pkg"
   name 'ownCloud'
