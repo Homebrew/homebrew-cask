@@ -55,7 +55,7 @@ if MacOS.version <= :mavericks     # symbolic name
 if MacOS.version <= '10.9'         # version string
 ```
 
-The available symbols for macOS versions are: `:cheetah`, `:puma`, `:jaguar`, `:panther`, `:tiger`, `:leopard`, `:snow_leopard`, `:lion`, `:mountain_lion`, `:mavericks`, `:yosemite`, `:el_capitan`, and `:sierra`. The corresponding numeric version strings should given as major releases containing a single dot.
+The available symbols for macOS versions are: `:cheetah`, `:puma`, `:jaguar`, `:panther`, `:tiger`, `:leopard`, `:snow_leopard`, `:lion`, `:mountain_lion`, `:mavericks`, `:yosemite`, `:el_capitan`, and `:sierra`. The corresponding numeric version strings should be given as major releases containing a single dot.
 
 ### Always Fall Through to the Newest Case
 
@@ -116,7 +116,7 @@ There are currently some arbitrary limitations on Cask tokens which are in the p
 
 ## Stanza order
 
-Having a common order for stanzas makes Casks easier to update and parse. Below is the the complete stanza sequence (no Cask will have all stanzas). The empty lines shown here are also important, as they help to visually delineate information.
+Having a common order for stanzas makes Casks easier to update and parse. Below is the complete stanza sequence (no Cask will have all stanzas). The empty lines shown here are also important, as they help to visually delineate information.
 
 ```
 version

@@ -1,6 +1,6 @@
 cask 'touchosc-editor' do
-  version '1.7.0'
-  sha256 'c23baa9eb9f3c15bb71f83f713a6b2e9aa01cc0ffe0acc15f23a6a8042acb766'
+  version '1.8.1'
+  sha256 '6997ad5ffbe24b0199dafa3b8b3c52e28a61892fc7c6e6274e2b8b93919a3544'
 
   url "http://hexler.net/pub/touchosc/touchosc-editor-#{version}-osx.zip"
   name 'TouchOSC Editor'

@@ -11,4 +11,6 @@ cask 'zxpinstaller' do
   license :gpl
 
   app 'ZXPInstaller.app'
+
+  zap delete: '~/Library/Preferences/com.electron.zxpinstaller.plist'
 end
