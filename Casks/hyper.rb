@@ -1,4 +1,4 @@
-cask 'hyperterm' do
+cask 'hyper' do
   version '0.8.1'
   sha256 '9b39e2dc710845db99ad2002e107c0c7754b7718c6cc41c8793435e9d18c3e03'
 
