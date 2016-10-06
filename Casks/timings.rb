@@ -1,10 +1,10 @@
 cask 'timings' do
-  version '2.4.7'
-  sha256 '5c014e6e2b2ed85641bd4f4bef37b9267e41b17ac93171cfb8d56be46e005774'
+  version '2.4.8'
+  sha256 'd569aaa064557fa31654826e083a295b3199a17f845f11b48da54b3d304e140b'
 
   url "https://mediaatelier.com/Timings2/Timings_#{version}.zip"
   appcast 'https://mediaatelier.com/Timings2/feed.php',
-          checkpoint: '44935a9c9cc29e9e4df5f81cbfeff134a4dfac8100b7985675738f318c8ebdf4'
+          checkpoint: '849b39da0e118572475b2089f9e3d68b08b531c490b35a18f294a763a270e444'
   name 'Timings'
   homepage 'https://mediaatelier.com/Timings'
   license :commercial
