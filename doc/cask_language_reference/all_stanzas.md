@@ -11,7 +11,6 @@ Each of the following stanzas is required for every Cask.
 | `url`              | no                            | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application.<br />A [comment](stanzas/url.md#when-url-and-homepage-hostnames-differ-add-a-comment) should be added if the hostnames in the `url` and `homepage` stanzas differ. Block syntax should be used for URLs that change on every visit.<br />See [URL Stanza Details](stanzas/url.md) for more information.
 | `name`             | yes                           | a string providing the full and proper name defined by the vendor (see also [Name Stanza Details](stanzas/name.md))
 | `homepage`         | no                            | application homepage; used for the `brew cask home` command
-| `license`          | no                            | a symbol identifying the license category for the application (see also [License Stanza Details](stanzas/license.md))
 
 ## At Least One Artifact Stanza Is Also Required
 
