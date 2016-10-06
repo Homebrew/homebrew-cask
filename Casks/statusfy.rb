@@ -3,8 +3,8 @@ cask 'statusfy' do
   sha256 '7fcd2bf27000bec59ef76343621fc4c551c68dd5ab338742ca824b2c5fe0771b'
 
   url "https://github.com/paulyoung/Statusfy/releases/download/#{version}/Statusfy.zip"
-  appcast 'https://github.com/fitztrev/shuttle/releases.atom',
-          checkpoint: '7c389e357ae08cb0f7d9e20108fe239da609514d09c1fbcb94192998f570b6c5'
+  appcast 'https://github.com/paulyoung/Statusfy/releases.atom',
+          checkpoint: '0c4e6266973191bc5cabe69bebae32d2698b007e1907af627694938899d87dac'
   name 'Shuttle'
   homepage 'https://github.com/paulyoung/Statusfy'
   license :mit
