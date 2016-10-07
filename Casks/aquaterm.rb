@@ -4,7 +4,7 @@ cask 'aquaterm' do
 
   url "https://downloads.sourceforge.net/aquaterm/AquaTerm/v#{version}/AquaTerm-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/aquaterm/rss?path=/AquaTerm',
-          checkpoint: '917b5a97ce56960657fd548cbe7ba124a1a0efec296daca2d998b618884beb79'
+          checkpoint: '7690e67a0a5101a228b261979ab45b525f57bddcfe0fa10409ad16bc7621afed'
   name 'AquaTerm'
   homepage 'http://aquaterm.sourceforge.net/'
   license :bsd
@@ -12,4 +12,6 @@ cask 'aquaterm' do
   pkg 'AquaTermInstaller.pkg'
 
   uninstall pkgutil: 'net.sourceforge.aquaterm.aquaterm.*'
+
+  zap       delete: '~/Library/Preferences/net.sourceforge.aquaterm.plist'
 end
