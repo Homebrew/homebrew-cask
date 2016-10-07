@@ -12,3 +12,4 @@ cask 'crowbarpgp' do
 
   app 'crowbarPGP.app'
 end
+
