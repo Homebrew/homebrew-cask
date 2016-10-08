@@ -1,6 +1,6 @@
 cask 'scratch' do
-  version '447'
-  sha256 'dc220d902c0d6f0e1e867d867648a00749bcc46a5aee05b74e6df64e23fa9feb'
+  version '450'
+  sha256 'bfe08081a5430a73cdc8b5d650decfbb3d71356d1e6599d942eaf73513918998'
 
   url "https://scratch.mit.edu/scratchr2/static/sa/Scratch-#{version}.dmg"
   name 'Scratch'
