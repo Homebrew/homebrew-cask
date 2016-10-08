@@ -1,6 +1,6 @@
 cask 'wireshark' do
-  version '2.2.0'
-  sha256 'b74177a860e670bb147c8bb3fe4befffa743f39ca706067e8cdc297ff6222dca'
+  version '2.2.1'
+  sha256 '34484020d8888dcfb8559e6ed5b3c4f01686d24a6260a6fbedafa66bffdb45e6'
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
   name 'Wireshark'
@@ -10,7 +10,7 @@ cask 'wireshark' do
   pkg "Wireshark #{version} Intel 64.pkg"
 
   postflight do
-    if Process.euid == 0
+    if Process.euid.zero?
       ohai 'Note:'
       puts <<-EOS.undent
         You executed 'brew cask' as the superuser.
