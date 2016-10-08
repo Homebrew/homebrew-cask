@@ -8,7 +8,5 @@ cask 'jet' do
   homepage 'https://codeship.com/documentation/docker/'
   license :closed
 
-  depends_on formula: 'docker'
-
   binary 'jet'
 end
