@@ -1,10 +1,10 @@
 cask 'jettison' do
-  version '1.5'
-  sha256 'b502b1b0cd7730eea576fe7f524bd9914c0652dbbb631362300194cbc7f610ce'
+  version '1.5.2'
+  sha256 'c19cc4cc5a58f8694bcc0449e011aaeda5c383f07f32deb0fa4ba86684e337b3'
 
   url "https://stclairsoft.com/download/Jettison-#{version}.dmg"
   appcast 'https://stclairsoft.com/cgi-bin/sparkle.cgi?JT',
-          checkpoint: 'fa83610c6373410e200e1cce210b5611575968e883aa33772bf91b17aaccdc7f'
+          checkpoint: '279c9659667864da8c7147010fc4db08e0bea52c05c9dc8a08f1aba878374fa4'
   name 'Jettison'
   name 'St. Clair Software Jettison'
   homepage 'https://stclairsoft.com/Jettison'
