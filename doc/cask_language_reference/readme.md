@@ -12,7 +12,6 @@ cask 'alfred' do
   url "https://cachefly.alfredapp.com/Alfred_#{version}.zip"
   name 'Alfred'
   homepage 'https://www.alfredapp.com/'
-  license :freemium
 
   app 'Alfred 2.app'
   app 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
@@ -86,7 +85,6 @@ cask 'myapp' do
   name 'MyApp'
   version '1.0'
   sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
-  license :unknown
 
   url "https://#{Utils.arbitrary_method}"
   homepage 'https://www.example.com/'
@@ -127,7 +125,6 @@ appcast,
   checkpoint: # shown here as it is required with `appcast`
 name
 homepage
-license
 gpg, key_id: # on same line, since first part is typically small
 
 auto_updates
