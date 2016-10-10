@@ -1,11 +1,11 @@
 cask 'mactex' do
-  version '20160603'
-  sha256 '34e5c48846a674e0025e92bf1ab7bb43a1108f729b4c26c61edcda24fa5383e3'
+  version '20161009'
+  sha256 'b44873d445881900401d0e0eddccc78140b9ed51b538364889eb8529350d5bd7'
 
   # mirror.ctan.org/systems/mac/mactex was verified as official when first introduced to the cask
   url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version}.pkg"
   appcast 'https://www.tug.org/mactex/downloading.html',
-          checkpoint: '14b52a4b06fa7259d2665c2a26f41dde0ee15fb61cb9b69c707ad916e9dd8073'
+          checkpoint: 'dba7dc2fba9b2dd846cfba460f1121162c4f68d580dd2a485f7f929a1d7ec6be'
   name 'MacTeX'
   homepage 'https://www.tug.org/mactex/'
   license :oss
