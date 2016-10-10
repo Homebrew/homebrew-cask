@@ -8,7 +8,6 @@ cask 'gemini' do
           checkpoint: '94818da12f213824999d9955518d9829071a973d763ddb911e09ccbdad786257'
   name 'Gemini'
   homepage 'https://macpaw.com/gemini'
-  license :commercial
 
   app "Gemini #{version.major}.app"
 

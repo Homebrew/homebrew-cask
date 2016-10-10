@@ -6,7 +6,6 @@ cask 'android-file-transfer' do
   url 'https://dl.google.com/dl/androidjumper/mtp/current/androidfiletransfer.dmg'
   name 'Android File Transfer'
   homepage 'https://www.android.com/filetransfer/'
-  license :gratis
 
   app 'Android File Transfer.app'
 

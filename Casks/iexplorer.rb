@@ -7,7 +7,6 @@ cask 'iexplorer' do
           checkpoint: 'a2c5f6cb31d8d18b94527522631551e9959a1fb95745e1fa8cf088141fbcd649'
   name 'iExplorer'
   homepage 'https://www.macroplant.com/iexplorer/'
-  license :freemium
 
   depends_on macos: '>= :mavericks'
 

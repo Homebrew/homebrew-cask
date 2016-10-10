@@ -5,7 +5,6 @@ cask 'osculator' do
   url "http://dl.osculator.net/releases/osculator-#{version}.dmg"
   name 'OSCulator'
   homepage 'http://www.osculator.net'
-  license :commercial
 
   app 'OSCulator ƒ/OSCulator.app'
 end

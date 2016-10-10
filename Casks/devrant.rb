@@ -7,7 +7,6 @@ cask 'devrant' do
           checkpoint: '7c6f89d3f2263ed0f01e1b0a171e8649c00b01608921f71204c2b9aba6b6338a'
   name 'devrant'
   homepage 'https://github.com/Meadowcottage/devRant'
-  license :gpl
 
   app 'devrant.app'
 end

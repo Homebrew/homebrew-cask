@@ -7,7 +7,6 @@ cask 'soqlxplorer' do
           checkpoint: 'f7b6c34d4e4425891096a5d3911f9b69ff452f799721d08ced6bebf2f5125300'
   name 'SoqlXplorer'
   homepage 'http://www.pocketsoap.com/osx/soqlx/'
-  license :mit
 
   app 'SoqlXplorer.app'
 end

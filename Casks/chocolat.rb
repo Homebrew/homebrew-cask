@@ -7,7 +7,6 @@ cask 'chocolat' do
           checkpoint: 'd3b552c92eb4b46f0ff609f207e62251f857ccf2ba2b3aee8c358599c1f1a855'
   name 'Chocolat'
   homepage 'https://chocolatapp.com/'
-  license :commercial
 
   app 'Chocolat.app'
 end

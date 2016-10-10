@@ -8,7 +8,6 @@ cask 'taskwarrior-pomodoro' do
           checkpoint: '6b898b32196fc2ce0808efaa92d2a343fd0697aec7cffcc285d95c48c59a4a89'
   name 'Taskwarrior-Pomodoro'
   homepage 'https://github.com/coddingtonbear/taskwarrior-pomodoro'
-  license :mit
 
   app 'Taskwarrior Pomodoro.app'
 end

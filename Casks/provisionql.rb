@@ -7,7 +7,6 @@ cask 'provisionql' do
           checkpoint: 'cb20def872e0bc63a71a1942abe2d3c767a3615416dd081d1178d199a3758bd0'
   name 'ProvisionQL'
   homepage 'https://github.com/ealeksandrov/ProvisionQL'
-  license :mit
 
   qlplugin 'ProvisionQL.qlgenerator'
 end

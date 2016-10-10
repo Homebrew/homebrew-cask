@@ -8,7 +8,6 @@ cask 'lisanet-gimp' do
           checkpoint: 'b4aa8e9ea275606268fe0f1e239832b8126d3a7707d24644b9b12e13e40307a1'
   name 'GIMP'
   homepage 'http://gimp.lisanet.de/'
-  license :gpl
 
   app 'Gimp.app'
 end

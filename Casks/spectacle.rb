@@ -14,7 +14,6 @@ cask 'spectacle' do
   url "https://s3.amazonaws.com/spectacle/downloads/Spectacle+#{version}.zip"
   name 'Spectacle'
   homepage 'https://spectacleapp.com/'
-  license :mit
 
   accessibility_access true
 

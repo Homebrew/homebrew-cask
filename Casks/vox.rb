@@ -8,7 +8,6 @@ cask 'vox' do
           checkpoint: 'c942319fd75d1e38b7284ed37fb7051a1e434523a5d1494c9a287c3742268f8d'
   name 'VOX'
   homepage 'https://coppertino.com/vox/mac'
-  license :freemium
 
   app 'Vox.app'
 

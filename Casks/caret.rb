@@ -8,7 +8,6 @@ cask 'caret' do
           checkpoint: '792f7d2a5b93a020908879528f6725823e4ad1e4280ab5c5484eeb88c48bf4e6'
   name 'Caret'
   homepage 'https://caret.io/'
-  license :commercial
 
   app 'Caret.app'
 end

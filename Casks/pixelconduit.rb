@@ -5,7 +5,6 @@ cask 'pixelconduit' do
   url "http://pixelconduit.com/PixelConduit_v#{version.dots_to_underscores}.zip"
   name 'PixelConduit'
   homepage 'http://pixelconduit.com'
-  license :freemium
 
   app 'PixelConduit.app'
 

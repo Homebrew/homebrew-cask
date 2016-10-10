@@ -7,7 +7,6 @@ cask 'typora' do
           checkpoint: 'd2fa56994eb57b35da0e3a3631ff2ea1e512995148ae268302ed274742f7180d'
   name 'Typora'
   homepage 'https://typora.io'
-  license :gratis
 
   app 'Typora.app'
 end

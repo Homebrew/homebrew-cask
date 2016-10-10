@@ -7,7 +7,6 @@ cask 'keystore-explorer' do
           checkpoint: '8a65b0bf9eec051a535dd47b37d59657d46b74ade7b306feaffc30ce56ad2f7e'
   name 'KeyStore Explorer'
   homepage 'http://keystore-explorer.sourceforge.net/'
-  license :gpl
 
   app "KeyStore Explorer #{version}.app"
 end

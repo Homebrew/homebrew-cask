@@ -5,7 +5,6 @@ cask 'find-empty-folders' do
   url 'http://files.tempel.org/FindEmptyFolders/FindEmptyFolders.zip'
   name 'Find Empty Folders'
   homepage 'http://www.tempel.org/FindEmptyFolders'
-  license :gratis
 
   depends_on macos: '>= :snow_leopard'
 

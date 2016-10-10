@@ -8,7 +8,6 @@ cask 'kotori' do
   name 'kotori'
   name '小鳥'
   homepage 'https://github.com/Watson1978/kotori'
-  license :mit
 
   app 'kotori.app'
 

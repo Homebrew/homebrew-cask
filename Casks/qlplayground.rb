@@ -7,7 +7,6 @@ cask 'qlplayground' do
           checkpoint: 'e5ee7b5098fe9d72bcdc8b6e36d2fb43c340c7c5a72e4af0b52c17138c9c21a3'
   name 'qlplayground'
   homepage 'https://github.com/norio-nomura/qlplayground'
-  license :mit
 
   qlplugin 'qlplayground.qlgenerator'
 end

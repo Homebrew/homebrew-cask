@@ -6,7 +6,6 @@ cask 'gmvault' do
   url "https://bitbucket.org/gaubert/gmvault-official-download/downloads/gmvault-v#{version}-macosx-intel.tar.gz"
   name 'Gmvault'
   homepage 'http://gmvault.org'
-  license :gpl
 
   binary "gmvault-v#{version}/gmvault"
 end

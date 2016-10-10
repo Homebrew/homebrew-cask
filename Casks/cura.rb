@@ -5,7 +5,6 @@ cask 'cura' do
   url "https://software.ultimaker.com/current/Cura-#{version}-MacOS.dmg"
   name 'Cura'
   homepage 'https://ultimaker.com/en/products/software'
-  license :oss
 
   app 'Cura/Cura.app'
 

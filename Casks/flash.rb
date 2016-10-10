@@ -8,7 +8,6 @@ cask 'flash' do
           checkpoint: 'e6bf656907bdee3e843e649f97de873aac9aa18e19d87c111d7fb658037c4047'
   name 'Adobe Flash Player'
   homepage 'https://get.adobe.com/flashplayer'
-  license :gratis
 
   pkg 'Install Adobe Flash Player.app/Contents/Resources/Adobe Flash Player.pkg'
 

@@ -6,7 +6,6 @@ cask 'open-sankore' do
   url "https://www.cndp.fr/open-sankore/OpenSankore/Releases/v#{version}/Open-Sankore_MacOSX_#{version}.dmg"
   name 'Open-Sankore'
   homepage 'http://open-sankore.org/'
-  license :gpl
 
   app 'Open-Sankore.app'
 end

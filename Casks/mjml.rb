@@ -8,7 +8,6 @@ cask 'mjml' do
           checkpoint: '270ae0f250b2ea3bd95b182dd01ae8a8eada3775d7c0c2ea132af50827385661'
   name 'MJML'
   homepage 'https://mjmlio.github.io/mjml-app/'
-  license :mit
 
   app 'MJML.app'
 end

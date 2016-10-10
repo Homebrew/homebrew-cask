@@ -6,7 +6,6 @@ cask 'hab' do
   url "https://habitat.bintray.com/stable/darwin/x86_64/hab-#{version}-x86_64-darwin.zip"
   name 'Habitat'
   homepage 'www.habitat.sh'
-  license :apache
 
   depends_on cask: 'docker'
 

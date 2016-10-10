@@ -6,7 +6,6 @@ cask 'ynab' do
   name 'You Need A Budget'
   name 'YNAB'
   homepage 'https://www.youneedabudget.com/'
-  license :commercial
 
   app 'YNAB 4.app'
 end

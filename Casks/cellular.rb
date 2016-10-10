@@ -6,7 +6,6 @@ cask 'cellular' do
   url "https://github.com/downloads/monofonik/cellular/Cellular-#{version}.dmg"
   name 'Cellular'
   homepage 'http://www.flipt.org/#cellular'
-  license :unknown
 
   suite 'Cellular'
 

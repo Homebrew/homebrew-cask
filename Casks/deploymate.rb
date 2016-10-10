@@ -8,7 +8,6 @@ cask 'deploymate' do
           checkpoint: 'a112f2107f7ed54b36a5a45e20da34d3a07ea19f97b3c925dec5568f8ca64204'
   name 'Deploymate'
   homepage 'http://www.deploymateapp.com'
-  license :commercial
 
   app 'Deploymate.app'
 

@@ -5,7 +5,6 @@ cask 'editready' do
   url "https://www.divergentmedia.com/filedownload/editready%20#{version}.dmg"
   name 'divergent media EditReady'
   homepage 'https://www.divergentmedia.com/editready'
-  license :commercial
 
   app 'EditReady.app'
 

@@ -6,7 +6,6 @@ cask 'katawa-shoujo' do
   name 'Katawa Shoujo'
   name 'かたわ少女'
   homepage 'http://katawa-shoujo.com/'
-  license :cc
 
   app 'Katawa Shoujo.app'
 end

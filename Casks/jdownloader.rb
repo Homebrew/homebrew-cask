@@ -12,7 +12,6 @@ cask 'jdownloader' do
 
   name 'JDownloader 2'
   homepage 'http://jdownloader.org/'
-  license :gpl
 
   auto_updates true
 

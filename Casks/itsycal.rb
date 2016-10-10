@@ -17,7 +17,6 @@ cask 'itsycal' do
 
   name 'Itsycal'
   homepage 'https://www.mowglii.com/itsycal/'
-  license :gratis
 
   depends_on macos: '>= :mountain_lion'
 

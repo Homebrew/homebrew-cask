@@ -12,7 +12,6 @@ cask 'geotag' do
           checkpoint: '6bccfd48a9ee7ae4a438c7c48684052cd93e783c2252e9c22b29aaa156bf483c'
   name 'GeoTag'
   homepage 'http://www.snafu.org/GeoTag/'
-  license :cc
 
   depends_on formula: 'exiftool'
 

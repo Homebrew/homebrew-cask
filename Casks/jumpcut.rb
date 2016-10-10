@@ -7,7 +7,6 @@ cask 'jumpcut' do
           checkpoint: '2ec8b76c6b00b9725bddff1448c44f77c8ece233a1131328605412410e0276f0'
   name 'Jumpcut'
   homepage 'http://jumpcut.sourceforge.net/'
-  license :mit
 
   app 'Jumpcut.app'
 end

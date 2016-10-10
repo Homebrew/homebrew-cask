@@ -5,7 +5,6 @@ cask 'dropbox' do
   url 'https://www.dropbox.com/download?plat=mac&full=1'
   name 'Dropbox'
   homepage 'https://www.dropbox.com/'
-  license :gratis
 
   auto_updates true
 

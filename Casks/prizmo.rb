@@ -7,7 +7,6 @@ cask 'prizmo' do
           checkpoint: '2cf75bb8852c58cb3052c25a4e14d10aba836be5ce12d6b263087b9dee0be22d'
   name 'Prizmo'
   homepage 'https://www.creaceed.com/prizmo'
-  license :freemium
 
   depends_on macos: '>= :yosemite'
 

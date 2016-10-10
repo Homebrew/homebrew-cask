@@ -25,7 +25,6 @@ cask 'coteditor' do
           checkpoint: '7c249670ee10fe60e8b98f7cbe319b0a530d5a05f312f5626e1dd0e9781624f6'
   name 'CotEditor'
   homepage 'https://coteditor.com/'
-  license :apache
 
   app 'CotEditor.app'
 

@@ -6,7 +6,6 @@ cask 'wechat-web-devtools' do
   name 'wechat web devtools'
   name '微信web开发者工具'
   homepage 'https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html'
-  license :commercial
 
   app '微信web开发者工具.app'
 end

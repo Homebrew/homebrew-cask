@@ -5,7 +5,6 @@ cask 'jgrasp' do
   url "http://www.jgrasp.org/dl4g/jgrasp/jgrasp#{version.no_dots}.pkg"
   name 'jgrasp'
   homepage 'http://jgrasp.org/index.html'
-  license :other
 
   pkg "jgrasp#{version.no_dots}.pkg"
 

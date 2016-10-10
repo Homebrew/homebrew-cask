@@ -7,7 +7,6 @@ cask 'spriteilluminator' do
           checkpoint: 'b295ea112a460f8f2217d40710412ba10b9756eae2d2579f39990949a982f0cf'
   name 'SpriteIlluminator'
   homepage 'https://www.codeandweb.com/spriteilluminator'
-  license :commercial
 
   app 'SpriteIlluminator.app'
 end

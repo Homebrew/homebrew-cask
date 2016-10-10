@@ -17,7 +17,6 @@ cask 'geneious' do
 
   name 'Geneious'
   homepage 'http://www.geneious.com/'
-  license :commercial
 
   app 'Geneious.app'
 end

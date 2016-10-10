@@ -7,7 +7,6 @@ cask 'techstoreclub-simple-comic' do
           checkpoint: '3bb3b59bebce4cb396c2f0debeb04510261b6d9e0d0a071bef6de9a8d076fdb5'
   name 'Simple Comic'
   homepage 'https://github.com/techstoreclub/Simple-Comic'
-  license :mit
 
   app 'Simple Comic.app'
 end

@@ -5,7 +5,6 @@ cask 'raindropio' do
   url 'https://raindrop.io/releases/mac/Raindrop.dmg'
   name 'Raindrop.io'
   homepage 'https://raindrop.io/'
-  license :gratis
 
   app 'Raindrop.io.app'
 end

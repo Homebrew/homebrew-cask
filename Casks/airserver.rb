@@ -7,7 +7,6 @@ cask 'airserver' do
           checkpoint: '6050520478908e4e475468f8a8de1f5a194d9fa00eec5ff29f90f1927f6b1502'
   name 'AirServer'
   homepage 'https://www.airserver.com'
-  license :commercial
 
   app 'AirServer.app'
 end

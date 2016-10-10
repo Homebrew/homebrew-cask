@@ -5,7 +5,6 @@ cask 'itouch-server' do
   url "http://logitech.com/pub/techsupport/mouse/mac/touchmousev#{version}.dmg"
   name 'Logitech Touch Mouse Server'
   homepage 'https://support.logitech.com/en_us/product/6367'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'iTouch-Server.app'
 end

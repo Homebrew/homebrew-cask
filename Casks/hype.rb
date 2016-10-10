@@ -7,7 +7,6 @@ cask 'hype' do
           checkpoint: '4ef4ee56a1e6db36ab432324bbe219dc2cb6bf6809b8fbcbcaae53c9a8a24bdd'
   name 'Tumult Hype'
   homepage 'https://tumult.com/hype/'
-  license :commercial
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   # Original discussion: https://github.com/caskroom/homebrew-cask/pull/15762

@@ -8,7 +8,6 @@ cask 'mypaint' do
           checkpoint: 'f344a1ee81f291f406c2b394369435653b52fa20417760edf6b549f3b71a3602'
   name 'MyPaint'
   homepage 'http://mypaint.intilinux.com'
-  license :gpl
 
   pkg "MyPaint-#{version}.pkg"
 

@@ -5,7 +5,6 @@ cask 'webex-nbr-player' do
   url "https://welcome.webex.com/client/WBXclient-#{version}/mac/intel/webexnbrplayer_intel.dmg"
   name 'Webex Network Recording player'
   homepage 'https://www.webex.com/play-webex-recording.html'
-  license :gratis
 
   pkg 'Network Recording Player.pkg'
 

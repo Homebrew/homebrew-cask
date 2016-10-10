@@ -7,7 +7,6 @@ cask 'netshade' do
           checkpoint: '23df6d2434d0053ad584d388ac124b9d7a89a1cf36ef9ead9cc540a64bc7ef0f'
   name 'NetShade'
   homepage 'http://raynersw.com/netshade.php'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'NetShade.app'
 end

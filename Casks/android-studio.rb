@@ -6,7 +6,6 @@ cask 'android-studio' do
   url "https://dl.google.com/dl/android/studio/ide-zips/#{version.before_comma}/android-studio-ide-#{version.after_comma}-mac.zip"
   name 'Android Studio'
   homepage 'https://developer.android.com/sdk/'
-  license :apache
 
   app 'Android Studio.app'
 

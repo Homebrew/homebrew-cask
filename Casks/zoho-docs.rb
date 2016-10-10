@@ -5,7 +5,6 @@ cask 'zoho-docs' do
   url 'https://docs.zoho.com/downloaddocument.do?docId=cm31cb748186d0ce240ed9f5733ff288d0d8a'
   name 'Zoho Docs'
   homepage 'https://www.zoho.com/docs/download-page.html'
-  license :closed
 
   app 'Zoho Docs.app'
 end

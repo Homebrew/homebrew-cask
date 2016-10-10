@@ -8,7 +8,6 @@ cask 'nucleo' do
           checkpoint: 'c895bfe129830eb1d85bc6bd0727c321eda667aea63a116222dbd3f242815a3d'
   name 'Nucleo'
   homepage 'https://nucleoapp.com/'
-  license :commercial
 
   app 'Nucleo.app'
 end

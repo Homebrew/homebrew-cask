@@ -5,7 +5,6 @@ cask 'scrolls' do
   url 'http://download.scrolls.com/new-installer/mac/Scrolls.dmg'
   name 'Mojang Scrolls'
   homepage 'https://scrolls.com/'
-  license :gratis
 
   app 'Scrolls.app'
 

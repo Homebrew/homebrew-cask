@@ -7,7 +7,6 @@ cask 'karabiner' do
           checkpoint: '291a5570aeda093e72ab0948ae70790a964887fcf03b156402ff0daf3768f58f'
   name 'Karabiner'
   homepage 'https://pqrs.org/osx/karabiner/'
-  license :public_domain
 
   auto_updates true
 

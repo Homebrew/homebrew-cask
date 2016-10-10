@@ -7,7 +7,6 @@ cask 'diskmaker-x' do
           checkpoint: '412ab96811e9aeea8c3c849c647af09f848ae1f77b91d96eaea5ecb066b29252'
   name 'DiskMaker X'
   homepage 'http://diskmakerx.com/'
-  license :gratis
 
   app "DiskMaker X #{version.major}.app"
 end

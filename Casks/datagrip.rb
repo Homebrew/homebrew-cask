@@ -5,7 +5,6 @@ cask 'datagrip' do
   url "https://download.jetbrains.com/datagrip/datagrip-#{version}.dmg"
   name 'DataGrip'
   homepage 'https://www.jetbrains.com/datagrip/'
-  license :commercial
 
   conflicts_with cask: 'datagrip-eap'
 

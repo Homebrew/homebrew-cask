@@ -7,7 +7,6 @@ cask 'yummy-ftp' do
           checkpoint: '3554480d47572013e1bd8bcb4a48a30694360869f8cb0873adfa8eea2c2ba4c1'
   name 'Yummy FTP'
   homepage 'http://www.yummysoftware.com'
-  license :commercial
 
   app 'Yummy FTP.app'
 end

@@ -7,7 +7,6 @@ cask 'neo11-chitchat' do
           checkpoint: '1d331c02c9dbecc82e852ae9069473b63ad1384c46b183be5d0e83259a954383'
   name 'ChitChat'
   homepage 'https://github.com/Neo11/ChitChat'
-  license :oss
 
   app 'ChitChat.app'
 end

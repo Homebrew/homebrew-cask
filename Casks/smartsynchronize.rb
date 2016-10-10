@@ -5,7 +5,6 @@ cask 'smartsynchronize' do
   url "https://www.syntevo.com/downloads/smartsynchronize/smartsynchronize-macosx-#{version.dots_to_underscores}.dmg"
   name 'SmartSynchronize'
   homepage 'https://www.syntevo.com/smartsynchronize/'
-  license :commercial
 
   depends_on macos: '>= :lion'
 

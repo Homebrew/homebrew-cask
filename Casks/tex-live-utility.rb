@@ -7,7 +7,6 @@ cask 'tex-live-utility' do
           checkpoint: '7c168708a9c3f6274b033455830e2a3c8d7446a93ade7d9822f58addd9918cc4'
   name 'TeX Live Utility'
   homepage 'https://github.com/amaxwell/tlutility'
-  license :oss
 
   app 'TeX Live Utility.app'
 end

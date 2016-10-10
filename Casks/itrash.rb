@@ -18,7 +18,6 @@ cask 'itrash' do
 
   name 'iTrash'
   homepage 'http://www.osxbytes.com/itrash.html'
-  license :commercial
 
   app 'iTrash.app'
 end

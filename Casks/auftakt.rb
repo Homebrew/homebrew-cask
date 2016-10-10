@@ -5,7 +5,6 @@ cask 'auftakt' do
   url "http://itok.jp/software/Auftakt_v#{version.no_dots}.dmg"
   name 'Auftakt'
   homepage 'http://itok.jp/blog/software/auftakt/'
-  license :gratis
 
   prefpane 'Auftakt.prefPane'
 end

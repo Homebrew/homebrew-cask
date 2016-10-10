@@ -7,7 +7,6 @@ cask 'dashcam-viewer' do
   name 'Dashcam Viewer'
   name 'Dashcam Viewer by Earthshine Software'
   homepage 'https://dashcamviewer.com'
-  license :freemium
 
   app 'Dashcam Viewer.app'
 end

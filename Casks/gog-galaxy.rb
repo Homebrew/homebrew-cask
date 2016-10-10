@@ -5,7 +5,6 @@ cask 'gog-galaxy' do
   url "https://cdn.gog.com/open/galaxy/client/galaxy_client_#{version}.pkg"
   name 'GOG Galaxy Client'
   homepage 'https://www.gog.com/galaxy'
-  license :gratis
 
   depends_on macos: '>= :mountain_lion'
 

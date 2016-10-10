@@ -5,7 +5,6 @@ cask 'candybar' do
   url "https://panic.com/candybar/d/CandyBar%20#{version}.zip"
   name 'CandyBar'
   homepage 'https://www.panic.com/blog/candybar-mountain-lion-and-beyond'
-  license :gratis
 
   app 'CandyBar.app'
 

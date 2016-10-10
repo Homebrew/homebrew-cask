@@ -7,7 +7,6 @@ cask 'time-tracker' do
           checkpoint: 'f10b0a3f4b727f8dd307bc63b58b30b2d00c8921bcef532457dd60b0827217ec'
   name 'TimeTracker'
   homepage 'https://github.com/rburgst/time-tracker-mac'
-  license :gpl
 
   app 'Time Tracker.app'
 end

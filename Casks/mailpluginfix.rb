@@ -5,7 +5,6 @@ cask 'mailpluginfix' do
   url "https://code2k.net/app/MailPluginFix-#{version}.zip"
   name 'MailPluginFix'
   homepage 'https://code2k.net/products/mailpluginfix/'
-  license :gratis
 
   app 'MailPluginFix.app'
 

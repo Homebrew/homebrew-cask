@@ -5,7 +5,6 @@ cask 'starrealms' do
   url "https://downloads.starrealms.com/StarRealms-v#{version.no_dots}.dmg"
   name 'Star Realms'
   homepage 'https://www.starrealms.com/digital-game/'
-  license :freemium
 
   app 'StarRealms.app'
 end

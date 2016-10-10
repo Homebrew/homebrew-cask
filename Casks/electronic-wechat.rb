@@ -7,7 +7,6 @@ cask 'electronic-wechat' do
           checkpoint: 'aed794ae6ae043f36a95dc23636cf9a8259e1f7702b948f26c23362b35ccceda'
   name 'Electronic WeChat'
   homepage 'https://github.com/geeeeeeeeek/electronic-wechat'
-  license :mit
 
   app 'Electronic WeChat-darwin-x64/Electronic WeChat.app'
 end

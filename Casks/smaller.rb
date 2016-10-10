@@ -7,7 +7,6 @@ cask 'smaller' do
           checkpoint: 'c544450799565e3905e0ddfebabfed02a384aaad5cfbe7367542c15152d3277c'
   name 'Smaller'
   homepage 'http://smallerapp.com/'
-  license :commercial
 
   app 'Smaller.app'
 end

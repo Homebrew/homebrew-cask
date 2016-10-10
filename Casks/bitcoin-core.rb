@@ -6,7 +6,6 @@ cask 'bitcoin-core' do
   url "https://bitcoin.org/bin/bitcoin-core-#{version}/bitcoin-#{version}-osx.dmg"
   name 'Bitcoin Core'
   homepage 'https://bitcoincore.org/'
-  license :mit
 
   conflicts_with cask: 'bitcoin-xt'
   depends_on macos: '>= :lion'

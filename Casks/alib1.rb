@@ -6,7 +6,6 @@ cask 'alib1' do
   url 'http://presstube.com/screensavers/Presstube-ALib1-mac.zip'
   name 'ALib1'
   homepage 'http://presstube.com/blog/2011/alib1/'
-  license :gratis
 
   depends_on cask: 'adobe-air'
 

@@ -12,7 +12,6 @@ cask 'imagealpha' do
   url "https://pngmini.com/ImageAlpha#{version}.tar.bz2"
   name 'ImageAlpha'
   homepage 'https://pngmini.com/'
-  license :gpl
 
   app 'ImageAlpha.app'
 end

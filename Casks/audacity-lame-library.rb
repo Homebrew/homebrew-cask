@@ -6,7 +6,6 @@ cask 'audacity-lame-library' do
   url "http://lame.buanzo.org/Lame_Library_v#{version}_for_Audacity_on_OSX.dmg", referer: "http://lame.buanzo.org/Lame_Library_v#{version}_for_Audacity_on_OSX.dmg"
   name 'Lame Library for Audacity'
   homepage 'http://manual.audacityteam.org/man/faq_installation_and_plug_ins.html#maclame'
-  license :unknown
 
   depends_on macos: '>= :snow_leopard'
   depends_on cask: 'audacity'

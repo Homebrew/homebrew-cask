@@ -6,7 +6,6 @@ cask 'postico' do
   url "https://s3-eu-west-1.amazonaws.com/eggerapps-downloads/postico-#{version}.zip"
   name 'Postico'
   homepage 'https://eggerapps.at/postico/'
-  license :freemium
 
   depends_on macos: '>= :mavericks'
 

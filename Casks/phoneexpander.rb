@@ -7,7 +7,6 @@ cask 'phoneexpander' do
           checkpoint: 'ebcdbc310920a916c79d4bc6041690a1dfc6799468ddc9c1e60173a4fa09dfd2'
   name 'PhoneExpander'
   homepage 'https://phoneexpander.com/'
-  license :commercial
 
   auto_updates true
 

@@ -6,7 +6,6 @@ cask 'giffun' do
   url "https://dl.dropbox.com/u/2000860/GIFfun-#{version}.dmg"
   name 'GIFfun'
   homepage 'http://www.stone.com/GIFfun/'
-  license :oss
 
   app 'GIFfun.app'
 end

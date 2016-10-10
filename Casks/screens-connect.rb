@@ -6,7 +6,6 @@ cask 'screens-connect' do
   url "https://download.edovia.com/screensconnect/screensconnect%20#{version}.dmg"
   name 'Screens Connect'
   homepage 'https://screensconnect.com'
-  license :gratis
 
   depends_on macos: '>= :mountain_lion'
 

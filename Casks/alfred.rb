@@ -5,7 +5,6 @@ cask 'alfred' do
   url "https://cachefly.alfredapp.com/Alfred_#{version}.zip"
   name 'Alfred'
   homepage 'https://www.alfredapp.com/'
-  license :freemium
 
   auto_updates true
   accessibility_access true

@@ -8,7 +8,6 @@ cask 'jedit' do
           checkpoint: '20949f9cfe6cfd10970e57b6f9aebb2ce0e52cf611f443996b28b0c1976c6119'
   name 'jEdit'
   homepage 'http://www.jedit.org'
-  license :gpl
 
   app 'jEdit.app'
 end

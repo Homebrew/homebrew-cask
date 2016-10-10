@@ -7,7 +7,6 @@ cask 'excalibur' do
           checkpoint: '9658dda2ecaf5784ebff74e2ca3110810e14ba4bda5dcd98c18a92959260e63e'
   name 'Excalibur'
   homepage 'http://excalibur.sourceforge.net'
-  license :gpl
 
   app 'Excalibur.app'
 end

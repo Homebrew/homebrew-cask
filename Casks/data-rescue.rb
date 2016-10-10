@@ -7,7 +7,6 @@ cask 'data-rescue' do
           checkpoint: 'b21030a529148a9ad0dd85bd6b3a075709e6386b53f40eeab31e33daf119d768'
   name 'Data Rescue 4'
   homepage 'https://www.prosofteng.com/products/data_rescue.php'
-  license :commercial
 
   app 'Data Rescue 4.app'
 end

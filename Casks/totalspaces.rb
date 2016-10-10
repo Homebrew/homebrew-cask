@@ -32,7 +32,6 @@ cask 'totalspaces' do
 
   name 'TotalSpaces'
   homepage 'http://totalspaces.binaryage.com/'
-  license :commercial
 
   uninstall signal: [
                       ['INT', 'com.binaryage.totalspacescrashwatcher'],

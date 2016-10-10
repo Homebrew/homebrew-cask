@@ -8,7 +8,6 @@ cask 'jasper' do
           checkpoint: 'd0852a1c3b78587aa066292ffda9d2f5bf5c5ff7deb5670a5a9a5e35b32f0b08'
   name 'Jasper'
   homepage 'https://jasperapp.io/'
-  license :commercial
 
   app 'Jasper.app'
 

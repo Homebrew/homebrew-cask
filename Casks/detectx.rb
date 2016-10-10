@@ -8,7 +8,6 @@ cask 'detectx' do
           checkpoint: '197e9f3e72adb4f0224ede371dd5a78314b8f4316f65fc3a0cca7dd94bfc7731'
   name 'DetectX'
   homepage 'https://sqwarq.com/detectx/'
-  license :commercial
 
   auto_updates true
 

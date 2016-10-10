@@ -5,7 +5,6 @@ cask 'lima' do
   url "https://update.api.meetlima.com/downloads/osx/dist/Lima_#{version}.dmg"
   name 'Lima'
   homepage 'https://meetlima.com/'
-  license :gratis
 
   app 'Lima.app'
 end

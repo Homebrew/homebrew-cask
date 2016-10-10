@@ -8,7 +8,6 @@ cask 'goofy' do
           checkpoint: '487c3d4a6f8520f7773e38341fc8fac04a556ce6ae5c3565d096a74ee5b96888'
   name 'Goofy'
   homepage 'http://www.goofyapp.com/'
-  license :mit
 
   app 'Goofy.app'
 end

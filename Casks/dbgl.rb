@@ -5,7 +5,6 @@ cask 'dbgl' do
   url "http://members.quicknet.nl/blankendaalr/dbgl/download/dbgl#{version.no_dots}.dmg"
   name 'DBGL'
   homepage 'http://members.quicknet.nl/blankendaalr/dbgl/'
-  license :gpl
 
   app 'DBGL.app'
 end

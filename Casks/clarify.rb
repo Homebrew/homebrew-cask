@@ -7,7 +7,6 @@ cask 'clarify' do
           checkpoint: 'f72c5dca89003ee282774a04865e98f0f8c02ba3e13913aa428ea3fa6b9a9adc'
   name 'Clarify'
   homepage 'http://www.clarify-it.com/'
-  license :commercial
 
   app 'Clarify.app'
 end

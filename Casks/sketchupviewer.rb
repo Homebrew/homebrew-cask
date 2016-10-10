@@ -7,7 +7,6 @@ cask 'sketchupviewer' do
   url 'https://dl.trimble.com/sketchup/SketchUpViewer-en.dmg'
   name 'SketchUpViewer'
   homepage 'https://www.sketchup.com/products/sketchup-viewer'
-  license :gratis
 
   app 'SketchUpViewer.app'
 end

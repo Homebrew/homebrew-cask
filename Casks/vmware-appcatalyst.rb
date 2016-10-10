@@ -5,7 +5,6 @@ cask 'vmware-appcatalyst' do
   url "http://getappcatalyst.com/downloads/VMware-AppCatalyst-Technical-Preview-#{version}.dmg"
   name 'VMware AppCatalyst'
   homepage 'http://getappcatalyst.com/'
-  license :commercial
 
   depends_on macos: '>= :mavericks'
 

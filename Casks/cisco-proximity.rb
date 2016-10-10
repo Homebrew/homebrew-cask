@@ -5,7 +5,6 @@ cask 'cisco-proximity' do
   url 'https://proximity.cisco.com/mac/Proximity.dmg'
   name 'Cisco Proximity'
   homepage 'https://proximity.cisco.com/'
-  license :gratis
 
   app 'Cisco Proximity.app'
 

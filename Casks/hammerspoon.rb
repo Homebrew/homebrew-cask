@@ -8,7 +8,6 @@ cask 'hammerspoon' do
           checkpoint: 'c8b710dc6d24ffce2cbb1b95c4953f8479a7299762c8a6a2d4cddda066bada32'
   name 'Hammerspoon'
   homepage 'http://www.hammerspoon.org/'
-  license :mit
 
   auto_updates true
   accessibility_access true

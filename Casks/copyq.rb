@@ -8,7 +8,6 @@ cask 'copyq' do
           checkpoint: 'd1a625ac78d4a299c72917288794d89784bd8c8ada53c15404df009ac4f02d28'
   name 'CopyQ'
   homepage 'https://hluk.github.io/CopyQ/'
-  license :gpl
 
   app 'CopyQ.app'
 end

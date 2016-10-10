@@ -5,7 +5,6 @@ cask 'goodnight' do
   url 'http://goodnight.jakobbossek.de/download/GoodNight.zip'
   name 'GoodNight'
   homepage 'http://goodnight.jakobbossek.de'
-  license :unknown
 
   app 'GoodNight.app'
 end

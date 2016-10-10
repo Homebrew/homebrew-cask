@@ -6,7 +6,6 @@ cask 'on-the-job' do
   url "https://stunt.s3.amazonaws.com/onthejob_#{version}.zip"
   name 'On The Job'
   homepage 'https://stuntsoftware.com/onthejob/'
-  license :commercial
 
   app 'On The Job.app'
 end

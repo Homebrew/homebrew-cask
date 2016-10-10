@@ -8,7 +8,6 @@ cask 'toggldesktop' do
           checkpoint: '460f65668197a03b0b95a17d1a1f7d2c617321281eca6c7b6dd136de9511189d'
   name 'TogglDesktop'
   homepage 'https://www.toggl.com'
-  license :bsd
 
   app 'TogglDesktop.app'
 end

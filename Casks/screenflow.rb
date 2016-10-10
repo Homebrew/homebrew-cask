@@ -7,7 +7,6 @@ cask 'screenflow' do
           checkpoint: 'aa20375740264cf5ecf4e6ed56a0f258f91631fc95f0e71783793840604ed2b9'
   name 'ScreenFlow'
   homepage 'https://www.telestream.net/screenflow/'
-  license :commercial
 
   auto_updates true
   depends_on macos: '>= :yosemite'

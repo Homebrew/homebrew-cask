@@ -8,7 +8,6 @@ cask 'chunky' do
           checkpoint: '1c79f54c04c544ffe940e095ca89b2f6d1ba5e25389f7ef0a5a0148a75c75d45'
   name 'Chunky'
   homepage 'http://chunky.llbit.se/'
-  license :gpl
 
   app 'Chunky.app'
 

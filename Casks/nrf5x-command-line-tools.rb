@@ -5,7 +5,6 @@ cask 'nrf5x-command-line-tools' do
   url 'https://www.nordicsemi.com/eng/nordic/download_resource/53406/6/73591027'
   name 'nRF5x Command Line Tools'
   homepage 'https://www.nordicsemi.com/eng/nordic/Products/nRF51-DK/nRF5x-Command-Line-Tools-OSX/53412'
-  license :gratis
 
   binary 'nrfjprog/nrfjprog'
   binary 'mergehex/mergehex'

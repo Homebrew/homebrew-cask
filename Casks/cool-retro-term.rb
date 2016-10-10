@@ -7,7 +7,6 @@ cask 'cool-retro-term' do
           checkpoint: 'eb9ed3cb84563876d607d15d5d262e750d5d9210b6ee8ea1621ea0e261b0c646'
   name 'cool-retro-term'
   homepage 'https://github.com/Swordfish90/cool-retro-term'
-  license :gpl
 
   app 'cool-retro-term.app'
 end

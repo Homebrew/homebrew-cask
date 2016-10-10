@@ -5,7 +5,6 @@ cask 'revisions' do
   url "https://revisionsapp.com/downloads/revisions-#{version}.dmg"
   name 'Revisions'
   homepage 'https://revisionsapp.com/'
-  license :commercial
 
   app 'Revisions.app'
 end

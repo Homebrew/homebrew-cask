@@ -5,7 +5,6 @@ cask 'ddnet' do
   url "https://ddnet.tw/downloads/DDNet-#{version}-osx.dmg"
   name 'DDNet'
   homepage 'https://ddnet.tw/'
-  license :oss
 
   app 'DDNet.app'
   app 'DDNet-Server.app'

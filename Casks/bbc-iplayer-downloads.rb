@@ -6,7 +6,6 @@ cask 'bbc-iplayer-downloads' do
   url "https://a.files.bbci.co.uk/iplayer/downloads/BBC-iPlayer-Downloads-#{version}.dmg"
   name 'BBC iPlayer Downloads'
   homepage 'https://www.bbc.co.uk/iplayer/install'
-  license :gratis
 
   app 'BBC iPlayer Downloads.app'
 end

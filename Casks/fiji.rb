@@ -6,7 +6,6 @@ cask 'fiji' do
   url 'http://jenkins.imagej.net/job/Stable-Fiji-MacOSX/lastSuccessfulBuild/artifact/fiji-macosx.dmg'
   name 'Fiji'
   homepage 'https://fiji.sc'
-  license :oss
 
   app 'Fiji.app'
 end

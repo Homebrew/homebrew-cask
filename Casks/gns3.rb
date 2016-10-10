@@ -9,7 +9,6 @@ cask 'gns3' do
           checkpoint: '38d57e50a965264786265131c4fee2d397a31db5bbd51f9ed8188805d5b324f2'
   name 'GNS3'
   homepage 'https://www.gns3.com/'
-  license :gpl
 
   app 'GNS3.app'
 end

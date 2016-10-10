@@ -8,7 +8,6 @@ cask 'twitterrific' do
           checkpoint: '8e2fde68cabcb874dd06ca8ff92b98cc07f759dca4c99828e25c35bb0074a289'
   name 'Twitterrific'
   homepage 'http://twitterrific.com/mac'
-  license :commercial
 
   app 'Twitterrific.app'
 

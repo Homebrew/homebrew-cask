@@ -6,7 +6,6 @@ cask 'pikopixel' do
       user_agent: :fake
   name 'PikoPixel'
   homepage 'http://twilightedge.com/mac/pikopixel/'
-  license :gpl
 
   app 'PikoPixel.app'
 end

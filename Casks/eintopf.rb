@@ -8,7 +8,6 @@ cask 'eintopf' do
           checkpoint: '2f683218039482487cb26a62f378cef879b5504f694736b58c14663bcd6bd978'
   name 'Eintopf'
   homepage 'https://eintopf.io'
-  license :mit
 
   app 'Eintopf.app'
 end

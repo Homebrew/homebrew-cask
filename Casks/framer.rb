@@ -8,7 +8,6 @@ cask 'framer' do
           checkpoint: '7dfb59037e01155f986d69f55a0be3d5c3e31986bfd76076c73a3748d1899a39'
   name 'Framer'
   homepage 'https://framerjs.com/'
-  license :commercial
 
   app 'Framer.app'
 end

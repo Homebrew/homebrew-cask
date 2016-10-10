@@ -6,7 +6,6 @@ cask 'chromium' do
   url 'https://download-chromium.appspot.com/dl/Mac?type=snapshots'
   name 'Chromium'
   homepage 'https://www.chromium.org/Home'
-  license :oss
 
   app 'chrome-mac/Chromium.app'
   binary "#{appdir}/Chromium.app/Contents/MacOS/Chromium", target: 'chromium'

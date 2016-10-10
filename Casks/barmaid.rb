@@ -7,7 +7,6 @@ cask 'barmaid' do
           checkpoint: '3c124e15a4425dca571ca4b1e5600a3196b48a648edfc3d4c083e98d97c9db95'
   name 'Barmaid'
   homepage 'https://github.com/zenonas/barmaid'
-  license :mit
 
   depends_on macos: '>= 10.9'
 

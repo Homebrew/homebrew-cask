@@ -7,7 +7,6 @@ cask 'freemind' do
           checkpoint: '4e53a4b189d19f05fdf845ce1873d530758ef35f508a41328b397432e45bb38a'
   name 'FreeMind'
   homepage 'http://freemind.sourceforge.net/wiki/index.php/Main_Page'
-  license :gpl
 
   app 'FreeMind.app'
 end

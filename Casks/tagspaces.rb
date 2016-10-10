@@ -8,7 +8,6 @@ cask 'tagspaces' do
           checkpoint: '2ea4e29ed2132a8926c1cfae8de3f1f47724471f8ac21ee3a89c7f4deb5e340b'
   name 'TagSpaces'
   homepage 'https://www.tagspaces.org/'
-  license :affero
 
   app 'TagSpaces.app'
 end

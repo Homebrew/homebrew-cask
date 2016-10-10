@@ -7,7 +7,6 @@ cask 'viscosity' do
           checkpoint: '919b641a3b0c42e190c4f383bd1235deecc869fb30d1be88e86ee1d0cc179752'
   name 'Viscosity'
   homepage 'https://www.sparklabs.com/viscosity/'
-  license :commercial
 
   app 'Viscosity.app'
 

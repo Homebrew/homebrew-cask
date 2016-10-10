@@ -6,7 +6,6 @@ cask 'bill' do
   url 'https://myownapp.com/downloads/Bill2.zip'
   name 'Bill'
   homepage 'https://billtheapp.com/'
-  license :commercial
 
   app 'Bill 2.app'
 end

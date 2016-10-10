@@ -5,7 +5,6 @@ cask 'photozoom-pro' do
   url 'https://www.benvista.com/photozoompro/download/mac'
   name 'PhotoZoom Pro'
   homepage 'https://www.benvista.com/photozoompro'
-  license :freemium
 
   app 'PhotoZoom Pro 6.app'
 end

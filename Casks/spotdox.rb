@@ -8,7 +8,6 @@ cask 'spotdox' do
           checkpoint: '0fdc4883bc28017d4e6481f54196bed158d9105f3f70c790bc657499dfb55004'
   name 'Spotdox'
   homepage 'https://spotdox.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Spotdox.app'
 end

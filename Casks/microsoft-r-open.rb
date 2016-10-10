@@ -6,7 +6,6 @@ cask 'microsoft-r-open' do
   name 'Microsoft R Open'
   name 'MRO'
   homepage 'https://mran.microsoft.com'
-  license :gpl
 
   pkg "microsoft-r-open-#{version}.pkg"
 

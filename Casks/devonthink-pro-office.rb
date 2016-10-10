@@ -8,7 +8,6 @@ cask 'devonthink-pro-office' do
           checkpoint: '15575a8ea0390a0f4a863e73fe70f2fe5d916384fe5b9848432f9708fd306cc8'
   name 'DEVONthink Pro Office'
   homepage 'http://www.devontechnologies.com/products/devonthink/devonthink-pro-office.html'
-  license :commercial
 
   depends_on macos: '>= :mountain_lion'
 

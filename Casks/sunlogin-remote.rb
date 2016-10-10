@@ -6,7 +6,6 @@ cask 'sunlogin-remote' do
   name 'Sunlogin Remote'
   name '向日葵控制端'
   homepage 'https://sunlogin.oray.com'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Sunlogin Remote.app'
 end

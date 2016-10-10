@@ -69,5 +69,4 @@ cask 'cleanmymac' do
 
   name 'CleanMyMac'
   homepage 'https://macpaw.com/cleanmymac'
-  license :commercial
 end

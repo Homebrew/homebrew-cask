@@ -5,7 +5,6 @@ cask 'mesasqlite' do
   url "http://www.desertsandsoftware.com/DEMOS/MesaSQLite#{version.no_dots}.zip"
   name 'MesaSQLite'
   homepage 'http://www.desertsandsoftware.com/wordpress/?page_id=17'
-  license :commercial
 
   app 'MesaSQLite.app'
 end

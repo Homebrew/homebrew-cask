@@ -7,7 +7,6 @@ cask 'fivedetails-flow' do
           checkpoint: '1278a4390fd8345f94365aa5dde30ce195f4e879ade82e011ab9a4b6b56f27c6'
   name 'Flow'
   homepage 'http://fivedetails.com/flow/'
-  license :commercial
 
   app 'Flow.app'
 

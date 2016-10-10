@@ -7,7 +7,6 @@ cask 'realm-browser' do
           checkpoint: '47f78f20dbd0320e1f9f584b86fcac736f14e2c100eb8bd4bfc2f9000552b64f'
   name 'Realm Browser'
   homepage 'https://github.com/realm/realm-browser-osx/'
-  license :apache
 
   app 'Realm Browser.app'
 end

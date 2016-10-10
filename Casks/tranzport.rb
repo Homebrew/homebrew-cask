@@ -8,7 +8,6 @@ cask 'tranzport' do
           checkpoint: 'c4f7bbc0951c936cc1894471e0e6eaae1319f4fbb1c49ae751a02a6246ca97f7'
   name 'Tranzport'
   homepage 'http://steverab.com/tranzport-mac/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Tranzport.app'
 end

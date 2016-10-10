@@ -5,7 +5,6 @@ cask 'sim-daltonism' do
   url "https://littoral.michelf.ca/apps/sim-daltonism/sim-daltonism-#{version}.zip"
   name 'Sim Daltonism'
   homepage 'https://michelf.ca/projects/mac/sim-daltonism/'
-  license :apache
 
   app 'Sim Daltonism.app'
 end

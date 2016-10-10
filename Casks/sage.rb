@@ -18,7 +18,6 @@ cask 'sage' do
 
   name 'Sage'
   homepage 'https://www.sagemath.org/'
-  license :gpl
 
   depends_on macos: '>= :lion'
   depends_on arch: :x86_64

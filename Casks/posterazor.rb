@@ -7,7 +7,6 @@ cask 'posterazor' do
           checkpoint: 'e48b0edf881bb9c3081198a0d63a1bc1f5afa9d8749faec9266270650a8feb3b'
   name 'PosteRazor'
   homepage 'http://posterazor.sourceforge.net'
-  license :gpl
 
   app 'PosteRazor.app'
 end

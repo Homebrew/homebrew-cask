@@ -7,7 +7,6 @@ cask 'codekit' do
           checkpoint: '68c472683d62647414d8a607008db38af917110f37afef586e6036fc9d2945ec'
   name 'CodeKit'
   homepage 'https://incident57.com/codekit/'
-  license :commercial
 
   auto_updates true
 

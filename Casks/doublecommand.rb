@@ -7,7 +7,6 @@ cask 'doublecommand' do
           checkpoint: '094eeb41e5a274d0eb3e01c4d2049efca7da3f5badeb62ef92431515e08203ef'
   name 'DoubleCommand'
   homepage 'http://doublecommand.sourceforge.net'
-  license :gpl
 
   pkg "DoubleCommand-#{version}.pkg"
 

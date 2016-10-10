@@ -7,7 +7,6 @@ cask 'airy' do
           checkpoint: 'd257102427567379b8b4d40f1ef55cece284f24e2675a90c3650c5033ee1ffcc'
   name 'Airy'
   homepage 'http://mac.eltima.com/youtube-downloader-mac.html'
-  license :commercial
 
   app 'Airy.app'
 

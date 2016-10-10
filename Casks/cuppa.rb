@@ -7,7 +7,6 @@ cask 'cuppa' do
           checkpoint: 'f01c77b88898d21e63f1fb75b9f00e182664d674a9b2b9f4d4daba61e14440e0'
   name 'Cuppa'
   homepage 'https://www.nathanatos.com/software'
-  license :bsd
 
   app 'Cuppa.app'
 end

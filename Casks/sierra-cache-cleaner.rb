@@ -6,7 +6,6 @@ cask 'sierra-cache-cleaner' do
   name 'Sierra Cache Cleaner'
   name 'SCC'
   homepage 'http://www.northernsoftworks.com/sierracachecleaner.html'
-  license :commercial
 
   depends_on macos: '<= :sierra'
 

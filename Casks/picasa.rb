@@ -5,7 +5,6 @@ cask 'picasa' do
   url "https://dl.google.com/photos/picasamac#{version.no_dots}.dmg"
   name 'Picasa'
   homepage 'https://picasa.google.com/'
-  license :gratis
 
   app 'Picasa.app'
 

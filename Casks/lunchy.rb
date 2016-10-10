@@ -7,7 +7,6 @@ cask 'lunchy' do
           checkpoint: '80d451b40d7c21b6d205d7d6e8be643c7bf4754ebb1ea52556472c61a5dabaaf'
   name 'Lunchy'
   homepage 'https://github.com/sosedoff/lunchy-go'
-  license :mit
 
   binary 'lunchy'
 end
