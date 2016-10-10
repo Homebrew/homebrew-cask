@@ -6,7 +6,6 @@ cask 'toontown-rewritten' do
   name 'Toontown Rewritten'
   name 'Toontown Launcher'
   homepage 'https://toontownrewritten.com'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   # Original discussion: https://github.com/caskroom/homebrew-cask/pull/8037

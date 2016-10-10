@@ -8,7 +8,6 @@ cask 'duckietv' do
           checkpoint: 'f11c61dde34cfe2a9f3e7150122340aa3f6680a634e00851066fccd4668e0103'
   name 'duckieTV'
   homepage 'https://schizoduckie.github.io/DuckieTV/'
-  license :oss
 
   pkg "DuckieTV-#{version}-OSX-x64.pkg", allow_untrusted: true
 

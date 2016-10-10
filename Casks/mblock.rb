@@ -6,7 +6,6 @@ cask 'mblock' do
   url "http://download.makeblock.com/mblock/v_#{version.dots_to_underscores}/mBlock_mac_V#{version}.zip"
   name 'mBlock'
   homepage 'http://www.mblock.cc/'
-  license :gpl
 
   app "mBlock_v#{version}.app"
 end

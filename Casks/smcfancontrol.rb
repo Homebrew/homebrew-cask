@@ -7,7 +7,6 @@ cask 'smcfancontrol' do
           checkpoint: '02ee10ec262f518ad8e099fe4230b78235d48ed26729c5ccd2241fe2d6291881'
   name 'smcFanControl'
   homepage 'https://www.eidac.de/?cat=40'
-  license :gpl
 
   app 'smcFanControl.app'
 

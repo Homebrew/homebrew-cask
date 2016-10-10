@@ -5,7 +5,6 @@ cask 'jprofiler' do
   url "http://download-keycdn.ej-technologies.com/jprofiler/jprofiler_macos_#{version.dots_to_underscores}.dmg"
   name 'JProfiler'
   homepage 'https://www.ej-technologies.com/products/jprofiler/overview.html'
-  license :closed
 
   app 'JProfiler.app'
 end

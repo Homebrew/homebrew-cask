@@ -8,7 +8,6 @@ cask 'qtpass' do
           checkpoint: '5c020a503bcfad1407583e46b16bc2ee273622a136ba9a631002defc860125dd'
   name 'QtPass'
   homepage 'https://qtpass.org/'
-  license :gpl
 
   app 'QtPass.app'
 end

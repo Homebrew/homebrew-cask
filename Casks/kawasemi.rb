@@ -6,7 +6,6 @@ cask 'kawasemi' do
   name 'Kawasemi'
   name 'かわせみ'
   homepage 'https://www.monokakido.jp/mac/kawasemi2.html'
-  license :commercial
 
   pkg 'Kawasemi2 Installer.app/Contents/Resources/Kawasemi2.pkg'
 

@@ -6,7 +6,6 @@ cask 'easyfind' do
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/freeware/easyfind/#{version}/EasyFind.app.zip"
   name 'EasyFind'
   homepage 'http://www.devontechnologies.com/download/products.html'
-  license :gratis
 
   app 'EasyFind.app'
 end

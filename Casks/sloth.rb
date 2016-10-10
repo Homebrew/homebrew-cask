@@ -7,7 +7,6 @@ cask 'sloth' do
           checkpoint: '97348470bb468d61e02d9327e06157970fedce166b8fdca2fd32a53509ce8a9e'
   name 'Sloth'
   homepage 'http://sveinbjorn.org/sloth'
-  license :gpl
 
   app 'Sloth.app'
 end

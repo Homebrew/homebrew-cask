@@ -7,7 +7,6 @@ cask 'sketch' do
           checkpoint: '7f2a880a4c456b965f987ce42bcf3bb4150580204131767525f933831d996baa'
   name 'Sketch'
   homepage 'https://www.sketchapp.com/'
-  license :commercial
 
   app 'Sketch.app'
 

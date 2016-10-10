@@ -8,7 +8,6 @@ cask 'middleclick' do
           checkpoint: '56cc9aa7f59fd6d6db671678ff4b72a5289becb98dbe32ce1587cc746d411db9'
   name 'MiddleClick'
   homepage 'https://rouge41.com/labs/'
-  license :gpl
 
   app 'MiddleClick.app'
 end

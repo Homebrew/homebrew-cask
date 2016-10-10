@@ -5,7 +5,6 @@ cask 'hue-topia' do
   url 'http://peacockmedia.software/mac/huetopia/huetopia.dmg'
   name 'Hue-topia'
   homepage 'http://peacockmedia.software/mac/huetopia/'
-  license :commercial
 
   app 'Hue-topia.app'
 end

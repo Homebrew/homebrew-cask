@@ -8,7 +8,6 @@ cask 'tv-browser' do
           checkpoint: '6c72cc25756e2a0d117c74692acb9515fc1a59933f469424d1409b36eee5449b'
   name 'TV-Browser'
   homepage 'http://www.tvbrowser.org/'
-  license :gpl
 
   app 'TV-Browser.app'
 end

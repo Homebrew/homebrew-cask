@@ -5,7 +5,6 @@ cask 'fitbit-connect' do
   url "http://cache.fitbit.com/FitbitConnect/FitbitConnect_Mac_#{version}.dmg"
   name 'Fitbit Connect'
   homepage 'https://www.fitbit.com/'
-  license :gratis
 
   pkg 'Install Fitbit Connect.pkg'
 

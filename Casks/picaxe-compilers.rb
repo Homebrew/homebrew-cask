@@ -5,7 +5,6 @@ cask 'picaxe-compilers' do
   url 'http://www.picaxe.com/downloads/picaxe_mac_intel.zip'
   name 'PICAXE Compilers'
   homepage 'http://www.picaxe.com/Software/Drivers/PICAXE-Compilers/'
-  license :closed
 
   compilers = %w[08 08m 08m2 08m2le
                  14m 14m2 18 18a 18m

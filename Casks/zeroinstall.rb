@@ -8,7 +8,6 @@ cask 'zeroinstall' do
           checkpoint: '7c02e36690dd4e096e40898ee54d59916110c3f3128862ba327857585daa7e57'
   name 'Zero Install'
   homepage 'http://0install.net/'
-  license :gpl
 
   pkg 'ZeroInstall.pkg'
 

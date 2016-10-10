@@ -7,7 +7,6 @@ cask 'gog-downloader' do
           checkpoint: 'a3c972e56f751b534b16c9c63930e6e663c0643123a09f9cc6ec921a7b4d1afb'
   name 'GOG Downloader'
   homepage 'https://www.gog.com/downloader'
-  license :gratis
 
   app 'GOG Downloader.app'
 

@@ -7,7 +7,6 @@ cask 'audioscrobbler' do
           checkpoint: 'c222292ffd9650b768c3d0777af0afcba066cd7c099870f7bb47da8c54c33956'
   name 'Audioscrobbler'
   homepage 'https://github.com/mxcl/Audioscrobbler.app'
-  license :gpl
 
   app 'Audioscrobbler.app'
 end

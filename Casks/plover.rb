@@ -8,7 +8,6 @@ cask 'plover' do
           checkpoint: '8eb7487c0243890078c45e7f0a3ca5b856f3d3b980ec9737f5aa87607037b91e'
   name 'Plover'
   homepage 'http://stenoknight.com/wiki/Main_Page'
-  license :gpl
 
   accessibility_access true
 

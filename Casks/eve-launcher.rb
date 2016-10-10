@@ -5,7 +5,6 @@ cask 'eve-launcher' do
   url "https://binaries.eveonline.com/EveLauncher-#{version}.dmg"
   name 'Eve Online'
   homepage 'https://www.eveonline.com/'
-  license :commercial
 
   app 'EVE Launcher.app'
 

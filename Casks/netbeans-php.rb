@@ -5,7 +5,6 @@ cask 'netbeans-php' do
   url "http://download.netbeans.org/netbeans/#{version}/final/bundles/netbeans-#{version}-php-macosx.dmg"
   name 'NetBeans IDE for PHP'
   homepage 'https://netbeans.org/'
-  license :oss
 
   pkg "NetBeans #{version}.pkg"
 

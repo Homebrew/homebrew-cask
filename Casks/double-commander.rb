@@ -7,7 +7,6 @@ cask 'double-commander' do
           checkpoint: 'e1e58e0ffe55b19752cae1d4f6cc80226644b5e1de14c95f612b23bde111f4b8'
   name 'Double Commander'
   homepage 'http://doublecmd.sourceforge.net/'
-  license :gpl
 
   app 'Double Commander.app'
 end

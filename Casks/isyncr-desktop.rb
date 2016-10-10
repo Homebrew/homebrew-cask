@@ -5,7 +5,6 @@ cask 'isyncr-desktop' do
   url "http://www.jrtstudio.com/files/iSyncr%20Desktop%20#{version}.pkg"
   name 'iSyncr Desktop'
   homepage 'http://www.jrtstudio.com/iSyncr-iTunes-for-Android'
-  license :gratis
 
   pkg "iSyncr Desktop #{version}.pkg"
 

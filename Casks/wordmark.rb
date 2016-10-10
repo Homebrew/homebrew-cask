@@ -8,7 +8,6 @@ cask 'wordmark' do
           checkpoint: 'ed6b36192e533e1f6ac518d2fbcfdbd483fdc64adc6dd79bc6e4386acbf9358b'
   name 'WordMark 2'
   homepage 'http://wordmarkapp.com/'
-  license :unknown
 
   app 'WordMark-darwin-x64/WordMark.app'
 end

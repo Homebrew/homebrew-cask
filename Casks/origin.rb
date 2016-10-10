@@ -6,7 +6,6 @@ cask 'origin' do
   url 'https://origin-a.akamaihd.net/Origin-Client-Download/origin/mac/live/Origin.dmg'
   name 'Origin'
   homepage 'https://origin.com'
-  license :gratis
 
   app 'Origin.app'
 end

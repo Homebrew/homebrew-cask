@@ -7,7 +7,6 @@ cask 'chrome-devtools' do
           checkpoint: '0755195b9dd06139fe4043a3395df6b7ccab187d6c892ef473155f409f6478dd'
   name 'Chrome DevTools'
   homepage 'https://github.com/auchenberg/chrome-devtools-app'
-  license :mit
 
   app 'Chrome DevTools App.app'
 end

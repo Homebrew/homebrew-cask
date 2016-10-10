@@ -5,7 +5,6 @@ cask 'skypewebplugin' do
   url "https://swx.cdn.skype.com/plugin/#{version}/SkypeWebPlugin.pkg"
   name 'Skype Web Plugin'
   homepage 'https://skype.com'
-  license :closed
 
   pkg 'SkypeWebPlugin.pkg'
 

@@ -6,7 +6,6 @@ cask 'poolside-fm' do
   url 'https://s3-eu-west-1.amazonaws.com/poolside-fm/HeyThereHotStuff.zip'
   name 'Poolside FM'
   homepage 'http://poolside.fm/mac/'
-  license :gratis
 
   app 'Poolside FM.app'
 end

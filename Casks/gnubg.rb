@@ -11,7 +11,6 @@ cask 'gnubg' do
 
   name 'Gnu Backgammon'
   homepage 'http://gnubg.org/'
-  license :gpl
 
   depends_on x11: true
 

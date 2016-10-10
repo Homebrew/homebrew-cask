@@ -5,7 +5,6 @@ cask 'gity' do
   url 'http://gityapp.com/gityapp/Gity.zip'
   name 'Gity'
   homepage 'http://gityapp.com/gityapp/'
-  license :gpl
 
   app 'Gity.app'
 end

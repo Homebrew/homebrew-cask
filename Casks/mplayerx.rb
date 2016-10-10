@@ -8,7 +8,6 @@ cask 'mplayerx' do
           checkpoint: '34bfae10cc1d8458ee908899a4a93d0f6ff2500b905f3d4458bfa0807cd1374a'
   name 'MPlayerX'
   homepage 'http://mplayerx.org/'
-  license :oss
 
   app 'MPlayerX.app'
 

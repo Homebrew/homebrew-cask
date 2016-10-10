@@ -5,7 +5,6 @@ cask 'master-password' do
   url 'https://ssl.masterpasswordapp.com/masterpassword-mac.zip'
   name 'Master Password'
   homepage 'http://masterpasswordapp.com'
-  license :gpl
 
   app 'Master Password.app'
 

@@ -5,7 +5,6 @@ cask 'intel-xdk' do
   url "https://download.xdk.intel.com/xdk/xdk_web_mac_master_#{version}.dmg"
   name 'Intel XDK'
   homepage 'http://xdk-software.intel.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "xdk_full_#{version}.pkg"
 

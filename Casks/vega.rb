@@ -5,7 +5,6 @@ cask 'vega' do
   url 'https://dist.subgraph.com/downloads/Vega64.dmg'
   name 'Vega'
   homepage 'https://subgraph.com/vega/index.en.html'
-  license :unknown
 
   app 'Vega.app'
 end

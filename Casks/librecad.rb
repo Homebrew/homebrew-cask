@@ -8,7 +8,6 @@ cask 'librecad' do
           checkpoint: 'a2463268ae3a532744db027bcdd154bfa4390dada1679dbea42d426e9d9b39cc'
   name 'LibreCAD'
   homepage 'http://librecad.org/'
-  license :gpl
 
   app 'LibreCAD.app'
 end

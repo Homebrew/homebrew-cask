@@ -7,7 +7,6 @@ cask 'beatport-pro' do
           checkpoint: 'ea3d3f35e508d63b3d58b50373d949f926c6bc2882ca21ab996e8a5ea2d94fc0'
   name 'Beatport Pro'
   homepage 'https://pro.beatport.com/'
-  license :closed
 
   app 'Beatport Pro.app'
 end

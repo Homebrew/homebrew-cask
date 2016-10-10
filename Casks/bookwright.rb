@@ -5,7 +5,6 @@ cask 'bookwright' do
   url "http://downloads.blurb.com/bookwright_v2/#{version}/BookWright.dmg"
   name 'BookWright'
   homepage 'https://www.blurb.com/bookwright'
-  license :closed
 
   app 'BookWright.app'
 end

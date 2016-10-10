@@ -8,7 +8,6 @@ cask 'textsoap' do
           checkpoint: '06a133c9ba24c5e22b11658eace5c000128e675dccfc4f6532255054c8f59019'
   name 'TextSoap'
   homepage 'https://www.unmarked.com/textsoap/'
-  license :commercial
 
   app "textsoap#{version.major}.app"
 

@@ -7,7 +7,6 @@ cask 'near-lock' do
           checkpoint: '5a7892312aa20f9057a8e868d748f61a35397854893a7b80f6dfc11922923958'
   name 'Near Lock'
   homepage 'http://nearlock.me/'
-  license :gratis
 
   app 'Near Lock.app'
 end

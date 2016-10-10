@@ -5,7 +5,6 @@ cask 'bitwig-studio' do
   url "https://downloads.bitwig.com/stable/#{version}/Bitwig%20Studio%20#{version}.dmg"
   name 'Bitwig Studio'
   homepage 'https://www.bitwig.com'
-  license :commercial
 
   app 'Bitwig Studio.app'
 end

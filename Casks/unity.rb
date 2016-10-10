@@ -5,7 +5,6 @@ cask 'unity' do
   url "http://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorInstaller/Unity.pkg"
   name 'Unity Editor'
   homepage 'https://unity3d.com/unity/'
-  license :commercial
 
   pkg 'Unity.pkg'
 

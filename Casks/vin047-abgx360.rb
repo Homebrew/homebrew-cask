@@ -7,7 +7,6 @@ cask 'vin047-abgx360' do
           checkpoint: '66aa25afd5cb6052b881fe18a75af2bf2c2e042ac50da962114f5825ea7902b1'
   name 'vin047-abgx360'
   homepage 'https://github.com/vin047/abgx360gui'
-  license :oss
 
   app 'abgx360 GUI.app'
 

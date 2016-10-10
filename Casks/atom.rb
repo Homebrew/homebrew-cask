@@ -8,7 +8,6 @@ cask 'atom' do
           checkpoint: 'b96f890e675ed2823e632465aaa13b445d780b8a7eb1330291133fa22065ec14'
   name 'Github Atom'
   homepage 'https://atom.io/'
-  license :mit
 
   auto_updates true
   depends_on macos: '>= :mountain_lion'

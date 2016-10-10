@@ -5,7 +5,6 @@ cask 'omnifocus-clip-o-tron' do
   url "https://www.omnigroup.com/ftp/pub/software/MacOSX/10.10/OmniFocus-Clip-o-Tron-Installer-#{version}.dmg"
   name 'OmniFocus Clip-O-Tron'
   homepage 'https://support.omnigroup.com/omnifocus-clip-o-tron'
-  license :commercial
 
   installer manual: 'OmniFocus Clip-o-Tron.app'
 end

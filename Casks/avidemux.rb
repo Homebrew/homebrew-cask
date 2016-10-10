@@ -8,7 +8,6 @@ cask 'avidemux' do
           checkpoint: 'a8205fa1028b0d77549b899ee33987cb57aaa94cf36e9c9953ef74eced55cd5e'
   name 'Avidemux'
   homepage 'https://www.avidemux.org/'
-  license :gpl
 
   app "Avidemux#{version.major_minor}.app"
 end

@@ -8,7 +8,6 @@ cask 'armory' do
           checkpoint: '50b50e2071c2cb4f05c0564cc0019d7fdd621ccc225953cdf4c1d93e40abba12'
   name 'Armory'
   homepage 'https://btcarmory.com/'
-  license :oss
 
   app 'Armory.app'
 end

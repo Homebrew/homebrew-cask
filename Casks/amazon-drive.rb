@@ -6,7 +6,6 @@ cask 'amazon-drive' do
   url 'https://d29x207vrinatv.cloudfront.net/mac/AmazonDriveInstaller.dmg'
   name 'Amazon Drive'
   homepage 'https://www.amazon.com/clouddrive/home/'
-  license :gratis
 
   installer script: 'Amazon Drive Installer.app/Contents/MacOS/Amazon Drive Installer',
             sudo:   false

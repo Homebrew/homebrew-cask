@@ -5,7 +5,6 @@ cask 'battle-net' do
   url 'http://www.battle.net/download/getInstallerForGame?os=mac&locale=enUS&version=LIVE&gameProgram=BATTLENET_APP'
   name 'Blizzard Battle.net'
   homepage 'https://us.battle.net/en/'
-  license :commercial
 
   installer manual: 'Battle.net-Setup.app'
 

@@ -5,7 +5,6 @@ cask 'rpn-scientific' do
   url "http://rpnscientific.freehostia.com/RPNScientificV#{version}.dmg"
   name 'RPN Scientific Calculator'
   homepage 'http://rpnscientific.freehostia.com/'
-  license :gratis
 
   app 'RPN Scientific.app'
 

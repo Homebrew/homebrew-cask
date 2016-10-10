@@ -7,7 +7,6 @@ cask 'statusfy' do
           checkpoint: '0c4e6266973191bc5cabe69bebae32d2698b007e1907af627694938899d87dac'
   name 'Statusfy'
   homepage 'https://github.com/paulyoung/Statusfy'
-  license :mit
 
   app 'Statusfy.app'
 end

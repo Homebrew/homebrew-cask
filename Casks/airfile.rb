@@ -8,7 +8,6 @@ cask 'airfile' do
           checkpoint: '0ce8f8b0bc9cfef1a125876fd721167b2457e63f7abae2f5d959686b6ed61a3e'
   name 'AirFile'
   homepage 'https://airfileapp.tumblr.com/'
-  license :commercial
 
   app 'AirFile.app'
 end

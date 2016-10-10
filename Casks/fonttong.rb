@@ -5,7 +5,6 @@ cask 'fonttong' do
   url 'http://www.asiafont.com/FontTong.dmg'
   name '폰트통'
   homepage 'http://www.asiafont.com'
-  license :gratis
 
   app "폰트통v#{version}.app"
 end

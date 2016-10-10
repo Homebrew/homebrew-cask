@@ -8,7 +8,6 @@ cask 'atraci' do
           checkpoint: '5736c97f3ab51d81fe93000943febc1fe9aa944ce75f066cc94bf0f216a651c5'
   name 'Atraci'
   homepage 'https://atraci.github.io/Atraci-website/'
-  license :mit
 
   app 'Atraci.app'
 end

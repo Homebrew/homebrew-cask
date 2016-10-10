@@ -8,7 +8,6 @@ cask 'flashlight' do
           checkpoint: '8c5e2c28b99d28496b74bd58b778ef895bb143f19bc6eaee21d8e0eeb55c0309'
   name 'Flashlight'
   homepage 'https://flashlight.nateparrott.com/'
-  license :gpl
 
   auto_updates true
 

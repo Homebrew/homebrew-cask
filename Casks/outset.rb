@@ -7,7 +7,6 @@ cask 'outset' do
           checkpoint: 'd916798c95ff3d1190a5deb2a88179ca199b42d3352603aeb0d3ca0d6d383a0c'
   name 'outset'
   homepage 'https://github.com/chilcote/outset'
-  license :apache
 
   pkg "outset-#{version}.pkg"
 

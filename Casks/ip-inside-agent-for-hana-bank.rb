@@ -5,7 +5,6 @@ cask 'ip-inside-agent-for-hana-bank' do
   url 'https://open.hanabank.com/interezen/agent/IPinsideAgent.dmg'
   name 'IP inside Agent for Hana Bank'
   homepage 'https://open.hanabank.com'
-  license :gratis
 
   pkg 'IPinsideAgent.pkg'
 

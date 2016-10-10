@@ -7,7 +7,6 @@ cask 'httpscoop' do
           checkpoint: 'a89471dee5778a059186b4a3035520d2bbfb5581d90f95b84ebc94408b21c2c1'
   name 'HTTP Scoop'
   homepage 'https://www.tuffcode.com'
-  license :commercial
 
   app 'HTTPScoop.app'
 end

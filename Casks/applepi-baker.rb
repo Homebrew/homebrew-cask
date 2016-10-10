@@ -8,7 +8,6 @@ cask 'applepi-baker' do
                }
   name 'ApplePi-Baker'
   homepage 'http://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/'
-  license :gratis
 
   app 'ApplePi-Baker.app'
 end

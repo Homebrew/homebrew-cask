@@ -8,7 +8,6 @@ cask 'movelinks' do
           checkpoint: '5cab6fe342d0d05df460b010eab2ba19491a2382f3decb6cb2b2d7803b7e6ef9'
   name 'Movelinks'
   homepage 'https://www.movescount.com/connect/moveslinkmac/Suunto_Ambit'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   auto_updates true
 

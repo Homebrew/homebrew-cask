@@ -8,7 +8,6 @@ cask 'appserver' do
           checkpoint: '5f1962c7d1468e71ec012ce91cdf6644ecef67af3aed1c27554cb8156d6cc5d8'
   name 'appserver.io'
   homepage 'http://www.appserver.io'
-  license :oss
 
   pkg "appserver-dist_#{version}_x86_64.pkg"
 

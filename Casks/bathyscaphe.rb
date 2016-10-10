@@ -5,7 +5,6 @@ cask 'bathyscaphe' do
   url "https://bitbucket.org/bathyscaphe/public/downloads/BathyScaphe-#{version}.dmg"
   name 'BathyScaphe'
   homepage 'http://bathyscaphe.bitbucket.org/'
-  license :oss
 
   app 'BathyScaphe.app'
 end

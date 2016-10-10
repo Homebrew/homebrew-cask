@@ -6,7 +6,6 @@ cask 'prey' do
   url "https://prey-releases.s3.amazonaws.com/node-client/#{version}/prey-mac-#{version}-x86.pkg"
   name 'Prey'
   homepage 'https://preyproject.com'
-  license :gpl
 
   pkg "prey-mac-#{version}-x86.pkg"
 

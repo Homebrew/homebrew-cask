@@ -7,7 +7,6 @@ cask 'mention' do
           checkpoint: '87e9053220e4eff05ab00275283c876a28eb0bfcf84aff6b8acb2ef2f6ce9582'
   name 'Mention'
   homepage 'https://en.mention.com/'
-  license :gratis
 
   app 'Mention.app'
 end

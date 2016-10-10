@@ -11,7 +11,6 @@ cask 'skype' do
 
   name 'Skype'
   homepage 'https://www.skype.com'
-  license :gratis
 
   auto_updates true
 

@@ -7,7 +7,6 @@ cask 'macaw' do
           checkpoint: '965a05c732a828d55db7d563cb01d1f746c425e3c672233ba3f67ec998e7bf2e'
   name 'Macaw'
   homepage 'http://macaw.co/'
-  license :commercial
 
   app 'Macaw.app'
 

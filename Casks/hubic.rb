@@ -6,7 +6,6 @@ cask 'hubic' do
   url "http://mir7.ovh.net/ovh-applications/hubic/hubiC-OSX/#{version.major_minor_patch}/hubiC-OSX-#{version}-osx.pkg"
   name 'hubiC'
   homepage 'https://hubic.com/'
-  license :gratis
 
   pkg "hubiC-OSX-#{version}-osx.pkg"
 

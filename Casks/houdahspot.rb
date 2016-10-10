@@ -7,7 +7,6 @@ cask 'houdahspot' do
           checkpoint: '5c99b50c655ceef16c50d5056d4bd749a89f12beb701b6057732fdaf94fe2026'
   name 'HoudahSpot'
   homepage 'https://www.houdah.com/houdahSpot/'
-  license :commercial
 
   app 'HoudahSpot.app'
 

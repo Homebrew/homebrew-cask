@@ -10,7 +10,6 @@ cask 'interarchy' do
   url "https://nolobe.com/interarchy/download?v=#{version}"
   name 'Interarchy'
   homepage 'https://nolobe.com/interarchy/'
-  license :commercial
 
   app 'Interarchy.app'
 end

@@ -12,7 +12,6 @@ cask 'amethyst' do
           checkpoint: '92d4615302d5e3ed68a3a187b6709e78080691550517f9b171b3631a6ca45d1c'
   name 'Amethyst'
   homepage 'https://ianyh.com/amethyst'
-  license :mit
 
   accessibility_access true
 

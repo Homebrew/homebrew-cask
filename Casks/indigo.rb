@@ -7,7 +7,6 @@ cask 'indigo' do
   name 'Indigo'
   name 'Indigo Domotics'
   homepage 'https://www.indigodomo.com'
-  license :commercial
 
   pkg 'Indigo Installer.pkg'
 

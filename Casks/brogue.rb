@@ -5,7 +5,6 @@ cask 'brogue' do
   url "https://sites.google.com/site/broguegame/Brogue%20v#{version}%20OS%20X.zip?attredirects=0&d=1"
   name 'Brogue'
   homepage 'https://sites.google.com/site/broguegame/'
-  license :affero
 
   app "Brogue v#{version}/Brogue.app"
 end

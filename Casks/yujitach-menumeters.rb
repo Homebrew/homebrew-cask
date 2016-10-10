@@ -5,7 +5,6 @@ cask 'yujitach-menumeters' do
   url "http://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/zips/MenuMeters_#{version}.zip"
   name 'MenuMeters El Capitan Port'
   homepage 'http://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/'
-  license :gpl
 
   depends_on macos: '>= :el_capitan'
 

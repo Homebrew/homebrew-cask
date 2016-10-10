@@ -5,7 +5,6 @@ cask 'infinit' do
   url 'https://download.infinit.io/macosx/app/Infinit.dmg'
   name 'Infinit'
   homepage 'https://www.infinit.io/'
-  license :gratis
 
   app 'Infinit.app'
 

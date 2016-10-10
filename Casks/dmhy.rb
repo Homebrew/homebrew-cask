@@ -7,7 +7,6 @@ cask 'dmhy' do
           checkpoint: 'f75dd5c49e4c77c3f34832bdead1ee7e2aa9b8be5b296e01582ef6cc8f78e771'
   name 'DMHY'
   homepage 'https://github.com/yaqinking/DMHY'
-  license :mit
 
   app 'DMHY.app'
 end

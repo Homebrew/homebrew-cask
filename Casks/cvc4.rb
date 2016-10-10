@@ -19,7 +19,6 @@ cask 'cvc4' do
 
   name 'CVC4'
   homepage 'https://cvc4.cs.nyu.edu/'
-  license :oss
 
   uninstall pkgutil: 'org.macports.cvc4'
 

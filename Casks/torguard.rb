@@ -8,7 +8,6 @@ cask 'torguard' do
           checkpoint: '5eeb07d71d1faec9dce4f2cdcc5e8d3790c7c26554f16ab5400f44967b7d1ab6'
   name 'TorGuard'
   homepage 'https://torguard.net/'
-  license :unknown
 
   app 'TorGuard.app'
 end

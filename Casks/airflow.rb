@@ -6,7 +6,6 @@ cask 'airflow' do
   url "https://s3.amazonaws.com/Airflow/Download/Airflow%20#{version}.dmg"
   name 'Airflow'
   homepage 'http://airflowapp.com/'
-  license :gratis
 
   app 'Airflow.app'
 end

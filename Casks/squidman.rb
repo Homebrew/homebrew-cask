@@ -5,7 +5,6 @@ cask 'squidman' do
   url "http://squidman.net/resources/downloads/SquidMan#{version}.dmg"
   name 'SquidMan'
   homepage 'http://squidman.net/squidman/'
-  license :gratis
 
   app 'SquidMan.app'
 end

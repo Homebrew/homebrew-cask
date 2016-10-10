@@ -7,7 +7,6 @@ cask 'thunderbird' do
           checkpoint: '28e0bfc5ee773a82e07809882874d5ad51ec035bf52445873bcfe400bd114c3b'
   name 'Mozilla Thunderbird'
   homepage 'https://www.mozilla.org/en-US/thunderbird/'
-  license :mpl
 
   app 'Thunderbird.app'
 

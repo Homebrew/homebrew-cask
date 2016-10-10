@@ -28,7 +28,6 @@ cask 'mailfollowup' do
   url "https://www.cs.unc.edu/~welch/MailFollowup/media/MailFollowUp_#{version}.dmg.zip"
   name 'MailFollowUp'
   homepage 'https://www.cs.unc.edu/~welch/MailFollowup/'
-  license :gratis
 
   pkg 'Install MailFollowUp.pkg'
 

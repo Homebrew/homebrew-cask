@@ -7,7 +7,6 @@ cask 'lingon-x' do
           checkpoint: '451448d9b34721711926e5ec12d0cd79416858b149a0ed6ebdaacfe4181a59d6'
   name 'Lingon X'
   homepage 'https://www.peterborgapps.com/lingon/'
-  license :commercial
 
   depends_on macos: '>= :yosemite'
 

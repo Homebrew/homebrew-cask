@@ -6,7 +6,6 @@ cask 'eagle' do
   url "http://web.cadsoft.de/ftp/eagle/program/#{version.sub(%r{\.\d+$}, '')}/eagle-mac64-#{version}.zip"
   name 'CadSoft EAGLE'
   homepage 'https://www.cadsoftusa.com/'
-  license :freemium
 
   pkg "eagle-mac64-#{version}.pkg"
 

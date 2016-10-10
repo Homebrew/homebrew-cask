@@ -7,7 +7,6 @@ cask 'pgweb' do
           checkpoint: '9aee4e4f2d0ff344e9e255b8d82b8aec68cdcaf045e646ff223214789dc31a29'
   name 'pgweb'
   homepage 'https://github.com/sosedoff/pgweb'
-  license :mit
 
   binary 'pgweb_darwin_amd64', target: 'pgweb'
 end

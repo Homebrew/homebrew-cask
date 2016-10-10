@@ -7,7 +7,6 @@ cask 'firefox' do
           checkpoint: 'a159161411794fc6bb2e6fce6e57df6b99eb14499dde41c0ee4d0803d9277364'
   name 'Mozilla Firefox'
   homepage 'https://www.mozilla.org/en-US/firefox/'
-  license :mpl
 
   auto_updates true
 

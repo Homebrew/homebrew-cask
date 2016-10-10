@@ -7,7 +7,6 @@ cask 'symboliclinker' do
           checkpoint: 'c7ec74fb114ce3be79f7e71def4f02ada28e5485387696ffadd65631a4817537'
   name 'SymbolicLinker'
   homepage 'https://github.com/nickzman/symboliclinker'
-  license :bsd
 
   service 'SymbolicLinker.service'
 end

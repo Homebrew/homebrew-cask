@@ -8,7 +8,6 @@ cask 'kaomoji' do
           checkpoint: 'c80344948d450636c79b58d95d7397f42cdb337e0130b5b9f85f5038f4505af9'
   name 'Kaomoji'
   homepage 'http://www.kaomojiapp.com/'
-  license :freemium
 
   auto_updates true
 

@@ -22,7 +22,6 @@ cask 'monolingual' do
           checkpoint: '4f40435d25696bad5afe152e0ffae05101967998e7262db9c4bfb622229e4a52'
   name 'Monolingual'
   homepage 'https://ingmarstein.github.io/Monolingual/'
-  license :gpl
 
   app 'Monolingual.app'
 end

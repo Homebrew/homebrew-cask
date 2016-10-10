@@ -5,7 +5,6 @@ cask 'livesurface-context' do
   url "http://www.livesurface.com/getcontextfile.php?du=b64c31a5-e26a-4a09-9f01-dd362e376c89&d=LiveSurface_Context_#{version}.dmg"
   name 'LiveSurface Context'
   homepage 'http://livesurface.com'
-  license :commercial
 
   app 'LiveSurface Context.app'
 

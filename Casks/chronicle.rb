@@ -7,7 +7,6 @@ cask 'chronicle' do
           checkpoint: 'ff7b3f1f508cdbcd382df87e51fe6bac8cefbdd20455b1a195363a60f808c480'
   name 'Chronicle'
   homepage 'http://chronicleapp.com/'
-  license :commercial
 
   app 'Chronicle.app'
 end

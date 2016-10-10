@@ -7,7 +7,6 @@ cask 'qlswift' do
           checkpoint: '5dc3ff40c67e2c7625aed0ad377a35dea553b437939372d784ef5b94080e8104'
   name 'QLSwift'
   homepage 'https://github.com/lexrus/QLSwift'
-  license :oss
 
   qlplugin 'QLSwift.qlgenerator'
 end

@@ -5,7 +5,6 @@ cask 'screens' do
   url "https://download.edovia.com/screens/Screens%20#{version}.zip"
   name 'Screens'
   homepage 'https://edovia.com/screens/#mac'
-  license :commercial
 
   app 'Screens.app'
 

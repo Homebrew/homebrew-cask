@@ -8,7 +8,6 @@ cask 'slingplayer-desktop' do
           checkpoint: 'f3e8f02a4af4671202a64777b3cc4e14f05865513a84b485eb797d7c48603574'
   name 'Slingplayer Desktop'
   homepage 'http://www.slingbox.com'
-  license :gratis
 
   app 'Slingplayer Desktop.app'
 end

@@ -7,7 +7,6 @@ cask 'provisioning' do
           checkpoint: '2474895e1fc8f47213e752c8f62a910d0f015e53b924ff3c7f20f48296b79dc9'
   name 'Provisioning'
   homepage 'https://github.com/chockenberry/Provisioning'
-  license :oss
 
   qlplugin "Provisioning-#{version}/Provisioning.qlgenerator"
 end

@@ -5,7 +5,6 @@ cask 'loopback' do
   url 'https://rogueamoeba.com/loopback/download/Loopback.zip'
   name 'Loopback'
   homepage 'https://rogueamoeba.com/loopback/'
-  license :commercial
 
   app 'Loopback.app'
 end

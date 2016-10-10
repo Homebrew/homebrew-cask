@@ -8,7 +8,6 @@ cask 'jaspersoft-studio' do
           checkpoint: '6b306acc2f4d67c9060263b4729526e7e65f2eb9480ce55b95e9ff246a1dbc02'
   name 'Jaspersoft Studio'
   homepage 'https://community.jaspersoft.com/project/jaspersoft-studio'
-  license :oss
 
   depends_on arch: :x86_64
 

@@ -7,7 +7,6 @@ cask 'qldds' do
           checkpoint: '181e68ea01116ea45693afbe33962a6b8a453c6e2804c4ab4a1ece9b2f23253b'
   name 'QuickLook DDS'
   homepage 'https://github.com/Marginal/QLdds'
-  license :gpl
 
   pkg "QLdds_#{version.no_dots}.pkg"
 

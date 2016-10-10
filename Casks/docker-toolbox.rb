@@ -8,7 +8,6 @@ cask 'docker-toolbox' do
           checkpoint: '0fbea9f72534c0621f9ec6559776c324c4cf333c3403f1a77da426f8cd35f68d'
   name 'Docker Toolbox'
   homepage 'https://www.docker.com/toolbox'
-  license :apache
 
   pkg "DockerToolbox-#{version}.pkg"
 

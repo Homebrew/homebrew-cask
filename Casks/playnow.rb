@@ -7,7 +7,6 @@ cask 'playnow' do
           checkpoint: '8be659cc2770e4252406cd5e58c800a1de4774dfd8f5e10b7c496350e273dd51'
   name 'PlayNow'
   homepage 'https://github.com/marcboquet/PlayNow/'
-  license :mit
 
   app 'PlayNow.app'
 end

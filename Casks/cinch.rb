@@ -7,7 +7,6 @@ cask 'cinch' do
           checkpoint: '435102475154532fb560886dd3ac50ee589a38c1a3a1457d03800c3d187a6b3e'
   name 'Cinch'
   homepage 'https://www.irradiatedsoftware.com/cinch/'
-  license :commercial
 
   app 'Cinch.app'
 end

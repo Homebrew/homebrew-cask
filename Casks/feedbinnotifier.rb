@@ -8,7 +8,6 @@ cask 'feedbinnotifier' do
           checkpoint: '1dc76597191bab28d4832ea7845cd6c274743d19f531336fec55a2e7c1ea35b6'
   name 'Feedbin Notifier'
   homepage 'https://kmikael.github.io/FeedbinNotifier'
-  license :mit
 
   app 'FeedbinNotifier.app'
 end

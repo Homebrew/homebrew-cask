@@ -7,7 +7,6 @@ cask 'pusher' do
           checkpoint: 'f713f4ee615887d908c0334aaa31ae499f9fb98fbfc4b3ed976f787646709ac6'
   name 'NWPusher'
   homepage 'https://github.com/noodlewerk/NWPusher'
-  license :bsd
 
   app 'Pusher.app'
 end

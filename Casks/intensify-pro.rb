@@ -8,7 +8,6 @@ cask 'intensify-pro' do
           checkpoint: 'a617011d8dbc7e3223a1cefafbe1ab1a83ec9f7adea37827da2f8115519ec1f8'
   name 'Intensify Pro'
   homepage 'https://macphun.com/intensify'
-  license :commercial
 
   app 'Intensify CK.app'
 end

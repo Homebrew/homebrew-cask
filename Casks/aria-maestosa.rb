@@ -7,7 +7,6 @@ cask 'aria-maestosa' do
           checkpoint: '477668fd1065310b682c7ced2a01f4be95af808290674d9598ff2895122cad3a'
   name 'Aria Maestosa'
   homepage 'http://ariamaestosa.sourceforge.net'
-  license :gpl
 
   app "AriaMaestosa-#{version}/Aria Maestosa.app"
 end

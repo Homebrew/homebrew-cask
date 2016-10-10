@@ -7,7 +7,6 @@ cask 'kyoku' do
           checkpoint: 'bd656a19e78074b9b0878f3d413a1da6317ad72b8b2cb98ef9ca6e4e602013d2'
   name 'Kyoku'
   homepage 'https://github.com/cheeaun/kyoku'
-  license :mit
 
   app 'Kyoku.app'
 end

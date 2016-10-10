@@ -7,7 +7,6 @@ cask 'qbserve' do
           checkpoint: '372d6cfb46a85cc5bcce1f87608e02cd3fbbc497333b749de6dba44f3cc6371c'
   name 'Qbserve'
   homepage 'https://qotoqot.com/qbserve/'
-  license :commercial
 
   accessibility_access true
   depends_on macos: '>= :yosemite'

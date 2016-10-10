@@ -5,7 +5,6 @@ cask 'quickpvr' do
   url 'http://www.limbic.com/downloads/QuickPVR_v4.zip'
   name 'QuickPVR'
   homepage 'http://www.limbic.com/quickpvr.html'
-  license :bsd
 
   qlplugin 'quickpvr.qlgenerator'
 end

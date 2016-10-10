@@ -7,7 +7,6 @@ cask 'bzflag' do
           checkpoint: 'f6f94afd10f51ff5510ceb84f4d04c707e5a74aa722f0443267d694c9a7c32c0'
   name 'BZFlag'
   homepage 'https://bzflag.org/'
-  license :gpl
 
   app "BZFlag-#{version}.app"
 end

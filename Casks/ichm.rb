@@ -6,7 +6,6 @@ cask 'ichm' do
   url "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/ichm/iChm.#{version}.zip"
   name 'iChm'
   homepage 'http://www.robinlu.com/ichm'
-  license :oss
 
   app 'iChm.app'
 end

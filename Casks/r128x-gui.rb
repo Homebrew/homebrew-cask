@@ -6,7 +6,6 @@ cask 'r128x-gui' do
   url "https://www.dropbox.com/s/rjdqzu8mvtoquvp/r128x-gui-#{version.dots_to_hyphens}.zip?dl=1"
   name 'r128x-gui'
   homepage 'https://github.com/audionuma/r128x'
-  license :gpl
 
   app 'r128x-gui.app'
 end

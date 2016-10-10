@@ -7,7 +7,6 @@ cask 'dropzone' do
           checkpoint: '5572a5a59d087717dcc4f3a44af1e772299d615122dfe8fe940d61ce8290e092'
   name 'Dropzone'
   homepage 'https://aptonic.com'
-  license :commercial
 
   app "Dropzone #{version.major}.app"
 end

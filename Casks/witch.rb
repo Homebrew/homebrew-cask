@@ -14,7 +14,6 @@ cask 'witch' do
 
   name 'Witch'
   homepage 'https://manytricks.com/witch/'
-  license :commercial
 
   auto_updates true
 

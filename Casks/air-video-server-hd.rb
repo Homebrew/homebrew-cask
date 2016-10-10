@@ -8,7 +8,6 @@ cask 'air-video-server-hd' do
           checkpoint: 'e327ff4f0f6128267a1ef1af2e92086228a69d43203823ff4ce9cdb435bdeaf7'
   name 'Air Video Server HD'
   homepage 'http://www.inmethod.com/airvideohd'
-  license :gratis
 
   app 'Air Video Server HD.app'
 

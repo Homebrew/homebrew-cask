@@ -7,7 +7,6 @@ cask 'keymo' do
           checkpoint: '382c704be6dbdc0bbeff5b01a661c227a9beabc487363bea91d63cf55ec0f8c7'
   name 'Keymo'
   homepage 'https://manytricks.com/keymo'
-  license :commercial
 
   auto_updates true
 

@@ -5,7 +5,6 @@ cask 'zdoom' do
   url "http://zdoom.org/files/zdoom/#{version.major_minor}/zdoom-#{version}.dmg"
   name 'ZDoom'
   homepage 'http://zdoom.org/'
-  license :oss
 
   app 'ZDoom.app'
 end

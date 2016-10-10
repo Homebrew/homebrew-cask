@@ -8,7 +8,6 @@ cask 'parse' do
           checkpoint: '07e39670b7193e99e97346f3b3e2c10d79b56285f53544f55d1b86f758d70e63'
   name 'Parse'
   homepage 'https://parse.com'
-  license :bsd
 
   container type: :naked
 

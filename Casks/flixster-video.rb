@@ -8,7 +8,6 @@ cask 'flixster-video' do
           checkpoint: 'cb865d6e566d861f67feee2bdfc4026122be341076f8fd3b230c138c5cf26f8a'
   name 'Flixster Video'
   homepage 'https://www.flixster.com/about/ultraviolet/'
-  license :gratis
 
   app 'Flixster Video.app'
 

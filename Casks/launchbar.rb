@@ -11,7 +11,6 @@ cask 'launchbar' do
 
   name 'LaunchBar'
   homepage 'https://www.obdev.at/products/launchbar/'
-  license :commercial
 
   app 'LaunchBar.app'
 

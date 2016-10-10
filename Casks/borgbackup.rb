@@ -8,7 +8,6 @@ cask 'borgbackup' do
           checkpoint: '957ad43f7646cd0227b030bd67359cd7403131fbf16505408a2899143515f119'
   name 'BorgBackup'
   homepage 'https://borgbackup.readthedocs.org/en/stable/'
-  license :bsd
   gpg "#{url}.asc",
       key_id: '51F78E01'
 

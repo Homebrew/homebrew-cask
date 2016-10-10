@@ -6,7 +6,6 @@ cask 'thington' do
   url "https://thington-download.s3.amazonaws.com/Thington.app.v#{version}.zip"
   name 'Thington'
   homepage 'https://thington.com/wemo'
-  license :closed
 
   app 'Thington.app'
 end

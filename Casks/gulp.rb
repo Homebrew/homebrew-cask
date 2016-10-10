@@ -7,7 +7,6 @@ cask 'gulp' do
           checkpoint: 'fcd58c1f7328c53e5d2311b7ee46b0bf58346d8550c0aa77cd9565be5908fb48'
   name 'gulp-app'
   homepage 'https://github.com/sindresorhus/gulp-app'
-  license :mit
 
   app 'gulp.app'
 end

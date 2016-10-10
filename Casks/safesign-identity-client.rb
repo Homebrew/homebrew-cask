@@ -6,7 +6,6 @@ cask 'safesign-identity-client' do
   url "http://site.solutinet.com.br/2014/images/files/instaladores-e-manuais/Safesign-#{version.no_dots}-MacOS-driver-manual.zip"
   name 'SafeSign Identity Client'
   homepage 'https://www.aeteurope.com/our-solutions/safesign-identity-client/'
-  license :gratis
 
   pkg "SafeSignIC#{version.no_dots}-x86_64-MAC.pkg"
 

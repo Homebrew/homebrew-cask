@@ -5,7 +5,6 @@ cask 'wiring' do
   url 'http://wiring.org.co/download/wiring-0101-macosx.zip'
   name 'Wiring'
   homepage 'http://wiring.org.co/'
-  license :gpl
 
   app 'Wiring.app'
 end

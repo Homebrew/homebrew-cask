@@ -7,7 +7,6 @@ cask 'xslimmer' do
           checkpoint: 'e6a52c35b48bb84462e177763e173ef65f8b4c4af66565f08d34512da98db7e7'
   name 'Xslimmer'
   homepage 'https://latenitesoft.com/xslimmer/'
-  license :commercial
 
   app 'Xslimmer.app'
 end

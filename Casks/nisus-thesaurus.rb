@@ -5,7 +5,6 @@ cask 'nisus-thesaurus' do
   url "https://nisus.com/files/free/Thesaurus-v#{version.no_dots}.zip"
   name 'Nisus Thesaurus'
   homepage 'https://nisus.com/Thesaurus/'
-  license :gratis
 
   depends_on macos: '>= :snow_leopard'
 

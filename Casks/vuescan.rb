@@ -5,7 +5,6 @@ cask 'vuescan' do
   url "https://www.hamrick.com/files/vuex64#{version.major_minor.no_dots}.dmg"
   name 'VueScan'
   homepage 'https://www.hamrick.com/'
-  license :commercial
 
   app 'VueScan.app'
 end

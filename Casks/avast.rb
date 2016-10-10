@@ -5,7 +5,6 @@ cask 'avast' do
   url 'http://download.ff.avast.com/mac/avast_free_mac_security.dmg'
   name 'Avast Mac Security'
   homepage 'https://www.avast.com/'
-  license :commercial
 
   pkg 'Avast Mac Security.pkg'
 

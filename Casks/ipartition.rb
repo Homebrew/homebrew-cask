@@ -5,7 +5,6 @@ cask 'ipartition' do
   url "https://coriolis-systems.com/downloads/iPartition-#{version}.zip"
   name 'iPartition'
   homepage 'https://coriolis-systems.com/iPartition.php'
-  license :commercial
 
   app 'iPartition.app'
 end

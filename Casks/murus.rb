@@ -5,7 +5,6 @@ cask 'murus' do
   url "http://www.murusfirewall.com/downloads/murus-#{version}.zip"
   name 'Murus Firewall'
   homepage 'http://www.murusfirewall.com'
-  license :freemium
 
   depends_on macos: '>= :mavericks'
 

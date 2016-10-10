@@ -6,7 +6,6 @@ cask 'musescore' do
   url "http://ftp.osuosl.org/pub/musescore/releases/MuseScore-#{version}/MuseScore-#{version}.dmg"
   name 'MuseScore'
   homepage 'https://musescore.org/'
-  license :gpl
 
   depends_on macos: '>= :lion'
 

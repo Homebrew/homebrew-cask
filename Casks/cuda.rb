@@ -5,7 +5,6 @@ cask 'cuda' do
   url "https://developer.nvidia.com/compute/cuda/#{version.major_minor}/Prod/local_installers/cuda_#{version}_mac-dmg"
   name 'Nvidia CUDA'
   homepage 'https://developer.nvidia.com/cuda-zone'
-  license :other
 
   installer script: 'CUDAMacOSXInstaller.app/Contents/MacOS/CUDAMacOSXInstaller',
             args:   ['--accept-eula', '--silent']

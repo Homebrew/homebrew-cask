@@ -6,7 +6,6 @@ cask 'seamonkey' do
   url "https://download.mozilla.org/?product=seamonkey-#{version}&os=osx&lang=en-US"
   name 'SeaMonkey'
   homepage 'http://www.seamonkey-project.org/'
-  license :oss
 
   app 'SeaMonkey.app'
 end

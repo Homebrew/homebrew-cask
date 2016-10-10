@@ -8,7 +8,6 @@ cask 'qlstephen' do
           checkpoint: '6cf8bb2decd2e475f96e024cdd7c265266361417b4d30520def92c31eb951c3b'
   name 'QLStephen'
   homepage 'https://whomwah.github.io/qlstephen/'
-  license :mit
 
   qlplugin 'QLStephen.qlgenerator'
 end

@@ -7,7 +7,6 @@ cask 'betterzip' do
           checkpoint: 'cc8f405304c66c96a64702a7806bef9e5c5a3f0b393560c95130e1730a38d79f'
   name 'BetterZip'
   homepage 'https://macitbetter.com'
-  license :commercial
 
   app 'BetterZip.app'
 

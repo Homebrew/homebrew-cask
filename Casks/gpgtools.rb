@@ -7,7 +7,6 @@ cask 'gpgtools' do
           checkpoint: '0c1cf1f2047fec41cf3af68106302f906fd593e8403b4a11b5877dbd1feb5091'
   name 'GPG Suite'
   homepage 'https://gpgtools.org/'
-  license :gpl
   gpg "#{url}.sig",
       key_url: 'https://gpgtools.org/GPGTools%2000D026C4.asc'
 

@@ -7,7 +7,6 @@ cask 'reveal' do
           checkpoint: '59912bbc29ae92bde4c523d54cc1a76babadc134b8a37c512bb32f72762eaa76'
   name 'Reveal'
   homepage 'https://revealapp.com/'
-  license :commercial
 
   app 'Reveal.app'
 end

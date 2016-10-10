@@ -23,7 +23,6 @@ cask 'araxis-merge' do
   end
 
   homepage 'https://www.araxis.com/merge'
-  license :commercial
 
   depends_on macos: '>= :mountain_lion'
 

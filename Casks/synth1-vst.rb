@@ -5,7 +5,6 @@ cask 'synth1-vst' do
   url "http://www.geocities.jp/daichi1969/softsynth/Synth1macvst#{version.no_dots}.zip"
   name 'Synth1 (VST)'
   homepage 'http://www.geocities.jp/daichi1969/softsynth/'
-  license :gratis
 
   vst_plugin 'Synth1.vst'
 end

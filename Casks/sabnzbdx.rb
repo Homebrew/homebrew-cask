@@ -5,7 +5,6 @@ cask 'sabnzbdx' do
   url "http://osx.boiboite.net/sabnzbdx-v#{version}.zip"
   name 'SABnzbdX'
   homepage 'http://osx.boiboite.net/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'SABnzbdX.app'
 

@@ -6,7 +6,6 @@ cask 'polar-websync' do
   url "https://www.polarpersonaltrainer.com/downloads/websync_#{version}.dmg"
   name 'Polar WebSync Software'
   homepage 'https://www.polar.com/us-en/support/downloads/Polar_WebSync_Software'
-  license :closed
 
   # cannot be installed automatically, because it presents a choice
   # See more: https://github.com/caskroom/homebrew-cask/pull/11040#issuecomment-100454926

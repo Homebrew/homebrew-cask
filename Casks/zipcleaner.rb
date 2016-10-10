@@ -5,7 +5,6 @@ cask 'zipcleaner' do
   url 'http://roger-jolly.nl/software/downloads/zipcleaner/ZipCleaner.zip'
   name 'ZipCleaner'
   homepage 'http://roger-jolly.nl/software/#zipcleaner'
-  license :isc
 
   app 'ZipCleaner.app'
 end

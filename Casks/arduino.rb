@@ -5,7 +5,6 @@ cask 'arduino' do
   url "https://downloads.arduino.cc/arduino-#{version}-macosx.zip"
   name 'Arduino'
   homepage 'https://www.arduino.cc/'
-  license :gpl
 
   app 'Arduino.app'
   binary "#{appdir}/Arduino.app/Contents/Java/arduino-builder"

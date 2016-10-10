@@ -13,7 +13,6 @@ cask 'r-app' do
 
   name 'R'
   homepage 'https://www.r-project.org'
-  license :gpl
 
   depends_on macos: '>= :snow_leopard'
 

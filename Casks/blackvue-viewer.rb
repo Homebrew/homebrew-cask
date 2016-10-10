@@ -5,7 +5,6 @@ cask 'blackvue-viewer' do
   url "http://www.blackvue.com/en/common/downloadHIT.asp?downfile=BlackVue%20Viewer_#{version.major_minor}.app.zip&path=board&idx=2052"
   name 'BlackVue Viewer'
   homepage 'https://blackvue.com'
-  license :closed
 
   app "BlackVue Viewer_#{version}.app"
 end
