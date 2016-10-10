@@ -9,7 +9,5 @@ cask 'qtpass' do
   name 'QtPass'
   homepage 'https://qtpass.org/'
 
-  license :gpl
-
   app 'QtPass.app'
 end
