@@ -7,7 +7,6 @@ cask 'transmission-remote-gui' do
           checkpoint: 'b83a50dcf74d826bb84b9d5aa6e19bfca4a8e0090e00a3feb7976bb9869dfe0a'
   name 'Transmission Remote GUI'
   homepage 'https://sourceforge.net/projects/transgui/'
-  license :oss
 
   pkg 'transgui.pkg'
 

@@ -6,7 +6,6 @@ cask 'dn-3023-driver' do
   url "http://ftp.assmann.com/pub/DN-/DN-3023___4016032318385/DN-3023_driver_driver%20Mac10.6-10.10_#{version}.zip"
   name 'USB driver for Gigabit Ethernet Adapter D-3023'
   homepage 'http://www.digitus.info/en/products/network/gigabit-ethernet-network/network-interface-cards/r-gigabit-ethernet-usb-30-adapter-dn-3023/'
-  license :gratis
 
   container type:   :zip,
             nested: 'DN-3023_Driver_MAC/AX88179_178A.dmg'

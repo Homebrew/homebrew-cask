@@ -5,7 +5,6 @@ cask 'mightytext' do
   url "https://mightytext.net/downloads/desktop-beta/MightyText-v#{version}.dmg"
   name 'MightyText'
   homepage 'https://mightytext.net/'
-  license :gratis
 
   app 'MightyText.app'
 

@@ -7,7 +7,6 @@ cask 'audirvana-plus' do
           checkpoint: '275426037674fd288d768dafea7bf6c91cd0c26cf3505242fba11155672d952c'
   name 'Audirvana Plus 2'
   homepage 'https://audirvana.com/'
-  license :commercial
 
   app 'Audirvana Plus.app'
 end

@@ -7,7 +7,6 @@ cask 'plotdigitizer' do
           checkpoint: '755ba0b18407b5cc8a7b3526876ca11d5d2f7b136481e9fe87956b9947dc942e'
   name 'Plot Digitizer'
   homepage 'http://plotdigitizer.sourceforge.net'
-  license :gpl
 
   app 'PlotDigitizer.app'
 end

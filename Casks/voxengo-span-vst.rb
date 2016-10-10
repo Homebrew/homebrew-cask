@@ -5,7 +5,6 @@ cask 'voxengo-span-vst' do
   url "https://www.voxengo.com/files/VoxengoSPAN_#{version.no_dots}_Mac_VST_VST3_setup.dmg"
   name 'Voxengo SPAN (VST)'
   homepage 'https://www.voxengo.com/product/span/'
-  license :gratis
 
   vst_plugin 'SPAN.vst'
   vst3_plugin 'SPAN.vst3'

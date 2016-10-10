@@ -7,7 +7,6 @@ cask 'pester' do
           checkpoint: '80c01b621ac7672ce1866445703e2c11532f79b1c6120aa568b33af0bce9289e'
   name 'Pester'
   homepage 'https://sabi.net/nriley/software/index.html#pester'
-  license :bsd
 
   app 'Pester.app'
 end

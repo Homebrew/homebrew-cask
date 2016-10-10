@@ -5,7 +5,6 @@ cask 'quicksync' do
   url "http://www.gigaset.com/fileadmin/gigaset/images/CORE/QuickSync/Mac_V#{version}/QuickSync.dmg"
   name 'QuickSync'
   homepage 'http://www.gigaset.com/en_US/kundenservice/downloads/quicksync/quicksync-fuer-mac.html'
-  license :gratis
 
   app 'QuickSync.app'
 end

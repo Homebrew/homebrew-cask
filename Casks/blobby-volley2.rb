@@ -5,7 +5,6 @@ cask 'blobby-volley2' do
   url "https://downloads.sourceforge.net/blobby/blobby2-macosx-#{version}.dmg"
   name 'Blobby Volley 2'
   homepage 'http://blobby.sourceforge.net'
-  license :gpl
 
   app 'Blobby Volley 2.app'
 end

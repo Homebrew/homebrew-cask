@@ -6,7 +6,6 @@ cask 'elasticwolf' do
   url "https://s3-us-gov-west-1.amazonaws.com/elasticwolf/ElasticWolf-osx-#{version}.zip"
   name 'AWS ElasticWolf Client Console'
   homepage 'https://aws.amazon.com/developertools/9313598265692691'
-  license :gratis
 
   app 'ElasticWolf.app'
 end

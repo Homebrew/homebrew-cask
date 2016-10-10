@@ -5,7 +5,6 @@ cask 'inkdrop' do
   url "https://www.inkdrop.info/api/update/Inkdrop-#{version}-Mac.zip"
   name 'Inkdrop'
   homepage 'https://www.inkdrop.info'
-  license :closed
 
   app 'Inkdrop (Beta).app'
 end

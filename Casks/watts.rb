@@ -6,7 +6,6 @@ cask 'watts' do
   url 'http://www.matchingbrackets.com/abatt/customer/Watts-48.dmg'
   name 'Watts'
   homepage 'http://binarytricks.com/'
-  license :commercial
 
   app 'Watts.app'
 end

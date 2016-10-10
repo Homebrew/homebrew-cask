@@ -6,7 +6,6 @@ cask 'fuse' do
   url "https://fuse-dl.azureedge.net/releaseartifacts/fuse_osx_#{version.dots_to_underscores}.pkg"
   name 'Fuse Fusetools'
   homepage 'https://www.fusetools.com'
-  license :closed
 
   pkg "fuse_osx_#{version.dots_to_underscores}.pkg"
 

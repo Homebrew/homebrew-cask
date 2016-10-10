@@ -6,7 +6,6 @@ cask 'temperature-monitor' do
   url 'https://www.bresink.eu/Downloads/TemperatureMonitor.dmg'
   name 'Temperature Monitor'
   homepage 'https://www.bresink.com/osx/LegacyProducts.html'
-  license :commercial
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app 'TemperatureMonitor.app', target: 'TemperatureMonitor.app'

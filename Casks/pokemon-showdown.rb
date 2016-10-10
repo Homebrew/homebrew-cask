@@ -5,7 +5,6 @@ cask 'pokemon-showdown' do
   url 'https://pokemonshowdown.com/files/pokemonshowdown-mac.zip'
   name 'Pokémon Showdown'
   homepage 'https://pokemonshowdown.com/'
-  license :mit
 
   app 'Pokemon Showdown.app'
 end

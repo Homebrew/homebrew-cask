@@ -5,7 +5,6 @@ cask 'chunkulus' do
   url 'http://presstube.com/screensavers/presstube-chunkulus-mac.zip'
   name 'Chunkulus'
   homepage 'http://presstube.com/blog/2011/chunkulus/'
-  license :cc
 
   depends_on cask: 'adobe-air'
 

@@ -6,7 +6,6 @@ cask 'appium' do
   url "https://bitbucket.org/appium/appium.app/downloads/appium-#{version}.dmg"
   name 'Appium'
   homepage 'http://appium.io'
-  license :apache
 
   app 'Appium.app'
 end

@@ -8,7 +8,6 @@ cask 'spacemonkey' do
           checkpoint: 'f2b61b62eea11d2c1d970740b4c6c04437d31469ac29160100d3fba723fdad4d'
   name 'Space Monkey'
   homepage 'https://www.spacemonkey.com'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   auto_updates true
 

@@ -6,7 +6,6 @@ cask 'preform' do
   url "https://s3.amazonaws.com/FormlabsReleases/Release/#{version.sub(%r{_.*}, '')}/PreForm_#{version}.dmg"
   name 'PreForm'
   homepage 'https://formlabs.com/products/preform/'
-  license :gratis
 
   app 'PreForm.app'
 end

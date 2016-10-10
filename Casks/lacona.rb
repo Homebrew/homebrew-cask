@@ -8,7 +8,6 @@ cask 'lacona' do
           checkpoint: '448b88e5ad9cd58e9f4d8cf7c5b58b9ac26c06b83539f7740538e15bf3882ca2'
   name 'Lacona'
   homepage 'https://www.lacona.io/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   auto_updates true
 

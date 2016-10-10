@@ -5,7 +5,6 @@ cask 'xecureweb-unified' do
   url 'https://open.hanabank.com/softforum/xwuni/install/xw_unified_install_mac_universal.pkg'
   name 'XecureWeb Unified'
   homepage 'https://open.hanabank.com'
-  license :gratis
 
   pkg 'xw_unified_install_mac_universal.pkg'
 

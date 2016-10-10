@@ -5,7 +5,6 @@ cask 'softraid' do
   url "https://softraid.com/updates/SoftRAID%20#{version}.dmg"
   name 'SoftRAID'
   homepage 'https://www.softraid.com/'
-  license :commercial
 
   app "SoftRAID #{version}/SoftRAID #{version}.app"
 end

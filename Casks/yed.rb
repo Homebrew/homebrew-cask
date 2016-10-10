@@ -5,7 +5,6 @@ cask 'yed' do
   url "https://www.yworks.com/products/yed/demo/yEd-#{version}_with-JRE8.dmg"
   name 'yWorks yEd'
   homepage 'https://www.yworks.com/en/products/yfiles/yed/'
-  license :gratis
 
   depends_on macos: '>= 10.8'
 

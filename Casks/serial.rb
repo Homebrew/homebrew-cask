@@ -5,7 +5,6 @@ cask 'serial' do
   url "https://www.decisivetactics.com/lib/click?u=/products/serial/dl/Serial_#{version}.zip"
   name 'Serial'
   homepage 'https://www.decisivetactics.com/products/serial/'
-  license :commercial
 
   app 'Serial.app'
 end

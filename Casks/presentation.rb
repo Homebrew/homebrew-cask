@@ -5,7 +5,6 @@ cask 'presentation' do
   url "http://iihm.imag.fr/blanch/software/osx-presentation/releases/osx-presentation-#{version}.dmg"
   name 'Présentation'
   homepage 'http://iihm.imag.fr/blanch/software/osx-presentation/'
-  license :gpl
 
   app 'Présentation.app'
 end

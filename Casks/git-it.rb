@@ -7,7 +7,6 @@ cask 'git-it' do
           checkpoint: '1547abc72f5827b0ecb17a420b2213354b7a2a8f89d688d7a0697cd815cc4686'
   name 'Git-it'
   homepage 'https://github.com/jlord/git-it-electron'
-  license :oss
 
   app 'Git-it-Mac-x64/Git-it.app'
 

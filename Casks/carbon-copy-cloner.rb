@@ -7,7 +7,6 @@ cask 'carbon-copy-cloner' do
           checkpoint: '1b64d38745f95986b8b0e0bf1b72341cc4a46616bd17226dec102a32b81c3b5a'
   name 'Carbon Copy Cloner'
   homepage 'https://bombich.com/'
-  license :commercial
 
   app 'Carbon Copy Cloner.app'
 

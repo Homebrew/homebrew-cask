@@ -6,7 +6,6 @@ cask 'aliwangwang' do
   url "https://dbison.alicdn.com/updates/macww-nosandbox-#{version}.dmg"
   name 'Ali Wangwang'
   homepage 'https://wangwang.taobao.com'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'AliWangwang.app'
 

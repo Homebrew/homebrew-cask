@@ -5,7 +5,6 @@ cask '4k-video-downloader' do
   url "https://downloads.4kdownload.com/app/4kvideodownloader_#{version}.dmg"
   name '4K Video Downloader'
   homepage 'https://www.4kdownload.com/products/product-videodownloader'
-  license :freemium
 
   app '4K Video Downloader.app'
 end

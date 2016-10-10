@@ -5,7 +5,6 @@ cask 'sonoair' do
   url "http://sonoair.mihosoft.eu/releases/#{version}/SonoAir.zip"
   name 'SonoAir'
   homepage 'http://sonoair.mihosoft.eu'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'SonoAir.app'
 end

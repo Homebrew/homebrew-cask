@@ -5,7 +5,6 @@ cask 'webstorm' do
   url "https://download.jetbrains.com/webstorm/WebStorm-#{version}.dmg"
   name 'WebStorm'
   homepage 'https://www.jetbrains.com/webstorm/'
-  license :commercial
 
   conflicts_with cask: 'webstorm-eap'
 

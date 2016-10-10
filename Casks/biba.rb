@@ -8,7 +8,6 @@ cask 'biba' do
           checkpoint: '30eeabb10721a3989ccf226b9dadded4c0eda0d6b32337272dfa71d8f8584032'
   name 'Biba'
   homepage 'https://www.biba.com'
-  license :closed
 
   app 'Biba.app'
 end

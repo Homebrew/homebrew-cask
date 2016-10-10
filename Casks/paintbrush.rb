@@ -7,7 +7,6 @@ cask 'paintbrush' do
           checkpoint: 'e1e7f7afa9b02245fae55442f3feedddddf1a8d43730abd68425529b83fe37bd'
   name 'Paintbrush'
   homepage 'http://paintbrush.sourceforge.net/'
-  license :gpl
 
   app 'Paintbrush.app'
 

@@ -5,7 +5,6 @@ cask 'gobbler' do
   url 'https://app.gobbler.com/download_latest_redirect?product_version=2'
   name 'Gobbler'
   homepage 'https://app.gobbler.com'
-  license :gratis
 
   installer manual: 'Gobbler.app'
 

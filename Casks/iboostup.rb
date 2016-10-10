@@ -7,7 +7,6 @@ cask 'iboostup' do
           checkpoint: '63fb737ac730a7bc770a2ba5a335612ce5eb93bec8421d4a13fa403d438e605a'
   name 'iBoostUp'
   homepage 'https://www.iboostup.com/'
-  license :freemium
 
   app 'iBoostUp.app'
 end

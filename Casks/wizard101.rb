@@ -7,7 +7,6 @@ cask 'wizard101' do
           checkpoint: 'aad04168f49ab14661ac4ff399796d54095fcb2d91cf379affed3c8ccda273a5'
   name 'Wizard101'
   homepage 'https://www.wizard101.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Wizard101.app'
 end

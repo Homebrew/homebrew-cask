@@ -5,7 +5,6 @@ cask 'continuity-activation-tool' do
   url 'https://github.com/dokterdok/Continuity-Activation-Tool/archive/master.zip'
   name 'Continuity Activation Tool'
   homepage 'https://github.com/dokterdok/Continuity-Activation-Tool/'
-  license :mit
 
   app 'Continuity-Activation-Tool-master/Continuity Activation Tool.app'
 end

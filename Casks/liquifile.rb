@@ -5,7 +5,6 @@ cask 'liquifile' do
   url 'http://www.liquifile.info/Liquifile.dmg'
   name 'Liquifile'
   homepage 'http://www.liquifile.info/'
-  license :commercial
 
   app "Liquifile_#{version.dots_to_underscores}.app"
 end

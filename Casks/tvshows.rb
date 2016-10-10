@@ -7,7 +7,6 @@ cask 'tvshows' do
           checkpoint: 'fe41e5a5084f9565a0697f49f4cc0bccd548bd52d1c5e6d3b350a394bc8f3465'
   name 'TVShows'
   homepage 'http://tvshowsapp.com/'
-  license :gpl
 
   prefpane 'TVShows.prefPane'
 

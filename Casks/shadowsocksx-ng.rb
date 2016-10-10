@@ -7,7 +7,6 @@ cask 'shadowsocksx-ng' do
           checkpoint: 'a04e2104c8823d27e4984fc05aa1a4948c7b6b7c7859c7f537081c72001a5b6f' 
   name 'ShadowsocksX-NG'
   homepage 'https://github.com/shadowsocks/ShadowsocksX-NG'
-  license :gpl
 
   conflicts_with cask: 'shadowsocksx'
 

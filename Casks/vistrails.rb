@@ -8,7 +8,6 @@ cask 'vistrails' do
           checkpoint: '5b5470cbdb0773a980d33bdb4c56d44d4d1ccbc56961988faaccc9104174569c'
   name 'VisTrails'
   homepage 'https://www.vistrails.org/'
-  license :bsd
 
   depends_on macos: '>= :snow_leopard'
 

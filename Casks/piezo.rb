@@ -7,7 +7,6 @@ cask 'piezo' do
           checkpoint: 'a7becbbd9f1a9ba7d5a8579a0e53ecc838461ff40f918e111734c05a7b12d642'
   name 'Piezo'
   homepage 'https://rogueamoeba.com/piezo/'
-  license :commercial
 
   app 'Piezo.app'
 end

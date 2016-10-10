@@ -7,7 +7,6 @@ cask 'ripit' do
           checkpoint: '689348dedb5f144b5195071b4ef1c03ba437986a6a1b58bebcb26e7006481979'
   name 'RipIt'
   homepage 'http://thelittleappfactory.com/ripit/'
-  license :commercial
 
   auto_updates true
 

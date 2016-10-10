@@ -6,7 +6,6 @@ cask 'flash-player' do
   url "https://fpdownload.macromedia.com/pub/flashplayer/updaters/#{version.major}/flashplayer_#{version.major}_sa.dmg"
   name 'Adobe Flash Player'
   homepage 'https://www.adobe.com/support/flashplayer/downloads.html'
-  license :gratis
 
   app 'Flash Player.app'
 

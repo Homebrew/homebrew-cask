@@ -5,7 +5,6 @@ cask 'bitmessage' do
   url "https://bitmessage.org/download/osx/Archive/bitmessage-v#{version}.dmg"
   name 'Bitmessage'
   homepage 'https://bitmessage.org/'
-  license :mit
 
   app 'Bitmessage.app'
 end

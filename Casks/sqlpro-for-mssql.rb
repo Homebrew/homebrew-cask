@@ -6,7 +6,6 @@ cask 'sqlpro-for-mssql' do
   url "https://d3fwkemdw8spx3.cloudfront.net/mssql/SQLProMSSQL.#{version}.app.zip"
   name 'SQLPro for MSSQL'
   homepage 'https://www.macsqlclient.com/'
-  license :commercial
 
   app 'SQLPro for MSSQL.app'
 

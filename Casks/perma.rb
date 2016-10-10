@@ -6,7 +6,6 @@ cask 'perma' do
   url "https://perma-dl.s3.amazonaws.com/Perma-v#{version}.zip"
   name 'Perma'
   homepage 'https://per.ma'
-  license :unknown
 
   app 'Perma.app'
 end

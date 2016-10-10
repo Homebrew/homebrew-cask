@@ -8,7 +8,6 @@ cask 'sqlectron' do
           checkpoint: '9ef052edf021c2550dfff3d26079d9276035bb7ae605bb16c615ca0b5dd0407e'
   name 'Sqlectron'
   homepage 'https://sqlectron.github.io/'
-  license :mit
 
   depends_on macos: '>= :mountain_lion'
 

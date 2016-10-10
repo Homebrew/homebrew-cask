@@ -6,7 +6,6 @@ cask 'send-to-kindle' do
   url 'https://s3.amazonaws.com/sendtokindle/SendToKindleForMac-installer.pkg'
   name 'Send to Kindle'
   homepage 'https://www.amazon.com/gp/sendtokindle/mac'
-  license :gratis
 
   pkg 'SendToKindleForMac-installer.pkg'
 

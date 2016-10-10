@@ -7,7 +7,6 @@ cask 'swiftybeaver' do
           checkpoint: '0827593e2f3880f4db763c1cfa97e272969e4753ebc75f0d0a8db0fd2bf63697'
   name 'SwiftyBeaver'
   homepage 'https://swiftybeaver.com/'
-  license :mit
 
   app 'SwiftyBeaver.app'
 end

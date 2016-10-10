@@ -8,7 +8,6 @@ cask 'tunnelbear' do
           checkpoint: 'd95454250918704ea514c5723179462ace18f4bf15901dd44c640053e8e9bb71'
   name 'TunnelBear'
   homepage 'https://www.tunnelbear.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'TunnelBear.app'
 

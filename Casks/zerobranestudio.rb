@@ -5,7 +5,6 @@ cask 'zerobranestudio' do
   url "https://download.zerobrane.com/ZeroBraneStudioEduPack-#{version}-macos.dmg"
   name 'ZeroBrane Studio'
   homepage 'https://studio.zerobrane.com'
-  license :mit
 
   app 'ZeroBraneStudio.app'
 end

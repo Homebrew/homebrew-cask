@@ -5,7 +5,6 @@ cask 'ireadfast' do
   url "https://www.gengis.net/downloads/iReadFast%20#{version}.dmg"
   name 'iReadFast'
   homepage 'https://www.gengis.net/prodotti/iReadFast_Mac/en/'
-  license :gratis
 
   app 'iReadFast.app'
 end

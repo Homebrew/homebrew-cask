@@ -5,7 +5,6 @@ cask 'qmapshack' do
   url "https://bitbucket.org/maproom/qmapshack/downloads/QMapShack-MacOSX_#{version}.tar.gz"
   name 'QMapShack'
   homepage 'https://bitbucket.org/maproom/qmapshack/wiki/Home'
-  license :gpl
 
   app 'QMapShack.app'
 end

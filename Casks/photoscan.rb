@@ -5,7 +5,6 @@ cask 'photoscan' do
   url "http://download.agisoft.com/photoscan_#{version.dots_to_underscores}.dmg"
   name 'Agisoft Photoscan'
   homepage 'http://www.agisoft.com'
-  license :commercial
 
   app 'PhotoScan.app'
 end

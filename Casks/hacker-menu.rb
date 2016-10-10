@@ -8,7 +8,6 @@ cask 'hacker-menu' do
           checkpoint: 'a55f652b40c1db009dddf4d3ee763d13fe679d93d062c8c33f5675bad2a944cb'
   name 'Hacker Menu'
   homepage 'https://hackermenu.io/'
-  license :mit
 
   app 'Hacker Menu.app'
 end

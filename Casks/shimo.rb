@@ -6,7 +6,6 @@ cask 'shimo' do
   url "https://shimo.s3.amazonaws.com/Shimo_#{version}.zip"
   name 'Shimo'
   homepage 'https://www.feingeist.io/shimo/'
-  license :commercial
 
   auto_updates true
 

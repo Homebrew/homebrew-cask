@@ -7,7 +7,6 @@ cask 'caprine' do
           checkpoint: '0d09e0094c60a0d79fd25b791add59d1e4661dc9c2e31dd85242a2f20e637989'
   name 'Caprine'
   homepage 'https://github.com/sindresorhus/caprine'
-  license :mit
 
   app 'Caprine.app'
 end

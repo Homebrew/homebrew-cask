@@ -7,7 +7,6 @@ cask 'dterm' do
           checkpoint: '482b6f4eeddf1fc1e347b5a9f293e2184dd01dcacf2695304b80b2d772faad6f'
   name 'DTerm'
   homepage 'https://decimus.net/DTerm'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   accessibility_access true
 

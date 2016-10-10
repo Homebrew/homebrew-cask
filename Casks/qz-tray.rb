@@ -8,7 +8,6 @@ cask 'qz-tray' do
           checkpoint: '33433b9469834be02d4297aaf6fe079bb5bbcd96fa86f914dd92848fdf0ab1b3'
   name 'QZ Tray'
   homepage 'https://qz.io/'
-  license :gratis
 
   container type: :naked
 

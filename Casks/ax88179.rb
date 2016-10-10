@@ -11,7 +11,6 @@ cask 'ax88179' do
   url "http://www.asix.com.tw/FrootAttach/driver/#{Utils.basename(version)}.zip"
   name 'AX88179'
   homepage 'http://www.asix.com.tw/download.php?sub=driverdetail&PItemID=131'
-  license :gratis
 
   pkg "AX88179_178A_v#{version.sub(%r{_.*}, '')}.pkg"
 

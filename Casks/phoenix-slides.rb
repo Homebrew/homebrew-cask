@@ -5,7 +5,6 @@ cask 'phoenix-slides' do
   url "http://blyt.net/phxslides/phoenix-slides-#{version.no_dots}.dmg"
   name 'Phoenix Slides'
   homepage 'http://blyt.net/phxslides'
-  license :gpl
 
   app 'Phoenix Slides.app'
 end

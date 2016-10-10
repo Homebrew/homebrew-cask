@@ -7,7 +7,6 @@ cask 'bilibili' do
           checkpoint: '33007f2ef2383f38337bc2c4948ece8bd3bf8972e8af8c841b93a0483e1ecfa8'
   name 'Bilibili'
   homepage 'https://github.com/typcn/bilibili-mac-client/'
-  license :gpl
 
   auto_updates true
 

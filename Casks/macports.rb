@@ -25,7 +25,6 @@ cask 'macports' do
 
   name 'MacPorts'
   homepage 'https://www.macports.org'
-  license :bsd
   gpg "#{url}.asc",
       key_id: '01ff673fb4aae6cd'
 

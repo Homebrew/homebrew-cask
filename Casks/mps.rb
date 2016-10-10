@@ -5,7 +5,6 @@ cask 'mps' do
   url "https://download-cf.jetbrains.com/mps/#{version.major_minor.no_dots}/MPS-#{version}-macos-jdk-bundled.dmg"
   name 'JetBrains MPS'
   homepage 'https://www.jetbrains.com/mps'
-  license :apache
 
   conflicts_with cask: 'mps-eap'
 

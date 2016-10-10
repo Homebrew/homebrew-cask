@@ -5,7 +5,6 @@ cask 'x-moto' do
   url "https://download.tuxfamily.org/xmoto/xmoto/#{version}/xmoto-#{version}-macosx.zip"
   name 'XMoto'
   homepage 'https://xmoto.tuxfamily.org/'
-  license :gpl
 
   app 'X-Moto.app'
 end

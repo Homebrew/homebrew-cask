@@ -7,7 +7,6 @@ cask 'mandrake' do
           checkpoint: '823a16ee9b605408873ddac7c801b6df98fd4cf847a6edbdbd89457d3072f433'
   name 'ManDrake'
   homepage 'http://sveinbjorn.org/mandrake'
-  license :bsd
 
   app 'ManDrake.app'
 end

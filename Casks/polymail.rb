@@ -7,7 +7,6 @@ cask 'polymail' do
           checkpoint: 'a4b5d9383f754e13dd4a4d4a36ce3b6edfd5022712fd8e313a14e45534414e6c'
   name 'Polymail'
   homepage 'https://polymail.io/'
-  license :closed
 
   auto_updates true
 

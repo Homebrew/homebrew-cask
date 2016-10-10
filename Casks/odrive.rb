@@ -7,7 +7,6 @@ cask 'odrive' do
   url "https://d3huse1s6vwzq6.cloudfront.net/odrivesync.#{version}.dmg"
   name 'odrive'
   homepage 'https://app.odrive.com/'
-  license :gratis
 
   pkg "odrive.#{version}.pkg"
 

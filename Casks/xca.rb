@@ -7,7 +7,6 @@ cask 'xca' do
           checkpoint: '6d374c5779ca08e0c525c3314f71707b21906506a5c6b5558a01f5ad02ffbbbf'
   name 'XCA'
   homepage 'http://xca.sourceforge.net/'
-  license :bsd
 
   app 'xca.app'
 end

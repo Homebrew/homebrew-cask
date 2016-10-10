@@ -6,7 +6,6 @@ cask 'qdslrdashboard' do
   url "http://files.lrtimelapse.com/dslrdashboard/V#{version}/qDslrDashboard_V#{version}_OSX_x64.dmg"
   name 'qDslrDashboard'
   homepage 'http://dslrdashboard.info/'
-  license :gratis
 
   app 'qDslrDashboard.app'
 end

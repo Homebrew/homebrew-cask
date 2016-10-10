@@ -5,7 +5,6 @@ cask 'komanda' do
   url 'http://komanda.io/stable/mac-current.zip'
   name 'Komanda'
   homepage 'http://komanda.io/'
-  license :mit
 
   app 'Komanda.app'
 end

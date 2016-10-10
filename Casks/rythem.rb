@@ -7,7 +7,6 @@ cask 'rythem' do
           checkpoint: 'b44420dfb2a0a02bafa8edf85fe57a421779419e0bfe29c2c60c3ef93eeb73d5'
   name 'Rythem'
   homepage 'https://github.com/AlloyTeam/Rythem'
-  license :mit
 
   app 'Rythem.app'
 end

@@ -5,7 +5,6 @@ cask 'tk-suite-client' do
   url "ftp://ftp.agfeo.de/pub/software/TK-Suite-Client_intel32_agfeo_#{version}.dmg"
   name 'TK-Suite Client'
   homepage 'https://agfeo.de/agfeo_web/hp3.nsf/lu/2064'
-  license :closed
 
   app 'TK-Suite-Client.app'
 end

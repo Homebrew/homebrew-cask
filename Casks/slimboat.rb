@@ -5,7 +5,6 @@ cask 'slimboat' do
   url 'http://www.slimjet.com/slimboat/release/slimboat.dmg'
   name 'SlimBoat'
   homepage 'http://www.slimjet.com/slimboat/en/'
-  license :gratis
 
   app 'SlimBoat.app'
 end

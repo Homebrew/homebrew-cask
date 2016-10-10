@@ -5,7 +5,6 @@ cask 'mail-unread-menu' do
   url "http://loganrockmore.com/MailUnreadMenu/MailUnreadMenu_#{version}.zip"
   name 'Mail Unread Menu'
   homepage 'http://loganrockmore.com/MailUnreadMenu/'
-  license :gratis
 
   app 'Mail Unread Menu.app'
 

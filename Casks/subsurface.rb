@@ -5,7 +5,6 @@ cask 'subsurface' do
   url "https://subsurface-divelog.org/downloads/Subsurface-#{version}.dmg"
   name 'Subsurface'
   homepage 'https://subsurface-divelog.org'
-  license :gpl
 
   app 'Subsurface.app'
 end

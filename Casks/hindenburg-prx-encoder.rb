@@ -5,7 +5,6 @@ cask 'hindenburg-prx-encoder' do
   url 'https://hindenburg.com/support/downloads/HindenburgPRXEncoder.dmg'
   name 'Hindenburg PRX Encoder'
   homepage 'https://hindenburg.com/prx-encoder'
-  license :gratis
 
   app 'Hindenburg PRX Encoder.app'
 end

@@ -8,7 +8,6 @@ cask 'google-play-music-desktop-player' do
           checkpoint: '7feb5fc873e184e5572b498bf17a1c3acf76b0fce7955c0dbcb4fec3f2b2b397'
   name 'Google Play Music Desktop Player'
   homepage 'https://www.googleplaymusicdesktopplayer.com/'
-  license :mit
 
   app 'Google Play Music Desktop Player.app'
 

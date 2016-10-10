@@ -13,7 +13,6 @@ cask 'filezilla' do
           checkpoint: '139fb1d6f257ca5bd78c6906248cbad6597f0c55db609982f833834ec0de7d9e'
   name 'FileZilla'
   homepage 'https://filezilla-project.org/'
-  license :gpl
 
   app 'FileZilla.app'
 

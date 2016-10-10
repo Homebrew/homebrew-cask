@@ -8,7 +8,6 @@ cask 'bit-slicer' do
           checkpoint: '71d3b5ac6366b2ea61bb2e2ab2815fad8dbc335e9c2eb040f1445785623365c3'
   name 'Bit Slicer'
   homepage 'https://github.com/zorgiepoo/bit-slicer/'
-  license :bsd
 
   app 'Bit Slicer.app'
 end

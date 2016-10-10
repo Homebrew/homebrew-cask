@@ -5,7 +5,6 @@ cask 'wacom-bamboo-tablet' do
   url "http://cdn.wacom.com/u/productsupport/drivers/mac/consumer/pentablet_#{version}.dmg"
   name 'Wacom Bamboo Tablet'
   homepage 'https://us.wacom.com/en/support/drivers'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Install Wacom Tablet.pkg'
 

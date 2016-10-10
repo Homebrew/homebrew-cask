@@ -6,7 +6,6 @@ cask 'mqttfx' do
   url "http://www.jensd.de/apps/mqttfx/#{version}/MQTT.fx-#{version}.dmg"
   name 'MQTT.fx'
   homepage 'http://mqttfx.jfx4ee.org/'
-  license :apache
 
   app 'MQTT.fx.app'
 end

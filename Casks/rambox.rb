@@ -8,7 +8,6 @@ cask 'rambox' do
           checkpoint: 'e20b6c46e8ccf41ab8b6cedf643d42e1cc92759f803910872ee20d9a42e36528'
   name 'Rambox'
   homepage 'http://rambox.pro/'
-  license :oss
 
   app 'Rambox.app'
 end

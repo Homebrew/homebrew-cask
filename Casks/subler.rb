@@ -8,7 +8,6 @@ cask 'subler' do
           checkpoint: '2cf6c8796570b362b6ee226f37f640488036ea4bf947875767af096188226793'
   name 'Subler'
   homepage 'https://subler.org/'
-  license :gpl
 
   auto_updates true
 

@@ -5,7 +5,6 @@ cask 'armitage' do
   url "http://www.fastandeasyhacking.com/download/armitage#{version.no_dots}.dmg"
   name 'Armitage'
   homepage 'http://www.fastandeasyhacking.com/'
-  license :bsd
 
   app 'Armitage.app'
 end

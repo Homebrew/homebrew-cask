@@ -6,7 +6,6 @@ cask 'resolume-avenue' do
   url "https://d19j6z4lvv1vde.cloudfront.net/Resolume_Arena_#{version.dots_to_underscores}_Installer.dmg"
   name 'Resolume Avenue'
   homepage 'https://resolume.com'
-  license :freemium
 
   pkg "Resolume Avenue #{version} Installer.pkg"
 

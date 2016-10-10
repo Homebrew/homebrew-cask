@@ -5,7 +5,6 @@ cask 'flixtools' do
   url 'http://www.flixtools.com/download/FlixTools.dmg'
   name 'OpenSubtitles FlixTools Lite'
   homepage 'https://www.flixtools.com/'
-  license :gratis
 
   app 'FlixTools.app'
 end

@@ -6,7 +6,6 @@ cask 'kobo' do
   url 'https://kbdownload1-a.akamaihd.net/desktop/kobodesktop/kobosetup.dmg'
   name 'Kobo'
   homepage 'https://www.kobo.com/desktop'
-  license :gratis
 
   app 'Kobo.app'
 end

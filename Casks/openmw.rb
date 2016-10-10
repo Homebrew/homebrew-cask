@@ -8,7 +8,6 @@ cask 'openmw' do
           checkpoint: '592c69134e57dd382bc2f99520d27211b654ce19758aa9af3fab059dcd16c64e'
   name 'OpenMW'
   homepage 'https://openmw.org/'
-  license :gpl
 
   suite 'OpenMW'
 end

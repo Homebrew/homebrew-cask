@@ -5,7 +5,6 @@ cask 'imitone' do
   url "https://imitone.com/beta/imitone-#{version}.dmg"
   name 'imitone'
   homepage 'https://imitone.com/'
-  license :commercial
 
   app 'imitone.app'
 end

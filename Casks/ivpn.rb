@@ -7,7 +7,6 @@ cask 'ivpn' do
           checkpoint: 'ef5a831947d62a9c82baa03e50e1044ef065f4bc80e30fd35c543f0eb6087414'
   name 'iVPN'
   homepage 'https://macserve.org.uk/projects/ivpn/'
-  license :commercial
 
   app 'iVPN.app'
 

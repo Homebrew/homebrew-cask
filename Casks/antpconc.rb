@@ -5,7 +5,6 @@ cask 'antpconc' do
   url "http://www.laurenceanthony.net/software/antpconc/releases/AntPConc#{version.no_dots}/AntPConc.zip"
   name 'AntPConc'
   homepage 'http://www.laurenceanthony.net/software/antpconc'
-  license :gratis
 
   app 'AntPConc.app'
 end

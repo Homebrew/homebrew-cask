@@ -5,7 +5,6 @@ cask 'stamp' do
   url "https://stampapp.io/media/STAMP#{version.no_dots}.dmg"
   name 'Stamp'
   homepage 'https://stampapp.io'
-  license :closed
 
   app 'STAMP.app'
 end

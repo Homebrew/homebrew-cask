@@ -18,7 +18,6 @@ cask 'spamsieve' do
 
   name 'SpamSieve'
   homepage 'https://c-command.com/spamsieve/'
-  license :commercial
 
   app 'SpamSieve.app'
 end

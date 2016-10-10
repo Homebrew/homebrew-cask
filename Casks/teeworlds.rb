@@ -5,7 +5,6 @@ cask 'teeworlds' do
   url "https://downloads.teeworlds.com/teeworlds-#{version}-osx.dmg"
   name 'Teeworlds'
   homepage 'https://www.teeworlds.com/'
-  license :oss
 
   app 'Teeworlds.app'
   app 'Teeworlds Server.app'

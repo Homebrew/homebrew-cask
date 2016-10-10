@@ -5,7 +5,6 @@ cask 'navicat-premium' do
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_premium_en.dmg"
   name 'Navicat Premium'
   homepage 'https://www.navicat.com/products/navicat-premium'
-  license :commercial
 
   app 'Navicat Premium.app'
 end

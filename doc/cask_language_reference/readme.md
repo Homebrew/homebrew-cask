@@ -12,7 +12,6 @@ cask 'alfred' do
   url "https://cachefly.alfredapp.com/Alfred_#{version}.zip"
   name 'Alfred'
   homepage 'https://www.alfredapp.com/'
-  license :freemium
 
   app 'Alfred 2.app'
   app 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
@@ -71,6 +70,50 @@ else
 end
 ```
 
+### Switch Between Languages or Regions
+
+To switch between languages or regions based on the system locale, the `language` stanza should be used.
+
+The `language` stanza can match language codes ([ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) or [ISO 639-2](https://en.wikipedia.org/wiki/ISO_639-2)), [regional identifiers [ISO 3166-1 Alpha 2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)) and script codes ([ISO 15924](https://en.wikipedia.org/wiki/ISO_15924)), or a combination thereof.
+
+The return value of the matching `language` block can be accessed by simply calling `language`.
+
+US English should always be used as the default language:
+
+```ruby
+language 'zh', 'CN' do
+  'zh_CN'
+end
+
+language 'de' do
+  'de_DE'
+end
+
+language 'en-GB' do
+  'en_GB'
+end
+
+language 'en', default: true do
+  'en_US'
+end
+```
+
+Note that the following are not the same:
+
+
+```ruby
+language 'en', 'GB' do
+  # matches all locales containing 'en' or 'GB'
+end
+
+language 'en-GB' do
+  # matches only locales containing 'en' and 'GB'
+end
+```
+
+
+Example: [Firefox](../../../../blob/master/Casks/firefox.rb).
+
 ## Arbitrary Ruby Methods
 
 In the exceptional case that the Cask DSL is insufficient, it is possible to define arbitrary Ruby variables and methods inside the Cask by creating a `Utils` namespace. Example:
@@ -86,7 +129,6 @@ cask 'myapp' do
   name 'MyApp'
   version '1.0'
   sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
-  license :unknown
 
   url "https://#{Utils.arbitrary_method}"
   homepage 'https://www.example.com/'
@@ -127,7 +169,6 @@ appcast,
   checkpoint: # shown here as it is required with `appcast`
 name
 homepage
-license
 gpg, key_id: # on same line, since first part is typically small
 
 auto_updates

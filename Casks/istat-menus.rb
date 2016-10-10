@@ -6,7 +6,6 @@ cask 'istat-menus' do
   url "https://s3.amazonaws.com/bjango/files/istatmenus5/istatmenus#{version}.zip"
   name 'iStats Menus'
   homepage 'https://bjango.com/mac/istatmenus/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'iStat Menus.app'
 

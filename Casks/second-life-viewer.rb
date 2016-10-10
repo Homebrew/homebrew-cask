@@ -5,7 +5,6 @@ cask 'second-life-viewer' do
   url "http://download.cloud.secondlife.com/Viewer_3/Second_Life_#{version.dots_to_underscores}_i386.dmg"
   name 'Linden Lab Second Life Viewer'
   homepage 'https://secondlife.com/'
-  license :gpl
 
   depends_on macos: '>= :lion'
 

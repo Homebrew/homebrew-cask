@@ -5,7 +5,6 @@ cask 'logitech-gaming-software' do
   url "http://download01.logitech.com/web/ftp/pub/techsupport/gaming/LogitechSetup_#{version}.zip"
   name 'Logitech Gaming Software'
   homepage 'https://support.logitech.com/en_us/downloads'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'LogitechGamingInstaller.app/Contents/Resources/LogiGamingSetup.mpkg'
 

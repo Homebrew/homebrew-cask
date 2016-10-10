@@ -7,7 +7,6 @@ cask 'graphiql' do
           checkpoint: '245bad515cbdea11d0b0610edcd9b132143ad25fc7febd35b79bec2cec05863a'
   name 'GraphiQL App'
   homepage 'https://github.com/skevy/graphiql-app'
-  license :mit
 
   app 'GraphiQL.app'
 end

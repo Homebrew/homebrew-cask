@@ -7,7 +7,6 @@ cask 'focus' do
           checkpoint: '250a501501d4e891c7ed828cf8f6f7f3aea2c8609052d0f6dd5919bb3d9892e6'
   name 'Focus'
   homepage 'https://heyfocus.com/'
-  license :commercial
 
   depends_on macos: '>= :mavericks'
 

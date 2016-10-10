@@ -5,7 +5,6 @@ cask 'iograph' do
   url "http://iographica.com/download/osx/IOGraph_v#{version.dots_to_underscores}.dmg"
   name 'IOGraph'
   homepage 'http://iographica.com/'
-  license :gratis
 
   app 'IOGraph.app'
 end

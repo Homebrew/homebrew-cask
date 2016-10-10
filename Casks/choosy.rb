@@ -7,7 +7,6 @@ cask 'choosy' do
           checkpoint: '588d73c48a23dc024ddd2b16029e989a731c7c53012bc87e46fb66fb8b807d95'
   name 'Choosy'
   homepage 'https://www.choosyosx.com/'
-  license :commercial
 
   prefpane 'Choosy.prefPane'
 end

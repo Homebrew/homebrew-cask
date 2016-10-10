@@ -7,7 +7,6 @@ cask 'vagrant-bar' do
           checkpoint: '52ae5bf709f27c99b8e8d32329aa784a002ea430c076dcaba28903c88d90c51a'
   name 'Vagrant Bar'
   homepage 'https://github.com/BipSync/VagrantBar'
-  license :oss
 
   app 'Vagrant Bar.app'
 end

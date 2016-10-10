@@ -6,7 +6,6 @@ cask 'tifig' do
   url "https://tifig-downloads.s3.amazonaws.com/tifig-#{version}-macosx.cocoa.x86_64.tar.gz"
   name 'Tifig'
   homepage 'https://www.tifig.net'
-  license :gratis
 
   depends_on arch: :x86_64
 

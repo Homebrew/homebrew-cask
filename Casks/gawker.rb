@@ -7,7 +7,6 @@ cask 'gawker' do
           checkpoint: '5a8f2adae2f10e3bff78ed21aec5fd8f96fbd6abf3be641a3257e6de3b62ac52'
   name 'Gawker'
   homepage 'http://gawker.sourceforge.net/Gawker.html'
-  license :gpl
 
   app 'Gawker.app'
 end

@@ -5,7 +5,6 @@ cask 'qobuz-desktop' do
   url 'http://www.qobuz.com/apps/qobuz-desktop/osx/QobuzDesktopInstaller.pkg'
   name 'Qobuz Desktop'
   homepage 'http://www.qobuz.com/applications#app-desktop'
-  license :unknown
 
   pkg 'QobuzDesktopInstaller.pkg'
 

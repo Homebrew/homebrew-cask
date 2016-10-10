@@ -15,7 +15,6 @@ cask 'textwrangler' do
           checkpoint: 'a5204efdb48776a1859abcb2bac6dd3f0d6dea65074b1ebdabd3a6d498f8d5cf'
   name 'TextWrangler'
   homepage 'http://www.barebones.com/products/textwrangler/'
-  license :gratis
 
   depends_on macos: '>= :snow_leopard'
 

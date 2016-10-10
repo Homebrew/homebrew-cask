@@ -7,7 +7,6 @@ cask 'kube-cluster' do
           checkpoint: 'cc48edd6ed762e3645dc73ff720a070af067ba12f6db91a15989c3eae3d33712'
   name 'Kube-Cluster'
   homepage 'https://github.com/TheNewNormal/kube-cluster-osx'
-  license :apache
 
   app 'Kube-Cluster.app'
 

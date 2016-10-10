@@ -7,7 +7,6 @@ cask 'menucalendarclock-ical' do
           checkpoint: '9f4c08ee81336e11eaf2d0dcced9e15ed31b37657401453d6059eda571371c1c'
   name 'MenuCalendarClock'
   homepage 'http://www.objectpark.net/en/mcc.html'
-  license :freemium
 
   app 'MenuCalendarClock iCal.app'
 end

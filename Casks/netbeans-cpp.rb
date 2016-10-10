@@ -5,7 +5,6 @@ cask 'netbeans-cpp' do
   url "http://download.netbeans.org/netbeans/#{version}/final/bundles/netbeans-#{version}-cpp-macosx.dmg"
   name 'NetBeans IDE for C/C++'
   homepage 'https://netbeans.org/'
-  license :oss
 
   pkg "NetBeans #{version}.pkg"
 

@@ -5,7 +5,6 @@ cask 'deezer' do
   url "http://e-cdn-content.deezer.com/builds/mac/Deezer_#{version.after_comma}.dmg"
   name 'Deezer'
   homepage 'https://www.deezer.com/formac'
-  license :gratis
 
   app 'Deezer.app'
 

@@ -8,7 +8,6 @@ cask 'lincastor' do
           checkpoint: 'f5624589dfecb9b5fba5fab9e92a816e01cb7b4f172e94d5e462a62e643a4bea'
   name 'LinCastor'
   homepage 'https://onflapp.wordpress.com/lincastor/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'LinCastor.app'
 end

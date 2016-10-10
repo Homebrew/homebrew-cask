@@ -5,7 +5,6 @@ cask 'ncmeta' do
   url "https://www.timschroeder.net/ncMeta/ncMeta#{version}.zip"
   name 'ncMeta'
   homepage 'https://www.timschroeder.net/ncMeta/'
-  license :mit
 
   app 'ncMeta.app'
 end

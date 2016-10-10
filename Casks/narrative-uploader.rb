@@ -7,7 +7,6 @@ cask 'narrative-uploader' do
           checkpoint: 'db3fe560e55b1735cfeb457552ec724d95c75b72699bb28e2590c12b58972919'
   name 'Narrative Uploader'
   homepage 'https://getnarrative.com/'
-  license :gratis
 
   app 'Narrative Uploader.app'
 end

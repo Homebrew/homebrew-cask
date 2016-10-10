@@ -7,7 +7,6 @@ cask 'black-screen' do
           checkpoint: '41cb95fdccc427dc00d6118a44c969fe8e7992d2555011ab1ad503c0b2c9822a'
   name 'Black Screen'
   homepage 'https://github.com/shockone/black-screen'
-  license :mit
 
   app 'Black Screen.app'
 end

@@ -8,7 +8,6 @@ cask 'grisbi' do
           checkpoint: 'a53b4cf4bd6e8203821bde322c13186d6f158fac481c6e2da0e3ea2da05dab53'
   name 'Grisbi'
   homepage 'http://www.grisbi.org/'
-  license :oss
 
   app 'Grisbi.app'
 end

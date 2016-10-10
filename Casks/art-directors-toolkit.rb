@@ -5,7 +5,6 @@ cask 'art-directors-toolkit' do
   url "http://www.code-line.com/download/ArtDirectorsToolkit#{version.major}i.zip"
   name 'Art Directors Toolkit'
   homepage 'https://code-line.com/artdirectorstoolkit'
-  license :commercial
 
   app "Art Directors Toolkit #{version.major}i.app"
 

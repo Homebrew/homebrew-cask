@@ -7,7 +7,6 @@ cask 'streakerbar' do
           checkpoint: '8200ff77a02d38672eeeb2b01bdd3a7f040c3f704c8468689c1e7c603a93b615'
   name 'streakerbar'
   homepage 'https://github.com/chaserx/streakerbar'
-  license :mit
 
   app 'streakerbar.app'
 end

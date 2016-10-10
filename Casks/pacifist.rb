@@ -12,7 +12,6 @@ cask 'pacifist' do
           checkpoint: '11541f9dbefb04099d97228a7104e7fa290ffe0db0c703c7c89f66a8220f85de'
   name 'Pacifist'
   homepage 'https://www.charlessoft.com/'
-  license :commercial
 
   depends_on macos: '>= :tiger'
 

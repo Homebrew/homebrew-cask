@@ -5,7 +5,6 @@ cask 'dropdmg' do
   url "https://c-command.com/downloads/DropDMG-#{version}.dmg"
   name 'DropDMG'
   homepage 'https://c-command.com/dropdmg/'
-  license :commercial
 
   depends_on macos: '>= :snow_leopard'
   depends_on arch: :intel

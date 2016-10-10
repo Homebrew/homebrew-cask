@@ -15,7 +15,6 @@ cask 'unison' do
 
   name 'Panic Unison'
   homepage 'https://www.cis.upenn.edu/~bcpierce/unison/'
-  license :gpl
 
   depends_on arch: :x86_64
 

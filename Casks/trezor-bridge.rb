@@ -6,7 +6,6 @@ cask 'trezor-bridge' do
   url "https://mytrezor.s3.amazonaws.com/bridge/#{version}/trezor-bridge-#{version}.pkg"
   name 'TREZOR Bridge'
   homepage 'https://mytrezor.com/'
-  license :gratis
 
   pkg "trezor-bridge-#{version}.pkg"
 

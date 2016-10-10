@@ -7,7 +7,6 @@ cask 'dingtalk' do
   name 'DingTalk'
   name '钉钉'
   homepage 'https://www.dingtalk.com/'
-  license :commercial
 
   app '钉钉.app'
 end

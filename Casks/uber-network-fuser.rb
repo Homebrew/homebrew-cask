@@ -6,7 +6,6 @@ cask 'uber-network-fuser' do
   url "https://dl.dropbox.com/s/uytv8p2eljk6fez/ubernetfuser_#{version}.dmg"
   name 'UBER Network Fuser'
   homepage 'https://thesustainableleader.com/2012/01/10/breaking-new-ground-an-uber-tool-for-the-mac/'
-  license :gratis
 
   app "UBER Network Fuser #{version}.app"
 end

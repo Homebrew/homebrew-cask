@@ -7,7 +7,6 @@ cask 'beardedspice' do
           checkpoint: 'a094964523a941114a507e6ff6e3a3cb10dcdbd4fa3cb6acab693bb5f31ed438'
   name 'BeardedSpice'
   homepage 'https://github.com/beardedspice/beardedspice/'
-  license :oss
 
   auto_updates true
 

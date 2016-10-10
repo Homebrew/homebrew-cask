@@ -5,7 +5,6 @@ cask 'awareness' do
   url "http://iamfutureproof.com/downloads/Awareness-#{version}.dmg"
   name 'Awareness'
   homepage 'http://iamfutureproof.com/tools/awareness/'
-  license :gratis
 
   app 'Awareness.app'
 

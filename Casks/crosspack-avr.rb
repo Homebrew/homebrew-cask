@@ -5,7 +5,6 @@ cask 'crosspack-avr' do
   url "https://www.obdev.at/downloads/crosspack/CrossPack-AVR-#{version.no_hyphens}.dmg"
   name 'CrossPack'
   homepage 'https://www.obdev.at/products/crosspack/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'CrossPack-AVR.pkg'
 

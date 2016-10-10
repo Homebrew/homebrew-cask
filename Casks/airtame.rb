@@ -5,7 +5,6 @@ cask 'airtame' do
   url "https://us-1-downloads.airtame.com/application/ga/osx_x86/releases/airtame-application_#{version}.dmg"
   name 'Airtame'
   homepage 'https://airtame.com'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   auto_updates 'True'
 

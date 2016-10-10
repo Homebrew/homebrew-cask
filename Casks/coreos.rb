@@ -7,7 +7,6 @@ cask 'coreos' do
           checkpoint: '734477a5e9f3742f55025f570fc394aaf93d96f7f4ce487ac1563aa661003223'
   name 'CoreOS VM'
   homepage 'https://github.com/TheNewNormal/coreos-osx'
-  license :apache
 
   depends_on cask: 'corectl-app'
 

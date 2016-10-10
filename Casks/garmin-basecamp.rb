@@ -5,7 +5,6 @@ cask 'garmin-basecamp' do
   url "http://download.garmin.com/software/BaseCampforMac_#{version.no_dots}.dmg"
   name 'Garmin BaseCamp'
   homepage 'https://www.garmin.com/en-US/shop/downloads/basecamp'
-  license :gratis
 
   depends_on macos: '>= :yosemite'
   depends_on arch: :intel

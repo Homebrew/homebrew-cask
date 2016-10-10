@@ -13,7 +13,6 @@ cask 'evernote' do
 
   name 'Evernote'
   homepage 'https://evernote.com/'
-  license :gratis
 
   auto_updates true
 

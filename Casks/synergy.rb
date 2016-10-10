@@ -5,7 +5,6 @@ cask 'synergy' do
   url "https://symless.com/files/packages/synergy-v#{version.before_comma}-stable-#{version.after_comma}-MacOSX1011-x86_64.dmg"
   name 'Synergy'
   homepage 'https://symless.com/synergy/'
-  license :commercial
 
   app 'Synergy.app'
 end
