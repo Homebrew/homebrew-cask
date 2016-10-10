@@ -6,7 +6,6 @@ cask 'futuniuniu' do
   name 'FutuNiuniu'
   name '富途牛牛'
   homepage 'https://www.futu5.com/'
-  license :commercial
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   # Original discussion: https://github.com/caskroom/homebrew-cask/pull/7435

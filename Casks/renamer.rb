@@ -6,7 +6,6 @@ cask 'renamer' do
   url "https://storage.googleapis.com/incrediblebee/apps/Renamer-#{version}/Renamer.zip"
   name 'Renamer'
   homepage 'http://renamer.com'
-  license :commercial
 
   app 'Renamer.app'
 end

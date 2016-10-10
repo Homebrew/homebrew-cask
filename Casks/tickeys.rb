@@ -8,7 +8,6 @@ cask 'tickeys' do
           checkpoint: 'f117f9e2ff4e81efc166189e65f61d9fc89f4cb010fff7aa0cbf7859cf63174b'
   name 'Tickeys'
   homepage 'http://www.yingdev.com/projects/tickeys'
-  license :mit
 
   app 'Tickeys.app'
 end

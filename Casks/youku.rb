@@ -5,7 +5,6 @@ cask 'youku' do
   url "http://desktop.youku.com/ugc/youkumac_#{version}.dmg"
   name '优酷Mac客户端'
   homepage 'http://pd.youku.com/pc'
-  license :gratis
 
   app '优酷.app'
 end

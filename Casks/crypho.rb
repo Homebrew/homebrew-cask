@@ -5,7 +5,6 @@ cask 'crypho' do
   url 'https://www.crypho.com/downloads/Crypho.dmg'
   name 'Crypho'
   homepage 'https://www.crypho.com'
-  license :closed
 
   app 'Crypho.app'
 end

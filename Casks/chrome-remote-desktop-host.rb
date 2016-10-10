@@ -5,7 +5,6 @@ cask 'chrome-remote-desktop-host' do
   url 'https://dl.google.com/chrome-remote-desktop/chromeremotedesktop.dmg'
   name 'Chrome Remote Desktop'
   homepage 'https://chrome.google.com/remotedesktop'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Chrome Remote Desktop Host.pkg'
 

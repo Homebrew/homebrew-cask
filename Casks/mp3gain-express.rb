@@ -7,7 +7,6 @@ cask 'mp3gain-express' do
           checkpoint: '15244c931d367a3cd64768c7a89a7ad73f53f7ae3a10fa238ea84060d52d908f'
   name 'MP3Gain Express'
   homepage 'http://projects.sappharad.com/mp3gain/'
-  license :oss
 
   app 'MP3Gain Express.app'
 end

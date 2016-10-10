@@ -7,7 +7,6 @@ cask 'create-recovery-partition-installer' do
           checkpoint: '0a040c2c1f5e8caff03534c7b81e4061e41eb696edba4f50f773d503ddddd7d7'
   name 'Create Recovery Partition Installer'
   homepage 'https://github.com/MagerValp/Create-Recovery-Partition-Installer/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Create Recovery Partition Installer.app'
 end

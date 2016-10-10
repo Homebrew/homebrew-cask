@@ -8,7 +8,6 @@ cask 'textmate' do
           checkpoint: 'f091bfd3b155b07c928979d76d9c176d4f6a1f08f77f86528b65d21da66f19a3'
   name 'TextMate'
   homepage 'https://macromates.com/'
-  license :gpl
 
   app 'TextMate.app'
   binary "#{appdir}/TextMate.app/Contents/Resources/mate"

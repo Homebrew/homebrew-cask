@@ -13,7 +13,6 @@ cask 'youdao' do
 
   name '有道词典'
   homepage 'http://cidian.youdao.com/index-mac.html'
-  license :commercial
 
   app '有道词典.app'
 

@@ -6,7 +6,6 @@ cask 'ioquake3' do
   url "https://ioquake3.org/files/#{version}/ioquake3%20#{version}.dmg"
   name 'ioquake3'
   homepage 'https://ioquake3.org/'
-  license :gpl
 
   suite 'ioquake3'
 

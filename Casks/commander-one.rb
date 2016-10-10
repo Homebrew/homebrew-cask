@@ -7,7 +7,6 @@ cask 'commander-one' do
           checkpoint: 'ad715e45624b992a2cd8c2ca6f1c5598d7527a68cffcd9b748d8360eb31ffb46'
   name 'Commander One'
   homepage 'http://mac.eltima.com/file-manager.html'
-  license :freemium
 
   app 'Commander One.app'
 end

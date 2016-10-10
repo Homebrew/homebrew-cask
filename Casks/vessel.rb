@@ -8,7 +8,6 @@ cask 'vessel' do
           checkpoint: 'eed47ee87455b8096b127fc21903aface6f597750ed856d441569450adb4f38e'
   name 'Vessel'
   homepage 'https://awvessel.github.io'
-  license :bsd
 
   app 'Vessel.app'
 end

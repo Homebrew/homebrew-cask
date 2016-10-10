@@ -7,7 +7,6 @@ cask 'shapes' do
           checkpoint: '4e3a90784913f1477df9fd594cc9a7cbd69e9b7d85873cdbe123e4ba618c4cb6'
   name 'Shapes'
   homepage 'http://shapesapp.com'
-  license :commercial
 
   depends_on macos: '>= :mountain_lion'
 

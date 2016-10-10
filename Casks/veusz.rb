@@ -5,7 +5,6 @@ cask 'veusz' do
   url "http://download.gna.org/veusz/Binaries-AppleOSX/veusz-#{version}-AppleOSX.dmg"
   name 'Veusz'
   homepage 'http://home.gna.org/veusz/'
-  license :gpl
 
   app 'Veusz.app'
 end

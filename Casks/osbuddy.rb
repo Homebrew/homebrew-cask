@@ -5,7 +5,6 @@ cask 'osbuddy' do
   url 'http://cdn.rsbuddy.com/OSBuddy.zip'
   name 'OSBuddy'
   homepage 'https://rsbuddy.com/osbuddy'
-  license :freemium
 
   app 'OSBuddy.app'
 end

@@ -6,7 +6,6 @@ cask 'archiver' do
   url 'https://commondatastorage.googleapis.com/incrediblebee/apps/Archiver/Archiver.zip'
   name 'Archiver'
   homepage 'http://archiverapp.com/'
-  license :commercial
 
   app 'Archiver.app'
 end

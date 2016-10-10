@@ -6,7 +6,6 @@ cask 'snes9x' do
   url "http://www.s9x-w32.de/dl/snes9x-#{version}-macosx-113.dmg.gz"
   name 'Snes9x'
   homepage 'http://www.snes9x.com/'
-  license :other
 
   app 'Snes9x.app'
 end

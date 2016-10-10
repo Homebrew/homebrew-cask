@@ -7,7 +7,6 @@ cask 'moeditor' do
           checkpoint: '3a0247fa7c01e7026c2fcf2d02cfc0ea4f2d073c4c39d2c0797f65ba919d41e1'
   name 'Moeditor'
   homepage 'https://github.com/Moeditor/Moeditor'
-  license :gpl
 
   app 'Moeditor.app'
 end

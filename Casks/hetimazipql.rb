@@ -5,7 +5,6 @@ cask 'hetimazipql' do
   url "http://hetima.com/hetimazipql/HetimaZip.qlgenerator#{version}.zip"
   name 'HetimaZip.qlgenerator'
   homepage 'http://hetima.com/hetimazipql/'
-  license :oss # zlib License
 
   depends_on macos: '>= :mountain_lion'
 

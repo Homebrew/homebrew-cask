@@ -6,7 +6,6 @@ cask 'jandi' do
   url 'https://d1fxzwizdp8gty.cloudfront.net/download/JANDI.dmg'
   name 'JANDI'
   homepage 'https://www.jandi.com/'
-  license :gratis
 
   auto_updates true
 

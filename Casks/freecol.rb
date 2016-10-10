@@ -8,7 +8,6 @@ cask 'freecol' do
           checkpoint: 'e03a560793701ff27f4229fca8348440c0a8c9d45caf6b8199f359edffb88f45'
   name 'FreeCol'
   homepage 'http://freecol.org'
-  license :gpl
 
   app 'FreeCol.app'
 end

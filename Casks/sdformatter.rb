@@ -5,7 +5,6 @@ cask 'sdformatter' do
   url "https://www.sdcard.org/downloads/formatter_4/eula_mac/SDFormatter_#{version}0B.pkg"
   name 'SD Formatter'
   homepage 'https://www.sdcard.org'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "SDFormatter_#{version}0B.pkg"
 

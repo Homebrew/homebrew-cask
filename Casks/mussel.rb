@@ -5,7 +5,6 @@ cask 'mussel' do
   url "http://jonathanwhiting.com/mussel/mussel_osx_#{version}.zip"
   name 'Mussel'
   homepage 'http://jonathanwhiting.com/mussel/'
-  license :gratis
 
   app 'Mussel.app'
 end

@@ -6,7 +6,6 @@ cask 'ocrkit' do
   url "https://dl.exactcode.de/tmp/#{version.after_comma}/OCRKit-#{version.before_comma}.dmg"
   name 'OCRKit'
   homepage 'https://ocrkit.com/'
-  license :freemium
 
   app 'OCRKit.app'
 end

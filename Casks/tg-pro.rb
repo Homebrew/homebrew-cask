@@ -7,7 +7,6 @@ cask 'tg-pro' do
           checkpoint: '0699744b368b56e0c0dbe43f5fa68a228418b4b7c752f4e52c41008ba7eb91ae'
   name 'TG Pro'
   homepage 'https://www.tunabellysoftware.com/tgpro/'
-  license :commercial
 
   app 'TG Pro.app'
 end

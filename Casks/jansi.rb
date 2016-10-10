@@ -7,7 +7,6 @@ cask 'jansi' do
   name 'Japanese ANSI'
   name 'JANSI'
   homepage 'https://kenie33-jansi.blogspot.jp/'
-  license :unknown
 
   depends_on macos: '>= :tiger'
 

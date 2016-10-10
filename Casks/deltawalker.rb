@@ -6,7 +6,6 @@ cask 'deltawalker' do
   url "https://s3.amazonaws.com/deltawalker/DeltaWalker-#{version}_64.dmg"
   name 'DeltaWalker'
   homepage 'http://www.deltawalker.com/'
-  license :commercial
 
   depends_on macos: '>= :tiger'
 

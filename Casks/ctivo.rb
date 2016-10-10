@@ -7,7 +7,6 @@ cask 'ctivo' do
           checkpoint: '089829b42a2b46c8f41bd7efa3f2cc72658d2fb48d1f8f002dcdaa8d47803f6c'
   name 'cTiVo'
   homepage 'https://github.com/dscottbuch/cTiVo'
-  license :oss
 
   app 'cTiVo.app'
 end

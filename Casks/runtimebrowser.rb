@@ -6,7 +6,6 @@ cask 'runtimebrowser' do
   url 'http://seriot.ch/temp/runtimebrowser.zip'
   name 'RuntimeBrowser'
   homepage 'https://github.com/nst/RuntimeBrowser'
-  license :oss
 
   app 'RuntimeBrowser.app'
 end

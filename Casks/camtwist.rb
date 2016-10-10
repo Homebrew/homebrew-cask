@@ -5,7 +5,6 @@ cask 'camtwist' do
   url "http://camtwiststudio.com/release/CamTwist_#{version}.dmg"
   name 'CamTwist'
   homepage 'http://camtwiststudio.com/'
-  license :gratis
 
   pkg 'CamTwist.pkg'
 

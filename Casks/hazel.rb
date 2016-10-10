@@ -8,7 +8,6 @@ cask 'hazel' do
           checkpoint: 'fd5271bb5fc3644bc2048a62750a485e1c860d3926b3c5d6614815a5bd3917bf'
   name 'Hazel'
   homepage 'https://www.noodlesoft.com/hazel.php'
-  license :freemium
 
   prefpane 'Install Hazel.app/Contents/Resources/Hazel.prefPane'
 

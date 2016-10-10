@@ -8,7 +8,6 @@ cask 'boom' do
           checkpoint: '8eb9a0a978cd243fb8f0decee2a11eb943c07bf3ccd4d231717e2f15060a02d5'
   name 'Boom'
   homepage 'http://www.globaldelight.com/boom/'
-  license :commercial
 
   depends_on macos: '>= :yosemite'
 

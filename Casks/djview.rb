@@ -7,7 +7,6 @@ cask 'djview' do
           checkpoint: 'cf1aa92be5131c0e7c88841c5d3102a60f9d2ee4e6bb2cf6c858afa273068339'
   name 'DjView'
   homepage 'http://djvu.sourceforge.net/'
-  license :gpl
 
   app 'DjView.app'
 

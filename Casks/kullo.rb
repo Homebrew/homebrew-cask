@@ -5,7 +5,6 @@ cask 'kullo' do
   url "https://www.kullo.net/download/files/osx/Kullo-#{version}.dmg"
   name 'Kullo'
   homepage 'https://www.kullo.net/'
-  license :gratis
 
   app 'Kullo.app'
 end

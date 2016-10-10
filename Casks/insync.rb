@@ -5,7 +5,6 @@ cask 'insync' do
   url "http://s.insynchq.com/builds/Insync-#{version}.dmg"
   name 'Insync'
   homepage 'https://www.insynchq.com/'
-  license :closed
 
   app 'Insync.app'
 end

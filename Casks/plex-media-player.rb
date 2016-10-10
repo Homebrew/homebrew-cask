@@ -5,7 +5,6 @@ cask 'plex-media-player' do
   url "https://downloads.plex.tv/plexmediaplayer/#{version}/PlexMediaPlayer-#{version}-macosx-x86_64.zip"
   name 'Plex Media Player'
   homepage 'https://plex.tv/'
-  license :gratis
 
   app 'Plex Media Player.app'
 end

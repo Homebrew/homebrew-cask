@@ -7,7 +7,6 @@ cask 'cloak' do
           checkpoint: '521c0cc48cac8bea58954bef1f484f9d09cafa501bdc687a44894be1ccd73176'
   name 'Cloak'
   homepage 'https://www.getcloak.com'
-  license :gratis
 
   app 'Cloak.app'
 end

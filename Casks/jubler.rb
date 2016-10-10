@@ -8,7 +8,6 @@ cask 'jubler' do
           checkpoint: 'e53b10d79d2f486772e1293517212cdef19be67cf76244880dcba34d944343e3'
   name 'Jubler'
   homepage 'http://www.jubler.org/'
-  license :gpl
 
   app 'Jubler.app'
 

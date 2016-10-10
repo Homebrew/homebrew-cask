@@ -7,7 +7,6 @@ cask 'shady' do
           checkpoint: 'efb197963d2fd0a759beea049a8d35db8eb8733a810518f8327db98a34492ff5'
   name 'Shady'
   homepage 'http://instinctivecode.com/shady/'
-  license :oss
 
   app 'Shady.app'
 end

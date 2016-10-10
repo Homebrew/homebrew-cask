@@ -15,7 +15,6 @@ cask 'omnigraffle' do
 
   name 'OmniGraffle'
   homepage 'https://www.omnigroup.com/omnigraffle/'
-  license :commercial
 
   app 'OmniGraffle.app'
 

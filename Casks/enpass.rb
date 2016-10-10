@@ -6,7 +6,6 @@ cask 'enpass' do
   url "https://dl.sinew.in/mac/setup/Enpass-#{version}.dmg"
   name 'Enpass'
   homepage 'https://enpass.io'
-  license :gratis
 
   depends_on macos: '>= :mountain_lion'
 

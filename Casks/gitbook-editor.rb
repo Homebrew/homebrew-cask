@@ -5,7 +5,6 @@ cask 'gitbook-editor' do
   url 'http://downloads.editor.gitbook.com/download/osx'
   name 'GitBook Editor'
   homepage 'https://www.gitbook.com/editor'
-  license :gratis
 
   app 'GitBook Editor.app'
 end

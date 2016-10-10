@@ -6,7 +6,6 @@ cask 'colorpicker-skalacolor' do
   url "https://s3.amazonaws.com/bjango/files/skalacolor/skalacolor#{version}.zip"
   name 'Skala Color'
   homepage 'https://bjango.com/mac/skalacolor/'
-  license :gratis
 
   colorpicker 'Skala Color Installer.app/Contents/Resources/SkalaColor.colorPicker'
 end

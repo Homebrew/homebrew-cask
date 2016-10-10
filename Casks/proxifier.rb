@@ -5,7 +5,6 @@ cask 'proxifier' do
   url 'https://www.proxifier.com/distr/ProxifierMac.zip'
   name 'Proxifier'
   homepage 'https://www.proxifier.com/mac/'
-  license :commercial
 
   app 'Proxifier.app'
 end

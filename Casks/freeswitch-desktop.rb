@@ -7,7 +7,6 @@ cask 'freeswitch-desktop' do
           checkpoint: '5f098f91a4517822fc961136a3730ba0b70f689d4c03ebf15618985b5d4c0312'
   name 'Freeswitch Desktop'
   homepage 'https://github.com/pablote/fs-mgmt'
-  license :apache
 
   app 'Freeswitch Desktop.app'
 end

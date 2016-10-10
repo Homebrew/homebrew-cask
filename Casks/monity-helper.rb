@@ -5,7 +5,6 @@ cask 'monity-helper' do
   url 'http://www.monityapp.com/download/MonityHelper.pkg'
   name 'Monity Helper'
   homepage 'http://www.monityapp.com'
-  license :closed
 
   pkg 'MonityHelper.pkg'
 

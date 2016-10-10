@@ -7,7 +7,6 @@ cask 'radio-silence' do
           checkpoint: 'b499bb832ce12d4e641ab1d69468dd1ddfc7d3871056a357a06d13610e9d2de8'
   name 'Radio Silence'
   homepage 'https://radiosilenceapp.com'
-  license :commercial
 
   pkg "Radio_Silence_#{version}.pkg"
 

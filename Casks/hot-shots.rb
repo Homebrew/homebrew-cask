@@ -7,7 +7,6 @@ cask 'hot-shots' do
           checkpoint: 'bc2389f3e28b96748c5f94508d125124f0af2d188b810d397c412e12f166eb59'
   name 'Hot Shots'
   homepage 'https://gngrwzrd.com/hotshots/'
-  license :commercial
 
   app "Hot Shots #{version.major}.app"
 end

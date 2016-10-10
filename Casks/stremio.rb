@@ -5,7 +5,6 @@ cask 'stremio' do
   url "https://dl.strem.io/Stremio%20#{version}.dmg"
   name 'Stremio'
   homepage 'https://www.strem.io/'
-  license :gratis
 
   app 'Stremio.app'
 end

@@ -6,7 +6,6 @@ cask 'kiwix' do
   url "https://mirror.netcologne.de/kiwix/bin/#{version}/kiwix-#{version}.dmg"
   name 'Kiwix'
   homepage 'http://www.kiwix.org'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Kiwix.app'
 end

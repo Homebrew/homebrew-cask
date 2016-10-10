@@ -7,7 +7,6 @@ cask 'freeplane' do
           checkpoint: '60fc48e1bc2033f5862ffb60ff689372bc9409406f254a39bb966ab833ee719a'
   name 'Freeplane'
   homepage 'http://freeplane.sourceforge.net/'
-  license :gpl
 
   app 'Freeplane.app'
 end

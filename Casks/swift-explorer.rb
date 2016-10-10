@@ -6,7 +6,6 @@ cask 'swift-explorer' do
   url "https://bintray.com/artifact/download/roikku/generic/SwiftExplorer-#{version}-1.0.dmg"
   name 'Swift Explorer'
   homepage 'http://www.619.io/swift-explorer'
-  license :apache
 
   app "SwiftExplorer-#{version}.app"
 

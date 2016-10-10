@@ -7,7 +7,6 @@ cask 'ukelele' do
           checkpoint: '15db67019d1f9d2995cbdc5735c10cb71f3344c22acd897356a21ab09313bd70'
   name 'Ukelele'
   homepage 'https://scripts.sil.org/ukelele'
-  license :gratis
 
   app 'Ukelele.app'
 

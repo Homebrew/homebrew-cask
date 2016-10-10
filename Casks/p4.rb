@@ -6,7 +6,6 @@ cask 'p4' do
   name 'Perforce Command-Line Client'
   name 'p4'
   homepage 'https://www.perforce.com/product/components/perforce-commandline-client'
-  license :gratis
 
   container type: :naked
 

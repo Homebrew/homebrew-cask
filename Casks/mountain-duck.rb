@@ -7,7 +7,6 @@ cask 'mountain-duck' do
           checkpoint: '875808506f655a7361e187a2b8e2e4c9ec9ab27e2b042edb7db42585cd67b227'
   name 'Mountain Duck'
   homepage 'https://mountainduck.io/'
-  license :commercial
 
   app 'Mountain Duck.app'
 end

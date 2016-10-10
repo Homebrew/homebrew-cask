@@ -7,7 +7,6 @@ cask 'lumen' do
           checkpoint: '44252a0c7faf5ca49ff4657a159b1081e996a04d32868ec142b654c1831a1ac4'
   name 'Lumen'
   homepage 'https://github.com/anishathalye/lumen'
-  license :gpl
 
   app 'Lumen.app'
 end

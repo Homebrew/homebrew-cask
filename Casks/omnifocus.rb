@@ -15,7 +15,6 @@ cask 'omnifocus' do
 
   name 'OmniFocus'
   homepage 'https://www.omnigroup.com/omnifocus/'
-  license :commercial
 
   app 'OmniFocus.app'
 

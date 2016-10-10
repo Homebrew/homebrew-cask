@@ -5,7 +5,6 @@ cask 'robomongo' do
   url "https://download.robomongo.org/#{version.before_comma}/osx/robomongo-#{version.before_comma}-darwin-x86_64-#{version.after_comma}.dmg"
   name 'Robomongo'
   homepage 'https://robomongo.org'
-  license :gpl
 
   app 'Robomongo.app'
 

@@ -7,7 +7,6 @@ cask 'unicodechecker' do
           checkpoint: '2fd58d75b6fa36b0fa9938048167d12e4e469c08a383b70c6f3fb4f101f9c729'
   name 'UnicodeChecker'
   homepage 'https://earthlingsoft.net/UnicodeChecker/'
-  license :gratis
 
   app "UnicodeChecker #{version}/UnicodeChecker.app"
 end

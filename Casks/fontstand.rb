@@ -6,7 +6,6 @@ cask 'fontstand' do
       user_agent: :fake
   name 'Fontstand'
   homepage 'https://fontstand.com/'
-  license :gratis
 
   app 'Fontstand.app'
 

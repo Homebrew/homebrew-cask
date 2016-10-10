@@ -7,7 +7,6 @@ cask 'baiduinput' do
   name 'BaiduIM'
   name '安装百度输入法'
   homepage 'http://wuxian.baidu.com/input/mac.html'
-  license :gratis
 
   installer manual: '安装百度输入法.app'
 

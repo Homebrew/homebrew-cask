@@ -6,7 +6,6 @@ cask 'komodo-edit' do
   url "https://downloads.activestate.com/Komodo/releases/#{version.sub(%r{-.*}, '')}/Komodo-Edit-#{version}-macosx-x86_64.dmg"
   name 'Komodo Edit'
   homepage 'https://komodoide.com/komodo-edit/'
-  license :mpl
 
   app "Komodo Edit #{version.major}.app"
 end

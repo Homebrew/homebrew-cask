@@ -5,7 +5,6 @@ cask 'psequel' do
   url "http://www.psequel.com/download?version=#{version}"
   name 'PSequel'
   homepage 'http://www.psequel.com'
-  license :closed
 
   app 'PSequel.app'
 end

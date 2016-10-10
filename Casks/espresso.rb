@@ -8,7 +8,6 @@ cask 'espresso' do
           checkpoint: '54f5a3da5544a66d475868f90c0a043170b684e4d3c5608ffbd29436b34d1f78'
   name 'Espresso'
   homepage 'https://macrabbit.com/espresso/'
-  license :freemium
 
   app 'Espresso.app'
 end

@@ -14,7 +14,6 @@ cask 'opensesame' do
 
   name 'OpenSesame'
   homepage 'http://osdoc.cogsci.nl/'
-  license :gpl
 
   app 'opensesame.app'
 end

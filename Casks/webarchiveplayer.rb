@@ -7,7 +7,6 @@ cask 'webarchiveplayer' do
           checkpoint: 'afa19ab62477ff8a21dde5e4704c78e1ae2d6ba027c43d53d13e6d970c3a38e6'
   name 'webarchiveplayer'
   homepage 'https://github.com/ikreymer/webarchiveplayer'
-  license :gpl
 
   app 'webarchiveplayer.app'
 end

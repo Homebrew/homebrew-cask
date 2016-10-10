@@ -8,7 +8,6 @@ cask 'dropshare' do
           checkpoint: 'f5a2dac4ec60a0cbd61a490091e62306692d686e6a3226cfd16ca2dcd1ae5f01'
   name 'Dropshare'
   homepage 'https://getdropsha.re/'
-  license :commercial
 
   app 'Dropshare 4.app'
 end

@@ -5,7 +5,6 @@ cask 'unity-android-support-for-editor' do
   url "http://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-#{version.before_comma}.pkg"
   name 'Unity Android Build Support'
   homepage 'https://unity3d.com/unity/'
-  license :commercial
 
   depends_on cask: 'unity'
 

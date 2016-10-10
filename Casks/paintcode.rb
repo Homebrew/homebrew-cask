@@ -5,7 +5,6 @@ cask 'paintcode' do
   url "https://www.paintcodeapp.com/content/versions/#{version}/paintcode-trial.zip"
   name 'PaintCode'
   homepage 'https://www.paintcodeapp.com/'
-  license :commercial
 
   app 'PaintCode.app'
 end

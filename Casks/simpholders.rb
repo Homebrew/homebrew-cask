@@ -7,7 +7,6 @@ cask 'simpholders' do
           checkpoint: '5bf1c98cf80e24efdcb1fed5726780a58b9867d7b09e9f5c08fedcdd2f7897d8'
   name 'SimPholders'
   homepage 'https://simpholders.com/'
-  license :commercial
 
   app 'SimPholders.app'
 end

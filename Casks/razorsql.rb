@@ -5,7 +5,6 @@ cask 'razorsql' do
   url "http://downloads.razorsql.com/downloads/#{version.dots_to_underscores}/razorsql#{version.dots_to_underscores}_x64.dmg"
   name 'RazorSQL'
   homepage 'https://razorsql.com/download_mac.html'
-  license :commercial
 
   app 'RazorSQL.app'
 

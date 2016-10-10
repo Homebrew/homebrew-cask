@@ -6,7 +6,6 @@ cask 'hex' do
   url 'http://dl.hex.gameforge.com/HexInstaller.dmg'
   name 'HEX'
   homepage 'https://hextcg.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Hex.app'
 end

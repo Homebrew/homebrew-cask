@@ -7,7 +7,6 @@ cask 'a-better-finder-rename' do
           checkpoint: '7e3de7cd9ab128fe2d2e387ddcac62475a9642af5a952648249b7ff68e22c2f9'
   name 'A Better Finder Rename'
   homepage 'http://www.publicspace.net/ABetterFinderRename/'
-  license :commercial
 
   app "A Better Finder Rename #{version.major}.app"
 end

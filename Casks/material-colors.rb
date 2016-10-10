@@ -7,7 +7,6 @@ cask 'material-colors' do
           checkpoint: 'ed9a70854ceef5f7cddeeaeef34a901533b60071dc22ccd4673dc513c037edd6'
   name 'Material Colors for Mac'
   homepage 'https://github.com/romannurik/MaterialColorsApp'
-  license :apache
 
   app 'Material Colors.app'
 

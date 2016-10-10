@@ -8,7 +8,6 @@ cask 'powerphotos' do
           checkpoint: '83cbf88807e12c99450f127f83d9448d1dab62eae02919f16fecb1fb3814aa24'
   name 'PowerPhotos'
   homepage 'https://www.fatcatsoftware.com/powerphotos/'
-  license :commercial
 
   auto_updates true
   depends_on macos: '>= :yosemite'

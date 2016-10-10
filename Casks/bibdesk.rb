@@ -7,7 +7,6 @@ cask 'bibdesk' do
           checkpoint: '618bbe4ed7f37c05ec1e67fc4fc14b1feef2e63d8ba8ca7c6440715b662f59ff'
   name 'BibDesk'
   homepage 'http://bibdesk.sourceforge.net/'
-  license :bsd
 
   app 'BibDesk.app'
 

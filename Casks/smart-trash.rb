@@ -7,7 +7,6 @@ cask 'smart-trash' do
           checkpoint: '6699bbe03e16dfc96ed4f6e638ceb74535d47e47fff9912785dbd630d7085927'
   name 'Smart Trash'
   homepage 'https://www.hyperbolicsoftware.com/SmartTrash.html'
-  license :commercial
 
   app 'Smart Trash.app'
 end

@@ -5,7 +5,6 @@ cask 'ksdiff' do
   url "https://cdn.kaleidoscopeapp.com/releases/ksdiff-#{version.sub(%r{.*?\((\d+)\)}, '\1')}.zip"
   name 'ksdiff'
   homepage 'http://www.kaleidoscopeapp.com/ksdiff2'
-  license :gratis
 
   conflicts_with cask: 'kaleidoscope'
 

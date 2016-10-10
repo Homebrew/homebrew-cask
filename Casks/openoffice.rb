@@ -8,7 +8,6 @@ cask 'openoffice' do
           checkpoint: '391656f2987abb760223ad7da9d186cc2bee9903e4b0d1c4cf686f8cc011a944'
   name 'Apache OpenOffice'
   homepage 'https://www.openoffice.org/'
-  license :apache
 
   app 'OpenOffice.app'
 

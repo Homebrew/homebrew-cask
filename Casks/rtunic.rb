@@ -6,7 +6,6 @@ cask 'rtunic' do
   url "https://d2c6jjk3vnoatm.cloudfront.net/spree/products/accessoies/484/0008-RTUNICv#{version}.zip"
   name 'rtunic'
   homepage 'https://www.anker.com/products/taxons/114/Connectivity'
-  license :gratis
 
   pkg "RTUNICv#{version}/RTUNICv#{version}.pkg"
 

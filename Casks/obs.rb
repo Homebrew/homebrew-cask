@@ -8,7 +8,6 @@ cask 'obs' do
           checkpoint: '161d6077d10e27243b8b8d0134198adcda7695754fd1cd33687cc2e55b70b5ec'
   name 'OBS'
   homepage 'https://obsproject.com/'
-  license :gpl
 
   pkg 'OBS.pkg'
 

@@ -6,7 +6,6 @@ cask 'bluemix-cli' do
   url "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/Bluemix_CLI_#{version}.pkg"
   name 'Bluemix-CLI'
   homepage 'https://clis.ng.bluemix.net/ui/home.html'
-  license :closed
 
   pkg "Bluemix_CLI_#{version}.pkg"
 

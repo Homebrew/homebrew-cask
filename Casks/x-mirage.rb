@@ -5,7 +5,6 @@ cask 'x-mirage' do
   url 'http://dl.x-mirage.com/x-mirage.dmg'
   name 'X-Mirage'
   homepage 'http://www.x-mirage.com/x-mirage/'
-  license :commercial
 
   app 'X-Mirage.app'
 end

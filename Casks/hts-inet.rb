@@ -5,7 +5,6 @@ cask 'hts-inet' do
   url 'http://www.htstechsupport.com/HTS_iNet.dmg'
   name 'HTS iNet'
   homepage 'http://www.htstechsupport.com/'
-  license :commercial
 
   app 'HTS iNet.app'
 end

@@ -7,7 +7,6 @@ cask 'qsyncthingtray' do
           checkpoint: '05524e57a102be842841cb8f07504d742595fb63631bbef89e3dbe8c5fdfb251'
   name 'QSyncthingTray'
   homepage 'https://github.com/sieren/QSyncthingTray'
-  license :gpl
 
   app 'QSyncthingTray.app'
 

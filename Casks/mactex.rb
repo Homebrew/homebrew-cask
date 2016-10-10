@@ -8,7 +8,6 @@ cask 'mactex' do
           checkpoint: 'dba7dc2fba9b2dd846cfba460f1121162c4f68d580dd2a485f7f929a1d7ec6be'
   name 'MacTeX'
   homepage 'https://www.tug.org/mactex/'
-  license :oss
 
   pkg "mactex-#{version}.pkg"
 

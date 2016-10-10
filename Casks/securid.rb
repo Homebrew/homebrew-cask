@@ -5,7 +5,6 @@ cask 'securid' do
   url "ftp://ftp.emc.com/pub/agents/RSASecurIDMac#{version.no_dots}.dmg"
   name 'RSA SecurID'
   homepage 'https://www.emc.com/security/rsa-securid/rsa-securid-software-authenticators/mac-os.htm'
-  license :gratis
 
   pkg "RSASecurIDTokenAutoMac#{version.no_dots}x64.pkg"
 

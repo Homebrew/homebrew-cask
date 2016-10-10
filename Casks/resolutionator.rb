@@ -7,7 +7,6 @@ cask 'resolutionator' do
           checkpoint: '65a6bf2d102c806c0021f5f175d4ce2ad79d577784c0bd42414eb0da40f17e90'
   name 'Resolutionator'
   homepage 'https://manytricks.com/resolutionator/'
-  license :gratis
 
   auto_updates true
   depends_on macos: '>= :mountain_lion'

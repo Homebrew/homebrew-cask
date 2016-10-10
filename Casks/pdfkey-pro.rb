@@ -6,7 +6,6 @@ cask 'pdfkey-pro' do
   url 'https://pdfkeypro.s3.amazonaws.com/PDFKeyPro.dmg'
   name 'PDFKey Pro'
   homepage 'http://pdfkey.com'
-  license :freemium
 
   app 'PDFKey Pro.app'
 end

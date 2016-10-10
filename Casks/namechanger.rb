@@ -7,7 +7,6 @@ cask 'namechanger' do
           checkpoint: '427e9fe31bbd34d9ee9d6fb064f6d6c10b0634ec8a7a18ddfc8453b0498f2496'
   name 'NameChanger'
   homepage 'https://mrrsoftware.com/namechanger/'
-  license :gratis
 
   app 'NameChanger.app'
 end

@@ -7,7 +7,6 @@ cask 'launchcontrol' do
           checkpoint: '800e2a324b47874056f3296febe032aed9fe320593fbc12cd5edf08781231adf'
   name 'LaunchControl'
   homepage 'http://www.soma-zone.com/LaunchControl/'
-  license :commercial
 
   app 'LaunchControl.app'
 end

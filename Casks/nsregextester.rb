@@ -6,7 +6,6 @@ cask 'nsregextester' do
   url 'http://vegh.ca/nsregextester/NSRegexTester.zip'
   name 'NSRegexTester'
   homepage 'https://github.com/aaronvegh/nsregextester'
-  license :oss
 
   app 'NSRegexTester.app'
 end

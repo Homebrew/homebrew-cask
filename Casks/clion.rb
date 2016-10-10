@@ -5,7 +5,6 @@ cask 'clion' do
   url "https://download.jetbrains.com/cpp/CLion-#{version}.dmg"
   name 'CLion'
   homepage 'https://www.jetbrains.com/clion'
-  license :commercial
 
   conflicts_with cask: 'clion-eap'
 

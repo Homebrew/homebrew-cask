@@ -6,7 +6,6 @@ cask 'ridibooks' do
   url "https://cdn.ridicorp.com/app/mac/ridibooks-#{version}.dmg"
   name 'Ridibooks'
   homepage 'https://ridibooks.com/support/app/download'
-  license :gratis
 
   app 'Ridibooks.app'
 

@@ -7,7 +7,6 @@ cask 'adobe-indesign-cc' do
       cookies:    { 'MM_TRIALS' => '1234' }
   name 'Adobe InDesign CC'
   homepage 'https://www.adobe.com/products/indesign.html'
-  license :commercial
 
   preflight do
     language = case MacOS.language

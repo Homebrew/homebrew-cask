@@ -5,7 +5,6 @@ cask 'voodoopad' do
   url 'https://plausible.coop/static/download/VoodooPad.zip'
   name 'VoodooPad'
   homepage 'https://plausible.coop/voodoopad/'
-  license :commercial
 
   app 'VoodooPad.app'
 end

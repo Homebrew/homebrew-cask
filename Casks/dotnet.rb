@@ -5,7 +5,6 @@ cask 'dotnet' do
   url "https://download.microsoft.com/download/0/A/3/0A372822-205D-4A86-BFA7-084D2CBE9EDF/dotnet-dev-osx-x64.#{version}.pkg"
   name '.Net Core'
   homepage 'https://www.microsoft.com/net/core#macos'
-  license :mit
 
   depends_on formula: 'openssl'
 

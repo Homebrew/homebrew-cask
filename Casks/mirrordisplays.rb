@@ -8,7 +8,6 @@ cask 'mirrordisplays' do
           checkpoint: 'e2b3b062a7439dd4b91f437b146ea32ee3c3038492af356d966b97673ac1c04a'
   name 'Mirror Displays'
   homepage 'http://www.fabiancanas.com/Projects/MirrorDisplays'
-  license :gpl
 
   app 'MirrorDisplays.app'
 end

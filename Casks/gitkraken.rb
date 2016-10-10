@@ -7,7 +7,6 @@ cask 'gitkraken' do
           checkpoint: 'b72ab85e252111731e04080f667d695eb32c28b73a67e51d456a52b169a3f84c'
   name 'GitKraken'
   homepage 'https://www.gitkraken.com/'
-  license :gratis
 
   auto_updates true
 

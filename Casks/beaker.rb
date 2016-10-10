@@ -6,7 +6,6 @@ cask 'beaker' do
   url "https://d299yghl10frh5.cloudfront.net/beaker-notebook-#{version}-mac.dmg"
   name 'Beaker'
   homepage 'http://beakernotebook.com/'
-  license :apache
 
   app 'Beaker.app'
 end

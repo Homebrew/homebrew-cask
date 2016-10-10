@@ -7,7 +7,6 @@ cask 'neteasemusic' do
   name 'NetEase cloud music'
   name '网易云音乐'
   homepage 'https://music.163.com/#/download'
-  license :gratis
 
   app 'NeteaseMusic.app'
 

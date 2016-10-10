@@ -6,7 +6,6 @@ cask 'feed-the-beast' do
   url 'http://ftb.cursecdn.com/FTB2/launcher/FTB_Launcher.zip'
   name 'Feed the Beast'
   homepage 'https://www.feed-the-beast.com/'
-  license :apache
 
   auto_updates true
 

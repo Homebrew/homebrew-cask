@@ -8,7 +8,6 @@ cask 'freecad' do
           checkpoint: '02a4638deb1035edb9d7fd90503cf5c31133b95550629b7524b677dea67f1d6e'
   name 'FreeCAD'
   homepage 'http://www.freecadweb.org'
-  license :gpl
 
   app 'FreeCAD.app'
 end

@@ -5,7 +5,6 @@ cask 'firestormos' do
   url "http://downloads.firestormviewer.org/mac/Phoenix-FirestormOS-Releasex64-#{version.dots_to_hyphens}.dmg"
   name 'Phoenix Firestorm viewer for Second Life'
   homepage 'http://www.firestormviewer.org'
-  license :oss
 
   app 'FirestormOS-Releasex64.app'
 

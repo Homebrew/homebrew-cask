@@ -6,7 +6,6 @@ cask 'biicode' do
   url "https://s3.amazonaws.com/biibinaries/release/#{version}/bii-macos-64_#{version.dots_to_underscores}.pkg"
   name 'Biicode'
   homepage 'https://biicode.github.io/biicode/'
-  license :closed
 
   pkg "bii-macos-64_#{version.dots_to_underscores}.pkg"
 

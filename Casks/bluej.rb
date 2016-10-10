@@ -5,7 +5,6 @@ cask 'bluej' do
   url "https://www.bluej.org/download/files/BlueJ-#{version.no_dots}.zip"
   name 'BlueJ'
   homepage 'https://www.bluej.org'
-  license :gpl
 
   app "BlueJ #{version}/BlueJ.app"
 end

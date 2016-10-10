@@ -5,7 +5,6 @@ cask 'atlantis' do
   url "http://www.riverdark.net/atlantis/downloads/Atlantis-#{version}.dmg"
   name 'Atlantis'
   homepage 'http://www.riverdark.net/atlantis/'
-  license :gratis
 
   app 'Atlantis.app'
 end

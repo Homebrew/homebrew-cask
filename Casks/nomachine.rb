@@ -5,7 +5,6 @@ cask 'nomachine' do
   url "http://download.nomachine.com/download/#{version.split('.')[0..1].join('.')}/MacOSX/nomachine_#{version}.dmg"
   name 'NoMachine'
   homepage 'https://www.nomachine.com/'
-  license :gratis
 
   pkg 'NoMachine.pkg'
 

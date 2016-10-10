@@ -7,7 +7,6 @@ cask 'stella' do
           checkpoint: '096a0719ee88287c5523ac52be377b76776d61bc9f6f4f018f68f177031833eb'
   name 'Stella'
   homepage 'http://stella.sourceforge.net'
-  license :gpl
 
   app 'Stella.app'
 end

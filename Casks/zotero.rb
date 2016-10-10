@@ -7,7 +7,6 @@ cask 'zotero' do
           checkpoint: '676bc665177ff8a48e2b0afc7563ab11560f0159590d770a224bcc50386a91fe'
   name 'Zotero'
   homepage 'https://www.zotero.org/'
-  license :affero
 
   auto_updates true
 

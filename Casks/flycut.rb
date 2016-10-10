@@ -7,7 +7,6 @@ cask 'flycut' do
           checkpoint: '02bb24f0420441a85701adebe5e145497146bd9c4923b321df6974042cbbffa4'
   name 'Flycut'
   homepage 'https://github.com/TermiT/Flycut'
-  license :mit
 
   app 'Flycut.app'
 

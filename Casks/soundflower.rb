@@ -7,7 +7,6 @@ cask 'soundflower' do
           checkpoint: '46ce87df41149532b2a9695224e6ff3060fffb6784e03c1703c315ac42674598'
   name 'Soundflower'
   homepage 'https://github.com/mattingalls/Soundflower'
-  license :oss
 
   pkg 'Soundflower.pkg'
 

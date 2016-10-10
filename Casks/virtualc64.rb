@@ -8,7 +8,6 @@ cask 'virtualc64' do
           checkpoint: 'c373cf6bb4ab35205b9b4b31f928a4f1e21eeb840831ef649583b9c1b420ba5c'
   name 'Virtual C64'
   homepage 'http://www.dirkwhoffmann.de/virtualc64/'
-  license :gpl
 
   app 'VirtualC64.app'
 end

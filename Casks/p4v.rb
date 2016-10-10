@@ -6,7 +6,6 @@ cask 'p4v' do
   name 'Perforce Visual Client'
   name 'P4V'
   homepage 'https://www.perforce.com/product/components/perforce-visual-client'
-  license :gratis
 
   app 'p4v.app'
   binary 'p4vc'

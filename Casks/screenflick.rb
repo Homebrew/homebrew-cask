@@ -7,7 +7,6 @@ cask 'screenflick' do
           checkpoint: 'e3acad2605dcc0d4545bc103d2a9722aa56bb4f38711ee7559ff555df9bcb5af'
   name 'Screenflick'
   homepage 'http://www.araelium.com/screenflick/'
-  license :commercial
 
   app 'Screenflick.app'
 end

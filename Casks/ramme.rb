@@ -7,7 +7,6 @@ cask 'ramme' do
           checkpoint: 'b526301e223e9a36aaebe375a984a28b5210a084a6d8dd2576761c95975196de'
   name 'Ramme'
   homepage 'https://github.com/terkelg/ramme/'
-  license :mit
 
   app 'Ramme.app'
 end

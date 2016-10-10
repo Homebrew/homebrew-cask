@@ -13,7 +13,6 @@ cask 'puppet-agent' do
   url "https://downloads.puppetlabs.com/mac/#{MacOS.version}/PC1/x86_64/puppet-agent-#{version}.osx#{MacOS.version}.dmg"
   name 'Puppet Agent'
   homepage 'https://docs.puppet.com/puppet/4.5/reference/about_agent.html'
-  license :oss # all Apache 2 except for the vendored OpenSSL + Ruby
 
   depends_on macos: [
                       :mavericks,

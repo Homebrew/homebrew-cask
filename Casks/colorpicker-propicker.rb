@@ -5,7 +5,6 @@ cask 'colorpicker-propicker' do
   url "http://www.irradiated.net/appcasts/pro-picker/releases/#{version}/ProPicker.zip"
   name 'Pro Picker'
   homepage 'http://www.irradiated.net/?page=pro-picker'
-  license :gratis
 
   colorpicker 'ProPicker.colorPicker'
 end

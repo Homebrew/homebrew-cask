@@ -6,7 +6,6 @@ cask 'numi' do
   url 'https://dl.devmate.com/com.dmitrynikolaev.numi/Numi.zip'
   name 'Numi'
   homepage 'https://numi.io/'
-  license :gratis
 
   app 'Numi.app'
 end

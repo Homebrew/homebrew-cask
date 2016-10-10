@@ -7,7 +7,6 @@ cask 'yoda' do
           checkpoint: 'f58c3b1b0d868e66b1021c19c3705a064e148af09f207a029effe78ff7c516c8'
   name 'Yoda'
   homepage 'https://github.com/whoisandie/yoda'
-  license :mit
 
   app 'Yoda.app'
 end

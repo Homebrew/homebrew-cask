@@ -8,7 +8,6 @@ cask 'snapheal-pro' do
           checkpoint: '54ac7c51ad3eebd02ec3b5b9cc7e66eba67935c5035687ab59fbf7b05ea4c6e3'
   name 'Macphun Snapheal Pro'
   homepage 'https://macphun.com/snapheal/'
-  license :commercial
 
   app 'Snapheal Pro.app'
 

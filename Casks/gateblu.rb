@@ -8,7 +8,6 @@ cask 'gateblu' do
           checkpoint: '83432afb7d03af5e597d06b46cf039d7ac04948200b27224b736222fd924529e'
   name 'Gateblu'
   homepage 'https://gateblu.octoblu.com'
-  license :mit
 
   pkg 'Gateblu Installer.pkg'
 

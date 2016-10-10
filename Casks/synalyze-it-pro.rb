@@ -8,7 +8,6 @@ cask 'synalyze-it-pro' do
           checkpoint: 'a707c86c78b38306eadf830802d60a913c22b9050a04f0d6f97785071dff0f28'
   name 'Synalyze It! Pro'
   homepage 'https://www.synalysis.net/'
-  license :commercial
 
   app 'Synalyze It! Pro.app'
 end

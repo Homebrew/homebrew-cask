@@ -8,7 +8,6 @@ cask 'qdesktop' do
           checkpoint: '0b0de69503c4c5c113458705f0ca13e91bc87c0ca91e8a395ca25d5d80d39384'
   name 'Qdesktop'
   homepage 'http://qvacua.com'
-  license :gpl
 
   app 'Qdesktop.app'
 end

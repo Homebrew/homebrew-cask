@@ -7,7 +7,6 @@ cask 'owncloud' do
           checkpoint: 'c38f3b861f837704752d7fca3ad7de32be66a211aba6159944344997aa07b8df'
   name 'ownCloud'
   homepage 'https://owncloud.com/'
-  license :gpl
 
   pkg "ownCloud-#{version}.pkg"
 

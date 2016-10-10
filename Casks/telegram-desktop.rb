@@ -6,7 +6,6 @@ cask 'telegram-desktop' do
   url "https://updates.tdesktop.com/tmac/tsetup.#{version}.dmg"
   name 'Telegram Desktop'
   homepage 'https://desktop.telegram.org'
-  license :gpl
 
   # Renamed to avoid conflict with telegram
   app 'Telegram.app', target: 'Telegram Desktop.app'

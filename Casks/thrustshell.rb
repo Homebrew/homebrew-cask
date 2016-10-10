@@ -7,7 +7,6 @@ cask 'thrustshell' do
           checkpoint: '935729b52959855a83ee7c4657f7588ab20faac0f51768f881d8374216cdacde'
   name 'thrust'
   homepage 'https://github.com/breach/thrust'
-  license :mit
 
   app 'ThrustShell.app'
 end

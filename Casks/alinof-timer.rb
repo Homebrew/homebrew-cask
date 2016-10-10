@@ -5,7 +5,6 @@ cask 'alinof-timer' do
   url 'http://www.alinofsoftware.ch/resources/AlinofTimer.pkg'
   name 'Alinof Timer'
   homepage 'http://www.alinofsoftware.ch/apps/products-timer/index.html'
-  license :gratis
 
   pkg 'AlinofTimer.pkg', allow_untrusted: true
 

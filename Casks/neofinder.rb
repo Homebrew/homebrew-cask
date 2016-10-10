@@ -8,7 +8,6 @@ cask 'neofinder' do
           checkpoint: 'dc7200a0207418ba7148ae3cff37fa3decd70bd911ce2f95c30cfd53ce484cdf'
   name 'NeoFinder'
   homepage 'http://www.cdfinder.de'
-  license :commercial
 
   app 'NeoFinder.app'
 end

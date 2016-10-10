@@ -5,7 +5,6 @@ cask 'dayone-cli' do
   url 'http://dayoneapp.com/downloads/dayone-cli.pkg'
   name 'Day One CLI'
   homepage 'http://dayoneapp.com/tools/cli-man/'
-  license :closed
 
   pkg 'dayone-cli.pkg'
 

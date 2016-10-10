@@ -5,7 +5,6 @@ cask 'isteg' do
   url "http://www.hanynet.com/isteg-#{version}.zip"
   name 'iSteg'
   homepage 'http://www.hanynet.com/isteg/'
-  license :oss
 
   app 'iSteg.app'
 end

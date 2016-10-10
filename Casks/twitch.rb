@@ -5,7 +5,6 @@ cask 'twitch' do
   url 'http://twitchapp.com/Twitch.app.zip'
   name 'Twitch'
   homepage 'http://twitchapp.com'
-  license :gratis
 
   app 'Twitch.app'
 end

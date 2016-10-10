@@ -8,7 +8,6 @@ cask 'world-of-tanks' do
           checkpoint: '1e3ca625cca19f523265c07c2f2beef750b2b4dc22446d75ecb15e67964a5847'
   name 'World Of Tanks'
   homepage 'https://worldoftanks.com/'
-  license :gratis
 
   app 'World of Tanks.app'
 

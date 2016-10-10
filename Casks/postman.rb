@@ -8,7 +8,6 @@ cask 'postman' do
           checkpoint: 'fc712ff9a9720e2220a7630733ee589ede1bd26f685b3ccda454f4e3cbbeba75'
   name 'Postman'
   homepage 'https://www.getpostman.com/'
-  license :closed
 
   app 'Postman.app'
 

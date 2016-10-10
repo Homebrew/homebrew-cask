@@ -8,7 +8,6 @@ cask 'sqlitebrowser' do
           checkpoint: '98208e99c912b1e888123a7bda69a8daff42e49009e4d834b8fb7ac5d7ae2d05'
   name 'SQLite Database Browser'
   homepage 'http://sqlitebrowser.org'
-  license :oss
 
   app 'DB Browser for SQLite.app'
 end

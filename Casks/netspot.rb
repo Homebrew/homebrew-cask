@@ -7,7 +7,6 @@ cask 'netspot' do
           checkpoint: 'c1b1da6dc1446400687ce427905923813d1fb07a583af17129a4979a28606135'
   name 'NetSpot'
   homepage 'https://www.netspotapp.com/'
-  license :freemium
 
   app 'NetSpot.app'
 end

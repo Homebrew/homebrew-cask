@@ -7,7 +7,6 @@ cask 'texturepacker' do
           checkpoint: '480bb68883fbddb3aadd0ee850fde35094f32e8438361eb8aa02a2c11ed26daa'
   name 'TexturePacker'
   homepage 'https://www.codeandweb.com/texturepacker'
-  license :freemium
 
   app 'TexturePacker.app'
 end

@@ -8,7 +8,6 @@ cask 'cartographica' do
           checkpoint: '7e85531c1c261a52989a7c08dc56e3fd2bb55c4d7627ed3cf6154dc0bab316ec'
   name 'Cartographica'
   homepage 'https://www.macgis.com/'
-  license :commercial
 
   app 'Cartographica.app'
 

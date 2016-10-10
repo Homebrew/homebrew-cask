@@ -7,7 +7,6 @@ cask 'moneyguru' do
           checkpoint: '42cc3e6d1ff4aed7cd2106b6287c1c9111f5438a2d0daf620b80faf8e6e33961'
   name 'moneyGuru'
   homepage 'https://www.hardcoded.net/moneyguru/'
-  license :bsd
 
   app 'moneyGuru.app'
 end
