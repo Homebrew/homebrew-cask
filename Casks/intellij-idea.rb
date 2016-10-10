@@ -5,7 +5,6 @@ cask 'intellij-idea' do
   url "https://download.jetbrains.com/idea/ideaIU-#{version}.dmg"
   name 'IntelliJ IDEA'
   homepage 'https://www.jetbrains.com/idea/'
-  license :commercial
 
   auto_updates true
 

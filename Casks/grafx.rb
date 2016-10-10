@@ -5,7 +5,6 @@ cask 'grafx' do
   url 'http://pulkomandy.tk/projects/GrafX2/downloads/24'
   name 'GrafX2'
   homepage 'http://pulkomandy.tk/projects/GrafX2'
-  license :gpl
 
   app 'Grafx2.app'
 end

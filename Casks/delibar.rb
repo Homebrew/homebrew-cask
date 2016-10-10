@@ -8,7 +8,6 @@ cask 'delibar' do
           checkpoint: '8930f1104bc7b714d0f07040aa0bbb661b182a2d8f8fd1e69c945e2674037802'
   name 'Delibar'
   homepage 'http://www.delibarapp.com/'
-  license :freemium
 
   app 'Delibar.app'
 end

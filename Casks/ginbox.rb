@@ -8,7 +8,6 @@ cask 'ginbox' do
   name 'gInbox'
   name 'Inbox by Google'
   homepage 'https://github.com/chenasraf/gInbox'
-  license :apache
 
   depends_on macos: '>= :mavericks'
 

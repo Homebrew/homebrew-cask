@@ -7,7 +7,6 @@ cask 'macupdate-desktop' do
           checkpoint: '268853a0860e236c4c98fc55da41d24cad893011359416392af4f87dee19cbdc'
   name 'MacUpdate Desktop'
   homepage 'https://www.macupdate.com/desktop'
-  license :freemium
 
   app 'MacUpdate Desktop.app'
 

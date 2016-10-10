@@ -7,7 +7,6 @@ cask 'aseprite' do
           checkpoint: '7e03d1fbeebc1c82311546e9f1a53a98609b30576c452df60eed23cbc9c921e6'
   name 'Aseprite'
   homepage 'http://www.aseprite.org'
-  license :gpl
 
   app 'Aseprite.app'
 end

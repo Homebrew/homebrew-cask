@@ -8,7 +8,6 @@ cask 'sync-my-l2p' do
           checkpoint: '131d35c756edf86c9a5197973c41651749402e4a948699a98d1d7ff8bae6b3c2'
   name 'Sync-my-L2P'
   homepage 'http://www.sync-my-l2p.de'
-  license :oss
 
   app 'Sync-my-L2P.app'
 end

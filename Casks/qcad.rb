@@ -5,7 +5,6 @@ cask 'qcad' do
   url "http://www.qcad.org/archives/qcad/qcad-#{version}-osx-10.6-10.11.dmg"
   name 'QCAD'
   homepage 'http://www.qcad.org/'
-  license :gpl
 
   depends_on macos: '>= :snow_leopard'
   depends_on arch: :intel

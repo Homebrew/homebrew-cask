@@ -7,7 +7,6 @@ cask 'epichrome' do
           checkpoint: '60d7434a8f8762ed4d846778c9d9e6fc6964ac77bb2ac19786841dcfc3af983d'
   name 'Epichrome'
   homepage 'https://github.com/dmarmor/epichrome'
-  license :gpl
 
   app 'Epichrome.app'
 end

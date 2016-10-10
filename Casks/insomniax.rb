@@ -7,7 +7,6 @@ cask 'insomniax' do
           checkpoint: 'ffe4389e2a4f837fbe48aef4017ed326d203fd23068d30dde3b6ae8c5fa80842'
   name 'InsomniaX'
   homepage 'https://semaja2.net/projects/insomniaxinfo/'
-  license :gratis
 
   app 'InsomniaX.app'
 end

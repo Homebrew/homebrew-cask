@@ -7,7 +7,6 @@ cask 'senuti' do
           checkpoint: 'd7e54d6b330e2fe6233898038cbe4896dd0e04d3a4b8b655d878276dd158395b'
   name 'Senuti'
   homepage 'https://www.fadingred.com/senuti/'
-  license :commercial
 
   app 'Senuti.app'
 end

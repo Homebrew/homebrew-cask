@@ -7,7 +7,6 @@ cask 'webuildsg' do
           checkpoint: '2969bb4658886e4e8c52ae8b12560f0b714f2ec7dbc7d0cc4cfcbf9511ab35e2'
   name 'We Build SG'
   homepage 'https://github.com/webuildsg/osx'
-  license :mit
 
   app 'WeBuildSG.app'
 end

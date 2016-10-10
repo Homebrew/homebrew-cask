@@ -6,7 +6,6 @@ cask 'camerabag' do
   url "http://downloads.nevercenter.com.s3.amazonaws.com/CameraBag_Mac_#{version.dots_to_underscores}.dmg"
   name 'CameraBag'
   homepage 'https://nevercenter.com/camerabag/desktop/'
-  license :commercial
 
   app 'CameraBag 2.app'
 end

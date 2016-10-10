@@ -5,7 +5,6 @@ cask 'upthere-home' do
   url 'https://upthere.com/apps/mac/UpthereHome.zip'
   name 'Upthere Home'
   homepage 'https://upthere.com/'
-  license :gratis
 
   app 'Upthere Home.app'
 

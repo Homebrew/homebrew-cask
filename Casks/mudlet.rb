@@ -5,7 +5,6 @@ cask 'mudlet' do
   url "http://www.mudlet.org/download/Mudlet-#{version}.zip"
   name 'Mudlet'
   homepage 'http://www.mudlet.org'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app "Mudlet-#{version}.app"
 end

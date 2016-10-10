@@ -7,7 +7,6 @@ cask 'name-mangler' do
           checkpoint: '622b9edd29a3f31b34d0a1f9d3aa892ec2b71a5dfd7cb31769c4d41559357b05'
   name 'Name Mangler'
   homepage 'https://manytricks.com/namemangler/'
-  license :freemium
 
   auto_updates true
 

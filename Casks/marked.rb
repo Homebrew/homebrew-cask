@@ -7,7 +7,6 @@ cask 'marked' do
           checkpoint: '4a9c417c56614330528fc6fa508cf2cb17679934b4ba67f347154ea07c6add39'
   name 'Marked'
   homepage 'http://marked2app.com'
-  license :commercial
 
   auto_updates true
 

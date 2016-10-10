@@ -5,7 +5,6 @@ cask 'pivotalbooster' do
   url "http://pivotalbooster.com/downloads/releases/#{version}/PivotalBooster_#{version}.dmg"
   name 'PivotalBooster'
   homepage 'http://pivotalbooster.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'PivotalBooster.app'
 end

@@ -6,7 +6,6 @@ cask 'lockdown' do
   url "https://bitbucket.org/objective-see/deploy/downloads/Lockdown_#{version}.zip"
   name 'Lockdown'
   homepage 'https://objective-see.com/products/lockdown.html'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Lockdown.app'
 end

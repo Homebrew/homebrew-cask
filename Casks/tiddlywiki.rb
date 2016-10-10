@@ -7,7 +7,6 @@ cask 'tiddlywiki' do
           checkpoint: 'cedb811780d4da29c7b4ee6a8437f4487bb66f5d58f770a2931108a9bd04bc57'
   name 'TiddlyWiki'
   homepage 'https://github.com/Jermolene/TiddlyDesktop'
-  license :bsd
 
   app "TiddlyDesktop-mac64-v#{version}/TiddlyWiki.app"
 end

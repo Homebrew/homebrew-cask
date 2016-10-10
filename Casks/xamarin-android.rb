@@ -7,7 +7,6 @@ cask 'xamarin-android' do
           checkpoint: 'b3b4ad91917a09091c1fee7f5aa71bab10c1c8cee5e5f2cbcdbb50e86ac31ac9'
   name 'Xamarin.Android'
   homepage 'https://xamarin.com/android'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "xamarin.android-#{version}.pkg"
 

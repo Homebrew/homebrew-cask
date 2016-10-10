@@ -5,7 +5,6 @@ cask 'htc-sync-manager' do
   url "https://dl4.htc.com/download/htc-sync-manager/setup_#{version}_htc.dmg"
   name 'HTC Sync Manager'
   homepage 'https://www.htc.com/us/software/htc-sync-manager/'
-  license :gratis
 
   app 'HTC Sync Manager.app'
 

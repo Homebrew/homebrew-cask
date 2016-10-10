@@ -7,7 +7,6 @@ cask 'midi-monitor' do
           checkpoint: 'eb0ebc4edfa5274c5a051c7753c3bcf924cc75392ec9a69d33176184732a29a5'
   name 'MIDI Monitor'
   homepage 'https://www.snoize.com/MIDIMonitor/'
-  license :bsd
 
   depends_on macos: '>= :lion'
 

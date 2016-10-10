@@ -5,7 +5,6 @@ cask 'openxcom' do
   url 'http://openxcom.org/file/1730/'
   name 'OpenXcom'
   homepage 'http://openxcom.org'
-  license :gpl
 
   app 'OpenXcom.app'
 end

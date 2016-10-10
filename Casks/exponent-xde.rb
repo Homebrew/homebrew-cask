@@ -6,7 +6,6 @@ cask 'exponent-xde' do
   url 'https://xde-updates.exponentjs.com/download/mac'
   name 'Exponent Development Environment (XDE)'
   homepage 'https://getexponent.com/'
-  license :mit
 
   app 'Exponent XDE.app'
 end

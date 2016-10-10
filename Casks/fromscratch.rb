@@ -8,7 +8,6 @@ cask 'fromscratch' do
           checkpoint: 'bc6fd4aea1849757ce946f7daaeaf22a1f47c838346af321cdb877e9b256f47e'
   name 'FromScratch'
   homepage 'https://fromscratch.rocks/'
-  license :mit
 
   app 'FromScratch.app'
 end

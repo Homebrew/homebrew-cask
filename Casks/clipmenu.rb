@@ -8,7 +8,6 @@ cask 'clipmenu' do
           checkpoint: 'bcd91bd0f5da24998cbdb2ac0be516c156a60105a9504aedc05ae2a7a4165647'
   name 'ClipMenu'
   homepage 'http://www.clipmenu.com/'
-  license :gratis
 
   app 'ClipMenu.app'
 

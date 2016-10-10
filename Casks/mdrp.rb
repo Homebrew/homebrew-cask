@@ -7,7 +7,6 @@ cask 'mdrp' do
           checkpoint: '182bbd4878cff5cef58fdbb700f6dd0ae625aca284407d49aab56afad85f4b66'
   name 'Mac DVDRipper Pro'
   homepage 'https://www.macdvdripperpro.com/'
-  license :commercial
 
   app 'MDRP.app'
 end

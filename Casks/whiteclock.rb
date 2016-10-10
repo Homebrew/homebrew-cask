@@ -5,7 +5,6 @@ cask 'whiteclock' do
   url "http://www.taimila.com/downloads/WhiteClock#{version.major}.zip"
   name 'White clock'
   homepage 'http://www.taimila.com/blog/white-clock-for-osx/'
-  license :gratis
 
   app 'WhiteClock.app'
 end

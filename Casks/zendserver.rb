@@ -5,7 +5,6 @@ cask 'zendserver' do
   url "http://downloads.zend.com/zendserver/#{version}/ZendServer-#{version}-php-5.6.10.dmg"
   name 'Zend Server'
   homepage 'https://www.zend.com/en/products/server/'
-  license :commercial
 
   pkg 'Zend Server.pkg'
 

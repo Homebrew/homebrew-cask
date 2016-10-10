@@ -8,7 +8,6 @@ cask 'franz' do
           checkpoint: 'ff6f46a9386bd0f33a5e1f68aa7ef54e89b7e87850acdb41866c7bddfb0b6ca3'
   name 'Franz'
   homepage 'http://meetfranz.com'
-  license :gratis
 
   app 'Franz.app'
 end

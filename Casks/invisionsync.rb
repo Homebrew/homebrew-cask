@@ -7,7 +7,6 @@ cask 'invisionsync' do
           checkpoint: '6131c1e35f72ea3e993b5054ffec8298ee85ddf8bdb3ca105a590eb45583e0e8'
   name 'InVision Sync'
   homepage 'https://invisionapp.com/'
-  license :gratis
 
   app 'InVisionSync.app'
 end

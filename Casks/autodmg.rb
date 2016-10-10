@@ -7,7 +7,6 @@ cask 'autodmg' do
           checkpoint: '72a92a5753fe1e90347d2b12f87a5ecc2a397a30680bcb65d09bb0e3de39fa1a'
   name 'AutoDMG'
   homepage 'https://github.com/MagerValp/AutoDMG'
-  license :apache
 
   app 'AutoDMG.app'
 end

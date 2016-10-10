@@ -8,7 +8,6 @@ cask 'keytty' do
           checkpoint: 'd4cdf07b530cce3260ac065c88a85a07d47fd8af9ff20e984e46866fb1968f99'
   name 'Keytty'
   homepage 'http://keytty.com/'
-  license :closed
 
   app 'Keytty.app'
 

@@ -8,7 +8,6 @@ cask 'w0lfschild-flashlight' do
           checkpoint: '9f610164e2661128457a0386d2e8ac66d28f041aa6dab449a0c998a2d8495309'
   name 'Flashlight'
   homepage 'https://github.com/w0lfschild/Flashlight'
-  license :bsd
 
   depends_on macos: '>= :yosemite'
   depends_on cask: 'mysimbl'

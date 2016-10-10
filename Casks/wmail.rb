@@ -8,7 +8,6 @@ cask 'wmail' do
           checkpoint: '88a65d3952c7868e1f5f5bdb974a2ac84dad1e55393a8751f170e95ae5d1ba1f'
   name 'WMail'
   homepage 'https://thomas101.github.io/wmail/'
-  license :mit
 
   app 'WMail-darwin-x64/WMail.app'
 end

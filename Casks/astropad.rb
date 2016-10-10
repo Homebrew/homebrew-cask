@@ -7,7 +7,6 @@ cask 'astropad' do
           checkpoint: 'c9d1e8e8daea79d0033bb9b63dbf0fc4a5e85216c091ec829a11772998c4dd41'
   name 'Astropad'
   homepage 'http://astropad.com/'
-  license :gratis
 
   depends_on macos: '>= :mavericks'
 

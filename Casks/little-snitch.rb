@@ -7,7 +7,6 @@ cask 'little-snitch' do
           checkpoint: 'eec25e526fc37ad3c828973eacfff88e7835a3b05dbc4f4332f62d7330072a83'
   name 'Little Snitch'
   homepage 'https://www.obdev.at/products/littlesnitch/'
-  license :commercial
 
   installer manual: 'Little Snitch Installer.app'
 

@@ -7,7 +7,6 @@ cask 'frappe' do
           checkpoint: '0b91d85bcfa2690de513f49840b13cdac460e415e029dcca58beccdc48d6ff39'
   name 'Frappé'
   homepage 'https://github.com/niftylettuce/frappe'
-  license :mit
 
   app 'Frappe.app'
 end

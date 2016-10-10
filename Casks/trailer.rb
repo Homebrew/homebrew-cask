@@ -7,7 +7,6 @@ cask 'trailer' do
           checkpoint: '19d474c514f7b06e1ce9532bbd1e12e112c47c2bc285362c98ee8f81f32acfc5'
   name 'Trailer'
   homepage 'https://ptsochantaris.github.io/trailer/'
-  license :mit
 
   app 'Trailer.app'
 

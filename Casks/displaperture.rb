@@ -5,7 +5,6 @@ cask 'displaperture' do
   url 'http://manytricks.com/download/displaperture'
   name 'Displaperture'
   homepage 'https://manytricks.com/displaperture'
-  license :gratis
 
   app 'Displaperture.app'
 end

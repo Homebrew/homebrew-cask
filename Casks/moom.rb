@@ -7,7 +7,6 @@ cask 'moom' do
           checkpoint: '9794a3f60d93e39cd1ea56d157635e881db492abcafdd13704cd6b8b58efeb4c'
   name 'Moom'
   homepage 'https://manytricks.com/moom/'
-  license :commercial
 
   auto_updates true
 

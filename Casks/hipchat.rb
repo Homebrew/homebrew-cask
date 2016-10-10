@@ -8,7 +8,6 @@ cask 'hipchat' do
           checkpoint: 'a24ed4d5d9d220b75cb6c96e083589b956e5e4f13b111e8b73583dc51afeabcf'
   name 'HipChat'
   homepage 'https://www.hipchat.com/'
-  license :freemium
 
   auto_updates true
 

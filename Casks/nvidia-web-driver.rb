@@ -5,7 +5,6 @@ cask 'nvidia-web-driver' do
   url "http://us.download.nvidia.com/Mac/Quadro_Certified/#{version}/WebDriver-#{version}.pkg"
   name 'NVIDIA Web Driver'
   homepage 'http://www.nvidia.com/download/driverResults.aspx/107369/en-us'
-  license :commercial
 
   pkg "WebDriver-#{version}.pkg"
 

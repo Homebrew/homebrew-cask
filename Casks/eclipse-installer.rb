@@ -5,7 +5,6 @@ cask 'eclipse-installer' do
   url 'https://eclipse.org/downloads/download.php?file=/oomph/epp/neon/R/eclipse-inst-mac64.tar.gz&r=1'
   name 'Eclipse Installer'
   homepage 'https://eclipse.org/'
-  license :eclipse
 
   depends_on macos: '>= :leopard'
   depends_on arch: :x86_64

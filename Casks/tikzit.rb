@@ -7,7 +7,6 @@ cask 'tikzit' do
           checkpoint: '2fc201624061d05e5b3ae505e69611fd11824534f28ada3ab4150de98ebca5f3'
   name 'TikZiT'
   homepage 'http://tikzit.sourceforge.net/'
-  license :gpl
 
   app 'TikZiT.app'
 end

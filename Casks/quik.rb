@@ -5,7 +5,6 @@ cask 'quik' do
   url "https://software.gopro.com/Mac/Quik-MacInstaller-#{version}.dmg"
   name 'GoPro Quik'
   homepage 'https://shop.gopro.com/softwareandapp/quik-%7C-desktop/Quik-Desktop.html'
-  license :commercial
 
   conflicts_with cask: 'gopro-studio'
 

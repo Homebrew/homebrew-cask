@@ -5,7 +5,6 @@ cask 'kicad' do
   url "http://downloads.kicad-pcb.org/osx/stable/kicad-#{version}.dmg"
   name 'KiCad'
   homepage 'http://www.kicad-pcb.org/'
-  license :gpl
 
   suite 'Kicad-apps', target: 'Kicad'
   artifact 'kicad', target: "#{ENV['HOME']}/Library/Application Support/kicad"

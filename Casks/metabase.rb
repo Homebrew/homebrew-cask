@@ -7,7 +7,6 @@ cask 'metabase' do
           checkpoint: '382c2f29e728fe2d9ddf69879807f8949bc4fd3b6b93ca0863412e77a69dc1e8'
   name 'Metabase'
   homepage 'http://www.metabase.com/'
-  license :affero
 
   app 'Metabase.app'
 end

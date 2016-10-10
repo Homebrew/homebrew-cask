@@ -8,7 +8,6 @@ cask 'wings3d' do
           checkpoint: '4d42c00858c911d9ca572a317ae1a48372e557e789faf10dfa2f5eeb1f132cea'
   name 'Wings 3D'
   homepage 'http://www.wings3d.com/'
-  license :oss
 
   app "Wings3D #{version}.app"
 end

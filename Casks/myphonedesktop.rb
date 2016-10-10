@@ -5,7 +5,6 @@ cask 'myphonedesktop' do
   url "http://www.myphonedesktop.com/dwn/myPhoneDesktop_macos_#{version.dots_to_underscores}.dmg"
   name 'myPhoneDesktop'
   homepage 'http://www.myphonedesktop.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'myPhoneDesktop.app'
 end

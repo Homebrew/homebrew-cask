@@ -5,7 +5,6 @@ cask 'graffitipot' do
   url "http://crystaly.com/graffitipot/GraffitiPot_#{version}.zip"
   name 'GraffitiPot'
   homepage 'http://crystaly.com/graffitipot/'
-  license :gratis
 
   app 'GraffitiPot.app'
 end

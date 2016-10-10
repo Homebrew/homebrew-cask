@@ -8,7 +8,6 @@ cask 'jabref' do
           checkpoint: '0cff3ed91fec9ffd92eb9592882c38f7f630fbb57c17e50fc1bc70f997b77729'
   name 'JabRef'
   homepage 'https://www.jabref.org/'
-  license :gpl
 
   installer script: 'JabRef Installer.app/Contents/MacOS/JavaApplicationStub',
             args:   [

@@ -5,7 +5,6 @@ cask 'across-lite' do
   url "http://www.litsoft.com/across/alite/download/download.php/al#{version.no_dots}osx.dmg?os=macosx"
   name 'Across Lite'
   homepage 'http://www.litsoft.com/across/alite/download/'
-  license :unknown
 
   app 'Across Lite.app'
 end

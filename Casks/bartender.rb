@@ -8,7 +8,6 @@ cask 'bartender' do
           checkpoint: '6d5406613e77584527da5dfcc997d13f6b2985ae81ec732f399216743fe00a16'
   name 'Bartender'
   homepage 'https://www.macbartender.com/'
-  license :commercial
 
   auto_updates true
 

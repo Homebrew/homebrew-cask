@@ -5,7 +5,6 @@ cask 'zend-studio' do
   url "http://downloads.zend.com/studio-eclipse/#{version}/ZendStudio-#{version}-macosx.cocoa.x86_64.dmg"
   name 'Zend Studio'
   homepage 'https://www.zend.com/en/products/studio/'
-  license :commercial
 
   app 'Zend Studio.app'
 end

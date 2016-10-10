@@ -8,7 +8,6 @@ cask 'oryoki' do
           checkpoint: '9e55a53a7930644516bb896ae8ea7be624586ebc08c8cb17d127ae3596a17107'
   name 'Oryoki'
   homepage 'http://oryoki.io/'
-  license :mit
 
   app 'Oryoki.app'
 end

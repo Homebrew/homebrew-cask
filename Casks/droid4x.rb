@@ -6,7 +6,6 @@ cask 'droid4x' do
   url 'http://dl.haima.me/download/DXDown/mac/Z001/Droid4XInstaller.zip'
   name 'Droid4X'
   homepage 'http://www.droid4x.com/'
-  license :closed
 
   installer manual: 'Droid4XInstaller.app'
 

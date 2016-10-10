@@ -7,7 +7,6 @@ cask 'zoom' do
           checkpoint: '100f800b8d8508447fd6e2690ef28f2dfe6e96d37d697583a6efcfbdf5dfc7fa'
   name 'Zoom'
   homepage 'http://www.logicalshift.co.uk/unix/zoom/'
-  license :gpl
 
   app 'Zoom.app'
 end

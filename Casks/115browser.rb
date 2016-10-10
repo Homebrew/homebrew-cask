@@ -6,7 +6,6 @@ cask '115browser' do
   name '115Browser'
   name '115浏览器'
   homepage 'https://pc.115.com/'
-  license :gratis
 
   app '115Browser.app'
 

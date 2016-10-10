@@ -5,7 +5,6 @@ cask 'lyrics-master' do
   url "http://www.kenichimaehashi.com/lyricsmaster/download/LyricsMaster#{version.no_dots}0.dmg"
   name 'Lyrics Master'
   homepage 'http://www.kenichimaehashi.com/lyricsmaster/'
-  license :gratis
 
   suite 'Lyrics Master'
 end

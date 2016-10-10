@@ -27,7 +27,6 @@ cask '1password' do
 
   name '1Password'
   homepage 'https://agilebits.com/onepassword'
-  license :commercial
 
   auto_updates true
 

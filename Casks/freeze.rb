@@ -7,7 +7,6 @@ cask 'freeze' do
           checkpoint: 'd8b24ff523f3cbb555d884908588f0c073d719e0190c928fe5dcba7b53080e85'
   name 'Freeze'
   homepage 'https://www.freezeapp.net/'
-  license :freemium
 
   app 'Freeze.app'
 end

@@ -7,7 +7,6 @@ cask 'porting-kit' do
           checkpoint: '77e6b989ddd3913979d0f8ed6dd8abde452ed94285d1087fd2da36701289ef84'
   name 'Porting Kit'
   homepage 'http://portingkit.com/'
-  license :gratis
 
   auto_updates true
   conflicts_with cask: 'caskroom/versions/porting-kit-legacy'

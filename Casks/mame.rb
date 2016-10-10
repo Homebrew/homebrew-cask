@@ -7,7 +7,6 @@ cask 'mame' do
           checkpoint: '05d87458543be825903620c590fc797a842cdcd8f91cab8b88623ecc701992b7'
   name 'MAME'
   homepage 'http://mameosx.sourceforge.net/'
-  license :gratis
 
   app 'MAME OS X.app'
 end

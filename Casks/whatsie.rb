@@ -8,7 +8,6 @@ cask 'whatsie' do
           checkpoint: 'a0754f575e81d5f0b18f43758690ec50d1bae237bdbe3302283f6569b65939ef'
   name 'Whatsie'
   homepage 'https://whatsie.chat/'
-  license :mit
 
   auto_updates true
   depends_on macos: '>= :mountain_lion'

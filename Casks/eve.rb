@@ -8,7 +8,6 @@ cask 'eve' do
           checkpoint: 'e9ec5e3e38ebb8c634bb750a6a41de8267c2f12adaf7ee3e29eb8d47be8f79ae'
   name 'EVE'
   homepage 'http://www.hotkey-eve.com/'
-  license :gratis
 
   app 'EVE.app'
 end

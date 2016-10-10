@@ -7,7 +7,6 @@ cask 'loop' do
           checkpoint: 'f3da3c524cdf9cbb5c1d3e58019045d93aea51d4c2f3b7323be9a10b9f63d26c'
   name 'Loop'
   homepage 'https://github.com/twostairs/loop'
-  license :mit
 
   app 'Loop.app'
 end

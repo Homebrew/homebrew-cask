@@ -5,7 +5,6 @@ cask 'eim' do
   url 'http://dldir1.qq.com/qqfile/crm/hrtx/EIM_Mac2.0_72363.dmg'
   name 'EIM'
   homepage 'http://b.qq.com/eim/main.html'
-  license :commercial
 
   app 'EIM.app'
 end

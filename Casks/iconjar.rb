@@ -8,7 +8,6 @@ cask 'iconjar' do
           checkpoint: '8ea50864567ba09ecde773b1360aef55c532f1dcaa6693e248b48e9b8f0b27ce'
   name 'IconJar'
   homepage 'http://geticonjar.com/'
-  license :gratis
 
   app 'IconJar.app'
 end

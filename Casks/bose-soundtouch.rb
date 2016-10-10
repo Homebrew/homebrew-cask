@@ -6,7 +6,6 @@ cask 'bose-soundtouch' do
   url "https://worldwide.bose.com/downloads/assets/updates/soundtouch/SoundTouch-#{version}-osx-10.9-installer.app.dmg"
   name 'Bose Soundtouch Controller App'
   homepage 'https://www.soundtouch.com'
-  license :closed
 
   depends_on macos: '>= :mavericks'
 

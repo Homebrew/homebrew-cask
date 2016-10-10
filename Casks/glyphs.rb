@@ -7,7 +7,6 @@ cask 'glyphs' do
           checkpoint: 'a00f114fc3cac79bcdd55fde37d4411ae7ebaa10116a17f3e13a68bca4bd87fa'
   name 'Glyphs'
   homepage 'https://www.glyphsapp.com'
-  license :commercial
 
   auto_updates true
 

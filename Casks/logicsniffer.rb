@@ -5,7 +5,6 @@ cask 'logicsniffer' do
   url "https://www.lxtreme.nl/ols/ols-#{version}-full.dmg"
   name 'Logic Sniffer'
   homepage 'https://www.lxtreme.nl/ols/'
-  license :gpl
 
   app 'LogicSniffer.app'
 end

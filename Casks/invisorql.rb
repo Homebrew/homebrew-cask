@@ -5,7 +5,6 @@ cask 'invisorql' do
   url "http://www.pozdeev.com/invisor/download/InvisorQL-#{version}.dmg"
   name 'Invisor QuickLook Plug-In'
   homepage 'http://www.pozdeev.com/invisor/'
-  license :gratis
 
   depends_on macos: '>= :lion'
   depends_on arch: :x86_64

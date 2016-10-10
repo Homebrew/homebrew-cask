@@ -8,7 +8,6 @@ cask 'hosts' do
           checkpoint: '616c636afe819d024b6a6247f229d028356f1f9fc3e06b31207350d848f418b9'
   name 'Hosts'
   homepage 'http://permanentmarkers.nl/software.html'
-  license :gpl
 
   pkg "Hosts-#{version}.pkg"
 

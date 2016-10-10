@@ -7,7 +7,6 @@ cask 'jes' do
           checkpoint: '89cbf0688db38705320d068184ab288f79a4171edd257232ccaacda84f94f389'
   name 'JES'
   homepage 'https://github.com/gatech-csl/jes'
-  license :oss
 
   app 'JES.app'
 end

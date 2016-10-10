@@ -5,7 +5,6 @@ cask 'bassshapes' do
   url "http://yellquietly.com/downloads/BassShapes_v#{version.no_dots}.zip"
   name 'Bass Shapes'
   homepage 'http://yellquietly.com/bass-shapes/'
-  license :gratis
 
   app "BassShapes_v#{version.no_dots}/BassShapes.app"
 end

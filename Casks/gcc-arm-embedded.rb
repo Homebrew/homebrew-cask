@@ -5,7 +5,6 @@ cask 'gcc-arm-embedded' do
   url "https://launchpad.net/gcc-arm-embedded/5.0/5-2016-q3-update/+download/gcc-arm-none-eabi-#{version.before_comma}-#{version.after_comma}-mac.tar.bz2"
   name 'GCC ARM Embedded'
   homepage 'https://launchpad.net/gcc-arm-embedded'
-  license :gpl
 
   binary "gcc-arm-none-eabi-#{version.before_comma}/bin/arm-none-eabi-addr2line"
   binary "gcc-arm-none-eabi-#{version.before_comma}/bin/arm-none-eabi-ar"

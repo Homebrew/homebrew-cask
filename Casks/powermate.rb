@@ -5,7 +5,6 @@ cask 'powermate' do
   url "https://support.griffintechnology.com/wp-content/uploads/sites/#{version.after_comma.dots_to_slashes}/PowerMate_v#{version.before_comma}.zip"
   name 'Griffin PowerMate'
   homepage 'https://support.griffintechnology.com/support/powermate/'
-  license :gratis
 
   app 'PowerMate.app'
 end

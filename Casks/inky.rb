@@ -5,7 +5,6 @@ cask 'inky' do
   url "https://download.inky.com/InkyInstall_osx_#{version}.dmg"
   name 'Inky'
   homepage 'http://inky.com'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Inky.app'
 

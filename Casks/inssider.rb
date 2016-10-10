@@ -8,7 +8,6 @@ cask 'inssider' do
           checkpoint: 'fd7b7d1cff572bf9567cb87524e4db3e6c01115d52ab70ceca9523d04bb17c26'
   name 'inSSIDer'
   homepage 'http://www.inssider.com/'
-  license :commercial
 
   app 'inSSIDer.app'
 end

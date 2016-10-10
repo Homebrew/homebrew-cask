@@ -5,7 +5,6 @@ cask 'ejector' do
   url "http://www.jeb.com.fr/soft/Ejector-v#{version}.dmg"
   name 'Ejector'
   homepage 'http://www.jeb.com.fr/en/ejector.shtml'
-  license :gratis
 
   app 'Ejector.app'
 end

@@ -7,7 +7,6 @@ cask 'telegram' do
           checkpoint: '77a07fbbe09f33a659ea0ca14d899c14fd88dfd17225c55289d64206090a7883'
   name 'Telegram for macOS'
   homepage 'https://macos.telegram.org'
-  license :gpl
 
   auto_updates true
 

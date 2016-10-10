@@ -7,7 +7,6 @@ cask 'contexts' do
           checkpoint: 'a2449460fca0cf5f1259c4415d681ecdb2945329d9e90a517716fece4c5a05b4'
   name 'Contexts'
   homepage 'https://contexts.co'
-  license :commercial
 
   app 'Contexts.app'
 

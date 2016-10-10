@@ -7,7 +7,6 @@ cask 'rowmote-helper' do
           checkpoint: 'a71f0a24aa505e25ca6b3d4626b138d3bc435986307afd333492df450ee2dc6c'
   name 'Rowmote Helper'
   homepage 'http://regularrateandrhythm.com/apps/rowmote-pro/'
-  license :commercial
 
   auto_updates true
 

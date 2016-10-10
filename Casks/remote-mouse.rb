@@ -5,7 +5,6 @@ cask 'remote-mouse' do
   url 'http://www.remotemouse.net/downloads/RemoteMouse.zip'
   name 'Remote Mouse'
   homepage 'http://www.remotemouse.net'
-  license :closed
 
   app 'Remote Mouse.app'
 end

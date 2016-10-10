@@ -7,7 +7,6 @@ cask 'ibooksremote' do
           checkpoint: '42f294c53eed32d814d0ca604468d05f58528c28e64badeec94f06a74b5db67b'
   name 'iBooks Remote'
   homepage 'https://github.com/decapyre/iBookRemote'
-  license :mit
 
   app 'iBooksRemote.app'
 end

@@ -7,7 +7,6 @@ cask 'harbor' do
           checkpoint: '733a116d08ac0afd4d67f1205b5aae3e0c0a7faa12385e1d42fb1d99669e2c98'
   name 'Harbor'
   homepage 'https://github.com/devmynd/harbor'
-  license :mit
 
   app 'Harbor.app'
 end

@@ -7,7 +7,6 @@ cask 'soundstand' do
           checkpoint: 'd841d920c2fe0ef22425beb9f9412072bf235c1b7affa677445d92dab5e323bf'
   name 'SoundStand'
   homepage 'https://github.com/ngtk/soundstand'
-  license :mit
 
   app 'SoundStand.app'
 end

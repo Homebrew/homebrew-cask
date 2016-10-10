@@ -13,7 +13,6 @@ cask 'time-out' do
   url "http://www.dejal.com/download/timeout-#{version}.zip"
   name 'Time Out'
   homepage 'http://www.dejal.com/timeout/'
-  license :gratis
 
   app 'Time Out.app'
 end

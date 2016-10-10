@@ -7,7 +7,6 @@ cask 'nndd' do
           checkpoint: '4f1d23fd9ebe4b3abf7495cf512df2f72f2097b3b4ff51d21e5fa837bb88766b'
   name 'NNDD'
   homepage 'https://osdn.jp/projects/nndd/'
-  license :x11
 
   depends_on cask: 'adobe-air'
 

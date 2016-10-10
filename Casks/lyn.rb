@@ -7,7 +7,6 @@ cask 'lyn' do
           checkpoint: '8e3c01bedb65e7061ab8c84d1e72cc5f93f21cfea78c3e6e57285a9a5a48f0a6'
   name 'Lyn'
   homepage 'http://www.lynapp.com/'
-  license :commercial
 
   app 'Lyn.app'
 end

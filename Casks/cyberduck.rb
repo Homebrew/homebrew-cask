@@ -7,7 +7,6 @@ cask 'cyberduck' do
           checkpoint: 'ddb250bc2d050de42fdb80d8e80f15c1e8dca382e658c4db6202cf9b17614538'
   name 'Cyberduck'
   homepage 'https://cyberduck.io/'
-  license :gpl
 
   app 'Cyberduck.app'
 

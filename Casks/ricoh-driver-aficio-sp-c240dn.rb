@@ -5,7 +5,6 @@ cask 'ricoh-driver-aficio-sp-c240dn' do
   url 'http://support.ricoh.com/bb/pub_e/dr_ut_e/0001273/0001273748/V202/r69453Lf.dmg'
   name 'Ricoh Aficio SP C240DN driver'
   homepage 'http://support.ricoh.com/bb/html/dr_ut_e/ra/model/spc240/spc240en.htm'
-  license :closed
 
   pkg 'Ricoh Aficio SP C240DN.pkg'
 

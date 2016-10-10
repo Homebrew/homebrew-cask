@@ -7,7 +7,6 @@ cask 'fission' do
           checkpoint: 'a2734a4521c4b7f8a41af8407445a129a993152cc69c5c9cbd096be0060d41ab'
   name 'Fission'
   homepage 'https://rogueamoeba.com/fission/'
-  license :commercial
 
   app 'Fission.app'
 end

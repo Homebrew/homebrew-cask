@@ -9,7 +9,6 @@ cask 'relaunch64' do
           checkpoint: '40fe263f6ed697443c0e4bc2c8e0ab396ec10bced068e2f93be5dd1f95eaef47'
   name 'Relaunch64'
   homepage 'http://www.popelganda.de/relaunch64.html'
-  license :gpl
 
   depends_on arch: :x86_64
 

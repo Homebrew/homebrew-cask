@@ -7,7 +7,6 @@ cask 'keycast' do
           checkpoint: '6c5dd6a56638fb560a20b31c4d0c6dcbb400954bdc8ba7d9d1cee5abd8fb7042'
   name 'KeyCast'
   homepage 'https://github.com/cho45/KeyCast'
-  license :bsd
 
   app 'KeyCast.app'
 end

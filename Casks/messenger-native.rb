@@ -7,7 +7,6 @@ cask 'messenger-native' do
           checkpoint: '24d213d471d0f1535ff73b30079a54fa471e9ce0aa5472ac047eafa7f28a69e3'
   name 'Messenger Native'
   homepage 'https://github.com/imton/MessengerNative'
-  license :mit
 
   app 'osx64/Messenger Native.app'
 end

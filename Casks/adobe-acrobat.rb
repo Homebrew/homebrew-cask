@@ -7,7 +7,6 @@ cask 'adobe-acrobat' do
       cookies:    { 'MM_TRIALS' => '1234' }
   name 'Adobe Acrobat Pro DC'
   homepage 'https://www.adobe.com/products/reader.html'
-  license :commercial
 
   depends_on macos: '>= 10.9'
 

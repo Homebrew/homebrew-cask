@@ -8,7 +8,6 @@ cask 'pinta' do
           checkpoint: 'd343ef21b0681259d7a8df250d61abf187a250cd34f54717c1d6130ec5767c28'
   name 'Pinta'
   homepage 'https://pinta-project.com/'
-  license :mit
 
   depends_on cask: 'mono-mdk'
 

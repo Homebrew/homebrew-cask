@@ -8,7 +8,6 @@ cask 'rhinoceros' do
           checkpoint: '91467e2ee25ef36dd48c226b54c6cdd7d39c5f0e21e7658531ff885b4cf777a3'
   name 'Rhinoceros'
   homepage 'https://www.rhino3d.com/'
-  license :commercial
 
   auto_updates true
 

@@ -5,7 +5,6 @@ cask 'deathtodsstore' do
   url 'https://www.aorensoftware.com/Downloads/Files/DeathToDSStore.zip'
   name 'DeathToDSStore'
   homepage 'https://www.aorensoftware.com/blog/2011/12/24/death-to-ds_store/'
-  license :mit
 
   app 'DeathToDSStore.app'
 end

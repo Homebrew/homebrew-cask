@@ -8,7 +8,6 @@ cask 'drawbot' do
           checkpoint: '0b1eaee8db2a260a43559382da5b02dd08be587121b256155256b433880a75e7'
   name 'DrawBot'
   homepage 'http://www.drawbot.com'
-  license :bsd
 
   app 'DrawBot.app'
 end

@@ -7,7 +7,6 @@ cask 'bezel' do
           checkpoint: '1368230610ccd16f1464bcb09337419ed88bd133fffe59abe2536bb269fbfea8'
   name 'bezel'
   homepage 'http://infinitapps.com/bezel/'
-  license :gratis
 
   app "Bezel #{version}/Bezel.app"
 end

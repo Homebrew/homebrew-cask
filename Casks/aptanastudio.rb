@@ -8,7 +8,6 @@ cask 'aptanastudio' do
           checkpoint: 'cc90ca0284dca1d1f8b17ed4b3afd300154eda6c1648e7d9cd1a797f984fd32d'
   name 'Aptana Studio'
   homepage 'http://www.aptana.com/'
-  license :gpl
 
   app "Aptana Studio #{version.major}/AptanaStudio#{version.major}.app"
 end

@@ -5,7 +5,6 @@ cask 'airmount' do
   url 'https://www.airmountapp.com/osx/AirMount.pkg'
   name 'AirMount'
   homepage 'https://www.airmountapp.com/'
-  license :gratis
 
   depends_on cask: 'osxfuse'
 

@@ -8,7 +8,6 @@ cask 'spillo' do
           checkpoint: 'e0ce29fb317c6a705b92cbf0b0cc6543ea4696dda8bf83de32e087bf33293fa9'
   name 'Spillo'
   homepage 'https://bananafishsoftware.com/products/spillo/'
-  license :commercial
 
   app 'Spillo.app'
 end

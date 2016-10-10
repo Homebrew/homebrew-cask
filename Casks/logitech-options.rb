@@ -5,7 +5,6 @@ cask 'logitech-options' do
   url "http://www.logitech.com/pub/techsupport/options/Options_#{version}.zip"
   name 'Logitech Options'
   homepage 'https://support.logitech.com/en_us/software/options'
-  license :closed
 
   depends_on macos: '>= :mavericks'
 

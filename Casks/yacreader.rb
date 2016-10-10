@@ -6,7 +6,6 @@ cask 'yacreader' do
   url "https://bitbucket.org/luisangelsm/yacreader/downloads/YACReader-#{version}-MacOSX-Intel.dmg"
   name 'YACReader'
   homepage 'http://www.yacreader.com/'
-  license :gpl
 
   app 'YACReader.app'
   app 'YACReaderLibrary.app'

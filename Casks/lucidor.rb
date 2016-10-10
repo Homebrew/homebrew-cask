@@ -5,7 +5,6 @@ cask 'lucidor' do
   url "http://lucidor.org/get.php?id=lucidor-#{version}.dmg"
   name 'Lucidor'
   homepage 'http://lucidor.org/lucidor/'
-  license :gpl
 
   app 'Lucidor.app'
 end

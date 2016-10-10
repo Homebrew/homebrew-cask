@@ -5,7 +5,6 @@ cask 'namecoin' do
   url "https://namecoin.info/files/Namecoin-Qt.app-#{version}.zip"
   name 'Namecoin'
   homepage 'https://namecoin.info/'
-  license :mit
 
   app 'Namecoin-Qt.app'
 

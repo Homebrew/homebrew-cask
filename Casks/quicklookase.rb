@@ -7,7 +7,6 @@ cask 'quicklookase' do
           checkpoint: 'e8309c2483e96838f53c80b021e3dff592753fe2e4033a9b1c4b5b71cbca0221'
   name 'QuickLookASE'
   homepage 'https://github.com/rsodre/QuickLookASE'
-  license :oss
 
   qlplugin 'QuickLookASE.qlgenerator'
 end

@@ -8,7 +8,6 @@ cask 'favs' do
           checkpoint: '3dcf55592e3461830c5d2d5b2ea875afafb684d483822f2894ea356dfe8dabc3'
   name 'Favs'
   homepage 'http://www.favsapp.com'
-  license :commercial
 
   app 'Favs.app'
 end

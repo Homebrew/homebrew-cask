@@ -8,7 +8,6 @@ cask 'kap' do
           checkpoint: '1c7c4d1574c902e55b24082fa7040735fc1bc2d021af7556c67f079dd7225c77'
   name 'Kap'
   homepage 'https://getkap.co/'
-  license :mit
 
   app 'Kap.app'
 

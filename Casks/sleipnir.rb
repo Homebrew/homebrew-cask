@@ -7,7 +7,6 @@ cask 'sleipnir' do
           checkpoint: '5d96372ba37a9569808c6a25874223ec3f6db687d916302eabc313b525cda3c7'
   name 'Sleipnir'
   homepage 'http://www.fenrir-inc.com/sleipnir/'
-  license :closed
 
   app 'Sleipnir.app'
 end

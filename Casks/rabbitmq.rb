@@ -8,7 +8,6 @@ cask 'rabbitmq' do
           checkpoint: '90cec6b712cb208b42599676a94d9462a60e92c7501884e49eb9a01284dcd3a3'
   name 'RabbitMQ'
   homepage 'https://jpadilla.github.io/rabbitmqapp/'
-  license :mit
 
   app 'RabbitMQ.app'
 

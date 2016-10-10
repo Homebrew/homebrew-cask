@@ -5,7 +5,6 @@ cask 'dbvisualizer' do
   url "https://www.dbvis.com/product_download/dbvis-#{version}/media/dbvis_macos_#{version.dots_to_underscores}.dmg"
   name 'DbVisualizer'
   homepage 'https://www.dbvis.com/'
-  license :commercial
 
   app 'DbVisualizer.app'
   installer script: 'DbVisualizer Installer.app/Contents/MacOS/JavaApplicationStub',

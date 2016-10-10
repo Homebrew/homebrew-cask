@@ -6,7 +6,6 @@ cask 'hypercli' do
   url 'https://hypercli-install.s3.amazonaws.com/hypercli.pkg'
   name 'Hyper_ client'
   homepage 'https://hyper.sh/'
-  license :apache
 
   pkg 'hypercli.pkg'
 

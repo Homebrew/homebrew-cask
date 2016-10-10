@@ -6,7 +6,6 @@ cask 'pastebot' do
   url "https://tapbots.net/pastebot#{version.major}/PastebotBeta.zip"
   name 'Pastebot'
   homepage 'http://tapbots.com/pastebot/beta/'
-  license :gratis
 
   app 'Pastebot.app'
 

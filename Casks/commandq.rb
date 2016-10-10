@@ -7,7 +7,6 @@ cask 'commandq' do
           checkpoint: '5e0f2d62c65b64c0fffa677040a4bd02213ed65c7f37908d055b900a4d40e646'
   name 'CommandQ'
   homepage 'https://clickontyler.com/commandq/'
-  license :commercial
 
   app 'CommandQ.app'
 end

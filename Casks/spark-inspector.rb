@@ -7,7 +7,6 @@ cask 'spark-inspector' do
           checkpoint: 'e15b687f8582273670e742a0622c153b41460c79a6c47585defba6dbdc470d8f'
   name 'Spark Inspector'
   homepage 'http://sparkinspector.com/'
-  license :commercial
 
   depends_on macos: '>= :mountain_lion'
 

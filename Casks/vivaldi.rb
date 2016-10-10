@@ -7,7 +7,6 @@ cask 'vivaldi' do
           checkpoint: 'cf246103f9d7482b080542b0b2279563bcc766b3a94886dc1ee87ac90af5417a'
   name 'Vivaldi'
   homepage 'https://vivaldi.com'
-  license :gratis
 
   auto_updates true
 

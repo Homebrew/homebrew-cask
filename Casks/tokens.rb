@@ -7,7 +7,6 @@ cask 'tokens' do
           checkpoint: '44bc6b825238fc5b6ae48b87719e2a21fc43ada018ddcd257fc28c7dd9ca2811'
   name 'Tokens'
   homepage 'http://usetokens.com/'
-  license :closed
 
   app 'Tokens.app'
 end

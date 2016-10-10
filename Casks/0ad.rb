@@ -6,7 +6,6 @@ cask '0ad' do
   url "https://releases.wildfiregames.com/0ad-#{version}-osx64.dmg"
   name '0 A.D.'
   homepage 'https://play0ad.com/'
-  license :oss
 
   app '0ad.app'
 end

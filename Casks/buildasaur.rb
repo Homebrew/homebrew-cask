@@ -7,7 +7,6 @@ cask 'buildasaur' do
           checkpoint: '2c18e38bcbab005714246766e634b0bcf25671958bc80ac09e0c877a516a33fc'
   name 'Buildasaur'
   homepage 'https://github.com/czechboy0/Buildasaur'
-  license :mit
 
   app 'Buildasaur.app'
 end

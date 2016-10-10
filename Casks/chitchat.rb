@@ -7,7 +7,6 @@ cask 'chitchat' do
           checkpoint: '5aab4cfa3ff23c6b9d0706df5deb9cf0c251a272555c57e3b35cdaeb2ba8796e'
   name 'ChitChat'
   homepage 'https://github.com/stonesam92/ChitChat'
-  license :oss
 
   app 'ChitChat.app'
 end

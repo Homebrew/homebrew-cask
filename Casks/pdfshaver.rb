@@ -7,7 +7,6 @@ cask 'pdfshaver' do
           checkpoint: 'a9136fb21812e99c8d7093e9b627faf192d1eda228e52ae51af7e28cf6ef034f'
   name 'PDFShaver'
   homepage 'https://github.com/tparry/PDFShaver.app'
-  license :public_domain
 
   app 'PDFShaver.app'
 end

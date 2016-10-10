@@ -7,7 +7,6 @@ cask 'plotdevice' do
           checkpoint: '4694267b346354a17e45e5a15cd3c108f88bd32c30b328c6273ce3b9d00d9aab'
   name 'PlotDevice'
   homepage 'http://plotdevice.io/'
-  license :oss
 
   app 'PlotDevice.app'
 end

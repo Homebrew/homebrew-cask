@@ -5,7 +5,6 @@ cask 'adobe-digital-editions' do
   url "http://download.adobe.com/pub/adobe/digitaleditions/ADE_#{version}_Installer.dmg"
   name 'Adobe Digital Editions'
   homepage 'https://www.adobe.com/solutions/ebook/digital-editions.html'
-  license :gratis
 
   pkg "Digital Editions #{version} Installer.pkg"
 

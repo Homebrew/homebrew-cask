@@ -6,7 +6,6 @@ cask 'node-profiler' do
   url "https://profiler.oss-cn-hangzhou.aliyuncs.com/node-profiler-v#{version}.pkg"
   name 'node-profiler'
   homepage 'https://alinode.aliyun.com/'
-  license :mit
 
   pkg "node-profiler-v#{version}.pkg"
 

@@ -5,7 +5,6 @@ cask 'sunvox' do
   url "http://www.warmplace.ru/soft/sunvox/sunvox-#{version}.zip"
   name 'SunVox'
   homepage 'http://www.warmplace.ru/soft/sunvox/'
-  license :gratis
 
   depends_on arch:  :x86_64,
              macos: '>= 10.6'

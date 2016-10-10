@@ -7,7 +7,6 @@ cask 'sqleditor' do
           checkpoint: '2e62bb0acf4a3e268a7c1fb20e338522883de41c1a7501e7ad83f4f71f44239f'
   name 'SQLEditor'
   homepage 'https://www.malcolmhardie.com/sqleditor/'
-  license :commercial
 
   app 'SQLEditor.app'
 end

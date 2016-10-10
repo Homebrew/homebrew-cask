@@ -8,7 +8,6 @@ cask 'filebot' do
           checkpoint: 'db948fcf10ec2bf554c46e33caaf26a190f642493d7790f7bb282beb6ec34b56'
   name 'FileBot'
   homepage 'https://www.filebot.net/'
-  license :gpl
 
   app "FileBot_#{version}-brew.app"
   binary "#{appdir}/FileBot_#{version}-brew.app/Contents/MacOS/filebot.sh", target: 'filebot'

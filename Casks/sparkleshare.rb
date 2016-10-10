@@ -6,7 +6,6 @@ cask 'sparkleshare' do
   url "https://bitbucket.org/hbons/sparkleshare/downloads/sparkleshare-mac-#{version}.zip"
   name 'SparkleShare'
   homepage 'https://sparkleshare.org/'
-  license :gpl
 
   app 'SparkleShare.app'
 end

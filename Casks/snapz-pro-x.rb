@@ -7,7 +7,6 @@ cask 'snapz-pro-x' do
           checkpoint: 'ee5f84078bfdb59c9c445844a98e6b26c3f39bdbbc7515af1f85c0fe56208fff'
   name 'Snapz Pro X'
   homepage 'https://www.ambrosiasw.com/utilities/snapzprox/'
-  license :commercial
 
   pkg 'Snapz Pro X.pkg'
 

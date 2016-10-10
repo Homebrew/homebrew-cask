@@ -8,7 +8,6 @@ cask 'breakaway' do
           checkpoint: '073b0d2ddb461bf6abc22c495cd9d8e0693a731d56f1a5949e5d84863c795c5e'
   name 'Breakaway'
   homepage 'http://mutablecode.com/apps/breakaway.html'
-  license :gpl
 
   app "breakaway-#{version}/Breakaway.app"
 end
