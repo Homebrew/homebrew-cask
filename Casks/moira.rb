@@ -1,17 +1,19 @@
 cask 'moira' do
-  version '4.0.0.3'
-  sha256 'e629324916533e9651d6cc0c9318361fbaaa06bb75fb722146ca51cd62251ff1'
+  version '4.0.0.3-patch1'
+  sha256 '230e5423ba41f278c55c716c1f81adef2591f32254acffc538ad8f3449eb6930'
 
   url "https://github.com/macathena/moira/archive/#{version}.zip"
+  appcast 'https://github.com/macathena/moira/releases.atom',
+          checkpoint: 'a1eb4ed6941e0d802be7db18e2a08bf2a09cd45b11795bc37b7d5625c6b47d42'
   name 'MIT Project Athena (Macathena) - Moira for Apple macOS/OS X'
   homepage 'https://github.com/macathena'
   license :unknown
 
-  depends_on formula: ['homebrew/dupes/krb5']
+  depends_on formula: ['hesiod', 'homebrew/dupes/krb5']
 
   binary "moira-#{version}/bin/blanche"
   # Provide a respectful chfn later in the form of a wrapper script
-  binary "moira-#{version}/bin/chfn", target: 'chsh.moira'
+  binary "moira-#{version}/bin/chfn", target: 'chfn.moira'
   binary "moira-#{version}/bin/chpobox"
   # Provide a respectful chsh later in the form of a wrapper script
   binary "moira-#{version}/bin/chsh", target: 'chsh.moira'
@@ -99,6 +101,8 @@ cask 'moira' do
   artifact "moira-#{version}/man/man8/startreg.8", target: '/usr/local/share/man/man8/startreg.8'
   artifact "moira-#{version}/man/man8/update_server.8", target: '/usr/local/share/man/man8/update_server.8'
 
-  caveats 'You MUST use MIT Kerberos as opposed to Apple-provided Heimdal Kerberos.'
-  caveats 'Use `brew link krb5 --force` after installation of homebrew/dupes/krb5.'
+  caveats <<-EOS.undent
+    You MUST use MIT Kerberos as opposed to Apple-provided Heimdal Kerberos.
+    Use `brew link krb5 --force` after installation of homebrew/dupes/krb5.
+  EOS
 end
