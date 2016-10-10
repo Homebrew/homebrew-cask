@@ -6,7 +6,6 @@ cask 'eid-ee' do
   name 'Electronic identity card software for Estonia'
   name 'eID Estonia'
   homepage 'https://installer.id.ee/?lang=eng'
-  license :gpl
 
   pkg 'Open-EID.pkg'
 
