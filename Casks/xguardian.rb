@@ -5,7 +5,6 @@ cask 'xguardian' do
   url 'http://xara.openscanner.cc/download'
   name 'XGuardian'
   homepage 'https://xara.openscanner.cc'
-  license :mit
 
   app 'xguardian.app'
 

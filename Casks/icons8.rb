@@ -8,7 +8,6 @@ cask 'icons8' do
           checkpoint: '2acbe167d4fb9a4f3e46e28bf9a0ca3934b8f55371b90c94bcff1c3ecfc1d4d2'
   name 'Icons8 App'
   homepage 'https://icons8.com/'
-  license :freemium
 
   app 'Icons8.app'
 end

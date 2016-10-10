@@ -7,7 +7,6 @@ cask 'cuttle' do
           checkpoint: 'eb9ed3cb84563876d607d15d5d262e750d5d9210b6ee8ea1621ea0e261b0c646'
   name 'CUTTLE'
   homepage 'https://github.com/oakmac/cuttle'
-  license :mit
 
   app 'Cuttle.app'
 end

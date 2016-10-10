@@ -8,7 +8,6 @@ cask 'dia' do
           checkpoint: '7eaa27518317fea3154dd57dbd257e04371d18599e4447e1ad501c7d275f60a9'
   name 'Dia'
   homepage 'http://dia-installer.de/'
-  license :gpl
 
   depends_on x11: true
 

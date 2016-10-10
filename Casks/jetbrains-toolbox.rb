@@ -5,7 +5,6 @@ cask 'jetbrains-toolbox' do
   url "https://download.jetbrains.com/toolbox/jetbrains-toolbox-#{version}.dmg"
   name 'JetBrains Toolbox'
   homepage 'https://www.jetbrains.com/'
-  license :gratis
 
   app 'JetBrains Toolbox.app'
 end

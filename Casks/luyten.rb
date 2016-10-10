@@ -8,7 +8,6 @@ cask 'luyten' do
           checkpoint: 'a3088d3278005021feb872e4d0f14767da2d32d1db73e851e2d9b3bbadc16ee8'
   name 'Luyten'
   homepage 'https://deathmarine.github.io/Luyten/'
-  license :apache
 
   app 'Luyten.app'
 end

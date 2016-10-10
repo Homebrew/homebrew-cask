@@ -5,7 +5,6 @@ cask 'switchresx' do
   url "https://www.madrau.com/data/switchresx/SwitchResX#{version.major}.zip"
   name 'SwitchResX'
   homepage 'https://www.madrau.com/'
-  license :freemium
 
   prefpane 'SwitchResX.app/Contents/Resources/SwitchResX.prefPane'
 

@@ -5,7 +5,6 @@ cask 'mongochef' do
   url "https://cdn.3t.io/mongochef-core/mac/#{version}/MongoChef.dmg"
   name 'MongoChef'
   homepage 'https://3t.io/mongochef/'
-  license :other
 
   app 'MongoChef.app'
 end

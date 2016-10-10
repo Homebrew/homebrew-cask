@@ -5,7 +5,6 @@ cask 'rekordbox' do
   url "https://rekordbox.com/_app/files/Install_rekordbox_#{version.dots_to_underscores}.pkg.zip"
   name 'rekordbox'
   homepage 'https://rekordbox.com/en/'
-  license :closed
 
   pkg "Install_rekordbox_#{version.dots_to_underscores}.pkg"
 

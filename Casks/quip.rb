@@ -6,7 +6,6 @@ cask 'quip' do
   url "https://d2i1pl9gz4hwa7.cloudfront.net/macosx_#{version}.dmg"
   name 'Quip'
   homepage 'https://quip.com/'
-  license :gratis
 
   app 'Quip.app'
 end

@@ -8,7 +8,6 @@ cask 'abricotine' do
           checkpoint: '1ea84fd733feb1f4bf458b884fa6c3ec46240ee159f002877cc3c1242882e6b6'
   name 'abricotine'
   homepage 'https://abricotine.brrd.fr'
-  license :gpl
 
   app 'Abricotine-darwin-x64/Abricotine.app'
 end

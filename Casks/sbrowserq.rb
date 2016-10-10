@@ -5,7 +5,6 @@ cask 'sbrowserq' do
   url "http://park.geocities.jp/sbrowser_q/SbrowserQ_V#{version}_mac.zip"
   name 'SbrowserQ'
   homepage 'http://park.geocities.jp/sbrowser_q/'
-  license :gratis
 
   app "SbrowserQ_V#{version}_mac/SbrowserQ.app"
   app "SbrowserQ_V#{version}_mac/SbrowserQ_Bundle_Java8.app"

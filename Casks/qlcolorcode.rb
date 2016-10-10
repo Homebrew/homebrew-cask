@@ -7,7 +7,6 @@ cask 'qlcolorcode' do
           checkpoint: '8292b9376d20a419a53be5e87c18da0560c7f5c302a2d47e64d76879b883be1d'
   name 'QLColorCode'
   homepage 'https://github.com/anthonygelibert/QLColorCode'
-  license :oss
 
   depends_on formula: 'highlight'
 

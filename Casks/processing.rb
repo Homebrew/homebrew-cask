@@ -7,7 +7,6 @@ cask 'processing' do
           checkpoint: '02ad612ff327c10b61eda7c06329a9ba5d80db902ba673131ecce4c6d1505b88'
   name 'Processing'
   homepage 'https://processing.org/'
-  license :gpl
 
   app 'Processing.app'
 

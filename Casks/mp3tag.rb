@@ -5,7 +5,6 @@ cask 'mp3tag' do
   url "http://download.mp3tag.de/mp3tagv#{version.no_dots}-MacOSX-Wine.zip"
   name 'MP3TAG'
   homepage 'http://www.mp3tag.de/en'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app "mp3tagv#{version.no_dots}-MacOSX-Wine/Mp3tag.app"
 end

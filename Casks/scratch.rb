@@ -5,7 +5,6 @@ cask 'scratch' do
   url "https://scratch.mit.edu/scratchr2/static/sa/Scratch-#{version}.dmg"
   name 'Scratch'
   homepage 'https://scratch.mit.edu/scratch2download/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   depends_on cask: 'adobe-air'
 

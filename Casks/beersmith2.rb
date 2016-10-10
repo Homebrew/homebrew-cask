@@ -6,7 +6,6 @@ cask 'beersmith2' do
   url "https://s3.amazonaws.com/beersmith2-3/BeerSmith#{version.dots_to_underscores}.dmg"
   name 'BeerSmith2'
   homepage 'http://beersmith.com'
-  license :commercial
 
   app 'BeerSmith2.app'
 end

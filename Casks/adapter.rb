@@ -7,7 +7,6 @@ cask 'adapter' do
           checkpoint: '17c8a441ce835c97f66dbd51dcbad221699360e42808091682ebfec5aed14edc'
   name 'Adapter'
   homepage 'https://www.macroplant.com/adapter/'
-  license :gratis
 
   depends_on macos: '>= :snow_leopard'
 

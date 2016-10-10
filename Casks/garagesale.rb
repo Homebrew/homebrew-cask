@@ -5,7 +5,6 @@ cask 'garagesale' do
   url "https://downloads.iwascoding.com/downloads/GarageSale_#{version}.zip"
   name 'GarageSale'
   homepage 'https://www.iwascoding.com/GarageSale/'
-  license :commercial
 
   app 'GarageSale.app'
 end

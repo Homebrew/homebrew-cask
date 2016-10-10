@@ -7,7 +7,6 @@ cask 'today-scripts' do
           checkpoint: 'b917f66e3d8aff9c43c533d98a09a61978c4122f5b669be6743e61a206398975'
   name 'Today Scripts'
   homepage 'https://github.com/SamRothCA/Today-Scripts'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Today Scripts.app'
 end

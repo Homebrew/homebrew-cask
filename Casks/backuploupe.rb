@@ -7,7 +7,6 @@ cask 'backuploupe' do
           checkpoint: '39c87da8ae335a0f2f314cadf3642c40d875cc59b8a02b718683fd5cfebbfb78'
   name 'BackupLoupe'
   homepage 'http://www.soma-zone.com/BackupLoupe/'
-  license :commercial
 
   app 'BackupLoupe.app'
 end

@@ -8,7 +8,6 @@ cask 'gpodder' do
           checkpoint: '2e66a10eb5778906af6dbcccc6a1e46d9d43e63bb3d8216c9c67a81a5de4e838'
   name 'gPodder'
   homepage 'http://gpodder.org/'
-  license :gpl
 
   app 'gPodder.app'
 end

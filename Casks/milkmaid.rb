@@ -7,7 +7,6 @@ cask 'milkmaid' do
           checkpoint: 'cc637868a5ba18ec3d36e9b72e59200678784646ec7fb1b84a319872c525ff1f'
   name 'MilkMaid'
   homepage 'https://github.com/jgallen23/MilkMaid'
-  license :mit
 
   app 'MilkMaid.app'
 

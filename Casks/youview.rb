@@ -7,7 +7,6 @@ cask 'youview' do
           checkpoint: '37a9df42602c6f4c3a135691e75a30cf8063474df96ce5197b246138146eaa08'
   name 'YouView'
   homepage 'https://mrgeckosmedia.com/applications/info/YouView'
-  license :oss
 
   app 'YouView.app'
 end

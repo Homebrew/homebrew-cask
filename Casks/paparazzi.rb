@@ -7,7 +7,6 @@ cask 'paparazzi' do
           checkpoint: '376d19a4674b030d0b824c7d482bc4ba6af5773df36bbd2578632b5787db6d54'
   name 'Paparazzi!'
   homepage 'https://derailer.org/paparazzi/'
-  license :gpl
 
   app 'Paparazzi!.app'
 end

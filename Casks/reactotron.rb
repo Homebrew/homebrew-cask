@@ -7,7 +7,6 @@ cask 'reactotron' do
           checkpoint: '915a3d36f3dfff24bb82236ad709a39d5abd5537c0290140aa3fce6e2e33e106'
   name 'Reactotron'
   homepage 'https://github.com/reactotron/reactotron'
-  license :mit
 
   app 'Reactotron.app'
 

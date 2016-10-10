@@ -7,7 +7,6 @@ cask 'fluid' do
           checkpoint: 'a4f30ede491c600675f005416f7c76dd2945daeb71d5ecb1f7621bedc0416e30'
   name 'Fluid'
   homepage 'http://fluidapp.com/'
-  license :freemium
 
   depends_on macos: '>= :snow_leopard'
 

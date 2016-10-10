@@ -8,7 +8,6 @@ cask 'hyper' do
           checkpoint: '9cb83c950deb477b1d9c95ebecbdaba3637db29007b2ff279ec4301147426b49'
   name 'Hyper'
   homepage 'https://hyper.is/'
-  license :mit
 
   app 'Hyper.app'
 

@@ -5,7 +5,6 @@ cask 'mamp' do
   url "https://downloads.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}.pkg"
   name 'MAMP'
   homepage 'https://www.mamp.info/'
-  license :freemium
 
   pkg "MAMP_MAMP_PRO_#{version}.pkg"
 

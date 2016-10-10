@@ -7,7 +7,6 @@ cask 'qlab' do
           checkpoint: 'dbdc85c3ec06dac60a1746c3cafb8c49d635fa24b21308c28ccb86b242b38f40'
   name 'QLab'
   homepage 'https://figure53.com/qlab/'
-  license :commercial
 
   app 'QLab.app'
 end

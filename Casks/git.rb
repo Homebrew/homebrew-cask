@@ -18,7 +18,6 @@ cask 'git' do
 
   name 'git-osx-installer'
   homepage 'https://sourceforge.net/projects/git-osx-installer'
-  license :mit
 
   depends_on macos: '>= :snow_leopard'
 

@@ -8,7 +8,6 @@ cask 'copay' do
           checkpoint: '30ffdfb7b3b882be4952711bf3672549655c681c364965845b5f38031c18c0dc'
   name 'Copay'
   homepage 'https://copay.io'
-  license :oss
 
   app 'Copay.app'
 end

@@ -8,7 +8,6 @@ cask 'macdown' do
           checkpoint: '5ddaf175fa2d01fa631675802a747b2a051e9effaaa989c71987b8888ee2de83'
   name 'MacDown'
   homepage 'http://macdown.uranusjr.com/'
-  license :mit
 
   app 'MacDown.app'
   binary "#{appdir}/MacDown.app/Contents/SharedSupport/bin/macdown"

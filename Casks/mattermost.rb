@@ -8,7 +8,6 @@ cask 'mattermost' do
           checkpoint: 'c5e741ba52c803e8f88d341dad0d2b544b3aad863d14b4e2eb240e8800099c34'
   name 'Mattermost'
   homepage 'https://www.mattermost.org/'
-  license :mit
 
   app 'mattermost-desktop-osx/Mattermost.app'
 end

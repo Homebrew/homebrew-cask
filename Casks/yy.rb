@@ -6,7 +6,6 @@ cask 'yy' do
   url "http://yydl.duowan.com/mac/YY/#{version}/YY-#{version}.dmg"
   name 'YY'
   homepage 'http://mac.yy.com/'
-  license :freemium
 
   app 'YY.app'
 end

@@ -7,7 +7,6 @@ cask 'mpfreaker' do
           checkpoint: '1a4dc76d3c4c01cfeb1c66742a2145a7c6134ecfed00c0c758a7dc8a10f8047d'
   name 'MPFreaker'
   homepage 'http://www.lairware.com/mpfreaker/'
-  license :freemium
 
   app 'MPFreaker.app'
 end

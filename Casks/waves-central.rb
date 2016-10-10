@@ -5,7 +5,6 @@ cask 'waves-central' do
   url "http://installers.waves.com/WavesCentral/V#{version}/Install_Waves_Central.dmg"
   name 'Waves Central'
   homepage 'https://www.waves.com/'
-  license :commercial
 
   app 'Waves Central.app'
 end

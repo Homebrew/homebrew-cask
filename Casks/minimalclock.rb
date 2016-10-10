@@ -5,7 +5,6 @@ cask 'minimalclock' do
   url 'http://www.ilovecolorz.net/download/MinimalClockScreenSaver.dmg'
   name 'MinimalClock'
   homepage 'http://ilovecolorz.net/minimalclock/'
-  license :gratis
 
   pkg ' .pkg'
 

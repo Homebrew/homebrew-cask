@@ -5,7 +5,6 @@ cask 'widgetrunner' do
   url "http://db.csail.mit.edu/madden/WidgetRunner/widgetrunner#{version.no_dots}.zip"
   name 'WidgetRunner'
   homepage 'http://db.csail.mit.edu/madden/WidgetRunner/'
-  license :mit
 
   app 'WidgetRunner.app'
 end

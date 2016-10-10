@@ -7,7 +7,6 @@ cask 'wowhead-client' do
           checkpoint: '4b3ecdb41c77fe47de375e19173e98c1642e918d6cd4300aa76b616057cac7e8'
   name 'Wowhead Client'
   homepage 'https://wowhead.com'
-  license :gratis
 
   app 'Wowhead Client.app'
 end

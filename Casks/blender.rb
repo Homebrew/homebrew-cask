@@ -5,7 +5,6 @@ cask 'blender' do
   url "https://download.blender.org/release/Blender#{version.major_minor}/blender-#{version}-OSX_10.6-x86_64.zip"
   name 'Blender'
   homepage 'https://www.blender.org/'
-  license :gpl
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app 'blender.app', target: 'Blender.app'

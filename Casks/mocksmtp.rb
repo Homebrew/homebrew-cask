@@ -5,7 +5,6 @@ cask 'mocksmtp' do
   url 'http://mocksmtpapp.com/MockSmtp.zip'
   name 'MockSMTP'
   homepage 'http://mocksmtpapp.com/'
-  license :commercial
 
   app 'MockSmtp.app'
 end

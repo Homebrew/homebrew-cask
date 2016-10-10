@@ -7,7 +7,6 @@ cask 'fugenschnitzer' do
           checkpoint: '592a295cdda866a0320b4c63d665ed07a7f03a5f44b5bbe649b8a1c5c217f30d'
   name 'fugenschnitzer'
   homepage 'http://fugenschnitzer.sourceforge.net/main_en.html'
-  license :gpl
 
   app 'Fugenschnitzer.app'
 end

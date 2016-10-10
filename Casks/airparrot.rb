@@ -7,7 +7,6 @@ cask 'airparrot' do
           checkpoint: 'bf3c7a9f1f3aca05a01f79f3e3e2b43e6c596c8d1670352e7f8892a0da7ee9d4'
   name 'AirParrot'
   homepage 'https://www.airsquirrels.com/airparrot/'
-  license :commercial
 
   app 'AirParrot 2.app'
 end

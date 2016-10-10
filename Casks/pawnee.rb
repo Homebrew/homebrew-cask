@@ -7,7 +7,6 @@ cask 'pawnee' do
           checkpoint: 'a1d658256d1cf535fd723be42f9e6d4b4e6af478b03c5576315ce18a16b1c717'
   name 'Pawnee'
   homepage 'https://github.com/johansatge/pawnee'
-  license :mit
 
   app 'Pawnee.app'
 end

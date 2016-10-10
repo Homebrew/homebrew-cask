@@ -8,7 +8,6 @@ cask '3mcloudlibrary' do
   name '3M Cloud Library'
   name 'cloudLibrary'
   homepage 'http://www.yourcloudlibrary.com/index.php/en-us/get-the-app/mac'
-  license :apache
 
   app '3MCloudLibrary.app'
 end

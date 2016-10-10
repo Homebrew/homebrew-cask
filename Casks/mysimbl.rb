@@ -8,7 +8,6 @@ cask 'mysimbl' do
           checkpoint: '6a354e1c0e94de679053d68a5b75bea385f79529decdf215905137a8991f5319'
   name 'mySIMBL'
   homepage 'https://github.com/w0lfschild/mySIMBL'
-  license :bsd
 
   conflicts_with cask: 'easysimbl'
 

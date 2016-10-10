@@ -5,7 +5,6 @@ cask 'fog-burner' do
   url 'http://fogburner.tofumatt.com/FogBurner.zip'
   name 'Fog Burner'
   homepage 'http://fogburner.tofumatt.com/'
-  license :oss
 
   depends_on macos: '>= 10.9'
 

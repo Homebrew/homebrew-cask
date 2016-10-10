@@ -7,7 +7,6 @@ cask 'pdfmasher' do
           checkpoint: 'ac03fce02d8d6c6ede8159a0b59e1da5b25cbeb9895ca878081efd1be69ad1ef'
   name 'PdfMasher'
   homepage 'https://www.hardcoded.net/pdfmasher/'
-  license :gpl
 
   app 'PdfMasher.app'
 end

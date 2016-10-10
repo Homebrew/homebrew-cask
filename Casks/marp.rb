@@ -8,7 +8,6 @@ cask 'marp' do
           checkpoint: 'c88ae7e0e0cce3ca564c0a263c2421f57202e52014773c0721b54904356a8432'
   name 'Marp'
   homepage 'https://yhatt.github.io/marp/'
-  license :mit
 
   app 'Marp.app'
 end

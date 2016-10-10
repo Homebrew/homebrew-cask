@@ -5,7 +5,6 @@ cask 'x2goclient' do
   url 'http://code.x2go.org/releases/X2GoClient_latest_macosx.dmg'
   name 'X2Go Client'
   homepage 'http://x2go.org'
-  license :gpl
 
   app 'x2goclient.app'
 end

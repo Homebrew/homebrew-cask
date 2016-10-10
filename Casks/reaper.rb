@@ -7,7 +7,6 @@ cask 'reaper' do
           checkpoint: '2dd0e26ee796983eceabec8ed3f712870113b9bede778133a09c1c6d91b72c42'
   name 'REAPER'
   homepage 'http://www.reaper.fm/'
-  license :commercial
 
   app 'REAPER64.app'
   app 'ReaMote64.app'

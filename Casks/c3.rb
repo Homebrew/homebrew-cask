@@ -7,7 +7,6 @@ cask 'c3' do
   url "https://d2xj26462na9l3.cloudfront.net/c3/C3-#{version}.dmg"
   name 'C3'
   homepage 'https://www.downloadc3.com/'
-  license :gratis
 
   app 'c3.app'
 end

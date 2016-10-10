@@ -7,7 +7,6 @@ cask 'hostr' do
           checkpoint: '5c98bdf298b336c3f61761f0ae0aca5d71e52b2293959508eb0afc611516501d'
   name 'Hostr'
   homepage 'https://hostr.co/'
-  license :gratis
 
   app 'Hostr.app'
 end

@@ -5,7 +5,6 @@ cask 'mkvtools' do
   url "http://www.emmgunn.com/downloads/mkvtools#{version}.zip"
   name 'MKVtools'
   homepage 'http://www.emmgunn.com/mkvtools/mkvtoolshome.html'
-  license :commercial
 
   app "mkvtools#{version}/MKVtools.app"
 end

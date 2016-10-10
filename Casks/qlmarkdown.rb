@@ -7,7 +7,6 @@ cask 'qlmarkdown' do
           checkpoint: '90c2dd6a28f257f169c067ad0f8b24b42cf0edd38955bfe0e629215cf8db74f7'
   name 'QLMarkdown'
   homepage 'https://github.com/toland/qlmarkdown'
-  license :bsd
 
   qlplugin 'QLMarkdown.qlgenerator'
 end

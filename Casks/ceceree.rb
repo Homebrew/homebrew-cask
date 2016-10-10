@@ -6,7 +6,6 @@ cask 'ceceree' do
   url 'https://dl.devmate.com/com.appiculous.Ceceree/Ceceree.zip'
   name 'Ceceree'
   homepage 'https://ceceree.com/'
-  license :commercial
 
   depends_on macos: '>= :yosemite'
 

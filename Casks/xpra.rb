@@ -5,7 +5,6 @@ cask 'xpra' do
   url 'https://www.xpra.org/dists/osx/x86/Xpra.dmg'
   name 'Xpra'
   homepage 'https://www.xpra.org'
-  license :gpl
 
   app 'Xpra.app'
 end

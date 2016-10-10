@@ -7,7 +7,6 @@ cask 'dictunifier' do
           checkpoint: '4145a3908f8a11155f2e99673f6ec99dd7d6825a052f48278d24554fd873bdb5'
   name 'DictUnifier'
   homepage 'https://github.com/jjgod/mac-dictionary-kit/'
-  license :oss
 
   app 'DictUnifier.app'
 end

@@ -7,7 +7,6 @@ cask 'fredm-fuse' do
           checkpoint: '0f03028636031305e1d68311f0c6319adb8ff5516e413d116362344302fba22d'
   name 'Fuse for Mac OS X'
   homepage 'http://fuse-for-macosx.sourceforge.net/'
-  license :gpl
 
   app 'Fuse for Mac OS X/Fuse.app'
 end

@@ -5,7 +5,6 @@ cask 'oki-postscript-drivers' do
   url 'http://belgium.oki.com/Includes/Pages/FileDownload.aspx?id=tcm:125-152412'
   name 'OKI MC860 PS Driver for OSX'
   homepage 'http://belgium.oki.com/support/printer/printer-drivers/detail.aspx?prodid=tcm:125-4613&driverid=tcm:125-152412-16'
-  license :closed
 
   pkg 'OKI PostScript Driver.pkg'
 

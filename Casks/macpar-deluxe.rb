@@ -5,7 +5,6 @@ cask 'macpar-deluxe' do
   url 'https://www.xs4all.nl/~gp/MacPAR_deLuxe/MacPARdeLuxe.dmg'
   name 'MacPAR deLuxe'
   homepage 'https://gp.home.xs4all.nl/Site/MacPAR_deLuxe.html'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'MacPAR deLuxe.app'
 end

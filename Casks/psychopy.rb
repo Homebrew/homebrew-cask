@@ -7,7 +7,6 @@ cask 'psychopy' do
           checkpoint: 'cae3f1e417eeadfe1203dd34a150bca64bc78fea6ae9649491bbc113ed5800da'
   name 'PsychoPy'
   homepage 'https://github.com/psychopy/psychopy'
-  license :oss
 
   app 'PsychoPy2.app'
 end

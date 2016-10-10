@@ -6,7 +6,6 @@ cask 'liclipse' do
   url "https://googledrive.com/host/0BwwQN8QrgsRpLVlDeHRNemw3S1E/LiClipse%20#{version}/liclipse_#{version}_macosx.cocoa.x86_64.dmg"
   name 'LiClipse'
   homepage 'http://www.liclipse.com/'
-  license :commercial
 
   app 'LiClipse.app'
 end

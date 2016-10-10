@@ -5,7 +5,6 @@ cask 'simplemoviex' do
   url 'http://simplemoviex.com/SimpleMovieX/SimpleMovieX.zip'
   name 'SimpleMovieX'
   homepage 'http://simplemoviex.com/SimpleMovieX/'
-  license :freemium
 
   app 'SimpleMovieX.app'
 

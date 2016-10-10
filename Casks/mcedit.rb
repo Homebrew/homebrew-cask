@@ -8,7 +8,6 @@ cask 'mcedit' do
           checkpoint: '496f5992c1dd033e1e4944a5c017ab81310446def236d8cded17725cededfd7e'
   name 'MCEdit-Unified'
   homepage 'https://khroki.github.io/MCEdit-Unified/'
-  license :mit
 
   app 'mcedit.app'
 end

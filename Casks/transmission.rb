@@ -8,7 +8,6 @@ cask 'transmission' do
           checkpoint: '97d7eb25ba4b293ec0948784d0b73c45483a2daa9cd00fcd5e80a9b56107ffc1'
   name 'Transmission'
   homepage 'https://www.transmissionbt.com/'
-  license :gpl
 
   auto_updates true
 

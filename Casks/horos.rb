@@ -5,7 +5,6 @@ cask 'horos' do
   url "https://www.horosproject.org/wp-content/uploads/downloads/Horos#{version}.dmg"
   name 'Horos – Free, open medical image viewer'
   homepage 'https://www.horosproject.org/'
-  license :gpl
 
   app 'Horos.app'
 end

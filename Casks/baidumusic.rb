@@ -6,7 +6,6 @@ cask 'baidumusic' do
   name 'Baidu Music'
   name '百度音乐'
   homepage 'http://music.baidu.com/'
-  license :gratis
 
   app '百度音乐.app'
 end

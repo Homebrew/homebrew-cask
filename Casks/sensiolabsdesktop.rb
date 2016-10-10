@@ -5,7 +5,6 @@ cask 'sensiolabsdesktop' do
   url "http://mac.desktop.sensiolabs.org/SensioLabsDesktop-#{version}.dmg"
   name 'SensioLabsDesktop'
   homepage 'http://desktop.sensiolabs.org'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'SensioLabsDesktop.app'
 

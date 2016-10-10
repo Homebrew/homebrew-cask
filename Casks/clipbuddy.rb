@@ -7,7 +7,6 @@ cask 'clipbuddy' do
           checkpoint: 'bee5f7c78116e833db494fe7157f33838716ff521d72bd7abb7233f46a57e32e'
   name 'ClipBuddy'
   homepage 'http://www.ondesoft.com/clipbuddy_mac/'
-  license :commercial
 
   depends_on macos: '>= :snow_leopard'
 

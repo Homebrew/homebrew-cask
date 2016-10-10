@@ -7,7 +7,6 @@ cask 'isolator' do
           checkpoint: 'ae7c35f74d6d2d4c524f05acf34054490899e288a340f0bc6e5954ff275c1a6a'
   name 'Isolator'
   homepage 'http://willmore.eu/software/isolator/'
-  license :gratis
 
   app 'Isolator.app'
 end

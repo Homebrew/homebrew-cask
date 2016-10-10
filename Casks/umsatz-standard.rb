@@ -5,7 +5,6 @@ cask 'umsatz-standard' do
   url 'https://umsatz-programm.de/ladungen/UmsatzStandard2015.zip'
   name 'Umsatz Standard 2015'
   homepage 'https://umsatz-programm.de'
-  license :freemium
 
   app 'Umsatz Standard 2015.app'
 end

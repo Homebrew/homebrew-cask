@@ -7,7 +7,6 @@ cask 'beacon-scanner' do
           checkpoint: '9d54970c1dd5706a0206a65ea818d3940bb1f74cb31697a12fba974281a20dc7'
   name 'BeaconScanner'
   homepage 'https://github.com/mlwelles/BeaconScanner/'
-  license :mit
 
   app 'Beacon Scanner.app'
 end

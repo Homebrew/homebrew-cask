@@ -8,7 +8,6 @@ cask 'raven' do
           checkpoint: '6f07d82c58161ad3be28bf8362b3e697c73b68869846ca0d7be5ab0a63986d1e'
   name 'Raven'
   homepage 'http://robotlolita.me/raven/'
-  license :mit
 
   app 'Raven.app'
 end

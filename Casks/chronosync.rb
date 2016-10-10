@@ -5,7 +5,6 @@ cask 'chronosync' do
   url 'https://downloads.econtechnologies.com/CS4_Download.dmg'
   name 'ChronoSync'
   homepage 'https://www.econtechnologies.com'
-  license :commercial
 
   pkg 'Install.pkg'
 

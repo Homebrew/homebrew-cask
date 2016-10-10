@@ -7,7 +7,6 @@ cask 'jing' do
           checkpoint: '2bf893728361e8bf5a7a36af4a2c4299c0bd04274e51f6c89affdb1f6df02880'
   name 'Jing'
   homepage 'https://www.techsmith.com/jing.html'
-  license :gratis
 
   app 'Jing.app'
 end

@@ -5,7 +5,6 @@ cask 'pharo' do
   url "http://files.pharo.org/platform/Pharo#{version}-mac.zip"
   name 'Pharo'
   homepage 'https://pharo.org'
-  license :oss
 
   app "Pharo#{version}.app"
 end

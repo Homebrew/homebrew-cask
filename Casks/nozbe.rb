@@ -5,7 +5,6 @@ cask 'nozbe' do
   url "https://files.nozbe.com/#{version.no_dots}/Nozbe.app.zip"
   name 'Nozbe'
   homepage 'https://nozbe.com'
-  license :freemium
 
   app 'Nozbe.app'
 end

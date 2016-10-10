@@ -5,7 +5,6 @@ cask 'screen-blacker' do
   url 'https://github.com/downloads/Figure53/ScreenBlacker/ScreenBlacker.zip'
   name 'Screen Blacker'
   homepage 'https://github.com/Figure53/ScreenBlacker'
-  license :mit
 
   app 'Screen Blacker.app'
 end

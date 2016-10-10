@@ -6,7 +6,6 @@ cask 'sopcast' do
   url "http://download.easetuner.com/download/SopCast-#{version}.dmg"
   name 'SopCast'
   homepage 'http://www.sopcast.org'
-  license :gratis
 
   app 'SopCast.app'
   binary "#{appdir}/SopCast.app/Contents/Resources/binaries/m32/sp-sc-auth"

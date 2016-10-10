@@ -5,7 +5,6 @@ cask 'ilya-birman-typography-layout' do
   url "http://ilyabirman.ru/projects/typography-layout/download/ilya-birman-typolayout-#{version}-mac.dmg"
   name 'Ilya Birman typography layout'
   homepage 'http://ilyabirman.ru/projects/typography-layout/'
-  license :oss
 
   artifact 'Install Ilya Birman Typography Layout.app/Contents/Resources/Layout/Ilya Birman Typography Layout.bundle', target: Pathname.new(File.expand_path('~')).join('Library/Keyboard Layouts/Ilya Birman Typography Layout.bundle')
 

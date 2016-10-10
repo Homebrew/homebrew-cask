@@ -6,7 +6,6 @@ cask 'sogouinput' do
   name 'Sogou Input Method'
   name '搜狗输入法'
   homepage 'http://pinyin.sogou.com/mac/'
-  license :gratis
 
   installer manual: '安装搜狗输入法.app'
 

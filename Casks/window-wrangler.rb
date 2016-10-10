@@ -5,7 +5,6 @@ cask 'window-wrangler' do
   url 'http://mindflow.dk/software/windowwrangler/windowwrangler.dmg'
   name 'Window Wrangler'
   homepage 'http://mindflow.dk/software/windowwrangler/'
-  license :gratis
 
   app 'Window Wrangler.app'
 end

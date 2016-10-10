@@ -7,7 +7,6 @@ cask 'shiba' do
           checkpoint: '1c0cdb6cba3a6ee81b31b72dd17b02465d6b0b457fe276739585ea53fdf85235'
   name 'Shiba'
   homepage 'https://github.com/rhysd/Shiba'
-  license :mit
 
   app 'Shiba-darwin-x64/Shiba.app'
 end

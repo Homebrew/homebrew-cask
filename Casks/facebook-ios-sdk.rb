@@ -5,7 +5,6 @@ cask 'facebook-ios-sdk' do
   url "https://origincache.facebook.com/developers/resources/?id=FacebookSDKs-iOS-#{version}.zip"
   name 'Facebook SDK for iOS'
   homepage 'https://developers.facebook.com/docs/ios'
-  license :other # https://github.com/facebook/facebook-ios-sdk/blob/master/LICENSE
 
   artifact 'AccountKit.framework', target: "#{ENV['HOME']}/Documents/FacebookSDK/AccountKit.framework"
   artifact 'AccountKitStrings.bundle', target: "#{ENV['HOME']}/Documents/FacebookSDK/AccountKitStrings.bundle"

@@ -6,7 +6,6 @@ cask 'amadeus-pro' do
   url 'https://s3.amazonaws.com/AmadeusPro2/AmadeusPro.dmg'
   name 'Amadeus Pro'
   homepage 'http://www.hairersoft.com/pro.html'
-  license :commercial
 
   app 'Amadeus Pro.app'
 end

@@ -5,7 +5,6 @@ cask 'eclipse-ptp' do
   url 'https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/neon/R/eclipse-parallel-neon-R-macosx-cocoa-x86_64.tar.gz&r=1'
   name 'Eclipse for Parallel Application Developers'
   homepage 'https://eclipse.org/'
-  license :eclipse
 
   depends_on macos: '>= :leopard'
   depends_on arch: :x86_64

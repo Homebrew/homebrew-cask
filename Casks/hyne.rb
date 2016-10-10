@@ -7,7 +7,6 @@ cask 'hyne' do
           checkpoint: '66554e3611412debaf31ec9bba874b96b57d635b78a6b1d61c561c4db7e5ca72'
   name 'Hyne'
   homepage 'https://github.com/myst6re/hyne'
-  license :oss
 
   app 'Hyne.app'
 

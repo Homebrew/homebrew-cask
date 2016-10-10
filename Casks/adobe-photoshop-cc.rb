@@ -7,7 +7,6 @@ cask 'adobe-photoshop-cc' do
       cookies:    { 'MM_TRIALS' => '1234' }
   name 'Adobe Photoshop CC'
   homepage 'https://www.adobe.com/products/photoshop.html'
-  license :commercial
 
   preflight do
     language = case MacOS.language

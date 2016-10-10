@@ -8,7 +8,6 @@ cask 'jin' do
           checkpoint: '16c958e1147a8a33c8b702c1aa2f6b112f31f8f93a0b6ec2c0c7b81dca2e32f7'
   name 'Jin'
   homepage 'http://www.jinchess.com/'
-  license :gpl
 
   app 'Jin.app'
 end

@@ -7,7 +7,6 @@ cask 'crunch' do
           checkpoint: 'c025f4a28d7bfd15788ad7ab9e51b63ebf1a790c45c33f09465d9711ce2a47f1'
   name 'Crunch'
   homepage 'https://github.com/chrissimpkins/Crunch'
-  license :mit
 
   app 'Crunch.app'
 end

@@ -5,7 +5,6 @@ cask 'veraport' do
   url 'https://open.citibank.co.kr/3rdParty/wizvera/veraport/down/veraport.pkg'
   name 'VeraPort'
   homepage 'https://open.citibank.co.kr'
-  license :gratis
 
   pkg 'veraport.pkg'
 

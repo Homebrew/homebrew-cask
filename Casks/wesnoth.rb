@@ -8,7 +8,6 @@ cask 'wesnoth' do
           checkpoint: '3cefc3332267dc68bd9fb487ddb6a436360dc0d259507082a1fcba9ad94d3704'
   name 'The Battle for Wesnoth'
   homepage 'https://wesnoth.org/'
-  license :gpl
 
   app 'Wesnoth.app'
 end

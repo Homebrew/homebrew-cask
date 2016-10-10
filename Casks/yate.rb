@@ -8,7 +8,6 @@ cask 'yate' do
           checkpoint: '11f517cd1d874becc4f8706a0c919bc868cf9ad18466219bea385bd940873970'
   name 'Yate'
   homepage 'https://2manyrobots.com/yate/'
-  license :commercial
 
   app 'Yate.app'
 end

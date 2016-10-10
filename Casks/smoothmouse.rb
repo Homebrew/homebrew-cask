@@ -7,7 +7,6 @@ cask 'smoothmouse' do
           checkpoint: '5971898ce809ee4bad6a80918fc30d853f7dc98d88e35a05efa4f2c72b40b073'
   name 'SmoothMouse'
   homepage 'http://smoothmouse.com'
-  license :gratis
 
   pkg 'SmoothMouse.pkg'
 

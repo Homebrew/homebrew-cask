@@ -6,7 +6,6 @@ cask 'pinegrow-web-designer' do
   url "https://pinegrow.s3.amazonaws.com/PinegrowMac.#{version}.dmg"
   name 'Pinegrow Web Designer'
   homepage 'http://pinegrow.com/'
-  license :commercial
 
   app 'Pinegrow Web Designer.app'
 end

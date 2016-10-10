@@ -5,7 +5,6 @@ cask 'basex' do
   url "http://files.basex.org/releases/#{version}/BaseX#{version.no_dots}.app.tar.bz2"
   name 'BaseX'
   homepage 'http://basex.org/'
-  license :bsd
 
   app 'BaseX.app'
 end

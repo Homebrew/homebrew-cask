@@ -5,7 +5,6 @@ cask 'alchemy' do
   url "http://al.chemy.org/files/Alchemy-#{version}.dmg"
   name 'Alchemy'
   homepage 'http://al.chemy.org'
-  license :gpl
 
   app 'Alchemy/Alchemy.app'
 end

@@ -5,7 +5,6 @@ cask 'imagej' do
   url "https://imagej.nih.gov/ij/download/osx/ImageJ#{version.no_dots}.zip"
   name 'ImageJ'
   homepage 'https://imagej.nih.gov/ij/index.html'
-  license :public_domain
 
   depends_on cask: 'java'
   depends_on macos: '>= :mountain_lion'

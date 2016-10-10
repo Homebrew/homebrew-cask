@@ -5,7 +5,6 @@ cask 'bonjour-browser' do
   url 'http://www.tildesoft.com/files/BonjourBrowser.dmg'
   name 'Bonjour Browser'
   homepage 'http://www.tildesoft.com/'
-  license :gratis
 
   app 'Bonjour Browser.app'
 end

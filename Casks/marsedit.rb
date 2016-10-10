@@ -7,7 +7,6 @@ cask 'marsedit' do
           checkpoint: '623bfbb2c102fd41513b4641fcc4a3b0b04927c2f0812539c192c50e57edccc5'
   name 'MarsEdit'
   homepage 'https://red-sweater.com/marsedit/'
-  license :commercial
 
   app 'MarsEdit.app'
 end

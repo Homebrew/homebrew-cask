@@ -5,7 +5,6 @@ cask 'horst' do
   url "http://penck.de/download/horst/zip/#{version}"
   name 'Horst'
   homepage 'http://penck.de/horst/'
-  license :freemium
 
   depends_on macos: '>= :lion'
 

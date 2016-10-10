@@ -5,7 +5,6 @@ cask 'paraphrasis-au' do
   url "http://archive.virtualanalogy.com/Mac/Paraphrasis_#{version.no_dots}.pkg"
   name 'VirtualAnalogy Paraphrasis (AU)'
   homepage 'http://virtualanalogy.com/'
-  license :gpl
 
   pkg "Paraphrasis_#{version.no_dots}.pkg"
 

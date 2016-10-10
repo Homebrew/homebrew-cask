@@ -7,7 +7,6 @@ cask 'sqlexplorer' do
           checkpoint: 'f2188cd9189d4190b70391dcb3b45d311959e6371344136939822f379f19c50f'
   name 'Eclipse SQL Explorer'
   homepage 'http://eclipsesql.sourceforge.net/'
-  license :gpl
 
   app 'SQLExplorer/sqlexplorer.app'
 end

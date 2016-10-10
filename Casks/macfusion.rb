@@ -8,7 +8,6 @@ cask 'macfusion' do
           checkpoint: '66247c8e488caf39992d97b35481a7b24891eff9afb51a57b651dc68ff1190a8'
   name 'Macfusion'
   homepage 'http://macfusionapp.org/'
-  license :apache
 
   depends_on cask: 'sshfs'
 

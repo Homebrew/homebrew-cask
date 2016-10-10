@@ -5,7 +5,6 @@ cask 'airvpn' do
   url "https://airvpn.org/repository/#{version}/airvpn_osx_x64_installer.pkg"
   name 'Air VPN'
   homepage 'https://airvpn.org/macosx/'
-  license :oss
 
   pkg 'airvpn_osx_x64_installer.pkg'
   binary '/Applications/AirVPN.app/Contents/MacOS/AirVPN'

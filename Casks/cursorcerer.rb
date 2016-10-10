@@ -5,7 +5,6 @@ cask 'cursorcerer' do
   url 'http://www.doomlaser.com/downloads/Cursorcerer.zip'
   name 'Cursorcerer'
   homepage 'http://doomlaser.com/cursorcerer-hide-your-cursor-at-will/'
-  license :gratis
 
   prefpane 'Cursorcerer.prefPane'
 end

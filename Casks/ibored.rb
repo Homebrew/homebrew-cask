@@ -5,7 +5,6 @@ cask 'ibored' do
   url "http://files.tempel.org/iBored/iBored-Mac_#{version}.zip"
   name 'iBored'
   homepage 'http://apps.tempel.org/iBored/'
-  license :closed
 
   app 'iBored.app'
 end

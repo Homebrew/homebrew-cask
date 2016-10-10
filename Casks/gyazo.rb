@@ -5,7 +5,6 @@ cask 'gyazo' do
   url "https://files.gyazo.com/setup/Gyazo-#{version}.dmg"
   name 'Nota Gyazo GIF'
   homepage 'https://gyazo.com/'
-  license :other
 
   app 'Gyazo.app'
   app 'Gyazo GIF.app'

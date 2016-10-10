@@ -5,7 +5,6 @@ cask 'gpsdump' do
   url "https://www.gpsdump.no/GpsDumpMac#{version.no_dots}.zip"
   name 'GpsDump'
   homepage 'https://www.gpsdump.no/body_mac.htm'
-  license :gratis
 
   app 'GpsDump.app'
 end

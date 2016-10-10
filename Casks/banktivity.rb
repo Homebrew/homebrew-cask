@@ -6,7 +6,6 @@ cask 'banktivity' do
   url 'https://www.iggsoft.com/banktivity/Banktivity5_Web.dmg'
   name 'Banktivity'
   homepage 'https://www.iggsoftware.com/banktivity'
-  license :commercial
 
   app 'Banktivity 5.app'
 end

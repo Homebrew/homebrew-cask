@@ -6,7 +6,6 @@ cask 'avibrazil-rdm' do
   url "https://avi.alkalay.net/software/RDM/RDM-#{version}.pkg"
   name 'RDM'
   homepage 'https://github.com/avibrazil/RDM'
-  license :gratis
 
   pkg "RDM-#{version}.pkg"
 

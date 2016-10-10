@@ -18,7 +18,6 @@ cask 'appcleaner' do
 
   name 'AppCleaner'
   homepage 'https://www.freemacsoft.net/appcleaner/'
-  license :gratis
 
   depends_on macos: '>= :tiger'
 

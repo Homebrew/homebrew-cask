@@ -5,7 +5,6 @@ cask 'sencha' do
   url "https://cdn.sencha.com/cmd/#{version}/jre/SenchaCmd-#{version}-osx.app.zip"
   name 'Sencha Cmd'
   homepage 'https://www.sencha.com/products/sencha-cmd/'
-  license :freemium
 
   installer script: "SenchaCmd-#{version}-osx.app/Contents/MacOS/JavaApplicationStub",
             args:   ['-Djava.awt.headless=true', '-q', '-dir', "/opt/Sencha/Cmd/#{version}"],

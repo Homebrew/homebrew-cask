@@ -6,7 +6,6 @@ cask 'blockblock' do
   url "https://bitbucket.org/objective-see/deploy/downloads/BlockBlock_#{version}.zip"
   name 'BlockBlock'
   homepage 'https://objective-see.com/products/blockblock.html'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   installer manual: 'BlockBlock_Installer.app'
 

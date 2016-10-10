@@ -5,7 +5,6 @@ cask 'treemaker' do
   url 'http://www.langorigami.com/files/articles/TreeMaker.dmg'
   name 'TreeMaker'
   homepage 'http://www.langorigami.com/article/treemaker'
-  license :gpl
 
   app "TreeMaker #{version.major}.app"
 end

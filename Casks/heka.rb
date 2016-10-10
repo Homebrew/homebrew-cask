@@ -7,7 +7,6 @@ cask 'heka' do
           checkpoint: '0fd98cf518a904404c8d9b07a4b1e04138ce07d39dd6e71b73a7ae7ed847cd58'
   name 'Mozilla heka'
   homepage 'https://github.com/mozilla-services/heka'
-  license :mpl
 
   pkg "heka-#{version.dots_to_underscores}-darwin-amd64.pkg"
 

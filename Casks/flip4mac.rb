@@ -5,7 +5,6 @@ cask 'flip4mac' do
   url "https://www.telestream.net/download-files/flip4mac/#{version.sub(%r{^(\d+)\.(\d+).*$}, '\1-\2')}/Flip4Mac-#{version}.dmg"
   name 'Flip4Mac'
   homepage 'https://www.telestream.net/flip4mac/'
-  license :commercial
 
   depends_on macos: '>= :snow_leopard'
 

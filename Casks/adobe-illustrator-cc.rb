@@ -7,7 +7,6 @@ cask 'adobe-illustrator-cc' do
       cookies:    { 'MM_TRIALS' => '1234' }
   name 'Adobe Illustrator CC'
   homepage 'https://www.adobe.com/products/illustrator.html'
-  license :commercial
 
   preflight do
     language = case MacOS.language

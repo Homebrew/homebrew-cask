@@ -8,7 +8,6 @@ cask 'iordning' do
   name 'iOrdning'
   name 'Economacs'
   homepage 'https://aderstedtsoftware.com/'
-  license :commercial
 
   app 'iOrdning.app'
 end

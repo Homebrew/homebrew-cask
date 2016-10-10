@@ -5,7 +5,6 @@ cask 'protant' do
   url "http://www.laurenceanthony.net/software/protant/releases/ProtAnt#{version.no_dots}/ProtAnt.zip"
   name 'ProtAnt'
   homepage 'http://www.laurenceanthony.net/software/protant'
-  license :gratis
 
   app 'ProtAnt.app'
 end

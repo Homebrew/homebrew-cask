@@ -5,7 +5,6 @@ cask 'ortho-robot' do
   url 'http://stabyourself.net/dl.php?file=orthorobot/orthorobot-osx.zip'
   name 'Ortho Robot'
   homepage 'http://stabyourself.net/orthorobot/'
-  license :oss
 
   app 'Ortho Robot.app'
 end

@@ -7,7 +7,6 @@ cask 'iteleport-connect' do
           checkpoint: 'e7df5301267b725512751f09ecd0a260586044e2b1330b4ac7ea3a8c8d5257ff'
   name 'iTeleport Connect'
   homepage 'http://www.iteleportmobile.com/connect'
-  license :gratis
 
   auto_updates true
   depends_on macos: '>= :snow_leopard'

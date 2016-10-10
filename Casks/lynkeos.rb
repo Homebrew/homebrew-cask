@@ -7,7 +7,6 @@ cask 'lynkeos' do
           checkpoint: '729ecd6e018278a11d8958e260bb0229382446c2c91198e29fd23b97daa7b5a5'
   name 'Lynkeos'
   homepage 'http://lynkeos.sourceforge.net/'
-  license :gpl
 
   app "Lynkeos-App-#{version.dots_to_hyphens}/Lynkeos.app"
 end

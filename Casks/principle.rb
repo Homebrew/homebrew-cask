@@ -8,7 +8,6 @@ cask 'principle' do
           checkpoint: 'b29797807d5f46132632e0d92c23ee3e176afa43c12c0881f826bfc7eb2deace'
   name 'Principle'
   homepage 'http://principleformac.com/'
-  license :commercial
 
   app 'Principle.app'
 end

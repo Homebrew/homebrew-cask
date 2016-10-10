@@ -5,7 +5,6 @@ cask 'xccello' do
   url 'http://lingsdesigns.com/xccello/files/Xccello.dmg'
   name 'Xccello'
   homepage 'http://lingsdesigns.com/xccello/'
-  license :unknown
 
   app 'Xccello.app'
 end

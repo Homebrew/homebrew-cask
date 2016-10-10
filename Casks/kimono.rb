@@ -6,7 +6,6 @@ cask 'kimono' do
   url 'https://s3.amazonaws.com/kimono-desktop-releases/v1.0.5/Kimono.app.zip'
   name 'Kimono'
   homepage 'https://www.kimonolabs.com/'
-  license :unknown
 
   app 'Kimono.app'
 end

@@ -6,7 +6,6 @@ cask 'dragthing' do
   url "https://s3.amazonaws.com/tlasystems/DragThing-#{version}.dmg"
   name 'DragThing'
   homepage 'http://www.dragthing.com'
-  license :freemium
 
   app 'DragThing.app'
 end

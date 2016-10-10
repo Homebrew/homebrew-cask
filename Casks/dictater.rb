@@ -8,7 +8,6 @@ cask 'dictater' do
           checkpoint: '4b76ebc3e9028414dbd22a2928dd2633c27a1ae75e6eec6fa7f8dd5f912b21aa'
   name 'Dictater'
   homepage 'https://nosrac.github.io/Dictater/'
-  license :mit
 
   app 'Dictater.app'
 end

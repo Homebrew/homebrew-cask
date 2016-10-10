@@ -8,7 +8,6 @@ cask 'munki' do
           checkpoint: 'bb38df0b01ef55cf51bfc6ec6fff2750dc8740c6fc662ee6d118efeba82176ba'
   name 'Munki'
   homepage 'https://www.munki.org/munki/'
-  license :apache
 
   pkg "munkitools-#{version}.pkg"
 

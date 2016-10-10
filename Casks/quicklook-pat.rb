@@ -7,7 +7,6 @@ cask 'quicklook-pat' do
           checkpoint: 'eb2ecca2f479d5c81317810ec81c13ec47afa5bb3a553d4eb05c5c34768ef4eb'
   name 'Adobe Photoshop Patterns Quicklook Plugin'
   homepage 'https://github.com/pixelrowdies/quicklook-pat'
-  license :gratis
 
   pkg 'PatternQuickLook.pkg'
 

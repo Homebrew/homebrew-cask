@@ -8,7 +8,6 @@ cask 'pphelper' do
   name 'pphelper'
   name 'pp助手'
   homepage 'http://pro.25pp.com/pp_mac_ios'
-  license :gratis
 
   app 'pp助手.app'
 end

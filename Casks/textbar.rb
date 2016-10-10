@@ -7,7 +7,6 @@ cask 'textbar' do
           checkpoint: 'e2b3c14cbdbddeb614d0cd7e080e19f12623450a6955aa3b676b48f9eb2d78b0'
   name 'TextBar'
   homepage 'http://www.richsomerfield.com/apps/'
-  license :closed
 
   depends_on macos: '>= :mountain_lion'
   depends_on arch: :x86_64

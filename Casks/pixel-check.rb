@@ -5,7 +5,6 @@ cask 'pixel-check' do
   url "http://macguitar.me/apps/pixelcheck/PXC#{version}.zip"
   name 'PiXel Check'
   homepage 'http://macguitar.me/apps/pixelcheck/'
-  license :gratis
 
   app "PiXel Check #{version}/PiXel Check.app"
 end

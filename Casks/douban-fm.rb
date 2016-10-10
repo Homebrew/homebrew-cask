@@ -7,7 +7,6 @@ cask 'douban-fm' do
           checkpoint: '08e4664256c13f6458d2e6db82033d9cee1584084f4a01eab91b89022cd50ac3'
   name 'Douban FM'
   homepage 'https://github.com/cyrilis/Douban-FM-Express'
-  license :mit
 
   app 'Douban FM.app'
 end

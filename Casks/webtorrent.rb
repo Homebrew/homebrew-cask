@@ -8,7 +8,6 @@ cask 'webtorrent' do
           checkpoint: '46813ac46b08ec5ff387164f52fd9a134e2bee2491de7a3569a323cfe7d2c62d'
   name 'WebTorrent Desktop'
   homepage 'https://webtorrent.io/desktop'
-  license :mit
 
   app 'WebTorrent.app'
 

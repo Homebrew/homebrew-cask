@@ -5,7 +5,6 @@ cask 'toodledo' do
   url 'https://www.toodledo.com/tools/Toodledo.dmg'
   name 'Toodledo Mac Menu Bar App'
   homepage 'https://www.toodledo.com/tools/mac_menubar.php'
-  license :gratis
 
   app 'Toodledo.app'
 end

@@ -5,7 +5,6 @@ cask 'stack-exchange-notifier' do
   url "https://hewgill.com/senotifier/stack-exchange-notifier-#{version}.dmg"
   name 'Stack Exchange Notifier'
   homepage 'https://hewgill.com/senotifier/'
-  license :bsd
 
   app 'Stack Exchange Notifier.app'
 end

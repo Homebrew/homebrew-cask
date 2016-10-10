@@ -5,7 +5,6 @@ cask 'cineplay' do
   url "https://www.digitalrebellion.com/download/cineplay?version=#{version.no_dots}"
   name 'CinePlay'
   homepage 'https://www.digitalrebellion.com/cineplay/'
-  license :commercial
 
   pkg 'Install CinePlay.pkg'
 

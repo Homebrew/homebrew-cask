@@ -5,7 +5,6 @@ cask 'codebox' do
   url 'https://www.codebox.io/download/mac'
   name 'Codebox'
   homepage 'https://www.codebox.io'
-  license :apache
 
   app 'Codebox.app'
 end

@@ -7,7 +7,6 @@ cask 'slimbatterymonitor' do
           checkpoint: '8aa20ac38c28f3a2118653d4cb71ee33a56bfcc95954202eb440dbb7a0bd8738'
   name 'SlimBatteryMonitor'
   homepage 'http://www.orange-carb.org/SBM/'
-  license :gratis
 
   app 'SlimBatteryMonitor.app'
 end

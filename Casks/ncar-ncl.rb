@@ -15,7 +15,6 @@ cask 'ncar-ncl' do
   name 'NCAR Command Language'
   name 'ncl'
   homepage 'https://www.ncl.ucar.edu/'
-  license :oss
 
   depends_on cask: 'xquartz'
   depends_on formula: 'gcc'

@@ -8,7 +8,6 @@ cask 'vpaint' do
           checkpoint: '1acbd6f7b3b66e2e10fe2cc38a8a2051cd6d198e4a3593bfa2dc74d081dc009d'
   name 'VPaint'
   homepage 'https://www.vpaint.org/'
-  license :mit
 
   app 'vpaint.app'
 

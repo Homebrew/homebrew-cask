@@ -6,7 +6,6 @@ cask 'short-menu' do
   url 'https://dl.devmate.com/com.floschliep.Short-Menu/ShortMenu.zip'
   name 'Short Menu'
   homepage 'https://appiculous.com/short-menu-mac/'
-  license :commercial
 
   app 'Short Menu.app'
 

@@ -7,7 +7,6 @@ cask 'pngcommentator' do
           checkpoint: '191e22bf5f7aa404eb58ab911c4f77fc43902bc8f3812e63b846059049401e43'
   name 'PNGCommentator'
   homepage 'http://www.echomist.co.uk/software/PNGCommentator.html'
-  license :gratis
 
   app 'PNGCommentator.app'
 end

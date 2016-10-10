@@ -8,7 +8,6 @@ cask 'gitbox' do
           checkpoint: 'd22fec338fe94f98556990084e8f11ab1c4378e8d4b6b2430544a857adc6215e'
   name 'Gitbox'
   homepage 'http://gitboxapp.com/'
-  license :commercial
 
   app 'Gitbox.app'
 

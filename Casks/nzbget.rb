@@ -8,7 +8,6 @@ cask 'nzbget' do
           checkpoint: 'f84a8fe899e4ff163afdb81af13bb7572f8070b5b9289a6fca0606dcb624d326'
   name 'NZBGet'
   homepage 'http://nzbget.net'
-  license :gpl
 
   app 'NZBGet.app'
 

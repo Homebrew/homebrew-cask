@@ -8,7 +8,6 @@ cask 'sparkbox' do
           checkpoint: '6651d8423c428326e9b213812cd24b261f97f91b74574888afde249f34ed5333'
   name 'Sparkbox'
   homepage 'http://www.icyblaze.com/sparkbox'
-  license :commercial
 
   depends_on macos: '>= :lion'
 

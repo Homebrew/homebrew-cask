@@ -8,7 +8,6 @@ cask 'baiducloud' do
   name 'Baidu Yun Tong Bu Pan'
   name '百度云同步盘'
   homepage 'https://pan.baidu.com'
-  license :gratis
 
   app '百度云同步盘.app'
 

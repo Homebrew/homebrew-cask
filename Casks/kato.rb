@@ -5,7 +5,6 @@ cask 'kato' do
   url 'http://labs.kato.im/Kato.pkg'
   name 'Kato'
   homepage 'https://app.kato.im/'
-  license :closed
 
   pkg 'Kato.pkg'
 

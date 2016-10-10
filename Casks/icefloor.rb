@@ -5,7 +5,6 @@ cask 'icefloor' do
   url "http://www.hanynet.com/icefloor-#{version}.zip"
   name 'IceFloor'
   homepage 'http://www.hanynet.com/icefloor/'
-  license :oss
 
   app 'IceFloor.app'
 end

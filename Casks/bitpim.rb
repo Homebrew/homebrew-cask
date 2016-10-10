@@ -8,7 +8,6 @@ cask 'bitpim' do
           checkpoint: '66382187ace01bc30d808ef6b6654ed241d3bb90c21021dbf48c11cea5ea1b89'
   name 'BitPim'
   homepage 'http://www.bitpim.org/'
-  license :gpl
 
   depends_on macos: '>= :tiger'
 

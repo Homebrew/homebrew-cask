@@ -8,7 +8,6 @@ cask 'boostnote' do
           checkpoint: 'a914090f67b50051a38b48d7b10db142b821efa94286486596a09fc66489abb4'
   name 'Boostnote'
   homepage 'https://b00st.io'
-  license :gpl
 
   depends_on macos: '>= :mavericks'
 

@@ -6,7 +6,6 @@ cask 'bittorrent' do
   url 'https://download-new.utorrent.com/os/osx/track/stable/endpoint/btmac'
   name 'BitTorrent'
   homepage 'https://www.bittorrent.com'
-  license :gratis
 
   installer manual: 'Bittorrent.app'
 

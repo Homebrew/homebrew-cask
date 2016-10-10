@@ -5,7 +5,6 @@ cask 'screencloud' do
   url "https://screencloud.net/files/mac/ScreenCloud-#{version}.dmg"
   name 'ScreenCloud'
   homepage 'https://screencloud.net/'
-  license :gratis
 
   app 'ScreenCloud.app'
 end

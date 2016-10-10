@@ -7,7 +7,6 @@ cask 'chessx' do
           checkpoint: '187624a5facb26d8a25469c10df522977b166f22de979bb9d2889efb2619c7c8'
   name 'ChessX'
   homepage 'http://chessx.sourceforge.net/'
-  license :gpl
 
   pkg 'chessx-installer.mpkg'
 

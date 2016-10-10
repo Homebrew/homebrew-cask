@@ -8,7 +8,6 @@ cask 'qnapi' do
           checkpoint: 'a1e48985ce0947d205899e896a1659ce1f4e4ba55d21b5ce59f37bb09bfe9d35'
   name 'QNapi'
   homepage 'https://qnapi.github.io/'
-  license :gpl
 
   app 'QNapi.app'
 end

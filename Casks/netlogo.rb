@@ -5,7 +5,6 @@ cask 'netlogo' do
   url "https://ccl.northwestern.edu/netlogo/#{version}/NetLogo-#{version}.dmg"
   name 'NetLogo'
   homepage 'https://ccl.northwestern.edu/netlogo/'
-  license :gpl
 
   suite "NetLogo #{version}"
 

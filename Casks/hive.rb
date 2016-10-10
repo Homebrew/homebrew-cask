@@ -8,7 +8,6 @@ cask 'hive' do
           checkpoint: '910983133c5e81dbb151627938adc2cfef7e0a53d7c72609499b035e9f482ca5'
   name 'Hive'
   homepage 'https://mac.hivewallet.com'
-  license :gpl
 
   app 'Hive.app'
 

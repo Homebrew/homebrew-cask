@@ -5,7 +5,6 @@ cask 'sync' do
   url 'https://www.sync.com/download/apple/Sync.dmg'
   name 'Sync'
   homepage 'https://www.sync.com/'
-  license :gratis
 
   app 'Sync.app'
 end

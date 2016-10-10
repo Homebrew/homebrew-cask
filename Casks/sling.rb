@@ -8,7 +8,6 @@ cask 'sling' do
           checkpoint: 'de5d79e53e3360f27b4574c426e3662cb93efabd78f3026ed1c8639353e64d8b'
   name 'Sling TV'
   homepage 'http://www.sling.com/'
-  license :gratis
 
   app 'Sling.app'
 

@@ -7,7 +7,6 @@ cask 'butler' do
           checkpoint: '22df27df37fa0b45e7bbef6d961a8b7e020041d441a9081e93a53269155420c8'
   name 'Butler'
   homepage 'https://manytricks.com/butler/'
-  license :commercial
 
   auto_updates true
 

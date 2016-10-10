@@ -7,7 +7,6 @@ cask 'gmail-notifier' do
           checkpoint: 'd233f4257fe1131fafbe6b7387422b33e00e80d8bb75958ac113a6a20d40e0a4'
   name 'Gmail Notifier'
   homepage 'https://github.com/jashephe/Gmail-Notifier'
-  license :bsd
 
   app 'Gmail Notifier.app'
 end

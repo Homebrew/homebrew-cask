@@ -5,7 +5,6 @@ cask 'mi' do
   url "https://www.mimikaki.net/download/mi#{version}.dmg"
   name 'Mi'
   homepage 'https://www.mimikaki.net/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'mi.app'
 end

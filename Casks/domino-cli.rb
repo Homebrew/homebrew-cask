@@ -5,7 +5,6 @@ cask 'domino-cli' do
   url 'https://app.dominodatalab.com/assets/cli/default/domino-install-mac.dmg'
   name 'Domino Client'
   homepage 'https://www.dominodatalab.com/'
-  license :unknown
 
   auto_updates true
 

@@ -7,7 +7,6 @@ cask 'thisservice' do
           checkpoint: 'ceba6331ef9bcc0160f1acf09edf7c4d6325c6ac5aca63469e0477825b65ef51'
   name 'ThisService'
   homepage 'http://wafflesoftware.net/thisservice/'
-  license :bsd
 
   app 'ThisService.app'
 end

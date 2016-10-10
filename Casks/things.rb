@@ -8,7 +8,6 @@ cask 'things' do
           checkpoint: 'c8720881d183baea1601339cc80cf24c1ecab9c5d05b2d0735f784a46a5f98cc'
   name 'Things'
   homepage 'https://culturedcode.com/things/'
-  license :commercial
 
   app 'Things.app'
 

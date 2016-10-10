@@ -7,7 +7,6 @@ cask 'jbidwatcher' do
           checkpoint: '8c77c9c8c3b057dc796441fec033235f659ac91a60362b6701cf16734342c8c2'
   name 'JBidwatcher'
   homepage 'https://www.jbidwatcher.com'
-  license :cc
 
   app 'JBidwatcher.app'
 end

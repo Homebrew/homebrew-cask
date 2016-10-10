@@ -5,7 +5,6 @@ cask 'pokerstars' do
   url 'https://www.pokerstars.com/PokerStars.app.zip'
   name 'PokerStars'
   homepage 'https://www.pokerstars.com/'
-  license :freemium
 
   auto_updates true
 

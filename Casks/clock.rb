@@ -6,7 +6,6 @@ cask 'clock' do
   url "https://github.com/downloads/zachwaugh/Clock.app/Clock-#{version}.zip"
   name 'Clock'
   homepage 'http://zachwaugh.me/clock/'
-  license :oss
 
   app 'Clock.app'
 end

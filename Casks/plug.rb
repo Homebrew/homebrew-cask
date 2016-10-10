@@ -13,7 +13,6 @@ cask 'plug' do
 
   name 'Plug'
   homepage 'https://www.plugformac.com/'
-  license :gratis
 
   app 'Plug.app'
 end

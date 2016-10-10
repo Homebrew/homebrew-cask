@@ -8,7 +8,6 @@ cask 'gephi' do
           checkpoint: 'd1feebc671a218ea171e3c8c521cc6450e09d556f29a086649c94f4339e6e1e5'
   name 'Gephi'
   homepage 'https://gephi.github.io/'
-  license :oss
 
   app 'Gephi.app'
 end

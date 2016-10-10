@@ -11,7 +11,6 @@ cask 'bitcoin-xt' do
           checkpoint: '843d6ef3717eaf20b2e88f78e3eacae10dc745a0c134f34187acfdbfcfdb4d8d'
   name 'Bitcoin XT'
   homepage 'https://bitcoinxt.software/'
-  license :mit
 
   conflicts_with cask: 'bitcoin-core'
 

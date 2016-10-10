@@ -7,7 +7,6 @@ cask 'react-native-debugger' do
           checkpoint: 'c98d7a18b9b64a27fbbaebeb48cb1bdf8bc302be9b3c7a36d298793f1c6198b6'
   name 'React Native Debugger'
   homepage 'https://github.com/jhen0409/react-native-debugger'
-  license :mit
 
   app 'React Native Debugger.app'
 end

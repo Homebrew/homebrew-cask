@@ -7,7 +7,6 @@ cask 'arrsync' do
           checkpoint: 'f7c57bd1384d7e7cac02ba47a2c0da78691f6045ff17c1b2c6f3642072658515'
   name 'arRsync'
   homepage 'http://arrsync.sourceforge.net'
-  license :gpl
 
   app 'arRsync.app'
 end

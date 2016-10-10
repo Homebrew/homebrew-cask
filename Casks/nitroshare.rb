@@ -5,7 +5,6 @@ cask 'nitroshare' do
   url "https://launchpad.net/nitroshare/0.3/#{version}/+download/nitroshare-#{version}-osx.dmg"
   name 'NitroShare'
   homepage 'https://launchpad.net/nitroshare'
-  license :gpl
 
   app 'NitroShare.app'
 end

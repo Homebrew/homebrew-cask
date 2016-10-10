@@ -7,7 +7,6 @@ cask 'schnapps' do
           checkpoint: '9d8006fdd5db72e9f79ee2814bb794c4aa775710243bf5f96655bfad562664f0'
   name 'Schnapps'
   homepage 'http://schnappsformac.com/'
-  license :commercial
 
   app 'Schnapps.app'
 

@@ -8,7 +8,6 @@ cask 'hostbuddy' do
           checkpoint: '5374460f8275768f75986c50d0a7a207bb259638b54fd9f0bf7795611d084606'
   name 'Hostbuddy'
   homepage 'https://clickontyler.com/hostbuddy/'
-  license :commercial
 
   app 'Hostbuddy.app'
 end

@@ -7,7 +7,6 @@ cask 'trayplay' do
           checkpoint: '0a9f111bef597bfa7f800a1f7d016049d9f59bb207d0e0d1c04e34d35d18dd66'
   name 'TrayPlay'
   homepage 'https://mborgerson.com/trayplay'
-  license :gpl
 
   app 'TrayPlay.app'
 end

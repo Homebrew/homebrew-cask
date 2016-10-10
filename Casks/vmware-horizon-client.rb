@@ -5,7 +5,6 @@ cask 'vmware-horizon-client' do
   url "https://download3.vmware.com/software/view/viewclients/CART16Q3/VMware-Horizon-Client-#{version}.dmg"
   name 'VMware Horizon Client'
   homepage 'https://www.vmware.com/'
-  license :gratis
 
   app 'VMware Horizon Client.app'
 end

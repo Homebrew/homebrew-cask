@@ -5,7 +5,6 @@ cask 'superbeam' do
   url 'http://superbe.am/download/5163'
   name 'SuperBeam'
   homepage 'http://superbe.am/'
-  license :gratis
 
   app 'SuperBeam.app'
 end

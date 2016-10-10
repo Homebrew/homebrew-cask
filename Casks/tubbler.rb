@@ -7,7 +7,6 @@ cask 'tubbler' do
           checkpoint: '332992e2232a2bfe6a207493f7ef6b97e1c5044d8d1e68b60bc9f9f2f0f5b26a'
   name 'Tubbler'
   homepage 'http://www.celmaro.com/tubbler'
-  license :gratis
 
   app 'Tubbler.app'
 end

@@ -8,7 +8,6 @@ cask 'cumulus' do
           checkpoint: '8ad60dd31679946c1c03a8d6afa4b6a14fa45760b98fb06924e2ed4491790c54'
   name 'Cumulus'
   homepage 'https://gillesdemey.github.io/Cumulus/'
-  license :oss
 
   app 'Cumulus.app'
 

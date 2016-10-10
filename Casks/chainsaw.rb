@@ -5,7 +5,6 @@ cask 'chainsaw' do
   url 'https://logging.apache.org/chainsaw/webstart/chainsaw.dmg'
   name 'Chainsaw'
   homepage 'https://logging.apache.org/chainsaw/'
-  license :apache
 
   depends_on arch: :ppc
 

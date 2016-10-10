@@ -7,7 +7,6 @@ cask 'speedy' do
           checkpoint: '6b0638d63dd078a73c3ffd8ae2a625123d52d9a30c4f220676aae8eb36718707'
   name 'Speedy'
   homepage 'http://www.apimac.com/mac/speedy/'
-  license :commercial
 
   app 'Speedy.app'
 end

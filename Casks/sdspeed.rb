@@ -5,7 +5,6 @@ cask 'sdspeed' do
   url "http://www.flagsoft.com/cmswp/wp-content/uploads/2013/03/sdspeed-#{version}.zip"
   name 'sdspeed'
   homepage 'https://www.flagsoft.com/cmswp/en/products/sdspeed-sd-card-memory-speed-test/'
-  license :gpl
 
   app 'sdspeed.app'
 end

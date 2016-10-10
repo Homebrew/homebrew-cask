@@ -7,7 +7,6 @@ cask 'monu' do
           checkpoint: '862cec6bc7b0b779f7c8266de779bd270ae08f39b39b79912d2b616e269115f1'
   name 'Monu'
   homepage 'https://github.com/maxogden/monu'
-  license :mit
 
   app 'Monu.app'
 end

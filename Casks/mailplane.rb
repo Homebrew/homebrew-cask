@@ -5,7 +5,6 @@ cask 'mailplane' do
   url 'http://update.mailplaneapp.com/mailplane_3.php'
   name 'Mailplane'
   homepage 'http://mailplaneapp.com'
-  license :commercial
 
   app 'Mailplane 3.app'
 

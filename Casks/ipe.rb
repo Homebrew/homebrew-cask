@@ -6,7 +6,6 @@ cask 'ipe' do
   url "https://dl.bintray.com/otfried/generic/ipe/#{version.major_minor}/ipe-#{version}-mac.dmg"
   name 'Ipe'
   homepage 'http://ipe.otfried.org/'
-  license :gpl
 
   app 'Ipe.app'
 

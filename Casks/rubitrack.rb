@@ -7,7 +7,6 @@ cask 'rubitrack' do
           checkpoint: 'e360c5fcdbc5d7add4941360999e8b914559d4ab9e4abec4a2ac058037b6a684'
   name 'rubiTrack'
   homepage 'https://www.rubitrack.com/'
-  license :commercial
 
   depends_on macos: '>= :yosemite'
   depends_on arch: :x86_64

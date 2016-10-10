@@ -5,7 +5,6 @@ cask 'logitech-harmony' do
   url "https://cdn-cx-images.dynamite.myharmony.com/software/LogitechHarmonyRemoteSoftware#{version}-OSX.dmg"
   name 'Logitech Harmony Remote Software'
   homepage 'https://www.myharmony.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'LogitechRemoteSoftware.pkg'
 

@@ -7,7 +7,6 @@ cask 'downie' do
           checkpoint: '77bda9c8d2db9891c8c8eda3909183cf9c2be7b5f3811e9296d3bc60a8b7b073'
   name 'Downie'
   homepage 'https://software.charliemonroe.net/downie.php'
-  license :commercial
 
   depends_on macos: '>= :yosemite'
 

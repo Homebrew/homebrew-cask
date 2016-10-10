@@ -8,7 +8,6 @@ cask 'liri-browser' do
           checkpoint: '45f8016ad9e5023a21ed430111f62701cc24699a51276d814a98c575488b6597'
   name 'Liri Browser'
   homepage 'http://liriproject.me/browser/'
-  license :gpl
 
   app 'Liri Browser.app'
 end

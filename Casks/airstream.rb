@@ -6,7 +6,6 @@ cask 'airstream' do
   url 'https://s3-us-west-2.amazonaws.com/airstream-clients/mac/airstream-mac.dmg'
   name 'AirStream'
   homepage 'http://airstream.io/download/'
-  license :gratis
 
   app 'AirStream.app'
 

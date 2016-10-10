@@ -5,7 +5,6 @@ cask 'xscreensaver' do
   url "https://www.jwz.org/xscreensaver/xscreensaver-#{version}.dmg"
   name 'XScreenSaver'
   homepage 'https://www.jwz.org/xscreensaver/'
-  license :bsd
 
   screen_saver 'Screen Savers/Abstractile.saver'
   screen_saver 'Screen Savers/Anemone.saver'

@@ -7,7 +7,6 @@ cask 'codebug' do
           checkpoint: '81f2e43713dfca05e22a81da84011b2264cf09ec8453e3cc601bff8f103fe8b9'
   name 'Codebug'
   homepage 'http://www.codebugapp.com/'
-  license :commercial
 
   app 'Codebug.app'
 end

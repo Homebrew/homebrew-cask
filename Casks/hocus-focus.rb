@@ -7,7 +7,6 @@ cask 'hocus-focus' do
           checkpoint: '3757afb32c1a6859edbfde3c09affd115a6e3742017787fea6dfd333a2114326'
   name 'Hocus Focus'
   homepage 'http://hocusfoc.us/'
-  license :gratis
 
   app 'Hocus Focus.app'
 

@@ -6,7 +6,6 @@ cask 'cliqz' do
   url "http://repository.cliqz.com.s3.amazonaws.com/dist/release/#{version}/de/CLIQZ-#{version}.de.mac.dmg"
   name 'CLIQZ'
   homepage 'https://cliqz.com'
-  license :oss
 
   app 'CLIQZ.app'
 

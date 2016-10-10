@@ -6,7 +6,6 @@ cask 'dymo-stamps' do
   url 'http://download.endicia.com/dymostamps/dymostamps.dmg'
   name 'Dymo Stamps'
   homepage 'https://www.dymo.com/en-US/online-support'
-  license :gratis
 
   depends_on cask: 'dymo-label'
 

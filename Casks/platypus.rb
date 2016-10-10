@@ -7,7 +7,6 @@ cask 'platypus' do
           checkpoint: 'b94ebed3f158d89018eed4d08e74323dcae50bc9e0273804a84c24899cd29e9d'
   name 'Platypus'
   homepage 'http://sveinbjorn.org/platypus'
-  license :bsd
 
   auto_updates true
 

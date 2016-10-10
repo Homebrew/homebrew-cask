@@ -7,7 +7,6 @@ cask 'batchmod' do
           checkpoint: '8dc120c11cd4137e4bad1717e03e50fab99aeb762e3610ee96494850cb01e0df'
   name 'BatChmod'
   homepage 'https://www.lagentesoft.com/batchmod/'
-  license :gratis
 
   app 'BatChmod.app'
 end

@@ -5,7 +5,6 @@ cask 'vrep' do
   url "http://coppeliarobotics.com/V-REP_PRO_EDU_V#{version.dots_to_underscores}_Mac.zip"
   name 'V-REP'
   homepage 'http://www.coppeliarobotics.com/index.html'
-  license :other
 
   suite "V-REP_PRO_EDU_V#{version.dots_to_underscores}_Mac"
 end

@@ -5,7 +5,6 @@ cask 'adobe-air-sdk' do
   url "https://airdownload.adobe.com/air/mac/download/#{version}/AIRSDK_Compiler.tbz2"
   name 'Adobe AIR SDK'
   homepage 'https://www.adobe.com/devnet/air/air-sdk-download.html'
-  license :closed
 
   binary 'bin/aasdoc.wrapper.sh',     target: 'aasdoc'
   binary 'bin/acompc.wrapper.sh',     target: 'acompc'

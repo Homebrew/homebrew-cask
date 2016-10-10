@@ -5,7 +5,6 @@ cask 'molotov' do
   url "http://desktop-auto-upgrade.molotov.tv/mac/Molotov-v#{version}.dmg"
   name 'Molotov'
   homepage 'https://www.molotov.tv/'
-  license :unknown
 
   app 'Molotov.app'
 end

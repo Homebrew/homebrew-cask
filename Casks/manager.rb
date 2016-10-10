@@ -5,7 +5,6 @@ cask 'manager' do
   url "http://cdn.manager.io/downloads/v#{version}/Manager.dmg"
   name 'Manager'
   homepage 'http://manager.io'
-  license :gratis
 
   app 'Manager.app'
 end

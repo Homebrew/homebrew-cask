@@ -8,7 +8,6 @@ cask 'openemu' do
           checkpoint: '37e83ba7dbe779068a0b10c575e6525d8bf9f2a1d50e922b18c2b57ed29741d4'
   name 'OpenEmu'
   homepage 'http://openemu.org/'
-  license :oss
 
   depends_on macos: '>= :el_capitan'
 

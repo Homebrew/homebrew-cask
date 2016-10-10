@@ -6,7 +6,6 @@ cask 'backtobed' do
   url 'https://backtobed.dadiugames.dk/studentversion/backtobed_osx.zip'
   name 'Back to Bed'
   homepage 'http://www.dadiu.dk/back-to-bed'
-  license :gratis
 
   app 'BackToBed.app'
 end

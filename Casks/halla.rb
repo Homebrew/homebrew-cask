@@ -7,7 +7,6 @@ cask 'halla' do
           checkpoint: '44182d9e902fc0c5577758b119167e50829a253b2a12b504c5cba372694d3094'
   name 'Halla'
   homepage 'https://github.com/rstacruz/halla'
-  license :mit
 
   app 'Halla.app'
 

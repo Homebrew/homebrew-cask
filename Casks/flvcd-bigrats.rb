@@ -5,7 +5,6 @@ cask 'flvcd-bigrats' do
   url "http://download.flvcd.com/mac/flvcd_bigrats_mac#{version.no_dots}.zip"
   name '硕鼠MAC'
   homepage 'http://www.flvcd.com/index.htm'
-  license :gratis
 
   app '硕鼠MAC.app'
 end

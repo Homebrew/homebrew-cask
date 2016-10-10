@@ -5,7 +5,6 @@ cask 'objectivesharpie' do
   url "https://files.xamarin.com/~abock/ObjectiveSharpie/ObjectiveSharpie-#{version}.pkg"
   name 'Objective Sharpie'
   homepage 'https://developer.xamarin.com/guides/cross-platform/macios/binding/objective-sharpie/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "ObjectiveSharpie-#{version}.pkg"
 

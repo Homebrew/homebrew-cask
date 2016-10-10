@@ -6,7 +6,6 @@ cask 'electric-sheep' do
   url "https://d100rc88eim93q.cloudfront.net/electricsheep-#{version}.dmg"
   name 'Electric Sheep'
   homepage 'http://www.electricsheep.org'
-  license :gpl
 
   pkg 'Electric Sheep.pkg'
 

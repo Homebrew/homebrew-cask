@@ -7,7 +7,6 @@ cask 'doitim' do
           checkpoint: '4e1f29318d7adf08a0a39da28d53a36ae4389db20b2f005ddfb92effe953c6a6'
   name 'Doit.im'
   homepage 'https://doit.im/'
-  license :commercial
 
   app 'Doit.im.app'
 end

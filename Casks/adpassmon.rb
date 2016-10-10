@@ -7,7 +7,6 @@ cask 'adpassmon' do
           checkpoint: '3c7b29281582e38dfc62205646c51bc9a60c5f8038609cc9e15aaf4c6d87f7e0'
   name 'ADPassMon'
   homepage 'https://github.com/macmule/ADPassMon'
-  license :mit
 
   app 'ADPassMon.app'
 end

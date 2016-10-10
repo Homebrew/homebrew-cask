@@ -5,7 +5,6 @@ cask 'adobe-photoshop-lightroom' do
   url "http://swupdl.adobe.com/updates/oobe/aam20/mac/AdobeLightroom-#{version.major}.0/#{version}/setup.dmg"
   name 'Adobe Photoshop Lightroom'
   homepage 'https://www.adobe.com/products/photoshop-lightroom.html'
-  license :commercial
 
   depends_on cask: 'caskroom/versions/adobe-photoshop-lightroom600'
 

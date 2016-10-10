@@ -13,7 +13,6 @@ cask 'usb-overdrive' do
   url "http://www.usboverdrive.com/download/USB-Overdrive-#{version.no_dots}.dmg"
   name 'USB Overdrive'
   homepage 'http://www.usboverdrive.com/'
-  license :commercial
 
   pkg 'Install USB Overdrive.pkg'
 

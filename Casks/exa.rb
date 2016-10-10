@@ -8,7 +8,6 @@ cask 'exa' do
           checkpoint: '77d34c77c2c3017137c276b6a3de91ffba51b4fe25f26c005382d934954a3e4f'
   name 'exa'
   homepage 'https://bsago.me/exa/'
-  license :mit
 
   binary 'exa-osx-x86_64', target: 'exa'
 end

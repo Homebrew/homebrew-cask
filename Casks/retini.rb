@@ -6,7 +6,6 @@ cask 'retini' do
   url 'https://github.com/terwanerik/Retini/raw/master/Retini.zip'
   name 'Retini'
   homepage 'https://terwanerik.github.io/Retini/'
-  license :mit
 
   app 'Retini.app'
 end

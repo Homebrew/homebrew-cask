@@ -5,7 +5,6 @@ cask 'pongsaver' do
   url 'https://rogueamoeba.com/freebies/download/PongSaver.zip'
   name 'PongSaver'
   homepage 'https://rogueamoeba.com/freebies/'
-  license :gratis
 
   screen_saver 'PongSaver.saver'
 end

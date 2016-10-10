@@ -6,7 +6,6 @@ cask 'scala-ide' do
   url "https://downloads.typesafe.com/scalaide-pack/#{version}-vfinal-luna-211-20160401/scala-SDK-#{version}-vfinal-2.11-macosx.cocoa.x86_64.zip"
   name 'Scala IDE'
   homepage 'http://scala-ide.org/'
-  license :bsd
 
   # Renamed for clarity: app name is inconsistent with its branding.
   # Also renamed to avoid conflict with other eclipse Casks.

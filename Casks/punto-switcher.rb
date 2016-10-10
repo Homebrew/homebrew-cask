@@ -6,7 +6,6 @@ cask 'punto-switcher' do
   url 'https://cache-default03d.cdn.yandex.net/download.cdn.yandex.net/punto/mac/PuntoSwitcher.zip'
   name 'Punto Switcher'
   homepage 'https://yandex.ru/soft/punto/'
-  license :gratis
 
   pkg 'PuntoSwitcher Installer.pkg'
 

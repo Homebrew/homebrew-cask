@@ -7,7 +7,6 @@ cask 'simple-hub' do
           checkpoint: 'c2f0e32897a18d616e5fb8fcc57597133f1c0b1ba511af56db2d84a463f8578d'
   name 'Simple Hub'
   homepage 'https://store.simplecontrol.com/simple-sync.html'
-  license :commercial
 
   app 'Simple Hub.app'
 

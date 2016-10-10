@@ -12,7 +12,6 @@ cask 'texpad' do
           checkpoint: 'c71e243eb741d3b9fa44c7b649a78b564c79ea6038e98249b0905d11f2b1616e'
   name 'Texpad'
   homepage 'https://www.texpadapp.com/osx'
-  license :commercial
 
   depends_on macos: '>= :snow_leopard'
 

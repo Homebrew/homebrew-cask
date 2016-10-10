@@ -8,7 +8,6 @@ cask 'lektor' do
           checkpoint: '2e5a9d63dc5064ecb39394084d2a659a4c5f9d075edbbeb18d80fb5b5aa0b4ff'
   name 'Lektor'
   homepage 'https://www.getlektor.com/'
-  license :oss
 
   app 'Lektor.app'
 end

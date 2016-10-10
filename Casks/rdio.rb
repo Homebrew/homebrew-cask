@@ -7,7 +7,6 @@ cask 'rdio' do
           checkpoint: 'b0b8bcdb83beea548c0fdf3ab7da0274c0be661e39a6c881a3a92634226d1332'
   name 'Rdio'
   homepage 'https://www.rdio.com'
-  license :gratis
 
   app 'Rdio.app'
 end

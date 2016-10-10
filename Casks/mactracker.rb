@@ -7,7 +7,6 @@ cask 'mactracker' do
           checkpoint: '6b79b75ef700dca673faab2ac7df022b7f170012a5c0080793049b909fa1efc0'
   name 'Mactracker'
   homepage 'https://mactracker.ca/'
-  license :gratis
 
   app 'Mactracker.app'
 end

@@ -6,7 +6,6 @@ cask 'toad' do
   url "http://community-downloads.quest.com/toadsoft/toadmacedition/ToadMacEdition_#{version.no_dots}.zip"
   name 'Toad'
   homepage 'https://www.toadworld.com/products/toad-mac-edition'
-  license :gratis
 
   pkg "ToadMacEdition_AppStore_#{version.no_dots}.pkg"
 

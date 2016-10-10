@@ -8,7 +8,6 @@ cask 'macpass' do
           checkpoint: 'e0cb1a3c927f46c82094b92ff519cf38dfb89d00e79f665428517773ba130bff'
   name 'MacPass'
   homepage 'https://mstarke.github.io/MacPass/'
-  license :gpl
 
   app 'MacPass.app'
 end

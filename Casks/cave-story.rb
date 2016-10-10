@@ -8,7 +8,6 @@ cask 'cave-story' do
   name 'Doukutsu'
   name '洞窟物語'
   homepage 'http://www.cavestory.org'
-  license :closed
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app 'Doukutsu.app', target: 'Cave Story.app'

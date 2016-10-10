@@ -7,7 +7,6 @@ cask 'klatexformula' do
           checkpoint: 'd03dfb386990dae34c456202e67d3d0976ef346c05a59e8c0c3c68a37d05ad2d'
   name 'KLatexFormula'
   homepage 'http://klatexformula.sourceforge.net'
-  license :gpl
 
   app 'KLatexFormula.app'
 end

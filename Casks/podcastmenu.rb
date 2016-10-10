@@ -7,7 +7,6 @@ cask 'podcastmenu' do
           checkpoint: 'a9939edfc61c1f0a49296791ba5dde2ac685c3e668ba8195e3b0ea0fe9cd5e28'
   name 'PodcastMenu'
   homepage 'https://github.com/insidegui/PodcastMenu'
-  license :bsd
 
   auto_updates true
   depends_on macos: '>= :el_capitan'

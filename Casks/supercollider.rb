@@ -8,7 +8,6 @@ cask 'supercollider' do
           checkpoint: '792cf265121b3358432cd35be470055b7fdaa01ad547ef1b3d1618c61c0e689e'
   name 'SuperCollider'
   homepage 'https://supercollider.github.io/'
-  license :gpl
 
   app 'SuperCollider/SuperCollider.app'
 end

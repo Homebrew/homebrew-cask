@@ -8,7 +8,6 @@ cask 'boxcryptor' do
           checkpoint: 'e2a747a1e5641595b466da20a79f59e86255b63f4a0d3a75febc77c8177a4033'
   name 'Boxcryptor'
   homepage 'https://www.boxcryptor.com/en'
-  license :commercial
 
   depends_on macos: '>= :mavericks'
 

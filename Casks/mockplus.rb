@@ -6,7 +6,6 @@ cask 'mockplus' do
   name 'Mockplus'
   name '摩客'
   homepage 'https://www.mockplus.cn/'
-  license :freemium
 
   app 'Mockplus.app'
 end

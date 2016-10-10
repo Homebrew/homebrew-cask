@@ -8,7 +8,6 @@ cask 'jenkins-menu' do
           checkpoint: '7d022aadeae3d7bafc6a0b580f4159b4b14d15fe24d08f360835557d5e2c5156'
   name 'Jenkins Menu'
   homepage 'http://qvacua.com'
-  license :gpl
 
   app 'Jenkins Menu.app'
 end

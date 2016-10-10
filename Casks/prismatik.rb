@@ -8,7 +8,6 @@ cask 'prismatik' do
           checkpoint: 'ed21f0f168d0db0f3764fdb42fa027c394f3df5781cd504526393422fe522351'
   name 'Prismatik'
   homepage 'http://lightpack.tv/'
-  license :gpl
 
   app 'Prismatik.app'
 end

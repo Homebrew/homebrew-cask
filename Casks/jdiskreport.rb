@@ -5,7 +5,6 @@ cask 'jdiskreport' do
   url "http://www.jgoodies.com/download/jdiskreport/jdiskreport-#{version.dots_to_underscores}-mac.zip"
   name 'JDiskReport'
   homepage 'http://www.jgoodies.com/freeware/jdiskreport/'
-  license :gratis
 
   app "JDiskReport #{version}/JDiskReport.app"
 end

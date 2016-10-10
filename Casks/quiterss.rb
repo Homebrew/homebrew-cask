@@ -5,7 +5,6 @@ cask 'quiterss' do
   url "https://quiterss.org/files/#{version}/QuiteRSS-#{version}.dmg"
   name 'QuiteRSS'
   homepage 'https://quiterss.org/'
-  license :gpl
 
   app 'Quiterss.app'
 

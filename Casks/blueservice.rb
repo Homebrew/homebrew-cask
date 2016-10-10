@@ -6,7 +6,6 @@ cask 'blueservice' do
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/freeware/blueservice/#{version}/BlueService.zip"
   name 'BlueService'
   homepage 'http://www.devontechnologies.com/products/freeware.html#c964'
-  license :gratis
 
   app 'BlueService.app'
 end

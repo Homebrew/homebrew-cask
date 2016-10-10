@@ -6,7 +6,6 @@ cask 'ebmac' do
   url "http://ftp.vector.co.jp/67/18/938/EBMac#{version}.dmg"
   name 'EBMac'
   homepage 'http://ebstudio.info/manual/EBMac/'
-  license :gratis
 
   app 'EBMac.app'
 end

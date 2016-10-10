@@ -7,7 +7,6 @@ cask 'audiobookbinder' do
           checkpoint: '5513a6cc78863fd79e2779794a0767d241a066e1b4bd5cce19ecf5daa34c2306'
   name 'Audiobook Binder'
   homepage 'https://bluezbox.com/audiobookbinder.html'
-  license :oss
 
   app 'AudioBookBinder.app'
 end

@@ -7,7 +7,6 @@ cask 'kuaipan' do
   name 'KuaiPan'
   name '金山快盘'
   homepage 'http://www.kuaipan.cn/d/mac'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'kuaipan.app'
 end

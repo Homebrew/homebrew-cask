@@ -7,7 +7,6 @@ cask 'notifyr' do
           checkpoint: '4cbac0fcae6af8a1c00bbc8e5a8c499ab5e4cd18a5126d518205924705fb3ab4'
   name 'Notifyr'
   homepage 'http://getnotifyr.com'
-  license :gratis
 
   prefpane 'Notifyr.prefPane'
 end

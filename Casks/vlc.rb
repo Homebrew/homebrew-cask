@@ -7,7 +7,6 @@ cask 'vlc' do
           checkpoint: '0e71dfa9874979a8a9e6a9a3a7fdd21366a92082bce2836cbd938186ad5945fa'
   name 'VLC media player'
   homepage 'https://www.videolan.org/vlc/'
-  license :oss
   gpg "#{url}.asc",
       key_id: '65f7c6b4206bd057a7eb73787180713be58d1adc'
 

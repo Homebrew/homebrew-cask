@@ -6,7 +6,6 @@ cask 'affinic-debugger-gui' do
   name 'Affinic Debugger GUI'
   name 'ADG'
   homepage 'http://www.affinic.com/?page_id=109'
-  license :freemium
 
   app 'Affinic Debugger GUI.app'
 end

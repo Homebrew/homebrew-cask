@@ -7,7 +7,6 @@ cask 'glueprint' do
           checkpoint: '8028e5a3bf0df90d01fedb100130816570a7baa44dbd34163df95ff1b5f1fd87'
   name 'GluePrint'
   homepage 'http://glueprintapp.com/'
-  license :gratis
 
   app 'GluePrint.app'
 end

@@ -8,7 +8,6 @@ cask 'vagrant-manager' do
           checkpoint: '0d60d80f827a3ed3b2e1eed81dd899deb5a26a25ea8173c8a02dd144abe4f915'
   name 'Vagrant Manager'
   homepage 'http://vagrantmanager.com/'
-  license :mit
 
   app 'Vagrant Manager.app'
 end

@@ -6,7 +6,6 @@ cask 'moedict' do
   url "https://github.com/racklin/moedict-desktop/releases/download/#{version}/moedict-desktop.app-#{version}.dmg"
   name 'Moedict'
   homepage 'https://racklin.github.io/moedict-desktop/'
-  license :mpl
 
   app 'Moedict-Desktop.app'
 end

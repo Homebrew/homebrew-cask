@@ -7,7 +7,6 @@ cask 'picat' do
           checkpoint: '040b8a4f7befb1c284c3e6e00c97e6659ca8ac9ebc87f37619fd5565972c12f4'
   name 'Picat'
   homepage 'http://www.picat-lang.org/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   binary 'Picat/picat'
 end

@@ -8,7 +8,6 @@ cask 'darktable' do
           checkpoint: '132bcc2ab579209a8a630e928085e14cc514185c39ffdebd32e6192c3f067576'
   name 'darktable'
   homepage 'https://www.darktable.org/'
-  license :gpl
 
   app 'darktable.app'
 end

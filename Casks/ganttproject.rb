@@ -5,7 +5,6 @@ cask 'ganttproject' do
   url "https://dl.ganttproject.biz/ganttproject-#{version.sub(%r{-.*}, '')}/ganttproject-#{version}.dmg"
   name 'GanttProject'
   homepage 'https://www.ganttproject.biz'
-  license :oss
 
   app 'GanttProject.app'
 end

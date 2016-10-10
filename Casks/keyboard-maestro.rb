@@ -6,7 +6,6 @@ cask 'keyboard-maestro' do
   url "https://files.stairways.com/keyboardmaestro-#{version.no_dots}.zip"
   name 'Keyboard Maestro'
   homepage 'https://www.keyboardmaestro.com/'
-  license :commercial
 
   depends_on macos: '>= :yosemite'
 

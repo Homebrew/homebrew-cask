@@ -5,7 +5,6 @@ cask 'texmacs' do
   url "http://www.texmacs.org/Download/ftp/tmftp/macos/TeXmacs-#{version}.dmg"
   name 'GNU TeXmacs'
   homepage 'http://www.texmacs.org/'
-  license :gpl
 
   app "TeXmacs-#{version}.app"
 

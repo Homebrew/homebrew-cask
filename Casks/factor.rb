@@ -5,7 +5,6 @@ cask 'factor' do
   url "http://downloads.factorcode.org/releases/#{version}/factor-macosx-x86-64-#{version}.dmg"
   name 'Factor'
   homepage 'http://factorcode.org/'
-  license :bsd
 
   app 'factor/Factor.app'
 

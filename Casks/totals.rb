@@ -7,7 +7,6 @@ cask 'totals' do
           checkpoint: 'd5f6a194602a18a1d6916696346218e7a39fa88c939f90c243e61ecde788892f'
   name 'Totals'
   homepage 'http://www.kedisoft.com/totals/'
-  license :commercial
 
   app 'Totals.app'
 end

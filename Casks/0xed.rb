@@ -5,7 +5,6 @@ cask '0xed' do
   url 'http://www.suavetech.com/cgi-bin/download.cgi?0xED.tar.bz2'
   name '0xED'
   homepage 'http://www.suavetech.com/0xed/'
-  license :gratis
 
   app '0xED.app'
 

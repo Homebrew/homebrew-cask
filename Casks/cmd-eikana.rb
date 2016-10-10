@@ -8,7 +8,6 @@ cask 'cmd-eikana' do
   name 'cmd-eikana'
   name '⌘英かな'
   homepage 'https://github.com/iMasanari/cmd-eikana'
-  license :mit
 
   app '⌘英かな.app'
 

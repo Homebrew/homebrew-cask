@@ -5,7 +5,6 @@ cask 'qrq' do
   url "https://fkurz.net/ham/qrq/qrq-#{version}.dmg"
   name 'qrq'
   homepage 'https://fkurz.net/ham/qrq.html'
-  license :gpl
 
   app 'qrq.app'
 end

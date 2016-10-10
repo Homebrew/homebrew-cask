@@ -6,7 +6,6 @@ cask 'ngrok' do
   url "https://bin.equinox.io/c/#{version.after_comma}/ngrok-stable-darwin-amd64.zip"
   name 'ngrok'
   homepage 'https://ngrok.com/'
-  license :freemium
 
   binary 'ngrok'
 

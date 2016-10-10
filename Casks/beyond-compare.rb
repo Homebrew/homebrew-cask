@@ -5,7 +5,6 @@ cask 'beyond-compare' do
   url "http://www.scootersoftware.com/BCompareOSX-#{version}.zip"
   name 'Beyond Compare'
   homepage 'http://www.scootersoftware.com/'
-  license :commercial
 
   app 'Beyond Compare.app'
 

@@ -7,7 +7,6 @@ cask 'inloop-qlplayground' do
           checkpoint: 'c9b454cfabeefcd059af9305776b24430c0b16bf0c2001dba70eaf57227e332a'
   name 'inloop-qlplayground'
   homepage 'https://github.com/inloop/qlplayground'
-  license :mit
 
   qlplugin 'inloop-qlplayground.qlgenerator'
 end

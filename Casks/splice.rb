@@ -8,7 +8,6 @@ cask 'splice' do
           checkpoint: 'a26a85e731e4929366286e0ecf5c67d63cd3f9505720f0813ce5b37b6cf6031b'
   name 'Splice'
   homepage 'https://splice.com/'
-  license :gratis
 
   app 'Splice.app'
 

@@ -6,7 +6,6 @@ cask 'knockknock' do
   url "https://bitbucket.org/objective-see/deploy/downloads/KnockKnock_#{version}.zip"
   name 'KnockKnock'
   homepage 'https://objective-see.com/products/knockknock.html'
-  license :gratis
 
   app 'KnockKnock.app'
 end

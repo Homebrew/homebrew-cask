@@ -5,7 +5,6 @@ cask 'pngyu' do
   url "https://nukesaq88.github.io/Pngyu/download/Pngyu_mac_#{version.no_dots}.zip"
   name 'Pngyu'
   homepage 'https://nukesaq88.github.io/Pngyu/'
-  license :bsd
 
   app 'Pngyu.app'
 end

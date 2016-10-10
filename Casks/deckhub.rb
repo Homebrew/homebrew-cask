@@ -5,7 +5,6 @@ cask 'deckhub' do
   url 'http://download.getdeckhub.com/', user_agent: :fake
   name 'DeckHub'
   homepage 'https://getdeckhub.com/'
-  license :commercial
 
   app 'DeckHub.app'
 end

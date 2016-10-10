@@ -5,7 +5,6 @@ cask 'gimp' do
   url "https://download.gimp.org/pub/gimp/v2.8/osx/gimp-#{version}.dmg"
   name 'GIMP'
   homepage 'https://www.gimp.org'
-  license :gpl
 
   app 'GIMP.app'
 

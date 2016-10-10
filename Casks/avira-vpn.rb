@@ -6,7 +6,6 @@ cask 'avira-vpn' do
   url 'https://install.avira-update.com/package/vpn/osx/int/vpn.pkg'
   name 'Avira Phantom VPN'
   homepage 'https://www.avira.com/en/avira-phantom-vpn'
-  license :commercial
 
   pkg 'vpn.pkg'
 

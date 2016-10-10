@@ -5,7 +5,6 @@ cask 'beoplay-software-update' do
   url 'https://www.beoplay.com/~/media/A6EA01EBD2F24D9CB021ADE273141B71.zip'
   name 'BeoPlay Software Update'
   homepage 'https://www.beoplay.com/support/product%20support/beoplay%20updater'
-  license :closed
 
   app 'BeoPlay Software Update.app'
 end

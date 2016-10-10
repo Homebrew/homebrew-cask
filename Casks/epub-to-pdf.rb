@@ -6,7 +6,6 @@ cask 'epub-to-pdf' do
   url "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/epub-2-pdf/e2p-#{version.major}.dmg"
   name 'epub-2-pdf'
   homepage 'https://code.google.com/archive/p/epub-2-pdf'
-  license :oss
 
   app 'epub-to-pdf.app'
 

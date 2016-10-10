@@ -5,7 +5,6 @@ cask 'micro-snitch' do
   url "https://www.obdev.at/downloads/MicroSnitch/MicroSnitch-#{version}.zip"
   name 'Micro Snitch'
   homepage 'https://www.obdev.at/products/microsnitch/'
-  license :commercial
 
   app 'Micro Snitch.app'
 end

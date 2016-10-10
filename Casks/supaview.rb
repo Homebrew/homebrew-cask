@@ -7,7 +7,6 @@ cask 'supaview' do
           checkpoint: '496d03d89eac26c1aee0887aa165a1200c2b3ddf15f4e7a15cf8712eb89992fd'
   name 'SupaView'
   homepage 'http://twinside.free.fr/supaview/'
-  license :gratis
 
   app 'SupaView.app'
 end

@@ -5,7 +5,6 @@ cask 'viber' do
   url 'http://download.viber.com/desktop/mac/Viber.dmg'
   name 'Viber'
   homepage 'http://viber.com'
-  license :gratis
 
   app 'Viber.app'
 end

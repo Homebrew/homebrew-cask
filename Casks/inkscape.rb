@@ -6,7 +6,6 @@ cask 'inkscape' do
   url "https://inkscape.global.ssl.fastly.net/media/resources/file/Inkscape-#{version}-x11-10.7-x86_64.dmg"
   name 'Inkscape'
   homepage 'https://inkscape.org/'
-  license :gpl
 
   depends_on x11: true
 

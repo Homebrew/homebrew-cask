@@ -6,7 +6,6 @@ cask 'abgx360' do
   url "https://dl.dropbox.com/u/59058148/abgx360-#{version}.pkg"
   name 'abgx360'
   homepage 'http://abgx360.xecuter.com/'
-  license :oss
 
   pkg "abgx360-#{version}.pkg"
 

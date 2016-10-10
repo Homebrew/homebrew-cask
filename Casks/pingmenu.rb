@@ -5,7 +5,6 @@ cask 'pingmenu' do
   url 'https://github.com/kalleboo/PingMenu/raw/master/PingMenu.app.zip'
   name 'PingMenu'
   homepage 'https://github.com/kalleboo/PingMenu'
-  license :oss
 
   app 'PingMenu.app'
 end

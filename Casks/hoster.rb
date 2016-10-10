@@ -7,7 +7,6 @@ cask 'hoster' do
           checkpoint: '2fd3f530371d11a463ebf019a77eb77a2c79c100231f3e05785b1ab454e0a013'
   name 'Hoster'
   homepage 'http://www.redwinder.com/macapp/hoster/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "Hoster#{version}08.mpkg", allow_untrusted: true
 

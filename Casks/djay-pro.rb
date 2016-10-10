@@ -7,7 +7,6 @@ cask 'djay-pro' do
           checkpoint: '48e1032e6268f88bddc1757b2fc0294f9b7a027234ed85bbab06506315fdcbb1'
   name 'Algoriddim djay Pro'
   homepage 'http://algoriddim.com/djay-mac'
-  license :commercial
 
   app 'djay Pro.app'
 end

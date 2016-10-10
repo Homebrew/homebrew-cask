@@ -5,7 +5,6 @@ cask 'waterroof' do
   url "http://www.hanynet.com/waterroof-#{version}.zip"
   name 'WaterRoof'
   homepage 'http://www.hanynet.com/waterroof/'
-  license :oss
 
   app 'WaterRoof.app'
 end

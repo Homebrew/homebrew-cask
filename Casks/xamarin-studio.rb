@@ -7,7 +7,6 @@ cask 'xamarin-studio' do
           checkpoint: '00b79aa8567cd5acabbe285e2b09fe0765df2def16a111c8c757015aff57d21e'
   name 'Xamarin Studio'
   homepage 'https://xamarin.com/studio'
-  license :gpl
 
   app 'Xamarin Studio.app'
 end

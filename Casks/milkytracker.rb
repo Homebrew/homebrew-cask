@@ -5,7 +5,6 @@ cask 'milkytracker' do
   url "http://www.milkytracker.org/files/milkytracker-#{version}-osx_universal.zip"
   name 'MilkyTracker'
   homepage 'http://www.milkytracker.org/'
-  license :gpl
 
   app "milkytracker-#{version}-osx_universal/MilkyTracker.app"
 end

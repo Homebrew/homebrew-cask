@@ -7,7 +7,6 @@ cask 'imageoptim' do
           checkpoint: '1b321e043e90a78528070831a1f29d06f118cb82770193e1e86aff74508144ad'
   name 'ImageOptim'
   homepage 'https://imageoptim.com/mac'
-  license :gpl
 
   auto_updates true
 

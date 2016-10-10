@@ -7,7 +7,6 @@ cask 'markright' do
           checkpoint: '49c746aad0bf4132f0b7d7052f31bcf5dddf92119e2da3c95016346581940db9'
   name 'MarkRight'
   homepage 'https://github.com/dvcrn/markright'
-  license :gpl
 
   app 'MarkRight.app'
 end

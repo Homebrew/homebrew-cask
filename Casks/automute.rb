@@ -7,7 +7,6 @@ cask 'automute' do
           checkpoint: 'fb3a604be3197410a71eadb289ce14665f328e886489d2e9a12659d2f9393e87'
   name 'AutoMute'
   homepage 'https://github.com/Lorenzo45/AutoMute'
-  license :mit
 
   app 'AutoMute.app'
 end

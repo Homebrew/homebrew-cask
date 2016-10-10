@@ -5,7 +5,6 @@ cask 'apppolice' do
   url 'http://definemac.com/download/AppPolice.dmg'
   name 'AppPolice'
   homepage 'http://definemac.com'
-  license :gpl
 
   app 'AppPolice.app'
 end

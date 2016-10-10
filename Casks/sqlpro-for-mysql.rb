@@ -6,7 +6,6 @@ cask 'sqlpro-for-mysql' do
   url "https://d3fwkemdw8spx3.cloudfront.net/mysql/SQLProMySQL.#{version}.app.zip"
   name 'SQLPro for MySQL'
   homepage 'https://www.mysqlui.com'
-  license :commercial
 
   app 'SQLPro for MySQL.app'
 

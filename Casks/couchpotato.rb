@@ -8,7 +8,6 @@ cask 'couchpotato' do
           checkpoint: 'b61f00dafd9c9cbe596613d712055d2404d628121b8eaec7407f3344bf3afb4e'
   name 'CouchPotato'
   homepage 'https://couchpota.to/'
-  license :gpl
 
   app 'CouchPotato.app'
 

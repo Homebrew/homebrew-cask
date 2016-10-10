@@ -7,7 +7,6 @@ cask 'model-boiler' do
           checkpoint: 'caab25cfbcd8bee242b06520f21023b847400a1fbd62db9b342480a1352b9b0e'
   name 'ModelBoiler'
   homepage 'https://github.com/nodes-ios/ModelBoiler'
-  license :mit
 
   app 'Model Boiler.app'
 end

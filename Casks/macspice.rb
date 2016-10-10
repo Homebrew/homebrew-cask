@@ -7,7 +7,6 @@ cask 'macspice' do
           checkpoint: 'b080cf2b0f2136bceae0fe7b51e98f1db39748002f0169eaa10061f80ecbf9a5'
   name 'MacSpice'
   homepage 'http://www.macspice.com/'
-  license :closed
 
   app 'MacSpice.app'
 end

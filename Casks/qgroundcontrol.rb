@@ -6,7 +6,6 @@ cask 'qgroundcontrol' do
   url "https://qgroundcontrol.s3.amazonaws.com/QGroundControl-Stable-V#{version}.dmg"
   name 'QGroundControl'
   homepage 'http://qgroundcontrol.org/'
-  license :gpl
 
   app 'qgroundcontrol.app'
 end

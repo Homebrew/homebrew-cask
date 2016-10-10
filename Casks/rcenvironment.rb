@@ -5,7 +5,6 @@ cask 'rcenvironment' do
   url "http://www.rubicode.com/Downloads/RCEnvironment-#{version}.X.dmg"
   name 'RCEnvironment'
   homepage 'http://www.rubicode.com/Software/RCEnvironment/'
-  license :bsd
 
   prefpane 'RCEnvironment.prefPane'
 end

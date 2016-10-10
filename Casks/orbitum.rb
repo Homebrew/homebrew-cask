@@ -5,7 +5,6 @@ cask 'orbitum' do
   url 'https://orbitum.com/orbitum.dmg'
   name 'Orbitum'
   homepage 'https://orbitum.com/'
-  license :gratis
 
   app 'Orbitum.app'
 end

@@ -7,7 +7,6 @@ cask 'playlist-assist' do
           checkpoint: '7324b771b62991def6574252bab947e3df630beae5351b7365ad8c9046f6fe29'
   name 'Playlist Assist'
   homepage 'https://dougscripts.com/apps/playlistassistapp.php'
-  license :commercial
 
   app 'Playlist Assist.app'
 end

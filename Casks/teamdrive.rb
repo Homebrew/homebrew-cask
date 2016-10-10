@@ -6,7 +6,6 @@ cask 'teamdrive' do
   url "http://s3download.teamdrive.net.s3.amazonaws.com/#{version}/TMDR/mac-10.10.5/Install-TeamDrive-#{version}_TMDR.dmg"
   name 'TeamDrive'
   homepage 'https://www.teamdrive.com/'
-  license :closed
 
   installer script: "Install-TeamDrive-#{version}_TMDR.app/Contents/MacOS/osx-intel",
             args:   ['--unattendedmodeui', 'none', '--mode', 'unattended']

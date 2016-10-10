@@ -11,7 +11,6 @@ cask 'icamsource' do
           checkpoint: '67a506f70a3a997b2d77198ca8902b5fdf7bdfd7a28c269ffebcc8528bb58650'
   name 'iCamSource'
   homepage 'http://skjm.com/icam/support.php'
-  license :gratis
 
   app 'iCamSource.app'
 end

@@ -5,7 +5,6 @@ cask 'kebrum' do
   url 'http://archive.kebrum.com/MkII/Kebrum.dmg'
   name 'Kebrum'
   homepage 'https://kebrum.com/'
-  license :gratis
 
   pkg 'Kebrum.pkg'
 

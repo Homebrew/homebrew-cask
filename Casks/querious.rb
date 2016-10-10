@@ -7,7 +7,6 @@ cask 'querious' do
           checkpoint: 'e72acf8cf365bea073c8a947454347172e360e3cbd5a158fb9cfc47dbb43a845'
   name 'Querious 2'
   homepage 'http://www.araelium.com/querious/'
-  license :commercial
 
   app 'Querious.app'
 end

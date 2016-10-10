@@ -5,7 +5,6 @@ cask 'unifi-controller' do
   url "https://dl.ubnt.com/unifi/#{version}/UniFi.pkg"
   name 'UniFi Controller'
   homepage 'https://www.ubnt.com/download/unifi'
-  license :commercial
 
   pkg 'UniFi.pkg'
 

@@ -7,7 +7,6 @@ cask 'ethereum-wallet' do
           checkpoint: '2d7732efec4c6ae0075a4bb955750dc4fd8e78874abe2c5216e527c25aa3d9b9'
   name 'Ethereum Wallet'
   homepage 'https://github.com/ethereum/mist'
-  license :gpl
 
   app 'Ethereum Wallet.app'
 end

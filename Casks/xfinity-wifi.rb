@@ -5,7 +5,6 @@ cask 'xfinity-wifi' do
   url 'https://wifi.xfinity.com/download_mac.php'
   name 'XFINITY WiFi'
   homepage 'https://wifi.xfinity.com/'
-  license :gratis
 
   container type: :pkg
 

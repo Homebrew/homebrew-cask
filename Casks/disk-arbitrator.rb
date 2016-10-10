@@ -8,7 +8,6 @@ cask 'disk-arbitrator' do
           checkpoint: 'f8858ef5754234e6e18aba2a209c53b321fcea92931eefca50476ee3dede1306'
   name 'Disk Arbitrator'
   homepage 'https://github.com/aburgh/Disk-Arbitrator'
-  license :bsd
 
   app 'Disk Arbitrator.app'
 

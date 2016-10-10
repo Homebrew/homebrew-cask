@@ -5,7 +5,6 @@ cask 'scrutiny' do
   url 'http://peacockmedia.software/mac/scrutiny/scrutiny.dmg'
   name 'Scrutiny'
   homepage 'http://peacockmedia.software/mac/scrutiny/'
-  license :commercial
 
   app 'Scrutiny.app'
 

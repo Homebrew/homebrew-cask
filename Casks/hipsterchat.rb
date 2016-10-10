@@ -7,7 +7,6 @@ cask 'hipsterchat' do
           checkpoint: '285d3ff9dc41f4de1043f21c62f84e886d8ddf7f52188e018c9f9144ff5a4d96'
   name 'HipsterChat'
   homepage 'https://github.com/kvasir/hipsterchat'
-  license :mit
 
   app 'HipsterChat.app'
 end

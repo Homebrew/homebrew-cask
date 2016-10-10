@@ -8,7 +8,6 @@ cask 'slack' do
           checkpoint: '16fdeec6794f180b946510dab4b4a5d844182d2631c81219f4601a931db4d104'
   name 'Slack'
   homepage 'https://slack.com/'
-  license :gratis
 
   auto_updates true
 

@@ -8,7 +8,6 @@ cask 'nulloy' do
           checkpoint: '6b12d536ceefb813d7e269dc5943e5fa1efca77de4f1e9b9b5eb700ee9d0a3ff'
   name 'Nulloy'
   homepage 'http://nulloy.com/'
-  license :gpl
 
   app 'Nulloy.app'
 end

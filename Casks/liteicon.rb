@@ -7,7 +7,6 @@ cask 'liteicon' do
           checkpoint: 'f89d570d5380ba470a6db1d66b05ba2d4b37c263910fca1c69500a810e220cd4'
   name 'LiteIcon'
   homepage 'https://www.freemacsoft.net/liteicon/'
-  license :gratis
 
   app 'LiteIcon.app'
 

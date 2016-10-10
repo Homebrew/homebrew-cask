@@ -7,7 +7,6 @@ cask 'cornerstone' do
           checkpoint: 'edab413cebd5ccd982e9bf7b3482030264dab4528fe1c486468b010296b1ad06'
   name 'Cornerstone'
   homepage 'https://www.zennaware.com/cornerstone/'
-  license :commercial
 
   app 'Cornerstone.app'
 end

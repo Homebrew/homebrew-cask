@@ -5,7 +5,6 @@ cask 'osu' do
   url "https://m1.ppy.sh/osu%21-#{version}.dmg"
   name 'osu!'
   homepage 'https://osu.ppy.sh'
-  license :closed
 
   app 'osu!.app'
 end

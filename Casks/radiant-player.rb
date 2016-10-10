@@ -8,7 +8,6 @@ cask 'radiant-player' do
           checkpoint: '38863b628f4b5673196067e2ae484d9d5bbbab1252d302e9016f334fd9c94e75'
   name 'Radiant Player'
   homepage 'https://radiant-player.github.io/radiant-player-mac/'
-  license :mit
 
   app 'Radiant Player.app'
 end

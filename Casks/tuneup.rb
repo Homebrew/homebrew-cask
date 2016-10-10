@@ -8,7 +8,6 @@ cask 'tuneup' do
           checkpoint: 'fa140f16451aa2604c86fe4f1eed48c80dc183618152552c633dbe3c864ec4f2'
   name 'TuneUp'
   homepage 'https://www.tuneupmedia.com/'
-  license :commercial
 
   installer manual: 'TuneUp-Installer.app'
 

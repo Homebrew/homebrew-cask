@@ -7,7 +7,6 @@ cask 'visual-studio-code' do
   name 'Microsoft Visual Studio Code'
   name 'VS Code'
   homepage 'https://code.visualstudio.com/'
-  license :mit
 
   auto_updates true
 

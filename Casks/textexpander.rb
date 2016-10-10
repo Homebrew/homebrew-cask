@@ -20,7 +20,6 @@ cask 'textexpander' do
 
   name 'TextExpander'
   homepage 'https://www.smilesoftware.com/TextExpander/'
-  license :commercial
 
   auto_updates true
   accessibility_access true

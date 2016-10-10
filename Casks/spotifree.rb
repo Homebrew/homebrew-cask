@@ -8,7 +8,6 @@ cask 'spotifree' do
           checkpoint: 'd6a27cb240971709d2212be2ae9e69ba229726f1e11200e08e67bd498c834d14'
   name 'Spotifree'
   homepage 'http://spotifree.gordinskiy.com/'
-  license :oss
 
   app 'Spotifree.app'
 end

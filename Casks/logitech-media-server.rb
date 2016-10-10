@@ -6,7 +6,6 @@ cask 'logitech-media-server' do
   url "http://downloads.slimdevices.com/LogitechMediaServer_v#{version}/LogitechMediaServer-#{version}.pkg"
   name 'Logitech Media Server'
   homepage 'http://www.mysqueezebox.com/'
-  license :gpl
 
   pkg "LogitechMediaServer-#{version}.pkg"
 

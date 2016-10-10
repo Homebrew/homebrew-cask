@@ -6,7 +6,6 @@ cask 'sqlpro-studio' do
   url "https://d3fwkemdw8spx3.cloudfront.net/studio/SQLProStudio.#{version}.app.zip"
   name 'SQLPro Studio'
   homepage 'https://www.sqlprostudio.com'
-  license :commercial
 
   app 'SQLPro Studio.app'
 

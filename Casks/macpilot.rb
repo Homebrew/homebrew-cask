@@ -5,7 +5,6 @@ cask 'macpilot' do
   url 'http://mirror.koingosw.com/products/macpilot/download/macpilot.dmg'
   name 'MacPilot'
   homepage 'http://www.koingosw.com/products/macpilot.php'
-  license :commercial
 
   app 'MacPilot.app'
 end

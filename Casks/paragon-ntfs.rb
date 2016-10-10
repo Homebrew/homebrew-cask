@@ -5,7 +5,6 @@ cask 'paragon-ntfs' do
   url "http://dl.paragon-software.com/demo/ntfsmac#{version}_trial_e.dmg"
   name 'Paragon NTFS for Mac'
   homepage 'https://www.paragon-software.com/home/ntfs-mac/'
-  license :commercial
 
   pkg 'FSInstaller.app/Contents/Resources/Paragon NTFS for Mac OS X.pkg'
 

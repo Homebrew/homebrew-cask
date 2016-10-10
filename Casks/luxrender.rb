@@ -5,7 +5,6 @@ cask 'luxrender' do
   url "http://www.luxrender.net/release/luxrender/#{version.major_minor}/mac/LuxRender_#{version}_OSXIntel_64bit.dmg"
   name 'LuxRender'
   homepage 'http://www.luxrender.net/wiki/Main_Page'
-  license :gpl
 
   app 'LuxRender/LuxRender.app'
 end

@@ -13,7 +13,6 @@ cask 'controlplane' do
   url "http://www.controlplaneapp.com/download/#{version}"
   name 'ControlPlane'
   homepage 'http://www.controlplaneapp.com/'
-  license :gpl
 
   depends_on macos: '>= :snow_leopard'
 

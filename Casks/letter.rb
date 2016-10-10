@@ -6,7 +6,6 @@ cask 'letter' do
   url 'https://paddle-static.s3.amazonaws.com/framework/apps/Let.ter/Let.ter.zip'
   name 'Let.ter'
   homepage 'http://theletterapp.com/'
-  license :commercial
 
   app 'Let.ter.app'
 end

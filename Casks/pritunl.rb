@@ -8,7 +8,6 @@ cask 'pritunl' do
           checkpoint: 'abbfafa4acb850251becef5d320fe89e58bf955ab111c73d10386afe93c37fc0'
   name 'Pritunl OpenVPN Client'
   homepage 'https://client.pritunl.com'
-  license :gpl
 
   pkg 'Pritunl.pkg'
 

@@ -5,7 +5,6 @@ cask 'triumph' do
   url 'https://www.audiofile-engineering.com/triumph/download/Triumph.dmg'
   name 'Triumph'
   homepage 'https://www.audiofile-engineering.com/triumph/'
-  license :commercial
 
   app 'Triumph.app'
 end

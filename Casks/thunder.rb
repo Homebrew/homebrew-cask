@@ -7,7 +7,6 @@ cask 'thunder' do
   name 'Thunder'
   name '迅雷'
   homepage 'http://mac.xunlei.com/'
-  license :commercial
 
   app 'Thunder.app'
 end

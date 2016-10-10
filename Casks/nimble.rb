@@ -8,7 +8,6 @@ cask 'nimble' do
           checkpoint: '1fbfbe392a526e27648c7a354ccde21e759d7da604afb196c90453974df23e69'
   name 'Nimble'
   homepage 'http://maybulb.com'
-  license :mit
 
   app 'Nimble.app'
 

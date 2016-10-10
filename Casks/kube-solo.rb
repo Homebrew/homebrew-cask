@@ -7,7 +7,6 @@ cask 'kube-solo' do
           checkpoint: 'd195600332b68aad2281b634e08bc2552dfb1faa09db7b15bb4486753c9a6fec'
   name 'Kube-Solo'
   homepage 'https://github.com/TheNewNormal/kube-solo-osx'
-  license :apache
 
   app 'Kube-Solo.app'
 

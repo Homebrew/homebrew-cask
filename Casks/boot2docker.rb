@@ -7,7 +7,6 @@ cask 'boot2docker' do
           checkpoint: 'd3c65cdfee967e2b947c548ad94a4d9d712ef299b57b8cdd949aea8eecf64a29'
   name 'Boot2Docker'
   homepage 'https://github.com/boot2docker/osx-installer'
-  license :apache
 
   pkg "Boot2Docker-#{version}.pkg"
 

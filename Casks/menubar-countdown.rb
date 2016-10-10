@@ -6,7 +6,6 @@ cask 'menubar-countdown' do
   url "https://s3.amazonaws.com/capablehands/downloads/MenubarCountdown-#{version}.zip"
   name 'Menubar Countdown'
   homepage 'http://capablehands.net/menubarcountdown'
-  license :gpl
 
   app "MenubarCountdown-#{version}/Menubar Countdown.app"
 end

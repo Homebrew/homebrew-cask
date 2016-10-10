@@ -11,7 +11,6 @@ cask 'popclip' do
   url "https://d20vhy8jiniubf.cloudfront.net/downloads/PopClip-#{version}.zip"
   name 'Popclip'
   homepage 'https://pilotmoon.com/popclip/'
-  license :commercial
 
   app 'Popclip.app'
 end

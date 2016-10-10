@@ -8,7 +8,6 @@ cask 'mailbutler' do
           checkpoint: '28df436c619b0fd0056da7d6521c59acb102a2b141f0800e97317c3f75facc77'
   name 'MailButler'
   homepage 'https://www.feingeist.io/mailbutler/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'MailButler.app'
 end

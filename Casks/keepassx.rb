@@ -5,7 +5,6 @@ cask 'keepassx' do
   url "https://www.keepassx.org/releases/#{version}/KeePassX-#{version}.dmg"
   name 'KeePassX'
   homepage 'https://www.keepassx.org'
-  license :bsd
 
   app 'KeePassX.app'
 

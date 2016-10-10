@@ -7,7 +7,6 @@ cask 'peakhour' do
           checkpoint: '2da30a27a0c618f7e4023bd71ffd0d3984f245ab598b66b55162aaa9c94d99fe'
   name 'PeakHour'
   homepage 'https://www.peakhourapp.com'
-  license :commercial
 
   app "PeakHour #{version.major}.app"
 end

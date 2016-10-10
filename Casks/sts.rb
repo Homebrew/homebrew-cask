@@ -16,7 +16,6 @@ cask 'sts' do
   url "https://dist.springsource.com/release/STS/#{version}/dist/e#{Utils.eclipse_version_major_minor}/spring-tool-suite-#{version}-e#{Utils.eclipse_version}-macosx-cocoa-x86_64.tar.gz"
   name 'Spring Tool Suite'
   homepage 'https://spring.io/tools/sts'
-  license :eclipse
 
   app 'sts-bundle/STS.app'
 end

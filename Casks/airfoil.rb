@@ -7,7 +7,6 @@ cask 'airfoil' do
           checkpoint: 'e36b4efa89de8b3dd0b2da676815b7af01e74b6835b4e525ac020bb8b7bbbe74'
   name 'Airfoil'
   homepage 'https://www.rogueamoeba.com/airfoil/mac/'
-  license :commercial
 
   app 'Airfoil/Airfoil Satellite.app'
   app 'Airfoil/Airfoil.app'

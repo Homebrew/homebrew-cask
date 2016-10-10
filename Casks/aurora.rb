@@ -7,7 +7,6 @@ cask 'aurora' do
           checkpoint: '204f30afe061ed20b223e8dfc498388c4c9b861efe0d5af2be6594aa19121de2'
   name 'Aurora'
   homepage 'https://www.oneperiodic.com/products/aurora/'
-  license :commercial
 
   app 'Aurora.app'
 end

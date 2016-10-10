@@ -6,7 +6,6 @@ cask 'crashplan' do
   url "https://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_#{version}_Mac.dmg"
   name 'CrashPlan'
   homepage 'https://www.code42.com/crashplan/'
-  license :gratis
 
   pkg 'Install CrashPlan.pkg'
 

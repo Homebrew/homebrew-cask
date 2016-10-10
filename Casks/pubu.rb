@@ -6,7 +6,6 @@ cask 'pubu' do
   url "http://facecdn.u.qiniudn.com/downloads/%E7%80%91%E5%B8%83_OSX_V#{version}_Beta.zip"
   name '瀑布'
   homepage 'https://pubu.im'
-  license :gratis
 
   app '瀑布.app'
 end

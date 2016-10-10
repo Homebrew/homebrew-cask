@@ -6,7 +6,6 @@ cask 'lingo' do
   url 'https://nounproject.s3.amazonaws.com/lingo/Lingo.dmg'
   name 'Lingo'
   homepage 'https://lingoapp.com'
-  license :gratis
 
   app 'Lingo.app'
 

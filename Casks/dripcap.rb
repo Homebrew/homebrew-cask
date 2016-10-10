@@ -8,7 +8,6 @@ cask 'dripcap' do
           checkpoint: 'eaf3729dcdc2a4e441028b803b20829963ef63b4809d0c753b148dd4f5bcf833'
   name 'Dripcap'
   homepage 'https://dripcap.org/'
-  license :mit
 
   app 'Dripcap.app'
 

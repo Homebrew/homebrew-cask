@@ -7,7 +7,6 @@ cask 'gear-player' do
           checkpoint: '3ad0ec6ab12d4818f3793ef615e4c716dd3411fe33652e391a55262239a21958'
   name 'Gear Player'
   homepage 'https://www.gearmusicplayer.com'
-  license :commercial
 
   auto_updates true
 

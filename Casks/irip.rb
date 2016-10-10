@@ -7,7 +7,6 @@ cask 'irip' do
           checkpoint: 'e934179f4e2cc9567565ae76ea1071cb735a2e92aa00893779f56aa31d6f7d5f'
   name 'iRip'
   homepage 'http://thelittleappfactory.com/irip/'
-  license :commercial
 
   app 'iRip.app'
 end

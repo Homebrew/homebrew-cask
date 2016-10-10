@@ -7,7 +7,6 @@ cask 'pdf-converter-master' do
           checkpoint: '34cdbc6f6d9f7ca079b4cb8732bd22a4716939a17f3a7942813a1756282b4657'
   name 'PDF Converter Master'
   homepage 'http://www.lightenpdf.com/pdf-converter-mac.html'
-  license :commercial
 
   app 'PDF Converter Master.app'
 end

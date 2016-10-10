@@ -5,7 +5,6 @@ cask 'nextcloud' do
   url "https://download.nextcloud.com/desktop/releases/Mac/Installer/Nextcloud-#{version}.pkg"
   name 'Nextcloud'
   homepage 'https://nextcloud.com'
-  license :gpl
 
   pkg "Nextcloud-#{version}.pkg"
 

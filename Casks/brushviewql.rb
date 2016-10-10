@@ -7,7 +7,6 @@ cask 'brushviewql' do
           checkpoint: '486964fda08be301457c6bf2bb4b72d6d06f73c53e18ab1d467beb9b6ae7dff7'
   name 'BrushViewQL'
   homepage 'http://brushviewer.sourceforge.net/'
-  license :gpl
 
   qlplugin 'BrushViewQL/BrushViewQL.qlgenerator'
 end

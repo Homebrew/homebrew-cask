@@ -6,7 +6,6 @@ cask 'xamarin-android-player' do
   url "https://xamarin-android-player.s3.amazonaws.com/player/mac/#{version.before_comma}/XAP-Beta-#{version.after_comma}-v#{version.before_comma}.dmg"
   name 'Xamarin Android Player'
   homepage 'https://xamarin.com/android-player'
-  license :gratis
 
   pkg "XAP-Beta-#{version.after_comma}-v#{version.before_comma}.pkg"
 

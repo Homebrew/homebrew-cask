@@ -7,7 +7,6 @@ cask 'dnscrypt' do
           checkpoint: '29c595e8cc826a70d1f0bee7a30930f53ba3f06d1a4e422879bf92bac139ddad'
   name 'DNSCrypt'
   homepage 'https://github.com/alterstep/dnscrypt-osxclient'
-  license :oss
 
   pkg 'DNSCrypt.pkg'
 

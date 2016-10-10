@@ -6,7 +6,6 @@ cask 'dmmbookviewer' do
   url "http://dl.aka.dmm.co.jp/dmmviewer/mac/DMMViewerSetup_Mac_#{version}.pkg"
   name 'DMMbookviewer'
   homepage 'https://book.dmm.com/info_bookviewer.html'
-  license :gratis
 
   pkg "DMMViewerSetup_Mac_#{version}.pkg"
 

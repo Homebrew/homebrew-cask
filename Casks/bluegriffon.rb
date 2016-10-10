@@ -5,7 +5,6 @@ cask 'bluegriffon' do
   url "http://bluegriffon.org/freshmeat/#{version}/bluegriffon-#{version}.mac.dmg"
   name 'BlueGriffon'
   homepage 'http://bluegriffon.org'
-  license :oss
 
   app 'BlueGriffon.app'
 end

@@ -7,7 +7,6 @@ cask 'dwihn0r-keepassx' do
           checkpoint: '6ebc4f87131181279642354e21839d5d5993d58098fa661ea26863c81294ad8a'
   name 'KeePassX'
   homepage 'https://github.com/dwihn0r/keepassx/'
-  license :gpl
 
   app 'KeePassX.app'
 end

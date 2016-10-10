@@ -8,7 +8,6 @@ cask 'openbazaar' do
           checkpoint: '9e386b2fbe4620771a0e8f39fc6b361ae4d539da64fa18cbe46aea4b7acdf27b'
   name 'OpenBazaar'
   homepage 'https://openbazaar.org/'
-  license :mit
 
   app 'OpenBazaar.app'
 

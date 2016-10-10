@@ -5,7 +5,6 @@ cask 'sonos' do
   url 'http://www.sonos.com/redir/controller_software_mac'
   name 'Sonos'
   homepage 'https://www.sonos.com/'
-  license :commercial
 
   app 'Sonos.app'
 end

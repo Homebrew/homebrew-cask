@@ -8,7 +8,6 @@ cask 'xaos' do
           checkpoint: '146ea58dc7acf2fae163644fdede7c5da1caacf4c84c3f1c3745a99b7f38a1c6'
   name 'GNU XaoS'
   homepage 'http://matek.hu/xaos'
-  license :gpl
 
   app 'XaoS.app'
 end

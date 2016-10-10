@@ -5,7 +5,6 @@ cask 'trenchbroom' do
   url "http://kristianduske.com/trenchbroom/downloads/mac/TrenchBroom_Mac_#{version}.zip"
   name 'TrenchBroom'
   homepage 'http://kristianduske.com/trenchbroom/'
-  license :gpl
 
   app 'TrenchBroom.app'
 end

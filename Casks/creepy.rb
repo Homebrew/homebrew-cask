@@ -8,7 +8,6 @@ cask 'creepy' do
           checkpoint: '7e6a4adab2f72f4be25e9d15dd1a1d2a94d87e2276a6d6bd6c7384d152ba12e9'
   name 'Creepy'
   homepage 'http://www.geocreepy.com/'
-  license :gpl
 
   app 'cree.py.app'
 end

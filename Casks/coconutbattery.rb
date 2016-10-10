@@ -17,7 +17,6 @@ cask 'coconutbattery' do
 
   name 'coconutBattery'
   homepage 'https://www.coconut-flavour.com/coconutbattery/'
-  license :bsd
 
   app 'coconutBattery.app'
 

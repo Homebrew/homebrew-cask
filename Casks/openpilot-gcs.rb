@@ -5,7 +5,6 @@ cask 'openpilot-gcs' do
   url "https://wiki.openpilot.org/download/attachments/361104/OpenPilot-RELEASE-#{version}-osx.dmg"
   name 'OpenPilot Ground Control Station'
   homepage 'https://wiki.openpilot.org/display/WIKI/OpenPilot+Downloads'
-  license :gpl
 
   app 'OpenPilot GCS.app'
 end

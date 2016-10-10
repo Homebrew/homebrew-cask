@@ -6,7 +6,6 @@ cask 'etcher' do
   url "https://resin-production-downloads.s3.amazonaws.com/etcher/#{version}/Etcher-darwin-x64.dmg"
   name 'Etcher'
   homepage 'https://www.etcher.io/'
-  license :apache
 
   app 'Etcher.app'
 end

@@ -5,7 +5,6 @@ cask 'serviio' do
   url "http://download.serviio.org/releases/serviio-#{version}-osx.tar.gz"
   name 'Serviio'
   homepage 'http://serviio.org/'
-  license :commercial
 
   pkg "Serviio-#{version}.pkg"
 end

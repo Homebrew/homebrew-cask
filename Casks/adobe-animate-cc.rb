@@ -7,7 +7,6 @@ cask 'adobe-animate-cc' do
       cookies:    { 'MM_TRIALS' => '1234' }
   name 'Adobe Animate CC'
   homepage 'https://www.adobe.com/products/animate.html'
-  license :commercial
 
   language = case MacOS.language
              when %r{^cs} then 'cs_CZ'

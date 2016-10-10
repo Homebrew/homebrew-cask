@@ -8,7 +8,6 @@ cask 'adobe-bloodhound' do
           checkpoint: '7e0455fdb26c7e689f6e6215181a7c50db7a48a74cfaf295c9ff8d592c2eeaae'
   name 'Adobe Bloodhound'
   homepage 'https://marketing.adobe.com/resources/help/en_US/mobile/bloodhound/'
-  license :gratis
 
   app 'Adobe Bloodhound.app'
 end

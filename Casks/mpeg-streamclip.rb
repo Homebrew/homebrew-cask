@@ -6,7 +6,6 @@ cask 'mpeg-streamclip' do
   url "http://www.alfanet.it/squared5/MPEG_Streamclip_#{version}.dmg"
   name 'MPEG Streamclip'
   homepage 'http://www.squared5.com/'
-  license :gratis
 
   app 'MPEG Streamclip.app'
 end

@@ -6,7 +6,6 @@ cask 'td-agent' do
   url "http://packages.treasuredata.com.s3.amazonaws.com/2/macosx/td-agent-#{version}-0.dmg"
   name 'td-agent'
   homepage 'https://www.fluentd.org/'
-  license :apache
 
   pkg "tdagent-#{version}-0.pkg"
 

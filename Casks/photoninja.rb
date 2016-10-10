@@ -6,7 +6,6 @@ cask 'photoninja' do
   url "https://picturecode.cachefly.net/photoninja/downloads/Install_PhotoNinja_#{version}.dmg"
   name 'Photo Ninja'
   homepage 'https://www.picturecode.com/'
-  license :commercial
 
   app "PhotoNinja_#{version}.app"
 end

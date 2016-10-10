@@ -5,7 +5,6 @@ cask 'microsoft-lync' do
   url "https://download.microsoft.com/download/5/0/0/500C7E1F-3235-47D4-BC11-95A71A1BA3ED/lync_#{version}.dmg"
   name 'Microsoft Lync 2011'
   homepage 'https://www.microsoft.com/en-us/download/details.aspx?id=36517'
-  license :gratis
 
   pkg 'Lync Installer.pkg'
 

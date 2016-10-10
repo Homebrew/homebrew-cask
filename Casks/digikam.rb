@@ -6,7 +6,6 @@ cask 'digikam' do
   url "http://download.kde.org/stable/digikam/digiKam-#{version}-MacOS-x86-64.pkg"
   name 'digiKam'
   homepage 'https://www.digikam.org'
-  license :gpl
 
   pkg "digikam-#{version}-MacOS-x86-64.pkg"
 

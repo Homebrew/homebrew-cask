@@ -7,7 +7,6 @@ cask 'porthole' do
           checkpoint: 'a3602cb1b9271bafaa09b607760da032f2bedaa6315238a339ae22c607510197'
   name 'Porthole'
   homepage 'http://getporthole.com/'
-  license :commercial
 
   app 'Porthole.app'
 end

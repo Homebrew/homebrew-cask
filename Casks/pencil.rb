@@ -7,7 +7,6 @@ cask 'pencil' do
           checkpoint: '78c1eac95e9b45745b6a5e2590e8023626ca9928b8f650f0362c62ab18da8a00'
   name 'Pencil'
   homepage 'https://github.com/prikhi/pencil'
-  license :gpl
 
   app 'Pencil.app'
 end

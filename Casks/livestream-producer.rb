@@ -5,7 +5,6 @@ cask 'livestream-producer' do
   url 'https://cdn.livestream.com/producer/LivestreamProducer.pkg'
   name 'Livestream Producer'
   homepage 'https://new.livestream.com/producer/software'
-  license :gratis
 
   pkg 'LivestreamProducer.pkg'
 

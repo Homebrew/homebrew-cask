@@ -5,7 +5,6 @@ cask 'camtasia' do
   url 'https://download.techsmith.com/camtasiamac/enu/Camtasia.dmg'
   name 'Camtasia'
   homepage 'https://www.techsmith.com/camtasia.html'
-  license :commercial
 
   app 'Camtasia 2.app'
 end

@@ -8,7 +8,6 @@ cask 'multidoge' do
           checkpoint: '171414db90a857afe06592aa5c815d6f8f693177ebe4a7454f7a00b9ccad8e5a'
   name 'MultiDoge'
   homepage 'http://multidoge.org/'
-  license :mit
 
   app 'MultiDoge.app'
 end

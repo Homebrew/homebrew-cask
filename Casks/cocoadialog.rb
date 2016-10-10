@@ -8,7 +8,6 @@ cask 'cocoadialog' do
           checkpoint: '370f0d166f7e5dbdf850c1f0107f2f965a93e389d9449adb2c8fd8f1a062e169'
   name 'cocoaDialog'
   homepage 'https://mstratman.github.io/cocoadialog/'
-  license :gpl
 
   app 'CocoaDialog.app'
 end

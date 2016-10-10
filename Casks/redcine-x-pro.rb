@@ -5,7 +5,6 @@ cask 'redcine-x-pro' do
   url "http://downloads.red.com/software/rcx/mac/release/#{version}/REDCINE-X_PRO_Build_#{version.major}.0.pkg"
   name 'REDCINE-X PRO'
   homepage 'https://www.red.com/'
-  license :commercial
 
   pkg "REDCINE-X_PRO_Build_#{version.major}.0.pkg"
 

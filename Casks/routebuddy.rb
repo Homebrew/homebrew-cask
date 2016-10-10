@@ -6,7 +6,6 @@ cask 'routebuddy' do
   url "https://objects.dreamhost.com/routebuddy/download/apps/RouteBuddy_#{version}.dmg"
   name 'RouteBuddy'
   homepage 'https://routebuddy.com/'
-  license :commercial
 
   app 'RouteBuddy.app'
 end

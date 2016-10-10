@@ -7,7 +7,6 @@ cask 'cycling74-max' do
   name 'Cycling ‘74 Max'
   name 'Ableton Max for Live'
   homepage 'https://cycling74.com/'
-  license :commercial
 
   app 'Max.app'
 end

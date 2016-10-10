@@ -8,7 +8,6 @@ cask 'audiomate' do
           checkpoint: '2af94fde8ad6c95ad8d87ebb6c2d6b14dd375917958d774e07b39ecb37685b1e'
   name 'AudioMate'
   homepage 'https://audiomateapp.com/'
-  license :mit
 
   app 'AudioMate.app'
 

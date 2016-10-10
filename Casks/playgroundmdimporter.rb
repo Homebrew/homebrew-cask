@@ -7,7 +7,6 @@ cask 'playgroundmdimporter' do
           checkpoint: '7220165f1235ccc639906c3a34b75e4a1b49bb3a2d8aa07b22b4fbdbf1bf3f65'
   name 'PlaygroundMDImporter'
   homepage 'https://github.com/norio-nomura/PlaygroundMDImporter'
-  license :mit
 
   artifact 'Playground.mdimporter', target: "#{ENV['HOME']}/Library/Spotlight/Playground.mdimporter"
 

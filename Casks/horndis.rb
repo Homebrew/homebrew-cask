@@ -5,7 +5,6 @@ cask 'horndis' do
   url "http://joshuawise.com/downloads/HoRNDIS-rel#{version}.pkg"
   name 'HoRNDIS'
   homepage 'http://joshuawise.com/horndis'
-  license :gpl
   gpg "#{url}.sig",
       key_id: '3e7f6d58ea80e0b3'
 

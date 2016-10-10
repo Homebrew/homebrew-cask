@@ -7,7 +7,6 @@ cask 'pirateplayer' do
           checkpoint: 'f61d3c35b95a7581000877e4294b6f38fefa60a16646684f32aa08f3372ceabe'
   name 'Pirateplayer'
   homepage 'http://pirateplay.se/'
-  license :gpl
 
   auto_updates true
 

@@ -6,7 +6,6 @@ cask 'marker-import' do
   url "http://www.digitalrebellion.com/download/markerimport?version=#{version.no_dots}"
   name 'Kollaborate Marker Import'
   homepage 'https://www.kollaborate.tv/resources'
-  license :gratis
 
   app 'Marker Import.app'
 

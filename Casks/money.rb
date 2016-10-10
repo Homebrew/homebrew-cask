@@ -5,7 +5,6 @@ cask 'money' do
   url "http://download.jumsoft.com/Applications/Money/Money_#{version}.zip"
   name 'Money'
   homepage 'https://www.jumsoft.com/money/'
-  license :commercial
 
   app 'Money.app'
 end

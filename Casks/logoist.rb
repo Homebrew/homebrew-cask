@@ -5,7 +5,6 @@ cask 'logoist' do
   url 'http://www.syniumsoftware.com/download/logoist.dmg'
   name 'Logoist'
   homepage 'http://www.syniumsoftware.com/logoist/'
-  license :commercial
 
   app 'Logoist.app'
 end

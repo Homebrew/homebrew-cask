@@ -6,7 +6,6 @@ cask 'dominion' do
   url "https://dominion.makingfun.co/Dominion%20#{version}.pkg"
   name 'Dominion'
   homepage 'https://www.playdominion.com/'
-  license :gratis
 
   depends_on macos: '>= :lion'
 

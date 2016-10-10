@@ -7,7 +7,6 @@ cask 'deskfun' do
           checkpoint: '1d7761dd1dbd0741321c499a4222cabd15aa8a1c661240d65e0ee4fdd199bf9a'
   name 'DeskFun'
   homepage 'http://www.furrysoft.de/?page=deskfun'
-  license :gratis
 
   app 'DeskFun.app'
 end

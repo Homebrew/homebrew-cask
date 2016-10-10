@@ -6,7 +6,6 @@ cask 'brewtarget' do
   url "https://launchpad.net/brewtarget/trunk/#{version}/+download/Brewtarget-#{version}.dmg"
   name 'brewtarget'
   homepage 'http://www.brewtarget.org/'
-  license :oss
 
   app 'brewtarget.app'
 end

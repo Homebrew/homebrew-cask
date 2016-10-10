@@ -7,7 +7,6 @@ cask 'propresenter' do
           checkpoint: 'acc463698d4f9c7030ad51e0bffdb32bbde1647dce8bc6ff38999da98905aa08'
   name 'ProPresenter'
   homepage 'https://www.renewedvision.com/propresenter.php'
-  license :commercial
 
   app 'ProPresenter 6.app'
 end

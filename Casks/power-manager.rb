@@ -7,7 +7,6 @@ cask 'power-manager' do
           checkpoint: 'bb2e3dca69a563292b36fbaa8aee38697085430e88cc3cc7fc75a6e56df89c8c'
   name 'Power Manager'
   homepage 'https://www.dssw.co.uk/powermanager'
-  license :commercial
 
   auto_updates true
   depends_on macos: '>= :lion'

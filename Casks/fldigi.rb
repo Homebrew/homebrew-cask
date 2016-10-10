@@ -7,7 +7,6 @@ cask 'fldigi' do
           checkpoint: '2cddfc239be10e2acf1ab18d722f6cf296d04c4900ed46ed76ee91c6552434d9'
   name 'fldigi'
   homepage 'https://sourceforge.net/projects/fldigi/files/fldigi/'
-  license :gpl
 
   app "fldigi-#{version}.app"
   app 'flarq-4.3.6.app'

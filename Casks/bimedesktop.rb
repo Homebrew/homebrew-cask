@@ -6,7 +6,6 @@ cask 'bimedesktop' do
   url 'https://s3.amazonaws.com/bimeio/bimedesktop/BimeDesktop-mac.zip'
   name 'BIME Desktop'
   homepage 'https://www.bimeanalytics.com/'
-  license :gratis
 
   app 'BimeDesktop.app'
 end

@@ -8,7 +8,6 @@ cask 'keeweb' do
           checkpoint: '67dbbf3ef00e3b891a8163f0dff154dd31e39e330f00e7a7c2fbd168c577f08f'
   name 'KeeWeb'
   homepage 'https://keeweb.info'
-  license :mit
 
   auto_updates true
 

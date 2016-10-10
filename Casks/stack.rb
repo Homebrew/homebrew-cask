@@ -6,7 +6,6 @@ cask 'stack' do
   url "https://mirror.transip.net/stack/software/osx/stack-#{version}.pkg"
   name 'STACK'
   homepage 'https://transip.nl/stack'
-  license :gratis
 
   pkg "stack-#{version}.pkg"
 

@@ -7,7 +7,6 @@ cask 'texshop' do
           checkpoint: '43e3e85c1e1d3a3a34b4c42cb41a45d1066ffa8d1c373fee9a28533cf3d86f63'
   name 'TeXShop'
   homepage 'http://pages.uoregon.edu/koch/texshop'
-  license :gpl
 
   app 'TeXShop.app'
 end

@@ -5,7 +5,6 @@ cask 'printnode' do
   url "https://app.printnode.com/bundles/printnodemain/downloads/printnode/#{version}/PrintNode-#{version}+dd7.dmg"
   name 'PrintNode'
   homepage 'https://www.printnode.com/'
-  license :gratis
 
   depends_on macos: '>= :mountain_lion'
 

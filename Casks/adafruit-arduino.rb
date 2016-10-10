@@ -6,7 +6,6 @@ cask 'adafruit-arduino' do
   url "https://s3.amazonaws.com/adafruit-download/adafruit-arduino-#{version}-macosx.zip"
   name 'Adafruit Arduino'
   homepage 'https://adafruit.com'
-  license :gpl
 
   conflicts_with cask: 'arduino'
 

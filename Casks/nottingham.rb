@@ -7,7 +7,6 @@ cask 'nottingham' do
           checkpoint: 'f5f9477be149a49ca79728c8d8b16feef8e183edd1ea6ee693d29e6d01256910'
   name 'Nottingham'
   homepage 'https://clickontyler.com/nottingham/'
-  license :gratis
 
   app 'Nottingham.app'
 end

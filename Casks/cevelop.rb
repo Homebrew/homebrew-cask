@@ -5,7 +5,6 @@ cask 'cevelop' do
   url "https://www.cevelop.com/cevelop/downloads/cevelop-#{version}-macosx.cocoa.x86_64.tar.gz"
   name 'Cevelop'
   homepage 'https://www.cevelop.com/'
-  license :gratis
 
   depends_on arch: :x86_64
 

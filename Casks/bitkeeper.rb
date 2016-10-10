@@ -5,7 +5,6 @@ cask 'bitkeeper' do
   url "https://www.bitkeeper.org/downloads/#{version}/bk-#{version}-x86_64-macosx.pkg"
   name 'BitKeeper'
   homepage 'https://www.bitkeeper.org'
-  license :apache
 
   pkg "bk-#{version}-x86_64-macosx.pkg"
 

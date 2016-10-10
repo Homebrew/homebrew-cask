@@ -7,7 +7,6 @@ cask 'xmrouter' do
   name 'miwifi'
   name '小米路由器'
   homepage 'http://miwifi.com/'
-  license :gratis
 
   app 'XMRouter.app'
 end

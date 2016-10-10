@@ -5,7 +5,6 @@ cask 'steermouse' do
   url "http://plentycom.jp/ctrl/files_sm/SteerMouse#{version}.dmg"
   name 'SteerMouse'
   homepage 'http://plentycom.jp/en/steermouse/'
-  license :commercial
 
   pkg 'SteerMouse Installer.app/Contents/Resources/SteerMouse.pkg'
 

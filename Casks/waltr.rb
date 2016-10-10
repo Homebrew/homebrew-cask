@@ -6,7 +6,6 @@ cask 'waltr' do
   url 'https://dl.devmate.com/com.softorino.Waltr/WALTR.zip'
   name 'WALTR'
   homepage 'https://softorino.com/waltr'
-  license :commercial
 
   app 'Waltr.app'
 end

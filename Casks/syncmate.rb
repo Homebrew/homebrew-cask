@@ -7,7 +7,6 @@ cask 'syncmate' do
           checkpoint: '82b939f1f7ccdaf515234c9d7f28332f9f4b83bda4164dc4ff7e93a5ed377b11'
   name 'SyncMate'
   homepage 'http://www.sync-mac.com'
-  license :commercial
 
   app 'SyncMate.app'
 end

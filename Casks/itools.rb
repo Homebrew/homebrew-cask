@@ -6,7 +6,6 @@ cask 'itools' do
   url "http://dl2.itools.hk/dl/iTools64_#{version}.dmg"
   name 'iTools'
   homepage 'http://pro.itools.cn/mac/english'
-  license :gratis
 
   app 'iTools.app'
 end

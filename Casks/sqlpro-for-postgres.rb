@@ -6,7 +6,6 @@ cask 'sqlpro-for-postgres' do
   url "https://d3fwkemdw8spx3.cloudfront.net/postgres/SQLProPostgres.#{version}.app.zip"
   name 'SQLPro for Postgres'
   homepage 'https://www.macpostgresclient.com/SQLProPostgres'
-  license :commercial
 
   app 'SQLPro for Postgres.app'
 

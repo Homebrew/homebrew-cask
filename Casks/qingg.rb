@@ -8,7 +8,6 @@ cask 'qingg' do
   name 'QinggIM'
   name '清歌输入法'
   homepage 'https://qingg.im/mac/'
-  license :gratis
 
   auto_updates true
 

@@ -5,7 +5,6 @@ cask 'bluestacks' do
   url "http://cdn.bluestacks.com/downloads/#{version}/BlueStacks-Installer.dmg"
   name 'BlueStacks'
   homepage 'http://www.bluestacks.com/'
-  license :closed
 
   app 'BlueStacks.app'
 

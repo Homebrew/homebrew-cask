@@ -5,7 +5,6 @@ cask 'iannix' do
   url "http://www.iannix.org/download/iannix_mac_64__#{version.dots_to_underscores}.dmg"
   name 'IanniX'
   homepage 'http://www.iannix.org/'
-  license :gpl
 
   app 'IanniX/IanniX.app'
 end

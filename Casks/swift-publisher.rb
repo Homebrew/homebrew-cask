@@ -8,7 +8,6 @@ cask 'swift-publisher' do
           checkpoint: '04cf983120e06ad9958bb69ff7d2b47c2d2bd6ba4f5349eeb5002602f54195ca'
   name 'Swift Publisher'
   homepage 'https://www.belightsoft.com/products/swiftpublisher/overview.php'
-  license :closed
 
   app "Swift Publisher #{version.major}.app"
 end

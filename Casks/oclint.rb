@@ -8,7 +8,6 @@ cask 'oclint' do
           checkpoint: '2b9179b96d9caccfcbac1aca6d10b6dfb5aa176daf840800434b32c12277a17b'
   name 'OCLint'
   homepage 'http://oclint.org'
-  license :oss
 
   binary "oclint-#{version.before_comma}/bin/oclint"
   binary "oclint-#{version.before_comma}/bin/oclint-json-compilation-database"

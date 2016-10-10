@@ -6,7 +6,6 @@ cask 'fiddler' do
   url 'http://ericlawrence.com/dl/InstallFiddler.dmg'
   name 'Telerik Fiddler Proxy'
   homepage 'https://www.telerik.com/fiddler'
-  license :commercial
 
   depends_on cask: 'mono-mdk'
 

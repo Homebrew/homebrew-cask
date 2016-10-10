@@ -7,7 +7,6 @@ cask 'audio-hijack' do
           checkpoint: '6c8bca6747961bfd604191d57047623ed8162f4418b049919b11a83067e68719'
   name 'Audio Hijack'
   homepage 'https://www.rogueamoeba.com/audiohijack/'
-  license :commercial
 
   depends_on macos: '>= :mavericks'
 

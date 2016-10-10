@@ -5,7 +5,6 @@ cask 'bitcasa' do
   url "https://dist.bitcasa.com/update/InstallBitcasa.#{version}.pkg"
   name 'Bitcasa CloudFS'
   homepage 'https://www.bitcasa.com'
-  license :gratis
 
   pkg "InstallBitcasa.#{version}.pkg"
 

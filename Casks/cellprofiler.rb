@@ -6,7 +6,6 @@ cask 'cellprofiler' do
   url 'https://cellprofiler-org.s3.amazonaws.com/CellProfiler.dmg'
   name 'CellProfiler'
   homepage 'http://cellprofiler.org'
-  license :oss
 
   app 'CellProfiler.app'
 end

@@ -6,7 +6,6 @@ cask 'kollaborate-plugin-pack' do
   url "http://www.digitalrebellion.com/download/kollabplugins?version=#{version.no_dots}"
   name 'Kollaborate Plugin Pack'
   homepage 'https://www.kollaborate.tv/resources'
-  license :gratis
 
   installer manual: 'Install Kollaborate Plugin Pack.pkg'
 

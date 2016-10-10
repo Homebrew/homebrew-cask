@@ -7,7 +7,6 @@ cask 'netnewswire' do
           checkpoint: 'cee1d039a2ffc06b54fb22d46af75f49ecbf8c48fd84068ff92aabcab48744c8'
   name 'NetNewsWire'
   homepage 'http://netnewswireapp.com/'
-  license :commercial
 
   app 'NetNewsWire.app'
 end

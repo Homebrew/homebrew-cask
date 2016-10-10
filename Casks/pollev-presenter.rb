@@ -8,7 +8,6 @@ cask 'pollev-presenter' do
           checkpoint: '6ebc1c92694e53bf219a540880fe16b2cb280c2a8e38084144076029d2b74d55'
   name 'PollEv Presenter'
   homepage 'https://www.polleverywhere.com/'
-  license :gratis
 
   app 'PollEv Presenter.app'
 end

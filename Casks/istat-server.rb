@@ -5,7 +5,6 @@ cask 'istat-server' do
   url 'https://download.bjango.com/istatserver/'
   name 'iStat Server'
   homepage 'https://bjango.com/mac/istatserver/'
-  license :gratis
 
   pkg 'iStat Server.pkg'
 

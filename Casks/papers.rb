@@ -7,7 +7,6 @@ cask 'papers' do
           checkpoint: 'c35a04f02091fbcaf519185678a234c6e034d798561b19c7af4f0c590648450f'
   name 'Papers'
   homepage 'https://www.papersapp.com/'
-  license :commercial
 
   app 'Papers.app'
 end

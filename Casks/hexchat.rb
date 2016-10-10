@@ -7,7 +7,6 @@ cask 'hexchat' do
           checkpoint: 'bf6e520b7f29913768f3f624bf9c8be7c7dafa7f9ed25994309732862c84e46d'
   name 'HexChat'
   homepage 'https://hexchat.net'
-  license :gpl
 
   app 'HexChat.app'
 end

@@ -5,7 +5,6 @@ cask 'cmdtap' do
   url "http://www.yingdev.com/Content/Projects/CmdTap/Release/#{version}/CmdTap.zip"
   name 'CmdTap'
   homepage 'http://www.yingdev.com/projects/cmdtap'
-  license :closed
 
   app 'CmdTap.app'
 end

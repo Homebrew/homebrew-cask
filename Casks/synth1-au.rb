@@ -5,7 +5,6 @@ cask 'synth1-au' do
   url "http://www.geocities.jp/daichi1969/softsynth/Synth1macau#{version.no_dots}.zip"
   name 'Synth1 (AU)'
   homepage 'http://www.geocities.jp/daichi1969/softsynth/'
-  license :gratis
 
   audio_unit_plugin 'Synth1.component'
 end

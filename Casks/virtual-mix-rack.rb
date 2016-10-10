@@ -5,7 +5,6 @@ cask 'virtual-mix-rack' do
   url "http://download.slatedigital.com/vmr/VMR_#{version.no_dots}_Mac.zip"
   name 'Slate Digital Virtual Mix Rack'
   homepage 'http://www.slatedigital.com/products/virtual-mix-rack/'
-  license :commercial
 
   container nested: "VMR_#{version.no_dots}_Mac.dmg"
 

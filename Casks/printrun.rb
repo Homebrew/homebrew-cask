@@ -6,7 +6,6 @@ cask 'printrun' do
   url 'http://koti.kapsi.fi/~kliment/printrun/Printrun-Mac-03Feb2015.zip'
   name 'Printrun'
   homepage 'https://github.com/kliment/Printrun'
-  license :gpl
 
   app 'Printrun-Mac-03Feb2015.app'
 end

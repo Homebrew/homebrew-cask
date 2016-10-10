@@ -7,7 +7,6 @@ cask 'praat' do
           checkpoint: '3d74ff31449d5f37f3cca51c91e62ba828697e7e247ac60f8e62ca26f4a3ff8a'
   name 'Praat'
   homepage 'http://www.fon.hum.uva.nl/praat/'
-  license :gpl
 
   app 'Praat.app'
   binary "#{appdir}/Praat.app/Contents/MacOS/Praat", target: 'praat'

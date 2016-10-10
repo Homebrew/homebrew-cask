@@ -8,7 +8,6 @@ cask 'vagrant' do
           checkpoint: 'b3e2ff8f8556294139653183d7e7cf47e572d2148c4ae2910d99920353042574'
   name 'Vagrant'
   homepage 'https://www.vagrantup.com/'
-  license :mit
 
   pkg 'Vagrant.pkg'
 

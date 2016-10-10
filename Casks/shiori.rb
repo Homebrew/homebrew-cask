@@ -7,7 +7,6 @@ cask 'shiori' do
           checkpoint: 'b74ab222a197cf6ffd5eb05df85f89ba04c699e1dcf7c639a7d8070da1fd3cfd'
   name 'Shiori'
   homepage 'https://aki-null.net/shiori/'
-  license :gratis
 
   app 'Shiori.app'
 end

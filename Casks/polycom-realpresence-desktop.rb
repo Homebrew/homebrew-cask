@@ -5,7 +5,6 @@ cask 'polycom-realpresence-desktop' do
   url "https://downloads.polycom.com/video/realpresence_desktop/RPDMac-release_#{version}.dmg"
   name 'Polycom RealPresence Desktop'
   homepage 'http://www.polycom.com/products-services/hd-telepresence-video-conferencing/realpresence-desktop/realpresence-desktop.html'
-  license :commercial
 
   pkg 'RealPresenceDesktop.pkg'
 

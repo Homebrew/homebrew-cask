@@ -7,7 +7,6 @@ cask 'xamarin-ios' do
           checkpoint: '00b79aa8567cd5acabbe285e2b09fe0765df2def16a111c8c757015aff57d21e'
   name 'Xamarin.iOS'
   homepage 'https://xamarin.com/ios'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "xamarin.ios-#{version}.pkg"
 

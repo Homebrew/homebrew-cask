@@ -7,7 +7,6 @@ cask 'swinsian' do
           checkpoint: '9f1e2c0ec9d7858be83f369ab73399d8080cdd7bfba4bc1f662445d1db2cef0c'
   name 'Swinsian'
   homepage 'https://swinsian.com'
-  license :commercial
 
   app 'Swinsian.app'
 end

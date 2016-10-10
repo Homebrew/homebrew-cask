@@ -8,7 +8,6 @@ cask 'qbittorrent' do
           checkpoint: 'e407968d0a0b068d9275170baa466025337ad85148f3639fa85ac5618c5c301f'
   name 'qBittorrent'
   homepage 'http://www.qbittorrent.org/'
-  license :gpl
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app 'qbittorrent.app', target: 'qBittorrent.app'

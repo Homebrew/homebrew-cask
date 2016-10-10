@@ -7,7 +7,6 @@ cask 'cutesdr' do
           checkpoint: '5619e8fccaa00f7ecbcd8726ea4942698c15d8dd760756cdf43de7da08bf595a'
   name 'CuteSDR'
   homepage 'https://sourceforge.net/projects/cutesdr'
-  license :oss
 
   app 'cutesdr.app'
 end

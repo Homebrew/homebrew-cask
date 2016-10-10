@@ -6,7 +6,6 @@ cask 'sonic-visualiser' do
   url "https://code.soundsoftware.ac.uk/attachments/download/1680/Sonic%20Visualiser-#{version}.dmg"
   name 'Sonic Visualiser'
   homepage 'http://www.sonicvisualiser.org/'
-  license :gpl
 
   app 'Sonic Visualiser.app'
 end

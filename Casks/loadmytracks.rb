@@ -8,7 +8,6 @@ cask 'loadmytracks' do
           checkpoint: 'bef86b055707d407eb2835db82e07d615968d344450417515cae5719fd97cefd'
   name 'LoadMyTracks'
   homepage 'https://www.loadmytracks.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'LoadMyTracks.app'
 end

@@ -5,7 +5,6 @@ cask 'acquia-dev-desktop' do
   url "https://www.acquia.com/sites/default/files/downloads/dev-desktop/AcquiaDevDesktop-#{version}.dmg"
   name 'Acquia Dev Desktop'
   homepage 'https://www.acquia.com/products-services/dev-desktop'
-  license :gratis
 
   installer script: 'Acquia Dev Desktop Installer.app/Contents/MacOS/installbuilder.sh',
             args:   ['--mode', 'unattended', '--unattendedmodeui', 'none'],

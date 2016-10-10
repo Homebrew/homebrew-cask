@@ -6,7 +6,6 @@ cask 'zulu' do
       referer: 'https://www.azul.com/downloads/zulu/zulu-mac/'
   name 'Azul Zulu Java Standard Edition Development Kit'
   homepage 'https://www.azul.com/downloads/zulu/zulu-mac/'
-  license :gratis
 
   conflicts_with cask: 'java'
 

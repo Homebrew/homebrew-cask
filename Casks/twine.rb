@@ -6,7 +6,6 @@ cask 'twine' do
   url "https://bitbucket.org/klembot/twinejs/downloads/twine_#{version}_osx.zip"
   name 'Twine'
   homepage 'https://twinery.org/'
-  license :gpl
 
   app 'Twine.app'
 end

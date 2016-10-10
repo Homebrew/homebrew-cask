@@ -8,7 +8,6 @@ cask 'logdna-agent' do
           checkpoint: '84a37f85b867f410014b7caa6e46b0a1ac9a07d5f83c1ec51c9eaf848a13d475'
   name 'LogDNA Agent'
   homepage 'https://logdna.com/'
-  license :mit
 
   pkg 'logdna-agent.pkg'
 

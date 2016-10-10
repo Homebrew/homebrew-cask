@@ -7,7 +7,6 @@ cask 'runtastic-connect' do
           checkpoint: '5a12c0d1453700ef2b9e284e3c5ea80649c2ef21aa0a6f8308629c91ea85fc8f'
   name 'Runtastic Connect'
   homepage 'https://www.runtastic.com/connect'
-  license :gratis
 
   app 'Runtastic Connect.app'
 end

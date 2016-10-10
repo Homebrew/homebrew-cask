@@ -7,7 +7,6 @@ cask 'finicky' do
           checkpoint: '4bcb25e5a86bc228c2abbf30df295cdfeb992e4a7038e2d2f6380ec793e75e29'
   name 'Finicky'
   homepage 'https://github.com/johnste/finicky'
-  license :mit
 
   app 'Finicky.app'
 end

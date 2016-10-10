@@ -7,7 +7,6 @@ cask 'hirundo' do
           checkpoint: '9ddb3a38601017b621f4824953afb7271635a97d38b31c1b5c6b7782a6a31e60'
   name 'Hirundo'
   homepage 'https://stylemac.com/hirundo/'
-  license :gratis
 
   app 'Hirundo.app'
 end

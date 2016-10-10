@@ -6,7 +6,6 @@ cask 'powerword' do
   name 'Powerword'
   name '词霸'
   homepage 'http://mac.iciba.com'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app '金山词霸.app'
 end

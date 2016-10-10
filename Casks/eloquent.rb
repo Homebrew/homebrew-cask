@@ -7,7 +7,6 @@ cask 'eloquent' do
           checkpoint: '6e60338304dbce613859c0883d191d7ec2dc81e8fec7bb431c6f05818601c994'
   name 'Eloquent'
   homepage 'https://github.com/mdbergmann/Eloquent'
-  license :gratis
 
   app 'Eloquent.app'
 

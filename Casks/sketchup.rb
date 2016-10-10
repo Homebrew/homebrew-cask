@@ -7,7 +7,6 @@ cask 'sketchup' do
   url 'https://dl.trimble.com/sketchup/SketchUpMake-en.dmg'
   name 'SketchUp'
   homepage 'https://www.sketchup.com/'
-  license :gratis
 
   suite 'SketchUp 2016'
 

@@ -6,7 +6,6 @@ cask 'cocoaspell' do
   url "http://people.ict.usc.edu/~leuski/cocoaspell/cocoAspell.#{version}.dmg"
   name 'cocoAspell'
   homepage 'http://cocoaspell.leuski.net/'
-  license :gratis
 
   pkg 'cocoAspell.pkg'
 

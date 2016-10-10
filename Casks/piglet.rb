@@ -7,7 +7,6 @@ cask 'piglet' do
           checkpoint: '31ffbcc1c5530ecf7e8e19caff41265c1631197b38bc873d9410800cbfbf7910'
   name 'Piglet'
   homepage 'https://github.com/jenslind/piglet'
-  license :mit
 
   app 'Piglet.app'
 end

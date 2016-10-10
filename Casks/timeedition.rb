@@ -8,7 +8,6 @@ cask 'timeedition' do
           checkpoint: 'cec11e55eba60ac1f7da63f1f81d7924a0d72ad68640011d5db9fb56547d2d8d'
   name 'timeEdition'
   homepage 'https://www.timeedition.com/old/en/'
-  license :gpl
 
   app "timeEdition #{version}/timeEdition.app"
 

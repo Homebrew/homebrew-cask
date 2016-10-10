@@ -8,7 +8,6 @@ cask 'getrasplex' do
           checkpoint: '370b7b8c278eb603e593b76b5c0cff1afc97cd592b189403492d3f19f3987f91'
   name 'Rasplex Installer'
   homepage 'http://www.rasplex.com/'
-  license :commercial
 
   app 'GetRasplex.app'
 end

@@ -7,7 +7,6 @@ cask 'lingrradar' do
           checkpoint: 'f076e43ea82c411d7a598bc28ee893451b7baaed35dd9450774e6a1f31139019'
   name 'Lingr Radar'
   homepage 'http://radar.lingr.com/'
-  license :gratis
 
   app 'LingrRadar.app'
 end

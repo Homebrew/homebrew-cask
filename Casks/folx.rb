@@ -7,7 +7,6 @@ cask 'folx' do
           checkpoint: 'af8da469e29f9348247d26748f9ba6cadafee62fbc09606bf766974c1da920ae'
   name 'Folx'
   homepage 'http://mac.eltima.com/download-manager.html'
-  license :freemium
 
   app 'Folx.app'
 end

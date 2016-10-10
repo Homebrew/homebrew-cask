@@ -11,7 +11,6 @@ cask 'macs-fan-control' do
 
   name 'Macs Fan Control'
   homepage 'http://www.crystalidea.com/macs-fan-control'
-  license :gratis
 
   app 'Macs Fan Control.app'
 

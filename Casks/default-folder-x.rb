@@ -13,7 +13,6 @@ cask 'default-folder-x' do
   url "https://www.stclairsoft.com/download/DefaultFolderX-#{version}.dmg"
   name 'Default Folder X'
   homepage 'https://www.stclairsoft.com/DefaultFolderX'
-  license :commercial
 
   if MacOS.version <= :mavericks
     installer manual: 'Default Folder X Installer.app'

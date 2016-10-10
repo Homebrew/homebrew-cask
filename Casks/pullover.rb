@@ -7,7 +7,6 @@ cask 'pullover' do
           checkpoint: 'f0341f0f19e6aac6aa57ad4c64a7188a307fcf7943344dac262f2f6818dba753'
   name 'Pullover'
   homepage 'https://github.com/cgrossde/Pullover'
-  license :gpl
 
   app 'pullover.app'
 end

@@ -15,7 +15,6 @@ cask 'simbl' do
 
   name 'SIMBL'
   homepage 'http://www.culater.net/software/SIMBL/SIMBL.php'
-  license :gpl
 
   uninstall launchctl: 'net.culater.SIMBL.Agent',
             pkgutil:   'net.culater.simbl.SIMBL.pkg'

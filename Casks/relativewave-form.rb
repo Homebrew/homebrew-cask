@@ -6,7 +6,6 @@ cask 'relativewave-form' do
   url "https://relativewave.storage.googleapis.com/files/Form-#{version}.dmg"
   name 'RelativeWave Form'
   homepage 'http://www.relativewave.com/form/'
-  license :gratis
 
   app 'Form.app'
 end

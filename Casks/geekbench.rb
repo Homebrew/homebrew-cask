@@ -15,7 +15,6 @@ cask 'geekbench' do
 
   name 'Geekbench'
   homepage 'https://www.primatelabs.com/geekbench/'
-  license :commercial
 
   app "Geekbench #{version.major}.app"
 end

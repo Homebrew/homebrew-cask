@@ -7,7 +7,6 @@ cask 'skadi' do
           checkpoint: '40d6e8f3a8d9382565bff1dc740497f5ccbad208962a6810b9a232e071e259d2'
   name 'skadi'
   homepage 'https://github.com/redcapital/skadi'
-  license :gpl
 
   app 'skadi.app'
 end

@@ -5,7 +5,6 @@ cask 'wiznote' do
   url "http://release.wiz.cn/wiznote-macos-#{version}.dmg"
   name 'WizNote'
   homepage 'http://www.wiz.cn/wiznote-mac.html'
-  license :gratis
 
   app 'WizNote.app'
 end

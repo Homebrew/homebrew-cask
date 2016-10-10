@@ -7,7 +7,6 @@ cask 'aquaterm' do
           checkpoint: '7690e67a0a5101a228b261979ab45b525f57bddcfe0fa10409ad16bc7621afed'
   name 'AquaTerm'
   homepage 'http://aquaterm.sourceforge.net/'
-  license :bsd
 
   pkg 'AquaTermInstaller.pkg'
 

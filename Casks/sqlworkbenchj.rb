@@ -5,7 +5,6 @@ cask 'sqlworkbenchj' do
   url "http://www.sql-workbench.net/archive/Workbench-Build#{version}-MacJava8.tgz"
   name 'SQL Workbench/J'
   homepage 'http://www.sql-workbench.net'
-  license :apache
 
   app 'SQLWorkbenchJ.app'
 

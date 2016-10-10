@@ -8,7 +8,6 @@ cask 'jettison' do
   name 'Jettison'
   name 'St. Clair Software Jettison'
   homepage 'https://stclairsoft.com/Jettison'
-  license :commercial
 
   auto_updates true
 

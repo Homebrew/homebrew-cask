@@ -5,7 +5,6 @@ cask 'massreplaceit' do
   url 'http://www.hexmonkeysoftware.com/files/mri.dmg.zip'
   name 'MassReplaceIt'
   homepage 'http://www.hexmonkeysoftware.com/'
-  license :gratis
 
   app 'MassReplaceIt.app'
 end

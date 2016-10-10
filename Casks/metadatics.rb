@@ -7,7 +7,6 @@ cask 'metadatics' do
           checkpoint: '19bdc4e350aa8e16f5170031425181eb88a465441a12816798533d34b6261814'
   name 'Metadatics'
   homepage 'http://markvapps.com/metadatics'
-  license :commercial
 
   app 'Metadatics.app'
 end

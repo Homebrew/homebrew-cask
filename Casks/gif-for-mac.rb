@@ -5,7 +5,6 @@ cask 'gif-for-mac' do
   url 'https://media.riffsy.com/mac/bin/GIFforMac.dmg'
   name 'GIF for Mac'
   homepage 'https://www.riffsy.com/Mac'
-  license :gratis
 
   app 'GIF for Mac.app'
 end

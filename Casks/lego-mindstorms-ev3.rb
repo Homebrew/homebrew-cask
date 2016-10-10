@@ -7,7 +7,6 @@ cask 'lego-mindstorms-ev3' do
   url 'http://esd.lego.com.edgesuite.net/digitaldelivery/mindstorms/6ecda7c2-1189-4816-b2dd-440e22d65814/public/LMS-EV3-OSX-ENUS-01-02-01-full-setup.dmg'
   name 'Lego Mindstorms EV3 Home Edition'
   homepage 'http://www.lego.com/en-us/mindstorms'
-  license :gratis
 
   pkg 'LEGO MINDSTORMS EV3 Home Edition.pkg'
 

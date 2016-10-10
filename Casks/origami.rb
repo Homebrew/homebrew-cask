@@ -8,7 +8,6 @@ cask 'origami' do
           checkpoint: '685edf3bdbf3ab04011144521a4508aa97a4a2ddf798fa71a0d1d9a34c01f53c'
   name 'Origami'
   homepage 'https://facebook.github.io/origami'
-  license :gratis
 
   pkg "Origami #{version}.pkg"
 

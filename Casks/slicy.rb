@@ -7,7 +7,6 @@ cask 'slicy' do
           checkpoint: '39d01f62bb6ab96fdee061a8077fd8cbffcafee6551d7be4bc0fe4dc20249e3d'
   name 'Slicy'
   homepage 'https://macrabbit.com/slicy/'
-  license :commercial
 
   app 'Slicy.app'
 end

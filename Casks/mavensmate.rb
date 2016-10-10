@@ -7,7 +7,6 @@ cask 'mavensmate' do
           checkpoint: '98c2b494c56732080d04e2deed55a044bd1ce157a84906e10178ab4002d61e41'
   name 'MavensMate'
   homepage 'https://github.com/joeferraro/MavensMate-Desktop'
-  license :unknown
 
   app 'MavensMate.app'
 end

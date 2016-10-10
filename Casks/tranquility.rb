@@ -7,7 +7,6 @@ cask 'tranquility' do
           checkpoint: 'b8dc56d79cb1a936e3db580d58b09204af3599197a97702cf6196e27c2c2c199'
   name 'Tranquility'
   homepage 'https://github.com/lswank/Tranquility'
-  license :apache
 
   app 'Tranquility.app'
 end

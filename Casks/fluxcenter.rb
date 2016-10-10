@@ -6,7 +6,6 @@ cask 'fluxcenter' do
   url "http://files.flux.to/files/Center/MacOS/Flux_FluxCenter_MacOSX_Installer_(#{version}).dmg"
   name 'FluxCenter'
   homepage 'http://www.fluxhome.com'
-  license :gratis
 
   app 'FluxCenter.app'
 end

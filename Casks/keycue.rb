@@ -5,7 +5,6 @@ cask 'keycue' do
   url "http://www.ergonis.com/downloads/products/keycue/KeyCue#{version.no_dots}-Install.dmg"
   name 'KeyCue'
   homepage 'http://www.ergonis.com/products/keycue/'
-  license :commercial
 
   app 'KeyCue.app'
 end

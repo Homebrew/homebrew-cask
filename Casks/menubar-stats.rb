@@ -5,7 +5,6 @@ cask 'menubar-stats' do
   url 'https://seense.com/menubarstats/updateapp/mbs.zip'
   name 'MenuBar Stats'
   homepage 'https://seense.com/menubarstats/'
-  license :commercial
 
   depends_on macos: '>= :yosemite'
 

@@ -7,7 +7,6 @@ cask 'adobe-bridge-cc' do
       cookies:    { 'MM_TRIALS' => '1234' }
   name 'Adobe Bridge CC'
   homepage 'https://www.adobe.com/products/bridge.html'
-  license :gratis
 
   preflight do
     system '/usr/bin/sudo', '-E', '--', "#{staged_path}/Install.app/Contents/MacOS/Install", '--mode=silent', "--deploymentFile=#{staged_path}/deployment/AdobeBridge6-mul.install.xml"

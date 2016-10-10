@@ -5,7 +5,6 @@ cask 'etrecheck' do
   url 'https://www.etresoft.com/download/EtreCheck.zip'
   name 'EtreCheck'
   homepage 'https://www.etresoft.com/etrecheck'
-  license :gpl
 
   app 'EtreCheck.app'
 end

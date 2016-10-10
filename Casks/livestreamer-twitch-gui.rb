@@ -7,7 +7,6 @@ cask 'livestreamer-twitch-gui' do
           checkpoint: 'f22b92d8a4c51bac99ac09386bcfd4a763b5c68298987d30bf97455ec0572182'
   name 'Livestreamer Twitch GUI'
   homepage 'https://github.com/bastimeyer/livestreamer-twitch-gui'
-  license :mit
 
   depends_on formula: 'livestreamer'
   depends_on cask: 'vlc'

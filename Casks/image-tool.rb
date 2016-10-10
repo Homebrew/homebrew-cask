@@ -5,7 +5,6 @@ cask 'image-tool' do
   url "http://www.jimmcgowan.net/diskimages/ImageTool#{version}.dmg"
   name 'Image Tool'
   homepage 'http://www.jimmcgowan.net/Site/ImageTool.html'
-  license :gratis
 
   app 'Image Tool.app'
 end

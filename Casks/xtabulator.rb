@@ -7,7 +7,6 @@ cask 'xtabulator' do
           checkpoint: '748a1baa4bcb3118c037a581f08ac1dad96a6ca904ddecddc10a0c675d703d69'
   name 'XTabulator'
   homepage 'http://www.bartastechnologies.com/products/xtabulator/'
-  license :commercial
 
   app "XTabulator #{version.major}/XTabulator.app"
 end

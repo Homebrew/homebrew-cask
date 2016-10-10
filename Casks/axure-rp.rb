@@ -6,7 +6,6 @@ cask 'axure-rp' do
   url 'https://axure.cachefly.net/AxureRP-Setup.dmg'
   name 'Axure RP'
   homepage 'https://www.axure.com/'
-  license :commercial
 
   app 'Axure RP 8.app'
 end

@@ -5,7 +5,6 @@ cask 'shazzlemailclient' do
   url "https://shazzlemail.com/files/client/mac/ShazzleMailClient-#{version}.dmg"
   name 'ShazzleMail Client'
   homepage 'https://shazzlemail.com/'
-  license :gratis
 
   app 'ShazzleMailClient.app'
 end

@@ -8,7 +8,6 @@ cask 'googleappengine' do
           checkpoint: '7918888a5ed9a499f939d5f9e2f433f768f12959dae32d0a1e174a4592b2876a'
   name 'Google App Engine'
   homepage 'https://developers.google.com/appengine/'
-  license :apache
 
   app 'GoogleAppEngineLauncher.app'
 end

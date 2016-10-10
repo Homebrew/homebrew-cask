@@ -5,7 +5,6 @@ cask 'actprinter' do
   url "http://www.actprinter.com/mac/ACTPrinter%20for%20Mac%20#{version}.zip"
   name 'ACTPrinter'
   homepage 'http://www.actprinter.com'
-  license :gratis
 
   app 'ACTPrinter for Mac.app'
 end

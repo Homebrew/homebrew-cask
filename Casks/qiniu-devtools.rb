@@ -6,7 +6,6 @@ cask 'qiniu-devtools' do
   url "http://devtools.qiniu.io/qiniu-devtools-darwin_amd64-v#{version}.tar.gz"
   name 'Qiniu Developer Tools'
   homepage 'http://developer.qiniu.com/'
-  license :unknown
 
   binary 'qetag'
   binary 'qrsboxcli'

@@ -6,7 +6,6 @@ cask 'kextviewr' do
   url "https://bitbucket.org/objective-see/deploy/downloads/KextViewr_#{version}.zip"
   name 'KextViewr'
   homepage 'https://objective-see.com/products/kextviewr.html'
-  license :gratis
 
   app 'KextViewr.app'
 end

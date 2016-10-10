@@ -7,7 +7,6 @@ cask 'x48' do
   url "https://sites.google.com/a/sharkus.com/sharkus-com/Home/x48-#{version}%20osx.zip"
   name 'x48'
   homepage 'http://blog.sharkus.com/2012/08/osx-hp48-emulators.html'
-  license :gpl
 
   depends_on x11: true
 

@@ -5,7 +5,6 @@ cask 'igetter' do
   url "http://www.igetter.net/search/downloads/iGetter#{version}.dmg"
   name 'iGetter'
   homepage 'http://www.igetter.net/'
-  license :commercial
 
   app "iGetter #{version}/iGetter.app"
 end

@@ -7,7 +7,6 @@ cask 'moreamp' do
           checkpoint: '78520db7d651591c8e6b701cb3d88151c0ebd9dd0c7eb3e56cce8f728df66810'
   name 'MoreAmp'
   homepage 'https://sourceforge.net/projects/moreamp/'
-  license :gpl
 
   app 'MoreAmp.app'
 end

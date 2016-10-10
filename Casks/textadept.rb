@@ -5,7 +5,6 @@ cask 'textadept' do
   url "https://foicica.com/textadept/download/textadept_#{version}.osx.zip"
   name 'Textadept'
   homepage 'https://foicica.com/textadept/'
-  license :mit
 
   app "textadept_#{version}.osx/Textadept.app"
 end

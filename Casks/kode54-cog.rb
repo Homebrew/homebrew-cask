@@ -5,7 +5,6 @@ cask 'kode54-cog' do
   url "https://www.kode54.net/cog/mercury_builds/Cog-#{version.after_comma}.zip"
   name 'Cog'
   homepage 'https://kode54.net/cog/'
-  license :gpl
 
   app 'Cog.app'
 end

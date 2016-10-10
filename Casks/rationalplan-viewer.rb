@@ -5,7 +5,6 @@ cask 'rationalplan-viewer' do
   url "http://www.rationalplan.com/download/RationalPlan-Viewer-#{version}.dmg"
   name 'RationalPlan Viewer'
   homepage 'http://www.rationalplan.com/viewer-project-management-software.php'
-  license :freemium
 
   app 'RationalPlan-Viewer.app'
 end

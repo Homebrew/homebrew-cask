@@ -8,7 +8,6 @@ cask 'hopper-disassembler' do
           checkpoint: '1c313cc8e78a21ec980c3032c06954e2394a994c39463d48c202a430af47acda'
   name 'Hopper Disassembler'
   homepage 'https://www.hopperapp.com/'
-  license :commercial
 
   auto_updates true
   depends_on macos: '>= :lion'

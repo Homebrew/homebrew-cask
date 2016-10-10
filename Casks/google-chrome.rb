@@ -5,7 +5,6 @@ cask 'google-chrome' do
   url 'https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg'
   name 'Google Chrome'
   homepage 'https://www.google.com/chrome/'
-  license :gratis
 
   auto_updates true
   depends_on macos: '>= :mavericks'

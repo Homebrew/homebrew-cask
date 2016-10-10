@@ -8,7 +8,6 @@ cask 'gnucash' do
           checkpoint: '186ebe2f93a3a6f6a1673d0f0e597e5eda375e881b10d0121938d8e0007ddbed'
   name 'GnuCash'
   homepage 'https://www.gnucash.org/'
-  license :gpl
 
   app 'Gnucash.app'
   app 'FinanceQuote Update.app'

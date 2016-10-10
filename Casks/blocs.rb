@@ -8,7 +8,6 @@ cask 'blocs' do
           checkpoint: '5b095d961e2a6177f4fdec510f423090ed962c96c3219901672d0745267d6413'
   name 'Blocs'
   homepage 'http://blocsapp.com/'
-  license :commercial
 
   auto_updates true
 

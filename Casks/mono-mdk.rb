@@ -5,7 +5,6 @@ cask 'mono-mdk' do
   url "https://download.mono-project.com/archive/#{version.sub(%r{\.[^.]*$}, '')}/macos-10-universal/MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
   name 'Mono'
   homepage 'http://mono-project.com/'
-  license :oss
 
   pkg "MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
 

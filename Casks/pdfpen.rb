@@ -7,7 +7,6 @@ cask 'pdfpen' do
           checkpoint: '96b4784a02c764617a2625194816e63f227338bf7997a2cd5fc8342626a3fadb'
   name 'PDFpen'
   homepage 'https://smilesoftware.com/PDFpen/'
-  license :commercial
 
   app 'PDFpen.app'
 end

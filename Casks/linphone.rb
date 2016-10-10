@@ -5,7 +5,6 @@ cask 'linphone' do
   url "https://www.linphone.org/releases/macosx/linphone-#{version}.pkg"
   name 'Linphone'
   homepage 'https://www.linphone.org/'
-  license :gpl
 
   pkg "linphone-#{version}.pkg"
 

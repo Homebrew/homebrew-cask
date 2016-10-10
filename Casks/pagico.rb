@@ -5,7 +5,6 @@ cask 'pagico' do
   url "https://www.pagico.com/downloads/Pagico_Desktop_r#{version.patch}.dmg"
   name 'Pagico'
   homepage 'https://www.pagico.com/'
-  license :commercial
 
   depends_on macos: '>= :lion'
 

@@ -7,7 +7,6 @@ cask 'corectl-app' do
           checkpoint: '1c589521e0a74974e828d2fe3f527345c7459eaeaaa8dd744f9eb6f728125109'
   name 'Corectl'
   homepage 'https://github.com/TheNewNormal/corectl.app'
-  license :oss
 
   app 'corectl.app'
   binary "#{appdir}/corectl.app/Contents/Resources/bin/corectl"

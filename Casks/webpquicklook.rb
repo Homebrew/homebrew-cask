@@ -7,7 +7,6 @@ cask 'webpquicklook' do
           checkpoint: 'ff7b9b8d5b1588c93785eee60ad68949987e788aef7c9820378082ecb475e442'
   name 'WebP QuickLook Plugin'
   homepage 'https://github.com/dchest/webp-quicklook'
-  license :mit
 
   qlplugin 'WebP.qlgenerator'
 end

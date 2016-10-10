@@ -7,7 +7,6 @@ cask 'ckb' do
           checkpoint: 'e78446bd6ad2ad006934a73a1165dbce61e7d99b3a6da6537dff6abe7de16e3d'
   name 'ckb'
   homepage 'https://github.com/ccMSC/ckb'
-  license :gpl
 
   pkg 'ckb.pkg'
 

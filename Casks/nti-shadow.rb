@@ -5,7 +5,6 @@ cask 'nti-shadow' do
   url "https://ftp4.nticorp.com/update/NTI_Shadow_#{version}_Free_Update_Mac.dmg"
   name 'NTI Shadow 5 for Mac'
   homepage 'http://www.nticorp.com/en/us/product/shadow_5_mac.asp'
-  license :commercial
 
   app 'NTI Shadow.app'
 

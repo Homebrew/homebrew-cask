@@ -5,7 +5,6 @@ cask 'dsp-radio' do
   url "https://dl2sdr.homepage.t-online.de/files/DSP_Radio_#{version.no_dots}.zip"
   name 'DSP Radio'
   homepage 'https://dl2sdr.homepage.t-online.de/'
-  license :gratis
 
   app "DSP Radio #{version}.app"
 end

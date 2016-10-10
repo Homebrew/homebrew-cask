@@ -7,7 +7,6 @@ cask 'imagemin' do
           checkpoint: '941c5b106f525dfd9e9459aef979c2224a8d00272313b75811bc2aa3ad48bcf5'
   name 'imagemin'
   homepage 'https://github.com/imagemin/imagemin-app'
-  license :mit
 
   # Renamed for clarity: app name is inconsistent with its branding.
   # Original discussion: https://github.com/caskroom/homebrew-cask/pull/4701

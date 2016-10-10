@@ -8,7 +8,6 @@ cask 'aether' do
           checkpoint: '950d21a97d51a45b278ec5efea34a815662be861234c79030d215c1afbcd4fbb'
   name 'Aether'
   homepage 'http://getaether.net/'
-  license :affero
 
   app 'Aether.app'
 end

@@ -6,7 +6,6 @@ cask 'synthesia' do
   url "https://synthesia.s3.amazonaws.com/files/Synthesia-#{version}.dmg"
   name 'Synthesia'
   homepage 'https://www.synthesiagame.com/'
-  license :freemium
 
   app 'Synthesia.app'
 end

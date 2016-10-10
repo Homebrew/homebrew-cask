@@ -5,7 +5,6 @@ cask 'alice' do
   url "https://www.ps.uni-saarland.de/alice/download/Alice-#{version}-4-i386.dmg"
   name 'Alice'
   homepage 'https://www.ps.uni-saarland.de/alice/'
-  license :mit
 
   app 'Alice.app'
 

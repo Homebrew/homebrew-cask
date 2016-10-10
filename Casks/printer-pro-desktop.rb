@@ -5,7 +5,6 @@ cask 'printer-pro-desktop' do
   url "https://support.readdle.com/ppd/PrinterProDesktop-#{version.dots_to_underscores}.dmg"
   name 'Printer Pro Desktop'
   homepage 'https://support.readdle.com/ppd/'
-  license :gratis
 
   app 'Printer Pro Desktop.app'
 end

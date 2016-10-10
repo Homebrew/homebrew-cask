@@ -5,7 +5,6 @@ cask 'dwarf-fortress' do
   url "http://www.bay12games.com/dwarves/df_#{version.minor}_#{version.patch}_osx.tar.bz2"
   name 'Dwarf Fortress'
   homepage 'http://www.bay12games.com/dwarves/'
-  license :gratis
 
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/df_osx/df.wrapper.sh"

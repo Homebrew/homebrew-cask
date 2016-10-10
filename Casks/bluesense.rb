@@ -5,7 +5,6 @@ cask 'bluesense' do
   url 'https://apps.inspira.io/updates/bluesense.zip'
   name 'BlueSense'
   homepage 'https://apps.inspira.io/bluesense/'
-  license :commercial
 
   auto_updates true
   depends_on macos: '>= :yosemite'

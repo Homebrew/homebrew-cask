@@ -5,7 +5,6 @@ cask 'vnc-viewer' do
   url "https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-#{version}-MacOSX-x86_64.dmg"
   name 'Real VNC Viewer'
   homepage 'https://www.realvnc.com/'
-  license :freemium
 
   app 'VNC Viewer.app'
 

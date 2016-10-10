@@ -6,7 +6,6 @@ cask 'tinyumbrella' do
   url "http://tinydev.space/downloads/#{version.dots_to_underscores}/tinyumbrella_macos_#{version.dots_to_underscores}_AppOnly_InstalledJRE.dmg"
   name 'TinyUmbrella'
   homepage 'http://www.firmwareumbrella.com/'
-  license :gratis
 
   depends_on cask: 'java'
 

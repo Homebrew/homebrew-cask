@@ -5,7 +5,6 @@ cask 'soundfly' do
   url 'http://abyssoft.com/software/soundfly/downloads/soundfly.zip'
   name 'Soundfly'
   homepage 'http://abyssoft.com/software/soundfly/'
-  license :gratis
 
   depends_on cask: 'soundflower'
 

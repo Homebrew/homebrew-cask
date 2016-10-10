@@ -13,7 +13,6 @@ cask 'cleanapp' do
   url "https://download.syniumsoftware.com/CleanApp/CleanApp%20#{version}.dmg"
   name 'Synium Software CleanApp'
   homepage 'http://www.syniumsoftware.com/cleanapp'
-  license :commercial
 
   app 'CleanApp.app'
 

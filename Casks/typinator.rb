@@ -5,7 +5,6 @@ cask 'typinator' do
   url 'http://www.ergonis.com/downloads/typinator-install.dmg'
   name 'Typinator'
   homepage 'http://www.ergonis.com/'
-  license :commercial
 
   accessibility_access true
 

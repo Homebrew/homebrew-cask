@@ -5,7 +5,6 @@ cask 'xoctave' do
   url 'http://www.xoctave.com/demo/xoctave%20demo.dmg'
   name 'Xoctave'
   homepage 'http://www.xoctave.com/'
-  license :commercial
 
   app 'Xoctave.app'
 

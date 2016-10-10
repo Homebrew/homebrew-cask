@@ -7,7 +7,6 @@ cask 'jump-desktop' do
           checkpoint: 'c1ec2782d66c15a6128dc3506d0f2d52d3959ac7a7f4632e295649e76ad6b2ab'
   name 'Jump Desktop'
   homepage 'https://jumpdesktop.com/#jdmac'
-  license :commercial
 
   app 'Jump Desktop.app'
 end

@@ -5,7 +5,6 @@ cask '010-editor' do
   url 'http://www.sweetscape.com/download/010EditorMacInstaller.dmg'
   name '010 Editor'
   homepage 'http://www.sweetscape.com/'
-  license :commercial
 
   app '010 Editor.app'
 end

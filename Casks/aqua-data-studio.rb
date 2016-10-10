@@ -5,7 +5,6 @@ cask 'aqua-data-studio' do
   url "http://www.aquafold.com/download/v#{version.major}.0.0/osx/ads-osx-#{version}.tar.gz"
   name 'Aquafold Aqua Data Studio'
   homepage 'http://www.aquafold.com/aquadatastudio.html'
-  license :commercial
 
   app 'Aqua Data Studio.app'
 end

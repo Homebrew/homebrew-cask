@@ -7,7 +7,6 @@ cask 'quotefix' do
           checkpoint: 'f95a33fb61ed287c57945f5c64258674d372a49411b5b47048dad20a284ca316'
   name 'QuoteFix'
   homepage 'https://github.com/robertklep/quotefixformac'
-  license :oss
 
   stage_only true
 

@@ -5,7 +5,6 @@ cask 'coolterm' do
   url 'http://freeware.the-meiers.org/CoolTerm_Mac.zip'
   name 'CoolTerm'
   homepage 'http://freeware.the-meiers.org/'
-  license :gratis
 
   app 'CoolTermMac/CoolTerm.app'
 end

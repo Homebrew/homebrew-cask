@@ -6,7 +6,6 @@ cask 'jet' do
   url "https://s3.amazonaws.com/codeship-jet-releases/#{version}/jet-darwin_amd64_#{version}.tar.gz"
   name 'Codeship Jet'
   homepage 'https://codeship.com/documentation/docker/'
-  license :closed
 
   binary 'jet'
 end

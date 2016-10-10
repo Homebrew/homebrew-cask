@@ -7,7 +7,6 @@ cask 'otomatic' do
           checkpoint: 'a0a3055f5c1ff7f98b0336d0b36afd980693ff65cd1efade65b86e6b45b4bfa1'
   name 'Otomatic'
   homepage 'http://codingcurious.com/otomatic/'
-  license :commercial
 
   auto_updates true
 

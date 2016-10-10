@@ -7,7 +7,6 @@ cask 'functionflip' do
           checkpoint: '4d66ce434c5ffb80f286227e918f77e14a9bc80e7bcc445353c02d484c33b699'
   name 'FunctionFlip'
   homepage 'http://kevingessner.com/software/functionflip/'
-  license :mit
 
   # FIXME: `accessibility_access true` only works on the first
   #        `app` stanza, but should ideally take a bundle id

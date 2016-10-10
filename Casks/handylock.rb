@@ -6,7 +6,6 @@ cask 'handylock' do
   url "https://s3.amazonaws.com/netputing/handyLock/handyLock+v#{version}.dmg"
   name 'handyLock'
   homepage 'https://www.netputing.com/applications/handylock/'
-  license :gratis
 
   app 'handyLock.app'
 end

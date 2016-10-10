@@ -5,7 +5,6 @@ cask 'yabumi' do
   url 'https://yabumi.cc/download/Yabumi.dmg'
   name 'Yabumi'
   homepage 'https://yabumi.cc/'
-  license :gpl
 
   app 'Yabumi.app'
 end

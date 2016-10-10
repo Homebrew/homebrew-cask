@@ -7,7 +7,6 @@ cask 'stay' do
           checkpoint: '9d125f0552b4d49387b21e68a283e4dc073ba8b539cf077a0c1b9f42c200692b'
   name 'Stay'
   homepage 'https://cordlessdog.com/stay/'
-  license :commercial
 
   app 'Stay.app'
 end

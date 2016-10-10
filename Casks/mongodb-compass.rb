@@ -5,7 +5,6 @@ cask 'mongodb-compass' do
   url "https://downloads.mongodb.com/compass/mongodb-compass-#{version}-darwin-x64.dmg"
   name 'MongoDB Compass'
   homepage 'https://www.mongodb.com/products/compass'
-  license :commercial
 
   app 'MongoDB Compass.app'
 

@@ -6,7 +6,6 @@ cask 'importio' do
   url 'https://d24s8iufolpmlr.cloudfront.net/FF24/production-builds/import.io.dmg'
   name 'import.io'
   homepage 'https://import.io/'
-  license :gratis
 
   app 'import.io.app'
 

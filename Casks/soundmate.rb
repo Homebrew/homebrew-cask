@@ -7,7 +7,6 @@ cask 'soundmate' do
           checkpoint: 'd8c653fc7fe214355b86072077f94279635a70da3d01f7d07b21381ed4a7d4d8'
   name 'soundmate'
   homepage 'http://www.icyarrow.com/soundmate'
-  license :commercial
 
   app 'SoundMate.app'
 end

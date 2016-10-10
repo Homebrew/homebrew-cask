@@ -8,7 +8,6 @@ cask 'icultus' do
           checkpoint: '093578d94bc93c0dbbd6fbefd837faaf6824ad516add11ca6acc8b7f81a1fec8'
   name 'iCultus'
   homepage 'https://djyde.github.io/iCultus'
-  license :mit
 
   app 'iCultus.app'
 end

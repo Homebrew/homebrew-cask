@@ -5,7 +5,6 @@ cask 'pi-filler' do
   url 'http://ivanx.com/raspberrypi/files/PiFiller.zip'
   name 'Pi Filler'
   homepage 'http://ivanx.com/raspberrypi'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Pi Filler.app'
 end

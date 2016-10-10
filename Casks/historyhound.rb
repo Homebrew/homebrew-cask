@@ -7,7 +7,6 @@ cask 'historyhound' do
           checkpoint: '9eca11b0d4be87890ebb4a9bb49680959786890978187876469597a961415646'
   name 'HistoryHound'
   homepage 'https://www.stclairsoft.com/HistoryHound/'
-  license :commercial
 
   app 'HistoryHound.app'
 end

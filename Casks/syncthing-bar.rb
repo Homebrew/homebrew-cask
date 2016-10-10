@@ -7,7 +7,6 @@ cask 'syncthing-bar' do
           checkpoint: 'fbc5cd4a99b96d6e2b4a225fcafe621a1f94fbcde3bc479c36d42ace7cae60b6'
   name 'Syncthing bar'
   homepage 'https://github.com/m0ppers/syncthing-bar'
-  license :oss
 
   pkg "syncthing-bar-#{version}.pkg"
 

@@ -5,7 +5,6 @@ cask 'adobe-creative-cloud' do
   url 'https://ccmdls.adobe.com/AdobeProducts/KCCC/1/osx10/CreativeCloudInstaller.dmg'
   name 'Adobe Creative Cloud'
   homepage 'https://creative.adobe.com/products/creative-cloud'
-  license :commercial
 
   installer manual: 'Creative Cloud Installer.app'
 end

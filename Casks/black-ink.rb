@@ -7,7 +7,6 @@ cask 'black-ink' do
           checkpoint: 'affea6547a2c90c4cd861f9bdbb770dc22bc2321d3853880afacc88b9cbebf61'
   name 'Black Ink'
   homepage 'https://red-sweater.com/blackink/'
-  license :commercial
 
   app 'Black Ink.app'
 end

@@ -7,7 +7,6 @@ cask 'putio-adder' do
           checkpoint: '0950d87d6b7fd15239b8dd6de551677cf66d0cb91c215c93afe572004cf93c67'
   name 'Put.IO Adder'
   homepage 'https://github.com/nicoSWD/put.io-adder'
-  license :mit
 
   app 'put.io adder.app'
 end

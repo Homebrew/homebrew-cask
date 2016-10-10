@@ -5,7 +5,6 @@ cask 'supersync' do
   url "https://supersync.com/downloads/SuperSync_#{version}.dmg"
   name 'SuperSync'
   homepage 'https://supersync.com/'
-  license :commercial
 
   depends_on arch: :intel
 

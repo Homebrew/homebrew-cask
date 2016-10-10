@@ -8,7 +8,6 @@ cask 'clipy' do
           checkpoint: 'dab5e440914f665d688d11716ae191474fcb65042a68d65840df2626a80823de'
   name 'Clipy'
   homepage 'https://clipy-app.com/'
-  license :mit
 
   depends_on macos: '>= :mavericks'
 

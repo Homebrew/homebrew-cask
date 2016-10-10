@@ -6,7 +6,6 @@ cask 'squirrel' do
   url "https://dl.bintray.com/lotem/rime/Squirrel-#{version}.zip"
   name 'Squirrel'
   homepage 'http://rime.im/download/'
-  license :gpl
 
   depends_on macos: '>= :lion'
 

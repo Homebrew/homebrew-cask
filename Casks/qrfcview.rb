@@ -6,7 +6,6 @@ cask 'qrfcview' do
   url "https://github.com/downloads/saghul/qrfcview-osx/qRFCView-#{version}-1.dmg"
   name 'qRFCView'
   homepage 'https://saghul.github.io/qrfcview-osx'
-  license :gpl
 
   app 'qRFCView.app'
 end

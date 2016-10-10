@@ -5,7 +5,6 @@ cask 'fliqlo' do
   url "http://fliqlo.com/download/fliqlo_#{version.no_dots}.dmg", referer: 'http://fliqlo.com/#about'
   name 'Fliqlo'
   homepage 'http://fliqlo.com/'
-  license :gratis
 
   screen_saver 'Fliqlo.saver'
 end

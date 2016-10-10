@@ -5,7 +5,6 @@ cask 'popchar' do
   url "http://www.ergonis.com/downloads/products/popcharx/PopCharX#{version.no_dots}-Install.dmg"
   name 'PopChar X'
   homepage 'http://www.ergonis.com/products/popcharx/'
-  license :commercial
 
   app 'PopChar.app'
 end

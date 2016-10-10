@@ -6,7 +6,6 @@ cask 'tcl' do
   url "https://downloads.activestate.com/ActiveTcl/releases/#{version.sub(%r{\.\d+$}, '')}/ActiveTcl#{version}-macosx10.5-i386-x86_64-threaded.dmg"
   name 'ActiveTcl'
   homepage 'https://tcl.tk/'
-  license :oss
 
   depends_on macos: '>= :leopard'
 

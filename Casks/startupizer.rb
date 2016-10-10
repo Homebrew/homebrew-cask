@@ -5,7 +5,6 @@ cask 'startupizer' do
   url 'http://gentlebytes.com/content/appcasts/startupizer/latest.php'
   name 'Startupizer2'
   homepage 'http://gentlebytes.com/startupizer/'
-  license :commercial
 
   app 'Startupizer2.app'
 

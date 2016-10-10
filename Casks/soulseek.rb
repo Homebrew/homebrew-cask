@@ -6,7 +6,6 @@ cask 'soulseek' do
   url "https://www.dropbox.com/s/fxx07um9kpffltj/SoulseekQt-#{version}.dmg?dl=1"
   name 'Soulseek'
   homepage 'http://www.soulseekqt.net/'
-  license :gratis
 
   app 'SoulseekQt.app'
 end

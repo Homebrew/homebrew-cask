@@ -7,7 +7,6 @@ cask 'cookie' do
           checkpoint: '4f6e9dddc27f696a6555c24a765fdc9f08992db41083d30a1ed7095043d9d236'
   name 'Cookie'
   homepage 'https://sweetpproductions.com/'
-  license :commercial
 
   app 'Cookie.app'
 end

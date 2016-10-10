@@ -5,7 +5,6 @@ cask 'adware-removal-tool' do
   url 'https://download.bitdefender.com/mac/tools/Adware%20Removal%20Tool.zip'
   name 'Bitdefender Adware Removal Tool for Mac'
   homepage 'http://www.bitdefender.com'
-  license :gratis
 
   app 'Adware Removal Tool.app'
 

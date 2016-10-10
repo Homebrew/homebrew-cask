@@ -5,7 +5,6 @@ cask 'heart' do
   url 'http://presstube.com/screensavers/presstube-heart-mac.zip'
   name 'Presstube Heart'
   homepage 'http://presstube.com/blog/2011/heart/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   depends_on cask: 'adobe-air'
 

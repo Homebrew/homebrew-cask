@@ -7,7 +7,6 @@ cask 'anatine' do
           checkpoint: '88140838bfb4d214c7dcc851f280b2527a1639628f30dd9b2bf1e180f0e88c4b'
   name 'Anatine'
   homepage 'https://github.com/sindresorhus/anatine'
-  license :mit
 
   app 'Anatine.app'
 

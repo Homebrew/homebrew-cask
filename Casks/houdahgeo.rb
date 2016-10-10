@@ -7,7 +7,6 @@ cask 'houdahgeo' do
           checkpoint: '5aa4e716671211b38c80ddbe1946c623f201f4bb0039e20e4c7046dce20ac00e'
   name 'HoudahGeo'
   homepage 'https://houdah.com/houdahGeo/'
-  license :commercial
 
   depends_on macos: '>= :mountain_lion'
 

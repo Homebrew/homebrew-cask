@@ -5,7 +5,6 @@ cask 'fs-uae' do
   url "https://fs-uae.net/stable/#{version}/fs-uae-suite_#{version}_macosx.tar.gz"
   name 'FS-UAE'
   homepage 'https://fs-uae.net/'
-  license :oss
 
   app 'FS-UAE Arcade.app'
   app 'FS-UAE Launcher.app'

@@ -7,7 +7,6 @@ cask 'glyphish-gallery' do
           checkpoint: '5080b2af02fb290471ab0346ec602571e3773498b15f468e34a3b1fd98d33318'
   name 'Glyphish Gallery'
   homepage 'https://github.com/glyphish/gallery'
-  license :oss
 
   app 'Glyphish Gallery.app'
 end

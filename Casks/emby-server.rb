@@ -6,7 +6,6 @@ cask 'emby-server' do
   url 'https://github.com/MediaBrowser/MediaBrowser.Releases/raw/master/Server/Emby.Server.Mac.pkg'
   name 'Emby Server'
   homepage 'https://emby.media/'
-  license :gpl
 
   pkg 'Emby.Server.Mac.pkg'
 

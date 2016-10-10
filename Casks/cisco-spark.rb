@@ -5,7 +5,6 @@ cask 'cisco-spark' do
   url 'https://download.ciscospark.com/mac/Spark.dmg'
   name 'Cisco Systems Spark'
   homepage 'https://www.ciscospark.com/'
-  license :gratis
 
   depends_on macos: '>= :mavericks'
 

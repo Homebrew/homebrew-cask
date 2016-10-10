@@ -7,7 +7,6 @@ cask 'texts' do
           checkpoint: '0fd21f16720bd0c45671e94bab176e26e003d17d32bd32fd9521d66e2b79bcc0'
   name 'Texts'
   homepage 'http://www.texts.io'
-  license :commercial
 
   app 'Texts.app'
 end

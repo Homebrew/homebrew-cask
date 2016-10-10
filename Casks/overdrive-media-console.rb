@@ -5,7 +5,6 @@ cask 'overdrive-media-console' do
   url 'https://app.overdrive.com/downloads/ODMediaConsoleSetup.dmg'
   name 'OverDrive Media Console'
   homepage 'https://www.overdrive.com/'
-  license :commercial
 
   pkg "OverDrive-Mac-Installer-Version-#{version}.pkg", allow_untrusted: true
 

@@ -5,7 +5,6 @@ cask 'xmarks-safari' do
   url "https://static.xmarks.com/clients/safari/xmarks_for_safari_#{version}.dmg"
   name 'Xmarks'
   homepage 'https://www.xmarks.com/'
-  license :gratis
 
   pkg 'Xmarks for Safari Installer.pkg'
 

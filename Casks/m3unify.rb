@@ -7,7 +7,6 @@ cask 'm3unify' do
           checkpoint: '1a309263774228ee6086a6275dca2a1436c326b0342fb549ee8d63e24224331d'
   name 'M3Unify'
   homepage 'https://dougscripts.com/apps/m3unifyapp.php'
-  license :commercial
 
   app 'M3Unify.app'
 end

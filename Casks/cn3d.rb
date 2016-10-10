@@ -5,7 +5,6 @@ cask 'cn3d' do
   url "ftp://ftp.ncbi.nlm.nih.gov/cn3d/Cn3D-#{version}-OSX.zip"
   name 'Cn3D'
   homepage 'https://www.ncbi.nlm.nih.gov/Structure/CN3D/cn3d.shtml'
-  license :public_domain
 
   app 'Cn3D.app'
 end

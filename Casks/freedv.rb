@@ -5,7 +5,6 @@ cask 'freedv' do
   url "https://files.freedv.org/OSX/FreeDV-#{version}.dmg"
   name 'FreeDV'
   homepage 'https://freedv.org/'
-  license :gpl
 
   app 'FreeDV.app'
 end

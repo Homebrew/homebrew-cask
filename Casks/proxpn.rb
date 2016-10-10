@@ -7,7 +7,6 @@ cask 'proxpn' do
           checkpoint: 'ec65d9d281487212b1aba6ff55e4ec7802dff549d692941fb2f81a996b8485ab'
   name 'proXPN'
   homepage 'https://www.proxpn.com/'
-  license :freemium
 
   depends_on macos: '>= :leopard'
 

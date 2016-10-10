@@ -5,7 +5,6 @@ cask 'hash-drop' do
   url "http://www.damasoft.net/Resources/Hash-Drop#{version}.dmg"
   name 'Hash-Drop'
   homepage 'http://www.damasoft.net/'
-  license :gratis
 
   app 'Hash-Drop.app'
 end

@@ -5,7 +5,6 @@ cask 'macid' do
   url "https://macid.co/app/#{version}/MacID%20for%20macOS.zip"
   name 'MacID'
   homepage 'https://macid.co/'
-  license :gratis
 
   depends_on macos: '>= :yosemite'
 

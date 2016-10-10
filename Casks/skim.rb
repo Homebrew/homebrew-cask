@@ -7,7 +7,6 @@ cask 'skim' do
           checkpoint: 'f7b96848e0e58fdc65817e857852b2fd61564c5c64b587f83f56887fb31ff530'
   name 'Skim'
   homepage 'http://skim-app.sourceforge.net/'
-  license :bsd
 
   app 'Skim.app'
   binary "#{appdir}/Skim.app/Contents/SharedSupport/displayline"

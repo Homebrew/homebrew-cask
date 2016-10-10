@@ -7,7 +7,6 @@ cask 'ios-saver' do
       referer: 'http://littleendiangamestudios.com/project/ios-8-screen-saver/'
   name 'iOS 8 Lockscreen for OSX'
   homepage 'http://littleendiangamestudios.com/project/ios-8-screen-saver/'
-  license :gratis
 
   depends_on macos: '>= :yosemite'
 

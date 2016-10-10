@@ -6,7 +6,6 @@ cask 'bovada-poker' do
   url 'https://cdn3-c.imagestore.lv/static/poker-client-installer-delta/installer/BovadaPoker.pkg'
   name 'Bovada Poker'
   homepage 'https://poker.bovada.lv'
-  license :gratis
 
   auto_updates true
 

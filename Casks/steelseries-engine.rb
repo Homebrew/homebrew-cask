@@ -6,7 +6,6 @@ cask 'steelseries-engine' do
   url "https://downloads.steelseriescdn.com/drivers/engine/SteelSeriesEngine#{version}.pkg"
   name 'SteelSeries Engine 3'
   homepage 'https://steelseries.com/engine'
-  license :gratis
 
   pkg "SteelSeriesEngine#{version}.pkg"
 

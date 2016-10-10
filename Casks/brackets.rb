@@ -8,7 +8,6 @@ cask 'brackets' do
           checkpoint: '065e17a16458bf2a795e1933bd59dd47c87a43b31989a31d1fcd3e3b4ddff8d8'
   name 'Brackets'
   homepage 'http://brackets.io'
-  license :mit
 
   app 'Brackets.app'
 

@@ -7,7 +7,6 @@ cask 'deadbeef' do
           checkpoint: '9a21bf0f8ea4dd2906546382547377ba1ec060ece905e66ea77b411ec21e81cb'
   name 'DeaDBeeF'
   homepage 'http://deadbeef.sourceforge.net/'
-  license :gpl
 
   app 'deadbeef.app'
 end

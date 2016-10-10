@@ -6,7 +6,6 @@ cask 'mongo-management-studio' do
   name 'Litixsoft Mongo Management Studio'
   name 'MMS'
   homepage 'http://www.litixsoft.de/english/mms/'
-  license :freemium
 
   pkg "mms-v#{version}-community-darwin.pkg"
 

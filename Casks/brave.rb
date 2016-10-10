@@ -8,7 +8,6 @@ cask 'brave' do
           checkpoint: 'adde91f3d0bc8c80019360e98b0fe05a1b9ddd6b597134217ee67924fecf5373'
   name 'Brave'
   homepage 'https://brave.com'
-  license :mpl
 
   app 'Brave.app'
 

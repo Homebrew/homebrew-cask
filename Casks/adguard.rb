@@ -7,7 +7,6 @@ cask 'adguard' do
           checkpoint: 'a934745bff30fa64ca202744b91a9c11dad69e60e84bf905aa4e118754fa993c'
   name 'Adguard for Mac'
   homepage 'https://adguard.com/'
-  license :commercial
 
   app 'Adguard.app'
 end

@@ -8,7 +8,6 @@ cask 'playback' do
           checkpoint: '7ad205703ce9b96d1788c7c5c69d653e0882d9311b8abbb1229a358db2f73dce'
   name 'Playback'
   homepage 'https://mafintosh.github.io/playback/'
-  license :mit
 
   app 'Playback.app'
 end

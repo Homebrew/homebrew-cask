@@ -5,7 +5,6 @@ cask 'movieply' do
   url "http://www.movieply.com/download/MoviePly-#{version}.OSX.zip"
   name 'MoviePly'
   homepage 'http://www.movieply.com/'
-  license :gratis
 
   app 'MoviePly.app'
 end

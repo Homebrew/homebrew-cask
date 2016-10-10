@@ -5,7 +5,6 @@ cask 'openshot-video-editor' do
   url "http://releases.openshot.org/mac/OpenShot-#{version}.dmg"
   name 'OpenShot Video Editor'
   homepage 'http://openshot.org'
-  license :gpl
 
   app 'OpenShot Video Editor.app'
 end

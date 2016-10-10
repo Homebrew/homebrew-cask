@@ -8,7 +8,6 @@ cask 'gzdoom' do
           checkpoint: 'fdf284e4bc993f222b95f4a8efbd114bb37b4b4423287de8a165941b8386d137'
   name 'gzdoom'
   homepage 'https://alexey-lysiuk.github.io/gzdoom/'
-  license :oss
 
   app 'GZDoom.app'
 end

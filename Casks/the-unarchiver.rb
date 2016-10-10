@@ -7,7 +7,6 @@ cask 'the-unarchiver' do
           checkpoint: '12b3e96559528c84b7353ce25f66d685b3813a4f86b3802835988f9b90084228'
   name 'The Unarchiver'
   homepage 'https://unarchiver.c3.cx/unarchiver'
-  license :oss
 
   auto_updates true
 

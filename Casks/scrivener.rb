@@ -8,7 +8,6 @@ cask 'scrivener' do
           checkpoint: '79e3d31dd436e68082f47d8d3690967b250f6f810eca34b4e057f3255003cdde'
   name 'Scrivener'
   homepage 'https://literatureandlatte.com/scrivener.php'
-  license :commercial
 
   app 'Scrivener.app'
 end

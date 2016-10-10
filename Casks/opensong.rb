@@ -8,7 +8,6 @@ cask 'opensong' do
           checkpoint: '3e46d9b242c8806de8b6dc9d4bd8f737d41d471a21d71a1d389f3845a7530043'
   name 'OpenSong'
   homepage 'http://www.opensong.org/'
-  license :gpl
 
   app "OpenSong V#{version}/OpenSongOSX-Cocoa.app"
   app "Opensong V#{version}/OpenSongOSX.app"

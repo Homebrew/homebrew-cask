@@ -5,7 +5,6 @@ cask 'progressive-downloader' do
   url "https://www.macpsd.net/update/#{version}/PSD.dmg"
   name 'Progressive Downloader'
   homepage 'https://www.macpsd.net/'
-  license :gratis
 
   depends_on macos: '>= :mavericks'
 

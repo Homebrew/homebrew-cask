@@ -8,7 +8,6 @@ cask 'knock' do
           checkpoint: 'ca44d5a1fdc3bc619f61202a52c92118da0dc37fb474beaab9d5c93b79431b9b'
   name 'Knock'
   homepage 'http://knocktounlock.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Knock.app'
 

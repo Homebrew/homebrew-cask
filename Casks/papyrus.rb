@@ -5,7 +5,6 @@ cask 'papyrus' do
   url "https://www.eclipse.org/downloads/download.php?file=/modeling/mdt/papyrus/rcp/neon/#{version}/papyrus-neon-#{version}-macosx64.tar.gz&r=1"
   name 'Papyrus'
   homepage 'https://eclipse.org/papyrus/'
-  license :eclipse
 
   depends_on macos: '>= :leopard'
   depends_on arch: :x86_64

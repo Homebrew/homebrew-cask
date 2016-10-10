@@ -7,7 +7,6 @@ cask 'timings' do
           checkpoint: '849b39da0e118572475b2089f9e3d68b08b531c490b35a18f294a763a270e444'
   name 'Timings'
   homepage 'https://mediaatelier.com/Timings'
-  license :commercial
 
   depends_on macos: '>= :mavericks'
 

@@ -8,7 +8,6 @@ cask 'antetype' do
           checkpoint: '1c34ded90e4db5bd7cbec65b1e55fce4a28f0d014478f7a73fa7b60212eee20e'
   name 'Antetype'
   homepage 'http://antetype.com'
-  license :commercial
 
   app 'Antetype.app'
 end

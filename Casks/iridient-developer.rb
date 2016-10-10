@@ -5,7 +5,6 @@ cask 'iridient-developer' do
   url "http://www.iridientdigital.com/downloads/IridientDeveloper_#{version.no_dots}.dmg"
   name 'Iridient Developer'
   homepage 'http://www.iridientdigital.com/'
-  license :freemium
 
   app 'Iridient Developer.app'
 end

@@ -5,7 +5,6 @@ cask 'droplr' do
   url 'https://droplr.com/homebrew'
   name 'Droplr'
   homepage 'https://droplr.com/'
-  license :gratis
 
   auto_updates true
 

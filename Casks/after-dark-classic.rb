@@ -5,7 +5,6 @@ cask 'after-dark-classic' do
   url 'ftp://www.infinisys.co.jp/online/online_afterdarkclassicset_e.dmg.gz'
   name 'After Dark Classic Set'
   homepage 'http://en.infinisys.co.jp/product/afterdarkclassicset/index.shtml'
-  license :commercial
 
   pkg 'ClassicSet.pkg'
 

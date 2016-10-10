@@ -7,7 +7,6 @@ cask 'pyfa' do
           checkpoint: 'eea8bb24a425814f3a83bd27bf8a690c77ac4bf058ebeb9765ac1b4415abe13d'
   name 'pyfa'
   homepage 'https://github.com/pyfa-org/Pyfa'
-  license :gpl
 
   app 'pyfa.app'
 end

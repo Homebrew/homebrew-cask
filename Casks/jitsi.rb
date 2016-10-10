@@ -7,7 +7,6 @@ cask 'jitsi' do
           checkpoint: '0bc9e51570c27e6f5f2cd22ef44b673a6cd0968dc26ee961a07000215af929ab'
   name 'Jitsi'
   homepage 'https://jitsi.org/'
-  license :gpl
 
   app 'Jitsi.app'
 end

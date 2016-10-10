@@ -5,7 +5,6 @@ cask 'farbox' do
   url "https://www.farbox.com/download/farbox_editor?fb_file_hash=editor/farbox_#{version}.dmg"
   name 'farbox'
   homepage 'https://www.farbox.com/'
-  license :gratis
 
   app 'farbox.app'
 end

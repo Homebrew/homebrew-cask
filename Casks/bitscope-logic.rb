@@ -5,7 +5,6 @@ cask 'bitscope-logic' do
   url "http://bitscope.com/download/files/bitscope-logic_#{version}.app.tgz"
   name 'BitScope Logic'
   homepage 'http://www.bitscope.com'
-  license :gratis
 
   app 'bitscope-logic.app'
 end

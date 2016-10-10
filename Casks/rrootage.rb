@@ -5,7 +5,6 @@ cask 'rrootage' do
   url "https://workram.com/downloads/rRootage-for-OS-X-#{version}.dmg"
   name 'rRootage'
   homepage 'https://workram.com/games/rrootage/'
-  license :bsd
 
   app 'rRootage.app'
 end

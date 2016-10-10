@@ -7,7 +7,6 @@ cask 'anybar' do
           checkpoint: '8c627a51a1453b13b10652e0dda39faefbd3826c62545ad0bdd93f0e8a9e1876'
   name 'AnyBar'
   homepage 'https://github.com/tonsky/AnyBar'
-  license :eclipse
 
   app 'AnyBar.app'
 end

@@ -5,7 +5,6 @@ cask 'angband' do
   url "http://rephial.org/downloads/#{version.major_minor}/Angband-#{version}-osx.dmg"
   name 'Angband'
   homepage 'http://rephial.org'
-  license :gpl
 
   app 'Angband.app'
 end

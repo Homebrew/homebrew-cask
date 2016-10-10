@@ -7,7 +7,6 @@ cask 'cocoapacketanalyzer' do
           checkpoint: '381d5769dd82422e539c9076baa73877a1489b48b2393ba26651e39a8c2fc53d'
   name 'Cocoa Packet Analyzer'
   homepage 'http://www.tastycocoabytes.com/cpa/'
-  license :gratis
 
   app 'CocoaPacketAnalyzer.app'
 end

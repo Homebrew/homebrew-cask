@@ -7,7 +7,6 @@ cask 'juicephone' do
           checkpoint: 'd2783c7f8f483409f5e251e27d8e54b50b549511e90fb0b0acab3b7c1778df4e'
   name 'JuicePhone'
   homepage 'http://addpod.de/juicephone'
-  license :gratis
 
   app 'JuicePhone.app'
 end

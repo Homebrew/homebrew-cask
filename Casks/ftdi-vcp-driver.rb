@@ -12,7 +12,6 @@ cask 'ftdi-vcp-driver' do
   url "http://www.ftdichip.com/Drivers/VCP/MacOSX/FTDIUSBSerialDriver_v#{version.dots_to_underscores}.dmg"
   name 'FTDI VCP Driver'
   homepage 'http://www.ftdichip.com/Drivers/VCP.htm'
-  license :gratis
 
   uninstall pkgutil: 'com.FTDI.ftdiusbserialdriverinstaller.*',
             kext:    'com.FTDI.driver.FTDIUSBSerialDriver',

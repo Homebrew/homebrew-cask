@@ -8,7 +8,6 @@ cask 'vienna' do
           checkpoint: '226ebcf4e7e000b5a30ada91aa54e58574f5352b0bedba7d2721691b1fc34b18'
   name 'Vienna'
   homepage 'http://www.vienna-rss.org'
-  license :apache
 
   app 'Vienna.app'
 

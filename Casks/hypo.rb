@@ -8,7 +8,6 @@ cask 'hypo' do
           checkpoint: '3e4b2547c4e1f3fdcf9cfa52ad540f2df3ed1e60ae167eb6c9b8b9f19ec57850'
   name 'hypo'
   homepage 'https://hypo.cc/mac.html'
-  license :gratis
 
   app 'Hypo.app'
 

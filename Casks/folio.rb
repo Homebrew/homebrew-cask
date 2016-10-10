@@ -6,7 +6,6 @@ cask 'folio' do
   url 'https://s3.amazonaws.com/folioformac.com/downloads/Folio.zip'
   name 'Folio'
   homepage 'http://folioformac.com'
-  license :commercial
 
   app 'Folio.app'
 

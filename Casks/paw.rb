@@ -7,7 +7,6 @@ cask 'paw' do
           checkpoint: 'd8c013df9507469ea98347619d54678373ecd83291174eadbaa40ad9330368c2'
   name 'Paw'
   homepage 'https://paw.cloud'
-  license :commercial
 
   app 'Paw.app'
 end

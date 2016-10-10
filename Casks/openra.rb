@@ -8,7 +8,6 @@ cask 'openra' do
           checkpoint: 'e6787d8d0cafc3da4c192de3f532e331173134ac2cb043ba67be65e09cb66462'
   name 'OpenRA'
   homepage 'http://www.openra.net'
-  license :gpl
 
   depends_on cask: 'mono-mdk'
 

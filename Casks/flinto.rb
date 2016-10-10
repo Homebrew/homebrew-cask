@@ -5,7 +5,6 @@ cask 'flinto' do
   url "https://www.flinto.com/assets/Flinto-#{version}.dmg"
   name 'Flinto'
   homepage 'https://www.flinto.com/mac'
-  license :commercial
 
   app 'Flinto.app'
 

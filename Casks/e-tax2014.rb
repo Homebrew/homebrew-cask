@@ -5,7 +5,6 @@ cask 'e-tax2014' do
   url "https://www.ato.gov.au/misc/downloads/etax2014/etax2014_#{version}.dmg"
   name 'e-tax'
   homepage 'https://www.ato.gov.au/individuals/lodging-your-tax-return/lodge-online/e-tax/downloading-and-installing-e-tax/#Mac'
-  license :gratis
 
   pkg 'etax2014_1.pkg'
 

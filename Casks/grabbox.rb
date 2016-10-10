@@ -7,7 +7,6 @@ cask 'grabbox' do
           checkpoint: '984e696e4034f787eae08c3977eb9a85fd5f8a02756f3b92fde13975f17dc334'
   name 'GrabBox'
   homepage 'http://grabbox.devsoft.no/'
-  license :gpl
 
   app 'GrabBox.app'
 end

@@ -6,7 +6,6 @@ cask 'bestres' do
   url 'https://dl.devmate.com/com.icyberon.BestRes/BestRes.zip'
   name 'BestRes'
   homepage 'http://icyberon.com/bestres/'
-  license :gratis
 
   depends_on macos: '>= :yosemite'
 

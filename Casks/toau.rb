@@ -7,7 +7,6 @@ cask 'toau' do
           checkpoint: '45ca6d15d85ecd89368f4f99d9497d9311bca9c4e157a70d81f969287c50fb80'
   name 'Toau'
   homepage 'http://toauapp.com'
-  license :commercial
 
   app 'Toau.app'
 end

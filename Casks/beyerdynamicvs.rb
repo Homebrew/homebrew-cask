@@ -5,7 +5,6 @@ cask 'beyerdynamicvs' do
   url 'http://www.beyerdynamic.com/fileadmin/editors/downloads/virtualstudio/beyerdynamic-virtual-studio_04-13.zip'
   name 'beyerdynamic Virtual Studio'
   homepage 'https://www.beyerdynamic.com/virtual-studio.html'
-  license :gratis
 
   container nested: "mac/beyerdynamicVS_Mac_#{version}_Plugin.dmg"
 

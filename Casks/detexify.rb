@@ -6,7 +6,6 @@ cask 'detexify' do
   url 'https://s3.amazonaws.com/detexify.kirelabs.org/Detexify.zip'
   name 'Detexify'
   homepage 'http://detexify.kirelabs.org/classify.html'
-  license :commercial
 
   app 'Detexify.app'
 end

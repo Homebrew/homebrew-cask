@@ -7,7 +7,6 @@ cask 'tinygrab' do
           checkpoint: '7e83bfe277a800bd0833e3ca79eade0056e3acbb998d72e6ad1be8e7b1693126'
   name 'TinyGrab'
   homepage 'http://www.tinygrab.com'
-  license :gratis
 
   app 'TinyGrab.app'
 end

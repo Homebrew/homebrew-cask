@@ -5,7 +5,6 @@ cask 'wakeonlan' do
   url "https://www.readpixel.com/downloads/files/WakeOnLan#{version}.zip"
   name 'WakeOnLan'
   homepage 'https://www.readpixel.com/wakeonlan/'
-  license :gratis
 
   app 'WakeOnLan/WakeOnLan.app'
 end

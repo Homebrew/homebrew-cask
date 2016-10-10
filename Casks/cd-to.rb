@@ -7,7 +7,6 @@ cask 'cd-to' do
           checkpoint: 'd1bd6448f379a5260875f0a04e932c71ea223ddaf1fdde45da3dda93228ab5f0'
   name 'cd to'
   homepage 'https://github.com/jbtule/cdto'
-  license :mit
 
   app "cdto_#{version.dots_to_underscores.gsub(%r{_\d$}, '')}/terminal/cd to.app"
 

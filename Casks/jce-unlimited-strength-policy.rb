@@ -6,7 +6,6 @@ cask 'jce-unlimited-strength-policy' do
       cookies: { 'oraclelicense' => 'accept-securebackup-cookie' }
   name 'Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files'
   homepage "https://www.oracle.com/technetwork/java/javase/downloads/jce#{version.split('.')[1]}-download-2133166.html"
-  license :gratis
 
   postflight do
     `/usr/libexec/java_home -v #{version} -X | grep -B0 -A1 JVMHomePath | sed -n -e 's/[[:space:]]*<string>\\(.*\\)<\\/string>/\\1/p'`.split("\n").each do |path|

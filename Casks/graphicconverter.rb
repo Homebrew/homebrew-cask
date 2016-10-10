@@ -8,7 +8,6 @@ cask 'graphicconverter' do
           checkpoint: '621f0918d123dd684b30e03995c383469a893408dc180aba7a760e87c0d1cf6f'
   name 'GraphicConverter'
   homepage 'https://www.lemkesoft.de/en/products/graphicconverter/'
-  license :commercial
 
   app "GraphicConverter #{version.major}.app"
 end

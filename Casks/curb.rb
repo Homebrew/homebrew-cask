@@ -7,7 +7,6 @@ cask 'curb' do
           checkpoint: '2141e205b0037e8e79d74564078cdaeb803b0dc2c1162e45477ebb9bcc72ae92'
   name 'Curb'
   homepage 'https://mrrsoftware.com/curb'
-  license :gratis
 
   app 'Curb.app'
 end

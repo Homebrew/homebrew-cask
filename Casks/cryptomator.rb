@@ -6,7 +6,6 @@ cask 'cryptomator' do
   url "https://bintray.com/artifact/download/cryptomator/cryptomator/Cryptomator-#{version}.dmg"
   name 'Cryptomator'
   homepage 'https://cryptomator.org'
-  license :oss
 
   app 'Cryptomator.app'
 end

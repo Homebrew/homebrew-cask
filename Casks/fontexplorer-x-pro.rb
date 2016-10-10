@@ -5,7 +5,6 @@ cask 'fontexplorer-x-pro' do
   url "http://fast.fontexplorerx.com/FontExplorerXPro#{version.no_dots}.dmg"
   name 'FontExplorer X Pro'
   homepage 'https://www.fontexplorerx.com/'
-  license :commercial
 
   depends_on macos: '>= :mountain_lion'
 

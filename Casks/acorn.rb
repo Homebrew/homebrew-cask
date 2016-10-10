@@ -7,7 +7,6 @@ cask 'acorn' do
           checkpoint: 'fdd211ab0c3a91766a9b5c7a69371bb235b3877921022dba70d3ac8fd8ba7fea'
   name 'Acorn'
   homepage 'http://flyingmeat.com/acorn/'
-  license :commercial
 
   auto_updates true
 

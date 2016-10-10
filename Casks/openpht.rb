@@ -7,7 +7,6 @@ cask 'openpht' do
           checkpoint: '209f89a2f9b9ae847e1ae60f21d58a974c114ce166fa4adfb935b4dc01097b2e'
   name 'OpenPHT'
   homepage 'https://github.com/RasPlex/OpenPHT'
-  license :gpl
 
   app 'OpenPHT.app'
 end

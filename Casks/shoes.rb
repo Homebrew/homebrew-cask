@@ -6,7 +6,6 @@ cask 'shoes' do
   url "https://shoes.mvmanila.com/public/shoes/shoes-#{version}-osx-10.9.tgz"
   name 'Shoes'
   homepage 'http://shoesrb.com/'
-  license :oss
 
   app 'Shoes.app'
 end

@@ -8,7 +8,6 @@ cask 'mucommander' do
           checkpoint: '8bd765c3f40255e49f6434a7a768cc459a4010ab73ed51c408868789576c1f37'
   name 'muCommander'
   homepage 'http://www.mucommander.com/'
-  license :gpl
 
   app 'muCommander.app'
 end

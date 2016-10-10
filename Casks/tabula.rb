@@ -8,7 +8,6 @@ cask 'tabula' do
           checkpoint: '2e20dc186a93930ca4b59fe694ba278c4171776a19c6942273d1b6510d05755d'
   name 'Tabula'
   homepage 'http://tabula.technology/'
-  license :mit
 
   app 'tabula/Tabula.app'
 end

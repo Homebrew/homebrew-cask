@@ -5,7 +5,6 @@ cask 'hiera' do
   url "https://downloads.puppetlabs.com/mac/hiera-#{version}.dmg"
   name 'Puppet Labs Hiera'
   homepage 'https://projects.puppetlabs.com/projects/hiera'
-  license :apache
 
   pkg "hiera-#{version}.pkg"
 

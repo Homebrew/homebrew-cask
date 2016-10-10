@@ -7,7 +7,6 @@ cask 'debookee' do
           checkpoint: '281a8310d97ab8c227ac534f6b98d47c27a9aee506ca166298d0d8f0a05b3eb4'
   name 'Debookee'
   homepage 'https://www.iwaxx.com/debookee/'
-  license :commercial
 
   app "Debookee #{version}/Debookee.app"
 end

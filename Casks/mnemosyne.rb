@@ -8,7 +8,6 @@ cask 'mnemosyne' do
           checkpoint: '3527121156674535d9eef71499b7363325a1786cfe4071cf1d1f66baefc267be'
   name 'Mnemosyne'
   homepage 'http://mnemosyne-proj.org/'
-  license :gpl
 
   app 'Mnemosyne.app'
 end

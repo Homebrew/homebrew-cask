@@ -7,7 +7,6 @@ cask 'dupeguru' do
           checkpoint: 'cb2280fe270ca96b6cffee8a0ad2d817614855100e4cd0f4a6be352793e7c146'
   name 'dupeGuru'
   homepage 'https://www.hardcoded.net/dupeguru/'
-  license :bsd
 
   app 'dupeGuru.app'
 end

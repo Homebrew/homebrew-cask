@@ -5,7 +5,6 @@ cask 'viewit' do
   url "http://www.hexcat.com/downloads/ViewIt-#{version}.zip"
   name 'ViewIt'
   homepage 'http://www.hexcat.com/viewit/'
-  license :commercial
 
   app 'ViewIt.app'
 end

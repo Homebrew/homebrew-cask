@@ -8,7 +8,6 @@ cask 'itch' do
           checkpoint: '26a87915c719ebdc7a62a82e821b0af586024887069621aefcb1896052ea44e2'
   name 'itch'
   homepage 'https://itch.io/app'
-  license :mit
 
   app 'itch.app'
 end

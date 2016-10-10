@@ -5,7 +5,6 @@ cask 'authoxy' do
   url "http://www.hrsoftworks.net/downloads/Authoxy#{version}.dmg"
   name 'Authoxy'
   homepage 'http://www.hrsoftworks.net'
-  license :gratis
 
   pkg 'Authoxy (double click me).pkg'
 

@@ -7,7 +7,6 @@ cask 'couleurs' do
           checkpoint: '551b133875dd44b446ef157a2645c32f48f4fbe1d1659ac3caef93c1db36ca32'
   name 'Couleurs'
   homepage 'https://couleursapp.com/'
-  license :gratis
 
   depends_on macos: '>= :yosemite'
 

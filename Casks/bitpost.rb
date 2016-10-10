@@ -6,7 +6,6 @@ cask 'bitpost' do
   url "http://voluntary.net.s3.amazonaws.com/Bitpost.#{version}.zip"
   name 'Bitpost'
   homepage 'https://voluntary.net/bitpost/'
-  license :mit
 
   app 'Bitpost.app'
 end

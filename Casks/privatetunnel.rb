@@ -6,7 +6,6 @@ cask 'privatetunnel' do
   url "https://swupdate.openvpn.org/privatetunnel/client/privatetunnel-mac-#{version}.dmg"
   name 'Private Tunnel'
   homepage 'https://www.privatetunnel.com'
-  license :gratis
 
   pkg 'PrivateTunnel.pkg'
 

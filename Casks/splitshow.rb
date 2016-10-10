@@ -7,7 +7,6 @@ cask 'splitshow' do
           checkpoint: 'eb0f9a5c5c4f0a92561148b454477fe1f868cb6ba9cac7f3d93263de5a3f4c1b'
   name 'SplitShow'
   homepage 'https://github.com/mpflanzer/splitshow'
-  license :mit
 
   app 'SplitShow.app'
 end

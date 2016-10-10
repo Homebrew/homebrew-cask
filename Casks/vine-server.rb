@@ -5,7 +5,6 @@ cask 'vine-server' do
   url "http://www.testplant.com/downloads/Vine/VineServer#{version}.dmg"
   name 'Vine Server'
   homepage 'http://www.testplant.com/products/vine/vine-server/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Vine Server.app'
 end

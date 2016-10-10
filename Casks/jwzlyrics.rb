@@ -7,7 +7,6 @@ cask 'jwzlyrics' do
           checkpoint: 'ba186147bb99f7727d9db34e09181952613a20f607536614468eff3bee1d4b83'
   name 'jwzlyrics'
   homepage 'https://www.jwz.org/jwzlyrics/'
-  license :unknown
 
   app 'jwzlyrics.app'
 end

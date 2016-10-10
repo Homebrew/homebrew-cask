@@ -7,7 +7,6 @@ cask 'growlvoice' do
           checkpoint: '415d7e6dcc19144b6f776d979521815c7d3768764d32a16c408890454d66ab83'
   name 'GrowlVoice'
   homepage 'http://www.growlvoice.com/'
-  license :commercial
 
   app 'GrowlVoice.app'
 end

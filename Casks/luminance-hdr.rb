@@ -7,7 +7,6 @@ cask 'luminance-hdr' do
           checkpoint: 'e122e7df8e1e6e9f350b1761fbab524e9cd43d3829c4f965281cbbc85299b858'
   name 'Luminance HDR'
   homepage 'http://qtpfsgui.sourceforge.net/'
-  license :gpl
 
   app "Luminance HDR #{version}.app"
 

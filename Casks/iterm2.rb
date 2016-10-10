@@ -8,7 +8,6 @@ cask 'iterm2' do
           checkpoint: 'd39bacce51180f1949aa3e1d75fd9149b03d08c6bd0aa9593221c2457b677cd8'
   name 'iTerm2'
   homepage 'https://www.iterm2.com/'
-  license :gpl
 
   auto_updates true
   depends_on macos: '>= :mountain_lion'

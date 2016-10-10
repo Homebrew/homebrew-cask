@@ -7,7 +7,6 @@ cask 'minikube' do
           checkpoint: 'c4b213e3bbe860bc61f88f4bf4c7b48588b0aa1d87583c248c66624683660a71'
   name 'Minikube'
   homepage 'https://github.com/kubernetes/minikube'
-  license :apache
 
   depends_on arch: :x86_64
   container type: :naked

@@ -5,7 +5,6 @@ cask 'stackato' do
   url "http://downloads.stackato.com/client/v#{version}/stackato-#{version}-macosx10.5-i386-x86_64.zip"
   name 'Stackato'
   homepage 'https://docs.stackato.com/user/client/'
-  license :apache
 
   binary "stackato-#{version}-macosx10.5-i386-x86_64/stackato"
 end

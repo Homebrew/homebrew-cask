@@ -7,7 +7,6 @@ cask 'hands-off' do
           checkpoint: 'e77c570a88756fa34f6c0a80df1cd7c239e223f34c827343b22edbd88430ee31'
   name 'Hands Off!'
   homepage 'https://www.oneperiodic.com/products/handsoff/'
-  license :commercial
 
   app 'Hands Off!.app'
 

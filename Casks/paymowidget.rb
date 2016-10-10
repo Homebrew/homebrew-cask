@@ -5,7 +5,6 @@ cask 'paymowidget' do
   url "https://app.paymoapp.com/desktop-apps/paymowidget/PaymoWidget_mac_#{version}.dmg"
   name 'Paymo Widget'
   homepage 'https://app.paymoapp.com/'
-  license :gpl
 
   app 'PaymoWidget.app'
 end

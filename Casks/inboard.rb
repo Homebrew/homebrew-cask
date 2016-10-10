@@ -7,7 +7,6 @@ cask 'inboard' do
           checkpoint: '2af763dba5809aa09932b379c652d04a372b1ededb7b8203db2bb65dc8115dd3'
   name 'Inboard'
   homepage 'http://inboardapp.com'
-  license :commercial
 
   app 'Inboard.app'
 end

@@ -5,7 +5,6 @@ cask 'dash-dash' do
   url "https://www.dash.org/binaries/dash-#{version}-osx.dmg"
   name 'Dash'
   homepage 'https://www.dash.org/'
-  license :mit
 
   app 'Dash-Qt.app'
 

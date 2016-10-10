@@ -12,7 +12,6 @@ cask 'scroll-reverser' do
   url "https://pilotmoon.com/downloads/ScrollReverser-#{version}.zip"
   name 'Scroll Reverser'
   homepage 'https://pilotmoon.com/scrollreverser/'
-  license :gratis
 
   app 'Scroll Reverser.app'
 

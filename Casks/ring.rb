@@ -8,7 +8,6 @@ cask 'ring' do
           checkpoint: '56d4addc5e0302953537dfaff3cbd87283cc333e73d3b129bf251aa48a271f52'
   name 'Ring'
   homepage 'https://ring.com/'
-  license :closed
 
   auto_updates true
 

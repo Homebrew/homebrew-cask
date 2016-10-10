@@ -5,7 +5,6 @@ cask 'nike-plus-connect' do
   url 'http://nikeplus.nike.com/nikeplus/nikeconnect/installers/macosx/Nike+Connect_new.dmg'
   name 'Nike+ Connect'
   homepage 'http://nikeplus.nike.com'
-  license :gratis
 
   pkg 'Nike+Connect_new.pkg'
 

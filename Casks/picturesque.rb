@@ -5,7 +5,6 @@ cask 'picturesque' do
   url "http://www.acqualia.com/files/sparkle/picturesque_#{version}.zip"
   name 'Picturesque'
   homepage 'http://www.acqualia.com/picturesque/'
-  license :commercial
 
   app 'Picturesque.app'
 end

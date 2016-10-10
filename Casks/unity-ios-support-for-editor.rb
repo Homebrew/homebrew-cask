@@ -5,7 +5,6 @@ cask 'unity-ios-support-for-editor' do
   url "http://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-#{version.before_comma}.pkg"
   name 'Unity iOS Build Support'
   homepage 'https://unity3d.com/unity/'
-  license :commercial
 
   depends_on cask: 'unity'
 

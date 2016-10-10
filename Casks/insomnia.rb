@@ -5,7 +5,6 @@ cask 'insomnia' do
   url "https://downloads.insomnia.rest/mac/Insomnia-#{version}.dmg"
   name 'Insomnia'
   homepage 'https://insomnia.rest/'
-  license :unknown
 
   app 'Insomnia.app'
 end

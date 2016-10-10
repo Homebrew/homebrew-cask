@@ -5,7 +5,6 @@ cask 'totalterminal' do
   url "http://downloads.binaryage.com/TotalTerminal-#{version}.dmg"
   name 'TotalTerminal'
   homepage 'http://totalterminal.binaryage.com'
-  license :gratis
 
   pkg 'TotalTerminal.pkg'
 

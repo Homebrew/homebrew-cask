@@ -6,7 +6,6 @@ cask 'ssh-tunnel-manager' do
   url "https://dl.devmate.com/org.tynsoe.sshtunnelmanager/#{version.before_comma}/#{version.after_comma}/SSHTunnelManager-#{version.before_comma}.zip"
   name 'SSH Tunnel Manager'
   homepage 'https://www.tynsoe.org/v2/stm/'
-  license :gratis
 
   app 'SSH Tunnel Manager.app'
 end

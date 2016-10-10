@@ -7,7 +7,6 @@ cask 'mailsmith' do
           checkpoint: '8a01c594f885a7e898f802707bdf105cec9aec3390138ba851353ca80d363bf5'
   name 'Mailsmith'
   homepage 'https://www.mailsmith.org/'
-  license :gratis
 
   app 'Mailsmith.app'
 

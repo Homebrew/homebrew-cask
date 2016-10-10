@@ -5,7 +5,6 @@ cask 'anonym' do
   url "http://www.hanynet.com/anonym-#{version}.zip"
   name 'Anonym'
   homepage 'http://www.hanynet.com/anonym/'
-  license :oss
 
   app 'Anonym.app'
 end

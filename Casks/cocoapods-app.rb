@@ -8,7 +8,6 @@ cask 'cocoapods-app' do
           checkpoint: '1c438660a09e131d1c8fe292712cb2ff797fe60fc4fc283d0d7aa59f3a9a6792'
   name 'CocoaPods.app'
   homepage 'https://cocoapods.org/'
-  license :mit
 
   app 'CocoaPods.app'
   binary "#{appdir}/CocoaPods.app/Contents/Helpers/pod"

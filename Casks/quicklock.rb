@@ -8,7 +8,6 @@ cask 'quicklock' do
           checkpoint: '582556c374e09cc083dc8b3085787ce8323bb38ba6396ccf0327d08f35fc7a94'
   name 'QuickLock'
   homepage 'http://www.quicklockapp.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'QuickLock.app'
 end

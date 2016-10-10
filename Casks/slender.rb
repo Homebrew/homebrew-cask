@@ -7,7 +7,6 @@ cask 'slender' do
           checkpoint: '1ece434f3b6a656a5f0106b147ecc9fbbc1e9e731a34d531b37c42a9db8c6675'
   name 'Slender'
   homepage 'http://dragonforged.com/slender/'
-  license :commercial
 
   app 'Slender.app'
 end

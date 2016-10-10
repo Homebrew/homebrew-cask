@@ -6,7 +6,6 @@ cask 'tla-plus-toolbox' do
   url "https://tla.msr-inria.inria.fr/tlatoolbox/products/TLAToolbox-#{version}-macosx.cocoa.x86_64.zip"
   name 'TLA+ Toolbox'
   homepage 'https://research.microsoft.com/en-us/um/people/lamport/tla/toolbox.html'
-  license :mit
 
   app 'TLA+ Toolbox.app'
 

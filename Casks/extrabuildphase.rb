@@ -7,7 +7,6 @@ cask 'extrabuildphase' do
           checkpoint: '503763045d9623767595e09036ce4c96988629bdcfb9b1f15ef5f040c64f679b'
   name 'ExtraBuildPhase'
   homepage 'https://github.com/norio-nomura/ExtraBuildPhase'
-  license :mit
 
   artifact 'ExtraBuildPhase.xcplugin', target: "#{ENV['HOME']}/Library/Application Support/Developer/Shared/Xcode/Plug-ins/ExtraBuildPhase.xcplugin"
 end

@@ -7,7 +7,6 @@ cask 'amidst' do
           checkpoint: '7c3d717bce58f93817928daaee850630f6d3237fe79c1d41a57958961b859eb9'
   name 'amidst'
   homepage 'https://github.com/toolbox4minecraft/amidst'
-  license :gpl
 
   app 'Amidst.app'
 end

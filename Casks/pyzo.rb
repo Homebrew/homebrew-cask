@@ -8,7 +8,6 @@ cask 'pyzo' do
           checkpoint: 'e39c7313422d52528d6f9e1171d5b94da9f93153df1c9e1f2efbf0d5e8b81af7'
   name 'Pyzo'
   homepage 'http://www.pyzo.org/'
-  license :bsd
 
   app 'pyzo.app'
 

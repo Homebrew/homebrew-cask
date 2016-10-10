@@ -5,7 +5,6 @@ cask 'breeze' do
   url "https://autumnapps.com/downloads/Breeze#{version}.dmg"
   name 'Breeze'
   homepage 'https://autumnapps.com/breeze/'
-  license :freemium
 
   app 'Breeze.app'
 

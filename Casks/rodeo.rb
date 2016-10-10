@@ -8,7 +8,6 @@ cask 'rodeo' do
           checkpoint: '661be9585dc69fa30fa3042b78631f52c453a6adcbba083e1b99f142f1d13832'
   name 'Rodeo'
   homepage 'http://rodeo.yhat.com/'
-  license :affero
 
   app 'Rodeo.app'
 end

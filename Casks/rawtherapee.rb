@@ -18,7 +18,6 @@ cask 'rawtherapee' do
 
   name 'RawTherapee'
   homepage 'http://rawtherapee.com'
-  license :gpl
 
   if MacOS.version <= :mavericks
     container nested: "RawTherapee_OSX_10.6_64_#{version}.dmg"

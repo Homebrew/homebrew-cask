@@ -5,7 +5,6 @@ cask 'logic' do
   url "http://downloads.saleae.com/logic/#{version}/Logic-#{version}-Darwin.dmg"
   name 'Logic'
   homepage 'https://www.saleae.com/'
-  license :commercial
 
   app 'Logic.app'
 end

@@ -7,7 +7,6 @@ cask 'findings' do
           checkpoint: '03d2cbcf088818ad76fe749a5b87ec4d1231482593ea42020842034832a43ce5'
   name 'Findings'
   homepage 'http://findingsapp.com'
-  license :freemium
 
   depends_on macos: '>= :mavericks'
 

@@ -8,7 +8,6 @@ cask 'dogecoin' do
           checkpoint: '3d22468ec5e9fe768efce8293cb1af298a6332ee4e1018768257418a64f99f0b'
   name 'Dogecoin'
   homepage 'http://dogecoin.com/'
-  license :mit
 
   app 'Dogecoin-Qt.app'
 end

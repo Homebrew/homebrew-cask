@@ -5,7 +5,6 @@ cask 'photo-supreme-postgresql' do
   url 'http://www.idimager.com/Trial/PhotoSupremePostgreSQL_V3.pkg'
   name 'Photo Supreme with PostreSQL'
   homepage 'http://www.idimager.com/WP/?page_id=20'
-  license :commercial
 
   depends_on macos: '>= 10.7'
   depends_on formula: 'postgresql'

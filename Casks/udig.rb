@@ -5,7 +5,6 @@ cask 'udig' do
   url "http://udig.refractions.net/files/downloads/udig-#{version}.macosx.cocoa.x86_64.dmg"
   name 'uDig'
   homepage 'http://udig.refractions.net/'
-  license :oss
 
   suite 'udig'
 end

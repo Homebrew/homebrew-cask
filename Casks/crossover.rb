@@ -7,7 +7,6 @@ cask 'crossover' do
           checkpoint: '773a5bc5be3fef3c2c08927bbd052c4b3e0177e99e127eb76134717ff8f32213'
   name 'CrossOver'
   homepage 'https://www.codeweavers.com/products/crossover-mac/'
-  license :commercial
 
   app 'CrossOver.app'
 end

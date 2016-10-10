@@ -5,7 +5,6 @@ cask 'pdfelement' do
   url 'http://download.wondershare.com/mac-pdfelement_full841.dmg'
   name 'Wondershare PDFelement for Mac'
   homepage 'https://pdf.wondershare.com'
-  license :commercial
 
   app 'PDFelement.app'
 end

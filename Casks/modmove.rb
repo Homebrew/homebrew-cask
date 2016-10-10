@@ -7,7 +7,6 @@ cask 'modmove' do
           checkpoint: '827b0314616db7d97a0c5f9cfc2252097a815781673ccf4bcc87aec34a691667'
   name 'ModMove'
   homepage 'https://github.com/keith/modmove'
-  license :mit
 
   accessibility_access true
 

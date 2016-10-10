@@ -8,7 +8,6 @@ cask 'osxfuse' do
           checkpoint: 'ed33e42fda060f052c775c50ae90068065dead115f27eb7c5709c02082007643'
   name 'OSXFUSE'
   homepage 'https://osxfuse.github.io/'
-  license :bsd
 
   installer script: '/usr/sbin/installer',
             args:   [

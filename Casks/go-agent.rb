@@ -5,7 +5,6 @@ cask 'go-agent' do
   url "https://download.go.cd/binaries/#{version}/osx/go-agent-#{version}-osx.zip"
   name 'Go Agent'
   homepage 'https://www.go.cd/'
-  license :apache
 
   app 'Go Agent.app'
 end

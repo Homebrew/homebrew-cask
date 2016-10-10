@@ -6,7 +6,6 @@ cask 'google-japanese-ime' do
   url 'https://dl.google.com/japanese-ime/latest/GoogleJapaneseInput.dmg'
   name 'Google Japanese Input Method Editor'
   homepage 'https://www.google.co.jp/ime/'
-  license :gratis
 
   pkg 'GoogleJapaneseInput.pkg'
 

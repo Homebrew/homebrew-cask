@@ -5,7 +5,6 @@ cask 'tortoisehg' do
   url "https://bitbucket.org/tortoisehg/files/downloads/TortoiseHg-#{version}-mac-x64.dmg"
   name 'TortoiseHg'
   homepage 'http://tortoisehg.bitbucket.org/'
-  license :gpl
 
   app 'TortoiseHg.app'
 end

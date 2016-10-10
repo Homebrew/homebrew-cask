@@ -5,7 +5,6 @@ cask 'mixxx' do
   url "https://downloads.mixxx.org/mixxx-#{version}/mixxx-#{version}-osxintel.dmg"
   name 'Mixxx'
   homepage 'https://www.mixxx.org'
-  license :gpl
 
   app 'Mixxx.app'
 end

@@ -6,7 +6,6 @@ cask 'garagebuy' do
   url "https://www.iwascoding.de/downloads/GarageBuy_#{version}.dmg"
   name 'GarageBuy'
   homepage 'https://www.iwascoding.com/GarageBuy'
-  license :gratis
 
   app 'GarageBuy.app'
 end

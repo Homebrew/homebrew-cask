@@ -15,7 +15,6 @@ cask 'virtualbox' do
           checkpoint: '68cffa589cae3c4d557ecb82a624655a2b6c85199c1425d26eefccfaa8548b2b'
   name 'Oracle VirtualBox'
   homepage 'https://www.virtualbox.org'
-  license :gpl
 
   pkg 'VirtualBox.pkg'
 

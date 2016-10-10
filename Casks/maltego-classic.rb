@@ -5,7 +5,6 @@ cask 'maltego-classic' do
   url "https://www.paterva.com/malv#{version.major}/classic/Maltego.v#{version}.dmg"
   name 'Paterva Maltego'
   homepage 'https://www.paterva.com/web7/buy/maltego-clients/maltego.php'
-  license :closed
 
   app "Maltego Classic v#{version.major_minor_patch}.app"
 end

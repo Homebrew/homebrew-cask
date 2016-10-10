@@ -7,7 +7,6 @@ cask 'keepingyouawake' do
           checkpoint: '0e0d4f9cd1dfe83049d5224ad09abe91beaa287073efa3c3f2ecb0e18a529603'
   name 'KeepingYouAwake'
   homepage 'https://github.com/newmarcel/KeepingYouAwake'
-  license :mit
 
   app 'KeepingYouAwake.app'
 

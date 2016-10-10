@@ -7,7 +7,6 @@ cask 'gamesalad' do
           checkpoint: 'ea3cec48ad05396ea2e2bfac2e49977292f0d649f461055682dc52730cb4b431'
   name 'GameSalad'
   homepage 'https://gamesalad.com/'
-  license :commercial
 
   app 'GameSalad.app'
 end

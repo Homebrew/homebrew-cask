@@ -6,7 +6,6 @@ cask 'turbo-boost-switcher' do
   url "https://s3.amazonaws.com/turbo-boost-switcher/Turbo_Boost_Switcher_v#{version}.zip"
   name 'Turbo Boost Switcher'
   homepage 'http://www.rugarciap.com/turbo-boost-switcher-for-os-x/'
-  license :gpl
 
   app 'Turbo Boost Switcher.app'
 

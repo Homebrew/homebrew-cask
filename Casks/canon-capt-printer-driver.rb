@@ -6,7 +6,6 @@ cask 'canon-capt-printer-driver' do
   url "http://gdlp01.c-wss.com/gds/7/0100004207/14/Mac_CAPT_V#{version.no_dots}_uk_EN.dmg"
   name 'Canon CAPT Printer Driver'
   homepage 'http://support-au.canon.com.au/contents/AU/EN/0100420705.html'
-  license :closed
 
   pkg 'MacOSX/Canon_CAPT_Installer.pkg'
 

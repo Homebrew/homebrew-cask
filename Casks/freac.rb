@@ -8,7 +8,6 @@ cask 'freac' do
           checkpoint: '128279d3629dc59eaee4eced8ceb8d2ece59f7c761c22e5b9820aa03403ae9a7'
   name 'fre:ac'
   homepage 'https://www.freac.org'
-  license :gpl
 
   app 'freac.app'
 end

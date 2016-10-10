@@ -7,7 +7,6 @@ cask 'wiretap-studio' do
           checkpoint: '88e49bedea4c9426997c344bda3f61959f3b7f0b05f432de0d9c26cf40a44fa4'
   name 'WireTap Studio'
   homepage 'https://www.ambrosiasw.com/utilities/wiretap/'
-  license :commercial
 
   app 'WireTap Studio.app'
 end

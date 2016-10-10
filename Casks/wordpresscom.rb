@@ -7,7 +7,6 @@ cask 'wordpresscom' do
           checkpoint: '67c301ee7c79b1c161c3d0a8691d267032489baf850ba8aecc4b9f5f3dcc3d87'
   name 'WordPress.com'
   homepage 'https://desktop.wordpress.com/'
-  license :gpl
 
   app 'WordPress.com.app'
 end

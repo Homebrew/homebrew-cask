@@ -7,7 +7,6 @@ cask 'recd' do
           checkpoint: '89f7f967ccc169b05f8de72236c0c360c8516635ce710aa3d52c0c345486d207'
   name 'Rec\'d'
   homepage 'https://github.com/aeewhite/Recd'
-  license :oss
 
   app "Rec'd.app"
 end

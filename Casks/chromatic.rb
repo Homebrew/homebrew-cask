@@ -7,7 +7,6 @@ cask 'chromatic' do
           checkpoint: '36c8f273a93367b4fe2284c0d279dbca49009584b368bbf35cac0250234b1afe'
   name 'Chromatic'
   homepage 'https://mrgeckosmedia.com/applications/info/Chromatic'
-  license :isc
 
   app 'Chromatic.app'
 end

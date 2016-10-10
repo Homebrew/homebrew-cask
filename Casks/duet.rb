@@ -8,7 +8,6 @@ cask 'duet' do
           checkpoint: 'effd1d216189a65c94a7307e9f55568df011564ddaa5393711f27717019e4b32'
   name 'Duet'
   homepage 'http://www.duetdisplay.com/'
-  license :gratis
 
   auto_updates true
 

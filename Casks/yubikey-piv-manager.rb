@@ -5,7 +5,6 @@ cask 'yubikey-piv-manager' do
   url "https://developers.yubico.com/yubikey-piv-manager/Releases/yubikey-piv-manager-#{version}-mac.pkg"
   name 'YubiKey PIV Manager'
   homepage 'https://developers.yubico.com/yubikey-piv-manager/'
-  license :gpl
 
   pkg "yubikey-piv-manager-#{version}-mac.pkg"
 

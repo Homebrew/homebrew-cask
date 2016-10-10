@@ -5,7 +5,6 @@ cask 'bowery' do
   url "http://desktop.bowery.io/#{version}_darwin_amd64.zip"
   name 'Bowery'
   homepage 'http://bowery.io/'
-  license :freemium
 
   pkg 'bowery.pkg'
 

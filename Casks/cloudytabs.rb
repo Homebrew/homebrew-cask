@@ -7,7 +7,6 @@ cask 'cloudytabs' do
           checkpoint: '8934ab65f5388b68ff231beb004bd956da07a8f79cd95060d67502296819d037'
   name 'CloudyTabs'
   homepage 'https://github.com/josh-/CloudyTabs/'
-  license :mit
 
   app 'CloudyTabs.app'
 end

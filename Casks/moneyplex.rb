@@ -6,7 +6,6 @@ cask 'moneyplex' do
   url 'http://www.matrica.com/download/mac/moneyplex.dmg'
   name 'moneyplex'
   homepage 'http://www.matrica.de/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'moneyplex.pkg', allow_untrusted: true
 

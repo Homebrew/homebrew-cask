@@ -8,7 +8,6 @@ cask 'kid3' do
           checkpoint: 'f51a382a4f5278a1d43f17c95464ff63d65cb17d61e010a72dabe8c23c8ddd44'
   name 'Kid3'
   homepage 'http://kid3.sourceforge.net/'
-  license :gpl
 
   app 'kid3.app'
   binary "#{appdir}/kid3.app/Contents/MacOS/kid3-cli"

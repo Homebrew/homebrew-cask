@@ -8,7 +8,6 @@ cask 'hex-fiend' do
           checkpoint: '2d09b3a576fc111777c4d5988be2d595651e163ee6f1b5d7dd12d608078d0a8c'
   name 'Hex Fiend'
   homepage 'http://ridiculousfish.com/hexfiend/'
-  license :bsd
 
   app 'Hex Fiend.app'
 

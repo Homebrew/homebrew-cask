@@ -7,7 +7,6 @@ cask 'ipvanish-vpn' do
           checkpoint: '7d73708aaa5bb44de71aeb4b25e6b9e92a37267ef2eb0730cf1d34b538dc0543'
   name 'IPVanish'
   homepage 'https://www.ipvanish.com/'
-  license :gratis
 
   app 'IPVanish VPN.app'
 end

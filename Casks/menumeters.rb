@@ -5,7 +5,6 @@ cask 'menumeters' do
   url 'https://www.ragingmenace.com/software/download/MenuMeters.dmg'
   name 'MenuMeters'
   homepage 'https://www.ragingmenace.com/software/menumeters/'
-  license :gpl
 
   depends_on macos: '<= :yosemite'
 

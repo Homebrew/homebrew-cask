@@ -5,7 +5,6 @@ cask 'not-tetris' do
   url "http://stabyourself.net/dl.php?file=nottetris#{version}/nottetris#{version}-osx.zip"
   name 'Not Tetris'
   homepage 'http://stabyourself.net/nottetris2/'
-  license :oss
 
   app "Not Tetris #{version}.app"
 

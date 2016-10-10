@@ -5,7 +5,6 @@ cask 'integrity' do
   url 'http://peacockmedia.co.uk/integrity/integrity.dmg'
   name 'Integrity'
   homepage 'http://peacockmedia.co.uk/integrity/'
-  license :gratis
 
   app 'Integrity.app'
 end

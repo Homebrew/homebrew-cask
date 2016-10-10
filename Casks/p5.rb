@@ -9,7 +9,6 @@ cask 'p5' do
           checkpoint: '219df1fa9cba52c93906de9018afc7657c809190a9abda6c0715a7aea28fa099'
   name 'p5.js Editor'
   homepage 'https://p5js.org/download/#editor'
-  license :mit
 
   app 'p5.app'
 end

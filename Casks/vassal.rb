@@ -8,7 +8,6 @@ cask 'vassal' do
           checkpoint: '441baba4b477cdd3a872591cb19e084a7b3c9ac52da2c8efdd948a6dd671b3dd'
   name 'VASSAL'
   homepage 'http://www.vassalengine.org/'
-  license :gpl
 
   app 'VASSAL.app'
 end

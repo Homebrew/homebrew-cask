@@ -7,7 +7,6 @@ cask 'blueharvest' do
           checkpoint: '00c105a8e5021d30fc552407ab64f00a7a5a47143c7a9c92f56501bc5d4ab3fb'
   name 'BlueHarvest'
   homepage 'http://zeroonetwenty.com/blueharvest/'
-  license :commercial
 
   app 'BlueHarvest.app'
 end

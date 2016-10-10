@@ -7,7 +7,6 @@ cask 'watch-screenshot-magic' do
           checkpoint: '145af78b658f959a27b7e5862d16799845b49acc6a1a45d6b0b573cc40cd6218'
   name 'Watch Screenshot Magic'
   homepage 'https://github.com/Imperiopolis/WatchScreenshotMagic'
-  license :mit
 
   app 'Watch Screenshot Magic.app'
 end

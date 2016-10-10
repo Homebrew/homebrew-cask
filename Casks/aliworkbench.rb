@@ -8,7 +8,6 @@ cask 'aliworkbench' do
   name 'Qian Niu'
   name '千牛'
   homepage 'https://qianniu.1688.com'
-  license :gratis
 
   app 'AliWorkBench.app'
 end

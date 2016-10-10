@@ -6,7 +6,6 @@ cask 'widelands' do
   url 'https://launchpad.net/widelands/build18/build-18/+download/widelands-build18-mac.dmg'
   name 'Widelands'
   homepage 'https://wl.widelands.org/'
-  license :gpl
 
   app 'Widelands.app'
 end

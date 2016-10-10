@@ -5,7 +5,6 @@ cask 'younity' do
   url 'http://downloads.getyounity.com/files/younityInstaller.dmg'
   name 'Younity'
   homepage 'https://getyounity.com'
-  license :gratis
 
   pkg "younityInstaller-#{version}.pkg"
 

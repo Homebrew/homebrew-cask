@@ -8,7 +8,6 @@ cask 'hobo' do
           checkpoint: '7e1bee541054caae98209bdb7039350806173a1baf9ffff81e659f12bc8d1460'
   name 'Hobo'
   homepage 'https://clickontyler.com/hobo/'
-  license :commercial
 
   app 'Hobo.app'
 end

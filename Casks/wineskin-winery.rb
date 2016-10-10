@@ -8,7 +8,6 @@ cask 'wineskin-winery' do
           checkpoint: 'aadd186bd1dac57d6b4dd583b74dcb921755c9fa6d6a8bf09206dc03384190fd'
   name 'Wineskin Winery'
   homepage 'http://wineskin.urgesoftware.com/'
-  license :gpl
 
   depends_on macos: '>= :snow_leopard'
 

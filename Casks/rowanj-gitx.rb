@@ -16,7 +16,6 @@ cask 'rowanj-gitx' do
           checkpoint: 'b1e11ef3e13e74f84a51bfd6169db61f9c37fe5df851bb8c5f131c1981f8fdc0'
   name 'GitX-dev'
   homepage 'https://rowanj.github.io/gitx/'
-  license :gpl
 
   conflicts_with cask: 'gitx'
   depends_on macos: '>= :snow_leopard'

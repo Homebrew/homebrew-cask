@@ -12,7 +12,6 @@ cask 'game-capture-hd' do
           checkpoint: 'a1d6aa74e2d6182ae3b0be8b40b72c550824922fc6b97f3a2b01ab88ad9e5606'
   name 'Game Capture HD'
   homepage 'https://www.elgato.com/en/gaming/gamecapture-hd'
-  license :commercial
 
   app 'Game Capture HD.app'
 end

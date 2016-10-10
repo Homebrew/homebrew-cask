@@ -7,7 +7,6 @@ cask 'simon' do
           checkpoint: '91c57296f0f57d0c74d4c196fa4306c7630e3f701aa9166367a65366261c95d3'
   name 'Simon'
   homepage 'http://www.dejal.com/simon/'
-  license :commercial
 
   app 'Simon.app'
 end

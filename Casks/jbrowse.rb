@@ -5,7 +5,6 @@ cask 'jbrowse' do
   url "https://jbrowse.org/releases/JBrowse-#{version}-desktop-osx.zip"
   name 'jbrowse'
   homepage 'https://jbrowse.org/'
-  license :oss
 
   app 'JBrowseDesktop-darwin-x64/JBrowseDesktop.app'
 end

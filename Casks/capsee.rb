@@ -5,7 +5,6 @@ cask 'capsee' do
   url "http://www.threemagination.com/CapSee#{version.no_dots}.zip"
   name 'CapSee'
   homepage 'http://www.threemagination.com/capsee/'
-  license :gratis
 
   app 'CapSee.app'
 end

@@ -6,7 +6,6 @@ cask 'basis-sync' do
   url "https://mybasis-duck.s3.amazonaws.com/client/BasisSync-#{version}.dmg"
   name 'Basis Sync'
   homepage 'https://www.mybasis.com/'
-  license :closed
 
   app 'Basis Sync.app'
 end

@@ -5,7 +5,6 @@ cask 'mcbopomofo' do
   url "https://app.openvanilla.org/file/mcbopomofo/McBopomofo-Installer-#{version}.zip"
   name 'McBopomofo'
   homepage 'https://mcbopomofo.openvanilla.org/'
-  license :mit
 
   installer manual: 'McBopomofoInstaller.app'
 

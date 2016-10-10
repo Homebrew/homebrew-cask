@@ -8,7 +8,6 @@ cask 'vox-preferences-pane' do
           checkpoint: 'c5d5496d2f6dd7567cb3b32535847b5d8cb403289bcdce458b977cb2df496da3'
   name 'VOX Preferences'
   homepage 'https://coppertino.com/addon'
-  license :gratis
 
   prefpane 'Vox Preferences.prefPane'
 end

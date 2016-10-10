@@ -8,7 +8,6 @@ cask 'barxtemp' do
           checkpoint: '9b7756a504b6ce274e2efde312990f95bb831589f9bf6a21cb1ccfe5a7f55c86'
   name 'barXtemp'
   homepage 'https://gabriele91.github.io/barXtemp/'
-  license :mit
 
   depends_on macos: '>= :mountain_lion'
 

@@ -5,7 +5,6 @@ cask 'fenics' do
   url "http://www.fenicsproject.org/pub/software/fenics/fenics-#{version}-osx10.9.dmg"
   name 'FEniCS'
   homepage 'https://fenicsproject.org/'
-  license :gpl
 
   depends_on macos: '>= :mavericks'
 

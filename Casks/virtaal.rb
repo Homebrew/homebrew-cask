@@ -8,7 +8,6 @@ cask 'virtaal' do
           checkpoint: '30197d11c26aa1b59697be8a5af72c3a51b6c12cbf0611465fb8dabb0172bed6'
   name 'Virtaal'
   homepage 'http://virtaal.translatehouse.org/'
-  license :gpl
 
   app 'Virtaal.app'
 end

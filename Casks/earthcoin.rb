@@ -5,7 +5,6 @@ cask 'earthcoin' do
   url "http://getearthcoin.com/downloads/EarthCoin-Qt-#{version}.dmg"
   name 'Earthcoin'
   homepage 'http://getearthcoin.com/'
-  license :oss
 
   app 'EarthCoin-Qt.app'
 end

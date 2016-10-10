@@ -7,7 +7,6 @@ cask 'finderminder' do
           checkpoint: '7871062270c4d96fb0878619d71edbdee1da5f4a51818401d5fd864450826853'
   name 'FinderMinder'
   homepage 'https://irradiatedsoftware.com/labs'
-  license :gratis
 
   accessibility_access true
 

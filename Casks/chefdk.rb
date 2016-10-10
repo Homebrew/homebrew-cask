@@ -8,7 +8,6 @@ cask 'chefdk' do
   name 'Chef Development Kit'
   name 'ChefDK'
   homepage 'https://downloads.chef.io/chef-dk/'
-  license :apache
 
   pkg "chefdk-#{version}.pkg"
 

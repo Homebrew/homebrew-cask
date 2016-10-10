@@ -5,7 +5,6 @@ cask 'plistedit-pro' do
   url 'https://www.fatcatsoftware.com/plisteditpro/PlistEditPro.zip'
   name 'PlistEdit Pro'
   homepage 'https://www.fatcatsoftware.com/plisteditpro/'
-  license :commercial
 
   app 'PlistEdit Pro.app'
 

@@ -5,7 +5,6 @@ cask 'taskpaper' do
   url 'https://www.taskpaper.com/assets/app/TaskPaper.dmg'
   name 'TaskPaper'
   homepage 'https://www.taskpaper.com/'
-  license :commercial
 
   app 'TaskPaper.app'
 end

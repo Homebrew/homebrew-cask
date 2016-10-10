@@ -7,7 +7,6 @@ cask 'xmplify' do
           checkpoint: 'a0528544f8f5ca1cdda9d3d0d32f4746dab296071faca625976029738007c858'
   name 'Xmplify'
   homepage 'http://xmplifyapp.com/'
-  license :commercial
 
   app 'Xmplify.app'
 

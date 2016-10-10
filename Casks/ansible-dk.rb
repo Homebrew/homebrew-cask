@@ -8,7 +8,6 @@ cask 'ansible-dk' do
   name 'Ansible DK'
   name 'Ansible Development Kit'
   homepage 'https://github.com/omniti-labs/ansible-dk'
-  license :bsd
 
   pkg 'ansible-dk-1.2.0-1.pkg'
 

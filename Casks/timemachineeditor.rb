@@ -5,7 +5,6 @@ cask 'timemachineeditor' do
   url 'http://timesoftware.free.fr/timemachineeditor/TimeMachineEditor.pkg'
   name 'TimeMachineEditor'
   homepage 'http://timesoftware.free.fr/timemachineeditor/'
-  license :gratis
 
   pkg 'TimeMachineEditor.pkg'
 

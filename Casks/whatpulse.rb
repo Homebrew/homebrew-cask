@@ -5,7 +5,6 @@ cask 'whatpulse' do
   url "http://amcdn.whatpulse.org/files/whatpulse-mac-#{version}.dmg"
   name 'WhatPulse'
   homepage 'http://www.whatpulse.org/'
-  license :gratis
 
   pkg "WhatPulse #{version}.mpkg"
 

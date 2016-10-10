@@ -7,7 +7,6 @@ cask 'air-connect' do
           checkpoint: 'f18a637310e9e6d0bf36d562297d55030f0ae8cc6caea1bffcbde1eda82d8e0e'
   name 'Air Connect'
   homepage 'https://avatron.com/get-air-connect/'
-  license :gratis
 
   app 'Air Connect.app'
 end

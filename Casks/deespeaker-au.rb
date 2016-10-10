@@ -5,7 +5,6 @@ cask 'deespeaker-au' do
   url 'http://dotec-audio.com/release/DeeSpeaker/latest/au/DeeSpeakerAU.zip'
   name 'DOTEC-AUDIO DeeSpeaker (AU)'
   homepage 'http://dotec-audio.com/deespeaker.html'
-  license :gratis
 
   audio_unit_plugin 'DeeSpeaker.component'
 end

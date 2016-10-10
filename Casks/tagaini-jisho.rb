@@ -8,7 +8,6 @@ cask 'tagaini-jisho' do
           checkpoint: '155c918aab4ba9bdbe952eb766e1b94e0bfdd206824adc27a1576e186052affa'
   name 'Tagaini Jisho'
   homepage 'http://www.tagaini.net/'
-  license :gpl
 
   app 'Tagaini Jisho.app'
 end

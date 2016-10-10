@@ -6,7 +6,6 @@ cask 'curse' do
   url 'https://updates.curseapp.net/osx/Curse.dmg'
   name 'Curse'
   homepage 'https://www.curse.com'
-  license :freemium
 
   auto_updates true
 

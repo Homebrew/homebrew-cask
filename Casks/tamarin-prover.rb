@@ -6,7 +6,6 @@ cask 'tamarin-prover' do
   url 'https://github.com/tamarin-prover/bin-dists/archive/master.zip'
   name 'tamarin-prover'
   homepage 'https://tamarin-prover.github.io'
-  license :gpl
 
   depends_on macos: '>= :lion'
   depends_on arch: :x86_64

@@ -6,7 +6,6 @@ cask 'captur' do
   url "https://dl.dropboxusercontent.com/u/27027504/captur-#{version}.dmg.zip"
   name 'Captur'
   homepage 'https://cambhlumbulunk.blogspot.co.uk/p/captur.html'
-  license :gratis
 
   app '64 Bit/Captur.app'
 end

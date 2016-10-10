@@ -7,7 +7,6 @@ cask 'voxql' do
           checkpoint: 'ba146e5eb1a5fcb45fb0f40d2749fc2d9c62b97d9995563baeae31e99b9cddbd'
   name 'voxql'
   homepage 'https://github.com/heptal/VoxQL'
-  license :mit
 
   qlplugin 'VoxQL.qlgenerator'
 end

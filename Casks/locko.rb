@@ -7,7 +7,6 @@ cask 'locko' do
           checkpoint: 'ab311f70d77b21dd8f2f06e2736346a81a6c9d3f8e4dcf730431b44579f14ef2'
   name 'Locko'
   homepage 'http://www.binarynights.com/'
-  license :commercial
 
   app 'Locko.app'
 end

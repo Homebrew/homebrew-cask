@@ -5,7 +5,6 @@ cask 'minerva' do
   url "http://blog.coursevector.com/downloads/Minerva-#{version.dots_to_hyphens}.air"
   name '.minerva'
   homepage 'http://blog.coursevector.com/minerva/'
-  license :gratis
 
   depends_on cask: 'adobe-air'
 

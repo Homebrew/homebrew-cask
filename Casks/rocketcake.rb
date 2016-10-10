@@ -6,7 +6,6 @@ cask 'rocketcake' do
   url "http://www.ambiera.at/downloads/RocketCake-#{version.major_minor}.dmg"
   name 'RocketCake'
   homepage 'http://www.ambiera.com/rocketcake/index.html'
-  license :freemium
 
   app 'RocketCake.app'
 

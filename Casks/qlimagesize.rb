@@ -6,7 +6,6 @@ cask 'qlimagesize' do
   url 'https://repo.whine.fr/qlImageSize.pkg'
   name 'qlImageSize'
   homepage 'https://github.com/Nyx0uf/qlImageSize'
-  license :bsd
 
   pkg 'qlImageSize.pkg'
 

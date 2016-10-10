@@ -8,7 +8,6 @@ cask 'devonthink-pro' do
           checkpoint: '4551a1304ab292db85c304dbb427d9399f7df83cbc721c3c3d8e3f9c39a7a432'
   name 'DEVONthink Pro'
   homepage 'http://www.devontechnologies.com/products/devonthink/devonthink-pro.html'
-  license :commercial
 
   app 'DEVONthink Pro.app'
 end

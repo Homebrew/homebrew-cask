@@ -5,7 +5,6 @@ cask 'chemdoodle' do
   url "https://www.chemdoodle.com/downloads/ChemDoodle-osx-#{version}.dmg"
   name 'ChemDoodle'
   homepage 'https://www.chemdoodle.com'
-  license :commercial
 
   suite 'ChemDoodle'
 end

@@ -5,7 +5,6 @@ cask 'gridwars' do
   url 'http://gridwars.marune.de/bin/gridwars_osx_x86.zip'
   name 'GridWars'
   homepage 'http://gridwars.marune.de/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   suite 'gridwars_osx_x86'
 end

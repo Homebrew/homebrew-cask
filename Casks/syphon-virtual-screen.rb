@@ -8,7 +8,6 @@ cask 'syphon-virtual-screen' do
           checkpoint: '99793e70b315957b663123c844fb442f2fffef84e7ec4731506b6324fc70fcca'
   name 'Syphon Virtual Screen'
   homepage 'https://andreacremaschi.github.io/Syphon-virtual-screen/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'Syphon Virtual Screen.mpkg'
 

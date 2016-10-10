@@ -8,7 +8,6 @@ cask 'protege' do
           checkpoint: '85a7963eb388f3eaca03ab284323423a4c3659fa2939b183c1a46ef222c6293c'
   name 'Protégé'
   homepage 'http://protege.stanford.edu/'
-  license :bsd
 
   app "Protege-#{version}/Protégé.app"
 end

@@ -5,7 +5,6 @@ cask 'jitouch' do
   url 'https://www.jitouch.com/jitouch_el_capitan.zip'
   name 'jitouch'
   homepage 'https://www.jitouch.com'
-  license :commercial
 
   prefpane 'jitouch/Jitouch.prefPane'
 

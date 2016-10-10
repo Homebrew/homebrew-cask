@@ -5,7 +5,6 @@ cask 'mobile-mouse-server' do
   url "http://mobilemouse.com/downloads/OS_X_Server_#{version.dots_to_underscores}.dmg"
   name 'Mobile Mouse Server'
   homepage 'http://mobilemouse.com/'
-  license :gratis
 
   app 'Mobile Mouse Server.app'
 

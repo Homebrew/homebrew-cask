@@ -5,7 +5,6 @@ cask 'not-pacman' do
   url "http://stabyourself.net/dl.php?file=notpacman-#{version}/notpacman-osx.zip"
   name 'Not Pacman'
   homepage 'http://stabyourself.net/notpacman/'
-  license :oss
 
   app 'Not Pacman.app'
 end

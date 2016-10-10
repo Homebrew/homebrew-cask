@@ -12,7 +12,6 @@ cask 'cargo' do
   url "https://static.rust-lang.org/cargo-dist/#{Utils.distname}.tar.gz"
   name 'Cargo'
   homepage 'https://crates.io/'
-  license :oss
 
   binary "#{Utils.distname}/cargo/bin/cargo"
   artifact "#{Utils.distname}/cargo/share/man/man1/cargo.1", target: '/usr/local/share/man/man1/cargo.1'

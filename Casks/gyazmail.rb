@@ -5,7 +5,6 @@ cask 'gyazmail' do
   url "http://gyazsquare.com/gyazmail/GyazMail-#{version.no_dots}.dmg"
   name 'GyazMail'
   homepage 'http://gyazsquare.com/gyazmail/'
-  license :commercial
 
   app 'GyazMail.app'
 end

@@ -5,7 +5,6 @@ cask 'plantronics-hub' do
   url "https://www.plantronics.com/media/downloads/PlantronicsHub-#{version}.dmg"
   name 'Plantronics Hub'
   homepage 'https://www.plantronics.com/au/product/plantronics-hub-desktop'
-  license :gratis
 
   pkg 'Plantronics Software.pkg'
 

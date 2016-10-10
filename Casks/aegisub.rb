@@ -5,7 +5,6 @@ cask 'aegisub' do
   url "http://ftp.aegisub.org/pub/releases/Aegisub-#{version}.dmg"
   name 'Aegisub'
   homepage 'http://www.aegisub.org/'
-  license :oss
 
   app 'Aegisub.app'
 end

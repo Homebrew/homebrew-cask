@@ -5,7 +5,6 @@ cask 'omnipresence' do
   url "https://downloads.omnigroup.com/software/MacOSX/10.10/OmniPresence-#{version}.dmg"
   name 'OmniPresence'
   homepage 'https://www.omnigroup.com/omnipresence'
-  license :commercial
 
   depends_on macos: '>= :yosemite'
 

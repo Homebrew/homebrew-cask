@@ -5,7 +5,6 @@ cask 'netbeans' do
   url "http://download.netbeans.org/netbeans/#{version}/final/bundles/netbeans-#{version}-macosx.dmg"
   name 'NetBeans IDE'
   homepage 'https://netbeans.org/'
-  license :oss
 
   pkg "NetBeans #{version}.pkg"
 

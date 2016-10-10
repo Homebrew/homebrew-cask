@@ -17,7 +17,6 @@ cask 'clamxav' do
 
   name 'ClamXav'
   homepage 'https://www.clamxav.com/'
-  license :commercial
 
   app 'ClamXav.app'
 

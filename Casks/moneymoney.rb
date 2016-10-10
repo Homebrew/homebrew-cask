@@ -7,7 +7,6 @@ cask 'moneymoney' do
           checkpoint: 'e2247ed7b757bcdb3f0276f9a9ecb8d60885760e9ff36778d175f82895e8ea4f'
   name 'MoneyMoney'
   homepage 'https://moneymoney-app.com/'
-  license :commercial
 
   app 'MoneyMoney.app'
 end

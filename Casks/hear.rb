@@ -7,7 +7,6 @@ cask 'hear' do
           checkpoint: 'fda2626909b97d07dd5ff26d881b7df42ebf51fcf112d29437819b42c62a56c3'
   name 'Hear'
   homepage 'https://www.prosofteng.com/hear/'
-  license :commercial
 
   app 'Hear.app'
 

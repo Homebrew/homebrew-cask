@@ -8,7 +8,6 @@ cask 'postgres' do
           checkpoint: 'f917159368356ab5e54e22dfa7f13c728d1846fe2e5e3cdd8f21fb5c749681cf'
   name 'Postgres'
   homepage 'https://postgresapp.com/'
-  license :oss
 
   app 'Postgres.app'
 end

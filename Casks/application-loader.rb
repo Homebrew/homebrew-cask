@@ -5,7 +5,6 @@ cask 'application-loader' do
   url "https://itunesconnect.apple.com/apploader/ApplicationLoader_#{version}.dmg"
   name 'Application Loader'
   homepage 'https://itunesconnect.apple.com'
-  license :gratis
 
   pkg 'ApplicationLoader.pkg'
 

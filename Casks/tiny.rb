@@ -6,7 +6,6 @@ cask 'tiny' do
   url 'https://kaomojiformac.github.io/tiny-download/Tiny.zip'
   name 'Tiny'
   homepage 'https://www.delightfuldev.com/tiny/'
-  license :gratis
 
   depends_on macos: '>= 10.10'
 

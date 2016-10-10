@@ -8,7 +8,6 @@ cask 'devonthink' do
           checkpoint: '94b758c197bd1b98fed3c09e5564395b7512cf604b683cc44af453c3b9ba647c'
   name 'DEVONthink Personal'
   homepage 'http://www.devontechnologies.com/products/devonthink/devonthink-personal.html'
-  license :commercial
 
   depends_on macos: '>= :mountain_lion'
 

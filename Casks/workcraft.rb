@@ -5,7 +5,6 @@ cask 'workcraft' do
   url "http://www.workcraft.org/_media/download/workcraft-v#{version}-osx.tar.gz"
   name 'Workcraft'
   homepage 'http://www.workcraft.org/'
-  license :oss
 
   app 'Workcraft.app'
 end

@@ -5,7 +5,6 @@ cask 'recent-menu' do
   url 'https://www.timschroeder.net/recentmenu/RecentMenu.zip'
   name 'Recent Menu'
   homepage 'https://www.timschroeder.net/recentmenu/'
-  license :oss
 
   app 'Recent Menu.app'
 end

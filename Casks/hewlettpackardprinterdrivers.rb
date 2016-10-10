@@ -5,7 +5,6 @@ cask 'hewlettpackardprinterdrivers' do
   url "https://support.apple.com/downloads/DL907/en_US/hpprinterdriver#{version}.dmg"
   name 'HP Printer Drivers'
   homepage 'https://support.apple.com/kb/DL907'
-  license :gratis
 
   pkg 'HewlettPackardPrinterDrivers.pkg'
 

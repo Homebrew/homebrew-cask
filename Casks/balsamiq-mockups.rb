@@ -5,7 +5,6 @@ cask 'balsamiq-mockups' do
   url "https://builds.balsamiq.com/mockups-desktop/Balsamiq_Mockups_#{version}.dmg"
   name 'Balsamiq Mockups'
   homepage 'https://balsamiq.com/'
-  license :commercial
 
   app "Balsamiq Mockups #{version.major}.app"
 

@@ -6,7 +6,6 @@ cask 'magicavoxel' do
   url "http://23.98.147.40/uploads/MagicaVoxel-#{version}-win-mac.zip"
   name 'MagicaVoxel'
   homepage 'https://ephtracy.github.io/'
-  license :gpl
 
   suite "MagicaVoxel-#{version}"
 end

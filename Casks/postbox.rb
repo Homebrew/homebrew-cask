@@ -6,7 +6,6 @@ cask 'postbox' do
   url "https://s3.amazonaws.com/download.getpostbox.com/installers/#{version}/1_6ba7710e4b30693e0770fd893492f752db8b7fc7/postbox-#{version}-mac64.dmg"
   name 'Postbox'
   homepage 'https://www.postbox-inc.com/'
-  license :commercial
 
   depends_on macos: '>= :mavericks'
   depends_on arch: :x86_64

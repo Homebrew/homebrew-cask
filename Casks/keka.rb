@@ -7,7 +7,6 @@ cask 'keka' do
           checkpoint: '40bf3dfa927e2b377a98177f0362d459b39e96c60c45c5f0cfd53d305f01cbe3'
   name 'Keka'
   homepage 'http://kekaosx.com/'
-  license :gratis
 
   app 'Keka.app'
 

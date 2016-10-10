@@ -8,7 +8,6 @@ cask 'logdna-cli' do
           checkpoint: '62a4bbdf4d9748db1a52a61e106cd246eea39fd2abb1291186a546eb189f90a3'
   name 'LogDNA CLI'
   homepage 'https://logdna.com/'
-  license :mit
 
   pkg 'logdna-cli.pkg'
 

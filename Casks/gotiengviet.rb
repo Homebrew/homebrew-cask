@@ -5,7 +5,6 @@ cask 'gotiengviet' do
   url 'https://www.trankynam.com/gotv/downloads/GoTiengViet.dmg'
   name 'GoTiengViet'
   homepage 'https://www.trankynam.com/gotv/'
-  license :freemium
 
   accessibility_access true
 

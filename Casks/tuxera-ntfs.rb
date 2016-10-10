@@ -5,7 +5,6 @@ cask 'tuxera-ntfs' do
   url "https://www.tuxera.com/mac/tuxerantfs_#{version}.dmg"
   name 'Tuxera NTFS'
   homepage 'https://www.tuxera.com/products/tuxera-ntfs-for-mac/'
-  license :closed
 
   pkg '.packages/Flat/Install Tuxera NTFS.mpkg'
 

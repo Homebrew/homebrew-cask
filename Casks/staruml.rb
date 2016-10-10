@@ -5,7 +5,6 @@ cask 'staruml' do
   url "http://staruml.io/download/release/v#{version}/StarUML-v#{version}.dmg"
   name 'StarUML'
   homepage 'http://staruml.io/'
-  license :commercial
 
   app 'StarUML.app'
 end

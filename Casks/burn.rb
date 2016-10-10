@@ -7,7 +7,6 @@ cask 'burn' do
           checkpoint: 'beba57bd08a2204b74e12d2ef99768cfef0cbd9c605dee8befd527ec2d994510'
   name 'Burn'
   homepage 'http://burn-osx.sourceforge.net/'
-  license :gpl
 
   app 'Burn.localized/Burn.app'
 end

@@ -8,7 +8,6 @@ cask 'qutebrowser' do
           checkpoint: 'f43d2512e2ced0ecd3cfae96424c614fd7ca1370f4e07d49c191a413e7475aac'
   name 'qutebrowser'
   homepage 'https://www.qutebrowser.org/'
-  license :gpl
 
   app 'qutebrowser.app'
 end

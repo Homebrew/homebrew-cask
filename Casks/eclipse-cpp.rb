@@ -5,7 +5,6 @@ cask 'eclipse-cpp' do
   url 'https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/neon/R/eclipse-cpp-neon-R-macosx-cocoa-x86_64.tar.gz&r=1'
   name 'Eclipse IDE for C/C++ Developers'
   homepage 'https://eclipse.org/'
-  license :eclipse
 
   depends_on macos: '>= :leopard'
   depends_on arch: :x86_64

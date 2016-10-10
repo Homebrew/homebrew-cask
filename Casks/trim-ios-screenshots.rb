@@ -5,7 +5,6 @@ cask 'trim-ios-screenshots' do
   url "https://github.com/downloads/osteslag/trim-ios-screenshots/Trim_iOS_Screenshots-#{version}.zip"
   name 'Trim iOS Screenshots'
   homepage 'https://github.com/osteslag/trim-ios-screenshots'
-  license :bsd
 
   app 'Trim iOS Screenshots.app'
 end

@@ -7,7 +7,6 @@ cask 'sysex-librarian' do
           checkpoint: '5932ad75281f34f7ed7dda012b8cabb61b0c9c95acf4f0429c06fdc6a41e34aa'
   name 'SysEx Librarian'
   homepage 'https://www.snoize.com/SysExLibrarian'
-  license :bsd
 
   depends_on macos: '>= :lion'
 

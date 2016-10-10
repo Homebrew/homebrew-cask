@@ -5,7 +5,6 @@ cask 'iconping' do
   url "http://antirez.com/iconping/iconping-#{version}.app.dmg"
   name 'Icon Ping'
   homepage 'http://antirez.com/iconping/'
-  license :bsd
 
   app 'iconping.app'
 end

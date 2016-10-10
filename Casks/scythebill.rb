@@ -6,7 +6,6 @@ cask 'scythebill' do
   url "https://s3.amazonaws.com/downloads.scythebill.com/scythebill-#{version}-mac-lion.zip"
   name 'Scythebill'
   homepage 'http://www.scythebill.com/'
-  license :apache
 
   app 'Scythebill.app'
 

@@ -8,7 +8,6 @@ cask 'retroshare' do
           checkpoint: '42336e0b3033221bde5f0dd6caf5eb6e08fbe72fe3f8efb67e232946a9f86cd8'
   name 'RetroShare'
   homepage 'http://retroshare.sourceforge.net/'
-  license :gpl
 
   app "Retroshare#{version.major_minor.no_dots}.app"
 end

@@ -6,7 +6,6 @@ cask 'prepros' do
   url "http://prepros.io.s3.amazonaws.com/installers/Prepros-Mac-#{version}.zip"
   name 'Prepros'
   homepage 'https://prepros.io/'
-  license :commercial
 
   app 'Prepros.app'
 end

@@ -8,7 +8,6 @@ cask 'imageplay' do
           checkpoint: 'fb7eee5114029e3ce1cf0e40b01f6e99393fa6dd567e6d6df5de2cad56589d3b'
   name 'ImagePlay'
   homepage 'https://imageplay.io/'
-  license :gpl
 
   app 'ImagePlay.app'
 end

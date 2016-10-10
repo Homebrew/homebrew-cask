@@ -8,7 +8,6 @@ cask 'identify' do
           checkpoint: '703a63799a0a8ed68a772bf9514779c45d02707690ac45fb4355a3fd666ddcba'
   name 'iDentify'
   homepage 'http://identify2.arrmihardies.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'iDentify.app'
 end

@@ -12,7 +12,6 @@ cask 'nvalt' do
 
   name 'nvALT'
   homepage 'http://brettterpstra.com/project/nvalt/'
-  license :bsd
 
   app 'nvALT.app'
 

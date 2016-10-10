@@ -8,7 +8,6 @@ cask 'laullon-gitx' do
           checkpoint: '8514821f4dd35269cfe030744f84a5c586e30215db82c54abbadb43f68a2a26b'
   name 'GitX (L)'
   homepage 'http://gitx.laullon.com/'
-  license :gpl
 
   conflicts_with cask: %w[
                          gitx

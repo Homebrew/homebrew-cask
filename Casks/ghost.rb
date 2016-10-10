@@ -8,7 +8,6 @@ cask 'ghost' do
           checkpoint: '73521985943f770ecaf5c6f87ddcb2e81feeaab3a251be29763ed06472a94336'
   name 'Ghost Desktop'
   homepage 'https://ghost.org/downloads'
-  license :mit
 
   app "ghost-#{version}-SIGNED/Ghost.app"
 end

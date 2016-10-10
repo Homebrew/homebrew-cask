@@ -5,7 +5,6 @@ cask 'turtl' do
   url "https://turtl.it/releases/desktop/turtl-osx-#{version}.dmg"
   name 'turtl'
   homepage 'https://turtl.it/'
-  license :oss
 
   app 'Turtl.app'
 end

@@ -7,7 +7,6 @@ cask 'espionage' do
           checkpoint: 'b3b95a26d885f32057b6e4275253ca57b7144ca9568490ee35b5c7ab9d6425a5'
   name 'Espionage'
   homepage 'https://www.espionageapp.com/'
-  license :commercial
   gpg "#{url}.sig",
       key_url: 'https://www.taoeffect.com/other/A884B988.asc'
 

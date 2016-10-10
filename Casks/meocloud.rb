@@ -7,7 +7,6 @@ cask 'meocloud' do
           checkpoint: '45f857300ca0ad4c5730a7f29fa3b44f1709f8b529388d8ec435a843eb3d5da7'
   name 'MEO Cloud'
   homepage 'https://meocloud.pt'
-  license :gratis
 
   app 'MEOCloud.app'
 end

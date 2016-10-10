@@ -7,7 +7,6 @@ cask 'media-converter' do
           checkpoint: '5208b7eac085a4a148c09386e67c210b45c637779a79c134ca1fc70a95fa8024'
   name 'Media Converter'
   homepage 'http://media-converter.sourceforge.net/'
-  license :gpl
 
   app 'Media Converter.localized/Media Converter.app'
 end

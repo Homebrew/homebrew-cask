@@ -5,7 +5,6 @@ cask 'canon-imagerunner-printer-driver-ufrii' do
   url "https://downloads.canon.com/bisg2016/drivers/mac/UFRII_v#{version}_Mac.zip"
   name 'Canon imageRUNNER UFRII Printer Driver'
   homepage 'https://www.usa.canon.com/internet/portal/us/home/support/details/copiers-mfps-fax-machines/support-multifunction/imagerunner-2018'
-  license :gratis
 
   pkg 'UFRII_LT_LIPS_LX_Installer.pkg'
 

@@ -7,7 +7,6 @@ cask 'electron-api-demos' do
           checkpoint: 'd166fad434b725bc4d31618a511e7104cc9cddeb405777068904d36b3158d848'
   name 'Electron API Demos'
   homepage 'https://github.com/electron/electron-api-demos'
-  license :unknown
 
   app 'Electron API Demos.app'
 end

@@ -7,7 +7,6 @@ cask 'reflector' do
           checkpoint: 'b0ae3b43137f370692a5be449305808691a6bff98be1fa902fa0a085d3984a89'
   name 'Reflector 2'
   homepage 'https://www.airsquirrels.com/reflector/'
-  license :commercial
 
   depends_on macos: '>= :mountain_lion'
 

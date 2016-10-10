@@ -8,7 +8,6 @@ cask 'pibakery' do
           checkpoint: '32c4b18e7d1986179ac634944e4e5093267ad1e1ada80f6065a9384a966ea3eb'
   name 'PiBakery'
   homepage 'http://www.pibakery.org/'
-  license :gpl
 
   pkg 'PiBakery.pkg'
 

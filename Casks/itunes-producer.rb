@@ -13,7 +13,6 @@ cask 'itunes-producer' do
 
   name 'iTunes Producer'
   homepage 'https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/ra/ng/resources_page'
-  license :closed
 
   depends_on macos: '>= :snow_leopard'
 

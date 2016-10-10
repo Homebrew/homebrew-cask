@@ -5,7 +5,6 @@ cask 'cpumeter' do
   url 'https://github.com/yusukeshibata/cpumeter/blob/master/dist/cpumeter.zip?raw=true'
   name 'cpumeter'
   homepage 'https://github.com/yusukeshibata/cpumeter/'
-  license :mit
 
   app 'cpumeter.app'
 end

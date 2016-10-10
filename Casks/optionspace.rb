@@ -7,7 +7,6 @@ cask 'optionspace' do
           checkpoint: '1e660b15eb8800467a96484a1b6a3725a749db714f14dc9b159258adaad59934'
   name 'OptionSpace'
   homepage 'https://optionspace.co'
-  license :freemium
 
   app 'OptionSpace.app'
 

@@ -5,7 +5,6 @@ cask 'resilio-sync' do
   url 'https://download-cdn.getsync.com/stable/osx/Resilio-Sync.dmg'
   name 'Resilio Sync'
   homepage 'https://www.getsync.com/'
-  license :gratis
 
   app 'Resilio Sync.app'
 end

@@ -7,7 +7,6 @@ cask 'disk-drill' do
           checkpoint: '69afe7db791c177298fe24c391dda37dcec5a9b8f1633ea14aecbc085f4b5a01'
   name 'Disk Drill'
   homepage 'https://www.cleverfiles.com/'
-  license :freemium
 
   app 'Disk Drill.app'
 

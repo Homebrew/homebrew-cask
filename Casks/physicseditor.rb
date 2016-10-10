@@ -7,7 +7,6 @@ cask 'physicseditor' do
           checkpoint: '9ab368e938edfa3b5442bfa81597351aff8d7d5d7daa2f9db63d65aa4d38b979'
   name 'PhysicsEditor'
   homepage 'https://www.codeandweb.com/physicseditor'
-  license :freemium
 
   depends_on macos: '>= :lion'
   depends_on arch: [:x86_64, :ppc_64]

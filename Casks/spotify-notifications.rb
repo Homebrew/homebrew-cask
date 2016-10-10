@@ -8,7 +8,6 @@ cask 'spotify-notifications' do
           checkpoint: '3ab1004774c7424ba472adbc993a95cd5cbbb424b45283470e11824556c269e7'
   name 'Spotify Notifications'
   homepage 'https://spotify-notifications.citruspi.io/'
-  license :public_domain
 
   app 'Spotify Notifications.app'
 end

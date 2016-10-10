@@ -7,7 +7,6 @@ cask 'arq' do
           checkpoint: '155484346612b1131f47fa6de4bb290a138d65bb34cfe0aea526da4609841565'
   name 'Arq'
   homepage 'https://www.arqbackup.com/'
-  license :commercial
 
   app 'Arq.app'
 

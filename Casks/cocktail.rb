@@ -52,7 +52,6 @@ cask 'cocktail' do
 
   name 'Cocktail'
   homepage 'https://www.maintain.se/cocktail/'
-  license :commercial
 
   app 'Cocktail.app'
 end

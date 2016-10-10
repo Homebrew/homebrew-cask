@@ -7,7 +7,6 @@ cask 'macvim' do
           checkpoint: '12e3a13c18f5e90cf45659af3f295a40238384e46d18c931323f81e37506e5ac'
   name 'MacVim'
   homepage 'https://github.com/macvim-dev/macvim'
-  license :oss
 
   conflicts_with formula: 'macvim'
 

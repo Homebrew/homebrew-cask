@@ -5,7 +5,6 @@ cask 'rb-app-checker-lite' do
   url 'https://brockerhoff.net/RB/AppCheckerLite/RBACL.zip'
   name 'RB App Checker Lite'
   homepage 'https://brockerhoff.net/RB/AppCheckerLite/'
-  license :closed
 
   app 'RB App Checker Lite.app'
 end

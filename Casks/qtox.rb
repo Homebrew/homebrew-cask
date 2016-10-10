@@ -8,7 +8,6 @@ cask 'qtox' do
           checkpoint: '3ddde03e902cc0266f14fc93268cb8ed29f774354677a3af78f7537cb17393d8'
   name 'qTox'
   homepage 'https://qtox.github.io/'
-  license :gpl
 
   app 'qTox.app'
 end

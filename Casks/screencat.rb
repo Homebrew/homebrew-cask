@@ -8,7 +8,6 @@ cask 'screencat' do
           checkpoint: 'ab6d5b16172351803d8ad9bd1d3200abade4df0c9abc60341d5a07f0d5ec3488'
   name 'ScreenCat'
   homepage 'https://maxogden.github.io/screencat/'
-  license :oss
 
   app 'ScreenCat.app'
 end

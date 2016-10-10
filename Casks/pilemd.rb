@@ -8,7 +8,6 @@ cask 'pilemd' do
           checkpoint: '2523ae0470c655ca89a8b1372c7c131b13725398405519edfed9930d3ad98bd9'
   name 'PileMd'
   homepage 'https://pilemd.com/'
-  license :gpl
 
   app 'PileMd.app'
 end

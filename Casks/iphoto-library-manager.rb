@@ -7,7 +7,6 @@ cask 'iphoto-library-manager' do
           checkpoint: 'd050807aec6efe87d4fa378e18000bc5292171c4488398702ffa181fadb99c1e'
   name 'iPhoto Library Manager'
   homepage 'https://www.fatcatsoftware.com/iplm/'
-  license :commercial
 
   app 'iPhoto Library Manager.app'
 end

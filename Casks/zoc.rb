@@ -5,7 +5,6 @@ cask 'zoc' do
   url "https://www.emtec.com/downloads/zoc/zoc#{version.no_dots}.dmg"
   name 'ZOC'
   homepage 'https://www.emtec.com/zoc/'
-  license :commercial
 
   app 'zoc7.app'
 end

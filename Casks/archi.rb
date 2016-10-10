@@ -5,7 +5,6 @@ cask 'archi' do
   url "http://www.archimatetool.com/downloads/latest/Archi-mac64-#{version}.zip"
   name 'Archi'
   homepage 'http://www.archimatetool.com'
-  license :mit
 
   app 'Archi/Archi.app'
 end

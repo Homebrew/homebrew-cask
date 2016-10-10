@@ -7,7 +7,6 @@ cask 'messenger' do
           checkpoint: '0e38e45168998342254958575d9127c2a1509f2290d1c7c8efc9e534d0ffb968'
   name 'Messenger'
   homepage 'https://fbmacmessenger.rsms.me/'
-  license :mit
 
   app 'Messenger.app'
 

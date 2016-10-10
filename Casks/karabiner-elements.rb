@@ -7,7 +7,6 @@ cask 'karabiner-elements' do
           checkpoint: '6081341adaa89eae09576a6f67add985ee97aaca88cc44c2221bd847d6cfc7f4'
   name 'Karabiner Elements'
   homepage 'https://pqrs.org/osx/karabiner/'
-  license :public_domain
 
   auto_updates true
 

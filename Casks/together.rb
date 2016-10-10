@@ -7,7 +7,6 @@ cask 'together' do
           checkpoint: '6c1d9fdc1be123f0d54798b8a917bd1d419764ea9ca7362bbf81f59c4e573d32'
   name 'Together'
   homepage 'https://reinventedsoftware.com/together/'
-  license :commercial
 
   app "Together #{version.major}.app"
 

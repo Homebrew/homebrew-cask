@@ -5,7 +5,6 @@ cask 'anonymousvpn' do
   url 'http://dl.anonymousvpn.org/AnonymousVPN.pkg'
   name 'Anonymous VPN'
   homepage 'https://www.anonymousvpn.org/'
-  license :gratis
 
   pkg 'AnonymousVPN.pkg'
 

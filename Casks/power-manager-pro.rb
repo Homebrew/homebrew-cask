@@ -7,7 +7,6 @@ cask 'power-manager-pro' do
           checkpoint: 'f99c254362f255dd99c85e615823e108c8c1aa9e7418f666d790aadd5d33fa7a'
   name 'Power Manager Pro'
   homepage 'https://www.dssw.co.uk/powermanager/professional/'
-  license :commercial
 
   auto_updates true
   depends_on macos: '>= :lion'

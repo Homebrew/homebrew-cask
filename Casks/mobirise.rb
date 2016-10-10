@@ -5,7 +5,6 @@ cask 'mobirise' do
   url 'https://mobirise.com/mobirise-free-mac.zip'
   name 'Mobirise'
   homepage 'https://mobirise.com'
-  license :gratis
 
   app 'Mobirise.app'
 end

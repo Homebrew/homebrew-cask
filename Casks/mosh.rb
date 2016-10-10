@@ -5,7 +5,6 @@ cask 'mosh' do
   url "https://mosh.mit.edu/mosh-#{version}.pkg"
   name 'Mosh'
   homepage 'https://mosh.mit.edu/'
-  license :gpl
 
   pkg "mosh-#{version}.pkg"
 

@@ -8,7 +8,6 @@ cask 'butt' do
           checkpoint: 'debc4e427e1f5c13678eb8301f23e13d07a75bb163216aa41e522c1f06816634'
   name 'Broadcast Using This Tool'
   homepage 'https://danielnoethen.de/'
-  license :gpl
 
   app 'butt.app'
 end

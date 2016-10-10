@@ -8,7 +8,6 @@ cask 'electron' do
           checkpoint: '40af55bc4cc58b48ab71fd46d5f17d6b09ec2078df3a77137ee6ccc7432db487'
   name 'Electron'
   homepage 'http://electron.atom.io/'
-  license :mit
 
   app 'Electron.app'
 

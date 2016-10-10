@@ -5,7 +5,6 @@ cask 'phpstorm' do
   url "https://download.jetbrains.com/webide/PhpStorm-#{version}.dmg"
   name 'JetBrains PhpStorm'
   homepage 'https://www.jetbrains.com/phpstorm/'
-  license :commercial
 
   app 'PhpStorm.app'
 

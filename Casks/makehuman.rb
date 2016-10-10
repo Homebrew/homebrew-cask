@@ -6,7 +6,6 @@ cask 'makehuman' do
   url "https://download.tuxfamily.org/makehuman/releases/#{version}/makehuman-#{version}-osx.dmg"
   name 'MakeHuman'
   homepage 'http://www.makehuman.org/'
-  license :affero
 
   app 'MakeHuman.app'
 end

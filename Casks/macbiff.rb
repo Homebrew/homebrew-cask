@@ -7,7 +7,6 @@ cask 'macbiff' do
           checkpoint: '7aabb0ea6d469d4d1c225c9be9e399eeccfc24b4cf1a0a161b401d9618e6df72'
   name 'MacBiff'
   homepage 'http://macbiff.sourceforge.net'
-  license :gpl
 
   app 'MacBiff.app'
 end

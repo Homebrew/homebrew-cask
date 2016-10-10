@@ -5,7 +5,6 @@ cask 'dragondisk' do
   url "http://download.dragondisk.com/DragonDisk-#{version}.dmg"
   name 'DragonDisk'
   homepage 'http://www.dragondisk.com/'
-  license :gratis
 
   app 'dragondisk.app'
 end

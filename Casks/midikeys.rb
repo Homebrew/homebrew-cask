@@ -7,7 +7,6 @@ cask 'midikeys' do
           checkpoint: '888de7cb3a3c985bc0038785f887384cdbb2d94bc0a25b4d291b4ccca7f28691'
   name 'MidiKeys'
   homepage 'http://www.manyetas.com/creed/midikeys.html'
-  license :gratis
 
   app 'MidiKeys/MidiKeys.app'
 end

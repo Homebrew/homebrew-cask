@@ -5,7 +5,6 @@ cask 'ibm-cloud-tools-for-swift' do
   url 'http://cloudtools.bluemix.net/release'
   name 'IBM Cloud Tools for Swift'
   homepage 'http://cloudtools.bluemix.net'
-  license :closed
 
   app 'IBM Cloud Tools for Swift.app'
 end

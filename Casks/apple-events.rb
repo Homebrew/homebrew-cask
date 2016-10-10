@@ -7,7 +7,6 @@ cask 'apple-events' do
           checkpoint: 'd7ca40878e8a8ed4a7d5423374d102004769ff9ac3fb67ff3d5bd2d44670ffff'
   name 'Apple Events'
   homepage 'https://github.com/insidegui/AppleEvents'
-  license :bsd
 
   auto_updates true
 

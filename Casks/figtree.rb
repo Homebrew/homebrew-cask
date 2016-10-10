@@ -5,7 +5,6 @@ cask 'figtree' do
   url 'http://tree.bio.ed.ac.uk/download.php?id=90'
   name 'FigTree'
   homepage 'http://tree.bio.ed.ac.uk/software/figtree/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app "FigTree v#{version}.app"
   qlplugin 'QuickLook Plugin/FigTreeQuickLookPlugin.qlgenerator'

@@ -5,7 +5,6 @@ cask 'omnioutliner' do
   url "https://downloads.omnigroup.com/software/MacOSX/10.10/OmniOutliner-#{version}.dmg"
   name 'OmniOutliner'
   homepage 'https://www.omnigroup.com/omnioutliner/'
-  license :commercial
 
   app 'OmniOutliner.app'
 end

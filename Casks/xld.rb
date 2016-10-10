@@ -9,7 +9,6 @@ cask 'xld' do
   name 'X Lossless Decoder'
   name 'XLD'
   homepage 'http://tmkk.undo.jp/xld/index_e.html'
-  license :oss
 
   app 'XLD.app'
 

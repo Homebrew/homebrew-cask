@@ -7,7 +7,6 @@ cask 'panini' do
           checkpoint: '2ab914ba93251d1c0d480b940da16e2f3c7b328c7ca8158d8bbcb1535c990e47'
   name 'Panini'
   homepage 'https://sourceforge.net/projects/pvqt/'
-  license :gpl
 
   app 'Panini.app'
 end

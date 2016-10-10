@@ -8,7 +8,6 @@ cask 'kdiff3' do
           checkpoint: 'ff44819d7794d2b61f2afcc381ed9cb01bf4e7f581b588e19e3a3300e04fd457'
   name 'KDiff3'
   homepage 'http://kdiff3.sourceforge.net/'
-  license :gpl
 
   app 'kdiff3.app'
   binary "#{appdir}/kdiff3.app/Contents/MacOS/kdiff3"

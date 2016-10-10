@@ -5,7 +5,6 @@ cask 'ibabel' do
   url 'http://macinchem.org/ibabel/ibabel3_files/iBabel.zip'
   name 'iBabel'
   homepage 'http://www.macinchem.org/ibabel/ibabel3.php'
-  license :gpl
 
   app 'iBabel.app'
 end

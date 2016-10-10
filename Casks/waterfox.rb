@@ -6,7 +6,6 @@ cask 'waterfox' do
   url "https://storage-waterfox.netdna-ssl.com/releases/osx64/installer/Waterfox%20#{version}%20Setup.dmg"
   name 'Waterfox'
   homepage 'https://www.waterfoxproject.org/'
-  license :oss
 
   app 'Waterfox.app'
 end

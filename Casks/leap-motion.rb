@@ -5,7 +5,6 @@ cask 'leap-motion' do
   url "https://warehouse.leapmotion.com/apps/#{version.after_comma}/download"
   name 'Leap Motion'
   homepage 'https://www.leapmotion.com/setup'
-  license :gratis
 
   pkg 'Leap Motion.pkg'
 

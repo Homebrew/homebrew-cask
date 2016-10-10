@@ -8,7 +8,6 @@ cask 'controllermate' do
           checkpoint: '6d05b022c9c81d131733523dccd2c45997f33ff694d1d76fe4016f27f5c4938a'
   name 'ControllerMate'
   homepage 'https://www.orderedbytes.com/controllermate/'
-  license :freemium
 
   pkg '#temp#/ControllerMate.pkg'
 

@@ -7,7 +7,6 @@ cask 'hyperswitch' do
           checkpoint: '74569bb37bae6d0a7ecfed2e63bc4acea2253e8611705ae8d24e1025b015cc16'
   name 'HyperSwitch'
   homepage 'https://bahoom.com/hyperswitch/'
-  license :gratis
 
   app 'HyperSwitch.app'
 end

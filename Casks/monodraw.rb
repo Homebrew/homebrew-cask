@@ -7,7 +7,6 @@ cask 'monodraw' do
           checkpoint: '396a457a8e3a7d22e75960aeb983dae5a9f425c427ac3684750d1f48addc300d'
   name 'Monodraw'
   homepage 'http://monodraw.helftone.com'
-  license :commercial
 
   app 'Monodraw.app'
 

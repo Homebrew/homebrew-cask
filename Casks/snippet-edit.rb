@@ -7,7 +7,6 @@ cask 'snippet-edit' do
           checkpoint: 'd8bcf3fc1b2c9648af174988789d2034662d047cf3f9a860f4ccf05fca665f59'
   name 'Snippet Edit'
   homepage 'http://cocoaholic.com/snippet_edit/'
-  license :gratis
 
   app 'Snippet Edit.app'
 end

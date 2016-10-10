@@ -5,7 +5,6 @@ cask 'gdal-framework' do
   url "http://www.kyngchaos.com/files/software/frameworks/GDAL_Complete-#{version.sub(%r{^(\d+\.\d+).*}, '\1')}.dmg"
   name 'GDAL Complete'
   homepage 'http://www.kyngchaos.com/software/frameworks'
-  license :oss
 
   pkg 'GDAL Complete.pkg'
   pkg 'Numpy.pkg'

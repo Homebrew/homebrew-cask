@@ -7,7 +7,6 @@ cask 'pepper-flash' do
           checkpoint: 'e6bf656907bdee3e843e649f97de873aac9aa18e19d87c111d7fb658037c4047'
   name 'Adobe Pepper Flash Player'
   homepage 'https://get.adobe.com/flashplayer/otherversions'
-  license :gratis
 
   pkg 'Install Adobe Pepper Flash Player.app/Contents/Resources/Adobe Flash Player.pkg'
 

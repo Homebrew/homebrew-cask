@@ -8,7 +8,6 @@ cask 'solvespace' do
           checkpoint: 'f81fcca30d49cc7b8c442d10ed814b8fb12f8dfe60369b4c48294904d931ab69'
   name 'SolveSpace'
   homepage 'http://solvespace.com'
-  license :gpl
 
   app 'SolveSpace.app'
 end

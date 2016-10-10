@@ -7,7 +7,6 @@ cask 'helm' do
           checkpoint: 'bc0b7ead6b44231cb9312dbec9a147b3c202387cdfd828cee0546f1b986d623c'
   name 'Helm'
   homepage 'https://github.com/kubernetes/helm'
-  license :apache
 
   binary 'darwin-amd64/helm'
 end

@@ -7,7 +7,6 @@ cask 'fauxpas' do
           checkpoint: '4ed08adb98070de7a9889ed57106241b073b01fb107d2a22adfd86e995b1feb9'
   name 'Faux Pas'
   homepage 'http://fauxpasapp.com'
-  license :commercial
 
   app 'FauxPas.app'
 end

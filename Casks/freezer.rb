@@ -7,7 +7,6 @@ cask 'freezer' do
           checkpoint: '4f5c4a2130291c9e756110919390cb5aedc5bbd0e037160508f4eec2af0b926e'
   name 'Freezer'
   homepage 'https://mrgeckosmedia.com/applications/info/Freezer'
-  license :gratis
 
   app 'Freezer/Freezer.app'
 end

@@ -7,7 +7,6 @@ cask 'quickbooks' do
           checkpoint: '224f25d5177ce838c76a78c7a0dc2eb9a05f40fd34678a23e1139e557fe30339'
   name 'QuickBooks'
   homepage 'https://qbo.intuit.com/'
-  license :gratis
 
   app 'QuickBooks.app'
 end

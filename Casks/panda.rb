@@ -8,7 +8,6 @@ cask 'panda' do
           checkpoint: 'b22489936ef3c40c5efcb566dd019e288909e03150b5b2846d78dc17cf2a6f34'
   name 'Panda'
   homepage 'http://pandapp.pablosproject.com/'
-  license :apache
 
   auto_updates true
 

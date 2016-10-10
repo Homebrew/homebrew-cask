@@ -5,7 +5,6 @@ cask 'digital' do
   url "http://scoutshonour.com/lilyofthevalley/digital-#{version}.dmg"
   name 'Digital: A Love Story'
   homepage 'http://scoutshonour.com/digital/'
-  license :cc
 
   app 'Digital.app'
 end

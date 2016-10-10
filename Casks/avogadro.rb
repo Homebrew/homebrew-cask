@@ -8,7 +8,6 @@ cask 'avogadro' do
           checkpoint: 'b4c194124e797b2c1962828bbbb16c54c624c9f38191bebcb6770259739208df'
   name 'Avogadro'
   homepage 'http://avogadro.openmolecules.net/'
-  license :gpl
 
   app 'Avogadro.app'
 end

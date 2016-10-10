@@ -15,7 +15,6 @@ cask 'themeengine' do
 
   name 'ThemeEngine'
   homepage 'https://github.com/alexzielenski/ThemeEngine/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'ThemeEngine.app'
 

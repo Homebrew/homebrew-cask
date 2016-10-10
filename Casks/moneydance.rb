@@ -5,7 +5,6 @@ cask 'moneydance' do
   url 'https://infinitekind.com/stabledl/2015/Moneydance.zip'
   name 'Moneydance'
   homepage 'https://infinitekind.com/moneydance'
-  license :commercial
 
   app 'Moneydance.app'
 end

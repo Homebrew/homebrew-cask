@@ -5,7 +5,6 @@ cask 'ishowu-instant' do
   url 'https://www.shinywhitebox.com/store/file.php?p=14'
   name 'iShowU Instant'
   homepage 'https://www.shinywhitebox.com/ishowu-instant'
-  license :commercial
 
   app 'iShowU Instant.app'
 end

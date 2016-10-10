@@ -8,7 +8,6 @@ cask 'svgcleaner' do
           checkpoint: 'ebd92be4f922b949564c492e25195ae6c30f58aea615e886e20586a67394aaf6'
   name 'SVGCleaner'
   homepage 'https://github.com/RazrFalcon/SVGCleaner/'
-  license :gpl
 
   app 'SVGCleaner.app'
 

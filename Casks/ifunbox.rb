@@ -7,7 +7,6 @@ cask 'ifunbox' do
           checkpoint: '1eebc7dda00de58c66b94300a3bf557615b96ab2b247ae460549ac35fc047e29'
   name 'iFunBox'
   homepage 'http://www.i-funbox.com/'
-  license :gratis
 
   app 'iFunBox.app'
 end

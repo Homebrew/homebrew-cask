@@ -5,7 +5,6 @@ cask 'ibackup' do
   url "http://www.grapefruit.ch/iBackup/versions/iBackup%20#{version.major}.x/iBackup%20#{version}.dmg"
   name 'iBackup'
   homepage 'http://www.grapefruit.ch/iBackup'
-  license :gratis
 
   app 'iBackup.app'
 end

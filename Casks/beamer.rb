@@ -7,7 +7,6 @@ cask 'beamer' do
           checkpoint: 'efc534002867fa76b4e190e0614f7d4b3e35fcd27a33814716309bf6d3477f7d'
   name 'Beamer'
   homepage 'https://beamer-app.com/'
-  license :commercial
 
   app 'Beamer.app'
 end

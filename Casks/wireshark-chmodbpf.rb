@@ -5,7 +5,6 @@ cask 'wireshark-chmodbpf' do
   url "https://www.wireshark.org/download/osx/all-versions/Wireshark%20#{version}%20Intel%2064.dmg"
   name 'Wireshark-ChmodBPF'
   homepage 'https://www.wireshark.org/'
-  license :gpl
 
   installer script: '/usr/sbin/installer',
             args:   [

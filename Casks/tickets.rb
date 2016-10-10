@@ -7,7 +7,6 @@ cask 'tickets' do
           checkpoint: '7e2de498cbcc71c944e00256c9cb64cfa50a9ba5c1bbe20575e9743b73ec34fe'
   name 'Tickets'
   homepage 'https://www.irradiatedsoftware.com/tickets/'
-  license :commercial
 
   app 'Tickets.app'
 end

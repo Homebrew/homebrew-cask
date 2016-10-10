@@ -7,7 +7,6 @@ cask 'appearin' do
           checkpoint: '4640526b621a7f622b852eebb3940bb7c3ce6773e4679130efde1ba1fc5296a2'
   name 'appear.in'
   homepage 'https://github.com/vitorgalvao/appear.in'
-  license :public_domain
 
   app 'appear.in.app'
 

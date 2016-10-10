@@ -8,7 +8,6 @@ cask 'powershell' do
           checkpoint: '11d86f299b326db2ca34aa771a5576da5438c28d30dbcba22c85878bf57298de'
   name 'PowerShell'
   homepage 'https://msdn.microsoft.com/powershell'
-  license :oss
 
   pkg "powershell-#{version}.pkg"
 

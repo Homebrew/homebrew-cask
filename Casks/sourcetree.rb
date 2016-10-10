@@ -16,7 +16,6 @@ cask 'sourcetree' do
           checkpoint: '096494e7aef3f14c99700663b0397571b19f2af17e18a8fa63c757409cf79708'
   name 'Atlassian SourceTree'
   homepage 'https://www.sourcetreeapp.com/'
-  license :gratis
 
   auto_updates true
 

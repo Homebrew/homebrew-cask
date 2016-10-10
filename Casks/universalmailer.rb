@@ -5,7 +5,6 @@ cask 'universalmailer' do
   url "https://universalmailer.github.io/UniversalMailer/zips/UniversalMailer-v#{version.dots_to_underscores}.zip"
   name 'Universal Mailer'
   homepage 'https://universalmailer.github.io/UniversalMailer/'
-  license :mit
 
   pkg 'UniversalMailer.pkg'
 

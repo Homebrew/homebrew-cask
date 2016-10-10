@@ -5,7 +5,6 @@ cask 'pd' do
   url "http://msp.ucsd.edu/Software/pd-#{version}-64bit.mac.tar.gz"
   name 'Pd'
   homepage 'http://msp.ucsd.edu/software.html'
-  license :bsd
 
   app "Pd-#{version}-64bit.app"
 

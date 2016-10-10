@@ -7,7 +7,6 @@ cask 'onlabs' do
           checkpoint: 'c04cfded371be6d1f1df7ac96d6ff95dc3e75ab4203d67c8f5ae480a081effa6'
   name 'onlabs'
   homepage 'https://github.com/lalyos/onlabs'
-  license :mit
 
   container type: :naked
 

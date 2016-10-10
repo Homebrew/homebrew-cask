@@ -8,7 +8,6 @@ cask 'mkchromecast' do
           checkpoint: '531ae62f7285a54c1b3e7540cd16bba20a0f0ef2036182c20bd696964919d464'
   name 'mkchromecast'
   homepage 'http://mkchromecast.com'
-  license :mit
 
   depends_on cask: 'soundflower'
 

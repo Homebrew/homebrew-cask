@@ -7,7 +7,6 @@ cask 'github-desktop' do
           checkpoint: 'b6482e6fe6594a1a9aad10b645fc551c9e16d0cd8deb4cedbfca6adaae43f1c2'
   name 'GitHub Desktop'
   homepage 'https://desktop.github.com/'
-  license :gratis
 
   app 'GitHub Desktop.app'
   binary "#{appdir}/GitHub Desktop.app/Contents/MacOS/github_cli", target: 'github'

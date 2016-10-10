@@ -7,7 +7,6 @@ cask 'dash' do
           checkpoint: '7ebd8e2c02a8c003e0fc7098fefc2313fc8bdd670a1ed711d2b89f05b163e0cc'
   name 'Dash'
   homepage 'https://kapeli.com/dash'
-  license :commercial
 
   app 'Dash.app'
 

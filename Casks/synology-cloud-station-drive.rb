@@ -5,7 +5,6 @@ cask 'synology-cloud-station-drive' do
   url "https://global.download.synology.com/download/Tools/CloudStationDrive/#{version}/Mac/Installer/synology-cloud-station-drive-#{version.sub(%r{.*-}, '')}.dmg"
   name 'Synology Cloud Station Drive'
   homepage 'https://www.synology.com/'
-  license :gratis
 
   pkg 'Install Cloud Station Drive.pkg'
 

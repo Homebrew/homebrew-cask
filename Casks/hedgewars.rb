@@ -8,7 +8,6 @@ cask 'hedgewars' do
           checkpoint: 'b568efa383a1243786b557c0d85dc0b3612afebcd310c77d91b5ec3c288a3264'
   name 'Hedgewars'
   homepage 'https://hedgewars.org/'
-  license :gpl
 
   app 'Hedgewars.app'
 end

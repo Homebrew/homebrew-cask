@@ -8,7 +8,6 @@ cask 'yojimbo' do
           checkpoint: '20b638968b9c3d76a362758135d6a537de3a669b0811b3edd946204b343d86f6'
   name 'Yojimbo'
   homepage 'http://www.barebones.com/products/yojimbo/'
-  license :commercial
 
   app 'Yojimbo.app'
 

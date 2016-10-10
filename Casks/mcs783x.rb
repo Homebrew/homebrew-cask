@@ -11,7 +11,6 @@ cask 'mcs783x' do
   url "http://www.asix.com.tw/FrootAttach/driver/#{Utils.basename(version)}.zip"
   name 'ASIX MCS7830/7832 USB to Ethernet Controller Driver'
   homepage 'http://www.asix.com.tw/products.php?op=pItemdetail&PItemID=108;71;101&PLine=71'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   container nested: "#{Utils.basename(version)}/MCS7830_v#{version.major_minor_patch}.dmg"
 

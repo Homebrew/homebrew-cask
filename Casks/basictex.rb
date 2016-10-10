@@ -6,7 +6,6 @@ cask 'basictex' do
   url "http://mirror.ctan.org/systems/mac/mactex/mactex-basictex-#{version}.pkg"
   name 'BasicTeX'
   homepage 'https://www.tug.org/mactex/morepackages.html'
-  license :oss
 
   pkg "mactex-basictex-#{version}.pkg"
 

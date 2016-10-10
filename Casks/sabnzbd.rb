@@ -8,7 +8,6 @@ cask 'sabnzbd' do
           checkpoint: 'ab70d22f87c7080c02ae3914b4a30563d72fb7c6a628e94ce92d40af60980968'
   name 'SABnzbd'
   homepage 'https://sabnzbd.org/'
-  license :gpl
 
   depends_on macos: '>= :mavericks'
 

@@ -5,7 +5,6 @@ cask 'orange' do
   url "http://orange.biolab.si/download/files/Orange#{version}.dmg"
   name 'Orange'
   homepage 'http://orange.biolab.si/'
-  license :gpl
 
   app 'Orange3.app'
 end

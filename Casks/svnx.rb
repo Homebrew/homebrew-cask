@@ -7,7 +7,6 @@ cask 'svnx' do
           checkpoint: '8200e453c0468f97f5d9c0bf7c3ec96ae1e4784f2a5f109a43e0ef2b13adce10'
   name 'svnX'
   homepage 'https://subversion.assembla.com/svn/svnx/html/index.html'
-  license :gratis
 
   app 'svnX.app'
 end

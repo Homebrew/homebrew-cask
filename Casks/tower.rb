@@ -8,7 +8,6 @@ cask 'tower' do
           checkpoint: '00618799a20d9cd61a71dd1ed4826d014e19fd65d848b1943187f1f8276f23fe'
   name 'Tower'
   homepage 'https://www.git-tower.com/'
-  license :commercial
 
   app 'Tower.app'
   binary "#{appdir}/Tower.app/Contents/MacOS/gittower"

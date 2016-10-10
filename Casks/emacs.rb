@@ -7,7 +7,6 @@ cask 'emacs' do
           checkpoint: '4867fa70191bad9cd83d3816882af1d4818443b311281a5c2b673f9e0fc2ee0e'
   name 'Emacs'
   homepage 'https://emacsformacosx.com/'
-  license :gpl
 
   app 'Emacs.app'
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin/emacsclient"

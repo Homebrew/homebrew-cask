@@ -5,7 +5,6 @@ cask 'touchosc-bridge' do
   url "http://hexler.net/pub/touchosc/touchosc-bridge-#{version}-osx.zip"
   name 'TouchOSC Bridge'
   homepage 'http://hexler.net/software/touchosc'
-  license :gratis
 
   app 'TouchOSC Bridge.app'
 end

@@ -5,7 +5,6 @@ cask 'megasync' do
   url 'https://mega.nz/MEGAsyncSetup.dmg'
   name 'MEGAsync'
   homepage 'https://mega.nz'
-  license :oss
 
   app 'MEGAsync.app'
 

@@ -5,7 +5,6 @@ cask 'qgis' do
   url "http://www.kyngchaos.com/files/software/qgis/QGIS-#{version}.dmg"
   name 'QGIS'
   homepage 'http://www.kyngchaos.com/software/qgis'
-  license :gpl
 
   depends_on cask: 'gdal-framework'
   depends_on formula: 'matplotlib'

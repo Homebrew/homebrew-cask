@@ -5,7 +5,6 @@ cask 'abscissa' do
   url "http://rbruehl.macbay.de/Abscissa/Downloads/Abscissa-#{version}.zip"
   name 'Abscissa'
   homepage 'http://rbruehl.macbay.de/Abscissa'
-  license :gratis
 
   app 'Abscissa-#{version}/Abscissa.app'
 end

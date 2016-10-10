@@ -5,7 +5,6 @@ cask 'smart-scroll' do
   url 'https://www.marcmoini.com/SmartScroll.dmg'
   name 'Smart Scroll'
   homepage 'https://www.marcmoini.com/sx_en.html'
-  license :commercial
 
   depends_on macos: '>= :snow_leopard'
 

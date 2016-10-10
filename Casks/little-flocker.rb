@@ -6,7 +6,6 @@ cask 'little-flocker' do
   url "https://www.zdziarski.com/littleflocker/LittleFlocker-#{version}.dmg"
   name 'Little Flocker'
   homepage 'https://littleflocker.com'
-  license :commercial
 
   pkg 'Install Little Flocker.pkg'
 

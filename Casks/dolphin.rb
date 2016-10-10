@@ -5,7 +5,6 @@ cask 'dolphin' do
   url "https://dl-mirror.dolphin-emu.org/#{version}/dolphin-#{version}.dmg"
   name 'Dolphin'
   homepage 'https://dolphin-emu.org/'
-  license :gpl
 
   app 'Dolphin.app'
 

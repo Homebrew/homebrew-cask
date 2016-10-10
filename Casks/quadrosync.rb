@@ -6,7 +6,6 @@ cask 'quadrosync' do
   url 'https://s3-eu-west-1.amazonaws.com/quadro-downloads/daemon/mac/QuadroSync_mac.dmg'
   name 'QuadroSync'
   homepage 'http://quadro.me/sync'
-  license :gratis
 
   installer manual: 'QuadroInstaller.app'
 

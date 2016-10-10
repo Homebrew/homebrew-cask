@@ -5,7 +5,6 @@ cask 'noobproof' do
   url "http://www.hanynet.com/noobproof-#{version}.zip"
   name 'NoobProof'
   homepage 'http://www.hanynet.com/noobproof/'
-  license :oss
 
   app 'NoobProof.app'
 end

@@ -8,7 +8,6 @@ cask 'cathode' do
           checkpoint: '9c9d24dd500bc58e625114c7e9c045ba41d86887e044c8f7441811b5bc237a94'
   name 'Cathode'
   homepage 'http://www.secretgeometry.com/apps/cathode'
-  license :commercial
 
   app 'Cathode.app'
 end

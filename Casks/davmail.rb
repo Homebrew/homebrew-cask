@@ -7,7 +7,6 @@ cask 'davmail' do
           checkpoint: '81c159ec1957fb5e79cb145e60414cee9eb5c20745b5e7bf8fbd95b98728630f'
   name 'DavMail'
   homepage 'http://davmail.sourceforge.net'
-  license :gpl
 
   app 'DavMail.app'
 

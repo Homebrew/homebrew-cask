@@ -5,7 +5,6 @@ cask 'unity-download-assistant' do
   url "http://netstorage.unity3d.com/unity/#{version.after_comma}/UnityDownloadAssistant-#{version.before_comma}.dmg"
   name 'Unity'
   homepage 'https://unity3d.com/unity/'
-  license :commercial
 
   installer manual: 'Unity Download Assistant.app'
 

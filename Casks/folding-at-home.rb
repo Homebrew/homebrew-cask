@@ -5,7 +5,6 @@ cask 'folding-at-home' do
   url "https://fah.stanford.edu/file-releases/public/release/fah-installer/osx-10.6.4-64bit/v#{version.sub(%r{\.\d+$}, '')}/fah-installer_#{version}_x86_64.mpkg.zip"
   name 'Folding@home'
   homepage 'https://folding.stanford.edu'
-  license :closed
 
   depends_on macos: '>= 10.6'
 

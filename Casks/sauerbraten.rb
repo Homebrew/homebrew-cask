@@ -8,7 +8,6 @@ cask 'sauerbraten' do
           checkpoint: '735d408a80dbcd098dbaca3946b69de28519b8ffe8b2df7ea6c51fd48553ed39'
   name 'Cube 2: Sauerbraten'
   homepage 'http://sauerbraten.org'
-  license :oss
 
   app 'Sauerbraten.app'
 end

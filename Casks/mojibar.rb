@@ -7,7 +7,6 @@ cask 'mojibar' do
           checkpoint: 'e33f7c268ba39988b426256954ef07f54165433a6835229278f4aafd87ed47c9'
   name 'Mojibar'
   homepage 'https://github.com/muan/mojibar'
-  license :mit
 
   app 'Mojibar-darwin-x64/Mojibar.app'
 end

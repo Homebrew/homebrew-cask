@@ -7,7 +7,6 @@ cask 'debt-quencher' do
           checkpoint: '2b2d1f8e28e357fe175bc344d8db93491dad790722b0e9c70edd33c649da748a'
   name 'Debt Quencher'
   homepage 'http://nothirst.com/debtquencher/'
-  license :freemium
 
   depends_on macos: '>= :tiger'
 

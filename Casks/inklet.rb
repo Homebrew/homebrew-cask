@@ -5,7 +5,6 @@ cask 'inklet' do
   url 'https://tenonedesign.com/apps/inklet/inklet.php'
   name 'Inklet'
   homepage 'https://tenonedesign.com/inklet.php'
-  license :commercial
 
   app 'Inklet.app'
 end

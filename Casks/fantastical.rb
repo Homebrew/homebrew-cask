@@ -7,7 +7,6 @@ cask 'fantastical' do
           checkpoint: '0ceed44f4b50a0aa57a70d60a484836bf7a4c7f0d886b154bc65b6def1e50ec2'
   name 'Fantastical'
   homepage 'https://flexibits.com/fantastical'
-  license :freemium
 
   app 'Fantastical 2.app'
 

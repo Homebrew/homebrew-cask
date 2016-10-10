@@ -8,7 +8,6 @@ cask 'pixelapse' do
           checkpoint: '8fea8285a97d5865771aa186eebcfe017e272d549a6b5ff6b7bfc431c2be6c62'
   name 'Pixelapse'
   homepage 'https://www.pixelapse.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Pixelapse.app'
 end

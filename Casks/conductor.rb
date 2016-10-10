@@ -7,7 +7,6 @@ cask 'conductor' do
           checkpoint: 'e9db5592440216e156b93dfe69a597508047dbda993e3ad8f528a5b54d448d00'
   name 'Conductor'
   homepage 'https://github.com/keith/conductor'
-  license :mit
 
   accessibility_access true
 

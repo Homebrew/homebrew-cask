@@ -8,7 +8,6 @@ cask 'freesmug-chromium' do
           checkpoint: '04d8f777b18e1f54958dcd8badcd51eb778c64dcd55521d45a85179bbe23cd97'
   name 'Chromium'
   homepage 'http://www.freesmug.org/chromium'
-  license :gpl
 
   app 'Chromium.app'
 end

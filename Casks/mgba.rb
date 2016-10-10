@@ -8,7 +8,6 @@ cask 'mgba' do
           checkpoint: 'd3bbdb391aea47fa0ec8badf2c0c640f3a611d58ab94e588cc9b98c798e95c4c'
   name 'mGBA'
   homepage 'https://mgba.io/'
-  license :mpl
 
   app "mGBA-#{version.before_comma}-#{version.after_comma}-osx/mGBA.app"
 end

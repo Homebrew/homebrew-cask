@@ -7,7 +7,6 @@ cask 'delicious-library' do
           checkpoint: '23e6fdb006a046913b7843b89b023154dafb20912459598313c2b38bdd19fa95'
   name 'Delicious Library'
   homepage 'https://delicious-monster.com/'
-  license :commercial
 
   app "Delicious Library #{version.major}.app"
 end

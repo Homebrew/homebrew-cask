@@ -6,7 +6,6 @@ cask 'lifesize' do
   url "http://cdn.lifesizecloud.com/LifesizeCloud-#{version}-signed.pkg"
   name 'lifesize'
   homepage 'https://www.lifesize.com/'
-  license :commercial
 
   auto_updates true
 

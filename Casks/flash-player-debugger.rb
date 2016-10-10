@@ -6,7 +6,6 @@ cask 'flash-player-debugger' do
   url "https://fpdownload.macromedia.com/pub/flashplayer/updaters/#{version.major}/flashplayer_#{version.major}_sa_debug.dmg"
   name 'Adobe Flash Player Debugger'
   homepage 'https://www.adobe.com/support/flashplayer/downloads.html'
-  license :gratis
 
   # Renamed to avoid conflict with flash-player.
   app 'Flash Player.app', target: 'Flash Player Debugger.app'

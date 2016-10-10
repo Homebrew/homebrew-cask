@@ -7,7 +7,6 @@ cask 'uninstallpkg' do
           checkpoint: '0a390467cb94ce7e1fe0d24d6188525d85808564505bdd3eed685debdeec52c2'
   name 'UninstallPKG'
   homepage 'https://www.corecode.at/uninstallpkg/'
-  license :freemium
 
   app 'UninstallPKG.app'
 

@@ -5,7 +5,6 @@ cask 'rubymotion' do
   url 'http://www.rubymotion.com/files/RubyMotion%20Installer.zip'
   name 'RubyMotion'
   homepage 'http://www.rubymotion.com/'
-  license :commercial
 
   installer manual: 'RubyMotion Installer.app'
 

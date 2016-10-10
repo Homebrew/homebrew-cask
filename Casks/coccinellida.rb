@@ -7,7 +7,6 @@ cask 'coccinellida' do
           checkpoint: '1e698171f549f46d602c94c37a07fc8862c24c30849a793c15e29ce9bb19f8fb'
   name 'Coccinellida'
   homepage 'http://coccinellida.sourceforge.net/'
-  license :gpl
 
   app 'Coccinellida.app'
 end

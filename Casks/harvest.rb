@@ -7,7 +7,6 @@ cask 'harvest' do
           checkpoint: '3ff20ca06678903097db234f916dff84419c76f954d64c4903f4210836974f6f'
   name 'Harvest'
   homepage 'https://www.getharvest.com/mac'
-  license :gratis
 
   app 'Harvest.app'
 end

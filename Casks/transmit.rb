@@ -5,7 +5,6 @@ cask 'transmit' do
   url "https://www.panic.com/transmit/d/Transmit%20#{version}.zip"
   name 'Transmit'
   homepage 'https://panic.com/transmit'
-  license :commercial
 
   app 'Transmit.app'
 

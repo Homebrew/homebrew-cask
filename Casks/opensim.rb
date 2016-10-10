@@ -7,7 +7,6 @@ cask 'opensim' do
           checkpoint: '8e6ab4bdbed55df1cba0cf229007cee1bebb550bbb4fbf252a6ea92d5997fa82'
   name 'OpenSim'
   homepage 'https://github.com/luosheng/OpenSim/'
-  license :mit
 
   app 'OpenSim.app'
 end

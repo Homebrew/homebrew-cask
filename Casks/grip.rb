@@ -9,7 +9,6 @@ cask 'grip' do
   name 'GRIP Computer Vision Engine'
   name 'GRIP'
   homepage 'https://wpiroboticsprojects.github.io/GRIP/'
-  license :oss
 
   app 'GRIP.app'
 end

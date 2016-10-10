@@ -5,7 +5,6 @@ cask 'eqmac' do
   url "http://eqmac.hulse.id.au/sites/default/files/downloads/EQMac-#{version}.zip"
   name 'EQMac'
   homepage 'http://eqmac.hulse.id.au/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app "EQMac-#{version}.app"
 end

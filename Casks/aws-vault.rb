@@ -5,7 +5,6 @@ cask 'aws-vault' do
   url "https://github.com/99designs/aws-vault/releases/download/v#{version}/aws-vault-darwin-amd64"
   name 'aws-vault'
   homepage 'https://github.com/99designs/aws-vault'
-  license :mit
 
   container type: :naked
 

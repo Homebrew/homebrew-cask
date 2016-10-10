@@ -8,7 +8,6 @@ cask 'apm-planner' do
           checkpoint: '3abbf4b7115646de8e41d974731c2697b59c34c0a6761de7220aaaa3c82d2d73'
   name 'APM Planner'
   homepage 'http://planner2.ardupilot.com/'
-  license :gpl
 
   app "APM Planner #{version.major_minor}.app"
   pkg 'FTDIUSBSerialDriver_10_4_10_5_10_6_10_7.mpkg'

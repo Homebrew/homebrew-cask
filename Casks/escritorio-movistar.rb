@@ -5,7 +5,6 @@ cask 'escritorio-movistar' do
   url "https://www.movistar.es/estaticos/descargaaplicaciones/Escritorio%20Movistar_v#{version}.pkg"
   name 'Escritorio Movistar'
   homepage 'https://www.movistar.es/particulares/servicios/descargaaplicaciones'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "Escritorio Movistar_v#{version}.pkg"
 

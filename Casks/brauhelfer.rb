@@ -5,7 +5,6 @@ cask 'brauhelfer' do
   url "http://www.joerum.de/kleiner-brauhelfer/lib/exe/fetch.php?media=download:01_04_03_02:kb_osx_#{version}.dmg"
   name 'Kleiner Brauhelfer'
   homepage 'http://www.joerum.de/kleiner-brauhelfer'
-  license :gpl
 
   app 'brauhelfer.app'
 end

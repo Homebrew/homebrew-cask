@@ -5,7 +5,6 @@ cask 'pastor' do
   url "https://mehlau.net/pastor/Pastor#{version.no_dots}-signed.dmg"
   name 'Pastor'
   homepage 'https://mehlau.net/pastor/'
-  license :gratis
 
   app 'Pastor.app'
 end

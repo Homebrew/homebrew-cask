@@ -5,7 +5,6 @@ cask 'tuneinstructor' do
   url "https://www.tune-instructor.de/resources/downloads/TuneInstructor#{version}.dmg"
   name 'Tune•Instructor'
   homepage 'https://www.tune-instructor.de/com/start.html'
-  license :commercial
 
   depends_on macos: '>= :yosemite'
 

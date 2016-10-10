@@ -7,7 +7,6 @@ cask 'fontprep' do
           checkpoint: '2d96c015ce34e1a5a5891838fff8c575779d2dac56bd39d135162b79f64083ed'
   name 'FontPrep'
   homepage 'https://github.com/briangonzalez/fontprep'
-  license :gpl
 
   app 'FontPrep.app'
 end

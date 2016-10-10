@@ -7,7 +7,6 @@ cask 'appdelete' do
           checkpoint: '52e80243071ab32d1cd4809b750116cfedc41e07925c3958c71bc12576520418'
   name 'AppDelete'
   homepage 'http://www.reggieashworth.com/appdelete'
-  license :commercial
 
   app 'AppDelete.app'
 end

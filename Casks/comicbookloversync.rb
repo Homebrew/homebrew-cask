@@ -5,7 +5,6 @@ cask 'comicbookloversync' do
   url 'https://www.bitcartel.com/downloads/comicbookloversync.zip'
   name 'ComicBookLover Sync'
   homepage 'https://www.bitcartel.com/comicbooklover/'
-  license :gratis
 
   app 'ComicBookLoverSync.app'
 end

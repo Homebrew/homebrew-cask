@@ -7,7 +7,6 @@ cask 'fstream' do
           checkpoint: 'b72e062b69d0a4bcf1a2a5f8acc4da87b09a849756bb2785d1435ab18d5579e1'
   name 'FStream'
   homepage 'https://www.sourcemac.com/?page=fstream'
-  license :gratis
 
   app 'FStream.app'
 end

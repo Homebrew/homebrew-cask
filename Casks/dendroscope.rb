@@ -6,7 +6,6 @@ cask 'dendroscope' do
   url "http://ab.inf.uni-tuebingen.de/data/software/dendroscope3/download/Dendroscope_macos_#{version.dots_to_underscores}.dmg"
   name 'Dendroscope'
   homepage 'http://dendroscope.org/'
-  license :gpl
 
   app 'Dendroscope.app'
 

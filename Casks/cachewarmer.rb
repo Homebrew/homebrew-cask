@@ -6,7 +6,6 @@ cask 'cachewarmer' do
   url "https://s3.amazonaws.com/assetcache.io/CacheWarmer-#{version}.pkg"
   name 'CacheWarmer'
   homepage 'https://assetcache.io/cachewarmer/'
-  license :freemium
 
   pkg "CacheWarmer-#{version}.pkg"
 

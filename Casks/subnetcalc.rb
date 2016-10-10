@@ -5,7 +5,6 @@ cask 'subnetcalc' do
   url "http://subnetcalc.free.fr/download/subnetcalc-#{version}.dmg"
   name 'SubnectCalc'
   homepage 'http://subnetcalc.free.fr/'
-  license :gpl
 
   app 'SubnetCalc.app'
 end

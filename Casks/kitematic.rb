@@ -8,7 +8,6 @@ cask 'kitematic' do
           checkpoint: '834ddbe5a9ae702ba925592d6fccf744edd2e4e3a2d3c7b1c65b48adab97a61d'
   name 'Kitematic'
   homepage 'https://kitematic.com/'
-  license :apache
 
   app 'Kitematic (Beta).app'
 

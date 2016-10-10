@@ -7,7 +7,6 @@ cask 'grandtotal' do
           checkpoint: '6868ecc7c06324327f66cb2a5ff28ca3cef67b1ef15cae440584bfbfd190653e'
   name 'GrandTotal'
   homepage 'https://www.mediaatelier.com/GrandTotal4/'
-  license :commercial
 
   depends_on macos: '>= :mountain_lion'
 

@@ -8,7 +8,6 @@ cask 'doomsday-engine' do
           checkpoint: '889f9570d9b2cdc64198a4766473d44f8c923affd73ff6879fed3f5feec6f87c'
   name 'Doomsday Engine'
   homepage 'http://dengine.net'
-  license :gpl
 
   pkg 'Doomsday.pkg'
 

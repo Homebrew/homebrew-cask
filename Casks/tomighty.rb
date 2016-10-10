@@ -8,7 +8,6 @@ cask 'tomighty' do
           checkpoint: 'd840c6dbb9a016a8db3e4cd209d0ade84b13864dab3dff9df0f1cba93761fa8c'
   name 'Tomighty'
   homepage 'http://www.tomighty.org/'
-  license :apache
 
   app 'Tomighty.app'
 end

@@ -8,7 +8,6 @@ cask 'reeddit' do
           checkpoint: '6c029ef230f82c430494d258b46ce49cd74a73ebb21214ed856b1e007b3fbd7d'
   name 'Reeddit'
   homepage 'http://mac.reedditapp.com/'
-  license :mit
 
   app 'Reeddit.app'
 end

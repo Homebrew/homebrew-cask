@@ -8,7 +8,6 @@ cask 'coderunner' do
           checkpoint: '65c88fcefb58847ce8dc929ad22d3fc99dd07cdbfa67296ad53d726d34859770'
   name 'CodeRunner'
   homepage 'https://coderunnerapp.com/'
-  license :commercial
 
   app 'CodeRunner.app'
 end

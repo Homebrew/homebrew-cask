@@ -7,7 +7,6 @@ cask 'shortcat' do
           checkpoint: '708f387b4618c28c21a68722ee5ecaefbcbe82b9bb898ffdb74a7c1e0f6157a3'
   name 'Sproutcube Shortcat'
   homepage 'https://shortcatapp.com/'
-  license :commercial
 
   accessibility_access true
 
