@@ -72,47 +72,8 @@ end
 
 ### Switch Between Languages or Regions
 
-To switch between languages or regions based on the system locale, the `language` stanza should be used.
+If a cask is available in multiple languages, you can use the `language` stanza to switch between languages or regions based on the system locale.
 
-The `language` stanza can match language codes ([ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) or [ISO 639-2](https://en.wikipedia.org/wiki/ISO_639-2)), [regional identifiers [ISO 3166-1 Alpha 2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)) and script codes ([ISO 15924](https://en.wikipedia.org/wiki/ISO_15924)), or a combination thereof.
-
-The return value of the matching `language` block can be accessed by simply calling `language`.
-
-US English should always be used as the default language:
-
-```ruby
-language 'zh', 'CN' do
-  'zh_CN'
-end
-
-language 'de' do
-  'de_DE'
-end
-
-language 'en-GB' do
-  'en_GB'
-end
-
-language 'en', default: true do
-  'en_US'
-end
-```
-
-Note that the following are not the same:
-
-
-```ruby
-language 'en', 'GB' do
-  # matches all locales containing 'en' or 'GB'
-end
-
-language 'en-GB' do
-  # matches only locales containing 'en' and 'GB'
-end
-```
-
-
-Example: [Firefox](../../../../blob/master/Casks/firefox.rb).
 
 ## Arbitrary Ruby Methods
 
