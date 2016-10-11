@@ -15,18 +15,19 @@ cask 'coteditor' do
     # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
     url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   else
-    version '3.0.0'
-    sha256 '2c892da6002345cfe8269d6d9669611435219096f08ae74bffca793e7638365d'
+    version '3.0.1'
+    sha256 '818067820960eb7ce73f6bdfbaac0fe46780cbbbc8d96b0f892f748c288220e8'
     # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
     url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   end
 
   appcast 'https://github.com/coteditor/CotEditor/releases.atom',
-          checkpoint: '7c249670ee10fe60e8b98f7cbe319b0a530d5a05f312f5626e1dd0e9781624f6'
+          checkpoint: '37585669a694e8f0ff398c8d3425c24cdd349c13be1f33de8e00c522867ea09b'
   name 'CotEditor'
   homepage 'https://coteditor.com/'
 
   app 'CotEditor.app'
+  binary "#{appdir}/CotEditor.app/Contents/SharedSupport/bin/cot", target: 'cot'
 
   zap delete: '~/Library/Containers/com.coteditor.CotEditor'
 end
