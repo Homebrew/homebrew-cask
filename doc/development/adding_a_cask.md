@@ -208,7 +208,7 @@ When an App has a principal stable version, alternative versions should be submi
 
 ### Regional and Localized
 
-When an App exists in more than one language or has different regional editions, [the `language` stanza should be used to switch between languages or regions](../../doc/cask_language_reference/language.md).
+When an App exists in more than one language or has different regional editions, [the `language` stanza should be used to switch between languages or regions](../../doc/cask_language_reference/stanzas/language.md).
 
 ### Trial and Freemium Versions
 
