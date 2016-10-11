@@ -4,7 +4,7 @@ cask 'ustream-producer' do
 
   url "https://www.ustream.tv/producer/download/mac/free/#{version}"
   name 'Ustream Producer'
-  homepage 'http://www.ustream.tv/'
+  homepage 'https://www.ustream.tv/'
 
   app 'Ustream Producer.app'
 end
