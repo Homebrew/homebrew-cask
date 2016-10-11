@@ -5,7 +5,6 @@ cask 'rapidminer-studio' do
   url 'http://go.rapidminer.com/rm-studio-download-mac'
   name 'RapidMiner Studio'
   homepage 'https://rapidminer.com/products/studio/'
-  license :unknown
 
   app 'RapidMiner Studio.app'
 end
