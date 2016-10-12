@@ -4,7 +4,7 @@ cask 'macupdate-desktop' do
 
   url "https://cdn.macupdate.com/MacUpdateDesktop#{version}.zip"
   appcast 'https://www.macupdate.com/desktop/updates.xml',
-          checkpoint: '268853a0860e236c4c98fc55da41d24cad893011359416392af4f87dee19cbdc'
+          checkpoint: '81693bee3a3b6917465b714432f13730e767b2781eff2cab18a21ba46475187c'
   name 'MacUpdate Desktop'
   homepage 'https://www.macupdate.com/desktop'
 
