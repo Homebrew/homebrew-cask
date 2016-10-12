@@ -4,7 +4,7 @@ cask 'xtabulator' do
 
   url "https://www.bartastechnologies.com/products/xtabulator/sparkleupdates/#{version}.zip"
   appcast 'https://www.bartastechnologies.com/products/xtabulator/sparkleupdates/xtappcast.php',
-          checkpoint: '748a1baa4bcb3118c037a581f08ac1dad96a6ca904ddecddc10a0c675d703d69'
+          checkpoint: '4a20255ba27c3c8d7c84f4acc76d4675e0918f672fc33d0312d9fda275204a50'
   name 'XTabulator'
   homepage 'https://www.bartastechnologies.com/products/xtabulator/'
 
