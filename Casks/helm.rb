@@ -1,6 +1,6 @@
 cask 'helm' do
   version '2.0.0-alpha.5'
-  sha256 '6bd540611042665c78923fd722e9cd25d08e7381e982535a3a720458da163811'
+  sha256 '62b45875666fda9cfc837d7861e5b6d7e36cd9ebd9b62652e6969bbdf01752da'
 
   # storage.googleapis.com/kubernetes-helm/ was verified as official when first introduced to the cask
   url "http://storage.googleapis.com/kubernetes-helm/helm-v#{version}-darwin-amd64.tar.gz"
