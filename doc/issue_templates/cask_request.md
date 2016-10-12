@@ -1,14 +1,12 @@
-Cask request:
+Cask request: [app name here]
 ### Cask details
 
 (Please fill out as much as possible)
 
-**Name** -
+**Name**:
 
-**Homepage** -
+**Homepage**:
 
-**License** -
+**Download URL**:
 
-**Download URL** -
-
-**Description** -
+**Description**:
