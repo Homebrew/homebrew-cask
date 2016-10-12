@@ -5,7 +5,7 @@ cask 'pinegrow-web-designer' do
   # pinegrow.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://pinegrow.s3.amazonaws.com/PinegrowMac.#{version}.dmg"
   name 'Pinegrow Web Designer'
-  homepage 'http://pinegrow.com/'
+  homepage 'https://pinegrow.com/'
 
   app 'Pinegrow Web Designer.app'
 end

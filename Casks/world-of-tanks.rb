@@ -8,7 +8,7 @@ cask 'world-of-tanks' do
     url 'https://wot.gcdn.co/eu/files/osx/worldoftanks_eu.dmg'
     appcast 'https://wot.gcdn.co/eu/files/osx/WoT_OSX_update_eu.xml',
             checkpoint: '7a151d7884cc87d0a9d1dad524c7ca3dbf1da571183d971d7426e7a3e443bd72'
-    homepage 'http://worldoftanks.eu/'
+    homepage 'https://worldoftanks.eu/'
   end
 
   language 'CA', 'US', default: true do
@@ -26,7 +26,7 @@ cask 'world-of-tanks' do
     url 'https://wot.gcdn.co/sea/files/osx/worldoftanks_asia.dmg'
     appcast 'https://wot.gcdn.co/sea/files/osx/WoT_OSX_update_asia.xml',
             checkpoint: '0b4bad256188ed484b8e946e5ef80b74fadc717b39b1fdc747f2c95e938077bb'
-    homepage 'http://worldoftanks.asia/'
+    homepage 'https://worldoftanks.asia/'
   end
 
   language 'KR' do
@@ -35,7 +35,7 @@ cask 'world-of-tanks' do
     url 'https://wot.gcdn.co/kr/files/osx/worldoftanks_kr.dmg'
     appcast 'https://wot.gcdn.co/kr/files/osx/WoT_OSX_update_kr.xml',
             checkpoint: '00fd089c9f73e92fa45a3b7f750a28a5479f0244e06132811ca7140814057833'
-    homepage 'http://worldoftanks.kr/'
+    homepage 'https://worldoftanks.kr/'
   end
 
   language 'RU' do
@@ -44,7 +44,7 @@ cask 'world-of-tanks' do
     url 'https://wot.gcdn.co/ru/files/osx/worldoftanks_ru.dmg'
     appcast 'https://wot.gcdn.co/ru/files/osx/WoT_OSX_update_ru.xml',
             checkpoint: '482344ba173148844d943a0120764a5295fb050d4f321d7e4c484cd97f15cabe'
-    homepage 'http://worldoftanks.ru/'
+    homepage 'https://worldoftanks.ru/'
   end
 
   name 'World of Tanks'

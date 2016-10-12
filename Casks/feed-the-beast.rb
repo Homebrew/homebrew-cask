@@ -3,7 +3,7 @@ cask 'feed-the-beast' do
   sha256 :no_check
 
   # ftb.cursecdn.com was verified as official when first introduced to the cask
-  url 'http://ftb.cursecdn.com/FTB2/launcher/FTB_Launcher.zip'
+  url 'https://ftb.cursecdn.com/FTB2/launcher/FTB_Launcher.zip'
   name 'Feed the Beast'
   homepage 'https://www.feed-the-beast.com/'
 

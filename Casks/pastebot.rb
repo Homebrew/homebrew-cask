@@ -5,7 +5,7 @@ cask 'pastebot' do
   # tapbots.net/pastebot was verified as official when first introduced to the cask
   url "https://tapbots.net/pastebot#{version.major}/PastebotBeta.zip"
   name 'Pastebot'
-  homepage 'http://tapbots.com/pastebot/beta/'
+  homepage 'https://tapbots.com/pastebot/beta/'
 
   app 'Pastebot.app'
 

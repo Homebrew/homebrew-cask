@@ -7,7 +7,7 @@ cask 'copper' do
   appcast 'https://updates.devmate.com/com.appfruits.copper.xml',
           checkpoint: '277749a667b3f42d180270e6531e94b2697dc3206d088802a5f18bb784cc89e4'
   name 'Copper'
-  homepage 'http://www.copper-app.com/'
+  homepage 'https://www.copper-app.com/'
 
   app 'Copper.app'
 end

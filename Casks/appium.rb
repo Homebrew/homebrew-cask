@@ -5,7 +5,7 @@ cask 'appium' do
   # bitbucket.org/appium/appium.app was verified as official when first introduced to the cask
   url "https://bitbucket.org/appium/appium.app/downloads/appium-#{version}.dmg"
   name 'Appium'
-  homepage 'http://appium.io'
+  homepage 'https://appium.io/'
 
   app 'Appium.app'
 end

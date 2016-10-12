@@ -5,7 +5,7 @@ cask 'flymaster-firmware' do
   # flymaster.net was verified as official when first introduced to the cask
   url 'http://downloads.flymaster.net/FirmwareInstaller.dmg'
   name 'Flymaster Firmware Installer'
-  homepage 'http://www.flymaster-avionics.com'
+  homepage 'https://www.flymaster-avionics.com/'
 
   app 'Firmware Installer.app'
 end
