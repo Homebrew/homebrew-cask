@@ -17,8 +17,8 @@ shopt -s nocasematch  # case-insensitive regular expressions
 
 script_subdir='developer/bin'
 template_subdir='doc/issue_templates'
-generate_url_script='generate_issue_template_urls'
-files_to_update=('README.md')
+generate_url_script='generate_issue_template_url'
+files_to_update=(README.md doc/readme.md doc/reporting_bugs/*)
 
 ###
 ### functions
@@ -77,7 +77,7 @@ update_template_url () {
     local escaped_template_url="${template_url/&/\\&}"
 
     /usr/bin/sed -i '' \
-                 -e "s|^\\(\\[${template_name}_template\\]: \\).*$|\\1${escaped_template_url}|g" \
+                 -e "s|^\\(\\[${template_name}\\]: \\).*$|\\1${escaped_template_url}|g" \
                  -- "${files_to_update[@]}"
 }
 

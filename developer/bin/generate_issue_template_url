@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 #
-# generate_issue_template_urls
+# generate_issue_template_url
 #
 
 ###
@@ -20,11 +20,8 @@ BASE_URL = "https://github.com/caskroom/homebrew-cask/issues/new".freeze
 ###
 
 def main(args)
-  args.each do |file|
-    File.read(file).scan(%r{(.*?)\n(.*)}m) do |title, body|
-      puts generate_url(title, body)
-    end
-  end
+  title, body = File.read(args[0]).match(%r{(.*?)\n(.*)}m).captures
+  print generate_url(title, body)
 end
 
 def generate_url(title, body)
@@ -46,11 +43,10 @@ end
 ###
 
 usage = <<-EOS
-Usage: generate_issue_template_urls <issue_template.md> ...
+Usage: generate_issue_template_url <issue_template.md>
 
-Given one or more GitHub issue template files, generate encoded URLs for each
-and print, separated by newlines. The first line of a template file should be
-the issue title.
+Print an encoded URL for the given GitHub issue template. The first line of
+a template file should be the issue title.
 
 With -debug, print out the encoded title and body individually as well.
 
@@ -66,7 +62,7 @@ if ARGV.first =~ %r{^-+debug?$}i
   ARGV.shift
 end
 
-if ARGV.empty?
+if ARGV.size != 1
   puts usage
   exit 1
 end
