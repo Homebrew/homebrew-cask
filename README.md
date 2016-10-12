@@ -56,13 +56,13 @@ If your issue persists, follow these instructions to the appropriate course of a
 * [`brew cask list` shows wrong information](doc/reporting_bugs/brew_cask_list_shows_wrong_information.md)
 * [`uninstall` wrongly reports cask as not installed](doc/reporting_bugs/uninstall_wrongly_reports_cask_as_not_installed.md)
 * [`Error: Unknown command: cask` error](doc/reporting_bugs/error_unknown_command_cask.md)
-* [My problem isn’t listed][bug_report_template]
+* [My problem isn’t listed][bug_report]
 
 ## Requests
 
 * Start an issue on GitHub following one of these templates:
-  * [Feature request][feature_request_template]
-  * [Cask request][cask_request_template]
+  * [Feature request][feature_request]
+  * [Cask request][cask_request]
 
 ## Questions? Wanna chat?
 
@@ -75,6 +75,6 @@ We’re really rather friendly! Here are the best places to talk about the proje
 ## License
 Code is under the [BSD 2 Clause (NetBSD) license](LICENSE)
 
-[bug_report_template]: https://github.com/caskroom/homebrew-cask/issues/new?title=Bug%20report%3A%20%5Bsummarise%20the%20issue%20here%5D&body=Remember%20to%20follow%20the%20%5Bpre%20bug%20report%5D%28https%3A%2F%2Fgithub.com%2Fcaskroom%2Fhomebrew-cask%2Fblob%2Fmaster%2Fdoc%2Freporting_bugs%2Fpre_bug_report.md%29%20guide%20beforehand.%20Failure%20to%20do%20so%20might%20get%20your%20issue%20closed.%0A%0A%23%23%23%23%20Description%20of%20issue%0A%0A%5Binsert%20a%20detailed%20description%20of%20your%20issue%20here%5D%0A%0A%3Cdetails%3E%3Csummary%3EOutput%20of%20%60brew%20cask%20%3Ccommand%3E%20--verbose%60%3C%2Fsummary%3E%0A%0A%60%60%60%0A%5Bpaste%20output%20here%5D%0A%60%60%60%0A%3C%2Fdetails%3E%0A%0A%3Cdetails%3E%3Csummary%3EOutput%20of%20%60brew%20doctor%60%3C%2Fsummary%3E%0A%0A%60%60%60%0A%5Bpaste%20output%20here%5D%0A%60%60%60%0A%3C%2Fdetails%3E%0A%0A%3Cdetails%3E%3Csummary%3EOutput%20of%20%60brew%20cask%20doctor%60%3C%2Fsummary%3E%0A%0A%60%60%60%0A%5Bpaste%20output%20here%5D%0A%60%60%60%0A%3C%2Fdetails%3E%0A
-[cask_request_template]: https://github.com/caskroom/homebrew-cask/issues/new?title=Cask%20request%3A%20%5Bapp%20name%20here%5D&body=%23%23%23%20Cask%20details%0A%0A%28Please%20fill%20out%20as%20much%20as%20possible%29%0A%0A%2A%2AName%2A%2A%3A%0A%0A%2A%2AHomepage%2A%2A%3A%0A%0A%2A%2ADownload%20URL%2A%2A%3A%0A%0A%2A%2ADescription%2A%2A%3A%0A
-[feature_request_template]: https://github.com/caskroom/homebrew-cask/issues/new?title=Feature%20request%3A&body=%23%23%23%20Description%20of%20feature%2Fenhancement%0A%0A%0A%0A%23%23%23%20Justification%0A%0A%0A%0A%23%23%23%20Example%20use%20case%0A%0A%0A%0A
+[bug_report]: https://github.com/caskroom/homebrew-cask/issues/new?title=Bug%20report%3A%20%5Bsummarise%20the%20issue%20here%5D&body=Remember%20to%20follow%20the%20%5Bpre%20bug%20report%5D%28https%3A%2F%2Fgithub.com%2Fcaskroom%2Fhomebrew-cask%2Fblob%2Fmaster%2Fdoc%2Freporting_bugs%2Fpre_bug_report.md%29%20guide%20beforehand.%20Failure%20to%20do%20so%20might%20get%20your%20issue%20closed.%0A%0A%23%23%23%23%20Description%20of%20issue%0A%0A%5Binsert%20a%20detailed%20description%20of%20your%20issue%20here%5D%0A%0A%3Cdetails%3E%3Csummary%3EOutput%20of%20%60brew%20cask%20%3Ccommand%3E%20--verbose%60%3C%2Fsummary%3E%0A%0A%60%60%60%0A%5Bpaste%20output%20here%5D%0A%60%60%60%0A%3C%2Fdetails%3E%0A%0A%3Cdetails%3E%3Csummary%3EOutput%20of%20%60brew%20doctor%60%3C%2Fsummary%3E%0A%0A%60%60%60%0A%5Bpaste%20output%20here%5D%0A%60%60%60%0A%3C%2Fdetails%3E%0A%0A%3Cdetails%3E%3Csummary%3EOutput%20of%20%60brew%20cask%20doctor%60%3C%2Fsummary%3E%0A%0A%60%60%60%0A%5Bpaste%20output%20here%5D%0A%60%60%60%0A%3C%2Fdetails%3E%0A
+[cask_request]: https://github.com/caskroom/homebrew-cask/issues/new?title=Cask%20request%3A%20%5Bapp%20name%20here%5D&body=%23%23%23%20Cask%20details%0A%0A%28Please%20fill%20out%20as%20much%20as%20possible%29%0A%0A%2A%2AName%2A%2A%3A%0A%0A%2A%2AHomepage%2A%2A%3A%0A%0A%2A%2ADownload%20URL%2A%2A%3A%0A%0A%2A%2ADescription%2A%2A%3A%0A
+[feature_request]: https://github.com/caskroom/homebrew-cask/issues/new?title=Feature%20request%3A&body=%23%23%23%20Description%20of%20feature%2Fenhancement%0A%0A%0A%0A%23%23%23%20Justification%0A%0A%0A%0A%23%23%23%20Example%20use%20case%0A%0A%0A%0A
