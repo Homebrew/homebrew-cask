@@ -1,30 +1,17 @@
 cask 'flashlight' do
-  version '1.0.1'
-  sha256 'b1d6172d1fb7901fdb50c7d4b2fc185ea324df8ae86158669c635babbfb85aec'
+  version '1.0.4'
+  sha256 '2040a268be730cc5cff603341d13b58a671132c74bee8dc8cc5662ea95466822'
 
-  # github.com/nate-parrott/Flashlight was verified as official when first introduced to the cask
-  url "https://github.com/nate-parrott/Flashlight/releases/download/v#{version}/Flashlight.zip"
-  appcast 'https://github.com/nate-parrott/Flashlight/releases.atom',
-          checkpoint: '8c5e2c28b99d28496b74bd58b778ef895bb143f19bc6eaee21d8e0eeb55c0309'
+  # githubusercontent.com/w0lfschild/app_updates/master/Flashlight was verified as official when first introduced to the cask
+  url "https://raw.githubusercontent.com/w0lfschild/app_updates/master/Flashlight/Flashlight_#{version}.zip"
+  appcast 'https://raw.githubusercontent.com/w0lfschild/app_updates/master/Flashlight/appcast.xml',
+          checkpoint: '9f610164e2661128457a0386d2e8ac66d28f041aa6dab449a0c998a2d8495309'
   name 'Flashlight'
-  homepage 'https://flashlight.nateparrott.com/'
+  homepage 'https://github.com/w0lfschild/Flashlight'
 
-  auto_updates true
+  auto_updates
+  depends_on macos: '>= :yosemite'
+  depends_on cask: 'mysimbl'
 
   app 'Flashlight.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
-
-  uninstall quit: 'com.nateparrott.Flashlight.FlashlightSIMBLAgent'
-
-  zap delete: [
-                '~/Library/Caches/com.nateparrott.Flashlight',
-                '~/Library/FlashlightPlugins',
-                '~/Library/Preferences/com.nateparrott.Flashlight.plist',
-                '~/Library/Preferences/com.nateparrott.Flashlight.FlashlightSIMBLAgent.plist',
-                '~/Library/Saved Application State/com.nateparrott.Flashlight.savedState',
-                '~/Library/ScriptingAdditions/Flashlight.osax',
-              ]
 end
