@@ -4,7 +4,7 @@ cask 'simpless' do
 
   url "https://wearekiss.com/files/SimpLESS-#{version}-mac.zip"
   name 'SimpLESS'
-  homepage 'http://wearekiss.com/simpless'
+  homepage 'https://wearekiss.com/simpless'
 
   app 'SimpLESS.app'
 end

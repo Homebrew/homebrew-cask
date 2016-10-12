@@ -3,7 +3,7 @@ cask 'lifesize' do
   sha256 '5661cc5e78efad1b1c3c5a4b3d3635e2c2514e2ba87335362c83677cbd3e12ee'
 
   # cdn.lifesizecloud.com was verified as official when first introduced to the cask
-  url "http://cdn.lifesizecloud.com/LifesizeCloud-#{version}-signed.pkg"
+  url "https://cdn.lifesizecloud.com/LifesizeCloud-#{version}-signed.pkg"
   name 'lifesize'
   homepage 'https://www.lifesize.com/'
 

@@ -6,7 +6,7 @@ cask 'lego-mindstorms-ev3' do
   # esd.lego.com.edgesuite.net/digitaldelivery/mindstorms was verified as official when first introduced to the cask
   url 'http://esd.lego.com.edgesuite.net/digitaldelivery/mindstorms/6ecda7c2-1189-4816-b2dd-440e22d65814/public/LMS-EV3-OSX-ENUS-01-02-01-full-setup.dmg'
   name 'Lego Mindstorms EV3 Home Edition'
-  homepage 'http://www.lego.com/en-us/mindstorms'
+  homepage 'https://www.lego.com/en-us/mindstorms'
 
   pkg 'LEGO MINDSTORMS EV3 Home Edition.pkg'
 
