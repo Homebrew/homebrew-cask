@@ -4,6 +4,8 @@ cask 'flash-player-debugger' do
 
   # macromedia.com was verified as official when first introduced to the cask
   url "https://fpdownload.macromedia.com/pub/flashplayer/updaters/#{version.major}/flashplayer_#{version.major}_sa_debug.dmg"
+  appcast 'http://fpdownload2.macromedia.com/get/flashplayer/update/current/xml/version_en_mac_pl.xml',
+          checkpoint: '159582e9a7da281f6d866c000f4f2803c7306e89be44075e6793c142286077e5'
   name 'Adobe Flash Player Debugger'
   homepage 'https://www.adobe.com/support/flashplayer/downloads.html'
 
