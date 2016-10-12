@@ -4,8 +4,8 @@ cask 'noti' do
 
   # github.com/jariz/Noti was verified as official when first introduced to the cask
   url "https://github.com/jariz/Noti/releases/download/#{version}/Noti.dmg"
-  appcast 'https://rawgit.com/jariz/Noti-appcast/master/appcast.xml',
-          checkpoint: 'b2868e917e6b97a22e0d45de63b5d67dfe911b902cc8a4ee738b28012e9cce12'
+  appcast 'https://github.com/jariz/Noti/releases.atom',
+          checkpoint: 'c784b94965f932e1db3022eeccc17e0a75c99012db068ca30a9bc85ca8be3851'
   name 'Noti'
   homepage 'https://noti.center/'
 
