@@ -164,6 +164,8 @@ Having a common order for stanzas makes Casks easier to update and parse. Below 
 version
 sha256
 
+language
+
 url
 appcast,
   checkpoint: # shown here as it is required with `appcast`
