@@ -1,6 +1,6 @@
 cask 'soundmate' do
-  version '3.2.0'
-  sha256 '00310fb78af68b1b1063b7c9cd7f0e393272f970007cc292face8cce0595159a'
+  version '3.2.1'
+  sha256 '3fadf8ddc7950738bd34e9e92f66eeca5f603797110837e31d0113fe42be7b54'
 
   url "http://www.icyarrow.com/soundmate/SoundMate_v#{version}.zip"
   appcast 'http://www.icyarrow.com/soundmate/soundmatecast.xml',
