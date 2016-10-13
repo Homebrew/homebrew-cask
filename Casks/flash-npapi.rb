@@ -6,7 +6,7 @@ cask 'flash-npapi' do
   url "https://fpdownload.adobe.com/get/flashplayer/pdc/#{version}/install_flash_player_osx.dmg"
   appcast 'http://fpdownload2.macromedia.com/get/flashplayer/update/current/xml/version_en_mac_pl.xml',
           checkpoint: '159582e9a7da281f6d866c000f4f2803c7306e89be44075e6793c142286077e5'
-  name 'Adobe Flash Player Plugin - NPAPI (for Safari and Firefox)'
+  name 'Adobe Flash Player NPAPI (plugin for Safari and Firefox)'
   homepage 'https://get.adobe.com/flashplayer'
 
   pkg 'Install Adobe Flash Player.app/Contents/Resources/Adobe Flash Player.pkg'
