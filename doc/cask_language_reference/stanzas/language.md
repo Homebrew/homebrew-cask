@@ -41,3 +41,12 @@ homepage "https://example.org/#{language}"
 ```
 
 Examples: [Firefox](https://github.com/caskroom/homebrew-cask/blob/306b8fbd9502036f1ca742f70c569d8677b62403/Casks/firefox.rb#L4L74), [Battle.net](https://github.com/caskroom/homebrew-cask/blob/306b8fbd9502036f1ca742f70c569d8677b62403/Casks/battle-net.rb#L5L17)
+
+
+## Installation
+
+To install a cask in a specific language, you can pass the `--language=` option to `brew cask install`:
+
+```
+brew cask install firefox --language=it
+```
