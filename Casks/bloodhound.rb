@@ -5,7 +5,7 @@ cask 'bloodhound' do
   url "https://github.com/adaptivethreat/BloodHound/releases/download/#{version}/BloodHound-darwin-x64.zip"
   appcast 'https://github.com/adaptivethreat/BloodHound/releases.atom',
   		checkpoint: '09212808c04cbcb7d651570160c1140bc05c7791889ac1b49eab147e1c787eb3'
-  name 'bloodhound'
+  name 'BloodHound'
   homepage 'https://github.com/adaptivethreat/BloodHound'
 
   app 'BloodHound-darwin-x64/BloodHound.app'
