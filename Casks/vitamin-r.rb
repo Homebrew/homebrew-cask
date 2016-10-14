@@ -30,5 +30,4 @@ cask 'vitamin-r' do
 
   name 'Vitamin-R'
   homepage 'http://www.publicspace.net/Vitamin-R/'
-  license :commercial
 end

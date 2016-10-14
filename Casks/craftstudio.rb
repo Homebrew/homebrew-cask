@@ -5,7 +5,6 @@ cask 'craftstudio' do
   url 'http://craftstud.io/files/OSX/CraftStudio.pkg'
   name 'CraftStudio'
   homepage 'http://craftstud.io'
-  license :commercial
 
   depends_on cask: 'mono-mre'
 

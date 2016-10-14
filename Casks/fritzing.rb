@@ -5,7 +5,6 @@ cask 'fritzing' do
   url "http://fritzing.org/download/#{version}/mac-os-x-105/Fritzing#{version}.dmg"
   name 'Fritzing'
   homepage 'http://fritzing.org/'
-  license :gpl
 
   app 'Fritzing.app'
 end

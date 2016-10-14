@@ -8,7 +8,6 @@ cask 'projectlibre' do
           checkpoint: '46f531cd85f0e21dd45d51c3516fe1d1b7a575d6b52708b190f969f0e5e4590a'
   name 'ProjectLibre'
   homepage 'http://www.projectlibre.org/'
-  license :oss
 
   app 'ProjectLibre.app'
 end

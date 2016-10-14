@@ -7,7 +7,6 @@ cask 'meshlab' do
           checkpoint: '6c7f4c0f099a5ee9ddca6a2cd2afb4c4c3c9a293bb06a4bb0f2a1b357f5de7a1'
   name 'MeshLab'
   homepage 'http://meshlab.sourceforge.net/'
-  license :gpl
 
   app 'meshlab.app'
 

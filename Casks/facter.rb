@@ -5,7 +5,6 @@ cask 'facter' do
   url "https://downloads.puppetlabs.com/mac/facter-#{version}.dmg"
   name 'Facter'
   homepage 'https://puppetlabs.com/facter'
-  license :apache
 
   pkg "facter-#{version}.pkg"
 

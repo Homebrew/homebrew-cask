@@ -5,7 +5,6 @@ cask 'navicat-for-oracle' do
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_ora_en.dmg"
   name 'Navicat for Oracle'
   homepage 'https://www.navicat.com/products/navicat-for-oracle'
-  license :commercial
 
   app 'Navicat for Oracle.app'
 end

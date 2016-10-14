@@ -7,7 +7,6 @@ cask 'soundcloud-downloader' do
           checkpoint: '69e4f358b3c260581c3d4da1d3cfc0285ed6b804e635457365382ec4ab17d7d8'
   name 'SoundCloud Downloader'
   homepage 'http://black-burn.ch/scd/'
-  license :mit
 
   app 'SoundCloud Downloader.app'
 end

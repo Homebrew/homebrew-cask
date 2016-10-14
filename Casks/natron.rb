@@ -8,7 +8,6 @@ cask 'natron' do
           checkpoint: '62b1dd010e40674cf6bdbabfe17dae6c8986ba8c5b8a3776eab63ecbc5d456fb'
   name 'Natron'
   homepage 'https://natron.fr/'
-  license :mpl
 
   app 'Natron.app'
 end

@@ -7,7 +7,6 @@ cask 'battery-report' do
           checkpoint: '18be1911eb53fa3d0a20abfaa0ba2a74992eed5bb9bb3fc39b64184537ffb674'
   name 'Battery Report'
   homepage 'https://www.dssw.co.uk/batteryreport'
-  license :commercial
 
   app 'Battery Report.app'
 end

@@ -8,7 +8,6 @@ cask 'cfxr' do
           checkpoint: '8df7001dcf306208bbaff94b3348320ac1771efc59fe61c6704b07aca238ebbe'
   name 'cfxr'
   homepage 'http://thirdcog.eu/apps/cfxr'
-  license :oss
 
   app 'cfxr.app'
 end

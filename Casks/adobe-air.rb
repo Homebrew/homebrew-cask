@@ -5,7 +5,6 @@ cask 'adobe-air' do
   url "https://airdownload.adobe.com/air/mac/download/#{version}/AdobeAIR.dmg"
   name 'Adobe AIR'
   homepage 'https://get.adobe.com/air/'
-  license :gratis
 
   installer script: 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
             args:   %w[-silent],
@@ -14,7 +13,12 @@ cask 'adobe-air' do
   uninstall script: {
                       executable: 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
                       args:       %w[-uninstall],
-                    }
+                    },
+            rmdir:  [
+                      '/Applications/Adobe/Flash Player/AddIns',
+                      '/Applications/Adobe/Flash Player',
+                      '/Applications/Adobe',
+                    ]
 
   zap delete: [
                 '~/Library/Application Support/Adobe/AIR',

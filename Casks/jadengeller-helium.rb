@@ -8,7 +8,6 @@ cask 'jadengeller-helium' do
           checkpoint: '875fb1cb7c6e18a330338c90a6cbabda82896e1e3699e2b8713c36fa073aa075'
   name 'Helium'
   homepage 'https://jadengeller.github.io/Helium/'
-  license :mit
 
   app 'Helium.app'
 end

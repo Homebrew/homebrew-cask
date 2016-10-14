@@ -7,7 +7,6 @@ cask 'felony' do
           checkpoint: '17e205d3176417046658cb1c3e48d388334ba10c8213faa8fcf0347e49c1084b'
   name 'Felony'
   homepage 'https://github.com/henryboldi/felony'
-  license :mit
 
   app 'felony.app'
 end

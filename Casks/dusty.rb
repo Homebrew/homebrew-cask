@@ -7,7 +7,6 @@ cask 'dusty' do
           checkpoint: 'f91aefdc855b9b5f5534fb9c411311bad195cecb0df2796a43c79c66a6453abc'
   name 'Dusty'
   homepage 'https://github.com/gamechanger/dusty'
-  license :mit
 
   depends_on cask: 'docker-toolbox'
   container type: :tar

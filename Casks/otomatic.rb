@@ -1,13 +1,12 @@
 cask 'otomatic' do
-  version '1.0.9.163'
-  sha256 'ed9b0498c46ed3964eb3424df6f6ef5400f94871a62129025e725388caf0d61d'
+  version '1.1.181'
+  sha256 'a99b4bc9a52a7afb2527a75efcb3d2ded2f1d061e9f310eb3eab53e5ac216cca'
 
   url "http://otomatic.codingcurious.com/update/archive/Otomatic.#{version}.zip"
   appcast 'http://otomatic.codingcurious.com/update/appcast.xml',
-          checkpoint: '18d2498229f75f9787c1e5775b256b6cb87a94c8e1fdb2f79a195597f7e2ee55'
+          checkpoint: 'a0a3055f5c1ff7f98b0336d0b36afd980693ff65cd1efade65b86e6b45b4bfa1'
   name 'Otomatic'
   homepage 'http://codingcurious.com/otomatic/'
-  license :commercial
 
   auto_updates true
 

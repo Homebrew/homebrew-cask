@@ -5,7 +5,6 @@ cask 'box-edit' do
   url 'https://app.box.com/static/BoxEdit/BoxEditInstaller.dmg'
   name 'Box Edit'
   homepage 'https://app.box.com/download-box-edit/'
-  license :gratis
 
   app 'Install Box Edit.app/Contents/Resources/Box Edit.app',
       target: "#{ENV['HOME']}/Library/Application Support/Box/Box Edit/Box Edit.app"

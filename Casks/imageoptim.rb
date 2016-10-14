@@ -6,8 +6,7 @@ cask 'imageoptim' do
   appcast 'https://imageoptim.com/appcast.xml',
           checkpoint: '1b321e043e90a78528070831a1f29d06f118cb82770193e1e86aff74508144ad'
   name 'ImageOptim'
-  homepage 'https://imageoptim.com/'
-  license :gpl
+  homepage 'https://imageoptim.com/mac'
 
   auto_updates true
 

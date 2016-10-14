@@ -7,7 +7,6 @@ cask 'livetail' do
           checkpoint: 'beadbf08fd78c786ffad244d9cd442013797505862f5d11975a48257476c486c'
   name 'Sumologic livetail CLI'
   homepage 'https://github.com/SumoLogic/livetail-cli'
-  license :commercial
 
   binary 'livetail'
 end

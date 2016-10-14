@@ -7,7 +7,6 @@ cask 'subl' do
           checkpoint: 'a237016bdb1c69984c9ebb903b7f7cffd5aaeab29d50df167c4fce0afb66787e'
   name 'subl:// URL handler'
   homepage 'https://github.com/dhoulb/subl'
-  license :oss
 
   app 'Subl.app'
 end

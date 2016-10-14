@@ -8,7 +8,6 @@ cask 'timestamp' do
           checkpoint: 'ac675221d957ad92f2707abaffdb0523bb97e17578dc1028b4dce4381f39866b'
   name 'Timestamp'
   homepage 'https://mzdr.github.io/timestamp/'
-  license :mit
 
   app 'Timestamp.app'
 end

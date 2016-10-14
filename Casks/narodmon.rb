@@ -8,7 +8,6 @@ cask 'narodmon' do
           checkpoint: 'b82c47d9286acc23f2c6dce439901c2433d2cb0fb9c2856d1fb78ffc96ce3f1e'
   name 'NarodMon'
   homepage 'https://narodmon.ru/'
-  license :mit
 
   app 'NarodMon.app'
 end

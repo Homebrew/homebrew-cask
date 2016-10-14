@@ -6,7 +6,6 @@ cask 'scansnap-manager-ix100' do
   url "http://origin.pfultd.com/downloads/IMAGE/driver/ss/mgr/m-ix100/MaciX100ManagerV#{version.no_dots}WW1.dmg"
   name 'ScanSnap Manager for Fujitsu ScanSnap iX100'
   homepage 'https://www.fujitsu.com/global/support/products/computing/peripheral/scanners/scansnap/software/ix100.html'
-  license :gratis
 
   depends_on macos: '>= :lion'
 

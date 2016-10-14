@@ -6,7 +6,6 @@ cask 'riverflow' do
   url "https://s3-ap-northeast-1.amazonaws.com/sparkle-appcasts/riverflow/riverflow-#{version}.zip"
   name 'Riverflow'
   homepage 'http://questbe.at/riverflow/'
-  license :gratis
 
   app 'Riverflow.app'
 

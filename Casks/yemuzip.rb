@@ -7,7 +7,6 @@ cask 'yemuzip' do
           checkpoint: '2ede15a2a242f583876e6e5f5957368819435adff6347431862c5a45ee7b2a42'
   name 'YemuZip'
   homepage 'http://www.yellowmug.com/yemuzip'
-  license :commercial
 
   app 'YemuZip.app'
 end

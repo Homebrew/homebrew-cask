@@ -5,7 +5,6 @@ cask 'printopia' do
   url "https://download.decisivetactics.com/products/printopia/dl/Printopia_#{version}.zip"
   name 'Printopia'
   homepage 'https://www.decisivetactics.com/products/printopia/'
-  license :commercial
 
   prefpane 'Printopia/Install Printopia.app/Contents/Resources/Printopia.prefPane'
 

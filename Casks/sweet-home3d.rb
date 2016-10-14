@@ -8,7 +8,6 @@ cask 'sweet-home3d' do
           checkpoint: 'be55e729ad642b6f7886650d8c56eb653c74723052bce02ac8b6e2ec289663bb'
   name 'Sweet Home 3D'
   homepage 'http://www.sweethome3d.com/'
-  license :gpl
 
   app 'Sweet Home 3D.app'
 end

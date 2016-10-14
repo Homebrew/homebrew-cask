@@ -7,7 +7,6 @@ cask 'aquaskk' do
           checkpoint: '8dce309c1b9a0c7ba2597b08cee0f5578a571ad37dfdfcb180cdcb55c0de6bff'
   name 'AquaSKK'
   homepage 'https://github.com/codefirst/aquaskk'
-  license :gpl
 
   pkg 'AquaSKK.pkg'
 

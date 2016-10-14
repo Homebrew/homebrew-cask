@@ -7,7 +7,6 @@ cask 'brain-workshop' do
           checkpoint: 'cb1e734cb05d2a36d1a8c238e5b4c78781e847e0c4785bc10d0f31959bbeb4d6'
   name 'Brain Workshop'
   homepage 'http://brainworkshop.sourceforge.net/'
-  license :gpl
 
   app 'Brain Workshop.app'
 end

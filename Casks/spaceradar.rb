@@ -7,7 +7,6 @@ cask 'spaceradar' do
           checkpoint: '86c8908866031b0ef56b4a4d57005e5f267ccb616c678803a10e14a818c5ba15'
   name 'SpaceRadar'
   homepage 'https://github.com/zz85/space-radar'
-  license :mit
 
   app 'SpaceRadar.app'
 

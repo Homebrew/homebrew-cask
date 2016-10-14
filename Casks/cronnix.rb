@@ -6,7 +6,6 @@ cask 'cronnix' do
   url "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/cronnix/CronniX_#{version}.app.zip"
   name 'CronniX'
   homepage 'https://code.google.com/archive/p/cronnix/'
-  license :gpl
 
   app 'CronniX.app'
 

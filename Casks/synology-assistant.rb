@@ -5,7 +5,6 @@ cask 'synology-assistant' do
   url "https://global.download.synology.com/download/Tools/Assistant/#{version}/Mac/Synology-Assistant-#{version}.dmg"
   name 'Synology Assistant'
   homepage 'https://www.synology.com/'
-  license :gratis
 
   app 'Synology Assistant.app'
 

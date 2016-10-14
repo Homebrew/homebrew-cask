@@ -6,7 +6,6 @@ cask 'crypt' do
   url "http://voluntary.net.s3.amazonaws.com/Crypt#{version}_20100429.zip"
   name 'Crypt'
   homepage 'https://voluntary.net/crypt/'
-  license :mit
 
   app "Crypt#{version}.app"
 end

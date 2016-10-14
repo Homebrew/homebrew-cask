@@ -7,7 +7,6 @@ cask 'appzapper' do
           checkpoint: 'b91ae47cbd23159ada1e03357647dc3140cd35ef509dfa44ed13e369aad07e88'
   name 'AppZapper'
   homepage 'https://www.appzapper.com/'
-  license :commercial
 
   auto_updates true
 

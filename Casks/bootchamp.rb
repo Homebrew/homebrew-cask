@@ -7,7 +7,6 @@ cask 'bootchamp' do
           checkpoint: '37d00975e1b9077228c98830917a373e33961f029cff1e4f9120544b1944192a'
   name 'BootChamp'
   homepage 'https://www.kainjow.com/'
-  license :oss
 
   app 'BootChamp.app'
 end

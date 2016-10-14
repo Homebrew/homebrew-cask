@@ -8,7 +8,6 @@ cask 'psi' do
           checkpoint: '6bfd1ea5481b4565924ecad3a1a631808fa9b7a484d14bb72d624365338183c4'
   name 'Psi'
   homepage 'http://psi-im.org/'
-  license :gpl
 
   app 'Psi.app'
 

@@ -5,7 +5,6 @@ cask 'sketch-tool' do
   url 'http://sketchtool.bohemiancoding.com/sketchtool-latest.zip'
   name 'SketchTool'
   homepage 'https://bohemiancoding.com/sketch/tool/'
-  license :gratis
 
   binary 'sketchtool/bin/sketchtool'
   binary 'sketchtool/bin/sketchmigrate'

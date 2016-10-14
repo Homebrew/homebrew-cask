@@ -5,7 +5,6 @@ cask 'fcs-remover' do
   url "https://www.digitalrebellion.com/download/fcsremover?version=#{version.no_dots}"
   name 'FCS Remover'
   homepage 'https://www.digitalrebellion.com/fcsremover/'
-  license :gratis
 
   app 'FCS Remover.app'
 

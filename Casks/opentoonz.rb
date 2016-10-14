@@ -8,7 +8,6 @@ cask 'opentoonz' do
           checkpoint: '936a3d648605266c580b1896f6e54d6ad25e6eaa4be1120f465e0576a8ee435b'
   name 'OpenToonz'
   homepage 'https://opentoonz.github.io/'
-  license :oss
 
   pkg 'OpenToonz.pkg'
 

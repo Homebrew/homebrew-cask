@@ -9,20 +9,25 @@ cask 'coteditor' do
     sha256 '444133083698c7c94c2b029644f39a0e36982ae34c24745789fa890626188347'
     # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
     url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
+  elsif MacOS.version <= :mavericks
+    version '2.5.7'
+    sha256 'f2c6eed9bfa31999f559396642e7bec0eb90ce0e3398f266fed8b3db5bdab37c'
+    # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
+    url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   else
-    version '2.5.6'
-    sha256 '36cf286ddfe9c00fdaf1723de02f9390f87d582d081fc7049f70c7b5d2992ead'
+    version '3.0.1'
+    sha256 '818067820960eb7ce73f6bdfbaac0fe46780cbbbc8d96b0f892f748c288220e8'
     # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
     url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   end
 
   appcast 'https://github.com/coteditor/CotEditor/releases.atom',
-          checkpoint: '5268af6fb256739cd81e610a4c814042a84c13621f299ecf2cd9bf9c307e6400'
+          checkpoint: '37585669a694e8f0ff398c8d3425c24cdd349c13be1f33de8e00c522867ea09b'
   name 'CotEditor'
   homepage 'https://coteditor.com/'
-  license :apache
 
   app 'CotEditor.app'
+  binary "#{appdir}/CotEditor.app/Contents/SharedSupport/bin/cot", target: 'cot'
 
   zap delete: '~/Library/Containers/com.coteditor.CotEditor'
 end

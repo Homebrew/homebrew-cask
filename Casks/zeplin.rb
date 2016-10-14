@@ -7,7 +7,6 @@ cask 'zeplin' do
   url 'https://zpl.io/download'
   name 'Zeplin'
   homepage 'https://zeplin.io/'
-  license :gratis
 
   app 'Zeplin.app'
 

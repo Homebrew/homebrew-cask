@@ -4,8 +4,7 @@ cask 'wd-my-cloud' do
 
   url 'http://download.wdc.com/nas/WDMyCloud_mac.dmg'
   name 'WD My Cloud'
-  homepage 'http://www.wdc.com/'
-  license :closed
+  homepage 'https://www.wdc.com/'
 
   pkg 'Install WD My Cloud.pkg'
 

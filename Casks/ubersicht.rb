@@ -7,7 +7,6 @@ cask 'ubersicht' do
           checkpoint: '156f6db16deb26544c11f1df36bbb4a53a61132f130f9c02ee8d9ce5cd6fb8a8'
   name 'Übersicht'
   homepage 'http://tracesof.net/uebersicht'
-  license :gpl
 
   app 'Übersicht.app'
 
@@ -18,5 +17,6 @@ cask 'ubersicht' do
                 '~/Library/Application Support/Übersicht',
                 '~/Library/Caches/tracesOf.Uebersicht',
                 '~/Library/Preferences/tracesOf.Uebersicht.plist',
+                '~/Library/WebKit/tracesOf.Uebersicht',
               ]
 end

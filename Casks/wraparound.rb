@@ -5,7 +5,6 @@ cask 'wraparound' do
   url "http://www.digicowsoftware.com/downloads/Wraparound#{version}-2010.zip"
   name 'Wraparound'
   homepage 'http://www.digicowsoftware.com/detail?_app=Wraparound'
-  license :gratis
 
   app 'Wraparound.app'
 end

@@ -8,7 +8,6 @@ cask 'vimr' do
           checkpoint: 'cfd99e9ff5feb321bde77647d980df524d1522c8203df977f7a245254020c250'
   name 'VimR'
   homepage 'http://vimr.org/'
-  license :gpl
 
   app 'VimR.app'
   binary "#{appdir}/VimR.app/Contents/Resources/vimr"

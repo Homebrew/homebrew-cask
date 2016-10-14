@@ -6,7 +6,6 @@ cask 'retas-studio' do
   url "https://www.clip-studio.com/clip_site/rental/rental_download/rsrental/dl?f=lib/retasstudio/data/#{version.no_dots}/RS_#{version.no_dots}_app.dmg"
   name 'RETAS STUDIO'
   homepage 'http://www.retasstudio.net/'
-  license :commercial
 
   app 'RETAS STUDIO.app'
 end

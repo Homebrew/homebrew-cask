@@ -6,7 +6,6 @@ cask 'icab' do
   url "http://icab.clauss-net.de/icab/iCab_#{version}_Intel.zip"
   name 'iCab'
   homepage 'http://www.icab.de/'
-  license :commercial
 
   app "iCab #{version} (64+32 Bit Intel Version for MacOSX 10.7-10.11)/iCab.app"
 end

@@ -4,8 +4,7 @@ cask 'qq' do
 
   url "http://dldir1.qq.com/qqfile/QQforMac/QQ_V#{version}.dmg"
   name 'QQ'
-  homepage 'http://im.qq.com/macqq/'
-  license :commercial
+  homepage 'https://im.qq.com/macqq/'
 
   app 'QQ.app'
 

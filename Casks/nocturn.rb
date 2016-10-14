@@ -7,7 +7,6 @@ cask 'nocturn' do
           checkpoint: '9c98ec9c8726dadf95924164f37481c3ffa76ee018b1aa9a5a3cf18463317978'
   name 'Nocturn'
   homepage 'https://github.com/k0kubun/Nocturn'
-  license :mit
 
   app 'Nocturn-darwin-x64/Nocturn.app'
 end

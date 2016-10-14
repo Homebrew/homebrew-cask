@@ -6,7 +6,6 @@ cask 'ticktick' do
   url "https://appest-public.s3.amazonaws.com/download/mac/TickTick_#{version}.dmg"
   name 'TickTick'
   homepage 'https://www.ticktick.com/home'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'TickTick.app'
 end

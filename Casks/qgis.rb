@@ -1,11 +1,10 @@
 cask 'qgis' do
-  version '2.14.3-1'
-  sha256 '844029c1e92974722d7b4e58e78aa4df041d045a161945cc7a37b38d692d4e55'
+  version '2.16.3-1'
+  sha256 'ed01b2f7f0212b548c2c5cd3d23d9baae0cbb603a7f2f7fbc2447b7339301711'
 
   url "http://www.kyngchaos.com/files/software/qgis/QGIS-#{version}.dmg"
   name 'QGIS'
   homepage 'http://www.kyngchaos.com/software/qgis'
-  license :gpl
 
   depends_on cask: 'gdal-framework'
   depends_on formula: 'matplotlib'

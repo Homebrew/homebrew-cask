@@ -7,7 +7,6 @@ cask 'manico' do
           checkpoint: '33d9e389b8b5693a85532ce756721210fa77b325faa3149c260b3cdc06618d2a'
   name 'Manico'
   homepage 'https://manico.im/'
-  license :commercial
 
   app 'Manico.app'
 

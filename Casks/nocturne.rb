@@ -7,7 +7,6 @@ cask 'nocturne' do
           checkpoint: '42900d719a13664d71d37c0e46a270ba87796613c7154a53afde9938d6cc9dc8'
   name 'Nocturne'
   homepage 'https://github.com/Daij-Djan/nocturne'
-  license :oss
 
   app 'Nocturne.app'
 end

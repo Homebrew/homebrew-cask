@@ -5,7 +5,6 @@ cask 'spideroakone' do
   url 'https://spideroak.com/getbuild?platform=mac'
   name 'SpiderOakOne'
   homepage 'https://spideroak.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'SpiderOakONE.pkg'
 

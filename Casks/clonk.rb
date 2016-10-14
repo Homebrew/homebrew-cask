@@ -6,7 +6,6 @@ cask 'clonk' do
   url 'http://www.clonkx.de/rage/cr_full_mac.zip'
   name 'Clonk Rage'
   homepage 'http://www.clonk.de/cr.php'
-  license :oss
 
   app 'Clonk.app'
 end

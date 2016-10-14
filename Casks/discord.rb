@@ -5,7 +5,6 @@ cask 'discord' do
   url "https://cdn.discordapp.com/apps/osx/#{version}/Discord.dmg"
   name 'Discord'
   homepage 'https://discordapp.com'
-  license :gratis
 
   app 'Discord.app'
 

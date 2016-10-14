@@ -5,7 +5,6 @@ cask 'multiply' do
   url "https://acondigital.com/software/Multiply_OSX_#{version.dots_to_underscores}.pkg.zip"
   name 'Multiply'
   homepage 'https://acondigital.com/products/multiply/'
-  license :gratis
 
   pkg 'Multiply_OSX_1_1_1.pkg'
 

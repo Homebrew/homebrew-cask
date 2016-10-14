@@ -7,20 +7,18 @@ cask 'karabiner' do
           checkpoint: '291a5570aeda093e72ab0948ae70790a964887fcf03b156402ff0daf3768f58f'
   name 'Karabiner'
   homepage 'https://pqrs.org/osx/karabiner/'
-  license :public_domain
 
   auto_updates true
 
   pkg 'Karabiner.sparkle_guided.pkg'
   binary '/Applications/Karabiner.app/Contents/Library/bin/karabiner'
 
-  uninstall early_script: '/Library/Application Support/org.pqrs/Karabiner/uninstall.sh',
-            script:       {
-                            executable:   '/usr/bin/killall',
-                            args:         ['Karabiner'],
-                            must_succeed: false,
-                            sudo:         false,
-                          }
+  uninstall quit:    'org.pqrs.Karabiner',
+            pkgutil: 'org.pqrs.Karabiner',
+            script:  {
+                       executable: '/Library/Application Support/org.pqrs/Karabiner/uninstall.sh',
+                       sudo:       true,
+                     }
 
   zap       delete: [
                       '~/Library/Application Support/Karabiner',

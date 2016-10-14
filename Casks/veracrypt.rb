@@ -6,19 +6,10 @@ cask 'veracrypt' do
   url 'https://download-codeplex.sec.s-msft.com/Download/Release?ProjectName=veracrypt&DownloadId=1601965&FileTime=131159523657700000&Build=21031'
   name 'VeraCrypt'
   homepage 'https://veracrypt.codeplex.com/'
-  license :oss
 
   depends_on cask: 'osxfuse'
 
   pkg 'VeraCrypt_Installer.pkg'
 
   uninstall pkgutil: 'com.idrix.pkg.veracrypt'
-
-  caveats <<-EOS.undent
-    #{token} requires osxfuse with "MacFUSE Compatibility Layer" enabled.
-    If you did not enable that option, #{token} will fail to install.
-
-    To enable the option, you need to install osxfuse manually (double-click the installer).
-    The installer should be located under #{Hbc.caskroom}/osxfuse
-  EOS
 end

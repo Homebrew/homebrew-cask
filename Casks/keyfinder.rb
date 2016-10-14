@@ -5,7 +5,6 @@ cask 'keyfinder' do
   url "http://www.ibrahimshaath.co.uk/keyfinder/bins/KeyFinder-OSX-#{version.dots_to_hyphens}.zip"
   name 'KeyFinder'
   homepage 'http://www.ibrahimshaath.co.uk/keyfinder/'
-  license :gpl
 
   app 'KeyFinder-OSX/KeyFinder.app'
 end

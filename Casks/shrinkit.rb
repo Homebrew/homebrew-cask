@@ -5,7 +5,6 @@ cask 'shrinkit' do
   url "https://download.panic.com/shrinkit/ShrinkIt%20#{version}.zip"
   name 'ShrinkIt'
   homepage 'https://www.panic.com/blog/shrinkit-1-2/'
-  license :gratis
 
   app 'ShrinkIt.app'
 end

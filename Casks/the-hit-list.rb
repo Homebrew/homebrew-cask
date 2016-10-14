@@ -7,7 +7,6 @@ cask 'the-hit-list' do
           checkpoint: '484546055de385df594a995cb3738b178f95a28a0da2a00b02c5a81612507b5c'
   name 'The Hit List'
   homepage 'https://www.karelia.com/products/the-hit-list/mac.html'
-  license :commercial
 
   app 'The Hit List.app'
 end

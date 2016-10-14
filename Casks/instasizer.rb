@@ -5,7 +5,6 @@ cask 'instasizer' do
   url 'http://www.tapgods.com/instasizer/Instasizer.zip'
   name 'Instasizer'
   homepage 'http://www.tapgods.com/instasizer/'
-  license :gratis
 
   depends_on macos: '>= 10.7'
 

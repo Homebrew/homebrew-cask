@@ -8,7 +8,6 @@ cask 'transmission' do
           checkpoint: '97d7eb25ba4b293ec0948784d0b73c45483a2daa9cd00fcd5e80a9b56107ffc1'
   name 'Transmission'
   homepage 'https://www.transmissionbt.com/'
-  license :gpl
 
   auto_updates true
 
@@ -17,8 +16,10 @@ cask 'transmission' do
   zap delete: [
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.m0k.transmission.sfl',
                 '~/Library/Application Support/Transmission',
+                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/org.m0k.transmission.help',
+                '~/Library/Caches/org.m0k.transmission',
+                '~/Library/Cookies/org.m0k.transmission.binarycookies',
                 '~/Library/Preferences/org.m0k.transmission.plist',
                 '~/Library/Preferences/org.m0k.transmission.LSSharedFileList.plist',
-                '~/Library/Caches/org.m0k.transmission',
               ]
 end

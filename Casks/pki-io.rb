@@ -8,7 +8,6 @@ cask 'pki-io' do
           checkpoint: '4a9ff1539471616d321f00c3556f7127e3bde30547d26fe73d2f3008ed07808c'
   name 'pki.io'
   homepage 'https://pki.io/'
-  license :apache
 
   binary 'pki.io/bin/pki.io'
 end

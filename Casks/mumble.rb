@@ -8,7 +8,6 @@ cask 'mumble' do
           checkpoint: '7c0254c2fb4593a98d8609d2ba2eabcb6f4492428d4aea172e145c26ba184590'
   name 'Mumble'
   homepage 'https://www.mumble.info/'
-  license :bsd
   gpg "#{url}.sig",
       key_url: 'https://mumble.info/gpg/mumble-auto-build-2015.asc'
 

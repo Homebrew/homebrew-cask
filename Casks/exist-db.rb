@@ -6,7 +6,6 @@ cask 'exist-db' do
   url "https://bintray.com/artifact/download/existdb/releases/eXist-db-#{version}.dmg"
   name 'eXist-db'
   homepage 'http://exist-db.org/'
-  license :gpl
 
   app 'eXist-db.app'
 end

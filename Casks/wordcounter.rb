@@ -8,7 +8,6 @@ cask 'wordcounter' do
           checkpoint: '5954d7e5f01c1e966b19997613f0172f47f1b780f3045ddc0df673f3ab6c3b70'
   name 'WordCounter'
   homepage 'http://wordcounterapp.com/'
-  license :commercial
 
   app 'WordCounter.app'
 end

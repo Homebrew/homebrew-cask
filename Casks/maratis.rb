@@ -6,7 +6,6 @@ cask 'maratis' do
   url "https://maratis.googlecode.com/files/Maratis-#{version}-osx10.6.zip"
   name 'Maratis'
   homepage 'http://www.maratis3d.org/'
-  license :oss
 
   app 'Maratis.app'
   app 'MaratisPlayer.app'

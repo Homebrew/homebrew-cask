@@ -10,7 +10,6 @@ cask 'yasu' do
   url "http://yasuapp.net/files/yasu_#{version}.zip"
   name 'Yasu'
   homepage 'http://yasuapp.net'
-  license :gratis
 
   app 'Yasu.app'
 

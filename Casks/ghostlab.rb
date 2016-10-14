@@ -7,7 +7,6 @@ cask 'ghostlab' do
           checkpoint: '243c77ba04b68fb6af58aed4467f7664d5bf79e88eff4726c48ca157d98a7490'
   name 'Ghostlab'
   homepage 'https://vanamco.com/ghostlab/'
-  license :commercial
 
   app 'Ghostlab2.app'
 end

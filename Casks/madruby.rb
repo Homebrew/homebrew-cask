@@ -5,7 +5,6 @@ cask 'madruby' do
   url "http://www.wingsforpigs.com/downloads/MadRuby_#{version}.dmg"
   name 'MadRuby'
   homepage 'http://www.wingsforpigs.com/MadRuby/MadRuby.html'
-  license :gratis
 
   app 'MadRuby.app'
 end

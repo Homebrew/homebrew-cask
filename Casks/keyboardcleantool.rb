@@ -6,7 +6,6 @@ cask 'keyboardcleantool' do
   url 'https://bettertouchtool.net/KeyboardCleanTool.zip'
   name 'KeyboardCleanTool'
   homepage 'https://blog.boastr.net/keyboardcleantool/'
-  license :gratis
 
   app 'KeyboardCleanTool.app'
 end

@@ -7,7 +7,6 @@ cask 'sizeup' do
           checkpoint: '72cab54bfab0d39660861fc45e691929faeaab312adc5f11d1368c28d40cc266'
   name 'SizeUp'
   homepage 'https://www.irradiatedsoftware.com/sizeup/'
-  license :commercial
 
   accessibility_access true
 

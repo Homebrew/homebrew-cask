@@ -5,7 +5,6 @@ cask 'kvirc' do
   url "ftp://ftp.kvirc.de/pub/kvirc/#{version}/binary/osx/KVIrc-#{version}-Equilibrium.dmg"
   name 'KVIrc'
   homepage 'http://www.kvirc.de'
-  license :gpl
 
   app 'KVIrc.app'
 end

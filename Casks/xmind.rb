@@ -5,7 +5,6 @@ cask 'xmind' do
   url 'http://www.xmind.net/xmind/downloads/xmind-7.5-update1-macosx.dmg'
   name 'XMind'
   homepage 'https://www.xmind.net'
-  license :freemium
 
   depends_on macos: '>= :snow_leopard'
 

@@ -8,7 +8,6 @@ cask 'mirador' do
           checkpoint: 'f170ed80b82bb18d60baca9c3310a9039ce8b88ee1c023f02a6a676bd0f6cdf6'
   name 'Mirador'
   homepage 'https://fathom.info/mirador/'
-  license :gpl
 
   app 'Mirador.app'
 end

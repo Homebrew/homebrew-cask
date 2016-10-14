@@ -5,7 +5,6 @@ cask 'pandora' do
   url "https://www.pandora.com/static/desktop_app/pandora_#{version.dots_to_underscores}.air"
   name 'Pandora'
   homepage 'https://www.pandora.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   depends_on cask: 'adobe-air'
 

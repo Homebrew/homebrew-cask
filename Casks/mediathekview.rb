@@ -7,7 +7,6 @@ cask 'mediathekview' do
           checkpoint: 'cc32cbb6d7db3f56cf4c4739c54a7442677a748f93548217cbc9de439b7be25a'
   name 'MediathekView'
   homepage 'https://sourceforge.net/projects/zdfmediathk/'
-  license :gpl
 
   app 'MediathekView.app'
 end

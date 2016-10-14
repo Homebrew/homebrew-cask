@@ -5,7 +5,6 @@ cask 'lyx' do
   url "ftp://ftp.lyx.org/pub/lyx/bin/#{version}/LyX-#{version}+qt5-x86_64-cocoa.dmg"
   name 'LyX'
   homepage 'https://www.lyx.org'
-  license :gpl
   gpg "#{url}.sig",
       key_id: 'de7a44fac7fb382d'
 

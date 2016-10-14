@@ -6,7 +6,6 @@ cask 'krita' do
   url "https://files.kde.org/krita/#{version.major}/osx/krita-#{version}.dmg"
   name 'Krita'
   homepage 'https://krita.org/'
-  license :gpl
 
   app 'Krita.app'
 end

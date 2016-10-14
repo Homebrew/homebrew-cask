@@ -8,7 +8,6 @@ cask 'metanota' do
           checkpoint: 'f54b59d67499e8add469cbec7d5bd206718048837d47df403e6e6c412ab93ca7'
   name 'Metanota'
   homepage 'http://www.metanota.com/'
-  license :freemium
 
   app 'Metanota.app'
 end

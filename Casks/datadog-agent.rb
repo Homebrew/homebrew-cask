@@ -6,7 +6,6 @@ cask 'datadog-agent' do
   url 'https://s3.amazonaws.com/dd-agent/datadogagent.dmg'
   name 'Datadog Agent'
   homepage 'https://www.datadoghq.com/'
-  license :bsd
 
   pkg "datadogagent-#{version}.pkg"
 

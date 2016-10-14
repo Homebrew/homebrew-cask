@@ -7,7 +7,6 @@ cask 'cakebrew' do
           checkpoint: '7f833bba1fce6248bd9267fb1190f327871aaf06939af8c8b0c8a5f2a300e8d8'
   name 'Cakebrew'
   homepage 'https://www.cakebrew.com/'
-  license :gpl
 
   app 'Cakebrew.app'
 end

@@ -5,7 +5,6 @@ cask 'diddumsdeux' do
   url 'http://diddu.ms/d/DiddumsDeux.zip'
   name 'Diddums'
   homepage 'http://diddu.ms/'
-  license :gratis
 
   app 'DiddumsDeux.app'
 end

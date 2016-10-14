@@ -6,7 +6,6 @@ cask 'proximity' do
   url "https://static.kvraudio.com/files/1451/proximity_v#{version.dots_to_underscores}-mac.zip"
   name 'Proximity'
   homepage 'http://www.tokyodawn.net/proximity/'
-  license :gratis
 
   container nested: 'macOS/Proximity-VST-AU.dmg'
 

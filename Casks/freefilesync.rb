@@ -6,7 +6,6 @@ cask 'freefilesync' do
       referer: 'https://www.freefilesync.org/download.php'
   name 'FreeFileSync'
   homepage 'http://www.freefilesync.org'
-  license :gpl
 
   app 'FreeFileSync.app'
   app 'RealtimeSync.app'

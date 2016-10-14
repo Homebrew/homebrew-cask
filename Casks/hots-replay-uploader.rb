@@ -7,7 +7,6 @@ cask 'hots-replay-uploader' do
           checkpoint: 'bfe84d8cb453a9b75cb5ac94a4fbb2729b5d4c0983a4f0536535f9d93aa842c5'
   name 'HotS Replay Uploader'
   homepage 'https://github.com/eivindveg/HotSUploader/'
-  license :apache
 
   app 'HotS Replay Uploader.app'
 end

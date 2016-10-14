@@ -5,7 +5,6 @@ cask 'sauce-connect' do
   url "https://saucelabs.com/downloads/sc-#{version}-osx.zip"
   name 'Sauce Connect'
   homepage 'https://docs.saucelabs.com/reference/sauce-connect/'
-  license :gratis
 
   binary "sc-#{version}-osx/bin/sc"
 end

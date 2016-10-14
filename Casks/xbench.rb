@@ -5,7 +5,6 @@ cask 'xbench' do
   url "http://xbench.com/Xbench_#{version}.dmg"
   name 'Xbench'
   homepage 'http://xbench.com/'
-  license :gratis
 
   app 'XBench.app'
 end

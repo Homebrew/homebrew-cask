@@ -7,7 +7,6 @@ cask 'trailrunner' do
           checkpoint: '118bf8eb0fdc06791e44c9075f843c23d62d7d0f1df2bee10933e40c0124b3a3'
   name 'TrailRunner'
   homepage 'http://trailrunnerx.com/'
-  license :gratis
 
   app 'TrailRunner.app'
 end

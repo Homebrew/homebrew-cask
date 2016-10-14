@@ -5,7 +5,6 @@ cask 'apptivate' do
   url 'http://www.apptivateapp.com/resources/Apptivate.app.zip'
   name 'Apptivate'
   homepage 'http://www.apptivateapp.com'
-  license :gratis
 
   app 'Apptivate.app'
 

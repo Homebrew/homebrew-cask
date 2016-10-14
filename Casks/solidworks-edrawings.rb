@@ -6,7 +6,6 @@ cask 'solidworks-edrawings' do
   url "http://dl-ak.solidworks.com/nonsecure/edrawings/e#{version.before_comma}#{version.after_comma}/macse/eDrawings%20#{version.before_comma}.dmg"
   name 'eDrawings Viewer'
   homepage 'http://www.edrawingsviewer.com/ed/edrawings-mac.htm'
-  license :gratis
 
   app 'SolidWorks eDrawings.app'
 end

@@ -6,7 +6,6 @@ cask 'dhs' do
   url "https://bitbucket.org/objective-see/deploy/downloads/DHS_#{version}.zip"
   name 'Dylib Hijeck Scanner'
   homepage 'https://objective-see.com/products/dhs.html'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'DHS.app'
 end

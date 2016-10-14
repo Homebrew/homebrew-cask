@@ -8,7 +8,6 @@ cask 'bee' do
           checkpoint: '6eb1d6e34661cdf43abf831f59d615f0b95ff25ab390544fb49b8bdd3ad80d8a'
   name 'Bee'
   homepage 'http://neat.io/bee/'
-  license :commercial
 
   app 'Bee.app'
 end

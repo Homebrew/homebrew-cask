@@ -5,7 +5,6 @@ cask 'caffeine' do
   url "http://lightheadsw.com/files/releases/com.lightheadsw.Caffeine/Caffeine#{version}.zip"
   name 'Caffeine'
   homepage 'http://lightheadsw.com/caffeine/'
-  license :gratis
 
   app 'Caffeine.app'
 

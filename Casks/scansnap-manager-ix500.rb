@@ -6,7 +6,6 @@ cask 'scansnap-manager-ix500' do
   url 'http://origin.pfultd.com/downloads/IMAGE/driver/ss/mgr/m-ix500/MaciX500ManagerV63L50WW1.dmg'
   name 'ScanSnap Manager for Fujitsu ScanSnap iX500'
   homepage 'https://www.fujitsu.com/global/support/products/computing/peripheral/scanners/scansnap/software/ix500.html'
-  license :gratis
 
   depends_on macos: '>= :lion'
 

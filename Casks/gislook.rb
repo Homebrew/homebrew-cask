@@ -5,7 +5,6 @@ cask 'gislook' do
   url 'http://cartography.oregonstate.edu/gislook/GISLook_GISMeta.pkg'
   name 'GISLook'
   homepage 'http://cartography.oregonstate.edu/GISLook.html'
-  license :other
 
   pkg 'GISLook_GISMeta.pkg'
 
