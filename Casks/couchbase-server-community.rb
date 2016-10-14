@@ -6,5 +6,5 @@ cask 'couchbase-server-community' do
   name 'Couchbase Server'
   homepage 'https://www.couchbase.com/'
 
-  app "couchbase-server-community_#{version}-macos_x86_64/Couchbase Server.app"
+  app "couchbase-server-community_#{version.major}/Couchbase Server.app"
 end
