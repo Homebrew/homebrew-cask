@@ -24,7 +24,6 @@ cask 'adobe-premiere-pro-cc' do
       cookies:    { 'MM_TRIALS' => '1234' }
   name 'Adobe Premiere Pro CC 2015'
   homepage 'https://www.adobe.com/products/premierepro.html'
-  license :commercial
 
   media_signature = '38C72D42-0672-43B1-9E05-E7631684F9A1'
 
