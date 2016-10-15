@@ -46,7 +46,7 @@ cask 'wireshark-chmodbpf' do
   end
 
   postflight do
-    if Process.euid == 0
+    if Process.euid.zero?
       ohai 'Note:'
       puts <<-EOS.undent
         You executed 'brew cask' as the superuser.
