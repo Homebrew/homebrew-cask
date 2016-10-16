@@ -9,7 +9,6 @@ cask 'oversight' do
   homepage 'https://objective-see.com/products/oversight.html'
 
   installer manual: 'OverSight_Installer.app'
-  app 'OverSight.app'
 
   uninstall quit: 'com.objective-see.OverSight',
             delete: '/Applications/OverSight.app',
