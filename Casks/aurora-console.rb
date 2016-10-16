@@ -7,5 +7,6 @@ cask 'aurora-console' do
   homepage 'https://github.com/Luxurioust/aurora/'
 
   license :mit
+
   binary 'aurora', target: 'aurora'
 end
