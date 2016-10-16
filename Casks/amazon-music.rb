@@ -1,6 +1,6 @@
 cask 'amazon-music' do
-  version '20160616,2001549f34'
-  sha256 'd13a1ac00bdaf03a982231f27a9067610fb4675990db058ab15ddec055ba9569'
+  version '20161012,0550106b75'
+  sha256 'b887d6352df8b3f6a0ec55c6711117059be780660299fdfba3514649561a3041'
 
   # ssl-images-amazon.com was verified as official when first introduced to the cask
   url "https://images-na.ssl-images-amazon.com/images/G/01/digital/music/morpho/installers/#{version.before_comma}/#{version.after_comma}/AmazonMusicInstaller.dmg"
