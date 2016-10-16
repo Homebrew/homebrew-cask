@@ -21,13 +21,13 @@ cask 'netbeans' do
   # receipts database that would be a bug upstream with NetBeans not prefixing
   # its GlassFish package with "org.netbeans."
   #
-  # If this ever becomes an issue, pkgutil: 'glassfish-.*' could be moved
-  # to a separate "zap" stanza.
+  # If this ever becomes an issue, pkgutil: 'glassfish.*' could be moved to a
+  # separate "zap" stanza.
   #
   # The NetBeans installer does some postflight unpacking of paths installed by
   # the macOS installer, so it's insufficient to just delete the paths exposed
   # by pkgutil, hence the additional ":delete" option below.
 
-  uninstall pkgutil: 'org.netbeans.ide.*|glassfish-.*',
+  uninstall pkgutil: 'org.netbeans.ide.*|glassfish.*',
             delete:  '/Applications/NetBeans'
 end
