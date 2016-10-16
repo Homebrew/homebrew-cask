@@ -1,6 +1,6 @@
 cask 'lyx' do
-  version '2.2.1'
-  sha256 'a4049525dda1b06035c12d575d512920b230393032658f8085710a926d1f3a36'
+  version '2.2.2'
+  sha256 'b6cf43227bfa8c1fb6879bacf04b818d78b6368c7318b0391f2bdfab70858d69'
 
   url "ftp://ftp.lyx.org/pub/lyx/bin/#{version}/LyX-#{version}+qt5-x86_64-cocoa.dmg"
   name 'LyX'
