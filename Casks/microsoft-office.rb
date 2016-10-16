@@ -1,6 +1,6 @@
 cask 'microsoft-office' do
-  version '15.26.0_160910'
-  sha256 '0936d7c66a9f99c259b2b8e13329b503b44290e56ee8d2c2512bce5a5f3bf32a'
+  version '15.27.0_161010'
+  sha256 '05994c29ee845dcdcdb0f9d9ab042082d51d06e002a2ce2dd5c3e8421b0ad2c8'
 
   url "https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/OfficeMac/Microsoft_Office_2016_#{version}_Installer.pkg"
   name 'Microsoft Office 2016'
