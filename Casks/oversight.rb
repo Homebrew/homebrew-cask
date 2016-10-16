@@ -12,6 +12,6 @@ cask 'oversight' do
   installer manual: 'OverSight_Installer.app'
 
   uninstall quit: 'com.objective-see.OverSight',
-            delete: '/Applications/OverSight.app',
-            login_item: 'Oversight'
+    delete: '/Applications/OverSight.app',
+    login_item: 'Oversight'
 end
