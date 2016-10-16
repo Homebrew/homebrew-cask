@@ -4,17 +4,17 @@ cask 'scala-ide' do
 
   module Utils
     def self.build
-      '20160401'
+      '20160504'
     end
   end
 
   # downloads.typesafe.com/scalaide-pack was verified as official when first introduced to the cask
-  url "https://downloads.typesafe.com/scalaide-pack/#{version}-vfinal-luna-211-#{Utils.build}/scala-SDK-#{build}-vfinal-2.11-macosx.cocoa.x86_64.zip"
+  url "https://downloads.typesafe.com/scalaide-pack/#{version}-vfinal-luna-211-#{Utils.build}/scala-SDK-#{version}-vfinal-2.11-macosx.cocoa.x86_64.zip"
   name 'Scala IDE'
   homepage 'http://scala-ide.org/'
 
   # Renamed for clarity: app name is inconsistent with its branding.
   # Also renamed to avoid conflict with other eclipse Casks.
   # Original discussion: https://github.com/caskroom/homebrew-cask/pull/2731
-  app 'eclipse/Eclipse.app', target: 'Scala IDE.app'
+  app 'eclipse', target: 'Scala IDE'
 end
