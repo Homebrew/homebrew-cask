@@ -1,6 +1,6 @@
 cask 'balsamiq-mockups' do
-  version '3.5.4'
-  sha256 'ef2ae819ffee8d7fe1641a260c8fa695caaa8719274b8c733baea5f83f953ae1'
+  version '3.5.5'
+  sha256 'b08819effb63fa3361e2286d4e580bc67edf30c16962c34453e191ccbcfc482e'
 
   url "https://builds.balsamiq.com/mockups-desktop/Balsamiq_Mockups_#{version}.dmg"
   name 'Balsamiq Mockups'
