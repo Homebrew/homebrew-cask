@@ -1,7 +1,7 @@
 cask 'icons8' do
   # note: "8" is not a version number, but an intrinsic part of the product name
-  version '5.4'
-  sha256 '69c1111ffc53b46083231e5942772af1d4dd31fc595e62a8e013d8f558db2299'
+  version :latest
+  sha256 :no_check
 
   url 'https://icons8.com/icons8_mac_app'
   appcast 'https://maxcdn.icons8.com/download/icons8_cast.xml',
