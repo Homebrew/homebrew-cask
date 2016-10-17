@@ -4,7 +4,7 @@ cask 'git-it' do
 
   url "https://github.com/jlord/git-it-electron/releases/download/#{version}/Git-it-Mac-x64.zip"
   appcast 'https://github.com/jlord/git-it-electron/releases.atom',
-          checkpoint: '1547abc72f5827b0ecb17a420b2213354b7a2a8f89d688d7a0697cd815cc4686'
+          checkpoint: '0c373b2f4391f9cf2acf0f573f5e35fb60e5e8ab8333e6483ffe6e8e0a49dac5'
   name 'Git-it'
   homepage 'https://github.com/jlord/git-it-electron'
 

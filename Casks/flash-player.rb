@@ -6,8 +6,8 @@ cask 'flash-player' do
   url "https://fpdownload.macromedia.com/pub/flashplayer/updaters/#{version.major}/flashplayer_#{version.major}_sa.dmg"
   appcast 'http://fpdownload2.macromedia.com/get/flashplayer/update/current/xml/version_en_mac_pl.xml',
           checkpoint: '159582e9a7da281f6d866c000f4f2803c7306e89be44075e6793c142286077e5'
-  name 'Adobe Flash Player'
-  homepage 'https://www.adobe.com/support/flashplayer/downloads.html'
+  name 'Adobe Flash Player projector'
+  homepage 'https://www.adobe.com/support/flashplayer/debug_downloads.html'
 
   app 'Flash Player.app'
 
