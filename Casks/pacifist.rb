@@ -13,7 +13,5 @@ cask 'pacifist' do
   name 'Pacifist'
   homepage 'https://www.charlessoft.com/'
 
-  depends_on macos: '>= :tiger'
-
   app 'Pacifist.app'
 end
