@@ -1,10 +1,10 @@
 cask 'soundmate' do
-  version '3.2.0'
-  sha256 '00310fb78af68b1b1063b7c9cd7f0e393272f970007cc292face8cce0595159a'
+  version '3.2.2'
+  sha256 'fdc2a8efa8c2ff6fb1c3c0202d98a9938aaf56960c4399f4ecca614207e74ff8'
 
   url "http://www.icyarrow.com/soundmate/SoundMate_v#{version}.zip"
   appcast 'http://www.icyarrow.com/soundmate/soundmatecast.xml',
-          checkpoint: 'd8c653fc7fe214355b86072077f94279635a70da3d01f7d07b21381ed4a7d4d8'
+          checkpoint: '5886a39685690a4a1526a6cd1909e40100faa353e552a3530383655bd707aa51'
   name 'soundmate'
   homepage 'http://www.icyarrow.com/soundmate'
 

@@ -1,11 +1,11 @@
 cask 'framer' do
-  version '72'
-  sha256 '3040f38dad7681b600beb91434e7dccc68277d7239fb1a0dc50f98247bfc3cca'
+  version '74'
+  sha256 '8f18323b7a526e54cf5ee6c09cf2bacdf53e51b0c5148369b03e5b830df83cda'
 
   # devmate.com/com.motif.framer was verified as official when first introduced to the cask
   url 'https://dl.devmate.com/com.motif.framer/FramerStudio.zip'
   appcast 'https://updates.devmate.com/com.motif.framer.xml',
-          checkpoint: '7dfb59037e01155f986d69f55a0be3d5c3e31986bfd76076c73a3748d1899a39'
+          checkpoint: '95c74629f70878e70337b6a55382d89cd300de58feebb83018d0ae1511991b75'
   name 'Framer'
   homepage 'https://framerjs.com/'
 
