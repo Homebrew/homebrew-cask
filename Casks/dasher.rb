@@ -5,7 +5,6 @@ cask 'dasher' do
   url "http://www.inference.phy.cam.ac.uk/dasher/download/macos/Dasher-MacOS-#{version}.zip"
   name 'Dasher'
   homepage 'http://www.inference.phy.cam.ac.uk/dasher/'
-  license :gpl
 
   app 'Dasher.app'
 

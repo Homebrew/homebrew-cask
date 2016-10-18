@@ -7,7 +7,6 @@ cask 'kanmusmemory' do
           checkpoint: 'f8cddbd8afc99bff82204851ed915bf9f8246499cc870ee7481ec24135e29faa'
   name 'KanmusuMemory'
   homepage 'http://relog.xii.jp/mt5r/2013/08/post-349.html'
-  license :apache
 
   app 'KanmusuMemory.app'
 end

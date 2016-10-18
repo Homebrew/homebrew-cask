@@ -6,7 +6,6 @@ cask 'kindlepreviewer' do
   url 'https://s3.amazonaws.com/kindlepreviewer/KindlePreviewer.pkg'
   name 'Kindle Previewer'
   homepage 'https://www.amazon.com/gp/feature.html/?docId=1000765261'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'KindlePreviewer.pkg'
 

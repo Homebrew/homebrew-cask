@@ -5,7 +5,6 @@ cask 'wacom-graphire2-tablet' do
   url "https://www.wacom.asia/sites/default/files/drivers/WacomTablet_#{version}.dmg"
   name 'Graphire2 Wacom Tablet'
   homepage 'https://www.wacom.asia/taxonomy/term/21'
-  license :gratis
 
   pkg 'Install Wacom Tablet.pkg'
 

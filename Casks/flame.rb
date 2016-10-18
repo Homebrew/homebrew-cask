@@ -5,7 +5,6 @@ cask 'flame' do
   url "http://husk.org/apps/Flame-#{version}-universal.zip"
   name 'Flame'
   homepage 'http://husk.org/apps/flame/'
-  license :gratis
 
   app 'Flame.app'
 end

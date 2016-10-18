@@ -5,7 +5,6 @@ cask 'jalbum' do
   url "http://download.jalbum.net/download/#{version}/MacOSX/jAlbum.dmg"
   name 'jAlbum'
   homepage 'https://jalbum.net'
-  license :freemium
 
   app 'jAlbum.app'
 end

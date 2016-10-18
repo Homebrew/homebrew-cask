@@ -6,7 +6,6 @@ cask 'xampp' do
   url "https://downloadsapachefriends.global.ssl.fastly.net/xampp-files/#{version.major_minor_patch}/xampp-osx-#{version}-installer.dmg"
   name 'XAMPP'
   homepage 'https://www.apachefriends.org/'
-  license :gpl
 
   installer script: 'XAMPP.app/Contents/MacOS/osx-intel',
             args:   ['--mode', 'unattended'],

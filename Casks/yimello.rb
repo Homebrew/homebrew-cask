@@ -5,7 +5,6 @@ cask 'yimello' do
   url "https://yimello.adriencadet.com/assets/zip/yimello-mac-#{version}.zip"
   name 'Yimello'
   homepage 'https://yimello.adriencadet.com/'
-  license :mit
 
   app 'Yimello.app'
 end

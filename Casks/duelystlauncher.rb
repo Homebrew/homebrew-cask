@@ -6,7 +6,6 @@ cask 'duelystlauncher' do
   url "https://downloads-counterplaygames.netdna-ssl.com/launcher/v#{version}/DuelystLauncher-v#{version}.dmg"
   name 'Duelyst'
   homepage 'https://updates.counterplay.co/launcher'
-  license :gratis
 
   app 'DuelystLauncher.app'
 

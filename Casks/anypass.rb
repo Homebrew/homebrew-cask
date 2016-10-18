@@ -5,7 +5,6 @@ cask 'anypass' do
   url "http://icyblaze.com/anypass/anypass_mac_#{version.sub(%r{^(\d+\.\d+).*}, '\1')}.zip"
   name 'Anypass'
   homepage 'http://icyblaze.com/anypass'
-  license :commercial
 
   app 'Anypass.app'
 end

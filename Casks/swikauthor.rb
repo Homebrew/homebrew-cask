@@ -5,7 +5,6 @@ cask 'swikauthor' do
   url "http://media.swikshare.com/download/SwikAuthorBeta_v#{version}.dmg"
   name 'SwikAuthor'
   homepage 'http://swikshare.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'SwikAuthor.app'
 end

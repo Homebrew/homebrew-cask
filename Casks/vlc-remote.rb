@@ -1,13 +1,12 @@
 cask 'vlc-remote' do
-  version '3.60'
-  sha256 'd2a1755f056cb6f492061d52a538ad7f801859348cc9a0f5453e94209082cb64'
+  version '3.63'
+  sha256 '55513b29dbc03f96af6792a91f00e4b6f262d0fd8847173c5791b203d6bf01c1'
 
   url "http://hobbyistsoftware.com/Downloads/VLCRemote/Versions/VLCSetup_#{version}.dmg"
   appcast 'http://hobbyistsoftware.com/Downloads/VLCRemote/vlcSetupHelperVersions.xml',
-          checkpoint: 'dbc6822df1776a697c456f13c7185db772ae288ba8c0b4062737b53584c7ac94'
+          checkpoint: '2cefab98336766f73eb21e269a1c8322eb9935405cc2b94711a6c0d9d2e89c3d'
   name 'VLC Remote'
   homepage 'http://hobbyistsoftware.com/vlc'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   installer manual: 'VLC Setup.app'
 end

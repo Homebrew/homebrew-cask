@@ -8,7 +8,6 @@ cask 'cockatrice' do
           checkpoint: '52a316aa5b7a91ec5bc05ab970ed7093a2e79e609b2bc22fe9ffaf44b2b73928'
   name 'Cockatrice'
   homepage 'http://www.woogerworks.com/'
-  license :gpl
 
   app 'cockatrice.app'
   app 'oracle.app'

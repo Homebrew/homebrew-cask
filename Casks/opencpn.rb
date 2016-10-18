@@ -6,7 +6,6 @@ cask 'opencpn' do
   url 'http://opencpn.navnux.org/4.4.0/OpenCPN_4.4.0.dmg'
   name 'OpenCPN'
   homepage 'http://opencpn.org'
-  license :gpl
 
   app 'OpenCPN.app'
 end

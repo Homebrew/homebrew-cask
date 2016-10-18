@@ -5,7 +5,6 @@ cask 'phonerescue' do
   url 'https://www.imobie.com/product/phonerescue-mac.dmg'
   name 'PhoneRescue'
   homepage 'https://www.imobie.com/phonerescue'
-  license :gratis
 
   app 'PhoneRescue.app'
 end

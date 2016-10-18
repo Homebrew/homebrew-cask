@@ -7,7 +7,6 @@ cask 'colloquy' do
           checkpoint: '91009856ce35364f86861d42e3f06d6603648914ef374997cde0a28f860ae52f'
   name 'Colloquy'
   homepage 'http://colloquy.info/'
-  license :gpl
 
   auto_updates true
 

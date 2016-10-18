@@ -8,7 +8,6 @@ cask 'goldencheetah' do
           checkpoint: '5710204f6643feba3208c9965e9c6526cd83c713ed544f865d907cb0a8d82677'
   name 'GoldenCheetah'
   homepage 'http://www.goldencheetah.org/'
-  license :gpl
 
   app 'GoldenCheetah.app'
 end

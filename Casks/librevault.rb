@@ -7,7 +7,6 @@ cask 'librevault' do
           checkpoint: '7bb5563f93f7b3deed9a0875b008ab4d46b58000aca379dff5d8a40b9d90bc5d'
   name 'Librevault'
   homepage 'https://librevault.com/'
-  license :gpl
 
   app 'Librevault.app'
 end

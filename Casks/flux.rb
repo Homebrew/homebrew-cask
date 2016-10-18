@@ -4,10 +4,9 @@ cask 'flux' do
 
   url "https://justgetflux.com/mac/Flux#{version}.zip"
   appcast 'https://justgetflux.com/mac/macflux.xml',
-          checkpoint: 'f47b77b5102fc5c62caf76c7a031c47093ea29e376131398b9fa51fbe382b740'
+          checkpoint: 'f6127c732fe64848139f952b0ff08dcd4ba97f1a58d6599857d6268ad035b5ec'
   name 'f.lux'
   homepage 'https://justgetflux.com/'
-  license :gratis
 
   auto_updates true
 

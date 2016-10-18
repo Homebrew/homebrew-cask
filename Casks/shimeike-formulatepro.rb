@@ -7,7 +7,6 @@ cask 'shimeike-formulatepro' do
           checkpoint: '5577b6aea342f35701fb94c0eff888f0536b01cdfe21978fded979d44835b082'
   name 'FormulatePro'
   homepage 'https://github.com/shimeike/formulatepro'
-  license :gpl
 
   app 'FormulatePro.app'
 end

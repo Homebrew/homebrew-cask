@@ -6,7 +6,6 @@ cask 'love' do
   url "https://bitbucket.org/rude/love/downloads/love-#{version}-macosx-x64.zip"
   name 'LÖVE'
   homepage 'https://love2d.org/'
-  license :oss
 
   app 'love.app'
   binary "#{appdir}/love.app/Contents/MacOS/love"

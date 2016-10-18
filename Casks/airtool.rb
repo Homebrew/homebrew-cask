@@ -8,7 +8,6 @@ cask 'airtool' do
           checkpoint: '67f9a0be145410a24b2e6ab73b2b69e03d3e6d9396b240f1bd5e8c988028f171'
   name 'Airtool'
   homepage 'https://www.adriangranados.com/apps/airtool'
-  license :gratis
 
   pkg "airtool_#{version}.pkg"
 

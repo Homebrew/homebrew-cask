@@ -8,7 +8,6 @@ cask 'dvdstyler' do
           checkpoint: '3b72e00954942e1e3d65a9dedcd212ee651b431500bb920e2774f2f6a1723bbb'
   name 'DVDStyler'
   homepage 'http://dvdstyler.org'
-  license :gpl
 
   app 'DVDStyler.app'
 end

@@ -4,8 +4,7 @@ cask 'sql-power-architect-jdbc' do
 
   url "http://download.sqlpower.ca/architect/#{version}/community/SQL-Power-Architect-OSX-#{version}.tar.gz"
   name 'SQL Power Architect Community edition'
-  homepage 'http://www.sqlpower.ca/'
-  license :gpl
+  homepage 'https://www.sqlpower.ca/'
 
   app 'SQL Power Architect JDBC.app'
 end

@@ -7,8 +7,7 @@ cask 'vistrails' do
   appcast 'https://sourceforge.net/projects/vistrails/rss?path=/vistrails',
           checkpoint: '5b5470cbdb0773a980d33bdb4c56d44d4d1ccbc56961988faaccc9104174569c'
   name 'VisTrails'
-  homepage 'http://www.vistrails.org/'
-  license :bsd
+  homepage 'https://www.vistrails.org/'
 
   depends_on macos: '>= :snow_leopard'
 

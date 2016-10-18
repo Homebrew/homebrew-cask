@@ -7,7 +7,6 @@ cask 'vocabulist' do
           checkpoint: '35158af6c993c77043a589e63269df9b3e4c443b78aa5cea62e0d8110e508a75'
   name 'Vocabulist'
   homepage 'http://vocabulistapp.com/'
-  license :oss
 
   app 'Vocabulist.app'
 end

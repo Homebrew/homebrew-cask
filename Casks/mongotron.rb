@@ -8,7 +8,6 @@ cask 'mongotron' do
           checkpoint: 'c72d7d2bf8514e6f839b3fecd2a5240ed7fc976eee535a9e2905946c0227374f'
   name 'Mongotron'
   homepage 'http://mongotron.io/'
-  license :mit
 
   app 'Mongotron-darwin-x64/Mongotron.app'
 

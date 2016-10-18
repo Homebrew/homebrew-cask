@@ -5,7 +5,6 @@ cask 'abyss' do
   url 'https://aprelium.com/data/abwsx1.dmg'
   name 'Abyss Web Server'
   homepage 'https://aprelium.com/abyssws/'
-  license :gratis
 
   app 'Abyss Web Server/Abyss Web Server.app'
 end

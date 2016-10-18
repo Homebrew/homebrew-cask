@@ -6,7 +6,6 @@ cask 'x-lite' do
   url "https://counterpath.s3.amazonaws.com/downloads/X-Lite_#{version}.dmg"
   name 'X-Lite'
   homepage 'https://www.counterpath.com/x-lite/'
-  license :commercial
 
   app 'X-Lite.app'
 end

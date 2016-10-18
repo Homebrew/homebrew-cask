@@ -8,7 +8,6 @@ cask 'safe-launcher' do
           checkpoint: 'd9786c58d9c64973c510f793d84185cb1cfeeb04c2828c65370b0ec659df27a7'
   name 'SAFE Launcher'
   homepage 'https://www.maidsafe.net/'
-  license :unknown
 
   app 'SAFE Launcher.app'
 

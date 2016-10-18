@@ -5,7 +5,6 @@ cask 'sketchbook' do
   url "https://cdn.sketchbook.com/mac/SketchBook_v#{version}_mac.dmg"
   name 'Autodesk Sketchbook'
   homepage 'https://www.sketchbook.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "SketchBook_v#{version}_mac.pkg"
 

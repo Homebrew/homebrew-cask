@@ -6,7 +6,6 @@ cask 'baiduhi' do
   name 'Baidu Hi'
   name '百度 Hi'
   homepage 'https://im.baidu.com/'
-  license :gratis
 
   app '百度Hi.app'
 end

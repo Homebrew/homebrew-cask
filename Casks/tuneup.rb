@@ -1,14 +1,13 @@
 cask 'tuneup' do
-  version '2.5.3.0'
-  sha256 '8a2722d8719323d692c4a14935d945a3e42946aa9abd8a772fbd3737e4698b5d'
+  version '2.8.4'
+  sha256 'af67b5ac301c9aeb842b90b22402b144ba3d8d4c66f84eb12cb53919bf1e9eb8'
 
   # dvk2ozaytrec6.cloudfront.net was verified as official when first introduced to the cask
-  url "https://dvk2ozaytrec6.cloudfront.net/mac4/Sparkle/TuneUp-Installer-#{version.major_minor}.0.zip"
+  url "https://dvk2ozaytrec6.cloudfront.net/mac4/Sparkle/TuneUp-#{version}.dmg"
   appcast 'https://dvk2ozaytrec6.cloudfront.net/mac4/appcast.xml',
-          checkpoint: 'fa140f16451aa2604c86fe4f1eed48c80dc183618152552c633dbe3c864ec4f2'
+          checkpoint: '64150d576a3291c6755d79e68b2e52e5d2fd71bee8e7627ac77bf57aca4f6f55'
   name 'TuneUp'
   homepage 'https://www.tuneupmedia.com/'
-  license :commercial
 
   installer manual: 'TuneUp-Installer.app'
 

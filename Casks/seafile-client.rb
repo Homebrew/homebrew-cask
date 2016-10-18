@@ -6,7 +6,6 @@ cask 'seafile-client' do
   url "https://bintray.com/artifact/download/seafile-org/seafile/seafile-client-#{version}.dmg"
   name 'Seafile Client'
   homepage 'https://seafile.com/'
-  license :gpl
 
   app 'Seafile Client.app'
 end

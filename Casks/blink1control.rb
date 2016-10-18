@@ -8,7 +8,6 @@ cask 'blink1control' do
           checkpoint: 'f8419b73ae281066a793d7d79211b45be165de976186784fb1271d2a8afa00c7'
   name 'Blink1Control'
   homepage 'https://blink1.thingm.com/'
-  license :cc
 
   app 'Blink1Control.app'
 end

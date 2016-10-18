@@ -8,7 +8,6 @@ cask 'ghdl' do
           checkpoint: 'd6f629caf9ece3d3f1d8f9c5a0a0f48d1ed9116a8831342fcd28511a18eebeec'
   name 'GHDL'
   homepage 'http://ghdl.free.fr/'
-  license :gpl
 
   pkg "ghdl-#{version}-llvm-darwin13.pkg"
 

@@ -5,7 +5,6 @@ cask 'iloc' do
   url "https://derailer.org/iloc/iloc-#{version}.tgz"
   name 'iloc'
   homepage 'https://derailer.org/iloc'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   binary "iloc-#{version}/iloc"
 end

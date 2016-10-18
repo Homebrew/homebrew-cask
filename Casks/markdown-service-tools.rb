@@ -5,7 +5,6 @@ cask 'markdown-service-tools' do
   url "http://cdn3.brettterpstra.com/downloads/MarkdownServiceTools#{version}.zip"
   name 'Markdown Service Tools'
   homepage 'http://brettterpstra.com/projects/markdown-service-tools/'
-  license :gratis
 
   service "MarkdownServiceTools#{version}/md - Code - Make Code Block.workflow"
   service "MarkdownServiceTools#{version}/md - Convert - HTML to Clipboard.workflow"
@@ -37,6 +36,7 @@ cask 'markdown-service-tools' do
   service "MarkdownServiceTools#{version}/md - Paragraphs - Preserve Line Breaks.workflow"
   service "MarkdownServiceTools#{version}/md - Paragraphs - Unwrap.workflow"
   service "MarkdownServiceTools#{version}/md - Tables - Cleanup.workflow"
+  service "MarkdownServiceTools#{version}/md - Tables - Create from CSV.workflow"
   service "MarkdownServiceTools#{version}/md - Wrap - Angle Brackets.workflow"
   service "MarkdownServiceTools#{version}/md - Wrap - Parenthesis.workflow"
   service "MarkdownServiceTools#{version}/md - Wrap - Square Brackets.workflow"

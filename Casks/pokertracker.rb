@@ -6,7 +6,6 @@ cask 'pokertracker' do
   url "http://s3-us1.ptrackupdate.com/releases/PT-Install-v#{version}.dmg"
   name 'PokerTracker'
   homepage 'https://www.pokertracker.com'
-  license :commercial
 
   app "PokerTracker #{version.major}.app"
 end

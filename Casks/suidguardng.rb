@@ -5,7 +5,6 @@ cask 'suidguardng' do
   url "https://www.suidguard.com/downloads/SUIDGuardNG-#{version.no_dots}.pkg"
   name 'SUIDGuardNG'
   homepage 'https://www.suidguard.com/'
-  license :bsd
 
   depends_on macos: '<= :yosemite'
 

@@ -6,7 +6,6 @@ cask 'packet-peeper' do
   url "https://bitbucket.org/choll/packetpeeper/downloads/PacketPeeper_#{version}.dmg"
   name 'Packet Peeper'
   homepage 'http://packetpeeper.org/'
-  license :gpl
 
   app 'Packet Peeper.app'
 end

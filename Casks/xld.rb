@@ -1,15 +1,14 @@
 cask 'xld' do
-  version '2015.12.14'
-  sha256 '08a03d72cf0ff2cc9e8810dc76604fd527270b0b6d35563d133e537a3ea30117'
+  version '2016.10.07'
+  sha256 '2c862a0e3109563c7848b5d0ad671218ab57d56f2444af60be06e50ad30df76d'
 
   # sourceforge.net/xld was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/xld/xld-#{version.no_dots}.dmg"
   appcast 'https://svn.code.sf.net/p/xld/code/appcast/xld-appcast_e.xml',
-          checkpoint: 'c4658828a87e26aad584edf9c0d6414ca45037c7219fb3d5889cac3e2578da33'
+          checkpoint: '0f95b97e04e14ef9e1cf4b695388024f2a66b47a41bdcc272fab4718b2746beb'
   name 'X Lossless Decoder'
   name 'XLD'
   homepage 'http://tmkk.undo.jp/xld/index_e.html'
-  license :oss
 
   app 'XLD.app'
 

@@ -7,7 +7,6 @@ cask 'big-mean-folder-machine' do
           checkpoint: '7df7fbe0e0827130bc3ce7f6bdc3ad3fc3c57323cf3aa6b8cfedbf696a9f7282'
   name 'Big Mean Folder Machine'
   homepage 'http://www.publicspace.net/BigMeanFolderMachine/'
-  license :commercial
 
   app "Big Mean Folder Machine #{version.major}.app"
 end

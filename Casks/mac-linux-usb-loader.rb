@@ -8,7 +8,6 @@ cask 'mac-linux-usb-loader' do
           checkpoint: '2f828e4edbab5a5814f8e4e7be45c68ded9ed0ea9316c362830ff96d647647b2'
   name 'Mac Linux USB Loader'
   homepage 'https://sevenbits.github.io/Mac-Linux-USB-Loader/'
-  license :bsd
 
   app 'Mac Linux USB Loader.app'
 end

@@ -7,7 +7,6 @@ cask 'magicprefs' do
           checkpoint: 'e22851bcd95863680a5edae619f083b742748a72cc5b0828fa7d5148e9532b80'
   name 'MagicPrefs'
   homepage 'http://magicprefs.com/'
-  license :gratis
 
   app 'MagicPrefs.app'
 

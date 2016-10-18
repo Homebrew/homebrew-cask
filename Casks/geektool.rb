@@ -8,7 +8,6 @@ cask 'geektool' do
           checkpoint: '919a693af08a23afe84ce132c390c4b05629d91f607f72d8c1af641d418efced'
   name 'GeekTool'
   homepage 'http://projects.tynsoe.org/en/geektool/'
-  license :mit
 
   app 'GeekTool.app'
 

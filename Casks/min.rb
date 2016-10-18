@@ -8,7 +8,6 @@ cask 'min' do
           checkpoint: '726031eecd9ac76c8a54b9270fefa4b4b5baf81e58bab8ae1d8dcf499f446f30'
   name 'Min'
   homepage 'https://minbrowser.github.io/min'
-  license :oss
 
   app 'Min.app'
 

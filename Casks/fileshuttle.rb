@@ -7,7 +7,6 @@ cask 'fileshuttle' do
           checkpoint: 'd313d70dd38d61d4157fd14494cd1acf3d87eeb56ba3d1152f869afd6fe35675'
   name 'FileShuttle'
   homepage 'https://fileshuttle.io/'
-  license :other
 
   app 'FileShuttle.app'
 end

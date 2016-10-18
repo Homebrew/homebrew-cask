@@ -5,7 +5,6 @@ cask 'ricochet' do
   url "https://ricochet.im/releases/#{version}/Ricochet-#{version}.dmg"
   name 'Ricochet'
   homepage 'https://ricochet.im/'
-  license :bsd
   gpg "#{url}.asc",
       key_id: '9032cae4cbfa933a5a2145d5ff97c53f183c045d'
 

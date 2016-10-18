@@ -5,7 +5,6 @@ cask 'inform' do
   url "http://inform7.com/download/content/#{version}/I7-#{version}-OSX.dmg"
   name 'Inform'
   homepage 'http://inform7.com/'
-  license :oss
 
   app 'Inform.app'
 end

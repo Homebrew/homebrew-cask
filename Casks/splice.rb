@@ -1,14 +1,13 @@
 cask 'splice' do
-  version '2.1.4-201608232053'
-  sha256 '98f1a111407316e4bbc69f126b208a88e6389fb27244d3919877e5600c475816'
+  version '2.1.8-201610131641'
+  sha256 '7123768004fce6a259752f47c948e1309e53853391a8e562da7074e588df0dbd'
 
   # amazonaws.com/spliceosx was verified as official when first introduced to the cask
   url "https://s3-us-west-1.amazonaws.com/spliceosx/Splice.app-#{version}.zip"
   appcast 'https://splice.com/appcast.xml',
-          checkpoint: 'ef5ffb099463af8c2820b026451ab058ade07ad65853898b16ee70af1e75005b'
+          checkpoint: '4fb3a1e2c86176252dfc9e7367df425e43bcfb132cdf590a4caaae3597b50949'
   name 'Splice'
   homepage 'https://splice.com/'
-  license :gratis
 
   app 'Splice.app'
 

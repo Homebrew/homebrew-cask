@@ -7,7 +7,6 @@ cask 'dfontsplitter' do
           checkpoint: 'ead408294b7d718d1e30c6963492889a5b4cc07fef47fcc8c7c30f913c092664'
   name 'DfontSplitter'
   homepage 'https://peter.upfold.org.uk/projects/dfontsplitter'
-  license :gpl
 
   app 'DfontSplitter.app'
 end

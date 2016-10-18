@@ -6,7 +6,6 @@ cask 'epoch' do
   url "https://s3.amazonaws.com/adcade-downloads/epoch2/Epoch_#{version}_osx64.dmg"
   name 'Epoch'
   homepage 'https://www.adcade.com/'
-  license :commercial
 
   app 'Epoch.app'
 end

@@ -1,15 +1,14 @@
 cask 'coreos' do
-  version '1.4.9'
-  sha256 'c0ad06ebee3500ed7d5ad594c2017298e4717f3816f88440f8a0577e07429bab'
+  version '1.5.1'
+  sha256 '6f66821ec58451d7d9fb564082b7f33d1e2f1c3bad88869743c6952f7887fe33'
 
   url "https://github.com/TheNewNormal/coreos-osx/releases/download/v#{version}/CoreOS_v#{version}.dmg"
   appcast 'https://github.com/TheNewNormal/coreos-osx/releases.atom',
-          checkpoint: '13b8920979514ce9e31b2716f1f211ee14329f63c995f0951940f45337d3aa9d'
+          checkpoint: '734477a5e9f3742f55025f570fc394aaf93d96f7f4ce487ac1563aa661003223'
   name 'CoreOS VM'
   homepage 'https://github.com/TheNewNormal/coreos-osx'
-  license :apache
 
-  depends_on cask: 'corectl'
+  depends_on cask: 'corectl-app'
 
   app 'CoreOS.app'
 

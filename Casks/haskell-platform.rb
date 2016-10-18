@@ -5,7 +5,6 @@ cask 'haskell-platform' do
   url "https://haskell.org/platform/download/#{version}/Haskell%20Platform%20#{version}%20Full%2064bit-signed-a.pkg"
   name 'Haskell Platform'
   homepage 'https://www.haskell.org/platform/'
-  license :bsd
 
   depends_on macos: '>= :snow_leopard'
 

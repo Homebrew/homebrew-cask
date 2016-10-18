@@ -1,13 +1,12 @@
 cask 'beacon-scanner' do
-  version '1.11'
-  sha256 'd290eb9f83544eef42184f2ad3f0e8d48e4bea44e192bd3dc9fbf57aab45af14'
+  version '1.1.12'
+  sha256 '5ec6a1d4c38b7ed93e9ec674c50aaceea266a180618d4ced3d8c07c11b001054'
 
-  url "https://github.com/mlwelles/BeaconScanner/releases/download/#{version}/BeaconScanner-#{version}.zip"
+  url "https://github.com/mlwelles/BeaconScanner/releases/download/1.1.2/BeaconScanner-#{version}.zip"
   appcast 'https://github.com/mlwelles/BeaconScanner/releases.atom',
-          checkpoint: '9d54970c1dd5706a0206a65ea818d3940bb1f74cb31697a12fba974281a20dc7'
+          checkpoint: '53ff673bd7cd8a3bbdb761cd60665c3b96d56980216c228b6f984e26bdd8f939'
   name 'BeaconScanner'
   homepage 'https://github.com/mlwelles/BeaconScanner/'
-  license :mit
 
   app 'Beacon Scanner.app'
 end

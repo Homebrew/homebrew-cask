@@ -8,7 +8,6 @@ cask 'rdm' do
           checkpoint: '55c262996d7b3d7809ae543638792d70b6a1d2d26e817eeffe8a7ed6da3391fe'
   name 'Redis Desktop Manager'
   homepage 'https://redisdesktop.com/'
-  license :gpl
 
   app 'rdm.app'
 end

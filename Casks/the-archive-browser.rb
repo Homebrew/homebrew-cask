@@ -5,7 +5,6 @@ cask 'the-archive-browser' do
   url "https://wakaba.c3.cx/releases/TheArchiveBrowser/TheArchiveBrowser#{version}.zip"
   name 'The Archive Browser'
   homepage 'https://archivebrowser.c3.cx'
-  license :commercial
 
   app 'The Archive Browser.app'
 end

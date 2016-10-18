@@ -7,7 +7,6 @@ cask 'invisor-lite' do
           checkpoint: '09e107fc3df2dcb1aeece9acc2eddcf9bb04632bb94f3d362f981abee7c22595'
   name 'Invisor Lite'
   homepage 'http://www.pozdeev.com/invisor/'
-  license :gratis
 
   app 'Invisor Lite.app'
 end

@@ -5,7 +5,6 @@ cask 'cgoban' do
   url 'http://files.gokgs.com/javaBin/cgoban.dmg'
   name 'CGoban'
   homepage 'https://www.gokgs.com/download.jsp'
-  license :closed
 
   app 'CGoban.app'
 

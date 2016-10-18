@@ -8,7 +8,6 @@ cask 'overture' do
           checkpoint: 'bc8eff785ac9f781aeeee6f94a37447ff529439b53918de3d8487bdca855c046'
   name 'Overture Tool'
   homepage 'http://overturetool.org/'
-  license :gpl
 
   app 'Overture.app'
 end

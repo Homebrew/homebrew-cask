@@ -5,7 +5,6 @@ cask 'cacoo-ninja' do
   url 'http://assets.cacoo.com/extension/151111/CacooNinjaInstaller.dmg'
   name 'Cacoo Ninja'
   homepage 'https://cacoo.com/extension'
-  license :gratis
 
   depends_on cask: 'adobe-air'
 

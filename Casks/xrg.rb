@@ -5,7 +5,6 @@ cask 'xrg' do
   url "http://download.gauchosoft.com/xrg/XRG-release-#{version}.zip"
   name 'XRG'
   homepage 'http://www.gauchosoft.com/Products/XRG/'
-  license :gpl
 
   app 'XRG.app'
 end

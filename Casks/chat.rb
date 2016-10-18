@@ -8,7 +8,6 @@ cask 'chat' do
           checkpoint: 'd6f08b16a849fac36038aff4d15fa764f0e71ba531992c3770b9347d39a4dc48'
   name 'Chat'
   homepage 'https://chatformac.com/'
-  license :gratis
 
   app 'Chat.app'
 end

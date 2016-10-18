@@ -7,7 +7,6 @@ cask 'sequential' do
           checkpoint: '1fb8416920c90af57525b72c518fd89b0e6e29775d576720adf7535268ea510d'
   name 'Sequential'
   homepage 'http://sequentialx.com'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Sequential.app'
 end

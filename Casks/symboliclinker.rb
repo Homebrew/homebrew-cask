@@ -1,13 +1,12 @@
 cask 'symboliclinker' do
-  version '2.0v3'
-  sha256 'f04f13e215bc084a47424f1768d759b748663ec593de1ec0d5709d1777b2b297'
+  version '2.1'
+  sha256 '89c25ece463416ab9e66e090c1c2b0f1b9eb7a1f41e278e3ac20f6b2f6424d93'
 
   url "https://github.com/nickzman/symboliclinker/releases/download/v#{version}/SymbolicLinker#{version}.dmg"
   appcast 'https://github.com/nickzman/symboliclinker/releases.atom',
-          checkpoint: 'bcd2b4693b166b4a9e6ed00b6b293f4f8d11796b4c8d9db77cdcd1439b50685b'
+          checkpoint: 'c7ec74fb114ce3be79f7e71def4f02ada28e5485387696ffadd65631a4817537'
   name 'SymbolicLinker'
   homepage 'https://github.com/nickzman/symboliclinker'
-  license :bsd
 
   service 'SymbolicLinker.service'
 end

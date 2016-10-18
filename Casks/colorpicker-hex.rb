@@ -5,7 +5,6 @@ cask 'colorpicker-hex' do
   url "http://wafflesoftware.net/hexpicker/download/HexColorPicker-#{version}.zip"
   name 'Hex Color Picker'
   homepage 'http://wafflesoftware.net/hexpicker/'
-  license :bsd
 
   colorpicker 'Hex Color Picker/HexColorPicker.colorPicker'
 end

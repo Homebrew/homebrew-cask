@@ -20,7 +20,6 @@ cask 'moneywell' do
   end
   name 'MoneyWell'
   homepage 'http://nothirst.com/moneywell/'
-  license :commercial
 
   depends_on macos: '>= :tiger'
 

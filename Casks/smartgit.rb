@@ -1,11 +1,10 @@
 cask 'smartgit' do
-  version '8.0.0'
-  sha256 '8fe6d2186a60bec057ae847dacf1665328f868eb2ef89943f1c13e3961392f4d'
+  version '8.0.3'
+  sha256 '9c807cbb5a16e18cba8d5a5f141f99dddc5248d11d2e214590664e885b758896'
 
-  url "https://www.syntevo.com/downloads/smartgit/smartgit-macosx-#{version.dots_to_underscores}.dmg"
+  url "https://www.syntevo.com/static/smart/download/smartgit/smartgit-macosx-#{version.dots_to_underscores}.dmg"
   name 'SmartGit'
   homepage 'https://www.syntevo.com/smartgit/'
-  license :commercial
 
   app 'SmartGit.app'
   binary "#{appdir}/SmartGit.app/Contents/MacOS/SmartGit"

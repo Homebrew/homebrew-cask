@@ -5,7 +5,6 @@ cask 'save-as-wwf' do
   url "http://www.saveaswwf.com/fileadmin/user_upload/wwfPlugin/SAVE_AS_WWF_#{version}.pkg.zip"
   name 'Save as WWF'
   homepage 'http://www.saveaswwf.com/'
-  license :closed
 
   pkg 'SAVE_AS_WWF_1.0.pkg'
 

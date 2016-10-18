@@ -6,7 +6,6 @@ cask 'steam' do
   url 'https://steamcdn-a.akamaihd.net/client/installer/steam.dmg'
   name 'Steam'
   homepage 'https://store.steampowered.com/about/'
-  license :gratis
 
   auto_updates true
 

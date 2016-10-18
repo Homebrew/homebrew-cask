@@ -5,7 +5,6 @@ cask '4peaks' do
   url 'http://downloads.nucleobytes.com/4peaks'
   name '4Peaks'
   homepage 'http://nucleobytes.com/index.php/4peaks'
-  license :gratis
 
   app '4Peaks.app'
 end

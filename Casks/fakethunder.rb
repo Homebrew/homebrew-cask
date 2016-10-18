@@ -5,7 +5,6 @@ cask 'fakethunder' do
   url "http://dl.martianz.cn/fakethunder/fakeThunder#{version.major}#{version.patch}.zip"
   name 'fakeThunder'
   homepage 'https://martianz.cn/fakethunder/'
-  license :gpl
 
   app 'fakeThunder.app'
 end

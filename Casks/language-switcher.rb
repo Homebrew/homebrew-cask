@@ -7,7 +7,6 @@ cask 'language-switcher' do
           checkpoint: '94d37c78e8d717371e6446ee8e68e44f4f93e035faca026c7ece8337348b0b71'
   name 'Language Switcher'
   homepage 'http://www.tj-hd.co.uk/en-gb/languageswitcher/'
-  license :gratis
 
   app 'Language Switcher.app'
 end

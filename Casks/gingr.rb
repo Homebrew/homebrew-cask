@@ -8,7 +8,6 @@ cask 'gingr' do
           checkpoint: '55307efb6bc20c741265ac4903825fc8fc49a35e2b6e3ef6a3a387cf2b69dbc1'
   name 'Gingr'
   homepage 'https://harvest.readthedocs.org/en/latest/content/gingr.html'
-  license :bsd
 
   app 'Gingr.app'
 end

@@ -8,7 +8,6 @@ cask 'flowdock' do
           checkpoint: '05c0917ea74ed402ec6f41dac60a62549f062e7a2f983f410a860d324cdcf976'
   name 'Flowdock'
   homepage 'https://www.flowdock.com/'
-  license :gratis
 
   app 'Flowdock.app'
 end

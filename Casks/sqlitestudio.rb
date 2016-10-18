@@ -7,7 +7,6 @@ cask 'sqlitestudio' do
           checkpoint: '758d9f5ef56c89b6c28109c924cae4763ce9539f9f98bb2cbd58450e4bd7bb5f'
   name 'SQLiteStudio'
   homepage 'http://sqlitestudio.pl'
-  license :gpl
 
   app 'SQLiteStudio.app'
 

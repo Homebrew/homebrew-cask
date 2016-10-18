@@ -21,4 +21,4 @@ The following methods may be called to perform standard tasks:
 
 `set_ownership(paths)` defaults user ownership to the current user and group ownership to `staff`. These can be changed by passing in extra options: `set_ownership(paths, user: 'user', group: 'group')`.
 
-`suppress_move_to_applications` optionally accepts a `:key` parameter for apps which use a nonstandard `defaults` key. Example: [`alfred.rb`](https://github.com/caskroom/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/alfred.rb#L16).
+`suppress_move_to_applications` optionally accepts a `key:` parameter for apps which use a nonstandard `defaults` key. Example: [`alfred.rb`](https://github.com/caskroom/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/alfred.rb#L16).

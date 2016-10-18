@@ -5,7 +5,6 @@ cask 'navicat-data-modeler' do
   url "http://download.navicat.com/download/modeler0#{version.major_minor.no_dots}_en.dmg"
   name 'Navicat Data Modeler'
   homepage 'https://www.navicat.com/products/navicat-data-modeler'
-  license :commercial
 
   depends_on macos: '>= :lion'
   depends_on arch: :intel

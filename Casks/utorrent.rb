@@ -2,17 +2,11 @@ cask 'utorrent' do
   version :latest
   sha256 :no_check
 
-  if Hardware::CPU.type == :ppc
-    url 'https://download-new.utorrent.com/endpoint/utmac/os/osx-ppc/track/stable/'
-    app 'uTorrent.app'
-  else
-    url 'https://download-new.utorrent.com/endpoint/utmac/os/osx/track/stable/'
-    installer manual: 'uTorrent.app'
-  end
-
+  url 'https://download-new.utorrent.com/endpoint/utmac/os/osx/track/stable/'
   name 'µTorrent'
   homepage 'https://www.utorrent.com/'
-  license :freemium
+
+  installer manual: 'uTorrent.app'
 
   zap delete: [
                 '~/Library/Application Support/uTorrent',

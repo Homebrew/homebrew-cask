@@ -7,7 +7,6 @@ cask 'minco' do
           checkpoint: '652b47a25570c42e1b2ad9f3b1c584a93c53326b7ce87fc16c79a2c2767bbff4'
   name 'Minco'
   homepage 'http://www.celmaro.com/minco/'
-  license :commercial
 
   depends_on macos: '>= :yosemite'
   depends_on arch: :x86_64

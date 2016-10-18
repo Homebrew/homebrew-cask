@@ -12,7 +12,6 @@ cask 'alfred' do
   url "https://cachefly.alfredapp.com/Alfred_#{version}.zip"
   name 'Alfred'
   homepage 'https://www.alfredapp.com/'
-  license :freemium
 
   app 'Alfred 2.app'
   app 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
@@ -41,8 +40,6 @@ Tests on the following values are known to be acceptable:
 | value                       | examples
 | ----------------------------|--------------------------------------
 | `MacOS.version`             | [macports.rb](https://github.com/caskroom/homebrew-cask/blob/9eae0af0daf9b55f81a3af010cca3b0b1272e2db/Casks/macports.rb#L4#L20), [coconutbattery.rb](https://github.com/caskroom/homebrew-cask/blob/2c801af44be29fff7f3cb2996455fce5dd95d1cc/Casks/coconutbattery.rb#L3#L17)
-| `Hardware::CPU.is_32_bit?`  | [vuescan.rb](https://github.com/caskroom/homebrew-cask/blob/655bfe48b41ae94cb81b1003182b8de5fa2995ef/Casks/vuescan.rb#L5#L9)
-| `Hardware::CPU.is_64_bit?`  | none, see [Always Fall Through to the Newest Case](#always-fall-through-to-the-newest-case)
 
 ### Version Comparisons
 
@@ -57,11 +54,11 @@ if MacOS.version <= :mavericks     # symbolic name
 if MacOS.version <= '10.9'         # version string
 ```
 
-The available symbols for macOS versions are: `:cheetah`, `:puma`, `:jaguar`, `:panther`, `:tiger`, `:leopard`, `:snow_leopard`, `:lion`, `:mountain_lion`, `:mavericks`, `:yosemite`, `:el_capitan`, and `:sierra`. The corresponding numeric version strings should given as major releases containing a single dot.
+The available symbols for macOS versions are: `:cheetah`, `:puma`, `:jaguar`, `:panther`, `:tiger`, `:leopard`, `:snow_leopard`, `:lion`, `:mountain_lion`, `:mavericks`, `:yosemite`, `:el_capitan`, and `:sierra`. The corresponding numeric version strings should be given as major releases containing a single dot.
 
 ### Always Fall Through to the Newest Case
 
-Conditionals should be constructed so that the default is the newest OS version or hardware type. When using an `if` statement, test for older versions, and then let the `else` statement hold the latest and greatest. This makes it more likely that the Cask will work without alteration when a new OS is released. Example (from [coconutbattery.rb](https://github.com/caskroom/homebrew-cask/blob/2c801af44be29fff7f3cb2996455fce5dd95d1cc/Casks/coconutbattery.rb)):
+Conditionals should be constructed so that the default is the newest OS version. When using an `if` statement, test for older versions, and then let the `else` statement hold the latest and greatest. This makes it more likely that the Cask will work without alteration when a new OS is released. Example (from [coconutbattery.rb](https://github.com/caskroom/homebrew-cask/blob/2c801af44be29fff7f3cb2996455fce5dd95d1cc/Casks/coconutbattery.rb)):
 
 ```ruby
 if MacOS.version <= :tiger
@@ -72,6 +69,11 @@ else
   # ...
 end
 ```
+
+### Switch Between Languages or Regions
+
+If a cask is available in multiple languages, you can use the `language` stanza to switch between languages or regions based on the system locale.
+
 
 ## Arbitrary Ruby Methods
 
@@ -88,7 +90,6 @@ cask 'myapp' do
   name 'MyApp'
   version '1.0'
   sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
-  license :unknown
 
   url "https://#{Utils.arbitrary_method}"
   homepage 'https://www.example.com/'
@@ -118,18 +119,19 @@ There are currently some arbitrary limitations on Cask tokens which are in the p
 
 ## Stanza order
 
-Having a common order for stanzas makes Casks easier to update and parse. Below is the the complete stanza sequence (no Cask will have all stanzas). The empty lines shown here are also important, as they help to visually delineate information.
+Having a common order for stanzas makes Casks easier to update and parse. Below is the complete stanza sequence (no Cask will have all stanzas). The empty lines shown here are also important, as they help to visually delineate information.
 
 ```
 version
 sha256
+
+language
 
 url
 appcast,
   checkpoint: # shown here as it is required with `appcast`
 name
 homepage
-license
 gpg, key_id: # on same line, since first part is typically small
 
 auto_updates

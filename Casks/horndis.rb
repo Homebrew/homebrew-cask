@@ -1,11 +1,10 @@
 cask 'horndis' do
-  version '7'
-  sha256 '6e12e75a07ed729986cc0d7a25faa1aa1171c2e4a8ddf3ccf819a35a20c6e98d'
+  version '8'
+  sha256 'daca9f4e3e7d392821fa349403d349930e675d234cd27a5f43f2b46da34b5a92'
 
   url "http://joshuawise.com/downloads/HoRNDIS-rel#{version}.pkg"
   name 'HoRNDIS'
   homepage 'http://joshuawise.com/horndis'
-  license :gpl
   gpg "#{url}.sig",
       key_id: '3e7f6d58ea80e0b3'
 

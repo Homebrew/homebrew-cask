@@ -6,7 +6,6 @@ cask 'prezi' do
   url "https://prezi-a.akamaihd.net/next-desktop/mac/Prezi_#{version}.dmg"
   name 'Prezi'
   homepage 'https://prezi.com/'
-  license :gratis
 
   app 'Prezi.app'
 end

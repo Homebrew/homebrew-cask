@@ -5,7 +5,6 @@ cask 'hyperdither' do
   url 'http://www.tinrocket.com/wp-content/plugins/download-monitor/download.php?id=1'
   name 'HyperDither'
   homepage 'http://www.tinrocket.com/hyperdither/'
-  license :gratis
 
   app "HyperDither #{version}/HyperDither.app"
 end

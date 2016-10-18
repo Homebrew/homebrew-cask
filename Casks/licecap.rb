@@ -5,7 +5,6 @@ cask 'licecap' do
   url "http://www.cockos.com/licecap/licecap#{version.no_dots}.dmg"
   name 'LICEcap'
   homepage 'http://www.cockos.com/licecap/'
-  license :gpl
 
   app 'LICEcap.app'
 end

@@ -7,7 +7,6 @@ cask 'whichspace' do
           checkpoint: '100d2a27e92d419f26342e7c2389388e0812a59640d21203db0c8c81a8aa9b82'
   name 'WhichSpace'
   homepage 'https://github.com/gechr/WhichSpace'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   depends_on macos: '> :yosemite'
 

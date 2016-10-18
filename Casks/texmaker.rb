@@ -5,7 +5,6 @@ cask 'texmaker' do
   url 'http://www.xm1math.net/texmaker/TexmakerMacosxLion.zip'
   name 'Texmaker'
   homepage 'http://www.xm1math.net/texmaker'
-  license :gratis
 
   app 'TexmakerMacosxLion/texmaker.app'
 end

@@ -6,7 +6,6 @@ cask 'blisk' do
   url "https://bliskcloudstorage.blob.core.windows.net/mac-installers/BliskInstaller_#{version}.dmg"
   name 'Blisk Browser'
   homepage 'https://blisk.io'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Blisk.app'
 end

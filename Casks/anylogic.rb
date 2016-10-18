@@ -5,7 +5,6 @@ cask 'anylogic' do
   url "http://www.anylogic.com/files/anylogic-ple-#{version}.dmg"
   name 'AnyLogic'
   homepage 'http://www.anylogic.com'
-  license :gratis
 
   depends_on arch: :x86_64
   depends_on macos: '>= :lion'

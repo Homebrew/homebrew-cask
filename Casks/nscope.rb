@@ -7,7 +7,6 @@ cask 'nscope' do
           checkpoint: '12f3b54ce7a1fea1f5f2987f3959eba11bf04ad1afbb0338897ae9b77d7c84df'
   name 'nScope'
   homepage 'http://www.nscope.org/'
-  license :closed
 
   app 'nScope.app'
 end

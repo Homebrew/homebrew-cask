@@ -8,7 +8,6 @@ cask 'chatty' do
           checkpoint: '626bce8b501ab9a8e61e3feb9869c9780178e8e873a620b8048454c94915cdee'
   name 'Chatty'
   homepage 'https://chatty.github.io'
-  license :mit
 
   suite 'Chatty'
 

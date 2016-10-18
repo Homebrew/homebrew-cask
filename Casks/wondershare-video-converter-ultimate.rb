@@ -5,7 +5,6 @@ cask 'wondershare-video-converter-ultimate' do
   url 'http://download.wondershare.com/video-converter-ultimate-mac_full735.dmg'
   name 'Wondershare Video Converter Ultimate'
   homepage 'https://www.wondershare.com/mac-video-converter-ultimate/'
-  license :freemium
 
   app 'Wondershare Video Converter Ultimate.app'
 

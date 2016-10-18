@@ -8,7 +8,6 @@ cask 'thyme' do
           checkpoint: '05388198ae32566498217e07231e5908c53127ed33ac2152c629ca867c6c1fda'
   name 'Thyme'
   homepage 'https://joaomoreno.github.io/thyme/'
-  license :mit
 
   app 'Thyme.app'
 end

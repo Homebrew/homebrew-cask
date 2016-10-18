@@ -17,7 +17,6 @@ cask 'daisydisk' do
 
   name 'DaisyDisk'
   homepage 'https://www.daisydiskapp.com'
-  license :freemium
 
   depends_on macos: '>= :snow_leopard'
 

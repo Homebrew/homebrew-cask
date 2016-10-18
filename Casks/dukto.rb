@@ -8,7 +8,6 @@ cask 'dukto' do
           checkpoint: '49bd22f7cca66665784b455169e086660d3fb3ff55471c62fbd7162ee37a3550'
   name 'Dukto'
   homepage 'http://www.msec.it/dukto/'
-  license :oss
 
   app 'Dukto.app'
 end

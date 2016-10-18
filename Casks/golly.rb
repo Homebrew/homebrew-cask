@@ -21,7 +21,6 @@ cask 'golly' do
 
   name 'Golly'
   homepage 'http://golly.sourceforge.net/'
-  license :gpl
 
   caveats do
     files_in_usr_local

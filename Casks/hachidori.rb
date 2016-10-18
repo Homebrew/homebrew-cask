@@ -8,7 +8,6 @@ cask 'hachidori' do
           checkpoint: 'f72e2b4819b37d77f73496453f1d91398d2f677314c9492b9db3b3c927c8c0e5'
   name 'Hachidori'
   homepage 'http://hachidori.ateliershiori.moe'
-  license :bsd
 
   app 'Hachidori.app'
 end

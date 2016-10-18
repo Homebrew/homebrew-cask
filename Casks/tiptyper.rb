@@ -13,7 +13,6 @@ cask 'tiptyper' do
 
   name 'TipTyper'
   homepage 'https://www.brunophilipe.com/software/tiptyper/'
-  license :gpl
 
   auto_updates true
 

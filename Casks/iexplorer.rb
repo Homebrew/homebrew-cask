@@ -1,15 +1,14 @@
 cask 'iexplorer' do
-  version '3.9.14.0'
-  sha256 '135639867092e801c2eba58812ce32d8e852b17a18c4fc3dcab5afaf0711a2a9'
+  version '4.0.10.0'
+  sha256 '4d4ec33e065a7c1e9cf124516c69f7086f8c1419888f37d821919fd7bc4a095b'
 
   url "https://www.macroplant.com/release/iExplorer-#{version}.dmg"
   appcast "https://www.macroplant.com/iexplorer/ie#{version.major}-appcast.xml",
-          checkpoint: '9b147ab5c6acdf1c27eb2fbb42cb68d36c5fb0ecb9a250e2a1c76667ed8af90b'
+          checkpoint: 'a2c5f6cb31d8d18b94527522631551e9959a1fb95745e1fa8cf088141fbcd649'
   name 'iExplorer'
   homepage 'https://www.macroplant.com/iexplorer/'
-  license :freemium
 
-  depends_on macos: '>= :snow_leopard'
+  depends_on macos: '>= :mavericks'
 
   app 'iExplorer.app'
 end

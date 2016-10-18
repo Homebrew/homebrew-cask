@@ -8,7 +8,6 @@ cask 'xquartz' do
           checkpoint: '74e4ffc811e99d388086551e256abc9259b9200d23a90eb380811516ae6f501a'
   name 'XQuartz'
   homepage 'https://www.xquartz.org/'
-  license :oss
 
   pkg 'XQuartz.pkg'
 
@@ -31,6 +30,7 @@ cask 'xquartz' do
                       '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.macosforge.xquartz.x11.sfl',
                       '~/Library/Application Support/XQuartz',
                       '~/Library/Caches/org.macosforge.xquartz.X11',
+                      '~/Library/Cookies/org.macosforge.xquartz.X11.binarycookies',
                       '~/Library/Logs/X11',
                       '~/Library/Logs/X11.org.macosforge.xquartz.log',
                       '~/Library/Logs/X11.org.macosforge.xquartz.log.old',

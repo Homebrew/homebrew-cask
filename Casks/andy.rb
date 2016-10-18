@@ -5,7 +5,6 @@ cask 'andy' do
   url "http://downloads.andyroid.net/installer/v#{version.major}/Andy_v#{version}_OSX.dmg"
   name 'Andy'
   homepage 'https://www.andyroid.net/'
-  license :commercial
 
   pkg 'Andy.pkg'
 

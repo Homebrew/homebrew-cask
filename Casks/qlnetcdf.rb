@@ -7,7 +7,6 @@ cask 'qlnetcdf' do
           checkpoint: '1f462ff39ea0307daf5aee204f2fdf3cd527b08b6fe127f07864fc8bde34a921'
   name 'QLNetcdf'
   homepage 'https://github.com/tobeycarman/QLNetcdf/'
-  license :mit
 
   qlplugin 'QLNetcdf.qlgenerator'
 end

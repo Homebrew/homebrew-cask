@@ -6,15 +6,18 @@ cask 'logitech-control-center' do
   elsif MacOS.version <= :lion
     version '3.9.1.b20'
     sha256 'e2c938286c4044bc6b83a7455f659e99d5854572d308cd6a9befd39eaed57d6c'
-  else
+  elsif MacOS.version <= :mountain_lion
     version '3.9.4'
     sha256 '0be19f691ad562cf143197bfd54c02183888c55842eb19a3bd644406acb3910d'
+    url "https://www.logitech.com/pub/techsupport/mouse/mac/lcc#{version}.zip"
+  else
+    version '3.9.5.66'
+    sha256 '4eb24d61d50ca3bb83b62c2cc965affa7d03eb247c38a8810f149d20edfab0df'
     url "https://www.logitech.com/pub/techsupport/mouse/mac/lcc#{version}.zip"
   end
 
   name 'Logitech Control Center'
   homepage 'https://support.logitech.com/en_us/product/3129'
-  license :closed
 
   pkg 'LCC Installer.app/Contents/Resources/Logitech Control Center.mpkg'
 

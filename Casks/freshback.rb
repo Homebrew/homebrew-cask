@@ -5,7 +5,6 @@ cask 'freshback' do
   url 'http://arkanath.com/FreshBackMac/FreshBackMac.zip'
   name 'FreshBackMac'
   homepage 'http://arkanath.com/FreshBackMac/'
-  license :gratis
 
   app 'FreshBackMac.app'
 end

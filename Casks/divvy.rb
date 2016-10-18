@@ -7,7 +7,6 @@ cask 'divvy' do
           checkpoint: '765774494983e7efb191ec656a5c8ab14ca1c0e93efaddcea573bc30aaaaaed1'
   name 'Divvy'
   homepage 'https://mizage.com/divvy/'
-  license :commercial
 
   app 'Divvy.app'
 

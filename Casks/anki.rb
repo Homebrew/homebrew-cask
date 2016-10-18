@@ -10,7 +10,6 @@ cask 'anki' do
   url "http://ankisrs.net/download/mirror/anki-#{version}.dmg"
   name 'Anki'
   homepage 'http://ankisrs.net/'
-  license :affero
 
   depends_on arch: :intel
 

@@ -5,7 +5,6 @@ cask 'cmpl' do
   url "http://www.coliop.org/_download/Cmpl-#{version.dots_to_hyphens}-osx.tar.gz"
   name 'CMPL'
   homepage 'http://www.coliop.org/'
-  license :gpl
 
   suite 'Cmpl'
   binary "#{appdir}/Cmpl/bin/cmpl"

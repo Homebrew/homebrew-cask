@@ -5,7 +5,6 @@ cask 'gifrocket' do
   url "http://www.gifrocket.com/Gifrocket.#{version}.zip"
   name 'Gifrocket'
   homepage 'http://www.gifrocket.com/'
-  license :gratis
 
   app 'Gifrocket.app'
 end

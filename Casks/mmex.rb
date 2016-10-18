@@ -8,7 +8,6 @@ cask 'mmex' do
           checkpoint: '18d49df544c4efd41e6f85a164250408437a9081fb6f3901c62f318e1c3e7e6c'
   name 'Money Manager Ex'
   homepage 'http://www.moneymanagerex.org'
-  license :gpl
 
   app 'MMEX.app'
 

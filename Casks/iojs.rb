@@ -5,7 +5,6 @@ cask 'iojs' do
   url "https://iojs.org/dist/v#{version}/iojs-v#{version}.pkg"
   name 'io.js'
   homepage 'https://iojs.org'
-  license :oss
 
   conflicts_with formula: 'iojs'
 

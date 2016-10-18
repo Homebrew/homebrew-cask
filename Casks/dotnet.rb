@@ -1,27 +1,24 @@
 cask 'dotnet' do
-  version '1.0.0-preview2-003121'
-  sha256 'c1ce17a46844291ee327c078e5c354cd5d90817ae2049c450a63522adf9b9c10'
+  version '1.0.0-preview2-003131'
+  sha256 '67415a46684be4ecdd3db69b235538d7f1583aaffd9ba79d3a10859a45a10623'
 
   url "https://download.microsoft.com/download/0/A/3/0A372822-205D-4A86-BFA7-084D2CBE9EDF/dotnet-dev-osx-x64.#{version}.pkg"
   name '.Net Core'
   homepage 'https://www.microsoft.com/net/core#macos'
-  license :mit
 
   depends_on formula: 'openssl'
 
   pkg "dotnet-dev-osx-x64.#{version}.pkg"
 
+  # Patch .NET Core to use the latest version of OpenSSL installed via Homebrew.
+  # https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md#openssl
+  postflight do
+    dotnet_core = '/usr/local/share/dotnet/shared/Microsoft.NETCore.App/1.0.1'
+    system '/usr/bin/sudo', '-E', '--', '/usr/bin/install_name_tool', "#{dotnet_core}/System.Security.Cryptography.Native.dylib", '-add_rpath', "#{HOMEBREW_PREFIX}/opt/openssl/lib"
+    system '/usr/bin/sudo', '-E', '--', '/usr/bin/install_name_tool', "#{dotnet_core}/System.Net.Http.Native.dylib", '-change', '/usr/lib/libcurl.4.dylib', "#{HOMEBREW_PREFIX}/opt/curl/lib/libcurl.4.dylib"
+  end
+
   uninstall pkgutil: 'com.microsoft.dotnet.*'
 
-  caveats <<-EOS.undent
-    The latest version of OpenSSL is required to use .NET Core.
-    It was already installed, but you may need to link it:
-
-      ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
-      ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
-
-    Zsh users may need to symlink the dotnet binary:
-
-      ln -s /usr/local/share/dotnet/dotnet /usr/local/bin
-  EOS
+  zap delete: '~/.nuget'
 end

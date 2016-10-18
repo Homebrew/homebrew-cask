@@ -8,7 +8,6 @@ cask 'noun-project' do
           checkpoint: '5f20b3ebde64e2015c4be14b8b0f93cea927df78cf443ba7c985c314273dbfc2'
   name 'Noun Project'
   homepage 'https://thenounproject.com'
-  license :commercial
 
   depends_on macos: '>= 10.9'
 
