@@ -6,5 +6,5 @@ cask 'burp-suite' do
   name 'Burp Suite'
   homepage 'https://portswigger.net/burp/'
 
-
+  installer manual: 'Burp Suite Free Edition Installer.app'
 end
