@@ -6,7 +6,6 @@ cask 'veracrypt' do
   url 'https://download-codeplex.sec.s-msft.com/Download/Release?ProjectName=veracrypt&DownloadId=1614080&FileTime=131212015497000000&Build=21031'
   name 'VeraCrypt'
   homepage 'https://veracrypt.codeplex.com/'
-  license :oss
 
   depends_on cask: 'osxfuse'
 
