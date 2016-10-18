@@ -7,4 +7,8 @@ cask 'burp-suite' do
   homepage 'https://portswigger.net/burp/'
 
   installer manual: 'Burp Suite Free Edition Installer.app'
+
+  uninstall delete: '/Applications/Burp Suite Free Edition.app'
+
+  zap delete: '~/.BurpSuite'
 end
