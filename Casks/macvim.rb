@@ -1,5 +1,5 @@
 cask 'macvim' do
-  version '8.0.111'
+  version '8.0.112'
   sha256 'e91ad178c963df6f8ced8b61033a47aef290986fcf7b0e79e7b83b5aa7e5491c'
 
   url "https://github.com/macvim-dev/macvim/releases/download/snapshot-#{version.patch}/MacVim.dmg"
