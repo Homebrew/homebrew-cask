@@ -11,4 +11,8 @@ cask 'burp-suite' do
   uninstall delete: '/Applications/Burp Suite Free Edition.app'
 
   zap delete: '~/.BurpSuite'
+
+  caveats do
+    depends_on_java
+  end
 end
