@@ -4,7 +4,7 @@ cask 'macvim' do
 
   url "https://github.com/macvim-dev/macvim/releases/download/snapshot-#{version.patch}/MacVim.dmg"
   appcast 'https://github.com/macvim-dev/macvim/releases.atom',
-          checkpoint: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+          checkpoint: 'f2634e8d24d6f52a823d53e1a69bc5cd5981cd9f15c8437b3304f796b8f2d41d'
   name 'MacVim'
   homepage 'https://github.com/macvim-dev/macvim'
 
