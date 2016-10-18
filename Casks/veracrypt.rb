@@ -1,9 +1,9 @@
 cask 'veracrypt' do
-  version '1.18a'
-  sha256 'b7c6b1a321a5f712b3bce13523c26f2fe7caa7a4062c01e5be9eba4779bd524b'
+  version '1.19'
+  sha256 'da098bba200d2cebb193bd699eef6dec7834c8eeb579ed40bcd21d45487e6ce7'
 
   # download-codeplex.sec.s-msft.com/Download/Release?ProjectName=veracrypt was verified as official when first introduced to the cask
-  url 'https://download-codeplex.sec.s-msft.com/Download/Release?ProjectName=veracrypt&DownloadId=1601965&FileTime=131159523657700000&Build=21031'
+  url 'https://download-codeplex.sec.s-msft.com/Download/Release?ProjectName=veracrypt&DownloadId=1614080&FileTime=131212015497000000&Build=21031'
   name 'VeraCrypt'
   homepage 'https://veracrypt.codeplex.com/'
 
