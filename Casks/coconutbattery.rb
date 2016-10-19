@@ -7,6 +7,10 @@ cask 'coconutbattery' do
     version '2.8'
     sha256 'fcfc81214ff26afff9f5c6c7cdc455b23ac898b6918f864b641a9e31526692d4'
     url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version}.zip"
+  elsif MacOS.version <= :yosemite
+    version '3.3.4'
+    sha256 '0edf6bdaf28fb3cc9c242fd916c348fbbae30a5356ddc1d6e5158d50f96d740d'
+    url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version.dots_to_underscores}.zip"
   else
     version '3.4'
     sha256 '3b16e5dc3a26a9b3f698743ef891abbe9bba16aa8f540d437f9a7081957e8102'
