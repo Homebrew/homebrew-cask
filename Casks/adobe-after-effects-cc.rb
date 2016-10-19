@@ -24,7 +24,6 @@ cask 'adobe-after-effects-cc' do
       cookies:    { 'MM_TRIALS' => '1234' }
   name 'Adobe After Effects CC 2015'
   homepage 'https://www.adobe.com/uk/products/aftereffects.html'
-  license :commercial
 
   media_signature = '147EC100-14BE-45EF-AB42-35BAEE7D02F0'
 

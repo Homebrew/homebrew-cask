@@ -24,6 +24,7 @@ cask 'deeper' do
                       :mavericks,
                       :yosemite,
                       :el_capitan,
+                      :sierra,
                     ]
 
   app 'Deeper.app'

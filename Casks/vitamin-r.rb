@@ -20,11 +20,11 @@ cask 'vitamin-r' do
     url 'http://www.publicspace.net/download/Vitamin_2_19.dmg'
     app 'Vitamin-R 2.app'
   else
-    version '2.40'
-    sha256 'e67d154bd4cc8e7a6a4bd8d36337bbc5b428bdda7621ba981063fe93c1ebe376'
+    version '2.4.3'
+    sha256 'a08960027b32249e44d37ec30f1f6f78432f5f4eb116c24650b1a008b6fb7918'
     url "http://www.publicspace.net/download/signedVitamin#{version.major}.zip"
     appcast "http://www.publicspace.net/app/vitamin#{version.major}.xml",
-            checkpoint: '946c8d7e8039a91eef89d0f310c1282f31822ac32a43b2cea8784fc89f83f72b'
+            checkpoint: 'ddba0d4086693bc527ac9623936517dc265c6d44aabbf04145d40b9758250d7e'
     app 'Vitamin-R 2.app'
   end
 

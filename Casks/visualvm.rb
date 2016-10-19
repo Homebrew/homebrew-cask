@@ -1,10 +1,13 @@
 cask 'visualvm' do
-  version '1.3.8'
-  sha256 'dae23a7625f543f14f86f846e590dae308df4c27dd64eda4ab8d85b9078e35bd'
+  version '1.3.9'
+  sha256 '969708277eacfbaf1a0bc465110db454efd8225aa43db090109676bedff386b6'
 
-  url "https://java.net/downloads/visualvm/release138/VisualVM_#{version.no_dots}.dmg"
+  # github.com/visualvm/visualvm.src was verified as official when first introduced to the cask
+  url "https://github.com/visualvm/visualvm.src/releases/download/#{version}/VisualVM_#{version.no_dots}.dmg"
+  appcast 'https://github.com/visualvm/visualvm.src/releases.atom',
+          checkpoint: 'dde5d93c09ce408c053b472040a2e2bfb0c283152722968c7da55985489cac41'
   name 'VisualVM'
-  homepage 'https://visualvm.java.net'
+  homepage 'https://visualvm.github.io'
 
   app 'VisualVM.app'
 
