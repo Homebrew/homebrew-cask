@@ -10,4 +10,13 @@ cask 'little-flocker' do
   pkg 'Install Little Flocker.pkg'
 
   uninstall pkgutil: 'com.zdziarski.LittleFlockerDaemon'
+
+  zap       delete: [
+                      '~/Library/Caches/com.zdziarski.LittleFlockerUpdater',
+                      '~/Library/Cookies/com.zdziarski.LittleFlockerUpdater.binarycookies',
+                      '~/Library/Preferences/com.zdziarski.LittleFlockerConfiguration.plist',
+                      '~/Library/Preferences/com.zdziarski.LittleFlockerUpdater.plist',
+                      '/Users/Shared/Little Flocker',
+                      '/Users/Shared/Little Flocker Extras',
+                    ]
 end
