@@ -1,11 +1,11 @@
 cask 'jaspersoft-studio' do
-  version '6.1.0'
-  sha256 '71ff620a24071115d90e84aff9a5642c73e0c65e9411e869ae8879355c0bdba1'
+  version '6.3.1'
+  sha256 'e2c0e713d3c5b309e1944c3d472f9dcea9e29d4c0ba439942f377ba9786fcd6a'
 
   # sourceforge.net/jasperstudio was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/jasperstudio/JaspersoftStudio-#{version}/TIBCOJaspersoftStudio-#{version}.final-mac-x86_64.dmg"
   appcast 'https://sourceforge.net/projects/jasperstudio/rss',
-          checkpoint: '6b306acc2f4d67c9060263b4729526e7e65f2eb9480ce55b95e9ff246a1dbc02'
+          checkpoint: '8119c62e016755bd697e8becfc82f9eb342766a8e6d89895b02242588482faab'
   name 'Jaspersoft Studio'
   homepage 'https://community.jaspersoft.com/project/jaspersoft-studio'
 
