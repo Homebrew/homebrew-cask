@@ -1,6 +1,6 @@
 cask 'coda' do
-  version '2.5.17'
-  sha256 '2f22c7e1fe2a78beb65557a302c8d4de63106c95f5b0ac7ab4ff0d08e2e1e6d3'
+  version '2.5.18'
+  sha256 'e46f53c246f41b5ce159c0a89da08a587c1acfce01a105bbddb5948604606850'
 
   url "https://download.panic.com/coda/Coda%20#{version}.zip"
   name 'Panic Coda'
