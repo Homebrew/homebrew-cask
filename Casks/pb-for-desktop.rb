@@ -1,6 +1,6 @@
 cask 'pb-for-desktop' do
   version '2.9.0'
-  sha256 :no_check
+  sha256 '9eaaefc6f93a231a204b7d37145473b002240b8e3a029ccf893f757777dbf6c7'
 
   url "https://github.com/sidneys/pb-for-desktop/releases/download/v#{version}/pb-for-desktop-v#{version}-darwin-x64.zip"
   appcast 'https://github.com/sidneys/pb-for-desktop/releases.atom',
