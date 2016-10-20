@@ -4,7 +4,7 @@ cask 'pingplotter' do
 
   url 'http://www.pingplotter.com/downloads/pingplotter_osx.zip'
   name 'PingPlotter'
-  homepage 'https://www.pingplotter.com/download/'
+  homepage 'https://www.pingplotter.com/'
 
   app 'PingPlotter.app'
 end
