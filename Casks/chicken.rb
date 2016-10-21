@@ -1,12 +1,12 @@
 cask 'chicken' do
-  version '2.2b2'
-  sha256 '20e910b6cbf95c3e5dcf6fe8e120d5a0911f19099128981fb95119cee8d5fc6b'
+  version '2.2b3'
+  sha256 '78f05c20e6584d8eb46a30c0f9eb3e90f4e583a0f2d78ad5810370fadec0f323'
 
-  url "https://downloads.sourceforge.net/chicken/Chicken-#{version}.dmg"
-  appcast 'http://chicken.sourceforge.net/chicken.xml',
-          checkpoint: '7dc47253417a3a5a34bbb32d25563b49cdec2c3d34f06893402349e1d19362e0'
+  url "https://github.com/boecko/chicken/releases/download/v#{version}/Chicken_#{version}.dmg"
+  appcast 'https://github.com/boecko/chicken/releases.atom',
+          checkpoint: 'ba84c852314ecc19d785e572707dd986645bb6d871335c4e165d3a3436b1fc13'
   name 'Chicken'
-  homepage 'https://sourceforge.net/projects/chicken/'
+  homepage 'https://github.com/boecko/chicken'
 
   app 'Chicken.app'
 
