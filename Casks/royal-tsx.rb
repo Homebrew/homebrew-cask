@@ -4,7 +4,7 @@ cask 'royal-tsx' do
 
   url "http://v2.royaltsx.com/updates/royaltsx_#{version}.dmg"
   appcast "https://royaltsx-v#{version.major}.royalapplications.com/updates_stable.php",
-          checkpoint: '1c70f653f26c956862062b7dd9cf6c1ce65b3065d707edbe0abb511a1ea21d12'
+          checkpoint: '24711c531c247279671199e4247695bcbc9c30d3e69254fc22c23df86cde5bcd'
   name 'Royal TSX'
   homepage 'http://www.royaltsx.com'
 
