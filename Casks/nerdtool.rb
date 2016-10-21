@@ -6,7 +6,7 @@ cask 'nerdtool' do
   url "http://cloud.github.com/downloads/balthamos/geektool-3/nerdtool-#{version}.zip"
   appcast 'https://github.com/balthamos/geektool-3/releases.atom',
           checkpoint: 'f5e8427431f93a5acf5d5616ab479aa6de5ed88e19476b179869fe12914fcc91'
-  name 'nerdtool'
+  name 'Nerdtool'
   homepage 'http://mutablecode.com/apps/nerdtool.html'
 
   app "nerdtool-#{version}/NerdTool.app"
