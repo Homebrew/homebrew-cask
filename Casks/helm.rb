@@ -9,7 +9,5 @@ cask 'helm' do
   name 'Helm'
   homepage 'https://github.com/kubernetes/helm'
 
-  depends_on arch: :x86_64
-
   binary 'darwin-amd64/helm'
 end
