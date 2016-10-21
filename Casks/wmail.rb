@@ -9,5 +9,5 @@ cask 'wmail' do
   name 'WMail'
   homepage 'https://thomas101.github.io/wmail/'
 
-  app 'WMail-darwin-x64/WMail.app'
+  app 'WMail.app'
 end
