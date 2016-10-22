@@ -10,6 +10,10 @@
 
 header 'Running before_script.sh...'
 
+# work around travis xcode bug
+# https://github.com/direnv/direnv/issues/210
+run rvm get head
+ 
 # update homebrew
 run brew update
 
