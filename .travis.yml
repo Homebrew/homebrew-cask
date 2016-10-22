@@ -7,8 +7,10 @@ matrix:
   include:
     - os: osx
       osx_image: xcode8
+      rvm: system
     - os: osx
       osx_image: xcode7.3
+      rvm: system
   fast_finish: true
 
 branches:
