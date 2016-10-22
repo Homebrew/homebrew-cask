@@ -1,17 +1,16 @@
 cask 'pb-for-desktop' do
-  version '2.9.0'
-  sha256 '9eaaefc6f93a231a204b7d37145473b002240b8e3a029ccf893f757777dbf6c7'
+  version '2.9.2'
+  sha256 '324dab567f9bb5271db77fa7b262a8a2948176810bd3472955db0ef14d75e59e'
 
   url "https://github.com/sidneys/pb-for-desktop/releases/download/v#{version}/pb-for-desktop-v#{version}-darwin-x64.zip"
   appcast 'https://github.com/sidneys/pb-for-desktop/releases.atom',
-          checkpoint: 'cc9b404807059f60c4c0f295d9caed3849813223ea927e635871ca0021fae3e7'
+          checkpoint: '4984930827cd9e67b0aecde7c8e7ee9001daf9a2f9b5169f375dc4e2b221d585'
   name 'PB for Desktop'
   homepage 'https://github.com/sidneys/pb-for-desktop'
 
   app 'PB for Desktop.app'
 
   zap delete: [
-                '~/Library/Application Support/ShipIt_stderr.log',
                 '~/Library/Application Support/PB for Desktop',
                 '~/Library/Caches/de.sidneys.pb-for-desktop',
                 '~/Library/Logs/pb-for-desktop',
