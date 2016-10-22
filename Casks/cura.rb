@@ -1,12 +1,21 @@
 cask 'cura' do
-  version '15.04.6'
-  sha256 'a3ce29da4d024187e6db1cc2f5643d2084160a2d09be738fe83e1a18d8456ef5'
+  version '2.3.0'
+  sha256 'cacc6d0002299791150b1310d332c1e5ead694f99044d57b2076c62d10f0fb50'
 
-  url "https://software.ultimaker.com/current/Cura-#{version}-MacOS.dmg"
+  url "https://software.ultimaker.com/current/Cura-#{version}-Darwin.dmg"
   name 'Cura'
   homepage 'https://ultimaker.com/en/products/software'
 
-  app 'Cura/Cura.app'
+  conflicts_with cask: 'lulzbot-cura'
 
-  zap delete: '~/.cura'
+  app 'Cura.app'
+
+  uninstall quit: 'nl.ultimaker.cura'
+
+  zap delete: [
+                '~/.cura',
+                '~/Library/Application Support/cura',
+                '~/Library/Preferences/nl.ultimaker.cura.Cura.plist',
+                '~/Library/Saved Application State/nl.ultimaker.cura.savedState',
+              ]
 end
