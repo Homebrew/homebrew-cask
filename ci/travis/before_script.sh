@@ -23,18 +23,18 @@ run 'env | sort'
 run sw_vers
 
 # capture system ruby and gem locations
-run export SYSTEM_RUBY_HOME="/System/Library/Frameworks/Ruby.framework/Versions/${HOMEBREW_RUBY%.*}"
+run export SYSTEM_RUBY_HOME="/System/Library/Frameworks/Ruby.framework/Versions/Current"
 run export SYSTEM_RUBY_BINDIR="${SYSTEM_RUBY_HOME}/usr/bin"
-run export SYSTEM_GEM_HOME="${SYSTEM_RUBY_HOME}/usr/lib/ruby/gems/${HOMEBREW_RUBY}"
+run export SYSTEM_GEM_HOME="$(gem_homes="${SYSTEM_RUBY_HOME}/usr/lib/ruby/gems/"*; echo ${gem_homes[${#gem_homes[@]}-1]})"
 run export SYSTEM_GEM_BINDIR="${SYSTEM_GEM_HOME}/bin"
 
 # capture user gem locations
-run export GEM_HOME="$HOME/.gem/ruby/${HOMEBREW_RUBY}"
+run export GEM_HOME="${HOME}/.gem/ruby/${SYSTEM_GEM_HOME##*/}"
 run export GEM_BINDIR="${GEM_HOME}/bin"
 
 # ensure that the gems we install are used before system gems
 run export GEM_PATH="${GEM_HOME}:${SYSTEM_GEM_HOME}"
-run export PATH="${GEM_BINDIR}:${SYSTEM_GEM_BINDIR}:${SYSTEM_RUBY_BINDIR}:$PATH"
+run export PATH="${GEM_BINDIR}:${SYSTEM_GEM_BINDIR}:${SYSTEM_RUBY_BINDIR}:${PATH}"
 
 # ensure that brew uses the ruby we want it to
 run export HOMEBREW_RUBY_PATH="${SYSTEM_RUBY_BINDIR}/ruby"
