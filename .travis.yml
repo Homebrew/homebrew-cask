@@ -1,12 +1,7 @@
 language: ruby
+cache: bundler
 
 sudo: false
-
-env:
-  global:
-    - LANG=en_US.UTF-8
-    - LANGUAGE=en_US.UTF-8
-    - LC_ALL=en_US.UTF-8
 
 matrix:
   include:
@@ -21,10 +16,6 @@ matrix:
 branches:
   only:
     - master
-
-cache:
-  directories:
-    - $HOME/.gem
 
 install: true # skip install step
 
