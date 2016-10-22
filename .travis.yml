@@ -2,29 +2,17 @@ language: ruby
 
 sudo: false
 
-env:
-  global:
-    - LANG=en_US.UTF-8
-    - LANGUAGE=en_US.UTF-8
-    - LC_ALL=en_US.UTF-8
-
 matrix:
   include:
     - os: osx
       osx_image: xcode8
-      rvm: system
     - os: osx
       osx_image: xcode7.3
-      rvm: system
   fast_finish: true
 
 branches:
   only:
     - master
-
-cache:
-  directories:
-    - $HOME/.gem
 
 install: true # skip install step
 
