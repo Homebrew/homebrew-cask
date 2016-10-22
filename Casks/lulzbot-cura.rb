@@ -1,4 +1,4 @@
-cask 'cura-lulzbot' do
+cask 'lulzbot-cura' do
   version '21.00-b796'
   sha256 '91747d45a9419542ee12ce962e9237b26fe138f9115bff781538ba8d62bbb8ac'
 
