@@ -1,6 +1,6 @@
 cask 'pb-for-desktop' do
   version '2.9.2'
-  sha256 'c28d023d1be83a04155f1c098c97c25777ce21ec740cd7807a96e76780081e42'
+  sha256 '324dab567f9bb5271db77fa7b262a8a2948176810bd3472955db0ef14d75e59e'
 
   url "https://github.com/sidneys/pb-for-desktop/releases/download/v#{version}/pb-for-desktop-v#{version}-darwin-x64.zip"
   name 'PB for Desktop'
