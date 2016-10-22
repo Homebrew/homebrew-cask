@@ -10,45 +10,8 @@
 
 header 'Running before_script.sh...'
 
-# https://github.com/rvm/rvm/pull/3627
-run rvm get head
-
-# unset rvm hook functions
-run unset -f cd gem
-
-# print all travis-defined environment variables
-run 'env | sort'
-
-# print detailed macOS version info
-run sw_vers
-
-# capture system ruby and gem locations
-run export SYSTEM_RUBY_HOME="/System/Library/Frameworks/Ruby.framework/Versions/${HOMEBREW_RUBY%.*}"
-run export SYSTEM_RUBY_BINDIR="${SYSTEM_RUBY_HOME}/usr/bin"
-run export SYSTEM_GEM_HOME="${SYSTEM_RUBY_HOME}/usr/lib/ruby/gems/${HOMEBREW_RUBY}"
-run export SYSTEM_GEM_BINDIR="${SYSTEM_GEM_HOME}/bin"
-
-# capture user gem locations
-run export GEM_HOME="$HOME/.gem/ruby/${HOMEBREW_RUBY}"
-run export GEM_BINDIR="${GEM_HOME}/bin"
-
-# ensure that the gems we install are used before system gems
-run export GEM_PATH="${GEM_HOME}:${SYSTEM_GEM_HOME}"
-run export PATH="${GEM_BINDIR}:${SYSTEM_GEM_BINDIR}:${SYSTEM_RUBY_BINDIR}:$PATH"
-
-# ensure that brew uses the ruby we want it to
-run export HOMEBREW_RUBY_PATH="${SYSTEM_RUBY_BINDIR}/ruby"
-
-run which ruby
-run ruby --version
-
-run which gem
-run gem --version
-
+# update homebrew
 run brew update
-
-# ensure that we are the only brew-cask available
-run brew uninstall --force brew-cask
 
 # mirror the repo as a tap, then run the build from there
 run export CASK_TAP_DIR="$(brew --repository)/Library/Taps/${TRAVIS_REPO_SLUG}"
