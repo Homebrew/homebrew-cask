@@ -10,13 +10,11 @@ env:
 
 matrix:
   include:
-    - env: OSX=10.11 HOMEBREW_RUBY=2.0.0
-      os: osx
-      osx_image: xcode7.3
+    - os: osx
+      osx_image: xcode8
       rvm: system
-    - env: OSX=10.10 HOMEBREW_RUBY=2.0.0
-      os: osx
-      osx_image: xcode7.1
+    - os: osx
+      osx_image: xcode7.3
       rvm: system
   fast_finish: true
 
