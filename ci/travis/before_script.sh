@@ -10,17 +10,9 @@
 
 header 'Running before_script.sh...'
 
-# https://github.com/rvm/rvm/pull/3627
+# work around travis osx bug
+# https://github.com/travis-ci/travis-ci/issues/6307#issuecomment-233315824
 run rvm get head
-
-# unset rvm hook functions
-run unset -f cd gem
-
-# print all travis-defined environment variables
-run 'env | sort'
-
-# print detailed macOS version info
-run sw_vers
 
 # capture system ruby and gem locations
 run export SYSTEM_RUBY_HOME="/System/Library/Frameworks/Ruby.framework/Versions/Current"
@@ -39,16 +31,8 @@ run export PATH="${GEM_BINDIR}:${SYSTEM_GEM_BINDIR}:${SYSTEM_RUBY_BINDIR}:${PATH
 # ensure that brew uses the ruby we want it to
 run export HOMEBREW_RUBY_PATH="${SYSTEM_RUBY_BINDIR}/ruby"
 
-run which ruby
-run ruby --version
-
-run which gem
-run gem --version
-
+# update homebrew
 run brew update
-
-# ensure that we are the only brew-cask available
-run brew uninstall --force brew-cask
 
 # mirror the repo as a tap, then run the build from there
 run export CASK_TAP_DIR="$(brew --repository)/Library/Taps/${TRAVIS_REPO_SLUG}"
