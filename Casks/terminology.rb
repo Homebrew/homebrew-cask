@@ -6,7 +6,9 @@ cask 'terminology' do
   name 'terminology'
   homepage 'https://agiletortoise.com/terminology/mac/'
 
-  installer script: 'Terminology-for-OS-X/Install.command', sudo: false
+  artifact 'Terminology-for-OS-X/Terminology.dictionary', target: "#{ENV['HOME']}/Library/Dictionaries/Terminology.dictionary"
 
-  uninstall delete: File.expand_path('~/Library/Dictionaries/Terminology.dictionary')
+  caveats <<-EOS.undent
+    To activate, open Dictionary.app and check "Terminology" in preferences.
+  EOS
 end
