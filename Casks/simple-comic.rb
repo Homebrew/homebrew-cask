@@ -4,7 +4,7 @@ cask 'simple-comic' do
 
   url "https://github.com/dancingtortoise/Simple-Comic/releases/download/#{version}/SimpleComic_#{version}.zip"
   appcast 'https://github.com/dancingtortoise/Simple-Comic/releases.atom',
-          checkpoint: '3bb3b59bebce4cb396c2f0debeb04510261b6d9e0d0a071bef6de9a8d076fdb5'
+          checkpoint: '66df09ef39345ef6782eb01eee3cc86d8d2a9a7860d963f55a88b62cd143b976'
   name 'Simple Comic'
   homepage 'https://dancingtortoise.github.io/'
 
