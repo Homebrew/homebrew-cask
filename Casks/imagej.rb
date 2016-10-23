@@ -6,8 +6,11 @@ cask 'imagej' do
   name 'ImageJ'
   homepage 'https://imagej.nih.gov/ij/index.html'
 
-  depends_on cask: 'java'
   depends_on macos: '>= :mountain_lion'
 
   suite 'ImageJ'
+
+  caveats do
+    depends_on_java
+  end
 end
