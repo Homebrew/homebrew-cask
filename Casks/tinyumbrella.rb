@@ -7,7 +7,9 @@ cask 'tinyumbrella' do
   name 'TinyUmbrella'
   homepage 'https://www.firmwareumbrella.com/'
 
-  depends_on cask: 'java'
-
   app 'TinyUmbrella.app'
+
+  caveats do
+    depends_on_java
+  end
 end
