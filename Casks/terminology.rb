@@ -8,5 +8,5 @@ cask 'terminology' do
 
   installer script: 'Terminology-for-OS-X/Install.command', sudo: false
 
-  uninstall delete: Pathname.new(File.expand_path('~')).join('Library/Dictionaries/Terminology.dictionary')
+  uninstall delete: File.expand_path('~/Library/Dictionaries/Terminology.dictionary')
 end
