@@ -2,12 +2,6 @@ language: ruby
 
 sudo: false
 
-env:
-  global:
-    - LANG=en_US.UTF-8
-    - LANGUAGE=en_US.UTF-8
-    - LC_ALL=en_US.UTF-8
-
 matrix:
   include:
     - os: osx
