@@ -8,10 +8,5 @@ cask 'emojipedia' do
   name 'Emojipedia'
   homepage 'https://github.com/gingerbeardman/Emojipedia'
 
-  artifact 'Emojipedia.dictionary', target: "#{ENV['HOME']}/Library/Dictionaries/Emojipedia.dictionary"
-
-  caveats <<-EOS.undent
-    Open macOS Dictionary app (in Applications folder)
-    Enable "#{token}" in preferences to activate.
-  EOS
+  dictionary 'Emojipedia.dictionary'
 end
