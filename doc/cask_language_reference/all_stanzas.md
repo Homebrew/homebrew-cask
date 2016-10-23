@@ -21,17 +21,17 @@ Each Cask must declare one or more *artifacts* (i.e. something to install).
 | `app`              | yes                           | relative path to an `.app` that should be moved into the `/Applications` folder on installation (see also [App Stanza Details](stanzas/app.md))
 | `pkg`              | yes                           | relative path to a `.pkg` file containing the distribution (see also [Pkg Stanza Details](stanzas/pkg.md))
 | `binary`           | yes                           | relative path to a Binary that should be linked into the `/usr/local/bin` folder on installation
-| `colorpicker`      | yes                           | relative path to a ColorPicker plugin that should be linked into the `~/Library/ColorPickers` folder on installation
-| `font`             | yes                           | relative path to a Font that should be linked into the `~/Library/Fonts` folder on installation
-| `input_method`     | yes                           | relative path to a Input Method that should be linked into the `~/Library/Input Methods` folder on installation
-| `internet_plugin`  | yes                           | relative path to a Service that should be linked into the `~/Library/Internet Plug-Ins` folder on installation
-| `prefpane`         | yes                           | relative path to a Preference Pane that should be linked into the `~/Library/PreferencePanes` folder on installation
-| `qlplugin`         | yes                           | relative path to a QuickLook Plugin that should be linked into the `~/Library/QuickLook` folder on installation
-| `screen_saver`     | yes                           | relative path to a Screen Saver that should be linked into the `~/Library/Screen Savers` folder on installation
-| `service`          | yes                           | relative path to a Service that should be linked into the `~/Library/Services` folder on installation
-| `audio_unit_plugin`| yes                           | relative path to an Audio Unit plugin that should be linked into the `~/Library/Audio/Components` folder on installation
-| `vst_plugin`       | yes                           | relative path to a VST Plugin that should be linked into the `~/Library/Audio/VST` folder on installation
-| `vst3_plugin`      | yes                           | relative path to a VST3 Plugin that should be linked into the `~/Library/Audio/VST3` folder on installation
+| `colorpicker`      | yes                           | relative path to a ColorPicker plugin that should be moved into the `~/Library/ColorPickers` folder on installation
+| `font`             | yes                           | relative path to a Font that should be moved into the `~/Library/Fonts` folder on installation
+| `input_method`     | yes                           | relative path to a Input Method that should be moved into the `~/Library/Input Methods` folder on installation
+| `internet_plugin`  | yes                           | relative path to a Service that should be moved into the `~/Library/Internet Plug-Ins` folder on installation
+| `prefpane`         | yes                           | relative path to a Preference Pane that should be moved into the `~/Library/PreferencePanes` folder on installation
+| `qlplugin`         | yes                           | relative path to a QuickLook Plugin that should be moved into the `~/Library/QuickLook` folder on installation
+| `screen_saver`     | yes                           | relative path to a Screen Saver that should be moved into the `~/Library/Screen Savers` folder on installation
+| `service`          | yes                           | relative path to a Service that should be moved into the `~/Library/Services` folder on installation
+| `audio_unit_plugin`| yes                           | relative path to an Audio Unit plugin that should be moved into the `~/Library/Audio/Components` folder on installation
+| `vst_plugin`       | yes                           | relative path to a VST Plugin that should be moved into the `~/Library/Audio/VST` folder on installation
+| `vst3_plugin`      | yes                           | relative path to a VST3 Plugin that should be moved into the `~/Library/Audio/VST3` folder on installation
 | `suite`            | yes                           | relative path to a containing directory that should be moved into the `/Applications` folder on installation (see also [Suite Stanza Details](stanzas/suite.md))
 | `artifact`         | yes                           | relative path to an arbitrary path that should be moved on installation. Must provide an absolute path as a `target` (example [alcatraz.rb](https://github.com/caskroom/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/alcatraz.rb#L12)). This is only for unusual cases. The `app` stanza is strongly preferred when linking `.app` bundles.
 | `installer`        | yes                           | describes an executable which must be run to complete the installation (see [Installer Stanza Details](stanzas/installer.md))
