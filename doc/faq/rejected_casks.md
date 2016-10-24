@@ -16,4 +16,4 @@ Common reasons to reject a Cask entirely:
 
 Common reasons to reject a Cask from the main repo:
 
-+ The app is an alternate edition or a legacy or development version of a Cask already in the main repo, and as such should be submitted to [caskroom/versions](https://github.com/caskroom/homebrew-versions) ([documented](../development/adding_a_cask.md#beta-unstable-development-nightly-legacy-or-alternative-versions)). Common offenders include [Sublime Text 3](https://github.com/caskroom/homebrew-cask/search?utf8=%E2%9C%93&q=sublime+text+3&type=Issues) and [Firefox Developer Edition](https://github.com/caskroom/homebrew-cask/search?q=firefox+developer+edition&type=Issues&utf8=%E2%9C%93).
++ The cask was submitted to the wrong repo. When drafting a cask, consult “[Finding a Home For Your Cask](../development/adding_a_cask.md#finding-a-home-for-your-cask)” to see where it belongs.
