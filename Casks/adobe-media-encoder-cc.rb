@@ -35,7 +35,6 @@ cask 'adobe-media-encoder-cc' do
       cookies:    { 'MM_TRIALS' => '1234' }
   name 'Adobe Media Encoder CC 2015'
   homepage 'https://www.adobe.com/products/media-encoder.html'
-  license :commercial
 
   media_signature = '0FAC7130-BEC5-47A5-8813-1D339B8326ED'
 
