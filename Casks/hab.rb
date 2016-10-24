@@ -5,7 +5,7 @@ cask 'hab' do
   # habitat.bintray.com was verified as official when first introduced to the cask
   url "https://habitat.bintray.com/stable/darwin/x86_64/hab-#{version}-x86_64-darwin.zip"
   name 'Habitat'
-  homepage 'www.habitat.sh'
+  homepage 'https://www.habitat.sh'
 
   depends_on cask: 'docker'
 
