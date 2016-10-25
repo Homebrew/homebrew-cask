@@ -4,8 +4,8 @@ cask 'droplr' do
 
   # files.droplr.com.s3.amazonaws.com was verified as official when first introduced to the cask
   url "http://files.droplr.com.s3.amazonaws.com/apps/mac/Droplr+#{version.after_comma}.zip"
-  name "Droplr"
-  homepage "https://droplr.com/"
+  name 'Droplr'
+  homepage 'https://droplr.com/'
 
   auto_updates true
 
