@@ -1,9 +1,9 @@
 cask 'slack' do
-  version '2.0.3'
-  sha256 '0859a1742d339a1ae46fd5d68ff259da2efd649acdde1231f06a3d4e43810d47'
+  version '2.3.0'
+  sha256 '21f8bcef54132e1d67d7e697d9805790f249ef3fe7b3f4f99007d138187d7990'
 
-  # slack-ssb-updates.global.ssl.fastly.net was verified as official when first introduced to the cask
-  url "https://slack-ssb-updates.global.ssl.fastly.net/mac_public_releases/slack-#{version}.zip"
+  # downloads.slack-edge.com was verified as official when first introduced to the cask
+  url "https://downloads.slack-edge.com/mac_releases/Slack-#{version}-macOS.zip"
   appcast 'https://rink.hockeyapp.net/api/2/apps/38e415752d573e7e78e06be8daf5acc1',
           checkpoint: '16fdeec6794f180b946510dab4b4a5d844182d2631c81219f4601a931db4d104'
   name 'Slack'
