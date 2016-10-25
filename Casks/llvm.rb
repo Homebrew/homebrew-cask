@@ -1,4 +1,4 @@
-cask 'llvm380' do
+cask 'llvm' do
   version '3.8.0'
   sha256 'e5a961e04b0e1738bbb5b824886a34932dc13b0af699d1fe16519d814d7b776f'
 
