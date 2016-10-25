@@ -4,7 +4,7 @@ cask 'eclipse-jee' do
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-jee-#{version.after_comma.before_colon}-#{version.after_colon}-macosx-cocoa-x86_64.tar.gz&r=1"
   name 'Eclipse IDE for Java EE Developers'
-  homepage "http://www.eclipse.org/downloads/packages/release/#{version.after_comma.before_colon}/#{version.after_colon}"
+  homepage 'https://eclipse.org/'
 
   depends_on macos: '>= :leopard'
   depends_on arch: :x86_64

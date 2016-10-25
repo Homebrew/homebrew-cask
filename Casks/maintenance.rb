@@ -24,6 +24,7 @@ cask 'maintenance' do
                       :mavericks,
                       :yosemite,
                       :el_capitan,
+                      :sierra,
                     ]
 
   app 'Maintenance.app'

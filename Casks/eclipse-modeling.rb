@@ -1,8 +1,8 @@
 cask 'eclipse-modeling' do
-  version '4.6.0'
-  sha256 'dcd7ab2331f45b8c9df5324209bf304a7eb7de8e0f7eaa843009aba51ee62ca6'
+  version '4.6.1,neon:1a'
+  sha256 '641854cb0c5b1fac540e6ae77ae9ed040975c51f28b98861cb9757a1898555dd'
 
-  url 'https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/neon/R/eclipse-modeling-neon-R-macosx-cocoa-x86_64.tar.gz&r=1'
+  url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-modeling-#{version.after_comma.before_colon}-#{version.after_colon}-macosx-cocoa-x86_64.tar.gz&r=1"
   name 'Eclipse Modeling Tools'
   homepage 'https://eclipse.org/'
 

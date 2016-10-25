@@ -1,6 +1,6 @@
 cask 'mini-vmac' do
-  version '3.3.3'
-  sha256 '40a0a2a8a5f37a1f7826e104f0219708c87b6759d071c2d69e1419fbbf5d1dbf'
+  version '3.4.1'
+  sha256 '1d3b6051c22d68033eb47da5c1ec4cc4b2474ca2095f087b085ceaa5effc19da'
 
   url "http://www.gryphel.com/d/minivmac/minivmac-#{version}/minivmac-#{version}-imch.bin.tgz"
   name 'Mini vMac'

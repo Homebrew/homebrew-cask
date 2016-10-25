@@ -1,11 +1,11 @@
 cask 'tunnelbear' do
-  version '3.0.2'
-  sha256 '2be37c32f05322f5f1370a1ba5af306f71fefab8a7d32c983db25f156edac133'
+  version '3.0.4'
+  sha256 '64513cb2e66aa154afab2fdff1533cd9ad1db87556414629e49ea1249885abee'
 
   # tunnelbear.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://tunnelbear.s3.amazonaws.com/downloads/mac/TunnelBear-#{version}.zip"
   appcast 'https://s3.amazonaws.com/tunnelbear/downloads/mac/appcast.xml',
-          checkpoint: 'd95454250918704ea514c5723179462ace18f4bf15901dd44c640053e8e9bb71'
+          checkpoint: 'aa432e2566dec4ea933567aaa0b6dccd2ba59df265ef3d39fa90873d914bb9e4'
   name 'TunnelBear'
   homepage 'https://www.tunnelbear.com/'
 
