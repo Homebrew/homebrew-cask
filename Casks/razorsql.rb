@@ -1,6 +1,6 @@
 cask 'razorsql' do
-  version '7.0.8'
-  sha256 '3f22f0be5eb0a4ff06d81b162c4c3a7a801bd9e73932ca7cba6245152fbdd56f'
+  version '7.1.0'
+  sha256 'cabc57ed66062e03250b321ac486a4b484f22bb502af80a5fe7c491dd4e9a9d0'
 
   url "http://downloads.razorsql.com/downloads/#{version.dots_to_underscores}/razorsql#{version.dots_to_underscores}_x64.dmg"
   name 'RazorSQL'
