@@ -1,6 +1,6 @@
 cask 'ssh-tunnel-manager' do
-  version '226.001,1469934770'
-  sha256 'a10cd2eda221f2771b4e9be618a24844e462549844bffe73e110d183df7dece9'
+  version '227.007,1476730358'
+  sha256 '11c8b7ca6f3a79b2cefdfc665a6cc6d5aaf2dac199e9380f44c3e1aea191c41a'
 
   # dl.devmate.com/org.tynsoe.sshtunnelmanager was verified as official when first introduced to the cask
   url "https://dl.devmate.com/org.tynsoe.sshtunnelmanager/#{version.before_comma}/#{version.after_comma}/SSHTunnelManager-#{version.before_comma}.zip"
