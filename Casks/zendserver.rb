@@ -1,8 +1,8 @@
 cask 'zendserver' do
-  version '8.5.1'
-  sha256 '5a34d8ea941eed7bb981810bfee11f44ae27d0c9e40e50e8fd1c93b8781352c9'
+  version '9.0.1,7.0.11'
+  sha256 'e8de80902d9066b2194d98e5ab4a4387d3a1f4359c624245d8beba4c14040ab9'
 
-  url "http://downloads.zend.com/zendserver/#{version}/ZendServer-#{version}-php-5.6.10.dmg"
+  url "http://downloads.zend.com/zendserver/#{version.before_comma}/ZendServer-#{version.before_comma}-php-#{version.after_comma}.dmg"
   name 'Zend Server'
   homepage 'https://www.zend.com/en/products/server/'
 
