@@ -13,7 +13,7 @@ cask 'dotnet' do
   # Patch .NET Core to use the latest version of OpenSSL installed via Homebrew.
   # https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md#openssl
   postflight do
-    dotnet_core = '/usr/local/share/dotnet/shared/Microsoft.NETCore.App/1.0.1'
+    dotnet_core = '/usr/local/share/dotnet/shared/Microsoft.NETCore.App/1.0.2'
     system '/usr/bin/sudo', '-E', '--', '/usr/bin/install_name_tool', "#{dotnet_core}/System.Security.Cryptography.Native.dylib", '-add_rpath', "#{HOMEBREW_PREFIX}/opt/openssl/lib"
     system '/usr/bin/sudo', '-E', '--', '/usr/bin/install_name_tool', "#{dotnet_core}/System.Net.Http.Native.dylib", '-change', '/usr/lib/libcurl.4.dylib', "#{HOMEBREW_PREFIX}/opt/curl/lib/libcurl.4.dylib"
   end
