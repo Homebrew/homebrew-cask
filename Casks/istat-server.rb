@@ -1,17 +1,11 @@
 cask 'istat-server' do
-  version :latest
-  sha256 :no_check
+  version '3.00'
+  sha256 'd28fcc1751e308ca81cdd5255e8c2be54eaa5dc06957ca099b050733b99765f9'
 
-  url 'https://download.bjango.com/istatserver/'
+  # amazonaws.com/bjango was verified as official when first introduced to the cask
+  url "https://s3.amazonaws.com/bjango/files/istatserver#{version.major}/istatserver#{version}.zip"
   name 'iStat Server'
   homepage 'https://bjango.com/mac/istatserver/'
 
-  pkg 'iStat Server.pkg'
-
-  uninstall script:  '/Applications/iStat Server.app/Contents/Resources/Uninstaller',
-            pkgutil: 'com.bjango.istatserver.*'
-
-  caveats do
-    reboot
-  end
+  app 'iStat Server.app'
 end
