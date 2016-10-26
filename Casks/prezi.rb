@@ -1,6 +1,6 @@
 cask 'prezi' do
-  version '6.8.8'
-  sha256 '0df7a3c9be61e5a65c00c0fa34b5fbc028f5d337ace8b2daae8bcffaaa4f30d2'
+  version '6.8.22'
+  sha256 '261ce0821874b91226b88cc295fe4688a1a153a5961a2a19714195f151db8743'
 
   # prezi-a.akamaihd.net was verified as official when first introduced to the cask
   url "https://prezi-a.akamaihd.net/next-desktop/mac/Prezi_#{version}.dmg"
