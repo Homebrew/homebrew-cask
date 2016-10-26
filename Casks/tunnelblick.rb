@@ -19,6 +19,14 @@ cask 'tunnelblick' do
   uninstall launchctl: 'net.tunnelblick.tunnelblick.LaunchAtLogin',
             quit:      'net.tunnelblick.tunnelblick'
 
+  zap delete: [
+                '~/Library/Application Support/Tunnelblick',
+                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/net.tunnelblick.tunnelblick.help',
+                '~/Library/Caches/net.tunnelblick.tunnelblick',
+                '~/Library/LaunchAgents/net.tunnelblick.tunnelblick.LaunchAtLogin.plist',
+                '~/Library/Preferences/net.tunnelblick.tunnelblick.plist',
+              ]
+
   caveats <<-EOS.undent
     For security reasons, #{token} must be installed to /Applications,
     and will request to be moved at launch.
