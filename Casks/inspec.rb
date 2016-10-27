@@ -20,5 +20,6 @@ cask 'inspec' do
                        '/opt/inspec/',
                        '/usr/local/bin/inspec',
                      ]
+
   zap delete: '~/.inspec/'
 end
