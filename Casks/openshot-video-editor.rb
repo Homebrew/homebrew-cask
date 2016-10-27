@@ -1,8 +1,9 @@
 cask 'openshot-video-editor' do
-  version '2.0.7'
-  sha256 '5308836bf101d8f74975e27ec45a118064c876c4f7ad997fe6af72d503b61429'
+  version 'v2.1.0'
+  sha256 'cee76dd79b396705f4aecc5b12722259f68adc93a1123342d91e7b9dc885c349'
 
-  url "http://releases.openshot.org/mac/OpenShot-#{version}.dmg"
+  # github.com/OpenShot/openshot-qt was verified as official when first introduced to the cask
+  url "http://github.com/OpenShot/openshot-qt/releases/download/#{version}/OpenShot-#{version}.dmg"
   name 'OpenShot Video Editor'
   homepage 'http://openshot.org'
 
