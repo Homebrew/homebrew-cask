@@ -6,7 +6,6 @@ cask 'inspec' do
   url "https://packages.chef.io/stable/mac_os_x/10.11/inspec-#{version}.dmg"
   appcast 'https://github.com/chef/inspec/releases.atom',
           checkpoint: 'c9905934b7e515e3f0486187dabee2bb43dc7a63677f0fdc0ca85bc0f316597a'
-  name 'InSpec'
   name 'InSpec by Chef'
   homepage 'http://inspec.io/'
 
