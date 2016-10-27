@@ -11,15 +11,13 @@ cask 'inspec' do
 
   pkg "inspec-#{version}.pkg"
 
-  # When updating this cask, please verify the list of paths to delete (and
-  # add to it if necessary):
-  #  find /usr/local/bin -lname '/opt/inspec/*'
-  # (Source: https://docs.chef.io/install_dk.html#mac-os-x)
+  # As suggested in https://docs.chef.io/install_dk.html#mac-os-x
+  uninstall_postflight do
+    system "sudo find /usr/local/bin -lname '/opt/inspec/*' -delete"
+  end
+
   uninstall pkgutil: 'com.getchef.pkg.inspec',
-            delete:  [
-                       '/opt/inspec/',
-                       '/usr/local/bin/inspec',
-                     ]
+            delete:  '/opt/inspec/'
 
   zap delete: '~/.inspec/'
 end
