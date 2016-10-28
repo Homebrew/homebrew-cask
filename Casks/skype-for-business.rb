@@ -8,7 +8,7 @@ cask 'skype-for-business' do
 
   pkg 'SkypeForBusinessInstaller-#{version}.pkg'
 
-  uninstall pkgutil:  'com.microsoft.SkypeForBusiness',
+  uninstall pkgutil:    'com.microsoft.SkypeForBusiness',
             login_item: 'Skype for Business'
 
   zap delete: [
