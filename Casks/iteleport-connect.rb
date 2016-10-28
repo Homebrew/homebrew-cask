@@ -1,10 +1,10 @@
 cask 'iteleport-connect' do
   version '6.0.0.2'
-  sha256 '2a845a052dfa04ae8a5c26da918944082f4a3a43ba3804cb8a078a77ad9f3b4c'
+  sha256 '834098a95c95183782e498de6427e3106b867a1f1793e4fe1306bb065baa732f'
 
-  url "http://www.iteleportmobile.com/download/iTeleport%20Installer.v#{version}.dmg"
-  appcast 'http://www.iteleportmobile.com/connect/mac/new',
-          checkpoint: 'e7df5301267b725512751f09ecd0a260586044e2b1330b4ac7ea3a8c8d5257ff'
+  url "http://www.iteleportmobile.com/download/iTeleport%20Connect.v#{version}.app.zip"
+  appcast 'http://www.iteleportmobile.com/download/sparkle.xml',
+          checkpoint: '892ff0a386d02d45828ce48baf1c761bd1b1b1091eeab70f28dbab4245e88aab'
   name 'iTeleport Connect'
   homepage 'http://www.iteleportmobile.com/connect'
 
