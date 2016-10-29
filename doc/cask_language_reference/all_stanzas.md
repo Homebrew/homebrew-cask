@@ -22,6 +22,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install).
 | `pkg`              | yes                           | relative path to a `.pkg` file containing the distribution (see also [Pkg Stanza Details](stanzas/pkg.md))
 | `binary`           | yes                           | relative path to a Binary that should be linked into the `/usr/local/bin` folder on installation
 | `colorpicker`      | yes                           | relative path to a ColorPicker plugin that should be moved into the `~/Library/ColorPickers` folder on installation
+| `dictionary`       | yes                           | relative path to a Dictionary that should be moved into the `~/Library/Dictionaries` folder on installation
 | `font`             | yes                           | relative path to a Font that should be moved into the `~/Library/Fonts` folder on installation
 | `input_method`     | yes                           | relative path to a Input Method that should be moved into the `~/Library/Input Methods` folder on installation
 | `internet_plugin`  | yes                           | relative path to a Service that should be moved into the `~/Library/Internet Plug-Ins` folder on installation

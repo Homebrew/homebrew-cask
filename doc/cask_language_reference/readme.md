@@ -146,6 +146,7 @@ pkg
 installer
 binary
 colorpicker
+dictionary
 font
 input_method
 internet_plugin
