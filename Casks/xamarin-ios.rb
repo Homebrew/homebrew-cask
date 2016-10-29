@@ -1,8 +1,8 @@
 cask 'xamarin-ios' do
-  version '10.0.1.8'
-  sha256 'f8c1962fd0bc2d66ff9e0a9d6851ad0d1c2f56aa06322581a92d4a4dc631de26'
+  version '10.2.0.4'
+  sha256 '4d5cbed3623e4978298f17ad1837382576ad72972577c3368be4c9fb7ee3de9c'
 
-  url "https://download.xamarin.com/MonoTouch/Mac/xamarin.ios-#{version}.pkg"
+  url "https://dl.xamarin.com/MonoTouch/Mac/xamarin.ios-#{version}.pkg"
   appcast 'https://static.xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
           checkpoint: '00b79aa8567cd5acabbe285e2b09fe0765df2def16a111c8c757015aff57d21e'
   name 'Xamarin.iOS'
