@@ -6,9 +6,5 @@ cask 'terminology' do
   name 'terminology'
   homepage 'https://agiletortoise.com/terminology/mac/'
 
-  artifact 'Terminology-for-OS-X/Terminology.dictionary', target: "#{ENV['HOME']}/Library/Dictionaries/Terminology.dictionary"
-
-  caveats <<-EOS.undent
-    To activate, open Dictionary.app and check "Terminology" in preferences.
-  EOS
+  dictionary 'Terminology-for-OS-X/Terminology.dictionary'
 end
