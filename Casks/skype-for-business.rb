@@ -6,7 +6,7 @@ cask 'skype-for-business' do
   name 'Skype for Business'
   homepage 'https://www.microsoft.com/en-us/download/details.aspx?id=54108'
 
-  pkg 'SkypeForBusinessInstaller-#{version}.pkg'
+  pkg "SkypeForBusinessInstaller-#{version}.pkg"
 
   uninstall pkgutil:    'com.microsoft.SkypeForBusiness',
             login_item: 'Skype for Business'
