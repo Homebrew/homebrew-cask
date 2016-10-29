@@ -31,6 +31,9 @@ run export PATH="${GEM_BINDIR}:${SYSTEM_GEM_BINDIR}:${SYSTEM_RUBY_BINDIR}:${PATH
 # ensure that brew uses the ruby we want it to
 run export HOMEBREW_RUBY_PATH="${SYSTEM_RUBY_BINDIR}/ruby"
 
+# make sure brew is on master branch
+run export HOMEBREW_DEVELOPER=1
+
 # update homebrew
 run brew update
 
