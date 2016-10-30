@@ -1,11 +1,11 @@
 cask 'panda' do
-  version '1.0.0'
-  sha256 'b71faa052ea3c2eb02c62e698e5234259b2f5cc5a07cf78675bb1b017b26a63e'
+  version '1.4.2'
+  sha256 '551a2f4c2195dd1c00e7dfe83836a86485212ebeb6b008f130cecb83e002e3b8'
 
   # github.com/pablosproject/Panda-Mac-app was verified as official when first introduced to the cask
-  url "https://github.com/pablosproject/Panda-Mac-app/releases/download/v#{version}/Panda.app.zip"
+  url "https://github.com/pablosproject/Panda-Mac-app/releases/download/#{version}/Panda.zip"
   appcast 'http://pandapp.pablosproject.com/updates/appcast/appcast.xml',
-          checkpoint: 'b22489936ef3c40c5efcb566dd019e288909e03150b5b2846d78dc17cf2a6f34'
+          checkpoint: '987cf7ea8613c260111c8a924f59e6c4b76801a10feacdfcf63d0b5ccffcbbde'
   name 'Panda'
   homepage 'http://pandapp.pablosproject.com/'
 
