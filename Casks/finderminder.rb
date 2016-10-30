@@ -1,10 +1,10 @@
 cask 'finderminder' do
-  version '1.2'
-  sha256 '9123db1552c5b8f1a65fde3a0bcee8007bc7f6d04364f586a53fc4f1ad27797e'
+  version '1.3'
+  sha256 '0595c99aa34bfddcb78d86f256f076b902671313b964b3c62eaf1115275f1248'
 
   url "https://www.irradiatedsoftware.com/downloads/FinderMinder_#{version}.zip"
   appcast 'https://www.irradiatedsoftware.com/updates/profiles/finderminder.php',
-          checkpoint: '7871062270c4d96fb0878619d71edbdee1da5f4a51818401d5fd864450826853'
+          checkpoint: '5f07a947f8e34f2759bdf7073446973122c43680509bf67874ab495ff051c64f'
   name 'FinderMinder'
   homepage 'https://irradiatedsoftware.com/labs'
 
