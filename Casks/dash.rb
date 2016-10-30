@@ -8,6 +8,8 @@ cask 'dash' do
   name 'Dash'
   homepage 'https://kapeli.com/dash'
 
+  auto_updates true
+
   app 'Dash.app'
 
   postflight do

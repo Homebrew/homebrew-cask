@@ -6,5 +6,7 @@ cask 'sonos' do
   name 'Sonos'
   homepage 'https://www.sonos.com/'
 
+  auto_updates true
+
   app 'Sonos.app'
 end
