@@ -1,5 +1,5 @@
 cask 'yy' do
-  version '1.1.6'
+  version '1.1.7'
   sha256 'a38215e90cf99d9ad20f05d230ad26db106ea6fb8464e8829e57843044b3a03b'
 
   # yydl.duowan.com/mac/YY was verified as official when first introduced to the cask
