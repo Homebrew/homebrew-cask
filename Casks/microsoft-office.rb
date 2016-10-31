@@ -32,6 +32,7 @@ cask 'microsoft-office' do
                       '~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate.fba',
                       '~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate2',
                       '~/Library/Containers/com.microsoft.Excel',
+                      '~/Library/Containers/com.microsoft.errorreporting',
                       '~/Library/Containers/com.microsoft.Office365ServiceV2',
                       '~/Library/Containers/com.microsoft.onenote.mac',
                       '~/Library/Containers/com.microsoft.Outlook',
