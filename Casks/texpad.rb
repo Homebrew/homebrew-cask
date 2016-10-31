@@ -3,13 +3,13 @@ cask 'texpad' do
     version '1.7.21'
     sha256 'cae312b89d25752917bf66572fd1c6b6722097b651abe9a1a1b399dc36493512'
   else
-    version '1.7.32__104__a6eb552'
-    sha256 'f43883c2efd95d59a04e0bef0d3f847cdad8a779ee5f0f2f490fea12994d9fe2'
+    version '1_7_34__123__53f8781'
+    sha256 'b331dbe5f37540cb352b78c023c66914016b83d5fb7ffb9f944caa255f7bd58e'
   end
 
-  url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.dots_to_underscores}.zip"
+  url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.dots_to_underscores}.dmg"
   appcast 'https://www.texpadapp.com/static-collected/upgrades/texpadappcast.xml',
-          checkpoint: 'c71e243eb741d3b9fa44c7b649a78b564c79ea6038e98249b0905d11f2b1616e'
+          checkpoint: 'eb1bce3688e13a6c0a3544a6362365d94d8010b6d30ff149a76f82d3c461d748'
   name 'Texpad'
   homepage 'https://www.texpadapp.com/osx'
 

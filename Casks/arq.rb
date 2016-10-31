@@ -8,6 +8,8 @@ cask 'arq' do
   name 'Arq'
   homepage 'https://www.arqbackup.com/'
 
+  auto_updates true
+
   app 'Arq.app'
 
   postflight do
