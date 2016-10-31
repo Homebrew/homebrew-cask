@@ -13,8 +13,8 @@ cask 'lyx' do
   app 'LyX.app'
 
   zap delete: [
+                "~/Library/Application Support/LyX-#{version.major_minor}",
                 "~/Library/Preferences/org.lyx.LyX-#{version.major_minor}.plist",
                 '~/Library/Saved Application State/org.lyx.lyx.savedState',
-                "~/Library/Application Support/LyX-#{version.major_minor}",
               ]
 end
