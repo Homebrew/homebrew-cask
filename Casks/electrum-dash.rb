@@ -10,5 +10,5 @@ cask 'electrum-dash' do
 
   pkg "Electrum-DASH-#{version}-Installer.pkg"
 
-  uninstall delete: '/Applications/Electrum-DASH.app'
+  uninstall pkgutil: 'org.pythonmac.unspecified.Electrum-DASH'
 end
