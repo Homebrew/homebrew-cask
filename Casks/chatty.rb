@@ -1,11 +1,11 @@
 cask 'chatty' do
-  version '0.8.4'
-  sha256 'e9c934b991789066f7fe511bef3a8f907651edf5a557015ee9834a0ba8dbd5d3'
+  version '0.8.4.1'
+  sha256 'd241200802ec8a755cad4b6707c1ed39343ac82d4070b5a4656423386344ceb0'
 
   # github.com/chatty/chatty was verified as official when first introduced to the cask
   url "https://github.com/chatty/chatty/releases/download/v#{version}/Chatty_#{version}.zip"
   appcast 'https://github.com/chatty/chatty/releases.atom',
-          checkpoint: '29c2520f5b8090050447b322c84e76e75101b2e70ec09edfe77a5c7d7f1aab07'
+          checkpoint: 'ef6d8bab49e52d165104d7ac747e326240c7d069165bf2f4226ea4f9a1da8701'
   name 'Chatty'
   homepage 'https://chatty.github.io'
 

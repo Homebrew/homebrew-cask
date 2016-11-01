@@ -6,6 +6,8 @@ cask 'teamviewer' do
   name 'TeamViewer'
   homepage 'https://www.teamviewer.com/'
 
+  auto_updates true
+
   pkg 'Install TeamViewer.pkg'
 
   uninstall pkgutil:   'com.teamviewer.*',
