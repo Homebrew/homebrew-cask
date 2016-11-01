@@ -20,5 +20,8 @@ cask 'launchpad-manager-yosemite' do
   name 'Launchpad Manager'
   homepage 'http://launchpadmanager.com/'
 
-  zap delete: '~/Library/Application Support/Launchpad Manager'
+  zap delete: [
+                '~/Library/Application Support/Launchpad Manager',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.attilamiklosi.yos.launchpadmanager.sfl',
+              ]
 end
