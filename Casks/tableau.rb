@@ -6,5 +6,7 @@ cask 'tableau' do
   name 'Tableau'
   homepage 'https://www.tableau.com/'
 
+  depends_on macos: '>= :yosemite'
+
   app 'Tableau.app'
 end
