@@ -1,4 +1,4 @@
-Before opening your issue **you must check our instructions** for [reporting bugs](https://github.com/caskroom/homebrew-cask#reporting-bugs) or [making requests](https://github.com/caskroom/homebrew-cask#requests), as appropriate. Note the former has many links to help diagnose and fix the most common issues.
+Before opening your issue **you must check our instructions** for [reporting bugs](https://github.com/caskroom/homebrew-cask#reporting-bugs) or [making requests](https://github.com/caskroom/homebrew-cask#requests), as appropriate. Note the former has several links to help diagnose and fix common issues.
 
 If none of those guides is appropriate, delete this template and explain your issue in detail.
 
