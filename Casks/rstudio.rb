@@ -7,7 +7,6 @@ cask 'rstudio' do
   name 'RStudio'
   homepage 'https://www.rstudio.com/'
 
-  #requires an `r` package
   depends_on formula: 'homebrew/science/r'
   
   app 'RStudio.app'
