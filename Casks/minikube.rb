@@ -1,6 +1,6 @@
 cask 'minikube' do
-  version '0.12.0'
-  sha256 'a96d6e1d53a7999503d00bcd41b4ccaa80f5d57f798608f03e3f4d63a42f9991'
+  version '0.12.2'
+  sha256 '5f818be5235d606ec5241ac1eea0dc92e6328d56841617c51e4595a0abc4300c'
 
   url "https://github.com/kubernetes/minikube/releases/download/v#{version}/minikube-darwin-amd64"
   appcast 'https://github.com/kubernetes/minikube/releases.atom',
