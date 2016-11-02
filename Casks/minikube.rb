@@ -4,7 +4,7 @@ cask 'minikube' do
 
   url "https://github.com/kubernetes/minikube/releases/download/v#{version}/minikube-darwin-amd64"
   appcast 'https://github.com/kubernetes/minikube/releases.atom',
-          checkpoint: 'c7afe3f8144af79a5e76615a6ac526196b1080bc62367d8e58481c4aefdd2e62'
+          checkpoint: '1bd94ecadb4c69469c347626fd78c3248df9bc9418dca9d77d1dec2890fcf6b1'
   name 'Minikube'
   homepage 'https://github.com/kubernetes/minikube'
 
