@@ -5,8 +5,8 @@ cask 'r-app' do
     url "https://cloud.r-project.org/bin/macosx/R-#{version}-snowleopard.pkg"
     pkg "R-#{version}-snowleopard.pkg"
   else
-    version '3.3.1'
-    sha256 'ecef7e7ee7ee5a43076537b8ef7246e451d6170874e3036a46d5b807cdf7b8de'
+    version '3.3.2'
+    sha256 '10ee51682c963eea0d2c1a6e9185a3a03ada9c1a377e8406d02c490708b7b122'
     url "https://cloud.r-project.org/bin/macosx/R-#{version}.pkg"
     pkg "R-#{version}.pkg"
   end
