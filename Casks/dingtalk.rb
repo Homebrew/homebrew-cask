@@ -1,6 +1,6 @@
 cask 'dingtalk' do
-  version '3.0.2'
-  sha256 '7e1446a7833db51aaed84f9a0fb677fad763115c755250caea61aa6992da2c9f'
+  version '3.1.2'
+  sha256 '89062039007a218d67466f4388988e721240e8d577b32426f9dc7add2ecaf8e0'
 
   # alicdn.com/dingtalk-desktop was verified as official when first introduced to the cask
   url "https://download.alicdn.com/dingtalk-desktop/Release/install/DingTalk_v#{version}.dmg"
