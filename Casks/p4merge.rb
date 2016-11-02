@@ -1,6 +1,6 @@
 cask 'p4merge' do
   version '2015.2-1312139'
-  sha256 '7466f80e1eeb3cb31940de614505b9353ca15b5ea80e1016e5eb037096687f59'
+  sha256 '2a77a8c0270a158432d6c571828c397ef3bd20b911bbbfb3db810845dc2995bc'
 
   url "http://filehost.perforce.com/perforce/r#{version.sub(%r{\A20(\d\d\.\d+).*}, '\1')}/bin.macosx107x86_64/P4V.dmg"
   name 'Perforce P4Merge'
