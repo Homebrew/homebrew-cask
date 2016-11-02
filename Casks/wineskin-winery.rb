@@ -15,8 +15,9 @@ cask 'wineskin-winery' do
 
   zap delete: [
                 '~/Library/Application Support/Wineskin',
-                '~/Library/Preferences/com.urgesoftware.wineskin.wineskin.plist',
                 '~/Library/Caches/com.urgesoftware.wineskin.wineskinwinery',
+                '~/Library/Caches/Wine',
+                '~/Library/Preferences/com.urgesoftware.wineskin.wineskin.plist',
                 '~/Library/Saved Application State/com.urgesoftware.wineskin.wineskin.savedState',
               ],
       rmdir:  '~/Applications/Wineskin'
