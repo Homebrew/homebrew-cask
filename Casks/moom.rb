@@ -1,10 +1,10 @@
 cask 'moom' do
-  version '3.2.5'
-  sha256 'c6ba0b0d1b02893dfa88b79524039129e3d4c7cb4688420e159d7b6bddf3fe61'
+  version '3.2.6'
+  sha256 '482dd69788ac707f13483631eae5aaef7fcc356b688d51e359a3b69fc531a143'
 
   url 'https://manytricks.com/download/moom'
   appcast 'https://manytricks.com/moom/appcast.xml',
-          checkpoint: '9794a3f60d93e39cd1ea56d157635e881db492abcafdd13704cd6b8b58efeb4c'
+          checkpoint: 'ea75ccd05a0a5ffbff3da7692f5fb60315b6a13dc055a44562c07c38588edb41'
   name 'Moom'
   homepage 'https://manytricks.com/moom/'
 
