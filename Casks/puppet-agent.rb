@@ -20,6 +20,7 @@ cask 'puppet-agent' do
                       :mavericks,
                       :yosemite,
                       :el_capitan,
+                      :sierra
                     ]
 
   pkg "puppet-agent-#{version}-installer.pkg"
