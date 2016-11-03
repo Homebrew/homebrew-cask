@@ -1,12 +1,14 @@
 cask 'puppet-agent' do
-  version '1.5.2-1'
+  version '1.8.0-1'
 
   if MacOS.version == :mavericks
-    sha256 'bc75b261b2c1e5ed18599e63848e22fd4fca440242ba31391617a9a59806ef7a'
+    sha256 '5bae76b8382f3ba8c221abda941c494a11d3aeb49980cb7d82cc2d6cef842df0'
   elsif MacOS.version == :yosemite
-    sha256 'ba9d22b4992f96f6e100e689f92f81e4cabb0459730459d9b53fe54c59b392a4'
-  else # MacOS.version == :el_capitan
-    sha256 '67613f23e6e7708fd1f8ddaa8528260cce176c4d46d7c3d666c236ea0edd1c8c'
+    sha256 'db00b905c4a9ea45c04eaf530111cc46ef9c9219e2553b907e3023e5ac02e4dc'
+  elsif MacOS.version == :el_capitan
+    sha256 '477da11a3055e4a3a3790d3006cb68a1e4fa68bf16f2a715215b2c8efc061753'
+  else # MacOS.version == :sierra
+    sha256 'be8aa9fe9905ff4daca94be5cd6555e58cadfa4073ffb19e2e9f1edb9344e9f6'
   end
 
   # downloads.puppetlabs.com was verified as official when first introduced to the cask
@@ -18,6 +20,7 @@ cask 'puppet-agent' do
                       :mavericks,
                       :yosemite,
                       :el_capitan,
+                      :sierra,
                     ]
 
   pkg "puppet-agent-#{version}-installer.pkg"
