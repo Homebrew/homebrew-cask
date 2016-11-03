@@ -1,10 +1,10 @@
 cask 'querious' do
-  version '2.0_beta47'
-  sha256 '2aaab59cb566be4f035a6db5ba4190f273d0845b638711e09c50753956a2cc48'
+  version '2.0_beta48'
+  sha256 'ce8a446c9826428013b1e928e6c333c92ec0bc4f36c636d97aaed8809b0169d1'
 
   url "https://store.araelium.com/querious/downloads/versions/Querious#{version}.zip"
   appcast 'https://arweb-assets.s3.amazonaws.com/downloads/querious/prerelease-updates.xml',
-          checkpoint: 'de7aae65da7303ce083fd2f699c3a17cf06d7ec8711e28e353707e8746f1dd7c'
+          checkpoint: 'f95fff88eab5a30baf0bc25dbc23cba048d503b91d05eaa8d69079fbf4c412b8'
   name 'Querious 2'
   homepage 'http://www.araelium.com/querious/'
 
