@@ -26,7 +26,7 @@ cask 'cocktail' do
 
     url "https://www.maintain.se/downloads/sparkle/elcapitan/Cocktail_#{version}.zip"
     appcast 'https://www.maintain.se/downloads/sparkle/elcapitan/elcapitan.xml',
-            checkpoint: 'a3629f9c689818cf031fa873880eaff56a8a3a10dc70e60f59e6d67b81e993ae'
+            checkpoint: 'b094a58c5d390c3f02ebb8ae9ecb0c462cfab1b31091e7ca7ed97f809f075c7e'
   else
     version '10.1'
     sha256 'c87671e42f20646a981e69c8c5b8b502aee808367fe85f6a5709da129ed8eba6'
