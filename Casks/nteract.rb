@@ -6,7 +6,7 @@ cask 'nteract' do
   appcast 'https://github.com/nteract/nteract/releases.atom',
           checkpoint: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855i'
   name 'nteract'
-  homepage 'https://github.com/nteract'
+  homepage 'https://github.com/nteract/nteract'
 
   app 'nteract.app'
 end
