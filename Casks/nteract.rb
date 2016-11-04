@@ -4,7 +4,7 @@ cask 'nteract' do
 
   url "https://github.com/nteract/nteract/releases/download/v0.0.14/nteract-#{version}.dmg"
   name 'nteract'
-  homepage 'https://nteract.io/'
+  homepage 'https://github.com/nteract'
 
   app 'nteract.app'
 end
