@@ -6,5 +6,5 @@ cask 'polar-clock' do
   name 'PolarClock Screensaver'
   homepage 'http://blog.pixelbreaker.com/polarclock'
 
-  screen_saver 'PolarClock #{version}.saver'
+  screen_saver "PolarClock #{version}.saver"
 end
