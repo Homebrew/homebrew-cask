@@ -3,7 +3,7 @@ cask 'scythebill' do
   sha256 '5a96cfaf72f5a574129856908502ecb06416d870fc0a5284ac665da5ed655649'
 
   # amazonaws.com/downloads.scythebill.com was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/downloads.scythebill.com/scythebill-#{version}-mac-lion.zip"
+  url "https://s3.amazonaws.com/downloads.scythebill.com/Scythebill-#{version}.dmg"
   name 'Scythebill'
   homepage 'http://www.scythebill.com/'
 
