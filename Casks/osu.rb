@@ -7,4 +7,6 @@ cask 'osu' do
   homepage 'https://osu.ppy.sh'
 
   app 'osu!.app'
+
+  zap delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/osu!.wineskin.prefs.sfl'
 end
