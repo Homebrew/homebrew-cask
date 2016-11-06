@@ -15,19 +15,19 @@ cask 'totalspaces' do
     version '2.5.0'
     sha256 '8aeb2176c2e22356fe7919e904db05880fa49c10de74f00bdc82614d1a41e9ef'
 
-    url "http://downloads.binaryage.com/TotalSpaces2-#{version}.dmg"
-    appcast 'http://updates-s3.binaryage.com/totalspaces2.xml',
+    url "http://downloads.binaryage.com/TotalSpaces#{version.major}-#{version}.dmg"
+    appcast "http://updates-s3.binaryage.com/totalspaces#{version.major}.xml",
             checkpoint: 'b3650a22599c6be19c377b65f1c1f838acb6222b254c7b8616785a099e28398d'
 
-    installer manual: 'TotalSpaces2.app'
+    installer manual: "TotalSpaces#{version.major}.app"
 
-    uninstall pkgutil: 'com.binaryage.TotalSpaces2',
+    uninstall pkgutil: "com.binaryage.TotalSpaces#{version.major}",
               script:  {
-                         executable: 'TotalSpaces2 Uninstaller.app/Contents/MacOS/TotalSpaces2 Uninstaller',
+                         executable: "TotalSpaces#{version.major} Uninstaller.app/Contents/MacOS/TotalSpaces#{version.major} Uninstaller",
                          args:       %w[--headless],
                          sudo:       true,
                        },
-              quit:    'com.binaryage.TotalSpaces2'
+              quit:    "com.binaryage.TotalSpaces#{version.major}"
   end
 
   name 'TotalSpaces'
