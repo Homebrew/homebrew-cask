@@ -9,4 +9,12 @@ cask 'a-better-finder-rename' do
   homepage 'http://www.publicspace.net/ABetterFinderRename/'
 
   app "A Better Finder Rename #{version.major}.app"
+
+  zap delete: [
+                "~/Library/Application Support/A Better Finder Rename #{version.major}",
+                "~/Library/Caches/net.publicspace.abfr#{version.major}",
+                "~/Library/Cookies/net.publicspace.abfr#{version.major}.binarycookies",
+                "~/Library/Preferences/net.publicspace.abfr#{version.major}.plist",
+                "~/Library/Saved Application State/net.publicspace.abfr#{version.major}.savedState",
+              ]
 end
