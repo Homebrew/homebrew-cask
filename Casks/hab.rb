@@ -1,6 +1,6 @@
 cask 'hab' do
-  version '0.12.0-20161031220814'
-  sha256 '025cd9e1bb2ca6813b8046c1c218025f6e9f6f3ca07d81ea1654aa60849fab45'
+  version '0.12.1-20161102174221'
+  sha256 '7447018747b0f041b7a1128ffd6a0a3af3062fa865d1d48da908dc3490e354b8'
 
   # habitat.bintray.com was verified as official when first introduced to the cask
   url "https://habitat.bintray.com/stable/darwin/x86_64/hab-#{version}-x86_64-darwin.zip"
