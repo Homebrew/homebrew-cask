@@ -1,13 +1,26 @@
 cask 'chefdk' do
-  version '0.19.6-1'
-  sha256 '10018814d9abf1323ad7193c7950ec943b5c307e63f07de395604c09e96edce9'
+  if MacOS.version == :mountain_lion
+    version '0.11.2-1'
+    sha256 '56899eab322cacac7f445a24d3159af34fccb5910642f4535eff4ee47321fe56'
+  elsif MacOS.version >= :mavericks
+    version '0.19.6-1'
+    sha256 '10018814d9abf1323ad7193c7950ec943b5c307e63f07de395604c09e96edce9'
+  end
 
-  url "https://packages.chef.io/stable/mac_os_x/10.11/chefdk-#{version}.dmg"
-  appcast 'https://www.chef.io/chef/metadata-chefdk?p=mac_os_x&pv=10.11&m=x86_64&v=latest&prerelease=false',
-          checkpoint: 'ca865b973720f39f692b0e80e226cb999633e973cb74f9d2df4399a457854564'
+  url "https://packages.chef.io/stable/mac_os_x/#{MacOS.version}/chefdk-#{version}.dmg"
+  appcast "https://www.chef.io/chef/metadata-chefdk?p=mac_os_x&pv=#{MacOS.version}&m=x86_64&v=latest&prerelease=false",
+          checkpoint: case MacOS.version.to_sym
+                      when :sierra then        '9d33160c2cede7f08d57657e87636c5897be644896fee6fc1522533dc78915eb'
+                      when :el_capitan then    'ca865b973720f39f692b0e80e226cb999633e973cb74f9d2df4399a457854564'
+                      when :yosemite then      '78643063bb3707a7497cece47a0b3e27198689de1beb4bea62d96b3f4ad1fe27'
+                      when :mavericks then     '72da9c073d474524feb68fdb6387ad563fe927cf7f4c6abfb8b01c4b09e31450'
+                      when :mountain_lion then '524f724368825c42a2d9d62716c05a0e2f897b07f78a867f6db5e288c622b84b'
+                      end
   name 'Chef Development Kit'
   name 'ChefDK'
   homepage 'https://downloads.chef.io/chef-dk/'
+
+  depends_on arch: :x86_64
 
   pkg "chefdk-#{version}.pkg"
 
