@@ -18,6 +18,7 @@ cask 'bluestacks' do
 
   zap       delete: [
                       '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks.sfl',
+                      '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks-support-tool.sfl',
                       '~/Library/BlueStacks',
                       '~/Library/Caches/com.bluestacks.BlueStacks',
                       '~/Library/Caches/com.bluestacks.BlueStacks-Support-Tool',
