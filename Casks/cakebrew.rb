@@ -1,10 +1,10 @@
 cask 'cakebrew' do
-  version '1.2.1'
-  sha256 '73313ec778294161ff8d384a53cadd5d3da336209c13b1ddf931e735bd8f6aa9'
+  version '1.2.3'
+  sha256 '12b35753178ebb73cb71631c363ab8bdee1e06597015780c259e4483c1fa522a'
 
-  url "https://www.cakebrew.com/files/cakebrew-#{version}.zip"
+  url "https://cdn.cakebrew.com/cakebrew-#{version}.dmg"
   appcast 'https://www.cakebrew.com/appcast/profileInfo.php',
-          checkpoint: '7f833bba1fce6248bd9267fb1190f327871aaf06939af8c8b0c8a5f2a300e8d8'
+          checkpoint: 'febdbeca94df821a28298c2454f8d0c0a7272379bbe743174e2764865aac5bcb'
   name 'Cakebrew'
   homepage 'https://www.cakebrew.com/'
 
