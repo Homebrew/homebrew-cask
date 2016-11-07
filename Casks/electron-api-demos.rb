@@ -10,7 +10,9 @@ cask 'electron-api-demos' do
 
   app 'Electron API Demos.app'
   
-  zap delete: [ '~/Library/Application Support/Electron API Demos',
+  zap delete: [
+                '~/Library/Application Support/Electron API Demos',
                 '~/Library/Caches/com.electron.electron-api-demos',
-                '~/Library/Saved Application State/com.electron.electron-api-demos.savedState', ]
+                '~/Library/Saved Application State/com.electron.electron-api-demos.savedState',
+              ]
 end
