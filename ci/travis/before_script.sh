@@ -14,6 +14,17 @@ header 'Running before_script.sh...'
 # https://github.com/travis-ci/travis-ci/issues/6307#issuecomment-233315824
 run rvm get head
 
+# see https://github.com/travis-ci/travis-ci/issues/2666
+run export BRANCH_COMMIT="${TRAVIS_COMMIT_RANGE##*.}"
+run export TARGET_COMMIT="${TRAVIS_COMMIT_RANGE%%.*}"
+# shellcheck disable=SC2016
+if ! run 'MERGE_BASE="$(git merge-base "${BRANCH_COMMIT}" "${TARGET_COMMIT}")"'; then
+  run git fetch --unshallow
+  run 'MERGE_BASE="$(git merge-base "${BRANCH_COMMIT}" "${TARGET_COMMIT}")"'
+fi
+run export MERGE_BASE="${MERGE_BASE}"
+run export TRAVIS_COMMIT_RANGE="${MERGE_BASE}...${BRANCH_COMMIT}"
+
 # capture system ruby and gem locations
 run export SYSTEM_RUBY_HOME="/System/Library/Frameworks/Ruby.framework/Versions/Current"
 run export SYSTEM_RUBY_BINDIR="${SYSTEM_RUBY_HOME}/usr/bin"
