@@ -1,23 +1,21 @@
-cask 'auristor-openafs-client' do
+cask 'auristor-client' do
+  version '0.128'
+
   if MacOS.version == :mavericks
-    version '0.117'
-    sha256 'e5a043bc4c96af437f91eaa636daf9356b3e7bf4c2721fb46b0f98f59e893e40'
+    sha256 'e79579c9ac2cd609bedd2e01104c113a3417e082e6b5a9f8d333d74e8a6d5030'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.9/AuriStor-client-#{version}-Mavericks.dmg"
   elsif MacOS.version == :yosemite
-    version '0.117'
-    sha256 'f153396cb4b2dfd731e4a20d7d68170d1b9c15b47fd562328236493e8d7714ec'
+    sha256 '966c115c1d87f239fb63521940e4a4142cf17e096548e9aaed92912c91f7202b'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.10/AuriStor-client-#{version}-Yosemite.dmg"
   elsif MacOS.version == :el_capitan
-    version '0.117'
-    sha256 '9dcb5e795d0aa031d83353df9c8736f6e8cadd4d7dbd81f15f3bfce927c7d2d0'
+    sha256 'b0a7eee25398e265304a7adfe672f8daa942b916ed7e069d45c3b871d023086f'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.11/AuriStor-client-#{version}-ElCapitan.dmg"
   else
-    version '0.121'
-    sha256 'c3f2094568e6591512ee17bda84cb363f9325a93bc181e39e95987f4e51c3483'
+    sha256 'bd10ac755255e30b887cb8a534ddbf19801ffbec7a40a831a2580302bd3a6646'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.12/AuriStor-client-#{version}-Sierra.dmg"
   end
 
-  name 'AuriStor File System OpenAFS Client'
+  name 'AuriStor File System Client'
   homepage 'https://www.auristor.com'
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
