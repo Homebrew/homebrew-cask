@@ -6,8 +6,6 @@ cask 'jtool' do
   name 'jtool'
   homepage 'http://newosxbook.com/tools/jtool.html'
 
-  license :gratis
-
   binary 'jtool'
   artifact 'jtool.1', target: "#{HOMEBREW_PREFIX}/share/man/man1/jtool.1"
 end
