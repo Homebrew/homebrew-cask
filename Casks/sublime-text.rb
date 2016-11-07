@@ -8,6 +8,7 @@ cask 'sublime-text' do
   name 'Sublime Text'
   homepage 'https://www.sublimetext.com/3'
 
+  auto_updates true
   conflicts_with cask: 'caskroom/versions/sublime-text-dev'
 
   app 'Sublime Text.app'
