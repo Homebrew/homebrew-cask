@@ -31,16 +31,16 @@ cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Casks"
 cask-repair --pull origin --push $github_user $outdated_cask
 ```
 
-If there is a more complicated change, or there is a case where `cask-repair` fails, you can also follow the steps in [Adding a Cask](doc/development/adding_a_cask.md) to do the same thing manually. Remember to update the `version` and `shasum` values, as well as the appcast [`checkpoint`](doc/cask_language_reference/stanzas/appcast.md), if there is one.
+If there is a more complicated change, or there is a case where `cask-repair` fails (for example, where a Cask uses a [`url do` block](https://github.com/caskroom/homebrew-cask/blob/60531a2812005dd5f17dc92f3ce7419af3c5d019/Casks/audacity.rb#L5#L15) or the [`language` stanza](https://github.com/caskroom/homebrew-cask/blob/306b8fbd9502036f1ca742f70c569d8677b62403/Casks/firefox.rb#L4L74)), you can also follow the steps in [Adding a Cask](doc/development/adding_a_cask.md) to do the same thing manually. Remember to update the `version` and `shasum` values, as well as the appcast [`checkpoint`](doc/cask_language_reference/stanzas/appcast.md), if there is one.
 
 
 ## Getting Set Up To Contribute
 
 For manual updates, you'll need to fork the repository and add your copy as a remote (can also be done with `hub fork`).
 
-1. Fork the repository in GitHub with the `Fork` button.
+1: Fork the repository in GitHub with the `Fork` button.
 
-2. Add your GitHub fork as a remote for your homebrew-cask Tap:
+2: If you have not already done so, add your GitHub fork as a remote for your homebrew-cask Tap:
 
 ```bash
 $ github_user='<my-github-username>'
@@ -48,7 +48,9 @@ $ cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
 $ git remote add "$github_user" "https://github.com/$github_user/homebrew-cask"
 ```
 
-3. Switch to a new branch (ie. `new-feature`), and work from there: `git checkout -b new-feature`
+3: If you have already added your GitHub fork as a remote for your homebrew-cask Tap, ensure your fork is [up-to-date](https://help.github.com/articles/syncing-a-fork/).
+
+4: Switch to a new branch (ie. `new-feature`), and work from there: `git checkout -b new-feature`
 
 
 ## Adding a Cask
