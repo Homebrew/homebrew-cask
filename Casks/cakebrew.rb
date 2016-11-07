@@ -9,4 +9,9 @@ cask 'cakebrew' do
   homepage 'https://www.cakebrew.com/'
 
   app 'Cakebrew.app'
+
+  zap delete: [
+                '~/Library/Caches/com.brunophilipe.Cakebrew',
+                '~/Library/Preferences/com.brunophilipe.Cakebrew.plist',
+              ]
 end

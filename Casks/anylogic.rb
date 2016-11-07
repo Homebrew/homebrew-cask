@@ -13,7 +13,10 @@ cask 'anylogic' do
 
   uninstall pkgutil: 'com.anylogic.AnyLogic'
 
-  zap delete: '~/Library/Caches/com.anylogic.AnyLogic'
+  zap delete: [
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.anylogic.anylogic.sfl',
+                '~/Library/Caches/com.anylogic.AnyLogic',
+              ]
 
   caveats do
     depends_on_java('8')

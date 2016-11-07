@@ -9,4 +9,6 @@ cask 'black-screen' do
   homepage 'https://github.com/shockone/black-screen'
 
   app 'Black Screen.app'
+
+  zap delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.shockone.black-screen.sfl'
 end

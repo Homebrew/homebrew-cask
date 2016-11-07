@@ -7,4 +7,6 @@ cask 'etrecheck' do
   homepage 'https://www.etresoft.com/etrecheck'
 
   app 'EtreCheck.app'
+
+  zap delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.etresoft.etrecheck.sfl'
 end
