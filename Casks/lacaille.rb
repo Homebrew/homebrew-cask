@@ -12,7 +12,5 @@ cask 'lacaille' do
 
   uninstall login_item: 'Lacaille'
 
-  zap delete: [
-                '~/Library/Preferences/org.jpn.lacaille.Lacaille.plist',
-              ]
+  zap delete: '~/Library/Preferences/org.jpn.lacaille.Lacaille.plist'
 end
