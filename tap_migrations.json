@@ -35,6 +35,7 @@
   "serf": "homebrew/core",
   "sickbeard": "homebrew/core",
   "srclib": "homebrew/core",
+  "sshfs": "homebrew/fuse",
   "sslmate": "homebrew/core",
   "swi-prolog": "homebrew/core",
   "syncthing": "homebrew/core",
