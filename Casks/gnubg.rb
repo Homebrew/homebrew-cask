@@ -21,7 +21,7 @@ cask 'gnubg' do
   caveats do
     <<-EOS.undent
       #{token} only works if called from /Applications, so you may need to install it with
-        brew cask --appdir=/Applications install #{token}
+        brew cask install #{token} --appdir=/Applications
     EOS
   end
 end
