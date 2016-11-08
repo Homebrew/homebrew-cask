@@ -1,11 +1,11 @@
 cask 'powershell' do
-  version '6.0.0-alpha.11'
-  sha256 'fdbc1f8545e89514da5e74e0fb3bdf1df9267ac9c0a020e6a71d3c506ddd6082'
+  version '6.0.0-alpha.12'
+  sha256 'f990ba234d7fe0e017d53bc77382b28b7811f9e69f31a6ea1c13f97a69b67cdc'
 
   # github.com/PowerShell/PowerShell was verified as official when first introduced to the cask
   url "https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}.pkg"
   appcast 'https://github.com/PowerShell/PowerShell/releases.atom',
-          checkpoint: '81a82e6fdee26ab5d676d088533b6774e4ad788577d031a9e72f34419900b119'
+          checkpoint: '4fea5b9b5bfad008b99350428b5c355547dc2e9e03cd284752496f5fc2ecd600'
   name 'PowerShell'
   homepage 'https://msdn.microsoft.com/powershell'
 
