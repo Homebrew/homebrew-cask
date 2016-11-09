@@ -18,7 +18,8 @@ cask 'dotnet' do
     system '/usr/bin/sudo', '-E', '--', '/usr/bin/install_name_tool', "#{dotnet_core}/System.Net.Http.Native.dylib", '-change', '/usr/lib/libcurl.4.dylib', "#{HOMEBREW_PREFIX}/opt/curl/lib/libcurl.4.dylib"
   end
 
-  uninstall pkgutil: 'com.microsoft.dotnet.*'
+  uninstall pkgutil: 'com.microsoft.dotnet.*',
+            delete:  '/etc/paths.d/dotnet'
 
   zap delete: '~/.nuget'
 end
