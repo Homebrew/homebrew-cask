@@ -5,6 +5,7 @@ cask 'aurora-console' do
   url "https://github.com/Luxurioust/aurora/releases/download/#{version}/aurora_darwin_amd64_v#{version}.tar.gz"
   name 'aurora'
   homepage 'https://github.com/Luxurioust/aurora/'
+
   license :mit
 
   binary 'aurora', target: 'aurora'
