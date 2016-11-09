@@ -1,6 +1,6 @@
 cask '0ad' do
-  version '0.0.20-alpha'
-  sha256 '5161cc784fc0a4e11bf48648cf09cb6f5b38afd13a6e32fa484497690e253f86'
+  version '0.0.21-alpha'
+  sha256 '4f616798252e4c814262e25b7d7e714619a6f0897c8a44a6a128766901d8b25d'
 
   # wildfiregames.com was verified as official when first introduced to the cask
   url "https://releases.wildfiregames.com/0ad-#{version}-osx64.dmg"
