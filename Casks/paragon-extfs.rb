@@ -2,7 +2,7 @@ cask 'paragon-extfs' do
   version :latest
   sha256 :no_check
 
-  url 'http://dl.paragon-software.com/demo/extmac_trial_u.dmg'
+  url 'http://dl.paragon-software.com/demo/extmac10_trial.dmg'
   name 'Paragon ExtFS'
   homepage 'https://www.paragon-software.com/home/extfs-mac/'
 
