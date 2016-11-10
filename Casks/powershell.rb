@@ -9,6 +9,8 @@ cask 'powershell' do
   name 'PowerShell'
   homepage 'https://msdn.microsoft.com/powershell'
 
+  depends_on formula: 'openssl'
+
   pkg "powershell-#{version}.pkg"
 
   uninstall pkgutil: 'powershell'
@@ -24,4 +26,11 @@ cask 'powershell' do
                 '~/.local/share',
                 '~/.local',
               ]
+
+  caveats <<-EOS.undent
+    A OpenSSL-backed libcurl is required for custom handling of certificates.
+    This is rarely needed, but you can install it with
+      brew install curl --with-openssl
+    See https://github.com/PowerShell/PowerShell/issues/2211
+  EOS
 end
