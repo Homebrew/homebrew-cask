@@ -19,7 +19,10 @@ cask 'cleanmymac' do
             checkpoint: 'e29bde675d18732b441d8bb7e0850356a9ef2192efc68276ec1c146904ae1c13'
     app "CleanMyMac #{version.major}.app"
 
-    uninstall launchctl: "com.macpaw.CleanMyMac#{version.major}.Agent"
+    uninstall launchctl: [
+                           "com.macpaw.CleanMyMac#{version.major}.Agent",
+                           "com.macpaw.CleanMyMac#{version.major}.Scheduler",
+                         ]
 
     zap delete: [
                   "/Library/LaunchDaemons/com.macpaw.CleanMyMac#{version.major}.Agent.plist",
@@ -47,7 +50,10 @@ cask 'cleanmymac' do
       suppress_move_to_applications
     end
 
-    uninstall launchctl: "com.macpaw.CleanMyMac#{version.major}.Agent"
+    uninstall launchctl: [
+                           "com.macpaw.CleanMyMac#{version.major}.Agent",
+                           "com.macpaw.CleanMyMac#{version.major}.Scheduler",
+                         ]
 
     zap delete: [
                   "/Library/LaunchDaemons/com.macpaw.CleanMyMac#{version.major}.Agent.plist",
