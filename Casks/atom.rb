@@ -1,11 +1,11 @@
 cask 'atom' do
-  version '1.11.2'
-  sha256 '931285cb1cd6989ec632f01f60fe6dd22129f255cd724bfd891c40ab6bd52194'
+  version '1.12.0'
+  sha256 'b53cabe691fcc3f9181ab8b0a701d6bd4db19060784ad6e410709c0b45424c25'
 
   # github.com/atom/atom was verified as official when first introduced to the cask
   url "https://github.com/atom/atom/releases/download/v#{version}/atom-mac.zip"
   appcast 'https://github.com/atom/atom/releases.atom',
-          checkpoint: 'e8fb2044180ebc457a6d12139da2d20bbe68115246487363c44a5290cb779b08'
+          checkpoint: '514005066f3e36e6fd2c4d8fee06f83e3c34f4af3bd2a3f4a6ce10b47b541552'
   name 'Github Atom'
   homepage 'https://atom.io/'
 
