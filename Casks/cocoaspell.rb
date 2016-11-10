@@ -6,6 +6,8 @@ cask 'cocoaspell' do
   name 'cocoAspell'
   homepage 'http://people.ict.usc.edu/~leuski/cocoaspell'
 
+  depends_on macos: '>= :el_capitan'
+
   pkg 'cocoAspell.pkg'
 
   uninstall pkgutil: 'net.leuski.cocoaspell.*',
