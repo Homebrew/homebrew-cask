@@ -8,7 +8,12 @@ cask 'speedify' do
 
   app 'Speedify.app'
 
-  uninstall launchctl: 'me.connectify.SMJobBlessHelper'
+  uninstall launchctl: [
+                         'me.connectify.SMJobBlessHelper',
+                         'SwitchboardService',
+                         'SpeedifyService',
+                       ],
+            script:    '/Applications/Speedify.app/Contents/Resources/uninstall-speedify-service.sh'
 
   zap delete: '~/Library/Speedify'
 end
