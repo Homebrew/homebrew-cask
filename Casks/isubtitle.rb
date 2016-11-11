@@ -1,4 +1,4 @@
-cask 'isubtitle' do                                                                                                                                         
+cask 'isubtitle' do
   version '2.9.1.1'
   sha256 '81396f37915786fe61bb37441e489196095c4ac0de2f4613a724171ab5ac718c'
 
