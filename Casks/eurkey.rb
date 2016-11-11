@@ -1,6 +1,6 @@
 cask 'eurkey' do
   version :latest
-  sha256 'ef965dcb405378fb78cff8b89e69190d15b0e699ae773056e6c2cb9c66b9511d'
+  sha256 :no_check 
 
   # github.com/jonasdiemer/EurKEY-Mac was verified as official when first introduced to the cask
   url 'https://github.com/jonasdiemer/EurKEY-Mac/archive/master.zip'
