@@ -13,7 +13,7 @@ cask 'speedify' do
                          'SwitchboardService',
                          'SpeedifyService',
                        ],
-            script:    '/Applications/Speedify.app/Contents/Resources/uninstall-speedify-service.sh'
+            script:    'Speedify.app/Contents/Resources/uninstall-speedify-service.sh'
 
   zap delete: '~/Library/Speedify'
 end
