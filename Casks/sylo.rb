@@ -1,11 +1,11 @@
 cask 'sylo' do
-  version '2.5.0'
-  sha256 '2ae336f009302199ae513a44a57c3749b59171b07276609f5e6d63c8e85168d8'
+  version '3.0'
+  sha256 '8ae73bd3b11c681443c903557d11812b649509ea265ce795bff68b56820274a8'
 
   # s3-us-west-2.amazonaws.com/unision was verified as official when first introduced to the cask
-  url 'https://s3-us-west-2.amazonaws.com/unision/Sylo.zip'
+  url 'https://s3-us-west-2.amazonaws.com/unision/Sylo.dmg'
   appcast 'http://admin.unisionmusic.com/sylo/update.xml',
-          checkpoint: '9e7d6805a219f1ce3476159a9fddf88758d0c2f3577c0284dafd4461148f6e49'
+          checkpoint: '6ee1ec375c4e7777ea26a20318c1907699ebc9b184d5f70c36de421ae785dadb'
   name 'Sylo'
   homepage 'http://www.sylomusic.com/'
 
