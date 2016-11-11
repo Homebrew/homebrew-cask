@@ -4,7 +4,7 @@ cask 'speedify' do
 
   url 'https://downloads.speedify.com/speedify.php?platform=osx'
   name 'Speedify'
-  homepage 'http://speedify.com'
+  homepage 'https://speedify.com'
 
   app 'Speedify.app'
 
