@@ -1,5 +1,5 @@
 cask 'eurkey' do
-  version '1.1'
+  version :latest
   sha256 'ef965dcb405378fb78cff8b89e69190d15b0e699ae773056e6c2cb9c66b9511d'
 
   # github.com/jonasdiemer/EurKEY-Mac was verified as official when first introduced to the cask
