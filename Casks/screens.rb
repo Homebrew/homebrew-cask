@@ -1,8 +1,8 @@
 cask 'screens' do
-  version '3.6.11b4828'
-  sha256 'c62417cb0b41cbd1122a24ec10e3c1d6706224527c6d20518b4c52b5be6d4568'
+  version '3.8.3'
+  sha256 '880b7293875e394288e680b2a27a70c218adf313ac290be1049611765a5e81ca'
 
-  url "https://download.edovia.com/screens/Screens%20#{version}.zip"
+  url "https://download.edovia.com/screens/Screens_#{version}.zip"
   name 'Screens'
   homepage 'https://edovia.com/screens/#mac'
 
