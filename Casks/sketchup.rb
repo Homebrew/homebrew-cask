@@ -8,15 +8,16 @@ cask 'sketchup' do
   name 'SketchUp'
   homepage 'https://www.sketchup.com/'
 
-  suite 'SketchUp 2016'
+  suite 'SketchUp 2017'
 
   zap delete: [
-                '~/Library/Application Support/SketchUp 2016',
-                '~/Library/Caches/com.sketchup.SketchUp.2016',
-                '~/Library/Application Support/Trimble Connect for SketchUp',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sketchup.sketchup.2016.sfl',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sketchup.stylebuilder.2016.sfl',
-                '~/Library/Cookies/com.sketchup.SketchUp.2016.binarycookies',
-                '~/Library/Preferences/com.sketchup.SketchUp.2016.plist',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sketchup.sketchup.2017.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sketchup.stylebuilder.2017.sfl',
+                '~/Library/Application Support/SketchUp 2017',
+                '~/Library/Caches/com.sketchup.SketchUp.2017',
+                '~/Library/Cookies/com.sketchup.SketchUp.2017.binarycookies',
+                '~/Library/Preferences/com.sketchup.SketchUp.2017.plist',
+                '~/Library/Preferences/com.sketchup.SketchUp.2017.plist',
+                '~/Library/Preferences/Trimble.SketchUp-Helper.plist',
               ]
 end
