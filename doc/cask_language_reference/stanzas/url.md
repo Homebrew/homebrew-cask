@@ -32,7 +32,7 @@ Where `URL_SECTION` is the smallest possible portion of the URL that uniquely id
 
 These comments must be added so a user auditing the cask knows the URL was verified by the Homebrew-Cask team as the one provided by the vendor, even though it may look unofficial or suspicious. It is our responsibility as Homebrew-Cask maintainers to verify both the `url` and `homepage` information when first added (or subsequently modified, apart from versioning).
 
-The comment doesn’t mean you should trust the source blindly, but we only approve casks in which users can easily verify its authenticity with basic means, such as checking the official homepage or public repository. Occasionally, slightly more elaborate techniques may be used, such as inspecting an [`appcast`](appcast.md) we established as official. Cases where such quick verifications aren’t possible (e.g. when the download URL is behind a registration wall) are [treated in a stricter manner](../../development/adding-a-cask.md#unofficial-vendorless-and-walled-builds).
+The comment doesn’t mean you should trust the source blindly, but we only approve casks in which users can easily verify its authenticity with basic means, such as checking the official homepage or public repository. Occasionally, slightly more elaborate techniques may be used, such as inspecting an [`appcast`](appcast.md) we established as official. Cases where such quick verifications aren’t possible (e.g. when the download URL is behind a registration wall) are [treated in a stricter manner](../../development/adding_a_cask.md#unofficial-vendorless-and-walled-builds).
 
 ## Difficulty Finding a URL
 
