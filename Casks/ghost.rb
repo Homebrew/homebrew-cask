@@ -9,5 +9,5 @@ cask 'ghost' do
   name 'Ghost Desktop'
   homepage 'https://ghost.org/downloads'
 
-  app "ghost-#{version}-SIGNED/Ghost.app"
+  app 'Ghost.app'
 end
