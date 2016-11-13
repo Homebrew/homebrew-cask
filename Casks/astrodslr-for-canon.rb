@@ -1,4 +1,4 @@
-cask 'astrodslr-canon' do
+cask 'astrodslr-for-canon' do
   version '1.2'
   sha256 'd7d3d35c773840ebe00a63821bcf2f925f0e66ad034ce9ee6cb3ff900d17237c'
 
