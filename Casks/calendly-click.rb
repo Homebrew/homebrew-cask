@@ -3,7 +3,7 @@ cask 'calendly-click' do
   sha256 '7ea9a361ceb8e39dd8d54019e6d6ed9d913f3d745987a95602e5bc32945d36b6'
 
   # d26xyjziomggk4.cloudfront.net was verified as official when first introduced to the cask
-  url 'https://d26xyjziomggk4.cloudfront.net/calendly_desktop/releases/production/darwin_x64/calendly-click-0.1.5.dmg'
+  url "https://d26xyjziomggk4.cloudfront.net/calendly_desktop/releases/production/darwin_x64/calendly-click-#{version}.dmg"
   name 'Calendly Click'
   homepage 'https://calendly.com/integrations/calendly_click'
 
