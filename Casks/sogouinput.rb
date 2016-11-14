@@ -5,7 +5,7 @@ cask 'sogouinput' do
   url "http://cdn1.ime.sogou.com/SogouInput_V#{version}.dmg"
   name 'Sogou Input Method'
   name '搜狗输入法'
-  homepage 'http://pinyin.sogou.com/mac/'
+  homepage 'https://pinyin.sogou.com/mac/'
 
   installer manual: '安装搜狗输入法.app'
 
