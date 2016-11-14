@@ -5,7 +5,7 @@ cask 'beersmith2' do
   # amazonaws.com/beersmith2-3 was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/beersmith2-3/BeerSmith#{version.dots_to_underscores}.dmg"
   name 'BeerSmith2'
-  homepage 'http://beersmith.com'
+  homepage 'https://beersmith.com/'
 
   app 'BeerSmith2.app'
 end
