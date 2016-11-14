@@ -6,7 +6,7 @@ cask 'diskmaker-x' do
   appcast 'http://diskmakerx.com/feed/',
           checkpoint: '972a26f7e1c3d53eea31ed54d7572cedfae435af19d5010ccc0f54d9d072dd44'
   name 'DiskMaker X'
-  homepage 'http://diskmakerx.com/'
+  homepage 'https://diskmakerx.com/'
 
   app "DiskMaker X #{version.major}.app"
 end
