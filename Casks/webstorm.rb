@@ -1,6 +1,6 @@
 cask 'webstorm' do
-  version '2016.2.4'
-  sha256 'f9c3f165dda60fb034eff2c717bca73cf997ee64e6da85575dd829b8104cfa2f'
+  version '2016.3'
+  sha256 '0119fa0ea55c61bb03df11f2dba6e43288f98143f8eb4042485759dac373e2a2'
 
   url "https://download.jetbrains.com/webstorm/WebStorm-#{version}.dmg"
   name 'WebStorm'
