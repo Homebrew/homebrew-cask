@@ -1,8 +1,8 @@
 cask 'vmware-appcatalyst' do
-  version 'Update' # June-2016
-  sha256 '6ed3d6d6fc2ff54105eccf3435c316b728fa5da8'
+  version :latest
+  sha256 'b8b99200e849079bbce4f8760950d6c4807d51a8c78ccccaca2bc3e04f467ddc'
 
-  url "http://getappcatalyst.com/downloads/VMware-AppCatalyst-Technical-Preview-#{version}.dmg"
+  url "http://getappcatalyst.com/downloads/VMware-AppCatalyst-Technical-Preview-Update.dmg"
   name 'VMware AppCatalyst'
   homepage 'http://getappcatalyst.com/'
 
