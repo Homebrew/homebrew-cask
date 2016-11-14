@@ -6,7 +6,7 @@ cask 'vlc-remote' do
   appcast 'http://hobbyistsoftware.com/Downloads/VLCRemote/vlcSetupHelperVersions.xml',
           checkpoint: '2cefab98336766f73eb21e269a1c8322eb9935405cc2b94711a6c0d9d2e89c3d'
   name 'VLC Remote'
-  homepage 'http://hobbyistsoftware.com/vlc'
+  homepage 'https://hobbyistsoftware.com/vlc'
 
   installer manual: 'VLC Setup.app'
 end
