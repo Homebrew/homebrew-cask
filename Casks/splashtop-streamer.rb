@@ -5,7 +5,7 @@ cask 'splashtop-streamer' do
   # d17kmd0va0f0mp.cloudfront.net was verified as official when first introduced to the cask
   url "https://d17kmd0va0f0mp.cloudfront.net/mac/Splashtop_Streamer_MAC_v#{version}.dmg"
   name 'Splashtop Streamer'
-  homepage 'http://www.splashtop.com/downloads'
+  homepage 'https://www.splashtop.com/downloads'
 
   pkg 'Splashtop Streamer.pkg'
 
