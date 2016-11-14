@@ -4,7 +4,7 @@ cask 'greenfoot' do
 
   url "http://www.greenfoot.org/download/files/Greenfoot-mac-#{version.no_dots}.zip"
   name 'Greenfoot'
-  homepage 'http://www.greenfoot.org/home'
+  homepage 'https://www.greenfoot.org/home'
 
   app "Greenfoot #{version}/Greenfoot.app"
 end
