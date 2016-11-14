@@ -14,7 +14,12 @@ cask 'visual-studio-code' do
   binary "#{appdir}/Visual Studio Code.app/Contents/Resources/app/bin/code"
 
   zap delete: [
+                '~/.vscode',
                 '~/Library/Application Support/Code',
-                '~/Library/Caches/Code',
+                '~/Library/Caches/com.microsoft.VSCode',
+                '~/Library/Caches/com.microsoft.VSCode.ShipIt',
+                '~/Library/Preferences/com.microsoft.VSCode.helper.plist',
+                '~/Library/Preferences/com.microsoft.VSCode.plist',
+                '~/Library/Saved Application State/com.microsoft.VSCode.savedState',
               ]
 end
