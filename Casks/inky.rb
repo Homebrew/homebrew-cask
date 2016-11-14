@@ -4,7 +4,7 @@ cask 'inky' do
 
   url "https://download.inky.com/InkyInstall_osx_#{version}.dmg"
   name 'Inky'
-  homepage 'http://inky.com'
+  homepage 'https://inky.com/'
 
   app 'Inky.app'
 
