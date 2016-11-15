@@ -12,13 +12,13 @@ cask 'marked' do
 
   app "Marked #{version.major}.app"
 
-  uninstall quit: 'com.brettterpstra.marked2'
+  uninstall quit: "com.brettterpstra.marked#{version.major}"
 
   zap delete: [
-                '~/Library/Application Support/Marked 2/paddata.padl',
-                '~/Library/Application Support/Marked 2/queue.pak',
-                '~/Library/Containers/com.brettterpstra.marked2',
-                '~/Library/Preferences/com.brettterpstra.marked2.LSSharedFileList.plist',
-                '~/Library/Saved Application State/com.brettterpstra.marked2.savedState',
+                "~/Library/Application Support/Marked #{version.major}/paddata.padl",
+                "~/Library/Application Support/Marked #{version.major}/queue.pak",
+                "~/Library/Containers/com.brettterpstra.marked#{version.major}",
+                "~/Library/Preferences/com.brettterpstra.marked#{version.major}.LSSharedFileList.plist",
+                "~/Library/Saved Application State/com.brettterpstra.marked#{version.major}.savedState",
               ]
 end
