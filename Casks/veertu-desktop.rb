@@ -1,13 +1,13 @@
 cask 'veertu-desktop' do
-  version '1.2.91'
-  sha256 'd0f62ea351a86143d37812438cad14cd7e956114a536151a7492fc3eac328d53'
+  version '1.2.92'
+  sha256 '4c6cd46bc02472c3ef9a26fd2f9808191c0703057a60a7f7002681f471463bd0'
 
   # d2sje6b9huarvp.cloudfront.net was verified as official when first introduced to the cask
   url "https://d2sje6b9huarvp.cloudfront.net/VeertuDesktop-#{version}.dmg"
   appcast 'https://d2sje6b9huarvp.cloudfront.net/vdoaupd.rss',
-          checkpoint: '3f92a5415d40b8703b53a11cd74c4c5f041eb31244976f34f5c259b19a44369e'
+          checkpoint: '75b13e0b0ab27a47b873057177b2afd0c6ca7e20466c09e64a60b13febfa3907'
   name 'Veertu'
-  homepage 'https://veertu.com'
+  homepage 'https://veertu.com/'
 
   app 'Veertu Desktop.app'
 
