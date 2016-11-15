@@ -1,4 +1,4 @@
-cask 'whats-your-sign' do
+cask 'whatsyoursign' do
   version '1.2.1'
   sha256 'b05363ce2106e23eda95caef1f812fb6cb1dc8f983dee035a4730afe35fc13d6'
 
