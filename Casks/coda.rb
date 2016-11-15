@@ -11,13 +11,13 @@ cask 'coda' do
   app "Coda #{version.major}.app"
 
   zap delete: [
-                "~/Library/Application Support/Coda {version.major}",
-                "~/Library/Application Support/Growl/Tickets/Coda {version.major}.growlTicket",
-                "~/Library/Caches/com.panic.Coda{version.major}",
-                "~/Library/Caches/com.apple.helpd/Generated/com.panic.Coda{version.major}.help",
-                "~/Library/Preferences/com.panic.Coda{version.major}.plist",
-                "~/Library/Preferences/com.panic.Coda{version.major}.LSSharedFileList.plist",
-                "~/Library/Preferences/com.panic.Coda{version.major}.LSSharedFileList.plist.lockfile",
-                "~/Library/Saved Application State/com.panic.Coda{version.major}.savedState",
+                "~/Library/Application Support/Coda #{version.major}",
+                "~/Library/Application Support/Growl/Tickets/Coda #{version.major}.growlTicket",
+                "~/Library/Caches/com.panic.Coda#{version.major}",
+                "~/Library/Caches/com.apple.helpd/Generated/com.panic.Coda#{version.major}.help",
+                "~/Library/Preferences/com.panic.Coda#{version.major}.plist",
+                "~/Library/Preferences/com.panic.Coda#{version.major}.LSSharedFileList.plist",
+                "~/Library/Preferences/com.panic.Coda#{version.major}.LSSharedFileList.plist.lockfile",
+                "~/Library/Saved Application State/com.panic.Coda#{version.major}.savedState",
               ]
 end
