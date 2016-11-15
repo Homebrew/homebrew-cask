@@ -5,7 +5,7 @@ cask 'little-flocker' do
   # zdziarski.com/littleflocker was verified as official when first introduced to the cask
   url "https://www.zdziarski.com/littleflocker/LittleFlocker-#{version}.dmg"
   name 'Little Flocker'
-  homepage 'https://littleflocker.com'
+  homepage 'https://www.littleflocker.com/'
 
   pkg 'Install Little Flocker.pkg'
 
