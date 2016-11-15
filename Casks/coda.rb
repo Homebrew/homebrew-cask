@@ -8,7 +8,7 @@ cask 'coda' do
 
   depends_on macos: '>= :lion'
 
-  app 'Coda 2.app'
+  app "Coda #{version.major}.app"
 
   zap delete: [
                 '~/Library/Application Support/Coda 2',
