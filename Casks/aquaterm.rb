@@ -6,7 +6,7 @@ cask 'aquaterm' do
   appcast 'https://sourceforge.net/projects/aquaterm/rss?path=/AquaTerm',
           checkpoint: '7690e67a0a5101a228b261979ab45b525f57bddcfe0fa10409ad16bc7621afed'
   name 'AquaTerm'
-  homepage 'http://aquaterm.sourceforge.net/'
+  homepage 'https://sourceforge.net/projects/aquaterm/'
 
   pkg 'AquaTermInstaller.pkg'
 
