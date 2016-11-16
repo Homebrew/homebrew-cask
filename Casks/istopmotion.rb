@@ -6,5 +6,5 @@ cask 'istopmotion' do
   name 'iStopMotion'
   homepage 'https://www.boinx.com/istopmotion/mac/'
 
-  app 'iStopMotion 3.app'
+  app "iStopMotion #{version.major}.app"
 end

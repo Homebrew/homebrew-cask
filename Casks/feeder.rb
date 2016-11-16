@@ -8,5 +8,5 @@ cask 'feeder' do
   name 'Feeder'
   homepage 'https://reinventedsoftware.com/feeder/'
 
-  app 'Feeder 3.app'
+  app "Feeder #{version.major}.app"
 end

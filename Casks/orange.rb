@@ -6,5 +6,5 @@ cask 'orange' do
   name 'Orange'
   homepage 'http://orange.biolab.si/'
 
-  app 'Orange3.app'
+  app "Orange#{version.major}.app"
 end

@@ -8,7 +8,7 @@ cask 'fantastical' do
   name 'Fantastical'
   homepage 'https://flexibits.com/fantastical'
 
-  app 'Fantastical 2.app'
+  app "Fantastical #{version.major}.app"
 
   postflight do
     suppress_move_to_applications

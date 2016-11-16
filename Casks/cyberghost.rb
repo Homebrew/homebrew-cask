@@ -6,7 +6,7 @@ cask 'cyberghost' do
   appcast 'https://download.cyberghostvpn.com/mac/updates/cyberghost_mac_update.inf',
           checkpoint: '558e5e8b62d828ad319191917628fc202aa5dabc0891bdd38be36199f222685f'
   name 'CyberGhost'
-  homepage 'https://www.cyberghostvpn.com/'
+  homepage 'https://www.cyberghostvpn.com/en'
 
-  app 'CyberGhost 5.app'
+  app "CyberGhost #{version.major}.app"
 end
