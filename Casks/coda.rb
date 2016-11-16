@@ -8,16 +8,16 @@ cask 'coda' do
 
   depends_on macos: '>= :lion'
 
-  app 'Coda 2.app'
+  app "Coda #{version.major}.app"
 
   zap delete: [
-                '~/Library/Application Support/Coda 2',
-                '~/Library/Application Support/Growl/Tickets/Coda 2.growlTicket',
-                '~/Library/Caches/com.panic.Coda2',
-                '~/Library/Caches/com.apple.helpd/Generated/com.panic.Coda2.help',
-                '~/Library/Preferences/com.panic.Coda2.plist',
-                '~/Library/Preferences/com.panic.Coda2.LSSharedFileList.plist',
-                '~/Library/Preferences/com.panic.Coda2.LSSharedFileList.plist.lockfile',
-                '~/Library/Saved Application State/com.panic.Coda2.savedState',
+                "~/Library/Application Support/Coda #{version.major}",
+                "~/Library/Application Support/Growl/Tickets/Coda #{version.major}.growlTicket",
+                "~/Library/Caches/com.panic.Coda#{version.major}",
+                "~/Library/Caches/com.apple.helpd/Generated/com.panic.Coda#{version.major}.help",
+                "~/Library/Preferences/com.panic.Coda#{version.major}.plist",
+                "~/Library/Preferences/com.panic.Coda#{version.major}.LSSharedFileList.plist",
+                "~/Library/Preferences/com.panic.Coda#{version.major}.LSSharedFileList.plist.lockfile",
+                "~/Library/Saved Application State/com.panic.Coda#{version.major}.savedState",
               ]
 end
