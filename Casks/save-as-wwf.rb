@@ -4,9 +4,9 @@ cask 'save-as-wwf' do
 
   url "http://www.saveaswwf.com/fileadmin/user_upload/wwfPlugin/SAVE_AS_WWF_#{version}.pkg.zip"
   name 'Save as WWF'
-  homepage 'http://www.saveaswwf.com/'
+  homepage 'http://www.saveaswwf.com/de/index.html'
 
-  pkg 'SAVE_AS_WWF_1.0.pkg'
+  pkg "SAVE_AS_WWF_#{version}.pkg"
 
   uninstall pkgutil: 'de.wwf.saveAsWwf.SAVEASWWF.pkg'
 end
