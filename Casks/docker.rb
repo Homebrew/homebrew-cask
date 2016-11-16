@@ -11,4 +11,18 @@ cask 'docker' do
   auto_updates true
 
   app 'Docker.app'
+
+  uninstall launchctl: 'com.docker.vmnetd'
+
+  zap delete: [
+                '/Library/PrivilegedHelperTools/com.docker.vmnetd',
+                '~/Library/Application Scripts/com.docker.helper',
+                '~/Library/Caches/KSCrashReports/Docker',
+                '~/Library/Caches/com.docker.docker',
+                '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.docker.docker',
+                '~/Library/Containers/com.docker.docker',
+                '~/Library/Containers/com.docker.helper',
+                '~/Library/Group Containers/group.com.docker',
+                '~/Library/Preferences/com.docker.docker.plist',
+              ]
 end
