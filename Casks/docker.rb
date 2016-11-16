@@ -12,8 +12,9 @@ cask 'docker' do
 
   app 'Docker.app'
 
+  uninstall launchctl: 'com.docker.vmnetd'
+
   zap delete: [
-                '/Library/LaunchDaemons/com.docker.vmnetd.plist',
                 '/Library/PrivilegedHelperTools/com.docker.vmnetd',
                 '~/Library/Application Scripts/com.docker.helper',
                 '~/Library/Caches/KSCrashReports/Docker',
