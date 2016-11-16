@@ -3,7 +3,7 @@ cask 'metagrowler' do
   sha256 'dc1ae19c1dd7a2af6fd2346911d93109e72b8a59b847341b35d42f36baab5657'
 
   url "https://buttered-cat.com/downloads/get/12/MetaGrowler_#{version}.zip"
-  name 'MetaGrowler: An extensible program for monitoring various activities and events that can occur on your system using Growl'
+  name 'MetaGrowler'
   homepage 'http://buttered-cat.com/products/view/MetaGrowler'
 
   app 'MetaGrowler.app'
