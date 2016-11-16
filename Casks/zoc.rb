@@ -6,5 +6,5 @@ cask 'zoc' do
   name 'ZOC'
   homepage 'https://www.emtec.com/zoc/'
 
-  app 'zoc7.app'
+  app "zoc#{version.major}.app"
 end

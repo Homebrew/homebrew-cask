@@ -7,7 +7,7 @@ cask 'linear' do
   appcast 'https://github.com/mikaa123/linear/releases.atom',
           checkpoint: '5dff0089adc2d1dd2a8c8617f4b87587ed306c4e3fd8beb87549e37bbc51305e'
   name 'Linear'
-  homepage 'https://mikaa123.github.io/linear-website/'
+  homepage 'http://linear.theuxshop.com/'
 
   app 'linear.app'
 

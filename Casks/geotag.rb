@@ -11,7 +11,7 @@ cask 'geotag' do
   appcast 'http://www.snafu.org/GeoTag/',
           checkpoint: '6bccfd48a9ee7ae4a438c7c48684052cd93e783c2252e9c22b29aaa156bf483c'
   name 'GeoTag'
-  homepage 'http://www.snafu.org/GeoTag/'
+  homepage 'https://www.snafu.org/GeoTag/'
 
   depends_on formula: 'exiftool'
 
