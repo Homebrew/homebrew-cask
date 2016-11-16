@@ -5,7 +5,7 @@ cask 'querious' do
   url "https://store.araelium.com/querious/downloads/versions/Querious#{version}.zip"
   appcast 'https://arweb-assets.s3.amazonaws.com/downloads/querious/prerelease-updates.xml',
           checkpoint: 'f95fff88eab5a30baf0bc25dbc23cba048d503b91d05eaa8d69079fbf4c412b8'
-  name 'Querious 2'
+  name "Querious #{version.major}"
   homepage 'http://www.araelium.com/querious/'
 
   app 'Querious.app'
