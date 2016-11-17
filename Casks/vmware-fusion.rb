@@ -3,6 +3,8 @@ cask 'vmware-fusion' do
   sha256 'f6c54b98c9788d1df94d470661eedff3e5d24ca4fb8962fac5eb5dc56de63b77'
 
   url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
+  appcast 'https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml',
+          checkpoint: 'cbb693dfe222df99e8f4d370c0a397c0e8abdcdfb18013de49c98143b247b20a'
   name 'VMware Fusion'
   homepage 'https://www.vmware.com/products/fusion/'
 
@@ -41,10 +43,16 @@ cask 'vmware-fusion' do
   zap delete: [
                 # note: '~/Library/Application Support/VMware Fusion' is not safe
                 # to delete. In older versions, VM images were located there.
+                '/Library/Application Support/VMware',
+                '/Library/Logs/VMware Fusion Services.log',
+                '/Library/Logs/VMware',
                 '/Library/Preferences/VMware Fusion',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vmware.fusion.sfl',
                 '~/Library/Caches/com.vmware.fusion',
-                '~/Library/Logs/VMware',
                 '~/Library/Logs/VMware Fusion',
+                '~/Library/Logs/VMware Graphics Service.log',
+                '~/Library/Logs/VMware',
+                '~/Library/Preferences/VMware Fusion',
                 '~/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist',
                 '~/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist.lockfile',
                 '~/Library/Preferences/com.vmware.fusion.plist',
@@ -53,5 +61,7 @@ cask 'vmware-fusion' do
                 '~/Library/Preferences/com.vmware.fusionDaemon.plist.lockfile',
                 '~/Library/Preferences/com.vmware.fusionStartMenu.plist',
                 '~/Library/Preferences/com.vmware.fusionStartMenu.plist.lockfile',
+                '~/Library/Saved Application State/com.vmware.fusion.savedState',
+                '~/Library/WebKit/com.vmware.fusion',
               ]
 end
