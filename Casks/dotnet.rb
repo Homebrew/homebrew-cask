@@ -1,5 +1,5 @@
 cask 'dotnet' do
-  version '1.0.0-preview2-1-003177,1.0.3'
+  version '1.0.0-preview2-1-003177,1.1.0'
   sha256 'be009582107b6eb58196a1e417e02c11d7da182669cd47a4c2a42f512e112fea'
 
   url "https://download.microsoft.com/download/1/4/1/141760B3-805B-4583-B17C-8C5BC5A876AB/Installers/dotnet-dev-osx-x64.#{version.before_comma}.pkg"
@@ -14,7 +14,7 @@ cask 'dotnet' do
   # https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md#openssl
   postflight do
     dotnet_core = "/usr/local/share/dotnet/shared/Microsoft.NETCore.App/#{version.after_comma}"
-    system '/usr/bin/sudo', '-E', '--', '/usr/bin/install_name_tool', "#{dotnet_core}/System.Security.Cryptography.Native.dylib", '-add_rpath', "#{HOMEBREW_PREFIX}/opt/openssl/lib"
+    system '/usr/bin/sudo', '-E', '--', '/usr/bin/install_name_tool', "#{dotnet_core}/System.Security.Cryptography.Native.OpenSsl.dylib", '-add_rpath', "#{HOMEBREW_PREFIX}/opt/openssl/lib"
     system '/usr/bin/sudo', '-E', '--', '/usr/bin/install_name_tool', "#{dotnet_core}/System.Net.Http.Native.dylib", '-change', '/usr/lib/libcurl.4.dylib', "#{HOMEBREW_PREFIX}/opt/curl/lib/libcurl.4.dylib"
   end
 
