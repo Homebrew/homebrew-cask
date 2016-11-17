@@ -14,6 +14,7 @@ shopt -s extglob
 
 CYAN='\033[0;36m'
 MAGENTA='\033[1;35m'
+RED='\033[1;31m'
 NC='\033[0m' # no color
 
 # log command before running and add a blank line
@@ -29,21 +30,14 @@ ohai () {
   echo -e "${MAGENTA}>>>${NC} $*"
 }
 
+odie () {
+  echo -e "${RED}!!!${NC} $*"
+  exit 1
+}
+
 # print args as a cyan header
 header () {
   echo
   echo -e "${CYAN}$*${NC}"
   echo
-}
-
-modified_cask_files () {
-  if [[ -z "${MODIFIED_CASK_FILES+defined}" ]]; then
-    MODIFIED_CASK_FILES="$(git diff --name-only --diff-filter=AM "${TRAVIS_COMMIT_RANGE}" -- Casks/*.rb)"
-    export MODIFIED_CASK_FILES
-  fi
-  echo "${MODIFIED_CASK_FILES}"
-}
-
-any_casks_modified () {
-  [[ -n "$(modified_cask_files)" ]]
 }
