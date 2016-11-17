@@ -8,6 +8,7 @@ cask 'sizeup' do
   name 'SizeUp'
   homepage 'https://www.irradiatedsoftware.com/sizeup/'
 
+  auto_updates true
   accessibility_access true
 
   app 'SizeUp.app'
