@@ -1,6 +1,6 @@
 cask '115browser' do
-  version '7.2.4.12'
-  sha256 'bd2a578dc84b9fd719b0af004d010059a78de62d534999e722e2f5131eb3bd02'
+  version '7.2.5.15'
+  sha256 '949cc0870ab585ae6cce916485f6d4751831c4543f1de0cc57ceb7557a62408e'
 
   url "http://down.115.com/client/mac/115br_v#{version}.dmg"
   name '115Browser'
@@ -12,6 +12,7 @@ cask '115browser' do
   zap delete: [
                 '~/Library/Application Support/115Browser',
                 '~/Library/Caches/115Browser',
+                '~/Library/Caches/com.115.115browser',
                 '~/Library/Preferences/com.115.115browser.plist',
                 '~/Library/Saved Application State/com.115.115browser.savedState',
               ]
