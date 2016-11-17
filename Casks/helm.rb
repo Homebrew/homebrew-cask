@@ -1,11 +1,11 @@
 cask 'helm' do
-  version '2.0.0-rc.2'
-  sha256 'b9abef4328feb9ae287f2ae3cfdfff625e951b7788f055e04a07dd6b9bbe232a'
+  version '2.0.0'
+  sha256 '1e654364fe7c2c28dd708ace0952c55e412af61621d0954cbe25e90df1180b3b'
 
   # storage.googleapis.com/kubernetes-helm/ was verified as official when first introduced to the cask
   url "http://storage.googleapis.com/kubernetes-helm/helm-v#{version}-darwin-amd64.tar.gz"
   appcast 'https://github.com/kubernetes/helm/releases.atom',
-          checkpoint: 'cb977ae4ce69f9e71cbdebffde11d19a488b423f1e56c70dc3654c333e5f753b'
+          checkpoint: 'a7d693afb88348128a4dc5644a31aa95062cb874b12064ea904caeb0142ce0a3'
   name 'Helm'
   homepage 'https://github.com/kubernetes/helm'
 
