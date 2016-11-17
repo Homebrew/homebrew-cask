@@ -14,8 +14,19 @@ cask 'dotnet' do
   # https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md#openssl
   postflight do
     dotnet_core = "/usr/local/share/dotnet/shared/Microsoft.NETCore.App/#{version.after_comma}"
-    system '/usr/bin/sudo', '-E', '--', '/usr/bin/install_name_tool', "#{dotnet_core}/System.Security.Cryptography.Native.OpenSsl.dylib", '-add_rpath', "#{HOMEBREW_PREFIX}/opt/openssl/lib"
-    system '/usr/bin/sudo', '-E', '--', '/usr/bin/install_name_tool', "#{dotnet_core}/System.Net.Http.Native.dylib", '-change', '/usr/lib/libcurl.4.dylib', "#{HOMEBREW_PREFIX}/opt/curl/lib/libcurl.4.dylib"
+    system_command '/usr/bin/install_name_tool',
+                   args: [
+                           "#{dotnet_core}/System.Security.Cryptography.Native.OpenSsl.dylib",
+                           '-add_rpath', "#{HOMEBREW_PREFIX}/opt/openssl/lib"
+                         ],
+                   sudo: true
+    system_command '/usr/bin/install_name_tool',
+                   args: [
+                           "#{dotnet_core}/System.Net.Http.Native.dylib",
+                           '-change', '/usr/lib/libcurl.4.dylib',
+                           "#{HOMEBREW_PREFIX}/opt/curl/lib/libcurl.4.dylib"
+                         ],
+                   sudo: true
   end
 
   uninstall pkgutil: 'com.microsoft.dotnet.*',

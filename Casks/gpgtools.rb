@@ -16,9 +16,12 @@ cask 'gpgtools' do
 
   # TODO: remove all ENV variables
   postflight do
-    system '/usr/bin/sudo', '-E', '--',
-           '/usr/local/MacGPG2/libexec/fixGpgHome', Etc.getpwuid(Process.euid).name,
-           ENV['GNUPGHOME'] ? ENV['GNUPGHOME'] : Pathname.new(File.expand_path('~')).join('.gnupg')
+    system_command '/usr/local/MacGPG2/libexec/fixGpgHome',
+                   args: [
+                           Etc.getpwuid(Process.euid).name,
+                           ENV['GNUPGHOME'] ? ENV['GNUPGHOME'] : Pathname.new(File.expand_path('~')).join('.gnupg'),
+                         ],
+                   sudo: true
   end
 
   uninstall_postflight do

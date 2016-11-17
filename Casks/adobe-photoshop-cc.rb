@@ -117,13 +117,16 @@ cask 'adobe-photoshop-cc' do
   homepage 'https://www.adobe.com/products/photoshop.html'
 
   preflight do
-    system '/usr/bin/sudo', '-E', '--', "#{staged_path}/Adobe Photoshop CC 2015/Install.app/Contents/MacOS/Install", '--mode=silent', "--deploymentFile=#{staged_path}/Adobe\ Photoshop\ CC\ 2015/Deployment/#{language}_Deployment.xml"
+    system_command "#{staged_path}/Adobe Photoshop CC 2015/Install.app/Contents/MacOS/Install",
+                   args: [
+                           '--mode=silent',
+                           "--deploymentFile=#{staged_path}/Adobe\ Photoshop\ CC\ 2015/Deployment/#{language}_Deployment.xml",
+                         ],
+                   sudo: true
   end
 
   uninstall_preflight do
-    uninstall_xml = "#{staged_path}/uninstall.xml"
-
-    IO.write uninstall_xml, <<-EOS.undent
+    IO.write "#{staged_path}/uninstall.xml", <<-EOS.undent
       <?xml version="1.0" encoding="utf-8"?>
       <Deployment>
         <Properties>
@@ -138,7 +141,12 @@ cask 'adobe-photoshop-cc' do
       </Deployment>
     EOS
 
-    system '/usr/bin/sudo', '-E', '--', "#{staged_path}/Adobe Photoshop CC 2015/Install.app/Contents/MacOS/Install", '--mode=silent', "--deploymentFile=#{uninstall_xml}"
+    system_command "#{staged_path}/Adobe Photoshop CC 2015/Install.app/Contents/MacOS/Install",
+                   args: [
+                           '--mode=silent',
+                           "--deploymentFile=#{staged_path}/uninstall.xml",
+                         ],
+                   sudo: true
   end
 
   uninstall rmdir: '/Applications/Utilities/Adobe Installers'

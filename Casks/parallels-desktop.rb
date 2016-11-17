@@ -10,12 +10,14 @@ cask 'parallels-desktop' do
 
   postflight do
     # Unhide the application
-    system '/usr/bin/sudo', '-E', '--', 'chflags', 'nohidden', "#{appdir}/Parallels Desktop.app"
+    system_command '/usr/bin/chflags',
+                   args: ['nohidden', "#{appdir}/Parallels Desktop.app"],
+                   sudo: true
 
     # Run the initialization script
-    system '/usr/bin/sudo', '-E', '--',
-           "#{appdir}/Parallels Desktop.app/Contents/MacOS/inittool",
-           'init', '-b', "#{appdir}/Parallels Desktop.app"
+    system_command "#{appdir}/Parallels Desktop.app/Contents/MacOS/inittool",
+                   args: ['init', '-b', "#{appdir}/Parallels Desktop.app"],
+                   sudo: true
   end
 
   uninstall_preflight do

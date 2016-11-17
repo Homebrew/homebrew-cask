@@ -9,11 +9,21 @@ cask 'adobe-bridge-cc' do
   homepage 'https://www.adobe.com/products/bridge.html'
 
   preflight do
-    system '/usr/bin/sudo', '-E', '--', "#{staged_path}/Install.app/Contents/MacOS/Install", '--mode=silent', "--deploymentFile=#{staged_path}/deployment/AdobeBridge6-mul.install.xml"
+    system_command "#{staged_path}/Install.app/Contents/MacOS/Install",
+                   args: [
+                           '--mode=silent',
+                           "--deploymentFile=#{staged_path}/deployment/AdobeBridge6-mul.install.xml",
+                         ],
+                   sudo: true
   end
 
   uninstall_preflight do
-    system '/usr/bin/sudo', '-E', '--', "#{staged_path}/Install.app/Contents/MacOS/Install", '--mode=silent', "--deploymentFile=#{staged_path}/deployment/AdobeBridge6-mul.remove.xml"
+    system_command "#{staged_path}/Install.app/Contents/MacOS/Install",
+                   args: [
+                           '--mode=silent',
+                           "--deploymentFile=#{staged_path}/deployment/AdobeBridge6-mul.remove.xml",
+                         ],
+                   sudo: true
   end
 
   uninstall rmdir: '/Applications/Utilities/Adobe Installers'

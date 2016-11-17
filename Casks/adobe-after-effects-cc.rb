@@ -28,9 +28,7 @@ cask 'adobe-after-effects-cc' do
   media_signature = '147EC100-14BE-45EF-AB42-35BAEE7D02F0'
 
   preflight do
-    install_xml = "#{staged_path}/install.xml"
-
-    IO.write install_xml, <<-EOS.undent
+    IO.write "#{staged_path}/install.xml", <<-EOS.undent
       <?xml version="1.0" encoding="utf-8"?>
       <Deployment>
         <Properties>
@@ -45,13 +43,16 @@ cask 'adobe-after-effects-cc' do
       </Deployment>
     EOS
 
-    system '/usr/bin/sudo', '-E', '--', "#{staged_path}/Adobe After Effects CC 2015/Install.app/Contents/MacOS/Install", '--mode=silent', "--deploymentFile=#{install_xml}"
+    system_command "#{staged_path}/Adobe After Effects CC 2015/Install.app/Contents/MacOS/Install",
+                   args: [
+                           '--mode=silent',
+                           "--deploymentFile=#{staged_path}/install.xml",
+                         ],
+                   sudo: true
   end
 
   uninstall_preflight do
-    uninstall_xml = "#{staged_path}/uninstall.xml"
-
-    IO.write uninstall_xml, <<-EOS.undent
+    IO.write "#{staged_path}/uninstall.xml", <<-EOS.undent
       <?xml version="1.0" encoding="utf-8"?>
       <Deployment>
         <Properties>
@@ -66,7 +67,12 @@ cask 'adobe-after-effects-cc' do
       </Deployment>
     EOS
 
-    system '/usr/bin/sudo', '-E', '--', "#{staged_path}/Adobe After Effects CC 2015/Install.app/Contents/MacOS/Install", '--mode=silent', "--deploymentFile=#{uninstall_xml}"
+    system_command "#{staged_path}/Adobe After Effects CC 2015/Install.app/Contents/MacOS/Install",
+                   args: [
+                           '--mode=silent',
+                           "--deploymentFile=#{staged_path}/uninstall.xml",
+                         ],
+                   sudo: true
   end
 
   uninstall rmdir: '/Applications/Utilities/Adobe Installers'

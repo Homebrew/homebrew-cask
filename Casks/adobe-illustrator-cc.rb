@@ -121,11 +121,21 @@ cask 'adobe-illustrator-cc' do
 
     IO.write deployment_xml, IO.read(deployment_xml).sub(%r{>en_US<}, ">#{language}<")
 
-    system '/usr/bin/sudo', '-E', '--', "#{staged_path}/Adobe Illustrator CC 2015/Install.app/Contents/MacOS/Install", '--mode=silent', "--deploymentFile=#{deployment_xml}"
+    system_command "#{staged_path}/Adobe Illustrator CC 2015/Install.app/Contents/MacOS/Install",
+                   args: [
+                           '--mode=silent',
+                           "--deploymentFile=#{deployment_xml}",
+                         ],
+                   sudo: true
   end
 
   uninstall_preflight do
-    system '/usr/bin/sudo', '-E', '--', "#{staged_path}/Adobe Illustrator CC 2015/Install.app/Contents/MacOS/Install", '--mode=silent', "--deploymentFile=#{staged_path}/Adobe\ Illustrator\ CC\ 2015/Deployment/uninstall.xml"
+    system_command "#{staged_path}/Adobe Illustrator CC 2015/Install.app/Contents/MacOS/Install",
+                   args: [
+                           '--mode=silent',
+                           "--deploymentFile=#{staged_path}/Adobe\ Illustrator\ CC\ 2015/Deployment/uninstall.xml",
+                         ],
+                   sudo: true
   end
 
   uninstall rmdir: '/Applications/Utilities/Adobe Installers'
