@@ -25,8 +25,9 @@ cask 'ax88179' do
   end
 
   postflight do
-    system '/usr/bin/sudo', '-E', '--',
-           '/sbin/kextload', '-b', 'com.asix.driver.ax88179-178a'
+    system_command '/sbin/kextload',
+                   args: ['-b', 'com.asix.driver.ax88179-178a'],
+                   sudo: true
   end
 
   uninstall early_script: {
