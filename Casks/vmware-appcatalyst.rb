@@ -2,7 +2,7 @@ cask 'vmware-appcatalyst' do
   version :latest
   sha256 :no_check
 
-  url "http://getappcatalyst.com/downloads/VMware-AppCatalyst-Technical-Preview-Update.dmg"
+  url 'http://getappcatalyst.com/downloads/VMware-AppCatalyst-Technical-Preview-Update.dmg'
   name 'VMware AppCatalyst'
   homepage 'http://getappcatalyst.com/'
 

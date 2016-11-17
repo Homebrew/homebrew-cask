@@ -11,7 +11,7 @@ cask 'splice' do
 
   app 'Splice.app'
 
-  uninstall quit:   'com.splice.Splice'
+  uninstall quit: 'com.splice.Splice'
 
   zap delete: [
                 '~/Library/Application Support/*Splice*',

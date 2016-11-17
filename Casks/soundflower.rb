@@ -11,8 +11,9 @@ cask 'soundflower' do
   pkg 'Soundflower.pkg'
 
   postflight do
-    system '/usr/bin/sudo', '-E', '--',
-           '/sbin/kextload', '-b', 'com.Cycling74.driver.Soundflower'
+    system_command '/sbin/kextload',
+                   args: ['-b', 'com.Cycling74.driver.Soundflower'],
+                   sudo: true
   end
 
   # early_script is a workaround for a slowly unloading kext, see private-eye Cask
