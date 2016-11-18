@@ -9,4 +9,10 @@ cask 'recordit' do
   homepage 'http://recordit.co/'
 
   app 'RecordIt.app'
+
+  zap delete: [
+                '~/Library/Application Support/Recordit',
+                '~/Library/Caches/us.freshout.RecordIt',
+                '~/Library/Preferences/us.freshout.RecordIt.plist',
+              ]
 end
