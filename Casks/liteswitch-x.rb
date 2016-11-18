@@ -8,8 +8,5 @@ cask 'liteswitch-x' do
 
   prefpane "LiteSwitch X #{version}/LiteSwitch X.prefPane"
 
-  zap delete: [
-                '~/Library/PreferencePanes/LiteSwitch X.prefPane',
-                '~/Library/Preferences/com.proteron.liteswitch.plist',
-              ]
+  zap delete: '~/Library/Preferences/com.proteron.liteswitch.plist',
 end
