@@ -13,7 +13,7 @@ cask 'xfinity-wifi' do
   # This is a horrible hack to force the file extension.  The
   # backend code should be fixed so that this is not needed.
   preflight do
-    system '/bin/mv', '--', staged_path.join('download_mac.php'), staged_path.join('XFINITY_WiFi.pkg')
+    system_command '/bin/mv', args: ['--', staged_path.join('download_mac.php'), staged_path.join('XFINITY_WiFi.pkg')]
   end
 
   uninstall pkgutil:   'com.smithmicro.netwise.osx.comcast.installer',

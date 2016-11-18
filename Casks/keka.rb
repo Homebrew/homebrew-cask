@@ -17,5 +17,6 @@ cask 'keka' do
                 '~/Library/Application Support/Keka',
                 '~/Library/Caches/com.aone.keka',
                 '~/Library/Preferences/com.aone.keka.plist',
+                '~/Library/Saved Application State/com.aone.keka.savedState',
               ]
 end

@@ -1,6 +1,6 @@
 cask 'ax88179' do
-  version '2.8.0_20160912'
-  sha256 '91dc9e76f4808d515c6c764be1d03dddf820b4050eba83a1e1d139541f5bf027'
+  version '2.8.0_20161108'
+  sha256 '493cbe5199f7a6bddf56f209abf7fa1fb67cca488de65173da25d720db9a1646'
 
   module Utils
     def self.basename(version)
@@ -20,13 +20,17 @@ cask 'ax88179' do
       dmg_mount = `/usr/bin/hdiutil mount -readonly -noidme -nobrowse -mountrandom /tmp '#{staged_path.join(Utils.basename(version), 'AX88179_178A.dmg')}' | /usr/bin/cut -f3 -- - | /usr/bin/grep -- '.' -`.chop
       FileUtils.cp(Dir.glob("#{dmg_mount}/AX*"), staged_path)
     ensure
-      system "/usr/bin/hdiutil eject '#{dmg_mount}' >/dev/null 2>&1"
+      system_command '/usr/bin/hdiutil',
+                     args:         ['eject', dmg_mount],
+                     print_stdout: false,
+                     print_stderr: false
     end
   end
 
   postflight do
-    system '/usr/bin/sudo', '-E', '--',
-           '/sbin/kextload', '-b', 'com.asix.driver.ax88179-178a'
+    system_command '/sbin/kextload',
+                   args: ['-b', 'com.asix.driver.ax88179-178a'],
+                   sudo: true
   end
 
   uninstall early_script: {

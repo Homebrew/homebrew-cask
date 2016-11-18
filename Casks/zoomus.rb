@@ -6,6 +6,8 @@ cask 'zoomus' do
   name 'Zoom.us'
   homepage 'https://www.zoom.us'
 
+  auto_updates true
+
   pkg 'zoomusInstaller.pkg'
 
   uninstall delete: '/Applications/zoom.us.app'

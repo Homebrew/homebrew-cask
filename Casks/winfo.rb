@@ -6,7 +6,7 @@ cask 'winfo' do
   appcast 'http://www.irradiatedsoftware.com/updates/profiles/profile.php',
           checkpoint: '5ab91af76aff763729f5f11f062cb99eae966405724557745a5045c29f949000'
   name 'Winfo'
-  homepage 'http://www.irradiatedsoftware.com/'
+  homepage 'https://www.irradiatedsoftware.com/'
 
   auto_updates true
 

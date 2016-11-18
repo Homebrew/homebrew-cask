@@ -13,7 +13,9 @@ cask 'inspec' do
 
   # As suggested in https://docs.chef.io/install_dk.html#mac-os-x
   uninstall_postflight do
-    system "sudo find /usr/local/bin -lname '/opt/inspec/*' -delete"
+    system_command '/usr/bin/find',
+                   args: ['/usr/local/bin', '-lname', '/opt/inspec/*', '-delete'],
+                   sudo: true
   end
 
   uninstall pkgutil: 'com.getchef.pkg.inspec',

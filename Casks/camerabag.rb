@@ -5,7 +5,7 @@ cask 'camerabag' do
   # downloads.nevercenter.com.s3.amazonaws.com was verified as official when first introduced to the cask
   url "http://downloads.nevercenter.com.s3.amazonaws.com/CameraBag_Mac_#{version.dots_to_underscores}.dmg"
   name 'CameraBag'
-  homepage 'https://nevercenter.com/camerabag/desktop/'
+  homepage 'http://nevercenter.com/camerabag/photo/'
 
-  app 'CameraBag 2.app'
+  app "CameraBag #{version.major}.app"
 end

@@ -6,7 +6,7 @@ cask 'wordmark' do
   url "https://github.com/wordmark/wordmark/releases/download/v#{version}/WordMark-darwin-x64.zip"
   appcast 'https://github.com/wordmark/wordmark/releases.atom',
           checkpoint: 'ed6b36192e533e1f6ac518d2fbcfdbd483fdc64adc6dd79bc6e4386acbf9358b'
-  name 'WordMark 2'
+  name "WordMark #{version.major}"
   homepage 'http://wordmarkapp.com/'
 
   app 'WordMark-darwin-x64/WordMark.app'
