@@ -11,7 +11,7 @@ cask 'td-toolbelt' do
   pkg 'td-toolbelt.pkg'
 
   preflight do
-    system '/bin/mv', '--', "#{staged_path}/mac", "#{staged_path}/td-toolbelt.pkg"
+    system_command '/bin/mv', args: ['--', "#{staged_path}/mac", "#{staged_path}/td-toolbelt.pkg"]
   end
 
   uninstall pkgutil: 'com.td.toolbelt'

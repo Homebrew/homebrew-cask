@@ -11,6 +11,6 @@ cask 'playgroundmdimporter' do
   artifact 'Playground.mdimporter', target: "#{ENV['HOME']}/Library/Spotlight/Playground.mdimporter"
 
   postflight do
-    system 'mdimport', '-r', "#{ENV['HOME']}/Library/Spotlight/Playground.mdimporter"
+    system_command '/usr/bin/mdimport', args: ['-r', "#{ENV['HOME']}/Library/Spotlight/Playground.mdimporter"]
   end
 end

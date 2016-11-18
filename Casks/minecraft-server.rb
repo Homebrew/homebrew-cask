@@ -23,7 +23,7 @@ cask 'minecraft-server' do
   end
 
   postflight do
-    system 'minecraft-server'
+    system_command 'minecraft-server'
 
     eula_file = "#{staged_path}/eula.txt"
     IO.write(eula_file, IO.read(eula_file).gsub('false', 'TRUE'))

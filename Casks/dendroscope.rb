@@ -10,11 +10,11 @@ cask 'dendroscope' do
   app 'Dendroscope.app'
 
   preflight do
-    system "#{staged_path}/Dendroscope Installer.app/Contents/MacOS/JavaApplicationStub", '-q', '-dir', staged_path.to_s
+    system_command "#{staged_path}/Dendroscope Installer.app/Contents/MacOS/JavaApplicationStub", args: ['-q', '-dir', staged_path.to_s]
   end
 
   uninstall_preflight do
-    system "#{staged_path}/Dendroscope Uninstaller.app/Contents/MacOS/JavaApplicationStub", '-q'
+    system_command "#{staged_path}/Dendroscope Uninstaller.app/Contents/MacOS/JavaApplicationStub", args: ['-q']
   end
 
   caveats do

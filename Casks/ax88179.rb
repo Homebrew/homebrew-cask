@@ -20,7 +20,10 @@ cask 'ax88179' do
       dmg_mount = `/usr/bin/hdiutil mount -readonly -noidme -nobrowse -mountrandom /tmp '#{staged_path.join(Utils.basename(version), 'AX88179_178A.dmg')}' | /usr/bin/cut -f3 -- - | /usr/bin/grep -- '.' -`.chop
       FileUtils.cp(Dir.glob("#{dmg_mount}/AX*"), staged_path)
     ensure
-      system "/usr/bin/hdiutil eject '#{dmg_mount}' >/dev/null 2>&1"
+      system_command '/usr/bin/hdiutil',
+                     args:         ['eject', dmg_mount],
+                     print_stdout: false,
+                     print_stderr: false
     end
   end
 

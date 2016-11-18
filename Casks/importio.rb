@@ -10,9 +10,9 @@ cask 'importio' do
   app 'import.io.app'
 
   preflight do
-    system '/usr/bin/xar', '-xf', "#{staged_path}/install.pkg", 'importio.pkg/Payload', '-C', staged_path
-    system '/usr/bin/tar', '-xf', "#{staged_path}/importio.pkg/Payload", '-C', staged_path
-    system '/bin/rm', '-r', "#{staged_path}/importio.pkg", "#{staged_path}/install.pkg"
+    system_command '/usr/bin/xar', args: ['-xf', "#{staged_path}/install.pkg", 'importio.pkg/Payload', '-C', staged_path]
+    system_command '/usr/bin/tar', args: ['-xf', "#{staged_path}/importio.pkg/Payload", '-C', staged_path]
+    system_command '/bin/rm', args: ['-r', "#{staged_path}/importio.pkg", "#{staged_path}/install.pkg"]
   end
 
   zap delete: '~/Library/Containers/import.io'

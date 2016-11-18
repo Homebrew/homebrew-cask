@@ -13,7 +13,7 @@ cask 'adobe-photoshop-lightroom' do
   # and https://github.com/caskroom/homebrew-versions/pull/296
 
   preflight do
-    system '/usr/bin/killall', '-kill', 'SafariNotificationAgent'
+    system_command '/usr/bin/killall', args: ['-kill', 'SafariNotificationAgent']
     system_command "#{staged_path}/AdobePatchInstaller.app/Contents/MacOS/AdobePatchInstaller",
                    args: [
                            '--mode=silent',
@@ -22,7 +22,7 @@ cask 'adobe-photoshop-lightroom' do
   end
 
   uninstall_preflight do
-    system 'brew', 'cask', 'uninstall', 'adobe-photoshop-lightroom600'
+    system_command 'brew', args: ['cask', 'uninstall', 'adobe-photoshop-lightroom600']
   end
 
   zap delete: [

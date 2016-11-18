@@ -11,6 +11,6 @@ cask 'chunkulus' do
   screen_saver 'presstube-chunkulus.app/Contents/Resources/Presstube - Chunkulus.saver'
 
   postflight do
-    system '/usr/libexec/PlistBuddy', '-c', 'Set :CFBundleName Chunkulus (Presstube)', "#{staged_path}/presstube-chunkulus.app/Contents/Resources/Presstube - Chunkulus.saver/Contents/Info.plist"
+    system_command '/usr/libexec/PlistBuddy', args: ['-c', 'Set :CFBundleName Chunkulus (Presstube)', "#{staged_path}/presstube-chunkulus.app/Contents/Resources/Presstube - Chunkulus.saver/Contents/Info.plist"]
   end
 end

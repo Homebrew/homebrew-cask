@@ -20,10 +20,20 @@ cask 'virtualbox-extension-pack' do
   stage_only true
 
   postflight do
-    system 'sudo', 'VBoxManage', 'extpack', 'install', '--replace', "#{staged_path}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
+    system_command 'VBoxManage',
+                   args: [
+                           'extpack', 'install',
+                           '--replace', "#{staged_path}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
+                         ],
+                   sudo: true
   end
 
   uninstall_postflight do
-    system 'sudo', 'VBoxManage', 'extpack', 'uninstall', 'Oracle VM VirtualBox Extension Pack'
+    system_command 'VBoxManage',
+                   args: [
+                           'extpack', 'uninstall',
+                           'Oracle VM VirtualBox Extension Pack'
+                         ],
+                   sudo: true
   end
 end
