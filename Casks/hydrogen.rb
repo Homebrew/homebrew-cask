@@ -7,7 +7,7 @@ cask 'hydrogen' do
   appcast 'https://sourceforge.net/projects/hydrogen/rss?path=/Hydrogen',
           checkpoint: 'c472fb7218f40ece440782a1eff2da0fe1a677ebe05686185593380a1018d6cd'
   name 'Hydrogen'
-  homepage 'https://www.hydrogen-music.org/hcms/'
+  homepage 'http://www.hydrogen-music.org/hcms/'
 
   app 'hydrogen.app'
 end
