@@ -4,7 +4,7 @@ cask 'hydrogen' do
 
   # downloads.sourceforge.net/hydrogen was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/hydrogen/hydrogen-#{version}.dmg"
-  appcast "https://sourceforge.net/projects/hydrogen/rss?path=/Hydrogen",
+  appcast 'https://sourceforge.net/projects/hydrogen/rss?path=/Hydrogen',
           checkpoint: 'c472fb7218f40ece440782a1eff2da0fe1a677ebe05686185593380a1018d6cd'
   name 'Hydrogen'
   homepage 'https://www.hydrogen-music.org/hcms/'
