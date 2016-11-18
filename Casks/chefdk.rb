@@ -9,7 +9,7 @@ cask 'chefdk' do
 
   url "https://packages.chef.io/stable/mac_os_x/#{MacOS.version}/chefdk-#{version}.dmg"
   appcast "https://www.chef.io/chef/metadata-chefdk?p=mac_os_x&pv=#{MacOS.version}&m=x86_64&v=latest&prerelease=false",
-          checkpoint: '86121b7b1f2f1b1082d25fdcaa61450fa2d9d4a0766b2f757d2557c5d801d4e3'
+          checkpoint: '59f8ddd44a4f8acea9aa035d204073e9de367f7378dcfa3a748856614cf197a4'
   name 'Chef Development Kit'
   name 'ChefDK'
   homepage 'https://downloads.chef.io/chef-dk/'
