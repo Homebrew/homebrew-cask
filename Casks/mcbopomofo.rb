@@ -4,7 +4,7 @@ cask 'mcbopomofo' do
 
   # github.com was verified as official when first introduced to the cask
   url "https://github.com/openvanilla/McBopomofo/releases/download/#{version}/McBopomofo-Installer-#{version}.zip"
-  appcast 'https://github.com/openvanilla/McBopomofo/releases.atom', 
+  appcast 'https://github.com/openvanilla/McBopomofo/releases.atom',
           checkpoint: 'd664ecb07c906c48fd9f09a28b29e76413768ddb20f897e5272b73cee27aeccb'
   name 'McBopomofo'
   homepage 'https://mcbopomofo.openvanilla.org/'
