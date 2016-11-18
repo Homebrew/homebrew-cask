@@ -5,7 +5,7 @@ cask 'hydrogen' do
   # downloads.sourceforge.net/projects/ was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/projects/hydrogen/files/Hydrogen/#{version.before_comma}%20Binaries/hydrogen-#{version.before_comma}-#{version.after_comma}.dmg"
   name 'Hydrogen'
-  homepage 'http://www.hydrogen-music.org/hcms/'
+  homepage 'https://www.hydrogen-music.org/hcms/'
 
   app 'hydrogen.app'
 end
