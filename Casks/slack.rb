@@ -19,10 +19,12 @@ cask 'slack' do
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tinyspeck.slackmacgap.sfl',
                 '~/Library/Application Support/Slack',
                 '~/Library/Caches/com.tinyspeck.slackmacgap',
+                '~/Library/Caches/com.tinyspeck.slackmacgap.ShipIt',
                 '~/Library/Containers/com.tinyspeck.slackmacgap',
                 '~/Library/Containers/com.tinyspeck.slackmacgap.SlackCallsService',
                 '~/Library/Cookies/com.tinyspeck.slackmacgap.binarycookies',
                 '~/Library/Preferences/com.tinyspeck.slackmacgap.plist',
+                '~/Library/Preferences/com.tinyspeck.slackmacgap.helper.plist',
                 '~/Library/Saved Application State/com.tinyspeck.slackmacgap.savedState',
               ]
 end
