@@ -35,7 +35,7 @@ cask 'dwarf-fortress' do
   end
 
   uninstall_preflight do
-    system 'cp', '-rf', "#{staged_path}/df_osx/data/save", '/tmp/dwarf-fortress-save/'
+    system_command '/bin/cp', args: ['-rf', "#{staged_path}/df_osx/data/save", '/tmp/dwarf-fortress-save/']
   end
 
   caveats 'During uninstall, your save data will be copied to /tmp/dwarf-fortress-save'
