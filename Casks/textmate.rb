@@ -9,6 +9,8 @@ cask 'textmate' do
   name 'TextMate'
   homepage 'https://macromates.com/'
 
+  auto_updates true
+
   app 'TextMate.app'
   binary "#{appdir}/TextMate.app/Contents/Resources/mate"
 

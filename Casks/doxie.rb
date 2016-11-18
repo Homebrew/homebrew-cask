@@ -6,5 +6,7 @@ cask 'doxie' do
   name 'Doxie'
   homepage 'http://www.getdoxie.com/'
 
+  auto_updates true
+
   app 'Doxie.app'
 end

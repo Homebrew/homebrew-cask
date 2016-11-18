@@ -8,6 +8,8 @@ cask 'viscosity' do
   name 'Viscosity'
   homepage 'https://www.sparklabs.com/viscosity/'
 
+  auto_updates true
+
   app 'Viscosity.app'
 
   zap delete: [

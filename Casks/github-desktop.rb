@@ -8,6 +8,8 @@ cask 'github-desktop' do
   name 'GitHub Desktop'
   homepage 'https://desktop.github.com/'
 
+  auto_updates true
+
   app 'GitHub Desktop.app'
   binary "#{appdir}/GitHub Desktop.app/Contents/MacOS/github_cli", target: 'github'
 
