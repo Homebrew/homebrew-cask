@@ -1,6 +1,6 @@
 cask 'lightworks' do
-  version '12.6.0'
-  sha256 'b6d3a534063f12dba90beb63676d2e168facb95fead668b6f06b900c2cbf5279'
+  version '12.6.0.1'
+  sha256 '1d1c9745e5c886aecf7729281e73b8fb280ad31b1773bc5c0a4b7000fbd1dbc0'
 
   url "http://downloads.lwks.com/lightworks_v#{version}.dmg"
   name 'Lightworks'
