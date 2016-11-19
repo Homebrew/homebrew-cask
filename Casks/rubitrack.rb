@@ -11,5 +11,5 @@ cask 'rubitrack' do
   depends_on macos: '>= :yosemite'
   depends_on arch: :x86_64
 
-  app "rubiTrack #{version.major}.app"
+  app "rubiTrack #{version.major} Pro.app"
 end
