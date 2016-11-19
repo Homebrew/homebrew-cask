@@ -1,4 +1,4 @@
-cask 'rubitrack' do
+cask 'rubitrack-pro' do
   version '4.3.5'
   sha256 'ff997eee5162b5edd5589d77c90560936a59fa2fb222582c7941ea6eb4dbb42d'
 
@@ -11,5 +11,5 @@ cask 'rubitrack' do
   depends_on macos: '>= :yosemite'
   depends_on arch: :x86_64
 
-  app "rubiTrack #{version.major}.app"
+  app "rubiTrack #{version.major} Pro.app"
 end
