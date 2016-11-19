@@ -1,4 +1,4 @@
-cask 'rubitrack' do
+cask 'rubitrack-pro' do
   version '4.3.5'
   sha256 'ff997eee5162b5edd5589d77c90560936a59fa2fb222582c7941ea6eb4dbb42d'
 
