@@ -1,4 +1,4 @@
-cask 'ur-quan-masters' do
+cask 'the-ur-quan-masters' do
   version '0.7.0-1'
   sha256 '19c313478efee8d7c51d8916b64fba4711e46b93b0c4596119dfc67d61ffa7dd'
 
