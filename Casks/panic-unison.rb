@@ -4,7 +4,7 @@ cask 'panic-unison' do
 
   url "https://download.panic.com/unison/Unison%20#{version}.zip"
   name 'Unison'
-  homepage 'https://panic.com/unison/'
+  homepage 'http://panic.com/unison/'
 
   app 'Unison.app'
 

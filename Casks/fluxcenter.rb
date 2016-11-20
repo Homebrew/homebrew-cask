@@ -5,7 +5,7 @@ cask 'fluxcenter' do
   # files.flux.to was verified as official when first introduced to the cask
   url "http://files.flux.to/files/Center/MacOS/Flux_FluxCenter_MacOSX_Installer_(#{version}).dmg"
   name 'FluxCenter'
-  homepage 'https://www.fluxhome.com/'
+  homepage 'http://www.fluxhome.com/'
 
   app 'FluxCenter.app'
 end

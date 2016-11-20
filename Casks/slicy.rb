@@ -7,7 +7,7 @@ cask 'slicy' do
   appcast "https://update.macrabbit.com/slicy/#{version}.xml",
           checkpoint: '39d01f62bb6ab96fdee061a8077fd8cbffcafee6551d7be4bc0fe4dc20249e3d'
   name 'Slicy'
-  homepage 'https://macrabbit.com/slicy/'
+  homepage 'http://macrabbit.com/slicy/'
 
   app 'Slicy.app'
 end

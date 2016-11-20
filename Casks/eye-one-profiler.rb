@@ -4,7 +4,7 @@ cask 'eye-one-profiler' do
 
   url 'http://www.xrite.com/downloader.aspx?FileID=1455&Type=M&returnurl=%2fi1profiler-i1publish%2fsupport%2fd1455'
   name 'i1Profiler'
-  homepage 'https://www.xrite.com/i1profiler-i1publish/support/d1455'
+  homepage 'http://www.xrite.com/i1profiler-i1publish/support/d1455'
 
   pkg 'i1Profiler.pkg'
 

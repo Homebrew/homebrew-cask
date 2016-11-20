@@ -4,7 +4,7 @@ cask 'xiami' do
 
   url 'http://www.xiami.com/software/download?app=music_mac'
   name 'Xiami'
-  homepage 'https://www.xiami.com/'
+  homepage 'http://www.xiami.com/'
 
   app 'Xiami.app'
 
