@@ -9,29 +9,12 @@ cask 'osxfuse' do
   name 'OSXFUSE'
   homepage 'https://osxfuse.github.io/'
 
-  installer script: '/usr/sbin/installer',
-            args:   [
-                      '-pkg', "#{staged_path}/Extras/FUSE for macOS #{version}.pkg",
-                      '-target', '/',
-                      '-applyChoiceChangesXML', "#{staged_path}/Extras/Choices.xml"
-                    ]
-
-  preflight do
-    IO.write "#{staged_path}/Extras/Choices.xml", <<-EOS.undent
-      <plist>
-        <array>
-        	<dict>
-        		<key>attributeSetting</key>
-        		<integer>1</integer>
-        		<key>choiceAttribute</key>
-        		<string>selected</string>
-        		<key>choiceIdentifier</key>
-        		<string>com.github.osxfuse.pkg.MacFUSE</string>
-        	</dict>
-        </array>
-      </plist>
-    EOS
-  end
+  pkg "Extras/FUSE for macOS #{version}.pkg",
+      choices: [
+                 'choiceIdentifier' => 'com.github.osxfuse.pkg.MacFUSE',
+                 'choiceAttribute'  => 'selected',
+                 'attributeSetting' => 1,
+               ]
 
   postflight do
     set_ownership ['/usr/local/include', '/usr/local/lib']
