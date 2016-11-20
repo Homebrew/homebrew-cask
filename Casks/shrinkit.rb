@@ -4,7 +4,7 @@ cask 'shrinkit' do
 
   url "https://download.panic.com/shrinkit/ShrinkIt%20#{version}.zip"
   name 'ShrinkIt'
-  homepage 'https://www.panic.com/blog/shrinkit-1-2/'
+  homepage 'https://panic.com/blog/shrinkit-1-2/'
 
   app 'ShrinkIt.app'
 end

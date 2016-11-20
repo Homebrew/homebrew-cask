@@ -4,7 +4,7 @@ cask 'globalsync' do
 
   url 'http://www.usglobalsat.com/store/download/25/globalsync.zip'
   name 'GlobalSync'
-  homepage 'http://www.usglobalsat.com/'
+  homepage 'http://usglobalsat.com/'
 
   app 'GlobalSync.app'
 end

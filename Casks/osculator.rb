@@ -4,7 +4,7 @@ cask 'osculator' do
 
   url "https://dl.osculator.net/releases/osculator-#{version}.dmg"
   name 'OSCulator'
-  homepage 'https://www.osculator.net/'
+  homepage 'https://osculator.net/'
 
   app 'OSCulator ƒ/OSCulator.app'
 end

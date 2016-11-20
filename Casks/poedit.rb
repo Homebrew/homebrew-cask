@@ -14,7 +14,7 @@ cask 'poedit' do
   end
 
   name 'Poedit'
-  homepage 'https://www.poedit.net/'
+  homepage 'https://poedit.net/'
 
   app 'Poedit.app'
 

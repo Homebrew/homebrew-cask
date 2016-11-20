@@ -6,7 +6,7 @@ cask 'liteicon' do
   appcast 'https://freemacsoft.net/liteicon/updates.xml',
           checkpoint: 'd011430ae0b99504d66d4367803f4fd008a54c1c03f8ffc69407867eda22925b'
   name 'LiteIcon'
-  homepage 'https://www.freemacsoft.net/liteicon/'
+  homepage 'https://freemacsoft.net/liteicon/'
 
   app 'LiteIcon.app'
 

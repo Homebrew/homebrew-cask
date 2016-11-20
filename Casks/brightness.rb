@@ -4,7 +4,7 @@ cask 'brightness' do
 
   url "http://www.bergdesign.com/resources/Brightness/Brightness_#{version}.dmg"
   name 'Brightness'
-  homepage 'http://www.bergdesign.com/brightness/'
+  homepage 'http://bergdesign.com/brightness/'
 
   app 'Brightness.app'
 end
