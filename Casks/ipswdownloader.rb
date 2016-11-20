@@ -10,7 +10,7 @@ cask 'ipswdownloader' do
   end
 
   name 'ipswDownloader'
-  homepage 'https://www.igrsoft.com/ipswdownloader/'
+  homepage 'https://igrsoft.com/ipswdownloader/'
 
   app 'ipswDownloader.app'
 end

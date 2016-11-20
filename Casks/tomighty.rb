@@ -7,7 +7,7 @@ cask 'tomighty' do
   appcast 'https://github.com/tomighty/tomighty-osx/releases.atom',
           checkpoint: 'd840c6dbb9a016a8db3e4cd209d0ade84b13864dab3dff9df0f1cba93761fa8c'
   name 'Tomighty'
-  homepage 'http://www.tomighty.org/'
+  homepage 'http://tomighty.org/'
 
   app 'Tomighty.app'
 end
