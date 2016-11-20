@@ -4,7 +4,7 @@ cask 'mysqlworkbench' do
 
   url "https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-osx-x86_64.dmg"
   name 'MySQL Workbench'
-  homepage 'https://www.mysql.com/products/workbench'
+  homepage 'http://www.mysql.com/products/workbench/'
   gpg "#{url}.asc",
       key_id: '8c718d3b5072e1f5'
 
