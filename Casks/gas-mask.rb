@@ -6,7 +6,7 @@ cask 'gas-mask' do
   appcast 'http://gmask.clockwise.ee/check_update/',
           checkpoint: '1521f159563375d5f66bc2ad30e5818df91625bbda3f1460a0a81670ee0f5c2a'
   name 'Gas Mask'
-  homepage 'http://www.clockwise.ee/'
+  homepage 'http://clockwise.ee/'
 
   app 'Gas Mask.app'
 end

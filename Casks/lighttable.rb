@@ -7,7 +7,7 @@ cask 'lighttable' do
   appcast 'https://github.com/LightTable/LightTable/releases.atom',
           checkpoint: '6195e1333c6a146c67861a8c7269e8c8405f04d628a0aa4742e159d3bfe98600'
   name 'Light Table'
-  homepage 'http://www.lighttable.com/'
+  homepage 'http://lighttable.com/'
 
   app "lighttable-#{version}-mac/LightTable.app"
   binary "lighttable-#{version}-mac/light"
