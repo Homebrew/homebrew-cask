@@ -5,7 +5,7 @@ cask 'importio' do
   # d24s8iufolpmlr.cloudfront.net was verified as official when first introduced to the cask
   url 'https://d24s8iufolpmlr.cloudfront.net/FF24/production-builds/import.io.dmg'
   name 'import.io'
-  homepage 'https://import.io/'
+  homepage 'https://www.import.io/'
 
   app 'import.io.app'
 

@@ -4,7 +4,7 @@ cask 'viber' do
 
   url 'https://download.viber.com/desktop/mac/Viber.dmg'
   name 'Viber'
-  homepage 'http://viber.com'
+  homepage 'http://www.viber.com'
 
   app 'Viber.app'
 end

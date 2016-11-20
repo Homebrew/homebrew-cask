@@ -17,7 +17,7 @@ cask 'bettertouchtool' do
   end
 
   name 'BetterTouchTool'
-  homepage 'https://boastr.net/'
+  homepage 'https://www.boastr.net/'
 
   auto_updates true
   accessibility_access true

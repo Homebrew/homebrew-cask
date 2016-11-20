@@ -13,7 +13,7 @@ cask 'spectacle' do
   # amazonaws.com/spectacle was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/spectacle/downloads/Spectacle+#{version}.zip"
   name 'Spectacle'
-  homepage 'https://spectacleapp.com/'
+  homepage 'https://www.spectacleapp.com/'
 
   accessibility_access true
 

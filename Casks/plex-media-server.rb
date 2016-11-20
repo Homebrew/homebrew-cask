@@ -4,7 +4,7 @@ cask 'plex-media-server' do
 
   url "https://downloads.plex.tv/plex-media-server/#{version}/PlexMediaServer-#{version}-OSX.zip"
   name 'Plex Media Server'
-  homepage 'https://plex.tv/'
+  homepage 'https://www.plex.tv/'
 
   depends_on macos: '>= :mountain_lion'
 

@@ -4,7 +4,7 @@ cask 'crashplan' do
 
   url "https://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_#{version}_Mac.dmg"
   name 'CrashPlan'
-  homepage 'https://crashplan.com/'
+  homepage 'https://www.crashplan.com/'
 
   pkg 'Install CrashPlan.pkg'
 

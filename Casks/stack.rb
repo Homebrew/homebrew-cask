@@ -5,7 +5,7 @@ cask 'stack' do
   # transip.net/stack was verified as official when first introduced to the cask
   url "https://mirror.transip.net/stack/software/osx/stack-#{version}.pkg"
   name 'STACK'
-  homepage 'https://transip.nl/stack'
+  homepage 'https://www.transip.nl/stack'
 
   pkg "stack-#{version}.pkg"
 

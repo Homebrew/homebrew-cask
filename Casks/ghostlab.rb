@@ -6,7 +6,7 @@ cask 'ghostlab' do
   appcast "https://awesome.vanamco.com/Ghostlab2/update/ghostlab#{version.major}-cast.xml?vco=trkd",
           checkpoint: '243c77ba04b68fb6af58aed4467f7664d5bf79e88eff4726c48ca157d98a7490'
   name 'Ghostlab'
-  homepage 'https://vanamco.com/ghostlab/'
+  homepage 'https://www.vanamco.com/ghostlab/'
 
   app "Ghostlab#{version.major}.app"
 end

@@ -4,7 +4,7 @@ cask 'skypewebplugin' do
 
   url "https://swx.cdn.skype.com/plugin/#{version}/SkypeWebPlugin.pkg"
   name 'Skype Web Plugin'
-  homepage 'https://skype.com'
+  homepage 'https://www.skype.com'
 
   pkg 'SkypeWebPlugin.pkg'
 

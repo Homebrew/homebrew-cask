@@ -7,7 +7,7 @@ cask 'race-into-space' do
   appcast 'https://sourceforge.net/projects/raceintospace/rss',
           checkpoint: '9a4ae7ec0dc399823bec3e9b24c808beab9889276360891bf382b3ef5eb56640'
   name 'Race Into Space'
-  homepage 'http://raceintospace.org/'
+  homepage 'http://www.raceintospace.org/'
 
   app 'Race Into Space.app'
 end

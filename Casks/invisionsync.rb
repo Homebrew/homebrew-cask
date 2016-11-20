@@ -6,7 +6,7 @@ cask 'invisionsync' do
   appcast 'https://projects.invisionapp.com/native_app/mac/sparkle/appcast_v2.xml',
           checkpoint: '3c142a877b1aa92ed471d0f2c83c09a0eb4954605f7230360259fd6901711b66'
   name 'InVision Sync'
-  homepage 'https://invisionapp.com/'
+  homepage 'https://www.invisionapp.com/'
 
   app 'InVisionSync.app'
 end

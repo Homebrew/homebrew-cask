@@ -6,7 +6,7 @@ cask 'keka' do
   appcast 'http://www.kekaosx.com/update/keka.xml',
           checkpoint: '76c07c4ead37d0ec9771f0aec315596d496fa0f80aacb9188c5ac5d9cf631e4e'
   name 'Keka'
-  homepage 'http://kekaosx.com/'
+  homepage 'http://www.kekaosx.com/'
 
   auto_updates true
   depends_on macos: '>= :lion'
