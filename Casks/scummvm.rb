@@ -4,7 +4,7 @@ cask 'scummvm' do
 
   url "https://scummvm.org/frs/scummvm/#{version}/scummvm-#{version}-macosx.dmg"
   name 'ScummVM'
-  homepage 'https://scummvm.org/'
+  homepage 'https://www.scummvm.org/'
 
   app 'ScummVM.app'
 end

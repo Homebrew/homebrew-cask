@@ -6,7 +6,7 @@ cask 'xamarin-android' do
   appcast 'https://static.xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
           checkpoint: '00b79aa8567cd5acabbe285e2b09fe0765df2def16a111c8c757015aff57d21e'
   name 'Xamarin.Android'
-  homepage 'https://xamarin.com/android'
+  homepage 'https://www.xamarin.com/android'
 
   pkg "xamarin.android-#{version}.pkg"
 
