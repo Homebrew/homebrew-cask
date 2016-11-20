@@ -4,7 +4,7 @@ cask 'heroes-of-newerth' do
 
   url "http://dl.heroesofnewerth.com/HoNClient-#{version}.dmg"
   name 'Heroes of Newerth'
-  homepage 'https://www.heroesofnewerth.com/'
+  homepage 'http://www.heroesofnewerth.com/'
 
   app 'Heroes of Newerth.app'
 
