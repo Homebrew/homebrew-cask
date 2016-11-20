@@ -1,19 +1,19 @@
 cask 'cd-to' do
-  version '2.6.0'
-  sha256 'a92def521d332a373f655a41338d0ec18dfaa6e24eb9ec2ca6df281398db3d46'
+  version '2.7.0'
+  sha256 '979667c59da350e1a1f6288d20b8cf84ccf81a96b63f1585ad06fd82acc36684'
 
-  url "https://github.com/jbtule/cdto/releases/download/#{version.dots_to_underscores}/cdto_#{version.dots_to_underscores.gsub(%r{_\d$}, '')}.zip"
-  appcast 'https://github.com/jbtule/cdto/releases.atom',
-          checkpoint: 'd1bd6448f379a5260875f0a04e932c71ea223ddaf1fdde45da3dda93228ab5f0'
-  name 'cd to'
-  homepage 'https://github.com/jbtule/cdto'
+  url "https://github.com/ealeksandrov/cdto/releases/download/#{version.dots_to_underscores}/cd_to_#{version.dots_to_underscores.gsub(%r{_\d$}, '')}.zip"
+  appcast 'https://github.com/ealeksandrov/cdto/releases.atom',
+          checkpoint: '64945ad97b2ff98dc41ec2cd05df9a71af6bf93faac41a75ff1f1a21a063e141'
+  name 'cd_to'
+  homepage 'https://github.com/ealeksandrov/cdto'
 
-  app "cdto_#{version.dots_to_underscores.gsub(%r{_\d$}, '')}/terminal/cd to.app"
+  app "cd_to_#{version.dots_to_underscores.gsub(%r{_\d$}, '')}/terminal/cd_to.app"
 
   caveats <<-EOS.undent
     To complete installation:
     1. Open the the Applications folder in finder.
-    2. Drag "cd to.app" onto the Finder toolbar while holding down the command(⌘) and option(⌥) keys.
+    2. Drag "cd_to.app" onto the Finder toolbar while holding down the command(⌘) and option(⌥) keys.
 
     To use, just click on the new button and instantly opens a new Terminal.app window.
 
