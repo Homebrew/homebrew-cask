@@ -5,7 +5,7 @@ cask 'nzbget' do
   # github.com/nzbget/nzbget was verified as official when first introduced to the cask
   url "https://github.com/nzbget/nzbget/releases/download/v#{version}/nzbget-#{version}-bin-osx.zip"
   appcast 'https://github.com/nzbget/nzbget/releases.atom',
-          checkpoint: '40878b72afb95745be8ac09745b31d2bb72bdfe8d1a32b9778c07b436b64dcd8'
+          checkpoint: 'cc9ea4ea0bc52bb1f0cb11e01f32d79c4e90c85dda1e20f2fed81abde027fb40'
   name 'NZBGet'
   homepage 'http://nzbget.net'
 
