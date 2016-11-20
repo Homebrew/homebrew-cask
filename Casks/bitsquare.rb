@@ -1,11 +1,11 @@
 cask 'bitsquare' do
-  version '0.4.9.7'
-  sha256 '95fac918e89f14363d9acbb7655f69830f2bb50fc89fdfa9aa66add7e64faa66'
+  version '0.4.9.8'
+  sha256 'badb2a66252072af83c7c8d77a98b556b8eeef94eacc2d104bbe85c5af7c45d6'
 
   # github.com/bitsquare/bitsquare was verified as official when first introduced to the cask
   url "https://github.com/bitsquare/bitsquare/releases/download/v#{version}/Bitsquare-#{version}.dmg"
   appcast 'https://github.com/bitsquare/bitsquare//releases.atom',
-          checkpoint: '8b6afd6c45cfe0bac77190a35c24f7dbdf547d70b6453e31fe1f5a5d4c826fa3'
+          checkpoint: '04c4276419fe404f24206e3a9a222e4d9676b136a92ade78df95af0fec21bafc'
   name 'Bitsquare'
   homepage 'https://bitsquare.io'
   gpg "#{url}.asc",
