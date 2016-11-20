@@ -4,7 +4,7 @@ cask 'waves-central' do
 
   url "http://installers.waves.com/WavesCentral/V#{version}/Install_Waves_Central.dmg"
   name 'Waves Central'
-  homepage 'https://www.waves.com/'
+  homepage 'http://www.waves.com/'
 
   app 'Waves Central.app'
 end

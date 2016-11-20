@@ -4,7 +4,7 @@ cask 'shruplay' do
 
   url "http://cdn.getshru.com/wp-content/uploads/#{version.major}/10/SHRUPlayMac_#{version.dots_to_underscores}.zip"
   name 'PDX Pet Design SHRUPlay'
-  homepage 'https://getshru.com/'
+  homepage 'http://getshru.com/'
 
   app 'ShruPlay.app'
 end
