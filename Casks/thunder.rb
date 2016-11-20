@@ -1,6 +1,6 @@
 cask 'thunder' do
-  version '2.7.7.2318'
-  sha256 '8e456706c038eacbe1974a0b6be48eb1a43f74c7dbca7c05e8fa0525acaafdaa'
+  version '2.7.8.2358'
+  sha256 'b99df5898a14744757884c6031ad508ad985131117348cee60279c3929199fc0'
 
   # down.sandai.net was verified as official when first introduced to the cask
   url "http://down.sandai.net/mac/thunder_dl#{version}_Beta.dmg"
@@ -14,8 +14,10 @@ cask 'thunder' do
 
   zap delete: [
                 '~/Library/Application Support/Thunder',
+                '~/Library/Caches/com.Thunder.XLPlayer',
                 '~/Library/Caches/com.xunlei.Thunder',
                 '~/Library/Caches/com.xunlei.Thunder-Store',
+                '~/Library/Cookies/com.xunlei.Thunder-Store.binarycookies',
                 '~/Library/Cookies/com.xunlei.Thunder.binarycookies',
                 '~/Library/Preferences/com.xunlei.Thunder-Store.plist',
                 '~/Library/Preferences/com.xunlei.Thunder.plist',
