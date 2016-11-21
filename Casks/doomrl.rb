@@ -4,7 +4,7 @@ cask 'doomrl' do
 
   url "http://doom.chaosforge.org/file_download/31/doomrl-#{version}.dmg"
   name 'Doom the Roguelike'
-  homepage 'http://doom.chaosforge.org'
+  homepage 'https://doom.chaosforge.org/'
 
   depends_on arch: :x86_64
 

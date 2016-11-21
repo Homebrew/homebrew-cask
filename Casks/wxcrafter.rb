@@ -4,7 +4,7 @@ cask 'wxcrafter' do
 
   url 'http://codelite.org/downloads/wxCrafter/wxCrafterDownloads.php?osx'
   name 'wxCrafter'
-  homepage 'http://wxcrafter.codelite.org'
+  homepage 'https://wxcrafter.codelite.org/'
 
   depends_on macos: '>= :mountain_lion'
 

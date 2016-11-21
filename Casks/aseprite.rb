@@ -6,7 +6,7 @@ cask 'aseprite' do
   appcast 'https://github.com/aseprite/aseprite/releases.atom',
           checkpoint: '7e03d1fbeebc1c82311546e9f1a53a98609b30576c452df60eed23cbc9c921e6'
   name 'Aseprite'
-  homepage 'http://www.aseprite.org'
+  homepage 'https://www.aseprite.org/'
 
   app 'Aseprite.app'
 end
