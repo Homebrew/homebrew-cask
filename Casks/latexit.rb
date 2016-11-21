@@ -7,7 +7,7 @@ cask 'latexit' do
   appcast 'https://pierre.chachatelier.fr/latexit/downloads/latexit-sparkle-en.rss',
           checkpoint: '90d5bc582ecba92ccf740e0a9793fa8f08441d3c9586eeddcb8baf003cdc023c'
   name 'LaTeXiT'
-  homepage 'https://www.chachatelier.fr/latexit'
+  homepage 'https://www.chachatelier.fr/latexit/'
 
   app 'LaTeXiT.app'
 

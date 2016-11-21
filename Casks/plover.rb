@@ -1,13 +1,13 @@
 cask 'plover' do
-  version '3.0.0'
-  sha256 '89505ebad2700e38d57b5c710550dac0ad4b9a44bd1e15ba8b1f162f0b464694'
+  version '3.1.0'
+  sha256 '6e325d70bab78de5c6846f9ba83e66b3ce3c59d61a267eaeb9183dc26edac9cf'
 
   # github.com/openstenoproject/plover was verified as official when first introduced to the cask
-  url "https://github.com/openstenoproject/plover/releases/download/v#{version}/Plover-#{version}.dmg"
+  url "https://github.com/openstenoproject/plover/releases/download/v#{version}/Plover-#{version}-macOS.dmg"
   appcast 'https://github.com/openstenoproject/plover/releases.atom',
-          checkpoint: '8eb7487c0243890078c45e7f0a3ca5b856f3d3b980ec9737f5aa87607037b91e'
+          checkpoint: '00552cb3716e36085af2c8ad44d0774d3e404e9ad86656bee7edb57721cd1d8c'
   name 'Plover'
-  homepage 'http://stenoknight.com/wiki/Main_Page'
+  homepage 'https://stenoknight.com/wiki/Main_Page'
 
   accessibility_access true
 

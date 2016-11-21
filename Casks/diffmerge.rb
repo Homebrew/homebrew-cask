@@ -4,7 +4,7 @@ cask 'diffmerge' do
 
   url "http://download.sourcegear.com/DiffMerge/#{version.sub(%r{\.\d+$}, '')}/DiffMerge.#{version}.intel.stable.pkg"
   name 'DiffMerge'
-  homepage 'https://www.sourcegear.com/diffmerge'
+  homepage 'https://www.sourcegear.com/diffmerge/'
 
   pkg "DiffMerge.#{version}.intel.stable.pkg"
 

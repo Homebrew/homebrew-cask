@@ -4,7 +4,7 @@ cask 'xamarin' do
 
   url 'https://download.xamarin.com/Installer/Mac/XamarinInstaller.dmg'
   name 'Xamarin Platform'
-  homepage 'https://xamarin.com/platform'
+  homepage 'https://www.xamarin.com/platform'
 
   installer manual: 'Install Xamarin.app'
 

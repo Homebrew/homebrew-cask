@@ -6,7 +6,7 @@ cask 'nicecast' do
   appcast 'https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&bundleid=com.rogueamoeba.Nicecast&system=10114',
           checkpoint: 'cd857805b6f1290a2b1777b0b8e35d8876879323446e5a20fbd013160cc450a7'
   name 'Nicecast'
-  homepage 'https://rogueamoeba.com/nicecast'
+  homepage 'https://rogueamoeba.com/nicecast/'
 
   app 'Nicecast.app'
 end

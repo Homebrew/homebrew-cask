@@ -4,7 +4,7 @@ cask 'wercker' do
 
   url 'http://downloads.wercker.com/release/wercker-darwin-latest.tar.gz'
   name 'Wercker'
-  homepage 'http://wercker.com/downloads/'
+  homepage 'http://www.wercker.com/downloads/'
 
   app 'wercker.app'
 end

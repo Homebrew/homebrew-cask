@@ -4,7 +4,7 @@ cask 'dmm-player' do
 
   url "http://portalapp.dmm.com/silverlightplayer/dmm/m/#{version.dots_to_underscores}/DMMPlayerInstaller_#{version.dots_to_underscores}.pkg"
   name 'DMM Player'
-  homepage 'https://www.dmm.com/digital/howto_dmmplayer_html/'
+  homepage 'http://www.dmm.com/digital/howto_dmmplayer_html/'
 
   pkg "DMMPlayerInstaller_#{version.dots_to_underscores}.pkg"
 

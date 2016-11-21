@@ -4,7 +4,7 @@ cask 'twelf' do
 
   url "http://twelf.org/releases/twelf-osx-#{version}.dmg"
   name 'Twelf'
-  homepage 'http://www.twelf.org'
+  homepage 'http://twelf.org'
 
   app 'Twelf'
 end
