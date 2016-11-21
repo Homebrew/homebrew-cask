@@ -4,6 +4,7 @@ cask 'wxwork' do
 
   url "http://dldir1.qq.com/foxmail/work_weixin/WXWork_#{version}.dmg"
   name 'Wechat Enterprise Version'
+  name '企业微信'
   homepage 'https://work.weixin.qq.com/'
 
   app '企业微信.app'
