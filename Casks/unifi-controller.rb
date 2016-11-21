@@ -4,7 +4,7 @@ cask 'unifi-controller' do
 
   url "https://dl.ubnt.com/unifi/#{version}/UniFi.pkg"
   name 'UniFi Controller'
-  homepage 'https://www.ubnt.com/download/unifi'
+  homepage 'https://www.ubnt.com/download/unifi/'
 
   pkg 'UniFi.pkg'
 

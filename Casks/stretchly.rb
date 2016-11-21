@@ -7,7 +7,7 @@ cask 'stretchly' do
   appcast 'https://github.com/hovancik/stretchly/releases.atom',
           checkpoint: '1c4244355d721e8f05a3f9c451f742a9e3f6cf7e463d252e0a4b2da000ec524b'
   name 'stretchly'
-  homepage 'https://hovancik.net/stretchly'
+  homepage 'https://hovancik.net/stretchly/'
 
   app 'stretchly.app'
 end
