@@ -1,11 +1,10 @@
 cask 'macfusion' do
-  version '2.1-dev'
-  sha256 'bc180bfe471fb41cbd5bf8d896dd38c0d4222436425970e090bcd36ad556e026'
+  version '2.0.4'
+  sha256 '6693241fd54d686013864adb86a6ea7eef6c1291546573b628b3ddf7889ef71c'
 
-  # github.com/ElDeveloper/macfusion was verified as official when first introduced to the cask
-  url "https://github.com/ElDeveloper/macfusion#{version.major}/releases/download/#{version}/Macfusion-#{version}.zip"
-  appcast "https://github.com/ElDeveloper/macfusion#{version.major}/releases.atom",
-          checkpoint: '1d723f056dc494253c55c5fa83f3f679ea9c4b421b2a97b806a70c08470aae08'
+  url "http://macfusionapp.org/releases/Macfusion_#{version}.zip"
+  appcast 'http://macfusionapp.org/appcast.xml',
+          checkpoint: '6035a7a17249b0f1106400fff4e81df9815f99eca3ef1e5b4a98d54fa97bfad3'
   name 'Macfusion'
   homepage 'http://macfusionapp.org/'
 
@@ -17,7 +16,7 @@ cask 'macfusion' do
   postflight do
     Dir.chdir("#{appdir}/Macfusion.app/Contents/PlugIns/sshfs.mfplugin/Contents/Resources") do
       File.rename('sshfs-static', 'sshfs-static.orig')
-      File.symlink('/usr/local/bin/sshfs', 'sshfs-static')
+      File.symlink("#{HOMEBREW_PREFIX}/bin/sshfs", 'sshfs-static')
     end
   end
 end
