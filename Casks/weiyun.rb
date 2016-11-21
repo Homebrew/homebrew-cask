@@ -5,7 +5,7 @@ cask 'weiyun' do
   # dldir1.qq.com/weiyun was verified as official when first introduced to the cask
   url "http://dldir1.qq.com/weiyun/Weiyun_Mac_#{version}.dmg"
   name 'weiyun'
-  homepage 'http://www.weiyun.com'
+  homepage 'https://www.weiyun.com/'
 
   app 'Weiyun.app'
 
