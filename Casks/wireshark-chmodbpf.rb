@@ -6,44 +6,24 @@ cask 'wireshark-chmodbpf' do
   name 'Wireshark-ChmodBPF'
   homepage 'https://www.wireshark.org/'
 
-  installer script: '/usr/sbin/installer',
-            args:   [
-                      '-applyChoiceChangesXML',
-                      "#{staged_path}/chmodbpf_only.xml",
-                      '-package',
-                      "#{staged_path}/Wireshark #{version} Intel 64.pkg",
-                      '-target',
-                      '/',
-                    ]
-
-  preflight do
-    # shim script (https://github.com/caskroom/homebrew-cask/pull/21318)
-    FileUtils.touch "#{staged_path}/chmodbpf_only.xml"
-    chmodbpf_only = File.open "#{staged_path}/chmodbpf_only.xml", 'w'
-    chmodbpf_only.puts '<?xml version="1.0" encoding="UTF-8"?>'
-    chmodbpf_only.puts '<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">'
-    chmodbpf_only.puts '<plist version="1.0">'
-    chmodbpf_only.puts '<array>'
-    chmodbpf_only.puts '  <dict>'
-    chmodbpf_only.puts '    <key>attributeSetting</key>'
-    chmodbpf_only.puts '    <integer>0</integer>'
-    chmodbpf_only.puts '    <key>choiceAttribute</key>'
-    chmodbpf_only.puts '    <string>selected</string>'
-    chmodbpf_only.puts '    <key>choiceIdentifier</key>'
-    chmodbpf_only.puts '    <string>wireshark</string>'
-    chmodbpf_only.puts '  </dict>'
-    chmodbpf_only.puts '  <dict>'
-    chmodbpf_only.puts '    <key>attributeSetting</key>'
-    chmodbpf_only.puts '    <integer>0</integer>'
-    chmodbpf_only.puts '    <key>choiceAttribute</key>'
-    chmodbpf_only.puts '    <string>selected</string>'
-    chmodbpf_only.puts '    <key>choiceIdentifier</key>'
-    chmodbpf_only.puts '    <string>cli</string>'
-    chmodbpf_only.puts '  </dict>'
-    chmodbpf_only.puts '</array>'
-    chmodbpf_only.puts '</plist>'
-    chmodbpf_only.close
-  end
+  pkg "Wireshark #{version} Intel 64.pkg",
+      choices: [
+                 {
+                   'choiceIdentifier' => 'wireshark',
+                   'choiceAttribute'  => 'selected',
+                   'attributeSetting' => 0,
+                 },
+                 {
+                   'choiceIdentifier' => 'chmodbpf',
+                   'choiceAttribute'  => 'selected',
+                   'attributeSetting' => 1,
+                 },
+                 {
+                   'choiceIdentifier' => 'cli',
+                   'choiceAttribute'  => 'selected',
+                   'attributeSetting' => 0,
+                 },
+               ]
 
   postflight do
     system_command '/usr/sbin/dseditgroup',
