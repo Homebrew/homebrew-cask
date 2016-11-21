@@ -9,7 +9,7 @@ cask 'antconc' do
 
   url "http://www.laurenceanthony.net/software/antconc/releases/AntConc#{version.no_dots}/AntConc.zip"
   name 'AntConc'
-  homepage 'http://www.laurenceanthony.net/software/antconc'
+  homepage 'http://www.laurenceanthony.net/software/antconc/'
 
   app 'AntConc.app'
 end

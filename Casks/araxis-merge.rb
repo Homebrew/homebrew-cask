@@ -22,7 +22,7 @@ cask 'araxis-merge' do
     url "https://www.araxis.com/download/Merge#{version}-macOS10.12.dmg"
   end
 
-  homepage 'https://www.araxis.com/merge'
+  homepage 'https://www.araxis.com/merge/'
 
   depends_on macos: '>= :mountain_lion'
 

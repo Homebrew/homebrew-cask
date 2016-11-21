@@ -4,7 +4,7 @@ cask 'phonebrowse' do
 
   url 'https://www.imobie.com/product/phonebrowse-mac.dmg'
   name 'PhoneBrowse'
-  homepage 'https://www.imobie.com/phonebrowse'
+  homepage 'https://www.imobie.com/phonebrowse/'
 
   app 'PhoneBrowse.app'
 end

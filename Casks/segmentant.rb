@@ -4,7 +4,7 @@ cask 'segmentant' do
 
   url "http://www.laurenceanthony.net/software/segmentant/releases/SegmentAnt#{version.no_dots}/SegmentAnt.zip"
   name 'SegmentAnt'
-  homepage 'http://www.laurenceanthony.net/software/segmentant'
+  homepage 'http://www.laurenceanthony.net/software/segmentant/'
 
   app 'SegmentAnt.app'
 end

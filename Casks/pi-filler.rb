@@ -4,7 +4,7 @@ cask 'pi-filler' do
 
   url 'http://ivanx.com/raspberrypi/files/PiFiller.zip'
   name 'Pi Filler'
-  homepage 'http://ivanx.com/raspberrypi'
+  homepage 'http://ivanx.com/raspberrypi/'
 
   app 'Pi Filler.app'
 end

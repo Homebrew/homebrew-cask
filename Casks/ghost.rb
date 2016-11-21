@@ -7,7 +7,7 @@ cask 'ghost' do
   appcast 'https://github.com/TryGhost/Ghost-Desktop/releases.atom',
           checkpoint: 'e401dbb9d54f893e2330de2beb343aedd2146e3578cb7e5933fade5bb844a73c'
   name 'Ghost Desktop'
-  homepage 'https://ghost.org/downloads'
+  homepage 'https://ghost.org/downloads/'
 
   app 'Ghost.app'
 end

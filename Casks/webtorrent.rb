@@ -7,7 +7,7 @@ cask 'webtorrent' do
   appcast 'https://github.com/feross/webtorrent-desktop/releases.atom',
           checkpoint: 'b1361dd58f810194aec58efc6566cbe5d29531b6e8261938f48c01817946e9fd'
   name 'WebTorrent Desktop'
-  homepage 'https://webtorrent.io/desktop'
+  homepage 'https://webtorrent.io/desktop/'
 
   app 'WebTorrent.app'
 

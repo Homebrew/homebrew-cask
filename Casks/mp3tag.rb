@@ -4,7 +4,7 @@ cask 'mp3tag' do
 
   url "http://download.mp3tag.de/mp3tagv#{version.no_dots}-MacOSX-Wine.zip"
   name 'MP3TAG'
-  homepage 'http://www.mp3tag.de/en'
+  homepage 'http://www.mp3tag.de/en/'
 
   app "mp3tagv#{version.no_dots}-MacOSX-Wine/Mp3tag.app"
 end

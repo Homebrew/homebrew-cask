@@ -4,7 +4,7 @@ cask 'iloc' do
 
   url "https://derailer.org/iloc/iloc-#{version}.tgz"
   name 'iloc'
-  homepage 'https://derailer.org/iloc'
+  homepage 'https://derailer.org/iloc/'
 
   binary "iloc-#{version}/iloc"
 end

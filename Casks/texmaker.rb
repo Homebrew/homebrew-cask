@@ -4,7 +4,7 @@ cask 'texmaker' do
 
   url 'http://www.xm1math.net/texmaker/TexmakerMacosxLion.zip'
   name 'Texmaker'
-  homepage 'http://www.xm1math.net/texmaker'
+  homepage 'http://www.xm1math.net/texmaker/'
 
   app 'TexmakerMacosxLion/texmaker.app'
 end

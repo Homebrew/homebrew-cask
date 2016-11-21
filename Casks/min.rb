@@ -7,7 +7,7 @@ cask 'min' do
   appcast 'https://github.com/minbrowser/min/releases.atom',
           checkpoint: 'd9fe31b89a107bec70ad419961cfba3e7dc971ac3946bf67894b9fb99b4a36cc'
   name 'Min'
-  homepage 'https://minbrowser.github.io/min'
+  homepage 'https://minbrowser.github.io/min/'
 
   app 'Min.app'
 

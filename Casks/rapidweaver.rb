@@ -7,7 +7,7 @@ cask 'rapidweaver' do
   appcast "https://updates.devmate.com/com.realmacsoftware.rapidweaver#{version.major}.xml",
           checkpoint: '42a364ce0f07cb09d7b55024becee4acc42646a530673f5ae1d178fb13b40c1e'
   name 'RapidWeaver'
-  homepage 'https://realmacsoftware.com/rapidweaver'
+  homepage 'https://realmacsoftware.com/rapidweaver/'
 
   depends_on macos: '>= :leopard'
 

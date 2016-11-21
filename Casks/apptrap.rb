@@ -6,7 +6,7 @@ cask 'apptrap' do
   appcast 'http://onnati.net/apptrap/ReleaseNotes.xml',
           checkpoint: '561cc83e41aea261c0472d73369c19b7c738b95b764eb346508a654643d651d5'
   name 'AppTrap'
-  homepage 'http://onnati.net/apptrap'
+  homepage 'http://onnati.net/apptrap/'
 
   prefpane 'AppTrap.prefPane'
 end

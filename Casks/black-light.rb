@@ -4,7 +4,7 @@ cask 'black-light' do
 
   url "https://littoral.michelf.ca/apps/black-light/black-light-#{version}.zip"
   name 'Black Light'
-  homepage 'https://michelf.ca/projects/black-light'
+  homepage 'https://michelf.ca/projects/black-light/'
 
   app 'Black Light.app'
 end

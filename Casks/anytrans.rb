@@ -4,7 +4,7 @@ cask 'anytrans' do
 
   url 'https://www.imobie.com/product/anytrans-mac.dmg'
   name 'AnyTrans'
-  homepage 'https://www.imobie.com/anytrans'
+  homepage 'https://www.imobie.com/anytrans/'
 
   app 'AnyTrans.app'
 end

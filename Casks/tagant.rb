@@ -4,7 +4,7 @@ cask 'tagant' do
 
   url "http://www.laurenceanthony.net/software/tagant/releases/TagAnt#{version.no_dots}/TagAnt.zip"
   name 'TagAnt'
-  homepage 'http://www.laurenceanthony.net/software/tagant'
+  homepage 'http://www.laurenceanthony.net/software/tagant/'
 
   app 'TagAnt.app'
 end

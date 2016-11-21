@@ -4,7 +4,7 @@ cask 'clion' do
 
   url "https://download.jetbrains.com/cpp/CLion-#{version}.dmg"
   name 'CLion'
-  homepage 'https://www.jetbrains.com/clion'
+  homepage 'https://www.jetbrains.com/clion/'
 
   conflicts_with cask: 'clion-eap'
 

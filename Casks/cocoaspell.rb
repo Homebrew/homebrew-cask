@@ -4,7 +4,7 @@ cask 'cocoaspell' do
 
   url "http://people.ict.usc.edu/~leuski/cocoaspell/cocoAspell.#{version}.dmg", user_agent: :fake
   name 'cocoAspell'
-  homepage 'http://people.ict.usc.edu/~leuski/cocoaspell'
+  homepage 'http://people.ict.usc.edu/~leuski/cocoaspell/'
 
   depends_on macos: '>= :el_capitan'
 
