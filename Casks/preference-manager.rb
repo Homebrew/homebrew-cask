@@ -6,7 +6,7 @@ cask 'preference-manager' do
   appcast 'https://www.digitalrebellion.com/rss/appcasts/pref_man.xml',
           checkpoint: '16d1e93f7fbdb16438f4fe44ae29079e63dbff5886965b707a72232371684d14'
   name 'Preference Manager'
-  homepage 'https://www.digitalrebellion.com/prefman'
+  homepage 'https://www.digitalrebellion.com/prefman/'
 
   app 'Preference Manager.app'
 end

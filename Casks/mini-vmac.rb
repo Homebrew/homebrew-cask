@@ -4,7 +4,7 @@ cask 'mini-vmac' do
 
   url "http://www.gryphel.com/d/minivmac/minivmac-#{version}/minivmac-#{version}-imch.bin.tgz"
   name 'Mini vMac'
-  homepage 'http://www.gryphel.com/c/minivmac'
+  homepage 'http://www.gryphel.com/c/minivmac/'
 
   app 'Mini vMac.app'
 end

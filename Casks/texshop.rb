@@ -6,7 +6,7 @@ cask 'texshop' do
   appcast 'http://pages.uoregon.edu/koch/texshop/texshop-64/texshopappcast.xml',
           checkpoint: '920914819ea0574c8fd896869b313aaeb597e6d592fd8de459cec5927991e04e'
   name 'TeXShop'
-  homepage 'http://pages.uoregon.edu/koch/texshop'
+  homepage 'http://pages.uoregon.edu/koch/texshop/'
 
   app 'TeXShop.app'
 end

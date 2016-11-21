@@ -5,7 +5,7 @@ cask 'hackhands' do
   # desktop.hackhands.com.s3-website-us-west-1.amazonaws.com was verified as official when first introduced to the cask
   url "http://desktop.hackhands.com.s3-website-us-west-1.amazonaws.com/osx/#{version}/HackHands.zip"
   name 'HackHands'
-  homepage 'https://hackhands.com/desktop'
+  homepage 'https://hackhands.com/desktop/'
 
   app 'HackHands.app'
 end
