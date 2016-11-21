@@ -11,7 +11,7 @@ cask 'amethyst' do
   appcast 'https://ianyh.com/amethyst/appcast.xml',
           checkpoint: '92d4615302d5e3ed68a3a187b6709e78080691550517f9b171b3631a6ca45d1c'
   name 'Amethyst'
-  homepage 'http://ianyh.com/amethyst/'
+  homepage 'https://ianyh.com/amethyst/'
 
   accessibility_access true
 

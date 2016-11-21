@@ -7,7 +7,7 @@ cask 'plover' do
   appcast 'https://github.com/openstenoproject/plover/releases.atom',
           checkpoint: '00552cb3716e36085af2c8ad44d0774d3e404e9ad86656bee7edb57721cd1d8c'
   name 'Plover'
-  homepage 'http://stenoknight.com/wiki/Main_Page'
+  homepage 'https://stenoknight.com/wiki/Main_Page'
 
   accessibility_access true
 
