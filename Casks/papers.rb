@@ -6,7 +6,7 @@ cask 'papers' do
   appcast 'https://appcaster.papersapp.com/apps/mac/production/appcast.xml',
           checkpoint: 'c35a04f02091fbcaf519185678a234c6e034d798561b19c7af4f0c590648450f'
   name 'Papers'
-  homepage 'http://papersapp.com/'
+  homepage 'https://papersapp.com/'
 
   app 'Papers.app'
 end
