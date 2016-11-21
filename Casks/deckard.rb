@@ -9,7 +9,6 @@ cask 'deckard' do
   auto_updates true
 
   app 'Deckard.app'
-  binary "#{appdir}/Deckard.app/Contents/MacOS/Deckard", target: 'deckard'
 
   postflight do
     suppress_move_to_applications
