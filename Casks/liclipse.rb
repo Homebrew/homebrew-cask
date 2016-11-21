@@ -5,7 +5,7 @@ cask 'liclipse' do
   # googledrive.com/host/0BwwQN8QrgsRpLVlDeHRNemw3S1E was verified as official when first introduced to the cask
   url "https://googledrive.com/host/0BwwQN8QrgsRpLVlDeHRNemw3S1E/LiClipse%20#{version}/liclipse_#{version}_macosx.cocoa.x86_64.dmg"
   name 'LiClipse'
-  homepage 'http://www.liclipse.com/'
+  homepage 'https://www.liclipse.com/'
 
   app 'LiClipse.app'
 end

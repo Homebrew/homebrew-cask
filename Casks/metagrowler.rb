@@ -4,7 +4,7 @@ cask 'metagrowler' do
 
   url "https://buttered-cat.com/downloads/get/12/MetaGrowler_#{version}.zip"
   name 'MetaGrowler'
-  homepage 'http://buttered-cat.com/products/view/MetaGrowler'
+  homepage 'https://buttered-cat.com/products/view/MetaGrowler'
 
   app 'MetaGrowler.app'
 end

@@ -7,7 +7,7 @@ cask 'neofinder' do
   appcast 'https://www.wfs-apps.de/updates/neofinder-appcast-64.xml',
           checkpoint: 'dc7200a0207418ba7148ae3cff37fa3decd70bd911ce2f95c30cfd53ce484cdf'
   name 'NeoFinder'
-  homepage 'http://www.cdfinder.de'
+  homepage 'https://www.cdfinder.de/'
 
   app 'NeoFinder.app'
 end

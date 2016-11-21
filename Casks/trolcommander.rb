@@ -7,7 +7,7 @@ cask 'trolcommander' do
   appcast 'https://github.com/trol73/mucommander/releases.atom',
           checkpoint: '07a84626dfc65bc014a9c4cd9d76f44b3138b6a11ca3d891f4492aa32f65af55'
   name 'trolCommander'
-  homepage 'http://trolsoft.ru/en/soft/trolcommander'
+  homepage 'https://trolsoft.ru/en/soft/trolcommander'
 
   app 'trolCommander.app'
 end

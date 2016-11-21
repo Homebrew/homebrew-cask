@@ -4,7 +4,7 @@ cask 'acslogo' do
 
   url "http://www.alancsmith.co.uk/logo/ACSLogo#{version.no_dots}.dmg"
   name 'ACSLogo'
-  homepage 'http://www.alancsmith.co.uk/logo/'
+  homepage 'https://www.alancsmith.co.uk/logo/'
 
   app 'ACSLogo/ACSLogo.app'
 end
