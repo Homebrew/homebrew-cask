@@ -5,7 +5,7 @@ cask 'enpass' do
   # sinew.in was verified as official when first introduced to the cask
   url "https://dl.sinew.in/mac/setup/Enpass-#{version}.dmg"
   name 'Enpass'
-  homepage 'https://enpass.io'
+  homepage 'https://www.enpass.io/'
 
   depends_on macos: '>= :mountain_lion'
 

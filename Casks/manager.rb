@@ -4,7 +4,7 @@ cask 'manager' do
 
   url "http://cdn.manager.io/downloads/v#{version}/Manager.dmg"
   name 'Manager'
-  homepage 'http://manager.io'
+  homepage 'http://www.manager.io/'
 
   app 'Manager.app'
 end

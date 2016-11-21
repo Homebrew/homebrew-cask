@@ -6,7 +6,7 @@ cask 'flash-ppapi' do
   appcast 'http://fpdownload2.macromedia.com/get/flashplayer/update/current/xml/version_en_mac_pep.xml',
           checkpoint: '50c4e19caa48710cf812e1549e5179124552b4bf760dc9aa719e09dd86d10fbe'
   name 'Adobe Flash Player PPAPI (plugin for Opera and Chromium)'
-  homepage 'https://get.adobe.com/flashplayer/otherversions'
+  homepage 'http://get.adobe.com/flashplayer/otherversions/'
 
   pkg 'Install Adobe Pepper Flash Player.app/Contents/Resources/Adobe Flash Player.pkg'
 

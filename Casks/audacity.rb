@@ -14,7 +14,7 @@ cask 'audacity' do
     end
   end
   name 'Audacity'
-  homepage 'http://audacityteam.org'
+  homepage 'http://www.audacityteam.org/'
 
   depends_on macos: '>= :snow_leopard'
 

@@ -16,7 +16,7 @@ cask 'daisydisk' do
   end
 
   name 'DaisyDisk'
-  homepage 'https://www.daisydiskapp.com'
+  homepage 'https://daisydiskapp.com/'
 
   depends_on macos: '>= :snow_leopard'
 

@@ -4,7 +4,7 @@ cask 'nutstore' do
 
   url 'https://jianguoyun.com/static/exe/installer/NutstoreOSXInstaller.dmg'
   name 'Nutstore'
-  homepage 'https://jianguoyun.com'
+  homepage 'https://www.jianguoyun.com/'
 
   app 'Nutstore.app'
 end

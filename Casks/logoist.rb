@@ -4,7 +4,7 @@ cask 'logoist' do
 
   url 'http://www.syniumsoftware.com/download/logoist.dmg'
   name 'Logoist'
-  homepage 'http://www.syniumsoftware.com/logoist/'
+  homepage 'http://www.syniumsoftware.com/logoist'
 
   app 'Logoist.app'
 end
