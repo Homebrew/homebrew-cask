@@ -4,7 +4,7 @@ cask 'crosspack-avr' do
 
   url "https://www.obdev.at/downloads/crosspack/CrossPack-AVR-#{version.no_hyphens}.dmg"
   name 'CrossPack'
-  homepage 'https://www.obdev.at/products/crosspack/'
+  homepage 'https://www.obdev.at/products/crosspack/index.html'
 
   pkg 'CrossPack-AVR.pkg'
 

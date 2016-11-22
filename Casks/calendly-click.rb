@@ -5,7 +5,7 @@ cask 'calendly-click' do
   # d26xyjziomggk4.cloudfront.net was verified as official when first introduced to the cask
   url "https://d26xyjziomggk4.cloudfront.net/calendly_desktop/releases/production/darwin_x64/calendly-click-#{version}.dmg"
   name 'Calendly Click'
-  homepage 'https://calendly.com/integrations/calendly_click'
+  homepage 'https://calendly.com/'
 
   app 'Calendly Click.app'
 end
