@@ -5,7 +5,7 @@ cask 'seafile-client' do
   # bintray.com/artifact/download/seafile-org was verified as official when first introduced to the cask
   url "https://bintray.com/artifact/download/seafile-org/seafile/seafile-client-#{version}.dmg"
   name 'Seafile Client'
-  homepage 'https://seafile.com/'
+  homepage 'https://www.seafile.com/'
 
   app 'Seafile Client.app'
 end

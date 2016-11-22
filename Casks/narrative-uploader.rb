@@ -6,7 +6,7 @@ cask 'narrative-uploader' do
   appcast 'https://dl.getnarrative.com/appcast/osx.xml',
           checkpoint: '2f8a198d12ccc1476ea2c164015412fc6f56c3017baa6b794e243e9da925ab2a'
   name 'Narrative Uploader'
-  homepage 'https://getnarrative.com/'
+  homepage 'http://getnarrative.com/'
 
   app 'Narrative Uploader.app'
 end

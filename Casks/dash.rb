@@ -1,5 +1,5 @@
 cask 'dash' do
-  version '3.4'
+  version '3.4.1'
   sha256 '6f43e7cfcc21497c23469c6db32da0d2bf34de6692b8a3f3fad976dce7c39c1a'
 
   url "https://kapeli.com/downloads/v#{version.major}/Dash.zip"

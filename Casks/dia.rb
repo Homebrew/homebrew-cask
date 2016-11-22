@@ -14,6 +14,6 @@ cask 'dia' do
   app 'Dia.app'
 
   postflight do
-    system '/usr/bin/sed', '-i', '--', 's/exec/exec env DISPLAY=:0/g', "#{appdir}/Dia.app/Contents/Resources/bin/dia"
+    system_command '/usr/bin/sed', args: ['-i', '--', 's/exec/exec env DISPLAY=:0/g', "#{appdir}/Dia.app/Contents/Resources/bin/dia"]
   end
 end

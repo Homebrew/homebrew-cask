@@ -4,7 +4,7 @@ cask 'antwordprofiler' do
 
   url "http://www.laurenceanthony.net/software/antwordprofiler/releases/AntWordProfiler#{version.no_dots}/AntWordProfiler.zip"
   name 'AntWordProfiler'
-  homepage 'http://www.laurenceanthony.net/software/antwordprofiler'
+  homepage 'http://www.laurenceanthony.net/software/antwordprofiler/'
 
   app 'AntWordProfiler.app'
 end

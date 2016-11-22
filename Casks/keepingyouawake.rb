@@ -8,6 +8,8 @@ cask 'keepingyouawake' do
   name 'KeepingYouAwake'
   homepage 'https://github.com/newmarcel/KeepingYouAwake'
 
+  auto_updates true
+
   app 'KeepingYouAwake.app'
 
   uninstall login_item: 'KeepingYouAwake'

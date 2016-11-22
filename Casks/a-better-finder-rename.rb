@@ -8,6 +8,8 @@ cask 'a-better-finder-rename' do
   name 'A Better Finder Rename'
   homepage 'http://www.publicspace.net/ABetterFinderRename/'
 
+  auto_updates true
+
   app "A Better Finder Rename #{version.major}.app"
 
   zap delete: [

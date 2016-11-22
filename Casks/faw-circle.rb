@@ -4,7 +4,7 @@ cask 'faw-circle' do
 
   url "http://futureaudioworkshop.com/downloads/Circle-#{version}-setup.dmg"
   name 'FAW Circle'
-  homepage 'https://futureaudioworkshop.com/circle/'
+  homepage 'http://futureaudioworkshop.com/circle/'
 
   pkg 'Circle².pkg'
 

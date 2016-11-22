@@ -4,7 +4,7 @@ cask 'docear' do
 
   url 'https://docear.org/downloads/docear_macos.zip'
   name 'Docear'
-  homepage 'https://docear.org'
+  homepage 'https://www.docear.org/'
 
   app "docear_macos/docear-#{version}/Docear.app"
 end

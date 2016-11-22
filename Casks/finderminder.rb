@@ -6,7 +6,7 @@ cask 'finderminder' do
   appcast 'https://www.irradiatedsoftware.com/updates/profiles/finderminder.php',
           checkpoint: '5f07a947f8e34f2759bdf7073446973122c43680509bf67874ab495ff051c64f'
   name 'FinderMinder'
-  homepage 'https://irradiatedsoftware.com/labs'
+  homepage 'https://www.irradiatedsoftware.com/labs/'
 
   accessibility_access true
 

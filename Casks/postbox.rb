@@ -1,9 +1,9 @@
 cask 'postbox' do
-  version '5.0.5'
-  sha256 'b87f775fc40fc626980c468cfea9ef397529792e4b2e4d5eeac1a16aac637791'
+  version '5.0.7'
+  sha256 '015db7354349f8e5beeeb9bbc8ecdc9f0d4038a8f50e94bbb201cac31c87dc16'
 
   # amazonaws.com/download.getpostbox.com was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/download.getpostbox.com/installers/#{version}/1_348aedfb4d5afd22e43adecbddf15a86b9aedad3/postbox-#{version}-mac64.dmg"
+  url "https://s3.amazonaws.com/download.getpostbox.com/installers/#{version}/1_5ba5f85e8058221b7e2dfba23f26e3232bb483b9/postbox-#{version}-mac64.dmg"
   name 'Postbox'
   homepage 'https://www.postbox-inc.com/'
 

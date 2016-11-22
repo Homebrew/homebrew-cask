@@ -7,7 +7,7 @@ cask 'drop-to-gif' do
   appcast 'https://github.com/mortenjust/droptogif/releases.atom',
           checkpoint: '6ac820bac52e7780d1aa24a31dd17e34c7c1253ae1c23f16dc77a91cfc77bab6'
   name 'Drop to GIF'
-  homepage 'https://mortenjust.github.io/droptogif'
+  homepage 'https://mortenjust.github.io/droptogif/'
 
   app 'Drop to GIF.app'
 end

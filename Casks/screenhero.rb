@@ -8,5 +8,7 @@ cask 'screenhero' do
   name 'Screenhero'
   homepage 'https://screenhero.com/'
 
+  auto_updates true
+
   app 'Screenhero.app'
 end
