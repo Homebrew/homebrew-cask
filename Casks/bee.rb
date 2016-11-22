@@ -7,7 +7,7 @@ cask 'bee' do
   appcast 'https://s3.amazonaws.com/www.neat.io/appcasts/bee-appcast.xml',
           checkpoint: '24d4f97bafc024fc43623d37ac49e69f1ee2db89dbae3c2fef10c39a3e6275dc'
   name 'Bee'
-  homepage 'http://neat.io/bee/'
+  homepage 'http://www.neat.io/bee/'
 
   app 'Bee.app'
 end

@@ -17,8 +17,8 @@ cask 'qz-tray' do
     # app needs to be extracted as the installer would automatically open it
     FileUtils.cd staged_path do
       FileUtils.mkdir_p 'QZ Tray.app'
-      system '/usr/bin/xar', '-xf', "qz-tray-#{version}.pkg", 'Payload'
-      system '/usr/bin/tar', '-xf', 'Payload', '-C', 'QZ Tray.app'
+      system_command '/usr/bin/xar', args: ['-xf', "qz-tray-#{version}.pkg", 'Payload']
+      system_command '/usr/bin/tar', args: ['-xf', 'Payload', '-C', 'QZ Tray.app']
       FileUtils.rm_rf ["qz-tray-#{version}.pkg", 'Payload']
     end
   end

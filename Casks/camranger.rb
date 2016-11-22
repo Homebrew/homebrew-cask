@@ -4,7 +4,7 @@ cask 'camranger' do
 
   url "http://www.camranger.com/downloadFiles/CamRanger_#{version.dots_to_underscores}.dmg"
   name 'CamRanger'
-  homepage 'https://camranger.com/mac-downloads'
+  homepage 'https://camranger.com/mac-downloads/'
 
   app 'CamRanger.app'
 end

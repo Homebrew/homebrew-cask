@@ -17,7 +17,7 @@ cask 'git' do
   end
 
   name 'git-osx-installer'
-  homepage 'https://sourceforge.net/projects/git-osx-installer'
+  homepage 'https://sourceforge.net/projects/git-osx-installer/'
 
   depends_on macos: '>= :snow_leopard'
 

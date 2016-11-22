@@ -179,6 +179,8 @@ will be moved. Default is `/Applications`.
 Default is `~/Library/PreferencePanes`
 * `--qlplugindir=/my/path` changes the path for Quicklook Plugins.
 Default is `~/Library/QuickLook`
+* `--dictionarydir=/my/path` changes the path for Dictionaries.
+Default is `~/Library/Dictionaries`
 * `--fontdir=/my/path` changes the path for Fonts.
 Default is `~/Library/Fonts`
 * `--input_methoddir=/my/path` changes the path for Input Methods.

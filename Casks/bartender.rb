@@ -4,7 +4,7 @@ cask 'bartender' do
 
   url "https://macbartender.com/B2/updates/#{version.dots_to_hyphens}/Bartender%20#{version.major}.zip",
       referer: 'https://www.macbartender.com'
-  appcast 'https://www.macbartender.com/B2/updates/updates.php',
+  appcast "https://www.macbartender.com/B#{version.major}/updates/updates.php",
           checkpoint: '6d5406613e77584527da5dfcc997d13f6b2985ae81ec732f399216743fe00a16'
   name 'Bartender'
   homepage 'https://www.macbartender.com/'
@@ -17,7 +17,7 @@ cask 'bartender' do
     suppress_move_to_applications
   end
 
-  uninstall login_item: 'Bartender 2'
+  uninstall login_item: "Bartender #{version.major}"
 
   zap delete: [
                 '/Library/ScriptingAdditions/BartenderHelper.osax',

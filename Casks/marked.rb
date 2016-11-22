@@ -1,24 +1,24 @@
 cask 'marked' do
-  version '2.5.7923'
-  sha256 'e197536389026d1a4113afafb642e09787105de8af37b5a13fd54dfbf37209a5'
+  version '2.5.8'
+  sha256 '58162745a1cc698611049d4cfdc9354d1b6b42c7f6fdb2a82bfa151c8d1e1931'
 
   url 'http://marked2app.com/download/Marked.zip'
   appcast 'https://updates.marked2app.com/marked.xml',
-          checkpoint: '4a9c417c56614330528fc6fa508cf2cb17679934b4ba67f347154ea07c6add39'
+          checkpoint: 'd3535eea0a5c3990d26b3ed474d2d8e32add3b6d14b3672b31a5682002db1295'
   name 'Marked'
-  homepage 'http://marked2app.com'
+  homepage 'http://marked2app.com/'
 
   auto_updates true
 
-  app 'Marked 2.app'
+  app "Marked #{version.major}.app"
 
-  uninstall quit: 'com.brettterpstra.marked2'
+  uninstall quit: "com.brettterpstra.marked#{version.major}"
 
   zap delete: [
-                '~/Library/Application Support/Marked 2/paddata.padl',
-                '~/Library/Application Support/Marked 2/queue.pak',
-                '~/Library/Containers/com.brettterpstra.marked2',
-                '~/Library/Preferences/com.brettterpstra.marked2.LSSharedFileList.plist',
-                '~/Library/Saved Application State/com.brettterpstra.marked2.savedState',
+                "~/Library/Application Support/Marked #{version.major}/paddata.padl",
+                "~/Library/Application Support/Marked #{version.major}/queue.pak",
+                "~/Library/Containers/com.brettterpstra.marked#{version.major}",
+                "~/Library/Preferences/com.brettterpstra.marked#{version.major}.LSSharedFileList.plist",
+                "~/Library/Saved Application State/com.brettterpstra.marked#{version.major}.savedState",
               ]
 end

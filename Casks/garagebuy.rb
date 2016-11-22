@@ -5,7 +5,7 @@ cask 'garagebuy' do
   # iwascoding.de was verified as official when first introduced to the cask
   url "https://www.iwascoding.de/downloads/GarageBuy_#{version}.dmg"
   name 'GarageBuy'
-  homepage 'https://www.iwascoding.com/GarageBuy'
+  homepage 'https://www.iwascoding.com/GarageBuy/'
 
   app 'GarageBuy.app'
 end

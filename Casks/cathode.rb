@@ -7,7 +7,7 @@ cask 'cathode' do
   appcast 'http://store.secretgeometry.com/appcast.php?id=7',
           checkpoint: '9c9d24dd500bc58e625114c7e9c045ba41d86887e044c8f7441811b5bc237a94'
   name 'Cathode'
-  homepage 'http://www.secretgeometry.com/apps/cathode'
+  homepage 'http://www.secretgeometry.com/apps/cathode/'
 
   app 'Cathode.app'
 end

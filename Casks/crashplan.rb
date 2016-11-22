@@ -1,10 +1,10 @@
 cask 'crashplan' do
   version '4.8.0'
-  sha256 '43ae48b8ae5c19312cdc4be561774f3e2fde64a483534f8de61a68403b16335f'
+  sha256 '42103d8a151dd36cdf3a96ce541abc8e9d47a25f9e050d9044a3607332295f3a'
 
   url "https://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_#{version}_Mac.dmg"
   name 'CrashPlan'
-  homepage 'https://crashplan.com/'
+  homepage 'https://www.crashplan.com/'
 
   pkg 'Install CrashPlan.pkg'
 

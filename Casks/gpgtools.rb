@@ -4,7 +4,7 @@ cask 'gpgtools' do
 
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
   appcast 'https://gpgtools.org/releases/gka/appcast.xml',
-          checkpoint: 'a5e963e76b0096573035e1c77860a1d65a312afde1b4354fc1e7c2dc31a0ab08'
+          checkpoint: 'b0e18b27c8464ec73f909ad47ac60cf66dc65ba8a1d534d4a3258d2ce399bb1f'
   name 'GPG Suite'
   homepage 'https://gpgtools.org/'
   gpg "#{url}.sig",
@@ -16,15 +16,18 @@ cask 'gpgtools' do
 
   # TODO: remove all ENV variables
   postflight do
-    system '/usr/bin/sudo', '-E', '--',
-           '/usr/local/MacGPG2/libexec/fixGpgHome', Etc.getpwuid(Process.euid).name,
-           ENV['GNUPGHOME'] ? ENV['GNUPGHOME'] : Pathname.new(File.expand_path('~')).join('.gnupg')
+    system_command '/usr/local/MacGPG2/libexec/fixGpgHome',
+                   args: [
+                           Etc.getpwuid(Process.euid).name,
+                           ENV['GNUPGHOME'] ? ENV['GNUPGHOME'] : Pathname.new(File.expand_path('~')).join('.gnupg'),
+                         ],
+                   sudo: true
   end
 
   uninstall_postflight do
-    system '/bin/bash', '-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg2)"      =~ MacGPG2 ]] && /bin/rm -- /usr/local/bin/gpg2'
-    system '/bin/bash', '-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg)"       =~ MacGPG2 ]] && /bin/rm -- /usr/local/bin/gpg'
-    system '/bin/bash', '-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg-agent)" =~ MacGPG2 ]] && /bin/rm -- /usr/local/bin/gpg-agent'
+    system_command '/bin/bash', args: ['-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg2)"      =~ MacGPG2 ]] && /bin/rm -- /usr/local/bin/gpg2']
+    system_command '/bin/bash', args: ['-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg)"       =~ MacGPG2 ]] && /bin/rm -- /usr/local/bin/gpg']
+    system_command '/bin/bash', args: ['-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg-agent)" =~ MacGPG2 ]] && /bin/rm -- /usr/local/bin/gpg-agent']
   end
 
   uninstall pkgutil:   'org.gpgtools.*',

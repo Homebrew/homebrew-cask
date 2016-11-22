@@ -6,7 +6,7 @@ cask 'pdfpen' do
   appcast 'https://updates.smilesoftware.com/com.smileonmymac.PDFpen.xml',
           checkpoint: '6ade3bfe21c7b3bfdf8e3c4fdd21f9367d809ea2d168750927dcb46cafdc1294'
   name 'PDFpen'
-  homepage 'https://smilesoftware.com/PDFpen/'
+  homepage 'https://smilesoftware.com/PDFpen'
 
   app 'PDFpen.app'
 end

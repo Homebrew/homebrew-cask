@@ -4,7 +4,7 @@ cask 'steelseries-engine' do
 
   # steelseriescdn.com was verified as official when first introduced to the cask
   url "https://downloads.steelseriescdn.com/drivers/engine/SteelSeriesEngine#{version}.pkg"
-  name 'SteelSeries Engine 3'
+  name "SteelSeries Engine #{version.major}"
   homepage 'https://steelseries.com/engine'
 
   pkg "SteelSeriesEngine#{version}.pkg"
@@ -16,9 +16,9 @@ cask 'steelseries-engine' do
                          'com.steelseries.ssenext.uninstaller',
                        ],
             launchctl: 'com.steelseries.SSENext',
-            quit:      'com.steelseries.SteelSeries-Engine-3',
+            quit:      "com.steelseries.SteelSeries-Engine-#{version.major}",
             delete:    [
-                         '/Applications/SteelSeries Engine 3',
+                         "/Applications/SteelSeries Engine #{version.major}",
                          '/Library/LaunchAgents/com.steelseries.SSENext.plist',
                        ]
 end
