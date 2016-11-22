@@ -6,7 +6,7 @@ cask 'frizzix' do
   appcast 'http://frizzix.de/downloads/FrizzixUpdate.xml',
           checkpoint: '1e452fb9339f33941d46d3195b9d8b4a2e90c2ccd63d42fcbf303151247175f4'
   name 'Frizzix'
-  homepage 'http://mac.frizzix.de/'
+  homepage 'http://mac.frizzix.de/de/'
 
   app 'Frizzix.app'
 end

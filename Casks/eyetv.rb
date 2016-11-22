@@ -4,7 +4,7 @@ cask 'eyetv' do
 
   url "http://files.elgato.com/eyetvdownloads/support/eyetv_#{version.no_dots}.dmg"
   name 'EyeTV'
-  homepage 'https://www.elgato.com/en/eyetv/eyetv-3'
+  homepage 'https://www.elgato.com/en/eyetv'
 
   app 'EyeTV.app'
 end

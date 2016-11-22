@@ -6,7 +6,7 @@ cask 'expandrive' do
   appcast 'https://updates.expandrive.com/appcast/expandrive.xml?version=3',
           checkpoint: 'dda2d1d5d2533f15c9aa383e3995c94adce333061f6d06f76bba00800500b4c4'
   name 'ExpanDrive'
-  homepage 'https://www.expandrive.com/expandrive'
+  homepage 'https://www.expandrive.com/apps/expandrive/
 
   app 'ExpanDrive.app'
 
