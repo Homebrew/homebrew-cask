@@ -7,7 +7,7 @@ cask 'lazarus' do
   appcast 'https://sourceforge.net/projects/lazarus/rss',
           checkpoint: '56d06477a5cbba6f3669f864fc3b1573d9c01739ae04bc39d1145d7a7f84f888'
   name 'Lazarus'
-  homepage 'http://lazarus.freepascal.org/'
+  homepage 'http://www.lazarus-ide.org/'
 
   depends_on formula: 'fpc'
   depends_on cask: 'fpcsrc'
