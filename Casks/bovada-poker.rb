@@ -5,7 +5,7 @@ cask 'bovada-poker' do
   # imagestore.lv was verified as official when first introduced to the cask
   url 'https://cdn3-c.imagestore.lv/static/poker-client-installer-delta/installer/BovadaPoker.pkg'
   name 'Bovada Poker'
-  homepage 'https://poker.bovada.lv'
+  homepage 'https://www.bovada.lv/poker-closure'
 
   auto_updates true
 
