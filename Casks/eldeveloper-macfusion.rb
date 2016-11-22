@@ -6,7 +6,7 @@ cask 'eldeveloper-macfusion' do
   appcast "https://github.com/ElDeveloper/macfusion#{version.major}/releases.atom",
           checkpoint: '1d723f056dc494253c55c5fa83f3f679ea9c4b421b2a97b806a70c08470aae08'
   name 'Macfusion'
-  homepage "https://github.com/ElDeveloper/macfusion2#{version.major}/"
+  homepage "https://github.com/ElDeveloper/macfusion#{version.major}/"
 
   depends_on formula: 'homebrew/fuse/sshfs'
 
