@@ -26,7 +26,7 @@ cask '1password' do
   end
 
   name '1Password'
-  homepage 'https://agilebits.com/onepassword'
+  homepage 'https://1password.com/'
 
   auto_updates true
 
