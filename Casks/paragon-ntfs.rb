@@ -6,7 +6,7 @@ cask 'paragon-ntfs' do
   name 'Paragon NTFS for Mac'
   homepage 'https://www.paragon-software.com/home/ntfs-mac/'
 
-  pkg 'FSInstaller.app/Contents/Resources/Paragon NTFS for Mac OS X.pkg'
+  installer manual: 'FSInstaller.app'
 
   uninstall pkgutil:   'com.paragon-software.filesystems.NTFS.pkg',
             script:    'Uninstall.app/Contents/Resources/uninstallNTFS.sh',
