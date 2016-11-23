@@ -4,7 +4,7 @@ cask 'makerbot-desktop' do
 
   url "https://downloads.makerbot.com/makerware/MakerBot%20Bundle%20BETA%20#{version}.dmg"
   name 'MakerBot Desktop'
-  homepage 'https://www.makerbot.com/desktop'
+  homepage 'https://www.makerbot.com/download-desktop/'
 
   pkg "MakerBot Bundle BETA #{version}.pkg"
 

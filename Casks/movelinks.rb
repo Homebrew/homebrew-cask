@@ -7,7 +7,7 @@ cask 'movelinks' do
   appcast 'https://d1c229iib3zm7m.cloudfront.net/mac/appcast.xml',
           checkpoint: 'c1d5f1b9a7c848fde84a61e12ed6232eb517126ad92be680ba4e37c76f902e14'
   name 'Movelinks'
-  homepage 'http://www.movescount.com/connect/moveslinkmac/Suunto_Ambit'
+  homepage 'http://www.movescount.com/connect/watch_sync_software?os=mac'
 
   auto_updates true
 

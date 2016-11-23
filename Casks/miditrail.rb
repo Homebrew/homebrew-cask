@@ -6,7 +6,7 @@ cask 'miditrail' do
   appcast 'https://osdn.jp/projects/miditrail/releases/rss',
           checkpoint: 'a2810f314cfe202a81049d7f9b6cb0257a936b18e6e922c8dfbc2bfe775abfee'
   name 'MIDITrail'
-  homepage 'https://osdn.jp/projects/miditrail/'
+  homepage 'https://osdn.net/projects/miditrail/'
 
   app 'MIDITrail/MIDITrail.app'
 end

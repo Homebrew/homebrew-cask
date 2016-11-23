@@ -4,7 +4,7 @@ cask 'menubarfilter' do
 
   url 'https://github.com/downloads/wez/MenuBarFilter/MenuBarFilter.zip'
   name 'Menubarfilter'
-  homepage 'https://wez.github.com/MenuBarFilter/'
+  homepage 'https://wez.github.io/MenuBarFilter/'
 
   app 'MenuBarFilter.app'
 end

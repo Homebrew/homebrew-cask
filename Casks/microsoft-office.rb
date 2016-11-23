@@ -4,7 +4,7 @@ cask 'microsoft-office' do
 
   url "https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/OfficeMac/Microsoft_Office_2016_#{version}_Installer.pkg"
   name 'Microsoft Office 2016'
-  homepage 'https://www.microsoft.com/mac'
+  homepage 'https://products.office.com/en-us/mac/microsoft-office-for-mac'
 
   auto_updates true
 
