@@ -4,7 +4,7 @@ cask 'integrity' do
 
   url 'http://peacockmedia.co.uk/integrity/integrity.dmg'
   name 'Integrity'
-  homepage 'http://peacockmedia.co.uk/integrity/'
+  homepage 'http://peacockmedia.software/mac/integrity/'
 
   app 'Integrity.app'
 end

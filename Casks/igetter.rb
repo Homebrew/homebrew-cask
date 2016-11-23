@@ -4,7 +4,7 @@ cask 'igetter' do
 
   url "https://www.igetter.net/search/downloads/iGetter#{version}.dmg"
   name 'iGetter'
-  homepage 'https://www.igetter.net/'
+  homepage 'https://www.igetter.net/index.html'
 
   app "iGetter #{version}/iGetter.app"
 end

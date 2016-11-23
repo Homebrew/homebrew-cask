@@ -7,7 +7,7 @@ cask 'iordning' do
           checkpoint: '6192841b1651b26b7178d5496a2b3c9837ea83ba1157b9e52aeca3d885e048c6'
   name 'iOrdning'
   name 'Economacs'
-  homepage 'https://www.aderstedtsoftware.com/'
+  homepage 'https://www.aderstedtsoftware.com/iordning/'
 
   app 'iOrdning.app'
 end
