@@ -4,7 +4,7 @@ cask 'worksnaps-client' do
 
   url "https://www.worksnaps.net/download/WSClient-mac-#{version}.dmg"
   name 'Worksnaps Client'
-  homepage 'https://www.worksnaps.net/'
+  homepage 'https://www.worksnaps.net/www/'
 
   app 'Worksnaps Client.app'
 end
