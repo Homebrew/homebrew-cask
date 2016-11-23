@@ -4,7 +4,7 @@ cask 'namecoin' do
 
   url "https://namecoin.info/files/Namecoin-Qt.app-#{version}.zip"
   name 'Namecoin'
-  homepage 'https://namecoin.info/'
+  homepage 'https://namecoin.org/'
 
   app 'Namecoin-Qt.app'
 

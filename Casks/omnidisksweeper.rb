@@ -4,7 +4,7 @@ cask 'omnidisksweeper' do
 
   url 'https://www.omnigroup.com/download/latest/OmniDiskSweeper'
   name 'OmniDiskSweeper'
-  homepage 'https://www.omnigroup.com/products/omnidisksweeper/'
+  homepage 'https://www.omnigroup.com/more/'
 
   app 'OmniDiskSweeper.app'
 end

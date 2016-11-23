@@ -4,7 +4,7 @@ cask 'paymowidget' do
 
   url "https://app.paymoapp.com/desktop-apps/paymowidget/PaymoWidget_mac_#{version}.dmg"
   name 'Paymo Widget'
-  homepage 'https://app.paymoapp.com/'
+  homepage 'https://app.paymoapp.com/auth/login/'
 
   app 'PaymoWidget.app'
 end
