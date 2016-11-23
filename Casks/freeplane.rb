@@ -6,7 +6,7 @@ cask 'freeplane' do
   appcast 'https://sourceforge.net/projects/freeplane/rss?path=/freeplane%20stable',
           checkpoint: '60fc48e1bc2033f5862ffb60ff689372bc9409406f254a39bb966ab833ee719a'
   name 'Freeplane'
-  homepage 'http://freeplane.sourceforge.net/wiki/index.php/Main_Page'
+  homepage 'http://freeplane.sourceforge.net/'
 
   app 'Freeplane.app'
 end
