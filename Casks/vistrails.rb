@@ -5,7 +5,7 @@ cask 'vistrails' do
   # sourceforge.net/project/vistrails has been verified as official
   url "https://downloads.sourceforge.net/project/vistrails/vistrails/v#{version.sub(%r{-.*}, '')}/vistrails-osx-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/vistrails/rss?path=/vistrails',
-    checkpoint: '2c87be9e8305cad6f23e74edbf88a0fd251cf8397f0f64d0e9c042be15b6e9c7'
+    checkpoint: '5b5470cbdb0773a980d33bdb4c56d44d4d1ccbc56961988faaccc9104174569c'
   name 'VisTrails'
   homepage 'https://www.vistrails.org'
 
