@@ -5,7 +5,7 @@ cask 'mongo-management-studio' do
   url "http://packages.litixsoft.de/mms/#{version}/mms-v#{version}-community-darwin.pkg"
   name 'Litixsoft Mongo Management Studio'
   name 'MMS'
-  homepage 'http://mms.litixsoft.de/index.php?lang=en'
+  homepage 'http://mms.litixsoft.de/'
 
   pkg "mms-v#{version}-community-darwin.pkg"
 
