@@ -6,7 +6,7 @@ cask 'beatport-pro' do
   appcast 'https://pro.beatport.com/mac/appcast.xml',
           checkpoint: '3692f8ca2ccaab6e7f812ea3c21bc9187575238e73349196e95bcc0be498d65c'
   name 'Beatport Pro'
-  homepage 'https://pro.beatport.com/'
+  homepage 'https://www.beatport.com/'
 
   app 'Beatport Pro.app'
 end
