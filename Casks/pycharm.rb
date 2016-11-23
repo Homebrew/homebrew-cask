@@ -1,6 +1,6 @@
 cask 'pycharm' do
-  version '2016.2.3'
-  sha256 '0e254d18cdf2dfc380110e9d05e8c3a16ec65fbf5c66316a351603e0a6d39ce8'
+  version '2016.3'
+  sha256 'cd4ccb448ed953fb2842ba364a18e99819c0d17ee12d9269c0b65c8551f58e7d'
 
   url "https://download.jetbrains.com/python/pycharm-professional-#{version}.dmg"
   name 'PyCharm'
