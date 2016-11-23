@@ -7,7 +7,7 @@ cask 'soundcleod' do
   appcast 'https://github.com/salomvary/soundcleod/releases.atom',
           checkpoint: '9fe007c0098bc5b7a0e9368209352e08089c848b7faaa02aab7b37654a00e389'
   name 'SoundCleod'
-  homepage 'https://salomvary.github.io/soundcleod/'
+  homepage 'https://soundcleod.com/'
 
   app 'SoundCleod.app'
 end

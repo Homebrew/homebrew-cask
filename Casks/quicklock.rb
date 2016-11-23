@@ -7,7 +7,7 @@ cask 'quicklock' do
   appcast 'http://quicklockapp.com/appcast.xml',
           checkpoint: '582556c374e09cc083dc8b3085787ce8323bb38ba6396ccf0327d08f35fc7a94'
   name 'QuickLock'
-  homepage 'http://www.quicklockapp.com/'
+  homepage 'https://www.thnkdev.com/quicklockapp/'
 
   app 'QuickLock.app'
 end
