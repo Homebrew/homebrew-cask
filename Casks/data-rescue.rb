@@ -6,7 +6,7 @@ cask 'data-rescue' do
   appcast "https://www.prosofteng.com/resources/dr#{version.major}/dr#{version.major}_appcast.xml",
           checkpoint: '27110ccfe0def3f4de8cd75c4105f6e9edfecbf0dfc46d07a33d41acac49d283'
   name "Data Rescue #{version.major}"
-  homepage 'https://www.prosofteng.com/products/data_rescue.php'
+  homepage 'https://www.prosofteng.com/data-rescue-recovery-software/'
 
   app "Data Rescue #{version.major}.app"
 end
