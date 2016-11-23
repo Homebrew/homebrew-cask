@@ -4,7 +4,7 @@ cask 'coronasdk' do
 
   url "https://developer.coronalabs.com/sites/default/files/CoronaSDK-#{version}.dmg"
   name 'Corona SDK'
-  homepage 'https://coronalabs.com/products/corona-sdk/'
+  homepage 'https://coronalabs.com/corona-sdk/'
 
   suite 'CoronaSDK'
 end
