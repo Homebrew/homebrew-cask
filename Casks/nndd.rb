@@ -3,7 +3,7 @@ cask 'nndd' do
   sha256 '6a73dcad2e73d877ad1503ed1162cae1a1c84f21d1abaa6aaf9b31bb2fbca531'
 
   url "http://dl.osdn.net/nndd/#{version.after_comma}/NNDD_v#{version.before_comma.dots_to_underscores}.dmg"
-  appcast 'https://dl.osdn.net/projects/nndd/releases/rss',
+  appcast 'https://osdn.net/projects/nndd/releases/rss',
           checkpoint: '4f1d23fd9ebe4b3abf7495cf512df2f72f2097b3b4ff51d21e5fa837bb88766b'
   name 'NNDD'
   homepage 'https://osdn.net/projects/nndd/'
