@@ -60,7 +60,7 @@ cask 'thunderbird' do
   appcast "https://aus5.mozilla.org/update/3/Thunderbird/#{version}/0/Darwin_x86_64-gcc3-u-i386-x86_64/en-US/release/Darwin%2015.3.0/default/default/update.xml?force=1",
           checkpoint: '8a1808dfcba1b3944c707c1e291845f5ae30e71898e0de03333338cafdda2b95'
   name 'Mozilla Thunderbird'
-  homepage 'https://www.mozilla.org/thunderbird/'
+  homepage 'https://www.mozilla.org/en-US/thunderbird/'
 
   app 'Thunderbird.app'
 

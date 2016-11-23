@@ -4,7 +4,7 @@ cask 'tomtom-mysports-connect' do
 
   url 'http://download.tomtom.com/sweet/fitness/MySportsConnectDesktop/current/TomTomMySportsConnectInstaller.pkg'
   name 'TomTom MySports Connect'
-  homepage 'https://www.tomtom.com/de_ch/mysports/getstarted/'
+  homepage 'https://www.tomtom.com/mysports/getstarted'
 
   pkg 'TomTomMySportsConnectInstaller.pkg'
 

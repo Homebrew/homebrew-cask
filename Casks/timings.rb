@@ -6,7 +6,7 @@ cask 'timings' do
   appcast "https://mediaatelier.com/Timings#{version.major}/feed.php",
           checkpoint: '0e383bab08e9fdc9e2e2ae99c8f63b2d5558991ea0adfb6f47b96fe14392feac'
   name 'Timings'
-  homepage 'https://www.mediaatelier.com/Timings'
+  homepage 'https://www.mediaatelier.com/Timings3/'
 
   depends_on macos: '>= :mavericks'
 
