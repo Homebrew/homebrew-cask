@@ -7,7 +7,7 @@ cask 'hazel' do
   appcast 'https://www.noodlesoft.com/Products/Hazel/generate-appcast.php',
           checkpoint: '3bf9cd2ba6f062fc43fa02fc9a155b9bc653c4e3373f6a61e2acc58d5fbd6624'
   name 'Hazel'
-  homepage 'https://www.noodlesoft.com/hazel.php'
+  homepage 'https://www.noodlesoft.com/'
 
   prefpane 'Install Hazel.app/Contents/Resources/Hazel.prefPane'
 
