@@ -5,7 +5,7 @@ cask 'eagle' do
   # cadsoft.de was verified as official when first introduced to the cask
   url "http://web.cadsoft.de/ftp/eagle/program/#{version.sub(%r{\.\d+$}, '')}/eagle-mac64-#{version}.zip"
   name 'CadSoft EAGLE'
-  homepage 'https://www.cadsoftusa.com/'
+  homepage 'https://cadsoft.io/'
 
   pkg "eagle-mac64-#{version}.pkg"
 
