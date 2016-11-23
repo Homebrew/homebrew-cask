@@ -1,6 +1,6 @@
 cask 'mauve' do
   version '2015.02.25'
-  sha256 '3e2e42b90c43669c841dbe43edacff4354874c2c47b5ce9e66c3aee7b9edbf10'
+  sha256 '7a9586ef3b83aa7678424a3f17ac15a257ff520b3968d78e1345b3c69b23c171'
 
   url "http://darlinglab.org/mauve/snapshots/#{version.major}/#{version.dots_to_hyphens}/MacOS/Mauve-snapshot_#{version.dots_to_hyphens}.dmg"
   name 'Mauve'
