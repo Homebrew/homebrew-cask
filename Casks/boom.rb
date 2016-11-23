@@ -13,16 +13,30 @@ cask 'boom' do
 
   app 'Boom 2.app'
 
-  uninstall quit:      'com.globaldelight.Boom2',
+  postflight do
+    system_command "#{appdir}/Boom 2.app/Contents/Resources/Components/Install.sh",
+                   args: ["#{appdir}/Boom 2.app/Contents/Resources/Components/Boom2Device.kext"],
+                   sudo: true
+  end
+
+  uninstall_postflight do
+    system_command '/bin/rm',
+                   args: ['-rf', '/Library/Extensions/Boom2Device.kext'],
+                   sudo: true
+  end
+
+  uninstall kext:      'com.globaldelight.driver.Boom2Device',
             launchctl: [
                          'com.globaldelight.Boom2.*',
                          'com.globaldelight.Boom2Daemon',
-                       ]
+                       ],
+            signal:    ['TERM', 'com.globaldelight.Boom2']
 
   zap delete: [
                 '~/Library/Application Support/com.globaldelight.Boom2',
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.globaldelight.boom2.sfl',
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.globaldelight.boom2daemon.sfl',
                 '~/Library/Preferences/com.globaldelight.Boom2.plist',
+                '~/Library/Preferences/com.globaldelight.Boom2Daemon.plist',
               ]
 end

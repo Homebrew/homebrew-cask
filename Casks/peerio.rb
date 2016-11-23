@@ -4,7 +4,7 @@ cask 'peerio' do
 
   url 'https://peerio.com/download/peerio-mac.zip'
   name 'Peerio'
-  homepage 'https://peerio.com/'
+  homepage 'https://www.peerio.com/'
 
   app 'Peerio.app'
 end

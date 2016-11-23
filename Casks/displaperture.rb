@@ -4,7 +4,7 @@ cask 'displaperture' do
 
   url 'http://manytricks.com/download/displaperture'
   name 'Displaperture'
-  homepage 'https://manytricks.com/displaperture'
+  homepage 'https://manytricks.com/displaperture/'
 
   app 'Displaperture.app'
 end

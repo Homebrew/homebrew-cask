@@ -4,7 +4,7 @@ cask 'wyzo' do
 
   url "http://download.wyzo.com/files/mac/WyzoSetup-#{version}.dmg"
   name 'Wyzo'
-  homepage 'http://wyzo.com'
+  homepage 'http://www.wyzo.com/'
 
   app 'Wyzo.app'
 end

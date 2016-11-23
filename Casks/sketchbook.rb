@@ -4,7 +4,7 @@ cask 'sketchbook' do
 
   url "https://cdn.sketchbook.com/mac/SketchBook_v#{version}_mac.dmg"
   name 'Autodesk Sketchbook'
-  homepage 'https://www.sketchbook.com/'
+  homepage 'https://www.sketchbook.com'
 
   pkg "SketchBook_v#{version}_mac.pkg"
 

@@ -1,11 +1,11 @@
 cask 'atom' do
-  version '1.11.2'
-  sha256 '931285cb1cd6989ec632f01f60fe6dd22129f255cd724bfd891c40ab6bd52194'
+  version '1.12.5'
+  sha256 '8522cabde11140ed209dc64b4069b3a4149ecae4f73dc84d9eb9a114bc905862'
 
   # github.com/atom/atom was verified as official when first introduced to the cask
   url "https://github.com/atom/atom/releases/download/v#{version}/atom-mac.zip"
   appcast 'https://github.com/atom/atom/releases.atom',
-          checkpoint: 'e8fb2044180ebc457a6d12139da2d20bbe68115246487363c44a5290cb779b08'
+          checkpoint: 'd581a97e1e90580af26531136f25c7e5d9e98a008da1820284b6da929eef4824'
   name 'Github Atom'
   homepage 'https://atom.io/'
 
@@ -22,11 +22,15 @@ cask 'atom' do
 
   zap delete: [
                 '~/.atom',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.atom.sfl',
                 '~/Library/Application Support/ShipIt_stderr.log',
                 '~/Library/Application Support/Atom',
                 '~/Library/Application Support/ShipIt_stdout.log',
                 '~/Library/Application Support/com.github.atom.ShipIt',
                 '~/Library/Caches/com.github.atom',
+                '~/Library/Caches/com.github.atom.ShipIt',
+                '~/Library/Preferences/com.github.atom.helper.plist',
                 '~/Library/Preferences/com.github.atom.plist',
+                '~/Library/Saved Application State/com.github.atom.savedState',
               ]
 end

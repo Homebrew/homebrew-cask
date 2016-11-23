@@ -1,13 +1,13 @@
 cask 'snapheal-pro' do
-  version '1.5.1118'
-  sha256 'b6b46a70f270872a5b9cd32f8366070227af4e70d37b054b3b79280d425b2aa2'
+  version '1.6.1193'
+  sha256 '0989dcf995c1058c3f80f8898a8f590e079ae1aebedfd7f84dbef6a8bed72874'
 
   # amazonaws.com/SnaphealCK was verified as official when first introduced to the cask
   url "https://creativekit.s3.amazonaws.com/SnaphealCK/SnaphealCKNA_Distribution_v#{version.dots_to_underscores}.zip"
   appcast 'http://cdn.macphun.com/updates/SnaphealMacPRO/appcast.xml',
-          checkpoint: '54ac7c51ad3eebd02ec3b5b9cc7e66eba67935c5035687ab59fbf7b05ea4c6e3'
+          checkpoint: '41be23f355c922362ddf47f2847cfd5050122ecfb5a1e57860187f16b04765b6'
   name 'Macphun Snapheal Pro'
-  homepage 'https://macphun.com/snapheal/'
+  homepage 'https://macphun.com/snapheal'
 
   app 'Snapheal Pro.app'
 

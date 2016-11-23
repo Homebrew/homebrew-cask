@@ -1,10 +1,10 @@
 cask 'simple-hub' do
-  version '4.5.4-1206'
-  sha256 '540d0ec88c762f325680a610aa6dd8abfc56fadc97ca6e04fb809c339005cd30'
+  version '4.5.6-1227'
+  sha256 'e1dffd459300da8d64534298ee598f981898fa35db72a4508da78566661df175'
 
   url "https://www.simplecontrol.com/b/SimpleHub-#{version.no_dots}.zip"
   appcast 'https://www.simplecontrol.com/b/Simple-HubAppcast.xml',
-          checkpoint: 'c2f0e32897a18d616e5fb8fcc57597133f1c0b1ba511af56db2d84a463f8578d'
+          checkpoint: 'e20a1dbab073713ded48aee9a9c527584ae913bc723190359d3516027e1cac8f'
   name 'Simple Hub'
   homepage 'https://store.simplecontrol.com/simple-sync.html'
 

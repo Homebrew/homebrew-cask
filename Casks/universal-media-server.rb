@@ -7,7 +7,7 @@ cask 'universal-media-server' do
   appcast 'https://sourceforge.net/projects/unimediaserver/rss?path=/Official%20Releases',
           checkpoint: '21be7f27ec7ac545faa851fb7662573af2e47d11aaf33bbe9b33ba3221c95bf4'
   name 'Universal Media Server'
-  homepage 'http://universalmediaserver.com'
+  homepage 'http://www.universalmediaserver.com/'
 
   app 'Universal Media Server.app'
 end

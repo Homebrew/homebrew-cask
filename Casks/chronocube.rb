@@ -7,7 +7,7 @@ cask 'chronocube' do
   appcast 'https://github.com/pablopunk/chronocube/releases.atom',
           checkpoint: '0a834802763635f2efdd91bce9443d92abb1046e59cd241b611656c10e5fafea'
   name 'Chronocube'
-  homepage 'https://pablopunk.github.io/chronocube/'
+  homepage 'http://chronocube.live/'
 
   app 'Chronocube.app'
 end

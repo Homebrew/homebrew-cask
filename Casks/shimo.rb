@@ -1,11 +1,11 @@
 cask 'shimo' do
-  version '4.1.3_8800'
-  sha256 '21c975fd452b84685d665be24a41e7e2339f4c415c02119c37feb7d88c627e49'
+  version '4.1.4.2_8819'
+  sha256 '2d2bb69c4a1732ce4a2fb05bab899d00dd98f86743e07f1fffa9a867fc836a4d'
 
   # shimo.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://shimo.s3.amazonaws.com/Shimo_#{version}.zip"
   name 'Shimo'
-  homepage 'https://www.feingeist.io/shimo/'
+  homepage 'https://www.shimovpn.com/'
 
   auto_updates true
 

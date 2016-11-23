@@ -35,14 +35,11 @@ cask 'adobe-media-encoder-cc' do
       cookies:    { 'MM_TRIALS' => '1234' }
   name 'Adobe Media Encoder CC 2015'
   homepage 'https://www.adobe.com/products/media-encoder.html'
-  license :commercial
 
   media_signature = '0FAC7130-BEC5-47A5-8813-1D339B8326ED'
 
   preflight do
-    install_xml = "#{staged_path}/install.xml"
-
-    IO.write install_xml, <<-EOS.undent
+    IO.write "#{staged_path}/install.xml", <<-EOS.undent
       <?xml version="1.0" encoding="utf-8"?>
       <Deployment>
         <Properties>
@@ -57,13 +54,16 @@ cask 'adobe-media-encoder-cc' do
       </Deployment>
     EOS
 
-    system '/usr/bin/sudo', '-E', '--', "#{staged_path}/Adobe Media Encoder CC 2015/Install.app/Contents/MacOS/Install", '--mode=silent', "--deploymentFile=#{install_xml}"
+    system_command "#{staged_path}/Adobe Media Encoder CC 2015/Install.app/Contents/MacOS/Install",
+                   args: [
+                           '--mode=silent',
+                           "--deploymentFile=#{staged_path}/install.xml",
+                         ],
+                   sudo: true
   end
 
   uninstall_preflight do
-    uninstall_xml = "#{staged_path}/uninstall.xml"
-
-    IO.write uninstall_xml, <<-EOS.undent
+    IO.write "#{staged_path}/uninstall.xml", <<-EOS.undent
       <?xml version="1.0" encoding="utf-8"?>
       <Deployment>
         <Properties>
@@ -78,7 +78,12 @@ cask 'adobe-media-encoder-cc' do
       </Deployment>
     EOS
 
-    system '/usr/bin/sudo', '-E', '--', "#{staged_path}/Adobe Media Encoder CC 2015/Install.app/Contents/MacOS/Install", '--mode=silent', "--deploymentFile=#{uninstall_xml}"
+    system_command "#{staged_path}/Adobe Media Encoder CC 2015/Install.app/Contents/MacOS/Install",
+                   args: [
+                           '--mode=silent',
+                           "--deploymentFile=#{staged_path}/uninstall.xml",
+                         ],
+                   sudo: true
   end
 
   uninstall rmdir: '/Applications/Utilities/Adobe Installers'

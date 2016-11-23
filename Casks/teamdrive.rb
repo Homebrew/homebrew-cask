@@ -1,9 +1,9 @@
 cask 'teamdrive' do
-  version '4.2.1.1547'
-  sha256 '9035faf2670bd77259667e69952a392f535be7ba116f8a291ee79e700e5099bd'
+  version '4.3.0.1605'
+  sha256 '24249162a183c496203c1946fdbc0cbc5da915a056f4dbd36ad916d7c5961603'
 
   # s3download.teamdrive.net.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "http://s3download.teamdrive.net.s3.amazonaws.com/#{version}/TMDR/mac-10.10.5/Install-TeamDrive-#{version}_TMDR.dmg"
+  url "http://s3download.teamdrive.net.s3.amazonaws.com/4.3.1605/TMDR/mac-10.10.5/Install-TeamDrive-#{version}_TMDR.dmg"
   name 'TeamDrive'
   homepage 'https://www.teamdrive.com/'
 

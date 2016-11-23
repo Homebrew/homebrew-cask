@@ -5,7 +5,7 @@ cask 'captur' do
   # dropboxusercontent.com/u/27027504 was verified as official when first introduced to the cask
   url "https://dl.dropboxusercontent.com/u/27027504/captur-#{version}.dmg.zip"
   name 'Captur'
-  homepage 'https://cambhlumbulunk.blogspot.co.uk/p/captur.html'
+  homepage 'https://cambhlumbulunk.blogspot.com/p/captur.html'
 
   app '64 Bit/Captur.app'
 end

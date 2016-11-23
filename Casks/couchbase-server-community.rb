@@ -4,7 +4,7 @@ cask 'couchbase-server-community' do
 
   url "http://packages.couchbase.com/releases/#{version}/couchbase-server-community_#{version}-macos_x86_64.zip"
   name 'Couchbase Server'
-  homepage 'https://www.couchbase.com/'
+  homepage 'http://www.couchbase.com/'
 
   app "couchbase-server-community_#{version.major}/Couchbase Server.app"
 end

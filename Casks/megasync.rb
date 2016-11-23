@@ -6,6 +6,8 @@ cask 'megasync' do
   name 'MEGAsync'
   homepage 'https://mega.nz'
 
+  auto_updates true
+
   app 'MEGAsync.app'
 
   caveats do

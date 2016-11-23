@@ -7,7 +7,7 @@ cask 'swift-publisher' do
   appcast 'https://www.belightsoft.com/download/updates/appcast_SwiftPublisher3.xml',
           checkpoint: '04cf983120e06ad9958bb69ff7d2b47c2d2bd6ba4f5349eeb5002602f54195ca'
   name 'Swift Publisher'
-  homepage 'https://www.belightsoft.com/products/swiftpublisher/overview.php'
+  homepage 'https://www.belightsoft.com/products/swiftpublisher/'
 
   app "Swift Publisher #{version.major}.app"
 end

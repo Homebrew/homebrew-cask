@@ -6,7 +6,5 @@ cask 'terminology' do
   name 'terminology'
   homepage 'https://agiletortoise.com/terminology/mac/'
 
-  installer script: 'Terminology-for-OS-X/Install.command', sudo: false
-
-  uninstall delete: Pathname.new(File.expand_path('~')).join('Library/Dictionaries/Terminology.dictionary')
+  dictionary 'Terminology-for-OS-X/Terminology.dictionary'
 end

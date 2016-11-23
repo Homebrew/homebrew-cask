@@ -7,7 +7,7 @@ cask 'wineskin-winery' do
   appcast 'https://sourceforge.net/projects/wineskin/rss',
           checkpoint: 'aadd186bd1dac57d6b4dd583b74dcb921755c9fa6d6a8bf09206dc03384190fd'
   name 'Wineskin Winery'
-  homepage 'http://wineskin.urgesoftware.com/'
+  homepage 'http://wineskin.urgesoftware.com/tiki-index.php'
 
   depends_on macos: '>= :snow_leopard'
 
@@ -15,9 +15,11 @@ cask 'wineskin-winery' do
 
   zap delete: [
                 '~/Library/Application Support/Wineskin',
-                '~/Library/Preferences/com.urgesoftware.wineskin.wineskin.plist',
                 '~/Library/Caches/com.urgesoftware.wineskin.wineskinwinery',
-                '~/Library/Saved Application State/com.urgesoftware.wineskin.wineskin.savedState',
+                '~/Library/Caches/Wine',
+                '~/Library/Preferences/com.urgesoftware.wineskin.wineskin.plist',
+                '~/Library/Saved Application State/com.urgesoftware.wineskin.wineskinwinery.savedState',
+                '~/Library/Saved Application State/*Wine.wineskin.prefs.savedState',
               ],
       rmdir:  '~/Applications/Wineskin'
 end

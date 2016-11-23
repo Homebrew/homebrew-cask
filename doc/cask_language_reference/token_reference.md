@@ -124,7 +124,7 @@ App Name on Disk       | Simplified App Name | Cask Token       | Filename
 
 ## With another Cask
 
-When the token for a new Cask would otherwise conflict with the token of an already existing Cask, the nature of that overlap dictates the token (for possibly both Casks). See [Finding a Home For Your Cask](../development/adding_a_cask.md#finding-a-home-for-your-cask) for information on how to proceed.
+When the token for a new Cask would otherwise conflict with the token of an already existing Cask, the nature of that overlap dictates the token (for possibly both Casks). See [Forks and Apps with Conflicting Names](../development/adding_a_cask.md#forks-and-apps-with-conflicting-names) for information on how to proceed.
 
 ## With a formula
 

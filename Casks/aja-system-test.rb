@@ -4,7 +4,7 @@ cask 'aja-system-test' do
 
   url "https://www.aja.com/assets/products/files/90/AJA_SystemTest-#{version}.app.zip"
   name 'AJA System Test'
-  homepage 'https://www.aja.com/en/products/aja-system-test'
+  homepage 'https://www.aja.com/products/aja-system-test'
 
   app 'AJA System Test.app'
 end

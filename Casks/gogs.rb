@@ -1,6 +1,6 @@
 cask 'gogs' do
-  version '0.9.48'
-  sha256 '8afbd71fde279e77ed5b16c8a80ef409661ccb3953bf6cc867fbede532686475'
+  version '0.9.97'
+  sha256 '281f107e5403374702f6080e7395f4728e5b978fc0484565fc46df3d367f8b80'
 
   url "https://cdn.gogs.io/gogs_v#{version}_darwin_amd64.zip"
   name 'Go Git Service'

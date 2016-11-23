@@ -5,7 +5,7 @@ cask 'xampp' do
   # downloadsapachefriends.global.ssl.fastly.net/xampp-files was verified as official when first introduced to the cask
   url "https://downloadsapachefriends.global.ssl.fastly.net/xampp-files/#{version.major_minor_patch}/xampp-osx-#{version}-installer.dmg"
   name 'XAMPP'
-  homepage 'https://www.apachefriends.org/'
+  homepage 'https://www.apachefriends.org/index.html'
 
   installer script: 'XAMPP.app/Contents/MacOS/osx-intel',
             args:   ['--mode', 'unattended'],

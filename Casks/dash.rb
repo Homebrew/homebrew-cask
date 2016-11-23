@@ -1,12 +1,14 @@
 cask 'dash' do
-  version '3.3.1'
-  sha256 '6c5de63dc1ec34c56bd2704e409b4df6efcdfc5fab267f1eb785a8cc345b9937'
+  version '3.4.1'
+  sha256 '6f43e7cfcc21497c23469c6db32da0d2bf34de6692b8a3f3fad976dce7c39c1a'
 
   url "https://kapeli.com/downloads/v#{version.major}/Dash.zip"
   appcast "https://kapeli.com/Dash#{version.major}.xml",
-          checkpoint: '7ebd8e2c02a8c003e0fc7098fefc2313fc8bdd670a1ed711d2b89f05b163e0cc'
+          checkpoint: '5a65d4ea85dbf61b3158184dc24cfd449b00fa476096e6b6230f92f04ac385b9'
   name 'Dash'
   homepage 'https://kapeli.com/dash'
+
+  auto_updates true
 
   app 'Dash.app'
 

@@ -7,7 +7,7 @@ cask 'supertuxkart' do
   appcast 'https://sourceforge.net/projects/supertuxkart/rss?path=/SuperTuxKart',
           checkpoint: '6e14ee842c36c4476dc38cbcc4996d6632f5bf8a4bf796a69d108441d810fdb4'
   name 'SuperTuxKart'
-  homepage 'https://supertuxkart.net'
+  homepage 'https://supertuxkart.net/Main_Page'
 
   app 'SuperTuxKart.app'
 end

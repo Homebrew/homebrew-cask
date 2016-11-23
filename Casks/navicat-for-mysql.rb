@@ -1,6 +1,6 @@
 cask 'navicat-for-mysql' do
-  version '11.2.14'
-  sha256 '1bda45092337abc050d05220ef72ab9cd99f34571b7f94912123aef4d75965b6'
+  version '11.2.15'
+  sha256 'f74b58c6a1b04dca1a9708bc5642cb07e56c22b1d0f4c64c84bca6cce71edab9'
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_mysql_en.dmg"
   name 'Navicat for MySQL'

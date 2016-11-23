@@ -4,7 +4,7 @@ cask 'garmin-virb-edit' do
 
   url "http://download.garmin.com/software/VIRBEditforMac_#{version.no_dividers}.dmg"
   name 'Garmin VIRB Edit'
-  homepage 'https://www.garmin.com/en-US/shop/downloads/virb-edit'
+  homepage 'https://buy.garmin.com/en-US/US/prod573412.html'
 
   depends_on macos: '>= 10.10'
 

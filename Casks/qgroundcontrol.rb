@@ -5,7 +5,7 @@ cask 'qgroundcontrol' do
   # qgroundcontrol.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://qgroundcontrol.s3.amazonaws.com/QGroundControl-Stable-V#{version}.dmg"
   name 'QGroundControl'
-  homepage 'http://qgroundcontrol.org/'
+  homepage 'http://qgroundcontrol.com/'
 
   app 'qgroundcontrol.app'
 end

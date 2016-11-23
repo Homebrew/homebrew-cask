@@ -4,15 +4,16 @@ cask 'soundflower' do
 
   url "https://github.com/mattingalls/Soundflower/releases/download/#{version}/Soundflower-#{version}.dmg"
   appcast 'https://github.com/mattingalls/Soundflower/releases.atom',
-          checkpoint: '46ce87df41149532b2a9695224e6ff3060fffb6784e03c1703c315ac42674598'
+          checkpoint: '5782759ffb2d6994cb222c88476011dee82680de40bef5011adcc36df6cdca49'
   name 'Soundflower'
   homepage 'https://github.com/mattingalls/Soundflower'
 
   pkg 'Soundflower.pkg'
 
   postflight do
-    system '/usr/bin/sudo', '-E', '--',
-           '/sbin/kextload', '-b', 'com.Cycling74.driver.Soundflower'
+    system_command '/sbin/kextload',
+                   args: ['-b', 'com.Cycling74.driver.Soundflower'],
+                   sudo: true
   end
 
   # early_script is a workaround for a slowly unloading kext, see private-eye Cask

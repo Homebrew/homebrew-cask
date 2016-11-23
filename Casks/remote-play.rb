@@ -6,6 +6,7 @@ cask 'remote-play' do
   name 'PS4 Remote Play'
   homepage 'https://remoteplay.dl.playstation.net/remoteplay/'
 
+  auto_updates true
   depends_on macos: '>= :yosemite'
 
   pkg 'RemotePlayInstaller.pkg'

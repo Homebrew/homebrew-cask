@@ -7,7 +7,7 @@ cask 'avogadro' do
   appcast 'https://sourceforge.net/projects/avogadro/rss',
           checkpoint: 'b4c194124e797b2c1962828bbbb16c54c624c9f38191bebcb6770259739208df'
   name 'Avogadro'
-  homepage 'http://avogadro.openmolecules.net/'
+  homepage 'https://avogadro.cc/wiki/Main_Page'
 
   app 'Avogadro.app'
 end
