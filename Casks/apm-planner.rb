@@ -4,7 +4,8 @@ cask 'apm-planner' do
 
   url "http://firmware.ardupilot.org/Tools/APMPlanner/apm_planner_#{version}_osx.dmg"
   appcast 'http://firmware.ardupilot.org/Tools/APMPlanner/apm_planner_version.json',
-          checkpoint: 'c05e845dcfbcd54d6aaa3a597495483a526c5550cd06f6631ecee0cdfd68ab08'  name 'APM Planner'
+          checkpoint: 'c05e845dcfbcd54d6aaa3a597495483a526c5550cd06f6631ecee0cdfd68ab08'
+  name 'APM Planner'
   homepage 'http://ardupilot.org/'
 
   app "APM Planner #{version.major_minor}.app"
