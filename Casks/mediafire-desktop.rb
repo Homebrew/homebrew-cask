@@ -4,7 +4,7 @@ cask 'mediafire-desktop' do
 
   url 'https://www.mediafire.com/?4xcr491804ncktz/'
   name 'MediaFire Desktop'
-  homepage 'http://www.mediafire.com/software/desktop/'
+  homepage 'http://www.mediafire.com/software/'
 
   app 'MediaFire Desktop.app'
 end
