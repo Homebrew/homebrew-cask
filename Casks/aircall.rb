@@ -6,7 +6,7 @@ cask 'aircall' do
   name 'Aircall'
   homepage 'https://aircall.io'
 
-  app 'Aircall.app'
-
   auto_updates true
+
+  app 'Aircall.app'
 end
