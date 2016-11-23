@@ -4,7 +4,7 @@ cask 'texmacs' do
 
   url "http://www.texmacs.org/Download/ftp/tmftp/macos/TeXmacs-#{version}.dmg"
   name 'GNU TeXmacs'
-  homepage 'http://www.texmacs.org/tmweb/home/welcome.en.html'
+  homepage 'http://www.texmacs.org/'
 
   app "TeXmacs-#{version}.app"
 
