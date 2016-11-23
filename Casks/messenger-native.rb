@@ -4,7 +4,7 @@ cask 'messenger-native' do
 
   url "https://github.com/gaston23/MessengerNative/releases/download/#{version}/Mac64_MessengerNative#{version}.zip"
   appcast 'https://github.com/gaston23/MessengerNative/releases.atom',
-          checkpoint: '24d213d471d0f1535ff73b30079a54fa471e9ce0aa5472ac047eafa7f28a69e3'
+          checkpoint: '136867cf6bf76c6c9466526ab1d48f358ae72913ce60629e3a7e6aff1c58392f'
   name 'Messenger Native'
   homepage 'https://github.com/gaston23/MessengerNative'
 
