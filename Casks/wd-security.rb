@@ -4,7 +4,7 @@ cask 'wd-security' do
 
   url "http://download.wdc.com/wdapp/WD_Security_#{version.dots_to_underscores}.zip"
   name 'WD Security'
-  homepage 'https://www.wdc.com/en/'
+  homepage 'https://www.wdc.com/'
 
   app 'WD Security.app'
 end

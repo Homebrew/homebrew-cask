@@ -4,7 +4,7 @@ cask 'zdoom' do
 
   url "https://zdoom.org/files/zdoom/#{version.major_minor}/zdoom-#{version}.dmg"
   name 'ZDoom'
-  homepage 'https://zdoom.org/'
+  homepage 'https://zdoom.org/News'
 
   app 'ZDoom.app'
 end
