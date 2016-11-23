@@ -7,7 +7,7 @@ cask 'solvespace' do
   appcast 'https://github.com/solvespace/solvespace/releases.atom',
           checkpoint: 'f81fcca30d49cc7b8c442d10ed814b8fb12f8dfe60369b4c48294904d931ab69'
   name 'SolveSpace'
-  homepage 'http://solvespace.com'
+  homepage 'http://solvespace.com/index.pl'
 
   app 'SolveSpace.app'
 end

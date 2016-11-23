@@ -4,7 +4,7 @@ cask 'qobuz-desktop' do
 
   url 'http://static.qobuz.com/apps/qobuz-desktop/osx/QobuzDesktopInstaller.pkg'
   name 'Qobuz Desktop'
-  homepage 'http://www.qobuz.com/applications#app-desktop'
+  homepage 'http://www.qobuz.com/applications'
 
   pkg 'QobuzDesktopInstaller.pkg'
 
