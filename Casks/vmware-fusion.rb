@@ -6,7 +6,7 @@ cask 'vmware-fusion' do
   appcast 'https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml',
           checkpoint: 'cbb693dfe222df99e8f4d370c0a397c0e8abdcdfb18013de49c98143b247b20a'
   name 'VMware Fusion'
-  homepage 'http://www.vmware.com/products/fusion/'
+  homepage 'http://www.vmware.com/products/fusion.html'
 
   auto_updates true
 

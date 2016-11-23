@@ -5,7 +5,7 @@ cask 'trezor-bridge' do
   # mytrezor.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://mytrezor.s3.amazonaws.com/bridge/#{version}/trezor-bridge-#{version}.pkg"
   name 'TREZOR Bridge'
-  homepage 'https://mytrezor.com/'
+  homepage 'https://wallet.mytrezor.com/'
 
   pkg "trezor-bridge-#{version}.pkg"
 
