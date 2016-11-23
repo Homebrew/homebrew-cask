@@ -5,7 +5,7 @@ cask 'android-studio' do
   # google.com/dl/android/studio was verified as official when first introduced to the cask
   url "https://dl.google.com/dl/android/studio/ide-zips/#{version.before_comma}/android-studio-ide-#{version.after_comma}-mac.zip"
   name 'Android Studio'
-  homepage 'https://developer.android.com/sdk/'
+  homepage 'https://developer.android.com/studio/index.html'
 
   app 'Android Studio.app'
 

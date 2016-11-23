@@ -4,7 +4,7 @@ cask 'adobe-reader' do
 
   url "http://ardownload.adobe.com/pub/adobe/reader/mac/AcrobatDC/#{version.no_dots}/AcroRdrDC_#{version.no_dots}_MUI.dmg"
   name 'Adobe Acrobat Reader DC'
-  homepage 'https://www.adobe.com/products/reader.html'
+  homepage 'https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html'
 
   depends_on macos: '>= 10.9'
 
