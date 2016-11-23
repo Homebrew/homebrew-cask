@@ -4,7 +4,7 @@ cask 'garmin-express' do
 
   url 'http://download.garmin.com/omt/express/B/GarminExpressInstaller.dmg'
   name 'Garmin Express'
-  homepage 'https://www.garmin.com/express'
+  homepage 'https://software.garmin.com/en-US/express.html'
 
   pkg 'Install Garmin Express.pkg'
 

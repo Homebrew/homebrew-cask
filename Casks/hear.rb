@@ -6,7 +6,7 @@ cask 'hear' do
   appcast 'https://www.prosofteng.com/resources/sparkle/sparkle.php?psProduct=Hear',
           checkpoint: 'fda2626909b97d07dd5ff26d881b7df42ebf51fcf112d29437819b42c62a56c3'
   name 'Hear'
-  homepage 'https://www.prosofteng.com/hear/'
+  homepage 'https://www.prosofteng.com/hear-audio-enhancer/'
 
   app 'Hear.app'
 
