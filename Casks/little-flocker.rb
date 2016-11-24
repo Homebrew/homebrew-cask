@@ -19,4 +19,8 @@ cask 'little-flocker' do
                       '/Users/Shared/Little Flocker',
                       '/Users/Shared/Little Flocker Extras',
                     ]
+
+  caveats do
+    reboot
+  end
 end
