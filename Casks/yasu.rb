@@ -1,15 +1,15 @@
 cask 'yasu' do
-  if MacOS.version <= ':snow_leopard'
+  if MacOS.version <= :snow_leopard
     version '2.8.2'
     sha256 '427672a45b8315c2f38d968ea5e0c35c21b91091a1fe0e750fcd2b0078644336'
     url "https://yasuformac.com/downloads/yasu_#{version}.zip"
     app 'Yasu.app'
-  elsif MacOS.version <= ':yosemite'
+  elsif MacOS.version <= :yosemite
     version '2.9.3'
     sha256 'd7bfd57c28a7d0fc364dc911532946b71f20d50b3fc594df4f31db59559a783a'
     url "https://yasuformac.com/downloads/yasu_#{version}.zip"
     app 'Yasu.app'
-  elsif MacOS.version <= ':el_capitan'
+  elsif MacOS.version <= :el_capitan
     version '3.0.4,504'
     sha256 'f1bd1e48a2ff0e9839f4b21c651e89a4e18d8aa85a9b9fa8642f333ef5b0053b'
     url "https://yasuformac.com/appcasts/10.11/yasuformac_#{version.after_comma}.zip"
