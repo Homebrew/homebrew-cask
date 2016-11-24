@@ -23,5 +23,4 @@ cask 'yasu' do
                 '~/Library/Preferences/net.yasuapp.yasu.plist',
                 '~/Library/Preferences/org.jimmitchell.yasu.plist',
               ]
-
 end
