@@ -31,4 +31,8 @@ cask 'little-snitch' do
       rmdir:  [
                 '/Library/Application Support/Objective Development',
               ]
+
+  caveats do
+    reboot
+  end
 end
