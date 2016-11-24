@@ -50,7 +50,7 @@ $ git remote add "$github_user" "https://github.com/$github_user/homebrew-cask"
 
 3: If you have already added your GitHub fork as a remote for your homebrew-cask Tap, ensure your fork is [up-to-date](https://help.github.com/articles/merging-an-upstream-repository-into-your-fork/).
 
-4: Switch to a new branch (ie. `new-feature`), and work from there: `git checkout -b new-feature`
+4: Switch to a new branch (ie. `new-feature`), and work from there: `git checkout -b new-feature`.
 
 
 ## Adding a Cask
@@ -64,11 +64,11 @@ With a bit of work, you can create a Cask for it. [This document](doc/developmen
 
 Some style guidelines:
 
-* All Casks and code should be indented using two spaces (never tabs)
-* There should not be any extraneous comments - the only comments that should be used are the ones explicitly defined in the [Cask Language Reference](doc/cask_language_reference)
-* The stanza order and position of newlines is important to make things easier (See [Stanza order](doc/cask_language_reference/#stanza-order))
-* Use string manipulations to improve the maintainability of your Cask (See [`version` methods](doc/cask_language_reference/stanzas/version.md#version-methods))
-* Test your cask using `brew cask audit/style` (See [testing](doc/development/adding_a_cask.md#testing-your-new-cask))
-* Make one Pull Request per Cask change
-* Squash commits after updating a Pull Request
-* Use descriptive commit messages - mention app name and version (ie. `Upgrade Transmission.app to v2.82`)
+* All Casks and code should be indented using two spaces (never tabs). When `brew cask style` contradicts this, `style` must be followed.
+* There should not be any extraneous comments - the only comments that should be used are the ones explicitly defined in the [Cask Language Reference](doc/cask_language_reference).
+* The stanza order and position of newlines is important to make things easier (See [Stanza order](doc/cask_language_reference/#stanza-order)).
+* Use string manipulations to improve the maintainability of your Cask (See [`version` methods](doc/cask_language_reference/stanzas/version.md#version-methods)).
+* Test your cask using `brew cask audit/style` (See [testing](doc/development/adding_a_cask.md#testing-your-new-cask)).
+* Make one Pull Request per Cask change.
+* Do not Squash commits after updating a Pull Request.
+* Use descriptive commit messages - mention app name and version (ie. `Upgrade Transmission.app to v2.82`).
