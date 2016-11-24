@@ -1,6 +1,6 @@
 cask 'keyfinder' do
-  version '2.1'
-  sha256 '79a8d55ffdabb676c2166f0921dc191154f74881e13fc6b0071955a8a1e32b00'
+  version '2.2'
+  sha256 '481894a3bf79b17b6b131adfac43033c545b24290e8c05bdc62f9e4849838dac'
 
   url "http://www.ibrahimshaath.co.uk/keyfinder/bins/KeyFinder-OSX-#{version.dots_to_hyphens}.zip"
   name 'KeyFinder'
