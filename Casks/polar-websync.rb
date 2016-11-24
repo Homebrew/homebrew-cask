@@ -5,7 +5,7 @@ cask 'polar-websync' do
   # polarpersonaltrainer.com was verified as official when first introduced to the cask
   url "https://www.polarpersonaltrainer.com/downloads/websync_#{version}.dmg"
   name 'Polar WebSync Software'
-  homepage 'https://www.polar.com/us-en/support/downloads/Polar_WebSync_Software'
+  homepage 'https://support.polar.com/support/downloads/Polar_WebSync_Software'
 
   # cannot be installed automatically, because it presents a choice
   # See more: https://github.com/caskroom/homebrew-cask/pull/11040#issuecomment-100454926

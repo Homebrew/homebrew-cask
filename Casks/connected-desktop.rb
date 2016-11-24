@@ -7,7 +7,7 @@ cask 'connected-desktop' do
   appcast 'http://appsoftware.connecteddata.com/mac/2.0/Appcast.xml',
           checkpoint: 'bafddaa3600663a31955344669f580ccff86ca00da43768edffae3a8842a5c89'
   name 'Connected Desktop'
-  homepage 'https://www.nexsan.com/products/private-cloud-appliances/'
+  homepage 'https://www.nexsan.com/products/unified-storage-enterprise-sync/'
 
   app 'Connected Desktop.app'
 end

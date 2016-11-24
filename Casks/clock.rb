@@ -5,7 +5,7 @@ cask 'clock' do
   # github.com/downloads/zachwaugh/Clock.app was verified as official when first introduced to the cask
   url "https://github.com/downloads/zachwaugh/Clock.app/Clock-#{version}.zip"
   name 'Clock'
-  homepage 'http://zachwaugh.me/clock/'
+  homepage 'https://zachwaugh.me/clock/'
 
   app 'Clock.app'
 end

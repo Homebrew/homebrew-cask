@@ -4,7 +4,7 @@ cask 'igv' do
 
   url "https://data.broadinstitute.org/igv/projects/downloads/IGV_#{version}.app.zip"
   name 'Integrative Genomics Viewer (IGV)'
-  homepage 'https://www.broadinstitute.org/software/igv/'
+  homepage 'https://software.broadinstitute.org/software/igv/'
 
   app "IGV_#{version}.app"
 

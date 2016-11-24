@@ -7,7 +7,7 @@ cask 'googleappengine' do
   appcast 'https://storage.googleapis.com/appengine-sdks',
           checkpoint: '7918888a5ed9a499f939d5f9e2f433f768f12959dae32d0a1e174a4592b2876a'
   name 'Google App Engine'
-  homepage 'https://developers.google.com/appengine/'
+  homepage 'https://cloud.google.com/appengine/'
 
   app 'GoogleAppEngineLauncher.app'
 end

@@ -7,7 +7,7 @@ cask 'polyphone' do
   appcast 'https://sourceforge.net/projects/polyphone/rss',
           checkpoint: 'ebaabb829363b6f03af5a5326b64c8011082ec8ee1561e3704f0e1df4df868e8'
   name 'Polyphone'
-  homepage 'http://polyphone.fr'
+  homepage 'http://polyphone-soundfonts.com/'
 
   app 'Polyphone.app'
 end

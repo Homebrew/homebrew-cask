@@ -7,7 +7,7 @@ cask 'pinta' do
   appcast 'https://github.com/PintaProject/Pinta/releases.atom',
           checkpoint: 'd343ef21b0681259d7a8df250d61abf187a250cd34f54717c1d6130ec5767c28'
   name 'Pinta'
-  homepage 'https://pinta-project.com/'
+  homepage 'https://pinta-project.com/pintaproject/pinta/'
 
   depends_on cask: 'mono-mdk'
 

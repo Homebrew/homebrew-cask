@@ -6,7 +6,7 @@ cask 'nzbvortex' do
   appcast "https://www.nzbvortex.com/update/appcast_v#{version.major}.xml",
           checkpoint: 'f4ca54a1dd9597962058922d4199f7bef816991e765fa26cca59e9f2a496ba51'
   name 'NZBVortex'
-  homepage 'https://www.nzbvortex.com/'
+  homepage 'https://www.nzbvortex.com/landing/'
 
   app "NZBVortex #{version.major}.app"
 end

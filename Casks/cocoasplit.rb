@@ -1,10 +1,10 @@
 cask 'cocoasplit' do
-  version :latest
-  sha256 :no_check
+  version '2.0.13'
+  sha256 '8e13a37b6e983453e955e5baa31992ae0c7160076660a9eb7bb40dd949381e00'
 
-  url 'http://krylon.rsdio.com/zakk/cocoasplit/CocoaSplit-current.zip'
+  url "https://www.cocoasplit.com/releases/#{version.major_minor}/CocoaSplit_#{version}.zip"
   name 'CocoaSplit'
-  homepage 'http://krylon.rsdio.com/zakk/cocoasplit/'
+  homepage 'https://www.cocoasplit.com/'
 
   app 'CocoaSplit.app'
 end

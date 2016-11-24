@@ -6,7 +6,7 @@ cask 'endicia' do
   appcast 'https://s3.amazonaws.com/endiciaformac/EndiciaForMacSparkle.xml',
           checkpoint: 'ce8a285edb70261c703b78aa8dd6b4f7e60b886e78f8798303b3f034f8ed549a'
   name 'Endicia for Mac'
-  homepage 'http://endiciaformac.com/'
+  homepage 'https://endiciaformac.com/'
 
   app 'Endicia.app'
 end

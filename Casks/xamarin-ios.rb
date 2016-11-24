@@ -6,7 +6,7 @@ cask 'xamarin-ios' do
   appcast 'https://static.xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
           checkpoint: '48d144620a3f8785b258c63ee2fb7e75a97b40ad3bfb947a74b914440df16422'
   name 'Xamarin.iOS'
-  homepage 'https://www.xamarin.com/ios'
+  homepage 'https://www.xamarin.com/platform'
 
   pkg "xamarin.ios-#{version}.pkg"
 

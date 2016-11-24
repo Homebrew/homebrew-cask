@@ -10,7 +10,7 @@ cask 'launchbar' do
   end
 
   name 'LaunchBar'
-  homepage 'https://www.obdev.at/products/launchbar/'
+  homepage 'https://www.obdev.at/products/launchbar/index.html'
 
   app 'LaunchBar.app'
 

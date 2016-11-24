@@ -4,7 +4,7 @@ cask 'hyperdock' do
 
   url 'https://bahoom.com/hyperdock/HyperDock.dmg'
   name 'HyperDock'
-  homepage 'http://hyperdock.bahoom.com/'
+  homepage 'https://bahoom.com/hyperdock/'
 
   prefpane 'HyperDock.prefpane'
 end

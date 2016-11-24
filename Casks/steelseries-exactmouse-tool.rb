@@ -5,7 +5,7 @@ cask 'steelseries-exactmouse-tool' do
   # steelseriescdn.com was verified as official when first introduced to the cask
   url 'https://downloads.steelseriescdn.com/drivers/tools/steelseries-exactmouse-tool.dmg'
   name 'SteelSeries ExactMouse Tool'
-  homepage 'https://steelseries.com/support/downloads'
+  homepage 'https://steelseries.com/downloads'
 
   app 'SteelSeries ExactMouse Tool.app'
 
