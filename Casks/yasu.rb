@@ -7,7 +7,9 @@ cask 'yasu' do
   elsif MacOS.version <= :yosemite
     version '2.9.3'
     sha256 'd7bfd57c28a7d0fc364dc911532946b71f20d50b3fc594df4f31db59559a783a'
-    url "https://yasuformac.com/downloads/yasu_#{version}.zip"
+    url "https://yasuformac.com/appcasts/10.10/Yasu_#{version}.zip"
+    appcast 'https://yasuformac.com/appcasts/10.10/yasu.xml',
+            checkpoint: 'd6df936cb2e8971eea6f4a0f3f8652d96faabd09c394386394944b85363d1507'
     app 'Yasu.app'
   elsif MacOS.version <= :el_capitan
     version '3.0.4,504'
