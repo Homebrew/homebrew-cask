@@ -1,17 +1,20 @@
 cask 'yasu' do
-  if MacOS.version <= :snow_leopard
-    version '2.8.2'
-    sha256 '427672a45b8315c2f38d968ea5e0c35c21b91091a1fe0e750fcd2b0078644336'
+  if MacOS.version <= '10.11'
+    version '504'
+    sha256 'f1bd1e48a2ff0e9839f4b21c651e89a4e18d8aa85a9b9fa8642f333ef5b0053b'
+    url "https://yasuformac.com/appcasts/10.11/yasuformac_#{version}.zip"
   else
-    version '2.9.1'
-    sha256 '597385cec59650cf5f5c9b54e22df5c0a87e4298e2164ceb09cf446b83646547'
+    version '602'
+    sha256 'db0951295b8e9b9d8fc4dfd37795b8261bbd1c79b218d260c9532f78b47abc14'
+    url "https://yasuformac.com/appcasts/10.12/yasuformac_#{version}.zip"
   end
 
-  url "http://yasuapp.net/files/yasu_#{version}.zip"
   name 'Yasu'
-  homepage 'http://yasuapp.net'
+  homepage 'https://yasuformac.com/'
 
-  app 'Yasu.app'
+  depends_on macos: '>= 10.11'
+
+  app 'Yasu for Mac.app'
 
   zap delete: [
                 '~/Library/Caches/com.apple.helpd/Generated/net.yasuapp.yasu.help',
@@ -21,7 +24,4 @@ cask 'yasu' do
                 '~/Library/Preferences/org.jimmitchell.yasu.plist',
               ]
 
-  caveats do
-    discontinued
-  end
 end
