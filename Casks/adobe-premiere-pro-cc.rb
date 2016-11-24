@@ -23,7 +23,7 @@ cask 'adobe-premiere-pro-cc' do
       user_agent: :fake,
       cookies:    { 'MM_TRIALS' => '1234' }
   name 'Adobe Premiere Pro CC 2015'
-  homepage 'http://www.adobe.com/products/premiere.html'
+  homepage 'https://www.adobe.com/products/premiere.html'
 
   media_signature = '38C72D42-0672-43B1-9E05-E7631684F9A1'
 
