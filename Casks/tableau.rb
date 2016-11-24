@@ -4,7 +4,7 @@ cask 'tableau' do
 
   url "https://downloads.tableau.com/tssoftware/TableauDesktop-#{version.dots_to_hyphens}.dmg"
   name 'Tableau'
-  homepage 'https://www.tableau.com/'
+  homepage 'https://public.tableau.com/s/'
 
   depends_on macos: '>= :yosemite'
 

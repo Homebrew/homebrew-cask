@@ -7,7 +7,7 @@ cask 'stepmania' do
   appcast 'https://github.com/stepmania/stepmania/releases.atom',
           checkpoint: '0b2d80a74aa81b15f01f0bc45ddfc6443e8422f3ca346b8c60ae9d55c1a853bd'
   name 'StepMania'
-  homepage 'http://www.stepmania.com/'
+  homepage 'https://www.stepmania.com/'
 
   app "StepMania-#{version}/Stepmania.app"
 end
