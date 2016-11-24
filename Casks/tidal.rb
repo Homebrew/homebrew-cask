@@ -4,7 +4,7 @@ cask 'tidal' do
 
   url 'https://download.tidal.com/desktop/TIDAL.dmg'
   name 'TIDAL'
-  homepage 'http://tidal.com/'
+  homepage 'https://tidal.com/'
 
   app 'TIDAL.app'
 end
