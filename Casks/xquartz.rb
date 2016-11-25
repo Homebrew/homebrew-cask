@@ -21,10 +21,16 @@ cask 'xquartz' do
     system_command '/bin/launchctl', args: ['load', '/Library/LaunchAgents/org.macosforge.xquartz.startx.plist']
   end
 
-  uninstall quit:      'org.macosforge.xquartz.X11',
-            launchctl: 'org.macosforge.xquartz.startx',
-            pkgutil:   'org.macosforge.xquartz.pkg',
-            delete:    '/opt/X11/'
+  uninstall_preflight do
+    system_command '/bin/launchctl', args: ['unload', '/Library/LaunchAgents/org.macosforge.xquartz.startx.plist']
+
+    system_command '/bin/launchctl', args: ['unload', '/Library/LaunchDaemons/org.macosforge.xquartz.privileged_startx.plist']
+
+    system_command 'rm', args: ['-rf', '/opt/X11* /Library/Launch*/org.macosforge.xquartz.* /Applications/Utilities/XQuartz.app /etc/*paths.d/*XQuartz']
+  end
+
+  uninstall quit:    'org.macosforge.xquartz.X11',
+            pkgutil: 'org.macosforge.xquartz.pkg'
 
   zap       delete: [
                       '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.macosforge.xquartz.x11.sfl',
