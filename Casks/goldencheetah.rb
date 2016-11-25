@@ -1,11 +1,11 @@
 cask 'goldencheetah' do
-  version '3.3.0'
-  sha256 'a32d917ead989fe491b1083f45efe758dcddaa912a7630904090c8c562f241e3'
+  version '3.4_Qt551'
+  sha256 '71f06e8e86a525c5fd5dcf7497795e46fa4f609a075e1bf272ed2f9831146daf'
 
   # github.com/GoldenCheetah/GoldenCheetah was verified as official when first introduced to the cask
-  url "https://github.com/GoldenCheetah/GoldenCheetah/releases/download/V#{version.major_minor}/GoldenCheetah_#{version}_QT5_64bit.dmg"
+  url "https://github.com/GoldenCheetah/GoldenCheetah/releases/download/V#{version.major_minor}/GoldenCheetah_V#{version}_64bit.dmg"
   appcast 'https://github.com/GoldenCheetah/GoldenCheetah/releases.atom',
-          checkpoint: '5710204f6643feba3208c9965e9c6526cd83c713ed544f865d907cb0a8d82677'
+          checkpoint: '430b4aad6807453284d87f7060c0e4ee557915545165c4f5b0ab6e845eee7b9c'
   name 'GoldenCheetah'
   homepage 'http://www.goldencheetah.org/'
 
