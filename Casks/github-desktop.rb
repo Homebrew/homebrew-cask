@@ -23,9 +23,11 @@ cask 'github-desktop' do
                        ]
 
   zap delete: [
+                '~/.config/git',
                 '~/Library/Application Support/GitHub for Mac',
                 '~/Library/Application Support/ShipIt_stderr.log',
                 '~/Library/Application Support/ShipIt_stdout.log',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.github.sfl',
                 '~/Library/Application Support/com.github.GitHub',
                 '~/Library/Application Support/com.github.GitHub.ShipIt',
                 '~/Library/Caches/GitHub for Mac',
