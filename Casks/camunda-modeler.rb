@@ -4,7 +4,7 @@ cask 'camunda-modeler' do
 
   url "https://camunda.org/release/camunda-modeler/#{version}/camunda-modeler-#{version}-darwin-x64.tar.gz"
   name 'Camunda Modeler'
-  homepage 'https://camunda.org'
+  homepage 'https://camunda.org/'
 
   app 'camunda-modeler/Camunda Modeler.app'
 end
