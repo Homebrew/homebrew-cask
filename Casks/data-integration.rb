@@ -7,7 +7,7 @@ cask 'data-integration' do
   appcast 'https://sourceforge.net/projects/pentaho/rss',
           checkpoint: '70d19f1c19f8c6f11733c18ea3f8217f4514bd4e6aa50763bc05d1ab8ff97f72'
   name 'Pentaho Data Integration'
-  homepage 'http://community.pentaho.com'
+  homepage 'http://community.pentaho.com/'
 
   app 'data-integration/Data Integration.app'
 end

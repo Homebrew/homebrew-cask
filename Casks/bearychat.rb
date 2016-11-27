@@ -4,7 +4,7 @@ cask 'bearychat' do
 
   url 'https://bearychat.com/apps/mac'
   name 'BearyChat'
-  homepage 'https://bearychat.com'
+  homepage 'https://bearychat.com/'
 
   app 'BearyChat.app'
 

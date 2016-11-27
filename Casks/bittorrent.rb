@@ -5,7 +5,7 @@ cask 'bittorrent' do
   # utorrent.com was verified as official when first introduced to the cask
   url 'https://download-new.utorrent.com/os/osx/track/stable/endpoint/btmac'
   name 'BitTorrent'
-  homepage 'https://www.bittorrent.com'
+  homepage 'https://www.bittorrent.com/'
 
   installer manual: 'Bittorrent.app'
 

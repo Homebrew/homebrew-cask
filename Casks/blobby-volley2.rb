@@ -4,7 +4,7 @@ cask 'blobby-volley2' do
 
   url "https://downloads.sourceforge.net/blobby/blobby2-macosx-#{version}.dmg"
   name 'Blobby Volley 2'
-  homepage 'http://blobby.sourceforge.net'
+  homepage 'http://blobby.sourceforge.net/'
 
   app 'Blobby Volley 2.app'
 end

@@ -4,7 +4,7 @@ cask 'cmake' do
 
   url "https://www.cmake.org/files/v#{version.major_minor}/cmake-#{version}-Darwin-x86_64.dmg"
   name 'CMake'
-  homepage 'https://cmake.org'
+  homepage 'https://cmake.org/'
 
   conflicts_with formula: 'cmake'
 

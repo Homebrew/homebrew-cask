@@ -4,7 +4,7 @@ cask 'crushftp' do
 
   url 'https://www.crushftp.com/early7/CrushFTP7_OSX.zip'
   name 'CrushFTP7'
-  homepage 'https://www.crushftp.com'
+  homepage 'https://www.crushftp.com/'
 
   app 'CrushFTP7_OSX/CrushFTP7.app'
 

@@ -6,7 +6,7 @@ cask 'arrsync' do
   appcast 'https://sourceforge.net/projects/arrsync/rss',
           checkpoint: 'f7c57bd1384d7e7cac02ba47a2c0da78691f6045ff17c1b2c6f3642072658515'
   name 'arRsync'
-  homepage 'http://arrsync.sourceforge.net'
+  homepage 'http://arrsync.sourceforge.net/'
 
   app 'arRsync.app'
 end

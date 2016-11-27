@@ -4,7 +4,7 @@ cask 'crypho' do
 
   url 'https://www.crypho.com/downloads/Crypho.dmg'
   name 'Crypho'
-  homepage 'https://www.crypho.com'
+  homepage 'https://www.crypho.com/'
 
   app 'Crypho.app'
 end

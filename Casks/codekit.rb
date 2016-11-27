@@ -6,7 +6,7 @@ cask 'codekit' do
   appcast "https://codekitapp.com/api/#{version.major}/appcast.xml",
           checkpoint: '64dff7566f12ddacd9a5d6b7c669b63f0c09c4b2c1e7e48678c7a914bfe883f3'
   name 'CodeKit'
-  homepage 'https://codekitapp.com'
+  homepage 'https://codekitapp.com/'
 
   auto_updates true
 

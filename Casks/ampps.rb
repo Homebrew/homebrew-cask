@@ -4,7 +4,7 @@ cask 'ampps' do
 
   url "http://files.ampps.com/AMPPS-#{version}.dmg"
   name 'AMPPS'
-  homepage 'http://www.ampps.com'
+  homepage 'http://www.ampps.com/'
 
   suite 'AMPPS'
 end

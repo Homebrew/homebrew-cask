@@ -4,7 +4,7 @@ cask 'diptrace' do
 
   url 'http://diptrace.com/downloads/DipTrace.dmg'
   name 'diptrace'
-  homepage 'http://diptrace.com'
+  homepage 'http://diptrace.com/'
 
   depends_on x11: true
 

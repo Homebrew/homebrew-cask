@@ -6,7 +6,7 @@ cask 'aria-maestosa' do
   appcast 'https://sourceforge.net/projects/ariamaestosa/rss',
           checkpoint: '477668fd1065310b682c7ced2a01f4be95af808290674d9598ff2895122cad3a'
   name 'Aria Maestosa'
-  homepage 'http://ariamaestosa.sourceforge.net'
+  homepage 'http://ariamaestosa.sourceforge.net/'
 
   app "AriaMaestosa-#{version}/Aria Maestosa.app"
 end

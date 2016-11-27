@@ -4,7 +4,7 @@ cask 'anoncoin' do
 
   url "https://anoncoin.net/downloads/#{version}/Anoncoin-#{version}.dmg"
   name 'Anoncoin'
-  homepage 'https://anoncoin.net'
+  homepage 'https://anoncoin.net/'
 
   app 'Anoncoin.app'
 

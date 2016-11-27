@@ -6,7 +6,7 @@ cask 'aircall' do
   appcast 'http://electron.aircall.io/update/osx/1.1.0',
           checkpoint: '25272934fa93d25ef834f9b4df1480ef14f33117adb2a2d86f53a0634e42f5cf'
   name 'Aircall'
-  homepage 'https://aircall.io'
+  homepage 'https://aircall.io/'
 
   auto_updates true
 

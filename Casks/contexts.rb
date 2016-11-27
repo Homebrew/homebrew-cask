@@ -6,7 +6,7 @@ cask 'contexts' do
   appcast 'https://contexts.co/appcasts/stable.xml',
           checkpoint: 'be56bd036b79f7d3b7d05685f151db835e51802547695bf78e639ed899f0ef89'
   name 'Contexts'
-  homepage 'https://contexts.co'
+  homepage 'https://contexts.co/'
 
   app 'Contexts.app'
 
