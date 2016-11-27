@@ -10,6 +10,8 @@ cask 'little-snitch' do
 
   installer manual: 'Little Snitch Installer.app'
 
+  uninstall script: '/Library/Little Snitch/Little Snitch Uninstaller.app/Contents/MacOS/Little Snitch Uninstaller'
+
   zap delete: [
                 '/Library/Application Support/Objective Development/Little Snitch',
                 '~/Library/Application Support/Little Snitch',
