@@ -22,8 +22,8 @@ cask 'github-desktop' do
                          'com.github.GitHub.GHInstallCLI',
                        ]
 
+  zap rmdir: '~/.config/git'
   zap delete: [
-                '~/.config/git',
                 '~/Library/Application Support/GitHub for Mac',
                 '~/Library/Application Support/ShipIt_stderr.log',
                 '~/Library/Application Support/ShipIt_stdout.log',
