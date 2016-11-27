@@ -4,7 +4,7 @@ cask 'qsync-client' do
 
   url 'https://download.qnap.com/webstart/QNAPQsync_Mac.dmg'
   name 'Qnap Qsync'
-  homepage 'https://www.qnap.com/i/in/utility/#block_3/'
+  homepage 'https://www.qnap.com/i/in/utility/#block_3'
 
   pkg 'Qsync Client.pkg'
 
