@@ -5,7 +5,7 @@ cask 'cryptomator' do
   # bintray.com/artifact/download/cryptomator was verified as official when first introduced to the cask
   url "https://bintray.com/artifact/download/cryptomator/cryptomator/Cryptomator-#{version}.dmg"
   name 'Cryptomator'
-  homepage 'https://cryptomator.org'
+  homepage 'https://cryptomator.org/'
 
   app 'Cryptomator.app'
 end
