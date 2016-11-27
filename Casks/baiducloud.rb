@@ -7,7 +7,7 @@ cask 'baiducloud' do
   name 'Baidu Cloud'
   name 'Baidu Yun Tong Bu Pan'
   name '百度云同步盘'
-  homepage 'https://pan.baidu.com'
+  homepage 'https://pan.baidu.com/'
 
   app '百度云同步盘.app'
 
