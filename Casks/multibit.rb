@@ -5,8 +5,7 @@ cask 'multibit' do
   url "https://multibit.org/releases/multibit-classic/multibit-classic-#{version}/multibit-classic-macos-#{version}.dmg"
   name 'MultiBit'
   homepage 'https://multibit.org/'
-  gpg "#{url}.asc",
-      key_id: '23f7fb7b'
+  gpg "#{url}.asc", key_id: '23f7fb7b'
 
   app 'MultiBit.app'
 end

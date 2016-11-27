@@ -84,8 +84,7 @@ cask 'torbrowser' do
   url "https://dist.torproject.org/torbrowser/#{version}/TorBrowser-#{version}-osx64_#{language}.dmg"
   name 'Tor Browser'
   homepage 'https://www.torproject.org/projects/torbrowser.html'
-  gpg "#{url}.asc",
-      key_id: 'ef6e286dda85ea2a4ba7de684e2c6e8793298290'
+  gpg "#{url}.asc", key_id: 'ef6e286dda85ea2a4ba7de684e2c6e8793298290'
 
   app 'TorBrowser.app'
 
