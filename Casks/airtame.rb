@@ -4,7 +4,7 @@ cask 'airtame' do
 
   url "https://us-1-downloads.airtame.com/application/ga/osx_x86/releases/airtame-application_#{version}.dmg"
   name 'Airtame'
-  homepage 'https://airtame.com'
+  homepage 'https://airtame.com/'
 
   auto_updates 'True'
 
