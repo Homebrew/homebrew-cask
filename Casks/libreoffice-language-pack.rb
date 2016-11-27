@@ -1,7 +1,6 @@
 cask 'libreoffice-language-pack' do
   version '5.2.3'
 
-
   language 'af' do
     sha256 'd5009312d432832bc90c2564b1491c112b476330a45b3acd8699f1c6a8f3e1b6'
     'af'
@@ -554,11 +553,9 @@ cask 'libreoffice-language-pack' do
 
 
   url "http://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64_langpack_#{language}.dmg"
-
   name 'LibreOffice language pack'
   homepage 'https://www.libreoffice.org/'
-  gpg "#{url}.asc",
-    key_id: 'c2839ecad9408fbe9531c3e9f434a1efafeeaea3'
+  gpg "#{url}.asc", key_id: 'c2839ecad9408fbe9531c3e9f434a1efafeeaea3'
 
   depends_on cask: 'libreoffice'
 
