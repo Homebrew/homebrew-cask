@@ -6,7 +6,7 @@ cask 'airserver' do
   appcast 'https://www.airserver.com/downloads/mac/appcast.xml',
           checkpoint: '6050520478908e4e475468f8a8de1f5a194d9fa00eec5ff29f90f1927f6b1502'
   name 'AirServer'
-  homepage 'https://www.airserver.com'
+  homepage 'https://www.airserver.com/'
 
   app 'AirServer.app'
 end
