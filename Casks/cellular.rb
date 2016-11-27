@@ -5,7 +5,7 @@ cask 'cellular' do
   # github.com/downloads/monofonik was verified as official when first introduced to the cask
   url "https://github.com/downloads/monofonik/cellular/Cellular-#{version}.dmg"
   name 'Cellular'
-  homepage 'http://www.flipt.org/#cellular/'
+  homepage 'http://www.flipt.org/#cellular'
 
   suite 'Cellular'
 
