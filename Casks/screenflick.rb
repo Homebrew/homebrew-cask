@@ -6,7 +6,7 @@ cask 'screenflick' do
   appcast "https://arweb-assets.s3.amazonaws.com/downloads/screenflick/screenflick#{version.major}.xml",
           checkpoint: '3cbb88dd50b651a17f30270b3892b69b1d2c1528148b156f840d4f172dfecf83'
   name 'Screenflick'
-  homepage 'http://www.araelium.com/screenflick/'
+  homepage 'https://www.araelium.com/screenflick/'
 
   app 'Screenflick.app'
 end
