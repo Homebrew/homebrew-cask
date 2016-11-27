@@ -23,10 +23,10 @@ pkg 'AlinofTimer.pkg', allow_untrusted: true
 ## `pkg choices:`
 
 `pkg choices:` can be used to override `.pkg`’s default install options via `-applyChoiceChangesXML`.
-(TODO: A reasonable issue which contains an image of install options on the GUI should be linked here)
+The example of install options appeared on the GUI is shown [here](https://github.com/caskroom/homebrew-cask/pull/26997).
 This option takes a deserialized version of the choiceChanges property list.
 Refer `CHOICE CHANGES FILE` section of `man installer` for further information about the choiceChanges file.
-(TODO: A pull request that contains adding `choices:` should be linked here)
+The proceduce to extract the choices value is described in [a pull request of wireshark-chmodbpf](https://github.com/caskroom/homebrew-cask/pull/26997).
 
 Example (TODO: A resonable cask which uses `choices:` should be linked here)
 
