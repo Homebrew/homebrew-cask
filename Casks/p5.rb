@@ -8,7 +8,7 @@ cask 'p5' do
   appcast 'https://github.com/processing/p5.js-editor/releases.atom',
           checkpoint: 'be59b9f02d63c2c3ad02c6736566605dc0931d26d6d814c9187ed0f6f2c1bcf9'
   name 'p5.js Editor'
-  homepage 'https://p5js.org/download/#editor'
+  homepage 'https://p5js.org/download/#editor/'
 
   app 'p5.app'
 end

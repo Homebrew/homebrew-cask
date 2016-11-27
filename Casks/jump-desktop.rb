@@ -6,7 +6,7 @@ cask 'jump-desktop' do
   appcast 'https://jumpdesktop.com/downloads/viewer/jdmac-web-appcast.xml',
           checkpoint: 'c1ec2782d66c15a6128dc3506d0f2d52d3959ac7a7f4632e295649e76ad6b2ab'
   name 'Jump Desktop'
-  homepage 'https://jumpdesktop.com/#jdmac'
+  homepage 'https://jumpdesktop.com/#jdmac/'
 
   app 'Jump Desktop.app'
 end

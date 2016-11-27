@@ -4,7 +4,7 @@ cask 'screens' do
 
   url "https://download.edovia.com/screens/Screens_#{version}.zip"
   name 'Screens'
-  homepage 'https://edovia.com/screens/#mac'
+  homepage 'https://edovia.com/screens/#mac/'
 
   app 'Screens.app'
 

@@ -4,7 +4,7 @@ cask 'ilok-license-manager' do
 
   url 'http://installers.ilok.com/iloklicensemanager/LicenseSupportInstallerMac.zip'
   name 'iLok License Manager'
-  homepage 'https://ilok.com/#!license-manager'
+  homepage 'https://ilok.com/#!license-manager/'
 
   pkg 'License Support.pkg'
 
