@@ -551,7 +551,6 @@ cask 'libreoffice-language-pack' do
     'zu'
   end
 
-
   url "http://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64_langpack_#{language}.dmg"
   name 'LibreOffice language pack'
   homepage 'https://www.libreoffice.org/'
