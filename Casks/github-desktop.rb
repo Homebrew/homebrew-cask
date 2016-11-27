@@ -35,5 +35,5 @@ cask 'github-desktop' do
                 '~/Library/Preferences/com.github.GitHub.LSSharedFileList.plist',
                 '~/Library/Preferences/com.github.GitHub.plist',
               ],
-      rmdir: '~/.config/git'
+      rmdir:  '~/.config/git'
 end
