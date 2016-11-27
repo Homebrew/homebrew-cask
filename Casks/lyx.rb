@@ -7,8 +7,7 @@ cask 'lyx' do
           checkpoint: '175cd70d08d80abd933253e0753da3ba1fbc6f7512e8f4b673c1b2c7d460682c'
   name 'LyX'
   homepage 'https://www.lyx.org'
-  gpg "#{url}.sig",
-      key_id: 'de7a44fac7fb382d'
+  gpg "#{url}.sig", key_id: 'de7a44fac7fb382d'
 
   app 'LyX.app'
 
