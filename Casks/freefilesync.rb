@@ -5,7 +5,7 @@ cask 'freefilesync' do
   # download2114.mediafire.com/dl0o9adlw80g/bzdxny1n7cxozkh was verified as official when first introduced to the cask.
   url "https://download2114.mediafire.com/dl0o9adlw80g/bzdxny1n7cxozkh/FreeFileSync_#{version}_macOS.zip"
   name 'FreeFileSync'
-  homepage 'http://www.freefilesync.org'
+  homepage 'http://www.freefilesync.org/'
 
   app 'FreeFileSync.app'
   app 'RealtimeSync.app'
