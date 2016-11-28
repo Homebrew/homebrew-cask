@@ -7,7 +7,7 @@ cask 'eintopf' do
   appcast 'https://github.com/mazehall/eintopf/releases.atom',
           checkpoint: '2f683218039482487cb26a62f378cef879b5504f694736b58c14663bcd6bd978'
   name 'Eintopf'
-  homepage 'https://eintopf.io'
+  homepage 'https://eintopf.io/'
 
   app 'Eintopf.app'
 end
