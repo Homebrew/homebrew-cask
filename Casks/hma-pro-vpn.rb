@@ -10,5 +10,10 @@ cask 'hma-pro-vpn' do
 
   installer manual: 'Install HMA! Pro VPN.app'
 
-  zap delete: '~/Library/Preferences/com.privax.hmaprovpn.plist'
+  zap delete: '~/Library/Preferences/com.privax.hmaprovpn.plist',
+      rmdir: '~/Library/Saved Application State/com.privax.hmaprovpn.savedState'
+
+  uninstall launchctl: 'com.privax.hmaprovpn.helper',
+            quit: 'com.privax.hmaprovpn.helper',
+            delete: ['/Applications/HMA! Pro VPN.app', '/Library/PrivilegedHelperTools/com.privax.hmaprovpn.helper']
 end
