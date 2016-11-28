@@ -1,11 +1,11 @@
 cask 'luyten' do
-  version '0.4.9'
-  sha256 'f5c37211501f00e5cb86623f7e2ab4ccaa07416bf2f5b067ac19846cad3b59c0'
+  version '0.5.0'
+  sha256 '3317031309365498693a3a75661748c5c5b1a3425ef8458b9b244266282386e5'
 
   # github.com/deathmarine/Luyten was verified as official when first introduced to the cask
   url "https://github.com/deathmarine/Luyten/releases/download/v#{version}/luyten-OSX-#{version}.zip"
   appcast 'https://github.com/deathmarine/Luyten/releases.atom',
-          checkpoint: 'a3088d3278005021feb872e4d0f14767da2d32d1db73e851e2d9b3bbadc16ee8'
+          checkpoint: 'aff98b5d8de9ef034ff5093eb58e5d1ab3711e963a589067fbf35f6ed177fae5'
   name 'Luyten'
   homepage 'https://deathmarine.github.io/Luyten/'
 
