@@ -6,7 +6,6 @@ cask 'filebot' do
   url "https://downloads.sourceforge.net/filebot/filebot/FileBot_#{version}/FileBot_#{version}-darwin.tar.xz"
   appcast 'https://app.filebot.net/update.xml',
           checkpoint: '10b885da024848f3d58be9b54f44088aa2dd3f7e714a8b0e3bbef96f2824bb2c'
-
   name 'FileBot'
   homepage 'https://www.filebot.net/'
 
