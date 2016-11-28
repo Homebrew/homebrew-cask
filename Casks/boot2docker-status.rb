@@ -7,7 +7,7 @@ cask 'boot2docker-status' do
   appcast 'https://github.com/nickgartmann/boot2docker-status/releases.atom',
           checkpoint: 'e399bad2bf54114275f4dbce07312b54338baca54d8489326405130501a02a0e'
   name 'Boot2Docker Status'
-  homepage 'http://boot2docker-status.nickgartmann.com'
+  homepage 'http://boot2docker-status.nickgartmann.com/'
 
   app 'Boot2Docker Status.app'
 

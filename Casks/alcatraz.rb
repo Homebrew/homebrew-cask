@@ -7,7 +7,7 @@ cask 'alcatraz' do
   appcast 'https://github.com/alcatraz/Alcatraz/releases.atom',
           checkpoint: '053f4ce6f085330611cfad0aacab07d2e3973233ff0b86881b22d0efee331914'
   name 'alcatraz'
-  homepage 'http://alcatraz.io'
+  homepage 'http://alcatraz.io/'
 
   artifact 'Alcatraz.xcplugin', target: "#{ENV['HOME']}/Library/Application Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin"
 

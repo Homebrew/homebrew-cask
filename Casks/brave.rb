@@ -7,7 +7,7 @@ cask 'brave' do
   appcast 'https://github.com/brave/browser-laptop/releases.atom',
           checkpoint: '5fd92e5631b617190f6b70b2133dff1c8e93802e71a7ef7286893199cd7d6e06'
   name 'Brave'
-  homepage 'https://brave.com'
+  homepage 'https://brave.com/'
 
   app 'Brave.app'
 

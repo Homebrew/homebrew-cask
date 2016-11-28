@@ -5,7 +5,7 @@ cask 'digikam' do
   # kde.org/stable/digikam was verified as official when first introduced to the cask
   url "http://download.kde.org/stable/digikam/digiKam-#{version}-MacOS-x86-64.pkg"
   name 'digiKam'
-  homepage 'https://www.digikam.org'
+  homepage 'https://www.digikam.org/'
 
   pkg "digikam-#{version}-MacOS-x86-64.pkg"
 

@@ -7,7 +7,7 @@ cask 'angry-ip-scanner' do
   appcast 'https://github.com/angryziber/ipscan/releases.atom',
           checkpoint: '43039a9b361014d6b347f070687e4f815e7f56ed2bf40b48d793344117cb4eb7'
   name 'Angry IP Scanner'
-  homepage 'http://angryip.org'
+  homepage 'http://angryip.org/'
 
   app 'Angry IP Scanner.app'
 end

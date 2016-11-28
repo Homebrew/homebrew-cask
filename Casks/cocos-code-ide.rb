@@ -4,7 +4,7 @@ cask 'cocos-code-ide' do
 
   url "http://www.cocos2d-x.org/filedown/cocos-code-ide-mac64-#{version}.dmg"
   name 'Cocos Code IDE'
-  homepage 'http://www.cocos2d-x.org'
+  homepage 'http://www.cocos2d-x.org/'
 
   app 'Cocos Code IDE.app'
 

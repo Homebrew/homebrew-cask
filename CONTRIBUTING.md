@@ -70,5 +70,5 @@ Some style guidelines:
 * Use string manipulations to improve the maintainability of your Cask (See [`version` methods](doc/cask_language_reference/stanzas/version.md#version-methods)).
 * Test your cask using `brew cask audit/style` (See [testing](doc/development/adding_a_cask.md#testing-your-new-cask)).
 * Make one Pull Request per Cask change.
-* Do not Squash commits after updating a Pull Request.
+* Do not squash commits after updating a Pull Request.
 * Use descriptive commit messages - mention app name and version (ie. `Upgrade Transmission.app to v2.82`).

@@ -4,7 +4,7 @@ cask 'bitscope-dso' do
 
   url "http://bitscope.com/download/files/bitscope-dso_#{version}.app.tgz"
   name 'BitScope DSO'
-  homepage 'http://www.bitscope.com'
+  homepage 'http://www.bitscope.com/'
 
   app 'bitscope-dso.app'
 end

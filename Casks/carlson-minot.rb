@@ -4,7 +4,7 @@ cask 'carlson-minot' do
 
   url "https://www.carlson-minot.com/downloads/arm-#{version}-arm-none-linux-gnueabi.osx.intelx86.bin.pkg"
   name 'Carlson-Minot Toolchain'
-  homepage 'https://www.carlson-minot.com'
+  homepage 'https://www.carlson-minot.com/'
 
   pkg "arm-#{version}-arm-none-linux-gnueabi.osx.intelx86.bin.pkg"
 

@@ -7,7 +7,7 @@ cask 'brackets' do
   appcast 'https://github.com/adobe/brackets/releases.atom',
           checkpoint: 'f6eea3ff7a857c6c4039ac24662a9eab1de15dcc0464f1d33f8ac35efdaa4121'
   name 'Brackets'
-  homepage 'http://brackets.io'
+  homepage 'http://brackets.io/'
 
   app 'Brackets.app'
 

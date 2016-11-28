@@ -4,7 +4,7 @@ cask 'astrometry' do
 
   url "http://download.cloudmakers.eu/Astrometry_#{version}.dmg"
   name 'Astrometry'
-  homepage 'http://www.cloudmakers.eu'
+  homepage 'http://www.cloudmakers.eu/'
 
   app 'Astrometry.app'
 end
