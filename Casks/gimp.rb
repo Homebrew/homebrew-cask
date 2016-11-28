@@ -4,7 +4,7 @@ cask 'gimp' do
 
   url "https://download.gimp.org/pub/gimp/v2.8/osx/gimp-#{version}.dmg"
   name 'GIMP'
-  homepage 'https://www.gimp.org'
+  homepage 'https://www.gimp.org/'
 
   app 'GIMP.app'
 

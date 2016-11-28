@@ -4,7 +4,7 @@ cask 'fish' do
 
   url "https://fishshell.com/files/#{version}/fish-#{version}.app.zip"
   name 'Fish App'
-  homepage 'https://fishshell.com'
+  homepage 'https://fishshell.com/'
 
   app 'fish.app'
 end

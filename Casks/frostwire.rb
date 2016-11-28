@@ -4,7 +4,7 @@ cask 'frostwire' do
 
   url "http://dl.frostwire.com/frostwire/#{version}/frostwire-#{version}.dmg"
   name 'FrostWire'
-  homepage 'http://www.frostwire.com'
+  homepage 'http://www.frostwire.com/'
 
   app 'FrostWire.app'
 end

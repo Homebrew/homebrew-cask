@@ -7,7 +7,7 @@ cask 'drawbot' do
   appcast 'https://raw.githubusercontent.com/typemytype/drawbot/master/drawBotSettings.py',
           checkpoint: '0b1eaee8db2a260a43559382da5b02dd08be587121b256155256b433880a75e7'
   name 'DrawBot'
-  homepage 'http://www.drawbot.com'
+  homepage 'http://www.drawbot.com/'
 
   app 'DrawBot.app'
 end

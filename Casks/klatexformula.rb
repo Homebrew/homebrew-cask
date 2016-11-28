@@ -6,7 +6,7 @@ cask 'klatexformula' do
   appcast 'https://sourceforge.net/projects/klatexformula/rss?path=/klatexformula',
           checkpoint: 'd03dfb386990dae34c456202e67d3d0976ef346c05a59e8c0c3c68a37d05ad2d'
   name 'KLatexFormula'
-  homepage 'http://klatexformula.sourceforge.net'
+  homepage 'http://klatexformula.sourceforge.net/'
 
   app 'KLatexFormula.app'
 end

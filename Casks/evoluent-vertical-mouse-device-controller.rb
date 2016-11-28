@@ -4,7 +4,7 @@ cask 'evoluent-vertical-mouse-device-controller' do
 
   url "https://evoluent.com/download/EvoluentVerticalMouseDeviceController#{version}f1_10_6.dmg"
   name 'Evoluent Vertical Mouse Device Controller'
-  homepage 'https://evoluent.com'
+  homepage 'https://evoluent.com/'
 
   pkg 'Evoluent VerticalMouse Device Controller.pkg'
 

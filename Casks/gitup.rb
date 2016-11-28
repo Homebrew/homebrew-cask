@@ -7,7 +7,7 @@ cask 'gitup' do
   appcast 'https://github.com/git-up/GitUp/releases.atom',
           checkpoint: '3fc88622548fe98ef117005b96e4284fcb544e8d52f58b5f8329ebd99cc4a9a2'
   name 'GitUp'
-  homepage 'http://gitup.co'
+  homepage 'http://gitup.co/'
 
   auto_updates true
   depends_on macos: '>= :mountain_lion'

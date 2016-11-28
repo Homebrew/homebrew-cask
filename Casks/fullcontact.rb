@@ -4,7 +4,7 @@ cask 'fullcontact' do
 
   url "http://mac.cdn.fullcontact.com/FullContact-#{version}.dmg"
   name 'FullContact'
-  homepage 'https://www.fullcontact.com'
+  homepage 'https://www.fullcontact.com/'
 
   app 'FullContact.app'
 end

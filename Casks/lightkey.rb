@@ -4,7 +4,7 @@ cask 'lightkey' do
 
   url "http://lightkeyapp.com/content/06-download/Lightkey-#{version.dots_to_hyphens}/LightkeyInstaller.zip"
   name 'Lightkey'
-  homepage 'http://lightkeyapp.com'
+  homepage 'http://lightkeyapp.com/'
 
   pkg 'LightkeyInstaller.pkg'
 

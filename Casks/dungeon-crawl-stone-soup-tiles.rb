@@ -4,7 +4,7 @@ cask 'dungeon-crawl-stone-soup-tiles' do
 
   url "https://crawl.develz.org/release/stone_soup-#{version}-tiles-macosx.zip"
   name 'Dungeon Crawl Stone Soup'
-  homepage 'https://crawl.develz.org'
+  homepage 'https://crawl.develz.org/'
 
   app 'Dungeon Crawl Stone Soup - Tiles.app'
 end

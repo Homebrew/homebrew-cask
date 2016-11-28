@@ -6,7 +6,7 @@ cask 'lacaille' do
   appcast 'http://lacaille.jpn.org',
           checkpoint: '9278d72ed9b5179467c1cf8888fc8d981ba32fc085bad32cf09119cf836c3ec4'
   name 'Lacaille'
-  homepage 'http://lacaille.jpn.org'
+  homepage 'http://lacaille.jpn.org/'
 
   app 'Lacaille.app'
 
