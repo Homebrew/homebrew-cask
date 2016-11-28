@@ -6,7 +6,5 @@ cask 'elektriktrickquicklook' do
   name 'Elektriktrick STL and GCode Quicklook'
   homepage 'http://www.elektriktrick.com/sw_quicklook.html'
 
-  depends_on macos: '>= :snow_leopard'
-
   qlplugin 'ElektrikTrickQuickLook.qlgenerator'
 end
