@@ -5,7 +5,7 @@ cask 'iueditor' do
   # iueditor.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://iueditor.s3.amazonaws.com/Release/IUEditorV#{version}.zip"
   name 'JDLab IUEditor'
-  homepage 'http://www.iueditor.org'
+  homepage 'http://www.iueditor.org/'
 
   app 'IUEditor.app'
 
