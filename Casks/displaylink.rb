@@ -14,7 +14,7 @@ cask 'displaylink' do
              },
       using: :post
   name 'DisplayLink USB Graphics Software'
-  homepage 'http://www.displaylink.com'
+  homepage 'http://www.displaylink.com/'
 
   pkg 'DisplayLink Software Installer.pkg'
 
