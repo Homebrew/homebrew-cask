@@ -4,7 +4,7 @@ cask 'kindle-comic-converter' do
 
   url "https://kcc.iosphe.re/OSX/KindleComicConverter_osx_#{version}.dmg"
   name 'Kindle Comic Converter'
-  homepage 'https://kcc.iosphe.re'
+  homepage 'https://kcc.iosphe.re/'
 
   app 'Kindle Comic Converter.app'
 end
