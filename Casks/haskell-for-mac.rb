@@ -7,7 +7,7 @@ cask 'haskell-for-mac' do
   appcast 'https://updates.devmate.com/com.haskellformac.Haskell.basic.xml',
           checkpoint: '967c75ea27da3a1955b3ca288fa52d4814e8f419770d008025a005ab0157ee83'
   name 'Haskell for Mac'
-  homepage 'http://haskellformac.com'
+  homepage 'http://haskellformac.com/'
 
   auto_updates true
 
