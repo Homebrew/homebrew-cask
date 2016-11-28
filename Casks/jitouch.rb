@@ -13,7 +13,7 @@ cask 'jitouch' do
   end
 
   name 'jitouch'
-  homepage 'https://www.jitouch.com'
+  homepage 'https://www.jitouch.com/'
 
   prefpane 'jitouch/Jitouch.prefPane'
 
