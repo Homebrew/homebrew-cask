@@ -12,8 +12,13 @@ cask 'hma-pro-vpn' do
 
   uninstall launchctl: 'com.privax.hmaprovpn.helper',
             quit:      'com.privax.hmaprovpn.helper',
-            delete:    ['/Applications/HMA! Pro VPN.app', '/Library/PrivilegedHelperTools/com.privax.hmaprovpn.helper']
+            delete:    [
+                         '/Applications/HMA! Pro VPN.app',
+                         '/Library/PrivilegedHelperTools/com.privax.hmaprovpn.helper',
+                       ]
 
-  zap delete: '~/Library/Preferences/com.privax.hmaprovpn.plist',
-      rmdir:  '~/Library/Saved Application State/com.privax.hmaprovpn.savedState'
+  zap delete: [
+                '~/Library/Preferences/com.privax.hmaprovpn.plist',
+                '~/Library/Saved Application State/com.privax.hmaprovpn.savedState',
+              ]
 end
