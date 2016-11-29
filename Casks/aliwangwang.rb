@@ -5,7 +5,7 @@ cask 'aliwangwang' do
   # dbison.alicdn.com was verified as official when first introduced to the cask
   url "https://dbison.alicdn.com/updates/macww-nosandbox-#{version}.dmg"
   name 'Ali Wangwang'
-  homepage 'https://wangwang.taobao.com'
+  homepage 'https://wangwang.taobao.com/'
 
   app 'AliWangwang.app'
 

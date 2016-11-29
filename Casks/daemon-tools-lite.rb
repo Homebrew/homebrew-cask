@@ -7,7 +7,7 @@ cask 'daemon-tools-lite' do
   appcast 'http://resources.web-search-home.com/xml/DAEMONToolsLite-appcast.xml',
           checkpoint: '79b2e4d6148069e93efd93c4f2dd4cf4fc0ef1fc09114898151aae03127ad1ad'
   name 'DAEMON Tools Lite'
-  homepage 'https://www.daemon-tools.cc/'
+  homepage 'https://www.daemon-tools.cc/home'
 
   app 'DAEMON Tools Lite.app'
 end

@@ -5,8 +5,7 @@ cask 'electrum' do
   url "https://download.electrum.org/#{version}/electrum-#{version}.dmg"
   name 'Electrum'
   homepage 'https://electrum.org/'
-  gpg "#{url}.asc",
-      key_id: '6694d8de7be8ee5631bed9502bd5824b7f9470e6'
+  gpg "#{url}.asc", key_id: '6694d8de7be8ee5631bed9502bd5824b7f9470e6'
 
   app 'Electrum.app'
 end

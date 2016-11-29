@@ -4,7 +4,7 @@ cask 'astroguider' do
 
   url "http://download.cloudmakers.eu/AstroGuider_#{version}.dmg"
   name 'AstroGuider'
-  homepage 'http://www.cloudmakers.eu'
+  homepage 'http://www.cloudmakers.eu/'
 
   app 'AstroGuider.app'
 end

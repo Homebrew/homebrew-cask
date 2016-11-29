@@ -5,7 +5,7 @@ cask 'resolume-avenue' do
   # d19j6z4lvv1vde.cloudfront.net was verified as official when first introduced to the cask
   url "https://d19j6z4lvv1vde.cloudfront.net/Resolume_Arena_#{version.dots_to_underscores}_Installer.dmg"
   name 'Resolume Avenue'
-  homepage 'https://resolume.com'
+  homepage 'https://resolume.com/'
 
   pkg "Resolume Avenue #{version} Installer.pkg"
 

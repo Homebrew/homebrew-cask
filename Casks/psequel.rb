@@ -4,7 +4,7 @@ cask 'psequel' do
 
   url "http://www.psequel.com/download?version=#{version}"
   name 'PSequel'
-  homepage 'http://www.psequel.com'
+  homepage 'http://www.psequel.com/'
 
   app 'PSequel.app'
 end

@@ -4,7 +4,7 @@ cask 'jasp' do
 
   url "https://static.jasp-stats.org/JASP-#{version}.dmg"
   name 'JASP'
-  homepage 'https://jasp-stats.org'
+  homepage 'https://jasp-stats.org/'
 
   app 'JASP.app'
 end

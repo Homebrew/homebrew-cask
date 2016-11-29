@@ -4,7 +4,7 @@ cask 'wdfirmwareupdater' do
 
   url 'http://download.wdc.com/fwupdater/Mac/WDFirmwareUpdater.zip'
   name 'WDFirmwareUpdater'
-  homepage 'https://www.wdc.com/en/'
+  homepage 'https://www.wdc.com/'
 
   app 'WDFirmwareUpdater.app'
 end

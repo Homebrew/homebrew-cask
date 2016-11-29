@@ -4,7 +4,7 @@ cask 'freedv' do
 
   url "https://files.freedv.org/OSX/FreeDV-#{version}.dmg"
   name 'FreeDV'
-  homepage 'https://freedv.org/'
+  homepage 'https://freedv.org/tiki-index.php'
 
   app 'FreeDV.app'
 end

@@ -4,7 +4,7 @@ cask 'real-vnc' do
 
   url "https://www.realvnc.com/download/file/vnc.files/VNC-#{version}-MacOSX-x86_64.pkg"
   name 'Real VNC'
-  homepage 'https://www.realvnc.com'
+  homepage 'https://www.realvnc.com/'
 
   pkg "VNC-#{version}-MacOSX-x86_64.pkg"
 

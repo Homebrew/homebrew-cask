@@ -4,7 +4,7 @@ cask 'recovery-disk-assistant' do
 
   url 'https://support.apple.com/downloads/DL1433/en_US/RecoveryDiskAssistant.dmg'
   name 'Recovery Disk Assistant'
-  homepage 'https://support.apple.com/kb/HT4848'
+  homepage 'https://support.apple.com/HT202294'
 
   app 'Recovery Disk Assistant.app'
 end

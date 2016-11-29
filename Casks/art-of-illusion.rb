@@ -7,7 +7,7 @@ cask 'art-of-illusion' do
   appcast 'https://sourceforge.net/projects/aoi/rss',
           checkpoint: 'fae03e7c48c7884a973bf22bed829959c7b3cc314353939578aa4dea4ae958cf'
   name 'Art of Illusion'
-  homepage 'http://www.artofillusion.org'
+  homepage 'http://www.artofillusion.org/'
 
   depends_on macos: '>= :snow_leopard'
 

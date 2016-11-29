@@ -2,7 +2,8 @@ cask 'cocoaspell' do
   version '2.5'
   sha256 'd8dd01e6471df86f55d5f272a33fdb421f49a2fb923a9858a8772ec4367d333c'
 
-  url "http://people.ict.usc.edu/~leuski/cocoaspell/cocoAspell.#{version}.dmg", user_agent: :fake
+  url "http://people.ict.usc.edu/~leuski/cocoaspell/cocoAspell.#{version}.dmg",
+      user_agent: :fake
   name 'cocoAspell'
   homepage 'http://people.ict.usc.edu/~leuski/cocoaspell/'
 

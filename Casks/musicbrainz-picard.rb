@@ -4,7 +4,7 @@ cask 'musicbrainz-picard' do
 
   url "http://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-#{version}.dmg"
   name 'MusicBrainz Picard'
-  homepage 'https://picard.musicbrainz.org'
+  homepage 'https://picard.musicbrainz.org/'
 
   app 'MusicBrainz Picard.app'
 end

@@ -5,7 +5,7 @@ cask 'banshee' do
   # gnome.org/pub/GNOME/binaries/mac/banshee was verified as official when first introduced to the cask
   url "https://ftp.gnome.org/pub/GNOME/binaries/mac/banshee/banshee-#{version}.macosx.intel.dmg"
   name 'Banshee'
-  homepage 'http://banshee.fm'
+  homepage 'http://banshee.fm/'
 
   app 'Banshee.app'
 end

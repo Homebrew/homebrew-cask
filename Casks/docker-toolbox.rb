@@ -7,7 +7,7 @@ cask 'docker-toolbox' do
   appcast 'https://github.com/docker/toolbox/releases.atom',
           checkpoint: '02197247d526f9d9ba62dfc9d5d8a8d6147d2451cec5fd9e6d17278c650d9900'
   name 'Docker Toolbox'
-  homepage 'https://www.docker.com/toolbox'
+  homepage 'https://www.docker.com/products/docker-toolbox'
 
   pkg "DockerToolbox-#{version}.pkg"
 

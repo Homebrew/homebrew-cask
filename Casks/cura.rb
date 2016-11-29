@@ -4,7 +4,7 @@ cask 'cura' do
 
   url "https://software.ultimaker.com/current/Cura-#{version}-Darwin.dmg"
   name 'Cura'
-  homepage 'https://ultimaker.com/en/products/software'
+  homepage 'https://ultimaker.com/en/products/cura-software'
 
   conflicts_with cask: 'lulzbot-cura'
 

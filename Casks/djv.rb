@@ -6,7 +6,7 @@ cask 'djv' do
   appcast 'https://sourceforge.net/projects/djv/rss?path=/djv-stable',
           checkpoint: '24f84457eb5cde9dd0bf55a6e28e83a7af5c8bcf7d06a014200c37ea7fcc3777'
   name 'DJV Imaging'
-  homepage 'http://djv.sourceforge.net'
+  homepage 'http://djv.sourceforge.net/'
 
   app "djv-#{version}-OSX-64.app"
 end

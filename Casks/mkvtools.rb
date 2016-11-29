@@ -4,7 +4,7 @@ cask 'mkvtools' do
 
   url "http://www.emmgunn.com/downloads/mkvtools#{version}.zip"
   name 'MKVtools'
-  homepage 'http://www.emmgunn.com/mkvtools/mkvtoolshome.html'
+  homepage 'http://www.emmgunn.com/mkvtools-home/'
 
   app "mkvtools#{version}/MKVtools.app"
 end

@@ -4,7 +4,7 @@ cask 'escritorio-movistar' do
 
   url "https://www.movistar.es/estaticos/descargaaplicaciones/Escritorio%20Movistar_v#{version}.pkg"
   name 'Escritorio Movistar'
-  homepage 'https://www.movistar.es/particulares/servicios/descargaaplicaciones'
+  homepage 'https://www.movistar.es/particulares/movil/servicios/descarga-de-aplicaciones/ficha-ayuda/ci.descarga-de-aplicaciones.ayudaDesplegable'
 
   pkg "Escritorio Movistar_v#{version}.pkg"
 

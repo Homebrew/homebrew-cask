@@ -6,7 +6,7 @@ cask 'audioslicer' do
   appcast 'https://sourceforge.net/projects/audioslicer/rss?path=/AudioSlicer',
           checkpoint: '6d9e32d6082008a24ad9d89b196e90ccda2a085eb5a0224e41ad11c63606a963'
   name 'AudioSlicer'
-  homepage 'http://audioslicer.sourceforge.net'
+  homepage 'http://audioslicer.sourceforge.net/'
 
   app 'AudioSlicer.app'
 end

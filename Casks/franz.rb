@@ -7,7 +7,7 @@ cask 'franz' do
   appcast 'https://github.com/imprecision/franz-app/releases.atom',
           checkpoint: 'ff6f46a9386bd0f33a5e1f68aa7ef54e89b7e87850acdb41866c7bddfb0b6ca3'
   name 'Franz'
-  homepage 'http://meetfranz.com'
+  homepage 'http://meetfranz.com/'
 
   app 'Franz.app'
 end

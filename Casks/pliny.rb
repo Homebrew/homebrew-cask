@@ -4,7 +4,7 @@ cask 'pliny' do
 
   url "http://pliny.cch.kcl.ac.uk/pliny-app-#{version}.tar.gz"
   name 'Pliny'
-  homepage 'http://pliny.cch.kcl.ac.uk'
+  homepage 'http://pliny.cch.kcl.ac.uk/'
 
   app 'Pliny/pliny.app'
 end

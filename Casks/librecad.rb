@@ -7,7 +7,7 @@ cask 'librecad' do
   appcast 'https://sourceforge.net/projects/librecad/rss?path=/OSX',
           checkpoint: 'a2463268ae3a532744db027bcdd154bfa4390dada1679dbea42d426e9d9b39cc'
   name 'LibreCAD'
-  homepage 'http://librecad.org/'
+  homepage 'http://librecad.org/cms/home.html'
 
   app 'LibreCAD.app'
 end

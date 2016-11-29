@@ -1,10 +1,10 @@
 cask 'isubtitle' do
-  version '2.9.1.1'
-  sha256 '81396f37915786fe61bb37441e489196095c4ac0de2f4613a724171ab5ac718c'
+  version '3.0'
+  sha256 'cbf9217ed1f84c15579acd569d2969196b8b0f3513f826b75469b24132f9bf77'
 
-  url "http://www.bitfield.se/isubtitle/download/iSubtitle_#{version}.zip"
-  appcast 'http://www.bitfield.se/isubtitle/changelog.xml',
-          checkpoint: '6abb72847d2408a95753b0668142a964fc2cdd982779c8b7f17c990afe486f39'
+  url "http://www.bitfield.se/isubtitle#{version.major}/download/iSubtitle_#{version}.zip"
+  appcast "http://www.bitfield.se/isubtitle#{version.major}/changelog.xml",
+          checkpoint: '84e3a37cb824f2d5bb5a45ff90a3d75126f1ddd8d60052496dbeb23a81aee9d5'
   name 'iSubtitle'
   homepage 'http://www.bitfield.se/isubtitle/'
 

@@ -1,11 +1,11 @@
 cask 'tower' do
-  version '2.5.2-334-bc7e6fb8'
-  sha256 '16f84397d3d323c1e810bf7421d429bde37c04e261aeaf6a35d1037c17d5607f'
+  version '2.5.3-337-441ac672'
+  sha256 '3fd20f583f8f82f795fea2b3024049c34b98d78dad902e310a82f580aeb2b485'
 
   # fournova-app-updates.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://fournova-app-updates.s3.amazonaws.com/apps/tower#{version.major}-mac/#{version.sub(%r{^[^\-]+\-}, '')}/Tower-#{version.major}-#{version.sub(%r{-[^-]+$}, '')}.zip"
   appcast "https://updates.fournova.com/updates/tower#{version.major}-mac/stable",
-          checkpoint: 'e3301dc2ed75b2d55109fb79e3e3fe83a0d3d88ce75b97ae8d6f559fd02a20e2'
+          checkpoint: '85f9fe9d7494acfbed27cd6abb5c323a633cff2cfc12d072a592e6519f79f6cc'
   name 'Tower'
   homepage 'https://www.git-tower.com/'
 

@@ -4,7 +4,7 @@ cask 'drobo-dashboard' do
 
   url "http://files.drobo.com/webrelease/dashboard/Drobo-Dashboard-#{version.sub(%r{_.*}, '')}.dmg"
   name 'Drobo Dashboard'
-  homepage 'http://www.drobo.com'
+  homepage 'http://www.drobo.com/'
 
   pkg "Install.app/Contents/Drobo_Dashboard_Installer_#{version}.pkg"
 

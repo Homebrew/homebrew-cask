@@ -11,7 +11,7 @@ cask 'nvalt' do
   end
 
   name 'nvALT'
-  homepage 'http://brettterpstra.com/project/nvalt/'
+  homepage 'http://brettterpstra.com/projects/nvalt/'
 
   app 'nvALT.app'
 

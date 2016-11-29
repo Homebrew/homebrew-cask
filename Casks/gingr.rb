@@ -7,7 +7,7 @@ cask 'gingr' do
   appcast 'https://github.com/marbl/gingr/releases.atom',
           checkpoint: '55307efb6bc20c741265ac4903825fc8fc49a35e2b6e3ef6a3a387cf2b69dbc1'
   name 'Gingr'
-  homepage 'https://harvest.readthedocs.org/en/latest/content/gingr.html'
+  homepage 'https://harvest.readthedocs.io/en/latest/content/gingr.html'
 
   app 'Gingr.app'
 end

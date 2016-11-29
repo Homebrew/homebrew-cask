@@ -4,7 +4,7 @@ cask 'microsoft-intellitype' do
 
   url 'https://download.microsoft.com/download/B/1/0/B109F931-70E2-425F-8681-EAAB75845AB8/Microsoft-Desktop_d305.dmg'
   name 'Microsoft IntelliType'
-  homepage 'https://www.microsoft.com/hardware/en-us/keyboards'
+  homepage 'https://www.microsoft.com/accessories/keyboards'
 
   pkg 'Microsoft Desktop Installer.app/Contents/Resources/Microsoft Desktop.mpkg/Contents/Packages/Microsoft Keyboard.pkg'
 

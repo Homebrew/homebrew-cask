@@ -4,7 +4,7 @@ cask 'lightworks' do
 
   url "http://downloads.lwks.com/lightworks_v#{version}.dmg"
   name 'Lightworks'
-  homepage 'https://www.lwks.com'
+  homepage 'https://www.lwks.com/'
 
   depends_on macos: '>= 10.8'
 

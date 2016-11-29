@@ -1,8 +1,8 @@
 cask 'serial' do
-  version '1.2.2'
-  sha256 '683e9cff5962f8871909315ed0f8b56d2e710046c054343866f84ef4dac1e486'
+  version '1.2.5'
+  sha256 '03b4c375d27a5f1a60601f6c6d29fff03c131f2f1d7b04b8d6f8cd2fb625c892'
 
-  url "https://www.decisivetactics.com/lib/click?u=/products/serial/dl/Serial_#{version}.zip"
+  url "https://download.decisivetactics.com/products/serial/dl/Serial_#{version}.zip"
   name 'Serial'
   homepage 'https://www.decisivetactics.com/products/serial/'
 

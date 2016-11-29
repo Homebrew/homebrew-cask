@@ -12,7 +12,7 @@ cask 'r-app' do
   end
 
   name 'R'
-  homepage 'https://www.r-project.org'
+  homepage 'https://www.r-project.org/'
 
   depends_on macos: '>= :snow_leopard'
 

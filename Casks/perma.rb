@@ -5,7 +5,7 @@ cask 'perma' do
   # perma-dl.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://perma-dl.s3.amazonaws.com/Perma-v#{version}.zip"
   name 'Perma'
-  homepage 'https://per.ma'
+  homepage 'https://per.ma/'
 
   app 'Perma.app'
 end

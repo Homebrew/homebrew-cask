@@ -4,7 +4,7 @@ cask 'ionu' do
 
   url 'https://prod1.ionu.com/release/OSX/IONU.dmg'
   name 'IONU'
-  homepage 'https://ionu.com'
+  homepage 'https://ionu.com/'
 
   app 'IONU.app'
 end

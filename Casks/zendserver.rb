@@ -4,7 +4,7 @@ cask 'zendserver' do
 
   url "http://downloads.zend.com/zendserver/#{version.before_comma}/ZendServer-#{version.before_comma}-php-#{version.after_comma}.dmg"
   name 'Zend Server'
-  homepage 'https://www.zend.com/en/products/server/'
+  homepage 'https://www.zend.com/en/products/zend_server'
 
   pkg 'Zend Server.pkg'
 

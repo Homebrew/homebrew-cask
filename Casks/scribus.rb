@@ -7,7 +7,7 @@ cask 'scribus' do
   appcast 'https://sourceforge.net/projects/scribus/rss?path=/scribus',
           checkpoint: '1f49e634e8be3cad53eef763364d5436821f1984cd2a9a9b96e8f5963cb34c79'
   name 'Scribus'
-  homepage 'https://www.scribus.net/canvas/Scribus'
+  homepage 'https://www.scribus.net/'
 
   app 'Scribus.app'
 end

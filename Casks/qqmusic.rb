@@ -4,7 +4,7 @@ cask 'qqmusic' do
 
   url "http://dldir1.qq.com/music/clntupate/mac/QQMusic#{version}.dmg"
   name 'QQ音乐'
-  homepage 'https://y.qq.com'
+  homepage 'https://y.qq.com/'
 
   app 'QQMusic.app'
 

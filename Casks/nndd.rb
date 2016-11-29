@@ -4,7 +4,7 @@ cask 'nndd' do
 
   url "http://dl.osdn.jp/nndd/#{version.after_comma}/NNDD_v#{version.before_comma.dots_to_underscores}.dmg"
   appcast 'https://osdn.jp/projects/nndd/releases/rss',
-          checkpoint: '4f1d23fd9ebe4b3abf7495cf512df2f72f2097b3b4ff51d21e5fa837bb88766b'
+          checkpoint: '688d962d47c3a84d474ddbb25c37fbe44240bba4f792bcfdb8cb6f1134fef678'
   name 'NNDD'
   homepage 'https://osdn.jp/projects/nndd/'
 
