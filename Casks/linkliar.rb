@@ -7,7 +7,6 @@ cask 'linkliar' do
           checkpoint: 'c0b394576f668e81bcd5ece23aa070b9b2d7451c1f694b9dfee3ca9ddfdafe93'
   name 'LinkLiar'
   homepage 'https://github.com/halo/LinkLiar'
-  license :mit
 
   app 'LinkLiar.app'
 end

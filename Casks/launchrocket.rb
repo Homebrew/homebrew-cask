@@ -7,7 +7,6 @@ cask 'launchrocket' do
           checkpoint: '43d4921c43c512fb24d966f1811be784503dbe7244c498eab38ef5cdb5a30223'
   name 'LaunchRocket'
   homepage 'https://github.com/jimbojsb/launchrocket'
-  license :mit
 
   prefpane 'LaunchRocket.prefPane'
 end

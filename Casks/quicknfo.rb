@@ -7,7 +7,6 @@ cask 'quicknfo' do
           checkpoint: '279e07f68848eed2a04fab4749972b30a7b8b12335b1a4f209650f72c9d59c80'
   name 'QuickNFO'
   homepage 'https://github.com/planbnet/QuickNFO'
-  license :oss
 
   qlplugin 'QuickNFO.qlgenerator'
 end

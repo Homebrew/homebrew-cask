@@ -7,7 +7,6 @@ cask 'irccloud' do
           checkpoint: '8d1c92114f5558fc2594610379904feb7bc7bc3b6ecb0ea3c5c44fc92dcc46e6'
   name 'IRCCloud Desktop'
   homepage 'https://github.com/irccloud/irccloud-desktop'
-  license :apache
 
   app 'IRCCloud.app'
 end

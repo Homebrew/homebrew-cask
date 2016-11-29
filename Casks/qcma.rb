@@ -8,7 +8,6 @@ cask 'qcma' do
           checkpoint: '6b1af368d82aaa0f8ed6b0757ed968260426dec2b235b088d9723326d46d5542'
   name 'Qcma'
   homepage 'https://codestation.github.io/qcma/'
-  license :gpl
 
   app 'Qcma.app'
 end

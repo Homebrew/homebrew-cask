@@ -7,7 +7,6 @@ cask 'disablemonitor' do
           checkpoint: 'fe771d9958403ea039c1ffa4e8edbc69dee465e1cff42456c18780d1dcbd91af'
   name 'DisableMonitor'
   homepage 'https://github.com/Eun/DisableMonitor'
-  license :gpl
 
   app 'DisableMonitor.app'
 end

@@ -7,7 +7,6 @@ cask 'arranger' do
           checkpoint: 'c6938ca1a2301d4d20f70f1012fd7d244e71d42f06bebb126dd8ee126bac3930'
   name 'Arranger'
   homepage 'http://bucketomac.de/arranger/arranger/'
-  license :gratis
 
   accessibility_access true
 

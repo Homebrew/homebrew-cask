@@ -6,7 +6,6 @@ cask 'mongoproc' do
   url "https://s3.amazonaws.com/edu-downloads.10gen.com/#{version}/mongoProc_#{version}_mac.dmg"
   name 'MongoProc'
   homepage 'https://university.mongodb.com/mongoproc'
-  license :gratis
 
   app 'mongoProc.app'
 end

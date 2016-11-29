@@ -7,7 +7,6 @@ cask 'ubar' do
           checkpoint: '1d54e5b404c005064cccef0caee02ce5e336d175adb99202c242e6281f7f0570'
   name 'uBar'
   homepage 'https://brawersoftware.com/products/ubar'
-  license :commercial
 
   depends_on macos: '>= :mavericks'
 

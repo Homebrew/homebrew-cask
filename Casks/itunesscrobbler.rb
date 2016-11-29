@@ -5,7 +5,6 @@ cask 'itunesscrobbler' do
   url "http://www.easyclasspage.de/lastfm/files/iTunesScrobbler_#{version.no_dots}.zip"
   name 'iTunesScrobbler'
   homepage 'http://www.easyclasspage.de/lastfm/seite-19.html'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'iTunesScrobbler.app'
 end

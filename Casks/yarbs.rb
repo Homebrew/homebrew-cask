@@ -7,7 +7,6 @@ cask 'yarbs' do
           checkpoint: 'db31cf2eea194cca39e9958ff919e74d08587d66ad40cdd369e25c37f1bacb64'
   name 'yarbs'
   homepage 'https://github.com/BakeRolls/yarbs'
-  license :cc
 
   app 'yarbs-darwin-x64/yarbs.app'
 end

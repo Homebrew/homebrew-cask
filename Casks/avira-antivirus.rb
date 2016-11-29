@@ -6,7 +6,6 @@ cask 'avira-antivirus' do
   url 'https://install.avira-update.com/package/wks_avira/osx/int/pecl/Avira_Antivirus.pkg'
   name 'Avira Antivirus'
   homepage 'https://www.avira.com/en/free-antivirus-mac'
-  license :commercial
 
   pkg 'Avira_Antivirus.pkg'
 

@@ -8,7 +8,6 @@ cask 'nodeclipse' do
           checkpoint: 'a1066f2fca3aec174f2ba3bc32609868e4f7cf68f7218bcb0bcde620f2f54918'
   name 'Nodeclipse'
   homepage 'http://www.nodeclipse.org/'
-  license :oss
 
   # Renamed for clarity: app name is inconsistent with its branding.
   # Also renamed to avoid conflict with other eclipse Casks.

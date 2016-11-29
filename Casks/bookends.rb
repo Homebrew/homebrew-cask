@@ -4,8 +4,7 @@ cask 'bookends' do
 
   url 'http://www.sonnysoftware.com/Bookends.dmg'
   name 'Bookends'
-  homepage 'http://www.sonnysoftware.com'
-  license :closed
+  homepage 'http://www.sonnysoftware.com/'
 
   app 'Bookends.app'
 end

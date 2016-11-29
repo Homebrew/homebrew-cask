@@ -6,7 +6,6 @@ cask 'ransomwhere' do
   url "https://bitbucket.org/objective-see/deploy/downloads/RansomWhere_#{version}.zip"
   name 'RansomWhere'
   homepage 'https://objective-see.com/products/ransomwhere.html'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   installer script: {
                       executable: "#{staged_path}/RansomWhere.app/Contents/MacOS/RansomWhere",

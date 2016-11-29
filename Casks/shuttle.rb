@@ -8,7 +8,6 @@ cask 'shuttle' do
           checkpoint: '7c389e357ae08cb0f7d9e20108fe239da609514d09c1fbcb94192998f570b6c5'
   name 'Shuttle'
   homepage 'https://fitztrev.github.io/shuttle/'
-  license :mit
 
   app 'Shuttle.app'
 

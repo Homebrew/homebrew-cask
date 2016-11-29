@@ -6,7 +6,6 @@ cask 'skreenics' do
   url "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/skreenics/Screeniks-#{version}.zip"
   name 'Skreenics'
   homepage 'https://code.google.com/archive/p/skreenics/'
-  license :oss
 
   app 'Skreenics.app'
 

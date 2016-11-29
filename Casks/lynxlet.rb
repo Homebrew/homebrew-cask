@@ -5,7 +5,6 @@ cask 'lynxlet' do
   url "https://habilis.net/lynxlet/Lynxlet_#{version}.dmg"
   name 'Lynxlet'
   homepage 'https://habilis.net/lynxlet/'
-  license :closed
 
   app 'Lynxlet.app'
 end

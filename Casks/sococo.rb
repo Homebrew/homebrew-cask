@@ -5,7 +5,6 @@ cask 'sococo' do
   url "https://s.sococo.com/rs/client/mac/Sococo-#{version}.dmg"
   name 'Sococo'
   homepage 'https://www.sococo.com/'
-  license :freemium
 
   depends_on macos: '>= :lion'
 

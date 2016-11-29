@@ -5,7 +5,6 @@ cask 'birdfont' do
   url "https://birdfont.org/download/birdfont-#{version}-free.dmg"
   name 'BirdFont'
   homepage 'https://birdfont.org/'
-  license :freemium
 
   app 'BirdFont.app'
 end

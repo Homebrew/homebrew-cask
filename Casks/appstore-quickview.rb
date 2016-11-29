@@ -5,7 +5,6 @@ cask 'appstore-quickview' do
   url 'https://www.marcmoini.com/App...StoreQuickview.zip'
   name 'App...Store Quickview'
   homepage 'https://www.marcmoini.com/aq_en.html'
-  license :closed
 
   app 'App...Store Quickview.app'
 end

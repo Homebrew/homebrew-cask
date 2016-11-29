@@ -5,7 +5,6 @@ cask 'ocenaudio' do
   url 'https://www.ocenaudio.com/downloads/ocenaudio64.dmg'
   name 'ocenaudio'
   homepage 'https://www.ocenaudio.com/en'
-  license :gratis
 
   app 'ocenaudio.app'
 end

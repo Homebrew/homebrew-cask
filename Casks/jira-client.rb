@@ -4,8 +4,7 @@ cask 'jira-client' do
 
   url "https://d1.almworks.com/.files/jiraclient-#{version.dots_to_underscores}.dmg"
   name 'JIRA Client'
-  homepage 'https://almworks.com/jiraclient'
-  license :closed
+  homepage 'http://almworks.com/jiraclient/overview.html'
 
   app 'JIRA Client.app'
 end

@@ -7,7 +7,6 @@ cask 'orelord-mongodb' do
           checkpoint: '0abd71958d358346fba3d4115621aeabc753d12a80b0859f904ae3f636e22b9a'
   name 'MongoDB'
   homepage 'https://github.com/orelord/mongodbx-app'
-  license :oss
 
   app 'MongoDB.app'
 end

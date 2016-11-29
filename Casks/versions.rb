@@ -7,7 +7,6 @@ cask 'versions' do
           checkpoint: '2ed6c00361f6f454c263250fd3a2ef34d7534ea15895fb65742cf2683ead995e'
   name 'Versions'
   homepage 'http://versionsapp.com/'
-  license :commercial
 
   app 'Versions.app'
 end

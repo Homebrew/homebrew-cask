@@ -7,7 +7,6 @@ cask 'wavtap' do
           checkpoint: '952af9b0ee8389aa44bf90fa72aa4b0e83a271341ff69930d0024a80cca40454'
   name 'WavTap'
   homepage 'https://github.com/pje/wavtap'
-  license :mit
 
   pkg "WavTap.#{version}.pkg"
 

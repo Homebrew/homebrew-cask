@@ -8,7 +8,6 @@ cask 'lytro-desktop' do
           checkpoint: 'c806ff660e791f181371f9946412ee07ebd03459db8791832ed4b0be378d587a'
   name 'Lytro Desktop'
   homepage 'https://www.lytro.com/'
-  license :gratis
 
   app 'Lytro Desktop.app'
 end

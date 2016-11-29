@@ -5,7 +5,6 @@ cask 'noiz2sa' do
   url "https://workram.com/downloads/Noiz2sa-for-OS-X-#{version}.dmg"
   name 'Noiz2sa'
   homepage 'https://workram.com/games/noiz2sa/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Noiz2sa.app'
 end

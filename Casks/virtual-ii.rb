@@ -11,7 +11,6 @@ cask 'virtual-ii' do
 
   name 'Virtual ]['
   homepage 'http://virtualii.com/'
-  license :freemium
 
   suite 'Virtual ]['
 

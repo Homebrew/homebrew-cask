@@ -8,7 +8,6 @@ cask 'gifloopcoder' do
           checkpoint: '5b76b8584760da71679c101cfdb082b930952a78b5bd6a17a4029ce5a395887c'
   name 'GIFLoopCoder'
   homepage 'http://www.gifloopcoder.com/'
-  license :mit
 
   app 'glc-osx/GIFLoopCoder.app'
 end

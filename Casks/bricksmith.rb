@@ -7,7 +7,6 @@ cask 'bricksmith' do
           checkpoint: '6e0946bf3dca4270977ed6eb67c33e7ccc2322703535c45ef972c7ac7cb692c0'
   name 'Bricksmith'
   homepage 'http://bricksmith.sourceforge.net/'
-  license :bsd
 
   app 'Bricksmith/Bricksmith.app'
 end

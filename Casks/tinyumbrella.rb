@@ -5,10 +5,11 @@ cask 'tinyumbrella' do
   # tinydev.space was verified as official when first introduced to the cask
   url "http://tinydev.space/downloads/#{version.dots_to_underscores}/tinyumbrella_macos_#{version.dots_to_underscores}_AppOnly_InstalledJRE.dmg"
   name 'TinyUmbrella'
-  homepage 'http://www.firmwareumbrella.com/'
-  license :gratis
-
-  depends_on cask: 'java'
+  homepage 'https://www.firmwareumbrella.com/'
 
   app 'TinyUmbrella.app'
+
+  caveats do
+    depends_on_java
+  end
 end

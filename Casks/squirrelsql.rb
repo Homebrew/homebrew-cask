@@ -8,7 +8,6 @@ cask 'squirrelsql' do
           checkpoint: '2bf738ab989998ed5a58b9239464120247b7adeba9ed3aff1acb9bb7b4113123'
   name 'SQuirrel SQL'
   homepage 'http://www.squirrelsql.org/'
-  license :gpl
 
   container type: :naked
 
@@ -73,11 +72,11 @@ EOS
   end
 
   postflight do
-    system 'java', '-jar', "#{staged_path}/squirrel-sql-#{version}-MACOSX-install.jar", installoptions.to_s
+    system_command 'java', args: ['-jar', "#{staged_path}/squirrel-sql-#{version}-MACOSX-install.jar", installoptions.to_s]
   end
 
   uninstall_postflight do
-    system 'java', '-jar', '/Applications/SQuirreLSQL.app/Uninstaller/uninstaller.jar', '-f', '-c'
+    system_command 'java', args: ['-jar', '/Applications/SQuirreLSQL.app/Uninstaller/uninstaller.jar', '-f', '-c']
   end
 
   zap delete: '~/.squirrel-sql'

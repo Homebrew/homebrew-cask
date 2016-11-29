@@ -4,8 +4,7 @@ cask 'blue-jeans-launcher' do
 
   url "https://swdl.bluejeans.com/desktop/mac/launchers/BlueJeansLauncher_live_#{version.no_dots}.dmg"
   name 'Blue Jeans videoconferencing'
-  homepage 'https://bluejeans.com/'
-  license :gratis
+  homepage 'https://www.bluejeans.com/'
 
   depends_on macos: '>= 10.6'
 

@@ -6,7 +6,6 @@ cask 'haroopad' do
   url "https://bitbucket.org/rhiokim/haroopad-download/downloads/Haroopad-v#{version}-x64.dmg"
   name 'Haroopad'
   homepage 'http://pad.haroopress.com/'
-  license :gratis
 
   app 'Haroopad.app'
 end

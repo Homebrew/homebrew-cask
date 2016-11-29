@@ -8,13 +8,12 @@ cask 'dia' do
           checkpoint: '7eaa27518317fea3154dd57dbd257e04371d18599e4447e1ad501c7d275f60a9'
   name 'Dia'
   homepage 'http://dia-installer.de/'
-  license :gpl
 
   depends_on x11: true
 
   app 'Dia.app'
 
   postflight do
-    system '/usr/bin/sed', '-i', '--', 's/exec/exec env DISPLAY=:0/g', "#{appdir}/Dia.app/Contents/Resources/bin/dia"
+    system_command '/usr/bin/sed', args: ['-i', '--', 's/exec/exec env DISPLAY=:0/g', "#{appdir}/Dia.app/Contents/Resources/bin/dia"]
   end
 end

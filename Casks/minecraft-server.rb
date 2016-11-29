@@ -6,7 +6,6 @@ cask 'minecraft-server' do
   url "https://s3.amazonaws.com/Minecraft.Download/versions/#{version}/minecraft_server.#{version}.jar"
   name 'Minecraft Server'
   homepage 'https://minecraft.net/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   container type: :naked
 
@@ -24,10 +23,10 @@ cask 'minecraft-server' do
   end
 
   postflight do
-    system 'minecraft-server'
+    system_command 'minecraft-server'
 
     eula_file = "#{staged_path}/eula.txt"
-    IO.write(eula_file, File.read(eula_file).gsub('false', 'TRUE'))
+    IO.write(eula_file, IO.read(eula_file).gsub('false', 'TRUE'))
   end
 
   caveats do

@@ -5,7 +5,6 @@ cask 'enfusegui' do
   url "http://software.bergmark.com/enfusegui/files/2.1/EnfuseGUI-#{version}.dmg"
   name 'EnfuseGUI'
   homepage 'http://software.bergmark.com/enfusegui/Main.html'
-  license :gratis
 
   app 'EnfuseGUI.app'
 end

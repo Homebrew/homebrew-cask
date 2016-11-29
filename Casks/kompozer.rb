@@ -8,7 +8,6 @@ cask 'kompozer' do
           checkpoint: 'bcf2fe720ea0abafaa21f240f2186752e129fa76c2474fbc4903e94cdd4b5e44'
   name 'KompoZer'
   homepage 'https://www.kompozer.net/'
-  license :oss
 
   app 'KompoZer.app'
 end

@@ -8,7 +8,6 @@ cask 'dosbox' do
           checkpoint: '929b955f2dc9eee4862c52b43d2d188232028bc8878f89ad1b7ad8a790dc3ba1'
   name 'DOSBox'
   homepage 'https://www.dosbox.com/'
-  license :gpl
 
   app 'DOSBox.app'
 end

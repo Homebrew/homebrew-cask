@@ -8,7 +8,6 @@ cask 'gqrx' do
           checkpoint: '686d4a577ad5eea69ae06269c07f215f0c8c90a6cfe89777808e5813d54b53cd'
   name 'Gqrx'
   homepage 'http://gqrx.dk/'
-  license :gpl
 
   app 'Gqrx.app'
 end

@@ -4,8 +4,7 @@ cask 'ui-browser' do
 
   url "http://pfiddlesoft.com/uibrowser/downloads/UIBrowser#{version.no_dots}.dmg"
   name 'UI Browser'
-  homepage 'http://pfiddlesoft.com/uibrowser'
-  license :closed
+  homepage 'http://pfiddlesoft.com/uibrowser/'
 
   pkg 'UI Browser.pkg'
 

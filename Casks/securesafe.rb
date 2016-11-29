@@ -5,7 +5,6 @@ cask 'securesafe' do
   url 'https://www.securesafe.com/en/assets/sync-client/SecureSafe.dmg'
   name 'SecureSafe'
   homepage 'https://www.securesafe.com/'
-  license :gratis
 
   app 'SecureSafe.app'
 end

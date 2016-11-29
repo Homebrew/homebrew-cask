@@ -7,7 +7,6 @@ cask 'voicemac' do
           checkpoint: '1ed2eb4bc4f9580fcde443fe31ca61bf20430c7560386f3fa9250cca497ef9a9'
   name 'VoiceMac'
   homepage 'https://mrgeckosmedia.com/applications/info/VoiceMac'
-  license :isc
 
   app 'VoiceMac/VoiceMac.app'
 

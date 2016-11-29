@@ -5,7 +5,6 @@ cask 'readcube' do
   url "https://download.readcube.com/desktop/#{version}/ReadCubeSetup.zip"
   name 'ReadCube'
   homepage 'https://www.readcube.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   installer manual: 'Install ReadCube.app'
 

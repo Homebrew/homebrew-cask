@@ -17,7 +17,6 @@ cask 'saoimage-ds9' do
 
   name 'SAOImage DS9'
   homepage 'http://ds9.si.edu/site/Home.html'
-  license :oss
 
   app 'SAOImage DS9.app'
 end

@@ -7,7 +7,6 @@ cask 'cactus' do
           checkpoint: '4a09054e73a1272707e4ae35eb0e9281a269877f660c708f6e426a3250bba342'
   name 'Cactus'
   homepage 'http://cactusformac.com/'
-  license :bsd
 
   app 'Cactus.app'
 

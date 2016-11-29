@@ -4,8 +4,7 @@ cask 'garmin-express' do
 
   url 'http://download.garmin.com/omt/express/B/GarminExpressInstaller.dmg'
   name 'Garmin Express'
-  homepage 'https://www.garmin.com/express'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://software.garmin.com/en-US/express.html'
 
   pkg 'Install Garmin Express.pkg'
 

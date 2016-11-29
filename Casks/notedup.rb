@@ -6,7 +6,6 @@ cask 'notedup' do
   url "https://github.com/ppyyf/notedup-bin/blob/master/#{version}/NoteDup_Mac_#{version}.zip?raw=true"
   name 'NoteDup'
   homepage 'https://appcenter.yinxiang.com/app/notedup/mac/'
-  license :closed
 
   app 'NoteDup.app'
 end

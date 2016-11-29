@@ -5,7 +5,6 @@ cask 'kodi' do
   url "http://mirrors.kodi.tv/releases/osx/x86_64/kodi-#{version}-Jarvis-x86_64.dmg"
   name 'Kodi'
   homepage 'https://kodi.tv/'
-  license :gpl
 
   app 'Kodi.app'
 end

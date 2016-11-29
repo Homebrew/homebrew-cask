@@ -7,12 +7,6 @@ cask 'emojipedia' do
           checkpoint: '139054548a85ff087d11dd4002ff8f5e6f5bdcad320a9ffde710ef7d995019b0'
   name 'Emojipedia'
   homepage 'https://github.com/gingerbeardman/Emojipedia'
-  license :mit
 
-  artifact 'Emojipedia.dictionary', target: "#{ENV['HOME']}/Library/Dictionaries/Emojipedia.dictionary"
-
-  caveats <<-EOS.undent
-    Open macOS Dictionary app (in Applications folder)
-    Enable "#{token}" in preferences to activate.
-  EOS
+  dictionary 'Emojipedia.dictionary'
 end

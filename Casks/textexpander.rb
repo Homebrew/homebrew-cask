@@ -19,8 +19,7 @@ cask 'textexpander' do
   end
 
   name 'TextExpander'
-  homepage 'https://www.smilesoftware.com/TextExpander/'
-  license :commercial
+  homepage 'https://smilesoftware.com/TextExpander'
 
   auto_updates true
   accessibility_access true

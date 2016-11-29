@@ -4,8 +4,7 @@ cask 'keybase' do
 
   url 'https://prerelease.keybase.io/Keybase.dmg'
   name 'Keybase'
-  homepage 'https://keybase.io'
-  license :bsd
+  homepage 'https://keybase.io/'
 
   auto_updates true
 

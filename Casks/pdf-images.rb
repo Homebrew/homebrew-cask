@@ -7,7 +7,6 @@ cask 'pdf-images' do
           checkpoint: 'a5203d844b1300bc54dd5a8a0089022f16897a6e906a7e89fc3805355f4d1718'
   name 'PDF-Images'
   homepage 'https://sourceforge.net/projects/pdf-images/'
-  license :oss
 
   depends_on macos: '>= :mountain_lion'
 

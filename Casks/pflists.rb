@@ -5,7 +5,6 @@ cask 'pflists' do
   url "http://www.hanynet.com/pflists-#{version}.zip"
   name 'PFLists'
   homepage 'http://www.hanynet.com/pflists/'
-  license :oss
 
   app 'PFLists.app'
 end

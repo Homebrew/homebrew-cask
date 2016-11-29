@@ -7,7 +7,6 @@ cask 'meerkat' do
           checkpoint: '6e199892ae71fbfb22838df4a03880132165e590a6b8422f270ec0f1008e7802'
   name 'Meerkat'
   homepage 'http://codesorcery.net/meerkat'
-  license :gratis
 
   app 'Meerkat.app'
 

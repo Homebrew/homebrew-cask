@@ -8,7 +8,6 @@ cask 'beotsmusic' do
           checkpoint: '58053ecb7f438e794ec2a78ea671f29736a54098d0847a91cf5c67f4e5b7eccf'
   name 'BeotsMusic'
   homepage 'http://beotsmusic.kiding.net/'
-  license :mit
 
   app 'BeotsMusic.app'
 

@@ -6,7 +6,6 @@ cask 'injection' do
   url "http://injectionforxcode.johnholdsworth.com/InjectionPluginV#{version}.pkg"
   name 'Injection for Xcode'
   homepage 'http://injectionforxcode.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "InjectionPluginV#{version}.pkg"
 

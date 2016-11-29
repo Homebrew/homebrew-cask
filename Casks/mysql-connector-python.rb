@@ -10,7 +10,6 @@ cask 'mysql-connector-python' do
 
   name 'MySQL Connector for Python'
   homepage 'https://dev.mysql.com/downloads/utilities/'
-  license :gpl
 
   pkg "mysql-connector-python-cext-#{version}.pkg"
 

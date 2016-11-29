@@ -5,7 +5,6 @@ cask 'timer' do
   url 'http://www.apimac.com/download/Timer.zip'
   name 'Timer'
   homepage 'http://www.apimac.com/mac/timer/'
-  license :commercial
 
   app 'Timer.app'
 

@@ -8,7 +8,6 @@ cask 'tilemill' do
           checkpoint: '2a8c33291658fba8f69f408cf102ca063fa709e301f399b2f2b1a4a93b7516b5'
   name 'TileMill'
   homepage 'https://www.mapbox.com/tilemill/'
-  license :bsd
 
   app 'TileMill.app'
 end

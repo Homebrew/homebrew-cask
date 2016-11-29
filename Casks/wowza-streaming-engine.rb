@@ -7,7 +7,6 @@ cask 'wowza-streaming-engine' do
           checkpoint: '2e5195d54f038ead29f281c9e9e1eb47d5a2868e93e0dfa6c9d641c71b8cd184'
   name 'Wowza Streaming Engine'
   homepage 'https://www.wowza.com/products/streaming-engine'
-  license :commercial
 
   auto_updates true
 

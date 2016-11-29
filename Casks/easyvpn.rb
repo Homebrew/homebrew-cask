@@ -7,7 +7,6 @@ cask 'easyvpn' do
           checkpoint: '34cc9739526b33f9ee56e2140da9418b9cfa764458c323391413db347f6f1431'
   name 'EasyVPN'
   homepage 'http://www.squashedsoftware.com/products-easyvpn.php'
-  license :commercial
 
   app 'EasyVPN.app'
 end

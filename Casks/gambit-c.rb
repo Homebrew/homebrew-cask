@@ -6,7 +6,6 @@ cask 'gambit-c' do
   url "https://www.iro.umontreal.ca/~gambit/download/gambit/v4.7/prebuilt/gambc-v#{version.dots_to_underscores}-macosx-intel64.dmg"
   name 'Gambit-C'
   homepage 'http://gambitscheme.org/'
-  license :apache
 
   pkg "gambc-v#{version.dots_to_underscores}-macosx-intel64.pkg"
 

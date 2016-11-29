@@ -6,7 +6,6 @@ cask 'league-of-legends' do
   url 'https://riotgamespatcher-a.akamaihd.net/Mac_ShellInstaller/NA/League%20of%20Legends%20NA.dmg'
   name 'League of Legends'
   homepage 'https://leagueoflegends.com/'
-  license :gratis
 
   app 'League of Legends.app'
 end

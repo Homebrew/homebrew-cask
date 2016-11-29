@@ -8,7 +8,6 @@ cask 'virtualhostx' do
           checkpoint: 'eff0ba231af74a8d803d22ef77001e27324867da3181dcec05c2d9f25c639d4e'
   name 'VirtualHostX'
   homepage 'https://clickontyler.com/virtualhostx/'
-  license :commercial
 
   app 'VirtualHostX.app'
 end

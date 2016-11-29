@@ -7,7 +7,6 @@ cask 'vico' do
           checkpoint: 'b4ee7b48c746e73c1f75c20d4767e47997473ace4f14d32328962b2f4bbbf76a'
   name 'Vico'
   homepage 'http://www.vicoapp.com'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Vico.app'
   binary "#{appdir}/Vico.app/Contents/MacOS/vicotool", target: 'vico'

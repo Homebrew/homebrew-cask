@@ -27,7 +27,6 @@ cask 'snagit' do
 
   name 'Snagit'
   homepage 'https://www.techsmith.com/snagit.html'
-  license :commercial
 
   app 'Snagit.app'
 end

@@ -4,8 +4,7 @@ cask 'retroarch' do
 
   url "https://buildbot.libretro.com/stable/#{version}/apple/osx/x86_64/RetroArch.dmg"
   name 'RetroArch'
-  homepage 'http://libretro.com'
-  license :gpl
+  homepage 'https://www.libretro.com/'
 
   app 'RetroArch.app'
 end

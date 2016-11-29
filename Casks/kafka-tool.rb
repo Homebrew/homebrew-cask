@@ -5,7 +5,6 @@ cask 'kafka-tool' do
   url 'http://www.kafkatool.com/download/kafkatool.dmg'
   name 'Kafka Tool'
   homepage 'http://www.kafkatool.com/index.html'
-  license :commercial
 
   installer script: 'Kafka Tool Installer.app/Contents/MacOS/JavaApplicationStub',
             args:   ['-q']

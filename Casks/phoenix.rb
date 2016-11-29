@@ -7,7 +7,6 @@ cask 'phoenix' do
           checkpoint: 'a9458b34e1447b21ffbf7de47e94ed99451126bf2fe46884d0c4e4b9809affcd'
   name 'Phoenix'
   homepage 'https://github.com/kasper/phoenix/'
-  license :mit
 
   accessibility_access true
   depends_on macos: '>= :yosemite'

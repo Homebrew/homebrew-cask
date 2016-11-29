@@ -6,7 +6,6 @@ cask 'readytalk-desktop' do
   url 'https://core.callinfo.com/packages/runtime/rtd-readytalk/darwin-x86_64/setup.dmg'
   name 'ReadyTalk Desktop'
   homepage 'https://www.readytalk.com/products-services/integrations/productivity/readytalk-desktop'
-  license :gratis
 
   app 'ReadyTalk Desktop.app'
 end

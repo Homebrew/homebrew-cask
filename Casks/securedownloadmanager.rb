@@ -6,7 +6,6 @@ cask 'securedownloadmanager' do
   name 'Kivuto Secure Download Manager'
   name 'SDM'
   homepage 'https://e5.onthehub.com/WebStore/Account/SdmDownloadFaq.aspx?ws=2cbc6a33-25f4-e011-8e6c-f04da23e67f6&secure=1'
-  license :gratis
 
   pkg 'SDM.pkg'
 

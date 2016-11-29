@@ -5,7 +5,6 @@ cask 'konica-minolta-bizhub-c450-driver' do
   url 'https://o.cses.konicaminolta.com/file/Default.aspx?FilePath=dl/201403/28102636/bizhub_C450_109.dmg'
   name 'Konica Minolta Bizhub C450 Driver'
   homepage 'http://www.biz.konicaminolta.com/download/'
-  license :gratis
 
   pkg 'KONICAMINOLTA_C450_109.pkg'
 

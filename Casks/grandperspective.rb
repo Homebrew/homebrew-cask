@@ -7,7 +7,6 @@ cask 'grandperspective' do
           checkpoint: '75d46fbcab208058ffeba8810d6e95e5de2caced796d408a8abf942a50f196ba'
   name 'GrandPerspective'
   homepage 'http://grandperspectiv.sourceforge.net/'
-  license :gpl
 
   app 'GrandPerspective.app'
 

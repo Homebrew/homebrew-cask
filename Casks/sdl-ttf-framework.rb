@@ -5,7 +5,6 @@ cask 'sdl-ttf-framework' do
   url "https://www.libsdl.org/projects/SDL_ttf/release/SDL_ttf-#{version}.dmg"
   name 'SDL_ttf.framework'
   homepage 'https://www.libsdl.org'
-  license :gpl
 
   stage_only true
 end

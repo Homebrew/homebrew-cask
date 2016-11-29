@@ -4,8 +4,7 @@ cask 'fork' do
 
   url 'https://git-fork.com/update/files/Fork.dmg'
   name 'Fork'
-  homepage 'https://git-fork.com'
-  license :closed
+  homepage 'https://git-fork.com/'
 
   app 'Fork.app'
 end

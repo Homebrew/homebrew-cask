@@ -6,7 +6,6 @@ cask 'pixi-paint' do
   url 'https://0.pixiecdn.com/PixiePaint-osx.zip'
   name 'Pixi Paint'
   homepage 'https://www.danielx.net/pixel-editor/docs/download'
-  license :mit
 
   app 'Pixi Paint/Pixi Paint.app'
 end

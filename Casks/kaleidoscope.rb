@@ -7,7 +7,6 @@ cask 'kaleidoscope' do
           checkpoint: '7227f778900aa4f17dab7b1984cf58e19325d131e71a6e38cd19bb363812730a'
   name 'Kaleidoscope'
   homepage 'http://www.kaleidoscopeapp.com/'
-  license :commercial
 
   auto_updates true
 

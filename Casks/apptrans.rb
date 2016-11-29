@@ -5,7 +5,6 @@ cask 'apptrans' do
   url 'https://www.imobie.com/product/apptrans-mac.dmg'
   name 'AppTrans'
   homepage 'https://www.imobie.com/apptrans/'
-  license :gratis
 
   app 'AppTrans.app'
 end

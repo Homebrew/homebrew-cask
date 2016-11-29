@@ -5,7 +5,6 @@ cask 'kismac' do
   url 'http://downloads.igrsoft.com/beta/KisMac2.zip'
   name 'KisMac'
   homepage 'https://igrsoft.com/kismac2/'
-  license :gpl
 
   app 'KisMac2.app'
 end

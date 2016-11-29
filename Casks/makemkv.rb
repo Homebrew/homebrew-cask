@@ -5,7 +5,6 @@ cask 'makemkv' do
   url "https://www.makemkv.com/download/makemkv_v#{version}_osx.dmg"
   name 'MakeMKV'
   homepage 'https://www.makemkv.com/'
-  license :freemium
 
   depends_on macos: '>= :snow_leopard'
 

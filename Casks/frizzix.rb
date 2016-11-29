@@ -7,7 +7,6 @@ cask 'frizzix' do
           checkpoint: '1e452fb9339f33941d46d3195b9d8b4a2e90c2ccd63d42fcbf303151247175f4'
   name 'Frizzix'
   homepage 'http://mac.frizzix.de/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Frizzix.app'
 end

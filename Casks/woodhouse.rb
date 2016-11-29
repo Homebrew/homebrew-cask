@@ -7,7 +7,6 @@ cask 'woodhouse' do
           checkpoint: '13325232ccfc9574fe890e370d05c4edf0255fb49a4785b242e94f97fb24fc14'
   name 'Woodhouse'
   homepage 'https://github.com/phinze/woodhouse/'
-  license :mit
 
   app 'Woodhouse.app'
 end

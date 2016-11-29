@@ -5,7 +5,6 @@ cask 'boonzi' do
   url "http://www.boonzi.pt/releases/boonzi.#{version}.dmg"
   name 'Boonzi'
   homepage 'http://www.boonzi.pt/'
-  license :commercial
 
   app 'Boonzi.app'
 end

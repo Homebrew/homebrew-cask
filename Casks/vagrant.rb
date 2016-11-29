@@ -1,16 +1,24 @@
 cask 'vagrant' do
-  version '1.8.6'
-  sha256 'b916cd103c91faf57b63b49188e4cd09136f81385ff05d62e55b68c87b53a2d9'
+  version '1.8.7'
+  sha256 '14d68f599a620cf421838ed037f0a1c4467e1b67475deeff62330a21fda4937b'
 
   # hashicorp.com/vagrant was verified as official when first introduced to the cask
   url "https://releases.hashicorp.com/vagrant/#{version}/vagrant_#{version}.dmg"
   appcast 'https://github.com/mitchellh/vagrant/releases.atom',
-          checkpoint: 'b3e2ff8f8556294139653183d7e7cf47e572d2148c4ae2910d99920353042574'
+          checkpoint: '8d16ac5df154d7b39604d9f6505b17394cdc45205c6a75a1bac8d9ff39cc2f06'
   name 'Vagrant'
   homepage 'https://www.vagrantup.com/'
-  license :mit
 
   pkg 'Vagrant.pkg'
+
+  # Vagrant 1.8.7 ships with a broken embedded curl. Removing it causes vagrant
+  # to fall back to the system-installed curl, which works.
+  # https://github.com/mitchellh/vagrant/issues/7969
+  postflight do
+    system_command '/bin/rm',
+                   args: ['/opt/vagrant/embedded/bin/curl'],
+                   sudo: true
+  end
 
   uninstall script:  { executable: 'uninstall.tool', input: %w[Yes] },
             pkgutil: 'com.vagrant.vagrant'

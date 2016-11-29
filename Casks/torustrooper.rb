@@ -5,7 +5,6 @@ cask 'torustrooper' do
   url "https://workram.com/downloads/TorusTrooper-for-OS-X-#{version}.dmg"
   name 'Torus Trooper'
   homepage 'https://workram.com/games/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'TorusTrooper.app'
 end

@@ -4,8 +4,7 @@ cask 'diskcatalogmaker' do
 
   url 'https://download.diskcatalogmaker.com/zip/DiskCatalogMaker.zip'
   name 'DiskCatalogMaker'
-  homepage 'https://diskcatalogmaker.com'
-  license :freemium
+  homepage 'https://diskcatalogmaker.com/'
 
   app 'DiskCatalogMaker.app'
 end

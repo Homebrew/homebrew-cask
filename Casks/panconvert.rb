@@ -6,8 +6,7 @@ cask 'panconvert' do
   appcast 'https://raw.githubusercontent.com/apaeffgen/PanConvert/master/docs/changelog.md',
           checkpoint: '619da3f895d1553f9a34f92385be79c158a6418ef8b3650af915586f9d7f81f5'
   name 'PanConvert'
-  homepage 'http://panconvert.sourceforge.net'
-  license :gpl
+  homepage 'http://panconvert.sourceforge.net/'
 
   app 'PanConvert.app'
 end

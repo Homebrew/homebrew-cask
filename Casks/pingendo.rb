@@ -4,8 +4,7 @@ cask 'pingendo' do
 
   url 'http://pingendo.com/Pingendo.dmg'
   name 'Pingendo'
-  homepage 'http://www.pingendo.com/'
-  license :closed
+  homepage 'http://pingendo.com/'
 
   app 'Pingendo.app'
 end

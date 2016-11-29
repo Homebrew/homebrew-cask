@@ -7,7 +7,6 @@ cask 'otx' do
           checkpoint: 'd15c0290c67946c961ad885829d82d9e455cbd94e1be3892120711f4d89778e1'
   name 'otx'
   homepage 'https://github.com/x43x61x69/otx'
-  license :oss
 
   auto_updates true
 

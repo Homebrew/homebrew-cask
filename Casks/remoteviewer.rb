@@ -6,7 +6,6 @@ cask 'remoteviewer' do
   url "https://people.freedesktop.org/~teuf/spice-gtk-osx/dmg/#{version.sub(%r{-.*}, '')}/RemoteViewer-#{version}.dmg"
   name 'Remote Viewer'
   homepage 'https://www.ovirt.org/SPICE_Remote-Viewer_on_OS_X'
-  license :gratis
 
   app 'RemoteViewer.app'
 end

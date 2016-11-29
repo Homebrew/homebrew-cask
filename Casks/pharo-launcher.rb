@@ -6,7 +6,6 @@ cask 'pharo-launcher' do
   url 'https://ci.inria.fr/pharo/view/Launcher/job/Launcher-Mac/lastSuccessfulBuild/artifact/latest.dmg'
   name 'Pharo Launcher'
   homepage 'http://smalltalkhub.com/#!/~Pharo/PharoLauncher/'
-  license :mit
 
   # Renamed to avoid conflict with pharo.
   app 'Pharo.app', target: 'Pharo Launcher.app'

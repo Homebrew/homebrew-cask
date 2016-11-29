@@ -5,7 +5,6 @@ cask 'gpower' do
   url "http://www.gpower.hhu.de/fileadmin/redaktion/Fakultaeten/Mathematisch-Naturwissenschaftliche_Fakultaet/Psychologie/AAP/gpower/GPowerMac_#{version}.zip"
   name 'G*Power'
   homepage 'http://www.gpower.hhu.de/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'G*Power.app'
 end

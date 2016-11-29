@@ -7,7 +7,6 @@ cask 'anyipsum' do
           checkpoint: '1ab7b72988f8466cd743095dfd62cf4f4232fc9d9a0cea33b960583989b5098a'
   name 'AnyIpsum'
   homepage 'https://github.com/jlowgren/AnyIpsum'
-  license :mit
 
   app 'AnyIpsum.app'
 end

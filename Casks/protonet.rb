@@ -7,7 +7,6 @@ cask 'protonet' do
           checkpoint: '7bbbe7ac04c99a9d4882d17794c81cbbd6ab951507e47312a9b246887624e9ad'
   name 'Protonet'
   homepage 'http://clients.protonet.info/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Protonet.app'
 end

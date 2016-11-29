@@ -6,7 +6,6 @@ cask 'image2icon' do
   url "https://sf-applications.s3.amazonaws.com/Image2Icon/app-releases/Image2icon#{version}.zip"
   name 'Image2Icon'
   homepage 'http://www.img2icnsapp.com/'
-  license :freemium
 
   depends_on macos: '>= :mavericks'
 

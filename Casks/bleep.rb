@@ -8,7 +8,6 @@ cask 'bleep' do
           checkpoint: 'e6b158babeedf088fc5883866c20259a76bfb5c826ae3a92ed6fa8ebaf15bb84'
   name 'BitTorrent Bleep'
   homepage 'http://www.bleep.pm/'
-  license :gratis
 
   app 'Bleep.app'
 

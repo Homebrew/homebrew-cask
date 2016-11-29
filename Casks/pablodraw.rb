@@ -5,7 +5,6 @@ cask 'pablodraw' do
   url "http://download.picoe.ca/pablodraw/#{version.sub(%r{\.\d+$}, '')}/PabloDrawMac-#{version}.zip"
   name 'PabloDraw'
   homepage 'http://picoe.ca/products/pablodraw/'
-  license :gratis
 
   app 'PabloDraw.app'
 end

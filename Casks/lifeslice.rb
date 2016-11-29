@@ -8,7 +8,6 @@ cask 'lifeslice' do
           checkpoint: '67f1a993754ab3372dc8e007d534afef2455c2348ad40972039e5f72b356162d'
   name 'LifeSlice'
   homepage 'https://wanderingstan.github.io/Lifeslice/'
-  license :oss
 
   app 'LifeSlice.app'
 end

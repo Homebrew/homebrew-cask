@@ -7,7 +7,6 @@ cask 'quickradar' do
           checkpoint: '56e93a67fa6149774b3477d167300f9f15e00a362db02b5a01ff1fc7034e133a'
   name 'QuickRadar'
   homepage 'http://www.quickradar.com/'
-  license :bsd
 
   app 'QuickRadar.app'
 end

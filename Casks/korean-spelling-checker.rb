@@ -8,7 +8,6 @@ cask 'korean-spelling-checker' do
           checkpoint: '1f8d76c232adad42c13d25850e2341b8979c07c5b989deb8c0c1a253c7b2d36a'
   name '한국어 맞춤법 검사기'
   homepage 'http://appletree.or.kr/google-chrome-extensions/'
-  license :mit
 
   service "Korean-Spelling-Checker-Workflow-#{version}/✔ 선택한 글의 한국어 맞춤법 검사하기.workflow"
 

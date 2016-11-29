@@ -1,13 +1,12 @@
 cask 'cloak' do
-  version '2.1.0'
-  sha256 'bd7e72f863290434b962a7db52a14eea73521a30cf28e883779c840e9cb3552c'
+  version '2.1.2'
+  sha256 '31386b801cd7677bb33446ab93259ca8ed4c330d2dd88918354360d34588cd09'
 
   url "https://static.getcloak.com/downloads/osx/updates/Release/Cloak-#{version}.dmg"
   appcast 'https://www.getcloak.com/updates/osx/public/',
-          checkpoint: '521c0cc48cac8bea58954bef1f484f9d09cafa501bdc687a44894be1ccd73176'
+          checkpoint: 'b3d53389e79d941e79f60fe8f76f6ab95b89e3e76694f5f23662fd897c6f257a'
   name 'Cloak'
-  homepage 'https://www.getcloak.com'
-  license :gratis
+  homepage 'https://www.getcloak.com/'
 
   app 'Cloak.app'
 end

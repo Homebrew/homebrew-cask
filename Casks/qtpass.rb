@@ -1,14 +1,13 @@
 cask 'qtpass' do
-  version '1.1.3'
-  sha256 'd2488cf342a7b470564481423dbf6b5a07789c41e7a39c7a44a027b6c2b0b054'
+  version '1.1.5'
+  sha256 'a8f35ff258a520795c9079dda837d3b1cbbdcd8528cec2ddae68573504f4883f'
 
   # github.com/IJHack/qtpass was verified as official when first introduced to the cask
   url "https://github.com/IJHack/qtpass/releases/download/v#{version}/qtpass-#{version}.dmg"
   appcast 'https://github.com/IJHack/qtpass/releases.atom',
-          checkpoint: '5c020a503bcfad1407583e46b16bc2ee273622a136ba9a631002defc860125dd'
+          checkpoint: 'e2efc86af57d6fcda7802285b02ab279ee97e106d1aa9539f5f4aec0c317e319'
   name 'QtPass'
   homepage 'https://qtpass.org/'
-  license :gpl
 
   app 'QtPass.app'
 end

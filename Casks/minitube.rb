@@ -7,7 +7,6 @@ cask 'minitube' do
           checkpoint: '71fff60efb8627259ade65a3c7effda61b967e63ce1fe5e0fcbf79c2c6323601'
   name 'Minitube'
   homepage 'http://flavio.tordini.org/minitube'
-  license :gpl
 
   app 'Minitube.app'
 end

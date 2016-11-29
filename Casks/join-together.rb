@@ -7,7 +7,6 @@ cask 'join-together' do
           checkpoint: 'd08e065f5b268046a65f3f46a0e5665312f340991da073c953d2962bf21794b9'
   name 'Join Together'
   homepage 'https://dougscripts.com/apps/jointogetherapp.php'
-  license :commercial
 
   app 'Join Together.app'
 end

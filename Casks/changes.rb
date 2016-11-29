@@ -8,7 +8,6 @@ cask 'changes' do
           checkpoint: '524b59ed2fd0b0cb7829bfa7d4729769d169dc6e391a113550082d44fd831806'
   name 'Changes'
   homepage 'http://martiancraft.com/products/changes.html'
-  license :commercial
 
   app 'Changes.app'
   binary "#{appdir}/Changes.app/Contents/Resources/chdiff"

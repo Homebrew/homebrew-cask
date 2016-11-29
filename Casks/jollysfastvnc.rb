@@ -7,7 +7,6 @@ cask 'jollysfastvnc' do
           checkpoint: 'dc11d23f685a3714d006809472517aeb839702dd4690c65ca7261e64f78079e2'
   name 'JollysFastVNC'
   homepage 'https://www.jinx.de/JollysFastVNC.html'
-  license :commercial
 
   depends_on macos: '>= :lion'
 

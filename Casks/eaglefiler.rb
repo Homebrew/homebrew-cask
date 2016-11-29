@@ -5,7 +5,6 @@ cask 'eaglefiler' do
   url "https://c-command.com/downloads/EagleFiler-#{version}.dmg"
   name 'EagleFiler'
   homepage 'https://c-command.com/eaglefiler/'
-  license :commercial
 
   app 'EagleFiler.app'
 end

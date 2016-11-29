@@ -1,13 +1,12 @@
 cask 'manico' do
-  version '2.1.1-350'
-  sha256 '467983062a74a08d5f93b3afa3fe90e6024191bbc37e90e107943a56e63061bb'
+  version '2.2'
+  sha256 'b5e82b984d6b6a9146375bb7a64c0d597fcfeccef1cb07956bda64f699adcd8b'
 
-  url "https://manico.im/static/Manico_#{version}.tar.gz"
+  url "https://manico.im/static/Manico_#{version}.dmg"
   appcast 'https://manico.im/static/manico-official-appcast.xml',
-          checkpoint: '33d9e389b8b5693a85532ce756721210fa77b325faa3149c260b3cdc06618d2a'
+          checkpoint: '7278b1933bf356865c61422e7702dc0f6b21b85a1e94ba5b7a2deb04f3a6875a'
   name 'Manico'
   homepage 'https://manico.im/'
-  license :commercial
 
   app 'Manico.app'
 

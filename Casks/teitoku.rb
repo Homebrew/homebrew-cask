@@ -8,7 +8,6 @@ cask 'teitoku' do
           checkpoint: '84392c67a7a06a97fd1c37593bebaf1470da8475e37c0b44476ed7b746f92cfa'
   name 'Teitoku'
   homepage 'http://makebooth.com/i/1xkN1'
-  license :mit
 
   app 'teitoku-osx/Teitoku.app'
 end

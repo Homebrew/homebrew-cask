@@ -6,7 +6,6 @@ cask 'paperspace' do
   url 'https://s3-us-west-1.amazonaws.com/ps-receiver/darwin/Paperspace.dmg'
   name 'Paperspace'
   homepage 'https://paperspace.io/'
-  license :commercial
 
   app 'Paperspace.app'
 end

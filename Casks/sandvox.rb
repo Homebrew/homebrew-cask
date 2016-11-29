@@ -5,7 +5,6 @@ cask 'sandvox' do
   url 'http://www.karelia.com/files/8/Sandvox.dmg'
   name 'Sandvox'
   homepage 'https://www.karelia.com/products/sandvox/'
-  license :freemium
 
   app 'Sandvox.app'
 end

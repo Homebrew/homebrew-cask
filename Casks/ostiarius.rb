@@ -6,7 +6,6 @@ cask 'ostiarius' do
   url "https://bitbucket.org/objective-see/deploy/downloads/Ostiarius_#{version}.zip"
   name 'Ostiarius'
   homepage 'https://objective-see.com/products/ostiarius.html'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Ostiarius.app'
 

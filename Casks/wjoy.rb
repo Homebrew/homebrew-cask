@@ -7,7 +7,6 @@ cask 'wjoy' do
           checkpoint: '0e823cea5613d6f503e915d6d8367ef91d1d0ebf1f736537870c1c62d133d0ae'
   name 'WJoy'
   homepage 'https://github.com/alxn1/wjoy'
-  license :oss
 
   app 'Wjoy.app'
 

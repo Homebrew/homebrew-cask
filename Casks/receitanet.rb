@@ -5,7 +5,6 @@ cask 'receitanet' do
   url "http://downloadirpf.receita.fazenda.gov.br/receitanet/Receitanet-#{version}.app.tar.gz"
   name 'Receitanet'
   homepage 'http://idg.receita.fazenda.gov.br/interface/cidadao/irpf/2016/'
-  license :closed
 
   app 'Receitanet.app'
   installer script: "Receitanet-#{version}.app/Contents/MacOS/installer",

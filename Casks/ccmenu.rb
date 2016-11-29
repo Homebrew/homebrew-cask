@@ -8,7 +8,6 @@ cask 'ccmenu' do
           checkpoint: '359155ebbd8e2ed24cfd5d3af31cc0ceebb7b44d5f63bc52a74b45e261bd8035'
   name 'CCMenu'
   homepage 'http://ccmenu.org/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'CCMenu.app'
 end

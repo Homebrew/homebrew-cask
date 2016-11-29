@@ -7,7 +7,6 @@ cask 'eudic' do
   name 'EuDic'
   name '欧路词典'
   homepage 'https://www.eudic.net/eudic/mac_dictionary.aspx'
-  license :closed
 
   app 'EuDic.app'
 end

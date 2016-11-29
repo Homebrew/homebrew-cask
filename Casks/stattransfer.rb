@@ -5,7 +5,6 @@ cask 'stattransfer' do
   url 'https://www.stattransfer.com/downloads/stdemo.dmg'
   name 'Stat/Transfer'
   homepage 'https://stattransfer.com/'
-  license :commercial
 
   pkg "st_installer_v#{version}.pkg"
 

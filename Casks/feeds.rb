@@ -8,7 +8,6 @@ cask 'feeds' do
           checkpoint: '4450c36d30006bb4b85fa047d9062a3ce22d3d170824eea73db3db01acb0a880'
   name 'Feeds'
   homepage 'http://www.feedsapp.com/'
-  license :mit
 
   app 'Feeds.app'
 

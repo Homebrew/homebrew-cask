@@ -5,7 +5,6 @@ cask 'tapaal' do
   url "http://www.tapaal.net/fileadmin/download/tapaal-3.1/tapaal-#{version}-mac64.dmg"
   name 'TAPAAL'
   homepage 'http://www.tapaal.net'
-  license :oss
 
   app 'Tapaal.app'
 end

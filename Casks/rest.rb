@@ -5,7 +5,6 @@ cask 'rest' do
   url 'https://dist.resttimer.com/mac/Rest.dmg'
   name 'Rest'
   homepage 'https://resttimer.com/en'
-  license :commercial
 
   app 'Rest.app'
 

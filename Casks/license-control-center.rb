@@ -5,7 +5,6 @@ cask 'license-control-center' do
   url 'http://download.steinberg.net/downloads/eLicenserControl.dmg'
   name 'eLicenser Control Center'
   homepage 'https://www.steinberg.net/en/company/technologies/elicenser.html'
-  license :gratis
 
   installer manual: 'eLicenserControlSetup.app'
 

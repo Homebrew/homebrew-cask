@@ -7,11 +7,10 @@ cask 'epubmdimporter' do
           checkpoint: 'f4b69e735f425ff4f6d8e4cc4c2f2a9daee6140c0988176f64626d4c7b61eb78'
   name 'EPUB Spotlight'
   homepage 'https://github.com/jaketmp/ePub-quicklook'
-  license :bsd
 
   artifact 'epub.mdimporter', target: "#{ENV['HOME']}/Library/Spotlight/AA_epub.mdimporter"
 
   postflight do
-    system 'mdimport', '-r', "#{ENV['HOME']}/Library/Spotlight/AA_epub.mdimporter"
+    system_command '/usr/bin/mdimport', args: ['-r', "#{ENV['HOME']}/Library/Spotlight/AA_epub.mdimporter"]
   end
 end

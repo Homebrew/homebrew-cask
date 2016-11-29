@@ -5,7 +5,6 @@ cask 'asepsis' do
   url "http://downloads.binaryage.com/Asepsis-#{version}.dmg"
   name 'Asepsis'
   homepage 'http://asepsis.binaryage.com/'
-  license :bsd
 
   pkg 'Asepsis.pkg'
 

@@ -5,7 +5,6 @@ cask 'popmaker' do
   url "http://cdn3.brettterpstra.com/downloads/PopMaker#{version}.zip"
   name 'PopMaker'
   homepage 'http://brettterpstra.com/2014/05/12/popmaker-popclip-extension-generator/'
-  license :gratis
 
   app 'PopMaker.app'
 end

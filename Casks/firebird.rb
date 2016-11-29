@@ -7,7 +7,6 @@ cask 'firebird' do
           checkpoint: '815103264eeb275c1836c2bc31770f422caac1395fca2f7c93f3b22348694879'
   name 'firebird'
   homepage 'https://github.com/nspire-emus/firebird'
-  license :cc
 
   app 'firebird.app'
 end

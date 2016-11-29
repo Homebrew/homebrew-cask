@@ -5,7 +5,6 @@ cask 'tubcloud' do
   url 'https://updates.owncloud.tu-berlin.de/tubcloud-latest-macos.pkg'
   name 'tubCloud Client'
   homepage 'https://www.tubit.tu-berlin.de/menue/dienste/daten_server/tubcloud/tubcloud_sync-client/'
-  license :gpl
 
   pkg 'tubcloud-latest-macos.pkg'
 

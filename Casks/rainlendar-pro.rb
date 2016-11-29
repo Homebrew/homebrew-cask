@@ -5,7 +5,6 @@ cask 'rainlendar-pro' do
   url "http://www.rainlendar.net/download/Rainlendar-Pro-#{version}.dmg"
   name 'Rainlendar Pro'
   homepage 'http://www.rainlendar.net/'
-  license :commercial
 
   app "Rainlendar#{version.major}-Pro.app"
 end

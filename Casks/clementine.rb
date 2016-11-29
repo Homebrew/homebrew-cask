@@ -8,7 +8,6 @@ cask 'clementine' do
           checkpoint: '4a73a16fbd870e168e0ade5d7680dd1382c59b531ac2969a9868974eea70bbcb'
   name 'Clementine'
   homepage 'https://www.clementine-player.org/'
-  license :gpl
 
   conflicts_with cask: 'caskroom/versions/clementine-rc'
 

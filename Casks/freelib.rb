@@ -7,7 +7,6 @@ cask 'freelib' do
           checkpoint: '4e5f7c0a1eed5d23ffb123b2932459172aeef85fdf467c0b8cf306da82677f0b'
   name 'FreeLib'
   homepage 'http://freelibdesign.sourceforge.net/'
-  license :other
 
   app 'freeLib.app'
 end

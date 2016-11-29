@@ -6,7 +6,6 @@ cask 'impactor' do
   url "https://cache.saurik.com/impactor/mac/Impactor_#{version}.dmg"
   name 'Impactor'
   homepage 'http://www.cydiaimpactor.com/'
-  license :gratis
 
   app 'Impactor.app'
 end

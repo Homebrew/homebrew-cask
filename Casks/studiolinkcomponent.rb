@@ -8,7 +8,6 @@ cask 'studiolinkcomponent' do
           checkpoint: 'f12e402194581d2fc3c8230faa2b2b069a3b57d6d5ad5df3df3c0b83d6103098'
   name 'Studio Link Plugin'
   homepage 'https://doku.studio-link.de/plugin/installation-plugin.html'
-  license :bsd
 
   audio_unit_plugin 'StudioLink.component'
 

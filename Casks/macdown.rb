@@ -1,14 +1,13 @@
 cask 'macdown' do
-  version '0.6'
-  sha256 '2f129112df7393b5987c811f0001c0e0c8a4612566db1fcbbb4170367bc781f8'
+  version '0.6.4'
+  sha256 'fcc7950c69eca4428a2eb4c2705e032a747eacb2b657bc48195c3aee60d35f25'
 
-  # github.com/uranusjr/macdown was verified as official when first introduced to the cask
-  url "https://github.com/uranusjr/macdown/releases/download/v#{version}/MacDown.app.zip"
-  appcast 'https://github.com/uranusjr/macdown/releases.atom',
-          checkpoint: '5ddaf175fa2d01fa631675802a747b2a051e9effaaa989c71987b8888ee2de83'
+  # github.com/MacDownApp/macdown was verified as official when first introduced to the cask
+  url "https://github.com/MacDownApp/macdown/releases/download/v#{version}/MacDown.app.zip"
+  appcast 'https://github.com/MacDownApp/macdown/releases.atom',
+          checkpoint: '494e6ec6883fd528a9b1905aa3270dfd0361143bfae5bec6b50284b22ef1f966'
   name 'MacDown'
   homepage 'http://macdown.uranusjr.com/'
-  license :mit
 
   app 'MacDown.app'
   binary "#{appdir}/MacDown.app/Contents/SharedSupport/bin/macdown"

@@ -5,7 +5,6 @@ cask 'brow' do
   url 'https://www.timschroeder.net/brow/brow.zip'
   name 'Brow'
   homepage 'https://www.timschroeder.net/brow/'
-  license :gratis
 
   app 'Brow.app'
 end

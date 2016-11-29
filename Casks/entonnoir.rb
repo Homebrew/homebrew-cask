@@ -7,7 +7,6 @@ cask 'entonnoir' do
           checkpoint: 'bdb2060920153b86a23fb016768d653453ddf6b40bac2316e822c7b5b6c18eb3'
   name 'Entonnoir'
   homepage 'http://tools.chocoflop.com/entonnoir_en.html'
-  license :closed
 
   app 'Entonnoir.app'
 end

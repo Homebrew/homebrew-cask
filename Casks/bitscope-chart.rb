@@ -4,8 +4,7 @@ cask 'bitscope-chart' do
 
   url "http://bitscope.com/download/files/bitscope-chart_#{version}.app.tgz"
   name 'BitScope Chart'
-  homepage 'http://www.bitscope.com'
-  license :gratis
+  homepage 'http://www.bitscope.com/'
 
   app 'bitscope-chart.app'
 end

@@ -7,7 +7,6 @@ cask 'mac2imgur' do
           checkpoint: '76c8d74c003e2fdd4c9b2062acff9f7badb863fdab3f11c86fb745be59af3d15'
   name 'mac2imgur'
   homepage 'https://github.com/mileswd/mac2imgur'
-  license :gpl
 
   app 'mac2imgur.app'
 

@@ -1,13 +1,12 @@
 cask 'invisionsync' do
-  version '1.7.24-678'
-  sha256 '8a7eedfb87f0e8d5c092d054e4bb0fee17c0dee3cde74d2a96628b99687569c2'
+  version '1.8.2-683'
+  sha256 '2e40d68390b2c1d72e32a50792a89f8ef80f6b34b0bfeefb4e480802cce4d55e'
 
   url "https://projects.invisionapp.com/native_app/mac/sparkle/#{version.sub(%r{^.*?-}, '')}.zip"
   appcast 'https://projects.invisionapp.com/native_app/mac/sparkle/appcast_v2.xml',
-          checkpoint: '6131c1e35f72ea3e993b5054ffec8298ee85ddf8bdb3ca105a590eb45583e0e8'
+          checkpoint: '3c142a877b1aa92ed471d0f2c83c09a0eb4954605f7230360259fd6901711b66'
   name 'InVision Sync'
-  homepage 'https://invisionapp.com/'
-  license :gratis
+  homepage 'https://www.invisionapp.com/'
 
   app 'InVisionSync.app'
 end

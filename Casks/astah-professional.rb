@@ -5,7 +5,6 @@ cask 'astah-professional' do
   url "http://cdn.astah.net/downloads/astah-professional-#{version.dots_to_underscores}-846701-MacOs.dmg"
   name 'Change Vision Astah Professional'
   homepage 'http://astah.net/editions/professional'
-  license :commercial
 
   pkg "astah professional ver #{version.dots_to_underscores}.pkg"
 

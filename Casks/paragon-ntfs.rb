@@ -5,12 +5,11 @@ cask 'paragon-ntfs' do
   url "http://dl.paragon-software.com/demo/ntfsmac#{version}_trial_e.dmg"
   name 'Paragon NTFS for Mac'
   homepage 'https://www.paragon-software.com/home/ntfs-mac/'
-  license :commercial
 
-  pkg 'FSInstaller.app/Contents/Resources/Paragon NTFS for Mac OS X.pkg'
+  installer manual: 'FSInstaller.app'
 
   uninstall pkgutil:   'com.paragon-software.filesystems.NTFS.pkg',
-            script:    'Uninstall.app/Contents/Resources/uninstall.sh',
+            script:    'Uninstall.app/Contents/Resources/uninstallNTFS.sh',
             launchctl: [
                          'com.paragon.ntfs*',
                          'com.paragon.updater',

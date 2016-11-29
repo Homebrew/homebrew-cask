@@ -7,17 +7,20 @@ cask 'coconutbattery' do
     version '2.8'
     sha256 'fcfc81214ff26afff9f5c6c7cdc455b23ac898b6918f864b641a9e31526692d4'
     url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version}.zip"
+  elsif MacOS.version <= :yosemite
+    version '3.3.4'
+    sha256 '0edf6bdaf28fb3cc9c242fd916c348fbbae30a5356ddc1d6e5158d50f96d740d'
+    url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version.dots_to_underscores}.zip"
   else
     version '3.4'
-    sha256 'cc64cec27cde9677c1313920bea46e05049a2354c0a7ab1b04f18895c80c12fe'
+    sha256 '3b16e5dc3a26a9b3f698743ef891abbe9bba16aa8f540d437f9a7081957e8102'
     url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version.dots_to_underscores}.zip"
     appcast 'http://updates.coconut-flavour.com/coconutBatteryIntel.xml',
-            checkpoint: '7e0d5b9a43ff98b3efe1eff787508ad01a4f176fc740043aaa133985c14e85e6'
+            checkpoint: '2b6ad421381d4478317524d15668250bb1bfdb4c1e6596940191747c3386ba1f'
   end
 
   name 'coconutBattery'
   homepage 'https://www.coconut-flavour.com/coconutbattery/'
-  license :bsd
 
   app 'coconutBattery.app'
 

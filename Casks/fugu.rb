@@ -8,7 +8,6 @@ cask 'fugu' do
           checkpoint: '160c21e81d72191ae8c2767e5261bf3f018f555344ddb3e0b4262a31bc7627c1'
   name 'Fugu'
   homepage 'http://rsug.itd.umich.edu/software/fugu/'
-  license :bsd
 
   app 'Fugu.app'
 end

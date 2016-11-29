@@ -5,7 +5,6 @@ cask 'typewriter' do
   url 'https://typewriter.llllll.li/download/Typewriter.zip'
   name 'Typewriter'
   homepage 'https://typewriter.llllll.li'
-  license :public_domain
 
   app 'Typewriter.app'
 end

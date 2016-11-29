@@ -7,7 +7,6 @@ cask 'tuntap' do
           checkpoint: '781b6f4837d37ac562e7d41f479e694a89e5e8f242f35c8ce6f59113970b7f01'
   name 'TunTap'
   homepage 'http://tuntaposx.sourceforge.net/'
-  license :bsd
 
   pkg "tuntap_#{version}.pkg"
 

@@ -8,7 +8,6 @@ cask 'trufont' do
           checkpoint: '94f15046baf1df5da48358493e4ab5895ed918e80abf67623dad4f1490c163a9'
   name 'TruFont'
   homepage 'https://trufont.github.io/'
-  license :oss
 
   app 'TruFont.app'
 end

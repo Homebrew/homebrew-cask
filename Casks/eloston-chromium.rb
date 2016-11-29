@@ -7,7 +7,6 @@ cask 'eloston-chromium' do
           checkpoint: 'fb8dc0c21f90efbde4e82a23c76fe559991632f0b4bcd551e11a99976be84f34'
   name 'Ungoogled Chromium'
   homepage 'https://github.com/Eloston/ungoogled-chromium'
-  license :oss
 
   app 'Chromium.app'
 

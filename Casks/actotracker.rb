@@ -8,7 +8,6 @@ cask 'actotracker' do
           checkpoint: '8ae126c057e71688c0d6c9b24ff45a56d97c62251dddd433d99bb724ddcb5492'
   name 'ActoTracker'
   homepage 'https://onflapp.wordpress.com/actotracker/'
-  license :gratis
 
   app 'ActoTracker.app'
 end

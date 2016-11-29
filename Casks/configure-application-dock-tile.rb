@@ -6,7 +6,6 @@ cask 'configure-application-dock-tile' do
   name 'Configure Application Dock Tile'
   name 'CADT'
   homepage 'http://boredzo.org/cadt/'
-  license :gratis
 
   app "Configure Application Dock Tile #{version}/Configure Application Dock Tile.app"
 end

@@ -8,7 +8,6 @@ cask 'vimediamanager' do
           checkpoint: '432abeca6ddfeae43f3e915996d9f691ec7b066620545abe05b237d385e4a468'
   name 'ViMediaManager'
   homepage 'http://mariusth.heliohost.org/vimediamanager/'
-  license :gratis
 
   app 'ViMediaManager.app'
 end

@@ -7,7 +7,6 @@ cask 'appfresh' do
           checkpoint: '47eaf3743f5384da1cd77e5fa122d6be1e3377b0232bb5da7467ec62e8631ec7'
   name 'metaquark AppFresh'
   homepage 'http://metaquark.de/appfresh/mac'
-  license :commercial
 
   app 'AppFresh.app'
 

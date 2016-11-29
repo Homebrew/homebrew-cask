@@ -7,7 +7,6 @@ cask 'ammonite' do
           checkpoint: '55642bf5d2fe63e3c36ef1e402e54331efc07459bc279bff4cd2e64473e57369'
   name 'Ammonite'
   homepage 'http://www.soma-zone.com/Ammonite/'
-  license :closed
 
   app 'Ammonite.app'
 end

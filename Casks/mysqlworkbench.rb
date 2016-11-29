@@ -1,13 +1,11 @@
 cask 'mysqlworkbench' do
-  version '6.3.7'
-  sha256 '06e7c87483b8851fa3c9baa6f784d76a8f099878abebdb56e8c22637b784ca12'
+  version '6.3.8'
+  sha256 '8bcaad64d9971caae23edd018b90537975c615310105dc6b19f8036dca80eef9'
 
   url "https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-osx-x86_64.dmg"
   name 'MySQL Workbench'
-  homepage 'https://www.mysql.com/products/workbench'
-  license :gpl
-  gpg "#{url}.asc",
-      key_id: '8c718d3b5072e1f5'
+  homepage 'https://www.mysql.com/products/workbench/'
+  gpg "#{url}.asc", key_id: '8c718d3b5072e1f5'
 
   app 'MySQLWorkbench.app'
 

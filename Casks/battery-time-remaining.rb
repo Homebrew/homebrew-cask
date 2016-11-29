@@ -5,7 +5,6 @@ cask 'battery-time-remaining' do
   url "http://yap.nu/battery-time-remaining/download/Battery%20Time%20Remaining%202-#{version}.zip"
   name 'Battery Time Remaining'
   homepage 'http://yap.nu/battery-time-remaining/'
-  license :apache
 
   app 'Battery Time Remaining 2.app'
 end

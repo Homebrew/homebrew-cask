@@ -5,7 +5,6 @@ cask 'notion' do
   url "https://www.notion.so/desktop/Notion-#{version}.dmg"
   name 'Notion'
   homepage 'https://www.notion.so/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Notion.app'
 end

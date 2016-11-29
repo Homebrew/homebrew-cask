@@ -7,7 +7,6 @@ cask 'createuserpkg' do
           checkpoint: 'e97f696d0d6e39e65357a56b62e91ae4fce4704097eb7a57659858a29c2c2fdf'
   name 'CreateUserPkg'
   homepage 'https://magervalp.github.io/CreateUserPkg/'
-  license :apache
 
   app 'CreateUserPkg.app'
 end

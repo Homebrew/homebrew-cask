@@ -6,7 +6,6 @@ cask 'mp4tools' do
       referer: 'http://www.emmgunn.com/mp4tools-home/mp4tools-downloads/'
   name 'MP4tools'
   homepage 'http://www.emmgunn.com/mp4tools-home/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app "mp4tools#{version}/MP4Tools.app"
 end

@@ -5,7 +5,6 @@ cask 'surge' do
   url 'http://dl.nssurge.com/mac/Surge-latest.zip'
   name 'Surge'
   homepage 'https://nssurge.com'
-  license :commercial
 
   app 'Surge.app'
 end

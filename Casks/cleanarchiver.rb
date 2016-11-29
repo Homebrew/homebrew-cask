@@ -7,7 +7,6 @@ cask 'cleanarchiver' do
           checkpoint: 'fcf7d3097d207f1c4322c5a8351a787987cfa39d6d095d9e8a9a403b98f37a48'
   name 'CleanArchiver'
   homepage 'https://www.sopht.jp/cleanarchiver/'
-  license :bsd
 
   app 'CleanArchiver.app'
 end

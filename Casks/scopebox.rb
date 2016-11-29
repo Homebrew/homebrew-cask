@@ -5,7 +5,6 @@ cask 'scopebox' do
   url "https://www.divergentmedia.com/filedownload/ScopeBox%20#{version}.dmg"
   name 'ScopeBox'
   homepage 'https://www.divergentmedia.com/scopebox'
-  license :commercial
 
   app 'ScopeBox.app'
 

@@ -6,7 +6,6 @@ cask 'keyaccess' do
   name 'Sassafras KeyAccess KeyServer Client'
   name 'K2 Client'
   homepage 'https://www.sassafras.com/support/'
-  license :gratis
 
   pkg 'K2Client.pkg'
 

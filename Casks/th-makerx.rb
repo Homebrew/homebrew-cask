@@ -5,7 +5,6 @@ cask 'th-makerx' do
   url "http://www5.wind.ne.jp/miko/mac_soft/th-maker_x/hqx/Th-MakerX_#{version.no_dots}.zip"
   name 'Th-MakerX'
   homepage 'http://www5.wind.ne.jp/miko/mac_soft/th-maker_x/index-en.html'
-  license :gratis
 
   app "Th-MakerX_#{version.no_dots}/Th-MakerX.app"
 

@@ -5,7 +5,6 @@ cask 'notebook' do
   url "https://www.circusponies.com/availabledownloads/NoteBook/CircusPoniesNoteBook#{version}.dmg"
   name 'Circus Ponies Notebook'
   homepage 'http://www.circusponies.com/'
-  license :commercial
 
   app 'Notebook.app'
 end

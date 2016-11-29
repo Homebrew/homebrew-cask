@@ -8,7 +8,6 @@ cask 'ibettercharge' do
           checkpoint: '928b6c64636011e7c75492c6cd2adbaa7e15d38c7773d30bac6aca1745a72cb2'
   name 'iBetterCharge'
   homepage 'https://softorino.com/ibettercharge/'
-  license :gratis
 
   app 'iBetterCharge.app'
 end

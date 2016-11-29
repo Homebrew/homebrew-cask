@@ -8,7 +8,6 @@ cask 'spek' do
           checkpoint: '2ed5efa777cb07040d9d44e658bec267111b978d4701bbd8d6f6d3e1c1264f49'
   name 'Spek'
   homepage 'http://spek.cc'
-  license :gpl
 
   app 'Spek.app'
 end

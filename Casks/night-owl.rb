@@ -9,7 +9,6 @@ cask 'night-owl' do
   name 'NightOwl'
   name 'YoruFukurou'
   homepage 'https://sites.google.com/site/yorufukurou/home-en'
-  license :gratis
 
   app 'Night Owl.app'
 end

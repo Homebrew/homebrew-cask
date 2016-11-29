@@ -7,7 +7,6 @@ cask 'chatology' do
           checkpoint: '8de7c950c0f46d3649bd3b0b78c1e787fa302e048da00b0dc384f9cb86821357'
   name 'Chatology'
   homepage 'https://flexibits.com/chatology'
-  license :commercial
 
   app 'Chatology.app'
 end

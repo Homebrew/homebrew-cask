@@ -8,7 +8,6 @@ cask 'enjoy' do
           checkpoint: 'cf19c8a0dc17a555a5dc370bc77e8eafd5f3adfb5aeb33406e06fc8e638e0984'
   name 'Enjoy2'
   homepage 'https://github.com/fyhuang/enjoy2/'
-  license :mit
 
   app 'Enjoy2.app'
 

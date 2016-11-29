@@ -7,7 +7,6 @@ cask 'quicklook-pfm' do
           checkpoint: '6bd737e8e514aed099b266761b2c0f223cbb689e2b5237872a7e3d782ea1a2e7'
   name 'quicklook-pfm'
   homepage 'https://github.com/lnxbil/quicklook-pfm'
-  license :oss
 
   qlplugin 'Quicklook-PFM.qlgenerator'
 end

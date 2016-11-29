@@ -7,7 +7,6 @@ cask 'leech' do
           checkpoint: 'b0bc47dfb3d94fa3a2b7b4dad2538b2026803578283b3c106d48692b18d47c99'
   name 'Leech'
   homepage 'https://manytricks.com/leech/'
-  license :commercial
 
   auto_updates true
 

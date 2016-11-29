@@ -4,8 +4,7 @@ cask 'plex-home-theater' do
 
   url "https://downloads.plex.tv/plex-home-theater/#{version}/PlexHomeTheater-#{version}-macosx-x86_64.zip"
   name 'Plex Home Theater'
-  homepage 'https://plex.tv'
-  license :gratis
+  homepage 'https://www.plex.tv/'
 
   app 'Plex Home Theater.app'
 end

@@ -7,7 +7,6 @@ cask 'raptor' do
           checkpoint: '0f631ed3d1dafea70b65dc0427b4e2ec3d6743eb98e8be187d7fc4abaef39ff0'
   name 'Raptor Chess Interface'
   homepage 'https://github.com/raptor-fics-interface/raptor'
-  license :bsd
 
   app 'Raptor.app'
 end

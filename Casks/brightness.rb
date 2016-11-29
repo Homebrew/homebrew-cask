@@ -4,8 +4,7 @@ cask 'brightness' do
 
   url "http://www.bergdesign.com/resources/Brightness/Brightness_#{version}.dmg"
   name 'Brightness'
-  homepage 'http://www.bergdesign.com/brightness/'
-  license :gratis
+  homepage 'http://bergdesign.com/brightness/'
 
   app 'Brightness.app'
 end

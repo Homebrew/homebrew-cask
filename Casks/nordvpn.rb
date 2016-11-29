@@ -4,8 +4,7 @@ cask 'nordvpn' do
 
   url 'https://nordvpn.com/api/osxapp/latest'
   name 'NordVPN'
-  homepage 'https://www.nordvpn.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://nordvpn.com/'
 
   app 'NordVPN.app'
 end

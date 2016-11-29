@@ -7,8 +7,7 @@ cask 'mancy' do
   appcast 'https://github.com/princejwesley/Mancy/releases.atom',
           checkpoint: '17da0fd50eed4f6e82adee200d440f7c2febef231fcc96f3af6e92fdf0b0a81e'
   name 'Mancy'
-  homepage 'http://www.mancy-re.pl/'
-  license :mit
+  homepage 'http://mancy-re.pl/'
 
   app 'Mancy-darwin-x64/Mancy.app'
 end

@@ -8,7 +8,6 @@ cask 'tribler' do
           checkpoint: 'b56dba965e57c2cd11ecf021983be4dd465285c44871d2bfc396036c33dfe6d8'
   name 'Tribler'
   homepage 'https://www.tribler.org/'
-  license :gpl
 
   app 'Tribler.app'
 end

@@ -7,7 +7,6 @@ cask 'mattr-slate' do
           checkpoint: '12a305e83d56fb2eab4c1341df73ea1faf5591838dc0ec636d7e06d72200bdb0'
   name 'Slate'
   homepage 'https://github.com/mattr-/slate'
-  license :gpl
 
   auto_updates true
   accessibility_access true

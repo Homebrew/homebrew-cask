@@ -5,7 +5,6 @@ cask 'the-cheat' do
   url "https://chazmcgarvey.github.com/thecheat/thecheat-#{version}.dmg"
   name 'The Cheat'
   homepage 'https://github.com/chazmcgarvey/thecheat'
-  license :gratis
 
   app 'The Cheat.app'
 end

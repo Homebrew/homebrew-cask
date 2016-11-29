@@ -5,7 +5,6 @@ cask 'zed' do
   url "http://download.zedapp.org/zed-mac-v#{version}.tar.gz"
   name 'Zed'
   homepage 'http://zedapp.org'
-  license :oss
 
   app 'Zed.app'
 end

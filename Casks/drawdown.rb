@@ -7,7 +7,6 @@ cask 'drawdown' do
           checkpoint: 'f23f65b11c6005f28f84ed5e23cb82cf88f8c11d15e25fc46178346d7176dce0'
   name 'DrawDown'
   homepage 'https://www.rwe-uk.com/app/drawdown'
-  license :commercial
 
   auto_updates true
 

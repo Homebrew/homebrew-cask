@@ -4,8 +4,7 @@ cask 'retro-virtual-machine' do
 
   url "http://www.retrovirtualmachine.org/release/Retro%20Virtual%20Machine%20v#{version}.dmg"
   name 'Retro Virtual Machine'
-  homepage 'http://www.retrovirtualmachine.org'
-  license :gratis
+  homepage 'http://www.retrovirtualmachine.org/'
 
   app 'Retro Virtual Machine.app'
 end

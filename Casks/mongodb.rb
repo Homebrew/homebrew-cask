@@ -8,7 +8,6 @@ cask 'mongodb' do
           checkpoint: '30d0c2fb36e0c5551d05614dea789cc6d5dacf8687c90c8474e229cbfaae295b'
   name 'MongoDB'
   homepage 'https://elweb.co/mongodb-app/'
-  license :mit
 
   app 'MongoDB.app'
 

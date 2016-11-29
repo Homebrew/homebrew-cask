@@ -1,7 +1,6 @@
 cask 'xerox-print-driver' do
   name 'Xerox Print Driver'
-  homepage 'http://www.support.xerox.com/support/colorqube-8900/downloads'
-  license :gratis
+  homepage 'http://www.support.xerox.com/support/colorqube-8900/downloads/enus.html'
 
   if MacOS.version <= :leopard
     version '2.94.3'

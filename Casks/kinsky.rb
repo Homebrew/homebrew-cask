@@ -5,7 +5,6 @@ cask 'kinsky' do
   url "https://oss.linn.co.uk/Releases/Kinsky/Davaar/Kinsky_#{version}_osx.pkg"
   name 'Kinsky'
   homepage 'https://oss.linn.co.uk/trac/wiki/DownloadKinsky'
-  license :bsd
 
   pkg "Kinsky_#{version}_osx.pkg"
 

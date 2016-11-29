@@ -5,7 +5,6 @@ cask 'teensy' do
   url 'https://www.pjrc.com/teensy/teensy.dmg'
   name 'Teensy'
   homepage 'https://pjrc.com/teensy/loader_mac.html'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'teensy.app'
 end

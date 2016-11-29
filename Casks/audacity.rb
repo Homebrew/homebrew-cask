@@ -14,8 +14,7 @@ cask 'audacity' do
     end
   end
   name 'Audacity'
-  homepage 'http://audacityteam.org'
-  license :gpl
+  homepage 'http://www.audacityteam.org/'
 
   depends_on macos: '>= :snow_leopard'
 

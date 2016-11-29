@@ -4,8 +4,7 @@ cask 'robofont' do
 
   url "http://robofont.com/downloads/RoboFont_#{version.after_comma}.dmg"
   name 'RoboFont'
-  homepage 'http://robofont.com'
-  license :other # See http://doc.robofont.com/license-agreement/
+  homepage 'https://doc.robofont.com/'
 
   depends_on macos: '>= :mavericks'
 

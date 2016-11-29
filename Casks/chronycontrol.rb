@@ -5,7 +5,6 @@ cask 'chronycontrol' do
   url "https://www.whatroute.net/software/chronycontrol-#{version}.zip"
   name 'ChronyControl'
   homepage 'https://whatroute.net/chronycontrol.html'
-  license :unknown
 
   app 'ChronyControl.app'
 

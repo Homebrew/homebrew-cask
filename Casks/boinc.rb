@@ -6,7 +6,6 @@ cask 'boinc' do
   name 'Berkeley Open Infrastructure for Network Computing'
   name 'BOINC'
   homepage 'https://boinc.berkeley.edu/'
-  license :gpl
 
   pkg "boinc_#{version}_macOSX_x86_64/BOINC Installer.app/Contents/Resources/BOINC.pkg"
 

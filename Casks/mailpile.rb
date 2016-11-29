@@ -5,7 +5,6 @@ cask 'mailpile' do
   url "https://www.mailpile.is/files/releases/Mailpile-Installer-Beta-III-#{version}.dmg"
   name 'Mailpile'
   homepage 'https://www.mailpile.is/'
-  license :gpl
 
   app 'Mailpile.app'
 end

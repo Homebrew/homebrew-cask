@@ -6,7 +6,6 @@ cask 'unetbootin' do
   url "http://launchpad.net/unetbootin/trunk/#{version}/+download/unetbootin-mac-#{version}.dmg"
   name 'UNetbootin'
   homepage 'https://unetbootin.github.io/'
-  license :gpl
 
   app 'unetbootin.app'
 end

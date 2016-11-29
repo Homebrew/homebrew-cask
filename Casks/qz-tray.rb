@@ -8,7 +8,6 @@ cask 'qz-tray' do
           checkpoint: '33433b9469834be02d4297aaf6fe079bb5bbcd96fa86f914dd92848fdf0ab1b3'
   name 'QZ Tray'
   homepage 'https://qz.io/'
-  license :gratis
 
   container type: :naked
 
@@ -18,8 +17,8 @@ cask 'qz-tray' do
     # app needs to be extracted as the installer would automatically open it
     FileUtils.cd staged_path do
       FileUtils.mkdir_p 'QZ Tray.app'
-      system '/usr/bin/xar', '-xf', "qz-tray-#{version}.pkg", 'Payload'
-      system '/usr/bin/tar', '-xf', 'Payload', '-C', 'QZ Tray.app'
+      system_command '/usr/bin/xar', args: ['-xf', "qz-tray-#{version}.pkg", 'Payload']
+      system_command '/usr/bin/tar', args: ['-xf', 'Payload', '-C', 'QZ Tray.app']
       FileUtils.rm_rf ["qz-tray-#{version}.pkg", 'Payload']
     end
   end

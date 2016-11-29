@@ -6,7 +6,6 @@ cask 'ios-app-signer' do
   url "https://github.com/DanTheMan827/ios-app-signer/releases/download/#{version}/iOS.App.Signer.app.zip"
   name 'iOS App Signer'
   homepage 'https://dantheman827.github.io/ios-app-signer/'
-  license :unknown
 
   app 'iOS App Signer.app'
 end

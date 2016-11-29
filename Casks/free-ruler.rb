@@ -5,7 +5,6 @@ cask 'free-ruler' do
   url "http://www.pascal.com/software/freeruler/FreeRuler#{version}.zip"
   name 'Free Ruler'
   homepage 'http://www.pascal.com/software/freeruler/'
-  license :gratis
 
   app "Free Ruler #{version}.app"
 end

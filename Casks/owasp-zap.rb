@@ -9,7 +9,6 @@ cask 'owasp-zap' do
   name 'OWASP Zed Attack Proxy'
   name 'ZAP'
   homepage 'https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project'
-  license :apache
 
   app 'OWASP ZAP.app'
 end

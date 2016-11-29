@@ -5,7 +5,6 @@ cask 'adobe-photoshop-lightroom' do
   url "http://swupdl.adobe.com/updates/oobe/aam20/mac/AdobeLightroom-#{version.major}.0/#{version}/setup.dmg"
   name 'Adobe Photoshop Lightroom'
   homepage 'https://www.adobe.com/products/photoshop-lightroom.html'
-  license :commercial
 
   depends_on cask: 'caskroom/versions/adobe-photoshop-lightroom600'
 
@@ -14,12 +13,16 @@ cask 'adobe-photoshop-lightroom' do
   # and https://github.com/caskroom/homebrew-versions/pull/296
 
   preflight do
-    system '/usr/bin/killall', '-kill', 'SafariNotificationAgent'
-    system '/usr/bin/sudo', '-E', '--', "#{staged_path}/AdobePatchInstaller.app/Contents/MacOS/AdobePatchInstaller", '--mode=silent'
+    system_command '/usr/bin/killall', args: ['-kill', 'SafariNotificationAgent']
+    system_command "#{staged_path}/AdobePatchInstaller.app/Contents/MacOS/AdobePatchInstaller",
+                   args: [
+                           '--mode=silent',
+                         ],
+                   sudo: true
   end
 
   uninstall_preflight do
-    system 'brew', 'cask', 'uninstall', 'adobe-photoshop-lightroom600'
+    system_command 'brew', args: ['cask', 'uninstall', 'adobe-photoshop-lightroom600']
   end
 
   zap delete: [

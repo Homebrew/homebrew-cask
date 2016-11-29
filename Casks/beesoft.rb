@@ -5,7 +5,6 @@ cask 'beesoft' do
   url "https://www.beeverycreative.com/public/software/BEESOFT/BEESOFT-#{version}/Mac-BEESOFT-#{version}.pkg"
   name 'Beesoft'
   homepage 'https://beeverycreative.com/beesoft/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "Mac-BEESOFT-#{version}.pkg"
 

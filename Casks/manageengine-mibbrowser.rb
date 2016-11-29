@@ -5,7 +5,6 @@ cask 'manageengine-mibbrowser' do
   url "https://www.manageengine.com/products/mibbrowser-free-tool/#{version.after_comma}/ManageEngine_MibBrowser_FreeTool.dmg"
   name 'ManageEngine MibBrowser'
   homepage 'https://www.manageengine.com/products/mibbrowser-free-tool/'
-  license :gratis
 
   app 'ManageEngine MibBrowser.app'
 end

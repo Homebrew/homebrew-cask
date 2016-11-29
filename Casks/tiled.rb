@@ -8,7 +8,6 @@ cask 'tiled' do
           checkpoint: '8cb97fe6d918184d4838f3514859fc2b98f43a5df2ea9f52be28bd3783bf5449'
   name 'Tiled'
   homepage 'http://www.mapeditor.org/'
-  license :gpl
 
   app 'Tiled.app'
 end

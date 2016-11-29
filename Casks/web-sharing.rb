@@ -4,8 +4,7 @@ cask 'web-sharing' do
 
   url "http://dl.clickontyler.com/web-sharing/websharing_#{version}.zip"
   name 'Web Sharing'
-  homepage 'https://clickontyler.com/web-sharing/'
-  license :gratis
+  homepage 'https://clickontyler.com/web-sharing-mountain-lion/'
 
   prefpane 'Web Sharing.prefPane'
 end

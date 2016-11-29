@@ -5,7 +5,6 @@ cask 'fanny' do
   url 'http://fannywidget.com/FannyWidget.zip'
   name 'FannyWidget'
   homepage 'http://fannywidget.com/'
-  license :oss
 
   app "Fanny #{version}/fanny.app"
 end

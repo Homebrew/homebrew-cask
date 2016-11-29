@@ -5,7 +5,6 @@ cask '1clipboard' do
   url 'http://1clipboard.io/download/darwin/1Clipboard.dmg'
   name '1Clipboard'
   homepage 'http://1clipboard.io/'
-  license :mit
 
   depends_on macos: '>= :mountain_lion'
 

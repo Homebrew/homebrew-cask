@@ -4,8 +4,7 @@ cask 'ableton-live' do
 
   url "http://cdn2-downloads.ableton.com/channels/#{version}/ableton_live_trial_#{version}_64.dmg"
   name 'Ableton Live'
-  homepage 'https://ableton.com/en/live'
-  license :commercial
+  homepage 'https://www.ableton.com/en/live/'
 
   app "Ableton Live #{version.major} Trial.app"
 

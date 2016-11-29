@@ -8,7 +8,6 @@ cask 'boxer' do
           checkpoint: 'a8d19705429ced354ead57abc45060f504368fd7def6038fb2f54e77a8a22c21'
   name 'Boxer'
   homepage 'http://boxerapp.com/'
-  license :gpl
 
   depends_on macos: '>= :leopard'
 

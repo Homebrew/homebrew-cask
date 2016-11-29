@@ -4,8 +4,7 @@ cask 'iridium-extra' do
 
   url "https://downloads.iridiumbrowser.de/macosx/#{version}/iridium_browser_extra_#{version}_osx_x64.dmg"
   name 'Iridium Browser'
-  homepage 'https://iridiumbrowser.de'
-  license :oss
+  homepage 'https://iridiumbrowser.de/'
 
   app 'Iridium-extra.app'
 

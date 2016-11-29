@@ -5,7 +5,6 @@ cask 'growl-fork' do
   url "https://bitbucket.org/pmetzger/growl/downloads/Growl-#{version}.dmg"
   name 'Growl'
   homepage 'https://bitbucket.org/pmetzger/growl'
-  license :bsd
 
   pkg 'Growl.pkg'
 

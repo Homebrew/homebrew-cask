@@ -6,7 +6,6 @@ cask 'pencil2d-pencil' do
   url "https://bitbucket.org/chchwy/pencil2d/downloads/Pencil2D-dev-#{version}-mac.zip"
   name 'Pencil2D Animation'
   homepage 'https://www.pencil2d.org/'
-  license :gpl
 
   app 'Pencil.app'
 end

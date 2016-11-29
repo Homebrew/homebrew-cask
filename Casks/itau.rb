@@ -5,7 +5,6 @@ cask 'itau' do
   url 'https://guardiao.itau.com.br/UpdateServer/aplicativoitau.dmg'
   name 'Itau'
   homepage 'https://www.itau.com.br/computador/'
-  license :gratis
 
   app 'Itau.app'
 end

@@ -5,8 +5,7 @@ cask 'kiwix' do
   # mirror.netcologne.de/kiwix was verified as official when first introduced to the cask
   url "https://mirror.netcologne.de/kiwix/bin/#{version}/kiwix-#{version}.dmg"
   name 'Kiwix'
-  homepage 'http://www.kiwix.org'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'http://www.kiwix.org/'
 
   app 'Kiwix.app'
 end

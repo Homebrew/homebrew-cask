@@ -5,7 +5,6 @@ cask 'vectr' do
   url "http://download.vectr.com/desktop/#{version}/mac/Vectr-#{version}.dmg"
   name 'Vectr'
   homepage 'https://vectr.com'
-  license :gratis
 
   app 'Vectr.app'
 end

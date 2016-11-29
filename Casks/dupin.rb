@@ -13,7 +13,6 @@ cask 'dupin' do
   url "https://dougscripts.com/itunes/scrx/dupinv#{version.no_dots}.zip"
   name 'Dupin'
   homepage 'https://dougscripts.com/apps/dupinapp.php'
-  license :commercial
 
   depends_on macos: '>= :snow_leopard'
 

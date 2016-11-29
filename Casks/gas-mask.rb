@@ -1,13 +1,12 @@
 cask 'gas-mask' do
-  version '0.8.3'
-  sha256 '907aa5979d1a902fa2582f5b6a4f2b1087e5f4e60cc9eb87594407d60fcd2d53'
+  version '0.8.4'
+  sha256 '2ad7dbb866f42a6adbda84ae454cefceab0df163602927e9936f26deb300b434'
 
   url "http://gmask.clockwise.ee/files/gas_mask_#{version}.zip"
   appcast 'http://gmask.clockwise.ee/check_update/',
-          checkpoint: '1521f159563375d5f66bc2ad30e5818df91625bbda3f1460a0a81670ee0f5c2a'
+          checkpoint: '45971ba5209d41a4b67875dc31f487be0d1ac11af7f7e75e082dfb8681a7d785'
   name 'Gas Mask'
-  homepage 'http://www.clockwise.ee/'
-  license :gpl
+  homepage 'http://clockwise.ee/'
 
   app 'Gas Mask.app'
 end

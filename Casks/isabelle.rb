@@ -5,7 +5,6 @@ cask 'isabelle' do
   url "https://www.cl.cam.ac.uk/research/hvg/Isabelle/dist/Isabelle#{version}.dmg"
   name 'Isabelle'
   homepage 'https://www.cl.cam.ac.uk/research/hvg/Isabelle/'
-  license :bsd
 
   app "Isabelle#{version}.app"
 end

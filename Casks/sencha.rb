@@ -1,11 +1,10 @@
 cask 'sencha' do
-  version '6.2.0.103'
-  sha256 '5203d9d2ae06e6be1fb05a8ce6276ab77cc1bc7295c999b6f97008da0c34efbb'
+  version '6.2.1.29'
+  sha256 '41713f045fb5d3c75992d4ea401ace967917efad837801b81547d53db6d31960'
 
   url "https://cdn.sencha.com/cmd/#{version}/jre/SenchaCmd-#{version}-osx.app.zip"
   name 'Sencha Cmd'
   homepage 'https://www.sencha.com/products/sencha-cmd/'
-  license :freemium
 
   installer script: "SenchaCmd-#{version}-osx.app/Contents/MacOS/JavaApplicationStub",
             args:   ['-Djava.awt.headless=true', '-q', '-dir', "/opt/Sencha/Cmd/#{version}"],

@@ -5,7 +5,6 @@ cask 'dynamite' do
   url "https://mediaatelier.com/DynaMite3/DynaMite_#{version}.zip"
   name 'DynaMite'
   homepage 'https://www.mediaatelier.com/DynaMite3/'
-  license :commercial
 
   depends_on macos: '>= :mavericks'
 

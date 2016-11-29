@@ -5,7 +5,6 @@ cask 'deepvacuum' do
   url "http://www.hexcat.com/downloads/DeepVacuum-#{version}.dmg"
   name 'DeepVacum'
   homepage 'http://www.hexcat.com/deepvacuum/index.html'
-  license :commercial
 
   app 'DeepVacuum.app'
 

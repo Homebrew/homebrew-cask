@@ -1,13 +1,11 @@
 cask 'baiduinput' do
-  version '3.4_1000e'
-  sha256 'dd7a65c1eb2c1f300c96bea2bac63bbdb4a23d31a78ddbdb4f4cd5d14eba08e3'
+  version '3.4.1.5_1000e,5r1ZsjOhKgQFm2e88IuM_a'
+  sha256 '0d6b13ac06bfdca2cf3f1d6c84d09904da6baf8fdb9730feaa077b2a64eac69b'
 
-  url "http://shouji.baidu.com/download/baiduinput_mac_v#{version}.dmg"
+  url "https://gss0.baidu.com/#{version.after_comma}/srf/mac/baiduinput_mac_v#{version.before_comma}.dmg"
   name 'Baidu Input'
-  name 'BaiduIM'
   name '安装百度输入法'
-  homepage 'http://wuxian.baidu.com/input/mac.html'
-  license :gratis
+  homepage 'https://srf.baidu.com/input/mac.html'
 
   installer manual: '安装百度输入法.app'
 

@@ -5,7 +5,6 @@ cask 'wowdoge' do
   url 'http://www.wowdoge.org/download/WowDoge.dmg'
   name 'WowDoge'
   homepage 'http://www.wowdoge.org'
-  license :mit
 
   app 'WowDoge.app'
 end

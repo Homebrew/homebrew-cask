@@ -5,7 +5,6 @@ cask 'google-nik-collection' do
   url "https://dl.google.com/edgedl/photos/nikcollection-full-#{version}.dmg"
   name 'Google Nik Collection'
   homepage 'https://www.google.com/nikcollection/'
-  license :closed
 
   installer manual: 'Nik Collection.app'
 

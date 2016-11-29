@@ -4,8 +4,7 @@ cask 'gurps-character-sheet' do
 
   url "http://gurpscharactersheet.com/downloads/#{version}/gcs-#{version}-mac.zip"
   name 'GURPS Character Sheet'
-  homepage 'http://gurpscharactersheet.com'
-  license :mpl
+  homepage 'http://gurpscharactersheet.com/'
 
   app "gcs-#{version}-mac/GURPS Character Sheet.app"
 end

@@ -8,7 +8,6 @@ cask 'stellarium' do
           checkpoint: '31520cf00b42ee13b6dcdbdb07677399d333bd48c28ec2f8aad23eb617896294'
   name 'Stellarium'
   homepage 'http://stellarium.org/'
-  license :gpl
 
   app 'Stellarium.app'
 

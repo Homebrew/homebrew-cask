@@ -7,7 +7,6 @@ cask 'neu' do
           checkpoint: '68beadae296c67137c75c6caee84ccb5c3ede8019c239cda59342255faa19f50'
   name 'Neu'
   homepage 'http://www.elegantchaos.com/neu/'
-  license :freemium
 
   app "neu-v#{version}/Neu.app"
 end

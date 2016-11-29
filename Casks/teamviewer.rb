@@ -5,7 +5,8 @@ cask 'teamviewer' do
   url 'https://download.teamviewer.com/download/TeamViewer.dmg'
   name 'TeamViewer'
   homepage 'https://www.teamviewer.com/'
-  license :freemium
+
+  auto_updates true
 
   pkg 'Install TeamViewer.pkg'
 

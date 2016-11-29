@@ -6,8 +6,7 @@ cask 'xamarin-jdk' do
   appcast 'https://static.xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
           checkpoint: '773227b41218a95c3404b764d09eed828cc248aa4bb3aaabbe75c6ad95022b22'
   name 'Xamarin Java JDK'
-  homepage 'https://xamarin.com/platform'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.xamarin.com/platform'
 
   pkg "JDK #{version.major} Update #{version.minor}.pkg"
 

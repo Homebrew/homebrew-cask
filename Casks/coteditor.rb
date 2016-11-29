@@ -9,20 +9,31 @@ cask 'coteditor' do
     sha256 '444133083698c7c94c2b029644f39a0e36982ae34c24745789fa890626188347'
     # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
     url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
-  else
+  elsif MacOS.version <= :mavericks
     version '2.5.7'
     sha256 'f2c6eed9bfa31999f559396642e7bec0eb90ce0e3398f266fed8b3db5bdab37c'
+    # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
+    url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
+  else
+    version '3.1.1'
+    sha256 'b3f7d23081b04dc2b9837d5049bfbcca610fefb3e06e4c6125168e714edeecc8'
     # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
     url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   end
 
   appcast 'https://github.com/coteditor/CotEditor/releases.atom',
-          checkpoint: '687123bec1fd7e517026eb411e29bd296371006d4d5e0418d355d75862af47b9'
+          checkpoint: 'c6e0f63280e8c0326597b18a37b976db22437a5430450a179fae50e1b6441c8c'
   name 'CotEditor'
   homepage 'https://coteditor.com/'
-  license :apache
 
   app 'CotEditor.app'
+  binary "#{appdir}/CotEditor.app/Contents/SharedSupport/bin/cot", target: 'cot'
 
-  zap delete: '~/Library/Containers/com.coteditor.CotEditor'
+  zap delete: [
+                '~/Library/Application Scripts/com.coteditor.CotEditor',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.coteditor.coteditor.sfl',
+                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.coteditor.CotEditor.help',
+                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/Japanese/HelpSDMIndexFile/com.coteditor.CotEditor.help',
+                '~/Library/Containers/com.coteditor.CotEditor',
+              ]
 end

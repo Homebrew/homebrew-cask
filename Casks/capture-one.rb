@@ -5,7 +5,6 @@ cask 'capture-one' do
   url "http://downloads.phaseone.com/International/CaptureOne.Mac.#{version}.dmg"
   name 'Capture One'
   homepage 'https://www.phaseone.com/en/Products/Software/Capture-One-Pro/dot-release.aspx'
-  license :freemium
 
   app "Capture One #{version.major}.app"
 end

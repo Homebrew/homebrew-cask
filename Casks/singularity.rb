@@ -6,7 +6,6 @@ cask 'singularity' do
   url "https://bitbucket.org/SingularityViewer/singularityviewer/downloads/Singularity_#{version.dots_to_underscores.sub(',', '_')}.dmg"
   name 'Singularity Viewer'
   homepage 'http://www.singularityviewer.org/'
-  license :gpl
 
   app 'Singularity.app'
 end

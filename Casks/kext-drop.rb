@@ -6,7 +6,6 @@ cask 'kext-drop' do
       user_agent: :fake
   name 'Kext Drop'
   homepage 'https://www.cindori.org/software/kextdrop/'
-  license :gratis
 
   app 'Kext Drop.app'
 end

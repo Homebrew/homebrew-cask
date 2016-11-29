@@ -4,8 +4,7 @@ cask 'livechat' do
 
   url 'https://www.livechatinc.com/download/Mac/LiveChat.dmg'
   name 'LiveChat'
-  homepage 'https://livechatinc.com'
-  license :commercial
+  homepage 'https://www.livechatinc.com/'
 
   app 'LiveChat.app'
 end

@@ -8,7 +8,6 @@ cask 'endlesssky' do
           checkpoint: '95fdac50548fddf72f5c3f92ab847ed735bb5f82861ed11f9484cc1cc6abaafd'
   name 'Endless Sky'
   homepage 'https://endless-sky.github.io/'
-  license :gpl
 
   app 'EndlessSky.app'
 end

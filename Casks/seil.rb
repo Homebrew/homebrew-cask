@@ -15,7 +15,6 @@ cask 'seil' do
           checkpoint: 'bf1be761638c151d1780c80db40ecb489899e055f4fdd3ddfa56b8f5692c3912'
   name 'Seil'
   homepage 'https://pqrs.org/osx/karabiner/seil.html'
-  license :public_domain
 
   depends_on macos: '>= :mountain_lion'
 

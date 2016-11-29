@@ -4,8 +4,7 @@ cask 'wondershare-pdf-editor-pro' do
 
   url 'http://download.wondershare.com/mac-pdf-editor-pro_full841.dmg'
   name 'Wondershare PDF Editor for Mac'
-  homepage 'https://www.wondershare.com/mac-pdf-editor'
-  license :commercial
+  homepage 'https://pdf.wondershare.com/pdf-editor-mac/'
 
   app 'Wondershare PDF Editor Pro.app'
 end

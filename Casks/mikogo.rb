@@ -6,7 +6,6 @@ cask 'mikogo' do
   url 'https://download.mikogo4.com/mikogo.dmg'
   name 'Mikogo'
   homepage 'https://www.mikogo.com/'
-  license :gratis
 
   # Renamed for clarity: app name is inconsistent with its branding
   app 'Mikogo-host.app', target: 'Mikogo.app'

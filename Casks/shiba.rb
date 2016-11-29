@@ -1,13 +1,12 @@
 cask 'shiba' do
-  version '1.0.0'
-  sha256 '4600a765cd2a9b23b9fa1090b86b43f8c43f7b6d07e69c2c294c26f06a5cf0d3'
+  version '1.0.4'
+  sha256 '910aa8ad99d4f6799991cfcfa35c58cbee55f8a5b4f5c21f9242b60c90c0e96d'
 
   url "https://github.com/rhysd/Shiba/releases/download/v#{version}/Shiba-darwin-x64.zip"
   appcast 'https://github.com/rhysd/Shiba/releases.atom',
-          checkpoint: '1c0cdb6cba3a6ee81b31b72dd17b02465d6b0b457fe276739585ea53fdf85235'
+          checkpoint: '3ad2a278d99e59b83997ec44725908669bc1153f2282a72de59d37ae234f1e85'
   name 'Shiba'
   homepage 'https://github.com/rhysd/Shiba'
-  license :mit
 
   app 'Shiba-darwin-x64/Shiba.app'
 end

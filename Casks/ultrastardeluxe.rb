@@ -7,7 +7,6 @@ cask 'ultrastardeluxe' do
           checkpoint: 'c8c913a606b8e18c5b61cd28932cdfb3434ff9b7b98b2a9008b9cead3f84a8ce'
   name 'UltraStar Deluxe'
   homepage 'http://ultrastardx.sourceforge.net/'
-  license :gpl
 
   app 'UltraStarDeluxe.app'
 end

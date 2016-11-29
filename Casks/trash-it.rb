@@ -13,5 +13,4 @@ cask 'trash-it' do
 
   name 'Trash It!'
   homepage 'http://nonamescriptware.com/'
-  license :gratis
 end

@@ -4,8 +4,7 @@ cask 'mobius' do
 
   url "http://www.circularlabs.com/Mobius%20#{version}.pkg"
   name 'Mobius'
-  homepage 'http://www.circularlabs.com'
-  license :gratis
+  homepage 'http://www.circularlabs.com/'
 
   pkg "Mobius #{version}.pkg"
 

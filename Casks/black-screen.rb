@@ -1,13 +1,14 @@
 cask 'black-screen' do
-  version '0.2.55'
-  sha256 '6010cec0721b24482eb31a528e44d638b815b3aa16154e7f114575353b9f840a'
+  version '0.2.93'
+  sha256 'f22217696997aa67833fd9bf6a888c748d4d743e18068d1bf4d8cc87e087a9bc'
 
-  url "https://github.com/shockone/black-screen/releases/download/v#{version}/black-screen-#{version}-mac.zip"
-  appcast 'https://github.com/shockone/black-screen/releases.atom',
-          checkpoint: '41cb95fdccc427dc00d6118a44c969fe8e7992d2555011ab1ad503c0b2c9822a'
+  url "https://github.com/vshatskyi/black-screen/releases/download/v#{version}/black-screen-#{version}-mac.zip"
+  appcast 'https://github.com/vshatskyi/black-screen/releases.atom',
+          checkpoint: 'ee18ae661108286d196dde79788ea2bc48a62c14f882a260319bd2670b9a6ae2'
   name 'Black Screen'
-  homepage 'https://github.com/shockone/black-screen'
-  license :mit
+  homepage 'https://github.com/vshatskyi/black-screen'
 
   app 'Black Screen.app'
+
+  zap delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.shockone.black-screen.sfl'
 end

@@ -5,7 +5,6 @@ cask 'post-haste' do
   url "https://www.digitalrebellion.com/download/posthaste?version=#{version.no_dots}"
   name 'Post Haste'
   homepage 'https://www.digitalrebellion.com/posthaste/'
-  license :gratis
 
   app 'Post Haste.app'
 

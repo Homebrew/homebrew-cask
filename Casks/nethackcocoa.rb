@@ -7,7 +7,6 @@ cask 'nethackcocoa' do
           checkpoint: '9cb9628fcc0e9c79576374ab095dc94661ae6309346a8fac7628a88a2f97ed6f'
   name 'NetHackCocoa'
   homepage 'https://github.com/dirkz/NetHack-Cocoa'
-  license :oss
 
   app 'NetHackCocoa.app'
 end

@@ -5,7 +5,6 @@ cask 'paragon-vmdk-mounter' do
   url 'http://dl.paragon-software.com/free/VMDK_MOUNTER_2014.dmg'
   name 'Paragon VMDK Mounter'
   homepage 'https://www.paragon-software.com/home/vd-mounter-mac-free/'
-  license :freemium
 
   pkg 'Paragon VMDK Mounter.pkg'
 

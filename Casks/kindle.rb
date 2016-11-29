@@ -5,7 +5,6 @@ cask 'kindle' do
   url "http://kindleformac.amazon.com/#{version}/KindleForMac-#{version}.dmg"
   name 'Kindle for Mac'
   homepage 'https://www.amazon.com/gp/digital/fiona/kcp-landing-page'
-  license :gratis
 
   app 'Kindle.app'
 

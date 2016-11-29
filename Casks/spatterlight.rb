@@ -5,7 +5,6 @@ cask 'spatterlight' do
   url "http://ccxvii.net/spatterlight/download/spatterlight-#{version}.zip"
   name 'Spatterlight'
   homepage 'http://ccxvii.net/spatterlight/'
-  license :gpl
 
   app 'Spatterlight.app'
 end

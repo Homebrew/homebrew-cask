@@ -5,7 +5,6 @@ cask 'ifilex' do
   url 'http://www.osxbytes.com/iFileX.dmg'
   name 'iFileX'
   homepage 'http://www.osxbytes.com/ifilex.html'
-  license :gratis
 
   app 'iFileX.app'
 end

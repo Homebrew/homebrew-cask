@@ -7,7 +7,6 @@ cask 'audiobook-builder' do
           checkpoint: 'e82ec1ee1623b4d41d69458b6af46fba041259f3cc2ed161c88c5cff6722c43f'
   name 'Audiobook Builder'
   homepage 'http://www.splasm.com/audiobookbuilder/'
-  license :commercial
 
   app 'Audiobook Builder.app'
 end

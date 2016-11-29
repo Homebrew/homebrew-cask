@@ -7,7 +7,6 @@ cask 'macbreakz' do
           checkpoint: 'dc30f7b8390c401431ecc54eb91ab7e06e0be9976a84bac1267dfbeb2547b48b'
   name 'MacBreakZ'
   homepage 'http://www.publicspace.net/MacBreakZ/'
-  license :commercial
 
   app "MacBreakZ #{version.major}.app"
 end

@@ -7,7 +7,6 @@ cask 'timemachinescheduler' do
           checkpoint: '45fe02d1f8cda89dc2bb0e8370966aaf5a0030192273a3c0d3c4b150f5443369'
   name 'TimeMachineScheduler'
   homepage 'http://www.klieme.com/TimeMachineScheduler.html'
-  license :gratis
 
   app 'TimeMachineScheduler.app'
 

@@ -7,7 +7,6 @@ cask 'jewelrybox' do
           checkpoint: 'ce5613f9a7818c00cbfe430939ac1246848fb8c38b44c603010cdad74d90e945'
   name 'JewelryBox'
   homepage 'https://github.com/remear/jewelrybox'
-  license :oss
 
   app 'JewelryBox.app'
 end

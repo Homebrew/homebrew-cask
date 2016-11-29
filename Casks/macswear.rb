@@ -5,7 +5,6 @@ cask 'macswear' do
   url "https://wakaba.c3.cx/releases/Swear/MacSwear#{version}.zip"
   name 'MacSwear'
   homepage 'https://wakaba.c3.cx/s/games/macswear'
-  license :public_domain
 
   app 'MacSwear.app'
 end

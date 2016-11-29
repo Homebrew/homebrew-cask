@@ -5,7 +5,6 @@ cask 'idefrag' do
   url "https://coriolis-systems.com/downloads/iDefrag-#{version}.dmg"
   name 'iDefrag'
   homepage 'https://coriolis-systems.com/iDefrag/'
-  license :commercial
 
   app 'iDefrag.app'
 end

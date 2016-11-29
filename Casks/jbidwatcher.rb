@@ -6,8 +6,7 @@ cask 'jbidwatcher' do
   appcast 'https://www.jbidwatcher.com/sparkle/updates.xml',
           checkpoint: '8c77c9c8c3b057dc796441fec033235f659ac91a60362b6701cf16734342c8c2'
   name 'JBidwatcher'
-  homepage 'https://www.jbidwatcher.com'
-  license :cc
+  homepage 'https://www.jbidwatcher.com/'
 
   app 'JBidwatcher.app'
 end

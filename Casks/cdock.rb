@@ -8,7 +8,6 @@ cask 'cdock' do
           checkpoint: '152818010dd4d1f3c7988a188841ddb9ae4db143616ef504dcbd01ea340f5405'
   name 'cDock2'
   homepage 'https://w0lfschild.github.io/cdock'
-  license :bsd
 
   depends_on cask: 'easysimbl'
   depends_on macos: '>= :mavericks'

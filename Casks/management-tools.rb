@@ -7,7 +7,6 @@ cask 'management-tools' do
           checkpoint: '1437803314ab96c09e68cf2f01571ca15e77fbc20cdbf61bc5c8d2627df821ff'
   name 'Management Tools'
   homepage 'https://github.com/univ-of-utah-marriott-library-apple/management_tools'
-  license :mit
 
   depends_on macos: '>= :mountain_lion'
 

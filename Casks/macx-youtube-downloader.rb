@@ -4,8 +4,7 @@ cask 'macx-youtube-downloader' do
 
   url 'https://www.macxdvd.com/download/macx-youtube-downloader-free.dmg'
   name 'MacX YouTube Downloader'
-  homepage 'https://www.macxdvd.com/free-youtube-video-downloader-mac'
-  license :gratis
+  homepage 'https://www.macxdvd.com/free-youtube-video-downloader-mac/'
 
   app 'MacX YouTube Downloader.app'
 end

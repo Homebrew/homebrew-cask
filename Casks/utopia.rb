@@ -5,7 +5,6 @@ cask 'utopia' do
   url "http://utopiadocs.com/files/Utopia-#{version}-Mac.dmg"
   name 'Utopia Documents'
   homepage 'http://utopiadocs.com/'
-  license :gpl
 
   app 'Utopia.app'
 end

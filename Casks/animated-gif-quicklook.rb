@@ -7,7 +7,6 @@ cask 'animated-gif-quicklook' do
           checkpoint: 'f7a28b9b96ad478f9165f77a78f14abb2c12a8787d69e3d77c788d1380471720'
   name 'Animated GIF Quicklook Plugin'
   homepage 'http://animgifqlgen.sourceforge.net/'
-  license :bsd
 
   pkg 'Animated GIF Quicklook Plugin Installer.pkg'
 

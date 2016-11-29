@@ -6,7 +6,6 @@ cask 'volumemixer' do
   url 'https://dl.devmate.com/com.ggt.vm/VolumeMixer.dmg'
   name 'Volume Mixer'
   homepage 'http://www.volumemixer-app.com/'
-  license :commercial
 
   app 'VolumeMixer.app'
 end

@@ -5,8 +5,7 @@ cask 'curse' do
   # curseapp.net was verified as official when first introduced to the cask
   url 'https://updates.curseapp.net/osx/Curse.dmg'
   name 'Curse'
-  homepage 'https://www.curse.com'
-  license :freemium
+  homepage 'https://www.curse.com/'
 
   auto_updates true
 

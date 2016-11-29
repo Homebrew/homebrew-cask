@@ -7,7 +7,6 @@ cask 'diskwave' do
           checkpoint: '8bc850c307554a6250a90dee47a0249810d7773abc33f772cd4f1de06b5b75b8'
   name 'DiskWave'
   homepage 'https://diskwave.barthe.ph/'
-  license :gratis
 
   app 'DiskWave.app'
 end

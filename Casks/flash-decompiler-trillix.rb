@@ -7,7 +7,6 @@ cask 'flash-decompiler-trillix' do
           checkpoint: '78c0a13b8ac9358a1a1c29d0198ac13ad2674839b923126d13f3135479703610'
   name 'Flash Decompiler Trillix'
   homepage 'http://www.flash-decompiler.com/mac.html'
-  license :commercial
 
   app 'Flash Decompiler Trillix.app'
 end

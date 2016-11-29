@@ -8,7 +8,6 @@ cask 'imazing' do
           checkpoint: '8753345cab0ae9c735b346860854dc4806d9f90dbb21a61cf7fa83a6d5aabdb1'
   name 'iMazing'
   homepage 'https://imazing.com/'
-  license :commercial
 
   depends_on macos: '>= :lion'
 

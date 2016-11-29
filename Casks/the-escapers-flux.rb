@@ -8,7 +8,6 @@ cask 'the-escapers-flux' do
           checkpoint: '5186709410d51bcd39f1fc569ecee474c97846173e483871eb8d1fd7ddf06099'
   name 'Flux'
   homepage 'http://www.theescapers.com/flux/'
-  license :commercial
 
   app 'Flux.app'
 end

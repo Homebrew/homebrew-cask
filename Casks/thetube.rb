@@ -4,8 +4,7 @@ cask 'thetube' do
 
   url "http://download2.equinux.com/files/other/TheTube_#{version}_Web.zip"
   name 'TheTube'
-  homepage 'https://www.equinux.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'http://www.equinux.com/'
 
   app 'TheTube.app'
 end

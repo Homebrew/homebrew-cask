@@ -7,7 +7,6 @@ cask 'go2shell' do
           checkpoint: '80d5e9cc0a8c1a16116e34341d09a8d78b1aff5ce2a77c7fc0c0ff1f56b96235'
   name 'Go2Shell'
   homepage 'https://zipzapmac.com/go2shell'
-  license :gratis
 
   app 'Go2Shell.app'
 end

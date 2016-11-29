@@ -6,8 +6,7 @@ cask 'unrarx' do
   appcast 'http://www.unrarx.com/update.xml',
           checkpoint: 'c42c5affe2dd688136eb43599d6bc91e2a6816a7be9cf063e58d81004b359ba6'
   name 'UnRarX'
-  homepage 'http://www.unrarx.com'
-  license :gratis
+  homepage 'https://www.unrarx.com/'
 
   app 'UnRarX.app'
 end

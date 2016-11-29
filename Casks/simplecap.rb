@@ -5,7 +5,6 @@ cask 'simplecap' do
   url "http://lakesoft.jp/simplecap/download/SimpleCap-#{version}.zip"
   name 'SimpleCap'
   homepage 'http://lakesoft.jp/simplecap-en/'
-  license :gratis
 
   app 'SimpleCap.app'
 end

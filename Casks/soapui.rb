@@ -6,7 +6,6 @@ cask 'soapui' do
   url "https://downloads.smartbear.com/soapui-os/SoapUI-#{version}.dmg"
   name 'SmartBear SoapUI'
   homepage 'https://www.soapui.org'
-  license :oss
 
   # Installer runs install4j from the distribution in quiet mode.
   #

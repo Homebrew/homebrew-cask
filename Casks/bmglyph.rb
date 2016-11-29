@@ -7,7 +7,6 @@ cask 'bmglyph' do
           checkpoint: 'a758ecf728343284d3271c230483f31ba5c0165e79c0462c83690a9b7fe0039e'
   name 'bmGlyph'
   homepage 'https://www.bmglyph.com/'
-  license :commercial
 
   depends_on macos: '>= :mountain_lion'
   depends_on arch: :x86_64

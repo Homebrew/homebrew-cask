@@ -6,7 +6,6 @@ cask 'geppetto' do
   url "https://downloads.puppetlabs.com/geppetto/4.x/geppetto-macosx.cocoa.x86_64-#{version}.zip"
   name 'Geppetto'
   homepage 'https://puppetlabs.github.io/geppetto/'
-  license :oss
 
   app 'geppetto/Geppetto.app'
 end

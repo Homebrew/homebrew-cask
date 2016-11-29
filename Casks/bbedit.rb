@@ -7,7 +7,6 @@ cask 'bbedit' do
           checkpoint: 'd9edfc0950afd9b90d05323de99632714f93a077997fc7c13dca0cc93898bee1'
   name 'BBEdit'
   homepage 'http://www.barebones.com/products/bbedit/'
-  license :commercial
 
   app 'BBEdit.app'
 

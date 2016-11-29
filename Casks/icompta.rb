@@ -15,7 +15,6 @@ cask 'icompta' do
 
   name 'iCompta'
   homepage 'https://www.icompta-app.com/'
-  license :commercial
 
   depends_on macos: '>= :leopard'
 end

@@ -1,11 +1,10 @@
 cask 'camunda-modeler' do
-  version '1.3.0'
-  sha256 'a0d38a8195f7db7f689ca1ed2e9cab8fb8957559a517c327f98dc5c71ad21392'
+  version '1.5.0'
+  sha256 'cbd86a03aa32d2b6cbd0e23e8b99f212ef7c44db5ef73589d9e58552e11e8978'
 
   url "https://camunda.org/release/camunda-modeler/#{version}/camunda-modeler-#{version}-darwin-x64.tar.gz"
   name 'Camunda Modeler'
-  homepage 'https://camunda.org'
-  license :mit
+  homepage 'https://camunda.org/'
 
   app 'camunda-modeler/Camunda Modeler.app'
 end

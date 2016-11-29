@@ -7,7 +7,6 @@ cask 'wwdc' do
           checkpoint: 'fe9ba442bd3968bd4eaa987cf42d345855c2f4a193b1a1f8a62f488f0a4e4234'
   name 'WWDC'
   homepage 'https://github.com/insidegui/WWDC'
-  license :bsd
 
   auto_updates true
 

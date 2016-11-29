@@ -6,7 +6,6 @@ cask 'sachsen' do
   url 'https://dl.devmate.com/eu.lauterbach.Sachsen/Sachsen.zip'
   name 'Sachsen'
   homepage 'http://www.ccll1.net/sachsen/'
-  license :commercial
 
   app 'Sachsen.app'
 end

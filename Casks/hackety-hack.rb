@@ -8,7 +8,6 @@ cask 'hackety-hack' do
           checkpoint: 'cfda5003270eacc46238ea3aa8982ef2c2db8e56ef3b2131adcddfdac437d91e'
   name 'Hackety Hack'
   homepage 'http://www.hackety.com/'
-  license :mit
 
   app 'Hackety Hack.app'
 

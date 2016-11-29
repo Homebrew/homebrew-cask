@@ -7,7 +7,6 @@ cask 'yubiswitch' do
           checkpoint: '3c81594845490b31f3154b86af8971af304dfd6ee464909110452f745503d558'
   name 'yubiswitch'
   homepage 'https://github.com/pallotron/yubiswitch'
-  license :gpl
 
   app 'yubiswitch.app'
 end

@@ -1,11 +1,10 @@
 cask 'mauve' do
-  version '2.3.1'
-  sha256 '586fe214eb6c430f2a98fd865856111b79502ff526ab2f6268dab1d99b337907'
+  version '2015.02.25'
+  sha256 '7a9586ef3b83aa7678424a3f17ac15a257ff520b3968d78e1345b3c69b23c171'
 
-  url "https://asap.genetics.wisc.edu/software/mauve/downloads/Mauve-#{version}.dmg"
+  url "http://darlinglab.org/mauve/snapshots/#{version.major}/#{version.dots_to_hyphens}/MacOS/Mauve-snapshot_#{version.dots_to_hyphens}.dmg"
   name 'Mauve'
-  homepage 'https://asap.genetics.wisc.edu/software/mauve/'
-  license :gpl
+  homepage 'http://darlinglab.org/mauve/mauve.html'
 
   app 'Mauve.app'
 end

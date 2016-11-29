@@ -5,7 +5,6 @@ cask 'darwindumper' do
   url "https://bitbucket.org/blackosx/darwindumper/downloads/DarwinDumper_v#{version}.zip"
   name 'DarwinDumper'
   homepage 'https://bitbucket.org/blackosx/darwindumper'
-  license :gpl
 
   app "DarwinDumper_v#{version}/DarwinDumper.app"
 end

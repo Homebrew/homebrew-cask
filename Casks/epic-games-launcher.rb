@@ -6,7 +6,6 @@ cask 'epic-games-launcher' do
   url "https://download.epicgames.com/Builds/UnrealEngineLauncher/Installers/EpicGamesLauncher-#{version}.dmg"
   name 'Epic Games Launcher'
   homepage 'https://www.unrealengine.com/what-is-unreal-engine-4'
-  license :commercial
 
   app 'Epic Games Launcher.app'
 end

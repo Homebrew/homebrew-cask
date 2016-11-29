@@ -5,7 +5,6 @@ cask 'totalfinder' do
   url "http://downloads.binaryage.com/TotalFinder-#{version}.dmg"
   name 'TotalFinder'
   homepage 'http://totalfinder.binaryage.com'
-  license :commercial
 
   depends_on macos: '>= :mavericks'
 

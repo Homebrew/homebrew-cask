@@ -5,7 +5,6 @@ cask 'trifacta-wrangler' do
   url 'https://wrangler-distribution-cdn.trifacta.com/Trifacta+Wrangler.dmg'
   name 'Trifacta Data Wrangler'
   homepage 'https://www.trifacta.com/'
-  license :freemium
 
   app 'Trifacta Wrangler.app'
 end

@@ -4,8 +4,7 @@ cask 'openzfs' do
 
   url "https://openzfsonosx.org/w/images/6/6b/OpenZFS_on_OS_X_#{version}.dmg"
   name 'OpenZFS on OS X'
-  homepage 'https://openzfsonosx.org'
-  license :oss
+  homepage 'https://openzfsonosx.org/'
 
   # OpenZFS on OS X has no version below Mountain Lion.
   if MacOS.version == :mountain_lion

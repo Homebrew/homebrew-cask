@@ -7,7 +7,6 @@ cask 'bowtie' do
           checkpoint: '801fdd497d1912b1446627c35d400a6a26bf5ffe430fb10ae8ec0695984bc98c'
   name 'Bowtie'
   homepage 'http://bowtieapp.com/'
-  license :gratis
 
   app "Bowtie #{version}/Bowtie.app"
 end

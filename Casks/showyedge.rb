@@ -7,7 +7,6 @@ cask 'showyedge' do
           checkpoint: 'a70a969aafa5c0a857871907ede6af76016e98aaaa87a827a38fa3550d5073d6'
   name 'ShowyEdge'
   homepage 'https://pqrs.org/osx/ShowyEdge/'
-  license :public_domain
 
   app 'ShowyEdge.app'
 end

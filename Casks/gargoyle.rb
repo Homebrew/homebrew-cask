@@ -7,7 +7,6 @@ cask 'gargoyle' do
           checkpoint: '856917364d871777ed008dee26d61fa23a131d5deed11202b338014102e93cf8'
   name 'Gargoyle'
   homepage 'https://github.com/garglk/garglk'
-  license :oss
 
   app 'Gargoyle.app'
 end

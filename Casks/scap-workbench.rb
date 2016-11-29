@@ -8,7 +8,6 @@ cask 'scap-workbench' do
           checkpoint: '7beb99e46af9aae7effb84245193d14564101f897ffbfce6bcf7250ade22bb70'
   name 'scap-workbench'
   homepage 'https://www.open-scap.org/tools/scap-workbench/'
-  license :gpl
 
   app 'scap-workbench.app'
 end

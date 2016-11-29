@@ -7,7 +7,6 @@ cask 'hotswitch' do
           checkpoint: '290d7c77034a070f70dce271c24dc7085355f55ac03e38a6e4d6b4be52aba51b'
   name 'HotSwitch'
   homepage 'https://oniatsu.github.io/HotSwitch/'
-  license :mit
 
   app 'HotSwitch.app'
 end

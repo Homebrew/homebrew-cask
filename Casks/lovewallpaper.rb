@@ -6,7 +6,6 @@ cask 'lovewallpaper' do
   url 'http://s.qdcdn.com/lovebizhi/LoveWallpaper4Mac.dmg'
   name '爱壁纸HD'
   homepage 'https://www.lovebizhi.com/'
-  license :gratis
 
   app 'LoveWallpaper4Mac.app'
 end

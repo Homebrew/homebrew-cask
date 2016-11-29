@@ -5,7 +5,6 @@ cask 'hiarcs-chess-explorer' do
   url "http://www.hiarcs.com/mhce/HIARCS-Chess-Explorer-Installer-v#{version}.pkg"
   name '(Deep) HIARCS Chess Explorer'
   homepage 'http://www.hiarcs.com/mac-chess-explorer.htm'
-  license :commercial
 
   pkg "HIARCS-Chess-Explorer-Installer-v#{version}.pkg"
 

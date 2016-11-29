@@ -1,11 +1,10 @@
 cask 'facebook-ios-sdk' do
-  version '4.16.0'
-  sha256 'd3ea25659db8ef058fe5f048c9a30e4660dcfca59ce17dab5606031548b4b635'
+  version '4.17.0'
+  sha256 '284bc764fcb4fa5582fa21397934a0a4676e1745187abab125cbdabc5b792fef'
 
   url "https://origincache.facebook.com/developers/resources/?id=FacebookSDKs-iOS-#{version}.zip"
   name 'Facebook SDK for iOS'
   homepage 'https://developers.facebook.com/docs/ios'
-  license :other # https://github.com/facebook/facebook-ios-sdk/blob/master/LICENSE
 
   artifact 'AccountKit.framework', target: "#{ENV['HOME']}/Documents/FacebookSDK/AccountKit.framework"
   artifact 'AccountKitStrings.bundle', target: "#{ENV['HOME']}/Documents/FacebookSDK/AccountKitStrings.bundle"

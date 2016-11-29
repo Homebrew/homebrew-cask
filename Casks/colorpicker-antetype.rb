@@ -5,7 +5,6 @@ cask 'colorpicker-antetype' do
   url "http://www.antetype.com/blog/downloads/AntetypeColorPickerOSX-#{version.dots_to_hyphens}.zip"
   name 'Antetype Color Picker'
   homepage 'http://www.antetype.com/blog/2014/03/updated-antetype-color-picker-1-4-1/'
-  license :gratis
 
   colorpicker 'AntetypeColorPicker.colorPicker'
 end

@@ -5,7 +5,6 @@ cask 'brainworx-bxmegasingle' do
   url "https://cdn.plugin-alliance.com/tl_files/products/installer/bx_megasingle_mac_#{version.dots_to_underscores}.zip"
   name 'Brainworx bx_megasingle'
   homepage 'https://www.plugin-alliance.com/en/products/bx_megasingle.html'
-  license :commercial
 
   pkg 'bx_megasingle.pkg'
 

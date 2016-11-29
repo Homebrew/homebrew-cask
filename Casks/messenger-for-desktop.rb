@@ -8,7 +8,6 @@ cask 'messenger-for-desktop' do
           checkpoint: 'ffad9631c3186cb8bc9bdfa9c3a3a984e9981694ae4e3b72de29d27296088071'
   name 'Messenger for Desktop'
   homepage 'https://messengerfordesktop.com/'
-  license :mit
 
   app 'Messenger for Desktop.app'
 end

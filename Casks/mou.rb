@@ -7,7 +7,6 @@ cask 'mou' do
           checkpoint: 'd97ac9eeef0a00c1f583ff7fd804ca12f63c970a61eeb0925bfb3b0f3d018eb6'
   name 'Mou'
   homepage 'http://25.io/mou/'
-  license :commercial
 
   depends_on macos: '<= :el_capitan'
 

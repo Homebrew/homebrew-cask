@@ -11,7 +11,6 @@ cask 'patchblocks' do
 
   name 'Patchblocks'
   homepage 'http://patchblocks.com/'
-  license :gratis
 
   app 'Patchblocks.app'
 end

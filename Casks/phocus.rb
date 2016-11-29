@@ -5,7 +5,6 @@ cask 'phocus' do
   url "http://static.hasselblad.com/2014/12/Phocus-#{version}.dmg"
   name 'Hasselblad Phocus'
   homepage 'https://www.hasselblad.com/software/phocus'
-  license :gratis
 
   app 'Phocus.app'
 end

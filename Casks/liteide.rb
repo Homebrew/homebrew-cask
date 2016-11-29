@@ -8,7 +8,6 @@ cask 'liteide' do
           checkpoint: 'c9055a3a1b71a9c59f74e33210a3674ba76282253f1989a1a46cdfa7ed5c5898'
   name 'LiteIDE'
   homepage 'https://github.com/visualfc/liteide'
-  license :gpl
 
   app 'LiteIDE.app'
 end

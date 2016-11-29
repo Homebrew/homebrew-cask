@@ -5,7 +5,6 @@ cask 'blast2go' do
   url "http://download.blast2go.com/html/software/blast2go/latest/#{version.dots_to_underscores}/Blast2GO_macos_#{version.dots_to_underscores}.dmg"
   name 'Blast2GO'
   homepage 'https://www.blast2go.com/'
-  license :freemium
 
   installer script: 'Blast2GO Installer.app/Contents/MacOS/JavaApplicationStub',
             args:   ['-q'],

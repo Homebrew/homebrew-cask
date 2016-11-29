@@ -5,7 +5,6 @@ cask 'jedict' do
   url "http://jedict.com/Downloads/JEDict#{version.no_dots}.zip"
   name 'Jedict'
   homepage 'http://www.jedict.com/'
-  license :commercial
 
   app 'JEDict.app'
 end

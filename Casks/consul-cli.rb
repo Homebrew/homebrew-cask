@@ -7,7 +7,6 @@ cask 'consul-cli' do
           checkpoint: '18cefe6107b5f47bdbc9430028a7708f1abfd4fd266379f2ffa7cbbc1eed51f6'
   name 'Consul CLI'
   homepage 'https://github.com/CiscoCloud/consul-cli/wiki'
-  license :apache
 
   binary "consul-cli_#{version}_darwin_amd64/consul-cli"
 end

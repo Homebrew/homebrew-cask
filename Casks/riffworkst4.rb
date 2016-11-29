@@ -6,7 +6,6 @@ cask 'riffworkst4' do
   url 'https://www.sonomawireworks.com/accountManagerUI/files/RiffWorksT4.dmg'
   name 'RiffWorks T4'
   homepage 'https://www.sonomawireworks.com/T4/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "RiffWorksT4V#{version.dots_to_underscores}.pkg"
 

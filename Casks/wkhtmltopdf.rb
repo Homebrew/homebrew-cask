@@ -6,7 +6,6 @@ cask 'wkhtmltopdf' do
   url "http://download.gna.org/wkhtmltopdf/#{version.major_minor}/#{version}/wkhtmltox-#{version}_osx-cocoa-x86-64.pkg"
   name 'wkhtmltopdf'
   homepage 'http://wkhtmltopdf.org/'
-  license :gpl
 
   depends_on macos: '>= :snow_leopard'
 

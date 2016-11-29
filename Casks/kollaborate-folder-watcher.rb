@@ -6,7 +6,6 @@ cask 'kollaborate-folder-watcher' do
   url "http://www.digitalrebellion.com/download/kollabfolderwatcher?version=#{version.no_dots}"
   name 'Kollaborate Folder Watcher'
   homepage 'https://www.kollaborate.tv/resources'
-  license :gratis
 
   app 'Kollaborate Folder Watcher.app'
 

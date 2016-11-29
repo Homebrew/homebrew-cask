@@ -6,7 +6,6 @@ cask 'heimdall-suite' do
   url "https://bitbucket.org/benjamin_dobell/heimdall/downloads/heimdall-suite-#{version}-mac.dmg"
   name 'Heimdall Suite'
   homepage 'http://glassechidna.com.au/heimdall/'
-  license :mit
 
   pkg "Heimdall Suite #{version}.pkg"
 

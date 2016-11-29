@@ -5,9 +5,21 @@ cask 'logitech-harmony' do
   url "https://cdn-cx-images.dynamite.myharmony.com/software/LogitechHarmonyRemoteSoftware#{version}-OSX.dmg"
   name 'Logitech Harmony Remote Software'
   homepage 'https://www.myharmony.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg 'LogitechRemoteSoftware.pkg'
+
+  postflight do
+    # Replace the hard-coded 1.4 requirement with an equally hard-coded 1.6 requirement
+    system_command '/usr/bin/sed',
+                   args: [
+                           '-E',
+                           '-i',
+                           '.bak',
+                           '-e',
+                           's|<string>1\.4\*</string>|<string>1.6*</string>|',
+                           '/Applications/Logitech Harmony Remote Software.app/Contents/Info.plist',
+                         ]
+  end
 
   uninstall quit:    'com.logitech.harmony.cappuccino.client.logitech',
             kext:    [
@@ -16,4 +28,8 @@ cask 'logitech-harmony' do
                        'com.Belcarra.iokit.USBLAN_usbpart',
                      ],
             pkgutil: 'com.logitech.harmony.logitechRemoteSoftware.*'
+
+  caveats do
+    depends_on_java('6')
+  end
 end

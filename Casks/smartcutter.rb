@@ -5,7 +5,6 @@ cask 'smartcutter' do
   url 'http://www.fame-ring.com/SmartCutter.dmg'
   name 'FameRing Smart Cutter for DV and DVB'
   homepage 'http://www.fame-ring.com/smart_cutter.html'
-  license :freemium
 
   app 'SmartCutter.app'
 

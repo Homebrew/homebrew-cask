@@ -7,7 +7,6 @@ cask 'operadriver' do
           checkpoint: 'a17c9b85ec515b393f9b29c6bf27e7f3103d92e7fa3e079a9ba41ce145d3ddf3'
   name 'operachromiumdriver'
   homepage 'https://github.com/operasoftware/operachromiumdriver'
-  license :apache
 
   binary 'operadriver'
 end

@@ -7,7 +7,6 @@ cask 'flexiglass' do
           checkpoint: '9f2f95c38e5d941d943e25e0b4f5b6649005a33818299de43c28d98935152b48'
   name 'Flexiglass'
   homepage 'https://nulana.com/flexiglass/'
-  license :commercial
 
   depends_on macos: '>= :snow_leopard'
   depends_on arch: :intel

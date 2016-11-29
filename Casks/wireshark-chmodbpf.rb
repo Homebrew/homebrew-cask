@@ -5,7 +5,6 @@ cask 'wireshark-chmodbpf' do
   url "https://www.wireshark.org/download/osx/all-versions/Wireshark%20#{version}%20Intel%2064.dmg"
   name 'Wireshark-ChmodBPF'
   homepage 'https://www.wireshark.org/'
-  license :gpl
 
   installer script: '/usr/sbin/installer',
             args:   [
@@ -47,17 +46,14 @@ cask 'wireshark-chmodbpf' do
   end
 
   postflight do
-    if Process.euid == 0
-      ohai 'Note:'
-      puts <<-EOS.undent
-        You executed 'brew cask' as the superuser.
-
-        You must manually add users to group 'access_bpf' in order to use Wireshark
-      EOS
-    else
-      system '/usr/bin/sudo', '-E', '--',
-             '/usr/sbin/dseditgroup', '-o', 'edit', '-a', Etc.getpwuid(Process.euid).name, '-t', 'user', '--', 'access_bpf'
-    end
+    system_command '/usr/sbin/dseditgroup',
+                   args: [
+                           '-o', 'edit',
+                           '-a', Etc.getpwuid(Process.euid).name,
+                           '-t', 'user',
+                           '--', 'access_bpf'
+                         ],
+                   sudo: true
   end
 
   uninstall script:  {

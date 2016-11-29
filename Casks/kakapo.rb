@@ -8,7 +8,6 @@ cask 'kakapo' do
           checkpoint: 'e87fbb21a94fabf4fe86d677d316717512dfa54b64fe34bfe0000a2c77fd1530'
   name 'Kakapo'
   homepage 'http://www.kakapo.co/app.html'
-  license :isc
 
   app 'Kakapo.app'
 end

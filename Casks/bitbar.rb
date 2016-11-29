@@ -7,7 +7,6 @@ cask 'bitbar' do
           checkpoint: '983fa180d4b2708f1c9e7890886446c3ff4792c32b5b3ad9adbe5011f0ea5131'
   name 'BitBar'
   homepage 'https://github.com/matryer/bitbar/'
-  license :mit
 
   app 'BitBar.app'
 end

@@ -5,7 +5,6 @@ cask 'dump-truck' do
   url 'https://www.goldenfrog.com/downloads/dumptruck/dumptruck.dmg'
   name 'Dump Truck'
   homepage 'https://www.goldenfrog.com/dumptruck'
-  license :gratis
 
   app 'Dump Truck.app'
 end

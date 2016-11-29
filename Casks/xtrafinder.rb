@@ -7,7 +7,6 @@ cask 'xtrafinder' do
           checkpoint: '24654fe73bc1b20bac52a55e93a0a27008108b3c2f193d8e1bb5620787a0da88'
   name 'XtraFinder'
   homepage 'https://www.trankynam.com/xtrafinder/'
-  license :gratis
 
   pkg 'XtraFinder.pkg'
 

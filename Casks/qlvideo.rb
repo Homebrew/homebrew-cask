@@ -7,7 +7,6 @@ cask 'qlvideo' do
           checkpoint: 'ea20ff8a5722e2875766d1d469ec5dea161fbf5cfcf3c15169fdf4c1b6a519ee'
   name 'QuickLook Video'
   homepage 'https://github.com/Marginal/QLVideo'
-  license :gpl
 
   pkg "QLVideo_#{version.no_dots}.pkg"
 

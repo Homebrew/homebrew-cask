@@ -8,7 +8,6 @@ cask 'cubicsdr' do
           checkpoint: '25e6bd2e65ae37f74f6659b8600bddad0bda93944f32308adc41339949dfd7de'
   name 'CubicSDR'
   homepage 'http://cubicsdr.com/'
-  license :gpl
 
   app 'CubicSDR.app'
 end

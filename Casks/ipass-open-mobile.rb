@@ -4,8 +4,7 @@ cask 'ipass-open-mobile' do
 
   url "https://www.ipass.com/misc/sw_downloads/Open-Mobile-Mac-V#{version}.dmg"
   name 'iPass Open Mobile'
-  homepage 'https://ipass.com/'
-  license :commercial
+  homepage 'https://www.ipass.com/'
 
   pkg 'iPassOpenMobile.pkg'
 

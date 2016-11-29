@@ -5,7 +5,6 @@ cask 'dupscanub' do
   url "http://www5.wind.ne.jp/miko/mac_soft/dup_scan/hqx/DupScanUB_#{version.no_dots}.dmg.zip"
   name 'DupScan'
   homepage 'http://www5.wind.ne.jp/miko/mac_soft/dup_scan/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'DupScan(UB).app'
 end

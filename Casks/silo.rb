@@ -5,7 +5,6 @@ cask 'silo' do
   url "https://nevercenter.com/download/Install_Silo_#{version.dots_to_underscores}_mac.zip"
   name 'Silo'
   homepage 'https://nevercenter.com/silo/'
-  license :commercial
 
   app "Silo #{version.sub(%r{^(\d+\.\d+).*}, '\1')}.app"
 end

@@ -5,7 +5,6 @@ cask 'valley' do
   url "https://assets.unigine.com/d/Unigine_Valley-#{version}.dmg"
   name 'Valley Benchmark'
   homepage 'https://unigine.com/products/benchmarks/valley'
-  license :gratis
 
   depends_on macos: '>= mountain_lion'
 

@@ -7,7 +7,6 @@ cask 'flux' do
           checkpoint: 'f6127c732fe64848139f952b0ff08dcd4ba97f1a58d6599857d6268ad035b5ec'
   name 'f.lux'
   homepage 'https://justgetflux.com/'
-  license :gratis
 
   auto_updates true
 

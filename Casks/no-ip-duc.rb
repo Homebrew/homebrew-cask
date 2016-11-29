@@ -5,7 +5,6 @@ cask 'no-ip-duc' do
   url "https://www.noip.com/client/mac/noip#{version}.dmg"
   name 'No-IP DUC'
   homepage 'https://www.noip.com/download?page=mac'
-  license :gratis
 
   app 'No-IP DUC.app'
 end

@@ -5,7 +5,6 @@ cask 'packages' do
   url 'http://s.sudre.free.fr/Software/files/Packages.dmg'
   name 'Packages'
   homepage 'http://s.sudre.free.fr/Software/Packages/about.html'
-  license :bsd
 
   pkg 'packages/Packages.pkg'
 

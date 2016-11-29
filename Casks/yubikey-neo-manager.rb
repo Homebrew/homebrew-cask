@@ -5,7 +5,6 @@ cask 'yubikey-neo-manager' do
   url "https://developers.yubico.com/yubikey-neo-manager/Releases/yubikey-neo-manager-#{version}-mac.pkg"
   name 'YubiKey NEO Manager'
   homepage 'https://developers.yubico.com/yubikey-neo-manager/'
-  license :bsd
 
   pkg "yubikey-neo-manager-#{version}-mac.pkg"
 

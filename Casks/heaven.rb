@@ -5,7 +5,6 @@ cask 'heaven' do
   url "https://assets.unigine.com/d/Unigine_Heaven-#{version}.dmg"
   name 'Heaven Benchmark'
   homepage 'https://unigine.com/products/benchmarks/heaven'
-  license :gratis
 
   depends_on macos: '>= mountain_lion'
 

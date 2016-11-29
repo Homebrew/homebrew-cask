@@ -6,7 +6,6 @@ cask 'konica-minolta-bizhub-c220-c280-c360-driver' do
   url "https://o.cses.konicaminolta.com/file/Default.aspx?FilePath=DL/#{version.after_comma.hyphens_to_slashes}/BHC360PSMacOS109_#{version.before_comma.no_dots}MU.dmg"
   name 'Konica Minolta Bizhub C220/C280/C360 PostScript Printer Driver'
   homepage 'https://www.konicaminolta.eu/en/business-solutions/support/download-center.html'
-  license :gratis
 
   depends_on macos: '>= 10.9'
 

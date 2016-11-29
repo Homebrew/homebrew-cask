@@ -5,7 +5,6 @@ cask 'levelator' do
   url "http://cdn.conversationsnetwork.org/Levelator-#{version}.dmg"
   name 'Levelator'
   homepage 'http://www.conversationsnetwork.org/levelator/'
-  license :gratis
 
   app 'Levelator.app'
 end

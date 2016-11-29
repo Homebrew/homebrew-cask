@@ -7,7 +7,6 @@ cask 'soundcast' do
           checkpoint: 'ab04e3e3fb6927ccf9c59c5b0e09ed59909cdaac6a81a407fed4c605e2597be8'
   name 'Soundcast'
   homepage 'https://github.com/andresgottlieb/soundcast'
-  license :mit
 
   depends_on cask: 'soundflower'
 

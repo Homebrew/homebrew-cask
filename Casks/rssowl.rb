@@ -8,7 +8,6 @@ cask 'rssowl' do
           checkpoint: 'aca4721ee09aa7ade00abf0a203ec7c37c22c114a85f6d830524f46269aad71f'
   name 'RSSOwl'
   homepage 'http://www.rssowl.org/'
-  license :eclipse
 
   app 'RSSOwl.app'
 end

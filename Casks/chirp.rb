@@ -5,7 +5,6 @@ cask 'chirp' do
   url "http://chirp.danplanet.com/download/#{version}/chirp-#{version}.app.zip"
   name 'CHIRP'
   homepage 'http://chirp.danplanet.com/'
-  license :gpl
 
   depends_on arch: :intel
   depends_on cask: 'kk7ds-python-runtime'

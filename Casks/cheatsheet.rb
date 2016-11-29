@@ -8,7 +8,6 @@ cask 'cheatsheet' do
           checkpoint: 'fa0b4ea2a2da30024eee3071e6cfcd4ebbf2fac502c2f7fe5f07e5039256b22c'
   name 'CheatSheet'
   homepage 'https://www.cheatsheetapp.com/CheatSheet/'
-  license :gratis
 
   app 'CheatSheet.app'
 

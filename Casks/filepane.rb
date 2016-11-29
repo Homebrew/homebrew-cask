@@ -6,7 +6,6 @@ cask 'filepane' do
   url 'https://dl.devmate.com/com.mymixapps.FilePane/FilePane.dmg'
   name 'FilePane'
   homepage 'http://mymixapps.com/filepane'
-  license :commercial
 
   app 'FilePane.app'
 

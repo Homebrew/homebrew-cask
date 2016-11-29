@@ -8,7 +8,6 @@ cask 'track-o-bot' do
           checkpoint: '50f779effdc72453fc06d6b2593dce301169fc0574d1ae68e7ad346cb948a651'
   name 'Track-o-Bot'
   homepage 'https://trackobot.com/'
-  license :gpl
 
   app 'Track-o-Bot.app'
 end

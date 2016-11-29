@@ -7,7 +7,6 @@ cask 'ntfs-free' do
           checkpoint: 'f017aa7dbaa29182f562eae6f90a3cce9b04c946ab32baca170cfbcb9724086c'
   name 'NTFS-FREE'
   homepage 'https://sourceforge.net/projects/ntfsfree/'
-  license :apache
 
   pkg "NTFS-free-#{version}.pkg"
 

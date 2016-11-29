@@ -8,7 +8,6 @@ cask 'epic' do
           checkpoint: 'baa4248683b2bde4cb5124bada0f5f7330ed865ef266ef7a7014729269debdf3'
   name 'Epic Privacy Browser'
   homepage 'https://www.epicbrowser.com/'
-  license :gratis
 
   app 'Epic.app'
 end

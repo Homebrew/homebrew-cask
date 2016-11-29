@@ -4,8 +4,7 @@ cask 'astrill' do
 
   url 'http://download.astrill.com/astrill-setup-mac.dmg'
   name 'Astrill'
-  homepage 'https://www.astrill.com'
-  license :gratis
+  homepage 'https://www.astrill.com/'
 
   pkg 'Astrill Setup.mpkg'
 

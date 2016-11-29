@@ -7,7 +7,6 @@ cask 'clusters' do
           checkpoint: 'e6833dc630494764aed0331f43210978f7c753b7c2b11716e50ad83d18f1ac06'
   name 'Clusters'
   homepage 'http://clustersapp.com/'
-  license :commercial
 
   prefpane 'Clusters.prefPane'
 

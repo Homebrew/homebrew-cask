@@ -6,8 +6,7 @@ cask 'dropzone' do
   appcast 'https://aptonic.com/sparkle/updates.xml',
           checkpoint: '5572a5a59d087717dcc4f3a44af1e772299d615122dfe8fe940d61ce8290e092'
   name 'Dropzone'
-  homepage 'https://aptonic.com'
-  license :commercial
+  homepage 'https://aptonic.com/'
 
   app "Dropzone #{version.major}.app"
 end

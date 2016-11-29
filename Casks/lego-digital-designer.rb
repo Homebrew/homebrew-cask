@@ -5,7 +5,6 @@ cask 'lego-digital-designer' do
   url "http://cache.lego.com/downloads/ldd2.0/installer/setupLDD-MAC-#{version.dots_to_underscores}.zip"
   name 'Lego Digital Designer'
   homepage 'http://ldd.lego.com/'
-  license :commercial
 
   pkg 'LDD.pkg'
 

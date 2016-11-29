@@ -8,7 +8,6 @@ cask 'jeromelebel-mongohub' do
           checkpoint: '6f591d790da4f6d9683753e2966899fe5efebd5c9b11d0ee91f1dd66ff2c4884'
   name 'MongoHub'
   homepage 'https://github.com/jeromelebel/MongoHub-Mac'
-  license :oss
 
   app 'MongoHub.app'
 end

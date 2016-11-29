@@ -4,8 +4,7 @@ cask 'context-free' do
 
   url "http://www.contextfreeart.org/download/ContextFree#{version}.dmg"
   name 'Context Free'
-  homepage 'http://www.contextfreeart.org/'
-  license :gpl
+  homepage 'https://www.contextfreeart.org/'
 
   app 'Context Free.app'
 end

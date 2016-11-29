@@ -18,11 +18,15 @@ NC='\033[0m' # no color
 
 # log command before running and add a blank line
 run () {
-  echo -e "${MAGENTA}>>>${NC} $*"
+  ohai "$*"
   eval "$*"
   local retval=$?
   echo
   return $retval
+}
+
+ohai () {
+  echo -e "${MAGENTA}>>>${NC} $*"
 }
 
 # print args as a cyan header

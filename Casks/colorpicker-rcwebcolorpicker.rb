@@ -4,8 +4,7 @@ cask 'colorpicker-rcwebcolorpicker' do
 
   url "http://www.rubicode.com/Downloads/RCWebColorPicker-#{version}.dmg"
   name 'RCWebColorPicker'
-  homepage 'http://www.rubicode.com/Software/RCWebColorPicker'
-  license :bsd
+  homepage 'http://www.rubicode.com/Software/RCWebColorPicker/'
 
   colorpicker 'RCWebColorPicker.colorPicker'
 end

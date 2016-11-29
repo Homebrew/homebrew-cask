@@ -8,7 +8,6 @@ cask 'diumoo' do
           checkpoint: '3338de89c108cfa730279f37cf36779ba3e5cd088a2a62789259d01d9e6cf183'
   name 'diumoo'
   homepage 'http://diumoo.net/'
-  license :gratis
 
   app 'diumoo.app'
 end

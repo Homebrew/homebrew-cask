@@ -5,7 +5,6 @@ cask 'snappy' do
   url 'http://go-snappy.com/Snappy.zip'
   name 'Snappy'
   homepage 'http://go-snappy.com'
-  license :gratis
 
   app 'Snappy.app'
 end

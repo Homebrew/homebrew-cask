@@ -6,8 +6,7 @@ cask 'battery-guardian' do
   appcast 'https://version.dssw.co.uk/batteryguardian/standard',
           checkpoint: '62cb80cfc4b5f02a4a4abea72aa36080b88d4ee73dd2841b9aa13af997df00ef'
   name 'Battery Guardian'
-  homepage 'https://www.dssw.co.uk/batteryguardian'
-  license :gratis
+  homepage 'https://www.dssw.co.uk/batteryguardian/'
 
   app 'Battery Guardian.app'
 end

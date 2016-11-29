@@ -7,7 +7,6 @@ cask 'lazpaint' do
           checkpoint: 'd52c7f467dc51331ce7ad24785f9e4eb3d7e386bf17e98ecfd8454ec0ca68a0a'
   name 'LazPaint'
   homepage 'https://sourceforge.net/projects/lazpaint/'
-  license :gpl
 
   app 'LazPaint.app'
 end

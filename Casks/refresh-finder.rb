@@ -4,8 +4,7 @@ cask 'refresh-finder' do
 
   url "http://soderhavet.com/refresh/Refresh_Finder_#{version}.dmg.zip"
   name 'Refresh Finder'
-  homepage 'http://soderhavet.com/refresh/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://soderhavet.com/refresh/'
 
   app 'Refresh Finder.app'
 end

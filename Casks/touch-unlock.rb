@@ -5,7 +5,6 @@ cask 'touch-unlock' do
   url "https://releases.touchunlock.com/packages/Touch%20Unlock%20for%20Mac%20-%20v#{version}.dmg"
   name 'Touch Unlock for Mac'
   homepage 'https://touchunlock.com'
-  license :gratis
 
   app 'Touch Unlock for Mac.app'
 

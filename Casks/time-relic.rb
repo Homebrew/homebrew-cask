@@ -8,7 +8,6 @@ cask 'time-relic' do
           checkpoint: '21916a631a669e1c56ac746c79f24bf4ec084fd12d2d4f8bdd490b897841c40e'
   name 'Time Relic'
   homepage 'https://timerelic.com/'
-  license :gratis
 
   app 'Time Relic.app'
 end

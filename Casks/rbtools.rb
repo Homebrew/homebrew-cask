@@ -5,7 +5,6 @@ cask 'rbtools' do
   url "https://downloads.reviewboard.org/releases/RBTools/#{version.sub(%r{\.\d+$}, '')}/RBTools-#{version}.pkg"
   name 'RBTools'
   homepage 'https://www.reviewboard.org/docs/rbtools/0.7/'
-  license :mit
 
   pkg "RBTools-#{version}.pkg"
 

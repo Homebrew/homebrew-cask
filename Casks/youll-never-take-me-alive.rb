@@ -8,7 +8,6 @@ cask 'youll-never-take-me-alive' do
   name 'You\'ll Never Take Me Alive!'
   name 'YoNTMA'
   homepage 'https://github.com/iSECPartners/yontma-mac'
-  license :oss
 
   app 'You\'ll Never Take Me Alive!.app'
 end

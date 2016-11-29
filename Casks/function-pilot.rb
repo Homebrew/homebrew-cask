@@ -5,7 +5,6 @@ cask 'function-pilot' do
   url 'http://tinybird.com/download/FunctionPilot.dmg'
   name 'Function Pilot'
   homepage 'http://tinybird.com/mac/function-pilot.html'
-  license :gratis
 
   app 'Function Pilot.app'
 

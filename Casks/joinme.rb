@@ -4,8 +4,7 @@ cask 'joinme' do
 
   url 'https://secure.join.me/Download.aspx?installer=mac&webdownload=true'
   name 'join.me'
-  homepage 'https://join.me/'
-  license :gratis
+  homepage 'https://www.join.me/'
 
   app 'join.me.app'
 end

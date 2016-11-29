@@ -3,8 +3,8 @@ cask 'displaylink' do
     version '2.2,121'
     sha256 '5c9a97a476b5ff27811491eebb653a03c96f899562b67566c24100d8593b1daa'
   else
-    version '2.5.1,573'
-    sha256 'b8eb10da99ce115a6649d79f23d4ee2c8ce32863b9139df285f3750d75eaa952'
+    version '2.6,707'
+    sha256 '5b1c7c5ba941a62a230316df13cdbe9be7559754e808d3480a6197c1a11a779a'
   end
 
   url "http://www.displaylink.com/downloads/file?id=#{version.after_comma}",
@@ -14,8 +14,7 @@ cask 'displaylink' do
              },
       using: :post
   name 'DisplayLink USB Graphics Software'
-  homepage 'http://www.displaylink.com'
-  license :gratis
+  homepage 'http://www.displaylink.com/'
 
   pkg 'DisplayLink Software Installer.pkg'
 

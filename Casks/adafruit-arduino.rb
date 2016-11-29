@@ -5,8 +5,7 @@ cask 'adafruit-arduino' do
   # amazonaws.com/adafruit-download was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/adafruit-download/adafruit-arduino-#{version}-macosx.zip"
   name 'Adafruit Arduino'
-  homepage 'https://adafruit.com'
-  license :gpl
+  homepage 'https://www.adafruit.com/'
 
   conflicts_with cask: 'arduino'
 

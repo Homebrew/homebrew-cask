@@ -2,10 +2,9 @@ cask 'install-disk-creator' do
   version :latest
   sha256 :no_check
 
-  url 'http://macdaddy.io/InstallDiskCreator.zip'
+  url 'https://macdaddy.io/InstallDiskCreator.zip'
   name 'Install Disk Creator'
-  homepage 'http://macdaddy.io/install-disk-creator/'
-  license :unknown
+  homepage 'https://macdaddy.io/install-disk-creator/'
 
   app 'Install Disk Creator.app'
 end

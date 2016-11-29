@@ -8,7 +8,6 @@ cask 'scapple' do
           checkpoint: '81c37dc0b445e6e8a5a1dbcdeff51f710598208bd78d31dfb79744ecf9b2f00a'
   name 'Scapple'
   homepage 'https://www.literatureandlatte.com/scapple.php'
-  license :commercial
 
   app 'Scapple.app'
 end

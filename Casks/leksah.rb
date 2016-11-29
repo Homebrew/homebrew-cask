@@ -5,7 +5,6 @@ cask 'leksah' do
   url "http://www.leksah.org/packages/leksah-#{version}.dmg"
   name 'Leksah'
   homepage 'http://leksah.org/'
-  license :oss
 
   app 'Leksah.app'
 end

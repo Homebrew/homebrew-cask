@@ -6,7 +6,6 @@ cask 'pg-commander' do
   url "https://eggerapps-downloads.s3.amazonaws.com/pgcommander-#{version}.zip"
   name 'PG Commander'
   homepage 'https://eggerapps.at/pgcommander/'
-  license :commercial
 
   app 'PG Commander.app'
 end

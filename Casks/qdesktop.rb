@@ -7,8 +7,7 @@ cask 'qdesktop' do
   appcast 'http://qvacua.com/qdesktop/appcast.xml',
           checkpoint: '0b0de69503c4c5c113458705f0ca13e91bc87c0ca91e8a395ca25d5d80d39384'
   name 'Qdesktop'
-  homepage 'http://qvacua.com'
-  license :gpl
+  homepage 'http://qvacua.com/'
 
   app 'Qdesktop.app'
 end

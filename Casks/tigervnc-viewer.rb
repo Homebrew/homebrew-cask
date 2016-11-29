@@ -6,7 +6,6 @@ cask 'tigervnc-viewer' do
   url "https://bintray.com/tigervnc/stable/download_file?file_path=TigerVNC-#{version}.dmg"
   name 'TigerVNC'
   homepage 'http://tigervnc.org/'
-  license :gpl
 
   app "TigerVNC Viewer #{version}.app"
 end

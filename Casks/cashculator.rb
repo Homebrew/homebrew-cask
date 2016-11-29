@@ -7,7 +7,6 @@ cask 'cashculator' do
           checkpoint: 'c5f684fdba54e32ba054459ec44f052bc76db4943bd284086516f351f50f902d'
   name 'Cashculator'
   homepage 'https://www.apparentsoft.com/cashculator'
-  license :freemium
 
   app 'Cashculator.app'
 end

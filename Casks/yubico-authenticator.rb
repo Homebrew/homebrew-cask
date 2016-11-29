@@ -5,7 +5,6 @@ cask 'yubico-authenticator' do
   url "https://developers.yubico.com/yubioath-desktop/Releases/yubioath-desktop-#{version}-mac.pkg"
   name 'Yubico Authenticator'
   homepage 'https://developers.yubico.com/yubioath-desktop/'
-  license :gpl
 
   pkg "yubioath-desktop-#{version}-mac.pkg"
 

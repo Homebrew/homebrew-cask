@@ -5,7 +5,6 @@ cask 'genymotion' do
   url "https://dl.genymotion.com/releases/genymotion-#{version}/genymotion-#{version}.dmg"
   name 'Genymotion'
   homepage 'https://www.genymotion.com/'
-  license :commercial
 
   depends_on cask: 'virtualbox'
 

@@ -7,7 +7,6 @@ cask 'comictagger' do
           checkpoint: 'd56894725596b7bc39ae80c881466b5fed98bda9380dcef53f5fc1562be9d9eb'
   name 'ComicTagger'
   homepage 'https://github.com/davide-romanini/comictagger'
-  license :apache
 
   app 'ComicTagger.app'
 end

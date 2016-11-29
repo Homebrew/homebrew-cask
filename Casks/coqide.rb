@@ -5,7 +5,6 @@ cask 'coqide' do
   url "https://coq.inria.fr/distrib/V#{version}/files/CoqIDE_#{version}.dmg"
   name 'Coq'
   homepage 'https://coq.inria.fr/'
-  license :oss
 
   app "CoqIDE_#{version}.app"
 end

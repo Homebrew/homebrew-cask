@@ -8,7 +8,6 @@ cask 'domainbrain' do
           checkpoint: '28cdbb02d6f2daf21a5451e6c176445625b5d8842572f6a92fb348454c4b11e7'
   name 'DomainBrain'
   homepage 'https://domainbrainapp.com/'
-  license :freemium
 
   auto_updates true
 

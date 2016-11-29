@@ -7,7 +7,6 @@ cask 'yakyak' do
           checkpoint: 'f67b5a42c826e263fa3a373ee1fa7de7c9df5bb36e47c53d15a021ef8d2053ca'
   name 'Yakyak'
   homepage 'https://github.com/yakyak/yakyak'
-  license :mit
 
   app 'Yakyak.app'
 end

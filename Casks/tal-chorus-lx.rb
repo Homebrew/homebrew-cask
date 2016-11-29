@@ -2,10 +2,9 @@ cask 'tal-chorus-lx' do
   version :latest
   sha256 :no_check
 
-  url 'http://kunz.corrupt.ch/downloads/plugins/TAL-Chorus-LX-installer.pkg'
+  url 'https://tal-software.com/downloads/plugins/TAL-Chorus-LX-installer.pkg'
   name 'TAL-Chorus-LX'
-  homepage 'http://kunz.corrupt.ch/products/tal-chorus-lx'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://tal-software.com/products/tal-chorus-lx'
 
   pkg 'TAL-Chorus-LX-installer.pkg'
 

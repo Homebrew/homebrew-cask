@@ -5,7 +5,6 @@ cask 'programmer-dvorak' do
   url "http://www.kaufmann.no/downloads/macos/ProgrammerDvorak-#{version.dots_to_underscores}.pkg.zip"
   name 'Programmer Dvorak'
   homepage 'http://kaufmann.no/roland/dvorak/'
-  license :oss
 
   pkg "Programmer Dvorak v#{version.sub(%r{b.*}, '')}.pkg"
 

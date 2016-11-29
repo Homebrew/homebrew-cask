@@ -5,7 +5,6 @@ cask 'sputnik' do
   url "http://sputnik.szwacz.com/downloads/Sputnik-v#{version}.dmg"
   name 'Sputnik'
   homepage 'http://sputnik.szwacz.com/'
-  license :gpl
 
   app 'Sputnik.app'
 end

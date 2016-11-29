@@ -5,7 +5,6 @@ cask 'modelio' do
   url "https://www.modelio.org/modelio-download-archive/doc_download/#{version.after_comma}-modelio-#{version.before_comma.no_dots}-macos-x.html"
   name 'Modelio'
   homepage 'https://www.modelio.org/'
-  license :oss
 
   app "Modelio #{version.major_minor}/modelio.app"
 

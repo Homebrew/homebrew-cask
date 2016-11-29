@@ -7,7 +7,6 @@ cask 'dogestry' do
           checkpoint: '4dfc6e34f91c83e1b780ffc13bce64201745ad98be044f2553fb7529e78cb58e'
   name 'Dogestry'
   homepage 'https://github.com/dogestry/dogestry'
-  license :mit
 
   container type: :naked
 

@@ -7,7 +7,6 @@ cask 'localizations' do
           checkpoint: '38c886eef9d1b4d396d587e3dbed037a4c5e6c7b00e34696a5024f44ef87e903'
   name 'Localizations'
   homepage 'https://github.com/athiercelin/localizations'
-  license :mit
 
   app 'Localizations.app'
 end

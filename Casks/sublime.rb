@@ -4,8 +4,7 @@ cask 'sublime' do
 
   url 'http://www.salukistudios.com/s/Sublime.zip'
   name 'Sublime'
-  homepage 'http://www.salukistudios.com/sublime/'
-  license :gratis
+  homepage 'https://www.salukistudios.com/sublime/'
 
   app 'Sublime.app'
 end

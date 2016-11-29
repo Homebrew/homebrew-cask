@@ -6,8 +6,7 @@ cask 'sysex-librarian' do
   appcast 'https://www.snoize.com/SysExLibrarian/SysExLibrarian.xml',
           checkpoint: '5932ad75281f34f7ed7dda012b8cabb61b0c9c95acf4f0429c06fdc6a41e34aa'
   name 'SysEx Librarian'
-  homepage 'https://www.snoize.com/SysExLibrarian'
-  license :bsd
+  homepage 'https://www.snoize.com/SysExLibrarian/'
 
   depends_on macos: '>= :lion'
 

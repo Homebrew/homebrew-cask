@@ -5,7 +5,6 @@ cask 'synology-cloud-station-backup' do
   url "https://global.download.synology.com/download/Tools/CloudStationBackup/#{version}/Mac/Installer/synology-cloud-station-backup-#{version.sub(%r{.*-}, '')}.dmg"
   name 'Synology Cloud Station Backup'
   homepage 'https://www.synology.com'
-  license :gratis
 
   pkg 'Install Cloud Station Backup.pkg'
 

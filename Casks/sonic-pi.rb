@@ -5,7 +5,6 @@ cask 'sonic-pi' do
   url "http://sonic-pi.net/files/releases/v#{version}/Sonic-Pi-for-Mac-v#{version}.dmg"
   name 'Sonic Pi'
   homepage 'http://sonic-pi.net/'
-  license :mit
 
   app 'Sonic Pi.app'
 end

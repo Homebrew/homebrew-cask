@@ -6,8 +6,7 @@ cask 'vlcstreamer' do
   appcast 'http://hobbyistsoftware.com/Downloads/VLCStreamer/vlcStreamerVersions.xml',
           checkpoint: '9537fb425ab6442a1ffb8166cc1040068993738204b0f9ca2bc5e0b64f9c85ca'
   name 'VLC Streamer'
-  homepage 'http://hobbyistsoftware.com/vlcstreamer'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://hobbyistsoftware.com/vlcstreamer'
 
   app 'VLCStreamer.app'
 end

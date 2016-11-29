@@ -6,8 +6,7 @@ cask 'slingshot' do
   appcast 'https://updates.airsquirrels.com/Slingshot/Mac/Slingshot.xml',
           checkpoint: 'd01e5c1777840a7dd1a87c16f640bcc12450d6ac46c3ac0bba4fdea959724ae8'
   name 'Slingshot'
-  homepage 'https://www.airsquirrels.com/slingshot/'
-  license :commercial
+  homepage 'http://www.airsquirrels.com/slingshot/'
 
   app 'Slingshot.app'
 end

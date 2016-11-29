@@ -6,7 +6,6 @@ cask 'password-gorilla' do
   url "https://gorilla.dp100.com/downloads/gorilla.mac.#{version.no_dots}.zip"
   name 'Password Gorilla'
   homepage 'https://github.com/zdia/gorilla'
-  license :gpl
 
   app 'Password Gorilla.app'
 

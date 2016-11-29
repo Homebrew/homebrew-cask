@@ -5,14 +5,13 @@ cask 'td-toolbelt' do
   url 'http://toolbelt.treasuredata.com/mac'
   name 'Treasure Data Toolbelt'
   homepage 'https://toolbelt.treasuredata.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   container type: :naked
 
   pkg 'td-toolbelt.pkg'
 
   preflight do
-    system '/bin/mv', '--', "#{staged_path}/mac", "#{staged_path}/td-toolbelt.pkg"
+    system_command '/bin/mv', args: ['--', "#{staged_path}/mac", "#{staged_path}/td-toolbelt.pkg"]
   end
 
   uninstall pkgutil: 'com.td.toolbelt'

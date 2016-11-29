@@ -6,7 +6,6 @@ cask 'visit' do
   url "https://portal.nersc.gov/project/visit/releases/#{version}/VisIt-#{version}.dmg"
   name 'VisIt'
   homepage 'https://wci.llnl.gov/simulation/computer-codes/visit'
-  license :bsd
 
   depends_on macos: '>= :mountain_lion'
 

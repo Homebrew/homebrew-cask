@@ -5,7 +5,6 @@ cask 'carmaintenance' do
   url "http://www.traxxsoftware.com/downloads/CarMaintenance_#{version.dots_to_underscores}.zip"
   name 'CarMaintenance'
   homepage 'http://www.traxxsoftware.com/download.html'
-  license :commercial
 
   depends_on macos: '>= 10.9'
 

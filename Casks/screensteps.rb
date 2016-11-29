@@ -6,7 +6,6 @@ cask 'screensteps' do
   url "https://www.bluemangolearning.com/download/screensteps/#{version.major_minor.dots_to_underscores}/beta/ScreenSteps.dmg"
   name 'ScreenSteps'
   homepage 'http://www.screensteps.com/'
-  license :commercial
 
   app 'ScreenSteps.app'
 end

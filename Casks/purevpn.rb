@@ -6,7 +6,6 @@ cask 'purevpn' do
   url 'https://s3.amazonaws.com/purevpn-dialer-assets/mac/app/purevpn_setup.dmg'
   name 'PureVPN'
   homepage 'https://www.purevpn.com/'
-  license :gratis
 
   app 'PureVPN.app'
 end

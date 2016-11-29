@@ -1,13 +1,12 @@
 cask 'wizard101' do
-  version '1.10'
-  sha256 '524694a96f33e98e6b63be1804c9fc2ad173fc324b1928b5d36dbcfe47ed8908'
+  version '1.11'
+  sha256 'd01eb59b63219ca709a704d24bc641587e1690484d0d5d29a2d83a8d40f2e8de'
 
   url 'http://versionec.us.wizard101.com//Wizard101.dmg'
   appcast 'http://versionec.us.wizard101.com//Wizard101.xml',
-          checkpoint: 'aad04168f49ab14661ac4ff399796d54095fcb2d91cf379affed3c8ccda273a5'
+          checkpoint: 'd3fc89aec186b91c8d3b01ee1152c9b7112f7638e5d7bba5ae89933ddb7e5233'
   name 'Wizard101'
   homepage 'https://www.wizard101.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Wizard101.app'
 end

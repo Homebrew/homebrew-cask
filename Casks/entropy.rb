@@ -8,7 +8,6 @@ cask 'entropy' do
           checkpoint: '37ce31b04dfe7736a4062e166c5f6d56d40a8e8a76aae070e05e9be44ffae087'
   name 'Entropy'
   homepage 'http://www.eigenlogik.com/entropy/'
-  license :commercial
 
   app 'Entropy.app'
 end

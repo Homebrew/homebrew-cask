@@ -7,7 +7,6 @@ cask 'carmetal' do
           checkpoint: '4caaf30e8385702176b6cb1358bdcb91187e3e5f9427b15f1fb661d2b13dd30f'
   name 'CaRMetal'
   homepage 'http://db-maths.nuxit.net/CaRMetal/index_en.html'
-  license :gpl
 
   app 'CaRMetal.app'
 end

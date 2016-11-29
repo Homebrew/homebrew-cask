@@ -4,8 +4,7 @@ cask 'omnidazzle' do
 
   url "http://downloads2.omnigroup.com/software/MacOSX/10.6/OmniDazzle-#{version}.dmg"
   name 'OmniDazzle'
-  homepage 'https://support.omnigroup.com/omnidazzle-troubleshooting'
-  license :gratis
+  homepage 'https://support.omnigroup.com/omnidazzle-troubleshooting/'
 
   app 'OmniDazzle.app'
 

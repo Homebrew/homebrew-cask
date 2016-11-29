@@ -7,7 +7,6 @@ cask 'alternote' do
           checkpoint: '1b523b50485c377b875d00ac3b182ed7283a27ec6c4b356e6d117def11b3c836'
   name 'Alternote'
   homepage 'http://alternoteapp.com/'
-  license :commercial
 
   app 'Alternote.app'
 

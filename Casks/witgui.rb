@@ -7,7 +7,6 @@ cask 'witgui' do
           checkpoint: 'b5ca8f503372e8bd082eb4845b69e05d877f15543f21b8957e7bce97264f0e57'
   name 'Witgui'
   homepage 'http://desairem.altervista.org/wordpress/witgui/'
-  license :gratis
 
   app 'Witgui.app'
 end

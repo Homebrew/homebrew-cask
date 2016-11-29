@@ -8,7 +8,6 @@ cask 'sigil' do
           checkpoint: 'd5436acdc8e533bc0b2aea3e30a4cffdf513ec10f21e27cd3396f839780d39e6'
   name 'Sigil'
   homepage 'https://sigil-ebook.com/'
-  license :gpl
 
   app 'Sigil.app'
 end

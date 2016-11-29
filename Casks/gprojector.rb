@@ -5,7 +5,6 @@ cask 'gprojector' do
   url "http://www.giss.nasa.gov/tools/gprojector/G.ProjectorOSX-#{version}.dmg"
   name 'G.Projector'
   homepage 'http://www.giss.nasa.gov/tools/gprojector/'
-  license :gratis
 
   app 'G.Projector.app'
 

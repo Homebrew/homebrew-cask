@@ -5,7 +5,6 @@ cask 'janusvr' do
   url 'http://www.janusvr.com/downloads/janusvr.dmg'
   name 'Janus VR'
   homepage 'http://janusvr.com/'
-  license :gratis
 
   app 'janusvr.app'
 end

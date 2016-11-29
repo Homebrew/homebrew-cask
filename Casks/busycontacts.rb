@@ -5,7 +5,6 @@ cask 'busycontacts' do
   url 'https://www.busymac.com/download/BusyContacts.zip'
   name 'BusyContacts'
   homepage 'https://www.busymac.com/busycontacts/index.html'
-  license :commercial
 
   pkg 'BusyContacts Installer.pkg'
 

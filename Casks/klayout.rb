@@ -6,7 +6,6 @@ cask 'klayout' do
   url "http://www.klayout.org/downloads/klayout-#{version}-MacOSX-Yosemite-1-Qt487mp.dmg.bz2"
   name 'KLayout'
   homepage 'http://www.klayout.de/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   suite 'KLayout'
 

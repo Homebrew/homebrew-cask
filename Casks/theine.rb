@@ -7,7 +7,6 @@ cask 'theine' do
           checkpoint: 'b45914107bffeb369f5fba2761135f9adede11e49ef0f7496f3a1e6bd1e5b8ea'
   name 'Theine'
   homepage 'https://github.com/lvillani/theine'
-  license :mit
 
   app 'Theine.app'
 end

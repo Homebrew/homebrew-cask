@@ -6,8 +6,7 @@ cask 'firetask' do
   appcast 'http://www.firetask.com/firetask-mac/updates/firetask-mac.xml',
           checkpoint: 'b9ec9115c1572cd14a8140966c30dbea1528e789b957fbfa5289683287d0cbec'
   name 'FireTask'
-  homepage 'http://firetask.com'
-  license :commercial
+  homepage 'http://firetask.com/'
 
   depends_on macos: '>= :mountain_lion'
 

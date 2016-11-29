@@ -5,8 +5,7 @@ cask 'neat' do
   # neatco.com was verified as official when first introduced to the cask
   url "http://cdn.neatco.com/Neat-#{version}-Release.dmg"
   name 'Neat for Mac'
-  homepage 'https://www.neat.com'
-  license :gratis
+  homepage 'https://www.neat.com/'
 
   pkg 'Install Neat.pkg'
 

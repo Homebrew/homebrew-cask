@@ -8,7 +8,6 @@ cask 'minizincide' do
           checkpoint: '6aae18d13995e417da3cda48e62cc6f999f6e8b7fcee6f4d2d59671276619fb1'
   name 'MiniZincIDE'
   homepage 'https://www.minizinc.org/ide/index.html'
-  license :mpl
 
   app 'MiniZincIDE.app'
 end

@@ -8,7 +8,6 @@ cask 'oolite' do
           checkpoint: '4fe29bcb8ba413dec4fdd02a53ea20ad4f8dea6aa7594b5808f2bc6562234c3d'
   name 'oolite'
   homepage 'http://www.oolite.org/'
-  license :gpl
 
   app "Oolite #{version}/Oolite.app"
 end

@@ -8,7 +8,6 @@ cask 'tvrenamer' do
           checkpoint: '2bf2f27122580b34bb9c5d1c3c06ca9d6a629e09365b4db6ad5244573a6b8c18'
   name 'TVRenamer'
   homepage 'http://tvrenamer.org/'
-  license :gpl
 
   app "TVRenamer-#{version}.app"
 

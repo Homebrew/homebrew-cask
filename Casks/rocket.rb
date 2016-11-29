@@ -6,7 +6,6 @@ cask 'rocket' do
   url 'https://dl.devmate.com/net.matthewpalmer.Rocket/Rocket.dmg'
   name 'Rocket'
   homepage 'http://matthewpalmer.net/rocket/'
-  license :freemium
 
   app 'Rocket.app'
 

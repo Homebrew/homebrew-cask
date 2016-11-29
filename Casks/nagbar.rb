@@ -5,7 +5,6 @@ cask 'nagbar' do
   url "https://sites.google.com/site/nagbarapp/NagBar-#{version}.dmg?attredirects=0&d=1"
   name 'NagBar'
   homepage 'https://sites.google.com/site/nagbarapp/home'
-  license :gratis
 
   app 'NagBar.app'
 

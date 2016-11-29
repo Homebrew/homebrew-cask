@@ -5,7 +5,6 @@ cask 'anonvpn' do
   url "https://anonvpn.io/updater/AnonVPN-MacOSX-10.7-#{version}.dmg"
   name 'AnonVPN'
   homepage 'https://anonvpn.io/'
-  license :gratis
 
   app 'AnonVPN.app'
 

@@ -7,7 +7,6 @@ cask 'betwixt' do
           checkpoint: 'aadc0f2daec367d8458d56f331b51ba89682ba2cb260b318faa73ad3d30e5f16'
   name 'Betwixt'
   homepage 'https://github.com/kdzwinel/betwixt'
-  license :mit
 
   app 'Betwixt-darwin-x64/Betwixt.app'
 

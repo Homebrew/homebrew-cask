@@ -7,7 +7,6 @@ cask 'videomonkey' do
           checkpoint: 'f048d314291a5a1c888e1ebf98a7a08c42085a6b15b72be3ea2e9375a5d8a090'
   name 'Video Monkey'
   homepage 'http://videomonkey.org/'
-  license :bsd
 
   app 'VideoMonkey.app'
 end

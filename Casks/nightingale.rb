@@ -8,7 +8,6 @@ cask 'nightingale' do
           checkpoint: '4b1ee6d24b9052faa6389f2deb6c63c05a8b544229ba72fed3de43ff59f316c8'
   name 'Nightingale'
   homepage 'https://getnightingale.com/'
-  license :oss
 
   app 'Nightingale.app'
 end

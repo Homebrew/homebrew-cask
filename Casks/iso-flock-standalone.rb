@@ -5,7 +5,6 @@ cask 'iso-flock-standalone' do
   url "http://swarms.cc/downloads/standalone/IsoFlockStandalone_#{version.no_dots}.zip"
   name 'ISO-Flock'
   homepage 'http://swarms.cc/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'ISO-Flock-Standalone.app'
 end

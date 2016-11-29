@@ -6,8 +6,7 @@ cask 'handy-outliner' do
   appcast 'https://sourceforge.net/projects/handyoutlinerfo/rss',
           checkpoint: '282f0552ceda6abaad84f75cb938aa90454a111dc309be4fb61aa493553ae99d'
   name 'HandyOutliner for DjVu and PDF'
-  homepage 'http://handyoutlinerfo.sourceforge.net'
-  license :gpl
+  homepage 'http://handyoutlinerfo.sourceforge.net/'
 
   depends_on cask:    'mono-mdk',
              formula: 'djvulibre'

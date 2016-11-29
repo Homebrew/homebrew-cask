@@ -8,7 +8,6 @@ cask 'kiwi' do
           checkpoint: '70b8a5bf1e8f8d3becd7b20c79a7a85b7b4b30729e064c6fa9f98fdea3c8bd4f'
   name 'Kiwi'
   homepage 'http://kiwi-app.net/'
-  license :commercial
 
   app 'Kiwi.app'
 end

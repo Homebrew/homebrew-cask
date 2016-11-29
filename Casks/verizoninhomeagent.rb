@@ -5,7 +5,6 @@ cask 'verizoninhomeagent' do
   url 'https://care.verizon.net/isupport_motive/iHAPkgsMac/VerizonInHomeAgentInstaller.dmg'
   name 'VerizonInHomeAgent'
   homepage 'https://care.verizon.net/iha/IHAPC.aspx'
-  license :gratis
 
   installer manual: 'VerizonInHomeAgentInstaller.app'
 

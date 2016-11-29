@@ -7,7 +7,6 @@ cask 'whatsdesktop' do
           checkpoint: '2a8b3bc900e72d9d95d0d50910ed1ad39d88a2cba0683c512dc2e41e9fe9989d'
   name 'WhatsDesktop'
   homepage 'https://github.com/mawie81/whatsdesktop'
-  license :mit
 
   app 'WhatsDesktop.app'
 end

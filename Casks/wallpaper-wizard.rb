@@ -6,7 +6,6 @@ cask 'wallpaper-wizard' do
   url 'https://dl.devmate.com/com.wallwiz/WallpaperWizard.dmg'
   name 'Wallpaper Wizard'
   homepage 'http://wallwiz.com'
-  license :freemium
 
   app 'Wallpaper Wizard.app'
 end

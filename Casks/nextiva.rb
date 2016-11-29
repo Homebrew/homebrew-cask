@@ -5,7 +5,6 @@ cask 'nextiva' do
   url "https://dm.nextiva.com/dms/bc/pc/Nextiva_App.bc-uc.osx-#{version}.dmg"
   name 'Nextiva'
   homepage 'https://www.nextiva.com/support/nextiva-app-mac-setup.html'
-  license :closed
 
   app 'Nextiva App.app'
 end

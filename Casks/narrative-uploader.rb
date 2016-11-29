@@ -1,13 +1,12 @@
 cask 'narrative-uploader' do
-  version '201510131242'
-  sha256 '1cc4cae7a1cfe43e3e35a2d49aa51a220925298f9628b2e2f84e900a1a82943b'
+  version '2.0.6'
+  sha256 'b9ada6a6ac631e14b2de24041f1e621e48a2b2a6698018eca06dc343456be8b7'
 
-  url "https://dl.getnarrative.com/appcast/osx/#{version}.zip"
+  url "https://dl.getnarrative.com/appcast/installers/NarrativeUploader_v#{version}.dmg"
   appcast 'https://dl.getnarrative.com/appcast/osx.xml',
-          checkpoint: 'db3fe560e55b1735cfeb457552ec724d95c75b72699bb28e2590c12b58972919'
+          checkpoint: '2f8a198d12ccc1476ea2c164015412fc6f56c3017baa6b794e243e9da925ab2a'
   name 'Narrative Uploader'
-  homepage 'https://getnarrative.com/'
-  license :gratis
+  homepage 'http://getnarrative.com/'
 
   app 'Narrative Uploader.app'
 end

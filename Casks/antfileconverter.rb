@@ -5,7 +5,6 @@ cask 'antfileconverter' do
   url "http://www.laurenceanthony.net/software/antfileconverter/releases/AntFileConverter#{version.no_dots}/AntFileConverter.zip"
   name 'AntFileConverter'
   homepage 'http://www.laurenceanthony.net/software/antfileconverter/'
-  license :gratis
 
   app 'AntFileConverter.app'
 end

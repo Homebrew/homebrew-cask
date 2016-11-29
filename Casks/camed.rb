@@ -7,7 +7,6 @@ cask 'camed' do
           checkpoint: '1ec7ebc109fd8ebeb0e49f53a3339ef217e926b986ba48fe6d1ac76fc0f4787e'
   name 'CAM Editor'
   homepage 'http://camprocessor.sourceforge.net/'
-  license :oss
 
   app "CAMEd-#{version}/CAMed.app"
 end

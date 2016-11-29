@@ -5,7 +5,6 @@ cask 'netgeargenie' do
   url 'http://updates1.netgear.com/netgeargenie/mac/update/NETGEARGenieInstaller.dmg'
   name 'NETGEARGenie'
   homepage 'https://www.netgear.com/home/discover/apps/genie.aspx'
-  license :gratis
 
   pkg "NETGEAR_Genie_Installer_#{version}.pkg"
 

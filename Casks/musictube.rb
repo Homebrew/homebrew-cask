@@ -7,7 +7,6 @@ cask 'musictube' do
           checkpoint: '979ab554fea8ee4d2d66063f2ad49645dde118e2a1ecea7935c64f034883424d'
   name 'Musictube'
   homepage 'http://flavio.tordini.org/musictube'
-  license :commercial
 
   app 'Musictube.app'
 end

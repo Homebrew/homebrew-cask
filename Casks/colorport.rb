@@ -4,8 +4,7 @@ cask 'colorport' do
 
   url 'http://www.xrite.com/downloader.aspx?FileID=1168&Type=M&returnurl=%2fcolorport-utility-software%2fsupport%2fd1168'
   name 'ColorPort Utility Software'
-  homepage 'https://www.xrite.com/colorport-utility-software/support/d1168'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'http://www.xrite.com/colorport-utility-software/support/d1168'
 
   pkg "ColorPort#{version.sub(%r{^(\d+)\.(\d+).*}, '\1\2')}Distribution.mpkg"
 

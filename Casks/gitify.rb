@@ -7,7 +7,6 @@ cask 'gitify' do
           checkpoint: '793158faf626b7fff00df7204b0b8061fc6128384be82d7e2bdf5556d89e2276'
   name 'Gitify'
   homepage 'https://github.com/manosim/gitify'
-  license :oss
 
   app 'Gitify.app'
 end

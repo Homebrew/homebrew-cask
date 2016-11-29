@@ -7,7 +7,6 @@ cask 'tomahawk' do
           checkpoint: 'a2c6432ac6479a859f51aae60e6e0eb6371b6274e89d272c3b9e05b4a39c89a1'
   name 'Tomahawk'
   homepage 'https://www.tomahawk-player.org/'
-  license :gpl
 
   app 'Tomahawk.app'
 end

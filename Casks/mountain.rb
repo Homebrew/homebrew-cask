@@ -7,7 +7,6 @@ cask 'mountain' do
           checkpoint: '26376efb3510b4804c540a105616362ae6fc009dd1aa85f99ea943bb27e88945'
   name 'Mountain'
   homepage 'https://appgineers.de/mountain/'
-  license :commercial
 
   depends_on macos: '>= :snow_leopard'
 

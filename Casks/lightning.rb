@@ -5,7 +5,6 @@ cask 'lightning' do
   url "http://downloads.filewave.com/lightning/FileWave_Lightning-#{version}.dmg"
   name 'FileWave Lightning'
   homepage 'https://www.filewave.com/products/imaging/lightning-thunderbolt'
-  license :gratis
 
   depends_on macos: '>= :lion'
 

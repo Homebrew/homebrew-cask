@@ -7,7 +7,6 @@ cask 'app-tamer' do
           checkpoint: '38cb483b444cc13cb1743f427b9bb6a2abb91fb8a5e00365402d4c5ccdb32553'
   name 'AppTamer'
   homepage 'https://www.stclairsoft.com/AppTamer/'
-  license :commercial
 
   app 'App Tamer.app'
 end

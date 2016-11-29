@@ -7,7 +7,6 @@ cask 'password-practice' do
           checkpoint: 'b203acfca9fc92751c37696198b7af8606047f2cbae6dabb19aefb4ff846ad54'
   name 'Password Practice'
   homepage 'https://mrgeckosmedia.com/applications/info/PasswordPractice'
-  license :public_domain
 
   app 'Password Practice.app'
 end

@@ -6,7 +6,6 @@ cask 'nally' do
   url "https://yllan.github.com/nally/download/Nally-#{version}.app.zip"
   name 'Nally'
   homepage 'http://yllan.org/app/Nally/'
-  license :gpl
 
   app 'Nally.app'
 end

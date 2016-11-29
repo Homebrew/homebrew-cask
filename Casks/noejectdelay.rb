@@ -5,7 +5,6 @@ cask 'noejectdelay' do
   url "https://pqrs.org/osx/karabiner/files/NoEjectDelay-#{version}.dmg"
   name 'NoEjectDelay'
   homepage 'https://pqrs.org/osx/karabiner/noejectdelay.html.en'
-  license :public_domain
 
   pkg 'NoEjectDelay.sparkle_guided.pkg'
 

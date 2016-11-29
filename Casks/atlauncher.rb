@@ -5,7 +5,6 @@ cask 'atlauncher' do
   url 'https://www.atlauncher.com/download/zip'
   name 'ATLauncher'
   homepage 'https://www.atlauncher.com/'
-  license :gpl
 
   app 'ATLauncher.app'
 end

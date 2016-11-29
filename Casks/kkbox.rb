@@ -5,7 +5,6 @@ cask 'kkbox' do
   url "https://download.kkbox.com/files/KKBOX-#{version}.dmg"
   name 'KKBOX'
   homepage 'https://www.kkbox.com/'
-  license :commercial
 
   app 'KKBOX.app'
 end

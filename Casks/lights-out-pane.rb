@@ -8,7 +8,6 @@ cask 'lights-out-pane' do
           checkpoint: '75854d32af21716adf8b5fe34b0ae4a4ab80f457dc7c0671976fe1622de5dd70'
   name 'Lights Out'
   homepage 'https://samturner.github.io/lights-out/'
-  license :gpl
 
   prefpane 'lights-out.prefPane'
 end

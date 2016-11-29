@@ -8,7 +8,6 @@ cask 'colour-contrast-analyser' do
           checkpoint: '0ecc055439e78cedf4195b8c810b30bf8a9e59db0fe36e3292d532b0ffeb9c15'
   name 'Colour Contrast Analyser'
   homepage 'https://www.paciellogroup.com/resources/contrastanalyser/'
-  license :gpl
 
   app 'Colour Contrast Analyser.app'
 end

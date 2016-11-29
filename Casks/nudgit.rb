@@ -5,7 +5,6 @@ cask 'nudgit' do
   url "http://nudg.it/nudg.it%20#{version}.zip"
   name 'Nudg.it'
   homepage 'http://nudg.it/'
-  license :gratis
 
   app "nudgit #{version}/nudg.it.app"
 end

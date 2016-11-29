@@ -4,8 +4,9 @@ cask 'sonos' do
 
   url 'http://www.sonos.com/redir/controller_software_mac'
   name 'Sonos'
-  homepage 'https://www.sonos.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'http://www.sonos.com/'
+
+  auto_updates true
 
   app 'Sonos.app'
 end

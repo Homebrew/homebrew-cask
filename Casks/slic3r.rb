@@ -5,7 +5,6 @@ cask 'slic3r' do
   url "http://dl.slic3r.org/mac/slic3r-osx-uni-#{version.dots_to_hyphens}-stable.dmg"
   name 'Slic3r'
   homepage 'http://slic3r.org/'
-  license :affero
 
   app 'Slic3r.app'
 end

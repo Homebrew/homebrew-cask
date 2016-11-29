@@ -4,8 +4,7 @@ cask 'lightkey' do
 
   url "http://lightkeyapp.com/content/06-download/Lightkey-#{version.dots_to_hyphens}/LightkeyInstaller.zip"
   name 'Lightkey'
-  homepage 'http://lightkeyapp.com'
-  license :commercial
+  homepage 'http://lightkeyapp.com/'
 
   pkg 'LightkeyInstaller.pkg'
 
@@ -16,4 +15,8 @@ cask 'lightkey' do
                        'de.monospc.lightkey.pkg.Velleman',
                        'de.monospc.lightkey.pkg.documentation',
                      ]
+
+  zap pkgutil: [
+                 'com.FTDI.ftdiusbserialdriverinstaller.FTDIUSBSerialDriver.pkg',
+               ]
 end

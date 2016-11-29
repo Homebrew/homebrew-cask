@@ -7,7 +7,6 @@ cask 'adium' do
           checkpoint: 'c0e7148f802efc6a1d255c420ec386c7de1fd1f4cd096970986a8bf891c5f342'
   name 'Adium'
   homepage 'https://www.adium.im/'
-  license :gpl
 
   app 'Adium.app'
 

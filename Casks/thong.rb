@@ -6,7 +6,6 @@ cask 'thong' do
   url "https://fousa-apps.s3.amazonaws.com/thong/thong-#{version}.dmg"
   name 'Thong'
   homepage 'http://thong.fousa.be/'
-  license :mit
 
   qlplugin 'Thong.qlgenerator'
 end

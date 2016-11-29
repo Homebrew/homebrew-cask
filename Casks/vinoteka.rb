@@ -7,7 +7,6 @@ cask 'vinoteka' do
           checkpoint: '7e65d66ceafa9deb3af5758197ede0f893b2858b1dd9272e870b64a24c887842'
   name 'Vinoteka'
   homepage 'https://www.vinotekasoft.com/'
-  license :commercial
 
   app 'Vinoteka.app'
 end

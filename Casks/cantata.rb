@@ -7,7 +7,6 @@ cask 'cantata' do
           checkpoint: 'd9e69862c6f41763941f2c74d365fb0a3a2f2a45efeae96f87699a3bfac0a8c7'
   name 'Cantata'
   homepage 'https://github.com/cdrummond/cantata'
-  license :gpl
 
   app 'Cantata.app'
 end

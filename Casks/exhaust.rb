@@ -7,7 +7,6 @@ cask 'exhaust' do
           checkpoint: '4ea1ee5c48ed7cd2934e7bd06f1b98f50dec07a31ccb5ed01874ba696470b4de'
   name 'Exhaust'
   homepage 'https://mrgeckosmedia.com/applications/info/Exhaust'
-  license :oss
 
   app 'Exhaust/Exhaust.app'
 end

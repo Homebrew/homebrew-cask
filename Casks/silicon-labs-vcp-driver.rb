@@ -6,7 +6,6 @@ cask 'silicon-labs-vcp-driver' do
   name 'Silicon Labs VCP Driver'
   name 'CP210x USB to UART Bridge VCP Driver'
   homepage 'https://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx'
-  license :gratis
 
   pkg 'Silicon Labs VCP Driver.pkg'
 

@@ -7,7 +7,6 @@ cask 'santa' do
           checkpoint: '3f49b3bbb7ff12b9a98741538152e59d210f4931df6e4bfb1677666de6b9351e'
   name 'Santa'
   homepage 'https://github.com/google/santa'
-  license :apache
 
   pkg "santa-#{version}.pkg"
 

@@ -8,7 +8,6 @@ cask 'lightpaper' do
           checkpoint: '82bbbb41cd12179fd15583927586a2a4a60d0237be095f30c795aad9a7aa85cd'
   name 'LightPaper'
   homepage 'http://lightpaper.42squares.in/'
-  license :commercial
 
   app 'LightPaper.app'
 end

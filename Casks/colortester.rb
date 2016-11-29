@@ -6,7 +6,6 @@ cask 'colortester' do
   url 'https://www.alfasado.co.jp/download/ColorTester_Mac.zip'
   name 'ColorTester'
   homepage 'https://alfasado.net/apps/colortester.html'
-  license :gratis
 
   app 'ColorTester/ColorTester.app'
 

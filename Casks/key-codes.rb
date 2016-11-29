@@ -7,7 +7,6 @@ cask 'key-codes' do
           checkpoint: 'c83453117309b3ee87694a729ce8ff72bb2d862fd33054fa8916af01e1a0adaa'
   name 'Key Codes'
   homepage 'https://manytricks.com/keycodes/'
-  license :gratis
 
   auto_updates true
 

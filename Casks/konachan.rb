@@ -7,7 +7,6 @@ cask 'konachan' do
           checkpoint: '687d4c8001201a585bf1c871deca020c61cd9dd805fb9341c2bf47a37fe3a2ac'
   name 'Konachan'
   homepage 'https://github.com/yaqinking/Konachan'
-  license :mit
 
   app 'Konachan.app'
 end

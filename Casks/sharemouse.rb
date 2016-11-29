@@ -5,7 +5,6 @@ cask 'sharemouse' do
   url 'http://www.keyboard-and-mouse-sharing.com/ShareMouseSetup.dmg'
   name 'ShareMouse'
   homepage 'http://www.keyboard-and-mouse-sharing.com/'
-  license :closed
 
   app 'ShareMouse.app'
 end

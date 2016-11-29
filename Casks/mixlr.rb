@@ -4,8 +4,7 @@ cask 'mixlr' do
 
   url 'http://cdn.mixlr.com/Mixlr.dmg'
   name 'Mixlr'
-  homepage 'https://mixlr.com/'
-  license :gratis
+  homepage 'http://mixlr.com/'
 
   app 'Mixlr.app'
 end

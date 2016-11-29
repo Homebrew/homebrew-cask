@@ -5,7 +5,6 @@ cask 'katana' do
   url 'http://download.witiz.com/Katana.zip'
   name 'Katana'
   homepage 'http://katana.witiz.com/'
-  license :commercial
 
   app 'Katana.app'
 end

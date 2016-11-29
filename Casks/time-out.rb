@@ -6,14 +6,13 @@ cask 'time-out' do
     version '1.7.1'
     sha256 '3c9892344c8313b8ccf0a76cceb00834ddbe26e5114bcd674c4fd53aeb44e310'
   else
-    version '2.0.2'
-    sha256 'f28b6cf73fc51801495b75e94108969700d06492d81d17ba7244040c251182cc'
+    version '2.1'
+    sha256 'ed3045c94b12ac7b6dfe6f4ee0f1b8ba1e2251d5e89b0afb25db913dc7a30609'
   end
 
   url "http://www.dejal.com/download/timeout-#{version}.zip"
   name 'Time Out'
   homepage 'http://www.dejal.com/timeout/'
-  license :gratis
 
   app 'Time Out.app'
 end

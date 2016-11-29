@@ -8,7 +8,6 @@ cask 'restool' do
           checkpoint: 'a6287fdb9b482425d972a87911fcbe7a80bc6097b15ccca065f9a3daf60d74e7'
   name 'RESTool'
   homepage 'https://nikola-k.github.io/RESTool/'
-  license :apache
 
   app 'RESTool.app'
 end

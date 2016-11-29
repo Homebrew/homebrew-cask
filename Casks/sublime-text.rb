@@ -7,8 +7,8 @@ cask 'sublime-text' do
           checkpoint: '34717c4ad8bc4fd51b211effcc67fb84a04acff65126a77ba9789811659cb6d6'
   name 'Sublime Text'
   homepage 'https://www.sublimetext.com/3'
-  license :closed
 
+  auto_updates true
   conflicts_with cask: 'caskroom/versions/sublime-text-dev'
 
   app 'Sublime Text.app'

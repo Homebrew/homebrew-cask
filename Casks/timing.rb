@@ -5,7 +5,6 @@ cask 'timing' do
   url 'https://timingapp.com/download/Timing.app.zip'
   name 'Timing'
   homepage 'https://timingapp.com/'
-  license :unknown
 
   app 'Timing.app'
 end

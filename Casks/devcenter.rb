@@ -4,8 +4,7 @@ cask 'devcenter' do
 
   url "https://downloads.datastax.com/devcenter/DevCenter-#{version}-macosx-x86_64.tar.gz"
   name 'DataStax DevCenter'
-  homepage 'https://www.datastax.com/what-we-offer/products-services/devcenter'
-  license :gratis
+  homepage 'https://www.datastax.com/products/datastax-devcenter-and-development-tools'
 
   suite 'DevCenter'
 end

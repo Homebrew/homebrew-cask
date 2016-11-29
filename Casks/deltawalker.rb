@@ -5,8 +5,7 @@ cask 'deltawalker' do
   # amazonaws.com/deltawalker was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/deltawalker/DeltaWalker-#{version}_64.dmg"
   name 'DeltaWalker'
-  homepage 'http://www.deltawalker.com/'
-  license :commercial
+  homepage 'https://www.deltawalker.com/'
 
   depends_on macos: '>= :tiger'
 

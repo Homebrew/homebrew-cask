@@ -8,7 +8,6 @@ cask 'aquamacs' do
           checkpoint: 'ee0238e8727aac3b9438e9ab6b688ac3dfd22f1646434ea5c9c5bb462660f8d1'
   name 'Aquamacs'
   homepage 'http://aquamacs.org/'
-  license :gpl
 
   app 'Aquamacs.app'
 

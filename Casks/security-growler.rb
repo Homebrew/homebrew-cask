@@ -7,7 +7,6 @@ cask 'security-growler' do
           checkpoint: 'f871b12f5e054e01460055a896e6fce7117c2c647b5cfef8acd7a1ae39ec25be'
   name 'Security Growler'
   homepage 'https://github.com/pirate/security-growler'
-  license :public_domain
 
   depends_on macos: '>= :mountain_lion'
 

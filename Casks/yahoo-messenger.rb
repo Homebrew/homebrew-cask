@@ -6,7 +6,6 @@ cask 'yahoo-messenger' do
   url "https://s.yimg.com/jd/desktop/#{version}/yahoo-messenger-#{version}-osx.zip"
   name 'Yahoo Messenger'
   homepage 'https://messenger.yahoo.com'
-  license :gratis
 
   app 'Yahoo Messenger.app'
 end

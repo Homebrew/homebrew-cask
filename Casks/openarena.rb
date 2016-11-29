@@ -4,8 +4,7 @@ cask 'openarena' do
 
   url 'http://openarena.ws/request.php?4'
   name 'OpenArena'
-  homepage 'http://openarena.ws'
-  license :gpl
+  homepage 'http://openarena.ws/smfnews.php'
 
   app "openarena-#{version}/OpenArena.app"
 

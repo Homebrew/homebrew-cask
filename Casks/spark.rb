@@ -5,7 +5,6 @@ cask 'spark' do
   url 'https://www.shadowlab.org/softwares/Spark/Spark.zip'
   name 'Spark'
   homepage 'https://www.shadowlab.org/softwares/spark.php'
-  license :mit
 
   app 'Spark.app'
 

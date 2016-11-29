@@ -6,7 +6,6 @@ cask 'firestr' do
   name 'Firestar'
   name 'Fire★'
   homepage 'https://mempko.com/firestr/firestr.html'
-  license :gpl
 
   app 'Firestr.app'
 end

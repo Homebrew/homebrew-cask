@@ -6,8 +6,7 @@ cask 'sleep-monitor' do
   appcast 'https://version.dssw.co.uk/sleepmonitor/standard',
           checkpoint: 'ce2f60062ef44a4e9ca411b903641bbc5b08568f6418a10c79f7409191fcd60f'
   name 'Sleep Monitor'
-  homepage 'https://www.dssw.co.uk/sleepmonitor'
-  license :commercial
+  homepage 'https://www.dssw.co.uk/sleepmonitor/'
 
   app 'Sleep Monitor.app'
 end

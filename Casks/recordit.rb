@@ -7,7 +7,12 @@ cask 'recordit' do
           checkpoint: '2700c9a93af7e06acf5541a6598b46e6d325d0c4c2702c5e7f2ce81bd3a6efe1'
   name 'RecordIt'
   homepage 'http://recordit.co/'
-  license :gratis
 
   app 'RecordIt.app'
+
+  zap delete: [
+                '~/Library/Application Support/Recordit',
+                '~/Library/Caches/us.freshout.RecordIt',
+                '~/Library/Preferences/us.freshout.RecordIt.plist',
+              ]
 end

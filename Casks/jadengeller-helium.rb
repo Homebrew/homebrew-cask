@@ -7,8 +7,7 @@ cask 'jadengeller-helium' do
   appcast 'https://github.com/JadenGeller/Helium/releases.atom',
           checkpoint: '875fb1cb7c6e18a330338c90a6cbabda82896e1e3699e2b8713c36fa073aa075'
   name 'Helium'
-  homepage 'https://jadengeller.github.io/Helium/'
-  license :mit
+  homepage 'http://heliumfloats.com/'
 
   app 'Helium.app'
 end

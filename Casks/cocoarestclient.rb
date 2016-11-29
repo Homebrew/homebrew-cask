@@ -8,7 +8,6 @@ cask 'cocoarestclient' do
           checkpoint: 'f9fcdcf9587014c022ca8c3bcda38d9ebd7efadd89ca625f9489e1273e8c68ee'
   name 'CocoaRestClient'
   homepage 'https://mmattozzi.github.io/cocoa-rest-client/'
-  license :bsd
 
   app 'CocoaRestClient.app'
 end

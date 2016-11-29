@@ -6,7 +6,6 @@ cask 'calcservice' do
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/freeware/calcservice/#{version}/CalcService.zip"
   name 'CalcService'
   homepage 'http://www.devontechnologies.com/products/freeware.html#c1111'
-  license :gratis
 
   app 'CalcService.app'
 end

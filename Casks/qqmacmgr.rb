@@ -5,7 +5,6 @@ cask 'qqmacmgr' do
   url "http://dlied6.qq.com/invc/xfspeed/mac/verupdate/QQMacMgr_#{version}.dmg"
   name '腾讯电脑管家'
   homepage 'http://mac.gj.qq.com/'
-  license :gratis
 
   app 'QQMacMgr.app'
 end

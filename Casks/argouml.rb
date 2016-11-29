@@ -5,7 +5,6 @@ cask 'argouml' do
   url "http://argouml-downloads.tigris.org/nonav/argouml-#{version}/ArgoUML-#{version}.app.tar.gz"
   name 'ArgoUML'
   homepage 'http://argouml.tigris.org/'
-  license :oss
 
   app 'ArgoUML.app'
 

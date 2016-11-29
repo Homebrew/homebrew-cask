@@ -5,7 +5,6 @@ cask 'google-earth' do
   url 'https://dl.google.com/earth/client/advanced/current/GoogleEarthMac-Intel.dmg'
   name 'Google Earth'
   homepage 'https://www.google.com/earth/'
-  license :gratis
 
   pkg 'Install Google Earth.pkg'
 

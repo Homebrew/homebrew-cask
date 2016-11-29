@@ -13,7 +13,6 @@ cask 'maintenance' do
 
   name 'Maintenance'
   homepage 'http://www.titanium.free.fr/maintenance.html'
-  license :gratis
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
   depends_on macos: [
@@ -25,6 +24,7 @@ cask 'maintenance' do
                       :mavericks,
                       :yosemite,
                       :el_capitan,
+                      :sierra,
                     ]
 
   app 'Maintenance.app'

@@ -7,7 +7,6 @@ cask 'soundflowerbed' do
           checkpoint: '2b823e11493170b24d4542d396c8f964792fa951b24443559a31141bb2b14a42'
   name 'SoundflowerBed'
   homepage 'https://github.com/mLupine/SoundflowerBed'
-  license :mit
 
   app 'SoundflowerBed.app'
 end

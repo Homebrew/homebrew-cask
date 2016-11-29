@@ -7,7 +7,6 @@ cask 'machg' do
           checkpoint: 'ced63dd31eb43a5e633c300d344cdea5cd15a01a539bceb6b1bcc3599581ffec'
   name 'MacHg'
   homepage 'http://jasonfharris.com/machg/'
-  license :bsd
 
   app 'MacHg.app'
 end

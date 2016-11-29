@@ -5,7 +5,6 @@ cask 'scilab' do
   url "https://www.scilab.org/download/#{version}/scilab-#{version}-x86_64_yosemite.dmg"
   name 'Scilab'
   homepage 'https://www.scilab.org'
-  license :gpl
 
   app "scilab-#{version}.app"
 end

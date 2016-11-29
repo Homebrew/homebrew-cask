@@ -7,7 +7,6 @@ cask 'honer' do
           checkpoint: '7a17fbf398d822447d22a13f3aae9a7420ade9e7e47f6d6a20aaa38b4b73c42c'
   name 'Honer'
   homepage 'https://github.com/puffnfresh/Honer.app'
-  license :mit
 
   app 'Honer.app'
 end

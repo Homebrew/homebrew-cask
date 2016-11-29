@@ -7,7 +7,6 @@ cask 'colorschemer-studio' do
           checkpoint: '8faf423e6e94caef34de09fc83c720ef2473d1a37bf4777a95717a814f73a722'
   name 'ColorSchemer Studio'
   homepage 'https://www.colorschemer.com'
-  license :commercial
 
   app "ColorSchemer Studio #{version.major}.app"
 end

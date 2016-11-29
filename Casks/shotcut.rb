@@ -8,7 +8,6 @@ cask 'shotcut' do
           checkpoint: '779aed1d63fae54c2801da15a9993d598e9cf7815b9328995ebbe1dac8debc66'
   name 'Shotcut'
   homepage 'https://www.shotcut.org/'
-  license :gpl
 
   app 'Shotcut.app'
 end

@@ -8,7 +8,6 @@ cask 'diashapes' do
           checkpoint: '83b29a472a6859e5ed836161348f8279fcc5fc5ab17987ac9d0a6f5424519fe8'
   name 'Dia'
   homepage 'http://dia-installer.de/'
-  license :gpl
 
   app 'Diashapes.app'
 end

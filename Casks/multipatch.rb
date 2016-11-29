@@ -5,7 +5,6 @@ cask 'multipatch' do
   url "http://projects.sappharad.com/tools/multipatch#{version.no_dots}.zip"
   name 'MultiPatch'
   homepage 'http://projects.sappharad.com/tools/multipatch.html'
-  license :gpl
 
   app 'MultiPatch/MultiPatch.app'
 end

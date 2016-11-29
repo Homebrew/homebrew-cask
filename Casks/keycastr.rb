@@ -7,7 +7,6 @@ cask 'keycastr' do
           checkpoint: '3faa2926353705ebb671d2920c782c287f902d566af93f3ba54b8b71220de7d2'
   name 'KeyCastr'
   homepage 'https://github.com/keycastr/keycastr'
-  license :bsd
 
   accessibility_access true
 

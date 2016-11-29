@@ -7,7 +7,6 @@ cask 'accessmenubarapps' do
           checkpoint: '9e9937691350f21a7f51543e2c93fc1feca6c38ca57036b719220b731180a745'
   name 'AccessMenuBarApps'
   homepage 'http://www.ortisoft.de/accessmenubarapps/'
-  license :gratis
 
   app 'AccessMenuBarApps.app'
 end

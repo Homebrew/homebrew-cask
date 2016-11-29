@@ -7,7 +7,6 @@ cask 'emojify' do
           checkpoint: 'd19588f51bfb615eb77bead4deb04eb8871dc320bc3d934538f52d212f394ad1'
   name 'Emojify Service'
   homepage 'https://github.com/Haroenv/emojify-service'
-  license :apache
 
   service "emojify-service-#{version}/Emojify.workflow"
 end

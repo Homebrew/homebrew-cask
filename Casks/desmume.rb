@@ -7,7 +7,6 @@ cask 'desmume' do
           checkpoint: '996ce5b97e3b872cd79f4b5b7ba14f90468d2f421f4d981b4eff049d026b378a'
   name 'DeSmuME'
   homepage 'https://sourceforge.net/projects/desmume/'
-  license :gpl
 
   app 'DeSmuME.app'
 end

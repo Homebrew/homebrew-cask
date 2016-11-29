@@ -5,7 +5,6 @@ cask 'sharetool' do
   url "https://files.bainsware.com/sharetool_#{version.no_dots}.dmg"
   name 'ShareTool'
   homepage 'https://www.bainsware.com'
-  license :gratis
 
   app 'ShareTool.app'
 end

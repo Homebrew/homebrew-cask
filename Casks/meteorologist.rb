@@ -7,7 +7,6 @@ cask 'meteorologist' do
           checkpoint: 'ba67de4b213d4ddb1966829195c729f429c0e07774834429c4a11e87113f78f5'
   name 'Meteorologist'
   homepage 'http://heat-meteo.sourceforge.net/'
-  license :oss
 
   app 'Meteorologist.app'
 end

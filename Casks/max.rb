@@ -7,7 +7,6 @@ cask 'max' do
           checkpoint: 'da0e3f2c4da860454e69657f5cbdf7b7866a68fa26cd456ae844e535981a4bc6'
   name 'Max'
   homepage 'https://sbooth.org/Max/'
-  license :gpl
 
   app "Max-#{version}/Max.app"
 end

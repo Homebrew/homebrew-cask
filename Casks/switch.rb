@@ -5,7 +5,6 @@ cask 'switch' do
   url 'http://www.nch.com.au/components/switchmaci.zip'
   name 'Switch Audio Converter'
   homepage 'http://www.nch.com.au/switch/'
-  license :closed
 
   app 'Switch.app'
 end

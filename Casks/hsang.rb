@@ -6,7 +6,6 @@ cask 'hsang' do
   url "http://nie.gdl.netease.com/lushi/HSAng_#{version}.dmg"
   name 'HSAng'
   homepage 'http://lushi.163.com/'
-  license :gratis
 
   app 'HSAng.app'
 end

@@ -5,7 +5,6 @@ cask 'free-download-manager' do
   url "http://files2.freedownloadmanager.org/#{version.major}/#{version.major_minor}-latest/fdm.dmg"
   name 'Free Download Manager'
   homepage 'http://www.freedownloadmanager.org/landing5.htm'
-  license :gratis
 
   app 'Free Download Manager.app'
 end

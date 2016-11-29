@@ -5,7 +5,6 @@ cask 'sticker' do
   url 'http://www.chompstomp.com/uploads/2/9/4/0/29406957/sticker.zip'
   name 'Sticker Window manager'
   homepage 'http://www.chompstomp.com/sticker.html'
-  license :commercial
 
   app 'Sticker.app'
 end

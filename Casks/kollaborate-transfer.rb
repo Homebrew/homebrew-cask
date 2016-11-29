@@ -6,7 +6,6 @@ cask 'kollaborate-transfer' do
   url "http://www.digitalrebellion.com/download/kollabtransfer?version=#{version.no_dots}"
   name 'Kollaborate Transfer'
   homepage 'https://www.kollaborate.tv/resources'
-  license :gratis
 
   app 'Kollaborate Transfer.app'
 

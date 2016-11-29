@@ -7,7 +7,6 @@ cask 'handbrakebatch' do
           checkpoint: 'bf889f0a8523ddef97552e1e07fa75e6641aa1190383e065f89337fad1a3cc53'
   name 'HandBrakeBatch'
   homepage 'https://www.osomac.com/apps/osx/handbrake-batch/'
-  license :gpl
 
   app 'HandBrakeBatch.app'
 

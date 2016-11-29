@@ -4,8 +4,7 @@ cask 'codelite' do
 
   url 'http://downloads.codelite.org/downloads.php?osx'
   name 'CodeLite'
-  homepage 'http://codelite.org'
-  license :gpl
+  homepage 'https://codelite.org/'
 
   depends_on macos: '>= :mountain_lion'
 

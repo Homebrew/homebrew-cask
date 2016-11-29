@@ -5,7 +5,6 @@ cask 'uberpov' do
   url "http://megapov.inetart.net/povrayunofficial_mac/uberpov_downloads/Uberpov_Mac_r#{version.major}.zip"
   name 'UberPOV'
   homepage 'http://megapov.inetart.net/povrayunofficial_mac/uberpov.html'
-  license :affero
 
   app 'Uberpov_Mac/UberPOV.app'
 

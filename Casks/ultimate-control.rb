@@ -5,7 +5,6 @@ cask 'ultimate-control' do
   url "http://www.negusoft.com/downloads/ultimate_control_v#{version}_mac.dmg"
   name 'NEGU Soft Ultimate Control'
   homepage 'http://www.negusoft.com/index.php/ultimate-control'
-  license :mpl
 
   app 'Ultimate Control.app'
 end

@@ -5,7 +5,6 @@ cask 'deluge' do
   url "http://download.deluge-torrent.org/mac_osx/deluge-#{version}-osx-x64-0.dmg"
   name 'Deluge'
   homepage 'http://deluge-torrent.org/'
-  license :gpl
 
   app 'Deluge.app'
 end

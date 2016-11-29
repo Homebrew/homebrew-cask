@@ -7,7 +7,6 @@ cask 'windownaut' do
           checkpoint: '7e59e49790e17dc4af136ecf32610d71e7a87e690378f1b24817df70f82def15'
   name 'Windownaut'
   homepage 'http://www.binarybakery.com/aprod/windownaut.html'
-  license :commercial
 
   app 'Windownaut.app'
 end

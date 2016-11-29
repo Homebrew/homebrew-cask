@@ -8,7 +8,6 @@ cask 'medis' do
           checkpoint: '206fef0808fa2ddef710f8e61e4cebce087266ce00568563693505af88df84e5'
   name 'Medis'
   homepage 'http://getmedis.com/'
-  license :mit
 
   app 'Medis.app'
 end

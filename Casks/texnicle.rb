@@ -7,7 +7,6 @@ cask 'texnicle' do
           checkpoint: '1d8e0e6d597e2aa6fd52ad15c3f5ff7c7420a447340e60dab126044f39b9864e'
   name 'TeXnicle'
   homepage 'http://www.bobsoft-mac.de/texnicle/texnicle.html'
-  license :gratis
 
   app 'TeXnicle.app'
 end

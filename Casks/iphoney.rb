@@ -4,8 +4,7 @@ cask 'iphoney' do
 
   url "https://download.marketcircle.com/s3/iPhoney_#{version}.zip"
   name 'iPhoney'
-  homepage 'https://www.marketcircle.com/iphoney'
-  license :gpl
+  homepage 'https://www.marketcircle.com/iphoney/'
 
   app 'iPhoney.app'
 end

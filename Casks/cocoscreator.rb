@@ -5,7 +5,6 @@ cask 'cocoscreator' do
   url "http://cdn.cocos2d-x.org/CocosCreator_v#{version}.dmg"
   name 'CocosCreator'
   homepage 'http://www.cocos2d-x.org/'
-  license :mit
 
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/cocos.wrapper.sh"

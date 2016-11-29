@@ -6,7 +6,6 @@ cask 'pdfexpert' do
   url 'https://readdle-test-binaries.s3.amazonaws.com/release/PDFExpert.dmg'
   name 'PDF Expert'
   homepage 'https://pdfexpert.com/'
-  license :commercial
 
   app 'PDF Expert.app'
 end

@@ -6,7 +6,6 @@ cask 'softorino-youtube-converter' do
   url 'https://dl.devmate.com/com.softorino.converter/SoftorinoConverter.dmg'
   name 'Softorino YouTube Converter'
   homepage 'https://softorino.com/youtube-converter'
-  license :gratis
 
   app 'Softorino YouTube Converter.app'
 end

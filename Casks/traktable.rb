@@ -8,7 +8,6 @@ cask 'traktable' do
           checkpoint: 'ed5ed4c4b7c56e4a348823f162e8d23fb9f4395a0d456ca2ea8fe36b9e7e8d6e'
   name 'Traktable'
   homepage 'https://yo-han.github.io/Traktable/'
-  license :oss
 
   app 'Traktable.app'
 end

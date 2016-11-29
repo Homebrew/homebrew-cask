@@ -7,7 +7,8 @@ cask 'github-desktop' do
           checkpoint: 'b6482e6fe6594a1a9aad10b645fc551c9e16d0cd8deb4cedbfca6adaae43f1c2'
   name 'GitHub Desktop'
   homepage 'https://desktop.github.com/'
-  license :gratis
+
+  auto_updates true
 
   app 'GitHub Desktop.app'
   binary "#{appdir}/GitHub Desktop.app/Contents/MacOS/github_cli", target: 'github'
@@ -25,6 +26,7 @@ cask 'github-desktop' do
                 '~/Library/Application Support/GitHub for Mac',
                 '~/Library/Application Support/ShipIt_stderr.log',
                 '~/Library/Application Support/ShipIt_stdout.log',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.github.sfl',
                 '~/Library/Application Support/com.github.GitHub',
                 '~/Library/Application Support/com.github.GitHub.ShipIt',
                 '~/Library/Caches/GitHub for Mac',
@@ -32,5 +34,6 @@ cask 'github-desktop' do
                 '~/Library/Containers/com.github.GitHub.Conduit',
                 '~/Library/Preferences/com.github.GitHub.LSSharedFileList.plist',
                 '~/Library/Preferences/com.github.GitHub.plist',
-              ]
+              ],
+      rmdir:  '~/.config/git'
 end

@@ -7,7 +7,6 @@ cask 'aerial' do
           checkpoint: '05c9cbb19ad4349b46d4aad95ec7e6391dc43dbebc378e2671c050f442058150'
   name 'Aerial Screensaver'
   homepage 'https://github.com/JohnCoates/Aerial'
-  license :mit
 
   screen_saver 'Aerial.saver'
 end

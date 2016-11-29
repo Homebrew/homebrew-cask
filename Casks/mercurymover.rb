@@ -5,7 +5,6 @@ cask 'mercurymover' do
   url 'http://www.heliumfoot.com/files/release/mercurymover/MercuryMover.dmg'
   name 'MercuryMover'
   homepage 'http://www.heliumfoot.com/mercurymover'
-  license :commercial
 
   prefpane 'MercuryMover.prefPane'
 

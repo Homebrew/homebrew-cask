@@ -6,7 +6,6 @@ cask 'boc-security-plugin' do
   name 'Bank of China (BOC) Security Plugin'
   name '中国银行网上银行登录安全控件'
   homepage 'https://www.boc.cn'
-  license :closed
 
   pkg 'npBOCMACSip_Product.pkg'
 

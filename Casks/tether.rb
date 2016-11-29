@@ -5,7 +5,6 @@ cask 'tether' do
   url "http://hellotether.com/downloads/Tether_v#{version}.zip"
   name 'Tether'
   homepage 'http://hellotether.com/'
-  license :gratis
 
   app 'Tether.app'
 end

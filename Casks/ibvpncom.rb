@@ -6,7 +6,6 @@ cask 'ibvpncom' do
   url 'http://download.ibvp.net/MAC_AIO.dmg'
   name 'ibVPN'
   homepage 'https://www.ibvpn.com/'
-  license :unknown
 
   app 'ibvpn.com.app'
 

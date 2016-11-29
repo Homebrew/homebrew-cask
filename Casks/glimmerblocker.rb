@@ -7,7 +7,6 @@ cask 'glimmerblocker' do
           checkpoint: 'c93a38d80349569f9b70ae6132ebf7ed02725268c76804349e3570ca18dd48af'
   name 'GlimmerBlocker'
   homepage 'https://glimmerblocker.org/'
-  license :gpl
 
   pkg 'GlimmerBlocker.pkg'
 

@@ -5,7 +5,6 @@ cask 'astah-sysml' do
   url "http://cdn.astah.net/downloads/astah-sysml-#{version.dots_to_underscores}-45e8f6-MacOs.dmg"
   name 'Change Vision Astah SysML'
   homepage 'http://astah.net/editions/sysml'
-  license :commercial
 
   pkg "astah sysml ver #{version.dots_to_underscores}.pkg"
 

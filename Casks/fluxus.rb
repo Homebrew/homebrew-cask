@@ -6,7 +6,6 @@ cask 'fluxus' do
   url "http://mndl.hu/fluxus/fluxus-#{version}.mac_intel.10.5.dmg.zip"
   name 'Fluxus'
   homepage 'http://www.pawfal.org/fluxus/'
-  license :gpl
 
   app 'Fluxus.app'
 end

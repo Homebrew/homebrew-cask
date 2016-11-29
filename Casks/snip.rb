@@ -5,7 +5,6 @@ cask 'snip' do
   url "http://snip.qq.com/resources/Snip_V#{version}.dmg"
   name 'Snip'
   homepage 'http://snip.qq.com/'
-  license :gratis
 
   pkg "Snip_V#{version.sub(%r{^(\d+\.\d+).*}, '\1')}.pkg"
 

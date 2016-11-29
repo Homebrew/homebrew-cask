@@ -5,7 +5,6 @@ cask 'bink-player' do
   url 'http://www.radgametools.com/down/Bink/BinkMacPlayer.dmg'
   name 'Bink Video Player'
   homepage 'http://www.radgametools.com/bnkdown.htm'
-  license :gratis
 
   app 'Bink Player.app'
 end

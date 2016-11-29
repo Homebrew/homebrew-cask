@@ -5,7 +5,6 @@ cask 'sickbeard-anime' do
   url "http://sickbeard.lad1337.de/download.php?f=SickBeard-OSX-anime-#{version}.dmg"
   name 'SickBeard Anime'
   homepage 'http://sickbeard.lad1337.de/'
-  license :gpl
 
   app 'SickBeard.app'
 end

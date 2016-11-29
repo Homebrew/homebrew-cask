@@ -4,8 +4,7 @@ cask 'licensed' do
 
   url 'http://amarsagoo.info/licensed/Licensed.dmg'
   name 'Licensed'
-  homepage 'http://amarsagoo.info/licensed'
-  license :gratis
+  homepage 'http://amarsagoo.info/licensed/'
 
   app 'Licensed.app'
 end

@@ -5,7 +5,6 @@ cask 'qqbrowser' do
   url 'http://dldir1.qq.com/invc/tt/QQBrowser_for_Mac.dmg'
   name 'QQ浏览器'
   homepage 'http://browser.qq.com/mac/'
-  license :commercial
 
   app 'QQBrowser.app'
 

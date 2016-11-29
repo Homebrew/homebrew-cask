@@ -6,7 +6,6 @@ cask 'multimarkdown-composer' do
   url "http://files.fletcherpenney.net.s3.amazonaws.com/MultiMarkdown%20Composer-#{version}.zip"
   name 'MultiMarkdown Composer'
   homepage 'http://multimarkdown.com/download/'
-  license :commercial
 
   app 'MultiMarkdown Composer.app'
 end

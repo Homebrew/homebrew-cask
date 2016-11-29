@@ -6,7 +6,6 @@ cask 'qqinput' do
   url "http://qqime.cdn.sogou.com/QQInput_Mac_Setup_#{version.dots_to_underscores}.dmg"
   name 'QQ输入法'
   homepage 'http://qq.pinyin.cn/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "安装QQ输入法#{version.sub(%r{^(\d+\.\d+).*}, '\1')}.pkg"
 

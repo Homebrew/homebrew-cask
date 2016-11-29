@@ -4,8 +4,7 @@ cask 'rescuetime' do
 
   url 'https://www.rescuetime.com/installers/RescueTimeInstaller.dmg'
   name 'RescueTime'
-  homepage 'https://www.rescuetime.com'
-  license :gratis
+  homepage 'https://www.rescuetime.com/'
 
   app 'RescueTime.app'
 end

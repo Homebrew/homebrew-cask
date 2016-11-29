@@ -6,7 +6,6 @@ cask 'taskexplorer' do
   url "https://bitbucket.org/objective-see/deploy/downloads/TaskExplorer_#{version}.zip"
   name 'TaskExplorer'
   homepage 'https://objective-see.com/products/taskexplorer.html'
-  license :gratis
 
   app 'TaskExplorer.app'
 end

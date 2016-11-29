@@ -8,7 +8,6 @@ cask 'nylas-n1' do
           checkpoint: '6a61d15b714accbb4ba83adcd1e53634d0999f904e68088a673ca64a3c573e16'
   name 'Nylas N1'
   homepage 'https://www.nylas.com/'
-  license :gpl
 
   auto_updates true
 

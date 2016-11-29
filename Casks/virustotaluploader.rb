@@ -5,7 +5,6 @@ cask 'virustotaluploader' do
   url "https://www.virustotal.com/static/bin/VirusTotalUploader_#{version}.dmg"
   name 'VirusTotalUploader'
   homepage 'https://www.virustotal.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'VirusTotalUploader.app'
 end

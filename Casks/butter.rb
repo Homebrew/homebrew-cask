@@ -7,7 +7,6 @@ cask 'butter' do
           checkpoint: 'd937486f468c52c3aa12d45202c99356ae85c11dd365ba06899478b6801c5556'
   name 'Butter'
   homepage 'https://github.com/harukasan/butter'
-  license :mit
 
   app 'Butter.app'
 end

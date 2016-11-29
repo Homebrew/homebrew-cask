@@ -8,7 +8,6 @@ cask 'todotxt' do
           checkpoint: 'fa99f96e53efa25ac05f5e8fc4747d8d13ae8a00e9339957c8c55d51c2ddca2c'
   name 'TodoTxtMac'
   homepage 'https://mjdescy.github.io/TodoTxtMac/'
-  license :mit
 
   app 'TodoTxtMac.app'
 end

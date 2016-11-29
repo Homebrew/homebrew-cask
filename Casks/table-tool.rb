@@ -7,7 +7,6 @@ cask 'table-tool' do
           checkpoint: '7392607502912d47225965601e76b31299b3491ff233e8a52ad4787135ff1a82'
   name 'Table Tool'
   homepage 'https://github.com/jakob/TableTool'
-  license :mit
 
   app 'Table Tool.app'
 end

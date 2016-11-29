@@ -15,7 +15,6 @@ cask 'welly' do
 
   name 'Welly'
   homepage 'https://code.google.com/archive/p/welly'
-  license :gpl
 
   app 'Welly.app'
 

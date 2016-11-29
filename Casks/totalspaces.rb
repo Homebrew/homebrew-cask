@@ -12,27 +12,26 @@ cask 'totalspaces' do
     uninstall pkgutil: 'com.switchstep.totalspaces',
               quit:    'com.binaryage.TotalSpaces'
   else
-    version '2.4.8'
-    sha256 '65cb4d0578be9ba2df83c62dae901bb8ca92de7d2ee4cd6c6a0648c71b4c1669'
+    version '2.5.0'
+    sha256 '8aeb2176c2e22356fe7919e904db05880fa49c10de74f00bdc82614d1a41e9ef'
 
-    url "http://downloads.binaryage.com/TotalSpaces2-#{version}.dmg"
-    appcast 'http://updates-s3.binaryage.com/totalspaces2.xml',
-            checkpoint: '338a29cf745b71fa5c06613061214a82696121f07116c13438c56dc1ad61956f'
+    url "http://downloads.binaryage.com/TotalSpaces#{version.major}-#{version}.dmg"
+    appcast "http://updates-s3.binaryage.com/totalspaces#{version.major}.xml",
+            checkpoint: 'b3650a22599c6be19c377b65f1c1f838acb6222b254c7b8616785a099e28398d'
 
-    installer manual: 'TotalSpaces2.app'
+    installer manual: "TotalSpaces#{version.major}.app"
 
-    uninstall pkgutil: 'com.binaryage.TotalSpaces2',
+    uninstall pkgutil: "com.binaryage.TotalSpaces#{version.major}",
               script:  {
-                         executable: 'TotalSpaces2 Uninstaller.app/Contents/MacOS/TotalSpaces2 Uninstaller',
+                         executable: "TotalSpaces#{version.major} Uninstaller.app/Contents/MacOS/TotalSpaces#{version.major} Uninstaller",
                          args:       %w[--headless],
                          sudo:       true,
                        },
-              quit:    'com.binaryage.TotalSpaces2'
+              quit:    "com.binaryage.TotalSpaces#{version.major}"
   end
 
   name 'TotalSpaces'
   homepage 'http://totalspaces.binaryage.com/'
-  license :commercial
 
   uninstall signal: [
                       ['INT', 'com.binaryage.totalspacescrashwatcher'],

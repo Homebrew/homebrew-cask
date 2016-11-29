@@ -7,7 +7,6 @@ cask 'qtspim' do
           checkpoint: '746e96427a6ac3af94e0207c64e46657f4bfbabcc8866a31b75a20b195972610'
   name 'QtSpim'
   homepage 'http://spimsimulator.sourceforge.net/'
-  license :bsd
 
   pkg 'QtSpim.mpkg'
 

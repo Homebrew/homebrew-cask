@@ -8,7 +8,6 @@ cask 'logisim' do
           checkpoint: '9ab854d47ec39e47fbe76d0ba4177f228c25bbbd05ebd2286d5899695c8837ec'
   name 'Logisim'
   homepage 'http://www.cburch.com/logisim/'
-  license :gpl
 
   app 'Logisim.app'
 end

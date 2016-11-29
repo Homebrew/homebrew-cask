@@ -8,7 +8,6 @@ cask 'insertpic' do
           checkpoint: '9090426919cd45cfa6ae7aef6e3a61130ebda5a9b3a30df55397684235ca9b5c'
   name 'InsertPic'
   homepage 'http://www.getinsertpic.com/'
-  license :gratis
 
   app 'InsertPic/InsertPic.app'
 end

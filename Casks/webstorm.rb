@@ -1,11 +1,10 @@
 cask 'webstorm' do
-  version '2016.2.3'
-  sha256 '010130726d68538cadd7090312603ecbb3183c9e57172c1465179685f5eccc18'
+  version '2016.3.1'
+  sha256 '04713c1ead945bf7e95f53cc2fb243d39e446fbb5dd8cce85ca5bb4edf185b38'
 
   url "https://download.jetbrains.com/webstorm/WebStorm-#{version}.dmg"
   name 'WebStorm'
   homepage 'https://www.jetbrains.com/webstorm/'
-  license :commercial
 
   conflicts_with cask: 'webstorm-eap'
 

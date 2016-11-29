@@ -4,8 +4,7 @@ cask 'syncany' do
 
   url "https://get.syncany.org/dist/releases/syncany-#{version}-x86_64.app.zip"
   name 'Syncany'
-  homepage 'https://syncany.org'
-  license :gpl
+  homepage 'https://www.syncany.org/'
 
   app 'Syncany.app'
 

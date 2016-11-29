@@ -7,7 +7,6 @@ cask 'letterfix' do
           checkpoint: '7755b58dbb1d24d43b305062434fd6c24567043b06e6ea12720b52101730eb7d'
   name 'LetterFix'
   homepage 'https://osdn.jp/projects/letter-fix/'
-  license :mit
 
   pkg "LetterFix-#{version}.pkg"
 

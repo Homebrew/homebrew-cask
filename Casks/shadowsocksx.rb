@@ -7,7 +7,6 @@ cask 'shadowsocksx' do
           checkpoint: '1694eafe2b374b0180cc685e6c7d5a7c1de7b41211fabcdd2dc2e82001dfca4c'
   name 'ShadowsocksX'
   homepage 'https://github.com/shadowsocks/shadowsocks-iOS/wiki/Shadowsocks-for-OSX-Help'
-  license :gpl
 
   app 'ShadowsocksX.app'
 end

@@ -4,8 +4,7 @@ cask 'j' do
 
   url "http://www.jsoftware.com/download/j#{version}/install/j#{version}_mac64.zip"
   name 'J'
-  homepage 'http://www.jsoftware.com'
-  license :gpl
+  homepage 'http://www.jsoftware.com/'
 
   apps = %w[jbrk jcon jhs jqt]
   apps.each do |a|

@@ -7,7 +7,6 @@ cask 'sumbolon' do
           checkpoint: '53c7cd038c0040e3d8be41605e4449fa93b05382ad49f507ef227069d0440a05'
   name 'Sumbolon'
   homepage 'https://www.rwe-uk.com/app/sumbolon'
-  license :commercial
 
   auto_updates true
 

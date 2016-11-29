@@ -7,7 +7,6 @@ cask 'dewdrop' do
           checkpoint: '0e697e33ef9613eaf868ba539db57d725bfaf0414e37bbab7bc50971095d33f0'
   name 'Dewdrop Client'
   homepage 'http://dewdrop.dangelov.com/'
-  license :gpl
 
   app 'Dewdrop.app'
 

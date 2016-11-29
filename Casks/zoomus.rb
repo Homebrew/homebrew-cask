@@ -5,7 +5,8 @@ cask 'zoomus' do
   url 'https://zoom.us/client/latest/zoomusInstaller.pkg'
   name 'Zoom.us'
   homepage 'https://www.zoom.us'
-  license :gratis
+
+  auto_updates true
 
   pkg 'zoomusInstaller.pkg'
 

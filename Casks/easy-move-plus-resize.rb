@@ -7,7 +7,6 @@ cask 'easy-move-plus-resize' do
           checkpoint: '33ab0e506b77da075d48917c8c9f595ec387848d97e04d1b4f69e473c7e5a14e'
   name 'Easy Move+Resize'
   homepage 'https://github.com/dmarcotte/easy-move-resize'
-  license :mit
 
   app 'Easy Move+Resize.app'
 end

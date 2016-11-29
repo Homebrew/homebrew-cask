@@ -8,7 +8,6 @@ cask 'bandage' do
           checkpoint: 'd70dfd9fbcd8219576c2ef2b68c53b85ef95c0fb3db13a5134cc50403d97776f'
   name 'Bandage'
   homepage 'https://rrwick.github.io/Bandage/'
-  license :gpl
 
   app 'Bandage.app'
 end

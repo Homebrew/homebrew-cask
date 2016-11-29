@@ -5,7 +5,6 @@ cask 'openclonk-c54d917-darwin-amd64-clang' do
   url "http://openclonk.org/builds/release/#{version}/openclonk-#{version}-x64.app.zip"
   name 'OpenClonk'
   homepage 'http://openclonk.org/'
-  license :isc
 
   app 'openclonk-c54d917-darwin-amd64-clang.app'
 end

@@ -8,7 +8,6 @@ cask 'nanobox' do
           checkpoint: '1aa4e3a08daed735dc993d058f352667d55a0d060fb6f1f63868e57a27ac1900'
   name 'nanobox'
   homepage 'https://www.nanobox.io/'
-  license :mpl
 
   depends_on cask: 'virtualbox'
   depends_on cask: 'vagrant'

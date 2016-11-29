@@ -5,8 +5,7 @@ cask 'backtobed' do
   # backtobed.dadiugames.dk was verified as official when first introduced to the cask
   url 'https://backtobed.dadiugames.dk/studentversion/backtobed_osx.zip'
   name 'Back to Bed'
-  homepage 'http://www.dadiu.dk/back-to-bed'
-  license :gratis
+  homepage 'https://www.dadiu.dk/back-to-bed'
 
   app 'BackToBed.app'
 end

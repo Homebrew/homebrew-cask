@@ -5,7 +5,6 @@ cask 'qr-journal' do
   url "http://www.joshjacob.com/mac-development/QRJournal#{version}.dmg"
   name 'QR Journal'
   homepage 'http://www.joshjacob.com/mac-development/qrjournal.php'
-  license :gratis
 
   app 'QR Journal.app'
 

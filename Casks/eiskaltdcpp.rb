@@ -7,7 +7,6 @@ cask 'eiskaltdcpp' do
           checkpoint: 'b4fb28f10cc3fbd688aed28a882b31447f7deac8ce29a5300090b71a0e45b63c'
   name 'EiskaltDC++'
   homepage 'https://sourceforge.net/projects/eiskaltdcpp/'
-  license :gpl
 
   app 'EiskaltDC++.app'
 end

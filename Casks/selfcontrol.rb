@@ -12,7 +12,6 @@ cask 'selfcontrol' do
           checkpoint: 'ed03ff3ec9c2616091c15546808a244f8780d8ba0d27499d4b3bd4316176fea9'
   name 'SelfControl'
   homepage 'https://selfcontrolapp.com/'
-  license :gpl
 
   auto_updates true
 

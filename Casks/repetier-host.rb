@@ -7,7 +7,6 @@ cask 'repetier-host' do
           checkpoint: 'ed6e7e102c9f09b9a6e53b4047779bb31bfd2ba71e47f1528f5f13471ba78492'
   name 'Repetier-Host'
   homepage 'https://www.repetier.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Repetier-Host Mac.app'
 end

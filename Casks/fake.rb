@@ -7,7 +7,6 @@ cask 'fake' do
           checkpoint: 'fcd79673ec64706f2ba888d965fb89c6120641d3687e09cc5484ca5964374c25'
   name 'Fake'
   homepage 'http://fakeapp.com/'
-  license :commercial
 
   app 'Fake.app'
 end

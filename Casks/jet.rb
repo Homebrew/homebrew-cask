@@ -1,14 +1,11 @@
 cask 'jet' do
-  version '1.10.0'
-  sha256 'c3add7cb1eecc323eeaaa62a72711ef02b646f30f09c47139f0b1bfca5e25f55'
+  version '1.14.1'
+  sha256 '7665d7c62b9e89e42a733d8ef1567138b94df196947b73e7356c6b5252351fca'
 
   # s3.amazonaws.com/codeship-jet-releases was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/codeship-jet-releases/#{version}/jet-darwin_amd64_#{version}.tar.gz"
   name 'Codeship Jet'
-  homepage 'https://codeship.com/documentation/docker/'
-  license :closed
-
-  depends_on formula: 'docker'
+  homepage 'https://documentation.codeship.com/docker/'
 
   binary 'jet'
 end

@@ -7,7 +7,6 @@ cask 'quickgeojson' do
           checkpoint: 'b030a58b367e52841dd5817d8c53ca657efd5789933fb97a405690c74a374258'
   name 'quickgeojson'
   homepage 'https://github.com/irees/quickgeojson'
-  license :bsd
 
   qlplugin 'quickgeojson.qlgenerator'
 end

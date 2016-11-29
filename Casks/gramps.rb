@@ -8,7 +8,6 @@ cask 'gramps' do
           checkpoint: 'febefb1931afcd9780aa2ec7bc4055c97be88aa01483aee452011e79074e1f19'
   name 'Gramps'
   homepage 'https://gramps-project.org/'
-  license :gpl
 
   app 'Gramps.app'
 end

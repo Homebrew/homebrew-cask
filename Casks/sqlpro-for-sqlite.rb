@@ -6,7 +6,6 @@ cask 'sqlpro-for-sqlite' do
   url "https://d3fwkemdw8spx3.cloudfront.net/sqlite/SQLProSQLite.#{version}.app.zip"
   name 'SQLPro for SQLite'
   homepage 'https://www.sqlitepro.com'
-  license :commercial
 
   app 'SQLPro for SQLite.app'
 

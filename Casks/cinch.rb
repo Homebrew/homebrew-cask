@@ -1,13 +1,12 @@
 cask 'cinch' do
-  version '1.2.1'
-  sha256 'd4e2ce94bb97a3e61e67372dbf9495e4542d9a3eca5625d3119ed8f9c24d61ab'
+  version '1.2.2'
+  sha256 'c8ff663bdc03329446db3ada84fa32aa0d382c7dbcd18a683712d1304ed914f1'
 
   url "https://www.irradiatedsoftware.com/downloads/Cinch_#{version}.zip"
   appcast 'https://www.irradiatedsoftware.com/updates/profiles/cinch.php',
-          checkpoint: '435102475154532fb560886dd3ac50ee589a38c1a3a1457d03800c3d187a6b3e'
+          checkpoint: '18e45489bf4ca68eaadfea51bc6ea38580ed00ac260bede0dd7b282778bf7a22'
   name 'Cinch'
   homepage 'https://www.irradiatedsoftware.com/cinch/'
-  license :commercial
 
   app 'Cinch.app'
 end

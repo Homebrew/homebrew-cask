@@ -19,8 +19,7 @@ cask 'bino' do
   end
 
   name 'Bino'
-  homepage 'http://bino3d.org'
-  license :gpl
+  homepage 'http://bino3d.org/'
 
   app 'Bino.app'
 end

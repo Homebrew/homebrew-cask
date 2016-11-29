@@ -6,7 +6,6 @@ cask 'apache-couchdb' do
   url "https://dl.bintray.com/apache/couchdb/mac/#{version}/Apache-CouchDB-#{version}.zip"
   name 'Apache CouchDB'
   homepage 'https://couchdb.apache.org/'
-  license :apache
 
   app 'Apache CouchDB.app'
 

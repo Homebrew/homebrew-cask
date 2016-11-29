@@ -5,7 +5,6 @@ cask 'kega-fusion' do
   url "http://www.carpeludum.com/download/Fusion#{version.no_dots}.zip"
   name 'Kega Fusion'
   homepage 'http://www.carpeludum.com/kega-fusion/'
-  license :gratis
 
   app 'Kega Fusion.app'
 

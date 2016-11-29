@@ -4,8 +4,7 @@ cask 'remember-the-milk' do
 
   url "https://www.rememberthemilk.com/download/mac/RememberTheMilk-#{version}.zip"
   name 'Remember The Milk'
-  homepage 'https://www.rememberthemilk.com'
-  license :commercial
+  homepage 'https://www.rememberthemilk.com/'
 
   app 'Remember The Milk.app'
 end

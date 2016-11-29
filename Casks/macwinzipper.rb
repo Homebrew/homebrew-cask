@@ -5,7 +5,6 @@ cask 'macwinzipper' do
   url "http://tidajapan.com/files/MacWinZipper-#{version}.dmg?download"
   name 'MacWinZipper'
   homepage 'http://tidajapan.com/macwinzipper'
-  license :commercial
 
   app 'MacWinZipper.app'
 end

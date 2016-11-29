@@ -5,7 +5,6 @@ cask 'thebrain' do
   url "http://assets.thebrain.com/downloads/TheBrain_macos_JRE_#{version.dots_to_underscores}.dmg"
   name 'TheBrain'
   homepage 'https://www.thebrain.com/'
-  license :commercial
 
   installer script: 'TheBrain Installer.app/Contents/MacOS/JavaApplicationStub',
             args:   ['-q'],

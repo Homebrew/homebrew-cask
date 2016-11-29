@@ -5,7 +5,6 @@ cask 'vorlon-desktop' do
   url "http://vorlonjs.io/desktop/vorlon-desktop_#{version}.dmg"
   name 'Vorlon desktop'
   homepage 'http://vorlonjs.io/'
-  license :mit
 
   app 'Vorlon desktop.app'
 end

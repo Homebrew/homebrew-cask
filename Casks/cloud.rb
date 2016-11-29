@@ -7,8 +7,7 @@ cask 'cloud' do
   appcast 'http://updates.getcloudapp.com/appcast.xml',
           checkpoint: 'cc83745deef53a6f0b9e5eb25c32a61a94873adaa1fe775cfb86232c786649d4'
   name 'CloudApp'
-  homepage 'https://getcloudapp.com/'
-  license :gratis
+  homepage 'https://www.getcloudapp.com/'
 
   app 'CloudApp.app'
 

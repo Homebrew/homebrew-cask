@@ -5,7 +5,6 @@ cask 'decitime' do
   url "http://www.tinbert.com/download.filewell.com/DeciTime#{version.no_dots}.dmg.zip"
   name 'DeciTime'
   homepage 'http://www.tinbert.com/DeciTimeMac/'
-  license :oss
 
   container nested: (nested_container = "DeciTime#{version.no_dots}.dmg")
 

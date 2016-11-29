@@ -7,7 +7,6 @@ cask 'earthdeskprefpane' do
           checkpoint: '4aa87dd81a365ae91a2a6bbfc7eb0d07c8e483b9341a822f819ba4458026796a'
   name 'EarthDesk'
   homepage 'http://www.xericdesign.com/earthdesk.php'
-  license :commercial
 
   auto_updates true
 

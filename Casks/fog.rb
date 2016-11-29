@@ -7,7 +7,6 @@ cask 'fog' do
           checkpoint: '2c0c2613ea83b4e5b1fced822ab99af24e16a478a6c5f95c146432c24215c056'
   name 'Fog'
   homepage 'https://github.com/vitorgalvao/fog'
-  license :public_domain
 
   app 'Fog.app'
 

@@ -5,7 +5,6 @@ cask 'nodebox' do
   url "https://secure.nodebox.net/downloads/NodeBox-#{version}.zip"
   name 'NodeBox'
   homepage 'https://www.nodebox.net/node/'
-  license :gpl
 
   app 'NodeBox.app'
 end

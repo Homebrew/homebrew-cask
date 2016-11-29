@@ -6,7 +6,6 @@ cask 'fing' do
   url "https://39qiv73eht2y1az3q51pykkf-wpengine.netdna-ssl.com/wp-content/uploads/#{version.after_comma.hyphens_to_slashes}/overlook-fing-#{version.before_comma}.dmg_.zip"
   name 'Fing'
   homepage 'https://www.fing.io/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "overlook-fing-#{version.before_comma}.pkg"
 

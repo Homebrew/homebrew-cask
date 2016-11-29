@@ -7,7 +7,6 @@ cask 'texstudio' do
           checkpoint: '4aa5fc6120f04f5cb217399f5d4776c0071cb03a310f8dd7d5e89a3caaadabd5'
   name 'TeXstudio'
   homepage 'http://texstudio.sourceforge.net/'
-  license :gpl
 
   app 'TeXstudio.app'
 end

@@ -5,7 +5,6 @@ cask 'parallels-access' do
   url "https://download.parallels.com/pmobile/v#{version.major}/#{version.major_minor_patch}/ParallelsAccess-#{version}-mac.dmg"
   name 'Parallels Access'
   homepage 'https://www.parallels.com/products/access/'
-  license :closed
 
   installer script: 'Parallels Access.app/Contents/MacOS/pm_ctl',
             args:   %w[instance_install],

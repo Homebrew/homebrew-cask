@@ -1,13 +1,12 @@
 cask 'ipvanish-vpn' do
-  version '3.0.1_440'
-  sha256 '45e98d0a9125c528288646d7a7a92b273a5b0d7cd7c601cfbe629714b3273a6b'
+  version '3.0.4_444'
+  sha256 'ab8e6bbbb0e22164c82ec6a622c94894a850fe3e4738d90e6f522807487ad296'
 
   url "https://www.ipvanish.com/software/osx/IPVanish_v#{version}.zip"
   appcast 'https://www.ipvanish.com/software/osx/updates.xml',
-          checkpoint: 'd3d3749ec17e3b9e10fcd756711d90fea3dd6975c0fc3e0d3daff7b5cf018702'
+          checkpoint: 'a2d2d45d327e4e2bdcc4546ede48819bcde3d8e9f416a246009e615e7a4db7c2'
   name 'IPVanish'
   homepage 'https://www.ipvanish.com/'
-  license :gratis
 
   app 'IPVanish VPN.app'
 end

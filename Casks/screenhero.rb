@@ -7,7 +7,8 @@ cask 'screenhero' do
           checkpoint: 'e9a3866e22348b5db011dcb375474359e09db7e34cb9c138f389050ab4e68d12'
   name 'Screenhero'
   homepage 'https://screenhero.com/'
-  license :commercial
+
+  auto_updates true
 
   app 'Screenhero.app'
 end

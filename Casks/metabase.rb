@@ -1,13 +1,12 @@
 cask 'metabase' do
-  version '0.19.2'
-  sha256 '7f7db7097f5400e2592139dbc1ba86cee225102487267408ae899bd2755fbc34'
+  version '0.20.3.0'
+  sha256 '45804c178bdf46e6c60f45c709bc5af8eb978571bf1a28c4b99168f57f91e2e6'
 
-  url "http://downloads.metabase.com/v#{version}/Metabase.dmg"
+  url "http://downloads.metabase.com/v#{version.major_minor_patch}/Metabase.dmg"
   appcast 'http://downloads.metabase.com/appcast.xml',
-          checkpoint: '382c2f29e728fe2d9ddf69879807f8949bc4fd3b6b93ca0863412e77a69dc1e8'
+          checkpoint: 'c93852307774349a390d08f5f5d688aa7bbf40c90eaaccc3d91368678e33143a'
   name 'Metabase'
   homepage 'http://www.metabase.com/'
-  license :affero
 
   app 'Metabase.app'
 end

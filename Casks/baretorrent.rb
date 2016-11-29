@@ -5,7 +5,6 @@ cask 'baretorrent' do
   url "https://launchpad.net/baretorrent/trunk/#{version}/+download/baretorrent-#{version}-osx-x64.dmg"
   name 'baretorrent'
   homepage 'https://launchpad.net/baretorrent'
-  license :public_domain
 
   app 'baretorrent.app'
 end

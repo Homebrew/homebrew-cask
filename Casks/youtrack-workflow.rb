@@ -5,7 +5,6 @@ cask 'youtrack-workflow' do
   url "https://download-cf.jetbrains.com/charisma/youtrack-workflow-editor-#{version}-macos.zip"
   name 'JetBrains Youtrack Workflow Editor'
   homepage 'https://www.jetbrains.com/youtrack/download/get_youtrack.html#materials=workflow-editor'
-  license :gratis
 
   app 'youtrack-workflow.app'
 

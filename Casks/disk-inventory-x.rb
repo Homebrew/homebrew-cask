@@ -6,7 +6,6 @@ cask 'disk-inventory-x' do
       user_agent: :fake
   name 'Disk Inventory X'
   homepage 'http://www.derlien.com/'
-  license :gpl
 
   app 'Disk Inventory X.app'
 end

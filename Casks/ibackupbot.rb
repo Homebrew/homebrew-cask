@@ -5,7 +5,6 @@ cask 'ibackupbot' do
   url 'http://www.icopybot.com/iBackupBot-Setup.dmg'
   name 'iBackupBot'
   homepage 'http://www.icopybot.com/itunes-backup-manager.htm'
-  license :closed
 
   app 'iBackupBot.app'
 end

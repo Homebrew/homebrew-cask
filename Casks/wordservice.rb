@@ -6,7 +6,6 @@ cask 'wordservice' do
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/freeware/wordservice/#{version}/WordService.zip"
   name 'WordService'
   homepage 'http://www.devontechnologies.com/products/freeware.html#c1115'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'WordService.app'
 end

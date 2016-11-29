@@ -5,7 +5,6 @@ cask 'easytether' do
   url 'http://www.mobile-stream.com/beta/easytether.dmg'
   name 'EasyTether'
   homepage 'http://www.mobile-stream.com/easytether/'
-  license :commercial
 
   pkg 'EasyTetherUSBEthernet.pkg'
 

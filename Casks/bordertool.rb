@@ -5,7 +5,6 @@ cask 'bordertool' do
   url 'http://xvi.rpc1.org/BorderTool.zip'
   name 'BorderTool'
   homepage 'http://xvi.rpc1.org/'
-  license :gratis
 
   app 'BorderTool.app'
 end

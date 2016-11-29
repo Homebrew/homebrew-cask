@@ -7,7 +7,6 @@ cask 'rightfont' do
           checkpoint: '2aeedf7f798fb76d5cbe5d992c6d9652072b2129d5e68eae06c11bc018c24247'
   name 'RightFont'
   homepage 'https://rightfontapp.com/'
-  license :commercial
 
   depends_on macos: '>= :yosemite'
 

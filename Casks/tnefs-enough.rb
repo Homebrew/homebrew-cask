@@ -23,7 +23,6 @@ cask 'tnefs-enough' do
 
   name 'TNEF\'s Enough'
   homepage 'http://www.joshjacob.com/mac-development/tnef.php'
-  license :gpl
 
   app 'TNEF\'s Enough.app'
 end

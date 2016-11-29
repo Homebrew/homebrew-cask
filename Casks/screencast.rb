@@ -7,7 +7,6 @@ cask 'screencast' do
           checkpoint: '888ce555dd77a6e70f588ddf421ec6c5e1f7778be0312dc5f43a9f415ee93e97'
   name 'Screencast'
   homepage 'https://github.com/soh335/Screencast'
-  license :closed
 
   app 'Screencast.app'
 end

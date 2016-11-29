@@ -1,14 +1,13 @@
 cask 'keytty' do
-  version '1.1.7,1468903136'
-  sha256 'ec9387f7640b067283bea1f1b46117e1c369e7f34d40d4593462a6916b725b92'
+  version '1.2.1,1478523599'
+  sha256 'c10a61be158ade8d8505dd87fcfafb9577c4db1c746dc44f223710540d884dc2'
 
   # dl.devmate.com/com.keytty.Keytty was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.keytty.Keytty/#{version.before_comma}/#{version.after_comma}/keytty-#{version.before_comma}.zip"
   appcast 'https://updates.devmate.com/com.keytty.Keytty.xml',
-          checkpoint: 'dc955a9d8cd12e3192300f4f66515de964e738a5141cc4d7466051df0e748aa8'
+          checkpoint: '7fd0b94dd90eab19e4be001ec520fb3ad5c1558c6d53acf8631639b561818b53'
   name 'Keytty'
   homepage 'http://keytty.com/'
-  license :closed
 
   app 'Keytty.app'
 

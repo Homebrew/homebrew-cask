@@ -4,8 +4,7 @@ cask 'colwiz-desktop' do
 
   url 'https://www.colwiz.com/update?app=colwiz.installer.v2.mac'
   name 'Colwiz'
-  homepage 'https://www.colwiz.com'
-  license :closed
+  homepage 'https://www.colwiz.com/'
 
   app 'Colwiz Desktop.app'
 end

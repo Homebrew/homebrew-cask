@@ -5,7 +5,6 @@ cask 'elyse' do
   url "http://silkwoodsoftware.com/Elyse-#{version.no_dots}.dmg"
   name 'Elyse'
   homepage 'http://silkwoodsoftware.com/'
-  license :freemium
 
   app 'Elyse.app'
 end

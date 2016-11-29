@@ -7,7 +7,6 @@ cask 'hugin' do
           checkpoint: '00abe255c13acffec0368944669e30f1690daf513050bd4f71afb2d42a4fb490'
   name 'Hugin'
   homepage 'http://hugin.sourceforge.net/'
-  license :gpl
 
   suite 'Hugin'
 end

@@ -5,7 +5,6 @@ cask 'rasoft' do
   url "https://www.rakocontrols.com/rasoftx/release/Rasoft%20Pro-#{version}.dmg"
   name 'Rasoft Pro'
   homepage 'https://rakocontrols.com/useful-information/rasoftpro/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Rasoft Pro.app'
 end

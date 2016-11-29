@@ -7,7 +7,6 @@ cask 'hockey' do
           checkpoint: '80877307fae78dab79b06256af60f0d6e7c254e524fb98b50c6cc36ed9f3429f'
   name 'HockeyApp'
   homepage 'https://hockeyapp.net/releases/mac/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'HockeyApp.app'
   binary "#{appdir}/HockeyApp.app/Contents/Resources/puck"

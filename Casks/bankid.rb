@@ -5,7 +5,6 @@ cask 'bankid' do
   url "https://install.bankid.com/Repository/BankID_installation_#{version.dots_to_underscores}.pkg"
   name 'BankID'
   homepage 'https://install.bankid.com/'
-  license :gratis
 
   pkg "BankID_installation_#{version.dots_to_underscores}.pkg"
 

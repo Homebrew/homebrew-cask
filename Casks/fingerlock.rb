@@ -5,7 +5,6 @@ cask 'fingerlock' do
   url 'http://www.fingerkeyapp.com/download/FingerLock.dmg'
   name 'FingerLock'
   homepage 'http://www.fingerkeyapp.com/'
-  license :gratis
 
   app 'FingerLock.app'
 end

@@ -6,7 +6,6 @@ cask 'speedcrunch' do
   url "https://bitbucket.org/heldercorreia/speedcrunch/downloads/SpeedCrunch-#{version}.dmg"
   name 'SpeedCrunch'
   homepage 'http://www.speedcrunch.org/'
-  license :gpl
 
   app 'SpeedCrunch.app'
 end

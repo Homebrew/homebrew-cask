@@ -8,7 +8,6 @@ cask 'hermes' do
           checkpoint: 'b50dd357b9bc29039a83b1eba22065a300ee1a3d3bcb17933507ce1a2086dfd9'
   name 'Hermes'
   homepage 'http://hermesapp.org/'
-  license :mit
 
   auto_updates true
 
