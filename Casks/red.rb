@@ -4,7 +4,7 @@ cask 'red' do
 
   url "http://static.red-lang.org/dl/mac/red-#{version.no_dots}"
   name 'Red Programming Language'
-  homepage 'http://www.red-lang.org'
+  homepage 'http://www.red-lang.org/'
 
   container type: :naked
 
