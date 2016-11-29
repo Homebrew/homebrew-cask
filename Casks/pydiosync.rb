@@ -4,7 +4,7 @@ cask 'pydiosync' do
 
   url "https://download.pydio.com/pub/pydio-sync/release/#{version}/PydioSync-MacOSX-Installer-v#{version}.dmg"
   name 'PydioSync'
-  homepage 'https://pydio.com'
+  homepage 'https://pydio.com/'
 
   pkg 'PydioSync-Setup.pkg'
 
