@@ -6,7 +6,7 @@ cask 'minbox' do
   appcast 'https://minbox.com/updates.xml',
           checkpoint: 'd6f20222f6fca106398c29a026237661e4805106af60d373f71f17948aa5d425'
   name 'Minbox'
-  homepage 'https://minbox.com'
+  homepage 'https://minbox.com/'
 
   app 'Minbox.app'
 end
