@@ -4,7 +4,7 @@ cask 'pharo' do
 
   url "http://files.pharo.org/platform/Pharo#{version}-mac.zip"
   name 'Pharo'
-  homepage 'https://pharo.org'
+  homepage 'https://pharo.org/'
 
   app "Pharo#{version}.app"
 end
