@@ -7,7 +7,7 @@ cask 'duet' do
   appcast 'https://updates.duetdisplay.com/checkMacUpdates',
           checkpoint: '118ed35f61dd63569722c55f9cfe1847b10407b6fb023b69a2ebd6e3530ed694'
   name 'Duet'
-  homepage 'http://www.duetdisplay.com/'
+  homepage 'https://www.duetdisplay.com/'
 
   auto_updates true
 
