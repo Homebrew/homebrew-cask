@@ -1,6 +1,6 @@
 cask 'mockuuups-studio' do
-  version '1.0.0'
-  sha256 '1ad632921da0ea2a0443bd8a34aa9ad53b36f8b324303a9971ea3be84bbda1b4'
+  version '1.0.1'
+  sha256 'ecefe1009ed42375db4df1c76a52f7f4e18378acbd6932e9df8e4a2e1b387ff1'
 
   # mockuuups.com was verified as official when first introduced to the cask
   url "https://binaries.mockuuups.com/Mockuuups%20Studio-#{version}.dmg"
