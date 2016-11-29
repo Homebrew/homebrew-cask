@@ -6,7 +6,7 @@ cask 'macbiff' do
   appcast 'https://sourceforge.net/projects/macbiff/rss?path=/macbiff',
           checkpoint: '7aabb0ea6d469d4d1c225c9be9e399eeccfc24b4cf1a0a161b401d9618e6df72'
   name 'MacBiff'
-  homepage 'http://macbiff.sourceforge.net'
+  homepage 'http://macbiff.sourceforge.net/'
 
   app 'MacBiff.app'
 end
