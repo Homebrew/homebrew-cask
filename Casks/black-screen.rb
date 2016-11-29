@@ -4,7 +4,7 @@ cask 'black-screen' do
 
   url "https://github.com/vshatskyi/black-screen/releases/download/v#{version}/black-screen-#{version}-mac.zip"
   appcast 'https://github.com/vshatskyi/black-screen/releases.atom',
-          checkpoint: '141a8a3a03bedb6a2b750d1669cefd717841cb6ea958ffc380480517efada04c'
+          checkpoint: 'ee18ae661108286d196dde79788ea2bc48a62c14f882a260319bd2670b9a6ae2'
   name 'Black Screen'
   homepage 'https://github.com/vshatskyi/black-screen'
 
