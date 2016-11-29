@@ -6,7 +6,7 @@ cask 'openmsx' do
   appcast 'https://sourceforge.net/projects/openmsx/rss',
           checkpoint: '797fc177f46bddd1950fb011b95188e334ca029c3cc25a3a4ab679f60bcebe56'
   name 'openMSX'
-  homepage 'http://openmsx.sourceforge.net'
+  homepage 'http://openmsx.sourceforge.net/'
 
   app 'openMSX.app'
 end

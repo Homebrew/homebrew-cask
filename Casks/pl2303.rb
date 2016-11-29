@@ -4,7 +4,7 @@ cask 'pl2303' do
 
   url "http://www.prolific.com.tw/UserFiles/files/PL2303_MacOSX_#{version.dots_to_underscores}.zip"
   name 'Prolific USB-Serial Cable driver'
-  homepage 'http://www.prolific.com.tw'
+  homepage 'http://www.prolific.com.tw/'
 
   pkg "PL2303_MacOSX_#{version}.pkg"
 

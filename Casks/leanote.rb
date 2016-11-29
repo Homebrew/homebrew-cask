@@ -7,7 +7,7 @@ cask 'leanote' do
   appcast 'https://github.com/leanote/desktop-app/releases.atom',
           checkpoint: '19a1cc4cc1347a96093670e3fa3945b0a2f9cfbc5c806423e240a12645c97a8e'
   name 'Leanote'
-  homepage 'http://leanote.org'
+  homepage 'http://leanote.org/'
 
   app 'Leanote.app'
 end

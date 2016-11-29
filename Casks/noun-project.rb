@@ -7,7 +7,7 @@ cask 'noun-project' do
   appcast 'https://thenounproject.com/for-mac/feed/',
           checkpoint: '5f20b3ebde64e2015c4be14b8b0f93cea927df78cf443ba7c985c314273dbfc2'
   name 'Noun Project'
-  homepage 'https://thenounproject.com'
+  homepage 'https://thenounproject.com/'
 
   depends_on macos: '>= 10.9'
 

@@ -7,7 +7,7 @@ cask 'sassquatch' do
   appcast 'https://thoughtbot.github.io/sassquatch/feed.xml',
           checkpoint: 'fd579aaf6f76be00a8d491628e99027fa0a4b033eb8d759fda2837c5536b4258'
   name 'Sassquatch'
-  homepage 'http://sassquatch.thoughtbot.com'
+  homepage 'http://sassquatch.thoughtbot.com/'
 
   app 'Sassquatch/Sassquatch.app'
 end

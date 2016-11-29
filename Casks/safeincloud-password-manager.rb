@@ -4,7 +4,7 @@ cask 'safeincloud-password-manager' do
 
   url 'https://www.safe-in-cloud.com/download/SafeInCloud.dmg'
   name 'SafeInCloud Password Manager'
-  homepage 'https://www.safe-in-cloud.com'
+  homepage 'https://www.safe-in-cloud.com/'
 
   app 'SafeInCloud Password Manager.app'
 end

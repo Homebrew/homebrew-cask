@@ -5,7 +5,7 @@ cask 'myo-connect' do
   # s3.amazonaws.com/thalmicdownloads was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/thalmicdownloads/mac/#{version}/MyoConnect.dmg"
   name 'Thalmic Labs Myo Connect'
-  homepage 'https://developer.thalmic.com'
+  homepage 'https://developer.thalmic.com/'
 
   app 'Myo Connect.app'
 
