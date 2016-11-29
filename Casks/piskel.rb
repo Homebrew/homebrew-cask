@@ -7,7 +7,7 @@ cask 'piskel' do
   appcast 'https://github.com/juliandescottes/piskel/releases.atom',
           checkpoint: '80cf25f310ff43f310b6c02525cc16b3fdb1fe8c66273843bc11ab758f2c5ed4'
   name 'Piskel'
-  homepage 'http://www.piskelapp.com'
+  homepage 'http://www.piskelapp.com/'
 
   app 'Piskel.app'
 end
