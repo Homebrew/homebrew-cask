@@ -4,7 +4,7 @@ cask 'master-password' do
 
   url 'https://ssl.masterpasswordapp.com/masterpassword-mac.zip'
   name 'Master Password'
-  homepage 'http://masterpasswordapp.com'
+  homepage 'http://masterpasswordapp.com/'
 
   app 'Master Password.app'
 
