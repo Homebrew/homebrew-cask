@@ -5,7 +5,7 @@ cask 'prey' do
   # prey-releases.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://prey-releases.s3.amazonaws.com/node-client/#{version}/prey-mac-#{version}-x86.pkg"
   name 'Prey'
-  homepage 'https://preyproject.com'
+  homepage 'https://preyproject.com/'
 
   pkg "prey-mac-#{version}-x86.pkg"
 
