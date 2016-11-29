@@ -4,7 +4,7 @@ cask 'quassel' do
 
   url "http://quassel-irc.org/pub/QuasselMono_MacOSX-x86_64_#{version}.dmg"
   name 'Quassel IRC'
-  homepage 'http://quassel-irc.org'
+  homepage 'http://quassel-irc.org/'
 
   app 'Quassel.app'
 end
