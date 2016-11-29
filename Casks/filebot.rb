@@ -9,13 +9,10 @@ cask 'filebot' do
   name 'FileBot'
   homepage 'https://www.filebot.net/'
 
-  # The darwin package only includes the CLI tools. Launching the app merely redirects to the Mac App Store.
-  # app 'FileBot.app'
+  # The darwin package only includes the CLI tools. Launching the app bundle merely redirects to the Mac App Store.
   binary 'FileBot.app/Contents/MacOS/filebot.sh', target: 'filebot'
 
-  zap delete: [
-                '~/Library/Preferences/net.filebot.ui.plist',
-              ]
+  zap delete: '~/Library/Preferences/net.filebot.ui.plist'
 
   caveats do
     depends_on_java('8')
