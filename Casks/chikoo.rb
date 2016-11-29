@@ -6,7 +6,7 @@ cask 'chikoo' do
   appcast 'https://download.codingturtle.com/appcast/chikoo/11000',
           checkpoint: 'af050d033356ae59b5bfc002faeb289d7dc6632f6bd8ac6623c5ecd9af2ec6f8'
   name 'Chikoo'
-  homepage 'https://codingturtle.com/chikoo'
+  homepage 'https://codingturtle.com/chikoo/'
 
   app 'Chikoo.app'
 end

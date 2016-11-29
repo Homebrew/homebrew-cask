@@ -7,7 +7,7 @@ cask 'screens-connect' do
   appcast 'https://updates.edovia.com/com.edovia.screens.connect.4.mac/appcast.xml',
           checkpoint: '0daebdac3a33c0983a11659087162e0229911b183304f9b37e43e9e52dfe8570'
   name 'Screens Connect'
-  homepage 'https://screensconnect.com'
+  homepage 'https://screensconnect.com/'
 
   depends_on macos: '>= :el_capitan'
 

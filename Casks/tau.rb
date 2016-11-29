@@ -2,9 +2,9 @@ cask 'tau' do
   version :latest
   sha256 :no_check
 
-  url 'http://tau.uoregon.edu/tau.dmg'
+  url 'https://www.cs.uoregon.edu/research/tau/tau.dmg'
   name 'TAU'
-  homepage 'http://tau.uoregon.edu/'
+  homepage 'https://www.cs.uoregon.edu/research/tau/home.php'
 
   suite 'TAU'
 end
