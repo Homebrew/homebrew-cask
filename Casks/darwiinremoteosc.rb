@@ -1,6 +1,6 @@
 cask 'darwiinremoteosc' do
-  version '0.6'
-  sha256 'f98c6c982182ae899af0e1f729120242544e5b3231002802aaef8d565068fcb9'
+  version :latest
+  sha256 :no_check
 
   url 'http://www.matthiaskronlachner.com/?download=1954'
   name 'DarwiinRemoteOSC'
