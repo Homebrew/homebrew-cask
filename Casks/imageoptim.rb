@@ -4,7 +4,7 @@ cask 'imageoptim' do
 
   url "https://imageoptim.com/ImageOptim#{version}.tar.bz2"
   appcast 'https://imageoptim.com/appcast.xml',
-          checkpoint: '245eb2ea799301d28b8c6a3edc624b0a834b5231cac2f12e060e5119329b3b5a'
+          checkpoint: '1430a917721cc97e6466310471d18a28d464197fe41fee3b0dfdaf3cb1b7aa21'
   name 'ImageOptim'
   homepage 'https://imageoptim.com/mac'
 
