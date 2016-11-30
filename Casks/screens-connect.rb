@@ -1,11 +1,11 @@
 cask 'screens-connect' do
-  version '4.1.2'
-  sha256 'eea3db7530f5d0db7b60d3c633ebd6ff887d3d6fdaa23aceb989632b77677721'
+  version '4.2'
+  sha256 '87546e86b647c03ccea2cf3f0f1dff0ab8adc33e19888077ea35956fb7848e09'
 
   # edovia.com was verified as official when first introduced to the cask
   url "https://download.edovia.com/screensconnect/ScreensConnect_#{version}.zip"
   appcast 'https://updates.edovia.com/com.edovia.screens.connect.4.mac/appcast.xml',
-          checkpoint: '0daebdac3a33c0983a11659087162e0229911b183304f9b37e43e9e52dfe8570'
+          checkpoint: '278cc7056cc914f6d5e555e584cf241e096d9138e0f9bda50fcd68aeed4e8b75'
   name 'Screens Connect'
   homepage 'https://screensconnect.com/'
 
