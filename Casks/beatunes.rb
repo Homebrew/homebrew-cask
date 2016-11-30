@@ -4,7 +4,7 @@ cask 'beatunes' do
 
   url "http://coxy.beatunes.com/download/beaTunes-#{version.dots_to_hyphens}.dmg"
   name 'beaTunes'
-  homepage 'https://www.beatunes.com'
+  homepage 'https://www.beatunes.com/'
 
   depends_on macos: '>= :lion'
   depends_on arch: :x86_64

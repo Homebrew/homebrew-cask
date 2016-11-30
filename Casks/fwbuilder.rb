@@ -7,7 +7,7 @@ cask 'fwbuilder' do
   appcast 'https://sourceforge.net/projects/fwbuilder/rss',
           checkpoint: '5eeec71160b49c41eb96bbac8d450d7fdec7698aec2e138773295a94e28f8b5a'
   name 'Firewall Builder'
-  homepage 'http://www.fwbuilder.org'
+  homepage 'http://www.fwbuilder.org/'
 
   app "fwbuilder-#{version}.app"
 end

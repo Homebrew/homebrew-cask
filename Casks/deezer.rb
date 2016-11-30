@@ -1,6 +1,6 @@
 cask 'deezer' do
-  version '1.1.3,4308'
-  sha256 '244530cb29c232c8464660153ddd052d81c7c6e0a6317288544f3225f55d79e5'
+  version '1.1.3,4311'
+  sha256 '7df7eb682894898b6175cbcf4997191c66d245bf8f4fa9de4fec911b83eb5273'
 
   url "http://e-cdn-content.deezer.com/builds/mac/Deezer_#{version.after_comma}.dmg"
   name 'Deezer'

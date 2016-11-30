@@ -4,7 +4,7 @@ cask 'mobirise' do
 
   url 'https://mobirise.com/mobirise-free-mac.zip'
   name 'Mobirise'
-  homepage 'https://mobirise.com'
+  homepage 'https://mobirise.com/'
 
   app 'Mobirise.app'
 end

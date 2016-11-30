@@ -4,7 +4,7 @@ cask 'nwjs' do
 
   url "https://dl.nwjs.io/v#{version}/nwjs-sdk-v#{version}-osx-x64.zip"
   name 'NW.js'
-  homepage 'https://nwjs.io'
+  homepage 'https://nwjs.io/'
 
   app "nwjs-sdk-v#{version}-osx-x64/nwjs.app"
   binary "nwjs-sdk-v#{version}-osx-x64/nwjc"

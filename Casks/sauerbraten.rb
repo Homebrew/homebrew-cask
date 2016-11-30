@@ -7,7 +7,7 @@ cask 'sauerbraten' do
   appcast 'https://sourceforge.net/projects/sauerbraten/rss',
           checkpoint: '735d408a80dbcd098dbaca3946b69de28519b8ffe8b2df7ea6c51fd48553ed39'
   name 'Cube 2: Sauerbraten'
-  homepage 'http://sauerbraten.org'
+  homepage 'http://sauerbraten.org/'
 
   app 'Sauerbraten.app'
 end

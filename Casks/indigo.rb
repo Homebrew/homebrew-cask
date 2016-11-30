@@ -6,7 +6,7 @@ cask 'indigo' do
   url "http://cloud.goprism.com/download/Indigo_#{version.dots_to_underscores}.dmg"
   name 'Indigo'
   name 'Indigo Domotics'
-  homepage 'https://www.indigodomo.com'
+  homepage 'https://www.indigodomo.com/'
 
   pkg 'Indigo Installer.pkg'
 

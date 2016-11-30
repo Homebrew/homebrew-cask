@@ -1,10 +1,10 @@
 cask 'xmplify' do
-  version '1.8.0'
-  sha256 'edf7eb1823e62302c9f44efb927efb25d159392bfa708a20d4a1785d8d16ebf0'
+  version '1.8.1'
+  sha256 'd9dfc2a48deb9a0088a0c40d60714f904e972da3b9f4b84fa9237f28ff5d41c0'
 
   url "http://xmplifyapp.com/releases/Xmplify-#{version}.dmg"
   appcast 'http://xmplifyapp.com/appcast.xml',
-          checkpoint: 'a0528544f8f5ca1cdda9d3d0d32f4746dab296071faca625976029738007c858'
+          checkpoint: 'c9f2ff3fc510c1328de3736f650c9e609f5d59b7960be083e9361f20a233dc95'
   name 'Xmplify'
   homepage 'http://xmplifyapp.com/'
 

@@ -6,7 +6,7 @@ cask 'findings' do
   appcast 'http://downloads.findingsapp.com/appcast.xml',
           checkpoint: '51548c6d2506ba1413967c96f183853facfef0cf4369fab6e069948340653397'
   name 'Findings'
-  homepage 'http://findingsapp.com'
+  homepage 'http://findingsapp.com/'
 
   depends_on macos: '>= :mavericks'
 

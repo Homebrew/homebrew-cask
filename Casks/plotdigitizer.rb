@@ -6,7 +6,7 @@ cask 'plotdigitizer' do
   appcast 'https://sourceforge.net/projects/plotdigitizer/rss',
           checkpoint: '755ba0b18407b5cc8a7b3526876ca11d5d2f7b136481e9fe87956b9947dc942e'
   name 'Plot Digitizer'
-  homepage 'http://plotdigitizer.sourceforge.net'
+  homepage 'http://plotdigitizer.sourceforge.net/'
 
   app 'PlotDigitizer.app'
 end

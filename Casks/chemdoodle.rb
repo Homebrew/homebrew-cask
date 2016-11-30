@@ -4,7 +4,7 @@ cask 'chemdoodle' do
 
   url "https://www.chemdoodle.com/downloads/ChemDoodle-osx-#{version}.dmg"
   name 'ChemDoodle'
-  homepage 'https://www.chemdoodle.com'
+  homepage 'https://www.chemdoodle.com/'
 
   suite 'ChemDoodle'
 end

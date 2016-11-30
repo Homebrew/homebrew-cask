@@ -4,7 +4,7 @@ cask 'indi-control-panel' do
 
   url "http://download.cloudmakers.eu/INDI_Control_Panel_#{version}.dmg"
   name 'INDI Control Panel'
-  homepage 'http://www.cloudmakers.eu'
+  homepage 'http://www.cloudmakers.eu/'
 
   app 'INDI Control Panel.app'
 end

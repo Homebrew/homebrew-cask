@@ -4,7 +4,7 @@ cask 'kepler' do
 
   url "https://code.kepler-project.org/code/kepler/releases/installers/#{version}/Kepler-#{version}.dmg"
   name 'Kepler'
-  homepage 'https://kepler-project.org'
+  homepage 'https://kepler-project.org/'
 
   suite "Kepler-#{version}"
 end

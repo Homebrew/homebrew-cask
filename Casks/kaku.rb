@@ -7,7 +7,7 @@ cask 'kaku' do
   appcast 'https://github.com/EragonJ/Kaku/releases.atom',
           checkpoint: 'ba0caf830db975e86fb14a85a2400fa91de98666c12dcef59afacb4cbd5533aa'
   name 'Kaku'
-  homepage 'http://kaku.rocks'
+  homepage 'http://kaku.rocks/'
 
   app 'Kaku.app'
 end

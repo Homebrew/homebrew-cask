@@ -6,7 +6,7 @@ cask 'betterzip' do
   appcast "https://macitbetter.com/BetterZip#{version.major}.rss",
           checkpoint: 'cc8f405304c66c96a64702a7806bef9e5c5a3f0b393560c95130e1730a38d79f'
   name 'BetterZip'
-  homepage 'https://macitbetter.com'
+  homepage 'https://macitbetter.com/'
 
   app 'BetterZip.app'
 

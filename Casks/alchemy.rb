@@ -4,7 +4,7 @@ cask 'alchemy' do
 
   url "http://al.chemy.org/files/Alchemy-#{version}.dmg"
   name 'Alchemy'
-  homepage 'http://al.chemy.org'
+  homepage 'http://al.chemy.org/'
 
   app 'Alchemy/Alchemy.app'
 end

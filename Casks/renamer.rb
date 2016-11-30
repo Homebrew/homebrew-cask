@@ -5,7 +5,7 @@ cask 'renamer' do
   # storage.googleapis.com/incrediblebee was verified as official when first introduced to the cask
   url "https://storage.googleapis.com/incrediblebee/apps/Renamer-#{version}/Renamer.zip"
   name 'Renamer'
-  homepage 'http://renamer.com'
+  homepage 'http://renamer.com/'
 
   app 'Renamer.app'
 end

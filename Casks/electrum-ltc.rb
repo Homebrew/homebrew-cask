@@ -5,8 +5,7 @@ cask 'electrum-ltc' do
   url "https://electrum-ltc.org/download/Electrum-LTC-#{version}.dmg"
   name 'Electrum-LTC'
   homepage 'https://electrum-ltc.org/'
-  gpg "#{url}.asc",
-      key_id: '9914864dfc33499c6ca2beea22453004695506fd'
+  gpg "#{url}.asc", key_id: '9914864dfc33499c6ca2beea22453004695506fd'
 
   app 'Electrum-LTC.app'
 end

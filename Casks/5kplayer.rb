@@ -4,7 +4,7 @@ cask '5kplayer' do
 
   url 'https://www.5kplayer.com/download/5kplayer.dmg'
   name '5KPlayer'
-  homepage 'https://www.5kplayer.com'
+  homepage 'https://www.5kplayer.com/'
 
   app '5KPlayer.app'
 end

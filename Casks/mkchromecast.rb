@@ -7,7 +7,7 @@ cask 'mkchromecast' do
   appcast 'https://github.com/muammar/mkchromecast/releases.atom',
           checkpoint: '531ae62f7285a54c1b3e7540cd16bba20a0f0ef2036182c20bd696964919d464'
   name 'mkchromecast'
-  homepage 'http://mkchromecast.com'
+  homepage 'http://mkchromecast.com/'
 
   depends_on cask: 'soundflower'
 

@@ -5,7 +5,7 @@ cask 'cliqz' do
   # repository.cliqz.com.s3.amazonaws.com was verified as official when first introduced to the cask
   url "http://repository.cliqz.com.s3.amazonaws.com/dist/release/#{version}/de/CLIQZ-#{version}.de.mac.dmg"
   name 'CLIQZ'
-  homepage 'https://cliqz.com'
+  homepage 'https://cliqz.com/'
 
   app 'CLIQZ.app'
 

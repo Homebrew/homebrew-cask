@@ -7,7 +7,7 @@ cask 'pomotodo' do
   appcast 'http://air.hackplan.com/projects/5455f382437315386000d4d5/versions/latest.xml',
           checkpoint: '29a7e720aada903ab887d8faeddb9ad6b68e53ddf8c0b4eb81ced2c0fc7090df'
   name 'Pomodoro'
-  homepage 'https://pomotodo.com'
+  homepage 'https://pomotodo.com/'
 
   app 'Pomotodo.app'
 end

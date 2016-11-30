@@ -7,7 +7,7 @@ cask 'openra' do
   appcast 'https://github.com/OpenRA/OpenRA/releases.atom',
           checkpoint: 'da02f72b8d7631c584ba88626c1dc82bec737f2ea0de0d1edb41e6a3ca6b800f'
   name 'OpenRA'
-  homepage 'http://www.openra.net'
+  homepage 'http://www.openra.net/'
 
   depends_on cask: 'mono-mdk'
 

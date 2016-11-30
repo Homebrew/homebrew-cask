@@ -7,7 +7,7 @@ cask 'boom' do
   appcast 'https://updates.devmate.com/com.globaldelight.Boom2.xml',
           checkpoint: '8eb9a0a978cd243fb8f0decee2a11eb943c07bf3ccd4d231717e2f15060a02d5'
   name 'Boom'
-  homepage 'http://www.globaldelight.com/boom/'
+  homepage 'http://www.globaldelight.com/boom'
 
   depends_on macos: '>= :yosemite'
 

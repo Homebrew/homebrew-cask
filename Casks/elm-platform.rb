@@ -4,7 +4,7 @@ cask 'elm-platform' do
 
   url "http://install.elm-lang.org/Elm-Platform-#{version}.pkg"
   name 'Elm'
-  homepage 'http://www.elm-lang.org'
+  homepage 'http://www.elm-lang.org/'
 
   pkg "Elm-Platform-#{version}.pkg"
 
