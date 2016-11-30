@@ -11,15 +11,6 @@ cask 'vagrant' do
 
   pkg 'Vagrant.pkg'
 
-  # Vagrant 1.8.7 ships with a broken embedded curl. Removing it causes vagrant
-  # to fall back to the system-installed curl, which works.
-  # https://github.com/mitchellh/vagrant/issues/7969
-  postflight do
-    system_command '/bin/rm',
-                   args: ['/opt/vagrant/embedded/bin/curl'],
-                   sudo: true
-  end
-
   uninstall script:  { executable: 'uninstall.tool', input: %w[Yes] },
             pkgutil: 'com.vagrant.vagrant'
 
