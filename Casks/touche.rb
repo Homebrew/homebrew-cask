@@ -4,6 +4,8 @@ cask 'touche' do
 
   # redsweater.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://redsweater.s3.amazonaws.com/Touche#{version}.zip"
+  appcast 'https://red-sweater.com/touche/appcast.php',
+          checkpoint: '2221cef86f61ed01bdd44df1e8b2cd7052adec9dce235f845548b808d97843e7'
   name 'Touché'
   homepage 'https://red-sweater.com/touche/'
 
