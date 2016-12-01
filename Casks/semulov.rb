@@ -6,7 +6,7 @@ cask 'semulov' do
   appcast 'https://kainjow.com/updates/semulov.xml',
           checkpoint: '0764186f5017aac6f1adbaf2cdc1732f8038af7cd673909fd612ea9e255adff4'
   name 'Semulov'
-  homepage 'https://www.kainjow.com'
+  homepage 'https://www.kainjow.com/'
 
   app 'Semulov.app'
 end
