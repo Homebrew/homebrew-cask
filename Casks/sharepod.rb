@@ -5,7 +5,7 @@ cask 'sharepod' do
   # cdn.macroplant.com was verified as official when first introduced to the cask
   url "http://cdn.macroplant.com/release/Sharepod-#{version}.dmg"
   name 'Sharepod'
-  homepage 'https://www.getsharepod.com'
+  homepage 'https://www.getsharepod.com/'
 
   app 'Sharepod.app'
 end
