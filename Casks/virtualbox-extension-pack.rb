@@ -12,7 +12,7 @@ cask 'virtualbox-extension-pack' do
 
   url "http://download.virtualbox.org/virtualbox/#{version.sub(%r{-.*}, '')}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
   name 'Oracle VirtualBox Extension Pack'
-  homepage 'https://www.virtualbox.org'
+  homepage 'https://www.virtualbox.org/'
 
   depends_on cask: 'virtualbox'
   container type: :naked
