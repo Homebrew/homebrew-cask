@@ -9,7 +9,7 @@ cask 'tunnelblick' do
 
   url "https://www.tunnelblick.net/release/Tunnelblick_#{version}.dmg"
   name 'Tunnelblick'
-  homepage 'https://www.tunnelblick.net'
+  homepage 'https://www.tunnelblick.net/'
 
   auto_updates true
   depends_on macos: '>= :tiger'

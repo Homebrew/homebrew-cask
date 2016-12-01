@@ -7,7 +7,7 @@ cask 'toggldesktop' do
   appcast 'https://assets.toggl.com/installers/darwin_stable_appcast.xml',
           checkpoint: '0af9b4c523d6303ce4ccbeeb640733b7b1de9901d22b13acc8c2cb8c0d9376ed'
   name 'TogglDesktop'
-  homepage 'https://www.toggl.com'
+  homepage 'https://www.toggl.com/'
 
   app 'TogglDesktop.app'
 end

@@ -14,7 +14,7 @@ cask 'virtualbox' do
   appcast 'http://download.virtualbox.org/virtualbox/LATEST.TXT',
           checkpoint: '779e6d24cb291ff605d93a3ec585cfa5589c1d4584ab7d9ee04a231d41ff5df3'
   name 'Oracle VirtualBox'
-  homepage 'https://www.virtualbox.org'
+  homepage 'https://www.virtualbox.org/'
 
   pkg 'VirtualBox.pkg'
 

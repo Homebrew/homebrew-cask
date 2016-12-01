@@ -6,7 +6,7 @@ cask 'shapes' do
   appcast "http://shapesapp.com/appcast/shapes#{version.major}.rss",
           checkpoint: '273c28c2c6030abfc48ef63eba711fcf86f36db4d31567b299ad95d5d90d4602'
   name 'Shapes'
-  homepage 'http://shapesapp.com'
+  homepage 'http://shapesapp.com/'
 
   depends_on macos: '>= :mountain_lion'
 

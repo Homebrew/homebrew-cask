@@ -4,7 +4,7 @@ cask 'story-writer' do
 
   url "http://soft.xiaoshujiang.com/version/Story-writer-v#{version}/Story-writer-osx64.zip"
   name 'Story Writer'
-  homepage 'http://soft.xiaoshujiang.com'
+  homepage 'http://soft.xiaoshujiang.com/'
 
   app 'Story-writer.app'
 end

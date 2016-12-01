@@ -5,7 +5,7 @@ cask 'tamarin-prover' do
   # github.com/tamarin-prover/bin-dists was verified as official when first introduced to the cask
   url 'https://github.com/tamarin-prover/bin-dists/archive/master.zip'
   name 'tamarin-prover'
-  homepage 'https://tamarin-prover.github.io'
+  homepage 'https://tamarin-prover.github.io/'
 
   depends_on macos: '>= :lion'
   depends_on arch: :x86_64

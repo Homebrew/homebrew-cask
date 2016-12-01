@@ -4,7 +4,7 @@ cask 'sqlworkbenchj' do
 
   url "http://www.sql-workbench.net/archive/Workbench-Build#{version}-MacJava8.tgz"
   name 'SQL Workbench/J'
-  homepage 'http://www.sql-workbench.net'
+  homepage 'http://www.sql-workbench.net/'
 
   app 'SQLWorkbenchJ.app'
 

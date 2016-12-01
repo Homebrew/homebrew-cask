@@ -4,7 +4,7 @@ cask 'zerobranestudio' do
 
   url "https://download.zerobrane.com/ZeroBraneStudioEduPack-#{version}-macos.dmg"
   name 'ZeroBrane Studio'
-  homepage 'https://studio.zerobrane.com'
+  homepage 'https://studio.zerobrane.com/'
 
   app 'ZeroBraneStudio.app'
 end

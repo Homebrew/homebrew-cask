@@ -4,7 +4,7 @@ cask 'sdl-framework' do
 
   url "https://www.libsdl.org/release/SDL-#{version}.dmg"
   name 'SDL.framework'
-  homepage 'https://www.libsdl.org'
+  homepage 'https://www.libsdl.org/'
 
   stage_only true
 end

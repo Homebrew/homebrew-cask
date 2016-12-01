@@ -4,7 +4,7 @@ cask 'twindocs' do
 
   url 'https://www.twindocs.com/plugins/es/tools_mac/Twindocs%20tools.pkg.zip'
   name 'Twindocs tools'
-  homepage 'https://www.twindocs.com'
+  homepage 'https://www.twindocs.com/'
 
   pkg 'Twindocs tools.pkg'
 

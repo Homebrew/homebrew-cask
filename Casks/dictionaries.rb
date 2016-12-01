@@ -5,7 +5,7 @@ cask 'dictionaries' do
   # dl.devmate.com was verified as official when first introduced to the cask
   url 'https://dl.devmate.com/io.dictionaries.Dictionaries/Dictionaries.zip'
   name 'Dictionaries'
-  homepage 'https://dictionaries.io'
+  homepage 'https://dictionaries.io/'
 
   app 'Dictionaries.app'
 end
