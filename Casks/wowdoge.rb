@@ -4,7 +4,7 @@ cask 'wowdoge' do
 
   url 'http://www.wowdoge.org/download/WowDoge.dmg'
   name 'WowDoge'
-  homepage 'http://www.wowdoge.org'
+  homepage 'http://www.wowdoge.org/'
 
   app 'WowDoge.app'
 end
