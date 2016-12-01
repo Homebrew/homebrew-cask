@@ -5,7 +5,7 @@ cask 'soapui' do
   # downloads.smartbear.com/soapui-os was verified as official when first introduced to the cask
   url "https://downloads.smartbear.com/soapui-os/SoapUI-#{version}.dmg"
   name 'SmartBear SoapUI'
-  homepage 'https://www.soapui.org'
+  homepage 'https://www.soapui.org/'
 
   # Installer runs install4j from the distribution in quiet mode.
   #
