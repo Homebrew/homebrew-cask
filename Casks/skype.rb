@@ -10,7 +10,7 @@ cask 'skype' do
   end
 
   name 'Skype'
-  homepage 'https://www.skype.com'
+  homepage 'https://www.skype.com/'
 
   auto_updates true
 
