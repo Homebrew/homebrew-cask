@@ -4,7 +4,7 @@ cask 'spotify' do
 
   url 'https://download.spotify.com/Spotify.dmg'
   name 'Spotify'
-  homepage 'https://www.spotify.com'
+  homepage 'https://www.spotify.com/'
 
   auto_updates true
   depends_on macos: '>= :lion'
