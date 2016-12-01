@@ -5,7 +5,7 @@ cask 'tongbu' do
   # qd.appdown.info/qd/zsmacqd was verified as official when first introduced to the cask
   url "http://qd.appdown.info/qd/zsmacqd/Tongbu_mac_v#{version}_baidupinzhuan.dmg"
   name 'Tongbu'
-  homepage 'http://www.tongbu.com'
+  homepage 'http://www.tongbu.com/'
 
   app 'Tongbu.app'
 end
