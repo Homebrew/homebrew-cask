@@ -5,7 +5,7 @@ cask 'sqlpro-for-sqlite' do
   # d3fwkemdw8spx3.cloudfront.net/sqlite was verified as official when first introduced to the cask
   url "https://d3fwkemdw8spx3.cloudfront.net/sqlite/SQLProSQLite.#{version}.app.zip"
   name 'SQLPro for SQLite'
-  homepage 'https://www.sqlitepro.com'
+  homepage 'https://www.sqlitepro.com/'
 
   app 'SQLPro for SQLite.app'
 
