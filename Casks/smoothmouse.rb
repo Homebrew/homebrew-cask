@@ -6,7 +6,7 @@ cask 'smoothmouse' do
   appcast 'http://update.smoothmouse.com/appcast.xml',
           checkpoint: '5971898ce809ee4bad6a80918fc30d853f7dc98d88e35a05efa4f2c72b40b073'
   name 'SmoothMouse'
-  homepage 'http://smoothmouse.com'
+  homepage 'http://smoothmouse.com/'
 
   pkg 'SmoothMouse.pkg'
 
