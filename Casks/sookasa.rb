@@ -7,7 +7,7 @@ cask 'sookasa' do
   appcast 'https://s3.amazonaws.com/sookasa-static-assets/mac-apps/appcats/appcast_mac_no_update.xml',
           checkpoint: '448360f2c1eec35b8b7ab5d6beaf5ecf25ea3f4a1f6d6f181f60aeb3bba3fcce'
   name 'Sookasa'
-  homepage 'https://www.sookasa.com'
+  homepage 'https://www.sookasa.com/'
 
   pkg "Sookasa_#{version}.pkg"
 
