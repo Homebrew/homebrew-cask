@@ -1,6 +1,6 @@
 cask 'flinto' do
-  version '1.6.3'
-  sha256 '4bdc7a9bebdc2d0d62ad728a89d65e59db9e5dddfab652cc76a8bd1e810543e5'
+  version '2.1'
+  sha256 '5ad0dd7433fe1d78a98c499055ab6fb017343f70df3d0aab62d770337d71b670'
 
   url "https://www.flinto.com/assets/Flinto-#{version}.dmg"
   name 'Flinto'
@@ -10,4 +10,6 @@ cask 'flinto' do
 
   uninstall pkgutil: 'com.flinto.*',
             delete:  '/Applications/FLinto.app'
+
+  zap delete: '~/Library/Application Scripts/com.flinto.Flinto'
 end
