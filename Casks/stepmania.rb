@@ -1,11 +1,11 @@
 cask 'stepmania' do
-  version '5.0.10'
-  sha256 '7e852089ff4cb13217e4a8debb76b1bffb3d8ff6ca31c903ff768577742b50a0'
+  version '5.0.12'
+  sha256 'b49eb7f4405c8cc289053deb48c30edcd8517a2948853e77befe9073818eb336'
 
   # github.com/stepmania/stepmania was verified as official when first introduced to the cask
   url "https://github.com/stepmania/stepmania/releases/download/v#{version}/StepMania-#{version}-mac.dmg"
   appcast 'https://github.com/stepmania/stepmania/releases.atom',
-          checkpoint: '0b2d80a74aa81b15f01f0bc45ddfc6443e8422f3ca346b8c60ae9d55c1a853bd'
+          checkpoint: '8a8f8be70726cd8f745a0787e0afaaa294a2e35a7ff135fc63de35597b7b3c90'
   name 'StepMania'
   homepage 'https://www.stepmania.com/'
 
