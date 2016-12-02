@@ -13,5 +13,6 @@ cask 'pokerstars' do
   zap delete: [
                 '~/Library/Preferences/com.pokerstars.user.ini',
                 '~/Library/Preferences/com.pokerstars.PokerStars.plist',
+                '~/Library/Application Support/PokerStars',
               ]
 end
