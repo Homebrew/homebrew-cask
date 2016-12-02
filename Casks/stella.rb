@@ -6,7 +6,7 @@ cask 'stella' do
   appcast 'https://sourceforge.net/projects/stella/rss?path=/stella',
           checkpoint: '096a0719ee88287c5523ac52be377b76776d61bc9f6f4f018f68f177031833eb'
   name 'Stella'
-  homepage 'http://stella.sourceforge.net'
+  homepage 'http://stella.sourceforge.net/'
 
   app 'Stella.app'
 end

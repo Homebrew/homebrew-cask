@@ -14,7 +14,7 @@ cask 'sente' do
   appcast 'https://www.thirdstreetsoftware.com/rss/Sente65.xml',
           checkpoint: '8b4ffee4f0379d9e1565166a6cecfa6a73260640ee8070e6abd8f58f3d26f754'
   name 'Sente'
-  homepage 'https://www.thirdstreetsoftware.com'
+  homepage 'https://www.thirdstreetsoftware.com/'
 
   app "Sente #{version.major}.app"
 end

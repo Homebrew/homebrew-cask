@@ -7,7 +7,7 @@ cask 'spacemonkey' do
   appcast 'https://rink.hockeyapp.net/api/2/apps/aa33b6780fdfc71247b2995fa47b5d7c',
           checkpoint: '432e79d7e5cd77de36a1e250e6474cdbeccdb0e45cbe81520d32bc6e4ba63a3c'
   name 'Space Monkey'
-  homepage 'https://www.spacemonkey.com'
+  homepage 'https://www.spacemonkey.com/'
 
   auto_updates true
 

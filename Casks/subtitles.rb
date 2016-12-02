@@ -6,7 +6,7 @@ cask 'subtitles' do
   appcast 'https://subtitlesapp.com/updates.xml',
           checkpoint: '1851499d9b99765244ec22db7faf583a82dd1d6e4e63aa04e7d0d1f28106c2ce'
   name 'Subtitles'
-  homepage 'https://subtitlesapp.com'
+  homepage 'https://subtitlesapp.com/'
 
   app 'Subtitles.app'
 

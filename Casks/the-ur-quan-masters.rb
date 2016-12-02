@@ -6,7 +6,7 @@ cask 'the-ur-quan-masters' do
   appcast 'https://sourceforge.net/projects/sc2/rss',
           checkpoint: '74e6fb7b18dc943aadb12bf7a5859788205790bc826b3decf39893dd0d3cf70e'
   name 'The Ur-Quan Masters'
-  homepage 'http://sc2.sourceforge.net'
+  homepage 'http://sc2.sourceforge.net/'
 
   app 'The Ur-Quan Masters.app'
 end

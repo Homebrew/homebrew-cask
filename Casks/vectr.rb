@@ -4,7 +4,7 @@ cask 'vectr' do
 
   url "http://download.vectr.com/desktop/#{version}/mac/Vectr-#{version}.dmg"
   name 'Vectr'
-  homepage 'https://vectr.com'
+  homepage 'https://vectr.com/'
 
   app 'Vectr.app'
 end

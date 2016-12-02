@@ -5,7 +5,7 @@ cask 'sunlogin-remote' do
   url "https://download.oray.com/sunlogin/SunloginRemote_v#{version}.dmg"
   name 'Sunlogin Remote'
   name '向日葵控制端'
-  homepage 'https://sunlogin.oray.com'
+  homepage 'https://sunlogin.oray.com/'
 
   app 'Sunlogin Remote.app'
 end

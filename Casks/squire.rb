@@ -7,7 +7,7 @@ cask 'squire' do
   appcast 'http://www.sylion.com/squireapp/sparkle/SquireMac/appcastSquireMac.xml',
           checkpoint: '4f7ea01207cca2fa14f1b6c82e6eb35500715ddeaa15258a5dccdbb05f0edb72'
   name 'Squire'
-  homepage 'http://squireapp.com'
+  homepage 'http://squireapp.com/'
 
   app 'Squire.app'
 end

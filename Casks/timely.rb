@@ -7,7 +7,7 @@ cask 'timely' do
   appcast 'https://github.com/Timely/desktop-releases/releases.atom',
           checkpoint: 'e4cb97258fa3ef5d9c4ac39ef80ad4bb3a96e11ad81beb1e674962292f270263'
   name 'Timely'
-  homepage 'https://timelyapp.com'
+  homepage 'https://timelyapp.com/'
 
   app 'Timely.app'
 end

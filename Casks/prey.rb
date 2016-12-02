@@ -1,6 +1,6 @@
 cask 'prey' do
-  version '1.6.3'
-  sha256 'eef70a6ca7e94163edb2bea4abbaea0c2e369202d2d2136c0f3e425465eacfb6'
+  version '1.6.4'
+  sha256 '170987b8e8a918ff538178304db0ba8251f9679fb195626b8023ee22c11b5d74'
 
   # prey-releases.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://prey-releases.s3.amazonaws.com/node-client/#{version}/prey-mac-#{version}-x86.pkg"

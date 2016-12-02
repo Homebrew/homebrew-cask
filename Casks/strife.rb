@@ -4,7 +4,7 @@ cask 'strife' do
 
   url "http://dl.strife.com/af1dfc2754268375727a3eec1749b27e/StrifeMac64-#{version}.zip"
   name 'Strife'
-  homepage 'https://strife.com'
+  homepage 'https://strife.com/'
 
   app 'Strife.app'
 end

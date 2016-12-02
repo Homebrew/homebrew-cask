@@ -6,7 +6,7 @@ cask 'telegram' do
   appcast 'https://osx.telegram.org/updates/versions.xml',
           checkpoint: '5a478e37b4fd26c4520ed4623dfa19ccc6abb5ade968c367f6901de6a5db5e8e'
   name 'Telegram for macOS'
-  homepage 'https://macos.telegram.org'
+  homepage 'https://macos.telegram.org/'
 
   auto_updates true
 
