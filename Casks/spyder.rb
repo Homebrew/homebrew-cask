@@ -1,11 +1,11 @@
 cask 'spyder' do
-  version '2.3.8'
-  sha256 '03bbdb9e2dc753d663b70ff3ac2190d5141099e58744465378f07597c81067be'
+  version '3.0.2'
+  sha256 'bd9f3326be19b0de047cef296b0bd6222ae4b21b0a508c16cc2d42c1e170468e'
 
   # bitbucket.org/spyder-ide/ was verified as official when first introduced to the cask
   url "https://bitbucket.org/spyder-ide/spyderlib/downloads/spyder-#{version}-py3.5.dmg"
   appcast 'https://github.com/spyder-ide/spyder/releases.atom',
-          checkpoint: 'b4b7ce3814df1fa1f3f9a3bf2ee33df9e5d486c051ef2049177a325f56d0986d'
+          checkpoint: '39a71e80aebab43f0b9ef10b96d32e79c3c4099f55419c77a05cb90740a95df1'
   name 'Spyder-Py3'
   homepage 'https://github.com/spyder-ide/spyder'
 
