@@ -8,4 +8,6 @@ cask 'laplock' do
   homepage 'https://www.laplock.co'
 
   pkg 'Laplock-Installer.pkg'
+
+  uninstall pkgutil: ['co.laplock.Laplock', 'co.laplock.Laplock-KEXT']
 end
