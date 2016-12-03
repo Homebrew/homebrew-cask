@@ -1,4 +1,4 @@
-cask 'teamviewer-support-collector' do
+cask 'teamviewer-supportcollector' do
   version :latest
   sha256 :no_check
 
@@ -7,6 +7,4 @@ cask 'teamviewer-support-collector' do
   homepage 'https://www.teamviewer.com/en/help'
 
   app 'TeamViewer SupportCollector.app'
-
-  uninstall trash: '~/Desktop/TeamViewer_SupportCollectorResults_OSX.zip'
 end
