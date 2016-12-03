@@ -1,4 +1,5 @@
 cask 'bitrix24' do
+  # note: "24" is not a version number, but an intrinsic part of the product name
   version :latest
   sha256 :no_check
 
