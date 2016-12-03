@@ -4,7 +4,7 @@ cask 'teamviewer-supportcollector' do
 
   url 'https://downloadeu9.teamviewer.com/support/SupportCollector.app.zip'
   name 'TeamViewer Support Collector'
-  homepage 'https://www.teamviewer.com/en/help'
+  homepage 'https://community.teamviewer.com/t5/TeamViewer-11/How-to-submit-a-ticket/td-p/72'
 
   app 'TeamViewer SupportCollector.app'
 end
