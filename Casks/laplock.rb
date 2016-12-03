@@ -9,5 +9,8 @@ cask 'laplock' do
 
   pkg 'Laplock-Installer.pkg'
 
-  uninstall pkgutil: ['co.laplock.Laplock', 'co.laplock.Laplock-KEXT']
+  uninstall pkgutil: [
+                       'co.laplock.Laplock',
+                       'co.laplock.Laplock-KEXT',
+                     ]
 end
