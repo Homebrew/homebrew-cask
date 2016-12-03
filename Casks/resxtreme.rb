@@ -4,7 +4,7 @@ cask 'resxtreme' do
 
   url 'http://resxtreme.com/download/ResXtreme.zip'
   name 'ResXtreme'
-  homepage 'http://resxtreme.com'
+  homepage 'http://resxtreme.com/'
 
   app 'ResXtreme.app'
 end

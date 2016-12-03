@@ -4,7 +4,7 @@ cask 'advancedcolors' do
 
   url 'http://advancedcolors.com/AdvancedColors.zip'
   name 'Advanced Colors'
-  homepage 'http://advancedcolors.com'
+  homepage 'http://advancedcolors.com/'
 
   app 'AdvancedColors.app'
 end

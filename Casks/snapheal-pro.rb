@@ -7,7 +7,7 @@ cask 'snapheal-pro' do
   appcast 'http://cdn.macphun.com/updates/SnaphealMacPRO/appcast.xml',
           checkpoint: '41be23f355c922362ddf47f2847cfd5050122ecfb5a1e57860187f16b04765b6'
   name 'Macphun Snapheal Pro'
-  homepage 'https://macphun.com/snapheal'
+  homepage 'http://macphun.com/snapheal'
 
   app 'Snapheal Pro.app'
 
