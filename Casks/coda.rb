@@ -5,7 +5,7 @@ cask 'coda' do
   url "https://download.panic.com/coda/Coda%20#{version}.zip"
   appcast "https://www.panic.com/updates/update.php?appName=Coda%20#{version.major}",
           checkpoint: 'd8310a287cd373dad15ec242bf6b4e181dc5af358772f8030ed2b0c772aec2f8'
-  name "Coda #{version}"
+  name 'Coda'
   homepage 'https://panic.com/coda/'
 
   depends_on macos: '>= :lion'
