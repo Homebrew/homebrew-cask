@@ -5,7 +5,7 @@ cask 'sylo' do
   # s3-us-west-2.amazonaws.com/unision was verified as official when first introduced to the cask
   url 'https://s3-us-west-2.amazonaws.com/unision/Sylo.dmg'
   appcast 'http://admin.unisionmusic.com/sylo/update.xml',
-          checkpoint: '3d72fe5852b8c98993fa650d971063ab4f0966629f752b8f2e73896b9191356e'
+          checkpoint: 'd80ccb11e06dbd55d1f167958e79dcc43faa7106d41879d739517ede1ba8788a'
   name 'Sylo'
   homepage 'http://www.sylomusic.com/'
 
