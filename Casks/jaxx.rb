@@ -4,7 +4,7 @@ cask 'jaxx' do
 
   url "https://jaxx.io/files/#{version}/Jaxx-v#{version}-osx.dmg"
   name 'Jaxx Blockchain Wallet'
-  homepage 'https://jaxx.io'
+  homepage 'https://jaxx.io/'
 
   app 'Jaxx.app'
 end

@@ -7,7 +7,7 @@ cask 'qownnotes' do
   appcast 'https://github.com/pbek/QOwnNotes/releases.atom',
           checkpoint: '81b0ed94ba7eebd8dfd1b8f890f383003e561ff0ba7e969581803222faf6d782'
   name 'QOwnNotes'
-  homepage 'http://www.qownnotes.org/'
+  homepage 'https://www.qownnotes.org/'
 
   app 'QOwnNotes.app'
 end
