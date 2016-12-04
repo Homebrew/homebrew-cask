@@ -6,11 +6,11 @@ cask 'pokerstars' do
     %w[.com]
   end
 
-  language 'AU' do
-    %w[.eu/de EU]
+  language 'AT' do
+    %w[.eu EU]
   end
 
-  launguage 'BE' do
+  language 'BE' do
     %w[.be BE]
   end
   
