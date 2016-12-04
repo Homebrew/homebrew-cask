@@ -1,5 +1,5 @@
 cask 'sylo' do
-  version '3.1'
+  version '3.2'
   sha256 '2f10f4a721eabacc9c964054a1a8e1ded95bb76637f933ceb783b4338e9ec500'
 
   # s3-us-west-2.amazonaws.com/unision was verified as official when first introduced to the cask
