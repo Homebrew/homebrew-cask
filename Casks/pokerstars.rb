@@ -6,7 +6,7 @@ cask 'pokerstars' do
     %w[com]
   end
 
-  language 'pt' do
+  language 'PT' do
     %w[pt PT]
   end
 
