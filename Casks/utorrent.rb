@@ -4,7 +4,7 @@ cask 'utorrent' do
 
   url 'https://download-new.utorrent.com/endpoint/utmac/os/osx/track/stable/'
   name 'µTorrent'
-  homepage 'http://www.utorrent.com/'
+  homepage 'https://www.utorrent.com/'
 
   installer manual: 'uTorrent.app'
 
