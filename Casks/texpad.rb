@@ -1,12 +1,12 @@
 cask 'texpad' do
   if MacOS.version <= :mountain_lion
-    version '1_6_14'
+    version '1.6.14'
     sha256 '18fcbe93e77e5b5bc848172546962fcde397a26fd543efcc1054004369192f7e'
-    url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version}.zip"
+    url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.dots_to_underscores}.zip"
   else
-    version '1_7_36__135__846a918'
+    version '1.7.36,135,846a918'
     sha256 'c1d288cb91e33f90f5e578930a2ec54807ef2bd7a8a235bc92a8c055fcfd79a6'
-    url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version}.dmg"
+    url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.before_comma.dots_to_underscores}__#{version.after_comma.before_comma}__#{version.after_comma.after_comma}.dmg"
   end
 
   appcast 'https://www.texpadapp.com/static-collected/upgrades/texpadappcast.xml',
