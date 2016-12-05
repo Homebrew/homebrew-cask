@@ -7,5 +7,7 @@ cask 'now' do
   name 'Now'
   homepage 'https://zeit.co/now'
 
+  auto_updates true
+
   app 'Now.app'
 end
