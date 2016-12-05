@@ -13,7 +13,43 @@ cask 'pokerstars' do
   language 'BE' do
     %w[.be BE]
   end
-  
+
+  language 'BG' do
+    %w[.bg BG]
+  end
+
+  language 'DK' do
+    %w[.dk DK]
+  end
+
+  language 'EE' do
+    %w[.ee EE]
+  end
+
+  language 'ES' do
+    %w[.es ES]
+  end
+
+  language 'FR' do
+    %w[.fr FR]
+  end
+
+  language 'GR' do
+    %w[.gr GR]
+  end
+
+  language 'IT' do
+    %w[.it IT]
+  end
+
+  language 'RO' do
+    %w[.ro RO]
+  end
+
+  language 'UK' do
+    %w[.uk UK]
+  end
+
   language 'PT' do
     %w[.pt PT]
   end
