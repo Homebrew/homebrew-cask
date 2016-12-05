@@ -4,7 +4,7 @@ cask 'squeak' do
 
   url "http://files.squeak.org/#{version}/Squeak-#{version}-All-in-One.zip"
   name 'Squeak'
-  homepage 'http://squeak.org'
+  homepage 'http://squeak.org/'
 
   app "Squeak-#{version}-All-in-One/Squeak-#{version}-All-in-One.app"
 

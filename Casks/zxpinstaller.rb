@@ -7,7 +7,7 @@ cask 'zxpinstaller' do
   appcast 'https://github.com/CreativeDo/ZXPInstaller/releases.atom',
           checkpoint: 'b90c69ba778b9321c00765c0d04e0e1d6aa38db8a88b49cf4ba86928108b020a'
   name 'ZXPInstaller'
-  homepage 'http://zxpinstaller.com'
+  homepage 'http://zxpinstaller.com/'
 
   app 'ZXPInstaller.app'
 

@@ -4,7 +4,7 @@ cask 'sonoair' do
 
   url "http://sonoair.mihosoft.eu/releases/#{version}/SonoAir.zip"
   name 'SonoAir'
-  homepage 'http://sonoair.mihosoft.eu'
+  homepage 'http://sonoair.mihosoft.eu/'
 
   app 'SonoAir.app'
 end

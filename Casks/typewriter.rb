@@ -4,7 +4,7 @@ cask 'typewriter' do
 
   url 'https://typewriter.llllll.li/download/Typewriter.zip'
   name 'Typewriter'
-  homepage 'https://typewriter.llllll.li'
+  homepage 'https://typewriter.llllll.li/'
 
   app 'Typewriter.app'
 end

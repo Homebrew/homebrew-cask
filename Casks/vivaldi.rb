@@ -6,7 +6,7 @@ cask 'vivaldi' do
   appcast 'https://update.vivaldi.com/update/1.0/mac/appcast.xml',
           checkpoint: '2fa69731030a1cce3f0000f17540865f3303502959e1cc526512874f35773230'
   name 'Vivaldi'
-  homepage 'https://vivaldi.com'
+  homepage 'https://vivaldi.com/'
 
   auto_updates true
 

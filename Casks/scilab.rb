@@ -4,7 +4,7 @@ cask 'scilab' do
 
   url "https://www.scilab.org/download/#{version}/scilab-#{version}-x86_64_yosemite.dmg"
   name 'Scilab'
-  homepage 'https://www.scilab.org'
+  homepage 'https://www.scilab.org/'
 
   app "scilab-#{version}.app"
 end

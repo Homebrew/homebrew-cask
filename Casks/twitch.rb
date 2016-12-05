@@ -4,7 +4,7 @@ cask 'twitch' do
 
   url 'http://twitchapp.com/Twitch.app.zip'
   name 'Twitch'
-  homepage 'http://twitchapp.com'
+  homepage 'http://twitchapp.com/'
 
   app 'Twitch.app'
 end

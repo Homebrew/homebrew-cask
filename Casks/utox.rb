@@ -7,7 +7,7 @@ cask 'utox' do
   appcast 'https://github.com/uTox/uTox/releases.atom',
           checkpoint: 'eee22a515c835b9a12c6dfc727a144227c27ec56d1b613a46362c8927b333a4a'
   name 'uTox'
-  homepage 'https://www.tox.chat'
+  homepage 'https://www.tox.chat/'
 
   app 'uTox.app'
 end

@@ -6,6 +6,7 @@ cask 'webstorm' do
   name 'WebStorm'
   homepage 'https://www.jetbrains.com/webstorm/'
 
+  auto_updates true
   conflicts_with cask: 'webstorm-eap'
 
   app 'WebStorm.app'
@@ -13,9 +14,11 @@ cask 'webstorm' do
   uninstall delete: '/usr/local/bin/wstorm'
 
   zap delete: [
-                "~/Library/Preferences/WebStorm#{version.major_minor}",
                 "~/Library/Application Support/WebStorm#{version.major_minor}",
                 "~/Library/Caches/WebStorm#{version.major_minor}",
                 "~/Library/Logs/WebStorm#{version.major_minor}",
+                "~/Library/Preferences/WebStorm#{version.major_minor}",
+                '~/Library/Preferences/jetbrains.webstorm.aaac0500.plist',
+                '~/Library/Saved Application State/com.jetbrains.WebStorm.savedState',
               ]
 end

@@ -6,7 +6,7 @@ cask 'browser-chooserx' do
   appcast "https://www.bdevapps.com/files/downloads/BrowserChooserXAppCast#{version.major}.xml",
           checkpoint: 'cee64db6ef68bc2efb79a2ca91047eaa429800086f9797057ee86e6463c137b5'
   name 'Browser ChooserX'
-  homepage 'https://www.bdevapps.com/'
+  homepage 'https://bdevapps.com/'
 
   auto_updates true
 

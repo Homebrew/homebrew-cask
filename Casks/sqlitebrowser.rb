@@ -7,7 +7,7 @@ cask 'sqlitebrowser' do
   appcast 'https://github.com/sqlitebrowser/sqlitebrowser/releases.atom',
           checkpoint: 'ea975e8eef36bcbb334dfc015736c138c8e0b897e43ee11840c25c8d9f6a1620'
   name 'SQLite Database Browser'
-  homepage 'http://sqlitebrowser.org'
+  homepage 'http://sqlitebrowser.org/'
 
   app 'DB Browser for SQLite.app'
 end

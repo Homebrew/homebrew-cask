@@ -1,6 +1,6 @@
 cask 'p4' do
-  version '2016.2.1457671'
-  sha256 'a18b0e0338d6331588afb12c57427ddf169dcf374e5e2ab000001bd0260efc1c'
+  version '2016.2.1468155'
+  sha256 '1e6165711902b65612637aa190e7ba09a8559f1e4e057e2b4587e7756c2bef59'
 
   url "http://filehost.perforce.com/perforce/r#{version.major_minor[2..-1]}/bin.macosx105x86_64/p4"
   name 'Perforce Command-Line Client'

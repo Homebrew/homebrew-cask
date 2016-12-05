@@ -7,7 +7,7 @@ cask 'visualvm' do
   appcast 'https://github.com/visualvm/visualvm.src/releases.atom',
           checkpoint: 'dde5d93c09ce408c053b472040a2e2bfb0c283152722968c7da55985489cac41'
   name 'VisualVM'
-  homepage 'https://visualvm.github.io'
+  homepage 'https://visualvm.github.io/'
 
   app 'VisualVM.app'
 

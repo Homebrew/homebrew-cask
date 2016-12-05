@@ -6,7 +6,7 @@ cask 'swinsian' do
   appcast 'https://www.swinsian.com/sparkle/sparklecast.xml',
           checkpoint: '0b2ca85ef37f4215353e0e795fd6d6d81725f0da2e2d8bbe7751a82af6302085'
   name 'Swinsian'
-  homepage 'https://swinsian.com'
+  homepage 'https://swinsian.com/'
 
   app 'Swinsian.app'
 end

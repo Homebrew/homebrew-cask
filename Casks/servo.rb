@@ -4,7 +4,7 @@ cask 'servo' do
 
   url 'https://download.servo.org/nightly/mac/servo-latest.dmg'
   name 'Servo'
-  homepage 'https://servo.org'
+  homepage 'https://servo.org/'
 
   app 'Servo.app'
 end

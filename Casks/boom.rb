@@ -19,12 +19,6 @@ cask 'boom' do
                    sudo: true
   end
 
-  uninstall_postflight do
-    system_command '/bin/rm',
-                   args: ['-rf', '/Library/Extensions/Boom2Device.kext'],
-                   sudo: true
-  end
-
   uninstall kext:      'com.globaldelight.driver.Boom2Device',
             launchctl: [
                          'com.globaldelight.Boom2.*',

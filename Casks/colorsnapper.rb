@@ -7,7 +7,7 @@ cask 'colorsnapper' do
   appcast 'http://colorsnapper.com/app/appcast.xml',
           checkpoint: '189b0b3b11a3116495c11cc64d59d78e6c5fa1cc8ed7645bb3551296f3a5476b'
   name 'ColorSnapper 2'
-  homepage 'http://colorsnapper.com/'
+  homepage 'https://colorsnapper.com/'
 
   app 'ColorSnapper2.app'
 
