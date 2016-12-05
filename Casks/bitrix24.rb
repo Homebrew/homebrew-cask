@@ -1,11 +1,11 @@
 cask 'bitrix24' do
   # note: "24" is not a version number, but an intrinsic part of the product name
-  version '4.1.8'
-  sha256 'fd19cc9d38fedef863693789d6501f419fb3f34eb4214ff62018055f3813a1d2'
+  version '4.1.77'
+  sha256 'ceb396b654adf6776f6f37da04d10c99b220522f58014990b3e5bd4b9b49896d'
 
   url 'http://dl.bitrix24.com/b24/bitrix24_desktop.dmg'
   appcast 'https://www.bitrix24.com/osx_version.php',
-          checkpoint: '63ff4e4da47cd42393b7f181c7498f8062b8fd8213a1ffcd721472ea0713be0a'
+          checkpoint: '3755d407191526cf3c1c969381f6d508c88373f18819195828e578558c136612'
   name 'Bitrix24'
   homepage 'https://www.bitrix24.com/apps/mobile-and-desktop-apps.php#desktop_app'
 
