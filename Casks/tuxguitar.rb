@@ -9,5 +9,5 @@ cask 'tuxguitar' do
   name 'TuxGuitar'
   homepage 'http://www.tuxguitar.com.ar/'
 
-  app 'Tuxguitar.app'
+  app "tuxguitar-#{version}-macosx-cocoa-64.app"
 end
