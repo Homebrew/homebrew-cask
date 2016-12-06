@@ -7,7 +7,7 @@ cask 'tuxguitar' do
   appcast 'https://sourceforge.net/projects/tuxguitar/rss?path=/TuxGuitar',
           checkpoint: '671e2f8853920191b1204bc8b14b73caa0dc033a054424787019744f7f1aaa10'
   name 'TuxGuitar'
-  homepage 'http://www.tuxguitar.com.ar/'
+  homepage 'https://sourceforge.net/projects/tuxguitar/'
 
   app "tuxguitar-#{version}-macosx-cocoa-64.app"
 end
