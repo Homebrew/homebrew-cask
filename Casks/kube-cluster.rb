@@ -1,10 +1,10 @@
 cask 'kube-cluster' do
-  version '0.5.2'
-  sha256 'ccce60b70061bcf69bb9157df5cfa3c2511cbeca92d96143aa754a81b30e4198'
+  version '0.5.3'
+  sha256 'a19384f36a215af485f6ca2761091feaf7b6e3825a4f19845bd627c82c4d4083'
 
   url "https://github.com/TheNewNormal/kube-cluster-osx/releases/download/v#{version}/Kube-Cluster_v#{version}.dmg"
   appcast 'https://github.com/TheNewNormal/kube-cluster-osx/releases.atom',
-          checkpoint: '20c656cac778020dcbee2a44c1a392cde990bc7a3445faa522ec0c33a72faa3e'
+          checkpoint: '5bc6824a2043fe62cf5c44b4959f38f2aabb7f159213b7e8d0040c76250901c7'
   name 'Kube-Cluster'
   homepage 'https://github.com/TheNewNormal/kube-cluster-osx'
 
