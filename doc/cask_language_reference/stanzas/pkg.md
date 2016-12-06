@@ -26,15 +26,24 @@ pkg 'AlinofTimer.pkg', allow_untrusted: true
 
 See [this pull request of wireshark-chmodbpf](https://github.com/caskroom/homebrew-cask/pull/26997) for an example of the procedure to extract the choices value, as well as their equivalents to the GUI options.
 
-Example (TODO: A resonable cask which uses `choices:` should be linked here)
-
+[Example (wireshark-chmodbpf.rb)](https://github.com/caskroom/homebrew-cask/commit/f95b8a8306b91fe9da7908b842f4a5fa80f7afe0):
 ```ruby
-pkg 'MyFancyPkg.pkg',
+pkg "Wireshark #{version} Intel 64.pkg",
     choices: [
                {
-                 'choiceIdentifier' => 'choice1',
+                 'choiceIdentifier' => 'wireshark',
+                 'choiceAttribute'  => 'selected',
+                 'attributeSetting' => 0,
+               },
+               {
+                 'choiceIdentifier' => 'chmodbpf',
                  'choiceAttribute'  => 'selected',
                  'attributeSetting' => 1,
-               }
+               },
+               {
+                 'choiceIdentifier' => 'cli',
+                 'choiceAttribute'  => 'selected',
+                 'attributeSetting' => 0,
+               },
              ]
 ```
