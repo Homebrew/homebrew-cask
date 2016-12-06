@@ -1,6 +1,6 @@
 cask 'hajo-headphone-enhancer' do
-  version '1.7.3'
-  sha256 '4d4e986621d493e6a994333cfb3acad223cd80bf262287ea197ac01eb464c501'
+  version :latest
+  sha256 :no_check
 
   url 'http://hajoheadphone.com/assets/install-hajo-headphone-enhancer.dmg'
   name 'Hajos Headphone Enhancer'
