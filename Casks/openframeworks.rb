@@ -1,10 +1,10 @@
 cask 'openframeworks' do
-  version '0.9.4'
-  sha256 '63f215d7107d77126f69608a5e2404faf4d5a8f23865fcf20834eac8c9e55884'
+  version '0.9.8'
+  sha256 '483a298afdf52f0da4574d35fd67babce6a29f2ce7c0af917d790f6ffaf1302f'
 
   url "http://openframeworks.cc/versions/v#{version}/of_v#{version}_osx_release.zip"
   appcast 'https://github.com/openframeworks/openFrameworks/releases.atom',
-          checkpoint: '63d63c85f28cc2931a15235c3b15127e94d044561243ab23eedbf03f05449515'
+          checkpoint: '991f9af155a29375905ee42cc8bb1716f3cce0a9d6880286af8ca93e6518af56'
   name 'Openframeworks'
   homepage 'http://openframeworks.cc/'
 
