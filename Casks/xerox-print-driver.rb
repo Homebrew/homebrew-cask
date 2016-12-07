@@ -20,7 +20,7 @@ cask 'xerox-print-driver' do
     url "http://download.support.xerox.com/pub/drivers/CQ8570/drivers/macosx1010/ar/XeroxPrintDriver.#{version}.dmg"
   end
 
-  pkg "Xerox Print Driver #{version.sub(%r{_.*}, '')}.pkg"
+  pkg "Xerox Print Driver #{version.major_minor_patch}.pkg"
 
   uninstall pkgutil: [
                        'com.xerox.installer.addprintqueue',
