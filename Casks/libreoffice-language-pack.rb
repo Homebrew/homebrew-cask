@@ -557,7 +557,7 @@ cask 'libreoffice-language-pack' do
   stage_only true
 
   preflight do
-    system '/usr/bin/tar', '-C', '/Applications/LibreOffice.app/', '-xjf', "#{staged_path}/LibreOffice Language Pack.app/Contents/tarball.tar.bz2"
-    system '/usr/bin/touch', '/Applications/LibreOffice.app/Contents/Resources/extensions'
+    system_command '/usr/bin/tar', args: ['-C', '/Applications/LibreOffice.app/', '-xjf', "#{staged_path}/LibreOffice Language Pack.app/Contents/tarball.tar.bz2"]
+    system_command '/usr/bin/touch', args: ['/Applications/LibreOffice.app/Contents/Resources/extensions']
   end
 end
