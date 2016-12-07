@@ -1,10 +1,10 @@
 cask 'coda' do
-  version '2.5.19'
-  sha256 '5d734cdac6b47b07ca8ef9224611b0f7c8a57f1ec7b66eb7befdfcaf20896548'
+  version '2.6'
+  sha256 '6ed66edaf471f54b55d781262df862a9ee85a1de0e59ead3d8f962a299197b79'
 
   url "https://download.panic.com/coda/Coda%20#{version}.zip"
   appcast "https://www.panic.com/updates/update.php?appName=Coda%20#{version.major}",
-          checkpoint: 'd8310a287cd373dad15ec242bf6b4e181dc5af358772f8030ed2b0c772aec2f8'
+          checkpoint: 'a18425031d53a37f99cfb67a8351b15746bbdc6854aa24162e9bfc624c5ef069'
   name 'Panic Coda'
   homepage 'https://panic.com/coda/'
 
