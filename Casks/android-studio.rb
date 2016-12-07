@@ -7,8 +7,6 @@ cask 'android-studio' do
   name 'Android Studio'
   homepage 'https://developer.android.com/studio/index.html'
 
-  license :unknown
-
   app 'Android Studio.app'
 
   zap delete: [
