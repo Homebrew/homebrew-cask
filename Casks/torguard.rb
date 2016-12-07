@@ -9,5 +9,13 @@ cask 'torguard' do
   name 'TorGuard'
   homepage 'https://torguard.net/'
 
-  app 'TorGuard.app'
+  pkg 'Install TorGuard.pkg'
+
+  uninstall pkgutil: 'net.torguard.TorGuardDesktopQt',
+            delete:  '/Applications/TorGuard.app'
+
+  zap delete: [
+                '~/Library/Preferences/net.torguard.TorGuard*.plist',
+                '~/Library/Saved Application State/net.torguard.TorGuardDesktopQt.savedState',
+              ]
 end
