@@ -1,4 +1,4 @@
-cask 'daemon-tools-lite' do
+cask 'daemon-tools' do
   version '5.0.253'
   sha256 'd9249c763efebda8095a9a26d23e3ad97d4827ddcdb931b58e0d6f44e012e096'
 
