@@ -20,7 +20,7 @@ cask 'virtualbox-extension-pack' do
   stage_only true
 
   postflight do
-    system_command 'VBoxManage',
+    system_command '/usr/local/bin/VBoxManage',
                    args: [
                            'extpack', 'install',
                            '--replace', "#{staged_path}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
@@ -29,7 +29,7 @@ cask 'virtualbox-extension-pack' do
   end
 
   uninstall_postflight do
-    system_command 'VBoxManage',
+    system_command '/usr/local/bin/VBoxManage',
                    args: [
                            'extpack', 'uninstall',
                            'Oracle VM VirtualBox Extension Pack'
