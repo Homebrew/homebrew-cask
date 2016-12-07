@@ -7,4 +7,6 @@ cask 'diddumsdeux' do
   homepage 'http://diddu.ms/'
 
   app 'DiddumsDeux.app'
+
+  zap delete: '~/Preferences/com.alasdairmonk.diddums.plist'
 end
