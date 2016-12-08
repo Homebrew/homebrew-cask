@@ -4,7 +4,7 @@ cask 'slicer' do
 
   url "http://download.slicer.org/bitstream/#{version.after_comma}"
   name '3D Slicer'
-  homepage 'https://www.slicer.org'
+  homepage 'https://www.slicer.org/'
 
   app 'Slicer.app'
 end

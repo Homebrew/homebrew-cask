@@ -7,7 +7,7 @@ cask 'mumble' do
   appcast 'https://github.com/mumble-voip/mumble/releases.atom',
           checkpoint: '7c0254c2fb4593a98d8609d2ba2eabcb6f4492428d4aea172e145c26ba184590'
   name 'Mumble'
-  homepage 'https://www.mumble.info/'
+  homepage 'https://wiki.mumble.info/wiki/Main_Page'
   gpg "#{url}.sig",
       key_url: 'https://mumble.info/gpg/mumble-auto-build-2015.asc'
 

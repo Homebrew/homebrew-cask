@@ -1,12 +1,12 @@
 cask 'uninstallpkg' do
-  version '1.0.22'
-  sha256 '531be8e7d1ce3fdfa1035a70b151f07464aa242a61209c7b85bda6b90cac2a69'
+  version '1.0.23'
+  sha256 'ddfcaedd4aa4880f2db7929212ca68add94e9bb2bc57d637bead0d0f6aa62038'
 
-  url "https://www.corecode.at/downloads/uninstallpkg_#{version}.zip"
-  appcast 'https://www.corecode.at/uninstallpkg/uninstallpkg.xml',
+  url 'https://www.corecode.io/downloads/uninstallpkg_latest.zip'
+  appcast 'https://www.corecode.io/uninstallpkg/uninstallpkg.xml',
           checkpoint: '0a390467cb94ce7e1fe0d24d6188525d85808564505bdd3eed685debdeec52c2'
   name 'UninstallPKG'
-  homepage 'https://www.corecode.at/uninstallpkg/'
+  homepage 'https://www.corecode.io/uninstallpkg/'
 
   app 'UninstallPKG.app'
 

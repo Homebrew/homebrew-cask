@@ -4,7 +4,7 @@ cask 'profilemanager' do
 
   url "https://archive.mozilla.org/pub/mozilla.org/utilities/profilemanager/#{version}/profilemanager.mac.dmg"
   name 'Mozilla Profile Manager'
-  homepage 'https://developer.mozilla.org/en-US/docs/Profile_Manager'
+  homepage 'https://developer.mozilla.org/en-US/docs/Mozilla/Profile_Manager'
 
   app 'ProfileManager.app'
 end

@@ -1,8 +1,11 @@
 cask 'dropbox' do
-  version :latest
-  sha256 :no_check
+  version '15.4.22'
+  sha256 'a1569dfdea08b585ecb9f50569f4d26bf86434957d604d7bd18498606c7e6a56'
 
-  url 'https://www.dropbox.com/download?plat=mac&full=1'
+  # clientupdates.dropboxstatic.com was verified as official when first introduced to the cask
+  url "https://clientupdates.dropboxstatic.com/client/Dropbox%20#{version}.dmg"
+  appcast 'https://www.dropbox.com/release_notes/rss.xml',
+          checkpoint: 'e5f348f7f83a2c283a5e8bada332407fc200bbadaedc5f3a5d5ef7be39b25922'
   name 'Dropbox'
   homepage 'https://www.dropbox.com/'
 

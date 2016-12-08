@@ -4,7 +4,7 @@ cask 'mudlet' do
 
   url "http://www.mudlet.org/download/Mudlet-#{version}.zip"
   name 'Mudlet'
-  homepage 'http://www.mudlet.org'
+  homepage 'http://www.mudlet.org/'
 
   app "Mudlet-#{version}.app"
 end

@@ -7,7 +7,7 @@ cask 'qmind' do
   appcast 'https://github.com/qvacua/qmind/releases.atom',
           checkpoint: 'bff9e6e15fa092a4e4eb2a329083803d67b9440b239214aa71d3bec9f8de7a8a'
   name 'Qmind'
-  homepage 'http://qvacua.com'
+  homepage 'http://qvacua.com/'
 
   app 'Qmind.app'
 end

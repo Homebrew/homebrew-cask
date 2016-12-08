@@ -5,7 +5,7 @@ cask 'yahoo-messenger' do
   # yimg.com was verified as official when first introduced to the cask
   url "https://s.yimg.com/jd/desktop/#{version}/yahoo-messenger-#{version}-osx.zip"
   name 'Yahoo Messenger'
-  homepage 'https://messenger.yahoo.com'
+  homepage 'https://messenger.yahoo.com/'
 
   app 'Yahoo Messenger.app'
 end

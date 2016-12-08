@@ -4,7 +4,7 @@ cask 'craftstudio' do
 
   url 'http://craftstud.io/files/OSX/CraftStudio.pkg'
   name 'CraftStudio'
-  homepage 'http://craftstud.io'
+  homepage 'http://craftstud.io/'
 
   depends_on cask: 'mono-mre'
 

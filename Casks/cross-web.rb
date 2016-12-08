@@ -4,7 +4,7 @@ cask 'cross-web' do
 
   url 'https://open.citibank.co.kr/3rdParty/initech/plugin/down/npCrossWeb_Mac.pkg'
   name 'Cross WEB'
-  homepage 'https://open.citibank.co.kr'
+  homepage 'https://open.citibank.co.kr/'
 
   pkg 'npCrossWeb_Mac.pkg'
 

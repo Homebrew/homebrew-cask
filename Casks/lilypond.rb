@@ -8,4 +8,12 @@ cask 'lilypond' do
   homepage 'http://lilypond.org/'
 
   app 'LilyPond.app'
+  binary "#{appdir}/LilyPond.app/Contents/Resources/bin/lilypond"
+  binary "#{appdir}/LilyPond.app/Contents/Resources/bin/lilypond-book"
+  binary "#{appdir}/LilyPond.app/Contents/Resources/bin/convert-ly"
+
+  zap delete: [
+                '~/Library/Preferences/org.lilypond.lilypond.plist',
+                '~/Library/Preferences/org.lilypond.lilypond.LSSharedFileList.plist',
+              ]
 end

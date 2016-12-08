@@ -5,7 +5,7 @@ cask 'keyboard-maestro' do
   # stairways.com was verified as official when first introduced to the cask
   url "https://files.stairways.com/keyboardmaestro-#{version.no_dots}.zip"
   name 'Keyboard Maestro'
-  homepage 'https://www.keyboardmaestro.com/'
+  homepage 'https://www.keyboardmaestro.com/main/'
 
   depends_on macos: '>= :yosemite'
 

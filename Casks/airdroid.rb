@@ -1,8 +1,9 @@
 cask 'airdroid' do
-  version '3.3.2'
-  sha256 '81eb39bb434d10cd6611617fe77ba1f0218c9b01b449ca8fdbf79beee227b075'
+  version '3.3.5.1'
+  sha256 '6e2e6e988071b4eec64ddc1e3e30c7f372fe31554f35a3f36d01984fbc6c33cd'
 
-  url "http://dl.airdroid.com/AirDroid_Desktop_Client_#{version}.dmg"
+  # s3.amazonaws.com/dl.airdroid.com was verified as official when first introduced to the cask
+  url "https://s3.amazonaws.com/dl.airdroid.com/AirDroid_Desktop_Client_#{version}.dmg"
   name 'AirDroid'
   homepage 'https://www.airdroid.com/'
 

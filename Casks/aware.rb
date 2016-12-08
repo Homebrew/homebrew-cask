@@ -7,7 +7,7 @@ cask 'aware' do
   appcast 'https://github.com/josh/Aware/releases.atom',
           checkpoint: '69d1a1fc0074d3e30dd3cb919be7a930907e690fdf733eb22d4c5bb4b9555986'
   name 'Aware'
-  homepage 'http://awaremac.com'
+  homepage 'http://awaremac.com/'
 
   app 'Aware.app'
 end

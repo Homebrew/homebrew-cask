@@ -6,7 +6,7 @@ cask 'posterazor' do
   appcast 'https://sourceforge.net/projects/posterazor/rss',
           checkpoint: 'e48b0edf881bb9c3081198a0d63a1bc1f5afa9d8749faec9266270650a8feb3b'
   name 'PosteRazor'
-  homepage 'http://posterazor.sourceforge.net'
+  homepage 'http://posterazor.sourceforge.net/'
 
   app 'PosteRazor.app'
 end

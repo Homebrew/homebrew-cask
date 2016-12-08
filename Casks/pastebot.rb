@@ -1,6 +1,6 @@
 cask 'pastebot' do
-  version '2.0.b12'
-  sha256 'dc7054ab271e77bcd3445f7634d68d0c9c6ba7055ef58b1c9af60f6b3fb67325'
+  version '2.0.b15'
+  sha256 'ace5d843f9aaccdecafac628930a7d26f55ecbdeb6ac08f64e479769b6fb48a9'
 
   # tapbots.net/pastebot was verified as official when first introduced to the cask
   url "https://tapbots.net/pastebot#{version.major}/PastebotBeta.zip"
@@ -9,5 +9,8 @@ cask 'pastebot' do
 
   app 'Pastebot.app'
 
-  zap delete: "~/Library/Containers/com.tapbots.Pastebot#{version.major}Mac"
+  zap delete: [
+                "~/Library/Containers/com.tapbots.Pastebot#{version.major}Mac",
+                "~/Library/Preferences/com.tapbots.Pastebot#{version.major}Mac.plist",
+              ]
 end

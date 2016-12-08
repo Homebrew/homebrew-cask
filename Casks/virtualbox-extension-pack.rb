@@ -6,13 +6,13 @@ cask 'virtualbox-extension-pack' do
     version '5.0.26-108824'
     sha256 '2f2302c7ba3d00a1258fe8e7767a6eb08dccdc3c31f6e3eeb74063c2c268b104'
   else
-    version '5.1.8-111374'
-    sha256 'd28bcd01c14eb07eedd2b964d1abe4876f0a7e0e89530e7ba285a5d6267bf322'
+    version '5.1.10-112026'
+    sha256 '3982657fd4853bcbc79b9162e618545a479b65aca08e9ced43a904aeeba3ffa5'
   end
 
   url "http://download.virtualbox.org/virtualbox/#{version.sub(%r{-.*}, '')}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
   name 'Oracle VirtualBox Extension Pack'
-  homepage 'https://www.virtualbox.org'
+  homepage 'https://www.virtualbox.org/'
 
   depends_on cask: 'virtualbox'
   container type: :naked
@@ -20,7 +20,7 @@ cask 'virtualbox-extension-pack' do
   stage_only true
 
   postflight do
-    system_command 'VBoxManage',
+    system_command '/usr/local/bin/VBoxManage',
                    args: [
                            'extpack', 'install',
                            '--replace', "#{staged_path}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
@@ -29,7 +29,7 @@ cask 'virtualbox-extension-pack' do
   end
 
   uninstall_postflight do
-    system_command 'VBoxManage',
+    system_command '/usr/local/bin/VBoxManage',
                    args: [
                            'extpack', 'uninstall',
                            'Oracle VM VirtualBox Extension Pack'

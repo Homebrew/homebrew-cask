@@ -6,7 +6,7 @@ cask 'dashcam-viewer' do
   url "https://dl.dropboxusercontent.com/u/25150850/Dashcam_Viewer_v#{version}.dmg"
   name 'Dashcam Viewer'
   name 'Dashcam Viewer by Earthshine Software'
-  homepage 'https://dashcamviewer.com'
+  homepage 'https://dashcamviewer.com/'
 
   app 'Dashcam Viewer.app'
 end

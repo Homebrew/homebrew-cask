@@ -24,9 +24,8 @@ cask 'macports' do
   end
 
   name 'MacPorts'
-  homepage 'https://www.macports.org'
-  gpg "#{url}.asc",
-      key_id: '01ff673fb4aae6cd'
+  homepage 'https://www.macports.org/'
+  gpg "#{url}.asc", key_id: '01ff673fb4aae6cd'
 
   uninstall pkgutil: 'org.macports.MacPorts'
 

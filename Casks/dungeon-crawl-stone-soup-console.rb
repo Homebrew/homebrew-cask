@@ -4,7 +4,7 @@ cask 'dungeon-crawl-stone-soup-console' do
 
   url "https://crawl.develz.org/release/stone_soup-#{version}-console-macosx.zip"
   name 'Dungeon Crawl Stone Soup'
-  homepage 'https://crawl.develz.org'
+  homepage 'https://crawl.develz.org/'
 
   app 'Dungeon Crawl Stone Soup - Console.app'
 end

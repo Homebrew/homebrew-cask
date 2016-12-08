@@ -4,7 +4,7 @@ cask 'zoomus' do
 
   url 'https://zoom.us/client/latest/zoomusInstaller.pkg'
   name 'Zoom.us'
-  homepage 'https://www.zoom.us'
+  homepage 'https://www.zoom.us/'
 
   auto_updates true
 

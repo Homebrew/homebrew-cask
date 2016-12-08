@@ -6,7 +6,7 @@ cask 'wordpresscom' do
   appcast 'https://public-api.wordpress.com/rest/v1.1/desktop/osx/version?compare=0.1.0&channel=stable',
           checkpoint: '960cd9d04fc8be4d43d8ade4e64236116b2f050db4a7ab15aed059f390a2865c'
   name 'WordPress.com'
-  homepage 'https://desktop.wordpress.com/'
+  homepage 'https://apps.wordpress.com/desktop/'
 
   app 'WordPress.com.app'
 end

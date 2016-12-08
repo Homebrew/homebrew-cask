@@ -7,7 +7,7 @@ cask 'prismatik' do
   appcast 'https://github.com/woodenshark/Lightpack/releases.atom',
           checkpoint: 'ed21f0f168d0db0f3764fdb42fa027c394f3df5781cd504526393422fe522351'
   name 'Prismatik'
-  homepage 'http://lightpack.tv/'
+  homepage 'https://lightpack.tv/promo/lightpack1.php'
 
   app 'Prismatik.app'
 end

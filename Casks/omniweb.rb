@@ -4,7 +4,7 @@ cask 'omniweb' do
 
   url "https://downloads.omnigroup.com/software/MacOSX/10.4/OmniWeb-#{version}.dmg"
   name 'OmniWeb'
-  homepage 'https://www.omnigroup.com/products/omniweb/'
+  homepage 'https://www.omnigroup.com/more/'
 
   app 'OmniWeb.app'
 end

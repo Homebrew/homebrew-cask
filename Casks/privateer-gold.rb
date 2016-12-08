@@ -6,7 +6,7 @@ cask 'privateer-gold' do
   appcast 'https://sourceforge.net/projects/privateer/rss',
           checkpoint: 'fff4235265cba62024406307614911ad78bd4ee5fc8fde4a1aa74b0dece4b085'
   name 'Privateer Gemini Gold'
-  homepage 'http://privateer.sourceforge.net'
+  homepage 'http://privateer.sourceforge.net/'
 
   app "Privateer Gold #{version}.app"
 end

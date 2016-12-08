@@ -4,7 +4,7 @@ cask 'astroimager' do
 
   url "http://download.cloudmakers.eu/AstroImager_#{version}.dmg"
   name 'AstroImager'
-  homepage 'http://www.cloudmakers.eu'
+  homepage 'http://www.cloudmakers.eu/'
 
   app 'AstroImager.app'
 end

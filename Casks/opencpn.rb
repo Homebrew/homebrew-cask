@@ -5,7 +5,7 @@ cask 'opencpn' do
   # opencpn.navnux.org was verified as official when first introduced to the cask
   url "http://opencpn.navnux.org/#{version}/OpenCPN_#{version}.dmg"
   name 'OpenCPN'
-  homepage 'http://opencpn.org'
+  homepage 'http://opencpn.org/ocpn/'
 
   app 'OpenCPN.app'
 end

@@ -7,7 +7,7 @@ cask 'streamtools' do
   appcast 'https://github.com/nytlabs/streamtools/releases.atom',
           checkpoint: '804719fa1c17b6827cbe3f0cb28b26c7c0161f9e18c4df3a705005ef332ae53e'
   name 'streamtools'
-  homepage 'https://nytlabs.github.io/streamtools/'
+  homepage 'http://nytlabs.com/streamtools/'
 
   binary "st_darwin_amd64-#{version}/st"
 end

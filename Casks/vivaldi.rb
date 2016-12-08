@@ -1,12 +1,12 @@
 cask 'vivaldi' do
-  version '1.4.589.38'
-  sha256 '3646edc99b0e0075f10028abc1234dc1eeef588922b0ab7202a74053be28c95a'
+  version '1.5.658.56'
+  sha256 'd99fdb5854c53f2a5820b9c44128ccff7fca48b6c3af5a1c4913dabe48e7fc31'
 
   url "https://downloads.vivaldi.com/stable/Vivaldi.#{version}.dmg"
   appcast 'https://update.vivaldi.com/update/1.0/mac/appcast.xml',
-          checkpoint: 'cf246103f9d7482b080542b0b2279563bcc766b3a94886dc1ee87ac90af5417a'
+          checkpoint: 'fbd46dd29a822f1d0bfb4f63ed38908286d8ccf4b1356f0a1741cf5f20f66090'
   name 'Vivaldi'
-  homepage 'https://vivaldi.com'
+  homepage 'https://vivaldi.com/'
 
   auto_updates true
 

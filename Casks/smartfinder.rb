@@ -4,7 +4,7 @@ cask 'smartfinder' do
 
   url 'https://sf.smartisan.com/sf/release/download'
   name 'Smart Finder'
-  homepage 'http://www.smartisan.com/apps/smartfinder'
+  homepage 'http://www.smartisan.com/apps/'
 
   app 'SmartFinder.app'
 end

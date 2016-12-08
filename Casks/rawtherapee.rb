@@ -17,7 +17,7 @@ cask 'rawtherapee' do
   end
 
   name 'RawTherapee'
-  homepage 'http://rawtherapee.com'
+  homepage 'http://rawtherapee.com/'
 
   if MacOS.version <= :mavericks
     container nested: "RawTherapee_OSX_10.6_64_#{version}.dmg"

@@ -6,7 +6,7 @@ cask 'handbrakecli' do
   appcast 'https://github.com/HandBrake/HandBrake/releases.atom',
           checkpoint: '2b923cfd24bf46490955348df4961fde6deaa3b0e1345d7775adcea86176a34a'
   name 'HandBrake'
-  homepage 'https://handbrake.fr'
+  homepage 'https://handbrake.fr/'
 
   binary 'HandBrakeCLI'
 end

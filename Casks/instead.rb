@@ -7,7 +7,7 @@ cask 'instead' do
   appcast 'https://sourceforge.net/projects/instead/rss?path=/instead',
           checkpoint: '6941875157d2644ec6dac6163e6c4a60b130a585f6b38e1e79de46d8d0307d0a'
   name 'INSTEAD'
-  homepage 'https://instead.syscall.ru/'
+  homepage 'https://instead.syscall.ru/index.html'
 
   app 'Instead.app'
 end

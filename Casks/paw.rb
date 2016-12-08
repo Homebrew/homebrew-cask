@@ -6,7 +6,7 @@ cask 'paw' do
   appcast 'https://paw.cloud/api/v2/updates/appcast',
           checkpoint: 'aa05f0eb9177ded8dd467d60b875f0f27347b93fcbcf0978d9de0d95f5d7b529'
   name 'Paw'
-  homepage 'https://paw.cloud'
+  homepage 'https://paw.cloud/'
 
   app 'Paw.app'
 end

@@ -4,7 +4,7 @@ cask 'gogs' do
 
   url "https://cdn.gogs.io/gogs_v#{version}_darwin_amd64.zip"
   name 'Go Git Service'
-  homepage 'https://gogs.io'
+  homepage 'https://gogs.io/'
 
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/gogs.wrapper.sh"

@@ -7,7 +7,7 @@ cask 'deco' do
   appcast 'https://github.com/decosoftware/deco-ide/releases.atom',
           checkpoint: 'c36536d79d0aefcaad1b366d4283387828b4ba1f30d418b8dc5a4888be60efe0'
   name 'Deco'
-  homepage 'https://www.decosoftware.com'
+  homepage 'https://www.decosoftware.com/'
 
   app 'Deco.app'
 

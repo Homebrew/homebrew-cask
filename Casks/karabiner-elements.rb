@@ -1,10 +1,10 @@
 cask 'karabiner-elements' do
-  version '0.90.64'
-  sha256 'a8088dec64532a4e44d04da7575d5007845fe4a662f476fab2497bbce40f96da'
+  version '0.90.68'
+  sha256 '2a83e118666492c8d48e3ead91455af7408625e828d1af4f18360f44a1b112a8'
 
   url "https://pqrs.org/osx/karabiner/files/Karabiner-Elements-#{version}.dmg"
   appcast 'https://pqrs.org/osx/karabiner/files/karabiner-elements-appcast.xml',
-          checkpoint: 'efe4965fba2522352112954ab44c37b8245364cd31db53accbc4c7cf0950d35b'
+          checkpoint: 'fb0e253ce0d0fbc10faad3aa1d1b7ed09cad2d9e727ebf0f098a4c30c79e0dce'
   name 'Karabiner Elements'
   homepage 'https://pqrs.org/osx/karabiner/'
 

@@ -4,7 +4,7 @@ cask 'bitscope-meter' do
 
   url "http://bitscope.com/download/files/bitscope-meter_#{version}.app.tgz"
   name 'BitScope Meter'
-  homepage 'http://www.bitscope.com'
+  homepage 'http://www.bitscope.com/'
 
   app 'bitscope-meter.app'
 end

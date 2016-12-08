@@ -5,7 +5,7 @@ cask 'folio' do
   # s3.amazonaws.com/folioformac.com was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/folioformac.com/downloads/Folio.zip'
   name 'Folio'
-  homepage 'http://folioformac.com'
+  homepage 'http://folioformac.com/'
 
   app 'Folio.app'
 

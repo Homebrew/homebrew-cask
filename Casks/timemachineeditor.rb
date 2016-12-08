@@ -2,9 +2,9 @@ cask 'timemachineeditor' do
   version :latest
   sha256 :no_check
 
-  url 'http://timesoftware.free.fr/timemachineeditor/TimeMachineEditor.pkg'
+  url 'https://tclementdev.com/timemachineeditor/TimeMachineEditor.pkg'
   name 'TimeMachineEditor'
-  homepage 'http://timesoftware.free.fr/timemachineeditor/'
+  homepage 'https://tclementdev.com/timemachineeditor/'
 
   pkg 'TimeMachineEditor.pkg'
 

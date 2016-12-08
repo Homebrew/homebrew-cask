@@ -7,7 +7,7 @@ cask 'edgeview' do
   appcast 'https://dl.dropboxusercontent.com/u/168552/edgeViewUpdate/edgeView_update.xml',
           checkpoint: '4bc735f9b4042e6bc67067de3ef236c30c831e375f9ad99cd780790bcbf8e94b'
   name 'EdgeView'
-  homepage 'https://edgehigh.wordpress.com'
+  homepage 'https://edgehigh.wordpress.com/'
 
   app 'EdgeView.app'
 end

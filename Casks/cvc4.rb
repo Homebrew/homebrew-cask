@@ -18,7 +18,7 @@ cask 'cvc4' do
   end
 
   name 'CVC4'
-  homepage 'https://cvc4.cs.nyu.edu/'
+  homepage 'https://cvc4.cs.nyu.edu/web/'
 
   uninstall pkgutil: 'org.macports.cvc4'
 

@@ -12,7 +12,7 @@ cask 'controlplane' do
 
   url "http://www.controlplaneapp.com/download/#{version}"
   name 'ControlPlane'
-  homepage 'http://www.controlplaneapp.com/'
+  homepage 'https://www.controlplaneapp.com/'
 
   depends_on macos: '>= :snow_leopard'
 

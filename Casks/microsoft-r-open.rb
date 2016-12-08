@@ -5,7 +5,7 @@ cask 'microsoft-r-open' do
   url "https://mran.microsoft.com/install/mro/#{version}/microsoft-r-open-#{version}.pkg"
   name 'Microsoft R Open'
   name 'MRO'
-  homepage 'https://mran.microsoft.com'
+  homepage 'https://mran.microsoft.com/'
 
   pkg "microsoft-r-open-#{version}.pkg"
 

@@ -7,6 +7,8 @@ cask 'silicon-labs-vcp-driver' do
   name 'CP210x USB to UART Bridge VCP Driver'
   homepage 'https://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx'
 
+  container nested: 'SiLabsUSBDriverDisk.dmg'
+
   pkg 'Silicon Labs VCP Driver.pkg'
 
   uninstall pkgutil: 'com.silabs.siliconLabsVcpDriver.*'

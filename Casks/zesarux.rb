@@ -1,10 +1,10 @@
 cask 'zesarux' do
-  version '4.1'
-  sha256 'e17287a2078d51f30b5e074ed5e698775d1174348bbdfc9f7e1461cacdbb2965'
+  version '4.2'
+  sha256 '63608613276db8062d8688b0a8f9f9aa7445e73be695be3d2a81599226c96d78'
 
   url "https://downloads.sourceforge.net/zesarux/ZEsarUX_bin-#{version}-MountainLion_or_higher.dmg.gz"
   appcast 'https://sourceforge.net/projects/zesarux/rss',
-          checkpoint: 'fbc35e41fe838ed574c9e9d8742c4643c0803e0ddb521cd99a280a91ee82f24c'
+          checkpoint: '77bf54e734f0870baf27dbc7093bd23edac235c03c8072c0a8486088df13a5be'
   name 'ZEsarUX'
   homepage 'https://sourceforge.net/projects/zesarux/'
 

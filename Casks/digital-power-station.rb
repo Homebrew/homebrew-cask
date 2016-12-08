@@ -1,12 +1,12 @@
 cask 'digital-power-station' do
-  version :latest
-  sha256 :no_check
+  version '2.0.0.19'
+  sha256 '19150a7bf72b52a142c1be2c6c5d763f42d39e7b85a7ab15dad25e5b49717bd3'
 
-  url 'http://www.dpsplugin.com/download/BongioviAcousticsDPS.dmg'
+  url "http://bongiovidps.com/wp-content/uploads/2016/05/Bongiovi_DPS_Mac_#{version}.zip"
   name 'Bongiovi Digital Power Station Plugin'
-  homepage 'http://dpsplugin.com/home/'
+  homepage 'http://bongiovidps.com/'
 
-  pkg 'Digital Power Station Installer.pkg'
+  pkg 'Bongiovi DPS.pkg'
 
   uninstall pkgutil: 'com.bongiovi.pkg.DigitalPowerStation.*'
 end

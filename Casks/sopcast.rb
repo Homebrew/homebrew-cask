@@ -5,7 +5,7 @@ cask 'sopcast' do
   # easetuner.com was verified as official when first introduced to the cask
   url "http://download.easetuner.com/download/SopCast-#{version}.dmg"
   name 'SopCast'
-  homepage 'http://www.sopcast.org'
+  homepage 'http://www.sopcast.org/'
 
   app 'SopCast.app'
   binary "#{appdir}/SopCast.app/Contents/Resources/binaries/m32/sp-sc-auth"

@@ -7,7 +7,7 @@ cask 'displaycal' do
   appcast 'https://sourceforge.net/projects/dispcalgui/rss?path=/release',
           checkpoint: '10f7fca2eaaa03dd2c057937be3832dd8c4af22c7d03cd3698a9d9e2719ad971'
   name 'DisplayCAL'
-  homepage 'https://displaycal.net'
+  homepage 'https://displaycal.net/'
 
   depends_on formula: 'argyll-cms'
 

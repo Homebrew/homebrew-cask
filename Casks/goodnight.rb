@@ -4,7 +4,7 @@ cask 'goodnight' do
 
   url 'http://goodnight.jakobbossek.de/download/GoodNight.zip'
   name 'GoodNight'
-  homepage 'http://goodnight.jakobbossek.de'
+  homepage 'http://goodnight.jakobbossek.de/'
 
   app 'GoodNight.app'
 end

@@ -7,7 +7,7 @@ cask 'feedbinnotifier' do
   appcast 'https://github.com/kmikael/FeedbinNotifier/releases.atom',
           checkpoint: '1dc76597191bab28d4832ea7845cd6c274743d19f531336fec55a2e7c1ea35b6'
   name 'Feedbin Notifier'
-  homepage 'https://kmikael.github.io/FeedbinNotifier'
+  homepage 'http://kmikael.com/FeedbinNotifier/'
 
   app 'FeedbinNotifier.app'
 end

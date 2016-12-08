@@ -4,7 +4,7 @@ cask 'livestream-producer' do
 
   url 'https://cdn.livestream.com/producer/LivestreamProducer.pkg'
   name 'Livestream Producer'
-  homepage 'https://new.livestream.com/producer/software'
+  homepage 'https://livestream.com/producer/software'
 
   pkg 'LivestreamProducer.pkg'
 

@@ -1,6 +1,6 @@
 cask 'printer-pro-desktop' do
-  version '1.3.7'
-  sha256 '6baa80352c3756824972a6aac8ebdabebcc082f693018d04a7a95f062565e704'
+  version '1.3.9'
+  sha256 '455223c814f90fda3754b85f1fcb7fda98e93722167b0a3aa3091a11bd2d5ef5'
 
   url "https://support.readdle.com/ppd/PrinterProDesktop-#{version.dots_to_underscores}.dmg"
   name 'Printer Pro Desktop'

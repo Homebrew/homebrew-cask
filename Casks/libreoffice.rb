@@ -6,8 +6,7 @@ cask 'libreoffice' do
   url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg"
   name 'LibreOffice'
   homepage 'https://www.libreoffice.org/'
-  gpg "#{url}.asc",
-      key_id: 'c2839ecad9408fbe9531c3e9f434a1efafeeaea3'
+  gpg "#{url}.asc", key_id: 'c2839ecad9408fbe9531c3e9f434a1efafeeaea3'
 
   app 'LibreOffice.app'
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/gengal"

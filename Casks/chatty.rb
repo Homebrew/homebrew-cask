@@ -7,7 +7,7 @@ cask 'chatty' do
   appcast 'https://github.com/chatty/chatty/releases.atom',
           checkpoint: 'ef6d8bab49e52d165104d7ac747e326240c7d069165bf2f4226ea4f9a1da8701'
   name 'Chatty'
-  homepage 'https://chatty.github.io'
+  homepage 'https://chatty.github.io/'
 
   suite 'Chatty'
 

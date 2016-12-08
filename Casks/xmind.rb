@@ -4,7 +4,7 @@ cask 'xmind' do
 
   url "https://www.xmind.net/xmind/downloads/xmind-#{version}-macosx.dmg"
   name 'XMind'
-  homepage 'https://www.xmind.net'
+  homepage 'https://www.xmind.net/'
 
   depends_on macos: '>= :snow_leopard'
 

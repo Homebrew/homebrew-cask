@@ -4,7 +4,7 @@ cask 'yourkit-java-profiler' do
 
   url "https://www.yourkit.com/download/yjp-#{version}-mac.zip"
   name 'YourKit Java Profiler'
-  homepage 'https://www.yourkit.com/overview/'
+  homepage 'https://www.yourkit.com/features/'
 
   app "YourKit-Java-Profiler-#{version.major_minor}.app"
 end

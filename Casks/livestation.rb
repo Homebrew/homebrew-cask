@@ -4,7 +4,7 @@ cask 'livestation' do
 
   url "http://updates.livestation.com/releases/Livestation-#{version}.dmg"
   name 'Livestation'
-  homepage 'https://www.livestation.com'
+  homepage 'https://www.livestation.com/'
 
   app 'Livestation.app'
 end

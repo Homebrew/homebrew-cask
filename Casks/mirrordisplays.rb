@@ -7,7 +7,7 @@ cask 'mirrordisplays' do
   appcast 'https://github.com/fcanas/mirror-displays/releases.atom',
           checkpoint: 'e2b3b062a7439dd4b91f437b146ea32ee3c3038492af356d966b97673ac1c04a'
   name 'Mirror Displays'
-  homepage 'http://www.fabiancanas.com/Projects/MirrorDisplays'
+  homepage 'https://fabiancanas.com/open-source/mirror-displays'
 
   app 'MirrorDisplays.app'
 end

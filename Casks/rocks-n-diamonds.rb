@@ -4,7 +4,7 @@ cask 'rocks-n-diamonds' do
 
   url "http://www.artsoft.org/RELEASES/macosx/rocksndiamonds/rocksndiamonds-#{version}.dmg"
   name 'Rocks\'n\'Diamonds'
-  homepage 'http://www.artsoft.org/rocksndiamonds/'
+  homepage 'https://www.artsoft.org/rocksndiamonds/'
 
   app "Rocks'n'Diamonds #{version}/Rocks'n'Diamonds.app"
 end

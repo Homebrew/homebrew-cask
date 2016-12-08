@@ -4,7 +4,7 @@ cask 'qiyimedia' do
 
   url 'http://mbdapp.iqiyi.com/j/ot/iQIYIMedia_003.dmg'
   name '爱奇艺视频'
-  homepage 'https://www.iqiyi.com'
+  homepage 'https://www.iqiyi.com/'
 
   app '爱奇艺.app'
 

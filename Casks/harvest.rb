@@ -6,7 +6,7 @@ cask 'harvest' do
   appcast 'https://www.getharvest.com/harvest/mac/appcast.xml',
           checkpoint: '7c7882523447866331187227ff9c410d2e34bf68d6d00bf454676db71b8d76f0'
   name 'Harvest'
-  homepage 'https://www.getharvest.com/mac'
+  homepage 'https://www.getharvest.com/mac-time-tracking'
 
   app 'Harvest.app'
 end

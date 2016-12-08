@@ -7,7 +7,7 @@ cask 'mac-linux-usb-loader' do
   appcast 'https://github.com/SevenBits/Mac-Linux-USB-Loader/releases.atom',
           checkpoint: '2f828e4edbab5a5814f8e4e7be45c68ded9ed0ea9316c362830ff96d647647b2'
   name 'Mac Linux USB Loader'
-  homepage 'https://sevenbits.github.io/Mac-Linux-USB-Loader/'
+  homepage 'https://www.sevenbits.io/mlul/'
 
   app 'Mac Linux USB Loader.app'
 end

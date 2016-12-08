@@ -4,7 +4,7 @@ cask 'gobbler' do
 
   url 'https://app.gobbler.com/download_latest_redirect?product_version=2'
   name 'Gobbler'
-  homepage 'https://app.gobbler.com'
+  homepage 'https://app.gobbler.com/'
 
   installer manual: 'Gobbler.app'
 

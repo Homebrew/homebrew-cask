@@ -6,7 +6,7 @@ cask 'autoffi' do
   appcast 'https://github.com/AutoFFI/AutoFFI/releases.atom',
           checkpoint: '7ab0902c0c3b4e12c7e581bd20085fe64ddcc6e5e5ccdea6975697bc639e3722'
   name 'AutoFFI'
-  homepage 'http://github.com/autoffi/autoffi'
+  homepage 'https://github.com/autoffi/autoffi'
 
   binary 'bin/affc'
 end

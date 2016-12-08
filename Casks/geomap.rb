@@ -4,7 +4,7 @@ cask 'geomap' do
 
   url 'http://www.geomapapp.org/MapApp/GeoMapApp.dmg'
   name 'GeoMapApp'
-  homepage 'http://www.geomapapp.org'
+  homepage 'http://www.geomapapp.org/'
 
   app 'GeoMapApp.app'
 

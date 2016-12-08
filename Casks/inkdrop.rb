@@ -4,7 +4,7 @@ cask 'inkdrop' do
 
   url "https://www.inkdrop.info/api/update/Inkdrop-#{version}-Mac.zip"
   name 'Inkdrop'
-  homepage 'https://www.inkdrop.info'
+  homepage 'https://www.inkdrop.info/'
 
   app 'Inkdrop (Beta).app'
 end

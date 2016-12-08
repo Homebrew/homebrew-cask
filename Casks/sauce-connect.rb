@@ -4,7 +4,7 @@ cask 'sauce-connect' do
 
   url "https://saucelabs.com/downloads/sc-#{version}-osx.zip"
   name 'Sauce Connect'
-  homepage 'https://docs.saucelabs.com/reference/sauce-connect/'
+  homepage 'https://wiki.saucelabs.com/display/DOCS/Setting+Up+Sauce+Connect'
 
   binary "sc-#{version}-osx/bin/sc"
 end

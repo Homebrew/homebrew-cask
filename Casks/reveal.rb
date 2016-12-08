@@ -1,11 +1,8 @@
 cask 'reveal' do
-  version '2'
-  sha256 'ab62f33440072f283717cd2557b235f8241dbbef9c2e66ee0ab6d540bd4905f7'
+  version '4'
+  sha256 '2e8f4c1a20c355d540de2aab3552114059ab7d63b987e0a116e9a02fee1fe426'
 
-  # dl.devmate.com/com.ittybittyapps.Reveal was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.ittybittyapps.Reveal#{version}/Reveal.zip"
-  appcast 'https://download.revealapp.com/reveal-release.xml',
-          checkpoint: '45f5abc7f69aa58300ad63786eabe2b5b4c6c4f6c90599e770d6eb50466231cf'
+  url "https://download.revealapp.com/Reveal.app-#{version}.zip"
   name 'Reveal'
   homepage 'https://revealapp.com/'
 

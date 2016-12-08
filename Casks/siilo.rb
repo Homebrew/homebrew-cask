@@ -6,7 +6,7 @@ cask 'siilo' do
   appcast 'https://api.siiloapp.com/versions/1/appcast.xml',
           checkpoint: 'd048385f246d0f8576533b61cc407c2ef6ac2a79e475695ffbd7588066c4af0a'
   name 'Siilo'
-  homepage 'https://siiloapp.com'
+  homepage 'https://siiloapp.com/'
 
   app 'Siilo.app'
 end

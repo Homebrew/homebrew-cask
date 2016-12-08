@@ -4,7 +4,7 @@ cask 'osu' do
 
   url "https://m1.ppy.sh/osu%21-#{version}.dmg"
   name 'osu!'
-  homepage 'https://osu.ppy.sh'
+  homepage 'https://osu.ppy.sh/'
 
   app 'osu!.app'
 

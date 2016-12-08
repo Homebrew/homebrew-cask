@@ -4,7 +4,7 @@ cask 'desktoputility' do
 
   url 'https://sweetpproductions.com/products/desktoputility/DesktopUtility.dmg'
   name 'DesktopUtility'
-  homepage 'https://sweetpproductions.com'
+  homepage 'https://sweetpproductions.com/'
 
   app 'DesktopUtility.app'
 end

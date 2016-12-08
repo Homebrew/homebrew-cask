@@ -7,7 +7,7 @@ cask 'codeblocks' do
   appcast 'https://sourceforge.net/projects/codeblocks/rss?path=/Binaries',
           checkpoint: '4502ee0eada5102690fc1be210d2c23a3b580f21fc7aca847e0ddc7e353ad502'
   name 'Code::Blocks'
-  homepage 'http://www.codeblocks.org'
+  homepage 'http://www.codeblocks.org/'
 
   app 'CodeBlocks.app'
 end

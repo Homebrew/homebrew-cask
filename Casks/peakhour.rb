@@ -6,7 +6,7 @@ cask 'peakhour' do
   appcast 'https://updates.peakhourapp.com/PeakHourAppcast.xml',
           checkpoint: 'a161b553f13b5fbdda70bd40f18e6f1766bc7504c42cc8bcadf65952125cc38b'
   name 'PeakHour'
-  homepage 'https://www.peakhourapp.com'
+  homepage 'https://www.peakhourapp.com/'
 
   app "PeakHour #{version.major}.app"
 end
