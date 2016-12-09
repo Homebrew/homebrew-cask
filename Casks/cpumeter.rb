@@ -2,9 +2,9 @@ cask 'cpumeter' do
   version :latest
   sha256 :no_check
 
-  url 'https://github.com/yusukeshibata/cpumeter/blob/master/dist/cpumeter.zip?raw=true'
-  name 'cpumeter'
-  homepage 'https://github.com/yusukeshibata/cpumeter/'
+  url 'https://github.com/yusukeshibata/cpuinfo/blob/master/dist/cpuinfo.zip?raw=true'
+  name 'cpuinfo'
+  homepage 'https://github.com/yusukeshibata/cpuinfo/'
 
-  app 'cpumeter.app'
+  app 'cpuinfo.app'
 end
