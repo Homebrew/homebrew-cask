@@ -121,5 +121,6 @@
   "yubikey-neo-manager": "caskroom/drivers",
   "yubikey-personalization-gui": "caskroom/drivers",
   "yubikey-piv-manager": "caskroom/drivers",
-  "yubiswitch": "caskroom/drivers"
+  "yubiswitch": "caskroom/drivers",
+  "chronograf": "homebrew/core"
 }
