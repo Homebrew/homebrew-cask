@@ -1,4 +1,4 @@
-cask 'cpumeter' do
+cask 'cpuinfo' do
   version :latest
   sha256 :no_check
 
