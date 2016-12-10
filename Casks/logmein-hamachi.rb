@@ -7,9 +7,7 @@ cask 'logmein-hamachi' do
   name 'LogMeIn Hamachi'
   homepage 'https://vpn.net/'
 
-  installer script: 'LogMeInHamachiInstaller.app/Contents/MacOS/Lili',
-            args:   ['--silent'],
-            sudo:   true
+  installer manual: 'LogMeInHamachiInstaller.app'
 
   uninstall script: {
                       executable: '/Applications/LogMeIn Hamachi/HamachiUninstaller.app/Contents/Resources/uninstaller.sh',
