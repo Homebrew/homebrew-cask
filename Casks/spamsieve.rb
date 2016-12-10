@@ -10,7 +10,7 @@ cask 'spamsieve' do
 
     url "https://c-command.com/downloads/SpamSieve-#{version}-leopard.dmg"
   else
-    version '2.9.26'
+    version '2.9.27'
     sha256 '95c1c3726ba260c25a8ae9b4482237639aee4e2e5e174c28c3cc287ba619c647'
 
     url "https://c-command.com/downloads/SpamSieve-#{version}.dmg"
