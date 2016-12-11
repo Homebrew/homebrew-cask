@@ -11,10 +11,6 @@ cask 'hex-fiend' do
 
   app 'Hex Fiend.app'
 
-  postflight do
-    set_permissions "#{appdir}/Hex Fiend.app/Contents/Frameworks/Sparkle.framework", 'a+rx'
-  end
-
   zap delete: [
                 '~/Library/Preferences/com.ridiculousfish.HexFiend.LSSharedFileList.plist',
                 '~/Library/Preferences/com.ridiculousfish.HexFiend.plist',
