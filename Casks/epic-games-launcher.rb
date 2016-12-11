@@ -8,4 +8,6 @@ cask 'epic-games-launcher' do
   homepage 'https://www.unrealengine.com/what-is-unreal-engine-4'
 
   app 'Epic Games Launcher.app'
+
+  zap delete: '~/Library/Caches/com.epicgames.EpicGamesLauncher'
 end
