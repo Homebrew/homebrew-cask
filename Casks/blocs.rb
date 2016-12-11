@@ -7,7 +7,7 @@ cask 'blocs' do
   appcast "https://uistore.io/blocs/#{version.major}.0/info.xml",
           checkpoint: 'e3b76b5db084e39752548490c9f7a2f9567ff377a9d05a0ba5e20ce812e5c65c'
   name 'Blocs'
-  homepage 'http://blocsapp.com/'
+  homepage 'https://blocsapp.com/'
 
   auto_updates true
 

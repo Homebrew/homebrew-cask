@@ -6,7 +6,7 @@ cask 'trailrunner' do
   appcast 'https://rink.hockeyapp.net/api/2/apps/83c4086e3f968b874757ba689e71f610',
           checkpoint: '4c0ba04a57fee54d4ba9941e5bf0351e8a420419111f7409b0a35a20f0c3846c'
   name 'TrailRunner'
-  homepage 'http://trailrunnerx.com/'
+  homepage 'http://www.trailrunnerx.com/'
 
   app 'TrailRunner.app'
 end

@@ -4,7 +4,7 @@ cask 'totalterminal' do
 
   url "http://downloads.binaryage.com/TotalTerminal-#{version}.dmg"
   name 'TotalTerminal'
-  homepage 'http://totalterminal.binaryage.com/'
+  homepage 'https://totalterminal.binaryage.com/'
 
   pkg 'TotalTerminal.pkg'
 

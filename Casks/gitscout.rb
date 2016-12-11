@@ -4,7 +4,7 @@ cask 'gitscout' do
 
   url 'https://gitscout.com/marshmallows'
   name 'Gitscout'
-  homepage 'https://gitscout.com'
+  homepage 'https://gitscout.com/'
 
   app 'Gitscout.app'
 end

@@ -5,7 +5,7 @@ cask 'deep-dreamer' do
   # devmate.com/com.realmacsoftware.deepdreamer was verified as official when first introduced to the cask
   url 'https://dl.devmate.com/com.realmacsoftware.deepdreamer/DeepDreamer.zip'
   name 'Deep Dreamer'
-  homepage 'https://realmacsoftware.com/deepdreamer'
+  homepage 'https://www.realmacsoftware.com/deepdreamer'
 
   app 'Deep Dreamer.app'
 end

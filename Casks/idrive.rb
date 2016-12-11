@@ -4,7 +4,7 @@ cask 'idrive' do
 
   url 'http://www.idrive.com/downloads/IDrive.dmg'
   name 'iDrive'
-  homepage 'http://www.idrive.com'
+  homepage 'https://www.idrive.com/'
 
   pkg 'IDrive.pkg'
 
