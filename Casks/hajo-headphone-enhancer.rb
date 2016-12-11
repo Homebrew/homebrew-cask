@@ -4,7 +4,7 @@ cask 'hajo-headphone-enhancer' do
 
   url 'http://hajoheadphone.com/assets/install-hajo-headphone-enhancer.dmg'
   name 'Hajos Headphone Enhancer'
-  homepage 'http://hajoheadphone.com/install-remove-hajos-headphone-enhancer'
+  homepage 'https://hajoheadphone.com/install-remove-hajos-headphone-enhancer'
 
   pkg 'Install Hajo Headphone Enhancer.pkg'
 

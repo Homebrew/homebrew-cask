@@ -5,7 +5,7 @@ cask 'hex' do
   # dl.hex.gameforge.com was verified as official when first introduced to the cask
   url 'http://dl.hex.gameforge.com/HexInstaller.dmg'
   name 'HEX'
-  homepage 'https://www.hextcg.com/'
+  homepage 'https://www.hex.gameforge.com/'
 
   app 'Hex.app'
 end

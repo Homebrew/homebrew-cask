@@ -10,7 +10,7 @@ cask 'patchblocks' do
   end
 
   name 'Patchblocks'
-  homepage 'http://patchblocks.com/'
+  homepage 'http://www.patchblocks.com/'
 
   app 'Patchblocks.app'
 end

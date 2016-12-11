@@ -12,7 +12,7 @@ cask 'youdao' do
   end
 
   name '有道词典'
-  homepage 'http://cidian.youdao.com/index-mac.html'
+  homepage 'https://cidian.youdao.com/index-mac.html'
 
   app '有道词典.app'
 

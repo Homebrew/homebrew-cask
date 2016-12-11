@@ -12,7 +12,7 @@ cask 'chefdk' do
           checkpoint: '59f8ddd44a4f8acea9aa035d204073e9de367f7378dcfa3a748856614cf197a4'
   name 'Chef Development Kit'
   name 'ChefDK'
-  homepage 'https://downloads.chef.io/chef-dk/'
+  homepage 'https://downloads.chef.io/chefdk/'
 
   depends_on arch: :x86_64
 
