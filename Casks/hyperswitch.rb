@@ -9,7 +9,7 @@ cask 'hyperswitch' do
   homepage 'https://bahoom.com/hyperswitch/'
 
   app 'HyperSwitch.app'
-  
+
   zap delete: [
                 '~/Library/Preferences/com.bahoom.HyperSwitch.plist',
                 '~/Library/Caches/com.bahoom.HyperSwitch',
