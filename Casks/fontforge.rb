@@ -1,11 +1,11 @@
 cask 'fontforge' do
-  version '2016-04-04'
-  sha256 '71da3bfad5c20b6746b5e619484b45f208b9e699924de82e8cc9ab709f5e13bb'
+  version '20161005'
+  sha256 '30398f6e0ee7cff1c4dd77297fc9ae550dd554538fc7dcde00bb77903d183144'
 
   # github.com/fontforge/fontforge was verified as official when first introduced to the cask
-  url "https://github.com/fontforge/fontforge/releases/download/#{version.no_hyphens}/FontForge-#{version}-Mac.app.dmg.zip"
+  url "https://github.com/fontforge/fontforge/releases/download/#{version}/FontForge-20161004-Mac.zip"
   appcast 'https://github.com/fontforge/fontforge/releases.atom',
-          checkpoint: 'dcb2587675266e30c2ac1530982c66f170a27a962d77708f8862d5f469ff8102'
+          checkpoint: '6546727c4b0560a20af0aaaaf22e2080fa63526c6ad29b14517acc2004a3c1af'
   name 'FontForge'
   homepage 'https://fontforge.github.io/en-US/'
 
