@@ -1,11 +1,11 @@
 cask 'hachidori' do
-  version '1.1.8'
-  sha256 'f97371c885af817177f4660232287176777e17092c0a25a9d1a74de8b31c0e52'
+  version '1.1.9.1'
+  sha256 'd4f1d11d3f3278dea79bc43f47576aaea36e2acdac3672164b95cbdddd91391d'
 
-  # github.com/chikorita157/hachidori was verified as official when first introduced to the cask
-  url "https://github.com/chikorita157/hachidori/releases/download/#{version}/Hachidori-#{version}.zip"
-  appcast 'https://github.com/chikorita157/hachidori/releases.atom',
-          checkpoint: 'f72e2b4819b37d77f73496453f1d91398d2f677314c9492b9db3b3c927c8c0e5'
+  # github.com/Atelier-Shiori/hachidori was verified as official when first introduced to the cask
+  url "https://github.com/Atelier-Shiori/hachidori/releases/download/#{version}/Hachidori-#{version}.dmg"
+  appcast 'https://github.com/Atelier-Shiori/hachidori/releases.atom',
+          checkpoint: 'b888480cde439d3cfcc5499b2ab2bcebbe3aed0a4906f28f3a3a35fb293924af'
   name 'Hachidori'
   homepage 'http://hachidori.ateliershiori.moe/'
 
