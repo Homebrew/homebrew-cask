@@ -14,8 +14,8 @@ cask 'textexpander' do
     sha256 '744a2b1dfef3d3d4a71dd045094152ea1c7fbd2e901c7d87cc752f5b21ec3887'
 
     url "https://cdn.textexpander.com/mac/TextExpander_#{version}.zip"
-    appcast 'https://textexpander.com/help/desktop/releasenotes.html'
-        checkpoint '06e349b77972644f1f7e036fbea79d978483f215e063d429c48ddc87bbace889'
+    appcast 'https://smilesoftware.com/appcast/TextExpander6.xml',
+            checkpoint: '2c6a78b2507c2dca7e5d67e122caa2c05567f08528dee537840520aafa19a0ea'
   end
 
   name 'TextExpander'
