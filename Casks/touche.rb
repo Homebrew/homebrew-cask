@@ -1,11 +1,11 @@
 cask 'touche' do
-  version '1.1.1'
-  sha256 '1430c9c7fdb2fe13981b2b182fd81f209e8bde971b6a220f64d47297072059ba'
+  version '1.1.2'
+  sha256 '3836f2016efb846f8cdb8e15afa579ed3352c39e4107cb5045c46bf045a546ed'
 
   # redsweater.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://redsweater.s3.amazonaws.com/Touche#{version}.zip"
   appcast 'https://red-sweater.com/touche/appcast.php',
-          checkpoint: '2221cef86f61ed01bdd44df1e8b2cd7052adec9dce235f845548b808d97843e7'
+          checkpoint: '8dcc3d671b2df9c2889801fed2d42ee2ebde6a61042b5559027dac6cfa5c6a38'
   name 'Touché'
   homepage 'https://red-sweater.com/touche/'
 
