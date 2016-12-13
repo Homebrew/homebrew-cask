@@ -73,7 +73,7 @@ cask 'firefox' do
 
   url "https://ftp.mozilla.org/pub/firefox/releases/#{version}/mac/#{language}/Firefox%20#{version}.dmg"
   appcast "https://aus5.mozilla.org/update/3/Firefox/#{version}/0/Darwin_x86_64-gcc3-u-i386-x86_64/en-US/release/Darwin%2015.3.0/default/default/update.xml?force=1",
-          checkpoint: '2bbba0fc24add1ba7a0c538a195cc5243292ee7cd5ede3d9fb2b49752ae44415'
+          checkpoint: '0888b8570c66c0225cf7515ec3f5afef8e0a752a88b4b9a77a54117722f769c6'
   name 'Mozilla Firefox'
   homepage 'https://www.mozilla.org/firefox/'
 
