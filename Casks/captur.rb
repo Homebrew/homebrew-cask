@@ -8,7 +8,6 @@ cask 'captur' do
   homepage 'https://cambhlumbulunk.blogspot.com/p/captur.html'
 
   depends_on macos: '>= :yosemite'
-  container nested: "Captur #{version}.dmg"
 
   app 'Captur.app'
 end
