@@ -1,11 +1,10 @@
 cask 'lacona' do
-  version '0.10.1'
-  sha256 'acc5b681774f9be2c702094d0d87baaa2728aee54529f6a27c6571342f8e13d3'
+  version '1.1.2'
+  sha256 '07c410761091faad533073c10fbad7ad6802e0ce8aef6d1f1fa61f5b392fa2c9'
 
-  # lacona-download.firebaseapp.com was verified as official when first introduced to the cask
-  url "https://lacona-download.firebaseapp.com/packages/#{version}/LaconaBeta.zip"
-  appcast 'https://lacona-download.firebaseapp.com/appcast.xml',
-          checkpoint: '448b88e5ad9cd58e9f4d8cf7c5b58b9ac26c06b83539f7740538e15bf3882ca2'
+  url "https://download.lacona.io/packages/#{version}/Lacona.zip"
+  appcast 'https://download.lacona.io/appcast.xml',
+          checkpoint: 'fa0c84c376f2af8c8f9f7c87c42115bbd8e4c9304f6547282039146b2ed30898'
   name 'Lacona'
   homepage 'https://www.lacona.io/'
 
