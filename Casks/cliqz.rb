@@ -1,9 +1,8 @@
 cask 'cliqz' do
-  version '1.2.1'
-  sha256 '387c4ef5b86f1c3605ff7bd54fd210ed23dda13f759a1280212cb2c3c29debf0'
+  version '1.9.0'
+  sha256 '86130280d3a45a8280a5e602bcdc9b0642f6fbaee7ef17efce56d00987545040'
 
-  # repository.cliqz.com.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "http://repository.cliqz.com.s3.amazonaws.com/dist/release/#{version}/de/CLIQZ-#{version}.de.mac.dmg"
+  url 'https://cdn.cliqz.com/browser-f/download/web0001/CLIQZ.de.mac.dmg'
   name 'CLIQZ'
   homepage 'https://cliqz.com/'
 
