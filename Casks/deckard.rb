@@ -1,6 +1,6 @@
 cask 'deckard' do
-  version '0.4.0'
-  sha256 '005b20436efe21ee99a64ce691c7fbebeface030b3d56cb49282c1ead3da495b'
+  version '0.4.1'
+  sha256 '8bbb38bbf68fa72b141972ddfc2a4fa85a02cfdaed30c13a3d012d4d92d57501'
 
   url "https://www.deckard.ai/download/#{version}.dmg"
   appcast 'https://www.deckard.ai/releases.html',
