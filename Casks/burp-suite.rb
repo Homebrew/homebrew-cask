@@ -1,6 +1,6 @@
 cask 'burp-suite' do
-  version '1.7.13'
-  sha256 '8c53f3af171c4338af1777e2ed59481a135ccb04a2b747d739a6730fe67564f4'
+  version '1.7.14'
+  sha256 'c2a9177e822dcb11c9b8135889bd5395b7f059d450e99e89c20b8e380c7aa479'
 
   url "https://portswigger.net/Burp/Releases/Download?productId=100&version=#{version}&type=MacOsx"
   name 'Burp Suite'
