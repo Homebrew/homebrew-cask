@@ -4,6 +4,8 @@ cask 'lacona' do
 
   # lacona-download.firebaseapp.com was verified as official when first introduced to the cask
   url "https://download.lacona.io/packages/#{version}/Lacona.zip"
+  appcast 'https://download.lacona.io/appcast.xml',
+          checkpoint: 'fa0c84c376f2af8c8f9f7c87c42115bbd8e4c9304f6547282039146b2ed30898'
   name 'Lacona'
   homepage 'https://www.lacona.io/'
 
