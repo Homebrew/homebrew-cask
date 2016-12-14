@@ -8,7 +8,6 @@ cask 'ndm' do
           checkpoint: '0db6ec7462676831c0922f595d653df6f903a49a540d41c81f0b6f5e1c2212b1'
   name 'ndm'
   homepage 'https://720kb.github.io/ndm'
-  license :gpl
 
   app 'ndm.app'
 end
