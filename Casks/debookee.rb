@@ -1,11 +1,11 @@
 cask 'debookee' do
-  version '5.2.1'
-  sha256 '03ff1dd7bc3f52facc31ae436b9974524b627cf3fe8e4938dc5de2a63db88e56'
+  version '5.2.2'
+  sha256 '521afdc999dae84fc5a1660c1ad918244b0254566be45e857cec4dc6d69daff3'
 
   # iwaxx.com/debookee/ was verified as official when first introduced to the cask
   url 'https://www.iwaxx.com/debookee/debookee.zip'
   appcast 'https://www.iwaxx.com/debookee/appcast.php',
-          checkpoint: '281a8310d97ab8c227ac534f6b98d47c27a9aee506ca166298d0d8f0a05b3eb4'
+          checkpoint: '345e8e107a056c423f6546c7322bbc451af54d9e937494391cdaf73f0b011433'
   name 'Debookee'
   homepage 'https://debookee.com/'
 
