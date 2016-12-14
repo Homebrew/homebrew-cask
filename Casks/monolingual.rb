@@ -12,14 +12,14 @@ cask 'monolingual' do
     version '1.6.7'
     sha256 'c96175ef35aae6409f760e6c1f70e7cc47d45ab2b769c3238b4a4d979d13756b'
   else
-    version '1.7.3'
-    sha256 '24fa5ff0a5903c0eb07cd58a15292e3adab97ea0823f304241dc4187f9252ffc'
+    version '1.7.4'
+    sha256 '1c46f3cede639a5ab29c0670e06fef490bbecf1679804891e1043e00c028119d'
   end
 
   # github.com/IngmarStein/Monolingual was verified as official when first introduced to the cask
   url "https://github.com/IngmarStein/Monolingual/releases/download/v#{version}/Monolingual-#{version}.dmg"
   appcast 'https://github.com/IngmarStein/Monolingual/releases.atom',
-          checkpoint: '4f40435d25696bad5afe152e0ffae05101967998e7262db9c4bfb622229e4a52'
+          checkpoint: '9955389341ce594af47df1e08ac0c9658fe8c7dfa69703bbf6ace5c085db0971'
   name 'Monolingual'
   homepage 'https://ingmarstein.github.io/Monolingual/'
 
