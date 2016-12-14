@@ -1,6 +1,6 @@
 cask 'ryver' do
-  version '1.1.6'
-  sha256 '8176bc4612e52e53bb14cffb50d576762fb556668a8e0d2b251b59c9a3ed7bd0'
+  version '1.2.0'
+  sha256 'de9a89fab748a1b5c1077b5710c222591129e8730f45eeda41fb3b7b37b30a4e'
 
   # d3vkb1nw20iqfq.cloudfront.net was verified as official when first introduced to the cask
   url "https://d3vkb1nw20iqfq.cloudfront.net/mac/Ryver-#{version}.dmg"
