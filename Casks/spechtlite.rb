@@ -1,10 +1,10 @@
 cask 'spechtlite' do
-  version '0.8.1'
-  sha256 '302ca8194c2787eb8d89a6b7a7bd8624ce3f3fd844bf21005d0c8d2d0031241d'
+  version '0.9.0.beta7'
+  sha256 '347061bbb20154c883845f37ab9fdab5128017ae97a4f2cf116a7dbe2d3b9c9b'
 
   url "https://github.com/zhuhaow/SpechtLite/releases/download/#{version}/SpechtLite.zip"
   appcast 'https://github.com/zhuhaow/SpechtLite/releases.atom',
-          checkpoint: 'fe837c2b13fd661be485639228ad98b9416fc3acea9ae1a91baaf31f289890f7'
+          checkpoint: 'e900dd067c2c73cf0494391c53f9af48d49031b200d73fed080b5e0e9577ce02'
   name 'SpechtLite'
   homepage 'https://github.com/zhuhaow/SpechtLite'
 
