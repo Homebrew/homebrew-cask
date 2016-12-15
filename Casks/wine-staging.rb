@@ -17,4 +17,5 @@ cask 'wine-staging' do
                        'org.winehq.wine-staging32',
                        'org.winehq.wine-staging64',
                      ]
+            delete:  "#{appdir}/Wine Staging.app"
 end
