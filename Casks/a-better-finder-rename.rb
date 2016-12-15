@@ -1,10 +1,10 @@
 cask 'a-better-finder-rename' do
-  version '10.11'
-  sha256 '6094b3f936ca6a644775c6f8c8f7292bba59861da0c5c75c7a4eaeb9a84e2a02'
+  version '10.12'
+  sha256 '75a0e83ca49cea6d3aa35797d9fbf0047fc6f021ce56e328e6c299f7218518c3'
 
   url "http://www.publicspace.net/download/ABFRX#{version.major}.dmg"
   appcast "http://www.publicspace.net/app/signed_abfr#{version.major}.xml",
-          checkpoint: '73cd625e12cbdad8f12bb0cf3b9510c1740d9bfe72f1a3fe7dac4f0b10246b91'
+          checkpoint: 'e76f8bb2ec07ddd5a13b5ef2fb8560550802906ebfcc2f57eacc2e426d5dbb51'
   name 'A Better Finder Rename'
   homepage 'http://www.publicspace.net/ABetterFinderRename/'
 
