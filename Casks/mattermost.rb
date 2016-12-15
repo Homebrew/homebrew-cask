@@ -9,5 +9,5 @@ cask 'mattermost' do
   name 'Mattermost'
   homepage 'https://about.mattermost.org/'
 
-  app 'mattermost-desktop-osx/Mattermost.app'
+  app 'Mattermost.app'
 end
