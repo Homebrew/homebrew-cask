@@ -4,8 +4,6 @@ cask 'soapui' do
 
   # cdn01.downloads.smartbear.com/soapui was verified as official when first introduced to the cask
   url "http://cdn01.downloads.smartbear.com/soapui/#{version}/SoapUI-#{version}.dmg"
-  appcast 'https://www.soapui.org/downloads/latest-release/release-notes.html',
-          checkpoint: '043dbaa4061cbe1cdd8fc4ce8aa53eeba123c74421d4c3ee734f89e29c7a0071'
   name 'SmartBear SoapUI'
   homepage 'https://www.soapui.org/'
 
