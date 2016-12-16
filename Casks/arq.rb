@@ -4,7 +4,7 @@ cask 'arq' do
 
   url "https://www.arqbackup.com/download/Arq_#{version}.zip"
   appcast "https://www.arqbackup.com/download/arq#{version.major}.xml",
-          checkpoint: 'a19d0e330a7777261d066e85b666ffd3af7b92cbf9d8278701c8c92f92b69cde'
+          checkpoint: 'f94e21a3027ac1073eeaac6a984f2f7de7294a634cc5474f7941926da9c14b00'
   name 'Arq'
   homepage 'https://www.arqbackup.com/'
 
