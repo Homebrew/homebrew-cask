@@ -7,8 +7,8 @@ cask 'bettertouchtool' do
     url "https://bettertouchtool.net/btt#{version}.zip"
 
   else
-    version '1.963'
-    sha256 '3f417bd4a6666ed7299230bb1f38c36d0402305c205543c0cc38d76217479220'
+    version '1.970'
+    sha256 'a74e53e957cf6bb1a6bb4538205c8fd1ee076e48cf776bc21a94002b1c10682d'
 
     url "https://boastr.net/releases/btt#{version}.zip"
     appcast 'http://appcast.boastr.net',
