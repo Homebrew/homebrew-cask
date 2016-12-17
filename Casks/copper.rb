@@ -1,11 +1,11 @@
 cask 'copper' do
-  version '1.2.1'
-  sha256 '91d7de2afad87112c0a33290128974c9171a1191a5e872242819a0af15ff41c5'
+  version '1.3'
+  sha256 '81a536e5dcf737d0d6f887a3422bc30c90466d96e6a3019fc8ac154607a4ba85'
 
   # dl.devmate.com was verified as official when first introduced to the cask
-  url 'https://dl.devmate.com/com.appfruits.copper/Copper.dmg'
+  url 'https://dl.devmate.com/com.appfruits.copper/Copper.zip'
   appcast 'https://updates.devmate.com/com.appfruits.copper.xml',
-          checkpoint: '277749a667b3f42d180270e6531e94b2697dc3206d088802a5f18bb784cc89e4'
+          checkpoint: '740c67fe43ee3794dc82fb08f6b641a3d46b59dde7d444cdcd709adaf41749b0'
   name 'Copper'
   homepage 'https://www.copper-app.com/'
 
