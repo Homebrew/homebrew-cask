@@ -1,11 +1,11 @@
 cask 'inkdrop' do
-  version '2.7.0'
-  sha256 'f7a5c7a30e46ead7c5229c4862a5a8edf721f375fe5a45795460d405d743882f'
+  version '2.7.1'
+  sha256 '9ab855b79bf98e1374ef62f9bde764792463730c27779260509721c4e09aeaef'
 
   # github.com/inkdropapp was verified as official when first introduced to the cask
   url "https://github.com/inkdropapp/releases/releases/download/v#{version}/Inkdrop-#{version}-Mac.zip"
   appcast 'https://github.com/inkdropapp/releases/releases.atom',
-          checkpoint: 'af10482547761f411cff498d1106fc8031d55e26faa6d873ec5a972be1ac4fdd'
+          checkpoint: '8a036013afbcf61c02e9cface2295e6ca5f59b898417e4c3b6ea3cc7c6a11e1a'
   name 'Inkdrop'
   homepage 'https://www.inkdrop.info/'
 
