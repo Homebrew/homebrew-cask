@@ -1,6 +1,6 @@
 cask 'kepler' do
-  version '2.4'
-  sha256 'efb0147bb93b7333269b2b71aae29a22c2c02b7a121091ac188aa3ca8de60760'
+  version '2.5'
+  sha256 '8b6b793b7ba95d1a26184d25b89fe531d8a291b75f1bfc62e7dbcf41a8bc05fb'
 
   url "https://code.kepler-project.org/code/kepler/releases/installers/#{version}/Kepler-#{version}.dmg"
   name 'Kepler'
