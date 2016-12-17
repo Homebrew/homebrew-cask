@@ -9,5 +9,5 @@ cask 'solvespace' do
   name 'SolveSpace'
   homepage 'http://solvespace.com/index.pl'
 
-  app 'SolveSpace.app'
+  app 'solvespace.app'
 end
