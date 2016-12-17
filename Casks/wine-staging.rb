@@ -1,6 +1,6 @@
 cask 'wine-staging' do
-  version '1.9.23'
-  sha256 '20b6f450642e3ec2ffc2a170ad5f6d8872b4389960500f1421534385c5ea2ae3'
+  version '2.0-rc1'
+  sha256 'fd297e8f9288a0eace85d3c31b923618d215de3f0463703140893942f171e989'
 
   url "https://repos.wine-staging.com/macosx/i686/winehq-staging-#{version}.pkg"
   name 'WineHQ-staging'
@@ -17,5 +17,8 @@ cask 'wine-staging' do
                        'org.winehq.wine-staging32',
                        'org.winehq.wine-staging64',
                      ],
-            delete:  '/Applications/Wine Staging.app'
+            delete:  [
+                       '/Applications/Wine Staging.app',
+                       '~/.wine',
+                     ]
 end
