@@ -3,11 +3,11 @@ cask 'spectacle' do
     version '0.8.6'
     sha256 '3e367d2d7e6fe7d5f41d717d49cb087ba7432624b71ddd91c0cfa9d5a5459b7c'
   else
-    version '1.1'
-    sha256 'ead5000dd1c8fc45485498cec2ae7be1e682b2652a8791d537c8db0c6a13b7e9'
+    version '1.1.1'
+    sha256 '5277f226b494eea34bd94b11712aa0cf6205cd682830d95683c2362103c01a7a'
 
     appcast 'https://www.spectacleapp.com/updates/appcast.xml',
-            checkpoint: '24ec634b9fd9d3dfbba43702fa2a10fef892f5885a305f9dfb79456c98b3e341'
+            checkpoint: 'fc09f1ec4c33bc291b3ef504637f3e83d8be7198fa636ac70e73a5f0a51315cd'
   end
 
   # amazonaws.com/spectacle was verified as official when first introduced to the cask
