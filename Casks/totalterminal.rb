@@ -1,8 +1,10 @@
 cask 'totalterminal' do
-  version '1.5.4'
-  sha256 '159475ff641a05cbce2ca4463eac4ae98006b62396b9f1f59d396d68d71d7d87'
+  version '1.6'
+  sha256 '552573dcbf3c75a3b11f9d0737a9abaee383b4f9f7aee36706277045698d4cf4'
 
   url "http://downloads.binaryage.com/TotalTerminal-#{version}.dmg"
+  appcast 'https://totalterminal.binaryage.com/changelog-beta.txt',
+          checkpoint: 'c55f3bc02ec9c3f27036fbe11de7a16c114f54328e9eefb5b8d4e67febd5162d'
   name 'TotalTerminal'
   homepage 'https://totalterminal.binaryage.com/'
 
