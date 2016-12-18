@@ -1,10 +1,10 @@
 cask 'nimbus' do
-  version '0.7.4'
-  sha256 '833f747d74fae3f670f145fa7458623779a1b18b482f3c5828aea13581f64033'
+  version '0.8.0'
+  sha256 '0fec9d878c457a0776deb40a2d3982bdf5aa5de27253ae2a10894520457d9b57'
 
-  url "https://github.com/jnordberg/irccloudapp/releases/download/#{version}/Nimbus-#{version}.zip"
+  url "https://github.com/jnordberg/irccloudapp/releases/download/#{version}/Nimbus.zip"
   appcast 'https://github.com/jnordberg/irccloudapp/releases.atom',
-          checkpoint: 'b104534c9831a6d7e8580e76d0ecc3b5c9266d2497ad811c684d12d2a7f9cf49'
+          checkpoint: '5e6df56386d9d490159f8dd7a55e9cdafeafe48239d34d9516d0d8f2ef5c0dee'
   name 'Nimbus'
   homepage 'https://github.com/jnordberg/irccloudapp'
 
