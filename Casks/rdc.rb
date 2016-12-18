@@ -8,5 +8,10 @@ cask 'rdc' do
 
   pkg 'RDC Installer.mpkg'
 
-  uninstall pkgutil: ["com.microsoft.rdc.*.pkg.#{version}"]
+  uninstall pkgutil: [
+    'com.microsoft.mau.all.autoupdate.pkg.2.3.2',
+    'com.microsoft.merp.all.errorreporting.pkg.2.2.6',
+    'com.microsoft.rdc.all.dock.pkg.2.1.1',
+    'com.microsoft.rdc.all.rdc.pkg.2.1.1'
+    ]
 end
