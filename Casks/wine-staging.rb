@@ -9,11 +9,13 @@ cask 'wine-staging' do
   depends_on cask: 'xquartz'
 
   pkg "winehq-staging-#{version}.pkg",
-      choices: {
-                 'choiceIdentifier' => 'choice3',
-                 'choiceAttribute'  => 'selected',
-                 'attributeSetting' => 1,
-               }
+      choices: [
+                 {
+                   'choiceIdentifier' => 'choice3',
+                   'choiceAttribute'  => 'selected',
+                   'attributeSetting' => 1,
+                 },
+               ]
 
   uninstall pkgutil: [
                        'org.winehq.wine-staging',
