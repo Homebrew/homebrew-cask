@@ -1,9 +1,9 @@
 cask 'yujitach-menumeters' do
-  version '1.9.2'
-  sha256 'ab35bf334b863e589a85b24aef670e748289e7228a26aaca5bb3db72f1fb00d3'
+  version '1.9.3'
+  sha256 'b81b2180bbb4d97097ede77726b0f6bbdd9e191d7817e77b339053e1ae33df8e'
 
   url "http://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/zips/MenuMeters_#{version}.zip"
-  name 'MenuMeters El Capitan Port'
+  name 'MenuMeters for El Capitan (and later)'
   homepage 'http://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/'
 
   depends_on macos: '>= :el_capitan'
