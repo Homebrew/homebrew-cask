@@ -7,7 +7,7 @@ cask 'cerebro' do
   appcast 'https://github.com/KELiON/cerebro/releases.atom',
           checkpoint: 'd0a372db626b46ceb8125c351c69a2733bc84fe82772bda007b91a0f649a1561'
   name 'Cerebro'
-  homepage 'https://cerebroapp.com'
+  homepage 'https://cerebroapp.com/'
 
   app 'Cerebro.app'
 end

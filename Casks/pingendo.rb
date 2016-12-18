@@ -4,7 +4,7 @@ cask 'pingendo' do
 
   url 'http://pingendo.com/Pingendo.dmg'
   name 'Pingendo'
-  homepage 'http://pingendo.com/'
+  homepage 'https://pingendo.com/'
 
   app 'Pingendo.app'
 end
