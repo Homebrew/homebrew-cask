@@ -7,7 +7,7 @@ cask 'ndm' do
   appcast 'https://github.com/720kb/ndm/releases.atom',
           checkpoint: '4d14881a991e3657c760486eca870685762f1347964713575719b96c3ce0369e'
   name 'ndm'
-  homepage 'https://720kb.github.io/ndm'
+  homepage 'https://720kb.github.io/ndm/'
 
   app 'ndm.app'
 end
