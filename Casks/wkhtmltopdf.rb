@@ -1,6 +1,6 @@
 cask 'wkhtmltopdf' do
-  version '0.12.3'
-  sha256 'c8aa0f9456444847d08c6c772e2e0e4244813e6a2911eba6c940439df9abd0f0'
+  version '0.12.4'
+  sha256 '402209589279e092c94d17c76e6fdda6be5cadb21ce12e7c093c41f82b757506'
 
   # download.gna.org/wkhtmltopdf was verified as official when first introduced to the cask
   url "http://download.gna.org/wkhtmltopdf/#{version.major_minor}/#{version}/wkhtmltox-#{version}_osx-cocoa-x86-64.pkg"
