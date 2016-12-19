@@ -1,4 +1,4 @@
-cask 'camerabag' do
+cask 'camerabag-photo' do
   version '3.0.1'
   sha256 '5fd4bad30ae1d84d179c0b10a38ea9df3f89d7c450e1c8f912da2f8f37949c9d'
 
