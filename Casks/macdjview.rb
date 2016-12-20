@@ -5,7 +5,6 @@ cask 'macdjview' do
   url "https://downloads.sourceforge.net/windjview/MacDjView/#{version}/MacDjView-#{version}.dmg.gz"
   appcast 'https://sourceforge.net/projects/windjview/rss?path=/MacDjView',
           checkpoint: 'e2a88b51a099ccf5fb4d7b199af9e9347f33c9a682b82174d5fab00d24fb1e48'
-
   name 'MacDjView'
   homepage 'http://windjview.sourceforge.net/'
 
