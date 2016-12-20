@@ -22,9 +22,17 @@ pkg 'AlinofTimer.pkg', allow_untrusted: true
 
 ## `pkg choices:`
 
-`pkg choices:` can be used to override `.pkg`’s default install options via `-applyChoiceChangesXML`. It takes a deserialized version of the `choiceChanges` property list (refer to the `CHOICE CHANGES FILE` section of the [`installer` manual page](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man8/installer.8.html) for further information).
+`pkg choices:` can be used to override `.pkg`’s default install options via `-applyChoiceChangesXML`. It uses a deserialized version of the `choiceChanges` property list (refer to the `CHOICE CHANGES FILE` section of the [`installer` man page](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man8/installer.8.html) for further information).
 
-See [this pull request of wireshark-chmodbpf](https://github.com/caskroom/homebrew-cask/pull/26997) for an example of the procedure to extract the choices value, as well as their equivalents to the GUI options.
+Running the  macOS command:
+
+```bash
+$ installer -showChoicesXML -pkg '/path/to/my.pkg'
+```
+
+will output an XML which you can use to extract the `choices:` values, as well as their equivalents to the GUI options.
+
+See [this pull request of wireshark-chmodbpf](https://github.com/caskroom/homebrew-cask/pull/26997) and [this one for wine-staging](https://github.com/caskroom/homebrew-cask/pull/27937) for some examples of the procedure.
 
 [Example (wireshark-chmodbpf.rb)](https://github.com/caskroom/homebrew-cask/commit/f95b8a8306b91fe9da7908b842f4a5fa80f7afe0):
 ```ruby
@@ -44,6 +52,18 @@ pkg "Wireshark #{version} Intel 64.pkg",
                  'choiceIdentifier' => 'cli',
                  'choiceAttribute'  => 'selected',
                  'attributeSetting' => 0,
+               },
+             ]
+```
+
+[Example (wine-staging.rb)](https://github.com/caskroom/homebrew-cask/commit/51b65f6a5a25a7f79af4d372e1a0bf1dc3849251):
+```ruby
+pkg "winehq-staging-#{version}.pkg",
+    choices: [
+               {
+                 'choiceIdentifier' => 'choice3',
+                 'choiceAttribute'  => 'selected',
+                 'attributeSetting' => 1,
                },
              ]
 ```
