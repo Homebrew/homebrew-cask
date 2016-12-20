@@ -8,4 +8,3 @@ cask 'freeter' do
 
   app 'Freeter.app'
 end
-
