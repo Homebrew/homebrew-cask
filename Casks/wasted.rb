@@ -4,7 +4,7 @@ cask 'wasted' do
 
   url 'http://wasted.werk01.de/Wasted.zip'
   appcast 'http://wasted.werk01.de/appcast.xml',
-          checkpoint: '2798524a4eb590c537dd46085528bb94a3717d6dd07572e93cb2241ed682f722'
+          checkpoint: '23a115ef319622d89f1b56f4b1ffea1ba10fd69e3b753e48344a4566687f04c6'
   name 'WASTED'
   homepage 'http://wasted.werk01.de'
 
