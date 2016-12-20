@@ -1,5 +1,5 @@
 cask 'deadbeef' do
-  version '0.7.2-2'
+  version '0.7.2'
   sha256 '13efaf69691e579a95dc5394648766f533082cc8acd4fef094eb5d92f600e967'
 
   url 'https://downloads.sourceforge.net/deadbeef/travis/osx/master/deadbeef-devel-osx-x86_64.zip'
