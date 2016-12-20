@@ -1,10 +1,10 @@
 cask 'dbeaver-enterprise' do
   version '3.8.2'
-  sha256 '0dcd609672e884874e6397652060697e29d7cf7b84030aadcac1dc0d812862ca'
+  sha256 '8061dfcebf357586938e0f89bbd774a0fc9cd501afa1cef218e5754b529d9f70'
 
   url "http://dbeaver.jkiss.org/files/#{version}/dbeaver-ee-#{version}-macos.dmg"
   appcast 'http://dbeaver.jkiss.org/files/',
-          checkpoint: 'd12e3485499f7bc09a44a51424b0f51f844b58c94837d0a811fd15876b545af2'
+          checkpoint: '248a14eb2cac6358f84b3043f226f9a06125ae2c4a3a497d59fd133652a56842'
   name 'DBeaver Enterprise Edition'
   homepage 'http://dbeaver.jkiss.org/'
 
