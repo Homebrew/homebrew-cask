@@ -32,7 +32,7 @@ $ installer -showChoicesXML -pkg '/path/to/my.pkg'
 
 will output an XML which you can use to extract the `choices:` values, as well as their equivalents to the GUI options.
 
-See [this pull request of wireshark-chmodbpf](https://github.com/caskroom/homebrew-cask/pull/26997) and [this one for wine-staging](https://github.com/caskroom/homebrew-cask/pull/27937) for some examples of the procedure.
+See [this pull request for wireshark-chmodbpf](https://github.com/caskroom/homebrew-cask/pull/26997) and [this one for wine-staging](https://github.com/caskroom/homebrew-cask/pull/27937) for some examples of the procedure.
 
 [Example (wireshark-chmodbpf.rb)](https://github.com/caskroom/homebrew-cask/blob/f95b8a8306b91fe9da7908b842f4a5fa80f7afe0/Casks/wireshark-chmodbpf.rb#L9#L26):
 ```ruby
