@@ -9,8 +9,8 @@ cask 'raven-lite' do
   depends_on macos: '>= :mountain_lion'
   depends_on arch: :x86_64
 
-  installer script: './RavenLite-Installer.app/Contents/MacOS/JavaAppLauncher',
-    sudo: false
+  installer script: './RavenLite-Installer.app/Contents/MacOS/JavaAppLauncher', sudo: false
+  
   uninstall delete: "/Applications/Raven Lite #{version.major_minor}/"
 
   caveats do
