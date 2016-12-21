@@ -7,11 +7,10 @@ cask 'raven-lite' do
   homepage 'http://www.birds.cornell.edu/brp/raven/RavenOverview.html'
 
   depends_on macos: '>= :mountain_lion'
-  depends_on arch: :x86_64
 
   installer script: 'RavenLite-Installer.app/Contents/MacOS/JavaAppLauncher', sudo: false
 
-  uninstall delete: "/Applications/Raven Lite #{version.major_minor}/"
+  uninstall delete: "/Applications/Raven Lite #{version.major_minor}"
 
   caveats do
     depends_on_java('8+')
