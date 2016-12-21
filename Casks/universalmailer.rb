@@ -17,8 +17,6 @@ cask 'universalmailer' do
   name 'Universal Mailer'
   homepage 'https://universalmailer.github.io/UniversalMailer/'
 
-  depends_on macos: '>= :snow_leopard'
-
   pkg 'UniversalMailer.pkg'
 
   uninstall pkgutil: 'it.noware.universalmailer.pkg',
