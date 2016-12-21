@@ -14,6 +14,6 @@ cask 'raven-lite' do
   uninstall delete: "/Applications/Raven Lite #{version.major_minor}/"
 
   caveats do
-      depends_on_java('8+')
+    depends_on_java('8+')
   end
 end
