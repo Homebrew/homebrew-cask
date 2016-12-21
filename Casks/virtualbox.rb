@@ -12,7 +12,7 @@ cask 'virtualbox' do
 
   url "http://download.virtualbox.org/virtualbox/#{version.sub(%r{-.*}, '')}/VirtualBox-#{version}-OSX.dmg"
   appcast 'http://download.virtualbox.org/virtualbox/LATEST.TXT',
-          checkpoint: '779e6d24cb291ff605d93a3ec585cfa5589c1d4584ab7d9ee04a231d41ff5df3'
+          checkpoint: 'be267ff5adb254acf71b9e2dab4de6bd16d4b0e5bf085edd9156c2d7be1f585f'
   name 'Oracle VirtualBox'
   homepage 'https://www.virtualbox.org/'
 
