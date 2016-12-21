@@ -6,7 +6,7 @@ cask 'lightworks' do
   name 'Lightworks'
   homepage 'https://www.lwks.com/'
 
-  depends_on macos: '>= 10.8'
+  depends_on macos: '>= :mountain_lion'
 
   app 'Lightworks.app'
 end
