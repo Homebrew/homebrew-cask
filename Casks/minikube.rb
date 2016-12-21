@@ -8,7 +8,6 @@ cask 'minikube' do
   name 'Minikube'
   homepage 'https://github.com/kubernetes/minikube'
 
-  depends_on arch: :x86_64
   container type: :naked
 
   binary 'minikube-darwin-amd64', target: 'minikube'

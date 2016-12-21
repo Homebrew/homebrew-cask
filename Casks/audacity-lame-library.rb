@@ -7,7 +7,6 @@ cask 'audacity-lame-library' do
   name 'Lame Library for Audacity'
   homepage 'http://manual.audacityteam.org/man/faq_installation_and_plug_ins.html#maclame'
 
-  depends_on macos: '>= :snow_leopard'
   depends_on cask: 'audacity'
 
   pkg "Lame Library v#{version} for Audacity.pkg"

@@ -7,7 +7,6 @@ cask 'eclipse-platform' do
   homepage 'https://eclipse.org/eclipse/'
 
   depends_on macos: '>= :leopard'
-  depends_on arch: :x86_64
 
   app 'Eclipse.app'
 end

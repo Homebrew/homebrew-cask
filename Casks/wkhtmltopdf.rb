@@ -7,8 +7,6 @@ cask 'wkhtmltopdf' do
   name 'wkhtmltopdf'
   homepage 'http://wkhtmltopdf.org/'
 
-  depends_on macos: '>= :snow_leopard'
-
   pkg "wkhtmltox-#{version}_osx-cocoa-x86-64.pkg"
 
   uninstall pkgutil: 'org.wkhtmltopdf.wkhtmltox',

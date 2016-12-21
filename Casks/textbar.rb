@@ -9,7 +9,6 @@ cask 'textbar' do
   homepage 'http://www.richsomerfield.com/apps/'
 
   depends_on macos: '>= :mountain_lion'
-  depends_on arch: :x86_64
 
   app 'TextBar.app'
 end

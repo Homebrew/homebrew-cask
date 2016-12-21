@@ -19,7 +19,6 @@ cask 'ncar-ncl' do
   depends_on cask: 'xquartz'
   depends_on formula: 'gcc'
   depends_on macos: '>= 10.8'
-  depends_on arch: :x86_64
 
   artifact 'include', target: '/usr/local/ncl-6.3.0/include'
   artifact 'bin', target: '/usr/local/ncl-6.3.0/bin'

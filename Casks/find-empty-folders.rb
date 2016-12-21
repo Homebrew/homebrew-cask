@@ -6,7 +6,5 @@ cask 'find-empty-folders' do
   name 'Find Empty Folders'
   homepage 'http://www.tempel.org/FindEmptyFolders'
 
-  depends_on macos: '>= :snow_leopard'
-
   app 'Find Empty Folders.app'
 end

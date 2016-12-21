@@ -6,8 +6,6 @@ cask 'makemkv' do
   name 'MakeMKV'
   homepage 'https://www.makemkv.com/'
 
-  depends_on macos: '>= :snow_leopard'
-
   app 'MakeMKV.app'
 
   zap delete: [

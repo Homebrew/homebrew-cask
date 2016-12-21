@@ -6,7 +6,5 @@ cask 'doomrl' do
   name 'Doom the Roguelike'
   homepage 'https://doom.chaosforge.org/'
 
-  depends_on arch: :x86_64
-
   app 'DoomRL.app'
 end

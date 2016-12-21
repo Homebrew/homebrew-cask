@@ -14,8 +14,6 @@ cask 'controlplane' do
   name 'ControlPlane'
   homepage 'https://www.controlplaneapp.com/'
 
-  depends_on macos: '>= :snow_leopard'
-
   app 'ControlPlane.app'
 
   zap delete: '~/Library/Preferences/com.dustinrue.ControlPlane.plist'

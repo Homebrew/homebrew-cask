@@ -8,7 +8,5 @@ cask 'mountain' do
   name 'Mountain'
   homepage 'https://appgineers.de/mountain/'
 
-  depends_on macos: '>= :snow_leopard'
-
   app 'Mountain.app'
 end

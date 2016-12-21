@@ -8,7 +8,5 @@ cask 'clipbuddy' do
   name 'ClipBuddy'
   homepage 'http://www.ondesoft.com/clipbuddy_mac/'
 
-  depends_on macos: '>= :snow_leopard'
-
   app 'ClipBuddy.app'
 end
