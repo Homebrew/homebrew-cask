@@ -4,14 +4,14 @@ cask 'raven-lite' do
 
   url "http://www.birds.cornell.edu/brp/RavenLite/RavenLiteFullInstaller/InstData/MacOSX/RavenLite-#{version}_macosx.dmg"
   name 'Raven Lite'
-  homepage 'http://www.birds.cornell.edu/brp/RavenLite/RavenLiteReadMe.htm'
+  homepage 'http://www.birds.cornell.edu/brp/raven/RavenOverview.html'
 
   depends_on macos: '>= :mountain_lion'
   depends_on arch: :x86_64
 
-  installer manual: 'RavenLite-Installer.app'
-
-  uninstall trash: '/Applications/Raven Lite 2.0/'
+  installer script: './RavenLite-Installer.app/Contents/MacOS/JavaAppLauncher',
+    sudo: false
+  uninstall delete: "/Applications/Raven Lite #{version.major_minor}/"
 
   caveats do
       depends_on_java('8+')
