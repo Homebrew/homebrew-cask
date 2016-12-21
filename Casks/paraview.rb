@@ -18,6 +18,4 @@ cask 'paraview' do
 
   name 'ParaView'
   homepage 'http://www.paraview.org/'
-
-  depends_on arch: :x86_64
 end
