@@ -7,7 +7,7 @@ cask 'ostiarius' do
   name 'Ostiarius'
   homepage 'https://objective-see.com/products/ostiarius.html'
 
-  depends_on macos: '<= :sierra'
+  depends_on macos: '<= :el_capitan'
 
   app 'Ostiarius.app'
 
