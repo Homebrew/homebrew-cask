@@ -9,7 +9,6 @@ cask 'rubitrack-pro' do
   homepage 'https://www.rubitrack.com/'
 
   depends_on macos: '>= :yosemite'
-  depends_on arch: :x86_64
 
   app "rubiTrack #{version.major} Pro.app"
 end

@@ -22,8 +22,6 @@ cask 'textwrangler' do
   name 'TextWrangler'
   homepage 'http://www.barebones.com/products/textwrangler/'
 
-  depends_on macos: '>= :snow_leopard'
-
   app 'TextWrangler.app'
   binary "#{appdir}/TextWrangler.app/Contents/Helpers/edit"
   binary "#{appdir}/TextWrangler.app/Contents/Helpers/twdiff"

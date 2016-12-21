@@ -9,7 +9,5 @@ cask 'jaspersoft-studio' do
   name 'Jaspersoft Studio'
   homepage 'https://community.jaspersoft.com/project/jaspersoft-studio'
 
-  depends_on arch: :x86_64
-
   app "Jaspersoft Studio #{version}.final/Jaspersoft Studio.app"
 end

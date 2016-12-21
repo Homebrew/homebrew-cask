@@ -9,7 +9,6 @@ cask 'minco' do
   homepage 'http://www.celmaro.com/minco/'
 
   depends_on macos: '>= :yosemite'
-  depends_on arch: :x86_64
 
   app 'Minco.app'
 end

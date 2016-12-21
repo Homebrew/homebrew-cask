@@ -10,7 +10,6 @@ cask 'porting-kit' do
 
   auto_updates true
   conflicts_with cask: 'caskroom/versions/porting-kit-legacy'
-  depends_on macos: '>= :snow_leopard'
 
   app 'Porting Kit.app'
 

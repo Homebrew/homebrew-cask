@@ -26,8 +26,6 @@ cask 'rawtherapee' do
   else
     container nested: "RawTherapee_OSX_10.11_64_#{version}/RawTherapee_OSX_10.11_64__.dmg"
   end
-  depends_on macos: '>= :snow_leopard',
-             arch:  :x86_64
 
   app 'RawTherapee.app'
 end

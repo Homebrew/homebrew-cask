@@ -14,7 +14,5 @@ cask 'dupin' do
   name 'Dupin'
   homepage 'https://dougscripts.com/apps/dupinapp.php'
 
-  depends_on macos: '>= :snow_leopard'
-
   app 'Dupin.app'
 end

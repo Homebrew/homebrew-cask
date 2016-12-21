@@ -6,7 +6,5 @@ cask 'nisus-thesaurus' do
   name 'Nisus Thesaurus'
   homepage 'https://nisus.com/Thesaurus/'
 
-  depends_on macos: '>= :snow_leopard'
-
   app 'Nisus Thesaurus.app'
 end

@@ -11,7 +11,5 @@ cask 'anki' do
   name 'Anki'
   homepage 'http://ankisrs.net/'
 
-  depends_on arch: :intel
-
   app 'Anki.app'
 end

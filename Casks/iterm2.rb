@@ -11,7 +11,6 @@ cask 'iterm2' do
 
   auto_updates true
   depends_on macos: '>= :mountain_lion'
-  depends_on arch: :intel
 
   app 'iTerm.app'
 

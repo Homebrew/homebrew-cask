@@ -14,8 +14,6 @@ cask 'chefdk' do
   name 'ChefDK'
   homepage 'https://downloads.chef.io/chefdk/'
 
-  depends_on arch: :x86_64
-
   pkg "chefdk-#{version}.pkg"
 
   # When updating this cask, please verify the list of paths to delete (and
