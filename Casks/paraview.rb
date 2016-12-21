@@ -19,6 +19,5 @@ cask 'paraview' do
   name 'ParaView'
   homepage 'http://www.paraview.org/'
 
-  depends_on macos: '>= :snow_leopard',
-             arch:  :x86_64
+  depends_on arch: :x86_64
 end
