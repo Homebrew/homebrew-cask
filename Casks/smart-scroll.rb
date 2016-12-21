@@ -6,7 +6,5 @@ cask 'smart-scroll' do
   name 'Smart Scroll'
   homepage 'https://www.marcmoini.com/sx_en.html'
 
-  depends_on macos: '>= :snow_leopard'
-
   prefpane "Smart Scroll #{version}.prefPane"
 end

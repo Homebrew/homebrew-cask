@@ -6,9 +6,6 @@ cask 'dropdmg' do
   name 'DropDMG'
   homepage 'https://c-command.com/dropdmg/'
 
-  depends_on macos: '>= :snow_leopard'
-  depends_on arch: :intel
-
   app 'DropDMG.app'
 
   zap delete: [

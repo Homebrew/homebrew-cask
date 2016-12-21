@@ -19,8 +19,6 @@ cask 'git' do
   name 'git-osx-installer'
   homepage 'https://sourceforge.net/projects/git-osx-installer/'
 
-  depends_on macos: '>= :snow_leopard'
-
   uninstall_preflight do
     system "/usr/bin/yes yes | #{staged_path}/uninstall.sh"
   end

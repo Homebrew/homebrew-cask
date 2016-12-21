@@ -6,8 +6,6 @@ cask 'xmind' do
   name 'XMind'
   homepage 'https://www.xmind.net/'
 
-  depends_on macos: '>= :snow_leopard'
-
   app 'XMind.app'
 
   zap delete: [

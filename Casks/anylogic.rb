@@ -6,7 +6,6 @@ cask 'anylogic' do
   name 'AnyLogic'
   homepage 'http://www.anylogic.com/'
 
-  depends_on arch: :x86_64
   depends_on macos: '>= :lion'
 
   pkg 'Install AnyLogic.pkg'

@@ -18,8 +18,6 @@ cask 'rowanj-gitx' do
   homepage 'https://rowanj.github.io/gitx/'
 
   conflicts_with cask: 'gitx'
-  depends_on macos: '>= :snow_leopard'
-  depends_on arch: :intel
 
   app 'GitX.app'
   binary "#{appdir}/GitX.app/Contents/Resources/gitx"

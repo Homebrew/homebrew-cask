@@ -6,7 +6,5 @@ cask 'supersync' do
   name 'SuperSync'
   homepage 'https://supersync.com/'
 
-  depends_on arch: :intel
-
   app 'SuperSync.app'
 end

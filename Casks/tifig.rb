@@ -7,7 +7,5 @@ cask 'tifig' do
   name 'Tifig'
   homepage 'https://www.tifig.net/'
 
-  depends_on arch: :x86_64
-
   app 'Tifig.app'
 end

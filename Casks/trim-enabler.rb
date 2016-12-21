@@ -13,7 +13,5 @@ cask 'trim-enabler' do
   name 'Trim Enabler'
   homepage 'https://www.cindori.org/software/trimenabler/'
 
-  depends_on macos: '>= :snow_leopard'
-
   app 'Trim Enabler.app'
 end

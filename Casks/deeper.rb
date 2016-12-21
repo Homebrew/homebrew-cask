@@ -28,10 +28,4 @@ cask 'deeper' do
                     ]
 
   app 'Deeper.app'
-
-  caveats do
-    if [:leopard, :tiger].include?(MacOS.version.to_sym)
-      puts 'Deeper only runs from an Administrator account on this version of OS X.'
-    end
-  end
 end

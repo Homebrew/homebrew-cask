@@ -6,8 +6,5 @@ cask 'qcad' do
   name 'QCAD'
   homepage 'https://www.qcad.org/'
 
-  depends_on macos: '>= :snow_leopard'
-  depends_on arch: :intel
-
   app 'QCAD.app'
 end

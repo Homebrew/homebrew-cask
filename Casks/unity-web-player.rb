@@ -6,8 +6,6 @@ cask 'unity-web-player' do
   name 'Unity Web Player'
   homepage 'https://unity3d.com/webplayer'
 
-  depends_on macos: '>= :snow_leopard'
-
   pkg 'Install Unity Web Player.pkg'
 
   uninstall pkgutil: 'com.unity.UnityWebPlayer',

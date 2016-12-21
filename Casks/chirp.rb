@@ -6,7 +6,6 @@ cask 'chirp' do
   name 'CHIRP'
   homepage 'http://chirp.danplanet.com/'
 
-  depends_on arch: :intel
   depends_on cask: 'kk7ds-python-runtime'
 
   app "chirp-#{version}.app"

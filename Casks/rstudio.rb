@@ -8,7 +8,6 @@ cask 'rstudio' do
   homepage 'https://www.rstudio.com/'
 
   depends_on formula: 'homebrew/science/r'
-  depends_on macos: '>= :snow_leopard'
 
   app 'RStudio.app'
 
