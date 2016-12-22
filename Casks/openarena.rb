@@ -9,7 +9,7 @@ cask 'openarena' do
   app "openarena-#{version}/OpenArena.app"
 
   postflight do
-    system_command '/bin/mv', args: ["#{staged_path}/baseoa", "#{appdir}/OpenArena.app/Contents/MacOS"]
+    system_command '/bin/mv', args: ["#{staged_path}/openarena-#{version}/baseoa", "#{appdir}/OpenArena.app/Contents/MacOS"]
     set_permissions "#{appdir}/OpenArena.app/Contents/MacOS/openarena.ub", '755'
   end
 end
