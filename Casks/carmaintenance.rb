@@ -1,6 +1,6 @@
 cask 'carmaintenance' do
-  version '1.8.21'
-  sha256 '4d9ec27b42913d157546b8abb58787d47d181aa46c554ce309f3d0b1d1b4d780'
+  version '1.8.22'
+  sha256 'df6cad8772ca8edcc18c721489b3e2c0c4aa0a61bb18acd443d621b76b6393aa'
 
   url "http://www.traxxsoftware.com/downloads/CarMaintenance_#{version.dots_to_underscores}.zip"
   name 'CarMaintenance'
