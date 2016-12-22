@@ -6,7 +6,7 @@ cask 'openarena' do
   name 'OpenArena'
   homepage 'http://openarena.ws/smfnews.php'
 
-  app "openarena-#{version}/OpenArena.app"
+  app "openarena-#{version}/OpenArena #{version} r28.app"
 
   postflight do
     set_permissions "#{appdir}/OpenArena.app/Contents/MacOS/openarena.ub", '755'
