@@ -17,9 +17,7 @@ cask 'ostiarius' do
             kext:   'com.objective-see.OstiariusKext',
             delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.objectivesee.ostiarius.sfl'
 
-  caveats <<-EOS.undent
-    Apple fixed the Gatekeeper flaws the developer discovered and reported that Ostiarius protected against. As such, if you’re running macOS Sierra (10.12+), Ostiarius is no longer needed!
-
-    For that reason we’re making the cask refuse to install on Sierra and later.
-  EOS
+  caveats do
+    discontinued
+  end
 end
