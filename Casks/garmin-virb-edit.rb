@@ -6,7 +6,7 @@ cask 'garmin-virb-edit' do
   name 'Garmin VIRB Edit'
   homepage 'https://buy.garmin.com/en-US/US/p/573412'
 
-  depends_on macos: '>= 10.10'
+  depends_on macos: '>= :yosemite'
 
   pkg 'Install VIRB Edit.pkg'
 

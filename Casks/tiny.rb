@@ -7,7 +7,7 @@ cask 'tiny' do
   name 'Tiny'
   homepage 'https://www.delightfuldev.com/tiny/'
 
-  depends_on macos: '>= 10.10'
+  depends_on macos: '>= :yosemite'
 
   app 'Tiny.app'
 end
