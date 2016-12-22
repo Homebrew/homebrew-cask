@@ -4,7 +4,7 @@ cask 'championify' do
 
   url "https://github.com/dustinblackman/Championify/releases/download/#{version}/Championify-OSX-#{version}.dmg"
   appcast 'https://github.com/dustinblackman/Championify/releases.atom',
-          checkpoint: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+          checkpoint: '8660f3a5723d3b345dd7efbfdf3e4924c5c37294d89124bbad80c0fb8f760660'
   name 'Championify'
   homepage 'https://github.com/dustinblackman/Championify/'
 
