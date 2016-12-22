@@ -4,7 +4,7 @@ cask 'dhs' do
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/DHS_#{version}.zip"
-  name 'Dylib Hijeck Scanner'
+  name 'Dylib Hijack Scanner'
   homepage 'https://objective-see.com/products/dhs.html'
 
   app 'DHS.app'
