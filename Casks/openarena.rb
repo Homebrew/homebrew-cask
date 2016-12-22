@@ -2,6 +2,7 @@ cask 'openarena' do
   version '0.8.8 r28'
   sha256 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
 
+  # download.tuxfamily.org/openarena was verified as official when first introduced to the cask
   url "http://download.tuxfamily.org/openarena/rel/#{version.major_minor_patch.no_dots}/openarena-#{version.major_minor_patch}.zip"
   name 'OpenArena'
   homepage 'http://openarena.ws/smfnews.php'
