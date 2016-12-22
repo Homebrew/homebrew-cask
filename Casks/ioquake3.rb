@@ -12,6 +12,6 @@ cask 'ioquake3' do
   caveats <<-EOS.undent
     To complete the installation of #{token}, you will have to copy the file
     'pak0.pk3' from your Quake 3 Arena installation support directory into
-    ~/Applications/ioquake3/baseq3/.
+    /Applications/ioquake3/baseq3/ or ~/Library/Application Support/Quake3/baseq3/.
   EOS
 end
