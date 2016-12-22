@@ -6,7 +6,7 @@ cask 'whatsyoursign' do
   url "https://bitbucket.org/objective-see/deploy/downloads/WhatsYourSign_#{version}.zip"
   appcast 'https://objective-see.com/products.json',
           checkpoint: 'b2004932186e0eb176a9ac01fe499de292d502d7a17559e900822f9cdbfa74d6'
-  name 'What\'s YourSign?'
+  name 'What\'s Your Sign?'
   homepage 'https://objective-see.com/products/whatsyoursign.html'
 
   installer manual: 'WhatsYourSign_Installer.app'
