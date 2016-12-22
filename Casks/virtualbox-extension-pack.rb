@@ -1,10 +1,10 @@
 cask 'virtualbox-extension-pack' do
   if MacOS.version <= :lion
-    version '4.3.38-106717'
-    sha256 'ba739b8602de9eb9d9da63c730a2329dc72b454073a2525c46fa00df2b5dba1c'
+    version '4.3.40-110317a'
+    sha256 '829812f9a94204cd206968a8b8c3ca14f719f9cc8e3e1c6825b68c2c3da13033'
   elsif MacOS.version == :mountain_lion
-    version '5.0.26-108824'
-    sha256 '2f2302c7ba3d00a1258fe8e7767a6eb08dccdc3c31f6e3eeb74063c2c268b104'
+    version '5.0.30-112061'
+    sha256 'f0880b7948bdc185d7e7be0fc98b551296ed9578f21e38d01b43771323a71a3d'
   else
     version '5.1.12-112440'
     sha256 '03111380afb06122a494595e966dffe3e2779840e8698e27e80f87342b291286'
