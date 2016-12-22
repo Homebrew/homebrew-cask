@@ -4,7 +4,7 @@ cask 'mysql-connector-python' do
 
   url "http://dev.mysql.com/get/Downloads/Connector-Python/mysql-connector-python-#{version}-macos10.12.dmg"
   name 'MySQL Connector for Python'
-  homepage 'https://dev.mysql.com/downloads/utilities/'
+  homepage 'https://dev.mysql.com/downloads/connector/python/'
 
   depends_on macos: '>= :yosemite'
 
