@@ -4,8 +4,6 @@ cask 'oversight' do
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/OverSight_#{version}.zip"
-  appcast 'https://objective-see.com/products.json',
-          checkpoint: 'b2004932186e0eb176a9ac01fe499de292d502d7a17559e900822f9cdbfa74d6'
   appcast 'https://objective-see.com/products/versions/oversight.json',
           checkpoint: 'da8cba3af8fa83a106e23be6299fd286fe8377931906270bfdd885a609a1ae8b'
   name 'Oversight'
