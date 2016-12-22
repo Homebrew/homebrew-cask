@@ -11,9 +11,13 @@ cask 'whatsyoursign' do
 
   installer manual: 'WhatsYourSign_Installer.app'
 
-  uninstall_postflight do
-    system_command '/usr/bin/pluginkit', args: ['-r', '-i', 'com.objective-see.WhatsYourSignExt.FinderSync']
+  uninstall_preflight do
+    system_command '/usr/bin/pluginkit', args: ['-r', '/Applications/WhatsYourSign.app/Contents/PlugIns/WhatsYourSign.appex']
   end
 
-  uninstall delete: '/Applications/WhatsYourSign.app'
+  uninstall delete: [
+                      '/Applications/WhatsYourSign.app',
+                      '~/Library/Application Scripts/com.objective-see.WhatsYourSignExt.FinderSync',
+                      '~/Library/Containers/com.objective-see.WhatsYourSignExt.FinderSync',
+                    ]
 end
