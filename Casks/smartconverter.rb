@@ -1,6 +1,6 @@
 cask 'smartconverter' do
-  version '2.2.3'
-  sha256 'a03f5e070547182e0d7e70f323962ec08efa2347b2f65664c9b1369e4feb067b'
+  version '2.3.0'
+  sha256 'ab070ad520275eb92eaf1fd8c6bc7eec63d566e49fa077c880f667d7024464e5'
 
   url "http://download.shedworx.com/smartconverter/SmartConverter-#{version}.dmg"
   name 'SmartConverter'
