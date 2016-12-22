@@ -521,6 +521,11 @@ cask 'libreoffice-language-pack' do
     've'
   end
 
+  language 'vec' do
+    sha256 '7179b634698ed90e5442663ba58018656ec1335ff80576aef94e2561f628b687'
+    'vec'
+  end
+
   language 'vi' do
     sha256 '985fdceff434b31650a4a836121b8da6d2496018b6cc8f035e46ff7ec2d90476'
     'vi'
