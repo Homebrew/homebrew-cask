@@ -1,10 +1,10 @@
 cask 'podcastmenu' do
-  version '1.2'
-  sha256 '8063236dd66ff1b7915a50ac09a4581c0d4819eeaac76aa7a6023c52f0b7a8ec'
+  version '1.2.1'
+  sha256 'bc4685be0b4501a7f31dd88755713812f96017a9fa01f28d59b3d29dfb38dbf1'
 
   url "https://github.com/insidegui/PodcastMenu/raw/master/Releases/PodcastMenu_v#{version}.zip"
   appcast 'https://github.com/insidegui/PodcastMenu/raw/master/Releases/appcast.xml',
-          checkpoint: 'a9939edfc61c1f0a49296791ba5dde2ac685c3e668ba8195e3b0ea0fe9cd5e28'
+          checkpoint: '5517ad23d0ef1676e42820a8e6bd576b5b2c66d38947e747280edea6d5ec85f5'
   name 'PodcastMenu'
   homepage 'https://github.com/insidegui/PodcastMenu'
 
