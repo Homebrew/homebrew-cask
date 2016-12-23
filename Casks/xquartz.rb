@@ -22,9 +22,17 @@ cask 'xquartz' do
   end
 
   uninstall quit:      'org.macosforge.xquartz.X11',
-            launchctl: 'org.macosforge.xquartz.startx',
+            launchctl: [
+                         'org.macosforge.xquartz.startx',
+                         'org.macosforge.xquartz.privileged_startx',
+                       ],
             pkgutil:   'org.macosforge.xquartz.pkg',
-            delete:    '/opt/X11/'
+            delete:    [
+                         '/opt/X11/',
+                         '/private/etc/manpaths.d/40-XQuartz',
+                         '/private/etc/paths.d/40-XQuartz',
+                         "#{appdir}/XQuartz.app",
+                       ]
 
   zap       delete: [
                       '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.macosforge.xquartz.x11.sfl',

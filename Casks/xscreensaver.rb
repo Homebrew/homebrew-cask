@@ -1,8 +1,10 @@
 cask 'xscreensaver' do
-  version '5.35'
-  sha256 '6ad392df82005b7a6915ebe18eb340e2fc8e1e1dc7d8e0e8a2822be1377f23b7'
+  version '5.36'
+  sha256 '3b1936ef9907bb819444dc01d27f4c27d555dd80e1f17a5957eb730742ed3d5d'
 
   url "https://www.jwz.org/xscreensaver/xscreensaver-#{version}.dmg"
+  appcast 'https://www.jwz.org/xscreensaver/changelog.html',
+          checkpoint: '3e458d1f83dfa71b43797aa040d41ab5571d6eabdffa3f042a0e67ab5a3c38a6'
   name 'XScreenSaver'
   homepage 'https://www.jwz.org/xscreensaver/'
 
@@ -47,7 +49,9 @@ cask 'xscreensaver' do
   screen_saver 'Screen Savers/Crystal.saver'
   screen_saver 'Screen Savers/Cube21.saver'
   screen_saver 'Screen Savers/Cubenetic.saver'
+  screen_saver 'Screen Savers/CubeStack.saver'
   screen_saver 'Screen Savers/CubeStorm.saver'
+  screen_saver 'Screen Savers/CubeTwist.saver'
   screen_saver 'Screen Savers/CubicGrid.saver'
   screen_saver 'Screen Savers/CWaves.saver'
   screen_saver 'Screen Savers/Cynosure.saver'
@@ -57,6 +61,7 @@ cask 'xscreensaver' do
   screen_saver 'Screen Savers/Deco.saver'
   screen_saver 'Screen Savers/Deluxe.saver'
   screen_saver 'Screen Savers/Demon.saver'
+  screen_saver 'Screen Savers/Discoball.saver'
   screen_saver 'Screen Savers/Discrete.saver'
   screen_saver 'Screen Savers/Distort.saver'
   screen_saver 'Screen Savers/DNAlogo.saver'
@@ -104,6 +109,7 @@ cask 'xscreensaver' do
   screen_saver 'Screen Savers/Halo.saver'
   screen_saver 'Screen Savers/Helix.saver'
   screen_saver 'Screen Savers/Hexadrop.saver'
+  screen_saver 'Screen Savers/Hexstrut.saver'
   screen_saver 'Screen Savers/Hilbert.saver'
   screen_saver 'Screen Savers/Hopalong.saver'
   screen_saver 'Screen Savers/Hydrostat.saver'
@@ -187,6 +193,7 @@ cask 'xscreensaver' do
   screen_saver 'Screen Savers/SpeedMine.saver'
   screen_saver 'Screen Savers/Spheremonics.saver'
   screen_saver 'Screen Savers/SplitFlap.saver'
+  screen_saver 'Screen Savers/Splodesic.saver'
   screen_saver 'Screen Savers/Spotlight.saver'
   screen_saver 'Screen Savers/Sproingies.saver'
   screen_saver 'Screen Savers/Squiral.saver'

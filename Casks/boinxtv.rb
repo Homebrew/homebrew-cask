@@ -7,7 +7,6 @@ cask 'boinxtv' do
   homepage 'https://boinx.com/boinxtv/'
 
   depends_on macos: '>= :lion'
-  depends_on arch: :intel
 
   app 'BoinxTV.app'
 end

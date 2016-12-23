@@ -4,7 +4,7 @@ cask 'murus' do
 
   url "http://www.murusfirewall.com/downloads/murus-#{version}.zip"
   name 'Murus Firewall'
-  homepage 'http://www.murusfirewall.com/'
+  homepage 'https://www.murusfirewall.com/'
 
   depends_on macos: '>= :mavericks'
 

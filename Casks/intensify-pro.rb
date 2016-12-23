@@ -7,7 +7,7 @@ cask 'intensify-pro' do
   appcast 'http://cdn.macphun.com/updates/IntensifyPro/appcast.xml',
           checkpoint: 'dd6bc7a7e2b41782984ed47a7e4edc7af2898990bbdd5b9c61f85f6d63523ab0'
   name 'Intensify Pro'
-  homepage 'https://macphun.com/intensify'
+  homepage 'http://macphun.com/intensify'
 
   app 'Intensify CK.app'
 end

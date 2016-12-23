@@ -1,10 +1,10 @@
 cask 'putio-adder' do
-  version '3.0.1'
-  sha256 '3af8635623f34a026fed3b2462cbf2a7c5d1feaeb069f9c69bd895be57c9005a'
+  version '3.0.2'
+  sha256 '592449ab9fb38b9800b4f36afb0b3622b536ab75b6efadf7a40be4a15f08426a'
 
   url "https://github.com/nicoSWD/put.io-adder/releases/download/v#{version}/put.io-adder-v#{version}.zip"
   appcast 'https://github.com/nicoSWD/put.io-adder/releases.atom',
-          checkpoint: '0950d87d6b7fd15239b8dd6de551677cf66d0cb91c215c93afe572004cf93c67'
+          checkpoint: 'dcf34cf9fcbe706e3a04e7b8a5ecd13656943d8d0cffa0927d3cdf58d55dfe66'
   name 'Put.IO Adder'
   homepage 'https://github.com/nicoSWD/put.io-adder'
 

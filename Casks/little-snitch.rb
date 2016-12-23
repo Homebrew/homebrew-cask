@@ -1,10 +1,10 @@
 cask 'little-snitch' do
-  version '3.7'
-  sha256 '5c44d853dc4178fb227abd3e8eee19ef1bf0d576f49b5b6a9a7eddf6ae7ea951'
+  version '3.7.1'
+  sha256 'e6332ee70385f459d9803b0a582d5344bb9dab28bcd56e247ae69866cc321802'
 
   url "https://www.obdev.at/downloads/littlesnitch/LittleSnitch-#{version}.dmg"
   appcast 'https://www.obdev.at/products/littlesnitch/releasenotes.html',
-          checkpoint: 'eec25e526fc37ad3c828973eacfff88e7835a3b05dbc4f4332f62d7330072a83'
+          checkpoint: '1f2ffae32b8f4cab5618c32d1f4d29f6b48554890398dce0467957d3c288936f'
   name 'Little Snitch'
   homepage 'https://www.obdev.at/products/littlesnitch/index.html'
 

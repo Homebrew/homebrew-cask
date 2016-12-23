@@ -9,7 +9,5 @@ cask 'art-of-illusion' do
   name 'Art of Illusion'
   homepage 'http://www.artofillusion.org/'
 
-  depends_on macos: '>= :snow_leopard'
-
   app 'Art of Illusion/Art of Illusion.app'
 end

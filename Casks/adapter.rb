@@ -8,7 +8,5 @@ cask 'adapter' do
   name 'Adapter'
   homepage 'https://www.macroplant.com/adapter/'
 
-  depends_on macos: '>= :snow_leopard'
-
   app 'Adapter.app'
 end

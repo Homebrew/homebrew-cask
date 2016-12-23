@@ -6,8 +6,6 @@ cask 'folding-at-home' do
   name 'Folding@home'
   homepage 'https://folding.stanford.edu/'
 
-  depends_on macos: '>= 10.6'
-
   pkg "fah-installer_#{version}_x86_64.pkg"
 
   uninstall pkgutil:   'edu.stanford.folding.*',

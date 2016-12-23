@@ -1,11 +1,11 @@
 cask 'spacemonkey' do
-  version '0.7.24,138'
-  sha256 'aa36b50a076ade356c7c065721d4e9b0a529a785cac08d70cef73dd9612c6c6f'
+  version '0.7.26,140'
+  sha256 '2fce0a2c82baf3df20a1e92accd3bdb44e745a2b0957afac9903ada2ce326691'
 
   # hockeyapp.net/api/2/apps/aa33b6780fdfc71247b2995fa47b5d7c was verified as official when first introduced to the cask
   url "https://rink.hockeyapp.net/api/2/apps/aa33b6780fdfc71247b2995fa47b5d7c/app_versions/#{version.after_comma}?format=zip"
   appcast 'https://rink.hockeyapp.net/api/2/apps/aa33b6780fdfc71247b2995fa47b5d7c',
-          checkpoint: '432e79d7e5cd77de36a1e250e6474cdbeccdb0e45cbe81520d32bc6e4ba63a3c'
+          checkpoint: '51a258a879da03822958429db1756f299c55e8ce1ecf30936b71e6850ec2a6fa'
   name 'Space Monkey'
   homepage 'https://www.spacemonkey.com/'
 

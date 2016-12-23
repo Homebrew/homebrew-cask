@@ -7,7 +7,6 @@ cask 'papyrus' do
   homepage 'https://eclipse.org/papyrus/'
 
   depends_on macos: '>= :leopard'
-  depends_on arch: :x86_64
 
   app 'Papyrus.app'
 end

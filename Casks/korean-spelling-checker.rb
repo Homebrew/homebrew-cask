@@ -1,11 +1,11 @@
 cask 'korean-spelling-checker' do
-  version '1.6.0'
-  sha256 '03fba7c4562a419e14221f5589f27efdd49d595f84c2528e09fa23c204097c2f'
+  version '1.7.0'
+  sha256 'a26723814722ef3c381f822321ca9ba9ef3885dab6071a1675bf12a9c0ad2142'
 
   # github.com/miname/Korean-Spelling-Checker-Workflow was verified as official when first introduced to the cask
   url "https://github.com/miname/Korean-Spelling-Checker-Workflow/archive/#{version}.tar.gz"
   appcast 'https://github.com/miname/Korean-Spelling-Checker-Workflow/releases.atom',
-          checkpoint: '1f8d76c232adad42c13d25850e2341b8979c07c5b989deb8c0c1a253c7b2d36a'
+          checkpoint: '9c4a731a6084689385b3e57dc77ba4dd3b5ca2e969a4ad601c13bc27d8f450d4'
   name '한국어 맞춤법 검사기'
   homepage 'http://appletree.or.kr/google-chrome-extensions/'
 

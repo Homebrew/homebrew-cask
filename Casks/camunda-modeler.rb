@@ -1,6 +1,6 @@
 cask 'camunda-modeler' do
-  version '1.5.0'
-  sha256 'cbd86a03aa32d2b6cbd0e23e8b99f212ef7c44db5ef73589d9e58552e11e8978'
+  version '1.5.1'
+  sha256 'f6562e511acde034ff96f6bedb527479de8a35882a2fd0d388d471606d2ffc16'
 
   url "https://camunda.org/release/camunda-modeler/#{version}/camunda-modeler-#{version}-darwin-x64.tar.gz"
   name 'Camunda Modeler'
