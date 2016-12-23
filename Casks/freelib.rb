@@ -1,10 +1,10 @@
 cask 'freelib' do
-  version '5.0'
-  sha256 '08ff35674c56b813fb7394b50362b5b7907ebbdcf4de73bfac6ceffd4eea8d40'
+  version '5.0.1'
+  sha256 'be47c517eab531867ae9337ee9893b4ddbfd4768b0d6ace1b902d97793e44367'
 
   url "https://downloads.sourceforge.net/freelibdesign/#{version}/freeLib#{version}.dmg"
   appcast 'https://sourceforge.net/projects/freelibdesign/rss',
-          checkpoint: '4e5f7c0a1eed5d23ffb123b2932459172aeef85fdf467c0b8cf306da82677f0b'
+          checkpoint: 'abd0f80a5e7116102db928960a6eb500f84c555187d873300f375b81886137a7'
   name 'FreeLib'
   homepage 'http://freelibdesign.sourceforge.net/'
 
