@@ -20,7 +20,7 @@ cask 'git' do
   homepage 'https://sourceforge.net/projects/git-osx-installer/'
 
   uninstall_preflight do
-    system "/usr/bin/yes yes | #{staged_path}/uninstall.sh"
+    system '/usr/bin/yes yes | /usr/local/git/uninstall.sh'
   end
 
   uninstall pkgutil: "GitOSX.Installer.git#{version.no_dots}Universal.*pkg"
