@@ -1,6 +1,6 @@
 cask 'pflists' do
-  version '1.0.1'
-  sha256 '024cd972503df8b7b01602e092a9b900b6758b33ba040860fd46af3bb53f2856'
+  version '1.0.2'
+  sha256 '9fcc95409e095d601f351b46d5a94aeb922fa1fe40c7d663ae6f05640fa4ff6a'
 
   url "http://www.hanynet.com/pflists-#{version}.zip"
   name 'PFLists'
