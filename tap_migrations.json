@@ -34,7 +34,6 @@
   "redis": "homebrew/core",
   "rust": "homebrew/core",
   "serf": "homebrew/core",
-  "sickbeard": "homebrew/core",
   "srclib": "homebrew/core",
   "sshfs": "homebrew/fuse",
   "sslmate": "homebrew/core",
