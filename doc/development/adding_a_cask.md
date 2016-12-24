@@ -196,7 +196,7 @@ We maintain separate Taps for different types of binaries. Our nomenclature is:
 
 ### Stable Versions
 
-Stable versions live in the main repository at [caskroom/homebrew-cask](https://github.com/caskroom/homebrew-cask). They should run on the latest release of macOS or the previous point release (in 2015, for example, that meant El Capitan and Yosemite).
+Stable versions live in the main repository at [caskroom/homebrew-cask](https://github.com/caskroom/homebrew-cask). They should run on the latest release of macOS or the previous point release (which are Sierra and El Capitan as of late 2016).
 
 ### But There Is No Stable Version!
 
@@ -288,12 +288,6 @@ $ git push "$github_user" my-new-cask
 ```
 
 If you are using [GitHub two-factor authentication](https://help.github.com/articles/about-two-factor-authentication/) and set your remote repository as HTTPS you will need to set up a personal access token and use that instead of your password. Further information [here](https://help.github.com/articles/https-cloning-errors/#provide-access-token-if-2fa-enabled).
-
-### Squashing
-
-If your pull request has multiple commits which revise the same lines of code, or if you make some changes after comments from one of the maintainers, it is better to [squash](https://davidwalsh.name/squash-commits-git) those commits together into one logical unit.
-
-But you don’t always have to squash — it is fine for a pull request to contain multiple commits when there is a logical reason for the separation.
 
 ### Filing a Pull Request on GitHub
 

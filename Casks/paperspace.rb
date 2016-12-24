@@ -5,7 +5,7 @@ cask 'paperspace' do
   # s3-us-west-1.amazonaws.com/ps-receiver was verified as official when first introduced to the cask
   url 'https://s3-us-west-1.amazonaws.com/ps-receiver/darwin/Paperspace.dmg'
   name 'Paperspace'
-  homepage 'https://paperspace.io/'
+  homepage 'https://www.paperspace.com/'
 
   app 'Paperspace.app'
 end

@@ -31,7 +31,7 @@ cask 'totalspaces' do
   end
 
   name 'TotalSpaces'
-  homepage 'http://totalspaces.binaryage.com/'
+  homepage 'https://totalspaces.binaryage.com/'
 
   uninstall signal: [
                       ['INT', 'com.binaryage.totalspacescrashwatcher'],

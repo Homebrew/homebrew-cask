@@ -1,8 +1,11 @@
 cask 'gcc-arm-embedded' do
-  version '5_4-2016q3,20160926'
-  sha256 '5656cdec40f99d5c054a85bbc694276e1c4a1488cdacbbc448bc6acd3bbe070d'
+  version '6_2-2016q4,20161216'
+  sha256 'cb52433610d0084ee85abcd1ac4879303acba0b6a4ecfe5a5113c09f0ee265f0'
 
-  url "https://launchpad.net/gcc-arm-embedded/5.0/5-2016-q3-update/+download/gcc-arm-none-eabi-#{version.before_comma}-#{version.after_comma}-mac.tar.bz2"
+  # armkeil.blob.core.windows.net/developer/Files/downloads/gnu-rm was verified as official when first introduced to the cask
+  url "https://armkeil.blob.core.windows.net/developer/Files/downloads/gnu-rm/#{version.before_comma.sub(%r{_\d+}, '')}/gcc-arm-none-eabi-#{version.before_comma}-#{version.after_comma}-mac.tar.bz2"
+  appcast 'http://feeds.launchpad.net/gcc-arm-embedded/announcements.atom',
+          checkpoint: '5cc2b8a304f5810461b7f77040f9453919c12c9ef59945d6927dffc00fa2baed'
   name 'GCC ARM Embedded'
   homepage 'https://launchpad.net/gcc-arm-embedded'
 

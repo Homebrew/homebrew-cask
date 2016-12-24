@@ -28,10 +28,4 @@ cask 'maintenance' do
                     ]
 
   app 'Maintenance.app'
-
-  caveats do
-    if [:leopard, :tiger].include?(MacOS.version.to_sym)
-      puts 'Maintenance only runs from an Administrator account on this version of OS X.'
-    end
-  end
 end

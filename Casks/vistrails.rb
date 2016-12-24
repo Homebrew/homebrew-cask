@@ -9,7 +9,5 @@ cask 'vistrails' do
   name 'VisTrails'
   homepage 'https://www.vistrails.org/index.php/Main_Page'
 
-  depends_on macos: '>= :snow_leopard'
-
   suite 'VisTrails'
 end

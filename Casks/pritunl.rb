@@ -1,11 +1,11 @@
 cask 'pritunl' do
-  version '1.0.1075.52'
-  sha256 'd26f68e3d4acd6f793c2067e9a32f0b3bbcb265fe50a4193ecf73caf54cebd39'
+  version '1.0.1187.7'
+  sha256 'c954e10d48d15bc308d8e4a523a3fe4d597e944fdcd4c88fe3c3ddd0c4fb4255'
 
   # github.com/pritunl/pritunl-client-electron was verified as official when first introduced to the cask
   url "https://github.com/pritunl/pritunl-client-electron/releases/download/#{version}/Pritunl.pkg.zip"
   appcast 'https://github.com/pritunl/pritunl-client-electron/releases.atom',
-          checkpoint: 'abbfafa4acb850251becef5d320fe89e58bf955ab111c73d10386afe93c37fc0'
+          checkpoint: '9881fb6bf246fa62f1c63c387682af226c2fcea4f348b04f02b0714dd83b311a'
   name 'Pritunl OpenVPN Client'
   homepage 'https://client.pritunl.com/'
 

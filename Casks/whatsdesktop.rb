@@ -1,10 +1,10 @@
 cask 'whatsdesktop' do
-  version '1.7.0'
-  sha256 '46b8d6dc33eecffb507ec9d9eaf2c6927e3f51370e2999945390f49d1d90db65'
+  version '1.8.0'
+  sha256 '9f68154a382dc4306b440a254662a3efd65b9e4bbd8cfbc76b625e70e9afcbc2'
 
-  url "https://github.com/mawie81/whatsdesktop/releases/download/#{version}/WhatsDesktop-osx-#{version}.zip"
+  url "https://github.com/mawie81/whatsdesktop/releases/download/#{version}/WhatsDesktop-#{version}.dmg"
   appcast 'https://github.com/mawie81/whatsdesktop/releases.atom',
-          checkpoint: '2a8b3bc900e72d9d95d0d50910ed1ad39d88a2cba0683c512dc2e41e9fe9989d'
+          checkpoint: '0758278df730ed99a5d76c51cca39d2f91abe345d615d09514b3d0504d40c22c'
   name 'WhatsDesktop'
   homepage 'https://github.com/mawie81/whatsdesktop'
 

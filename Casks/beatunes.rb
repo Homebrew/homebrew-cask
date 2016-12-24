@@ -7,7 +7,6 @@ cask 'beatunes' do
   homepage 'https://www.beatunes.com/'
 
   depends_on macos: '>= :lion'
-  depends_on arch: :x86_64
 
   app "beaTunes#{version.major}.app"
 end

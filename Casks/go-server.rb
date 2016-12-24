@@ -1,6 +1,6 @@
 cask 'go-server' do
-  version '16.10.0-4131'
-  sha256 '76e82efae5e6d14e3503384fbb9a2c70a6ada1d6fd6781d1c05de6c7fe349d1f'
+  version '16.12.0-4352'
+  sha256 'f0b7f7f401e1a11022978c908f02409c0deec9c1cd5d80a6ae334bd82a7749e9'
 
   url "https://download.go.cd/binaries/#{version}/osx/go-server-#{version}-osx.zip"
   name 'Go Server'

@@ -8,7 +8,6 @@ cask 'postbox' do
   homepage 'https://www.postbox-inc.com/'
 
   depends_on macos: '>= :mavericks'
-  depends_on arch: :x86_64
 
   app 'Postbox.app'
 

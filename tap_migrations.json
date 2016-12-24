@@ -1,5 +1,6 @@
 {
   "azure-cli": "homebrew/core",
+  "basex": "homebrew/core",
   "cocoapods": "homebrew/core",
   "consul": "homebrew/core",
   "consul-template": "homebrew/core",
@@ -14,6 +15,7 @@
   "go": "homebrew/core",
   "graphviz": "homebrew/core",
   "handbrakecli": "homebrew/core",
+  "helm": "homebrew/core",
   "hub": "homebrew/core",
   "hyper": "homebrew/core",
   "idris": "homebrew/core",

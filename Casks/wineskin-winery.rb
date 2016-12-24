@@ -9,8 +9,6 @@ cask 'wineskin-winery' do
   name 'Wineskin Winery'
   homepage 'http://wineskin.urgesoftware.com/tiki-index.php'
 
-  depends_on macos: '>= :snow_leopard'
-
   app 'Wineskin Winery.app'
 
   zap delete: [

@@ -6,7 +6,7 @@ cask 'yed' do
   name 'yWorks yEd'
   homepage 'https://www.yworks.com/products/yed'
 
-  depends_on macos: '>= 10.8'
+  depends_on macos: '>= :mountain_lion'
 
   app 'yEd.app'
 end

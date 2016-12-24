@@ -1,6 +1,6 @@
 cask 'bitscope-logic' do
-  version '1.2.DJ20B'
-  sha256 'e0093f292209f6ad306873911c3551bdafa201e09ed634c9080e3b58e9bf6196'
+  version '1.2.FC20C'
+  sha256 '9522c54851e88f4e69bc7b518fe0d760b790219cc29de001a510ebe2adedbc77'
 
   url "http://bitscope.com/download/files/bitscope-logic_#{version}.app.tgz"
   name 'BitScope Logic'

@@ -14,8 +14,6 @@ cask 'r-app' do
   name 'R'
   homepage 'https://www.r-project.org/'
 
-  depends_on macos: '>= :snow_leopard'
-
   uninstall pkgutil: [
                        'org.r-project.R.maverics.fw.pkg',
                        'org.r-project.R.maverics.GUI.pkg',

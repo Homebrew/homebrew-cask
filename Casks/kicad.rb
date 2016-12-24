@@ -1,6 +1,6 @@
 cask 'kicad' do
-  version '4.0.4'
-  sha256 '77c45d49d1d151d3ef86ac88578a0497612d250af134b6d339fc147e95cb48bf'
+  version '4.0.5'
+  sha256 'b9747534aa29074eeb383dd4b506cf76e977f5b222dd08022d856a48d6137049'
 
   url "http://downloads.kicad-pcb.org/osx/stable/kicad-#{version}.dmg"
   name 'KiCad'

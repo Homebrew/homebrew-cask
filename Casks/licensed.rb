@@ -4,7 +4,7 @@ cask 'licensed' do
 
   url 'http://amarsagoo.info/licensed/Licensed.dmg'
   name 'Licensed'
-  homepage 'http://amarsagoo.info/licensed/'
+  homepage 'https://amarsagoo.info/licensed/'
 
   app 'Licensed.app'
 end

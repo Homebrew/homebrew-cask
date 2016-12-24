@@ -1,13 +1,15 @@
 cask 'iueditor' do
-  version '1.1.1.6'
-  sha256 'f644d8e8a4f0aab420cf76ce724fb8e680e4f592de1bdad54399f938342fa641'
+  version '2.0.5.6'
+  sha256 'd4a4775c0c32b62645887d1afe9072cd04e9190731a7e2fcbf5e9be3212d2724'
 
-  # iueditor.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "https://iueditor.s3.amazonaws.com/Release/IUEditorV#{version}.zip"
+  url "http://cdn.iueditor.org/release/IUEditorV#{version}.pkg"
   name 'JDLab IUEditor'
   homepage 'http://www.iueditor.org/'
 
-  app 'IUEditor.app'
+  pkg "IUEditorV#{version}.pkg"
+
+  uninstall delete:  '/Applications/IUEditor.app',
+            pkgutil: 'org.jdlab.IUEditor'
 
   zap delete: [
                 '~/Library/Preferences/org.jdlab.IUEditor.LSSharedFileList.plist',
