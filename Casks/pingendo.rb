@@ -1,10 +1,10 @@
 cask 'pingendo' do
-  version :latest
-  sha256 :no_check
+  version '3'
+  sha256 :no_check # required as upstream package is updated in-place
 
-  url 'http://pingendo.com/Pingendo.dmg'
+  url "http://download.pingendo.com/v#{version}/Pingendo.dmg"
   name 'Pingendo'
   homepage 'https://pingendo.com/'
 
-  app 'Pingendo.app'
+  app "Pingendo#{version}.app"
 end
