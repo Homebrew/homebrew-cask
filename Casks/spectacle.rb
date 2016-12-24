@@ -16,14 +16,17 @@ cask 'spectacle' do
   homepage 'https://www.spectacleapp.com/'
 
   accessibility_access true
+  depends_on macos: '>= :lion'
 
   app 'Spectacle.app'
 
   uninstall login_item: 'Spectacle'
 
   zap delete: [
+                '~/Library/Application Support/Spectacle',
                 '~/Library/Caches/com.divisiblebyzero.Spectacle',
                 '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.divisiblebyzero.Spectacle',
+                '~/Library/Cookies/com.divisiblebyzero.Spectacle.binarycookies',
                 '~/Library/Preferences/com.divisiblebyzero.Spectacle.plist',
               ]
 end
