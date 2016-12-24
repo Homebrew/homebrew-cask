@@ -7,7 +7,7 @@ cask 'anvil' do
   appcast 'https://sparkler.herokuapp.com/apps/3/updates.xml',
           checkpoint: '49b49d5f4279c590477d7393207d26a2ca2c908527e12b0fd150a68790590b90'
   name 'Anvil'
-  homepage 'http://anvilformac.com/'
+  homepage 'https://anvilformac.com/'
 
   app "Anvil #{version.sub('_', ' ')}/Anvil.app"
 end
