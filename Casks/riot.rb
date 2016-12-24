@@ -4,7 +4,7 @@ cask 'riot' do
 
   url "https://riot.im/download/desktop/install/macos/Riot-#{version}.dmg"
   name 'Riot'
-  homepage 'https://riot.im'
+  homepage 'https://riot.im/'
 
   app 'Riot.app'
 end

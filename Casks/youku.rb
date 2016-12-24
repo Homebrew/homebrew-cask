@@ -10,7 +10,7 @@ cask 'youku' do
   url "http://desktop.youku.com/ugc/youkumac_#{version}.dmg"
   name 'Youku'
   name '优酷'
-  homepage 'http://pd.youku.com/pc'
+  homepage 'https://pd.youku.com/pc'
 
   app '优酷.app'
 

@@ -7,7 +7,7 @@ cask 'fenix' do
   appcast 'https://github.com/coreybutler/fenix/releases.atom',
           checkpoint: '57b8ed989956042b16b76844cb4c294c8b31e0aba29cd349ebb69d91588c2daa'
   name 'Fenix'
-  homepage 'http://fenixwebserver.com/'
+  homepage 'https://fenixwebserver.com/'
 
   app 'Fenix.app'
 end
