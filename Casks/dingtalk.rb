@@ -1,5 +1,5 @@
 cask 'dingtalk' do
-  version '3.2.0'
+  version '3.3.0'
   sha256 '059e2132c1e21ee9c4c6a15918819062f9f879b755be4f34102177d19da2e01d'
 
   # alicdn.com/dingtalk-desktop was verified as official when first introduced to the cask
