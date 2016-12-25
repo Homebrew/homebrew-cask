@@ -5,7 +5,6 @@ cask 'uncolored' do
   # github.com/n457/Uncolored was verified as official when first introduced to the cask
   url  "https://github.com/n457/Uncolored/releases/download/v.#{version}/Uncolored-v.#{version}-osx-x64.dmg"
   name '(Un)colored'
-  name 'Uncolored'
   homepage 'https://n457.github.io/Uncolored/'
 
   app 'Uncolored.app'
