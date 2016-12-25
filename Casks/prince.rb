@@ -9,7 +9,10 @@ cask 'prince' do
   installer script: "prince-#{version}-macosx/install.sh",
             sudo:   false
 
-  uninstall delete: ['/usr/local/bin/prince', '/usr/local/lib/prince']
+  uninstall delete: [
+                      '/usr/local/bin/prince',
+                      '/usr/local/lib/prince',
+                    ]
 
   caveats do
     files_in_usr_local
