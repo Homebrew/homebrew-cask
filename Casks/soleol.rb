@@ -6,5 +6,5 @@ cask 'soleol' do
   name 'SolEol'
   homepage 'http://eduo.info/apps/soleol'
 
-  app 'SolEol/SolEol.app'
+  app 'SolEol.app'
 end
