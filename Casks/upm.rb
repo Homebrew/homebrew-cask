@@ -1,6 +1,6 @@
 cask 'upm' do
-  version '1.13'
-  sha256 '8f4092603a2f96f38eb32e3101210c2e3771970097367a616769e85e3afdf060'
+  version '1.14'
+  sha256 'd9e46bdf6ccd5ff1d79290a51352bd23aa45ebdd6d7b832e254f88297446b06d'
 
   url "https://downloads.sourceforge.net/upm/upm-#{version}/upm-mac-#{version}.tar.gz"
   appcast 'https://sourceforge.net/projects/upm/rss',
