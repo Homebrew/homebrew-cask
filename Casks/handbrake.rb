@@ -9,6 +9,15 @@ cask 'handbrake' do
   homepage 'https://handbrake.fr/'
 
   auto_updates true
+  depends_on macos: '>= :lion'
 
   app 'HandBrake.app'
+
+  zap delete: [
+                '~/Library/Application Support/HandBrake',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/fr.handbrake.handbrake.sfl',
+                '~/Library/Caches/fr.handbrake.HandBrake',
+                '~/Library/Preferences/fr.handbrake.HandBrake.plist',
+                '~/Library/Saved Application State/fr.handbrake.HandBrake.savedState',
+              ]
 end
