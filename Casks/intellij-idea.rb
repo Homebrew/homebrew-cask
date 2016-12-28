@@ -15,5 +15,7 @@ cask 'intellij-idea' do
                 "~/Library/Logs/IntelliJIdea#{version.major_minor}",
                 "~/Library/Application Support/IntelliJIdea#{version.major_minor}",
                 "~/Library/Preferences/IntelliJIdea#{version.major_minor}",
+                '~/Library/Preferences/com.jetbrains.intellij.plist',
+                '~/Library/Saved Application State/com.jetbrains.intellij.savedState',
               ]
 end
