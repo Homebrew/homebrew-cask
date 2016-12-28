@@ -1,11 +1,11 @@
 cask 'kaomoji' do
-  version '1.9'
-  sha256 '04f7e6dc47b469eb90a74d5c569959f2218cc8f3b354edf85117b9f52574b071'
+  version '1.9.13'
+  sha256 'efb7457d3f41bd95c58668ed15e7553f67fc1d96ab2bc2680e334bcfd838bd3c'
 
   # kaomojiformac.github.io was verified as official when first introduced to the cask
   url 'https://kaomojiformac.github.io/download/Kaomoji.zip'
   appcast 'https://kaomojiformac.github.io/download/kaomojiupdate.xml',
-          checkpoint: 'c80344948d450636c79b58d95d7397f42cdb337e0130b5b9f85f5038f4505af9'
+          checkpoint: '0a5b54f892c7389dfead42f4941816dc028b909599d6ba4306137c69f9bdd1a8'
   name 'Kaomoji'
   homepage 'http://www.kaomojiapp.com/'
 
