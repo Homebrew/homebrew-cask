@@ -5,7 +5,7 @@ cask 'flashlight' do
   # githubusercontent.com/w0lfschild/app_updates/master/Flashlight was verified as official when first introduced to the cask
   url "https://raw.githubusercontent.com/w0lfschild/app_updates/master/Flashlight/Flashlight_#{version}.zip"
   appcast 'https://raw.githubusercontent.com/w0lfschild/app_updates/master/Flashlight/appcast.xml',
-          checkpoint: '9f610164e2661128457a0386d2e8ac66d28f041aa6dab449a0c998a2d8495309'
+          checkpoint: 'd81c3766258fcb1f424cb93ae3ceb5938d157aa3c4b90bf88ab9304c92aaf794'
   name 'Flashlight'
   homepage 'https://github.com/w0lfschild/Flashlight'
 
