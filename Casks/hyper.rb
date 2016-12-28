@@ -13,7 +13,7 @@ cask 'hyper' do
 
   zap delete: [
                 '~/.hyper.js',
-                '~/.hyper_modules',
+                '~/.hyper_plugins',
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.zeit.hyper.sfl',
                 '~/Library/Application Support/Hyper',
                 '~/Library/Caches/co.zeit.hyper',
