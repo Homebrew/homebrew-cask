@@ -6,7 +6,7 @@ cask 'airtame' do
   name 'Airtame'
   homepage 'https://airtame.com/'
 
-  auto_updates 'True'
+  auto_updates true
 
   app 'Airtame.app'
 end
