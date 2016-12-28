@@ -1,6 +1,6 @@
 cask 'xamarin-mdk' do
-  version '4.6.2.7'
-  sha256 'e31963607d9eab70e5e0cece21773cc4be30484159f0b47b661b44b9d821ffd3'
+  version '4.6.2.16'
+  sha256 '466866fbf633e8853683543dd906b9773989bf5bb28366522d8309e3dde45e3e'
 
   url "https://dl.xamarin.com/MonoFrameworkMDK/Macx86/MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
   appcast 'https://static.xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
