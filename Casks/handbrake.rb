@@ -1,10 +1,10 @@
 cask 'handbrake' do
-  version '1.0.0'
-  sha256 'be51aa13eed29d6426e87f0111c0de2bd408214af4ba1b5d45c910ae1c626a52'
+  version '1.0.1'
+  sha256 '27f936ef028c9d20ee5da2b23c7352968c98226274ca43f3bc1571cf71820673'
 
   url "http://download.handbrake.fr/handbrake/releases/#{version}/HandBrake-#{version}.dmg"
   appcast 'https://github.com/HandBrake/HandBrake/releases.atom',
-          checkpoint: '6d23bce7181a5d1dc6e7145bab14f3e85abfa55a941005c68bbbef25c95ba05c'
+          checkpoint: '2814707b0478aa73d49711427f47d237fb5e36d10a5a919044e6ce72a81b82c8'
   name 'HandBrake'
   homepage 'https://handbrake.fr/'
 
