@@ -9,5 +9,6 @@ cask 'logitech-myharmony' do
   pkg 'MyHarmonySetup.pkg'
 
   uninstall quit:    'org.logitech.MyHarmony',
-            pkgutil: 'MyHarmony.pkg'
+            pkgutil: 'MyHarmony.pkg',
+            rmdir:   '/Applications/MyHarmony.app'
 end
