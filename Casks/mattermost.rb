@@ -7,7 +7,7 @@ cask 'mattermost' do
   appcast 'https://github.com/mattermost/desktop/releases.atom',
           checkpoint: '9e1033d791d7bcb6de41b302229fb8c867aa527700323c988e24acc594fa89d1'
   name 'Mattermost'
-  homepage 'https://about.mattermost.org/'
+  homepage 'https://about.mattermost.com/'
 
   app 'Mattermost.app'
 end
