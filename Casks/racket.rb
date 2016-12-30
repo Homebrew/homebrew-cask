@@ -2,7 +2,8 @@ cask 'racket' do
   version '6.7'
   sha256 'abd6d9da0b09c3dc9d06e5a48ebb5e567f57ffa1584f4f262f9e6ecca9d8108a'
 
-  url "https://mirror.racket-lang.org/releases/#{version}/installers/racket-#{version}-x86_64-macosx.dmg"
+  # cs.utah.edu/plt/installers was verified as official when first introduced to the cask
+  url "https://www.cs.utah.edu/plt/installers/#{version}/racket-#{version}-x86_64-macosx.dmg"
   name 'Racket'
   homepage 'https://racket-lang.org/'
 
