@@ -6,6 +6,8 @@ cask 'airvpn' do
   name 'Air VPN'
   homepage 'https://airvpn.org/macosx/'
 
+  container type: :pkg
+
   pkg 'airvpn_osx_x64_installer.pkg'
   binary '/Applications/AirVPN.app/Contents/MacOS/AirVPN'
 
