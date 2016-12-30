@@ -1,6 +1,6 @@
 cask 'wesnoth' do
-  version '1.13.6'
-  sha256 'eb5c76cf7cd83a582bdef19d6a7c8b165eb69b4024ceab5ea1987b10753a15e8'
+  version '1.12.6'
+  sha256 'c94fe7880b1ed0f52e31ad570d3f082412ffbeb9d7ddadf0c64d501dfc1f0589'
 
   # sourceforge.net/wesnoth was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/wesnoth/Wesnoth_#{version}.dmg"
