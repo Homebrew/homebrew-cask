@@ -1,6 +1,6 @@
 cask 'tk-suite-client' do
-  version '4.4.34'
-  sha256 '60f0011b66f958a80295bf37011b166976967a1bde149ee278fa94b61172fb83'
+  version '4.4.38'
+  sha256 'e5be01717e876988aaac7f236f39de7746e4b1b2c08fd6ab4587f271f66ebb51'
 
   url "ftp://ftp.agfeo.de/pub/software/TK-Suite-Client_intel32_agfeo_#{version}.dmg"
   name 'TK-Suite Client'
