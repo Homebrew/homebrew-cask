@@ -5,7 +5,7 @@ cask 'poi' do
   # github.com/poooi/poi was verified as official when first introduced to the cask
   url "https://github.com/poooi/poi/releases/download/v#{version}/poi-#{version}-macos-x64.dmg"
   appcast 'https://github.com/poooi/poi/releases.atom',
-          checkpoint: 'c4e14892affb593a9b76b68307a6fff9bd9a1fbe76f896c293313ee3929a71a6'
+          checkpoint: 'a7cfdeecffb231551946cdb08d50db8a84610d10321c81b3218c829cb90625fb'
   name 'poi'
   homepage 'https://poi.io/'
 
