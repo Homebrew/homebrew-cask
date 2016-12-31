@@ -4,7 +4,7 @@ cask 'bitdefender' do
 
   url 'http://download.bitdefender.com/mac/antivirus/en/bitdefender_antivirus_for_mac.dmg'
   name 'Bitdefender Virus Scanner'
-  homepage 'http://www.bitdefender.com/solutions/virus-scanner-for-mac.html'
+  homepage 'http://www.bitdefender.com/'
 
   pkg 'Bitdefender Installer.pkg'
 
