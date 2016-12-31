@@ -9,7 +9,8 @@ cask 'ezeep' do
   installer manual: 'ezeep Installer.app'
 
   uninstall script: {
-                      executable: "#{staged_path}/ezeep Installer.app/Contents/Resources/uninstall.sh", args: ['production'],
-                      sudo: true,
+                      executable: "#{staged_path}/ezeep Installer.app/Contents/Resources/uninstall.sh",
+                      args:       ['production'],
+                      sudo:       true
                     }
 end
