@@ -12,7 +12,7 @@ cask 'youku' do
   name '优酷'
   homepage 'https://pd.youku.com/pc'
 
-  depends_on mac: '>= :mountain_lion'
+  depends_on macos: '>= :mountain_lion'
 
   app '优酷.app'
 
