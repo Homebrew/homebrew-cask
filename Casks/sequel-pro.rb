@@ -5,7 +5,7 @@ cask 'sequel-pro' do
   # github.com/sequelpro/sequelpro was verified as official when first introduced to the cask
   url "https://github.com/sequelpro/sequelpro/releases/download/release-#{version}/sequel-pro-#{version}.dmg"
   appcast 'https://github.com/sequelpro/sequelpro/releases.atom',
-          checkpoint: 'dab1d8d845c8ced586958bc4ded12de724c9ec3013313ff3c2a4babc7cdd74fb'
+          checkpoint: '47c9e6a368cfced1f05cfe8d4052fa582c9071b2bfe16c42d2677066f6d7ea10'
   name 'Sequel Pro'
   homepage 'https://www.sequelpro.com/'
 
