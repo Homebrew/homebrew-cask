@@ -1,6 +1,6 @@
 cask 'poi' do
-  version '7.2.1'
-  sha256 '4dffcb2790d22c2769f60f8615eff9421bc44320ed759ddd2458c46f6c716466'
+  version '7.3.0'
+  sha256 '10a0150600c9bb95021c0e198057d6764bed796fc5b894c9ee4d4b0752fff6ab'
 
   # github.com/poooi/poi was verified as official when first introduced to the cask
   url "https://github.com/poooi/poi/releases/download/v#{version}/poi-#{version}-macos-x64.dmg"
