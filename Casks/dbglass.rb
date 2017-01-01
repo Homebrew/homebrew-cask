@@ -9,7 +9,7 @@ cask 'dbglass' do
   name 'DBGlass'
   homepage 'http://dbglass.web-pal.com'
 
-  app 'DBGlass-darwin-x64/DBGlass.app', target: 'DBGlass.app'
+  app 'DBGlass-darwin-x64/DBGlass.app'
 
   uninstall quit: 'DBGlass'
 end
