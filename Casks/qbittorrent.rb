@@ -7,7 +7,7 @@ cask 'qbittorrent' do
   appcast 'https://sourceforge.net/projects/qbittorrent/rss?path=/qbittorrent-mac',
           checkpoint: '80ba15210f3eb226e6f01848dd69298df7f42e7ee7dd849dfc2a2dc576dbb3e1'
   name 'qBittorrent'
-  homepage 'http://www.qbittorrent.org/'
+  homepage 'https://www.qbittorrent.org/'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app 'qbittorrent.app', target: 'qBittorrent.app'

@@ -4,7 +4,7 @@ cask 'prince' do
 
   url "https://www.princexml.com/download/prince-#{version}-macosx.tar.gz"
   name 'Prince'
-  homepage 'https://www.princexml.com'
+  homepage 'https://www.princexml.com/'
 
   installer script: "prince-#{version}-macosx/install.sh",
             sudo:   false
