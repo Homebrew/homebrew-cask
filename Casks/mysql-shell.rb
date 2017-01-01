@@ -4,7 +4,7 @@ cask 'mysql-shell' do
 
   url "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-#{version}-osx10.11-x86-64bit.dmg"
   name 'MySQL Shell'
-  homepage 'http://dev.mysql.com/downloads/shell/'
+  homepage 'https://dev.mysql.com/downloads/shell/'
 
   pkg "mysql-shell-#{version}-osx10.11-x86-64bit.pkg"
 
