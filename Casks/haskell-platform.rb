@@ -8,6 +8,9 @@ cask 'haskell-platform' do
 
   pkg "Haskell Platform #{version} Full 64bit-signed-a.pkg"
 
-  uninstall script:  { executable: '/Library/Haskell/bin/uninstall-hs', args: %w[all --remove] },
+  uninstall script:  {
+                       executable: '/Library/Haskell/bin/uninstall-hs',
+                       args:       %w[all --remove],
+                     },
             pkgutil: 'org.haskell.HaskellPlatform.*'
 end
