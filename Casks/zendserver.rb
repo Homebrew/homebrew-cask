@@ -10,7 +10,7 @@ cask 'zendserver' do
 
   uninstall script:  {
                        executable: '/usr/local/zend/bin/uninstall.sh',
-                       args: ['--automatic'],
+                       args:       ['--automatic'],
                      },
             pkgutil: 'zenith.pkg.ZendServer'
 
