@@ -1,10 +1,10 @@
 cask 'karabiner-elements' do
-  version '0.90.70'
-  sha256 '87f8977e39a6ad71d7ac11811581ac0fc99e11fb1ddc5e42430fb2c1aab0cf70'
+  version '0.90.72'
+  sha256 'eb669d0f230dda8620ea95f75a27da83557a6be6432a17db42380151a929bd73'
 
   url "https://pqrs.org/osx/karabiner/files/Karabiner-Elements-#{version}.dmg"
   appcast 'https://pqrs.org/osx/karabiner/files/karabiner-elements-appcast.xml',
-          checkpoint: 'eb6092dfe5464f8681b3df44fac8f645db4845b226fa3df6228f86ea0b3e2472'
+          checkpoint: '9e2e8acbe4294dcead4d30f847610e7ea6a5798694cbd73d1059daa962a9a2bf'
   name 'Karabiner Elements'
   homepage 'https://pqrs.org/osx/karabiner/'
 
@@ -22,6 +22,7 @@ cask 'karabiner-elements' do
   zap       delete: [
                       '~/Library/Application Support/Karabiner-Elements',
                       '~/.karabiner.d',
+                      '~/.config/karabiner',
                       '~/Library/Preferences/org.pqrs.Karabiner-Elements-Updater.plist',
                       '~/Library/Caches/org.pqrs.Karabiner-Elements-Updater',
                     ]
