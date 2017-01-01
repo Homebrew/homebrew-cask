@@ -10,6 +10,4 @@ cask 'dbglass' do
   homepage 'http://dbglass.web-pal.com'
 
   app 'DBGlass-darwin-x64/DBGlass.app'
-
-  uninstall quit: 'DBGlass'
 end
