@@ -11,7 +11,7 @@ cask 'exnihilo' do
 
   app 'ExNihilo.app'
 
-  uninstall  login_item: 'ExNihilo'
+  uninstall login_item: 'ExNihilo'
 
   zap        delete: [
                        '~/Library/Caches/com.soloinc.ExNihilo',
