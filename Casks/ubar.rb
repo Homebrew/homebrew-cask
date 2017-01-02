@@ -1,10 +1,10 @@
 cask 'ubar' do
-  version '3.2.4'
-  sha256 '185557b629c61cbb8ffa3f8111471de1540e4803a359e099246ed31460192680'
+  version '3.2.5'
+  sha256 '25d42b6770e2ae2debb4d570c33b5e661b71b4c7f24bda61016968cd66fe3638'
 
   url "http://www.brawersoftware.com/downloads/ubar/ubar#{version.no_dots}.zip"
   appcast "https://brawersoftware.com/appcasts/feeds/ubar/ubar#{version.major}.xml",
-          checkpoint: '1d54e5b404c005064cccef0caee02ce5e336d175adb99202c242e6281f7f0570'
+          checkpoint: 'd09faa07d4adfc30ac31934981bf90162fc1c007cfc5affbf53b5118ccd79ca2'
   name 'uBar'
   homepage 'https://brawersoftware.com/products/ubar'
 
