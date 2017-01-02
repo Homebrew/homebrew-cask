@@ -4,11 +4,11 @@ cask 'tiptyper' do
     sha256 '5f862ea7d68548569c9b038f8cc8e542e07ae21b26462e75442f28ba2d4088ad'
     url "https://www.brunophilipe.com/software/tiptyper/releases/releasen-#{version}.zip"
   else
-    version '2.7'
-    sha256 'ec9b114764ce348c13407a672ea55489d2070ae5372fc9474f717ec0d943d8d9'
+    version '2.7.1'
+    sha256 'dc1191110c1bfd470e654189b432251aec075db876ef1740b3a19db711eaf27c'
     url "https://www.brunophilipe.com/software/tiptyper/releases/releasen-#{version}.zip"
     appcast 'https://www.brunophilipe.com/software/tiptyper/versioninfo/appcast.php',
-            checkpoint: 'ac97ae5bfcb64305adf50b72484d70095993c6fc61b3a339f76f628bb4efed19'
+            checkpoint: 'e60dde8ebe9b27a75b53278339a54e9ce67e6912a70264b51384c4a7edeb4b1f'
   end
 
   name 'TipTyper'
