@@ -9,6 +9,8 @@ cask 'exnihilo' do
   name 'Ex nihilo'
   homepage 'https://vayn.github.io/ex-nihilo/'
 
+  auto_updates true
+
   app 'ExNihilo.app'
 
   uninstall login_item: 'ExNihilo'
