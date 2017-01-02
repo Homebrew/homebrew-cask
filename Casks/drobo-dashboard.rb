@@ -8,7 +8,9 @@ cask 'drobo-dashboard' do
 
   pkg "Install.app/Contents/Drobo_Dashboard_Installer_#{version}.pkg"
 
-  uninstall script:  { executable: 'Uninstall.app/Contents/Resources/Scripts/Drobo_Dashboard_uninstall.sh',
-                       sudo:       true },
+  uninstall script:  {
+                       executable: 'Uninstall.app/Contents/Resources/Scripts/Drobo_Dashboard_uninstall.sh',
+                       sudo:       true,
+                     },
             pkgutil: 'com.datarobotics.drobodashboard'
 end
