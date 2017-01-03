@@ -18,7 +18,10 @@ cask 'virtualbox' do
 
   pkg 'VirtualBox.pkg'
 
-  uninstall script:  { executable: 'VirtualBox_Uninstall.tool', args: %w[--unattended] },
+  uninstall script:  {
+                       executable: 'VirtualBox_Uninstall.tool',
+                       args:       %w[--unattended],
+                     },
             pkgutil: 'org.virtualbox.pkg.*'
 
   zap delete: [

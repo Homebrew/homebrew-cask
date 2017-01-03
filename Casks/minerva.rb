@@ -4,7 +4,7 @@ cask 'minerva' do
 
   url "http://blog.coursevector.com/downloads/Minerva-#{version.dots_to_hyphens}.air"
   name '.minerva'
-  homepage 'https://blog.coursevector.com/minerva/'
+  homepage 'https://blog.coursevector.com/minerva'
 
   depends_on cask: 'adobe-air'
 

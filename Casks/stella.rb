@@ -1,10 +1,10 @@
 cask 'stella' do
-  version '4.6.6'
-  sha256 'afbe3bf9f5564c18720f59a8336d20e920120a5219e49a6b7373be7475841cb9'
+  version '4.7.3'
+  sha256 'b78cc81541830bc054318858e11dc07254bf1e7c64095f19479f8301b42aab77'
 
   url "https://downloads.sourceforge.net/stella/stella/#{version}/Stella-#{version}-macosx.dmg"
   appcast 'https://sourceforge.net/projects/stella/rss?path=/stella',
-          checkpoint: '096a0719ee88287c5523ac52be377b76776d61bc9f6f4f018f68f177031833eb'
+          checkpoint: '880727ceb05e13b21bbd463ab9e090761e7ca74e17c15056e163c93263819a3c'
   name 'Stella'
   homepage 'http://stella.sourceforge.net/'
 

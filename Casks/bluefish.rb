@@ -5,7 +5,7 @@ cask 'bluefish' do
   # bennewitz.com was verified as official when first introduced to the cask
   url "http://www.bennewitz.com/bluefish/stable/binaries/macosx/Bluefish-#{version}.dmg"
   name 'Bluefish'
-  homepage 'http://bluefish.openoffice.nl/'
+  homepage 'http://bluefish.openoffice.nl/index.html'
 
   app 'Bluefish.app'
 end

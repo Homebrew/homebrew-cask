@@ -5,7 +5,7 @@ cask 'hacker-menu' do
   # github.com/jingweno/hacker-menu was verified as official when first introduced to the cask
   url "https://github.com/jingweno/hacker-menu/releases/download/v#{version}/hacker-menu-mac.zip"
   appcast 'https://github.com/jingweno/hacker-menu/releases.atom',
-          checkpoint: 'a55f652b40c1db009dddf4d3ee763d13fe679d93d062c8c33f5675bad2a944cb'
+          checkpoint: '3c8769b46ff0e92300472cb6ebcd7bf42a8ad434c4ca95980d4b063788d5e811'
   name 'Hacker Menu'
   homepage 'https://hackermenu.io/'
 

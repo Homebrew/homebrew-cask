@@ -1,11 +1,11 @@
 cask 'tiled' do
-  version '0.17.2'
-  sha256 'ac2a825f67e1632ccdb1f4dd15325932000551780b42fdc526b2d574bbb5ec0f'
+  version '0.18.0'
+  sha256 'd3ab43da2b8de13a980a889a82d854c01ff0448778e9d3d10dbb8fa9cf116753'
 
   # github.com/bjorn/tiled was verified as official when first introduced to the cask
   url "https://github.com/bjorn/tiled/releases/download/v#{version}/tiled-#{version}.dmg"
   appcast 'https://github.com/bjorn/tiled/releases.atom',
-          checkpoint: 'c80a7517fe04219885378fe966f33a32bb2c0c00260073400528d8fd7bf5970e'
+          checkpoint: 'b4004dcf40e47783d5ed7629c91578988e26b402383262cade01935574599de3'
   name 'Tiled'
   homepage 'http://www.mapeditor.org/'
 
