@@ -4,8 +4,8 @@ cask 'exnihilo' do
 
   # github.com/Vayn/ex-nihilo was verified as official when first introduced to the cask
   url "https://github.com/Vayn/ex-nihilo/releases/download/#{version}/ExNihilo.zip"
-  appcast 'https://vayn.github.io/ex-nihilo/release/appcast.xml',
-          checkpoint: 'd65a82d8aac3cb650e2a4ec0903d6f3b3577870ef59c7c64e16165df5773cd88'
+  appcast 'https://github.com/vayn/ex-nihilo/releases.atom',
+          checkpoint: '91a12170ea0986d15d2fb3241a9d9421adbae279f5c13fca04c4ed0b013eeddb'
   name 'Ex nihilo'
   homepage 'https://vayn.github.io/ex-nihilo/'
 
