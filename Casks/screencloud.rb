@@ -1,6 +1,6 @@
 cask 'screencloud' do
-  version '1.2.0'
-  sha256 'e1a1a569a77fa1f92d27df2c55e60c7c0fe73a03904ae2eb67bb01c68188ffd5'
+  version '1.3.0'
+  sha256 '0f5dce6b79be20f12cd1e14cad91e107898312ea1c2802e6f43627dcbd431c01'
 
   url "https://screencloud.net/files/mac/ScreenCloud-#{version}.dmg"
   name 'ScreenCloud'
