@@ -76,7 +76,7 @@ EOS
   end
 
   uninstall_postflight do
-    system_command 'java', args: ['-jar', '#{appdir}/SQuirreLSQL.app/Uninstaller/uninstaller.jar', '-f', '-c']
+    system_command 'java', args: ['-jar', "#{appdir}/SQuirreLSQL.app/Uninstaller/uninstaller.jar", '-f', '-c']
   end
 
   zap delete: '~/.squirrel-sql'
