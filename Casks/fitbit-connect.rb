@@ -1,8 +1,8 @@
 cask 'fitbit-connect' do
-  version '20160602_2.0.1.6801'
-  sha256 '2c51d17bb093465b703e645ef62f463e89660054b57583a993589e78583f7d6a'
+  version '2.0.1.6809-2016-08-09'
+  sha256 '1edc086c380d24f63301a167b61e06f50ebcb57dbef7ddffa22878b313ea378c'
 
-  url "http://cache.fitbit.com/FitbitConnect/FitbitConnect_Mac_#{version}.dmg"
+  url "http://cache.fitbit.com/FitbitConnect/FitbitConnect-v#{version}.dmg"
   name 'Fitbit Connect'
   homepage 'https://www.fitbit.com/'
 
