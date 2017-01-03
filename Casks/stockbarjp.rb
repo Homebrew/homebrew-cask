@@ -4,7 +4,7 @@ cask 'stockbarjp' do
 
   url 'http://midnightsuyama.org/download/StockBarJP.zip'
   name 'StockBarJP'
-  homepage 'http://midnightsuyama.org/blog/articles/stockbarjp/'
+  homepage 'http://midnightsuyama.org/'
 
   app 'StockBarJP.app'
 end
