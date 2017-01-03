@@ -12,8 +12,4 @@ cask 'dia' do
   depends_on x11: true
 
   app 'Dia.app'
-
-  postflight do
-    system_command '/usr/bin/sed', args: ['-i', '--', 's/exec/exec env DISPLAY=:0/g', "#{appdir}/Dia.app/Contents/Resources/bin/dia"]
-  end
 end
