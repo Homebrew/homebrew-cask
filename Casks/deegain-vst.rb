@@ -4,7 +4,7 @@ cask 'deegain-vst' do
 
   url 'http://dotec-audio.com/release/DeeGain/latest/mac/DeeGainMac.zip'
   name 'DOTEC-AUDIO DeeGain (VST)'
-  homepage 'http://dotec-audio.com/deegain.html'
+  homepage 'https://dotec-audio.com/deegain.html'
 
   vst_plugin 'DeeGain.vst'
 end

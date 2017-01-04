@@ -1,6 +1,6 @@
 cask 'filebot' do
-  version '4.7.5'
-  sha256 '51f0fc6a992ee82ee05a7596a36b68f95e5f0306d6b35f5a767ab5aeeecb5e64'
+  version '4.7.6'
+  sha256 'f95464b24b57d7ecdc82831009fbc6c311199e47b0209b54a004d263d41c2e9e'
 
   # sourceforge.net/filebot was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/filebot/filebot/FileBot_#{version}/FileBot_#{version}-darwin.tar.xz"

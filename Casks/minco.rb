@@ -1,10 +1,10 @@
 cask 'minco' do
-  version '2.0.27'
-  sha256 '70834dc1356d008dc989c2b645dadbf1c9eacb3b75c661fcc212dba2944b1b62'
+  version '2.0.28'
+  sha256 'dca60abe4d9b654dbd888196b6504a036fe44985898d33b9b8329ea9ec6e7da2'
 
   url "http://www.celmaro.com/files/minco#{version.major}/Minco.zip"
   appcast "http://www.celmaro.com/updates/minco#{version.major}/minco.xml",
-          checkpoint: '652b47a25570c42e1b2ad9f3b1c584a93c53326b7ce87fc16c79a2c2767bbff4'
+          checkpoint: '022f009680320da59fa0f6a6b5b7620a31f1d0a06c952b3ac5afe5c49138b658'
   name 'Minco'
   homepage 'http://www.celmaro.com/minco/'
 

@@ -8,7 +8,7 @@ cask 'nuimo' do
   name 'Nuimo'
   homepage 'https://www.senic.com/en/app'
 
-  auto_updates 'true'
+  auto_updates true
 
   app 'Nuimo.app'
 end

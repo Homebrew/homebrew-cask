@@ -1,6 +1,6 @@
 cask 'yourkit-java-profiler' do
-  version '2016.02-b44'
-  sha256 '17496acc087928594e7186826866739078638a67f100328ea957d3588f9cc66f'
+  version '2016.02-b45'
+  sha256 'fbbca98bd9166d638a71cebdaab332c58b43154cc8fe04e1b344bc248ee21f11'
 
   url "https://www.yourkit.com/download/yjp-#{version}-mac.zip"
   name 'YourKit Java Profiler'

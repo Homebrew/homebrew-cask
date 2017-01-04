@@ -1,11 +1,10 @@
 cask 'espresso' do
-  version '2.2.3'
-  sha256 '5d6be08f97fb87cf4a1ba713c4ea7f9f09c7eb11658891725df171fe1cf73442'
+  version '2.2.4'
+  sha256 '099528d34645711db15ef9ca586fbe62e4440c981caba5ee3b6ca4816a94a6a9'
 
-  # amazonaws.com/macrabbit was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/macrabbit/downloads/Espresso%20#{version}.zip"
+  url "https://macrabbit.com/espresso/downloads/Espresso%20#{version}.zip"
   appcast "https://update.macrabbit.com/espresso/#{version}.xml",
-          checkpoint: '54f5a3da5544a66d475868f90c0a043170b684e4d3c5608ffbd29436b34d1f78'
+          checkpoint: '27e974e9e7538ad6a2d8efa6ef3edc8bba0e607aca2c6419350a8baef24f4baa'
   name 'Espresso'
   homepage 'http://macrabbit.com/espresso/'
 
