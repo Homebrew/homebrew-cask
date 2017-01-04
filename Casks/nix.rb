@@ -8,7 +8,8 @@ cask 'nix' do
 
   depends_on macos: '>= :yosemite'
 
-  installer script: "nix-#{version}-x86_64-darwin/install", sudo: false
+  installer script: "nix-#{version}-x86_64-darwin/install",
+            sudo: false
 
   uninstall delete: [
                       '/nix',
