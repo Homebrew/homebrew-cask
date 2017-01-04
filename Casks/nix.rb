@@ -10,10 +10,10 @@ cask 'nix' do
 
   installer script: "nix-#{version}-x86_64-darwin/install", sudo: false
 
-  uninstall delete: %w[
-                      /nix
-                      ~/.nix-channels
-                      ~/.nix-defexpr
-                      ~/.nix-profile
+  uninstall delete: [
+                      '/nix',
+                      '~/.nix-channels',
+                      '~/.nix-defexpr',
+                      '~/.nix-profile'.
                     ]
 end
