@@ -28,6 +28,8 @@ cask 'macports' do
     pkg "MacPorts-#{version}-10.12-Sierra.pkg"
   end
 
+  appcast 'https://github.com/macports/macports-base/releases.atom',
+          checkpoint: 'bb4a24db76cee5daec24c402a3c521881f5724b2725e20b6fd5610a53144853e'
   name 'MacPorts'
   homepage 'https://www.macports.org/'
   gpg "#{url}.asc", key_id: '01ff673fb4aae6cd'
