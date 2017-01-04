@@ -17,4 +17,21 @@ cask 'nix' do
                       '~/.nix-defexpr',
                       '~/.nix-profile',
                     ]
+
+  uninstall_postflight do
+    ['~/.bash_profile', '~/.bash_login', '~/.profile'].each do |profile_path|
+      profile_path = File.expand_path(profile_path)
+
+      if File.exist?(profile_path)
+        system_command '/usr/bin/sed',
+                       args: [
+                               '-E',
+                               '-i', '.nix_uninstall_bak',
+                               '-e', '/# added by Nix installer/d',
+                                profile_path
+                             ],
+                       sudo: false
+      end
+    end
+  end
 end
