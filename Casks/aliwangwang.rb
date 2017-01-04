@@ -1,9 +1,11 @@
 cask 'aliwangwang' do
-  version '7.06.00-8301'
-  sha256 'a289951f8a0d04b0a8b81de71abe79e6e625f742ec7013f67ce69e9fc462c6a1'
+  version '7.06.12-8579'
+  sha256 '8a0a4bb24c7fd048362b1f33778d2f1d055725a8041a1a186e92dc532ac61ffa'
 
   # dbison.alicdn.com was verified as official when first introduced to the cask
-  url "https://dbison.alicdn.com/updates/macww-nosandbox-#{version}.dmg"
+  url "https://dbison.alicdn.com/updates/MacWW_7_5_Internal-#{version}.dmg"
+  appcast 'http://update.labs.etao.com/MacWW_7_5_Internal/updates.xml',
+          checkpoint: '9c3c392733db24d35b521401a0a4cd15cae3e34b49e79e5ad4c97ff5374f9faf'
   name 'Ali Wangwang'
   homepage 'https://wangwang.taobao.com/'
 
