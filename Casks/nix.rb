@@ -11,12 +11,7 @@ cask 'nix' do
   installer script: "nix-#{version}-x86_64-darwin/install",
             sudo:   false
 
-  uninstall delete: [
-                      '/nix',
-                      '~/.nix-channels',
-                      '~/.nix-defexpr',
-                      '~/.nix-profile',
-                    ]
+  uninstall delete: '/nix'
 
   uninstall_postflight do
     ['~/.bash_profile', '~/.bash_login', '~/.profile'].each do |profile_path|
@@ -34,4 +29,10 @@ cask 'nix' do
       end
     end
   end
+
+  zap delete: [
+                '~/.nix-channels',
+                '~/.nix-defexpr',
+                '~/.nix-profile',
+              ]
 end
