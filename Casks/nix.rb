@@ -9,12 +9,12 @@ cask 'nix' do
   depends_on macos: '>= :yosemite'
 
   installer script: "nix-#{version}-x86_64-darwin/install",
-            sudo: false
+            sudo:   false
 
   uninstall delete: [
                       '/nix',
                       '~/.nix-channels',
                       '~/.nix-defexpr',
-                      '~/.nix-profile'.
+                      '~/.nix-profile',
                     ]
 end
