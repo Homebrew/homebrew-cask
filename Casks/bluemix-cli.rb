@@ -18,7 +18,8 @@ cask 'bluemix-cli' do
                              '-E',
                              '-i', '.bluemix_uninstall_bak',
                              '-e', '/^### Added by the Bluemix CLI$/d',
-                             '-e', '/^source \/usr\/local\/Bluemix\/bx\/bash_autocomplete$/d', '/etc/profile'
+                             '-e', '/^source \/usr\/local\/Bluemix\/bx\/bash_autocomplete$/d',
+                             '/etc/profile'
                            ],
                      sudo: true
     end
