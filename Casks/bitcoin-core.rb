@@ -17,9 +17,5 @@ cask 'bitcoin-core' do
     set_permissions "#{staged_path}/Bitcoin-Qt.app", '0755'
   end
 
-  postflight do
-    set_permissions "#{appdir}/Bitcoin Core.app", '0755'
-  end
-
   zap delete: '~/Library/Preferences/org.bitcoin.Bitcoin-Qt.plist'
 end
