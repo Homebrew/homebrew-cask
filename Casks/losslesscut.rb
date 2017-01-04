@@ -1,4 +1,4 @@
-cask 'loslesscut' do
+cask 'losslesscut' do
   version '1.3.0'
   sha256 'd44affab76fc4538a7968207742a2324a2cffb60b14360519650b0989b4049fb'
 
