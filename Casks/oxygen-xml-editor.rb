@@ -1,5 +1,5 @@
 cask 'oxygen-xml-editor' do
-  version 'latest'
+  version :latest
   sha256 :no_check
 
   url 'http://mirror.oxygenxml.com/InstData/Editor/MacOSX/VM/oxygen.dmg'
