@@ -11,24 +11,23 @@ cask 'nix' do
   installer script: "nix-#{version}-x86_64-darwin/install",
             sudo:   false
 
-  uninstall delete: '/nix'
-
   uninstall_postflight do
     ['~/.bash_profile', '~/.bash_login', '~/.profile'].each do |profile_path|
       profile_path = File.expand_path(profile_path)
 
-      if File.exist?(profile_path)
-        system_command '/usr/bin/sed',
-                       args: [
-                               '-E',
-                               '-i', '.nix_uninstall_bak',
-                               '-e', '/# added by Nix installer/d',
-                                profile_path
-                             ],
-                       sudo: false
-      end
+      next unless File.exist?(profile_path)
+      system_command '/usr/bin/sed',
+                     args: [
+                             '-E',
+                             '-i', '.nix_uninstall_bak',
+                             '-e', '/# added by Nix installer/d',
+                             profile_path
+                           ],
+                     sudo: false
     end
   end
+
+  uninstall delete: '/nix'
 
   zap delete: [
                 '~/.nix-channels',
