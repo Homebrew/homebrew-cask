@@ -8,7 +8,7 @@ cask 'seashore' do
   name 'Seashore'
   homepage 'http://seashore.sourceforge.net/'
   
-  depends_on macos: '<= :el_capitain'
+  depends_on macos: '<= :el_capitan'
   
   app 'Seashore.app'
 end
