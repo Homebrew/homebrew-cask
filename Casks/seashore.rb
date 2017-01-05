@@ -7,6 +7,8 @@ cask 'seashore' do
           checkpoint: 'bcf60985cd8080b2d7d2df038b78e4eff30b60ce2e2d562cf91f2939cf4bb451'
   name 'Seashore'
   homepage 'http://seashore.sourceforge.net/'
-
+  
+  depends_on macos: '<= :el_capitain'
+  
   app 'Seashore.app'
 end
