@@ -8,4 +8,6 @@ cask 'prime95' do
   homepage 'http://www.mersenne.org/'
 
   app 'Prime95.app'
+
+  zap delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mersenne.prime95.sfl'
 end

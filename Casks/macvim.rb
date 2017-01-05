@@ -1,10 +1,10 @@
 cask 'macvim' do
-  version '8.0.119'
-  sha256 'cb94f33aa0c2ce4990a2c9e24d2775887ba6d91e1fb78059c6f0d3d1922ba5f7'
+  version '8.0.120'
+  sha256 'e47e34fcf9cd7421a24bdca9f1436b7237f79c3ac4200adf08235fa329c0b60f'
 
   url "https://github.com/macvim-dev/macvim/releases/download/snapshot-#{version.patch}/MacVim.dmg"
   appcast 'https://github.com/macvim-dev/macvim/releases.atom',
-          checkpoint: '6cdfad69fd19df6a25fc577ea624bc2b68c16b98c29dd7b7e1cc17c61d369462'
+          checkpoint: 'f60ac57dc8cc53818c32befb997ec60e1e01700401e22841b063163892a6e449'
   name 'MacVim'
   homepage 'https://github.com/macvim-dev/macvim'
 

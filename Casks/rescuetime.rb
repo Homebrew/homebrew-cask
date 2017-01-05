@@ -7,4 +7,6 @@ cask 'rescuetime' do
   homepage 'https://www.rescuetime.com/'
 
   app 'RescueTime.app'
+
+  zap delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rescuetime.rescuetime.sfl'
 end

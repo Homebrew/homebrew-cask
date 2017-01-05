@@ -11,6 +11,7 @@ cask 'paintbrush' do
   app 'Paintbrush.app'
 
   zap delete: [
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.soggywaffles.paintbrush.sfl',
                 '~/Library/Preferences/com.soggywaffles.Paintbrush.LSSharedFileList.plist',
                 '~/Library/Preferences/com.soggywaffles.Paintbrush.plist',
                 '~/Library/Caches/com.soggywaffles.Paintbrush',

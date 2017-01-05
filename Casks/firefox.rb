@@ -82,6 +82,7 @@ cask 'firefox' do
   app 'Firefox.app'
 
   zap delete: [
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.firefox.sfl',
                 '~/Library/Application Support/Firefox',
                 '~/Library/Caches/Firefox',
               ]
