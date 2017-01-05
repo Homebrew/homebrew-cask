@@ -13,8 +13,8 @@ cask 'casio-screen-receiver' do
                        'com.casio.fx.ScreenReceiver.fxASPIDriver',
                        'com.casio.fx.ScreenReceiver.fxSRManual',
                      ],
-            delete:  "#{appdir}/CASIO/ScreenReceiver.app",
-            rmdir:   "#{appdir}/CASIO"
+            delete:  "/Applications/CASIO/ScreenReceiver.app",
+            rmdir:   "/Applications/CASIO"
 
   zap delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.casio.fx.screenreceiver.sfl'
 
