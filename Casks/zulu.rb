@@ -21,6 +21,9 @@ cask 'zulu' do
     system_command '/bin/ln',
                    args: ['-nsf', '--', "/Library/Java/JavaVirtualMachines/zulu#{version.before_comma}.jdk/Contents/Home", '/Library/Java/Home'],
                    sudo: true
+    system_command '/usr/libexec/PlistBuddy',
+                   args: ['-c', 'Add :JavaVM:JVMCapabilities: string JNI', "/Library/Java/JavaVirtualMachines/zulu#{version.before_comma}.jdk/Contents/Info.plist"],
+                   sudo: true
 
     if MacOS.version <= :mavericks
       system_command '/bin/rm',
