@@ -5,7 +5,6 @@ cask 'oxygen-xml-editor' do
   url 'http://mirror.oxygenxml.com/InstData/Editor/MacOSX/VM/oxygen.dmg'
   name 'oXygen XML Editor'
   homepage 'https://www.oxygenxml.com/xml_editor.html'
-  license :commercial
 
   suite 'Oxygen XML Editor'
 end
