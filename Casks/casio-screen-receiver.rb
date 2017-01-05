@@ -2,7 +2,7 @@ cask 'casio-screen-receiver' do
   version '3.02,b:4'
   sha256 '5eaff7fd7894d483534d82e7fbc6b77a6d304afa580e10b1c7bce38a3a69e07a'
 
-  url "https://edu.casio.com/education/support_software/dl/screen_Receiver/screenrecv_inst_#{version.before_comma.no_dots}#{version.after_comma_before_colon}_#{version.after_colon}.zip"
+  url "https://edu.casio.com/education/support_software/dl/screen_Receiver/screenrecv_inst_#{version.before_comma.no_dots}#{version.after_comma.before_colon}_#{version.after_colon}.zip"
   name 'Casio Screen Receiver'
   homepage 'https://edu.casio.com/education/support_software/'
 
