@@ -8,5 +8,8 @@ cask 'osu' do
 
   app 'osu!.app'
 
-  zap delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/osu!.wineskin.prefs.sfl'
+  zap delete: [
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/osu!.wineskin.prefs.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/osu!20275532226wine.wineskin.prefs.sfl',
+              ]
 end
