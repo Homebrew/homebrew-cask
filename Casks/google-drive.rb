@@ -9,6 +9,7 @@ cask 'google-drive' do
   app 'Google Drive.app'
 
   zap delete: [
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.googledrive.sfl',
                 '~/Library/Application Support/Google/Drive',
                 '~/Library/Preferences/com.google.GoogleDrive.plist',
                 '~/Library/Caches/com.google.GoogleDrive',

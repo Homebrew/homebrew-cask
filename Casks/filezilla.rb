@@ -18,6 +18,7 @@ cask 'filezilla' do
 
   zap delete: [
                 '~/.config/filezilla',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/de.filezilla.sfl',
                 '~/Library/Saved Application State/de.filezilla.savedState',
                 '~/Library/Preferences/de.filezilla.plist',
               ]
