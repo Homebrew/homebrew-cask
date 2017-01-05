@@ -15,7 +15,7 @@ cask 'casio-screen-receiver' do
                      ],
             rmdir:   "#{appdir}/CASIO"
 
-   zap delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.casio.fx.screenreceiver.sfl'
+  zap delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.casio.fx.screenreceiver.sfl'
 
   caveats do
      reboot
