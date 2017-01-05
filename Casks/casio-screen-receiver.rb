@@ -19,6 +19,6 @@ cask 'casio-screen-receiver' do
   zap delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.casio.fx.screenreceiver.sfl'
 
   caveats do
-     reboot
+    reboot
   end
 end
