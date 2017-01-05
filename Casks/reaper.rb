@@ -4,7 +4,7 @@ cask 'reaper' do
 
   url "http://www.reaper.fm/files/#{version.major}.x/reaper#{version.no_dots}_x86_64.dmg"
   appcast 'http://www.reaper.fm/whatsnew.txt',
-          checkpoint: '94e7a31385ffa24ccd6bd2347d2b81e64eaabccfa6723819dcfae17f00724bbd'
+          checkpoint: 'bc783a029339057c9cdf7a28c42b95ea2d7e0ab0bf1a9e04cb94ec7cf0c5afc9'
   name 'REAPER'
   homepage 'http://www.reaper.fm/'
 
