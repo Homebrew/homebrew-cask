@@ -13,5 +13,7 @@ cask 'real-vnc' do
                       args:       ['-c', '/Applications/RealVNC/Uninstall\ VNC\ Server.app/Contents/Resources/uninstaller.sh; /Applications/RealVNC/Uninstall\ VNC\ Viewer.app/Contents/Resources/uninstaller.sh'],
                     }
 
-  caveats "Uninstall scripts throw errors '/Applications/RealVNC/Advanced.localized: No such file or directory' but work correctly"
+  caveats <<-EOS.undent
+    Uninstall scripts throw error '/Applications/RealVNC/Advanced.localized: No such file or directory' but work correctly
+  EOS
 end
