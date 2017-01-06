@@ -8,4 +8,6 @@ cask 'unetbootin' do
   homepage 'https://unetbootin.github.io/'
 
   app 'unetbootin.app'
+
+  zap delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.yourcompany.unetbootin.sfl'
 end

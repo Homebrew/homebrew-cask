@@ -9,4 +9,6 @@ cask 'sketchupviewer' do
   homepage 'http://www.sketchup.com/products/sketchup-viewer'
 
   app 'SketchUpViewer.app'
+
+  zap delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sketchup.sketchupviewer.sfl'
 end

@@ -20,9 +20,12 @@ cask 'mailfollowup' do
   elsif MacOS.version <= :yosemite
     version '1.7.3'
     sha256 '1fe25c718b71e7a8b164058c5638c7e0ffc4a24c35a97daf53221c2543593fd4'
-  else
+  elsif MacOS.version <= :el_capitan
     version '1.8'
     sha256 'b6bec94f71453688adaed58ec30ee98924456f3da6b6d1a22118dd838e49ebe1'
+  else
+    version '1.8.3'
+    sha256 '7c9125a6794ed4b1528a39c9eb65849351c345d8a456b7d3a175d3728032e449'
   end
 
   url "https://www.cs.unc.edu/~welch/MailFollowup/media/MailFollowUp_#{version}.dmg.zip"

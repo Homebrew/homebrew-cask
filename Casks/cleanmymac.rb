@@ -60,6 +60,8 @@ cask 'cleanmymac' do
                   "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac#{version.major}.Agent",
                   "/Users/Shared/CleanMyMac #{version.major}",
                   "/private/var/run/com.macpaw.CleanMyMac#{version.major}.Agent.socket",
+                  "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac#{version.major}.sfl",
+                  "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac#{version.major}.scheduler.sfl",
                   "~/Library/Application Support/CleanMyMac #{version.major}",
                   "~/Library/Application Support/CleanMyMac #{version.major} Menu",
                   "~/Library/Caches/CleanMyMac #{version.major}",

@@ -9,5 +9,12 @@ cask 'postgres' do
   name 'Postgres'
   homepage 'https://postgresapp.com/'
 
+  auto_updates true
+
   app 'Postgres.app'
+
+  zap delete: [
+                '~/Library/Application Support/Postgres',
+                '~/Library/Preferences/com.postgresapp.Postgres2.plist',
+              ]
 end
