@@ -8,5 +8,7 @@ cask 'hawk-eye' do
   name 'Hawk Eye'
   homepage 'https://github.com/harksys/HawkEye'
 
+  auto_updates true
+
   app 'Hawk Eye.app'
 end
