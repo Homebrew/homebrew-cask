@@ -6,7 +6,7 @@ cask 'marked' do
   appcast 'https://updates.marked2app.com/marked.xml',
           checkpoint: 'caf003f39ca2a87922e2d1f6afe17df55bd6bb6f36dcfd16b52e257cf629f5e0'
   name 'Marked'
-  homepage 'https://marked2app.com/'
+  homepage 'http://marked2app.com/'
 
   auto_updates true
 
