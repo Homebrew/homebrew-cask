@@ -4,7 +4,7 @@ cask 'unseen' do
 
   url "https://download.unseen.is/unseenapp-is-v#{version}/unseenapp-beta-v#{version}-osx.zip"
   name 'Unseen'
-  homepage 'https://download.unseen.is/#mac-downloads'
+  homepage 'https://download.unseen.is/'
 
   app "Unseen_v#{version}.app"
 
