@@ -22,7 +22,7 @@ cask 'squirrelsql' do
         <com.izforge.izpack.panels.HelloPanel id="UNKNOWN (com.izforge.izpack.panels.HelloPanel)"/>
         <com.izforge.izpack.panels.HTMLInfoPanel id="UNKNOWN (com.izforge.izpack.panels.HTMLInfoPanel)"/>
         <com.izforge.izpack.panels.TargetPanel id="UNKNOWN (com.izforge.izpack.panels.TargetPanel)">
-        <installpath>/Applications/SQuirreLSQL.app</installpath>
+        <installpath>#{appdir}/SQuirreLSQL.app</installpath>
         </com.izforge.izpack.panels.TargetPanel>
         <com.izforge.izpack.panels.PacksPanel id="UNKNOWN (com.izforge.izpack.panels.PacksPanel)">
         <pack index="0" name="Base" selected="true"/>
@@ -76,7 +76,7 @@ cask 'squirrelsql' do
   end
 
   uninstall_postflight do
-    system_command 'java', args: ['-jar', '/Applications/SQuirreLSQL.app/Uninstaller/uninstaller.jar', '-f', '-c']
+    system_command 'java', args: ['-jar', "#{appdir}/SQuirreLSQL.app/Uninstaller/uninstaller.jar", '-f', '-c']
   end
 
   zap delete: '~/.squirrel-sql'
