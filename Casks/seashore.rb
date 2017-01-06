@@ -11,4 +11,8 @@ cask 'seashore' do
   depends_on macos: '<= :el_capitan'
 
   app 'Seashore.app'
+
+  caveats do
+    discontinued
+  end
 end
