@@ -6,7 +6,7 @@ cask 'unseen' do
   name 'Unseen'
   homepage 'https://download.unseen.is/#mac-downloads'
 
-  app "Unseen_v#{version}.app", target: 'Unseen.app'
+  app "Unseen_v#{version}.app"
 
   zap delete: [
                 '~/Library/Application Support/Unseen',
