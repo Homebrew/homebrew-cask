@@ -8,12 +8,18 @@ cask 'real-vnc' do
 
   pkg "VNC-#{version}-MacOSX-x86_64.pkg"
 
-  uninstall script: {
-                      executable: '/bin/sh',
-                      args:       ['-c', '/Applications/RealVNC/Uninstall\ VNC\ Server.app/Contents/Resources/uninstaller.sh; /Applications/RealVNC/Uninstall\ VNC\ Viewer.app/Contents/Resources/uninstaller.sh'],
-                    }
+  uninstall launchctl: [
+                         'com.realvnc.vncserver',
+                         'com.realvnc.vncserver.peruser',
+                       ],
+            pkgutil:   [
+                         'com.realvnc.vncserver.pkg',
+                         'com.realvnc.vncviewer.pkg',
+                       ]
 
-  caveats <<-EOS.undent
-    Uninstall scripts throw error '/Applications/RealVNC/Advanced.localized: No such file or directory' but work correctly
-  EOS
+  zap delete: [
+                '~/Library/Saved Application State/com.realvnc.vnclicensewiz.savedState',
+                '~/Library/Saved Application State/com.realvnc.vncviewer.savedState',
+                '~/Library/Saved Application State/com.realvnc.vncserver.savedState',
+              ]
 end
