@@ -26,10 +26,8 @@ cask 'wine-staging' do
                      ],
             delete:  '/Applications/Wine Staging.app'
 
-  caveats do
-    <<-EOS.undent
-      #{token} installs support for running 64 bit applications in Wine, which is considered experimental.
-      If you do not want 64 bit support, you should download and install the #{token} package manually.
-    EOS
-  end
+  caveats <<-EOS.undent
+    #{token} installs support for running 64 bit applications in Wine, which is considered experimental.
+    If you do not want 64 bit support, you should download and install the #{token} package manually.
+  EOS
 end
