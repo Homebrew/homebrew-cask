@@ -8,7 +8,7 @@ cask 'goad' do
   # github.com/zeph/goad is a fork with several improvements of goad.io
   homepage 'https://goad.io'
 
-  container type: :naked
+  container type: :zip
 
-  binary 'goad-osx-x86-64', target: 'goad'
+  binary 'goad', target: 'goad'
 end
