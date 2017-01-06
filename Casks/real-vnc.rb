@@ -1,6 +1,6 @@
 cask 'real-vnc' do
-  version '5.3.2'
-  sha256 'ed075ad1bec0d3d6ae9c446fbdec211798853d79f14c7a98520819f22fe991d3'
+  version '6.0.1'
+  sha256 '404d3b1ffe4b576736a1802d8f44270e26af390f1b6c379bfe95b0803de3e5d2'
 
   url "https://www.realvnc.com/download/file/vnc.files/VNC-#{version}-MacOSX-x86_64.pkg"
   name 'Real VNC'
@@ -8,5 +8,18 @@ cask 'real-vnc' do
 
   pkg "VNC-#{version}-MacOSX-x86_64.pkg"
 
-  uninstall script: '/Applications/RealVNC/Advanced.localized/Uninstall VNC Viewer.app/Contents/Resources/uninstaller.sh'
+  uninstall launchctl: [
+                         'com.realvnc.vncserver',
+                         'com.realvnc.vncserver.peruser',
+                       ],
+            pkgutil:   [
+                         'com.realvnc.vncserver.pkg',
+                         'com.realvnc.vncviewer.pkg',
+                       ]
+
+  zap delete: [
+                '~/Library/Saved Application State/com.realvnc.vnclicensewiz.savedState',
+                '~/Library/Saved Application State/com.realvnc.vncviewer.savedState',
+                '~/Library/Saved Application State/com.realvnc.vncserver.savedState',
+              ]
 end
