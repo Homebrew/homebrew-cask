@@ -4,7 +4,7 @@ cask 'yakyak' do
 
   url "https://github.com/yakyak/yakyak/releases/download/v#{version}/yakyak-#{version}-osx.zip"
   appcast 'https://github.com/yakyak/yakyak/releases.atom',
-          checkpoint: '58eea7b353f84ff5ca98853838423d57df350e5f68705881361dd7ad646a2108'
+          checkpoint: 'fc6fcc04a790d974a656ebc58e4d232f16401ae6a9307e5703627468aad5bf3f'
   name 'Yakyak'
   homepage 'https://github.com/yakyak/yakyak'
 
