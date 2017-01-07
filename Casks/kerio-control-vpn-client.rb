@@ -11,5 +11,8 @@ cask 'kerio-control-vpn-client' do
   uninstall kext:      'com.kerio.kext.kvnet',
             launchctl: 'com.kerio.kvpncsvc',
             pkgutil:   'com.kerio.control.kvpnclient.pkg',
-            quit:      ['com.kerio.VPN.status', 'com.kerio.VPN.agent']
+            quit:      [
+                         'com.kerio.VPN.status',
+                         'com.kerio.VPN.agent',
+                       ]
 end
