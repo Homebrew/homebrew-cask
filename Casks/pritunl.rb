@@ -11,7 +11,7 @@ cask 'pritunl' do
 
   pkg 'Pritunl.pkg'
 
-  uninstall pkgutil: 'com.pritunl.pkg.Pritunl',
+  uninstall pkgutil:   'com.pritunl.pkg.Pritunl',
             launchctl: [
                          'com.pritunl.client',
                          'com.pritunl.service',
