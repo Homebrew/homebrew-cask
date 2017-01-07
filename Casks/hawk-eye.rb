@@ -4,7 +4,7 @@ cask 'hawk-eye' do
 
   url "https://github.com/harksys/HawkEye/releases/download/#{version}/hawkeye-#{version}-osx-x64.dmg"
   appcast 'https://github.com/harksys/HawkEye/releases.atom',
-          checkpoint: '48d0bc77ea24fef00c175dfc11ee313f55131c792d95ce1fde44148b63668559'
+          checkpoint: '150c01ef0b020ff10b357c7835db5f41d92cf5f0673f7bc22b60663307a6dd61'
   name 'Hawk Eye'
   homepage 'https://github.com/harksys/HawkEye'
 
