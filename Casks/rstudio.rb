@@ -13,7 +13,7 @@ cask 'rstudio' do
 
   caveats <<-EOS.undent
     #{token} depends on R.
-    There are different ways to satisfy that dependency and we don’t want to impose one, so it is up to you to satify it.
+    There are different ways to satisfy that dependency and we don’t want to impose one, so it is up to you to satisfy it.
     We suggest you do so by running one of:
 
       brew install homebrew/science/r
