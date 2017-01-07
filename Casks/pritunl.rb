@@ -11,11 +11,16 @@ cask 'pritunl' do
 
   pkg 'Pritunl.pkg'
 
-  uninstall pkgutil: 'com.pritunl.pkg.Pritunl'
+  uninstall pkgutil:   'com.pritunl.pkg.Pritunl',
+            launchctl: [
+                         'com.pritunl.client',
+                         'com.pritunl.service',
+                       ]
 
   zap delete: [
                 '~/Library/Application Support/pritunl',
                 '~/Library/Caches/pritunl',
                 '~/Library/Preferences/com.electron.pritunl.plist',
+                '/var/log/pritunl.log',
               ]
 end
