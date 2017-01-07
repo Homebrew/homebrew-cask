@@ -9,7 +9,7 @@ cask 'axoloti-runtime' do
   name 'Axoloti Runtime'
   homepage 'http://www.axoloti.com/'
 
-  app 'axoloti_runtime'
+  suite 'axoloti_runtime'
 
   caveats do
     depends_on_java('8')
