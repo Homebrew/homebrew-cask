@@ -1,10 +1,10 @@
 cask 'trailrunner' do
-  version '3.8.828'
-  sha256 '94e96f48eb7818332a732963dd97f2b5caf92c79b9b840e94be10919b0a28506'
+  version '3.8.830'
+  sha256 'a53915cd8b5bbbe55fd96d0372b587e7ec165236f92589cf274ea55e380faa26'
 
   url 'http://downloads.trailrunnerx.com/TrailRunner.app.zip'
   appcast 'https://rink.hockeyapp.net/api/2/apps/83c4086e3f968b874757ba689e71f610',
-          checkpoint: '97bc58f1da646e029d80ea1856080a773053bb99e5abcb3d11ac0291aafa4312'
+          checkpoint: '60131a8205964387489144e2d94556d665b8b267fe984751d49eda26d375b31c'
   name 'TrailRunner'
   homepage 'http://www.trailrunnerx.com/'
 
