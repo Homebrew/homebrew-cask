@@ -22,7 +22,7 @@ cask 'macports' do
     url "https://github.com/macports/macports-base/releases/download/v#{version}/MacPorts-#{version}-10.11-ElCapitan.pkg"
     pkg "MacPorts-#{version}-10.11-ElCapitan.pkg"
   else
-    sha256 'a465c9364ecc24139c2a15a8613e2dbc8911f9eae96e3b5a7db4a8117f29db88'
+    sha256 '66cfda8d097038cb2786c8d73e3d85216d92f2afab00df97b8fe45d7a634242f'
     # github.com/macports/macports-base was verified as official when first introduced to the cask
     url "https://github.com/macports/macports-base/releases/download/v#{version}/MacPorts-#{version}-10.12-Sierra.pkg"
     pkg "MacPorts-#{version}-10.12-Sierra.pkg"
