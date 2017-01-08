@@ -1,6 +1,6 @@
 cask 'texstudio' do
   version '2.12.0'
-  sha256 'ab8f43541ea490669a077868dcdbf2c12b8b9c67243843e9c7961b9da4a83d0b'
+  sha256 '28b2b493cbbeadc92da23eba3a58499e1449ccfd32f2b7a728656f6b67df14c6'
 
   url "https://downloads.sourceforge.net/texstudio/texstudio-#{version}-osx-qt5.7.1.zip"
   appcast 'https://sourceforge.net/projects/texstudio/rss',
