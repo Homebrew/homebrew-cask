@@ -4,7 +4,7 @@ cask 'go-server' do
 
   url "https://download.gocd.io/binaries/#{version}/osx/go-server-#{version}-osx.zip"
   name 'Go Server'
-  homepage 'https://gocd.io/'
+  homepage 'https://www.gocd.io/'
 
   app 'Go Server.app'
 end

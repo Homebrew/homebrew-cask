@@ -4,7 +4,7 @@ cask 'go-agent' do
 
   url "https://download.gocd.io/binaries/#{version}/osx/go-agent-#{version}-osx.zip"
   name 'Go Agent'
-  homepage 'https://gocd.io/'
+  homepage 'https://www.gocd.io/'
 
   app 'Go Agent.app'
 end

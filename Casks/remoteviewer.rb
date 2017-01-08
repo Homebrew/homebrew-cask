@@ -5,7 +5,7 @@ cask 'remoteviewer' do
   # people.freedesktop.org/~teuf/spice-gtk-osx was verified as official when first introduced to the cask
   url "https://people.freedesktop.org/~teuf/spice-gtk-osx/dmg/#{version.sub(%r{-.*}, '')}/RemoteViewer-#{version}.dmg"
   name 'Remote Viewer'
-  homepage 'https://www.ovirt.org/SPICE_Remote-Viewer_on_OS_X'
+  homepage 'https://www.ovirt.org/documentation/admin-guide/virt/spice-remote-viewer-on-os-x/'
 
   app 'RemoteViewer.app'
 end

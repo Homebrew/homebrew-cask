@@ -4,7 +4,7 @@ cask 'datagraph' do
 
   url 'http://www.visualdatatools.com/DataGraph/DataGraph.dmg'
   name 'DataGraph'
-  homepage 'http://www.visualdatatools.com/DataGraph/'
+  homepage 'https://www.visualdatatools.com/DataGraph/'
 
   app 'DataGraph.app'
 end
