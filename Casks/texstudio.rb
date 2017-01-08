@@ -1,10 +1,10 @@
 cask 'texstudio' do
-  version '2.11.2'
-  sha256 '5447741352557ddb516bb5edd87ee70fade420dd5d5a19ddddb20fd67c100e61'
+  version '2.12.0'
+  sha256 '28b2b493cbbeadc92da23eba3a58499e1449ccfd32f2b7a728656f6b67df14c6'
 
-  url "https://downloads.sourceforge.net/texstudio/texstudio-#{version}-osx-qt5.6.zip"
+  url "https://downloads.sourceforge.net/texstudio/texstudio-#{version}-osx-qt5.7.1.zip"
   appcast 'https://sourceforge.net/projects/texstudio/rss',
-          checkpoint: '4aa5fc6120f04f5cb217399f5d4776c0071cb03a310f8dd7d5e89a3caaadabd5'
+          checkpoint: '6e1d75c0f1c775e9d3d855013b64316d8f477fe13a14f227492c54f7ef888fca'
   name 'TeXstudio'
   homepage 'http://texstudio.sourceforge.net/'
 
