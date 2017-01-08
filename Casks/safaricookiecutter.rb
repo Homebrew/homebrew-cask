@@ -5,7 +5,6 @@ cask 'safaricookiecutter' do
   url "https://github.com/nickzman/safaricookiecutter/releases/download/v#{version}/SafariCookieCutter#{version}.dmg"
   appcast 'https://github.com/nickzman/safaricookiecutter/releases.atom',
           checkpoint: 'd0b54d55434361940464c9036b0294262376eae7096c9f0e3a0296bdeb600207'
-
   name 'SafariCookieCutter'
   homepage 'https://github.com/nickzman/safaricookiecutter'
 
