@@ -1,8 +1,9 @@
 cask 'osculator' do
-  version '2.13.3-12-g5f24bc9'
-  sha256 '30563bcb6f80a9498cf25d38a41c0baba3631f6bcec21a8733cbb267b1e67dfc'
+  version '3.1.1-7-g064b670,8f8c7fe3-196c-44c2-8b93-e7507b749fdf'
+  sha256 '960bc3536cbf27fd0307d8e08d5d855f0f796f14b2016df4e6835818ffac2817'
 
-  url "https://dl.osculator.net/releases/osculator-#{version}.dmg"
+  # distribution.wildora.net was verified as official when first introduced to the cask
+  url "https://distribution.wildora.net/products/osculator-v#{version.major}/revisions/#{version.after_comma}/osculator-#{version.before_comma}.dmg"
   name 'OSCulator'
   homepage 'https://osculator.net/'
 
