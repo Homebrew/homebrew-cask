@@ -8,6 +8,8 @@ cask 'mailtags' do
 
   installer manual: 'Install MailTags 5.app'
 
+  uninstall pkgutil: 'ca.indev.MailTags*'
+
   zap delete: [
                 '~/Library/Mail/Bundles/MailTags.mailbundle',
                 '~/Library/Application Support/Indev/MailTagsHelper.app',
