@@ -1,6 +1,6 @@
 cask 'f-secure-anti-virus' do
-  version ':latest'
-  sha256 'bd22b8841b8ebbc178936afbf9a6c6668750e1cfc313500419fe4d7b5960542c'
+  version :latest
+  sha256 :no_check
 
   url 'https://download.sp.f-secure.com/SE/Retail/installer/F-Secure-Anti-Virus-for-Mac.mpkg'
   name 'F-Secure Anti-Virus'
@@ -8,7 +8,11 @@ cask 'f-secure-anti-virus' do
 
   pkg 'F-Secure-Anti-Virus-for-Mac.mpkg'
 
-  uninstall script: '/usr/local/f-secure/bin/uninstall_MacProtection'
+  uninstall script: {
+              executable: '/usr/local/f-secure/bin/uninstall_MacProtection',
+              sudo:       true,
+            },
+            pkgutil: 'com.f-secure.*'
 
   caveats do
     reboot
