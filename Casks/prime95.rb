@@ -5,7 +5,7 @@ cask 'prime95' do
 
   url "http://www.mersenne.org/ftp_root/gimps/p95v#{version.no_dots}.MacOSX.zip"
   name 'Prime95'
-  homepage 'http://www.mersenne.org/'
+  homepage 'https://www.mersenne.org/'
 
   app 'Prime95.app'
 

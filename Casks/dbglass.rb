@@ -7,7 +7,7 @@ cask 'dbglass' do
   appcast 'https://github.com/web-pal/dbglass/releases.atom',
           checkpoint: '8db209134c537d898b9fe48062b87cc65628568055266b3211b959b149877f1d'
   name 'DBGlass'
-  homepage 'http://dbglass.web-pal.com'
+  homepage 'http://dbglass.web-pal.com/'
 
   app 'DBGlass-darwin-x64/DBGlass.app'
 end

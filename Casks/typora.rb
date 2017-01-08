@@ -6,7 +6,7 @@ cask 'typora' do
   appcast 'https://www.typora.io/download/dev_update.xml',
           checkpoint: '24c28f80b1396ad0b903106d4d94799957790bb20a81d469e6b79b58d523d777'
   name 'Typora'
-  homepage 'https://www.typora.io/'
+  homepage 'https://typora.io/'
 
   app 'Typora.app'
 end

@@ -6,7 +6,7 @@ cask 'isolator' do
   appcast 'http://willmore.eu/software/isolator/allversions.xml',
           checkpoint: 'ae7c35f74d6d2d4c524f05acf34054490899e288a340f0bc6e5954ff275c1a6a'
   name 'Isolator'
-  homepage 'https://willmore.eu/software/isolator/'
+  homepage 'https://www.willmore.eu/software/isolator/'
 
   app 'Isolator.app'
 end

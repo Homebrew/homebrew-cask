@@ -4,7 +4,7 @@ cask 'google-adwords-editor' do
 
   url "https://dl.google.com/adwords_editor/#{version}/Google_AdWords_Editor.dmg"
   name 'Google AdWords Editor'
-  homepage 'https://adwords.google.com/home/tools/adwords-editor/'
+  homepage 'https://adwords.google.com/home/tools/adwords-editor/?zd=1'
 
   app 'Google AdWords Editor.app'
 end
