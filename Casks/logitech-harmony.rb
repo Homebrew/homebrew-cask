@@ -15,7 +15,8 @@ cask 'logitech-harmony' do
                            '-E',
                            '-i',
                            '.bak',
-                           '-e', 's|<string>1\.4\*</string>|<string>1.6*</string>|',
+                           '-e',
+                           's|<string>1\.4\*</string>|<string>1.6*</string>|',
                            '/Applications/Logitech Harmony Remote Software.app/Contents/Info.plist',
                          ]
   end
