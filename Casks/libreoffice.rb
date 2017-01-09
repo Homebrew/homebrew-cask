@@ -9,7 +9,7 @@ cask 'libreoffice' do
   gpg "#{url}.asc", key_id: 'c2839ecad9408fbe9531c3e9f434a1efafeeaea3'
 
   depends_on macos: '>= :mountain_lion'
-  
+
   app 'LibreOffice.app'
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/gengal"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/regmerge"
