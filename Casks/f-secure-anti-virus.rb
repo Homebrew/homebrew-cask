@@ -8,10 +8,10 @@ cask 'f-secure-anti-virus' do
 
   pkg 'F-Secure-Anti-Virus-for-Mac.mpkg'
 
-  uninstall script: {
-              executable: '/usr/local/f-secure/bin/uninstall_MacProtection',
-              sudo:       true,
-            },
+  uninstall script:  {
+                       executable: '/usr/local/f-secure/bin/uninstall_MacProtection',
+                       sudo:       true,
+                     },
             pkgutil: 'com.f-secure.*'
 
   caveats do
