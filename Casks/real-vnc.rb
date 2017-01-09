@@ -8,6 +8,11 @@ cask 'real-vnc' do
 
   pkg "VNC-#{version}-MacOSX-x86_64.pkg"
 
+  uninstall_preflight do
+    system_command '/Applications/RealVNC/Uninstall VNC Server.app/Contents/Resources/uninstaller.sh', print_stderr: false, sudo: true
+    system_command '/Applications/RealVNC/Uninstall VNC Viewer.app/Contents/Resources/uninstaller.sh', print_stderr: false, sudo: true
+  end
+
   uninstall launchctl: [
                          'com.realvnc.vncserver',
                          'com.realvnc.vncserver.peruser',
