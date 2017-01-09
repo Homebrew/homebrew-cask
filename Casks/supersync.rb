@@ -1,6 +1,6 @@
 cask 'supersync' do
-  version '6.1.1'
-  sha256 '43ca3fa8eebdba63bf9b8f2c17d26f0847e0ae55c114312f606240cbbbf88ce4'
+  version '6.1.2'
+  sha256 'fe5afaefc3a9803106a2f4f4decde36a45401fa384404185fd06ab747f72a31a'
 
   url "https://supersync.com/downloads/SuperSync_#{version}.dmg"
   name 'SuperSync'
