@@ -9,16 +9,8 @@ cask 'real-vnc' do
   pkg "VNC-#{version}-MacOSX-x86_64.pkg"
 
   uninstall_preflight do
-    IO.write "#{staged_path}/uninstall.sh", <<-EOS.undent
-      #!/bin/sh
-      "/Applications/RealVNC/Uninstall VNC Server.app/Contents/Resources/uninstaller.sh" &> /dev/null
-      "/Applications/RealVNC/Uninstall VNC Viewer.app/Contents/Resources/uninstaller.sh" &> /dev/null
-    EOS
-
-    set_permissions "#{staged_path}/uninstall.sh", '0777'
-
-    system_command "#{staged_path}/uninstall.sh",
-                   sudo: true
+    system_command '/Applications/RealVNC/Uninstall VNC Server.app/Contents/Resources/uninstaller.sh', print_stderr: false, sudo: true
+    system_command '/Applications/RealVNC/Uninstall VNC Viewer.app/Contents/Resources/uninstaller.sh', print_stderr: false, sudo: true
   end
 
   uninstall launchctl: [
