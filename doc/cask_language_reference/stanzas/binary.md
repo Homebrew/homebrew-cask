@@ -1,6 +1,6 @@
-# binary
+# binary`
 
-In the simple case of a string argument to `binary`, the source file is linked into the `/usr/local/bin` folder on installation. For example (from [operadriver.rb](https://github.com/caskroom/homebrew-cask/blob/60531a2812005dd5f17dc92f3ce7419af3c5d019/Casks/operadriver.rb#L11)):
+In the simple case of a string argument to `binary`, the source file is linked into the ``$(brew --prefix)/bin` directory (typically `/usr/local/bin`) on installation. For example (from [operadriver.rb](https://github.com/caskroom/homebrew-cask/blob/60531a2812005dd5f17dc92f3ce7419af3c5d019/Casks/operadriver.rb#L11)):
 
 ```ruby
 binary 'operadriver'
@@ -20,7 +20,7 @@ from a source file such as:
 
 ## Renaming the Target
 
-You can rename the target which appears in your `/usr/local/bin` directory by adding a `target:` key to `binary`, for example to be to be consistent with other command-line tools like [changing case](https://github.com/caskroom/homebrew-cask/blob/070a3bdeadf339892268d79aded9108ba7960f32/Casks/praat.rb#L12):
+You can rename the target which appears in your binaries directory directory by adding a `target:` key to `binary`, for example to be to be consistent with other command-line tools like [changing case](https://github.com/caskroom/homebrew-cask/blob/070a3bdeadf339892268d79aded9108ba7960f32/Casks/praat.rb#L12):
 
 ```ruby
 binary "#{appdir}/Praat.app/Contents/MacOS/Praat", target: 'praat'
