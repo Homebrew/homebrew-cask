@@ -1,6 +1,6 @@
 cask 'kollaborate-plugin-pack' do
-  version '1.0.6.0'
-  sha256 '74d11ff0b93650fc67e48959e377fa9ea2d7cb029eb6e79dc07b4808d8c1ab9d'
+  version '1.1.2.0'
+  sha256 'a0c1e814397696c609e33e0f89ba1aff762d3632a82276ebcd49670e734bcefc'
 
   # digitalrebellion.com was verified as official when first introduced to the cask
   url "http://www.digitalrebellion.com/download/kollabplugins?version=#{version.no_dots}"
