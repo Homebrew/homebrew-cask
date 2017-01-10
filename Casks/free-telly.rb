@@ -8,7 +8,11 @@ cask 'free-telly' do
     require 'json'
     # androidfilehost.com was verified as official when first introduced to the cask
     uri = URI('https://www.androidfilehost.com/libs/otf/mirrors.otf.php')
-    res = Net::HTTP.post_form(uri, 'submit' => 'submit', 'action' => 'getdownloadmirrors', 'fid' => '24588232905720770')
+    req = Net::HTTP::Post.new(uri)
+    file_id = '24588232905720770'
+    req.set_form_data('submit' => 'submit', 'action' => 'getdownloadmirrors', 'fid' => file_id)
+    req['Referer'] = "https://www.androidfilehost.com/?fid=#{file_id}"
+    res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: uri.scheme == 'https') { |http| http.request(req) }
     JSON.parse(res.body)['MIRRORS'][0]['url']
   end
   name 'FreeTelly'
