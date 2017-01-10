@@ -1,6 +1,6 @@
 # binary`
 
-In the simple case of a string argument to `binary`, the source file is linked into the ``$(brew --prefix)/bin` directory (typically `/usr/local/bin`) on installation. For example (from [operadriver.rb](https://github.com/caskroom/homebrew-cask/blob/60531a2812005dd5f17dc92f3ce7419af3c5d019/Casks/operadriver.rb#L11)):
+In the simple case of a string argument to `binary`, the source file is linked into the `$(brew --prefix)/bin` directory (typically `/usr/local/bin`) on installation. For example (from [operadriver.rb](https://github.com/caskroom/homebrew-cask/blob/60531a2812005dd5f17dc92f3ce7419af3c5d019/Casks/operadriver.rb#L11)):
 
 ```ruby
 binary 'operadriver'
@@ -9,7 +9,7 @@ binary 'operadriver'
 creates a symlink to:
 
 ```bash
-/usr/local/bin/operadriver
+$(brew --prefix)/bin/operadriver
 ```
 
 from a source file such as:
