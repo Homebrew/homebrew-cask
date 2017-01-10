@@ -37,3 +37,11 @@ or just [cleaning up the name](https://github.com/caskroom/homebrew-cask/blob/14
 ```ruby
 binary 'minishift-darwin-amd64', target: 'minishift'
 ```
+
+## target: May Contain an Absolute Path
+
+If `target:` has a leading slash, it is interpreted as an absolute path. The containing directory for the absolute path will be created if it does not already exist. This is usseful for installing manual pages that are often included with binaries, for example (from [manopen.rb](https://github.com/caskroom/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/manopen.rb#L12)):
+
+```ruby
+artifact 'openman.1', target: '/usr/local/share/man/man1/openman.1'
+```
