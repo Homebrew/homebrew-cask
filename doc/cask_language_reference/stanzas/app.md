@@ -1,21 +1,15 @@
 # app
 
-In the simple case of a string argument to `app`, the source file is moved to the target `~/Applications` directory. For example:
+In the simple case of a string argument to `app`, the source file is moved to the target `/Applications` directory. For example:
 
 ```ruby
 app 'Alfred 2.app'
 ```
 
-moves the source to:
+by default moves the source to:
 
 ```bash
 /Applications/Alfred 2.app
-```
-
-from a source file such as:
-
-```bash
-/usr/local/Caskroom/alfred/2.8.2_431/Alfred 2.app
 ```
 
 ## Renaming the Target
