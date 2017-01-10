@@ -1,6 +1,6 @@
 cask 'privatetunnel' do
-  version '2.7'
-  sha256 '64ff83847f41cbdc857f616bff03477292c30e2283ce9617a59bb4bbba1058b4'
+  version '2.8'
+  sha256 '8abc331c8ab9d6805328bbc53f93f3bf9c94efbd8e609606ecbee9006851fbae'
 
   # swupdate.openvpn.org/privatetunnel was verified as official when first introduced to the cask
   url "https://swupdate.openvpn.org/privatetunnel/client/privatetunnel-mac-#{version}.dmg"
