@@ -1,11 +1,11 @@
 cask 'hyper' do
-  version '1.0.1'
-  sha256 'bead3062d2f979c3161362640b1c8d65530a8fa2f50d7b776c8567316b276fea'
+  version '1.1.0'
+  sha256 '7bcc3c437e66ef183a9063a6586e7d301b1cd584a8212d58c984cd26be6d7804'
 
   # github.com/zeit/hyper was verified as official when first introduced to the cask
   url "https://github.com/zeit/hyper/releases/download/#{version}/hyper-#{version}-mac.zip"
   appcast 'https://github.com/zeit/hyper/releases.atom',
-          checkpoint: '33a14cba0cec8c67c21b151162891668a62089e399f855ce239ce0ea202fb2e1'
+          checkpoint: '24cd4e7b79b778639476f323052420982f832b3b67745e5f417dc4320f5c1ff8'
   name 'Hyper'
   homepage 'https://hyper.is/'
 
