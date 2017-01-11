@@ -3,6 +3,8 @@ cask 'anoncoin' do
   sha256 '8b4bb2d1b58e012d5f9b4f493c2f36bcd7bb75096fd70736c39f5d2b1aeaa94d'
 
   url "https://anoncoin.net/downloads/#{version}/Anoncoin-#{version}.dmg"
+  appcast 'https://anoncoin.net/downloads/',
+          checkpoint: '7f2c0786d5cdbcde4d1001036fd954ecb2e38b49dc6404f67e11839bec7924cb'
   name 'Anoncoin'
   homepage 'https://anoncoin.net/'
 
