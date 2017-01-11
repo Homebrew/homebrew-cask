@@ -4,6 +4,8 @@ cask 'icab' do
 
   # icab.clauss-net.de was verified as official when first introduced to the cask
   url "http://icab.clauss-net.de/icab/iCab_#{version}_Intel.zip"
+  appcast 'http://www.icab.de/dl.php',
+          checkpoint: 'a2272b5ef213ca7cc65604012025e2bcd87c498cf1e251bf26c272e9525170ed'
   name 'iCab'
   homepage 'http://www.icab.de/'
 
