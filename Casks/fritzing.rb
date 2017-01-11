@@ -10,4 +10,3 @@ cask 'fritzing' do
 
   app 'Fritzing.app'
 end
-
