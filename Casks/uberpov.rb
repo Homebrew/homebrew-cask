@@ -8,20 +8,18 @@ cask 'uberpov' do
 
   app 'Uberpov_Mac/UberPOV.app'
 
-  caveats do
-    <<-EOS.undent
-      The standard UberPOV include path is:
+  caveats <<-EOS.undent
+    The standard UberPOV include path is:
 
-        #{staged_path}/Uberpov_Mac/include/
+      #{staged_path}/Uberpov_Mac/include/
 
-      Before starting any renders, you may want to set the include path in
-      UberPOV's preferences under
+    Before starting any renders, you may want to set the include path in
+    UberPOV's preferences under
 
-        "Files & Paths" > "Set search Paths for additional include files".
+      "Files & Paths" > "Set search Paths for additional include files".
 
-      Sample scenes will be installed at:
+    Sample scenes will be installed at:
 
-        #{staged_path}/Uberpov_Mac/scenes/
-    EOS
-  end
+      #{staged_path}/Uberpov_Mac/scenes/
+  EOS
 end

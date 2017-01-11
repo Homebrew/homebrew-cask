@@ -1,12 +1,16 @@
 cask 'papyrus' do
-  version '2.0.0'
-  sha256 'fbb4f8749bf6562c7b18ea99ba46616ebee69398acf578c355cca9450e3fd66b'
+  version '2.0.1,neon'
+  sha256 '9527e06a93ba87f998a90c1729f53382b7c47ea337f6ff0f2b0f7c5789f3f85f'
 
-  url "https://www.eclipse.org/downloads/download.php?file=/modeling/mdt/papyrus/rcp/neon/#{version}/papyrus-neon-#{version}-macosx64.tar.gz&r=1"
+  url "https://www.eclipse.org/downloads/download.php?file=/modeling/mdt/papyrus/rcp/#{version.after_comma}/#{version.before_comma}/papyrus-#{version.after_comma}-#{version.before_comma}-macosx64.tar.gz&r=1"
   name 'Papyrus'
   homepage 'https://eclipse.org/papyrus/'
 
   depends_on macos: '>= :leopard'
 
   app 'Papyrus.app'
+
+  caveats do
+    depends_on_java('8+')
+  end
 end

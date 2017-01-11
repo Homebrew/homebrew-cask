@@ -13,12 +13,6 @@ cask 'boom' do
 
   app 'Boom 2.app'
 
-  postflight do
-    system_command "#{appdir}/Boom 2.app/Contents/Resources/Components/Install.sh",
-                   args: ["#{appdir}/Boom 2.app/Contents/Resources/Components/Boom2Device.kext"],
-                   sudo: true
-  end
-
   uninstall kext:      'com.globaldelight.driver.Boom2Device',
             launchctl: [
                          'com.globaldelight.Boom2.*',

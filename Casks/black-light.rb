@@ -1,6 +1,6 @@
 cask 'black-light' do
-  version '2.1'
-  sha256 '008861531d4d52b3b0721095f7c6edf50d2b0a3232e2d045360f474ca7841834'
+  version '2.3'
+  sha256 'f6f563a0d3b880da904b7e15e03f9b101dfeb6c5df6332a2dd71f62a249c7e4a'
 
   url "https://littoral.michelf.ca/apps/black-light/black-light-#{version}.zip"
   name 'Black Light'

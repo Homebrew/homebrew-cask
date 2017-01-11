@@ -6,7 +6,7 @@ cask 'iexplorer' do
   appcast "https://www.macroplant.com/iexplorer/ie#{version.major}-appcast.xml",
           checkpoint: '48eaa402b874473b322a88d0af31c3642f1c2588a3337524a95a71c2d5fd564d'
   name 'iExplorer'
-  homepage 'https://www.macroplant.com/iexplorer/'
+  homepage 'https://macroplant.com/iexplorer'
 
   depends_on macos: '>= :mavericks'
 

@@ -1,8 +1,8 @@
 cask 'vectr' do
-  version '0.1.10'
-  sha256 '2fd1589a9d3eb4745b49588f54dd0758074bbbdf7aaa6379934ab9c9d8fbf0f4'
+  version '0.1.11'
+  sha256 'a6d345d5f6859fc888519c293f75d20e610f785f504f9e8e7832fa61de431d1a'
 
-  url "http://download.vectr.com/desktop/#{version}/mac/Vectr-#{version}.dmg"
+  url "http://download.vectr.com/desktop/#{version}/mac/Vectr-mac.dmg"
   name 'Vectr'
   homepage 'https://vectr.com/'
 

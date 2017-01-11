@@ -6,7 +6,7 @@ cask 'adapter' do
   appcast 'https://www.macroplant.com/adapter/adapterAppcast.xml',
           checkpoint: '17c8a441ce835c97f66dbd51dcbad221699360e42808091682ebfec5aed14edc'
   name 'Adapter'
-  homepage 'https://www.macroplant.com/adapter/'
+  homepage 'https://macroplant.com/adapter/'
 
   app 'Adapter.app'
 end

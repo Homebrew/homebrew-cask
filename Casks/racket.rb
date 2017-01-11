@@ -30,4 +30,13 @@ cask 'racket' do
   binary "#{appdir}/Racket v#{version}/bin/slatex"
   binary "#{appdir}/Racket v#{version}/bin/slideshow"
   binary "#{appdir}/Racket v#{version}/bin/swindle"
+
+  caveats <<-EOS.undent
+    MacBook Pro with Touch Bar users:
+    To avoid a bug in this version that prevents programs from working with the Touch Bar, use the 32-bit version or try a snapshot build:
+      https://pre.racket-lang.org/installers/
+
+    More information on the download page:
+      https://download.racket-lang.org/
+  EOS
 end

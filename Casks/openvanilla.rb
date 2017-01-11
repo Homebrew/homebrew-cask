@@ -1,6 +1,6 @@
 cask 'openvanilla' do
-  version '1.1.0'
-  sha256 'e8d23d00de5c95b1abb4870be0bf059bba7c332d5259870de8678811c3330cef'
+  version '1.2.0'
+  sha256 '3a37ae257c08df0472ffb29f611571b7af306ced25c2688f16d062792946f1dc'
 
   # github.com/openvanilla/openvanilla/ was verified as official when first introduced to the cask
   url "https://github.com/openvanilla/openvanilla/releases/download/#{version}/OpenVanilla-Installer-Mac-#{version}.zip"

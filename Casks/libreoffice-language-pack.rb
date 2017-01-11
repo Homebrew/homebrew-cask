@@ -566,9 +566,7 @@ cask 'libreoffice-language-pack' do
     system_command '/usr/bin/touch', args: ["#{appdir}/LibreOffice.app/Contents/Resources/extensions"]
   end
 
-  caveats do
-    <<-EOS.undent
-      #{token} assumes LibreOffice is installed in #{appdir}. If it is not, you’ll need to run #{staged_path}/LibreOffice Language Pack.app manually.
-    EOS
-  end
+  caveats <<-EOS.undent
+    #{token} assumes LibreOffice is installed in #{appdir}. If it is not, you’ll need to run #{staged_path}/LibreOffice Language Pack.app manually.
+  EOS
 end

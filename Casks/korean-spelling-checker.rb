@@ -13,12 +13,10 @@ cask 'korean-spelling-checker' do
 
   uninstall delete: '~/Library/Services/✔ 선택한 글의 한국어 맞춤법 검사하기.workflow'
 
-  caveats do
-    <<-EOS.undent
-      #{token} only works when you install it manually via Service Installer,
-      so you may need to run the installer with
+  caveats <<-EOS.undent
+    #{token} only works when you install it manually via Service Installer,
+    so you may need to run the installer with
 
-        open '~/Library/Services/✔ 선택한 글의 한국어 맞춤법 검사하기.workflow'
-    EOS
-  end
+      open '~/Library/Services/✔ 선택한 글의 한국어 맞춤법 검사하기.workflow'
+  EOS
 end

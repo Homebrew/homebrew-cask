@@ -1,9 +1,8 @@
 cask 'little-flocker' do
-  version '1.4.1'
-  sha256 'ad440cda69ab7ba09b4cba504673c125fd056e8543181a5db9b42a090127c742'
+  version '1.4.4'
+  sha256 'b52bee3b28b2b33e65f345dfe8fb8035ffdb684118a8ac96ba9b94ee65aef870'
 
-  # zdziarski.com/littleflocker was verified as official when first introduced to the cask
-  url "https://www.zdziarski.com/littleflocker/LittleFlocker-#{version}.dmg"
+  url "https://www.littleflocker.com/downloads/LittleFlocker-#{version}.dmg"
   name 'Little Flocker'
   homepage 'https://www.littleflocker.com/'
 

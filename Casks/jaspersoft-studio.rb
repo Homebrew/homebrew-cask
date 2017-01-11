@@ -9,5 +9,5 @@ cask 'jaspersoft-studio' do
   name 'Jaspersoft Studio'
   homepage 'https://community.jaspersoft.com/project/jaspersoft-studio'
 
-  app "Jaspersoft Studio #{version}.final/Jaspersoft Studio.app"
+  app "Jaspersoft Studio #{version}.final.app"
 end

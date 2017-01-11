@@ -24,8 +24,7 @@ cask 'ncar-ncl' do
   artifact 'bin', target: '/usr/local/ncl-6.3.0/bin'
   artifact 'lib', target: '/usr/local/ncl-6.3.0/lib'
 
-  caveats do
-    <<-EOS.undent
+  caveats <<-EOS.undent
     To use ncar-ncl, you must add the $NCARG_ROOT/bin directory
     to your PATH environment variable.
 
@@ -41,6 +40,5 @@ cask 'ncar-ncl' do
 
     For other information, please see:
     https://www.ncl.ucar.edu/Download/macosx.shtml
-    EOS
-  end
+  EOS
 end
