@@ -15,6 +15,5 @@ cask 'rar' do
     Instructions on using rar and unrar are aviable in
 
       #{staged_path}/rar/rar.txt
-
   EOS
 end
