@@ -11,6 +11,8 @@ cask 'r-app' do
     pkg "R-#{version}.pkg"
   end
 
+  appcast 'https://www.r-project.org/',
+          checkpoint: '97043eed2b030ed4fa7ffd3509b6f9edc2ce9aaa1608ea3bd35ab421ab98f843'
   name 'R'
   homepage 'https://www.r-project.org/'
 
