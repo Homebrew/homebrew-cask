@@ -1,6 +1,6 @@
 cask 'deathtodsstore' do
-  version '1.0.5'
-  sha256 '0722de6215f02f5f0b35e1cf14f92203259e14f2ff03fae5b4d0a621f520c07b'
+  version :latest
+  sha256 :no_check
 
   url 'https://www.aorensoftware.com/Downloads/Files/DeathToDSStore.zip'
   name 'DeathToDSStore'
