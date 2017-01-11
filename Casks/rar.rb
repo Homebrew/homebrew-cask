@@ -8,4 +8,13 @@ cask 'rar' do
 
   binary 'rar/rar'
   binary 'rar/unrar'
+  artifact 'rar/default.sfx', target: '/usr/local/lib/default.sfx'
+  artifact 'rar/rarfiles.lst', target: '/usr/local/etc/rarfiles.lst'
+
+  caveats <<-EOS.undent
+    Instructions on using rar and unrar are aviable in
+
+      #{staged_path}/rar/rar.txt
+
+  EOS
 end
