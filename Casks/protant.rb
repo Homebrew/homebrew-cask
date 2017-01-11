@@ -1,6 +1,6 @@
 cask 'protant' do
-  version '1.0.0'
-  sha256 '98906ca80b98ce8fc7ec11eea6bba29f629a072752bb1c2f9ba07a1355effee1'
+  version '1.2.0'
+  sha256 'db0a3b6af8034d622009fbfd0b44913c242d6e962a439610af3e0c4b64003272'
 
   url "http://www.laurenceanthony.net/software/protant/releases/ProtAnt#{version.no_dots}/ProtAnt.zip"
   name 'ProtAnt'
