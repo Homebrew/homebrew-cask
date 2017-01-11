@@ -1,4 +1,4 @@
-cask 'rabbitmq' do
+cask 'rabbitmq-app' do
   version '3.6.1-build.1'
   sha256 '1838afcece704ab1d23645d5d44953b809474f1f67ec4b18f3f98d440e5b5aad'
 
