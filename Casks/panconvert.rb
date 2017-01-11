@@ -1,12 +1,12 @@
 cask 'panconvert' do
-  version '0.1.5'
-  sha256 '98ab46e9ac375b155d9361480e2d180fc2caf9905d55a64ea2faca3873b80ff9'
+  version '0.2.0'
+  sha256 'bd678333401cddbeb90a75d20ce3581baa752843d53d3a25b821dbbebc1b04bf'
 
-  url "https://downloads.sourceforge.net/panconvert/PanConvert-#{version}.dmg"
-  appcast 'https://raw.githubusercontent.com/apaeffgen/PanConvert/master/docs/changelog.md',
-          checkpoint: '619da3f895d1553f9a34f92385be79c158a6418ef8b3650af915586f9d7f81f5'
+  url "https://downloads.sourceforge.net/panconvert/PanConvert-#{version}.app.dmg"
+  appcast 'https://sourceforge.net/projects/panconvert/rss?path=/Newest',
+          checkpoint: '3895fa9fc4f9b5c5603f3af53f6dff0bacb41498e22c448cb8d99a563c65b5b8'
   name 'PanConvert'
   homepage 'http://panconvert.sourceforge.net/'
 
-  app 'PanConvert.app'
+  app "PanConvert-#{version}.app"
 end
