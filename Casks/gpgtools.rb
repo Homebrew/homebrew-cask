@@ -26,9 +26,10 @@ cask 'gpgtools' do
 
   uninstall_postflight do
     system_command '/usr/bin/killall', args: ['-kill', 'gpg-agent']
-    system_command '/bin/bash', args: ['-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg2)"      =~ MacGPG2 ]] && /bin/rm -f /usr/local/bin/gpg2']
-    system_command '/bin/bash', args: ['-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg)"       =~ MacGPG2 ]] && /bin/rm -f /usr/local/bin/gpg']
-    system_command '/bin/bash', args: ['-c', '[[ "$(/usr/bin/readlink /usr/local/bin/gpg-agent)" =~ MacGPG2 ]] && /bin/rm -f /usr/local/bin/gpg-agent']
+
+    %w(gpg gpg2 gpg-agent).map { |exec| "/usr/local/bin/#{exec}" }.each do |exec_location|
+      system_command '/bin/bash', args: ['-c', "[[ $(/usr/bin/readlink #{exec_location})      =~ MacGPG2 ]] && /bin/rm -f #{exec_location}"] if File.exist?(exec_location)
+    end
   end
 
   uninstall pkgutil:   'org.gpgtools.*',
