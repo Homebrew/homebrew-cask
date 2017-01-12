@@ -4,6 +4,8 @@ cask 'sopcast' do
 
   # download.sopcast.com/download was verified as official when first introduced to the cask
   url "http://download.sopcast.com/download/SopCastOSX-#{version}.zip"
+  appcast 'http://www.sopcast.org/download/mac.html',
+          checkpoint: '673096d87f25ade59b657b1b5e389b702b61440727f68db2337ab0730185def9'
   name 'SopCast'
   homepage 'http://www.sopcast.org/'
 
