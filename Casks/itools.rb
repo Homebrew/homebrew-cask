@@ -1,6 +1,6 @@
 cask 'itools' do
-  version '2.9.1'
-  sha256 '56e888c6c65784604ee3a48bbc0013bdf0c1f73e70e72e230699f45243f5f977'
+  version '2.9.2'
+  sha256 'cd74e55b8b92a8c1a75278ad7c02baf5521b51241505620c282e9547cd20afcd'
 
   # dl2.itools.hk/dl was verified as official when first introduced to the cask
   url "http://dl2.itools.hk/dl/iTools64_#{version}.dmg"
