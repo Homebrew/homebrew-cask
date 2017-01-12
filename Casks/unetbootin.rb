@@ -4,6 +4,8 @@ cask 'unetbootin' do
 
   # launchpad.net/unetbootin was verified as official when first introduced to the cask
   url "http://launchpad.net/unetbootin/trunk/#{version}/+download/unetbootin-mac-#{version}.dmg"
+  appcast 'https://github.com/unetbootin/unetbootin/releases.atom',
+          checkpoint: 'f9e92d09e934f9ed61ac373f7ec4a9659f8917dbe5370964185bf9a88c31ca86'
   name 'UNetbootin'
   homepage 'https://unetbootin.github.io/'
 
