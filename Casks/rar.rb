@@ -12,7 +12,7 @@ cask 'rar' do
   artifact 'rar/rarfiles.lst', target: '/usr/local/etc/rarfiles.lst'
 
   caveats <<-EOS.undent
-    Instructions on using rar and unrar are aviable in
+    Instructions on using rar and unrar are available in
 
       #{staged_path}/rar/rar.txt
   EOS
