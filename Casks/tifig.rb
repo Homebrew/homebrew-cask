@@ -4,6 +4,8 @@ cask 'tifig' do
 
   # tifig-downloads.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://tifig-downloads.s3.amazonaws.com/tifig-#{version}-macosx.cocoa.x86_64.tar.gz"
+  appcast 'https://www.tifig.net/download/',
+          checkpoint: '5aade911f27a689391d5114b59a5c1a0d0cb42566fe916629728f405852d6b4f'
   name 'Tifig'
   homepage 'https://www.tifig.net/'
 
