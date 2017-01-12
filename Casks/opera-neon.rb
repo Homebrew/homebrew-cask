@@ -8,6 +8,8 @@ cask 'opera-neon' do
 
   app 'Opera Neon.app'
 
-  zap delete: '~/Library/Application Support/Opera Neon'
-  zap delete: '~/Library/Caches/Opera Neon'
+  zap delete: [
+                '~/Library/Application Support/Opera Neon',
+                '~/Library/Caches/Opera Neon',
+              ]
 end
