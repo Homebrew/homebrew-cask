@@ -4,6 +4,8 @@ cask 'pikopixel' do
 
   url "http://twilightedge.com/downloads/PikoPixel.#{version}.dmg",
       user_agent: :fake
+  appcast 'http://twilightedge.com/mac/pikopixel/history.html',
+          checkpoint: 'ed0c1ad08e1ad6e16901fec8a50cfe91c3fde3e5e02bfe39a29a42f6a0ae78fd'
   name 'PikoPixel'
   homepage 'http://twilightedge.com/mac/pikopixel/'
 
