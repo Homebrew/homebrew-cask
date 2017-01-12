@@ -1,4 +1,4 @@
-cask 'db-papyrus' do
+cask 'morkro-papyrus' do
   version '1.0.0'
   sha256 'cd88cd942504aa676879d86ba7c435ba8250db05525f0482a0c3812d069abf21'
 
