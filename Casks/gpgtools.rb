@@ -26,13 +26,16 @@ cask 'gpgtools' do
 
   uninstall_postflight do
     system_command '/usr/bin/killall', args: ['-kill', 'gpg-agent']
-
-    %w(gpg gpg2 gpg-agent).map { |exec| "/usr/local/bin/#{exec}" }.each do |exec_location|
-      system_command '/bin/bash', args: ['-c', "[[ $(/usr/bin/readlink #{exec_location})      =~ MacGPG2 ]] && /bin/rm -f #{exec_location}"] if File.exist?(exec_location)
-    end
+    system_command '/bin/bash', args: ['-c', '[[ -f /usr/local/bin/gpg2      ]] && [[ "$(/usr/bin/readlink /usr/local/bin/gpg2)"      =~ MacGPG2 ]] && /bin/rm -f /usr/local/bin/gpg2']
+    system_command '/bin/bash', args: ['-c', '[[ -f /usr/local/bin/gpg       ]] && [[ "$(/usr/bin/readlink /usr/local/bin/gpg)"       =~ MacGPG2 ]] && /bin/rm -f /usr/local/bin/gpg']
+    system_command '/bin/bash', args: ['-c', '[[ -f /usr/local/bin/gpg-agent ]] && [[ "$(/usr/bin/readlink /usr/local/bin/gpg-agent)" =~ MacGPG2 ]] && /bin/rm -f /usr/local/bin/gpg-agent']
   end
 
-  uninstall pkgutil:   'org.gpgtools.*',
+  uninstall script:    {
+                         executable: "#{staged_path}/Uninstall.app/Contents/Resources/GPG Suite Uninstaller.app/Contents/Resources/uninstall.sh",
+                         sudo:       true,
+                       }
+            pkgutil:   'org.gpgtools.*',
             quit:      [
                          'com.apple.mail',
                          'org.gpgtools.gpgkeychainaccess',
