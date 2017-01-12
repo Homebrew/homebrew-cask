@@ -18,4 +18,4 @@ cask 'baiducloud' do
                 '~/Library/Preferences/com.baidu.netdiskmac.plist',
                 '~/Library/Caches/com.baidu.netdiskmac',
               ]
-end
+  
