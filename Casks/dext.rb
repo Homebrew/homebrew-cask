@@ -4,7 +4,7 @@ cask 'dext' do
 
   url "https://github.com/vutran/dext/releases/download/v#{version}/Dext-darwin-x64.zip"
   appcast 'https://github.com/vutran/dext/releases.atom',
-          checkpoint: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+          checkpoint: '8759a1def2fbe2580dda40dd7a87eade01b96001d83e86476c9fa13fccfacd3c'
   name 'Dext'
   homepage 'https://github.com/vutran/dext'
 
