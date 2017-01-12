@@ -12,6 +12,8 @@ cask 'ncar-ncl' do
     url 'https://www.earthsystemgrid.org/download/fileDownload.htm?logicalFileId=e085cc06-cd9a-11e4-bb80-00c0f03d5b7c'
   end
 
+  appcast 'https://www.ncl.ucar.edu/current_release.shtml',
+          checkpoint: '01ae7c6703902e423b5b506de488182cd02e6d9c14bd8f4fa5ebbf995a9be2f3'
   name 'NCAR Command Language'
   name 'ncl'
   homepage 'https://www.ncl.ucar.edu/'
