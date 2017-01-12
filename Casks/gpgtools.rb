@@ -28,7 +28,7 @@ cask 'gpgtools' do
     system_command '/usr/bin/killall', args: ['-kill', 'gpg-agent']
 
     %w(gpg gpg2 gpg-agent).map { |exec_name| "/usr/local/bin/#{exec_name}" }.each do |exec|
-      File.rm(exec) if (File.exist?(exec) && File.readlink(exec))
+      File.rm(exec) if (File.exist?(exec) && File.readlink(exec).include?('MacGPG2'))
     end
   end
 
