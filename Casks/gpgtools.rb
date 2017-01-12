@@ -26,9 +26,10 @@ cask 'gpgtools' do
 
   uninstall_postflight do
     system_command '/usr/bin/killall', args: ['-kill', 'gpg-agent']
-    system_command '/bin/bash', args: ['-c', '[[ -f /usr/local/bin/gpg2      ]] && [[ "$(/usr/bin/readlink /usr/local/bin/gpg2)"      =~ MacGPG2 ]] && /bin/rm -f /usr/local/bin/gpg2']
-    system_command '/bin/bash', args: ['-c', '[[ -f /usr/local/bin/gpg       ]] && [[ "$(/usr/bin/readlink /usr/local/bin/gpg)"       =~ MacGPG2 ]] && /bin/rm -f /usr/local/bin/gpg']
-    system_command '/bin/bash', args: ['-c', '[[ -f /usr/local/bin/gpg-agent ]] && [[ "$(/usr/bin/readlink /usr/local/bin/gpg-agent)" =~ MacGPG2 ]] && /bin/rm -f /usr/local/bin/gpg-agent']
+
+    %w(gpg gpg2 gpg-agent).map { |exec_name| "/usr/local/bin/#{exec_name}" }.each do |exec|
+      File.rm(exec) if (File.exist?(exec) && File.readlink(exec))
+    end
   end
 
   uninstall script:    {
