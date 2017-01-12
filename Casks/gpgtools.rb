@@ -25,6 +25,7 @@ cask 'gpgtools' do
   end
 
   uninstall_postflight do
+    # TODO: add kill to uninstall quit
     system_command '/usr/bin/killall', args: ['-kill', 'gpg-agent']
 
     %w(gpg gpg2 gpg-agent).map { |exec_name| "/usr/local/bin/#{exec_name}" }.each do |exec|
@@ -35,7 +36,7 @@ cask 'gpgtools' do
   uninstall script:    {
                          executable: "#{staged_path}/Uninstall.app/Contents/Resources/GPG Suite Uninstaller.app/Contents/Resources/uninstall.sh",
                          sudo:       true,
-                       }
+                       },
             pkgutil:   'org.gpgtools.*',
             quit:      [
                          'com.apple.mail',
