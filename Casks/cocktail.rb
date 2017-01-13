@@ -21,12 +21,12 @@ cask 'cocktail' do
     appcast 'https://www.maintain.se/downloads/sparkle/yosemite/yosemite.xml',
             checkpoint: 'ffe079c9b71d0f356c8a4d45ecf4f5a50e1d284c972b0a1e5cf92234d7a1010e'
   elsif MacOS.version == :el_capitan
-    version '9.4.1'
-    sha256 'bdcaa296adbcd070ed56ed9b1caa9670503d7090a40ffb7d11e887fa7770143d'
+    version '9.4.2'
+    sha256 'cd03c89532f9b08d6b3fb0c86a08307212b7f70f564c50589825f66ccf11fff3'
 
     url "https://www.maintain.se/downloads/sparkle/elcapitan/Cocktail_#{version}.zip"
     appcast 'https://www.maintain.se/downloads/sparkle/elcapitan/elcapitan.xml',
-            checkpoint: '8a0d7ac1a486872367a9f70e783736a754c34965fd31e750de289e1baa657eaf'
+            checkpoint: 'edc259968e1d28f3197019000270363a7c72ecb4c9bb163f83908382b0736995'
   else
     version '10.1.4'
     sha256 '8e77d08baa3b219cf188322256efbc52813bf7552204a7cd4e5ef10a284a43ef'
