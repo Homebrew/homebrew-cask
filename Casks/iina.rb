@@ -1,6 +1,6 @@
 cask 'iina' do
-  version '0.0.1'
-  sha256 'bfd2ebd9d615cf380814e0c4f334d6ee349e11f5178841e82a08d1e542677c53'
+  version '0.0.2'
+  sha256 '786a44c6cc118dfc97d2c91684b8e28f05dcaa3c64401f0505e1db4e67224d9d'
 
   # github.com/lhc70000/iina was verified as official when first introduced to the cask
   url "https://github.com/lhc70000/iina/releases/download/v#{version}/IINA.v#{version}.zip"
