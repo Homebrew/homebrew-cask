@@ -40,6 +40,7 @@ cask 'gpgtools' do
                          'org.gpgtools.gpgkeychainaccess',
                          'org.gpgtools.gpgkeychain',
                          'org.gpgtools.gpgservices',
+                         # TODO: add "killall -kill gpg-agent"
                        ],
             launchctl: [
                          'org.gpgtools.Libmacgpg.xpc',
