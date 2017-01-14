@@ -1,4 +1,4 @@
-cask 'vuo' do
+cask 'vuo-editor' do
   version '1.2.5'
   sha256 '0527a79ec76e6e8af434d3c9545c4dda298082eeb384de9fc4a6f1363db715f8'
 
