@@ -8,8 +8,6 @@ cask 'vuo' do
   name 'Vuo'
   homepage 'https://vuo.org/'
 
-  license :freemium
-
   app 'Vuo Editor.app'
 
   uninstall delete: '~/Library/Caches/org.vuo'
