@@ -9,4 +9,11 @@ cask 'beatunes' do
   depends_on macos: '>= :lion'
 
   app "beaTunes#{version.major}.app"
+
+  zap delete: [
+                '~/Library/Application Support/beaTunes',
+                '~/Library/Caches/beaTunes',
+                '~/Library/Logs/beaTunes',
+                '~/Library/Preferences/com.tagtraum.beatunes.plist',
+              ]
 end
