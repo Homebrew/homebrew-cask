@@ -9,5 +9,5 @@ cask 'grenchman' do
 
   depends_on formula: 'libffi'
 
-  binary 'grench-0.2.0-mac', target: 'grench'
+  binary "grench-#{version}-mac", target: 'grench'
 end
