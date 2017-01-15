@@ -4,7 +4,7 @@ cask 'ovito' do
 
   url "https://ovito.org/download/#{version}/ovito-#{version}-macos.dmg"
   name 'OVITO'
-  homepage 'https://ovito.org'
+  homepage 'https://ovito.org/'
 
   app 'Ovito.app'
 end

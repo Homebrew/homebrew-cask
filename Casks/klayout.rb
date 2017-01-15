@@ -5,7 +5,7 @@ cask 'klayout' do
   # klayout.org was verified as official when first introduced to the cask
   url "http://www.klayout.org/downloads/MacOS/klayout-#{version}-MacOSX-Yosemite-1-Qt487mp.dmg.bz2"
   name 'KLayout'
-  homepage 'http://www.klayout.de/'
+  homepage 'https://www.klayout.de/'
 
   suite 'KLayout'
 

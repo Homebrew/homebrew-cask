@@ -7,7 +7,7 @@ cask 'writefull' do
   appcast 'https://github.com/paraphrase-ai/writefull-releases/releases.atom',
           checkpoint: '7c9ae4a6c5ebb22eb50af62f4167c813c76da523a9743fd266fb45bff0a810c6'
   name 'Writefull'
-  homepage 'http://writefullapp.com/'
+  homepage 'https://writefullapp.com/'
 
   app "Writefull_#{version.major}beta.app"
 end

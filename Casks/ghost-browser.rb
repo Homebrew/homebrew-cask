@@ -4,7 +4,7 @@ cask 'ghost-browser' do
 
   url "https://ghostbrowser.com/ghostdev/downloads/GhostBrowser-#{version}.dmg"
   name 'Ghost Browser'
-  homepage 'https://ghostbrowser.com'
+  homepage 'https://ghostbrowser.com/'
 
   app 'Ghost Browser.app'
 end

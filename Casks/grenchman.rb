@@ -5,7 +5,7 @@ cask 'grenchman' do
   # technomancy.github.io/grenchman/downloads was verified as official when first introduced to the cask
   url "https://technomancy.github.io/grenchman/downloads/grench-#{version}-mac"
   name 'Grenchman'
-  homepage 'http://leiningen.org/grench.html'
+  homepage 'https://leiningen.org/grench.html'
 
   depends_on formula: 'libffi'
 

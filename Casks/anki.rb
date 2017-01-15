@@ -9,7 +9,7 @@ cask 'anki' do
 
   url "http://ankisrs.net/download/mirror/anki-#{version}.dmg"
   name 'Anki'
-  homepage 'https://ankisrs.net/'
+  homepage 'https://apps.ankisrs.net/'
 
   app 'Anki.app'
 end
