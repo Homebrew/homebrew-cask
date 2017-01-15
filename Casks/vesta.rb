@@ -1,9 +1,8 @@
 cask 'vesta' do
-  version :latest
-  sha256 :no_check
+  version '3.4.0'
+  sha256 'adc8e468ad53a79cccfa5aa3c0db113c9b6b656c032aa28fc8d6630b0714d133'
 
-  # geocities.jp/kmo_mma was verified as official when first introduced to the cask
-  url 'http://www.geocities.jp/kmo_mma/crystal/download/VESTA.dmg'
+  url "http://jp-minerals.org/vesta/archives/#{version}/VESTA.dmg"
   name 'VESTA'
   homepage 'http://jp-minerals.org/vesta/en/'
 
