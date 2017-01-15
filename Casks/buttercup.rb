@@ -7,7 +7,7 @@ cask 'buttercup' do
   appcast 'https://github.com/buttercup-pw/buttercup/releases.atom',
           checkpoint: 'f9509aad18521511b24c814258977ba56c153a5314aadaf11d9f93f34416bbed'
   name 'Buttercup'
-  homepage 'https://buttercup.pw'
+  homepage 'https://buttercup.pw/'
 
   app 'Buttercup.app'
 end

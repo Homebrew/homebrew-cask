@@ -5,7 +5,7 @@ cask 'abgx360' do
   # dropbox.com/u/59058148 was verified as official when first introduced to the cask
   url "https://dl.dropbox.com/u/59058148/abgx360-#{version}.pkg"
   name 'abgx360'
-  homepage 'http://abgx360.xecuter.com/'
+  homepage 'https://abgx360.xecuter.com/'
 
   pkg "abgx360-#{version}.pkg"
 

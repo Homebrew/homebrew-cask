@@ -5,7 +5,7 @@ cask 'citrix-receiver' do
   # downloadplugins.citrix.com.edgesuite.net was verified as official when first introduced to the cask
   url 'http://downloadplugins.citrix.com.edgesuite.net/Mac/CitrixReceiverWeb.dmg'
   name 'Citrix Receiver'
-  homepage 'https://www.citrix.com/go/receiver.html'
+  homepage 'https://www.citrix.com/products/receiver/'
 
   pkg 'Install Citrix Receiver.pkg'
 

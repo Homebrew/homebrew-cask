@@ -4,7 +4,7 @@ cask 'panoply' do
 
   url "http://www.giss.nasa.gov/tools/panoply/download/PanoplyMacOS-#{version}.dmg"
   name 'Panoply netCDF, HDF and GRIB Data Viewer'
-  homepage 'http://www.giss.nasa.gov/tools/panoply/'
+  homepage 'https://www.giss.nasa.gov/tools/panoply/'
 
   app 'Panoply.app'
 
