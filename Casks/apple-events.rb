@@ -4,7 +4,7 @@ cask 'apple-events' do
 
   url "https://github.com/insidegui/AppleEvents/releases/download/#{version}/AppleEvents_v#{version}_r.zip"
   appcast 'https://github.com/insidegui/AppleEvents/releases.atom',
-          checkpoint: '751efe3487fe195362e1967f84e919a33138d3df47bf738c394bc0fad68a0a34'
+          checkpoint: '475d39ed0b4a3084af4f7a1068a49065fc7833973b08f3479a57f7f766668d8e'
   name 'Apple Events'
   homepage 'https://github.com/insidegui/AppleEvents'
 
