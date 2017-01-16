@@ -4,7 +4,7 @@ cask 'soundflowerbed' do
 
   url "https://github.com/mLupine/SoundflowerBed/releases/download/#{version}-release/SoundflowerBed-#{version}-release.dmg"
   appcast 'https://github.com/mLupine/SoundflowerBed/releases.atom',
-          checkpoint: '2b823e11493170b24d4542d396c8f964792fa951b24443559a31141bb2b14a42'
+          checkpoint: '60120402605c0241c7cfba987f2dd7cf8039ed3089ecb82e9fbf316fe1d101de'
   name 'SoundflowerBed'
   homepage 'https://github.com/mLupine/SoundflowerBed'
 

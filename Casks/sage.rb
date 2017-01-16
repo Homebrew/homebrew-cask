@@ -20,7 +20,6 @@ cask 'sage' do
   homepage 'https://www.sagemath.org/'
 
   depends_on macos: '>= :lion'
-  depends_on arch: :x86_64
 
   app "SageMath-#{version}.app"
   binary "#{appdir}/SageMath-#{version}.app/Contents/Resources/sage/sage"

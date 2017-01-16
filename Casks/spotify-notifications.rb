@@ -1,11 +1,10 @@
 cask 'spotify-notifications' do
-  version '0.5.2'
-  sha256 'c464da41ae084dfc208c94656e33465c86721a54391f2ee1ecba29e269296972'
+  version '0.6.0'
+  sha256 '136f676a4580a561ca08edf13a79a5cea5878f276ff6a38e3f2bb96aeca61031'
 
-  # github.com/citruspi/Spotify-Notifications was verified as official when first introduced to the cask
-  url "https://github.com/citruspi/Spotify-Notifications/releases/download/#{version}/Spotify.Notifications.-.#{version}.zip"
+  url "https://downloads.spotify-notifications.citruspi.io/#{version}-release.zip"
   appcast 'https://github.com/citruspi/Spotify-Notifications/releases.atom',
-          checkpoint: '3ab1004774c7424ba472adbc993a95cd5cbbb424b45283470e11824556c269e7'
+          checkpoint: 'cd99bce96073c73d5b6332e1de2d34bed20f21c62ee2d02876fe024bb4ed305a'
   name 'Spotify Notifications'
   homepage 'https://spotify-notifications.citruspi.io/'
 

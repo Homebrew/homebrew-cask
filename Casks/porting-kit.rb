@@ -1,16 +1,15 @@
 cask 'porting-kit' do
-  version '2.4.154'
-  sha256 '9c19758fa078403f8158f93843398c35276227e8c9bd6dcd3d9ae6416719517d'
+  version '2.4.185'
+  sha256 '7b608cab1e7d15a11db769c3cfbd651fe61114a902168bb75d629ce18c3997b8'
 
   url "http://portingkit.com/kit/Porting%20Kit%20#{version}.zip"
   appcast 'http://portingkit.com/kit/updatecast.xml',
-          checkpoint: '5b8db697627be14c9658f19b8cec0ce182674bd946a06c6fc445a31a3bff061d'
+          checkpoint: '7b111a9b16065c844628623fe868293634dac11dab4af0dbd63c8d2c1ab913ab'
   name 'Porting Kit'
   homepage 'http://portingkit.com/en/'
 
   auto_updates true
   conflicts_with cask: 'caskroom/versions/porting-kit-legacy'
-  depends_on macos: '>= :snow_leopard'
 
   app 'Porting Kit.app'
 

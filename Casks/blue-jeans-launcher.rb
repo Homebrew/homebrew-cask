@@ -6,8 +6,6 @@ cask 'blue-jeans-launcher' do
   name 'Blue Jeans videoconferencing'
   homepage 'https://www.bluejeans.com/'
 
-  depends_on macos: '>= 10.6'
-
   installer manual: 'Blue Jeans Launcher.app'
 
   uninstall signal: [

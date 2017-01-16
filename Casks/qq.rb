@@ -1,6 +1,6 @@
 cask 'qq' do
-  version '5.2.0'
-  sha256 '4a0d67db88c533b98d19b5f163259e765988339bad4c1e7b9bb72e0c5354d7c3'
+  version '5.4.0'
+  sha256 'b5f3df23ec7b7db1ffcd15e22fc2f8a217c9a943c828b084c059d769d767b3c1'
 
   url "http://dldir1.qq.com/qqfile/QQforMac/QQ_V#{version}.dmg"
   name 'QQ'
@@ -14,11 +14,13 @@ cask 'qq' do
                 '~/Library/Application Scripts/FN2V63AD2J.com.tencent.ScreenCapture2',
                 '~/Library/Application Scripts/FN2V63AD2J.com.tencent.localserver2',
                 '~/Library/Application Scripts/com.tencent.qq',
+                '~/Library/Caches/com.tencent.qq',
                 '~/Library/Containers/FN2V63AD2J.com.tencent.ScreenCapture2',
                 '~/Library/Containers/FN2V63AD2J.com.tencent.localserver2',
                 '~/Library/Containers/com.tencent.qq',
                 '~/Library/Group Containers/FN2V63AD2J.com.tencent',
                 '~/Library/Preferences/com.tencent.qq.plist',
                 '~/Library/Saved Application State/com.tencent.qq.savedState',
+                '~/Library/WebKit/com.tencent.qq',
               ]
 end

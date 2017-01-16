@@ -128,6 +128,6 @@ When the token for a new Cask would otherwise conflict with the token of an alre
 
 ## With a formula
 
-If a Homebrew formula and a Homebrew-Cask cask both exist with the same token and they both refer to the same app — respectively a CLI a GUI — and the GUI app is simply a wrapper of the CLI tool but has been decided to provide enough value to warrant the inclusion of both the formula and the cask, the cask will have the `-app` suffix. This is the only instance where an `-app` suffix is allowed, precisely so the “why” is clear if you know the rule.
+If a Homebrew formula and a Homebrew-Cask cask both exist with the same token and they both refer to the same app — respectively a CLI and a GUI — and the GUI app is simply a wrapper of the CLI tool but has been decided to provide enough value to warrant the inclusion of both the formula and the cask, the cask will have the `-app` suffix. This is the only instance where an `-app` suffix is allowed, precisely so the “why” is clear when you know the rule.
 
 # <3 THANK YOU TO ALL CONTRIBUTORS! <3

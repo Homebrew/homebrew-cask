@@ -1,6 +1,6 @@
 cask 'intellij-idea' do
-  version '2016.3'
-  sha256 'd2b3a583f6bec919c7d260a0faeaccd55b34b7d10dc268a1dfe5b38eeaeb55a1'
+  version '2016.3.2'
+  sha256 'ccf1179a67f7b9d57b96c17aa99da57cc9dcdeedbf6570c7487cfc8f555b11b0'
 
   url "https://download.jetbrains.com/idea/ideaIU-#{version}.dmg"
   name 'IntelliJ IDEA'
@@ -15,5 +15,7 @@ cask 'intellij-idea' do
                 "~/Library/Logs/IntelliJIdea#{version.major_minor}",
                 "~/Library/Application Support/IntelliJIdea#{version.major_minor}",
                 "~/Library/Preferences/IntelliJIdea#{version.major_minor}",
+                '~/Library/Preferences/com.jetbrains.intellij.plist',
+                '~/Library/Saved Application State/com.jetbrains.intellij.savedState',
               ]
 end

@@ -1,11 +1,11 @@
 cask 'gnucash' do
-  version '2.6.14-1,a'
-  sha256 '529525a883d57b3484e33997d751580d4038665718cd54b67a5595c1b32c5b17'
+  version '2.6.15-1'
+  sha256 '009a33dc8d0ac6dd73a380085a62900fcc469e290c0d5001970c87c7a9d7d9a5'
 
   # github.com/Gnucash/gnucash was verified as official when first introduced to the cask
-  url "https://github.com/Gnucash/gnucash/releases/download/#{version.major_minor_patch}#{version.after_comma}/Gnucash-Intel-#{version.before_comma}.dmg"
+  url "https://github.com/Gnucash/gnucash/releases/download/#{version.major_minor_patch}/Gnucash-Intel-#{version}.dmg"
   appcast 'https://github.com/Gnucash/gnucash/releases.atom',
-          checkpoint: 'db34621e345a2c5b1f34d81ed698449eb617cc344468045ec263fb792558716c'
+          checkpoint: '7e9f730f8d4d5434a3da8c14a5880d8d253ff7e17ca3cb7036a5677e1739ba80'
   name 'GnuCash'
   homepage 'https://www.gnucash.org/'
 

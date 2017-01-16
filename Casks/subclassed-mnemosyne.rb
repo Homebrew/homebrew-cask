@@ -1,6 +1,6 @@
 cask 'subclassed-mnemosyne' do
-  version '1.1'
-  sha256 'c641f423f449104615f614bedc7a54938ae67b63a97842351a3258b0a283f6b3'
+  version :latest
+  sha256 :no_check
 
   url 'https://www.subclassed.com/download/Mnemosyne.zip'
   name 'Mnemosyne'

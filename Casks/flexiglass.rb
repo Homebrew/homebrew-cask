@@ -8,8 +8,5 @@ cask 'flexiglass' do
   name 'Flexiglass'
   homepage 'https://nulana.com/flexiglass/'
 
-  depends_on macos: '>= :snow_leopard'
-  depends_on arch: :intel
-
   app 'Flexiglass.app'
 end

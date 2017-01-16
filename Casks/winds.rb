@@ -7,7 +7,7 @@ cask 'winds' do
   appcast 'https://github.com/GetStream/Winds/releases.atom',
           checkpoint: '0bbe523d705c737a8fd063038d2fc299af8717a449c6b57fb644185824da2060'
   name 'Winds'
-  homepage 'https://winds.getstream.io'
+  homepage 'https://winds.getstream.io/'
 
   app 'Winds.app'
 end

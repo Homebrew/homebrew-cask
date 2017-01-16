@@ -1,6 +1,6 @@
 cask 'insomnia' do
-  version '4.0.9'
-  sha256 '7cf66c24d3a32d6569c2988ed029f81a82cc3ff35eb3c30d9f2dcfa8f8e5c07d'
+  version '4.0.13'
+  sha256 '8cf4abe469302b025deb496db1179fcfc99907a74130d9ae74dde36417faa45f'
 
   url "https://downloads.insomnia.rest/mac/Insomnia-#{version}.dmg"
   name 'Insomnia'

@@ -6,7 +6,7 @@ cask 'adobe-reader' do
   name 'Adobe Acrobat Reader DC'
   homepage 'https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html'
 
-  depends_on macos: '>= 10.9'
+  depends_on macos: '>= :mavericks'
 
   pkg "AcroRdrDC_#{version.no_dots}_MUI.pkg"
 

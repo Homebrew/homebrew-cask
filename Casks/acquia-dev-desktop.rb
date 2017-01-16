@@ -1,6 +1,6 @@
 cask 'acquia-dev-desktop' do
-  version '2-2015-11-22'
-  sha256 'f874833d950e52a06acda5ba7cc93ba8d083728934c6f5f4fb741dc7b5424631'
+  version '2-2016-08-11'
+  sha256 '501ac0e0646905f39314d5f1404733b96e990b9c2e1b786186371bca89fa8d83'
 
   url "https://www.acquia.com/sites/default/files/downloads/dev-desktop/AcquiaDevDesktop-#{version}.dmg"
   name 'Acquia Dev Desktop'

@@ -1,6 +1,6 @@
 cask 'packages' do
-  version '1.1.3'
-  sha256 'fb9baad763db3a1767b047ab7b634ae764f22e94f0e8285d143d9c34e72c1672'
+  version :latest
+  sha256 :no_check
 
   url 'http://s.sudre.free.fr/Software/files/Packages.dmg'
   name 'Packages'

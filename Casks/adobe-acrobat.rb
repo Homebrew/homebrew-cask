@@ -8,7 +8,7 @@ cask 'adobe-acrobat' do
   name 'Adobe Acrobat Pro DC'
   homepage 'https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html'
 
-  depends_on macos: '>= 10.9'
+  depends_on macos: '>= :mavericks'
 
   pkg "Acrobat #{version}/Acrobat #{version} Installer.pkg"
 

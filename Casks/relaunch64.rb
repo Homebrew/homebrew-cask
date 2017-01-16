@@ -10,7 +10,5 @@ cask 'relaunch64' do
   name 'Relaunch64'
   homepage 'http://www.popelganda.de/relaunch64.html'
 
-  depends_on arch: :x86_64
-
   app 'Relaunch64.app'
 end

@@ -1,6 +1,6 @@
 cask 'mobile-mouse-server' do
-  version '3.3.2'
-  sha256 'cb20bcb4afcee39d0dfaf91caf796c413728ff7bdd5a6b2c987ac2e09bc55a8e'
+  version '3.3.4'
+  sha256 'd113c105a5ae3d20b06cd6e47354f890b06947373c726fb0f4970f3f48a4b047'
 
   url "http://mobilemouse.com/downloads/OS_X_Server_#{version.dots_to_underscores}.dmg"
   name 'Mobile Mouse Server'

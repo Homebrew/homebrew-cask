@@ -1,12 +1,14 @@
 cask 'libreoffice' do
-  version '5.2.3'
-  sha256 '7f842a38e00312b6283341af3323433558bc155495cf54206dc88a5dd3abe277'
+  version '5.2.4'
+  sha256 '9359d8cf8aa5f1692894843fdd2ac0d166a0d173601b578e592498ab04f7c870'
 
   # documentfoundation.org was verified as official when first introduced to the cask
   url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg"
   name 'LibreOffice'
   homepage 'https://www.libreoffice.org/'
   gpg "#{url}.asc", key_id: 'c2839ecad9408fbe9531c3e9f434a1efafeeaea3'
+
+  depends_on macos: '>= :mountain_lion'
 
   app 'LibreOffice.app'
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/gengal"

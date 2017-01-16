@@ -1,6 +1,6 @@
 cask 'laverna' do
-  version '0.7.1'
-  sha256 '2044a681fa23583510e1a8a6a151c21cbd083f29cc66c79ad1e40c27c5a5828b'
+  version '0.7.3'
+  sha256 'd3fcc7ccc7130502093a53963dd0cb5dadfc37280420a3c5647de5b60424532e'
 
   # github.com/Laverna/laverna was verified as official when first introduced to the cask
   url "https://github.com/Laverna/laverna/releases/download/#{version}/laverna-#{version}-darwin-x64.zip"

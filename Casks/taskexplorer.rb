@@ -4,6 +4,8 @@ cask 'taskexplorer' do
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/TaskExplorer_#{version}.zip"
+  appcast 'https://objective-see.com/products.json',
+          checkpoint: 'b2004932186e0eb176a9ac01fe499de292d502d7a17559e900822f9cdbfa74d6'
   name 'TaskExplorer'
   homepage 'https://objective-see.com/products/taskexplorer.html'
 

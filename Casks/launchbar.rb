@@ -4,8 +4,8 @@ cask 'launchbar' do
     sha256 '22a1ec0c10de940e5efbcccd18b8b048d95fb7c63213a01c7976a76d6be69a4d'
     url "https://www.obdev.at/downloads/launchbar/legacy/LaunchBar-#{version}.dmg"
   else
-    version '6.7.2'
-    sha256 'ee956df6736e61a61fd169cfdc6d32d51ce2fab465ef648e61a0965c768e2415'
+    version '6.8'
+    sha256 '317b68072e4b2e88cf66a52ca3f23c35f50f26ae8e8e61d58089cee6b956d36c'
     url "https://www.obdev.at/downloads/launchbar/LaunchBar-#{version}.dmg"
   end
 

@@ -1,10 +1,10 @@
 cask 'aria-maestosa' do
-  version '1.4.9'
-  sha256 '3a8d8bc625a6e27b2312ff1c008e78b64c94faa5ef263c85c6005e72a98ec1bf'
+  version '1.4.13'
+  sha256 'a3a04954ff7258141d4762659f49a204e42f24a06fab6ba318f47a749e6398c0'
 
   url "https://downloads.sourceforge.net/ariamaestosa/AriaMaestosa-osx-#{version}.zip"
   appcast 'https://sourceforge.net/projects/ariamaestosa/rss',
-          checkpoint: '477668fd1065310b682c7ced2a01f4be95af808290674d9598ff2895122cad3a'
+          checkpoint: '27ab42b1eaccdf79de35fa54c8dfd33c8e25b079a221e14d11e7d17efb64cac6'
   name 'Aria Maestosa'
   homepage 'http://ariamaestosa.sourceforge.net/'
 

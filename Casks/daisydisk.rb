@@ -18,8 +18,6 @@ cask 'daisydisk' do
   name 'DaisyDisk'
   homepage 'https://daisydiskapp.com/'
 
-  depends_on macos: '>= :snow_leopard'
-
   app 'DaisyDisk.app'
 
   postflight do

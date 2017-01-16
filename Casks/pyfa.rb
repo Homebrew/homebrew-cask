@@ -1,10 +1,10 @@
 cask 'pyfa' do
-  version '1.25.1,1.9'
-  sha256 'd3d5bb635a5b95f64ef9e133e11f0717a214abf4a5e46c275a293549783ab8ac'
+  version '1.26.0,yc118.10-1.2'
+  sha256 'd5df452ab38ba29ffe1a1bbe1a7316d64f5ce8b8d52c3cac345d870ce4a92b01'
 
-  url "https://github.com/pyfa-org/Pyfa/releases/download/v#{version.before_comma}/pyfa-#{version.before_comma}-ascension-#{version.after_comma}-mac.zip"
+  url "https://github.com/pyfa-org/Pyfa/releases/download/v#{version.before_comma}/pyfa-#{version.before_comma}-#{version.after_comma}-mac.zip"
   appcast 'https://github.com/pyfa-org/Pyfa/releases.atom',
-          checkpoint: '5a93c2b3880881738825b904a189b632147b2d5a9cc3a3a8fa75c8582048d0ba'
+          checkpoint: '04ce83834d317aeb2747275feb2470d72dd7e6664fd76e08383059b131eb153e'
   name 'pyfa'
   homepage 'https://github.com/pyfa-org/Pyfa'
 

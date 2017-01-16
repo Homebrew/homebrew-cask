@@ -50,7 +50,7 @@ cask 'wireshark-chmodbpf' do
                      ]
 
   caveats do
-    puts <<-EOS.undent
+    <<-EOS.undent
       This cask will install only the ChmodBPF package from the current Wireshark
       stable install package.
       An access_bpf group will be created and its members allowed access to BPF

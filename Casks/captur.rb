@@ -1,11 +1,13 @@
 cask 'captur' do
-  version '2.4'
-  sha256 '1f6f19806290c1c366701a8391fdc26cae3b1a54e3d54d715e420346eeb66648'
+  version '3.2'
+  sha256 '63c1881ba5ee8675f3f60135de0106dbe3948e3d8bb997c8d8f9557dd6c07834'
 
   # dropboxusercontent.com/u/27027504 was verified as official when first introduced to the cask
-  url "https://dl.dropboxusercontent.com/u/27027504/captur-#{version}.dmg.zip"
+  url "https://dl.dropboxusercontent.com/u/27027504/captur-#{version}.zip"
   name 'Captur'
   homepage 'https://cambhlumbulunk.blogspot.com/p/captur.html'
 
-  app '64 Bit/Captur.app'
+  depends_on macos: '>= :yosemite'
+
+  app 'Captur.app'
 end

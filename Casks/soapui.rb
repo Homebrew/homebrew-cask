@@ -1,9 +1,9 @@
 cask 'soapui' do
-  version '5.2.1'
-  sha256 '773cb3aaa269e14ed34f06d931b6898e6a8ad16d9d08d67cc4935e137bfbe37c'
+  version '5.3.0'
+  sha256 '3d82a64d0573f136511b3591c060d59d78e8db356fc03df4d003dce83ec967c8'
 
-  # downloads.smartbear.com/soapui-os was verified as official when first introduced to the cask
-  url "https://downloads.smartbear.com/soapui-os/SoapUI-#{version}.dmg"
+  # cdn01.downloads.smartbear.com/soapui was verified as official when first introduced to the cask
+  url "http://cdn01.downloads.smartbear.com/soapui/#{version}/SoapUI-#{version}.dmg"
   name 'SmartBear SoapUI'
   homepage 'https://www.soapui.org/'
 

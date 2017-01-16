@@ -1,9 +1,9 @@
 cask 'baiducloud' do
-  version '2.4.4'
-  sha256 '0a1a438f9ab69d67f0d53d585f0a8c5db7fdbb84ab0c0df55fc06068a67b8149'
+  version '2.4.5'
+  sha256 '7694edba46c8e53ffd2d2485dad4d68b06e27cc038d18cdd40699d1c0e559ba2'
 
   # issuecdn.baidupcs.com was verified as official when first introduced to the cask
-  url "http://issuecdn.baidupcs.com/issue/netdisk/macapk/BaiduYun_#{version}.dmg"
+  url "http://issuecdn.baidupcs.com/issue/netdisk/macapk/BaiduNetdisk_mac_#{version}.dmg"
   name 'Baidu Cloud'
   name 'Baidu Yun Tong Bu Pan'
   name '百度云同步盘'

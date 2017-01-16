@@ -8,7 +8,6 @@ cask 'minishift' do
   name 'Minishift'
   homepage 'https://github.com/minishift/minishift'
 
-  depends_on arch: :x86_64
   container type: :naked
 
   binary 'minishift-darwin-amd64', target: 'minishift'

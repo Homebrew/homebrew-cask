@@ -12,21 +12,21 @@ cask 'ncar-ncl' do
     url 'https://www.earthsystemgrid.org/download/fileDownload.htm?logicalFileId=e085cc06-cd9a-11e4-bb80-00c0f03d5b7c'
   end
 
+  appcast 'https://www.ncl.ucar.edu/current_release.shtml',
+          checkpoint: '01ae7c6703902e423b5b506de488182cd02e6d9c14bd8f4fa5ebbf995a9be2f3'
   name 'NCAR Command Language'
   name 'ncl'
   homepage 'https://www.ncl.ucar.edu/'
 
   depends_on cask: 'xquartz'
   depends_on formula: 'gcc'
-  depends_on macos: '>= 10.8'
-  depends_on arch: :x86_64
+  depends_on macos: '>= :mountain_lion'
 
   artifact 'include', target: '/usr/local/ncl-6.3.0/include'
   artifact 'bin', target: '/usr/local/ncl-6.3.0/bin'
   artifact 'lib', target: '/usr/local/ncl-6.3.0/lib'
 
-  caveats do
-    <<-EOS.undent
+  caveats <<-EOS.undent
     To use ncar-ncl, you must add the $NCARG_ROOT/bin directory
     to your PATH environment variable.
 
@@ -42,6 +42,5 @@ cask 'ncar-ncl' do
 
     For other information, please see:
     https://www.ncl.ucar.edu/Download/macosx.shtml
-    EOS
-  end
+  EOS
 end

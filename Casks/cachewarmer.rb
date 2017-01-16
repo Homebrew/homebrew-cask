@@ -1,9 +1,11 @@
 cask 'cachewarmer' do
-  version '17'
-  sha256 'f048be607937ca2884fd64dd5f324cb814ab3ae2e45de64e5978c09709b398ed'
+  version '20'
+  sha256 'b40dd4d7a50cf8a5be3bc570bfa83a590ff354b08970b671053cc940cdbcf317'
 
   # s3.amazonaws.com/assetcache.io was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/assetcache.io/CacheWarmer-#{version}.pkg"
+  appcast 'https://assetcache.io/cachewarmer/release-notes/',
+          checkpoint: 'f2c04c1692040d0f8c4da6957cf4b510e6089c0bb53d2b80620bbab1359dc2f9'
   name 'CacheWarmer'
   homepage 'https://assetcache.io/cachewarmer/'
 

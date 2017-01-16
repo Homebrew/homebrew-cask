@@ -1,10 +1,10 @@
 cask 'hewlettpackardprinterdrivers' do
-  version '3.1'
-  sha256 'd8b618878b1949496197e31ee4b8d36b50ad6169cc5acef8c1cb1917e6b4200b'
+  version '5.0'
+  sha256 '02aba5aacbc812d995a3818a1b032f5b1e6aa124060ed5405f0e73d8be726667'
 
-  url "https://support.apple.com/downloads/DL907/en_US/hpprinterdriver#{version}.dmg"
+  url "http://support.apple.com/downloads/DL1888/en_US/hpprinterdrivers#{version}.dmg"
   name 'HP Printer Drivers'
-  homepage 'https://support.apple.com/kb/DL907'
+  homepage 'https://support.apple.com/kb/DL1888'
 
   pkg 'HewlettPackardPrinterDrivers.pkg'
 

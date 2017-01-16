@@ -1,6 +1,6 @@
 cask 'brow' do
-  version '1.0'
-  sha256 'f646b89e63853edab7dfae701f10074b0b966f624d2c1e412f0c07cdeeff2eeb'
+  version :latest
+  sha256 :no_check
 
   url 'https://www.timschroeder.net/files/brow.zip'
   name 'Brow'

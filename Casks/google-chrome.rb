@@ -12,6 +12,8 @@ cask 'google-chrome' do
   app 'Google Chrome.app'
 
   zap delete: [
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.chrome.app.*.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.chrome.sfl',
                 '~/Library/Application Support/Google/Chrome',
                 '~/Library/Caches/Google/Chrome',
                 '~/Library/Caches/com.google.Chrome',

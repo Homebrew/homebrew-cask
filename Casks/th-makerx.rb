@@ -1,6 +1,6 @@
 cask 'th-makerx' do
-  version '3.6.0'
-  sha256 '7b45203fc92355a4c1714a85c48bc6ac5ab9d9ee3762fa500c94cd68c6d60792'
+  version '3.7.0'
+  sha256 '6c835eeb64a38f1dedabfe826703e2f4211adbbadcf4179fb2cb7200e149aca2'
 
   url "http://www5.wind.ne.jp/miko/mac_soft/th-maker_x/hqx/Th-MakerX_#{version.no_dots}.zip"
   name 'Th-MakerX'

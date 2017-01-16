@@ -1,15 +1,12 @@
 cask 'mysql-connector-python' do
-  version '2.1.3'
-  sha256 '49655f970317383fc188ff48c777ade58be40d05d33be44c1c5e676546e41ba4'
+  version '2.1.5'
+  sha256 'd95dec32546fd7c3ca96bd3f65da374d2e9861ab3c145e2dddb80ac40acc1331'
 
-  if MacOS.version <= :mountain_lion
-    url "http://dev.mysql.com/get/Downloads/Connector-Python/mysql-connector-python-#{version}-osx10.8.dmg"
-  else
-    url "http://dev.mysql.com/get/Downloads/Connector-Python/mysql-connector-python-#{version}-osx10.9.dmg"
-  end
-
+  url "http://dev.mysql.com/get/Downloads/Connector-Python/mysql-connector-python-#{version}-macos10.12.dmg"
   name 'MySQL Connector for Python'
-  homepage 'https://dev.mysql.com/downloads/utilities/'
+  homepage 'https://dev.mysql.com/downloads/connector/python/'
+
+  depends_on macos: '>= :yosemite'
 
   pkg "mysql-connector-python-cext-#{version}.pkg"
 

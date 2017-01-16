@@ -5,7 +5,7 @@ cask 'hbuilder' do
   # download.dcloud.net.cn was verified as official when first introduced to the cask
   url "http://download.dcloud.net.cn/HBuilder.#{version}.macosx_64.dmg"
   name 'HBuilder'
-  homepage 'http://www.dcloud.io/'
+  homepage 'https://www.dcloud.io/'
 
   app 'HBuilder.app'
 end

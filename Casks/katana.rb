@@ -1,6 +1,6 @@
 cask 'katana' do
-  version '1.1.1'
-  sha256 'cac0091f63a0281f6f95f609e04455db98f915f4e1f40a575e822208b3265eae'
+  version :latest
+  sha256 :no_check
 
   url 'http://download.witiz.com/Katana.zip'
   name 'Katana'

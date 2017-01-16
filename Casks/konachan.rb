@@ -1,6 +1,6 @@
 cask 'konachan' do
-  version '1.0'
-  sha256 '248ff1db7bf9ca3d8148253c7b7053c89982419dd1481e103780b8dfb9aa1e11'
+  version '1.0.1'
+  sha256 '79a9bdee98cb01bc43f38995698d94b519061e4349368e0966ae443aa80a9c5d'
 
   url "https://github.com/yaqinking/Konachan/releases/download/v#{version}/Konachan.app.zip"
   appcast 'https://github.com/yaqinking/Konachan/releases.atom',

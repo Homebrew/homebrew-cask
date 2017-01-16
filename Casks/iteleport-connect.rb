@@ -9,7 +9,6 @@ cask 'iteleport-connect' do
   homepage 'http://www.iteleportmobile.com/connect'
 
   auto_updates true
-  depends_on macos: '>= :snow_leopard'
 
   app 'iTeleport Connect.app'
 end

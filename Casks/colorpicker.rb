@@ -6,7 +6,7 @@ cask 'colorpicker' do
   appcast 'http://www.northernspysoftware.com/feed/colorpicker.xml',
           checkpoint: '0c5eb8f736ccd0ae1594d61d09ed4b44c7bb84e2c1aef4e32fcc5ffe6cce56bb'
   name 'ColorPicker'
-  homepage 'http://www.northernspysoftware.com/software/colorpicker'
+  homepage 'https://www.northernspysoftware.com/software/colorpicker'
 
   app 'ColorPicker.app'
 end

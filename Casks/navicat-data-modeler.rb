@@ -7,7 +7,6 @@ cask 'navicat-data-modeler' do
   homepage 'https://www.navicat.com/products/navicat-data-modeler'
 
   depends_on macos: '>= :lion'
-  depends_on arch: :intel
 
   app 'Navicat Data Modeler.app'
 end

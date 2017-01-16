@@ -6,7 +6,5 @@ cask 'cevelop' do
   name 'Cevelop'
   homepage 'https://www.cevelop.com/'
 
-  depends_on arch: :x86_64
-
   app 'Cevelop.app'
 end
