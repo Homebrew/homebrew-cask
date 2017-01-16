@@ -1,4 +1,4 @@
-cask 'svg-cleaner' do
+cask 'svgcleaner' do
   version '0.8.0'
   sha256 '544e75bd51b042e26183814720e656b787a6dd525c694314cf09ce0e6783f976'
 
@@ -8,7 +8,10 @@ cask 'svg-cleaner' do
   name 'SVG Cleaner'
   homepage 'https://github.com/RazrFalcon/svgcleaner-gui/'
 
-  app 'SVG Cleaner.app'
+  app 'SVGCleaner.app'
 
-  zap delete: '~/Library/Saved Application State/com.yourcompany.SVGCleaner.savedState'
+  zap delete: [
+                '~/Library/Preferences/com.svgcleaner.svgcleaner.plist',
+                '~/Library/Saved Application State/com.yourcompany.SVGCleaner.savedState',
+              ]
 end
