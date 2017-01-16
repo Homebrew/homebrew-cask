@@ -4,7 +4,7 @@ cask 'deckard' do
 
   url "https://www.deckard.ai/download/#{version}.dmg"
   appcast 'https://www.deckard.ai/releases.html',
-          checkpoint: '4529f32ca3fff0455532d70a5a4a80b3e5f77a95119e680239df49942ac2ab83'
+          checkpoint: 'aab4cf61e05273752804a8ca263bdc3400ffcc265fd03a3dcc07553c9cd2274d'
   name 'Deckard Assist'
   homepage 'https://www.deckard.ai/'
 
