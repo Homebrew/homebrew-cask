@@ -4,11 +4,11 @@ cask 'qtspim' do
 
   url "https://downloads.sourceforge.net/spimsimulator/QtSpim_#{version}_mac.mpkg.zip"
   appcast 'https://sourceforge.net/projects/spimsimulator/rss',
-          checkpoint: '8655c6252572c0156d8dd1a5808d850affe99cba8856f11c42975677b60813c0'
+          checkpoint: 'db926e1454e85c1f9d8e9336296c5cc6e44bc68eb52f7e7c9a909a5c44366abd'
   name 'QtSpim'
   homepage 'http://spimsimulator.sourceforge.net/'
 
-  pkg 'QtSpim.mpkg'
+  pkg "QtSpim_#{version}_mac.mpkg"
 
   uninstall pkgutil: 'org.larusstone.pkg.QtSpim'
 end
