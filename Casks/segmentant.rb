@@ -1,6 +1,6 @@
 cask 'segmentant' do
-  version '1.0.0'
-  sha256 '547a31a50389a342a6e22c4dea3828dfb3ef4d01dffbfb83fb75483b514c16d4'
+  version '1.1.1'
+  sha256 '2c621ad463b677afa58e4b9a5b265924b7923ed3cc0ea1c93c72eb0cffd1f167'
 
   url "http://www.laurenceanthony.net/software/segmentant/releases/SegmentAnt#{version.no_dots}/SegmentAnt.zip"
   name 'SegmentAnt'
