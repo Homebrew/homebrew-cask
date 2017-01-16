@@ -7,5 +7,14 @@ cask 'kindlegen' do
   name 'KindleGen'
   homepage 'https://www.amazon.com/gp/feature.html?docId=1000765211'
 
-  binary 'kindlegen'
+  binary "KindleGen_Mac_i386_v#{version.dots_to_underscores}/kindlegen"
+
+  caveats <<-EOS.undent
+    We agreed to the KindleGen License Agreement for you by downloading KindleGen.
+    If this is unacceptable you should uninstall.
+
+    Instructions on using KindleGen are available in
+
+      #{staged_path}/manual.html
+  EOS
 end
