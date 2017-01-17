@@ -14,7 +14,7 @@ cask 'teamviewer' do
             launchctl: 'com.teamviewer.service',
             delete:    [
                          '/Applications/TeamViewer.app',
-                         '/Library/Fonts/TeamViewer12.otf',
+                         "/Library/Fonts/TeamViewer#{version.major}.otf",
                          '/Library/LaunchAgents/com.teamviewer.teamviewer.plist',
                          '/Library/LaunchAgents/com.teamviewer.teamviewer_desktop.plist',
                          '/Library/LaunchDaemons/com.teamviewer.Helper.plist',
