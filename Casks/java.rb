@@ -1,8 +1,9 @@
 cask 'java' do
-  version '1.8.0_112-b16'
-  sha256 'c9ebb729acb0ee8e6fbeda85751be20b024c45e3ebb83cc7c624908ffb8a466d'
+  version '1.8.0_121-b13:e9e7ea248e2c4826b92b3f075a80e441'
+  sha256 '82ff2493cd4b9ebdaeb9135abaffc9a37b71d341b007a83f73aa6ff3df1b6a3a'
 
-  url "http://download.oracle.com/otn-pub/java/jdk/#{version.sub(%r{^\d+\.(\d+).*?_(.*)$}, '\1u\2')}/jdk-#{version.sub(%r{^\d+\.(\d+).*?_(\d+)-.*$}, '\1u\2')}-macosx-x64.dmg",
+  java_update = version.sub(%r{.*_(\d+)-.*}, '\1')
+  url "http://download.oracle.com/otn-pub/java/jdk/#{version.minor}u#{version.before_colon.split('_', 2).last}/#{version.after_colon}/jdk-#{version.minor}u#{java_update}-macosx-x64.dmg",
       cookies: {
                  'oraclelicense' => 'accept-securebackup-cookie',
                }
@@ -11,7 +12,7 @@ cask 'java' do
 
   auto_updates true
 
-  pkg "JDK #{version.split('.')[1]} Update #{version.sub(%r{^.*?_(\d+)-.*$}, '\1')}.pkg"
+  pkg "JDK #{version.minor} Update #{java_update}.pkg"
 
   postflight do
     system_command '/usr/libexec/PlistBuddy',
@@ -47,7 +48,7 @@ cask 'java' do
   end
 
   uninstall pkgutil:   [
-                         "com.oracle.jdk#{version.sub(%r{^\d+\.(\d+).*?_(\d+)-.*$}, '\1u\2')}",
+                         "com.oracle.jdk#{version.minor}u#{java_update}",
                          'com.oracle.jre',
                        ],
             launchctl: [
