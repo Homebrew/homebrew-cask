@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 cask 'acorn' do
   version '5.6.1'
   sha256 '98d716aebb93e788f0ddda995734acba7923ba54cfac0cbda96a1bd50cb81454'
