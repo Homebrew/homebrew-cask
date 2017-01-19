@@ -22,6 +22,5 @@ cask 'grads' do
     See the documentation at:
 
       #{staged_path}/bin/INSTALL
-
   EOS
 end
