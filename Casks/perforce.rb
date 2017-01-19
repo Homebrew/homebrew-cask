@@ -16,5 +16,4 @@ cask 'perforce' do
 
       #{staged_path}
   EOS
-
 end
