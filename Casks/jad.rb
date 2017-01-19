@@ -10,7 +10,7 @@ cask 'jad' do
   artifact 'jad.1', target: '/usr/local/share/man/man1/jad.1'
 
   caveats <<-EOS.undent
-    Instructions on using cmucl are available in
+    Instructions on using jad are available in
 
       #{staged_path}/Readme.txt
   EOS
