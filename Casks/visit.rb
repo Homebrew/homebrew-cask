@@ -1,6 +1,6 @@
 cask 'visit' do
-  version '2.12.0'
-  sha256 '060ada90328827aed9d5a175aade5e5e243ad99881749c9a360d980bd46d870d'
+  version '2.12.1'
+  sha256 '95c4dc58a9a6994c69e810dc264d7992addf1b19b6fbd6b4286302586462bff1'
 
   # portal.nersc.gov/project/visit was verified as official when first introduced to the cask
   url "https://portal.nersc.gov/project/visit/releases/#{version}/VisIt-#{version}.dmg"
