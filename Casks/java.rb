@@ -3,12 +3,12 @@ cask 'java' do
   sha256 '82ff2493cd4b9ebdaeb9135abaffc9a37b71d341b007a83f73aa6ff3df1b6a3a'
 
   java_update = version.sub(%r{.*_(\d+)-.*}, '\1')
-  url "http://download.oracle.com/otn-pub/java/jdk/#{version.minor}u#{version.before_comma.split('_', 2).last}/#{version.after_comma}/jdk-#{version.minor}u#{java_update}-macosx-x64.dmg",
+  url "http://download.oracle.com/otn-pub/java/jdk/#{version.minor}u#{version.before_comma.split('_').last}/#{version.after_comma}/jdk-#{version.minor}u#{java_update}-macosx-x64.dmg",
       cookies: {
                  'oraclelicense' => 'accept-securebackup-cookie',
                }
   name 'Java Standard Edition Development Kit'
-  homepage "https://www.oracle.com/technetwork/java/javase/downloads/jdk#{version.split('.')[1]}-downloads-2133151.html"
+  homepage "https://www.oracle.com/technetwork/java/javase/downloads/jdk#{version.minor}-downloads-2133151.html"
 
   auto_updates true
 
