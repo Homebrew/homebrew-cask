@@ -1,6 +1,6 @@
 cask 'helix-versioning-engine' do
   version '16.2'
-  sha256 '1f013168fe33939d808c7775e3e6a9661531ebc0798dbdfc709d49233cf23304'
+  sha256 :no_check # required as upstream package is updated in-place
 
   url "http://cdist2.perforce.com/perforce/r#{version}/bin.darwin90x86/helix-versioning-engine.tgz"
   name 'Helix Versioning Engine'
