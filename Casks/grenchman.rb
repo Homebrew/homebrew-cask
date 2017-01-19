@@ -9,5 +9,7 @@ cask 'grenchman' do
 
   depends_on formula: 'libffi'
 
+  container type: :naked
+
   binary "grench-#{version}-mac", target: 'grench'
 end
