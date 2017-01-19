@@ -1,4 +1,4 @@
-cask 'helix-versioning-engine' do
+cask 'perforce' do
   version '16.2'
   sha256 :no_check # required as upstream package is updated in-place
 
