@@ -3,7 +3,7 @@ cask 'helix-versioning-engine' do
   sha256 :no_check # required as upstream package is updated in-place
 
   url "http://cdist2.perforce.com/perforce/r#{version}/bin.darwin90x86/helix-versioning-engine.tgz"
-  name 'Helix Versioning Engine'
+  name 'Perforce Helix Versioning Engine'
   homepage 'http://www.perforce.com/'
 
   binary 'p4'
