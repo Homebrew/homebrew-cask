@@ -7,10 +7,10 @@ cask 'cmucl' do
   name 'Cmucl'
   homepage 'http://www.cons.org/cmucl'
 
-  binary "cmucl-#{version}-x86-darwin/bin/lisp"
-  artifact "cmucl-#{version}-x86-darwin/lib/cmucl", target: '/usr/local/lib/cmucl'
-  artifact "cmucl-#{version}-x86-darwin/man/man1/cmucl.1", target: '/usr/local/share/man/man1/cmucl.1'
-  artifact "cmucl-#{version}-x86-darwin/man/man1/lisp.1", target: '/usr/local/share/man/man1/lisp.1'
+  binary 'bin/lisp'
+  artifact 'lib/cmucl', target: '/usr/local/lib/cmucl'
+  artifact 'man/man1/cmucl.1', target: '/usr/local/share/man/man1/cmucl.1'
+  artifact 'man/man1/lisp.1', target: '/usr/local/share/man/man1/lisp.1'
 
   caveats <<-EOS.undent
     Instructions on using cmucl are available in
