@@ -6,5 +6,5 @@ cask 'subgit' do
   name 'SubGit'
   homepage 'http://subgit.com'
 
-  binary 'bin/subgit'
+  stage_only true
 end
