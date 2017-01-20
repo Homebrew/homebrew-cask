@@ -10,25 +10,22 @@ cask 'eventstore' do
   binary 'eventstore-testclient'
 
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/eventstore"
+  eventstore_shimscript = "#{staged_path}/eventstore"
+  testclient_shimscript = "#{staged_path}/eventstore-testclient"
 
   preflight do
-    IO.write shimscript, <<-EOS.undent
+    IO.write eventstore_shimscript, <<-EOS.undent
       #!/bin/sh
       cd "#{staged_path}"
       exec "#{staged_path}/run-node.sh" "$@"
     EOS
-    FileUtils.chmod '+x', shimscript
-  end
 
-  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/eventstore-testclient"
-
-  preflight do
-    IO.write shimscript, <<-EOS.undent
+    IO.write testclient_shimscript, <<-EOS.undent
       #!/bin/sh
       exec "#{staged_path}/testclient" "$@"
     EOS
-    FileUtils.chmod '+x', shimscript
+
+    FileUtils.chmod '+x', eventstore_shimscript
+    FileUtils.chmod '+x', testclient_shimscript
   end
 end
