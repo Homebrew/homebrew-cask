@@ -7,4 +7,8 @@ cask 'subgit' do
   homepage 'http://subgit.com'
 
   binary "subgit-#{version}/bin/subgit"
+
+  caveats do
+    depends_on_java('7+')
+	end
 end
