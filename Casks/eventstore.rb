@@ -6,8 +6,8 @@ cask 'eventstore' do
   name 'Event Store'
   homepage 'http://geteventstore.com'
 
-  binary 'eventstore'
-  binary 'eventstore-testclient'
+  binary "EventStore-OSS-MacOSX-v#{version}/eventstore"
+  binary "EventStore-OSS-MacOSX-v#{version}/eventstore-testclient"
 
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
   eventstore_shimscript = "#{staged_path}/EventStore-OSS-MacOSX-v#{version}/eventstore"
