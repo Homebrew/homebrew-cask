@@ -10,5 +10,5 @@ cask 'subgit' do
 
   caveats do
     depends_on_java('7+')
-	end
+  end
 end
