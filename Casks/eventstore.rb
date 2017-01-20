@@ -25,7 +25,7 @@ cask 'eventstore' do
       exec "#{staged_path}/testclient" "$@"
     EOS
 
-    FileUtils.chmod '+x', eventstore_shimscript
-    FileUtils.chmod '+x', testclient_shimscript
+    set_permissions eventstore_shimscript, '+x'
+    set_permissions testclient_shimscript, '+x'
   end
 end
