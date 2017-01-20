@@ -30,7 +30,7 @@ cask 'libreoffice' do
       #!/bin/sh
       '#{appdir}/LibreOffice.app/Contents/MacOS/soffice' "$@"
     EOS
-    FileUtils.chmod '+x', shimscript
+    set_permissions shimscript, '+x'
   end
 
   zap delete: [
