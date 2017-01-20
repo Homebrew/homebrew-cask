@@ -10,19 +10,19 @@ cask 'eventstore' do
   binary 'eventstore-testclient'
 
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
-  eventstore_shimscript = "#{staged_path}/eventstore"
-  testclient_shimscript = "#{staged_path}/eventstore-testclient"
+  eventstore_shimscript = "#{staged_path}/EventStore-OSS-MacOSX-v#{version}/eventstore"
+  testclient_shimscript = "#{staged_path}/EventStore-OSS-MacOSX-v#{version}/eventstore-testclient"
 
   preflight do
     IO.write eventstore_shimscript, <<-EOS.undent
       #!/bin/sh
-      cd "#{staged_path}"
-      exec "#{staged_path}/run-node.sh" "$@"
+      cd "#{staged_path}/EventStore-OSS-MacOSX-v#{version}"
+      exec "#{staged_path}/EventStore-OSS-MacOSX-v#{version}/run-node.sh" "$@"
     EOS
 
     IO.write testclient_shimscript, <<-EOS.undent
       #!/bin/sh
-      exec "#{staged_path}/testclient" "$@"
+      exec "#{staged_path}/EventStore-OSS-MacOSX-v#{version}/testclient" "$@"
     EOS
 
     set_permissions eventstore_shimscript, '+x'
