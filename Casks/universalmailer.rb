@@ -14,6 +14,8 @@ cask 'universalmailer' do
   end
 
   url "https://universalmailer.github.io/UniversalMailer/zips/UniversalMailer-v#{version.dots_to_underscores}.zip"
+  appcast 'https://universalmailer.github.io/UniversalMailer/download.html',
+          checkpoint: 'a4d338f1cb40ec31ba9ea26438d289f41cbdb84333a6f351b037ec620c4c46d0'
   name 'Universal Mailer'
   homepage 'https://universalmailer.github.io/UniversalMailer/'
 

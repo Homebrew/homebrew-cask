@@ -1,11 +1,11 @@
 cask 'dripcap' do
-  version '0.5.6'
-  sha256 '294a6e17d84e1a1582bca17a2081fbfa8909722d02840cf783520ce2cde1c1c8'
+  version '0.6.1'
+  sha256 '8aeef72c32a76906feb5dc5d95e2195f06404225305d6bdbaff9477ca49b367e'
 
   # github.com/dripcap was verified as official when first introduced to the cask
   url "https://github.com/dripcap/dripcap/releases/download/v#{version}/dripcap-darwin-amd64.dmg"
   appcast 'https://github.com/dripcap/dripcap/releases.atom',
-          checkpoint: '3fe41f8370c15299f79434db286740a84828fa0eae0f921f6220bc40713c16b0'
+          checkpoint: '25aa7d8fbacf558990e74d9d6caae648365facd3851e133fede5c1ade363adbc'
   name 'Dripcap'
   homepage 'https://dripcap.org/'
 

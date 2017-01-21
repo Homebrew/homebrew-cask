@@ -1,10 +1,10 @@
 cask 'keka' do
-  version '1.0.6'
-  sha256 'c164cdca023c47a9c61ef1c93bf64252636ed73433bf36117408db4a1647c966'
+  version '1.0.7'
+  sha256 '92d05db46ba32e656992d2f9699e328b94dee058e573da3147865f3993bbe579'
 
   url "http://www.kekaosx.com/release/Keka-#{version}.dmg"
   appcast 'http://www.kekaosx.com/update/keka.xml',
-          checkpoint: '76c07c4ead37d0ec9771f0aec315596d496fa0f80aacb9188c5ac5d9cf631e4e'
+          checkpoint: '772e4f21cf3ba63c4b2d9a10a8419b680a74464fadaead8b70380ad677410546'
   name 'Keka'
   homepage 'http://www.kekaosx.com/'
 

@@ -1,6 +1,6 @@
 cask 'mesasqlite' do
-  version '4.0.8'
-  sha256 '16741eb458127db0ce72e71824ddf938ee7b30a8b6ea4bc0e82357aab5b3359b'
+  version '4.2.3'
+  sha256 '010a4e43aba647cc79168e3fe2a290696ad68334a37308d06e2438147b1d9653'
 
   url "http://www.desertsandsoftware.com/DEMOS/MesaSQLite#{version.no_dots}.zip"
   name 'MesaSQLite'

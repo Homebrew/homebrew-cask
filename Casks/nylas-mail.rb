@@ -1,24 +1,25 @@
-cask 'nylas-n1' do
-  version '0.4.402-74a7c7f'
-  sha256 '2e0270e40df2cb21f2013714641ed3514bf2cc0a9a846853fffd68b0fc4eabcf'
+cask 'nylas-mail' do
+  version '1.0.10-5e144cf'
+  sha256 '2ac7f49a00c8a195e1b983b11e808f66e1399e69b46f6761b3470ab23293abb7'
 
   # edgehill.s3-us-west-2.amazonaws.com was verified as official when first introduced to the cask
-  url "https://edgehill.s3-us-west-2.amazonaws.com/#{version}/darwin/x64/N1.zip"
+  url "https://edgehill.s3-us-west-2.amazonaws.com/#{version}/darwin/x64/NylasMail.zip"
   appcast 'https://edgehill.nylas.com/update-check?platform=darwin&arch=64',
-          checkpoint: '62e6f8ed3695f39f3796a1f5a4aced61c860d6833cfec711e8f1a16bbbca5270'
-  name 'Nylas N1'
+          checkpoint: '19732a7204b4e5840befa53277795bce8dab0d6244e20c995e2dbdff7ff87155'
+  name 'Nylas Mail'
   homepage 'https://www.nylas.com/'
 
   auto_updates true
 
-  app 'Nylas N1.app'
+  app 'Nylas Mail.app'
 
   zap delete: [
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nylas.nylas-mail.sfl',
                 '~/Library/Application Support/com.nylas.nylas-mail.ShipIt',
-                '~/Library/Application Support/Nylas N1',
+                '~/Library/Application Support/Nylas Mail',
                 '~/Library/Caches/com.nylas.nylas-mail',
-                '~/Library/Caches/Nylas N1',
+                '~/Library/Caches/com.nylas.nylas-mail.ShipIt',
+                '~/Library/Caches/Nylas Mail',
                 '~/Library/Preferences/com.nylas.nylas-mail.plist',
                 '~/Library/Saved Application State/com.nylas.nylas-mail.savedState',
               ]

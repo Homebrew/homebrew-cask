@@ -1,6 +1,6 @@
 cask 'sylo' do
   version '3.3'
-  sha256 '52435147b11d80314057e176f63d45e07524368d9763bbfaf62c95338bd2b97b'
+  sha256 '30c41498e8737a9911ab129d1ef7e883ae8ccd1d09147f4b79733373f2421721'
 
   # s3-us-west-2.amazonaws.com/unision was verified as official when first introduced to the cask
   url 'https://s3-us-west-2.amazonaws.com/unision/Sylo.dmg'

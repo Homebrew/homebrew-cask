@@ -1,6 +1,6 @@
 cask 'lifesize' do
-  version '10.3.2-181'
-  sha256 '5661cc5e78efad1b1c3c5a4b3d3635e2c2514e2ba87335362c83677cbd3e12ee'
+  version '10.3.3-209'
+  sha256 '182b67f1649f5d3be8d844ef78976f8d05225bf8994bd2b2852859d048105be0'
 
   # cdn.lifesizecloud.com was verified as official when first introduced to the cask
   url "https://cdn.lifesizecloud.com/LifesizeCloud-#{version}-signed.pkg"

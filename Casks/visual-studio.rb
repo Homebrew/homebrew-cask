@@ -1,9 +1,9 @@
 cask 'visual-studio' do
-  version '2016-11-16-2'
-  sha256 '0a18e2ff4ab91b87b6be8c3fa78fcb0d8a44e6685a96071b9ec09cc5d7028160'
+  version '2017-01-14'
+  sha256 '44c7952dd2c8b44b8715f8bb33868448a3433506a8156ce5513903f7cc154d51'
 
   # xamarin.azureedge.net was verified as official when first introduced to the cask
-  url "https://xamarin.azureedge.net/VsMacInstaller/#{version}/VisualStudioforMacPreviewInstaller.dmg"
+  url "https://xamarin.azureedge.net//VsMacInstaller/#{version}/VisualStudioforMacPreviewInstaller.dmg"
   name 'Visual Studio for Mac'
   homepage 'https://www.visualstudio.com/vs/visual-studio-mac/'
 

@@ -1,5 +1,5 @@
 cask 'vox-preferences-pane' do
-  version '1.2'
+  version '1.2.19'
   sha256 '9f29732dd7441c5dd18024838ed46a968499ad39529ad41be1664ee315a20ee6'
 
   # devmate.com/com.coppertino.VoxPrefs was verified as official when first introduced to the cask

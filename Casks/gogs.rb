@@ -19,6 +19,6 @@ cask 'gogs' do
       #!/bin/sh
       cd '#{staged_path}/gogs' && ./gogs "$@"
     EOS
-    FileUtils.chmod '+x', shimscript
+    set_permissions shimscript, '+x'
   end
 end

@@ -1,11 +1,11 @@
 cask 'boostnote' do
-  version '0.8.0'
-  sha256 '8fffd2b3a2fb345da42a32d7ee265f576d205c2fb628f6f66466e727de9ecd44'
+  version '0.8.2'
+  sha256 'a0eeddc8a16f43d31038e7f9261ae3cbef3b2acf19e5d2e3c9a1fd33f38f8093'
 
   # github.com/BoostIO/boost-releases was verified as official when first introduced to the cask
   url "https://github.com/BoostIO/boost-releases/releases/download/v#{version}/Boostnote-mac.dmg"
   appcast 'https://github.com/BoostIO/boost-releases/releases.atom',
-          checkpoint: 'ee236641bdd8e55671241a50cea398363f2f0c192fba4ad518b707b88a31c6af'
+          checkpoint: 'ed6319b0ee6d7d3e121f8475c9cb77f406fd791f7a21055886e8933350feceef'
   name 'Boostnote'
   homepage 'https://b00st.io/'
 

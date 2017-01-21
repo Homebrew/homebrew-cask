@@ -1,5 +1,5 @@
 cask 'yate' do
-  version '3.14.3.4'
+  version '3.15'
   sha256 'a6e7306de1b5fc485702ce2b1177c7f05ffab66ef26cace046777d7866edb17b'
 
   url 'https://2manyrobots.com/Updates/Yate/Yate.zip',
