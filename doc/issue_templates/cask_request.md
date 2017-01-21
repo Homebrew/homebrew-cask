@@ -1,12 +1,12 @@
 Cask request: [app name here]
 ### Cask details
 
-(Please fill out as much as possible)
+Please fill out as much as possible. Before you do, note **we cannot support Mac App Store-only apps**.
 
-**Name**:
+Name:
 
-**Homepage**:
+Homepage:
 
-**Download URL**:
+Download URL:
 
-**Description**:
+Description:

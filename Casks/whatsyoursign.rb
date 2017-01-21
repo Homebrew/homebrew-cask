@@ -1,6 +1,6 @@
 cask 'whatsyoursign' do
-  version '1.2.1'
-  sha256 'b05363ce2106e23eda95caef1f812fb6cb1dc8f983dee035a4730afe35fc13d6'
+  version '1.2.3'
+  sha256 '385415996a5ce57865d591df4af679b2023e58d27e1f6237a8a90c60c8052f88'
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/WhatsYourSign_#{version}.zip"

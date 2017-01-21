@@ -1,11 +1,11 @@
 cask 'oclint' do
-  version '0.11,15.6.0'
-  sha256 '804d7389d8631835fd4ceee845c5a6cc47062ffb10341ffcb421269c25182c0d'
+  version '0.11.1,16.3.0'
+  sha256 'fd2a0ca67392ca14a57b9f2bebbcaecd7406b3266fe5c95a691d96e77c073054'
 
   # github.com/oclint/oclint was verified as official when first introduced to the cask
   url "https://github.com/oclint/oclint/releases/download/v#{version.before_comma}/oclint-#{version.before_comma}-x86_64-darwin-#{version.after_comma}.tar.gz"
   appcast 'https://github.com/oclint/oclint/releases.atom',
-          checkpoint: '2b9179b96d9caccfcbac1aca6d10b6dfb5aa176daf840800434b32c12277a17b'
+          checkpoint: '9a9cf7180ee21e139ccaac56b9c80845866632e625ea2a735ff782e9f3972369'
   name 'OCLint'
   homepage 'http://oclint.org/'
 

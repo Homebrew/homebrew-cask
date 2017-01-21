@@ -7,7 +7,7 @@ cask 'kindlegen' do
   name 'KindleGen'
   homepage 'https://www.amazon.com/gp/feature.html?docId=1000765211'
 
-  binary "KindleGen_Mac_i386_v#{version.dots_to_underscores}/kindlegen"
+  binary 'kindlegen'
 
   caveats <<-EOS.undent
     Instructions on using KindleGen are available in
