@@ -1,6 +1,6 @@
 cask 'wacom-intuos-tablet' do
-  version '6.3.16-12'
-  sha256 'd466685d873739a8e714aef5eb5a01f5c2e586bedc308e5b32eda5275af58004'
+  version '6.3.20-8'
+  sha256 'c0ede699f001ffde7fe4ca27df7c62720bdad29a9b04fd8be646ed81f2211ba5'
 
   url "http://cdn.wacom.com/u/productsupport/drivers/mac/professional/WacomTablet_#{version}.dmg"
   name 'Wacom Intuos 4/5/Pro Tablet'
