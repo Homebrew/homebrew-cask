@@ -8,6 +8,6 @@ cask 'starleaf-breeze' do
 
   auto_updates true
 
-  app 'StarLeaf Breeze.app'
+  pkg 'StarLeaf-Breeze-Installer-Mac-OS.pkg'
 
 end
