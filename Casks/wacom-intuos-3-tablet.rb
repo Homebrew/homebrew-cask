@@ -4,7 +4,7 @@ cask 'wacom-intuos-3-tablet' do
 
   url "http://cdn.wacom.com/u/productsupport/drivers/mac/professional/WacomTablet_#{version}.dmg"
   name 'Wacom Intuos 3 Tablet'
-  homepage 'http://www.wacom.com/'
+  homepage 'https://www.wacom.com/en-us/support/product-support/drivers'
 
   conflicts_with cask: 'wacom-intuos-tablet'
 
