@@ -1,6 +1,6 @@
 cask 'qqmusic' do
-  version '4.2.2Build01'
-  sha256 'f833e423092a8f39d74d9ab49b8dc7dc51919c51a998c3eca498c642734a49b0'
+  version '4.2.3Build02'
+  sha256 '772a112b5425c035fb69e26c43f9a59a38c46f38e8d5ee536bcf88051d7b5f67'
 
   url "http://dldir1.qq.com/music/clntupate/mac/QQMusic#{version}.dmg"
   name 'QQ音乐'
