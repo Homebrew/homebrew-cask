@@ -11,5 +11,4 @@ cask 'starleaf-breeze' do
   pkg 'StarLeaf-Breeze-Installer-Mac-OS.pkg'
 
   uninstall pkgutil: 'com.starleaf.breeze.mac'
-
 end
