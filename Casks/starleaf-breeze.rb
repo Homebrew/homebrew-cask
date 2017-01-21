@@ -1,0 +1,13 @@
+cask 'starleaf-breeze' do
+  version :latest
+  sha256 :no_check
+
+  url 'https://dl.starleaf.com/breeze_downloads/StarLeaf-Breeze-Installer-Mac-OS.pkg'
+  name 'Starleaf Breeze'
+  homepage 'http://www.starleaf.com/'
+
+  auto_updates true
+
+  app 'StarLeaf Breeze.app'
+
+end
