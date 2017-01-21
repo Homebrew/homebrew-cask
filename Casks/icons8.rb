@@ -1,7 +1,7 @@
 cask 'icons8' do
   # note: "8" is not a version number, but an intrinsic part of the product name
-  version '5.4.3'
-  sha256 '8b1a1bebc528f0e28a311b22d9db202586c25060f9c91ca036e78a5a0c68d9b0'
+  version '5.5'
+  sha256 '448dba94aded9064969df658ce1df7177fb23ffd8e8a1d7a14c469b2ce87b19f'
 
   url 'https://desktop.icons8.com/updates/mac/Icons8App_for_Mac_OS.dmg'
   appcast 'https://maxcdn.icons8.com/download/icons8_cast.xml',
