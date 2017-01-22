@@ -22,6 +22,7 @@ cask-repair --help
 cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Casks"
 git config --local hub.protocol https
 hub fork
+git fetch --unshallow
 
 # use to update <outdated_cask>
 outdated_cask='<the-cask-i-want-to-update>'
@@ -46,6 +47,7 @@ For manual updates, you'll need to fork the repository and add your copy as a re
 $ github_user='<my-github-username>'
 $ cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
 $ git remote add "$github_user" "https://github.com/$github_user/homebrew-cask"
+$ git fetch --unshallow
 ```
 
 3: If you have already added your GitHub fork as a remote for your homebrew-cask Tap, ensure your fork is [up-to-date](https://help.github.com/articles/merging-an-upstream-repository-into-your-fork/).
