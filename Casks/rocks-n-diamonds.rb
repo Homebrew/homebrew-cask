@@ -1,10 +1,12 @@
 cask 'rocks-n-diamonds' do
-  version '3.3.1.2'
-  sha256 '5405786ac296e4052e25f26a2a200a01d49e9c0ae77070a9b94ecbce893ae543'
+  version '4.0.0.1'
+  sha256 '638762d5229d2c4125217a7213c5bb37c2ef68fb53bff238c28efc79b9533206'
 
   url "http://www.artsoft.org/RELEASES/macosx/rocksndiamonds/rocksndiamonds-#{version}.dmg"
+  appcast 'https://www.artsoft.org/RELEASES/macosx/rocksndiamonds/',
+          checkpoint: '5dbe5526a9c0d63bd8ee75ea25eab02bfc1f66d64f5a87190025e217359465b1'
   name 'Rocks\'n\'Diamonds'
   homepage 'https://www.artsoft.org/rocksndiamonds/'
 
-  app "Rocks'n'Diamonds #{version}/Rocks'n'Diamonds.app"
+  app 'Rocks\'n\'Diamonds.app'
 end
