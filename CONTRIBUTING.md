@@ -55,7 +55,7 @@ $ git remote add "$github_user" "https://github.com/$github_user/homebrew-cask"
 
 ## Adding a Cask
 
-Notice an application that's not in Homebrew-Cask yet? Make sure it's not yet in [Homebrew-Versions](https://github.com/caskroom/homebrew-versions) (can be searched from the Github repository page) or [Homebrew](https://github.com/Homebrew/homebrew) (can be searched with `brew search`). Mac App Store apps can't be installed via Homebrew-Cask, but check out [mas](https://github.com/argon/mas) for an alternative.
+Notice an application that's not in Homebrew-Cask yet? Make sure it's not yet in [Caskroom/versions](https://github.com/caskroom/homebrew-versions) or [Homebrew/core](https://github.com/Homebrew/homebrew-core) (can be searched with `brew search`). Mac App Store apps can't be installed via Homebrew-Cask, but check out [mas](https://github.com/argon/mas) for an alternative.
 
 With a bit of work, you can create a Cask for it. [This document](doc/development/adding_a_cask.md) will walk you through creating a new Cask, testing it, and submitting it to us.
 
