@@ -6,7 +6,7 @@ cask 'programmer-dvorak' do
   appcast 'http://kaufmann.no/roland/dvorak',
           checkpoint: 'c08091bb0345b4376580e7ba19dd907ba78450a7180647b5b02a27c13e364a6d'
   name 'Programmer Dvorak'
-  homepage 'http://kaufmann.no/roland/dvorak/'
+  homepage 'https://kaufmann.no/roland/dvorak/'
 
   pkg "Programmer Dvorak v#{version.sub(%r{b.*}, '')}.pkg"
 

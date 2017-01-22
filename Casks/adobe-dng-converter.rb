@@ -4,7 +4,7 @@ cask 'adobe-dng-converter' do
 
   url "http://download.adobe.com/pub/adobe/dng/mac/DNGConverter_#{version.dots_to_underscores}.dmg"
   name 'Adobe Camera Raw and DNG Converter'
-  homepage 'http://supportdownloads.adobe.com/product.jsp?product=106&platform=Macintosh'
+  homepage 'https://supportdownloads.adobe.com/product.jsp?product=106&platform=Macintosh'
 
   pkg "DNGConverter_#{version.dots_to_underscores}.pkg"
 

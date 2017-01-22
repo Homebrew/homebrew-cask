@@ -4,7 +4,7 @@ cask 'perforce' do
 
   url "http://cdist2.perforce.com/perforce/r#{version}/bin.darwin90x86/helix-versioning-engine.tgz"
   name 'Perforce Helix Versioning Engine'
-  homepage 'http://www.perforce.com/'
+  homepage 'https://www.perforce.com/'
 
   binary 'p4'
   binary 'p4broker'

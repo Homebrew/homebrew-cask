@@ -5,7 +5,7 @@ cask 'simply-fortran' do
   # download.approximatrix.com/sfortran was verified as official when first introduced to the cask
   url "https://download.approximatrix.com/sfortran/#{version}/SimplyFortran-#{version}.dmg"
   name 'Simply Fortran'
-  homepage 'http://simplyfortran.com/'
+  homepage 'https://simplyfortran.com/'
 
   app 'Simply Fortran.app'
 end

@@ -4,7 +4,7 @@ cask 'zooom' do
 
   url 'http://software.coderage-software.com/zooom/Zooom_Latest.dmg'
   name 'Zooom/2'
-  homepage 'http://coderage-software.com/zooom/'
+  homepage 'https://coderage-software.com/zooom/'
 
   depends_on macos: '>= :mavericks'
 

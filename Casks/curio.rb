@@ -4,7 +4,7 @@ cask 'curio' do
 
   url 'http://zengobi.com/downloads/Curio.zip'
   name 'Curio'
-  homepage 'https://zengobi.com/products/curio/'
+  homepage 'https://zengobi.com/curio/'
 
   app 'Curio.app'
 end

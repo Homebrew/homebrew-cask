@@ -4,7 +4,7 @@ cask 'subgit' do
 
   url "https://subgit.com/download/subgit-#{version}.zip"
   name 'SubGit'
-  homepage 'http://subgit.com'
+  homepage 'https://subgit.com/'
 
   binary "subgit-#{version}/bin/subgit"
 
