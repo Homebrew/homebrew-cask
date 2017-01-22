@@ -5,7 +5,7 @@ cask 'bose-soundtouch' do
   # bose.com was verified as official when first introduced to the cask
   url "https://worldwide.bose.com/downloads/assets/updates/soundtouch/SoundTouch-#{version}-osx-10.9-installer.app.dmg"
   name 'Bose Soundtouch Controller App'
-  homepage 'https://www.soundtouch.com'
+  homepage 'https://www.soundtouch.com/'
 
   depends_on macos: '>= :mavericks'
 

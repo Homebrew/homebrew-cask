@@ -4,7 +4,7 @@ cask 'jad' do
 
   url "http://www.varaneckas.com/jad/jad#{version.no_dots}.mac.intel.zip"
   name 'Jad - the fast Java Decompiler'
-  homepage 'http://www.varaneckas.com/jad/'
+  homepage 'https://varaneckas.com/jad/'
 
   binary 'jad'
   artifact 'jad.1', target: '/usr/local/share/man/man1/jad.1'

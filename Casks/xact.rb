@@ -6,7 +6,7 @@ cask 'xact' do
   appcast 'http://xactupdate.scottcbrown.org/xACT.xml',
           checkpoint: '8d9d65d16c97d222254af173465ace91b959a73129773f8ba8b19e8ac16995d9'
   name 'xACT'
-  homepage 'http://xact.scottcbrown.org/'
+  homepage 'https://xact.scottcbrown.org/'
 
   app "xACT #{version}/xACT.app"
 end
