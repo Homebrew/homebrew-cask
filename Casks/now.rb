@@ -8,5 +8,6 @@ cask 'now' do
   homepage 'https://zeit.co/desktop'
 
   auto_updates true
+
   app 'Now.app'
 end
