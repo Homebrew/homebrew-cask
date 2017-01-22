@@ -1,6 +1,6 @@
 cask 'vdmx' do
-  version 'b8.6.1.1'
-  sha256 'c6606f03f16c421fcf26e06b8f5a3c338efed14087babadbccf7a1705480acdf'
+  version :latest
+  sha256 :no_check
 
   url 'http://vidvox.net/download/vdmx_demo'
   name 'VDMX5'
