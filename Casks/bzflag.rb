@@ -4,9 +4,9 @@ cask 'bzflag' do
 
   url "https://download.bzflag.org/bzflag/osx/#{version}/BZFlag-#{version}-macOS.zip"
   appcast 'https://github.com/BZFlag-Dev/bzflag/releases.atom',
-          checkpoint: 'dd2c052f3c22f8d0a64fa2230c80fa0113e9a8611963e279d7b6c48cdf908541'
+          checkpoint: '4662d8b609304cd7be193cfd5ef6504670d98d52fba4e3f6a0546db7d76a6451'
   name 'BZFlag'
-  homepage 'http://bzflag.org/'
+  homepage 'https://bzflag.org/'
 
   app "BZFlag-#{version}.app"
 end

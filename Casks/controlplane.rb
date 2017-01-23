@@ -6,11 +6,11 @@ cask 'controlplane' do
     version '1.6.5'
     sha256 '446da8ecb194f4a4c9e9d0a1984f1476cfcb7202a3415b6d36eff063f97db47c'
 
-    appcast 'http://www.controlplaneapp.com/appcast.xml',
+    appcast 'https://www.controlplaneapp.com/appcast.xml',
             checkpoint: 'e8e01bc8f468b991f72c731ab00a15d676ca26a0ccbe75af237d17d223ac81a6'
   end
 
-  url "http://www.controlplaneapp.com/download/#{version}"
+  url "https://www.controlplaneapp.com/download/#{version}"
   name 'ControlPlane'
   homepage 'https://www.controlplaneapp.com/'
 

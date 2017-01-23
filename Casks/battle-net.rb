@@ -11,7 +11,7 @@ cask 'battle-net' do
 
   language 'zh', 'CN' do
     url 'https://www.battlenet.com.cn/download/getInstaller?os=mac&installer=Battle.net-Setup-zhCN.zip'
-    homepage 'http://www.battlenet.com.cn/zh/'
+    homepage 'https://www.battlenet.com.cn/zh/'
 
     installer manual: 'Battle.net-Setup-zhCN.app'
   end
