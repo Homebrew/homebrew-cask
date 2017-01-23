@@ -6,7 +6,7 @@ The value of the `appcast` stanza is a string, holding the URL for an appcast wh
 
 | key           | value       |
 | ------------- | ----------- |
-| `checkpoint:` | a string holding a custom checksum of the most recent appcast which matches the current Cask versioning. Use `curl --compressed --location --user-agent 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.152 Safari/537.36' "{{appcast_url}}" | /usr/bin/sed 's|<pubDate>[^<]*</pubDate>||g' | shasum --algorithm 256` to calculate it.
+| `checkpoint:` | a string holding a custom checksum of the most recent appcast which matches the current Cask versioning. Use `brew cask _appcast_checkpoint --calculate "{{appcast_url}}"` to calculate it.
 
 Example: [`atom.rb`](https://github.com/caskroom/homebrew-cask/blob/4d5a2dd2376f42c726148cfccaefe839f21e42ab/Casks/atom.rb#L7L8)
 
