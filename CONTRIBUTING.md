@@ -18,17 +18,8 @@ Notice an application that's out-of-date in Homebrew-Cask? In most cases, it's v
 brew install vitorgalvao/tiny-scripts/cask-repair
 cask-repair --help
 
-# fork homebrew-cask to your account - only needed once
-cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Casks"
-git config --local hub.protocol https
-hub fork
-
 # use to update <outdated_cask>
-outdated_cask='<the-cask-i-want-to-update>'
-github_user='<my-github-username>'
-cd "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Casks"
-
-cask-repair --pull origin --push $github_user $outdated_cask
+cask-repair <outdated_cask>
 ```
 
 If there is a more complicated change, or there is a case where `cask-repair` fails (for example, where a Cask uses a [`url do` block](https://github.com/caskroom/homebrew-cask/blob/60531a2812005dd5f17dc92f3ce7419af3c5d019/Casks/audacity.rb#L5#L15) or the [`language` stanza](https://github.com/caskroom/homebrew-cask/blob/306b8fbd9502036f1ca742f70c569d8677b62403/Casks/firefox.rb#L4L74)), you can also follow the steps in [Adding a Cask](doc/development/adding_a_cask.md) to do the same thing manually. Remember to update the `version` and `shasum` values, as well as the appcast [`checkpoint`](doc/cask_language_reference/stanzas/appcast.md), if there is one.
