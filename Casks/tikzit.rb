@@ -4,7 +4,7 @@ cask 'tikzit' do
 
   url "https://downloads.sourceforge.net/tikzit/TikZiT-osx-#{version}.zip"
   appcast 'http://tikzit.sourceforge.net/appcast/tikzit.xml',
-          checkpoint: '2fc201624061d05e5b3ae505e69611fd11824534f28ada3ab4150de98ebca5f3'
+          checkpoint: '906cd45032179999523b58eb97a293bf63674ba2193b7932ea3930655e8e1516'
   name 'TikZiT'
   homepage 'http://tikzit.sourceforge.net/'
 
