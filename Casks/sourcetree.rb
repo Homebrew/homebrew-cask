@@ -6,8 +6,8 @@ cask 'sourcetree' do
     version '2.0.5.5'
     sha256 'f23129587703a706a37d5fdd9b2390875305b482a2b4e4b0e34bd49cba9b63c9'
   else
-    version '2.4e'
-    sha256 '950357781de8cfd29377b8b8f356c5037c7480650e9d1bc1fed92db70217ea22'
+    version '2.4f'
+    sha256 '3e2e7fb4c1f2cbcf52028f32b07780d92d04a1a0d38422dc780d7ae26f68b4de'
   end
 
   # atlassian.com was verified as official when first introduced to the cask
