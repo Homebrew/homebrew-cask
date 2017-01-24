@@ -4,7 +4,7 @@ cask 'minikube' do
 
   url "https://github.com/kubernetes/minikube/releases/download/v#{version}/minikube-darwin-amd64"
   appcast 'https://github.com/kubernetes/minikube/releases.atom',
-          checkpoint: '08c47fdf54bfb5bf62badf7685802bc107e4e7ba05b4d0440d71d14dad6f3c1e'
+          checkpoint: '4facf8aca14f0a96adc1b3f32696938be460c8a66830c42ba3fa3242745acf95'
   name 'Minikube'
   homepage 'https://github.com/kubernetes/minikube'
 
@@ -15,4 +15,6 @@ cask 'minikube' do
   postflight do
     set_permissions "#{staged_path}/minikube-darwin-amd64", '0755'
   end
+
+  zap delete: '~/.minikube'
 end
