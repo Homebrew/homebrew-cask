@@ -192,6 +192,7 @@ We maintain separate Taps for different types of binaries. Our nomenclature is:
 + **Unofficial**: An *allegedly* unmodified compiled binary, by a third-party, of a binary that has no existing build by the owner of the source code.
 + **Vendorless**: A binary distributed without an official website, like a forum posting.
 + **Walled**: When the download URL is both behind a login/registration form and from a host that differs from the homepage.
++ **Font**: Data file containing a set of glyphs, characters, or symbols, that changes typed text.
 
 ### Stable Versions
 
