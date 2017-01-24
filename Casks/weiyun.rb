@@ -3,7 +3,7 @@ cask 'weiyun' do
   sha256 'e219143abb8b5cbf1063a28f72398e8747bdec0cd95ad03369edbb16a8dd9043'
 
   # dldir1.qq.com/weiyun was verified as official when first introduced to the cask
-  url "http://dldir1.qq.com/weiyun/Weiyun_Mac_#{version}.dmg"
+  url "https://dldir1.qq.com/weiyun/Weiyun_Mac_#{version}.dmg"
   name 'weiyun'
   homepage 'https://www.weiyun.com/'
 
