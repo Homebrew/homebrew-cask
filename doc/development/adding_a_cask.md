@@ -182,10 +182,9 @@ If your application and Homebrew-Cask do not work well together, feel free to [f
 We maintain separate Taps for different types of binaries. Our nomenclature is:
 
 + **Stable**: The latest version provided by the developer defined by them as such.
-+ **Beta, Development, Unstable**: Subsequent versions to **stable**, yet incomplete and under development, aiming to eventually become the new **stable**.
++ **Beta, Development, Unstable**: Subsequent versions to **stable**, yet incomplete and under development, aiming to eventually become the new **stable**. Also includes alternate versions specifically targeted at developers.
 + **Nightly**: Constantly up-to-date versions of the current development state.
 + **Legacy**: Any **stable** version that is not the most recent.
-+ **Alternative**: Alternative edition of an existing app, by the same vendor (developer editions, community editions, pro editions, …).
 + **Regional, Localized**: Any version that isn’t the US English one, when that exists.
 + **Trial**: Date-limited version that stops working entirely after it expires, requiring payment to lift the limitation.
 + **Freemium**: Gratis version that works indefinitely but with limitations that can be removed by paying.
@@ -202,9 +201,9 @@ Stable versions live in the main repository at [caskroom/homebrew-cask](https://
 
 When an App is only available as beta, development, or unstable versions, or in cases where such a version is the general standard, then said version can go into the main repo.
 
-### Beta, Unstable, Development, Nightly, Legacy, or Alternative Versions
+### Beta, Unstable, Development, Nightly, or Legacy
 
-When an App has a principal stable version, alternative versions should be submitted to [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
+When an App has a main stable version, alternative versions should be submitted to [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
 
 ### Regional and Localized
 
