@@ -149,6 +149,19 @@ IDs inside a kext bundle you have located on disk can be listed using the comman
 $ "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_id_in_kext" '/path/to/name.kext'
 ```
 
+## uninstall Key script:
+
+`uninstall script:` introduces a series of key-value pairs describing a command which will automate completion of the uninstall. Example (from [gpgtools.rb](https://github.com/caskroom/homebrew-cask/blob/4a0a49d1210a8202cbdd54bce2986f15049b8b61/Casks/gpgtools.rb#L33-#L37)):
+
+```ruby
+  uninstall script:    {
+                         executable: "#{staged_path}/Uninstall.app/Contents/Resources/GPG Suite Uninstaller.app/Contents/Resources/uninstall.sh",
+                         sudo:       true,
+                       }
+```
+
+It is important to note that, although `script:` in the above example does attempt to completely uninstall the `pkg`, it should not be used in detriment of [`pkgutil:`](#uninstall-key-pkgutil), but as a complement when possible.
+
 ## uninstall Key delete:
 
 `delete:` should only be used as a last resort, if other `uninstall` methods are insufficient.
