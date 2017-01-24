@@ -5,8 +5,8 @@ cask 'texpad' do
 
     url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.dots_to_underscores}.zip"
   else
-    version '1.7.38,148,9f8c3e4'
-    sha256 'ee4cb219e7005c4faf44ed5774e8079ee1312ed6a0ab3fbd838427e084644cca'
+    version '1.7.39,155,827a641'
+    sha256 'f1162bf7494e3130c7dec0b86d336a10d9d65c7dd6bed68574089c0eb8815948'
 
     url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.before_comma.dots_to_underscores}__#{version.after_comma.before_comma}__#{version.after_comma.after_comma}.dmg"
     appcast 'https://www.texpadapp.com/static-collected/upgrades/texpadappcast.xml',
