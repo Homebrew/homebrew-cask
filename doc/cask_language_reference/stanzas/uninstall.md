@@ -157,11 +157,10 @@ $ "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_i
   uninstall script:    {
                          executable: "#{staged_path}/Uninstall.app/Contents/Resources/GPG Suite Uninstaller.app/Contents/Resources/uninstall.sh",
                          sudo:       true,
-                       },
-            pkgutil:   'org.gpgtools.*'
+                       }
 ```
 
-It is important to note that, although `script:` in the above example does attempt to completely uninstall the `pkg`, it should not be used in detriment of `pkgutil:`, but as a complement when possible.
+It is important to note that, although `script:` in the above example does attempt to completely uninstall the `pkg`, it should not be used in detriment of [`pkgutil:`](#uninstall-key-pkgutil), but as a complement when possible.
 
 ## uninstall Key delete:
 
