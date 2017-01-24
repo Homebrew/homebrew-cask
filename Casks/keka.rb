@@ -5,7 +5,7 @@ cask 'keka' do
   # github.com/aonez/Keka was verified as official when first introduced to the cask
   url "https://github.com/aonez/Keka/releases/download/#{version}/Keka-#{version}.dmg"
   appcast 'https://github.com/aonez/Keka/releases.atom',
-          checkpoint: '772e4f21cf3ba63c4b2d9a10a8419b680a74464fadaead8b70380ad677410546'
+          checkpoint: '6239d57ff44cec2f16c5f8546b61b891daa96a358b4b99481fc4de516cf00e57'
   name 'Keka'
   homepage 'http://www.kekaosx.com/'
 
