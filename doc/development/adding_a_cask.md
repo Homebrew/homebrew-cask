@@ -194,6 +194,7 @@ We maintain separate Taps for different types of binaries. Our nomenclature is:
 + **Walled**: When the download URL is both behind a login/registration form and from a host that differs from the homepage.
 + **Font**: Data file containing a set of glyphs, characters, or symbols, that changes typed text.
 + **eID**: Software to install electronic identity card software of various countries.
++ **Driver**: Software with the sole goal of making a hardware peripheral recognisable by the system.
 
 ### Stable Versions
 
@@ -231,6 +232,11 @@ for details.
 ### eIDs
 
 eID Casks live in the [caskroom/homebrew-eid](https://github.com/caskroom/homebrew-eid) repository. See the eid repo [CONTRIBUTING.md](../../../../../homebrew-eid/blob/master/CONTRIBUTING.md)
+for details.
+
+### Drivers
+
+Driver Casks live in the [caskroom/homebrew-drivers](https://github.com/caskroom/homebrew-drivers) repository. See the drivers repo [CONTRIBUTING.md](../../../../../homebrew-drivers/blob/master/CONTRIBUTING.md)
 for details.
 
 ## Submitting Your Changes
