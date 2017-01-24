@@ -1,10 +1,12 @@
 cask 'wireshark' do
-  version '2.2.3'
-  sha256 '300195804c9545a75632c191fb1c5491f18e314b01178a2abe18faab78c8e150'
+  version '2.2.4'
+  sha256 'e3951fdd6cbf7bfec65595ba668f953ccb2587ad94f078cac3a5b99bf3bd2e6e'
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
   name 'Wireshark'
   homepage 'https://www.wireshark.org/'
+
+  depends_on macos: '>= :mountain_lion'
 
   pkg "Wireshark #{version} Intel 64.pkg"
 
