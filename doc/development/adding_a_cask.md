@@ -193,6 +193,7 @@ We maintain separate Taps for different types of binaries. Our nomenclature is:
 + **Vendorless**: A binary distributed without an official website, like a forum posting.
 + **Walled**: When the download URL is both behind a login/registration form and from a host that differs from the homepage.
 + **Font**: Data file containing a set of glyphs, characters, or symbols, that changes typed text.
++ **eID**: Software to install electronic identity card software of various countries.
 
 ### Stable Versions
 
@@ -225,6 +226,11 @@ We do not accept these casks since they offer a higher-than-normal security risk
 ### Fonts
 
 Font Casks live in the [caskroom/homebrew-fonts](https://github.com/caskroom/homebrew-fonts) repository. See the font repo [CONTRIBUTING.md](../../../../../homebrew-fonts/blob/master/CONTRIBUTING.md)
+for details.
+
+### eIDs
+
+eID Casks live in the [caskroom/homebrew-eid](https://github.com/caskroom/homebrew-eid) repository. See the eid repo [CONTRIBUTING.md](../../../../../homebrew-eid/blob/master/CONTRIBUTING.md)
 for details.
 
 ## Submitting Your Changes
