@@ -1,10 +1,10 @@
 cask 'realm-browser' do
-  version '2.1.2'
-  sha256 'fc9356c241687096b18c397585acff1d81a9e06c3aae43cdb56d2174966f6ea0'
+  version '2.1.3'
+  sha256 'ee73a95a080fe6b9c23976b12a3b21318572aa14780d25546f2363ca884091c7'
 
-  url "https://github.com/realm/realm-browser-osx/releases/download/v#{version}/Realm.Browser-#{version}.zip"
+  url "https://github.com/realm/realm-browser-osx/releases/download/v#{version}/RealmBrowser-#{version}.zip"
   appcast 'https://github.com/realm/realm-browser-osx/releases.atom',
-          checkpoint: 'b2d6a1a85a6bbcf784aa2bbaee9836717ee8479cfe396565a6964c1896706ae4'
+          checkpoint: '1864b6387152ebd114c75e3f1a7a81638ea90a5380a83abda7e72236c64dcfee'
   name 'Realm Browser'
   homepage 'https://github.com/realm/realm-browser-osx/'
 
