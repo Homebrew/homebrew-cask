@@ -1,6 +1,6 @@
 cask 'kext-utility' do
-  version '2.6.4'
-  sha256 '45d8705872adaba89137a99465ac4d423dc70e6b297515ced03f66f05deb19e8'
+  version '2.6.6'
+  sha256 '3527644157e2eefc78cf8719a71f34558d010c97db9b054bfe362b4542531f21'
 
   url "http://cvad-mac.narod.ru/files/Kext_Utility.app.v#{version}.zip"
   name 'Kext Utility'
