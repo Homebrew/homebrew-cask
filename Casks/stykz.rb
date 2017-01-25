@@ -1,6 +1,6 @@
 cask 'stykz' do
-  version '1.0.2'
-  sha256 '5e48b2115f7d3406e5f218045813184f9dc65db39b973fa8ad71ecbf7b86cede'
+  version :latest
+  sha256 :no_check
 
   url 'http://www.stykz.net/downloads/mac/Stykz.dmg.zip'
   name 'Stykz'
