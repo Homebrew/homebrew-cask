@@ -6,5 +6,5 @@ cask 'smartfinder' do
   name 'Smart Finder'
   homepage 'http://www.smartisan.com/apps/'
 
-  app 'SmartFinder.app'
+  app 'HandShaker.app'
 end
