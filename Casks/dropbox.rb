@@ -5,7 +5,7 @@ cask 'dropbox' do
   # clientupdates.dropboxstatic.com was verified as official when first introduced to the cask
   url "https://clientupdates.dropboxstatic.com/client/Dropbox%20#{version}.dmg"
   appcast 'https://www.dropbox.com/release_notes/rss.xml',
-          checkpoint: '8ff3fbcd6b128f85c7b530010b8b42e24aba486303e976552f0ed975af077abf'
+          checkpoint: '2794637a8b028d903f0d27432291dce968886923a86325994156cf1206edec80'
   name 'Dropbox'
   homepage 'https://www.dropbox.com/'
 
