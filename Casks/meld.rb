@@ -10,5 +10,5 @@ cask 'meld' do
   homepage 'https://yousseb.github.io/meld/'
 
   app 'Meld.app'
-  binary "#{appdir}/Contents/MacOS/Meld", target: 'meld'
+  binary "#{appdir}/Meld.app/Contents/MacOS/Meld", target: 'meld'
 end
