@@ -1,6 +1,6 @@
 cask 'racket' do
-  version '6.7'
-  sha256 'abd6d9da0b09c3dc9d06e5a48ebb5e567f57ffa1584f4f262f9e6ecca9d8108a'
+  version '6.8'
+  sha256 '98303654b3c5bc1389e35fe8ca91f8b2ee749469796b2d80d864fb7dfdccc547'
 
   # cs.utah.edu/plt/installers was verified as official when first introduced to the cask
   url "https://www.cs.utah.edu/plt/installers/#{version}/racket-#{version}-x86_64-macosx.dmg"
