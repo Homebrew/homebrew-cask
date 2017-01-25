@@ -7,7 +7,7 @@ cask 'biba' do
   appcast 'https://api.biba.com/osx_downloads/appcast',
           checkpoint: '30eeabb10721a3989ccf226b9dadded4c0eda0d6b32337272dfa71d8f8584032'
   name 'Biba'
-  homepage 'http://www.biba.com/'
+  homepage 'https://www.biba.com/'
 
   app 'Biba.app'
 end

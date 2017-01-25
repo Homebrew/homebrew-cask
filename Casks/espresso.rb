@@ -6,7 +6,7 @@ cask 'espresso' do
   appcast "https://update.macrabbit.com/espresso/#{version}.xml",
           checkpoint: '27e974e9e7538ad6a2d8efa6ef3edc8bba0e607aca2c6419350a8baef24f4baa'
   name 'Espresso'
-  homepage 'http://macrabbit.com/espresso/'
+  homepage 'https://macrabbit.com/espresso/'
 
   app 'Espresso.app'
 end

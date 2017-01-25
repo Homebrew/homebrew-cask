@@ -2,7 +2,7 @@ cask '115browser' do
   version '7.2.5.15'
   sha256 '949cc0870ab585ae6cce916485f6d4751831c4543f1de0cc57ceb7557a62408e'
 
-  url "http://down.115.com/client/mac/115br_v#{version}.dmg"
+  url "https://down.115.com/client/mac/115br_v#{version}.dmg"
   name '115Browser'
   name '115浏览器'
   homepage 'https://pc.115.com/'

@@ -3,7 +3,7 @@ cask 'baiducloud' do
   sha256 '7694edba46c8e53ffd2d2485dad4d68b06e27cc038d18cdd40699d1c0e559ba2'
 
   # issuecdn.baidupcs.com was verified as official when first introduced to the cask
-  url "http://issuecdn.baidupcs.com/issue/netdisk/macapk/BaiduNetdisk_mac_#{version}.dmg"
+  url "https://issuecdn.baidupcs.com/issue/netdisk/macapk/BaiduNetdisk_mac_#{version}.dmg"
   name 'Baidu Cloud'
   name 'Baidu Yun Tong Bu Pan'
   name '百度云同步盘'
