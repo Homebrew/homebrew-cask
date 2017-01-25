@@ -1,6 +1,6 @@
 cask 'scythebill' do
-  version '13.4.1'
-  sha256 '569b68ea9ba10216aab38320833fb3765c799f5b8b05da97ed67c4df21d12636'
+  version '13.5.0'
+  sha256 'bd30b4e8ffba2f5a538f5128ddcef797a9bcbe766d39485de064d3e9fe2f16f6'
 
   # amazonaws.com/downloads.scythebill.com was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/downloads.scythebill.com/Scythebill-#{version}.dmg"
