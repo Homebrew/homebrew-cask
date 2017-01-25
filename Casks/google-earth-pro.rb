@@ -6,7 +6,7 @@ cask 'google-earth-pro' do
   name 'Google Earth Pro'
   homepage 'https://www.google.com/earth/'
 
-  pkg 'Install Google Earth.pkg'
+  pkg 'Install Google Earth Pro 7.1.8.3036.pkg'
 
   uninstall pkgutil: 'com.Google.GoogleEarthPro'
 
