@@ -5,7 +5,7 @@ cask 'rambox' do
   # github.com/saenzramiro/rambox was verified as official when first introduced to the cask
   url "https://github.com/saenzramiro/rambox/releases/download/#{version}/Rambox-#{version}-mac.zip"
   appcast 'https://github.com/saenzramiro/rambox/releases.atom',
-          checkpoint: '2689c99aa959590944dea05630ca4de5c467be555b2ade277faa7cb3ef6ef970'
+          checkpoint: 'cee34001a896d6de679c3bdca37743246ab2d6dce5158fb6910316418d18d4d1'
   name 'Rambox'
   homepage 'http://rambox.pro/'
 
