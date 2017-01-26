@@ -6,6 +6,9 @@ cask 'srware-iron' do
   name 'SRWare SRWare Iron'
   homepage 'https://www.srware.net/en/software_srware_iron.php'
 
+  depends_on formula: 'unar'
+  container type: :generic_unar
+
   # Renamed for clarity: app name is inconsistent with its branding.
-  app 'Chromium.app', target: 'SRWare Iron.app'
+  app 'iron-mac64/Chromium.app', :target => 'SRWare Iron.app'
 end
