@@ -1,10 +1,10 @@
 cask 'arq' do
-  version '5.7.2'
-  sha256 '9e9212c6cfc0fcd7dd73c35e280f742ac4ade80197c800875269e46e1dd9a77f'
+  version '5.7.3'
+  sha256 '1850a7dcf31bf5f95e3ee8adbfa8e73cda51faa7eeef4df74c193ab31781d7d1'
 
   url "https://www.arqbackup.com/download/Arq_#{version}.zip"
   appcast "https://www.arqbackup.com/download/arq#{version.major}.xml",
-          checkpoint: '2b2f2e0e637fc60438bd683b55fa3bcfcaaf04a60ead31f864ae5e712c6c5ec0'
+          checkpoint: '93d4846b8ba67dae7ec3a25ed8bb8dedb2675db89c25b4883c586ad82a461d4f'
   name 'Arq'
   homepage 'https://www.arqbackup.com/'
 
