@@ -49,7 +49,7 @@ For software with unusual needs that are not covered by the DSL, we generally ac
 
 The setup is similar to that for contibuting to the core code of Homebrew - consult Homebrew's [documentation for maintainers]( https://github.com/Homebrew/brew/tree/master/docs#maintainers) for more information.
 
-### Forcing a Ruby interpreter
+### Forcing a Ruby Interpreter
 
 You can force a specific version of the Ruby interpreter, and/or an alternate version of the `brew-cask` subcommand, by invoking `brew cask` with fully-qualified paths, like this:
 
@@ -124,7 +124,7 @@ logisim	---
 
 As a final example, the command `brew cask _stanza homepage > homepage_list.txt` will output the `homepage` of every Cask into the text file `homepage_list.txt`.
 
-## Be social
+## Be Social
 
 If you are going to develop for Homebrew-Cask, it’s a great idea to chat with us first. Here’s why:
 
