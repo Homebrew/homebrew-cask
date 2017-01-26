@@ -1,6 +1,6 @@
 cask 'wine-staging' do
-  version '2.0-rc5'
-  sha256 '7e90da67fb05d91733acf8c856722c95e3fce2587a76a8ff334c1d5104cc606c'
+  version '2.0'
+  sha256 '37d0f5de1af9ec2d9ce0aef9cad6e58232d501aa2f3fb66f3397513e5357eafc'
 
   url "https://repos.wine-staging.com/macosx/i686/winehq-staging-#{version}.pkg"
   name 'WineHQ-staging'
