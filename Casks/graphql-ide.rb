@@ -4,7 +4,7 @@ cask 'graphql-ide' do
 
   url "https://github.com/redound/graphql-ide/releases/download/v#{version}/GraphQL.IDE.app.zip"
   appcast 'https://github.com/redound/graphql-ide/releases.atom',
-          checkpoint: '303b735e0bceec72e00116ef27afd394686f2c1aa0cd133a4ec658b28d900555'
+          checkpoint: '85a07b3f3077bd2139c2b4d42942c1a724a6a27c5e55387489d86c6aeb4d2b17'
   name 'GraphQL IDE'
   homepage 'https://github.com/redound/graphql-ide'
 
