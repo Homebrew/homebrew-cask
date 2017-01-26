@@ -1,11 +1,11 @@
 cask 'neofinder' do
-  version '7'
-  sha256 'b4a8b1f85216a7db62a72aa82cb53a127ea84953cae8f0f5d104d88033765417'
+  version '7.0.1'
+  sha256 '00d33015bd43a6faaea3ca5609bb4d29ebde62e0c66d985a43c79fb2f05c2afb'
 
   # wfs-apps.de was verified as official when first introduced to the cask
   url "https://www.wfs-apps.de/updates/neofinder.#{version}.zip"
   appcast 'https://www.wfs-apps.de/updates/neofinder-appcast-64.xml',
-          checkpoint: 'd4b196c718780be1f55fa8d2544d68ed47e19b03c0f4496c7338b81a9a5cc2b7'
+          checkpoint: '6e103746983253e88cd032251844b6e4eae3461a1f04c5758ee29283b9645885'
   name 'NeoFinder'
   homepage 'https://www.cdfinder.de/'
 
