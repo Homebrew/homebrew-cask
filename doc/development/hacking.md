@@ -15,6 +15,8 @@ Homebrew-Cask is designed to work like a traditional Unix tool:
 
 ## Project Status
 
+Homebrew-Cask is still young, and should be considered in alpha.
+
 We have good support for a variety of artifacts: apps, pkgs, binaries, plugins, and [fonts](https://github.com/caskroom/homebrew-fonts/). Homebrew-Cask can install and uninstall any of those. However, these commands don’t work well with multiple versions, and most importantly, we currently can’t `upgrade`.
 
 Since upgrading is a core feature of every package manager, the implementation of an `upgrade` verb is our top priority. For `upgrade` to work reliably, we must:
