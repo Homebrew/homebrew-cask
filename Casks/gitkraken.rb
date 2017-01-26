@@ -1,5 +1,5 @@
 cask 'gitkraken' do
-  version '1.9.3'
+  version '2.0.1'
   sha256 '091c133f8a5b1ac3e9447d9cdf26e9dbd1136525e6fa883d430d07c985988003'
 
   url "https://release.gitkraken.com/darwin/v#{version}.zip"
