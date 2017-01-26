@@ -6,8 +6,6 @@ If you’d like to hack on the Ruby code that drives this project, please join u
 
 Homebrew-Cask is an attempt to make a Linux-style package manager for precompiled macOS software. Homebrew-Cask is not yet as featureful as `apt` or `yum`, but we are trying to be as close as we can get to those tools from the user’s point of view.
 
-We manage installed files via methods like [Homebrew](http://brew.sh/). Similarly, we try to avoid `sudo` where possible.
-
 Homebrew-Cask is designed to work like a traditional Unix tool:
 
 * All functionality should be accessible from the CLI. The user should be freed (**freed!**) from interacting with a GUI.
@@ -17,15 +15,7 @@ Homebrew-Cask is designed to work like a traditional Unix tool:
 
 Homebrew-Cask is still young, and should be considered in alpha.
 
-We have good support for a variety of artifacts: apps, pkgs, binaries, plugins, and [fonts](https://github.com/caskroom/homebrew-fonts/). Homebrew-Cask can install and uninstall any of those. However, these commands don’t work well with multiple versions, and most importantly, we currently can’t `upgrade`.
-
-Since upgrading is a core feature of every package manager, the implementation of an `upgrade` verb is our top priority. For `upgrade` to work reliably, we must:
-
-* Maintain unequivocal version information from a variety of sources,
-* Track version-specific uninstallation,
-* Play nice with self-updating software.
-
-These and more requirements are tracked in our `upgrade` roadmaps discussed [here](https://github.com/caskroom/homebrew-cask/issues/4678) and [here](https://github.com/caskroom/homebrew-cask/issues/29301). If you’d like to contribute to `upgrade`, that’s an excellent place to start.
+We have good support for a variety of artifacts such as apps, pkgs, binaries, plugins, and [fonts](https://github.com/caskroom/homebrew-fonts/). Homebrew-Cask can install and uninstall any of those. However, these commands don’t work well with multiple versions, and most importantly, we currently can’t `upgrade` ([but are working on it](https://github.com/caskroom/homebrew-cask/issues/29301)).
 
 ## Homebrew and Homebrew-Cask
 
@@ -47,7 +37,7 @@ For software with unusual needs that are not covered by the DSL, we generally ac
 
 ### Setup
 
-The setup is similar to that for contibuting to the core code of Homebrew - consult Homebrew's [documentation for maintainers]( https://github.com/Homebrew/brew/tree/master/docs#maintainers) for more information.
+The setup is similar to that for contibuting to the core code of Homebrew — consult Homebrew’s [documentation for maintainers](https://github.com/Homebrew/brew/tree/master/docs#maintainers) for more information.
 
 ### Forcing a Ruby Interpreter
 
@@ -95,7 +85,7 @@ Advanced users may create their own external commands for Homebrew-Cask by follo
 
 ### The External Command `_stanza`
 
-[`_stanza`](https://github.com/Homebrew/brew/blob/master/Library/Homebrew/cask/lib/hbc/cli/internal_stanza.rb) is an incredibly useful command to contributors who want to build a tool that leans on the information from Homebrew-Cask. It extracts and renders a specific stanza for either a given Cask, or for every Cask.
+[`_stanza`](https://github.com/Homebrew/brew/blob/master/Library/Homebrew/cask/lib/hbc/cli/internal_stanza.rb) is a useful command to contributors who want to build a tool that leans on the information from Homebrew-Cask. It extracts and renders a specific stanza for either a given Cask or every Cask.
 
 The syntax is
 
@@ -103,34 +93,8 @@ The syntax is
 brew cask _stanza <stanza_name> [ --table | --yaml | --inspect | --quiet ] [ <cask_token> ... ]
 ```
 
-If no `<cask_token>`'s are given, then data for all Casks is returned. On failure, a blank line is returned on the standard output.
+If no `<cask_token>`’s are given, then data for all Casks is returned. On failure, a blank line is returned to the standard output.
 
-For example, `brew cask _stanza appcast atom` outputs the `appcast` for the Cask [atom.rb](https://github.com/caskroom/homebrew-cask/blob/43ad9d8ddbad71fbeee42710d567861f080fedf8/Casks/atom.rb#L7), namely `https://github.com/atom/atom/releases.atom`.
-
-The command `brew cask _stanza app --table --yaml alfred google-chrome adium voicemac logisim` outputs a human-readable data table of the `app` stanzas for the given Casks:
-
-```bash
-alfred	---
-- Alfred 3.app
-google-chrome	---
-- Google Chrome.app
-adium	---
-- Adium.app
-voicemac	---
-- VoiceMac/VoiceMac.app
-logisim	---
-- Logisim.app
-```
-
-As a final example, the command `brew cask _stanza homepage > homepage_list.txt` will output the `homepage` of every Cask into the text file `homepage_list.txt`.
-
-## Be Social
-
-If you are going to develop for Homebrew-Cask, it’s a great idea to chat with us first. Here’s why:
-
-* Discuss your thoughts before coding by [opening an issue](https://github.com/caskroom/homebrew-cask/issues/new) and maybe get new ideas
-* Get feedback from the Travis-CI bot on build failures
-* Join us (and [caskbot](https://github.com/passcod/caskbot)) on IRC at `#homebrew-cask` on Freenode
-* Join us on [Gitter](https://gitter.im/caskroom/homebrew-cask)
+For example, `brew cask _stanza appcast atom` outputs the [`appcast` for the Cask atom.rb](https://github.com/caskroom/homebrew-cask/blob/43ad9d8ddbad71fbeee42710d567861f080fedf8/Casks/atom.rb#L7), namely `https://github.com/atom/atom/releases.atom`.
 
 # <3 THANK YOU! <3
