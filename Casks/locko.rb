@@ -4,9 +4,9 @@ cask 'locko' do
 
   url 'http://download.binarynights.com/Locko.zip'
   appcast 'http://update.binarynights.com/locko/sparkle-update.xml',
-          checkpoint: 'ab311f70d77b21dd8f2f06e2736346a81a6c9d3f8e4dcf730431b44579f14ef2'
+          checkpoint: '109cd2e84b31bafcc00c84f5fbb8a3dc27653c1aaeba983b9f4cd5ef41258afd'
   name 'Locko'
-  homepage 'http://www.binarynights.com/'
+  homepage 'https://www.binarynights.com/'
 
   app 'Locko.app'
 end
