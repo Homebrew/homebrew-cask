@@ -5,9 +5,9 @@ cask 'polyphone' do
   # sourceforge.net/polyphone was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/polyphone/polyphone-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/polyphone/rss',
-          checkpoint: 'e65a3b235aa749006ae05ee2df31dedb6bbdcbe7e066a72b885c7dff1ef84d94'
+          checkpoint: '609b92b4f61512809cb2bac131873deac0b62d085a2ae617415d2fe585107fc3'
   name 'Polyphone'
-  homepage 'http://polyphone-soundfonts.com/'
+  homepage 'https://polyphone-soundfonts.com/'
 
   app 'Polyphone.app'
 end

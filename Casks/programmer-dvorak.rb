@@ -2,9 +2,9 @@ cask 'programmer-dvorak' do
   version '1.2b9'
   sha256 '36e51a0ee3ece99de99f2983e14beb415f74d9ae4726093cb60463cc206295e9'
 
-  url "http://www.kaufmann.no/downloads/macos/ProgrammerDvorak-#{version.dots_to_underscores}.pkg.zip"
-  appcast 'http://kaufmann.no/roland/dvorak',
-          checkpoint: 'c08091bb0345b4376580e7ba19dd907ba78450a7180647b5b02a27c13e364a6d'
+  url "https://www.kaufmann.no/downloads/macos/ProgrammerDvorak-#{version.dots_to_underscores}.pkg.zip"
+  appcast 'https://kaufmann.no/roland/dvorak',
+          checkpoint: '20a4400a036665bf6639dddca1726093c5c200d08c79e807e6a02918b6802005'
   name 'Programmer Dvorak'
   homepage 'https://kaufmann.no/roland/dvorak/'
 
