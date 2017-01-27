@@ -43,7 +43,7 @@ cask 'world-of-tanks' do
 
     url 'https://wot.gcdn.co/ru/files/osx/worldoftanks_ru.dmg'
     appcast 'https://wot.gcdn.co/ru/files/osx/WoT_OSX_update_ru.xml',
-            checkpoint: 'e2e2750ff01fb00a5ca44244273c821c2564ed533543ecf16ef73cce3712bfb8'
+            checkpoint: 'ff33b34e2e24f607ee0ed1d61381f735f1549a5f97efd4e8c58d3b815e59920d'
     homepage 'http://worldoftanks.ru/'
   end
 
