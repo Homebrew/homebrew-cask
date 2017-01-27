@@ -1,12 +1,12 @@
 cask 'wacom-intuos-tablet' do
-  version '6.3.15-2'
-  sha256 '2a36df11a877b6c75e080477d34fad4af2c7f0758efaeb792cffc302d836f590'
+  version '6.3.20-8'
+  sha256 'c0ede699f001ffde7fe4ca27df7c62720bdad29a9b04fd8be646ed81f2211ba5'
 
   url "http://cdn.wacom.com/u/productsupport/drivers/mac/professional/WacomTablet_#{version}.dmg"
-  name 'Wacom Intuos3/4/5 Tablet'
-  homepage 'http://www.wacom.com/'
+  name 'Wacom Intuos 4/5/Pro Tablet'
+  homepage 'https://www.wacom.com/support/product-support/drivers'
 
-  conflicts_with cask: 'wacom-intuos-pro-tablet'
+  conflicts_with cask: 'wacom-intuos-3-tablet'
 
   pkg 'Install Wacom Tablet.pkg'
 
