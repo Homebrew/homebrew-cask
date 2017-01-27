@@ -7,7 +7,7 @@ cask 'sylo' do
   appcast 'http://admin.unisionmusic.com/sylo/update.xml',
           checkpoint: '4bf7981f23b254b78788617f903ef03e00ced67d3872b08b23a3a96bf11c576f'
   name 'Sylo'
-  homepage 'http://www.sylomusic.com/'
+  homepage 'https://www.sylomusic.com/'
 
   auto_updates true
 
