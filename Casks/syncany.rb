@@ -1,6 +1,6 @@
 cask 'syncany' do
-  version '0.4.6-alpha'
-  sha256 '6ff3f4eadf716616e4f91402779d77734194071ff191bba4eb2f30352c161f90'
+  version '0.4.9-alpha'
+  sha256 '7d2f8a5d504833c2c5054ecdb929de896a89627ccdd69fd21eaccd35444bca5a'
 
   url "https://get.syncany.org/dist/releases/syncany-#{version}-x86_64.app.zip"
   name 'Syncany'
