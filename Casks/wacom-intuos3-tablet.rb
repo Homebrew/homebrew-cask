@@ -1,9 +1,9 @@
-cask 'wacom-intuos-3-tablet' do
+cask 'wacom-intuos3-tablet' do
   version '6.3.15-2'
   sha256 '2a36df11a877b6c75e080477d34fad4af2c7f0758efaeb792cffc302d836f590'
 
   url "http://cdn.wacom.com/u/productsupport/drivers/mac/professional/WacomTablet_#{version}.dmg"
-  name 'Wacom Intuos 3 Tablet'
+  name 'Wacom Intuos3 Tablet'
   homepage 'https://www.wacom.com/en-us/support/product-support/drivers'
 
   conflicts_with cask: 'wacom-intuos-tablet'
