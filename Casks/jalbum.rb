@@ -4,7 +4,7 @@ cask 'jalbum' do
 
   url "http://download.jalbum.net/download/#{version}/MacOSX/jAlbum.dmg"
   name 'jAlbum'
-  homepage 'http://jalbum.net/'
+  homepage 'https://jalbum.net/'
 
   app 'jAlbum.app'
 end
