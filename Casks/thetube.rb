@@ -4,7 +4,7 @@ cask 'thetube' do
 
   url "http://download2.equinux.com/files/other/TheTube_#{version}_Web.zip"
   name 'TheTube'
-  homepage 'http://www.equinux.com/'
+  homepage 'https://www.equinux.com/'
 
   app 'TheTube.app'
 end
