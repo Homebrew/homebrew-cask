@@ -4,8 +4,8 @@ cask 'swift-publisher' do
 
   # s3.amazonaws.com/belightsoft was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/belightsoft/SwiftPublisher.dmg'
-  appcast 'https://www.belightsoft.com/download/updates/appcast_SwiftPublisher3.xml',
-          checkpoint: '04cf983120e06ad9958bb69ff7d2b47c2d2bd6ba4f5349eeb5002602f54195ca'
+  appcast "https://www.belightsoft.com/download/updates/appcast_SwiftPublisher#{version.major}.xml",
+          checkpoint: 'd6a4ec3a83b57ec88a5618ce44c518faa4618caa03e00234afd1d8da972af4ec'
   name 'Swift Publisher'
   homepage 'https://www.belightsoft.com/products/swiftpublisher/'
 
