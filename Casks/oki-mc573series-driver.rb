@@ -4,7 +4,7 @@ cask 'oki-mc573series-driver' do
 
   url 'http://www.oki.com/eu/printing/download/MC573_PS_OSX_010000_85604.dmg'
   name 'OKI Color PS Driver for OSX'
-  homepage 'http://www.oki.com/eu/printing/support/drivers-and-utilities/?id=46591401FZ01&tab=drivers-and-utilities&productCategory=colour&sku=46403102'
+  homepage 'https://www.oki.com/eu/printing/support/drivers-and-utilities/?id=46591401FZ01&tab=drivers-and-utilities&productCategory=colour&sku=46403102'
 
   pkg 'Installer for OSX.pkg'
 
