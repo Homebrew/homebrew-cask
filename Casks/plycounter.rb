@@ -4,7 +4,7 @@ cask 'plycounter' do
 
   url 'https://www.plycount.com/plycounter/downloads/PlyCounter.dmg'
   name 'PlyCounter'
-  homepage 'http://www.plycount.com/'
+  homepage 'https://www.plycount.com/'
 
   app 'PlyCounter.app'
 end
