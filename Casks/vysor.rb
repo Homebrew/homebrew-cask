@@ -1,9 +1,11 @@
 cask 'vysor' do
-  version :latest
-  sha256 :no_check
+  version '1.6.7'
+  sha256 'c75f6c3f1e5b84141686c4214da91a409992f6c937521e821a77d83d6b548a2d'
 
-  # vysornuts.clockworkmod.com was verified as official when first introduced to the cask
-  url 'https://vysornuts.clockworkmod.com/download/osx.zip'
+  # github.com/koush/vysor.io was verified as official when first introduced to the cask
+  url "https://github.com/koush/vysor.io/releases/download/v#{version}/Vysor-mac.zip"
+  appcast 'https://github.com/koush/vysor.io/releases.atom',
+          checkpoint: '0d2caa485689d7473f12c206dc29f93837facca857a60276e44b632dfa290766'
   name 'Vysor'
   homepage 'https://www.vysor.io'
 
