@@ -16,5 +16,5 @@ cask 'audio-hijack' do
                 '~/Library/Preferences/com.rogueamoeba.audiohijack3.plist',
                 '~/Library/Application Support/Audio Hijack',
                 '~/Music/Audio Hijack',
-              ],
+              ]
 end
