@@ -2,7 +2,7 @@ cask 'vdmx' do
   version :latest
   sha256 :no_check
 
-  url 'http://vidvox.net/download/vdmx_demo'
+  url 'https://vidvox.net/download/vdmx_demo'
   name 'VDMX5'
   homepage 'http://vidvox.net/'
 
