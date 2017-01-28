@@ -10,4 +10,12 @@ cask 'iina' do
   homepage 'https://lhc70000.github.io/iina/'
 
   app 'IINA.app'
+
+  zap delete: [
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.colliderli.iina.sfl',
+                '~/Library/Application Support/com.colliderli.iina',
+                '~/Library/Caches/com.colliderli.iina',
+                '~/Library/Preferences/com.colliderli.iina.plist',
+                '~/Library/Saved Application State/com.colliderli.iina.savedState',
+              ]
 end
