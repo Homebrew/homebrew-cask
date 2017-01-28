@@ -6,6 +6,7 @@ cask 'wireshark-chmodbpf' do
   name 'Wireshark-ChmodBPF'
   homepage 'https://www.wireshark.org/'
 
+  conflicts_with cask: 'wireshark'
   depends_on macos: '>= :mountain_lion'
 
   pkg "Wireshark #{version} Intel 64.pkg",
