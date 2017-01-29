@@ -11,7 +11,5 @@ cask 'find-any-file' do
 
   app 'Find Any File.app'
 
-  zap delete: [
-                '~/Library/Application Support/Find Any File',
-              ]
+  zap delete: '~/Library/Application Support/Find Any File'
 end
