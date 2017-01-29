@@ -4,7 +4,7 @@ cask 'bookwright' do
 
   url "http://downloads.blurb.com/bookwright_v2/#{version}/BookWright.dmg"
   name 'BookWright'
-  homepage 'https://www.blurb.com/bookwright'
+  homepage 'http://www.blurb.com/bookwright'
 
   app 'BookWright.app'
 end

@@ -4,7 +4,7 @@ cask 'starleaf-breeze' do
 
   url 'https://dl.starleaf.com/breeze_downloads/StarLeaf-Breeze-Installer-Mac-OS.pkg'
   name 'Starleaf Breeze'
-  homepage 'http://www.starleaf.com/'
+  homepage 'https://www.starleaf.com/'
 
   auto_updates true
 

@@ -4,7 +4,7 @@ cask 'vdmx' do
 
   url 'https://vidvox.net/download/vdmx_demo'
   name 'VDMX5'
-  homepage 'http://vidvox.net/'
+  homepage 'https://vidvox.net/'
 
   pkg 'VDMX5 Installer.pkg'
 

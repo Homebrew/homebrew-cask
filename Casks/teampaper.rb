@@ -6,7 +6,7 @@ cask 'teampaper' do
   appcast 'https://www.teampaper.me/sparkle/sparkle.xml',
           checkpoint: '2f477deb9b9b1eb2911395024627d6cb5e5588cd2a9be54d980cfe4c6db7c95e'
   name 'TeamPaper'
-  homepage 'https://teampaper.me'
+  homepage 'http://teampaper.me/'
 
   app 'TeamPaper.app'
 end

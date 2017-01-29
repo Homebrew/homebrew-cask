@@ -5,7 +5,7 @@ cask 'freefilesync' do
   url "http://www.freefilesync.org/download/FreeFileSync_#{version}_macOS.zip",
       user_agent: :fake
   name 'FreeFileSync'
-  homepage 'https://www.freefilesync.org/'
+  homepage 'http://www.freefilesync.org/'
 
   app 'FreeFileSync.app'
   app 'RealtimeSync.app'

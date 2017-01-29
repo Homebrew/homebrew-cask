@@ -4,7 +4,7 @@ cask 'runescape' do
 
   url 'https://content.runescape.com/downloads/osx/RuneScape.dmg'
   name 'RuneScape'
-  homepage 'https://www.runescape.com/'
+  homepage 'http://www.runescape.com/'
 
   app 'RuneScape.app'
 end
