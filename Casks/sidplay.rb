@@ -9,5 +9,7 @@ cask 'sidplay' do
   name 'SIDPLAY'
   homepage 'http://www.sidmusic.org/sidplay/mac/'
 
+  depends_on macos: '>= :el_capitan'
+
   app 'SIDPLAY.app'
 end
