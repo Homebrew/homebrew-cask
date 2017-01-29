@@ -5,7 +5,7 @@ cask 'katawa-shoujo' do
   url "http://dl.katawa-shoujo.com/gold_#{version}/%5B4ls%5D_katawa_shoujo_#{version}-%5Bmac%5D%5B1DFC84A6%5D.dmg"
   name 'Katawa Shoujo'
   name 'かたわ少女'
-  homepage 'http://www.katawa-shoujo.com/'
+  homepage 'https://www.katawa-shoujo.com/'
 
   app 'Katawa Shoujo.app'
 end

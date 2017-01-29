@@ -4,7 +4,7 @@ cask 'mac-informer' do
 
   url 'http://files.informer.com/simac.dmg'
   name 'Mac Informer'
-  homepage 'https://macdownload.informer.com/landing/'
+  homepage 'http://macdownload.informer.com/landing/'
 
   app 'Mac Informer.app'
 

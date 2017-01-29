@@ -4,7 +4,7 @@ cask 'redcine-x-pro' do
 
   url "http://downloads.red.com/software/rcx/mac/release/#{version.major}.#{version.after_comma}/REDCINE-X_PRO_Build_#{version.major_minor}.pkg"
   name 'REDCINE-X PRO'
-  homepage 'https://www.red.com/'
+  homepage 'http://www.red.com/'
 
   pkg "REDCINE-X_PRO_Build_#{version.major_minor}.pkg"
 

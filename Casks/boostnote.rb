@@ -7,7 +7,7 @@ cask 'boostnote' do
   appcast 'https://github.com/BoostIO/boost-releases/releases.atom',
           checkpoint: '2a3ab8c243b7377dffbfc927f883ac4392adbf328ef58bfa186aa840d63d0050'
   name 'Boostnote'
-  homepage 'https://b00st.io/'
+  homepage 'https://boostnote.io/'
 
   depends_on macos: '>= :mavericks'
 

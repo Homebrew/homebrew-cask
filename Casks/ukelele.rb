@@ -6,7 +6,7 @@ cask 'ukelele' do
   appcast 'https://dl.dropboxusercontent.com/u/60565698/Ukelele/Ukelele_appcast.xml',
           checkpoint: '7843b4d5e4426629571910dfbe056dee2f67d92e3f9d3373b29ac2101429f643'
   name 'Ukelele'
-  homepage 'https://scripts.sil.org/ukelele'
+  homepage 'http://scripts.sil.org/ukelele'
 
   app 'Ukelele.app'
 

@@ -4,7 +4,7 @@ cask 'kerio-control-vpn-client' do
 
   url 'http://download.kerio.com/dwn/kerio-control-vpnclient-mac.dmg'
   name 'Kerio Control VPN Client'
-  homepage 'https://www.kerio.com/'
+  homepage 'http://www.kerio.com/'
 
   pkg 'Kerio Control VPN Client Installer.pkg'
 

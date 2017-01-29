@@ -6,7 +6,7 @@ cask 'gtkwave' do
   appcast 'https://sourceforge.net/projects/gtkwave/rss',
           checkpoint: '5dd3eb7b6d85f1d4ef2bb86e20dc61c3f2ae60422608cd5683de5088d524b15c'
   name 'GTKWave'
-  homepage 'http://gtkwave.sourceforge.net'
+  homepage 'http://gtkwave.sourceforge.net/'
 
   app 'gtkwave.app'
 end

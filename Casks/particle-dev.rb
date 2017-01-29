@@ -5,7 +5,7 @@ cask 'particle-dev' do
   # s3.amazonaws.com/spark-website was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/spark-website/particle-dev-mac.zip'
   name 'Particle Dev'
-  homepage 'https://www.particle.io/products/development-tools/particle-local-ide'
+  homepage 'https://www.particle.io/products/development-tools/particle-desktop-ide'
 
   app 'Particle Dev.app'
 
