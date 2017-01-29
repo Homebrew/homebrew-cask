@@ -11,4 +11,10 @@ cask 'audio-hijack' do
   depends_on macos: '>= :mavericks'
 
   app 'Audio Hijack.app'
+
+  zap delete: [
+                "~/Library/Preferences/com.rogueamoeba.audiohijack#{version.major}.plist",
+                '~/Library/Application Support/Audio Hijack',
+                '~/Music/Audio Hijack',
+              ]
 end
