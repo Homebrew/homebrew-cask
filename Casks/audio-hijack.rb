@@ -13,7 +13,7 @@ cask 'audio-hijack' do
   app 'Audio Hijack.app'
 
   zap delete: [
-                '~/Library/Preferences/com.rogueamoeba.audiohijack3.plist',
+                "~/Library/Preferences/com.rogueamoeba.audiohijack#{version.major}.plist",
                 '~/Library/Application Support/Audio Hijack',
                 '~/Music/Audio Hijack',
               ]
