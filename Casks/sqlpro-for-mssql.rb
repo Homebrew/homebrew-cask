@@ -1,6 +1,6 @@
 cask 'sqlpro-for-mssql' do
-  version '1.0.135'
-  sha256 '13ac27101abeba3b183d027cad97395ae2ab208227eb383ff7f311309daf453b'
+  version '1.0.136'
+  sha256 '18bb97338c7164728cd1b2168e753a5dffa8fe946d4b5402c3b36314d23ec9cf'
 
   # d3fwkemdw8spx3.cloudfront.net/mssql was verified as official when first introduced to the cask
   url "https://d3fwkemdw8spx3.cloudfront.net/mssql/SQLProMSSQL.#{version}.app.zip"
