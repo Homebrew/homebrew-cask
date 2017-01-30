@@ -14,8 +14,4 @@ cask 'oclint' do
   binary "oclint-#{version.before_comma}/bin/oclint-xcodebuild"
   binary "oclint-#{version.before_comma}/lib/oclint", target: '/usr/local/lib/oclint'
   binary "oclint-#{version.before_comma}/include/c++", target: '/usr/local/include/c++'
-
-  caveats do
-    files_in_usr_local
-  end
 end
