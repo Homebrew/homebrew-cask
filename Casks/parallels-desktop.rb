@@ -25,11 +25,13 @@ cask 'parallels-desktop' do
   end
 
   uninstall delete: [
-                      '/usr/bin/prl_convert',
-                      '/usr/bin/prl_disk_tool',
-                      '/usr/bin/prl_perf_ctl',
-                      '/usr/bin/prlctl',
-                      '/usr/bin/prlsrvctl',
+                      '/usr/local/bin/prl_convert',
+                      '/usr/local/bin/prl_disk_tool',
+                      '/usr/local/bin/prl_perf_ctl',
+                      '/usr/local/bin/prlcore2dmp',
+                      '/usr/local/bin/prlctl',
+                      '/usr/local/bin/prlexec',
+                      '/usr/local/bin/prlsrvctl',
                     ]
 
   zap       delete: [
