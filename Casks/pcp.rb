@@ -9,10 +9,9 @@ cask 'pcp' do
 
   pkg "pcp-#{version}.pkg", allow_untrusted: true
 
+  # TODO: should do a proper install - see https://github.com/caskroom/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/uninstall.md
+  zap delete: ['/Applications/pmchart.app']
 
-  # TODO should do a proper install - see https://github.com/caskroom/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/uninstall.md 
-  zap delete: [ '/Applications/pmchart.app' ]
-  
   caveats "
     * During installation 2 windows will pop up asking your permission for access for network ports for `pmlogger` and `pmcd`.  This is expected.
     * System Integrity Protection _may_ intefere with this install - If the installer takes more than a minute to complete, you might want to reboot..
