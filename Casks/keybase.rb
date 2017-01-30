@@ -1,6 +1,6 @@
 cask 'keybase' do
   version :latest
-  sha256 :no_check
+  sha256 '896ebeab741c4f4abfc848aef771488d2b5bbb08388c2ff6237284e22e23bb82'
 
   url 'https://prerelease.keybase.io/Keybase.dmg'
   name 'Keybase'
