@@ -4,7 +4,7 @@ cask 'pycharm-edu' do
 
   url "https://download.jetbrains.com/python/pycharm-edu-#{version}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=PCE&latest=true&type=release',
-          checkpoint: 'f2cf1c786b244e961f61fbbedf3a6480bf3a78233c76f49b8cceea3245c02007'
+          checkpoint: '996879c1ca05564f7b2c3b77abf406e7bfa5c5565b725aeb8b866c709d5d8303'
   name 'Jetbrains PyCharm Educational Edition'
   name 'PyCharm Edu'
   homepage 'https://www.jetbrains.com/pycharm-edu/'
