@@ -30,8 +30,4 @@ cask 'sage' do
                 '~/Library/Logs/sage.log',
                 '~/Library/Preferences/org.sagemath.Sage.plist',
               ]
-
-  caveats do
-    files_in_usr_local
-  end
 end
