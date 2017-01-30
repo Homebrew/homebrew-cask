@@ -13,6 +13,5 @@ cask 'arduino' do
 
   caveats do
     depends_on_java
-    files_in_usr_local
   end
 end
