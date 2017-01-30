@@ -21,8 +21,4 @@ cask 'golly' do
 
   name 'Golly'
   homepage 'http://golly.sourceforge.net/'
-
-  caveats do
-    files_in_usr_local
-  end
 end
