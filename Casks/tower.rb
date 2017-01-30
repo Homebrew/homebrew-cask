@@ -17,8 +17,4 @@ cask 'tower' do
                 "~/Library/Caches/com.fournova.Tower#{version.major}",
                 "~/Library/Preferences/com.fournova.Tower#{version.major}.plist",
               ]
-
-  caveats do
-    files_in_usr_local
-  end
 end
