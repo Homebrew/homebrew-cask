@@ -43,6 +43,8 @@
   "swi-prolog": "homebrew/core",
   "syncthing": "homebrew/core",
   "terraform": "homebrew/core",
+  "unifi-controller.rb": "caskroom/drivers",
   "vault": "homebrew/core",
-  "volatility": "homebrew/core"
+  "volatility": "homebrew/core",
+  "xbox360-controller-driver.rb": "caskroom/drivers"
 }
