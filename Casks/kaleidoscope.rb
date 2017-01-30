@@ -25,8 +25,4 @@ cask 'kaleidoscope' do
                 '~/Library/Preferences/com.blackpixel.kaleidoscope.plist',
                 '~/Library/Saved Application State/com.blackpixel.kaleidoscope.savedState',
               ]
-
-  caveats do
-    files_in_usr_local
-  end
 end
