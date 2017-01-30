@@ -8,5 +8,5 @@ cask 'freefilesync' do
   homepage 'http://www.freefilesync.org/'
 
   app 'FreeFileSync.app'
-  app 'RealtimeSync.app'
+  app 'RealTimeSync.app'
 end
