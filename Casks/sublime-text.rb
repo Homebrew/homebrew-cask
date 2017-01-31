@@ -23,8 +23,4 @@ cask 'sublime-text' do
                 '~/Library/Preferences/com.sublimetext.3.plist',
                 '~/Library/Saved Application State/com.sublimetext.3.savedState',
               ]
-
-  caveats do
-    files_in_usr_local
-  end
 end

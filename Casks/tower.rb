@@ -5,7 +5,7 @@ cask 'tower' do
   # fournova-app-updates.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://fournova-app-updates.s3.amazonaws.com/apps/tower#{version.major}-mac/#{version.sub(%r{^[^\-]+\-}, '')}/Tower-#{version.major}-#{version.sub(%r{-[^-]+$}, '')}.zip"
   appcast "https://updates.fournova.com/updates/tower#{version.major}-mac/stable",
-          checkpoint: '85f9fe9d7494acfbed27cd6abb5c323a633cff2cfc12d072a592e6519f79f6cc'
+          checkpoint: '08567549c704d9045c81ce24476d0212ee50a2bf485c0c6264bd9f1c83115fae'
   name 'Tower'
   homepage 'https://www.git-tower.com/'
 
@@ -17,8 +17,4 @@ cask 'tower' do
                 "~/Library/Caches/com.fournova.Tower#{version.major}",
                 "~/Library/Preferences/com.fournova.Tower#{version.major}.plist",
               ]
-
-  caveats do
-    files_in_usr_local
-  end
 end

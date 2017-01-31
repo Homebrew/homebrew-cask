@@ -10,8 +10,4 @@ cask 'smartsynchronize' do
 
   app 'SmartSynchronize.app'
   binary "#{appdir}/SmartSynchronize.app/Contents/MacOS/SmartSynchronize"
-
-  caveats do
-    files_in_usr_local
-  end
 end

@@ -36,8 +36,4 @@ cask 'sourcetree' do
                 '~/Library/Preferences/com.torusknot.SourceTreeNotMAS.LSSharedFileList.plist',
                 '~/Library/Saved Application State/com.torusknot.SourceTreeNotMAS.savedState',
               ]
-
-  caveats do
-    files_in_usr_local
-  end
 end
