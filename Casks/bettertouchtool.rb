@@ -4,16 +4,15 @@ cask 'bettertouchtool' do
     sha256 'fad5e9d36259c379bdb33188cf15d179fd9ff73023035c98f5734e7e3e13bb75'
 
     # bettertouchtool.net was verified as official when first introduced to the cask
-    url "https://bettertouchtool.net/btt#{version}.zip"
+    url "https://bettertouchtool.net/releases/btt#{version}.zip"
 
   else
-    version '1.992'
-    sha256 'bfdac9a2a4929bf88d1cc6301d742574b2c0b5384e54f12e7f5503cdcba3eaa0'
+    version '2.01'
+    sha256 'd6441a041cbb3dfb6e786dfddd87f075d0ee6e8a0642eca98357e78fb7581d22'
 
-    url "https://boastr.net/releases/btt#{version}.zip"
-    appcast 'http://appcast.boastr.net',
-            checkpoint: 'a0456c391f5c6c6e89804b7ee0a39ad5686f7c89a6b479ee50965b9d1c8a0abf'
-
+    url "https://bettertouchtool.net/releases/btt#{version}.zip"
+    appcast 'https://updates.bettertouchtool.net/appcast.xml',
+            checkpoint: 'c21f21e0070981040d98db2ef4a07887a82c91bff6db3b0a5e944d0014df6cd7'
   end
 
   name 'BetterTouchTool'
