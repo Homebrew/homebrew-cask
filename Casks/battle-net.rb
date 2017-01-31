@@ -25,9 +25,9 @@ cask 'battle-net' do
                 '~/Library/Preferences/net.battle.Authenticator.prefs',
                 '~/Library/Preferences/net.battle.Identity.prefs',
                 '~/Library/Preferences/net.battnet.battle.plist',
-                '~/Blizzard',
                 '/Users/Shared/Battle.net',
-              ]
+              ],
+      rmdir:  '~/Blizzard'
 
   caveats 'If you pick an installation directory other than /Applications when installing this cask, you will need to uninstall it manually'
 end
