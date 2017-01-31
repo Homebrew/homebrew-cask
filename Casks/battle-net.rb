@@ -25,6 +25,7 @@ cask 'battle-net' do
                 '~/Library/Preferences/net.battle.Authenticator.prefs',
                 '~/Library/Preferences/net.battle.Identity.prefs',
                 '~/Library/Preferences/net.battnet.battle.plist',
+                '~/Blizzard',
                 '/Users/Shared/Battle.net',
               ]
 
