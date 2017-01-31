@@ -15,7 +15,7 @@ cask 'unison' do
 
   appcast 'https://github.com/bcpierce00/unison/releases.atom',
           checkpoint: 'e8eaa827b069c50db797d395b2722be0760a4d229f9f332d714f754efeaed467'
-  name 'Panic Unison'
+  name 'Unison'
   homepage 'https://www.cis.upenn.edu/~bcpierce/unison/'
 
   app 'Unison.app'
