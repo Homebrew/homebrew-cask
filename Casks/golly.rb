@@ -13,7 +13,7 @@ cask 'golly' do
 
     url "https://downloads.sourceforge.net/golly/golly/golly-#{version}/golly-#{version}-mac.zip"
     appcast 'https://sourceforge.net/projects/golly/rss?path=/golly',
-            checkpoint: '2fa3e061bf65b9a057bc864604b4e4ffcd11c2c7238c61b0fb5cbd75fbe1acfb'
+            checkpoint: '7b50b7456e8709c9bee37c6808759288d61714c392eee7233660fd66d8c66bf6'
 
     app "golly-#{version}-mac/Golly.app"
     binary "golly-#{version}-mac/bgolly"
