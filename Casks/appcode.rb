@@ -8,6 +8,7 @@ cask 'appcode' do
   name 'AppCode'
   homepage 'https://www.jetbrains.com/objc/'
 
+  auto_updates true
   conflicts_with cask: 'appcode-eap'
 
   app 'AppCode.app'

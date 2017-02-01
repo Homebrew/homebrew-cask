@@ -9,6 +9,8 @@ cask 'pycharm-edu' do
   name 'PyCharm Edu'
   homepage 'https://www.jetbrains.com/pycharm-edu/'
 
+  auto_updates true
+
   app 'PyCharm Edu.app'
 
   zap delete: [

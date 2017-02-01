@@ -8,5 +8,7 @@ cask 'jetbrains-toolbox' do
   name 'JetBrains Toolbox'
   homepage 'https://www.jetbrains.com/'
 
+  auto_updates true
+
   app 'JetBrains Toolbox.app'
 end

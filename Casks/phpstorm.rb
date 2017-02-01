@@ -8,6 +8,8 @@ cask 'phpstorm' do
   name 'JetBrains PhpStorm'
   homepage 'https://www.jetbrains.com/phpstorm/'
 
+  auto_updates true
+
   app 'PhpStorm.app'
 
   uninstall delete: '/usr/local/bin/pstorm'
