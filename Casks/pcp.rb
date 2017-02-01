@@ -92,7 +92,7 @@ cask 'pcp' do
 
   caveats <<-EOS.undent
     During installation 2 windows will pop up asking your permission for access for network ports for `pmlogger` and `pmcd`.  This is expected.
-    
+
     System Integrity Protection _may_ intefere with this install - If the installer takes more than a minute to complete, you may need to reboot.
   EOS
 end
