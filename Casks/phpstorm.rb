@@ -9,6 +9,7 @@ cask 'phpstorm' do
   homepage 'https://www.jetbrains.com/phpstorm/'
 
   auto_updates true
+  conflicts_with cask: 'phpstorm-eap'
 
   app 'PhpStorm.app'
 
