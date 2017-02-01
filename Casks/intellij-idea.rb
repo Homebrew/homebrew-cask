@@ -4,6 +4,7 @@ cask 'intellij-idea' do
 
   url "https://download.jetbrains.com/idea/ideaIU-#{version}.dmg"
   name 'IntelliJ IDEA'
+  name 'IntelliJ IDEA Ultimate'
   homepage 'https://www.jetbrains.com/idea/'
 
   auto_updates true
