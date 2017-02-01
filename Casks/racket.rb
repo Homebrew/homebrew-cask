@@ -4,6 +4,8 @@ cask 'racket' do
 
   # cs.utah.edu/plt/installers was verified as official when first introduced to the cask
   url "https://www.cs.utah.edu/plt/installers/#{version}/racket-#{version}-x86_64-macosx.dmg"
+  appcast 'https://download.racket-lang.org/all-versions.html',
+          checkpoint: '9ab86f69b8680fa999611069c2891ef21a997258a4c597f8308a78046e7d5818'
   name 'Racket'
   homepage 'https://racket-lang.org/'
 

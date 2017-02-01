@@ -4,6 +4,8 @@ cask 'inkscape' do
 
   # inkscape.global.ssl.fastly.net was verified as official when first introduced to the cask
   url "https://inkscape.global.ssl.fastly.net/media/resources/file/Inkscape-#{version}-x11-10.7-x86_64.dmg"
+  appcast 'https://github.com/inkscape/inkscape/releases.atom',
+          checkpoint: 'a51f39bb4105f44332032e96b5edeb57346c4c8bceac2bc59c7a850a7e9526ec'
   name 'Inkscape'
   homepage 'https://inkscape.org/'
 

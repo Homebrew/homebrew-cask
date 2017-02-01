@@ -4,6 +4,8 @@ cask 'bluefish' do
 
   # bennewitz.com was verified as official when first introduced to the cask
   url "https://www.bennewitz.com/bluefish/stable/binaries/macosx/Bluefish-#{version}.dmg"
+  appcast 'http://www.bennewitz.com/bluefish/stable/binaries/macosx/',
+          checkpoint: 'f58657eee498c7cf605ac73859ca02994ccc8712491164561a0092c5ce9f0e58'
   name 'Bluefish'
   homepage 'http://bluefish.openoffice.nl/index.html'
 
