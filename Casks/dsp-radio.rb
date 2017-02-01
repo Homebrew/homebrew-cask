@@ -1,6 +1,6 @@
 cask 'dsp-radio' do
-  version '1.4.1'
-  sha256 'b04ff63d41a47923455499340e32706df83a184c54c590d70191072b8fdbbbc9'
+  version '1.4.6'
+  sha256 '8c4312487519727f6d96454ec01cbcbb207bd813655e37a870f04d096618e015'
 
   url "https://dl2sdr.homepage.t-online.de/files/DSP_Radio_#{version.no_dots}.zip"
   name 'DSP Radio'
