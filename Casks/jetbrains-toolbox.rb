@@ -6,7 +6,7 @@ cask 'jetbrains-toolbox' do
   appcast 'https://data.services.jetbrains.com/products/releases?code=TBA&latest=true&type=release',
           checkpoint: '4112c22398bef77e9e8e0864a5b1e8b8cd7c03833bbad66fff46378ce2253a88'
   name 'JetBrains Toolbox'
-  homepage 'https://www.jetbrains.com/'
+  homepage 'https://www.jetbrains.com/toolbox/app/'
 
   auto_updates true
 
