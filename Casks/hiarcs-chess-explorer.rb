@@ -1,6 +1,6 @@
 cask 'hiarcs-chess-explorer' do
-  version '1.8e'
-  sha256 '53dc3f7db266c1400dc2d5aab3a05eb8c503a50b4cdbc18e57d3d6d9ae0ce129'
+  version '1.9.1'
+  sha256 'b08b328f767db0cf2aa552ede7251b69175ed78be30da23ca6a16de1d4dbaa62'
 
   url "http://www.hiarcs.com/mhce/HIARCS-Chess-Explorer-Installer-v#{version}.pkg"
   name '(Deep) HIARCS Chess Explorer'
