@@ -10,7 +10,5 @@ cask 'git-it' do
 
   app 'Git-it-darwin-x64/Git-it.app'
 
-  zap delete: [
-                '~/Library/Application Support/Git-it',
-              ]
+  zap delete: '~/Library/Application Support/Git-it'
 end
