@@ -1,6 +1,6 @@
 cask 'fastlane' do
-  version '1.6'
-  sha256 '4922f5815f0920260fa8dc1a9ce6163832c2b34ebf71c0386606dd4aa08db927'
+  version '1.7'
+  sha256 'fc5fb2f28229cd02f49586f30da7075d557cae8fb6717f4c5d4e195fc3eb3beb'
 
   # kits-crashlytics-com.s3.amazonaws.com/fastlane/ was verified as official when first introduced to the cask
   url "https://kits-crashlytics-com.s3.amazonaws.com/fastlane/standalone/bundle-#{version}.zip"
