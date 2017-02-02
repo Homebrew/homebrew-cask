@@ -6,7 +6,7 @@ cask 'media-center' do
   name 'JRiver Media Center'
   homepage 'https://www.jriver.com/'
 
-  app "Media Center #{vesion.major}.app"
+  app "Media Center #{version.major}.app"
 
   zap delete: '~/Library/Application Support/J River/'
 end
