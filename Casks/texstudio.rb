@@ -8,5 +8,5 @@ cask 'texstudio' do
   name 'TeXstudio'
   homepage 'http://texstudio.sourceforge.net/'
 
-  app 'TeXstudio.app'
+  app 'texstudio.app'
 end
