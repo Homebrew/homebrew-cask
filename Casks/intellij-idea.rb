@@ -3,7 +3,6 @@ cask 'intellij-idea' do
   sha256 'bb4b30112df5370be156f1439feb6e87e12353f10a662be26d0754ffd752b7b8'
 
   url "https://download.jetbrains.com/idea/ideaIU-#{version}.dmg"
-  name 'IntelliJ IDEA'
   name 'IntelliJ IDEA Ultimate'
   homepage 'https://www.jetbrains.com/idea/'
 
