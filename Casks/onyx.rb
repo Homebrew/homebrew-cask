@@ -1,6 +1,6 @@
 cask 'onyx' do
-  version :latest
-  sha256 :no_check
+  version '3.2.2'
+  sha256 'c48b27710da5d4882241605a6179daf706be4cb287bcdcd18119d352cc64ef8a'
 
   macos_release = MacOS.version.to_s.delete('.')
 
@@ -12,7 +12,7 @@ cask 'onyx' do
   end
 
   appcast 'http://www.titanium.free.fr/release_onyx.html',
-          checkpoint: 'cce29a87371b8bb3059c32d9c28b2cdc20fe4f944b00fa8d3dd13b3de1c23e7c'
+          checkpoint: 'e77d30cd899aaa199351eb091ec477c580840b449880fb0808540e98ce96b913'
   name 'OnyX'
   homepage 'http://www.titanium.free.fr/onyx.html'
 
