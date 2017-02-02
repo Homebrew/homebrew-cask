@@ -12,7 +12,7 @@ cask 'bettertouchtool' do
 
     url "https://bettertouchtool.net/releases/btt#{version}.zip"
     appcast 'https://updates.bettertouchtool.net/appcast.xml',
-            checkpoint: 'c21f21e0070981040d98db2ef4a07887a82c91bff6db3b0a5e944d0014df6cd7'
+            checkpoint: 'f895a61b0a5e6d6e81d62bc5c2d6e9cf123dd3609e3eac4ce0b73b8c943327ed'
   end
 
   name 'BetterTouchTool'
