@@ -8,9 +8,9 @@ cask 'iina' do
           checkpoint: '70901e8c6d313b114fe817b48aefa6e6aeac393b4aec577d562481f923a2b88e'
   name 'IINA'
   homepage 'https://lhc70000.github.io/iina/'
-  
+
   auto_updates true
-  
+
   app 'IINA.app'
 
   zap delete: [
