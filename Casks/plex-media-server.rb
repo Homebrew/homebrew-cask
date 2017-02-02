@@ -4,7 +4,7 @@ cask 'plex-media-server' do
 
   url "https://downloads.plex.tv/plex-media-server/#{version.chop.chop}/PlexMediaServer-#{version}-OSX.zip"
   appcast 'https://plex.tv/api/downloads/1.json',
-          checkpoint: 'b4180f9852b2b5af6010efb9ca2d24462edf92a35da954c939b999ff3bcfa562'
+          checkpoint: '47e470b9f6949b744cbe5192e5e2687f2d5729b83d80c00a9b9665a7cd798bf6'
   name 'Plex Media Server'
   homepage 'https://www.plex.tv/'
 
