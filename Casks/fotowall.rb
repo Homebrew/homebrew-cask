@@ -4,6 +4,8 @@ cask 'fotowall' do
 
   # storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/fotowall was verified as official when first introduced to the cask
   url "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/fotowall/Fotowall-#{version}-OSX.dmg"
+  appcast 'http://www.enricoros.com/opensource/fotowall/download/changelogs/',
+          checkpoint: 'b28bf6caa8bc300f962ea1ea95cce071aa80a1623efabdc2db4182ff78e7dd6b'
   name 'Fotowall'
   homepage 'http://www.enricoros.com/opensource/fotowall/'
 

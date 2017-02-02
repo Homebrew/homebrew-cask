@@ -4,6 +4,8 @@ cask 'namecoin' do
 
   # namecoin.info was verified as official when first introduced to the cask
   url "https://namecoin.info/files/Namecoin-Qt.app-#{version}.zip"
+  appcast 'https://github.com/namecoin/namecoin-legacy/releases.atom',
+          checkpoint: '614319117db6bd3374b30549025052623c5182b9e88a9de81ed1140063648956'
   name 'Namecoin'
   homepage 'https://namecoin.org/'
 
