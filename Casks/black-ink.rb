@@ -1,10 +1,10 @@
 cask 'black-ink' do
-  version '1.6.6'
-  sha256 'e26188469a9179f695f58ed40c078935def34d51564d0dfa4b3e03038431c1e6'
+  version '1.6.7'
+  sha256 '795c74fca4681fd51e0910484ba19e0c2aeea48b36d4d5236104e9117bc3bb4e'
 
   url "https://red-sweater.com/blackink/BlackInk#{version}.zip"
   appcast 'https://red-sweater.com/blackink/appcast1.php',
-          checkpoint: 'da630d54480b42a975eeded2cb432e887a73c07cd5065a5250ccbf946b274cde'
+          checkpoint: '788f8eca5bd2ee64c87dbb0f7df707c184450bc35b2449e661aaf6cd3345d816'
   name 'Black Ink'
   homepage 'https://red-sweater.com/blackink/'
 

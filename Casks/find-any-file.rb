@@ -10,4 +10,6 @@ cask 'find-any-file' do
   homepage 'http://apps.tempel.org/FindAnyFile/'
 
   app 'Find Any File.app'
+
+  zap delete: '~/Library/Application Support/Find Any File'
 end

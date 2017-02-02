@@ -1,10 +1,11 @@
 cask 'keka' do
-  version '1.0.6'
-  sha256 'c164cdca023c47a9c61ef1c93bf64252636ed73433bf36117408db4a1647c966'
+  version '1.0.7'
+  sha256 '92d05db46ba32e656992d2f9699e328b94dee058e573da3147865f3993bbe579'
 
-  url "http://www.kekaosx.com/release/Keka-#{version}.dmg"
-  appcast 'http://www.kekaosx.com/update/keka.xml',
-          checkpoint: '76c07c4ead37d0ec9771f0aec315596d496fa0f80aacb9188c5ac5d9cf631e4e'
+  # github.com/aonez/Keka was verified as official when first introduced to the cask
+  url "https://github.com/aonez/Keka/releases/download/v#{version}/Keka-#{version}.dmg"
+  appcast 'https://github.com/aonez/Keka/releases.atom',
+          checkpoint: '2abc192f8bc1572c7654d6eb4121c9f638ce405de61229ad09ec770a7c91deb2'
   name 'Keka'
   homepage 'http://www.kekaosx.com/'
 

@@ -1,10 +1,10 @@
 cask 'bilibili' do
-  version '2.49'
-  sha256 'cedfa534e3f6f28aabd6694cdcccc71abe6a441d27930a4068c452f1f0732a50'
+  version '2.51'
+  sha256 '7baf5fcfc4a467f03dbcd1165faae9fa339ece6972a4a38f37dd18f773c08268'
 
   url "https://github.com/typcn/bilibili-mac-client/releases/download/#{version}/Bilibili.dmg"
   appcast 'https://github.com/typcn/bilibili-mac-client/releases.atom',
-          checkpoint: '97ac13089f454748cc46416d60988ffbbc5b42667c4bbb3849200e999aea2a8c'
+          checkpoint: 'e6eb3c6acdb1f48bd3281c8d1c9d4b03190dc4ad027a873996bf1127c766aad0'
   name 'Bilibili'
   homepage 'https://github.com/typcn/bilibili-mac-client/'
 

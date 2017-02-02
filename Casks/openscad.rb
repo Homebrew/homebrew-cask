@@ -9,4 +9,11 @@ cask 'openscad' do
   homepage 'http://www.openscad.org/'
 
   app 'OpenSCAD.app'
+  binary "#{appdir}/OpenSCAD.app/Contents/MacOS/OpenSCAD", target: 'openscad'
+
+  zap delete: [
+                '~/Library/Caches/org.openscad.OpenSCAD',
+                '~/Library/Preferences/org.openscad.OpenSCAD.plist',
+                '~/Library/Saved Application State/org.openscad.OpenSCAD.savedState',
+              ]
 end

@@ -1,8 +1,8 @@
 cask 'intel-haxm' do
-  version '6.0.3'
-  sha256 'a5d98ee00c52a7cacb346c984f7d353f8268fb6892e60d78af5382d20ac1d15c'
+  version '6.1.0,e1:bf'
+  sha256 '80590becaaa89acbf6df23c113ab78ba35e92e1e54e73b93682759abd0653fdc'
 
-  url "https://software.intel.com/sites/default/files/managed/38/16/haxm-macosx_v#{version.dots_to_underscores}.zip"
+  url "https://software.intel.com/sites/default/files/managed/#{version.after_comma.before_colon}/#{version.after_colon}/haxm-macosx_v#{version.before_comma.dots_to_underscores}.zip"
   name 'Intel HAXM'
   homepage 'https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager'
 

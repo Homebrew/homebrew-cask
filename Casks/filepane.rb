@@ -5,7 +5,7 @@ cask 'filepane' do
   # dl.devmate.com/com.mymixapps.FilePane was verified as official when first introduced to the cask
   url 'https://dl.devmate.com/com.mymixapps.FilePane/FilePane.dmg'
   name 'FilePane'
-  homepage 'http://mymixapps.com/filepane'
+  homepage 'https://mymixapps.com/filepane'
 
   app 'FilePane.app'
 

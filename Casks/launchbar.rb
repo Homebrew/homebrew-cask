@@ -9,6 +9,8 @@ cask 'launchbar' do
     url "https://www.obdev.at/downloads/launchbar/LaunchBar-#{version}.dmg"
   end
 
+  appcast 'https://www.obdev.at/products/launchbar/releasenotes.html',
+          checkpoint: '439812b0fdcff5f4c54b4aad2ce42eb3b661263af59423b5daa374d601682beb'
   name 'LaunchBar'
   homepage 'https://www.obdev.at/products/launchbar/index.html'
 

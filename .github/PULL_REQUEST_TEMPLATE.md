@@ -12,8 +12,10 @@ Additionally, **if adding a new cask**:
 - [ ] `brew cask install {{cask_file}}` worked successfully.
 - [ ] `brew cask uninstall {{cask_file}}` worked successfully.
 - [ ] Checked there are no [open pull requests] for the same cask.
-- [ ] Checked that the cask was not already refused in [closed issues].
+- [ ] Checked the cask was not already refused in [closed issues].
+- [ ] Checked the cask is submitted to [the correct repo].
 
 [token reference]: https://github.com/caskroom/homebrew-cask/blob/master/doc/cask_language_reference/token_reference.md
 [open pull requests]: https://github.com/caskroom/homebrew-cask/pulls
 [closed issues]: https://github.com/caskroom/homebrew-cask/issues?q=is%3Aissue+is%3Aclosed
+[the correct repo]: https://github.com/caskroom/homebrew-cask/blob/master/doc/development/adding_a_cask.md#finding-a-home-for-your-cask

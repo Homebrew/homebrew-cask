@@ -182,10 +182,9 @@ If your application and Homebrew-Cask do not work well together, feel free to [f
 We maintain separate Taps for different types of binaries. Our nomenclature is:
 
 + **Stable**: The latest version provided by the developer defined by them as such.
-+ **Beta, Development, Unstable**: Subsequent versions to **stable**, yet incomplete and under development, aiming to eventually become the new **stable**.
++ **Beta, Development, Unstable**: Subsequent versions to **stable**, yet incomplete and under development, aiming to eventually become the new **stable**. Also includes alternate versions specifically targeted at developers.
 + **Nightly**: Constantly up-to-date versions of the current development state.
 + **Legacy**: Any **stable** version that is not the most recent.
-+ **Alternative**: Alternative edition of an existing app, by the same vendor (developer editions, community editions, pro editions, …).
 + **Regional, Localized**: Any version that isn’t the US English one, when that exists.
 + **Trial**: Date-limited version that stops working entirely after it expires, requiring payment to lift the limitation.
 + **Freemium**: Gratis version that works indefinitely but with limitations that can be removed by paying.
@@ -193,6 +192,9 @@ We maintain separate Taps for different types of binaries. Our nomenclature is:
 + **Unofficial**: An *allegedly* unmodified compiled binary, by a third-party, of a binary that has no existing build by the owner of the source code.
 + **Vendorless**: A binary distributed without an official website, like a forum posting.
 + **Walled**: When the download URL is both behind a login/registration form and from a host that differs from the homepage.
++ **Font**: Data file containing a set of glyphs, characters, or symbols, that changes typed text.
++ **eID**: Software to install electronic identity card software of various countries.
++ **Driver**: Software with the sole goal of making a hardware peripheral recognisable by the system.
 
 ### Stable Versions
 
@@ -202,9 +204,9 @@ Stable versions live in the main repository at [caskroom/homebrew-cask](https://
 
 When an App is only available as beta, development, or unstable versions, or in cases where such a version is the general standard, then said version can go into the main repo.
 
-### Beta, Unstable, Development, Nightly, Legacy, or Alternative Versions
+### Beta, Unstable, Development, Nightly, or Legacy
 
-When an App has a principal stable version, alternative versions should be submitted to [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
+When an App has a main stable version, alternative versions should be submitted to [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
 
 ### Regional and Localized
 
@@ -225,6 +227,16 @@ We do not accept these casks since they offer a higher-than-normal security risk
 ### Fonts
 
 Font Casks live in the [caskroom/homebrew-fonts](https://github.com/caskroom/homebrew-fonts) repository. See the font repo [CONTRIBUTING.md](../../../../../homebrew-fonts/blob/master/CONTRIBUTING.md)
+for details.
+
+### eIDs
+
+eID Casks live in the [caskroom/homebrew-eid](https://github.com/caskroom/homebrew-eid) repository. See the eid repo [CONTRIBUTING.md](../../../../../homebrew-eid/blob/master/CONTRIBUTING.md)
+for details.
+
+### Drivers
+
+Driver Casks live in the [caskroom/homebrew-drivers](https://github.com/caskroom/homebrew-drivers) repository. See the drivers repo [CONTRIBUTING.md](../../../../../homebrew-drivers/blob/master/CONTRIBUTING.md)
 for details.
 
 ## Submitting Your Changes

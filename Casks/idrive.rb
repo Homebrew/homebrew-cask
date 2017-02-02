@@ -2,7 +2,7 @@ cask 'idrive' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.idrive.com/downloads/IDrive.dmg'
+  url 'https://www.idrive.com/downloads/IDrive.dmg'
   name 'iDrive'
   homepage 'https://www.idrive.com/'
 

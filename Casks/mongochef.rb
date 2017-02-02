@@ -1,10 +1,10 @@
 cask 'mongochef' do
-  version '4.5.1'
-  sha256 '8221b179fef6946244ff439cdadb55f408481690bcaec996c1d59c664f966590'
+  version '4.5.5'
+  sha256 '862b18acdf433151413b3f8e66645e3ade55c828466d1b76a4babb7967398de7'
 
   url "https://cdn.3t.io/mongochef-core/mac/#{version}/MongoChef.dmg"
-  appcast 'http://downloads.3t.io/mongochef-core/changelog.txt',
-          checkpoint: '464de2612fe807d96e7f66fd967ce86cea55ceef013d593862f580bf9df1852f'
+  appcast 'https://downloads.3t.io/mongochef-core/changelog.txt',
+          checkpoint: 'e25999a0785eb04736917ee64e1e491eb4e5cca6beddac8a6e5a906af1553f95'
   name 'MongoChef'
   homepage 'https://3t.io/mongochef/'
 

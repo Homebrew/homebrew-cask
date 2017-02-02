@@ -4,6 +4,8 @@ cask 'veracrypt' do
 
   # launchpad.net/veracrypt/trunk/ was verified as official when first introduced to the cask
   url "https://launchpad.net/veracrypt/trunk/#{version}/+download/VeraCrypt_#{version}.dmg"
+  appcast 'https://github.com/veracrypt/VeraCrypt/releases.atom',
+          checkpoint: '7c26121dc95c7344b9413ad24b204adaa10c338d91eac4b77122e7ac0adf64e8'
   name 'VeraCrypt'
   homepage 'https://veracrypt.codeplex.com/'
 

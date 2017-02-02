@@ -7,4 +7,8 @@ cask 'zdoom' do
   homepage 'https://zdoom.org/News'
 
   app 'ZDoom.app'
+
+  caveats do
+    discontinued
+  end
 end

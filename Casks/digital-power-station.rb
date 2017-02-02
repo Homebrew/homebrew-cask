@@ -4,7 +4,7 @@ cask 'digital-power-station' do
 
   url "https://bongiovidps.com/wp-content/uploads/#{version.after_comma.dots_to_slashes}/Bongiovi_DPS_Mac_#{version.before_comma}.zip"
   name 'Bongiovi Digital Power Station Plugin'
-  homepage 'http://bongiovidps.com/'
+  homepage 'https://bongiovidps.com/'
 
   pkg 'Bongiovi DPS.pkg'
 
