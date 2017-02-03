@@ -59,13 +59,11 @@ This form can also be combined with a specific Ruby interpreter as above.
 
 ### Forcing a Specific macOS Release
 
-The environment variable `$MACOS_RELEASE` can be overridden at the command line for test purposes:
+The environment variable `$MACOS_VERSION` can be overridden at the command line for test purposes:
 
 ```bash
-$ MACOS_RELEASE=10.9 brew cask info <cask>
+$ MACOS_VERSION=10.9 brew cask info <cask>
 ```
-
-The environment variable `$MACOS_RELEASE_WITH_PATCHLEVEL` is also available, though not consulted directly. Use `$MACOS_RELEASE` for testing.
 
 ### Target Ruby Versions
 
