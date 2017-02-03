@@ -66,11 +66,6 @@ cask 'libreoffice-language-pack' do
     'bs'
   end
 
-  language 'ca-valencia' do
-    sha256 '9eeb67532bc1387b036b815df70d8c917c5cf536c425558855be94a228819539'
-    'ca-valencia'
-  end
-
   language 'ca' do
     sha256 '12923ef29be84b66438bef3a2efdac7d6fd2ec6a5dd3629250cf5b16f2b813c2'
     'ca'
