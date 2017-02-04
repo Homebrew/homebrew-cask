@@ -1,11 +1,9 @@
 cask 'sookasa' do
-  version '3.19.15'
-  sha256 '5b68bbbab8bad695df697431fee8ce5d05435bdd686e4680ff56355a60dd0e00'
+  version '3.20.9'
+  sha256 '45bacea4790b2382df29d44e9f1df60c28a51fee36637e566a3863cc73a877af'
 
   # d2rs8uj3cnos4.cloudfront.net was verified as official when first introduced to the cask
   url "https://d2rs8uj3cnos4.cloudfront.net/mac-apps/releases/Sookasa_#{version}.pkg"
-  appcast 'https://s3.amazonaws.com/sookasa-static-assets/mac-apps/appcats/appcast_mac_no_update.xml',
-          checkpoint: '448360f2c1eec35b8b7ab5d6beaf5ecf25ea3f4a1f6d6f181f60aeb3bba3fcce'
   name 'Sookasa'
   homepage 'https://www.sookasa.com/'
 
