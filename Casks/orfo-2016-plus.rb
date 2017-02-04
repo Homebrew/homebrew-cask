@@ -1,12 +1,13 @@
-cask 'orfo-2016-plus' do
-  version '16.2.2'
-  sha256 '04af9b8553f30ed21adac1f370c2077ab0338558231f1a8e26131dc4908f2996'
+cask 'orfo-plus' do
+  version :latest
+  sha256 :no_check
 
   url 'http://www.orfo.ru/download/ORFO2016Plus.dmg'
-  name 'orfo-2016-plus'
+  name 'ORFO Plus'
+  name 'ОРФО'
   homepage 'http://www.orfo.ru'
 
-  conflicts_with formula: 'orfo-2016'
+  conflicts_with cask: 'orfo'
 
   pkg 'ORFO2016Plus.pkg'
 
@@ -20,10 +21,6 @@ cask 'orfo-2016-plus' do
 
   zap delete: '/Library/Application Support/ORFO 2016'
 
-  caveats <<-EOS.undent
-    Installing this Cask means you have AGREED to the terms of the software
-    license agreement
-  EOS
   caveats do
     reboot
   end
