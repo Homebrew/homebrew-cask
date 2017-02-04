@@ -3,8 +3,13 @@ cask 'phpstorm' do
   sha256 '7e553c83e8af822cd100832ecc107f16fc1006314fea4c4f52a35d7bb14a0967'
 
   url "https://download.jetbrains.com/webide/PhpStorm-#{version}.dmg"
+  appcast 'https://data.services.jetbrains.com/products/releases?code=PS&latest=true&type=release',
+          checkpoint: '7f061838333a997fbaa79c1891e66ea0c21db25c57abfcaa56dc5b91cee54f06'
   name 'JetBrains PhpStorm'
   homepage 'https://www.jetbrains.com/phpstorm/'
+
+  auto_updates true
+  conflicts_with cask: 'phpstorm-eap'
 
   app 'PhpStorm.app'
 

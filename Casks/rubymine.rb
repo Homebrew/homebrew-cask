@@ -4,10 +4,11 @@ cask 'rubymine' do
 
   url "https://download.jetbrains.com/ruby/RubyMine-#{version}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=RM&latest=true&type=release',
-          checkpoint: '08bb17f0886abd78389670010485612122280522a66447705e1d65870035d2aa'
+          checkpoint: '21b1683a2ad48dc3c202dc57e28aa7f9d3c7c80703b8100d1443ca3560a2d26d'
   name 'RubyMine'
   homepage 'https://www.jetbrains.com/ruby/'
 
+  auto_updates true
   conflicts_with cask: 'rubymine-eap'
 
   app 'RubyMine.app'
