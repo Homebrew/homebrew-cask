@@ -1,6 +1,6 @@
 cask 'rationalplan-viewer' do
-  version '4.14.7306'
-  sha256 '1e8926757687e3ca1e15241bfb1aacc82e07e2167c9c1cc0a5416a71585c3d3c'
+  version '4.15.7389'
+  sha256 '73945254e36c5bd7839421a7f02962db1cfe033b6a0a3962f2c7be3c3929537d'
 
   url "http://www.rationalplan.com/download/RationalPlan-Viewer-#{version}.dmg"
   name 'RationalPlan Viewer'
