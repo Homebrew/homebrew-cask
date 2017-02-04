@@ -10,8 +10,8 @@ cask 'sage' do
     # mit.edu/sage was verified as official when first introduced to the cask
     url "http://mirrors.mit.edu/sage/osx/intel/sage-#{version}-OSX_10.9.5-x86_64.app.dmg"
   else
-    version '7.4'
-    sha256 '99ba664250755f14bf98bb149d9b59d80b9e1612897353c70fb8e1388a090315'
+    version '7.5.1'
+    sha256 '257a48d5b7af19fb6ee18f1a5cd248dbc4153b8c2ee6f6bfbd4e70cbae4f54d8'
     # mit.edu/sage was verified as official when first introduced to the cask
     url "http://mirrors.mit.edu/sage/osx/intel/sage-#{version}-OSX_10.11.6-x86_64.app.dmg"
   end
