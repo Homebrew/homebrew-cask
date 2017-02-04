@@ -9,14 +9,14 @@ cask 'atok' do
   pkg 'ATOK 2016 インストーラ.pkg'
 
   # uninstall script: '/Applications/JustSystems/ATOK\ 2016/ATOK\ Uninstaller.app/Contents/MacOS/ATOK\ Uninstaller'
-  uninstall pkgutil: ['com.justsystems.atok2016.doc.pkg',
-  	    	     'com.justsystems.atok2016.pkg',
-		     'com.justsystems.atok2016.quicklook.pkg',
-		     'com.justsystems.atok2016.sync.pkg',
-		     'com.justsystems.JustOnlineUpdate.pkg',
-		     'com.justsystems.pkg.lma'],
+  uninstall pkgutil:   ['com.justsystems.atok2016.doc.pkg',
+                        'com.justsystems.atok2016.pkg',
+                        'com.justsystems.atok2016.quicklook.pkg',
+                        'com.justsystems.atok2016.sync.pkg',
+                        'com.justsystems.JustOnlineUpdate.pkg',
+                        'com.justsystems.pkg.lma'],
             launchctl: ['com.justsystems.inputmethod.atok29',
-            'com.justsystems.launchd.jslmaUI',
-            'com.justsystems.launchd.UpdateChecker',
-            'com.justsystems.launchd.Atok29.AlBg']
+                        'com.justsystems.launchd.jslmaUI',
+                        'com.justsystems.launchd.UpdateChecker',
+                        'com.justsystems.launchd.Atok29.AlBg']
 end
