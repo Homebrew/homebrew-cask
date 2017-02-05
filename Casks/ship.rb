@@ -1,6 +1,6 @@
 cask 'ship' do
   version '2.0'
-  sha256 '4cf4c0f7f369a1958a8e486b05fdd49dd575ad8f8a2ffc1be3b36d20e9c4b9a9'
+  sha256 '0422eef83b18e1f7e60f568b66750060857829b80d220e4ca9c96d50872f7649'
 
   url "https://www.realartists.com/builds/#{version}/Ship.app.zip"
   appcast "https://www.realartists.com/builds/#{version}/sparkle.xml",
