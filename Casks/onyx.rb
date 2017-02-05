@@ -1,33 +1,20 @@
 cask 'onyx' do
-  version '3.2.2'
-  sha256 'c48b27710da5d4882241605a6179daf706be4cb287bcdcd18119d352cc64ef8a'
-
-  macos_release = MacOS.version.to_s.delete('.')
-
-  if MacOS.version <= :yosemite
-    url "http://www.titanium.free.fr/download/#{macos_release}/OnyX.dmg"
+  if MacOS.version == :el_capitan
+    version '3.1.8'
+    sha256 '9d46d09346666a4dcecd0c92eb1bebd76c76f145744926ebda594831d45724ab'
   else
-    # joel.barriere.pagesperso-orange.fr was verified as official when first introduced to the cask
-    url "http://joel.barriere.pagesperso-orange.fr/download/#{macos_release}/OnyX.dmg"
+    version '3.2.3'
+    sha256 '53537980646d43fd7521fae700fff0154c4b557ab32ee055342e49ca2c6ac97b'
   end
 
+  # joel.barriere.pagesperso-orange.fr/download was verified as official when first introduced to the cask
+  url "http://joel.barriere.pagesperso-orange.fr/download/#{MacOS.version.to_s.delete('.')}/OnyX.dmg"
   appcast 'http://www.titanium.free.fr/release_onyx.html',
-          checkpoint: 'e77d30cd899aaa199351eb091ec477c580840b449880fb0808540e98ce96b913'
+          checkpoint: '9735d7b818279e27dbb65eda02934f86d4ede11567895136ecd96505955052d1'
   name 'OnyX'
   homepage 'http://www.titanium.free.fr/onyx.html'
 
-  # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
-  depends_on macos: [
-                      :tiger,
-                      :leopard,
-                      :snow_leopard,
-                      :lion,
-                      :mountain_lion,
-                      :mavericks,
-                      :yosemite,
-                      :el_capitan,
-                      :sierra,
-                    ]
+  depends_on macos: '>= :el_capitan'
 
   app 'OnyX.app'
 end
