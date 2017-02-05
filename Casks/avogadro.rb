@@ -5,7 +5,7 @@ cask 'avogadro' do
   # sourceforge.net/avogadro/avogadro2 was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/avogadro/avogadro2/Avogadro2-#{version}-Darwin.dmg"
   appcast 'https://sourceforge.net/projects/avogadro/rss',
-          checkpoint: '86812f0880364b4a27a9f91cc64088181e6264e9793b4b5331a7317db60338cb'
+          checkpoint: '84f164280cc8b8c0749dc382dcd688cff57cc31eebf6ccb907fe4563b2d49152'
   name 'Avogadro'
   homepage 'https://avogadro.cc/wiki/Main_Page'
 
