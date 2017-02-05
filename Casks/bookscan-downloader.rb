@@ -4,6 +4,7 @@ cask 'bookscan-downloader' do
 
   url "http://system.bookscan.co.jp/downloader/bookscanDownloader#{version}.air"
   name 'BOOKSCAN Downloader'
+  name 'BOOKSCAN ダウンローダー'
   homepage 'http://bookscan.co.jp/'
 
   depends_on cask: 'adobe-air'
