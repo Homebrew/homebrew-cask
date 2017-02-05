@@ -4,7 +4,7 @@ cask 'freeze' do
 
   url "https://www.freezeapp.net/download/Freeze-#{version}.zip"
   appcast 'https://www.freezeapp.net/appcast.xml',
-          checkpoint: 'e7001b1b8d798114fd1bc7dbc34e062aa11b12e0e5c726f35309c79c71b895b5'
+          checkpoint: 'b7ffa9824076e3c4a8d6749745a4180180eb2ca41d56beeeda0e6944df74d077'
   name 'Freeze'
   homepage 'https://www.freezeapp.net/'
 
