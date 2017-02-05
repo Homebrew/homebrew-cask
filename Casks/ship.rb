@@ -4,7 +4,7 @@ cask 'ship' do
 
   url "https://www.realartists.com/builds/#{version}/Ship.app.zip"
   appcast "https://www.realartists.com/builds/#{version}/sparkle.xml",
-          checkpoint: 'add1ec24702d46c77f294866507b13c6bc105cc34968bb7150371a9e62a5c6a4'
+          checkpoint: 'dd8ffc08a7a2d0b1d5dc24ffdfbdd6820a8f827897e7f18cb1170267fa4fbe7a'
   name 'Ship'
   homepage 'https://www.realartists.com/'
 
