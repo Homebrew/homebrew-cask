@@ -4,7 +4,7 @@ cask 'atok' do
 
   url 'https://gate.justsystems.com/download/atok/ut/mac/at29try.dmg'
   name 'ATOK'
-  homepage 'http://www.justsystems.com/jp/products/atokmac/'
+  homepage 'https://www.justsystems.com/jp/products/atokmac/'
 
   pkg "ATOK #{version} インストーラ.pkg"
 

@@ -7,7 +7,7 @@ cask 'opencpn' do
   appcast 'https://github.com/OpenCPN/OpenCPN/releases.atom',
           checkpoint: '169b89252300cc760dab9f554ad9384183e3d3c7dbad746dfcdf44e69c2e6e93'
   name 'OpenCPN'
-  homepage 'http://opencpn.org/'
+  homepage 'https://www.opencpn.org/'
 
   app 'OpenCPN.app'
 end
