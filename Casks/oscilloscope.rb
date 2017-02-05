@@ -1,10 +1,10 @@
 cask 'oscilloscope' do
-  version '1.0.7'
-  sha256 '7da3fcbb84fcdb88c1eb09074d8af2028b9069487001dcf5f3d1f1b9c349b66c'
+  version '1.0.8'
+  sha256 '952d017212a8cf35d01ac86ddad8bb2ac1bc57820396f5dfd5bc7a14fd4c9060'
 
   url "https://github.com/kritzikratzi/Oscilloscope/releases/download/#{version}/oscilloscope-#{version}-osx.zip"
   appcast 'https://github.com/kritzikratzi/Oscilloscope/releases.atom',
-          checkpoint: '5d371197fb6937c8ba01fbec0bb2438e9ac3aeb0b07dd12eb5b6dec6f9991855'
+          checkpoint: 'fdf8ab40acc1a46f6337ec91eb659c0fd5bc1a7d5bab474328793125c440c283'
   name 'Oscilloscope'
   homepage 'https://github.com/kritzikratzi/Oscilloscope'
 
