@@ -7,7 +7,7 @@ cask 'vysor' do
   appcast 'https://github.com/koush/vysor.io/releases.atom',
           checkpoint: '0d2caa485689d7473f12c206dc29f93837facca857a60276e44b632dfa290766'
   name 'Vysor'
-  homepage 'https://www.vysor.io'
+  homepage 'https://www.vysor.io/'
 
   app 'Vysor.app'
 

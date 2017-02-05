@@ -4,7 +4,7 @@ cask 'chirp-daily' do
 
   url "http://trac.chirp.danplanet.com/chirp_daily/LATEST/chirp-daily-#{version}.app.zip"
   name 'CHIRP'
-  homepage 'http://chirp.danplanet.com/'
+  homepage 'http://chirp.danplanet.com/projects/chirp/wiki/Home'
 
   depends_on cask: 'kk7ds-python-runtime'
 
