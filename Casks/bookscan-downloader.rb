@@ -9,5 +9,5 @@ cask 'bookscan-downloader' do
 
   depends_on cask: 'adobe-air'
 
-  app 'BOOKSCAN ダウンローダー 2.6β.app'
+  app "BOOKSCAN ダウンローダー #{version.major_minor}β.app"
 end
