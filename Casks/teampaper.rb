@@ -1,6 +1,6 @@
 cask 'teampaper' do
-  version '2.0,8610'
-  sha256 '8acd953f91273b08da1511a72472bb947c37b0907ff80152de51e995c7db09e1'
+  version '2.0.8610'
+  sha256 'bb0911addcc22462ebf826137c049411a9b6215cf80917939e592d9e5065435c'
 
   url 'http://teampaper.me/snap/download/teampapersnap.dmg'
   appcast 'https://www.teampaper.me/sparkle/sparkle.xml',
