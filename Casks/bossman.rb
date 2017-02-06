@@ -11,5 +11,4 @@ cask 'bossman' do
   depends_on formula: 'tmux'
 
   app 'Bossman.app'
-  app 'Bossman.app'
 end
