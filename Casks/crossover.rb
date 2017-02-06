@@ -1,10 +1,10 @@
 cask 'crossover' do
-  version '16.0.0'
-  sha256 '4b3f60b53a2d1b6d07ac5fe6fb795d8f32d44eafb7436d6630780bd5ebde0f70'
+  version '16.1.0'
+  sha256 'ed623c9d384c0b112b8ee0e6f139b9ae9b7f2eac967b2718764b643028f1b9bf'
 
   url "https://media.codeweavers.com/pub/crossover/cxmac/demo/crossover-#{version}.zip"
   appcast 'https://www.codeweavers.com/xml/versions/cxmac.xml',
-          checkpoint: '904179f711f72ab7332ef53133f119b94cfa8e82b906dc3837993c3910cb526e'
+          checkpoint: '87064614109cf890c11d01b55e9e73596282a03d029af3e4a33857723f67da09'
   name 'CrossOver'
   homepage 'https://www.codeweavers.com/products/crossover-mac/'
 
