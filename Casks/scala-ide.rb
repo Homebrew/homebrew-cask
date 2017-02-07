@@ -10,5 +10,5 @@ cask 'scala-ide' do
   # Renamed for clarity: app name is inconsistent with its branding.
   # Also renamed to avoid conflict with other eclipse Casks.
   # Original discussion: https://github.com/caskroom/homebrew-cask/pull/2731
-  suite 'eclipse.app', target: 'Scala IDE.app'
+  app 'eclipse.app', target: 'Scala IDE.app'
 end
