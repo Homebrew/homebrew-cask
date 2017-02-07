@@ -12,11 +12,11 @@ cask 'coconutbattery' do
     sha256 '0edf6bdaf28fb3cc9c242fd916c348fbbae30a5356ddc1d6e5158d50f96d740d'
     url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version.dots_to_underscores}.zip"
   else
-    version '3.5'
-    sha256 '1e029bf9acfffe34a9258f635843fa146cee9a38795b26edabf989f2b40a2264'
+    version '3.5.1'
+    sha256 '5cde42342ad09b8e75303ef0d9ec212e5592dcb52895b9db72c6375adcfaa0e7'
     url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version}.zip"
     appcast 'http://updates.coconut-flavour.com/coconutBatteryIntel.xml',
-            checkpoint: '23b3d2105de7dc10264fe4184d2c6158e41698f64b9c54c0b11c39203664e150'
+            checkpoint: 'eff17e7bae73d67211dd178f3f17d81b44e37d281313886ee7017a7c6b1c8c4c'
   end
 
   name 'coconutBattery'
