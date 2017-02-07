@@ -7,7 +7,7 @@ cask 'mpv' do
   appcast 'https://laboratory.stolendata.net/~djinn/mpv_osx/',
           checkpoint: '00223d39362fa2d8764dd0e98997c6b412b21e5ec12d6bec2f90ffe7df7a4608'
   name 'mpv'
-  homepage 'https://mpv.io'
+  homepage 'https://mpv.io/'
 
   app 'mpv.app'
 end

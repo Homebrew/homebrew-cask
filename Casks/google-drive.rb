@@ -13,5 +13,6 @@ cask 'google-drive' do
                 '~/Library/Application Support/Google/Drive',
                 '~/Library/Preferences/com.google.GoogleDrive.plist',
                 '~/Library/Caches/com.google.GoogleDrive',
-              ]
+              ],
+      rmdir:  '~/Google Drive'
 end

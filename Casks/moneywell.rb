@@ -19,7 +19,7 @@ cask 'moneywell' do
             checkpoint: 'c15c3d7d302707b80fe7256771ac8add22478defe9280e6b4d57784be271a936'
   end
   name 'MoneyWell'
-  homepage 'http://nothirst.com/moneywell/'
+  homepage 'https://moneywellapp.com/'
 
   depends_on macos: '>= :tiger'
 

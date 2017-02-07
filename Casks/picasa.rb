@@ -13,4 +13,8 @@ cask 'picasa' do
                 '~/Library/Application Support/Google/Picasa3',
                 '~/Library/Saved Application State/com.google.picasa.savedState',
               ]
+
+  caveats do
+    discontinued
+  end
 end

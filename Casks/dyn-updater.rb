@@ -4,7 +4,7 @@ cask 'dyn-updater' do
 
   url 'http://cdn.dyn.com/dynupdater/DynUpdater.dmg'
   name 'Dyn Updater'
-  homepage 'https://dyn.com/apps/updater/'
+  homepage 'https://dyn.com/updater/'
 
   app 'Dyn Updater.app'
 end

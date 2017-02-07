@@ -4,7 +4,7 @@ cask 'eventstore' do
 
   url "http://download.geteventstore.com/binaries/EventStore-OSS-MacOSX-v#{version}.tar.gz"
   name 'Event Store'
-  homepage 'http://geteventstore.com'
+  homepage 'https://geteventstore.com/'
 
   binary "EventStore-OSS-MacOSX-v#{version}/eventstore"
   binary "EventStore-OSS-MacOSX-v#{version}/eventstore-testclient"

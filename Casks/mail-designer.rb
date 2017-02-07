@@ -1,6 +1,6 @@
 cask 'mail-designer' do
-  version '2.6.4'
-  sha256 '9e740f958c02bc4a8fc9f1757105ecc382488ec502be05b974d177afcf2d7d81'
+  version '2.6.6'
+  sha256 '16c113d4d5167953f8145ffb4571adaff08dc352aebc27bd4cc51df5513093f3'
 
   url "http://download.equinux.com/files/other/Mail_Designer_#{version}.zip"
   name 'Mail Designer'

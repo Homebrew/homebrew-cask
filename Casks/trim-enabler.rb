@@ -11,7 +11,7 @@ cask 'trim-enabler' do
   end
 
   name 'Trim Enabler'
-  homepage 'https://www.cindori.org/software/trimenabler/'
+  homepage 'https://cindori.org/trimenabler/'
 
   app 'Trim Enabler.app'
 end

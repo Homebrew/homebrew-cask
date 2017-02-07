@@ -5,7 +5,7 @@ cask 'electric-sheep' do
   # d100rc88eim93q.cloudfront.net was verified as official when first introduced to the cask
   url "https://d100rc88eim93q.cloudfront.net/electricsheep-#{version}.dmg"
   name 'Electric Sheep'
-  homepage 'http://www.electricsheep.org/'
+  homepage 'https://gold.electricsheep.org/'
 
   pkg 'Electric Sheep.pkg'
 

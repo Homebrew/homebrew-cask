@@ -1,6 +1,6 @@
 cask 'dropdmg' do
-  version '3.4.4'
-  sha256 '1d21d12b6314a119f8d40446479d4bb544f963a5ebf707d9198f63974c8a358f'
+  version '3.4.5'
+  sha256 '7bfe7042a454debefbfc17d52d57c407a416b10c78b1944f8c3b11152bfd1c22'
 
   url "https://c-command.com/downloads/DropDMG-#{version}.dmg"
   name 'DropDMG'

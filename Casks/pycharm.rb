@@ -4,10 +4,11 @@ cask 'pycharm' do
 
   url "https://download.jetbrains.com/python/pycharm-professional-#{version}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=PCP&latest=true&type=release',
-          checkpoint: '07878d7ff3f6c98608f0c7819c5b4ead2f1a6ac06cd57d60444f3b77e4015fab'
+          checkpoint: '15a14edcaae951808dcf655104c9f4e6400b717bcf8a3d1b24ec8d3a39f61eed'
   name 'PyCharm'
   homepage 'https://www.jetbrains.com/pycharm/'
 
+  auto_updates true
   conflicts_with cask: 'pycharm-eap'
 
   app 'PyCharm.app'

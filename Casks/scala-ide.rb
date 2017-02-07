@@ -3,7 +3,7 @@ cask 'scala-ide' do
   sha256 'b3bd0907aec82e943de80df428839f08fca6823e99484bf28b50f878d1503d05'
 
   # downloads.typesafe.com/scalaide-pack was verified as official when first introduced to the cask
-  url "http://downloads.typesafe.com/scalaide-pack/#{version.before_comma}-vfinal-luna-#{version.before_colon.after_comma.no_dots}-#{version.after_colon}/scala-SDK-#{version.before_comma}-vfinal-#{version.before_colon.after_comma}-macosx.cocoa.x86_64.zip"
+  url "https://downloads.typesafe.com/scalaide-pack/#{version.before_comma}-vfinal-luna-#{version.before_colon.after_comma.no_dots}-#{version.after_colon}/scala-SDK-#{version.before_comma}-vfinal-#{version.before_colon.after_comma}-macosx.cocoa.x86_64.zip"
   name 'Scala IDE'
   homepage 'http://scala-ide.org/'
 

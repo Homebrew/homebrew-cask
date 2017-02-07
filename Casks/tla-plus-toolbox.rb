@@ -5,7 +5,7 @@ cask 'tla-plus-toolbox' do
   # tla.msr-inria.inria.fr/tlatoolbox was verified as official when first introduced to the cask
   url "https://tla.msr-inria.inria.fr/tlatoolbox/products/TLAToolbox-#{version}-macosx.cocoa.x86_64.zip"
   name 'TLA+ Toolbox'
-  homepage 'https://research.microsoft.com/en-us/um/people/lamport/tla/toolbox.html'
+  homepage 'https://lamport.azurewebsites.net/tla/toolbox.html'
 
   app 'TLA+ Toolbox.app'
 

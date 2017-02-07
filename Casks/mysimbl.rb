@@ -1,11 +1,11 @@
 cask 'mysimbl' do
-  version '0.4.3'
-  sha256 '340b836590d3fd4a292fe536ffb1fc269dfd1a794ac006fd0166ff6340fb066a'
+  version '0.5.1'
+  sha256 'c57c40a4d93eee94c7f2a68f1ef4aa314eb61fa1012e6ebe248afef42bc48090'
 
   # githubusercontent.com/w0lfschild/app_updates/master/mySIMBL was verified as official when first introduced to the cask
   url "https://raw.githubusercontent.com/w0lfschild/app_updates/master/mySIMBL/mySIMBL_#{version}.zip"
   appcast 'https://raw.githubusercontent.com/w0lfschild/app_updates/master/mySIMBL/appcast.xml',
-          checkpoint: '1ca21aa0ea63986fccfa681e0730965b3fccf9ceeaebd7652534bc4fc3333fcd'
+          checkpoint: '7923369a4c5ca5e6df3a493697327505a974abd0bb7b25b893a31151c7150555'
   name 'mySIMBL'
   homepage 'https://github.com/w0lfschild/mySIMBL'
 

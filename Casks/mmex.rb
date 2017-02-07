@@ -1,13 +1,15 @@
 cask 'mmex' do
-  version '1.2.7'
-  sha256 '48b780000a5b153ce58b49d7ba03c45d9eed1311b3984d79f4f3080fb05d99d0'
+  version '1.3.1'
+  sha256 'c84f70258122b2c1037a745a6701fb8bc7a44a2bf9210f8e41152945333cd544'
 
   # github.com/moneymanagerex/moneymanagerex was verified as official when first introduced to the cask
-  url "https://github.com/moneymanagerex/moneymanagerex/releases/download/v#{version}/mmex-v#{version}.dmg"
+  url "https://github.com/moneymanagerex/moneymanagerex/releases/download/v#{version}/mmex-v#{version}-macOS10.9.dmg"
   appcast 'https://github.com/moneymanagerex/moneymanagerex/releases.atom',
-          checkpoint: '18d49df544c4efd41e6f85a164250408437a9081fb6f3901c62f318e1c3e7e6c'
+          checkpoint: 'e5a3bfadc4dadbd06cd8aa8b0e8c5425f009fc28989769943d902f6ac3f476e3'
   name 'Money Manager Ex'
   homepage 'http://www.moneymanagerex.org/'
+
+  depends_on macos: '>= :mavericks'
 
   app 'MMEX.app'
 

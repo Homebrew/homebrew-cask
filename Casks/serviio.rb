@@ -7,4 +7,11 @@ cask 'serviio' do
   homepage 'http://serviio.org/'
 
   pkg "Serviio-#{version}.pkg"
+
+  uninstall pkgutil: [
+                       'org.serviio.pkg.autostart',
+                       'org.serviio.pkg.JRE',
+                       'org.serviio.pkg.ServiioConsole',
+                       'org.serviio.pkg.Serviio',
+                     ]
 end

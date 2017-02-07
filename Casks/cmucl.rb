@@ -5,7 +5,7 @@ cask 'cmucl' do
   # common-lisp.net/project/cmucl was verified as official when first introduced to the cask
   url "https://common-lisp.net/project/cmucl/downloads/release/#{version}/cmucl-#{version}-x86-darwin.tar.bz2"
   name 'Cmucl'
-  homepage 'http://www.cons.org/cmucl'
+  homepage 'https://www.cons.org/cmucl/'
 
   binary 'bin/lisp'
   artifact 'lib/cmucl', target: '/usr/local/lib/cmucl'

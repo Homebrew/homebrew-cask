@@ -11,8 +11,4 @@ cask 'sopcast' do
 
   app 'SopCast.app'
   binary "#{appdir}/SopCast.app/Contents/Resources/binaries/m32/sp-sc-auth"
-
-  caveats do
-    files_in_usr_local
-  end
 end

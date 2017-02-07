@@ -6,7 +6,7 @@ The value of the `appcast` stanza is a string, holding the URL for an appcast wh
 
 | key           | value       |
 | ------------- | ----------- |
-| `checkpoint:` | a string holding a custom checksum of the most recent appcast which matches the current Cask versioning. Use `curl --compressed --location --user-agent 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.152 Safari/537.36' "{{appcast_url}}" | /usr/bin/sed 's|<pubDate>[^<]*</pubDate>||g' | shasum --algorithm 256` to calculate it.
+| `checkpoint:` | a string holding a custom checksum of the most recent appcast which matches the current Cask versioning. Use `brew cask _appcast_checkpoint --calculate "{{appcast_url}}"` to calculate it.
 
 Example: [`atom.rb`](https://github.com/caskroom/homebrew-cask/blob/4d5a2dd2376f42c726148cfccaefe839f21e42ab/Casks/atom.rb#L7L8)
 
@@ -16,7 +16,7 @@ There are a few different ways the `appcast` can be determined:
 
  * The popular update framework [Sparkle](https://sparkle-project.org/) generally uses the `SUFeedURL` property in `Contents/Info.plist` inside `.app` bundles. You can use the script [`find_sparkle_appcast`](https://github.com/caskroom/homebrew-cask/blob/master/developer/bin/find_sparkle_appcast) by running the command `"$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/find_sparkle_appcast" '/full/path/to/software.app'` to find the `appcast` and `checkpoint` automatically. (Example: [`glyphs.rb`](https://github.com/caskroom/homebrew-cask/blob/e7cb7464e58b01b641da64f6016761411fbaef12/Casks/glyphs.rb#L6L7))
 
-* Sourceforge projects follow the form `https://downloads.sourceforge.net/projects/{{project_name}}/rss`. A more specific page can be used as needed, pointing to a specific directory structure: `https://sourceforge.net/projects/{{project_name}}/rss?path=/{{path_here}}`. (Example: [`seashore.rb`](https://github.com/caskroom/homebrew-cask/blob/60531a2812005dd5f17dc92f3ce7419af3c5d019/Casks/seashore.rb#L6L7))
+* Sourceforge projects follow the form `https://sourceforge.net/projects/{{project_name}}/rss`. A more specific page can be used as needed, pointing to a specific directory structure: `https://sourceforge.net/projects/{{project_name}}/rss?path=/{{path_here}}`. (Example: [`seashore.rb`](https://github.com/caskroom/homebrew-cask/blob/60531a2812005dd5f17dc92f3ce7419af3c5d019/Casks/seashore.rb#L6L7))
 
 * HockeyApp URLs are of the form `https://rink.hockeyapp.net/api/2/apps/HEXADECIMAL_STRING<SOMETHING_ELSE>`. For the `appcast`, remove `<SOMETHING_ELSE>` (ending up with `https://rink.hockeyapp.net/api/2/apps/HEXADECIMAL_STRING`. (Example: [`iconjar.rb`](https://github.com/caskroom/homebrew-cask/blob/190c98214e699be43f00ab91780d9184a96c7525/Casks/iconjar.rb#L7L8))
 

@@ -7,7 +7,7 @@ cask 'applepi-baker' do
                  'gdbbx_session_activity' => '0',
                }
   name 'ApplePi-Baker'
-  homepage 'http://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/'
+  homepage 'https://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/'
 
   app 'ApplePi-Baker.app'
 end
