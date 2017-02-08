@@ -73,7 +73,7 @@ cask 'thunderbird' do
 
   url "https://ftp.mozilla.org/pub/thunderbird/releases/#{version}/mac/#{language}/Thunderbird%20#{version}.dmg"
   appcast "https://aus5.mozilla.org/update/3/Thunderbird/#{version}/0/Darwin_x86_64-gcc3-u-i386-x86_64/en-US/release/Darwin%2015.3.0/default/default/update.xml?force=1",
-          checkpoint: 'ee5ad1d4bbc21309f5f2f4ac9f370acb2865866b838d5f624b4b306b6c61e100'
+          checkpoint: 'ee412add136f2d6d0932b250eb49bfbc1b9f4e07dcd1d9a4bcad58ac90322198'
   name 'Mozilla Thunderbird'
   homepage 'https://www.mozilla.org/thunderbird/'
 
