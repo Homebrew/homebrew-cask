@@ -16,7 +16,7 @@ cask 'monolingual' do
     sha256 '24fa5ff0a5903c0eb07cd58a15292e3adab97ea0823f304241dc4187f9252ffc'
   else
     version '1.7.6'
-    sha256 '24fa5ff0a5903c0eb07cd58a15292e3adab97ea0823f304241dc4187f9252ffc'
+    sha256 'b0ab447ba49e98c468ee3c07ebf0f574d0df635277b1b12b821fc53547a3f3f6'
   end
 
   # github.com/IngmarStein/Monolingual was verified as official when first introduced to the cask
