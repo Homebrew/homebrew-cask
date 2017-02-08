@@ -55,7 +55,7 @@ cask 'zulu' do
     '/Library/Java/JavaVirtualMachines/zulu{version}.jdk'. Removing them may
     require manual deletion, e.g.
 
-      rm -rf /opt/homebrew-cask/Caskroom/zulu/
+      rm -rf /usr/local/Caskroom/zulu/
       rm -rf /Library/Java/JavaVirtualMachines/zulu*.jdk
   EOS
 end
