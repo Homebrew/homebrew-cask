@@ -8,5 +8,7 @@ cask 'cookie' do
   name 'Cookie'
   homepage 'https://sweetpproductions.com/'
 
+  depends_on macos: '>= :el_capitan'
+
   app 'Cookie.app'
 end
