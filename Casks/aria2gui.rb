@@ -5,8 +5,8 @@ cask 'aria2gui' do
   url "https://github.com/yangshun1029/aria2gui/releases/download/#{version}/Aria2GUI-v#{version}.zip"
   appcast 'https://github.com/yangshun1029/aria2gui/releases.atom',
           checkpoint: 'cf4c11c299e639d7979e80c46d43979f11c26fe1b2f3098523598aab16e29910'
-  name 'aria2gui'
+  name 'Aria2GUI'
   homepage 'https://github.com/yangshun1029/aria2gui'
 
-  app 'aria2gui.app'
+  app 'Aria2GUI.app'
 end
