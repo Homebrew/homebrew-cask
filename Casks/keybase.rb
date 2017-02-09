@@ -13,7 +13,7 @@ cask 'keybase' do
   app 'Keybase.app'
 
   postflight do
-    system_command '/Applications/Keybase.App/Contents/Resources/KeybaseInstaller.app/Contents/MacOS/Keybase',
+    system_command "#{appdir}/Keybase.App/Contents/Resources/KeybaseInstaller.app/Contents/MacOS/Keybase",
                    args: ['--app-path=/Applications/Keybase.app', '--run-mode=prod', '--timeout=10']
   end
 
@@ -21,7 +21,7 @@ cask 'keybase' do
     if system_command('launchctl', args: ['list']).stdout =~ %r{/^\d+.*keybase.Electron/}
       system_command 'killall', args: ['-kill', 'Keybase']
     end
-    system_command '/Applications/Keybase.app/Contents/SharedSupport/bin/keybase',
+    system_command "#{appdir}/Keybase.app/Contents/SharedSupport/bin/keybase",
                    args: ['uninstall']
   end
 end
