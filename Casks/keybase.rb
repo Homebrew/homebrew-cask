@@ -14,7 +14,7 @@ cask 'keybase' do
 
   postflight do
     system_command "#{appdir}/Keybase.App/Contents/Resources/KeybaseInstaller.app/Contents/MacOS/Keybase",
-                   args: ['--app-path=/Applications/Keybase.app', '--run-mode=prod', '--timeout=10']
+                   args: ["--app-path=#{appdir}/Keybase.app", '--run-mode=prod', '--timeout=10']
   end
 
   uninstall_preflight do
