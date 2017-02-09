@@ -48,14 +48,4 @@ cask 'zulu' do
                          ]
                        end,
                      ].keep_if { |v| !v.nil? }
-
-  caveats <<-EOS.undent
-    If this cask is upgraded, previous stale versions will be left under
-    'Caskroom/zulu/{version}'. Stale versions may also be left under
-    '/Library/Java/JavaVirtualMachines/zulu{version}.jdk'. Removing them may
-    require manual deletion, e.g.
-
-      rm -rf /opt/homebrew-cask/Caskroom/zulu/
-      rm -rf /Library/Java/JavaVirtualMachines/zulu*.jdk
-  EOS
 end
