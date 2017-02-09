@@ -2,7 +2,7 @@ cask 'chefdk' do
   if MacOS.version == :mountain_lion
     version '0.11.2-1'
     sha256 '56899eab322cacac7f445a24d3159af34fccb5910642f4535eff4ee47321fe56'
-  elsif MacOS.version >= :mavericks
+  elsif MacOS.version <= :mavericks
     version '1.2.22-1'
     sha256 '5c435de289e90da45938a0f1a1f7e472e73a84f9b6bbe93e50342e11cc935458'
   end
