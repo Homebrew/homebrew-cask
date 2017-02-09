@@ -3,7 +3,7 @@ cask 'vpnsecure' do
   sha256 :no_check
 
   url 'https://downloads.vpnsecure.me/vpnsecure.pkg'
-  name 'VPN Secure'
+  name 'VPNSecure OpenVPN Encrypted VPN Client'
   homepage 'https://www.vpnsecure.me'
 
   pkg 'vpnsecure.pkg'
