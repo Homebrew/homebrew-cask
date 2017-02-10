@@ -1,4 +1,4 @@
-cask 'marathoninfinity' do
+cask 'marathon-infinity' do
   version '20150620'
   sha256 'ec6595f58f718e4274e6a66762084616940e9dfd1c93a011a01b3e95c0fbbdd9'
 
