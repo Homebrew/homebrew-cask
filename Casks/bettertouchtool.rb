@@ -7,12 +7,12 @@ cask 'bettertouchtool' do
     url "https://bettertouchtool.net/releases/btt#{version}.zip"
 
   else
-    version '2.02'
-    sha256 '6505d59fa999e81a0bf0568a468508c2f441b47220b17d6f6fb12e03331340a3'
+    version '2.04'
+    sha256 '1c8b41ad3c0b98dfb244d667dd4e67be2a1c5f581effed1a0521f6c9631096ee'
 
     url "https://bettertouchtool.net/releases/btt#{version}.zip"
     appcast 'https://updates.bettertouchtool.net/appcast.xml',
-            checkpoint: 'f895a61b0a5e6d6e81d62bc5c2d6e9cf123dd3609e3eac4ce0b73b8c943327ed'
+            checkpoint: '847220e812cac2f426aafa4a97016b7be03644c9f4713e0424002db5721469b7'
   end
 
   name 'BetterTouchTool'
