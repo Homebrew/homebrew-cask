@@ -14,8 +14,10 @@ cask 'fog' do
 
   zap delete: [
                 '~/Library/Application Support/Fog',
-                '~/Library/Caches/Fog',
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vitorgalvao.fog.sfl',
+                '~/Library/Caches/Fog',
+                '~/Library/Preferences/com.vitorgalvao.fog.helper.plist',
+                '~/Library/Preferences/com.vitorgalvao.fog.plist',
                 '~/Library/Saved Application State/com.vitorgalvao.fog.savedState',
               ]
 end
