@@ -6,6 +6,8 @@ cask 'little-flocker' do
   name 'Little Flocker'
   homepage 'https://www.littleflocker.com/'
 
+  depends_on macos: '>= :el_capitan'
+
   pkg 'Install Little Flocker.pkg'
 
   uninstall pkgutil: 'com.zdziarski.LittleFlockerDaemon'
