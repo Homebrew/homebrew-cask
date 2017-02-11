@@ -1,10 +1,10 @@
 cask 'sqlworkbenchj' do
-  version '121'
-  sha256 'ef7033fd865265092d448adc19002ca99f5b1487a9722b96e3174d901c389840'
+  version '122'
+  sha256 'e8c213fbab38116117aafa8b16ad3909117a67e0007d64d6c4acf97c712ad0c2'
 
-  url "http://www.sql-workbench.net/archive/Workbench-Build#{version}-MacJava8.tgz"
+  url "http://www.sql-workbench.net/Workbench-Build#{version}-Mac.tgz"
   appcast 'http://www.sql-workbench.net/wb_news.xml',
-          checkpoint: 'bb25ae8f66a46735b9e7bd23dc21a6d6e6a386ec8e940549080db3b02e74753b'
+          checkpoint: 'be4915770cb90aaf3b8b7e055edea9263dda55e7eb87b88527a7d500f89d6dc8'
   name 'SQL Workbench/J'
   homepage 'http://www.sql-workbench.net/'
 
