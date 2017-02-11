@@ -8,6 +8,6 @@ cask 'onscreen-control' do
 
   pkg "OnScreenControl.#{version}.pkg"
 
-  uninstall quit: 'com.LGSI.-.OnScreen-Control',
+  uninstall quit:    'com.LGSI.-.OnScreen-Control',
             pkgutil: 'com.lge.onscreenControl.*'
 end
