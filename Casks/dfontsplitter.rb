@@ -8,5 +8,5 @@ cask 'dfontsplitter' do
   name 'DfontSplitter'
   homepage 'https://peter.upfold.org.uk/projects/dfontsplitter'
 
-  app 'DfontSplitter.app'
+  app "#{version}/DfontSplitter.app"
 end
