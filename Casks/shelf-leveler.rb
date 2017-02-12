@@ -6,7 +6,7 @@ cask 'shelf-leveler' do
   appcast 'https://mrgeckosmedia.com/applications/releasenotes/Shelf-Leveler',
           checkpoint: '064a0876b7a52e15425c1935b644bd4c0977e39002e9db419d7173ded0ee2d63'
   name 'Shelf Leveler'
-  homepage 'https://mrgeckosmedia.com/applications/info/Shelf-Leveler'
+  homepage 'https://mrgeckosmedia.com/applications/info/Shelf-Leveler/'
 
   app 'Shelf Leveler.app'
 end

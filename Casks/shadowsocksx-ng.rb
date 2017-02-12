@@ -6,7 +6,7 @@ cask 'shadowsocksx-ng' do
   appcast 'https://github.com/shadowsocks/ShadowsocksX-NG/releases.atom',
           checkpoint: 'f94e6e5c88995dbdd28751ded6491f0a43b781af2b13d311d71b3fc6a21bbeba'
   name 'ShadowsocksX-NG'
-  homepage 'https://github.com/shadowsocks/ShadowsocksX-NG'
+  homepage 'https://github.com/shadowsocks/ShadowsocksX-NG/'
 
   conflicts_with cask: 'shadowsocksx'
 

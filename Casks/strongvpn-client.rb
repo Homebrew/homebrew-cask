@@ -7,7 +7,7 @@ cask 'strongvpn-client' do
   appcast 'https://colomovers.com/mac.xml',
           checkpoint: 'd0d7858e5914ce9a1791c7c5719d4d4826bffecfead63c26e99fd44f325af46b'
   name 'StrongVPN'
-  homepage 'https://strongvpn.com/setup.html'
+  homepage 'https://strongvpn.com/setup.html/'
 
   app 'StrongVPN.app'
 end

@@ -6,7 +6,7 @@ cask 'kodelife' do
   appcast 'http://hexler.net/pub/kodelife/appcast.hex',
           checkpoint: '72aaf0fc5ec5c8f865026db8a44ad6f574a6a5444986c64375a9bb95d3961853'
   name 'KodeLife'
-  homepage 'http://hexler.net/software/kodelife'
+  homepage 'https://hexler.net/software/kodelife'
 
   auto_updates true
 
