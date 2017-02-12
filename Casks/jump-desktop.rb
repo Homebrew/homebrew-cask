@@ -1,10 +1,10 @@
 cask 'jump-desktop' do
-  version '7.0.3'
-  sha256 '987763efc74b5bdefd8cdff7cf804d9fb3334a1b0a8d2acac489197a9f7ddf3d'
+  version '7.0.4'
+  sha256 '5e9ef5b498de62860158b97440d4b15a00fe6d64fb8ddfd39ca8588f3d016bef'
 
   url 'https://jumpdesktop.com/downloads/jdmac'
   appcast 'https://jumpdesktop.com/downloads/viewer/jdmac-web-appcast.xml',
-          checkpoint: '90719bf84fce814a49fbd8645b5bd7d4655ef6980353272ae5d083ef34791d1c'
+          checkpoint: '97af2ab1e629c77b4d9bc07a729620bfb8289f772eb9a61888a8ce04fd647ce1'
   name 'Jump Desktop'
   homepage 'https://jumpdesktop.com/#jdmac'
 
