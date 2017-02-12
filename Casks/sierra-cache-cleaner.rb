@@ -5,7 +5,7 @@ cask 'sierra-cache-cleaner' do
   url 'http://www.northernsoftworks.com/downloads/scc.dmg'
   name 'Sierra Cache Cleaner'
   name 'SCC'
-  homepage 'http://www.northernsoftworks.com/sierracachecleaner.html/'
+  homepage 'http://www.northernsoftworks.com/sierracachecleaner.html'
 
   depends_on macos: '<= :sierra'
   if MacOS.version >= :lion
