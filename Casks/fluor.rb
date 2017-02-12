@@ -1,6 +1,6 @@
 cask 'fluor' do
   version '1.1'
-  sha256 '89ce58822dbb2816bc6dd2fbb29acc6c6c1344d0c1f66011a2ee1c671f06b803'
+  sha256 '23078f21bc8460df9336452e66e9033366a10ad504bb25622dbf868f2fd0c292'
 
   url "https://github.com/Pyroh/Fluor/releases/download/#{version}/Fluor.#{version}.dmg"
   appcast 'https://github.com/Pyroh/Fluor/releases.atom',
