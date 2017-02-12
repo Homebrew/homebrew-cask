@@ -6,7 +6,7 @@ cask 'cuteclips' do
   appcast 'http://cuteclips3.com/cuteclipsappcast.xml',
           checkpoint: 'e43a4c4e0d87fa3fd2ffee4ea88fa5ad3263e4c423b41f86465f48cbddb12135'
   name 'CuteClips'
-  homepage 'http://cuteclips3.com'
+  homepage 'http://cuteclips3.com/'
 
   app "CuteClips#{version.major}.app"
 end

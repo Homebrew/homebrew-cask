@@ -4,7 +4,7 @@ cask 'shades' do
 
   url 'https://www.charcoaldesign.co.uk/shades/download/intel'
   name 'Shades'
-  homepage 'https://www.charcoaldesign.co.uk/shades'
+  homepage 'https://www.charcoaldesign.co.uk/shades/'
 
   prefpane 'Shades Preferences.prefPane'
 end

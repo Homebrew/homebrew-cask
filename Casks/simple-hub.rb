@@ -6,7 +6,7 @@ cask 'simple-hub' do
   appcast 'https://www.simplecontrol.com/b/Simple-HubAppcast.xml',
           checkpoint: '930a2df33d838cbf49b4b1fcc082f5f0ccafd20e8cad165b4b5d9b456f4037fd'
   name 'Simple Hub'
-  homepage 'https://store.simplecontrol.com/simple-sync.html'
+  homepage 'https://store.simplecontrol.com/simple-sync.html/'
 
   app 'Simple Hub.app'
 

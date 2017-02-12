@@ -7,7 +7,7 @@ cask 'keepassxc' do
   appcast 'https://github.com/keepassxreboot/keepassxc/releases.atom',
           checkpoint: '1f990f1b8e6092f28e2209a93c8b58a90c4f84eba8f2b5d365c64a43b5a044ce'
   name 'KeePassXC'
-  homepage 'https://keepassxreboot.github.io/'
+  homepage 'https://keepassxc.org/'
 
   app 'KeePassXC.app'
 

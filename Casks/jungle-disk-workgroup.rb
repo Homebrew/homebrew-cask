@@ -6,7 +6,7 @@ cask 'jungle-disk-workgroup' do
   appcast 'https://services.jungledisk.com/updatecheck.aspx',
           checkpoint: '359d56d22543c5c883cf7d2139a55a26ac385e50cbf09ff4361dd9b2f40d7369'
   name 'Jungle Disk Workgroup'
-  homepage 'https://www.jungledisk.com'
+  homepage 'https://www.jungledisk.com/'
 
   auto_updates true
 

@@ -5,7 +5,7 @@ cask 'orfo' do
   url 'http://www.orfo.ru/download/ORFO2016.dmg'
   name 'ORFO'
   name 'ОРФО'
-  homepage 'http://www.orfo.ru'
+  homepage 'http://www.orfo.ru/'
 
   conflicts_with cask: 'orfo-plus'
 
