@@ -8,4 +8,6 @@ cask 'appcelerator-studio' do
   homepage 'http://www.appcelerator.com'
 
   pkg 'Appcelerator Studio.pkg'
+
+  uninstall delete: '/Applications/Appcelerator Studio'
 end
