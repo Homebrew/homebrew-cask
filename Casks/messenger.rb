@@ -1,10 +1,10 @@
 cask 'messenger' do
-  version '0.1.10.1479230589-6c4e6bd63b9f663c'
-  sha256 'e6804a588ba088004f6e72e0e86d96703eb0a73f8671ab3f69dd1468b66b662d'
+  version '0.1.11.1484623553-420db4a3b3b64255'
+  sha256 'a580e5377e156915c7bb69673615b70ddcf4704fd87c0206fb1353941cbe87a0'
 
   url "https://fbmacmessenger.rsms.me/dist/Messenger-#{version}.zip"
   appcast 'https://fbmacmessenger.rsms.me/changelog.xml',
-          checkpoint: 'c8b6bc8f35f7a03534521c408cae82dd9aeb10a92a690b4f6079ac652bdbb298'
+          checkpoint: 'f3894e5800cd1dc4a1ca80083a60ef41f0d92a85fcbf8b01d7e50f5f31d48448'
   name 'Messenger'
   homepage 'https://fbmacmessenger.rsms.me/'
 
