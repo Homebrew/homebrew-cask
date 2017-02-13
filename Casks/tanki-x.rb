@@ -4,7 +4,7 @@ cask 'tanki-x' do
 
   url 'http://static.tankix.com/app/StandaloneOSXIntel64/prod_523/TankiX.dmg'
   name 'Tanki X'
-  homepage 'http://tankix.com/'
+  homepage 'http://www.tankix.com/'
 
   app 'tankix.app'
 end
