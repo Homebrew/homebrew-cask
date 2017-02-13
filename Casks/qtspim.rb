@@ -1,6 +1,6 @@
 cask 'qtspim' do
   version '9.1.18'
-  sha256 'b66e026ac7ea99db67ba6e546cf50e78395395a58744a443793800cf9deb175d'
+  sha256 '5e51b50d0a497e3704808e03f314c15a501686aa7dc36b74c63cc7ae065e75d8'
 
   url "https://downloads.sourceforge.net/spimsimulator/QtSpim_#{version}_mac.mpkg.zip"
   appcast 'https://sourceforge.net/projects/spimsimulator/rss',
