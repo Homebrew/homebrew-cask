@@ -1,4 +1,4 @@
-cask 'tanki-x' do
+cask 'tankix' do
   version :latest
   sha256 :no_check
 
