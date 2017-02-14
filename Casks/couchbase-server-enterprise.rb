@@ -1,5 +1,5 @@
 cask 'couchbase-server-enterprise' do
-  if MacOS.version < :sierra
+  if MacOS.version <= :el_capitan
     version '4.5.1'
     sha256 'de014c7c134eb97ff00be6b2e6f5d0da84295ce05bbb7bb3a4d3c747a365cd22'
   else
