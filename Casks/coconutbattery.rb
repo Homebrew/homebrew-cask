@@ -15,6 +15,8 @@ cask 'coconutbattery' do
     version '3.5.1'
     sha256 '864aa85b070d848bf74912bef38f3b550c65f8a2039389e9b4403debd3ba25a6'
     url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version}.zip"
+    appcast 'https://coconut-flavour.com/updates/coconutBattery.xml',
+            checkpoint: 'ed4848c3f3306c62c4fbead800b69b39d9509f2fa03365e1fd9e21655fb72a11'
   end
 
   name 'coconutBattery'
