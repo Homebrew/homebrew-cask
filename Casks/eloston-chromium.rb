@@ -7,7 +7,7 @@ cask 'eloston-chromium' do
   appcast 'https://github.com/ungoogled-software/ungoogled-chromium-binaries/releases.atom',
           checkpoint: 'dbb87319a87c7ccf876d7df29abf5dbbf95c97935855238aafe9daabd093fd9a'
   name 'Ungoogled Chromium'
-  homepage 'https://github.com/Eloston/ungoogled-chromium'
+  homepage 'https://ungoogled-software.github.io/ungoogled-chromium-binaries/'
 
   app 'Chromium.app'
 
