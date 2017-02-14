@@ -8,7 +8,7 @@ cask 'simplenote' do
   name 'Simplenote'
   homepage 'https://github.com/Automattic/simplenote-electron'
 
-  app 'Simplenote.app'
+  app 'Simplenote-darwin-x64/Simplenote.app'
 
   zap delete: [
                 '~/Library/Application Support/Simplenote',
