@@ -1,10 +1,10 @@
 cask 'ealeksandrov-cd-to' do
-  version '2.7.0'
-  sha256 '979667c59da350e1a1f6288d20b8cf84ccf81a96b63f1585ad06fd82acc36684'
+  version '2.8.0'
+  sha256 'bcc450c23da12a2e3b82ad60ca3698b0464ee96b11cc077348d26ad1b2439600'
 
   url "https://github.com/ealeksandrov/cdto/releases/download/#{version.dots_to_underscores}/cd_to_#{version.major_minor.dots_to_underscores}.zip"
   appcast 'https://github.com/ealeksandrov/cdto/releases.atom',
-          checkpoint: '64945ad97b2ff98dc41ec2cd05df9a71af6bf93faac41a75ff1f1a21a063e141'
+          checkpoint: 'a4e8fc8ff9b2927e3b12198d1d9cf9d309be58f5c88261d11ef38363e2c07957'
   name 'cd_to'
   homepage 'https://github.com/ealeksandrov/cdto'
 

@@ -1,10 +1,10 @@
 cask 'morkro-papyrus' do
-  version '1.0.0'
-  sha256 'cd88cd942504aa676879d86ba7c435ba8250db05525f0482a0c3812d069abf21'
+  version '1.0.2'
+  sha256 '56224eadffc9be30a240790487919406fb6ffc8e952c1446de696850b209bca8'
 
   url "https://github.com/morkro/papyrus/releases/download/#{version}/Papyrus-osx-#{version}.zip"
   appcast 'https://github.com/morkro/papyrus/releases.atom',
-          checkpoint: '8c12e03261b6509c4f1c3269fa0ab07324095c829f7cff3cc309b77c60ecc0a8'
+          checkpoint: 'f22ccbcd9ec38efaf29618ee61c2c3ede100469afeb5c16502a943e0ddeb00d1'
   name 'Papyrus'
   homepage 'https://github.com/morkro/papyrus'
 

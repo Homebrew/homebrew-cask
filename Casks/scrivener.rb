@@ -3,9 +3,9 @@ cask 'scrivener' do
   sha256 'b4a09047b4b7f7522d58fdd5736f7de9d7250447f3573fd993964bfb3b6be1e1'
 
   # scrivener.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "http://scrivener.s3.amazonaws.com/mac_updates/Scrivener_#{version.after_comma}_#{version.before_comma}.zip"
+  url "https://scrivener.s3.amazonaws.com/mac_updates/Scrivener_#{version.after_comma}_#{version.before_comma}.zip"
   appcast "https://www.literatureandlatte.com/downloads/scrivener-#{version.major}.xml",
-          checkpoint: '5ebdbf2cd82e1d644ad1a63fac21cbc02ca8d180295eea9ab944d91700f8052c'
+          checkpoint: 'd07056774e32c51cb38b9730c90fa41da16413d2de3af00a2dd6b8e50c097755'
   name 'Scrivener'
   homepage 'https://literatureandlatte.com/scrivener.php'
 

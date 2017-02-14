@@ -1,11 +1,11 @@
 cask 'jxplorer' do
-  version '3.3.1'
-  sha256 'b51995a93203590e6690d8ad54f73cd7af1c9f2bef6219adca79c58eda71d860'
+  version '3.3.1.2'
+  sha256 '4a51114e4bb54bd1fa7704f826d3b67cc2d50e6a64303c549595275c5bb49f0d'
 
   # sourceforge.net/jxplorer was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/jxplorer/jxplorer/version%20#{version}/jxplorer-#{version}-osx.zip"
   appcast 'https://sourceforge.net/projects/jxplorer/rss?path=/jxplorer',
-          checkpoint: '678e62f7056c41d31dfb73b2b60039755a4759e842cd71fabddc92efe3262ca3'
+          checkpoint: '188e113fcfe201892108e911775fa31ad6561faca18f42297fb98c5d9b298159'
   name 'JXplorer'
   homepage 'http://jxplorer.org/'
 

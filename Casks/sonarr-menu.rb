@@ -6,7 +6,7 @@ cask 'sonarr-menu' do
   appcast 'https://github.com/jefbarn/Sonarr-Menu/releases.atom',
           checkpoint: '10522a3868d5f6eef2200873fd4384947a46bac5622423a38ed35a867ac58b3b'
   name 'Sonarr Menu'
-  homepage 'https://github.com/jefbarn/Sonarr-Menu'
+  homepage 'https://github.com/jefbarn/Sonarr-Menu/'
 
   depends_on cask: 'sonarr'
   depends_on macos: '>= :mavericks'

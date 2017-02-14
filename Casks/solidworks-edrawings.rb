@@ -5,7 +5,7 @@ cask 'solidworks-edrawings' do
   # dl-ak.solidworks.com/nonsecure/edrawings was verified as official when first introduced to the cask
   url "http://dl-ak.solidworks.com/nonsecure/edrawings/e#{version.before_comma}#{version.after_comma}/macse/eDrawings%20#{version.before_comma}.dmg"
   name 'eDrawings Viewer'
-  homepage 'http://www.edrawingsviewer.com/ed/edrawings-mac.htm'
+  homepage 'http://www.edrawingsviewer.com/ed/edrawings-mac.htm/'
 
   app 'SolidWorks eDrawings.app'
 end

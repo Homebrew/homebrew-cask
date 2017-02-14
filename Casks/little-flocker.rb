@@ -1,10 +1,12 @@
 cask 'little-flocker' do
-  version '1.4.7'
-  sha256 '2b58a58509ea0d0429a0d930689ecd691c7b1a5f61f2760beba202a4212c6fcc'
+  version '1.4.9'
+  sha256 '71be8e4793db84919e3ba1374081db5b9a2830133684960348f38bd8a15cc974'
 
   url "https://www.littleflocker.com/downloads/LittleFlocker-#{version}.dmg"
   name 'Little Flocker'
   homepage 'https://www.littleflocker.com/'
+
+  depends_on macos: '>= :el_capitan'
 
   pkg 'Install Little Flocker.pkg'
 

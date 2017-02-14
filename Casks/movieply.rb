@@ -1,6 +1,6 @@
 cask 'movieply' do
   version '1.2'
-  sha256 '30fde0ba565ec8f5bc15aed7fbfd9d24b3efba2b05835582cf0f5fdf730de822'
+  sha256 '083d15a07f8702e1216f5ec39ee1879d1459e307a6ee7ae223651fed856dae93'
 
   url "http://www.movieply.com/download/MoviePly-#{version}.OSX.zip"
   name 'MoviePly'

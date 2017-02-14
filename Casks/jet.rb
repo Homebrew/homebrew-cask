@@ -1,6 +1,6 @@
 cask 'jet' do
-  version '1.15.4'
-  sha256 '7698cbabff953e8a04db4fecab83af32f61cc85a9d7e6bd741f50085740afaac'
+  version '1.15.8'
+  sha256 'e37c4a88caf127bbc07fe366290dc739b6a58703e1f689517e009b90e1d61df1'
 
   # s3.amazonaws.com/codeship-jet-releases was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/codeship-jet-releases/#{version}/jet-darwin_amd64_#{version}.tar.gz"

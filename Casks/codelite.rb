@@ -2,7 +2,7 @@ cask 'codelite' do
   version :latest
   sha256 :no_check
 
-  url 'http://downloads.codelite.org/downloads.php?osx'
+  url 'https://downloads.codelite.org/downloads.php?osx'
   name 'CodeLite'
   homepage 'https://codelite.org/'
 

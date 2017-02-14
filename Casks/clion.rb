@@ -4,10 +4,11 @@ cask 'clion' do
 
   url "https://download.jetbrains.com/cpp/CLion-#{version}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=CL&latest=true&type=release',
-          checkpoint: '8fe8ed177649c1c462e1072cad92a6701d099bb9aa1cbc53b4612d36d0a72330'
+          checkpoint: 'c1e30f5c65a932f247f4667b05f84553d35dc6aa92270dd70f3d4bb928940955'
   name 'CLion'
   homepage 'https://www.jetbrains.com/clion/'
 
+  auto_updates true
   conflicts_with cask: 'clion-eap'
 
   app 'CLion.app'
