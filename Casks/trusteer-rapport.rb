@@ -8,5 +8,9 @@ cask 'trusteer-rapport' do
 
   pkg 'Rapport.pkg'
 
-  uninstall pkgutil: 'com.trusteer.ibmSecurityTrusteerEndpointProtection.*'
+  uninstall script:  {
+                       executable: "#{staged_path}/Uninstall Rapport.app/Contents/Resources/RapportUninstaller.sh",
+                       sudo:       true,
+                     }
+            pkgutil: 'com.trusteer.ibmSecurityTrusteerEndpointProtection.*'
 end
