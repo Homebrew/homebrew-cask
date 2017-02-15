@@ -6,7 +6,7 @@ cask 'shimeike-formulatepro' do
   appcast 'https://github.com/shimeike/formulatepro/releases.atom',
           checkpoint: '5577b6aea342f35701fb94c0eff888f0536b01cdfe21978fded979d44835b082'
   name 'FormulatePro'
-  homepage 'https://github.com/shimeike/formulatepro'
+  homepage 'https://github.com/shimeike/formulatepro/'
 
   app 'FormulatePro.app'
 end

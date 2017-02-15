@@ -6,7 +6,7 @@ cask 'shiftit' do
   appcast 'https://github.com/fikovnik/ShiftIt/releases.atom',
           checkpoint: '27768f3e0be91ae446110e3e478d895b543745f2c01f914cfb2b932f1070fba8'
   name 'ShiftIt'
-  homepage 'https://github.com/fikovnik/ShiftIt'
+  homepage 'https://github.com/fikovnik/ShiftIt/'
 
   app 'ShiftIt.app'
 end

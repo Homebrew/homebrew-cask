@@ -8,7 +8,7 @@ cask 'marathon2' do
   appcast 'https://github.com/Aleph-One-Marathon/alephone/releases.atom',
           checkpoint: '7960a0eee7bd6c594b7a6cf6ce093a71d31715522774224c9def5903390479d6'
   name 'Marathon 2'
-  homepage 'https://alephone.lhowon.org'
+  homepage 'https://alephone.lhowon.org/'
 
   app 'Marathon 2.app'
 end

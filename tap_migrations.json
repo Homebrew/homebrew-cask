@@ -2,6 +2,7 @@
   "ax88179": "caskroom/drivers",
   "azure-cli": "homebrew/core",
   "basex": "homebrew/core",
+  "bose-soundtouch": "caskroom/drivers",
   "canon-capt-printer-driver": "caskroom/drivers",
   "canon-imagerunner-printer-driver-ufrii": "caskroom/drivers",
   "cocoapods": "homebrew/core",
