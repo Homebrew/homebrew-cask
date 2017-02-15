@@ -7,4 +7,6 @@ cask 'trusteer-rapport' do
   homepage 'https://www.trusteer.com/ProtectYourMoney'
 
   pkg 'Rapport.pkg'
+
+  uninstall pkgutil: 'com.trusteer.ibmSecurityTrusteerEndpointProtection.*'
 end
