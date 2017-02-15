@@ -7,7 +7,11 @@ cask 'oryoki' do
   appcast 'https://github.com/thmsbfft/oryoki/releases.atom',
           checkpoint: 'a2f6d39a0d20f944954e8e5d865d51a8c6bdf2f32d28cff1d97253c4414b4762'
   name 'Oryoki'
+  name 'Ōryōki'
+  name '応量器'
   homepage 'http://oryoki.io/'
+
+  depends_on macos: '>= :el_capitan'
 
   app 'Oryoki.app'
 end
