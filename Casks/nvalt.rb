@@ -5,9 +5,9 @@ cask 'nvalt' do
     # abyss.designheresy.com/nvaltb was verified as official when first introduced to the cask
     url "http://abyss.designheresy.com/nvaltb/nvalt#{version}.zip"
   else
-    version '2.2.7b125'
-    sha256 'efdab1c5fbf995c1adad9e65bb65438a39c9c6119205e578260ac49e576136c2'
-    url "http://assets.brettterpstra.com/nvALT#{version.delete('b')}.dmg"
+    version '2.2.7b126'
+    sha256 '496e0fb87b255ac6b6746395ff676b788cc455eccd1e65b49a63d0e2812754c3'
+    url "http://updates.designheresy.com/nvalt/nvALT#{version.delete('b')}.dmg"
   end
 
   name 'nvALT'
