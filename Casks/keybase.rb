@@ -18,12 +18,7 @@ cask 'keybase' do
   end
 
   uninstall_preflight do
-    if system_command('launchctl', args: ['list']).stdout =~ %r{/^\d+.*keybase.Electron/}
-      system_command 'killall', args: ['-kill', 'Keybase']
-    end
-    if File.exist?("#{appdir}/Keybase.app/Contents/SharedSupport/bin/keybase")
-      system_command "#{appdir}/Keybase.app/Contents/SharedSupport/bin/keybase",
-                     args: ['uninstall']
-    end
+    system_command('killall', args: ['-kill', 'Keybase']) if system_command('launchctl', args: ['list']).stdout =~ %r{/^\d+.*keybase.Electron/}
+    system_command("#{appdir}/Keybase.app/Contents/SharedSupport/bin/keybase", args: ['uninstall']) if File.exist?("#{appdir}/Keybase.app/Contents/SharedSupport/bin/keybase")
   end
 end
