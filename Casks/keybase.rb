@@ -21,7 +21,9 @@ cask 'keybase' do
     if system_command('launchctl', args: ['list']).stdout =~ %r{/^\d+.*keybase.Electron/}
       system_command 'killall', args: ['-kill', 'Keybase']
     end
-    system_command "#{appdir}/Keybase.app/Contents/SharedSupport/bin/keybase",
-                   args: ['uninstall']
+    if File.exist?("#{appdir}/Keybase.app/Contents/SharedSupport/bin/keybase")
+      system_command "#{appdir}/Keybase.app/Contents/SharedSupport/bin/keybase",
+                     args: ['uninstall']
+    end
   end
 end
