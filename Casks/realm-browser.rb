@@ -4,7 +4,7 @@ cask 'realm-browser' do
 
   url "https://github.com/realm/realm-browser-osx/releases/download/v#{version}/RealmBrowser-#{version}.zip"
   appcast 'https://github.com/realm/realm-browser-osx/releases.atom',
-          checkpoint: 'e1bedf4ca694b5b87fa0b76637c7f7b7f807f39f55022c7e59734898e48c5f88'
+          checkpoint: '045858267321ac397c121cc0566476f1c50d22ea7f795e31ef4d049ccb1f46ce'
   name 'Realm Browser'
   homepage 'https://github.com/realm/realm-browser-osx/'
 
