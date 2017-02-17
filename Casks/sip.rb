@@ -8,5 +8,7 @@ cask 'sip' do
   name 'Sip'
   homepage 'http://sipapp.io/'
 
+  depends_on macos: '>= :el_capitan'
+
   app 'Sip.app'
 end
