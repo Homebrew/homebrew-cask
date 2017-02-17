@@ -9,7 +9,5 @@ cask 'get-backup-pro' do
   name "Get Backup Pro #{version.major}"
   homepage 'https://www.belightsoft.com/products/getbackup/'
 
-  license :commercial
-
   app "Get Backup Pro #{version.major}.app"
 end
