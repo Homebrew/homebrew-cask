@@ -1,10 +1,10 @@
 cask 'healthi' do
-  version '1.3.0'
-  sha256 '7c4025b80faf5fb53ed9ce021805401a78dc4a86cfe02c47ec27ccd2a20dbc55'
+  version '2.1.0'
+  sha256 'c6e78e7c5f942078394fe4467c4acf58a6f44183d748b0d61f9ab8de832e9777'
 
   url "https://github.com/pablopunk/healthi-app/releases/download/#{version}/healthi.app.zip"
   appcast 'https://github.com/pablopunk/healthi-app/releases.atom',
-          checkpoint: '4c04647cf7ad53ba9937ae4301b67697a4bfacfb31337311d1523635113d47c5'
+          checkpoint: '36ae6b106cca01ee635bc31f99e0d6f6dc2ada03d382d893fb10b895206b7e19'
   name 'healthi'
   homepage 'https://github.com/pablopunk/healthi-app'
 
