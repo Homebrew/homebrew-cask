@@ -13,6 +13,12 @@ cask 'vmrc' do
 
   app 'payload/VMware Remote Console.app'
 
+  postflight do
+    system_command "#{appdir}/VMware Remote Console.app/Contents/Library/Initialize VMRC.tool",
+                   args: ['set'],
+                   sudo: true
+  end
+
   uninstall_preflight do
     set_ownership "#{appdir}/VMware Remote Console.app"
   end
