@@ -1,4 +1,4 @@
-cask 'vmrc' do
+cask 'vmware-remote-console' do
   version '9.0.0-4288332'
   sha256 'b3adb7f0b2c19f98765710a0c6902f7d3d32ebf7e908886d4d6f687c4f8f6b2b'
 
