@@ -1,12 +1,14 @@
 cask 'sip' do
-  version '0.9.4'
-  sha256 '32754b3a255377a67b72387425d59f9b2ea2094cc4c157a3b98e91da7a5cd018'
+  version '0.9.6'
+  sha256 '6f3091851190fdc1c1b5742fa6039dc11b007fa0db2c81fdc1770ca2e834527b'
 
   url 'http://sipapp.io/download/sip.dmg'
   appcast 'http://sipapp.io/sparkle/sip.xml',
-          checkpoint: '88734a57e970eaf72c5cfb7427cdba41f682e044668f7f4173144847496b26bd'
+          checkpoint: '4853ffd0b9743d05640a1ec6cc22731e255060aa9b8579b5ed15e0de0ffc8fe7'
   name 'Sip'
   homepage 'http://sipapp.io/'
+
+  depends_on macos: '>= :el_capitan'
 
   app 'Sip.app'
 end

@@ -4,7 +4,7 @@ cask 'scenebuilder' do
 
   url "http://download.gluonhq.com/scenebuilder/#{version}/install/mac/SceneBuilder-#{version}.dmg"
   name 'Scene Builder'
-  homepage 'https://gluonhq.com/labs/scene-builder/'
+  homepage 'https://gluonhq.com/products/scene-builder/'
 
   app 'SceneBuilder.app'
 end

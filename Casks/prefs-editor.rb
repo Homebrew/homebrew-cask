@@ -4,7 +4,7 @@ cask 'prefs-editor' do
 
   url 'http://files.tempel.org/Various/OSX_Prefs_Editor/PrefsEditor.zip'
   name 'Prefs Editor'
-  homepage 'http://www.tempel.org/PrefsEditor'
+  homepage 'http://apps.tempel.org/PrefsEditor/'
 
   app 'Prefs Editor.app'
 end

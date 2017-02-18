@@ -1,10 +1,10 @@
 cask 'sleipnir' do
-  version '4.5.4'
-  sha256 'cede4cf9d285b2e4f2e1f13d2f38a031e394e15ebc9198c13adbb19ba56ffecf'
+  version '4.5.5'
+  sha256 '33bd05a8ac11aaa19d843908449bff7bc35bebc177be1a4905fc50693c3c4387'
 
   url 'http://www.fenrir-inc.com/services/download.php?file=Sleipnir.dmg'
   appcast 'https://update.fenrir.co.jp/smartupdate/mac/sleipnir/appcast.xml',
-          checkpoint: '1e06ef7892b52f07b7b30d9d9c183974ff7da57d41934f6bc8e6d845b3109796'
+          checkpoint: 'aa6698d2ce1bf7a2a2c4bbe1638e15aa5311ac5bb30001ce26526ff380dc2ee6'
   name 'Sleipnir'
   homepage 'http://www.fenrir-inc.com/sleipnir/'
 

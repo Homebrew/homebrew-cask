@@ -4,6 +4,8 @@ cask 'scythebill' do
 
   # amazonaws.com/downloads.scythebill.com was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/downloads.scythebill.com/Scythebill-#{version}.dmg"
+  appcast 'http://www.scythebill.com/download.html',
+          checkpoint: '1f5bdc71b76823ce6f6503c101b3e9a519ac21695b1b4436c2ec4dbc860943dc'
   name 'Scythebill'
   homepage 'http://www.scythebill.com/'
 

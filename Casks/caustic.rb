@@ -4,7 +4,7 @@ cask 'caustic' do
 
   url "http://www.singlecellsoftware.com/download/Caustic_#{version}.dmg"
   name 'Caustic'
-  homepage 'http://www.singlecellsoftware.com/caustic'
+  homepage 'https://www.singlecellsoftware.com/caustic'
 
   app 'CausticOSX.app'
 end

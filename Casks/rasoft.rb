@@ -6,7 +6,7 @@ cask 'rasoft' do
   appcast 'https://rakocontrols.com/useful-information/rasoftpro/',
           checkpoint: '9a6ff15d831c7d722d2a318f085af5769e2f85e3be10ca6ba28e3c80caaa8468'
   name 'Rasoft Pro'
-  homepage 'https://rakocontrols.com/useful-information/rasoftpro/'
+  homepage 'https://www.rakocontrols.com/useful-information/rasoftpro/'
 
   app 'Rasoft Pro.app'
 end

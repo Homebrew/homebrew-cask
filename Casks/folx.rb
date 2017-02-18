@@ -1,10 +1,10 @@
 cask 'folx' do
-  version '5.1.13665'
-  sha256 'd56950b317952e783f7be845d33a03e500de60e59ebd06632647b8a999c70191'
+  version '5.1.13671'
+  sha256 '45535464ba360fb7625bd6eb6736ba68ef7daed37833ef62c8170b16d511dd97'
 
   url "http://www.eltima.com/download/folx-update/downloader_mac_#{version}.dmg"
   appcast 'http://mac.eltima.com/download/folx-updater/folx.xml',
-          checkpoint: '32940954833ecc69649ba2f66515855f17002ae44b36176d86efcc5569ff8e90'
+          checkpoint: 'de10550065e2316573a16d23e031b6f4dd59ea655033922216ac8ab4910b0c5e'
   name 'Folx'
   homepage 'http://mac.eltima.com/download-manager.html'
 
