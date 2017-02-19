@@ -15,6 +15,9 @@ cask 'postgres' do
 
   zap delete: [
                 '~/Library/Application Support/Postgres',
-                '~/Library/Preferences/com.postgresapp.Postgres2.plist',
+                "~/Library/Caches/com.postgresapp.Postgres#{version.major}",
+                "~/Library/Cookies/com.postgresapp.Postgres#{version.major}.binarycookies",
+                "~/Library/LaunchAgents/com.postgresapp.Postgres#{version.major}LoginHelper.plist",
+                "~/Library/Preferences/com.postgresapp.Postgres#{version.major}.plist",
               ]
 end

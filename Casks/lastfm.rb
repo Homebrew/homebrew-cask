@@ -9,4 +9,13 @@ cask 'lastfm' do
   homepage 'http://www.last.fm/'
 
   app 'Last.fm.app'
+
+  zap delete: [
+                '~/Library/Application Support/CrashReporter/Last.fm*',
+                '~/Library/Application Support/Last.fm',
+                '~/Library/Caches/fm.last.Scrobbler',
+                '~/Library/Caches/Last.fm',
+                '~/Library/Logs/Last.fm',
+                '~/Library/Preferences/fm.last*',
+              ]
 end
