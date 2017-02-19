@@ -1,6 +1,6 @@
 cask 'fanny' do
-  version '1.0.1'
-  sha256 'faeea76bca6a599be99457a0ecbb9ff406f30f893c2be81d9d93208f485546d3'
+  version '1.0.2'
+  sha256 'bfad1c1fd9e08f390f7e80a4f2e5571612843c042aec850efa04d0badc191f06'
 
   url 'http://fannywidget.com/FannyWidget.zip'
   name 'FannyWidget'
