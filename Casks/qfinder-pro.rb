@@ -1,4 +1,4 @@
-cask 'qfinder' do
+cask 'qfinder-pro' do
   version '2.3.1.0124'
   sha256 '04831a98d32b005136b22a68415a76f6666e8878f6cf6a87ad49178fa07b811c'
 
