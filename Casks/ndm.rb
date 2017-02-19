@@ -5,7 +5,7 @@ cask 'ndm' do
   # github.com/720kb/ndm was verified as official when first introduced to the cask
   url "https://github.com/720kb/ndm/releases/download/v#{version}/ndm-#{version}.dmg"
   appcast 'https://github.com/720kb/ndm/releases.atom',
-          checkpoint: 'bc369e17fd3e6ef4421adfd4b86670c474f57ba37f1f9775427ac9b944fc6c46'
+          checkpoint: '31e8ea2c8c1748af0a3060313acf6319e313fc88ff5652d55de68c12910f67a9'
   name 'ndm'
   homepage 'https://720kb.github.io/ndm/'
 
