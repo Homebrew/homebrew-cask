@@ -1,11 +1,11 @@
 cask 'axoloti' do
-  version '1.0.12'
-  sha256 'a17c32dd7a4d2ab3441568126157bd0b72741b8c217372ab8720f0a216c4a3da'
+  version '1.0.12-1'
+  sha256 '21839f25fd323f092a9e7b4c103fc5c6e126d95bfcbdc54b2db2224639fee1b6'
 
   # github.com/axoloti/axoloti was verified as official when first introduced to the cask
   url "https://github.com/axoloti/axoloti/releases/download/#{version}/axoloti-mac-#{version}.dmg"
   appcast 'https://github.com/axoloti/axoloti/releases.atom',
-          checkpoint: 'e532866f2a0592718b2a7206d14595956ee3bd6b551568f3f26269e3ac796844'
+          checkpoint: '7e8428f250a591ed812f1f6cba4e91727230eff0d3aaab07c455f7a4c0245677'
   name 'Axoloti Core'
   homepage 'http://www.axoloti.com/'
 
