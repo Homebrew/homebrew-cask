@@ -2,7 +2,8 @@ cask 'kindle' do
   version '46083'
   sha256 '2105e350b1b31cf8ccc4e35468c5ae42c7b34f7c7bbfe3b29677d6c731862328'
 
-  url "http://kindleformac.amazon.com/#{version}/KindleForMac-#{version}.dmg"
+  # s3.amazonaws.com/kindleformac was verified as official when first introduced to the cask
+  url "https://s3.amazonaws.com/kindleformac/#{version}/KindleForMac-#{version}.dmg"
   name 'Kindle for Mac'
   homepage 'https://www.amazon.com/gp/digital/fiona/kcp-landing-page'
 

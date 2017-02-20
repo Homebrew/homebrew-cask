@@ -1,11 +1,11 @@
 cask 'duckietv' do
-  version '1.1.3'
-  sha256 '4c4ee965cf39db6333dad65fe2b56ebf412af490a1b091487ef5d1fe8989b359'
+  version '1.1.4'
+  sha256 '93516a16197256d05c7a575c3a6932b9384ee8c1cfc41afe103d9fdb2a0dda5f'
 
   # github.com/SchizoDuckie/DuckieTV was verified as official when first introduced to the cask
   url "https://github.com/SchizoDuckie/DuckieTV/releases/download/#{version}/DuckieTV-#{version}-OSX-x64.pkg"
   appcast 'https://github.com/SchizoDuckie/DuckieTV/releases.atom',
-          checkpoint: 'f11c61dde34cfe2a9f3e7150122340aa3f6680a634e00851066fccd4668e0103'
+          checkpoint: '30c530aad16358a149c5f8abe0cf69607260b6cb1524e8ad3bb2c52224d5481c'
   name 'duckieTV'
   homepage 'https://schizoduckie.github.io/DuckieTV/'
 
