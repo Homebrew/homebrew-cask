@@ -9,7 +9,5 @@ cask 'webcatalog' do
   name 'WebCatalog'
   homepage 'https://getwebcatalog.com'
 
-  auto_updates false
-
   app 'WebCatalog.app'
 end
