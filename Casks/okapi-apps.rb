@@ -7,7 +7,7 @@ cask 'okapi-apps' do
   name 'Okapi-Apps'
   homepage 'http://okapiframework.org/'
 
-  suite "Okapi_#{version}", target: 'Okapi'
+  suite "Okapi_#{version}"
 
   caveats do
     depends_on_java('8+')
