@@ -1,9 +1,9 @@
 cask 'omegat' do
-  version :latest
-  sha256 :no_check
+  version '3.6.0_04'
+  sha256 '3047e5f43d2460901cf476b9b716c1f7c08c8ba0'
 
-  # sourceforge.net/projects/omegat was verified as official when first introduced to the cask
-  url 'https://sourceforge.net/projects/omegat/files/latest/download'
+  # downloads.sourceforge.net/project/omegat was verified as official when first introduced to the cask
+  url "https://downloads.sourceforge.net/project/omegat/OmegaT%20-%20Standard/OmegaT%20#{version.sub(%r{_\d+}, '%20build%20')}/OmegaT_#{version}_Mac_Signed.zip"
   appcast 'https://sourceforge.net/projects/omegat/rss',
           checkpoint: 'ee727bd624e9fc1e1358f540422afe8b6f5d917258e97db85d3cb9c8115f4519'
   name 'OmegaT'
