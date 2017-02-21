@@ -9,4 +9,6 @@ cask 'discovercare' do
   container nested: "DiscoverCare_v.#{version}.dmg"
 
   app 'DiscoverCare.app'
+
+  zap delete: '~/DiscoverCare'
 end
