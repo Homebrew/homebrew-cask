@@ -10,7 +10,10 @@ cask 'tamarin-prover' do
   homepage 'https://tamarin-prover.github.io/'
 
   depends_on macos: '>= :lion'
-  depends_on formula: ['homebrew/science/maude', 'graphviz']
+  depends_on formula: [
+                        'homebrew/science/maude',
+                        'graphviz',
+                      ]
 
-  binary 'tamarin-prover-1.2-macOS-x86_64', target: 'tamarin-prover'
+  binary "tamarin-prover-"${version.major_minor}-macOS-x86_64", target: 'tamarin-prover'
 end
