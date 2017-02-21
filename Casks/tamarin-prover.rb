@@ -6,6 +6,8 @@ cask 'tamarin-prover' do
   url 'https://github.com/tamarin-prover/tamarin-prover/releases/download/1.2.0/tamarin-prover-1.2-macOS-x86_64.zip'
   name 'tamarin-prover'
   homepage 'https://tamarin-prover.github.io/'
+  appcast 'https://github.com/tamarin-prover/tamarin-prover/releases.atom',
+  	checkpoint: 'd53924084b55faacd8db4d3c65bbfbfc51583107708084b4e8189fb4ae4d9677'
 
   depends_on macos: '>= :lion'
   depends_on formula: ['homebrew/science/maude', 'graphviz']
