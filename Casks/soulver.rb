@@ -1,10 +1,10 @@
 cask 'soulver' do
-  version '2.6.0-5456'
-  sha256 '1ba18b3be8835e916a19a840fa7136d0ba9dd4d339c72b05a65ee1862a5c3d51'
+  version '2.6.1-5482'
+  sha256 'e3a1977c01e734e432eba4fff88ff2a57690414a25fae7bfc9659062640b234d'
 
   url "http://www.acqualia.com/files/sparkle/soulver_#{version}.zip"
   appcast "http://www.acqualia.com/soulver/appcast/soulver#{version.major}.xml",
-          checkpoint: '1e355d3d72aeafce49717901df0986926ed78d0f4201416964d91b72200c2f33'
+          checkpoint: '4d8d650d946053334b843c8db5656a943c187a9f40e4bece82f3c9558e4af683'
   name 'Soulver'
   homepage 'http://www.acqualia.com/soulver/'
 
