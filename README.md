@@ -13,7 +13,13 @@ It’s implemented as a `homebrew` [external command](http://docs.brew.sh/Extern
 
 ## Let’s try it!
 
-To start using Homebrew-Cask, you just need [Homebrew](http://brew.sh/) installed.
+To start using Homebrew-Cask, make sure you already have [Homebrew](http://brew.sh/) installed, then simply type:
+
+```
+$ brew tap caskroom/cask
+```
+
+You're now ready to use Homebrew-Cask! Let's try it:
 
 <img src="https://i.imgur.com/WYa2557.gif" width="450px" alt="Installing Atom (animated gif)">
 
