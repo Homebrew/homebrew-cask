@@ -1,6 +1,6 @@
 cask 'axoloti-runtime' do
-  version '1.0.12'
-  sha256 '5b3b484692a0afaca4663aee9456ed4836b1662881d0118c42e122cd1039bff8'
+  version '1.0.12-1'
+  sha256 '433c965b0814f4e01cd8d5d827ba18ea5bda6b6dd798ac8f6f6f29d0b0c9e77d'
 
   # github.com/axoloti/axoloti was verified as official when first introduced to the cask
   url "https://github.com/axoloti/axoloti/releases/download/#{version}/axo_runtime_mac_#{version}.dmg"
