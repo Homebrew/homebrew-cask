@@ -13,7 +13,7 @@ cask 'keybase' do
   app 'Keybase.app'
 
   postflight do
-    system_command "#{appdir}/Keybase.App/Contents/Resources/KeybaseInstaller.app/Contents/MacOS/Keybase",
+    system_command "#{appdir}/Keybase.app/Contents/Resources/KeybaseInstaller.app/Contents/MacOS/Keybase",
                    args: ["--app-path=#{appdir}/Keybase.app", '--run-mode=prod', '--timeout=10']
   end
 

@@ -1,11 +1,11 @@
 cask 'cockatrice' do
-  version '2016-12-31,All_Hallows_Eve_Revision1'
-  sha256 '173ed52cda8e984cd37c1bb6967ba6d9269e212a4c58802951c140f15bd2e0d1'
+  version '2017-01-20,All_Hallows_Eve_Revision2'
+  sha256 '283e2e66b1970f749889743758de5974a34549eb53d83d8dcf2109ce5588f3e7'
 
   # github.com/Cockatrice/Cockatrice was verified as official when first introduced to the cask
   url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.before_comma}-Release/Cockatrice_#{version.after_comma}_osx.dmg"
   appcast 'https://github.com/Cockatrice/Cockatrice/releases.atom',
-          checkpoint: '6d2a3f4aee905da93316c3ffc70891937900f5aa34b61182c487de7b935f7e1e'
+          checkpoint: 'dff341b93a27245f9bc4a99d4abc4a591ac961ba2994e2accfd03e745fc4c1b6'
   name 'Cockatrice'
   homepage 'http://www.woogerworks.com/'
 
