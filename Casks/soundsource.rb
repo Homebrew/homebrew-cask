@@ -8,5 +8,7 @@ cask 'soundsource' do
   name 'SoundSource'
   homepage 'https://rogueamoeba.com/soundsource/'
 
+  depends_on macos: '>= :yosemite'
+
   app 'SoundSource.app'
 end
