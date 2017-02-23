@@ -6,12 +6,10 @@ cask 'ui-browser' do
   name 'UI Browser'
   homepage 'http://pfiddlesoft.com/uibrowser/'
 
-  pkg 'UI Browser.pkg'
+  app 'UI Browser.app'
 
-  uninstall pkgutil: [
-                       'com.pfiddlesoft.pkg.uibrowser',
-                       'com.pfiddlesoft.pkg.uielementscriptsfolder',
-                       'com.pfiddlesoft.pkg.pfassistiveframework',
-                       'com.pfiddlesoft.pkg.pfeventtapsframework',
-                     ]
+  zap delete: [
+                '~/Library/Caches/com.apple.helpd/Generated/com.pfiddlesoft.uibrowser.help',
+                '~/Library/Preferences/com.pfiddlesoft.uibrowser.plist',
+              ]
 end
