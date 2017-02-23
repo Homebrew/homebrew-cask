@@ -36,6 +36,12 @@ cask 'vmware-fusion' do
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-vmx-stats"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/VMware OVF Tool/ovftool"
 
+  postflight do
+    system_command "#{appdir}/VMware Fusion.app/Contents/Library/Initialize VMware Fusion.tool",
+                   args: ['set'],
+                   sudo: true
+  end
+
   uninstall_preflight do
     set_ownership "#{appdir}/VMware Fusion.app"
   end
