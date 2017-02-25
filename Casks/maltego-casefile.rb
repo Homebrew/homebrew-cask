@@ -1,4 +1,4 @@
-cask 'casefile' do
+cask 'maltego-casefile' do
   version '2.1.1.8751'
   sha256 'd9b330471e6d03a9af436fc45f5ab46b1038bc437cda3b753371733cb813c97c'
 
