@@ -4,10 +4,10 @@ cask 'jdownloader' do
 
   if MacOS.version <= :snow_leopard
     url 'http://installer.jdownloader.org/clean/JD2Setup_10_6_or_lower.dmg',
-        user_agent: 'HomebrewCask/1.0 (Macintosh; Intel Mac OS X) (+http://caskroom.io)'
+        user_agent: :fake
   else
     url 'http://installer.jdownloader.org/clean/JD2Setup.dmg',
-        user_agent: 'HomebrewCask/1.0 (Macintosh; Intel Mac OS X) (+http://caskroom.io)'
+        user_agent: :fake
   end
 
   name 'JDownloader 2'
