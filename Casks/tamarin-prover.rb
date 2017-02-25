@@ -5,7 +5,7 @@ cask 'tamarin-prover' do
   # github.com/tamarin-prover/tamarin-prover was verified as official when first introduced to the cask
   url "https://github.com/tamarin-prover/tamarin-prover/releases/download/#{version}/tamarin-prover-#{version.major_minor}-macOS-x86_64.zip"
   appcast 'https://github.com/tamarin-prover/tamarin-prover/releases.atom',
-          checkpoint: 'd53924084b55faacd8db4d3c65bbfbfc51583107708084b4e8189fb4ae4d9677'
+          checkpoint: '8c17c539bdbd3fef91799b534be0dc5b2075d604dcb579be603d6c8dbfa40c4d'
   name 'tamarin-prover'
   homepage 'https://tamarin-prover.github.io/'
 
