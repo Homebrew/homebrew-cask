@@ -1,6 +1,6 @@
 cask 'tamarin-prover' do
-  version '1.2.0'
-  sha256 'f6178d6b3f7356d3c0d704339417bb413432f781f1ebf810e18ce32eed45ebda'
+  version '1.2.1'
+  sha256 'f8f2eb5ba1fc7ff1f3ed6db0dc4063c291f03c5dace442f0fb896ed5f783f80e'
 
   # github.com/tamarin-prover/tamarin-prover was verified as official when first introduced to the cask
   url "https://github.com/tamarin-prover/tamarin-prover/releases/download/#{version}/tamarin-prover-#{version.major_minor}-macOS-x86_64.zip"
