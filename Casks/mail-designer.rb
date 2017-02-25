@@ -4,7 +4,7 @@ cask 'mail-designer' do
 
   url "http://download.equinux.com/files/other/Mail_Designer_#{version}.zip"
   name 'Mail Designer'
-  homepage 'http://equinux.com/us/products/maildesigner2/'
+  homepage 'http://maildesigner.equinux.com/'
 
   app 'Mail Designer.app'
 end

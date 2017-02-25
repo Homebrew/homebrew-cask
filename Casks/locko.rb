@@ -6,7 +6,7 @@ cask 'locko' do
   appcast 'http://update.binarynights.com/locko/sparkle-update.xml',
           checkpoint: '109cd2e84b31bafcc00c84f5fbb8a3dc27653c1aaeba983b9f4cd5ef41258afd'
   name 'Locko'
-  homepage 'https://www.binarynights.com/'
+  homepage 'https://www.binarynights.com/forklift/'
 
   app 'Locko.app'
 end

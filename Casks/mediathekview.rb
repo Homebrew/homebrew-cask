@@ -6,7 +6,7 @@ cask 'mediathekview' do
   appcast 'https://mediathekview.de/changelog/index.xml',
           checkpoint: '1b1ad0bd0cbef19a4f59e8707e0c87f38a2d8bc88cd293c79a1a13ffef6e37d3'
   name 'MediathekView'
-  homepage 'https://mediathekview.de'
+  homepage 'https://mediathekview.de/'
 
   app 'MediathekView.app'
 end

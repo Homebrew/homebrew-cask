@@ -4,7 +4,7 @@ cask 'enews' do
 
   url "http://www.xinhuaenews.com/download/eNewsMac_v#{version}.zip"
   name 'eNews采集'
-  homepage 'http://www.xinhuaenews.com/'
+  homepage 'https://www.xinhuaenews.com/'
 
   app 'eNews采集.app'
 end
