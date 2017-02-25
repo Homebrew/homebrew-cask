@@ -4,7 +4,7 @@ cask 'vine-server' do
 
   url "http://www.testplant.com/downloads/Vine/VineServer#{version}.dmg"
   name 'Vine Server'
-  homepage 'http://www.testplant.com/dlds/vine/'
+  homepage 'https://www.testplant.com/dlds/vine/'
 
   app 'Vine Server.app'
 end

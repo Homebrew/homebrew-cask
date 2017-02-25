@@ -6,7 +6,7 @@ cask 'platypus' do
   appcast 'http://www.sveinbjorn.org/files/appcasts/PlatypusAppcast.xml',
           checkpoint: 'b94ebed3f158d89018eed4d08e74323dcae50bc9e0273804a84c24899cd29e9d'
   name 'Platypus'
-  homepage 'http://sveinbjorn.org/platypus'
+  homepage 'https://sveinbjorn.org/platypus'
 
   auto_updates true
 

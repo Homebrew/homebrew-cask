@@ -4,7 +4,7 @@ cask 'ultimate' do
 
   url 'http://download.epubor.com/epubor_ultimate.zip'
   name 'Ultimate Converter'
-  homepage 'http://www.epubor.com/'
+  homepage 'https://www.epubor.com/'
 
   container nested: "epubor_ultimate/Ultimate_v#{version}.dmg"
 

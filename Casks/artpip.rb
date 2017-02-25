@@ -4,7 +4,7 @@ cask 'artpip' do
 
   url 'https://www.artpip.com/download/osx'
   name 'Artpip'
-  homepage 'https://www.artpip.com'
+  homepage 'https://www.artpip.com/'
 
   app 'Artpip.app'
 end

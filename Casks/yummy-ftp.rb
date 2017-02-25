@@ -6,7 +6,7 @@ cask 'yummy-ftp' do
   appcast 'http://www.yummysoftware.com/su/yummyftp/feed.xml',
           checkpoint: '99e4f84bbe7f950279f1b3a9f1210f66666fa5f12d47e764c89ac1588526e2fc'
   name 'Yummy FTP'
-  homepage 'http://www.yummysoftware.com/'
+  homepage 'https://www.yummysoftware.com/'
 
   app 'Yummy FTP.app'
 end

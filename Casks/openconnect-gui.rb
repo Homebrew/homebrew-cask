@@ -7,7 +7,7 @@ cask 'openconnect-gui' do
   appcast 'https://github.com/openconnect/openconnect-gui/releases.atom',
           checkpoint: '3531d36df88eb1e5b360809181473c0caf5ef638a269da325d185569ac416995'
   name 'OpenConnect-GUI'
-  homepage 'https://openconnect.github.io/openconnect-gui'
+  homepage 'https://openconnect.github.io/openconnect-gui/'
 
   app 'openconnect-gui.app'
 end

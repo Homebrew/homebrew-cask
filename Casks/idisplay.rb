@@ -12,7 +12,7 @@ cask 'idisplay' do
   end
 
   name 'iDisplay'
-  homepage 'http://getidisplay.com/'
+  homepage 'https://getidisplay.com/'
 
   app 'iDisplay.app'
 end

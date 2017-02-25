@@ -4,7 +4,7 @@ cask 'semaphor' do
 
   url 'https://spideroak.com/releases/semaphor/osx'
   name 'Semaphor'
-  homepage 'https://spideroak.com/solutions/semaphor/'
+  homepage 'https://spideroak.com/personal/semaphor'
 
   app 'Semaphor.app'
 end

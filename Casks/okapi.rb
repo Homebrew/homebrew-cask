@@ -5,7 +5,7 @@ cask 'okapi' do
   # bintray.com/okapi was verified as official when first introduced to the cask
   url "http://dl.bintray.com/okapi/Distribution/okapi-apps_cocoa-macosx-x86_64_#{version}.dmg"
   name 'Okapi'
-  homepage 'http://okapiframework.org/'
+  homepage 'https://okapiframework.org/'
 
   suite "Okapi_#{version}"
 

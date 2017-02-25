@@ -4,7 +4,7 @@ cask 'vpnsecure' do
 
   url 'https://downloads.vpnsecure.me/vpnsecure.pkg'
   name 'VPNSecure OpenVPN Encrypted VPN Client'
-  homepage 'https://www.vpnsecure.me'
+  homepage 'https://www.vpnsecure.me/'
 
   pkg 'vpnsecure.pkg'
 
