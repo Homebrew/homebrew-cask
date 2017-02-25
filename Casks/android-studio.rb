@@ -17,5 +17,8 @@ cask 'android-studio' do
                 '~/Library/Preferences/com.google.android.studio.plist',
                 "~/Library/Logs/AndroidStudio#{version.major_minor}",
               ],
-      rmdir:  '~/AndroidStudioProjects'
+      rmdir:  [
+                '~/AndroidStudioProjects',
+                '~/Library/Android',
+              ]
 end
