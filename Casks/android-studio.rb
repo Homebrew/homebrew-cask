@@ -10,11 +10,12 @@ cask 'android-studio' do
   app 'Android Studio.app'
 
   zap delete: [
+                "~/Library/Android/sdk",
+                "~/Library/Application Support/AndroidStudio#{version.major_minor}",
+                "~/Library/Caches/AndroidStudio#{version.major_minor}",
                 "~/Library/Preferences/AndroidStudio#{version.major_minor}",
                 '~/Library/Preferences/com.google.android.studio.plist',
-                "~/Library/Application Support/AndroidStudio#{version.major_minor}",
                 "~/Library/Logs/AndroidStudio#{version.major_minor}",
-                "~/Library/Caches/AndroidStudio#{version.major_minor}",
               ],
       rmdir:  '~/AndroidStudioProjects'
 end
