@@ -4,7 +4,7 @@ cask 'bioedit' do
 
   ## info:
   ## https://guangchuangyu.github.io/2016/03/yet-an-unofficial-bioedit-for-osx/
-  ## 
+  ##
   url "https://gitlab.com/GuangchuangYu/BioEdit-OSX/raw/master/BioEdit.dmg"
   name 'BioEdit: Biological sequence alignment editor'
   homepage 'http://www.mbio.ncsu.edu/bioedit/bioedit.html'
@@ -14,8 +14,6 @@ cask 'bioedit' do
 
   app 'BioEdit.app'
 
-  uninstall pkgutil: 'com.adobe.acrobat.DC.reader.*',
-            delete:  '/Applications/BioEdit.app'
 
   zap       delete: [
                       '~/Library/Caches/BioEdit'
