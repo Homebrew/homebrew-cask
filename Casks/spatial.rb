@@ -3,11 +3,11 @@ cask 'spatial' do
   sha256 :no_check
 
   url 'https://console.improbable.io/toolbelt/download/latest/mac'
-  name 'spatial'
+  name 'Spatial'
   homepage 'https://spatialos.improbable.io/docs'
 
   auto_updates true
   container type: :naked
 
-  binary 'mac', target: 'spatial'
+  binary 'spatial'
 end
