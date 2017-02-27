@@ -9,5 +9,5 @@ cask 'spatial' do
   auto_updates true
   container type: :naked
 
-  binary 'spatial'
+  binary 'mac', target: 'spatial'
 end
