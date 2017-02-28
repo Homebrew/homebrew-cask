@@ -1,11 +1,11 @@
 cask 'gogs' do
-  version '0.9.141'
-  sha256 '7f212e256a1234bc5f837053cf761b8caeef13a31907e4c2d16f42b9de6b1076'
+  version '0.10.1'
+  sha256 '968419e59e201f6a12a194c3b192832c98f49b260ff756bab1722205f7b4f3ad'
 
   # github.com/gogits/gogs was verified as official when first introduced to the cask
   url "https://github.com/gogits/gogs/releases/download/v#{version}/darwin_amd64.zip"
   appcast 'https://github.com/gogits/gogs/releases.atom',
-          checkpoint: '2640ba497b91a8715fb257f6048b0797bace77ef430c98d540a2828a2e90f8ad'
+          checkpoint: '1be784f6655633a275534ad304b6ee53e67fddbfd357c85cae5a0f62c706866e'
   name 'Go Git Service'
   homepage 'https://gogs.io/'
 
