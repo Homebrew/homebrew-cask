@@ -9,8 +9,8 @@ cask 'fitbit-connect' do
   pkg 'Install Fitbit Connect.pkg'
 
   uninstall script:  {
-                       executable: 'Uninstall Fitbit Connect.app/Contents/Resources/uninstall.sh',
-                       sudo:       true,
-                     },
-            pkgutil: 'com.fitbit.pkg.GalileoInstaller'
+    executable: 'Uninstall\ Fitbit\ Connect.app/Contents/Resources/uninstall.sh',
+    sudo: true,
+  },
+  pkgutil: 'com.fitbit.pkg.GalileoInstaller'
 end
