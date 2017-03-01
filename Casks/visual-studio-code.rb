@@ -6,6 +6,7 @@ cask 'visual-studio-code' do
   url "https://az764295.vo.msecnd.net/stable/#{version.after_comma}/VSCode-darwin-stable.zip"
   name 'Microsoft Visual Studio Code'
   name 'VS Code'
+  name 'vscode'
   homepage 'https://code.visualstudio.com/'
 
   auto_updates true
