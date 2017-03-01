@@ -1,11 +1,11 @@
 cask 'tamarin-prover' do
-  version '1.2.0'
-  sha256 'f6178d6b3f7356d3c0d704339417bb413432f781f1ebf810e18ce32eed45ebda'
+  version '1.2.1'
+  sha256 'ab8719d7743dd0e2d3a99bd7233ea4f5fda985c15ed51498115bff1c90652d2c'
 
   # github.com/tamarin-prover/tamarin-prover was verified as official when first introduced to the cask
-  url "https://github.com/tamarin-prover/tamarin-prover/releases/download/#{version}/tamarin-prover-#{version.major_minor}-macOS-x86_64.zip"
+  url "https://github.com/tamarin-prover/tamarin-prover/releases/download/#{version}/tamarin-prover-#{version}-macOS-x86_64.zip"
   appcast 'https://github.com/tamarin-prover/tamarin-prover/releases.atom',
-          checkpoint: 'd53924084b55faacd8db4d3c65bbfbfc51583107708084b4e8189fb4ae4d9677'
+          checkpoint: '8c17c539bdbd3fef91799b534be0dc5b2075d604dcb579be603d6c8dbfa40c4d'
   name 'tamarin-prover'
   homepage 'https://tamarin-prover.github.io/'
 
@@ -15,5 +15,5 @@ cask 'tamarin-prover' do
                         'graphviz',
                       ]
 
-  binary "tamarin-prover-#{version.major_minor}-macOS-x86_64", target: 'tamarin-prover'
+  binary 'tamarin-prover'
 end

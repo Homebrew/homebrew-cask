@@ -6,7 +6,7 @@ cask 'encryptr' do
   appcast 'https://github.com/SpiderOak/Encryptr/releases.atom',
           checkpoint: 'a7e094ccb571d99d08b9dd64c01caed8a8db15ff4563861f9af364b9208b9173'
   name 'SpiderOak Encryptr'
-  homepage 'https://spideroak.com/solutions/encryptr'
+  homepage 'https://spideroak.com/personal/encryptr'
 
   app 'Encryptr.app'
 

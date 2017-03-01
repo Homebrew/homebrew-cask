@@ -6,7 +6,7 @@ cask 'duplicati' do
   appcast 'https://github.com/duplicati/duplicati/releases.atom',
           checkpoint: '5b228522bece130f042464271a9a9d49febd1e6935f9642653c12666d870af07'
   name 'Duplicati'
-  homepage 'http://www.duplicati.com/'
+  homepage 'https://www.duplicati.com/'
 
   app 'Duplicati.app'
 end

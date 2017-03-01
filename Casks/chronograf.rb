@@ -4,7 +4,7 @@ cask 'chronograf' do
 
   url "https://dl.influxdata.com/chronograf/releases/chronograf-#{version}-darwin_amd64.tar.gz"
   name 'Chronograf'
-  homepage 'https://www.influxdata.com/time-series-platform/chronograf/'
+  homepage 'https://www.influxdata.com/products/'
 
   binary "chronograf-#{version}/chronograf-#{version}-darwin_amd64", target: 'chronograf'
 end

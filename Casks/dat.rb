@@ -7,7 +7,7 @@ cask 'dat' do
   appcast 'https://github.com/datproject/dat-desktop/releases.atom',
           checkpoint: 'be65a17ca77991a2fb243c467c2b48d83ab4575140b7931d7ca5396d7f0a8cd8'
   name 'Dat Desktop'
-  homepage 'https://datproject.org'
+  homepage 'https://datproject.org/'
 
   app 'Dat.app'
 end

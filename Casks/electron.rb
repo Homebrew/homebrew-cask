@@ -7,7 +7,7 @@ cask 'electron' do
   appcast 'https://github.com/electron/electron/releases.atom',
           checkpoint: 'af42a3d933d70d264d5d400176d051211c06dcf21b7bc526104580d72fcfa1cb'
   name 'Electron'
-  homepage 'http://electron.atom.io/'
+  homepage 'https://electron.atom.io/'
 
   app 'Electron.app'
 

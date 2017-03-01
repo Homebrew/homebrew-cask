@@ -6,7 +6,7 @@ cask 'pdf-converter-master' do
   appcast 'http://www.lightenpdf.com/xml/PDF-Converter-Mac.xml',
           checkpoint: 'dbca8cd297fd79e1fa28d94b49770f28f572c728f6a7907a4fc669755961986e'
   name 'PDF Converter Master'
-  homepage 'http://www.lightenpdf.com/pdf-converter-mac.html'
+  homepage 'https://www.lightenpdf.com/pdf-converter-mac.html'
 
   app 'PDF Converter Master.app'
 end
