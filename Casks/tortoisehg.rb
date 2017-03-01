@@ -1,6 +1,6 @@
 cask 'tortoisehg' do
-  version '4.0.1'
-  sha256 '3b8833e308cb4916cc3adfb3c7a0267e37decd39472b8e3ea483a6ece4ce2be2'
+  version '4.1.0'
+  sha256 'd1a62adf235370205756d29dd1b965e70be26ded6ac606ac94f729e59b244bdc'
 
   # bitbucket.org/tortoisehg/files/downloads was verified as official when first introduced to the cask
   url "https://bitbucket.org/tortoisehg/files/downloads/TortoiseHg-#{version}-mac-x64.dmg"
