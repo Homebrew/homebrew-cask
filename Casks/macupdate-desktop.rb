@@ -1,10 +1,10 @@
 cask 'macupdate-desktop' do
-  version '6.1.6'
-  sha256 'c929ef05f4d292b079c5538bb0c1283706ab845d7d0c342ac4b73b83dfb65489'
+  version '6.1.7'
+  sha256 '3d96c2cddf767f208a2bf271b1612f89d1c46543402df1bced4911b53292e320'
 
   url "http://cdn.macupdate.com/MacUpdateDesktop#{version}.zip"
   appcast 'https://www.macupdate.com/desktop/updates.xml',
-          checkpoint: '81693bee3a3b6917465b714432f13730e767b2781eff2cab18a21ba46475187c'
+          checkpoint: '4a5d6fea7b479baa4b9277e4bac1c29e358ac392b3f7a8e19de7bc44b4172f4b'
   name 'MacUpdate Desktop'
   homepage 'https://www.macupdate.com/desktop'
 
