@@ -21,5 +21,4 @@ cask 'tableau' do
                          'com.tableausoftware.oracle',
                          'com.tableausoftware.postgresql',
                       ]
-
 end
