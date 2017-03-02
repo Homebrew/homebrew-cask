@@ -5,11 +5,17 @@ cask 'bettertouchtool' do
 
     # bettertouchtool.net was verified as official when first introduced to the cask
     url "https://bettertouchtool.net/releases/btt#{version}.zip"
-
+  elsif MacOS.version <= :lion
+    version '1.922'
+    sha256 '7a5a7cc9a9e5ae77f4ee7470f26453d327ccb55c7fac7f78f1bbe14ae9f0e70c'
+    url "https://bettertouchtool.net/releases/btt#{version}_lion.zip"
+  elsif MacOS.version <= :mavericks
+    version '2.04'
+    sha256 '5e7bbfd929d8e06472edf42bdc5938c0a260c3e71101fb951559eda5ae1faaf7'
+    url "https://bettertouchtool.net/releases/btt#{version}b.zip"
   else
-    version '2.071'
-    sha256 '1955630a5296d5491e22445d7cd0c5848bb2d19460055ac2ea195e00000750ef'
-
+    version '2.08'
+    sha256 '21cd1a326402706c1f53e1b7b4081623619b2613f5ec5989813425fe4bb192b2'
     url "https://bettertouchtool.net/releases/btt#{version}.zip"
     appcast 'https://updates.bettertouchtool.net/appcast.xml',
             checkpoint: '720ffbe4b74a5efd17fd4f80e56e44d5f4f2314d7bd0521a31a132abbe9ca904'
