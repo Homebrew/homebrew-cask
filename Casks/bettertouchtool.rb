@@ -10,9 +10,9 @@ cask 'bettertouchtool' do
     sha256 '7a5a7cc9a9e5ae77f4ee7470f26453d327ccb55c7fac7f78f1bbe14ae9f0e70c'
     url "https://bettertouchtool.net/releases/btt#{version}_lion.zip"
   elsif MacOS.version <= :mavericks
-    version '2.04'
-    sha256 '5e7bbfd929d8e06472edf42bdc5938c0a260c3e71101fb951559eda5ae1faaf7'
-    url "https://bettertouchtool.net/releases/btt#{version}b.zip"
+    version '2.05'
+    sha256 '41013cfeffee286a038363651db3dd315ff3a1e0cf07774d9ce852111be50a5a'
+    url "https://bettertouchtool.net/releases/btt#{version}_final_10_9.zip"
   else
     version '2.08'
     sha256 '21cd1a326402706c1f53e1b7b4081623619b2613f5ec5989813425fe4bb192b2'
