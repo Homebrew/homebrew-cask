@@ -8,4 +8,10 @@ cask 'avg-antivirus' do
   homepage 'http://www.avg.com/us-en/avg-antivirus-for-mac'
 
   pkg 'Install AVG AntiVirus.pkg'
+
+  uninstall pkgutil: [
+                       'com.avast.VpsPlugin',
+                       'com.avast.installer.AppClosePlugin',
+                       'com.avg.avg',
+                     ]
 end
