@@ -7,6 +7,5 @@ cask 'avg-antivirus' do
   name 'AVG Antivirus for Mac'
   homepage 'http://www.avg.com/us-en/avg-antivirus-for-mac'
 
-  # app 'AVG AntiVirus.app'
   pkg 'Install AVG AntiVirus.pkg'
 end
