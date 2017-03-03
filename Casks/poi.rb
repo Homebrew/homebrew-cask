@@ -11,7 +11,5 @@ cask 'poi' do
 
   app 'poi.app'
 
-  zap delete: [
-                '~/Library/Application Support/poi/',
-              ]
+  zap delete: '~/Library/Application Support/poi/'
 end
