@@ -6,6 +6,7 @@ cask 'youdao-note' do
   url 'http://download.ydstatic.com/notewebsite/downloads/YoudaoNote.dmg'
   name '有道云笔记'
   homepage 'https://note.youdao.com/index.html'
+
   depends_on macos: '>= :yosemite'
 
   app 'YoudaoNote.app'
