@@ -5,7 +5,7 @@ cask 'youdao-note' do
   # download.ydstatic.com/notewebsite/downloads was verified as official when first introduced to the cask
   url 'http://download.ydstatic.com/notewebsite/downloads/YoudaoNote.dmg'
   name '有道云笔记'
-  homepage 'https://note.youdao.com/index.html'
+  homepage 'https://note.youdao.com/'
 
   depends_on macos: '>= :yosemite'
 
