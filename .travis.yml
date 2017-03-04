@@ -1,0 +1,45 @@
+language: ruby
+
+sudo: false
+
+matrix:
+  include:
+    - os: osx
+      osx_image: xcode8.2
+      rvm: system
+    - os: osx
+      osx_image: xcode7.3
+      rvm: system
+  fast_finish: true
+
+branches:
+  only:
+    - master
+
+cache:
+  directories:
+    - $HOME/.gem
+
+install: true # skip install step
+
+before_script:
+  - . ci/travis/before_script.sh
+
+script:
+  - . ci/travis/script.sh
+
+notifications:
+  email: false
+  irc:
+    channels:
+      - "chat.freenode.net#homebrew-cask"
+    template:
+      - "(%{repository_name}) %{build_number}: %{branch}@%{commit} %{author} -> %{message} %{build_url}"
+    use_notice: true
+    skip_join: true
+  webhooks:
+    urls:
+      - "https://webhooks.gitter.im/e/712d699360b239db14a5"
+    on_success: change
+    on_failure: always
+    on_start: never

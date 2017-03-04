@@ -1,0 +1,115 @@
+#!/bin/bash
+#
+# list_ids_in_pkg
+#
+
+###
+### settings
+###
+
+set -e                # exit on any uncaught error
+set +o histexpand     # don't expand history expressions
+shopt -s nocasematch  # case-insensitive regular expressions
+
+###
+### global variables
+###
+
+pkgdir=''
+
+# prefer GNU xargs
+xargs="$(/usr/bin/which gxargs || printf '/usr/bin/xargs')"
+
+###
+### functions
+###
+
+bundle_id_source_1 () {
+    /usr/bin/find "$pkgdir" -name PackageInfo -print0 |                                \
+    "$xargs" -0 /usr/bin/perl -0777 -ne                                                \
+      'while (m{<pkg-info.*?\sid(?:entifier)?\s*=\s*"([^"]*?)"}sg) { print "$1\n" }'
+}
+
+bundle_id_source_2 () {
+    /usr/bin/find "$pkgdir" -name Info.plist -print0 |                                 \
+    "$xargs" -0 -I {} /usr/libexec/PlistBuddy {} -c 'Print :CFBundleIdentifier'
+}
+
+merge_sources () {
+    /usr/bin/sort | /usr/bin/uniq
+}
+
+clean_sources () {
+    /usr/bin/egrep -v '^com\.apple\.' |                                                \
+    /usr/bin/egrep -v 'sparkle\.finish-installation$'
+}
+
+mark_up_sources () {
+    /usr/bin/perl -pe 's{\n}{\000}sg' |                                                \
+    "$xargs" -0 -I{} -n1 /bin/bash -c                                                  \
+      'printf "{}"; /usr/sbin/pkgutil --pkg-info "{}" >/dev/null 2>&1 && printf " (+)"; printf "\n"'
+}
+
+###
+### main
+###
+
+_list_ids_in_pkg () {
+
+    if [[ -d "$1" ]]; then
+        pkgdir="$1"
+        if [[ -h "$pkgdir" ]]; then
+            pkgdir="$(/usr/bin/readlink "$pkgdir")"
+        fi
+    else
+        local tmpdir="$(/usr/bin/mktemp -d -t list_ids_in_pkg)"
+        trap "/bin/rm -rf -- '$tmpdir'" EXIT
+        pkgdir="$tmpdir/unpack"
+        /usr/sbin/pkgutil --expand "$1" "$tmpdir/unpack" "$pkgdir"
+    fi
+
+    {
+      # emit strings that look like bundle ids
+      bundle_id_source_1;
+      bundle_id_source_2;
+    } |                     \
+    merge_sources |         \
+    clean_sources |         \
+    mark_up_sources
+
+}
+
+# process args
+if [[ $1 =~ ^-+h(elp)?$ || -z "$1" ]]; then
+    printf "list_ids_in_pkg <file.pkg>
+
+Given a package file, extract a list of candidate Package IDs
+which may be useful in a Cask uninstall stanza, eg
+
+    uninstall pkgutil: 'package.id.goes.here'
+
+The given package file need not be installed.
+
+The output of this script should be overly inclusive -- not
+every candidate package id in the output will be needed at
+uninstall time.
+
+Package IDs designated by Apple or common development frameworks
+will be excluded from the output.
+
+If a package id is already installed, it will be followed by
+a plus symbol '(+)' in the output.  This can be verified via
+the command
+
+    /usr/sbin/pkgutil --pkg-info 'package.id.goes.here'
+
+See CONTRIBUTING.md and 'man pkgutil' for more information.
+
+"
+    exit
+fi
+
+# dispatch main
+_list_ids_in_pkg "${@}"
+
+#
