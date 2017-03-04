@@ -6,5 +6,5 @@ cask 'hearthstone' do
   name 'Hearthstone'
   homepage 'http://us.battle.net/hearthstone/en/'
 
-  app 'Hearthstone-Setup.app'
+  installer manual: 'Hearthstone-Setup.app'
 end
