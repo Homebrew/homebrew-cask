@@ -5,7 +5,7 @@ cask 'postage' do
   # github.com/workflowproducts/postage was verified as official when first introduced to the cask
   url "https://github.com/workflowproducts/postage/releases/download/eV#{version}/Postage-#{version}.dmg"
   appcast 'https://github.com/workflowproducts/postage/releases.atom',
-          checkpoint: '02c0f2495941b876d5b421bdc2123b63daa02475620a175408703e09c2ce66c0'
+          checkpoint: 'c56474558f912d5a3eabfd68e2c72186f34efb746bd960e65b620ee3544be457'
   name 'Postage'
   homepage 'https://www.workflowproducts.com/postage.html'
 
