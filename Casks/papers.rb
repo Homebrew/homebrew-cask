@@ -1,10 +1,10 @@
 cask 'papers' do
-  version '3.4.7,527'
-  sha256 'a3772fad2fc4c5c273b597e136d7ba07e9f19c88b401d481f760697beb70ebe4'
+  version '3.4.10,548'
+  sha256 'cef4ecc8f0968b500db1fe1cd0d525a6912d8e3e9b5035d416fe77236ba74132'
 
   url "http://appcaster.papersapp.com/apps/mac/production/download/#{version.after_comma}/papers_#{version.before_comma.no_dots}_#{version.after_comma}.dmg"
   appcast 'https://appcaster.papersapp.com/apps/mac/production/appcast.xml',
-          checkpoint: 'c35a04f02091fbcaf519185678a234c6e034d798561b19c7af4f0c590648450f'
+          checkpoint: '211d6e5e84a12cb510842970d9e1ba096ad3206a3a3574b4ea266969f93fb9b0'
   name 'Papers'
   homepage 'https://papersapp.com/'
 
