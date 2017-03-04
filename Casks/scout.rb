@@ -4,8 +4,8 @@ cask 'scout' do
 
   # github.com/scout-app/scout-app was verified as official when first introduced to the cask
   url 'https://github.com/scout-app/scout-app/releases/download/v2.12.12/OSX_Scout-App_2.12.12.zip'
-  appcast 'https://github.com/jnordberg/irccloudapp/releases.atom',
-          checkpoint: 'ceb58e03536a9cef907651a7455a140fe475b267345b7056e91df650cc5b81b7'
+  appcast 'https://github.com/scout-app/scout-app/releases.atom',
+          checkpoint: '75ad564c48c266066eab01ef7f06180e065bfd9ac0eb92261579bb0d9cd7b833'
   name 'Scout-App'
   homepage 'http://scout-app.io/'
 
