@@ -26,9 +26,7 @@ cask 'clamxav' do
 
   zap delete: [
                 '~/Library/Caches/uk.co.markallan.clamxav',
-                '~/Library/Logs/clamXav-scan.log',
-                # TODO: glob/expand needed here
-                '~/Library/Logs/clamXav-scan.log.0.bz2',
+                '~/Library/Logs/clamXav-scan.*',
               ]
 
   caveats do
