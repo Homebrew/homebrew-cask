@@ -1,10 +1,8 @@
 cask 'docker' do
-  version '1.13.1.15353'
-  sha256 '137ac8f191f043759f09fef705219d97586cac1e742f34715d823aefca2a2591'
+  version :latest
+  sha256 :no_check
 
-  url "https://download.docker.com/mac/stable/#{version}/Docker.dmg"
-  appcast 'https://download.docker.com/mac/stable/appcast.xml',
-          checkpoint: '166a08c5e8877e645850e78720c735a9492b6f75e0d9e81da1331c6521eba8a5'
+  url 'https://download.docker.com/mac/stable/Docker.dmg'
   name 'Docker'
   homepage 'https://www.docker.com/community-edition'
 
