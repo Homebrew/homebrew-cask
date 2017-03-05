@@ -6,7 +6,7 @@ cask 'lyn' do
   appcast 'http://www.lynapp.com/lyn/update.xml',
           checkpoint: '62aa93b5a77671a6028ec991884c80c8a4638e8674c853aabc679f6c0cda3a89'
   name 'Lyn'
-  homepage 'http://www.lynapp.com/'
+  homepage 'https://www.lynapp.com/'
 
   app 'Lyn.app'
 end
