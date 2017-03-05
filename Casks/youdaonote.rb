@@ -1,4 +1,4 @@
-cask 'youdao-note' do
+cask 'youdaonote' do
   version :latest
   sha256 :no_check
 
