@@ -2,7 +2,7 @@ cask 'docker' do
   version '17.03.0'
   sha256 '17a05db62267b175986536594b1a4ea0a393690031d0ae688f6db73e2399d30a'
 
-  url "https://get.docker.com/builds/Darwin/x86_64/docker-#{version}-ce.tgz"
+  url "https://download.docker.com/mac/stable/#{version}/Docker.dmg"
   appcast 'https://github.com/docker/docker/releases.atom',
           checkpoint: '6a5a4e061449ba35f3a14a7f87c60826d35c2db6a93d864f966eb76420d0c0a8'
   name 'Docker Community Edition'
