@@ -173,7 +173,7 @@ Arguments to `uninstall delete:` should be static, single-quoted, absolute paths
  should not be interpolated in the value.
 * Basic tilde expansion is performed on paths, i.e., leading `~` is expanded to the home directory.
 * Only absolute paths should be given.
-* Glob expansion is performed using the standard `*` character.
+* Glob expansion is performed using the [standard set of characters](https://en.wikipedia.org/wiki/Glob_(programming)).
 
 To remove user-specific files, use the `zap` stanza.
 
