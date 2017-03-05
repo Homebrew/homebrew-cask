@@ -1,10 +1,10 @@
 cask 'hype' do
-  version '3.5.5'
-  sha256 '8a72e1167440364a397b674422082edd19a62d8fc8a5463540c7ea7324611c93'
+  version '3.6.1'
+  sha256 '5f8437a60234137fde4a1a22039f648175d26e29c858abc8ab6c75dde9e1e905'
 
   url 'https://tumult.com/hype/download/Hype.zip'
   appcast 'https://tumult.com/hype/appcast_hype2.xml',
-          checkpoint: '4a3eb7ade6eb6d508225db47c0a9e11b67d70f5310b797453bfe465b331c4bd1'
+          checkpoint: 'bd7c36fbc7696f1dd57d2121e6b0d6d051d811a0693c0c92f170f55b04201b00'
   name 'Tumult Hype'
   homepage 'https://tumult.com/hype/'
 
