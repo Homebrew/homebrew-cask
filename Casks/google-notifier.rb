@@ -4,7 +4,7 @@ cask 'google-notifier' do
 
   url "https://dl.google.com/mac/download/GoogleNotifier_#{version}.dmg"
   name 'Google Notifier'
-  homepage 'https://chrome.google.com/webstore/detail/gmail-notifier/dcjichoefijpinlfnjghokpkojhlhkgl'
+  homepage 'https://chrome.google.com/webstore/detail/notifier-for-gmail/dcjichoefijpinlfnjghokpkojhlhkgl'
 
   app 'Google Notifier.app'
 
