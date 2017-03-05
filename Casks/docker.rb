@@ -6,7 +6,7 @@ cask 'docker' do
   appcast 'https://download.docker.com/mac/stable/appcast.xml',
           checkpoint: '166a08c5e8877e645850e78720c735a9492b6f75e0d9e81da1331c6521eba8a5'
   name 'Docker'
-  homepage 'https://www.docker.com/products/docker'
+  homepage 'https://www.docker.com/community-edition'
 
   auto_updates true
   depends_on macos: '>= :yosemite'
