@@ -4,12 +4,13 @@ cask 'youdao-note' do
 
   # download.ydstatic.com/notewebsite/downloads was verified as official when first introduced to the cask
   url 'http://download.ydstatic.com/notewebsite/downloads/YoudaoNote.dmg'
+  name 'Youdao Note'
   name '有道云笔记'
   homepage 'https://note.youdao.com/'
 
   depends_on macos: '>= :yosemite'
 
-  app 'Youdao Note.app'
+  app 'YoudaoNote.app'
 
   zap delete: [
                 '~/Library/Caches/com.crashlytics.data/com.youdao.YoudaoDict',
