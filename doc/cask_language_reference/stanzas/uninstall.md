@@ -169,11 +169,11 @@ It is important to note that, although `script:` in the above example does attem
 Arguments to `uninstall delete:` should be static, single-quoted, absolute paths.
 
 * Only single quotes should be used.
-* Double-quotes should not be used. `ENV['HOME']` and other variables
+* Double-quotes should not be used except when invoking [`#{version}` interpolation](https://github.com/caskroom/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/version.md). `ENV['HOME']` and other variables
  should not be interpolated in the value.
 * Basic tilde expansion is performed on paths, i.e., leading `~` is expanded to the home directory.
 * Only absolute paths should be given.
-* No glob expansion is performed (*eg* `*` characters are literal), though glob expansion is a desired future feature.
+* Glob expansion is performed using the [standard set of characters](https://en.wikipedia.org/wiki/Glob_(programming)).
 
 To remove user-specific files, use the `zap` stanza.
 
