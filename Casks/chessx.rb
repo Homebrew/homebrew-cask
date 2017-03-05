@@ -1,10 +1,10 @@
 cask 'chessx' do
-  version '1.4.0'
-  sha256 'cd019f5ad61ea6b7b0488e7a50ffb8012c3f65f11fb0367205e2a342c2eb4d20'
+  version '1.4.4'
+  sha256 '1304632fa6f6cb6922882de477aab002f2793c18b99718dde86eb08d94432ca2'
 
   url "https://downloads.sourceforge.net/chessx/chessx/#{version}/chessx-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/chessx/rss?path=/chessx',
-          checkpoint: '187624a5facb26d8a25469c10df522977b166f22de979bb9d2889efb2619c7c8'
+          checkpoint: 'a48aa2be2eb2885edaa179620b9cdfc6d8b33224d1db078d3ccea79b7615f798'
   name 'ChessX'
   homepage 'http://chessx.sourceforge.net/'
 
