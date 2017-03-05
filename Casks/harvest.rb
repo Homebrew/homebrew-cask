@@ -4,7 +4,7 @@ cask 'harvest' do
 
   url "https://www.getharvest.com/harvest/mac/Harvest.#{version}.zip"
   appcast 'https://www.getharvest.com/harvest/mac/appcast.xml',
-          checkpoint: '67f5102e0e5c50a03e51dfac1e829b1a839302f76bf4e65c2014b3460697ffbd'
+          checkpoint: '19df0e212c9cbbd2e18db4ea4c67d6b4af43c72b266c30dcbb97b746ce5030eb'
   name 'Harvest'
   homepage 'https://www.getharvest.com/mac-time-tracking'
 
