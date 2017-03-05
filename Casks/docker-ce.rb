@@ -1,9 +1,10 @@
-cask 'docker' do
+cask 'docker-ce' do
   version :latest
   sha256 :no_check
 
   url 'https://download.docker.com/mac/stable/Docker.dmg'
-  name 'Docker'
+  name 'Docker Community Edition'
+  name 'Docker CE'
   homepage 'https://www.docker.com/products/docker'
 
   auto_updates true
