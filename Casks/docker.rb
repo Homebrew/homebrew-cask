@@ -1,4 +1,4 @@
-cask 'docker-ce' do
+cask 'docker' do
   version :latest
   sha256 :no_check
 
