@@ -1,10 +1,10 @@
 cask 'lumen' do
-  version '1.0.0'
-  sha256 'd5ad8dea570063860086df09802cde876070ec7b28694f292e0aa3ce333a1ef9'
+  version '1.1.0'
+  sha256 '7a612f04a960939b4b3dc057f2322153a1345afc25d82f96023ee427073d409e'
 
   url "https://github.com/anishathalye/lumen/releases/download/v#{version}/Lumen.zip"
   appcast 'https://github.com/anishathalye/lumen/releases.atom',
-          checkpoint: '44252a0c7faf5ca49ff4657a159b1081e996a04d32868ec142b654c1831a1ac4'
+          checkpoint: '9c606fb1bda97d502eecac5b21e494e53b307be5738094fee3e4cb987dab8638'
   name 'Lumen'
   homepage 'https://github.com/anishathalye/lumen'
 
