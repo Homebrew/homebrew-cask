@@ -5,7 +5,7 @@ cask 'docker-ce' do
   url 'https://download.docker.com/mac/stable/Docker.dmg'
   name 'Docker Community Edition'
   name 'Docker CE'
-  homepage 'https://www.docker.com/products/docker'
+  homepage 'https://www.docker.com/community-edition'
 
   auto_updates true
   depends_on macos: '>= :yosemite'
