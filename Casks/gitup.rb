@@ -1,5 +1,5 @@
 cask 'gitup' do
-  version '1.0.6'
+  version '1.0.7'
   sha256 'b5bfe8c1802b1c7f72359214e58b2c768c5b7a573d6579a3101f8932b81d308f'
 
   # s3-us-west-2.amazonaws.com/gitup-builds was verified as official when first introduced to the cask
