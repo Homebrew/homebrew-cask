@@ -20,6 +20,6 @@ cask 'phpstorm' do
                 "~/Library/Caches/PhpStorm#{version.major_minor}",
                 "~/Library/Logs/PhpStorm#{version.major_minor}",
                 "~/Library/Application Support/PhpStorm#{version.major_minor}",
-                # TODO: expand/glob for '~/Library/Preferences/jetbrains.phpstorm.*.plist',
+                '~/Library/Preferences/jetbrains.phpstorm.*.plist',
               ]
 end

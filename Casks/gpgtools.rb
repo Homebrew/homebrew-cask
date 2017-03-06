@@ -75,7 +75,7 @@ cask 'gpgtools' do
                 '~/Library/Application Support/GPGTools',
                 '~/Library/Frameworks/Libmacgpg.framework',
                 '~/Containers/com.apple.mail/Data/Library/Frameworks/Libmacgpg.framework',
-                # TODO: expand/glob for ~/Library/Caches/org.gpgtools.gpg*
+                '~/Library/Caches/org.gpgtools.gpg*',
               ]
 
   caveats do

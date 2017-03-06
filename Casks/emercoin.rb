@@ -7,7 +7,7 @@ cask 'emercoin' do
   appcast 'https://sourceforge.net/projects/emercoin/rss',
           checkpoint: 'd33ff85a688ba6116e832f0ac590a51b676e9713e16f1a58977bfb70b2e78506'
   name 'Emercoin'
-  homepage 'http://emercoin.com'
+  homepage 'http://emercoin.com/'
 
   app 'Emercoin-Qt.app'
 

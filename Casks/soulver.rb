@@ -17,8 +17,6 @@ cask 'soulver' do
   zap delete: [
                 '~/Library/Application Support/Soulver',
                 '~/Library/Preferences/com.acqualia.soulver.plist',
-                '~/Library/Autosave Information/Unsaved Soulver Document.soulver',
-                # TODO: glob/expand support
-                # '~/Library/Autosave Information/Unsaved Soulver Document 2.soulver',
+                '~/Library/Autosave Information/Unsaved Soulver Document*',
               ]
 end

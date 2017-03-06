@@ -4,7 +4,7 @@ cask 'path-finder' do
 
   url 'http://get.cocoatech.com/PF7.zip'
   name 'Path Finder'
-  homepage 'https://cocoatech.com/pathfinder/'
+  homepage 'https://cocoatech.com/'
 
   app 'Path Finder.app'
 
