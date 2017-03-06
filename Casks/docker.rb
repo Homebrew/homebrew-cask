@@ -1,6 +1,6 @@
 cask 'docker' do
   version '17.03.0'
-  sha256 '17a05db62267b175986536594b1a4ea0a393690031d0ae688f6db73e2399d30a'
+  sha256 'ed670f3a456289ce887ce8ac54f47a5d17df26353beceb463dc09c4709973a3d'
 
   url 'https://download.docker.com/mac/stable/Docker.dmg'
   appcast 'https://github.com/docker/docker/releases.atom',
