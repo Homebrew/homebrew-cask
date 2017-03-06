@@ -1,6 +1,6 @@
 cask 'catlight' do
-  version '2.4.2'
-  sha256 'c9f561f54a0df5d329152cd69290b5b9afb56d121c3e29177efea53b57d3f843'
+  version :latest
+  sha256 :no_check
 
   url 'https://catlight.io/downloads/mac/beta'
   name 'catlight'
