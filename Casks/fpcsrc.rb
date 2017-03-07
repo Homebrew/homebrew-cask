@@ -1,11 +1,11 @@
 cask 'fpcsrc' do
-  version '3.0.0-20151207'
-  sha256 '42184722c8836cce6e4c57e9f9b43b0d0cd1f4f3cbccc5cf2ceb07d193ac6092'
+  version '3.0.2'
+  sha256 '1c61c7423a632150d27efd39fad810adda9b008b4cfd250a911c4583854a4016'
 
   # sourceforge.net/lazarus was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/lazarus/fpcsrc-#{version}-macosx.dmg"
+  url "https://downloads.sourceforge.net/lazarus/fpc-src-#{version}-macosx.dmg"
   appcast 'https://sourceforge.net/projects/lazarus/rss',
-          checkpoint: '56d06477a5cbba6f3669f864fc3b1573d9c01739ae04bc39d1145d7a7f84f888'
+          checkpoint: 'ce6a7706e0ea9631ad9bc2e4a3d8d712459c79ea239fee34b7aace8cbe5ecd94'
   name 'Free Pascal Compiler Source'
   homepage 'http://www.freepascal.org/'
 
