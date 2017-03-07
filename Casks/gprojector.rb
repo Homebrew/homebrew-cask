@@ -1,14 +1,14 @@
 cask 'gprojector' do
-  version '1.7.4'
-  sha256 '6e8d8c5659b8d9719cbf1ac95a1fee814a8411362639493ecfa383a6b929fb71'
+  version '2.0.0'
+  sha256 'd34a53731d5b4c26f9c199c8d897b2bd1812b6174e3413d6aed5b9c75b5bfa7f'
 
-  url "http://www.giss.nasa.gov/tools/gprojector/G.ProjectorOSX-#{version}.dmg"
+  url "https://www.giss.nasa.gov/tools/gprojector/download/G.ProjectorMacOS-#{version}.dmg"
   name 'G.Projector'
   homepage 'https://www.giss.nasa.gov/tools/gprojector/'
 
   app 'G.Projector.app'
 
   caveats do
-    depends_on_java('7+')
+    depends_on_java('8+')
   end
 end
