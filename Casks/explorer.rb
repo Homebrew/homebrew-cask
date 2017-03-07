@@ -8,5 +8,5 @@ cask 'explorer' do
   name 'explorer'
   homepage 'https://github.com/jfbouzereau/explorer'
 
-  app 'explorer'
+  app 'Explorer-darwin-x64.app'
 end
