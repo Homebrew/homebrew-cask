@@ -1,6 +1,6 @@
 cask 'fpcsrc' do
   version '3.0.2'
-  sha256 '1c61c7423a632150d27efd39fad810adda9b008b4cfd250a911c4583854a4016'
+  sha256 'ca3e47394e65c8a53a6bdb5f4f8551f54a036e8613865bca73b231b059be9bc8'
 
   # sourceforge.net/lazarus was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/lazarus/fpc-src-#{version}-macosx.dmg"
