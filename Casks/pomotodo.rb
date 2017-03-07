@@ -1,6 +1,6 @@
 cask 'pomotodo' do
-  version '3.0.25,1487668760'
-  sha256 'c0adcffc4e8c8c79a3e6bad9f5857d1059c71f5a837b62338a219e8454938a56'
+  version '3.0.26,1488772232'
+  sha256 '64cc4414b3d7829dfb50d690cca4273f2c9385279fb33d0a63dd78ba6da14310'
 
   # cdn.hackplan.com/theair was verified as official when first introduced to the cask
   url "http://cdn.hackplan.com/theair/#{version.after_comma}/Pomotodo_v#{version.before_comma}.dmg"
