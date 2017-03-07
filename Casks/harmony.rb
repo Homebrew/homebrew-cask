@@ -10,4 +10,11 @@ cask 'harmony' do
   homepage 'http://getharmony.xyz/'
 
   app 'Harmony.app'
+
+  zap delete: [
+                '~/Library/Application Support/Harmony',
+                '~/Library/Preferences/com.vincelwt.harmony.helper.plist',
+                '~/Library/Preferences/com.vincelwt.harmony.plist',
+                '~/Library/Saved Application State/com.vincelwt.harmony.savedState',
+              ]
 end
