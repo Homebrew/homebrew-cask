@@ -7,6 +7,6 @@ cask 'gifcapture' do
           checkpoint: 'c6f1765d3174c178e8b1fa57b6f6c1d8e9879b58d2c567837d4d37051c471038'
   name 'GifCapture'
   homepage 'https://github.com/onmyway133/GifCapture'
-  
+
   app 'GifCapture.app'
 end
