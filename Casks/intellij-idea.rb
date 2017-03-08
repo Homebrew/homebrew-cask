@@ -4,7 +4,7 @@ cask 'intellij-idea' do
 
   url "https://download.jetbrains.com/idea/ideaIU-#{version}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=IIU&latest=true&type=release',
-          checkpoint: 'a725581302012d1dba4f2f26834e14992d21db3f725ce3f4933f7d1b9d10852c'
+          checkpoint: '96c427261ad1bea66b78cead640f843bf3808acef31b4ec05d43044d21f53233'
   name 'IntelliJ IDEA Ultimate'
   homepage 'https://www.jetbrains.com/idea/'
 
