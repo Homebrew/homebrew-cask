@@ -1,10 +1,8 @@
 cask 'docker' do
-  version '17.03.0'
-  sha256 'ed670f3a456289ce887ce8ac54f47a5d17df26353beceb463dc09c4709973a3d'
+  version :latest
+  sha256 :no_check
 
   url 'https://download.docker.com/mac/stable/Docker.dmg'
-  appcast 'https://github.com/docker/docker/releases.atom',
-          checkpoint: '6a5a4e061449ba35f3a14a7f87c60826d35c2db6a93d864f966eb76420d0c0a8'
   name 'Docker Community Edition'
   name 'Docker CE'
   homepage 'https://www.docker.com/community-edition'
