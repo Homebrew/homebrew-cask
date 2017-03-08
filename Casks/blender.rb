@@ -21,6 +21,5 @@ cask 'blender' do
       #!/bin/bash
       '#{appdir}/Blender.app/Contents/MacOS/blender' "$@"
     EOS
-    set_permissions shimscript, '+x'
   end
 end
