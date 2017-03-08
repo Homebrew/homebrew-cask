@@ -24,8 +24,5 @@ cask 'eventstore' do
       #!/bin/sh
       exec "#{staged_path}/EventStore-OSS-MacOSX-v#{version}/testclient" "$@"
     EOS
-
-    set_permissions eventstore_shimscript, '+x'
-    set_permissions testclient_shimscript, '+x'
   end
 end
