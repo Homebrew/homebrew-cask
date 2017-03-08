@@ -18,7 +18,6 @@ cask 'hipchat' do
   end
 
   zap delete: [
-                # TODO: expand/glob for '~/Library/<userid>/HipChat/'
                 '~/Library/Application Support/HipChat',
                 '~/Library/Caches/com.hipchat.HipChat',
                 '~/Library/HipChat',
