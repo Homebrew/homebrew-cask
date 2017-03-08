@@ -5,7 +5,7 @@ cask 'explorer' do
   url "https://github.com/jfbouzereau/explorer/releases/download/#{version}/Explorer-darwin-x64.zip"
   appcast 'https://github.com/jfbouzereau/explorer/releases.atom',
           checkpoint: '72093729e37cd133de303b4f9748c20453d1188ba8763eaf70b9d3b5fe92319d'
-  name 'explorer'
+  name 'Explorer'
   homepage 'https://github.com/jfbouzereau/explorer'
 
   app 'Explorer-darwin-x64.app'
