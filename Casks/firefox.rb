@@ -16,6 +16,21 @@ cask 'firefox' do
     'en-US'
   end
 
+  language 'es-AR' do
+    sha256 'fcb8514f86580c5cd2ca05bcd73299199d98a193e522beceb7d68a65da4604d4'
+    'es-AR'
+  end
+
+  language 'es-CL' do
+    sha256 'c9a89ba8975592c38d9f8cd867d704ae024397e151d866300262c635e66417aa'
+    'es-CL'
+  end
+
+  language 'es-ES' do
+    sha256 '10e1ec20305363db5ba1bf2d57c5d1542ee827fb1d47f53f8b3e62f6dc9e2223'
+    'es-ES'
+  end
+
   language 'fr' do
     sha256 '3a8589fa4afa96bf6e3389cc7467290b075bd389c288f84d7815069ba4dc7693'
     'fr'
@@ -24,6 +39,11 @@ cask 'firefox' do
   language 'gl' do
     sha256 '8f59c2d7d9b2876b13e184e86254fcbac873ee9fd0bbf8d3836c49fb366503ec'
     'gl'
+  end
+
+  language 'hi' do
+    sha256 'bf4fe6b5415ff7a2fa374758f5f7bc719168805e42cf90337184659ed5a62d26'
+    'hi-IN'
   end
 
   language 'it' do
@@ -37,18 +57,23 @@ cask 'firefox' do
   end
 
   language 'nl' do
-    sha256 '7a1b1a89fb2e5a96463627a67533fc478a45ff49ff2b832b1de0680bdacd39e1'
+    sha256 'ded743271d41b8f754264f2414b54f179a637b1cb3a8d314a016fe4a0b53f6ac'
     'nl'
   end
 
   language 'pl' do
-    sha256 'ded743271d41b8f754264f2414b54f179a637b1cb3a8d314a016fe4a0b53f6ac'
+    sha256 'e50737f7602da0520f31985175f410689634214e691a9bc425e9dc6a0699316c'
     'pl'
   end
 
   language 'pt' do
     sha256 'ff556198b4f77d9f6870e05f143f1b50f8c74e9118b3fb1b4892d63f06b10fca'
     'pt-PT'
+  end
+
+  language 'pt-BR' do
+    sha256 'f6e47571aee5ed011cc832abd8af3ab90fedd700a0430045c63bdfc03610b0ad'
+    'pt-BR'
   end
 
   language 'ru' do
@@ -73,7 +98,7 @@ cask 'firefox' do
 
   url "https://ftp.mozilla.org/pub/firefox/releases/#{version}/mac/#{language}/Firefox%20#{version}.dmg"
   appcast "https://aus5.mozilla.org/update/3/Firefox/#{version}/0/Darwin_x86_64-gcc3-u-i386-x86_64/en-US/release/Darwin%2015.3.0/default/default/update.xml?force=1",
-          checkpoint: '622431420b64d1c42a42a67bc376d4dc135e165041ded68c396bacdc3654e43a'
+          checkpoint: '98b72a3ac12ef87b8274b37135e2e7d011bca36d6bcfefa711fd80739d0001eb'
   name 'Mozilla Firefox'
   homepage 'https://www.mozilla.org/firefox/'
 
