@@ -13,9 +13,5 @@ cask 'minikube' do
 
   binary 'minikube-darwin-amd64', target: 'minikube'
 
-  postflight do
-    set_permissions "#{staged_path}/minikube-darwin-amd64", '0755'
-  end
-
   zap delete: '~/.minikube'
 end
