@@ -18,7 +18,6 @@ cask 'dwarf-fortress' do
       #!/bin/sh
       exec '#{staged_path}/df_osx/df' "$@"
     EOS
-    set_permissions shimscript, '+x'
   end
 
   postflight do

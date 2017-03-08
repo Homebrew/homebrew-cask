@@ -11,8 +11,4 @@ cask 'onlabs' do
   container type: :naked
 
   binary 'onlabs_darwin_amd64', target: 'onlabs'
-
-  postflight do
-    set_permissions "#{staged_path}/onlabs_darwin_amd64", '755'
-  end
 end

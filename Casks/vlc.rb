@@ -21,7 +21,6 @@ cask 'vlc' do
       #!/bin/sh
       '#{appdir}/VLC.app/Contents/MacOS/VLC' "$@"
     EOS
-    set_permissions shimscript, '+x'
   end
 
   zap delete: [

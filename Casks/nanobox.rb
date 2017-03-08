@@ -15,10 +15,6 @@ cask 'nanobox' do
 
   binary 'nanobox'
 
-  postflight do
-    set_permissions "#{staged_path}/nanobox", '755'
-  end
-
   zap delete: [
                 '~/.nanobox',
                 '/opt/nanobox',

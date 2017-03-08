@@ -22,10 +22,6 @@ cask 'handy-outliner' do
     handy_outliner.close
   end
 
-  postflight do
-    set_permissions "#{staged_path}/handy-outliner", '+x'
-  end
-
   caveats do
     puts "To run this app, type 'handy-outliner' in terminal."
   end
