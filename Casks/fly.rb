@@ -11,8 +11,4 @@ cask 'fly' do
   container type: :naked
 
   binary 'fly_darwin_amd64', target: 'fly'
-
-  postflight do
-    set_permissions "#{staged_path}/fly_darwin_amd64", '0755'
-  end
 end
