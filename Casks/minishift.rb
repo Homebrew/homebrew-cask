@@ -11,8 +11,4 @@ cask 'minishift' do
   container type: :naked
 
   binary 'minishift-darwin-amd64', target: 'minishift'
-
-  postflight do
-    set_permissions "#{staged_path}/minishift-darwin-amd64", '0755'
-  end
 end
