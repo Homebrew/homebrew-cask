@@ -1,4 +1,4 @@
-cask 'canarymail' do
+cask 'canary' do
   version :latest
   sha256 :no_check
 
