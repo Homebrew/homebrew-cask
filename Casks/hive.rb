@@ -4,6 +4,7 @@ cask 'hive' do
 
   # github.com/hivewallet/hive-mac was verified as official when first introduced to the cask
   url "https://github.com/hivewallet/hive-mac/releases/download/#{version}/Hive-#{version}.zip"
+  # github.com verified as official when first introduced to the cask
   appcast 'https://github.com/hivewallet/hive-mac/releases.atom',
           checkpoint: '910983133c5e81dbb151627938adc2cfef7e0a53d7c72609499b035e9f482ca5'
   name 'Hive'
