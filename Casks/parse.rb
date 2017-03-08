@@ -12,8 +12,4 @@ cask 'parse' do
   container type: :naked
 
   binary 'parse'
-
-  postflight do
-    set_permissions "#{staged_path}/parse", '0755'
-  end
 end
