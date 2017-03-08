@@ -19,7 +19,6 @@ cask 'minecraft-server' do
       cd "$(dirname "$(readlink -n $0)")" && \
         java -Xmx1024M -Xms1024M -jar 'minecraft_server.#{version}.jar' nogui
     EOS
-    set_permissions shimscript, '+x'
   end
 
   postflight do
