@@ -13,13 +13,15 @@ cask 'handy-outliner' do
 
   binary 'handy-outliner'
 
+  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/handy-outliner"
+
   preflight do
-    FileUtils.touch "#{staged_path}/handy-outliner"
-    handy_outliner = File.open "#{staged_path}/handy-outliner", 'w'
-    handy_outliner.puts '# !/bin/bash'
-    handy_outliner.puts 'BASEDIR=$(dirname "$(readlink -n $0)")'
-    handy_outliner.puts "$BASEDIR/handyoutliner_#{version}/start-macos"
-    handy_outliner.close
+    IO.write shimscript, <<-EOS.undent
+      # !/bin/sh
+      BASEDIR="$(dirname "$(readlink -n $0)")"
+      $BASEDIR/handyoutliner_#{version}/start-macos
+    EOS
   end
 
   caveats do
