@@ -1,10 +1,10 @@
 cask 'mediathekview' do
-  version '13.0.0'
-  sha256 '96c8ba822f171dab19472ae4d8e2120014540c833ca28c767fc913b49a31144a'
+  version '13.0.2'
+  sha256 '03530a1ad13ecb0f88b2929ae75e356741d52f80fa09aecfbb037cc4d71d4571'
 
   url "https://download.mediathekview.de/stabil/MediathekView-#{version}.dmg"
   appcast 'https://mediathekview.de/changelog/index.xml',
-          checkpoint: '1b1ad0bd0cbef19a4f59e8707e0c87f38a2d8bc88cd293c79a1a13ffef6e37d3'
+          checkpoint: 'e111fd5b5f3b18ee849d7082737820ffc3b745b3742d9b97c835011f7b4ae562'
   name 'MediathekView'
   homepage 'https://mediathekview.de/'
 
