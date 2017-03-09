@@ -4,7 +4,7 @@ cask 'zesarux' do
 
   url "https://downloads.sourceforge.net/zesarux/ZEsarUX_bin-#{version}-MountainLion_or_higher.dmg.gz"
   appcast 'https://sourceforge.net/projects/zesarux/rss',
-          checkpoint: '77bf54e734f0870baf27dbc7093bd23edac235c03c8072c0a8486088df13a5be'
+          checkpoint: '5687bee64ebde5d8c48533c17d30bb91dabf0b25c5ccca9679d69652e3b7f7cb'
   name 'ZEsarUX'
   homepage 'https://sourceforge.net/projects/zesarux/'
 
