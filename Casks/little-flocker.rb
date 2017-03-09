@@ -1,6 +1,6 @@
 cask 'little-flocker' do
-  version '1.5.0'
-  sha256 'a5cefd4c2f1ef0301ec93889d1d0e4ff2e49cf2d0019169ba542d2463aeb6228'
+  version '1.6.0'
+  sha256 '9b549d7fa482100e53512e8cc8c636b199f04a99c2dbad25afb3d6247110719d'
 
   url "https://www.littleflocker.com/downloads/LittleFlocker-#{version}.dmg"
   name 'Little Flocker'
