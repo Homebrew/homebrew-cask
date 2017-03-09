@@ -1,5 +1,5 @@
 cask 'topcat' do
-  version '4.3-5'
+  version '4.4'
   sha256 '60ac8689ff1aa0edce445a39d558946a8bfb2779e5d222550ad36c300bfb4560'
 
   url 'http://www.star.bris.ac.uk/~mbt/topcat/topcat-full.dmg'
