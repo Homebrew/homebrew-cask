@@ -1,5 +1,5 @@
 cask 'visual-studio-code' do
-  version '8076a19fdcab7e1fc1707952d652f0bb6c6db331'
+  version '1.10.2,8076a19fdcab7e1fc1707952d652f0bb6c6db331'
   sha256 '6a5f5ab94a66221f02939cbe27a047881dacd8c1a0a4fd73c4349d4990d5f6ff'
 
   # az764295.vo.msecnd.net was verified as official when first introduced to the cask
