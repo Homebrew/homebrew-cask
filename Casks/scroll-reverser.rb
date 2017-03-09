@@ -13,7 +13,12 @@ cask 'scroll-reverser' do
   name 'Scroll Reverser'
   homepage 'https://pilotmoon.com/scrollreverser/'
 
+  depends_on macos: '>= :tiger'
+
   app 'Scroll Reverser.app'
 
-  zap delete: '~/Library/Caches/com.pilotmoon.scroll-reverser'
+  zap delete: [
+                '~/Library/Caches/com.pilotmoon.scroll-reverser',
+                '~/Library/Preferences/com.pilotmoon.scroll-reverser.plist',
+              ]
 end
