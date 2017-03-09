@@ -1,5 +1,5 @@
 cask 'kite' do
-  version '1.0'
+  version '1.0.1'
   sha256 '2154c0278276e8828ca44b4d3185ede4e8ebb7317f23d5a9060f774c6cb7f2a6'
 
   url 'https://kiteapp.co/downloads/KiteCompositor.dmg'
