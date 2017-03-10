@@ -4,7 +4,7 @@ cask 'vmware-fusion' do
 
   url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
   appcast 'https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml',
-          chekpoint: 'a7d9994edeb6a04b6202e76b13bdf5e83d113d507dcea6072523bc46f7883aa6'
+          checkpoint: 'a7d9994edeb6a04b6202e76b13bdf5e83d113d507dcea6072523bc46f7883aa6'
   name 'VMware Fusion'
   homepage 'https://www.vmware.com/products/fusion.html'
 
