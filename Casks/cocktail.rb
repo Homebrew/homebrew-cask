@@ -22,11 +22,11 @@ cask 'cocktail' do
             checkpoint: 'ffe079c9b71d0f356c8a4d45ecf4f5a50e1d284c972b0a1e5cf92234d7a1010e'
   elsif MacOS.version == :el_capitan
     version '9.5.1'
-    sha256 '71947ea3bb2ed2a8eb21dd9cd29a4e4dec593126c550a46233b98e560e0a13ea'
+    sha256 'd1084a7336bd008c82e8ca32f3ab08984a8ac804eccef18e19440516fccc487a'
 
     url "https://www.maintain.se/downloads/sparkle/elcapitan/Cocktail_#{version}.zip"
     appcast 'https://www.maintain.se/downloads/sparkle/elcapitan/elcapitan.xml',
-            checkpoint: 'bfad5f46b13b40e3adfc8473d8f51e0f4a130da071a3a4506f1eed9fab221da2'
+            checkpoint: '7144bf0379f31f46d1ba71827bce341314034efa3b23809cf33d4a44a609bb18'
   else
     version '10.3'
     sha256 '2369e8349537c2f90f4b00d01371ff9c1ecbd5038ae9fa265ff26b701f829c1e'
