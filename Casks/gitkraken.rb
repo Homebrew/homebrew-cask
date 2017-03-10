@@ -4,7 +4,7 @@ cask 'gitkraken' do
 
   url "https://release.gitkraken.com/darwin/v#{version}.zip"
   appcast 'https://release.gitkraken.com/darwin/RELEASES',
-          checkpoint: '5349dfc0c5b6e8351c212bbef5aed1b7f4fc0b45d8cea091b27c96aa59985bc3'
+          checkpoint: '23e38bf1c5553489b92448ff58748de64bdbc10cd369830c74727005d6c82d5f'
   name 'GitKraken'
   homepage 'https://www.gitkraken.com/'
 
