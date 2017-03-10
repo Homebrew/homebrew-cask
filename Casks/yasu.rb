@@ -13,7 +13,7 @@ cask 'yasu' do
     url "https://yasuformac.com/appcasts/10.11/yasuformac_#{version.after_comma}.zip",
         user_agent: :fake
     appcast 'https://yasuformac.com/appcasts/10.11/yasu.xml',
-            checkpoint: '1349d309621d03caef39dc1b2edadc0638926dd8c4899eef9073b19c7f59666b'
+            checkpoint: 'd13bbaeca2a2c3610fa770ed3b2080fa040f525bbcc15c144d1802ecaf3ee487'
     app 'Yasu for Mac.app'
   else
     version '4.0.2,602'
