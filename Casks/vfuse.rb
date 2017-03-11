@@ -12,7 +12,7 @@ cask 'vfuse' do
   binary '/usr/local/vfuse/vfuse'
 
   uninstall pkgutil: 'com.chilcote.vfuse'
-  
+
   caveats do
     files_in_usr_local
   end
