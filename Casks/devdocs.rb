@@ -1,12 +1,19 @@
 cask 'devdocs' do
-  version '0.2.1'
-  sha256 '554eb5cbe0051d10bb116dee406e7a093e7cb6ed386574217e82749fcda31bd5'
+  version '0.2.2'
+  sha256 '53a6464a30526638dcae63dd621964dd54cda5310f01a258e4ccc377d45b1688'
 
   url "https://github.com/egoist/devdocs-app/releases/download/v#{version}/DevDocs-#{version}.dmg"
   appcast 'https://github.com/egoist/devdocs-app/releases.atom',
-          checkpoint: '1c157ca1e9184b137f1f5d406b0f4841c0995389ef3a97f37b3fd0aef69a4aaf'
+          checkpoint: 'b5e3beae81e20809834d230009570702bfe658f7adcc70916f5206665c7411a8'
   name 'DevDocs App'
   homepage 'https://github.com/egoist/devdocs-app'
 
   app 'DevDocs.app'
+
+  zap delete: [
+                '~/Library/Application Support/DevDocs',
+                '~/Library/Preferences/com.egoistian.devdocs-app.helper.plist',
+                '~/Library/Preferences/com.egoistian.devdocs-app.plist',
+                '~/Library/Saved Application State/com.egoistian.devdocs-app.savedState',
+              ]
 end
