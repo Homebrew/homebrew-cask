@@ -1,6 +1,6 @@
 cask 'liteide' do
   version '31.1'
-  sha256 '910a6d5c6a57b5681a1737e5bbb870628fc3dfb204d723576bd6196e6e74fdcd'
+  sha256 'fe06c00457b953716b688e1d20e9772cb494b0a915fab0857a12ce81a2656e29'
 
   url "https://github.com/visualfc/liteide/releases/download/x#{version.major}/liteidex#{version}.macosx-qt5.zip"
   appcast 'https://github.com/visualfc/liteide/releases.atom',
