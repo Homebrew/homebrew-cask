@@ -7,5 +7,5 @@ cask 'affinic-debugger-gui' do
   name 'ADG'
   homepage 'http://www.affinic.com/?page_id=109'
 
-  app 'Affinic Debugger GUI.app'
+  app 'Affinic Debugger.app'
 end
