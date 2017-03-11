@@ -3,8 +3,7 @@ cask 'affinic-debugger' do
   sha256 :no_check
 
   url 'http://www.affinic.com/download/adg_macosx.dmg'
-  name 'Affinic Debugger GUI'
-  name 'ADG'
+  name 'Affinic Debugger'
   homepage 'http://www.affinic.com/?page_id=109'
 
   app 'Affinic Debugger.app'
