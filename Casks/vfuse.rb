@@ -9,6 +9,11 @@ cask 'vfuse' do
   homepage 'https://github.com/chilcote/vfuse'
 
   pkg "vfuse-#{version}.pkg"
+  binary '/usr/local/vfuse/vfuse'
 
   uninstall pkgutil: 'com.chilcote.vfuse'
+
+  caveats do
+    files_in_usr_local
+  end
 end
