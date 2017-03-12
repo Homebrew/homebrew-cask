@@ -1,4 +1,4 @@
-Before reporting a bug, lets make sure everything is right with your setup.
+Before reporting a bug, let’s make sure everything is right with your setup.
 
 When reporting bugs, remember that Homebrew-Cask is an independent project from Homebrew. Do your best to direct bug reports to the appropriate project. If your command started with `brew cask`, bring the bug to us first.
 
