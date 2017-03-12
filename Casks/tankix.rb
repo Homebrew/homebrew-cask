@@ -7,4 +7,11 @@ cask 'tankix' do
   homepage 'http://www.tankix.com/'
 
   app 'tankix.app'
+
+  zap delete: [
+                '/Library/Logs/DiagnosticReports/tankix*',
+                '~/Library/Application\ Support/CrashReporter/tankix*',
+                '~/Library/Preferences/unity.AlternativaPlatform.TankiX.plist',
+                '~/Library/Saved\ Application\ State/unity.AlternativaPlatform.TankiX.savedState',
+              ]
 end
