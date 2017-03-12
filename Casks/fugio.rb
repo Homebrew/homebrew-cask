@@ -18,5 +18,5 @@ cask 'fugio' do
                           homebrew/science/opencv3
                         ]
 
-  app 'Fugio'
+  suite 'Fugio'
 end
