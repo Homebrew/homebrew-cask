@@ -18,4 +18,3 @@ cask 'fugio' do
 
   app 'Fugio'
 end
-
