@@ -11,7 +11,7 @@ Fixing this error is typically easy, and requires only a bit of time on your par
 └─ README.md
 ```
 
-Now, lets look at the cask (`brew cask cat {{cask_name}}`:
+Now, let's look at the cask (`brew cask cat {{cask_name}}`:
 
 ```
 (…)
@@ -21,7 +21,7 @@ app 'SomeApp.app'
 
 The cask was expecting `SomeApp.app` to be in the top directory of the archive (see how it says simply `SomeApp.app`) but the developer changed it to inside a `Files` directory. All we have to do is update that line of the cask to follow the new structure: `app 'Files/SomeApp.app'`.
 
-Note that occasionally the app’s name changes completely (from `SomeApp.app` to `OtherApp.app`, lets say). In these instances, the filename of the cask itself, as well as its token, must also change. Consult the [`token reference`](https://github.com/caskroom/homebrew-cask/blob/master/doc/cask_language_reference/token_reference.md) for complete instructions on the new name.
+Note that occasionally the app’s name changes completely (from `SomeApp.app` to `OtherApp.app`, let's say). In these instances, the filename of the cask itself, as well as its token, must also change. Consult the [`token reference`](https://github.com/caskroom/homebrew-cask/blob/master/doc/cask_language_reference/token_reference.md) for complete instructions on the new name.
 
 Follow the instructions to [submit a fix](../../CONTRIBUTING.md#updating-a-cask), and make the change to the cask. If using `cask-repair`, you may give it the `--edit-cask` flag when calling it on the command-line to step right into editing it. If you’re having trouble, open an issue [with this template][issue_source_not_there_and_cannot_find_it] explaining your steps so far and why you’re having trouble submitting the update.
 
