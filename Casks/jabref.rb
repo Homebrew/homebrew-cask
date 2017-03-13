@@ -17,8 +17,7 @@ cask 'jabref' do
                       '-VshowFileAction$Boolean=false',
                       '-Vsys.installationDir=/Applications',
                       '-VexecutionLauncherAction$Boolean=false',
-                    ],
-            sudo:   false
+                    ]
 
   uninstall delete: '/Applications/JabRef.app'
 end
