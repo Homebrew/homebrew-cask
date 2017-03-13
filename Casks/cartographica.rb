@@ -4,6 +4,7 @@ cask 'cartographica' do
 
   # cluetrust.com was verified as official when first introduced to the cask
   url "https://www.cluetrust.com/Downloads/Cartographica_#{version.after_comma}.dmg"
+  # cluetrust.com verified as official when first introduced to the cask
   appcast 'https://www.cluetrust.com/AppCasts/Cartographica.xml',
           checkpoint: '7e85531c1c261a52989a7c08dc56e3fd2bb55c4d7627ed3cf6154dc0bab316ec'
   name 'Cartographica'
