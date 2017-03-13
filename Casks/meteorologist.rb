@@ -1,6 +1,6 @@
 cask 'meteorologist' do
   version '3.0.1'
-  sha256 '78231273857e15c772c0958e8dd9cb98af94a75c2718a2fc187dd1b3e77e3cb8'
+  sha256 '6db9be88efa1da5f665998becf8e9c0e2d0998d4ff75d44bebf16a4cb6ed0670'
 
   url "https://downloads.sourceforge.net/heat-meteo/Meteorologist-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/heat-meteo/rss',
