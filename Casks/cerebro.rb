@@ -10,4 +10,11 @@ cask 'cerebro' do
   homepage 'https://cerebroapp.com/'
 
   app 'Cerebro.app'
+
+  zap delete: [
+                '~/Library/Application Support/Cerebro',
+                '~/Library/Preferences/com.cerebroapp.Cerebro.helper.plist',
+                '~/Library/Preferences/com.cerebroapp.Cerebro.plist',
+                '~/Library/Saved Application State/com.cerebroapp.Cerebro.savedState',
+              ]
 end
