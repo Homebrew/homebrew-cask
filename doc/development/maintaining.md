@@ -57,7 +57,7 @@ Label | Description | Issues | Pull Requests
 
 ## Reviewing Core PRs
 
-Occasionally we’ll get submissions from users that fix bugs or add features to Homebrew-Cask itself. There is a subset of our maintainers who are less familiar with Ruby and prefer to leave these review to folks with more experience with the language. This is AOK!
+Occasionally we’ll get submissions from users that fix bugs or add features to Homebrew-Cask itself. There is a subset of our maintainers who are less familiar with Ruby and prefer to leave these reviews to folks with more experience with the language. This is AOK!
 
 ## Handling Cask Update PRs
 
