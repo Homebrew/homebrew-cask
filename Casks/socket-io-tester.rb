@@ -1,4 +1,4 @@
-cask 'socketio-tester' do
+cask 'socket-io-tester' do
   version '1.0.1'
   sha256 '07cc306ba370a458966afd42bc287e556a40aa41a5d0c9aeab1719db0e648b9d'
 
