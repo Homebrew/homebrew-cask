@@ -14,5 +14,5 @@ cask 'trusteer-rapport' do
                      },
             pkgutil: 'com.trusteer.ibmSecurityTrusteerEndpointProtection.*'
 
-  zap delete: '~/Library/Application\ Support/Rapport'
+  zap delete: '~/Library/Application Support/Rapport'
 end
