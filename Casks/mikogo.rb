@@ -7,6 +7,8 @@ cask 'mikogo' do
   name 'Mikogo'
   homepage 'https://www.mikogo.com/'
 
-  # Renamed for clarity: app name is inconsistent with its branding
-  app 'Mikogo-host.app', target: 'Mikogo.app'
+  pkg 'Mikogo-installer.signed.pkg'
+
+  uninstall pkgutil: 'com.mikogo.pkg.open-beta',
+            delete:  '/Applications/Mikogo-host.app'
 end
