@@ -4,6 +4,8 @@ cask 'socket-io-tester' do
 
   # github.com/AppSaloon/socket.io-tester was verified as official when first introduced to the cask
   url "https://github.com/AppSaloon/socket.io-tester/releases/download/v#{version}/socket-io-tester-darwin-x64.zip"
+  appcast 'https://github.com/AppSaloon/socket.io-tester/releases.atom',
+          checkpoint: 'a06fd228a30df9b6e8f0fb64c91142eff3128cf8fc303242173d2f33bfae6d3c'
   name 'socket-io-tester.app'
   homepage 'https://appsaloon.github.io/socket.io-tester/'
 
