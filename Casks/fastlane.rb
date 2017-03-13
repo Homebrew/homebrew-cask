@@ -12,7 +12,6 @@ cask 'fastlane' do
 
   uninstall script: {
                       executable: "#{staged_path}/uninstall",
-                      args:       ['-y'],
-                      sudo:       false,
+                      args:       ['-y']
                     }
 end
