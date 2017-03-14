@@ -4,7 +4,7 @@ cask 'missive' do
 
   url 'https://download.missiveapp.com/download/osx'
   name 'missive'
-  homepage 'https://missiveapp.com'
+  homepage 'https://missiveapp.com/'
 
   app 'Missive.app'
 end

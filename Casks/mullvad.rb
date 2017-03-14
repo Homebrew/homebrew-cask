@@ -4,7 +4,7 @@ cask 'mullvad' do
 
   url "https://www.mullvad.net/media/client/Mullvad-#{version}.dmg"
   name 'Mullvad'
-  homepage 'https://mullvad.net'
+  homepage 'https://mullvad.net/'
 
   app 'Mullvad.app'
 end

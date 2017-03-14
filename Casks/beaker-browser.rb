@@ -5,7 +5,7 @@ cask 'beaker-browser' do
   # download.beakerbrowser.net/download was verified as official when first introduced to the cask
   url 'https://download.beakerbrowser.net/download/latest/osx'
   name 'Beaker Browser'
-  homepage 'https://beakerbrowser.com'
+  homepage 'https://beakerbrowser.com/'
 
   app 'Beaker Browser.app'
 end
