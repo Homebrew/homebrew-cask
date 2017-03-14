@@ -12,6 +12,6 @@ cask 'fastlane' do
 
   uninstall script: {
                       executable: "#{staged_path}/uninstall",
-                      args:       ['-y']
+                      args:       ['-y'],
                     }
 end
