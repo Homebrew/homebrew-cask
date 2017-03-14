@@ -1,10 +1,10 @@
 cask 'vmware-fusion' do
-  version '8.5.4-5115894'
-  sha256 '50f6017c6ba34c537625c94e86849b8b9772d5684bff5f3fe7003be283d54395'
+  version '8.5.5-5192483'
+  sha256 '713be441a762055e5fd24cc9b3f2fdd2664728bff8324cc1542ca120b14659b6'
 
   url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
   appcast 'https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml',
-          checkpoint: 'a7d9994edeb6a04b6202e76b13bdf5e83d113d507dcea6072523bc46f7883aa6'
+          checkpoint: 'e8e7064fd0e6ab8b35b78e5313f4e2ce5bf3ef231009c4f090c6bd27210e22c0'
   name 'VMware Fusion'
   homepage 'https://www.vmware.com/products/fusion.html'
 
