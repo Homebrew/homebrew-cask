@@ -11,6 +11,6 @@ cask 'thinkorswim' do
 
   uninstall script: {
                       executable: '/Applications/thinkorswim/thinkorswim Uninstaller.app/Contents/MacOS/JavaApplicationStub',
-                      args:       ['-q']
+                      args:       ['-q'],
                     }
 end
