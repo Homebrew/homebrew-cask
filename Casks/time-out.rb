@@ -6,8 +6,8 @@ cask 'time-out' do
     version '1.7.1'
     sha256 '3c9892344c8313b8ccf0a76cceb00834ddbe26e5114bcd674c4fd53aeb44e310'
   else
-    version '2.1'
-    sha256 'ed3045c94b12ac7b6dfe6f4ee0f1b8ba1e2251d5e89b0afb25db913dc7a30609'
+    version '2.2'
+    sha256 'f2c0de432894d469533cc741e1edafd3a4fad46dbbd3a4ca2a67a1711c8e84fc'
   end
 
   url "http://www.dejal.com/download/timeout-#{version}.zip"
