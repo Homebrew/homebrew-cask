@@ -5,7 +5,6 @@ cask 'console' do
   url "https://github.com/macmade/Console/releases/download/#{version}/Console.app.zip"
   appcast 'https://github.com/macmade/Console/releases.atom',
           checkpoint: '8b49c744334f3257824f87fd5fc27abb2473320f935e841681a9fe26683e1f0e'
-
   name 'Console'
   homepage 'https://github.com/macmade/Console'
 
