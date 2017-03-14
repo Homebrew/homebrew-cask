@@ -5,7 +5,7 @@ cask 'bartender' do
   url "https://macbartender.com/B2/updates/#{version.dots_to_hyphens}/Bartender%20#{version.major}.zip",
       referer: 'https://www.macbartender.com'
   appcast "https://www.macbartender.com/B#{version.major}/updates/updates.php",
-          checkpoint: 'b20fdea4effb9bef5c64337de5980568674e24c29cd4dc4db14a2ae4847fe675'
+          checkpoint: 'cd55f94fd35c9b13519ad1a4a32ebf4ab1aca1e8d71634159dc8a9308ef5deab'
   name 'Bartender'
   homepage 'https://www.macbartender.com/'
 
