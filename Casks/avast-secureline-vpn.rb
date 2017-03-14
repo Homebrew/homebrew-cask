@@ -8,8 +8,7 @@ cask 'avast-secureline-vpn' do
 
   pkg 'Avast SecureLine VPN.pkg'
 
-  uninstall script:   '/Applications/AvastSecureLine.app/Contents/Applications/AvastSecureLineUninstaller.app/Contents/MacOS/AvastSecureLineUninstaller',
-            pkgutil:   'com.avast.secureline',
+  uninstall pkgutil:   'com.avast.secureline',
             launchctl: [
                          'com.avast.secureline.userinit',
                          'com.avast.secureline.update-agent',
