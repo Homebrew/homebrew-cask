@@ -42,8 +42,7 @@ cask 'soapui' do
                       '-Vsys.installationDir=/Applications',
                       '-VexecutionLauncherAction$Boolean=false',
                       '-Vsys.component.714$Boolean=true',
-                    ],
-            sudo:   false
+                    ]
 
   uninstall delete: "/Applications/SoapUI-#{version}.app"
 end
