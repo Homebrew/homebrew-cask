@@ -1,6 +1,6 @@
 cask 'multifirefox' do
-  version '2.3.3'
-  sha256 'da08ec6b31a928549783aefcd54664fcf26e107bf09bb1d5439e769a2273b537'
+  version '2.4.0'
+  sha256 '7b0cac19469d6a222b4254c0c6ef27cafe847ce89e1efb398d3637f1425645dc'
 
   # amazonaws.com/mff_sparkle was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/mff_sparkle/MultiFirefox_#{version}.zip"
