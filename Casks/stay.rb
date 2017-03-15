@@ -9,4 +9,10 @@ cask 'stay' do
   homepage 'https://cordlessdog.com/stay/'
 
   app 'Stay.app'
+
+  zap delete: [
+                '~/Library/Application Support/Stay',
+                '~/Library/Application Support/com.cordlessdog.Stay',
+                '~/Library/Preferences/com.cordlessdog.Stay.plist',
+              ]
 end
