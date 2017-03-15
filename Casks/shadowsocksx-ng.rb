@@ -4,7 +4,7 @@ cask 'shadowsocksx-ng' do
 
   url "https://github.com/shadowsocks/ShadowsocksX-NG/releases/download/v#{version}/ShadowsocksX-NG-#{version}.zip"
   appcast 'https://github.com/shadowsocks/ShadowsocksX-NG/releases.atom',
-          checkpoint: 'f94e6e5c88995dbdd28751ded6491f0a43b781af2b13d311d71b3fc6a21bbeba'
+          checkpoint: '94dea810527b023d1e94b13f76245cc197ff06e1115e33c2da3810768b203fed'
   name 'ShadowsocksX-NG'
   homepage 'https://github.com/shadowsocks/ShadowsocksX-NG/'
 
