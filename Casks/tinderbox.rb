@@ -10,10 +10,10 @@ cask 'tinderbox' do
   else
     version '7.0.1'
     sha256 '58d533b172f609dac13d80700557f05b2b451db24212c05625b864f9b9fc82a4'
-    app 'Tinderbox 7.app'
+    app "Tinderbox #{version.major}.app"
   end
 
-  url "http://www.eastgate.com/download/tbx#{version.gsub('.', '')}.dmg"
+  url "http://www.eastgate.com/download/tbx#{version.no_dots}.dmg"
   name 'Tinderbox'
   homepage 'http://eastgate.com/Tinderbox/'
 end
