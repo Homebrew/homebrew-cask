@@ -11,14 +11,14 @@ cask 'tableau' do
   pkg 'Tableau Desktop.pkg'
 
   uninstall pkgutil: [
-                         'com.amazon.redshiftodbc',
-                         'com.simba.sparkodbc',
-                         'com.simba.sqlserverodbc',
-                         'com.tableausoftware.Desktop.app',
-                         'com.tableausoftware.DesktopShortcut',
-                         'com.tableausoftware.FLEXNet.11.14.0',
-                         'com.tableausoftware.mysql',
-                         'com.tableausoftware.oracle',
-                         'com.tableausoftware.postgresql',
-                      ]
+                       'com.amazon.redshiftodbc',
+                       'com.simba.sparkodbc',
+                       'com.simba.sqlserverodbc',
+                       'com.tableausoftware.Desktop.app',
+                       'com.tableausoftware.DesktopShortcut',
+                       'com.tableausoftware.FLEXNet.11.14.0',
+                       'com.tableausoftware.mysql',
+                       'com.tableausoftware.oracle',
+                       'com.tableausoftware.postgresql',
+                     ]
 end
