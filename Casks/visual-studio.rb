@@ -10,4 +10,12 @@ cask 'visual-studio' do
   installer manual: 'Install Visual Studio for Mac Preview.app'
 
   uninstall delete: '/Applications/Visual Studio.app'
+
+  zap delete: [
+                '~/Library/VisualStudio',
+                '~/Library/Caches/VisualStudio',
+                '~/Library/Logs/VisualStudio',
+                '~/Library/Preferences/Visual*Studio',
+                '~/Library/Application Support/CrashReporter/VisualStudio*',
+              ]
 end
