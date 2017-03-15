@@ -10,8 +10,7 @@ cask 'anaconda' do
   container type: :naked
 
   installer script: "Anaconda3-#{version}-MacOSX-x86_64.sh",
-            args:   ['-b'],
-            sudo:   false
+            args:   ['-b']
 
   uninstall delete: '~/anaconda3'
 

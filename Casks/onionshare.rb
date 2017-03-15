@@ -1,11 +1,11 @@
 cask 'onionshare' do
-  version '0.9.1'
-  sha256 '9721b9f60ab777d1b6a470d33108031814d6a0833909dc695e40c7b3d98279d1'
+  version '1.0'
+  sha256 '4586f3b2218188475610354f14c95e08b988d6d190eecc3f04258d25ca3543a6'
 
   # github.com/micahflee/onionshare was verified as official when first introduced to the cask
   url "https://github.com/micahflee/onionshare/releases/download/v#{version}/OnionShare.pkg"
   appcast 'https://github.com/micahflee/onionshare/releases.atom',
-          checkpoint: '5317a163350bbc2c380be9004831eeb12021e8a30a319d6424e3e2776ef0901a'
+          checkpoint: '72c38373f27461c9533ee32c87c2b13898f368779701213f0e625d51722337f9'
   name 'OnionShare'
   homepage 'https://onionshare.org/'
   gpg "#{url}.sig",

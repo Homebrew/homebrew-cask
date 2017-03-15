@@ -10,8 +10,4 @@ cask 'wercker-cli' do
   container type: :naked
 
   binary 'wercker'
-
-  postflight do
-    set_permissions "#{staged_path}/wercker", '0755'
-  end
 end

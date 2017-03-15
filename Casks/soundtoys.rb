@@ -1,6 +1,6 @@
 cask 'soundtoys' do
-  version '5.0.4,11752'
-  sha256 'da8bc65685bbc8cdbe45956cc668a4c8a2ccac0a16c11aba073ee215cc9a40a2'
+  version '5.2.0,12502'
+  sha256 'e991f754a07e636f2671538859033e5c60d73079097ed8725c241872a2c2e2bd'
 
   # s3.amazonaws.com/soundtoys5 was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/soundtoys5/#{version.after_comma}/Soundtoys#{version.major}_#{version.before_comma}.#{version.after_comma}.dmg"

@@ -1,17 +1,15 @@
 cask 'ui-browser' do
-  version '2.5.0'
-  sha256 '76a4d3c195d82c27d18b9477554fd1783ae72790b7671762310f8852a38ebc0a'
+  version '2.6.1'
+  sha256 'db4e3a4812a8b980226edd40ae4d88a0168e35829d4f4bff44435250183712cc'
 
   url "http://pfiddlesoft.com/uibrowser/downloads/UIBrowser#{version.no_dots}.dmg"
   name 'UI Browser'
   homepage 'http://pfiddlesoft.com/uibrowser/'
 
-  pkg 'UI Browser.pkg'
+  app 'UI Browser.app'
 
-  uninstall pkgutil: [
-                       'com.pfiddlesoft.pkg.uibrowser',
-                       'com.pfiddlesoft.pkg.uielementscriptsfolder',
-                       'com.pfiddlesoft.pkg.pfassistiveframework',
-                       'com.pfiddlesoft.pkg.pfeventtapsframework',
-                     ]
+  zap delete: [
+                '~/Library/Caches/com.apple.helpd/Generated/com.pfiddlesoft.uibrowser.help',
+                '~/Library/Preferences/com.pfiddlesoft.uibrowser.plist',
+              ]
 end

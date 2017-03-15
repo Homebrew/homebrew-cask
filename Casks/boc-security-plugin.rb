@@ -5,7 +5,7 @@ cask 'boc-security-plugin' do
   url 'https://dlsev.boc.cn/support/secWidgets/npBOCMACSip_Product.pkg'
   name 'Bank of China (BOC) Security Plugin'
   name '中国银行网上银行登录安全控件'
-  homepage 'https://www.boc.cn'
+  homepage 'https://www.boc.cn/'
 
   pkg 'npBOCMACSip_Product.pkg'
 

@@ -1,11 +1,11 @@
 cask 'filebot' do
-  version '4.7.7'
-  sha256 'ee5b74db11b6bc3a3a5fba167fce33d45c0479fca5d2f9a6426bac5be6b9fc67'
+  version '4.7.8'
+  sha256 'd58c699ecd47a6f9cec2226acf11a01bb57c07ac093eaaed31c5bc4cdda7c7b7'
 
   # sourceforge.net/filebot was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/filebot/filebot/FileBot_#{version}/FileBot_#{version}-darwin.tar.xz"
   appcast 'https://app.filebot.net/update.xml',
-          checkpoint: '0c148b723288cbc00b6a64e9bf56f2147df255e0b9440ab079032fdbe0c2bf9d'
+          checkpoint: '47b0253c28bac7d5182b615cd80c8cec9f67d59b697d9331e1f1c74cdae78c6c'
   name 'FileBot'
   homepage 'https://www.filebot.net/'
 

@@ -8,8 +8,7 @@ cask 'nix' do
 
   depends_on macos: '>= :yosemite'
 
-  installer script: "nix-#{version}-x86_64-darwin/install",
-            sudo:   false
+  installer script: "nix-#{version}-x86_64-darwin/install"
 
   uninstall_postflight do
     ['~/.bash_profile', '~/.bash_login', '~/.profile'].each do |profile_path|
@@ -22,8 +21,7 @@ cask 'nix' do
                              '-i', '.nix_uninstall_bak',
                              '-e', '/# added by Nix installer/d',
                              profile_path
-                           ],
-                     sudo: false
+                           ]
     end
   end
 

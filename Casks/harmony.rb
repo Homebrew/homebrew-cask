@@ -1,13 +1,20 @@
 cask 'harmony' do
-  version '0.4.5'
-  sha256 '4baefe6ff06a977afcb4bf8cf6ba0449b13a62876fb47539f2778671d49e27e8'
+  version '0.4.7'
+  sha256 'b17649067dcb9f1810bdd684e08d70cf04289120945e34f271fdccd2db582fb2'
 
   # github.com/vincelwt/harmony was verified as official when first introduced to the cask
   url "https://github.com/vincelwt/harmony/releases/download/v#{version}/harmony-#{version}.dmg"
   appcast 'https://github.com/vincelwt/harmony/releases.atom',
-          checkpoint: 'a02fdc8573b9852046d096542dd2f2f7f0c2b1c7d37ab88e52de0353434fcd26'
+          checkpoint: 'c5f8e370155c76a02a08da9194809d405f5c257c1233628e0321c39b3f432970'
   name 'Harmony'
   homepage 'http://getharmony.xyz/'
 
   app 'Harmony.app'
+
+  zap delete: [
+                '~/Library/Application Support/Harmony',
+                '~/Library/Preferences/com.vincelwt.harmony.helper.plist',
+                '~/Library/Preferences/com.vincelwt.harmony.plist',
+                '~/Library/Saved Application State/com.vincelwt.harmony.savedState',
+              ]
 end

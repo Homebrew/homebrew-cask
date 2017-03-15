@@ -1,6 +1,6 @@
 cask 'dropbox' do
-  version '19.4.13'
-  sha256 '22143fc23732c27a0fbc1e4c626bb7d32c847ccf5b5884789f592a73a33e8904'
+  version '21.4.25'
+  sha256 'b6cc226f6264593ef3096beab68a2c08f54a845e5d35975d41e83d3dc7b060a5'
 
   # clientupdates.dropboxstatic.com was verified as official when first introduced to the cask
   url "https://clientupdates.dropboxstatic.com/client/Dropbox%20#{version}.dmg"

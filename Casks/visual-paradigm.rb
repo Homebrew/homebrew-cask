@@ -6,12 +6,5 @@ cask 'visual-paradigm' do
   name 'Visual Paradigm'
   homepage 'https://www.visual-paradigm.com/'
 
-  installer script: "Visual Paradigm #{version.before_comma} Installer.app/Contents/MacOS/JavaApplicationStub",
-            args:   ['-q'],
-            sudo:   false
-
-  uninstall script: {
-                      executable: "/Applications/Visual Paradigm #{version.before_comma}/uninstaller/uninstall.app/Contents/MacOS/JavaApplicationStub",
-                      args:       ['-q'],
-                    }
+  app 'Visual Paradigm.app'
 end
