@@ -12,4 +12,4 @@ Amongst other things, the logistics of such requests are unsustainable for Homeb
 
 You should also be able to present clear actionable fixes to those concerns. Simply asking for it without solutions will get your issue closed.
 
-There is a difference between discoverability and searchability, however, and while the former (finding new apps you didn’t know about) is unlikely to ever become part of our goals, the later (identifying the app you know about and want to install) is indeed important to us, and we continue to work on it.
+There is a difference between discoverability and searchability, however, and while the former (finding new apps you didn’t know about) is unlikely to ever become part of our goals, the latter (identifying the app you know about and want to install) is indeed important to us, and we continue to work on it.

@@ -32,7 +32,7 @@ Since `pkg` installers can do arbitrary things, different techniques are needed 
   - `args:` - array of arguments to the uninstall script
   - `input:` - array of lines of input to be sent to `stdin` of the script
   - `must_succeed:` - set to `false` if the script is allowed to fail
-  - `sudo:` - set to `false` if the script does not need `sudo`
+  - `sudo:` - set to `true` if the script needs `sudo`
 * `delete:` (string or array) - single-quoted, absolute paths of files or directory trees to remove. `delete:` should only be used as a last resort. `pkgutil:` is strongly preferred.
 * `rmdir:` (string or array) - single-quoted, absolute paths of directories to remove if empty
 * `trash:` (string or array) - currently a synonym for `delete:`. In the future this will cause files to be moved to the Trash.

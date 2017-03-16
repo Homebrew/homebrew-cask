@@ -7,8 +7,7 @@ cask 'amazon-drive' do
   name 'Amazon Drive'
   homepage 'https://www.amazon.com/clouddrive/home/'
 
-  installer script: 'Amazon Drive Installer.app/Contents/MacOS/Amazon Drive Installer',
-            sudo:   false
+  installer script: 'Amazon Drive Installer.app/Contents/MacOS/Amazon Drive Installer'
 
   uninstall quit:   'com.amazon.clouddrive.mac',
             delete: '/Applications/Amazon Drive.app'

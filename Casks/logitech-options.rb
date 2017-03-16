@@ -12,7 +12,6 @@ cask 'logitech-options' do
 
   uninstall script:  {
                        executable: '/Applications/Utilities/LogiMgr Uninstaller.app/Contents/Resources/Uninstaller',
-                       sudo:       false,
                      },
             pkgutil: [
                        'com.logitech.manager.pkg',

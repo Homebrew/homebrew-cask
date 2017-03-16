@@ -5,7 +5,7 @@ cask 'fsmonitor' do
   # tristan-software.ch/FSMonitor was verified as official when first introduced to the cask
   url "https://tristan-software.ch/FSMonitor/Archives/FSMonitor_#{version}.zip"
   name 'FSMonitor'
-  homepage 'http://fsmonitor.com'
+  homepage 'http://fsmonitor.com/'
 
   app 'FSMonitor.app'
 

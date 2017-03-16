@@ -11,8 +11,7 @@ cask 'j' do
     app "j64-#{version}/#{a}.app"
   end
 
-  installer script: "j64-#{version}/updatejqt.sh",
-            sudo:   false
+  installer script: "j64-#{version}/updatejqt.sh"
 
   # target names according to readme.txt
   %w[jcon jconsole].each do |b|

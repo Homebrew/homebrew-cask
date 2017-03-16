@@ -1,12 +1,12 @@
 cask 'rasoft' do
-  version '3.6'
-  sha256 'a285edb402ea394b1044f441236751403dae6399d46c455833f658af18a287ec'
+  version '3.8'
+  sha256 'c077fdb0766938d336ac2f80fe8cf2d0ae3316142af8d39849932c59232e196c'
 
-  url "https://www.rakocontrols.com/rasoftx/release/Rasoft%20Pro-#{version}.dmg"
+  url "https://www.rakocontrols.com/media/1399/rasoft-pro-#{version.no_dots}.dmg"
   appcast 'https://rakocontrols.com/useful-information/rasoftpro/',
-          checkpoint: '9a6ff15d831c7d722d2a318f085af5769e2f85e3be10ca6ba28e3c80caaa8468'
+          checkpoint: 'de8cf9f7db68d6f8fbb980e2a6f576fa2e2b15d7afbfa90b2e234bf1aaea3361'
   name 'Rasoft Pro'
-  homepage 'https://www.rakocontrols.com/useful-information/rasoftpro/'
+  homepage 'https://www.rakocontrols.com/support/software/'
 
   app 'Rasoft Pro.app'
 end

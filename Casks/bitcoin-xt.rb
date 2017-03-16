@@ -20,10 +20,6 @@ cask 'bitcoin-xt' do
     set_permissions "#{staged_path}/Bitcoin-Xt.app", '0755'
   end
 
-  postflight do
-    set_permissions "#{appdir}/Bitcoin-Xt.app", '0555'
-  end
-
   zap delete: [
                 '~/Library/Preferences/org.bitcoin.Bitcoin-Qt.plist',
               ]

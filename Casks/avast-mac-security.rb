@@ -1,4 +1,4 @@
-cask 'avast' do
+cask 'avast-mac-security' do
   version :latest
   sha256 :no_check
 

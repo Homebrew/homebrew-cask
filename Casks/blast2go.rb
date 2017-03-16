@@ -7,8 +7,7 @@ cask 'blast2go' do
   homepage 'https://www.blast2go.com/'
 
   installer script: 'Blast2GO Installer.app/Contents/MacOS/JavaApplicationStub',
-            args:   ['-q'],
-            sudo:   false
+            args:   ['-q']
 
   uninstall delete: '/Applications/Blast2GO'
 

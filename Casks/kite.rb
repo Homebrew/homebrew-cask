@@ -6,7 +6,7 @@ cask 'kite' do
   appcast 'https://api.kiteapp.co/kite_appcast.xml',
           checkpoint: 'd1e4b46dc56a0570c1a724fc4fec87868b42293821ee1debf8b583a5c05ae145'
   name 'Kite Compositor'
-  homepage 'https://kiteapp.co'
+  homepage 'https://kiteapp.co/'
 
   app 'Kite.app'
 end
