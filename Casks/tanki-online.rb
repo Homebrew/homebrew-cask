@@ -9,7 +9,7 @@ cask 'tanki-online' do
   app 'Tanki Online.app'
 
   zap delete: [
-                '~/Library/Application\ Support/TankiOnline/',
+                '~/Library/Application Support/TankiOnline/',
                 '~/Library/Caches/TankiOnline/',
               ]
 end
