@@ -1,6 +1,6 @@
 cask 'unity-download-assistant' do
   version '5.5.2f1,3829d7f588f3'
-  sha256 'af96d69829a2f3bdc673e82081d79651723161cc88278b2c79faff46d7385a53'
+  sha256 '3b9c4cf078cbe930882c5a428e81548d8d008316d4ae157e529b3f146e57d82b'
 
   url "http://netstorage.unity3d.com/unity/#{version.after_comma}/UnityDownloadAssistant-#{version.before_comma}.dmg"
   name 'Unity'
