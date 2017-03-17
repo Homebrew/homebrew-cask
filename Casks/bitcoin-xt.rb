@@ -12,7 +12,9 @@ cask 'bitcoin-xt' do
   name 'Bitcoin XT'
   homepage 'https://bitcoinxt.software/'
 
-  conflicts_with cask: 'bitcoin-core'
+  conflicts_with cask: 'bitcoin-classic',
+                 cask: 'bitcoin-core',
+                 cask: 'bitcoin-unlimited'
 
   app 'Bitcoin-XT.app'
 
