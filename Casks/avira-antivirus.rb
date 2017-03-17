@@ -7,6 +7,8 @@ cask 'avira-antivirus' do
   name 'Avira Antivirus'
   homepage 'https://www.avira.com/en/free-antivirus-mac'
 
+  auto_updates true
+
   pkg 'Avira_Antivirus.pkg'
 
   uninstall script:  '/Applications/Utilities/Avira-Uninstall.app/Contents/MacOS/uninstall',
