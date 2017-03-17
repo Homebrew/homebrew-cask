@@ -6,17 +6,14 @@ cask 'bitcoin-unlimited' do
   name 'Bitcoin Unlimited'
   homepage 'https://www.bitcoinunlimited.info'
 
-  conflicts_with cask: 'bitcoin-core',
+  conflicts_with cask: 'bitcoin-classic',
+                 cask: 'bitcoin-core',
                  cask: 'bitcoin-xt'
 
   depends_on     macos: '>= :mountain_lion'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app 'Bitcoin-Qt.app', target: 'Bitcoin Unlimited.app'
-
-  preflight do
-    set_permissions "#{staged_path}/Bitcoin-Qt.app", '0755'
-  end
 
   zap delete: '~/Library/Preferences/info.bitcoinunlimited.Bitcoin-Qt.plist'
 end
