@@ -1,6 +1,6 @@
 cask 'fugio' do
-  version '2.6.0'
-  sha256 'ad7d00590a747d31bb35680414c8ff4cd6d39d597e52d677f896cb41bf22e6d7'
+  version '2.7.0'
+  sha256 '87bc5e2810e6151cfba543ba77192be26c049454997243f88d7415f6e533ced5'
 
   url "http://www.bigfug.com/releases/Fugio-#{version}-Cask.zip"
   name 'Fugio'
