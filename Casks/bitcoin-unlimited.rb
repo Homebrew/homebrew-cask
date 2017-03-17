@@ -2,8 +2,8 @@ cask 'bitcoin-unlimited' do
   version '1.0.1.1'
   sha256  '47aa38b237d15112ea41e70341be3d2cbbc0edc431a2ddf2533bb34cbd359db9'
 
-  url      "https://www.bitcoinunlimited.info/downloads/bitcoinUnlimited-#{version}-osx.dmg"
-  name     'Bitcoin Unlimited'
+  url "https://www.bitcoinunlimited.info/downloads/bitcoinUnlimited-#{version}-osx.dmg"
+  name 'Bitcoin Unlimited'
   homepage 'https://www.bitcoinunlimited.info'
 
   conflicts_with cask: 'bitcoin-core',
