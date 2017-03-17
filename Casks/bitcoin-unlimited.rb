@@ -4,13 +4,10 @@ cask 'bitcoin-unlimited' do
 
   url "https://www.bitcoinunlimited.info/downloads/bitcoinUnlimited-#{version}-osx.dmg"
   name 'Bitcoin Unlimited'
-  homepage 'https://www.bitcoinunlimited.info'
+  homepage 'https://www.bitcoinunlimited.info/'
 
-  conflicts_with cask: 'bitcoin-classic',
-                 cask: 'bitcoin-core',
-                 cask: 'bitcoin-xt'
-
-  depends_on     macos: '>= :mountain_lion'
+  conflicts_with cask: %w[bitcoin-classic bitcoin-core bitcoin-xt]
+  depends_on macos: '>= :mountain_lion'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app 'Bitcoin-Qt.app', target: 'Bitcoin Unlimited.app'
