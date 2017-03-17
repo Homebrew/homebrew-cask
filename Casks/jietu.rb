@@ -10,7 +10,7 @@ cask 'jietu' do
   app 'Jietu.app'
 
   uninstall quit:      'com.tencent.JietuMac',
-            launchctl: 'com.tencent.JietuHelperMac',
+            launchctl: 'com.tencent.JietuHelperMac'
 
   zap delete: '~/Library/Preferences/com.tencent.JietuMac.plist'
 end
