@@ -1,10 +1,10 @@
 cask 'bibdesk' do
-  version '1.6.9'
-  sha256 '1363517ece4b6aa2e8147e194504957685562a26c83b5ec7e6d3e5aa54ca1050'
+  version '1.6.10'
+  sha256 '45044432df719fa543ef446326a2bd2ce2a09071656107470523b9babc5bc95e'
 
   url "https://downloads.sourceforge.net/bibdesk/BibDesk/BibDesk-#{version}/BibDesk-#{version}.dmg"
   appcast 'http://bibdesk.sourceforge.net/bibdesk.xml',
-          checkpoint: '2c1338fbf02f93cead3c1228b43efdf0354d7a60b81e002b4d76988f07c44acf'
+          checkpoint: '037b7bec2d25572d9b982307a23e34cc6a6357209a73f572ffc27b2515f5cf4e'
   name 'BibDesk'
   homepage 'http://bibdesk.sourceforge.net/'
 
