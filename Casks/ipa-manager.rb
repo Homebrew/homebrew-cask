@@ -8,5 +8,15 @@ cask 'ipa-manager' do
   name 'IPA Manager'
   homepage 'https://www.blugs.com/IPA/'
 
+  auto_updates true
+  depends_on macos: '>= :leopard'
+
+
   app 'IPA Manager.app'
+
+  zap delete: [
+  				'~/Library/Preferences/com.blugs.IPAManager.plist'
+				'~/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.blugs.ipamanager.sfl'
+      			'~/Library/Caches/com.blugs.IPAManager'
+              ]
 end
