@@ -6,6 +6,8 @@ cask 'tankix' do
   name 'Tanki X'
   homepage 'http://www.tankix.com/'
 
+  auto_updates true
+
   app 'tankix.app'
 
   zap delete: [
