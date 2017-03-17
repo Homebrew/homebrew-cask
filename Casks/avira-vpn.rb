@@ -10,4 +10,6 @@ cask 'avira-vpn' do
   pkg 'vpn.pkg'
 
   uninstall pkgutil: 'com.avira.pkg.AviraPhantomVpn'
+
+  zap delete: '~/Library/Preferences/com.avira.macvpn.plist'
 end
