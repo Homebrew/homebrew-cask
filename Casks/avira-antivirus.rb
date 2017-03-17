@@ -13,4 +13,6 @@ cask 'avira-antivirus' do
 
   uninstall script:  '/Applications/Utilities/Avira-Uninstall.app/Contents/MacOS/uninstall',
             pkgutil: 'com.avira.pkg.AviraMacSecurity'
+
+  zap delete: '~/Library/Saved Application State/com.avira.controlcenter.savedState'
 end
