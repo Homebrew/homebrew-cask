@@ -7,4 +7,9 @@ cask 'keycue' do
   homepage 'http://www.ergonis.com/products/keycue/'
 
   app 'KeyCue.app'
+
+  zap delete: [
+                '~/Library/Application Support/KeyCue',
+                '~/Library/Preferences/com.macility.keycue.plist',
+              ]
 end

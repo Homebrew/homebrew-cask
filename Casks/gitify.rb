@@ -9,4 +9,11 @@ cask 'gitify' do
   homepage 'https://github.com/manosim/gitify'
 
   app 'Gitify.app'
+
+  zap delete: [
+                '~/Library/Application Support/gitify',
+                '~/Library/Preferences/com.electron.gitify.helper.plist',
+                '~/Library/Preferences/com.electron.gitify.plist',
+                '~/Library/Saved Application State/com.electron.gitify.savedState',
+              ]
 end
