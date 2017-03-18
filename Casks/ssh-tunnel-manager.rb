@@ -9,7 +9,5 @@ cask 'ssh-tunnel-manager' do
 
   app 'SSH Tunnel Manager.app'
 
-  zap delete: [
-                '~/Library/Preferences/org.tynsoe.sshtunnelmanager.plist',
-              ]
+  zap delete: '~/Library/Preferences/org.tynsoe.sshtunnelmanager.plist'
 end
