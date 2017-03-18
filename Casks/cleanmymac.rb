@@ -67,6 +67,7 @@ cask 'cleanmymac' do
                   "~/Library/Caches/CleanMyMac #{version.major}",
                   "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}",
                   "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}.Menu",
+                  "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}.Scheduler",
                   "~/Library/Logs/CleanMyMac #{version.major}.log",
                   "~/Library/Logs/com.macpaw.CleanMyMac#{version.major}",
                   "~/Library/Preferences/com.macpaw.CleanMyMac-#{version.major}-Helper.plist",
