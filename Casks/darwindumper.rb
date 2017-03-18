@@ -1,6 +1,6 @@
 cask 'darwindumper' do
-  version '3.0.2'
-  sha256 '17267226d3b7f6bec761566921cdba1e20c0885dcf3240eb5060fda1e073babc'
+  version '3.0.3'
+  sha256 '15eca11d9c03c4af0ceb335efb844db02eb1a5ad1ce85691ec6ea7c6c30c7148'
 
   url "https://bitbucket.org/blackosx/darwindumper/downloads/DarwinDumper_v#{version}.zip"
   name 'DarwinDumper'
