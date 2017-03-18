@@ -26,4 +26,9 @@ cask 'textwrangler' do
   binary "#{appdir}/TextWrangler.app/Contents/Helpers/edit"
   binary "#{appdir}/TextWrangler.app/Contents/Helpers/twdiff"
   binary "#{appdir}/TextWrangler.app/Contents/Helpers/twfind"
+
+  caveats do
+    discontinued
+  end
+
 end
