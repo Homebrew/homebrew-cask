@@ -4,6 +4,8 @@ cask 'bitcoin-classic' do
 
   # github.com/bitcoinclassic was verified as official when first introduced to the cask
   url "https://github.com/bitcoinclassic/bitcoinclassic/releases/download/v#{version}/bitcoin-#{version}-osx.dmg"
+  appcast 'https://github.com/bitcoinclassic/bitcoinclassic/releases.atom',
+          checkpoint: 'e1cab782b11b51d1810fcdeaf4a3c3ed722f335b0452330c39cb31b52b9a889f'
   name 'Bitcoin Classic'
   homepage 'https://bitcoinclassic.com/'
 
