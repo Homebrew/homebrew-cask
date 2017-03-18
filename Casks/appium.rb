@@ -8,4 +8,9 @@ cask 'appium' do
   homepage 'https://appium.io/'
 
   app 'Appium.app'
+
+  zap delete: [
+                '~/Library/Preferences/com.appium.Appium.plist',
+                '~/Library/Caches/com.appium.Appium',
+              ]
 end
