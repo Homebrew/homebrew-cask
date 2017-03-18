@@ -11,12 +11,18 @@ cask 'adobe-reader' do
   pkg "AcroRdrDC_#{version.no_dots}_MUI.pkg"
 
   uninstall pkgutil: 'com.adobe.acrobat.DC.reader.*',
-            delete:  '/Applications/Adobe Acrobat Reader DC.app'
+            delete:  '/Applications/Adobe Acrobat Reader DC.app',
+            quit:    [
+                       'com.adobe.Reader',
+                       'com.adobe.AdobeRdrCEFHelper',
+                       'com.adobe.AdobeRdrCEF',
+                     ]
 
-  zap       delete: [
-                      '~/Library/Application Support/Adobe/Acrobat/DC',
-                      '~/Library/Preferences/Adobe/Acrobat/DC',
-                      '~/Library/Preferences/com.adobe.Reader.plist',
-                      '~/Library/Caches/com.adobe.Reader',
-                    ]
+  zap delete: [
+                '~/Library/Preferences/com.adobe.Reader.plist',
+                '~/Library/Preferences/com.adobe.AdobeRdrCEFHelper.plist',
+                '~/Library/Preferences/com.adobe.crashreporter.plist',
+                '~/Library/Caches/com.adobe.Reader',
+                '/Library/Preferences/com.adobe.reader.DC.WebResource.plist',
+              ]
 end
