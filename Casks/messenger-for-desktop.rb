@@ -5,7 +5,7 @@ cask 'messenger-for-desktop' do
   # github.com/Aluxian/Facebook-Messenger-Desktop was verified as official when first introduced to the cask
   url "https://github.com/Aluxian/Facebook-Messenger-Desktop/releases/download/v#{version}/messengerfordesktop-#{version}-osx.dmg"
   appcast 'https://github.com/Aluxian/Facebook-Messenger-Desktop/releases.atom',
-          checkpoint: 'b26b01cc4a54ceae8f024c5e157b1bb4327338faf5768b4bc38707f02e9fc662'
+          checkpoint: '3f77603c5d2b79e63a66044fcbc9a11c309c692282e911eb2e209c418b72e56c'
   name 'Messenger for Desktop'
   homepage 'https://messengerfordesktop.com/'
 
