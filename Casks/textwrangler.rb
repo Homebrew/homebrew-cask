@@ -30,5 +30,4 @@ cask 'textwrangler' do
   caveats do
     discontinued
   end
-
 end
