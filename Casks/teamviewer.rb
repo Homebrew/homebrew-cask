@@ -11,7 +11,7 @@ cask 'teamviewer' do
   pkg 'Install TeamViewer.pkg'
 
   uninstall pkgutil:   'com.teamviewer.*',
-            launchctl: 'com.teamviewer.service',
+            launchctl: 'com.teamviewer.*',
             delete:    [
                          '/Applications/TeamViewer.app',
                          "/Library/Fonts/TeamViewer#{version.major}.otf",
@@ -31,5 +31,6 @@ cask 'teamviewer' do
                       '~/Library/Preferences/com.teamviewer.TeamViewer.plist',
                       '~/Library/Preferences/com.teamviewer.teamviewer.preferences.plist',
                       '~/Library/Saved Application State/com.teamviewer.TeamViewer.savedState',
+                      '~/Library/Cookies/com.teamviewer.TeamViewer.binarycookies',
                     ]
 end
