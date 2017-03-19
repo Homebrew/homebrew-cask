@@ -172,21 +172,23 @@ $ brew cask install caskroom/fonts/font-symbola
 You can also modify the default installation locations used when issuing `brew cask install`:
 
 * `--caskroom=/my/path` determines where the actual applications will be located.
-Default is `$(brew --prefix)/Caskroom`
+Default is `$(brew --prefix)/Caskroom`.
 * `--appdir=/my/path` changes the path where the applications (above)
 will be moved. Default is `/Applications`.
 * `--prefpanedir=/my/path` changes the path for PreferencePanes.
-Default is `~/Library/PreferencePanes`
+Default is `~/Library/PreferencePanes`.
 * `--qlplugindir=/my/path` changes the path for Quicklook Plugins.
-Default is `~/Library/QuickLook`
+Default is `~/Library/QuickLook`.
 * `--dictionarydir=/my/path` changes the path for Dictionaries.
-Default is `~/Library/Dictionaries`
+Default is `~/Library/Dictionaries`.
 * `--fontdir=/my/path` changes the path for Fonts.
-Default is `~/Library/Fonts`
+Default is `~/Library/Fonts`.
 * `--input_methoddir=/my/path` changes the path for Input Methods.
-Default is `~/Library/Input Methods`
+Default is `~/Library/Input Methods`.
 * `--screen_saverdir=/my/path` changes the path for Screen Savers.
-Default is `~/Library/Screen Savers`
+Default is `~/Library/Screen Savers`.
+* `--language=<iso-language>` changes the language of the cask to be installed.
+Default is the language of your system.
 
 To make these settings persistent, you might want to add the following line to your `.bash_profile` or `.zshenv`:
 
