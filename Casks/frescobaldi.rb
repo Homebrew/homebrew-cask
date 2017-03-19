@@ -9,5 +9,7 @@ cask 'frescobaldi' do
 
   app 'Frescobaldi.app'
 
+  zap delete: '~/Library/Preferences/org.frescobaldi.frescobaldi.plist'
+
   caveats "If you don't already have LilyPond installed, download it from http://lilypond.org or install it with `brew cask install lilypond`."
 end
