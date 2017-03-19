@@ -8,7 +8,7 @@ cask 'frescobaldi' do
           checkpoint: '1edb6cbd5767024e224f7aecda697d206b49a180066180dd3201359cf4f6a598'
   name 'Frescobaldi'
   homepage 'http://frescobaldi.org/'
-  
+
   depends_on cask: 'lilypond'
 
   app 'Frescobaldi.app'
