@@ -6,5 +6,10 @@ cask 'bassshapes' do
   name 'Bass Shapes'
   homepage 'http://yellquietly.com/bass-shapes/'
 
-  app "BassShapes_v#{version.no_dots}/BassShapes.app"
+  app 'BassShapes.app'
+
+  zap delete: [
+                '~/Library/Preferences/com.yellQuietly.BassShapes.plist',
+                '~/Library/Saved Application State/com.yellQuietly.BassShapes.savedState',
+              ]
 end

@@ -10,5 +10,11 @@ cask 'black-screen' do
 
   app 'Black Screen.app'
 
-  zap delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.shockone.black-screen.sfl'
+  zap delete: [
+                '~/Library/Application Support/Black Screen',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.shockone.black-screen.sfl',
+                '~/Library/Preferences/com.github.shockone.black-screen.helper.plist',
+                '~/Library/Preferences/com.github.shockone.black-screen.plist',
+                '~/Library/Saved Application State/com.github.shockone.black-screen.savedState',
+              ]
 end

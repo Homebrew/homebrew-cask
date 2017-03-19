@@ -9,4 +9,13 @@ cask 'tg-pro' do
   homepage 'https://www.tunabellysoftware.com/tgpro/'
 
   app 'TG Pro.app'
+
+  zap delete: [
+                '/Library/LaunchDaemons/com.tunabellysoftware.TGFanHelper.plist',
+                '/Library/PrivilegedHelperTools/com.tunabellysoftware.TGFanHelper',
+                '~/Library/Application Support/TG Pro',
+                '~/Library/Caches/com.tunabellysoftware.tgpro',
+                '~/Library/Cookies/com.tunabellysoftware.tgpro.binarycookies',
+                '~/Library/Preferences/com.tunabellysoftware.tgpro.plist',
+              ]
 end
