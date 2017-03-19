@@ -1,10 +1,10 @@
 cask 'messenger-for-desktop' do
-  version '2.0.6'
-  sha256 'cd013a62c919e960555b267402ef6f79c10973ec78222eeb3ab707a13f38d275'
+  version '2.0.7'
+  sha256 '6aeaadd90cd02abf406bae927b78ab654543b7b2c83f19604a7df12e265a8ad4'
 
-  # github.com/Aluxian/Facebook-Messenger-Desktop was verified as official when first introduced to the cask
-  url "https://github.com/Aluxian/Facebook-Messenger-Desktop/releases/download/v#{version}/messengerfordesktop-#{version}-osx.dmg"
-  appcast 'https://github.com/Aluxian/Facebook-Messenger-Desktop/releases.atom',
+  # github.com/aluxian/Messenger-for-Desktop was verified as official when first introduced to the cask
+  url "https://github.com/aluxian/Messenger-for-Desktop/releases/download/v#{version}/messengerfordesktop-#{version}-osx.dmg"
+  appcast 'https://github.com/aluxian/Messenger-for-Desktop/releases.atom',
           checkpoint: '3f77603c5d2b79e63a66044fcbc9a11c309c692282e911eb2e209c418b72e56c'
   name 'Messenger for Desktop'
   homepage 'https://messengerfordesktop.com/'
