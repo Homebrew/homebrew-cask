@@ -4,6 +4,7 @@ cask 'frescobaldi' do
 
   # github.com/wbsoft/frescobaldi was verified as official when first introduced to the cask
   url 'https://github.com/wbsoft/frescobaldi/releases/download/v2.20.0/Frescobaldi-2.20.0-x86_64.dmg'
+  appcast 'https://github.com/wbsoft/frescobaldi/releases.atom', checkpoint: '1edb6cbd5767024e224f7aecda697d206b49a180066180dd3201359cf4f6a598'
   name 'Frescobaldi'
   homepage 'http://frescobaldi.org/'
 
