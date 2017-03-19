@@ -7,4 +7,6 @@ cask 'resxtreme' do
   homepage 'http://resxtreme.com/'
 
   app 'ResXtreme.app'
+
+  zap delete: '~/Library/Preferences/info.chrismiles.ResXtreme.plist'
 end

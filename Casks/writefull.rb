@@ -8,4 +8,13 @@ cask 'writefull' do
   homepage 'https://writefullapp.com/'
 
   app 'Writefull.app'
+
+  zap delete: [
+                '~/Library/Application Support/Writefull_3beta',
+                '~/Library/Application Support/com.paraphrase.Writefull.ShipIt',
+                '~/Library/Caches/Writefull_3beta',
+                '~/Library/Caches/com.paraphrase.Writefull',
+                '~/Library/Preferences/com.paraphrase.Writefull.plist',
+                '~/Library/Saved Application State/com.paraphrase.Writefull.savedState',
+              ]
 end
