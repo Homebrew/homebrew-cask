@@ -187,8 +187,8 @@ Default is `~/Library/Fonts`.
 Default is `~/Library/Input Methods`.
 * `--screen_saverdir=/my/path` changes the path for Screen Savers.
 Default is `~/Library/Screen Savers`.
-* `--language=<iso-language>` changes the language of the cask to be installed.
-Default is the language of your system.
+* `--language=<iso-language>[,<iso-language> ... ]` changes the language of the cask to be installed.
+The first matching language is used, otherwise it uses the default language of the cask.
 
 To make these settings persistent, you might want to add the following line to your `.bash_profile` or `.zshenv`:
 
