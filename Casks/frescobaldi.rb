@@ -9,8 +9,6 @@ cask 'frescobaldi' do
   name 'Frescobaldi'
   homepage 'http://frescobaldi.org/'
 
-  depends_on cask: 'lilypond'
-
   app 'Frescobaldi.app'
 
   zap delete: '~/Library/Preferences/org.frescobaldi.frescobaldi.plist'
