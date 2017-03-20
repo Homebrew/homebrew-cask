@@ -10,4 +10,6 @@ cask 'vagrant-manager' do
   homepage 'http://vagrantmanager.com/'
 
   app 'Vagrant Manager.app'
+
+  zap delete: '~/Library/Preferences/lanayo.Vagrant-Manager.plist'
 end

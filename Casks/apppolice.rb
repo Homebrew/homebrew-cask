@@ -9,4 +9,9 @@ cask 'apppolice' do
   homepage 'https://github.com/fuyu/apppolice'
 
   app 'AppPolice.app'
+
+  uninstall login_item: 'AppPolice',
+            quit:       'com.definemac.AppPolice'
+
+  zap delete: '~/Library/Preferences/com.definemac.AppPolice.plist'
 end

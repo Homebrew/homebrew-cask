@@ -10,13 +10,17 @@ cask 'avast-secureline-vpn' do
 
   uninstall pkgutil:   'com.avast.secureline',
             launchctl: [
-                         'com.avast.secureline.userinit',
-                         'com.avast.secureline.update-agent',
+                         'com.avast.secureline*',
                          '*.com.avast.osx.secureline.avastsecurelinehelper',
-                       ]
+                         'com.avast.secureline.home.userinit',
+                       ],
+            delete:    '/Applications/AvastSecureLine.app'
 
   zap delete: [
                 '~/Library/Cookies/com.avast.osx.secureline.binarycookies',
                 '~/Library/Caches/com.avast.osx.secureline',
+                '~/Library/Group Containers/*.com.avast.osx.secureline*',
+                '~/Library/Preferences/*.com.avast.osx.secureline.plist',
+                '~/Library/Group Containers/*.group.com.avast.osx',
               ]
 end

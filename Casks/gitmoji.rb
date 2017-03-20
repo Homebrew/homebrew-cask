@@ -9,4 +9,11 @@ cask 'gitmoji' do
   homepage 'https://github.com/Meadowcottage/gitmoji'
 
   app 'gitmoji.app'
+
+  zap delete: [
+                '~/Library/Application Support/gitmoji',
+                '~/Library/Preferences/com.Meadowcottage.Gitmoji.helper.plist',
+                '~/Library/Preferences/com.Meadowcottage.Gitmoji.plist',
+                '~/Library/Saved Application State/com.Meadowcottage.Gitmoji.savedState',
+              ]
 end
