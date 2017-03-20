@@ -168,6 +168,7 @@ $ brew cask install caskroom/fonts/font-symbola
 * `--debug`: output debug information
 * `--no-binaries`: skip symlinking executable binaries into `/usr/local/bin`
 * `--require-sha`: abort installation of cask if no checksum is defined
+* `--language=<iso-language>[,<iso-language> ... ]` changes the language of the cask to be installed. The first matching language is used, otherwise it uses the default language of the cask.
 
 You can also modify the default installation locations used when issuing `brew cask install`:
 
