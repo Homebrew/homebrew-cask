@@ -1,6 +1,6 @@
 cask 'multibit-hd' do
-  version '0.4.1'
-  sha256 '12d230b723fd8d51fe6ea90a4ecdad25ee3eff6ebec6fc80295c55f54ea3c63a'
+  version '0.5.1'
+  sha256 'c79e4e315576db7152a139f2c35aa5b47bc706a3df9669bfddba9bdeb9db4520'
 
   url "https://multibit.org/releases/multibit-hd/multibit-hd-#{version}/multibit-macos-#{version}-drag-install.dmg"
   name 'MultiBit HD'
