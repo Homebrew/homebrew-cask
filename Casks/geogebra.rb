@@ -2,11 +2,11 @@ cask 'geogebra' do
   version :latest
   sha256 :no_check
 
-  url "https://download.geogebra.org/package/mac-port"
+  url 'https://download.geogebra.org/package/mac-port'
   name 'GeoGebra'
   homepage 'https://www.geogebra.org/'
 
-  app "GeoGebra.app"
+  app 'GeoGebra.app'
 
   uninstall quit:       'org.geogebra.mathapps',
             login_item: 'GeoGebra'
