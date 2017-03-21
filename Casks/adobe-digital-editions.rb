@@ -6,7 +6,7 @@ cask 'adobe-digital-editions' do
   name 'Adobe Digital Editions'
   homepage 'https://www.adobe.com/solutions/ebook/digital-editions.html'
 
-  pkg "Digital Editions #{version} Installer.pkg"
+  pkg "Digital Editions #{version.major_minor} Installer.pkg"
 
   uninstall pkgutil: 'com.adobe.adobedigitaleditions.app'
 
