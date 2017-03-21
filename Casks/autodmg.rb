@@ -9,4 +9,5 @@ cask 'autodmg' do
   homepage 'https://github.com/MagerValp/AutoDMG'
 
   app 'AutoDMG.app'
+  binary "#{appdir}/AutoDMG.app/Contents/MacOS/AutoDMG"
 end
