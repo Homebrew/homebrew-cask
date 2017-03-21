@@ -34,6 +34,20 @@ complete
 
 And there we have it. Atom installed with one quick command: no clicking, no dragging, no dropping.
 
+## Tab Completioin
+
+[Homebrew/homebrew-completions](https://github.com/Homebrew/homebrew-completions) support `bash` and `fish` completions(only for `brew-cask` right now), you should type:
+
+    brew install homebrew/completions/brew-cask-completion
+
+Or:
+
+    brew tap homebrew/completions
+    brew install brew-cask-completion
+
+If you are looking for `zsh` completion support, please use
+[oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh).
+
 ## Learn More
 
 * Find basic documentation on using Homebrew-Cask in [USAGE.md](USAGE.md)
