@@ -1,6 +1,6 @@
 cask 'kindlepreviewer' do
-  version :latest
-  sha256 :no_check
+  version '3.8.0'
+  sha256 '640cde7739e7aa95214aa8dc2c9f127a2c959f95f40142d6e9639257bb7ef85f'
 
   # s3.amazonaws.com/kindlepreviewer3 was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/kindlepreviewer3/KindlePreviewerInstaller.pkg'
