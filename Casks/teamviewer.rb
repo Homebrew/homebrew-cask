@@ -1,6 +1,6 @@
 cask 'teamviewer' do
   version '12.0.72647'
-  sha256 '1dc2dda560dc8a70b6478e7e88b1c64d9b0f6a8db24c8d165c2b2e14e2de55ee'
+  sha256 '5570875f99f2be0fdc167366c11e80056fa9e3d617e9b731e7821a81e2e1df45'
 
   url "https://download.teamviewer.com/download/version_#{version.major}x/TeamViewer.dmg"
   name 'TeamViewer'
