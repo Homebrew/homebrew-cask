@@ -11,7 +11,10 @@ cask 'metasploit' do
 
   pkg 'metasploitframework-latest.pkg'
 
-  uninstall script:  { executable: 'uninstall.tool', input: %w[Yes] },
+  uninstall script:  {
+                        executable: 'uninstall.tool',
+                        input:      %w[Yes] 
+                     },
             pkgutil: 'test.rapid7releaseengineeringr7rerapid7com.pkg.metasploit-framework'
 
   zap delete: '~/.msf4'
