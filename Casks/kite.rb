@@ -1,10 +1,10 @@
 cask 'kite' do
-  version '1.0.1'
-  sha256 '2154c0278276e8828ca44b4d3185ede4e8ebb7317f23d5a9060f774c6cb7f2a6'
+  version '1.1'
+  sha256 '0f80766eb315d6e2188ea2c62ea86478f838719d34b6e70d1e42d07d8bde5519'
 
   url 'https://kiteapp.co/downloads/KiteCompositor.dmg'
   appcast 'https://api.kiteapp.co/kite_appcast.xml',
-          checkpoint: 'd1e4b46dc56a0570c1a724fc4fec87868b42293821ee1debf8b583a5c05ae145'
+          checkpoint: '4bf1b9e1686160f292d1de9e714d5fe74003df2be7a3c06ffa7870a4eb90ea69'
   name 'Kite Compositor'
   homepage 'https://kiteapp.co/'
 
