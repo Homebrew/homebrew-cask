@@ -9,7 +9,7 @@ cask 'vagrant' do
   name 'Vagrant'
   homepage 'https://www.vagrantup.com/'
 
-  pkg 'Vagrant.pkg'
+  pkg 'vagrant.pkg'
 
   uninstall script:  {
                        executable: 'uninstall.tool',
