@@ -1,6 +1,6 @@
 cask 'jedit' do
-  version '5.3.0'
-  sha256 '9ef706449951c8904ed7504294c3d854aaaf73f3fd8059dd8d4803036829f9f7'
+  version '5.4.0'
+  sha256 '5bef965e267a13cbac8dae12d4f3b1428298fb769c759cedd9d75be96a82c96a'
 
   # sourceforge.net/jedit was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/jedit/jedit#{version}install.dmg"
