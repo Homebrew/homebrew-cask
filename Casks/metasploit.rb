@@ -9,12 +9,20 @@ cask 'metasploit' do
   homepage 'https://www.metasploit.com'
   license :bsd
 
+  depends_on formula: [
+                        'nmap',
+                        'postgresql'
+                      ]
+
   pkg 'metasploitframework-latest.pkg'
 
+  installer script:       '/opt/metasploit-framework/bin/msfconsole',
+            must_succeed: false
+
   uninstall  script:  {
-                       executable: '/opt/metasploit-framework/bin/msfremove',
-                       input:      %w[Yes],
-                       sudo:       true
+                        executable: '/opt/metasploit-framework/bin/msfremove',
+                        input:      %w[Yes],
+                        sudo:       true
                       },
             pkgutil:  '.*metasploit.*',
               rmdir:  '/opt/metasploit-framework'
