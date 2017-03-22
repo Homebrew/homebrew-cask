@@ -1,15 +1,22 @@
 cask 'haskell-for-mac' do
-  version '1.3.1,1226.1481263340'
-  sha256 'df7842930ea03c236c8c51f6775f66a69f3a9a7ff642da5ea0fc78c6d0831b75'
+  version '1.4.0,1286.1490060445'
+  sha256 'de90e6effa54f0941f135252565a851de17eaefcdf00bdb2a5ca38e1d2135214'
 
   # dl.devmate.com/com.haskellformac.Haskell.basic was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.haskellformac.Haskell.basic/#{version.after_comma.dots_to_slashes}/Haskell%E2%80%94FunctionalProgrammingLab-#{version.after_comma.major}.zip"
   appcast 'https://updates.devmate.com/com.haskellformac.Haskell.basic.xml',
-          checkpoint: '315adb1b8e64404705362dcf3c25adff14ff1a4fe85cbaa3f61a5597bd7dd7c8'
+          checkpoint: '51841c041b2cfe2a0950e820c972865ed0a9c97f502d46437581f1b8fc5c7312'
   name 'Haskell for Mac'
   homepage 'http://haskellformac.com/'
 
   auto_updates true
 
   app 'Haskell.app'
+
+  zap delete: [
+                '~/Library/Application Scripts/com.haskellformac.Haskell.basic',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.haskellformac.haskell.basic.sfl',
+                '~/Library/Containers/com.haskellformac.Haskell.basic',
+                '~/Library/Preferences/com.haskellformac.Haskell.basic.plist',
+              ]
 end

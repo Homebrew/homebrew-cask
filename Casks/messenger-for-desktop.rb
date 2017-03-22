@@ -1,13 +1,25 @@
 cask 'messenger-for-desktop' do
-  version '2.0.4'
-  sha256 '3bf9d0668cdf9dd434150d6c87f8ff6de93846a4c77a0f3bb1e820afad1910c6'
+  version '2.0.7'
+  sha256 '6aeaadd90cd02abf406bae927b78ab654543b7b2c83f19604a7df12e265a8ad4'
 
-  # github.com/Aluxian/Facebook-Messenger-Desktop was verified as official when first introduced to the cask
-  url "https://github.com/Aluxian/Facebook-Messenger-Desktop/releases/download/v#{version}/messengerfordesktop-#{version}-osx.dmg"
-  appcast 'https://github.com/Aluxian/Facebook-Messenger-Desktop/releases.atom',
-          checkpoint: 'd63acc80f778fa451fe48d9737408e41312577f39e672e0836b082f876ed0adb'
+  # github.com/aluxian/Messenger-for-Desktop was verified as official when first introduced to the cask
+  url "https://github.com/aluxian/Messenger-for-Desktop/releases/download/v#{version}/messengerfordesktop-#{version}-osx.dmg"
+  appcast 'https://github.com/aluxian/Messenger-for-Desktop/releases.atom',
+          checkpoint: '3f77603c5d2b79e63a66044fcbc9a11c309c692282e911eb2e209c418b72e56c'
   name 'Messenger for Desktop'
   homepage 'https://messengerfordesktop.com/'
 
   app 'Messenger for Desktop.app'
+
+  zap delete: [
+                '/Library/Logs/DiagnosticReports/Messenger For Desktop*',
+                '~/Library/Application Support/Messenger For Desktop',
+                '~/Library/Caches/com.aluxian.messengerfd',
+                '~/Library/Caches/com.aluxian.messengerfd.ShipIt',
+                '~/Library/Cookies/com.aluxian.messengerfd.binarycookies',
+                '~/Library/Preferences/ByHost/com.aluxian.messengerfd.ShipIt*',
+                '~/Library/Preferences/com.aluxian.messengerfd.helper.plist',
+                '~/Library/Preferences/com.aluxian.messengerfd.plist',
+                '~/Library/Saved Application State/com.aluxian.messengerfd.savedState',
+              ]
 end

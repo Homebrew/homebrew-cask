@@ -14,6 +14,8 @@ cask 'fork' do
 
   zap delete: [
                 '~/Library/Application Support/com.DanPristupov.Fork',
+                '~/Library/Caches/com.DanPristupov.Fork',
                 '~/Library/Preferences/com.DanPristupov.Fork.plist',
+                '~/Library/Saved Application State/com.DanPristupov.Fork.savedState',
               ]
 end

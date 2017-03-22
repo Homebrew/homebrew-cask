@@ -7,8 +7,7 @@ cask 'thebrain' do
   homepage 'https://www.thebrain.com/'
 
   installer script: 'TheBrain Installer.app/Contents/MacOS/JavaApplicationStub',
-            args:   ['-q'],
-            sudo:   false
+            args:   ['-q']
 
   uninstall delete: '/Applications/TheBrain.app'
 end

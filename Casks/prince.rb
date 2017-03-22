@@ -6,8 +6,7 @@ cask 'prince' do
   name 'Prince'
   homepage 'https://www.princexml.com/'
 
-  installer script: "prince-#{version}-macosx/install.sh",
-            sudo:   false
+  installer script: "prince-#{version}-macosx/install.sh"
 
   uninstall delete: [
                       '/usr/local/bin/prince',

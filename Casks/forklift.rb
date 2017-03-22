@@ -14,9 +14,14 @@ cask 'forklift' do
   app 'ForkLift.app'
 
   zap delete: [
+                '/Library/LaunchDaemons/com.binarynights.ForkLiftHelper.plist',
+                '/Library/PrivilegedHelperTools/com.binarynights.ForkLiftHelper',
                 '~/Library/Application Support/ForkLift',
                 '~/Library/Caches/com.binarynights.ForkLift-3',
+                '~/Library/Cookies/com.binarynights.ForkLift-3.binarycookies',
+                '~/Library/Logs/ForkLift',
                 '~/Library/Preferences/com.binarynights.ForkLift-3.plist',
+                '~/Library/Preferences/com.binarynights.ForkLiftMini.plist',
                 '~/Library/Saved Application State/com.binarynights.ForkLift-3.savedState',
               ]
 end

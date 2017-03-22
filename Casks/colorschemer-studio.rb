@@ -6,7 +6,7 @@ cask 'colorschemer-studio' do
   appcast "http://www.colorschemer.com/appcast/studio#{version.major}_mac.xml",
           checkpoint: '8faf423e6e94caef34de09fc83c720ef2473d1a37bf4777a95717a814f73a722'
   name 'ColorSchemer Studio'
-  homepage 'https://www.colorschemer.com'
+  homepage 'https://www.colorschemer.com/'
 
   app "ColorSchemer Studio #{version.major}.app"
 end

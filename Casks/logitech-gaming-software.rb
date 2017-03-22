@@ -1,6 +1,6 @@
 cask 'logitech-gaming-software' do
-  version '8.87.92'
-  sha256 'acc6a474d1cde82a7e21fe24f5ce32af0ee7307ec7d1e2dd4389249c83e5c7c5'
+  version '8.89.38'
+  sha256 '6f31f26d8e26235560fc82ea25091617a45d204f4560563da5867d4ec0415a2c'
 
   url "https://download01.logitech.com/web/ftp/pub/techsupport/gaming/LogitechSetup_#{version}.zip"
   name 'Logitech Gaming Software'

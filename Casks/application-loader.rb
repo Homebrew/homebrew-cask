@@ -9,4 +9,9 @@ cask 'application-loader' do
   pkg 'ApplicationLoader.pkg'
 
   uninstall pkgutil: 'com.apple.pkg.ApplicationLoader'
+
+  zap delete: [
+                '~/Library/Caches/com.apple.itunes.connect.ApplicationLoader',
+                '~/Library/Preferences/com.apple.itunes.connect.ApplicationLoader.plist',
+              ]
 end

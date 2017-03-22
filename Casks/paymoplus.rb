@@ -4,7 +4,7 @@ cask 'paymoplus' do
 
   url 'https://app.paymoapp.com/desktop-apps/paymoplus/PaymoPlus_latest.dmg'
   name 'PaymoPlus'
-  homepage 'https://www.paymoapp.com'
+  homepage 'https://www.paymoapp.com/'
 
   app 'PaymoPlus.app'
 end

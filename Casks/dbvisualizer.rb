@@ -8,8 +8,7 @@ cask 'dbvisualizer' do
 
   app 'DbVisualizer.app'
   installer script: 'DbVisualizer Installer.app/Contents/MacOS/JavaApplicationStub',
-            args:   ['-q', '-dir', staged_path.to_s],
-            sudo:   false
+            args:   ['-q', '-dir', staged_path.to_s]
 
   uninstall signal: [['TERM', 'com.dbvis.DbVisualizer']]
 

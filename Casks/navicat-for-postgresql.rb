@@ -1,6 +1,6 @@
 cask 'navicat-for-postgresql' do
-  version '11.2.16'
-  sha256 'ce8a0277657c90210e0e9fadcc12a1d0593561ef85f700de84ca37e93cb17563'
+  version '11.2.17'
+  sha256 '426fcc44ffc1ae21a855a3d7a56c31dd47ab8ca517df1f782b81a2b45e31abdb'
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_pgsql_en.dmg"
   name 'Navicat for PostgreSQL'

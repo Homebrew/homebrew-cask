@@ -1,13 +1,13 @@
 cask 'datadog-agent' do
-  version '5.8.0-1'
-  sha256 '7a9e0306519e067e8e35e96c8f52b1fa41147a1bb5b7410dd0d0e0c85bbfaf38'
+  version '5.11.3-1'
+  sha256 'f4dbf1a5f96a66725d4f033c54d13cdfca8c18376b31a8888e37c1deb838d7e7'
 
   # s3.amazonaws.com/dd-agent was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/dd-agent/datadogagent.dmg'
   name 'Datadog Agent'
   homepage 'https://www.datadoghq.com/'
 
-  pkg "datadogagent-#{version}.pkg"
+  pkg "datadog-agent-#{version}.pkg"
 
   preflight do
     require 'etc'

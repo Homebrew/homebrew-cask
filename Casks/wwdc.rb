@@ -11,4 +11,10 @@ cask 'wwdc' do
   auto_updates true
 
   app 'WWDC.app'
+
+  zap delete: [
+                '~/Library/Application Support/br.com.guilhermerambo.WWDC',
+                '~/Library/Caches/br.com.guilhermerambo.WWDC',
+                '~/Library/Preferences/br.com.guilhermerambo.WWDC.plist',
+              ]
 end
