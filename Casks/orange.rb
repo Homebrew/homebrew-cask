@@ -1,8 +1,8 @@
 cask 'orange' do
-  version '3-3.3.8'
-  sha256 '11566c7233a0d9d64d115cebe6b1996358cba7a5ed2b37a5e82d85b32cb5c335'
+  version '3.3.10'
+  sha256 '85dcb15da9d9f5f10c5bcb702fc98f64c02b1a497d3143cf8e2301874066c70b'
 
-  url "http://orange.biolab.si/download/files/Orange#{version}.dmg"
+  url "http://orange.biolab.si/download/files/Orange#{version.major}-#{version}.dmg"
   name 'Orange'
   homepage 'http://orange.biolab.si/'
 

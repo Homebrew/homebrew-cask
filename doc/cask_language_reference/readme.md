@@ -112,8 +112,6 @@ cask '<cask-token>' do
 [`<cask-token>`](token_reference.md) should match the Cask filename, without the `.rb` extension,
 enclosed in single quotes.
 
-The header line is not entirely strict Ruby: no comma is required after the Cask token.
-
 There are currently some arbitrary limitations on Cask tokens which are in the process of being removed. The Travis bot will catch any errors during the transition.
 
 

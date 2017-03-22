@@ -1,14 +1,14 @@
 cask 'panoply' do
-  version '4.6.1'
-  sha256 '465074f0088e6b254563dc97d661c47409bef5bfd0510982d5fb8859669f48ec'
+  version '4.7.0'
+  sha256 '17467c84ba9e8e359da0fd9d636710675b7c0b9637faaac5489f4faed64f89a2'
 
-  url "http://www.giss.nasa.gov/tools/panoply/download/PanoplyMacOS-#{version}.dmg"
+  url "https://www.giss.nasa.gov/tools/panoply/download/PanoplyMacOS-#{version}.dmg"
   name 'Panoply netCDF, HDF and GRIB Data Viewer'
-  homepage 'http://www.giss.nasa.gov/tools/panoply/'
+  homepage 'https://www.giss.nasa.gov/tools/panoply/'
 
   app 'Panoply.app'
 
   caveats do
-    depends_on_java('7+')
+    depends_on_java('8+')
   end
 end

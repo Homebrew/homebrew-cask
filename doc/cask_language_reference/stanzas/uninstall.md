@@ -32,7 +32,7 @@ Since `pkg` installers can do arbitrary things, different techniques are needed 
   - `args:` - array of arguments to the uninstall script
   - `input:` - array of lines of input to be sent to `stdin` of the script
   - `must_succeed:` - set to `false` if the script is allowed to fail
-  - `sudo:` - set to `false` if the script does not need `sudo`
+  - `sudo:` - set to `true` if the script needs `sudo`
 * `delete:` (string or array) - single-quoted, absolute paths of files or directory trees to remove. `delete:` should only be used as a last resort. `pkgutil:` is strongly preferred.
 * `rmdir:` (string or array) - single-quoted, absolute paths of directories to remove if empty
 * `trash:` (string or array) - currently a synonym for `delete:`. In the future this will cause files to be moved to the Trash.
@@ -149,18 +149,29 @@ IDs inside a kext bundle you have located on disk can be listed using the comman
 $ "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_id_in_kext" '/path/to/name.kext'
 ```
 
+## uninstall Key script:
+
+`uninstall script:` introduces a series of key-value pairs describing a command which will automate completion of the uninstall. Example (from [gpgtools.rb](https://github.com/caskroom/homebrew-cask/blob/4a0a49d1210a8202cbdd54bce2986f15049b8b61/Casks/gpgtools.rb#L33-#L37)):
+
+```ruby
+  uninstall script:    {
+                         executable: "#{staged_path}/Uninstall.app/Contents/Resources/GPG Suite Uninstaller.app/Contents/Resources/uninstall.sh",
+                         sudo:       true,
+                       }
+```
+
+It is important to note that, although `script:` in the above example does attempt to completely uninstall the `pkg`, it should not be used in detriment of [`pkgutil:`](#uninstall-key-pkgutil), but as a complement when possible.
+
 ## uninstall Key delete:
 
 `delete:` should only be used as a last resort, if other `uninstall` methods are insufficient.
 
-Arguments to `uninstall delete:` should be static, single-quoted, absolute paths.
+Arguments to `uninstall delete:` should use the following basic rules:
 
-* Only single quotes should be used.
-* Double-quotes should not be used. `ENV['HOME']` and other variables
- should not be interpolated in the value.
+* Only single quotes should be used, except when invoking [`#{version}` interpolation](https://github.com/caskroom/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/version.md). `ENV['HOME']` and other variables should not be interpolated in the value.
 * Basic tilde expansion is performed on paths, i.e., leading `~` is expanded to the home directory.
-* Only absolute paths should be given.
-* No glob expansion is performed (*eg* `*` characters are literal), though glob expansion is a desired future feature.
+* Paths must be absolute.
+* Glob expansion is performed using the [standard set of characters](https://en.wikipedia.org/wiki/Glob_(programming)).
 
 To remove user-specific files, use the `zap` stanza.
 

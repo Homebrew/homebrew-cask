@@ -1,13 +1,12 @@
 cask 'vimediamanager' do
-  version '0.7a14c'
+  version '0,7a14:c'
   sha256 '2fb3dc8b5d2c5ab40a34e18c0860da98d1b92bac673f8a134bfca82cf013714a'
 
-  # mariusth.channelwood.org was verified as official when first introduced to the cask
-  url "http://mariusth.channelwood.org/vimediamanager/files/vimediamanager_v#{version}.dmg"
-  appcast 'http://mariusth.heliohost.org/vimediamanager/appcast-cocoa.xml',
-          checkpoint: '432abeca6ddfeae43f3e915996d9f691ec7b066620545abe05b237d385e4a468'
+  url "https://github.com/vidalvanbergen/ViMediaManager/releases/download/v#{version.after_comma.before_colon}/vimediamanager_v#{version.before_comma}.#{version.after_comma.before_colon}#{version.after_colon}.dmg"
+  appcast 'https://github.com/vidalvanbergen/ViMediaManager/releases.atom',
+          checkpoint: '691bcae2d5e238bf242193f5e6191a759b810766a832de3e93eebaa59a6898c4'
   name 'ViMediaManager'
-  homepage 'http://mariusth.heliohost.org/vimediamanager/'
+  homepage 'https://github.com/vidalvanbergen/ViMediaManager'
 
   app 'ViMediaManager.app'
 end

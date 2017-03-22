@@ -1,6 +1,6 @@
 cask 'zulu' do
-  version '1.8.0_112,8.19.0.1'
-  sha256 'fdb3cd4a90bad536cb38db0688ab18b640fc975c9b8b72b59fbf57eb477b838d'
+  version '1.8.0_121,8.20.0.5'
+  sha256 '64c1f2b70fe3be0c5f531294ab93bd8bed0ee82117113b43c8686c38212915be'
 
   url "https://cdn.azul.com/zulu/bin/zulu#{version.after_comma}-jdk#{version.minor}.#{version.patch}.#{version.before_comma.sub(%r{.*_}, '')}-macosx_x64.dmg",
       referer: 'https://www.azul.com/downloads/zulu/zulu-mac/'
@@ -20,6 +20,9 @@ cask 'zulu' do
                    sudo: true
     system_command '/bin/ln',
                    args: ['-nsf', '--', "/Library/Java/JavaVirtualMachines/zulu#{version.before_comma}.jdk/Contents/Home", '/Library/Java/Home'],
+                   sudo: true
+    system_command '/usr/libexec/PlistBuddy',
+                   args: ['-c', 'Add :JavaVM:JVMCapabilities: string JNI', "/Library/Java/JavaVirtualMachines/zulu#{version.before_comma}.jdk/Contents/Info.plist"],
                    sudo: true
 
     if MacOS.version <= :mavericks
@@ -45,14 +48,4 @@ cask 'zulu' do
                          ]
                        end,
                      ].keep_if { |v| !v.nil? }
-
-  caveats <<-EOS.undent
-    If this cask is upgraded, previous stale versions will be left under
-    'Caskroom/zulu/{version}'. Stale versions may also be left under
-    '/Library/Java/JavaVirtualMachines/zulu{version}.jdk'. Removing them may
-    require manual deletion, e.g.
-
-      rm -rf /opt/homebrew-cask/Caskroom/zulu/
-      rm -rf /Library/Java/JavaVirtualMachines/zulu*.jdk
-  EOS
 end

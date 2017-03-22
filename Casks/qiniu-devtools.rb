@@ -5,7 +5,7 @@ cask 'qiniu-devtools' do
   # devtools.qiniu.io was verified as official when first introduced to the cask
   url "http://devtools.qiniu.io/qiniu-devtools-darwin_amd64-v#{version}.tar.gz"
   name 'Qiniu Developer Tools'
-  homepage 'http://developer.qiniu.com/'
+  homepage 'https://developer.qiniu.com/'
 
   binary 'qetag'
   binary 'qrsboxcli'

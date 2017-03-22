@@ -1,11 +1,11 @@
 cask 'timely' do
-  version '0.3.4'
-  sha256 'e03507be08721055c1a761b3753bbf1932a22f75e424bb6ac3c179199982c9b9'
+  version '0.4.5'
+  sha256 '732ca8669ce3390d5b9404bfb3ce06b30e0a20ef0a60da081624d22a1955c341'
 
   # github.com/Timely was verified as official when first introduced to the cask
   url "https://github.com/Timely/desktop-releases/releases/download/osx64-v#{version}/Timely-#{version}.dmg"
   appcast 'https://github.com/Timely/desktop-releases/releases.atom',
-          checkpoint: 'e4cb97258fa3ef5d9c4ac39ef80ad4bb3a96e11ad81beb1e674962292f270263'
+          checkpoint: '10058dde6d53d6ab0fa626266ffbe9ee7ab53172ed41bde843d700ea9eb5a5d4'
   name 'Timely'
   homepage 'https://timelyapp.com/'
 

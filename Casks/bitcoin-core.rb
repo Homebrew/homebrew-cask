@@ -1,6 +1,6 @@
 cask 'bitcoin-core' do
-  version '0.13.1'
-  sha256 'ca063833ffcfe9ac5c8f0e213a39b90132f32eb408e675c1e40eeaf3fcb0404f'
+  version '0.14.0'
+  sha256 '50fea43935e93381552b6730444eed6bbe513637a785e1b864b0c5883729228c'
 
   # bitcoin.org was verified as official when first introduced to the cask
   url "https://bitcoin.org/bin/bitcoin-core-#{version}/bitcoin-#{version}-osx.dmg"
@@ -17,11 +17,5 @@ cask 'bitcoin-core' do
     set_permissions "#{staged_path}/Bitcoin-Qt.app", '0755'
   end
 
-  postflight do
-    set_permissions "#{appdir}/Bitcoin Core.app", '0555'
-  end
-
-  zap delete: [
-                '~/Library/Preferences/org.bitcoin.Bitcoin-Qt.plist',
-              ]
+  zap delete: '~/Library/Preferences/org.bitcoin.Bitcoin-Qt.plist'
 end

@@ -1,4 +1,4 @@
-Before reporting a bug, lets make sure everything is right with your setup.
+Before reporting a bug, let’s make sure everything is right with your setup.
 
 When reporting bugs, remember that Homebrew-Cask is an independent project from Homebrew. Do your best to direct bug reports to the appropriate project. If your command started with `brew cask`, bring the bug to us first.
 
@@ -8,8 +8,7 @@ If you did not find your particular bug, before reporting it make sure you have 
 
 ```bash
 $ cd $(brew --repo); git fetch; git reset --hard origin/master
-$ brew untap phinze/cask; brew untap caskroom/cask; brew uninstall --force brew-cask
-$ brew cleanup; brew cask cleanup; brew update
+$ brew untap caskroom/cask; brew cleanup; brew cask cleanup; brew update
 ```
 
 Retry your failing command. If the issue persists, [go back](../../README.md#reporting-bugs) and pick the appropriate instructions for your problem.

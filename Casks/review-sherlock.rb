@@ -7,7 +7,6 @@ cask 'review-sherlock' do
   homepage 'http://www.rbcafe.com/software/review-sherlock/'
 
   depends_on macos: '>= :mountain_lion'
-  depends_on arch: :intel
 
   app 'Review Sherlock.app'
 end

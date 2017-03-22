@@ -4,7 +4,7 @@ cask 'deegain-au' do
 
   url 'http://dotec-audio.com/release/DeeGain/latest/au/DeeGainAU.zip'
   name 'DOTEC-AUDIO DeeGain (AU)'
-  homepage 'http://dotec-audio.com/deegain.html'
+  homepage 'https://dotec-audio.com/deegain.html'
 
   audio_unit_plugin 'DeeGain.component'
 end

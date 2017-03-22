@@ -4,7 +4,7 @@ cask 'soundflower' do
 
   url "https://github.com/mattingalls/Soundflower/releases/download/#{version}/Soundflower-#{version}.dmg"
   appcast 'https://github.com/mattingalls/Soundflower/releases.atom',
-          checkpoint: '5782759ffb2d6994cb222c88476011dee82680de40bef5011adcc36df6cdca49'
+          checkpoint: '02b56380ecc6fe4e29bd5a1b1410eee360c2947faf69b114b401e440455353a0'
   name 'Soundflower'
   homepage 'https://github.com/mattingalls/Soundflower'
 

@@ -7,7 +7,7 @@ cask 'macdown' do
   appcast 'https://github.com/MacDownApp/macdown/releases.atom',
           checkpoint: '494e6ec6883fd528a9b1905aa3270dfd0361143bfae5bec6b50284b22ef1f966'
   name 'MacDown'
-  homepage 'http://macdown.uranusjr.com/'
+  homepage 'https://macdown.uranusjr.com/'
 
   app 'MacDown.app'
   binary "#{appdir}/MacDown.app/Contents/SharedSupport/bin/macdown"

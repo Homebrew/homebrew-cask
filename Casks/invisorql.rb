@@ -9,7 +9,6 @@ cask 'invisorql' do
   homepage 'http://www.pozdeev.com/invisor/'
 
   depends_on macos: '>= :lion'
-  depends_on arch: :x86_64
   depends_on cask: 'invisor-lite'
 
   qlplugin 'InvisorQL.qlgenerator'

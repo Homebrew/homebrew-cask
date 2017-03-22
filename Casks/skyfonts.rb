@@ -4,6 +4,8 @@ cask 'skyfonts' do
 
   # cdn1.skyfonts.com was verified as official when first introduced to the cask
   url "http://cdn1.skyfonts.com/client/Monotype_SkyFonts_Mac64_#{version}.dmg"
+  appcast 'https://www.fonts.com/other/skyfonts/getskyfontsclientdownloadinfo',
+          checkpoint: 'a549f8ab010f32f2f40bbcada5ac1e4097069dbfb82ce184e3e52638b5b2cdbe'
   name 'SkyFonts'
   homepage 'https://www.fonts.com/web-fonts/google'
 

@@ -1,11 +1,11 @@
 cask 'korean-spelling-checker' do
-  version '1.7.0'
-  sha256 'a26723814722ef3c381f822321ca9ba9ef3885dab6071a1675bf12a9c0ad2142'
+  version '1.7.1'
+  sha256 'bbf7ebd57e29d83db827dbce46d8397d2de2eedd15ae1248a2d4bf556db5fc57'
 
   # github.com/miname/Korean-Spelling-Checker-Workflow was verified as official when first introduced to the cask
   url "https://github.com/miname/Korean-Spelling-Checker-Workflow/archive/#{version}.tar.gz"
   appcast 'https://github.com/miname/Korean-Spelling-Checker-Workflow/releases.atom',
-          checkpoint: '9c4a731a6084689385b3e57dc77ba4dd3b5ca2e969a4ad601c13bc27d8f450d4'
+          checkpoint: 'a51b690a1fa84faae276e0d7ba92837346d99a6824cd6863bdc2b99b4fe70599'
   name '한국어 맞춤법 검사기'
   homepage 'http://appletree.or.kr/google-chrome-extensions/'
 
@@ -13,12 +13,10 @@ cask 'korean-spelling-checker' do
 
   uninstall delete: '~/Library/Services/✔ 선택한 글의 한국어 맞춤법 검사하기.workflow'
 
-  caveats do
-    <<-EOS.undent
-      #{token} only works when you install it manually via Service Installer,
-      so you may need to run the installer with
+  caveats <<-EOS.undent
+    #{token} only works when you install it manually via Service Installer,
+    so you may need to run the installer with
 
-        open '~/Library/Services/✔ 선택한 글의 한국어 맞춤법 검사하기.workflow'
-    EOS
-  end
+      open '~/Library/Services/✔ 선택한 글의 한국어 맞춤법 검사하기.workflow'
+  EOS
 end

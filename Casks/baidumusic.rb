@@ -5,7 +5,7 @@ cask 'baidumusic' do
   url 'http://music.baidu.com/player/mac/baidumusic_mac.dmg'
   name 'Baidu Music'
   name '百度音乐'
-  homepage 'http://music.baidu.com/'
+  homepage 'https://music.baidu.com/'
 
   app '百度音乐.app'
 end

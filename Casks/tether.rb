@@ -1,6 +1,6 @@
 cask 'tether' do
-  version '1.6.2'
-  sha256 '3e774fa4f4e25a0be0da5d23c1052701d8f78ae1393172a085058324b21bcbaf'
+  version '1.7.1'
+  sha256 '7e775cbc7d45d526662db8eba4682adc214e344d2ee8713f78e98ad3cc807194'
 
   url "http://hellotether.com/downloads/Tether_v#{version}.zip"
   name 'Tether'

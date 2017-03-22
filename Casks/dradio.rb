@@ -6,7 +6,7 @@ cask 'dradio' do
   appcast 'http://dradio.me/updates/appcast.xml',
           checkpoint: '8015cab2f43ad05aeff7b6cab2151b77878ec30663079b9c61abce71fa2b617d'
   name 'dRadio'
-  homepage 'http://dradio.me'
+  homepage 'http://dradio.me/'
 
   app 'dRadio.app'
 end

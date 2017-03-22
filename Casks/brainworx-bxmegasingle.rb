@@ -1,6 +1,6 @@
 cask 'brainworx-bxmegasingle' do
-  version '1.3'
-  sha256 '92b6393ec946840cccfe3cfe06318629c3a467d608f67480bef7ebc272ba1071'
+  version '1.3.1'
+  sha256 '693d13c932dfad28907d5bee0678cf8c4f1424986dbb2ef33cc8e0ba9131c4a6'
 
   url "https://cdn.plugin-alliance.com/tl_files/products/installer/bx_megasingle_mac_#{version.dots_to_underscores}.zip"
   name 'Brainworx bx_megasingle'

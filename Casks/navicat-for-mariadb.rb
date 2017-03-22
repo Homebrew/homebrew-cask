@@ -1,6 +1,6 @@
 cask 'navicat-for-mariadb' do
-  version '11.2.15'
-  sha256 '0f3cbefa16058ffbd59ca40efef83c3ba5cd4e1c7a8b0ca161f53a98b9e3b52e'
+  version '11.2.17'
+  sha256 'e0510d95a12ddaf15d705bdf452ede866227f056b54cd1af0f4d9c085ce7a872'
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_mariadb_en.dmg"
   name 'Navicat for MariaDB'

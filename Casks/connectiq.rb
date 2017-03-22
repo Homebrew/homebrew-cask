@@ -1,14 +1,14 @@
 cask 'connectiq' do
-  version '1.2.1'
-  sha256 '37461e01e41697c9abe794772649a9f144d358c6da56b1dd39f0c533f3a29198'
+  version '2.2.2'
+  sha256 '07f5676c759867e65139c2184f9b7aae8039547c51098b213c8d6126a951856b'
 
-  url "https://developer.garmin.com/downloads/connect-iq/sdks/connectiq-sdk-mac-#{version}.zip"
+  url "https://developer.garmin.com/downloads/connect-iq/sdks/connectiq-sdk-mac-#{version}.dmg"
   name 'Garmin Connect IQ SDK'
   homepage 'https://developer.garmin.com/connect-iq'
 
-  app 'bin/ConnectIQ.app'
-  binary 'bin/connectiq'
-  binary 'bin/monkeyc'
-  binary 'bin/monkeydo'
-  binary 'bin/shell'
+  app "connectiq-sdk-mac-#{version}/bin/ConnectIQ.app"
+  binary "connectiq-sdk-mac-#{version}/bin/connectiq"
+  binary "connectiq-sdk-mac-#{version}/bin/monkeyc"
+  binary "connectiq-sdk-mac-#{version}/bin/monkeydo"
+  binary "connectiq-sdk-mac-#{version}/bin/shell"
 end

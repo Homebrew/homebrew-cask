@@ -1,10 +1,10 @@
 cask 'rbtools' do
-  version '0.7.7'
-  sha256 '9f349490d82ce62c373c639437b14f81b40a36e6f06c7ec3c3154bc388d9defb'
+  version '0.7.9'
+  sha256 '3eb805c9b91902802b055380ddcffc503f6e034d987a9b818d7c40b287b76741'
 
   url "https://downloads.reviewboard.org/releases/RBTools/#{version.major_minor}/RBTools-#{version}.pkg"
   appcast 'https://www.reviewboard.org/docs/releasenotes/rbtools/',
-          checkpoint: '8c04b3f5824596f4882606e02321e76d50646b606529ecec7ff671ea45d1e651'
+          checkpoint: 'c7386ff57deb321b44102fd8b26063846b0ce0095930b919977651f2569d0a7b'
   name 'RBTools'
   homepage 'https://www.reviewboard.org/docs/rbtools/0.7/'
 

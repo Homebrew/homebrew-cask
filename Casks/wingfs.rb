@@ -1,6 +1,6 @@
 cask 'wingfs' do
-  version '2.0.81'
-  sha256 '1e982efc23f718ab0da48dc60b660fd0e41a5a79749ae31651e1e318cbc9b58d'
+  version '2.0.82'
+  sha256 'a9335af21fff081c2114a6f7cd0f9c53cd207d5c4e6f881d5cb31c6d8e46d639'
 
   # s3.amazonaws.com/wingfs_downloads was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/wingfs_downloads/WingFS_#{version.major_minor}.dmg"

@@ -1,18 +1,13 @@
 cask 'vitalsource-bookshelf' do
-  if MacOS.version <= :lion
-    version '6.5.2'
-    sha256 'bf5873bb39ff76421a55c9ab769007bb1af64b21dabf6630a4087bbc29c27d55'
-    url "http://downloads.vitalbook.com/vsti/bookshelf/#{version}/MAC/Bookshelf/VitalSource_Bookshelf_#{version}.zip"
-  else
-    version '6.8'
-    sha256 '01153395bb01f79cf11bc5091568c35b3d5de6a0725254bce8b39e0b57a5b031'
-    url "http://downloads.vitalbook.com/vsti/bookshelf/#{version}/MAC/BOOKSHELF/VitalSource_Bookshelf_#{version}.zip"
-  end
+  version '7.0'
+  sha256 'd9654ad2b9b49d9e212c56b5265f027cb9b9288e9837929bcc51f3879bfdce52'
 
-  appcast 'https://services.vitalbook.com/version/check',
-          checkpoint: 'a310b400eadb9aabc7bcf12e5e56ee2dd80d595288a380d8d2a572b242016bb8'
+  # downloads.vitalbook.com/vsti/bookshelf was verified as official when first introduced to the cask
+  url "http://downloads.vitalbook.com/vsti/bookshelf/#{version}/MAC/Bookshelf/VitalSource_Bookshelf_#{version}.dmg"
   name 'VitalSource Bookshelf'
   homepage 'https://www.vitalsource.com/bookshelf-features'
+
+  depends_on macos: '>= :mavericks'
 
   app 'VitalSource Bookshelf.app'
 end

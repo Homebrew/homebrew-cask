@@ -6,8 +6,5 @@ cask 'sunvox' do
   name 'SunVox'
   homepage 'http://www.warmplace.ru/soft/sunvox/'
 
-  depends_on arch:  :x86_64,
-             macos: '>= 10.6'
-
   app 'sunvox/sunvox/osx/SunVox.app'
 end

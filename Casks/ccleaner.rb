@@ -4,7 +4,7 @@ cask 'ccleaner' do
 
   url "https://download.piriform.com/mac/CCMacSetup#{version.sub(%r{^(\d+)\.(\d+).*}, '\1\2')}.dmg"
   name 'Piriform CCleaner'
-  homepage 'https://www.piriform.com/ccleaner'
+  homepage 'https://www.piriform.com/ccleaner-mac'
 
   app 'CCleaner.app'
 

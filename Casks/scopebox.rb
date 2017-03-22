@@ -1,6 +1,6 @@
 cask 'scopebox' do
-  version '3.4.3'
-  sha256 'abd8be8ec861e217c61bdc17dee60984da69d18409992dd5ef85d0966938e96e'
+  version '3.5.4'
+  sha256 'a5368385fb88ab8d5d9458649a97d0d9085c586ab6e738e562392f033c455cec'
 
   url "https://www.divergentmedia.com/filedownload/ScopeBox%20#{version}.dmg"
   name 'ScopeBox'

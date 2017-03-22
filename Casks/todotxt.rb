@@ -1,11 +1,11 @@
 cask 'todotxt' do
-  version '2.3.2'
-  sha256 '430e61897681b000416e7e08b41b0763f16371c095838cff64f1d103e63f3dac'
+  version '2.4.0'
+  sha256 '67f94669661e5b2186f3b619465d18206d8e20ae082d672c86b17d766f59fd41'
 
   # github.com/mjdescy/TodoTxtMac was verified as official when first introduced to the cask
   url "https://github.com/mjdescy/TodoTxtMac/releases/download/#{version}/TodoTxtMac.app.zip"
   appcast 'https://github.com/mjdescy/TodoTxtMac/releases.atom',
-          checkpoint: 'fa99f96e53efa25ac05f5e8fc4747d8d13ae8a00e9339957c8c55d51c2ddca2c'
+          checkpoint: 'b0e4bee1ac3637dfd19abcf039d09752d484ea76796a848ead606a3257ac6e3e'
   name 'TodoTxtMac'
   homepage 'https://mjdescy.github.io/TodoTxtMac/'
 

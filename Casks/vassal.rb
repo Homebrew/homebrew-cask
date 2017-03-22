@@ -1,11 +1,11 @@
 cask 'vassal' do
-  version '3.2.16'
-  sha256 '13a6a556a4c4d87a8c40556b72b8c703f919da19f3144ddf48d61be947e9bb02'
+  version '3.2.17'
+  sha256 '9aa341de5c4ec936c137f21105ed7e622b2cd437600882d7bad9755dea5fac3e'
 
   # sourceforge.net/vassalengine was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/vassalengine/VASSAL-current/VASSAL-#{version}/VASSAL-#{version}-macosx.dmg"
   appcast 'https://sourceforge.net/projects/vassalengine/rss?path=/VASSAL-current',
-          checkpoint: '441baba4b477cdd3a872591cb19e084a7b3c9ac52da2c8efdd948a6dd671b3dd'
+          checkpoint: '9cea3e557aac1ca18ddeedf4ac7adab15a401efc1c568dae2faf0b5004b69cb7'
   name 'VASSAL'
   homepage 'http://www.vassalengine.org/'
 

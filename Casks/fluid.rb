@@ -8,7 +8,5 @@ cask 'fluid' do
   name 'Fluid'
   homepage 'http://fluidapp.com/'
 
-  depends_on macos: '>= :snow_leopard'
-
   app 'Fluid.app'
 end

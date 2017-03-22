@@ -1,6 +1,6 @@
 cask 'kullo' do
-  version '49.0.0'
-  sha256 'e0193b6c2871bf09175baef5747d9758fff37aaf5d39869be77e1b95833a2fd2'
+  version '50.0.0'
+  sha256 '5b70563a3726f8477c65113ef61df3c3df287e13a457b80b0547d365aba4e9dd'
 
   url "https://www.kullo.net/download/files/osx/Kullo-#{version}.dmg"
   name 'Kullo'

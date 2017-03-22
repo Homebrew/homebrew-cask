@@ -4,7 +4,7 @@ cask 'ti-connect-ce' do
 
   url "http://edudownload.ti.com/downloads/files/cdn/ti-connect/#{version.major_minor}/TIConnectCE-#{version}.dmg"
   name 'TI Connect™ CE'
-  homepage 'https://education.ti.com/en/us/products/computer_software/connectivity-software/ti-connect-ce-software/tabs/overview'
+  homepage 'https://education.ti.com/en/products/computer-software/ti-connect-ce-sw'
 
   app 'TI Connect CE.app'
 end

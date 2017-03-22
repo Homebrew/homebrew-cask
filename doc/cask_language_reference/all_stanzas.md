@@ -20,7 +20,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install).
 | ------------------ |------------------------------ | ----------- |
 | `app`              | yes                           | relative path to an `.app` that should be moved into the `/Applications` folder on installation (see also [App Stanza Details](stanzas/app.md))
 | `pkg`              | yes                           | relative path to a `.pkg` file containing the distribution (see also [Pkg Stanza Details](stanzas/pkg.md))
-| `binary`           | yes                           | relative path to a Binary that should be linked into the `/usr/local/bin` folder on installation
+| `binary`           | yes                           | relative path to a Binary that should be linked into the `$(brew --prefix)/bin` folder (typically `/usr/local/bin`) on installation
 | `colorpicker`      | yes                           | relative path to a ColorPicker plugin that should be moved into the `~/Library/ColorPickers` folder on installation
 | `dictionary`       | yes                           | relative path to a Dictionary that should be moved into the `~/Library/Dictionaries` folder on installation
 | `font`             | yes                           | relative path to a Font that should be moved into the `~/Library/Fonts` folder on installation

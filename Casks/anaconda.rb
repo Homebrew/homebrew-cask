@@ -1,6 +1,6 @@
 cask 'anaconda' do
-  version '4.2.0'
-  sha256 '95448921601e1952e01a17ba9767cd3621c154af7fc52dd6b7f57d462155a358'
+  version '4.3.1'
+  sha256 'a42267203e207cb5e0f539e0d879ead12e436311825c7114d0edd880d001b539'
 
   url "https://repo.continuum.io/archive/Anaconda3-#{version}-MacOSX-x86_64.sh"
   name 'Continuum Analytics Anaconda'
@@ -10,8 +10,7 @@ cask 'anaconda' do
   container type: :naked
 
   installer script: "Anaconda3-#{version}-MacOSX-x86_64.sh",
-            args:   ['-b'],
-            sudo:   false
+            args:   ['-b']
 
   uninstall delete: '~/anaconda3'
 

@@ -4,6 +4,8 @@ cask 'td-agent' do
 
   # packages.treasuredata.com.s3.amazonaws.com was verified as official when first introduced to the cask
   url "http://packages.treasuredata.com.s3.amazonaws.com/2/macosx/td-agent-#{version}.dmg"
+  appcast 'https://td-agent-package-browser.herokuapp.com/2/macosx',
+          checkpoint: '0464c337583625e3604e30bbc6434f018cb7034c200710c2dd5965a8fa18ea47'
   name 'td-agent'
   homepage 'https://www.fluentd.org/'
 

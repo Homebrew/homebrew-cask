@@ -6,7 +6,7 @@ cask 'fog-burner' do
   name 'Fog Burner'
   homepage 'http://fogburner.tofumatt.com/'
 
-  depends_on macos: '>= 10.9'
+  depends_on macos: '>= :mavericks'
 
   app 'Fog Burner.app'
 end

@@ -7,6 +7,7 @@ cask 'plistedit-pro' do
   homepage 'https://www.fatcatsoftware.com/plisteditpro/'
 
   app 'PlistEdit Pro.app'
+  binary "#{appdir}/PlistEdit Pro.app/Contents/MacOS/pledit"
 
   zap delete: [
                 '~/Library/Preferences/com.fatcatsoftware.pledpro.plist',

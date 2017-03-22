@@ -10,8 +10,4 @@ cask 'adobe-arh' do
   container type: :naked
 
   binary 'arh'
-
-  postflight do
-    set_permissions "#{staged_path}/arh", '755'
-  end
 end

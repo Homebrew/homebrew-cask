@@ -6,8 +6,8 @@ cask 'sourcetree' do
     version '2.0.5.5'
     sha256 'f23129587703a706a37d5fdd9b2390875305b482a2b4e4b0e34bd49cba9b63c9'
   else
-    version '2.4c'
-    sha256 '9d5d1fd44f39a757436405c79a551a896c5e421c6acf27a75de376e519664701'
+    version '2.4.1a'
+    sha256 'cec67981d4b8ea8a8e46ac7190d6d4d16a2164427a5c0e2419b1af327fc24815'
   end
 
   # atlassian.com was verified as official when first introduced to the cask
@@ -36,8 +36,4 @@ cask 'sourcetree' do
                 '~/Library/Preferences/com.torusknot.SourceTreeNotMAS.LSSharedFileList.plist',
                 '~/Library/Saved Application State/com.torusknot.SourceTreeNotMAS.savedState',
               ]
-
-  caveats do
-    files_in_usr_local
-  end
 end

@@ -1,6 +1,6 @@
 cask 'simpletag' do
-  version '1.5.8'
-  sha256 'dcd183808fa09dd15d7ec9c1050fee7588e59b9bbaa8cd0fd49e337d2ed2028a'
+  version '1.5.10'
+  sha256 '32bb973f784e63271467cf28b1a877053a0e9d435d6eed15d3f05ef76c286ab0'
 
   url "https://downloads.sourceforge.net/simpletag/simpletag-gui-#{version}-osx.zip"
   appcast 'https://sourceforge.net/projects/simpletag/rss',

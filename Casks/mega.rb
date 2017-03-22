@@ -6,8 +6,5 @@ cask 'mega' do
   name 'MEGA'
   homepage 'http://megasoftware.net/'
 
-  depends_on macos: '>= :snow_leopard'
-  depends_on arch: :intel
-
   app "MEGA#{version}-mac.app"
 end

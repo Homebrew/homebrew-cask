@@ -4,7 +4,7 @@ cask 'crosswebex' do
 
   url "https://open.shinhan.com/initech/extension/down/CrossWebEX.pkg?ver=#{version}"
   name 'Cross WEB EX'
-  homepage 'https://open.shinhan.com/'
+  homepage 'https://bank.shinhan.com/'
 
   pkg 'CrossWebEX.pkg'
 

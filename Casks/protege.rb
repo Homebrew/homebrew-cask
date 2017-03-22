@@ -7,7 +7,7 @@ cask 'protege' do
   appcast 'https://github.com/protegeproject/protege-distribution/releases.atom',
           checkpoint: '015b97cd269ea62c263f6e647b8a0b435af388ca3bc3fe84dd9b231c795247c7'
   name 'Protégé'
-  homepage 'http://protege.stanford.edu/'
+  homepage 'https://protege.stanford.edu/'
 
   app "Protege-#{version}/Protégé.app"
 end

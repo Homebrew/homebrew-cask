@@ -1,6 +1,6 @@
 cask 'j' do
-  version '804'
-  sha256 'b730a73e78303a40166e297f9b4d874bfa2e4877ef02137641a55252157a2b44'
+  version '805'
+  sha256 '55acaed87895dddcfe8dc08ae3c5045b6705830622c923c6852296cd0f5720a5'
 
   url "http://www.jsoftware.com/download/j#{version}/install/j#{version}_mac64.zip"
   name 'J'
@@ -11,8 +11,7 @@ cask 'j' do
     app "j64-#{version}/#{a}.app"
   end
 
-  installer script: "j64-#{version}/updatejqt.sh",
-            sudo:   false
+  installer script: "j64-#{version}/updatejqt.sh"
 
   # target names according to readme.txt
   %w[jcon jconsole].each do |b|

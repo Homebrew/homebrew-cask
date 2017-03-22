@@ -75,27 +75,18 @@ The available symbols for hardware are:
 
 | symbol     | meaning        |
 | ---------- | -------------- |
-| `:i386`    | 32-bit Intel   |
 | `:x86_64`  | 64-bit Intel   |
-| `:ppc_7400`| 32-bit PowerPC |
-| `:ppc_64`  | 64-bit PowerPC |
-| `:intel`   | Any Intel      |
-| `:ppc`     | Any PowerPC    |
+| `:intel`   | 64-bit Intel   |
 
 The following are all valid expressions:
 
 ```ruby
-depends_on arch: :x86_64
-depends_on arch: [:x86_64]          # same meaning as above
 depends_on arch: :intel
-depends_on arch: [:i386, :x86_64]   # same meaning as above
+depends_on arch: :x86_64            # same meaning as above
+depends_on arch: [:x86_64]          # same meaning as above
 ```
 
-Since PowerPC hardware is no longer common, the expression most frequently needed will be:
-
-```ruby
-depends_on arch: :x86_64
-```
+Since as of now all the macOS versions we support only run on 64-bit Intel, `depends_on arch:` is never necessary.
 
 ## All depends_on Keys
 

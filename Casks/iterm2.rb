@@ -1,17 +1,16 @@
 cask 'iterm2' do
   # note: "2" is not a version number, but an intrinsic part of the product name
-  version '3.0.12'
-  sha256 'd500c5e376a05df6896f92504961142b7721efb9e235232d39545c7a3c5b7507'
+  version '3.0.14'
+  sha256 'bed63a85d48d4e0ec2f49858aa4a6ce5dcb7bb3eaf78f87124ed5239b6a7e936'
 
   url "https://iterm2.com/downloads/stable/iTerm2-#{version.dots_to_underscores}.zip"
   appcast 'https://iterm2.com/appcasts/final.xml',
-          checkpoint: '1a760708aa5754e898f23cbb2c232033d09d2a0e1df53852e4f2cf81acbf33c4'
+          checkpoint: '05a38d47dec2db1a0e779d54222ac80ff1d07f8c0c97e46fcc232ae1a381cb21'
   name 'iTerm2'
   homepage 'https://www.iterm2.com/'
 
   auto_updates true
   depends_on macos: '>= :mountain_lion'
-  depends_on arch: :intel
 
   app 'iTerm.app'
 

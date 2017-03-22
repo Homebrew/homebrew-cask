@@ -1,11 +1,11 @@
 cask 'borgbackup' do
-  version '1.0.9rc1'
-  sha256 '926af3037808a017bd54c43d8d83e91ba2da68631b4321f253acedd704f200af'
+  version '1.0.10'
+  sha256 '6c441f77e43909248b7494d768e34e442984ac8aaaa32405aa53fc750d9e1245'
 
   # github.com/borgbackup/borg was verified as official when first introduced to the cask
   url "https://github.com/borgbackup/borg/releases/download/#{version}/borg-macosx64"
   appcast 'https://github.com/borgbackup/borg/releases.atom',
-          checkpoint: '18c47b4b9dec2deff4da88dfdbe1f833ae680143d5291305d034fe68083c86d7'
+          checkpoint: '44e5d9858488ccdcd055eddeb61caf204ca15a22e2e5d8808dc636216d573e10'
   name 'BorgBackup'
   homepage 'https://borgbackup.readthedocs.io/en/stable/'
   gpg "#{url}.asc", key_id: '51F78E01'

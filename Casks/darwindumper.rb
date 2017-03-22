@@ -1,10 +1,10 @@
 cask 'darwindumper' do
-  version '2.9.9.2'
-  sha256 '6971211171f5f562ad833ca530173d7783c5211222b2540cd599d47ac7f2576c'
+  version '3.0.3'
+  sha256 '15eca11d9c03c4af0ceb335efb844db02eb1a5ad1ce85691ec6ea7c6c30c7148'
 
   url "https://bitbucket.org/blackosx/darwindumper/downloads/DarwinDumper_v#{version}.zip"
   name 'DarwinDumper'
   homepage 'https://bitbucket.org/blackosx/darwindumper'
 
-  app "DarwinDumper_v#{version}/DarwinDumper.app"
+  app 'DarwinDumper.app'
 end

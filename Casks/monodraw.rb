@@ -1,10 +1,10 @@
 cask 'monodraw' do
-  version 'b94'
-  sha256 '2e0dc71d06c9f6a56b7a6c8f31c9fe3689c53ec4bd28c9ff175c6065e7565970'
+  version 'b97'
+  sha256 'df8665c7d9aabf92114b37fc305e57ca7f920b9d5bef3352d3053a33427a4290'
 
   url "https://updates.helftone.com/monodraw/downloads/Monodraw-#{version}.zip"
   appcast 'https://updates.helftone.com/monodraw/appcast-beta.xml',
-          checkpoint: '396a457a8e3a7d22e75960aeb983dae5a9f425c427ac3684750d1f48addc300d'
+          checkpoint: 'd50ef187befb26c6366d68b897525ebdcc3cd952cfd86a7001cceeb4f8976efe'
   name 'Monodraw'
   homepage 'https://monodraw.helftone.com/'
 

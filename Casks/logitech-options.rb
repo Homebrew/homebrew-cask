@@ -1,6 +1,6 @@
 cask 'logitech-options' do
-  version '6.32.4'
-  sha256 '34a86ac3ff38725d49f876dbe7c027f1d6afc7c666cbdbe5fe9523d1652b3c9c'
+  version '6.40.106'
+  sha256 '256ae2b791d3b09ee68d463d5799b7b651a8bcc12339174475d54b84765705d7'
 
   url "http://www.logitech.com/pub/techsupport/options/Options_#{version}.zip"
   name 'Logitech Options'
@@ -12,7 +12,6 @@ cask 'logitech-options' do
 
   uninstall script:  {
                        executable: '/Applications/Utilities/LogiMgr Uninstaller.app/Contents/Resources/Uninstaller',
-                       sudo:       false,
                      },
             pkgutil: [
                        'com.logitech.manager.pkg',

@@ -1,6 +1,6 @@
 cask 'makerbot-desktop' do
-  version '3.9.1.1346'
-  sha256 '3ab82fcf397d1fe2ea9781054a47f85a96899f7362946a475bba5312c4a54970'
+  version '3.10.0.1725'
+  sha256 '9579eeb71daec6cf7e13bbc69f0bc7a954ab65ff9ee82e0fd03121226a21629e'
 
   url "https://downloads.makerbot.com/makerware/MakerBot%20Bundle%20BETA%20#{version}.dmg"
   name 'MakerBot Desktop'

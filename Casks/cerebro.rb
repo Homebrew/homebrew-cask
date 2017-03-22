@@ -1,13 +1,20 @@
 cask 'cerebro' do
-  version '0.1.0'
-  sha256 '0a2acec0d520cd632172c00cabd0a160184dcbc29302eae28478832c930021ca'
+  version '0.2.7'
+  sha256 '170e4bbf0104ebe4bb0667dafceccc033abd652966ee33721e7d6f85b9f9b564'
 
   # github.com/KELiON/cerebro was verified as official when first introduced to the cask
-  url "https://github.com/KELiON/cerebro/releases/download/#{version}/Cerebro.dmg"
+  url "https://github.com/KELiON/cerebro/releases/download/#{version}/cerebro-#{version}.dmg"
   appcast 'https://github.com/KELiON/cerebro/releases.atom',
-          checkpoint: 'd0a372db626b46ceb8125c351c69a2733bc84fe82772bda007b91a0f649a1561'
+          checkpoint: 'b6819500d8d2da2c703d2f085060f1937f11d8b906a1a5f59035bcba3d9ea926'
   name 'Cerebro'
   homepage 'https://cerebroapp.com/'
 
   app 'Cerebro.app'
+
+  zap delete: [
+                '~/Library/Application Support/Cerebro',
+                '~/Library/Preferences/com.cerebroapp.Cerebro.helper.plist',
+                '~/Library/Preferences/com.cerebroapp.Cerebro.plist',
+                '~/Library/Saved Application State/com.cerebroapp.Cerebro.savedState',
+              ]
 end

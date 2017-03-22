@@ -10,10 +10,8 @@ cask 'megasync' do
 
   app 'MEGAsync.app'
 
-  caveats do
-    <<-EOS.undent
-      #{token} only works if called from /Applications, so you may need to install it with
-        brew cask install --appdir=/Applications #{token}
-    EOS
-  end
+  caveats <<-EOS.undent
+    #{token} only works if called from /Applications, so you may need to install it with
+      brew cask install --appdir=/Applications #{token}
+  EOS
 end

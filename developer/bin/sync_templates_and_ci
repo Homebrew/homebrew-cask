@@ -3,7 +3,7 @@
 readonly caskroom_online='https://github.com/caskroom'
 readonly caskroom_repos_dir="$(mktemp -d)"
 readonly main_repo_dir="$(mktemp -d)" # From where files will be copied
-readonly caskroom_repos=(homebrew-versions homebrew-fonts homebrew-eid) # homebrew-cask is absent since it's the repo all the others are compared against
+readonly caskroom_repos=(homebrew-versions homebrew-fonts homebrew-eid homebrew-drivers) # homebrew-cask is absent since it's the repo all the others are compared against
 
 function message {
   echo "${1}"

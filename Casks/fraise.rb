@@ -6,5 +6,11 @@ cask 'fraise' do
   name 'Fraise'
   homepage 'https://github.com/jfmoy/Fraise'
 
+  depends_on macos: '<= :el_capitan'
+
   app 'Fraise.app'
+
+  caveats do
+    discontinued
+  end
 end

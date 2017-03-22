@@ -1,6 +1,6 @@
 cask 'stamp' do
-  version '4.4.3'
-  sha256 '0c183b8acdaaa51732be8b9baf0e7ab5beb9c7989e7d92670d829697214e5841'
+  version '4.4.4'
+  sha256 'b7d9208c3a4686914618beafcf2613566d3ec0f1108705780ce45d0077ef86cc'
 
   url "https://freeyourmusic.com/media/STAMP#{version.no_dots}.dmg"
   name 'Stamp'

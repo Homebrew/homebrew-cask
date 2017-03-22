@@ -7,7 +7,6 @@ cask 'outguess' do
   homepage 'http://www.rbcafe.com/software/outguess/'
 
   depends_on macos: '>= :mountain_lion'
-  depends_on arch: :intel
 
   app 'Outguess.app'
 end

@@ -9,7 +9,7 @@ cask 'noun-project' do
   name 'Noun Project'
   homepage 'https://thenounproject.com/'
 
-  depends_on macos: '>= 10.9'
+  depends_on macos: '>= :mavericks'
 
   app 'Noun Project.app'
 end

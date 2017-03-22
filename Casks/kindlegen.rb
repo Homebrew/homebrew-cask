@@ -8,4 +8,10 @@ cask 'kindlegen' do
   homepage 'https://www.amazon.com/gp/feature.html?docId=1000765211'
 
   binary 'kindlegen'
+
+  caveats <<-EOS.undent
+    Instructions on using KindleGen are available in
+
+      #{staged_path}/manual.html
+  EOS
 end

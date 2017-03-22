@@ -7,7 +7,7 @@ cask 'pokerth' do
   appcast 'https://sourceforge.net/projects/pokerth/rss',
           checkpoint: '7a823751e557c8c38a4ae7ae0f4cfe502f140dbf84e433021280298c4413608d'
   name 'PokerTH'
-  homepage 'https://pokerth.net/'
+  homepage 'https://www.pokerth.net/'
 
   app 'pokerth.app'
 end

@@ -1,10 +1,10 @@
 cask 'macbreakz' do
-  version '5.26'
-  sha256 'b40f25f56cd4968d15affebe74e25c5d600d04a5723d9d03ef59ec72431903a1'
+  version '5.31'
+  sha256 '7ca1bf91ff2c018363f1dd74137077ebdd616beb5aa4d42aa732a64cf6761b8e'
 
   url "http://www.publicspace.net/download/MacBreakZ#{version.major}.dmg"
   appcast "http://www.publicspace.net/app/signed_mb#{version.major}.xml",
-          checkpoint: 'dc30f7b8390c401431ecc54eb91ab7e06e0be9976a84bac1267dfbeb2547b48b'
+          checkpoint: '54d830fe2ce391de55ed11509459748aae6bb6931ef477a364dce934eab60763'
   name 'MacBreakZ'
   homepage 'http://www.publicspace.net/MacBreakZ/'
 

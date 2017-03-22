@@ -4,7 +4,7 @@ cask 'bitlord' do
 
   url "http://www.bitlord.com/osx/BitLord-Lion-#{version}.dmg"
   name 'BitLord'
-  homepage 'http://www.bitlord.com/'
+  homepage 'https://www.bitlord.com/'
 
   app 'BitLord.app'
 end

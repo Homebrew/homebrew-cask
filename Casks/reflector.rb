@@ -1,10 +1,10 @@
 cask 'reflector' do
-  version '2.5.4.0'
-  sha256 '19164380fd3ed85e155ed7126bce197ce2d9e5acc31253000619a8373d8fa871'
+  version '2.6.0'
+  sha256 '00dab8f66c3d8f0605257517ebe12d7edb10126e0732840e1c78051744a3e8e0'
 
   url "https://download.airsquirrels.com/Reflector#{version.major}/Mac/Reflector-#{version}.dmg"
   appcast "https://updates.airsquirrels.com/Reflector#{version.major}/Mac/Reflector#{version.major}.xml",
-          checkpoint: '51e719d11b97a4e2d81f4f040e8777d7b40956ba5dac22f6bcee1d0ad5c74efe'
+          checkpoint: '26f5ec51941725648ddb415aec6a36edf5eebc722bb2b992b2c1a29378c32b1f'
   name "Reflector #{version.major}"
   homepage 'http://www.airsquirrels.com/reflector/'
 

@@ -1,10 +1,10 @@
 cask 'vmware-fusion' do
-  version '8.5.3-4696910'
-  sha256 '68d3f5b4379302138f3d1060ec270b960a531e28177f8b30c5431390912b6337'
+  version '8.5.5-5192483'
+  sha256 '713be441a762055e5fd24cc9b3f2fdd2664728bff8324cc1542ca120b14659b6'
 
   url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
   appcast 'https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml',
-          checkpoint: '3b61731b6d171ddb91512e06e8118160d4a703e606e8df1d3a6b57bdfce38c58'
+          checkpoint: 'e8e7064fd0e6ab8b35b78e5313f4e2ce5bf3ef231009c4f090c6bd27210e22c0'
   name 'VMware Fusion'
   homepage 'https://www.vmware.com/products/fusion.html'
 
@@ -35,6 +35,12 @@ cask 'vmware-fusion' do
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-vmx-debug"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-vmx-stats"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/VMware OVF Tool/ovftool"
+
+  postflight do
+    system_command "#{appdir}/VMware Fusion.app/Contents/Library/Initialize VMware Fusion.tool",
+                   args: ['set'],
+                   sudo: true
+  end
 
   uninstall_preflight do
     set_ownership "#{appdir}/VMware Fusion.app"

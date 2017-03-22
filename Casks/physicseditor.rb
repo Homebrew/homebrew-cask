@@ -9,7 +9,6 @@ cask 'physicseditor' do
   homepage 'https://www.codeandweb.com/physicseditor'
 
   depends_on macos: '>= :lion'
-  depends_on arch: [:x86_64, :ppc_64]
 
   app 'PhysicsEditor.app'
 end

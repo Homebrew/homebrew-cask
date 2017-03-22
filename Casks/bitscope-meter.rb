@@ -1,6 +1,6 @@
 cask 'bitscope-meter' do
-  version '2.0.DD14E'
-  sha256 'de1877050993fde72e1efbe135035b9dc2589cc60fb80e0c876057c89cd56f82'
+  version '2.0.FK22G'
+  sha256 '1aa8d0171918870155eeb5b58f38676c7e46541b11dd25f6bfaade13bb549ccd'
 
   url "http://bitscope.com/download/files/bitscope-meter_#{version}.app.tgz"
   name 'BitScope Meter'

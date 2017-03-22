@@ -1,11 +1,10 @@
 cask 'soulseek' do
-  version '2016-4-24'
-  sha256 '82cbee7947e5d87db00ae38df5fb65d053a3cd7e4fdc61ca3a1508437a9673ce'
+  version '2017-2-25'
+  sha256 '9bc76b360fb326807c3c655fdb9af98ea4b5db30ee56a1baed9c65c0897fd5d4'
 
-  # dropbox.com/s/fxx07um9kpffltj was verified as official when first introduced to the cask
-  url "https://www.dropbox.com/s/fxx07um9kpffltj/SoulseekQt-#{version}.dmg?dl=1"
+  url "https://www.slsknet.org/SoulseekQt/Mac/SoulseekQt-#{version}.dmg"
   name 'Soulseek'
-  homepage 'http://www.soulseekqt.net/'
+  homepage 'https://www.slsknet.org/'
 
   app 'SoulseekQt.app'
 end

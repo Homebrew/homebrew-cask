@@ -6,8 +6,6 @@ cask 'flip4mac' do
   name 'Flip4Mac'
   homepage 'https://www.telestream.net/flip4mac/'
 
-  depends_on macos: '>= :snow_leopard'
-
   pkg 'Flip4Mac.pkg'
 
   uninstall pkgutil: 'net.telestream.Flip4Mac'
