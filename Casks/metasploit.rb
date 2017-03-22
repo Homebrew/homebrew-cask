@@ -24,5 +24,5 @@ cask 'metasploit' do
                         sudo:       true,
                       },
             pkgutil:  '.*metasploit.*',
-            rmdir:    '/opt/metasploit-framework'
+            delete:   '/opt/metasploit-framework'
 end
