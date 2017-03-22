@@ -4,7 +4,7 @@ cask 'knime' do
 
   url "https://download.knime.org/analytics-platform/macosx/knime_#{version}.app.macosx.cocoa.x86_64.dmg"
   name 'KNIME Analytics Platform'
-  homepage 'https://www.knime.org'
+  homepage 'https://www.knime.org/'
 
   depends_on macos: '>= :lion'
 
