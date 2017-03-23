@@ -1,4 +1,4 @@
-cask 'miniconda' do
+cask 'miniconda2' do
   version :latest
   sha256 :no_check
 
