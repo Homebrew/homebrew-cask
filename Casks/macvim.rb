@@ -12,10 +12,7 @@ cask 'macvim' do
   depends_on macos: '>= :mountain_lion'
 
   app 'MacVim.app'
-  binary "#{appdir}/MacVim.app/Contents/MacOS/MacVim"
-  binary "#{appdir}/MacVim.app/Contents/MacOS/macvim-askpass"
-  binary "#{appdir}/MacVim.app/Contents/MacOS/mvim"
-  binary "#{appdir}/MacVim.app/Contents/MacOS/Vim"
+  binary "#{appdir}/MacVim.app/Contents/bin/mvim"
 
   zap delete: [
                 '~/Library/Caches/org.vim.MacVim',
