@@ -1,6 +1,6 @@
 cask 'free-download-manager' do
-  version '5.1.25'
-  sha256 '2cecfb18e98272bec8c0bc6974b53afdcdc4c08f9a25b912906762bfb05c0259'
+  version '5.1.26'
+  sha256 '6d943b77ae74c280ec1fd8e26e4d5427911505b71df671164c60236d9edafc33'
 
   url "http://files2.freedownloadmanager.org/#{version.major}/#{version.major_minor}-latest/fdm.dmg"
   name 'Free Download Manager'
