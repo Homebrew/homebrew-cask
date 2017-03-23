@@ -7,4 +7,12 @@ cask 'jumpshare' do
   homepage 'https://jumpshare.com/'
 
   app 'Jumpshare.app'
+
+  zap delete: [
+                '~/Library/Application Scripts/com.jumpshare.JumpshareLoginHelper',
+                '~/Library/Application Support/com.jumpshare.Jumpshare',
+                '~/Library/Containers/com.jumpshare.JumpshareLoginHelper',
+                '~/Library/Cookies/com.jumpshare.Jumpshare.binarycookies',
+                '~/Library/Preferences/com.jumpshare.Jumpshare.plist',
+              ]
 end

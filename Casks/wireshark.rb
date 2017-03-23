@@ -26,6 +26,7 @@ cask 'wireshark' do
   uninstall script:  {
                        executable: '/usr/sbin/dseditgroup',
                        args:       ['-o', 'delete', 'access_bpf'],
+                       sudo:       true,
                      },
             pkgutil: 'org.wireshark.*',
             delete:  [

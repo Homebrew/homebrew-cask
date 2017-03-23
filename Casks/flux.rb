@@ -16,7 +16,8 @@ cask 'flux' do
     suppress_move_to_applications
   end
 
-  uninstall login_item: 'Flux'
+  uninstall login_item: 'Flux',
+            quit:       'org.herf.Flux'
 
   zap delete: [
                 '~/Library/Preferences/org.herf.Flux.plist',

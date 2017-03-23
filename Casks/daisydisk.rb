@@ -23,4 +23,11 @@ cask 'daisydisk' do
   postflight do
     suppress_move_to_applications
   end
+
+  zap delete: [
+                '/Library/LaunchDaemons/com.daisydiskapp.DaisyDiskAdminHelper.plist',
+                '/Library/PrivilegedHelperTools/com.daisydiskapp.DaisyDiskAdminHelper',
+                '~/Library/Application Support/DaisyDisk',
+                '~/Library/Preferences/com.daisydiskapp.DaisyDiskStandAlone.plist',
+              ]
 end

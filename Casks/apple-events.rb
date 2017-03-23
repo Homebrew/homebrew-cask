@@ -4,11 +4,17 @@ cask 'apple-events' do
 
   url "https://github.com/insidegui/AppleEvents/releases/download/#{version}/AppleEvents_v#{version}_r.zip"
   appcast 'https://github.com/insidegui/AppleEvents/releases.atom',
-          checkpoint: '475d39ed0b4a3084af4f7a1068a49065fc7833973b08f3479a57f7f766668d8e'
+          checkpoint: 'cdf5faa46cdf2b6215c68424a681bba8462d5f4e0d39791929f2411b4bd08b9f'
   name 'Apple Events'
   homepage 'https://github.com/insidegui/AppleEvents'
 
   auto_updates true
 
   app 'Apple Events.app'
+
+  zap delete: [
+                '~/Library/Application Support/br.com.guilhermerambo.Apple-Events',
+                '~/Library/Caches/br.com.guilhermerambo.Apple-Events',
+                '~/Library/Preferences/br.com.guilhermerambo.Apple-Events.plist',
+              ]
 end

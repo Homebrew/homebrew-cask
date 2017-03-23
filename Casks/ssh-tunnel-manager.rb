@@ -8,4 +8,6 @@ cask 'ssh-tunnel-manager' do
   homepage 'https://www.tynsoe.org/v2/stm/'
 
   app 'SSH Tunnel Manager.app'
+
+  zap delete: '~/Library/Preferences/org.tynsoe.sshtunnelmanager.plist'
 end

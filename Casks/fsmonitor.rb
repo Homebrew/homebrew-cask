@@ -12,4 +12,14 @@ cask 'fsmonitor' do
   postflight do
     suppress_move_to_applications
   end
+
+  zap delete: [
+                '/Library/LaunchDaemons/com.tristan.fseventstool.plist',
+                '/Library/PrivilegedHelperTools/com.tristan.fseventstool',
+                '/Users/Shared/FSMonitor',
+                '~/Library/Application Support/FSMonitor',
+                '~/Library/Application Support/com.tristan.FSMonitor',
+                '~/Library/Caches/com.tristan.FSMonitor',
+                '~/Library/Preferences/com.tristan.FSMonitor.plist',
+              ]
 end
