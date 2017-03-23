@@ -5,7 +5,7 @@ cask 'jedit' do
   # sourceforge.net/jedit was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/jedit/jedit#{version}install.dmg"
   appcast 'https://sourceforge.net/projects/jedit/rss',
-          checkpoint: '20949f9cfe6cfd10970e57b6f9aebb2ce0e52cf611f443996b28b0c1976c6119'
+          checkpoint: '5ef477fd6b9583423dc6fca1816255d1e2c4da3057f8cd88d7783b904dcb8567'
   name 'jEdit'
   homepage 'http://www.jedit.org/'
 
