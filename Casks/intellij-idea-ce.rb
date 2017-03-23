@@ -1,10 +1,10 @@
 cask 'intellij-idea-ce' do
   version '2017.1'
-  sha256 'd4320af2c36923c84fb5ea5ecd46c964fb8835123b166995cff30677fa674870'
+  sha256 '20acc55b4f6d9052576b71f23fa197c2a90b1ff33f27c1c8c59dbbadf88283cf'
 
   url "https://download.jetbrains.com/idea/ideaIC-#{version}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=IIC&latest=true&type=release',
-          checkpoint: '71eb78853bb09579bd30f3f4f5a87558cecdc9fadc6a9e566a819cc8a60f05dd'
+          checkpoint: '74a9753f2b55b62be5e1fb41691fc489c34457556b73383cec28a22752bef61c'
   name 'IntelliJ IDEA Community Edition'
   name 'IntelliJ IDEA CE'
   homepage 'https://www.jetbrains.com/idea/'
