@@ -14,15 +14,14 @@ cask 'metasploit' do
                       ]
 
   pkg 'metasploitframework-latest.pkg'
-
   installer script:       '/opt/metasploit-framework/bin/msfconsole',
             must_succeed: false
 
-  uninstall script:   {
-                        executable: '/opt/metasploit-framework/bin/msfremove',
-                        input:      %w[Yes],
-                        sudo:       true,
-                      },
-            pkgutil:  '.*metasploit.*',
-            delete:   '/opt/metasploit-framework'
+  uninstall script:  {
+                       executable: '/opt/metasploit-framework/bin/msfremove',
+                       input:      %w[Yes],
+                       sudo:       true,
+                     },
+            pkgutil: '.*metasploit.*',
+            delete:  '/opt/metasploit-framework'
 end
