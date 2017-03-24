@@ -12,7 +12,17 @@ cask 'macvim' do
   depends_on macos: '>= :mountain_lion'
 
   app 'MacVim.app'
-  binary "#{appdir}/MacVim.app/Contents/bin/mvim"
+
+  %w[
+    gview
+    gvim
+    gvimdiff
+    mview
+    mvim
+    mvimdiff
+  ].each do |link_name|
+    binary "#{appdir}/MacVim.app/Contents/bin/mvim", target: link_name
+  end
 
   zap delete: [
                 '~/Library/Caches/org.vim.MacVim',
