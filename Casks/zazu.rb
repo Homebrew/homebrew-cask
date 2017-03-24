@@ -1,11 +1,11 @@
 cask 'zazu' do
-  version '0.4.0'
-  sha256 'c51307df89108a89b96db1ad483340f205309a46cac7e9cc714bae8073924b0e'
+  version '0.5.1'
+  sha256 'dad890f91ff3e2924cd72c388ca1074d6399bce6af8a904909bb4e268ca990c2'
 
   # github.com was verified as official when first introduced to the cask
   url "https://github.com/tinytacoteam/zazu/releases/download/v#{version}/zazu-#{version}.dmg"
   appcast 'https://github.com/tinytacoteam/zazu/releases.atom',
-          checkpoint: '72d2103f1a82c9c9279cc62c122eff79ddabf3beb9f567c58b32486f39d1dee7'
+          checkpoint: 'c510e79944a19c11cec489c36da04737742f0130c366a6f5d9cbf60e60de6e88'
   name 'Zazu'
   homepage 'http://zazuapp.org/'
 
