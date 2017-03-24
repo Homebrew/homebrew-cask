@@ -4,7 +4,7 @@ cask 'double-commander' do
 
   url "https://downloads.sourceforge.net/doublecmd/doublecmd-#{version}.qt.x86_64.dmg"
   appcast 'https://sourceforge.net/projects/doublecmd/rss',
-          checkpoint: 'f848918b77c267414fb0eb34f97053a2316cc4ae0eed54483dcd968c5f74a31a'
+          checkpoint: '7d61cd97bb46ff40d2ab5bc5de77817d7f8994b706ef10209d8b048a42ad1627'
   name 'Double Commander'
   homepage 'http://doublecmd.sourceforge.net/'
 
