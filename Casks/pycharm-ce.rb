@@ -5,7 +5,6 @@ cask 'pycharm-ce' do
   url "https://download.jetbrains.com/python/pycharm-community-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=PCC&latest=true&type=release',
           checkpoint: 'd56902f0f9917a35f04f2e538d9b2f432f18550bbd8eb05acff59cbadd90894d'
-
   name 'Jetbrains PyCharm Community Edition'
   name 'PyCharm CE'
   homepage 'https://www.jetbrains.com/pycharm/'

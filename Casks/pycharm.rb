@@ -5,7 +5,6 @@ cask 'pycharm' do
   url "https://download.jetbrains.com/python/pycharm-professional-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=PCP&latest=true&type=release',
           checkpoint: 'fee227c74f9450b3192675ce9fa25a276437d14585aa31cf74911546658adf8a'
-
   name 'PyCharm'
   homepage 'https://www.jetbrains.com/pycharm/'
 
