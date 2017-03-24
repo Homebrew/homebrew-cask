@@ -1,10 +1,10 @@
 cask 'zerotier-one' do
-  version '1.1.14'
-  sha256 '272c07b491f2bdb17757345be1ebc63609436c2ccd912bb515d08742951d63bf'
+  version '1.2.2'
+  sha256 'e57245b90c8620a0448ac2aba4cc24c57a3b1010f448879c7a953779d3f4435e'
 
   url 'https://download.zerotier.com/dist/ZeroTier%20One.pkg'
   appcast 'https://github.com/zerotier/ZeroTierOne/releases.atom',
-          checkpoint: '281d0b06265be988b641b1dce843cf3635059e8cd0e5fce9391be1e03c74827d'
+          checkpoint: '032cf7579d5fbb1eeb5d8c49bc74e4a1c6dec93c04cf5086a4d6210cea800eca'
   name 'ZeroTier One'
   homepage 'https://www.zerotier.com/product-one.shtml'
 
