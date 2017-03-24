@@ -94,7 +94,7 @@ The following aliases and abbreviations are provided for convenience:
 [Homebrew/homebrew-completions](https://github.com/Homebrew/homebrew-completions) supports `bash` and `fish` completions (only for `brew-cask` right now). Install them with:
 
 ```bash
-$ brew install homebrew/completions/brew-cask-completion
+$ brew install brew-cask-completion
 ```
 
 For `zsh` completion support, simply run:
