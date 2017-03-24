@@ -4,7 +4,7 @@ cask 'bitsquare' do
 
   # github.com/bitsquare/bitsquare was verified as official when first introduced to the cask
   url "https://github.com/bitsquare/bitsquare/releases/download/v#{version}/Bitsquare-#{version}.dmg"
-  appcast 'https://github.com/bitsquare/bitsquare//releases.atom',
+  appcast 'https://github.com/bitsquare/bitsquare/releases.atom',
           checkpoint: '972e9ef712ad7c0350af858b89d717cf70eda2ed7baa0290e9f25ff1a7067ba1'
   name 'Bitsquare'
   homepage 'https://bitsquare.io/'
