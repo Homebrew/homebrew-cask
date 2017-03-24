@@ -1,10 +1,10 @@
 cask 'gpg-sync' do
-  version '0.1.0'
-  sha256 '815a136c36ebcad6b3c1905f40570582a0cae0c9d8784e3e8fe3d6ff8e1f2e0f'
+  version '0.1.1'
+  sha256 '56b3d0073baf521fd6dc8f2fc09d63edf75d16b37a46b4437275dc3865484be3'
 
   url "https://github.com/firstlookmedia/gpgsync/releases/download/v#{version}/GPGSync.pkg"
   appcast 'https://github.com/firstlookmedia/gpgsync/releases.atom',
-          checkpoint: '7711036493f8e7b022efeb90c64ddfe261525b55daad0149eac7face93c658ae'
+          checkpoint: 'e386ff63730a46c0dad3c6a24a4509bc83babcb0e389e2175ea9e1e633054941'
   name 'GPG Sync'
   homepage 'https://github.com/firstlookmedia/gpgsync/'
 
