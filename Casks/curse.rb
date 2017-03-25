@@ -18,5 +18,11 @@ cask 'curse' do
                 '~/Library/Caches/com.curse.radium',
                 '~/Library/Caches/curse',
                 '~/Library/Preferences/com.curse.curseclient.plist',
+                '~/Library/Preferences/com.curse.curseclient.helper.plist',
+                '/Library/ScriptingAdditions/CurseOverlay.osax',
               ]
+
+  caveats do
+    discontinued
+  end
 end
