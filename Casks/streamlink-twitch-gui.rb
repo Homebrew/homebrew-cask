@@ -1,10 +1,10 @@
 cask 'streamlink-twitch-gui' do
-  version '1.1.1'
-  sha256 '9df47f1877027792b63c1b0d7d8d6bea24fe3e7e73ddb386d9879f7c831360be'
+  version '1.2.0'
+  sha256 '0cbc6aae06938b293d30634c976be5b6cb72589334122f148f42e844a14a159c'
 
   url "https://github.com/streamlink/streamlink-twitch-gui/releases/download/v#{version}/streamlink-twitch-gui-v#{version}-macOS.tar.gz"
   appcast 'https://github.com/streamlink/streamlink-twitch-gui/releases.atom',
-          checkpoint: 'f0488ed908e21c6743dfa889e751a2ec47892ce87aa4325266830acae3b81370'
+          checkpoint: '9a1db875aa77c42cb1dad36653e4747cb9b776643cfc05412d7f4ede98aa69bf'
   name 'Streamlink Twitch GUI'
   homepage 'https://github.com/streamlink/streamlink-twitch-gui/'
 
