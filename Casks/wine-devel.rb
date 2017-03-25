@@ -1,6 +1,6 @@
 cask 'wine-devel' do
-  version '2.1'
-  sha256 '2a84e1d3aeaabf82ebab71f9a546909ce9b40bb4cffae062dc96545150bf930a'
+  version '2.2'
+  sha256 'c79275bde71627fdeb8fb5ad612c1f78edd381003d64d94a50f87375bf4c33a6'
 
   url "https://dl.winehq.org/wine-builds/macosx/i686/winehq-devel-#{version}.pkg"
   name 'WineHQ-devel'
