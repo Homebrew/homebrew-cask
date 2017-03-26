@@ -4,7 +4,7 @@ cask 'elmedia-player' do
 
   url 'http://mac.eltima.com/download/elmediaplayer.dmg'
   name 'Elmedia Player'
-  homepage 'http://mac.eltima.com/media-player.html'
+  homepage 'https://mac.eltima.com/media-player.html'
 
   app 'Elmedia Player.app'
 

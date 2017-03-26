@@ -6,7 +6,7 @@ cask 'airy' do
   appcast 'http://mac.eltima.com/download/airy-update/airy.xml',
           checkpoint: '6e57d84268b74bcb5fe180cf5fbf724b224585d99f0eea006e683a0fcd128239'
   name 'Airy'
-  homepage 'http://mac.eltima.com/youtube-downloader-mac.html'
+  homepage 'https://mac.eltima.com/youtube-downloader-mac.html'
 
   app 'Airy.app'
 

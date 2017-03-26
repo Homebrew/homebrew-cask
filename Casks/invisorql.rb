@@ -6,7 +6,7 @@ cask 'invisorql' do
   appcast 'http://www.pozdeev.com/invisor/changelog-ql.php',
           checkpoint: '7f58ba19ad1422d0d949fc6d56ae24c623033e8b2fbadf5a1dae8509ed527ee6'
   name 'Invisor QuickLook Plug-In'
-  homepage 'http://www.pozdeev.com/invisor/'
+  homepage 'https://www.pozdeev.com/invisor/'
 
   depends_on macos: '>= :lion'
   depends_on cask: 'invisor-lite'

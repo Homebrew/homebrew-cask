@@ -6,7 +6,7 @@ cask 'zoom' do
   appcast 'http://www.logicalshift.co.uk/unix/zoom/update.xml',
           checkpoint: '100f800b8d8508447fd6e2690ef28f2dfe6e96d37d697583a6efcfbdf5dfc7fa'
   name 'Zoom'
-  homepage 'http://www.logicalshift.co.uk/unix/zoom/'
+  homepage 'https://www.logicalshift.co.uk/unix/zoom/'
 
   app 'Zoom.app'
 end

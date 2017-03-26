@@ -6,7 +6,7 @@ cask 'commander-one' do
   appcast 'http://www.eltima.com/download/commander-update/settings.xml',
           checkpoint: 'cdd0d91d5f64a0c66405f4b130aedb8b87918ff74e2639388a54782bb87c9a97'
   name 'Commander One'
-  homepage 'http://mac.eltima.com/file-manager.html'
+  homepage 'https://mac.eltima.com/file-manager.html'
 
   app 'Commander One.app'
 end

@@ -6,7 +6,7 @@ cask 'folx' do
   appcast 'http://mac.eltima.com/download/folx-updater/folx.xml',
           checkpoint: 'de10550065e2316573a16d23e031b6f4dd59ea655033922216ac8ab4910b0c5e'
   name 'Folx'
-  homepage 'http://mac.eltima.com/download-manager.html'
+  homepage 'https://mac.eltima.com/download-manager.html'
 
   auto_updates true
 

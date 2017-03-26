@@ -7,7 +7,7 @@ cask 'boxcryptor' do
   appcast 'https://rink.hockeyapp.net/api/2/apps/7fd6db3e51a977132e3b120c613eaea8',
           checkpoint: '96de80d6dc8c7dfbe069a33e4dda791feaf7158fa2b681c3fc42e83459367720'
   name 'Boxcryptor'
-  homepage 'https://www.boxcryptor.com/en'
+  homepage 'https://www.boxcryptor.com/en/'
 
   depends_on macos: '>= :mavericks'
 

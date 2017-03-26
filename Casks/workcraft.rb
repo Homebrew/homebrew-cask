@@ -4,7 +4,7 @@ cask 'workcraft' do
 
   url "https://www.workcraft.org/lib/exe/fetch.php/download/workcraft-v#{version}-osx.tar.gz"
   name 'Workcraft'
-  homepage 'http://www.workcraft.org/'
+  homepage 'https://www.workcraft.org/'
 
   app 'Workcraft.app'
 end
