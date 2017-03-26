@@ -6,7 +6,7 @@ cask 'wavesurfer' do
   appcast 'https://sourceforge.net/projects/wavesurfer/rss',
           checkpoint: '620ae6885b402e925edfd9901f176336d056697bf9dc187da55cdb5047cc91bf'
   name 'WaveSurfer'
-  homepage 'https://sourceforge.net/projects/wavesurfer'
+  homepage 'https://sourceforge.net/projects/wavesurfer/'
 
   app 'WaveSurfer.app'
 end
