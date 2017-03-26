@@ -4,7 +4,7 @@ cask 'file-juicer' do
 
   url 'http://echoone.com/filejuicer/FileJuicer.dmg'
   name 'File Juicer'
-  homepage 'http://echoone.com/filejuicer/'
+  homepage 'https://echoone.com/filejuicer/'
 
   app 'File Juicer.app'
 end
