@@ -7,7 +7,7 @@ cask 'exfalso' do
   appcast 'https://github.com/quodlibet/quodlibet/releases.atom',
           checkpoint: '2c4aa5c46bf6b4ecb5a4321de3d63f015520f48ade3de3720a86a92a18143170'
   name 'Ex Falso'
-  homepage 'http://quodlibet.readthedocs.io/'
+  homepage 'https://quodlibet.readthedocs.io/'
 
   app 'ExFalso.app'
 
