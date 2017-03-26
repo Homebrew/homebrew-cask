@@ -4,7 +4,7 @@ cask 'dayone-cli' do
 
   url 'http://dayoneapp.com/downloads/dayone-cli.pkg'
   name 'Day One CLI'
-  homepage 'http://dayoneapp.com/tools/cli-man/'
+  homepage 'https://dayoneapp.com/tools/cli-man/'
 
   pkg 'dayone-cli.pkg'
 
