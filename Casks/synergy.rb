@@ -4,7 +4,7 @@ cask 'synergy' do
 
   url "https://binaries.symless.com/v#{version.before_comma}/synergy-v#{version.before_comma}-stable-#{version.after_comma}-MacOSX-x86_64.dmg"
   name 'Synergy'
-  homepage 'https://symless.com/synergy/'
+  homepage 'https://symless.com/synergy'
 
   app 'Synergy.app'
 end
