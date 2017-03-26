@@ -4,7 +4,7 @@ cask 'shapes' do
 
   url "http://shapesapp.com/dist/Shapes_#{version}.zip"
   appcast "http://shapesapp.com/appcast/shapes#{version.major}.rss",
-          checkpoint: '2797b54dbdc8cba24209eba91cebbcbe4e273d80b0a64c13fb156c0b8adb24ae'
+          checkpoint: 'a0b8c47ac54597d0cebf549ca72ed2464e79000f376472c34ecdc2cb4de1f1c4'
   name 'Shapes'
   homepage 'http://shapesapp.com/'
 
