@@ -65,6 +65,7 @@ cask 'cleanmymac' do
                   "~/Library/Application Support/CleanMyMac #{version.major}",
                   "~/Library/Application Support/CleanMyMac #{version.major} Menu",
                   "~/Library/Caches/CleanMyMac #{version.major}",
+                  "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.macpaw.CleanMyMac#{version.major}.help",
                   "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}",
                   "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}.Menu",
                   "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}.Scheduler",
@@ -75,6 +76,7 @@ cask 'cleanmymac' do
                   "~/Library/Preferences/com.macpaw.cleanmymac#{version.major}.menu.plist",
                   "~/Library/Preferences/com.macpaw.CleanMyMac#{version.major}.Scheduler.plist",
                   "~/Library/Preferences/com.macpaw.CleanMyMac#{version.major}.plist",
+                  "~/Pictures/Photos Library.photoslibrary/private/com.macpaw.CleanMyMac#{version.major}",
                 ]
   end
 
