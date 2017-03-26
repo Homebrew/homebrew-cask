@@ -6,7 +6,7 @@ cask 'beyond-compare' do
   appcast "http://www.scootersoftware.com/checkupdates.php?product=bc#{version.major}&platform=osx",
           checkpoint: '491f6cbf38ca59aed9ceae04d0ffcbf93a460a8c342ee682ca92c277e6a144a9'
   name 'Beyond Compare'
-  homepage 'http://www.scootersoftware.com/'
+  homepage 'https://www.scootersoftware.com/'
 
   app 'Beyond Compare.app'
 
