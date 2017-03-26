@@ -4,7 +4,7 @@ cask 'ultraedit' do
 
   url  "http://www.ultraedit.com/files/uex/OSX/UltraEdit_#{version}.dmg"
   name 'UltraEdit'
-  homepage 'http://www.ultraedit.com/products/ultraedit.html'
+  homepage 'https://www.ultraedit.com/'
 
   app 'UltraEdit.app'
 end
