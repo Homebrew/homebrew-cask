@@ -4,7 +4,7 @@ cask 'fugio' do
 
   url "http://www.bigfug.com/releases/Fugio-#{version}-Cask.zip"
   name 'Fugio'
-  homepage 'http://www.bigfug.com/software/fugio'
+  homepage 'http://www.bigfug.com/software/fugio/'
 
   depends_on macos: '>= 10.9'
   depends_on formula: %w[
