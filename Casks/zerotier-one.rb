@@ -6,7 +6,7 @@ cask 'zerotier-one' do
   appcast 'https://github.com/zerotier/ZeroTierOne/releases.atom',
           checkpoint: '032cf7579d5fbb1eeb5d8c49bc74e4a1c6dec93c04cf5086a4d6210cea800eca'
   name 'ZeroTier One'
-  homepage 'https://www.zerotier.com/product-one.shtml'
+  homepage 'https://www.zerotier.com/download.shtml'
 
   pkg 'ZeroTier One.pkg'
 
