@@ -4,11 +4,12 @@ cask 'telegram' do
 
   url "https://osx.telegram.org/updates/Telegram-#{version}.app.zip"
   appcast 'https://osx.telegram.org/updates/versions.xml',
-          checkpoint: 'b005735a9fe4921020ca0655a50507e1cf9fa984138a6745ddb4afb6d7c7ae9b'
+          checkpoint: '351b7783b7053fa103b61895f3962ce55671d69654b2c1b45d60d94bd9e9bfb4'
   name 'Telegram for macOS'
   homepage 'https://macos.telegram.org/'
 
   auto_updates true
+  depends_on macos: '>= 10.11'
 
   app 'Telegram.app'
 end
