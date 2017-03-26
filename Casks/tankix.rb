@@ -4,7 +4,7 @@ cask 'tankix' do
 
   url "http://static.tankix.com/app/StandaloneOSXIntel64/prod_#{version}/TankiX.dmg"
   name 'Tanki X'
-  homepage 'http://www.tankix.com/'
+  homepage 'https://www.tankix.com/'
 
   auto_updates true
 
