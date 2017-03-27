@@ -6,7 +6,7 @@ cask 'squad' do
   appcast 'https://andrewschreiber.github.io/squadappcast.xml',
           checkpoint: '0242efe468fb4018e319b97796263a21951711d198e4069887d939f955968faa'
   name 'Squad'
-  homepage 'https://andrewschreiber.github.io'
+  homepage 'https://andrewschreiber.github.io/'
 
   app 'Squad.app'
 end
