@@ -9,6 +9,8 @@ cask 'messenger-for-desktop' do
   name 'Messenger for Desktop'
   homepage 'https://messengerfordesktop.com/'
 
+  auto_updates true
+
   app 'Messenger for Desktop.app'
 
   zap delete: [
