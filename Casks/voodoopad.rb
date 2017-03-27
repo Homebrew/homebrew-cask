@@ -4,7 +4,7 @@ cask 'voodoopad' do
 
   url "https://plausible.coop/static/download/VoodooPad-#{version}.zip"
   appcast 'https://plausible.coop/voodoopad/release_notes',
-          checkpoint: 'e4993ba176c67aae1c4c053bee52bdd533fc133ab0b7456b733dff1c74c4d4ca'
+          checkpoint: 'd8ee7913b9d061ce99ab45c7171aba17460ae22ca3528156da2fba50cdcf69d6'
   name 'VoodooPad'
   homepage 'https://plausible.coop/voodoopad/'
 
