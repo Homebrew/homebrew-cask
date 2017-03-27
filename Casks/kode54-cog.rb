@@ -1,6 +1,6 @@
 cask 'kode54-cog' do
-  version '0.08,3d0d0ee'
-  sha256 'e62714567ef250fbe82f8539660135e0ff146902df1b09cdcfa107f08cf1f6b1'
+  version '0.08,a142a06'
+  sha256 '3e746e7f0c12ceea3abdf70b8c7a913aaecb17a885c4f9b31c9c9168013f2d83'
 
   # losno.co/cog was verified as official when first introduced to the cask
   url "https://f.losno.co/cog/Cog-#{version.after_comma}.zip"

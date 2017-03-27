@@ -4,7 +4,7 @@ cask 'tanki-online' do
 
   url "http://s.eu.tankionline.com/resources/client/#{version}/mac/tankionline_eu.dmg"
   name 'Tanki Online'
-  homepage 'http://tankionline.com/'
+  homepage 'https://tankionline.com/'
 
   app 'Tanki Online.app'
 

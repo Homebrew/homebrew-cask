@@ -1,11 +1,11 @@
 cask 'bitcoin-classic' do
-  version '1.2.2'
-  sha256  'ee6eda8071e65a47b60a6d3a52c04ab8e75c53abfcca53da24599f572514dece'
+  version '1.2.3'
+  sha256 'f691d218b5c1f24c458a3a5b144518a99dbc64fa0fcc4329735e35f39f498fa0'
 
   # github.com/bitcoinclassic was verified as official when first introduced to the cask
   url "https://github.com/bitcoinclassic/bitcoinclassic/releases/download/v#{version}/bitcoin-#{version}-osx.dmg"
   appcast 'https://github.com/bitcoinclassic/bitcoinclassic/releases.atom',
-          checkpoint: 'e1cab782b11b51d1810fcdeaf4a3c3ed722f335b0452330c39cb31b52b9a889f'
+          checkpoint: '64a310cb19e13569c87f8b054e84de08a894e4e456d78f49346018930b751975'
   name 'Bitcoin Classic'
   homepage 'https://bitcoinclassic.com/'
 

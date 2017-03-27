@@ -11,7 +11,7 @@ cask 'onyx' do
   appcast 'http://www.titanium-software.fr/en/release_onyx.html',
           checkpoint: 'ae7c39cba93b9d724adc82dadd2ca421ec39551c7bb7e42487aee9a6e7f49fb9'
   name 'OnyX'
-  homepage 'http://www.titanium-software.fr/en/onyx.html'
+  homepage 'https://www.titanium-software.fr/en/onyx.html'
 
   depends_on macos: '>= :el_capitan'
 

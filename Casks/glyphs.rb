@@ -6,7 +6,7 @@ cask 'glyphs' do
   appcast "https://updates.glyphsapp.com/appcast#{version.major}.xml",
           checkpoint: 'e90536931075a32aed280b693ac4fb89a9361be1c19530d9657890af2c9f2050'
   name 'Glyphs'
-  homepage 'https://www.glyphsapp.com/'
+  homepage 'https://glyphsapp.com/'
 
   auto_updates true
 

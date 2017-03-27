@@ -7,7 +7,7 @@ cask 'harmony' do
   appcast 'https://github.com/vincelwt/harmony/releases.atom',
           checkpoint: 'f6dc0576624d60b4735804fd6d38e987ad66cfd6a04e6a47e79eaa52c88f40a2'
   name 'Harmony'
-  homepage 'http://getharmony.xyz/'
+  homepage 'https://getharmony.xyz/'
 
   app 'Harmony.app'
 

@@ -6,7 +6,7 @@ cask 'maintenance' do
 
   url "https://www.titanium-software.fr/download/#{macos_release}/Maintenance.dmg"
   name 'Maintenance'
-  homepage 'http://www.titanium-software.fr/en/maintenance.html'
+  homepage 'https://www.titanium-software.fr/en/maintenance.html'
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
   depends_on macos: [

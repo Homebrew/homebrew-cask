@@ -5,7 +5,7 @@ cask 'wkhtmltopdf' do
   # download.gna.org/wkhtmltopdf was verified as official when first introduced to the cask
   url "http://download.gna.org/wkhtmltopdf/#{version.major_minor}/#{version}/wkhtmltox-#{version}_osx-cocoa-x86-64.pkg"
   name 'wkhtmltopdf'
-  homepage 'http://wkhtmltopdf.org/'
+  homepage 'https://wkhtmltopdf.org/'
 
   pkg "wkhtmltox-#{version}_osx-cocoa-x86-64.pkg"
 
