@@ -9,7 +9,7 @@ cask 'obs' do
   name 'OBS'
   homepage 'https://obsproject.com/'
 
-  pkg 'OBS.pkg'
+  pkg "obs-mac-#{version}-installer.pkg"
 
   uninstall pkgutil: 'org.obsproject.pkg.obs-studio',
             delete:  '/Applications/SyphonInject.app'
