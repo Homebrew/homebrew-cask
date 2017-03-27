@@ -5,7 +5,7 @@ cask 'vessel' do
   # github.com/awvessel/vessel was verified as official when first introduced to the cask
   url "https://github.com/awvessel/vessel/releases/download/#{version}/Vessel-#{version}.zip"
   appcast 'https://github.com/awvessel/vessel/releases.atom',
-          checkpoint: 'eed47ee87455b8096b127fc21903aface6f597750ed856d441569450adb4f38e'
+          checkpoint: 'e8321d849ffb1bb2c0b154b3095b43201e3de527368cdad185b7a3605563d405'
   name 'Vessel'
   homepage 'https://awvessel.github.io/'
 
