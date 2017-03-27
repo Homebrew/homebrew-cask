@@ -5,7 +5,7 @@ cask 'creepy' do
   # github.com/jkakavas/creepy was verified as official when first introduced to the cask
   url "https://github.com/jkakavas/creepy/releases/download/v#{version}/cree.py_#{version}.dmg.zip"
   appcast 'https://github.com/jkakavas/creepy/releases.atom',
-          checkpoint: '7e6a4adab2f72f4be25e9d15dd1a1d2a94d87e2276a6d6bd6c7384d152ba12e9'
+          checkpoint: 'f6b7733a0ba803c626be8f77deea458e1d31fdbfd85d5037c38ac1ddf09f454d'
   name 'Creepy'
   homepage 'http://www.geocreepy.com/'
 
