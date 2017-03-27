@@ -1,4 +1,4 @@
-cask 'AppGate-Client' do
+cask 'appgate-client' do
   version '11.2.3'
   sha256 'a9eb6ed2f46f33dfca21aea81ff163b99978aee27f78bbbc55200ed12728ae62'
 
