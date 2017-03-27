@@ -1,10 +1,10 @@
 cask 'meteorologist' do
-  version '3.0.1'
-  sha256 '6db9be88efa1da5f665998becf8e9c0e2d0998d4ff75d44bebf16a4cb6ed0670'
+  version '3.0.2'
+  sha256 '14cc28d247ea5c63b27e50f13005462c3d1c4fe43de2e195053e09b9db0764ed'
 
   url "https://downloads.sourceforge.net/heat-meteo/Meteorologist-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/heat-meteo/rss',
-          checkpoint: '76eb0d439df1b336a0cc02cd24c073693e302fb321cfd3e874bc2727ff2fcfde'
+          checkpoint: 'c049e545f0b588b45393211a66a4358cc18283992fb19706e2634dcf31b46876'
   name 'Meteorologist'
   homepage 'http://heat-meteo.sourceforge.net/'
 
