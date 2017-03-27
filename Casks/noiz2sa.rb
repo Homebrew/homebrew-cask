@@ -4,7 +4,7 @@ cask 'noiz2sa' do
 
   url "https://workram.com/downloads/Noiz2sa-for-OS-X-#{version}.dmg"
   appcast 'https://workram.com/games/noiz2sa/',
-          checkpoint: 'a6b2ed06deaa79e55249a0e6f105c3562391f1bad1f17006ded7d6bef06049cd'
+          checkpoint: '7d75d2d0426fbf93afc384cff783faf59f5feecf592abc194146eeb13bd01f15'
   name 'Noiz2sa'
   homepage 'https://workram.com/games/noiz2sa/'
 
