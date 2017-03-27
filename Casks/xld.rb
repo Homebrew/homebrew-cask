@@ -5,7 +5,7 @@ cask 'xld' do
   # sourceforge.net/xld was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/xld/xld-#{version.no_dots}.dmg"
   appcast 'https://svn.code.sf.net/p/xld/code/appcast/xld-appcast_e.xml',
-          checkpoint: '0f95b97e04e14ef9e1cf4b695388024f2a66b47a41bdcc272fab4718b2746beb'
+          checkpoint: '44ac9db56348e5797244dac36133b3196073de2bf6ad20b3adc98299978da94c'
   name 'X Lossless Decoder'
   name 'XLD'
   homepage 'http://tmkk.undo.jp/xld/index_e.html'
