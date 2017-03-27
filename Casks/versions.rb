@@ -4,7 +4,7 @@ cask 'versions' do
 
   url "https://cdn.versionsapp.com/releases/Versions-#{version}.zip"
   appcast 'https://updates.blackpixel.com/updates?app=vs',
-          checkpoint: '2ed6c00361f6f454c263250fd3a2ef34d7534ea15895fb65742cf2683ead995e'
+          checkpoint: 'c21288f5920256d3fe7fa74bd9bc18163631ba4a1551e5a5ce237a2df1b93fcf'
   name 'Versions'
   homepage 'http://versionsapp.com/'
 
