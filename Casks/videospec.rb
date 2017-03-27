@@ -4,7 +4,7 @@ cask 'videospec' do
 
   url "http://videospec.free.fr/VideoSpec_#{version}.dmg"
   appcast 'http://videospec.free.fr/release/videospec.xml',
-          checkpoint: '17195c9c14a1c6d71726f764d54fa534b23e642492a64100186b2540fe331bed'
+          checkpoint: '969de5d87756138149c66228ca76911fa49b1c86f5fa5801cf7cee6bbd16c938'
   name 'VideoSpec'
   homepage 'http://videospec.free.fr/english/'
 
