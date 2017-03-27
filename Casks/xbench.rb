@@ -4,7 +4,7 @@ cask 'xbench' do
 
   url "http://xbench.com/Xbench_#{version}.dmg"
   appcast 'http://xbench.com/',
-          checkpoint: 'e8fbc91f7176d9d870d56c4e69212521f8baa514a60b5ebcc0cc59f9b0bd4146'
+          checkpoint: '8df068ebd3ee00adf16d6c7095c8e9312d49996cc864617b51b5a6cd8f64d814'
   name 'Xbench'
   homepage 'http://xbench.com/'
 
