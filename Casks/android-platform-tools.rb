@@ -10,5 +10,9 @@ cask 'android-platform-tools' do
   conflicts_with cask: 'android-sdk'
 
   binary "#{staged_path}/platform-tools/adb"
+  binary "#{staged_path}/platform-tools/dmtracedump"
+  binary "#{staged_path}/platform-tools/etc1tool"
   binary "#{staged_path}/platform-tools/fastboot"
+  binary "#{staged_path}/platform-tools/hprof-conv"
+  binary "#{staged_path}/platform-tools/sqlite3"
 end
