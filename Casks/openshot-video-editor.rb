@@ -5,7 +5,7 @@ cask 'openshot-video-editor' do
   # github.com/OpenShot/openshot-qt was verified as official when first introduced to the cask
   url "https://github.com/OpenShot/openshot-qt/releases/download/v#{version}/OpenShot-v#{version}-x86_64.dmg"
   appcast 'https://github.com/OpenShot/openshot-qt/releases.atom',
-          checkpoint: 'e6e113a4274e5f761244caf568ea30df76017f7c4a69ca1dcb35a7df83be9772'
+          checkpoint: 'c745bfaef941e2a1c02f218203a80765b19fef9792e0325e9f8bae475d84f021'
   name 'OpenShot Video Editor'
   homepage 'http://openshot.org/'
 
