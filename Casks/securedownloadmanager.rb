@@ -7,9 +7,5 @@ cask 'securedownloadmanager' do
   name 'SDM'
   homepage 'https://phoenix.onthehub.com/WebStore/Account/SdmDownloadFaq.aspx?secure=1#DownloadInstall'
 
-  pkg 'SDM.pkg'
-
-  uninstall pkgutil: 'e-academy.com.secureDownloadManager.SecureDownloadManager.pkg'
-
-  zap pkgutil: 'e-academy.com.secureDownloadManager.Applications.pkg'
+  app 'SecureDownloadManager.app'
 end
