@@ -1,6 +1,6 @@
 cask 'stattransfer' do
   version '13'
-  sha256 '2a5af41ee57a0300b11e2b1e62e613fcb582cb262b731b3f8facbed4b76a4b53'
+  sha256 '66c223a0f194e4ff566d73cea1210dd378b52e696f75dd72fd6b3a18ccc8b20a'
 
   url 'https://www.stattransfer.com/downloads/stdemo.dmg'
   name 'Stat/Transfer'
