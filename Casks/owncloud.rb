@@ -1,10 +1,10 @@
 cask 'owncloud' do
-  version '2.3.0.4097'
-  sha256 '3846a6b3e639ff4f6842e25623d2a7d74c53acba6c2bc6eb00dc349b8d6361d2'
+  version '2.3.1.4139'
+  sha256 '4c1ccf26af4d66700cb2e13d032da108c741682906a5f472f3d3fd8148963e7a'
 
   url "https://download.owncloud.com/desktop/stable/ownCloud-#{version}.pkg"
   appcast 'https://github.com/owncloud/client/releases.atom',
-          checkpoint: '9f171a967f4ff581d7f275a225dbb27fb9db9f2547b92d7e35c5621b45e895f0'
+          checkpoint: 'f4efb635c2dd629d6745eda090ed91989b2474af6b135e60d5c702e216dc6645'
   name 'ownCloud'
   homepage 'https://owncloud.com/'
 
