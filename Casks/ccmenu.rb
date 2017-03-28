@@ -5,7 +5,7 @@ cask 'ccmenu' do
   # github.com/erikdoe/ccmenu was verified as official when first introduced to the cask
   url "https://github.com/erikdoe/ccmenu/releases/download/v#{version}/CCMenu.app.zip"
   appcast 'https://github.com/erikdoe/ccmenu/releases.atom',
-          checkpoint: '359155ebbd8e2ed24cfd5d3af31cc0ceebb7b44d5f63bc52a74b45e261bd8035'
+          checkpoint: '1de8927fbde7716a5197d631ab72ef7035b365d22350c5a8105bc762dda7ff94'
   name 'CCMenu'
   homepage 'http://ccmenu.org/'
 
