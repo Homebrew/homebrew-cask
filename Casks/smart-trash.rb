@@ -1,10 +1,10 @@
 cask 'smart-trash' do
-  version '2.0.5'
-  sha256 '48097d963556d160ef89d705834089c55e93f7a10e61cd58f1df5a76eca7b5a0'
+  version '2.0.7'
+  sha256 '21ae6bff2f598033d2be4d55f275031d8014455a9267288dbdf538c7ab24de5e'
 
   url "https://www.hyperbolicsoftware.com/programs/SmartTrash#{version.major}.zip"
   appcast 'https://www.hyperbolicsoftware.com/Receipts/Smart_Trash/SmartTrashUpdate.xml',
-          checkpoint: '576fae9e8a4a8455f32c16a5c8b27fd096af83ebd3de038d5e07afbae7154ba0'
+          checkpoint: 'c75a14ff5dec0edcc99e0aae77d793597eb86e8efd4f68dd214166ef1a979e1a'
   name 'Smart Trash'
   homepage 'https://www.hyperbolicsoftware.com/SmartTrash.html'
 
