@@ -4,7 +4,7 @@ cask 'cactus' do
 
   url "http://update.cactusformac.com/static/downloads/Cactus-#{version}.zip"
   appcast 'http://update.cactusformac.com.s3-website-us-east-1.amazonaws.com/appcast.xml',
-          checkpoint: '4a09054e73a1272707e4ae35eb0e9281a269877f660c708f6e426a3250bba342'
+          checkpoint: '9e3c4dcc129c38ad1ef99fb438b36f22d7843e9914b868899c46f99a600613dd'
   name 'Cactus'
   homepage 'http://cactusformac.com/'
 
