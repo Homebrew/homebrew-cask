@@ -4,7 +4,7 @@ cask 'mal-updater-os-x' do
 
   url 'https://malupdaterosx.ateliershiori.moe/download.php'
   name 'MAL Updater OS X'
-  homepage 'https://malupdaterosx.ateliershiori.moe'
+  homepage 'https://malupdaterosx.ateliershiori.moe/'
 
   app 'MAL Updater OS X.app'
 
