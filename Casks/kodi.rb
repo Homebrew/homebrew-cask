@@ -9,4 +9,12 @@ cask 'kodi' do
   homepage 'https://kodi.tv/'
 
   app 'Kodi.app'
+
+  zap delete: [
+                '~/.kodi',
+                '~/Library/Application Support/Kodi',
+                '~/Library/Logs/kodi.log',
+                '~/Library/Logs/kodi.old.log',
+                '~/Library/Saved Application State/org.xbmc.kodi.savedState',
+              ]
 end
