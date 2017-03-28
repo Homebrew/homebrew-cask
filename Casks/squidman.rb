@@ -9,4 +9,8 @@ cask 'squidman' do
   app 'SquidMan.app'
 
   zap delete: '/usr/local/squid'
+
+  caveats do
+    files_in_usr_local
+  end
 end
