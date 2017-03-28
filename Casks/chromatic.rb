@@ -4,7 +4,7 @@ cask 'chromatic' do
 
   url 'https://download.mrgeckosmedia.com/Chromatic.zip'
   appcast 'https://mrgeckosmedia.com/applications/releasenotes/Chromatic',
-          checkpoint: '36c8f273a93367b4fe2284c0d279dbca49009584b368bbf35cac0250234b1afe'
+          checkpoint: '37d046621b3b0797c0aa90e95a2e33f9e37007104f58c2a0efd3cbe7939a0690'
   name 'Chromatic'
   homepage 'https://mrgeckosmedia.com/applications/info/Chromatic'
 
