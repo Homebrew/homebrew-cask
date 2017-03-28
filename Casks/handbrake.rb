@@ -4,7 +4,7 @@ cask 'handbrake' do
 
   url "https://download.handbrake.fr/handbrake/releases/#{version}/HandBrake-#{version}.dmg"
   appcast 'https://github.com/HandBrake/HandBrake/releases.atom',
-          checkpoint: 'd75178825cb79c5c69d72956add21e77d8614cd9a49b175a2f75de4055e5b48f'
+          checkpoint: '1363c5cec0067036313bf0ce62fbbb6e36c59875b4ff8f5a23bdf8d34b5e59a9'
   name 'HandBrake'
   homepage 'https://handbrake.fr/'
 
