@@ -3,12 +3,12 @@ cask 'icamsource' do
     version '2.7.2'
     sha256 '21ab85b8914d2da18f38675b44635573e9693f442d9810ce93df012e9cba43bb'
   else
-    version '2.8.5'
-    sha256 'ff27ea1747f6ea555b4f98e01a2a57c6a2c939bd06cdf28211b423e6c4af2704'
+    version '2.9'
+    sha256 'bc04eb17400a21331daee7d5d6b554b32a10ab70d53fe0ba4030c95761785bcd'
   end
   url "http://skjm.com/icam/iCamSource#{version}.dmg"
   appcast 'http://skjm.com/sparkle/iCamSource.xml',
-          checkpoint: '67a506f70a3a997b2d77198ca8902b5fdf7bdfd7a28c269ffebcc8528bb58650'
+          checkpoint: 'f150f639b74612df8cfad97978c94a356cd111c08381e2b64b58cfa2065e2f54'
   name 'iCamSource'
   homepage 'http://skjm.com/icam/support.php'
 
