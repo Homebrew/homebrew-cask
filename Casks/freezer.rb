@@ -4,7 +4,7 @@ cask 'freezer' do
 
   url 'https://download.mrgeckosmedia.com/Freezer.zip'
   appcast 'https://mrgeckosmedia.com/applications/releasenotes/Freezer',
-          checkpoint: '4f5c4a2130291c9e756110919390cb5aedc5bbd0e037160508f4eec2af0b926e'
+          checkpoint: 'fc9e1cf68f0d144680cf751cff38986edfc21a88ef09eed3558a0b18217b82c2'
   name 'Freezer'
   homepage 'https://mrgeckosmedia.com/applications/info/Freezer'
 
