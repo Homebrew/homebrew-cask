@@ -7,4 +7,6 @@ cask 'squidman' do
   homepage 'http://squidman.net/squidman/'
 
   app 'SquidMan.app'
+
+  zap delete: "/usr/local/squid"
 end
