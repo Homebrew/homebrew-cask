@@ -4,7 +4,7 @@ cask 'handbrakebatch' do
 
   url "https://www.osomac.com/appcasts/handbrakebatch/HandBrakeBatch_#{version}.zip"
   appcast 'https://www.osomac.com/appcasts/handbrakebatch/HandBrakeBatch.xml',
-          checkpoint: 'bf889f0a8523ddef97552e1e07fa75e6641aa1190383e065f89337fad1a3cc53'
+          checkpoint: 'd0130e8bccf68a690263dd558001c636fff191896500d9665245a920c107904f'
   name 'HandBrakeBatch'
   homepage 'https://www.osomac.com/apps/osx/handbrake-batch/'
 
