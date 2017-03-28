@@ -2,7 +2,7 @@ cask 'firefox' do
   version '52.0.2'
 
   language 'de' do
-    sha256 'f9a91e0d57652566ba7f0d2e191cdc3db3219b3cf29a83ed145a9110a0bda108'
+    sha256 '701b391f93dcfbba2c72e16d9c67708c73510990c49e2c0c30ddcc5c41613a05'
     'de'
   end
 
