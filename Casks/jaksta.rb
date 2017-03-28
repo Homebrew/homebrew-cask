@@ -4,7 +4,7 @@ cask 'jaksta' do
 
   url "http://downloads.jaksta.com/release/mac/Jaksta-#{version}.dmg"
   appcast 'http://downloads.jaksta.com/release/mac/sparkle/JakstaforMac.xml',
-          checkpoint: '703256f661160f17c271f94333d5e21b9b1c5c28123e48c7eadda8126a4c2394'
+          checkpoint: '164a2b0a2fa866c475947fe2ae1e4a1020f11ca6ab03d5525bc54fc41d274be1'
   name 'Jaksta'
   homepage 'https://www.jaksta.com/products'
 
