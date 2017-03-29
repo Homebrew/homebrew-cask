@@ -7,23 +7,26 @@ cask 'android-sdk' do
   name 'android-sdk'
   homepage 'https://developer.android.com/index.html'
 
-  binary "#{staged_path}/tools/bin/sdkmanager"
+  binary "#{staged_path}/emulator/emulator"
+  binary "#{staged_path}/emulator/emulator-check"
+  binary "#{staged_path}/emulator/emulator64-arm"
+  binary "#{staged_path}/emulator/emulator64-mips"
+  binary "#{staged_path}/emulator/emulator64-x86"
+  binary "#{staged_path}/platform-tools/adb"
+  binary "#{staged_path}/platform-tools/dmtracedump"
+  binary "#{staged_path}/platform-tools/etc1tool"
+  binary "#{staged_path}/platform-tools/fastboot"
+  binary "#{staged_path}/platform-tools/hprof-conv"
+  binary "#{staged_path}/platform-tools/sqlite3"
   binary "#{staged_path}/tools/android"
-  binary "#{staged_path}/tools/ddms"
-  binary "#{staged_path}/tools/draw9patch"
-  binary "#{staged_path}/tools/emulator"
-  binary "#{staged_path}/tools/emulator64-arm"
-  binary "#{staged_path}/tools/emulator-check"
-  binary "#{staged_path}/tools/emulator64-mips"
-  binary "#{staged_path}/tools/emulator64-x86"
-  binary "#{staged_path}/tools/hierarchyviewer"
-  binary "#{staged_path}/tools/lint"
+  binary "#{staged_path}/tools/bin/avdmanager"
+  binary "#{staged_path}/tools/bin/lint"
+  binary "#{staged_path}/tools/bin/monkeyrunner"
+  binary "#{staged_path}/tools/bin/sdkmanager"
   binary "#{staged_path}/tools/mksdcard"
   binary "#{staged_path}/tools/monitor"
-  binary "#{staged_path}/tools/monkeyrunner"
-  binary "#{staged_path}/tools/traceview"
 
-  postflight do
+  preflight do
     system_command "#{staged_path}/tools/bin/sdkmanager", args: ['tools', 'platform-tools', 'build-tools;25.0.2'], input: 'y'
   end
 
