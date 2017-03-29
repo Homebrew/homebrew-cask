@@ -1,9 +1,9 @@
 cask 'open-sankore' do
-  version '2.5.0'
-  sha256 '773e563a312b64542b0ca905b290606b46c85372e24e2ab5c807de7933f38828'
+  version '2.5.1'
+  sha256 '7b7ada04dc4bf3d47e2ae2ef33b207bde65904d2db4d6d2525951af9bff4f073'
 
   # cndp.fr/open-sankore was verified as official when first introduced to the cask
-  url "https://www.cndp.fr/open-sankore/OpenSankore/Releases/v#{version}/Open-Sankore_MacOSX_#{version}.dmg"
+  url "http://www.cndp.fr/open-sankore/OpenSankore/Releases/v#{version}/Open-Sankore_MacOSX_#{version}.dmg"
   name 'Open-Sankore'
   homepage 'http://open-sankore.org/'
 
