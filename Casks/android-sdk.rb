@@ -7,6 +7,16 @@ cask 'android-sdk' do
   name 'android-sdk'
   homepage 'https://developer.android.com/index.html'
 
+  build_tools_version = '25.0.2'
+
+  binary "#{staged_path}/build-tools/#{build_tools_version}/aapt"
+  binary "#{staged_path}/build-tools/#{build_tools_version}/aapt2"
+  binary "#{staged_path}/build-tools/#{build_tools_version}/aidl"
+  binary "#{staged_path}/build-tools/#{build_tools_version}/apksigner"
+  binary "#{staged_path}/build-tools/#{build_tools_version}/dexdump"
+  binary "#{staged_path}/build-tools/#{build_tools_version}/dx"
+  binary "#{staged_path}/build-tools/#{build_tools_version}/llvm-rs-cc"
+  binary "#{staged_path}/build-tools/#{build_tools_version}/zipalign"
   binary "#{staged_path}/emulator/emulator"
   binary "#{staged_path}/emulator/emulator-check"
   binary "#{staged_path}/emulator/emulator64-arm"
@@ -27,7 +37,7 @@ cask 'android-sdk' do
   binary "#{staged_path}/tools/monitor"
 
   preflight do
-    system_command "#{staged_path}/tools/bin/sdkmanager", args: ['tools', 'platform-tools', 'build-tools;25.0.2'], input: 'y'
+    system_command "#{staged_path}/tools/bin/sdkmanager", args: ['tools', 'platform-tools', "build-tools;#{build_tools_version}"], input: 'y'
   end
 
   caveats <<-EOS.undent
