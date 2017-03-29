@@ -1,6 +1,6 @@
 cask 'docker' do
-  version '17.03.1-ce'
-  sha256 '403b167dff238f5cbdb5fb085a842b8c8e1d6812956873f47df875a01adb0200'
+  version :latest
+  sha256 :no_check
 
   url 'https://download.docker.com/mac/stable/Docker.dmg'
   appcast 'https://download.docker.com/mac/stable/appcast.xml',
