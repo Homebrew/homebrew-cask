@@ -1,6 +1,6 @@
 cask 'hortonworks-hive-odbc' do
-  version '2.1.5.1006'
-  sha256 'bbe696f2530205149d944eb880a1653a66303d1553dd4df7371cad69d64596b1'
+  version '2.1.7.1010'
+  sha256 '7b429e7288094f7c37c14d18fd653c92d990660bc958c44166a80d8003f4704b'
 
   url "http://public-repo-1.hortonworks.com/HDP/hive-odbc/#{version}/Mac_OS_X/hive-odbc-native.dmg"
   name 'Hortoworks ODBC Driver for Hive'
