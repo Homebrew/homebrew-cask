@@ -8,5 +8,5 @@ cask 'manictime' do
 
   pkg "ManicTime-#{version}.pkg"
 
-  uninstall pkgutil 'com.finkit.manictime.tracker'
+  uninstall pkgutil: 'com.finkit.manictime.tracker'
 end
