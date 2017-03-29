@@ -1,6 +1,6 @@
-cask 'virtualhere-client' do
-  version '4.0.3'
-  sha256 'ecbfa51fb67db4f6cbc5b9345141ef5860333abc1dfba99d578d8360f357e115'
+cask 'virtualhere' do
+  version :latest
+  sha256 :no_check
 
   url 'https://www.virtualhere.com/sites/default/files/usbclient/VirtualHere.dmg'
   name 'VirtualHere'
