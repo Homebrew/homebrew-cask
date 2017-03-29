@@ -1,10 +1,10 @@
 cask 'snapndrag' do
-  version '4.2.2'
-  sha256 'c06ec405df7bfaad46f8a515798f7092c557dc65a9faed6d1fff1a29b2d2e47f'
+  version '4.2.4'
+  sha256 '5e4ed74cf420f2c41b69c77d9963dec58a5fd0ed2f11f07eee613ea56054a768'
 
   url "http://yellowmug.com/download/SnapNDrag_#{version}.dmg"
   appcast 'http://yellowmug.com/snapndrag/appcast-1012.xml',
-          checkpoint: 'f95d7fd7cc8e6ab7797be453e95bfb696db51bf5388fb53df16a1b233f5e73d8'
+          checkpoint: '5fd344a724f6fbf98d42bb7a31e29fd787838fb232a9d91482575b280ae6cf71'
   name 'SnapNDrag'
   homepage 'http://www.yellowmug.com/snapndrag/'
 
