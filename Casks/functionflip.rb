@@ -4,7 +4,7 @@ cask 'functionflip' do
 
   url "http://kevingessner.com/public/downloads/FunctionFlip/#{version}/FunctionFlip.prefPane.zip"
   appcast 'http://kevingessner.com/update/functionflip/',
-          checkpoint: '4d66ce434c5ffb80f286227e918f77e14a9bc80e7bcc445353c02d484c33b699'
+          checkpoint: 'd76f71bf62983625bbd95fca40197cda9a03c5e25b32bac39b49ec758a7bb362'
   name 'FunctionFlip'
   homepage 'http://kevingessner.com/software/functionflip/'
 
