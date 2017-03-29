@@ -5,7 +5,7 @@ cask 'openconnect-gui' do
   # github.com/openconnect/openconnect-gui was verified as official when first introduced to the cask
   url "https://github.com/openconnect/openconnect-gui/releases/download/v#{version}/openconnect-gui-#{version}-Darwin.dmg"
   appcast 'https://github.com/openconnect/openconnect-gui/releases.atom',
-          checkpoint: '3531d36df88eb1e5b360809181473c0caf5ef638a269da325d185569ac416995'
+          checkpoint: '85537e6c3cd11eeeae3ac38d3353cd6ae74b6bae4778c66ebf9ddae4859d6fd6'
   name 'OpenConnect-GUI'
   homepage 'https://openconnect.github.io/openconnect-gui/'
 
