@@ -5,7 +5,7 @@ cask 'openbazaar' do
   # github.com/OpenBazaar/OpenBazaar-Installer was verified as official when first introduced to the cask
   url "https://github.com/OpenBazaar/OpenBazaar-Installer/releases/download/v#{version}/OpenBazaar-#{version}.dmg"
   appcast 'https://github.com/OpenBazaar/OpenBazaar-Installer/releases.atom',
-          checkpoint: 'a1e8bf2a22478543645a22b80ed1771d221000c065f06fcfb0218041b041bbc7'
+          checkpoint: '5957307c99117948ab51282d4ab9507f39b68f33ba8d2c1566d17f13c8846360'
   name 'OpenBazaar'
   homepage 'https://openbazaar.org/'
 

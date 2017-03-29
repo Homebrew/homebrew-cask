@@ -1,11 +1,11 @@
 cask 'owasp-zap' do
-  version '2.5.0'
-  sha256 '56f99b77c57cdb1e84a9404b589c1d443d52877ee456c02cc7eae25105c18ae5'
+  version '2.6.0'
+  sha256 '7133593b91d0d7925436adc79370b654cb1d4d642a9bb85cc3880bfaf2683b87'
 
   # github.com/zaproxy/zaproxy was verified as official when first introduced to the cask
-  url "https://github.com/zaproxy/zaproxy/releases/download/#{version}/ZAP_#{version}_Mac_OS_X.dmg"
+  url "https://github.com/zaproxy/zaproxy/releases/download/#{version}/ZAP_#{version.dots_to_underscores}_macos.dmg"
   appcast 'https://github.com/zaproxy/zaproxy/releases.atom',
-          checkpoint: 'ddd4c4d3195ccbb86f98fab20661f09383e79ee9e9407cfb154acaeddeb81108'
+          checkpoint: '7b84ad46090667a859271d665f06266f2397582390c78a92ce3b974c0229e7f4'
   name 'OWASP Zed Attack Proxy'
   name 'ZAP'
   homepage 'https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project'
