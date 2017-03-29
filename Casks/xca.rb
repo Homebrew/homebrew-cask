@@ -4,7 +4,7 @@ cask 'xca' do
 
   url "https://downloads.sourceforge.net/xca/xca/#{version}/xca-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/xca/rss?path=/xca',
-          checkpoint: '6d374c5779ca08e0c525c3314f71707b21906506a5c6b5558a01f5ad02ffbbbf'
+          checkpoint: '936bec75f8ece9b612ae7268ec93a6d2313a70342bda98b2a822f24f151750e3'
   name 'XCA'
   homepage 'http://xca.sourceforge.net/'
 

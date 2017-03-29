@@ -4,7 +4,7 @@ cask 'xlifftool' do
 
   url "https://github.com/remuslazar/osx-xliff-tool/releases/download/v#{version}/XLIFFTool.app.zip"
   appcast 'https://github.com/remuslazar/osx-xliff-tool/releases.atom',
-          checkpoint: '3d2a123a12bb38bceaf2840741860dc63565e4e7e2a675d85f72d6fa713c8b3f'
+          checkpoint: '09c7503b2114c075ce5f7e45a534932bbf902d2a9fda2fa9f6019fdfce9e4287'
   name 'XLIFFTool'
   homepage 'https://github.com/remuslazar/osx-xliff-tool'
 

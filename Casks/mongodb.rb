@@ -5,7 +5,7 @@ cask 'mongodb' do
   # github.com/gcollazo/mongodbapp was verified as official when first introduced to the cask
   url "https://github.com/gcollazo/mongodbapp/releases/download/#{version}/MongoDB.zip"
   appcast 'https://github.com/gcollazo/mongodbapp/releases.atom',
-          checkpoint: 'a15fa1bae683ae3f98f514cc2955fa27baab6e69443b6bd7dbd3224f5396acca'
+          checkpoint: '93e15dcc180c256dd01d3b4ba1d2d06ce5220bd5424ff9277e3c17f858e94330'
   name 'MongoDB'
   homepage 'https://elweb.co/mongodb-app/'
 

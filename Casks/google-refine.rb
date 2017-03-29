@@ -5,7 +5,7 @@ cask 'google-refine' do
   # github.com/OpenRefine/OpenRefine was verified as official when first introduced to the cask
   url "https://github.com/OpenRefine/OpenRefine/releases/download/2.5/google-refine-#{version}.dmg"
   appcast 'https://github.com/OpenRefine/OpenRefine/releases.atom',
-          checkpoint: '59a4567d43b4d1324b972028e35e407279594f787552f2a201b2cb5d4a8f17bb'
+          checkpoint: '03b210226f5c7c767cef5b012135c00ef5e43e6da8ea4e36282046a4af43bf40'
   name 'OpenRefine'
   homepage 'http://openrefine.org/'
 

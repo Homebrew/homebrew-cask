@@ -4,7 +4,7 @@ cask 'kyoku' do
 
   url "https://github.com/cheeaun/kyoku/releases/download/#{version}/Kyoku.app.zip"
   appcast 'https://github.com/cheeaun/kyoku/releases.atom',
-          checkpoint: 'bd656a19e78074b9b0878f3d413a1da6317ad72b8b2cb98ef9ca6e4e602013d2'
+          checkpoint: 'dcfb735800144567300e1433349f6d8925103e94b47f0bf861c5031c09d5f476'
   name 'Kyoku'
   homepage 'https://github.com/cheeaun/kyoku'
 

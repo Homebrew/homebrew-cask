@@ -4,7 +4,7 @@ cask 'vivaldi' do
 
   url "https://downloads.vivaldi.com/stable/Vivaldi.#{version}.dmg"
   appcast 'https://update.vivaldi.com/update/1.0/mac/appcast.xml',
-          checkpoint: '7f322b89efcdd172882b514cfc1b0674877a1181d61cfd7a215fd4d78ea3d6ec'
+          checkpoint: 'a12850c7dcbffa58f7c7db4a8a1ccd4c1cde240c71bf31c61605421918a5083b'
   name 'Vivaldi'
   homepage 'https://vivaldi.com/'
 

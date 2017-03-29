@@ -1,6 +1,6 @@
 cask 'eclipse-rcp' do
-  version '4.6.2,neon:2'
-  sha256 'fd850fd5a5f22723c25ce6d8855856afe48b407ddfe457e8f084a8b50d7e3b1f'
+  version '4.6.3,neon:3'
+  sha256 '1f2373589b093158bf0e02201fbedd725ede294f98e2fc962e248c78fa5cf5ac'
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-rcp-#{version.after_comma.before_colon}-#{version.after_colon}-macosx-cocoa-x86_64.tar.gz&r=1"
   name 'Eclipse for RCP and RAP Developers'

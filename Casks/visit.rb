@@ -5,7 +5,7 @@ cask 'visit' do
   # portal.nersc.gov/project/visit was verified as official when first introduced to the cask
   url "https://portal.nersc.gov/project/visit/releases/#{version}/VisIt-#{version}.dmg"
   appcast 'https://wci.llnl.gov/simulation/computer-codes/visit/executables',
-          checkpoint: '6d1f16f2a61085c04db7dea62820ffb8dd63306eb3930588b5a1c19a43b317cd'
+          checkpoint: 'd1652e31f41d271e7290841db291be88f269eb1d3f143bec7871bbbbc3b723e9'
   name 'VisIt'
   homepage 'https://wci.llnl.gov/simulation/computer-codes/visit'
 

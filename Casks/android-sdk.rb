@@ -29,6 +29,6 @@ cask 'android-sdk' do
 
   caveats <<-EOS.undent
     We will install android-sdk-tools, platform-tools, and build-tools for you.
-    You can contol android sdk packages via sdkmanager command.
+    You can control android sdk packages via the sdkmanager command.
   EOS
 end

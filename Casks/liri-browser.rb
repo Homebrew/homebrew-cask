@@ -4,7 +4,7 @@ cask 'liri-browser' do
 
   url "https://github.com/liri-project/liri-browser/releases/download/v#{version}/liri-browser-#{version}-osx.zip"
   appcast 'https://github.com/liri-project/liri-browser/releases.atom',
-          checkpoint: '45f8016ad9e5023a21ed430111f62701cc24699a51276d814a98c575488b6597'
+          checkpoint: '088ea30d055178d4ac1c3d3cdeed661fb4bdea3c17718f93a0c626b190597f65'
   name 'Liri Browser'
   homepage 'https://github.com/liri-project/liri-browser'
 

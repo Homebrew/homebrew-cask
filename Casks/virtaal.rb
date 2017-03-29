@@ -5,7 +5,7 @@ cask 'virtaal' do
   # sourceforge.net/translate/Virtaal was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/translate/Virtaal/#{version.sub(%r{^(\d+\.\d+\.\d+).*}, '\1')}/Virtaal-#{version.sub(%r{^(\d+\.\d+\.\d+).*}, '\1')}-Mac-Beta-2.dmg"
   appcast 'https://sourceforge.net/projects/translate/rss?path=/Virtaal',
-          checkpoint: '30197d11c26aa1b59697be8a5af72c3a51b6c12cbf0611465fb8dabb0172bed6'
+          checkpoint: '7c1f848df86c73d5ffc44bdc56e2c65a74730c2643435bb43e6284ee73e4a21e'
   name 'Virtaal'
   homepage 'http://virtaal.translatehouse.org/'
 
