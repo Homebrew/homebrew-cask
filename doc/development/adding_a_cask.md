@@ -294,6 +294,10 @@ Examples of difficult, unclear commit summaries:
 
 Push your changes to your GitHub account:
 
+(Note: this assumes you have cloned this repository
+and added it to your local clone
+under a remote named after your github account.)
+
 ```bash
 $ github_user='<my-github-username>'
 $ git push "$github_user" my-new-cask
