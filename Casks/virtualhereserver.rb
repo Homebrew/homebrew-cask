@@ -1,6 +1,6 @@
-cask 'virtualhere-server' do
-  version '3.2.8'
-  sha256 '829060fc7b82cc03ff76e6313dad4e1158c4ed2904896c4dcd20965493462c3d'
+cask 'virtualhereserver' do
+  version :latest
+  sha256 :no_check
 
   url 'https://www.virtualhere.com/sites/default/files/usbserver/VirtualHereServer.dmg'
   name 'VirtualHereServer'
