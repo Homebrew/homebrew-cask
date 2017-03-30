@@ -1,12 +1,12 @@
 cask 'pencil' do
-  version '2.0.21'
-  sha256 '19f8d5a82eb79ad02d8a669a7bb178d0036b17314e81c94845da144d87dd8acd'
+  version '3.0.1'
+  sha256 'a8a9f43180e3dcd04adb3619575d4d870e5dda24be40307106140a93368d2036'
 
-  url "https://github.com/prikhi/pencil/releases/download/v#{version}/Pencil-#{version}-mac-osx.zip"
+  url "http://pencil.evolus.vn/dl/V#{version}/Pencil-#{version}.dmg"
   appcast 'https://github.com/prikhi/pencil/releases.atom',
-          checkpoint: '0201d816a97457eb9aacd6356299dcb0c39d135adce4e8c3ac11922c30a0ddad'
+          checkpoint: '207db45afcda031fbc4e6b642c0144ea0d5fa6e4d987dbdd62fecf9582f410bb'
   name 'Pencil'
-  homepage 'https://github.com/prikhi/pencil'
+  homepage 'http://pencil.evolus.vn/'
 
   app 'Pencil.app'
 end
