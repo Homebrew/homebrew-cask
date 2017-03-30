@@ -4,7 +4,7 @@ cask 'phoenix' do
 
   url "https://github.com/kasper/phoenix/releases/download/#{version}/phoenix-#{version}.tar.gz"
   appcast 'https://github.com/kasper/phoenix/releases.atom',
-          checkpoint: '80ffe2afccd60b7607aeb44370c1afd51c498d8f18314979c18a9d12eebb5fb6'
+          checkpoint: '758ca017cecc03415b887144c07e37488dccfa717b62e4e5416dc423f2d4c9b2'
   name 'Phoenix'
   homepage 'https://github.com/kasper/phoenix/'
 
