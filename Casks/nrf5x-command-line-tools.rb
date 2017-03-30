@@ -1,8 +1,8 @@
 cask 'nrf5x-command-line-tools' do
-  version '9.1.0'
-  sha256 '6fbbcde29267191c5874101aceda67b25b8c075bcf06450ae02a688e2fd58af6'
+  version '53402.11.65316563'
+  sha256 '2a26e57a54a53ae7009f56041619ef6ea215f829aa75c9c35d1d45555f032a71'
 
-  url 'https://www.nordicsemi.com/eng/nordic/download_resource/53406/7/88118096'
+  url "https://www.nordicsemi.com/eng/nordic/download_resource/#{version.major}/#{version.minor}/#{version.patch}"
   name 'nRF5x Command Line Tools'
   homepage 'https://www.nordicsemi.com/eng/nordic/Products/nRF51-DK/nRF5x-Command-Line-Tools-OSX/53412'
 
