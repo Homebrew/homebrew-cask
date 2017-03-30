@@ -4,7 +4,7 @@ cask 'wwdc' do
 
   url "https://github.com/insidegui/WWDC/releases/download/#{version}/WWDC_v#{version}.zip"
   appcast 'https://github.com/insidegui/WWDC/releases.atom',
-          checkpoint: '79368cc7f1c7ef09000a13cd3f63b4284bc23bf1e331977945b4d2c74ba847b0'
+          checkpoint: '9d8b9a9c7e406a840fe2b46b542e2e8be1158a71da218ead9e6639d8e65b39a2'
   name 'WWDC'
   homepage 'https://github.com/insidegui/WWDC'
 
