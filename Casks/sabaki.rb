@@ -7,9 +7,9 @@ cask 'sabaki' do
   name 'Sabaki'
   homepage 'http://sabaki.yichuanshen.de/'
 
-  license :mit
-
   depends_on formula: 'unrar'
+
+  license :mit
 
   app 'Sabaki.app'
 end
