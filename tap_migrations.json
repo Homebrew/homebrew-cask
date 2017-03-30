@@ -13,6 +13,7 @@
   "displaylink": "caskroom/drivers",
   "dmd": "homebrew/core",
   "docker-compose": "homebrew/core",
+  "exa": "homebrew/core",
   "exiftool": "homebrew/core",
   "fpc": "homebrew/core",
   "ftdi-vcp-driver": "caskroom/drivers",
