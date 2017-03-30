@@ -4,7 +4,7 @@ cask 'harbor' do
 
   url "https://github.com/devmynd/harbor/releases/download/v#{version}/Harbor.app.zip"
   appcast 'https://github.com/devmynd/harbor/releases.atom',
-          checkpoint: 'b8f2d7d68567b57751324c4b62a8956f70c52c7cb1237aa16aaf82bd38745aea'
+          checkpoint: 'c859a2df7829f153015b4426c8e446927276317d800fc5ef0535f47c57871782'
   name 'Harbor'
   homepage 'https://github.com/devmynd/harbor'
 
