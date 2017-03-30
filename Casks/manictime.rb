@@ -9,8 +9,4 @@ cask 'manictime' do
   pkg "ManicTime-#{version}.pkg"
 
   uninstall pkgutil: 'com.finkit.manictime.tracker'
-
-  caveats 'This is not a full ManicTime Windows port to Mac. '\
-          'It is only a tracker, and  requires ManicTime Server v3.2 or later '\
-          'installed on a Windows machine to receive and display the reports.'
 end
