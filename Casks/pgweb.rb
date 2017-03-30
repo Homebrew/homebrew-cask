@@ -4,7 +4,7 @@ cask 'pgweb' do
 
   url "https://github.com/sosedoff/pgweb/releases/download/v#{version}/pgweb_darwin_amd64.zip"
   appcast 'https://github.com/sosedoff/pgweb/releases.atom',
-          checkpoint: '701b48686b44214fd068a789306029ff1ed66c7c0893852345b6b83ed0c91990'
+          checkpoint: '85469b28b0473229d9c5383706716d0631e8a9bbd911b21895a9205b0ed542bb'
   name 'pgweb'
   homepage 'https://github.com/sosedoff/pgweb'
 
