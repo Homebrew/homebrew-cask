@@ -5,7 +5,7 @@ cask 'oryoki' do
   # github.com/thmsbfft/oryoki was verified as official when first introduced to the cask
   url "https://github.com/thmsbfft/oryoki/releases/download/#{version}/Oryoki-#{version}.zip"
   appcast 'https://github.com/thmsbfft/oryoki/releases.atom',
-          checkpoint: 'a2f6d39a0d20f944954e8e5d865d51a8c6bdf2f32d28cff1d97253c4414b4762'
+          checkpoint: '71bb3809095da7768cd8473fff26258612291f27f4c95a2cf80a677b9d097bcf'
   name 'Oryoki'
   name 'Ōryōki'
   name '応量器'
