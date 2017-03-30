@@ -1,10 +1,10 @@
 cask 'bbedit' do
-  version '11.6.4'
-  sha256 'c97b6a1804c051a28ef8a476518df608a6ee75e98a043d0284f53f818ca08989'
+  version '11.6.5'
+  sha256 '2b32db1592802aa1b3cddbe7649b005a892eb2a9d5f760d8708f4eaae80fd914'
 
   url "http://pine.barebones.com/files/BBEdit_#{version}.dmg"
   appcast 'https://versioncheck.barebones.com/BBEdit.xml',
-          checkpoint: '867891de38a744b4c898ac0acf4b078b3062e18119a0c716b45e8b5b4cf8fe24'
+          checkpoint: 'adcd1cda2c27210d9d75b1a83706c5b388a50347cdaf2677582572a5c0d151cf'
   name 'BBEdit'
   homepage 'http://www.barebones.com/products/bbedit/'
 
