@@ -5,7 +5,7 @@ cask 'hab' do
   # habitat.bintray.com was verified as official when first introduced to the cask
   url "https://habitat.bintray.com/stable/darwin/x86_64/hab-#{version}-x86_64-darwin.zip"
   appcast 'https://github.com/habitat-sh/habitat/releases.atom',
-          checkpoint: '24a0e5817e279933c2b956c8ff38e9d25203ea1fa7fb8210d2c10d847a84909f'
+          checkpoint: '1cb1fb007e841e1696028373a1748f17e47e43f9f52bc2cc611bccca563e7fa4'
   name 'Habitat'
   homepage 'https://www.habitat.sh/'
 
