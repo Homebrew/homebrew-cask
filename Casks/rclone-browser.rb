@@ -9,7 +9,7 @@ cask 'rclone-browser' do
 
   depends_on formula: 'rclone'
 
-  app "#{archive_name}/Rclone Browser.app"
+  app "#{version.before_comma}-#{version.after_comma}/Rclone Browser.app"
 
   zap delete: [
                 '~/Library/Preferences/Rclone Browser.plist',
