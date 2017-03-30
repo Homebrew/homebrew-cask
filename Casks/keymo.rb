@@ -4,7 +4,7 @@ cask 'keymo' do
 
   url 'https://manytricks.com/download/keymo'
   appcast 'https://manytricks.com/keymo/appcast.xml',
-          checkpoint: '382c704be6dbdc0bbeff5b01a661c227a9beabc487363bea91d63cf55ec0f8c7'
+          checkpoint: '4af8d968000fbbe7cbcacbd13f120c4234bf75d805d7243ed69bdc0571a7bece'
   name 'Keymo'
   homepage 'https://manytricks.com/keymo/'
 
