@@ -1,6 +1,6 @@
 cask 'waves-central' do
-  version '1.1.0.22'
-  sha256 '0144e9883cef68dbf6a4194caf31bf4e3ffeefa7950063c8ac12547eb0a34dc9'
+  version '1.3.0.7'
+  sha256 '95ba5187b63eacc302f4d21653ec94ab020642d0712f371ce0d263834d6007db'
 
   url "http://installers.waves.com/WavesCentral/V#{version}/Install_Waves_Central.dmg"
   name 'Waves Central'
