@@ -4,7 +4,7 @@ cask 'outset' do
 
   url "https://github.com/chilcote/outset/releases/download/v#{version}/outset-#{version}.pkg"
   appcast 'https://github.com/chilcote/outset/releases.atom',
-          checkpoint: '83da0d14e2858e696717362d7c51e4e470c9017fde80232f273a098d3a953a77'
+          checkpoint: 'e95456adc46d0ec04aa6b12c528b56c53cc29a0c8f597e21fbd69cebc55fca63'
   name 'outset'
   homepage 'https://github.com/chilcote/outset'
 
