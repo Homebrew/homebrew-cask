@@ -65,9 +65,9 @@ If your issue persists, search for it before opening a new one. If you find an o
 
 ## Requests
 
-* Start an issue on GitHub following one of these templates:
-  * [Feature request][feature_request]
-  * [Cask request][cask_request]
+Start an issue on GitHub following one of these templates:
+* [Feature request][feature_request]
+* [Cask request][cask_request]
 
 ## Questions? Wanna chat?
 
