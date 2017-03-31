@@ -3,6 +3,7 @@ cask 'adobe-bridge-cc' do
   sha256 'd8f27894419077792b3a01c63150c7bfe43599cf3ebeb240770046c56bc79c94'
 
   url 'http://trials3.adobe.com/AdobeProducts/KBRG/6/osx10/Bridge_6_LS20.dmg',
+  # Bridge_6_LS20 is propably the part that needs to be changed, but I don't know how this versioning in their url works 
       user_agent: :fake,
       cookies:    { 'MM_TRIALS' => '1234' }
   name 'Adobe Bridge CC'
