@@ -1,11 +1,11 @@
 cask 'telegram-desktop' do
-  version '1.0.14'
-  sha256 '5b26864a532ba90ba06179a68233f0c6549035d3133a887d71ac82657331098f'
+  version '1.0.27'
+  sha256 '7f6166a4040b4716b5359804e2a8f66e031eccaec66e1eb3aac268cfee3a97bc'
 
   # tdesktop.com was verified as official when first introduced to the cask
   url "https://updates.tdesktop.com/tmac/tsetup.#{version}.dmg"
   appcast "https://tdesktop.com/mac/tupdates/current?version=#{version.no_dots}",
-          checkpoint: '670837f1300c0f0aa7a7db9f10dc9fd121568eea9e9f87df5fe4768a5ff3c18c'
+          checkpoint: 'd79546c618e147fe7dad0b3bae50fc3419ab646cc3fb9dad3ec8a385e72aa67d'
   name 'Telegram Desktop'
   homepage 'https://desktop.telegram.org/'
 
