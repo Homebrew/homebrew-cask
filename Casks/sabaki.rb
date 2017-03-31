@@ -9,7 +9,5 @@ cask 'sabaki' do
 
   depends_on formula: 'unrar'
 
-  license :mit
-
   app 'Sabaki.app'
 end
