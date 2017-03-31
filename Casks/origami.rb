@@ -5,7 +5,7 @@ cask 'origami' do
   # github.com/facebook/origami was verified as official when first introduced to the cask
   url "https://github.com/facebook/origami/releases/download/v#{version}/Origami-#{version}.zip"
   appcast 'https://github.com/facebook/origami/releases.atom',
-          checkpoint: '685edf3bdbf3ab04011144521a4508aa97a4a2ddf798fa71a0d1d9a34c01f53c'
+          checkpoint: 'd38bd50b4d8cc93621940b1e90897ab9cbf1b3fb7fa8e5e3004126963b053cac'
   name 'Origami'
   homepage 'https://facebook.github.io/origami'
 

@@ -5,7 +5,7 @@ cask 'ghdl' do
   # github.com/tgingold/ghdl was verified as official when first introduced to the cask
   url "https://github.com/tgingold/ghdl/releases/download/v#{version}/ghdl-#{version}-llvm-darwin13.pkg"
   appcast 'https://github.com/tgingold/ghdl/releases.atom',
-          checkpoint: 'd6f629caf9ece3d3f1d8f9c5a0a0f48d1ed9116a8831342fcd28511a18eebeec'
+          checkpoint: '23d87b7efbb471cdd2425f9a95a4e92dccf4d9cd8bcdce4316c983f6503f312a'
   name 'GHDL'
   homepage 'http://ghdl.free.fr/'
 
