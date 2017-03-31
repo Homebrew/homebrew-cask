@@ -1,5 +1,5 @@
 cask 'adobe-air' do
-  version '24.0'
+  version '25.0'
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://airdownload.adobe.com/air/mac/download/#{version}/AdobeAIR.dmg"
