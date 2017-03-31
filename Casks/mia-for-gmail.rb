@@ -1,6 +1,6 @@
 cask 'mia-for-gmail' do
   version '2.2.7'
-  sha256 '14330732c7ee96128f81004e42a80e5c2fda36610c9e7d4d1d609489d83be6bf'
+  sha256 '6db8c810cdc125468ac7c4a302b8dd8a9d919ef3144fd7675340f6f5e02211e5'
 
   url 'https://www.miaforgmail.com/application/notifier-pro-for-gmail/MiaForGmail.dmg'
   appcast 'https://www.sovapps.com/application/notifier-pro-for-gmail/notifier.xml',
