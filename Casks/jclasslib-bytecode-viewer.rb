@@ -15,7 +15,7 @@ cask 'jclasslib-bytecode-viewer' do
   app 'jclasslib bytecode viewer.app'
 
   zap delete: [
-                '~/Library/Saved Application State/com.install4j.8931-3388-4457-4383.404488187.savedState',
-                '~/Library/Saved Application State/com.install4j.8931-3388-4457-4383.404488187',
+                '~/Library/Saved Application State/com.install4j.*.savedState',
+                '~/Library/Saved Application State/com.install4j.*',
               ]
 end
