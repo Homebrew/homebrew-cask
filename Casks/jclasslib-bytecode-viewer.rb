@@ -10,8 +10,6 @@ cask 'jclasslib-bytecode-viewer' do
 
   auto_updates true
 
-  license :gpl
-
   app 'jclasslib bytecode viewer.app'
 
   zap delete: [
