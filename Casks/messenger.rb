@@ -1,6 +1,6 @@
 cask 'messenger' do
-  version '0.1.12.1487384288-5622ec8fa60c38a1'
-  sha256 '9f560c0caf5c37d0bf3ba33b003b8da61f8d8d3bc775be36ba540bbdbac9c93d'
+  version '0.1.5.1442536116-8f43a2f9c4d47b7b'
+  sha256 'b26068e8a9950e8e60edaacdb54d2faf4be314afa24f5dead6e6101eb7dbb420'
 
   url "https://fbmacmessenger.rsms.me/dist/Messenger-#{version}.zip"
   appcast 'https://fbmacmessenger.rsms.me/changelog.xml',
