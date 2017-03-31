@@ -4,7 +4,7 @@ cask 'lazpaint' do
 
   url "https://downloads.sourceforge.net/lazpaint/lazpaint#{version}_osx32.zip"
   appcast 'https://sourceforge.net/projects/lazpaint/rss',
-          checkpoint: 'd52c7f467dc51331ce7ad24785f9e4eb3d7e386bf17e98ecfd8454ec0ca68a0a'
+          checkpoint: 'ce8c6ecb6dff3743d2833a86635bff3ecc4f53f181026fb34b7c159419c004e6'
   name 'LazPaint'
   homepage 'https://sourceforge.net/projects/lazpaint/'
 
