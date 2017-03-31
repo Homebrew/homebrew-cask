@@ -1,6 +1,6 @@
 cask 'huamim' do
-  version 'latest'
-  sha256 '4b1af2cdbc0b66648ebaf2f116f90d31e71a6749ecdcc8c8d2ea11011af3f9fa'
+  version :latest
+  sha256 :no_check
 
   url 'https://kisexu-file.b0.upaiyun.com/fp/app/huami-mac.zip'
   name 'HuaMiM'
