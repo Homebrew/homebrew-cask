@@ -43,9 +43,13 @@ And there we have it. Atom installed with one quick command: no clicking, no dra
 
 ## Reporting bugs
 
-Like most pieces of software, Homebrew-Cask has bugs — and we are busy fixing them! If you find a new bug tell us about it, but before you do make sure the problem isn’t simply an outdated setup on your side, by following [this guide](doc/reporting_bugs/pre_bug_report.md).
+[**If you ignore this guide, your issue may be closed without review**](doc/faq/closing_issues_without_review.md).
 
-If your issue persists, follow these instructions to the appropriate course of action:
+Before reporting a bug, run `brew update-reset && brew update` and try your command again. This will ensure the problem isn’t an outdated setup on your side. Note this command is a fix-all that will reset the state of all your taps, so if you have changes on those that you want to keep, deal with them first.
+
+If your issue persists, search for it before opening a new one. If you find an open issue and have any new information not reported in the original, please add your insights. If you find a closed issue, try the solutions there.
+
+ If the issue is still not solved, see the guides for common problems:
 
 * A cask fails to install:
   * [`curl` error](doc/reporting_bugs/a_cask_fails_to_install.md#curl-error)
@@ -57,13 +61,13 @@ If your issue persists, follow these instructions to the appropriate course of a
 * [`brew cask list` shows wrong information](doc/reporting_bugs/brew_cask_list_shows_wrong_information.md)
 * [`uninstall` wrongly reports cask as not installed](doc/reporting_bugs/uninstall_wrongly_reports_cask_as_not_installed.md)
 * [`Error: Unknown command: cask` error](doc/reporting_bugs/error_unknown_command_cask.md)
-* [My problem isn’t listed][bug_report]
+* [My problem isn’t listed](https://github.com/caskroom/homebrew-cask/issues/new)
 
 ## Requests
 
-* Start an issue on GitHub following one of these templates:
-  * [Feature request][feature_request]
-  * [Cask request][cask_request]
+Start an issue on GitHub following one of these templates:
+* [Feature request][feature_request]
+* [Cask request][cask_request]
 
 ## Questions? Wanna chat?
 
@@ -76,6 +80,5 @@ We’re really rather friendly! Here are the best places to talk about the proje
 ## License
 Code is under the [BSD 2 Clause (NetBSD) license](LICENSE)
 
-[bug_report]: https://github.com/caskroom/homebrew-cask/issues/new?title=Bug%20report%3A%20%5Bsummarise%20the%20issue%20here%5D&body=Remember%20to%20follow%20the%20%5Bpre%20bug%20report%5D%28https%3A%2F%2Fgithub.com%2Fcaskroom%2Fhomebrew-cask%2Fblob%2Fmaster%2Fdoc%2Freporting_bugs%2Fpre_bug_report.md%29%20guide%20beforehand.%20Failure%20to%20do%20so%20might%20get%20your%20issue%20closed.%0A%0A%23%23%23%23%20Description%20of%20issue%0A%0A%5Binsert%20a%20detailed%20description%20of%20your%20issue%20here%5D%0A%0A%3Cdetails%3E%3Csummary%3EOutput%20of%20%60brew%20cask%20%3Ccommand%3E%20--verbose%60%3C%2Fsummary%3E%0A%0A%60%60%60%0A%5Bpaste%20output%20here%5D%0A%60%60%60%0A%3C%2Fdetails%3E%0A%0A%3Cdetails%3E%3Csummary%3EOutput%20of%20%60brew%20doctor%60%3C%2Fsummary%3E%0A%0A%60%60%60%0A%5Bpaste%20output%20here%5D%0A%60%60%60%0A%3C%2Fdetails%3E%0A%0A%3Cdetails%3E%3Csummary%3EOutput%20of%20%60brew%20cask%20doctor%60%3C%2Fsummary%3E%0A%0A%60%60%60%0A%5Bpaste%20output%20here%5D%0A%60%60%60%0A%3C%2Fdetails%3E%0A
 [cask_request]: https://github.com/caskroom/homebrew-cask/issues/new?title=Cask%20request%3A%20%5Bapp%20name%20here%5D&body=%23%23%23%20Cask%20details%0A%0APlease%20fill%20out%20as%20much%20as%20possible.%20Before%20you%20do%2C%20note%20%2A%2Awe%20cannot%20support%20Mac%20App%20Store-only%20apps%2A%2A.%0A%0AName%3A%0A%0AHomepage%3A%0A%0ADownload%20URL%3A%0A%0ADescription%3A%0A
 [feature_request]: https://github.com/caskroom/homebrew-cask/issues/new?title=Feature%20request%3A&body=%23%23%23%20Description%20of%20feature%2Fenhancement%0A%0A%0A%0A%23%23%23%20Justification%0A%0A%0A%0A%23%23%23%20Example%20use%20case%0A%0A%0A%0A
