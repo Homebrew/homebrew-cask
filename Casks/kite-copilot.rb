@@ -5,7 +5,7 @@ cask 'kite-copilot' do
   # s3-us-west-1.amazonaws.com/kite-downloads was verified as official when first introduced to the cask
   url "https://s3-us-west-1.amazonaws.com/kite-downloads/Kite-#{version}.dmg"
   appcast 'https://release.kite.com/appcast.xml',
-          checkpoint: '56e444ad815da78da235b3b3d289a190c84295bfb136ce4e226d1dde04372907'
+          checkpoint: '7611b119c633ab1402d8348f29d1aaa9743b2dadf815a3d984fcb6942e807686'
   name 'Kite'
   homepage 'https://kite.com/'
 
