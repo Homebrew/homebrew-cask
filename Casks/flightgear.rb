@@ -10,4 +10,9 @@ cask 'flightgear' do
   homepage 'http://www.flightgear.org/'
 
   app 'FlightGear.app'
+
+  zap delete: [
+                '/Library/Logs/DiagnosticReports/fgfs*',
+                '~/Library/Application Support/FlightGear',
+              ]
 end
