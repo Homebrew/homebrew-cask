@@ -8,5 +8,5 @@ cask 'rq' do
   name 'rq'
   homepage 'https://github.com/dflemstr/rq'
 
-  binary 'x86_64-apple-darwin/rq', target: 'rq'
+  binary 'x86_64-apple-darwin/rq'
 end
