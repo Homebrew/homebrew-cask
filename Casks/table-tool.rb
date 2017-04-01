@@ -4,7 +4,7 @@ cask 'table-tool' do
 
   url "https://github.com/jakob/TableTool/releases/download/v#{version}/tabletool-#{version}.zip"
   appcast 'https://github.com/jakob/TableTool/releases.atom',
-          checkpoint: '018d9b9ef2158e97203d26fd981e285e034b8fa9ce41d31496683216186a2879'
+          checkpoint: '21684c0cab56de4fd2cf9e73f3df14969995c17ca378dc752a56274c2f0965c9'
   name 'Table Tool'
   homepage 'https://github.com/jakob/TableTool'
 
