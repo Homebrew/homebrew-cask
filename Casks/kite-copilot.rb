@@ -9,5 +9,7 @@ cask 'kite-copilot' do
   name 'Kite'
   homepage 'https://kite.com/'
 
+  auto_updates true
+
   app 'Kite.app'
 end
