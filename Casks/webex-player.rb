@@ -5,7 +5,6 @@ cask 'webex-player' do
   url 'https://welcome.webex.com/client/T31L/mac/intel/webexplayer_intel.dmg'
   name 'WebEx Player'
   homepage 'https://www.webex.com/play-webex-recording.html'
-  license :gratis
 
   pkg 'WebEx Player.pkg'
 
