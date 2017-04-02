@@ -7,6 +7,8 @@ cask 'android-sdk' do
   name 'android-sdk'
   homepage 'https://developer.android.com/index.html'
 
+  conflicts_with cask: 'android-platform-tools'
+
   build_tools_version = '25.0.2'
 
   binary "#{staged_path}/build-tools/#{build_tools_version}/aapt"
@@ -40,8 +42,16 @@ cask 'android-sdk' do
     system_command "#{staged_path}/tools/bin/sdkmanager", args: ['tools', 'platform-tools', "build-tools;#{build_tools_version}"], input: 'y'
   end
 
+  postflight do
+    # default unversioned path symlink
+    share_path = "#{HOMEBREW_PREFIX}/share/android-sdk"
+    FileUtils.ln_sf(staged_path.to_s, share_path)
+  end
+
   caveats <<-EOS.undent
     We will install android-sdk-tools, platform-tools, and build-tools for you.
     You can control android sdk packages via the sdkmanager command.
+    You may want to add to your profile:
+      'export ANDROID_HOME=#{HOMEBREW_PREFIX}/share/android-sdk'
   EOS
 end
