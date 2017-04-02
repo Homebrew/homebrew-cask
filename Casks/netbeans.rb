@@ -32,7 +32,7 @@ cask 'netbeans' do
             delete:  '/Applications/NetBeans'
 
   zap delete: [
-                "~/Library/Application\ Support/NetBeans/#{version.major_minor}",
-                "~/Library/Caches/NetBeans/#{version.major_minor}",
+                '~/Library/Application Support/NetBeans',
+                '~/Library/Caches/NetBeans',
               ]
 end
