@@ -77,6 +77,7 @@
   "wacom-graphire4-tablet": "caskroom/drivers",
   "wacom-intuos-tablet": "caskroom/drivers",
   "wacom-intuos3-tablet": "caskroom/drivers",
+  "wine-devel": "caskroom/versions",
   "wine-staging": "caskroom/versions",
   "xbox360-controller-driver": "caskroom/drivers",
   "xerox-print-driver": "caskroom/drivers"
