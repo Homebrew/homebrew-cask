@@ -1,4 +1,4 @@
-cask 'webex-player' do
+cask 'webex-wrf-player' do
   version 'T31L'
   sha256 'fcaeaa30414b3ba1bec41ec75940321b13cd738c32ed2f350810265fa2c8cb2f'
 
