@@ -10,7 +10,7 @@
 
 {{replace this}}
 
-#### Output of your command with `--verbose --debug`.
+#### Output of your command with `--verbose --debug`
 
 ```
 {{replace this}}
