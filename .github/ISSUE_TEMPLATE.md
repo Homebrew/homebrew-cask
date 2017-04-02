@@ -4,7 +4,7 @@
   - [ ] None of the templates was appropriate for my issue, or I’m not sure.
 - [ ] I ran `brew update-reset && brew update` and retried my command.
 - [ ] I ran `brew doctor`, fixed as many issues as possible and retried my command.
-- [ ] I understand that [if I ignore these instructions, my issue may be closed without review](doc/faq/closing_issues_without_review.md).
+- [ ] I understand that [if I ignore these instructions, my issue may be closed without review](https://github.com/caskroom/homebrew-cask/blob/master/doc/faq/closing_issues_without_review.md).
 
 #### Description of issue
 
