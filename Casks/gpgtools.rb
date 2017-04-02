@@ -14,16 +14,6 @@ cask 'gpgtools' do
 
   pkg 'Install.pkg'
 
-  # TODO: remove all ENV variables
-  postflight do
-    system_command '/usr/local/MacGPG2/libexec/fixGpgHome',
-                   args: [
-                           Etc.getpwuid(Process.euid).name,
-                           ENV['GNUPGHOME'] ? ENV['GNUPGHOME'] : Pathname.new(File.expand_path('~')).join('.gnupg'),
-                         ],
-                   sudo: true
-  end
-
   uninstall_postflight do
     %w[gpg gpg2 gpg-agent].map { |exec_name| "/usr/local/bin/#{exec_name}" }.each do |exec|
       File.rm(exec) if File.exist?(exec) && File.readlink(exec).include?('MacGPG2')
