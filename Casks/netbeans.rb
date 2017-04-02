@@ -30,4 +30,9 @@ cask 'netbeans' do
 
   uninstall pkgutil: 'org.netbeans.ide.*|glassfish.*',
             delete:  '/Applications/NetBeans'
+
+  zap delete: [
+                "~/Library/Application\ Support/NetBeans/#{version.major_minor}",
+                "~/Library/Caches/NetBeans/#{version.major_minor}",
+              ]
 end
