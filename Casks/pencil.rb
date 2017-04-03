@@ -6,7 +6,7 @@ cask 'pencil' do
   appcast 'https://github.com/prikhi/pencil/releases.atom',
           checkpoint: '207db45afcda031fbc4e6b642c0144ea0d5fa6e4d987dbdd62fecf9582f410bb'
   name 'Pencil'
-  homepage 'http://pencil.evolus.vn/'
+  homepage 'https://pencil.evolus.vn/'
 
   app 'Pencil.app'
 end

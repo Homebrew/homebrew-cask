@@ -6,7 +6,7 @@ cask 'bbedit' do
   appcast 'https://versioncheck.barebones.com/BBEdit.xml',
           checkpoint: 'adcd1cda2c27210d9d75b1a83706c5b388a50347cdaf2677582572a5c0d151cf'
   name 'BBEdit'
-  homepage 'http://www.barebones.com/products/bbedit/'
+  homepage 'https://www.barebones.com/products/bbedit/'
 
   depends_on macos: '>= :mavericks'
 

@@ -5,7 +5,7 @@ cask 'playmemories-home' do
   # pmb.update.sony.net/PMH was verified as official when first introduced to the cask
   url "http://pmb.update.sony.net/PMH/ZwznMvYM3l/PMHOME_#{version.no_dots}DL.dmg"
   name 'PlayMemories Home'
-  homepage 'http://support.d-imaging.sony.co.jp/www/disoft/int/download/playmemories-home/mac/en/'
+  homepage 'https://support.d-imaging.sony.co.jp/www/disoft/int/download/playmemories-home/mac/en/'
 
   pkg 'PMH_INST.pkg'
 

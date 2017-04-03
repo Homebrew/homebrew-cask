@@ -4,7 +4,7 @@ cask 'gravitdesigner' do
 
   url 'https://app.designer.io/_downloads/mac/GravitDesigner.zip'
   name 'Gravit Designer'
-  homepage 'http://designer.io/'
+  homepage 'https://designer.io/'
 
   app 'GravitDesigner.app'
 end

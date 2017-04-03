@@ -4,7 +4,7 @@ cask 'trenchbroom' do
 
   url "http://kristianduske.com/trenchbroom/downloads/macosx/stable/TrenchBroom_Mac_#{version}.zip"
   appcast 'http://kristianduske.com/trenchbroom/downloads.php?platform=macosx',
-          checkpoint: '6210328d2de8336ad34e088d64f927a86e0db81655865ed9507bcfe5e8ae1b78'
+          checkpoint: '07694d7d87fc302601918c5ef21dbf33cf8c6f55cbc61351d220d96533dcf09e'
   name 'TrenchBroom'
   homepage 'http://kristianduske.com/trenchbroom/'
 

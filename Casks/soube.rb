@@ -1,11 +1,11 @@
 cask 'soube' do
-  version '1.3.2'
-  sha256 'a6fccfdd425ac5d237a3a2f80d517baf14c6ec1d758b9d7bab04e0044ce8c69b'
+  version '1.4.2'
+  sha256 'c09df1e3a512677468bb49aa1a72306110ecd57fb85a29a0897fba5ba3b940a5'
 
   # github.com/DracotMolver/Soube was verified as official when first introduced to the cask
   url "https://github.com/DracotMolver/Soube/releases/download/#{version}/soube-#{version}.dmg"
   appcast 'https://github.com/DracotMolver/Soube/releases.atom',
-          checkpoint: '818ba8cacafa664ca1561737fbd6e3499cce1bff39525840792974b12bd8ead2'
+          checkpoint: 'ea1de0a98840d99303b89f8dc27d579ecfa21b315234c13c4f505baef4c97b7e'
   name 'Soube'
   homepage 'http://soube.diegomolina.cl/'
 

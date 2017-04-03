@@ -4,7 +4,7 @@ cask 'tomahawk' do
 
   url "http://download.tomahawk-player.org/Tomahawk-#{version}.dmg"
   appcast 'https://github.com/tomahawk-player/tomahawk/releases.atom',
-          checkpoint: 'a2c6432ac6479a859f51aae60e6e0eb6371b6274e89d272c3b9e05b4a39c89a1'
+          checkpoint: '8b34e618385fe6f85a9887878b8cd2f11040e3d2c24a0364aa994c467e4c1bd8'
   name 'Tomahawk'
   homepage 'https://www.tomahawk-player.org/'
 

@@ -4,7 +4,7 @@ cask 'cantata' do
 
   url "https://github.com/CDrummond/cantata/releases/download/v#{version}/Cantata-#{version}.dmg"
   appcast 'https://github.com/CDrummond/cantata/releases.atom',
-          checkpoint: 'd9e69862c6f41763941f2c74d365fb0a3a2f2a45efeae96f87699a3bfac0a8c7'
+          checkpoint: '4421d33d3c8b121da3d7740b2ce6bc356d8f04c6a762581f6787ee2e7cdf1c0d'
   name 'Cantata'
   homepage 'https://github.com/cdrummond/cantata'
 
