@@ -43,9 +43,11 @@ cask 'android-sdk' do
   end
 
   postflight do
-    # default unversioned path symlink
-    share_path = "#{HOMEBREW_PREFIX}/share/android-sdk"
-    FileUtils.ln_sf(staged_path.to_s, share_path)
+    FileUtils.ln_sf(staged_path.to_s, "#{HOMEBREW_PREFIX}/share/android-sdk")
+  end
+
+  uninstall_postflight do
+    FileUtils.rm("#{HOMEBREW_PREFIX}/share/android-sdk")
   end
 
   caveats <<-EOS.undent
@@ -53,5 +55,8 @@ cask 'android-sdk' do
     You can control android sdk packages via the sdkmanager command.
     You may want to add to your profile:
       'export ANDROID_HOME=#{HOMEBREW_PREFIX}/share/android-sdk'
+
+    This operation may take up to 10 minutes depending on your internet connection.
+    Please, be patient.
   EOS
 end
