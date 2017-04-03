@@ -7,7 +7,7 @@ cask 'cctalk' do
   appcast 'http://f1.ct.hjfile.cn/api/AutoUpdate/newupdate/out/mac/cctalk/update/info.xml',
           checkpoint: '50da191b8d58b72dcd008d992b63671ca89c831a3ef2acff0eb8c40dfe3f2133'
   name 'CCTalk'
-  homepage 'http://www.cctalk.com/download/'
+  homepage 'https://www.cctalk.com/download/'
 
   app 'CCtalk.app'
 end

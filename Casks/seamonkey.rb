@@ -34,7 +34,7 @@ cask 'seamonkey' do
   # mozilla.org was verified as official when first introduced to the cask
   url "https://ftp.mozilla.org/pub/seamonkey/releases/#{version}/mac/#{language}/SeaMonkey%20#{version}.dmg"
   name 'SeaMonkey'
-  homepage 'http://www.seamonkey-project.org/'
+  homepage 'https://www.seamonkey-project.org/'
 
   auto_updates true
 
