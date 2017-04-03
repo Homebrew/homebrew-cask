@@ -12,8 +12,8 @@ cask 'tankix' do
 
   zap delete: [
                 '/Library/Logs/DiagnosticReports/tankix*',
-                '~/Library/Application\ Support/CrashReporter/tankix*',
+                '~/Library/Application Support/CrashReporter/tankix*',
                 '~/Library/Preferences/unity.AlternativaPlatform.TankiX.plist',
-                '~/Library/Saved\ Application\ State/unity.AlternativaPlatform.TankiX.savedState',
+                '~/Library/Saved Application State/unity.AlternativaPlatform.TankiX.savedState',
               ]
 end
