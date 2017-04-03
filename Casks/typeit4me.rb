@@ -4,7 +4,7 @@ cask 'typeit4me' do
 
   url "http://ettoresoftware.com/download/TypeIt4Me#{version}.zip"
   appcast 'http://ettoresoftware.com/download/TypeIt4MeAppcast.xml',
-          checkpoint: 'eed094f3eec67e5216040586426f0f4f36d4b77939eee5c05b91dbc40170035c'
+          checkpoint: '2d6aa7866ec74708c78c0fd4cc75d95ffda5e32ba77f23fb0beaeede5727ba1a'
   name 'TypeIt4Me'
   homepage 'http://www.ettoresoftware.com/mac-apps/typeit4me/'
 
