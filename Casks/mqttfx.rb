@@ -13,6 +13,6 @@ cask 'mqttfx' do
 
   zap delete: [
                 '~/Library/Application Support/MQTT-FX',
-                '~//Library/Application Support/MQTT.fx',
+                '~/Library/Application Support/MQTT.fx',
               ]
 end
