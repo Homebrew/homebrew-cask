@@ -2,7 +2,7 @@ cask 'prott' do
   version :latest
   sha256 :no_check
 
-  url 'https://prottapp.com/app/gadgets/prott.dmg'
+  url 'https://dl.prottapp.com/apps/prott.dmg'
   name 'Prott'
   homepage 'https://prottapp.com/'
 
