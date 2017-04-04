@@ -9,5 +9,5 @@ cask 'switchhosts' do
   name 'SwitchHosts!'
   homepage 'https://oldj.github.io/SwitchHosts/'
 
-  app 'SwitchHosts!.app'
+  app 'SwitchHosts!-darwin-x64/SwitchHosts!.app'
 end
