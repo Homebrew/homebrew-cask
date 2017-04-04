@@ -7,7 +7,11 @@ cask 'mqttfx' do
   name 'MQTT.fx'
   homepage 'http://www.mqttfx.org/'
 
-  installer manual: 'MQTT.fx Installer.app'
+  installer script: {
+                      executable: 'MQTT.fx Installer.app/Contents/MacOS/JavaApplicationStub',
+                      args:       %w[-q],
+                      sudo:       true,
+                    }
 
   uninstall delete: '/Applications/MQTT.fx.app'
 
