@@ -11,8 +11,8 @@
 header 'Running before_script.sh...'
 
 # Required workarounds
-if ! command -v gpg2 &>/dev/null; then brew unlink gnupg && brew install gpg2; fi # After El Capitan is no longer needed, this can likely be removed
-gpg2 --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 # Required by RVM: https://rvm.io/rvm/security
+if ! run command -v gpg2 &>/dev/null; then run brew unlink gnupg && run brew install gpg2; fi # After El Capitan is no longer needed, this can likely be removed
+run gpg2 --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 # Required by RVM: https://rvm.io/rvm/security
 run rvm get head # Required due to Travis bug: https://github.com/travis-ci/travis-ci/issues/6307#issuecomment-233315824
 
 # see https://github.com/travis-ci/travis-ci/issues/2666
