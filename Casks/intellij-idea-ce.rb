@@ -13,12 +13,10 @@ cask 'intellij-idea-ce' do
 
   app 'IntelliJ IDEA CE.app'
 
-  uninstall script: {
-                      executable:   '/bin/rm',
-                      args:         [`which idea`.strip!],
-                      sudo:         false,
-                      must_succeed: false,
-                    }
+  uninstall_postflight do
+    launcher_path = `which idea`.strip!
+    FileUtils.rm(launcher_path) unless launcher_path.nil?
+  end
 
   zap delete: [
                 "~/Library/Application Support/IdeaIC#{version.major_minor}",
