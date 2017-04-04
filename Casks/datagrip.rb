@@ -13,6 +13,10 @@ cask 'datagrip' do
 
   app 'DataGrip.app'
 
+  uninstall_postflight do
+    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'datagrip') }.each { |path| File.delete(path) if File.exist?(path) }
+  end
+
   zap delete: [
                 "~/Library/Preferences/DataGrip#{version.major_minor}",
                 "~/Library/Application Support/DataGrip#{version.major_minor}",
