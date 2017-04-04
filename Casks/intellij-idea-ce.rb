@@ -13,7 +13,12 @@ cask 'intellij-idea-ce' do
 
   app 'IntelliJ IDEA CE.app'
 
-  uninstall delete: '/usr/local/bin/idea'
+  uninstall script: {
+                      executable:   '/bin/rm',
+                      args:         [`which idea`.strip!],
+                      sudo:         false,
+                      must_succeed: false,
+                    }
 
   zap delete: [
                 "~/Library/Application Support/IdeaIC#{version.major_minor}",
