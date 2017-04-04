@@ -14,8 +14,7 @@ cask 'intellij-idea-ce' do
   app 'IntelliJ IDEA CE.app'
 
   uninstall_postflight do
-    launcher_path = `which idea`.strip!
-    FileUtils.rm(launcher_path) unless launcher_path.nil?
+    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'idea') }.each { |path| File.rm(path) if File.exist?(path) }
   end
 
   zap delete: [
