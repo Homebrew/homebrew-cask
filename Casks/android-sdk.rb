@@ -29,7 +29,6 @@ cask 'android-sdk' do
   binary "#{staged_path}/platform-tools/etc1tool"
   binary "#{staged_path}/platform-tools/fastboot"
   binary "#{staged_path}/platform-tools/hprof-conv"
-  binary "#{staged_path}/platform-tools/sqlite3"
   binary "#{staged_path}/tools/android"
   binary "#{staged_path}/tools/bin/avdmanager"
   binary "#{staged_path}/tools/bin/lint"
