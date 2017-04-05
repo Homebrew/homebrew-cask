@@ -1,10 +1,10 @@
 cask 'musicbrainz-picard' do
-  version '1.4'
-  sha256 'c3eacf30cfc4dcdafd617619ea774ab203343f889ef5b7d61163e21e473a0833'
+  version '1.4.1'
+  sha256 '423f7b21a048e94b8889acd45bb70fc4b8b0b8bbd18437c8394bd747462ab089'
 
   url "http://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-#{version}.dmg"
   appcast 'https://picard.musicbrainz.org/changelog/',
-          checkpoint: '4a3d91d42a68edd818853e230e296805c480af637053cfbc0c2a7f4f7ab7c00d'
+          checkpoint: 'ccbaa3d95f931ebff6c4f7d27794a32dfdafcdb4bbb7ae88f39cd95680916040'
   name 'MusicBrainz Picard'
   homepage 'https://picard.musicbrainz.org/'
 
