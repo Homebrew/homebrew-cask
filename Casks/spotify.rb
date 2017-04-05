@@ -19,6 +19,7 @@ cask 'spotify' do
                 '~/Library/Preferences/com.spotify.client.plist',
                 '~/Library/Preferences/com.spotify.client.helper.plist',
                 '~/Library/Caches/com.spotify.client',
+                '~/Library/Caches/com.spotify.client.helper',
                 '~/Library/Saved Application State/com.spotify.client.savedState',
                 '~/Library/Logs/Spotify',
               ]
