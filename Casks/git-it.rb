@@ -1,10 +1,10 @@
 cask 'git-it' do
-  version '4.2.3'
-  sha256 '81ea8d0a675286f6d6ed958c68456f13c9315704191e747b4227dec4f0ef54ad'
+  version '4.3.3'
+  sha256 '466c3c9a2c60a96c1f662bb2f4c4d264f65f5aa29303c808bfbf0ab5c6644827'
 
   url "https://github.com/jlord/git-it-electron/releases/download/#{version}/Git-it-Mac-x64.zip"
   appcast 'https://github.com/jlord/git-it-electron/releases.atom',
-          checkpoint: '2ec735bc7d4f679ba67ccfbdfd1af29943e9f5c67bd56c46706b644bb8782283'
+          checkpoint: '9ae33c41691c1724b7008608177d920618c1a982ed7674d20c26b0db3b583807'
   name 'Git-it'
   homepage 'https://github.com/jlord/git-it-electron'
 
