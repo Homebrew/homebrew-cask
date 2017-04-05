@@ -4,7 +4,7 @@ cask 'flux' do
 
   url "https://justgetflux.com/mac/Flux#{version}.zip"
   appcast 'https://justgetflux.com/mac/macflux.xml',
-          checkpoint: 'f6127c732fe64848139f952b0ff08dcd4ba97f1a58d6599857d6268ad035b5ec'
+          checkpoint: '16bee634c8c3ab57414f2aa3afac3afc762e6aad522247dc9d5c9bddd73fbdc7'
   name 'f.lux'
   homepage 'https://justgetflux.com/'
 
@@ -22,5 +22,6 @@ cask 'flux' do
   zap delete: [
                 '~/Library/Preferences/org.herf.Flux.plist',
                 '~/Library/Caches/org.herf.Flux',
+                '~/Library/Cookies/org.herf.Flux.binarycookies',
               ]
 end
