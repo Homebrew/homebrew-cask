@@ -7,9 +7,6 @@ matrix:
     - os: osx
       osx_image: xcode8.2
       rvm: system
-    - os: osx
-      osx_image: xcode7.3
-      rvm: system
   fast_finish: true
 
 branches:
@@ -21,9 +18,6 @@ cache:
     - $HOME/.gem
 
 install: true # skip install step
-
-before_install: set -e # REMOVE AFTER EL CAPITAN IS NO LONGER NEEDED
-after_script: set +e # REMOVE AFTER EL CAPITAN IS NO LONGER NEEDED
 
 before_script:
   - . ci/travis/before_script.sh
