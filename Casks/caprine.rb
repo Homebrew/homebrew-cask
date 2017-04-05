@@ -8,5 +8,7 @@ cask 'caprine' do
   name 'Caprine'
   homepage 'https://github.com/sindresorhus/caprine'
 
+  auto_updates true
+
   app 'Caprine.app'
 end
