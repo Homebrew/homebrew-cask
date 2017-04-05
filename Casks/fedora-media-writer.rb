@@ -1,6 +1,6 @@
 cask 'fedora-media-writer' do
   version '4.0.8'
-  sha256 '6f64f2ba333033f839981cb4435662fc299a8bdc45e895bc33ffd9753f675f62'
+  sha256 'd457232f0cac86514a8d32ae9673fcde1386f3349b98c47f84b9d6f318f00753'
 
   # github.com/MartinBriza/MediaWriter was verified as official when first introduced to the cask
   url "https://github.com/MartinBriza/MediaWriter/releases/download/#{version}/FedoraMediaWriter-osx-#{version}.dmg"
