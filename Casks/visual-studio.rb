@@ -17,5 +17,7 @@ cask 'visual-studio' do
                 '~/Library/Logs/VisualStudio',
                 '~/Library/Preferences/Visual*Studio',
                 '~/Library/Application Support/CrashReporter/VisualStudio*',
+                '/Applications/Xamarin Workbooks.app',
+                '/Applications/Xamarin Profiler.app',
               ]
 end
