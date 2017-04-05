@@ -22,6 +22,9 @@ cache:
 
 install: true # skip install step
 
+before_install: set -e # REMOVE AFTER EL CAPITAN IS NO LONGER NEEDED
+after_script: set +e # REMOVE AFTER EL CAPITAN IS NO LONGER NEEDED
+
 before_script:
   - . ci/travis/before_script.sh
 
