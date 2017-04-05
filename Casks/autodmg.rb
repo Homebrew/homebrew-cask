@@ -9,4 +9,10 @@ cask 'autodmg' do
   homepage 'https://github.com/MagerValp/AutoDMG'
 
   app 'AutoDMG.app'
+
+  zap delete: [
+                '~/Library/Preferences/se.gu.it.AutoDMG.plist',
+                '~/Library/Application Support/AutoDMG',
+                '~/Library/Caches/se.gu.it.AutoDMG',
+              ]
 end
