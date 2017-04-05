@@ -14,5 +14,4 @@ cask 'zoolz' do
             delete:     '/Applications/ZoolzRestore.app'
 
   zap delete: '~/.config/Genie9/Zoolz'
-
 end
