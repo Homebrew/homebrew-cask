@@ -4,8 +4,8 @@ cask 'fedora-media-writer' do
 
   # github.com/MartinBriza/MediaWriter was verified as official when first introduced to the cask
   url "https://github.com/MartinBriza/MediaWriter/releases/download/#{version}/FedoraMediaWriter-osx-#{version}.dmg"
-  appcast 'https://github.com/MartinBriza/MediaWriter/releases',
-          checkpoint: '6f6daea2d9b18afbbd04f81b9cd2f79fc1c90f8d7ba162e7a8c389579cac1902'
+  appcast 'https://github.com/MartinBriza/MediaWriter/releases.atom',
+          checkpoint: '3ee20b6276d110a610c675f64b42e4b270e11ff56466066ff3e85d6a5a62e352'
   name 'Fedora Media Writer'
   homepage 'https://fedoraproject.org/wiki/How_to_create_and_use_Live_USB'
 
