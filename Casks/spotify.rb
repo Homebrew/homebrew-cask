@@ -22,5 +22,6 @@ cask 'spotify' do
                 '~/Library/Caches/com.spotify.client.helper',
                 '~/Library/Saved Application State/com.spotify.client.savedState',
                 '~/Library/Logs/Spotify',
+                '~/Library/Cookies/com.spotify.client.binarycookies',
               ]
 end
