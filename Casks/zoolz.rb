@@ -10,5 +10,7 @@ cask 'zoolz' do
 
   uninstall quit:       'Zoolz',
             login_item: 'Zoolz',
-            pkgutil:    'ZoolzInstaller'
+            pkgutil:    'ZoolzInstaller',
+            delete:     '/Applications/ZoolzRestore.app'
+
 end
