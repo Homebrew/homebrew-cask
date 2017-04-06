@@ -1,6 +1,6 @@
 cask 'apptivate' do
-  version :latest
-  sha256 :no_check
+  version '2.2'
+  sha256 '8391b37f818c492085cb2b702799b6f98e615adaf8d726a10a9fd56890d6c306'
 
   url 'http://www.apptivateapp.com/resources/Apptivate.app.zip'
   name 'Apptivate'
