@@ -3,7 +3,7 @@ cask 'colortester' do
   sha256 :no_check
 
   # alfasado.co.jp was verified as official when first introduced to the cask
-  url 'https://www.alfasado.co.jp/download/ColorTester_Mac.zip'
+  url 'http://www.alfasado.co.jp/download/ColorTester_Mac.zip'
   name 'ColorTester'
   homepage 'https://alfasado.net/apps/colortester.html'
 
