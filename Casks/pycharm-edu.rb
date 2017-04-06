@@ -13,6 +13,10 @@ cask 'pycharm-edu' do
 
   app 'PyCharm Edu.app'
 
+  uninstall_postflight do
+    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'charm') }.each { |path| File.delete(path) if File.exist?(path) }
+  end
+
   zap delete: [
                 "~/Library/Preferences/PyCharmEdu#{version.major_minor.no_dots}",
                 "~/Library/Application Support/PyCharmEdu#{version.major_minor.no_dots}",

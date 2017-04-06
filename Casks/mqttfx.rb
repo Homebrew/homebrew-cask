@@ -5,7 +5,18 @@ cask 'mqttfx' do
   # jensd.de/apps/mqttfx was verified as official when first introduced to the cask
   url "http://www.jensd.de/apps/mqttfx/#{version}/mqttfx-#{version}-macos.dmg"
   name 'MQTT.fx'
-  homepage 'http://mqttfx.jfx4ee.org/'
+  homepage 'http://www.mqttfx.org/'
 
-  app 'MQTT.fx.app'
+  installer script: {
+                      executable: 'MQTT.fx Installer.app/Contents/MacOS/JavaApplicationStub',
+                      args:       %w[-q],
+                      sudo:       true,
+                    }
+
+  uninstall delete: '/Applications/MQTT.fx.app'
+
+  zap delete: [
+                '~/Library/Application Support/MQTT-FX',
+                '~/Library/Application Support/MQTT.fx',
+              ]
 end

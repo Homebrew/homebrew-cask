@@ -14,7 +14,9 @@ cask 'pycharm-ce' do
 
   app 'PyCharm CE.app'
 
-  uninstall delete: '/usr/local/bin/charm'
+  uninstall_postflight do
+    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'charm') }.each { |path| File.delete(path) if File.exist?(path) }
+  end
 
   zap delete: [
                 "~/Library/Application Support/PyCharm#{version.major_minor}",

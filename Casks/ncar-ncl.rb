@@ -1,26 +1,23 @@
 cask 'ncar-ncl' do
-  version '6.3.0'
+  version '6.4.0'
 
-  if MacOS.version == :mountain_lion
-    sha256 '154914834df0eeb69b778698062900175a5dcc88dcd76545cc2c504551cd756a'
-    url 'https://www.earthsystemgrid.org/download/fileDownload.htm?logicalFileId=e0852fc5-cd9a-11e4-bb80-00c0f03d5b7c'
-  elsif MacOS.version == :mavericks
-    sha256 'abe78b6830c43f8056cad02f5fbcbf4de82c4948b95b757b0d8a72d4776cbbf6'
-    url 'https://www.earthsystemgrid.org/download/fileDownload.htm?logicalFileId=e0849384-cd9a-11e4-bb80-00c0f03d5b7c'
+  if MacOS.version == :el_capitan
+    sha256 '2e1a2957dacd14835716f0f7309117a35e1f6255fa8569d0dc3038c42df9cbfd'
+    url 'https://www.earthsystemgrid.org/download/fileDownload.html?logicalFileId=1139ad88-fa02-11e6-a976-00c0f03d5b7c'
   else
-    sha256 'b0a7a02d1044380b6f33d274ccd0e870e06f11fbb98e72a58844eee98c98ff8d'
-    url 'https://www.earthsystemgrid.org/download/fileDownload.htm?logicalFileId=e085cc06-cd9a-11e4-bb80-00c0f03d5b7c'
+    sha256 '3db9396a6b33eff1a5d31b8e4d41eeac17f459a2740b614131fbbe943bc76a3c'
+    url 'https://www.earthsystemgrid.org/download/fileDownload.html?logicalFileId=0a459666-fa02-11e6-a976-00c0f03d5b7c'
   end
 
   appcast 'https://www.ncl.ucar.edu/current_release.shtml',
-          checkpoint: '01ae7c6703902e423b5b506de488182cd02e6d9c14bd8f4fa5ebbf995a9be2f3'
+          checkpoint: 'd8de7ea6d65bdb008d2080157cb901d37eaeaeb501742ea54c7f209ac6e8ea85'
   name 'NCAR Command Language'
   name 'ncl'
   homepage 'https://www.ncl.ucar.edu/'
 
   depends_on cask: 'xquartz'
   depends_on formula: 'gcc'
-  depends_on macos: '>= :mountain_lion'
+  depends_on macos: '>= :el_capitan'
 
   artifact 'include', target: '/usr/local/ncl-6.3.0/include'
   artifact 'bin', target: '/usr/local/ncl-6.3.0/bin'
@@ -32,7 +29,7 @@ cask 'ncar-ncl' do
 
     For bash shell, add these lines to ~/.bash_profile:
 
-      export NCARG_ROOT=/usr/local/ncl-6.3.0
+      export NCARG_ROOT=/usr/local/ncl-6.4.0
       export PATH=$NCARG_ROOT/bin:"$PATH"
 
     You may also need to modify your DYLD_FALLBACK_LIBRARY_PATH
