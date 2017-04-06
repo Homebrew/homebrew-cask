@@ -10,5 +10,15 @@ cask 'owasp-zap' do
   name 'ZAP'
   homepage 'https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project'
 
-  app 'OWASP ZAP.app'
+  installer script: 'OWASP Zed Attack Proxy Installer.app/Contents/MacOS/JavaApplicationStub',
+            args:   ['-q'],
+            sudo:   true
+
+  uninstall script: {
+                      executable: "/Applications/ZAP #{version}.app/OWASP Zed Attack Proxy Uninstaller.app/Contents/MacOS/JavaApplicationStub",
+                      args:       %w[-q -c],
+                      sudo:       true,
+
+                    },
+            delete: "/Applications/ZAP #{version}.app"
 end
