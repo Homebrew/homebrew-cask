@@ -7,6 +7,8 @@ cask 'bordertool2' do
   url 'http://xvi.rpc1.free.fr/BorderTool%202.zip'
   name 'BorderTool 2'
   homepage 'http://xvi.rpc1.org/'
+  
+  auto_updates true
 
   app 'BorderTool 2.app'
 end
