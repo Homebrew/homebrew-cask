@@ -1,6 +1,6 @@
 cask 'ui-browser' do
-  version '2.6.1'
-  sha256 'db4e3a4812a8b980226edd40ae4d88a0168e35829d4f4bff44435250183712cc'
+  version '2.6.2'
+  sha256 'bb43a84913d98576197645ec5214eadf2b86a11ece5d4bdb591c38e8d689dafb'
 
   url "http://pfiddlesoft.com/uibrowser/downloads/UIBrowser#{version.no_dots}.dmg"
   name 'UI Browser'

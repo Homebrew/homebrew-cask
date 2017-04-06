@@ -13,7 +13,9 @@ cask 'webstorm' do
 
   app 'WebStorm.app'
 
-  uninstall delete: '/usr/local/bin/wstorm'
+  uninstall_postflight do
+    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'wstorm') }.each { |path| File.delete(path) if File.exist?(path) }
+  end
 
   zap delete: [
                 "~/Library/Application Support/WebStorm#{version.major_minor}",

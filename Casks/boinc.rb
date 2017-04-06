@@ -16,5 +16,7 @@ cask 'boinc' do
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/edu.berkeley.boinc.*.sfl',
                 '~/Library/Application Support/BOINC',
                 '~/Library/Caches/edu.berkeley.boinc',
+                '~/Library/Preferences/BOINC Manager Preferences',
+                '~/Library/Preferences/edu.berkeley.boinc.plist',
               ]
 end

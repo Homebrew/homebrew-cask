@@ -1,10 +1,10 @@
 cask 'mediainfo' do
-  version '0.7.93'
-  sha256 '88025567e517825a34d626d2b39370dc6f9289cb09ce6f3664ecd871576c760f'
+  version '0.7.94'
+  sha256 '7d0b3a1585628ead8c924d166b69d366b889509b3516214a178a1f0bb74b72cb'
 
   url "https://mediaarea.net/download/binary/mediainfo-gui/#{version}/MediaInfo_GUI_#{version}_Mac.dmg"
   appcast 'https://mediaarea.net/rss/mediainfo_updates.xml',
-          checkpoint: '239841c19e101ac144948117ad8f29cbda885fb2d9ba61c024bd8face292a33e'
+          checkpoint: '0d4ed009a1ba2c543b16599c01ad6526c81ee2d0b59798732702bc8c76ef7d4b'
   name 'MediaInfo'
   homepage 'https://mediaarea.net/en/MediaInfo'
 

@@ -6,11 +6,11 @@ cask 'dwarf-fortress' do
   name 'Dwarf Fortress'
   homepage 'http://www.bay12games.com/dwarves/'
 
-  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/df_osx/df.wrapper.sh"
   depends_on cask: 'sdl-framework'
   depends_on cask: 'sdl-ttf-framework'
 
+  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/df_osx/df.wrapper.sh"
   binary shimscript, target: 'dwarf-fortress'
 
   preflight do
@@ -28,13 +28,13 @@ cask 'dwarf-fortress' do
       }.each do |key, value|
         name = "#{key}.framework"
         File.rename(name, "#{name}.orig")
-        File.symlink(Hbc.load(value).staged_path.join(name), name)
+        File.symlink(Hbc::CaskLoader.load(value).staged_path.join(name), name)
       end
     end
   end
 
   uninstall_preflight do
-    system_command '/bin/cp', args: ['-rf', "#{staged_path}/df_osx/data/save", '/tmp/dwarf-fortress-save/']
+    FileUtils.cp_r("#{staged_path}/df_osx/data/save", '/tmp/dwarf-fortress-save/') if Dir.exist?("#{staged_path}/df_osx/data/save")
   end
 
   caveats 'During uninstall, your save data will be copied to /tmp/dwarf-fortress-save'

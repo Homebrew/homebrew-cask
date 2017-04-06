@@ -1,6 +1,6 @@
 cask 'nix' do
-  version '1.11.6'
-  sha256 '66896f137d02175cc0c0318b130761d4e30416834deaf103e3dccc28c24fe643'
+  version '1.11.8'
+  sha256 '65093cbd779afe943667097c3cc80dc83082f8d876744598fd40e7855603f7f8'
 
   url "https://nixos.org/releases/nix/nix-#{version}/nix-#{version}-x86_64-darwin.tar.bz2"
   name 'nix'

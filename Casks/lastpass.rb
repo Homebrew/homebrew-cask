@@ -4,7 +4,7 @@ cask 'lastpass' do
 
   url 'https://lastpass.com/download/cdn/lpmacosx.zip'
   name 'LastPass'
-  homepage 'https://lastpass.com/'
+  homepage 'https://www.lastpass.com/'
 
   installer manual: 'LastPass Installer.app'
 

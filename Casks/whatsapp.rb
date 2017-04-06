@@ -15,5 +15,6 @@ cask 'whatsapp' do
                 '~/Library/Application Support/WhatsApp.ShipIt',
                 '~/Library/Caches/WhatsApp',
                 '~/Library/Preferences/WhatsApp.plist',
+                '~/Library/Preferences/WhatsApp-Helper.plist',
               ]
 end

@@ -4,7 +4,7 @@ cask 'qlvideo' do
 
   url "https://github.com/Marginal/QLVideo/releases/download/rel-#{version.no_dots}/QLVideo_#{version.no_dots}.pkg"
   appcast 'https://github.com/Marginal/QLVideo/releases.atom',
-          checkpoint: 'ea20ff8a5722e2875766d1d469ec5dea161fbf5cfcf3c15169fdf4c1b6a519ee'
+          checkpoint: '2dbbdfc46712b462753a2d0a0c54c74c98a746eaf63896c0db4d1b09463d8266'
   name 'QuickLook Video'
   homepage 'https://github.com/Marginal/QLVideo'
 

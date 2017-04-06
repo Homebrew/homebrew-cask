@@ -13,7 +13,9 @@ cask 'rubymine' do
 
   app 'RubyMine.app'
 
-  uninstall delete: '/usr/local/bin/mine'
+  uninstall_postflight do
+    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'mine') }.each { |path| File.delete(path) if File.exist?(path) }
+  end
 
   zap delete: [
                 "~/Library/Application Support/RubyMine#{version.major_minor}",

@@ -13,6 +13,8 @@ cask 'vfuse' do
 
   uninstall pkgutil: 'com.chilcote.vfuse'
 
+  zap delete: '~/Library/Preferences/com.chilcote.vfused.plist'
+
   caveats do
     files_in_usr_local
   end

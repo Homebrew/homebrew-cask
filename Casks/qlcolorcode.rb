@@ -4,7 +4,7 @@ cask 'qlcolorcode' do
 
   url "https://github.com/anthonygelibert/QLColorCode/releases/download/release-#{version}/QLColorCode.qlgenerator.zip"
   appcast 'https://github.com/anthonygelibert/QLColorCode/releases.atom',
-          checkpoint: '8292b9376d20a419a53be5e87c18da0560c7f5c302a2d47e64d76879b883be1d'
+          checkpoint: '0f3ff11b8f32c32869669d669f3386e8a8de60a9a68278130af75a1e68274d67'
   name 'QLColorCode'
   homepage 'https://github.com/anthonygelibert/QLColorCode'
 

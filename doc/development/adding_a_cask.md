@@ -295,8 +295,7 @@ Examples of difficult, unclear commit summaries:
 Push your changes to your GitHub account:
 
 ```bash
-$ github_user='<my-github-username>'
-$ git push "$github_user" my-new-cask
+$ git push <my-github-username> my-new-cask
 ```
 
 If you are using [GitHub two-factor authentication](https://help.github.com/articles/about-two-factor-authentication/) and set your remote repository as HTTPS you will need to set up a personal access token and use that instead of your password. Further information [here](https://help.github.com/articles/https-cloning-errors/#provide-access-token-if-2fa-enabled).

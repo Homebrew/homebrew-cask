@@ -4,7 +4,7 @@ cask 'stay' do
 
   url "https://cordlessdog.com/stay/versions/Stay%20#{version}.dmg"
   appcast 'https://cordlessdog.com/stay/appcast.xml',
-          checkpoint: '29ba88cd7fd5d9692b9d348f645daa94ea7d5c63fd0746478e3d7fc1cd0ea0e1'
+          checkpoint: 'b5657da5ebb3f6a654081929fe0f2eff2e547c3e520bed9bd6e47732bc54540c'
   name 'Stay'
   homepage 'https://cordlessdog.com/stay/'
 

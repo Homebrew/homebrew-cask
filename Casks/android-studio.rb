@@ -1,6 +1,6 @@
 cask 'android-studio' do
-  version '2.3.0.8,162.3764568'
-  sha256 'a97fd4b10badc75b9227e2843918dba7ab42992f96ba5e799a507a966a67e22b'
+  version '2.3.1.0,162.3871768'
+  sha256 '7af9bb72c8ede549b3a4d0d8fc6dbc597bb4b726e15d2fba73edf12dd2ebc6d8'
 
   # google.com/dl/android/studio was verified as official when first introduced to the cask
   url "https://dl.google.com/dl/android/studio/ide-zips/#{version.before_comma}/android-studio-ide-#{version.after_comma}-mac.zip"
