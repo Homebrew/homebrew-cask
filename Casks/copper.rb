@@ -8,6 +8,8 @@ cask 'copper' do
           checkpoint: '165e078d5a0f364870d7586995682b8277bbf79c6e7cfb7e69837d95e4dc94e4'
   name 'Copper'
   homepage 'https://www.copper-app.com/'
+  
+  auto_updates true
 
   app 'Copper.app'
 end
