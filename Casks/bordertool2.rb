@@ -3,7 +3,8 @@ cask 'bordertool2' do
   version :latest
   sha256 :no_check
 
-  url 'http://xvi.rpc1.org/BorderTool%202.zip'
+  # xvi.rpc1.free.fr was verified as official when first introduced to the cask
+  url 'http://xvi.rpc1.free.fr/BorderTool%202.zip'
   name 'BorderTool 2'
   homepage 'http://xvi.rpc1.org/'
 
