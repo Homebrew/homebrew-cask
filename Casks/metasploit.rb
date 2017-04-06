@@ -9,10 +9,7 @@ cask 'metasploit' do
   homepage 'https://www.metasploit.com/'
   gpg "#{url}.asc", key_id: '2007B954'
 
-  depends_on formula: %w[
-                        nmap
-                        postgresql
-                      ]
+  depends_on formula: 'nmap'
 
   pkg "metasploit-framework-#{version.major_minor_patch}+#{version.after_comma}-1rapid7-1.pkg"
   binary '/opt/metasploit-framework/bin/metasploit-aggregator'
