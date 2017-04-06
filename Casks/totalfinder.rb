@@ -14,6 +14,6 @@ cask 'totalfinder' do
             script:  {
                        executable: 'TotalFinder Uninstaller.app/Contents/MacOS/TotalFinder Uninstaller',
                        args:       %w[--headless],
-                       sudo:       true
+                       sudo:       true,
                      }
 end
