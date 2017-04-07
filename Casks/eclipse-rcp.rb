@@ -8,5 +8,6 @@ cask 'eclipse-rcp' do
 
   depends_on macos: '>= :leopard'
 
-  app 'Eclipse.app'
+  # Renamed to avoid conflict with other Eclipse.
+  app 'Eclipse.app', target: 'Eclipse RCP.app'
 end
