@@ -27,6 +27,6 @@ cask 'owasp-zap' do
               ]
 
   caveats do
-    depends_on_java
+    depends_on_java('7+')
   end
 end
