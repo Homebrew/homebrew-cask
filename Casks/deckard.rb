@@ -6,7 +6,7 @@ cask 'deckard' do
   appcast 'https://deckard.ai/releases.html',
           checkpoint: '9ba55546518333367d58ae14849ee1a4a4a401416b798dde553bf40e837a7c9a'
   name 'Deckard Assist'
-  homepage 'https://deckard.ai/'
+  homepage 'https://www.deckard.ai/'
 
   auto_updates true
 
