@@ -18,5 +18,6 @@ cask 'boinc' do
                 '~/Library/Caches/edu.berkeley.boinc',
                 '~/Library/Preferences/BOINC Manager Preferences',
                 '~/Library/Preferences/edu.berkeley.boinc.plist',
+                '/Library/Screen Savers/BOINCSaver.saver',
               ]
 end
