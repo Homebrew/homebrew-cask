@@ -18,7 +18,15 @@ cask 'owasp-zap' do
                       executable: "/Applications/ZAP #{version}.app/OWASP Zed Attack Proxy Uninstaller.app/Contents/MacOS/JavaApplicationStub",
                       args:       %w[-q -c],
                       sudo:       true,
-
                     },
             delete: "/Applications/ZAP #{version}.app"
+
+  zap delete: [
+                '~/Library/Preferences/org.zaproxy.zap.plist',
+                '~/Library/Application Support/ZAP',
+              ]
+
+  caveats do
+    depends_on_java('7+')
+  end
 end
