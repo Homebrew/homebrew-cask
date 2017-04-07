@@ -1,10 +1,10 @@
 cask 'deckard' do
-  version '0.6.1'
-  sha256 'b12283cf03904975bb30c8c1cd58a7cc6679b7c378fc1d79326c77464afaaef5'
+  version '0.6.2'
+  sha256 '053aef4eb4cf0774f43dbc87349580a2c03cc6bbcb0f81f50f7081bdda0e05a5'
 
-  url "https://www.deckard.ai/download/#{version}.dmg"
-  appcast 'https://www.deckard.ai/releases.html',
-          checkpoint: '7c876ac2b663a396d913a26a4f97545945f2748bc25a3bb594fedadc4ff3086e'
+  url "https://deckard.ai/download/#{version}.dmg"
+  appcast 'https://deckard.ai/releases.html',
+          checkpoint: '9ba55546518333367d58ae14849ee1a4a4a401416b798dde553bf40e837a7c9a'
   name 'Deckard Assist'
   homepage 'https://www.deckard.ai/'
 
