@@ -1,10 +1,10 @@
 cask 'shapes' do
-  version '4.8.6'
-  sha256 '2bd98ff0f77d32aa8bcc32f945d78c374b5db2e4d737cee64df9d527fad982ba'
+  version '4.8.8'
+  sha256 'edcb61cbc8793880e7932bac37c20ddf92576594db8be7762399086fecd464ca'
 
   url "http://shapesapp.com/dist/Shapes_#{version}.zip"
   appcast "http://shapesapp.com/appcast/shapes#{version.major}.rss",
-          checkpoint: '2797b54dbdc8cba24209eba91cebbcbe4e273d80b0a64c13fb156c0b8adb24ae'
+          checkpoint: '5ec892167e089623a0a584e21b062ea739e0ad3520e9ada796bbac500bcfceed'
   name 'Shapes'
   homepage 'http://shapesapp.com/'
 

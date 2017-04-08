@@ -1,10 +1,10 @@
 cask 'phpstorm' do
-  version '2016.3.2'
-  sha256 '7e553c83e8af822cd100832ecc107f16fc1006314fea4c4f52a35d7bb14a0967'
+  version '2017.1.1,171.4163.3'
+  sha256 'b7c29de96ee01b5dbfa4e7aa52714ad74f17783fdb3ab66317f278ed5739df29'
 
-  url "https://download.jetbrains.com/webide/PhpStorm-#{version}.dmg"
+  url "https://download.jetbrains.com/webide/PhpStorm-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=PS&latest=true&type=release',
-          checkpoint: '7f061838333a997fbaa79c1891e66ea0c21db25c57abfcaa56dc5b91cee54f06'
+          checkpoint: '2b1dfe689c4cd21ae5f475c3f5a145b08e2e94b30d4a5c308e79531e7c3679c9'
   name 'JetBrains PhpStorm'
   homepage 'https://www.jetbrains.com/phpstorm/'
 
@@ -13,13 +13,15 @@ cask 'phpstorm' do
 
   app 'PhpStorm.app'
 
-  uninstall delete: '/usr/local/bin/pstorm'
+  uninstall_postflight do
+    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'pstorm') }.each { |path| File.delete(path) if File.exist?(path) }
+  end
 
   zap delete: [
                 "~/Library/Preferences/PhpStorm#{version.major_minor}",
                 "~/Library/Caches/PhpStorm#{version.major_minor}",
                 "~/Library/Logs/PhpStorm#{version.major_minor}",
                 "~/Library/Application Support/PhpStorm#{version.major_minor}",
-                # TODO: expand/glob for '~/Library/Preferences/jetbrains.phpstorm.*.plist',
+                '~/Library/Preferences/jetbrains.phpstorm.*.plist',
               ]
 end

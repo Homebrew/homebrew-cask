@@ -8,10 +8,13 @@ cask 'cakebrew' do
   name 'Cakebrew'
   homepage 'https://www.cakebrew.com/'
 
+  depends_on macos: '>= :mountain_lion'
+
   app 'Cakebrew.app'
 
   zap delete: [
                 '~/Library/Caches/com.brunophilipe.Cakebrew',
                 '~/Library/Preferences/com.brunophilipe.Cakebrew.plist',
+                '~/Library/Saved Application State/com.brunophilipe.Cakebrew.savedState',
               ]
 end

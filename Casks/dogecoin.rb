@@ -5,7 +5,7 @@ cask 'dogecoin' do
   # github.com/dogecoin/dogecoin was verified as official when first introduced to the cask
   url "https://github.com/dogecoin/dogecoin/releases/download/v#{version}/dogecoin-#{version}-osx-signed.dmg"
   appcast 'https://github.com/dogecoin/dogecoin/releases.atom',
-          checkpoint: '3d22468ec5e9fe768efce8293cb1af298a6332ee4e1018768257418a64f99f0b'
+          checkpoint: 'a95e91189854b31e03a68bb01da0b3db37575cb92f47f8dc69e0c1d87cfc8396'
   name 'Dogecoin'
   homepage 'http://dogecoin.com/'
 

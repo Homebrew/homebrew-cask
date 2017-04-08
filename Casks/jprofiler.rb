@@ -1,10 +1,10 @@
 cask 'jprofiler' do
-  version '9.2.1'
-  sha256 'e5a596e460f401689bba599a54628ef6fc1c596e6dd8955e7fd2c2dfa49581ec'
+  version '10.0.1'
+  sha256 '41f48b959786d3e8a7e54f0faa907aa62300334f76dfd753822724b6c02d62ad'
 
   url "https://download-keycdn.ej-technologies.com/jprofiler/jprofiler_macos_#{version.dots_to_underscores}.dmg"
   appcast 'http://feeds.ej-technologies.com/jprofiler',
-          checkpoint: '25d1c58866f9121f05b1a6933947cd4915b75bb226d492fc72eed8b25415eaaf'
+          checkpoint: 'ae69c3b96d219020d98efb9453feb09e58f44682ccc870e475589d7cc4e77f29'
   name 'JProfiler'
   homepage 'https://www.ej-technologies.com/products/jprofiler/overview.html'
 

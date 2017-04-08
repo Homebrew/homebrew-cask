@@ -4,7 +4,7 @@ cask 'graphiql' do
 
   url "https://github.com/skevy/graphiql-app/releases/download/v#{version}/GraphiQL.app.zip"
   appcast 'https://github.com/skevy/graphiql-app/releases.atom',
-          checkpoint: 'fce9560a17c24c08fae1ac23d2f0b08cee5a7db4c991c20609d060f667538ae3'
+          checkpoint: '02fb19f384437cd5ae7e15c15e825e2f5c406944bc5e8db91543320b33c9b93f'
   name 'GraphiQL App'
   homepage 'https://github.com/skevy/graphiql-app'
 

@@ -1,6 +1,6 @@
 cask 'libreoffice' do
-  version '5.3.0'
-  sha256 '430f9b2d324e58de5b47f70be46ee2a4690e36c0612e04314f7a99c4fca7f059'
+  version '5.3.2'
+  sha256 '5b9751480fe659c54cd736f78573dedeecca4199bab8e59bef4f6508c0c91d7e'
 
   # documentfoundation.org was verified as official when first introduced to the cask
   url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg"
@@ -30,7 +30,6 @@ cask 'libreoffice' do
       #!/bin/sh
       '#{appdir}/LibreOffice.app/Contents/MacOS/soffice' "$@"
     EOS
-    set_permissions shimscript, '+x'
   end
 
   zap delete: [

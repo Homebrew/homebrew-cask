@@ -1,12 +1,20 @@
 cask 'typora' do
-  version '0.9.9.9.0'
-  sha256 '17a3781e33d045bfa59a8f6c976d5208d6b4a7e1b2d22a16e03bb02c74059fc9'
+  version '0.9.9.9.4.2'
+  sha256 '9a35ffef9e10ccc66d67097744a0e76bd3f30ae340b8916c3e0172709c116dfa'
 
   url "https://www.typora.io/download/typora_#{version}.zip"
   appcast 'https://www.typora.io/download/dev_update.xml',
-          checkpoint: '7218d417f1032bb4b89ba3239aafac2c1584848404fdf8e2737555265582e3fb'
+          checkpoint: '91910bbfb5a02ae7f6293314c2b82ee714cf2070c6a1ab70e36d8e0e00ea894d'
   name 'Typora'
   homepage 'https://typora.io/'
 
   app 'Typora.app'
+
+  zap delete: [
+                '~/Library/Application Support/abnerworks.Typora',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/abnerworks.typora.sfl',
+                '~/Library/Caches/abnerworks.Typora',
+                '~/Library/Cookies/abnerworks.Typora.binarycookies',
+                '~/Library/Preferences/abnerworks.Typora.plist',
+              ]
 end

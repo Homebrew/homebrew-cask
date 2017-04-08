@@ -57,7 +57,7 @@ Label | Description | Issues | Pull Requests
 
 ## Reviewing Core PRs
 
-Occasionally we’ll get submissions from users that fix bugs or add features to Homebrew-Cask itself. There is a subset of our maintainers who are less familiar with Ruby and prefer to leave these review to folks with more experience with the language. This is AOK!
+Occasionally we’ll get submissions from users that fix bugs or add features to Homebrew-Cask itself. There is a subset of our maintainers who are less familiar with Ruby and prefer to leave these reviews to folks with more experience with the language. This is AOK!
 
 ## Handling Cask Update PRs
 
@@ -69,7 +69,7 @@ Lastly, if you see an outdated cask that just needs a version bump, you can use 
 
 ## Tips
 
-* To keep your repository up to date with caskroom/master, you can create a custom bash function to save some typing. Feel free to adapt the following set of commands to your specific needs --> `cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout master; git pull origin; git push "$GITHUB_USERNAME" master; git remote prune origin; git fetch -p origin; git remote update --prune`
+* To keep your repository up to date with caskroom/master, you can create a custom bash function to save some typing. Feel free to adapt the following set of commands to your specific needs --> `cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout master; git pull origin; git push "${GITHUB_USERNAME}" master; git remote prune origin; git fetch -p origin; git remote update --prune`
 
 ## Ideas for other things to include here
 

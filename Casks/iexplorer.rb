@@ -1,6 +1,6 @@
 cask 'iexplorer' do
-  version '4.0.11'
-  sha256 'b9d222d53cdcc53f0137140d48ab01ff782860c9872397c7462d23f6dbedcb8b'
+  version '4.0.12'
+  sha256 '54187525ee44681113d928f5eaddb5361ef9f85167d332281ed7a36bd26e71aa'
 
   url "https://assets.macroplant.com/downloads/iExplorer-#{version}.dmg"
   name 'iExplorer'

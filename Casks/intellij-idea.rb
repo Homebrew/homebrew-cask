@@ -1,16 +1,20 @@
 cask 'intellij-idea' do
-  version '2016.3.4'
-  sha256 'bb4b30112df5370be156f1439feb6e87e12353f10a662be26d0754ffd752b7b8'
+  version '2017.1,171.3780.107'
+  sha256 'f37b3b63276d9e0cc9784506ea3257cbf6b843095546f5afef07e08a04dc74c0'
 
-  url "https://download.jetbrains.com/idea/ideaIU-#{version}.dmg"
+  url "https://download.jetbrains.com/idea/ideaIU-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=IIU&latest=true&type=release',
-          checkpoint: 'a725581302012d1dba4f2f26834e14992d21db3f725ce3f4933f7d1b9d10852c'
+          checkpoint: '82be45bb011f2a5160743ff33da22611d616aac156305db42e34c7fdd774d7f2'
   name 'IntelliJ IDEA Ultimate'
   homepage 'https://www.jetbrains.com/idea/'
 
   auto_updates true
 
   app 'IntelliJ IDEA.app'
+
+  uninstall_postflight do
+    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'idea') }.each { |path| File.delete(path) if File.exist?(path) }
+  end
 
   zap delete: [
                 "~/Library/Caches/IntelliJIdea#{version.major_minor}",

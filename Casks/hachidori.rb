@@ -7,7 +7,7 @@ cask 'hachidori' do
   appcast 'https://github.com/Atelier-Shiori/hachidori/releases.atom',
           checkpoint: 'b888480cde439d3cfcc5499b2ab2bcebbe3aed0a4906f28f3a3a35fb293924af'
   name 'Hachidori'
-  homepage 'http://hachidori.ateliershiori.moe/'
+  homepage 'https://hachidori.ateliershiori.moe/'
 
   app 'Hachidori.app'
 end

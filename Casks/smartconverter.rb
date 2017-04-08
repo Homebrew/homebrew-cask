@@ -4,7 +4,7 @@ cask 'smartconverter' do
 
   url "http://download.shedworx.com/smartconverter/SmartConverter-#{version}.dmg"
   name 'SmartConverter'
-  homepage 'https://shedworx.com/smart-converter-pro/'
+  homepage 'https://shedworx.com/smart-converter-pro'
 
   app 'SmartConverter.app'
 

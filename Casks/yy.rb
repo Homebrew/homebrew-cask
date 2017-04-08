@@ -5,7 +5,7 @@ cask 'yy' do
   # yydl.duowan.com/mac/YY was verified as official when first introduced to the cask
   url "http://yydl.duowan.com/mac/YY/#{version}/YY-#{version}.dmg"
   name 'YY'
-  homepage 'http://mac.yy.com/'
+  homepage 'https://www.yy.com/'
 
   app 'YY.app'
 end

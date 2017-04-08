@@ -4,7 +4,7 @@ cask 'xtrafinder' do
 
   url 'https://www.trankynam.com/xtrafinder/downloads/XtraFinder.dmg'
   appcast 'https://www.trankynam.com/xtrafinder/XtraFinder-Appcast.xml',
-          checkpoint: '24654fe73bc1b20bac52a55e93a0a27008108b3c2f193d8e1bb5620787a0da88'
+          checkpoint: '7645737d49a4e697f4e1361d89d12d513bf2c0f6edefc91131ae3330b910ea3e'
   name 'XtraFinder'
   homepage 'https://www.trankynam.com/xtrafinder/'
 

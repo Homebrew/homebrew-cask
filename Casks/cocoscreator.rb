@@ -17,7 +17,6 @@ cask 'cocoscreator' do
       #!/bin/sh
       cd '#{appdir}/CocosCreator.app/Contents/Resources/cocos2d-x/tools/cocos2d-console/bin' && ./cocos "$@"
     EOS
-    set_permissions shimscript, '+x'
   end
 
   zap delete: [

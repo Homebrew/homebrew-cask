@@ -22,7 +22,7 @@ installer manual: 'Little Snitch Installer.app'
 | `args:`         | array of arguments to the install script
 | `input:`        | array of lines of input to be sent to `stdin` of the script
 | `must_succeed:` | set to `false` if the script is allowed to fail
-| `sudo:`         | set to `false` if the script does not need `sudo`
+| `sudo:`         | set to `true` if the script needs `sudo`
 
 The path may be absolute, or relative to the Cask. Example (from [adobe-air.rb](https://github.com/caskroom/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/adobe-air.rb#L10-#L12)):
 

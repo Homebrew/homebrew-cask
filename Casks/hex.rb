@@ -4,7 +4,7 @@ cask 'hex' do
 
   url 'http://dl.hex.gameforge.com/HexInstaller.dmg'
   name 'HEX'
-  homepage 'https://hex.gameforge.com/'
+  homepage 'https://gameforge.com/'
 
   app 'Hex.app'
 end

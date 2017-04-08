@@ -5,7 +5,7 @@ cask 'qmind' do
   # github.com/qvacua/qmind was verified as official when first introduced to the cask
   url "https://github.com/qvacua/qmind/releases/download/v#{version}-22/Qmind-#{version}.zip"
   appcast 'https://github.com/qvacua/qmind/releases.atom',
-          checkpoint: 'bff9e6e15fa092a4e4eb2a329083803d67b9440b239214aa71d3bec9f8de7a8a'
+          checkpoint: '0f08a3d9e84a7b5f1e0c0f5ce4d5d413507cc55aa8fc112c9b07da0d3fc3ca3f'
   name 'Qmind'
   homepage 'http://qvacua.com/'
 

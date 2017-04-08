@@ -1,6 +1,6 @@
 cask 'epic-games-launcher' do
-  version '2.12.14-3176191'
-  sha256 '35d3a60287a37a1d41468ecb560ef85b52b08ca6d1ff7e8bfc370450e84ede31'
+  version '2.12.24-3321064'
+  sha256 'b1e37a5ff042fb5e13cd904d71acb14496bd65036612a726ff3b509947779c1d'
 
   # epicgames.com was verified as official when first introduced to the cask
   url "https://download.epicgames.com/Builds/UnrealEngineLauncher/Installers/EpicGamesLauncher-#{version}.dmg"

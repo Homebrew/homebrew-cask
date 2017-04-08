@@ -1,8 +1,9 @@
 cask 'airvpn' do
-  version '2.10'
-  sha256 '2ab80137f9a80b0c8dcd549c56b66ca74c8aa6fd03156f6d665f18da949ce055'
+  version '2.12.4'
+  sha256 'ab52cafc027378c8e37c4807b00377a903d82009d5c5afc53a09da5afff20311'
 
-  url "https://airvpn.org/eddie/download/?platform=osx&arch=x64&format=installer.pkg&version=#{version}"
+  # eddie.website was verified as official when first introduced to the cask
+  url "https://eddie.website/download/?platform=macos&arch=x64&ui=ui&format=installer.pkg&version=#{version}"
   name 'Air VPN'
   homepage 'https://airvpn.org/macosx/'
 

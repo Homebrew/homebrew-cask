@@ -4,7 +4,7 @@ cask 'debt-quencher' do
 
   url "http://downloads.nothirst.com/DebtQuencher_#{version.sub(%r{^(\d+)\.(\d+).*}, '\1.\2')}.zip"
   appcast 'http://nothirst.com/feeds/DebtQuencherAppcast.xml',
-          checkpoint: '2b2d1f8e28e357fe175bc344d8db93491dad790722b0e9c70edd33c649da748a'
+          checkpoint: 'e9dfeda02779bfceea5fb34278f5d28f97d2c6403242d6ba0520c8850a910195'
   name 'Debt Quencher'
   homepage 'http://nothirst.com/debtquencher/'
 

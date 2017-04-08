@@ -6,7 +6,7 @@ cask 'exifrenamer' do
   appcast 'http://www.qdev.de/versions/ExifRenamer.txt',
           checkpoint: 'eb01a4e8e8922406f15a22cadc3fae28d4f513afe11b4734788eb2ea73cf034e'
   name 'ExifRenamer'
-  homepage 'http://www.qdev.de/?location=mac/exifrenamer&forcelang=en'
+  homepage 'https://www.qdev.de/?location=mac/exifrenamer&forcelang=en'
 
   app 'ExifRenamer.app'
 

@@ -1,11 +1,11 @@
 cask 'caret' do
-  version '1.14.2'
-  sha256 '019778f6bcd0ec4121e290576a931b0e97e0e7d004fdd3b770eb6859bc0e7c73'
+  version '2.0.8'
+  sha256 '7d24156368ba7ae7f2fbd89583fe53783af44c6fa2add4d79640439e45fd2312'
 
   # github.com/careteditor/caret was verified as official when first introduced to the cask
   url "https://github.com/careteditor/caret/releases/download/#{version}/Caret.dmg"
   appcast 'https://github.com/careteditor/caret/releases.atom',
-          checkpoint: '278457f23557e4258b64f9a4decb33e8614afaeffcbe627b897050d296de51d3'
+          checkpoint: 'bafbb6a15b2107268ecc61fd66969b1d1eaba391fa7f798d332557f60803f745'
   name 'Caret'
   homepage 'https://caret.io/'
 

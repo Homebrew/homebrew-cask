@@ -1,10 +1,10 @@
 cask 'pycharm-ce' do
-  version '2016.3.2'
-  sha256 '672b6991bde38fb3693ab88055eb93fab25e7304eb4e52216177c7545f1fe144'
+  version '2017.1,171.3780.115'
+  sha256 '248bbed16874f42d2f75bebc237a572eb8a43fef4b1fc778efabc549d1aed159'
 
-  url "https://download.jetbrains.com/python/pycharm-community-#{version}.dmg"
+  url "https://download.jetbrains.com/python/pycharm-community-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=PCC&latest=true&type=release',
-          checkpoint: 'f38dfa4fce2d630b3ac77b3f5c250262ee739dde5723576361db9cab8d424c44'
+          checkpoint: 'd56902f0f9917a35f04f2e538d9b2f432f18550bbd8eb05acff59cbadd90894d'
   name 'Jetbrains PyCharm Community Edition'
   name 'PyCharm CE'
   homepage 'https://www.jetbrains.com/pycharm/'
@@ -14,7 +14,9 @@ cask 'pycharm-ce' do
 
   app 'PyCharm CE.app'
 
-  uninstall delete: '/usr/local/bin/charm'
+  uninstall_postflight do
+    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'charm') }.each { |path| File.delete(path) if File.exist?(path) }
+  end
 
   zap delete: [
                 "~/Library/Application Support/PyCharm#{version.major_minor}",

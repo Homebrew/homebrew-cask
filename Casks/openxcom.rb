@@ -4,7 +4,7 @@ cask 'openxcom' do
 
   url 'http://openxcom.org/file/1730/'
   name 'OpenXcom'
-  homepage 'http://openxcom.org/'
+  homepage 'https://openxcom.org/'
 
   app 'OpenXcom.app'
 end

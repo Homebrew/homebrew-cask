@@ -5,7 +5,7 @@ cask 'virtualc64' do
 
   url "http://www.dirkwhoffmann.de/virtualc64/VirtualC64_#{version}.zip"
   appcast 'http://dirkwhoffmann.de/virtualc64/VirtualC64Appcast.xml',
-          checkpoint: 'c373cf6bb4ab35205b9b4b31f928a4f1e21eeb840831ef649583b9c1b420ba5c'
+          checkpoint: '81d3f0fbe4227e74b6712d99b265d6da4d57cf732ed1d7cef7028816748f3633'
   name 'Virtual C64'
   homepage 'http://www.dirkwhoffmann.de/virtualc64/'
 

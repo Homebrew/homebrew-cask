@@ -11,8 +11,7 @@ cask 'miniconda' do
   container type: :naked
 
   installer script: 'Miniconda3-latest-MacOSX-x86_64.sh',
-            args:   ['-b'],
-            sudo:   false
+            args:   ['-b']
 
   uninstall delete: '~/miniconda3'
 

@@ -4,7 +4,7 @@ cask 'smcfancontrol' do
 
   url "https://www.eidac.de/smcfancontrol/smcfancontrol_#{version.dots_to_underscores}.zip"
   appcast 'https://www.eidac.de/smcfancontrol/smcfancontrol.xml',
-          checkpoint: 'b39e3a345beddb5026f54e7cb9593c4eb7c83a3cb63de015d53c84c10f52bf26'
+          checkpoint: 'bc7b8543fabb7f80e378ea1f24a1559fea3717a4835248ab9b82b3b6ac41e5de'
   name 'smcFanControl'
   homepage 'https://www.eidac.de/?cat=40'
 

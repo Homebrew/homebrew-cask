@@ -5,7 +5,7 @@ cask 'cachewarmer' do
   # s3.amazonaws.com/assetcache.io was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/assetcache.io/CacheWarmer-#{version}.pkg"
   appcast 'https://assetcache.io/cachewarmer/release-notes/',
-          checkpoint: 'f2c04c1692040d0f8c4da6957cf4b510e6089c0bb53d2b80620bbab1359dc2f9'
+          checkpoint: 'e303120cd02a95cbfea82820e2a9f6a9f2bb454b58cbec17660116d25022019e'
   name 'CacheWarmer'
   homepage 'https://assetcache.io/cachewarmer/'
 

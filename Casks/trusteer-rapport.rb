@@ -13,4 +13,9 @@ cask 'trusteer-rapport' do
                        sudo:       true,
                      },
             pkgutil: 'com.trusteer.ibmSecurityTrusteerEndpointProtection.*'
+
+  zap delete: [
+                '~/Library/Application Support/Rapport',
+                '~/Library/Preferences/com.trusteer.rapportd.plist',
+              ]
 end

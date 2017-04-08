@@ -1,10 +1,10 @@
 cask 'deadbeef' do
-  version '0.7.2'
-  sha256 '669daa26d5b347f332827ca75682b98cf14fd735b16cd0d4973746aa8a362323'
+  version '1.0'
+  sha256 '0357c19172d560c7e8eb24f12ca77fffaf29b1608cde812f145c39ede7086364'
 
   url 'https://downloads.sourceforge.net/deadbeef/travis/osx/master/deadbeef-devel-osx-x86_64.zip'
   appcast 'https://sourceforge.net/projects/deadbeef/rss?path=/travis/osx/master',
-          checkpoint: 'dea19615860a038ef31c65a996ea380037ea255724e40eea21722fda10c0685c'
+          checkpoint: '4ad50dde5f5017cee4a8df60104ecf48c5c4b72a8d2550d77f0b1c047c568d27'
   name 'DeaDBeeF'
   homepage 'http://deadbeef.sourceforge.net/'
 

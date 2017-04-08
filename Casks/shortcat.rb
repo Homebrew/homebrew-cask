@@ -11,4 +11,10 @@ cask 'shortcat' do
   accessibility_access true
 
   app 'Shortcat.app'
+
+  zap delete: [
+                '~/Library/Application Support/Shortcat',
+                '~/Library/Cookies/com.sproutcube.Shortcat.binarycookies',
+                '~/Library/Preferences/com.sproutcube.Shortcat.plist',
+              ]
 end

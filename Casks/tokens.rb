@@ -4,7 +4,7 @@ cask 'tokens' do
 
   url "http://resources.usetokens.com/download/#{version}/Tokens.app.zip"
   appcast 'http://api.usetokens.com/updates/stable',
-          checkpoint: 'e255134bf321cd7998ac78cb7bf87b29cca4134f840e11d502532b4faa765927'
+          checkpoint: 'd61bd5c28aeb1288b7e47d17456eb938182368935f54a77b973f3e5d1b645b1f'
   name 'Tokens'
   homepage 'http://usetokens.com/'
 

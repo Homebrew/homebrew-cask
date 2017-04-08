@@ -9,16 +9,16 @@ cask 'araxis-merge' do
     sha256 '341b47242f30aca3ce3c0af9112c95f3bdac5f5ae262aa1894a9632b46fef6ab'
     url "https://www.araxis.com/download/Merge#{version}-OSX10.9.dmg"
   elsif MacOS.version <= :yosemite
-    version '2016.4812'
-    sha256 '5a181d1b33ff1862853fc1fa5e09873997aeb484acf65d53a0c4bd91e4f341fe'
+    version '2017.4855'
+    sha256 '7ba0fb79a0ef1a6e3c1f569e6b6c384d9d83d09a255faf4ed200252a8db85c8f'
     url "https://www.araxis.com/download/Merge#{version}-OSX10.10.dmg"
   elsif MacOS.version <= :el_capitan
-    version '2016.4812'
-    sha256 'd5e1c6ff738ea03328e82e70eafc6d8ca455c44b4aadfbbdb7dc53e3953cb019'
+    version '2017.4855'
+    sha256 'feb0d1d33cb4911269dfa8a356cfcabb488c6db9963a7ede1ec3687959b123fb'
     url "https://www.araxis.com/download/Merge#{version}-OSX10.11.dmg"
   else
-    version '2016.4812'
-    sha256 'e891327e9b15f7efa11eef6213d22fb5dad9d8d9c739a403ab98194a961467a2'
+    version '2017.4855'
+    sha256 'ee1d6a23f1455ea84487ff63faccc9c9ebb56bdb590f4544d98a4235f9816d26'
     url "https://www.araxis.com/download/Merge#{version}-macOS10.12.dmg"
   end
 

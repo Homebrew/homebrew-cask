@@ -6,7 +6,7 @@ cask 'sloth' do
   appcast 'http://sveinbjorn.org/files/appcasts/SlothAppcast.xml',
           checkpoint: '97348470bb468d61e02d9327e06157970fedce166b8fdca2fd32a53509ce8a9e'
   name 'Sloth'
-  homepage 'http://sveinbjorn.org/sloth'
+  homepage 'https://sveinbjorn.org/sloth'
 
   app 'Sloth.app'
 end

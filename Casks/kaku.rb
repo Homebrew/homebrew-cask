@@ -5,7 +5,7 @@ cask 'kaku' do
   # github.com/EragonJ/Kaku was verified as official when first introduced to the cask
   url "https://github.com/EragonJ/Kaku/releases/download/#{version}/Kaku-#{version}.dmg"
   appcast 'https://github.com/EragonJ/Kaku/releases.atom',
-          checkpoint: '39cfe15ddd86b8120075c0afba93d5f8befc63aff093f6d486efea97df03528c'
+          checkpoint: '9d430dc3a9e05ecd244fed81aeb766e68d710fb97d59bdaf2070f7b7e12a769c'
   name 'Kaku'
   homepage 'http://kaku.rocks/'
 

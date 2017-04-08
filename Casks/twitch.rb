@@ -2,9 +2,10 @@ cask 'twitch' do
   version :latest
   sha256 :no_check
 
-  url 'http://twitchapp.com/Twitch.app.zip'
+  # updates.twitchapp.net was verified as official when first introduced to the cask
+  url 'https://updates.twitchapp.net/mac/Twitch.dmg'
   name 'Twitch'
-  homepage 'http://twitchapp.com/'
+  homepage 'https://app.twitch.tv/'
 
   app 'Twitch.app'
 end

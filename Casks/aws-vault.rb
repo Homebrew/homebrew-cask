@@ -1,10 +1,10 @@
 cask 'aws-vault' do
-  version '3.7.0'
-  sha256 'd17dfd93591efeaaceaca8d2eba8371f2ecc1543c4dc5d4441333c557330b04a'
+  version '3.7.1'
+  sha256 '6ca2ac45cd227f38fb8374509f0ea0665fa0b34db5cb8724e238b87622dec459'
 
   url "https://github.com/99designs/aws-vault/releases/download/v#{version}/aws-vault-darwin-amd64"
   appcast 'https://github.com/99designs/aws-vault/releases.atom',
-          checkpoint: 'f1668dcf1b7e0b144d30ce76b3d1af473448bcc13579cf6a03a5419c41ecbe44'
+          checkpoint: 'f9d4579577b0f0a828d0c6da6801a956a6f69b2b44056ad5b21e348913d44600'
   name 'aws-vault'
   homepage 'https://github.com/99designs/aws-vault'
 

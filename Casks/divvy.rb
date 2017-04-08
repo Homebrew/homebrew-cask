@@ -1,10 +1,10 @@
 cask 'divvy' do
-  version '1.5'
-  sha256 'ed1b38f12967ae833b80448e30714e242599aba8891f9abe5c5ecb14ab074aaf'
+  version '1.5.1'
+  sha256 '2823c41a8d5e4f0e27760a87b1fdb8acf9b6a48eef4074421e6daa1119f89a53'
 
   url "https://mizage.com/downloads/Divvy_#{version}.zip"
   appcast 'https://mizage.com/updates/profiles/divvy.php',
-          checkpoint: 'cfa5899a82ba4e8e0c8339a0b070290b2ffd51dd7a82869a22cd7ad209b1b39f'
+          checkpoint: 'd3686656422fbfed68cb31b4a495d5eaa80ce581a696f2ab6488ab0a70ffb55b'
   name 'Divvy'
   homepage 'https://mizage.com/divvy/'
 

@@ -1,6 +1,6 @@
 cask 'nix' do
-  version '1.11.6'
-  sha256 '66896f137d02175cc0c0318b130761d4e30416834deaf103e3dccc28c24fe643'
+  version '1.11.8'
+  sha256 '65093cbd779afe943667097c3cc80dc83082f8d876744598fd40e7855603f7f8'
 
   url "https://nixos.org/releases/nix/nix-#{version}/nix-#{version}-x86_64-darwin.tar.bz2"
   name 'nix'
@@ -8,8 +8,7 @@ cask 'nix' do
 
   depends_on macos: '>= :yosemite'
 
-  installer script: "nix-#{version}-x86_64-darwin/install",
-            sudo:   false
+  installer script: "nix-#{version}-x86_64-darwin/install"
 
   uninstall_postflight do
     ['~/.bash_profile', '~/.bash_login', '~/.profile'].each do |profile_path|
@@ -22,8 +21,7 @@ cask 'nix' do
                              '-i', '.nix_uninstall_bak',
                              '-e', '/# added by Nix installer/d',
                              profile_path
-                           ],
-                     sudo: false
+                           ]
     end
   end
 
