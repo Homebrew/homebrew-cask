@@ -18,6 +18,8 @@ cask 'avira-vpn' do
 
   zap delete: [
                 '~/Library/Preferences/com.avira.macvpn.plist',
+                '~/Library/Application Support/PhantomVPN',
+                '~/Library/Caches/PhantomVPN',
                 '/Library/Application Support/PhantomVPN',
               ]
 end
