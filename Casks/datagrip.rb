@@ -1,5 +1,5 @@
 cask 'datagrip' do
-  version '2017.1.1'
+  version '2017.1.1,171.4073.34'
   sha256 '74ae0f0fc03da294aec816b52a53e8c23dee84b4fe13a610c48c9db28b604f9b'
 
   url "https://download.jetbrains.com/datagrip/datagrip-#{version.before_comma}.dmg"
