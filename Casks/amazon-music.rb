@@ -26,7 +26,7 @@ cask 'amazon-music' do
               ]
 
   caveats <<-EOS.undent
-    If the app won't launch after installation, try
+    If the app will not launch after installation, try
 
       brew cask zap #{token}
       brew cask install #{token}
