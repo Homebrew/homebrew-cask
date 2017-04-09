@@ -24,10 +24,12 @@ installer manual: 'Little Snitch Installer.app'
 | `must_succeed:` | set to `false` if the script is allowed to fail
 | `sudo:`         | set to `true` if the script needs `sudo`
 
-The path may be absolute, or relative to the Cask. Example (from [adobe-air.rb](https://github.com/caskroom/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/adobe-air.rb#L10-#L12)):
+The path may be absolute, or relative to the Cask. Example (from [ransomwhere.rb](https://github.com/caskroom/homebrew-cask/blob/master/Casks/ransomwhere.rb#L12-L16)):
 
 ```ruby
-installer script: 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
-          args:   %w[-silent],
-          sudo:   true
+  installer script: {
+                      executable: "#{staged_path}/RansomWhere.app/Contents/MacOS/RansomWhere",
+                      args:       ['-install'],
+                      sudo:       true,
+                    }
 ```
