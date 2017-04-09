@@ -24,7 +24,7 @@ installer manual: 'Little Snitch Installer.app'
 | `must_succeed:` | set to `false` if the script is allowed to fail
 | `sudo:`         | set to `true` if the script needs `sudo`
 
-The path may be absolute, or relative to the Cask. Example (from [ransomwhere.rb](https://github.com/caskroom/homebrew-cask/blob/master/Casks/ransomwhere.rb#L12-L16)):
+The path may be absolute, or relative to the Cask. Example (from [ransomwhere.rb](https://github.com/caskroom/homebrew-cask/blob/2a7499561420bd375e45e96082c273ca75b600d1/Casks/ransomwhere.rb#L12-L16)):
 
 ```ruby
   installer script: {
