@@ -7,7 +7,8 @@ cask 'turbo-boost-switcher' do
   name 'Turbo Boost Switcher'
   homepage 'http://www.rugarciap.com/turbo-boost-switcher-for-os-x/'
 
-  app 'Turbo Boost Switcher (English).app'
+  # App renamed to remove "(English)" suffix
+  app 'Turbo Boost Switcher.app'
 
   uninstall quit:       'rugarciap.com.Turbo-Boost-Switcher',
             kext:       'com.rugarciap.DisableTurboBoost',
