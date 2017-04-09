@@ -3,11 +3,11 @@ cask 'youku' do
     version '1.0.6.01094'
     sha256 'ab17b83f88f1035bda7d20c064bfd59c35925c373aed510f1612f3473ec0c37e'
   else
-    version '1.2.0.02132'
-    sha256 '3f631452ad31dc1f743951f8a760c5146e3a6a4420cce40c0010f158b9ab4f25'
+    version '1.2.1.03315'
+    sha256 'b7a80f361ee1cf0c5160e079623d8f25769b3b6ce8ad29e2ce8fa64c63de917e'
   end
 
-  url "http://pcclient.download.youku.com/ugc/youkumac_#{version}.dmg"
+  url "http://pcclient.download.youku.com/ikumac/youkumac_#{version}.dmg"
   name 'Youku'
   name '优酷'
   homepage 'https://pd.youku.com/pc'
