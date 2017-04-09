@@ -18,7 +18,7 @@ installer manual: 'Little Snitch Installer.app'
 
 | key             | value
 | ----------------|------------------------------
-| `script:`       | path to an install script to be run via `sudo`. (Required first key.)
+| `executable:`   | path to an install script to be run via `sudo`. (Required first key.)
 | `args:`         | array of arguments to the install script
 | `input:`        | array of lines of input to be sent to `stdin` of the script
 | `must_succeed:` | set to `false` if the script is allowed to fail
