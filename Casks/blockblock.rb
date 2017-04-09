@@ -9,16 +9,15 @@ cask 'blockblock' do
   name 'BlockBlock'
   homepage 'https://objective-see.com/products/blockblock.html'
 
-  installer manual: 'BlockBlock_Installer.app'
+  installer script: {
+                      executable: "#{staged_path}/BlockBlock_Installer.app/Contents/MacOS/BlockBlock",
+                      args:       ['-install'],
+                      sudo:       true,
+                    }
 
-  uninstall quit:      'com.objectivesee.BlockBlock',
-            launchctl: [
-                         'com.objectiveSee.blockblock.agent',
-                         'com.objectiveSee.blockblock.daemon',
-                       ],
-            delete:    [
-                         '/Applications/BlockBlock.app',
-                         '/Library/LaunchDaemons/com.objectiveSee.blockblock.plist',
-                         '~/Library/LaunchAgents/com.objectiveSee.blockblock.plist',
-                       ]
+  uninstall script: {
+                      executable: "#{staged_path}/BlockBlock_Installer.app/Contents/MacOS/BlockBlock",
+                      args:       ['-uninstall'],
+                      sudo:       true,
+                    }
 end
