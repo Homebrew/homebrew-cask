@@ -13,5 +13,7 @@ cask 'ccleaner' do
                 '~/Library/Caches/com.piriform.ccleaner',
                 '~/Library/Preferences/com.piriform.ccleaner.plist',
                 '~/Library/Saved Application State/com.piriform.ccleaner.savedState',
+                '~/Library/Cookies/com.piriform.ccleaner.binarycookies',
+                '/Users/Shared/CCleaner',
               ]
 end
