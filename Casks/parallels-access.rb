@@ -6,9 +6,11 @@ cask 'parallels-access' do
   name 'Parallels Access'
   homepage 'https://www.parallels.com/products/access/'
 
-  installer script: 'Parallels Access.app/Contents/MacOS/pm_ctl',
-            args:   %w[instance_install],
-            sudo:   true
+  installer script: {
+                      executable: 'Parallels Access.app/Contents/MacOS/pm_ctl',
+                      args:       %w[instance_install],
+                      sudo:       true,
+                    }
 
   uninstall launchctl: [
                          'com.parallels.mobile.startgui.launchagent',
