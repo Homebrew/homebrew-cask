@@ -6,8 +6,10 @@ cask 'blast2go' do
   name 'Blast2GO'
   homepage 'https://www.blast2go.com/'
 
-  installer script: 'Blast2GO Installer.app/Contents/MacOS/JavaApplicationStub',
-            args:   ['-q']
+  installer script: {
+                      executable: 'Blast2GO Installer.app/Contents/MacOS/JavaApplicationStub',
+                      args:       ['-q'],
+                    }
 
   uninstall delete: '/Applications/Blast2GO'
 
