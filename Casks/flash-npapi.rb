@@ -17,5 +17,6 @@ cask 'flash-npapi' do
   zap       delete: [
                       '~/Library/Caches/Adobe/Flash Player',
                       '~/Library/Logs/FlashPlayerInstallManager.log',
+                      '/Library/Internet Plug-Ins/flashplayer.xpt',
                     ]
 end
