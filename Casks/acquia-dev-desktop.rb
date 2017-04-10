@@ -6,9 +6,11 @@ cask 'acquia-dev-desktop' do
   name 'Acquia Dev Desktop'
   homepage 'https://www.acquia.com/products-services/dev-desktop'
 
-  installer script: 'Acquia Dev Desktop Installer.app/Contents/MacOS/installbuilder.sh',
-            args:   ['--mode', 'unattended', '--unattendedmodeui', 'none'],
-            sudo:   true
+  installer script: {
+                      executable: 'Acquia Dev Desktop Installer.app/Contents/MacOS/installbuilder.sh',
+                      args:       ['--mode', 'unattended', '--unattendedmodeui', 'none'],
+                      sudo:       true,
+                    }
 
   uninstall script: {
                       executable: '/Applications/DevDesktop/uninstall.app/Contents/MacOS/installbuilder.sh',
