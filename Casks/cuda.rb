@@ -6,8 +6,10 @@ cask 'cuda' do
   name 'Nvidia CUDA'
   homepage 'https://developer.nvidia.com/cuda-zone'
 
-  installer script: 'CUDAMacOSXInstaller.app/Contents/MacOS/CUDAMacOSXInstaller',
-            args:   ['--accept-eula', '--silent']
+  installer script: {
+                      executable: 'CUDAMacOSXInstaller.app/Contents/MacOS/CUDAMacOSXInstaller',
+                      args:       ['--accept-eula', '--silent'],
+                    }
 
   uninstall script: "/Developer/NVIDIA/CUDA-#{version.major_minor}/bin/uninstall_cuda_#{version.major_minor}.pl"
 end
