@@ -6,9 +6,11 @@ cask 'sencha' do
   name 'Sencha Cmd'
   homepage 'https://www.sencha.com/products/sencha-cmd/'
 
-  installer script: "SenchaCmd-#{version}-osx.app/Contents/MacOS/JavaApplicationStub",
-            args:   ['-Djava.awt.headless=true', '-q', '-dir', "/opt/Sencha/Cmd/#{version}"],
-            sudo:   true
+  installer script: {
+                      executable: "SenchaCmd-#{version}-osx.app/Contents/MacOS/JavaApplicationStub",
+                      args:       ['-Djava.awt.headless=true', '-q', '-dir', "/opt/Sencha/Cmd/#{version}"],
+                      sudo:       true,
+                    }
 
   postflight do
     set_ownership '/opt/Sencha'
