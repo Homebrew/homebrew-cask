@@ -33,3 +33,9 @@ The path may be absolute, or relative to the Cask. Example (from [ransomwhere.rb
                       sudo:       true,
                     }
 ```
+
+If the `installer script:` does not require any of the key-values it can point directly to the path of the install script. Example (from [amazon-drive.rb](https://github.com/caskroom/homebrew-cask/blob/427c52acdc3ce0ab1e97950e6cee9896480d7353/Casks/amazon-drive.rb#L10)):
+
+```ruby
+installer script: 'Amazon Drive Installer.app/Contents/MacOS/Amazon Drive Installer'
+```
