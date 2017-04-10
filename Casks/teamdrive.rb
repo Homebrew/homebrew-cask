@@ -7,8 +7,10 @@ cask 'teamdrive' do
   name 'TeamDrive'
   homepage 'https://www.teamdrive.com/'
 
-  installer script: "Install-TeamDrive-#{version}_TMDR.app/Contents/MacOS/osx-intel",
-            args:   ['--unattendedmodeui', 'none', '--mode', 'unattended']
+  installer script: {
+                      executable: "Install-TeamDrive-#{version}_TMDR.app/Contents/MacOS/osx-intel",
+                      args:       ['--unattendedmodeui', 'none', '--mode', 'unattended'],
+                    }
 
   uninstall script: {
                       executable: '/Applications/TeamDrive/uninstall.app/Contents/MacOS/osx-intel',
