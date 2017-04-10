@@ -7,9 +7,11 @@ cask 'xampp' do
   name 'XAMPP'
   homepage 'https://www.apachefriends.org/index.html'
 
-  installer script: 'XAMPP.app/Contents/MacOS/osx-intel',
-            args:   ['--mode', 'unattended'],
-            sudo:   true
+  installer script: {
+                      executable: 'XAMPP.app/Contents/MacOS/osx-intel',
+                      args:       ['--mode', 'unattended'],
+                      sudo:       true,
+                    }
 
   uninstall quit:   'com.bitnami.manager',
             delete: '/Applications/XAMPP/'
