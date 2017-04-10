@@ -23,5 +23,7 @@ cask 'flux' do
                 '~/Library/Preferences/org.herf.Flux.plist',
                 '~/Library/Caches/org.herf.Flux',
                 '~/Library/Cookies/org.herf.Flux.binarycookies',
+                '~/Library/Application Support/Flux',
+                '~/Library/Containers/com.justgetflux.flux',
               ]
 end
