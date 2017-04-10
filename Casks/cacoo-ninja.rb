@@ -8,9 +8,11 @@ cask 'cacoo-ninja' do
 
   depends_on cask: 'adobe-air'
 
-  installer script: 'Install Cacoo Ninja.app/Contents/MacOS/Install Cacoo Ninja',
-            args:   %w[-silent],
-            sudo:   true
+  installer script: {
+                      executable: 'Install Cacoo Ninja.app/Contents/MacOS/Install Cacoo Ninja',
+                      args:       %w[-silent],
+                      sudo:       true,
+                    }
 
   uninstall script: {
                       executable: Hbc::Container::Air::INSTALLER_PATHNAME,
