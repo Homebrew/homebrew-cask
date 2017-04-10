@@ -1,6 +1,6 @@
 cask 'frostwire' do
   version '6.4.7'
-  sha256 'f15d73d145009a41319aad7384731e9fffffe3c5ae930a9db92a844f99406170'
+  sha256 'e1223dc702203a953f35afab525f45f4971ac57ea89da10525105b717d6dca13'
 
   # downloads.sourceforge.net/frostwire was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/frostwire/frostwire-#{version.before_comma}.dmg"
