@@ -6,9 +6,11 @@ cask 'adobe-air' do
   name 'Adobe AIR'
   homepage 'https://get.adobe.com/air/'
 
-  installer script: 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
-            args:   %w[-silent],
-            sudo:   true
+  installer script: {
+                      executable: 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
+                      args:       %w[-silent],
+                      sudo:       true,
+                    }
 
   uninstall script: {
                       executable: 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
