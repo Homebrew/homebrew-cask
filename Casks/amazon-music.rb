@@ -7,9 +7,11 @@ cask 'amazon-music' do
   name 'Amazon Music'
   homepage 'https://www.amazon.com/gp/feature.html/?ie=UTF8&docId=1001067901'
 
-  installer script: 'Amazon Music Installer.app/Contents/MacOS/osx-intel',
-            args:   ['--unattendedmodeui', 'none'],
-            sudo:   true
+  installer script: {
+                      executable: 'Amazon Music Installer.app/Contents/MacOS/osx-intel',
+                      args:       ['--unattendedmodeui', 'none'],
+                      sudo:       true,
+                    }
 
   uninstall quit:      [
                          'com.amazon.music',
