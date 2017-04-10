@@ -7,6 +7,6 @@ cask 'maccpuid' do
   homepage 'https://software.intel.com/en-us/articles/download-maccpuid'
 
   app 'MacCPUID.app'
-  
+
   zap delete: '~/Library/Caches/com.intel.MacCPUID'
 end
