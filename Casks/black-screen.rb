@@ -1,10 +1,10 @@
 cask 'black-screen' do
-  version '0.2.140'
-  sha256 '701a3768f4d6954facd9dcf7ee50712a6ab7def39f1e680e62869f23c2626d2e'
+  version '0.2.142'
+  sha256 '31c19513eb3da8839bc4c99b04750103912123a9b1e154ae52a3befa1679b309'
 
   url "https://github.com/vshatskyi/black-screen/releases/download/v#{version}/black-screen-#{version}-mac.zip"
   appcast 'https://github.com/vshatskyi/black-screen/releases.atom',
-          checkpoint: '495f333af99d83359a752658e2e8957a6a31bad25377dbdf2fa3641ef506620d'
+          checkpoint: 'c5be23cc74cce090f019daef4f9c1cd45e04a9a91ac548d0d854fd7e51950dd3'
   name 'Black Screen'
   homepage 'https://github.com/vshatskyi/black-screen'
 
