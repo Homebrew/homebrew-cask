@@ -1,11 +1,11 @@
 cask 'qz-tray' do
-  version '2.0.2'
-  sha256 'c80763bdc501e19e7880aa9d0c30fcdc29dcceb7267dbdecd9e14e7cd870ab99'
+  version '2.0.3'
+  sha256 '64421b277342a99c7e34a8bf7c75697e8717ddad2ed42f211b12fbffe5e4fc68'
 
   # github.com/qzind/tray was verified as official when first introduced to the cask
   url "https://github.com/qzind/tray/releases/download/v#{version}/qz-tray-#{version}.pkg"
   appcast 'https://github.com/qzind/tray/releases.atom',
-          checkpoint: '568149289d68d429f4a5ee4905d3e2b05c7a816e49c215b60a2de3b6a0e14f49'
+          checkpoint: '09cc43c652b1928049e131ca28d137007a7a9431b4e3a8ff2e643cc755605e0a'
   name 'QZ Tray'
   homepage 'https://qz.io/'
 
