@@ -7,4 +7,12 @@ cask '5kplayer' do
   homepage 'https://www.5kplayer.com/'
 
   app '5KPlayer.app'
+
+  uninstall quit: 'com.digiarty.5kplayer'
+
+  zap delete: [
+                '~/Library/Caches/com.digiarty.5kplayer',
+                '~/Library/Preferences/com.digiarty.5kplayer.plist',
+                '~/Library/Saved Application State/com.digiarty.5kplayer.savedState',
+              ]
 end
