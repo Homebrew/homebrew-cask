@@ -7,7 +7,7 @@ cask 'flashlight' do
   appcast 'https://raw.githubusercontent.com/w0lfschild/app_updates/master/Flashlight/appcast.xml',
           checkpoint: '33b12bbb0c79e43759ffece9a1bf4168e65fbf89178c214fd16647e579951f3c'
   name 'Flashlight'
-  homepage 'https://github.com/w0lfschild/Flashlight'
+  homepage 'https://github.com/w0lfschild/Flashlight/'
 
   auto_updates true
   depends_on macos: '>= :yosemite'
