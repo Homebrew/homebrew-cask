@@ -1,10 +1,10 @@
 cask 'chatology' do
-  version '1.1.1'
-  sha256 '1867746333abce042f7306d0e1388e0454c053119d91307047f2ffca72e920e2'
+  version '1.1.2'
+  sha256 '133bd7c2d13bcad042b0c885d916edcf88073bfb2a0d340d1243184ca55e8370'
 
   url "http://cdn.flexibits.com/Chatology_#{version}.zip"
   appcast 'https://flexibits.com/chatology/appcast.php',
-          checkpoint: '81991574b1480ce01b901904abfa4a8b3ad0a99efe357f7b9fd208d181364366'
+          checkpoint: '5572a3834d8dbf929f111a3184824624e62b35f3346ed898c8d6b9b35014991f'
   name 'Chatology'
   homepage 'https://flexibits.com/chatology'
 
