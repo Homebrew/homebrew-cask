@@ -1,4 +1,4 @@
-cask 'airvpn' do
+cask 'eddie' do
   version '2.12.4'
   sha256 '898abec0155bfe90f5b04c5c22dc20339cc21a59fc5083284550c430acd4b761'
 
