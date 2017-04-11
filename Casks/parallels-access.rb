@@ -6,6 +6,8 @@ cask 'parallels-access' do
   name 'Parallels Access'
   homepage 'https://www.parallels.com/products/access/'
 
+  # Contents of DMG cannot be extracted by Cask
+  # Original discussion: https://github.com/caskroom/homebrew-cask/issues/26872
   container type: :naked
 
   preflight do
