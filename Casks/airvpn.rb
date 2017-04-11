@@ -1,15 +1,14 @@
 cask 'airvpn' do
   version '2.12.4'
-  sha256 'ab52cafc027378c8e37c4807b00377a903d82009d5c5afc53a09da5afff20311'
+  sha256 '898abec0155bfe90f5b04c5c22dc20339cc21a59fc5083284550c430acd4b761'
 
   # eddie.website was verified as official when first introduced to the cask
-  url "https://eddie.website/download/?platform=macos&arch=x64&ui=ui&format=installer.pkg&version=#{version}"
+  url "https://eddie.website/download/?platform=macos&arch=x64&ui=ui&format=disk.dmg&version=#{version}"
   name 'Air VPN'
+  name 'Eddie'
   homepage 'https://airvpn.org/macosx/'
 
-  pkg 'airvpn_osx_x64_installer.pkg'
-  binary '/Applications/AirVPN.app/Contents/MacOS/AirVPN'
+  app 'Eddie.app'
 
-  uninstall quit:    'com.airvpn.client',
-            pkgutil: 'com.airvpn.client'
+  uninstall quit: 'com.eddie.client'
 end
