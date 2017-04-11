@@ -8,11 +8,9 @@ cask 'sound-siphon' do
 
   pkg 'Sound Siphon Installer.pkg'
 
-  uninstall pkgutil: [
-                       'com.staticz.installer.soundsiphon.*',
-                     ]
+  uninstall pkgutil: 'com.staticz.installer.soundsiphon.*'
 
   caveats <<-EOF.undent
-    You need to restart your Mac before using “Sound Siphon”.
+    You need to restart your Mac before using #{token}.
   EOF
 end
