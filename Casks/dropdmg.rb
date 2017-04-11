@@ -10,7 +10,6 @@ cask 'dropdmg' do
 
   zap delete: [
                 '~/Library/Application Support/DropDMG',
-                '~/Library/Caches/com.c-command.DropDMG',
                 '~/Library/Automator/DropDMG.action',
                 '~/Library/Automator/Expand Disk Image.action',
                 '~/Library/Caches/com.c-command.DropDMG',
