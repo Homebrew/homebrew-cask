@@ -9,11 +9,11 @@ cask 'golly' do
     binary "golly-#{version}-mac106/bgolly"
   else
     version '2.8'
-    sha256 'be6dff40918b76d985d79d8cfe1a48fcd23ab0df3f3991d82940c1365b06c689'
+    sha256 '3ee7488591f97547ba69ce52172384f6e9bfd12baf0c1fbf062b17afaf51fafc'
 
-    url "https://downloads.sourceforge.net/golly/golly/golly-#{version}/golly-#{version}-mac.zip"
+    url "https://downloads.sourceforge.net/golly/golly/golly-#{version}/Golly-#{version}-Mac.dmg"
     appcast 'https://sourceforge.net/projects/golly/rss?path=/golly',
-            checkpoint: '7b50b7456e8709c9bee37c6808759288d61714c392eee7233660fd66d8c66bf6'
+            checkpoint: '5bd057ed02b659d4a6ff2f363bc2dd751f41f7ce4d46ae34c4c35b5d8a6ec49f'
 
     app "golly-#{version}-mac/Golly.app"
     binary "golly-#{version}-mac/bgolly"
