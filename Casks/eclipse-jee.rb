@@ -8,7 +8,8 @@ cask 'eclipse-jee' do
 
   depends_on macos: '>= :leopard'
 
-  app 'Eclipse.app'
+  # Renamed to avoid conflict with other Eclipse.
+  app 'Eclipse.app', target: 'Eclipse JEE.app'
 
   caveats do
     depends_on_java
