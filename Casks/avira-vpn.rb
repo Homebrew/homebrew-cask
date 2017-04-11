@@ -5,7 +5,7 @@ cask 'avira-vpn' do
   # avira-update.com was verified as official when first introduced to the cask
   url 'https://install.avira-update.com/package/vpn/osx/int/vpn.pkg'
   name 'Avira Phantom VPN'
-  homepage 'https://www.avira.com/en/avira-phantom-vpn'
+  homepage 'https://www.avira.com/en/avira-phantom-vpn/'
 
   pkg 'vpn.pkg'
 
