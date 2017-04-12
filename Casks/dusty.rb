@@ -11,10 +11,11 @@ cask 'dusty' do
   depends_on cask: 'docker-toolbox'
   container type: :tar
 
-  installer script:       'brew-install.sh',
-            args:         %W[#{staged_path}],
-            must_succeed: true,
-            sudo:         true
+  installer script: {
+                      executable: 'brew-install.sh',
+                      args:       %W[#{staged_path}],
+                      sudo:       true,
+                    }
   binary 'dusty'
 
   uninstall launchctl: 'com.gamechanger.dusty'

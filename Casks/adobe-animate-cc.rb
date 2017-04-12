@@ -108,8 +108,10 @@ cask 'adobe-animate-cc' do
   name 'Adobe Animate CC'
   homepage 'https://www.adobe.com/products/animate.html'
 
-  installer script: "#{staged_path}/Adobe Animate CC 2015/Install.app/Contents/MacOS/Install",
-            args:   ['--mode=silent', "--deploymentFile=#{staged_path}/Adobe Animate CC 2015/deploy/#{language}_Deployment.xml"]
+  installer script: {
+                      executable: "#{staged_path}/Adobe Animate CC 2015/Install.app/Contents/MacOS/Install",
+                      args:       ['--mode=silent', "--deploymentFile=#{staged_path}/Adobe Animate CC 2015/deploy/#{language}_Deployment.xml"],
+                    }
 
   uninstall script: {
                       executable: "#{staged_path}/Adobe Animate CC 2015/Install.app/Contents/MacOS/Install",
