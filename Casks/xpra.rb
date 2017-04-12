@@ -6,5 +6,9 @@ cask 'xpra' do
   name 'Xpra'
   homepage 'https://www.xpra.org/'
 
-  app 'Xpra.app'
+  pkg 'Xpra-x86_64.pkg', allow_untrusted: true
+
+  uninstall pkgutil:  'org.xpra.pkg'
+
+  zap delete: '/Library/Application Support/Xpra'
 end
