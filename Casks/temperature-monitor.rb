@@ -7,9 +7,8 @@ cask 'temperature-monitor' do
   name 'Temperature Monitor'
   homepage 'https://www.bresink.com/osx/LegacyProducts.html'
 
-  # Renamed for consistency: app name is different in the Finder and in a shell.
-  app 'TemperatureMonitor.app', target: 'TemperatureMonitor.app'
-  app 'TemperaturMonitorLite.app', target: 'Temperature Monitor Lite.app'
+  app 'Temperature Monitor.app'
+  app 'Temperatur Monitor Lite.app'
 
   caveats do
     discontinued
