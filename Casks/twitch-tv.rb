@@ -1,4 +1,4 @@
-cask 'twitchapp' do
+cask 'twitch-tv' do
   version :latest
   sha256 :no_check
 
