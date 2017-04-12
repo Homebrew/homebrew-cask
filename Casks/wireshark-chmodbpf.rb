@@ -52,7 +52,7 @@ cask 'wireshark-chmodbpf' do
   end
 
   uninstall pkgutil: 'org.wireshark.ChmodBPF.pkg',
-            delete:  '/Library/LaunchDaemons/org.wireshark.ChmodBPF.plist'
+            delete:  '/Library/LaunchDaemons/org.wireshark.ChmodBPF.plist',
             rmdir:   [
                        '/Library/Application Support/Wireshark/ChmodBPF',
                        '/Library/Application Support/Wireshark',
