@@ -7,9 +7,8 @@ cask 'intel-haxm' do
   homepage 'https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager'
 
   installer script: {
-                      executable:   'silent_install.sh',
-                      sudo:         true,
-                      must_succeed: true,
+                      executable: 'silent_install.sh',
+                      sudo:       true,
                     }
 
   uninstall script: {
