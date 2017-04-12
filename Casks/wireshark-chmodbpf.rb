@@ -41,14 +41,17 @@ cask 'wireshark-chmodbpf' do
                    sudo: true
   end
 
-  uninstall script:  {
-                       executable: '/usr/sbin/dseditgroup',
-                       args:       ['-o', 'delete', 'access_bpf'],
-                     },
-            pkgutil: 'org.wireshark.ChmodBPF.pkg',
-            delete:  [
-                       '/Library/LaunchDaemons/org.wireshark.ChmodBPF.plist',
-                     ],
+  uninstall_preflight do
+    system_command '/usr/sbin/dseditgroup',
+                   args: [
+                           '-o',
+                           'delete',
+                           'access_bpf',
+                         ]
+  end
+
+  uninstall pkgutil: 'org.wireshark.ChmodBPF.pkg',
+            delete:  '/Library/LaunchDaemons/org.wireshark.ChmodBPF.plist'
             rmdir:   [
                        '/Library/Application Support/Wireshark/ChmodBPF',
                        '/Library/Application Support/Wireshark',
