@@ -1,10 +1,10 @@
 cask 'weibox' do
   version '2.8.0'
-  sha256 '416e2159d0ca83f66359cf3278d300a55367ee573867de71f31c4d926b97df6e'
+  sha256 'a0317a6a0ac0fc2c8e5c07e3561b115808257f5e2eb2195eecdb05624dab21c5'
 
   url "http://2.weiboformac.sinaapp.com/downloads/#{version}.release.zip"
   appcast 'https://weiboformac.sinaapp.com/appcast/wm2.xml',
-          checkpoint: '7eb49b121dd6b425d75716b599bbf748e61b171a5924f2d6dba0b612f042d41d'
+          checkpoint: '2aefd31728fb15674f7afd1bc2fd4b47f42b6720227f2ee81b8a6d80344815c3'
   name 'WeiboX'
   homepage 'https://weiboformac.sinaapp.com/'
 
