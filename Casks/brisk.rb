@@ -8,7 +8,5 @@ cask 'brisk' do
   name 'Brisk'
   homepage 'https://github.com/br1sk/brisk'
 
-  license :mit
-
   app 'Brisk.app'
 end
