@@ -9,8 +9,10 @@ cask 'anaconda' do
   depends_on macos: '>= :lion'
   container type: :naked
 
-  installer script: "Anaconda3-#{version}-MacOSX-x86_64.sh",
-            args:   ['-b']
+  installer script: {
+                      executable: "Anaconda3-#{version}-MacOSX-x86_64.sh",
+                      args:       ['-b'],
+                    }
 
   uninstall delete: '~/anaconda3'
 

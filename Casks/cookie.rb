@@ -1,14 +1,20 @@
 cask 'cookie' do
-  version '5.2.4'
-  sha256 '01695c31c6f9cf06efbf881ae3d8bf6b5c6c07e05f5bc682e1dd9198fcbeab50'
+  version '5.5.1'
+  sha256 '55c32f562f42723a3f0366f6daefd6a1cada44822bd1afbc6f6b95bf1a998b51'
 
   url "https://sweetpproductions.com/products/cookie#{version.major}/Cookie#{version.major}.dmg"
   appcast "https://sweetpproductions.com/products/cookie#{version.major}/appcast.xml",
-          checkpoint: '396ee4d1bb398eb89db216f2456b469392287eb21a7eec8addab825a2d607c83'
+          checkpoint: 'c001f5edabb2efdc733c79d84de683f832c0f962dfe0499d23949a36d8271540'
   name 'Cookie'
   homepage 'https://sweetpproductions.com/'
 
   depends_on macos: '>= :el_capitan'
 
   app 'Cookie.app'
+
+  zap delete: [
+                '~/Library/Application Scripts/com.sweetpproductions.Cookie5',
+                '~/Library/Containers/com.sweetpproductions.Cookie5',
+                '~/Library/Preferences/com.sweetpproductions.Cookie5.plist',
+              ]
 end

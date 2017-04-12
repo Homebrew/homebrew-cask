@@ -4,7 +4,7 @@ cask 'orange' do
 
   url "http://orange.biolab.si/download/files/Orange#{version.major}-#{version}.dmg"
   name 'Orange'
-  homepage 'http://orange.biolab.si/'
+  homepage 'https://orange.biolab.si/'
 
   app "Orange#{version.major}.app"
 end

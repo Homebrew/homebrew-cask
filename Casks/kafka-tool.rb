@@ -6,8 +6,10 @@ cask 'kafka-tool' do
   name 'Kafka Tool'
   homepage 'http://www.kafkatool.com/index.html'
 
-  installer script: 'Kafka Tool Installer.app/Contents/MacOS/JavaApplicationStub',
-            args:   ['-q']
+  installer script: {
+                      executable: 'Kafka Tool Installer.app/Contents/MacOS/JavaApplicationStub',
+                      args:       ['-q'],
+                    }
 
   uninstall delete: '/Applications/Kafka Tool.app'
 

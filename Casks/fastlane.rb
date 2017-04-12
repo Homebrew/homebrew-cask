@@ -7,8 +7,10 @@ cask 'fastlane' do
   name 'fastlane'
   homepage 'https://fastlane.tools/'
 
-  installer script: "#{staged_path}/install",
-            args:   ['-p', '-u', '-b']
+  installer script: {
+                      executable: "#{staged_path}/install",
+                      args:       ['-p', '-u', '-b'],
+                    }
 
   uninstall script: {
                       executable: "#{staged_path}/uninstall",

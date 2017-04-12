@@ -28,21 +28,23 @@ cask 'soapui' do
   # And refer to the install4j command line options for additional information
   #   https://resources.ej-technologies.com/install4j/help/doc/index.html
   #
-  installer script: "SoapUI #{version} Installer.app/Contents/MacOS/JavaApplicationStub",
-            args:   [
-                      '-q',
-                      '-Vsys.adminRights$Boolean=true',
-                      '-Vsys.programGroupDisabled$Boolean=true',
-                      '-VcreateDesktopLinkAction$Boolean=false',
-                      '-Vsys.component.2393$Boolean=false',
-                      '-Vsys.component.132$Boolean=true',
-                      '-Vsys.component.1263$Boolean=false',
-                      '-Vsys.languageId=en',
-                      '-VshowFileAction$Boolean=false',
-                      '-Vsys.installationDir=/Applications',
-                      '-VexecutionLauncherAction$Boolean=false',
-                      '-Vsys.component.714$Boolean=true',
-                    ]
+  installer script: {
+                      executable: "SoapUI #{version} Installer.app/Contents/MacOS/JavaApplicationStub",
+                      args:       [
+                                    '-q',
+                                    '-Vsys.adminRights$Boolean=true',
+                                    '-Vsys.programGroupDisabled$Boolean=true',
+                                    '-VcreateDesktopLinkAction$Boolean=false',
+                                    '-Vsys.component.2393$Boolean=false',
+                                    '-Vsys.component.132$Boolean=true',
+                                    '-Vsys.component.1263$Boolean=false',
+                                    '-Vsys.languageId=en',
+                                    '-VshowFileAction$Boolean=false',
+                                    '-Vsys.installationDir=/Applications',
+                                    '-VexecutionLauncherAction$Boolean=false',
+                                    '-Vsys.component.714$Boolean=true',
+                                  ],
+                    }
 
   uninstall delete: "/Applications/SoapUI-#{version}.app"
 end

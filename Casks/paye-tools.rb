@@ -6,9 +6,11 @@ cask 'paye-tools' do
   name 'Basic PAYE Tools'
   homepage 'https://www.gov.uk/basic-paye-tools'
 
-  installer script: "payetools-rti-#{version}-osx.app/Contents/MacOS/osx-intel",
-            args:   ['--mode', 'unattended'],
-            sudo:   true
+  installer script: {
+                      executable: "payetools-rti-#{version}-osx.app/Contents/MacOS/osx-intel",
+                      args:       ['--mode', 'unattended'],
+                      sudo:       true,
+                    }
 
   uninstall quit: 'uk.gov.hmrc.bptrti'
 end

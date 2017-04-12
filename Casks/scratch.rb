@@ -10,9 +10,11 @@ cask 'scratch' do
 
   depends_on cask: 'adobe-air'
 
-  installer script: "Install Scratch #{version.major}.app/Contents/MacOS/Install Scratch #{version.major}",
-            args:   %w[-silent],
-            sudo:   true
+  installer script: {
+                      executable: "Install Scratch #{version.major}.app/Contents/MacOS/Install Scratch #{version.major}",
+                      args:       %w[-silent],
+                      sudo:       true,
+                    }
 
   uninstall script: {
                       executable: Hbc::Container::Air::INSTALLER_PATHNAME,

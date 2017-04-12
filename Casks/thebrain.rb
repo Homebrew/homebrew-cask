@@ -6,8 +6,10 @@ cask 'thebrain' do
   name 'TheBrain'
   homepage 'https://www.thebrain.com/'
 
-  installer script: 'TheBrain Installer.app/Contents/MacOS/JavaApplicationStub',
-            args:   ['-q']
+  installer script: {
+                      executable: 'TheBrain Installer.app/Contents/MacOS/JavaApplicationStub',
+                      args:       ['-q'],
+                    }
 
   uninstall delete: '/Applications/TheBrain.app'
 end

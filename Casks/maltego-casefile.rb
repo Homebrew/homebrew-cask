@@ -7,4 +7,11 @@ cask 'maltego-casefile' do
   homepage 'https://www.paterva.com/web7/buy/maltego-clients/casefile.php'
 
   app "Maltego CaseFile v#{version.major_minor_patch}.app"
+
+  zap delete: "~/Library/Application Support/maltego/v#{version.major_minor_patch}CaseFile",
+      rmdir:  '~/Library/Application Support/maltego'
+
+  caveats do
+    depends_on_java('7+')
+  end
 end

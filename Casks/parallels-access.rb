@@ -1,14 +1,24 @@
 cask 'parallels-access' do
-  version '3.0.2-30719'
-  sha256 'afafadd6f3e384c0e421b10eb827f83fa65b60206c938431c9c20083d6a0f252'
+  version '3.1.6-31326'
+  sha256 '1713e25c009785bb53f8eb1d193155a4c401ebba4361ce577e3e5c16f3ce787e'
 
-  url "https://download.parallels.com/pmobile/v#{version.major}/#{version.major_minor_patch}/ParallelsAccess-#{version}-mac.dmg"
+  url "https://download.parallels.com/pmobile/v#{version.major}/#{version}/ParallelsAccess-#{version}-mac.dmg"
   name 'Parallels Access'
   homepage 'https://www.parallels.com/products/access/'
 
-  installer script: 'Parallels Access.app/Contents/MacOS/pm_ctl',
-            args:   %w[instance_install],
-            sudo:   true
+  # This .dmg cannot be extracted normally
+  # Original discussion: https://github.com/caskroom/homebrew-cask/issues/26872
+  container type: :naked
+
+  preflight do
+    system_command '/usr/bin/hdiutil',
+                   args: ['attach', '-nobrowse', "#{staged_path}/ParallelsAccess-#{version}-mac.dmg"]
+    system_command '/Volumes/Parallels Access/Parallels Access.app/Contents/MacOS/pm_ctl',
+                   args: ['instance_install'],
+                   sudo: true
+    system_command '/usr/bin/hdiutil',
+                   args: ['detach', '/Volumes/Parallels Access']
+  end
 
   uninstall launchctl: [
                          'com.parallels.mobile.startgui.launchagent',

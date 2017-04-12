@@ -9,15 +9,17 @@ cask 'jabref' do
   name 'JabRef'
   homepage 'https://www.jabref.org/'
 
-  installer script: 'JabRef Installer.app/Contents/MacOS/JavaApplicationStub',
-            args:   [
-                      '-q',
-                      '-VcreateDesktopLinkAction$Boolean=false',
-                      '-VaddToDockAction$Boolean=false',
-                      '-VshowFileAction$Boolean=false',
-                      '-Vsys.installationDir=/Applications',
-                      '-VexecutionLauncherAction$Boolean=false',
-                    ]
+  installer script: {
+                      executable: 'JabRef Installer.app/Contents/MacOS/JavaApplicationStub',
+                      args:       [
+                                    '-q',
+                                    '-VcreateDesktopLinkAction$Boolean=false',
+                                    '-VaddToDockAction$Boolean=false',
+                                    '-VshowFileAction$Boolean=false',
+                                    '-Vsys.installationDir=/Applications',
+                                    '-VexecutionLauncherAction$Boolean=false',
+                                  ],
+                    }
 
   uninstall delete: '/Applications/JabRef.app'
 end

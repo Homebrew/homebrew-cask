@@ -1,8 +1,8 @@
 cask 'zoomus' do
-  version :latest
-  sha256 :no_check
+  version '4.0.29390.0411'
+  sha256 '61a5dc189f72c40c87e90abf1206fbb2b950da85416df085257b588c79ada524'
 
-  url 'https://zoom.us/client/latest/zoomusInstaller.pkg'
+  url "https://www.zoom.us/client/#{version}/zoomusInstaller.pkg"
   name 'Zoom.us'
   homepage 'https://www.zoom.us/'
 
