@@ -24,6 +24,8 @@ cask 'wireshark' do
   end
 
   uninstall_preflight do
+    set_permissions '/Library/Application Support/Wireshark', '0755'
+
     system_command '/usr/sbin/dseditgroup',
                    args: [
                            '-o',
