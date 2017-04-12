@@ -47,7 +47,8 @@ cask 'wireshark-chmodbpf' do
                            '-o',
                            'delete',
                            'access_bpf',
-                         ]
+                         ],
+                   sudo: true
   end
 
   uninstall pkgutil: 'org.wireshark.ChmodBPF.pkg',
