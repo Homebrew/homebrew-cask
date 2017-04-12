@@ -1,5 +1,5 @@
 cask 'cookie' do
-  version '5.5.1'
+  version '5.5.2'
   sha256 '55c32f562f42723a3f0366f6daefd6a1cada44822bd1afbc6f6b95bf1a998b51'
 
   url "https://sweetpproductions.com/products/cookie#{version.major}/Cookie#{version.major}.dmg"
