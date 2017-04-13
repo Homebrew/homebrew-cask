@@ -1,10 +1,10 @@
 cask 'plex-media-server' do
-  version '1.5.4.3596-0d2d8c2be'
-  sha256 '754523ab7923ddbc888e8eac35774bd2deaece41d9885ceca56218700558cb81'
+  version '1.5.5.3634-995f1dead'
+  sha256 'b52fc15b8af39a29a760f6687a4c15f44697c8d007c327d873dc9cbba7413de5'
 
   url "https://downloads.plex.tv/plex-media-server/#{version}/PlexMediaServer-#{version}-OSX.zip"
   appcast 'https://plex.tv/api/downloads/1.json',
-          checkpoint: 'b58f97778704b61eb0b6463150e7a1134a85f633b9e6296d4d4558246a0bb251'
+          checkpoint: '389713decf32f514cfeb6baa10f81fb4c9f13abfc9f0a7bf2613874c1266a092'
   name 'Plex Media Server'
   homepage 'https://www.plex.tv/'
 
