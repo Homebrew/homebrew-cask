@@ -4,7 +4,7 @@ cask 'gdisk' do
 
   url "https://downloads.sourceforge.net/gptfdisk/gdisk-#{version}.pkg"
   appcast 'https://sourceforge.net/projects/gptfdisk/rss',
-          checkpoint: '1a3a7679724709689b97aef5bf28909e5407b624fcbd3c67d63af96957eadb3b'
+          checkpoint: '8cbd4a8261f6342d94cb53c726a2b33ee5dd8961abb2601dc9e86c0eaeb36f76'
   name 'GPT fdisk'
   homepage 'https://sourceforge.net/projects/gptfdisk/'
 
