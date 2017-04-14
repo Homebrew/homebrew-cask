@@ -12,13 +12,12 @@ cask 'android-ndk' do
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/ndk_exec.sh"
   preflight do
-    FileUtils.rm_rf "#{HOMEBREW_PREFIX}/opt/android-ndk"
+    FileUtils.symlink(staged_path.to_s, "#{HOMEBREW_PREFIX}/opt/android-ndk", force: true)
 
-    File.symlink(staged_path.to_s, "#{HOMEBREW_PREFIX}/opt/android-ndk")
     IO.write shimscript, <<-EOS.undent
-     #!/bin/bash
-     readonly executable="#{staged_path}/android-ndk-r#{version}/$(basename ${0})"
-     test -f "${executable}" && exec "${executable}" "${@}"
+      #!/bin/bash
+      readonly executable="#{staged_path}/android-ndk-r#{version}/$(basename ${0})"
+      test -f "${executable}" && exec "${executable}" "${@}"
     EOS
     set_permissions shimscript, '+x'
   end
