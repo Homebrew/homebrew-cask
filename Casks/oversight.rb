@@ -20,4 +20,9 @@ cask 'oversight' do
                       args:       ['-uninstall'],
                       sudo:       true,
                     }
+
+  zap delete: [
+                '~/Library/Preferences/com.objective-see.OverSight.plist',
+                '~/Library/Application Support/Objective-See/OverSight',
+              ]
 end
