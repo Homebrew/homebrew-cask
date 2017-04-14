@@ -18,10 +18,9 @@ cask 'android-ndk' do
 
     File.symlink(staged_path.to_s, "#{HOMEBREW_PREFIX}/opt/android-ndk")
     IO.write shimscript, <<-EOS.undent
-     #!/bin/sh
-     BASENAME=`basename $0`
-     EXEC="#{staged_path}/android-ndk-r#{version}/$BASENAME"
-     test -f "$EXEC" && exec "$EXEC" "$@"
+     #!/bin/bash
+     readonly executable="#{staged_path}/android-ndk-r#{version}/$(basename ${0})"
+     test -f "${executable}" && exec "${executable}" "${@}"
     EOS
     set_permissions shimscript, '+x'
   end
