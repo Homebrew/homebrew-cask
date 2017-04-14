@@ -1,17 +1,23 @@
 cask 'oversight' do
-  version '1.0.0'
-  sha256 'e20b7d91f4301f26236607e5c204286b1901cd138ae6c3a66865c09a95746bc5'
+  version '1.1.0'
+  sha256 'a1798c555f34f3d9e66c23edcb0add55fbdc554a2c6b40177e2281b0ebc585be'
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/OverSight_#{version}.zip"
   appcast 'https://objective-see.com/products/versions/oversight.json',
-          checkpoint: 'da8cba3af8fa83a106e23be6299fd286fe8377931906270bfdd885a609a1ae8b'
-  name 'Oversight'
+          checkpoint: 'cd2bf3138784a13e5d52b5b1d61959e6084ccca4458eb4cace4e4f8fd8de397d'
+  name 'OverSight'
   homepage 'https://objective-see.com/products/oversight.html'
 
-  installer manual: 'OverSight_Installer.app'
+  installer script: {
+                      executable: "#{staged_path}/OverSight_Installer.app/Contents/MacOS/OverSight_Installer",
+                      args:       ['-install'],
+                      sudo:       true,
+                    }
 
-  uninstall quit:       'com.objective-see.OverSightHelper',
-            delete:     '/Applications/OverSight.app',
-            login_item: 'OverSight Helper'
+  uninstall script: {
+                      executable: "#{staged_path}/OverSight_Installer.app/Contents/MacOS/OverSight_Installer",
+                      args:       ['-uninstall'],
+                      sudo:       true,
+                    }
 end
