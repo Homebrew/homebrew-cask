@@ -12,7 +12,7 @@ cask 'android-ndk' do
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/ndk_exec.sh"
   preflight do
-    FileUtils.symlink(staged_path.to_s, "#{HOMEBREW_PREFIX}/opt/android-ndk", force: true)
+    FileUtils.ln(staged_path.to_s, "#{HOMEBREW_PREFIX}/opt/android-ndk", force: true)
 
     IO.write shimscript, <<-EOS.undent
       #!/bin/bash
