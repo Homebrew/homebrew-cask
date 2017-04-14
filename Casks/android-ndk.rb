@@ -9,8 +9,6 @@ cask 'android-ndk' do
 
   conflicts_with cask: 'crystax-ndk'
 
-  stage_only true
-
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/ndk_exec.sh"
   preflight do
