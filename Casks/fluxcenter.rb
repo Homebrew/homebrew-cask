@@ -1,6 +1,6 @@
 cask 'fluxcenter' do
-  version '1.2.4.44994'
-  sha256 'bdc036d665898263ea062336f928f61ae946cb745b6b3ca19f5acd2d3054f59a'
+  version '1.2.6.45795'
+  sha256 'bc731374b2317e3046c73a7e64d6e48d898a6aa501ffe30ff8eb54875ab0f0ff'
 
   # files.flux.to was verified as official when first introduced to the cask
   url "http://files.flux.to/files/Center/MacOS/Flux_FluxCenter_MacOSX_Installer_(#{version}).dmg"
