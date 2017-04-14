@@ -20,9 +20,7 @@ cask 'macvim' do
     mview
     mvim
     mvimdiff
-  ].each do |link_name|
-    binary "#{appdir}/MacVim.app/Contents/bin/mvim", target: link_name
-  end
+  ].each { |link_name| binary "#{appdir}/MacVim.app/Contents/bin/mvim", target: link_name }
 
   zap delete: [
                 '~/Library/Caches/org.vim.MacVim',
