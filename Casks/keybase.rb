@@ -1,10 +1,10 @@
 cask 'keybase' do
-  version '1.0.20-20170317000044,73c5db6'
-  sha256 '2f31db3668db8d613ce85fc3ef4bf6f933c64eb2f46e8c664a777166b1f8e3e0'
+  version '1.0.21-20170413194119,9dea6e1'
+  sha256 'c95ae144b67135f5ad1cbfcd12fed650c34c4d6635dd9568f5043dd69f4ac857'
 
   url "https://prerelease.keybase.io/darwin/Keybase-#{version.before_comma}%2B#{version.after_comma}.dmg"
   appcast 'https://prerelease.keybase.io/update-darwin-prod-v2.json',
-          checkpoint: 'b37694bcb085744fdd02746801d646f7f5745ed861aa2866848cc4442a1a3f74'
+          checkpoint: 'b4a97631cbfdbaed480c2998fa896e3dba6f7b2f2c8ee490992fddbdf4dc876c'
   name 'Keybase'
   homepage 'https://keybase.io/'
 
