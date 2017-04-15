@@ -6,5 +6,5 @@ cask 'logoist' do
   name 'Logoist'
   homepage 'http://www.syniumsoftware.com/logoist'
 
-  app 'Logoist.app'
+  app 'Logoist 2 Demo.app'
 end
