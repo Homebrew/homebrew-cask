@@ -23,12 +23,19 @@ cask 'wireshark' do
                    sudo: true
   end
 
-  uninstall script:  {
-                       executable: '/usr/sbin/dseditgroup',
-                       args:       ['-o', 'delete', 'access_bpf'],
-                       sudo:       true,
-                     },
-            pkgutil: 'org.wireshark.*',
+  uninstall_preflight do
+    set_permissions '/Library/Application Support/Wireshark', '0755'
+
+    system_command '/usr/sbin/dseditgroup',
+                   args: [
+                           '-o',
+                           'delete',
+                           'access_bpf',
+                         ],
+                   sudo: true
+  end
+
+  uninstall pkgutil: 'org.wireshark.*',
             delete:  [
                        '/usr/local/bin/capinfos',
                        '/usr/local/bin/dftest',
