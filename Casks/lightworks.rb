@@ -9,4 +9,6 @@ cask 'lightworks' do
   depends_on macos: '>= :mountain_lion'
 
   app 'Lightworks.app'
+
+  zap delete: '~/Library/Saved Application State/com.editshare.lightworks.savedState'
 end
