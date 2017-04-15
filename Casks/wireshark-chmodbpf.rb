@@ -42,6 +42,8 @@ cask 'wireshark-chmodbpf' do
   end
 
   uninstall_preflight do
+    set_ownership '/Library/Application Support/Wireshark'
+
     system_command '/usr/sbin/dseditgroup',
                    args: [
                            '-o',
@@ -52,11 +54,7 @@ cask 'wireshark-chmodbpf' do
   end
 
   uninstall pkgutil: 'org.wireshark.ChmodBPF.pkg',
-            delete:  '/Library/LaunchDaemons/org.wireshark.ChmodBPF.plist',
-            rmdir:   [
-                       '/Library/Application Support/Wireshark/ChmodBPF',
-                       '/Library/Application Support/Wireshark',
-                     ]
+            delete:  '/Library/LaunchDaemons/org.wireshark.ChmodBPF.plist'
 
   caveats do
     <<-EOS.undent
@@ -68,10 +66,8 @@ cask 'wireshark-chmodbpf' do
       support Wireshark installed from homebrew or other cases where unpriviledged
       access to macOS packet capture devices is desired without installing the binary
       distribution of Wireshark.
-
       The user account used to install this cask will be added to the access_bpf
       group automatically.
-
     EOS
     reboot
   end
