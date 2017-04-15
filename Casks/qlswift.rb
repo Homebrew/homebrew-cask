@@ -1,10 +1,10 @@
 cask 'qlswift' do
-  version '0.0.1'
-  sha256 '9541767fb3f381791cd5b98a84c681da6607179c8da32677f73972c9a0836728'
+  version '0.0.2'
+  sha256 '4407b8e25320a339032bf97cf7bc2a0d62bdf5f45c889e78ee757236ba600408'
 
   url "https://github.com/lexrus/QLSwift/releases/download/#{version}/QLSwift.qlgenerator.zip"
   appcast 'https://github.com/lexrus/QLSwift/releases.atom',
-          checkpoint: '5dc3ff40c67e2c7625aed0ad377a35dea553b437939372d784ef5b94080e8104'
+          checkpoint: 'd34f0dab52066a6b05b237b2fb895121ddb1e6ecedd2d1cfd154c29f4c2965ea'
   name 'QLSwift'
   homepage 'https://github.com/lexrus/QLSwift'
 
