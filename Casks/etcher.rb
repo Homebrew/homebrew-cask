@@ -1,6 +1,6 @@
 cask 'etcher' do
-  version '1.0.0-rc.2'
-  sha256 'c5e40463a728df61cfc0f351a179f22e5468af829321fa8c55a8ec071db0ce91'
+  version '1.0.0-beta.19'
+  sha256 'c8f01a62c0d5927b85e2f6ad9a69d6c712e857446ecede87d3297041ac66627b'
 
   # resin-production-downloads.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://resin-production-downloads.s3.amazonaws.com/etcher/#{version}/Etcher-#{version}-darwin-x64.dmg"
