@@ -1,10 +1,10 @@
 cask 'fldigi' do
-  version '4.0.1'
-  sha256 '025c953be210e180abbb9c2e04451db34286eff016150d7eb770c137f9461594'
+  version '4.0.2'
+  sha256 '79a6102d5d69e814b58d66cb8bc8ceac7f506005b3481fbf71261a9a28296aea'
 
   url "https://downloads.sourceforge.net/fldigi/fldigi/fldigi-#{version}_i386.dmg"
   appcast 'https://sourceforge.net/projects/fldigi/rss?path=/fldigi',
-          checkpoint: 'fe8a66f3cd9a0d49afbbe3d1b492848fa765fab8f334e943bb0ca156f8bf1775'
+          checkpoint: 'bed8ba38f33a34e1d0c83dd196babcb31cc68126fe5a14a082664a8601d1303e'
   name 'fldigi'
   homepage 'https://sourceforge.net/projects/fldigi/files/fldigi/'
 
