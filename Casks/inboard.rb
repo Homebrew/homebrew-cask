@@ -6,7 +6,7 @@ cask 'inboard' do
   appcast 'http://inboardapp.com/appcast.xml',
           checkpoint: '61e43b9c8b46c6d18440721ad263f29bce73e25a1bc06f1824ab45481b9c3018'
   name 'Inboard'
-  homepage 'http://inboardapp.com/'
+  homepage 'https://inboardapp.com/'
 
   app 'Inboard.app'
 end
