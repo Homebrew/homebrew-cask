@@ -1,0 +1,10 @@
+class Validator_sac < Cask
+  version '0.10.4'
+  sha256 '45ed10a41d49cdce8c048dae50f96abc78d9a45d5d0137d5757ed69de333a67f'
+
+  url 'http://habilis.net/download/Validator-SAC_0.10.4.zip'
+  homepage 'http://habilis.net/validator-sac/'
+  license :unknown
+
+  app 'Validator-SAC.app'
+end
