@@ -11,4 +11,8 @@ cask 'dterm' do
   accessibility_access true
 
   app 'DTerm.app'
+  uninstall :quit => 'net.decimus.dterm'
+  caveats do
+    assistive_devices
+  end
 end
