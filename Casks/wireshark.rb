@@ -24,7 +24,7 @@ cask 'wireshark' do
   end
 
   uninstall_preflight do
-    set_permissions '/Library/Application Support/Wireshark', '0755'
+    set_ownership '/Library/Application Support/Wireshark'
 
     system_command '/usr/sbin/dseditgroup',
                    args: [
@@ -37,6 +37,7 @@ cask 'wireshark' do
 
   uninstall pkgutil: 'org.wireshark.*',
             delete:  [
+                       '/Library/LaunchDaemons/org.wireshark.ChmodBPF.plist',
                        '/usr/local/bin/capinfos',
                        '/usr/local/bin/dftest',
                        '/usr/local/bin/dumpcap',
