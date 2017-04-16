@@ -4,7 +4,7 @@ cask 'archi' do
 
   url "http://www.archimatetool.com/downloads/latest/Archi-mac64-#{version}.zip"
   name 'Archi'
-  homepage 'http://www.archimatetool.com/'
+  homepage 'https://www.archimatetool.com/'
 
   app 'Archi/Archi.app'
 end

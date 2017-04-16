@@ -6,7 +6,7 @@ cask 'syncmate' do
   appcast "http://www.eltima.com/download/syncmate-update/syncmate#{version.major}.xml",
           checkpoint: 'a057f63a65f4b4156f7847a777db21fa5d7328f5f47ea17e1d9e6977f603049b'
   name 'SyncMate'
-  homepage 'http://www.sync-mac.com/'
+  homepage 'https://www.sync-mac.com/'
 
   app 'SyncMate.app'
 end
