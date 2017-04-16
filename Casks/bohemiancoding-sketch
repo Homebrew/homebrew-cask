@@ -1,0 +1,7 @@
+class BohemiancodingSketch < Cask
+  url 'http://bohemiancoding.com/static/download/sketch.zip'
+  homepage 'http://bohemiancoding.com/sketch'
+  version '3.0.2'
+  sha256 'ebfe3c7a504530a3666471bc4b0fad1ad0789cd2a8b0e3ecf2bf5df026494b41'
+  link 'Sketch.app'
+end
