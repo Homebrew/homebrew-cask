@@ -1,6 +1,6 @@
 cask 'oversight' do
-  version '1.1.0'
-  sha256 'a1798c555f34f3d9e66c23edcb0add55fbdc554a2c6b40177e2281b0ebc585be'
+  version '1.1.1'
+  sha256 '9dc5b18b268fa17d9e23534b96dc01a069bf0ba332f781dd96e9b1320c3f67d3'
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/OverSight_#{version}.zip"
