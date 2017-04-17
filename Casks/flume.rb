@@ -9,4 +9,10 @@ cask 'flume' do
   homepage 'https://flumeapp.com/'
 
   app 'Flume.app'
+
+  auto_updates true
+
+  zap delete: [
+                '~/Library/Application Support/Flume',
+              ]
 end
