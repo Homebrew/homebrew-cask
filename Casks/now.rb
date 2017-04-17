@@ -12,7 +12,7 @@ cask 'now' do
   app 'Now.app'
 
   zap delete: [
-                '~/.now.json'
+                '~/.now.json',
                 '~/Library/Application Support/Now',
                 '~/Library/Caches/co.zeit.now',
                 '~/Library/Caches/co.zeit.now.ShipIt',
