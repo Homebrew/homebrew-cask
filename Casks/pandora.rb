@@ -8,5 +8,6 @@ cask 'pandora' do
 
   depends_on cask: 'adobe-air'
 
+  depends_on :cask => 'adobe-air'
   app 'Pandora.app'
 end
