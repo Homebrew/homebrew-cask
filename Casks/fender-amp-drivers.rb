@@ -9,6 +9,8 @@ cask 'fender-amp-drivers' do
 
   depends_on macos: '>= :lion'
 
+  depends_on :macos => '>= :lion'
+
   pkg 'Fender FUSE Installer.app/Contents/Resources/FenderDrivers.pkg'
 
   uninstall pkgutil: 'com.Fender.pkg.FenderAmpDrivers'
