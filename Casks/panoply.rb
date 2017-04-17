@@ -6,6 +6,8 @@ cask 'panoply' do
   name 'Panoply netCDF, HDF and GRIB Data Viewer'
   homepage 'https://www.giss.nasa.gov/tools/panoply/'
 
+  depends_on :cask => 'java'
+
   app 'Panoply.app'
 
   caveats do
