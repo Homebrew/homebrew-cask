@@ -9,5 +9,4 @@ cask 'flume' do
   homepage 'https://flumeapp.com/'
 
   app 'Flume.app'
-
 end
