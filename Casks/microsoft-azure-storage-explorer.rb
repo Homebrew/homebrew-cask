@@ -7,5 +7,5 @@ cask 'microsoft-azure-storage-explorer' do
   name 'Microsoft Azure Storage Explorer'
   homepage 'http://storageexplorer.com/'
 
-  app 'Microsoft Azure Storage Explorer.app'
+  app 'MicrosoftAzureStorageExplorer/Microsoft Azure Storage Explorer.app'
 end
