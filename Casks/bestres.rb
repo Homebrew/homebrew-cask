@@ -9,5 +9,7 @@ cask 'bestres' do
 
   depends_on macos: '>= :yosemite'
 
+  depends_on :macos => '>= :yosemite'
+
   app 'BestRes.app'
 end
