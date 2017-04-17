@@ -23,12 +23,12 @@ cask 'android-ndk' do
   end
 
   %w[
-      ndk-build
-      ndk-depends
-      ndk-gdb
-      ndk-stack
-      ndk-which
-    ].each { |link_name| binary shimscript, target: link_name }
+    ndk-build
+    ndk-depends
+    ndk-gdb
+    ndk-stack
+    ndk-which
+  ].each { |link_name| binary shimscript, target: link_name }
 
   caveats <<-EOS.undent
    You may want to add to your profile:
