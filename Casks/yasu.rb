@@ -16,12 +16,12 @@ cask 'yasu' do
             checkpoint: 'd13bbaeca2a2c3610fa770ed3b2080fa040f525bbcc15c144d1802ecaf3ee487'
     app 'Yasu for Mac.app'
   else
-    version '4.0.2,602'
-    sha256 'db0951295b8e9b9d8fc4dfd37795b8261bbd1c79b218d260c9532f78b47abc14'
+    version '4.0.3,603'
+    sha256 'aff402cdad7574e39705968f4ed2e35a05ef64260bf3cae85acf62d22e15f920'
     url "https://yasuformac.com/appcasts/10.12/yasuformac_#{version.after_comma}.zip",
         user_agent: :fake
     appcast 'https://yasuformac.com/appcasts/10.12/yasu.xml',
-            checkpoint: 'bdbef00a431e551842dc2a953e2abdf46cb3dc036e06c91b35ca245d55e99995'
+            checkpoint: '26699f36f3b2d0b95d5c25342d6fae72ad6dceda732679718701223127b5e7ce'
     app 'Yasu for Mac.app'
   end
 
