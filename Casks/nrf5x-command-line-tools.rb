@@ -1,6 +1,6 @@
 cask 'nrf5x-command-line-tools' do
-  version '53402.11.65316563'
-  sha256 '2a26e57a54a53ae7009f56041619ef6ea215f829aa75c9c35d1d45555f032a71'
+  version '53412.12.75215164'
+  sha256 '40342170b40cc4a930b695a3695f1b47b29d4ba1362af280a74f6cbbbf1c925d'
 
   url "https://www.nordicsemi.com/eng/nordic/download_resource/#{version.major}/#{version.minor}/#{version.patch}"
   name 'nRF5x Command Line Tools'
