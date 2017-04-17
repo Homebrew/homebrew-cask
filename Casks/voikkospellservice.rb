@@ -8,6 +8,8 @@ cask 'voikkospellservice' do
 
   depends_on macos: '>= :mavericks'
 
+  depends_on :macos => '>= :mavericks'
+
   service 'VoikkoSpellService.app'
 
   uninstall signal: ['TERM', 'org.puimula.VoikkoSpellService']
