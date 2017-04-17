@@ -49,8 +49,6 @@ cask 'gpgtools' do
                          '/private/etc/manpaths.d/MacGPG2',
                          '/private/tmp/gpg-agent',
                          '/Library/PreferencePanes/GPGPreferences.prefPane',
-                         '/Applications/GPG Keychain Access.app',
-                         '/Applications/GPG Keychain.app',
                          '/Library/Application Support/GPGTools',
                          '/Library/Frameworks/Libmacgpg.framework',
                        ]
