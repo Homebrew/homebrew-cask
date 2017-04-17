@@ -22,5 +22,6 @@ cask 'nylas-mail' do
                 '~/Library/Caches/Nylas Mail',
                 '~/Library/Preferences/com.nylas.nylas-mail.plist',
                 '~/Library/Saved Application State/com.nylas.nylas-mail.savedState',
+                '~/.nylas-mail',
               ]
 end
