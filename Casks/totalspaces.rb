@@ -12,8 +12,8 @@ cask 'totalspaces' do
     uninstall pkgutil: 'com.switchstep.totalspaces',
               quit:    'com.binaryage.TotalSpaces'
   else
-    version '2.5.0'
-    sha256 '8aeb2176c2e22356fe7919e904db05880fa49c10de74f00bdc82614d1a41e9ef'
+    version '2.5.4'
+    sha256 '8b53eea81e432df5a61ccdc0c9e727cd4e7c2bb265db454d536356c106bdc5c0'
 
     url "http://downloads.binaryage.com/TotalSpaces#{version.major}-#{version}.dmg"
     appcast "http://updates-s3.binaryage.com/totalspaces#{version.major}.xml",
