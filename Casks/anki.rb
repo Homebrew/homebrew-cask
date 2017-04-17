@@ -8,5 +8,7 @@ cask 'anki' do
 
   depends_on macos: '>= :lion'
 
+  depends_on :arch => :intel
+
   app 'Anki.app'
 end
