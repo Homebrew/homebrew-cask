@@ -8,5 +8,5 @@ cask 'pocketcasts' do
   name 'Pocket Casts for Mac'
   homepage 'https://github.com/mortenjust/PocketCastsOSX'
 
-  app 'PocketCasts.app'
+  app 'PocketCast.app'
 end
