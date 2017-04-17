@@ -11,6 +11,12 @@ It’s implemented as a `homebrew` [external command](http://docs.brew.sh/Extern
 [![Build Status](https://img.shields.io/travis/caskroom/homebrew-cask/master.svg)](https://travis-ci.org/caskroom/homebrew-cask)
 [![Join the chat at https://gitter.im/caskroom/homebrew-cask](https://img.shields.io/badge/gitter-join%20chat-blue.svg)](https://gitter.im/caskroom/homebrew-cask)
 
+## Get Cask
+
+```bash
+$ brew tap caskroom/cask
+```
+
 ## Let’s try it!
 
 To start using Homebrew-Cask, you just need [Homebrew](http://brew.sh/) installed.
