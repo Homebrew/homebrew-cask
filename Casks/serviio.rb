@@ -14,4 +14,14 @@ cask 'serviio' do
                        'org.serviio.pkg.ServiioConsole',
                        'org.serviio.pkg.Serviio',
                      ]
+
+  zap delete: [
+                '/Library/Application Support/Serviio',
+                '/private/var/log/serviio',
+                '~/Library/Application Support/CrashReporter/Serviio-Console Helper_*.plist',
+                '~/Library/Application Support/Serviio-Console-Wrapper',
+                '~/Library/Caches/Serviio-Console-Wrapper',
+                '~/Library/Preferences/org.serviio.serviio-web-console.plist',
+                '~/Library/Saved Application State/org.serviio.serviio-web-console.savedState',
+              ]
 end
