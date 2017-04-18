@@ -6,5 +6,5 @@ cask 'vectr' do
   name 'Vectr'
   homepage 'https://vectr.com/'
 
-  app 'Vectr.app'
+  app "vectr-mac-#{version}/Vectr.app"
 end
