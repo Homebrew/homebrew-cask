@@ -2,7 +2,7 @@ cask 'bearychat' do
   version :latest
   sha256 :no_check
 
-  url 'https://bearychat.com/apps/mac'
+  url 'https://download.bearychat.com/apps/v2/mac'
   name 'BearyChat'
   homepage 'https://bearychat.com/'
 
