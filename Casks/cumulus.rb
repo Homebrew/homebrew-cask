@@ -1,6 +1,6 @@
 cask 'cumulus' do
   version '0.10.1'
-  sha256 '9eaf742c4f933760bb2cb6390c018cdf525b97c06461608050d8554c4a5aa8e9'
+  sha256 'f23cffe610f095ef28acc7a14a61b5548755af452ecf5d38c2e2916e424ca271'
 
   # github.com/gillesdemey/Cumulus was verified as official when first introduced to the cask
   url "https://github.com/gillesdemey/Cumulus/releases/download/v#{version}/Cumulus-#{version}.dmg"
