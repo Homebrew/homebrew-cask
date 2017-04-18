@@ -12,8 +12,7 @@ cask 'syncthing-bar' do
 
   uninstall quit:      'koeln.mop.syncthing-bar',
             pkgutil:   'koeln.mop.syncthing-bar',
-            launchctl: 'koeln.mop.syncthing-bar.agent',
-            delete:    '/Applications/syncthing-bar.app'
+            launchctl: 'koeln.mop.syncthing-bar.agent'
 
   zap delete: [
                 '~/Library/Application Support/Syncthing',
