@@ -10,6 +10,8 @@ cask 'shortcat' do
 
   accessibility_access true
 
+  accessibility_access true
+
   app 'Shortcat.app'
 
   zap delete: [
