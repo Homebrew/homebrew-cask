@@ -10,6 +10,8 @@ cask 'moom' do
 
   auto_updates true
 
+  auto_updates true
+
   app 'Moom.app'
 
   zap delete: [
