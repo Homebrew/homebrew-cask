@@ -5,9 +5,12 @@ cask 'bassjump' do
   elsif MacOS.version == :yosemite
     version '3.0.0'
     sha256 '0f5507d69a3cd6247fda0977235db789c90d3e9f9de835dfe69c0ebf330b993d'
-  else
+  elsif MacOS.version == :el_capitan
     version '3.0.1'
     sha256 '9aa2020f996dba7f66cfda20615e3a0fded4c974a32ae5cf6bb6626c9d06e541'
+  else
+    version '3.1.0'
+    sha256 'ccffa678710f7636cfb7264f9a96a4aa74960c6722da9685fd43567417383853'
   end
 
   # ffe82a399885f9f28605-66638985576304cbe11c530b9b932f18.r24.cf2.rackcdn.com was verified as official when first introduced to the cask
