@@ -11,8 +11,6 @@ cask 'macdown' do
 
   auto_updates true
 
-  auto_updates true
-
   app 'MacDown.app'
   binary "#{appdir}/MacDown.app/Contents/SharedSupport/bin/macdown"
 
