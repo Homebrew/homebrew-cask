@@ -12,6 +12,8 @@ cask 'hammerspoon' do
   auto_updates true
   accessibility_access true
 
+  accessibility_access true
+
   app 'Hammerspoon.app'
 
   uninstall quit:       'org.hammerspoon.Hammerspoon',
