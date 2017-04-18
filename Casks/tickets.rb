@@ -1,8 +1,8 @@
 cask 'tickets' do
   version '2.5'
-  sha256 '8f2d7879581fb2604158367fb6e7eda8bc9ebf15e97781b69b64355f2832af6e'
+  sha256 'cb31bec7ce1254249febbd090d2f1775fbe47dbc065aab48eaf2e8317b930214'
 
-  url 'https://www.irradiatedsoftware.com/download/Tickets.zip'
+  url "http://www.irradiatedsoftware.com/downloads/Tickets_#{version}.zip"
   appcast 'https://www.irradiatedsoftware.com/updates/profiles/tickets.php',
           checkpoint: '7e2de498cbcc71c944e00256c9cb64cfa50a9ba5c1bbe20575e9743b73ec34fe'
   name 'Tickets'
