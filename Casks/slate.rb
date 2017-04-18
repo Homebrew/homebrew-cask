@@ -11,6 +11,8 @@ cask 'slate' do
 
   accessibility_access true
 
+  accessibility_access true
+
   app 'Slate.app'
 
   zap delete: [

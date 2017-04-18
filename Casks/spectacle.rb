@@ -19,6 +19,8 @@ cask 'spectacle' do
   accessibility_access true
   depends_on macos: '>= :lion'
 
+  accessibility_access true
+
   app 'Spectacle.app'
 
   uninstall login_item: 'Spectacle'

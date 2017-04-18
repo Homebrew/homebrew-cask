@@ -11,6 +11,8 @@ cask 'sizeup' do
   auto_updates true
   accessibility_access true
 
+  accessibility_access true
+
   app 'SizeUp.app'
 
   zap delete: [
