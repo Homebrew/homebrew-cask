@@ -10,5 +10,7 @@ cask 'butler' do
 
   auto_updates true
 
+  auto_updates true
+
   app 'Butler.app'
 end
