@@ -17,6 +17,8 @@ cask 'witch' do
 
   auto_updates true
 
+  auto_updates true
+
   prefpane 'Witch.prefPane'
 
   zap delete: '~/Library/Preferences/com.manytricks.Witch.plist'
