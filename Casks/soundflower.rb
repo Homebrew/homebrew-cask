@@ -23,6 +23,5 @@ cask 'soundflower' do
                             must_succeed: false,
                           },
             pkgutil:      'com.cycling74.soundflower.*',
-            delete:       '/Applications/Soundflower',
             kext:         'com.Cycling74.driver.Soundflower'
 end
