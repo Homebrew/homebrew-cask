@@ -4,6 +4,7 @@ cask 'night-owl' do
 
   # aki-null.net was verified as official when first introduced to the cask
   url 'https://aki-null.net/yf/NightOwl.zip'
+  # null.net verified as official when first introduced to the cask
   appcast 'https://aki-null.net/yf/distribution/changelog_sl_en.html',
           checkpoint: 'b773919ea618fd977a79719e2084e056cb18da18c7ec61bde3e0cef676bff8ed'
   name 'NightOwl'
