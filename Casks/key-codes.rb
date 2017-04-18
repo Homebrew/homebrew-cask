@@ -10,5 +10,7 @@ cask 'key-codes' do
 
   auto_updates true
 
+  auto_updates true
+
   app 'Key Codes.app'
 end
