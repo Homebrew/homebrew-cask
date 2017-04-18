@@ -10,5 +10,7 @@ cask 'time-sink' do
 
   auto_updates true
 
+  auto_updates true
+
   app 'Time Sink.app'
 end
