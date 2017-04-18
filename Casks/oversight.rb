@@ -24,5 +24,6 @@ cask 'oversight' do
   zap delete: [
                 '~/Library/Preferences/com.objective-see.OverSight.plist',
                 '~/Library/Application Support/Objective-See/OverSight',
+                '~/Library/Caches/com.objective-see.OverSightHelper',
               ]
 end
