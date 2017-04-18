@@ -10,5 +10,7 @@ cask 'name-mangler' do
 
   auto_updates true
 
+  auto_updates true
+
   app 'Name Mangler.app'
 end
