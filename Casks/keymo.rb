@@ -10,6 +10,8 @@ cask 'keymo' do
 
   auto_updates true
 
+  auto_updates true
+
   app 'Keymo.app'
 
   zap delete: '~/Library/Preferences/com.manytricks.Keymo.plist'
