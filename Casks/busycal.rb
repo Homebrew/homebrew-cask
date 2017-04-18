@@ -11,7 +11,6 @@ cask 'busycal' do
   pkg 'BusyCal Installer.pkg'
 
   uninstall pkgutil: 'com.busymac.busycal3.pkg',
-            delete:  '/Applications/BusyCal.app',
             quit:    [
                        'com.busymac.busycal3',
                        'N4RA379GBW.com.busymac.busycal3.alarm',
