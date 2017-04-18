@@ -7,7 +7,6 @@ cask 'expressscribe' do
   homepage 'http://www.nch.com.au/scribe/index.html'
 
   auto_updates true
-  depends_on macos: '>= 10.5'
 
   app 'ExpressScribe.app'
 
