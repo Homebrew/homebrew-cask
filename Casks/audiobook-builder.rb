@@ -4,7 +4,7 @@ cask 'audiobook-builder' do
 
   url "http://www.splasm.com/downloads/audiobookbuilder/Audiobook%20Builder%20#{version}.dmg"
   name 'Audiobook Builder'
-  homepage 'http://www.splasm.com/audiobookbuilder/'
+  homepage 'https://www.splasm.com/audiobookbuilder/'
 
   app 'Audiobook Builder.app'
 end

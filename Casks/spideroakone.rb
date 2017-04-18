@@ -8,6 +8,5 @@ cask 'spideroakone' do
 
   pkg 'SpiderOakONE.pkg'
 
-  uninstall delete:  '/Applications/SpiderOakONE.app',
-            pkgutil: 'org.python.python'
+  uninstall pkgutil: 'org.python.python'
 end

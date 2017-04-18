@@ -1,6 +1,6 @@
 cask 'ukelele' do
-  version '3.2.3'
-  sha256 'aba60cf88c613f820629b7f66945ba141a9f028b2bb1cc29a57aa507bd926c54'
+  version '3.2.4'
+  sha256 'ac2285669fc8b2d24546519773c1e1e2c97e9d262296ee39545bdc89f3583c19'
 
   url "https://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Ukelele_#{version}&filename=Ukelele_#{version}.dmg"
   name 'Ukelele'

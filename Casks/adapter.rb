@@ -4,9 +4,15 @@ cask 'adapter' do
 
   url "http://downloads.macroplant.com/Adapter-#{version}.dmg"
   appcast 'https://www.macroplant.com/adapter/adapterAppcast.xml',
-          checkpoint: '17c8a441ce835c97f66dbd51dcbad221699360e42808091682ebfec5aed14edc'
+          checkpoint: '8198e12480f9a0c5b45c10610bf50966e8cfbe1f11dbe0ece2e5661c7fcf5306'
   name 'Adapter'
   homepage 'https://macroplant.com/adapter'
 
   app 'Adapter.app'
+
+  zap delete: [
+                '~/Library/Application Support/Adapter',
+                '~/Library/Caches/com.macroplant.adapter',
+                '~/Library/com.macroplant.adapter.plist',
+              ]
 end

@@ -1,6 +1,6 @@
 cask 'proxifier' do
-  version '2.18'
-  sha256 '8ecac718e1292af4871184412fd6096f0e8fe41cd25280eec2d94812f6e0efb7'
+  version '2.19'
+  sha256 'dcefba17e07a11d2ce8c12f949e9c59f80994588f3910516b58669e9e740854c'
 
   url 'https://www.proxifier.com/distr/ProxifierMac.zip'
   appcast 'https://www.proxifier.com/distr/last_versions/ProxifierMac.txt',

@@ -2,9 +2,9 @@ cask 'iholdem-indicator' do
   version :latest
   sha256 :no_check
 
-  url 'https://www.iholdemindicator.com/download/iHoldemIndicatorInstaller.pkg'
+  url 'http://www.iholdemindicator.com/download/iHoldemIndicatorInstaller.pkg'
   name 'iHoldem Indicator'
-  homepage 'https://www.iholdemindicator.com/'
+  homepage 'http://www.iholdemindicator.com/'
 
   pkg 'iHoldemIndicatorInstaller.pkg'
 

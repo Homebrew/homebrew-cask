@@ -1,12 +1,12 @@
 cask 'mysql-shell' do
-  version '1.0.5'
-  sha256 'aa70cfd1b0d9663e1a942b0d4f6047e097a0e1ee7d6906b44c27fcecee10d24b'
+  version '1.0.9'
+  sha256 'c47ebefa2bb8f0a949843e5eb198857d4e96a4e296c4bde5f1afec03c295844a'
 
-  url "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-#{version}-osx10.11-x86-64bit.dmg"
+  url "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-#{version}-macos10.12-x86-64bit.dmg"
   name 'MySQL Shell'
   homepage 'https://dev.mysql.com/downloads/shell/'
 
-  pkg "mysql-shell-#{version}-osx10.11-x86-64bit.pkg"
+  pkg "mysql-shell-#{version}-macos10.12-x86-64bit.pkg"
 
   uninstall pkgutil: 'com.mysql.shell'
 

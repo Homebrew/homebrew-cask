@@ -26,7 +26,7 @@ cask '1password' do
   end
 
   appcast 'https://app-updates.agilebits.com/product_history/OPM4',
-          checkpoint: '5597c1b088e1fa61bb601b19df5e6abdeee30dd97a7764085c4e61c2f5be10b5'
+          checkpoint: '59ffe7334bf28793ea8cf7268c4a77d574eb968797633c36c008a393b4ae364d'
   name '1Password'
   homepage 'https://1password.com/'
 
