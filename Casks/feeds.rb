@@ -4,6 +4,7 @@ cask 'feeds' do
 
   # storage.googleapis.com/feeds-releases was verified as official when first introduced to the cask
   url "https://storage.googleapis.com/feeds-releases/Feeds-#{version}.zip"
+  # googleapis.com verified as official when first introduced to the cask
   appcast 'https://storage.googleapis.com/feeds-releases/appcast.xml',
           checkpoint: '4450c36d30006bb4b85fa047d9062a3ce22d3d170824eea73db3db01acb0a880'
   name 'Feeds'
