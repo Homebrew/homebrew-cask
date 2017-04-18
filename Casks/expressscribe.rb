@@ -3,7 +3,7 @@ cask 'expressscribe' do
   sha256 :no_check
 
   url 'http://www.nch.com.au/scribe/scribemaci.zip'
-  name 'NCH Software Express Scribe Transcription Software Free'
+  name 'Express Scribe Transcription Software'
   homepage 'http://www.nch.com.au/scribe/index.html'
 
   auto_updates true
