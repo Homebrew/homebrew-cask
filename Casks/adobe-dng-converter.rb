@@ -16,7 +16,6 @@ cask 'adobe-dng-converter' do
 
   pkg "DNGConverter_#{version.dots_to_underscores}.pkg"
 
-  uninstall delete:  '/Applications/Adobe DNG Converter.app',
-            pkgutil: 'com.adobe.adobeDngConverter*',
+  uninstall pkgutil: 'com.adobe.DNGConverter',
             quit:    'com.adobe.DNGConverter'
 end
