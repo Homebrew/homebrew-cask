@@ -4,6 +4,7 @@ cask 'eve' do
 
   # amazonaws.com/hotkeyeve was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/hotkeyeve/Downloads/EVE-latest.zip'
+  # amazonaws.com verified as official when first introduced to the cask
   appcast 'https://s3.amazonaws.com/hotkeyeve/hotkeyEVEappcast.xml',
           checkpoint: 'e9ec5e3e38ebb8c634bb750a6a41de8267c2f12adaf7ee3e29eb8d47be8f79ae'
   name 'EVE'
