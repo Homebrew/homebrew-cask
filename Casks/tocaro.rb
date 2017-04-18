@@ -4,7 +4,7 @@ cask 'tocaro' do
 
   url 'https://deskapp.tocaro.im/download/latest/osx'
   name 'Tocaro'
-  homepage 'https://tocaro.im'
+  homepage 'https://tocaro.im/'
 
   app 'tocaro.app'
 end
