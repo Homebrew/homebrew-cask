@@ -1,6 +1,6 @@
 cask 'audiomate' do
   version '2.2.6'
-  sha256 '1be327d0d98d4884ccb9077f60ac9a6ff8cd10df3c3841fc85fde6866462a43e'
+  sha256 '056ec23c32409bb599b0f51042531b5c7ecbc4875a0279358e87266487be069f'
 
   # 9labs.io was verified as official when first introduced to the cask
   url "http://backend.9labs.io/download/audiomate?version=#{version}"
