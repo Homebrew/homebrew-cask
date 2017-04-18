@@ -7,7 +7,9 @@ cask 'macdown' do
   appcast 'http://macdown.uranusjr.com/sparkle/macdown/stable/appcast.xml',
           checkpoint: 'b5d3dd1f4690778a82675d110ff4699aecbd29a6597214492756d1e8d38310f6'
   name 'MacDown'
-  homepage 'https://macdown.uranusjr.com/'
+  homepage 'http://macdown.uranusjr.com/'
+
+  auto_updates true
 
   auto_updates true
 
