@@ -34,4 +34,8 @@ cask 'seil' do
                       '~/Library/Preferences/org.pqrs.PCKeyboardHack.plist',
                       '~/Library/Preferences/org.pqrs.Seil.plist',
                     ]
+
+  caveats do
+    discontinued
+  end
 end
