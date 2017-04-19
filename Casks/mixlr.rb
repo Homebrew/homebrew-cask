@@ -8,6 +8,8 @@ cask 'mixlr' do
 
   pkg 'Mixlr.pkg'
 
+  uninstall pkgutil: 'com.mixlr.pkg.Mixlr'
+
   zap delete: [
                 '~/Library/Application Support/mixlr',
                 '~/Library/Preferences/com.mixlr.Broadcaster.plist',
