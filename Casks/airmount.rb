@@ -11,6 +11,5 @@ cask 'airmount' do
   pkg 'AirMount.pkg'
 
   uninstall quit:    'com.tinkerstuff.AirMount',
-            pkgutil: 'com.tinkerstuff.AirMount',
-            delete:  '/Applications/AirMount.app'
+            pkgutil: 'com.tinkerstuff.AirMount'
 end

@@ -15,6 +15,7 @@ cask 'adobe-air' do
   uninstall script: {
                       executable: 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
                       args:       %w[-uninstall],
+                      sudo:       true,
                     },
             rmdir:  [
                       '/Applications/Adobe/Flash Player/AddIns',
