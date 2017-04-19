@@ -16,7 +16,7 @@ cask 'seil' do
   name 'Seil'
   homepage 'https://pqrs.org/osx/karabiner/seil.html'
 
-  depends_on macos: '>= :mountain_lion'
+  depends_on macos: '<= :el_capitan'
 
   if MacOS.version <= :mountain_lion
     pkg 'Seil.pkg'
