@@ -19,6 +19,13 @@ cask 'cocoscreator' do
     EOS
   end
 
+  postflight do
+    File.open("#{appdir}/CocosCreator.app/Contents/Resources/cocos2d-x/tools/cocos2d-console/bin/cocos", 'w') do |f|
+      f.puts('#!/bin/bash')
+      f.puts("python \"#{appdir}/CocosCreator.app/Contents/Resources/cocos2d-x/tools/cocos2d-console/bin/cocos.py\" \"$@\"")
+    end
+  end
+
   zap delete: [
                 '~/Library/Application Support/CocosCreator',
                 '~/Library/Preferences/com.cocos.creator.plist',
