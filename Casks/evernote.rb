@@ -20,6 +20,11 @@ cask 'evernote' do
 
   app 'Evernote.app'
 
+  uninstall quit: [
+                    'com.evernote.Evernote',
+                    'com.evernote.EvernoteHelper',
+                  ]
+
   zap delete: [
                 '~/Library/Application Support/com.evernote.Evernote',
                 '~/Library/Application Support/com.evernote.EvernoteHelper',
