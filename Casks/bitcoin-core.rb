@@ -7,6 +7,8 @@ cask 'bitcoin-core' do
   name 'Bitcoin Core'
   homepage 'https://bitcoincore.org/'
 
+  depends_on macos: '>= :lion'
+
   conflicts_with cask: 'bitcoin-xt'
   depends_on macos: '>= :mountain_lion'
 
