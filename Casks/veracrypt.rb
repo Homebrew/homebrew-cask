@@ -11,6 +11,8 @@ cask 'veracrypt' do
 
   depends_on cask: 'osxfuse'
 
+  depends_on cask: 'osxfuse'
+
   pkg 'VeraCrypt_Installer.pkg'
 
   uninstall pkgutil: 'com.idrix.pkg.veracrypt'
