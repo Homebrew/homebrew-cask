@@ -4,7 +4,7 @@ cask 'quickradar' do
 
   url "http://www.quickradar.com/#{version}.zip"
   appcast 'http://www.quickradar.com/appcast.xml',
-          checkpoint: '12c9e616bac0289d4112227adf24ce9df99174ac3de7ac0781b01b45fc97ced6'
+          checkpoint: '92f1b4a517c2c8813d23d40cdb8ba158d4858cc1c1c04a120caf2ca6900f6121'
   name 'QuickRadar'
   homepage 'http://www.quickradar.com/'
 
