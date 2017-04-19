@@ -24,3 +24,6 @@ elif [[ ${#modified_casks[@]} -gt 0 ]]; then
 else
   ohai 'No casks modified, skipping'
 fi
+
+run brew cask audit Casks/*.rb
+run brew cask style Casks/*.rb
