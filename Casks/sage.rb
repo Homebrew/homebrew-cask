@@ -9,6 +9,11 @@ cask 'sage' do
     sha256 'a4cd5c6f3207cd9c429642bb58a6310ba05e6da9fddbf36dc1aa5e47c5904c96'
     # mit.edu/sage was verified as official when first introduced to the cask
     url "http://mirrors.mit.edu/sage/osx/intel/sage-#{version}-OSX_10.9.5-x86_64.app.dmg"
+  elsif MacOS.version <= :el_capitan
+    version '7.6'
+    sha256 'ba9ffba5dea394dc808c31a7b71af4d0db9759d9440b4dc2e35c921bd03e916f'
+    # mit.edu/sage was verified as official when first introduced to the cask
+    url "http://mirrors.mit.edu/sage/osx/intel/sage-#{version}-OSX_10.11.6-x86_64.app.dmg"
   else
     version '7.6'
     sha256 'dbd5e79825ad505dbf852c8c794cd604a3bd560151fb3ec08a9df7f9c5626ab2'
