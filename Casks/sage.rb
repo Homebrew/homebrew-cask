@@ -1,10 +1,5 @@
 cask 'sage' do
-  if MacOS.version <= :lion
-    version '7.2'
-    sha256 'f88e0686ae8fe31f2684163a57bea938d93f732842cab7c263ee6e4cdeb271cc'
-    # mit.edu/sage was verified as official when first introduced to the cask
-    url "http://mirrors.mit.edu/sage/osx/intel/sage-#{version}-OSX_10.7.5-x86_64.app.dmg"
-  elsif MacOS.version <= :mavericks
+  if MacOS.version <= :mavericks
     version '7.2'
     sha256 'a4cd5c6f3207cd9c429642bb58a6310ba05e6da9fddbf36dc1aa5e47c5904c96'
     # mit.edu/sage was verified as official when first introduced to the cask
