@@ -1,8 +1,8 @@
 cask 'notion' do
-  version '0.1.6'
-  sha256 '5ae990ccf4da265c059766e24a2bf6e0f2991a5115573be0f8f346e052782178'
+  version :latest
+  sha256 :no_check
 
-  url "https://www.notion.so/desktop/Notion-#{version}.dmg"
+  url 'https://www.notion.so/desktop/Notion.dmg'
   name 'Notion'
   homepage 'https://www.notion.so/'
 
