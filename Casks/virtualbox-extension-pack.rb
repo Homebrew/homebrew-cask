@@ -37,5 +37,5 @@ cask 'virtualbox-extension-pack' do
     VirtualBox Personal Use and Evaluation License at
 
     https://www.virtualbox.org/wiki/VirtualBox_PUEL
-    EOS
+  EOS
 end
