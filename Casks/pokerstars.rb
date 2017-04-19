@@ -34,9 +34,9 @@ cask 'pokerstars' do
     %w[.pt PT]
   end
 
-  url "https://www.pokerstars#{language[0]}/PokerStars#{language[1]}.app.zip"
+  url "http://www.pokerstars#{language[0]}/PokerStars#{language[1]}.app.zip"
   name 'PokerStars'
-  homepage "https://www.pokerstars#{language[0]}"
+  homepage "http://www.pokerstars#{language[0]}"
 
   auto_updates true
   container nested: "PokerStars#{language[1]}/PokerStars#{language[1]}.dmg"
