@@ -10,7 +10,14 @@ cask 'gog-galaxy' do
 
   pkg "galaxy_client_#{version}.pkg"
 
-  uninstall delete: '/Applications/GalaxyClient.app'
-
-  zap delete: '/Users/Shared/GOG.com'
+  uninstall delete: [
+                      '/Applications/GalaxyClient.app',
+                      '/Library/LaunchAgents/com.gog.galaxy.commservice.plist',
+                      '/Library/LaunchDaemons/com.gog.galaxy.ClientService.plist',
+                      '/Library/PrivilegedHelperTools/com.gog.galaxy.ClientService',
+                      '~/Library/Preferences/com.gog.galaxy.cef.renderer.plist',
+                      '~/Library/Preferences/com.gog.galaxy.plist',
+                      '/Users/Shared/GOG.com/Galaxy',
+                    ],
+            rmdir:  '/Users/Shared/GOG.com'
 end
