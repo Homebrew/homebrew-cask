@@ -7,6 +7,8 @@ cask 'avira-vpn' do
   name 'Avira Phantom VPN'
   homepage 'https://www.avira.com/en/avira-phantom-vpn/'
 
+  depends_on macos: '>= :yosemite'
+
   pkg 'vpn.pkg'
 
   uninstall pkgutil:   'com.avira.pkg.AviraPhantomVpn',
