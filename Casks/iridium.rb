@@ -1,4 +1,4 @@
-cask 'iridium-extra' do
+cask 'iridium' do
   version '57.0'
   sha256 '3fec33a6426d1ee1a52371a721b4760fa8d0bd355cf5e0060f84201859210b66'
 
