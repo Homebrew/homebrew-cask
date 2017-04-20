@@ -16,9 +16,5 @@ cask 'steelseries-engine' do
                          'com.steelseries.ssenext.uninstaller',
                        ],
             launchctl: 'com.steelseries.SSENext',
-            quit:      "com.steelseries.SteelSeries-Engine-#{version.major}",
-            delete:    [
-                         "/Applications/SteelSeries Engine #{version.major}",
-                         '/Library/LaunchAgents/com.steelseries.SSENext.plist',
-                       ]
+            quit:      "com.steelseries.SteelSeries-Engine-#{version.major}"
 end
