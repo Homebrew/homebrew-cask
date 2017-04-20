@@ -24,8 +24,8 @@ cask 'mailfollowup' do
     version '1.8'
     sha256 'b6bec94f71453688adaed58ec30ee98924456f3da6b6d1a22118dd838e49ebe1'
   else
-    version '1.8.3'
-    sha256 '7c9125a6794ed4b1528a39c9eb65849351c345d8a456b7d3a175d3728032e449'
+    version '1.8.4'
+    sha256 '77e48cbb5d9b4a1909efd15ecc25f370a392fdee94361a402f0dfa9b5ddd0de7'
   end
 
   url "https://www.cs.unc.edu/~welch/MailFollowup/media/MailFollowUp_#{version}.dmg.zip"
