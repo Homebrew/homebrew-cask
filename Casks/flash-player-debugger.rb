@@ -1,5 +1,5 @@
 cask 'flash-player-debugger' do
-  version '25.0.0.148'
+  version '25.0.0.163'
   sha256 '324e169d34ea9d848b51dd4e4d37bd3877e5960e8fc93115559c331e8892a27a'
 
   # macromedia.com was verified as official when first introduced to the cask
