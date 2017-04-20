@@ -10,13 +10,13 @@ cask 'ransomwhere' do
   homepage 'https://objective-see.com/products/ransomwhere.html'
 
   installer script: {
-                      executable: "#{staged_path}/RansomWhere.app/Contents/MacOS/RansomWhere",
+                      executable: "#{staged_path}/RansomWhere_Installer.app/Contents/MacOS/RansomWhere_Installer",
                       args:       ['-install'],
                       sudo:       true,
                     }
 
   uninstall script: {
-                      executable: "#{staged_path}/RansomWhere.app/Contents/MacOS/RansomWhere",
+                      executable: "#{staged_path}/RansomWhere_Installer.app/Contents/MacOS/RansomWhere_Installer",
                       args:       ['-uninstall'],
                       sudo:       true,
                     }
