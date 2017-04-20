@@ -8,8 +8,7 @@ cask 'iueditor' do
 
   pkg "IUEditorV#{version}.pkg"
 
-  uninstall delete:  '/Applications/IUEditor.app',
-            pkgutil: 'org.jdlab.IUEditor'
+  uninstall pkgutil: 'org.jdlab.IUEditor'
 
   zap delete: [
                 '~/Library/Preferences/org.jdlab.IUEditor.LSSharedFileList.plist',
