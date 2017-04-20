@@ -1,11 +1,11 @@
 cask 'skyfonts' do
-  version '5.7.1.0'
-  sha256 '3372bb7a3e622769f63ea1345a334361ec660966d4060f89c57437bda7c49203'
+  version '5.9.1.0'
+  sha256 '95282a85c259fac335bc5acbca4f3c7b9d94bfa0e3683eeee3d94eb665410bf6'
 
   # cdn1.skyfonts.com was verified as official when first introduced to the cask
   url "http://cdn1.skyfonts.com/client/Monotype_SkyFonts_Mac64_#{version}.dmg"
   appcast 'https://www.fonts.com/other/skyfonts/getskyfontsclientdownloadinfo',
-          checkpoint: 'a549f8ab010f32f2f40bbcada5ac1e4097069dbfb82ce184e3e52638b5b2cdbe'
+          checkpoint: '17bbc003f08ec07517c947aa0d08d2bb48e0142982008beeeaf5344d9935d537'
   name 'SkyFonts'
   homepage 'https://www.fonts.com/web-fonts/google'
 
