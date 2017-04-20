@@ -1,10 +1,10 @@
 cask 'linkliar' do
-  version '1.1.2'
-  sha256 '33b41b807daf1e87add1a361aa810f4e6e6840545f70664f0607afb6ccc11767'
+  version '1.1.3'
+  sha256 '34c9baeaf1d6732c8ce9add689b281f9b71fddadd8f56cca614cba4f8c167962'
 
   url "https://github.com/halo/LinkLiar/releases/download/#{version}/LinkLiar.app.zip"
   appcast 'https://github.com/halo/LinkLiar/releases.atom',
-          checkpoint: 'c0b394576f668e81bcd5ece23aa070b9b2d7451c1f694b9dfee3ca9ddfdafe93'
+          checkpoint: '27742cdc16226bcd05fef563df4b55f7cf49fe0c169fab9c96ed3ad0ba189d90'
   name 'LinkLiar'
   homepage 'https://github.com/halo/LinkLiar'
 
