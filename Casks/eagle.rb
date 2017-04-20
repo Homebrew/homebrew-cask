@@ -8,6 +8,5 @@ cask 'eagle' do
 
   pkg "Autodesk_EAGLE_#{version}_English_Mac_64bit.pkg"
 
-  uninstall pkgutil: 'com.Autodesk.eagle',
-            delete:  "/Applications/EAGLE-#{version}"
+  uninstall pkgutil: 'com.Autodesk.eagle'
 end
