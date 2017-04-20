@@ -1,6 +1,6 @@
 cask 'kinsky' do
-  version '4.3.17'
-  sha256 '624d2ee1c2ab62e347b7effe0ec8b1bd32d6e70d9cae6fb62d8fb8e2995c7173'
+  version '4.4.5'
+  sha256 '2f4f04e76863eebe1da3d77e2fbd8eee71d57cdd3950f3bac64e0d569fa104de'
 
   url "https://oss.linn.co.uk/Releases/Kinsky/Davaar/Kinsky_#{version}_osx.pkg"
   name 'Kinsky'
