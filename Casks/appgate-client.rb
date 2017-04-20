@@ -1,6 +1,6 @@
 cask 'appgate-client' do
-  version '11.2.3'
-  sha256 'a9eb6ed2f46f33dfca21aea81ff163b99978aee27f78bbbc55200ed12728ae62'
+  version '11.2.4'
+  sha256 '897912245bdd11903d2417da1227bf582e566dcf17af211fdc0f6cf568a7f9ad'
 
   url "http://download.cryptzone.com/files/download/AppGate-#{version}/Clients/MacOSX/AppGate_Client.dmg"
   name 'AppGate (classic)'
@@ -8,10 +8,11 @@ cask 'appgate-client' do
 
   pkg 'AppGate Client.pkg'
 
-  uninstall pkgutil: [
-                       'com.appgate.pkg.appgateclient.component',
-                       'com.appgate.pkg.appgatefwd.component',
-                     ]
+  uninstall launchctl: 'com.cryptzone.appgate.fwdd',
+            pkgutil:   [
+                         'com.appgate.pkg.appgateclient.component',
+                         'com.appgate.pkg.appgatefwd.component',
+                       ]
 
   caveats do
     depends_on_java('6+')
