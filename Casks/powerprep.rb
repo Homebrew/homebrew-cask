@@ -8,6 +8,5 @@ cask 'powerprep' do
 
   pkg "PowerPrepIIV#{version.dots_to_underscores}.pkg"
 
-  uninstall pkgutil: 'org.ets.GrePowerprepII.Applications.pkg',
-            delete:  '/Applications/POWERPREP II'
+  uninstall pkgutil: 'org.ets.GrePowerprepII.Applications.pkg'
 end
