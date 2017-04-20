@@ -7,8 +7,8 @@ cask 'mikogo' do
   name 'Mikogo'
   homepage 'https://www.mikogo.com/'
 
+  app 'Mikogo-host.app'
   pkg 'Mikogo-installer.signed.pkg'
 
-  uninstall pkgutil: 'com.mikogo.pkg.open-beta',
-            delete:  '/Applications/Mikogo-host.app'
+  zap delete: '~/Library/Application Scripts/Mikogo-video'
 end
