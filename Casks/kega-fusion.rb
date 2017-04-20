@@ -6,7 +6,7 @@ cask 'kega-fusion' do
   name 'Kega Fusion'
   homepage 'http://www.carpeludum.com/kega-fusion/'
 
-  app 'Kega Fusion.app'
+  app "Fusion#{version.no_dots}/Kega Fusion.app"
 
   zap delete: [
                 '~/Library/Application Support/Kega Fusion',
