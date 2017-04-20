@@ -153,6 +153,16 @@ Example:
   app 'TexmakerMacosxLion/texmaker.app'
   ```
 
+## Calculating Checksums
+
+You can leave the checksum for `sha256` and `checkpoint` empty.
+
+To get the checksums run the audit:
+
+```bash
+brew cask audit my-new-cask --download
+```
+
 
 ## Testing Your New Cask
 
