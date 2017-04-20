@@ -4,6 +4,7 @@ cask 'bleep' do
 
   # utorrent.com was verified as official when first introduced to the cask
   url 'https://download-new.utorrent.com/endpoint/bleep/os/osx/track/stable/'
+  # bittorrent.com verified as official when first introduced to the cask
   appcast 'https://bleeposx.bittorrent.com/appcast.xml',
           checkpoint: 'e6b158babeedf088fc5883866c20259a76bfb5c826ae3a92ed6fa8ebaf15bb84'
   name 'BitTorrent Bleep'
