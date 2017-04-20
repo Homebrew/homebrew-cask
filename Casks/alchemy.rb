@@ -3,6 +3,8 @@ cask 'alchemy' do
   sha256 '7527f4e2231db8167c57d2639fcba166d8fefea091cca7884bd355fb52a3449a'
 
   url "http://al.chemy.org/files/Alchemy-#{version}.dmg"
+  appcast 'http://al.chemy.org/download/',
+          checkpoint: '712824d1a1ce9d579414a14a7c40da101abbb79368ddf104c6dd75501663d46a'
   name 'Alchemy'
   homepage 'http://al.chemy.org/'
 
