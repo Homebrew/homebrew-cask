@@ -4,6 +4,7 @@ cask 'hypo' do
 
   # hypo.github.io was verified as official when first introduced to the cask
   url "https://hypo.github.io/HypoAppPublic/hypo-#{version}.app.tbz"
+  # github.io verified as official when first introduced to the cask
   appcast 'https://hypo.github.io/HypoAppPublic/appcast.xml',
           checkpoint: '8c662005d5f4ea9c75c0cbc53e5e0f432fedcf6d9dad6e8007ea8a12acccbe17'
   name 'hypo'
