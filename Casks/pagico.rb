@@ -10,6 +10,5 @@ cask 'pagico' do
 
   pkg 'Install Pagico.pkg'
 
-  uninstall pkgutil: 'com.pagico.*',
-            delete:  '/Applications/Pagico'
+  uninstall pkgutil: 'com.pagico.*'
 end
