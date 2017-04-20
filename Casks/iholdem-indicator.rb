@@ -13,8 +13,7 @@ cask 'iholdem-indicator' do
                          'com.ckmn.iHoldemIndicator',
                          'com.ckmn.IndicatorHelper',
                        ],
-            pkgutil:   'iHoldemIndicatorInstaller',
-            delete:    '/Applications/iHoldemIndicator.app'
+            pkgutil:   'com.ckmn.iholdemIndicator.iHoldemIndicator.pkg'
 
   zap delete: '~/Library/Application Support/iHoldemIndicator'
 end
