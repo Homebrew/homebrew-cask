@@ -43,6 +43,7 @@
   "oki-postscript-drivers": "caskroom/drivers",
   "otto": "homebrew/core",
   "packer": "homebrew/core",
+  "pgloader": "homebrew/core",
   "pandoc": "homebrew/core",
   "pgloader": "homebrew/core",
   "phantomjs": "homebrew/core",
