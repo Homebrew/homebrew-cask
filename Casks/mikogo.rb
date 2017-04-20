@@ -9,6 +9,8 @@ cask 'mikogo' do
 
   pkg 'Mikogo-installer.signed.pkg'
 
-  uninstall pkgutil: 'com.mikogo.pkg.open-beta',
-            delete:  '/Applications/Mikogo-host.app'
+  uninstall pkgutil: [
+                       'com.mikogo.open-beta',
+                       'com.mikogo.open-beta.video',
+                     ]
 end
