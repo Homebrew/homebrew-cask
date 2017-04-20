@@ -9,6 +9,5 @@ cask 'digital-power-station' do
   pkg 'Bongiovi DPS.pkg'
 
   uninstall pkgutil: 'com.bongiovi.pkg.BongioviDPS.*',
-            kext:    'com.bongiovi.DPSReflector',
-            delete:  '/Applications/Bongiovi DPS'
+            kext:    'com.bongiovi.DPSReflector'
 end
