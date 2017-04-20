@@ -1,6 +1,6 @@
 cask 'lincastor' do
   version '1.4'
-  sha256 'ded9377b56278c6714cfa4ceeefdec37ef43423da910debea1839c89d3d821bf'
+  sha256 '2102986e6a7600ca18c0510ad395f027c4bb4d10beec229b3d73d806b6dfd378'
 
   # dropbox.com/s/43fuhic0mhvhb6f was verified as official when first introduced to the cask
   url 'https://www.dropbox.com/s/43fuhic0mhvhb6f/LinCastor.zip'
