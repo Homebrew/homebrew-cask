@@ -11,10 +11,11 @@ cask 'anaconda' do
 
   installer script: {
                       executable: "Anaconda3-#{version}-MacOSX-x86_64.sh",
-                      args:       ['-b'],
+                      args:       ['-b', '-p/usr/local/anaconda3'],
+                      sudo:       true,
                     }
 
-  uninstall delete: '~/anaconda3'
+  uninstall delete: '/usr/local/anaconda3'
 
   zap delete: [
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.io.sfl',
@@ -22,6 +23,7 @@ cask 'anaconda' do
               ]
 
   caveats do
-    path_environment_variable '~/anaconda3/bin'
+    path_environment_variable '/usr/local/anaconda3/bin'
+    files_in_usr_local
   end
 end
