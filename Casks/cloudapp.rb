@@ -1,4 +1,4 @@
-cask 'cloud' do
+cask 'cloudapp' do
   version '4.2.2'
   sha256 '07e64309bac4f076880721a7174a7a6443dfaff6f6262aea384323baea8037ec'
 
