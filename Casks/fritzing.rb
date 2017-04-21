@@ -4,7 +4,7 @@ cask 'fritzing' do
 
   url "http://fritzing.org/download/#{version}/mac-os-x-105/Fritzing#{version}.dmg"
   appcast 'https://github.com/fritzing/fritzing-app/releases.atom',
-          checkpoint: 'a809ee3389e816cc81bd1053fabbb5da2cf82f093128db4fe8ddfa80a9b4a36d'
+          checkpoint: '25fb142407f7b457cb547f7d4b902e41f5903ba6826aa2c394d7273f5cdc4e3a'
   name 'Fritzing'
   homepage 'http://fritzing.org/home/'
 

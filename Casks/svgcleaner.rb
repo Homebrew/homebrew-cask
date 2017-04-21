@@ -4,7 +4,7 @@ cask 'svgcleaner' do
 
   url "https://github.com/RazrFalcon/svgcleaner-gui/releases/download/v#{version}/svgcleaner_macos_#{version}.zip"
   appcast 'https://github.com/RazrFalcon/svgcleaner-gui/releases.atom',
-          checkpoint: '238f133ff682095cab4474b8871b538e5ade86912b1aa9d117073460cbb863a3'
+          checkpoint: '6a4f5f74f1be0b897a978106d02bf689471132140190ee5cc93e7469b299262a'
   name 'SVG Cleaner'
   homepage 'https://github.com/RazrFalcon/svgcleaner-gui/'
 
