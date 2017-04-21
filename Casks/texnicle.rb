@@ -1,10 +1,10 @@
 cask 'texnicle' do
-  version '2.2.15'
-  sha256 '754b5ed5e93a11a8bd39adbabd0285d4d61844dd21992a5986ee1fd2bdfcd904'
+  version '2.3.0'
+  sha256 '4909f36a7e741c68fa5104209f860b61594327ba751a5c8c5007ea690fd4b91f'
 
   url "http://www.bobsoft-mac.de/resources/TeXnicle/#{version.major_minor}/TeXnicle.app.#{version}.zip"
   appcast 'http://www.bobsoft-mac.de/profileInfo.php',
-          checkpoint: '1d8e0e6d597e2aa6fd52ad15c3f5ff7c7420a447340e60dab126044f39b9864e'
+          checkpoint: '6cf864d6eb1e4e0007658aac17f6ca7f85914d92933ef10d34e351e170815064'
   name 'TeXnicle'
   homepage 'http://www.bobsoft-mac.de/texnicle/texnicle.html'
 
