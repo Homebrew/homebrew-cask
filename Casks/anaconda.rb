@@ -11,7 +11,7 @@ cask 'anaconda' do
 
   installer script: {
                       executable: "Anaconda3-#{version}-MacOSX-x86_64.sh",
-                      args:       ['-b'],
+                      args:       ['-b', '-p /usr/local/bin/'],
                     }
 
   uninstall delete: '~/anaconda3'
@@ -22,6 +22,6 @@ cask 'anaconda' do
               ]
 
   caveats do
-    path_environment_variable '~/anaconda3/bin'
+    path_environment_variable '/usr/local/bin/anaconda3/bin'
   end
 end
