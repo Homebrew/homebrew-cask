@@ -1,11 +1,11 @@
 cask 'vysor' do
-  version '1.6.7'
-  sha256 'c75f6c3f1e5b84141686c4214da91a409992f6c937521e821a77d83d6b548a2d'
+  version '1.7.3'
+  sha256 'bce80d4b5e27d1698e974de42372125419ad0fd06e8b339d039e93e2c0af41a1'
 
   # github.com/koush/vysor.io was verified as official when first introduced to the cask
   url "https://github.com/koush/vysor.io/releases/download/v#{version}/Vysor-mac.zip"
   appcast 'https://github.com/koush/vysor.io/releases.atom',
-          checkpoint: '0d2caa485689d7473f12c206dc29f93837facca857a60276e44b632dfa290766'
+          checkpoint: '76c3b4c7924032bcd52ea262756145fd0c2864f0afa8f08d9aa2167e3699234c'
   name 'Vysor'
   homepage 'https://www.vysor.io/'
 
