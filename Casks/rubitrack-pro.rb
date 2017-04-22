@@ -1,10 +1,10 @@
 cask 'rubitrack-pro' do
-  version '4.3.9'
-  sha256 '87374feaf9245e7dcbf6fd70b34bfec7ea59ec44d1a96555c828dc05ff70524f'
+  version '4.4.0'
+  sha256 '84c2a1a1ebdcd3956983e031df4326cdc2ce23842ff146d24add3f4001b6f98f'
 
-  url "https://www.rubitrack.com/files/rubiTrack-#{version}.dmg"
+  url "https://www.rubitrack.com/files/rubiTrack-#{version.major_minor}_u.dmg"
   appcast "https://www.rubitrack.com/autoupdate/sparkle#{version.major}.xml",
-          checkpoint: 'e8eebb435f931bb98eb3d587d4665d2b9cdf5cc0906b9f38e5a76c9ecdee57c8'
+          checkpoint: 'eb71ac0f39dc349c880fdb541daa3ab689c0f64bf957cd3136c354f133656986'
   name 'rubiTrack'
   homepage 'https://www.rubitrack.com/'
 
