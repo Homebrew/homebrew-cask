@@ -1,4 +1,4 @@
-cask 'shuttle' do
+cask 'get-iplayer-automator' do
   version '1.8.7'
   sha256 'd4b3cf156cb0d101a4a4c4799b92c0bdd276adcb5af73b9eeb6b7e2f75a87acb'
 
@@ -8,7 +8,7 @@ cask 'shuttle' do
   name 'Get iPlayer Automator'
   homepage 'https://github.com/GetiPlayerAutomator'
 
-  app 'Get iPlayer Automator.app'
-
   depends_on macos: '>= 10.7'
+
+  app 'Get iPlayer Automator.app'
 end
