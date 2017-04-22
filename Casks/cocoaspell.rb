@@ -4,6 +4,8 @@ cask 'cocoaspell' do
 
   url "http://people.ict.usc.edu/~leuski/cocoaspell/cocoAspell.#{version}.dmg",
       user_agent: :fake
+  appcast 'http://people.ict.usc.edu/~leuski/cocoaspell/',
+          checkpoint: 'e22a03f5b7404c2bb2c9a09c2ead537eff504a8158fe99c523c4ef369e097ea9'
   name 'cocoAspell'
   homepage 'http://people.ict.usc.edu/~leuski/cocoaspell/'
 
