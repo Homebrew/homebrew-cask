@@ -5,14 +5,14 @@ cask 'r-app' do
     url "https://cloud.r-project.org/bin/macosx/R-#{version}-snowleopard.pkg"
     pkg "R-#{version}-snowleopard.pkg"
   else
-    version '3.3.3'
-    sha256 '77d7a145d1f7d5c3f5bd7310ae2beb7349118528d938e519845ce7d205b4c864'
+    version '3.4.0'
+    sha256 '6ec412a0d9b8eaef19f69f3e25a993dcfd53a8294ee17d04052c243037554646'
     url "https://cloud.r-project.org/bin/macosx/R-#{version}.pkg"
     pkg "R-#{version}.pkg"
   end
 
   appcast 'https://www.r-project.org/',
-          checkpoint: '875ca36d0e218b70c1216b51ff18622612421ab31d54a8a1b5ba1ca6a0a94f3b'
+          checkpoint: 'cc725ddf69caa3a397b6f188de9d9e3c3e0cbfc6a03cb0bc67a0d27f9a6c3192'
   name 'R'
   homepage 'https://www.r-project.org/'
 
