@@ -2,6 +2,7 @@ cask 'chatmate-for-facebook' do
   version :latest
   sha256 :no_check
 
+  # dl.devmate.com/net.coldx.mac.Facebook was verified as official when first introduced to the cask
   url 'https://dl.devmate.com/net.coldx.mac.Facebook/ChatMateforFacebook.dmg'
   name 'ChatMate for Facebook'
   homepage 'https://chatmate.io/facebook/'
