@@ -1,8 +1,8 @@
 cask 'p4merge' do
-  version '2015.2-1312139'
-  sha256 '2a77a8c0270a158432d6c571828c397ef3bd20b911bbbfb3db810845dc2995bc'
+  version '2017.1-1491634'
+  sha256 'b015a82a7c0bd492edb972dc542b377a7633bad2148e4b3e2d800f7df0c9297a'
 
-  url "http://filehost.perforce.com/perforce/r#{version.sub(%r{\A20(\d\d\.\d+).*}, '\1')}/bin.macosx107x86_64/P4V.dmg"
+  url "http://filehost.perforce.com/perforce/r#{version.sub(%r{\A20(\d\d\.\d+).*}, '\1')}/bin.macosx1011x86_64/P4V.dmg"
   name 'Perforce P4Merge'
   homepage 'https://www.perforce.com/product/components/perforce-visual-merge-and-diff-tools'
 
