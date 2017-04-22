@@ -4,9 +4,9 @@ cask 'exante-atp' do
 
   url 'https://updates.exante.eu/atp-install/atp-osx.pkg'
   name 'EXANTE ATP'
-  homepage 'https://updates.exante.eu'
+  homepage 'https://exante.eu/technology/ATP/'
 
   pkg 'atp-osx.pkg'
-  uninstall pkgutil: 'eu.exante.atp.Client.prod'
 
+  uninstall pkgutil: 'eu.exante.atp.Client.prod'
 end
