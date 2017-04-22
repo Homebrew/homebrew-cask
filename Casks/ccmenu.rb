@@ -1,11 +1,11 @@
 cask 'ccmenu' do
-  version '12.1'
-  sha256 '3b9f226f57159bf395a4e76cd958f1f90c7a5c9b181c16fad64a96cff8f19c2e'
+  version '13.0'
+  sha256 '716702efabff1f0353aca4663b79b8dc7f034df3f8754f7673261e1d8e62a844'
 
   # github.com/erikdoe/ccmenu was verified as official when first introduced to the cask
   url "https://github.com/erikdoe/ccmenu/releases/download/v#{version}/CCMenu.app.zip"
   appcast 'https://github.com/erikdoe/ccmenu/releases.atom',
-          checkpoint: '1de8927fbde7716a5197d631ab72ef7035b365d22350c5a8105bc762dda7ff94'
+          checkpoint: 'a9f1fc7448e5fa4c513b5296bd8fe3c095a04cd771a2f3d4633f8e5ebfb2ddd3'
   name 'CCMenu'
   homepage 'http://ccmenu.org/'
 
