@@ -8,7 +8,7 @@ cask 'gitee' do
   name 'Gitee'
   homepage 'https://github.com/Nightonke/Gitee'
 
-  app "Gitee #{version}.app", target: 'Gitee.app'
+  app "Gitee #{version}.app"
 
   zap delete: [
                 '~/Library/Application Support/com.nightonke.VHGithubNotifier',
