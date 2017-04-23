@@ -6,7 +6,7 @@ cask 'get-iplayer-automator' do
   appcast 'https://github.com/GetiPlayerAutomator/get-iplayer-automator/releases.atom',
           checkpoint: '076b539e0eae2dd1a2d7ef485b1293eeeeaaaa456856e44b27374566835ef077'
   name 'Get iPlayer Automator'
-  homepage 'https://github.com/GetiPlayerAutomator'
+  homepage 'https://github.com/GetiPlayerAutomator/get-iplayer-automator'
 
   depends_on macos: '>= 10.7'
 
