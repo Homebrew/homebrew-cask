@@ -8,7 +8,5 @@ cask 'minishift' do
   name 'Minishift'
   homepage 'https://github.com/minishift/minishift'
 
-  container type: :gzip
-
   binary 'minishift-darwin-amd64', target: 'minishift'
 end
