@@ -58,7 +58,6 @@ If your issue persists, search for it before opening a new one. If you find an o
   * [`source is not there` error](doc/reporting_bugs/a_cask_fails_to_install.md#source-is-not-there-error)
   * [`wrong number of arguments` error](doc/reporting_bugs/a_cask_fails_to_install.md#wrong-number-of-arguments-error)
   * [Unlisted reason](doc/reporting_bugs/a_cask_fails_to_install.md#unlisted-reason)
-* [`brew cask list` shows wrong information](doc/reporting_bugs/brew_cask_list_shows_wrong_information.md)
 * [`uninstall` wrongly reports cask as not installed](doc/reporting_bugs/uninstall_wrongly_reports_cask_as_not_installed.md)
 * [`Error: Unknown command: cask` error](doc/reporting_bugs/error_unknown_command_cask.md)
 * [My problem isn’t listed](https://github.com/caskroom/homebrew-cask/issues/new)

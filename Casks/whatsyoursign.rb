@@ -4,10 +4,12 @@ cask 'whatsyoursign' do
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/WhatsYourSign_#{version}.zip"
-  appcast 'https://objective-see.com/products.json',
-          checkpoint: 'b2004932186e0eb176a9ac01fe499de292d502d7a17559e900822f9cdbfa74d6'
+  appcast 'https://objective-see.com/products/changelogs/WhatsYourSign.txt',
+          checkpoint: 'c42029832fa2b7320627554d841b7377b3326392512807aa4ffab4ca18680f31'
   name 'What\'s Your Sign?'
   homepage 'https://objective-see.com/products/whatsyoursign.html'
+
+  depends_on macos: '>= :yosemite'
 
   installer manual: 'WhatsYourSign_Installer.app'
 
