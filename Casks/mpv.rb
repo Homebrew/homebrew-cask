@@ -10,4 +10,5 @@ cask 'mpv' do
   homepage 'https://mpv.io/'
 
   app 'mpv.app'
+  binary "#{appdir}/mpv.app/Contents/MacOS/mpv"
 end
