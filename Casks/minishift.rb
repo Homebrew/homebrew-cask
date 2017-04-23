@@ -8,5 +8,5 @@ cask 'minishift' do
   name 'Minishift'
   homepage 'https://github.com/minishift/minishift'
 
-  binary 'minishift-darwin-amd64', target: 'minishift'
+  binary 'minishift-#{version}-darwin-amd64.tgz', target: 'minishift'
 end
