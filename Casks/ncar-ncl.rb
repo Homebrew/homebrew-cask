@@ -1,7 +1,7 @@
 cask 'ncar-ncl' do
   version '6.4.0'
 
-  if MacOS.version == :el_capitan
+  if MacOS.version == :Sierra
     sha256 '2e1a2957dacd14835716f0f7309117a35e1f6255fa8569d0dc3038c42df9cbfd'
     url 'https://www.earthsystemgrid.org/download/fileDownload.html?logicalFileId=1139ad88-fa02-11e6-a976-00c0f03d5b7c'
   else
@@ -17,11 +17,11 @@ cask 'ncar-ncl' do
 
   depends_on cask: 'xquartz'
   depends_on formula: 'gcc'
-  depends_on macos: '>= :el_capitan'
+  depends_on macos: '>= :Sierra'
 
-  artifact 'include', target: '/usr/local/ncl-6.3.0/include'
-  artifact 'bin', target: '/usr/local/ncl-6.3.0/bin'
-  artifact 'lib', target: '/usr/local/ncl-6.3.0/lib'
+  artifact 'include', target: '/usr/local/Cellar/ncl-6.4.0/include'
+  artifact 'bin', target: '/usr/local/Cellar/ncl-6.4.0/bin'
+  artifact 'lib', target: '/usr/local/Cellar/ncl-6.4.0/lib'
 
   caveats <<-EOS.undent
     To use ncar-ncl, you must add the $NCARG_ROOT/bin directory
@@ -29,7 +29,7 @@ cask 'ncar-ncl' do
 
     For bash shell, add these lines to ~/.bash_profile:
 
-      export NCARG_ROOT=/usr/local/ncl-6.4.0
+      export NCARG_ROOT=/usr/local/Cellar/ncl-6.4.0
       export PATH=$NCARG_ROOT/bin:"$PATH"
 
     You may also need to modify your DYLD_FALLBACK_LIBRARY_PATH
