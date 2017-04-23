@@ -7,6 +7,8 @@ cask 'minishift' do
           checkpoint: '58e3db1b1ba4204b6df8b5f0ecb55526352884c63921f23762c349aba62f1f92'
   name 'Minishift'
   homepage 'https://github.com/minishift/minishift'
+  
+  container type: :tar
 
-  binary 'minishift-#{version}-darwin-amd64.tgz', target: 'minishift'
+  binary 'minishift-darwin-amd64.tgz', target: 'minishift'
 end
