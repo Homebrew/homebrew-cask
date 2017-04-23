@@ -4,7 +4,7 @@ cask 'idreamx' do
 
   url "http://tooloosoft.com/apps/iDreamX/mac/iDreamX_#{version}.dmg"
   name 'iDreamX'
-  homepage 'http://tooloosoft.com/tooloosoft/features_EN.html'
+  homepage 'http://tooloosoft.com/tooloosoft/home.html'
 
   app 'iDreamx/iDreamX.app'
 end
