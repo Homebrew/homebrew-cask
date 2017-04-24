@@ -1,11 +1,11 @@
 cask 'spectacle-editor' do
-  version '0.1.3'
-  sha256 '6148958a0f75a13efdef11a88fcad01745c049d632a310aadf9a65d6ce911b0d'
+  version '0.1.4'
+  sha256 'd86b80d5ed91308c1ed6f480e2be73e6f2620c025cba954310c526cf24b086b9'
 
   # github.com/FormidableLabs/spectacle-editor was verified as official when first introduced to the cask
   url "https://github.com/FormidableLabs/spectacle-editor/releases/download/v#{version}/Spectacle.Editor-#{version}.dmg"
   appcast 'https://github.com/FormidableLabs/spectacle-editor/releases.atom',
-          checkpoint: 'c8e0be2b73a5ba750b227282cb27d29a644bec513f170d2e10aff74823b697b4'
+          checkpoint: 'd1035190c7acb31b161d495b84a919860f5b8901570a14430b22520243f1b789'
   name 'Spectacle Editor'
   homepage 'https://formidable.com/open-source/spectacle-editor/'
 
