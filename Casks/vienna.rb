@@ -7,7 +7,7 @@ cask 'vienna' do
   appcast 'https://viennarss.github.io/sparkle-files/changelog.xml',
           checkpoint: 'e9e55b01bf0ce272296d25dcbbde5ccee5503b7471835f2d49b78e55cc9783c6'
   name 'Vienna'
-  homepage 'http://www.vienna-rss.org/'
+  homepage 'http://www.vienna-rss.com/'
 
   app 'Vienna.app'
 
