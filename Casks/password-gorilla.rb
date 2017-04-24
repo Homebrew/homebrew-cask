@@ -4,6 +4,8 @@ cask 'password-gorilla' do
 
   # gorilla.dp100.com was verified as official when first introduced to the cask
   url "https://gorilla.dp100.com/downloads/gorilla.mac.#{version.no_dots}.zip"
+  appcast 'http://gorilla.dp100.com/downloads/',
+          checkpoint: '565d731e4ce49b9f948d244da4427b0294673c3c701608b7501c1dfb4d200272'
   name 'Password Gorilla'
   homepage 'https://github.com/zdia/gorilla'
 
