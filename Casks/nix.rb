@@ -3,6 +3,8 @@ cask 'nix' do
   sha256 '65093cbd779afe943667097c3cc80dc83082f8d876744598fd40e7855603f7f8'
 
   url "https://nixos.org/releases/nix/nix-#{version}/nix-#{version}-x86_64-darwin.tar.bz2"
+  appcast 'https://nixos.org/releases/nix/latest/',
+          checkpoint: '70362d7bedcf593d01fb229cc48ec96be6d2b5634d9efa2d819e4eb386d9ae87'
   name 'nix'
   homepage 'https://nixos.org/nix/'
 

@@ -3,6 +3,8 @@ cask 'rpn-scientific' do
   sha256 '96e72827fe0214eb9cc279484a718814b356f2e3e1cd6653314ed213548e83d9'
 
   url "http://rpnscientific.freehostia.com/RPNScientificV#{version}.dmg"
+  appcast 'http://rpnscientific.freehostia.com/',
+          checkpoint: '6b7f41800cdfa7fb59aa3b48b31aecd12288ff8640928d92058fd972615e118f'
   name 'RPN Scientific Calculator'
   homepage 'http://rpnscientific.freehostia.com/'
 
