@@ -4,7 +4,7 @@ cask 'studio-3t' do
 
   url "https://download.studio3t.com/studio-3t/mac/#{version}/Studio-3T.dmg"
   appcast 'http://files.studio3t.com/changelog/changelog.txt',
-          checkpoint: '627e9f98d4c76f038172125a0f95ac92c3db47e73f8ed1ded8505a8983928935'
+          checkpoint: '78ff051d040ab2537f8275e59975d9e598431d9f63530ec0492a42cd8c3cb8be'
   name 'Studio 3T'
   homepage 'https://studio3t.com/'
 
