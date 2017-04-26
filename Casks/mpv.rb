@@ -1,11 +1,11 @@
 cask 'mpv' do
-  version '0.24.0'
-  sha256 '9c5f6a698f916ac8c11dbe38a1a753d3e6036a13e57773763cb27e41b3733b99'
+  version '0.25.0'
+  sha256 '66d6cd73bd95f588fecf4ea1ae6cc34fc74add9f1bd813dbfb56f53dc4f3dcfc'
 
   # laboratory.stolendata.net/~djinn/mpv_osx was verified as official when first introduced to the cask
   url "https://laboratory.stolendata.net/~djinn/mpv_osx/mpv-#{version}.tar.gz"
   appcast 'https://laboratory.stolendata.net/~djinn/mpv_osx/',
-          checkpoint: 'f0e027fd80e722e44fdc28ac34c69b4662544b45d997afb77ffd69c20d95ad39'
+          checkpoint: '7a6ff328b8b173398ec90780b45f479431fc4a614242c78b1a617dae935c2654'
   name 'mpv'
   homepage 'https://mpv.io/'
 
