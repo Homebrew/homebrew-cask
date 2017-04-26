@@ -1,6 +1,6 @@
 cask 'epic' do
-  version '49.0.2575.1'
-  sha256 'a4151a95705685257c7b38a1c6d6496a9a82743c49bdc3ed9c12957cf714e67b'
+  version '53.0.2785.143'
+  sha256 'd5182231a9cbecbe39ff3b562e876b3f03092c71c8ccfb7c71880c88bd271297'
 
   # s3.amazonaws.com/epicprivacybrowser was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/epicprivacybrowser/mac/Epic_OSX_#{version}.zip"
