@@ -1,10 +1,10 @@
 cask 'webstorm' do
-  version '2017.1.1,171.4073.40'
-  sha256 '5e57a3bdba7266b735e53a2b00e59c8b9be5b6cf5081dfd4a49ab5a7e27fb9b1'
+  version '2017.1.2,171.4249.40'
+  sha256 '704124e005a819faa53dfa80d8705a29f8c395e8d66dfa4a2760aaf66aeaef81'
 
   url "https://download.jetbrains.com/webstorm/WebStorm-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=WS&latest=true&type=release',
-          checkpoint: '0ce7fdedceaeea49007142be64440b188a9653134831d98cc2996cc91ce82a77'
+          checkpoint: '1363240a69d580393b24d64ff606a2084e6a6a9770129d4cdcd2d583fbffe7f9'
   name 'WebStorm'
   homepage 'https://www.jetbrains.com/webstorm/'
 
