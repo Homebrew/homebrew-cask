@@ -3,10 +3,10 @@ cask 'scroll-reverser' do
     version '1.5.1'
     sha256 '7d31ac1f2a2fbdc06db200da0aeb6ce7fea9ffff712b70ddffbfb769d4fd0f25'
   else
-    version '1.7.4'
-    sha256 '13b4355e8fa34c702cea1430287abffbfde879ad2f5c47c009b06d2353b7b3fd'
+    version '1.7.5'
+    sha256 '9d7e8ab69686071428818677be09c842f52456637b84b6700305a9119db04187'
     appcast 'https://softwareupdate.pilotmoon.com/update/scrollreverser/appcast.xml',
-            checkpoint: 'b12f7f3fc7fd6ae1dffe1b7e48b1d66f715cc5cd9e0686db571e3fd8f7e8ac79'
+            checkpoint: 'f8f5428ee550e2f43c2919abb78ff3f37412a8a9b4b1f35ad91aa123a48f9cc1'
   end
 
   url "https://pilotmoon.com/downloads/ScrollReverser-#{version}.zip"
