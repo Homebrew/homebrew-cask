@@ -1,10 +1,10 @@
 cask 'processing' do
-  version '3.3.1'
-  sha256 'dffac411d9ea98be868e888d4b282f3ed6454da137f6779f0101a6ab391fd987'
+  version '3.3.2'
+  sha256 '4797b00bd0b8ef19bff355059abe81b7b10fffdc60c5fd90bb643b707fcab033'
 
   url "http://download.processing.org/processing-#{version}-macosx.zip"
   appcast 'https://github.com/processing/processing/releases.atom',
-          checkpoint: '57cf02861e7246ca2a052527d5d08bf236611e2a8362862605a3be377eed800c'
+          checkpoint: 'b848a8e099ac8d3eff94ba98fd0609dbaa57f6892a48f477b59c09bfe1ecc20d'
   name 'Processing'
   homepage 'https://processing.org/'
 
