@@ -4,7 +4,7 @@ cask 'cakebrew' do
 
   url "https://cakebrew-377a.kxcdn.com/cakebrew-#{version}.dmg"
   appcast 'https://www.cakebrew.com/appcast/profileInfo.php',
-          checkpoint: 'febdbeca94df821a28298c2454f8d0c0a7272379bbe743174e2764865aac5bcb'
+          checkpoint: 'a1aaa9cb869aa3740faf459cf4fdbed932d5bd00375854ad6ca58a1b562624b4'
   name 'Cakebrew'
   homepage 'https://www.cakebrew.com/'
 
