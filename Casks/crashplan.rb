@@ -1,6 +1,6 @@
 cask 'crashplan' do
-  version '4.8.0'
-  sha256 '42103d8a151dd36cdf3a96ce541abc8e9d47a25f9e050d9044a3607332295f3a'
+  version '4.8.2'
+  sha256 '9bbe52ee3fca462c929edb77df3025b3ca08d90350df499ba3936ab21c9df689'
 
   url "https://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_#{version}_Mac.dmg"
   name 'CrashPlan'
@@ -8,6 +8,10 @@ cask 'crashplan' do
 
   pkg 'Install CrashPlan.pkg'
 
-  uninstall script:  'Uninstall.app/Contents/Resources/uninstall.sh',
-            pkgutil: 'com.crashplan.app.pkg'
+  uninstall launchctl: 'com.backup42.desktop',
+            pkgutil:   'com.crashplan.app.pkg',
+            script:    {
+                         executable: 'Uninstall.app/Contents/Resources/uninstall.sh',
+                         sudo:       true,
+                       }
 end

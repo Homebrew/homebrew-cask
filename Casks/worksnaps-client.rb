@@ -1,8 +1,9 @@
 cask 'worksnaps-client' do
-  version '1.1.20141010-2'
-  sha256 'ca1949845c9f65ae3e0ae0302b89048d706622b07661c393af765af7a520a5e6'
+  version '1.1.20170312-2'
+  sha256 'eb19d50ec2d0ff26d0275a9eadac2872fc00c58faa3281ba9f110a1ae50c97d3'
 
-  url "https://www.worksnaps.net/download/WSClient-mac-#{version}.dmg"
+  # worksnaps-download.s3.amazonaws.com was verified as official when first introduced to the cask
+  url "https://worksnaps-download.s3.amazonaws.com/WSClient-mac-10.9-#{version}.dmg"
   name 'Worksnaps Client'
   homepage 'https://www.worksnaps.net/www/'
 

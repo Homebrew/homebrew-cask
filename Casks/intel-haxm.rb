@@ -1,6 +1,6 @@
 cask 'intel-haxm' do
-  version '6.1.1,19:94'
-  sha256 'd4a409cfbeefdeabb2f1bba93f7b009836aa960401c2d8cd3b96bf7012593a2b'
+  version '6.1.2,62:0b'
+  sha256 '40ab087ffaec9cb7c92feea4e92962039c582378bd12f5d669640b21abcdf2b1'
 
   url "https://software.intel.com/sites/default/files/managed/#{version.after_comma.before_colon}/#{version.after_colon}/haxm-macosx_v#{version.before_comma.dots_to_underscores}.zip"
   name 'Intel HAXM'

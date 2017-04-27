@@ -1,6 +1,6 @@
 cask 'adium' do
-  version '1.5.10.2'
-  sha256 'ea1a1016a383c59198c43f37576edb0045e391f46ca5402b0f6365e9d5d7f395'
+  version '1.5.10.3'
+  sha256 'da5613e42a16d071704f949b7ad9c3eea6ee7e95b7dd73e9669d595450924d31'
 
   url "http://download.adium.im/Adium_#{version}.dmg"
   appcast 'https://www.adium.im/sparkle/appcast-release.xml',

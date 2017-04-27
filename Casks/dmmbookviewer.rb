@@ -9,6 +9,12 @@ cask 'dmmbookviewer' do
 
   pkg "DMMViewerSetup_Mac_#{version}.pkg"
 
-  uninstall pkgutil: 'com.dmm.DMMbookviewer',
-            delete:  '/Applications/DMMbookviewer.app'
+  uninstall pkgutil: [
+                       'com.dmm.DMMbookviewer',
+                       'jp.co.cyphertec.installer.acwd.plist',
+                       'jp.co.cyphertec.installer.framework.CypherGuardAC',
+                       'jp.co.cyphertec.installer.info.CypherGuardAC',
+                       'jp.co.cyphertec.installer.kext.nosigned',
+                       'jp.co.cyphertec.installer.kext.signed',
+                     ]
 end

@@ -1,11 +1,11 @@
 cask 'figtree' do
-  version '1.4.2'
-  sha256 '0474f07e4f0f0b2af2c83bf06cb3a3f13d13b8e41a5f41e6deb099f9992071bc'
+  version '1.4.3,96'
+  sha256 '462eec7fe70530f86993e53dcce59ee45428628947574e2f91f5274c09898600'
 
-  url 'http://tree.bio.ed.ac.uk/download.php?id=90'
+  url "http://tree.bio.ed.ac.uk/download.php?id=#{version.after_comma}"
   name 'FigTree'
   homepage 'http://tree.bio.ed.ac.uk/software/figtree/'
 
-  app "FigTree v#{version}.app"
+  app "FigTree v#{version.before_comma}.app"
   qlplugin 'QuickLook Plugin/FigTreeQuickLookPlugin.qlgenerator'
 end

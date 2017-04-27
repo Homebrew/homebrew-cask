@@ -1,14 +1,8 @@
 cask 'skype' do
-  if MacOS.version <= :mountain_lion
-    version '6.15.0.335'
-    sha256 '592abdd157df12d718576a86c8f8e62fced55292fd7e6909d53aa5eaaa9218f4'
-    url "https://download.skype.com/macosx/Skype_#{version}.dmg"
-  else
-    version :latest
-    sha256 :no_check
-    url 'https://www.skype.com/go/getskype-macosx.dmg'
-  end
+  version :latest
+  sha256 :no_check
 
+  url 'https://www.skype.com/go/getskype-macosx.dmg'
   name 'Skype'
   homepage 'https://www.skype.com/'
 

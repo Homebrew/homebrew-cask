@@ -5,7 +5,7 @@ cask 'transmission' do
   # github.com/transmission/transmission was verified as official when first introduced to the cask
   url "https://github.com/transmission/transmission/releases/download/#{version}/transmission-#{version}.dmg"
   appcast 'https://github.com/transmission/transmission/releases.atom',
-          checkpoint: '97d7eb25ba4b293ec0948784d0b73c45483a2daa9cd00fcd5e80a9b56107ffc1'
+          checkpoint: '80618128cd9138e031489bf4cbe9b56637b971ff37a00e8c3798aada41adf90e'
   name 'Transmission'
   homepage 'https://transmissionbt.com/'
 

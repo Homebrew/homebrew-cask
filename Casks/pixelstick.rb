@@ -1,10 +1,10 @@
 cask 'pixelstick' do
-  version '2.9'
-  sha256 '3aa737ccb1aa05e20d145c73b6925aef437d3f91de0b230dd9d630d79856415b'
+  version '2.10'
+  sha256 '6fb1daa43db60aadc13a2ff87432b8e975275beaa7ce1a92fb854d350357479f'
 
   url 'https://plumamazing.com/bin/pixelstick/pixelstick.zip'
   appcast 'https://plumamazing.com/appcastSSL.php?pid=100',
-          checkpoint: '00aaebb986220c50209297e9402c88d9193a29cf90f0702d3f05265cb4fff78f'
+          checkpoint: 'ea2e367eed6d4d03f81d99dd3a341ba5b6e1019ad69baa902419cca4af7bb226'
   name 'PixelStick'
   homepage 'https://plumamazing.com/mac/pixelstick'
 

@@ -21,6 +21,8 @@ cask 'tnefs-enough' do
     url "http://www.joshjacob.com/mac-development/TNEF#{version}.dmg"
   end
 
+  appcast 'http://www.joshjacob.com/mac-development/tnef.php',
+          checkpoint: '83846e43fd6821cf841c656e8d94b11e11ddb9df85c415a4f14578363297dcf7'
   name 'TNEF\'s Enough'
   homepage 'http://www.joshjacob.com/mac-development/tnef.php'
 

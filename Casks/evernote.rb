@@ -19,4 +19,17 @@ cask 'evernote' do
   auto_updates true
 
   app 'Evernote.app'
+
+  uninstall quit: [
+                    'com.evernote.Evernote',
+                    'com.evernote.EvernoteHelper',
+                  ]
+
+  zap delete: [
+                '~/Library/Application Support/com.evernote.Evernote',
+                '~/Library/Application Support/com.evernote.EvernoteHelper',
+                '~/Library/Caches/com.evernote.Evernote',
+                '~/Library/Preferences/com.evernote.Evernote.plist',
+                '~/Library/Preferences/com.evernote.EvernoteHelper.plist',
+              ]
 end

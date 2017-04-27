@@ -9,5 +9,5 @@ cask 'wd-my-cloud' do
   pkg 'Install WD My Cloud.pkg'
 
   uninstall  pkgutil: 'com.wdc.wdMyCloud.*',
-             rmdir:   '/Applications/WD My Cloud'
+             delete:  '~/Desktop/WD My Cloud.app'
 end

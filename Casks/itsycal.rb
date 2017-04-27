@@ -5,6 +5,12 @@ cask 'itsycal' do
 
     # s3.amazonaws.com/itsycal was verified as official when first introduced to the cask
     url "https://s3.amazonaws.com/itsycal/Itsycal-#{version}.zip"
+  elsif MacOS.version <= :el_capitan
+    version '0.10.16'
+    sha256 'dbf1b104c7a3a2ca3ead9879145cb0557955c29d53f35a92b42f48e68122957c'
+
+    # s3.amazonaws.com/itsycal was verified as official when first introduced to the cask
+    url "https://s3.amazonaws.com/itsycal/Itsycal-#{version}.zip"
   else
     version '0.11.2'
     sha256 '3477594b1f0786f86ac6d2d0552f116fb06e45060405b967f36e4a56357c38cc'

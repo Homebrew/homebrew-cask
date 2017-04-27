@@ -8,8 +8,7 @@ cask 'flinto' do
 
   app 'Flinto.app'
 
-  uninstall pkgutil: 'com.flinto.*',
-            delete:  '/Applications/FLinto.app'
+  uninstall pkgutil: 'com.flinto.*'
 
   zap delete: '~/Library/Application Scripts/com.flinto.Flinto'
 end

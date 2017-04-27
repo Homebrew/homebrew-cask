@@ -4,10 +4,12 @@ cask 'dhs' do
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/DHS_#{version}.zip"
-  appcast 'https://objective-see.com/products.json',
-          checkpoint: 'b2004932186e0eb176a9ac01fe499de292d502d7a17559e900822f9cdbfa74d6'
+  appcast 'https://objective-see.com/products/changelogs/DHS.txt',
+          checkpoint: '0a020400feddccce670c0070c4a97ec9ac911a629b02db773cf16a432ae11440'
   name 'Dylib Hijack Scanner'
   homepage 'https://objective-see.com/products/dhs.html'
 
   app 'DHS.app'
+
+  zap delete: '~/Library/Preferences/com.objective-see.DHS.plist'
 end

@@ -1,6 +1,6 @@
 cask 'anylogic' do
-  version '7.3.6'
-  sha256 '798a4002ed8eed2f307896977112a6a54e58dd45615f3523eee190fc1f8aa72b'
+  version '8.0.5'
+  sha256 'c982048534c3b6bcd99ed5f12a81e570ed133d9acffa22852127d515f9027bff'
 
   url "http://www.anylogic.com/files/anylogic-ple-#{version}.dmg"
   name 'AnyLogic'

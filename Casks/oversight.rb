@@ -1,13 +1,15 @@
 cask 'oversight' do
-  version '1.1.1'
-  sha256 '9dc5b18b268fa17d9e23534b96dc01a069bf0ba332f781dd96e9b1320c3f67d3'
+  version '1.1.2'
+  sha256 '4d930136f7e99880f7fb98cd195c47ee69b011c726be1e860ee4b43546386bd5'
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/OverSight_#{version}.zip"
-  appcast 'https://objective-see.com/products/versions/oversight.json',
-          checkpoint: 'cd2bf3138784a13e5d52b5b1d61959e6084ccca4458eb4cace4e4f8fd8de397d'
+  appcast 'https://objective-see.com/products/changelogs/OverSight.txt',
+          checkpoint: '4ecde116ebc77bdb2c8e173ff7760b69ff57c84376cd1144b22d2408bf126e79'
   name 'OverSight'
   homepage 'https://objective-see.com/products/oversight.html'
+
+  depends_on macos: '>= :yosemite'
 
   installer script: {
                       executable: "#{staged_path}/OverSight_Installer.app/Contents/MacOS/OverSight_Installer",

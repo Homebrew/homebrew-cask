@@ -1,6 +1,6 @@
 cask 'post-haste' do
-  version '2.6,2601'
-  sha256 'c90b4f231d61238e750cff1dfb6d7e7dbb25cfe9a9c1659d0a61dabeda99beab'
+  version '2.6.1,2610'
+  sha256 '935b89c608765a144bc9f3c472a6960032904ee5cc09963fdbb93953a5428453'
 
   url "https://www.digitalrebellion.com/download/posthaste?version=#{version.after_comma}"
   name 'Post Haste'

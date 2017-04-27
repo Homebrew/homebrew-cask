@@ -1,11 +1,11 @@
 cask 'unetbootin' do
-  version '625'
-  sha256 '4568b7b0cef1c240a16b6e03cb5f2cf19f50385645abd82c9206db7aff7d9ddf'
+  version '638'
+  sha256 '044bfc61889e899c0e2130ef6882c4743eb0f3dfcc7bd42ff6d606df85b1a6f1'
 
   # launchpad.net/unetbootin was verified as official when first introduced to the cask
   url "http://launchpad.net/unetbootin/trunk/#{version}/+download/unetbootin-mac-#{version}.dmg"
   appcast 'https://github.com/unetbootin/unetbootin/releases.atom',
-          checkpoint: 'f9e92d09e934f9ed61ac373f7ec4a9659f8917dbe5370964185bf9a88c31ca86'
+          checkpoint: '40834386a2952a46adb82252c0d7b06994e49134a678aace34f32d442527959a'
   name 'UNetbootin'
   homepage 'https://unetbootin.github.io/'
 
