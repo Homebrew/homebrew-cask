@@ -5,7 +5,7 @@ cask 'audiomate' do
   # 9labs.io was verified as official when first introduced to the cask
   url "http://backend.9labs.io/download/audiomate?version=#{version}"
   appcast 'https://backend.9labs.io/appcast/audiomate',
-          checkpoint: '2af94fde8ad6c95ad8d87ebb6c2d6b14dd375917958d774e07b39ecb37685b1e'
+          checkpoint: '3bd02b90a41fc54116f85a27c869cf3b8c07042b0b7bcb2fea9d127b5578b15d'
   name 'AudioMate'
   homepage 'https://audiomateapp.com/'
 
