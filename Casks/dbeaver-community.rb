@@ -10,4 +10,8 @@ cask 'dbeaver-community' do
   homepage 'http://dbeaver.jkiss.org/'
 
   app 'DBeaver.app'
+
+  caveats do
+    depends_on_java('8+')
+  end
 end
