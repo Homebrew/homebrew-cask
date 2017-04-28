@@ -4,7 +4,7 @@ cask 'audio-hijack' do
 
   url 'https://rogueamoeba.com/audiohijack/download/AudioHijack.zip'
   appcast "https://www.rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&bundleid=com.rogueamoeba.audiohijack#{version.major}",
-          checkpoint: '6c8bca6747961bfd604191d57047623ed8162f4418b049919b11a83067e68719'
+          checkpoint: '5e41bc1722ba4e877b5c0b87835a1b9b7c105e9854489f616175db69a8a52cf3'
   name 'Audio Hijack'
   homepage 'https://www.rogueamoeba.com/audiohijack/'
 
