@@ -5,7 +5,7 @@ cask 'automatic' do
   # com-codingcurious-downloads.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://com-codingcurious-downloads.s3.amazonaws.com/Automatic.#{version}.zip"
   appcast 'http://update.codingcurious.com/automatic/appcast2.xml',
-          checkpoint: '136d69f53b1873774a0bea357c570b1412f50034cda8909642ff8bb10ea75578'
+          checkpoint: 'c03c7f501a677bce6e764089360eb0d57a495d0083c22606a9fc93e778197322'
   name 'Automatic'
   homepage 'http://codingcurious.com/otomatic/'
 
