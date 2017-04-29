@@ -1,6 +1,6 @@
 cask 'paye-tools' do
-  version '16.1.16125.489'
-  sha256 'a188f5b122a99bb4c944835c2b0bfb6da89e1e4405245212ccd4e8f34f79186d'
+  version '17.0.17068.356'
+  sha256 'dd568956b671e41c656835fb50e188de2932558cea79363c02407d9faf37cdc0'
 
   url "https://www.gov.uk/government/uploads/uploaded/hmrc/payetools-rti-#{version}-osx.zip"
   name 'Basic PAYE Tools'
@@ -12,5 +12,6 @@ cask 'paye-tools' do
                       sudo:       true,
                     }
 
-  uninstall quit: 'uk.gov.hmrc.bptrti'
+  uninstall quit:   'uk.gov.hmrc.bptrti',
+            delete: '/Applications/HMRC'
 end
