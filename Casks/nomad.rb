@@ -3,7 +3,7 @@ cask 'nomad' do
   sha256 :no_check
 
   url 'https://www.nomad.menu/download/NoMAD.pkg'
-  name 'NoMad'
+  name 'NoMAD'
   homepage 'https://www.nomad.menu/'
 
   depends_on macos: '>= :yosemite'
