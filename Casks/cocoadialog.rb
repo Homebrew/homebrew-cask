@@ -5,7 +5,7 @@ cask 'cocoadialog' do
   # github.com/downloads/mstratman/cocoadialog was verified as official when first introduced to the cask
   url "https://github.com/downloads/mstratman/cocoadialog/CocoaDialog-#{version}.dmg"
   appcast 'https://github.com/mstratman/cocoadialog/releases.atom',
-          checkpoint: '370f0d166f7e5dbdf850c1f0107f2f965a93e389d9449adb2c8fd8f1a062e169'
+          checkpoint: '7144c245f8616fcadd57144910fec921871a3af7478fe4b62eab9f5f89501aeb'
   name 'cocoaDialog'
   homepage 'https://mstratman.github.io/cocoadialog/'
 
