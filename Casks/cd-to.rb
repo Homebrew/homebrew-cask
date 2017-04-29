@@ -4,7 +4,7 @@ cask 'cd-to' do
 
   url "https://github.com/jbtule/cdto/releases/download/#{version.dots_to_underscores}/cdto_#{version.dots_to_underscores.gsub(%r{_\d$}, '')}.zip"
   appcast 'https://github.com/jbtule/cdto/releases.atom',
-          checkpoint: 'd1bd6448f379a5260875f0a04e932c71ea223ddaf1fdde45da3dda93228ab5f0'
+          checkpoint: 'b47d89df99576be853c6b6a1c3be4167cc57675a95464bd5753153de481d9199'
   name 'cd to'
   homepage 'https://github.com/jbtule/cdto'
 
