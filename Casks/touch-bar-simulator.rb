@@ -8,6 +8,8 @@ cask 'touch-bar-simulator' do
   name 'Touch Bar Simulator'
   homepage 'https://github.com/sindresorhus/touch-bar-simulator'
 
+  depends_on macos: '>= :sierra'
+
   app 'Touch Bar Simulator.app'
 
   zap delete: [
