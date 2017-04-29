@@ -4,7 +4,7 @@ cask 'clarify' do
 
   url "http://files.clarify-it.com/v#{version.major}/updaters/#{version}/Clarify.app.zip"
   appcast "https://www.bluemangolearning.com/download/clarify/#{version.major_minor.dots_to_underscores}/auto_update/release/clarify_appcast.xml",
-          checkpoint: 'f72c5dca89003ee282774a04865e98f0f8c02ba3e13913aa428ea3fa6b9a9adc'
+          checkpoint: 'f2a5e10edb7f9d72167455e3629c0ffc516f0addafc71b40d8f1d1f822113ae9'
   name 'Clarify'
   homepage 'http://www.clarify-it.com/'
 
