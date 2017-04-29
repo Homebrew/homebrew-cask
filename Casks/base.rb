@@ -4,7 +4,7 @@ cask 'base' do
 
   url "https://files.menial.co.uk/base/base_#{version}.zip"
   appcast 'https://update.menial.co.uk/software/base/',
-          checkpoint: '13dec5059cd301d7d1b87d4c780ebd2c4c9a707895064d1f55852ee3592fdeb9'
+          checkpoint: 'fdc1f898970f2bc310c2a377a9e2cfb90aba9cdb48116974e3113d9623d571a8'
   name 'Menial Base'
   homepage 'https://menial.co.uk/base/'
 
