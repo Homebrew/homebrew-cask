@@ -4,9 +4,11 @@ cask 'adapter' do
 
   url "http://downloads.macroplant.com/Adapter-#{version}.dmg"
   appcast "https://macroplant.com/adapter/mac/v#{version.major}/appcast",
-          checkpoint: '75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070'
+          checkpoint: '5f4a331d45a3f35e44fa58a66af7cd7a8f212950a0a6a53a98a2e406ff2e5d95'
   name 'Adapter'
   homepage 'https://macroplant.com/adapter'
+
+  depends_on macos: '>= :lion'
 
   app 'Adapter.app'
 
