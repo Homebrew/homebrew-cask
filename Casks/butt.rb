@@ -5,7 +5,7 @@ cask 'butt' do
   # sourceforge.net/butt was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/butt/butt-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/butt/rss',
-          checkpoint: 'debc4e427e1f5c13678eb8301f23e13d07a75bb163216aa41e522c1f06816634'
+          checkpoint: 'a173d19c3d3a1ae54671f7e423fdb153db757e17d4aebe84da1becd6d16e99ff'
   name 'Broadcast Using This Tool'
   homepage 'https://danielnoethen.de/'
 
