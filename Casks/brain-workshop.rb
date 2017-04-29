@@ -4,7 +4,7 @@ cask 'brain-workshop' do
 
   url "https://downloads.sourceforge.net/brainworkshop/brainworkshop/Brain%20Workshop%20#{version.major_minor}/brainworkshop-#{version}-MacOSX.zip"
   appcast 'https://sourceforge.net/projects/brainworkshop/rss?path=/brainworkshop',
-          checkpoint: 'cb1e734cb05d2a36d1a8c238e5b4c78781e847e0c4785bc10d0f31959bbeb4d6'
+          checkpoint: 'a4edcdab375aef76e90b3d4e64f80a9984f388b3c2af2b253c642557a832396a'
   name 'Brain Workshop'
   homepage 'http://brainworkshop.sourceforge.net/'
 
