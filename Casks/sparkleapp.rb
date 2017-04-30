@@ -3,8 +3,10 @@ cask 'sparkleapp' do
   sha256 :no_check
 
   url 'https://sparkleapp.com/download'
-  name 'sparkle'
+  name 'Sparkle'
   homepage 'https://sparkleapp.com/'
 
-  app 'sparkle.app'
+  auto_updates true
+
+  app 'Sparkle.app'
 end
