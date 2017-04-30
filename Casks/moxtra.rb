@@ -2,7 +2,7 @@ cask 'moxtra' do
   version :latest
   sha256 :no_check
 
-  url 'https://www.moxtra.com/download/desktopapp'
+  url 'https://www.moxtra.com/client/mac/MoxtraDesktopInstaller.dmg'
   name 'Moxtra'
   homepage 'http://moxtra.com/application/'
 
