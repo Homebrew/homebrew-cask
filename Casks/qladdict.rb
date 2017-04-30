@@ -9,12 +9,4 @@ cask 'qladdict' do
   homepage 'https://github.com/tattali/QLAddict/'
 
   qlplugin 'QLAddict.qlgenerator'
-
-  caveats <<-EOS.undent
-    Change theme with :
-    defaults write com.sub.QLAddict theme NAME_OF_THEME
-
-    See all available themes :
-    https://github.com/tattali/QLAddict/blob/master/available-themes.md
-  EOS
 end
