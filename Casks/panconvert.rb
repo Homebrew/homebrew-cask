@@ -8,19 +8,13 @@ cask 'panconvert' do
   name 'PanConvert'
   homepage 'http://panconvert.sourceforge.net/'
 
-  stage_only true
+  installer script: {
+                      executable: "#{staged_path}/Panconvert-#{version}-osx-installer.app/Contents/MacOS/installbuilder.sh",
+                      args:       ['--mode', 'unattended'],
+                    }
 
-  postflight do
-    system_command "#{staged_path}/Panconvert-#{version}-osx-installer.app/Contents/MacOS/installbuilder.sh",
-                   args: [
-                           '--mode', 'unattended'
-                         ]
-  end
-
-  uninstall_postflight do
-    system_command "/Applications/Panconvert-#{version}/uninstall.app/Contents/MacOS/osx-intel",
-                   args: [
-                           '--mode', 'unattended'
-                         ]
-  end
+  uninstall script: {
+                      executable: "/Applications/Panconvert-#{version}/uninstall.app/Contents/MacOS/osx-intel",
+                      args:       ['--mode', 'unattended'],
+                    }
 end
