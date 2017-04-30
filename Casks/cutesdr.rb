@@ -4,7 +4,7 @@ cask 'cutesdr' do
 
   url "https://downloads.sourceforge.net/cutesdr/CuteSdr#{version.no_dots}.dmg"
   appcast 'https://sourceforge.net/projects/cutesdr/rss',
-          checkpoint: '5619e8fccaa00f7ecbcd8726ea4942698c15d8dd760756cdf43de7da08bf595a'
+          checkpoint: 'c3368736929f4007a9b9c474ee2089f9c19da1d2fa3f9db73546e6d3262bcf87'
   name 'CuteSDR'
   homepage 'https://sourceforge.net/projects/cutesdr/'
 
