@@ -1,4 +1,4 @@
-cask 'sparkleapp' do
+cask 'riverdesign-sparkle' do
   version :latest
   sha256 :no_check
 
