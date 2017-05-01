@@ -1,10 +1,10 @@
 cask 'mpfreaker' do
-  version '1.9.7'
-  sha256 '8313c7e89a6c41c2a5e8dab77e124b84f1c47f1652e6da534c38d42aaae772f4'
+  version '1.10'
+  sha256 'd4423ccaff090b0fe336a80f86ace193b34e273e4149c11b3a23e90b15181ae8'
 
   url 'http://www.lairware.com/download/MPFreaker.dmg'
   appcast 'http://lwupdate.dyndns.org/mpfreaker.xml',
-          checkpoint: '1a4dc76d3c4c01cfeb1c66742a2145a7c6134ecfed00c0c758a7dc8a10f8047d'
+          checkpoint: '671385ac01783bc26fb85e9753ff69f6f31d7e09d31146e21ebcba99e7ce9481'
   name 'MPFreaker'
   homepage 'http://www.lairware.com/mpfreaker/'
 
