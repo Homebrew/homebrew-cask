@@ -9,10 +9,14 @@ cask 'kicad' do
   homepage 'http://kicad-pcb.org/'
 
   suite 'Kicad-apps', target: 'Kicad'
-  artifact 'kicad', target: "#{ENV['HOME']}/Library/Application Support/kicad"
+  artifact 'kicad', target: '/Library/Application Support/kicad'
 
   preflight do
     system_command '/bin/mkdir', args: ['--', "#{staged_path}/Kicad-apps"]
     system_command '/bin/mv', args: ['--', *Dir["#{staged_path}/Kicad/*.app"], "#{staged_path}/Kicad-apps/"]
   end
+
+  uninstall delete: '/Library/Application Support/kicad'
+
+  zap delete: '~/Library/Preferences/kicad'
 end
