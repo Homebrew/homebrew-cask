@@ -1,11 +1,11 @@
 cask 'nylas-mail' do
-  version '2.0.31-e675deb'
-  sha256 'f0dba07e2585f401bc190c4b5618124c7457c31df46ad3be117b42a0b48f0758'
+  version '2.0.32-fec7941'
+  sha256 '493e42d9913903d317827c75fa8cca2c1204e3b988c016491823f3c45dbb4cfb'
 
   # edgehill.s3-us-west-2.amazonaws.com was verified as official when first introduced to the cask
   url "https://edgehill.s3-us-west-2.amazonaws.com/#{version}/darwin/x64/NylasMail.dmg"
   appcast 'https://edgehill.nylas.com/update-check?platform=darwin&arch=64',
-          checkpoint: 'f3dc638fbcac0ee7a0dbd8a13a33b578d2ff917c39bccac712a1e42cebd30c4e'
+          checkpoint: 'c333095da7f2b03c74c7c8b44605108502566725fed36e20ad1f7099533fc23b'
   name 'Nylas Mail'
   homepage 'https://www.nylas.com/'
 
