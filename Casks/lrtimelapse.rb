@@ -8,5 +8,5 @@ cask 'lrtimelapse' do
 
   pkg "LRTimelapse #{version} Installer.pkg"
 
-  uninstall script: { executable: 'Uninstall LRTimelapse.command' }
+  uninstall script: 'Uninstall LRTimelapse.command'
 end
