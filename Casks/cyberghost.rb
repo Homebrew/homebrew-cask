@@ -4,7 +4,7 @@ cask 'cyberghost' do
 
   url "https://download.cyberghostvpn.com/mac/cg5mac_#{version}.dmg"
   appcast 'https://download.cyberghostvpn.com/mac/updates/cyberghost_mac_update.inf',
-          checkpoint: '558e5e8b62d828ad319191917628fc202aa5dabc0891bdd38be36199f222685f'
+          checkpoint: '3e9d014a611e4fea1cfcd85850394ac0a4fdd6d491c3a8c7a60708d7ad3937c8'
   name 'CyberGhost'
   homepage 'https://www.cyberghostvpn.com/en'
 

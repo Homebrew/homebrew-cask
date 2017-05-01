@@ -4,7 +4,7 @@ cask 'coreos' do
 
   url "https://github.com/TheNewNormal/coreos-osx/releases/download/v#{version}/CoreOS_v#{version}.dmg"
   appcast 'https://github.com/TheNewNormal/coreos-osx/releases.atom',
-          checkpoint: '00c7515b3d3e3e9fd868203a4b81688ff30015520cbb19f917a0c42caceb06fe'
+          checkpoint: 'daaa1be178825fa81239cfa825c3ecd1ff24fa0fbe84bd17ab1592bf2d220e3f'
   name 'CoreOS VM'
   homepage 'https://github.com/TheNewNormal/coreos-osx'
 

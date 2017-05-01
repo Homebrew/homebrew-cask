@@ -5,7 +5,7 @@ cask 'aquamacs' do
   # github.com/davidswelt/aquamacs-emacs was verified as official when first introduced to the cask
   url "https://github.com/davidswelt/aquamacs-emacs/releases/download/Aquamacs-#{version}/Aquamacs-Emacs-#{version}.dmg"
   appcast 'https://github.com/davidswelt/aquamacs-emacs/releases.atom',
-          checkpoint: 'ee0238e8727aac3b9438e9ab6b688ac3dfd22f1646434ea5c9c5bb462660f8d1'
+          checkpoint: '255752184faa29423a6b8828a4b99118de74850b10ef5ed6d56816d632e53131'
   name 'Aquamacs'
   homepage 'http://aquamacs.org/'
 

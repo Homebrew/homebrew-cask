@@ -108,6 +108,7 @@ Similar to the `preflight`, `postflight`, `uninstall_preflight`, and `uninstall_
 
 ```rb
 url do
+  require 'open-uri'
   # No known stable URL; fetching disposable URL from landing site
   open('https://example.com/app/landing') do |landing_page|
     content = landing_page.read
@@ -123,7 +124,7 @@ The block will be called immediately before downloading; its result value will b
 
 You can use the `url` stanza with either a direct argument or a block but not with both.
 
-Example for using the block syntax: [audacity.rb](https://github.com/caskroom/homebrew-cask/blob/c389d9ccbb46d30b6ac1cbdbadf49591ca8ff6cd/Casks/audacity.rb#L5-L15)
+Example for using the block syntax: [vlc-nightly.rb](https://github.com/caskroom/homebrew-versions/blob/2bf0f13dd49d263ebec0ca56e58ad8458633f789/Casks/vlc-nightly.rb#L5L10)
 
 ### Mixing Additional URL Parameters With the Block Syntax
 

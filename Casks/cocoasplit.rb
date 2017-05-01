@@ -1,6 +1,6 @@
 cask 'cocoasplit' do
-  version '2.0.14'
-  sha256 '89d0470987d67bbad69b3e8d7e23922873e2c79feec5460609e9193829b3a00d'
+  version '2.0.15'
+  sha256 '4a25e84b9c2afcc92af6234e823baf2351b3ea50e87555328c244a7aefe99b57'
 
   url "https://www.cocoasplit.com/releases/#{version.major_minor}/CocoaSplit_#{version}.zip"
   name 'CocoaSplit'

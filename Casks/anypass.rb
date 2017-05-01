@@ -4,7 +4,7 @@ cask 'anypass' do
 
   url "http://icyblaze.com/anypass/anypass_mac_#{version.sub(%r{^(\d+\.\d+).*}, '\1')}.zip"
   appcast 'http://icyblaze.com/anypass/',
-          checkpoint: 'e438ed63fbe147117168c65645e79c5068b5ad10d2f0cf6ade97d29228723b8a'
+          checkpoint: 'a93133b5edb61e88a18e891ac744a700d4d414348b849ede345e7d8c8b5443e0'
   name 'Anypass'
   homepage 'http://icyblaze.com/anypass/'
 

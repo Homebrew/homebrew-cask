@@ -4,7 +4,7 @@ cask 'coqide' do
 
   url "https://coq.inria.fr/distrib/V#{version}/files/CoqIDE_#{version}.dmg"
   appcast 'https://coq.inria.fr/rss.xml',
-          checkpoint: '91b6d31b7d6478150b9a4af834bf54314ebff26d1e7152ff7cc548faf2796bfc'
+          checkpoint: '6a51f27b585a42e8debc0cf9fcc2a55b4fc2ca0853490ba483568ba306d83d85'
   name 'Coq'
   homepage 'https://coq.inria.fr/'
 

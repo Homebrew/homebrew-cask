@@ -5,7 +5,7 @@ cask 'codeblocks' do
   # sourceforge.net/codeblocks was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/codeblocks/Binaries/#{version}/MacOS/CodeBlocks-#{version}-mac.zip"
   appcast 'https://sourceforge.net/projects/codeblocks/rss?path=/Binaries',
-          checkpoint: '4502ee0eada5102690fc1be210d2c23a3b580f21fc7aca847e0ddc7e353ad502'
+          checkpoint: '0aa170c07e486ed80771d98bfcdb35309a3924dfff7c60b36f0f7c8ddac95ce5'
   name 'Code::Blocks'
   homepage 'http://www.codeblocks.org/'
 

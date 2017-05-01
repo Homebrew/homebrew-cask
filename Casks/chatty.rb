@@ -5,7 +5,7 @@ cask 'chatty' do
   # github.com/chatty/chatty was verified as official when first introduced to the cask
   url "https://github.com/chatty/chatty/releases/download/v#{version}/Chatty_#{version}.zip"
   appcast 'https://github.com/chatty/chatty/releases.atom',
-          checkpoint: 'a84090aab24aa2048d8f6098d3e227707ea8376ff77e21f61e7724904b3e6f19'
+          checkpoint: '91f8e1ed94a3efd26b043ef95adb29e24e2e981342a1534aaff6abf80782b53c'
   name 'Chatty'
   homepage 'https://chatty.github.io/'
 

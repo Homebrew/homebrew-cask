@@ -4,7 +4,7 @@ cask 'clion' do
 
   url "https://download.jetbrains.com/cpp/CLion-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=CL&latest=true&type=release',
-          checkpoint: '93b9db3b231d83add3349fbc3a6964fe8eb888802a033a6d709615674981f651'
+          checkpoint: '63eeb90eee2f6cab33735159cf488af97fe1af4b958ba5edd19598bd61e940eb'
   name 'CLion'
   homepage 'https://www.jetbrains.com/clion/'
 

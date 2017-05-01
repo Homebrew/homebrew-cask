@@ -5,7 +5,7 @@ cask 'cubicsdr' do
   # github.com/cjcliffe/CubicSDR was verified as official when first introduced to the cask
   url "https://github.com/cjcliffe/CubicSDR/releases/download/#{version}/CubicSDR-#{version}-Darwin.dmg"
   appcast 'https://github.com/cjcliffe/CubicSDR/releases.atom',
-          checkpoint: '6bc2d8513d0a7646888bd7760b10608567f16e030c2c7fa58498a48e1387749f'
+          checkpoint: '99f6b7502f66e40a6a940da7fd5c57b5b2daa39ee7162afdf45b4c53300d5733'
   name 'CubicSDR'
   homepage 'http://cubicsdr.com/'
 
