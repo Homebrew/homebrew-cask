@@ -9,7 +9,9 @@ cask 'zekr' do
   name 'Zekr'
   homepage 'http://zekr.org/'
 
-  depends_on_java(6)
-
   app 'Zekr.app'
+
+  caveats do
+    depends_on_java('6+')
+  end
 end
