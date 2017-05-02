@@ -11,22 +11,24 @@ cask 'kicad-extras' do
   artifact 'modules', target: '/Library/Application Support/kicad/modules'
 
   preflight do
-    system_command '/bin/mv', args: ['--', '/Library/Application Support/kicad/modules', '/Library/Application Support/kicad/modules.github']
-    system_command '/bin/cp', args: ['-f',
-                                     '/Library/Application Support/kicad/template/fp-lib-table.for-pretty',
-                                     '/Library/Application Support/kicad/template/fp-lib-table']
+    FileUtils.cd '/Library/Application Support/kicad/' do
+      FileUtils.mv 'modules', 'modules.github'
+      FileUtils.cp 'template/fp-lib-table.for-pretty', 'template/fp-lib-table'
+    end
   end
 
   uninstall_preflight do
-    unless File.directory?('/Library/Application Support/kicad/modules.github')
-      system_command '/bin/mv', args: ['--', '/Library/Application Support/kicad/modules', '/Library/Application Support/kicad/modules.github']
+    FileUtils.cd '/Library/Application Support/kicad/' do
+      unless File.exist?('modules.github')
+        FileUtils.mv 'modules', 'modules.github'
+      end
     end
   end
 
   uninstall_postflight do
-    system_command '/bin/mv', args: ['--', '/Library/Application Support/kicad/modules.github', '/Library/Application Support/kicad/modules']
-    system_command '/bin/cp', args: ['-f',
-                                     '/Library/Application Support/kicad/template/fp-lib-table.for-github',
-                                     '/Library/Application Support/kicad/template/fp-lib-table']
+    FileUtils.cd '/Library/Application Support/kicad/' do
+      FileUtils.mv 'modules.github', 'modules'
+      FileUtils.cp 'template/fp-lib-table.for-github', 'template/fp-lib-table'
+    end
   end
 end
