@@ -1,6 +1,6 @@
 cask 'owasp-zap' do
   version '2.6.0'
-  sha256 '7133593b91d0d7925436adc79370b654cb1d4d642a9bb85cc3880bfaf2683b87'
+  sha256 'ed8f58c07bee746439879649a3b13bd7bffbccd6b1163c335f5eb0711ec3563d'
 
   # github.com/zaproxy/zaproxy was verified as official when first introduced to the cask
   url "https://github.com/zaproxy/zaproxy/releases/download/#{version}/ZAP_#{version.dots_to_underscores}_macos.dmg"
