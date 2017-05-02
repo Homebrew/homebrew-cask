@@ -5,7 +5,7 @@ cask 'dbeaver-community' do
   # github.com/serge-rider/dbeaver was verified as official when first introduced to the cask
   url "https://github.com/serge-rider/dbeaver/releases/download/#{version}/dbeaver-ce-#{version}-macos.dmg"
   appcast 'https://github.com/serge-rider/dbeaver/releases.atom',
-          checkpoint: '6325cc362d5d60203aa911da0cd82b298280d8d95f44af92108a6ba9397171c6'
+          checkpoint: '36c6a8c88c7a8ba8f1a38dcfba936e76626e65c87ad0da47966e48dcc61b91c6'
   name 'DBeaver Community Edition'
   homepage 'http://dbeaver.jkiss.org/'
 
