@@ -18,7 +18,7 @@ cask 'kicad-extras' do
   end
 
   uninstall_preflight do
-    if File.directory?('/Library/Application Support/kicad/modules.github') == false
+    unless File.directory?('/Library/Application Support/kicad/modules.github')
       system_command '/bin/mv', args: ['--', '/Library/Application Support/kicad/modules', '/Library/Application Support/kicad/modules.github']
     end
   end
