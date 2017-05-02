@@ -4,10 +4,12 @@ cask 'zekr' do
 
   # downloads.sourceforge.net/zekr was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/zekr/zekr-#{version}-mac_64.tgz"
+  appcast 'https://sourceforge.net/projects/zekr/rss?path=/Zekr',
+          checkpoint: 'd4156f90a39a16f9247164fa8a5536e6c5e396e55fff047cb7fe86aa2f114643'
   name 'Zekr'
   homepage 'http://zekr.org/'
 
-  depends_on cask: 'java'
+  depends_on_java(6)
 
   app 'Zekr.app'
 end
