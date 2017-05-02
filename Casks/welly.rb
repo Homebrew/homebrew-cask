@@ -1,9 +1,5 @@
 cask 'welly' do
-  if MacOS.version <= :leopard
-    version '2.4'
-    sha256 '8cf6ca119184112e774103f6df1e279826c10d64fe4b303167dc68ffd28f6b8b'
-    url "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/welly/Welly.v#{version}.zip"
-  elsif MacOS.version <= :snow_leopard
+  if MacOS.version <= :snow_leopard
     version '2.64'
     sha256 '9403a92d74f5e7e02974a0fe8641ab1e320523948a67add596c964b2c4c13cae'
     url "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/welly/Welly.v#{version}.zip"
