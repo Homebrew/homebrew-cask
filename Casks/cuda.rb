@@ -11,5 +11,8 @@ cask 'cuda' do
                       args:       ['--accept-eula', '--silent'],
                     }
 
-  uninstall script: "/Developer/NVIDIA/CUDA-#{version.major_minor}/bin/uninstall_cuda_#{version.major_minor}.pl"
+  uninstall script: {
+                      executable: "/Developer/NVIDIA/CUDA-#{version.major_minor}/bin/uninstall_cuda_#{version.major_minor}.pl",
+                      sudo:       true,
+                    }
 end
