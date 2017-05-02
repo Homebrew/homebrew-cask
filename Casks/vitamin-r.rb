@@ -1,10 +1,5 @@
 cask 'vitamin-r' do
-  if MacOS.version <= :leopard
-    version '1.48'
-    sha256 '9a06bbf02da9ff61d10fc5cc14ff888c6125e8ccef92dc42e3878284c46afe45'
-    url 'http://www.publicspace.net/download/VitaminLeopard.dmg'
-    app 'Vitamin-R.app'
-  elsif MacOS.version <= :snow_leopard
+  if MacOS.version <= :snow_leopard
     version '1.85'
     sha256 'cf5676f710a9be0f290aa20c2b1f9feaf87f162b580987f7c08477a2f13b2705'
     url "http://www.publicspace.net/download/Vitamin_#{version.dots_to_underscores}.dmg"
