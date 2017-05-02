@@ -13,10 +13,10 @@ cask 'mps' do
   app "MPS #{version.major_minor}.app"
 
   zap delete: [
-                "~/MPSSamples.#{version}",
-                "~/Library/Application Support/MPS#{version.major_minor.no_dots}",
-                "~/Library/Preferences/MPS#{version.major_minor.no_dots}",
-                "~/Library/Caches/MPS#{version.major_minor.no_dots}",
-                "~/Library/Logs/MPS#{version.major_minor.no_dots}",
+                "~/MPSSamples.#{version.before_comma.major_minor}",
+                "~/Library/Application Support/MPS#{version.before_comma.major_minor}",
+                "~/Library/Preferences/MPS#{version.before_comma.major_minor}",
+                "~/Library/Caches/MPS#{version.before_comma.major_minor}",
+                "~/Library/Logs/MPS#{version.before_comma.major_minor}",
               ]
 end
