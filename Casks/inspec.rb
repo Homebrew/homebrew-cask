@@ -7,7 +7,7 @@ cask 'inspec' do
   appcast 'https://github.com/chef/inspec/releases.atom',
           checkpoint: 'eb2bf1079cb70b1a9bb788f0606dc2313a645afa272a7950858b1992c6350931'
   name 'InSpec by Chef'
-  homepage 'http://inspec.io/'
+  homepage 'https://www.inspec.io/'
 
   pkg "inspec-#{version}.pkg"
 

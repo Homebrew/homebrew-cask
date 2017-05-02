@@ -4,7 +4,7 @@ cask 'iholdem-indicator' do
 
   url 'http://www.iholdemindicator.com/download/iHoldemIndicatorInstaller.pkg'
   name 'iHoldem Indicator'
-  homepage 'http://www.iholdemindicator.com/'
+  homepage 'https://www.iholdemindicator.com/'
 
   pkg 'iHoldemIndicatorInstaller.pkg'
 

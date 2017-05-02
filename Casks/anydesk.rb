@@ -4,7 +4,7 @@ cask 'anydesk' do
 
   url 'https://download.anydesk.com/anydesk.dmg'
   name 'AnyDesk'
-  homepage 'https://anydesk.com/'
+  homepage 'https://anydesk.com/remote-desktop'
 
   app 'AnyDesk.app'
 end
