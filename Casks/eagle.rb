@@ -4,7 +4,7 @@ cask 'eagle' do
 
   url "http://trial2.autodesk.com/NET17SWDLD/2017/EGLPRM/ESD/Autodesk_EAGLE_#{version}_English_Mac_64bit.pkg"
   name 'CadSoft EAGLE'
-  homepage 'http://www.autodesk.com/products/eagle/overview'
+  homepage 'https://www.autodesk.com/products/eagle/overview'
 
   pkg "Autodesk_EAGLE_#{version}_English_Mac_64bit.pkg"
 
