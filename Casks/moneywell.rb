@@ -1,10 +1,5 @@
 cask 'moneywell' do
-  if MacOS.version <= :tiger
-    version '1.4.13'
-    sha256 'b2eb23a4d5d9e555d00529f83d4cae43abc184c9174a4b729693b55787dfd64d'
-
-    url "http://downloads.nothirst.com/MoneyWell_#{version.major_minor}.zip"
-  elsif MacOS.version <= :snow_leopard
+  if MacOS.version <= :snow_leopard
     version '1.7.3'
     sha256 '6f34a57999fcc09147035f62caff7efede3a385c0f2e7b6f3f90e9a64e826410'
 
