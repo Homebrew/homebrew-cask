@@ -12,10 +12,8 @@ cask 'kicad' do
   artifact 'kicad', target: '/Library/Application Support/kicad'
 
   preflight do
-    FileUtils.cd staged_path do
-      FileUtils.mkdir 'Kicad-apps'
-      FileUtils.mv Dir.glob('Kicad/*.app'), 'Kicad-apps/'
-    end
+    FileUtils.mkdir "#{staged_path}/Kicad-apps"
+    FileUtils.mv Dir.glob("#{staged_path}/*.app"), "#{staged_path}/Kicad-apps"
   end
 
   zap delete: '~/Library/Preferences/kicad'
