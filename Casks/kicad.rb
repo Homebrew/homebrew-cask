@@ -16,7 +16,5 @@ cask 'kicad' do
     system_command '/bin/mv', args: ['--', *Dir["#{staged_path}/Kicad/*.app"], "#{staged_path}/Kicad-apps/"]
   end
 
-  uninstall delete: '/Library/Application Support/kicad'
-
   zap delete: '~/Library/Preferences/kicad'
 end
