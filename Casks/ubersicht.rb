@@ -8,13 +8,13 @@ cask 'ubersicht' do
   name 'Übersicht'
   homepage 'http://tracesof.net/uebersicht/'
 
-  app 'Übersicht.app'
+  app 'Übersicht.app'
 
-  uninstall login_item: 'Übersicht'
+  uninstall login_item: 'Übersicht'
 
   zap delete: [
                 '~/Library/Application Support/tracesOf.Uebersicht',
-                '~/Library/Application Support/Übersicht',
+                '~/Library/Application Support/Übersicht',
                 '~/Library/Caches/tracesOf.Uebersicht',
                 '~/Library/Preferences/tracesOf.Uebersicht.plist',
                 '~/Library/WebKit/tracesOf.Uebersicht',
