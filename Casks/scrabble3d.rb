@@ -3,7 +3,7 @@ cask 'scrabble3d' do
   sha256 :no_check
 
   # sourceforge.net/projects/scrabble was verified as official when first introduced to the cask
-  url 'https://sourceforge.net/projects/scrabble/files/latest/download'
+  url 'https://downloads.sourceforge.net/scrabble/Scrabble3D-darwin.pkg'
   name 'Scrabble3D'
   homepage 'https://scrabble.sourceforge.io/'
 
