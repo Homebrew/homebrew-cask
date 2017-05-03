@@ -1,10 +1,10 @@
 cask 'tankix' do
-  version '602'
-  sha256 '37bbe6d773b34e2a24729932c2b5b640d8c39a3943852ffe4d2c1a96a1a9e6ea'
+  version '603'
+  sha256 'c1567c756f6f8cc3c4baf05205e584988c1153cf9180ef4a5988c663613cd3ab'
 
   url "http://static.tankix.com/app/StandaloneOSXIntel64/prod_#{version}/TankiX.dmg"
   appcast 'http://www.tankix.com/en/download/',
-          checkpoint: '1e6fa8824b5c21d343d06850a810c3fea2c29ac05928d2a2678137797bde4555'
+          checkpoint: '4bf3009e12c8b5019cbaf4c0842b92a369c026195e752ed04a1c5949890cf6d7'
   name 'Tanki X'
   homepage 'https://www.tankix.com/'
 
