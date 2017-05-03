@@ -2,7 +2,8 @@ cask 'scrabble3d' do
   version :latest
   sha256 :no_check
 
-  url 'https://downloads.sourceforge.net/project/scrabble/Main_Program/MacOS/Scrabble3D-darwin.pkg'
+  url 'https://sourceforge.net/projects/scrabble/files/latest/download'
+  # url 'https://downloads.sourceforge.net/project/scrabble/Main_Program/MacOS/Scrabble3D-darwin.pkg'
   name 'Scrabble3D'
   homepage 'https://scrabble.sourceforge.io/'
 
