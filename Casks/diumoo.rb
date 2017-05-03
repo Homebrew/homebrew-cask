@@ -5,7 +5,7 @@ cask 'diumoo' do
   # github.com/shanzi/diumoo was verified as official when first introduced to the cask
   url "https://github.com/shanzi/diumoo/releases/download/v#{version}/diumoo.zip"
   appcast 'https://github.com/shanzi/diumoo/releases.atom',
-          checkpoint: '3338de89c108cfa730279f37cf36779ba3e5cd088a2a62789259d01d9e6cf183'
+          checkpoint: 'a821ab089dadfb4dbaa63b68c5c7725588f40a1e144488519f80fa67b05e5eb9'
   name 'diumoo'
   homepage 'http://diumoo.net/'
 
