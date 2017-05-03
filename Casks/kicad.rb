@@ -13,7 +13,7 @@ cask 'kicad' do
 
   preflight do
     FileUtils.mkdir "#{staged_path}/Kicad-apps"
-    FileUtils.mv Dir.glob("#{staged_path}/*.app"), "#{staged_path}/Kicad-apps"
+    FileUtils.mv Dir.glob("#{staged_path}/Kicad/*.app"), "#{staged_path}/Kicad-apps/"
   end
 
   zap delete: '~/Library/Preferences/kicad'
