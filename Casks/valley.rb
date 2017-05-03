@@ -4,7 +4,7 @@ cask 'valley' do
 
   url "https://assets.unigine.com/d/Unigine_Valley-#{version}.dmg"
   name 'Valley Benchmark'
-  homepage 'https://unigine.com/products/benchmarks/valley'
+  homepage 'https://benchmark.unigine.com/valley'
 
   depends_on macos: '>= mountain_lion'
 

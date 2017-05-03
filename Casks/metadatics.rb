@@ -6,7 +6,7 @@ cask 'metadatics' do
   appcast 'http://www.markvapps.com/applications/metadatics/metadatics_appcast.xml',
           checkpoint: '19bdc4e350aa8e16f5170031425181eb88a465441a12816798533d34b6261814'
   name 'Metadatics'
-  homepage 'https://markvapps.com/metadatics'
+  homepage 'https://www.markvapps.com/metadatics'
 
   app 'Metadatics.app'
 end

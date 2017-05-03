@@ -4,7 +4,7 @@ cask 'dcommander' do
 
   url 'http://devstorm-apps.com/dc/download.php'
   name 'DCommander'
-  homepage 'http://devstorm-apps.com/dc/'
+  homepage 'https://devstorm-apps.com/dc/'
 
   app 'DCommander.app'
 

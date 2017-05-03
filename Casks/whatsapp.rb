@@ -8,6 +8,8 @@ cask 'whatsapp' do
   name 'WhatsApp'
   homepage 'https://www.whatsapp.com/'
 
+  auto_updates true
+
   app 'WhatsApp.app'
 
   zap delete: [

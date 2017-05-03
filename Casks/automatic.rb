@@ -7,7 +7,7 @@ cask 'automatic' do
   appcast 'http://update.codingcurious.com/automatic/appcast2.xml',
           checkpoint: 'c03c7f501a677bce6e764089360eb0d57a495d0083c22606a9fc93e778197322'
   name 'Automatic'
-  homepage 'http://codingcurious.com/otomatic/'
+  homepage 'https://codingcurious.com/otomatic/'
 
   prefpane 'Automatic.prefPane'
 end
