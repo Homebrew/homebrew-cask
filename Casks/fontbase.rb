@@ -12,6 +12,6 @@ cask 'fontbase' do
                 '~/Library/Preferences/com.dominiklevitsky.fontbase.helper.plist',
                 '~/Library/Preferences/com.dominiklevitsky.fontbase.plist',
                 '~/Library/Application Support/FontBase',
-                '~/Library/Saved Application State/com.dominiklevitsky.fontbase.savedState'.
+                '~/Library/Saved Application State/com.dominiklevitsky.fontbase.savedState',
               ]
 end
