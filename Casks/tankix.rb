@@ -4,7 +4,7 @@ cask 'tankix' do
 
   url "http://static.tankix.com/app/StandaloneOSXIntel64/prod_#{version}/TankiX.dmg"
   appcast 'http://www.tankix.com/en/download/',
-          checkpoint: '544e18ed1178e052084dc3c604a2588f7e1026bef5a79c30045b999811da7aa2'
+          checkpoint: 'bb54941ed2be33d14982a7ef12b3353a480503b151842bebf20d8a3e429ac66f'
   name 'Tanki X'
   homepage 'https://www.tankix.com/'
 
