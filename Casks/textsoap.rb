@@ -14,4 +14,14 @@ cask 'textsoap' do
   postflight do
     suppress_move_to_applications
   end
+
+  zap delete: [
+                '~/Library/Application Support/TextSoap',
+                "~/Library/Application Support/com.unmarked.textsoap#{version.major}",
+                "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.unmarked.textsoap#{version.major}.help",
+                "~/Library/Caches/com.unmarked.textsoap#{version.major}",
+                "~/Library/Cookies/com.unmarked.textsoap#{version.major}.binarycookies",
+                "~/Library/Preferences/com.unmarked.textsoap#{version.major}.plist",
+                "~/Library/Saved Application State/com.unmarked.textsoap#{version.major}.savedState",
+              ]
 end
