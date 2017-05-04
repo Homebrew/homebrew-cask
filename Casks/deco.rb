@@ -5,7 +5,7 @@ cask 'deco' do
   # github.com/decosoftware/deco-ide was verified as official when first introduced to the cask
   url "https://github.com/decosoftware/deco-ide/releases/download/v#{version}/Deco-#{version}-osx.zip"
   appcast 'https://github.com/decosoftware/deco-ide/releases.atom',
-          checkpoint: 'c36536d79d0aefcaad1b366d4283387828b4ba1f30d418b8dc5a4888be60efe0'
+          checkpoint: 'f325ac5ff5dca6dfee0271ca49c87ad65dcc87a1dbd85ba270b7738948afee8e'
   name 'Deco'
   homepage 'https://www.decosoftware.com/'
 
