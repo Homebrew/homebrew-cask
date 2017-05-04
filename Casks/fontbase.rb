@@ -7,4 +7,11 @@ cask 'fontbase' do
   homepage 'http://fontba.se/'
 
   app 'FontBase.app'
+
+  zap delete: [
+                '~/Library/Preferences/com.dominiklevitsky.fontbase.helper.plist',
+                '~/Library/Preferences/com.dominiklevitsky.fontbase.plist',
+                '~/Library/Application Support/FontBase',
+                '~/Library/Saved Application State/com.dominiklevitsky.fontbase.savedState',
+              ]
 end
