@@ -1,5 +1,5 @@
 cask 'canary' do
-  version '0.972,241'
+  version '0.972.304,241'
   sha256 '4fd067a2115da6b02b332d7afec15e967c7e32e84f5eaf188c3ba18750df1ef4'
 
   # rink.hockeyapp.net/api was verified as official when first introduced to the cask
