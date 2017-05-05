@@ -5,7 +5,7 @@ cask 'cockatrice' do
   # github.com/Cockatrice/Cockatrice was verified as official when first introduced to the cask
   url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.before_comma}/Cockatrice_#{version.after_comma}_osx.dmg"
   appcast 'https://github.com/Cockatrice/Cockatrice/releases.atom',
-          checkpoint: '62ec13c1cd85124d87d26c107e195b0db675867a868fd40c6532567d8b7f5f72'
+          checkpoint: '2eaed6e3ff21a0ef97c6e734be6ca485436a8d95067e855b74439c7552b4cf9f'
   name 'Cockatrice'
   homepage 'http://www.woogerworks.com/'
 
