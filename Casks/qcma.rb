@@ -5,7 +5,7 @@ cask 'qcma' do
   # github.com/codestation was verified as official when first introduced to the cask
   url "https://github.com/codestation/qcma/releases/download/v#{version}/Qcma_#{version}.dmg"
   appcast 'https://github.com/codestation/qcma/releases.atom',
-          checkpoint: 'c044a6988f1ca7d34301003b44d076ccccd63dd74fdbd561520586bee02fe328'
+          checkpoint: '46020775f9b0d28815e6f3183d93df722336dd39334fd68d8ad5442740f43dfe'
   name 'Qcma'
   homepage 'https://codestation.github.io/qcma/'
 
