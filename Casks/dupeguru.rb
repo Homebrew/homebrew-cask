@@ -4,7 +4,7 @@ cask 'dupeguru' do
 
   url "https://download.hardcoded.net/dupeguru_osx_#{version.dots_to_underscores}.dmg"
   appcast 'https://www.hardcoded.net/updates/dupeguru.appcast',
-          checkpoint: '45e83e6d46bbdec99cd4c9701c54195268d79d1507bd933ad40991d48fb6502f'
+          checkpoint: '805361d6344084dfdeb21be5e30a5b001054967320fa6e06afc5ba431d084a12'
   name 'dupeGuru'
   homepage 'https://www.hardcoded.net/dupeguru/'
 
