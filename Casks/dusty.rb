@@ -4,7 +4,7 @@ cask 'dusty' do
 
   url "https://github.com/gamechanger/dusty/releases/download/#{version}/dusty.tar.gz"
   appcast 'https://github.com/gamechanger/dusty/releases.atom',
-          checkpoint: 'f91aefdc855b9b5f5534fb9c411311bad195cecb0df2796a43c79c66a6453abc'
+          checkpoint: '09f746fb06653b90bc85735011b73d0a1b1509a703f26114a5f36caba7849317'
   name 'Dusty'
   homepage 'https://github.com/gamechanger/dusty'
 
