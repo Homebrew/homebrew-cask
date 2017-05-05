@@ -5,7 +5,7 @@ cask 'copyq' do
   # github.com/hluk/CopyQ was verified as official when first introduced to the cask
   url "https://github.com/hluk/CopyQ/releases/download/v#{version}/CopyQ.dmg"
   appcast 'https://github.com/hluk/CopyQ/releases.atom',
-          checkpoint: '1ad7aec7320212e20a34f48f9e80eda9aadf5df2a1c07c02d0c289f042de5030'
+          checkpoint: 'fccae631ca62f9ea00a3e5ccb32097fb90ec8f04ce5f24d2f0b00ddbe0192f19'
   name 'CopyQ'
   homepage 'https://hluk.github.io/CopyQ/'
 
