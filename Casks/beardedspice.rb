@@ -4,7 +4,7 @@ cask 'beardedspice' do
 
   url "https://github.com/beardedspice/beardedspice/releases/download/v#{version}/BeardedSpice-#{version}.zip"
   appcast 'https://github.com/beardedspice/beardedspice/releases.atom',
-          checkpoint: '098d652f3207d906163f005a6987f2076710fdaf8d20af3dde03808d0a18e50f'
+          checkpoint: 'b580811eb86d4441992912a85bbdd5802fb62b7cbac85144de4b4a1b50bcbaf3'
   name 'BeardedSpice'
   homepage 'https://github.com/beardedspice/beardedspice/'
 
