@@ -101,7 +101,6 @@
   "synology-photo-station-uploader": "caskroom/drivers",
   "synologyeiauthenticator": "caskroom/drivers",
   "terraform": "homebrew/core",
-  "tomtom-mysports-connect": "caskroom/drivers",
   "unifi-controller": "caskroom/drivers",
   "vault": "homebrew/core",
   "volatility": "homebrew/core",
