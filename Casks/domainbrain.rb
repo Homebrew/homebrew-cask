@@ -5,7 +5,7 @@ cask 'domainbrain' do
   # s3.amazonaws.com/joeworkman_downloads was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/joeworkman_downloads/DomainBrain.zip'
   appcast "https://domainbrainapp.com/appcast_v#{version.major}.xml",
-          checkpoint: '28cdbb02d6f2daf21a5451e6c176445625b5d8842572f6a92fb348454c4b11e7'
+          checkpoint: 'e38e9b967c88762e504ef9afaedece6e944d77ad0680ad2703aa00443fe20f1e'
   name 'DomainBrain'
   homepage 'https://domainbrainapp.com/'
 
