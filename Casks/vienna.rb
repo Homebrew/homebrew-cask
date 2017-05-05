@@ -14,6 +14,8 @@ cask 'vienna' do
   zap delete: [
                 '~/Library/Application Support/Vienna',
                 '~/Library/Caches/uk.co.opencommunity.vienna2',
+                '~/Library/Cookies/uk.co.opencommunity.vienna2.binarycookies',
                 '~/Library/Preferences/uk.co.opencommunity.vienna2.plist',
+                '~/Library/Saved Application State/uk.co.opencommunity.vienna2.savedState',
               ]
 end
