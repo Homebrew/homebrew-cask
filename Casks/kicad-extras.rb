@@ -19,9 +19,7 @@ cask 'kicad-extras' do
 
   uninstall_preflight do
     FileUtils.cd '/Library/Application Support/kicad/' do
-      unless File.exist?('modules.github')
-        FileUtils.mv 'modules', 'modules.github'
-      end
+      FileUtils.mv 'modules', 'modules.github' unless File.exist?('modules.github')
     end
   end
 
