@@ -11,4 +11,13 @@ cask 'sip' do
   depends_on macos: '>= :el_capitan'
 
   app 'Sip.app'
+
+  zap delete: [
+                '~/Library/Application Support/Sip',
+                '~/Library/Application Support/io.sipapp.Sip-paddle',
+                '~/Library/Caches/io.sipapp.Sip-paddle',
+                '~/Library/Cookies/io.sipapp.Sip-paddle.binarycookies',
+                '~/Library/Preferences/io.sipapp.Sip-paddle.plist',
+                '~/Library/Saved Application State/io.sipapp.Sip-paddle.savedState',
+              ]
 end
