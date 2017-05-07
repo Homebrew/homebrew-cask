@@ -10,4 +10,13 @@ cask 'goofy' do
   homepage 'http://www.goofyapp.com/'
 
   app 'Goofy.app'
+
+  zap delete: [
+                '~/Library/Application Support/goofy-core',
+                '~/Library/Caches/cc.buechele.Goofy',
+                '~/Library/Caches/cc.buechele.Goofy.ShipIt',
+                '~/Library/Preferences/cc.buechele.Goofy.helper.plist',
+                '~/Library/Preferences/cc.buechele.Goofy.plist',
+                '~/Library/Saved Application State/cc.buechele.Goofy.savedState',
+              ]
 end
