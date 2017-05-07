@@ -4,7 +4,7 @@ cask 'easysimbl' do
 
   url "https://github.com/norio-nomura/EasySIMBL/releases/download/EasySIMBL-#{version}/EasySIMBL-#{version}.zip"
   appcast 'https://github.com/norio-nomura/EasySIMBL/releases.atom',
-          checkpoint: 'd4dbce66da553b7cd56a005c0d6e154f87ffe8bf0728b530e3a18b4f00915572'
+          checkpoint: '3c41b4f16d41f691e69c6f465d6bd4b67129aeca26d037268019673b611c8f63'
   name 'EasySIMBL'
   homepage 'https://github.com/norio-nomura/EasySIMBL'
 

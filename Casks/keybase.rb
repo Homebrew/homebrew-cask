@@ -17,11 +17,32 @@ cask 'keybase' do
                    args: ["--app-path=#{appdir}/Keybase.app", '--run-mode=prod', '--timeout=10']
   end
 
-  uninstall_preflight do
-    if system_command('launchctl', args: ['list']).stdout =~ %r{/^\d+.*keybase.Electron/}
-      system_command 'killall', args: ['-kill', 'Keybase']
-    end
-    system_command "#{appdir}/Keybase.app/Contents/SharedSupport/bin/keybase",
-                   args: ['uninstall']
-  end
+  uninstall launchctl:  'keybase.Helper',
+            login_item: 'Keybase',
+            signal:     [
+                          ['TERM', 'keybase.Electron'],
+                          ['TERM', 'keybase.ElectronHelper'],
+                          ['KILL', 'keybase.Electron'],
+                          ['KILL', 'keybase.ElectronHelper'],
+                        ],
+            script:     {
+                          executable: "#{appdir}/Keybase.app/Contents/SharedSupport/bin/keybase",
+                          args:       ['uninstall'],
+                        }
+
+  zap delete: [
+                '~/Library/Application Support/Keybase',
+                '~/Library/Caches/Keybase',
+                '~/Library/Group Containers/keybase',
+                '~/Library/Logs/Keybase.app.log',
+                '~/Library/Logs/keybase.kbfs.log',
+                '~/Library/Logs/keybase.service.log',
+                '~/Library/Logs/keybase.start.log',
+                '~/Library/Logs/keybase.updater.log',
+                '~/Library/Preferences/keybase.Electron.plist',
+                '~/Library/Preferences/keybase.ElectronHelper.plist',
+                '/Library/Logs/keybase.system.log',
+                '/Library/PrivilegedHelperTools/keybase.Helper',
+              ],
+      rmdir:  '/keybase'
 end

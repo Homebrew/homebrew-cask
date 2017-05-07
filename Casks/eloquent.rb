@@ -4,7 +4,7 @@ cask 'eloquent' do
 
   url "https://github.com/mdbergmann/Eloquent/releases/download/#{version}/Eloquent-#{version}.app.zip"
   appcast 'https://github.com/mdbergmann/Eloquent/releases.atom',
-          checkpoint: '6e60338304dbce613859c0883d191d7ec2dc81e8fec7bb431c6f05818601c994'
+          checkpoint: 'fb7fb116ea130507dc6341b97a11985ed535af69b9712f699a711db9c9b6f57c'
   name 'Eloquent'
   homepage 'https://github.com/mdbergmann/Eloquent'
 

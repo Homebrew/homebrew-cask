@@ -5,7 +5,7 @@ cask 'beaker-electron' do
   # d299yghl10frh5.cloudfront.net was verified as official when first introduced to the cask
   url "https://d299yghl10frh5.cloudfront.net/beaker-notebook-#{version}-electron-mac.dmg"
   appcast 'https://github.com/twosigma/beakerx/releases.atom',
-          checkpoint: '31c52c046703cf1719ff51b52b7f886834f46f7dfb17b3ee648c66786e978263'
+          checkpoint: 'a66b88ef479e3a664e0591c30517386bc4d5e4e14a4b0294be303f6595189072'
   name 'Beaker Electron'
   homepage 'http://beakernotebook.com/'
 

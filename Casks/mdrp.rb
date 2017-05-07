@@ -1,6 +1,6 @@
 cask 'mdrp' do
-  version '6.1.3'
-  sha256 '710f9a4693013b6fd8b8badcde4695819e9b827e689c13826acf099f4f73dfe0'
+  version '7.0.0'
+  sha256 '3b7caa984db9b9bd4400c25fa8c4216374106983cc47936030de949ad7923433'
 
   url "http://www.macdvdripperpro.com/MDRP_v#{version.no_dots}.zip"
   appcast 'https://www.macdvdripperpro.com/mdrp_sparkle5.xml',

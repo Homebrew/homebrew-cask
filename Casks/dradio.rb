@@ -4,7 +4,7 @@ cask 'dradio' do
 
   url "http://dradio.me/updates/dRadio-#{version.sub(%r{.*_}, '')}.zip"
   appcast 'http://dradio.me/updates/appcast.xml',
-          checkpoint: '8015cab2f43ad05aeff7b6cab2151b77878ec30663079b9c61abce71fa2b617d'
+          checkpoint: 'b4b01903b1b1839ffa08a26e8f31c0ca7070d8743da6d1870906f649b57c1cbb'
   name 'dRadio'
   homepage 'http://dradio.me/'
 

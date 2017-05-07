@@ -4,11 +4,20 @@ cask 'sip' do
 
   url 'http://sipapp.io/download/sip.dmg'
   appcast 'http://sipapp.io/sparkle/sip.xml',
-          checkpoint: 'ed62453dea14d74753b6a56f2fcc933b459a9af036dee02adcfaa187ebe7e4bb'
+          checkpoint: '11a2777cc30899fc9ac3299cc1590180a64c342b07b6e5e32724a6187b5f7125'
   name 'Sip'
   homepage 'https://sipapp.io/'
 
   depends_on macos: '>= :el_capitan'
 
   app 'Sip.app'
+
+  zap delete: [
+                '~/Library/Application Support/Sip',
+                '~/Library/Application Support/io.sipapp.Sip-paddle',
+                '~/Library/Caches/io.sipapp.Sip-paddle',
+                '~/Library/Cookies/io.sipapp.Sip-paddle.binarycookies',
+                '~/Library/Preferences/io.sipapp.Sip-paddle.plist',
+                '~/Library/Saved Application State/io.sipapp.Sip-paddle.savedState',
+              ]
 end

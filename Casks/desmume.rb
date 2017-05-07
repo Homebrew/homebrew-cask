@@ -4,7 +4,7 @@ cask 'desmume' do
 
   url "https://downloads.sourceforge.net/desmume/desmume-#{version}-mac.dmg"
   appcast 'https://sourceforge.net/projects/desmume/rss',
-          checkpoint: '996ce5b97e3b872cd79f4b5b7ba14f90468d2f421f4d981b4eff049d026b378a'
+          checkpoint: 'eb8e74863353054c3c3a92b7e0fc05dc71f77276187e70ddd629c01a43ff08d1'
   name 'DeSmuME'
   homepage 'https://sourceforge.net/projects/desmume/'
 
