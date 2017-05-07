@@ -4,7 +4,7 @@ cask 'emojify' do
 
   url "https://github.com/Haroenv/emojify-service/archive/v#{version}.zip"
   appcast 'https://github.com/Haroenv/emojify-service/releases.atom',
-          checkpoint: 'd19588f51bfb615eb77bead4deb04eb8871dc320bc3d934538f52d212f394ad1'
+          checkpoint: '995ef5406f625566150fe2fd749e12fd6914978102e8919ea0a1398e5e0b6770'
   name 'Emojify Service'
   homepage 'https://github.com/Haroenv/emojify-service'
 
