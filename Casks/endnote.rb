@@ -2,9 +2,11 @@ cask 'endnote' do
   version :latest
   sha256 :no_check
 
-  url 'http://endnote.com/x7/EndNoteX7Installer.dmg'
+  url 'http://download.endnote.com/downloads/X8/EndNoteX8Installer.dmg'
   name 'EndNote'
   homepage 'http://endnote.com/'
 
-  app 'EndNote X7/EndNote X7.app'
+  container nested: 'Install EndNote X8.app/Contents/Resources/EndNote.zip'
+
+  suite 'EndNote X8'
 end
