@@ -15,7 +15,9 @@ cask 'monodraw' do
   end
 
   zap delete: [
-                '~/Library/Preferences/com.helftone.monodraw.plist',
+                '~/Library/Application Support/com.helftone.monodraw',
                 '~/Library/Caches/com.helftone.monodraw',
+                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.helftone.monodraw.help',
+                '~/Library/Preferences/com.helftone.monodraw.plist',
               ]
 end
