@@ -4,7 +4,7 @@ cask 'ramme' do
 
   url "https://github.com/terkelg/ramme/releases/download/v#{version}/Ramme-#{version}.dmg"
   appcast 'https://github.com/terkelg/ramme/releases.atom',
-          checkpoint: '5d776a973b82369008f319d2cec1189c0114116abb62e54246174a62fc1ecb8c'
+          checkpoint: '575b457921467cfab492e4086c33d1b7d96a79180f921567139cf71ab1885a18'
   name 'Ramme'
   homepage 'https://github.com/terkelg/ramme/'
 
