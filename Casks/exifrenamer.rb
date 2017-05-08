@@ -4,7 +4,7 @@ cask 'exifrenamer' do
 
   url 'http://www.qdev.de/downloads/files/ExifRenamer.dmg'
   appcast 'http://www.qdev.de/versions/ExifRenamer.txt',
-          checkpoint: 'eb01a4e8e8922406f15a22cadc3fae28d4f513afe11b4734788eb2ea73cf034e'
+          checkpoint: '06e19dead69dcc16bc573cc9f24b68b69907f4cfd4afb9d70372cc6b462a9862'
   name 'ExifRenamer'
   homepage 'https://www.qdev.de/?location=mac/exifrenamer&forcelang=en'
 
