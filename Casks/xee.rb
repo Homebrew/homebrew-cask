@@ -7,4 +7,11 @@ cask 'xee' do
   homepage 'https://xee.c3.cx/'
 
   app 'Xee³.app'
+
+  zap delete: [
+                '~/Library/Application Support/Xee3',
+                '~/Library/Caches/cx.c3.Xee3',
+                '~/Library/Cookies/cx.c3.Xee3.binarycookies',
+                '~/Library/Preferences/cx.c3.Xee3.plist',
+              ]
 end
