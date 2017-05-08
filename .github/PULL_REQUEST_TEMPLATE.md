@@ -5,6 +5,8 @@ After making all changes to the cask:
 - [ ] `brew cask audit --download {{cask_file}}` is error-free.
 - [ ] `brew cask style --fix {{cask_file}}` reports no offenses.
 - [ ] The commit message includes the cask’s name and version.
+- [ ] `sha256` was updated, but `version` remained the same.
+      [Post a link to a public confirmation by the developer.][version-checksum]:
 
 Additionally, **if adding a new cask**:
 
@@ -19,3 +21,4 @@ Additionally, **if adding a new cask**:
 [open pull requests]: https://github.com/caskroom/homebrew-cask/pulls
 [closed issues]: https://github.com/caskroom/homebrew-cask/issues?q=is%3Aissue+is%3Aclosed
 [the correct repo]: https://github.com/caskroom/homebrew-cask/blob/master/doc/development/adding_a_cask.md#finding-a-home-for-your-cask
+[version-checksum]: https://github.com/caskroom/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/sha256.md#updating-the-sha256
