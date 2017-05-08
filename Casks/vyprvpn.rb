@@ -7,4 +7,15 @@ cask 'vyprvpn' do
   homepage 'https://www.goldenfrog.com/vyprvpn'
 
   app 'VyprVPN.app'
+
+  uninstall quit: 'com.goldenfrog.VyprVPN*'
+
+  zap delete: [
+                '/Library/LaunchDaemons/vyrpvpnservice.plist',
+                '/Library/PrivilegedHelperTools/vyprvpnservice',
+                '~/Library/Caches/com.goldenfrog.VyprVPN',
+                '~/Library/LaunchAgents/com.goldenfrog.VyprVPNUserAgent.plist',
+                '~/Library/Logs/GoldenFrog/VyprVPN.log',
+                '~/Library/Preferences/com.goldenfrog.VyprVPN.plist',
+              ]
 end
