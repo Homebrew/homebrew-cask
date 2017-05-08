@@ -4,7 +4,7 @@ cask 'ethereum-wallet' do
 
   url "https://github.com/ethereum/mist/releases/download/v#{version}/Ethereum-Wallet-macosx-#{version.dots_to_hyphens}.dmg"
   appcast 'https://github.com/ethereum/mist/releases.atom',
-          checkpoint: 'fe2fc14549a6c22d63eb1df823db47f9cd94bbd4b2cfa28091ecac3caf992bf4'
+          checkpoint: 'f3d170f13cc1de0500b446c9d9cafc59279cd4f9d4214dc71b422191c725641d'
   name 'Ethereum Wallet'
   homepage 'https://github.com/ethereum/mist'
 
