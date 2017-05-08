@@ -5,7 +5,7 @@ cask 'radiant-player' do
   # github.com/radiant-player/radiant-player-mac was verified as official when first introduced to the cask
   url "https://github.com/radiant-player/radiant-player-mac/releases/download/v#{version}/radiant-player-v#{version}.zip"
   appcast 'https://github.com/radiant-player/radiant-player-mac/releases.atom',
-          checkpoint: '548ec4c8abdfacc29f8bcfe70b12d4b00b5bed6b21d7f27b1eeaffd9e23cc65a'
+          checkpoint: 'bcca0da37fe819e29830731a7a020df199a6d49fb11c3e1c7c8135dd6a7b0707'
   name 'Radiant Player'
   homepage 'https://radiant-player.github.io/radiant-player-mac/'
 
