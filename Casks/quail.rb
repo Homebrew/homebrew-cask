@@ -4,7 +4,7 @@ cask 'quail' do
 
   url "https://github.com/1000ch/quail/releases/download/v#{version}/Quail-macos-v#{version}.zip"
   appcast 'https://github.com/1000ch/quail/releases.atom',
-          checkpoint: 'd20a216591ea6ba084feb625f144aaee83781ca1ede0af3eef46454d866b12c3'
+          checkpoint: 'd2253c80808e2aa825a9dcfc69df36252653ef250e422fa8d5b8b05b23fa9f71'
   name 'Quail'
   homepage 'https://github.com/1000ch/quail'
 
