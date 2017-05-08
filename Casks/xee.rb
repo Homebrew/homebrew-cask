@@ -9,7 +9,7 @@ cask 'xee' do
   app 'Xee³.app'
 
   zap delete: [
-                '~/Library/Application Support/Xee3',
+                '~/Library/Application Support/Xee³',
                 '~/Library/Caches/cx.c3.Xee3',
                 '~/Library/Cookies/cx.c3.Xee3.binarycookies',
                 '~/Library/Preferences/cx.c3.Xee3.plist',
