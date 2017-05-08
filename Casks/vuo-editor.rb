@@ -4,7 +4,7 @@ cask 'vuo-editor' do
 
   url "https://vuo.org/sites/default/files/vuo-#{version}-editor.zip"
   appcast 'https://vuo.org/releases.rss',
-          checkpoint: 'dc6caa34dfc4f521ff59a780b3f9f606b26d328444d69641c73f42769984cf76'
+          checkpoint: 'f121286a6f0bc023ec94e285ae08ae5fa7a8492f77eab0363d930a7756f989fa'
   name 'Vuo'
   homepage 'https://vuo.org/'
 
