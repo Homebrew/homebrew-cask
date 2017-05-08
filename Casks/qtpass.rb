@@ -5,7 +5,7 @@ cask 'qtpass' do
   # github.com/IJHack/qtpass was verified as official when first introduced to the cask
   url "https://github.com/IJHack/qtpass/releases/download/v#{version}/qtpass-#{version}.dmg"
   appcast 'https://github.com/IJHack/qtpass/releases.atom',
-          checkpoint: '1cc4e299e99dd1fd06f1dbee73f20132aad8e6d4f382e5e80cef9ca624e73c89'
+          checkpoint: '56021f84c929bfa5afc5053d46090c6b92cb94d494c12809255b2072abf373ed'
   name 'QtPass'
   homepage 'https://qtpass.org/'
 
