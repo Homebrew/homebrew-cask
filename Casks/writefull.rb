@@ -5,7 +5,7 @@ cask 'writefull' do
   # d3aw1w08kaciwn.cloudfront.net was verified as official when first introduced to the cask
   url "https://d3aw1w08kaciwn.cloudfront.net/#{version}/Writefull.dmg"
   appcast 'https://writefullapp.com/js/download-urls.js',
-          checkpoint: 'c264817170cd61498505d1f26cb84a86688751fb3fccc1b47e044aba5f29e0fd'
+          checkpoint: '76d2df0a07491e39623b71e3183612afc49f36e49e4eef2caf0187c549ed935c'
   name 'Writefull'
   homepage 'https://writefullapp.com/'
 
