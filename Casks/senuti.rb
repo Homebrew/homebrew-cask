@@ -4,7 +4,7 @@ cask 'senuti' do
 
   url "https://www.fadingred.com/files/senuti/senuti_#{version}.zip"
   appcast 'https://www.fadingred.com/senuti/updates.xml',
-          checkpoint: 'd7e54d6b330e2fe6233898038cbe4896dd0e04d3a4b8b655d878276dd158395b'
+          checkpoint: '76b70a6c0e38d31be0c64337b425ebb2e7bd953b8e10c7287820413091740e74'
   name 'Senuti'
   homepage 'https://www.fadingred.com/senuti/'
 
