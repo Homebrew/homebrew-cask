@@ -17,7 +17,6 @@ cask 'avira-vpn' do
                          'org.phantomDaemon',
                          'org.openvpn',
                        ],
-
             delete:    '/Applications/Avira Phantom VPN.app'
 
   zap delete: [
