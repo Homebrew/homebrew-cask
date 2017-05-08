@@ -4,7 +4,7 @@ cask 'shady' do
 
   url "http://instinctivecode.com/shady/shady_#{version}.zip"
   appcast 'http://instinctivecode.com/appcasts/shady.xml',
-          checkpoint: 'efb197963d2fd0a759beea049a8d35db8eb8733a810518f8327db98a34492ff5'
+          checkpoint: '6baf05284e288255a3d703ee4f1b4c248269661da205c0e4e88f8aa6052e3072'
   name 'Shady'
   homepage 'http://instinctivecode.com/shady/'
 
