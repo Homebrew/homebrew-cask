@@ -4,7 +4,7 @@ cask 'mist' do
 
   url "https://github.com/ethereum/mist/releases/download/v#{version}/Mist-macosx-#{version.dots_to_hyphens}.dmg"
   appcast 'https://github.com/ethereum/mist/releases.atom',
-          checkpoint: 'f13dc4c770931e8f8805d584c8fb6f21461a5757b31e0f9fca50f07ac73a12f5'
+          checkpoint: 'f3d170f13cc1de0500b446c9d9cafc59279cd4f9d4214dc71b422191c725641d'
   name 'Mist'
   homepage 'https://github.com/ethereum/mist'
 
