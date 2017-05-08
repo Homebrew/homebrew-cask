@@ -4,7 +4,7 @@ cask 'wordpresscom' do
 
   url "https://public-api.wordpress.com/rest/v1.1/desktop/osx/download?type=app&ref=update&version=#{version}"
   appcast 'https://public-api.wordpress.com/rest/v1.1/desktop/osx/version?compare=0.1.0&channel=stable',
-          checkpoint: 'a3105289fe7f1aec303176ae98d6213774ee21cd83ed732a7002301d29839b50'
+          checkpoint: '7ef15118771d0d3f3a7fa3120c86f3d440b1284afefb5cbcbbe2f87d32fffeb1'
   name 'WordPress.com'
   homepage 'https://apps.wordpress.com/desktop/'
 
