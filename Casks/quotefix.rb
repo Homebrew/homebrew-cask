@@ -4,7 +4,7 @@ cask 'quotefix' do
 
   url "https://github.com/robertklep/quotefixformac/files/#{version.after_comma}/QuoteFix-#{version.before_comma}.zip"
   appcast 'https://github.com/robertklep/quotefixformac/releases.atom',
-          checkpoint: 'f95a33fb61ed287c57945f5c64258674d372a49411b5b47048dad20a284ca316'
+          checkpoint: '0e2e2db147a03e4697a5138374ec61ba4182ce45e33cc3fb3d93b7242ac9a9b7'
   name 'QuoteFix'
   homepage 'https://github.com/robertklep/quotefixformac'
 
