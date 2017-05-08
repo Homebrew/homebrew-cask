@@ -4,7 +4,7 @@ cask 'together' do
 
   url "https://reinventedsoftware.com/together/downloads/Together_#{version}.dmg"
   appcast "https://reinventedsoftware.com/together/downloads/Together#{version.major}.xml",
-          checkpoint: '4c38c1d6a8add7cae337594f77bc9c073d2f8bd21ca945003ef3f69ae341134c'
+          checkpoint: 'a2bbf6732a52265b8cd5b1c0aade0a4ed076e479950157b965e35a8e35babc50'
   name 'Together'
   homepage 'https://reinventedsoftware.com/together/'
 
