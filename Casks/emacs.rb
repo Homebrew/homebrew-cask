@@ -8,7 +8,8 @@ cask 'emacs' do
   name 'Emacs'
   homepage 'https://emacsformacosx.com/'
 
-  conflicts_with formula: 'emacs', 'ctags'
+  conflicts_with formula: 'emacs'
+  conflicts_with formula: 'ctags'
 
   app 'Emacs.app'
   binary "#{appdir}/Emacs.app/Contents/MacOS/Emacs", target: 'emacs'
