@@ -4,7 +4,7 @@ cask 'felony' do
 
   url "https://github.com/henryboldi/felony/releases/download/#{version}/Felony-#{version}-mac.zip"
   appcast 'https://github.com/henryboldi/felony/releases.atom',
-          checkpoint: '17e205d3176417046658cb1c3e48d388334ba10c8213faa8fcf0347e49c1084b'
+          checkpoint: '5e48d2c9a7fbeb0249fb513c7fb03d044a42db57a4296fd6626861f3151eecb9'
   name 'Felony'
   homepage 'https://github.com/henryboldi/felony'
 
