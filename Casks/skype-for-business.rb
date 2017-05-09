@@ -14,7 +14,7 @@ cask 'skype-for-business' do
                           'com.microsoft.SkypeForBusiness',
                           'com.microsoft.SkypeForBusiness.MeetingJoinPlugin',
                           'com.microsoft.package.Microsoft_AutoUpdate.app',
-                        ]
+                        ],
             login_item: 'Skype for Business'
 
   zap delete: [
