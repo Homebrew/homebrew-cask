@@ -4,9 +4,17 @@ cask 'paparazzi' do
 
   url "https://derailer.org/paparazzi/Paparazzi!%20#{version}.dmg"
   appcast 'https://derailer.org/paparazzi/appcast/',
-          checkpoint: 'dadd0160957d37476f8b45b79442213ac8e8621918467c0ca4c02c328840bc5a'
+          checkpoint: '1673362065a3a18036832bdc850b40b24b44bfb1188739b134f9dcabf48c6fa1'
   name 'Paparazzi!'
   homepage 'https://derailer.org/paparazzi/'
 
   app 'Paparazzi!.app'
+
+  zap delete: [
+                '~/Library/Application Support/Paparazzi!',
+                '~/Library/Caches/org.derailer.Paparazzi',
+                '~/Library/Cookies/org.derailer.Paparazzi.binarycookies',
+                '~/Library/Preferences/org.derailer.Paparazzi.plist',
+                '~/Library/Saved Application State/org.derailer.Paparazzi.savedState',
+              ]
 end
