@@ -4,7 +4,7 @@ cask 'finicky' do
 
   url "https://github.com/johnste/finicky/releases/download/v#{version}/Finicky.zip"
   appcast 'https://github.com/johnste/finicky/releases.atom',
-          checkpoint: '4bcb25e5a86bc228c2abbf30df295cdfeb992e4a7038e2d2f6380ec793e75e29'
+          checkpoint: 'e4ad5370cc77f08af5be5ab0d7bab3b1d2f2b0cbd61390dc20c0bfeaf8389533'
   name 'Finicky'
   homepage 'https://github.com/johnste/finicky'
 
