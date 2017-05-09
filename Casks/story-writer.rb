@@ -1,8 +1,11 @@
 cask 'story-writer' do
-  version '1.10.0'
-  sha256 '23c0774816f5d3c12a61ec7f84983fd5505eea2b329914fb78c3d218cb6b5ccf'
+  version '3.0.1'
+  sha256 '99778c54d8c495dc5d5d499806e4bfbd5863e928d94c53b5b34f142dfeb81fa7'
 
-  url "http://soft.xiaoshujiang.com/version/Story-writer-v#{version}/Story-writer-osx64.zip"
+  # github.com/suziwen/markdownxiaoshujiang was verified as official when first introduced to the cask
+  url "https://github.com/suziwen/markdownxiaoshujiang/releases/download/v#{version}/Story-writer-osx64.zip"
+  appcast 'https://github.com/suziwen/markdownxiaoshujiang/releases.atom',
+          checkpoint: '970b077bc463a07a9823a343b3eff2ee20b4f6f3799fd5435f3be559e1847484'
   name 'Story Writer'
   homepage 'http://soft.xiaoshujiang.com/'
 
