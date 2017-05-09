@@ -10,9 +10,11 @@ cask 'skype-for-business' do
 
   pkg "SkypeForBusinessInstaller-#{version}.pkg"
 
-  uninstall pkgutil:    'com.microsoft.SkypeForBusiness',
-                        'com.microsoft.SkypeForBusiness.MeetingJoinPlugin',
-                        'com.microsoft.package.Microsoft_AutoUpdate.app',
+  uninstall pkgutil:    [
+                          'com.microsoft.SkypeForBusiness',
+                          'com.microsoft.SkypeForBusiness.MeetingJoinPlugin',
+                          'com.microsoft.package.Microsoft_AutoUpdate.app',
+                        ]
             login_item: 'Skype for Business'
 
   zap delete: [
