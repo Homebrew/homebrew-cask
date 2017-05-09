@@ -9,9 +9,15 @@ cask 'asciidocfx' do
   name 'AsciidocFX'
   homepage 'http://www.asciidocfx.com/'
 
-  installer manual: 'AsciidocFX Installer.app'
+  installer script: {
+                      executable: 'AsciidocFX Installer.app/Contents/MacOS/JavaApplicationStub',
+                      args:       ['-q'],
+                      sudo:       true,
+                    }
 
   uninstall script: {
-                      executable: '/Applications/AsciidocFX/AsciidocFX Uninstaller.app',
+                      executable: '/Applications/AsciidocFX/AsciidocFX Uninstaller.app/Contents/MacOS/JavaApplicationStub',
+                      args:       ['-q'],
+                      sudo:       true,
                     }
 end
