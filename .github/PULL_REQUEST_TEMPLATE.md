@@ -5,9 +5,13 @@ After making all changes to the cask:
 - [ ] `brew cask audit --download {{cask_file}}` is error-free.
 - [ ] `brew cask style --fix {{cask_file}}` reports no offenses.
 - [ ] The commit message includes the cask’s name and version.
-- [ ] [`sha256` changed but `version` didn’t][version-checksum]. Link to public confirmation by the developer:
 
-Additionally, **if adding a new cask**:
+Additionally, if **updating a cask**:
+
+- [ ] [If the `sha256` changed but the `version` didn’t][version-checksum], 
+      provide a link to public confirmation by the developer: {{link}}
+
+Additionally, if **adding a new cask**:
 
 - [ ] Named the cask according to the [token reference].
 - [ ] `brew cask install {{cask_file}}` worked successfully.
