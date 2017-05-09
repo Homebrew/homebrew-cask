@@ -4,7 +4,7 @@ cask 'fantastical' do
 
   url "http://cdn.flexibits.com/Fantastical_#{version}.zip"
   appcast 'https://flexibits.com/fantastical/appcast2.php',
-          checkpoint: 'e0e74a37ec16479898a465138189750007c208ed37fc5ab1ca4ef0deee7fca54'
+          checkpoint: '847b3c5ca9527f7cff6df617e21fe775852f7d180f1ed28d49021bccc1600512'
   name 'Fantastical'
   homepage 'https://flexibits.com/fantastical'
 

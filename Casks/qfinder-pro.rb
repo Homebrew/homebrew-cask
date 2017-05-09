@@ -4,7 +4,7 @@ cask 'qfinder-pro' do
 
   url "http://download.qnap.com/Storage/Utility/QNAPQfinderProMac-#{version}.dmg"
   appcast 'http://update.qnap.com/SoftwareRelease.xml',
-          checkpoint: '6c9a8e8468c537a19ad9c60d92f702045af614022fde70334c9692da11587362'
+          checkpoint: '8ab6972e9275ff089a556cae3207aa2582055a01d128955fa6002dbe3767d7ee'
   name 'Qnap Qfinder Pro'
   homepage 'https://www.qnap.com/en/utilities#utliity_5'
 

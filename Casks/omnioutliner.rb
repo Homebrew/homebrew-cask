@@ -1,8 +1,10 @@
 cask 'omnioutliner' do
-  version '5.0.2'
-  sha256 'be66619497a8c31f21ea790c24a53e41b9968957740d9f1c66ad774c57d71779'
+  version '5.0.3'
+  sha256 'e0d9e543b457efc059eba9875729ddd9196cd1c9edfc1092118ce38a0e2c4c0d'
 
   url "https://downloads.omnigroup.com/software/MacOSX/10.11/OmniOutliner-#{version}.dmg"
+  appcast "https://update.omnigroup.com/appcast/com.omnigroup.OmniOutliner#{version.major}",
+          checkpoint: '1d608a6b2dbbabbcfdbe92ddfbfc4ac531a5a4b9d8cdef0862dbda406784a8b0'
   name 'OmniOutliner'
   homepage 'https://www.omnigroup.com/omnioutliner/'
 
