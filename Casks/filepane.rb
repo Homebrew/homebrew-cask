@@ -3,7 +3,7 @@ cask 'filepane' do
   sha256 :no_check
 
   # dl.devmate.com/com.mymixapps.FilePane was verified as official when first introduced to the cask
-  url 'https://dl.devmate.com/com.mymixapps.FilePane/FilePane.dmg'
+  url 'http://dl.devmate.com/com.mymixapps.FilePane/FilePane.dmg'
   name 'FilePane'
   homepage 'https://mymixapps.com/filepane'
 
