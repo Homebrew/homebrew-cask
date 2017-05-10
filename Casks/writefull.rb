@@ -1,6 +1,6 @@
 cask 'writefull' do
-  version '3.0.0-beta17'
-  sha256 'da1a9e1d39512c275d57de7de1f01b08ff9132258b02e514d1bd86c388a0fd8c'
+  version '3.0.0-beta19'
+  sha256 '0b424a82bbf184661ca7f0dd6459a8248ccb643cf07855fadab1481e10445c8d'
 
   # d3aw1w08kaciwn.cloudfront.net was verified as official when first introduced to the cask
   url "https://d3aw1w08kaciwn.cloudfront.net/#{version}/Writefull.dmg"
