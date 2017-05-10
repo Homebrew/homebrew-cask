@@ -1,5 +1,5 @@
 cask 'soundcloud-downloader' do
-  version '2.7.2'
+  version '2.7.7'
   sha256 'fa43678ebedfd71edf3ee6972f824aa5f39b55f640e011b408a6e9b69878703b'
 
   url "http://black-burn.ch/scd/downloads/#{version.no_dots}/in/b"
