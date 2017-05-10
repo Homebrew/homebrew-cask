@@ -4,7 +4,7 @@ cask 'fluor' do
 
   url "https://github.com/Pyroh/Fluor/releases/download/#{version}/Fluor.#{version}.dmg"
   appcast 'https://github.com/Pyroh/Fluor/releases.atom',
-          checkpoint: 'dbc24234d57bfa5e8c6483d6443f2cb24c4f75aa4f22a717d1c0e177a74587d8'
+          checkpoint: '7a5dde65aa88f8554c8ccb64e7f148872c25e1cdcf9a5ade3c9c732958dc1b92'
   name 'Fluor'
   homepage 'https://github.com/Pyroh/Fluor/'
 

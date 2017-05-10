@@ -4,7 +4,7 @@ cask 'get-iplayer-automator' do
 
   url "https://github.com/GetiPlayerAutomator/get-iplayer-automator/releases/download/#{version}/GetiPlayerAutomator_#{version}.zip"
   appcast 'https://github.com/GetiPlayerAutomator/get-iplayer-automator/releases.atom',
-          checkpoint: '076b539e0eae2dd1a2d7ef485b1293eeeeaaaa456856e44b27374566835ef077'
+          checkpoint: '2ed72d317dc422061777add8be77af1b6e0625addb3b933aa57fbb504f193f00'
   name 'Get iPlayer Automator'
   homepage 'https://github.com/GetiPlayerAutomator/get-iplayer-automator'
 

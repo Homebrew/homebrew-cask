@@ -4,7 +4,7 @@ cask 'glyphish-color-changer' do
 
   url "https://github.com/glyphish/color-changer/releases/download/v#{version}/v#{version}.zip"
   appcast 'https://github.com/glyphish/color-changer/releases.atom',
-          checkpoint: 'ae9964f5d451cb548f65709fb622e85d731a95ec1f4c47ac753472da98ebe7b5'
+          checkpoint: '4bf58a8848e2bb9ba8b360b5a3275a55b6a30e1c7b4d22eb6bf391457b052891'
   name 'Glyphish Color Changer'
   homepage 'https://github.com/glyphish/color-changer'
 

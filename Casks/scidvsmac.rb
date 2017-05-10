@@ -4,7 +4,7 @@ cask 'scidvsmac' do
 
   url "https://downloads.sourceforge.net/scidvspc/ScidvsMac-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/scidvspc/rss',
-          checkpoint: '165fb2aa11d6d9cda49ea3b4a5d298d56ac0588ca40c21e9ec73ed429cca5a68'
+          checkpoint: '8454afedfcb03d752e66f18834e714798ba0f9407416be1a834958f4eb582fce'
   name 'Scid vs. Mac'
   homepage 'http://scidvspc.sourceforge.net/'
 

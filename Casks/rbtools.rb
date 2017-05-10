@@ -4,7 +4,7 @@ cask 'rbtools' do
 
   url "https://downloads.reviewboard.org/releases/RBTools/#{version.major_minor}/RBTools-#{version}.pkg"
   appcast 'https://www.reviewboard.org/docs/releasenotes/rbtools/',
-          checkpoint: 'c7386ff57deb321b44102fd8b26063846b0ce0095930b919977651f2569d0a7b'
+          checkpoint: '4543ec8bd3e4da722dbb82a9a33dcaf52419a193e13d9d8117f1b001223cc044'
   name 'RBTools'
   homepage 'https://www.reviewboard.org/docs/rbtools/0.7/'
 

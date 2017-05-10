@@ -4,7 +4,7 @@ cask 'steveschow-gfxcardstatus' do
 
   url "https://github.com/steveschow/gfxCardStatus/releases/download/v#{version}/gfxCardStatus.app.zip"
   appcast 'https://github.com/steveschow/gfxCardStatus/releases.atom',
-          checkpoint: '33d446605b692d858ffa9e512c2723ccfb13078c8a48fbd926adc042211ddc99'
+          checkpoint: 'd567b3d2bd83568e434fac95018230436e5c14ea832e30279e2a43a9815ef6f5'
   name 'gfxCardStatus'
   homepage 'https://github.com/steveschow/gfxCardStatus'
 

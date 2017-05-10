@@ -4,7 +4,7 @@ cask 'glyphish-gallery' do
 
   url "https://github.com/glyphish/gallery/releases/download/v#{version}/v#{version}.zip"
   appcast 'https://github.com/glyphish/gallery/releases.atom',
-          checkpoint: '5080b2af02fb290471ab0346ec602571e3773498b15f468e34a3b1fd98d33318'
+          checkpoint: '0e8ce7408a91638c531a8904c8bc6870abd6136166f0306d655f4f95ef096902'
   name 'Glyphish Gallery'
   homepage 'https://github.com/glyphish/gallery'
 

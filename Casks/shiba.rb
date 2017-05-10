@@ -4,7 +4,7 @@ cask 'shiba' do
 
   url "https://github.com/rhysd/Shiba/releases/download/v#{version}/Shiba-darwin-x64.zip"
   appcast 'https://github.com/rhysd/Shiba/releases.atom',
-          checkpoint: '3ad2a278d99e59b83997ec44725908669bc1153f2282a72de59d37ae234f1e85'
+          checkpoint: 'b9f739fd32d06d52e7e4d0a9e4d839fe002968972a1a6e2e4fa029acc9d067c8'
   name 'Shiba'
   homepage 'https://github.com/rhysd/Shiba/'
 

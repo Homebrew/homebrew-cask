@@ -4,7 +4,7 @@ cask 'semulov' do
 
   url 'https://www.kainjow.com/downloads/Semulov.zip'
   appcast 'https://kainjow.com/updates/semulov.xml',
-          checkpoint: '7bddcc2c76ef94366112266d6163429a022385c8609a7e196e5230a928cc32f5'
+          checkpoint: '38e4f99c745a53fc8791d8b127966eaad639e2730e247d7c1c9544f17bc8e7ff'
   name 'Semulov'
   homepage 'https://www.kainjow.com/'
 
