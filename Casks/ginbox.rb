@@ -4,7 +4,7 @@ cask 'ginbox' do
 
   url "https://github.com/chenasraf/gInbox/releases/download/#{version}/gInbox-#{version}.zip"
   appcast 'https://github.com/chenasraf/gInbox/releases.atom',
-          checkpoint: '78f329dc444e0861e35f0e6fa2010f86e2db3bde1e2588e16735684db04acc51'
+          checkpoint: '3a89225229a6a08abebe28b80cdf78946a22e59d23e4905c454e12ed4b34abee'
   name 'gInbox'
   name 'Inbox by Google'
   homepage 'https://github.com/chenasraf/gInbox'
