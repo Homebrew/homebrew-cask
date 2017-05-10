@@ -4,7 +4,7 @@ cask 'iboostup' do
 
   url 'https://www.iboostup.com/iboostup.dmg'
   appcast 'https://www.iboostup.com/updates',
-          checkpoint: 'ef359e1ee2d461e285517fc50650db354234423fb5a5a70b3dd0e81bae19414d'
+          checkpoint: '7637d243502d7e5d2325bdeaefacbf040edd1c739324fedffda4d6638d076dd9'
   name 'iBoostUp'
   homepage 'https://www.iboostup.com/'
 
