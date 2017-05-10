@@ -4,7 +4,7 @@ cask 'soqlxplorer' do
 
   url "http://www.pocketsoap.com/osx/soqlx/soqlXplorer_v#{version}.zip"
   appcast 'http://www.pocketsoap.com/osx/soqlx/appcast.xml',
-          checkpoint: 'a965965c2f744cc086797ed893491100c08efc8f4f6ed2e2f0063bf4774d5243'
+          checkpoint: '70205d0d804a6f29f27f8b52cc9f965456cbf8c41b2f46da0461dd5c6d840f11'
   name 'SoqlXplorer'
   homepage 'http://www.pocketsoap.com/osx/soqlx/'
 
