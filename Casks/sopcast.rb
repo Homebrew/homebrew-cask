@@ -7,7 +7,7 @@ cask 'sopcast' do
   appcast 'http://www.sopcast.org/download/mac.html',
           checkpoint: '673096d87f25ade59b657b1b5e389b702b61440727f68db2337ab0730185def9'
   name 'SopCast'
-  homepage 'http://www.sopcast.org/'
+  homepage 'http://www.sopcast.com/'
 
   app 'SopCast.app'
   binary "#{appdir}/SopCast.app/Contents/Resources/binaries/m32/sp-sc-auth"
