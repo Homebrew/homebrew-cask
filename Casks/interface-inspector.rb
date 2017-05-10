@@ -4,7 +4,7 @@ cask 'interface-inspector' do
 
   url "https://www.interface-inspector.com/download/Interface-Inspector-#{version}.zip"
   appcast 'https://www.interface-inspector.com/download/feed.xml',
-          checkpoint: 'bfb2eb4fb35aa4ce5db1124d7450af12915323d59b73161c9358e5c8f514d08e'
+          checkpoint: '5642874ee57e949e29925c92ebe3b6387bd5d162eec063c2e7e4c0e9d1d42752'
   name 'Interface Inspector'
   homepage 'https://www.interface-inspector.com/'
 
