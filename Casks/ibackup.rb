@@ -4,7 +4,7 @@ cask 'ibackup' do
 
   url "http://www.grapefruit.ch/iBackup/versions/iBackup%20#{version.major}.x/iBackup%20#{version}.dmg"
   appcast 'http://www.grapefruit.ch/iBackup/downloads.html',
-          checkpoint: '3f0bdd8f457ea60d548feda9c18e9dfedb74849470fa232dba8cb9e7dc4144a3'
+          checkpoint: '482b10adc3d2409583cbc9325863abe6d563b9d933e248cc44f504386da73794'
   name 'iBackup'
   homepage 'http://www.grapefruit.ch/iBackup/'
 
