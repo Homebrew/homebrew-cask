@@ -4,7 +4,7 @@ cask 'icolors' do
 
   url "https://www.fadingred.com/files/icolors/icolors_#{version}.zip"
   appcast 'http://www.fadingred.com/icolors/updates.xml',
-          checkpoint: '5b0763ad2b44c2b64c9fc2c6e225574e5a8bbb89730653def24e667fe615b7bd'
+          checkpoint: '753431d5bc996e38d4e83d77a7bbd11a3b93f4e2084a9261db6ad8d3bc6c6360'
   name 'iColors'
   homepage 'http://www.fadingred.com/icolors/'
 
