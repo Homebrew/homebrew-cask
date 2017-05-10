@@ -4,8 +4,8 @@ cask 'screens-connect' do
 
   # edovia.com was verified as official when first introduced to the cask
   url "https://download.edovia.com/screensconnect/ScreensConnect_#{version}.zip"
-  appcast 'https://updates.edovia.com/com.edovia.screens.connect.4.mac/appcast.xml',
-          checkpoint: '278cc7056cc914f6d5e555e584cf241e096d9138e0f9bda50fcd68aeed4e8b75'
+  appcast 'https://updates.devmate.com/com.edovia.Screens-Connect.xml',
+          checkpoint: 'da582d3160a5ec150a42260a318f0b007ec58173a05617a314804e461bd5ba2b'
   name 'Screens Connect'
   homepage 'https://screensconnect.com/'
 
