@@ -5,7 +5,7 @@ cask 'postgres' do
   # github.com/PostgresApp/PostgresApp was verified as official when first introduced to the cask
   url "https://github.com/PostgresApp/PostgresApp/releases/download/v#{version}/Postgres-#{version}.dmg"
   appcast 'https://github.com/PostgresApp/PostgresApp/releases.atom',
-          checkpoint: '00a7677b5ac292d1833dde2dcaf89f8c791d56546f6ea077ac3f8fcc44fd0e2d'
+          checkpoint: '69e7c2904c06dd4ef2f4467aef988ea6c6852f82279a0a4851fdb67f77d66c25'
   name 'Postgres'
   homepage 'https://postgresapp.com/'
 

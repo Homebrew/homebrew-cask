@@ -1,10 +1,10 @@
 cask 'handshaker' do
-  version '2.0.2'
-  sha256 'e45d5cebb66fa9ba2d676203cb161735e3506c757aa9544873b6702d79b361c2'
+  version '2.1.0'
+  sha256 'f337d070c79da0542e1728dab7a27c2eeccddf4aa4fa6475d8e77887ac3dfd36'
 
   url 'https://sf.smartisan.com/sf/release/download'
   appcast 'https://sf.smartisan.com/update.plist',
-          checkpoint: '14d3fb377ea85209d607a6cf78842160810667dbabe58f73ff92b5eca3a665e9'
+          checkpoint: '175bafc5f53c7d3c356088708285d308aceb73932b4a0a8fb72080b2c17dd1bd'
   name 'HandShaker'
   homepage 'http://www.smartisan.com/apps/'
 

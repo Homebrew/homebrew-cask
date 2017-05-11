@@ -4,7 +4,7 @@ cask 'hackmd' do
 
   url "https://github.com/hackmdio/hackmd-desktop/releases/download/v#{version}/HackMD-#{version}.dmg"
   appcast 'https://github.com/hackmdio/hackmd-desktop/releases.atom',
-          checkpoint: '5267ea53c9028a21d3eea4fc1576230fc0a54b531e0ddf961eefb8a8508edc5b'
+          checkpoint: '1ad1bec0cb8d094e1fe0d011ec3cb726264eedd7ef8287bac1aeb8b909f36eae'
   name 'HackMD'
   homepage 'https://github.com/hackmdio/hackmd-desktop'
 
