@@ -4,7 +4,7 @@ cask 'invisorql' do
 
   url "http://www.pozdeev.com/invisor/download/InvisorQL-#{version}.dmg"
   appcast 'http://www.pozdeev.com/invisor/changelog-ql.php',
-          checkpoint: '7f58ba19ad1422d0d949fc6d56ae24c623033e8b2fbadf5a1dae8509ed527ee6'
+          checkpoint: '09badd03c1cedf90e190c70e7a719740354360bf63f2e084bb1b8dd5bca105c4'
   name 'Invisor QuickLook Plug-In'
   homepage 'https://www.pozdeev.com/invisor/'
 
