@@ -4,7 +4,7 @@ cask 'fotomagico' do
 
   url "https://cdn.boinx.com/software/fotomagico/Boinx_FotoMagico_#{version.major}_#{version}.app.zip"
   appcast 'https://www.boinx.com/d/connect//histories/fotomagico',
-          checkpoint: '4d6df3a75a8c83c8504db84a99d5b94da07b0934bbffec43c6601500a00c0bcb'
+          checkpoint: '6163e011fc17f4335203652980ff318a7c616f74d78a516317cadbaa67ad7a0d'
   name 'FotoMagico'
   homepage 'https://www.boinx.com/fotomagico/'
 
