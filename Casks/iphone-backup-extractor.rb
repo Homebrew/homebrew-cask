@@ -4,7 +4,7 @@ cask 'iphone-backup-extractor' do
 
   url 'http://supercrazyawesome.com/downloads/iPhone%20Backup%20Extractor.app.zip'
   appcast 'http://supercrazyawesome.com/sparkle.xml',
-          checkpoint: 'dbed6231a752fb8fbdbab3956ffd48552ff2332333c01d682f1482fd982620cb'
+          checkpoint: '7ce7eba0039adda89d370eeece1d47ab05eb2bff78fea85383cb7f167b737369'
   name 'iPhone Backup Extractor'
   homepage 'http://supercrazyawesome.com/'
 
