@@ -8,14 +8,25 @@ cask 'vyprvpn' do
 
   app 'VyprVPN.app'
 
-  uninstall quit: 'com.goldenfrog.VyprVPN*'
+  uninstall quit:      'com.goldenfrog.VyprVPN*',
+            launchctl: [
+                         'vyprvpnservice',
+                         'com.goldenfrog.resourcewatchdog',
+                         'com.goldenfrog.VyprVPNUserAgent',
+                       ],
+            kext:      'com.goldenfrog.VyprVPNMalwareFilter'
 
-  zap delete: [
-                '/Library/LaunchDaemons/vyrpvpnservice.plist',
-                '/Library/PrivilegedHelperTools/vyprvpnservice',
-                '~/Library/Caches/com.goldenfrog.VyprVPN',
-                '~/Library/LaunchAgents/com.goldenfrog.VyprVPNUserAgent.plist',
-                '~/Library/Logs/GoldenFrog/VyprVPN.log',
-                '~/Library/Preferences/com.goldenfrog.VyprVPN.plist',
-              ]
+  zap delete:    [
+                   '/Library/LaunchDaemons/vyrpvpnservice.plist',
+                   '/Library/PrivilegedHelperTools/vyprvpnservice',
+                   '~/Library/Caches/com.goldenfrog.VyprVPN',
+                   '~/Library/LaunchAgents/com.goldenfrog.VyprVPNUserAgent.plist',
+                   '~/Library/Logs/GoldenFrog/VyprVPN.log',
+                   '~/Library/Preferences/com.goldenfrog.VyprVPN.plist',
+                 ],
+      kext:      [
+                   'net.sf.tuntaposx.tap',
+                   'net.sf.tuntaposx.tun',
+                 ],
+      launchctl: 'org.openvpn'
 end
