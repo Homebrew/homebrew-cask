@@ -5,7 +5,7 @@ cask 'fontforge' do
   # github.com/fontforge/fontforge was verified as official when first introduced to the cask
   url "https://github.com/fontforge/fontforge/releases/download/#{version}/FontForge-20161004-Mac.zip"
   appcast 'https://github.com/fontforge/fontforge/releases.atom',
-          checkpoint: '6546727c4b0560a20af0aaaaf22e2080fa63526c6ad29b14517acc2004a3c1af'
+          checkpoint: 'd6f82294326df6025cb352188bcc48ec0a1fba2beb3a18b7bd54602518598a9f'
   name 'FontForge'
   homepage 'https://fontforge.github.io/en-US/'
 
