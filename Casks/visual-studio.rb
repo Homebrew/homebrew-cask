@@ -9,9 +9,9 @@ cask 'visual-studio' do
   name 'Visual Studio for Mac'
   homepage 'https://www.visualstudio.com/vs/visual-studio-mac/'
 
-  app 'Visual Studio.app'
+  depends_on cask: 'mono-mdk'
 
-  uninstall delete: '/Applications/Visual Studio.app'
+  app 'Visual Studio.app'
 
   zap delete: [
                 '~/Library/VisualStudio',
