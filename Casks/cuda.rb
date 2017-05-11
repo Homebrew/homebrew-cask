@@ -14,5 +14,14 @@ cask 'cuda' do
   uninstall script: {
                       executable: "/Developer/NVIDIA/CUDA-#{version.major_minor}/bin/uninstall_cuda_#{version.major_minor}.pl",
                       sudo:       true,
-                    }
+                    },
+            launchctl: [
+                         'com.nvidia.CUDASoftwareUpdate',
+                         'com.nvidia.cuda.launcher',
+                         'com.nvidia.cudad',
+                       ],
+            kext: 'com.nvidia.CUDA',
+            delete: '/Library/PreferencePanes/CUDA Preferences.prefPane'
+
+  zap delete: '/Library/Frameworks/CUDA.framework'
 end
