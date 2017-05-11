@@ -4,7 +4,7 @@ cask 'lynkeos' do
 
   url "https://downloads.sourceforge.net/lynkeos/lynkeos/#{version}/Lynkeos-App-#{version.dots_to_hyphens}.zip"
   appcast 'https://sourceforge.net/projects/lynkeos/rss?path=/lynkeos',
-          checkpoint: '729ecd6e018278a11d8958e260bb0229382446c2c91198e29fd23b97daa7b5a5'
+          checkpoint: 'ffa5c27035903ecba29b5adb6929de8016eab5240eb7a77de979bea3738aff62'
   name 'Lynkeos'
   homepage 'http://lynkeos.sourceforge.net/'
 
