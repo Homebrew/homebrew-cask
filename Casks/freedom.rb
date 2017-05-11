@@ -1,14 +1,15 @@
 cask 'freedom' do
   version '1.4.6'
-  sha256 'de857dbbcf3f1f65dc8a44380977ed7dc3a7da6bda1e5616f3555767b459384e'
+  sha256 'efb5dd8d8679bc4ccd07b7056ff482ace085e55615063a05c2141c8080b73563'
 
-  url 'https://cdn.freedom.to/installers/FreedomSetup.dmg'
+  url "https://cdn.freedom.to/installers/updates/mac/#{version}/Freedom.zip"
   appcast 'https://cdn.freedom.to/installers/updates/mac/Appcast.xml',
-          checkpoint: 'd5b94d6d470c8ecc7f77bca718d6641ea5de9188fa4db354bad5fa700e1d7fd5'
+          checkpoint: 'd9bb4ab2f960211a26b7e1b99ac2dd3b2346035d032d944cce12e04a6c688587'
   name 'Freedom'
   homepage 'https://freedom.to/'
 
   auto_updates true
+  depends_on macos: '>= :mavericks'
 
   app 'Freedom.app'
 end
