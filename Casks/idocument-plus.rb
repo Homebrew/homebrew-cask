@@ -5,7 +5,7 @@ cask 'idocument-plus' do
   # amazonaws.com/IcyBlaze-iDocument2 was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/IcyBlaze-iDocument2/Download/idocument_plus_#{version}.dmg"
   appcast 'http://www.icyblaze.com/idocument/changelogs/idocumentplus_release.html',
-          checkpoint: '816e6021878b62ab2c0e0f2f808255a08ae4b2dd1e4da7cfdd62170e7c7a1cde'
+          checkpoint: '3508d48fbb2fdab53666dfaaebf392651e18c387002457a8f88cf8641fc775de'
   name 'iDocument Plus'
   homepage 'http://www.icyblaze.com/idocument/'
 
