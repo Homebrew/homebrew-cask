@@ -13,16 +13,14 @@ cask 'avira-vpn' do
 
   uninstall pkgutil:   'com.avira.pkg.AviraPhantomVpn',
             quit:      'com.avira.macvpn',
-            launchctl: [
-                         'org.phantomDaemon',
-                         'org.openvpn',
-                       ],
+            launchctl: 'org.phantomDaemon',
             delete:    '/Applications/Avira Phantom VPN.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.avira.macvpn.plist',
-                '~/Library/Application Support/PhantomVPN',
-                '~/Library/Caches/PhantomVPN',
-                '/Library/Application Support/PhantomVPN',
-              ]
+  zap delete:    [
+                   '~/Library/Preferences/com.avira.macvpn.plist',
+                   '~/Library/Application Support/PhantomVPN',
+                   '~/Library/Caches/PhantomVPN',
+                   '/Library/Application Support/PhantomVPN',
+                 ],
+      launchctl: 'org.openvpn'
 end
