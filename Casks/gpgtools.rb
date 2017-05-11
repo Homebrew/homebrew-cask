@@ -4,7 +4,7 @@ cask 'gpgtools' do
 
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
   appcast 'https://gpgtools.org/releases/gka/appcast.xml',
-          checkpoint: 'b0e18b27c8464ec73f909ad47ac60cf66dc65ba8a1d534d4a3258d2ce399bb1f'
+          checkpoint: 'c7e9de96763026580c821554221f7d1227fa76e7d32d6f7b30e876c67e7ed64d'
   name 'GPG Suite'
   homepage 'https://gpgtools.org/'
   gpg "#{url}.sig",
