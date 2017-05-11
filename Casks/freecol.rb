@@ -5,7 +5,7 @@ cask 'freecol' do
   # sourceforge.net/freecol was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/freecol/freecol-#{version}-mac.tar.bz2"
   appcast 'https://sourceforge.net/projects/freecol/rss',
-          checkpoint: 'e03a560793701ff27f4229fca8348440c0a8c9d45caf6b8199f359edffb88f45'
+          checkpoint: '9e98b8be91794dc547ce105cd3c90b2f8b360aee414d84f1bf642b9624c925fe'
   name 'FreeCol'
   homepage 'http://www.freecol.org/'
 
