@@ -4,7 +4,7 @@ cask 'handy-outliner' do
 
   url "https://downloads.sourceforge.net/handyoutlinerfo/handyoutliner_#{version}.zip"
   appcast 'https://sourceforge.net/projects/handyoutlinerfo/rss',
-          checkpoint: '282f0552ceda6abaad84f75cb938aa90454a111dc309be4fb61aa493553ae99d'
+          checkpoint: 'cecb51c6c4341e9527776b119dee4b9774b73e5f710dd8221f2af8d626fa05e2'
   name 'HandyOutliner for DjVu and PDF'
   homepage 'http://handyoutlinerfo.sourceforge.net/'
 
