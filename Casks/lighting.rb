@@ -4,7 +4,7 @@ cask 'lighting' do
 
   url "https://github.com/tatey/Lighting/releases/download/#{version}/Lighting-#{version}.zip"
   appcast 'https://github.com/tatey/Lighting/releases.atom',
-          checkpoint: '1578b1c7d4848473d239edbe356a208b439b784242619436216f62f45d74e65c'
+          checkpoint: '180bbccc381cc1a7dfc42e6538845d1b3cec15419398ff1116b995d97543176e'
   name 'Lighting'
   homepage 'https://github.com/tatey/Lighting'
 
