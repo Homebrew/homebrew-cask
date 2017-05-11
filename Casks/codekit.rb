@@ -11,4 +11,12 @@ cask 'codekit' do
   auto_updates true
 
   app 'CodeKit.app'
+
+  zap delete: [
+                '~/Library/Application Support/com.incident57.CodeKit3',
+                '~/Library/Caches/com.incident57.CodeKit3',
+                '~/Library/Cookies/com.incident57.CodeKit3.binarycookies',
+                '~/Library/Preferences/com.incident57.CodeKit3.plist',
+                '~/Library/Saved Application State/com.incident57.CodeKit3.savedState',
+              ]
 end
