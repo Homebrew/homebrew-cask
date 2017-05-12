@@ -4,7 +4,7 @@ cask 'objectivesharpie' do
 
   url "https://download.xamarin.com/objective-sharpie/ObjectiveSharpie-#{version}.pkg"
   appcast 'https://developer.xamarin.com/guides/cross-platform/macios/binding/objective-sharpie/releases/',
-          checkpoint: 'b165aa8f8d43ff887927c9f25e0e1de04e9c9c25f1f3ae163ef2833c723f147f'
+          checkpoint: '7a7dee3899648ea6ed857bde3d9e06e2b17114b52a83d66d36c47f1264a7eaa9'
   name 'Objective Sharpie'
   homepage 'https://developer.xamarin.com/guides/cross-platform/macios/binding/objective-sharpie/'
 
