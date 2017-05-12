@@ -9,6 +9,8 @@ cask 'telegram-desktop' do
   name 'Telegram Desktop'
   homepage 'https://desktop.telegram.org/'
 
+  conflicts_with cask: 'telegram-desktop-dev'
+
   # Renamed to avoid conflict with telegram
   app 'Telegram.app', target: 'Telegram Desktop.app'
 
