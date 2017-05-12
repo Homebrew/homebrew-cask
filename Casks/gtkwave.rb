@@ -4,7 +4,7 @@ cask 'gtkwave' do
 
   url "https://downloads.sourceforge.net/gtkwave/gtkwave-#{version}-osx-app/gtkwave.zip"
   appcast 'https://sourceforge.net/projects/gtkwave/rss',
-          checkpoint: '5dd3eb7b6d85f1d4ef2bb86e20dc61c3f2ae60422608cd5683de5088d524b15c'
+          checkpoint: 'a3dd4c83ff15a8349abd0f9e1d5ef2cb500b2da1cfc4ff7ca80a64090dcd9bdc'
   name 'GTKWave'
   homepage 'http://gtkwave.sourceforge.net/'
 
