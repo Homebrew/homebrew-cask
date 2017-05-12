@@ -1,10 +1,10 @@
 cask 'zoc' do
-  version '7.14.1'
-  sha256 'a7ddf27fa49d172f87272d7a6d23faf9c7fa3121accecfb81ceb778989d11036'
+  version '7.14.2'
+  sha256 '0e1325d802d1e31fc6e475f76217de17af5d1b85e35dc5fe5fa8788508bf944c'
 
   url "https://www.emtec.com/downloads/zoc/zoc#{version.no_dots}.dmg"
   appcast "http://www.emtec.com/downloads/zoc/zoc#{version.no_dots}_changes.txt",
-          checkpoint: '8d5763e67bdee0cf102279773ebbf66f59cccc446c9a8cc69a3cad8ab2a30ceb'
+          checkpoint: '3b336ae41d1ddaab24304e09c259bd43a67038c25af5307b06a0bbaf258dba96'
   name 'ZOC'
   homepage 'https://www.emtec.com/zoc/'
 
