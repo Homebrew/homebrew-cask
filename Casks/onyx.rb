@@ -9,11 +9,19 @@ cask 'onyx' do
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete('.')}/OnyX.dmg"
   appcast 'http://www.titanium-software.fr/en/release_onyx.html',
-          checkpoint: 'c16bcf20fc23cb0da4e45e8b1eef97f8fb2315c3860c672c2d397907e6835e60'
+          checkpoint: '5cd36845920d898967819b152615689c765a35af6451668b3805cb3b3929df88'
   name 'OnyX'
   homepage 'https://www.titanium-software.fr/en/onyx.html'
 
   depends_on macos: '>= :el_capitan'
 
   app 'OnyX.app'
+
+  zap delete: [
+                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.titanium.OnyX.help',
+                '~/Library/Logs/OnyX.log',
+                '~/Library/Preferences/OnyX.plist',
+                '~/Library/Preferences/com.titanium.OnyX.plist',
+                '~/Library/Saved Application State/com.titanium.OnyX.savedState',
+              ]
 end
