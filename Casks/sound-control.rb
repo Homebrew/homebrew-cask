@@ -9,5 +9,7 @@ cask 'sound-control' do
 
   pkg 'Sound Control Installer.pkg'
 
-  uninstall pkgutil: 'com.staticz.installer.soundcontrol.*'
+  uninstall launchctl: 'com.staticz.soundcontrol.*',
+            quit:      'com.staticz.SoundControl',
+            pkgutil:   'com.staticz.installer.soundcontrol.*'
 end
