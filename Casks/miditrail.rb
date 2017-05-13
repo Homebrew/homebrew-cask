@@ -4,8 +4,8 @@ cask 'miditrail' do
 
   # dl.osdn.jp/miditrail was verified as official when first introduced to the cask
   url "http://dl.osdn.jp/miditrail/#{version.after_comma}/MIDITrail-Ver.#{version.before_comma}-MacOSX.zip"
-  appcast 'https://osdn.jp/projects/miditrail/releases/rss',
-          checkpoint: 'a2810f314cfe202a81049d7f9b6cb0257a936b18e6e922c8dfbc2bfe775abfee'
+  appcast 'https://ja.osdn.net/projects/miditrail/releases/rss',
+          checkpoint: '8da63abdfbc8cde08c4993b6895ac475ba7986e15aa0f5dd750cdc060dc11a59'
   name 'MIDITrail'
   homepage 'https://osdn.net/projects/miditrail/'
 
