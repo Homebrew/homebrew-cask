@@ -4,7 +4,7 @@ cask 'grandtotal' do
 
   url "https://mediaatelier.com/GrandTotal#{version.major}/GrandTotal_#{version}.zip"
   appcast "https://mediaatelier.com/GrandTotal#{version.major}/feed.php",
-          checkpoint: '5634a29753fdeecb019a0c232df81aebe6bc93492391dfdd46e494759087cc8d'
+          checkpoint: 'd0fe1e69d907fa020dec695ba9baec2f43da5256ca667d6e3fa66eb43dd24d56'
   name 'GrandTotal'
   homepage 'https://www.mediaatelier.com/GrandTotal4/'
 

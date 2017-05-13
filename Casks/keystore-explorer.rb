@@ -4,7 +4,7 @@ cask 'keystore-explorer' do
 
   url "https://downloads.sourceforge.net/keystore-explorer/KSE%20#{version}/kse-#{version.no_dots}.dmg"
   appcast 'https://sourceforge.net/projects/keystore-explorer/rss',
-          checkpoint: '7b15fcaa57e590af43362b426bcc2dda8e06e020735351a637cfc1547c91759f'
+          checkpoint: '6e53faf2de2906e436facf8a5798956fcbb525b3d55728d1ad14424684fa6e1a'
   name 'KeyStore Explorer'
   homepage 'http://keystore-explorer.sourceforge.net/'
 

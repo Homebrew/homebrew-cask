@@ -1,10 +1,10 @@
 cask 'luminance-hdr' do
-  version '2.4.0'
-  sha256 '8b97a9bf902aba0249091a70637df5f6040cdc25f9522aaa25bbb73aa9e297b9'
+  version '2.5.1'
+  sha256 '6edefd0e7342ae59eb02bd809eef379f2f25af355ef9ed63394c7a1fa7424b45'
 
-  url "https://downloads.sourceforge.net/qtpfsgui/Luminance%20HDR%20#{version}-MacOSX-10.8.dmg"
+  url "https://downloads.sourceforge.net/qtpfsgui/Luminance_HDR_#{version}.dmg"
   appcast 'https://sourceforge.net/projects/qtpfsgui/rss',
-          checkpoint: 'e122e7df8e1e6e9f350b1761fbab524e9cd43d3829c4f965281cbbc85299b858'
+          checkpoint: 'bf34873072f3b12322ee98cc2131ad6e24280692246713e9f37857c3c6d0511b'
   name 'Luminance HDR'
   homepage 'http://qtpfsgui.sourceforge.net/'
 

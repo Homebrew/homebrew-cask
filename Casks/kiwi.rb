@@ -5,7 +5,7 @@ cask 'kiwi' do
   # yourhead.com/appcast/kiwi was verified as official when first introduced to the cask
   url "http://yourhead.com/appcast/kiwi/Kiwi_#{version}.zip"
   appcast 'http://yourhead.com/appcast/kiwi/appcast.xml',
-          checkpoint: '70b8a5bf1e8f8d3becd7b20c79a7a85b7b4b30729e064c6fa9f98fdea3c8bd4f'
+          checkpoint: '9ffbcd98c3c9a67ad4f810eb12fc3dee48e8b5246c2f37cecb3f9bfd398cb205'
   name 'Kiwi'
   homepage 'http://kiwi-app.net/'
 

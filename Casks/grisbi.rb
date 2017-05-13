@@ -5,7 +5,7 @@ cask 'grisbi' do
   # sourceforge.net/grisbi was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/grisbi/grisbi%20stable/#{version.major_minor}.x/Grisbi-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/grisbi/rss?path=/grisbi%20stable',
-          checkpoint: 'a53b4cf4bd6e8203821bde322c13186d6f158fac481c6e2da0e3ea2da05dab53'
+          checkpoint: '8bc783ac775193a3212e54c1429eb18f9d285986c0d77fb507628402e8f0d68e'
   name 'Grisbi'
   homepage 'http://www.grisbi.org/'
 

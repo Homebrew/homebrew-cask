@@ -4,7 +4,7 @@ cask 'kivy' do
 
   url "https://kivy.org/downloads/#{version}/Kivy-#{version}-osx-python3.7z"
   appcast 'https://kivy.org/downloads/',
-          checkpoint: '7c0b6faeba2b6662ce8b963f05f73ae9dc8faf5cc799870434fe92f634e6a1e5'
+          checkpoint: '3d01457f7479545c936856c7f259e5c9fcb9570c2678be17cc05ea475aab73c5'
   name 'Kivy'
   homepage 'https://kivy.org/'
 

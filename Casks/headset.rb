@@ -5,8 +5,8 @@ cask 'headset' do
   # github.com/headsetapp/headset-electron was verified as official when first introduced to the cask
   url "https://github.com/headsetapp/headset-electron/releases/download/v#{version}/Headset-#{version}.dmg"
   appcast 'https://github.com/headsetapp/headset-electron/releases.atom',
-          checkpoint: 'c618b5228f592eff07978e49e299392740903fb884edca467af30eea60acb79b'
-  name 'Heasdset'
+          checkpoint: 'ede19e767bd5b40cfa82ab5012ada8870d1c66fd80a6a890705b567655b9b8d0'
+  name 'Headset'
   homepage 'http://headsetapp.co/'
 
   app 'Headset.app'

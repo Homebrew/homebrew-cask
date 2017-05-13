@@ -1,6 +1,6 @@
 cask 'vlc' do
-  version '2.2.4'
-  sha256 'fd071b9817c9efccac5a144d69893a4a5323cbde4a74d5691c3cf3ab979d4160'
+  version '2.2.5.1'
+  sha256 '7e31cf16b944ef84d7cbf40b23cafa6f7dc53c2163b2e46bda5e518c46880bdf'
 
   url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}.dmg"
   appcast 'http://update.videolan.org/vlc/sparkle/vlc-intel64.xml',
