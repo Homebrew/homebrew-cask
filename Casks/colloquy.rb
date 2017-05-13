@@ -10,6 +10,8 @@ cask 'colloquy' do
 
   auto_updates true
 
+  auto_updates true
+
   app 'Colloquy.app'
 
   postflight do

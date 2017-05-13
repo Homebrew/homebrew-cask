@@ -11,6 +11,8 @@ cask 'hipchat' do
 
   auto_updates true
 
+  auto_updates true
+
   app 'HipChat.app'
 
   postflight do

@@ -8,6 +8,8 @@ cask 'skype' do
 
   auto_updates true
 
+  auto_updates true
+
   app 'Skype.app'
 
   zap delete: [

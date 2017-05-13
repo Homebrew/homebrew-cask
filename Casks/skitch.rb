@@ -8,6 +8,8 @@ cask 'skitch' do
 
   auto_updates true
 
+  auto_updates true
+
   app 'Skitch.app'
 
   zap delete: [

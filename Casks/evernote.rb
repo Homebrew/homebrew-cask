@@ -18,6 +18,8 @@ cask 'evernote' do
 
   auto_updates true
 
+  auto_updates true
+
   app 'Evernote.app'
 
   uninstall quit: [

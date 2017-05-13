@@ -10,5 +10,7 @@ cask 'appzapper' do
 
   auto_updates true
 
+  auto_updates true
+
   app 'AppZapper.app'
 end

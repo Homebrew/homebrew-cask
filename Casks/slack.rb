@@ -9,6 +9,8 @@ cask 'slack' do
 
   auto_updates true
 
+  auto_updates true
+
   app 'Slack.app'
 
   uninstall quit: 'com.tinyspeck.slackmacgap'
