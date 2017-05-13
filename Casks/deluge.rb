@@ -1,6 +1,6 @@
 cask 'deluge' do
-  version '1.3.14'
-  sha256 'e431358d127ec5b3d70aeff3795e3a370b2e51fbf153a2be175a6d553855325f'
+  version '1.3.15'
+  sha256 '308643abb49f6a5e93a200ace62ab316171064c8b3a3106e4308523217ae557c'
 
   url "http://download.deluge-torrent.org/mac_osx/deluge-#{version}-macosx-x64.dmg"
   name 'Deluge'
