@@ -9,4 +9,8 @@ cask 'linein' do
   homepage 'https://www.rogueamoeba.com/freebies/'
 
   app 'LineIn.app'
+
+  caveats do
+    discontinued
+  end
 end
