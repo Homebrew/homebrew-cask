@@ -5,7 +5,7 @@ cask 'hipchat' do
   # amazonaws.com/downloads.hipchat.com/osx was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/downloads.hipchat.com/osx/HipChat-#{version}.zip"
   appcast 'https://www.hipchat.com/release_notes/appcast/mac',
-          checkpoint: 'c6b93e028f81c7881cd4e5713b85d3fc5af219c36d3fbe309bd40fa439842382'
+          checkpoint: '9fe787ff9eadcbf05f4614102d10fd573552872764d2094462de43739ba97279'
   name 'HipChat'
   homepage 'https://www.hipchat.com/'
 

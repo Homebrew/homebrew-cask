@@ -4,7 +4,7 @@ cask 'provisioning' do
 
   url "https://github.com/chockenberry/Provisioning/releases/download/#{version}/Provisioning-#{version}.zip"
   appcast 'https://github.com/chockenberry/Provisioning/releases.atom',
-          checkpoint: '2474895e1fc8f47213e752c8f62a910d0f015e53b924ff3c7f20f48296b79dc9'
+          checkpoint: 'cd2b64b4a4456f1cf0f27655bb6e1b910e98f51f22fd4bb4335f7148766e351d'
   name 'Provisioning'
   homepage 'https://github.com/chockenberry/Provisioning'
 

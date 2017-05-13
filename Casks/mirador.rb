@@ -5,7 +5,7 @@ cask 'mirador' do
   # github.com/mirador/mirador was verified as official when first introduced to the cask
   url "https://github.com/mirador/mirador/releases/download/#{version}/mirador-macosx-#{version}.zip"
   appcast 'https://github.com/mirador/mirador/releases.atom',
-          checkpoint: 'e28f3cb994524bbe25555c09e1298caf1992d676cbe4140017472f7de997dee5'
+          checkpoint: 'df6a4217f3c2d1678517a01d367755175a59d10d91c037ba1e15c012999b2ebf'
   name 'Mirador'
   homepage 'https://fathom.info/mirador/'
 

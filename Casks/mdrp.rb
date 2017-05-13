@@ -4,7 +4,7 @@ cask 'mdrp' do
 
   url "http://www.macdvdripperpro.com/MDRP_v#{version.no_dots}.zip"
   appcast 'https://www.macdvdripperpro.com/mdrp_sparkle5.xml',
-          checkpoint: '65784608e9c18bf77c66434d53200f7af4b51f78a5638f3471eecee1c44de74c'
+          checkpoint: '4906a84404edb4abe16c8315854b5cd0d667125bb28a5d3182372ec2312523e1'
   name 'Mac DVDRipper Pro'
   homepage 'https://www.macdvdripperpro.com/'
 

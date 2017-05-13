@@ -1,4 +1,4 @@
-cask 'adobe-reader' do
+cask 'adobe-acrobat-reader' do
   version '17.009.20044'
   sha256 'cc1f94c913194963cf83edbb104b616d5411ee644ada7405390f7daebaed1efc'
 

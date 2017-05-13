@@ -5,7 +5,7 @@ cask 'gpodder' do
   # sourceforge.net/gpodder was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/gpodder/gPodder-#{version}.zip"
   appcast 'https://sourceforge.net/projects/gpodder/rss?path=/macosx',
-          checkpoint: 'cb0012d8251330c826ecb2ac16bdd1db728c8cdb7013d8e836a7dd0b8fec7bc9'
+          checkpoint: 'fee22810723be4fcdd5d0f2855f4e79c302db35e3bd867a8bf20e8dfab9ccb91'
   name 'gPodder'
   homepage 'https://gpodder.org/'
 

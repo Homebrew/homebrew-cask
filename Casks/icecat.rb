@@ -4,7 +4,7 @@ cask 'icecat' do
 
   url "https://ftp.gnu.org/gnu/gnuzilla/#{version}/icecat-#{version}.en-US.mac64.dmg"
   appcast 'https://ftp.gnu.org/gnu/gnuzilla/',
-          checkpoint: 'fefdf580e7f0188808ba1053fbc435bc0e80e133e63b7194ab007a92464e69ca'
+          checkpoint: 'ed5338188eab1fa536bed4054300d3210cd3587bc26c217d97c8d25b1dfeeb4b'
   name 'IceCat'
   homepage 'https://www.gnu.org/software/gnuzilla/'
 

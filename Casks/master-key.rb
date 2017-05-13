@@ -4,7 +4,7 @@ cask 'master-key' do
 
   url 'https://macinmind.com/MasterKey.dmg'
   appcast 'https://macinmind.com/pads/MasterKeyappcast.xml',
-          checkpoint: '680e469511621b3f9dfb3976d6ef7c5518a322423fc1b4bf402945508660cf7d'
+          checkpoint: '469c8d0959f0344590ca3212e8a96563e8fd9b2bc83dd68ab922f99c26076aec'
   name 'Master Key'
   homepage 'https://macinmind.com/?area=app&app=masterkey&pg=info'
 
