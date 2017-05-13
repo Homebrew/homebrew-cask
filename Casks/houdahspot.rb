@@ -4,7 +4,7 @@ cask 'houdahspot' do
 
   url "https://www.houdah.com/houdahSpot/updates/cast#{version.major}_assets/HoudahSpot#{version}.zip"
   appcast "https://www.houdah.com/houdahSpot/updates/cast#{version.major}.xml",
-          checkpoint: '1b2dca6bf16c13d2365778c33b7d9b315546ed949d84e1e749f045ad2781567a'
+          checkpoint: 'e06ce13c8c1995a5a89d4405ef6acdebe11537e390e248a8ef72e1b08cf76caf'
   name 'HoudahSpot'
   homepage 'https://www.houdah.com/houdahSpot/'
 
