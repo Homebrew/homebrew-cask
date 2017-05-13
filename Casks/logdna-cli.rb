@@ -5,7 +5,7 @@ cask 'logdna-cli' do
   # github.com/logdna/logdna-cli was verified as official when first introduced to the cask
   url "https://github.com/logdna/logdna-cli/releases/download/#{version}/logdna-cli.pkg"
   appcast 'https://github.com/logdna/logdna-cli/releases.atom',
-          checkpoint: 'ae528a484fd174b392be8c99c55b215e336b4c865b6192bd797ea2792408ea32'
+          checkpoint: 'd31bdf3541d359436ce5aedaed41f9c34bcad46e5b4b70cca361f6cc2d8dafcf'
   name 'LogDNA CLI'
   homepage 'https://logdna.com/'
 
