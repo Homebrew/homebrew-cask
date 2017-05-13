@@ -14,7 +14,7 @@ cask 'little-snitch' do
   end
 
   appcast 'https://www.obdev.at/products/littlesnitch/releasenotes.html',
-          checkpoint: 'ddcf9a82b606ed6f11abee06780285182bbbc6aa77c43b0f7b279554514ba9bc'
+          checkpoint: '08b0322185fc2c0d636aa19369a076c62e30b50b868e44807e7128843af15b54'
   name 'Little Snitch'
   homepage 'https://www.obdev.at/products/littlesnitch/index.html'
 
