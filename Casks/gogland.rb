@@ -1,6 +1,6 @@
 cask 'gogland' do
   # Gogland is EAP only for now
-  version 'EAP 8,171.4424.55'
+  version '1.0 EAP,171.4424.55'
   sha256 'ffebcd4b356eb6f96b7020d5f1221c548d203fff0053c99cdb9c87c0491ac61a'
 
   url "https://download.jetbrains.com/go/gogland-#{version.after_comma}.dmg"
@@ -12,7 +12,7 @@ cask 'gogland' do
 
   auto_updates true
 
-  app "Gogland #{version.before_comma} EAP.app"
+  app "Gogland #{version.before_comma}.app"
 
   uninstall_postflight do
     ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'Gogland') }.each { |path| File.delete(path) if File.exist?(path) }
