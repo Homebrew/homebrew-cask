@@ -6,7 +6,7 @@ cask 'headset' do
   url "https://github.com/headsetapp/headset-electron/releases/download/v#{version}/Headset-#{version}.dmg"
   appcast 'https://github.com/headsetapp/headset-electron/releases.atom',
           checkpoint: 'ede19e767bd5b40cfa82ab5012ada8870d1c66fd80a6a890705b567655b9b8d0'
-  name 'Heasdset'
+  name 'Headset'
   homepage 'http://headsetapp.co/'
 
   app 'Headset.app'
