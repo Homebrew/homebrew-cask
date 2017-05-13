@@ -5,7 +5,7 @@ cask 'gqrx' do
   # github.com/csete/gqrx was verified as official when first introduced to the cask
   url "https://github.com/csete/gqrx/releases/download/v#{version.major_minor}/Gqrx-#{version}.dmg"
   appcast 'https://github.com/csete/gqrx/releases.atom',
-          checkpoint: '8a99dcbea1f93b049a49791a1d57ded257eb9e340bea070c144af1bfda2784ca'
+          checkpoint: '868109cceeb9e6551defa48fc6959e619e5ff98a23e63e65b3cbcfc30d1d4e6f'
   name 'Gqrx'
   homepage 'http://gqrx.dk/'
 
