@@ -4,7 +4,7 @@ cask 'mimolive' do
 
   url "https://cdn.boinx.com/software/mimolive/Boinx_mimoLive_#{version}.app.zip"
   appcast 'https://boinx.com/d/connect//histories/mimolive',
-          checkpoint: 'a186666c7cb22f69342d5e95fa966069e2ce30db32ace8c79972a005d708026d'
+          checkpoint: 'd4931f0307d990a4a33a0f8620ef1b81b9aafb0cf80ecadfb939581eafb3a35c'
   name 'mimoLive'
   homepage 'https://boinx.com/mimolive/'
 
