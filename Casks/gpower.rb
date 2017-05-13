@@ -4,7 +4,7 @@ cask 'gpower' do
 
   url "http://www.gpower.hhu.de/fileadmin/redaktion/Fakultaeten/Mathematisch-Naturwissenschaftliche_Fakultaet/Psychologie/AAP/gpower/GPowerMac_#{version}.zip"
   appcast 'http://www.gpower.hhu.de/',
-          checkpoint: 'fa610445a677339329cd3bbc01b87151477859cbeed26dc70850bdb115782087'
+          checkpoint: '3d30f9976dfc848cd099a3a1508f8214d87169cb7b889465dd5b890367ae9491'
   name 'G*Power'
   homepage 'http://www.gpower.hhu.de/'
 
