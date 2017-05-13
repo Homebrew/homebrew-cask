@@ -4,7 +4,7 @@ cask 'material-colors' do
 
   url "https://github.com/romannurik/MaterialColorsApp/releases/download/v#{version}/MaterialColors-#{version}.zip"
   appcast 'https://github.com/romannurik/MaterialColorsApp/releases.atom',
-          checkpoint: 'ed9a70854ceef5f7cddeeaeef34a901533b60071dc22ccd4673dc513c037edd6'
+          checkpoint: '26edfa88306c1daf1a273fb6765623de114eee1a83d4978dc039af3f6059817c'
   name 'Material Colors for Mac'
   homepage 'https://github.com/romannurik/MaterialColorsApp'
 
