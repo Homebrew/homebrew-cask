@@ -1,11 +1,11 @@
 cask 'linear' do
-  version '1.3.0'
-  sha256 'f93d9115e5173375b529c836cf6727936f40cd364b12314c42dc80564444ca10'
+  version '1.4.1'
+  sha256 '57576222fba52a5fcaf35360c28a81d36a6b2abd3938a11574a7a041dea3cbdc'
 
   # github.com/mikaa123/linear was verified as official when first introduced to the cask
   url "https://github.com/mikaa123/linear/releases/download/#{version}/linear.zip"
   appcast 'https://github.com/mikaa123/linear/releases.atom',
-          checkpoint: '5dff0089adc2d1dd2a8c8617f4b87587ed306c4e3fd8beb87549e37bbc51305e'
+          checkpoint: 'a1c7e5f02188f3d28e8c90e4514e28de280564d50a85b20007969af076739ad6'
   name 'Linear'
   homepage 'http://linear.theuxshop.com/'
 
