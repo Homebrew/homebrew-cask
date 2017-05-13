@@ -1,6 +1,6 @@
 cask 'dragondisk' do
   version '1.05'
-  sha256 '66499e1aa9ca322a3a14f74710fe78675f2d4c11df754cc4a3912e1165c7bc39'
+  sha256 'a2797d416b712ce1b7a7a8a8a4d791894627e6c8819e1e2241efc7ecf97b7f3b'
 
   # download.dragondisk.com/ was verified as official when first introduced to the cask
   url "http://download.dragondisk.com/DragonDisk-#{version}.dmg"
