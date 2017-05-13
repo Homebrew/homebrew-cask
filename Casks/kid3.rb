@@ -5,7 +5,7 @@ cask 'kid3' do
 
   url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin.dmg"
   appcast 'https://sourceforge.net/projects/kid3/rss',
-          checkpoint: '142c4420f784998ac5eac81b16b102f5112d0ee045b29991d361843cb33aca8a'
+          checkpoint: '326d5cdaae5a48220169d19cc4e31663068248943bd80257d00e5eda7c743bb6'
   name 'Kid3'
   homepage 'http://kid3.sourceforge.net/'
 
