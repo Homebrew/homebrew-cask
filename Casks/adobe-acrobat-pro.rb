@@ -1,4 +1,4 @@
-cask 'adobe-acrobat' do
+cask 'adobe-acrobat-pro' do
   version '2015'
   sha256 :no_check # required as upstream package is updated in-place
 
