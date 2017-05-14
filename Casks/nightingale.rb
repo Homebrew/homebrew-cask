@@ -5,7 +5,7 @@ cask 'nightingale' do
   # github.com/nightingale-media-player/nightingale-hacking was verified as official when first introduced to the cask
   url "https://github.com/nightingale-media-player/nightingale-hacking/releases/download/nightingale-#{version.major_minor_patch}/Nightingale_#{version}_macosx-i686.dmg"
   appcast 'https://github.com/nightingale-media-player/nightingale-hacking/releases.atom',
-          checkpoint: '4b1ee6d24b9052faa6389f2deb6c63c05a8b544229ba72fed3de43ff59f316c8'
+          checkpoint: 'a7a614d0364b1ba2ea3bbf25897e6df2cd428838168edf2527fddd961f467a51'
   name 'Nightingale'
   homepage 'https://getnightingale.com/'
 
