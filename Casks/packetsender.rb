@@ -5,7 +5,7 @@ cask 'packetsender' do
   # github.com/dannagle/PacketSender was verified as official when first introduced to the cask
   url "https://github.com/dannagle/PacketSender/releases/download/v#{version.before_comma}/PacketSender_v#{version.before_comma.dots_to_underscores}_#{version.after_comma}.dmg"
   appcast 'https://github.com/dannagle/PacketSender/releases.atom',
-          checkpoint: 'd5ac4cc3e91163d8c70942b77218be2a6a97f70d54b0ffb8f323832ae24aa4d8'
+          checkpoint: 'b7fde4b18d8cd19e6ac4846dd4a3364bc6c9aa71f1b64606a5ad5ca0a2e29282'
   name 'Packet Sender'
   homepage 'https://packetsender.com/'
 
