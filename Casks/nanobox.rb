@@ -5,7 +5,7 @@ cask 'nanobox' do
   # s3.amazonaws.com/tools.nanobox.io was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/tools.nanobox.io/cli/darwin/amd64/nanobox'
   appcast 'https://github.com/nanobox-io/nanobox/releases.atom',
-          checkpoint: '1aa4e3a08daed735dc993d058f352667d55a0d060fb6f1f63868e57a27ac1900'
+          checkpoint: 'ec194abb98dfcd6f3604dcfb307713989febbdc36de96259b1c57563cf414962'
   name 'nanobox'
   homepage 'https://www.nanobox.io/'
 
