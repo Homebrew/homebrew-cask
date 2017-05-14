@@ -1,11 +1,11 @@
 cask 'narodmon' do
-  version '3.0.0'
-  sha256 '151f98eb73d6a11fb36ae9cbb022c2e2e0d6707297399f207326f8cea3d2ffb2'
+  version '3.0.4'
+  sha256 '03818b133df820a2005118f49e2a217f2a21389ac9cee748f0a3dcfd7c701242'
 
   # github.com/niki-timofe/NarodMonOSX was verified as official when first introduced to the cask
-  url "https://github.com/niki-timofe/NarodMonOSX/releases/download/v#{version}/NarodMon.app.zip"
+  url "https://github.com/niki-timofe/NarodMonOSX/releases/download/v#{version}/NarodMon.zip"
   appcast 'https://github.com/niki-timofe/NarodMonOSX/releases.atom',
-          checkpoint: '3a17a667718c30c66a8cde6b9761bb8aedb10d816d331b49547603b8454d340f'
+          checkpoint: '84a7bc56bc17a28d35492912da1bf94c950e526bb0c4f890d95e183e10f41ae6'
   name 'NarodMon'
   homepage 'https://narodmon.ru/'
 
