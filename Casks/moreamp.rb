@@ -4,7 +4,7 @@ cask 'moreamp' do
 
   url "https://downloads.sourceforge.net/moreamp/moreamp/MoreAmp-#{version}/MoreAmp-#{version}-binOSX104intel.dmg"
   appcast 'https://sourceforge.net/projects/moreamp/rss?path=/moreamp',
-          checkpoint: '78520db7d651591c8e6b701cb3d88151c0ebd9dd0c7eb3e56cce8f728df66810'
+          checkpoint: '18fb7fd1b6ca997065bf0a144ec05fecaa5deccf188f88c2d007b569c60aa526'
   name 'MoreAmp'
   homepage 'https://sourceforge.net/projects/moreamp/'
 
