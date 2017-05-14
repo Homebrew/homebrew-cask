@@ -10,7 +10,7 @@ cask 'texpad' do
 
     url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.before_comma.dots_to_underscores}__#{version.after_comma.before_comma}__#{version.after_comma.after_comma}.dmg"
     appcast 'https://www.texpadapp.com/static-collected/upgrades/texpadappcast.xml',
-            checkpoint: 'bb20f1d972495ce913b85fbe7d1f91b7b8b481c447a98c1b58111e5643f81afd'
+            checkpoint: '6f124a02d5a13ef398f70d69ad16e41f5967b4eb1a78be342bcd8d65d40b8022'
   end
 
   name 'Texpad'
