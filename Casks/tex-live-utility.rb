@@ -4,7 +4,7 @@ cask 'tex-live-utility' do
 
   url "https://github.com/amaxwell/tlutility/releases/download/#{version}/TeX.Live.Utility.app-#{version}.tar.gz"
   appcast 'https://raw.githubusercontent.com/amaxwell/tlutility/master/appcast/tlu_appcast.xml',
-          checkpoint: '7c168708a9c3f6274b033455830e2a3c8d7446a93ade7d9822f58addd9918cc4'
+          checkpoint: '1057b8465bf967a864151e016ea8ca565a929d23827e520a409de4ce4b909ad4'
   name 'TeX Live Utility'
   homepage 'https://github.com/amaxwell/tlutility'
 
