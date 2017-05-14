@@ -9,4 +9,8 @@ cask 'makeiphoneringtone' do
   homepage 'https://rogueamoeba.com/freebies/'
 
   app 'MakeiPhoneRingtone.app'
+
+  caveats do
+    discontinued
+  end
 end
