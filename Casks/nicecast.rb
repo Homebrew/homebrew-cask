@@ -4,7 +4,7 @@ cask 'nicecast' do
 
   url 'https://rogueamoeba.com/nicecast/download/Nicecast.zip'
   appcast 'https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&bundleid=com.rogueamoeba.Nicecast&system=10114',
-          checkpoint: 'cd857805b6f1290a2b1777b0b8e35d8876879323446e5a20fbd013160cc450a7'
+          checkpoint: 'e13e37ea05462fea6aa278ee8352ffe0ce9a6aaa7c03072b406c773dffebb8b0'
   name 'Nicecast'
   homepage 'https://rogueamoeba.com/nicecast/'
 
