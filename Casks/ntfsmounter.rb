@@ -4,7 +4,7 @@ cask 'ntfsmounter' do
 
   url "http://ntfsmounter.com/NTFS%20Mounter%20#{version}.dmg.zip"
   appcast 'http://ntfsmounter.com/',
-          checkpoint: '617ad7431d12c751f518533b8c7b7f8b56decd2513d7f3ee49f2fa07f45739bc'
+          checkpoint: '9a6e520a3ffbdd348ba8d9c832666b2ffce42f5c35b940bbbf90b55ed445413c'
   name 'NTFS Mounter'
   homepage 'http://ntfsmounter.com/'
 
