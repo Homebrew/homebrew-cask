@@ -4,7 +4,7 @@ cask 'nextcloud' do
 
   url "https://download.nextcloud.com/desktop/releases/Mac/Installer/Nextcloud-#{version}.pkg"
   appcast 'https://github.com/nextcloud/client_theming/releases.atom',
-          checkpoint: '809388c15ead83723efb01f237864838f6d5c6ab9545d7989990ea0d07044cda'
+          checkpoint: 'd6cd43112beceba98ec788b300c58c663aaa7b60d68cd507482ac06aa44e324f'
   name 'Nextcloud'
   homepage 'https://nextcloud.com/'
 
