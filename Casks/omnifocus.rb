@@ -17,6 +17,8 @@ cask 'omnifocus' do
     url "https://downloads.omnigroup.com/software/MacOSX/10.11/OmniFocus-#{version}.dmg"
   end
 
+  appcast "https://update.omnigroup.com/appcast/com.omnigroup.OmniFocus#{version.major}",
+          checkpoint: '269ee59938e4785ce50bcaefb9c84c7f5407dc03ca9703fb259620e4870fc99e'
   name 'OmniFocus'
   homepage 'https://www.omnigroup.com/omnifocus/'
 
