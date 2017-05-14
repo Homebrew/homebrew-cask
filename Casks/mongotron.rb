@@ -5,7 +5,7 @@ cask 'mongotron' do
   # github.com/officert/mongotron was verified as official when first introduced to the cask
   url "https://github.com/officert/mongotron/releases/download/#{version}/Mongotron-darwin-x64.zip"
   appcast 'https://github.com/officert/mongotron/releases.atom',
-          checkpoint: 'c72d7d2bf8514e6f839b3fecd2a5240ed7fc976eee535a9e2905946c0227374f'
+          checkpoint: 'f06905ea0434fcdeff49d494d1a60d9e476f2511b215027c9fc3eba7c066d5a9'
   name 'Mongotron'
   homepage 'http://mongotron.io/'
 
