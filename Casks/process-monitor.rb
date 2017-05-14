@@ -1,6 +1,6 @@
 cask 'process-monitor' do
   version '1.1'
-  sha256 :no_check
+  sha256 'ef074c433a75ab347856b26a7fa0568558c2b938d7b531c12cd53ae1ddfebea8'
 
   # s3.amazonaws.com/sqwarq.com was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/sqwarq.com/PublicZips/ProcessMonitor.app.zip'
