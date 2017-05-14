@@ -10,7 +10,7 @@ cask 'ncar-ncl' do
   end
 
   appcast 'https://www.ncl.ucar.edu/current_release.shtml',
-          checkpoint: 'd8de7ea6d65bdb008d2080157cb901d37eaeaeb501742ea54c7f209ac6e8ea85'
+          checkpoint: '634aeb20f5c52736d0d800cf2a77abaa6c16685550a46e817590ef3dbd482d6b'
   name 'NCAR Command Language'
   name 'ncl'
   homepage 'https://www.ncl.ucar.edu/'
