@@ -5,7 +5,7 @@ cask 'opentoonz' do
   # github.com/opentoonz/opentoonz was verified as official when first introduced to the cask
   url "https://github.com/opentoonz/opentoonz/releases/download/v#{version}/OpenToonz.pkg"
   appcast 'https://github.com/opentoonz/opentoonz/releases.atom',
-          checkpoint: 'f0ba39ba289549df0369e0c98d94caf6d6544b876993b918f80e735bc6674760'
+          checkpoint: 'c3a7ddeccf932c3a25ab0e8e72d8c49c0cca35d65b749adc2ade3655fde67870'
   name 'OpenToonz'
   homepage 'https://opentoonz.github.io/'
 
