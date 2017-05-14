@@ -4,7 +4,7 @@ cask 'openmsx' do
 
   url "https://downloads.sourceforge.net/openmsx/openmsx-#{version}-mac-x86_64-bin.dmg"
   appcast 'https://sourceforge.net/projects/openmsx/rss',
-          checkpoint: '797fc177f46bddd1950fb011b95188e334ca029c3cc25a3a4ab679f60bcebe56'
+          checkpoint: 'bb73fd2f4896a55b1459f2c52835c58b1510737a5945183f532797fcbf14be73'
   name 'openMSX'
   homepage 'http://openmsx.sourceforge.net/'
 
