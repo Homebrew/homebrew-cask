@@ -10,14 +10,14 @@ cask 'paraview' do
     url "http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v#{version.major_minor}&type=binary&os=osx&downloadFile=ParaView-#{version}-Qt4-OpenGL2-MPI-OSX10.7-64bit.dmg"
     app 'paraview.app'
   else
-    version '5.3.0'
-    sha256 '75b385dcf244f3942cb74eeed8e593d6744a330f1f97ae1301c6584da8d607c0'
+    version '5.4.0'
+    sha256 '079903bff72d5213b9928787db1e0546f9169d2f7ed6e6fa3f5835ef2ccc1065'
     url "http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v#{version.major_minor}&type=binary&os=osx&downloadFile=ParaView-#{version}-Qt5-OpenGL2-MPI-OSX10.8-64bit.dmg"
     app "Paraview-#{version}.app"
   end
 
   appcast 'http://www.paraview.org/files/paraview-download.js',
-          checkpoint: '583fd88c3ec75a28f83d7de14a76c039b0345575bb1fca801996087cedad65f0'
+          checkpoint: '971c7202a3757ada059550673c3c7fe0be7193592ef6c933507e83993f099cfa'
   name 'ParaView'
   homepage 'http://www.paraview.org/'
 end

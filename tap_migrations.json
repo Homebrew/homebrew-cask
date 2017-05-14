@@ -7,6 +7,7 @@
   "canon-capt-printer-driver": "caskroom/drivers",
   "canon-imagerunner-printer-driver-ufrii": "caskroom/drivers",
   "casio-screen-receiver": "caskroom/drivers",
+  "chronograf": "homebrew/core",
   "cocoapods": "homebrew/core",
   "consul": "homebrew/core",
   "consul-template": "homebrew/core",
