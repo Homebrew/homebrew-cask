@@ -4,7 +4,7 @@ cask 'namechanger' do
 
   url "https://www.mrrsoftware.com/Downloads/NameChanger/Updates/NameChanger-#{version.dots_to_underscores}.zip"
   appcast 'https://mrrsoftware.com/Downloads/NameChanger/Updates/NameChangerSoftwareUpdates.xml',
-          checkpoint: '00cc536c81895136ea548eed2cf5cc5236089e1026f0dd99244db6ef7a4d9737'
+          checkpoint: 'bc5602d20c7b88ad517282a8d1ae96327dd2c074fafd9ba36b76679c52b56e07'
   name 'NameChanger'
   homepage 'https://mrrsoftware.com/namechanger/'
 
