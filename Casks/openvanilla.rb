@@ -1,11 +1,11 @@
 cask 'openvanilla' do
-  version '1.3.2'
-  sha256 'b77f4f5b7cecb56901411b7ff1ce246e671b37086119d4a1bb120300ecbb7846'
+  version '1.3.3'
+  sha256 'f1152b3815f400dcd8eea89a53e88e69fe344c7cbb0fac7613fdfff060469d8a'
 
   # github.com/openvanilla/openvanilla/ was verified as official when first introduced to the cask
   url "https://github.com/openvanilla/openvanilla/releases/download/#{version}/OpenVanilla-Installer-Mac-#{version}.zip"
   appcast 'https://github.com/openvanilla/openvanilla/releases.atom',
-          checkpoint: '6bb8a2063c7b7ae5addab4b9a57ae065a22a36684af3a6d36fcb663dadcb8696'
+          checkpoint: 'e082310a10496fc25234b8f3ba1256bc33fb9e92f7a86bf8926a1bd721387c41'
   name 'OpenVanilla'
   homepage 'https://openvanilla.org/'
 
