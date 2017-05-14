@@ -10,4 +10,11 @@ cask 'postico' do
   depends_on macos: '>= :mavericks'
 
   app 'Postico.app'
+
+  zap delete: [
+                '~/Library/Application Scripts/at.eggerapps.Postico',
+                '~/Library/Containers/at.eggerapps.Postico',
+                '~/Library/Preferences/at.eggerapps.Postico.plist',
+                '~/Library/Saved Application State/at.eggerapps.Postico.savedState',
+              ]
 end
