@@ -12,7 +12,7 @@ cask 'chefdk' do
           checkpoint: 'c5749a47eb5ce302cc014242b6c24d48592b4af1d8014043c4f7097c0c4c1c5c'
   name 'Chef Development Kit'
   name 'ChefDK'
-  homepage 'https://downloads.chef.io/chefdk/'
+  homepage 'https://downloads.chef.io/chefdk'
 
   depends_on macos: '>= :mountain_lion'
 
