@@ -6,7 +6,7 @@ cask 'soundcloud-downloader' do
   appcast 'https://black-burn.ch/apps/SCD2/updates/gold.xml?hwni=1',
           checkpoint: '26e98b02b515fa664bd395dfe5ecaac54a8dba3507953bf245a3524f7099ea46'
   name 'SoundCloud Downloader'
-  homepage 'https://black-burn.ch/scd/'
+  homepage 'https://black-burn.ch/app/SCD2'
 
   app 'SoundCloud Downloader.app'
 end

@@ -5,7 +5,7 @@ cask 'vanilla' do
   # devmate.com was verified as official when first introduced to the cask
   url 'https://dl.devmate.com/net.matthewpalmer.Vanilla/Vanilla.dmg'
   name 'Vanilla'
-  homepage 'http://matthewpalmer.net/vanilla'
+  homepage 'http://matthewpalmer.net/vanilla/'
 
   app 'Vanilla.app'
 end
