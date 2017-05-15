@@ -4,7 +4,7 @@ cask 'piezo' do
 
   url 'https://rogueamoeba.com/piezo/download/Piezo.zip'
   appcast 'https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&bundleid=com.rogueamoeba.Piezo&system=10114',
-          checkpoint: 'a7becbbd9f1a9ba7d5a8579a0e53ecc838461ff40f918e111734c05a7b12d642'
+          checkpoint: 'f40dd24bc2ab3e76c10a88b777d24f807805071f2f823c9af48f40f1a5d5a075'
   name 'Piezo'
   homepage 'https://rogueamoeba.com/piezo/'
 
