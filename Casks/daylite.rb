@@ -4,7 +4,7 @@ cask 'daylite' do
 
   url "https://download.marketcircle.com/daylite/daylitedma#{version.no_dots}.dmg"
   name 'Daylite'
-  homepage 'https://www.marketcircle.com/daylite/'
+  homepage 'https://www.marketcircle.com/'
 
   pkg 'Install Daylite & Mail Assistant.pkg'
 

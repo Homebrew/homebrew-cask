@@ -7,7 +7,7 @@ cask 'korean-spelling-checker' do
   appcast 'https://github.com/miname/Korean-Spelling-Checker-Workflow/releases.atom',
           checkpoint: 'a51b690a1fa84faae276e0d7ba92837346d99a6824cd6863bdc2b99b4fe70599'
   name '한국어 맞춤법 검사기'
-  homepage 'http://appletree.or.kr/google-chrome-extensions/'
+  homepage 'https://appletree.or.kr//google-chrome-extensions/'
 
   service "Korean-Spelling-Checker-Workflow-#{version}/✔ 선택한 글의 한국어 맞춤법 검사하기.workflow"
 
@@ -17,6 +17,6 @@ cask 'korean-spelling-checker' do
     #{token} only works when you install it manually via Service Installer,
     so you may need to run the installer with
 
-      open '~/Library/Services/✔ 선택한 글의 한국어 맞춤법 검사하기.workflow'
+      open '~/Library/Services/✔ 선택한 글의 한국어 맞춤법 검사하기.workflow'
   EOS
 end
