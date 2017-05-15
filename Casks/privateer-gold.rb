@@ -4,7 +4,7 @@ cask 'privateer-gold' do
 
   url "https://downloads.sourceforge.net/privateer/PrivateerGold#{version}.dmg"
   appcast 'https://sourceforge.net/projects/privateer/rss',
-          checkpoint: 'fff4235265cba62024406307614911ad78bd4ee5fc8fde4a1aa74b0dece4b085'
+          checkpoint: 'bb04f3294f26811a043728362c05f4590add8875a1f5482fa2d31182d37e819b'
   name 'Privateer Gemini Gold'
   homepage 'http://privateer.sourceforge.net/'
 
