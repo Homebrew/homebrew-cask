@@ -1,6 +1,6 @@
 cask 'thunder' do
-  version '3.0.8.2844'
-  sha256 'b6e4cf82efb397b742ce5106a214013f501725730a57ab1511b72edab2a091f3'
+  version '3.0.9.2892'
+  sha256 '5797fe79fc689a6811c44fbd82f70bf7c1b3d66d9f2c5efe7f0bab422cf5ccdd'
 
   # down.sandai.net was verified as official when first introduced to the cask
   url "http://down.sandai.net/mac/thunder_#{version}.dmg"
@@ -16,9 +16,10 @@ cask 'thunder' do
                 '~/Library/Application Support/Thunder',
                 '~/Library/Caches/com.xunlei.Thunder',
                 '~/Library/Caches/com.xunlei.XLPlayer',
-                '~/Library/Caches/com.xunlei.swjsq',
                 '~/Library/Cookies/com.xunlei.Thunder.binarycookies',
+                '~/Library/Preferences/com.xunlei.Thunder.loginSDK.plist',
                 '~/Library/Preferences/com.xunlei.Thunder.plist',
+                '~/Library/Preferences/com.xunlei.XLPlayer.plist',
                 '~/Library/Saved Application State/com.xunlei.Thunder.savedState',
                 '~/Library/Saved Application State/com.xunlei.XLPlayer.savedState',
               ]
