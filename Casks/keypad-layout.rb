@@ -1,10 +1,10 @@
 cask 'keypad-layout' do
-  version '1.1'
-  sha256 '08c38f7f53a4112254b6504b8e91aa422b507f646df7f8281df56b8721cb958c'
+  version '1.2'
+  sha256 '3ab918b4ca61a0f8b281d29ef6eb732969289583ea4e5e45f0a22aa95c9a91d4'
 
   url "https://github.com/janten/keypad-layout/releases/download/#{version}/Keypad-Layout.zip"
   appcast 'https://github.com/janten/keypad-layout/releases.atom',
-          checkpoint: '15065e27d1bc119cd36ca3ad44a5dbcc79a5f6d8c79f48f80a3ab2abacf9ebae'
+          checkpoint: '304da5404549049922f6f052188c36051af13af1be94645261c3ee7634858881'
   name 'Keypad Layout'
   homepage 'https://github.com/janten/keypad-layout'
 
