@@ -4,7 +4,7 @@ cask 'manuscripts' do
 
   url 'https://updates.manuscriptsapp.com/apps/manuscripts/production/download'
   name 'Manuscripts'
-  homepage 'http://www.manuscriptsapp.com/'
+  homepage 'https://www.manuscriptsapp.com/'
 
   app 'Manuscripts.app'
 end
