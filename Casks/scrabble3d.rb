@@ -7,7 +7,7 @@ cask 'scrabble3d' do
   appcast 'https://sourceforge.net/projects/scrabble/rss?path=/Main_Program/MacOS',
           checkpoint: 'd126154155cdbe7ad8c285e739a8a902e69bded1b6b980d9280495796c123351'
   name 'Scrabble3D'
-  homepage 'https://scrabble.sourceforge.io/'
+  homepage 'http://scrabble.sourceforge.net/'
 
   pkg 'Scrabble3D-darwin.pkg'
 
