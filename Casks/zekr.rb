@@ -7,7 +7,7 @@ cask 'zekr' do
   appcast 'https://sourceforge.net/projects/zekr/rss?path=/Zekr',
           checkpoint: 'd4156f90a39a16f9247164fa8a5536e6c5e396e55fff047cb7fe86aa2f114643'
   name 'Zekr'
-  homepage 'http://zekr.org/'
+  homepage 'https://zekr.org/'
 
   app 'Zekr.app'
 
