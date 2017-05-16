@@ -5,7 +5,7 @@ cask 'now' do
   # github.com/zeit/now-desktop was verified as official when first introduced to the cask
   url "https://github.com/zeit/now-desktop/releases/download/#{version}/now-desktop-#{version}-mac.zip"
   appcast 'https://github.com/zeit/now-desktop/releases.atom',
-          checkpoint: '79a2e0ea9a90908f688661758090480e5a3f1bd4817fa93a61242d26fffef422'
+          checkpoint: '382c47975468b847bb557bd7926ee6c04e4f52afd4cc2282e2ebf4feca3df1b6'
   name 'Now'
   homepage 'https://zeit.co/now'
 
