@@ -1,0 +1,8 @@
+class AdobeReaderFr < Cask
+  url 'http://ardownload.adobe.com/pub/adobe/reader/mac/11.x/11.0.00/fr_FR/AdbeRdr11000_fr_FR.dmg'
+  homepage 'http://www.adobe.com/products/reader.html'
+  version '11.0.00'
+  no_checksum
+  install 'Adobe Reader XI Installer.pkg'
+  uninstall :pkgutil => 'com.adobe.acrobat.reader.11000.*'
+end
