@@ -4,7 +4,7 @@ cask 'piglet' do
 
   url "https://github.com/jenslind/piglet/releases/download/v#{version}/Piglet.zip"
   appcast 'https://github.com/jenslind/piglet/releases.atom',
-          checkpoint: '31ffbcc1c5530ecf7e8e19caff41265c1631197b38bc873d9410800cbfbf7910'
+          checkpoint: 'd434649049ce056aba87d66106bad087ddb2d46ef6f990b5641b14cf6a22006b'
   name 'Piglet'
   homepage 'https://github.com/jenslind/piglet'
 
