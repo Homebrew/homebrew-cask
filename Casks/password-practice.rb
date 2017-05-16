@@ -4,7 +4,7 @@ cask 'password-practice' do
 
   url 'https://mrgeckosmedia.com/applications/download/PasswordPractice'
   appcast 'https://mrgeckosmedia.com/applications/releasenotes/PasswordPractice',
-          checkpoint: 'b203acfca9fc92751c37696198b7af8606047f2cbae6dabb19aefb4ff846ad54'
+          checkpoint: '70adba0f6fea264b35554c3a98010740d3c8afeb2e6a07a1d17050b746c1c481'
   name 'Password Practice'
   homepage 'https://mrgeckosmedia.com/applications/info/PasswordPractice'
 
