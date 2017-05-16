@@ -5,7 +5,7 @@ cask 'mcedit' do
   # github.com/Khroki/MCEdit-Unified was verified as official when first introduced to the cask
   url "https://github.com/Khroki/MCEdit-Unified/releases/download/#{version}/MCEdit.v#{version}.OSX.64bit.zip"
   appcast 'https://github.com/Khroki/MCEdit-Unified/releases.atom',
-          checkpoint: '4f2e24a6f33b62e24d538b879d16fce414771524787c44eac4ea6a7d88502366'
+          checkpoint: '6d45b83ded8e642ca2c53c5210f7dc45c52e4865cfe8d2c790c06838fa79aed0'
   name 'MCEdit-Unified'
   homepage 'http://www.mcedit-unified.net/'
 

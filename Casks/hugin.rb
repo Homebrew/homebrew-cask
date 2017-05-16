@@ -4,7 +4,7 @@ cask 'hugin' do
 
   url "https://downloads.sourceforge.net/hugin/Hugin-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/hugin/rss',
-          checkpoint: '00abe255c13acffec0368944669e30f1690daf513050bd4f71afb2d42a4fb490'
+          checkpoint: 'b5547e1ec75e4c68666a44ba0b96a8d7c24b4be47b950668df81159e7a49f829'
   name 'Hugin'
   homepage 'http://hugin.sourceforge.net/'
 

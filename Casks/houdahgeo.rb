@@ -4,7 +4,7 @@ cask 'houdahgeo' do
 
   url "https://www.houdah.com/houdahGeo/updates4/cast_assets/HoudahGeo#{version}.zip"
   appcast "https://www.houdah.com/houdahGeo/updates#{version.major}/cast.xml",
-          checkpoint: '5aa4e716671211b38c80ddbe1946c623f201f4bb0039e20e4c7046dce20ac00e'
+          checkpoint: '5803c2e0f7fcc5433ef33460cbae3632b25b69910d1f986076cb6c492b52bdce'
   name 'HoudahGeo'
   homepage 'https://www.houdah.com/houdahGeo/'
 

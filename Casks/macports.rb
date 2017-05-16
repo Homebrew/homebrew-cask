@@ -29,7 +29,7 @@ cask 'macports' do
   end
 
   appcast 'https://github.com/macports/macports-base/releases.atom',
-          checkpoint: '43a4906fd5edaea9d93d04b65774cfaf70063830ce3ff9de78fce26023cf98ac'
+          checkpoint: '52f4a89e16cfb5751203f37432a58e2f067d125f1c799d339f3952794a5bdc50'
   name 'MacPorts'
   homepage 'https://www.macports.org/'
   gpg "#{url}.asc", key_id: '01ff673fb4aae6cd'

@@ -4,7 +4,7 @@ cask 'pliny' do
 
   url "http://pliny.cch.kcl.ac.uk/pliny-app-#{version}.tar.gz"
   appcast 'http://pliny.cch.kcl.ac.uk/setup.html',
-          checkpoint: 'e91b521c5c361dca55ad9f0c1110cc53aa0ebe539726a06e6c2595e3cab0e88e'
+          checkpoint: 'f7960672a3a9d42cfd907f69166c4a13239cc29ae07aa60675083f8c41cd3acb'
   name 'Pliny'
   homepage 'http://pliny.cch.kcl.ac.uk/'
 

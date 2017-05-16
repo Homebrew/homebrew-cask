@@ -4,7 +4,7 @@ cask 'knuff' do
 
   url "https://github.com/KnuffApp/Knuff/releases/download/v#{version}/Knuff.app.zip"
   appcast 'https://github.com/KnuffApp/Knuff/releases.atom',
-          checkpoint: '4dbd515606ee39d27435503496353d109454c571ca2fe88ce4eed0a74deac0e1'
+          checkpoint: 'd736b6239009ee0d0c1eb2795d902859b66c7fb250a80705539add563b4363c4'
   name 'Knuff'
   homepage 'https://github.com/KnuffApp/Knuff'
 

@@ -4,7 +4,7 @@ cask 'mavensmate' do
 
   url "https://github.com/joeferraro/MavensMate-Desktop/releases/download/v#{version}/MavensMate-Desktop-#{version}.dmg"
   appcast 'https://github.com/joeferraro/MavensMate-Desktop/releases.atom',
-          checkpoint: 'f7091d612f879aff65a3a64effd370c2b72479748aece2f2dde1d250ae99b033'
+          checkpoint: '8452b4e1ee569d8c6802695c88e3d73d966fa99375e02a8e18d6b30ee64238d2'
   name 'MavensMate'
   homepage 'https://github.com/joeferraro/MavensMate-Desktop'
 

@@ -4,7 +4,7 @@ cask 'pref-setter' do
 
   url 'http://www.nightproductions.net/downloads/prefsetter.zip'
   appcast 'http://www.nightproductions.net/feeds/prefsetter.xml',
-          checkpoint: '3cf40e0893b96cec1314c601d7bb93782c28202585903f5fd0e6e6eb1fb821c8'
+          checkpoint: '6af6c83d087881cb90d65da87d843f6c062b636e093bf0ee43f309d07415a2db'
   name 'Pref Setter'
   homepage 'http://www.nightproductions.net/prefsetter.html'
 

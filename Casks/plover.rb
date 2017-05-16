@@ -5,7 +5,7 @@ cask 'plover' do
   # github.com/openstenoproject/plover was verified as official when first introduced to the cask
   url "https://github.com/openstenoproject/plover/releases/download/v#{version}/plover-#{version}-py2-mac.dmg"
   appcast 'https://github.com/openstenoproject/plover/releases.atom',
-          checkpoint: '040e2f8a084202788d5e6d1e68a38214d14cac854ebca97c7d99e42d8855d40b'
+          checkpoint: '10f8eec2e12c94b13ad64d5f348efaa7cf181c1de24f812cc2fb965dbbf08258'
   name 'Plover'
   homepage 'https://stenoknight.com/wiki/Main_Page'
 

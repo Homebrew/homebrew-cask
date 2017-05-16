@@ -4,7 +4,7 @@ cask 'irccloud' do
 
   url "https://github.com/irccloud/irccloud-desktop/releases/download/v#{version}/irccloud-desktop-#{version}.dmg"
   appcast 'https://github.com/irccloud/irccloud-desktop/releases.atom',
-          checkpoint: '8d1c92114f5558fc2594610379904feb7bc7bc3b6ecb0ea3c5c44fc92dcc46e6'
+          checkpoint: 'a4d332dccac9aa9517eb76095555cc2195d3005b1853167531b89ab39ba9ce49'
   name 'IRCCloud Desktop'
   homepage 'https://github.com/irccloud/irccloud-desktop'
 

@@ -5,7 +5,7 @@ cask 'pinta' do
   # github.com/PintaProject/Pinta was verified as official when first introduced to the cask
   url "https://github.com/PintaProject/Pinta/releases/download/#{version}/Pinta.app.zip"
   appcast 'https://github.com/PintaProject/Pinta/releases.atom',
-          checkpoint: 'd343ef21b0681259d7a8df250d61abf187a250cd34f54717c1d6130ec5767c28'
+          checkpoint: '3a9a1d24957700d63abd785fa13a694d0113dbb0fc777d7cd1808170d8f13a53'
   name 'Pinta'
   homepage 'https://pinta-project.com/pintaproject/pinta/'
 

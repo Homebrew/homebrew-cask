@@ -4,7 +4,7 @@ cask 'panini' do
 
   url "https://downloads.sourceforge.net/pvqt/Panini-#{version}B-mac.dmg"
   appcast 'https://sourceforge.net/projects/pvqt/rss',
-          checkpoint: '2ab914ba93251d1c0d480b940da16e2f3c7b328c7ca8158d8bbcb1535c990e47'
+          checkpoint: '240ebece43c34eee4cd45ba8638d99c936281337fae4864fbe32083536ee052e'
   name 'Panini'
   homepage 'https://sourceforge.net/projects/pvqt/'
 

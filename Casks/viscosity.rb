@@ -13,7 +13,12 @@ cask 'viscosity' do
   app 'Viscosity.app'
 
   zap delete: [
+                '/Library/Application Support/Viscosity',
+                '/Library/LaunchDaemons/com.sparklabs.ViscosityHelper.plist',
+                '/Library/PrivilegedHelperTools/com.sparklabs.ViscosityHelper',
                 '~/Library/Application Support/Viscosity',
+                '~/Library/Caches/com.viscosityvpn.Viscosity',
+                '~/Library/Cookies/com.viscosityvpn.Viscosity.binarycookies',
                 '~/Library/Preferences/com.viscosityvpn.Viscosity.plist',
               ]
 end

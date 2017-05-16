@@ -102,7 +102,7 @@ cask 'adobe-animate-cc' do
     'uk_UA'
   end
 
-  url "http://trials3.adobe.com/AdobeProducts/FLPR/#{version.dots_to_underscores}/osx10-64/Animate_#{version.major}_LS20.dmg",
+  url "https://trials3.adobe.com/AdobeProducts/FLPR/#{version.dots_to_underscores}/osx10-64/Animate_#{version.major}_LS20.dmg",
       user_agent: :fake,
       cookies:    { 'MM_TRIALS' => '1234' }
   name 'Adobe Animate CC'

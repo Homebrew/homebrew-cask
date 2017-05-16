@@ -5,7 +5,7 @@ cask 'mac-linux-usb-loader' do
   # github.com/SevenBits/Mac-Linux-USB-Loader was verified as official when first introduced to the cask
   url "https://github.com/SevenBits/Mac-Linux-USB-Loader/releases/download/v#{version}/Mac.Linux.USB.Loader.zip"
   appcast 'https://github.com/SevenBits/Mac-Linux-USB-Loader/releases.atom',
-          checkpoint: '2f828e4edbab5a5814f8e4e7be45c68ded9ed0ea9316c362830ff96d647647b2'
+          checkpoint: '5662637e7878eb6b37802f2226a2a71ddd0b82c1b1eab7158adebad8f20809f3'
   name 'Mac Linux USB Loader'
   homepage 'https://www.sevenbits.io/mlul/'
 

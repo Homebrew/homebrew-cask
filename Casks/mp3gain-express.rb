@@ -4,7 +4,7 @@ cask 'mp3gain-express' do
 
   url "http://projects.sappharad.com/mp3gain/mp3gain_mac#{version.no_dots}.zip"
   appcast 'http://projects.sappharad.com/mp3gain/updates.xml',
-          checkpoint: '15244c931d367a3cd64768c7a89a7ad73f53f7ae3a10fa238ea84060d52d908f'
+          checkpoint: '6065d4e0b882f7b4d703bad0f6d64ad15f8afc11125f0d033857db773d9a3a7d'
   name 'MP3Gain Express'
   homepage 'http://projects.sappharad.com/mp3gain/'
 

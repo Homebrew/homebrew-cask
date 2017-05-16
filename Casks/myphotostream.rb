@@ -4,7 +4,7 @@ cask 'myphotostream' do
 
   url "http://www.weareyeah.com/MyPhotostream/download/#{version}/MyPhotostream-update.zip"
   appcast 'http://www.weareyeah.com/MyPhotostream/feeds/update.appcast',
-          checkpoint: '69b4f5b092e285068a5f26a6a5888e9e6c7bb9dc65de83a3e7985dda426b89ba'
+          checkpoint: 'e1351763bee9f57f97416c547870994f103fb681c58b4423dd9f7a47b23253bc'
   name 'MyPhotostream'
   homepage 'http://www.weareyeah.com/MyPhotostream/'
 

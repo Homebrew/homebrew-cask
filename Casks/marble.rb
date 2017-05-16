@@ -4,7 +4,7 @@ cask 'marble' do
 
   url "https://files.kde.org/marble/downloads/MacOSX/Marble-#{version}.dmg"
   appcast 'https://marble.kde.org/install.php',
-          checkpoint: '2e380a4e00b3dd33424238e3f263c594baa4b5baf4c26ef51141bd9f94cf3fce'
+          checkpoint: '1ce02722daa1d15697f044f62f454f346371d1b224e75e5454bc3a0a5d7a241d'
   name 'Marble'
   homepage 'https://marble.kde.org/'
 

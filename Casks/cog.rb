@@ -8,7 +8,7 @@ cask 'cog' do
   appcast 'http://mamburu.net/cog/stable.xml',
           checkpoint: 'f5770d73ad0c4a19af24cf25195c01d1cc05b937a79416fe82ead0949beee62e'
   name 'Cog'
-  homepage 'http://cogx.org/'
+  homepage 'https://cogx.org/'
 
   app 'Cog.app'
 end

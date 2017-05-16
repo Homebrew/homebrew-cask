@@ -7,7 +7,7 @@ cask 'openshot-video-editor' do
   appcast 'https://github.com/OpenShot/openshot-qt/releases.atom',
           checkpoint: '150d0dc218d3d53e4f30e45accc245d8b12c9951e55dd68f48f0bc445be0eee8'
   name 'OpenShot Video Editor'
-  homepage 'http://openshot.org/'
+  homepage 'https://openshot.org/'
 
   app 'OpenShot Video Editor.app'
 end

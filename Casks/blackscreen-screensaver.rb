@@ -4,7 +4,7 @@ cask 'blackscreen-screensaver' do
 
   url "http://www.dr-lex.be/software/download/BlackScreen#{version.dots_to_underscores}.zip"
   name 'Black Screen screensaver'
-  homepage 'http://www.dr-lex.be/software/screensavers.html'
+  homepage 'https://www.dr-lex.be/software/screensavers.html'
 
   screen_saver 'Black Screen/BlackScreen.saver'
 end

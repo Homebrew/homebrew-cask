@@ -5,7 +5,7 @@ cask 'latexit' do
   url "https://www.chachatelier.fr/latexit/downloads/LaTeXiT-#{version.dots_to_underscores}.dmg",
       user_agent: :fake
   appcast 'https://pierre.chachatelier.fr/latexit/downloads/latexit-sparkle-en.rss',
-          checkpoint: '90d5bc582ecba92ccf740e0a9793fa8f08441d3c9586eeddcb8baf003cdc023c'
+          checkpoint: '6bf7fcfc9469abb3d723d605537a97f3e498c10981e2c526b48e9254bcde53dc'
   name 'LaTeXiT'
   homepage 'https://www.chachatelier.fr/latexit/'
 

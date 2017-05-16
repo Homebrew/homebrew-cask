@@ -7,7 +7,7 @@ cask 'fpcsrc' do
   appcast 'https://sourceforge.net/projects/lazarus/rss',
           checkpoint: 'ce6a7706e0ea9631ad9bc2e4a3d8d712459c79ea239fee34b7aace8cbe5ecd94'
   name 'Free Pascal Compiler Source'
-  homepage 'http://www.freepascal.org/'
+  homepage 'https://www.freepascal.org/'
 
   pkg "fpcsrc-#{version.before_comma}-#{version.after_comma}.pkg"
 

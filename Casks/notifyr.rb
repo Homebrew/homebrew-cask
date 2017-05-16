@@ -4,7 +4,7 @@ cask 'notifyr' do
 
   url "http://getnotifyr.com/app/Notifyr#{version.no_dots}.zip"
   appcast 'http://getnotifyr.com/app/appcast.xml',
-          checkpoint: '4cbac0fcae6af8a1c00bbc8e5a8c499ab5e4cd18a5126d518205924705fb3ab4'
+          checkpoint: 'd5eae10e1d4ecd48c772124510026590edbaafb08755c9e82a4fed168b6444d5'
   name 'Notifyr'
   homepage 'http://getnotifyr.com/'
 
