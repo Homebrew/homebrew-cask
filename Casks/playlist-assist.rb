@@ -4,7 +4,7 @@ cask 'playlist-assist' do
 
   url "https://dougscripts.com/itunes/scrx/playlistassistv#{version.no_dots}.zip"
   appcast 'https://dougscripts.com/itunes/itinfo/playlistassist_appcast.xml',
-          checkpoint: '39792cfd11bdb7cd356c9bf7b7990803bab97a47fa82ebfddd64e4d256e739bc'
+          checkpoint: 'a4687577efe197bc3a4cb0aad90e2a113121106d1a4ed233f6f58c021dbaae59'
   name 'Playlist Assist'
   homepage 'https://dougscripts.com/apps/playlistassistapp.php'
 
