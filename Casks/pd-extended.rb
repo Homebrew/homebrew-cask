@@ -4,7 +4,7 @@ cask 'pd-extended' do
 
   url "https://downloads.sourceforge.net/pure-data/pd-extended/#{version}/Pd-#{version}-extended-macosx105-i386.dmg"
   appcast 'https://sourceforge.net/projects/pure-data/rss?path=/pd-extended',
-          checkpoint: '1cce97ff42748325b3ca1ae4dd873a866f04215cb6b2253e15fd5cf6211a33e8'
+          checkpoint: '7e6978f8bc5af341ca246931eab51a4b01413f7234aff3f16f52b51aed9b2d22'
   name 'Pd-extended'
   homepage 'https://sourceforge.net/projects/pure-data/'
 
