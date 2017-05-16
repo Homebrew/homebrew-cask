@@ -4,7 +4,7 @@ cask 'navicat-for-oracle' do
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_ora_en.dmg"
   appcast 'https://www.navicat.com/products/navicat-for-oracle-release-note',
-          checkpoint: '976ee6551c762789ddd6b656ddad35a11809e83a66cd3e7327fa7e1d2c384105'  
+          checkpoint: '976ee6551c762789ddd6b656ddad35a11809e83a66cd3e7327fa7e1d2c384105'
   name 'Navicat for Oracle'
   homepage 'https://www.navicat.com/products/navicat-for-oracle'
 
