@@ -4,7 +4,7 @@ cask 'postgrespreferencepane' do
 
   url "https://github.com/MaccaTech/PostgresPrefs/releases/download/v#{version}/PostgreSQL.prefPane-v#{version}.zip"
   appcast 'https://github.com/MaccaTech/PostgresPrefs/releases.atom',
-          checkpoint: 'ebffbab28a2d9c2eb3c493c02128d0a2162f3c16864e9d015aa7ec073e5ca627'
+          checkpoint: 'a5ba55f0a2e26224f6be01404ef8eb4546e57cfcf79c3af3f6b775d46547d9ed'
   name 'PostgresPrefs'
   homepage 'https://github.com/MaccaTech/PostgresPrefs'
 
