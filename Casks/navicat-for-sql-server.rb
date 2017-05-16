@@ -4,7 +4,7 @@ cask 'navicat-for-sql-server' do
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_sqlserver_en.dmg"
   appcast 'https://www.navicat.com/products/navicat-for-sqlserver-release-note',
-          checkpoint: '11f0134465eb9c7f0526a03e4fcab01760bfa43352b0678e1d78364361a62625'  
+          checkpoint: '11f0134465eb9c7f0526a03e4fcab01760bfa43352b0678e1d78364361a62625'
   name 'Navicat for SQL Server'
   homepage 'https://www.navicat.com/products/navicat-for-sqlserver'
 
