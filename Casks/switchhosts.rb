@@ -5,7 +5,7 @@ cask 'switchhosts' do
   # github.com/oldj/SwitchHosts was verified as official when first introduced to the cask
   url "https://github.com/oldj/SwitchHosts/releases/download/v#{version.major_minor_patch}/SwitchHosts-macOS-x64_v#{version}.zip"
   appcast 'https://github.com/oldj/SwitchHosts/releases.atom',
-          checkpoint: 'a439e65ebd787caeb787d858f9c604bd2039e1a876e2ee403b6f352310976515'
+          checkpoint: '2d5ec4b21a73ca0d31fc3c7d0c4fb9fe2192f2a1623a2633785f4d42d0e9c549'
   name 'SwitchHosts!'
   homepage 'https://oldj.github.io/SwitchHosts/'
 
