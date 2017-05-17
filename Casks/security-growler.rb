@@ -4,7 +4,7 @@ cask 'security-growler' do
 
   url "https://github.com/pirate/security-growler/releases/download/v#{version}/Security.Growler.app.zip"
   appcast 'https://github.com/pirate/security-growler/releases.atom',
-          checkpoint: '8e66d2ad02cdecc2728c20c7cf6352614d7b3b5de218a3adc4e496728b72f396'
+          checkpoint: 'c28136022a4fcdcdf84108fe6cffead9a05967a160bacd30dd9eb0f1bae783d4'
   name 'Security Growler'
   homepage 'https://github.com/pirate/security-growler'
 
