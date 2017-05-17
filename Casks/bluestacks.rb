@@ -8,6 +8,10 @@ cask 'bluestacks' do
 
   app 'BlueStacks.app'
 
+  uninstall_preflight do
+    set_ownership "#{appdir}/BlueStacks.app"
+  end
+
   uninstall launchctl: [
                          'com.BlueStacks.AppPlayer.bstservice_helper',
                          'com.BlueStacks.AppPlayer.Service',
