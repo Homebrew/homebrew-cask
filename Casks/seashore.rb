@@ -4,7 +4,7 @@ cask 'seashore' do
 
   url "https://downloads.sourceforge.net/seashore/seashore%20binaries/Seashore%20#{version}/Seashore.zip"
   appcast 'https://sourceforge.net/projects/seashore/rss?path=/seashore%20binaries',
-          checkpoint: '13808d72b3771b130ff83388dbd5ebe591ef3dc6a678ac9d0f78265087542877'
+          checkpoint: '0166c87c323a21d17c1f5c80a979a930546dc7cece1c1a3e4064ce188639a73d'
   name 'Seashore'
   homepage 'http://seashore.sourceforge.net/'
 
