@@ -4,7 +4,7 @@ cask 'rowmote-helper' do
 
   url "http://regularrateandrhythm.com/rowmote-pro/rh/rowmote-helper-#{version}.zip"
   appcast 'http://www.regularrateandrhythm.com/apps/rowmote-pro/rowmote-appcast.xml',
-          checkpoint: 'a71f0a24aa505e25ca6b3d4626b138d3bc435986307afd333492df450ee2dc6c'
+          checkpoint: '98ca3ca5b67bf12757bb4b6257f65257b023274e41587738e12e9e7ab8f10ac7'
   name 'Rowmote Helper'
   homepage 'http://regularrateandrhythm.com/apps/rowmote-pro/'
 
