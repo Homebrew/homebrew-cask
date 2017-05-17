@@ -4,7 +4,7 @@ cask 'ubersicht' do
 
   url "http://tracesof.net/uebersicht/releases/Uebersicht-#{version}.app.zip"
   appcast 'http://tracesof.net/uebersicht/updates.xml.rss',
-          checkpoint: '987585f6b7169cafedce64f14b4f0542c435420ce7921065ad53bb29c078a86c'
+          checkpoint: 'ad937ed65050a40cccc8c7e9079a63f75a9b154357f15226acaf189d03f9e924'
   name 'Übersicht'
   homepage 'http://tracesof.net/uebersicht/'
 
