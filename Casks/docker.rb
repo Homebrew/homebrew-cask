@@ -14,7 +14,18 @@ cask 'docker' do
 
   app 'Docker.app'
 
-  uninstall delete:    '/Library/PrivilegedHelperTools/com.docker.vmnetd',
+  preflight do
+    ['docker', 'docker-compose', 'docker-machine'].each do |cmd|
+      system_command '/bin/ln', args: ['-s', "#{appdir}/Docker.app/Contents/Resources/etc/#{cmd}.zsh-completion", "/usr/local/share/zsh/site-functions/_#{cmd}"]
+    end
+  end
+
+  uninstall delete:    [
+                         '/Library/PrivilegedHelperTools/com.docker.vmnetd',
+                         '/usr/local/share/zsh/site-functions/_docker',
+                         '/usr/local/share/zsh/site-functions/_docker-compose',
+                         '/usr/local/share/zsh/site-functions/_docker-machine',
+                       ],
             launchctl: [
                          'com.docker.helper',
                          'com.docker.vmnetd',
