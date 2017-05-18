@@ -4,7 +4,7 @@ cask 'sonic-pi' do
 
   url "http://sonic-pi.net/files/releases/v#{version}/Sonic-Pi-for-Mac-v#{version}.dmg"
   appcast 'https://github.com/samaaron/sonic-pi/releases.atom',
-          checkpoint: 'de0a077ee24d16baa40620e5cabc991c2b8dcfabf71893b4d014c384a442ed9c'
+          checkpoint: 'eb4ec1bd1e5fabf1dca795111628996bb3eef2696fd2ca52d866ca4f0337ded9'
   name 'Sonic Pi'
   homepage 'http://sonic-pi.net/'
 
