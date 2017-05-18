@@ -1,10 +1,10 @@
 cask 'ramme' do
-  version '3.0.3'
-  sha256 '051a4d23e5e3b58c9e6ac1879baa15a4ca1230b85c1b5f2051cd871324d3889d'
+  version '3.1.0'
+  sha256 'e8eaef921eab170f99396c127495b558d6b2cbaf1df914bcccd5ab37d592e1da'
 
   url "https://github.com/terkelg/ramme/releases/download/v#{version}/Ramme-#{version}.dmg"
   appcast 'https://github.com/terkelg/ramme/releases.atom',
-          checkpoint: '575b457921467cfab492e4086c33d1b7d96a79180f921567139cf71ab1885a18'
+          checkpoint: '3c25b04a09e8545b9d472753fbc540c339a5ce4c3ea4655aeff0796c164fcf27'
   name 'Ramme'
   homepage 'https://github.com/terkelg/ramme/'
 

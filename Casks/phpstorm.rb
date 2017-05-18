@@ -1,10 +1,10 @@
 cask 'phpstorm' do
-  version '2017.1.3,171.4424.11'
-  sha256 'b631cb4eb030da9f45b0e4a4080fb7cd7172897c6644cc1e57f833ea7276168e'
+  version '2017.1.4,171.4694.2'
+  sha256 '6f69545fd44b89e15f981fc8bf12908a22a892787ae5603a4aa9598dfcfd1761'
 
   url "https://download.jetbrains.com/webide/PhpStorm-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=PS&latest=true&type=release',
-          checkpoint: '0a667867d115bab920b770529d0b11e8b088dc9e6fe0e0789c06b0a5f31001cd'
+          checkpoint: 'd19b8f27fe6ba05de60567ca1802fec1c0b0f81814884ce7f65d8ae6b9783104'
   name 'JetBrains PhpStorm'
   homepage 'https://www.jetbrains.com/phpstorm/'
 

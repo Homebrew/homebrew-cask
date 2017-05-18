@@ -9,4 +9,9 @@ cask 'freeze' do
   homepage 'https://www.freezeapp.net/'
 
   app 'Freeze.app'
+
+  zap delete: [
+                '~/Library/Application Scripts/seb.GlacierMac',
+                '~/Library/Containers/seb.GlacierMac',
+              ]
 end
