@@ -4,7 +4,7 @@ cask 'react-native-debugger' do
 
   url "https://github.com/jhen0409/react-native-debugger/releases/download/v#{version}/rn-debugger-macos-x64.zip"
   appcast 'https://github.com/jhen0409/react-native-debugger/releases.atom',
-          checkpoint: '7e5b7fac1d1f4f0f7b521323ff705d7fe9700a33b598a1e0834dfa6887ffb2f7'
+          checkpoint: '78ca7ed23b171f4a57c69a654c60195c6df0b73172b1d71b7f68bf913e782b4d'
   name 'React Native Debugger'
   homepage 'https://github.com/jhen0409/react-native-debugger'
 
