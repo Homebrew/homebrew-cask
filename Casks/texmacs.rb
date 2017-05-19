@@ -4,7 +4,7 @@ cask 'texmacs' do
 
   url "http://www.texmacs.org/Download/ftp/tmftp/macos/TeXmacs-#{version}.dmg"
   appcast 'http://www.texmacs.org/tmweb/download/macosx.en.html',
-          checkpoint: '7e207b62277a2f1777c40e2d1c2405a5cb58718ad79a1ba6424a8291207a708c'
+          checkpoint: '3631d7cd770cb0bf2b23e8b10a330e7ddfbece85c49fc74e6531e83e0bb00778'
   name 'GNU TeXmacs'
   homepage 'http://www.texmacs.org/'
 

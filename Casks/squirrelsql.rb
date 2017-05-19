@@ -5,7 +5,7 @@ cask 'squirrelsql' do
   # sourceforge.net/squirrel-sql was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/squirrel-sql/1-stable/#{version}/squirrel-sql-#{version}-MACOSX-install.jar"
   appcast 'https://sourceforge.net/projects/squirrel-sql/rss?path=/1-stable',
-          checkpoint: '2bf738ab989998ed5a58b9239464120247b7adeba9ed3aff1acb9bb7b4113123'
+          checkpoint: 'f3b56771efd0140b885e5a74f7c2528f984109f2c8c8de0adee5447419bde5b1'
   name 'SQuirrel SQL'
   homepage 'http://www.squirrelsql.org/'
 
