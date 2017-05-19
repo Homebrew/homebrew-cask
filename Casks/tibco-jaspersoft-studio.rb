@@ -5,7 +5,7 @@ cask 'tibco-jaspersoft-studio' do
   # sourceforge.net/jasperstudio was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/jasperstudio/TIBCOJaspersoftStudio-#{version}.final-mac-x86_64.dmg"
   appcast 'https://sourceforge.net/projects/jasperstudio/rss',
-          checkpoint: 'e46ce59c6a652c8bdca94d2dc96aa210b0cf003af2e445148497a229c4825a8a'
+          checkpoint: '367747da803dcf7a26c346a67d39b2a3aa96a89b59ce300ecc298a5da3df1782'
   name 'TIBCO Jaspersoft Studio'
   homepage 'https://community.jaspersoft.com/project/jaspersoft-studio'
 
