@@ -10,4 +10,10 @@ cask 'xscope' do
   homepage 'http://xscopeapp.com/'
 
   app 'xScope.app'
+
+  zap delete: [
+                '~/Library/Caches/com.iconfactory.xScope',
+                '~/Library/Caches/com.iconfactory.xScope.cache',
+                '~/Library/Preferences/com.iconfactory.xScope.plist',
+              ]
 end
