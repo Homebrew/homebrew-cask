@@ -8,6 +8,8 @@ cask 'xamarin-mac' do
   name 'Xamarin Mac'
   homepage 'https://www.xamarin.com/platform'
 
+  depends_on cask: 'mono-mdk'
+
   pkg "xamarin.mac-#{version}.pkg"
 
   uninstall pkgutil: [
