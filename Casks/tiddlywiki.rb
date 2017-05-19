@@ -4,7 +4,7 @@ cask 'tiddlywiki' do
 
   url "https://github.com/Jermolene/TiddlyDesktop/releases/download/v#{version}/tiddlydesktop-mac64-v#{version}.zip"
   appcast 'https://github.com/Jermolene/TiddlyDesktop/releases.atom',
-          checkpoint: 'cedb811780d4da29c7b4ee6a8437f4487bb66f5d58f770a2931108a9bd04bc57'
+          checkpoint: '3d35a2b54c339e8c1641bd4917f60a54259928f63800c04898b985ad042e925f'
   name 'TiddlyWiki'
   homepage 'https://github.com/Jermolene/TiddlyDesktop'
 
