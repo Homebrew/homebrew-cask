@@ -5,7 +5,7 @@ cask 'sync-my-l2p' do
   # github.com/Sync-my-L2P/Sync-my-L2P was verified as official when first introduced to the cask
   url "https://github.com/Sync-my-L2P/Sync-my-L2P/releases/download/v#{version}/SyncMyL2P-#{version}-osx.dmg"
   appcast 'https://github.com/Sync-my-L2P/Sync-my-L2P/releases.atom',
-          checkpoint: '131d35c756edf86c9a5197973c41651749402e4a948699a98d1d7ff8bae6b3c2'
+          checkpoint: '6429f99b9639a3ccf917d955d79df0b0263e3a4643b2d994bf30419a0e25c290'
   name 'Sync-my-L2P'
   homepage 'http://www.sync-my-l2p.de/'
 
