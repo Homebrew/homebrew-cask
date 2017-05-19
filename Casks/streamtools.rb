@@ -5,7 +5,7 @@ cask 'streamtools' do
   # github.com/nytlabs/streamtools was verified as official when first introduced to the cask
   url "https://github.com/nytlabs/streamtools/releases/download/#{version}/st_darwin_amd64-#{version}.tar.gz"
   appcast 'https://github.com/nytlabs/streamtools/releases.atom',
-          checkpoint: '804719fa1c17b6827cbe3f0cb28b26c7c0161f9e18c4df3a705005ef332ae53e'
+          checkpoint: 'd0acf4bf79d2e34d5a936addc9f9bae47a9512337cf76a0eb81dadb55be4d686'
   name 'streamtools'
   homepage 'http://nytlabs.com/streamtools/'
 
