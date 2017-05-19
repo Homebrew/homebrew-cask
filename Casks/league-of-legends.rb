@@ -8,4 +8,6 @@ cask 'league-of-legends' do
   homepage 'https://leagueoflegends.com/'
 
   app 'League of Legends.app'
+
+  zap delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.riotgames.maccontainer.sfl'
 end
