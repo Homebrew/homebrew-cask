@@ -4,7 +4,7 @@ cask 'tapaal' do
 
   url "http://www.tapaal.net/fileadmin/download/tapaal-#{version.major_minor}/tapaal-#{version}-mac64.dmg"
   appcast 'http://www.tapaal.net/',
-          checkpoint: '3464ec18189f3b4326a2f56e2cbb29a2d264db87331389b6bdfbc43e8561e8e5'
+          checkpoint: 'b2d4f5ec27af3b9437a79a3a28fb3d0e1e7c5931bc5f440368ed83fd886c3288'
   name 'TAPAAL'
   homepage 'http://www.tapaal.net/'
 
