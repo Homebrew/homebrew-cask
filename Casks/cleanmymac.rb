@@ -80,7 +80,6 @@ cask 'cleanmymac' do
                   '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac3.scheduler.sfl',
                   '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac3.sfl',
                 ]
-
   end
 
   name 'CleanMyMac'
