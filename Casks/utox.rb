@@ -5,7 +5,7 @@ cask 'utox' do
   # github.com/uTox/uTox was verified as official when first introduced to the cask
   url "https://github.com/uTox/uTox/releases/download/v#{version}/uTox-#{version}.dmg"
   appcast 'https://github.com/uTox/uTox/releases.atom',
-          checkpoint: 'eee22a515c835b9a12c6dfc727a144227c27ec56d1b613a46362c8927b333a4a'
+          checkpoint: '3ac9e7a194c722a871e25415c165dbe8b6fe9e3930a94bee38b66846e1beaea6'
   name 'uTox'
   homepage 'https://www.tox.chat/'
 
