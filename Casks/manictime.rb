@@ -1,6 +1,6 @@
 cask 'manictime' do
-  version '1.3.3'
-  sha256 '87e0d7077974e9d1fb4c2a5ea1de397ba296cc634a92b0c1146263f2dfc65edc'
+  version '1.4.0'
+  sha256 '2072e484087f1c41364f66b1f4f897be57c974b7608f9271bdd91df2cd507229'
 
   url "http://cdn.manictime.com/setup/mac/ManicTime-v#{version}.dmg"
   name 'ManicTime'
