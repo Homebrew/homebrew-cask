@@ -9,13 +9,13 @@ cask 'universalmailer' do
     version '2.1.6'
     sha256 '873f2606f1bf4168775ad48213638d2ede3dee4d8925c84049a42e31a38a9137'
   else
-    version '3b16'
-    sha256 'f0ef4992a515b28584296fde95b036a7d7c2820fc306230d89ddbff381bfea27'
+    version '3b18'
+    sha256 '0fbdfb03a74854963c4ba33c0fb83fbc3c3406c2de2754fdac0bb68275c41cbe'
   end
 
   url "https://universalmailer.github.io/UniversalMailer/zips/UniversalMailer-v#{version.dots_to_underscores}.zip"
   appcast 'https://universalmailer.github.io/UniversalMailer/download.html',
-          checkpoint: 'b0babe8cae395a51217216d9f0b4fad41a384089a012d98dc866f3bc5e142293'
+          checkpoint: 'db0ab0a479729ebf4d9810f1dc19d1db217cf253344f4569a7a205ee35e02edc'
   name 'Universal Mailer'
   homepage 'https://universalmailer.github.io/UniversalMailer/'
 
