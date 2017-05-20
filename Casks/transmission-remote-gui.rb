@@ -4,7 +4,7 @@ cask 'transmission-remote-gui' do
 
   url "https://downloads.sourceforge.net/transgui/#{version}/transgui-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/transgui/rss',
-          checkpoint: 'b83a50dcf74d826bb84b9d5aa6e19bfca4a8e0090e00a3feb7976bb9869dfe0a'
+          checkpoint: '8d676af5ce3c702cfce68c3a7323f09dadc71098bc3212d3551472952e81b78a'
   name 'Transmission Remote GUI'
   homepage 'https://sourceforge.net/projects/transgui/'
 
