@@ -4,7 +4,7 @@ cask 'totalterminal' do
 
   url "http://downloads.binaryage.com/TotalTerminal-#{version}.dmg"
   appcast 'https://totalterminal.binaryage.com/changelog-beta.txt',
-          checkpoint: 'c55f3bc02ec9c3f27036fbe11de7a16c114f54328e9eefb5b8d4e67febd5162d'
+          checkpoint: '56c5a64a27476506814254ac090369873f1c97638037b14cf34727b0d41aec91'
   name 'TotalTerminal'
   homepage 'https://totalterminal.binaryage.com/'
 
