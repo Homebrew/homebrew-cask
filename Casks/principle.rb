@@ -1,11 +1,11 @@
 cask 'principle' do
-  version '2.1.4'
-  sha256 '1f3110b4be955576dda6458a85de264ed5f05e227199211678da457853b92b96'
+  version '2.1.5'
+  sha256 'a4d0de0b6ccc219ed85c7c072ad0c55c2474dab3afcf26ce6c8af483efde4ac9'
 
   # principleformac.com.s3.amazonaws.com was verified as official when first introduced to the cask
   url 'http://principleformac.com.s3.amazonaws.com/download/Principle_Latest.zip'
   appcast 'http://principleformac.com/update2.xml',
-          checkpoint: '3db849e42e30663501a646b50cffa942f6ab482ec5bb63646f2e4452424083ca'
+          checkpoint: 'c65bb0e45da84a8da4db63eb9647c822a60751f636cef0db577f8d30eb38d489'
   name 'Principle'
   homepage 'http://principleformac.com/'
 
