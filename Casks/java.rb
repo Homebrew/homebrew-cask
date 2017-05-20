@@ -10,8 +10,6 @@ cask 'java' do
   name 'Java Standard Edition Development Kit'
   homepage "https://www.oracle.com/technetwork/java/javase/downloads/jdk#{version.minor}-downloads-2133151.html"
 
-  auto_updates true
-
   pkg "JDK #{version.minor} Update #{java_update}.pkg"
 
   postflight do
