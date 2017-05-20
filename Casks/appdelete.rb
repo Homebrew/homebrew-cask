@@ -4,7 +4,7 @@ cask 'appdelete' do
 
   url 'http://www.reggieashworth.com/downloads/AppDelete.dmg'
   appcast "http://www.reggieashworth.com/AD#{version.major}Appcast.xml",
-          checkpoint: '2ee2069f1fb1f4a76adde5c9be3c120742556ed741b1dd43ee4804017db86d61'
+          checkpoint: '843016cf398f3163565900b2589522f265402a7b6a37e2704c0adab10bc1ace6'
   name 'AppDelete'
   homepage 'http://www.reggieashworth.com/appdelete'
 
