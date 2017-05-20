@@ -7,4 +7,14 @@ cask 'armitage' do
   homepage 'http://www.fastandeasyhacking.com/'
 
   app 'Armitage.app'
+  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/armitage.wrapper.sh"
+  binary shimscript, target: 'armitage'
+
+  preflight do
+    IO.write shimscript, <<-EOS.undent
+      #!/bin/sh
+      java "$@" -jar '#{appdir}/Armitage.app/Contents/Java/armitage.jar'
+    EOS
+  end
 end
