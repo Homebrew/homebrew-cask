@@ -6,5 +6,7 @@ cask 'yourkit-java-profiler' do
   name 'YourKit Java Profiler'
   homepage 'https://www.yourkit.com/features/'
 
+  auto_updates true
+
   app "YourKit-Java-Profiler-#{version.major_minor}.app"
 end
