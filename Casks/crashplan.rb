@@ -6,6 +6,8 @@ cask 'crashplan' do
   name 'CrashPlan'
   homepage 'https://www.crashplan.com/'
 
+  auto_updates true
+
   pkg 'Install CrashPlan.pkg'
 
   uninstall launchctl: 'com.backup42.desktop',
