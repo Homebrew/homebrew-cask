@@ -4,7 +4,7 @@ cask 'torustrooper' do
 
   url "https://workram.com/downloads/TorusTrooper-for-OS-X-#{version}.dmg"
   appcast 'https://workram.com/games/',
-          checkpoint: 'a53dea4e8dcc4e5486a920d1b73e53454811f3d8c54b19b25236eff3f8923030'
+          checkpoint: 'a31aea1ac1a7e2e6acfa671cafa7ed6949d84142d069c10dd39da4a005ff4e06'
   name 'Torus Trooper'
   homepage 'https://workram.com/games/'
 
