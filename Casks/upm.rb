@@ -4,7 +4,7 @@ cask 'upm' do
 
   url "https://downloads.sourceforge.net/upm/upm-#{version}/upm-mac-#{version}.tar.gz"
   appcast 'https://sourceforge.net/projects/upm/rss',
-          checkpoint: '89855b9570b29cfa046bd23fa605d5488ddd34d20b98a5628e5e4972022eb0ab'
+          checkpoint: '03c4d2fb07e59aefded525947d72ce9e628d5c1c4897e7168867a5e3bec485d9'
   name 'Universal Password Manager'
   homepage 'http://upm.sourceforge.net/'
 
