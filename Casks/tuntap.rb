@@ -4,7 +4,7 @@ cask 'tuntap' do
 
   url "https://downloads.sourceforge.net/tuntaposx/tuntap/#{version}/tuntap_#{version}.tar.gz"
   appcast 'https://sourceforge.net/projects/tuntaposx/rss?path=/tuntap',
-          checkpoint: '781b6f4837d37ac562e7d41f479e694a89e5e8f242f35c8ce6f59113970b7f01'
+          checkpoint: 'e9cc5269edac00c5d94ed063d41a116120b519b76e4d1a7e920d4d77ad2244c8'
   name 'TunTap'
   homepage 'http://tuntaposx.sourceforge.net/'
 
