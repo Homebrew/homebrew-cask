@@ -1,6 +1,6 @@
 cask 'autopano-giga' do
-  version '4.4.0.400,2017-03-25'
-  sha256 '836a0b67cd4a6553efc6f19d7440561ea4c521952949551a4229f13583588682'
+  version '4.4.1.400,2017-05-16'
+  sha256 '49bb5e5981d1eef950373a21ebb6a7fdada879b8a8fa3936556875ec4ecad75c'
 
   url "http://cdn-download.kolor.com/apg/#{version.before_comma}_#{version.after_comma}/AutopanoGiga_Mac_#{version.major_minor_patch.no_dots}_#{version.after_comma}.dmg"
   name 'Autopano Giga'
