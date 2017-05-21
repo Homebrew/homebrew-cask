@@ -1,10 +1,10 @@
 cask 'rhodes-kite' do
-  version '1.2'
-  sha256 '7fa99815d9dbd2f33ebdb744af57bb9c4d4919fbdf11b65da47ff2ac55d83b66'
+  version '1.2.1'
+  sha256 '50c48b1d25ec70110383628c448f23d38e739e2891b714eb7f345df88fdd6753'
 
   url "https://kiteapp.co/downloads/Kite-#{version}.zip"
   appcast 'https://api.kiteapp.co/kite_appcast.xml',
-          checkpoint: '71ec101dea8230abcfebcd3d1601648bce000d946775ad17867feadced923eae'
+          checkpoint: 'c29ffd466c3bda57de695daa50211d19dd65af16408819e4651d924ed09be5d8'
   name 'Kite Compositor'
   homepage 'https://kiteapp.co/'
 
