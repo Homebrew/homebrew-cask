@@ -15,7 +15,7 @@ cask 'saoimage-ds9' do
   name 'SAOImage DS9'
   homepage 'http://ds9.si.edu/site/Home.html'
 
-  depends_on macos: '=> :yosemite'
+  depends_on macos: '>= :yosemite'
 
   app 'SAOImage DS9.app'
 end
