@@ -1,8 +1,8 @@
 cask 'i1profiler' do
-  version '1.6.7'
-  sha256 'fe3a00123b6c9a1b60f7d2d42207770d1cffa23fe2e29410a308ee6dee40fda0'
+  version '1.7.0'
+  sha256 '7a256c428c429140dea8e86eb685be5d6231bf1dc029f65973d653b7232dcb0a'
 
-  url 'https://my.xrite.com/downloader.aspx?FileID=1672&Type=M'
+  url 'https://my.xrite.com/downloader.aspx?FileID=1802&Type=M'
   name 'i1Profiler'
   name 'Eye-One Profiler'
   name 'i1Publish'
