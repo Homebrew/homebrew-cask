@@ -6,7 +6,7 @@ cask 'acronis-true-image' do
   appcast 'https://www.acronis.com/en-us/support/updates/changes.html?p=39955',
           checkpoint: '64a5df85dc47fd0fe89569d55f4d4fdc1d4f9e8da9ef72a79b2ad5205296b402'
   name 'Acronis True Image'
-  homepage 'https://www.acronis.com/de-de/personal/computer-backup/'
+  homepage 'http://www.acronis.com/de-de/personal/computer-backup/'
 
   app 'Acronis True Image.app'
 end
