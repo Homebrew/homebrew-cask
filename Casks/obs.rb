@@ -1,18 +1,20 @@
 cask 'obs' do
-  version '18.0.1'
-  sha256 'a0f353fa60ef78862814c1a11cd8e02382e0ec6d761ca1dddb4427ab37408957'
+  version '19.0.1'
+  sha256 '7e8ccb69971daa44049f3d4978b6d80cc857f0815e55059b859484b00eaf07e9'
 
   # github.com/jp9000/obs-studio was verified as official when first introduced to the cask
   url "https://github.com/jp9000/obs-studio/releases/download/#{version}/obs-mac-#{version}-installer.pkg"
   appcast 'https://github.com/jp9000/obs-studio/releases.atom',
-          checkpoint: 'b85bdd5f84d3398e45bf7d388945c7fbb70328f354df54a6245fbbb08d0b8903'
+          checkpoint: '0a9e66f8f20bdc7b6b82b6e176d6ceb3f33808e5fd9e6e282749a30dbf444811'
   name 'OBS'
   homepage 'https://obsproject.com/'
 
   pkg "obs-mac-#{version}-installer.pkg"
 
-  uninstall pkgutil: 'org.obsproject.pkg.obs-studio',
-            delete:  '/Applications/SyphonInject.app'
+  uninstall pkgutil: [
+                       'org.obsproject.pkg.obs-studio',
+                       'zakk.lol.SyphonInject',
+                     ]
 
   zap delete: [
                 '/Library/Application Support/obs-studio',
