@@ -4,7 +4,7 @@ cask 'vmware-appcatalyst' do
 
   url 'http://getappcatalyst.com/downloads/VMware-AppCatalyst-Technical-Preview-Update.dmg'
   name 'VMware AppCatalyst'
-  homepage 'http://getappcatalyst.com/'
+  homepage 'https://www.vmware.com/cloudnative/appcatalyst-download.html'
 
   depends_on macos: '>= :mavericks'
 
