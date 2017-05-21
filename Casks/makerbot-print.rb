@@ -3,7 +3,7 @@ cask 'makerbot-print' do
   sha256 :no_check
 
   # s3.amazonaws.com/downloads-makerbot-com/installer/release was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/downloads-makerbot-com/installer/release/MakerBotDesktopInstaller.pkg"
+  url 'https://s3.amazonaws.com/downloads-makerbot-com/installer/release/MakerBotDesktopInstaller.pkg'
   name 'MakerBot Print'
   homepage 'https://www.makerbot.com/print/'
 
