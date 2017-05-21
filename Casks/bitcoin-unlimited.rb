@@ -1,6 +1,6 @@
 cask 'bitcoin-unlimited' do
-  version '1.0.1.3'
-  sha256  '7e19427a5931278a06cefdea972a674b676bbfeab2816993ab6b530889aeb536'
+  version '1.0.2.0'
+  sha256 'e0360d108cb4f3ea996e5d59c41e95065e793c140bc12042e217d037bb587d63'
 
   url "https://www.bitcoinunlimited.info/downloads/bitcoinUnlimited-#{version}-osx.dmg"
   name 'Bitcoin Unlimited'
