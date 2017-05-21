@@ -7,7 +7,7 @@ cask 'cloudtv' do
   appcast 'https://updates.devmate.com/com.nonoche.CloudTV.xml',
           checkpoint: 'd0888b4b32c0ea6adab6b6a6619a3ee7e510e4066b9b4310bf2647578fe9681f'
   name 'CloudTV'
-  homepage 'http://cloudtvapp.net/'
+  homepage 'https://cloudtvapp.net/'
 
   app 'CloudTV.app'
 end
