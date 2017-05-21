@@ -1,6 +1,6 @@
 cask 'camranger' do
-  version '1.9.3'
-  sha256 'b8483e82f7d77557be54a7801775671956a93bff5140d7f65a11cfd471ea5cb6'
+  version '1.9.4'
+  sha256 'ea0af693a64c3e56e606bfd8f337e1292f69aed2fcb6d65a19557ea23105a5f3'
 
   url "https://www.camranger.com/downloadFiles/CamRanger_Mac_#{version.dots_to_underscores}.dmg",
       user_agent: :fake
