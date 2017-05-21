@@ -3,13 +3,13 @@ cask 'chefdk' do
     version '0.11.2-1'
     sha256 '56899eab322cacac7f445a24d3159af34fccb5910642f4535eff4ee47321fe56'
   else
-    version '1.3.43-1'
-    sha256 'aacdde86b7a0ab31d9f1adfad0fc3a65893e0cc2dd1f37af61a8848e9309e2da'
+    version '1.4.3-1'
+    sha256 '5791d9d7303afcc1fc5cc64c8eb53e2344302f9732be1c543ed48ee8f9a9ab33'
   end
 
   url "https://packages.chef.io/stable/mac_os_x/#{MacOS.version}/chefdk-#{version}.dmg"
   appcast "https://www.chef.io/chef/metadata-chefdk?p=mac_os_x&pv=#{MacOS.version}&m=x86_64&v=latest&prerelease=false",
-          checkpoint: 'c5749a47eb5ce302cc014242b6c24d48592b4af1d8014043c4f7097c0c4c1c5c'
+          checkpoint: '6d323ad700e3b0f2a0ec55b37dc331c37c124a77d326b1ede19a91acdb46ddee'
   name 'Chef Development Kit'
   name 'ChefDK'
   homepage 'https://downloads.chef.io/chefdk'
