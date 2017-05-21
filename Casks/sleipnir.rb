@@ -6,7 +6,7 @@ cask 'sleipnir' do
   appcast 'https://update.fenrir.co.jp/smartupdate/mac/sleipnir/appcast.xml',
           checkpoint: '02fb658905c9f306799788db97c23a0fc403862a866e65c231d9614eda72f50b'
   name 'Sleipnir'
-  homepage 'http://www.fenrir-inc.com/jp/sleipnir/'
+  homepage 'https://www.fenrir-inc.com/jp/sleipnir/'
 
   app 'Sleipnir.app'
 end
