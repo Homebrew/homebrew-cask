@@ -4,7 +4,7 @@ cask 'duplicati' do
 
   url "https://updates.duplicati.com/experimental/duplicati-#{version.before_comma}_experimental_#{version.after_comma}.dmg"
   appcast 'https://github.com/duplicati/duplicati/releases.atom',
-          checkpoint: 'fb7210a75a4678a6fbdf376fd2bcc1e4536234e5f5790c9f0c739ce22a43551c'
+          checkpoint: '06ec236e8d09ab811b345a6001a1d17e165d5f30bf9ec658ad855536c4dd89f3'
   name 'Duplicati'
   homepage 'https://www.duplicati.com/'
 
