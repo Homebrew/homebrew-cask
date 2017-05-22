@@ -12,7 +12,7 @@ cask 'cloudlibrary' do
 
     url "http://download.yourcloudlibrary.com/apps/mac/cloudLibrary-#{version}.pkg"
     appcast 'http://www.yourcloudlibrary.com/index.php/en-us/downloads/software?format=rss',
-            checkpoint: '0142ef1e6809410e6d8a2b944809407aab4fb085125c2dd2c34bd2075c564c8b'
+            checkpoint: '3f3008860d59afc9c064e0150256bfd83b2abffef7cb0fc6380c0061e3083723'
 
     pkg "cloudLibrary-#{version}.pkg"
 
