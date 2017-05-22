@@ -4,7 +4,7 @@ cask 'digital-power-station' do
 
   url "https://bongiovidps.com/wp-content/uploads/#{version.after_comma.dots_to_slashes}/Bongiovi_DPS_Mac_Setup.zip"
   appcast 'http://bongiovidps.com/download/',
-          checkpoint: 'a7de6bd3b1fb1a84e01a228f1b895391e2a27972e3ae2afcf2d51a67ed7ef0cc'
+          checkpoint: 'a8f3261198606135c36fbd20765757104a7769a2c235c0250b39130f28d2f415'
   name 'Bongiovi Digital Power Station Plugin'
   homepage 'https://bongiovidps.com/'
 
