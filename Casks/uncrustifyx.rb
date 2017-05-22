@@ -4,7 +4,7 @@ cask 'uncrustifyx' do
 
   url "https://github.com/ryanmaxwell/UncrustifyX/releases/download/#{version}/UncrustifyX-#{version}.zip"
   appcast 'https://github.com/ryanmaxwell/UncrustifyX/releases.atom',
-          checkpoint: 'a630a55936f8f5cf7ade0b73f1c8c094d3b733a028121da60f383fb69b9f4e43'
+          checkpoint: 'ce3555ed06c048f9882ba21c6b10fe03b3a2687016788915025a2891b5b683c5'
   name 'UncrustifyX'
   homepage 'https://github.com/ryanmaxwell/UncrustifyX'
 

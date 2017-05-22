@@ -1,6 +1,6 @@
 cask 'pcp' do
-  version '3.11.4-1'
-  sha256 '23ab95f60c127601e7b995525523b2a8762eab224fdaa12c8bffc39b3de3fc34'
+  version '3.11.9-1'
+  sha256 '4e21a5146a8d405ff4fc6a082eb7fa40521165c6feab5f60c3f2f1a9cba153a1'
 
   # bintray.com/pcp/macosx was verified as official when first introduced to the cask
   url "https://bintray.com/pcp/macosx/download_file?file_path=pcp-#{version}.dmg"

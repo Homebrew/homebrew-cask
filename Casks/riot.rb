@@ -6,7 +6,7 @@ cask 'riot' do
   appcast 'https://github.com/vector-im/riot-web/releases.atom',
           checkpoint: '0d6bfa6ff69f885d473fab4e761af6b81096a83e8c626c4ab0165905e43861e5'
   name 'Riot'
-  homepage 'https://riot.im/'
+  homepage 'https://about.riot.im/'
 
   app 'Riot.app'
 

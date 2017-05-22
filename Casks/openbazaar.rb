@@ -7,7 +7,7 @@ cask 'openbazaar' do
   appcast 'https://github.com/OpenBazaar/OpenBazaar-Installer/releases.atom',
           checkpoint: '5957307c99117948ab51282d4ab9507f39b68f33ba8d2c1566d17f13c8846360'
   name 'OpenBazaar'
-  homepage 'https://openbazaar.org/'
+  homepage 'https://www.openbazaar.org/'
 
   app 'OpenBazaar.app'
 

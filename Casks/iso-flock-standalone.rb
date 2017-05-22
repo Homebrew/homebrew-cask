@@ -1,6 +1,6 @@
 cask 'iso-flock-standalone' do
-  version '1.5.3'
-  sha256 '5f2765b12519f021bc4305e491f7c2ebd55ca7279f379864f6827dea1cdd5166'
+  version '1.6.0'
+  sha256 '76011ab98aa915bb67a912c6da6b842ad792dd154c5045026a06107c0fb51da4'
 
   url "http://swarms.cc/downloads/standalone/IsoFlockStandalone_#{version.no_dots}.zip"
   name 'ISO-Flock'

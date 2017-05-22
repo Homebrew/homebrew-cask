@@ -4,7 +4,7 @@ cask 'time-tracker' do
 
   url "https://github.com/rburgst/time-tracker-mac/releases/download/v#{version}-binary/Time.Tracker-#{version}-bin.zip"
   appcast 'https://github.com/rburgst/time-tracker-mac/releases.atom',
-          checkpoint: 'f10b0a3f4b727f8dd307bc63b58b30b2d00c8921bcef532457dd60b0827217ec'
+          checkpoint: 'e22133328e9f14dc4620bf8826f4fe4ecd4e787893b58fba64f78b1d2097a92d'
   name 'TimeTracker'
   homepage 'https://github.com/rburgst/time-tracker-mac'
 

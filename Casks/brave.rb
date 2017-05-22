@@ -5,7 +5,7 @@ cask 'brave' do
   # github.com/brave/browser-laptop was verified as official when first introduced to the cask
   url "https://github.com/brave/browser-laptop/releases/download/v#{version}dev/Brave-#{version}.dmg"
   appcast 'https://github.com/brave/browser-laptop/releases.atom',
-          checkpoint: '38a0a5315f394fb6939a2ab26b25553cdb713c9ef315dc455076e2baee36ad3b'
+          checkpoint: '35665396732f7fa94ce91df1b9f414a83832be7d4b88793dc39e6d1812132ab4'
   name 'Brave'
   homepage 'https://brave.com/'
 

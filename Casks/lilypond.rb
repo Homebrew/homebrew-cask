@@ -1,11 +1,11 @@
 cask 'lilypond' do
-  version '2.19.59-1'
-  sha256 '69bae4faa6fbcbd5cc85c9fb81888966868d79b025335503d12ad54dcfdae1be'
+  version '2.19.60-1'
+  sha256 'f96d9a51fb38b0acd60f037d13fd12347ea315a9e09318fb34ee664e8edd0ddb'
 
   # linuxaudio.org/lilypond was verified as official when first introduced to the cask
   url "http://download.linuxaudio.org/lilypond/binaries/darwin-x86/lilypond-#{version}.darwin-x86.tar.bz2"
   appcast 'http://download.linuxaudio.org/lilypond/binaries/darwin-x86/',
-          checkpoint: '694060f2f0ccc4816838a4365e1da4ff9244caede7986fc212a0b140565cb960'
+          checkpoint: 'a0c5e6bc2f2555b5e3ffaf117a969c8d59714aee760ed7cdda98e17163079d79'
   name 'LilyPond'
   homepage 'http://lilypond.org/'
 

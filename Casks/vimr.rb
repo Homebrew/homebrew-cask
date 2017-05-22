@@ -5,7 +5,7 @@ cask 'vimr' do
   # github.com/qvacua/vimr was verified as official when first introduced to the cask
   url "https://github.com/qvacua/vimr/releases/download/v#{version}/VimR-v#{version}.tar.bz2"
   appcast 'https://github.com/qvacua/vimr/releases.atom',
-          checkpoint: '5451bfd1d007032ab989a0078ad8c8856210ad9f5803210c983f95ec8facda64'
+          checkpoint: '300e7e1ce4c37bf1dca8f3296303fdf00a19852f2c59a423d2cbf464b92464aa'
   name 'VimR'
   homepage 'http://vimr.org/'
 

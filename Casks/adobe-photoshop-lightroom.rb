@@ -6,6 +6,7 @@ cask 'adobe-photoshop-lightroom' do
   name 'Adobe Photoshop Lightroom'
   homepage 'https://www.adobe.com/products/photoshop-lightroom.html'
 
+  auto_updates true
   depends_on cask: 'caskroom/versions/adobe-photoshop-lightroom600'
 
   # staged_path not available in Installer/Uninstall Stanza, workaround by nesting with preflight/postflight

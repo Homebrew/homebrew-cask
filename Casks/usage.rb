@@ -1,10 +1,10 @@
 cask 'usage' do
-  version '1.3'
-  sha256 'd976ad992a15cc8dc78ee8f5cfc68970fb654ae2ae6367020565ee14dd9a5521'
+  version '1.4.1'
+  sha256 'f5df10949605a1440d11122128da284337018df1eb2ce6e30309d1a4e0d865ff'
 
   url "https://mediaatelier.com/Usage/Usage_#{version}.zip"
   appcast 'https://mediaatelier.com/Usage/feed.php',
-          checkpoint: 'a0294fb6625e0f98f3c988889a4ba77b4b8e96dd18f78a994c458a3b2762d160'
+          checkpoint: 'df65bdf80fd02054dd20eea3e12300658a29e1b9255dd7043c416228c46aaa4b'
   name 'Usage'
   homepage 'https://www.mediaatelier.com/Usage/'
 

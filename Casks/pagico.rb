@@ -1,6 +1,6 @@
 cask 'pagico' do
-  version '7.4.2119'
-  sha256 'a04ad5b11c5b7e4082a191939135f7886fab626886c272b64a5a625dc6e7d2ba'
+  version '8.7.2161'
+  sha256 '0d0ebf19632dbb2a8279e04868fba42eed74ace7be1cdf9de47659b9a92d42bd'
 
   url "https://www.pagico.com/downloads/Pagico_Desktop_r#{version.patch}.dmg"
   name 'Pagico'

@@ -1,10 +1,10 @@
 cask 'firebird' do
-  version '1.2'
-  sha256 '1cc02fffd00b51eff1d6d3c5616820e94e0cd3bb1ee06cd02ac42adfe4eab662'
+  version '1.3'
+  sha256 'eaf84c7853326107628eec8b90fc8e1e78ea1afc84a7dfb3177ca50c273b7250'
 
   url "https://github.com/nspire-emus/firebird/releases/download/v#{version}/firebird-mac.dmg"
   appcast 'https://github.com/nspire-emus/firebird/releases.atom',
-          checkpoint: '4c2339255da96c594c784ae3d3846bb422f261fda372147245fef66cecd502d4'
+          checkpoint: '35d06123bf4aee8f5eef821600daffa5a4240ce91c53b07fe2577e827249ddf8'
   name 'firebird'
   homepage 'https://github.com/nspire-emus/firebird'
 
