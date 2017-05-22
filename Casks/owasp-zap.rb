@@ -5,7 +5,7 @@ cask 'owasp-zap' do
   # github.com/zaproxy/zaproxy was verified as official when first introduced to the cask
   url "https://github.com/zaproxy/zaproxy/releases/download/#{version}/ZAP_#{version.dots_to_underscores}_macos.dmg"
   appcast 'https://github.com/zaproxy/zaproxy/releases.atom',
-          checkpoint: '0fdbe9621de845467af37ad876de01c8cde5817fb70d171ce781b520490410f8'
+          checkpoint: 'ea8d9d2157f2b03f69b7a17a86e2bcd078af3981167bba5eaa95fdfe8c7ca769'
   name 'OWASP Zed Attack Proxy'
   name 'ZAP'
   homepage 'https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project'
