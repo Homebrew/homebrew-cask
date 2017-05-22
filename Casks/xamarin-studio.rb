@@ -4,7 +4,7 @@ cask 'xamarin-studio' do
 
   url "https://dl.xamarin.com/MonoDevelop/Mac/XamarinStudio-#{version}.dmg"
   appcast 'https://xampubdl.blob.core.windows.net/static/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
-          checkpoint: '477c85901ee0146c2f34467c8cfc1f3a94bcb96c5467bb8b5cfc1ed765b3676e'
+          checkpoint: '45f2c1416f8321cfd68ffc388ecedae744d12cf4345bbb9bac1e36dca3ce6214'
   name 'Xamarin Studio'
   homepage 'https://www.xamarin.com/visual-studio-for-mac'
 
