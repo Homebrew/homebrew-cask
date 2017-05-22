@@ -1,6 +1,6 @@
 cask 'virtual-mix-rack' do
-  version '1.6.6.2'
-  sha256 'd0ae13f883c86069b78914320a1a9b3d6fc773a1bc44fc4c3e92d2f868a0cf99'
+  version '1.6.8.1'
+  sha256 'f791027301c9340aeee1becef682a4ea28d3faf91ffa9823fa5d89159ea788c0'
 
   url "http://download.slatedigital.com/vmr/VMR_#{version.no_dots}_Mac.zip"
   name 'Slate Digital Virtual Mix Rack'
