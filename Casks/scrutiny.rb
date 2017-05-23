@@ -6,7 +6,7 @@ cask 'scrutiny' do
   name 'Scrutiny'
   homepage 'http://peacockmedia.software/mac/scrutiny/'
 
-  app 'Scrutiny.app'
+  app 'scrutiny--latest.app'
 
   zap delete: [
                 '~/Library/Application Support/Scrutiny5',
