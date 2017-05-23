@@ -1,5 +1,5 @@
 cask 'the-escapers-flux' do
-  version '7.0.6'
+  version '7.0.8'
   sha256 '2114522e95f43d5bfb15515ea7889fb6f09188c03ad16fba0f75d64337f6e7cf'
 
   # amazonaws.com/Flux was verified as official when first introduced to the cask
