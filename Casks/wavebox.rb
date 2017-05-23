@@ -1,11 +1,11 @@
 cask 'wavebox' do
-  version '3.1.7'
-  sha256 '9bd8771e38afce30da3c479be9efe017efdd31d9576047e962c98684e636912c'
+  version '3.1.8'
+  sha256 '3fc09c5e63b63f0fd883cb0ba292e664b8c30c14a038e84157bddc85001c8fa2'
 
   # github.com/wavebox/waveboxapp was verified as official when first introduced to the cask
   url "https://github.com/wavebox/waveboxapp/releases/download/v#{version}/Wavebox_#{version.dots_to_underscores}_osx.dmg"
   appcast 'https://github.com/wavebox/waveboxapp/releases.atom',
-          checkpoint: '58fd6317e947ee500e3642115399be99281063b18251e12cd98123556ff6d256'
+          checkpoint: 'a7870102187e882bc2ddf9ecbb0443cc58b12ded784d4c6f08f56bc20f35db8d'
   name 'Wavebox'
   homepage 'https://wavebox.io/'
 
