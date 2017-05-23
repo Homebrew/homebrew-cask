@@ -1,8 +1,8 @@
 cask 'dotnet' do
-  version '1.1.1'
-  sha256 'd77898110caf4b715392b93310467f7354204440a38da00b7d50bb5796a3de18'
+  version '1.1.2'
+  sha256 '6f7b90c38f90944c94312161561d6f9f4baaaaca4601c3d5ca3947402d4ff26c'
 
-  url "https://download.microsoft.com/download/9/5/1/95198156-644E-4CCE-8DA1-C41F7658510C/dotnet-osx-x64.#{version}.pkg"
+  url "https://download.microsoft.com/download/D/0/2/D028801E-0802-43C8-9F9F-C7DB0A39B344/dotnet-osx-x64.#{version}.pkg"
   name '.Net Core'
   homepage 'https://www.microsoft.com/net/core#macos'
 

@@ -5,7 +5,7 @@ cask 'supertuxkart' do
   # sourceforge.net/supertuxkart was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/supertuxkart/SuperTuxKart-#{version}-osx.dmg"
   appcast 'https://sourceforge.net/projects/supertuxkart/rss?path=/SuperTuxKart',
-          checkpoint: '6e14ee842c36c4476dc38cbcc4996d6632f5bf8a4bf796a69d108441d810fdb4'
+          checkpoint: 'fa97eaa099fa970191df5a2c8b7a70536316043768cf2066814a9e58572736d4'
   name 'SuperTuxKart'
   homepage 'https://supertuxkart.net/Main_Page'
 

@@ -1,12 +1,12 @@
 cask 'beesoft' do
-  version '3.14.0'
-  sha256 'ed4e22a482d42a7b732040e281e57faae7df949087d8326ca228cfdf8e6c2183'
+  version '3.15.0'
+  sha256 '50123c5ed6b388bd607f8a5d5f8f1115f3969da3df20dc3ec57670c32262169c'
 
-  url "https://www.beeverycreative.com/public/software/BEESOFT/BEESOFT-#{version}/Mac-BEESOFT-#{version}-stable.pkg"
+  url "https://www.beeverycreative.com/public/software/BEESOFT/BEESOFT-#{version}/Mac-BEESOFT-#{version}.pkg"
   name 'Beesoft'
   homepage 'https://beeverycreative.com/beesoft/'
 
-  pkg "Mac-BEESOFT-#{version}-stable.pkg"
+  pkg "Mac-BEESOFT-#{version}.pkg"
 
-  uninstall pkgutil: 'com.beeerycreative.beesoft'
+  uninstall pkgutil: 'com.beeverycreative.beesoft'
 end

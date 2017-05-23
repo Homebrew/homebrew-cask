@@ -1,10 +1,10 @@
 cask 'beardedspice' do
-  version '2.2.1'
-  sha256 '42cb97350217f55c5ce8b50d3de664b7c2d6f5bc5fd1ec0da06e25c4f61e8ad9'
+  version '2.2.2'
+  sha256 '4a0c0da3182447ec873d5fb56ecd59d4ce1aca6c2718eb1a4236dc3025f2c989'
 
   url "https://github.com/beardedspice/beardedspice/releases/download/v#{version}/BeardedSpice-#{version}.zip"
   appcast 'https://github.com/beardedspice/beardedspice/releases.atom',
-          checkpoint: 'b580811eb86d4441992912a85bbdd5802fb62b7cbac85144de4b4a1b50bcbaf3'
+          checkpoint: 'bc0fc1c9886b9fe1b131fdf1bc63b99a16fc2ea47d681e29d162795f03999e1c'
   name 'BeardedSpice'
   homepage 'https://github.com/beardedspice/beardedspice/'
 

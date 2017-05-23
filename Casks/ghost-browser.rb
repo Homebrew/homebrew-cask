@@ -1,6 +1,6 @@
 cask 'ghost-browser' do
-  version '1.1.0.1'
-  sha256 'b1a4ccc18edca262acdc09ed4095c5c8295ccc4c5d81478e83f468fdcd0aa92d'
+  version '1.1.0.3'
+  sha256 'f7199c5bbc56aaf64e90e6cc67868f19189f2bd4d3f06fdfe9382d68323826bc'
 
   url "https://ghostbrowser.com/ghostdev/downloads/GhostBrowser-#{version}.dmg"
   name 'Ghost Browser'

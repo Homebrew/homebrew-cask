@@ -5,7 +5,7 @@ cask 'uncolored' do
   # github.com/n457/Uncolored was verified as official when first introduced to the cask
   url "https://github.com/n457/Uncolored/releases/download/v.#{version}/Uncolored-v.#{version}-osx-x64.dmg"
   appcast 'https://github.com/n457/Uncolored/releases.atom',
-          checkpoint: '2edf99eeec394128ecb3272e6eb4e392abd044f4f3887a438fd48895fe392428'
+          checkpoint: 'cb001d2238fb92f4340e03dd5203f3a0c3ba224d6d5ad189783671af7d453182'
   name '(Un)colored'
   homepage 'https://n457.github.io/Uncolored/'
 

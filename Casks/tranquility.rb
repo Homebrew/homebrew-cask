@@ -4,7 +4,7 @@ cask 'tranquility' do
 
   url "https://github.com/lswank/Tranquility/releases/download/#{version}/Tranquility.app.zip"
   appcast 'https://github.com/lswank/Tranquility/releases.atom',
-          checkpoint: 'b8dc56d79cb1a936e3db580d58b09204af3599197a97702cf6196e27c2c2c199'
+          checkpoint: '839282331f503a8e30e50887abf9a07c0d3e8844e0c7ceddc6a6f25a2faf65ce'
   name 'Tranquility'
   homepage 'https://github.com/lswank/Tranquility'
 

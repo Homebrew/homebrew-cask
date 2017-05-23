@@ -1,6 +1,6 @@
 cask 'simply-fortran' do
-  version '2.36'
-  sha256 'bc8761375ca4480f18304db4c24b94757ace6284a267ae9a6d43e792610f7b5d'
+  version '2.37'
+  sha256 'fd1a09d7633f36649478162ed72b984c7f3cbe443f8b129f19ca12a4741856bc'
 
   # download.approximatrix.com/sfortran was verified as official when first introduced to the cask
   url "https://download.approximatrix.com/sfortran/#{version}/SimplyFortran-#{version}.dmg"

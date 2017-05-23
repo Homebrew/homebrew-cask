@@ -1,10 +1,10 @@
 cask 'lyx' do
-  version '2.2.2'
-  sha256 'eae722f4ef8057d37dcd9c118442922e5d9ba1c7460b28ef8bc7a4b264cf995b'
+  version '2.2.3'
+  sha256 '845766b6e5deda4e5147211fea0e24d3e24dd3cceff014ed1269c942ef9e7883'
 
-  url "ftp://ftp.lyx.org/pub/lyx/bin/#{version}/LyX-#{version}+qt5.6.2-x86_64-cocoa.dmg"
+  url "ftp://ftp.lyx.org/pub/lyx/bin/#{version}/LyX-#{version}+qt5-x86_64-cocoa.dmg"
   appcast 'https://www.lyx.org/misc/rss/lyx_news_feed.xml',
-          checkpoint: '175cd70d08d80abd933253e0753da3ba1fbc6f7512e8f4b673c1b2c7d460682c'
+          checkpoint: '30ba8c1a0446a8071ce2b5ef85cf7933fcf9081097dc566393b3280e67d28df4'
   name 'LyX'
   homepage 'https://www.lyx.org/'
   gpg "#{url}.sig", key_id: 'de7a44fac7fb382d'

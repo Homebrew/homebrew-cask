@@ -1,15 +1,15 @@
 cask 'things' do
-  version '2.8.11'
-  sha256 'd3abebdb1e9e4bd96f29fc82db1f3e98d376ed28e1a0ff06c60a6fdbf9f1b177'
+  version '3.0.1'
+  sha256 'ba17da2afd6db07b9a3d23cdab5c50b80193a16876010ab31b954c3d19ecdb6e'
 
   # culturedcode.cachefly.net was verified as official when first introduced to the cask
-  url "https://culturedcode.cachefly.net/things/Things_#{version}.zip"
-  appcast 'https://culturedcode.cachefly.net/things/sparkle/sparkle_en.xml',
-          checkpoint: '6b554d7c6e413acdc68fe9be5ffb7d43cdc0f5d1af275f3a59fad9e2dbc19779'
+  url 'https://culturedcode.cachefly.net/things/Things_30001001_20170518.zip'
+  appcast 'https://culturedcode.cachefly.net/things/leopard/sparkle/sparkle_1.4.8_en.xml',
+          checkpoint: 'cd06fe3a9cbcc04efdaa8d0fb4184a50ceb7e42e5b647e66b13ac9f9eca922f9'
   name 'Things'
   homepage 'https://culturedcode.com/things/'
 
-  app 'Things.app'
+  app 'Things3.app'
 
   postflight do
     suppress_move_to_applications key: 'suppressMoveToApplications'

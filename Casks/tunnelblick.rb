@@ -1,11 +1,11 @@
 cask 'tunnelblick' do
-  version '3.7.1,4811'
-  sha256 '7b27baba1d25639560667c29d946e5e9602d874e89a73b7a454e81620feada8d'
+  version '3.7.1a,4812'
+  sha256 '66f99c50a8cad2985ecc224e378dbd79bb01c3d6b66ae7b16f69b780ee76b6c9'
 
   # github.com/Tunnelblick/Tunnelblick/releases/download was verified as official when first introduced to the cask
   url "https://github.com/Tunnelblick/Tunnelblick/releases/download/v#{version.before_comma}/Tunnelblick_#{version.before_comma}_build_#{version.after_comma}.dmg"
   appcast 'https://github.com/Tunnelblick/Tunnelblick/releases.atom',
-          checkpoint: '254699319c1abab58a3f4e8e62f3e2710840ec36c2a9fd8b29b8ba1003218bda'
+          checkpoint: 'a7eea207befc0028e7288e21d0e34ed72fe7649e71d73b285d1ee1c8bd555123'
   name 'Tunnelblick'
   homepage 'https://www.tunnelblick.net/'
 
