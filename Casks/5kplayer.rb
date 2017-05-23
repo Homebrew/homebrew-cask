@@ -1,6 +1,6 @@
 cask '5kplayer' do
-  version :latest
-  sha256 :no_check
+  version '4.2'
+  sha256 '0ad05ce71d8b1e0b4777647087d0c034c83ae7d40c8a19ca1324f70eec55de34'
 
   url 'https://www.5kplayer.com/download/5kplayer.dmg'
   name '5KPlayer'
