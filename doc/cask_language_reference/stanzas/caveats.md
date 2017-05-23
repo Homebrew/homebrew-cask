@@ -43,11 +43,17 @@ The following methods may be called to generate standard warning messages:
 | `discontinued`                    | all software development has been officially discontinued upstream
 | `free_license(web_page)`          | users may get an official license to use the software at `web_page`
 | `malware(radar_number)`           | app has been reported to bundle malware. See [the FAQ](https://github.com/caskroom/homebrew-cask/blob/master/doc/faq/apps_with_malware.md) for the necessary steps.
+| `unverified(discussion_url)`      | the Cask `sha256` could not be verified. See [sha256](https://github.com/caskroom/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/sha256.md#updating-the-sha256) for more information.
 
-Example:
+Examples:
 
 ```ruby
 caveats do
   path_environment_variable '/usr/texbin'
+end
+```
+```ruby
+caveats do
+  unverified 'https://github.com/caskroom/homebrew-cask/pull/34063'
 end
 ```
