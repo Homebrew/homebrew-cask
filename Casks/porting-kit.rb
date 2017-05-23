@@ -1,10 +1,10 @@
 cask 'porting-kit' do
-  version '2.6.0'
-  sha256 '3bb29c6f816440cbbe77af941a1e2bc46eea9c6eae1d188b8e9fc4cfdcf14bc0'
+  version '2.6.1'
+  sha256 'f6abdbdbd209bc68b5f8779e84e71c1dcc804ff3837f259d6150283a2f2ea8d1'
 
   url "http://portingkit.com/kit/Porting%20Kit%20#{version}.zip"
   appcast 'http://portingkit.com/kit/updatecast.xml',
-          checkpoint: '5cd26b98fb4494a098040f3321ebae8cfbd05b1c9bc90db53f73398c8c23fa51'
+          checkpoint: '3e2061d80821149aab024fc9c7ea211f4e96cb959ab0e4b3800c0130128af2cd'
   name 'Porting Kit'
   homepage 'http://portingkit.com/en/'
 
