@@ -38,7 +38,7 @@ cask 'vmware-fusion' do
 
   postflight do
     system_command "#{appdir}/VMware Fusion.app/Contents/Library/Initialize VMware Fusion.tool",
-                   args: ['set'],
+                   args: ['set', '', '', ENV.fetch('VMWARE_FUSION_LICENSE_KEY', '')],
                    sudo: true
   end
 
