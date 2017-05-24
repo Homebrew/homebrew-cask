@@ -4,7 +4,7 @@ cask 'reactotron' do
 
   url "https://github.com/infinitered/reactotron/releases/download/v#{version}/Reactotron.app.zip"
   appcast 'https://github.com/infinitered/reactotron/releases.atom',
-          checkpoint: '3150ba76360f8f5d4494aae8475ac8a48f3242d4515b1941f565f0d31337d763'
+          checkpoint: '33cf39ba68bc0ae64d1a4eae05f70ee3fa8ad40a0786ab9ec6980bf6cb169970'
   name 'Reactotron'
   homepage 'https://github.com/infinitered/reactotron'
 
