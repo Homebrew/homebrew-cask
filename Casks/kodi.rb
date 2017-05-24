@@ -1,10 +1,10 @@
 cask 'kodi' do
-  version '17.1-Krypton'
-  sha256 '1c60aa80cd8397a9bd68ffd88c7da698043e940bc3db94550d8154f6ffb60807'
+  version '17.2-Krypton'
+  sha256 'd8df20fab6456626652010c9b136ecd0775e9d3d16dd52dd6f53c27ec4683504'
 
   url "http://mirrors.kodi.tv/releases/osx/x86_64/kodi-#{version}-x86_64.dmg"
   appcast 'https://github.com/xbmc/xbmc/releases.atom',
-          checkpoint: 'e5a9d76d3c2550cb39383d0120bc9e6360001c1988c4c3fa5df9d4ed5b4e4436'
+          checkpoint: '5d35ae8b83f1ebaf6a0d7bed996483335d6d00eeea8752f5b02dedaa9ab4feaa'
   name 'Kodi'
   homepage 'https://kodi.tv/'
 
