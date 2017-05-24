@@ -4,7 +4,7 @@ cask 'openpht' do
 
   url "https://github.com/RasPlex/OpenPHT/releases/download/v#{version}/OpenPHT-#{version}-macosx-x86_64.zip"
   appcast 'https://github.com/RasPlex/OpenPHT/releases.atom',
-          checkpoint: 'dd0292e2e2fa859c89287e0c112d7b668824c8364463a78a1e7c2d1f42fefbc5'
+          checkpoint: '5aa8f8b4a5287ab3b80fab8379dde771db56fe41435ace8fff12583837c458ed'
   name 'OpenPHT'
   homepage 'https://github.com/RasPlex/OpenPHT'
 
