@@ -1,11 +1,11 @@
 cask 'cockatrice' do
-  version '2.3.17,2017-05-05:Trial_of_the_Gods'
+  version '2.3.17,2017-05-05:Trials_of_the_Gods'
   sha256 'd0400d5a23acb8e54e1a02196d1db83fccfc7259f28e9d16a74ddc92cc3fd797'
 
   # github.com/Cockatrice/Cockatrice was verified as official when first introduced to the cask
   url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.after_comma.before_colon}-Release-#{version.before_comma}/Cockatrice-#{version.after_colon}-#{version.before_comma}.dmg"
   appcast 'https://github.com/Cockatrice/Cockatrice/releases.atom',
-          checkpoint: '5820c5f6fc3954123d521b632643ac329b7a4453a0eb52e3b3019fe19629ee29'
+          checkpoint: '51b9110805391f4fcea33a9ca2e96bf8415023b83afee93e90d444321b36a99f'
   name 'Cockatrice'
   homepage 'http://www.woogerworks.com/'
 

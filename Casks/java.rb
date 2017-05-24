@@ -71,9 +71,14 @@ cask 'java' do
                        ].keep_if { |v| !v.nil? }
 
   zap       delete: [
+                      '~/Library/Application Support/Java/',
                       '~/Library/Application Support/Oracle/Java',
                       '~/Library/Caches/com.oracle.java.Java-Updater',
+                      '~/Library/Caches/Oracle.MacJREInstaller',
                       '~/Library/Caches/net.java.openjdk.cmd',
+                      '~/Library/Preferences/com.oracle.java.Java-Updater.plist',
+                      '~/Library/Preferences/com.oracle.java.JavaAppletPlugin.plist',
+                      '~/Library/Preferences/com.oracle.javadeployment.plist',
                     ],
             rmdir:  '~/Library/Application Support/Oracle/'
 
