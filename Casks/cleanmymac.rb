@@ -77,6 +77,8 @@ cask 'cleanmymac' do
                   "~/Library/Preferences/com.macpaw.CleanMyMac#{version.major}.Scheduler.plist",
                   "~/Library/Preferences/com.macpaw.CleanMyMac#{version.major}.plist",
                   "~/Pictures/Photos Library.photoslibrary/private/com.macpaw.CleanMyMac#{version.major}",
+                  '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac3.scheduler.sfl',
+                  '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac3.sfl',
                 ]
   end
 
