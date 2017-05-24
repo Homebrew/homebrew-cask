@@ -4,7 +4,7 @@ cask 'kinsky' do
 
   url "https://oss.linn.co.uk/Releases/Kinsky/Davaar/Kinsky_#{version}_osx.pkg"
   appcast 'http://oss.linn.co.uk/Releases/Kinsky/Davaar/',
-          checkpoint: 'd9c7986a2d999b4287e34178abfa434029eda9ceeca6b327051397a01a42f017'
+          checkpoint: 'd91f772d6ad90c010a079fca7c98fbc34c1dc9e9e91d0c2150fcf66e1248ef6e'
   name 'Kinsky'
   homepage 'https://oss.linn.co.uk/trac/wiki/DownloadKinsky'
 
