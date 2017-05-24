@@ -9,4 +9,9 @@ cask 'licecap' do
   homepage 'http://www.cockos.com/licecap/'
 
   app 'LICEcap.app'
+
+  zap delete: [
+                '~/Library/Application Support/LICEcap',
+                '~/Library/Preferences/com.cockos.LICEcap.plist',
+              ]
 end
