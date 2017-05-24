@@ -1,6 +1,6 @@
 cask 'microsoft-r-open' do
-  version '3.3.3'
-  sha256 '08f0de900f12912ccc31465c2ace1ca67261cfc8c7a25cc768f7bda7f6d644af'
+  version '3.4.0'
+  sha256 'abb186664801d75d8801aff47c9bb010ca1124bbcb9fff2b4a5be265d62565bb'
 
   url "https://mran.microsoft.com/install/mro/#{version}/microsoft-r-open-#{version}.pkg"
   name 'Microsoft R Open'
