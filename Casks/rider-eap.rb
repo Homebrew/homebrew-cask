@@ -10,7 +10,7 @@ cask 'rider-eap' do
 
   app 'Rider EAP.app'
 
-  uninstall delete: ENV['PATH'].split(File::PATH_SEPARATOR).map { |p| "{p}/rider" }.each { |path| File.delete(path) if File.exist?(path) }
+  uninstall delete: ENV['PATH'].split(File::PATH_SEPARATOR).map { |p| "#{p}/rider" }.select { |f| File.exist?(f) }
 
   zap delete: [
                 '~/Library/Caches/Rider10',
