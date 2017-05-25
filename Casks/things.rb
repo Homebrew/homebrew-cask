@@ -11,10 +11,6 @@ cask 'things' do
 
   app 'Things3.app'
 
-  postflight do
-    suppress_move_to_applications key: 'suppressMoveToApplications'
-  end
-
   zap delete: [
                 '~/Library/Preferences/com.culturedcode.things.plist',
                 '~/Library/Application Support/Cultured Code',

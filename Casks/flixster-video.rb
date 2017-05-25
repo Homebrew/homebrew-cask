@@ -10,8 +10,4 @@ cask 'flixster-video' do
   homepage 'https://www.flixstervideo.com/apps'
 
   app 'Flixster Video.app'
-
-  postflight do
-    suppress_move_to_applications key: 'moveToApplicationsFolderAlertSuppress'
-  end
 end

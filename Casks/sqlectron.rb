@@ -13,10 +13,6 @@ cask 'sqlectron' do
 
   app 'Sqlectron.app'
 
-  postflight do
-    suppress_move_to_applications
-  end
-
   zap delete: [
                 '~/.sqlectron.json',
                 '~/Library/Application Support/Sqlectron',

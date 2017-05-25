@@ -11,10 +11,6 @@ cask 'fsmonitor' do
 
   app 'FSMonitor.app'
 
-  postflight do
-    suppress_move_to_applications
-  end
-
   zap delete: [
                 '/Library/LaunchDaemons/com.tristan.fseventstool.plist',
                 '/Library/PrivilegedHelperTools/com.tristan.fseventstool',

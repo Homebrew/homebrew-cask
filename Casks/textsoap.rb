@@ -11,10 +11,6 @@ cask 'textsoap' do
 
   app "textsoap#{version.major}.app"
 
-  postflight do
-    suppress_move_to_applications
-  end
-
   zap delete: [
                 '~/Library/Application Support/TextSoap',
                 "~/Library/Application Support/com.unmarked.textsoap#{version.major}",

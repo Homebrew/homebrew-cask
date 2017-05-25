@@ -10,8 +10,4 @@ cask 'audiomate' do
   homepage 'https://audiomateapp.com/'
 
   app 'AudioMate.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 end

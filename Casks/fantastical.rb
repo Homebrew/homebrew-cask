@@ -10,9 +10,5 @@ cask 'fantastical' do
 
   app "Fantastical #{version.major}.app"
 
-  postflight do
-    suppress_move_to_applications
-  end
-
   zap delete: '~/Library/Preferences/com.flexibits.fantastical.plist'
 end

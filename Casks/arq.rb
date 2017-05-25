@@ -11,8 +11,4 @@ cask 'arq' do
   auto_updates true
 
   app 'Arq.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 end

@@ -18,6 +18,5 @@ cask 'steamcmd' do
       #!/bin/sh
       exec '#{staged_path}/steamcmd.sh' "$@"
     EOS
-    set_permissions shimscript, '+x'
   end
 end

@@ -8,8 +8,4 @@ cask 'thingsmacsandboxhelper' do
   homepage 'https://culturedcode.com/things/mac/help/things-sandboxing-helper-download/'
 
   app 'ThingsMacSandboxHelper.app'
-
-  postflight do
-    suppress_move_to_applications key: 'suppressMoveToApplications'
-  end
 end

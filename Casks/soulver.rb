@@ -10,10 +10,6 @@ cask 'soulver' do
 
   app 'Soulver.app'
 
-  postflight do
-    suppress_move_to_applications
-  end
-
   zap delete: [
                 '~/Library/Application Support/Soulver',
                 '~/Library/Preferences/com.acqualia.soulver.plist',

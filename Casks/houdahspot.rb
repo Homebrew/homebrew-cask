@@ -9,8 +9,4 @@ cask 'houdahspot' do
   homepage 'https://www.houdah.com/houdahSpot/'
 
   app 'HoudahSpot.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 end

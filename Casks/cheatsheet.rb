@@ -11,10 +11,6 @@ cask 'cheatsheet' do
 
   app 'CheatSheet.app'
 
-  postflight do
-    suppress_move_to_applications
-  end
-
   zap delete: [
                 '~/Library/Application Support/com.mediaatelier.CheatSheet',
                 '~/Library/Preferences/com.mediaatelier.CheatSheet.plist',

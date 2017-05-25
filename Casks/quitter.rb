@@ -12,10 +12,6 @@ cask 'quitter' do
 
   app 'Quitter.app'
 
-  postflight do
-    suppress_move_to_applications
-  end
-
   zap delete: [
                 '~/Library/Preferences/com.marcoarment.quitter.plist',
                 '~/Library/Caches/com.marcoarment.quitter',

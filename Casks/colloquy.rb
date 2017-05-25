@@ -12,10 +12,6 @@ cask 'colloquy' do
 
   app 'Colloquy.app'
 
-  postflight do
-    suppress_move_to_applications
-  end
-
   zap delete: [
                 '~/Library/Application Support/Colloquy',
                 '~/Library/Caches/info.colloquy',

@@ -16,10 +16,6 @@ cask 'atom' do
   binary "#{appdir}/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm", target: 'apm'
   binary "#{appdir}/Atom.app/Contents/Resources/app/atom.sh", target: 'atom'
 
-  postflight do
-    suppress_move_to_applications
-  end
-
   zap delete: [
                 '~/.atom',
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.atom.sfl',

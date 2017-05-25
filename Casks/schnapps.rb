@@ -9,8 +9,4 @@ cask 'schnapps' do
   homepage 'http://schnappsformac.com/'
 
   app 'Schnapps.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 end

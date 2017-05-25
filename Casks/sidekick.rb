@@ -11,8 +11,4 @@ cask 'sidekick' do
   auto_updates true
 
   app 'Sidekick.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 end

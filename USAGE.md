@@ -173,7 +173,6 @@ $ brew cask install caskroom/fonts/font-symbola
 
 You can also modify the default installation locations used when issuing `brew cask install`:
 
-* `--caskroom=/my/path` determines where the actual applications will be located. Default is `$(brew --prefix)/Caskroom`.
 * `--appdir=/my/path` changes the path where the applications will be moved. Default is `/Applications`.
 * `--fontdir=/my/path` changes the path for Fonts. Default is `~/Library/Fonts`.
 * See `man brew-cask` for the other default installation locations and the flags to change them.
@@ -182,7 +181,7 @@ To make these settings persistent, you might want to add the following line to y
 
 ```bash
 # Specify your defaults in this environment variable
-export HOMEBREW_CASK_OPTS="--appdir=~/Applications --caskroom=/etc/Caskroom"
+export HOMEBREW_CASK_OPTS="--appdir=~/Applications --fontdir=/Library/Fonts"
 ```
 
 Note that you still can override the environment variable `HOMEBREW_CASK_OPTS` by _explicitly_ providing options in the command line:
