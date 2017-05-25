@@ -8,9 +8,5 @@ cask 'mailplane' do
 
   app 'Mailplane 3.app'
 
-  postflight do
-    suppress_move_to_applications
-  end
-
   zap delete: '~/Library/Preferences/com.mailplaneapp.Mailplane.plist'
 end

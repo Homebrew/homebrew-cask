@@ -11,8 +11,4 @@ cask 'lacona' do
   auto_updates true
 
   app 'Lacona.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 end

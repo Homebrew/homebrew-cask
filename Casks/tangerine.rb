@@ -11,8 +11,4 @@ cask 'tangerine' do
   auto_updates true
 
   app 'Tangerine!.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 end

@@ -13,10 +13,6 @@ cask 'kaleidoscope' do
   app 'Kaleidoscope.app'
   binary "#{appdir}/Kaleidoscope.app/Contents/Resources/bin/ksdiff"
 
-  postflight do
-    suppress_move_to_applications
-  end
-
   zap delete: [
                 '~/Library/Application Support/Kaleidoscope',
                 '~/Library/Caches/com.blackpixel.kaleidoscope',

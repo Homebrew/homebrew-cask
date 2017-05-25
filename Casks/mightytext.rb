@@ -7,8 +7,4 @@ cask 'mightytext' do
   homepage 'https://mightytext.net/'
 
   app 'MightyText.app'
-
-  postflight do
-    suppress_move_to_applications key: 'suppressMoveToApplications'
-  end
 end

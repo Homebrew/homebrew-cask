@@ -12,8 +12,4 @@ cask 'bbedit' do
   depends_on macos: '>= :mavericks'
 
   app 'BBEdit.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 end

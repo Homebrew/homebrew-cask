@@ -5,7 +5,7 @@ cask 'ios-app-signer' do
   # github.com/DanTheMan827/ios-app-signer was verified as official when first introduced to the cask
   url "https://github.com/DanTheMan827/ios-app-signer/releases/download/#{version}/iOS.App.Signer.app.zip"
   appcast 'https://github.com/DanTheMan827/ios-app-signer/releases.atom',
-          checkpoint: '608bfbffa0f7cc8601db1c62802b1f3b61a3fa94e0bdd3387db0bf8869148c72'
+          checkpoint: '180b0e34e5af5fe688180b1760cefd5d3c0fa5d845a7e578d5a24a7d3d8377a2'
   name 'iOS App Signer'
   homepage 'https://dantheman827.github.io/ios-app-signer/'
 

@@ -46,10 +46,6 @@ cask 'cleanmymac' do
             checkpoint: 'af5693766df356d2df10f034cacd5583cc1308229cd79e238bcda67181b901c0'
     app "CleanMyMac #{version.major}.app"
 
-    postflight do
-      suppress_move_to_applications
-    end
-
     uninstall launchctl: [
                            "com.macpaw.CleanMyMac#{version.major}.Agent",
                            "com.macpaw.CleanMyMac#{version.major}.Scheduler",

@@ -4,7 +4,7 @@ cask 'healthi' do
 
   url "https://github.com/pablopunk/healthi-app/releases/download/#{version}/healthi.app.zip"
   appcast 'https://github.com/pablopunk/healthi-app/releases.atom',
-          checkpoint: 'a0bcda00f251f223d7444e5ad6f1c2579e3e444116ab9ab57559ec8d9f7a2826'
+          checkpoint: 'ad545cb3efe854044d7e7fe30a04729c93942bbe44409bc1d5ffeff985891c6b'
   name 'healthi'
   homepage 'https://github.com/pablopunk/healthi-app'
 

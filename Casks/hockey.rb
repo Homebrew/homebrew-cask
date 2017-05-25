@@ -10,8 +10,4 @@ cask 'hockey' do
 
   app 'HockeyApp.app'
   binary "#{appdir}/HockeyApp.app/Contents/Resources/puck"
-
-  postflight do
-    suppress_move_to_applications
-  end
 end

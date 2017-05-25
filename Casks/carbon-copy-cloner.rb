@@ -9,8 +9,4 @@ cask 'carbon-copy-cloner' do
   homepage 'https://bombich.com/'
 
   app 'Carbon Copy Cloner.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 end
