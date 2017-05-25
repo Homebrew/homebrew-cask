@@ -1,6 +1,6 @@
 cask 'pocketsmith' do
-  version '0.1.1'
-  sha256 '371caff85ccae05b78d42b7d5c973735ab626f5f7284da772599b4360294f295'
+  version '0.1.2'
+  sha256 '0e8e61b28bef9fb006af8ba09d3556080c07b50e24dec2aa71db6c996bf3fda1'
 
   # d17qi61ltj6gb6.cloudfront.net was verified as official when first introduced to the cask
   url "https://d17qi61ltj6gb6.cloudfront.net/#{version}/PocketSmith.dmg"
