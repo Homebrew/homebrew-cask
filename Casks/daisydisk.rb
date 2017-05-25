@@ -20,10 +20,6 @@ cask 'daisydisk' do
 
   app 'DaisyDisk.app'
 
-  postflight do
-    suppress_move_to_applications
-  end
-
   zap delete: [
                 '/Library/LaunchDaemons/com.daisydiskapp.DaisyDiskAdminHelper.plist',
                 '/Library/PrivilegedHelperTools/com.daisydiskapp.DaisyDiskAdminHelper',

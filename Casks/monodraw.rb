@@ -10,10 +10,6 @@ cask 'monodraw' do
 
   app 'Monodraw.app'
 
-  postflight do
-    suppress_move_to_applications
-  end
-
   zap delete: [
                 '~/Library/Application Support/com.helftone.monodraw',
                 '~/Library/Caches/com.helftone.monodraw',

@@ -10,10 +10,6 @@ cask 'clamxav' do
 
   app 'ClamXav.app'
 
-  postflight do
-    suppress_move_to_applications
-  end
-
   zap delete: [
                 '~/Library/Caches/uk.co.markallan.clamxav',
                 '~/Library/Logs/clamXav-scan.*',

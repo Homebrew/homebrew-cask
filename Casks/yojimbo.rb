@@ -10,8 +10,4 @@ cask 'yojimbo' do
   homepage 'https://www.barebones.com/products/yojimbo/'
 
   app 'Yojimbo.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 end

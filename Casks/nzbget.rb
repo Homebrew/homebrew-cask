@@ -11,10 +11,6 @@ cask 'nzbget' do
 
   app 'NZBGet.app'
 
-  postflight do
-    suppress_move_to_applications
-  end
-
   zap delete: [
                 '~/Library/Application Support/NZBGet',
                 '~/Library/Preferences/net.sourceforge.nzbget.plist',

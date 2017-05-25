@@ -10,9 +10,5 @@ cask 'macid' do
 
   app 'MacID.app'
 
-  postflight do
-    suppress_move_to_applications
-  end
-
   zap delete: '~/Library/Preferences/com.kanecheshire.MacIDOSX.plist'
 end

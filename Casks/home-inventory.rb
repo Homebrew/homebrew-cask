@@ -9,8 +9,4 @@ cask 'home-inventory' do
   depends_on macos: '>= :lion'
 
   app 'Home Inventory.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 end

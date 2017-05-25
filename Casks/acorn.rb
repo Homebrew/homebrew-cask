@@ -11,8 +11,4 @@ cask 'acorn' do
   auto_updates true
 
   app 'Acorn.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 end

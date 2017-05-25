@@ -13,10 +13,6 @@ cask 'github-desktop' do
 
   app 'GitHub Desktop.app'
 
-  postflight do
-    suppress_move_to_applications
-  end
-
   zap delete: [
                 '~/Library/Application Support/GitHub Desktop',
                 '~/Library/Application Support/ShipIt_stderr.log',

@@ -12,10 +12,6 @@ cask 'dash' do
 
   app 'Dash.app'
 
-  postflight do
-    suppress_move_to_applications
-  end
-
   zap delete: [
                 '~/Library/Application Support/Dash',
                 '~/Library/Application Support/com.kapeli.dashdoc',

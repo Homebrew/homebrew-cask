@@ -13,10 +13,6 @@ cask 'hipchat' do
 
   app 'HipChat.app'
 
-  postflight do
-    suppress_move_to_applications
-  end
-
   zap delete: [
                 '~/Library/Application Support/HipChat',
                 '~/Library/Caches/com.hipchat.HipChat',

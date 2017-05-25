@@ -8,8 +8,4 @@ cask 'fontstand' do
   homepage 'https://fontstand.com/'
 
   app 'Fontstand.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 end
