@@ -19,7 +19,6 @@ cask 'android-ndk' do
       readonly executable="#{staged_path}/android-ndk-r#{version}/$(basename ${0})"
       test -f "${executable}" && exec "${executable}" "${@}"
     EOS
-    set_permissions shimscript, '+x'
   end
 
   %w[
