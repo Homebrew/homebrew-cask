@@ -1,5 +1,5 @@
 cask 'silverlight' do
-  version '5.1.50901.0'
+  version '5.1.50906.0'
   sha256 :no_check # required as upstream package is updated in-place
 
   url 'https://download.microsoft.com/download/0/3/E/03EB1393-4F4E-4191-8364-C641FAB20344/50901.00/Silverlight.dmg'
