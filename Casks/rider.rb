@@ -1,4 +1,4 @@
-cask 'rider-eap' do
+cask 'rider' do
   # Rider is EAP only for now
   version '1.0,171.4456.199'
   sha256 'dc995c3d9483c1b033a2de38fa81982e125ebafe478559f23f058989d90092dd'
