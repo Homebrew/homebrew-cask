@@ -3,7 +3,7 @@ cask 'postman' do
   sha256 :no_check
 
   # dl.pstmn.io/download/latest/osx was verified as official when first introduced to the cask
-  url 'https://dl.pstmn.io/download/latest/osx'
+  url 'https://app.getpostman.com/app/download/osx64'
   name 'Postman'
   homepage 'https://www.getpostman.com/'
 
