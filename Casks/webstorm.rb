@@ -9,7 +9,6 @@ cask 'webstorm' do
   homepage 'https://www.jetbrains.com/webstorm/'
 
   auto_updates true
-  conflicts_with cask: 'webstorm-eap'
 
   app 'WebStorm.app'
 

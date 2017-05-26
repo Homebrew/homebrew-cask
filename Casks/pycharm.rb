@@ -9,7 +9,6 @@ cask 'pycharm' do
   homepage 'https://www.jetbrains.com/pycharm/'
 
   auto_updates true
-  conflicts_with cask: 'pycharm-eap'
 
   app 'PyCharm.app'
 

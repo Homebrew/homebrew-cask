@@ -8,8 +8,6 @@ cask 'mps' do
   name 'JetBrains MPS'
   homepage 'https://www.jetbrains.com/mps/'
 
-  conflicts_with cask: 'mps-eap'
-
   app "MPS #{version.major_minor}.app"
 
   zap delete: [
