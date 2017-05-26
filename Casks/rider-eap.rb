@@ -4,6 +4,8 @@ cask 'rider-eap' do
   sha256 'dc995c3d9483c1b033a2de38fa81982e125ebafe478559f23f058989d90092dd'
 
   url "https://download.jetbrains.com/resharper/riderRS-#{version.after_comma}.dmg"
+  appcast 'https://data.services.jetbrains.com/products/releases?code=RD&latest=true&type=eap',
+          checkpoint: 'ec073388a9c68061536e457a508d421dfc93a663656d11b6eeebb6677641c85a'
   name 'Jetbrains Rider'
   homepage 'https://www.jetbrains.com/rider/'
 
