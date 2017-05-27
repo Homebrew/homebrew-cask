@@ -4,7 +4,7 @@ cask 'zesarux' do
 
   url "https://downloads.sourceforge.net/zesarux/ZEsarUX_bin-#{version}-macos_opengl.dmg.gz"
   appcast 'https://sourceforge.net/projects/zesarux/rss',
-          checkpoint: '3f52364d2813ea81f88caf703234a4511e3b138381e455133ef80e6b3cc80247'
+          checkpoint: '42ad3614ff6c9f1709bb89287a33ffd519215609b298507b6485a807ecba3908'
   name 'ZEsarUX'
   homepage 'https://sourceforge.net/projects/zesarux/'
 
