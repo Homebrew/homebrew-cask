@@ -9,7 +9,6 @@ cask 'datagrip' do
   homepage 'https://www.jetbrains.com/datagrip/'
 
   auto_updates true
-  conflicts_with cask: 'datagrip-eap'
 
   app 'DataGrip.app'
 
