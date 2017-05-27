@@ -4,8 +4,7 @@ cask 'dollydrive' do
 
   url "http://dollydrive.com/download-center/dollydrive/DollyDrive_#{version.major_minor}_#{version.no_dots}_CERTIFIED.zip"
   appcast "http://www.dollydrive.com/dolly#{version.major}.xml",
-          checkpoint:
-                      '3ff4fe0e5a38053b5179774599043aa76b718d6af4286d28ace8a8bce93524d1'
+          checkpoint: '3ff4fe0e5a38053b5179774599043aa76b718d6af4286d28ace8a8bce93524d1'
   name 'DollyDrive'
   homepage 'http://www.dollydrive.com/'
 
