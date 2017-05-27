@@ -9,11 +9,4 @@ cask 'softraid' do
   homepage 'https://www.softraid.com/'
 
   app "SoftRAID #{version}/SoftRAID #{version}.app"
-
-  caveats do
-    <<-EOS.undent
-      You will needo to launch the SoftRAID #{version}.app manually to update the SoftRAID driver
-      followed by a reboot for the installation to take effect.
-    EOS
-  end
 end
