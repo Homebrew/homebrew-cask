@@ -1,11 +1,11 @@
 cask 'openra' do
-  version '20170421'
-  sha256 '4b90257e4a0687a8ae3cf5c1ea257df8df9aad382d94e9cf28d6b5d39d0c89e2'
+  version '20170527'
+  sha256 '4c0633512673d5ee2401ccc5cac06ccbe46ad14af002940189f6d4701eee1046'
 
   # github.com/OpenRA/OpenRA was verified as official when first introduced to the cask
   url "https://github.com/OpenRA/OpenRA/releases/download/release-#{version}/OpenRA-release-#{version}.zip"
   appcast 'https://github.com/OpenRA/OpenRA/releases.atom',
-          checkpoint: '5523815bd7c5e8ddc7c256ef3452d0ff6922996ebb4d8520b91f8d5f2582a576'
+          checkpoint: 'c1af3e1740e8ad122d60b34ebe8a61f522fa0521f18633174e3087cdcb103b45'
   name 'OpenRA'
   homepage 'http://www.openra.net/'
 
