@@ -6,40 +6,11 @@ cask 'transmit-disk' do
   name 'transmit-disk'
   homepage 'https://panic.com/transmit/'
 
-  depends_on cask: 'transmit'
-
-  pkg "Transmit Disk #{version}.pkg",
-      choices: [
-                 {
-                   'choiceIdentifier' => 'com.panic.TransmitDisk.pkg',
-                   'choiceAttribute'  => 'visible',
-                   'attributeSetting' => false,
-                 },
-                 {
-                   'choiceIdentifier' => 'com.panic.TransmitDisk.pkg',
-                   'choiceAttribute'  => 'enabled',
-                   'attributeSetting' => true,
-                 },
-                 {
-                   'choiceIdentifier' => 'com.panic.TransmitDisk.pkg',
-                   'choiceAttribute'  => 'selected',
-                   'attributeSetting' => 1,
-                 },
-                 # FIXME: Puts .app in correct place but fails package validation
-                 # {
-                 #   'choiceIdentifier' => 'com.panic.TransmitDisk.pkg',
-                 #   'choiceAttribute'  => 'customLocation',
-                 #   'attributeSetting' => '/Applications',
-                 # },
-               ]
+  pkg "Transmit Disk #{version}.pkg"
 
   postflight do
-    system_command 'mv',
-                   args: [
-                           '/tmp/Transmit/Transmit Disk.app',
-                           '/Applications/',
-                         ],
-                   sudo: true
+    set_ownership ['/tmp/Transmit']
+    FileUtils.move('/tmp/Transmit/Transmit Disk.app', "#{appdir}/Transmit Disk.app")
   end
 
   uninstall quit:    [
@@ -51,11 +22,10 @@ cask 'transmit-disk' do
                        'com.panic.TransmitDisk.pkg',
                        'com.panic.TransmitDisk.filesystem.tdfuse.pkg',
                      ],
-            trash:   '/Applications/Transmit Disk.app'
+            delete:  "#{appdir}/Transmit Disk.app"
 
   zap delete: [
                 '~/Library/Preferences/com.panic.Transmit.TransmitDisk.plist',
                 '/Library/Filesystems/transmitdisk.fs/',
-                '/Applications/Transmit Disk.app',
               ]
 end
