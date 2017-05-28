@@ -9,8 +9,8 @@ cask 'transmit-disk' do
   pkg "Transmit Disk #{version}.pkg"
 
   postflight do
-    set_ownership ['/tmp/Transmit']
-    FileUtils.move('/tmp/Transmit/Transmit Disk.app', "#{appdir}/Transmit Disk.app")
+    set_ownership '/tmp/Transmit'
+    FileUtils.mv '/tmp/Transmit/Transmit Disk.app', appdir
   end
 
   uninstall quit:    [
