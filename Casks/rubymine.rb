@@ -9,7 +9,6 @@ cask 'rubymine' do
   homepage 'https://www.jetbrains.com/ruby/'
 
   auto_updates true
-  conflicts_with cask: 'rubymine-eap'
 
   app 'RubyMine.app'
 

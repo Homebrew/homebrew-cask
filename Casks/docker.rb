@@ -1,5 +1,5 @@
 cask 'docker' do
-  version '17.03.1-ce,17661'
+  version '17.03.1-ce-mac12,17661'
   sha256 'b65882665a678c5833037637a3dd43997283e6a096a431d83f130642447a855e'
 
   url "https://download.docker.com/mac/stable/#{version.after_comma}/Docker.dmg"

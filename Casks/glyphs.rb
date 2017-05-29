@@ -1,10 +1,10 @@
 cask 'glyphs' do
-  version '2.4.2-1017'
-  sha256 '9df9a363435f04ffe5454034daa4d07de86a535ed96a255012ac4383ba9b3e13'
+  version '2.4.2-1026'
+  sha256 '3a01bd9c852f176b2a35be6642d5515395b670a2dc6311da5abb1b31f813a1a8'
 
   url "https://updates.glyphsapp.com/Glyphs#{version}.zip"
   appcast "https://updates.glyphsapp.com/appcast#{version.major}.xml",
-          checkpoint: '9d9d8b423c7e9ccd16748029702d296b86f10f93421456c025d946045e28f437'
+          checkpoint: '27a593d068a6bb6e5ee0e737b0a0bf97b34bd1948c9359f580857315be65f1c7'
   name 'Glyphs'
   homepage 'https://glyphsapp.com/'
 

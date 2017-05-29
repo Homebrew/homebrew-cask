@@ -1,6 +1,6 @@
 cask 'ogdesign-eagle' do
-  version '1.1.2'
-  sha256 '747e1cf3420686105813250acb02fa3b17fa4b84e59b40c8a476c0d06c8e9e3f'
+  version '1.1.3'
+  sha256 'bc79a7bef63a5c32a8f12131a346b5d692e99f2ca07a69cfd57ad6ae63170168'
 
   # eagle-1253434826.file.myqcloud.com was verified as official when first introduced to the cask
   url "http://eagle-1253434826.file.myqcloud.com/releases/darwin/#{version}/Eagle.zip"

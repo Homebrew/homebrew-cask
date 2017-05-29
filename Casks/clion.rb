@@ -9,7 +9,6 @@ cask 'clion' do
   homepage 'https://www.jetbrains.com/clion/'
 
   auto_updates true
-  conflicts_with cask: 'clion-eap'
 
   app 'CLion.app'
 

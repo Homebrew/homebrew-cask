@@ -8,7 +8,7 @@ cask 'mps' do
   name 'JetBrains MPS'
   homepage 'https://www.jetbrains.com/mps/'
 
-  conflicts_with cask: 'mps-eap'
+  auto_updates true
 
   app "MPS #{version.major_minor}.app"
 

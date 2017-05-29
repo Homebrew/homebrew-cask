@@ -1,10 +1,10 @@
 cask 'softraid' do
-  version '5.5.6'
-  sha256 '6c1ea77a982d12ec5b78121e5217be04d7ce822afee1b201e75b4e81a8c6b729'
+  version '5.6'
+  sha256 'a255295d5e98fa47556f6aa54ef22ef7756fc5cd5256dc34cf312c41a520396f'
 
   url "https://softraid.com/updates/SoftRAID%20#{version}.dmg"
-  appcast 'https://www.softraid.com/updates/Latest_SoftRAID_Release.html',
-          checkpoint: '39819a5c4955646bbb59aed2cfc5b9363d774b0594f4bbb13306ba7eee89b44c'
+  appcast 'https://www.softraid.com/pages/support/download_latest_version.html',
+          checkpoint: 'ac9af2488e40b380b2d51ba04a56a2d7cee70de9ac9ca040d385e2356bb9dea1'
   name 'SoftRAID'
   homepage 'https://www.softraid.com/'
 

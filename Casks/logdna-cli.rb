@@ -1,11 +1,11 @@
 cask 'logdna-cli' do
-  version '1.1.1'
-  sha256 '5ffda85b0e8dafb918cc5b9e9ae18e4372ae4e5a30a492f0669ddd738cc76f9b'
+  version '1.2.0'
+  sha256 '6655f39122ec9497f9613099951fe8d2735b40ba12fe378f28687f4b68ac11e9'
 
   # github.com/logdna/logdna-cli was verified as official when first introduced to the cask
   url "https://github.com/logdna/logdna-cli/releases/download/#{version}/logdna-cli.pkg"
   appcast 'https://github.com/logdna/logdna-cli/releases.atom',
-          checkpoint: 'd31bdf3541d359436ce5aedaed41f9c34bcad46e5b4b70cca361f6cc2d8dafcf'
+          checkpoint: '1ff99ed137d57f571581482c8b625b447a7adaf62cd1095874a23d8ecca12dc6'
   name 'LogDNA CLI'
   homepage 'https://logdna.com/'
 
