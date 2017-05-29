@@ -4,7 +4,7 @@ cask 'gif-for-mac' do
 
   url 'https://media.tenor.co/mac/bin/GIFforMac.dmg'
   name 'GIF for Mac'
-  homepage 'https://www.tenor.co/mac'
+  homepage 'https://tenor.co/mac'
 
   app 'GIF for Mac.app'
 end
