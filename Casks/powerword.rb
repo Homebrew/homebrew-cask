@@ -5,7 +5,7 @@ cask 'powerword' do
   url "https://download.iciba.com/pc/powerword_macosx_beta_#{version}.dmg"
   name 'Powerword'
   name '词霸'
-  homepage 'http://www.iciba.com/powerword'
+  homepage 'https://www.iciba.com/powerword'
 
   app '金山词霸.app'
 end
