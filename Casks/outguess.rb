@@ -4,7 +4,7 @@ cask 'outguess' do
 
   url 'http://www.rbcafe.com/download/outguess.zip'
   name 'Outguess'
-  homepage 'http://www.rbcafe.com/software/outguess/'
+  homepage 'https://www.rbcafe.com/software/outguess/'
 
   depends_on macos: '>= :mountain_lion'
 
