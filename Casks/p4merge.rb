@@ -4,7 +4,7 @@ cask 'p4merge' do
 
   url "http://filehost.perforce.com/perforce/r#{version.sub(%r{\A20(\d\d\.\d+).*}, '\1')}/bin.macosx1011x86_64/P4V.dmg"
   name 'Perforce P4Merge'
-  homepage 'https://www.perforce.com/product/components/perforce-visual-merge-and-diff-tools'
+  homepage 'https://www.perforce.com/products/helix-apps/merge-diff-tool-p4merge'
 
   app 'p4merge.app'
 
