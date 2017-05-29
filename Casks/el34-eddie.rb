@@ -4,6 +4,8 @@ cask 'el34-eddie' do
 
   # el34software.com was verified as official when first introduced to the cask
   url "http://el34software.com/latest/Eddie%20OSX%20#{version}.zip"
+  appcast 'http://www.el34.com/EddieReleaseNotes.html',
+          checkpoint: 'be1951aa42fadf6a2c3c7088a63e1c211ab3a2c0fc5078b53309bfcc1fd275b7'
   name 'Eddie'
   homepage 'http://www.el34.com/'
 
