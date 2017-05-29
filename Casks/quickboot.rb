@@ -6,7 +6,7 @@ cask 'quickboot' do
   appcast 'https://buttered-cat.com/products/QuickBoot',
           checkpoint: '66c84a167917f3233bb58b4f37106ff044656ce4455986fcc14e239f8028b7c5'
   name 'QuickBoot'
-  homepage 'https://buttered-cat.com/products/QuickBoot'
+  homepage 'https://buttered-cat.com/products/QuickBoot/'
 
   app 'QuickBoot.app'
 end
