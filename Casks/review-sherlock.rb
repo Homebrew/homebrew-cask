@@ -2,7 +2,7 @@ cask 'review-sherlock' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.rbcafe.com/download/reviewsherlock.zip'
+  url 'https://www.rbcafe.com/download/reviewsherlock.zip'
   name 'Review Sherlock'
   homepage 'https://www.rbcafe.com/software/review-sherlock/'
 
