@@ -5,7 +5,7 @@ cask 'macpass' do
   # github.com/mstarke/MacPass was verified as official when first introduced to the cask
   url "https://github.com/mstarke/MacPass/releases/download/#{version}/MacPass-#{version}.zip"
   appcast 'https://github.com/mstarke/MacPass/releases.atom',
-          checkpoint: 'a104302161f8b56ca01d8bcb141fd7fbb639fe6cf973a0a32cb3a26a876d5752'
+          checkpoint: '058a97340210902c05fc1eff2384af9b68a7493c3bd5cc3542a0255ee3177775'
   name 'MacPass'
   homepage 'https://mstarke.github.io/MacPass/'
 
