@@ -4,7 +4,7 @@ cask 'mame' do
 
   url "https://downloads.sourceforge.net/mameosx/MAMEOSX-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/mameosx/rss',
-          checkpoint: 'a3295c669aae45dd0ae512c6db410298b0b59bad9c537200b2b1b7df8207279f'
+          checkpoint: '7b87a1945db16b735ad47fb39f552f8dfd5f3ff775a73819e5c309a1d17559b2'
   name 'MAME'
   homepage 'http://mameosx.sourceforge.net/'
 
