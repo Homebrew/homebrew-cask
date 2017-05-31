@@ -7,7 +7,7 @@ cask 'wwdc' do
   appcast 'https://github.com/insidegui/WWDC/releases.atom',
           checkpoint: '50d8b2567a563c1e9c5e2e19730731f19445f61777988ff626aa7b91a01709e0'
   name 'WWDC'
-  homepage 'https://wwdc.io'
+  homepage 'https://wwdc.io/'
 
   auto_updates true
 
