@@ -6,5 +6,5 @@ cask 'capture-one' do
   name 'Capture One'
   homepage 'https://www.phaseone.com/en/Products/Software/Capture-One-Pro/Whats-new.aspx'
 
-  app 'Capture One.app'
+  app "Capture One #{version.major}.app"
 end
