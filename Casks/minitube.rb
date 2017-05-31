@@ -1,10 +1,10 @@
 cask 'minitube' do
-  version '2.6'
-  sha256 'd60cf2e11b07cfa14f69aa0881a835f8946ff12d180a5d7bdbbf20dd307a235a'
+  version '2.7'
+  sha256 '54e11efb1498309ee4d9331fca327f987552806b7c2633e7f1a68a9bed2adeae'
 
   url 'http://flavio.tordini.org/files/minitube/minitube.dmg'
   appcast 'http://flavio.tordini.org/minitube-ws/appcast.xml',
-          checkpoint: '4e9d1b9a1b2a43828e11006bede5f56f2c2af02539224fa8fe6f2f9972cc523d'
+          checkpoint: '4f982ecfcbe80a5c1f4c894812dc9a2bbd011d1c70fb961ff2f355825c858c8e'
   name 'Minitube'
   homepage 'http://flavio.tordini.org/minitube'
 
