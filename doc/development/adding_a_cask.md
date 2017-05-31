@@ -202,7 +202,7 @@ Stable versions live in the main repository at [caskroom/homebrew-cask](https://
 
 ### But There Is No Stable Version!
 
-When an App is only available as beta, development, or unstable versions, or in cases where such a version is the general standard, then said version can go into the main repo.
+When an App is only available as beta, development, or unstable versions, or in cases where such a version is the general standard, then said version should go into the main repo, and not into [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
 
 ### Beta, Unstable, Development, Nightly, or Legacy
 
