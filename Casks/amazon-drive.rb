@@ -13,9 +13,12 @@ cask 'amazon-drive' do
             delete: '/Applications/Amazon Drive.app'
 
   zap delete: [
+                '~/Library/Logs/Amazon Cloud Drive/',
                 '~/Library/Logs/Amazon Drive/',
                 '~/Library/Preferences/com.amazon.clouddrive.mac.plist',
+                '~/Library/Application Scripts/Amazon Cloud Drive/',
                 '~/Library/Application Support/Amazon Drive/',
+                '~/Library/Caches/com.amazon.clouddrive.mac/',
                 '~/Library/Cookies/com.amazon.clouddrive.mac.binarycookies',
               ]
 end
