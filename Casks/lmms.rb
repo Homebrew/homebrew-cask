@@ -14,7 +14,7 @@ cask 'lmms' do
   end
 
   appcast 'https://github.com/LMMS/lmms/releases.atom',
-          checkpoint: '2358ce3a24f437d756a91f9b8d4435bab1a1bdceeb07d49e57a1368059e43f06'
+          checkpoint: '3c070a7735c4e1a14179cca21fe6232dfa3496ec2320d7d9ebda0927eaa73f16'
   name 'LMMS'
   homepage 'https://lmms.io/'
 
