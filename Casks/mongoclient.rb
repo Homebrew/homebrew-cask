@@ -9,7 +9,7 @@ cask 'mongoclient' do
   name 'Mongoclient'
   homepage 'https://www.mongoclient.com/'
 
-  app 'Mongoclient.app'
+  app 'Mongoclient-darwin-x64/Mongoclient.app'
 
   zap delete: [
                 '~/Library/Application Support/Mongoclient',
