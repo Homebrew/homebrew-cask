@@ -10,8 +10,6 @@ cask 'tripmode' do
 
   depends_on macos: '>= :yosemite'
 
-  pkg 'TripMode.pkg'
-
   uninstall pkgutil: 'ch.tripmode.pkg.TripMode'
 
   zap delete: '~/Library/Preferences/ch.tripmode.TripMode.plist'
