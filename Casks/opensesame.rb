@@ -9,7 +9,7 @@ cask 'opensesame' do
     # github.com/smathot/OpenSesame was verified as official when first introduced to the cask
     url "https://github.com/smathot/OpenSesame/releases/download/release/#{version}/opensesame_#{version}-py2.7-macos-1.dmg"
     appcast 'https://github.com/smathot/OpenSesame/releases.atom',
-            checkpoint: '27ce86920dfb1d7815fdae809f67a4c28b21448abcaa7a4a1878682f9a6331a2'
+            checkpoint: '8a82d4c98339aca6ffcb5286805340a54e1e11a87a98fd416c3f2975fc6381ee'
   end
 
   name 'OpenSesame'

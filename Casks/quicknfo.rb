@@ -4,7 +4,7 @@ cask 'quicknfo' do
 
   url "https://github.com/The-Master777/QuickNFO/releases/download/v#{version}/QuickNFO.qlgenerator.zip"
   appcast 'https://github.com/The-Master777/QuickNFO/releases.atom',
-          checkpoint: '279e07f68848eed2a04fab4749972b30a7b8b12335b1a4f209650f72c9d59c80'
+          checkpoint: 'eff62dc123d295b082ccc021396660db1b13fb2e10bbc66be16784e5f1d7f0c2'
   name 'QuickNFO'
   homepage 'https://github.com/planbnet/QuickNFO'
 

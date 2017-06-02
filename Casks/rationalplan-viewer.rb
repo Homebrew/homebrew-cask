@@ -4,7 +4,7 @@ cask 'rationalplan-viewer' do
 
   url "http://www.rationalplan.com/download/RationalPlan-Viewer-#{version}.dmg"
   name 'RationalPlan Viewer'
-  homepage 'https://www.rationalplan.com/viewer-project-management-software.php'
+  homepage 'https://www.rationalplan.com/on-premise/'
 
   app 'RationalPlan-Viewer.app'
 end

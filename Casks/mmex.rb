@@ -5,7 +5,7 @@ cask 'mmex' do
   # github.com/moneymanagerex/moneymanagerex was verified as official when first introduced to the cask
   url "https://github.com/moneymanagerex/moneymanagerex/releases/download/v#{version}/mmex-v#{version}-macOS10.9.dmg"
   appcast 'https://github.com/moneymanagerex/moneymanagerex/releases.atom',
-          checkpoint: 'e5a3bfadc4dadbd06cd8aa8b0e8c5425f009fc28989769943d902f6ac3f476e3'
+          checkpoint: 'd64a84e883064903f617f33b3c01c2925d239b9f630314e24a32795109802d87'
   name 'Money Manager Ex'
   homepage 'http://www.moneymanagerex.org/'
 

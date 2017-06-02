@@ -4,7 +4,7 @@ cask 'scratch' do
 
   url "https://scratch.mit.edu/scratchr2/static/sa/Scratch-#{version.after_comma}.dmg"
   appcast 'https://scratch.mit.edu/scratchr2/static/sa/version.xml',
-          checkpoint: '8226770c3ad032b4ecd8e93815673be427024937cbea9f13cd1c532fc47830a4'
+          checkpoint: '9764185dc2913aa7974f9b59d41105abfb870a3e62591b1f5531c6c5cc4dc30d'
   name 'Scratch'
   homepage 'https://scratch.mit.edu/scratch2download/'
 

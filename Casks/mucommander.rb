@@ -5,7 +5,7 @@ cask 'mucommander' do
   # github.com/mucommander/mucommander was verified as official when first introduced to the cask
   url "https://github.com/mucommander/mucommander/releases/download/#{version}/mucommander-#{version}.dmg"
   appcast 'https://github.com/mucommander/mucommander/releases.atom',
-          checkpoint: '2aded0eaec7e02ec75e1be9a3321cb3b142f9a798bba3d772facd626ac22d7bf'
+          checkpoint: 'dc6b3cc95d6a209036e2b564854f85dd3778abdee72b0f53f9671ae4134e6500'
   name 'muCommander'
   homepage 'http://www.mucommander.com/'
 

@@ -4,7 +4,7 @@ cask 'cleartext' do
 
   url "https://github.com/mortenjust/cleartext-mac/releases/download/#{version}/Cleartext.zip"
   appcast 'https://github.com/mortenjust/cleartext-mac/releases.atom',
-          checkpoint: 'a97a4e71395b006d52aca725321b82d63b77aa75d5a4571daba06e9ecda0847c'
+          checkpoint: 'bfaebff6f178edaefb157c457a0c577c3d63ed0003cd426b2c4837ab4cd8e6cb'
   name 'Cleartext'
   homepage 'https://github.com/mortenjust/cleartext-mac'
 

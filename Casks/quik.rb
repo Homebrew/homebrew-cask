@@ -6,7 +6,7 @@ cask 'quik' do
   name 'GoPro Quik'
   homepage 'https://shop.gopro.com/softwareandapp/quik-%7C-desktop/Quik-Desktop.html'
 
-  pkg 'Quik.pkg'
+  pkg 'GoPro Quik.pkg'
 
   uninstall pkgutil: 'com.GoPro.pkg.GoProApp'
 end

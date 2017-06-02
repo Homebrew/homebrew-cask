@@ -4,7 +4,7 @@ cask 'windownaut' do
 
   url 'http://www.binarybakery.com/products/Windownaut.dmg'
   appcast 'http://www.binarybakery.com/products/windownaut-appcast.xml',
-          checkpoint: '7e59e49790e17dc4af136ecf32610d71e7a87e690378f1b24817df70f82def15'
+          checkpoint: '6520cae7acac051f07d83ae26055b130921098c95a00f7dc878063b17100052e'
   name 'Windownaut'
   homepage 'http://www.binarybakery.com/aprod/windownaut.html'
 

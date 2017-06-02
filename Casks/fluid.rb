@@ -9,4 +9,9 @@ cask 'fluid' do
   homepage 'http://fluidapp.com/'
 
   app 'Fluid.app'
+
+  zap delete: [
+                '~/Library/Application Support/Fluid',
+                '~/Library/Preferences/com.fluidapp.Fluid.plist',
+              ]
 end

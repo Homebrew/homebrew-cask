@@ -19,7 +19,7 @@ cask 'adobe-after-effects-cc' do
   language('zh') { 'zh_CN' }
   language('ru') { 'ru_RU' }
 
-  url "http://trials3.adobe.com/AdobeProducts/AEFT/#{version.dots_to_underscores}/osx10-64/AfterEffects_#{version.dots_to_underscores}_LS20.dmg",
+  url "https://trials3.adobe.com/AdobeProducts/AEFT/#{version.dots_to_underscores}/osx10-64/AfterEffects_#{version.dots_to_underscores}_LS20.dmg",
       user_agent: :fake,
       cookies:    { 'MM_TRIALS' => '1234' }
   name 'Adobe After Effects CC 2015'

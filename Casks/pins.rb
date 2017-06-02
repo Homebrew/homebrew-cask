@@ -4,7 +4,7 @@ cask 'pins' do
 
   url 'http://pinsapp.com/download/Pins.dmg'
   name 'Pins'
-  homepage 'http://pinsapp.com/'
+  homepage 'https://pinsapp.com/'
 
   app 'Pins.app'
 

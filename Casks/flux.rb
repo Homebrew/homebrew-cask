@@ -1,6 +1,6 @@
 cask 'flux' do
-  version '39.94'
-  sha256 '45e69b3f02c02e6f442c1e2ce49b70e14f69d5cb7453cad031e61055ffbdb318'
+  version '39.98'
+  sha256 '4b041705c40a593dbf745b83f49254c5a4f46b7e3bedcf150194e3f0840dd525'
 
   url "https://justgetflux.com/mac/Flux#{version}.zip"
   appcast 'https://justgetflux.com/mac/macflux.xml',
@@ -11,10 +11,6 @@ cask 'flux' do
   auto_updates true
 
   app 'Flux.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 
   uninstall login_item: 'Flux',
             quit:       'org.herf.Flux'

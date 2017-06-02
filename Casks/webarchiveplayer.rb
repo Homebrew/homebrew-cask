@@ -4,7 +4,7 @@ cask 'webarchiveplayer' do
 
   url "https://github.com/ikreymer/webarchiveplayer/releases/download/#{version}/webarchiveplayer.dmg"
   appcast 'https://github.com/ikreymer/webarchiveplayer/releases.atom',
-          checkpoint: 'a6041e53be0d61b346e14be9cef6109b46a9c207d6f809855605bf652a9e4ae3'
+          checkpoint: 'c57abc9633d036e8da8f08aed03b33df1a4539619ee2d6db908d7edfe889576d'
   name 'webarchiveplayer'
   homepage 'https://github.com/ikreymer/webarchiveplayer'
 

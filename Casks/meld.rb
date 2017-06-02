@@ -5,7 +5,7 @@ cask 'meld' do
   # github.com/yousseb/meld was verified as official when first introduced to the cask
   url "https://github.com/yousseb/meld/releases/download/#{version.after_comma}/meldmerge.dmg"
   appcast 'https://github.com/yousseb/meld/releases.atom',
-          checkpoint: '4f8b54087e9218c1195f74c5a70bbcfc32803fbbd92a3a90257437d7300a4f27'
+          checkpoint: 'ef52bbf506323d079d2d1d7d2767ba9bf70944996202da672cf19e0c684af82d'
   name 'Meld for OSX'
   homepage 'https://yousseb.github.io/meld/'
 

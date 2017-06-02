@@ -1,39 +1,29 @@
 cask 'github-desktop' do
-  version '222'
-  sha256 'b7d001b36a88f75f9c6102de8fbf683ab940caa2b654fd7a1a0f367be689fc02'
+  version '0.5.9-d08be790'
+  sha256 '335c28e70f52fc53048a6dc6b12abf89ee7fd2b55a49bd90b982537ae3cdcb1e'
 
-  url "https://mac-installer.github.com/mac/GitHub%20Desktop%20#{version}.zip"
-  appcast 'https://central.github.com/mac/appcast.xml',
-          checkpoint: 'b6482e6fe6594a1a9aad10b645fc551c9e16d0cd8deb4cedbfca6adaae43f1c2'
+  # githubusercontent.com was verified as official when first introduced to the cask
+  url "https://desktop.githubusercontent.com/releases/#{version}/GitHubDesktop.zip"
+  appcast 'https://github.com/desktop/desktop/releases.atom',
+          checkpoint: 'acf2ad7c22e097177a3a1f381ba26301d0817d124c1df73af9df70d053587cc4'
   name 'GitHub Desktop'
   homepage 'https://desktop.github.com/'
 
   auto_updates true
 
   app 'GitHub Desktop.app'
-  binary "#{appdir}/GitHub Desktop.app/Contents/MacOS/github_cli", target: 'github'
-
-  postflight do
-    suppress_move_to_applications
-  end
-
-  uninstall launchctl: [
-                         'com.github.GitHub.Conduit',
-                         'com.github.GitHub.GHInstallCLI',
-                       ]
 
   zap delete: [
-                '~/Library/Application Support/GitHub for Mac',
+                '~/Library/Application Support/GitHub Desktop',
                 '~/Library/Application Support/ShipIt_stderr.log',
                 '~/Library/Application Support/ShipIt_stdout.log',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.github.sfl',
-                '~/Library/Application Support/com.github.GitHub',
-                '~/Library/Application Support/com.github.GitHub.ShipIt',
-                '~/Library/Caches/GitHub for Mac',
-                '~/Library/Caches/com.github.GitHub',
-                '~/Library/Containers/com.github.GitHub.Conduit',
-                '~/Library/Preferences/com.github.GitHub.LSSharedFileList.plist',
-                '~/Library/Preferences/com.github.GitHub.plist',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.GitHubClient.sfl',
+                '~/Library/Application Support/com.github.GitHubClient',
+                '~/Library/Application Support/com.github.GitHubClient.ShipIt',
+                '~/Library/Caches/com.github.GitHubClient',
+                '~/Library/Caches/com.github.GitHubClient.ShipIt',
+                '~/Library/Preferences/com.github.GitHubClient.helper.plist',
+                '~/Library/Preferences/com.github.GitHubClient.plist',
               ],
       rmdir:  '~/.config/git'
 end

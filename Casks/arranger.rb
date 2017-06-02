@@ -4,11 +4,12 @@ cask 'arranger' do
 
   url "http://bucketomac.de/downloads/Arranger#{version}.zip"
   appcast 'http://bucketomac.de/appcast/arrangercast.xml',
-          checkpoint: 'c6938ca1a2301d4d20f70f1012fd7d244e71d42f06bebb126dd8ee126bac3930'
+          checkpoint: '0d8030610ea9f97f5bc0f16dabb1cff33343108cb5a9a8414bdb8f45f1be747c'
   name 'Arranger'
   homepage 'http://bucketomac.de/arranger/arranger/'
 
   accessibility_access true
+  depends_on macos: '>= :mountain_lion'
 
   app 'Arranger.app'
 end

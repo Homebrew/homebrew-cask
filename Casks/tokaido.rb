@@ -4,7 +4,7 @@ cask 'tokaido' do
 
   url "https://github.com/tokaido/tokaidoapp/releases/download/v#{version}/Tokaido.zip"
   appcast 'https://github.com/tokaido/tokaidoapp/releases.atom',
-          checkpoint: '81178263b6362780344767f76a57ee328bab77ce02d89909c86fac1b9cea3319'
+          checkpoint: 'cb947717a16d9b01848f9929490338892ce3833b09566dccac494e251e598303'
   name 'Tokaido'
   homepage 'https://github.com/tokaido/tokaidoapp'
 

@@ -4,7 +4,7 @@ cask 'deskfun' do
 
   url "http://www.furrysoft.de/download/DeskFun#{version}.zip"
   appcast 'http://www.furrysoft.de/appcast/DeskFun.xml',
-          checkpoint: '1d7761dd1dbd0741321c499a4222cabd15aa8a1c661240d65e0ee4fdd199bf9a'
+          checkpoint: '57ed0eb9f5e08f7879eb825012bfb2b8ad21387aad8b35adce4f6659eb1b7999'
   name 'DeskFun'
   homepage 'http://www.furrysoft.de/?page=deskfun'
 

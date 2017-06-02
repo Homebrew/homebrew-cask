@@ -8,10 +8,6 @@ cask 'path-finder' do
 
   app 'Path Finder.app'
 
-  postflight do
-    suppress_move_to_applications key: 'kNTMoveToApplicationsFolderAlertSuppress'
-  end
-
   zap delete: [
                 '~/Library/Preferences/com.cocoatech.PathFinder.plist',
                 '~/Library/Application Support/Path Finder',

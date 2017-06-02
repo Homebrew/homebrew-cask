@@ -5,7 +5,7 @@ cask 'min' do
   # github.com/minbrowser/min was verified as official when first introduced to the cask
   url "https://github.com/minbrowser/min/releases/download/v#{version}/Min-v#{version}-darwin-x64.zip"
   appcast 'https://github.com/minbrowser/min/releases.atom',
-          checkpoint: 'b4dd5cc128a8a80ea14a393f8457140ef4e5b2b4f2482df630a1e63b503f288f'
+          checkpoint: 'cb4a0fa6ec7b562c31aa9d218ca819db68a8904184cdddd9205ecad33349e8b3'
   name 'Min'
   homepage 'https://minbrowser.github.io/min/'
 

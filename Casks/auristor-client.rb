@@ -15,8 +15,6 @@ cask 'auristor-client' do
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.12/AuriStor-client-#{version}-Sierra.dmg"
   end
 
-  appcast 'https://www.auristor.com/filesystem/client-installer/',
-          checkpoint: 'f1372d3bc0b5d5184ea71c189282a5f5cd5a7134a79ba25b8b2946b503e0a604'
   name 'AuriStor File System Client'
   homepage 'https://www.auristor.com/'
 

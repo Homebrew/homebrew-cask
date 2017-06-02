@@ -5,7 +5,7 @@ cask 'breakaway' do
   # sourceforge.net/breakaway was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/breakaway/breakaway-#{version}.zip"
   appcast 'https://sourceforge.net/projects/breakaway/rss',
-          checkpoint: '073b0d2ddb461bf6abc22c495cd9d8e0693a731d56f1a5949e5d84863c795c5e'
+          checkpoint: 'cabdc1ccf0cec26b7996a6ac740fd5f8c22e08892c35ad90e0cdf2dc5ef65268'
   name 'Breakaway'
   homepage 'http://mutablecode.com/apps/breakaway.html'
 

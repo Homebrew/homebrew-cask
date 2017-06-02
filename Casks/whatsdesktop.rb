@@ -4,7 +4,7 @@ cask 'whatsdesktop' do
 
   url "https://github.com/mawie81/whatsdesktop/releases/download/#{version}/WhatsDesktop-#{version}.dmg"
   appcast 'https://github.com/mawie81/whatsdesktop/releases.atom',
-          checkpoint: '0758278df730ed99a5d76c51cca39d2f91abe345d615d09514b3d0504d40c22c'
+          checkpoint: '1137e7be0e05431fd9cbff1fccd03a73fb898c6b9c4930cff7e82641b593b6ac'
   name 'WhatsDesktop'
   homepage 'https://github.com/mawie81/whatsdesktop'
 

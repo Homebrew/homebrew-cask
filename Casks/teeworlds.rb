@@ -4,7 +4,7 @@ cask 'teeworlds' do
 
   url "https://downloads.teeworlds.com/teeworlds-#{version}-osx.dmg"
   appcast 'https://www.teeworlds.com/?page=downloads',
-          checkpoint: 'f6bee25b48abb654d415cea3513e353e4c374594c4f2af9a15012d9ae5d02e33'
+          checkpoint: '801d1139239193f9036eaf817bbb1159546b05ae7e2b7d8c7490374b9bdf9f46'
   name 'Teeworlds'
   homepage 'https://www.teeworlds.com/'
 

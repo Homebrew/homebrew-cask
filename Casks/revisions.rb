@@ -4,7 +4,7 @@ cask 'revisions' do
 
   url "https://revisionsapp.com/downloads/revisions-#{version}.dmg"
   appcast 'https://revisionsapp.com/releases',
-          checkpoint: '46f1a2b2ece8d629014de0abc1aaa1b673f007caca47cd8d2659a94b46f8f326'
+          checkpoint: '3d64ab59a74f6207b84529a5b51ca7073553002ce1ffbef03e37075ab93bedd1'
   name 'Revisions'
   homepage 'https://revisionsapp.com/'
 

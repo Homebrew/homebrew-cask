@@ -4,13 +4,9 @@ cask 'schnapps' do
 
   url "http://www.schnappsformac.com/download/Schnapps_v#{version}.zip"
   appcast 'http://schnappsformac.com/download/appcast.xml',
-          checkpoint: '9d8006fdd5db72e9f79ee2814bb794c4aa775710243bf5f96655bfad562664f0'
+          checkpoint: '3e7a3758358348a5fc55e24a1b4610172ed3b44c8237bb2448193f70a2fa18f4'
   name 'Schnapps'
   homepage 'http://schnappsformac.com/'
 
   app 'Schnapps.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 end

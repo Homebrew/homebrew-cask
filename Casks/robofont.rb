@@ -4,7 +4,7 @@ cask 'robofont' do
 
   url "http://robofont.com/downloads/RoboFont_#{version.after_comma}.dmg"
   appcast 'http://robofont.com/downloads/',
-          checkpoint: 'a3ceaaa950defd4e2a878892b7486bfc788283d065459e1689b083911741f4eb'
+          checkpoint: '7aedb4426631691f11efb84e3bd2169e6bff8eebaffa3d33d2ddc74ef784cdc1'
   name 'RoboFont'
   homepage 'https://doc.robofont.com/'
 

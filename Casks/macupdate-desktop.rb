@@ -10,10 +10,6 @@ cask 'macupdate-desktop' do
 
   app 'MacUpdate Desktop.app'
 
-  postflight do
-    suppress_move_to_applications
-  end
-
   zap delete: [
                 "~/Library/Application Support/MacUpdate/MacUpdate Desktop #{version.major}",
                 "~/Library/Caches/com.macupdate.desktop#{version.major}",

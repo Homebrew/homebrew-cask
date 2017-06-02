@@ -4,7 +4,7 @@ cask 'netshade' do
 
   url "https://secure.raynersw.com/downloads/NetShade-#{version.dots_to_hyphens}.app.zip"
   appcast 'https://secure.raynersw.com/appcast.php',
-          checkpoint: '898af8ae25b251ed6e1fc5a473da1ed019cfb1d83079b4aff8fa2656c6adc9cf'
+          checkpoint: '495f1b5f37f6528781f7ce480e72fafe260c15e5dd19729a93b3fabc7968912a'
   name 'NetShade'
   homepage 'http://raynersw.com/netshade.php'
 

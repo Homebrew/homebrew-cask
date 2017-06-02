@@ -5,7 +5,7 @@ cask 'duckietv' do
   # github.com/SchizoDuckie/DuckieTV was verified as official when first introduced to the cask
   url "https://github.com/SchizoDuckie/DuckieTV/releases/download/#{version}/DuckieTV-#{version}-OSX-x64.pkg"
   appcast 'https://github.com/SchizoDuckie/DuckieTV/releases.atom',
-          checkpoint: '30c530aad16358a149c5f8abe0cf69607260b6cb1524e8ad3bb2c52224d5481c'
+          checkpoint: 'aa8437be4c7e2b850a5538c56e75c1c04ff2cab08ecff1867997c7765e8a5c99'
   name 'duckieTV'
   homepage 'https://schizoduckie.github.io/DuckieTV/'
 

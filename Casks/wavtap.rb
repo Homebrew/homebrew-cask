@@ -4,7 +4,7 @@ cask 'wavtap' do
 
   url "https://github.com/pje/WavTap/releases/download/#{version}/WavTap.#{version}.pkg"
   appcast 'https://github.com/pje/WavTap/releases.atom',
-          checkpoint: '952af9b0ee8389aa44bf90fa72aa4b0e83a271341ff69930d0024a80cca40454'
+          checkpoint: 'e0ceb82d22306e4a0a27451d3ac47777a605883d4a470c4fdfa1ccf947d14220'
   name 'WavTap'
   homepage 'https://github.com/pje/wavtap'
 

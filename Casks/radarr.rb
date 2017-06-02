@@ -1,11 +1,11 @@
 cask 'radarr' do
-  version '0.2.0.654'
-  sha256 'c0aa3875ee49383e06b34abcfb86b5d1bce746970e0a20dd396d5a6c076b77d4'
+  version '0.2.0.696'
+  sha256 '47486379f64d49f5f4ef3d136285fe4ede1ec40095401aaf4bafd0d8aefec881'
 
   # github.com/Radarr/Radarr was verified as official when first introduced to the cask
   url "https://github.com/Radarr/Radarr/releases/download/v#{version}/Radarr.develop.#{version}.osx-app.zip"
   appcast 'https://github.com/Radarr/Radarr/releases.atom',
-          checkpoint: 'd86e5406dd44ed06fee747cf5d3c8468023befbd7ba9e8fe15874a355ea0f624'
+          checkpoint: '207e425b74613b1b2ec86ffadbcb68b194a698a5ee3a5a8f9d90fc19e4a36398'
   name 'Radarr'
   homepage 'https://radarr.video/'
 

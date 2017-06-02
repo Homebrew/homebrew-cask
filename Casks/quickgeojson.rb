@@ -4,7 +4,7 @@ cask 'quickgeojson' do
 
   url "https://github.com/irees/quickgeojson/releases/download/v#{version}/quickgeojson.qlgenerator.zip"
   appcast 'https://github.com/irees/quickgeojson/releases.atom',
-          checkpoint: 'b030a58b367e52841dd5817d8c53ca657efd5789933fb97a405690c74a374258'
+          checkpoint: 'e24e0416b10f16068cb4fa438875bd94db1c73bd3b663fc504b7231f308ec96a'
   name 'quickgeojson'
   homepage 'https://github.com/irees/quickgeojson'
 

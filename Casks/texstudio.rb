@@ -4,7 +4,7 @@ cask 'texstudio' do
 
   url "https://downloads.sourceforge.net/texstudio/texstudio-#{version}-osx-qt5.7.1.zip"
   appcast 'https://sourceforge.net/projects/texstudio/rss',
-          checkpoint: '2a3e20d8bee14961e3de7989ac3cfe31439918b57fe5b6395aac134cbe561dff'
+          checkpoint: 'c15be9de6478bfea79db4dfad89c7e1d35c624377fe690ea4cbffc3df8cb331b'
   name 'TeXstudio'
   homepage 'http://texstudio.sourceforge.net/'
 

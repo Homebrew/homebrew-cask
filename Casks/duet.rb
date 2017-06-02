@@ -4,8 +4,8 @@ cask 'duet' do
 
   # s3-us-west-1.amazonaws.com/duetmac/ was verified as official when first introduced to the cask
   url "https://s3-us-west-1.amazonaws.com/duetmac/#{version.major_minor_patch.dots_to_underscores}/duet-#{version.dots_to_hyphens}.zip"
-  appcast 'https://updates.duetdisplay.com/checkMacUpdates',
-          checkpoint: '5ced264c2c1161b2226ab307ca8dd8a9a42ad3db2ea50f4283a8a4092f8cb882'
+  appcast 'https://s3-us-west-1.amazonaws.com/duetmac/1_6_3/DuetDisplayAppcast.xml',
+          checkpoint: '49aa9a81b1012d2524cc1a81e61502cea506299295703f1016da77dccb60cdfa'
   name 'Duet'
   homepage 'https://www.duetdisplay.com/'
 

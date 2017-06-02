@@ -1,10 +1,10 @@
 cask 'tex-live-utility' do
-  version '1.26'
-  sha256 '2af336179817ede13108a4b883223072b0b999b0dff53b9edbc0ef6a704f1f52'
+  version '1.28'
+  sha256 '5e5c115871f897e7c247babfd8049002ab16e0d3c89a1c84cccd72791ac0f941'
 
   url "https://github.com/amaxwell/tlutility/releases/download/#{version}/TeX.Live.Utility.app-#{version}.tar.gz"
   appcast 'https://raw.githubusercontent.com/amaxwell/tlutility/master/appcast/tlu_appcast.xml',
-          checkpoint: '7c168708a9c3f6274b033455830e2a3c8d7446a93ade7d9822f58addd9918cc4'
+          checkpoint: '1c93aab71ce0a3ca7b9b6507b51fcdb84c08338e2cc11b93e0a3fce5e5019924'
   name 'TeX Live Utility'
   homepage 'https://github.com/amaxwell/tlutility'
 

@@ -4,7 +4,7 @@ cask 'posterazor' do
 
   url "https://downloads.sourceforge.net/posterazor/PosteRazor-#{version}-OSX.dmg"
   appcast 'https://sourceforge.net/projects/posterazor/rss',
-          checkpoint: 'e48b0edf881bb9c3081198a0d63a1bc1f5afa9d8749faec9266270650a8feb3b'
+          checkpoint: '96d00043780b70c575c4c9a6895fa1b48c43d77ca2f65c1582d377a61a1b1574'
   name 'PosteRazor'
   homepage 'http://posterazor.sourceforge.net/'
 

@@ -10,10 +10,6 @@ cask 'gitter' do
 
   app 'Gitter.app'
 
-  postflight do
-    suppress_move_to_applications
-  end
-
   uninstall quit: [
                     'com.troupe.gitter.mac.Gitter',
                     'com.troupe.gitter.mac.GitterHelperApp',

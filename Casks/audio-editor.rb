@@ -4,7 +4,7 @@ cask 'audio-editor' do
 
   url 'http://www.macsome.com/AudioEditor.dmg'
   appcast 'http://www.macsome.com/audio-editor-mac/su_feed.xml',
-          checkpoint: 'cba23cfdf00721f576b7f14ab9a6ce7dd54fae398054193e3f7d120316cb0bb0'
+          checkpoint: '17ee1f267414631e333c8aa56267e8b0436ad0f86171208debbce8f6cae3aa60'
   name 'Macsome Audio Editor'
   homepage 'http://www.macsome.com/audio-editor-mac/'
 

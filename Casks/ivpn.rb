@@ -4,7 +4,7 @@ cask 'ivpn' do
 
   url "https://macserve.org.uk/downloads/ivpn/iVPN_#{version}.zip"
   appcast 'http://macserve.org.uk:8090/profileInfo.php',
-          checkpoint: 'ef5a831947d62a9c82baa03e50e1044ef065f4bc80e30fd35c543f0eb6087414'
+          checkpoint: 'd61209d979c8e8139f92ea2a2efc770a03fae77e24895bd6e6e4fc83273b7d69'
   name 'iVPN'
   homepage 'https://macserve.org.uk/'
 

@@ -1,6 +1,6 @@
 cask 'skype-for-business' do
-  version '16.3.0.240'
-  sha256 'c7dbfe1faed63419037084dce34c08f6b8cd0cd0b99b09e4e8c1b7ffbe13157f'
+  version '16.6.0.333'
+  sha256 'cf2fddc7e45010d5a0b968c900bf130762ac22305e61c94351c25f0e18e0f662'
 
   url "https://download.microsoft.com/download/D/0/5/D055DA17-C7B8-4257-89A1-78E7BBE3833F/SkypeForBusinessInstaller-#{version}.pkg"
   name 'Skype for Business'
@@ -10,7 +10,11 @@ cask 'skype-for-business' do
 
   pkg "SkypeForBusinessInstaller-#{version}.pkg"
 
-  uninstall pkgutil:    'com.microsoft.SkypeForBusiness',
+  uninstall pkgutil:    [
+                          'com.microsoft.SkypeForBusiness',
+                          'com.microsoft.SkypeForBusiness.MeetingJoinPlugin',
+                          'com.microsoft.package.Microsoft_AutoUpdate.app',
+                        ],
             login_item: 'Skype for Business'
 
   zap delete: [

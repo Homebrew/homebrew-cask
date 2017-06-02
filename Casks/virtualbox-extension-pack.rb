@@ -1,10 +1,10 @@
 cask 'virtualbox-extension-pack' do
-  version '5.1.20-114628'
-  sha256 '51e85e3792a5a435d88368a52a363321acdd913f4fb3c55cd623911d447ad148'
+  version '5.1.22-115126'
+  sha256 '244e6f450cba64e0b025711050db3c43e6ce77e12cd80bcd08796315a90c8aaf'
 
   url "http://download.virtualbox.org/virtualbox/#{version.sub(%r{-.*}, '')}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
   appcast 'http://download.virtualbox.org/virtualbox/LATEST.TXT',
-          checkpoint: '840fe5c7e77518c74fcb29830e0b3933596dc2a41784e7f3e76ce418fac96a66'
+          checkpoint: '4bc244bbabe0bdb1c33d1813128589ceb3112be9ccebfccc1100ff6ca358b1c3'
   name 'Oracle VirtualBox Extension Pack'
   homepage 'https://www.virtualbox.org/'
 

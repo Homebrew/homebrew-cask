@@ -5,7 +5,7 @@ cask 'restool' do
   # github.com/Nikola-K/RESTool was verified as official when first introduced to the cask
   url "https://github.com/Nikola-K/RESTool/releases/download/v#{version}/RESTool_#{version}_osx.zip"
   appcast 'https://github.com/Nikola-K/RESTool/releases.atom',
-          checkpoint: 'a6287fdb9b482425d972a87911fcbe7a80bc6097b15ccca065f9a3daf60d74e7'
+          checkpoint: '8e53ac8a4fd103f8b915b7ef93f94f5148711968f915ed88dcc92090215d1d0a'
   name 'RESTool'
   homepage 'https://nikola-k.github.io/RESTool/'
 

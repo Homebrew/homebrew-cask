@@ -1,11 +1,11 @@
 cask 'buttercup' do
-  version '0.12.2'
-  sha256 'a4182de9f197328cdca3988b4d58d2051cdc118e53855de525b59e38fa4a2feb'
+  version '0.17.0'
+  sha256 'afbbe3eb80d4e8872f808b91eb9785ec8b685a1bdc17419f537db053683f5a9b'
 
-  # github.com/buttercup-pw/buttercup was verified as official when first introduced to the cask
-  url "https://github.com/buttercup-pw/buttercup/releases/download/v#{version}-alpha/Buttercup-#{version}-mac.zip"
-  appcast 'https://github.com/buttercup-pw/buttercup/releases.atom',
-          checkpoint: 'f2ecf71a7abfd434bd34d70d72c6ecb843eda8dc404a34fe0b706ad741e93d61'
+  # github.com/buttercup/buttercup was verified as official when first introduced to the cask
+  url "https://github.com/buttercup/buttercup/releases/download/v#{version}/Buttercup-#{version}-mac.zip"
+  appcast 'https://github.com/buttercup/buttercup/releases.atom',
+          checkpoint: 'f826642604cef94caf9be98fc0c491c890b1f5227195a9c4dfbc8d5942d16012'
   name 'Buttercup'
   homepage 'https://buttercup.pw/'
 

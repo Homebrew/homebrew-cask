@@ -6,7 +6,7 @@ cask 'otomatic' do
   appcast 'http://otomatic.codingcurious.com/update/appcast.xml',
           checkpoint: '510dab1c8a12f743673a3b894ba72e0495488f1966533a192bc9cae916639deb'
   name 'Otomatic'
-  homepage 'http://codingcurious.com/otomatic/'
+  homepage 'https://codingcurious.com/otomatic/'
 
   auto_updates true
 

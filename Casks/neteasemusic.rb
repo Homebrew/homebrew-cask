@@ -1,6 +1,6 @@
 cask 'neteasemusic' do
-  version '1.5.3_544'
-  sha256 '21f5bf9f1d19463051e80f56d5eb9ee4ff92fcb4e11a2845b81f482aba664253'
+  version '1.5.5_552'
+  sha256 '0d6e225356c95d0a5129fcc5515110f241c5395a60254a54f1bc1f3dd7466f5e'
 
   # s1.music.126.net was verified as official when first introduced to the cask
   url "http://s1.music.126.net/download/osx/NeteaseMusic_#{version}_web.dmg"

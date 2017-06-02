@@ -4,7 +4,7 @@ cask 'djview' do
 
   url "https://downloads.sourceforge.net/djvu/DjVuLibre-3.5.27%2BDjView-#{version}-qt57b-intel64.dmg"
   appcast 'https://sourceforge.net/projects/djvu/rss',
-          checkpoint: '5ad7e42269fd45af3efb843e42b2cebef42f145e26c1a99c09f8a6af41b3861f'
+          checkpoint: 'aeacee2c4f4de38de4aad7d682d2728a3b10153c943f386e30b0621879efd920'
   name 'DjView'
   homepage 'http://djvu.sourceforge.net/'
 

@@ -4,7 +4,7 @@ cask 'epubmdimporter' do
 
   url "https://github.com/jaketmp/ePub-quicklook/releases/download/v#{version}/epub.mdimporter.zip"
   appcast 'https://github.com/jaketmp/ePub-quicklook/releases.atom',
-          checkpoint: 'f4b69e735f425ff4f6d8e4cc4c2f2a9daee6140c0988176f64626d4c7b61eb78'
+          checkpoint: '839bfc0ae9a0a435d2f1fbab192eccb05cfaa75e57be7df0eefe9af9c1ffd20d'
   name 'EPUB Spotlight'
   homepage 'https://github.com/jaketmp/ePub-quicklook'
 

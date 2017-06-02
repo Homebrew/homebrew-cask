@@ -4,7 +4,7 @@ cask 'spark-inspector' do
 
   url 'http://sparkinspector.com/downloads/sparkinspector.dmg'
   appcast 'http://sparkinspector.com/sparkle/feed.xml',
-          checkpoint: 'e15b687f8582273670e742a0622c153b41460c79a6c47585defba6dbdc470d8f'
+          checkpoint: 'ba24c6118bf341e62a5bf24576319222abcaa0d4203109a1d7780f2242858020'
   name 'Spark Inspector'
   homepage 'http://sparkinspector.com/'
 

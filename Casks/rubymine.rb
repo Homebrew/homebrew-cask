@@ -1,15 +1,14 @@
 cask 'rubymine' do
-  version '2017.1.1,171.4073.39'
-  sha256 'ab6283b57d5056af18de5b9c8d89b30355743f393ebd221451c579ea7fdeeed9'
+  version '2017.1.3,171.4424.69'
+  sha256 'cd288c28afe67117209fbb4bce718d61b838493b1f98cecf30aae78e2c776cb6'
 
   url "https://download.jetbrains.com/ruby/RubyMine-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=RM&latest=true&type=release',
-          checkpoint: '55a2190326bf1ae6cf1bd22216d26c88de1c1d21b2d8738a326a53954d2a3443'
+          checkpoint: '112366a7b9b916e7c6fd8bf3735c4415115b61cc03072b4f1e9b51e56b14c021'
   name 'RubyMine'
   homepage 'https://www.jetbrains.com/ruby/'
 
   auto_updates true
-  conflicts_with cask: 'rubymine-eap'
 
   app 'RubyMine.app'
 

@@ -4,7 +4,7 @@ cask 'simpletag' do
 
   url "https://downloads.sourceforge.net/simpletag/simpletag-gui-#{version}-osx.zip"
   appcast 'https://sourceforge.net/projects/simpletag/rss',
-          checkpoint: '7ce71edc7aec04c948ba801d49132b164d164c7d4c9dc019275ae8ad2b254288'
+          checkpoint: '6705a1adb6c30ea422e1ec32267b58db8122a955971852c63e29f3b2ebb68500'
   name 'SimpleTAG'
   homepage 'https://sourceforge.net/projects/simpletag/'
 

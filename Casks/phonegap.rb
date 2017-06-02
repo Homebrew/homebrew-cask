@@ -1,11 +1,11 @@
 cask 'phonegap' do
-  version '0.4.3'
-  sha256 '43076b27d96f2ed31fbbdc0a6e23331caf1583a8cb3c2ae2026f9fa3d94d7944'
+  version '0.4.4'
+  sha256 'de491f77e3e55c01329e4d48c9ff02003058e6824e1a4cf971f92c128a94c145'
 
   # github.com/phonegap/phonegap-app-desktop was verified as official when first introduced to the cask
   url "https://github.com/phonegap/phonegap-app-desktop/releases/download/#{version}/PhoneGapDesktop.dmg"
   appcast 'https://github.com/phonegap/phonegap-app-desktop/releases.atom',
-          checkpoint: '60009a43e006c53790bfce55051e3bdb7f410cdfd042922a70c49d80ad4b8029'
+          checkpoint: 'a22f431f89e2f07e275af34231ca8bf28e7035cddde8de4c3a86c3dea125fe49'
   name 'PhoneGap Desktop App'
   homepage 'http://phonegap.com/'
 

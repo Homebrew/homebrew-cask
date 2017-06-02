@@ -1,10 +1,10 @@
 cask 'viewit' do
-  version '2.61'
-  sha256 '4689dfa7c25f65acef8104920c94b61172170c44af349ce8e6cc23f63feb0d14'
+  version '2.63'
+  sha256 '41dfaa4904b2cf454bc9f7d3a36df2a28382e109e4be43eb53024bd26cc2d16e'
 
   url "http://www.hexcat.com/downloads/ViewIt-#{version}.zip"
   appcast 'http://www.hexcat.com/downloads.html',
-          checkpoint: '2dcb52ec50517c76cbe5ed8cc87f71f5222b3734e18cc02353e4efa502faafe8'
+          checkpoint: '9dcddf7d3f126e39c3901e73b388f79b3c2aafdefd3ef198120c0592dd9fd91f'
   name 'ViewIt'
   homepage 'http://www.hexcat.com/viewit/'
 

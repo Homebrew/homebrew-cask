@@ -5,7 +5,7 @@ cask 'ring' do
   # ring-mac-app-assets.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://ring-mac-app-assets.s3.amazonaws.com/production/Ring_#{version}.zip"
   appcast 'https://ring-mac-app-assets.s3.amazonaws.com/production/ring-appcast.xml',
-          checkpoint: '56d4addc5e0302953537dfaff3cbd87283cc333e73d3b129bf251aa48a271f52'
+          checkpoint: 'cc3682c38fe59e30111fee2ef9bfab02661c0f188082c29f82df04f047e5d11f'
   name 'Ring'
   homepage 'https://ring.com/'
 

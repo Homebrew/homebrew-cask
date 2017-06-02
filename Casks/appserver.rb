@@ -5,7 +5,7 @@ cask 'appserver' do
   # github.com/appserver-io/appserver was verified as official when first introduced to the cask
   url "https://github.com/appserver-io/appserver/releases/download/#{version.sub(%r{-.*}, '')}/appserver-dist_#{version}_x86_64.pkg"
   appcast 'https://github.com/appserver-io/appserver/releases.atom',
-          checkpoint: '5f1962c7d1468e71ec012ce91cdf6644ecef67af3aed1c27554cb8156d6cc5d8'
+          checkpoint: '7ff61bdab52711e2f289f89835204463370d5bc6769aa1fb17584a074a38aaea'
   name 'appserver.io'
   homepage 'http://appserver.io/'
 

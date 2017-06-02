@@ -4,7 +4,7 @@ cask 'sdl-framework' do
 
   url "https://www.libsdl.org/release/SDL#{version.major}-#{version}.dmg"
   appcast 'https://www.libsdl.org/release/',
-          checkpoint: '96be2bfa97cbeb863b64bf12cca8b658966907d94a227ccdd05853f0875a0338'
+          checkpoint: '88871a300301cd16d8b0435b3e6a086ce039f9740f9e0dcf7e67d686cc151143'
   name 'SDL.framework'
   homepage 'https://www.libsdl.org/'
 

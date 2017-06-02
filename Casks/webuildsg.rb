@@ -4,7 +4,7 @@ cask 'webuildsg' do
 
   url "https://github.com/webuildsg/osx/releases/download/v#{version}/WeBuildSG.app.zip"
   appcast 'https://github.com/webuildsg/osx/releases.atom',
-          checkpoint: '2969bb4658886e4e8c52ae8b12560f0b714f2ec7dbc7d0cc4cfcbf9511ab35e2'
+          checkpoint: '511f6539871fe7ba4780b6e4f57e33931d51a2934805a0cd8e0345e951fe1f94'
   name 'We Build SG'
   homepage 'https://github.com/webuildsg/osx'
 

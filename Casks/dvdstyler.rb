@@ -5,7 +5,7 @@ cask 'dvdstyler' do
   # sourceforge.net/dvdstyler was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/dvdstyler/DVDStyler-#{version}-MacOSX.dmg"
   appcast 'https://sourceforge.net/projects/dvdstyler/rss',
-          checkpoint: 'eeb09e1641cac1695a2ac136bea8a2bc21d9dab00bda98439806bbc86fe2f709'
+          checkpoint: 'f5dcdcddef5bfa8da5cb8c688cd58e432d2cb5742b3193f99d9a34043c831eee'
   name 'DVDStyler'
   homepage 'http://www.dvdstyler.org/'
 

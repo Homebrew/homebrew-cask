@@ -15,6 +15,10 @@ cask 'anaconda' do
                       sudo:       true,
                     }
 
+  postflight do
+    set_ownership "#{HOMEBREW_PREFIX}/anaconda3"
+  end
+
   uninstall delete: "#{HOMEBREW_PREFIX}/anaconda3"
 
   zap delete: [

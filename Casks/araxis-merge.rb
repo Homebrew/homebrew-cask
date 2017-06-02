@@ -1,5 +1,4 @@
 cask 'araxis-merge' do
-  name 'Araxis Merge'
   if MacOS.version <= :mountain_lion
     version '2014.4459'
     sha256 '7945e0fd583880bf4bbb65899c7184692d683f247764e73f435e0685954028f0'
@@ -22,6 +21,9 @@ cask 'araxis-merge' do
     url "https://www.araxis.com/download/Merge#{version}-macOS10.12.dmg"
   end
 
+  appcast 'https://www.araxis.com/news-feed.atom',
+          checkpoint: '3d7db606ca639fded79a5e76d28033cef76f44c02cefa04511577f0886edd2bf'
+  name 'Araxis Merge'
   homepage 'https://www.araxis.com/merge/'
 
   depends_on macos: '>= :mountain_lion'

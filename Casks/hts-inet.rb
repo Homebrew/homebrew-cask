@@ -6,5 +6,5 @@ cask 'hts-inet' do
   name 'HTS iNet'
   homepage 'http://www.htstechsupport.com/'
 
-  app 'HTS iNet.app'
+  app 'HTS-iNet.app'
 end

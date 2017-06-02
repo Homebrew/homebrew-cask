@@ -1,10 +1,10 @@
 cask 'teampaper-snap' do
-  version '2.0.8680'
-  sha256 '5041890f61d3ccd8c461cc8573eceb96099d0da683a0674b84401afd632ac3b2'
+  version '2.0.8800'
+  sha256 'c07ce6ef63ef73515ad538912d2ad2a05e731da568d8303c2ffdb821287b7f7e'
 
   url 'http://teampaper.me/snap/download/teampapersnap.dmg'
   appcast 'https://www.teampaper.me/sparkle/sparkle.xml',
-          checkpoint: 'fbe8869c3ed69e50b8a6b36b8d89610d1c02dcf1b98ce34ea92533b12b2dd51c'
+          checkpoint: '2059b3de12837e57b08dc414228a7837373124cb8d19f8770d3807d366c05037'
   name 'TeamPaper'
   homepage 'https://teampaper.me/snap/'
 

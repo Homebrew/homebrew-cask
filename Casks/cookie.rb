@@ -1,10 +1,10 @@
 cask 'cookie' do
-  version '5.5.4'
-  sha256 '1c0e8a707e61c2e196a59def6cd3f0b20c30f4375f0cc53d6cfd282fe743076d'
+  version '5.5.7'
+  sha256 'd05910dd83ecc29cc86cf0b41734ab9966b39d02a34ca4be3b84189a46c1144d'
 
   url "https://sweetpproductions.com/products/cookie#{version.major}/Cookie#{version.major}.dmg"
   appcast "https://sweetpproductions.com/products/cookie#{version.major}/appcast.xml",
-          checkpoint: '01cd4eb983d2424d9c701b140027c98fad17fc0cb0493349c0e75ebfcfb7b8de'
+          checkpoint: '317a3aa39107b8c2bb6ef8a638c51af7ea1f409f05a33609e749a70a0881868b'
   name 'Cookie'
   homepage 'https://sweetpproductions.com/'
 

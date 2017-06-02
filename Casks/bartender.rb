@@ -13,10 +13,6 @@ cask 'bartender' do
 
   app "Bartender #{version.major}.app"
 
-  postflight do
-    suppress_move_to_applications
-  end
-
   uninstall login_item: "Bartender #{version.major}"
 
   zap delete: [

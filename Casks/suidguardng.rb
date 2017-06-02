@@ -4,7 +4,7 @@ cask 'suidguardng' do
 
   url "http://www.suidguard.com/downloads/SUIDGuardNG-#{version.no_dots}.pkg"
   name 'SUIDGuardNG'
-  homepage 'http://www.suidguard.com/'
+  homepage 'http://www.suidguard.com/stories/index.html'
 
   depends_on macos: '<= :yosemite'
 

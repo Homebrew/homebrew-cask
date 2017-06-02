@@ -4,7 +4,7 @@ cask 'steermouse' do
 
   url "http://plentycom.jp/ctrl/files_sm/SteerMouse#{version}.dmg"
   appcast 'http://plentycom.jp/en/steermouse/download.php',
-          checkpoint: '20ae76fd5154d1e2ebaa6892644e202e1eb7b7607c6a4412d73a32b74b9d2a0c'
+          checkpoint: 'f2c1c089d047a061b1a5498f02ecf5c6d2bd9e4f69b4e26e56ee34ff7122a468'
   name 'SteerMouse'
   homepage 'http://plentycom.jp/en/steermouse/'
 

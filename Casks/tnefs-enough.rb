@@ -1,10 +1,5 @@
 cask 'tnefs-enough' do
-  if MacOS.version <= :tiger
-    version '2.0'
-    sha256 '555ba1f181023f0a48014e1b2fe0168fbb6e58731042c57509506ddf37512c5c'
-
-    url "http://www.joshjacob.com/mac-development/TNEF#{version}.dmg"
-  elsif MacOS.version <= :snow_leopard
+  if MacOS.version <= :snow_leopard
     version '2.2'
     sha256 '0cccaf239829961b835f0661d3a0f96fc53f3fd29533ab52172eeb357f974fb5'
 

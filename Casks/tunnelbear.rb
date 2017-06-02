@@ -11,10 +11,6 @@ cask 'tunnelbear' do
 
   app 'TunnelBear.app'
 
-  postflight do
-    suppress_move_to_applications
-  end
-
   uninstall quit:      'com.tunnelbear.mac.TunnelBear',
             launchctl: 'com.tunnelbear.mac.tbeard'
 

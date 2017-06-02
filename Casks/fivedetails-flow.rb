@@ -4,7 +4,7 @@ cask 'fivedetails-flow' do
 
   url 'http://fivedetails.com/flow/download'
   appcast 'http://extendmac.com/flow/updates/update.php',
-          checkpoint: '1278a4390fd8345f94365aa5dde30ce195f4e879ade82e011ab9a4b6b56f27c6'
+          checkpoint: '19ace39f9820f653f5a1af52764589637db1b15503b0c245aeb78b55b101dd68'
   name 'Flow'
   homepage 'http://fivedetails.com/flow/'
 

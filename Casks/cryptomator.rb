@@ -5,7 +5,7 @@ cask 'cryptomator' do
   # bintray.com/artifact/download/cryptomator was verified as official when first introduced to the cask
   url "https://bintray.com/artifact/download/cryptomator/cryptomator/Cryptomator-#{version}.dmg"
   appcast 'https://github.com/cryptomator/cryptomator/releases.atom',
-          checkpoint: '9d77ffcb25ec02a5671b291264e64d61d6b2c3f08b94ba5e49f49f115c613550'
+          checkpoint: 'aa4063276e835ad31b9455607ffca5aba1742e4789dbe022b5ca21dab4581b72'
   name 'Cryptomator'
   homepage 'https://cryptomator.org/'
 

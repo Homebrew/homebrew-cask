@@ -1,10 +1,10 @@
 cask 'browser-chooserx' do
-  version '1.3.6'
-  sha256 '0cecf4e72e345bd6cc8de96807897a28290624a4c904399be1a5e530fded2487'
+  version '1.4.1'
+  sha256 '816e16381055883dc684a39894937ed5477f7a060dbd9b17fe552f9cd65266d4'
 
   url 'https://www.bdevapps.com/files/downloads/Browser%20ChooserX.zip'
   appcast "https://www.bdevapps.com/files/downloads/BrowserChooserXAppCast#{version.major}.xml",
-          checkpoint: '01a52d65b6e9c758ad6c1964cba23c4462d93ca7008c38fc20d3940dc7e2ac2c'
+          checkpoint: 'c2348984d6d79b0fafdb2dc0966ec687be1240584adc03aeabaa95d751d3bf4a'
   name 'Browser ChooserX'
   homepage 'https://bdevapps.com/'
 

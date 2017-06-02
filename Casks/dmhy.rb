@@ -4,7 +4,7 @@ cask 'dmhy' do
 
   url "https://github.com/yaqinking/DMHY/releases/download/v#{version}/DMHY.app.zip"
   appcast 'https://github.com/yaqinking/DMHY/releases.atom',
-          checkpoint: 'f75dd5c49e4c77c3f34832bdead1ee7e2aa9b8be5b296e01582ef6cc8f78e771'
+          checkpoint: 'a6341357ea5a312e1977d017d119a211904afa2e615000e2b60f5426553ad796'
   name 'DMHY'
   homepage 'https://github.com/yaqinking/DMHY'
 

@@ -4,7 +4,7 @@ cask 'bowtie' do
 
   url "http://bowtieapp.com/bowtie-#{version}.zip"
   appcast 'http://updates.13bold.com/appcasts/bowtie',
-          checkpoint: '801fdd497d1912b1446627c35d400a6a26bf5ffe430fb10ae8ec0695984bc98c'
+          checkpoint: '0a8e17e8ac793ca783e628ddfee1015831bb86fb23683b1011a159016ecfd43d'
   name 'Bowtie'
   homepage 'http://bowtieapp.com/'
 

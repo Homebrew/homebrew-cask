@@ -5,7 +5,7 @@ cask 'museeks' do
   # github.com/KeitIG/museeks was verified as official when first introduced to the cask
   url "https://github.com/KeitIG/museeks/releases/download/#{version}/museeks-darwin-x64.zip"
   appcast 'https://github.com/KeitIG/museeks/releases.atom',
-          checkpoint: '0cd40c2b626a8d818343d03ce14471d33d04f0891f67486e853d1f66a013a455'
+          checkpoint: 'b665ed884240a10c70c82c499ab38d549267f6425a69d527a569cf4ad70cf8ca'
   name 'Museeks'
   homepage 'https://museeks.io/'
 

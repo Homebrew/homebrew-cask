@@ -4,7 +4,7 @@ cask 'fliqlo' do
 
   url "http://fliqlo.com/download/fliqlo_#{version.no_dots}.dmg", referer: 'http://fliqlo.com/#about'
   appcast 'http://fliqlo.com/changelog.txt',
-          checkpoint: '0c97c1d658a9242df6e3cdb8d408d46ed4b6496bff5176135a70b3a7dc71877d'
+          checkpoint: 'b109f9bef6ee577e33bcdb34aa4149bd75cdf19e0bf2e8adfba389a1a314a252'
   name 'Fliqlo'
   homepage 'http://fliqlo.com/'
 

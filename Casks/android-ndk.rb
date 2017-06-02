@@ -5,7 +5,7 @@ cask 'android-ndk' do
   # dl.google.com/android/repository/android-ndk was verified as official when first introduced to the cask
   url "https://dl.google.com/android/repository/android-ndk-r#{version}-darwin-x86_64.zip"
   name 'Android NDK'
-  homepage 'https://developer.android.com/ndk/'
+  homepage 'https://developer.android.com/ndk/index.html'
 
   conflicts_with cask: 'crystax-ndk'
 
@@ -19,7 +19,6 @@ cask 'android-ndk' do
       readonly executable="#{staged_path}/android-ndk-r#{version}/$(basename ${0})"
       test -f "${executable}" && exec "${executable}" "${@}"
     EOS
-    set_permissions shimscript, '+x'
   end
 
   %w[

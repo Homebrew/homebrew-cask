@@ -4,7 +4,7 @@ cask 'arduino' do
 
   url "https://downloads.arduino.cc/arduino-#{version}-macosx.zip"
   appcast 'https://www.arduino.cc/en/Main/ReleaseNotes',
-          checkpoint: 'ceca15e13a1da1c071e4b57b5425cd77897e13e82f250ed4a6f029427728a0a8'
+          checkpoint: 'fd200ef38bdd87c7e1fbcfc835b09141ab5ce2ee78cf30a8d48fe1a789445fed'
   name 'Arduino'
   homepage 'https://www.arduino.cc/'
 

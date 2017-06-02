@@ -5,7 +5,7 @@ cask 'scap-workbench' do
   # github.com/OpenSCAP/scap-workbench was verified as official when first introduced to the cask
   url "https://github.com/OpenSCAP/scap-workbench/releases/download/#{version}/scap-workbench-#{version}.dmg"
   appcast 'https://github.com/OpenSCAP/scap-workbench/releases.atom',
-          checkpoint: 'b3d63d0ee9e295b11fe80731a57057b5e4def157812e16033ea0a29520ee7413'
+          checkpoint: '1725f812a7fd7b6f97ef71fea73e3c70be6904be0de6cbdccc4307485cbd4863'
   name 'scap-workbench'
   homepage 'https://www.open-scap.org/tools/scap-workbench/'
 

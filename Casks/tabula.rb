@@ -5,7 +5,7 @@ cask 'tabula' do
   # github.com/tabulapdf/tabula was verified as official when first introduced to the cask
   url "https://github.com/tabulapdf/tabula/releases/download/v#{version.major_minor_patch}/tabula-mac-#{version}.zip"
   appcast 'https://github.com/tabulapdf/tabula/releases.atom',
-          checkpoint: '8d9dad810499164269a195e9c8b0e4ea3a2ce60daf638762056a7d5ae91bc624'
+          checkpoint: '3d3f2d52a9ee3feb890d2f7594fcdaac2555cba78179552790fe184f56da1b91'
   name 'Tabula'
   homepage 'http://tabula.technology/'
 

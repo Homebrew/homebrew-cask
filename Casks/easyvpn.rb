@@ -4,7 +4,7 @@ cask 'easyvpn' do
 
   url "http://www.squashedsoftware.com/downloads/easyVPN_#{version}.zip"
   appcast 'http://www.squashedsoftware.com/appcasts/easyvpn.xml',
-          checkpoint: '34cc9739526b33f9ee56e2140da9418b9cfa764458c323391413db347f6f1431'
+          checkpoint: 'aff462b7453c7cbba26366a5194c81cb39751429a29292d9fd25184bc7d6d866'
   name 'EasyVPN'
   homepage 'http://www.squashedsoftware.com/products-easyvpn.php'
 

@@ -5,7 +5,7 @@ cask 'gnucash' do
   # github.com/Gnucash/gnucash was verified as official when first introduced to the cask
   url "https://github.com/Gnucash/gnucash/releases/download/#{version.major_minor_patch}/Gnucash-Intel-#{version}.dmg"
   appcast 'https://github.com/Gnucash/gnucash/releases.atom',
-          checkpoint: '90d20dba5f6ff8ef750e221463ff396639e089ffb25a70e81697a0b10b7680f0'
+          checkpoint: '4dc7df87ea304f84d38f6df81fc229f8168ee07de5694b1c0ad63edf06b553cc'
   name 'GnuCash'
   homepage 'https://www.gnucash.org/'
 

@@ -4,7 +4,7 @@ cask 'easy-move-plus-resize' do
 
   url "https://github.com/dmarcotte/easy-move-resize/releases/download/#{version}/Easy.Move.Resize.zip"
   appcast 'https://github.com/dmarcotte/easy-move-resize/releases.atom',
-          checkpoint: '33ab0e506b77da075d48917c8c9f595ec387848d97e04d1b4f69e473c7e5a14e'
+          checkpoint: 'c3473b96895a84448586da51b6683c27a9b1241f9726bd79bd2b845d383e4043'
   name 'Easy Move+Resize'
   homepage 'https://github.com/dmarcotte/easy-move-resize'
 

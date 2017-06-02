@@ -1,11 +1,11 @@
 cask 'consul-web-ui' do
-  version '0.8.1'
-  sha256 '0caff8d54a80ff7bc5baec39b0eda19a9652df992db324026e361fa31183749f'
+  version '0.8.3'
+  sha256 '9212c44c3ee4acaeca88d794225a2858a558be531a3cd44c741990c4493d6f12'
 
   # hashicorp.com was verified as official when first introduced to the cask
   url "https://releases.hashicorp.com/consul/#{version}/consul_#{version}_web_ui.zip"
   appcast 'https://github.com/hashicorp/consul/releases.atom',
-          checkpoint: '471fa470266be3f2f03cf06a74a503e0cde88430be2407a832db6f60a548fa60'
+          checkpoint: '19d042490f2195267f70b959ab2ebb811f007c1ae67d282cda105c4dc2371fa7'
   name 'Consul Web UI'
   homepage 'https://www.consul.io/intro/getting-started/ui.html'
 

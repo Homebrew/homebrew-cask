@@ -6,5 +6,5 @@ cask 'lyrics-master' do
   name 'Lyrics Master'
   homepage 'http://www.kenichimaehashi.com/lyricsmaster/'
 
-  suite 'Lyrics Master'
+  app 'Lyrics Master.app'
 end

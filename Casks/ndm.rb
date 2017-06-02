@@ -1,11 +1,11 @@
 cask 'ndm' do
-  version '1.1.1'
-  sha256 '561d370450f39713e29e42c3971e02c44f071de21402ff8533706afdda38302b'
+  version '1.2.0'
+  sha256 '7feea9270a35f5c3675abec49c6c38e83796f2a9c81040a190932d069e68a921'
 
   # github.com/720kb/ndm was verified as official when first introduced to the cask
   url "https://github.com/720kb/ndm/releases/download/v#{version}/ndm-#{version}.dmg"
   appcast 'https://github.com/720kb/ndm/releases.atom',
-          checkpoint: '5eb0a91feca304dc4980ed708a2db3096dfd822b4c5ebc630222b4293bb5b1af'
+          checkpoint: 'deffc1ffb8ea98e4a32a511c4721cc971e874a1310211bdfbec784f544f9403f'
   name 'ndm'
   homepage 'https://720kb.github.io/ndm/'
 

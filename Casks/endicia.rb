@@ -4,7 +4,7 @@ cask 'endicia' do
 
   url "https://download.endiciaformac.com/EndiciaForMac#{version.no_dots}.dmg"
   appcast 'https://s3.amazonaws.com/endiciaformac/EndiciaForMacSparkle.xml',
-          checkpoint: 'c9dad58a13861de3cebc56dfc6a332dcf2c77cb32ef449464beff3d7573c0517'
+          checkpoint: '27b61b03cf0d412974146e6507df1fd2348625df78e82ba43bdb4261fd94407b'
   name 'Endicia for Mac'
   homepage 'https://endiciaformac.com/'
 

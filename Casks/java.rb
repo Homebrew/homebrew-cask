@@ -10,8 +10,6 @@ cask 'java' do
   name 'Java Standard Edition Development Kit'
   homepage "https://www.oracle.com/technetwork/java/javase/downloads/jdk#{version.minor}-downloads-2133151.html"
 
-  auto_updates true
-
   pkg "JDK #{version.minor} Update #{java_update}.pkg"
 
   postflight do
@@ -73,9 +71,14 @@ cask 'java' do
                        ].keep_if { |v| !v.nil? }
 
   zap       delete: [
+                      '~/Library/Application Support/Java/',
                       '~/Library/Application Support/Oracle/Java',
                       '~/Library/Caches/com.oracle.java.Java-Updater',
+                      '~/Library/Caches/Oracle.MacJREInstaller',
                       '~/Library/Caches/net.java.openjdk.cmd',
+                      '~/Library/Preferences/com.oracle.java.Java-Updater.plist',
+                      '~/Library/Preferences/com.oracle.java.JavaAppletPlugin.plist',
+                      '~/Library/Preferences/com.oracle.javadeployment.plist',
                     ],
             rmdir:  '~/Library/Application Support/Oracle/'
 

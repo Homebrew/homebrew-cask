@@ -5,7 +5,7 @@ cask 'dukto' do
   # sourceforge.net/dukto was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/dukto/Dukto#{version}-OSX.dmg"
   appcast 'https://sourceforge.net/projects/dukto/rss',
-          checkpoint: '49bd22f7cca66665784b455169e086660d3fb3ff55471c62fbd7162ee37a3550'
+          checkpoint: '7f985cf2586168ce483c2f3cb55bd0cf442519a39147d70550fc70069c9d9f5e'
   name 'Dukto'
   homepage 'http://www.msec.it/blog/?page_id=11'
 

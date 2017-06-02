@@ -5,7 +5,7 @@ cask 'astromenace' do
   # downloads.sourceforge.net/openastromenace was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/openastromenace/astromenace-macosx-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/openastromenace/rss',
-          checkpoint: '1423a6e6ea44d0727b613493bea73f1fe2c9e8b87b3a4f509a6cc683ddc35ffd'
+          checkpoint: '10d05cfa8f7be95977bf83b5111a19996316c7eca3abc61a095be30575ccc160'
   name 'AstroMenace'
   homepage 'http://www.viewizard.com/'
 

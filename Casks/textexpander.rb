@@ -10,12 +10,12 @@ cask 'textexpander' do
 
     url "https://cdn.smilesoftware.com/TextExpander_#{version}.zip"
   else
-    version '6.1.7'
-    sha256 'af4dd54b76a7fcea8aeaae22a5089aa4c7d39e98e9a638cee586a11939b9e2bc'
+    version '6.2.1'
+    sha256 'aed11d5a004c54c7841e07819dfe10dcbd4319acd32df641e60a858df10ed00b'
 
     url "https://cdn.textexpander.com/mac/TextExpander_#{version}.zip"
     appcast 'https://smilesoftware.com/appcast/TextExpander6.xml',
-            checkpoint: 'a9d6a39d320401e7ce135671db55ee2fe63f88bbbf0e9939a50feb1ba11c62cf'
+            checkpoint: 'c02b25c60c720805757b2e0a9a01d859f94c3402a00d025843433013a1a82a14'
   end
 
   name 'TextExpander'

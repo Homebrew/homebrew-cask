@@ -4,7 +4,7 @@ cask 'orelord-mongodb' do
 
   url "https://github.com/orelord/mongodbx-app/releases/download/v#{version}/MongoDBX-#{version}-2.4.9.zip"
   appcast 'https://github.com/orelord/mongodbx-app/releases.atom',
-          checkpoint: '0abd71958d358346fba3d4115621aeabc753d12a80b0859f904ae3f636e22b9a'
+          checkpoint: 'f592ac021e820694d5dc1a8592b914eb4106cea8a25c300e3379998d98e7c0a0'
   name 'MongoDB'
   homepage 'https://github.com/orelord/mongodbx-app'
 

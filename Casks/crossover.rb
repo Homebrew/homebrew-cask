@@ -4,7 +4,7 @@ cask 'crossover' do
 
   url "https://media.codeweavers.com/pub/crossover/cxmac/demo/crossover-#{version}.zip"
   appcast 'https://www.codeweavers.com/xml/versions/cxmac.xml',
-          checkpoint: 'a2caaf43ccd2c9e038244b273ba69b6460d337e89175dd5d4fdee75d71e8f676'
+          checkpoint: '3bd3db7874fe5b1031706588acf7433b745cb21770a8dc28e4507a5d4f89c933'
   name 'CrossOver'
   homepage 'https://www.codeweavers.com/products/crossover-mac/'
 

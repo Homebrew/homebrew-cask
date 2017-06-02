@@ -5,7 +5,7 @@ cask 'barxtemp' do
   # github.com/Gabriele91/barXtemp was verified as official when first introduced to the cask
   url "https://github.com/Gabriele91/barXtemp/releases/download/#{version}/barXtemp.app.zip"
   appcast 'https://github.com/Gabriele91/barXtemp/releases.atom',
-          checkpoint: '9b7756a504b6ce274e2efde312990f95bb831589f9bf6a21cb1ccfe5a7f55c86'
+          checkpoint: '9b9241fbc6f23d60d033f2567a8d21f4aa077055c46fb87541ff6ef5cb2cdbae'
   name 'barXtemp'
   homepage 'https://gabriele91.github.io/barXtemp/'
 

@@ -4,7 +4,7 @@ cask 'wjoy' do
 
   url "https://github.com/alxn1/wjoy/releases/download/#{version}/wjoy.#{version}.dmg"
   appcast 'https://github.com/alxn1/wjoy/releases.atom',
-          checkpoint: '0e823cea5613d6f503e915d6d8367ef91d1d0ebf1f736537870c1c62d133d0ae'
+          checkpoint: '106e09bc615d70facc7075fe79791a576f8d0f0eb1183a4244e032c2570cd29b'
   name 'WJoy'
   homepage 'https://github.com/alxn1/wjoy'
 

@@ -4,7 +4,7 @@ cask 'davmail' do
 
   url "https://downloads.sourceforge.net/davmail/DavMail-MacOSX-#{version}.app.zip"
   appcast 'https://sourceforge.net/projects/davmail/rss',
-          checkpoint: '4bd1e76733b1f6efe08e96968320d211e78acd2654b009bca51258786c74c23b'
+          checkpoint: 'd93328ed59cf73d09c3a942b7086c0da93207e8dd3f6cf6f273f928d6f70fa3a'
   name 'DavMail'
   homepage 'http://davmail.sourceforge.net/'
 

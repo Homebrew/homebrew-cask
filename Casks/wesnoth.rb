@@ -5,7 +5,7 @@ cask 'wesnoth' do
   # sourceforge.net/wesnoth was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/wesnoth/Wesnoth_#{version}.dmg"
   appcast 'https://sourceforge.net/projects/wesnoth/rss',
-          checkpoint: 'e0e6ab9b2945b0b88f059f3a7d2d2702d869a00c3f85ac7a2b17d16019b81597'
+          checkpoint: '6ab872944613cebe3c54f7922e42f01e3122841a526699ccea41373f258c2ea0'
   name 'The Battle for Wesnoth'
   homepage 'https://wesnoth.org/'
 

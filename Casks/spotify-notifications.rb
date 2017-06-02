@@ -4,7 +4,7 @@ cask 'spotify-notifications' do
 
   url "https://downloads.spotify-notifications.citruspi.io/#{version}-release.zip"
   appcast 'https://github.com/citruspi/Spotify-Notifications/releases.atom',
-          checkpoint: 'cd99bce96073c73d5b6332e1de2d34bed20f21c62ee2d02876fe024bb4ed305a'
+          checkpoint: 'bb0f60292149bba6223d62f7d5e483a4ab8b1ea0a75671be1cd88b2f2a9d0020'
   name 'Spotify Notifications'
   homepage 'https://spotify-notifications.citruspi.io/'
 

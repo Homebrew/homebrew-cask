@@ -5,7 +5,7 @@ cask 'stellarium' do
   # sourceforge.net/stellarium was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/stellarium/Stellarium-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/stellarium/rss',
-          checkpoint: '6ca55293917be3015e40ce49c222567267deb5c9a1ee8e3c0073e0c45909355a'
+          checkpoint: '416450e25bbc60b111694d05e8bf06430f95ced71b5dd09dee6d397d988f1166'
   name 'Stellarium'
   homepage 'http://stellarium.org/'
 

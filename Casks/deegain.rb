@@ -1,11 +1,11 @@
 cask 'deegain' do
-  version '1.0.5'
-  sha256 '57e60cb7f0baf3e52622edfd8a61997aac7256a63b7d16f65700649206b2c437'
+  version '1.1.0'
+  sha256 '3ad7fd274120a694cf7ab99f266c7a29e9e2476c9d46e433067c3079169d9dc5'
 
   url "https://dotec-audio.com/release/DeeGain/DeeGainMac_#{version}.zip"
   name 'DOTEC-AUDIO DeeGain'
   homepage 'https://dotec-audio.com/deegain.html'
 
-  audio_unit_plugin 'DeeGain.component'
-  vst_plugin 'DeeGain.vst'
+  audio_unit_plugin 'AudioUnit/DeeGain.component'
+  vst_plugin 'VST/DeeGain.vst'
 end

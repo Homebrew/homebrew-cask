@@ -4,7 +4,7 @@ cask 'fuzzyclock' do
 
   url 'http://mschmidt.me/macOS/FuzzyClock.zip'
   name 'FuzzyClock'
-  homepage 'http://mschmidt.me/macos.html'
+  homepage 'https://mschmidt.me/macos.html'
 
   app 'FuzzyClock.app'
 end

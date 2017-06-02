@@ -5,7 +5,7 @@ cask 'anvil' do
   # amazonaws.com/sparkler_versions was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/sparkler_versions/versions/uploads/000/000/129/original/Anvil_#{version}.zip"
   appcast 'https://sparkler.herokuapp.com/apps/3/updates.xml',
-          checkpoint: '49b49d5f4279c590477d7393207d26a2ca2c908527e12b0fd150a68790590b90'
+          checkpoint: 'f0f573475cd91a1154878775ee459b5ecc3d6164adedaa589fc9d4ac02f18e23'
   name 'Anvil'
   homepage 'https://anvilformac.com/'
 

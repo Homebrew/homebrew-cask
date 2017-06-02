@@ -5,7 +5,7 @@ cask 'thyme' do
   # github.com/joaomoreno/thyme was verified as official when first introduced to the cask
   url "https://github.com/joaomoreno/thyme/releases/download/#{version}/Thyme.#{version}.dmg"
   appcast 'https://github.com/joaomoreno/thyme/releases.atom',
-          checkpoint: '05388198ae32566498217e07231e5908c53127ed33ac2152c629ca867c6c1fda'
+          checkpoint: '6b34b6cae580e164156f0625b486a803c8edcf03970b88148edce7159d3eb981'
   name 'Thyme'
   homepage 'https://joaomoreno.github.io/thyme/'
 

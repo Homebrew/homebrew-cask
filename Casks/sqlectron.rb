@@ -5,17 +5,13 @@ cask 'sqlectron' do
   # github.com/sqlectron/sqlectron-gui was verified as official when first introduced to the cask
   url "https://github.com/sqlectron/sqlectron-gui/releases/download/v#{version}/Sqlectron-#{version}-mac.zip"
   appcast 'https://github.com/sqlectron/sqlectron-gui/releases.atom',
-          checkpoint: '9c0c8874ec655fc1c90b644f710a5919a6050a1fc5323634921499fcb734e1c8'
+          checkpoint: '0cf8fbbc1100a25d3b8077310322b75e0da67a917277c7cb94ad8657856897ca'
   name 'Sqlectron'
   homepage 'https://sqlectron.github.io/'
 
   depends_on macos: '>= :mountain_lion'
 
   app 'Sqlectron.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 
   zap delete: [
                 '~/.sqlectron.json',

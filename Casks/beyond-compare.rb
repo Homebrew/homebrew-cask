@@ -1,18 +1,14 @@
 cask 'beyond-compare' do
-  version '4.2.0.22108'
-  sha256 '5850db6b7f9415785c9e722943cfb601d074d706e2233c87667f96cdcbed754d'
+  version '4.2.2.22384'
+  sha256 '53d6394b4751a50e14cd5c8dcd1650c09d662b6b46c067f8f3bf879634f26724'
 
   url "http://www.scootersoftware.com/BCompareOSX-#{version}.zip"
   appcast "http://www.scootersoftware.com/checkupdates.php?product=bc#{version.major}&platform=osx",
-          checkpoint: 'd5d70e04ae38dbeddeaf77db67081be70a04c98e01e263a5f8352ad042ae6670'
+          checkpoint: '7367a47a30dbe60cda77a1c461bee54a7300467393a7362fc788de2bfb8743f2'
   name 'Beyond Compare'
   homepage 'https://www.scootersoftware.com/'
 
   app 'Beyond Compare.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 
   zap delete: [
                 '~/Library/Application Support/Beyond Compare',

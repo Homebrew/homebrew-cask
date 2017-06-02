@@ -4,7 +4,7 @@ cask 'djv' do
 
   url "https://downloads.sourceforge.net/djv/djv-stable/#{version}/djv-#{version}-OSX-64.dmg"
   appcast 'https://sourceforge.net/projects/djv/rss?path=/djv-stable',
-          checkpoint: '24f84457eb5cde9dd0bf55a6e28e83a7af5c8bcf7d06a014200c37ea7fcc3777'
+          checkpoint: '90b79ce6671b45e6f73c16312f9e61d89606f6ff485630572235f3e14d8fdd2a'
   name 'DJV Imaging'
   homepage 'http://djv.sourceforge.net/'
 

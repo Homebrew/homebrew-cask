@@ -4,7 +4,7 @@ cask 'automute' do
 
   url "https://github.com/Lorenzo45/AutoMute/releases/download/v#{version}/AutoMute.zip"
   appcast 'https://github.com/Lorenzo45/AutoMute/releases.atom',
-          checkpoint: 'fb3a604be3197410a71eadb289ce14665f328e886489d2e9a12659d2f9393e87'
+          checkpoint: 'f469d4109bc963a303a2672bbb13588f515496625144ec12d8190781db6021c3'
   name 'AutoMute'
   homepage 'https://github.com/Lorenzo45/AutoMute'
 

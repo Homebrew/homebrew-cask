@@ -4,7 +4,7 @@ cask 'istopmotion' do
 
   url "https://cdn.boinx.com/software/istopmotion/Boinx_iStopMotion_#{version}.app.zip"
   appcast 'https://www.boinx.com/d/connect/histories/istopmotion',
-          checkpoint: '9234c3abcb9738d7bbfcc6098c5e6ae22f3cf0c742e6bbd395c3da94859e5ea3'
+          checkpoint: '27df05aa9511e2bdfa3b70434664de287efabcc6e80d316eb5b8acf63093c456'
   name 'iStopMotion'
   homepage 'https://www.boinx.com/istopmotion/mac/'
 

@@ -4,7 +4,7 @@ cask 'epichrome' do
 
   url "https://github.com/dmarmor/epichrome/releases/download/v#{version}/epichrome-#{version}.dmg"
   appcast 'https://github.com/dmarmor/epichrome/releases.atom',
-          checkpoint: '7d06767fb9e238d2413fac857456c8d530423b6149f2f901abe2b2d2813a2866'
+          checkpoint: 'f5b42de4c613fe3247cffc74da06c4426137058cfe4d4ae49d9fc3e81b56c123'
   name 'Epichrome'
   homepage 'https://github.com/dmarmor/epichrome'
 

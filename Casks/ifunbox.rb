@@ -4,7 +4,7 @@ cask 'ifunbox' do
 
   url "http://dl.i-funbox.com/updates/ifunbox.mac/#{version}/ifunboxmac.dmg"
   appcast 'http://dl.i-funbox.com/updates/ifunbox.mac/update.xml',
-          checkpoint: '1eebc7dda00de58c66b94300a3bf557615b96ab2b247ae460549ac35fc047e29'
+          checkpoint: '9b12b34329541e5d27314bd889b936e44b236f1c75d37d1909b20285d540ebac'
   name 'iFunBox'
   homepage 'http://www.i-funbox.com/'
 

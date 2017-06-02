@@ -4,7 +4,7 @@ cask 'spaceradar' do
 
   url "https://github.com/zz85/space-radar/releases/download/v#{version}/SpaceRadar-darwin-x64.zip"
   appcast 'https://github.com/zz85/space-radar/releases.atom',
-          checkpoint: '86c8908866031b0ef56b4a4d57005e5f267ccb616c678803a10e14a818c5ba15'
+          checkpoint: '6d94539a86bf2034da873c6d4d021b80746fb794ed5c387eb0e672829edd2d78'
   name 'SpaceRadar'
   homepage 'https://github.com/zz85/space-radar'
 

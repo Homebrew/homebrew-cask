@@ -12,7 +12,7 @@ cask 'sente' do
 
   url "https://www.thirdstreetsoftware.com/downloads/Sente-#{version}.zip"
   appcast 'https://www.thirdstreetsoftware.com/rss/Sente65.xml',
-          checkpoint: '8b4ffee4f0379d9e1565166a6cecfa6a73260640ee8070e6abd8f58f3d26f754'
+          checkpoint: '449878fb52ee12b982f8e8c44728183a794bf396274fd36b89194e5f89c3b35f'
   name 'Sente'
   homepage 'https://www.thirdstreetsoftware.com/'
 

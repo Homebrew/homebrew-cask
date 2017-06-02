@@ -5,7 +5,7 @@ cask 'catch' do
   # github.com/mipstian/catch was verified as official when first introduced to the cask
   url "https://github.com/mipstian/catch/releases/download/#{version}/Catch-#{version}.zip"
   appcast 'https://github.com/mipstian/catch/releases.atom',
-          checkpoint: '0b4257bc1e21f6c4ccc16c4b3f7f16da6106cfae5bd22b18c960a6991b0463dc'
+          checkpoint: '5d1a90f8341e2467530d4254620dbd2c1760eae5ce296ef3e31764c3ff74d2d3'
   name 'Catch'
   homepage 'https://www.giorgiocalderolla.com/index.html#catch'
 

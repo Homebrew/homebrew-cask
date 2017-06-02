@@ -5,7 +5,7 @@ cask 'medis' do
   # github.com/luin/medis was verified as official when first introduced to the cask
   url "https://github.com/luin/medis/releases/download/v#{version}/medis-v#{version}-mac-x64.zip"
   appcast 'https://github.com/luin/medis/releases.atom',
-          checkpoint: '9fcd1fc611d622ea8286d35f8d97a73f34e615a41fb83c54ac5b7d58ff8e83bf'
+          checkpoint: 'd1ccf2022d97fa7acb70b8b9661489a02c412b3e93cbcf92c28ff62b83081d83'
   name 'Medis'
   homepage 'http://getmedis.com/'
 

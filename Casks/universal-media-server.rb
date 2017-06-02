@@ -10,4 +10,6 @@ cask 'universal-media-server' do
   homepage 'http://www.universalmediaserver.com/'
 
   app 'Universal Media Server.app'
+
+  zap delete: '~/Library/Application Support/UMS/'
 end
