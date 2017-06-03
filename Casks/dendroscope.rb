@@ -22,4 +22,10 @@ cask 'dendroscope' do
   caveats do
     depends_on_java
   end
+
+  caveats <<-EOS.undent
+    #{token} requires Java. You can install the latest version with
+
+      brew cask install java
+  EOS
 end
