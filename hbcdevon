@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "Turning on Brew Cask Development"
+./developer/bin/develop_brew_cask
