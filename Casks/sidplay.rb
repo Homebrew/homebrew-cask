@@ -1,11 +1,11 @@
 cask 'sidplay' do
   version '4.2'
-  sha256 '883aed3cbe682613e0e0357a88bece775e30cf6793d81d9fb8d9fd2549721663'
+  sha256 '11d713325deeceadf0948c239ec353ee3b2346ca9cee47e2c7680113f34ba66e'
 
   # twinbirds.com/sidplay was verified as official when first introduced to the cask
   url "http://www.twinbirds.com/sidplay/SIDPLAY#{version.major}.zip"
   appcast 'http://www.sidmusic.org/sidplay/mac/sidplay_appcast.xml',
-          checkpoint: 'dcdf4de0dd4e7bdbebda68c26e156b57f4199f23d89176ca9bc3159377d4ac58'
+          checkpoint: '95157ceef255f8e5415809eda558627f05b668c57e28026c7dd640c582af292b'
   name 'SIDPLAY'
   homepage 'http://www.sidmusic.org/sidplay/mac/'
 
