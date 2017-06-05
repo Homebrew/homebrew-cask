@@ -9,7 +9,7 @@ cask 'hosts' do
   name 'Hosts'
   homepage 'http://permanentmarkers.nl/software.html'
 
-  pkg "Hosts-#{version}.pkg"
+  pkg "Hosts-#{version}.pkg", allow_untrusted: true
 
   uninstall pkgutil: 'nl.permanentmarkers.hosts.Hosts.pkg'
 end
