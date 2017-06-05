@@ -1,5 +1,10 @@
 cask 'firefox' do
   version '53.0.3'
+  
+  language 'cs' do
+    sha256 'f4de07f648dd1688075bb25ecd78f0a686ea156d67ca466436c880b985be2390'
+    'cs'
+  end
 
   language 'de' do
     sha256 '35524e21ff7ddf4b73a00e8307930db6eef306777e515d8b497249a1dfc6e2b9'

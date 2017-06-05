@@ -11,5 +11,6 @@ cask 'bearychat' do
   zap delete: [
                 '~/Preferences/com.node-webkit-builder.bearychat.plist',
                 '~/Library/Application Support/BearyChat',
+                '~/Library/Application Support/BearyChat_V2',
               ]
 end
