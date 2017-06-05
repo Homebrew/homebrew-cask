@@ -6,7 +6,7 @@ cask 'protonet' do
   appcast 'http://clients.protonet.info/osx/stable/appcast.xml',
           checkpoint: '7bbbe7ac04c99a9d4882d17794c81cbbd6ab951507e47312a9b246887624e9ad'
   name 'Protonet'
-  homepage 'http://clients.protonet.info/'
+  homepage 'https://clients.protonet.info/'
 
   app 'Protonet.app'
 end
