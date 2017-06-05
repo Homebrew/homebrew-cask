@@ -6,7 +6,7 @@ cask 'go-agent' do
   appcast 'https://github.com/gocd/gocd/releases.atom',
           checkpoint: '4e4f162d063d75ea1ff1642a0c0544cf6c628b1a915329e8c5fbf88da2dd6ce8'
   name 'Go Agent'
-  homepage 'https://www.gocd.io/'
+  homepage 'https://www.gocd.org/'
 
   app 'Go Agent.app'
 end
