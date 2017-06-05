@@ -4,7 +4,7 @@ cask 'paragon-ntfs' do
 
   url "http://dl.paragon-software.com/demo/ntfsmac#{version}_trial_e.dmg"
   name 'Paragon NTFS for Mac'
-  homepage 'https://www.paragon-software.com/home/ntfs-mac/'
+  homepage 'https://www.paragon-software.com/ufsdhome/ntfs-mac/'
 
   installer manual: 'FSInstaller.app'
 

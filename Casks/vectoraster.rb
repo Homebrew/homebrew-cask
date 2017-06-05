@@ -4,7 +4,7 @@ cask 'vectoraster' do
 
   url "https://www.lostminds.com/downloads/dl.php?vectoraster#{version.major}.zip"
   name 'Vectoraster'
-  homepage 'https://www.lostminds.com/content/product.php?vectoraster6'
+  homepage 'https://www.lostminds.com/vectoraster6/'
 
   app "Vectoraster #{version.major}/Vectoraster.app"
 

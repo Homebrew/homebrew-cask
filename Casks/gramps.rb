@@ -7,7 +7,7 @@ cask 'gramps' do
   appcast 'https://github.com/gramps-project/gramps/releases.atom',
           checkpoint: '21afd12a9830d38f741cab4452b405f02e89b69a99105118fb2ff69174a6efc2'
   name 'Gramps'
-  homepage 'https://gramps-project.org/'
+  homepage 'https://gramps-project.org/introduction-WP/'
 
   app 'Gramps.app'
 end

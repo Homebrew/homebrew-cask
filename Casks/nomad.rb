@@ -4,7 +4,7 @@ cask 'nomad' do
 
   url 'https://www.nomad.menu/download/NoMAD.pkg'
   name 'NoMAD'
-  homepage 'https://www.nomad.menu/'
+  homepage 'https://nomad.menu/'
 
   depends_on macos: '>= :yosemite'
 
