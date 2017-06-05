@@ -6,7 +6,7 @@ cask 'go-server' do
   appcast 'https://github.com/gocd/gocd/releases.atom',
           checkpoint: 'abcc8b9914fb3fdb0658581f43d6e5f673af0e359519febad83f61583ef76b70'
   name 'Go Server'
-  homepage 'https://www.gocd.io/'
+  homepage 'https://www.gocd.org/'
 
   app 'Go Server.app'
 end
