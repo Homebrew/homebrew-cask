@@ -7,7 +7,7 @@ cask 'gzdoom' do
   appcast 'https://github.com/coelckers/gzdoom/releases.atom',
           checkpoint: '4c28aeac1b5ca0e3af443b2a1d86d94e3f8c5d0875739dea89acf2536b8e5645'
   name 'gzdoom'
-  homepage 'https://gzdoom.drdteam.org/'
+  homepage 'https://zdoom.org/index'
 
   app 'GZDoom.app'
 end
