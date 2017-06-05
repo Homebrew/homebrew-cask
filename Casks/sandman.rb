@@ -5,7 +5,7 @@ cask 'sandman' do
   # github.com was verified as official when first introduced to the cask
   url "https://github.com/alexanderepstein/Sandman/releases/download/v#{version}/Sandman-#{version}.dmg"
   name 'Sandman'
-  homepage 'https://alexanderepstein.github.io/sandman'
+  homepage 'https://alexanderepstein.github.io/Sandman/'
 
   app 'Sandman.app'
 end
