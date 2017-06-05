@@ -7,6 +7,5 @@ cask 'sandman' do
   name 'Sandman'
   homepage 'https://alexanderepstein.github.io/sandman'
 
-  license 'MIT'
   app 'Sandman.app'
 end
