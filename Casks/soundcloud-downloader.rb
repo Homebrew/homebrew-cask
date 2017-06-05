@@ -1,10 +1,10 @@
 cask 'soundcloud-downloader' do
-  version '2.7.9'
-  sha256 '2215a7ec8783d68cc93bdd866156692bf68bdd9be1dcfd1f3f591b83e2a3b869'
+  version '2.8.0'
+  sha256 'be76b5d480517713702207874626ad4453ac3be0e4629f2463286ae36b7c87ca'
 
   url "https://black-burn.ch/app/SCD2/download/#{version}"
   appcast 'https://black-burn.ch/apps/SCD2/updates/gold.xml?hwni=1',
-          checkpoint: '4670f08a8ea2ab622ef3698cced08d56c630e324337cb2407f64ef479809c4a6'
+          checkpoint: '817a0ca89391c7ea806860298738bdef55ba249c414dc2b529ef2b7692897647'
   name 'SoundCloud Downloader'
   homepage 'https://black-burn.ch/app/SCD2'
 
