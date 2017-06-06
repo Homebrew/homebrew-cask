@@ -97,7 +97,7 @@
   "sonos": "caskroom/drivers",
   "sony-ericsson-bridge": "caskroom/drivers",
   "srclib": "homebrew/core",
-  "sshfs": "homebrew/fuse",
+  "sshfs": "homebrew/core",
   "sslmate": "homebrew/core",
   "steelseries-engine": "caskroom/drivers",
   "steelseries-exactmouse-tool": "caskroom/drivers",
