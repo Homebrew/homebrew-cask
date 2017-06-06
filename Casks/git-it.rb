@@ -8,7 +8,7 @@ cask 'git-it' do
   name 'Git-it'
   homepage 'https://github.com/jlord/git-it-electron'
 
-  app 'Git-it-darwin-x64/Git-it.app'
+  app 'Git-it-Mac-x64/Git-it.app'
 
   zap delete: [
                 '~/Library/Application Support/Git-it',
