@@ -1,10 +1,10 @@
 cask 'arduino' do
-  version '1.8.2'
-  sha256 'edb3a2d6a479bb0557686c0bf6c8fdf85ff9dccf3cdebc32578092240f09f4c3'
+  version '1.8.3'
+  sha256 'ea1560f933240a3808d154f5a36981ffe1e8ae53398cca10a037b73aeb894666'
 
   url "https://downloads.arduino.cc/arduino-#{version}-macosx.zip"
   appcast 'https://www.arduino.cc/en/Main/ReleaseNotes',
-          checkpoint: 'fd200ef38bdd87c7e1fbcfc835b09141ab5ce2ee78cf30a8d48fe1a789445fed'
+          checkpoint: '400491fb3bf101157604827e5ebac3c34b77798ac4af5836a2d45ffd7dc7013a'
   name 'Arduino'
   homepage 'https://www.arduino.cc/'
 
