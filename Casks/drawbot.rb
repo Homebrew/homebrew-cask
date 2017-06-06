@@ -1,11 +1,11 @@
 cask 'drawbot' do
-  version '3.95'
-  sha256 'cd92dd2f4f6eb886c752401623ab039adba93561dbe797e8af4bd99911d399a6'
+  version '3.96'
+  sha256 '94c9bddc7f14116b34c05e77301d6760153b455ed288e4f024faf8930d576cdd'
 
   # typemytype.com/drawBot was verified as official when first introduced to the cask
   url 'http://static.typemytype.com/drawBot/DrawBot.dmg'
   appcast 'https://raw.githubusercontent.com/typemytype/drawbot/master/drawBot/drawBotSettings.py',
-          checkpoint: '7a626a14ccca184ac5e5085005db611b6cf8f878f82dbaf02fabb24e46dfed74'
+          checkpoint: '0cb32c4c3065ed85f296efadc6ce4b8ab77c0de9bb388e4f15e4f4bcd4e04421'
   name 'DrawBot'
   homepage 'http://www.drawbot.com/'
 
