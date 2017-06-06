@@ -5,7 +5,7 @@ cask 'chatmate-for-facebook' do
   # dl.devmate.com/net.coldx.mac.Facebook was verified as official when first introduced to the cask
   url 'https://dl.devmate.com/net.coldx.mac.Facebook/ChatMateforFacebook.dmg'
   name 'ChatMate for Facebook'
-  homepage 'https://chatmate.io/facebook/'
+  homepage 'https://chatmate.io/mac/facebook/'
 
   app 'ChatMate for Facebook.app'
 
