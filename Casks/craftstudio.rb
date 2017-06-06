@@ -7,7 +7,7 @@ cask 'craftstudio' do
   name 'CraftStudio'
   homepage 'https://sparklinlabs.itch.io/craftstudio'
 
-  depends_on cask: 'mono-mre'
+  depends_on cask: 'mono-mdk'
 
   pkg 'CraftStudio.pkg'
 

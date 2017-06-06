@@ -5,10 +5,19 @@ cask 'copyq' do
   # github.com/hluk/CopyQ was verified as official when first introduced to the cask
   url "https://github.com/hluk/CopyQ/releases/download/v#{version}/CopyQ.dmg"
   appcast 'https://github.com/hluk/CopyQ/releases.atom',
-          checkpoint: '4d5aa488e9fef7dd477eca8c7756c03e4eb81eb0a3988b89345fbd6295e3f7f9'
+          checkpoint: 'd01cd301b1a44df6cba29cec178ab12c493a29e2e6bb1eae9bbfca5af91632cc'
   name 'CopyQ'
   homepage 'https://hluk.github.io/CopyQ/'
 
   app 'CopyQ.app'
-  binary "#{appdir}/CopyQ.app/Contents/MacOS/copyq"
+  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/copyq.wrapper.sh"
+  binary shimscript, target: 'copyq'
+
+  preflight do
+    IO.write shimscript, <<-EOS.undent
+      #!/bin/bash
+      exec '#{appdir}/CopyQ.app/Contents/MacOS/copyq' "$@"
+    EOS
+  end
 end
