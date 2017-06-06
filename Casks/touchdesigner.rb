@@ -8,5 +8,5 @@ cask 'touchdesigner' do
   name 'Derivative TouchDesigner'
   homepage 'https://www.derivative.ca/'
 
-  app "TouchDesigner#{version.split('.').first}.app"
+  app "TouchDesigner#{version.major}.app"
 end
