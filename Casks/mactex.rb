@@ -9,7 +9,7 @@ cask 'mactex' do
   name 'MacTeX'
   homepage 'https://www.tug.org/mactex/'
 
-  pkg "mactex-#{version}.pkg"
+  pkg 'MacTeX.pkg'
 
   uninstall pkgutil: [
                        'org.tug.mactex.ghostscript9.21',
