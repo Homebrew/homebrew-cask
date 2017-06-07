@@ -1,10 +1,10 @@
 cask 'insomnia' do
-  version '5.1.1'
-  sha256 '52ccd01d5706c8ddf4aa005ec7763e49ecbd418699534c9866b0ff61ba07399e'
+  version '5.2.0'
+  sha256 'db8bb86c9468b34e7216be6387d46a85e22ef35365a9996616b03499cec0c014'
 
   url 'https://builds.insomnia.rest/downloads/mac/latest'
   appcast 'https://insomnia.rest/changelog/index.xml',
-          checkpoint: 'f4fa4111a12930416d5425f44486b91955a9f1ab4c6d38625225c885a728f9f4'
+          checkpoint: '305e888c6e5c6b1ff1fb975bfc3d0933d73be17e1e4696827885daaf7fad7f69'
   name 'Insomnia'
   homepage 'https://insomnia.rest/'
 
