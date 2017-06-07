@@ -5,7 +5,7 @@ cask 'pritunl' do
   # github.com/pritunl/pritunl-client-electron was verified as official when first introduced to the cask
   url "https://github.com/pritunl/pritunl-client-electron/releases/download/#{version}/Pritunl.pkg.zip"
   appcast 'https://github.com/pritunl/pritunl-client-electron/releases.atom',
-          checkpoint: 'bebd7c03ccc0d6d0aeae908faf891d062ef34a0962821b6e6ec3b9c7b8c32c25'
+          checkpoint: 'da5e340f57e6f00e3817db2d4864094d891e270e58a5c03af3d6c28b51a7b58b'
   name 'Pritunl OpenVPN Client'
   homepage 'https://client.pritunl.com/'
 
