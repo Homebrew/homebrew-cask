@@ -1,6 +1,6 @@
 cask 'helio' do
-  version '1.7'
-  sha256 '0b1b181584ec3abc948e1a766d25a43f63f84bc55d9e7205696e87814a03cb43'
+  version '1.7.6'
+  sha256 '7f0499eb9266e65f3535795c20b18b82bf926a9966f757ea1a5854d861e8cfa6'
 
   url "http://helioworkstation.com/app/Helio-#{version}.dmg"
   name 'Helio'
