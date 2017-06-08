@@ -16,7 +16,11 @@ cask 'anka-run' do
                     }
 
   zap delete: [
+                '~/.anka.log',
+                '~/.anka.mac_counter.txt',
+                '~/.anka.mac_prefix.txt',
                 '~/Library/Application Support/Veertu/Anka',
+                '~/Library/Logs/com.veertu.anka',
                 '/Library/Application Support/Veertu/Anka',
               ],
       rmdir:  [
