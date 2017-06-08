@@ -6,5 +6,5 @@ cask 'latexdraw' do
   name 'LaTexDraw'
   homepage 'http://latexdraw.sourceforge.net/'
 
-  app 'LaTexDraw-3.3.5.app'
+  app "LaTexDraw-#{version}.app"
 end
