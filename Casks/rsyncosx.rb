@@ -4,7 +4,7 @@ cask 'rsyncosx' do
 
   url "https://github.com/rsyncOSX/RsyncOSX/releases/download/v#{version}/RsyncOSX.dmg"
   appcast 'https://github.com/rsyncOSX/RsyncOSX/releases.atom',
-          checkpoint: '60104f6a455ac428eb8302feece8d8dc2268cf2d0f51683d0b773d05bcbc8892'
+          checkpoint: 'c0db3454b0447da55cf1f4c8497b65a32d87d5d20445f9b1882cb6807569f06f'
   name 'RsyncOSX'
   homepage 'https://github.com/rsyncOSX/RsyncOSX'
 
