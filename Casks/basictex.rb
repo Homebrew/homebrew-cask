@@ -1,6 +1,6 @@
 cask 'basictex' do
-  version '20170523'
-  sha256 '024fc0e2bff8d28074a25ee8adc12c2ab37202cfea7229678d92a7b5d1debba2'
+  version '20170607'
+  sha256 'da83f12d6bbd9ee427a2142dff9ff3c8f4c4c187285a516c17aa539f09baf563'
 
   # mirror.ctan.org/systems/mac/mactex was verified as official when first introduced to the cask
   url "http://mirror.ctan.org/systems/mac/mactex/mactex-basictex-#{version.no_dots}.pkg"
