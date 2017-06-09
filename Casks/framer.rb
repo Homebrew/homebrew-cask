@@ -1,5 +1,5 @@
 cask 'framer' do
-  version '92'
+  version '9285'
   sha256 'ce7677a2b9709a50d30140f121d6ca421acbd6c2856d56e8683f7613825f5f0d'
 
   # devmate.com/com.motif.framer was verified as official when first introduced to the cask
