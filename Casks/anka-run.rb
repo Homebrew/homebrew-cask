@@ -4,6 +4,8 @@ cask 'anka-run' do
 
   # d1efqjhnhbvc57.cloudfront.net was verified as official when first introduced to the cask
   url "https://d1efqjhnhbvc57.cloudfront.net/AnkaRun-#{version}.pkg"
+  appcast 'https://ankadoc.bitbucket.io/release-notes/index.html',
+          checkpoint: 'ddd1507c4915eb98b94fd361d2a6d203be762322039d69d04ac14abee84e75ba'
   name 'Veertu Anka Run'
   homepage 'https://veertu.com/'
 
@@ -21,6 +23,7 @@ cask 'anka-run' do
                 '~/.anka.mac_prefix.txt',
                 '~/Library/Application Support/Veertu/Anka',
                 '~/Library/Logs/com.veertu.anka',
+                '~/vm_lib',
                 '/Library/Application Support/Veertu/Anka',
               ],
       rmdir:  [
