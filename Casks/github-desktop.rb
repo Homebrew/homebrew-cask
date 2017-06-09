@@ -1,11 +1,11 @@
 cask 'github-desktop' do
-  version '0.5.9-d08be790'
-  sha256 '335c28e70f52fc53048a6dc6b12abf89ee7fd2b55a49bd90b982537ae3cdcb1e'
+  version '0.6.0-bde7470d'
+  sha256 '2049b2124c809f0dbf4f236bc6e0267cfe225e6f562bcc51d5c35e7e9baf4c13'
 
   # githubusercontent.com was verified as official when first introduced to the cask
   url "https://desktop.githubusercontent.com/releases/#{version}/GitHubDesktop.zip"
   appcast 'https://github.com/desktop/desktop/releases.atom',
-          checkpoint: 'acf2ad7c22e097177a3a1f381ba26301d0817d124c1df73af9df70d053587cc4'
+          checkpoint: '50bc5a31cee692a059961f475ed8ca5d4de32f10d79a88fd54b46e36154edde4'
   name 'GitHub Desktop'
   homepage 'https://desktop.github.com/'
 
