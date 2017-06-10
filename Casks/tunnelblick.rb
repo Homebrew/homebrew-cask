@@ -14,7 +14,7 @@ cask 'tunnelblick' do
 
   app 'Tunnelblick.app'
 
-  uninstall_postflight do
+  uninstall_preflight do
     set_ownership "#{appdir}/Tunnelblick.app"
   end
 
