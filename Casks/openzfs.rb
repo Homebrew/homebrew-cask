@@ -20,11 +20,13 @@ cask 'openzfs' do
     pkg "OpenZFS on OS X #{version.before_comma} Sierra.pkg"
   end
 
-  uninstall_preflight do
-    system_command '/usr/bin/sed',
-                   args: ['-i', '.bak', 's|/usr/sbin/zpool|/usr/local/bin/zpool|', "#{staged_path}/Docs & Scripts/uninstall-openzfsonosx.sh"]
-    system_command '/usr/bin/sed',
-                   args: ['-i', '.bak', 's|/usr/sbin/zfs|/usr/local/bin/zfs|', "#{staged_path}/Docs & Scripts/uninstall-openzfsonosx.sh"]
+  if MacOS.version >= :el_capitan
+    uninstall_preflight do
+      system_command '/usr/bin/sed',
+                     args: ['-i', '.bak', 's|/usr/sbin/zpool|/usr/local/bin/zpool|', "#{staged_path}/Docs & Scripts/uninstall-openzfsonosx.sh"]
+      system_command '/usr/bin/sed',
+                     args: ['-i', '.bak', 's|/usr/sbin/zfs|/usr/local/bin/zfs|', "#{staged_path}/Docs & Scripts/uninstall-openzfsonosx.sh"]
+    end
   end
 
   uninstall script: {
