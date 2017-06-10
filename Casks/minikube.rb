@@ -9,6 +9,7 @@ cask 'minikube' do
   name 'Minikube'
   homepage 'https://github.com/kubernetes/minikube'
 
+  depends_on formula: 'kubernetes-cli'
   container type: :naked
 
   binary 'minikube-darwin-amd64', target: 'minikube'
