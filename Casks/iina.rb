@@ -9,7 +9,6 @@ cask 'iina' do
   name 'IINA'
   homepage 'https://lhc70000.github.io/iina/'
 
-  auto_updates true
   depends_on macos: '>= :yosemite'
 
   app 'IINA.app'
