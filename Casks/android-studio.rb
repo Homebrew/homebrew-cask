@@ -7,6 +7,8 @@ cask 'android-studio' do
   name 'Android Studio'
   homepage 'https://developer.android.com/studio/index.html'
 
+  auto_updates true
+
   app 'Android Studio.app'
 
   zap delete: [
