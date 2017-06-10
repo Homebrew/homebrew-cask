@@ -1,6 +1,6 @@
 cask 'ubersicht' do
-  version '1.2.47'
-  sha256 '7c3bc01e7112e8f66c93768afad090c8ef28a438c0b7f84f6894262b13187bdc'
+  version '1.2.46'
+  sha256 '4629eb4863673e69599d51f986d469c4a3f13b6b843cb0d065c08f767e3b2eea'
 
   url "http://tracesof.net/uebersicht/releases/Uebersicht-#{version}.app.zip"
   appcast 'http://tracesof.net/uebersicht/updates.xml.rss',
