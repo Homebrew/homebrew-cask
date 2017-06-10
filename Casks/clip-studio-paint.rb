@@ -8,6 +8,8 @@ cask 'clip-studio-paint' do
 
   pkg "CSP_#{version.no_dots}ENm_app.pkg"
 
-  uninstall pkgutil: "jp.co.CELSYS.AggregateMdul.*"
-  uninstall pkgutil: "jp.co.CELSYS.ClipStudio*"
+  uninstall pkgutil: [
+                       'jp.co.CELSYS.AggregateMdul.*',
+                       'jp.co.CELSYS.ClipStudio*',
+                     ]
 end
