@@ -14,6 +14,10 @@ cask 'tunnelblick' do
 
   app 'Tunnelblick.app'
 
+  uninstall_preflight do
+    set_ownership "#{appdir}/Tunnelblick.app"
+  end
+
   uninstall launchctl: 'net.tunnelblick.tunnelblick.LaunchAtLogin',
             quit:      'net.tunnelblick.tunnelblick'
 
