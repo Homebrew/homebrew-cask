@@ -4,7 +4,7 @@ cask 'drivedx' do
 
   url "https://binaryfruit.com/download/drivedx/mac/1/bin/DriveDx.#{version}.zip"
   name 'DriveDX'
-  homepage 'https://binaryfruit.com/drivedx/'
+  homepage 'https://binaryfruit.com/drivedx'
 
   app 'DriveDX.app'
 end
