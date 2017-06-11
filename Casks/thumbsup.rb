@@ -7,7 +7,7 @@ cask 'thumbsup' do
   appcast 'http://www.devontechnologies.com/download/thank-you-for-downloading.html?productid=900000015',
           checkpoint: 'cd24b12aeded11293ddd5039f5072be0b991c92541fd9b629d4d8e7d33d2cfcc'
   name 'ThumbsUp'
-  homepage 'http://www.devontechnologies.com/products/freeware.html#c966'
+  homepage 'https://www.devontechnologies.com/products/freeware.html#c966'
 
   app 'ThumbsUp.app'
 end

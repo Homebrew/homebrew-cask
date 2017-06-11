@@ -4,7 +4,7 @@ cask 'composercat' do
 
   url "https://downloads.getcomposercat.com/composercat/Composercat-#{version}.dmg"
   name 'Composercat'
-  homepage 'https://getcomposercat.com/'
+  homepage 'https://www.getcomposercat.com/'
 
   app 'Composercat.app'
 end

@@ -6,7 +6,7 @@ cask 'macspice' do
   appcast 'http://www.macspice.com/AppCast-v2.xml',
           checkpoint: '0d57f4a640d1d4991aab10d13a744be9d2afcec1b9ee1621ea5668f4964eb6a9'
   name 'MacSpice'
-  homepage 'http://www.macspice.com/'
+  homepage 'https://www.macspice.com/'
 
   app 'MacSpice.app'
 end

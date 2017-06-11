@@ -7,7 +7,7 @@ cask 'devonthink' do
   appcast 'http://www.devon-technologies.com/fileadmin/templates/filemaker/sparkle.php?product=217255&format=xml',
           checkpoint: '17e7dd27abdb4be17e08dced0087fe90161d48fd64edba69e618f611cb6555eb'
   name 'DEVONthink Personal'
-  homepage 'http://www.devontechnologies.com/products/devonthink/devonthink-personal.html'
+  homepage 'https://www.devontechnologies.com/products/devonthink/devonthink-personal.html'
 
   depends_on macos: '>= :mountain_lion'
 
