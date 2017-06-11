@@ -29,7 +29,8 @@ cask 'openzfs' do
     end
   end
 
-  uninstall script: {
+  uninstall delete: '~/zfsuninstaller.*',
+            script: {
                       executable: "#{staged_path}/Docs & Scripts/uninstall-openzfsonosx.sh",
                       sudo:       true,
                     }
