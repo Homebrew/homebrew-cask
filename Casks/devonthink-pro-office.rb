@@ -7,7 +7,7 @@ cask 'devonthink-pro-office' do
   appcast 'http://www.devon-technologies.com/fileadmin/templates/filemaker/sparkle.php?product=300125739&format=xml',
           checkpoint: '6e3718e4b66cd4c0522364176ae600aa4a5046eb2bc8d776b318cb86fb5c7561'
   name 'DEVONthink Pro Office'
-  homepage 'http://www.devontechnologies.com/products/devonthink/devonthink-pro-office.html'
+  homepage 'https://www.devontechnologies.com/products/devonthink/devonthink-pro-office.html'
 
   depends_on macos: '>= :mountain_lion'
 
