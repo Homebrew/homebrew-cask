@@ -7,7 +7,7 @@ cask 'nzbget' do
   appcast 'https://github.com/nzbget/nzbget/releases.atom',
           checkpoint: 'fb133a71209efc75adc7820600ad76d7738a9d4346623b23aae97319d2df4cdb'
   name 'NZBGet'
-  homepage 'http://nzbget.net/'
+  homepage 'https://nzbget.net/'
 
   app 'NZBGet.app'
 
