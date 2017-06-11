@@ -7,7 +7,7 @@ cask 'devonthink-pro' do
   appcast 'http://www.devon-technologies.com/fileadmin/templates/filemaker/sparkle.php?product=300030707&format=xml',
           checkpoint: '867a3f823b57aa307d225e56b830f134749d18d7d50809a2c47236e4be52f276'
   name 'DEVONthink Pro'
-  homepage 'http://www.devontechnologies.com/products/devonthink/devonthink-pro.html'
+  homepage 'https://www.devontechnologies.com/products/devonthink/devonthink-pro.html'
 
   app 'DEVONthink Pro.app'
 end
