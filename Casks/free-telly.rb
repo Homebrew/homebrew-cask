@@ -16,7 +16,7 @@ cask 'free-telly' do
     JSON.parse(res.body)['MIRRORS'][0]['url']
   end
   name 'FreeTelly'
-  homepage 'https://www.tvaddons.ag/freetelly-mac-kodi/'
+  homepage 'https://www.tvaddons.ag/kodi-addons-krypton/'
 
   app 'FreeTelly.app'
 
