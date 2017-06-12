@@ -1,11 +1,11 @@
 cask 'frostwire' do
-  version '6.5.1'
-  sha256 '02c215975a4c7aa2b0693ab02a0fccce9675d072aa955518dae5b171f0dcf5e4'
+  version '6.5.2'
+  sha256 '82d8885ca2078fd29d92b7495b24ed238d053ececd2ad185a48a0e6e28dfe857'
 
   # downloads.sourceforge.net/frostwire was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/frostwire/frostwire-#{version.before_comma}.dmg"
   appcast "https://sourceforge.net/projects/frostwire/rss?path=/FrostWire%20#{version.major}.x",
-          checkpoint: '0ea2c01c793be51f738d4e6c0d260678816a4402f65bcbf4bd74ad29d10a0d89'
+          checkpoint: '988a3087332ce38111e2bcd5a0af742d055a68f016d5d644e21e96bdbc5313e9'
   name 'FrostWire'
   homepage 'http://www.frostwire.com/'
 

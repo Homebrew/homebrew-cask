@@ -7,7 +7,7 @@ cask 'omegat' do
   appcast 'https://sourceforge.net/projects/omegat/rss?path=/OmegaT%20-%20Standard',
           checkpoint: '2155252f798843886b330aa944c9c41f8b53790d3c9fbd36a1a1f332d5248390'
   name 'OmegaT'
-  homepage 'http://www.omegat.org/'
+  homepage 'https://omegat.org/'
 
   app "OmegaT_#{version}_Mac_Signed/OmegaT.app"
 

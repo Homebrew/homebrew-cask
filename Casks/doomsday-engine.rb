@@ -7,7 +7,7 @@ cask 'doomsday-engine' do
   appcast 'https://sourceforge.net/projects/deng/rss',
           checkpoint: '1a1b7e03bfd9ccc0745ce5cf418a9f19474944200ca6c8bd0240205f56208ac7'
   name 'Doomsday Engine'
-  homepage 'http://dengine.net/'
+  homepage 'https://dengine.net/'
 
   app 'Doomsday.app'
   app 'Doomsday Shell.app'

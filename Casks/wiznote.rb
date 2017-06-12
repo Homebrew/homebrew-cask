@@ -4,7 +4,7 @@ cask 'wiznote' do
 
   url "http://get.wiz.cn/wiznote-macos-#{version.after_comma}.dmg"
   name 'WizNote'
-  homepage 'http://www.wiz.cn/wiznote-mac.html'
+  homepage 'https://www.wiz.cn/wiznote-mac.html'
 
   app 'WizNote.app'
 end

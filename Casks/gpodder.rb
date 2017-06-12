@@ -7,7 +7,7 @@ cask 'gpodder' do
   appcast 'https://sourceforge.net/projects/gpodder/rss?path=/macosx',
           checkpoint: 'fee22810723be4fcdd5d0f2855f4e79c302db35e3bd867a8bf20e8dfab9ccb91'
   name 'gPodder'
-  homepage 'https://gpodder.org/'
+  homepage 'https://gpodder.github.io/'
 
   app 'gPodder.app'
 end

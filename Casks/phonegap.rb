@@ -7,7 +7,7 @@ cask 'phonegap' do
   appcast 'https://github.com/phonegap/phonegap-app-desktop/releases.atom',
           checkpoint: 'a22f431f89e2f07e275af34231ca8bf28e7035cddde8de4c3a86c3dea125fe49'
   name 'PhoneGap Desktop App'
-  homepage 'http://phonegap.com/'
+  homepage 'https://phonegap.com/'
 
   app 'PhoneGap.app'
 end
