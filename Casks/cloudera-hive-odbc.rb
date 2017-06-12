@@ -1,6 +1,6 @@
 cask 'cloudera-hive-odbc' do
-  version '2.5.21,1010'
-  sha256 'bf180972a6d4810648c5bdbc1e3a67f56cbfd884079660914ed7cffaf8b671e1'
+  version '2.5.22,1014'
+  sha256 'c9beae779160e9fae2be6fab27a1f1308a72f0b8a7341e02ce7a625653dbb4a3'
 
   url "https://downloads.cloudera.com/connectors/hive_odbc_#{version.before_comma}.#{version.after_comma}/OSX/ClouderaHiveODBC.dmg"
   name 'Cloudera ODBC Driver for Hive'
