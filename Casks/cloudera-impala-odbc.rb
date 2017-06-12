@@ -9,10 +9,4 @@ cask 'cloudera-impala-odbc' do
   pkg 'ClouderaImpalaODBC.pkg'
 
   uninstall pkgutil: 'cloudera.impalaodbc'
-
-  caveats <<-EOS.undent
-    For configuration instructions, see
-
-      /opt/cloudera/impalaodbc/Readme.txt
-  EOS
 end
