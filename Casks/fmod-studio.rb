@@ -1,6 +1,6 @@
 cask 'fmod-studio' do
-  version '10904'
-  sha256 '0e29d7eb50a189dd30e07b6e038238cb2e490fcd072ec3f851ce406656fd411a'
+  version '10905'
+  sha256 'c19958b654a058370701b5bd31498029883c5c695062cd9bb2f5662079e964b5'
 
   url "https://www.fmod.org/download/fmodstudio/tool/Mac/fmodstudio#{version}mac-installer.dmg"
   name 'FMOD Studio'
