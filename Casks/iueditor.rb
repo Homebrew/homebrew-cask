@@ -1,6 +1,6 @@
 cask 'iueditor' do
-  version '2.0.5.30'
-  sha256 '04edb407d7056a307754e94b92d3ed144c8a15a11e550d1a97314a33bfa8a86b'
+  version '2.0.6.1'
+  sha256 'd03c18a5caa32af1e732ef5ac951f1bc9cc50952da9fa64fafc44341bd04e2ea'
 
   url "https://cdn.iueditor.org/release/IUEditorV#{version}.pkg"
   name 'JDLab IUEditor'
