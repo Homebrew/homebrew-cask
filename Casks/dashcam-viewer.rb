@@ -1,6 +1,6 @@
 cask 'dashcam-viewer' do
-  version '2.6.4'
-  sha256 '733b637e45301a2ecbd3364070fa453a456d825d57d6466aecffc51f4e912f49'
+  version '2.6.5'
+  sha256 'cfc185fd37141c8a70aa235b55c8323351bfdde03afca871c6dcef5217cbbacb'
 
   # dropboxusercontent.com/u/25150850 was verified as official when first introduced to the cask
   url "https://dl.dropboxusercontent.com/u/25150850/Dashcam_Viewer_v#{version}.dmg"
