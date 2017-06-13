@@ -4,8 +4,7 @@ cask 'pdf-toolbox' do
 
   url 'http://www.lightenpdf.com/Product/DownLoad.aspx?id=34&&t=0'
   name 'PDF Toolbox'
-  homepage 'http://www.lightenpdf.com/pdf-toolbox-mac.html'
-  license :commercial
+  homepage 'https://www.lightenpdf.com/pdf-toolbox-mac.html'
 
   app 'PDF Toolbox.app'
 end

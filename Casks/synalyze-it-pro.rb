@@ -1,14 +1,13 @@
 cask 'synalyze-it-pro' do
-  version '1.14'
-  sha256 '25899c87a55d39d728ec945bce60fae4cf55e28092dc028010d2a3987ea5bb3f'
+  version '1.18'
+  sha256 '9f860e7369529c12c195e2d831b5985139387c9235418744e7fac5285e7d5396'
 
-  # s3-us-west-2.amazonaws.com/synalysis was verified as official when first introduced to the cask
-  url "https://s3-us-west-2.amazonaws.com/synalysis/SynalyzeItProTA_#{version}.zip"
-  appcast 'http://www.synalyze-it.com/SynalyzeItPro/appcast.xml',
-          checkpoint: 'e74f18b3880f12d6e0a895948fc61949ea3e91fbb285421045f1aeab3c06db87'
+  # synalyze-it.com/Downloads was verified as official when first introduced to the cask
+  url "https://www.synalyze-it.com/Downloads/SynalyzeItProTA_#{version}.zip"
+  appcast 'https://www.synalyze-it.com/SynalyzeItPro/appcast.xml',
+          checkpoint: 'a707c86c78b38306eadf830802d60a913c22b9050a04f0d6f97785071dff0f28'
   name 'Synalyze It! Pro'
   homepage 'https://www.synalysis.net/'
-  license :commercial
 
   app 'Synalyze It! Pro.app'
 end

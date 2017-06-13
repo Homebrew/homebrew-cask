@@ -1,25 +1,30 @@
 cask 'araxis-merge' do
-  name 'Araxis Merge'
-  if MacOS.release <= :mountain_lion
+  if MacOS.version <= :mountain_lion
     version '2014.4459'
     sha256 '7945e0fd583880bf4bbb65899c7184692d683f247764e73f435e0685954028f0'
-    url "http://www.araxis.com/download/Merge#{version}-OSX10.8.dmg"
-  elsif MacOS.release <= :mavericks
-    version '2016.4750'
-    sha256 '9f3f4d3ba4931f69f75fd315e6823b19c5bb3938a5734b59b6aa92ec715ed00f'
-    url "http://www.araxis.com/download/Merge#{version}-OSX10.9.dmg"
-  elsif MacOS.release <= :yosemite
-    version '2016.4750'
-    sha256 '18208f885f645347ae5956a81aa1d1ef78fbc5dd5f5da0ed5a02efab004293cf'
-    url "http://www.araxis.com/download/Merge#{version}-OSX10.10.dmg"
-  else
+    url "https://www.araxis.com/download/Merge#{version}-OSX10.8.dmg"
+  elsif MacOS.version <= :mavericks
     version '2016.4774'
-    sha256 'e43f6ed8ff962c7136f3f354076a1f543abdfc2137fcd5776e5e66435adfd392'
-    url "http://www.araxis.com/download/Merge#{version}-OSX10.11.dmg"
+    sha256 '341b47242f30aca3ce3c0af9112c95f3bdac5f5ae262aa1894a9632b46fef6ab'
+    url "https://www.araxis.com/download/Merge#{version}-OSX10.9.dmg"
+  elsif MacOS.version <= :yosemite
+    version '2017.4855'
+    sha256 '7ba0fb79a0ef1a6e3c1f569e6b6c384d9d83d09a255faf4ed200252a8db85c8f'
+    url "https://www.araxis.com/download/Merge#{version}-OSX10.10.dmg"
+  elsif MacOS.version <= :el_capitan
+    version '2017.4855'
+    sha256 'feb0d1d33cb4911269dfa8a356cfcabb488c6db9963a7ede1ec3687959b123fb'
+    url "https://www.araxis.com/download/Merge#{version}-OSX10.11.dmg"
+  else
+    version '2017.4855'
+    sha256 'ee1d6a23f1455ea84487ff63faccc9c9ebb56bdb590f4544d98a4235f9816d26'
+    url "https://www.araxis.com/download/Merge#{version}-macOS10.12.dmg"
   end
 
-  homepage 'http://www.araxis.com/merge'
-  license :commercial
+  appcast 'https://www.araxis.com/news-feed.atom',
+          checkpoint: '3d7db606ca639fded79a5e76d28033cef76f44c02cefa04511577f0886edd2bf'
+  name 'Araxis Merge'
+  homepage 'https://www.araxis.com/merge/'
 
   depends_on macos: '>= :mountain_lion'
 
@@ -43,6 +48,6 @@ cask 'araxis-merge' do
 
   caveats <<-EOS.undent
     For instructions to integrate Araxis Merge with Finder or other applications,
-    see http://www.araxis.com/merge/documentation-os-x/installing.en
+    see https://www.araxis.com/merge/documentation-os-x/installing.en
   EOS
 end

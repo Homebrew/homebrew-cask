@@ -4,8 +4,7 @@ cask 'varidesk' do
 
   url 'http://www.varidesk.com/assets/standing-desk-app/VARIDESK.dmg'
   name 'VARIDESK Standing Desk Companion App'
-  homepage 'http://www.varidesk.com/'
-  license :gratis
+  homepage 'https://www.varidesk.com/'
 
   installer manual: 'Install VARIDESK.app'
 

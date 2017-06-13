@@ -5,8 +5,7 @@ cask 'packet-peeper' do
   # bitbucket.org/choll/packetpeeper was verified as official when first introduced to the cask
   url "https://bitbucket.org/choll/packetpeeper/downloads/PacketPeeper_#{version}.dmg"
   name 'Packet Peeper'
-  homepage 'http://packetpeeper.org/'
-  license :gpl
+  homepage 'https://packetpeeper.org/'
 
   app 'Packet Peeper.app'
 end

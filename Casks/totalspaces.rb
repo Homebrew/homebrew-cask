@@ -1,5 +1,5 @@
 cask 'totalspaces' do
-  if MacOS.release <= :mountain_lion
+  if MacOS.version <= :mountain_lion
     version '1.2.11'
     sha256 'fd54c6ea092f6fae2035745959ff6e080953e77ec6c76715e532b4b0352235d4'
 
@@ -12,27 +12,26 @@ cask 'totalspaces' do
     uninstall pkgutil: 'com.switchstep.totalspaces',
               quit:    'com.binaryage.TotalSpaces'
   else
-    version '2.3.9'
-    sha256 'bceb14233264b95cdac18c57c57f1e3c95988b76e3795c270d1e8cdd4e58f250'
+    version '2.5.4'
+    sha256 '8b53eea81e432df5a61ccdc0c9e727cd4e7c2bb265db454d536356c106bdc5c0'
 
-    url "http://downloads.binaryage.com/TotalSpaces2-#{version}.dmg"
-    appcast 'http://updates-s3.binaryage.com/totalspaces2.xml',
-            checkpoint: '82186203303e73e7ba337d007f3e75babbfe94b7ac204f68979072e59ce26131'
+    url "http://downloads.binaryage.com/TotalSpaces#{version.major}-#{version}.dmg"
+    appcast "http://updates-s3.binaryage.com/totalspaces#{version.major}.xml",
+            checkpoint: 'b3650a22599c6be19c377b65f1c1f838acb6222b254c7b8616785a099e28398d'
 
-    installer manual: 'TotalSpaces2.app'
+    installer manual: "TotalSpaces#{version.major}.app"
 
-    uninstall pkgutil: 'com.binaryage.TotalSpaces2',
+    uninstall pkgutil: "com.binaryage.TotalSpaces#{version.major}",
               script:  {
-                         executable: 'TotalSpaces2 Uninstaller.app/Contents/MacOS/TotalSpaces2 Uninstaller',
+                         executable: "TotalSpaces#{version.major} Uninstaller.app/Contents/MacOS/TotalSpaces#{version.major} Uninstaller",
                          args:       %w[--headless],
                          sudo:       true,
                        },
-              quit:    'com.binaryage.TotalSpaces2'
+              quit:    "com.binaryage.TotalSpaces#{version.major}"
   end
 
   name 'TotalSpaces'
-  homepage 'http://totalspaces.binaryage.com/'
-  license :commercial
+  homepage 'https://totalspaces.binaryage.com/'
 
   uninstall signal: [
                       ['INT', 'com.binaryage.totalspacescrashwatcher'],

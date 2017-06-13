@@ -2,10 +2,9 @@ cask 'wxcrafter' do
   version :latest
   sha256 :no_check
 
-  url 'http://codelite.org/downloads/wxCrafter/wxCrafterDownloads.php?osx'
+  url 'https://codelite.org/downloads/wxCrafter/wxCrafterDownloads.php?osx'
   name 'wxCrafter'
-  homepage 'http://wxcrafter.codelite.org'
-  license :freemium
+  homepage 'https://wxcrafter.codelite.org/'
 
   depends_on macos: '>= :mountain_lion'
 

@@ -4,8 +4,7 @@ cask 'wireless-transfer' do
 
   url 'http://www.wirelesstransferapp.com/wirelesstransferapp-intel.dmg'
   name 'Wireless Transfer App'
-  homepage 'http://www.wirelesstransferapp.com'
-  license :gratis
+  homepage 'http://www.wirelesstransferapp.com/'
 
   app 'Wireless Transfer App.app'
 end

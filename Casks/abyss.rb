@@ -1,11 +1,10 @@
 cask 'abyss' do
   version 'x1'
-  sha256 '63b0b8d6420a0f65899ea1fa7827f04c8c8b3fa444a9f6361054d6605cf13fed'
+  sha256 '2130e3da4d97c71d2c932261f51ed31cbb3bcadfc600db5eb6b7f646ccf31707'
 
-  url 'http://www.aprelium.com/data/abwsx1.dmg'
+  url "https://aprelium.com/data/abws#{version}.dmg"
   name 'Abyss Web Server'
-  homepage 'http://www.aprelium.com/abyssws'
-  license :gratis
+  homepage 'https://aprelium.com/abyssws/'
 
   app 'Abyss Web Server/Abyss Web Server.app'
 end

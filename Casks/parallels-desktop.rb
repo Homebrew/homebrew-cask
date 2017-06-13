@@ -1,19 +1,23 @@
 cask 'parallels-desktop' do
-  version '11.2.0-32581'
-  sha256 'af5891183faac0b3080ebc46f5c225b61f5df82e11fea267148b67a4ea8da57c'
+  version '12.2.0-41591'
+  sha256 '2a9cea952eaa9348ec55ffad07a34b1c62ab0868a5c19dccb08ed701067f25ab'
 
-  url "http://download.parallels.com/desktop/v#{version[%r{^\w+}]}/#{version}/ParallelsDesktop-#{version}.dmg"
+  url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
   name 'Parallels Desktop'
   homepage 'https://www.parallels.com/products/desktop/'
-  license :commercial
 
   app 'Parallels Desktop.app'
 
   postflight do
+    # Unhide the application
+    system_command '/usr/bin/chflags',
+                   args: ['nohidden', "#{appdir}/Parallels Desktop.app"],
+                   sudo: true
+
     # Run the initialization script
-    system '/usr/bin/sudo', '-E', '--',
-           "#{appdir}/Parallels Desktop.app/Contents/MacOS/inittool",
-           'init', '-b', "#{appdir}/Parallels Desktop.app"
+    system_command "#{appdir}/Parallels Desktop.app/Contents/MacOS/inittool",
+                   args: ['init', '-b', "#{appdir}/Parallels Desktop.app"],
+                   sudo: true
   end
 
   uninstall_preflight do
@@ -21,11 +25,13 @@ cask 'parallels-desktop' do
   end
 
   uninstall delete: [
-                      '/usr/bin/prl_convert',
-                      '/usr/bin/prl_disk_tool',
-                      '/usr/bin/prl_perf_ctl',
-                      '/usr/bin/prlctl',
-                      '/usr/bin/prlsrvctl',
+                      '/usr/local/bin/prl_convert',
+                      '/usr/local/bin/prl_disk_tool',
+                      '/usr/local/bin/prl_perf_ctl',
+                      '/usr/local/bin/prlcore2dmp',
+                      '/usr/local/bin/prlctl',
+                      '/usr/local/bin/prlexec',
+                      '/usr/local/bin/prlsrvctl',
                     ]
 
   zap       delete: [

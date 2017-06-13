@@ -1,11 +1,10 @@
 cask 'wondershare-video-converter-ultimate' do
-  version '5.2.1'
-  sha256 'ad1229e4f7aac5d9067ae3ea83d7e2e5dbeb7a6bcce1b049db9ff153b3e494d7'
+  version '5.7.2,735'
+  sha256 'd8e5d2359d89d53f917d8722d9f9fb3e6c40d1d9fd44431b121d192b0fd404d6'
 
-  url 'http://download.wondershare.com/video-converter-ultimate-mac_full735.dmg'
+  url "http://download.wondershare.com/cbs_down/video-converter-ultimate-mac_full#{version.after_comma}.dmg"
   name 'Wondershare Video Converter Ultimate'
-  homepage 'https://www.wondershare.com/mac-video-converter-ultimate/'
-  license :freemium
+  homepage 'https://videoconverter.wondershare.com/video-converter-ultimate-mac.html'
 
   app 'Wondershare Video Converter Ultimate.app'
 

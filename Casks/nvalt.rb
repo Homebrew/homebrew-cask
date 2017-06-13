@@ -1,14 +1,11 @@
 cask 'nvalt' do
-  version '2.2b111'
-  sha256 'd787ddf92730bb03ba084e72bc6fb5f4fbd42731fa3531476af9eb3ce39e1cd0'
+  version '2.2.7-126'
+  sha256 '496e0fb87b255ac6b6746395ff676b788cc455eccd1e65b49a63d0e2812754c3'
 
-  # abyss.designheresy.com/nvaltb was verified as official when first introduced to the cask
-  url "http://abyss.designheresy.com/nvaltb/nvalt#{version}.zip"
-  appcast 'http://abyss.designheresy.com/nvalt2/nvalt2main.xml',
-          checkpoint: '0a7a6a0a27508d2de6ffcd7ebd5be5db54986ea9ba6694daacbe01c59cdea89d'
+  # updates.designheresy.com/nvalt was verified as official when first introduced to the cask
+  url "http://updates.designheresy.com/nvalt/nvALT#{version.no_hyphens}.dmg"
   name 'nvALT'
-  homepage 'http://brettterpstra.com/project/nvalt/'
-  license :bsd
+  homepage 'http://brettterpstra.com/projects/nvalt/'
 
   app 'nvALT.app'
 

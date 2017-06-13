@@ -5,7 +5,12 @@ cask 'fraise' do
   url "https://github.com/downloads/jfmoy/Fraise/Fraise%20#{version}.zip"
   name 'Fraise'
   homepage 'https://github.com/jfmoy/Fraise'
-  license :apache
+
+  depends_on macos: '<= :el_capitan'
 
   app 'Fraise.app'
+
+  caveats do
+    discontinued
+  end
 end

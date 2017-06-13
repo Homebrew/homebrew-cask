@@ -1,14 +1,13 @@
 cask 'mirador' do
-  version '1.4'
-  sha256 '4131c4114fba598e86b803d20ba1ef9732b7b92897b6c4b753ae62e892d9bdf1'
+  version '1.4.1'
+  sha256 '654288f08d66ae18372c422260b891d2d89126eca76ea51fea40205974c135c9'
 
   # github.com/mirador/mirador was verified as official when first introduced to the cask
   url "https://github.com/mirador/mirador/releases/download/#{version}/mirador-macosx-#{version}.zip"
   appcast 'https://github.com/mirador/mirador/releases.atom',
-          checkpoint: 'f170ed80b82bb18d60baca9c3310a9039ce8b88ee1c023f02a6a676bd0f6cdf6'
+          checkpoint: 'db4792b5a0250149a701fa881d53177cb58d4e5e94157ee91c7c9e7b70fcd4f4'
   name 'Mirador'
-  homepage 'http://fathom.info/mirador/'
-  license :gpl
+  homepage 'https://fathom.info/mirador/'
 
   app 'Mirador.app'
 end

@@ -5,7 +5,6 @@ cask 'mac-informer' do
   url 'http://files.informer.com/simac.dmg'
   name 'Mac Informer'
   homepage 'http://macdownload.informer.com/landing/'
-  license :gratis
 
   app 'Mac Informer.app'
 

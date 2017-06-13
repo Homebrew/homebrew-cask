@@ -1,11 +1,12 @@
 cask 'servetome' do
-  version '3.9.0.3101'
-  sha256 '507987377436f80f985e3c46e1f5ffaecea933d8fbe36c23a5eb09f11c77567a'
+  version '4.0.0144'
+  sha256 '32e9ab67641a22051e4e879f8aeb6d723fa2e7ac5aee961c155bacb735d59be7'
 
   url "http://downloads.zqueue.com/ServeToMe-v#{version}.dmg"
+  appcast 'https://www.zqueue.com/servetome/changehistory.html',
+          checkpoint: 'feed3e29ad59f08e1add12b87f065fc7f6daa2977790dd0fc744e2caf4a4f566'
   name 'ServeToMe'
-  homepage 'http://zqueue.com/servetome/'
-  license :gratis
+  homepage 'https://www.zqueue.com/servetome/'
 
   app 'ServeToMe.app'
 end

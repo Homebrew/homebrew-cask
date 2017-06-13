@@ -1,13 +1,12 @@
 cask 'gamesalad' do
-  version '1.24.42'
-  sha256 '6014804d408b0cdb731b1dd1c4ca9e2071c197763a69404bd333d2db510259dc'
+  version '1.25.80'
+  sha256 'd0b40aaf79328b0d06dc42997e3b108de84c068e8e0e9efbe176e57b66105ebe'
 
   url "http://releases.gamesalad.com/creator/#{version}/GameSalad-Creator-#{version}.dmg"
   appcast 'https://gamesalad.com/download/studioUpdates',
-          checkpoint: '0db18d0127bf89e9e7db36ba8ea11b7c8bdb13ddae296546f8f50a609b1d3cbd'
+          checkpoint: '82f4d5166317d2e02c2b883d2e3c358a436d8bcf70f0d255c04338612cb0720c'
   name 'GameSalad'
   homepage 'https://gamesalad.com/'
-  license :commercial
 
   app 'GameSalad.app'
 end

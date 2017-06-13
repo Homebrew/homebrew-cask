@@ -1,12 +1,15 @@
 cask 'cocoaspell' do
-  version '2.1'
-  sha256 '06d6cd7f2b04c47f553c5a3a33ebe6bc5651457521cbe7e3ead84a6cb218053c'
+  version '2.5'
+  sha256 'd8dd01e6471df86f55d5f272a33fdb421f49a2fb923a9858a8772ec4367d333c'
 
-  # people.ict.usc.edu/~leuski/cocoaspell was verified as official when first introduced to the cask
-  url "http://people.ict.usc.edu/~leuski/cocoaspell/cocoAspell.#{version}.dmg"
+  url "http://people.ict.usc.edu/~leuski/cocoaspell/cocoAspell.#{version}.dmg",
+      user_agent: :fake
+  appcast 'http://people.ict.usc.edu/~leuski/cocoaspell/',
+          checkpoint: 'e22a03f5b7404c2bb2c9a09c2ead537eff504a8158fe99c523c4ef369e097ea9'
   name 'cocoAspell'
-  homepage 'http://cocoaspell.leuski.net/'
-  license :gratis
+  homepage 'http://people.ict.usc.edu/~leuski/cocoaspell/'
+
+  depends_on macos: '>= :el_capitan'
 
   pkg 'cocoAspell.pkg'
 

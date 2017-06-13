@@ -5,7 +5,6 @@ cask 'luxmark' do
   url "http://www.luxrender.net/release/luxmark/v#{version}/luxmark-macos64-v#{version}.zip"
   name 'LuxMark'
   homepage 'http://www.luxrender.net/wiki/LuxMark'
-  license :gpl
 
   app 'LuxMark.app'
 end

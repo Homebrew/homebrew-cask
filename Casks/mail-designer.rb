@@ -1,11 +1,10 @@
 cask 'mail-designer' do
-  version '2.3.1'
-  sha256 'ea4052960959f7a9fdc2033441eaba2267b0d0df01a7c70da57f747ee5438afd'
+  version '2.6.6'
+  sha256 '16c113d4d5167953f8145ffb4571adaff08dc352aebc27bd4cc51df5513093f3'
 
   url "http://download.equinux.com/files/other/Mail_Designer_#{version}.zip"
   name 'Mail Designer'
-  homepage 'http://equinux.com/us/products/maildesigner2/'
-  license :commercial
+  homepage 'http://maildesigner.equinux.com/'
 
   app 'Mail Designer.app'
 end

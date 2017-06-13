@@ -6,7 +6,6 @@ cask 'show-my-screen' do
   name 'Show My Screen'
   name '华信云会议'
   homepage 'https://www.show-my-screen.com/'
-  license :commercial
 
   app 'Show My Screen.app'
 end

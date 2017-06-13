@@ -4,8 +4,7 @@ cask 'gameranger' do
 
   url 'https://gameranger.com/download/GameRanger.dmg'
   name 'GameRanger'
-  homepage 'https://gameranger.com'
-  license :gratis
+  homepage 'https://gameranger.com/'
 
   app 'GameRanger.app'
 

@@ -5,15 +5,15 @@ cask 'soundfly' do
   url 'http://abyssoft.com/software/soundfly/downloads/soundfly.zip'
   name 'Soundfly'
   homepage 'http://abyssoft.com/software/soundfly/'
-  license :gratis
 
   depends_on cask: 'soundflower'
 
   pkg 'Soundfly.pkg', allow_untrusted: true
 
   postflight do
-    system '/usr/bin/sudo', '-E', '--',
-           '/sbin/kextload', '-b', 'com.Cycling74.driver.Soundflower'
+    system_command '/sbin/kextload',
+                   args: ['-b', 'com.Cycling74.driver.Soundflower'],
+                   sudo: true
   end
 
   uninstall pkgutil: 'com.abyssoft.soundfly.*'

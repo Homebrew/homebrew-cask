@@ -1,11 +1,10 @@
 cask 'objectivesharpie' do
-  version '3.0.8'
-  sha256 'f5deb879d0f5f379eb5ccc6d78bedf99007386d102720639cf7a5f3dc8be04cc'
+  version '3.3.0'
+  sha256 'a3f0b65895e55fa7628e3727772bed99fa7713cc059b716d3f30266b9b18ce0f'
 
-  url "https://files.xamarin.com/~abock/ObjectiveSharpie/ObjectiveSharpie-#{version}.pkg"
+  url "https://download.xamarin.com/objective-sharpie/ObjectiveSharpie-#{version}.pkg"
   name 'Objective Sharpie'
   homepage 'https://developer.xamarin.com/guides/cross-platform/macios/binding/objective-sharpie/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "ObjectiveSharpie-#{version}.pkg"
 

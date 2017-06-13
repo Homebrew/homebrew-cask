@@ -5,8 +5,7 @@ cask 'colortester' do
   # alfasado.co.jp was verified as official when first introduced to the cask
   url 'http://www.alfasado.co.jp/download/ColorTester_Mac.zip'
   name 'ColorTester'
-  homepage 'http://alfasado.net/apps/colortester.html'
-  license :gratis
+  homepage 'https://alfasado.net/apps/colortester.html'
 
   app 'ColorTester/ColorTester.app'
 

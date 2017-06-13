@@ -2,13 +2,9 @@ cask 'suspicious-package' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.mothersruin.com/software/downloads/SuspiciousPackage.xip'
+  url 'http://www.mothersruin.com/software/downloads/SuspiciousPackage.dmg'
   name 'Suspicious Package'
   homepage 'http://www.mothersruin.com/software/SuspiciousPackage/'
-  license :gratis
-
-  depends_on formula: 'unar'
-  container type: :generic_unar
 
   app 'Suspicious Package.app'
 end

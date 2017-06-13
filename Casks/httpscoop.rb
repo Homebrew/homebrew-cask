@@ -6,8 +6,7 @@ cask 'httpscoop' do
   appcast 'https://www.tuffcode.com/releases/httpscoop-appcast.xml',
           checkpoint: 'a89471dee5778a059186b4a3035520d2bbfb5581d90f95b84ebc94408b21c2c1'
   name 'HTTP Scoop'
-  homepage 'https://www.tuffcode.com'
-  license :commercial
+  homepage 'https://www.tuffcode.com/'
 
   app 'HTTPScoop.app'
 end

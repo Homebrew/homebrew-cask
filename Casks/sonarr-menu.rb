@@ -4,10 +4,9 @@ cask 'sonarr-menu' do
 
   url "https://github.com/jefbarn/Sonarr-Menu/releases/download/v#{version}/Sonarr-Menu.v#{version}.zip"
   appcast 'https://github.com/jefbarn/Sonarr-Menu/releases.atom',
-          checkpoint: '10522a3868d5f6eef2200873fd4384947a46bac5622423a38ed35a867ac58b3b'
+          checkpoint: '93dc65ea1cc2ad37687a301e3f236e3e1e5a835d203de618d04f1dddb68637ab'
   name 'Sonarr Menu'
-  homepage 'https://github.com/jefbarn/Sonarr-Menu'
-  license :gpl
+  homepage 'https://github.com/jefbarn/Sonarr-Menu/'
 
   depends_on cask: 'sonarr'
   depends_on macos: '>= :mavericks'

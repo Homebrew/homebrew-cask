@@ -1,11 +1,10 @@
 cask 'avocode' do
-  version '2.6.0'
-  sha256 '3f3a2512bc2309488270e0cd491223ac7d82e7aec7e7edf7840f1e9d2cb901af'
+  version '2.14.2'
+  sha256 'fe5fe595443eb540bd3c13635366fee9c139fb821b11e6e08ba588a2dbfa443d'
 
-  url "http://mediacdn.avocode.com/download/avocode-app/#{version}/avocode-app-mac-#{version}.zip"
+  url "http://media.avocode.com/download/avocode-app/#{version}/Avocode-#{version}-mac.zip"
   name 'Avocode'
-  homepage 'http://avocode.com/'
-  license :commercial
+  homepage 'https://avocode.com/'
 
   app 'Avocode.app'
 

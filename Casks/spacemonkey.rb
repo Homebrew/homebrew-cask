@@ -1,13 +1,13 @@
 cask 'spacemonkey' do
-  version '0.7.17'
-  sha256 '276c29a536e0a21539831dfbb6dd81f10dbd09a0e17bffeb11cd253c1dc78e57'
+  version '0.7.26,140'
+  sha256 '2fce0a2c82baf3df20a1e92accd3bdb44e745a2b0957afac9903ada2ce326691'
 
-  url 'http://downloads.spacemonkey.com/client/mac/latest'
+  # hockeyapp.net/api/2/apps/aa33b6780fdfc71247b2995fa47b5d7c was verified as official when first introduced to the cask
+  url "https://rink.hockeyapp.net/api/2/apps/aa33b6780fdfc71247b2995fa47b5d7c/app_versions/#{version.after_comma}?format=zip"
   appcast 'https://rink.hockeyapp.net/api/2/apps/aa33b6780fdfc71247b2995fa47b5d7c',
-          checkpoint: 'f2b7a87fc442d49534923f392be6d2fa9b78b75fe1bafb3843835c3681cd8f39'
+          checkpoint: '51a258a879da03822958429db1756f299c55e8ce1ecf30936b71e6850ec2a6fa'
   name 'Space Monkey'
-  homepage 'https://www.spacemonkey.com'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.spacemonkey.com/'
 
   auto_updates true
 

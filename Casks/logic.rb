@@ -1,11 +1,12 @@
 cask 'logic' do
-  version '1.2.10'
-  sha256 '02042d0527069581b4f4cf6d5dbd7d16312ae2219d2787d53ad677ddd6fa26b4'
+  version '1.2.14'
+  sha256 '42c7d5dc6f8193535ae578b634a1941c769eab29cf641e127459032a6a53ceb7'
 
   url "http://downloads.saleae.com/logic/#{version}/Logic-#{version}-Darwin.dmg"
   name 'Logic'
   homepage 'https://www.saleae.com/'
-  license :commercial
+
+  depends_on macos: '>= :lion'
 
   app 'Logic.app'
 end

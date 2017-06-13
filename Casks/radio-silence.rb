@@ -4,10 +4,9 @@ cask 'radio-silence' do
 
   url "https://radiosilenceapp.com/downloads/Radio_Silence_#{version}.pkg"
   appcast 'https://radiosilenceapp.com/update',
-          checkpoint: 'b499bb832ce12d4e641ab1d69468dd1ddfc7d3871056a357a06d13610e9d2de8'
+          checkpoint: 'fc370e4a6397e4b72f6a81c3b840ae1c45376e23d55b258f2f52b01fae037949'
   name 'Radio Silence'
-  homepage 'http://radiosilenceapp.com'
-  license :commercial
+  homepage 'https://radiosilenceapp.com/'
 
   pkg "Radio_Silence_#{version}.pkg"
 

@@ -5,8 +5,7 @@ cask 'wallpaper-wizard' do
   # dl.devmate.com/com.wallwiz was verified as official when first introduced to the cask
   url 'https://dl.devmate.com/com.wallwiz/WallpaperWizard.dmg'
   name 'Wallpaper Wizard'
-  homepage 'http://wallwiz.com'
-  license :freemium
+  homepage 'https://wallwiz.com/'
 
   app 'Wallpaper Wizard.app'
 end

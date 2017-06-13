@@ -1,12 +1,13 @@
 cask 'cachewarmer' do
-  version '16'
-  sha256 'cdbff051ac20e68e761ee73258059b47c4ef2864330dafbc46d2bfd407d4ad94'
+  version '20'
+  sha256 'b40dd4d7a50cf8a5be3bc570bfa83a590ff354b08970b671053cc940cdbcf317'
 
-  # amazonaws.com/glencode_downloads was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/glencode_downloads/CacheWarmer-#{version}.pkg"
+  # s3.amazonaws.com/assetcache.io was verified as official when first introduced to the cask
+  url "https://s3.amazonaws.com/assetcache.io/CacheWarmer-#{version}.pkg"
+  appcast 'https://assetcache.io/cachewarmer/release-notes/',
+          checkpoint: 'e303120cd02a95cbfea82820e2a9f6a9f2bb454b58cbec17660116d25022019e'
   name 'CacheWarmer'
   homepage 'https://assetcache.io/cachewarmer/'
-  license :freemium
 
   pkg "CacheWarmer-#{version}.pkg"
 

@@ -4,10 +4,14 @@ cask 'application-loader' do
 
   url "https://itunesconnect.apple.com/apploader/ApplicationLoader_#{version}.dmg"
   name 'Application Loader'
-  homepage 'https://itunesconnect.apple.com'
-  license :gratis
+  homepage 'https://itunesconnect.apple.com/'
 
   pkg 'ApplicationLoader.pkg'
 
   uninstall pkgutil: 'com.apple.pkg.ApplicationLoader'
+
+  zap delete: [
+                '~/Library/Caches/com.apple.itunes.connect.ApplicationLoader',
+                '~/Library/Preferences/com.apple.itunes.connect.ApplicationLoader.plist',
+              ]
 end

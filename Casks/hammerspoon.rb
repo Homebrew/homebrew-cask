@@ -1,16 +1,27 @@
 cask 'hammerspoon' do
-  version '0.9.46'
-  sha256 '20f7e81624b6f007d6fdd8944cab3d9ba48c36fd0b4f1405a590526b5d4859bc'
+  version '0.9.54'
+  sha256 'c7c9313b0bd7f892c13b4b7dc23e578bdec881af49e1552d9851000794c31baa'
 
   # github.com/Hammerspoon/hammerspoon was verified as official when first introduced to the cask
   url "https://github.com/Hammerspoon/hammerspoon/releases/download/#{version}/Hammerspoon-#{version}.zip"
   appcast 'https://github.com/Hammerspoon/hammerspoon/releases.atom',
-          checkpoint: '05766d2bc98e45972168b97d57c250b60c6450a49fba54ea55e8ea74cab6cdbf'
+          checkpoint: '67022a741662cc92b2a2398d8d6ea6a9b3bde5ae020736124abc1636c4fc96c3'
   name 'Hammerspoon'
   homepage 'http://www.hammerspoon.org/'
-  license :mit
 
+  auto_updates true
   accessibility_access true
 
   app 'Hammerspoon.app'
+
+  uninstall quit:       'org.hammerspoon.Hammerspoon',
+            login_item: 'Hammerspoon'
+
+  zap delete: [
+                '~/.hammerspoon',
+                '~/Library/Application Support/com.crashlytics/org.hammerspoon.Hammerspoon',
+                '~/Library/Caches/org.hammerspoon.Hammerspoon',
+                '~/Library/Preferences/org.hammerspoon.Hammerspoon.plist',
+                '~/Library/Saved Application State/org.hammerspoon.Hammerspoon.savedState',
+              ]
 end

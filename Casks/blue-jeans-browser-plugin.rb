@@ -4,17 +4,11 @@ cask 'blue-jeans-browser-plugin' do
 
   url "https://swdl.bluejeans.com/skinny/rbjnplugin_#{version}.pkg"
   name 'Blue Jeans Browser Plug-in'
-  homepage 'http://bluejeans.com/'
-  license :gratis
+  homepage 'https://www.bluejeans.com/'
 
-  container type: :xar
+  container type:   :xar,
+            nested: 'Scripts'
 
   internet_plugin "rbjninstallplugin_#{version}.plugin"
   internet_plugin "rbjnplugin_#{version}.plugin"
-
-  # container nested: 'Scripts' doesn't recognize a gzipped CPIO
-  preflight do
-    system '/usr/bin/tar', '-xf', "#{staged_path}/Scripts", '-C', staged_path
-    system '/bin/rm', '-f', '--', "#{staged_path}/Scripts"
-  end
 end

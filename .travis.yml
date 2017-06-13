@@ -2,21 +2,10 @@ language: ruby
 
 sudo: false
 
-env:
-  global:
-    - LANG=en_US.UTF-8
-    - LANGUAGE=en_US.UTF-8
-    - LC_ALL=en_US.UTF-8
-
 matrix:
   include:
-    - env: OSX=10.11 HOMEBREW_RUBY=2.0.0 HOMEBREW_OSX_VERSION=$OSX
-      os: osx
-      osx_image: xcode7.3
-      rvm: system
-    - env: OSX=10.10 HOMEBREW_RUBY=2.0.0 HOMEBREW_OSX_VERSION=$OSX
-      os: osx
-      osx_image: xcode7.1
+    - os: osx
+      osx_image: xcode8.3
       rvm: system
   fast_finish: true
 
@@ -28,11 +17,7 @@ cache:
   directories:
     - $HOME/.gem
 
-before_install:
-  - . ci/travis/before_install.sh
-
-install:
-  - . ci/travis/install.sh
+install: true # skip install step
 
 before_script:
   - . ci/travis/before_script.sh

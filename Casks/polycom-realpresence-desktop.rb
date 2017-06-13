@@ -1,11 +1,10 @@
 cask 'polycom-realpresence-desktop' do
-  version '3.5.0_59579'
-  sha256 '7b52d08b5be50e43b1f943201cbc9507983e19c44fa411f8a57c7b2adceab969'
+  version '3.5.1_61068'
+  sha256 '166159efe603d5df950e46ac72aa245d1fa4a21a78df811d901f44de5b56ef4c'
 
-  url "http://downloads.polycom.com/video/realpresence_desktop/RPDMac-release_#{version}.dmg"
+  url "https://downloads.polycom.com/video/realpresence_desktop/RPDMac-release_#{version}.dmg"
   name 'Polycom RealPresence Desktop'
   homepage 'http://www.polycom.com/products-services/hd-telepresence-video-conferencing/realpresence-desktop/realpresence-desktop.html'
-  license :commercial
 
   pkg 'RealPresenceDesktop.pkg'
 

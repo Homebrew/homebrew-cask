@@ -1,12 +1,11 @@
 cask 'pokertracker' do
-  version '4.14.7'
-  sha256 'e112d03806915ae737cc3c3ba035ec17149f742cf4e45946033af181e156de94'
+  version '4.14.24'
+  sha256 '6ee042c28475b475f622e5d2593bf204ced6eba0a3491302b5fd421d2e06b469'
 
   # s3-us1.ptrackupdate.com was verified as official when first introduced to the cask
   url "http://s3-us1.ptrackupdate.com/releases/PT-Install-v#{version}.dmg"
   name 'PokerTracker'
-  homepage 'https://www.pokertracker.com'
-  license :commercial
+  homepage 'https://www.pokertracker.com/'
 
   app "PokerTracker #{version.major}.app"
 end

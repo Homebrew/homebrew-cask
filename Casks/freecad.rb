@@ -1,14 +1,13 @@
 cask 'freecad' do
-  version '0.16-6705.acfe417'
-  sha256 '7ddd1dc718b9338bc3581f02f107a80d3dfe3dfe147f7dcd7c5d28af864654f9'
+  version '0.16-6706.f86a4e4'
+  sha256 '9d05b21103bfe0dd7de2ec006fc4c1baca3e7ff32d4b570d91e627caded40178'
 
   # github.com/FreeCAD/FreeCAD was verified as official when first introduced to the cask
   url "https://github.com/FreeCAD/FreeCAD/releases/download/0.16/FreeCAD_#{version}-OSX-x86_64.dmg"
   appcast 'https://github.com/FreeCAD/FreeCAD/releases.atom',
-          checkpoint: 'ac051636765e99376ab15d484b3dd0f938f59f4fa48a627a367a97a44ca5ad86'
+          checkpoint: 'ab325c19d5b46136ac4debd7c3b0f3de55a0ae784a79df5f8cbea3cc10ab7555'
   name 'FreeCAD'
-  homepage 'http://www.freecadweb.org'
-  license :gpl
+  homepage 'https://www.freecadweb.org/'
 
   app 'FreeCAD.app'
 end

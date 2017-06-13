@@ -1,15 +1,23 @@
 cask 'keka' do
-  version '1.0.4'
-  sha256 '0075741ed52e2c86d7749dfe2baf54c8b6dad75a780b4b51ca5fb14337124701'
+  version '1.0.8'
+  sha256 'ad6ab5e3baf98ab33d56022a844d5a37747bef9767cf9d3a2ed646f8a85630ee'
 
-  url "http://www.kekaosx.com/release/Keka-#{version}-intel.dmg"
-  appcast 'http://www.kekaosx.com/update/keka.xml',
-          checkpoint: '40bf3dfa927e2b377a98177f0362d459b39e96c60c45c5f0cfd53d305f01cbe3'
+  # github.com/aonez/Keka was verified as official when first introduced to the cask
+  url "https://github.com/aonez/Keka/releases/download/v#{version}/Keka-#{version}.dmg"
+  appcast 'https://github.com/aonez/Keka/releases.atom',
+          checkpoint: 'f362deea318251b1d8bbc659bb797690f94747c7fb030d51b37de6eb9f1e441f'
   name 'Keka'
-  homepage 'http://kekaosx.com/'
-  license :gratis
+  homepage 'http://www.kekaosx.com/'
+
+  auto_updates true
+  depends_on macos: '>= :lion'
 
   app 'Keka.app'
 
-  zap delete: '~/Library/Preferences/com.aone.keka.plist'
+  zap delete: [
+                '~/Library/Application Support/Keka',
+                '~/Library/Caches/com.aone.keka',
+                '~/Library/Preferences/com.aone.keka.plist',
+                '~/Library/Saved Application State/com.aone.keka.savedState',
+              ]
 end

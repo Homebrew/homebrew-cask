@@ -2,12 +2,12 @@ cask 'plistedit-pro' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.fatcatsoftware.com/plisteditpro/PlistEditPro.zip'
+  url 'https://www.fatcatsoftware.com/plisteditpro/PlistEditPro.zip'
   name 'PlistEdit Pro'
-  homepage 'http://www.fatcatsoftware.com/plisteditpro/'
-  license :commercial
+  homepage 'https://www.fatcatsoftware.com/plisteditpro/'
 
   app 'PlistEdit Pro.app'
+  binary "#{appdir}/PlistEdit Pro.app/Contents/MacOS/pledit"
 
   zap delete: [
                 '~/Library/Preferences/com.fatcatsoftware.pledpro.plist',

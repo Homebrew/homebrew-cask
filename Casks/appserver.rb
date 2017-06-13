@@ -1,14 +1,13 @@
 cask 'appserver' do
-  version '1.1.2-188'
-  sha256 '4e35ab705e51d976071a9b5612da0a1c611fe628fb7daebfc93a2ec4ab729eeb'
+  version '1.1.4-212'
+  sha256 '81f40c5335774b469ddfe4045462510a576a0f9ad5bbfc2363ea7b3de582bb46'
 
   # github.com/appserver-io/appserver was verified as official when first introduced to the cask
   url "https://github.com/appserver-io/appserver/releases/download/#{version.sub(%r{-.*}, '')}/appserver-dist_#{version}_x86_64.pkg"
   appcast 'https://github.com/appserver-io/appserver/releases.atom',
-          checkpoint: 'feb266769751d25fa5997c390974274ede42a138457b193f62cccec6327966f1'
+          checkpoint: '1d421bed542b5ce4df18f0388ae00f2cc38b661ba9f0d5deedffced970095e4a'
   name 'appserver.io'
-  homepage 'http://www.appserver.io'
-  license :oss
+  homepage 'http://appserver.io/'
 
   pkg "appserver-dist_#{version}_x86_64.pkg"
 

@@ -1,15 +1,15 @@
 cask 'blast2go' do
-  version '3.3'
-  sha256 'af181ff39556e15dc012a45a07744475f284e730095f39cc892d30d7342aa2e9'
+  version '4.1'
+  sha256 '5bb520f33900544c291f8f968d66072db613a77546aa351afac434581b4b5d95'
 
   url "http://download.blast2go.com/html/software/blast2go/latest/#{version.dots_to_underscores}/Blast2GO_macos_#{version.dots_to_underscores}.dmg"
   name 'Blast2GO'
   homepage 'https://www.blast2go.com/'
-  license :freemium
 
-  installer script: 'Blast2GO Installer.app/Contents/MacOS/JavaApplicationStub',
-            args:   ['-q'],
-            sudo:   false
+  installer script: {
+                      executable: 'Blast2GO Installer.app/Contents/MacOS/JavaApplicationStub',
+                      args:       ['-q'],
+                    }
 
   uninstall delete: '/Applications/Blast2GO'
 

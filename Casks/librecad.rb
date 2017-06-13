@@ -1,12 +1,13 @@
 cask 'librecad' do
-  version '2.0.10'
-  sha256 '53735cc765cc8e89f28c19d1b5696ccda985e7ad6196e3fb504ab6297c15518a'
+  version '2.1.3'
+  sha256 'e17f74be117c2cabbc9c5844ae459dd1d1e6f94b17d09f0e809ef23b936a8952'
 
-  # sourceforge.net/project/librecad was verified as official when first introduced to the cask
-  url "http://downloads.sourceforge.net/project/librecad/OSX/#{version}/LibreCAD_#{version.dots_to_hyphens}.dmg"
+  # github.com/LibreCAD/LibreCAD was verified as official when first introduced to the cask
+  url "https://github.com/LibreCAD/LibreCAD/releases/download/#{version}/LibreCAD_#{version.dots_to_hyphens}.dmg"
+  appcast 'https://github.com/LibreCAD/LibreCAD/releases.atom',
+          checkpoint: '490f293425e95a3ca9833b74cf2034bb98c434d78b13e0db2da77e2f4eb9ccf0'
   name 'LibreCAD'
-  homepage 'http://librecad.org/'
-  license :gpl
+  homepage 'http://librecad.org/cms/home.html'
 
   app 'LibreCAD.app'
 end

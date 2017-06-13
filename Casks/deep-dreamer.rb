@@ -6,7 +6,6 @@ cask 'deep-dreamer' do
   url 'https://dl.devmate.com/com.realmacsoftware.deepdreamer/DeepDreamer.zip'
   name 'Deep Dreamer'
   homepage 'https://www.realmacsoftware.com/deepdreamer'
-  license :commercial
 
   app 'Deep Dreamer.app'
 end

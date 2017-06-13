@@ -1,13 +1,12 @@
 cask 'soqlxplorer' do
-  version '2.40'
-  sha256 'c85897a120bd8d5f6afa7b7c1c1917c3b08a971135a652b21d9a52c7d7cf2641'
+  version '2.60'
+  sha256 '29a7b9b9ae13d25038dd25d53a7b15ae4f80640b83dad5ef96dc5d9ecfcd2f29'
 
   url "http://www.pocketsoap.com/osx/soqlx/soqlXplorer_v#{version}.zip"
   appcast 'http://www.pocketsoap.com/osx/soqlx/appcast.xml',
-          checkpoint: 'd86d13c4a2e045f00bfd6e98bf78dd6ffc4a631c706d022be840178a1c83e2d2'
+          checkpoint: '70205d0d804a6f29f27f8b52cc9f965456cbf8c41b2f46da0461dd5c6d840f11'
   name 'SoqlXplorer'
   homepage 'http://www.pocketsoap.com/osx/soqlx/'
-  license :mit
 
   app 'SoqlXplorer.app'
 end

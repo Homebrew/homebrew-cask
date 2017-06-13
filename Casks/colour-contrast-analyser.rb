@@ -1,11 +1,13 @@
 cask 'colour-contrast-analyser' do
-  version '1.5.13'
-  sha256 '2e737dde56179725ccbad1306bfa8db2711bbc910d046cdb4c567e6a5ad86bb4'
+  version '2.3'
+  sha256 '1f7e71e75df0f7893b6bbcc1d22655f9d084586d4f5d71111e222bdc030df67e'
 
-  url "http://files.paciellogroup.com/resources/CCA_#{version}.dmg"
+  # github.com/ThePacielloGroup/CCA-OSX was verified as official when first introduced to the cask
+  url "https://github.com/ThePacielloGroup/CCA-OSX/releases/download/#{version}/Colour.Contrast.Analyser.app.zip"
+  appcast 'https://github.com/ThePacielloGroup/CCA-OSX/releases.atom',
+          checkpoint: '4ab9b55e98b8b2dfff03bfbbd3b71bc797c8094c6d3005d6629f3686879e634a'
   name 'Colour Contrast Analyser'
   homepage 'https://www.paciellogroup.com/resources/contrastanalyser/'
-  license :gpl
 
   app 'Colour Contrast Analyser.app'
 end

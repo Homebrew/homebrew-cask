@@ -1,11 +1,10 @@
 cask 'gimp' do
-  version '2.8.16-x86_64'
-  sha256 'bd84e6e6af21ee76c664654dc47344655086d0587de807418517dd1ec57b1e09'
+  version '2.8.22'
+  sha256 '3414960c54b262b5793947f55a6d1ab53045a507978a21ff758a54bf6be4bd16'
 
-  url "https://download.gimp.org/pub/gimp/v2.8/osx/gimp-#{version}.dmg"
+  url "https://download.gimp.org/pub/gimp/v#{version.major_minor}/osx/gimp-#{version}-x86_64.dmg"
   name 'GIMP'
-  homepage 'https://www.gimp.org'
-  license :gpl
+  homepage 'https://www.gimp.org/'
 
   app 'GIMP.app'
 

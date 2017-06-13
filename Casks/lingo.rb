@@ -5,8 +5,7 @@ cask 'lingo' do
   # nounproject.s3.amazonaws.com/lingo was verified as official when first introduced to the cask
   url 'https://nounproject.s3.amazonaws.com/lingo/Lingo.dmg'
   name 'Lingo'
-  homepage 'https://lingoapp.com'
-  license :gratis
+  homepage 'https://www.lingoapp.com/'
 
   app 'Lingo.app'
 

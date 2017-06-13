@@ -1,12 +1,14 @@
 cask 'kid3' do
   # note: "3" is not a version number, but an intrinsic part of the product name (ID3 tags)
-  version '3.4.1'
-  sha256 '607d2cdf682d7c8b7df20f08466d4fe1e9f0c27ced66dbe766668752d600173e'
+  version '3.4.5'
+  sha256 '8e3fcdcf1fda8219a16ffc91e015d4d8a8784558e81f9e4068650566cfc35e84'
 
-  url "http://downloads.sourceforge.net/sourceforge/kid3/kid3-#{version}-Darwin.dmg"
+  url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin.dmg"
+  appcast 'https://sourceforge.net/projects/kid3/rss',
+          checkpoint: '09880f4083cf1aff970af27ecf55925068f0d770f83b1dc9e64ab0c5973b6be5'
   name 'Kid3'
   homepage 'http://kid3.sourceforge.net/'
-  license :gpl
 
   app 'kid3.app'
+  binary "#{appdir}/kid3.app/Contents/MacOS/kid3-cli"
 end

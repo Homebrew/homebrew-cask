@@ -1,14 +1,12 @@
 cask 'steermouse' do
-  version '4.2.6f1'
-  sha256 '4bbe779fcbfc69d9ebb196e888789cb088459cd3f944c3978a55c061d7d9f819'
+  version '5.1'
+  sha256 '00a32b26a3ce04543ef820e9985b4b1d0514b83164be876b1b4f79cdb1dd29ac'
 
   url "http://plentycom.jp/ctrl/files_sm/SteerMouse#{version}.dmg"
+  appcast 'http://plentycom.jp/en/steermouse/download.php',
+          checkpoint: 'f2c1c089d047a061b1a5498f02ecf5c6d2bd9e4f69b4e26e56ee34ff7122a468'
   name 'SteerMouse'
   homepage 'http://plentycom.jp/en/steermouse/'
-  license :commercial
 
-  pkg 'SteerMouse Installer.app/Contents/Resources/SteerMouse.pkg'
-
-  uninstall pkgutil: 'jp.plentycom.SteerMouse.pkg.*',
-            kext:    'com.cyberic.SmoothMouse'
+  prefpane 'SteerMouse.prefPane'
 end

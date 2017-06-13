@@ -5,7 +5,6 @@ cask 'polar-clock' do
   url "http://blog.pixelbreaker.com/downloads/polarclock/PolarClock#{version.major}_osx_snow_leopard.zip"
   name 'PolarClock Screensaver'
   homepage 'http://blog.pixelbreaker.com/polarclock'
-  license :unknown
 
-  screen_saver 'PolarClock #{version}.saver'
+  screen_saver "PolarClock #{version}.saver"
 end

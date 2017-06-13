@@ -5,12 +5,13 @@ cask 'receitanet' do
   url "http://downloadirpf.receita.fazenda.gov.br/receitanet/Receitanet-#{version}.app.tar.gz"
   name 'Receitanet'
   homepage 'http://idg.receita.fazenda.gov.br/interface/cidadao/irpf/2016/'
-  license :closed
 
   app 'Receitanet.app'
-  installer script: "Receitanet-#{version}.app/Contents/MacOS/installer",
-            args:   %W[--response-file response --mode silent --prefix #{staged_path}],
-            sudo:   true
+  installer script: {
+                      executable: "Receitanet-#{version}.app/Contents/MacOS/installer",
+                      args:       %W[--response-file response --mode silent --prefix #{staged_path}],
+                      sudo:       true,
+                    }
 
   uninstall script: {
                       executable: 'Desinstalador',
@@ -19,6 +20,6 @@ cask 'receitanet' do
                     }
 
   caveats do
-    depends_on_java('7')
+    depends_on_java('7+')
   end
 end

@@ -7,15 +7,10 @@ cask 'quitter' do
           checkpoint: '51873371a0fbdd7664b2e143e17ccca9fb4d962602dcd42618812fe24be4134c'
   name 'Quitter'
   homepage 'https://marco.org/apps#quitter'
-  license :gratis
 
   auto_updates true
 
   app 'Quitter.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 
   zap delete: [
                 '~/Library/Preferences/com.marcoarment.quitter.plist',

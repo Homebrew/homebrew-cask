@@ -6,8 +6,7 @@ cask 'snippets' do
   appcast 'https://snippets.me/mac/appcast.xml',
           checkpoint: 'b67b5cd59bfee4398a81f157dec126b982f120f757ec24a4ea1396f459ed19d0'
   name 'Snippets'
-  homepage 'http://snippets.me/'
-  license :gratis
+  homepage 'https://snippets.me/'
 
   app 'Snippets.app'
 end

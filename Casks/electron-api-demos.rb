@@ -1,13 +1,18 @@
 cask 'electron-api-demos' do
-  version '1.1.0'
-  sha256 '8692437acd8ed97ad5676f847fe8b74f4e66bc46f5397483dc77f0bc868fb61f'
+  version '1.3.0'
+  sha256 'd0b2fd3a3e0306f84f6734010b271cd1f2dc642e81a5a0b0b16cfc9b25814107'
 
   url "https://github.com/electron/electron-api-demos/releases/download/v#{version}/electron-api-demos-mac.zip"
   appcast 'https://github.com/electron/electron-api-demos/releases.atom',
-          checkpoint: '6c64b52c4780c47cb42ff016ae1b7c651bb4e77004a7904de7408aaad6381878'
+          checkpoint: '3183363297478ddd29e40ce54b36bd6af491431bc6daf84d6281dd76c74619eb'
   name 'Electron API Demos'
   homepage 'https://github.com/electron/electron-api-demos'
-  license :unknown
 
   app 'Electron API Demos.app'
+
+  zap delete: [
+                '~/Library/Application Support/Electron API Demos',
+                '~/Library/Caches/com.electron.electron-api-demos',
+                '~/Library/Saved Application State/com.electron.electron-api-demos.savedState',
+              ]
 end

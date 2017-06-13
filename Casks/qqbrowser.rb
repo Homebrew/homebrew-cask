@@ -2,10 +2,9 @@ cask 'qqbrowser' do
   version :latest
   sha256 :no_check
 
-  url 'http://dldir1.qq.com/invc/tt/QQBrowser_for_Mac.dmg'
+  url 'https://dldir1.qq.com/invc/tt/QQBrowser_for_Mac.dmg'
   name 'QQ浏览器'
   homepage 'http://browser.qq.com/mac/'
-  license :commercial
 
   app 'QQBrowser.app'
 

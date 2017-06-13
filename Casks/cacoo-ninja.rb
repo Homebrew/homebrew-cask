@@ -5,13 +5,14 @@ cask 'cacoo-ninja' do
   url 'http://assets.cacoo.com/extension/151111/CacooNinjaInstaller.dmg'
   name 'Cacoo Ninja'
   homepage 'https://cacoo.com/extension'
-  license :gratis
 
   depends_on cask: 'adobe-air'
 
-  installer script: 'Install Cacoo Ninja.app/Contents/MacOS/Install Cacoo Ninja',
-            args:   %w[-silent],
-            sudo:   true
+  installer script: {
+                      executable: 'Install Cacoo Ninja.app/Contents/MacOS/Install Cacoo Ninja',
+                      args:       %w[-silent],
+                      sudo:       true,
+                    }
 
   uninstall script: {
                       executable: Hbc::Container::Air::INSTALLER_PATHNAME,

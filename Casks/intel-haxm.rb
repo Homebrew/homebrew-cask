@@ -1,15 +1,15 @@
 cask 'intel-haxm' do
-  version '6.0.1'
-  sha256 'b990646aed6cf52baebcf1778a45e6c188241d15bc453be0800ca5dab92271a5'
+  version '6.1.2,62:0b'
+  sha256 '40ab087ffaec9cb7c92feea4e92962039c582378bd12f5d669640b21abcdf2b1'
 
-  url "https://software.intel.com/sites/default/files/managed/dd/21/haxm-macosx_v#{version.dots_to_underscores}.zip"
+  url "https://software.intel.com/sites/default/files/managed/#{version.after_comma.before_colon}/#{version.after_colon}/haxm-macosx_v#{version.before_comma.dots_to_underscores}.zip"
   name 'Intel HAXM'
   homepage 'https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager'
-  license :closed
 
-  installer script:       'silent_install.sh',
-            sudo:         true,
-            must_succeed: true
+  installer script: {
+                      executable: 'silent_install.sh',
+                      sudo:       true,
+                    }
 
   uninstall script: {
                       sudo:         true,

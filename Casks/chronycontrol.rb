@@ -1,11 +1,12 @@
 cask 'chronycontrol' do
-  version '1.1.2'
-  sha256 'b171c2a201f3b9455668d2b283f5a7746b082ef28fcd04cc3aa266302606926c'
+  version '1.1.6'
+  sha256 '8e60ee8176f62af4bc733a576c51d5f2cb9f3294cf167924e7ea6ac33d2b6916'
 
   url "https://www.whatroute.net/software/chronycontrol-#{version}.zip"
+  appcast 'https://whatroute.net/chronycontrol.html',
+          checkpoint: 'ccecf5233d81787186f924b34ad1ee0ba7ed3cc4dcde82bb79b2f554c733edae'
   name 'ChronyControl'
   homepage 'https://whatroute.net/chronycontrol.html'
-  license :unknown
 
   app 'ChronyControl.app'
 

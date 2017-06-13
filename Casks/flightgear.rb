@@ -1,12 +1,18 @@
 cask 'flightgear' do
-  version '2016.2.1'
-  sha256 '86e0bdbe06a7e9660380060fc3e48f3e2d1ee5cf838af3573805db2560a5c720'
+  version '2017.2.1'
+  sha256 '117fb9d18681e52007895c876ab9864aaf99f5b7a7899928bc7e365de4f1b6d7'
 
-  # sourceforge.net/sourceforge/flightgear was verified as official when first introduced to the cask
-  url "http://downloads.sourceforge.net/sourceforge/flightgear/FlightGear-#{version}.dmg"
+  # sourceforge.net/flightgear was verified as official when first introduced to the cask
+  url "https://downloads.sourceforge.net/flightgear/FlightGear-#{version}.dmg"
+  appcast 'https://sourceforge.net/projects/flightgear/rss',
+          checkpoint: 'f3173cad3e18b44b9297ef200ea4d1ea9e171818af279e6fb834f5131d879574'
   name 'FlightGear'
   homepage 'http://www.flightgear.org/'
-  license :gpl
 
   app 'FlightGear.app'
+
+  zap delete: [
+                '/Library/Logs/DiagnosticReports/fgfs*',
+                '~/Library/Application Support/FlightGear',
+              ]
 end

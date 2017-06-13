@@ -7,7 +7,6 @@ cask 'pophub' do
           checkpoint: '2976fdb95c11370d8ba43436dc894700688cb364297166d04afafa1fd8c85512'
   name 'PopHub'
   homepage 'https://github.com/questbeat/PopHub-Electron'
-  license :mit
 
   app 'PopHub.app'
 end

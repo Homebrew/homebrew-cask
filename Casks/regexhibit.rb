@@ -4,8 +4,7 @@ cask 'regexhibit' do
 
   url 'http://roger-jolly.nl/software/downloads/regexhibit/RegExhibit.zip'
   name 'RegExhibit'
-  homepage 'http://roger-jolly.nl/software/#regexhibit'
-  license :gratis
+  homepage 'https://roger-jolly.nl/software/#regexhibit'
 
   app 'RegExhibit.app'
 

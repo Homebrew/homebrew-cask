@@ -1,13 +1,12 @@
 cask 'picat' do
-  version '1.9'
-  sha256 '4d8efcac07fb99aa6a635239509948b730e6589e6348929cb156e871c4f9f748'
+  version '2.1'
+  sha256 '2a51c892388ffc48a7a55b336dfcf7c7dbb0c347bbcaf4038d2f1ea10f9b0097'
 
   url "http://picat-lang.org/download/picat#{version.no_dots}_macx.tar.gz"
   appcast 'http://picat-lang.org/updates.txt',
-          checkpoint: '040b8a4f7befb1c284c3e6e00c97e6659ca8ac9ebc87f37619fd5565972c12f4'
+          checkpoint: 'c2e35787d2c61d8e73ef38369fa0c139e153a24169d43bb8f43a33ba58ae0a39'
   name 'Picat'
   homepage 'http://www.picat-lang.org/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   binary 'Picat/picat'
 end

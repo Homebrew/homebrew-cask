@@ -1,13 +1,12 @@
 cask 'cleartext' do
-  version '1.31'
-  sha256 'c53860370de86d59d81eb1164df1ea17a7824333be4eb2beb52843663dbb5b27'
+  version '2.45'
+  sha256 '4b3d44a0666c2bf2dd838c0f190e9a5678b2dc4d76e83d70fe091295d4cabdbc'
 
-  url "https://github.com/mortenjust/cleartext-mac/releases/download/#{version}/Cleartext#{version}.zip"
+  url "https://github.com/mortenjust/cleartext-mac/releases/download/#{version}/Cleartext.zip"
   appcast 'https://github.com/mortenjust/cleartext-mac/releases.atom',
-          checkpoint: '3bc07ccdbae7659e08df6ddc12c65b83131c8f92fbb6eab473ea6be1fdd34344'
+          checkpoint: 'bfaebff6f178edaefb157c457a0c577c3d63ed0003cd426b2c4837ab4cd8e6cb'
   name 'Cleartext'
   homepage 'https://github.com/mortenjust/cleartext-mac'
-  license :mit
 
   app 'Cleartext.app'
 end

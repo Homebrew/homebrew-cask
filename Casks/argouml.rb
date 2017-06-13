@@ -5,11 +5,10 @@ cask 'argouml' do
   url "http://argouml-downloads.tigris.org/nonav/argouml-#{version}/ArgoUML-#{version}.app.tar.gz"
   name 'ArgoUML'
   homepage 'http://argouml.tigris.org/'
-  license :oss
 
   app 'ArgoUML.app'
 
   caveats do
-    depends_on_java('6')
+    depends_on_java('6+')
   end
 end

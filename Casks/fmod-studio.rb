@@ -1,11 +1,10 @@
 cask 'fmod-studio' do
-  version '10610'
-  sha256 'c31511f0751f334a7a52ce0006b9f6d85c7d556a049e9eb3725a6dd1388c000e'
+  version '10905'
+  sha256 'c19958b654a058370701b5bd31498029883c5c695062cd9bb2f5662079e964b5'
 
-  url "http://www.fmod.org/download/fmodstudio/tool/Mac/fmodstudio#{version}mac-installer.dmg"
+  url "https://www.fmod.org/download/fmodstudio/tool/Mac/fmodstudio#{version}mac-installer.dmg"
   name 'FMOD Studio'
-  homepage 'http://www.fmod.org/products/'
-  license :commercial
+  homepage 'https://www.fmod.org/hub-page/products/'
 
   app 'FMOD Studio/FMOD Studio.app'
 end

@@ -1,12 +1,11 @@
 cask 'sqlpro-for-mysql' do
-  version '1.0.20'
-  sha256 '078d78fad1d998b808f927715939bf343a13c4088c9c2ec6244ae33b62522186'
+  version '1.0.36'
+  sha256 '79c28cdd091a7ff1562faaec01fac8f7300df38cf1d5d3c2a097ab198effff77'
 
   # d3fwkemdw8spx3.cloudfront.net/mysql was verified as official when first introduced to the cask
   url "https://d3fwkemdw8spx3.cloudfront.net/mysql/SQLProMySQL.#{version}.app.zip"
   name 'SQLPro for MySQL'
-  homepage 'http://www.mysqlui.com'
-  license :commercial
+  homepage 'https://www.mysqlui.com/'
 
   app 'SQLPro for MySQL.app'
 

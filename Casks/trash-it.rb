@@ -1,17 +1,17 @@
 cask 'trash-it' do
-  if MacOS.release <= :leopard
-    version '4.1'
-    sha256 'a30ed22452d4c2fcefdbf2d892394524a3744ebd50fdcee2203ff705e648240e'
-    url "http://nonamescriptware.com/wp-content/uploads/TrashIt#{version.delete('.')}.zip"
+  if MacOS.version <= :snow_leopard
+    version '5.2'
+    sha256 '2428fcf10f8641488e1a43f8d64dfa7256129aab9813c1f841c72bf75f11c821'
+    url "http://nonamescriptware.com/wp-content/uploads/TrashIt#{version.no_dots}.zip"
     app "TrashIt #{version}/Drag content to Desktop/Trash It!.app"
   else
-    version '6.0.1'
-    sha256 'c3a45b6f97a210502bc6adbb4f09329de2622ca9cdb999c40bddd55ed6c8f4db'
+    version :latest
+    sha256 :no_check
     url 'http://nonamescriptware.com/wp-content/uploads/Trashit.zip'
     app "Trash It! #{version}/Drag content to Desktop/Trash It!.app"
   end
-
+  appcast 'http://nonamescriptware.com/downloads/',
+          checkpoint: '7a27f7d208c8fdb0e95a83e5981061714feb271e1ce611c4e765285471f75ada'
   name 'Trash It!'
   homepage 'http://nonamescriptware.com/'
-  license :gratis
 end

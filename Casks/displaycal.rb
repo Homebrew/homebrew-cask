@@ -1,19 +1,22 @@
 cask 'displaycal' do
-  version '3.1.3.1'
-  sha256 'fa28c1c7d7ed6f4ea183cf7b367fd35d78ecd921b2750b48d8c23e00933b8126'
+  version '3.3.1.0'
+  sha256 'cd56f7329cc4d8a212176a9ab0521ab4b7b5c31f8b1a94a800b83fbf9a3a779e'
 
   # sourceforge.net/dispcalgui was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/dispcalgui/release/#{version}/DisplayCAL-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/dispcalgui/rss?path=/release',
-          checkpoint: '26d5d205b22c6467ba2ed4852ed5ccb3d799a48fc59188177d29cc8bb504d9f6'
+          checkpoint: '2053110dacb1c889398e46f44af59619283c19af1bddddc56894feee7982d628'
   name 'DisplayCAL'
-  homepage 'https://displaycal.net'
-  license :gpl
+  homepage 'https://displaycal.net/'
 
   depends_on formula: 'argyll-cms'
 
-  # There is no sub-folder in the DMG; the root *is* the folder
-  suite '.', target: 'DisplayCAL'
+  suite 'DisplayCAL'
+
+  preflight do
+    # There is no sub-folder in the DMG; the root *is* the folder
+    FileUtils.mv(staged_path.children, staged_path.join('DisplayCAL').tap(&:mkpath))
+  end
 
   zap delete: [
                 '~/Library/Application Support/dispcalGUI',

@@ -1,5 +1,5 @@
 cask 'lmms' do
-  if MacOS.release <= :snow_leopard
+  if MacOS.version <= :snow_leopard
     version '1.0.99'
     sha256 '2ce390337a2ee372f76812b5c308ac8f3faad6981d99f0eb3b843149e3ebc98c'
 
@@ -14,10 +14,9 @@ cask 'lmms' do
   end
 
   appcast 'https://github.com/LMMS/lmms/releases.atom',
-          checkpoint: 'edae3c2206d544ad9aa0d3627935e63b6b580fb2d7a9011a67715aef5c0f2192'
+          checkpoint: '3c070a7735c4e1a14179cca21fe6232dfa3496ec2320d7d9ebda0927eaa73f16'
   name 'LMMS'
   homepage 'https://lmms.io/'
-  license :gpl
 
   app 'LMMS.app'
 end

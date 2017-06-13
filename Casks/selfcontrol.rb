@@ -1,5 +1,5 @@
 cask 'selfcontrol' do
-  if MacOS.release <= :snow_leopard
+  if MacOS.version <= :snow_leopard
     version '1.5.1'
     sha256 'd3823a1e9ba0b47dc2cb39c93cd51837c2dafc7d5a5a564825f4a440fd2ab9ad'
   else
@@ -9,10 +9,9 @@ cask 'selfcontrol' do
 
   url "http://downloads.selfcontrolapp.com/SelfControl-#{version}.zip"
   appcast 'https://selfcontrolapp.com/SelfControlAppcast.xml',
-          checkpoint: 'ed03ff3ec9c2616091c15546808a244f8780d8ba0d27499d4b3bd4316176fea9'
+          checkpoint: '731efae243c693b57617da396c134fc23263b944b3af7d5e3e77ebf6ed2ab6fe'
   name 'SelfControl'
   homepage 'https://selfcontrolapp.com/'
-  license :gpl
 
   auto_updates true
 

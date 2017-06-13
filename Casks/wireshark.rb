@@ -1,34 +1,43 @@
 cask 'wireshark' do
-  version '2.0.4'
-  sha256 'b78531be77099f4d4b08a1a0fea6dbb777b739ee82255cc83f7de47137ef1627'
+  version '2.2.7'
+  sha256 '6d46e7270fc6b661ece24c0fcaf56c7e4ce4f65501ef055ea46c6cfdf95c6dcb'
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
+  appcast 'https://www.wireshark.org/download/osx/',
+          checkpoint: '6ee31ea196b816cef77baae0b19fb88c6bdef3af8543049d5a293ab3fba60838'
   name 'Wireshark'
   homepage 'https://www.wireshark.org/'
-  license :gpl
+
+  depends_on macos: '>= :mountain_lion'
 
   pkg "Wireshark #{version} Intel 64.pkg"
 
   postflight do
-    if Process.euid == 0
-      ohai 'Note:'
-      puts <<-EOS.undent
-        You executed 'brew cask' as the superuser.
-
-        You must manually add users to group 'access_bpf' in order to use Wireshark
-      EOS
-    else
-      system '/usr/bin/sudo', '-E', '--',
-             '/usr/sbin/dseditgroup', '-o', 'edit', '-a', Etc.getpwuid(Process.euid).name, '-t', 'user', '--', 'access_bpf'
-    end
+    system_command '/usr/sbin/dseditgroup',
+                   args: [
+                           '-o', 'edit',
+                           '-a', Etc.getpwuid(Process.euid).name,
+                           '-t', 'user',
+                           '--', 'access_bpf'
+                         ],
+                   sudo: true
   end
 
-  uninstall script:  {
-                       executable: '/usr/sbin/dseditgroup',
-                       args:       ['-o', 'delete', 'access_bpf'],
-                     },
-            pkgutil: 'org.wireshark.*',
+  uninstall_preflight do
+    set_ownership '/Library/Application Support/Wireshark'
+
+    system_command '/usr/sbin/dseditgroup',
+                   args: [
+                           '-o',
+                           'delete',
+                           'access_bpf',
+                         ],
+                   sudo: true
+  end
+
+  uninstall pkgutil: 'org.wireshark.*',
             delete:  [
+                       '/Library/LaunchDaemons/org.wireshark.ChmodBPF.plist',
                        '/usr/local/bin/capinfos',
                        '/usr/local/bin/dftest',
                        '/usr/local/bin/dumpcap',

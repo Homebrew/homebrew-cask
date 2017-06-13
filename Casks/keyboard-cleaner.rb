@@ -5,7 +5,6 @@ cask 'keyboard-cleaner' do
   url 'http://jan.prima.de/Keyboard_Cleaner.zip'
   name 'Keyboard Cleaner'
   homepage 'http://jan.prima.de/~jan/plok/archives/48-Keyboard-Cleaner.html'
-  license :gratis
 
   app 'Keyboard Cleaner.app'
 end

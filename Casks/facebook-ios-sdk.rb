@@ -1,13 +1,25 @@
 cask 'facebook-ios-sdk' do
-  version '3.24.4'
-  sha256 'dc9ae3e6c9969a03b15e041dd24d7f0d0bdfcd35f8a7eb8d35c2e21434a3a0b3'
+  version '4.23.0'
+  sha256 '696bde4dd67258f288f22a9ba51116180f5e0975b5ca5c10901c2d4866df7de9'
 
-  url "https://origincache.facebook.com/developers/resources/?id=facebook-ios-sdk-#{version}.pkg"
+  url "https://origincache.facebook.com/developers/resources/?id=FacebookSDKs-iOS-#{version}.zip"
   name 'Facebook SDK for iOS'
   homepage 'https://developers.facebook.com/docs/ios'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
-  pkg "facebook-ios-sdk-#{version}.pkg"
+  artifact 'AccountKit.framework', target: "#{ENV['HOME']}/Documents/FacebookSDK/AccountKit.framework"
+  artifact 'AccountKitStrings.bundle', target: "#{ENV['HOME']}/Documents/FacebookSDK/AccountKitStrings.bundle"
+  artifact 'Bolts.framework', target: "#{ENV['HOME']}/Documents/FacebookSDK/Bolts.framework"
+  artifact 'DocSets', target: "#{ENV['HOME']}/Documents/FacebookSDK/DocSets"
+  artifact 'FBAudienceNetwork.framework', target: "#{ENV['HOME']}/Documents/FacebookSDK/FBAudienceNetwork.framework"
+  artifact 'FBNotifications.framework', target: "#{ENV['HOME']}/Documents/FacebookSDK/FBNotifications.framework"
+  artifact 'FBSDKCoreKit.framework', target: "#{ENV['HOME']}/Documents/FacebookSDK/FBSDKCoreKit.framework"
+  artifact 'FBSDKLoginKit.framework', target: "#{ENV['HOME']}/Documents/FacebookSDK/FBSDKLoginKit.framework"
+  artifact 'FBSDKMessengerShareKit.framework', target: "#{ENV['HOME']}/Documents/FacebookSDK/FBSDKMessengerShareKit.framework"
+  artifact 'FBSDKShareKit.framework', target: "#{ENV['HOME']}/Documents/FacebookSDK/FBSDKShareKit.framework"
+  artifact 'FacebookSDKStrings.bundle', target: "#{ENV['HOME']}/Documents/FacebookSDK/FacebookSDKStrings.bundle"
+  artifact 'Samples', target: "#{ENV['HOME']}/Documents/FacebookSDK/Samples"
 
-  uninstall pkgutil: 'com.facebook.sdk.pkg'
+  preflight do
+    system_command '/bin/mkdir', args: ['-p', '--', "#{ENV['HOME']}/Documents/FacebookSDK"]
+  end
 end

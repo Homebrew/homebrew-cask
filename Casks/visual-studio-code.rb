@@ -1,21 +1,26 @@
 cask 'visual-studio-code' do
-  version '1.3.1,e6b4afa53e9c0f54edef1673de9001e9f0f547ae'
-  sha256 'e6a00c76cbfae19f57b7e8d8e2d3296f8507703a8a781652613a855191618b53'
+  version '1.13.0,376c52b955428d205459bea6619fc161fc8faacf'
+  sha256 '98afd41a706f3c13f04aee019f72514f13b8e61cf21b55069aa9679c5bd97de1'
 
   # az764295.vo.msecnd.net was verified as official when first introduced to the cask
   url "https://az764295.vo.msecnd.net/stable/#{version.after_comma}/VSCode-darwin-stable.zip"
   name 'Microsoft Visual Studio Code'
   name 'VS Code'
   homepage 'https://code.visualstudio.com/'
-  license :mit
 
   auto_updates true
+  depends_on macos: '>= :mavericks'
 
   app 'Visual Studio Code.app'
   binary "#{appdir}/Visual Studio Code.app/Contents/Resources/app/bin/code"
 
   zap delete: [
+                '~/.vscode',
                 '~/Library/Application Support/Code',
-                '~/Library/Caches/Code',
+                '~/Library/Caches/com.microsoft.VSCode',
+                '~/Library/Caches/com.microsoft.VSCode.ShipIt',
+                '~/Library/Preferences/com.microsoft.VSCode.helper.plist',
+                '~/Library/Preferences/com.microsoft.VSCode.plist',
+                '~/Library/Saved Application State/com.microsoft.VSCode.savedState',
               ]
 end

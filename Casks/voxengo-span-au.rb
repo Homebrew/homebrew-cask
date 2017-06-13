@@ -1,11 +1,10 @@
 cask 'voxengo-span-au' do
-  version '2.10'
-  sha256 '48cf467a2d3b3be87b4b6ab725dd10f6ecf98cb8bceb090c4b2920989f33d413'
+  version '31'
+  sha256 '025163dbecae1da3c6ca5984109f3b94ee8fcbc6153242a905fa1a202d133efd'
 
-  url "http://www.voxengo.com/files/VoxengoSPAN_#{version.no_dots}_Mac_AU_AAX_setup.dmg"
+  url "https://www.voxengo.com/files/VoxengoSPAN_#{version.no_dots}_Mac_AU_AAX_setup.dmg"
   name 'Voxengo SPAN (AU)'
-  homepage 'http://www.voxengo.com/product/span/'
-  license :gratis
+  homepage 'https://www.voxengo.com/product/span/'
 
   audio_unit_plugin 'SPAN.component'
 end

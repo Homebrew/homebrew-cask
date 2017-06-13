@@ -2,11 +2,10 @@ cask 'keyaccess' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.sassafras.com/links/K2Client.pkg'
+  url 'https://www.sassafras.com/links/K2Client.pkg'
   name 'Sassafras KeyAccess KeyServer Client'
   name 'K2 Client'
-  homepage 'http://www.sassafras.com/support/'
-  license :gratis
+  homepage 'https://www.sassafras.com/support/'
 
   pkg 'K2Client.pkg'
 

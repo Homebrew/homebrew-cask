@@ -4,8 +4,7 @@ cask 'ip-inside-agent-for-citibank' do
 
   url 'https://open.citibank.co.kr/3rdParty/interezen/OSX-MAC/IPinsideAgent.dmg'
   name 'IP inside Agent for CitiBank'
-  homepage 'https://open.citibank.co.kr'
-  license :gratis
+  homepage 'https://open.citibank.co.kr/'
 
   pkg 'IPinsideAgent.pkg'
 

@@ -1,19 +1,14 @@
 cask 'macid' do
-  version '1.3.4'
-  sha256 'c37ee8b3585031e8480d3ed0e14e0e6f24eaadd0467c7110f465288069646fb7'
+  version '1.3.6'
+  sha256 'b13c7018e073007ec5ad2e2b8573b0d1dae7d7be77fb380ac0055ba269fdf80b'
 
-  url "https://macid.co/app/#{version}/MacID%20for%20OS%20X.zip"
+  url "https://macid.co/app/#{version}/MacID%20for%20macOS.zip"
   name 'MacID'
   homepage 'https://macid.co/'
-  license :gratis
 
   depends_on macos: '>= :yosemite'
 
   app 'MacID.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 
   zap delete: '~/Library/Preferences/com.kanecheshire.MacIDOSX.plist'
 end

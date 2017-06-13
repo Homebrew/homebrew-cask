@@ -4,10 +4,9 @@ cask 'cantata' do
 
   url "https://github.com/CDrummond/cantata/releases/download/v#{version}/Cantata-#{version}.dmg"
   appcast 'https://github.com/CDrummond/cantata/releases.atom',
-          checkpoint: 'b29b78442f6e911557c3d356e791ca702865cbccb8d930e81207a8b5d0da05d0'
+          checkpoint: '4421d33d3c8b121da3d7740b2ce6bc356d8f04c6a762581f6787ee2e7cdf1c0d'
   name 'Cantata'
   homepage 'https://github.com/cdrummond/cantata'
-  license :gpl
 
   app 'Cantata.app'
 end

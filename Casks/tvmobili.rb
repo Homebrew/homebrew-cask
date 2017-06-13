@@ -1,13 +1,12 @@
 cask 'tvmobili' do
-  version :latest
-  sha256 :no_check
+  version '2.1.4693'
+  sha256 '6ba5968a1c2c026f671eef5a57d3102a5fc8f972328cfdca6843dcb06724092c'
 
   url 'http://www.tvmobili.com/binaries/stable/tvmobili-yosemite-universal.dmg'
   name 'TVMOBiLi'
   homepage 'http://www.tvmobili.com/'
-  license :commercial
 
-  pkg 'tvmobili-yosemite-universal.2.1.4693.pkg'
+  pkg "tvmobili-yosemite-universal.#{version}.pkg"
 
   uninstall pkgutil:   'com.tvmobili.tvmobilisvcd',
             launchctl: [

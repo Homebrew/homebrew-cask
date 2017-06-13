@@ -1,11 +1,10 @@
 cask 'ddnet' do
-  version '10.1.1'
-  sha256 '7dfc778f6f196e031b29e08cf1fe415554c1c9f64edf0d71bf7514e672387342'
+  version '10.6.3'
+  sha256 '9d3015e9630f24d366c02d771f4ab20a0fbfd9ffe508900d73bc931fca1f3682'
 
   url "https://ddnet.tw/downloads/DDNet-#{version}-osx.dmg"
   name 'DDNet'
   homepage 'https://ddnet.tw/'
-  license :oss
 
   app 'DDNet.app'
   app 'DDNet-Server.app'

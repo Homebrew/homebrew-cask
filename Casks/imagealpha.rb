@@ -1,5 +1,5 @@
 cask 'imagealpha' do
-  if MacOS.release <= :snow_leopard
+  if MacOS.version <= :snow_leopard
     version '1.2.3'
     sha256 '79388edcaf5cb29234f722a672b069c6d51fb812e89969ba8db8e957b9a32bf3'
   else
@@ -12,7 +12,6 @@ cask 'imagealpha' do
   url "https://pngmini.com/ImageAlpha#{version}.tar.bz2"
   name 'ImageAlpha'
   homepage 'https://pngmini.com/'
-  license :gpl
 
   app 'ImageAlpha.app'
 end

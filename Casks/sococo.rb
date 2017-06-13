@@ -1,11 +1,12 @@
 cask 'sococo' do
-  version '0.3.9-9509'
-  sha256 'ff7123c64b062739d07906947482cf6e6bdfd7098f6846fb0578499f52daa50a'
+  version '0.5.4-14344'
+  sha256 '6430e60970265f334a9f5c998c4e05809804119b002169d0d231e2bb3e896464'
 
   url "https://s.sococo.com/rs/client/mac/Sococo-#{version}.dmg"
+  appcast 'https://s.sococo.com/rs/client/latest.json',
+          checkpoint: '8b399c9b48f81ae7340f4d391dee398f4d3533671154f94f85da342c323da45a'
   name 'Sococo'
   homepage 'https://www.sococo.com/'
-  license :freemium
 
   depends_on macos: '>= :lion'
 

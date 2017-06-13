@@ -1,11 +1,10 @@
 cask 'cmake' do
-  version '3.5.1'
-  sha256 'a01c25b90296cabbeeca85c2258336e6ccefc36f93589b4d32af6cd95646a83f'
+  version '3.8.0'
+  sha256 'fc1badbd48a0fdf045498e658627a7e4691c53d02da77439d57a8c2a584fc6a3'
 
   url "https://www.cmake.org/files/v#{version.major_minor}/cmake-#{version}-Darwin-x86_64.dmg"
   name 'CMake'
-  homepage 'https://cmake.org'
-  license :bsd
+  homepage 'https://cmake.org/'
 
   conflicts_with formula: 'cmake'
 

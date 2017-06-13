@@ -1,13 +1,12 @@
 cask 'pullover' do
-  version '1.0.0'
-  sha256 'fa170d7fa4d7144f29df8b5385c5e40f2a0a7fcace5c86e55fe408dc8dbc9f5e'
+  version '1.2.0'
+  sha256 '134b185b095871594f53008fbd91a5c963c67034c8e8462e0919279f0d93e741'
 
   url "https://github.com/cgrossde/Pullover/releases/download/#{version}/Pullover_#{version}.dmg"
   appcast 'https://github.com/cgrossde/Pullover/releases.atom',
-          checkpoint: 'cea85f2af6fbb6955998acd1eb7a483d96ff366768eac6404776b9efb2d37f57'
+          checkpoint: '7610adf404cef72b9a637341c92fcbfdffbc4b5f7dbdd0594862f006b694372d'
   name 'Pullover'
   homepage 'https://github.com/cgrossde/Pullover'
-  license :gpl
 
   app 'pullover.app'
 end

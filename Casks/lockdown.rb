@@ -4,9 +4,10 @@ cask 'lockdown' do
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/Lockdown_#{version}.zip"
+  appcast 'https://objective-see.com/products/changelogs/Lockdown.txt',
+          checkpoint: '864b3e63cc6594f204ae57f5539b293ac937748b828bf3b1543855e0296f12d7'
   name 'Lockdown'
   homepage 'https://objective-see.com/products/lockdown.html'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Lockdown.app'
 end

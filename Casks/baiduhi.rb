@@ -1,12 +1,11 @@
 cask 'baiduhi' do
-  version '1.6.0.0'
-  sha256 '15de7fee8818b6ae9565a15e97fc0c3938041a129bc9cec1a359ddc8dc82590f'
+  version :latest
+  sha256 :no_check
 
-  url "https://bs.baidu.com/app-res/mac/machi_#{version}.dmg"
+  url 'https://im.baidu.com/download/machi_setup.dmg'
   name 'Baidu Hi'
   name '百度 Hi'
-  homepage 'https://im.baidu.com/'
-  license :gratis
+  homepage 'https://hi.baidu.com/'
 
   app '百度Hi.app'
 end

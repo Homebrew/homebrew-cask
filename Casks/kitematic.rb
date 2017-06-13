@@ -1,19 +1,21 @@
 cask 'kitematic' do
-  version '0.10.5'
-  sha256 '1142b3b3934a36cff3ecc322f0773c1fc390219773a21a71fc35b3255bc4a15c'
+  version '0.17.0'
+  sha256 '93ce30f2c953177a8969326259785135830d84c66552467972422214f3253dea'
 
   # github.com/docker/kitematic was verified as official when first introduced to the cask
   url "https://github.com/docker/kitematic/releases/download/v#{version}/Kitematic-#{version}-Mac.zip"
   appcast 'https://github.com/docker/kitematic/releases.atom',
-          checkpoint: '5aca7decc78f2f3182693847a31919d53099b53aa17012c77517180838f8a467'
+          checkpoint: '9187da9aa977402aef3f5bd90a2327c12ba709f574e174269cdf24a629cc457c'
   name 'Kitematic'
   homepage 'https://kitematic.com/'
-  license :apache
 
   app 'Kitematic (Beta).app'
 
   zap delete: [
-                '~/Library/Application Support/Kitematic',
                 '~/Kitematic',
+                '~/Library/Application Support/Kitematic',
+                '~/Library/Caches/Kitematic',
+                '~/Library/Preferences/com.electron.kitematic_(beta).plist',
+                '~/Library/Saved Application State/com.electron.kitematic_(beta).savedState',
               ]
 end

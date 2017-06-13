@@ -4,8 +4,7 @@ cask 'google-photos-backup' do
 
   url 'https://dl.google.com/dl/picasa/gpautobackup_setup.dmg'
   name 'Google Photos Backup'
-  homepage 'https://photos.google.com/'
-  license :gratis
+  homepage 'https://www.google.com/photos/about/'
 
   depends_on macos: '>= :lion'
 

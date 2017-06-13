@@ -1,14 +1,13 @@
 cask 'eclipse-ptp' do
-  version '4.6.0'
-  sha256 '7eab1605dce524abb872185d184e8033b02e8a2c9fd23005a4c15224b4712803'
+  version '4.6.3,neon:3'
+  sha256 'c19e0698efb27d87533cdf92433be1c6a52335226a03bf5583e6ffe34ab62589'
 
-  url 'https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/neon/R/eclipse-parallel-neon-R-macosx-cocoa-x86_64.tar.gz&r=1'
+  url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-parallel-#{version.after_comma.before_colon}-#{version.after_colon}-macosx-cocoa-x86_64.tar.gz&r=1"
   name 'Eclipse for Parallel Application Developers'
   homepage 'https://eclipse.org/'
-  license :eclipse
 
   depends_on macos: '>= :leopard'
-  depends_on arch: :x86_64
 
-  app 'Eclipse.app'
+  # Renamed to avoid conflict with other Eclipse.
+  app 'Eclipse.app', target: 'Eclipse PTP.app'
 end

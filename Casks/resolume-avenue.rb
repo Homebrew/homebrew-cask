@@ -1,14 +1,13 @@
 cask 'resolume-avenue' do
-  version '5.0.4'
-  sha256 '44e668b89916d7a27498c269ee165a6796b78860f23f7815098fcb9e506aa2df'
+  version '4.6.4'
+  sha256 'e6adfd60d07cfa025bd61c1047b4451c07407e1bf67746fa741952c3efbde7ae'
 
   # d19j6z4lvv1vde.cloudfront.net was verified as official when first introduced to the cask
-  url "https://d19j6z4lvv1vde.cloudfront.net/Resolume_Arena_#{version.dots_to_underscores}_Installer.dmg"
+  url "https://d19j6z4lvv1vde.cloudfront.net/Resolume_Avenue_#{version.dots_to_underscores}_Installer.dmg"
   name 'Resolume Avenue'
-  homepage 'https://resolume.com'
-  license :freemium
+  homepage 'https://resolume.com/'
 
   pkg "Resolume Avenue #{version} Installer.pkg"
 
-  uninstall pkgutil: 'com.resolume.*'
+  uninstall pkgutil: 'com.resolume.pkg.ResolumeAvenue*'
 end

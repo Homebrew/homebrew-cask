@@ -1,20 +1,15 @@
 cask 'nzbget' do
-  version '16.4'
-  sha256 '90d7c1282f89e9cab67dd2681b76b45889481fb188ea7de0a06b842b9d7b5589'
+  version '18.1'
+  sha256 '61acf00f3d274127a1e7c687a7215e04f04b76e04319d82b5fbd2556f1bc6c5a'
 
   # github.com/nzbget/nzbget was verified as official when first introduced to the cask
-  url "https://github.com/nzbget/nzbget/releases/download/v#{version}/nzbget-#{version}-bin-osx.zip"
+  url "https://github.com/nzbget/nzbget/releases/download/v#{version}/nzbget-#{version}-bin-macos.zip"
   appcast 'https://github.com/nzbget/nzbget/releases.atom',
-          checkpoint: '8baed2fe56a2d408266e7d5aa88285ffbd46184f2717da1d7d6b3039d79dac31'
+          checkpoint: 'fb133a71209efc75adc7820600ad76d7738a9d4346623b23aae97319d2df4cdb'
   name 'NZBGet'
-  homepage 'http://nzbget.net'
-  license :gpl
+  homepage 'https://nzbget.net/'
 
   app 'NZBGet.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 
   zap delete: [
                 '~/Library/Application Support/NZBGet',

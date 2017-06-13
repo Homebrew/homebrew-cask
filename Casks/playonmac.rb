@@ -1,11 +1,12 @@
 cask 'playonmac' do
-  version '4.2.10'
-  sha256 '825bfd9ce432aebb6515ce34ff8de7916392a5c1c80f87e711114f12e8a2f259'
+  version '4.2.11'
+  sha256 '489e6806b2952cad193abd4918ce597c27b105ffe645d044219c766862193d64'
 
   url "http://repository.playonmac.com/PlayOnMac/PlayOnMac_#{version}.dmg"
+  appcast "https://github.com/PlayOnLinux/POL-POM-#{version.major}/releases.atom",
+          checkpoint: 'a4859d74522483388025f71b5bb45ea53ca9f6a5892163a92fa7168c010e7fd9'
   name 'PlayOnMac'
   homepage 'https://www.playonmac.com/en'
-  license :gpl
 
   app 'PlayOnMac.app'
 end

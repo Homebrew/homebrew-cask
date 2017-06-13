@@ -6,18 +6,19 @@ cask 'amazon-drive' do
   url 'https://d29x207vrinatv.cloudfront.net/mac/AmazonDriveInstaller.dmg'
   name 'Amazon Drive'
   homepage 'https://www.amazon.com/clouddrive/home/'
-  license :gratis
 
-  installer script: 'Amazon Drive Installer.app/Contents/MacOS/Amazon Drive Installer',
-            sudo:   false
+  installer script: 'Amazon Drive Installer.app/Contents/MacOS/Amazon Drive Installer'
 
   uninstall quit:   'com.amazon.clouddrive.mac',
             delete: '/Applications/Amazon Drive.app'
 
   zap delete: [
+                '~/Library/Logs/Amazon Cloud Drive/',
                 '~/Library/Logs/Amazon Drive/',
                 '~/Library/Preferences/com.amazon.clouddrive.mac.plist',
+                '~/Library/Application Scripts/Amazon Cloud Drive/',
                 '~/Library/Application Support/Amazon Drive/',
+                '~/Library/Caches/com.amazon.clouddrive.mac/',
                 '~/Library/Cookies/com.amazon.clouddrive.mac.binarycookies',
               ]
 end

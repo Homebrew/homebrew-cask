@@ -1,14 +1,21 @@
 cask 'iconjar' do
-  version '0.9.1,37'
-  sha256 '21ef48d3eb108fefa17d2a925185e65cb6e96b52dd42ac93c137ee29a19d51d3'
+  version '1.4.0,21992:1496262966'
+  sha256 'b7ad0428dfcfb9d80fdd4c4b9bed11eb6a6f6da7b03722e82d7e3594ed9a9cf7'
 
-  # hockeyapp.net/api/2/apps/b91fcb22f1ac5013dad6ffde2dca7c79 was verified as official when first introduced to the cask
-  url "https://rink.hockeyapp.net/api/2/apps/b91fcb22f1ac5013dad6ffde2dca7c79/app_versions/#{version.after_comma}?format=zip"
-  appcast 'https://rink.hockeyapp.net/api/2/apps/b91fcb22f1ac5013dad6ffde2dca7c79',
-          checkpoint: '8ea50864567ba09ecde773b1360aef55c532f1dcaa6693e248b48e9b8f0b27ce'
+  # dl.devmate.com/com.iconjar.iconjar was verified as official when first introduced to the cask
+  url "https://dl.devmate.com/com.iconjar.iconjar/#{version.after_comma.before_colon}/#{version.after_colon}/Iconjar-#{version.after_comma.before_colon}.zip"
+  appcast 'https://updates.devmate.com/com.iconjar.iconjar.xml',
+          checkpoint: '310ccafa85b89c7fb219ec6680fa731573bcbf8fc87507d25eb879df508c9f35'
   name 'IconJar'
-  homepage 'http://geticonjar.com/'
-  license :gratis
+  homepage 'https://geticonjar.com/'
+
+  auto_updates true
 
   app 'IconJar.app'
+
+  zap delete: [
+                '/Users/Shared/IconJar',
+                '~/Library/Application Support/IconJar',
+                '~/Library/Preferences/com.iconjar.iconjar.plist',
+              ]
 end

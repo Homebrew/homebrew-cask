@@ -122,6 +122,12 @@ App Name on Disk       | Simplified App Name | Cask Token       | Filename
 
 # Token Overlap
 
-When the token for a new Cask would otherwise conflict with the token of an already existing Cask, the nature of that overlap dictates the token (for possibly both Casks). See [Finding a Home For Your Cask](../development/adding_a_cask.md#finding-a-home-for-your-cask) for information on how to proceed.
+## With another Cask
+
+When the token for a new Cask would otherwise conflict with the token of an already existing Cask, the nature of that overlap dictates the token (for possibly both Casks). See [Forks and Apps with Conflicting Names](../development/adding_a_cask.md#forks-and-apps-with-conflicting-names) for information on how to proceed.
+
+## With a formula
+
+If a Homebrew formula and a Homebrew-Cask cask both exist with the same token and they both refer to the same app — respectively a CLI and a GUI — and the GUI app is simply a wrapper of the CLI tool but has been decided to provide enough value to warrant the inclusion of both the formula and the cask, the cask will have the `-app` suffix. This is the only instance where an `-app` suffix is allowed, precisely so the “why” is clear when you know the rule.
 
 # <3 THANK YOU TO ALL CONTRIBUTORS! <3

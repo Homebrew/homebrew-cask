@@ -1,11 +1,10 @@
 cask 'nomachine' do
-  version '5.1.26_1'
-  sha256 '837d4cc8049ddccef287ad9fec29c4c009f426f56a32b8c8b1396ced2e80b6f8'
+  version '5.3.9_7'
+  sha256 'cc9bffba27d511dc74da7421500eb0362a5b5f1d9fe88dba8871c666ffe18ef8'
 
-  url "http://download.nomachine.com/download/#{version.split('.')[0..1].join('.')}/MacOSX/nomachine_#{version}.dmg"
+  url "http://download.nomachine.com/download/#{version.major_minor}/MacOSX/nomachine_#{version}.dmg"
   name 'NoMachine'
   homepage 'https://www.nomachine.com/'
-  license :gratis
 
   pkg 'NoMachine.pkg'
 

@@ -1,14 +1,13 @@
 cask 'openemu' do
-  version '2.0.2'
-  sha256 'fb05076541a973ee126afd798ea1ffda596be575d44660fece494d57624aed59'
+  version '2.0.5'
+  sha256 '83ab82bb89b2e8244d7a704927a1280c3b0166d9d2d416e072b99a6d68081923'
 
   # github.com/OpenEmu/OpenEmu was verified as official when first introduced to the cask
   url "https://github.com/OpenEmu/OpenEmu/releases/download/v#{version}/OpenEmu_#{version}.zip"
   appcast 'https://github.com/OpenEmu/OpenEmu/releases.atom',
-          checkpoint: '1ebf17155f39b0d5e31e33e067bc86b3fc75772c084e3f231902e940511cb2cd'
+          checkpoint: 'd6afba37317ede3d0b2717c65f380aca59858f2ca965a5d1d0823e4154b5c765'
   name 'OpenEmu'
   homepage 'http://openemu.org/'
-  license :oss
 
   depends_on macos: '>= :el_capitan'
 

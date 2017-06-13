@@ -1,18 +1,26 @@
 cask 'mysimbl' do
-  version '0.2.6'
-  sha256 '077069e66ae076d392e88b88f9e313b477bfe613b0ba7463332cceadde65c8fc'
+  version '0.5.1'
+  sha256 'c57c40a4d93eee94c7f2a68f1ef4aa314eb61fa1012e6ebe248afef42bc48090'
 
   # githubusercontent.com/w0lfschild/app_updates/master/mySIMBL was verified as official when first introduced to the cask
   url "https://raw.githubusercontent.com/w0lfschild/app_updates/master/mySIMBL/mySIMBL_#{version}.zip"
   appcast 'https://raw.githubusercontent.com/w0lfschild/app_updates/master/mySIMBL/appcast.xml',
-          checkpoint: '835deb468f1af3b7863ddabeaeccb67d47405698c53a8ffbd5be59e72334b291'
+          checkpoint: '7923369a4c5ca5e6df3a493697327505a974abd0bb7b25b893a31151c7150555'
   name 'mySIMBL'
   homepage 'https://github.com/w0lfschild/mySIMBL'
-  license :bsd
 
   conflicts_with cask: 'easysimbl'
 
   app 'mySIMBL.app'
+
+  zap delete: [
+                '~/Library/Application Support/mySIMBL',
+                '~/Library/Caches/org.w0lf.mySIMBL',
+                '~/Library/Caches/org.w0lf.mySIMBLAgent',
+                '~/Library/Preferences/org.w0lf.SIMBLAgent.plist',
+                '~/Library/Preferences/org.w0lf.mySIMBL.plist',
+                '~/Library/Preferences/org.w0lf.mySIMBLAgent.plist',
+              ]
 
   caveats 'System Integrity Protection must be disabled to install SIMBL.'
 end

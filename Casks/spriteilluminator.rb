@@ -1,13 +1,12 @@
 cask 'spriteilluminator' do
-  version '1.3.0'
-  sha256 'f8eb5acc5abc7ecc5edcfc795f1018bf1ca974360f4dfa814cc829a036596f77'
+  version '1.4.0'
+  sha256 '111d8df09a4fe622be8f0478ed2cb1f45dc2b31cf3d2c99510cfcfe6a2e1123c'
 
   url "https://www.codeandweb.com/download/spriteilluminator/#{version}/SpriteIlluminator-#{version}-uni.dmg"
   appcast 'https://www.codeandweb.com/releases/SpriteIlluminator/appcast-mac-release.xml',
-          checkpoint: 'b295ea112a460f8f2217d40710412ba10b9756eae2d2579f39990949a982f0cf'
+          checkpoint: '7a3684dfc6d725649c818593de6e825476f1a1091518a47d59622a87ee2aac2d'
   name 'SpriteIlluminator'
   homepage 'https://www.codeandweb.com/spriteilluminator'
-  license :commercial
 
   app 'SpriteIlluminator.app'
 end

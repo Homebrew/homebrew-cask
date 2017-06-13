@@ -1,11 +1,10 @@
 cask 'rekordbox' do
-  version '4.0.5'
-  sha256 'f7c92ad81a4c6bf942eb99e575b60012350ec58fb76a28a6d4311dda597d4d3b'
+  version '4.3.1'
+  sha256 'a9eec817e25936ec920de2948430f1a364909c97ae73aee64fc815c303e5f950'
 
   url "https://rekordbox.com/_app/files/Install_rekordbox_#{version.dots_to_underscores}.pkg.zip"
   name 'rekordbox'
   homepage 'https://rekordbox.com/en/'
-  license :closed
 
   pkg "Install_rekordbox_#{version.dots_to_underscores}.pkg"
 

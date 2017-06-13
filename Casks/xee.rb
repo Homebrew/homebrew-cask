@@ -5,7 +5,13 @@ cask 'xee' do
   url "http://xee.c3.cx/downloads/Xee#{version}.dmg"
   name 'Xee³'
   homepage 'https://xee.c3.cx/'
-  license :commercial
 
   app 'Xee³.app'
+
+  zap delete: [
+                '~/Library/Application Support/Xee³',
+                '~/Library/Caches/cx.c3.Xee3',
+                '~/Library/Cookies/cx.c3.Xee3.binarycookies',
+                '~/Library/Preferences/cx.c3.Xee3.plist',
+              ]
 end

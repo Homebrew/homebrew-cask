@@ -1,24 +1,19 @@
 cask 'bartender' do
-  version '2.0.7'
-  sha256 'e96ee3ab2fe6bca413a16899cd1388e69a58ac00ab87e597138163d0632a1689'
+  version '2.1.6'
+  sha256 '013bb1f5dcc29ff1ecbc341da96b6e399dc3c85fc95bd8c7bee153ab0d8756f5'
 
   url "https://macbartender.com/B2/updates/#{version.dots_to_hyphens}/Bartender%20#{version.major}.zip",
-      referer: 'http://www.macbartender.com'
-  appcast 'https://www.macbartender.com/B2/updates/updates.php',
-          checkpoint: 'e659a2a6c64eb2bddda4027c34538e146ae46775dae606c391b6da19e5013b4c'
+      referer: 'https://www.macbartender.com'
+  appcast "https://www.macbartender.com/B#{version.major}/updates/updates.php",
+          checkpoint: 'b119cbc503ce671c5aa1a16dc11704b5baed00a6de3d4b344837b854cc47d4c1'
   name 'Bartender'
   homepage 'https://www.macbartender.com/'
-  license :commercial
 
   auto_updates true
 
   app "Bartender #{version.major}.app"
 
-  postflight do
-    suppress_move_to_applications
-  end
-
-  uninstall login_item: 'Bartender 2'
+  uninstall login_item: "Bartender #{version.major}"
 
   zap delete: [
                 '/Library/ScriptingAdditions/BartenderHelper.osax',

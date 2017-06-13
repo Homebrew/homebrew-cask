@@ -5,9 +5,6 @@ cask 'people-plus-content-ip' do
   url "http://www.polycom.co.uk/content/dam/polycom/common/documents/firmware/PPCIPmac_v#{version}.dmg.zip"
   name 'People + Content IP'
   homepage 'http://www.polycom.co.uk/products-services/hd-telepresence-video-conferencing/realpresence-accessories/people-content-ip.html#stab1'
-  license :gratis
-
-  container nested: "PPCIPmac_v#{version}.dmg"
 
   app 'People + Content IP.app'
 end

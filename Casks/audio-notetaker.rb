@@ -2,10 +2,9 @@ cask 'audio-notetaker' do
   version :latest
   sha256 :no_check
 
-  url 'http://link.sonocent.com/AudioNotetaker/Mac/Download'
+  url 'https://link.sonocent.com/AudioNotetaker/Mac/Download'
   name 'Audio Notetaker'
-  homepage 'http://www.sonocent.com/en/the_software/audio_notetaker'
-  license :commercial
+  homepage 'https://www.sonocent.com/en-us/audio-notetaker/'
 
   app 'Audio Notetaker.app'
 end

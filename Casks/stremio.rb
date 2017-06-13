@@ -1,11 +1,10 @@
 cask 'stremio' do
-  version '3.5.9'
-  sha256 'eae503c5c93b09bc19ce363f28dc055127ab0f76c1faa1a5a9d741de885ae527'
+  version '3.6.5'
+  sha256 '079a39585cd50be2b914ecb1437295f87b894fa28816925d2382232bb0625fe8'
 
-  url "http://dl.strem.io/Stremio%20#{version}.dmg"
+  url "https://dl.strem.io/Stremio%20#{version}.dmg"
   name 'Stremio'
-  homepage 'http://www.strem.io/'
-  license :gratis
+  homepage 'https://www.strem.io/'
 
   app 'Stremio.app'
 end

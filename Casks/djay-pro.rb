@@ -1,13 +1,12 @@
 cask 'djay-pro' do
-  version '1.3.1,201604300753'
-  sha256 '6e38d3eb23eb3b2e0e2394bd4029211fae2c27184c295911c9d163f004169fdd'
+  version '1.4.3,201703200957'
+  sha256 'a2d1af6130a5e2de76c3abe85fafff8047f4160b98d7a55ba5df39b30c6e13e0'
 
   url "http://download.algoriddim.com/djay/#{version.after_comma}/djay_Pro_#{version.before_comma}.zip"
   appcast 'https://www.algoriddim.com/djay-pro-mac/releasenotes/appcast',
-          checkpoint: '48e1032e6268f88bddc1757b2fc0294f9b7a027234ed85bbab06506315fdcbb1'
+          checkpoint: '6c669e49621bc10770238d0207b157789a534ba3b952a463354cc8d1e340fdcb'
   name 'Algoriddim djay Pro'
-  homepage 'http://algoriddim.com/djay-mac'
-  license :commercial
+  homepage 'https://www.algoriddim.com/djay-pro-mac'
 
   app 'djay Pro.app'
 end

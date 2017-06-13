@@ -1,11 +1,12 @@
 cask 'robofont' do
-  version '1.6,1410152315'
-  sha256 'fb2fd390868a32fb9e89490081f3f052e65c1156ee32b39cac1c799b87abc4c7'
+  version '1.8.1,1612102134'
+  sha256 '923b0d7f72a4e155e86fc9afa1e657dc240662d7470f5d93162b13c2359dd936'
 
   url "http://robofont.com/downloads/RoboFont_#{version.after_comma}.dmg"
+  appcast 'http://robofont.com/downloads/',
+          checkpoint: '7aedb4426631691f11efb84e3bd2169e6bff8eebaffa3d33d2ddc74ef784cdc1'
   name 'RoboFont'
-  homepage 'http://robofont.com'
-  license :other # See http://doc.robofont.com/license-agreement/
+  homepage 'https://doc.robofont.com/'
 
   depends_on macos: '>= :mavericks'
 

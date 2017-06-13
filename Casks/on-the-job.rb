@@ -4,9 +4,10 @@ cask 'on-the-job' do
 
   # stunt.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://stunt.s3.amazonaws.com/onthejob_#{version}.zip"
+  appcast 'https://stuntsoftware.com/onthejob/',
+          checkpoint: 'd5484f706bf70812fc7f6091244e71c4f5e326d8d978b2363a6af75e5272088b'
   name 'On The Job'
   homepage 'https://stuntsoftware.com/onthejob/'
-  license :commercial
 
   app 'On The Job.app'
 end

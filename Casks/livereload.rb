@@ -6,8 +6,7 @@ cask 'livereload' do
   appcast 'https://s3.amazonaws.com/download.livereload.com/LiveReload-Mac-appcast.xml',
           checkpoint: '755f681d6ccf6d2e69dc86ac31f69c131632cc9f4a11554c46277d6824256213'
   name 'LiveReload'
-  homepage 'http://livereload.com'
-  license :oss
+  homepage 'http://livereload.com/'
 
   app 'LiveReload.app'
 end

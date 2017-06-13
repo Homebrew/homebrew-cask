@@ -1,13 +1,12 @@
 cask 'historyhound' do
-  version '1.9.11'
-  sha256 '125cda1a46a2757128a48d49ef8c755fa7ec8d13040875fe29d0133a4518d5ae'
+  version '1.9.12'
+  sha256 'f2bf9a68026868a0b2ed41516c42cc52323bdf7bfdbbe4c1d311b442a88b740c'
 
   url "https://www.stclairsoft.com/download/HistoryHound-#{version}.dmg"
   appcast 'https://www.stclairsoft.com/cgi-bin/sparkle.cgi?HH',
-          checkpoint: '9eca11b0d4be87890ebb4a9bb49680959786890978187876469597a961415646'
+          checkpoint: '5ba20222c0ce71b65a16b25afbbdc5147f8d05105df8e25c269fc4d353620d15'
   name 'HistoryHound'
   homepage 'https://www.stclairsoft.com/HistoryHound/'
-  license :commercial
 
   app 'HistoryHound.app'
 end

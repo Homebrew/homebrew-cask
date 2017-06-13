@@ -1,13 +1,12 @@
 cask 'klatexformula' do
-  version '3.3.0beta'
-  sha256 '7b1ac67dec83010acce4da00d1a10c6bab3921e9eedb7e88322f8b3bf987c104'
+  version '4.0.0'
+  sha256 '2204da5aef0e30a3a4fd4d4e8d372a9a139589b99c12254c6f30f2553f1f0d94'
 
-  url "http://downloads.sourceforge.net/project/klatexformula/klatexformula/klatexformula-#{version}/klatexformula-#{version}-macosx.dmg"
+  url "https://downloads.sourceforge.net/klatexformula/klatexformula/klatexformula-#{version}/klatexformula-#{version}-macosx.dmg"
   appcast 'https://sourceforge.net/projects/klatexformula/rss?path=/klatexformula',
-          checkpoint: 'cd0d0e88a5c1fe433a1ade7d4bb6d052271db9496204353e77ca2f5307a871a5'
+          checkpoint: '089e768852081144675a63ccf60590358830e77bcd765063b09c5777ced7b031'
   name 'KLatexFormula'
-  homepage 'http://klatexformula.sourceforge.net'
-  license :gpl
+  homepage 'http://klatexformula.sourceforge.net/'
 
-  app 'KLatexFormula.app'
+  app 'klatexformula.app'
 end

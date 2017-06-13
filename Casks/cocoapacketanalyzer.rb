@@ -1,13 +1,12 @@
 cask 'cocoapacketanalyzer' do
-  version '1.31'
-  sha256 'fc3586868fcf90e3ca766c31dbf184de78e5c907210dfdabbd13a831712fc864'
+  version '1.51'
+  sha256 '8d1e27ce1f53cd393792df4ac9f87b2d51551e48ec912049b673a4700937534d'
 
-  url "http://tastycocoabytes.com/_downloads/CPA_#{version.delete('.')}.dmg"
+  url "http://tastycocoabytes.com/_downloads/CPA_#{version.no_dots}.dmg"
   appcast 'http://www.tastycocoabytes.com/cpa/updates/appcasting.php',
-          checkpoint: '9813fa52c69e2e54f5ba108352aa7d4a570a136a66dd4d94fb9b10ff959430e3'
+          checkpoint: '381d5769dd82422e539c9076baa73877a1489b48b2393ba26651e39a8c2fc53d'
   name 'Cocoa Packet Analyzer'
   homepage 'http://www.tastycocoabytes.com/cpa/'
-  license :gratis
 
   app 'CocoaPacketAnalyzer.app'
 end

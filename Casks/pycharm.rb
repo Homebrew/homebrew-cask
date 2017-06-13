@@ -1,17 +1,20 @@
 cask 'pycharm' do
-  version '2016.1.4'
-  sha256 '2f395a34f2e799eebd034a77fd895f20c1a2c2e8bfa9c85b07f848dc216192b4'
+  version '2017.1.3,171.4424.42'
+  sha256 '88d336affb96ba9ca324fb991068ef52cff63ac35c4c0ffee617d86346a8452c'
 
-  url "https://download.jetbrains.com/python/pycharm-professional-#{version}.dmg"
+  url "https://download.jetbrains.com/python/pycharm-professional-#{version.before_comma}.dmg"
+  appcast 'https://data.services.jetbrains.com/products/releases?code=PCP&latest=true&type=release',
+          checkpoint: '9b6d801ed3b6245b366f94b43b72d074cf782d5004c3eb5193906d651d8eafff'
   name 'PyCharm'
   homepage 'https://www.jetbrains.com/pycharm/'
-  license :commercial
 
-  conflicts_with cask: 'pycharm-eap'
+  auto_updates true
 
   app 'PyCharm.app'
 
-  uninstall delete: '/usr/local/bin/charm'
+  uninstall_postflight do
+    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'charm') }.each { |path| File.delete(path) if File.exist?(path) }
+  end
 
   zap delete: [
                 "~/Library/Preferences/PyCharm#{version.major_minor}",

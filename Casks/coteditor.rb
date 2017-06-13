@@ -1,28 +1,39 @@
 cask 'coteditor' do
-  if MacOS.release <= :snow_leopard
+  if MacOS.version <= :snow_leopard
     version '1.3.1'
     sha256 '5c871bd9de30fc3c76fc66acb4ea258d4d3762ae341181d65a7ef1f8de4751c5'
     # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
     url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}_For10.4.dmg"
-  elsif MacOS.release <= :lion
+  elsif MacOS.version <= :lion
     version '1.5.4'
     sha256 '444133083698c7c94c2b029644f39a0e36982ae34c24745789fa890626188347'
     # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
     url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
+  elsif MacOS.version <= :mavericks
+    version '2.5.7'
+    sha256 'f2c6eed9bfa31999f559396642e7bec0eb90ce0e3398f266fed8b3db5bdab37c'
+    # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
+    url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   else
-    version '2.5.6'
-    sha256 '36cf286ddfe9c00fdaf1723de02f9390f87d582d081fc7049f70c7b5d2992ead'
+    version '3.1.8'
+    sha256 '353c0b459ceb4f4c631544b798d6ae66d9358c56a01889cc5608422f7d144a4c'
     # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
     url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   end
 
   appcast 'https://github.com/coteditor/CotEditor/releases.atom',
-          checkpoint: '5268af6fb256739cd81e610a4c814042a84c13621f299ecf2cd9bf9c307e6400'
+          checkpoint: '744ebe87db1c0b4baf75d6a0e861a5892f88f254758d3eaa8d270dbb6ced768e'
   name 'CotEditor'
   homepage 'https://coteditor.com/'
-  license :apache
 
   app 'CotEditor.app'
+  binary "#{appdir}/CotEditor.app/Contents/SharedSupport/bin/cot", target: 'cot'
 
-  zap delete: '~/Library/Containers/com.coteditor.CotEditor'
+  zap delete: [
+                '~/Library/Application Scripts/com.coteditor.CotEditor',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.coteditor.coteditor.sfl',
+                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.coteditor.CotEditor.help',
+                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/Japanese/HelpSDMIndexFile/com.coteditor.CotEditor.help',
+                '~/Library/Containers/com.coteditor.CotEditor',
+              ]
 end

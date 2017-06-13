@@ -1,22 +1,19 @@
 cask 'monodraw' do
-  version 'b88'
-  sha256 '233cc3b96681bb3dc6358ca846ad1b938b5fa1d77834f7fca149fa15d5deec96'
+  version 'b97'
+  sha256 'df8665c7d9aabf92114b37fc305e57ca7f920b9d5bef3352d3053a33427a4290'
 
-  url "http://updates.helftone.com/monodraw/downloads/Monodraw-#{version}.zip"
-  appcast 'http://updates.helftone.com/monodraw/appcast-beta.xml',
-          checkpoint: 'd8023e46e9ab868fd198e0c403776749e74a2d1dd431d9c4af503f3c405b5402'
+  url "https://updates.helftone.com/monodraw/downloads/Monodraw-#{version}.zip"
+  appcast 'https://updates.helftone.com/monodraw/appcast-beta.xml',
+          checkpoint: 'd50ef187befb26c6366d68b897525ebdcc3cd952cfd86a7001cceeb4f8976efe'
   name 'Monodraw'
-  homepage 'http://monodraw.helftone.com'
-  license :commercial
+  homepage 'https://monodraw.helftone.com/'
 
   app 'Monodraw.app'
 
-  postflight do
-    suppress_move_to_applications
-  end
-
   zap delete: [
-                '~/Library/Preferences/com.helftone.monodraw.plist',
+                '~/Library/Application Support/com.helftone.monodraw',
                 '~/Library/Caches/com.helftone.monodraw',
+                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.helftone.monodraw.help',
+                '~/Library/Preferences/com.helftone.monodraw.plist',
               ]
 end

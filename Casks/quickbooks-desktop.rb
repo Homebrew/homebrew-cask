@@ -5,7 +5,6 @@ cask 'quickbooks-desktop' do
   url "https://http-download.intuit.com/http.intuit/Downloads/#{version}/Latest/QuickBooksMac#{version}.dmg"
   name 'QuickBooks Desktop'
   homepage 'https://quickbooks.intuit.com/mac/'
-  license :commercial
 
   app "QuickBooks #{version}.app"
 end

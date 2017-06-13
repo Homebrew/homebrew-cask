@@ -1,13 +1,12 @@
 cask 'doxygen' do
-  version '1.8.11'
-  sha256 '81ce64ad3d9b72de1b6eebd0a316d364f7e97d43b604875b20fe444f12cfceab'
+  version '1.8.13'
+  sha256 '3fa2327580ddbfdbcfd2925c63a1b1e4ae05227b2771542a555d546da64ea517'
 
-  url "http://ftp.stack.nl/pub/users/dimitri/Doxygen-#{version}.dmg"
+  url "https://ftp.stack.nl/pub/users/dimitri/Doxygen-#{version}.dmg"
   appcast 'https://www.stack.nl/~dimitri/doxygen/manual/changelog.html',
-          checkpoint: '47d68c2c457a2d6e3840bd189da9d6f4b4b71389e0bf17166a673d60703dd8dd'
+          checkpoint: '76768ca4023acd09ee3509c46cb9091f721bbdcbee3ab86816eab1ea8f5fe5ee'
   name 'Doxygen'
   homepage 'https://www.stack.nl/~dimitri/doxygen/'
-  license :gpl
 
   app 'Doxygen.app'
 end

@@ -4,10 +4,9 @@ cask 'audioscrobbler' do
 
   url "https://github.com/mxcl/Audioscrobbler.app/releases/download/#{version}/Audioscrobbler-#{version}.zip"
   appcast 'https://github.com/mxcl/Audioscrobbler.app/releases.atom',
-          checkpoint: '5f88616335c5cdc4e6355a1dc2f8ac0ff9062bee4b653e631e1b48e301329946'
+          checkpoint: 'c222292ffd9650b768c3d0777af0afcba066cd7c099870f7bb47da8c54c33956'
   name 'Audioscrobbler'
   homepage 'https://github.com/mxcl/Audioscrobbler.app'
-  license :gpl
 
   app 'Audioscrobbler.app'
 end

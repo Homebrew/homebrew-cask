@@ -1,14 +1,13 @@
 cask 'pomotodo' do
-  version '0.13.3,1458914986'
-  sha256 '8ff2279ffd9e7efa7d3018df36ece019b2b6ca74d1e926f5c7a5a1ca12f436c6'
+  version '3.1.6,1491546051'
+  sha256 'b4fab1c02498d189aec1e4b50d88fdc56cd99841b8ddc1a48764102711c09541'
 
   # cdn.hackplan.com/theair was verified as official when first introduced to the cask
   url "http://cdn.hackplan.com/theair/#{version.after_comma}/Pomotodo_v#{version.before_comma}.dmg"
   appcast 'http://air.hackplan.com/projects/5455f382437315386000d4d5/versions/latest.xml',
-          checkpoint: '30f76b576eba5c4a718e3284dc3bbab396f9f384ea5b21f9349b5c56e02cc104'
+          checkpoint: '8f67471dd199a1fdaeda4e5aad44226e85e40c556f946bd141e7e691e45b7fcc'
   name 'Pomodoro'
-  homepage 'https://pomotodo.com'
-  license :gratis
+  homepage 'https://pomotodo.com/'
 
   app 'Pomotodo.app'
 end

@@ -1,11 +1,12 @@
 cask 'texmacs' do
-  version '1.99.4'
-  sha256 '7065db07e8190c9d211dd32b6e3e711cc9c49210c51afe6fc273fe50aa9c9e3d'
+  version '1.99.5'
+  sha256 '6f560861a25439a3a4e314098ed096a3416581eab90ace89c7055e2eb34f7e2e'
 
   url "http://www.texmacs.org/Download/ftp/tmftp/macos/TeXmacs-#{version}.dmg"
+  appcast 'http://www.texmacs.org/tmweb/download/macosx.en.html',
+          checkpoint: '3631d7cd770cb0bf2b23e8b10a330e7ddfbece85c49fc74e6531e83e0bb00778'
   name 'GNU TeXmacs'
   homepage 'http://www.texmacs.org/'
-  license :gpl
 
   app "TeXmacs-#{version}.app"
 

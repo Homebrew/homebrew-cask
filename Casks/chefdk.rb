@@ -1,12 +1,20 @@
 cask 'chefdk' do
-  version '0.15.16-1'
-  sha256 '3be88aa75d68824a01c9e9f4e3104930a67877c8cd92976b57f5d300228a597f'
+  if MacOS.version == :mountain_lion
+    version '0.11.2-1'
+    sha256 '56899eab322cacac7f445a24d3159af34fccb5910642f4535eff4ee47321fe56'
+  else
+    version '1.4.3-1'
+    sha256 '5791d9d7303afcc1fc5cc64c8eb53e2344302f9732be1c543ed48ee8f9a9ab33'
+  end
 
-  url "https://packages.chef.io/stable/mac_os_x/10.11/chefdk-#{version}.dmg"
+  url "https://packages.chef.io/stable/mac_os_x/#{MacOS.version}/chefdk-#{version}.dmg"
+  appcast "https://www.chef.io/chef/metadata-chefdk?p=mac_os_x&pv=#{MacOS.version}&m=x86_64&v=latest&prerelease=false",
+          checkpoint: '6d323ad700e3b0f2a0ec55b37dc331c37c124a77d326b1ede19a91acdb46ddee'
   name 'Chef Development Kit'
   name 'ChefDK'
-  homepage 'https://downloads.chef.io/chef-dk/'
-  license :apache
+  homepage 'https://downloads.chef.io/chefdk'
+
+  depends_on macos: '>= :mountain_lion'
 
   pkg "chefdk-#{version}.pkg"
 
@@ -23,11 +31,12 @@ cask 'chefdk' do
                        '/usr/local/bin/chef-client',
                        '/usr/local/bin/chef-shell',
                        '/usr/local/bin/chef-solo',
-                       '/usr/local/bin/chef-zero',
+                       '/usr/local/bin/chef-vault',
                        '/usr/local/bin/cookstyle',
+                       '/usr/local/bin/dco',
                        '/usr/local/bin/delivery',
-                       '/usr/local/bin/fauxhai',
                        '/usr/local/bin/foodcritic',
+                       '/usr/local/bin/inspec',
                        '/usr/local/bin/kitchen',
                        '/usr/local/bin/knife',
                        '/usr/local/bin/ohai',
@@ -36,4 +45,6 @@ cask 'chefdk' do
                        '/usr/local/bin/pushy-service-manager',
                        '/usr/local/bin/rubocop',
                      ]
+
+  zap delete: '~/.chefdk/'
 end

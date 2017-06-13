@@ -1,11 +1,10 @@
 cask 'gyazo' do
-  version '3.2.1'
-  sha256 'e803fe99ee20a13889727556c3b85624a555d3dda7e45436a0c9fe48a5a840d6'
+  version '3.5.0'
+  sha256 'b1123c34d967724687a17773ebed112d6a57832c45332c3f45f6a7ac0090c667'
 
   url "https://files.gyazo.com/setup/Gyazo-#{version}.dmg"
   name 'Nota Gyazo GIF'
   homepage 'https://gyazo.com/'
-  license :other
 
   app 'Gyazo.app'
   app 'Gyazo GIF.app'

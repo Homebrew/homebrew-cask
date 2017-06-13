@@ -1,11 +1,13 @@
 cask 'miditrail' do
-  version '1.2.1'
-  sha256 '183070cf0c4e071ef5251979a27a75933e21855ebd3c346ce7f6be328d5e43a0'
+  version '1.2.2,64107'
+  sha256 '6c1f5730c9404e85f769c11142fe8b3b2e8c73f77e817729ff67e01363692ef7'
 
-  url "http://dl.sourceforge.jp/miditrail/60194/MIDITrail-Ver.#{version}-MacOSX.zip"
+  # dl.osdn.jp/miditrail was verified as official when first introduced to the cask
+  url "http://dl.osdn.jp/miditrail/#{version.after_comma}/MIDITrail-Ver.#{version.before_comma}-MacOSX.zip"
+  appcast 'https://ja.osdn.net/projects/miditrail/releases/rss',
+          checkpoint: '8da63abdfbc8cde08c4993b6895ac475ba7986e15aa0f5dd750cdc060dc11a59'
   name 'MIDITrail'
-  homepage 'http://en.sourceforge.jp/projects/miditrail/'
-  license :bsd
+  homepage 'https://osdn.net/projects/miditrail/'
 
   app 'MIDITrail/MIDITrail.app'
 end

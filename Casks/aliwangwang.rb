@@ -1,12 +1,11 @@
 cask 'aliwangwang' do
-  version '7.00.02-7243'
-  sha256 '78f3a632cfb8bc6835131ed8a434b09cef90a29a8fd5051f7c6d87a3306d5b85'
+  version '7.08.00-8659'
+  sha256 'b35e67920b72941e5ddee9a9297aa56d9a6c5c4eba23cc3b2bd9b2978f00e28d'
 
   # dbison.alicdn.com was verified as official when first introduced to the cask
-  url "https://dbison.alicdn.com/updates/macww-nosandbox-#{version}.dmg"
+  url "https://dbison.alicdn.com/updates/MacWW_7_6_10-#{version}.dmg"
   name 'Ali Wangwang'
-  homepage 'https://wangwang.taobao.com'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://wangwang.taobao.com/'
 
   app 'AliWangwang.app'
 

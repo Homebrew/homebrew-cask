@@ -7,13 +7,8 @@ cask 'tangerine' do
           checkpoint: '4562fcc5822206312ac2338bf5e820dcf4ed7ae27ac80f2670233593dc5b7733'
   name 'Tangerine!'
   homepage 'https://www.karelia.com/products/tangerine/'
-  license :commercial
 
   auto_updates true
 
   app 'Tangerine!.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 end

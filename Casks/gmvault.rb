@@ -5,8 +5,7 @@ cask 'gmvault' do
   # bitbucket.org/gaubert/gmvault-official-download was verified as official when first introduced to the cask
   url "https://bitbucket.org/gaubert/gmvault-official-download/downloads/gmvault-v#{version}-macosx-intel.tar.gz"
   name 'Gmvault'
-  homepage 'http://gmvault.org'
-  license :gpl
+  homepage 'http://gmvault.org/'
 
   binary "gmvault-v#{version}/gmvault"
 end

@@ -5,7 +5,6 @@ cask 'movist' do
   url 'https://github.com/downloads/samiamwork/Movist/Movist.app.zip'
   name 'Movist'
   homepage 'https://github.com/samiamwork/Movist'
-  license :gpl
 
   app 'Movist.app'
 end

@@ -1,14 +1,20 @@
 cask 'postico' do
-  version '1.0.8'
-  sha256 '44633d2c10932eef09eb6497ef50aace82cf126efef13e079a4a5b1dd9f26181'
+  version '1.1.2'
+  sha256 '07b6382f74524c462c6c637f2cd81649314a98a7e4e510504528df9eb7a868d6'
 
   # amazonaws.com/eggerapps-downloads was verified as official when first introduced to the cask
   url "https://s3-eu-west-1.amazonaws.com/eggerapps-downloads/postico-#{version}.zip"
   name 'Postico'
   homepage 'https://eggerapps.at/postico/'
-  license :freemium
 
   depends_on macos: '>= :mavericks'
 
   app 'Postico.app'
+
+  zap delete: [
+                '~/Library/Application Scripts/at.eggerapps.Postico',
+                '~/Library/Containers/at.eggerapps.Postico',
+                '~/Library/Preferences/at.eggerapps.Postico.plist',
+                '~/Library/Saved Application State/at.eggerapps.Postico.savedState',
+              ]
 end

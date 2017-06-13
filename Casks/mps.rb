@@ -1,21 +1,22 @@
 cask 'mps' do
-  version '3.3.5'
-  sha256 'ecde1c1faf4d425a69c44befaf19b64068e74a1ca2dd9044c4b750f996b8254a'
+  version '2017.1.1,171.1216'
+  sha256 '981e55215d77fd4124359e53f702fe975adf067ca0954d52a3a725fdc45fb69a'
 
-  url "http://download-cf.jetbrains.com/mps/#{version.major_minor.no_dots}/MPS-#{version}-macos-jdk-bundled.dmg"
+  url "https://download.jetbrains.com/mps/#{version.before_comma.major_minor}/MPS-#{version.before_comma}-macos-jdk-bundled.dmg"
+  appcast 'https://data.services.jetbrains.com/products/releases?code=MPS&latest=true&type=release',
+          checkpoint: 'f5cd8509511842a6833a7e0c84adab8d1829ed0d178f0d3b14570d0fbb0c0272'
   name 'JetBrains MPS'
-  homepage 'https://www.jetbrains.com/mps'
-  license :apache
+  homepage 'https://www.jetbrains.com/mps/'
 
-  conflicts_with cask: 'mps-eap'
+  auto_updates true
 
   app "MPS #{version.major_minor}.app"
 
   zap delete: [
-                "~/MPSSamples.#{version}",
-                "~/Library/Application Support/MPS#{version.major_minor.no_dots}",
-                "~/Library/Preferences/MPS#{version.major_minor.no_dots}",
-                "~/Library/Caches/MPS#{version.major_minor.no_dots}",
-                "~/Library/Logs/MPS#{version.major_minor.no_dots}",
+                "~/MPSSamples.#{version.before_comma.major_minor}",
+                "~/Library/Application Support/MPS#{version.before_comma.major_minor}",
+                "~/Library/Preferences/MPS#{version.before_comma.major_minor}",
+                "~/Library/Caches/MPS#{version.before_comma.major_minor}",
+                "~/Library/Logs/MPS#{version.before_comma.major_minor}",
               ]
 end

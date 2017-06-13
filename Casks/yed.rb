@@ -1,13 +1,12 @@
 cask 'yed' do
-  version '3.15.0.2'
-  sha256 '4fa8723c46d2cab39c35f49d1171c816aa82d620bebc4d6a587d4f956735405d'
+  version '3.17'
+  sha256 '3e94a3d307420ccfc611d2192b572ed5ae83f0e1b35bc2ee14246dd404552519'
 
   url "https://www.yworks.com/products/yed/demo/yEd-#{version}_with-JRE8.dmg"
   name 'yWorks yEd'
-  homepage 'https://www.yworks.com/en/products/yfiles/yed/'
-  license :gratis
+  homepage 'https://www.yworks.com/products/yed'
 
-  depends_on macos: '>= 10.8'
+  depends_on macos: '>= :mountain_lion'
 
   app 'yEd.app'
 end

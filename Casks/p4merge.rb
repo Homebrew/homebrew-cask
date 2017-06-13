@@ -1,11 +1,10 @@
 cask 'p4merge' do
-  version '2015.2-1312139'
-  sha256 '6f64cca4e84d344c5f420e58a72bd07c4fbf5f3eb9665b165acd8baa36c18eb9'
+  version '2017.1-1491634'
+  sha256 'b015a82a7c0bd492edb972dc542b377a7633bad2148e4b3e2d800f7df0c9297a'
 
-  url "http://filehost.perforce.com/perforce/r#{version.sub(%r{\A20(\d\d\.\d+).*}, '\1')}/bin.macosx107x86_64/P4V.dmg"
+  url "http://filehost.perforce.com/perforce/r#{version.sub(%r{\A20(\d\d\.\d+).*}, '\1')}/bin.macosx1011x86_64/P4V.dmg"
   name 'Perforce P4Merge'
-  homepage 'https://www.perforce.com/product/components/perforce-visual-merge-and-diff-tools'
-  license :gratis
+  homepage 'https://www.perforce.com/products/helix-apps/merge-diff-tool-p4merge'
 
   app 'p4merge.app'
 
@@ -18,6 +17,6 @@ cask 'p4merge' do
   caveats <<-EOS.undent
     git can be configured to use p4merge as a merge tool via
 
-      http://pempek.net/articles/2014/04/18/git-p4merge/
+      https://pempek.net/articles/2014/04/18/git-p4merge/
   EOS
 end

@@ -1,11 +1,10 @@
 cask 'stamp' do
-  version '4.2.25'
-  sha256 'f8f322fbbcfd542fad37c9721b1438f20f26936e8d41abff675204490b5b1f9d'
+  version '4.6.3'
+  sha256 '02c26def4301964cc1a884d520842e1e67445328e2923c1e2ca3995a1e7b92ee'
 
-  url "https://stampapp.io/media/STAMP#{version.delete('.')}.dmg"
+  url "https://freeyourmusic.com/media/STAMP#{version.no_dots}.dmg"
   name 'Stamp'
-  homepage 'https://stampapp.io'
-  license :closed
+  homepage 'https://freeyourmusic.com/'
 
   app 'STAMP.app'
 end

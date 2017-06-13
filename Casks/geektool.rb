@@ -1,14 +1,13 @@
 cask 'geektool' do
-  version '320.23,1468354898'
-  sha256 '21f51ea73c5e552613a432f534dafe8eb31d118db18a4f3094adaceedbd827f5'
+  version '331.014,1470733752'
+  sha256 '73cbb2361601048c7f4d05a6717e53e83b088d49ac75309b2f8e4dccc17df63c'
 
   # dl.devmate.com/org.tynsoe.GeekTool was verified as official when first introduced to the cask
   url "https://dl.devmate.com/org.tynsoe.GeekTool/#{version.before_comma}/#{version.after_comma}/GeekTool-#{version.before_comma}.zip"
   appcast 'https://updates.devmate.com/org.tynsoe.GeekTool.xml',
-          checkpoint: 'e32e33786907cd3857f0694a84f0c5ea916b921e03413b16c8711575336042bd'
+          checkpoint: '919a693af08a23afe84ce132c390c4b05629d91f607f72d8c1af641d418efced'
   name 'GeekTool'
-  homepage 'http://projects.tynsoe.org/en/geektool/'
-  license :mit
+  homepage 'https://www.tynsoe.org/v2/geektool/'
 
   app 'GeekTool.app'
 

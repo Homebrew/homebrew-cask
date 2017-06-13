@@ -1,14 +1,13 @@
 cask 'qcma' do
-  version '0.3.10'
-  sha256 '9273f68bc59a3ddb379d8051d18c95ff0d8935bd7b3a1c4d46653fde710c5882'
+  version '0.4.1'
+  sha256 'f920aeb3497285af12e2e105977347675e5a46df505bfa32cec32965eea6a960'
 
-  # nekmo.com/qcma was verified as official when first introduced to the cask
-  url "http://codestation.nekmo.com/qcma/#{version}/osx/qcma-#{version}.dmg"
+  # github.com/codestation was verified as official when first introduced to the cask
+  url "https://github.com/codestation/qcma/releases/download/v#{version}/Qcma_#{version}.dmg"
   appcast 'https://github.com/codestation/qcma/releases.atom',
-          checkpoint: '6b1af368d82aaa0f8ed6b0757ed968260426dec2b235b088d9723326d46d5542'
+          checkpoint: '46020775f9b0d28815e6f3183d93df722336dd39334fd68d8ad5442740f43dfe'
   name 'Qcma'
   homepage 'https://codestation.github.io/qcma/'
-  license :gpl
 
   app 'Qcma.app'
 end

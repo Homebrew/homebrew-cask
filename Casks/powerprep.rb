@@ -5,10 +5,8 @@ cask 'powerprep' do
   url "https://www.ets.org/s/gre/powerprep/PowerPrepIIV#{version.dots_to_underscores}.pkg"
   name 'PowerPrep'
   homepage 'https://www.ets.org/gre/revised_general/prepare/powerprep2/'
-  license :gratis
 
   pkg "PowerPrepIIV#{version.dots_to_underscores}.pkg"
 
-  uninstall pkgutil: 'org.ets.GrePowerprepII.Applications.pkg',
-            delete:  '/Applications/POWERPREP II'
+  uninstall pkgutil: 'org.ets.GrePowerprepII.Applications.pkg'
 end

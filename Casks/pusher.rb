@@ -1,13 +1,12 @@
 cask 'pusher' do
-  version '0.7.0'
-  sha256 'c1fd413680cdb97af5528c1e459f285fc88650ca967b605f455d5a01052f4d8d'
+  version '0.7.5'
+  sha256 'b329a5106b6670bf50da4b91ba34d82102edb70074828cf4d0cd879b1a5e2180'
 
   url "https://github.com/noodlewerk/NWPusher/releases/download/#{version}/pusher.app.zip"
   appcast 'https://github.com/noodlewerk/NWPusher/releases.atom',
-          checkpoint: '5a5c4793b2a280dcd123f861fc9d9677a1deeb557f88e549ced80e5ecca697df'
+          checkpoint: '869055f8bf0ea4902aec211f9d20cb3ae334183ac4b112026102456e60454aa5'
   name 'NWPusher'
   homepage 'https://github.com/noodlewerk/NWPusher'
-  license :bsd
 
   app 'Pusher.app'
 end

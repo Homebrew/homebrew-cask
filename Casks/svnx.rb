@@ -1,13 +1,12 @@
 cask 'svnx' do
-  version '2.0b2'
-  sha256 'f8d5f5a57eaaeed5904669fc5cde3773a6d05578bf331264cf1eac4c7b26ae2d'
+  version '2.0'
+  sha256 '6096b60f95e9029942a05d9fb55093df4a19ee35d63c37fc9e95a7f8f505a960'
 
   url "https://subversion.assembla.com/svn/svnx/tags/svnX%20#{version}.dmg"
   appcast 'https://subversion.assembla.com/svn/svnx/rss/svnX.rss.xml',
-          checkpoint: 'db70ff768403b7248e7dd75e64c400c13ff55623b149d4f294f92713ebc9517e'
+          checkpoint: '78239a866c4285c3781e7b43ab25306a393bc4ce794ff0b2e36442834b307f32'
   name 'svnX'
   homepage 'https://subversion.assembla.com/svn/svnx/html/index.html'
-  license :gratis
 
   app 'svnX.app'
 end

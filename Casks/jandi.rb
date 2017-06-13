@@ -5,8 +5,7 @@ cask 'jandi' do
   # d1fxzwizdp8gty.cloudfront.net was verified as official when first introduced to the cask
   url 'https://d1fxzwizdp8gty.cloudfront.net/download/JANDI.dmg'
   name 'JANDI'
-  homepage 'https://www.jandi.com/'
-  license :gratis
+  homepage 'https://www.jandi.com/landing/'
 
   auto_updates true
 

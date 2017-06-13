@@ -1,17 +1,10 @@
 cask 'popclip' do
-  if MacOS.release <= :mountain_lion
-    version '1.5.4'
-    sha256 '8046452efc41988aa20ec0af31bc73aaceba5dd3d68bb4f56dc51959a2966349'
-  else
-    version '1.5.5'
-    sha256 'e028c21c93c6632c85b63c5ea9b365ae76dd375455baec804506f0091b93a4be'
-  end
+  version '1.5.7'
+  sha256 '1e6feba9e365d7802e22b0fd682e61740fab6707b655c71e37b3e6fd65ad8d75'
 
-  # d20vhy8jiniubf.cloudfront.net was verified as official when first introduced to the cask
-  url "https://d20vhy8jiniubf.cloudfront.net/downloads/PopClip-#{version}.zip"
+  url "https://pilotmoon.com/downloads/PopClip-#{version}.zip"
   name 'Popclip'
   homepage 'https://pilotmoon.com/popclip/'
-  license :commercial
 
   app 'Popclip.app'
 end

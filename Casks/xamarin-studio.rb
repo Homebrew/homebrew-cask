@@ -1,13 +1,12 @@
 cask 'xamarin-studio' do
-  version '6.0.1.9-0'
-  sha256 'dda412d2172cdb40548d16ae5da2384cb2cc5f69898a461c882c98a60401e5af'
+  version '6.3.0.864'
+  sha256 '213c8aab25014f9656827fa24043a98a7dcf171d48708fe06bb328cead44640c'
 
-  url "https://download.xamarin.com/studio/Mac/XamarinStudio-#{version}.dmg"
-  appcast 'https://static.xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
-          checkpoint: '2cb6260bf1f5348e125fe9cab2effe9862fe76f0706f146dd91c827827cdda6b'
+  url "https://dl.xamarin.com/MonoDevelop/Mac/XamarinStudio-#{version}.dmg"
+  appcast 'https://xampubdl.blob.core.windows.net/static/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
+          checkpoint: 'd1c454ead2e12eb823776ab1e0f18c35cb9372379ac93aacff7107c0c76b8c0b'
   name 'Xamarin Studio'
-  homepage 'https://xamarin.com/studio'
-  license :gpl
+  homepage 'https://www.xamarin.com/visual-studio-for-mac'
 
   app 'Xamarin Studio.app'
 end

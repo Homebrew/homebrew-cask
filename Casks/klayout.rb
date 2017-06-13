@@ -1,14 +1,18 @@
 cask 'klayout' do
-  version '0.24.7'
-  sha256 'c986ede1d0950294b1c3f94fe174927cfee2af82fe21ac03a5b15d5abc6b6385'
+  version '0.24.10'
+  sha256 'a2097dd73f8bbdeb4297f1fdaba01635894941ae1b3c376e625948171061d6d6'
 
   # klayout.org was verified as official when first introduced to the cask
-  url "http://www.klayout.org/downloads/klayout-#{version}-MacOSX-Yosemite-1-Qt487mp.dmg.bz2"
+  url "http://www.klayout.org/downloads/MacOS/klayout-#{version}-MacOSX-Yosemite-1-Qt487mp.dmg.bz2"
   name 'KLayout'
-  homepage 'http://www.klayout.de/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.klayout.de/'
 
-  pkg "klayout.#{version}.pkg"
+  suite 'KLayout'
+
+  preflight do
+    # There is no sub-folder in the DMG; the root *is* the folder
+    FileUtils.mv(staged_path.children, staged_path.join('KLayout').tap(&:mkpath))
+  end
 
   uninstall pkgutil: 'klayout.de',
             quit:    'klayout.de'

@@ -6,7 +6,6 @@ cask 'growlnotify' do
   url "https://growl.cachefly.net/GrowlNotify-#{version}.zip"
   name 'GrowlNotify'
   homepage 'http://growl.info/downloads'
-  license :bsd
 
   pkg 'GrowlNotify.pkg'
 

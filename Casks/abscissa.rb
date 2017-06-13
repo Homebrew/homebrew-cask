@@ -1,11 +1,12 @@
 cask 'abscissa' do
-  version '3.4.3'
-  sha256 '4ef1744451548aed19665cf71102e3ca8bb2af4ee02e45c6a18721a7b3c91a76'
+  version '3.4.6'
+  sha256 '319c6871e4f42eaf6b1925aff66859024241d5c11a542badeb6993d287da3da2'
 
   url "http://rbruehl.macbay.de/Abscissa/Downloads/Abscissa-#{version}.zip"
+  appcast 'http://rbruehl.macbay.de/Abscissa/Downloads/',
+          checkpoint: 'a5b279ad4abd26be9934916a946d708517383bc459d3edcbe248bfc354ae6c99'
   name 'Abscissa'
-  homepage 'http://rbruehl.macbay.de/Abscissa'
-  license :gratis
+  homepage 'http://rbruehl.macbay.de/Abscissa/'
 
-  app 'Abscissa-#{version}/Abscissa.app'
+  app "Abscissa-#{version}/Abscissa.app"
 end

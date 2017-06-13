@@ -1,14 +1,13 @@
 cask 'lektor' do
-  version '1.2.1'
-  sha256 'd6d984eddcefcae9397e1fb10d96f2fd61324a9f2a7008cea4edad2ee8743feb'
+  version '2.3'
+  sha256 '42b78c60a13fe2c58b238878b020677661cb410f753136a0a6b7f9165de49b31'
 
   # github.com/lektor/lektor was verified as official when first introduced to the cask
   url "https://github.com/lektor/lektor/releases/download/#{version}/Lektor-#{version}.dmg"
   appcast 'https://github.com/lektor/lektor/releases.atom',
-          checkpoint: '1b283900aa1f42ce2a9cb6fe1bfc722729e3b83fea8630c46e61093d8b04a46b'
+          checkpoint: '5c3be26bd3bdd6849048dacfcf92fc6976e9e901325fbb6066c144e933e63648'
   name 'Lektor'
   homepage 'https://www.getlektor.com/'
-  license :oss
 
   app 'Lektor.app'
 end

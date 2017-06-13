@@ -1,17 +1,14 @@
 cask 'relaunch64' do
   # note: "64" is not a version number, but an intrinsic part of the product name
-  version '3.3.6'
-  sha256 '6da269fa3f76bbd7cff512c253a1f6e23ef9ae25660a4f5858a9d0eeb7802b86'
+  version '3.3.7'
+  sha256 '0fdd2802f8b85ab3b1ec03cb5a22ba20e94a89f4ee6edd974ab818490dd686dc'
 
   # github.com/sjPlot/Relaunch64 was verified as official when first introduced to the cask
   url "https://github.com/sjPlot/Relaunch64/releases/download/#{version}/Relaunch64_#{version}_OS_X_app.zip"
   appcast 'https://github.com/sjPlot/Relaunch64/releases.atom',
-          checkpoint: '40fe263f6ed697443c0e4bc2c8e0ab396ec10bced068e2f93be5dd1f95eaef47'
+          checkpoint: '03fbaeed64c544d89a6d46961a87ddf986f97cf47165dc39f6e4f81228b11398'
   name 'Relaunch64'
   homepage 'http://www.popelganda.de/relaunch64.html'
-  license :gpl
-
-  depends_on arch: :x86_64
 
   app 'Relaunch64.app'
 end

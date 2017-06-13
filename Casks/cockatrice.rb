@@ -1,16 +1,13 @@
 cask 'cockatrice' do
-  version '2016-05-06,The_Shadows'
-  sha256 'd59f7778f6ad153478716209f480e79ada3b0fd4a3ec3902a9650dff82e4ada0'
+  version '2.3.17,2017-05-05:Trials_of_the_Gods'
+  sha256 'd0400d5a23acb8e54e1a02196d1db83fccfc7259f28e9d16a74ddc92cc3fd797'
 
   # github.com/Cockatrice/Cockatrice was verified as official when first introduced to the cask
-  url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.before_comma}-Release/Cockatrice_#{version.after_comma}_osx.dmg.zip"
+  url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.after_comma.before_colon}-Release-#{version.before_comma}/Cockatrice-#{version.after_colon}-#{version.before_comma}.dmg"
   appcast 'https://github.com/Cockatrice/Cockatrice/releases.atom',
-          checkpoint: '5a119ae4ed3c642e334614763aabe442631ddfa3594e99f5a3419518805d5a90'
+          checkpoint: '4ad8c56dd33bd0ae3f1a60532c4a140f866b703106d3b7490dccd4cc591986b2'
   name 'Cockatrice'
   homepage 'http://www.woogerworks.com/'
-  license :gpl
-
-  container nested: "Cockatrice_#{version.after_comma}_osx.dmg"
 
   app 'cockatrice.app'
   app 'oracle.app'

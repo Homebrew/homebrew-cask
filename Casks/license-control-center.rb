@@ -2,10 +2,9 @@ cask 'license-control-center' do
   version :latest
   sha256 :no_check
 
-  url 'http://download.steinberg.net/downloads/eLicenserControl.dmg'
+  url 'https://download.steinberg.net/downloads/eLicenserControl.dmg'
   name 'eLicenser Control Center'
-  homepage 'http://www.steinberg.net/en/company/technologies/elicenser.html'
-  license :gratis
+  homepage 'https://www.steinberg.net/en/company/technologies/elicenser.html'
 
   installer manual: 'eLicenserControlSetup.app'
 

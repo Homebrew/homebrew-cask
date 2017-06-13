@@ -1,13 +1,12 @@
 cask 'snapz-pro-x' do
-  version '2.6.0'
-  sha256 'f603dae7a8fe64633f01ca2a53a1eed0907d17e3733f125fedb6d2e96b491b64'
+  version '2.6.1'
+  sha256 'f979b464768bc2bf4e9fe9ed34e8914b0eba98af08f26c3a1ac298fde533541f'
 
   url "http://downloads3.ambrosiasw.com/snapzprox/essentials/SnapzProX#{version.major}.dmg"
-  appcast 'https://www.ambrosiasw.com/updates/profile.php/snapz_pro_x/release',
-          checkpoint: 'ee5f84078bfdb59c9c445844a98e6b26c3f39bdbbc7515af1f85c0fe56208fff'
+  appcast 'http://www.ambrosiasw.com/updates/profile.php/snapz_pro_x/release',
+          checkpoint: '0da65f1139e0e1fa8a17f1372dabb22af4873e4ff989f7acd6585749d1a03a0f'
   name 'Snapz Pro X'
   homepage 'http://www.ambrosiasw.com/utilities/snapzprox/'
-  license :commercial
 
   pkg 'Snapz Pro X.pkg'
 

@@ -7,8 +7,7 @@ cask 'remomix' do
   appcast 'https://github.com/johndbritton/remomix-releases/releases.atom',
           checkpoint: '73b44d814f16176f6496889ba4e9cf9166dad2cc8360c77a67f93305977bf68f'
   name 'Remomix'
-  homepage 'http://remomix.com'
-  license :gratis
+  homepage 'http://remomix.com/'
 
   app 'Remomix.app'
 end

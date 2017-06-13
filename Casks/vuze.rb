@@ -5,11 +5,12 @@ cask 'vuze' do
   url 'https://cf1.vuze.com/files/J7/VuzeBittorrentClientInstaller.dmg'
   name 'Vuze'
   homepage 'https://www.vuze.com/'
-  license :gpl
 
-  installer script: 'Vuze Installer.app/Contents/MacOS/JavaApplicationStub',
-            args:   ['-q'],
-            sudo:   true
+  installer script: {
+                      executable: 'Vuze Installer.app/Contents/MacOS/JavaApplicationStub',
+                      args:       ['-q'],
+                      sudo:       true,
+                    }
 
   uninstall delete: '/Applications/Vuze.app'
 

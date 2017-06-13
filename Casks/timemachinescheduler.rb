@@ -1,15 +1,20 @@
 cask 'timemachinescheduler' do
-  version '3.1.4'
-  sha256 '22b0976139c42d163aa7d905d845594af41d4f3d4254a21b334f0232b3815f0a'
+  version '4.0b8Full'
+  sha256 '8f05280e3375c6d7d7a7767ed3ae4be2c69b6c7826153b8ec28f566b51404d59'
 
   url "http://www.klieme.com/Downloads/TimeMachineScheduler/TimeMachineScheduler_#{version}.zip"
   appcast 'http://www.klieme.com/Downloads/TimeMachineScheduler/appcast.xml',
           checkpoint: '45fe02d1f8cda89dc2bb0e8370966aaf5a0030192273a3c0d3c4b150f5443369'
   name 'TimeMachineScheduler'
   homepage 'http://www.klieme.com/TimeMachineScheduler.html'
-  license :gratis
 
-  container nested: 'TimeMachineScheduler3_Installer.dmg'
+  app 'TimeMachineScheduler.app'
 
-  prefpane 'TimeMachineScheduler3_Installer.app/Contents/Resources/TimeMachineScheduler.prefPane'
+  zap delete: [
+                '/Library/LaunchDaemons/com.klieme.TimeMachineScheduler.plist',
+                '/Library/Preferences/com.klieme.TimeMachineScheduler.plist',
+                '~/Library/Caches/com.klieme.TimeMachineScheduler',
+                '~/Library/Preferences/com.klieme.TimeMachineScheduler.plist',
+                '~/Library/Saved Application State/com.klieme.TimeMachineScheduler.savedState',
+              ]
 end

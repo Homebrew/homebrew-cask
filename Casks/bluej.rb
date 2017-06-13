@@ -1,11 +1,10 @@
 cask 'bluej' do
-  version '3.1.7'
-  sha256 'b693557212b61de537299519bcb40d7b5ac00c2ba60b9c88e900dced80c8c363'
+  version '4.0.1'
+  sha256 '9277ec8d133d27111b933cbc4fb38f335200e8623d3bb41ac67c314ba33f0525'
 
-  url "https://www.bluej.org/download/files/BlueJ-#{version.delete('.')}.zip"
+  url "https://www.bluej.org/download/files/BlueJ-mac-#{version.no_dots}.zip"
   name 'BlueJ'
-  homepage 'https://www.bluej.org'
-  license :gpl
+  homepage 'https://www.bluej.org/'
 
-  app "BlueJ #{version}/BlueJ.app"
+  app "BlueJ #{version.sub(%r{[a-z]$}, '')}/BlueJ.app"
 end

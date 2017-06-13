@@ -1,11 +1,10 @@
 cask 'patchblocks' do
-  version '0.3.3'
-  sha256 'd039d82a61a53b75962ebf9fb7b31426b69435271988b61f5ba23ec58001fa83'
+  version '1.0'
+  sha256 'e10d2d933cc27c689477148a8aa562ddcb4fd61ccde2df9d8ed86d9693890596'
 
-  url "http://patchblocks.com/sites/default/files/Patchblocks-#{version}-Yosemite.dmg"
+  url "http://www.patchblocks.com/download/Patchblocks-#{version}.dmg"
   name 'Patchblocks'
-  homepage 'http://patchblocks.com/'
-  license :gratis
+  homepage 'http://www.patchblocks.com/'
 
-  app "Patchblocks-#{version}.app"
+  app 'Patchblocks.app'
 end

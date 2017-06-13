@@ -1,13 +1,10 @@
 cask 'xmind' do
-  version '3.6.1'
-  sha256 '028b64584ad213484032fff8741a477de69cdafe4fa6ac060acb4c301bdedf59'
+  version '8-update2'
+  sha256 '4c2d3a367c84754ff969a1a9e28725af85e79121648555ed99fd60a94d9ea5ab'
 
-  url 'http://dl2.xmind.net/xmind-downloads/xmind-7-update1-macosx.dmg'
+  url "https://www.xmind.net/xmind/downloads/xmind-#{version}-macosx.dmg"
   name 'XMind'
-  homepage 'https://www.xmind.net'
-  license :freemium
-
-  depends_on macos: '>= :snow_leopard'
+  homepage 'https://www.xmind.net/'
 
   app 'XMind.app'
 

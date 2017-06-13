@@ -1,12 +1,13 @@
 cask 'prey' do
-  version '1.5.1'
-  sha256 '8c9e69c21d2bfb101745681fd935df308899828effda21e28be8da3ffb174746'
+  version '1.6.6'
+  sha256 '9320748f34804fa69f9526692151fa0a2c21de175e095f676fc5b41f64a55530'
 
   # prey-releases.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://prey-releases.s3.amazonaws.com/node-client/#{version}/prey-mac-#{version}-x86.pkg"
+  appcast 'https://github.com/prey/prey-node-client/releases.atom',
+          checkpoint: '83e37aa898a33accd7860a9a600e5979155b24d150f7476a6938465a3078247c'
   name 'Prey'
-  homepage 'https://preyproject.com'
-  license :gpl
+  homepage 'https://www.preyproject.com/'
 
   pkg "prey-mac-#{version}-x86.pkg"
 

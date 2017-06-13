@@ -1,13 +1,21 @@
 cask 'cakebrew' do
-  version '1.2'
-  sha256 '2d9de51fbca270abaf69a7b7fd822fe52790478508ab71401430d13d2bbcd098'
+  version '1.2.3'
+  sha256 '12b35753178ebb73cb71631c363ab8bdee1e06597015780c259e4483c1fa522a'
 
-  url "https://www.cakebrew.com/files/cakebrew-#{version}.zip"
+  # cakebrew-377a.kxcdn.com was verified as official when first introduced to the cask
+  url "https://cakebrew-377a.kxcdn.com/cakebrew-#{version}.dmg"
   appcast 'https://www.cakebrew.com/appcast/profileInfo.php',
-          checkpoint: 'b21892747ea8b7924813c3c08cd52da136332886961dfef3d52cf53eb5b0de2a'
+          checkpoint: 'a1aaa9cb869aa3740faf459cf4fdbed932d5bd00375854ad6ca58a1b562624b4'
   name 'Cakebrew'
   homepage 'https://www.cakebrew.com/'
-  license :gpl
+
+  depends_on macos: '>= :mountain_lion'
 
   app 'Cakebrew.app'
+
+  zap delete: [
+                '~/Library/Caches/com.brunophilipe.Cakebrew',
+                '~/Library/Preferences/com.brunophilipe.Cakebrew.plist',
+                '~/Library/Saved Application State/com.brunophilipe.Cakebrew.savedState',
+              ]
 end

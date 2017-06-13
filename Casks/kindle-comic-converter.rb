@@ -1,11 +1,10 @@
 cask 'kindle-comic-converter' do
-  version '5.0.1'
-  sha256 '48bf8bb6d57972652399d99a89d04aee2fcd3ead31898ea07594ea7db0edfed9'
+  version '5.4'
+  sha256 '2c88b10895c75f841895092c567610cc5c48f5b124a2aec1a10b75d5899c048c'
 
   url "https://kcc.iosphe.re/OSX/KindleComicConverter_osx_#{version}.dmg"
   name 'Kindle Comic Converter'
-  homepage 'https://kcc.iosphe.re'
-  license :isc
+  homepage 'https://kcc.iosphe.re/'
 
   app 'Kindle Comic Converter.app'
 end

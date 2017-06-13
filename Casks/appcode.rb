@@ -1,15 +1,20 @@
 cask 'appcode' do
-  version '2016.1.3'
-  sha256 'b0de414b7785cf89f680bc8f413c5ebdb66430cebb20f0395c4c49590c4d3f09'
+  version '2017.1.3,171.4694.27'
+  sha256 '85461480392290fa2fd941196d5677e5c2869fe03fbe95a8cda1d452f61f5b28'
 
-  url "https://download.jetbrains.com/objc/AppCode-#{version}.dmg"
+  url "https://download.jetbrains.com/objc/AppCode-#{version.before_comma}.dmg"
+  appcast 'https://data.services.jetbrains.com/products/releases?code=AC&latest=true&type=release',
+          checkpoint: '51c512573d9be7ba04caca7995da23017b02fb9f5f0536b7662b775214ed1279'
   name 'AppCode'
   homepage 'https://www.jetbrains.com/objc/'
-  license :commercial
 
-  conflicts_with cask: 'appcode-eap'
+  auto_updates true
 
   app 'AppCode.app'
+
+  uninstall_postflight do
+    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'appcode') }.each { |path| File.delete(path) if File.exist?(path) }
+  end
 
   zap delete: [
                 "~/Library/Preferences/AppCode#{version.major_minor}",
