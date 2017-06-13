@@ -14,19 +14,19 @@ cask 'daylite' do
                        ],
             launchctl: [
                          'com.marketcircle.persistence.autoupdate',
-                         'GR26KTJYTV.com.marketcircle.Daylite-Helper',
+                         '*.com.marketcircle.Daylite-Helper',
                        ],
             signal:    [
                          ['TERM', 'com.marketcircle.daylite'],
                          ['TERM', 'com.marketcircle.persistence.autoupdate'],
-                         ['KILL', 'GR26KTJYTV.com.marketcircle.Daylite-Helper'],
+                         ['KILL', '*.com.marketcircle.Daylite-Helper'],
                        ]
 
   zap delete: [
                 '~/Library/Application Support/com.marketcircle.daylite',
                 '~/Library/Caches/com.marketcircle.daylite',
                 '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.marketcircle.daylite',
-                '~/Library/Group Containers/GR26KTJYTV.com.marketcircle.daylite',
+                '~/Library/Group Containers/*.com.marketcircle.daylite',
                 '~/Library/Preferences/com.marketcircle.daylite.plist',
                 '~/Library/Saved Application State/com.marketcircle.daylite.savedState',
               ]
