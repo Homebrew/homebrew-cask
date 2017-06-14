@@ -1,10 +1,10 @@
 cask 'devdocs' do
-  version '0.4.0'
-  sha256 'ff8f0bdf1c6ad677139b1798717c0cfe58ab41fc2857b1155b196887e05d88ea'
+  version '0.5.0'
+  sha256 '67e64ad1b521caa37246c8273cc5f3a01b30a1403da575a2e32692f6d5d12ffd'
 
   url "https://github.com/egoist/devdocs-app/releases/download/v#{version}/DevDocs-#{version}.dmg"
   appcast 'https://github.com/egoist/devdocs-app/releases.atom',
-          checkpoint: '83ad81c3338a3ae9fc7ea32b3522d32a67f93f56d6bd7f1266e8340d13d59711'
+          checkpoint: 'ed2b374a4b3cbc3b3fb81eaf946be6d650d5f43c5d2f08043a1781a1c1863813'
   name 'DevDocs App'
   homepage 'https://github.com/egoist/devdocs-app'
 
