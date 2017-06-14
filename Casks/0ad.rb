@@ -5,7 +5,7 @@ cask '0ad' do
   # wildfiregames.com was verified as official when first introduced to the cask
   url "http://releases.wildfiregames.com/0ad-#{version}-osx64.dmg"
   appcast 'https://play0ad.com/download/mac/',
-          checkpoint: 'd540eba952d8c3871d4c12fd7690a5a276dab4f627e601e77f1c78091d3a5c86'
+          checkpoint: '7929cb7bfe3b37c3bb861397c4ae350c3d9d21067bad664d3729d2dac7049a67'
   name '0 A.D.'
   homepage 'https://play0ad.com/'
 
