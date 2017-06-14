@@ -1,6 +1,6 @@
 cask 'firefox' do
   version '54.0'
-  
+
   language 'cs' do
     sha256 '3bb7c01aaf7e4962482539ed291332b31317774adf05c0847806e87ebaf7a14a'
     'cs'
