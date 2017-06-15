@@ -4,6 +4,8 @@ cask 'kalabox' do
 
   # github.com/kalabox/kalabox was verified as official when first introduced to the cask
   url "https://github.com/kalabox/kalabox/releases/download/v#{version}/kalabox-v#{version}.dmg"
+  appcast 'https://github.com/kalabox/kalabox/releases.atom',
+          checkpoint: '4bda20c55da5053fb855c44857f965496cd085e30f0dc937c405b0654799cefb'
   name 'Kalabox'
   homepage 'http://kalabox.io/'
 
