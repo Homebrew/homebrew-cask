@@ -5,7 +5,7 @@ cask 'doomsday-engine' do
   # sourceforge.net/deng was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/deng/doomsday_#{version}_x86_64.dmg"
   appcast 'https://sourceforge.net/projects/deng/rss',
-          checkpoint: '1a1b7e03bfd9ccc0745ce5cf418a9f19474944200ca6c8bd0240205f56208ac7'
+          checkpoint: '4df660f7418c2dfd1be9d923695708b44d2a0353e240c4d25f2930f88cb01e73'
   name 'Doomsday Engine'
   homepage 'https://dengine.net/'
 
