@@ -1,6 +1,6 @@
 cask 'minecraft-server' do
-  version '1.11.2'
-  sha256 'dec47d36b429fd05076b90b1f42c2a25138bc39204aa51b9674ef2a98d64d88a'
+  version '1.12'
+  sha256 'feebff3834e41cc096522525707d2dd27adc2431b1f3145b9d0ccfc4c8a3dc09'
 
   # s3.amazonaws.com/Minecraft.Download was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/Minecraft.Download/versions/#{version}/minecraft_server.#{version}.jar"
