@@ -6,14 +6,17 @@ cask 'avocode' do
   name 'Avocode'
   homepage 'https://avocode.com/'
 
+  auto_updates true
+
   app 'Avocode.app'
 
   zap delete: [
-                '~/Library/Preferences/com.madebysource.avocode.plist',
-                '~/Library/Preferences/com.madebysource.avocode.helper.plist',
-                '~/Library/Application Support/Avocode',
-                '~/Library/Saved Application State/com.madebysource.avocode.savedState',
-                '~/Library/Caches/com.madebysource.avocode',
                 '~/.avocode',
+                '~/Library/Application Support/Avocode',
+                '~/Library/Caches/com.madebysource.avocode',
+                '~/Library/Caches/com.madebysource.avocode.ShipIt',
+                '~/Library/Preferences/com.madebysource.avocode.helper.plist',
+                '~/Library/Preferences/com.madebysource.avocode.plist',
+                '~/Library/Saved Application State/com.madebysource.avocode.savedState',
               ]
 end
