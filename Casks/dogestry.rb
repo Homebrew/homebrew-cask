@@ -4,7 +4,7 @@ cask 'dogestry' do
 
   url "https://github.com/dogestry/dogestry/releases/download/v#{version}/dogestry-darwin-#{version}"
   appcast 'https://github.com/dogestry/dogestry/releases.atom',
-          checkpoint: '645d70f9bce4da5251f54d6a2ad7d6ae9ac4e443d4bbd2638d1c8f268c5629f9'
+          checkpoint: '736cca14bc61906dff0cbd27728d9b0bd11a17740116d23a079377f91153b03a'
   name 'Dogestry'
   homepage 'https://github.com/dogestry/dogestry'
 
