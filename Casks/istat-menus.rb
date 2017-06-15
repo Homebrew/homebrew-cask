@@ -9,6 +9,12 @@ cask 'istat-menus' do
 
   app 'iStat Menus.app'
 
+  uninstall quit: [
+                    'com.bjango.iStat-Menus-Notifications',
+                    'com.bjango.iStatMenusAgent',
+                    'com.bjango.istatmenusstatus',
+                  ]
+
   zap delete: [
                 "/Library/Application Support/iStat Menus #{version.major}",
                 '/Library/LaunchAgents/com.bjango.istatmenusagent.plist',
