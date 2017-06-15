@@ -1,11 +1,11 @@
 cask 'comma-chameleon' do
-  version '0.5.1'
-  sha256 'd8508f4bc9b9f1fb61b354b3547b069ca8392a8ffa0d2ffcab5d98a178e8d20c'
+  version '0.5.2'
+  sha256 'be08b2088d4065f797d8943ee213882779f99d7130467ed73d0f4d5b73dc02fb'
 
   # github.com/theodi/comma-chameleon was verified as official when first introduced to the cask
-  url "https://github.com/theodi/comma-chameleon/releases/download/#{version}/comma-chameleon-darwin-x64.tar.gz"
+  url "https://github.com/theodi/comma-chameleon/releases/download/#{version}/Comma.Chameleon-darwin-x64.zip"
   appcast 'https://github.com/theodi/comma-chameleon/releases.atom',
-          checkpoint: 'abed1e78fa64028a3bc5eaf814bc45ffe29d3e986adefaa1be957e9e1674925b'
+          checkpoint: '69d6c44cff9461e20c4152b819e978ad88abf1e029c2f1f0be2b35b320da8d43'
   name 'Comma Chameleon'
   homepage 'https://comma-chameleon.io/'
 
