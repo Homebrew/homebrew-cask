@@ -14,8 +14,9 @@ cask 'wwdc' do
   app 'WWDC.app'
 
   zap delete: [
-                '~/Library/Application Support/br.com.guilhermerambo.WWDC',
-                '~/Library/Caches/br.com.guilhermerambo.WWDC',
-                '~/Library/Preferences/br.com.guilhermerambo.WWDC.plist',
+                '~/Library/Application Support/io.wwdc.app',
+                '~/Library/Application Support/io.wwdc.app.TranscriptIndexingService',
+                '~/Library/Application Support/WWDC',
+                '~/Library/Preferences/io.wwdc.app.plist',
               ]
 end
