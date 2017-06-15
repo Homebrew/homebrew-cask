@@ -10,9 +10,10 @@ cask 'avocode' do
 
   zap delete: [
                 '~/Library/Preferences/com.madebysource.avocode.plist',
+                '~/Library/Preferences/com.madebysource.avocode.helper.plist',
                 '~/Library/Application Support/Avocode',
                 '~/Library/Saved Application State/com.madebysource.avocode.savedState',
-                '~/Library/Caches/Avocode',
-                '~/.avcd',
+                '~/Library/Caches/com.madebysource.avocode',
+                '~/.avocode',
               ]
 end
