@@ -5,7 +5,7 @@ cask 'devonthink' do
   # amazonaws.com/DTWebsiteSupport was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/#{version}/DEVONthink_Personal.app.zip"
   appcast 'http://www.devon-technologies.com/fileadmin/templates/filemaker/sparkle.php?product=217255&format=xml',
-          checkpoint: '17e7dd27abdb4be17e08dced0087fe90161d48fd64edba69e618f611cb6555eb'
+          checkpoint: '3f5321f92ad6779d131217fde8396e1a7816c16abe15447ec4e58eecad9c0693'
   name 'DEVONthink Personal'
   homepage 'https://www.devontechnologies.com/products/devonthink/devonthink-personal.html'
 
