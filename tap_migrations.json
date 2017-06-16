@@ -78,6 +78,7 @@
   "pgloader": "homebrew/core",
   "phantomjs": "homebrew/core",
   "pl2303": "caskroom/drivers",
+  "plantronics-hub": "caskroom/drivers",
   "purescript": "homebrew/core",
   "python": "homebrew/core",
   "python3": "homebrew/core",
