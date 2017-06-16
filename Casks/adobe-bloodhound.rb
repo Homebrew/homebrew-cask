@@ -5,7 +5,7 @@ cask 'adobe-bloodhound' do
   # github.com/Adobe-Marketing-Cloud/mobile-services was verified as official when first introduced to the cask
   url "https://github.com/Adobe-Marketing-Cloud/mobile-services/releases/download/Bloodhound-v#{version}-OSX/Bloodhound-#{version}-OSX.dmg"
   appcast 'https://github.com/Adobe-Marketing-Cloud/mobile-services/releases.atom',
-          checkpoint: '041dab602b594331fcb9de739b1c5ea1f1bd52b6586a326a75d31be764a5ff20'
+          checkpoint: '72bb527592738d6f10e62265fc35a47091ab1aac2673a13293eb3c295a0d7b7f'
   name 'Adobe Bloodhound'
   homepage 'https://marketing.adobe.com/resources/help/en_US/mobile/bloodhound/'
 
