@@ -5,7 +5,7 @@ cask 'cheatsheet' do
   # mediaatelier.com/CheatSheet was verified as official when first introduced to the cask
   url "https://mediaatelier.com/CheatSheet/CheatSheet_#{version}.zip"
   appcast 'https://mediaatelier.com/CheatSheet/feed.php',
-          checkpoint: '59fa86defe758b8e0d85572f5a67e72cf559a8be0f0b912e4f4510dc50f85c0e'
+          checkpoint: '9d6994ef2b83ba8bd7ef7ab4ff4aff486ca226c28fac40569f448e27790d7ab2'
   name 'CheatSheet'
   homepage 'https://www.cheatsheetapp.com/CheatSheet/'
 

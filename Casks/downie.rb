@@ -1,10 +1,10 @@
 cask 'downie' do
-  version '2.8.9,1479'
-  sha256 '0666d2791634dcb90e1b8b07eb76f5af6e79da59e0fe32be6e8bd55f101710e1'
+  version '2.9.1,1486'
+  sha256 '302f7cf0c9da10e21032a09d98da6ad6f6f52fe31632a74894bafabc593e7289'
 
   url "https://trial.charliemonroe.net/downie/Downie_#{version.after_comma}.zip"
   appcast 'https://trial.charliemonroe.net/downie/updates_2.3.xml',
-          checkpoint: '74281b09b6cf49099fe90b70bad3536cb7042723e082b0178e55ef0a667e76cd'
+          checkpoint: '030d8f3e46d92d0bb9e8b86ab78ea38fd588247c2e00a309e4c1cf7d0b98461a'
   name 'Downie'
   homepage 'https://software.charliemonroe.net/downie.php'
 
