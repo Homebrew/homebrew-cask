@@ -4,7 +4,7 @@ cask 'aqua-data-studio' do
 
   url "http://www.aquafold.com/download/v#{version.major}.0.0/osx/ads-osx-#{version}.tar.gz"
   appcast 'http://www.aquafold.com/download/',
-          checkpoint: 'ef91e22d2d66c511d7063eeaedf35b5cd7f0b3429b2c3724801b36e004923ef0'
+          checkpoint: 'c5dde3e0fbd7d9d67b3c1e13612dfa5c8c7a6705652f88599472b4a97b1a2620'
   name 'Aquafold Aqua Data Studio'
   homepage 'http://www.aquafold.com/aquadatastudio.html'
 
