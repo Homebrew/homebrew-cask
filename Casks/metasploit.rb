@@ -20,13 +20,17 @@ cask 'metasploit' do
   binary '/opt/metasploit-framework/bin/msfelfscan'
   binary '/opt/metasploit-framework/bin/msfmachscan'
   binary '/opt/metasploit-framework/bin/msfpescan'
-  binary '/opt/metasploit-framework/bin/msfremove'
   binary '/opt/metasploit-framework/bin/msfrop'
   binary '/opt/metasploit-framework/bin/msfrpc'
   binary '/opt/metasploit-framework/bin/msfrpcd'
   binary '/opt/metasploit-framework/bin/msfupdate'
   binary '/opt/metasploit-framework/bin/msfvenom'
 
-  uninstall pkgutil: '.*metasploit.*',
-            delete:  '/opt/metasploit-framework'
+  uninstall_preflight do
+    system_command '/bin/rm',
+                   args: ['-rf', '/opt/metasploit-framework'],
+                   sudo: true
+  end
+
+  uninstall pkgutil: '.*metasploit.*'
 end
