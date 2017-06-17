@@ -6,6 +6,7 @@ cask 'connectiq' do
   name 'Garmin Connect IQ SDK'
   homepage 'https://developer.garmin.com/connect-iq'
 
+  app "connectiq-sdk-mac-#{version}/bin/ConnectIQ.app"
   binary "connectiq-sdk-mac-#{version}/bin/connectiq"
   binary "connectiq-sdk-mac-#{version}/bin/monkeyc"
   binary "connectiq-sdk-mac-#{version}/bin/monkeydo"
