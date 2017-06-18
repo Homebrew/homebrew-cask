@@ -1,6 +1,6 @@
 cask 'duet' do
-  version '1.6.3.6'
-  sha256 'e8beb6d3c1bee14410d6602d9d6a263a33a76a1c6c5476734070a745e375d96e'
+  version '1.6.4.0'
+  sha256 '0e52f9dc2392130aad7cf2731c2c1b08bd175dd4f93b3ae06474ca04df078416'
 
   # s3-us-west-1.amazonaws.com/duetmac/ was verified as official when first introduced to the cask
   url "https://s3-us-west-1.amazonaws.com/duetmac/#{version.major_minor_patch.dots_to_underscores}/duet-#{version.dots_to_hyphens}.zip"
