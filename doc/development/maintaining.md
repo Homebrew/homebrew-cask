@@ -38,7 +38,6 @@ Label | Description | Issues | Pull Requests
 **bug** | Something isn’t working as expected. A modification/addition/removal. Must always be accompanied by **cask** or **core** | &#x2713; | &#x2713;
 **cask** | Relates directly to a cask. Must always be accompanied by **bug** or **enhancement**. | &#x2713; | &#x2713;
 **cask request** | Either a request for a new cask or a call for correction in an existing one. | &#x2713; |
-**outdated appcast** | An automated label, handled by the various scripts geared towards updating casks with outdated appcasts. Should never be applied manually. | &#x2713; | &#x2713;
 **chief bug** | When multiple people open new issues for the same bug, the main issue where its progression is being tracked should have this label. Every other one should be marked **duplicate** and closed. | &#x2713; |
 **core** | Relates directly to the code of the core, Homebrew-Cask itself. Must always be accompanied by **bug** or **enhancement**. | &#x2713; | &#x2713;
 **discussion** | A matter that benefits from discussion before a decision is to be made. Any opinion should be given by users and maintainers alike, even if that opinion is “I have no strong feelings on the matter”. | &#x2713; |
@@ -54,6 +53,7 @@ Label | Description | Issues | Pull Requests
 **upstream** | Something we have no hand in, and can only be fixed with intervention from developers outside Homebrew-Cask. Always refers to a cask, and never to the core. | &#x2713; | &#x2713;
 **awaiting maintainer feedback** | A maintainer requires input from other maintainers to proceed. Other maintainers should occasionally check this label and give their feedback on the subject, if able. | &#x2713; | &#x2713;
 **awaiting user reply** | A maintainer requires further action or information from the original poster to proceed. Particularly useful to weed out those cases where issues and pull requests would otherwise be left open indefinitely because the original poster never replies. | &#x2713; | &#x2713;
+**awaiting verification** | A pull request that [requires verification](https://github.com/caskroom/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/sha256.md#updating-the-sha256) of a `sha256` change. |  | &#x2713;
 
 ## Reviewing Core PRs
 
