@@ -7,7 +7,7 @@ cask 'kalabox' do
   appcast 'https://github.com/kalabox/kalabox/releases.atom',
           checkpoint: '4bda20c55da5053fb855c44857f965496cd085e30f0dc937c405b0654799cefb'
   name 'Kalabox'
-  homepage 'http://kalabox.io/'
+  homepage 'http://www.kalabox.io/'
 
   pkg 'KalaboxInstaller.pkg'
 

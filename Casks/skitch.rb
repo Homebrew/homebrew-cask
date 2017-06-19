@@ -4,7 +4,7 @@ cask 'skitch' do
 
   url "https://cdn1.evernote.com/skitch/mac/release/Skitch-#{version}.zip"
   name 'Skitch'
-  homepage 'https://evernote.com/skitch/'
+  homepage 'https://evernote.com/products/skitch'
 
   auto_updates true
 

@@ -1,10 +1,10 @@
 cask 'metasploit' do
-  version '4.14.27+20170614092237'
-  sha256 '4c2a9b2fa2e064b47253300a76cca20546c1b66792db29df7c4562d01d572904'
+  version '4.14.28+20170617092236'
+  sha256 '8a76196f8b57373a7a6a11ef37b5e98fd28dd1ea5d327cb252e3cb7b4fa4a316'
 
   url "https://osx.metasploit.com/metasploit-framework-#{version}-1rapid7-1.pkg"
   appcast 'https://osx.metasploit.com/LATEST',
-          checkpoint: 'e53b48ebee38f72e5c7c0636ae60b8bdbce4aac17b6d82742225e19b4f0dfd26'
+          checkpoint: 'f218cb29c407e42fb5acc3e0010ad217ad7969ee87fdee3bac056a1376f9e5ba'
   name 'Metasploit Framework'
   homepage 'https://www.metasploit.com/'
   gpg "#{url}.asc", key_id: '2007B954'
@@ -20,13 +20,17 @@ cask 'metasploit' do
   binary '/opt/metasploit-framework/bin/msfelfscan'
   binary '/opt/metasploit-framework/bin/msfmachscan'
   binary '/opt/metasploit-framework/bin/msfpescan'
-  binary '/opt/metasploit-framework/bin/msfremove'
   binary '/opt/metasploit-framework/bin/msfrop'
   binary '/opt/metasploit-framework/bin/msfrpc'
   binary '/opt/metasploit-framework/bin/msfrpcd'
   binary '/opt/metasploit-framework/bin/msfupdate'
   binary '/opt/metasploit-framework/bin/msfvenom'
 
-  uninstall pkgutil: '.*metasploit.*',
-            delete:  '/opt/metasploit-framework'
+  uninstall_preflight do
+    system_command '/bin/rm',
+                   args: ['-rf', '/opt/metasploit-framework'],
+                   sudo: true
+  end
+
+  uninstall pkgutil: '.*metasploit.*'
 end

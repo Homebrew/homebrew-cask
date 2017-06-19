@@ -5,7 +5,7 @@ cask 'triumph' do
   # audiofile-engineering.com/triumph/download was verified as official when first introduced to the cask
   url 'https://www.audiofile-engineering.com/triumph/download/Triumph.dmg'
   name 'Triumph'
-  homepage 'http://triumph.aurchitect.com/'
+  homepage 'https://triumph.aurchitect.com/'
 
   app 'Triumph.app'
 end
