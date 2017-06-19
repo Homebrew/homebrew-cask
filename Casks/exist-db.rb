@@ -5,7 +5,7 @@ cask 'exist-db' do
   # bintray.com/artifact/download/existdb was verified as official when first introduced to the cask
   url "https://bintray.com/artifact/download/existdb/releases/eXist-db-#{version}.dmg"
   name 'eXist-db'
-  homepage 'http://exist-db.org/exist/apps/homepage/index.html'
+  homepage 'https://exist-db.org/exist/apps/homepage/index.html'
 
   app 'eXist-db.app'
 end
