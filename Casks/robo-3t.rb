@@ -1,4 +1,4 @@
-cask 'robo3t' do
+cask 'robo-3t' do
   version '1.1.1,c93c6b0'
   sha256 'b536ca099c200d80a4173c4aa2726fa3eaeaef8ddd17968e2326bd8d2ec9f3b4'
 
