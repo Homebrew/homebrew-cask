@@ -1,6 +1,6 @@
 cask 'devdocs' do
-  version '0.6.0'
-  sha256 'daea1cb863a38294b881fe68539cae8aa2e8f44ef660464626c1baf21d3b92eb'
+  version '0.6.1'
+  sha256 'b2a011097388f34be59d6dd8644175934df048477b6d22b5cee889b8c666f054'
 
   url "https://github.com/egoist/devdocs-app/releases/download/v#{version}/DevDocs-#{version}.dmg"
   appcast 'https://github.com/egoist/devdocs-app/releases.atom',
