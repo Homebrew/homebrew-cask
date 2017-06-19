@@ -4,7 +4,7 @@ cask 'devdocs' do
 
   url "https://github.com/egoist/devdocs-app/releases/download/v#{version}/DevDocs-#{version}.dmg"
   appcast 'https://github.com/egoist/devdocs-app/releases.atom',
-          checkpoint: '69513ab9f9ef22d4a392b08e99a29a97ca7ba24d37d3af5fcbc5a0c5159c143b'
+          checkpoint: 'd8788cdd26808681562f88e23915437cca964062d68eab7be0e3caedd65a6990'
   name 'DevDocs App'
   homepage 'https://github.com/egoist/devdocs-app'
 
