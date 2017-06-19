@@ -16,14 +16,14 @@ So here is where we are gathering details about how we maintain the project.
 
 ## Things we focus on
 
-* We favor the user above all.
+* By default, we favor the user.
 * Any user that submits a PR to our little old project is solid gold - we do everything we can to make sure they have a good experience and that their work is appreciated.
 * Friendliness. In our minds, we are in a *friendliness contest* against other open-source projects. We want to be the nicest, most fun, most easygoing project in the universe.
-* Supporting each other. Help the other maintainers, and spread out the workload.
+* Supporting each other. Help the other maintainers and spread out the workload.
 
 ## Reviewing Incoming Casks
 
-Casks are the lifeblood of this project, and they generate the most maintenance-requiring activity on the project.
+Casks are the lifeblood of this project and they generate the most maintenance-requiring activity on the project.
 
 While we started as a tool for convenience, we’re working on adding safety and security to the list of things we do for our users. That means things like verifying download URLs, working to figure out file checksums when possible, *etc*.
 
@@ -55,15 +55,11 @@ Label | Description | Issues | Pull Requests
 **awaiting user reply** | A maintainer requires further action or information from the original poster to proceed. Particularly useful to weed out those cases where issues and pull requests would otherwise be left open indefinitely because the original poster never replies. | &#x2713; | &#x2713;
 **awaiting verification** | A pull request that [requires verification](https://github.com/caskroom/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/sha256.md#updating-the-sha256) of a `sha256` change. |  | &#x2713;
 
-## Reviewing Core PRs
-
-Occasionally we’ll get submissions from users that fix bugs or add features to Homebrew-Cask itself. There is a subset of our maintainers who are less familiar with Ruby and prefer to leave these reviews to folks with more experience with the language. This is AOK!
-
 ## Handling Cask Update PRs
 
-The most common pull requests we get are to add or update Casks. [Vítor Galvão](https://github.com/vitorgalvao) has created [some excellent scripts](https://github.com/vitorgalvao/tiny-scripts) to make these rote changes more painless. You can use [`fastmerge`](https://github.com/vitorgalvao/tiny-scripts/blob/master/fastmerge) if the PR is ready to merge (everything looks fine, all tests passed). Sometimes, new contributors aren't aware of how to squash commits, posting something like “Please [squash your commits](https://davidwalsh.name/squash-commits-git). Thanks!” should help them out.
+The most common pull requests we get are to add or update Casks. [Vítor Galvão](https://github.com/vitorgalvao) has created [some excellent scripts](https://github.com/vitorgalvao/tiny-scripts) to make these rote changes more painless. You can use [`fastmerge`](https://github.com/vitorgalvao/tiny-scripts/blob/master/fastmerge) if the PR is ready to merge (everything looks fine, all tests passed). If the PR has an error, you can use [`prfixmaster`](https://github.com/vitorgalvao/tiny-scripts/blob/master/prfixmaster) to make any necessary changes.
 
-If the PR has an error, you can use [`prfixmaster`](https://github.com/vitorgalvao/tiny-scripts/blob/master/prfixmaster) to make any necessary changes.
+When merging via the web interface, `Squash and merge` is the preferred method.
 
 Lastly, if you see an outdated cask that just needs a version bump, you can use [`cask-repair`](https://github.com/vitorgalvao/tiny-scripts/blob/master/cask-repair) to make the PR yourself quickly.
 
