@@ -5,7 +5,7 @@ cask 'cctalk' do
   # f1.ct.hjfile.cn was verified as official when first introduced to the cask
   url "http://f1.ct.hjfile.cn/api/AutoUpdate/newupdate/out/mac/cctalk/archive/#{version.before_comma.hyphens_to_dots}/CCtalk-#{version.before_comma}-hujiang-#{version.after_comma}.dmg"
   appcast 'http://f1.ct.hjfile.cn/api/AutoUpdate/newupdate/out/mac/cctalk/update/info.xml',
-          checkpoint: 'c08047aa69dc3ba5b8bc9c24ebf3bbc473e91090435a6107898543a4afa543ca'
+          checkpoint: '2c6841769e9c743903b26117fb5308b9fe9efc5c41d431a4d43a905edd1e24a4'
   name 'CCTalk'
   homepage 'https://www.cctalk.com/download/'
 
