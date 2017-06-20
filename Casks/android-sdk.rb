@@ -1,39 +1,58 @@
 cask 'android-sdk' do
-  version '25.2.3'
-  sha256 '593544d4ca7ab162705d0032fb0c0c88e75bd0f42412d09a1e8daa3394681dc6'
+  version '3859397'
+  sha256 '4a81754a760fce88cba74d69c364b05b31c53d57b26f9f82355c61d5fe4b9df9'
 
-  # google.com/android/repository/tools_r was verified as official when first introduced to the cask
-  url "https://dl.google.com/android/repository/tools_r#{version}-macosx.zip"
+  # dl.google.com/android/repository was verified as official when first introduced to the cask
+  url "https://dl.google.com/android/repository/sdk-tools-darwin-#{version}.zip"
   name 'android-sdk'
   homepage 'https://developer.android.com/index.html'
 
   conflicts_with cask: 'android-platform-tools'
 
-  build_tools_version = '25.0.2'
+  build_tools_version = '26.0.0'
 
   binary "#{staged_path}/build-tools/#{build_tools_version}/aapt"
   binary "#{staged_path}/build-tools/#{build_tools_version}/aapt2"
+  binary "#{staged_path}/build-tools/#{build_tools_version}/aarch64-linux-android-ld"
   binary "#{staged_path}/build-tools/#{build_tools_version}/aidl"
-  binary "#{staged_path}/build-tools/#{build_tools_version}/apksigner"
+  binary "#{staged_path}/build-tools/#{build_tools_version}/arm-linux-androideabi-ld"
+  binary "#{staged_path}/build-tools/#{build_tools_version}/bcc_compat"
   binary "#{staged_path}/build-tools/#{build_tools_version}/dexdump"
   binary "#{staged_path}/build-tools/#{build_tools_version}/dx"
+  binary "#{staged_path}/build-tools/#{build_tools_version}/i686-linux-android-ld"
   binary "#{staged_path}/build-tools/#{build_tools_version}/llvm-rs-cc"
+  binary "#{staged_path}/build-tools/#{build_tools_version}/mainDexClasses"
+  binary "#{staged_path}/build-tools/#{build_tools_version}/mipsel-linux-android-ld"
+  binary "#{staged_path}/build-tools/#{build_tools_version}/split-select"
+  binary "#{staged_path}/build-tools/#{build_tools_version}/x86_64-linux-android-ld"
   binary "#{staged_path}/build-tools/#{build_tools_version}/zipalign"
+  binary "#{staged_path}/emulator/bin64/e2fsck"
+  binary "#{staged_path}/emulator/bin64/fsck.ext4"
+  binary "#{staged_path}/emulator/bin64/mkfs.ext4"
+  binary "#{staged_path}/emulator/bin64/resize2fs"
+  binary "#{staged_path}/emulator/bin64/tune2fs"
   binary "#{staged_path}/emulator/emulator"
   binary "#{staged_path}/emulator/emulator-check"
   binary "#{staged_path}/emulator/emulator64-arm"
+  binary "#{staged_path}/emulator/emulator64-crash-service"
   binary "#{staged_path}/emulator/emulator64-mips"
   binary "#{staged_path}/emulator/emulator64-x86"
+  binary "#{staged_path}/emulator/mksdcard"
   binary "#{staged_path}/platform-tools/adb"
   binary "#{staged_path}/platform-tools/dmtracedump"
   binary "#{staged_path}/platform-tools/etc1tool"
   binary "#{staged_path}/platform-tools/fastboot"
   binary "#{staged_path}/platform-tools/hprof-conv"
+  binary "#{staged_path}/platform-tools/systrace/systrace.py"
   binary "#{staged_path}/tools/android"
+  binary "#{staged_path}/tools/bin/archquery"
   binary "#{staged_path}/tools/bin/avdmanager"
+  binary "#{staged_path}/tools/bin/jobb"
   binary "#{staged_path}/tools/bin/lint"
   binary "#{staged_path}/tools/bin/monkeyrunner"
+  binary "#{staged_path}/tools/bin/screenshot2"
   binary "#{staged_path}/tools/bin/sdkmanager"
+  binary "#{staged_path}/tools/bin/uiautomatorviewer"
   binary "#{staged_path}/tools/mksdcard"
   binary "#{staged_path}/tools/monitor"
 

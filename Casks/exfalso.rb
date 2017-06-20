@@ -1,11 +1,11 @@
 cask 'exfalso' do
-  version '3.9.0'
-  sha256 '4da83c06cc6fa9961cb00c711220c17627107a6e27bc8b57459c3805a1f2c651'
+  version '3.9.1'
+  sha256 '3f26a9ddd7659a3b29f9e04f522122ad077e900b2e30591404a649527254fbf4'
 
-  # bitbucket.org/lazka/quodlibet was verified as official when first introduced to the cask
-  url "https://bitbucket.org/lazka/quodlibet/downloads/ExFalso-#{version}.dmg"
+  # github.com/quodlibet/quodlibet was verified as official when first introduced to the cask
+  url "https://github.com/quodlibet/quodlibet/releases/download/release-#{version}/QuodLibet-#{version}.dmg"
   appcast 'https://github.com/quodlibet/quodlibet/releases.atom',
-          checkpoint: '1cb6bed33dc0a4c621a01ac5d6148a59ef525c3d9c5449c2a760c22f45ab3a7d'
+          checkpoint: '07c8c61a85c2371138c696b28aa175857d84645a59d2a2d99dc9a73341d141ed'
   name 'Ex Falso'
   homepage 'https://quodlibet.readthedocs.io/'
 
