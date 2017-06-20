@@ -13,8 +13,8 @@ cask 'teseve' do
 
   app 'Teseve.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.flatland.app.teseve.plist',
-                '~/Library/Application Support/teseve',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.flatland.app.teseve.plist',
+               '~/Library/Application Support/teseve',
+             ]
 end

@@ -13,8 +13,8 @@ cask 'sqlectron' do
 
   app 'Sqlectron.app'
 
-  zap delete: [
-                '~/.sqlectron.json',
-                '~/Library/Application Support/Sqlectron',
-              ]
+  zap trash: [
+               '~/.sqlectron.json',
+               '~/Library/Application Support/Sqlectron',
+             ]
 end

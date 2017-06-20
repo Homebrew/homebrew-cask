@@ -20,5 +20,5 @@ cask 'quadrosync' do
             launchctl:  'com.quadro.QuadroInstaller.HelperTool',
             login_item: 'QuadroSync'
 
-  zap delete: '/Library/Application Support/Quadro'
+  zap trash: '/Library/Application Support/Quadro'
 end

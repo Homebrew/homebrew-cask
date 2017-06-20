@@ -15,5 +15,5 @@ cask 'speedify' do
                        ],
             script:    "#{appdir}/Speedify.app/Contents/Resources/uninstall-speedify-service.sh"
 
-  zap delete: '~/Library/Speedify'
+  zap trash: '~/Library/Speedify'
 end

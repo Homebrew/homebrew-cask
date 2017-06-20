@@ -8,8 +8,8 @@ cask 'path-finder' do
 
   app 'Path Finder.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.cocoatech.PathFinder.plist',
-                '~/Library/Application Support/Path Finder',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.cocoatech.PathFinder.plist',
+               '~/Library/Application Support/Path Finder',
+             ]
 end

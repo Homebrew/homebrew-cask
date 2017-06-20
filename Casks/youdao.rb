@@ -16,5 +16,5 @@ cask 'youdao' do
 
   app '有道词典.app'
 
-  zap delete: '~/Library/com.youdao.YoudaoDict'
+  zap trash: '~/Library/com.youdao.YoudaoDict'
 end

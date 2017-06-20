@@ -12,5 +12,5 @@ cask 'flume' do
 
   app 'Flume.app'
 
-  zap delete: '~/Library/Application Support/Flume'
+  zap trash: '~/Library/Application Support/Flume'
 end

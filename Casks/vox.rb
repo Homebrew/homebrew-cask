@@ -11,8 +11,8 @@ cask 'vox' do
 
   app 'VOX.app'
 
-  zap delete: [
-                '~/Library/Containers/com.coppertino.Vox',
-                '~/Library/Preferences/com.coppertino.Vox.plist',
-              ]
+  zap trash: [
+               '~/Library/Containers/com.coppertino.Vox',
+               '~/Library/Preferences/com.coppertino.Vox.plist',
+             ]
 end

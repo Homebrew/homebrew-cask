@@ -11,8 +11,8 @@ cask 'nzbget' do
 
   app 'NZBGet.app'
 
-  zap delete: [
-                '~/Library/Application Support/NZBGet',
-                '~/Library/Preferences/net.sourceforge.nzbget.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/NZBGet',
+               '~/Library/Preferences/net.sourceforge.nzbget.plist',
+             ]
 end

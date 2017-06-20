@@ -10,7 +10,7 @@ cask 'reactotron' do
 
   app 'Reactotron.app'
 
-  zap delete: [
-                '~/Library/Application Support/Reactotron',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Reactotron',
+             ]
 end

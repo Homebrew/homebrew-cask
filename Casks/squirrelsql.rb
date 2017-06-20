@@ -79,7 +79,7 @@ cask 'squirrelsql' do
     system_command 'java', args: ['-jar', "#{appdir}/SQuirreLSQL.app/Uninstaller/uninstaller.jar", '-f', '-c']
   end
 
-  zap delete: '~/.squirrel-sql'
+  zap trash: '~/.squirrel-sql'
 
   caveats do
     depends_on_java('6+')

@@ -8,5 +8,5 @@ cask 'pins' do
 
   app 'Pins.app'
 
-  zap delete: '~/Library/Containers/com.pinsapp.pins'
+  zap trash: '~/Library/Containers/com.pinsapp.pins'
 end

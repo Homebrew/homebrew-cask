@@ -10,5 +10,5 @@ cask 'processing' do
 
   app 'Processing.app'
 
-  zap delete: '~/Library/Processing/preferences.txt'
+  zap trash: '~/Library/Processing/preferences.txt'
 end

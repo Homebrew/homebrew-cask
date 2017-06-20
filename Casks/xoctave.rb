@@ -13,5 +13,5 @@ cask 'xoctave' do
 
   uninstall quit: 'org.magnifier.magnifier'
 
-  zap delete: '~/xoctave'
+  zap trash: '~/xoctave'
 end

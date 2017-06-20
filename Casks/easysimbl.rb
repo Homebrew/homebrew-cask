@@ -10,8 +10,8 @@ cask 'easysimbl' do
 
   app 'EasySIMBL.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.github.norio-nomura.EasySIMBL.plist',
-                '~/Library/Preferences/com.github.norio-nomura.SIMBL-Agent.plist',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.github.norio-nomura.EasySIMBL.plist',
+               '~/Library/Preferences/com.github.norio-nomura.SIMBL-Agent.plist',
+             ]
 end

@@ -11,5 +11,5 @@ cask 'studiolinkstandalone' do
 
   app 'StudioLinkStandalone.app'
 
-  zap delete: '~/.studio-link'
+  zap trash: '~/.studio-link'
 end

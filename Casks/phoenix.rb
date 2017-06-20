@@ -13,8 +13,8 @@ cask 'phoenix' do
 
   app 'Phoenix.app'
 
-  zap delete: [
-                '~/.phoenix.js',
-                '~/Library/Application Support/Phoenix/storage.json',
-              ]
+  zap trash: [
+               '~/.phoenix.js',
+               '~/Library/Application Support/Phoenix/storage.json',
+             ]
 end

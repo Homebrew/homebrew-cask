@@ -10,5 +10,5 @@ cask 'mysql-shell' do
 
   uninstall pkgutil: 'com.mysql.shell'
 
-  zap delete: '~/.mysqlsh'
+  zap trash: '~/.mysqlsh'
 end

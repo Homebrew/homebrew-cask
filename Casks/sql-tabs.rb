@@ -8,5 +8,5 @@ cask 'sql-tabs' do
 
   app 'SQL Tabs.app'
 
-  zap delete: '~/.sqltabs'
+  zap trash: '~/.sqltabs'
 end

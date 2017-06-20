@@ -11,5 +11,5 @@ cask 'universal-media-server' do
 
   app 'Universal Media Server.app'
 
-  zap delete: '~/Library/Application Support/UMS/'
+  zap trash: '~/Library/Application Support/UMS/'
 end
