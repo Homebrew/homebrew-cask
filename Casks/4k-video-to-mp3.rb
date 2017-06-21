@@ -10,8 +10,8 @@ cask '4k-video-to-mp3' do
 
   app '4K Video to MP3.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.4kdownload.4K Video to MP3.plist',
-                '~/Library/Application Support/4kdownload.com',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.4kdownload.4K Video to MP3.plist',
+               '~/Library/Application Support/4kdownload.com',
+             ]
 end

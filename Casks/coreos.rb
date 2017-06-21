@@ -12,5 +12,5 @@ cask 'coreos' do
 
   app 'CoreOS.app'
 
-  zap delete: '~/coreos-osx'
+  zap trash: '~/coreos-osx'
 end

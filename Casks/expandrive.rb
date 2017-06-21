@@ -10,9 +10,9 @@ cask 'expandrive' do
 
   app 'ExpanDrive.app'
 
-  zap delete: [
-                '~/Library/Application Support/ExpanDrive',
-                '~/Library/Preferences/com.expandrive.ExpanDrive2.plist',
-                '~/Library/Preferences/com.expandrive.ExpanDrive3.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/ExpanDrive',
+               '~/Library/Preferences/com.expandrive.ExpanDrive2.plist',
+               '~/Library/Preferences/com.expandrive.ExpanDrive3.plist',
+             ]
 end

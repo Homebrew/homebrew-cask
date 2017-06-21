@@ -10,5 +10,5 @@ cask 'discovercare' do
 
   app 'DiscoverCare.app'
 
-  zap delete: '~/DiscoverCare'
+  zap trash: '~/DiscoverCare'
 end

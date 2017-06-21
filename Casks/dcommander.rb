@@ -8,5 +8,5 @@ cask 'dcommander' do
 
   app 'DCommander.app'
 
-  zap delete: '~/Library/Containers/com.devstorm.dc3'
+  zap trash: '~/Library/Containers/com.devstorm.dc3'
 end

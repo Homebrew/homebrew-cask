@@ -87,7 +87,7 @@ cask 'pcp' do
                        ],
             launchctl: 'io.pcp'
 
-  zap delete: '~/.pcp'
+  zap trash: '~/.pcp'
 
   caveats <<-EOS.undent
     During installation 2 windows will pop up asking your permission for access for network ports for `pmlogger` and `pmcd`.  This is expected.

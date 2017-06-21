@@ -10,5 +10,5 @@ cask 'texmacs' do
 
   app "TeXmacs-#{version}.app"
 
-  zap delete: '~/.TeXmacs'
+  zap trash: '~/.TeXmacs'
 end

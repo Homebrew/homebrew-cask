@@ -10,5 +10,5 @@ cask 'flinto' do
 
   uninstall pkgutil: 'com.flinto.*'
 
-  zap delete: '~/Library/Application Scripts/com.flinto.Flinto'
+  zap trash: '~/Library/Application Scripts/com.flinto.Flinto'
 end

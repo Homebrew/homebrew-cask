@@ -10,8 +10,8 @@ cask 'simple-hub' do
 
   app 'Simple Hub.app'
 
-  zap delete: [
-                '~/Library/Application Support/Roomie Agent',
-                '~/Library/Preferences/com.roomie.agent.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Roomie Agent',
+               '~/Library/Preferences/com.roomie.agent.plist',
+             ]
 end

@@ -10,8 +10,8 @@ cask 'wxcrafter' do
 
   app 'wxCrafter.app'
 
-  zap delete: [
-                '~/Library/Application Support/wxcrafter',
-                '~/Library/Preferences/wxcrafter.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/wxcrafter',
+               '~/Library/Preferences/wxcrafter.plist',
+             ]
 end

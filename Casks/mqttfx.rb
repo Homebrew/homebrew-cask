@@ -15,8 +15,8 @@ cask 'mqttfx' do
 
   uninstall delete: '/Applications/MQTT.fx.app'
 
-  zap delete: [
-                '~/Library/Application Support/MQTT-FX',
-                '~/Library/Application Support/MQTT.fx',
-              ]
+  zap trash: [
+               '~/Library/Application Support/MQTT-FX',
+               '~/Library/Application Support/MQTT.fx',
+             ]
 end

@@ -11,5 +11,5 @@ cask 'shuttle' do
 
   app 'Shuttle.app'
 
-  zap delete: '~/.shuttle.json'
+  zap trash: '~/.shuttle.json'
 end

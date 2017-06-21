@@ -27,5 +27,5 @@ cask 'radio-silence' do
                             'com.radiosilenceapp.nke',
                           ]
 
-  zap delete: '~/Library/Application Support/Radio Silence'
+  zap trash: '~/Library/Application Support/Radio Silence'
 end

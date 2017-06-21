@@ -19,5 +19,5 @@ cask 'witch' do
 
   prefpane 'Witch.prefPane'
 
-  zap delete: '~/Library/Preferences/com.manytricks.Witch.plist'
+  zap trash: '~/Library/Preferences/com.manytricks.Witch.plist'
 end

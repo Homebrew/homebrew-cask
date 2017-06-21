@@ -10,5 +10,5 @@ cask 'readcube' do
 
   uninstall trash: '/Applications/ReadCube.app'
 
-  zap delete: '~/Library/Preferences/com.readcube.Desktop/'
+  zap trash: '~/Library/Preferences/com.readcube.Desktop/'
 end

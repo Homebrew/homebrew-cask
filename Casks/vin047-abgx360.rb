@@ -10,5 +10,5 @@ cask 'vin047-abgx360' do
 
   app 'abgx360 GUI.app'
 
-  zap delete: '~/.abgx360'
+  zap trash: '~/.abgx360'
 end

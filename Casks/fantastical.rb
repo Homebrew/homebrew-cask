@@ -10,5 +10,5 @@ cask 'fantastical' do
 
   app "Fantastical #{version.major}.app"
 
-  zap delete: '~/Library/Preferences/com.flexibits.fantastical.plist'
+  zap trash: '~/Library/Preferences/com.flexibits.fantastical.plist'
 end

@@ -13,5 +13,5 @@ cask 'plover' do
 
   app 'Plover.app'
 
-  zap delete: '~/Library/Application Support/plover/'
+  zap trash: '~/Library/Application Support/plover/'
 end

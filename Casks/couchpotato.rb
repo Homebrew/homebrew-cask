@@ -11,5 +11,5 @@ cask 'couchpotato' do
 
   app 'CouchPotato.app'
 
-  zap delete: '~/Library/Application Support/CouchPotato'
+  zap trash: '~/Library/Application Support/CouchPotato'
 end

@@ -10,5 +10,5 @@ cask 'enjoyable' do
 
   app 'Enjoyable.app'
 
-  zap delete: '~/Library/Preferences/com.yukkurigames.Enjoyable.plist'
+  zap trash: '~/Library/Preferences/com.yukkurigames.Enjoyable.plist'
 end

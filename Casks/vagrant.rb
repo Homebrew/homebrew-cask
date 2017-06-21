@@ -17,5 +17,5 @@ cask 'vagrant' do
                      },
             pkgutil: 'com.vagrant.vagrant'
 
-  zap delete: '~/.vagrant.d'
+  zap trash: '~/.vagrant.d'
 end

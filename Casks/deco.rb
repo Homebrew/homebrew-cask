@@ -11,8 +11,8 @@ cask 'deco' do
 
   app 'Deco.app'
 
-  zap delete: [
-                '~/.Deco',
-                '~/Library/Application Support/com.decosoftware.Deco',
-              ]
+  zap trash: [
+               '~/.Deco',
+               '~/Library/Application Support/com.decosoftware.Deco',
+             ]
 end

@@ -8,9 +8,9 @@ cask 'notion' do
 
   app 'Notion.app'
 
-  zap delete: [
-                '~/Library/Application Support/Notion',
-                '~/Library/Preferences/notion.id.helper.plist',
-                '~/Library/Preferences/notion.id.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Notion',
+               '~/Library/Preferences/notion.id.helper.plist',
+               '~/Library/Preferences/notion.id.plist',
+             ]
 end

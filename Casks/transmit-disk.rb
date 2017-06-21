@@ -24,8 +24,8 @@ cask 'transmit-disk' do
                      ],
             delete:  "#{appdir}/Transmit Disk.app"
 
-  zap delete: [
-                '~/Library/Preferences/com.panic.Transmit.TransmitDisk.plist',
-                '/Library/Filesystems/transmitdisk.fs/',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.panic.Transmit.TransmitDisk.plist',
+               '/Library/Filesystems/transmitdisk.fs/',
+             ]
 end

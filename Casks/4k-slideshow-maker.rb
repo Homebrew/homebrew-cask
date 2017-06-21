@@ -11,8 +11,10 @@ cask '4k-slideshow-maker' do
   app '4K Slideshow Maker.app'
 
   zap delete: [
+                '~/Library/Saved Application State/com.openmedia.4kslideshowmaker.savedState',
+              ],
+      trash:  [
                 '~/Library/Preferences/com.4kdownload.4K Slideshow Maker.plist',
                 '~/Library/Application Support/4kdownload.com',
-                '~/Library/Saved Application State/com.openmedia.4kslideshowmaker.savedState',
               ]
 end

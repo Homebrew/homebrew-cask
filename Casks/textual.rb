@@ -8,8 +8,8 @@ cask 'textual' do
 
   app 'Textual.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.codeux.apps.textual.plist',
-                '~/Library/Application Support/Textual',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.codeux.apps.textual.plist',
+               '~/Library/Application Support/Textual',
+             ]
 end

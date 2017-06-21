@@ -18,10 +18,10 @@ cask 'earthdeskprefpane' do
                       '/Library/PreferencePanes/EarthDesk.prefpane',
                     ]
 
-  zap delete: [
-                '~/Library/Preferences/com.apple.desktop.plist',
-                '~/Library/Preferences/com.xericdesign.earthdesk.core.plist',
-                '~/Library/Preferences/com.xericdesign.earthdesk.engine.plist',
-                '~/Library/Preferences/com.xericdesign.earthdesk.prefPane.plist',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.apple.desktop.plist',
+               '~/Library/Preferences/com.xericdesign.earthdesk.core.plist',
+               '~/Library/Preferences/com.xericdesign.earthdesk.engine.plist',
+               '~/Library/Preferences/com.xericdesign.earthdesk.prefPane.plist',
+             ]
 end

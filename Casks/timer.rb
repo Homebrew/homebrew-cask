@@ -8,8 +8,8 @@ cask 'timer' do
 
   app 'Timer.app'
 
-  zap delete: [
-                '~/Library/Preferences/Apimac',
-                '~/Library/Application Support/Apimac',
-              ]
+  zap trash: [
+               '~/Library/Preferences/Apimac',
+               '~/Library/Application Support/Apimac',
+             ]
 end

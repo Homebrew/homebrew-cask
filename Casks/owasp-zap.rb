@@ -23,10 +23,10 @@ cask 'owasp-zap' do
                     },
             delete: "/Applications/ZAP #{version}.app"
 
-  zap delete: [
-                '~/Library/Preferences/org.zaproxy.zap.plist',
-                '~/Library/Application Support/ZAP',
-              ]
+  zap trash: [
+               '~/Library/Preferences/org.zaproxy.zap.plist',
+               '~/Library/Application Support/ZAP',
+             ]
 
   caveats do
     depends_on_java('7+')
