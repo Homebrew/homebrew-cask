@@ -10,5 +10,5 @@ cask 'qsyncthingtray' do
 
   app 'QSyncthingTray.app'
 
-  zap delete: '~/Library/Preferences/com.sieren.QSyncthingTray.plist'
+  zap trash: '~/Library/Preferences/com.sieren.QSyncthingTray.plist'
 end

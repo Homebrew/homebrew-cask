@@ -9,5 +9,5 @@ cask 'ngrok' do
 
   binary 'ngrok'
 
-  zap delete: '~/.ngrok2'
+  zap trash: '~/.ngrok2'
 end

@@ -1,14 +1,19 @@
 cask 'gitify' do
-  version '2.0.0'
-  sha256 'a41ff8647957f5901860e924e75f0ecbce8518fadce349784a1dcd15985050ce'
+  version '2.0.2'
+  sha256 'c0d206b5160850c89dafcb330fa4df74c53de457154bf765257f7fe343f675f6'
 
   url "https://github.com/manosim/gitify/releases/download/#{version}/gitify-osx.zip"
   appcast 'https://github.com/manosim/gitify/releases.atom',
-          checkpoint: 'de8b362f4876630b82163d1d1a6ed7ac38e3396fc8bdfdbe61eadb8e839a1555'
+          checkpoint: '1a17101d1ec564960a3651bcb3cc57b2ae2dd8e48f53b4e33aedbecd96fc1d61'
   name 'Gitify'
   homepage 'https://github.com/manosim/gitify'
 
   app 'Gitify.app'
+
+  uninstall quit: [
+                    'com.electron.gitify',
+                    'com.electron.gitify.helper',
+                  ]
 
   zap delete: [
                 '~/Library/Application Support/gitify',

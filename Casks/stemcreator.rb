@@ -9,5 +9,5 @@ cask 'stemcreator' do
   app 'StemCreator.app'
   artifact 'Documentation', target: Pathname.new(File.expand_path('~')).join('Library/Application Support/Native Instruments/Stem Creator/Documentation')
 
-  zap delete: '~/Library/Application Support/Native Instruments/Stem Creator'
+  zap trash: '~/Library/Application Support/Native Instruments/Stem Creator'
 end

@@ -10,5 +10,5 @@ cask 'cord' do
 
   app 'CoRD.app'
 
-  zap delete: '~/Library/Application Support/CoRD'
+  zap trash: '~/Library/Application Support/CoRD'
 end

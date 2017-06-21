@@ -11,5 +11,5 @@ cask 'exfalso' do
 
   app 'ExFalso.app'
 
-  zap delete: '~/.quodlibet'
+  zap trash: '~/.quodlibet'
 end

@@ -10,5 +10,5 @@ cask 'exifrenamer' do
 
   app 'ExifRenamer.app'
 
-  zap delete: '~/Library/Preferences/de.qdev.ExifRenamer.plist'
+  zap trash: '~/Library/Preferences/de.qdev.ExifRenamer.plist'
 end

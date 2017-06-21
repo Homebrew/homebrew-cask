@@ -16,8 +16,8 @@ cask 'youku' do
 
   app '优酷.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/com.youku.mac',
-                '~/Library/Containers/com.youku.mac',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/com.youku.mac',
+               '~/Library/Containers/com.youku.mac',
+             ]
 end

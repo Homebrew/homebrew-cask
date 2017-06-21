@@ -29,9 +29,9 @@ cask 'nix' do
 
   uninstall delete: '/nix'
 
-  zap delete: [
-                '~/.nix-channels',
-                '~/.nix-defexpr',
-                '~/.nix-profile',
-              ]
+  zap trash: [
+               '~/.nix-channels',
+               '~/.nix-defexpr',
+               '~/.nix-profile',
+             ]
 end

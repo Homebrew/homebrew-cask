@@ -10,8 +10,8 @@ cask 'freeze' do
 
   app 'Freeze.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/seb.GlacierMac',
-                '~/Library/Containers/seb.GlacierMac',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/seb.GlacierMac',
+               '~/Library/Containers/seb.GlacierMac',
+             ]
 end

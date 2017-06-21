@@ -11,5 +11,5 @@ cask 'mplayer-osx-extended' do
 
   app 'MPlayer OSX Extended.app'
 
-  zap delete: '~/.mplayer'
+  zap trash: '~/.mplayer'
 end

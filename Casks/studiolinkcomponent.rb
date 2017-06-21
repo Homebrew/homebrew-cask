@@ -11,5 +11,5 @@ cask 'studiolinkcomponent' do
 
   audio_unit_plugin 'StudioLink.component'
 
-  zap delete: '~/.studio-link-plugin'
+  zap trash: '~/.studio-link-plugin'
 end

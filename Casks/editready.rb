@@ -8,8 +8,8 @@ cask 'editready' do
 
   app 'EditReady.app'
 
-  zap delete: [
-                '~/Library/Application Support/EditReady',
-                '~/Library/Preferences/com.divergentmedia.EditReady.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/EditReady',
+               '~/Library/Preferences/com.divergentmedia.EditReady.plist',
+             ]
 end

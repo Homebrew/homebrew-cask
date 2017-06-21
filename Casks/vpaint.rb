@@ -11,5 +11,5 @@ cask 'vpaint' do
 
   app 'vpaint.app'
 
-  zap delete: '~/.config/vpaint'
+  zap trash: '~/.config/vpaint'
 end

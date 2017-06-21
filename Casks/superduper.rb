@@ -9,5 +9,5 @@ cask 'superduper' do
 
   app 'SuperDuper!.app'
 
-  zap delete: '~/Library/Application Support/SuperDuper!'
+  zap trash: '~/Library/Application Support/SuperDuper!'
 end

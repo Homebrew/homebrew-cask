@@ -10,8 +10,8 @@ cask 'fluid' do
 
   app 'Fluid.app'
 
-  zap delete: [
-                '~/Library/Application Support/Fluid',
-                '~/Library/Preferences/com.fluidapp.Fluid.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Fluid',
+               '~/Library/Preferences/com.fluidapp.Fluid.plist',
+             ]
 end

@@ -12,5 +12,5 @@ cask 'yujitach-menumeters' do
 
   prefpane 'MenuMeters.prefPane'
 
-  zap delete: '~/Library/Preferences/com.ragingmenace.MenuMeters.plist'
+  zap trash: '~/Library/Preferences/com.ragingmenace.MenuMeters.plist'
 end

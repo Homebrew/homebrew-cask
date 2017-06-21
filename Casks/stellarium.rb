@@ -11,5 +11,5 @@ cask 'stellarium' do
 
   app 'Stellarium.app'
 
-  zap delete: '~/Library/Preferences/Stellarium'
+  zap trash: '~/Library/Preferences/Stellarium'
 end

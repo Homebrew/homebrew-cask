@@ -8,5 +8,5 @@ cask 'geomap' do
 
   app 'GeoMapApp.app'
 
-  zap delete: '~/.GMA'
+  zap trash: '~/.GMA'
 end

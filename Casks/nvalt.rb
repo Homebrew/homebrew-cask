@@ -9,8 +9,8 @@ cask 'nvalt' do
 
   app 'nvALT.app'
 
-  zap delete: [
-                '~/Library/Preferences/net.elasticthreads.nv.plist',
-                '~/Library/Application Support/Notational Velocity',
-              ]
+  zap trash: [
+               '~/Library/Preferences/net.elasticthreads.nv.plist',
+               '~/Library/Application Support/Notational Velocity',
+             ]
 end

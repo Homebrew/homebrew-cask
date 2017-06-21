@@ -8,8 +8,8 @@ cask 'expressions' do
 
   app 'Expressions.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/com.apptorium.Expressions-dm',
-                '~/Library/Containers/com.apptorium.Expressions-dm',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/com.apptorium.Expressions-dm',
+               '~/Library/Containers/com.apptorium.Expressions-dm',
+             ]
 end

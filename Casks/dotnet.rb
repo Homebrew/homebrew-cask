@@ -32,5 +32,5 @@ cask 'dotnet' do
   uninstall pkgutil: 'com.microsoft.dotnet.*',
             delete:  '/etc/paths.d/dotnet'
 
-  zap delete: '~/.nuget'
+  zap trash: '~/.nuget'
 end

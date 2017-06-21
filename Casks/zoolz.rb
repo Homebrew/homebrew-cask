@@ -13,5 +13,5 @@ cask 'zoolz' do
             pkgutil:    'ZoolzInstaller',
             delete:     '/Applications/ZoolzRestore.app'
 
-  zap delete: '~/.config/Genie9/Zoolz'
+  zap trash: '~/.config/Genie9/Zoolz'
 end

@@ -8,5 +8,5 @@ cask 'spark' do
 
   app 'Spark.app'
 
-  zap delete: '~/Library/Application Support/Spark'
+  zap trash: '~/Library/Application Support/Spark'
 end

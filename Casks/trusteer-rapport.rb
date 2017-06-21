@@ -14,8 +14,8 @@ cask 'trusteer-rapport' do
                      },
             pkgutil: 'com.trusteer.ibmSecurityTrusteerEndpointProtection.*'
 
-  zap delete: [
-                '~/Library/Application Support/Rapport',
-                '~/Library/Preferences/com.trusteer.rapportd.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Rapport',
+               '~/Library/Preferences/com.trusteer.rapportd.plist',
+             ]
 end

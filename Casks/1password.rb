@@ -32,10 +32,10 @@ cask '1password' do
 
   auto_updates true
 
-  zap delete: [
-                '~/Library/Application Scripts/2BUA8C4S2C.com.agilebits.onepassword-osx-helper',
-                '~/Library/Containers/2BUA8C4S2C.com.agilebits.onepassword-osx-helper',
-                '~/Library/Containers/com.agilebits.onepassword-osx',
-                '~/Library/Group Containers/2BUA8C4S2C.com.agilebits',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/2BUA8C4S2C.com.agilebits.onepassword-osx-helper',
+               '~/Library/Containers/2BUA8C4S2C.com.agilebits.onepassword-osx-helper',
+               '~/Library/Containers/com.agilebits.onepassword-osx',
+               '~/Library/Group Containers/2BUA8C4S2C.com.agilebits',
+             ]
 end

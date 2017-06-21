@@ -10,5 +10,5 @@ cask 'xpra' do
 
   uninstall pkgutil:  'org.xpra.pkg'
 
-  zap delete: '/Library/Application Support/Xpra'
+  zap trash: '/Library/Application Support/Xpra'
 end
