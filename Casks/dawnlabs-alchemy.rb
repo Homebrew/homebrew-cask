@@ -9,4 +9,6 @@ cask 'dawnlabs-alchemy' do
   homepage 'https://github.com/dawnlabs/alchemy'
 
   app 'Alchemy-darwin-x64/Alchemy.app'
+
+  uninstall signal: ['TERM', 'com.electron.alchemy']
 end
