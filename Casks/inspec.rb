@@ -1,11 +1,11 @@
 cask 'inspec' do
-  version '1.25.1-1'
-  sha256 '026d8bb09d909cf3213e6a55998326c9976ade081c9804724c09c07d7431586a'
+  version '1.28.1-1'
+  sha256 'b869468f68925d783f1ac99514b28e79c37befbc33a2391affa11d057a400261'
 
   # packages.chef.io was verified as official when first introduced to the cask
   url "https://packages.chef.io/files/stable/inspec/#{version.major_minor_patch}/mac_os_x/10.12/inspec-#{version}.dmg"
   appcast 'https://github.com/chef/inspec/releases.atom',
-          checkpoint: '504a42e6b855a72fc67463f70a6119ea6e3a7cc776d529adb0d722fa1c9c4167'
+          checkpoint: 'c33d2ec8a6abc1d5872bf1aa4d52dccc0dcbd554571463f8363b801eba87923f'
   name 'InSpec by Chef'
   homepage 'https://www.inspec.io/'
 
