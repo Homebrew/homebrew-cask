@@ -5,7 +5,7 @@ cask 'psi' do
   # sourceforge.net/psi was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/psi/Psi-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/psi/rss',
-          checkpoint: 'fc703fc10b2d55e7e3899978ced2ba7538158ada157bca15842c6a0834320f26'
+          checkpoint: '0dc233c8da65af7c4a7ecdbcdc84440b313df474e3152b28fcdda38bfee6b328'
   name 'Psi'
   homepage 'http://psi-im.org/'
 
