@@ -1,8 +1,8 @@
 cask 'qiyimedia' do
-  version '005'
-  sha256 '5c4be4a6c91358b40a96747194b90e2360c721648a009354f8fc29a33590b531'
+  version '4.15.10'
+  sha256 'fad57bd51aca4ccd797ea26e165e70a5824a4e62189c0369271ee6f516e94039'
 
-  url "https://mbdapp.iqiyi.com/j/ot/iQIYIMedia_#{version}.dmg"
+  url 'https://mbdapp.iqiyi.com/j/ot/iQIYIMedia_003.dmg'
   name '爱奇艺视频'
   homepage 'https://www.iqiyi.com/'
 
