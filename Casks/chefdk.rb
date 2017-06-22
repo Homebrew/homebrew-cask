@@ -3,8 +3,8 @@ cask 'chefdk' do
     version '0.11.2-1'
     sha256 '56899eab322cacac7f445a24d3159af34fccb5910642f4535eff4ee47321fe56'
   else
-    version '1.4.3-1'
-    sha256 '5791d9d7303afcc1fc5cc64c8eb53e2344302f9732be1c543ed48ee8f9a9ab33'
+    version '1.5.0-1'
+    sha256 '23a7a0cd0b58c12fef7881f23d3b862b45d6baa27237e39290cb0b80ee6483ff'
   end
 
   url "https://packages.chef.io/stable/mac_os_x/#{MacOS.version}/chefdk-#{version}.dmg"
