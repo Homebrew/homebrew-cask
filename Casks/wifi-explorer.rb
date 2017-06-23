@@ -1,11 +1,11 @@
 cask 'wifi-explorer' do
-  version '2.3.1'
-  sha256 '7c89a610b88e396ecbfea3c837463fa9493f1a1ec753d4d0644ad9909742edfb'
+  version '2.3.2'
+  sha256 '96cf78ae761e68ecf4141b919d1fa8a578e665ed678066cfcb75380dff54b990'
 
   # s3.amazonaws.com/apps.adriangranados.com was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/apps.adriangranados.com/wifiexplorer.zip'
   appcast 'https://www.adriangranados.com/appcasts/wifiexplorercast.xml',
-          checkpoint: 'ffbc98d5db6d4eb7d5bbdd71b9bafe11ff718070a12624ab0798fd32cd48974b'
+          checkpoint: 'ab789ce78c00e1ba7490aa4741205244d0bb00e956e1c1d0e413a6e8449538f4'
   name 'WiFi Explorer'
   homepage 'https://www.adriangranados.com/apps/wifi-explorer'
 
