@@ -1,6 +1,11 @@
 cask 'thunderbird' do
   version '52.2.0'
 
+  language 'cs' do
+    sha256 '5e300e28761c0588aabd42d48adb4e71d70ea182f956a14a49aaddc5eaed937a'
+    'cs'
+  end
+
   language 'de' do
     sha256 '64030af3e83f1c02e1616197fc5111d7d3f29e1c37509deb763dbb4d6a8c67a0'
     'de'
