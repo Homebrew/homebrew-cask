@@ -1,10 +1,10 @@
 cask 'airserver' do
-  version '7.0.5'
-  sha256 '14c6ac13594ed69d5607f92f9ad9e1c1458bb22078d71078ffe6cd480578a54e'
+  version '7.0.8'
+  sha256 '8c2f9b7f9cfafc3005ee27eecc0a0514484c223d52a0b3656c488b998778234c'
 
   url "http://dl.airserver.com/mac/AirServer-#{version}.dmg"
   appcast 'https://www.airserver.com/downloads/mac/appcast.xml',
-          checkpoint: '7336b8a1360c18d81499cac1c53c3e7c6757cf6f29437900ec1aa82bdc6af60d'
+          checkpoint: '257b330e793fd68f273dcfb52e182dab49c3292a761e7bd4bd8e576052fbe53f'
   name 'AirServer'
   homepage 'https://www.airserver.com/'
 
