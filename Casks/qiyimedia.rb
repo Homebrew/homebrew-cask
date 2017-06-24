@@ -2,7 +2,7 @@ cask 'qiyimedia' do
   version :latest
   sha256 :no_check
 
-  url 'https://mbdapp.iqiyi.com/j/ot/iQIYIMedia_003.dmg'
+  url 'https://mbdapp.iqiyi.com/j/ot/iQIYIMedia_005.dmg'
   name '爱奇艺视频'
   homepage 'https://www.iqiyi.com/'
 
