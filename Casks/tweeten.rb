@@ -5,7 +5,7 @@ cask 'tweeten' do
   # github.com/MehediH/TweetenSite was verified as official when first introduced to the cask
   url "https://github.com/MehediH/TweetenSite/releases/download/#{version}/tweeten-darwin-x64.zip"
   appcast 'https://github.com/MehediH/TweetenSite/releases.atom',
-          checkpoint: '057d2c565c93c01c85b2ff67d650db9f029a8e8563f1d82a1acc927aa877f777'
+          checkpoint: 'd337261a136a37c1d6f084599928721222ddae3c7d90e00f1d661b063209153b'
   name 'Tweeten'
   homepage 'http://tweetenapp.com/'
 
