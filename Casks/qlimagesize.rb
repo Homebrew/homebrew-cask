@@ -21,4 +21,8 @@ cask 'qlimagesize' do
                        '~/Library/Spotlight/mdImageSize.mdimporter',
                      ],
             pkgutil: 'fr.whine.qlimagesize.pkg'
+
+  caveats do
+    reboot
+  end
 end
