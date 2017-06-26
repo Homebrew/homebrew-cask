@@ -4,13 +4,13 @@ cask 'launchbar' do
     sha256 '22a1ec0c10de940e5efbcccd18b8b048d95fb7c63213a01c7976a76d6be69a4d'
     url "https://www.obdev.at/downloads/launchbar/legacy/LaunchBar-#{version}.dmg"
   else
-    version '6.8'
-    sha256 '317b68072e4b2e88cf66a52ca3f23c35f50f26ae8e8e61d58089cee6b956d36c'
+    version '6.9'
+    sha256 '45469a2ae467f20e8514be3a73765a7f52934fa388c3a69b048f2ed06bb6e026'
     url "https://www.obdev.at/downloads/launchbar/LaunchBar-#{version}.dmg"
   end
 
   appcast 'https://www.obdev.at/products/launchbar/releasenotes.html',
-          checkpoint: '439812b0fdcff5f4c54b4aad2ce42eb3b661263af59423b5daa374d601682beb'
+          checkpoint: '657976f1e78729091db9a49667493b1916d95ca0e0e0983f3b1b797028d23df3'
   name 'LaunchBar'
   homepage 'https://www.obdev.at/products/launchbar/index.html'
 

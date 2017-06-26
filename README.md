@@ -13,7 +13,7 @@ We do this by providing a friendly Homebrew-style CLI workflow for the administr
 
 To start using Homebrew-Cask, you just need [Homebrew](http://brew.sh/) installed.
 
-<img src="https://i.imgur.com/WYa2557.gif" width="450px" alt="Installing Atom (animated gif)">
+<img src="https://i.imgur.com/dPgmLax.gif" width="673" alt="Installing Atom (animated gif)">
 
 Slower, now:
 
