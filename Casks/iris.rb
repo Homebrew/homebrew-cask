@@ -8,4 +8,13 @@ cask 'iris' do
   homepage 'https://iristech.co/iris/'
 
   app 'Iris.app'
+
+  uninstall launchctl: 'co.iristech.Iris.plist',
+            quit:      'co.iristech.Iris'
+
+  zap delete: [
+                '~/Library/LaunchAgents/co.iristech.Iris.plist',
+                '~/Library/Saved Application State/co.iristech.Iris.savedState',
+              ],
+      trash:  '~/Library/Preferences/com.iristech.Iris.plist'
 end
