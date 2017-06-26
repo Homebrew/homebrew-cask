@@ -9,12 +9,10 @@ cask 'iris' do
 
   app 'Iris.app'
 
-  uninstall launchctl: 'co.iristech.Iris.plist',
+  uninstall delete:    '~/Library/LaunchAgents/co.iristech.Iris.plist',
+            launchctl: 'co.iristech.Iris.plist',
             quit:      'co.iristech.Iris'
 
-  zap delete: [
-                '~/Library/LaunchAgents/co.iristech.Iris.plist',
-                '~/Library/Saved Application State/co.iristech.Iris.savedState',
-              ],
+  zap delete: '~/Library/Saved Application State/co.iristech.Iris.savedState',
       trash:  '~/Library/Preferences/com.iristech.Iris.plist'
 end
