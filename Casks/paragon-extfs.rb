@@ -6,12 +6,18 @@ cask 'paragon-extfs' do
   name 'Paragon ExtFS'
   homepage 'https://www.paragon-software.com/home/extfs-mac/'
 
-  pkg 'FSInstaller.app/Contents/MacOS/FSInstaller'
+  container nested: 'FSInstaller.app/Contents/Resources/product.zip'
 
-  uninstall pkgutil:   'Uninstall.app/Contents/MacOS/uninstaller',
-            script:    '',
-            launchctl: [
-                         'com.paragon.extfs*',
-                         'com.paragon.updater',
+  pkg 'product.pkg'
+
+  uninstall kext:      'com.paragon-software.filesystems.extfs',
+            launchctl: 'com.paragon-software.extfs*',
+            pkgutil:   'com.paragon-software.pkg.extfs',
+            quit:      'com.paragon-software.extfs*',
+            signal:    [
+                         ['KILL', 'com.paragon-software.extfs.FSMenuApp'],
+                         ['KILL', 'com.paragon-software.extfs.notification-agent'],
                        ]
+
+  zap trash: '~/Library/Preferences/com.paragon-software.extfs.fsapp.plist'
 end
