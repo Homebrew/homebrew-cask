@@ -1,10 +1,10 @@
 cask 'the-tagger' do
-  version '1.6.1'
-  sha256 '51ef8424ae4f6c7e53159e665d87067ce43dd9be3cfc2e7c18efd0f717375b9c'
+  version '1.6.2'
+  sha256 '804559029ad38dc4850a780c6b7677c440784761c83af5b470b2df579b649c81'
 
   url 'https://deadbeatsw.com/thetagger/TheTaggerLatest.zip'
   appcast 'https://deadbeatsw.com/thetagger/appcast.xml',
-          checkpoint: 'dad3dd5d7fddb361fd75d449ada6982d291a204cf044fc0ac9172f225739fd18'
+          checkpoint: '2567fc729d9e769fb4f492d66ad97422f261b113f9e78c4159b5ce9b52a9e42f'
   name 'The Tagger'
   homepage 'https://deadbeatsw.com/thetagger/'
 
