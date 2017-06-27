@@ -4,7 +4,7 @@ cask 'paragon-extfs' do
 
   url "http://dl.paragon-software.com/demo/trial_extfs#{version}.dmg"
   name 'Paragon ExtFS'
-  homepage 'https://www.paragon-software.com/home/extfs-mac/'
+  homepage 'https://www.paragon-software.com/ufsdhome/extfs-mac/'
 
   container nested: 'FSInstaller.app/Contents/Resources/product.zip'
 
