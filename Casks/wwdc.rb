@@ -1,11 +1,11 @@
 cask 'wwdc' do
-  version '5.1.1'
-  sha256 '17ed2d3e999f57da406bf187556b72a9dafbcce3464c47cb40449b488424a85d'
+  version '5.1.2'
+  sha256 '796fc622ac6d72e817103b1abd42df341f52fcaf638c34135cc4d779232a32b3'
 
   # github.com/insidegui/WWDC was verified as official when first introduced to the cask
   url "https://github.com/insidegui/WWDC/releases/download/#{version}/WWDC_v#{version}.zip"
   appcast 'https://github.com/insidegui/WWDC/releases.atom',
-          checkpoint: '5035ca23692bc669f10059607696444411bc6ce7223b189356b4f5f6a3bcda3a'
+          checkpoint: 'cedf7cb732b62cc55b6213b334e7bb7824ff685d95be6bf9221e517fac79d81d'
   name 'WWDC'
   homepage 'https://wwdc.io/'
 
