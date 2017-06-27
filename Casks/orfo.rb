@@ -19,7 +19,7 @@ cask 'orfo' do
             delete:     '/Library/PreferencePanes/ORFOSetup.prefPane',
             login_item: 'OrfoUpdate'
 
-  zap delete: '/Library/Application Support/ORFO 2016'
+  zap trash: '/Library/Application Support/ORFO 2016'
 
   caveats do
     reboot

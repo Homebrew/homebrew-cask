@@ -11,5 +11,5 @@ cask 'nagstamon' do
 
   app "Nagstamon-#{version}.app"
 
-  zap delete: '~/.nagstamon'
+  zap trash: '~/.nagstamon'
 end

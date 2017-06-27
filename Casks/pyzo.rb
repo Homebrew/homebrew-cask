@@ -11,5 +11,5 @@ cask 'pyzo' do
 
   app 'pyzo.app'
 
-  zap delete: '~/Library/Application Support/pyzo'
+  zap trash: '~/Library/Application Support/pyzo'
 end

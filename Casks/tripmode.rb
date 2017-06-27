@@ -12,5 +12,5 @@ cask 'tripmode' do
 
   app 'TripMode.app'
 
-  zap delete: '~/Library/Preferences/ch.tripmode.TripMode.plist'
+  zap trash: '~/Library/Preferences/ch.tripmode.TripMode.plist'
 end

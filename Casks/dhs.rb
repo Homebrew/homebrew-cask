@@ -11,5 +11,5 @@ cask 'dhs' do
 
   app 'DHS.app'
 
-  zap delete: '~/Library/Preferences/com.objective-see.DHS.plist'
+  zap trash: '~/Library/Preferences/com.objective-see.DHS.plist'
 end

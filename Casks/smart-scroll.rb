@@ -1,6 +1,6 @@
 cask 'smart-scroll' do
-  version '4.3.3'
-  sha256 'aa0c7c1a19b50e03c3cb8e78c4f3529351fe9108d98d710afb6f02a51cce0822'
+  version '4.3.4'
+  sha256 '48961a60e218a8821c28fd0d1c54a900b125044dbb0500f8fa3ea5678349859c'
 
   url 'https://www.marcmoini.com/SmartScroll.dmg'
   name 'Smart Scroll'

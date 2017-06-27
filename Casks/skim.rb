@@ -13,5 +13,5 @@ cask 'skim' do
   binary "#{appdir}/Skim.app/Contents/SharedSupport/skimnotes"
   binary "#{appdir}/Skim.app/Contents/SharedSupport/skimpdf"
 
-  zap delete: '~/Library/Preferences/net.sourceforge.skim-app.skim.plist'
+  zap trash: '~/Library/Preferences/net.sourceforge.skim-app.skim.plist'
 end

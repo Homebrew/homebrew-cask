@@ -1,6 +1,6 @@
 cask 'eagle' do
-  version '8.2.1'
-  sha256 'eaf0b8fe0c090de5799516a0ba42344cbdfbafbbc4a6c33d999ecbe9e13be3f4'
+  version '8.2.2'
+  sha256 '39836bea001b2709cbc16951753674a2042355bc9a9039965c7217af44cc4e3a'
 
   url "http://trial2.autodesk.com/NET17SWDLD/2017/EGLPRM/ESD/Autodesk_EAGLE_#{version}_English_Mac_64bit.pkg"
   name 'CadSoft EAGLE'

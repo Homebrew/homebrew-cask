@@ -10,9 +10,9 @@ cask 'zeplin' do
 
   app 'Zeplin.app'
 
-  zap delete: [
-                '~/Library/Logs/Zeplin',
-                '~/Library/Caches/io.zeplin.osx',
-                '~/Library/Preferences/io.zeplin.osx.plist',
-              ]
+  zap trash: [
+               '~/Library/Logs/Zeplin',
+               '~/Library/Caches/io.zeplin.osx',
+               '~/Library/Preferences/io.zeplin.osx.plist',
+             ]
 end

@@ -8,5 +8,5 @@ cask 'deepvacuum' do
 
   app 'DeepVacuum.app'
 
-  zap delete: '~/Library/Preferences/com.hexcat.deepvacuum.plist'
+  zap trash: '~/Library/Preferences/com.hexcat.deepvacuum.plist'
 end

@@ -10,8 +10,8 @@ cask 'transmit' do
 
   app 'Transmit.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.panic.Transmit.plist',
-                '~/Library/Application Support/Transmit',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.panic.Transmit.plist',
+               '~/Library/Application Support/Transmit',
+             ]
 end

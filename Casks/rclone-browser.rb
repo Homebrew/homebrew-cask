@@ -13,8 +13,8 @@ cask 'rclone-browser' do
 
   app "rclone-browser-#{version.before_comma}-#{version.after_comma}-macOS/Rclone Browser.app"
 
-  zap delete: [
-                '~/Library/Preferences/Rclone Browser.plist',
-                '~/Library/Preferences/com.rclone-browser.rclone-browser.plist',
-              ]
+  zap trash: [
+               '~/Library/Preferences/Rclone Browser.plist',
+               '~/Library/Preferences/com.rclone-browser.rclone-browser.plist',
+             ]
 end

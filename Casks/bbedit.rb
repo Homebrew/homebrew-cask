@@ -5,7 +5,7 @@ cask 'bbedit' do
   # s3.amazonaws.com/BBSW-download was verified as official when first introduced to the cask
   url "http://s3.amazonaws.com/BBSW-download/BBEdit_#{version}.dmg"
   appcast 'https://versioncheck.barebones.com/BBEdit.xml',
-          checkpoint: '3c23672214dcfd8680b996f09aa6824218973e7c3ae69afa9824b054a2042b88'
+          checkpoint: 'a6fcea1acefa6b99c3d85a60db86a57afb924d0e3b9d94bf87a2589dfeb7c9a8'
   name 'BBEdit'
   homepage 'https://www.barebones.com/products/bbedit/'
 

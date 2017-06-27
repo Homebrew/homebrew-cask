@@ -8,5 +8,5 @@ cask 'syncany' do
 
   app 'Syncany.app'
 
-  zap delete: '~/.config/syncany'
+  zap trash: '~/.config/syncany'
 end

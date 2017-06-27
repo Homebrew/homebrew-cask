@@ -4,7 +4,7 @@ cask 'ordnett-pluss' do
 
   url 'http://nedlasting.ordnett.no/ordnettpluss_current.dmg'
   name 'Ordnett Pluss'
-  homepage 'https://ordnett.no/'
+  homepage 'https://www.ordnett.no/'
 
   pkg 'OrdnettPluss3.pkg'
 

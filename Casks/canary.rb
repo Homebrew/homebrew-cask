@@ -1,11 +1,11 @@
 cask 'canary' do
-  version '0.992,317,249'
-  sha256 'a1db6b3a62704e50844e60bfe9575b35758bad8a2e06d9ebc9f4e043aa932274'
+  version '0.994,320,251'
+  sha256 '9d404b135e5a056442b34b5aba571bb86f3beafa26ed150f21e3f05122becc54'
 
   # rink.hockeyapp.net/api was verified as official when first introduced to the cask
   url "https://rink.hockeyapp.net/api/2/apps/b36ac4a380ea4907940c2054f6163050/app_versions/#{version.after_comma}?format=zip"
   appcast 'https://rink.hockeyapp.net/api/2/apps/b36ac4a380ea4907940c2054f6163050',
-          checkpoint: 'a96c4ba7b53b9f79db15ffc440430e5ad50c59649a7a396548316893fffa050f'
+          checkpoint: '4f8986f6f5a647bda2951725fc5169da519043b6cd15ed3f9886250b32ae99e1'
   name 'Canary'
   homepage 'https://canarymail.io/'
 

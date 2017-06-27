@@ -11,5 +11,5 @@ cask 'zxpinstaller' do
 
   app 'ZXPInstaller.app'
 
-  zap delete: '~/Library/Preferences/com.electron.zxpinstaller.plist'
+  zap trash: '~/Library/Preferences/com.electron.zxpinstaller.plist'
 end

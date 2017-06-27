@@ -5,7 +5,7 @@ cask 'owasp-zap' do
   # github.com/zaproxy/zaproxy was verified as official when first introduced to the cask
   url "https://github.com/zaproxy/zaproxy/releases/download/#{version}/ZAP_#{version.dots_to_underscores}_macos.dmg"
   appcast 'https://github.com/zaproxy/zaproxy/releases.atom',
-          checkpoint: '5cd63080ce020a8422379ad9ac25c02405cdb6e996a580020b53e6b163285324'
+          checkpoint: '23a240ee8d41b3316270c51928f36ae58e530dc80cbf2440da799d569130dc20'
   name 'OWASP Zed Attack Proxy'
   name 'ZAP'
   homepage 'https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project'
@@ -23,10 +23,10 @@ cask 'owasp-zap' do
                     },
             delete: "/Applications/ZAP #{version}.app"
 
-  zap delete: [
-                '~/Library/Preferences/org.zaproxy.zap.plist',
-                '~/Library/Application Support/ZAP',
-              ]
+  zap trash: [
+               '~/Library/Preferences/org.zaproxy.zap.plist',
+               '~/Library/Application Support/ZAP',
+             ]
 
   caveats do
     depends_on_java('7+')

@@ -1,6 +1,6 @@
 cask 'adobe-air-sdk' do
-  version '25.0'
-  sha256 '36cb9c62ad245c8f84efce0f218e8465cfec40d657e35533ba21a48107a8c6ba'
+  version '26.0'
+  sha256 'dececd6dc01f6fdd53f410a6c7dc70037f34af07de49ca8ccd54c945c4284af1'
 
   url "https://airdownload.adobe.com/air/mac/download/#{version}/AIRSDK_Compiler.dmg"
   name 'Adobe AIR SDK'

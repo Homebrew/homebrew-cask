@@ -26,16 +26,16 @@ cask '1password' do
   end
 
   appcast 'https://app-updates.agilebits.com/product_history/OPM4',
-          checkpoint: '1be3642b91cda969ba08b81f6af8902ee8f4bfda22c8252bcd077493b6981184'
+          checkpoint: '64754b0317250fc62c8167bba2610842349566cda8be738452aead94a130597b'
   name '1Password'
   homepage 'https://1password.com/'
 
   auto_updates true
 
-  zap delete: [
-                '~/Library/Application Scripts/2BUA8C4S2C.com.agilebits.onepassword-osx-helper',
-                '~/Library/Containers/2BUA8C4S2C.com.agilebits.onepassword-osx-helper',
-                '~/Library/Containers/com.agilebits.onepassword-osx',
-                '~/Library/Group Containers/2BUA8C4S2C.com.agilebits',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/2BUA8C4S2C.com.agilebits.onepassword-osx-helper',
+               '~/Library/Containers/2BUA8C4S2C.com.agilebits.onepassword-osx-helper',
+               '~/Library/Containers/com.agilebits.onepassword-osx',
+               '~/Library/Group Containers/2BUA8C4S2C.com.agilebits',
+             ]
 end

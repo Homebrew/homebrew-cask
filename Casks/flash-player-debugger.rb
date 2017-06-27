@@ -1,11 +1,11 @@
 cask 'flash-player-debugger' do
-  version '26.0.0.126'
-  sha256 '25c31941ecffd4448cce83a571659af52d6543ca23e377763c9b3a48b5e6ce4f'
+  version '26.0.0.131'
+  sha256 '9d90ac4ffcde058e14e021c7effbada8fc08aadc0681df91326af3cae7481c67'
 
   # macromedia.com was verified as official when first introduced to the cask
   url "https://fpdownload.macromedia.com/pub/flashplayer/updaters/#{version.major}/flashplayer_#{version.major}_sa_debug.dmg"
   appcast 'http://fpdownload2.macromedia.com/get/flashplayer/update/current/xml/version_en_mac_pep.xml',
-          checkpoint: '788a4e4eaa4bda842e2890baafd3e6d176ebc53eaf42255ec18808d5fb601594'
+          checkpoint: 'cf9933c08cd57d3606059c3fc326e83616aa7bd9b4f5a6a0c01c6f2067ba56dc'
   name 'Adobe Flash Player projector content debugger'
   homepage 'https://www.adobe.com/support/flashplayer/debug_downloads.html'
 

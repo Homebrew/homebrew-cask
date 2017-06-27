@@ -14,5 +14,5 @@ cask 'disk-arbitrator' do
   uninstall launchctl: 'us.burghardt.Disk-Arbitrator',
             quit:      'us.burghardt.Disk-Arbitrator'
 
-  zap delete: '~/Library/Preferences/us.burghardt.Disk-Arbitrator.plist'
+  zap trash: '~/Library/Preferences/us.burghardt.Disk-Arbitrator.plist'
 end

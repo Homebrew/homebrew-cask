@@ -11,8 +11,8 @@ cask 'touche' do
 
   app 'Touché.app'
 
-  zap delete: [
-                '~/Library/Containers/com.red-sweater.touche',
-                '~/Library/Preferences/com.red-sweater.touche.plist',
-              ]
+  zap trash: [
+               '~/Library/Containers/com.red-sweater.touche',
+               '~/Library/Preferences/com.red-sweater.touche.plist',
+             ]
 end

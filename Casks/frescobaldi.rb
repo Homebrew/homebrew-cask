@@ -11,5 +11,5 @@ cask 'frescobaldi' do
 
   app 'Frescobaldi.app'
 
-  zap delete: '~/Library/Preferences/org.frescobaldi.frescobaldi.plist'
+  zap trash: '~/Library/Preferences/org.frescobaldi.frescobaldi.plist'
 end

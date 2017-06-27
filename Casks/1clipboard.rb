@@ -19,11 +19,14 @@ cask '1clipboard' do
                         ]
 
   zap delete: [
-                '~/Library/Application Support/1Clipboard',
-                '~/Library/Application Support/com.ngwin.1clipboard.ShipIt',
                 '~/Library/Caches/1Clipboard',
                 '~/Library/Caches/com.ngwin.1clipboard',
-                '~/Library/Preferences/com.ngwin.1clipboard.plist',
                 '~/Library/Saved Application State/com.ngwin.1clipboard.savedState',
+
+              ],
+      trash:  [
+                '~/Library/Application Support/1Clipboard',
+                '~/Library/Application Support/com.ngwin.1clipboard.ShipIt',
+                '~/Library/Preferences/com.ngwin.1clipboard.plist',
               ]
 end

@@ -10,5 +10,5 @@ cask 'flycut' do
 
   app 'Flycut.app'
 
-  zap delete: '~/Library/Preferences/com.generalarcade.flycut.plist'
+  zap trash: '~/Library/Preferences/com.generalarcade.flycut.plist'
 end

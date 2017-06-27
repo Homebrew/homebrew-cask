@@ -11,5 +11,5 @@ cask 'gitbox' do
 
   app 'Gitbox.app'
 
-  zap delete: '~/Library/Preferences/com.oleganza.gitbox.plist'
+  zap trash: '~/Library/Preferences/com.oleganza.gitbox.plist'
 end

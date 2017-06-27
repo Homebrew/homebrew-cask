@@ -10,7 +10,7 @@ cask 'tuck' do
 
   app 'Tuck.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.irradiatedsoftware.Tuck.plist',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.irradiatedsoftware.Tuck.plist',
+             ]
 end

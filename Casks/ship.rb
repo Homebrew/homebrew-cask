@@ -10,8 +10,8 @@ cask 'ship' do
 
   app 'Ship.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.realartists.Ship.plist',
-                '~/Library/Application Support/Ship',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.realartists.Ship.plist',
+               '~/Library/Application Support/Ship',
+             ]
 end

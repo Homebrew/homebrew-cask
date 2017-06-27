@@ -1,6 +1,6 @@
 cask 'cocoscreator' do
-  version '1.4.2_2017032901'
-  sha256 '7b6853b8457543560ea4be8054ea5e155436ea5cee6a241b7731a9a1734b1da8'
+  version '1.5.1_2017061501'
+  sha256 'f882bc1b9a79dc07e02820baee2068ad449febd57585dec6e5af38271a23e365'
 
   url "http://cdn.cocos2d-x.org/CocosCreator_v#{version}.dmg"
   name 'CocosCreator'

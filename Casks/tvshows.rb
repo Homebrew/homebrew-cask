@@ -10,5 +10,5 @@ cask 'tvshows' do
 
   prefpane 'TVShows.prefPane'
 
-  zap delete: '~/Library/Application Support/TVShows 2'
+  zap trash: '~/Library/Application Support/TVShows 2'
 end

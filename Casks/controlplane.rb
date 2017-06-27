@@ -16,5 +16,5 @@ cask 'controlplane' do
 
   app 'ControlPlane.app'
 
-  zap delete: '~/Library/Preferences/com.dustinrue.ControlPlane.plist'
+  zap trash: '~/Library/Preferences/com.dustinrue.ControlPlane.plist'
 end
