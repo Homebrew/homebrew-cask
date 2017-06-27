@@ -6,7 +6,7 @@ cask 'hma-pro-vpn' do
   url "https://d1llq9kjmh5kle.cloudfront.net/HMA-Pro-VPN-macOS-#{version}.dmg"
   name 'HMA! Pro VPN'
   name 'HideMyAss! Pro VPN'
-  homepage 'https://www.hidemyass.com/'
+  homepage 'https://www.hidemyass.com/index'
 
   installer manual: 'Install HMA! Pro VPN.app'
 
