@@ -10,7 +10,16 @@ cask 'kdiff3' do
   homepage 'http://kdiff3.sourceforge.net/'
 
   app 'kdiff3.app'
-  binary "#{appdir}/kdiff3.app/Contents/MacOS/kdiff3"
+  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/kdiff3.wrapper.sh"
+  binary shimscript, target: 'kdiff3'
+
+  preflight do
+    IO.write shimscript, <<-EOS.undent
+      #!/bin/bash
+      '#{appdir}/kdiff3.app/Contents/MacOS/kdiff3' "$@"
+    EOS
+  end
 
   zap delete: '~/.kdiff3rc'
 end
