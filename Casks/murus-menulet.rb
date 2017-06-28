@@ -10,8 +10,8 @@ cask 'murus-menulet' do
 
   app 'Murus Menulet.app'
 
-  zap delete: [
-                '/Library/LaunchDaemons/it.murus.murusd.plist',
-                '/usr/local/bin/murusd',
-              ]
+  uninstall delete:     '/usr/local/bin/murusd',
+            launchctl:  'it.murus.murusd',
+            login_item: 'Murus Menulet',
+            quit:       'it.murus.Murus-Menulet'
 end
