@@ -10,7 +10,5 @@ cask 'muruslogsvisualizer' do
 
   app 'MurusLogsVisualizer.app'
 
-  zap delete: [
-                '~/Library/Preferences/it.murus.MurusLogsVisualizer.plist',
-              ]
+  zap delete: '~/Library/Preferences/it.murus.MurusLogsVisualizer.plist'
 end
