@@ -10,5 +10,7 @@ cask 'muruslogsvisualizer' do
 
   app 'MurusLogsVisualizer.app'
 
+  uninstall quit: 'it.murus.MurusLogsVisualizer'
+
   zap delete: '~/Library/Preferences/it.murus.MurusLogsVisualizer.plist'
 end
