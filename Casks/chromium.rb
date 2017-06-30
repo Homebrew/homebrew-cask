@@ -8,7 +8,16 @@ cask 'chromium' do
   homepage 'https://www.chromium.org/Home'
 
   app 'chrome-mac/Chromium.app'
-  binary "#{appdir}/Chromium.app/Contents/MacOS/Chromium", target: 'chromium'
+  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/chromium.wrapper.sh"
+  binary shimscript, target: 'chromium'
+
+  preflight do
+    IO.write shimscript, <<-EOS.undent
+      #!/bin/bash
+      '#{appdir}/Chromium.app/Contents/MacOS/Chromium "$@"
+    EOS
+  end
 
   zap delete: [
                 '~/Library/Preferences/org.chromium.Chromium.plist',
