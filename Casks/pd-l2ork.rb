@@ -11,4 +11,8 @@ cask 'pd-l2ork' do
   homepage 'https://agraef.github.io/purr-data/'
 
   app 'Pd-l2ork.app'
+
+  uninstall_preflight do
+    set_permissions "#{appdir}/Pd-l2ork.app", '0777'
+  end
 end
