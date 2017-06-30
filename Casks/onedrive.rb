@@ -9,12 +9,11 @@ cask 'onedrive' do
 
   app 'OneDrive.app'
 
-  uninstall pkgutil: 'com.microsoft.OneDrive',
-            quit:    [
-                       'com.microsoft.OneDrive',
-                       'com.microsoft.OneDrive.FinderSync',
-                     ],
-            delete:  '/Library/LaunchDaemons/com.microsoft.OneDriveUpdaterDaemon.plist'
+  uninstall quit:   [
+                      'com.microsoft.OneDrive',
+                      'com.microsoft.OneDrive.FinderSync',
+                    ],
+            delete: '/Library/LaunchDaemons/com.microsoft.OneDriveUpdaterDaemon.plist'
 
   zap delete: [
                 '~/Library/Caches/com.microsoft.OneDrive',
