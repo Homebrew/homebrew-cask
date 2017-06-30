@@ -14,7 +14,7 @@ cask 'endnote' do
                 '/Library/Application Support/ResearchSoft/EndNote',
                 '~/Library/Application Support/EndNote',
                 '~/Library/Caches/com.ThomsonResearchSoft.EndNote',
-                '~/Library/Services/ENService.app/Contents/Resources/EndNote.icns',
+                '~/Library/Services/ENService.app',
                 '~/Library/Spotlight/EndNote.mdimporter',
               ],
       trash:  '~/Library/Preferences/com.ThomsonResearchSoft.EndNote.plist'
