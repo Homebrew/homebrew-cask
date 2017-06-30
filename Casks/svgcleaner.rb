@@ -1,10 +1,10 @@
 cask 'svgcleaner' do
-  version '0.9.0'
-  sha256 '444b4d1d79dbf202e4a90e347a653d6ef372396f6bf69d23350ef2cf5e13acb7'
+  version '0.9.1'
+  sha256 'f0bb62eba3f0eb68e7c71d913fb74d3438c40ad27186f3e9e945a2185634d3f0'
 
   url "https://github.com/RazrFalcon/svgcleaner-gui/releases/download/v#{version}/svgcleaner_macos_#{version}.zip"
   appcast 'https://github.com/RazrFalcon/svgcleaner-gui/releases.atom',
-          checkpoint: '0d021d66f13c9440b1c586c2bb2c8d69278d7c1afd50cb54082487cb8745aca9'
+          checkpoint: '0766cb077502e5e486e67580c20afc5636faa96f1a9ce087fce3df03aeeaaea2'
   name 'SVG Cleaner'
   homepage 'https://github.com/RazrFalcon/svgcleaner-gui/'
 

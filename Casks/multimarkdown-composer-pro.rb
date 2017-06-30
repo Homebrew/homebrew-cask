@@ -1,6 +1,6 @@
 cask 'multimarkdown-composer-pro' do
-  version '3.0b47'
-  sha256 '0c2d1e0e1ac380501076e54de138278492a83c9750e079c05faac07ca0e81461'
+  version '3.0b51'
+  sha256 '845027aedcaefb1d50955acc2a355422eded7e15a49f4343a5915828f9a903b7'
 
   # files.fletcherpenney.net.s3.amazonaws.com was verified as official when first introduced to the cask
   url "http://files.fletcherpenney.net.s3.amazonaws.com/MultiMarkdown%20Composer%20Pro%20%28Beta%29-#{version}.zip"

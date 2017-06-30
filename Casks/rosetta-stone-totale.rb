@@ -4,7 +4,7 @@ cask 'rosetta-stone-totale' do
 
   url "http://resources.rosettastone.com/rs/updates/application/#{version}/macintosh/Rosetta%20Stone%20TOTALe%20Update.dmg"
   name 'Rosetta Stone'
-  homepage 'http://www.rosettastone.com/'
+  homepage 'https://www.rosettastone.com/'
 
   pkg 'Rosetta Stone TOTALe.pkg', allow_untrusted: true
 
