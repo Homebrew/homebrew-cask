@@ -6,7 +6,7 @@ cask 'anka-run' do
   url "https://d1efqjhnhbvc57.cloudfront.net/AnkaRun-#{version}.pkg",
       referer: 'https://veertu.com/download-anka-run/'
   appcast 'https://ankadoc.bitbucket.io/release-notes/index.html',
-          checkpoint: 'f9edda9fa7bd7b44e929d4c071f79e50e8e1c24ce41e7db76df468b6b0d6495a'
+          checkpoint: '09509132b813d53fb3367506c9e71750765c7df4ba121d7b82dafaee6fcc2c9d'
   name 'Veertu Anka Run'
   homepage 'https://veertu.com/'
 
