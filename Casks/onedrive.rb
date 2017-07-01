@@ -1,20 +1,19 @@
 cask 'onedrive' do
-  version '17.3.6798.0207'
-  sha256 'ead6017d367f9d15990cdccfe617adc8750d7302adfeadada353e267362c6c92'
+  version '17.3.6916.0606'
+  sha256 'f46f523e682adcd375c1dd0b97d260f9326caa822d3206a95e77cf01d865416c'
 
   # oneclient.sfx.ms was verified as official when first introduced to the cask
-  url "https://oneclient.sfx.ms/Mac/Prod/#{version}/OneDrive.pkg"
+  url "https://oneclient.sfx.ms/Mac/Prod/#{version}/OneDrive.zip"
   name 'OneDrive'
   homepage 'https://onedrive.live.com/'
 
-  pkg 'OneDrive.pkg'
+  app 'OneDrive.app'
 
-  uninstall pkgutil: 'com.microsoft.OneDrive',
-            quit:    [
-                       'com.microsoft.OneDrive',
-                       'com.microsoft.OneDrive.FinderSync',
-                     ],
-            delete:  '/Library/LaunchDaemons/com.microsoft.OneDriveUpdaterDaemon.plist'
+  uninstall quit:   [
+                      'com.microsoft.OneDrive',
+                      'com.microsoft.OneDrive.FinderSync',
+                    ],
+            delete: '/Library/LaunchDaemons/com.microsoft.OneDriveUpdaterDaemon.plist'
 
   zap delete: [
                 '~/Library/Caches/com.microsoft.OneDrive',
