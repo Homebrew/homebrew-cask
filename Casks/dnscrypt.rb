@@ -17,5 +17,8 @@ cask 'dnscrypt' do
                          'com.github.dnscrypt-osxclient.DNSCryptConsoleChange',
                          'com.github.dnscrypt-osxclient.DNSCryptControlChange',
                          'com.github.dnscrypt-osxclient.DNSCryptNetworkChange',
-                       ]
+                       ],
+            delete:    '/Library/PreferencePanes/DNSCrypt.prefPane'
+
+  zap delete: '/Library/Application Support/DNSCrypt'
 end
