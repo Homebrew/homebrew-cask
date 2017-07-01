@@ -6,9 +6,6 @@ cask 'dwarf-fortress' do
   name 'Dwarf Fortress'
   homepage 'http://www.bay12games.com/dwarves/'
 
-  depends_on cask: 'sdl-framework'
-  depends_on cask: 'sdl-ttf-framework'
-
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/df_osx/df.wrapper.sh"
   binary shimscript, target: 'dwarf-fortress'
@@ -18,19 +15,6 @@ cask 'dwarf-fortress' do
       #!/bin/sh
       exec '#{staged_path}/df_osx/df' "$@"
     EOS
-  end
-
-  postflight do
-    Dir.chdir("#{staged_path}/df_osx/libs") do
-      {
-        'SDL'     => 'sdl-framework',
-        'SDL_ttf' => 'sdl-ttf-framework',
-      }.each do |key, value|
-        name = "#{key}.framework"
-        File.rename(name, "#{name}.orig")
-        File.symlink(Hbc::CaskLoader.load(value).staged_path.join(name), name)
-      end
-    end
   end
 
   uninstall_preflight do
