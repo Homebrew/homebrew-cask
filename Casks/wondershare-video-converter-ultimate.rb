@@ -4,7 +4,7 @@ cask 'wondershare-video-converter-ultimate' do
 
   url "http://download.wondershare.com/cbs_down/video-converter-ultimate-mac_full#{version.after_comma}.dmg"
   name 'Wondershare Video Converter Ultimate'
-  homepage 'https://videoconverter.wondershare.com/video-converter-ultimate-mac.html'
+  homepage 'https://videoconverter.wondershare.com/'
 
   app 'Wondershare Video Converter Ultimate.app'
 
