@@ -6,7 +6,7 @@ cask 'mudlet' do
   appcast 'https://github.com/Mudlet/Mudlet/releases.atom',
           checkpoint: '533a8fd5aa78ba4c215e7414f3fce9e94ddbf67415c278c3d197bd4093c31ab9'
   name 'Mudlet'
-  homepage 'http://www.mudlet.org/'
+  homepage 'https://www.mudlet.org/'
 
   app 'Mudlet.app'
 end

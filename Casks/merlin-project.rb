@@ -4,7 +4,7 @@ cask 'merlin-project' do
 
   url 'https://www.projectwizards.net/downloads/MerlinProject.zip'
   name 'Merlin Project'
-  homepage 'https://projectwizards.net/en/products/merlin-project/what-is'
+  homepage 'https://www.projectwizards.net/en/products/merlin-project/what-is'
 
   app 'Merlin Project.app'
 end
