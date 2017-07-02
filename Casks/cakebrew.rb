@@ -1,11 +1,11 @@
 cask 'cakebrew' do
-  version '1.2.3'
-  sha256 '12b35753178ebb73cb71631c363ab8bdee1e06597015780c259e4483c1fa522a'
+  version '1.2.4'
+  sha256 '00a400b2fed5f103ae705729c0ede1616e5819a758b50d5583557832ae282c0b'
 
   # cakebrew-377a.kxcdn.com was verified as official when first introduced to the cask
   url "https://cakebrew-377a.kxcdn.com/cakebrew-#{version}.dmg"
   appcast 'https://www.cakebrew.com/appcast/profileInfo.php',
-          checkpoint: 'a1aaa9cb869aa3740faf459cf4fdbed932d5bd00375854ad6ca58a1b562624b4'
+          checkpoint: '461890a01e3c15163fdc3186dedbfc0234b8f80d18ee5595e72c74eabd27f814'
   name 'Cakebrew'
   homepage 'https://www.cakebrew.com/'
 
