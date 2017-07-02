@@ -6,7 +6,7 @@ cask 'kaleidoscope' do
   appcast 'https://updates.blackpixel.com/updates?app=ks',
           checkpoint: '3565966f6ee7e103dde711452d37b1269dff83857371e3566cd04d3d3fd8b917'
   name 'Kaleidoscope'
-  homepage 'http://www.kaleidoscopeapp.com/'
+  homepage 'https://www.kaleidoscopeapp.com/'
 
   auto_updates true
 
