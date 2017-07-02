@@ -7,4 +7,13 @@ cask 'suspicious-package' do
   homepage 'http://www.mothersruin.com/software/SuspiciousPackage/'
 
   app 'Suspicious Package.app'
+
+  zap delete: [
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mothersruin.suspiciouspackageapp.sfl',
+                '~/Library/Caches/com.mothersruin.SuspiciousPackageApp',
+                '~/Library/Caches/com.mothersruin.XPCService.UpdateChecker',
+                '~/Library/Preferences/com.mothersruin.SuspiciousPackage.plist',
+                '~/Library/Preferences/com.mothersruin.SuspiciousPackageApp.plist',
+                '~/Library/WebKit/com.mothersruin.SuspiciousPackageApp',
+              ]
 end
