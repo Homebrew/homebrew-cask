@@ -1,10 +1,10 @@
 cask 'beamer' do
-  version '3.3'
-  sha256 '46ec78ca4ce0bf47a6026e3a13149083764f0b05e157a6d268a3b3b01862641e'
+  version '3.3.1'
+  sha256 '53d712e1037ccdb0334caf6615c2da97c239f1a4f3eeb65d0547a018d6447d26'
 
   url "https://beamer-app.com/resources/downloads/Beamer-#{version}.zip"
   appcast "https://beamer-app.com/beamer#{version.major}-appcast.xml",
-          checkpoint: '766f15866691fd2c6329a2888fbde950f14a1357c083a52e2406948840e7e761'
+          checkpoint: 'a91f0d52dfbeb5060670038c147c7cfccb7d4b7aba027dcf9e0f87962319ae06'
   name 'Beamer'
   homepage 'https://beamer-app.com/'
 
