@@ -8,5 +8,6 @@ cask 'people-plus-content-ip' do
 
   pkg "PPCIPmac_v#{version}.pkg"
 
-  uninstall pkgutil: 'com.polycom.PPCIP'
+  uninstall launchctl: 'com.polycom.PPCIP',
+            pkgutil:   'com.polycom.PPCIP'
 end
