@@ -14,6 +14,7 @@ cask 'vagrant' do
   uninstall script:  {
                        executable: 'uninstall.tool',
                        input:      %w[Yes],
+                       sudo:       true,
                      },
             pkgutil: 'com.vagrant.vagrant'
 
