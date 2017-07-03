@@ -9,6 +9,8 @@ cask 'now' do
   name 'Now'
   homepage 'https://zeit.co/now'
 
+  conflicts_with formula: 'now-cli'
+
   app 'Now.app'
 
   zap delete: [
