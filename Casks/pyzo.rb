@@ -1,11 +1,11 @@
 cask 'pyzo' do
-  version '4.3.1'
-  sha256 'a52b8217b5eaad22ef41f8385ea5caea4cb0451985438adfbd5ce3aacc78d0a3'
+  version '4.4'
+  sha256 'b031fc62e5cd5b721227ecea55841f269f52e12c6c165a4cac05d797d4f029fb'
 
   # github.com/pyzo/pyzo was verified as official when first introduced to the cask
   url "https://github.com/pyzo/pyzo/releases/download/v#{version}/pyzo-#{version}-osx64.dmg"
   appcast 'https://github.com/pyzo/pyzo/releases.atom',
-          checkpoint: '457c16e08fe3d74b0988d8e582055e2f67d09a775cd2d74108918eb2599a3ce7'
+          checkpoint: '18207956327a9617a6847f0718b5f61acc0fccb1d103380df48b20aec8b9508f'
   name 'Pyzo'
   homepage 'http://www.pyzo.org/'
 
