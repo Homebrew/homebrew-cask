@@ -9,4 +9,7 @@ cask 'musicbrainz-picard' do
   homepage 'https://picard.musicbrainz.org/'
 
   app 'MusicBrainz Picard.app'
+
+  zap delete: '~/Library/Caches/MusicBrainz',
+      trash:  '~/.config/MusicBrainz'
 end
