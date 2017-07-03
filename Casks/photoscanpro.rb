@@ -1,6 +1,6 @@
 cask 'photoscanpro' do
-  version '1.3.0'
-  sha256 '1b37d63a572e9af5c4c4c5920df6e9071086b784f3281f322fdf1cac58b2b5d0'
+  version '1.3.2'
+  sha256 'eb4653dbf2fc40a2968b04f7f82d9b70cb86be95a9898b7892d4841bc0e50ead'
 
   url "http://download.agisoft.com/photoscan-pro_#{version.dots_to_underscores}.dmg"
   name 'Agisoft PhotoScan Professional'
