@@ -4,6 +4,8 @@ cask 'paintcode' do
 
   # pixelcut.com/paintcode was verified as official when first introduced to the cask
   url "https://www.pixelcut.com/paintcode#{version}/paintcode.zip"
+  appcast "https://www.pixelcut.com/paintcode#{version}/appcast.xml",
+          checkpoint: '29d13ab38d6162342c8b3f3da11df15655632a706ad849bf901a92ff7441d891'
   name 'PaintCode'
   homepage 'https://www.paintcodeapp.com/'
 
