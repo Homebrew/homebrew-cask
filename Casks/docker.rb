@@ -14,11 +14,12 @@ cask 'docker' do
 
   app 'Docker.app'
 
-  uninstall launchctl: [
+  uninstall delete:    '/Library/PrivilegedHelperTools/com.docker.vmnetd',
+            launchctl: [
                          'com.docker.helper',
                          'com.docker.vmnetd',
                        ],
-            delete:    '/Library/PrivilegedHelperTools/com.docker.vmnetd'
+            quit:      'com.docker.docker'
 
   zap delete: [
                 '~/Library/Application Scripts/com.docker.helper',
