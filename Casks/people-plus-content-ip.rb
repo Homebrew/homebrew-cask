@@ -7,4 +7,6 @@ cask 'people-plus-content-ip' do
   homepage 'http://www.polycom.co.uk/products-services/hd-telepresence-video-conferencing/realpresence-accessories/people-content-ip.html#stab1'
 
   pkg "PPCIPmac_v#{version}.pkg"
+
+  uninstall pkgutil: 'com.polycom.PPCIP'
 end
