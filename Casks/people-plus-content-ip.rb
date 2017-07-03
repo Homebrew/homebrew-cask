@@ -1,10 +1,13 @@
 cask 'people-plus-content-ip' do
-  version '1.0.1'
-  sha256 '4a29e7eb0901db45572e7dac108df74b52015c75d4aaa9fe774b5027b8bf9990'
+  version '1.4.2'
+  sha256 '930e4b3d4110f647b4912010e61ad5d476ada44cda50cc813496de1c11ea7f59'
 
-  url "http://www.polycom.co.uk/content/dam/polycom/common/documents/firmware/PPCIPmac_v#{version}.dmg.zip"
+  url "http://www.polycom.co.uk/content/dam/polycom/common/documents/firmware/ppcip-mac-v#{version}-pkg.zip"
   name 'People + Content IP'
   homepage 'http://www.polycom.co.uk/products-services/hd-telepresence-video-conferencing/realpresence-accessories/people-content-ip.html#stab1'
 
-  app 'People + Content IP.app'
+  pkg "PPCIPmac_v#{version}.pkg"
+
+  uninstall launchctl: 'com.polycom.PPCIP',
+            pkgutil:   'com.polycom.PPCIP'
 end
