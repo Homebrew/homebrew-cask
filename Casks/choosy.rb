@@ -1,10 +1,10 @@
 cask 'choosy' do
-  version '1.1'
-  sha256 'c6530d4e0dddbf47c6a8999bda8f3a5ef1857f4481b9325e56cfe00f05b2022c'
+  version '1.2.1'
+  sha256 '820009af29bcc9bf1b476962b028c6dd49486ab20b45fbd6d8ee3f1f3abce46a'
 
   url "https://downloads.choosyosx.com/choosy_#{version}.zip"
   appcast 'https://www.choosyosx.com/sparkle/feed',
-          checkpoint: '588d73c48a23dc024ddd2b16029e989a731c7c53012bc87e46fb66fb8b807d95'
+          checkpoint: '66dd9d3135d0fb6668d120b5cb5011e2add6aae160e12abe0246513a2693f7fd'
   name 'Choosy'
   homepage 'https://www.choosyosx.com/'
 
