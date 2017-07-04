@@ -36,6 +36,11 @@ cask 'firefox' do
     'es-ES'
   end
 
+  language 'fi' do
+    sha256 '1c3aa43e72799768f699a0a9336d5d36d905bbce194b8b9b6470fc2459bcb9ea'
+    'fi'
+  end
+
   language 'fr' do
     sha256 '9e29824f3a420378e60e0dfaaf9bd51f36fbce1800bfba45bb3b812043226577'
     'fr'
