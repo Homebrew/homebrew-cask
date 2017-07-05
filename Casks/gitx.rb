@@ -8,10 +8,7 @@ cask 'gitx' do
   name 'GitX'
   homepage 'http://gitx.frim.nl/'
 
-  conflicts_with cask: %w[
-                         laullon-gitx
-                         rowanj-gitx
-                       ]
+  conflicts_with cask: ['laullon-gitx', 'rowanj-gitx']
 
   app 'GitX.app'
   binary "#{appdir}/GitX.app/Contents/Resources/gitx"

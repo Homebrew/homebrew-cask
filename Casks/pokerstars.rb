@@ -3,35 +3,35 @@ cask 'pokerstars' do
   sha256 :no_check
 
   language 'US', default: true do
-    %w[.com]
+    ['.com', '']
   end
 
   language 'AT' do
-    %w[.eu EU]
+    ['.eu', 'EU']
   end
 
   language 'DK' do
-    %w[.dk DK]
+    ['.dk', 'DK']
   end
 
   language 'GR' do
-    %w[.gr GR]
+    ['.gr', 'GR']
   end
 
   language 'IT' do
-    %w[.it IT]
+    ['.it', 'IT']
   end
 
   language 'RO' do
-    %w[.ro RO]
+    ['.ro', 'RO']
   end
 
   language 'UK' do
-    %w[.uk UK]
+    ['.uk', 'UK']
   end
 
   language 'PT' do
-    %w[.pt PT]
+    ['.pt', 'PT']
   end
 
   url "http://www.pokerstars#{language[0]}/PokerStars#{language[1]}.app.zip"

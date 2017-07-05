@@ -10,13 +10,13 @@ cask 'cacoo-ninja' do
 
   installer script: {
                       executable: 'Install Cacoo Ninja.app/Contents/MacOS/Install Cacoo Ninja',
-                      args:       %w[-silent],
+                      args:       ['-silent'],
                       sudo:       true,
                     }
 
   uninstall script: {
                       executable: Hbc::Container::Air::INSTALLER_PATHNAME,
-                      args:       %w[-uninstall -silent /Applications/Cacoo\ Ninja.app],
+                      args:       ['-uninstall', '-silent', '/Applications/Cacoo Ninja.app'],
                       sudo:       true,
                     }
 end

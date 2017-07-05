@@ -12,7 +12,7 @@ cask 'scratch' do
 
   installer script: {
                       executable: "Install Scratch #{version.major}.app/Contents/MacOS/Install Scratch #{version.major}",
-                      args:       %w[-silent],
+                      args:       ['-silent'],
                       sudo:       true,
                     }
 

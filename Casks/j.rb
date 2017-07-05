@@ -6,7 +6,7 @@ cask 'j' do
   name 'J'
   homepage 'http://www.jsoftware.com/'
 
-  apps = %w[jbrk jcon jhs jqt]
+  apps = ['jbrk', 'jcon', 'jhs', 'jqt']
   apps.each do |a|
     app "j64-#{version}/#{a}.app"
   end
@@ -14,10 +14,10 @@ cask 'j' do
   installer script: "j64-#{version}/updatejqt.sh"
 
   # target names according to readme.txt
-  %w[jcon jconsole].each do |b|
+  ['jcon', 'jconsole'].each do |b|
     binary "j64-#{version}/bin/jconsole", target: b
   end
-  commands = %w[jbrk jhs jqt]
+  commands = ['jbrk', 'jhs', 'jqt']
   commands.each do |b|
     binary "j64-#{version}/bin/#{b}.command", target: b
   end

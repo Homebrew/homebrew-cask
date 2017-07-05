@@ -18,7 +18,7 @@ cask 'owasp-zap' do
 
   uninstall script: {
                       executable: "/Applications/ZAP #{version}.app/OWASP Zed Attack Proxy Uninstaller.app/Contents/MacOS/JavaApplicationStub",
-                      args:       %w[-q -c],
+                      args:       ['-q', '-c'],
                       sudo:       true,
                     },
             delete: "/Applications/ZAP #{version}.app"

@@ -7,15 +7,15 @@ cask 'fugio' do
   homepage 'https://www.bigfug.com/software/fugio/'
 
   depends_on macos: '>= 10.9'
-  depends_on formula: %w[
-                        ffmpeg
-                        fftw
-                        glew
-                        lua
-                        portaudio
-                        portmidi
-                        snappy
-                        homebrew/science/opencv3
+  depends_on formula: [
+                        'ffmpeg',
+                        'fftw',
+                        'glew',
+                        'lua',
+                        'portaudio',
+                        'portmidi',
+                        'snappy',
+                        'homebrew/science/opencv3',
                       ]
 
   suite 'Fugio'

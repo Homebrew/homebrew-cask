@@ -11,12 +11,12 @@ cask 'lilypond' do
 
   app 'LilyPond.app'
 
-  binaries = %w[
-               abc2ly
-               convert-ly
-               lilypond
-               lilypond-book
-               musicxml2ly
+  binaries = [
+               'abc2ly',
+               'convert-ly',
+               'lilypond',
+               'lilypond-book',
+               'musicxml2ly',
              ]
 
   binaries.each do |shimscript|

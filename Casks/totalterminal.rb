@@ -13,6 +13,6 @@ cask 'totalterminal' do
   uninstall pkgutil: 'com.binaryage.pkg.totalterminal.app',
             script:  {
                        executable: 'TotalTerminal Uninstaller.app/Contents/MacOS/TotalTerminal Uninstaller',
-                       args:       %w[--headless],
+                       args:       ['--headless'],
                      }
 end

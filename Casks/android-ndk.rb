@@ -21,12 +21,12 @@ cask 'android-ndk' do
     EOS
   end
 
-  %w[
-    ndk-build
-    ndk-depends
-    ndk-gdb
-    ndk-stack
-    ndk-which
+  [
+    'ndk-build',
+    'ndk-depends',
+    'ndk-gdb',
+    'ndk-stack',
+    'ndk-which',
   ].each { |link_name| binary shimscript, target: link_name }
 
   uninstall_postflight do
