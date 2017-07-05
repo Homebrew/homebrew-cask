@@ -19,12 +19,12 @@ cask 'auristor-client' do
   homepage 'https://www.auristor.com/'
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
-  depends_on macos: [
-                      :mavericks,
-                      :yosemite,
-                      :el_capitan,
-                      :sierra,
-                    ]
+  depends_on macos: %i{
+                      mavericks
+                      yosemite
+                      el_capitan
+                      sierra
+                    }
 
   pkg 'Auristor-Lite.pkg'
 
