@@ -4,7 +4,7 @@ cask 'little-snitch' do
 
   url "https://www.obdev.at/downloads/littlesnitch/LittleSnitch-#{version}.dmg"
   appcast 'https://www.obdev.at/products/littlesnitch/releasenotes.html',
-          checkpoint: 'aa855e2c38d2bf3e001915a2d47e0916f9eaa5d8ce8281d4f2743ed78d1567df'
+          checkpoint: 'ffdec57721163f55004abc8201d47b9393ecfbc1b7ae7077e60c24db97c12e6b'
   name 'Little Snitch'
   homepage 'https://www.obdev.at/products/littlesnitch/index.html'
 
