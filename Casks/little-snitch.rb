@@ -31,9 +31,7 @@ cask 'little-snitch' do
                 '~/Library/Preferences/at.obdev.LittleSnitchSoftwareUpdate.plist',
                 '~/Library/Saved Application State/at.obdev.LittleSnitchInstaller.savedState',
               ],
-      rmdir:  [
-                '/Library/Application Support/Objective Development',
-              ]
+      rmdir:  '/Library/Application Support/Objective Development'
 
   caveats do
     reboot
