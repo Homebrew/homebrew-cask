@@ -28,12 +28,12 @@ cask 'cocktail' do
     appcast 'https://www.maintain.se/downloads/sparkle/elcapitan/elcapitan.xml',
             checkpoint: 'caf773ffc53978e4d0469056f0822c5acb9d85fc0ae1f43c51732c7e1dccfcca'
   else
-    version '10.3.5'
-    sha256 'b5e32572112d354f07b502e8bc2df99b780dbf006bc1c0a04a38dbeeec737fd8'
+    version '10.4'
+    sha256 'f7f258d3edb24afe11a810dbb88cf61a4318b565dca8f1c3f9bd1b1a1c6c05d3'
 
     url "https://www.maintain.se/downloads/sparkle/sierra/Cocktail_#{version}.zip"
     appcast 'https://www.maintain.se/downloads/sparkle/sierra/sierra.xml',
-            checkpoint: '7b8899bbf5095b8ea98b3521312e1f8530f6dbcb7f542431eb17a70221c59f2f'
+            checkpoint: 'd0aa31925f316daceec6d29d5bb818b3eeb721535526bfd6ae5915a844274666'
   end
 
   name 'Cocktail'
