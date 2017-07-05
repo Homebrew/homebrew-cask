@@ -23,6 +23,12 @@ cask 'ncar-ncl' do
   artifact 'bin', target: "/usr/local/ncl-#{version}/bin"
   artifact 'lib', target: "/usr/local/ncl-#{version}/lib"
 
+  preflight do
+    system_command '/bin/mkdir', args: ['-p', "/usr/local/ncl-#{version}"], sudo: true
+  end
+
+  uninstall delete: "/usr/local/ncl-#{version}"
+
   caveats <<-EOS.undent
     To use ncar-ncl, you must add the $NCARG_ROOT/bin directory
     to your PATH environment variable.
