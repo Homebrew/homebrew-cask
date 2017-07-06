@@ -12,7 +12,7 @@ cask 'haskell-platform' do
 
   uninstall script:  {
                        executable: '/Library/Haskell/bin/uninstall-hs',
-                       args:       %w[all --remove],
+                       args:       ['all', '--remove'],
                        sudo:       true,
                      },
             pkgutil: 'org.haskell.HaskellPlatform.*'

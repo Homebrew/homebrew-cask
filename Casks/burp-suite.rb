@@ -8,7 +8,7 @@ cask 'burp-suite' do
 
   installer script: {
                       executable: 'Burp Suite Free Edition Installer.app/Contents/MacOS/JavaApplicationStub',
-                      args:       %w[-q],
+                      args:       ['-q'],
                       sudo:       true,
                     }
 

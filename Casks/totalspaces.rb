@@ -24,7 +24,7 @@ cask 'totalspaces' do
     uninstall pkgutil: "com.binaryage.TotalSpaces#{version.major}",
               script:  {
                          executable: "TotalSpaces#{version.major} Uninstaller.app/Contents/MacOS/TotalSpaces#{version.major} Uninstaller",
-                         args:       %w[--headless],
+                         args:       ['--headless'],
                          sudo:       true,
                        },
               quit:    "com.binaryage.TotalSpaces#{version.major}"
