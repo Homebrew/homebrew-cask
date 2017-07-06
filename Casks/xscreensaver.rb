@@ -218,6 +218,7 @@ cask 'xscreensaver' do
   screen_saver 'Screen Savers/Unicrud.saver'
   screen_saver 'Screen Savers/UnknownPleasures.saver'
   screen_saver 'Screen Savers/Vermiculate.saver'
+  screen_saver 'Screen Savers/Vigilance.saver'
   screen_saver 'Screen Savers/Voronoi.saver'
   screen_saver 'Screen Savers/Wander.saver'
   screen_saver 'Screen Savers/WebCollage.saver'
