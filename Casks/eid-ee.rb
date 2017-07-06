@@ -11,7 +11,7 @@ cask 'eid-ee' do
 
   uninstall script: {
                       executable: 'uninstall.sh',
-                      input:      %w[y],
+                      input:      ['y'],
                     }
 
   caveats <<-EOS.undent
