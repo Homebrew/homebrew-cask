@@ -8,6 +8,8 @@ cask 'smooze' do
   name 'Smooze'
   homepage 'https://smooze.co/'
 
+  auto_updates true
+
   app 'Smooze.app'
 
   uninstall login_item: 'Smooze',
