@@ -8,6 +8,7 @@ cask 'espresso' do
           checkpoint: 'ac70487ffbb4c6bd7c32ddde622b66bc622a8538850b20ccc22bc2c279e84c8f'
   name 'Espresso'
   homepage 'https://espressoapp.com/'
+
   depends_on macos: '>= :sierra'
 
   app 'Espresso.app'
