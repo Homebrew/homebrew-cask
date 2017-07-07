@@ -18,7 +18,7 @@ cask 'mono-mdk' do
     /usr/local/bin and adds #{token} to /private/etc/paths.d/
     You may want to:
 
-    brew unlink {formula} && brew link {formula}
+      brew unlink {formula} && brew link {formula}
 
     and/or remove /private/etc/paths.d/monocommands
   EOS
