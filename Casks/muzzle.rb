@@ -1,10 +1,10 @@
 cask 'muzzle' do
-  version '1.1'
-  sha256 '59b827bd397892b405dfbb16d0c737829f54c14f7664af7d8e32989190d4bff4'
+  version '1.2'
+  sha256 'e6a253075b3eaa8862d8ef9dfac3a4de6021d3a0de587657fe447df0b3193f2e'
 
   url 'https://muzzleapp.com/binaries/muzzle.zip'
   appcast 'https://muzzleapp.com/api/1/appcast.xml',
-          checkpoint: 'ab8abd15c2bfcad026506b3518883b4e5ef2eab50ec40e9c6bc9c3b012a56319'
+          checkpoint: '03532f6316d7a485b38aee764000f40e64f7185e7e205d3a80d552b850158556'
   name 'Muzzle'
   homepage 'https://muzzleapp.com/'
 
