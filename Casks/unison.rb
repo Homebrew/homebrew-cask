@@ -24,5 +24,12 @@ cask 'unison' do
   name 'Unison'
   homepage 'https://www.cis.upenn.edu/~bcpierce/unison/'
 
+  conflicts_with formula: 'unison'
+
   app 'Unison.app'
+  binary "#{appdir}/Unison.app/Contents/MacOS/cltool", target: 'unison'
+
+  postflight do
+    system_command '/usr/bin/defaults', args: ['write', 'edu.upenn.cis.Unison CheckCltool', '-bool', 'false']
+  end
 end
