@@ -30,6 +30,6 @@ cask 'unison' do
   binary "#{appdir}/Unison.app/Contents/MacOS/cltool", target: 'unison'
 
   postflight do
-    system_command '/usr/bin/defaults', args: ['write', 'edu.upenn.cis.Unison CheckCltool', '-bool', 'false']
+    system_command '/usr/bin/defaults', args: ['write', 'edu.upenn.cis.Unison', 'CheckCltool', '-bool', 'false']
   end
 end
