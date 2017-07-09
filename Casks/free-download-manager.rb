@@ -4,7 +4,7 @@ cask 'free-download-manager' do
 
   url 'http://dn3.freedownloadmanager.org/5/5.1-latest/fdm.dmg'
   name 'Free Download Manager'
-  homepage 'http://www.freedownloadmanager.org/landing#{version.major}.htm'
+  homepage 'http://www.freedownloadmanager.org/'
 
   depends_on macos: '>= 10.9'
 
