@@ -7,6 +7,8 @@ cask 'authy-desktop' do
   name 'Authy Desktop'
   homepage 'https://authy.com/'
 
+  auto_updates true
+
   app 'Authy Desktop.app'
 
   zap delete: [
