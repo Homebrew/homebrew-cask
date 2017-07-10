@@ -4,9 +4,11 @@ cask 'muzzle' do
 
   url 'https://muzzleapp.com/binaries/muzzle.zip'
   appcast 'https://muzzleapp.com/api/1/appcast.xml',
-          checkpoint: '03532f6316d7a485b38aee764000f40e64f7185e7e205d3a80d552b850158556'
+          checkpoint: '5d0b59d99cd2bc53ee8ab8993af13d98ac70fd50860abb8a4ff85453bffaa057'
   name 'Muzzle'
   homepage 'https://muzzleapp.com/'
+
+  depends_on macos: '>= 10.11'
 
   app 'Muzzle.app'
 end
