@@ -1,5 +1,5 @@
 cask 'filezilla' do
-  if MacOS.version <= :mavericks
+  if MacOS.version == :mavericks
     version '3.24.1'
     sha256 '79f28c13820ffcb9e6fa4446a1a317a45fd91d6a67fb1a562d30443f1abe186e'
   else
@@ -14,12 +14,14 @@ cask 'filezilla' do
   name 'FileZilla'
   homepage 'https://filezilla-project.org/'
 
+  depends_on macos: '>= :mavericks'
+
   app 'FileZilla.app'
 
   zap delete: [
                 '~/.config/filezilla',
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/de.filezilla.sfl',
-                '~/Library/Saved Application State/de.filezilla.savedState',
                 '~/Library/Preferences/de.filezilla.plist',
+                '~/Library/Saved Application State/de.filezilla.savedState',
               ]
 end
