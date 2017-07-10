@@ -12,8 +12,15 @@ cask 'setapp' do
 
   app 'Setapp.app'
 
-  uninstall script: {
-                      executable: '/Applications/Setapp.app/Contents/Resources/SetappUninstaller.app/Contents/Resources/removeSetapp.sh',
+  uninstall delete: '~/Library/QuickLook/SetappQL.qlgenerator',
+            script: {
+                      executable: "#{appdir}/Setapp.app/Contents/Resources/SetappUninstaller.app/Contents/Resources/removeSetapp.sh",
                       sudo:       true,
                     }
+
+  zap delete: [
+                '~/Library/Application Scripts/com.setapp.DesktopClient.SetappAgent.FinderSyncExt',
+                '~/Library/Caches/com.setapp.DesktopClient.SetappAgent',
+                '~/Library/Logs/Setapp',
+              ]
 end
