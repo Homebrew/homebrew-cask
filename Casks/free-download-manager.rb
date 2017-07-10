@@ -10,11 +10,21 @@ cask 'free-download-manager' do
 
   app 'Free Download Manager.app'
 
+  uninstall launchctl: [
+                         "org.freedownloadmanager.fdm#{version.major}",
+                         "org.freedownloadmanager.fdm#{version.major}.helper",
+                       ],
+            quit:      [
+                         "org.freedownloadmanager.fdm#{version.major}",
+                         "org.freedownloadmanager.fdm#{version.major}.launcher",
+                       ]
+
   zap delete: [
-                '~/Library/Application Support/Free Download Manager',
                 "~/Library/Caches/org.freedownloadmanager.fdm#{version.major}",
-                "~/Library/Preferences/org.freedownloadmanager.fdm#{version.major}.plist",
                 "~/Library/Saved Application State/org.freedownloadmanager.fdm#{version.major}.savedState",
-                "~/Library/LaunchAgents/org.freedownloadmanager.fdm#{version.major}.helper.plist",
+              ],
+      trash:  [
+                '~/Library/Application Support/Free Download Manager',
+                "~/Library/Preferences/org.freedownloadmanager.fdm#{version.major}.plist",
               ]
 end
