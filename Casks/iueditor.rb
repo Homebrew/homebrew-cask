@@ -4,7 +4,7 @@ cask 'iueditor' do
 
   url "https://cdn.iueditor.org/release/IUEditorV#{version}.pkg"
   name 'JDLab IUEditor'
-  homepage 'http://www.iueditor.org/'
+  homepage 'https://www.iueditor.org/'
 
   pkg "IUEditorV#{version}.pkg"
 

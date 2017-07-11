@@ -6,7 +6,7 @@ cask 'scratch' do
   appcast 'https://scratch.mit.edu/scratchr2/static/sa/version.xml',
           checkpoint: '9764185dc2913aa7974f9b59d41105abfb870a3e62591b1f5531c6c5cc4dc30d'
   name 'Scratch'
-  homepage 'https://scratch.mit.edu/scratch2download/'
+  homepage 'https://scratch.mit.edu/download'
 
   depends_on cask: 'adobe-air'
 
