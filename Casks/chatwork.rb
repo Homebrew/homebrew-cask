@@ -2,8 +2,7 @@ cask 'chatwork' do
   version :latest
   sha256 :no_check
 
-  # link.chat-work.com was verified as official when first introduced to the cask
-  url 'http://link.chat-work.com/desktop_app_mac'
+  url 'http://desktop-app.chatwork.com/installer/ChatWork.dmg'
   name 'ChatWork'
   homepage 'https://www.chatwork.com/'
 
