@@ -4,7 +4,7 @@ cask 'soundplant' do
 
   url "http://soundplant.org/downloads/Soundplant#{version}.dmg"
   name 'Soundplant'
-  homepage 'http://soundplant.org/'
+  homepage 'https://soundplant.org/'
 
   app "Soundplant #{version}.app"
 
