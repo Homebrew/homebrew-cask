@@ -8,5 +8,7 @@ cask 'slic3r' do
   name 'Slic3r'
   homepage 'http://slic3r.org/'
 
+  conflicts_with cask: 'slic3r-prusa'
+
   app 'Slic3r.app'
 end
