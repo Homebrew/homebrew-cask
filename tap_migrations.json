@@ -63,6 +63,7 @@
   "mcs783x": "caskroom/drivers",
   "microsoft-intellipoint": "caskroom/drivers",
   "microsoft-intellitype": "caskroom/drivers",
+  "minishift": "homebrew/core",
   "mitmproxy": "homebrew/core",
   "netgeargenie": "caskroom/drivers",
   "nike-plus-connect": "caskroom/drivers",
