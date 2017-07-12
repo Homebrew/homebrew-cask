@@ -1,9 +1,9 @@
-cask 'backup-and-sync-from-google' do
+cask 'google-backup-and-sync' do
   version :latest
   sha256 :no_check
 
   url 'https://dl.google.com/drive/InstallBackupAndSync.dmg'
-  name 'Backup and Sync from Google'
+  name 'Google Backup and Sync'
   homepage 'https://www.google.com/drive/download/'
 
   app 'Backup and Sync.app'
