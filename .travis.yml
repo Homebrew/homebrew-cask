@@ -23,7 +23,7 @@ before_script:
   - . ci/travis/before_script.sh
 
 script:
-  - . ci/travis/script.sh
+  - travis_wait . ci/travis/script.sh
 
 notifications:
   email: false
