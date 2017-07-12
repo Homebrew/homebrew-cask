@@ -5,7 +5,7 @@ cask 'iina' do
   # github.com/lhc70000/iina was verified as official when first introduced to the cask
   url "https://github.com/lhc70000/iina/releases/download/v#{version}/IINA.v#{version}.dmg"
   appcast 'https://github.com/lhc70000/iina/releases.atom',
-          checkpoint: '8f6d32750822605138ba57ed60126166d9e0ece47d9a678e6a6f4a0df0d25567'
+          checkpoint: 'fd708a83aa0d5ccd3d38e156e43d17a928192bcf49bff2a3a34ae845929169cf'
   name 'IINA'
   homepage 'https://lhc70000.github.io/iina/'
 
