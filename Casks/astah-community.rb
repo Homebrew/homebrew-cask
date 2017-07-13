@@ -4,7 +4,7 @@ cask 'astah-community' do
 
   url "http://cdn.astah.net/downloads/astah-community-#{version.before_comma.dots_to_underscores}-#{version.after_comma}-MacOs.dmg"
   appcast 'http://astah.net/release-notes/community',
-          checkpoint: '444e1de7421b8de9892beec2a7ddd5024a655dbcaf072c8135b296882a885b7e'
+          checkpoint: '0c7f285cde1fcf69800947f9d5405fb1458f4ba20965231405c16695d11a335c'
   name 'Change Vision Astah Community'
   homepage 'http://astah.net/editions/community'
 
