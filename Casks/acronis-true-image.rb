@@ -4,7 +4,7 @@ cask 'acronis-true-image' do
 
   url "https://dl.acronis.com/s/AcronisTrueImage#{version.major}.dmg"
   appcast 'https://www.acronis.com/en-us/support/updates/changes.html?p=39955',
-          checkpoint: '64a5df85dc47fd0fe89569d55f4d4fdc1d4f9e8da9ef72a79b2ad5205296b402'
+          checkpoint: '8c25836b3c2cf2bc0a083c1d6742138eae724fcd06bb0c79b9179edb25a1fdd0'
   name 'Acronis True Image'
   homepage 'https://www.acronis.com/de-de/personal/computer-backup/'
 
