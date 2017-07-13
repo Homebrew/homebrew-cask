@@ -5,7 +5,7 @@ cask '4k-youtube-to-mp3' do
 
   url "https://downloads2.4kdownload.com/app/4kyoutubetomp3_#{version.major_minor}.dmg"
   appcast 'https://www.4kdownload.com/download',
-          checkpoint: '9fe8dcb8ad4126c3e296b842be3e03d76a8eb9957f00881354c93d663cc4e77d'
+          checkpoint: '49ff507a887439ff101f36b84c58788834a7a4a7638127609c8a49fa6278b627'
   name '4K YouTube to MP3'
   homepage 'https://www.4kdownload.com/products/product-youtubetomp3'
 
