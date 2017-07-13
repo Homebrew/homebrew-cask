@@ -4,7 +4,7 @@ cask 'hockey' do
 
   url "https://rink.hockeyapp.net/api/2/apps/67503a7926431872c4b6c1549f5bd6b1/app_versions/#{version.after_comma}?format=zip"
   appcast 'https://rink.hockeyapp.net/api/2/apps/67503a7926431872c4b6c1549f5bd6b1',
-          checkpoint: '612bc1c05bf7675134e6f6f3ada9a4239ee0d6f82c55c08470d661b3c049d832'
+          checkpoint: 'a9d73e714a0199766bf9860903ab810b84e5f4c03c4606a970660108cf2e1346'
   name 'HockeyApp'
   homepage 'https://hockeyapp.net/releases/mac/'
 
