@@ -8,7 +8,7 @@ cask 'foxtel-go' do
 
   depends_on cask: 'silverlight'
 
-  app 'Foxtel Go.app'
+  pkg 'setupFoxtelGoMac.pkg'
 
   uninstall pkgutil: 'com.Foxtel.foxtelGo.FoxtelGoFiles.pkg'
 end
