@@ -10,6 +10,7 @@ cask 'powershell' do
   homepage 'https://msdn.microsoft.com/powershell'
 
   depends_on formula: 'openssl'
+  depends_on macos: '>= :sierra'
 
   pkg "powershell-#{version}-osx.10.12-x64.pkg"
 

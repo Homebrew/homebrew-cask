@@ -12,8 +12,8 @@ cask 'folding-at-home' do
 
   uninstall pkgutil:   'edu.stanford.folding.*',
             launchctl: 'edu.stanford.folding.fahclient',
-            quit:      %w[
-                         edu.stanford.folding.fahviewer
-                         edu.stanford.folding.fahcontrol
+            quit:      [
+                         'edu.stanford.folding.fahviewer',
+                         'edu.stanford.folding.fahcontrol',
                        ]
 end

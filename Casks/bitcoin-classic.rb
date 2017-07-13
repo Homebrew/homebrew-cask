@@ -9,7 +9,7 @@ cask 'bitcoin-classic' do
   name 'Bitcoin Classic'
   homepage 'https://bitcoinclassic.com/'
 
-  conflicts_with cask: %w[bitcoin-core bitcoin-unlimited bitcoin-xt]
+  conflicts_with cask: ['bitcoin-core', 'bitcoin-unlimited', 'bitcoin-xt']
   depends_on macos: '>= :mountain_lion'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.

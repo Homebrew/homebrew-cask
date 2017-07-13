@@ -1,11 +1,11 @@
 cask 'dockstation' do
-  version '1.2.1'
-  sha256 '95a1c7f7f554ab6ece946e965a48a4afecbf3bade7689bced3c63be33ebc034e'
+  version '1.2.4'
+  sha256 '86826de5da20f9eb6ecf0cc2ca1d14ef6d1964eef9e2a11c703cbf011064f081'
 
   # github.com/DockStation/dockstation was verified as official when first introduced to the cask
   url "https://github.com/DockStation/dockstation/releases/download/v#{version}/dockstation-#{version}.dmg"
   appcast 'https://github.com/DockStation/dockstation/releases.atom',
-          checkpoint: '04a77c5ff85c177c98cdcc9fbc1b95931e158c27bb20f0d3a2a17ea8694e9ab9'
+          checkpoint: '1e36b6544959b5c78cb89ee996a601d72992f4beab91640552fa155163fba6cd'
   name 'DockStation'
   homepage 'https://dockstation.io/'
 

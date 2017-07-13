@@ -1,10 +1,10 @@
 cask 'launchcontrol' do
-  version '1.32'
-  sha256 '1375cd061e2c38531c7851e31471d46f8ecc3617cc5011dfedfdcbd40c69ba57'
+  version '1.32.2'
+  sha256 'd8c224a270c088bfe98d5a564099ac073c38b01240d4ad10cda057c22b18dbf0'
 
   url "http://www.soma-zone.com/download/files/LaunchControl_#{version}.tar.bz2"
   appcast 'http://www.soma-zone.com/LaunchControl/a/appcast.xml',
-          checkpoint: '1fd999fc5135dfe9037c94454ec590284d4c81df86f5092c50642443a9f41a15'
+          checkpoint: '2c829814d8b965b9e6b3dc58571afd391fb202804591298f34245b5cd4168811'
   name 'LaunchControl'
   homepage 'http://www.soma-zone.com/LaunchControl/'
 

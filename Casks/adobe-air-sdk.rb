@@ -21,20 +21,20 @@ cask 'adobe-air-sdk' do
   binary 'bin/swfdump.wrapper.sh',    target: 'swfdump'
 
   preflight do
-    %w[
-      aasdoc
-      acompc
-      adl
-      adt
-      amxmlc
-      asdoc
-      compc
-      fdb
-      fontswf
-      mxmlc
-      optimizer
-      swcdepends
-      swfdump
+    [
+      'aasdoc',
+      'acompc',
+      'adl',
+      'adt',
+      'amxmlc',
+      'asdoc',
+      'compc',
+      'fdb',
+      'fontswf',
+      'mxmlc',
+      'optimizer',
+      'swcdepends',
+      'swfdump',
     ].each do |shimscript|
       # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
       IO.write "#{staged_path}/bin/#{shimscript}.wrapper.sh", <<-EOS.undent

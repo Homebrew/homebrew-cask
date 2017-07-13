@@ -5,7 +5,7 @@ cask 'softorino-youtube-converter' do
   # devmate.com/com.softorino.converter was verified as official when first introduced to the cask
   url 'https://dl.devmate.com/com.softorino.converter/SoftorinoConverter.dmg'
   name 'Softorino YouTube Converter'
-  homepage 'https://softorino.com/youtube-converter'
+  homepage 'https://softorino.com/youtube-converter/'
 
   app 'Softorino YouTube Converter.app'
 end

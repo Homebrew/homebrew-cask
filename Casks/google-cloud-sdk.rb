@@ -8,7 +8,7 @@ cask 'google-cloud-sdk' do
 
   installer script: {
                       executable: 'google-cloud-sdk/install.sh',
-                      args:       %w[--usage-reporting false --bash-completion false --path-update false --rc-path false --quiet],
+                      args:       ['--usage-reporting', 'false', '--bash-completion', 'false', '--path-update', 'false', '--rc-path', 'false', '--quiet'],
                     }
   binary 'google-cloud-sdk/bin/bq'
   binary 'google-cloud-sdk/bin/gcloud'

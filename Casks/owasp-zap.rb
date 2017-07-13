@@ -5,7 +5,7 @@ cask 'owasp-zap' do
   # github.com/zaproxy/zaproxy was verified as official when first introduced to the cask
   url "https://github.com/zaproxy/zaproxy/releases/download/#{version}/ZAP_#{version.dots_to_underscores}_macos.dmg"
   appcast 'https://github.com/zaproxy/zaproxy/releases.atom',
-          checkpoint: '3b2cb486fbec1410e4edf025540e8c94fb1f14b13275ff938121ac725871a158'
+          checkpoint: 'bb28e7a4fe165b05d9893df23bdd2b5c6c55a7cae86568b09773d74129204da8'
   name 'OWASP Zed Attack Proxy'
   name 'ZAP'
   homepage 'https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project'
@@ -18,7 +18,7 @@ cask 'owasp-zap' do
 
   uninstall script: {
                       executable: "/Applications/ZAP #{version}.app/OWASP Zed Attack Proxy Uninstaller.app/Contents/MacOS/JavaApplicationStub",
-                      args:       %w[-q -c],
+                      args:       ['-q', '-c'],
                       sudo:       true,
                     },
             delete: "/Applications/ZAP #{version}.app"

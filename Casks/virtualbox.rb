@@ -18,7 +18,7 @@ cask 'virtualbox' do
 
   uninstall script:  {
                        executable: 'VirtualBox_Uninstall.tool',
-                       args:       %w[--unattended],
+                       args:       ['--unattended'],
                        sudo:       true,
                      },
             pkgutil: 'org.virtualbox.pkg.*'

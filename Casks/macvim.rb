@@ -13,13 +13,13 @@ cask 'macvim' do
 
   app 'MacVim.app'
 
-  %w[
-    gview
-    gvim
-    gvimdiff
-    mview
-    mvim
-    mvimdiff
+  [
+    'gview',
+    'gvim',
+    'gvimdiff',
+    'mview',
+    'mvim',
+    'mvimdiff',
   ].each { |link_name| binary "#{appdir}/MacVim.app/Contents/bin/mvim", target: link_name }
 
   zap delete: [

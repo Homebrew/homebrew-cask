@@ -10,7 +10,7 @@ cask 'chrome-remote-desktop-host' do
 
   uninstall script:  {
                        executable: '/Applications/Chrome Remote Desktop Host Uninstaller.app/Contents/MacOS/remoting_host_uninstaller',
-                       args:       %w[--no-ui],
+                       args:       ['--no-ui'],
                      },
             pkgutil: 'com.google.pkg.ChromeRemoteDesktopHost'
 
