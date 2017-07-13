@@ -4,7 +4,7 @@ cask 'anki' do
 
   url "https://apps.ankiweb.net/downloads/current/anki-#{version}.dmg"
   appcast 'https://apps.ankiweb.net/docs/changes.html',
-          checkpoint: 'a016ba7e8f40fb74bd6ee24041716de7a6261eaa02ca0de4a2240d28a9adecd4'
+          checkpoint: '0d544a3ddca7d357f0fa36c01c795cd332257c149a728949e5866bbff373dba0'
   name 'Anki'
   homepage 'https://apps.ankiweb.net/'
 
