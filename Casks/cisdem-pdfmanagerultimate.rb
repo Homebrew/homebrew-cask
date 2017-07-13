@@ -4,7 +4,7 @@ cask 'cisdem-pdfmanagerultimate' do
 
   url 'https://www.cisdem.com/download/cisdem-pdfmanagerultimate.dmg'
   appcast 'https://www.cisdem.com/pdf-manager-ultimate-mac/release-notes.html',
-          checkpoint: '12e51c88946084cc1cb074d43d68857993a6c83e46cfbd63a4695f47aa841fb1'
+          checkpoint: '04c565b8fd6338864c2a2ef78573c2139d98be918532fcfa63d7be6a23884c27'
   name 'Cisdem PDFManagerUltimate'
   homepage 'https://www.cisdem.com/pdf-manager-ultimate-mac.html'
 
