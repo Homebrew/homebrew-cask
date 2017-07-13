@@ -4,7 +4,7 @@ cask 'upterm' do
 
   url "https://github.com/railsware/upterm/releases/download/v#{version}/upterm-#{version}-mac.zip"
   appcast 'https://github.com/railsware/upterm/releases.atom',
-          checkpoint: '8010f7946936080b36ef461fb81401ea6b5e802a896769fe5f8060e754c76487'
+          checkpoint: 'f1eaf4fd3bb7e357860903a54ac9c7caf6cb190db4ce6c71724e8dcd75a5fc86'
   name 'Upterm'
   homepage 'https://github.com/railsware/upterm'
 
