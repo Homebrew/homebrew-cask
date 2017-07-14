@@ -1,6 +1,6 @@
 cask 'rider' do
-  # Rider is EAP only for now
-  version '1.0,171.4456.1432'
+  # Rider is RC for now
+  version '2017.1,171.4456.1432'
   sha256 'f4bd0df5e45c2c4f356f0716bd2c8e9ec21b81a9161abcf5283234e099f7989e'
 
   url "https://download.jetbrains.com/resharper/Rider-RC-#{version.after_comma}.dmg"
@@ -11,16 +11,16 @@ cask 'rider' do
 
   auto_updates true
 
-  app 'Rider EAP.app'
+  app 'Rider 2017.1 RC.app'
 
   uninstall delete: ENV['PATH'].split(File::PATH_SEPARATOR).map { |p| "#{p}/rider" }.select { |f| File.exist?(f) }
 
   zap delete: [
-                "~/Library/Caches/Rider#{version.major_minor.no_dots}",
-                "~/Library/Logs/Rider#{version.major_minor.no_dots}",
-                "~/Library/Application Support/Rider#{version.major_minor.no_dots}",
-                "~/Library/Preferences/Rider#{version.major_minor.no_dots}",
-                '~/Library/Preferences/com.jetbrains.rider-EAP.plist',
-                '~/Library/Saved Application State/com.jetbrains.rider-EAP.savedState',
+                "~/Library/Caches/Rider#{version.major_minor}",
+                "~/Library/Logs/Rider#{version.major_minor}",
+                "~/Library/Application Support/Rider#{version.major_minor}",
+                "~/Library/Preferences/Rider#{version.major_minor}",
+                '~/Library/Preferences/com.jetbrains.rider.71e559ef.plist',
+                '~/Library/Saved Application State/com.jetbrains.rider.savedState',
               ]
 end
