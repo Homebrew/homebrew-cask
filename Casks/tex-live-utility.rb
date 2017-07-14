@@ -8,5 +8,7 @@ cask 'tex-live-utility' do
   name 'TeX Live Utility'
   homepage 'https://github.com/amaxwell/tlutility'
 
+  auto_updates true
+
   app 'TeX Live Utility.app'
 end
