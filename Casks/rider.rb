@@ -1,11 +1,11 @@
 cask 'rider' do
   # Rider is EAP only for now
-  version '1.0,171.4456.902'
-  sha256 '763b6960d44e3a8b5d8432a10ce6f5037d7278f4f5e04c82da2b2abf202be685'
+  version '1.0,171.4456.1432'
+  sha256 'f4bd0df5e45c2c4f356f0716bd2c8e9ec21b81a9161abcf5283234e099f7989e'
 
-  url "https://download.jetbrains.com/resharper/riderRS-#{version.after_comma}.dmg"
+  url "https://download.jetbrains.com/resharper/Rider-RC-#{version.after_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=RD&latest=true&type=eap',
-          checkpoint: 'b2b303009e0f6d8296b54e32187133c3d9351fb10e5ad163fb26e1b9536ebc3f'
+          checkpoint: '6391fe0c6b7d03925ad568e1d9ac88c11b5ff7d0120a85b967c1fd9e9c010471'
   name 'Jetbrains Rider'
   homepage 'https://www.jetbrains.com/rider/'
 
