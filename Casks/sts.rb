@@ -17,5 +17,7 @@ cask 'sts' do
   name 'Spring Tool Suite'
   homepage 'https://spring.io/tools/sts'
 
+  auto_updates true
+
   app 'sts-bundle/STS.app'
 end
