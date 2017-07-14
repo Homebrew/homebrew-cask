@@ -20,7 +20,7 @@ cask 'rider' do
                 "~/Library/Logs/Rider#{version.major_minor}",
                 "~/Library/Application Support/Rider#{version.major_minor}",
                 "~/Library/Preferences/Rider#{version.major_minor}",
-                '~/Library/Preferences/com.jetbrains.rider.71e559ef.plist',
+                '~/Library/Preferences/jetbrains.rider.71e559ef.plist',
                 '~/Library/Saved Application State/com.jetbrains.rider.savedState',
               ]
 end
