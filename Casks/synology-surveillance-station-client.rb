@@ -4,7 +4,7 @@ cask 'synology-surveillance-station-client' do
 
   url "https://global.download.synology.com/download/Tools/SurveillanceStationClient/#{version}/Mac/Synology%20Surveillance%20Station%20Client-#{version}.dmg"
   name 'Synology Surveillance Station Client'
-  homepage 'https://www.synology.com/'
+  homepage 'https://www.synology.com/surveillance/'
 
   pkg 'Surveillance Station Client.pkg'
 
