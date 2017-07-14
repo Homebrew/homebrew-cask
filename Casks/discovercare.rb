@@ -1,6 +1,6 @@
 cask 'discovercare' do
-  version '1.0.3'
-  sha256 '420f792c4431ada7eed8fcd09a9114aa3604750508913752574f2d9ed3c9a96e'
+  version '1.0.4'
+  sha256 '4f536f7e1c92787ee8a750fd4245c1d64c163807fb683ea8a59427aac57c18af'
 
   url 'http://en.volkswagen.com/content/medialib/vwd4/global/discovercare/files/discovercare_macen/_jcr_content/renditions/rendition.download_attachment.file/discovercare_mac_en.zip'
   name 'Volkswagen DiscoverCare'
