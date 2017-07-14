@@ -6,7 +6,7 @@ cask 'google-earth' do
   name 'Google Earth'
   homepage 'https://www.google.com/earth/'
 
-  pkg "Install Google Earth Free #{version}.pkg"
+  pkg "Install Google Earth Pro #{version}.pkg"
 
   uninstall pkgutil: [
                        'com.Google.GoogleEarthPlus',
