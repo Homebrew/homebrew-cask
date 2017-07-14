@@ -2,8 +2,7 @@ cask 'fiddler' do
   version :latest
   sha256 :no_check
 
-  # ericlawrence.com was verified as official when first introduced to the cask
-  url 'http://ericlawrence.com/dl/InstallFiddler.dmg'
+  url 'https://www.telerik.com/docs/default-source/fiddler/fiddler-mac.zip'
   name 'Telerik Fiddler Proxy'
   homepage 'http://www.telerik.com/fiddler'
 
