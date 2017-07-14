@@ -5,7 +5,7 @@ cask 'deepstream' do
   # github.com/deepstreamIO/deepstream.io was verified as official when first introduced to the cask
   url "https://github.com/deepstreamIO/deepstream.io/releases/download/v#{version}/deepstream.io-mac-#{version}.pkg"
   appcast 'https://github.com/deepstreamIO/deepstream.io/releases.atom',
-          checkpoint: 'e018eef5240d2eaf2158a9c9dad2ba7d5bfe26d33a42762008f15b3bcb66d6aa'
+          checkpoint: '0bfc169e99e6f7f20c060de54122436f71f672c811fe7f4a319c6bc4781e3f61'
   name 'deepstream'
   homepage 'https://deepstream.io/'
 
