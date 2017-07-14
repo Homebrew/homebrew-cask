@@ -8,6 +8,10 @@ cask 'synology-surveillance-station-client' do
 
   pkg 'Surveillance Station Client.pkg'
 
-  uninstall pkgutil:   ['com.synology.svsclient-Live-View', 'com.synology.svsclient-Recording', 'com.synology.svsclient-Timeline'],
+  uninstall pkgutil:   [
+                         'com.synology.svsclient-Live-View',
+                         'com.synology.svsclient-Recording',
+                         'com.synology.svsclient-Timeline',
+                       ],
             launchctl: 'com.synology.ssc.launch.agent'
 end
