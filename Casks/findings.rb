@@ -4,7 +4,7 @@ cask 'findings' do
 
   url "http://downloads.findingsapp.com/Findings_#{version.after_comma}_#{version.before_comma}.zip"
   appcast 'http://downloads.findingsapp.com/appcast.xml',
-          checkpoint: '85085abc8aaef1933f800fae148ab8b36e53b10294a709711b9a6b0637fc907d'
+          checkpoint: '88b9b5a9fb9d8c50fdb668f279d7aff1d00b1caf30b9585894c6b6e497cb10f2'
   name 'Findings'
   homepage 'http://findingsapp.com/'
 
