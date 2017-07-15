@@ -17,9 +17,4 @@ cask 'google-earth-pro' do
                 '~/Library/Caches/Google Earth',
                 '~/Library/Caches/com.Google.GoogleEarthPro',
               ]
-
-  caveats <<-EOS.undent
-    Using #{token} requires a license key. If you do not have a key, use your
-    email address and the key GEPFREE to sign in.
-  EOS
 end
