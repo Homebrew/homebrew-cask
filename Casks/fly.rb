@@ -4,7 +4,7 @@ cask 'fly' do
 
   url "https://github.com/concourse/concourse/releases/download/v#{version}/fly_darwin_amd64"
   appcast 'https://github.com/concourse/concourse/releases.atom',
-          checkpoint: '288168c1a6cb51917aa4bf9f93cab31f14e99629891c8f3b18f09bd1f632fe94'
+          checkpoint: '63a2869ac18606524b794797f6f798e1798ed5175aa915c55e1d64056d65c8f9'
   name 'fly'
   homepage 'https://github.com/concourse/fly'
 
