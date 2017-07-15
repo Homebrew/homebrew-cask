@@ -7,4 +7,7 @@ cask 'prefs-editor' do
   homepage 'http://apps.tempel.org/PrefsEditor/'
 
   app 'Prefs Editor.app'
+
+  zap delete: '~/Library/Saved Application State/org.tempel.prefseditor.savedState',
+      trash:  '~/Library/Preferences/org.tempel.prefseditor.plist'
 end
