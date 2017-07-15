@@ -7,9 +7,7 @@ cask 'bittorrent' do
   name 'BitTorrent'
   homepage 'https://www.bittorrent.com/'
 
-  installer manual: 'Bittorrent.app'
-
-  uninstall delete: '/Applications/BitTorrent.app'
+  app 'BitTorrent.app'
 
   zap delete: [
                 '~/Library/Preferences/com.com.bittorrent.BitTorrent.plist',
