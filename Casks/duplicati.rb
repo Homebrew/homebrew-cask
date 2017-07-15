@@ -1,10 +1,10 @@
 cask 'duplicati' do
-  version '2.0.1.61,2017-05-30'
-  sha256 '8ac19a3fa8aea4429476dbac9255c917030fe4b14ce1e1e47df2128a15108e1a'
+  version '2.0.1.73,2017-07-15'
+  sha256 '9f4550958722d08125df303b062e0d22a7981c697f758d45e7b4e1ebb62b1206'
 
   url "https://updates.duplicati.com/experimental/duplicati-#{version.before_comma}_experimental_#{version.after_comma}.dmg"
   appcast 'https://github.com/duplicati/duplicati/releases.atom',
-          checkpoint: '9a9880a9a5dd39d00934715988b8a100cd8623065d07cb005c4569e2e665bd63'
+          checkpoint: '7b18b4c85186739f3060ae6cd25308992e5d503b3e36e434084089f27ed4eab1'
   name 'Duplicati'
   homepage 'https://www.duplicati.com/'
 
