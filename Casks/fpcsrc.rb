@@ -5,7 +5,7 @@ cask 'fpcsrc' do
   # sourceforge.net/lazarus was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/lazarus/fpc-src-#{version.before_comma}-macosx.dmg"
   appcast 'https://sourceforge.net/projects/lazarus/rss',
-          checkpoint: '6ea3788189504730b4ff77d65dc9b4f6e4658f66919d803ca01bc709b83da8ab'
+          checkpoint: '8ab02d40404440038034b43801b98c89c3c3e278a0a2a8bfedb5951223e47ab1'
   name 'Free Pascal Compiler Source'
   homepage 'https://www.freepascal.org/'
 
