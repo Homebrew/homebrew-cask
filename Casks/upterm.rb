@@ -1,10 +1,10 @@
 cask 'upterm' do
-  version '0.2.159'
-  sha256 '55a2a989375c57adaf5ee84a589414bb6a07a7aa0d5813dd25dbb5c6209b53c7'
+  version '0.2.160'
+  sha256 'ed08cf9b3b82f7440c1a8b974ae2960b296d9efdec17e57cab583e97b602764b'
 
   url "https://github.com/railsware/upterm/releases/download/v#{version}/upterm-#{version}-mac.zip"
   appcast 'https://github.com/railsware/upterm/releases.atom',
-          checkpoint: '740eeb6b120a53bfdca3b12acb933e7743d7f1d2af504a450f6d11165e92aa98'
+          checkpoint: '4c2274b768b2beac856c9afbfbdf55aa59040726d2c9d67532e1023390702ca2'
   name 'Upterm'
   homepage 'https://github.com/railsware/upterm'
 
