@@ -5,7 +5,7 @@ cask 'gitup' do
   # s3-us-west-2.amazonaws.com/gitup-builds was verified as official when first introduced to the cask
   url 'https://s3-us-west-2.amazonaws.com/gitup-builds/stable/GitUp.zip'
   appcast 'https://github.com/git-up/GitUp/releases.atom',
-          checkpoint: 'e28488300af69d4eb5c2eb24d2d3e4e31a9fc5606b27e5a4c936216a7cc1022a'
+          checkpoint: '6a0a080b65c4c9c4f8a2605759c1955eba2550a6b1314f6b53fa47f59e83cd58'
   name 'GitUp'
   homepage 'http://gitup.co/'
 
