@@ -11,15 +11,18 @@ cask 'now' do
 
   app 'Now.app'
 
+  uninstall delete:     '/usr/local/bin/now',
+            login_item: 'Now',
+            signal:     ['TERM', 'co.zeit.now']
+
   zap delete: [
-                '~/Library/Application Support/Now',
                 '~/Library/Caches/co.zeit.now',
                 '~/Library/Caches/co.zeit.now.ShipIt',
               ],
       trash:  [
                 '~/.now.json',
+                '~/Library/Application Support/Now',
                 '~/Library/Preferences/co.zeit.now.plist',
                 '~/Library/Preferences/co.zeit.now.helper.plist',
-                '/usr/local/bin/now',
               ]
 end
