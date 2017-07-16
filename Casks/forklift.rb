@@ -4,7 +4,7 @@ cask 'forklift' do
 
   url "http://download.binarynights.com/ForkLift#{version}.zip"
   appcast "https://updates.binarynights.com/ForkLift#{version.major}/update.xml",
-          checkpoint: 'cb08a1fc585029ea18c8020780ae961403d86d99d89aebbf046ea61232e4c47b'
+          checkpoint: '04cc308dec0dd16770e9c327f3ead161934af8a4241fb69c499aedc4db3f0e3e'
   name 'ForkLift'
   homepage 'https://binarynights.com/forklift/'
 
