@@ -16,7 +16,9 @@ cask 'screens' do
 
   zap delete: [
                 "~/Library/Application Scripts/com.edovia.screens#{version.major}.mac",
+                '~/Library/Application Scripts/com.edovia.screens.launcher',
                 "~/Library/Containers/com.edovia.screens#{version.major}.mac",
+                '~/Library/Containers/com.edovia.screens.launcher',
                 '~/Library/Logs/Screens',
               ]
 end
