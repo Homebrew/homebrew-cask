@@ -5,7 +5,7 @@ cask 'google-play-music-desktop-player' do
   # github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL- was verified as official when first introduced to the cask
   url "https://github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL-/releases/download/v#{version}/Google.Play.Music.Desktop.Player.OSX.zip"
   appcast 'https://github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL-/releases.atom',
-          checkpoint: '27cf7147e022a5f64ca7fb4dea73597499e6e584cbfdee2ea269b9e0c30899cd'
+          checkpoint: '9e44e95944481b7485480a0288aa3e94f84975c921b21e1708f0f7a96725d0ec'
   name 'Google Play Music Desktop Player'
   homepage 'https://www.googleplaymusicdesktopplayer.com/'
 
