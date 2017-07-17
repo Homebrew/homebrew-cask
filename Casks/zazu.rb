@@ -5,7 +5,7 @@ cask 'zazu' do
   # github.com was verified as official when first introduced to the cask
   url "https://github.com/tinytacoteam/zazu/releases/download/v#{version}/zazu-#{version}.dmg"
   appcast 'https://github.com/tinytacoteam/zazu/releases.atom',
-          checkpoint: '1b8094222b8cc1d81d7eec245ca9b0c8a4fa40020d72d8dcb410ffea4da8d188'
+          checkpoint: '4467936c2454df94c8e6b680d2343ce8afabe2734ee001e4292b3703cc6f0098'
   name 'Zazu'
   homepage 'http://zazuapp.org/'
 
