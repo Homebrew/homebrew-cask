@@ -4,7 +4,7 @@ cask 'dolphin' do
 
   url "https://dl-mirror.dolphin-emu.org/#{version}/dolphin-#{version}.dmg"
   appcast 'https://github.com/dolphin-emu/dolphin/releases.atom',
-          checkpoint: '89923290b966c1ec59b23ff257a2ee6195a9dfbeee0434069cbe2e85afda847e'
+          checkpoint: '6ab4f4b3cee67f86682a5bb8208f5b0b4cd57d0d89c9264f607f09a764914216'
   name 'Dolphin'
   homepage 'https://dolphin-emu.org/'
 

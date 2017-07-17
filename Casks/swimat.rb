@@ -1,10 +1,10 @@
 cask 'swimat' do
-  version '1.3.3'
-  sha256 'c6649743365c8d30fab0c11061531958e209b8c0fe97a0e592cad8865d14781f'
+  version '1.3.5'
+  sha256 '74d250c1bd646a709fb2086276e9734b8f7c7daa3987a822fbf782e81819e38c'
 
   url "https://github.com/Jintin/Swimat/releases/download/v#{version}/Swimat.zip"
   appcast 'https://github.com/Jintin/Swimat/releases.atom',
-          checkpoint: '00a6dc7553927986323b42437d5fe24af044de83298e33f7cf20dc37ce13a73d'
+          checkpoint: '8337435f96dcd88b2f407e7f9e8d1e5ea1ddf18e63751287df3ff7bd94ec8b23'
   name 'Swimat'
   homepage 'https://github.com/Jintin/Swimat'
 

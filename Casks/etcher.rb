@@ -5,7 +5,7 @@ cask 'etcher' do
   # resin-production-downloads.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://resin-production-downloads.s3.amazonaws.com/etcher/#{version}/Etcher-#{version}-darwin-x64.dmg"
   appcast 'https://github.com/resin-io/etcher/releases.atom',
-          checkpoint: '6c029a234674e2e356cd6973f3eba3f65ca360ef73804c740c1aedcfa99e0a96'
+          checkpoint: '9d3f2c93486e1e68096e85ff8e336c6d30e3629e0b2f6b7f7070b69f72bf58a7'
   name 'Etcher'
   homepage 'https://etcher.io/'
 

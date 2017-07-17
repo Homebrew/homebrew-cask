@@ -10,4 +10,18 @@ cask 'google-backup-and-sync' do
   depends_on macos: '>= :mavericks'
 
   app 'Backup and Sync.app'
+
+  uninstall quit: 'com.google.GoogleDrive'
+
+  zap delete: [
+                '~/Library/Application Scripts/com.google.GoogleDrive.FinderSyncAPIExtension',
+                '~/Library/Caches/com.google.GoogleDrive',
+                '~/Library/Containers/com.google.GoogleDrive.FinderSyncAPIExtension',
+                '~/Library/Cookies/com.google.GoogleDrive.binarycookies',
+                '~/Library/Group Containers/google_drive',
+              ],
+      trash:  [
+                '~/Library/Application Support/Google/Drive',
+                '~/Library/Preferences/com.google.GoogleDrive.plist',
+              ]
 end

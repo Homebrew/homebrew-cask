@@ -5,7 +5,7 @@ cask 'freecad' do
   # github.com/FreeCAD/FreeCAD was verified as official when first introduced to the cask
   url "https://github.com/FreeCAD/FreeCAD/releases/download/0.16/FreeCAD_#{version}-OSX-x86_64.dmg"
   appcast 'https://github.com/FreeCAD/FreeCAD/releases.atom',
-          checkpoint: 'ab325c19d5b46136ac4debd7c3b0f3de55a0ae784a79df5f8cbea3cc10ab7555'
+          checkpoint: '198392755d0e3a9209111491b130b4f932f8d1d36f7aa88c47826f0103bff4e0'
   name 'FreeCAD'
   homepage 'https://www.freecadweb.org/'
 

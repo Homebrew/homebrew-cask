@@ -194,7 +194,7 @@ We maintain separate Taps for different types of binaries. Our nomenclature is:
 + **Walled**: When the download URL is both behind a login/registration form and from a host that differs from the homepage.
 + **Font**: Data file containing a set of glyphs, characters, or symbols, that changes typed text.
 + **eID**: Software to install electronic identity card software of various countries.
-+ **Driver**: Software with the sole goal of making a hardware peripheral recognisable by the system.
++ **Driver**: Software to make a hardware peripheral recognisable and usable by the system. If the software is useless without the peripheral, it’s considered a driver.
 
 ### Stable Versions
 

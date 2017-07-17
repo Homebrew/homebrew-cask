@@ -4,7 +4,7 @@ cask 'crypter' do
 
   url "https://github.com/HR/Crypter/releases/download/v#{version}/Crypter-#{version}.dmg"
   appcast 'https://github.com/HR/Crypter/releases.atom',
-          checkpoint: 'c27754561a4ceaee39898c4eb5d52062c8d4b4237f32d55132a602fdfd884450'
+          checkpoint: 'e0858d3f61c773b3c4d6bc567036ca3258875dd804657b36c41e04b4c64b0553'
   name 'Crypter'
   homepage 'https://github.com/HR/Crypter'
 
