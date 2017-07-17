@@ -4,7 +4,7 @@ cask 'kotori' do
 
   url "https://github.com/Watson1978/kotori/releases/download/v#{version}/kotori_#{version}.dmg"
   appcast 'https://github.com/Watson1978/kotori/releases.atom',
-          checkpoint: 'cede69926c796533f8b4d0c24887d9bf028ef7a3824d29450b3963e4ac52ed07'
+          checkpoint: '32edd1fe702bc3121a92ce4cdad6152e25c4064e9494d9eeb47a89450e9f2cad'
   name 'kotori'
   name '小鳥'
   homepage 'https://github.com/Watson1978/kotori'
