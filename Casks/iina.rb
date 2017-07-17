@@ -4,8 +4,8 @@ cask 'iina' do
 
   # dl-portal.iina.io was verified as official when first introduced to the cask
   url "https://dl-portal.iina.io/IINA.v#{version}.dmg"
-  appcast 'https://www.iina.io/appcast.xml',
-          checkpoint: 'b9572d3f0eb0d67b4c6c04afdaf11734d0ffb9e3543d83ca834133261115d3da'
+  appcast 'https://github.com/lhc70000/iina/releases.atom',
+          checkpoint: 'f465cc540b2fdbe4582b02c2b5eec9a227cc78e0caef939f5e0dc852487e96c7'
   name 'IINA'
   homepage 'https://lhc70000.github.io/iina/'
 
