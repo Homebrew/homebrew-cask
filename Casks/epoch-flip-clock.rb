@@ -4,7 +4,7 @@ cask 'epoch-flip-clock' do
 
   url "https://github.com/chrstphrknwtn/epoch-flip-clock/releases/download/#{version}/Epoch.Flip.Clock.saver.zip"
   appcast 'https://github.com/chrstphrknwtn/epoch-flip-clock/releases.atom',
-          checkpoint: 'f6196573c6f0e74b5978341b2007fc8c85a6c99b0edc524d8c8c9cf1a7aa5ec2'
+          checkpoint: '41a86464323f5fbaed984ba4bb930aaca4d458c10d4dc8b281c93183f2521942'
   name 'Epoch Flip Clock Screensaver'
   homepage 'https://github.com/chrstphrknwtn/epoch-flip-clock/'
 
