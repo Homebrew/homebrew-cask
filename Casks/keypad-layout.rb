@@ -4,7 +4,7 @@ cask 'keypad-layout' do
 
   url "https://github.com/janten/keypad-layout/releases/download/#{version}/Keypad-Layout.zip"
   appcast 'https://github.com/janten/keypad-layout/releases.atom',
-          checkpoint: '993ed24bc82fea12c8f7fa3f36de0e6c3276b663d8887c41342f6d9c05d61a0e'
+          checkpoint: 'd474031346c6ad4e5cf2c50e99bd84326074c8cdfeab6eec058acbc1b97011b8'
   name 'Keypad Layout'
   homepage 'https://github.com/janten/keypad-layout'
 
