@@ -1,5 +1,5 @@
 cask 'i1profiler' do
-  version '1.7.0'
+  version '1.7.1'
   sha256 '7a256c428c429140dea8e86eb685be5d6231bf1dc029f65973d653b7232dcb0a'
 
   url 'https://my.xrite.com/downloader.aspx?FileID=1802&Type=M'
