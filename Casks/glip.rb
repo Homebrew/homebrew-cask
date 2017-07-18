@@ -2,7 +2,7 @@ cask 'glip' do
   version '3.0.1727'
   sha256 'eca4a1dd80f66f0cfa6ed1a1936b2b528426cf745a1472e0459d8c9cceb8637d'
 
-  # downloads.ringcentral.com was verified as official when first introduced to the cask
+  # downloads.ringcentral.com/glip/rc was verified as official when first introduced to the cask
   url "https://downloads.ringcentral.com/glip/rc/#{version}/mac/Glip-#{version}.dmg"
   name 'Glip'
   homepage 'https://www.glip.com/'
