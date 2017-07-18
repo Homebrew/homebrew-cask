@@ -1,6 +1,6 @@
 cask 'java' do
-  version '1.8.0_131-b11,d54c1d3a095b4ff2b6607d096fa80163'
-  sha256 '642aca454e10bea70a36a36f54cc5bac22267de78bf85c2d019b1fefbc023c43'
+  version '1.8.0_141-b15,336fa29ff2bb4ef291e347e091f7f4a7'
+  sha256 'ed540bc452c1fd7772a27db6dc45b65d37ed0808edfa8853a234d3fc21e6992c'
 
   java_update = version.sub(%r{.*_(\d+)-.*}, '\1')
   url "http://download.oracle.com/otn-pub/java/jdk/#{version.minor}u#{version.before_comma.split('_').last}/#{version.after_comma}/jdk-#{version.minor}u#{java_update}-macosx-x64.dmg",
