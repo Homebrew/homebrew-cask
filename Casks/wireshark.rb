@@ -38,6 +38,8 @@ cask 'wireshark' do
   uninstall pkgutil: 'org.wireshark.*',
             delete:  [
                        '/Library/LaunchDaemons/org.wireshark.ChmodBPF.plist',
+                       '/private/etc/manpaths.d/Wireshark',
+                       '/private/etc/paths.d/Wireshark',
                        '/usr/local/bin/capinfos',
                        '/usr/local/bin/dftest',
                        '/usr/local/bin/dumpcap',
@@ -49,4 +51,6 @@ cask 'wireshark' do
                        '/usr/local/bin/tshark',
                        '/usr/local/bin/wireshark',
                      ]
+
+  zap delete: '~/Library/Saved Application State/org.wireshark.Wireshark.savedState'
 end
