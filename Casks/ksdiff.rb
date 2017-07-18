@@ -8,7 +8,7 @@ cask 'ksdiff' do
 
   conflicts_with cask: 'kaleidoscope'
 
-  pkg 'Install ksdiff.pkg'
+  pkg 'Install ksdiff.pkg', allow_untrusted: true
 
   uninstall pkgutil: 'com.blackpixel.kaleidoscope.ksdiff.installer.pkg'
 
