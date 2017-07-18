@@ -6,5 +6,5 @@ cask 'kernel-panic-screensaver' do
   name 'Kernel Panic Screensaver'
   homepage 'http://doomlaser.com/kernel-panic-screensaver/'
 
-  app 'KPsaver.saver'
+  screen_saver 'KPsaver.saver'
 end
