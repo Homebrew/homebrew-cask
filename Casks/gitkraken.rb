@@ -1,6 +1,6 @@
 cask 'gitkraken' do
-  version '2.6.0'
-  sha256 '83375b055240a3284d1fa9493e8972694c7790cea272e210b8a1f599987fbdd6'
+  version '2.7.0'
+  sha256 '7d846469af9f9dd10fc0f4774f4f30d051b280b3e4beec251261f620ff14c465'
 
   url "https://release.gitkraken.com/darwin/v#{version}.zip"
   appcast 'https://release.gitkraken.com/darwin/RELEASES',
