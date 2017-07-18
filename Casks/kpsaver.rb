@@ -1,4 +1,4 @@
-cask 'kernel-panic-screensaver' do
+cask 'kpsaver' do
   version :latest
   sha256 :no_check
 
