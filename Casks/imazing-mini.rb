@@ -19,7 +19,16 @@ cask 'imazing-mini' do
                 "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.DigiDNA.iMazing#{version.major}Mac.Mini",
               ],
       trash:  [
+                '~/Library/Application Support/iMazing',
                 '~/Library/Application Support/iMazing Mini',
+                '~/Library/Application Support/MobileSync/Backup/iMazing.Versions',
+                '~/Library/Caches/iMazing',
                 "~/Library/Preferences/com.DigiDNA.iMazing#{version.major}Mac.Mini.plist",
+                '/Users/Shared/iMazing Mini',
               ]
+
+  caveats <<-EOS.undent
+    Performing a zap on this cask removes files pertaining to both #{token}
+    and imazing, so it should not be done if you only want to uninstall one of them.
+  EOS
 end
