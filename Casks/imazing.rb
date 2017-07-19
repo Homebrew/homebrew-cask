@@ -1,15 +1,15 @@
 cask 'imazing' do
-  version '2.3.0'
-  sha256 '79f0a8f50aadf5695bd6b89e6ceca0668eb0f043b3bdfeb6df25fcb6b18bed2e'
+  version '2.3.1'
+  sha256 '65820880df939380db9730117669a5f2c4c4a334660762900aeda9e54539a25e'
 
   # dl.devmate.com was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.DigiDNA.iMazing#{version.major}Mac/iMazing#{version.major}forMac.dmg"
-  name 'iMazing'
+  name 'iMazing Mini'
   homepage 'https://imazing.com/'
 
   depends_on macos: '>= :lion'
 
-  app 'iMazing.app'
+  app 'iMazing Mini.app'
 
   zap delete: [
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.digidna.imazingmac.sfl',
