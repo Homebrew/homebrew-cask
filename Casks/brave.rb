@@ -9,6 +9,9 @@ cask 'brave' do
   name 'Brave'
   homepage 'https://brave.com/'
 
+  auto_updates true
+  depends_on macos: '>= :mavericks'
+
   app 'Brave.app'
 
   zap delete: [
