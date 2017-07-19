@@ -1,6 +1,6 @@
 cask 'google-earth-pro' do
-  version '7.1.8.3036'
-  sha256 '6eff03463b4ae435d7e27a5501352e85ed7b92eadafbe341c3b88784f6d4fd4e'
+  version '7.3.0.3830'
+  sha256 'bc9fab7a6d83fa9f0bd218cb56162dd31337cb52c7874b3ace0330cd5d73f9bf'
 
   url 'https://dl.google.com/earth/client/advanced/current/GoogleEarthProMac-Intel.dmg'
   name 'Google Earth Pro'
