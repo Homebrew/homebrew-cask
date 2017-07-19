@@ -7,6 +7,7 @@ cask 'imazing-mini' do
   name 'iMazing Mini'
   homepage 'https://imazing.com/mini'
 
+  conflicts_with cask: 'imazing'
   depends_on macos: '>= 10.8'
 
   app 'iMazing Mini.app'
@@ -14,18 +15,16 @@ cask 'imazing-mini' do
   uninstall login_item: 'iMazing Mini',
             quit:       "com.DigiDNA.iMazing#{version.major}Mac.Mini"
 
-  zap delete: [
-                "~/Library/Caches/com.DigiDNA.iMazing#{version.major}Mac.Mini",
-                "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.DigiDNA.iMazing#{version.major}Mac.Mini",
-              ],
-      trash:  [
-                '~/Library/Application Support/iMazing',
-                '~/Library/Application Support/iMazing Mini',
-                '~/Library/Application Support/MobileSync/Backup/iMazing.Versions',
-                '~/Library/Caches/iMazing',
-                "~/Library/Preferences/com.DigiDNA.iMazing#{version.major}Mac.Mini.plist",
-                '/Users/Shared/iMazing Mini',
-              ]
+  zap trash: [
+               '~/Library/Application Support/iMazing',
+               '~/Library/Application Support/iMazing Mini',
+               '~/Library/Application Support/MobileSync/Backup/iMazing.Versions',
+               "~/Library/Caches/com.DigiDNA.iMazing#{version.major}Mac.Mini",
+               "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.DigiDNA.iMazing#{version.major}Mac.Mini",
+               '~/Library/Caches/iMazing',
+               "~/Library/Preferences/com.DigiDNA.iMazing#{version.major}Mac.Mini.plist",
+               '/Users/Shared/iMazing Mini',
+             ]
 
   caveats <<-EOS.undent
     Performing a zap on this cask removes files pertaining to both #{token}
