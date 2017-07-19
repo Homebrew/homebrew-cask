@@ -1,6 +1,6 @@
 cask 'google-earth' do
-  version '7.1.8.3036'
-  sha256 'a6cdb98e2caf0162c425b1acc0dab6196a220bf59eef378624b8b7c60a22bf18'
+  version '7.3.0.3830'
+  sha256 'bc9fab7a6d83fa9f0bd218cb56162dd31337cb52c7874b3ace0330cd5d73f9bf'
 
   url 'https://dl.google.com/earth/client/advanced/current/GoogleEarthMac-Intel.dmg'
   name 'Google Earth'
