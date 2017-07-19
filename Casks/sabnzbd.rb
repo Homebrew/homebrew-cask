@@ -5,7 +5,7 @@ cask 'sabnzbd' do
   # github.com/sabnzbd/sabnzbd was verified as official when first introduced to the cask
   url "https://github.com/sabnzbd/sabnzbd/releases/download/#{version}/SABnzbd-#{version}-osx.dmg"
   appcast 'https://github.com/sabnzbd/sabnzbd/releases.atom',
-          checkpoint: '7aca883e825a3a87efcb6fd85213fd37dc1ca9de2caf366cff8de36b30e4219d'
+          checkpoint: 'fff864fbd45b3e6d563cb446e727823e4b628c1b2b057a9c79da6eff1679ee84'
   name 'SABnzbd'
   homepage 'https://sabnzbd.org/'
 
