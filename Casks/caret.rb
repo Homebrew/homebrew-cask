@@ -5,7 +5,7 @@ cask 'caret' do
   # github.com/careteditor/caret was verified as official when first introduced to the cask
   url "https://github.com/careteditor/caret/releases/download/#{version}/Caret.dmg"
   appcast 'https://github.com/careteditor/caret/releases.atom',
-          checkpoint: '70465dc1b4102b55633852a894eb3908e7b8830b71210c8b0f955bbb1fada794'
+          checkpoint: 'f033817978cca18c8fe537e31796323313f42a974d6ebd0d510a2f988acd808b'
   name 'Caret'
   homepage 'https://caret.io/'
 
