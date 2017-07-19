@@ -4,12 +4,12 @@ cask 'imazing' do
 
   # dl.devmate.com was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.DigiDNA.iMazing#{version.major}Mac/iMazing#{version.major}forMac.dmg"
-  name 'iMazing Mini'
+  name 'iMazing'
   homepage 'https://imazing.com/'
 
   depends_on macos: '>= :lion'
 
-  app 'iMazing Mini.app'
+  app 'iMazing.app'
 
   zap delete: [
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.digidna.imazingmac.sfl',
