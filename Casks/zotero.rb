@@ -4,7 +4,7 @@ cask 'zotero' do
 
   url "https://download.zotero.org/client/release/#{version}/Zotero-#{version}.dmg"
   appcast 'https://github.com/zotero/zotero/releases.atom',
-          checkpoint: '698f6c205c06e891ddca54f6c3b80b48369cdfbff987274556bf2b0342b3e119'
+          checkpoint: 'f447e76548240b1aa2cdf29b0dcc9bb1600924705870b661225408b756c07b69'
   name 'Zotero'
   homepage 'https://www.zotero.org/'
 
