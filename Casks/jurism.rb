@@ -1,4 +1,4 @@
-cask 'juris-m' do
+cask 'jurism' do
   version '4.0.29.12m98'
   sha256 'ee2dcc5280c09860bdd0c76e0b47014b91e4214e983382f63c313de674e6a001'
 
