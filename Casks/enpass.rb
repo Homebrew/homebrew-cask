@@ -1,6 +1,6 @@
 cask 'enpass' do
-  version '5.5.7'
-  sha256 'c93381bfa56d1f430f85ea70b760ab39fdf845e43e7921e4c0271003eebc2eda'
+  version '5.5.8'
+  sha256 'f7a75036f95f4ba535ccff9c9f1be93250222c5c880e9d0d2aa19bfe749f4588'
 
   # sinew.in was verified as official when first introduced to the cask
   url "https://dl.sinew.in/mac/setup/Enpass-#{version}.dmg"
