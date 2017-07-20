@@ -4,7 +4,7 @@ cask '4k-video-downloader' do
 
   url "https://downloads2.4kdownload.com/app/4kvideodownloader_#{version.major_minor}.dmg"
   appcast 'https://www.4kdownload.com/download',
-          checkpoint: '49ff507a887439ff101f36b84c58788834a7a4a7638127609c8a49fa6278b627'
+          checkpoint: '8de0a5725c670e5fa688b8f7ede33e197766ff2acd12e1de4b8d6bb5a267fdd3'
   name '4K Video Downloader'
   homepage 'https://www.4kdownload.com/products/product-videodownloader'
 
