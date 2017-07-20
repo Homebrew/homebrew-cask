@@ -1,6 +1,6 @@
 cask 'tableplus' do
-  version :latest
-  sha256 :no_check
+  version '1.0'
+  sha256 'ca5655445c2f4674eda66fd1833a9f8dedb80937073b0b4a204100e7f2b21fe5'
 
   url 'https://tableplus.io/release/osx/tableplus_latest.zip'
   appcast 'https://tableplus.io/osx/version.xml',
