@@ -5,7 +5,7 @@ cask 'powershell' do
   # github.com/PowerShell/PowerShell was verified as official when first introduced to the cask
   url "https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}-osx.10.12-x64.pkg"
   appcast 'https://github.com/PowerShell/PowerShell/releases.atom',
-          checkpoint: 'bed0f5d03f1f08b148e346e45dae098d784a83adffa148fa1b0649ee7478cee4'
+          checkpoint: '2cb3e19eaeab7d240d4704ad711771bc7d1f5a23227c133e45ac00e2902543c6'
   name 'PowerShell'
   homepage 'https://github.com/PowerShell/PowerShell'
 
