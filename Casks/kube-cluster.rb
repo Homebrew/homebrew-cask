@@ -4,7 +4,7 @@ cask 'kube-cluster' do
 
   url "https://github.com/TheNewNormal/kube-cluster-osx/releases/download/v#{version}/Kube-Cluster_v#{version}.dmg"
   appcast 'https://github.com/TheNewNormal/kube-cluster-osx/releases.atom',
-          checkpoint: '12142417fce52c3258b14094dd17f96d259c33e2f7250f207196e2db241c2f4c'
+          checkpoint: 'ef4bf984c711141c7db3b433e716aa9f0bd41069463cbe174ffbe22f4fecf227'
   name 'Kube-Cluster'
   homepage 'https://github.com/TheNewNormal/kube-cluster-osx'
 

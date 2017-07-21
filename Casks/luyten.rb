@@ -5,7 +5,7 @@ cask 'luyten' do
   # github.com/deathmarine/Luyten was verified as official when first introduced to the cask
   url "https://github.com/deathmarine/Luyten/releases/download/v#{version}/luyten-OSX-#{version}.zip"
   appcast 'https://github.com/deathmarine/Luyten/releases.atom',
-          checkpoint: '80f6b0c24cdedec4e4396b30ef54e608847809c62a89d573d006b0c034665a14'
+          checkpoint: '25c5c57af0a8c3365a11c5a85aa2d137033e29c4119540dfafaaf155fabf8de0'
   name 'Luyten'
   homepage 'https://deathmarine.github.io/Luyten/'
 

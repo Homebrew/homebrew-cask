@@ -4,7 +4,7 @@ cask 'linkliar' do
 
   url "https://github.com/halo/LinkLiar/releases/download/#{version}/LinkLiar.app.zip"
   appcast 'https://github.com/halo/LinkLiar/releases.atom',
-          checkpoint: '27742cdc16226bcd05fef563df4b55f7cf49fe0c169fab9c96ed3ad0ba189d90'
+          checkpoint: '4d7b2d9b6cb988ba6824f1bf0a41ec466c6f737808a03ef5611feb872cc1be17'
   name 'LinkLiar'
   homepage 'https://github.com/halo/LinkLiar'
 

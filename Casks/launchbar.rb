@@ -10,7 +10,7 @@ cask 'launchbar' do
   end
 
   appcast 'https://www.obdev.at/products/launchbar/releasenotes.html',
-          checkpoint: '657976f1e78729091db9a49667493b1916d95ca0e0e0983f3b1b797028d23df3'
+          checkpoint: 'cebb4f2fc1ace15cbe2b9d9e857f65ddbc1c3b7f100b214ac82f00bb92a0f8f1'
   name 'LaunchBar'
   homepage 'https://www.obdev.at/products/launchbar/index.html'
 
