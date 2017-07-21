@@ -5,7 +5,7 @@ cask 'hyper' do
   # github.com/zeit/hyper was verified as official when first introduced to the cask
   url "https://github.com/zeit/hyper/releases/download/#{version}/hyper-#{version}-mac.zip"
   appcast 'https://github.com/zeit/hyper/releases.atom',
-          checkpoint: '7fd30ef5c924d11ad85525e7be3dd41d4b821ae7bd675771fd97d95067357a36'
+          checkpoint: '76c2edfd2d16a8b8634d205d1333ffbf849e9f133da14eda458c82b8f399510c'
   name 'Hyper'
   homepage 'https://hyper.is/'
 

@@ -1,10 +1,10 @@
 cask 'wireshark' do
-  version '2.2.7'
-  sha256 '6d46e7270fc6b661ece24c0fcaf56c7e4ce4f65501ef055ea46c6cfdf95c6dcb'
+  version '2.4.0'
+  sha256 '20c2e5fa8ec302fc47100ad42f8d2020e629a72b75a7343929206d3274bd08b2'
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
   appcast 'https://www.wireshark.org/download/osx/',
-          checkpoint: '6ee31ea196b816cef77baae0b19fb88c6bdef3af8543049d5a293ab3fba60838'
+          checkpoint: '0645b35f9985b5ccd49a2d59603dbd57efeaadbd71439dc9cfe8271798d61e0d'
   name 'Wireshark'
   homepage 'https://www.wireshark.org/'
 
@@ -38,6 +38,8 @@ cask 'wireshark' do
   uninstall pkgutil: 'org.wireshark.*',
             delete:  [
                        '/Library/LaunchDaemons/org.wireshark.ChmodBPF.plist',
+                       '/private/etc/manpaths.d/Wireshark',
+                       '/private/etc/paths.d/Wireshark',
                        '/usr/local/bin/capinfos',
                        '/usr/local/bin/dftest',
                        '/usr/local/bin/dumpcap',
@@ -49,4 +51,6 @@ cask 'wireshark' do
                        '/usr/local/bin/tshark',
                        '/usr/local/bin/wireshark',
                      ]
+
+  zap delete: '~/Library/Saved Application State/org.wireshark.Wireshark.savedState'
 end

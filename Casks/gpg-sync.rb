@@ -4,7 +4,7 @@ cask 'gpg-sync' do
 
   url "https://github.com/firstlookmedia/gpgsync/releases/download/v#{version}/GPGSync.pkg"
   appcast 'https://github.com/firstlookmedia/gpgsync/releases.atom',
-          checkpoint: 'e386ff63730a46c0dad3c6a24a4509bc83babcb0e389e2175ea9e1e633054941'
+          checkpoint: '3ab44b4f16899187408c2c5cedab0d19dcb9960fcc3f9a2758800b876e3f487a'
   name 'GPG Sync'
   homepage 'https://github.com/firstlookmedia/gpgsync/'
 

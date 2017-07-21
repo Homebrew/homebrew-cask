@@ -1,11 +1,11 @@
 cask 'osxfuse' do
-  version '3.6.2'
-  sha256 '33ab1b3c08f8e0084522103caec35fe32148505d9f1e1468eb7f0fe2a41c5960'
+  version '3.6.3'
+  sha256 '64474821b8b9b663ff728f79fd0e7d361f972dc0ac0ea4e16f7d26cdb1655db2'
 
   # github.com/osxfuse was verified as official when first introduced to the cask
   url "https://github.com/osxfuse/osxfuse/releases/download/osxfuse-#{version}/osxfuse-#{version}.dmg"
   appcast 'https://github.com/osxfuse/osxfuse/releases.atom',
-          checkpoint: '8aa4654bd39f34672dc8ad087154d1769c3350bc554fb69a0e1735e8c0f32e64'
+          checkpoint: '1786c47db49d68ecdec0c199b008651a8413ce5447428c485e4b37da6baf9ad7'
   name 'OSXFUSE'
   homepage 'https://osxfuse.github.io/'
 

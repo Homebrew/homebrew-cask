@@ -4,7 +4,7 @@ cask 'jclasslib-bytecode-viewer' do
 
   url "https://github.com/ingokegel/jclasslib/releases/download/#{version}/jclasslib_macos_#{version.dots_to_underscores}.dmg"
   appcast 'https://github.com/ingokegel/jclasslib/releases.atom',
-          checkpoint: '983038f2613ba53c0186c85a30e2d80bd848c0ef8b33163d3f8c24b2336f7290'
+          checkpoint: 'bc4fe9a7dd836e7b5c3fc8b628bfcc8cb376570b999894742c350a0843c3a918'
   name 'jclasslib bytecode viewer'
   homepage 'https://github.com/ingokegel/jclasslib'
 

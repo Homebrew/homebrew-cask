@@ -5,7 +5,7 @@ cask 'vagrant' do
   # hashicorp.com/vagrant was verified as official when first introduced to the cask
   url "https://releases.hashicorp.com/vagrant/#{version}/vagrant_#{version}_x86_64.dmg"
   appcast 'https://github.com/mitchellh/vagrant/releases.atom',
-          checkpoint: 'e2c4859e876a81fa46e17359d452a26f250ee859e43c5265c2a19ab88b376644'
+          checkpoint: '9d64b05fb85bc59867c8cd6f7d0f80e0ebe5af3a40746a0d052b931b081a41e4'
   name 'Vagrant'
   homepage 'https://www.vagrantup.com/'
 

@@ -5,7 +5,7 @@ cask 'disk-sensei' do
   # amazonaws.com/cindori was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/cindori/DiskSensei.dmg'
   name 'Disk Sensei'
-  homepage 'https://cindori.org/disksensei/'
+  homepage 'https://cindori.org/'
 
   app 'Disk Sensei.app'
 end

@@ -11,7 +11,7 @@ cask 'mono-mdk' do
 
   pkg "MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
 
-  uninstall delete:  '/private/etc/paths.d/monocommands',
+  uninstall delete:  '/private/etc/paths.d/mono-commands',
             pkgutil: 'com.xamarin.mono-*'
 
   caveats <<-EOS.undent
@@ -21,6 +21,6 @@ cask 'mono-mdk' do
 
       brew unlink {formula} && brew link {formula}
 
-    and/or remove /private/etc/paths.d/monocommands
+    and/or remove /private/etc/paths.d/mono-commands
   EOS
 end
