@@ -1,11 +1,11 @@
 cask 'etcher' do
-  version '1.0.0'
-  sha256 '11259ae4a3b36a60092bdf365fd3f54eba854e9f0a88e661d5a7969d26d51fae'
+  version '1.1.0'
+  sha256 'a53d35d342e2c1b0e7236c4c5581565eadba9d7ad517f28c6849df49e8a740e2'
 
-  # resin-production-downloads.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "https://resin-production-downloads.s3.amazonaws.com/etcher/#{version}/Etcher-#{version}-darwin-x64.dmg"
+  # github.com/resin-io/etcher/releases/download was verified as official when first introduced to the cask
+  url "https://github.com/resin-io/etcher/releases/download/v#{version}/Etcher-#{version}-darwin-x64.dmg"
   appcast 'https://github.com/resin-io/etcher/releases.atom',
-          checkpoint: '9d3f2c93486e1e68096e85ff8e336c6d30e3629e0b2f6b7f7070b69f72bf58a7'
+          checkpoint: 'f88ff67e8ebd30e6a25b03a727d1caeb5d77969953c99af0a36141d79f8a5b21'
   name 'Etcher'
   homepage 'https://etcher.io/'
 
