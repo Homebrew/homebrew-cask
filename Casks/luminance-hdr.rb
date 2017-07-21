@@ -4,7 +4,7 @@ cask 'luminance-hdr' do
 
   url "https://downloads.sourceforge.net/qtpfsgui/Luminance_HDR_#{version}.dmg"
   appcast 'https://sourceforge.net/projects/qtpfsgui/rss',
-          checkpoint: 'ba334f17992a87cd3126b40338693e564c4d16bf568ba78ec77d1fac517130bc'
+          checkpoint: '3ecae87283d3f01c31c1905d25cf0320518d9947577af0d2f3edc3ac8d89ded2'
   name 'Luminance HDR'
   homepage 'http://qtpfsgui.sourceforge.net/'
 
