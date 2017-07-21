@@ -5,7 +5,7 @@ cask 'logdna-agent' do
   # github.com/logdna/logdna-agent was verified as official when first introduced to the cask
   url "https://github.com/logdna/logdna-agent/releases/download/#{version}/logdna-agent-#{version}.pkg"
   appcast 'https://github.com/logdna/logdna-agent/releases.atom',
-          checkpoint: 'd2fdf2e635bfe47eb692580b7d1bde205395a01738c645411aa8dfd9264f7e11'
+          checkpoint: 'cee7186ede988c251a7212238182afa99a5a31814b581c7c6567caa1d0bd49c9'
   name 'LogDNA Agent'
   homepage 'https://logdna.com/'
 
