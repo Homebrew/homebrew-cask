@@ -7,7 +7,7 @@ cask 'powershell' do
   appcast 'https://github.com/PowerShell/PowerShell/releases.atom',
           checkpoint: 'bed0f5d03f1f08b148e346e45dae098d784a83adffa148fa1b0649ee7478cee4'
   name 'PowerShell'
-  homepage 'https://msdn.microsoft.com/powershell'
+  homepage 'https://github.com/PowerShell/PowerShell'
 
   depends_on formula: 'openssl'
   depends_on macos: '>= :sierra'
