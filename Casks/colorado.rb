@@ -8,4 +8,10 @@ cask 'colorado' do
 
   app 'colorado-mac/colorado.app'
 
+  zap delete: '~/Library/Saved Application State/com.electron.colorado.savedState',
+      trash:  [
+                '~/Library/Application Support/colorado',
+                '~/Library/Preferences/com.electron.colorado.helper.plist',
+                '~/Library/Preferences/com.electron.colorado.plist',
+              ]
 end
