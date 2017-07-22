@@ -11,6 +11,11 @@ cask 'v2rayx' do
 
   app 'V2RayX.app'
 
+  postflight do
+    set_permissions "#{appdir}/V2RayX.app/Contents/Resources/install_helper.sh", 'u+x'
+    system_command "#{appdir}/V2RayX.app/Contents/Resources/install_helper.sh", sudo: true
+  end
+
   uninstall_preflight do
     set_ownership '/Library/Application Support/V2RayX'
   end
