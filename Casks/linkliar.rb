@@ -14,4 +14,14 @@ cask 'linkliar' do
   homepage 'https://github.com/halo/LinkLiar'
 
   app 'LinkLiar.app'
+
+  uninstall delete:    [
+                         '/Library/Application Support/LinkDaemon',
+                         '/Library/Application Support/LinkLiar',
+                       ],
+            launchctl: [
+                         'io.github.halo.linkdaemon',
+                         'io.github.halo.linkhelper',
+                       ],
+            quit:      'io.github.halo.LinkLiar'
 end
