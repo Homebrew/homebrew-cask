@@ -12,6 +12,7 @@ cask 'github-desktop' do
   auto_updates true
 
   app 'GitHub Desktop.app'
+  binary "#{appdir}/GitHub Desktop.app/Contents/Resources/app/static/github.sh", target: 'github'
 
   zap delete: [
                 '~/Library/Application Support/GitHub Desktop',
