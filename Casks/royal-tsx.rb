@@ -7,7 +7,7 @@ cask 'royal-tsx' do
   appcast "https://royaltsx-v#{version.major}.royalapplications.com/updates_stable.php",
           checkpoint: 'bd35b1c1e0058db923d7016e73d63f3bd9033789604d9d9a60724a53a496b953'
   name 'Royal TSX'
-  homepage 'https://www.royalapplications.com/ts/osx/features'
+  homepage 'https://www.royalapplications.com/ts/mac/features'
 
   app 'Royal TSX.app'
 end
