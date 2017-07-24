@@ -1,6 +1,6 @@
 cask 'xld' do
-  version '2017.07.10'
-  sha256 '4703f2326a1937625991214e9fde56239322cfe02e151f9e054c52b4438680c0'
+  version '2017.07.10-3'
+  sha256 '58dff4c83a70d83fa5425a78988d13b2d39d7270dc02af0c4eb3d2891789fe01'
 
   # sourceforge.net/xld was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/xld/xld-#{version.no_dots}.dmg"

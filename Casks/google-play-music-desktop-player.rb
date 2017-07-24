@@ -1,11 +1,11 @@
 cask 'google-play-music-desktop-player' do
-  version '4.3.0'
-  sha256 '0b9ae207fbc9c38d7fddba5d7185be99d741d2b318e1933332f6cda7b48b3c6e'
+  version '4.4.0'
+  sha256 'd33b699bd7ca1da2ea0dc9da63035556184f9a21979a4a181892939426180dc7'
 
   # github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL- was verified as official when first introduced to the cask
   url "https://github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL-/releases/download/v#{version}/Google.Play.Music.Desktop.Player.OSX.zip"
   appcast 'https://github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL-/releases.atom',
-          checkpoint: '9e44e95944481b7485480a0288aa3e94f84975c921b21e1708f0f7a96725d0ec'
+          checkpoint: '9cee9cb1172d62b26b46c65f31d33face4064b62b49d647afa79ecedbf95777a'
   name 'Google Play Music Desktop Player'
   homepage 'https://www.googleplaymusicdesktopplayer.com/'
 
