@@ -4,7 +4,7 @@ cask 'anybar' do
 
   url "https://github.com/tonsky/AnyBar/releases/download/#{version}/AnyBar-#{version}.zip"
   appcast 'https://github.com/tonsky/AnyBar/releases.atom',
-          checkpoint: '8c627a51a1453b13b10652e0dda39faefbd3826c62545ad0bdd93f0e8a9e1876'
+          checkpoint: '8542cd0d1d343e2b5d69fd3219475b3db2c3cf81afff3fcc77199b2eabe86b8b'
   name 'AnyBar'
   homepage 'https://github.com/tonsky/AnyBar'
 
