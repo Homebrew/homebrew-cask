@@ -9,7 +9,7 @@ cask 'android-sdk' do
 
   conflicts_with cask: 'android-platform-tools'
 
-  build_tools_version = '26.0.0'
+  build_tools_version = '26.0.1'
 
   binary "#{staged_path}/build-tools/#{build_tools_version}/aapt"
   binary "#{staged_path}/build-tools/#{build_tools_version}/aapt2"
