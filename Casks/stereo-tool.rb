@@ -1,4 +1,4 @@
-cask 'stereotool' do
+cask 'stereo-tool' do
   version '8.40'
   sha256 'eb835c3b29461d52ea9bf4721178e3817bb63f7b2bb139fbecc7d9002548b079'
 
