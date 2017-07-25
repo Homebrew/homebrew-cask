@@ -4,7 +4,7 @@ cask 'amm' do
 
   url "https://github.com/15cm/AMM/releases/download/v#{version}/AMM_v#{version}.dmg"
   appcast 'https://github.com/15cm/AMM/releases.atom',
-          checkpoint: '451904bfb10360aa5430d4e24fee0e72c9543264c2f35a861069069e6dbb571f'
+          checkpoint: 'acc5467eb73151d7f5e848ddf38308e51c2ab71d57674de50603a45230074310'
   name 'AMM'
   homepage 'https://github.com/15cm/AMM'
 
