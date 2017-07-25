@@ -5,7 +5,7 @@ cask 'asciidocfx' do
   # github.com/asciidocfx/AsciidocFX was verified as official when first introduced to the cask
   url "https://github.com/asciidocfx/AsciidocFX/releases/download/v#{version}/AsciidocFX_Mac.dmg"
   appcast 'https://github.com/asciidocfx/AsciidocFX/releases.atom',
-          checkpoint: '71e3d7c0e829ecf95331d9c9a5576bea320ea45c520516fa5ac8b9e9d738a7fe'
+          checkpoint: '9e3703d63f0923fd1d2d3abf5326da6558400635fbfeec18aaecc252cc6a1dab'
   name 'AsciidocFX'
   homepage 'http://www.asciidocfx.com/'
 
