@@ -4,7 +4,7 @@ cask 'archi' do
 
   url "http://www.archimatetool.com/downloads/release/v#{version.major}/Archi-mac-#{version}.zip"
   appcast 'https://github.com/archimatetool/archi/releases.atom',
-          checkpoint: 'c2fad564fc2be522c1b2860280041c48c772b57b6065ce81ef97b5980ca77a3c'
+          checkpoint: '53c09c7b5f52da00c23cd94c9b0870b1a655292eb4377d7660eb832f5032374a'
   name 'Archi'
   homepage 'https://www.archimatetool.com/'
 
