@@ -4,7 +4,7 @@ cask 'appearin' do
 
   url "https://github.com/vitorgalvao/appear.in/releases/download/#{version}/appear.in-osx-#{version}.zip"
   appcast 'https://github.com/vitorgalvao/appear.in/releases.atom',
-          checkpoint: '0054fd4b83384b07e5c0bad1424b7a6fc44b29dbf6b2216f21a8a52e495b0586'
+          checkpoint: '7524292c3e42d0f805a44991c2d8f9459891516317eab49a446a414163d8eb5d'
   name 'appear.in'
   homepage 'https://github.com/vitorgalvao/appear.in'
 
