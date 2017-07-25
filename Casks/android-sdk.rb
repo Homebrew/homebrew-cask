@@ -1,31 +1,29 @@
 cask 'android-sdk' do
-  version '3859397'
+  version '3859397,26.0.1'
   sha256 '4a81754a760fce88cba74d69c364b05b31c53d57b26f9f82355c61d5fe4b9df9'
 
   # dl.google.com/android/repository was verified as official when first introduced to the cask
-  url "https://dl.google.com/android/repository/sdk-tools-darwin-#{version}.zip"
+  url "https://dl.google.com/android/repository/sdk-tools-darwin-#{version.before_comma}.zip"
   name 'android-sdk'
   homepage 'https://developer.android.com/index.html'
 
   conflicts_with cask: 'android-platform-tools'
 
-  build_tools_version = '26.0.1'
-
-  binary "#{staged_path}/build-tools/#{build_tools_version}/aapt"
-  binary "#{staged_path}/build-tools/#{build_tools_version}/aapt2"
-  binary "#{staged_path}/build-tools/#{build_tools_version}/aarch64-linux-android-ld"
-  binary "#{staged_path}/build-tools/#{build_tools_version}/aidl"
-  binary "#{staged_path}/build-tools/#{build_tools_version}/arm-linux-androideabi-ld"
-  binary "#{staged_path}/build-tools/#{build_tools_version}/bcc_compat"
-  binary "#{staged_path}/build-tools/#{build_tools_version}/dexdump"
-  binary "#{staged_path}/build-tools/#{build_tools_version}/dx"
-  binary "#{staged_path}/build-tools/#{build_tools_version}/i686-linux-android-ld"
-  binary "#{staged_path}/build-tools/#{build_tools_version}/llvm-rs-cc"
-  binary "#{staged_path}/build-tools/#{build_tools_version}/mainDexClasses"
-  binary "#{staged_path}/build-tools/#{build_tools_version}/mipsel-linux-android-ld"
-  binary "#{staged_path}/build-tools/#{build_tools_version}/split-select"
-  binary "#{staged_path}/build-tools/#{build_tools_version}/x86_64-linux-android-ld"
-  binary "#{staged_path}/build-tools/#{build_tools_version}/zipalign"
+  binary "#{staged_path}/build-tools/#{version.after_comma}/aapt"
+  binary "#{staged_path}/build-tools/#{version.after_comma}/aapt2"
+  binary "#{staged_path}/build-tools/#{version.after_comma}/aarch64-linux-android-ld"
+  binary "#{staged_path}/build-tools/#{version.after_comma}/aidl"
+  binary "#{staged_path}/build-tools/#{version.after_comma}/arm-linux-androideabi-ld"
+  binary "#{staged_path}/build-tools/#{version.after_comma}/bcc_compat"
+  binary "#{staged_path}/build-tools/#{version.after_comma}/dexdump"
+  binary "#{staged_path}/build-tools/#{version.after_comma}/dx"
+  binary "#{staged_path}/build-tools/#{version.after_comma}/i686-linux-android-ld"
+  binary "#{staged_path}/build-tools/#{version.after_comma}/llvm-rs-cc"
+  binary "#{staged_path}/build-tools/#{version.after_comma}/mainDexClasses"
+  binary "#{staged_path}/build-tools/#{version.after_comma}/mipsel-linux-android-ld"
+  binary "#{staged_path}/build-tools/#{version.after_comma}/split-select"
+  binary "#{staged_path}/build-tools/#{version.after_comma}/x86_64-linux-android-ld"
+  binary "#{staged_path}/build-tools/#{version.after_comma}/zipalign"
   binary "#{staged_path}/emulator/bin64/e2fsck"
   binary "#{staged_path}/emulator/bin64/fsck.ext4"
   binary "#{staged_path}/emulator/bin64/mkfs.ext4"
@@ -57,7 +55,7 @@ cask 'android-sdk' do
   binary "#{staged_path}/tools/monitor"
 
   preflight do
-    system_command "#{staged_path}/tools/bin/sdkmanager", args: ['tools', 'platform-tools', "build-tools;#{build_tools_version}"], input: 'y'
+    system_command "#{staged_path}/tools/bin/sdkmanager", args: ['tools', 'platform-tools', "build-tools;#{version.after_comma}"], input: 'y'
   end
 
   postflight do
