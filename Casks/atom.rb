@@ -5,7 +5,7 @@ cask 'atom' do
   # github.com/atom/atom was verified as official when first introduced to the cask
   url "https://github.com/atom/atom/releases/download/v#{version}/atom-mac.zip"
   appcast 'https://github.com/atom/atom/releases.atom',
-          checkpoint: 'e915f9442c8f902735597854e4d91dc74f327abb448e9b263be5f0ed613a06f1'
+          checkpoint: '558f91b838b64c930b196dcc52d2da1fadaeedec32becae130d37f001c3d03b2'
   name 'Github Atom'
   homepage 'https://atom.io/'
 
