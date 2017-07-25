@@ -5,7 +5,7 @@ cask 'aether' do
   # github.com/nehbit/aether-public was verified as official when first introduced to the cask
   url "https://github.com/nehbit/aether-public/releases/download/v#{version}-OSX/Aether.#{version}.dmg"
   appcast 'https://github.com/nehbit/aether-public/releases.atom',
-          checkpoint: '56e557a46ba7e6a98174a30212cc12c51c093ca09791fda3dea01e3514ebdece'
+          checkpoint: 'cfd1eeab50243955ebb52c7710fddeb08d8cbbfef751d0108273ca58e3ccbd38'
   name 'Aether'
   homepage 'http://getaether.net/'
 
