@@ -1,5 +1,5 @@
 cask 'prusa-slic3r' do
-  version '1.36.0,201707170748'
+  version '1.36.1,201707251232'
   sha256 '52d3ccf5b398e9376b305728fdcc7c09f493c7e596103f2e25d20ea5bed3c761'
 
   # github.com/prusa3d/Slic3r was verified as official when first introduced to the cask.
