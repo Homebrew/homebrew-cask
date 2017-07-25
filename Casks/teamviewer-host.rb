@@ -1,6 +1,6 @@
 cask 'teamviewer-host' do
-  version '12.0.78517'
-  sha256 'd1e841dc1f25592fceca02e0a0eae3c02c185c9cfabf7002bbe0200106790cee'
+  version '12.0.80984'
+  sha256 '93fbde09b14cfac13f4f3fd3e7c02bdd3712b6a5c598c00c7a40b8c981938024'
 
   url "https://download.teamviewer.com/download/version_#{version.major}x/TeamViewerHost.dmg"
   name 'TeamViewer Host'
