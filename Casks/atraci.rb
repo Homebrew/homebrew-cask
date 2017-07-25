@@ -4,7 +4,7 @@ cask 'atraci' do
 
   url "https://github.com/Atraci/Atraci/releases/download/#{version}/Atraci-mac.zip"
   appcast 'https://github.com/Atraci/Atraci/releases.atom',
-          checkpoint: 'a8819ada26bd29deaf289bc9c47cea03cfaa2e9bb2dd25910967cd4c29a50c71'
+          checkpoint: '72d55bc157b78c2380239b9f157d76cd5b98551496b995d54b83d06290ae4255'
   name 'Atraci'
   homepage 'https://github.com/Atraci/Atraci/'
 
