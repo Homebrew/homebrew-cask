@@ -4,7 +4,7 @@ cask 'stereotool' do
 
   url "http://www.stereotool.com/download/stereo_tool.zip"
   name 'StereoTool'
-  homepage 'https://www.stereotool.com/'
+  homepage 'http://www.stereotool.com/'
 
   app 'stereo_tool.app'
 end
