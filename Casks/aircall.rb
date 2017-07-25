@@ -1,10 +1,10 @@
 cask 'aircall' do
-  version '1.4.10'
-  sha256 'c70ae1bd8913ca9c3b1dd5037d600f4c9e901bc38a17829fb11b7f1d4579a5eb'
+  version '1.4.11'
+  sha256 'eef8dd31b3b9c9a7fad88758474e7755b1715f5405382bfe705bf02572b5d295'
 
   url "https://electron.aircall.io/download/version/#{version}/osx_64?filetype=dmg&channel=stable"
   appcast 'https://electron.aircall.io/update/osx/1.1.0',
-          checkpoint: '891aa7db25ac73b5d2c654381b8bae5c9c981629b0c51abd2096e6c9946214c1'
+          checkpoint: '4814444d1ab30b98414914c5c7b98c37b57ad7b66906b94efcd6b4d0e80cd234'
   name 'Aircall'
   homepage 'https://aircall.io/'
 
