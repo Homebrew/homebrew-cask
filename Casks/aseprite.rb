@@ -4,7 +4,7 @@ cask 'aseprite' do
 
   url "https://www.aseprite.org/downloads/trial/Aseprite-v#{version}-trial-MacOSX.dmg"
   appcast 'https://github.com/aseprite/aseprite/releases.atom',
-          checkpoint: '69daacf9be253265a763583cb67dc3c9e92078d6c056c1c736ec2d457444b594'
+          checkpoint: '60400a94b1700388239158950876e996e451f45bf9c362ea331e9bab193d6888'
   name 'Aseprite'
   homepage 'https://www.aseprite.org/'
 
