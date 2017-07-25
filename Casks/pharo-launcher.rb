@@ -1,9 +1,9 @@
 cask 'pharo-launcher' do
-  version '0.2.13'
-  sha256 '96959ac605a23ec9566a7ddf4c7f5f303cb46f2dd002b1013f90942cb29054f7'
+  version :latest
+  sha256 :no_check
 
   # ci.inria.fr/pharo/view/Launcher/job/Publish-Launcher-stable-Mac was verified as official when first introduced to the cask
-  url "https://ci.inria.fr/pharo/view/Launcher/job/Publish-Launcher-stable-Mac/lastSuccessfulBuild/artifact/Pharo_#{version}.dmg"
+  url 'https://ci.inria.fr/pharo/view/Launcher/job/Publish-Launcher-stable-Mac/lastSuccessfulBuild/artifact/latest.dmg'
   name 'Pharo Launcher'
   homepage 'https://github.com/pharo-project/pharo-launcher'
 
