@@ -1,4 +1,4 @@
-cask 'slic3r-prusa' do
+cask 'prusa-slic3r' do
   version '1.36.0,201707170748'
   sha256 '52d3ccf5b398e9376b305728fdcc7c09f493c7e596103f2e25d20ea5bed3c761'
 
