@@ -7,7 +7,5 @@ cask 'kactus' do
   name 'Kactus'
   homepage 'http://kactus.io/'
 
-  depends_on cask: 'sketch'
-
   app 'Kactus.app'
 end
