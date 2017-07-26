@@ -15,7 +15,6 @@ cask 'zoomus-outlook-plugin' do
                          sudo:       true,
                        },
             pkgutil:   'ZoomMacOutlookPlugin.pkg',
-            delete:    '/Applications/ZoomOutlookPlugin/',
             launchctl: 'us.zoom.pluginagent',
             quit:      'us.zoom.pluginagent'
 end
