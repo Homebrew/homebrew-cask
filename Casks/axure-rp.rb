@@ -5,7 +5,7 @@ cask 'axure-rp' do
   # axure.cachefly.net was verified as official when first introduced to the cask
   url 'https://axure.cachefly.net/AxureRP-Setup.dmg'
   appcast 'https://www.axure.com/release-history',
-          checkpoint: '5153189f994563084fded8496b548da4ddc3de314e4c6d51f38cb9584a44dddb'
+          checkpoint: '3b87a8072a44e2f42db6c4727ef52510ffe452071af6c82695e0d42c1f2ab96e'
   name 'Axure RP'
   homepage 'https://www.axure.com/'
 
