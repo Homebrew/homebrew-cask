@@ -1,6 +1,6 @@
 cask 'java-jdk-javadoc' do
-  version '1.8.0_141-b15,336fa29ff2bb4ef291e347e091f7f4a7'
-  sha256 '77e3d2c07bdf29838580eac7cf6d5191d64c6892104df265e7c4da6ab471cbcf'
+  version '1.8.0_144-b01,090f390dda5b47b9b721c7dfaa008135'
+  sha256 'ae2b2fdb162ca5716fe60d8fddbe7b0d2059d2b571311d27d488a20a40c6b3be'
 
   java_update = version.sub(%r{.*_(\d+)-.*}, '\1')
   url "http://download.oracle.com/otn-pub/java/jdk/#{version.minor}u#{version.before_comma.split('_').last}/#{version.after_comma}/jdk-#{version.minor}u#{java_update}-docs-all.zip",
