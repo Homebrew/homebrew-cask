@@ -4,7 +4,7 @@ cask 'autodmg' do
 
   url "https://github.com/MagerValp/AutoDMG/releases/download/v#{version}/AutoDMG-#{version}.dmg"
   appcast 'https://github.com/MagerValp/AutoDMG/releases.atom',
-          checkpoint: 'c29303ee083b595d6cfd0f8b2635e0d83e89522a56382b3c6ea5d87a971cf5d5'
+          checkpoint: 'd81a5ea27380dc044e607407017bcc1c4c5f1b457ec9b8fba34862c4f6df99a1'
   name 'AutoDMG'
   homepage 'https://github.com/MagerValp/AutoDMG'
 
