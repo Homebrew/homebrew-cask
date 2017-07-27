@@ -4,7 +4,7 @@ cask 'bob' do
 
   url "https://github.com/casperstorm/Bob/releases/download/#{version}/backup-bob.app.zip"
   appcast 'https://github.com/casperstorm/Bob/releases.atom',
-          checkpoint: '6559ed43d7584e608ddb571531d12b73690eb00b675a5b3ab112e02d7db526cb'
+          checkpoint: 'b0591d69b6767da5a16b38ed3e4e26a13324f46b1638b7d1bcf447a82814be0c'
   name 'Bob'
   homepage 'https://github.com/casperstorm/Bob'
 
