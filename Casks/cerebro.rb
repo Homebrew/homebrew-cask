@@ -5,7 +5,7 @@ cask 'cerebro' do
   # github.com/KELiON/cerebro was verified as official when first introduced to the cask
   url "https://github.com/KELiON/cerebro/releases/download/v#{version}/cerebro-#{version}.dmg"
   appcast 'https://github.com/KELiON/cerebro/releases.atom',
-          checkpoint: '129fe5a143ecaffb7bc7d08fcdc2e18f674810a70d506967e0efcd86efc6a680'
+          checkpoint: '5f4e78c193e1046b523af6747c673ed3e67b988c1532695245a1ef6a8bc72177'
   name 'Cerebro'
   homepage 'https://cerebroapp.com/'
 
