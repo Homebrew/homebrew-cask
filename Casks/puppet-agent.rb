@@ -4,7 +4,7 @@ cask 'puppet-agent' do
   if MacOS.version == :yosemite
     sha256 'e9c2dd30c2a81cf004f168782e2cc49161e2bd4ea041e43116a7d0be5b854dfb'
   elsif MacOS.version == :el_capitan
-    sha256 '37067d3a337492021895ca14a60e50be4eea82e0b9c431b63ecc95b63bf4876'
+    sha256 'e37067d3a337492021895ca14a60e50be4eea82e0b9c431b63ecc95b63bf4876'
   else
     sha256 '32ff2b3dafbc9e98df979d4a3bb0ebc42963277430a5f5be7ae07e5123bbd143'
   end
