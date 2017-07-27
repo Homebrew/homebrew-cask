@@ -1,11 +1,9 @@
 cask 'imazing' do
-  version '2.3.3'
-  sha256 'ce31c7a8fd766e8587f8e3d236ca4db815a54c6fe1d5c31a588b3155c4c4a846'
+  version '2'
+  sha256 :no_check # required as upstream package is updated in-place
 
   # dl.devmate.com was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.DigiDNA.iMazing#{version.major}Mac/iMazing#{version.major}forMac.dmg"
-  appcast "https://updates.devmate.com/releasenotes/7823/com.DigiDNA.iMazing#{version.major}Mac.html",
-          checkpoint: 'b1b06d89892667b46f604ae68131213c9fe174e9d10ff60d859117051bc7ceea'
+  url "https://dl.devmate.com/com.DigiDNA.iMazing#{version}Mac/iMazing#{version}forMac.dmg"
   name 'iMazing'
   homepage 'https://imazing.com/'
 
@@ -16,20 +14,20 @@ cask 'imazing' do
 
   uninstall login_item: 'iMazing Mini',
             quit:       [
-                          "com.DigiDNA.iMazing#{version.major}Mac",
-                          "com.DigiDNA.iMazing#{version.major}Mac.Mini",
+                          "com.DigiDNA.iMazing#{version}Mac",
+                          "com.DigiDNA.iMazing#{version}Mac.Mini",
                         ]
 
   zap trash: [
                '~/Library/Application Support/iMazing',
                '~/Library/Application Support/iMazing Mini',
                '~/Library/Application Support/MobileSync/Backup/iMazing.Versions',
-               "~/Library/Caches/com.DigiDNA.iMazing#{version.major}Mac",
-               "~/Library/Caches/com.DigiDNA.iMazing#{version.major}Mac.Mini",
-               "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.DigiDNA.iMazing#{version.major}Mac.Mini",
+               "~/Library/Caches/com.DigiDNA.iMazing#{version}Mac",
+               "~/Library/Caches/com.DigiDNA.iMazing#{version}Mac.Mini",
+               "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.DigiDNA.iMazing#{version}Mac.Mini",
                '~/Library/Caches/iMazing',
-               "~/Library/Preferences/com.DigiDNA.iMazing#{version.major}Mac.plist",
-               "~/Library/Preferences/com.DigiDNA.iMazing#{version.major}Mac.Mini.plist",
+               "~/Library/Preferences/com.DigiDNA.iMazing#{version}Mac.plist",
+               "~/Library/Preferences/com.DigiDNA.iMazing#{version}Mac.Mini.plist",
                '/Users/Shared/iMazing Mini',
                '/Users/Shared/iMazing',
              ]
