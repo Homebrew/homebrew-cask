@@ -4,7 +4,7 @@ cask 'bitkeeper' do
 
   url "http://www.bitkeeper.org/downloads/#{version}/bk-#{version}-x86_64-macosx.pkg"
   appcast 'http://www.bitkeeper.org/download.html',
-          checkpoint: '3ec320168eb53f3f1317b7ef2f9fefdf3633b40d18022c554b228eb1db50d8a8'
+          checkpoint: '012486fc8f110b56139f497338253996bf6629c2f47c80d8b2a88ede9fc404ee'
   name 'BitKeeper'
   homepage 'http://www.bitkeeper.org/'
 
