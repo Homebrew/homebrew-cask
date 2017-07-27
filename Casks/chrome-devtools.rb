@@ -4,7 +4,7 @@ cask 'chrome-devtools' do
 
   url "https://github.com/auchenberg/chrome-devtools-app/releases/download/v#{version}/chrome-devtools-app_#{version}.dmg"
   appcast 'https://github.com/auchenberg/chrome-devtools-app/releases.atom',
-          checkpoint: 'cdbba9426341e0ad1d5b7a01c5f007091cc1d41bce9b50923166837d85f6d943'
+          checkpoint: '67fbcc2f435ff12e0666763b98130ede4f9ac0b748b7a153e5ccabc31a5ecc13'
   name 'Chrome DevTools'
   homepage 'https://github.com/auchenberg/chrome-devtools-app'
 
