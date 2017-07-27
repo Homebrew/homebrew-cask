@@ -1,6 +1,6 @@
 cask 'expandrive' do
-  version '6.0.12'
-  sha256 '8db5c0ac4cdc6ca0dc5231a0ec91f355e8590223cf2a1561eb5242d2f8ac686a'
+  version '6.0.13'
+  sha256 '8fbd7a219ec94dafd037590d256b13d2942b6bcdad4b95fda88520f3ad5289f8'
 
   url "https://updates.expandrive.com/apps/expandrive/v/#{version.dots_to_hyphens}/download.dmg"
   appcast 'https://updates.expandrive.com/appcast/expandrive.xml',
