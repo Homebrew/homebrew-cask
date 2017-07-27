@@ -4,7 +4,7 @@ cask 'caprine' do
 
   url "https://github.com/sindresorhus/caprine/releases/download/v#{version}/caprine-#{version}-mac.zip"
   appcast 'https://github.com/sindresorhus/caprine/releases.atom',
-          checkpoint: 'eeadbb7e6220e50e1140bac345bdbad0f31832d5e143af1839eb113d23f29541'
+          checkpoint: '4811cd96fef7c47e39ac75714fb7fc0d026d0ff66685eb919cb3b1e32cba4f9d'
   name 'Caprine'
   homepage 'https://github.com/sindresorhus/caprine'
 
