@@ -4,7 +4,7 @@ cask 'botframework-emulator' do
 
   url "https://github.com/Microsoft/BotFramework-Emulator/releases/download/v#{version}/botframework-emulator-#{version}-mac.zip"
   appcast 'https://github.com/Microsoft/BotFramework-Emulator/releases.atom',
-          checkpoint: 'b8557f2447a1cd0fd0a85665f6c27266bc8a7496e5581530be76c36b34f4587f'
+          checkpoint: '55a8b628f1cd6aa5f2cc867021c534df44c5e918d492fac98b132fe4b49039de'
   name 'Microsoft Bot Framework Emulator'
   homepage 'https://github.com/Microsoft/BotFramework-Emulator'
 
