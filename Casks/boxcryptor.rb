@@ -4,7 +4,7 @@ cask 'boxcryptor' do
 
   url "https://downloads.boxcryptor.com/boxcryptor/mac/Boxcryptor_v#{version}_Installer.dmg"
   appcast 'https://rink.hockeyapp.net/api/2/apps/7fd6db3e51a977132e3b120c613eaea8',
-          checkpoint: 'a0f79b8db35b4b52aa303b22fe3cfe43d83b8cb8a3d6c6b21b03351f80f5a0ca'
+          checkpoint: 'c96c7962d552975cdff7f8aa8d29a37fc71b3e0ff2235f892a67d45627bd659a'
   name 'Boxcryptor'
   homepage 'https://www.boxcryptor.com/en/'
 
