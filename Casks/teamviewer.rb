@@ -1,6 +1,6 @@
 cask 'teamviewer' do
-  version '12.0.81279'
-  sha256 'e15da207c2b4831e893b5c6092f9565f8c35c1ae8379532d1d5ca41573b37fa6'
+  version '12'
+  sha256 :no_check # required as upstream package is updated in-place
 
   url "https://download.teamviewer.com/download/version_#{version.major}x/TeamViewer.dmg"
   name 'TeamViewer'
