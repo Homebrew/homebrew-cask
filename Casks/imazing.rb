@@ -4,6 +4,8 @@ cask 'imazing' do
 
   # dl.devmate.com was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.DigiDNA.iMazing#{version.major}Mac/iMazing#{version.major}forMac.dmg"
+  appcast "https://updates.devmate.com/releasenotes/7823/com.DigiDNA.iMazing#{version.major}Mac.html",
+          checkpoint: 'b1b06d89892667b46f604ae68131213c9fe174e9d10ff60d859117051bc7ceea'
   name 'iMazing'
   homepage 'https://imazing.com/'
 
