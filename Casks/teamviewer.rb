@@ -2,7 +2,7 @@ cask 'teamviewer' do
   version '12'
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "https://download.teamviewer.com/download/version_#{version.major}x/TeamViewer.dmg"
+  url "https://download.teamviewer.com/download/version_#{version}x/TeamViewer.dmg"
   name 'TeamViewer'
   homepage 'https://www.teamviewer.com/'
 
@@ -10,10 +10,10 @@ cask 'teamviewer' do
 
   pkg 'Install TeamViewer.pkg'
 
-  uninstall pkgutil: "com.teamviewer.teamviewer#{version.major}(?!AuthPlugin|PriviledgedHelper).*",
+  uninstall pkgutil: "com.teamviewer.teamviewer#{version}(?!AuthPlugin|PriviledgedHelper).*",
             delete:  [
                        '/Applications/TeamViewer.app',
-                       "/Library/Fonts/TeamViewer#{version.major}.otf",
+                       "/Library/Fonts/TeamViewer#{version}.otf",
                      ]
 
   zap       delete: [
