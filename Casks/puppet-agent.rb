@@ -12,7 +12,7 @@ cask 'puppet-agent' do
   # downloads.puppetlabs.com was verified as official when first introduced to the cask
   url "https://downloads.puppetlabs.com/mac/#{MacOS.version}/PC1/x86_64/puppet-agent-#{version}.osx#{MacOS.version}.dmg"
   appcast 'https://downloads.puppetlabs.com/mac/10.12/PC1/x86_64/',
-          checkpoint: 'e161485d3f785c7e10323b4a82db0034ac4b7b5899cfa077a55dd5401255c494'
+          checkpoint: '349c8d077a54dc2d481626a58512f3be63d0287799928ce0fc6feaff5edf5baf'
   name 'Puppet Agent'
   homepage 'https://docs.puppet.com/puppet/4.5/about_agent.html'
 
