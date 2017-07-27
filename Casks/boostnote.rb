@@ -5,7 +5,7 @@ cask 'boostnote' do
   # github.com/BoostIO/boost-releases was verified as official when first introduced to the cask
   url "https://github.com/BoostIO/boost-releases/releases/download/v#{version}/Boostnote-mac.dmg"
   appcast 'https://github.com/BoostIO/boost-releases/releases.atom',
-          checkpoint: '03445af0e25f85979dfc442881094dbaacaa57fc72ff816db50797ea369254bf'
+          checkpoint: '4702612a0187e73b5ff1662866cf94708322c76fa749a2b82943d22a974a7e7e'
   name 'Boostnote'
   homepage 'https://boostnote.io/'
 
