@@ -5,7 +5,7 @@ cask 'comma-chameleon' do
   # github.com/theodi/comma-chameleon was verified as official when first introduced to the cask
   url "https://github.com/theodi/comma-chameleon/releases/download/#{version}/Comma.Chameleon-darwin-x64.zip"
   appcast 'https://github.com/theodi/comma-chameleon/releases.atom',
-          checkpoint: '69d6c44cff9461e20c4152b819e978ad88abf1e029c2f1f0be2b35b320da8d43'
+          checkpoint: '673f3eb04098a27cb5232c6042d43002302d47609062010b43fc164b0b6e7de6'
   name 'Comma Chameleon'
   homepage 'https://comma-chameleon.io/'
 
