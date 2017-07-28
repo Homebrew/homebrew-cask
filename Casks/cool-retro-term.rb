@@ -4,7 +4,7 @@ cask 'cool-retro-term' do
 
   url "https://github.com/Swordfish90/cool-retro-term/releases/download/v#{version}/cool-retro-term#{version.delete('.')}.dmg"
   appcast 'https://github.com/Swordfish90/cool-retro-term/releases.atom',
-          checkpoint: '632a816c2e5f8f150f26396e21d0526c87159595fd79bdaff6dabaad8629d1fc'
+          checkpoint: 'a789607a40af3f9b0c7c534b27c781b48b221fc14fb3ec132d68acc0b79eddac'
   name 'cool-retro-term'
   homepage 'https://github.com/Swordfish90/cool-retro-term'
 
