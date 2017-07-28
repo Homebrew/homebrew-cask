@@ -11,8 +11,10 @@ cask 'basictex' do
 
   uninstall pkgutil: "org.tug.mactex.basictex#{version.major}",
             delete:  [
+                       "/usr/local/texlive/#{version.major}basic",
                        '/etc/paths.d/TeX',
                        '/etc/manpaths.d/TeX',
                        '/Library/TeX',
-                     ]
+                     ],
+            rmdir:   '/usr/local/texlive'
 end
