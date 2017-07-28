@@ -4,7 +4,7 @@ cask 'cloudy' do
 
   url 'https://github.com/calebd/cloudy/releases/download/v5/Cloudy.zip'
   appcast 'https://github.com/calebd/cloudy/releases.atom',
-          checkpoint: 'e4dabdd103758cca09814f6d68675e887c6775390e18d334e221fceb0a362818'
+          checkpoint: '613e2382baff34c0207ce1d52c0c37646de3173512c9fe6e42d9e7c1fbeb23fd'
   name 'Cloudy'
   homepage 'https://github.com/calebd/cloudy'
 
