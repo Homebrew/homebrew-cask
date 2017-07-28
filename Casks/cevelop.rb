@@ -4,7 +4,7 @@ cask 'cevelop' do
 
   url "https://www.cevelop.com/cevelop/downloads/cevelop-#{version}-macosx.cocoa.x86_64.tar.gz"
   appcast 'https://www.cevelop.com/download/',
-          checkpoint: 'c5873f22b5b702dfd01b0541ba18dbf354d42d71f1ab45e69e6f41ae5e3c7fe0'
+          checkpoint: '58bcd0acc6a5ea02c2d34834997f87379f2fc1dd8d1fa8017e395c6ba6875553'
   name 'Cevelop'
   homepage 'https://www.cevelop.com/'
 
