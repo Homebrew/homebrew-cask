@@ -4,7 +4,7 @@ cask 'ckb' do
 
   url "https://github.com/ccMSC/ckb/releases/download/v#{version}/ckb.pkg"
   appcast 'https://github.com/ccMSC/ckb/releases.atom',
-          checkpoint: 'a986b9f3e5d5d9103c7711f5032cfbf4140eafac008342bc9e9907798f5e2421'
+          checkpoint: '7c4d9d7c8e23e91beb865efdf41512c8ed77b820fe28d11630dc67ab5fc710b9'
   name 'ckb'
   homepage 'https://github.com/ccMSC/ckb'
 
