@@ -4,7 +4,7 @@ cask 'corelocationcli' do
 
   url "https://github.com/fulldecent/corelocationcli/releases/download/#{version}/CoreLocationCLI.zip"
   appcast 'https://github.com/fulldecent/corelocationcli/releases.atom',
-          checkpoint: '65e6d799fcdc80d57b426855653aaaa5bbc03efdad5f578a550c5a98ca876eee'
+          checkpoint: '50fc2119711333b356b2d30e3d3683b1f64a3d52a780a1f5f51a0366145d4328'
   name 'Core Location CLI'
   homepage 'https://github.com/fulldecent/corelocationcli'
 
