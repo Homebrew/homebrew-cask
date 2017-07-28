@@ -5,7 +5,7 @@ cask 'clementine' do
   # github.com/clementine-player/Clementine was verified as official when first introduced to the cask
   url "https://github.com/clementine-player/Clementine/releases/download/#{version}/clementine-#{version}.dmg"
   appcast 'https://github.com/clementine-player/Clementine/releases.atom',
-          checkpoint: 'f2e34fdf3d07c9437f30a4119e66d57f6b4dc72c3782e695330a55ab1b865356'
+          checkpoint: 'ced6f215c6a3dcad642b293d880a70dd17d9225f862e09b565ba542bfe8ee9cb'
   name 'Clementine'
   homepage 'https://www.clementine-player.org/'
 
