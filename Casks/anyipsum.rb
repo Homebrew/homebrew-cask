@@ -4,7 +4,7 @@ cask 'anyipsum' do
 
   url "https://github.com/jlowgren/AnyIpsum/releases/download/v#{version}/AnyIpsum.dmg"
   appcast 'https://github.com/jlowgren/AnyIpsum/releases.atom',
-          checkpoint: 'adb3b644a915e880a8b3adeb4e393ec8ba696018bcb04994651751051b595780'
+          checkpoint: '8f033c12e8a716023314c9c6c61925143fecf32613ebea8df57ce34ca38ec18e'
   name 'AnyIpsum'
   homepage 'https://github.com/jlowgren/AnyIpsum'
 

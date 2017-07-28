@@ -5,7 +5,7 @@ cask 'bisq' do
   # github.com/bitsquare/bitsquare was verified as official when first introduced to the cask
   url "https://github.com/bitsquare/bitsquare/releases/download/v#{version}/Bisq-#{version}.dmg"
   appcast 'https://github.com/bitsquare/bitsquare/releases.atom',
-          checkpoint: '9e0099bc84038f67609e5a3d7327f3adaffedfbac879f98ddc3b1a32706efb2d'
+          checkpoint: 'a4a386edb7bedaffe3f2f282a42042fed68a086538af81dc08ca4689b008221e'
   name 'Bisq'
   homepage 'https://bitsquare.io/'
   gpg "#{url}.asc", key_id: '1dc3c8c4316a698ac494039cf5b84436f379a1c6'

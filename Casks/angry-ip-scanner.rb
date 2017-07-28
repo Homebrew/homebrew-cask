@@ -5,7 +5,7 @@ cask 'angry-ip-scanner' do
   # github.com/angryip/ipscan was verified as official when first introduced to the cask
   url "https://github.com/angryip/ipscan/releases/download/#{version}/ipscan-mac-#{version}.zip"
   appcast 'https://github.com/angryip/ipscan/releases.atom',
-          checkpoint: '6d6ec55fce2ab10346564d7990c4645dbb1b63c71d6f4fc73922c49051f53e21'
+          checkpoint: '361e1b18d29be11a526cc85ff7fd2e56c2ea1daff7cd261e9fc58f99e84a0cf5'
   name 'Angry IP Scanner'
   homepage 'http://angryip.org/'
 

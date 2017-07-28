@@ -1,10 +1,10 @@
 cask 'ship' do
-  version '2.0.2'
-  sha256 '98d5f145fef0ca9f8562933fabd496d36452047021979d582af7f558c610e198'
+  version '2.5.4'
+  sha256 '2217af411a6d146e1f67bce5e05d7c310089ef7b7d3c3bb4fb1217e1cf98197a'
 
-  url "https://www.realartists.com/builds/#{version.major_minor}/Ship.app.zip"
-  appcast "https://www.realartists.com/builds/#{version.major_minor}/sparkle.xml",
-          checkpoint: '6289e888d8bf4cd8ace1798d95b0d0105616949d4c2188c0b6ae44ba6558bd39'
+  url "https://www.realartists.com/builds/#{version.major}.0/Ship.app.zip"
+  appcast "https://www.realartists.com/builds/#{version.major}.0/sparkle.xml",
+          checkpoint: '8385ead1633dbbd7e10234c3e1c9efea78827d2d4d516b8868b08bdf6ab84fbf'
   name 'Ship'
   homepage 'https://www.realartists.com/'
 

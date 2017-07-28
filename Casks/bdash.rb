@@ -4,7 +4,7 @@ cask 'bdash' do
 
   url "https://github.com/bdash-app/bdash/releases/download/#{version}/Bdash-#{version}-macOS.zip"
   appcast 'https://github.com/bdash-app/bdash/releases.atom',
-          checkpoint: '3c4c5ff7503686c516a3f1bc16616857bba73ef602aa59cc52c3bea5fcefd8d9'
+          checkpoint: '7ad7fa99e2324187649091259bb13ffd43c203a0ad900115eecc2e4ca2b15779'
   name 'Bdash'
   homepage 'https://github.com/bdash-app/bdash'
 
