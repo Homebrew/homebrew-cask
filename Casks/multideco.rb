@@ -11,9 +11,7 @@ cask 'multideco' do
 
   uninstall pkgutil: 'com.hhssoftware.multideco.MultiDeco.pkg'
 
-  zap delete: [
-                '~/Saved Application State/com.hhssoftware.multideco.savedState',
-              ],
+  zap delete: '~/Saved Application State/com.hhssoftware.multideco.savedState',
       trash:  [
                 '~/Library/Preferences/com.hhssoftware.multideco.plist',
                 '~/Library/MultiDeco',
