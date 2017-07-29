@@ -9,5 +9,5 @@ cask '0ad' do
   name '0 A.D.'
   homepage 'https://play0ad.com/'
 
-  app '0 A.D..app'
+  app '0ad.app'
 end
