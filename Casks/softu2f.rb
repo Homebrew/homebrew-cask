@@ -8,6 +8,8 @@ cask 'softu2f' do
   name 'Soft U2F'
   homepage 'https://github.com/github/SoftU2F'
 
+  depends_on macos: '>= :sierra'
+
   pkg 'SoftU2F.pkg'
 
   uninstall launchctl: 'com.github.SoftU2F',
