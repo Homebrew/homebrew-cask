@@ -1,6 +1,6 @@
 cask 'the-unarchiver' do
-  version :latest
-  sha256 :no_check
+  version '3.11.1'
+  sha256 '12d1af6475149647f996f1b0510e067f057444852f1aa08a8dad75d6debe6ddf'
 
   url 'https://theunarchiver.com/downloads/TheUnarchiver.zip'
   name 'The Unarchiver'
