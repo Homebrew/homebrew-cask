@@ -12,13 +12,20 @@ cask 'viscosity' do
 
   app 'Viscosity.app'
 
+  uninstall delete:     [
+                          '/Library/Application Support/Viscosity',
+                          '/Library/PrivilegedHelperTools/com.sparklabs.ViscosityHelper',
+                        ],
+            launchctl:  'com.sparklabs.ViscosityHelper',
+            login_item: 'Viscosity',
+            signal:     ['TERM', 'com.viscosityvpn.Viscosity']
+
   zap delete: [
-                '/Library/Application Support/Viscosity',
-                '/Library/LaunchDaemons/com.sparklabs.ViscosityHelper.plist',
-                '/Library/PrivilegedHelperTools/com.sparklabs.ViscosityHelper',
-                '~/Library/Application Support/Viscosity',
                 '~/Library/Caches/com.viscosityvpn.Viscosity',
                 '~/Library/Cookies/com.viscosityvpn.Viscosity.binarycookies',
+              ],
+      trash:  [
+                '~/Library/Application Support/Viscosity',
                 '~/Library/Preferences/com.viscosityvpn.Viscosity.plist',
               ]
 end
