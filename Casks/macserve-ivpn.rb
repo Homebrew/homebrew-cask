@@ -1,4 +1,4 @@
-cask 'ivpn' do
+cask 'macserve-ivpn' do
   version '7.4.3'
   sha256 '4c8ed0b22e13ae23c0afd1307c690d9bb60011b5336c6b1eb5a2a42371f3b7e0'
 
