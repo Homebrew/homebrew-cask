@@ -4,7 +4,7 @@ cask 'racket' do
 
   url "https://mirror.racket-lang.org/installers/#{version}/racket-#{version}-x86_64-macosx.dmg"
   appcast 'https://download.racket-lang.org/all-versions.html',
-          checkpoint: '2885b39dc623f041308952f096c37d200f4c7bda10c049b451897de0e5716dbb'
+          checkpoint: 'fd8e1ab40210ae188f13986e6fe4665f8e90563ffc9c20601e6dfb7de3654fad'
   name 'Racket'
   homepage 'https://racket-lang.org/'
 
