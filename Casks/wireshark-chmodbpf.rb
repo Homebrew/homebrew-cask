@@ -53,8 +53,8 @@ cask 'wireshark-chmodbpf' do
                    sudo: true
   end
 
-  uninstall pkgutil: 'org.wireshark.ChmodBPF.pkg',
-            delete:  '/Library/LaunchDaemons/org.wireshark.ChmodBPF.plist'
+  uninstall pkgutil:   'org.wireshark.ChmodBPF.pkg',
+            launchctl: 'org.wireshark.ChmodBPF'
 
   caveats do
     <<-EOS.undent

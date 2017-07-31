@@ -35,22 +35,22 @@ cask 'wireshark' do
                    sudo: true
   end
 
-  uninstall pkgutil: 'org.wireshark.*',
-            delete:  [
-                       '/Library/LaunchDaemons/org.wireshark.ChmodBPF.plist',
-                       '/private/etc/manpaths.d/Wireshark',
-                       '/private/etc/paths.d/Wireshark',
-                       '/usr/local/bin/capinfos',
-                       '/usr/local/bin/dftest',
-                       '/usr/local/bin/dumpcap',
-                       '/usr/local/bin/editcap',
-                       '/usr/local/bin/mergecap',
-                       '/usr/local/bin/randpkt',
-                       '/usr/local/bin/rawshark',
-                       '/usr/local/bin/text2pcap',
-                       '/usr/local/bin/tshark',
-                       '/usr/local/bin/wireshark',
-                     ]
+  uninstall pkgutil:   'org.wireshark.*',
+            launchctl: 'org.wireshark.ChmodBPF',
+            delete:    [
+                         '/private/etc/manpaths.d/Wireshark',
+                         '/private/etc/paths.d/Wireshark',
+                         '/usr/local/bin/capinfos',
+                         '/usr/local/bin/dftest',
+                         '/usr/local/bin/dumpcap',
+                         '/usr/local/bin/editcap',
+                         '/usr/local/bin/mergecap',
+                         '/usr/local/bin/randpkt',
+                         '/usr/local/bin/rawshark',
+                         '/usr/local/bin/text2pcap',
+                         '/usr/local/bin/tshark',
+                         '/usr/local/bin/wireshark',
+                       ]
 
   zap delete: '~/Library/Saved Application State/org.wireshark.Wireshark.savedState'
 end
