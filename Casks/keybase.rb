@@ -17,7 +17,8 @@ cask 'keybase' do
                    args: ["--app-path=#{appdir}/Keybase.app", '--run-mode=prod', '--timeout=10']
   end
 
-  uninstall launchctl:  'keybase.Helper',
+  uninstall delete:     '/Library/PrivilegedHelperTools/keybase.Helper',
+            launchctl:  'keybase.Helper',
             login_item: 'Keybase',
             signal:     [
                           ['TERM', 'keybase.Electron'],
@@ -31,18 +32,15 @@ cask 'keybase' do
                         }
 
   zap delete: [
-                '~/Library/Application Support/Keybase',
                 '~/Library/Caches/Keybase',
                 '~/Library/Group Containers/keybase',
-                '~/Library/Logs/Keybase.app.log',
-                '~/Library/Logs/keybase.kbfs.log',
-                '~/Library/Logs/keybase.service.log',
-                '~/Library/Logs/keybase.start.log',
-                '~/Library/Logs/keybase.updater.log',
-                '~/Library/Preferences/keybase.Electron.plist',
-                '~/Library/Preferences/keybase.ElectronHelper.plist',
-                '/Library/Logs/keybase.system.log',
-                '/Library/PrivilegedHelperTools/keybase.Helper',
+                '~/Library/Logs/Keybase*',
+                '~/Library/Logs/keybase*',
+                '/Library/Logs/keybase*',
+              ],
+      trash:  [
+                '~/Library/Application Support/Keybase',
+                '~/Library/Preferences/keybase*',
               ],
       rmdir:  '/keybase'
 end
