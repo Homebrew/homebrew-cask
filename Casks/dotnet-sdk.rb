@@ -1,14 +1,14 @@
 cask 'dotnet-sdk' do
-  version '1.1.1'
-  sha256 '5b432bc4cf63ea63e8c28a089747feb8a10364e91dae734ca69942ea14188c81'
+  version '1.0.4'
+  sha256 'ec1e1eafad419c86933a5c2c07841a9f4bd65f1145883cad2f95d5028bf70460'
 
-  url "https://download.microsoft.com/download/8/F/9/8F9659B9-E628-4D1A-B6BF-C3004C8C954B/dotnet-#{version}-sdk-osx-x64.pkg"
+  url "https://download.microsoft.com/download/B/9/F/B9F1AF57-C14A-4670-9973-CDF47209B5BF/dotnet-dev-osx-x64.#{version}.pkg"
   name '.Net Core SDK'
   homepage 'https://www.microsoft.com/net/core#macos'
 
   depends_on formula: 'openssl'
 
-  pkg "dotnet-#{version}-sdk-osx-x64.pkg"
+  pkg "dotnet-dev-osx-x64.#{version}.pkg"
 
   # Patch .NET Core to use the latest version of OpenSSL installed via Homebrew.
   # https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md#openssl
