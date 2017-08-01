@@ -1,10 +1,10 @@
 cask 'pycharm-edu' do
-  version '3.5.1,163.15268'
-  sha256 '0b8bbcc5098d5634f5bced50113d50911520410b73be08d374d0a4691c3ed3f6'
+  version '4.0,172.3663'
+  sha256 '18c7222c30292af9a3fa22c9d54a66dc46db65187a3ba4ff9ffbb553f26697f2'
 
   url "https://download.jetbrains.com/python/pycharm-edu-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=PCE&latest=true&type=release',
-          checkpoint: '2537a7ec131b6b6786ec75dc8a2344b75b6181dfed16d5dec0372b41a82f901e'
+          checkpoint: '9c462878e4694156189ae9b30d4e3d47a730d69c4bef9e926577e62862681751'
   name 'Jetbrains PyCharm Educational Edition'
   name 'PyCharm Edu'
   homepage 'https://www.jetbrains.com/pycharm-edu/'
