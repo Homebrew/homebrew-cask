@@ -5,7 +5,7 @@ cask 'postgres' do
   # github.com/PostgresApp/PostgresApp was verified as official when first introduced to the cask
   url "https://github.com/PostgresApp/PostgresApp/releases/download/v#{version}/Postgres-#{version}.dmg"
   appcast 'https://github.com/PostgresApp/PostgresApp/releases.atom',
-          checkpoint: '9cec0b8c51cc023f904ccec9ca04a054d509a63087ce64cff35d819064be1de8'
+          checkpoint: '973c5f61605b955e6923dc970e05dd407316b4a1511c0fff21f79be178f22675'
   name 'Postgres'
   homepage 'https://postgresapp.com/'
 
@@ -13,11 +13,18 @@ cask 'postgres' do
 
   app 'Postgres.app'
 
+  uninstall launchctl: "com.postgresapp.Postgres#{version.major}LoginHelper",
+            quit:      [
+                         "com.postgresapp.Postgres#{version.major}",
+                         "com.postgresapp.Postgres#{version.major}MenuHelper",
+                       ]
+
   zap delete: [
-                '~/Library/Application Support/Postgres',
                 "~/Library/Caches/com.postgresapp.Postgres#{version.major}",
                 "~/Library/Cookies/com.postgresapp.Postgres#{version.major}.binarycookies",
-                "~/Library/LaunchAgents/com.postgresapp.Postgres#{version.major}LoginHelper.plist",
+              ],
+      trash:  [
+                '~/Library/Application Support/Postgres',
                 "~/Library/Preferences/com.postgresapp.Postgres#{version.major}.plist",
               ]
 end
