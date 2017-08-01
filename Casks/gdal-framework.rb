@@ -7,7 +7,7 @@ cask 'gdal-framework' do
   homepage 'http://www.kyngchaos.com/software/frameworks'
 
   pkg 'GDAL Complete.pkg'
-  pkg 'Numpy.pkg'
+  pkg 'NumPy.pkg'
 
   uninstall pkgutil: [
                        'org.maptools.proj-framework-mtlion',
