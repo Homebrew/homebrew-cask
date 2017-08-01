@@ -12,6 +12,20 @@ cask 'softu2f' do
 
   pkg 'SoftU2F.pkg'
 
+  postflight do
+    launchd_plist = "#{ENV['HOME']}/Library/LaunchAgents/com.github.SoftU2F.plist"
+
+    system_command '/bin/launchctl',
+                   args: ['unload', launchd_plist],
+                   sudo: true
+
+    set_ownership('~/Library/LaunchAgents/com.github.SoftU2F.plist')
+
+    system_command '/bin/launchctl',
+                   args: ['load', launchd_plist],
+                   sudo: false
+  end
+
   uninstall launchctl: 'com.github.SoftU2F',
             kext:      'com.github.SoftU2FDriver',
             pkgutil:   'com.GitHub.SoftU2F'
