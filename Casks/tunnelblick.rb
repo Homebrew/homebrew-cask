@@ -5,12 +5,11 @@ cask 'tunnelblick' do
   # github.com/Tunnelblick/Tunnelblick/releases/download was verified as official when first introduced to the cask
   url "https://github.com/Tunnelblick/Tunnelblick/releases/download/v#{version.before_comma}/Tunnelblick_#{version.before_comma}_build_#{version.after_comma}.dmg"
   appcast 'https://github.com/Tunnelblick/Tunnelblick/releases.atom',
-          checkpoint: '0b5246ec04c67e81c3e2205da05bfcfce8de9b9ac345514adc07b67024e10178'
+          checkpoint: '3c9e0b74a61accb3e6188708cbd2738f460531b0e2a616a8cb96cacfd894e1c2'
   name 'Tunnelblick'
   homepage 'https://www.tunnelblick.net/'
 
   auto_updates true
-  depends_on macos: '>= :tiger'
 
   app 'Tunnelblick.app'
 
@@ -18,14 +17,19 @@ cask 'tunnelblick' do
     set_ownership "#{appdir}/Tunnelblick.app"
   end
 
-  uninstall launchctl: 'net.tunnelblick.tunnelblick.LaunchAtLogin',
+  uninstall launchctl: [
+                         'net.tunnelblick.tunnelblick.LaunchAtLogin',
+                         'net.tunnelblick.tunnelblick.tunnelblickd',
+                       ],
             quit:      'net.tunnelblick.tunnelblick'
 
   zap delete: [
-                '~/Library/Application Support/Tunnelblick',
                 '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/net.tunnelblick.tunnelblick.help',
                 '~/Library/Caches/net.tunnelblick.tunnelblick',
-                '~/Library/LaunchAgents/net.tunnelblick.tunnelblick.LaunchAtLogin.plist',
+              ],
+      trash:  [
+                '/Library/Application Support/Tunnelblick',
+                '~/Library/Application Support/Tunnelblick',
                 '~/Library/Preferences/net.tunnelblick.tunnelblick.plist',
               ]
 
