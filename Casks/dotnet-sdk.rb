@@ -16,11 +16,7 @@ cask 'dotnet-sdk' do
     run_times = ['1.0.5', '1.1.2']
     run_times.each do |version|
       dotnet_core = "/usr/local/share/dotnet/shared/Microsoft.NETCore.App/#{version}"
-
-      open_ssl_lib = 'System.Security.Cryptography.Native.dylib'
-      if version == '1.1.2'
-        open_ssl_lib = 'System.Security.Cryptography.Native.OpenSsl.dylib'
-      end
+      open_ssl_lib = version == '1.0.5' ? 'System.Security.Cryptography.Native.dylib' : 'System.Security.Cryptography.Native.OpenSsl.dylib'
 
       system_command '/usr/bin/install_name_tool',
                      args: [
