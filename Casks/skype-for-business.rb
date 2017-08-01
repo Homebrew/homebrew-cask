@@ -8,6 +8,8 @@ cask 'skype-for-business' do
 
   depends_on macos: '>= :el_capitan'
 
+  auto_updates true
+
   pkg "SkypeForBusinessInstaller-#{version}.pkg"
 
   uninstall pkgutil:    [
