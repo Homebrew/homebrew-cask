@@ -12,8 +12,8 @@ cask 'omnigraffle' do
     sha256 '7671d46ccd0b53a5917b0ccba5971fe1f1d7990b2d636f25c941b11b03c6e23c'
     url "http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.10/OmniGraffle-#{version}.dmg"
   else
-    version '7.4'
-    sha256 '6f49be07dab1ad16d6b275e75ba61797f545030795b1e6932cfc53371bdb62db'
+    version '7.4.1'
+    sha256 '20a007d5bf6c5074194a208cdc09b9f8be82d05921f1fd0947d2bc9bff2a67ec'
     url "http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.11/OmniGraffle-#{version}.dmg"
   end
 
