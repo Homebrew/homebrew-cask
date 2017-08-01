@@ -3,7 +3,7 @@ cask 'dotnet-sdk' do
   sha256 'ec1e1eafad419c86933a5c2c07841a9f4bd65f1145883cad2f95d5028bf70460'
 
   url "https://download.microsoft.com/download/B/9/F/B9F1AF57-C14A-4670-9973-CDF47209B5BF/dotnet-dev-osx-x64.#{version}.pkg"
-  name '.NET Core SDK 1.0.4 with .NET Core 1.0.5(LTS) and .NET Core 1.1.2(Current)'
+  name '.NET Core SDK'
   homepage 'https://www.microsoft.com/net/core#macos'
 
   depends_on formula: 'openssl'
