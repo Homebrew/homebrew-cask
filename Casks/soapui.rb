@@ -66,8 +66,9 @@ cask 'soapui' do
 
   uninstall delete: "/Applications/SoapUI-#{version}.app"
 
-  zap delete: [
-                '~/default-soapui-workspace.xml',
-                '~/soapui-settings.xml',
-              ]
+  zap trash: [
+               '~/.soapuios',
+               '~/default-soapui-workspace.xml',
+               '~/soapui-settings.xml',
+             ]
 end
