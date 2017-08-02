@@ -2,7 +2,9 @@ cask 'burp-suite' do
   version '1.7.24'
   sha256 '4edfbf71499ffbaa5baaac04db6eed995537ca39da98928e649e6922abff1f20'
 
-  url "https://portswigger.net/Burp/Releases/Download?productId=100&version=#{version}&type=MacOsx"
+  url "https://portswigger.net/burp/releases/download?product=free&version=#{version}&type=macosx"
+  appcast 'https://portswigger.net/burp/freereleasesarchive',
+          checkpoint: '11a60e0ad23663faae4f0626e99c9bec1bc13c148339c131563987df48c631d1'
   name 'Burp Suite'
   homepage 'https://portswigger.net/burp/'
 
@@ -14,9 +16,5 @@ cask 'burp-suite' do
 
   uninstall delete: '/Applications/Burp Suite Free Edition.app'
 
-  zap delete: '~/.BurpSuite'
-
-  caveats do
-    depends_on_java
-  end
+  zap trash: '~/.BurpSuite'
 end

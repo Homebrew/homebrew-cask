@@ -4,7 +4,7 @@ cask 'corectl-app' do
 
   url "https://github.com/TheNewNormal/corectl.app/releases/download/v#{version}/corectl_v#{version}.dmg"
   appcast 'https://github.com/TheNewNormal/corectl.app/releases.atom',
-          checkpoint: 'a8c59a6b7be6b1dd875acd163e7440dd4d8dbf2d47889efb79a1a93a8a7c161e'
+          checkpoint: 'b00a4524703f6497244e91b895bc71f54f626afeea90c1426c39b988eb807526'
   name 'Corectl'
   homepage 'https://github.com/TheNewNormal/corectl.app'
 

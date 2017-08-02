@@ -4,7 +4,7 @@ cask 'crunch' do
 
   url "https://github.com/chrissimpkins/Crunch/releases/download/v#{version}/Crunch-Installer.dmg"
   appcast 'https://github.com/chrissimpkins/Crunch/releases.atom',
-          checkpoint: 'c025f4a28d7bfd15788ad7ab9e51b63ebf1a790c45c33f09465d9711ce2a47f1'
+          checkpoint: 'c75f897b89e6c810b134c92d933c2307481ca7f72c2600831c2706daf0ed534b'
   name 'Crunch'
   homepage 'https://github.com/chrissimpkins/Crunch'
 

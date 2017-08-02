@@ -6,6 +6,7 @@ cask 'skype-for-business' do
   name 'Skype for Business'
   homepage 'https://www.microsoft.com/en-us/download/details.aspx?id=54108'
 
+  auto_updates true
   depends_on macos: '>= :el_capitan'
 
   pkg "SkypeForBusinessInstaller-#{version}.pkg"

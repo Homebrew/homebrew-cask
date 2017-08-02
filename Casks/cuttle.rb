@@ -4,7 +4,7 @@ cask 'cuttle' do
 
   url "https://github.com/oakmac/cuttle/releases/download/v#{version}/cuttle-v#{version}-mac.dmg"
   appcast 'https://github.com/oakmac/cuttle/releases.atom',
-          checkpoint: '9bcc9cf41d92b6c9470bdeaa80436b98b4016424d73c1f3561890770c36c5908'
+          checkpoint: 'dde2357efd14bbd9c4178d95e3005cbf2801dcf4d3886a492bff2bd9a9e50c1f'
   name 'CUTTLE'
   homepage 'https://github.com/oakmac/cuttle'
 

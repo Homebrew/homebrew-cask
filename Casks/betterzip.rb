@@ -8,6 +8,8 @@ cask 'betterzip' do
   name 'BetterZip'
   homepage 'https://macitbetter.com/'
 
+  auto_updates true
+
   app 'BetterZip.app'
 
   zap delete: '~/Library/Preferences/com.macitbetter.betterzip.plist'
