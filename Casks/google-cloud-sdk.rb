@@ -1,8 +1,8 @@
 cask 'google-cloud-sdk' do
-  version :latest
-  sha256 :no_check
+  version '165.0.0'
+  sha256 'e4ff9f899ae94efecb601feb5b24ca48918317986a5f29200467736ff4132c7a'
 
-  url 'https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz'
+  url "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-#{version}-darwin-x86_64.tar.gz"
   name 'Google Cloud SDK'
   homepage 'https://cloud.google.com/sdk/'
 
