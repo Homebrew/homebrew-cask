@@ -4,7 +4,7 @@ cask 'dictunifier' do
 
   url "https://github.com/jjgod/mac-dictionary-kit/releases/download/v#{version}/DictUnifier-#{version}.zip"
   appcast 'https://github.com/jjgod/mac-dictionary-kit/releases.atom',
-          checkpoint: '4145a3908f8a11155f2e99673f6ec99dd7d6825a052f48278d24554fd873bdb5'
+          checkpoint: '38b274e4f49f088b061cf84546fe403f8d1ca0e6cef025aa2b61426abb64f611'
   name 'DictUnifier'
   homepage 'https://github.com/jjgod/mac-dictionary-kit/'
 
