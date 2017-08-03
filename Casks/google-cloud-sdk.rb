@@ -14,18 +14,11 @@ cask 'google-cloud-sdk' do
   binary 'google-cloud-sdk/bin/gcloud'
   binary 'google-cloud-sdk/bin/git-credential-gcloud.sh', target: 'git-credential-gcloud'
   binary 'google-cloud-sdk/bin/gsutil'
+  artifact 'google-cloud-sdk/completion.bash.inc', target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/google-cloud-sdk-completion.bash"
+  artifact 'google-cloud-sdk/completion.zsh.inc', target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/google-cloud-sdk-completion.zsh"
+  artifact 'google-cloud-sdk/path.bash.inc', target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/google-cloud-sdk-path.bash"
+  artifact 'google-cloud-sdk/path.fish.inc', target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/google-cloud-sdk-path.fish"
+  artifact 'google-cloud-sdk/path.zsh.inc', target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/google-cloud-sdk-path.zsh"
 
   uninstall delete: "#{staged_path}/#{token}" # Not actually necessary, since it would be deleted anyway. It is present to make clear an uninstall was not forgotten and that for this cask it is indeed this simple.
-
-  caveats <<-EOS.undent
-    #{token} is installed at #{staged_path}/#{token}. Add your profile:
-
-      for bash users
-        source '#{staged_path}/#{token}/path.bash.inc'
-        source '#{staged_path}/#{token}/completion.bash.inc'
-
-      for zsh users
-        source '#{staged_path}/#{token}/path.zsh.inc'
-        source '#{staged_path}/#{token}/completion.zsh.inc'
-  EOS
 end
