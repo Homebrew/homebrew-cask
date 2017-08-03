@@ -10,10 +10,12 @@ cask 'charles' do
 
   app 'Charles.app'
 
-  zap delete: [
+  uninstall quit: 'com.xk72.Charles'
+
+  zap delete: '~/Library/Saved Application State/com.xk72.Charles.savedState',
+      trash:  [
                 '~/Library/Application Support/Charles',
                 '~/Library/Preferences/com.xk72.Charles.plist',
                 '~/Library/Preferences/com.xk72.charles.config',
-                '~/Library/Saved Application State/com.xk72.Charles.savedState',
               ]
 end
