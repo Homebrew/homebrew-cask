@@ -11,23 +11,31 @@ cask 'cleanmymac' do
 
   app "CleanMyMac #{version.major}.app"
 
-  uninstall launchctl: [
-                         "com.macpaw.CleanMyMac#{version.major}.Agent",
-                         "com.macpaw.CleanMyMac#{version.major}.Scheduler",
-                       ]
+  uninstall delete:     "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac#{version.major}.Agent",
+            launchctl:  [
+                          "com.macpaw.CleanMyMac#{version.major}.Agent",
+                          "com.macpaw.CleanMyMac#{version.major}.Scheduler",
+                        ],
+            login_item: "CleanMyMac #{version.major} Menu",
+            quit:       [
+                          "com.macpaw.CleanMyMac#{version.major}",
+                          "com.macpaw.CleanMyMac#{version.major}.Menu",
+                        ]
 
   zap delete: [
-                "/Library/LaunchDaemons/com.macpaw.CleanMyMac#{version.major}.Agent.plist",
-                "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac#{version.major}.Agent",
-                "/Users/Shared/CleanMyMac #{version.major}",
                 "/private/var/run/com.macpaw.CleanMyMac#{version.major}.Agent.socket",
                 "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac#{version.major}.sfl",
                 "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac#{version.major}.scheduler.sfl",
+              ],
+      trash:  [
+                "/Users/Shared/CleanMyMac #{version.major}",
+                "/Users/Shared/CleanMyMac #{version.major} Menu",
                 "~/Library/Application Support/CleanMyMac #{version.major}",
                 "~/Library/Application Support/CleanMyMac #{version.major} Menu",
                 "~/Library/Caches/CleanMyMac #{version.major}",
                 "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.macpaw.CleanMyMac#{version.major}.help",
                 "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}",
+                "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}.KnowledgeBase",
                 "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}.Menu",
                 "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}.Scheduler",
                 "~/Library/Logs/CleanMyMac #{version.major}.log",
