@@ -1,5 +1,4 @@
 cask 'panoply' do
-  # https://www.giss.nasa.gov/tools/panoply/download/
   version '4.8.2'
   sha256 'f08f3593961c49133bd9562bb240b6bfa89d4ebd0d16f86df612974be38fbdb4'
 
