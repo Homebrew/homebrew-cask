@@ -10,7 +10,7 @@ cask 'rider' do
 
   auto_updates true
 
-  app "Rider #{version.major_minor} RC.app"
+  app "Rider #{version.major_minor}.app"
 
   uninstall delete: ENV['PATH'].split(File::PATH_SEPARATOR).map { |p| "#{p}/rider" }.select { |f| File.exist?(f) }
 
