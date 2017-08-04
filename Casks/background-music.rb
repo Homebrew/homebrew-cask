@@ -8,12 +8,12 @@ cask 'background-music' do
   name 'Background Music'
   homepage 'https://github.com/kyleneideck/BackgroundMusic'
 
+  depends_on macos: '>= 10.10'
+
   pkg "BackgroundMusic-#{version}.pkg"
 
-  uninstall quit:    'com.bearisdriving.BGM.App',
-
-            pkgutil: [
-                       'com.bearisdriving.BGM',
-                       'com.bearisdriving.BGM.XPCHelper',
-                     ]
+  uninstall launchctl: 'com.bearisdriving.BGM.XPCHelper',
+            pkgutil:   'com.bearisdriving.BGM',
+            quit:      'com.bearisdriving.BGM.App',
+            script:    '/Applications/Background Music.app/Contents/Resources/_uninstall-non-interactive.sh'
 end
