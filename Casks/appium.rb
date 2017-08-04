@@ -5,14 +5,15 @@ cask 'appium' do
   # github.com/appium/appium-desktop was verified as official when first introduced to the cask.
   url "https://github.com/appium/appium-desktop/releases/download/v#{version}/appium-desktop-#{version}-mac.zip"
   appcast 'https://github.com/appium/appium-desktop/releases.atom',
-          checkpoint: '4a922036bab3fa4e403d263bcee9ae57775a5af44fc83adadd462beff75e3bc1'
-  name 'Appium'
+          checkpoint: '7d0ddbc3fae9396cb02d4cea56dead044c1055b9f09c5f061275f8be922f8fb3'
   name 'Appium Desktop'
   homepage 'https://appium.io/'
 
   app 'Appium.app'
 
-  zap delete: [
+  zap delete: '~/Library/Saved Application State/io.appium.desktop.savedState',
+      trash:  [
+                '~/Library/Application Support/appium-desktop',
                 '~/Library/Preferences/io.appium.desktop.helper.plist',
                 '~/Library/Preferences/io.appium.desktop.plist',
               ]
