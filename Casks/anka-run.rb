@@ -12,11 +12,15 @@ cask 'anka-run' do
 
   pkg "AnkaRun-#{version}.pkg"
 
-  uninstall script: {
-                      executable: '/Library/Application Support/Veertu/Anka/tools/uninstall.sh',
-                      args:       ['-f'],
-                      sudo:       true,
-                    }
+  uninstall launchctl: [
+                         'com.veertu.nlimit',
+                         'com.veertu.vlaunch',
+                       ],
+            script:    {
+                         executable: '/Library/Application Support/Veertu/Anka/tools/uninstall.sh',
+                         args:       ['-f'],
+                         sudo:       true,
+                       }
 
   zap delete: [
                 '~/.anka',
