@@ -5,7 +5,7 @@ cask 'dockstation' do
   # github.com/DockStation/dockstation was verified as official when first introduced to the cask
   url "https://github.com/DockStation/dockstation/releases/download/v#{version}/dockstation-#{version}.dmg"
   appcast 'https://github.com/DockStation/dockstation/releases.atom',
-          checkpoint: '1e36b6544959b5c78cb89ee996a601d72992f4beab91640552fa155163fba6cd'
+          checkpoint: '5e48f61d0e862dab3df692d9fb9023d8707e36018b52a6713fa9a7a1450e3b50'
   name 'DockStation'
   homepage 'https://dockstation.io/'
 
