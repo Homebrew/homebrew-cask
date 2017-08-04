@@ -6,9 +6,11 @@ cask 'staraccess' do
   name 'Star Access'
   homepage 'https://my.ukrsibbank.com/en/personal/'
 
-  depends_on cask: 'java'
-
   app 'StarAccess.app'
 
   zap trash: '~/.iBank2'
+
+  caveats do
+    depends_on_java('6+')
+  end
 end
