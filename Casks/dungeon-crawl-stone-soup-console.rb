@@ -4,7 +4,7 @@ cask 'dungeon-crawl-stone-soup-console' do
 
   url "https://crawl.develz.org/release/#{version.major_minor}/stone_soup-#{version}-console-macosx.zip"
   appcast 'https://github.com/crawl/crawl/releases.atom',
-          checkpoint: '3c14c15c6218ff47d09578610b247ebcf514d3071a3a1b913fe0d1a2bd99cb73'
+          checkpoint: '957a105056d323391f7fb641d3b2443f87b02ec3fcc92eb15e3382bfac2a042c'
   name 'Dungeon Crawl Stone Soup'
   homepage 'https://crawl.develz.org/'
 
