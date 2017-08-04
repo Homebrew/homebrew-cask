@@ -1,11 +1,11 @@
 cask 'doomsday-engine' do
-  version '2.0.2'
-  sha256 'dfd6e8a0399bc5a1a828b43254160c5523edbe74077fd0668b9f3bc6637be45a'
+  version '2.0.3'
+  sha256 '8dd5fb6a780f5d53918b5bb96af95cc69041387c34f070a00196604f52539018'
 
   # sourceforge.net/deng was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/deng/doomsday_#{version}_x86_64.dmg"
   appcast 'https://sourceforge.net/projects/deng/rss',
-          checkpoint: 'fe367d8acb08fbcc5357afd28de2536c94d8fb5b2127355c2e2ee60d5c463a8b'
+          checkpoint: 'db1e7243b5c785310d09237ecd00547f5fc99878db982ad1f341f8e4b1266be7'
   name 'Doomsday Engine'
   homepage 'https://dengine.net/'
 
