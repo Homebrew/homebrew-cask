@@ -1,4 +1,4 @@
-cask 'appium-desktop' do
+cask 'appium' do
   version '1.1.1'
   sha256 'bdb212c3e71b47e0c36ed246cb3bc10e704cc50c3f87de0447cc111be317e7b2'
 
