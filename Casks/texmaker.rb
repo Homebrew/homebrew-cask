@@ -1,6 +1,6 @@
 cask 'texmaker' do
   version '5.0.1'
-  sha256 'a8e17a3d9c46b97184e939add09b856f4afcfe5f6941c5ccd7a7656ccc583585'
+  sha256 '6ad92da13d2c895621ee6a82f5d6afb0dd4a12d65add2934d85a602175638535'
 
   url "http://www.xm1math.net/texmaker/assets/files/texmaker-#{version}.dmg"
   appcast 'http://www.xm1math.net/texmaker/log.html',
