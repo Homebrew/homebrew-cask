@@ -10,4 +10,10 @@ cask 'dogecoin' do
   homepage 'http://dogecoin.com/'
 
   app 'Dogecoin-Qt.app'
+
+  preflight do
+    set_permissions "#{staged_path}/Dogecoin-Qt.app", '0755'
+  end
+
+  zap delete: '~/Library/com.dogecoin.Dogecoin-Qt.plist'
 end
