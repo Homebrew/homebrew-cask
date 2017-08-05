@@ -1,32 +1,37 @@
 cask 'dotnet-sdk' do
-  version '1.1.1'
-  sha256 '5b432bc4cf63ea63e8c28a089747feb8a10364e91dae734ca69942ea14188c81'
+  version '1.0.4'
+  sha256 'ec1e1eafad419c86933a5c2c07841a9f4bd65f1145883cad2f95d5028bf70460'
 
-  url "https://download.microsoft.com/download/8/F/9/8F9659B9-E628-4D1A-B6BF-C3004C8C954B/dotnet-#{version}-sdk-osx-x64.pkg"
-  name '.Net Core SDK'
+  url "https://download.microsoft.com/download/B/9/F/B9F1AF57-C14A-4670-9973-CDF47209B5BF/dotnet-dev-osx-x64.#{version}.pkg"
+  name '.NET Core SDK'
   homepage 'https://www.microsoft.com/net/core#macos'
 
   depends_on formula: 'openssl'
 
-  pkg "dotnet-#{version}-sdk-osx-x64.pkg"
+  pkg "dotnet-dev-osx-x64.#{version}.pkg"
 
   # Patch .NET Core to use the latest version of OpenSSL installed via Homebrew.
   # https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md#openssl
   postflight do
-    dotnet_core = "/usr/local/share/dotnet/shared/Microsoft.NETCore.App/#{version}"
-    system_command '/usr/bin/install_name_tool',
-                   args: [
-                           "#{dotnet_core}/System.Security.Cryptography.Native.OpenSsl.dylib",
-                           '-add_rpath', "#{HOMEBREW_PREFIX}/opt/openssl/lib"
-                         ],
-                   sudo: true
-    system_command '/usr/bin/install_name_tool',
-                   args: [
-                           "#{dotnet_core}/System.Net.Http.Native.dylib",
-                           '-change', '/usr/lib/libcurl.4.dylib',
-                           "#{HOMEBREW_PREFIX}/opt/curl/lib/libcurl.4.dylib"
-                         ],
-                   sudo: true
+    run_times = ['1.0.5', '1.1.2']
+    run_times.each do |version|
+      dotnet_core = "/usr/local/share/dotnet/shared/Microsoft.NETCore.App/#{version}"
+      open_ssl_lib = version == '1.0.5' ? 'System.Security.Cryptography.Native.dylib' : 'System.Security.Cryptography.Native.OpenSsl.dylib'
+
+      system_command '/usr/bin/install_name_tool',
+                     args: [
+                             "#{dotnet_core}/#{open_ssl_lib}",
+                             '-add_rpath', "#{HOMEBREW_PREFIX}/opt/openssl/lib"
+                           ],
+                     sudo: true
+      system_command '/usr/bin/install_name_tool',
+                     args: [
+                             "#{dotnet_core}/System.Net.Http.Native.dylib",
+                             '-change', '/usr/lib/libcurl.4.dylib',
+                             "#{HOMEBREW_PREFIX}/opt/curl/lib/libcurl.4.dylib"
+                           ],
+                     sudo: true
+    end
   end
 
   uninstall pkgutil: 'com.microsoft.dotnet.*',
