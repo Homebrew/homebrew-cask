@@ -15,13 +15,15 @@ cask 'gogland' do
   app "Gogland #{version.before_comma}.app"
 
   uninstall_postflight do
-    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'Gogland') }.each { |path| File.delete(path) if File.exist?(path) }
+    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'Gogland') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }
   end
 
   zap delete: [
-                "~/Library/Preferences/Gogland#{version.major_minor}",
-                "~/Library/Application Support/Gogland#{version.major_minor}",
                 "~/Library/Caches/Gogland#{version.major_minor}",
                 "~/Library/Logs/Gogland#{version.major_minor}",
+              ],
+      trash:  [
+                "~/Library/Preferences/Gogland#{version.major_minor}",
+                "~/Library/Application Support/Gogland#{version.major_minor}",
               ]
 end
