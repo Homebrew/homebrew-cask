@@ -1,8 +1,9 @@
 cask 'todometer' do
-  version :latest
-  sha256 :no_check
+  version '1.0.4'
+  sha256 '49a744d996cfa925b50064f1853f8bf1372a3073f449a482f7896ccc5ca15d48'
 
-  url 'https://cassidoo.github.io/todometer/release-builds/install-todometer.dmg'
+  # github.com/cassidoo/todometer was verified as official when first introduced to the cask
+  url 'https://github.com/cassidoo/todometer/releases/download/v1.0.4/install-todometer.dmg'
   name 'todometer'
   homepage 'https://cassidoo.github.io/todometer/'
 
