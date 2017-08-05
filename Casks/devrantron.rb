@@ -11,8 +11,16 @@ cask 'devrantron' do
 
   app 'devRantron.app'
 
-  zap delete: [
+  uninstall login_item: 'devRantron',
+            signal:     [
+                          ['TERM', 'de.zerotask.theclassic'],
+                          ['TERM', 'de.zerotask.theclassic.helper'],
+                        ]
+
+  zap delete: '~/Library/Saved Application State/de.zerotask.theclassic.savedState',
+      trash:  [
                 '~/Library/Application Support/devrantron',
-                '~/Library/Saved Application State/de.zerotask.theclassic.savedState',
+                '~/Library/Preferences/de.zerotask.theclassic.helper.plist',
+                '~/Library/Preferences/de.zerotask.theclassic.plist',
               ]
 end
