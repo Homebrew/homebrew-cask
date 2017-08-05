@@ -7,5 +7,6 @@ cask 'jedit-x' do
   name 'Jedit X'
   homepage 'http://www.artman21.com/en/jedit_x/'
 
+  suite 'Jedit X Folder'
   app 'Jedit X.app'
 end
