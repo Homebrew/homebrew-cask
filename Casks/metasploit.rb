@@ -26,11 +26,12 @@ cask 'metasploit' do
   binary '/opt/metasploit-framework/bin/msfupdate'
   binary '/opt/metasploit-framework/bin/msfvenom'
 
-  uninstall_preflight do
-    system_command '/bin/rm',
-                   args: ['-rf', '/opt/metasploit-framework'],
-                   sudo: true
-  end
+  uninstall script: {
+                      executable: '/opt/metasploit-framework/bin/msfremove',
+                      input:      ['y'],
+                      sudo:       true,
+                    },
+            rmdir:  '/opt/metasploit-framework'
 
-  uninstall pkgutil: '.*metasploit.*'
+  zap trash: '~/.msf4'
 end
