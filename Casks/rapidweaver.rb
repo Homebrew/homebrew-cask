@@ -9,7 +9,7 @@ cask 'rapidweaver' do
   name 'RapidWeaver'
   homepage 'https://www.realmacsoftware.com/rapidweaver/'
 
-  depends_on macos: '>= :leopard'
+  depends_on macos: '>= :sierra'
 
   app "RapidWeaver #{version.major}.app"
 end
