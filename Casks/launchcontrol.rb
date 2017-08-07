@@ -7,7 +7,7 @@ cask 'launchcontrol' do
           checkpoint: 'b8c7a5ff5248ef2801bf7d15f77bb96cd99065e5a8ddabb9003e497a386acd48'
   name 'LaunchControl'
   homepage 'http://www.soma-zone.com/LaunchControl/'
-  
+
   auto_updates true
 
   app 'LaunchControl.app'
