@@ -7,6 +7,8 @@ cask 'adium' do
           checkpoint: 'bd77f84e4dba32a3337f79e6a7bb3e5678750f79248c048d3cf7661634c94028'
   name 'Adium'
   homepage 'https://www.adium.im/'
+  
+  auto_updates true
 
   app 'Adium.app'
 
