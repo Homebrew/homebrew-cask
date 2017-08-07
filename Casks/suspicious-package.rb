@@ -9,7 +9,7 @@ cask 'suspicious-package' do
   homepage 'http://www.mothersruin.com/software/SuspiciousPackage/'
 
   auto_updates true
-  
+
   app 'Suspicious Package.app'
 
   zap delete: [
