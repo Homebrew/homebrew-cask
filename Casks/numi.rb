@@ -9,5 +9,7 @@ cask 'numi' do
   name 'Numi'
   homepage 'https://numi.io/'
 
+  auto_updates true
+
   app 'Numi.app'
 end
