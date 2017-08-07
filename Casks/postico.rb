@@ -1,6 +1,6 @@
 cask 'postico' do
-  version '1.2'
-  sha256 'f2dbeeb6245bfc144af85929a698a1abed755955dd9a2bb899efe7c1b1eb43fa'
+  version '1.2.2'
+  sha256 '6bae5e169ddf91af762be0ace4e8a9695c0b52ca5285c1cb330e287d29234404'
 
   # amazonaws.com/eggerapps-downloads was verified as official when first introduced to the cask
   url "https://s3-eu-west-1.amazonaws.com/eggerapps-downloads/postico-#{version}.zip"
