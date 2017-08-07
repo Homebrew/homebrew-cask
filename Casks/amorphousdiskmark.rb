@@ -8,8 +8,6 @@ cask 'amorphousdiskmark' do
 
   app 'AmorphousDiskMark.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.katsurashareware.AmorphousDiskMark.plist',
-                '~/Library/Saved Application State/com.katsurashareware.AmorphousDiskMark.savedState',
-              ]
+  zap delete: '~/Library/Saved Application State/com.katsurashareware.AmorphousDiskMark.savedState',
+      trash:  '~/Library/Preferences/com.katsurashareware.AmorphousDiskMark.plist'
 end
