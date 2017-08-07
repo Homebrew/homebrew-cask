@@ -19,6 +19,13 @@ cask 'microsoft-office' do
                          'com.microsoft.autoupdate.helpertool',
                          'com.microsoft.office.licensing.helper',
                          'com.microsoft.office.licensingV2.helper',
+                       ],
+            delete:    [
+                         '/Applications/Microsoft Excel.app',
+                         '/Applications/Microsoft OneNote.app',
+                         '/Applications/Microsoft Outlook.app',
+                         '/Applications/Microsoft PowerPoint.app',
+                         '/Applications/Microsoft Word.app',
                        ]
 
   zap       delete: [
