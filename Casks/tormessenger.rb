@@ -5,6 +5,8 @@ cask 'tormessenger' do
   url "https://dist.torproject.org/tormessenger/#{version}/TorMessenger-#{version}-osx64_en-US.dmg"
   name 'Tor Messenger'
   homepage 'https://trac.torproject.org/projects/tor/wiki/doc/TorMessenger'
+  
+  auto_updates true
 
   app 'TorMessenger.app'
 end
