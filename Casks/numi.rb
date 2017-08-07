@@ -8,6 +8,8 @@ cask 'numi' do
           checkpoint: '0628e73a0ef4fbfc4564fa6408358eadca3a724266ee26e5969d36488aebe953'
   name 'Numi'
   homepage 'https://numi.io/'
+  
+  auto_updates true
 
   app 'Numi.app'
 end
