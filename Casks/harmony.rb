@@ -11,10 +11,16 @@ cask 'harmony' do
 
   app 'Harmony.app'
 
-  zap delete: [
+  uninstall signal: [
+                      ['TERM', 'com.vincelwt.harmony'],
+                      ['TERM', 'com.vincelwt.harmony.helper'],
+                    ]
+
+  zap delete: '~/Library/Saved Application State/com.vincelwt.harmony.savedState',
+      trash:  [
+                '~/.config/configstore/harmony.json',
                 '~/Library/Application Support/Harmony',
                 '~/Library/Preferences/com.vincelwt.harmony.helper.plist',
                 '~/Library/Preferences/com.vincelwt.harmony.plist',
-                '~/Library/Saved Application State/com.vincelwt.harmony.savedState',
               ]
 end
