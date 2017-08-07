@@ -11,7 +11,8 @@ cask 'google-photos-backup-and-sync' do
 
   app 'Backup and Sync.app'
 
-  uninstall quit: 'com.google.GoogleDrive'
+  uninstall login_item: 'Backup and sync from Google',
+            quit:       'com.google.GoogleDrive'
 
   zap delete: [
                 '~/Library/Application Scripts/com.google.GoogleDrive.FinderSyncAPIExtension',
