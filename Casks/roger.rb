@@ -2,7 +2,8 @@ cask 'roger' do
   version :latest
   sha256 :no_check
 
-  url 'http://api.useroger.com/download'
+  # s3.amazonaws.com/placepixel-images/_walkietalkie_ was verified as official when first introduced to the cask
+  url 'https://s3.amazonaws.com/placepixel-images/_walkietalkie_/last/Roger.dmg'
   name 'Roger'
   homepage 'http://www.useroger.com/'
 
