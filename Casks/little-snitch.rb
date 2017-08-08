@@ -1,3 +1,4 @@
+# Typically change version, sha256 and checkpoint
 cask 'little-snitch' do
   version '4.0.2'
   sha256 'e83c33f26f4e963b47315614f2094a5d46d96aacf5bb3983b4e786e98fa76fad'
