@@ -4,7 +4,7 @@ cask 'm64py' do
 
   url "https://downloads.sourceforge.net/m64py/m64py-#{version}/m64py-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/m64py/rss',
-  		  checkpoint: '44efb9f2bad589140f378dd995a455e75ede699ecf0163252c9c44ffb407f3c9'
+          checkpoint: '44efb9f2bad589140f378dd995a455e75ede699ecf0163252c9c44ffb407f3c9'
   name 'm64py'
   homepage 'http://m64py.sourceforge.net/'
 
