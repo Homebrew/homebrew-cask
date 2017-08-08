@@ -8,9 +8,8 @@ After making all changes to the cask:
 
 Additionally, if **updating a cask**:
 
-
-- [ ] `sha256` changed but `version` stayed the same ([what is this?][version-checksum]).  
-      I’m providing public confirmation below.
+- [ ] If the `sha256` changed but the `version` didn’t,  
+      provide public confirmation ([How?][version-checksum]): {{link}}
 
 Additionally, if **adding a new cask**:
 
