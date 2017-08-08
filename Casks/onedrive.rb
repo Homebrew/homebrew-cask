@@ -7,6 +7,8 @@ cask 'onedrive' do
   name 'OneDrive'
   homepage 'https://onedrive.live.com/'
 
+  auto_updates true
+
   pkg 'OneDrive.pkg'
 
   uninstall delete:    '/Applications/OneDrive.app',

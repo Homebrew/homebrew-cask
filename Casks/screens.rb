@@ -1,11 +1,11 @@
 cask 'screens' do
-  version '4.1.2,8274'
-  sha256 '5961f2a7abe8e87c656dc81f527008388dacff38ebbe0a7fe6fbbb988803836a'
+  version '4.1.3,8310'
+  sha256 'ea6caa792239092207142f6de8bd66f96ff343310dc7f5f857793f717d11a81d'
 
   # dl.devmate.com was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.edovia.screens4.mac/Screens#{version.major}.dmg"
   appcast "https://updates.devmate.com/com.edovia.screens#{version.major}.mac.xml",
-          checkpoint: '4b46773e72ae1327bba0600d48c05fe544d427a873a41ec9c27e2b81bc7b9593'
+          checkpoint: '938b34eb8e0b89fa9eae7ab3c159d2a40856ca8f76a4975d867711d0f1e93164'
   name 'Screens'
   homepage 'https://edovia.com/screens-mac/'
 

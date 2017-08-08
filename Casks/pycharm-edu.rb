@@ -14,13 +14,15 @@ cask 'pycharm-edu' do
   app 'PyCharm Edu.app'
 
   uninstall_postflight do
-    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'charm') }.each { |path| File.delete(path) if File.exist?(path) }
+    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'charm') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }
   end
 
   zap delete: [
-                "~/Library/Preferences/PyCharmEdu#{version.major_minor.no_dots}",
-                "~/Library/Application Support/PyCharmEdu#{version.major_minor.no_dots}",
                 "~/Library/Caches/PyCharmEdu#{version.major_minor.no_dots}",
                 "~/Library/Logs/PyCharmEdu#{version.major_minor.no_dots}",
+              ],
+      trash:  [
+                "~/Library/Application Support/PyCharmEdu#{version.major_minor.no_dots}",
+                "~/Library/Preferences/PyCharmEdu#{version.major_minor.no_dots}",
               ]
 end

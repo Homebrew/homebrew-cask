@@ -4,7 +4,7 @@ cask 'earthcoin' do
 
   url "https://github.com/earthcoinproject/earthcoin/releases/download/v#{version}/EarthCoin-Qt-#{version}.dmg"
   appcast 'https://github.com/earthcoinproject/earthcoin/releases.atom',
-          checkpoint: 'c6a519dbfd324fdb63513e876e5e2ee54f07eb29a19607de911ca77af7f228e7'
+          checkpoint: '36f87000b43580758a9c417da9ccae96cde40c6a0450c9df4d2620b87166f4e0'
   name 'Earthcoin'
   homepage 'https://github.com/earthcoinproject/earthcoin'
 

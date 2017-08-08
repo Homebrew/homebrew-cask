@@ -14,15 +14,17 @@ cask 'intellij-idea-ce' do
   app 'IntelliJ IDEA CE.app'
 
   uninstall_postflight do
-    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'idea') }.each { |path| File.delete(path) if File.exist?(path) }
+    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'idea') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }
   end
 
   zap delete: [
-                "~/Library/Application Support/IdeaIC#{version.major_minor}",
-                "~/Library/Preferences/IdeaIC#{version.major_minor}",
                 "~/Library/Caches/IdeaIC#{version.major_minor}",
                 "~/Library/Logs/IdeaIC#{version.major_minor}",
-                '~/Library/Preferences/com.jetbrains.intellij.ce.plist',
                 '~/Library/Saved Application State/com.jetbrains.intellij.ce.savedState',
+              ],
+      trash:  [
+                "~/Library/Application Support/IdeaIC#{version.major_minor}",
+                "~/Library/Preferences/IdeaIC#{version.major_minor}",
+                '~/Library/Preferences/com.jetbrains.intellij.ce.plist',
               ]
 end
