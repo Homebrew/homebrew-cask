@@ -62,5 +62,7 @@ cask 'jce-unlimited-strength-policy' do
   caveats <<-EOS.undent
     Installing this Cask means you have AGREED to the Oracle Binary Code License Agreement for Java SE at
       https://www.oracle.com/technetwork/java/javase/terms/license/index.html
+
+    #{token} will be uninstalled when the Java Cask is uninstalled or reinstalled
   EOS
 end
