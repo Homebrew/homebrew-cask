@@ -7,6 +7,8 @@ cask 'istat-menus' do
   name 'iStats Menus'
   homepage 'https://bjango.com/mac/istatmenus/'
 
+  auto_updates true
+
   app 'iStat Menus.app'
 
   uninstall delete:    "/Library/Application Support/iStat Menus #{version.major}",
