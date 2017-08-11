@@ -45,6 +45,16 @@ cask 'java' do
     end
   end
 
+  uninstall_preflight do
+    if File.exist?("#{HOMEBREW_PREFIX}/Caskroom/java-jdk-javadoc")
+      system_command 'brew', args: ['cask', 'uninstall', 'java-jdk-javadoc']
+    end
+
+    if File.exist?("#{HOMEBREW_PREFIX}/Caskroom/jce-unlimited-strength-policy")
+      system_command 'brew', args: ['cask', 'uninstall', 'jce-unlimited-strength-policy']
+    end
+  end
+
   uninstall pkgutil:   [
                          "com.oracle.jdk#{version.minor}u#{java_update}",
                          'com.oracle.jre',
