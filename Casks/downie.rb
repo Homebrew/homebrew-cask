@@ -1,5 +1,5 @@
 cask 'downie' do
-  version '2.9.7,1517'
+  version '2.9.8,1517'
   sha256 'e354ffb5d7f8cbb14f77d2d3a204e0cce50ef44d98a6a15fae89faa23017bbc9'
 
   url "https://trial.charliemonroe.net/downie/Downie_#{version.after_comma}.zip"
