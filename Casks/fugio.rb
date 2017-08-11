@@ -15,7 +15,7 @@ cask 'fugio' do
                         'portaudio',
                         'portmidi',
                         'snappy',
-                        'opencv',
+                        'homebrew/science/opencv3',
                       ]
 
   suite 'Fugio'
