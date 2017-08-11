@@ -1,8 +1,11 @@
 cask 'itk-snap' do
-  version '3.4.0'
-  sha256 'f1b6d98db85e2f727402860baf6a7f9ff39e53aa4d27bc187ecf863cc5b86d59'
+  version '3.6.0-20170401'
+  sha256 '865e54fc3c872bf1815dd0535dd232a195844eac7016186e3327587555dceda6'
 
-  url 'http://www.nitrc.org/frs/downloadlink.php/7960'
+  # downloads.sourceforge.net/itk-snap was verified as official when first introduced to the cask
+  url "https://downloads.sourceforge.net/itk-snap/itksnap-#{version}-MacOS-x86_64.dmg"
+  appcast "https://sourceforge.net/projects/itk-snap/rss?path=/itk-snap/#{version.major_minor_patch}",
+          checkpoint: 'cbcb8043f900839c85287548d79ba588f88a1b7756cea163ef901f2671bff3b9'
   name 'ITK-SNAP'
   homepage 'http://www.itksnap.org/'
 
