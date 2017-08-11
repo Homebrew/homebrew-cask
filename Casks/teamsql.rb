@@ -10,4 +10,17 @@ cask 'teamsql' do
   homepage 'https://teamsql.io/'
 
   app 'TeamSQL.app'
+
+  zap delete: [
+                '/private/var/db/BootCaches/*/app.io.teamsql.desktop.playlist',
+                '/private/var/folders/*/*/C/io.teamsql.desktop',
+                '/private/var/folders/*/*/T/io.teamsql.desktop*',
+                '~/Caches/io.teamsql.desktop*',
+                '~/Library/Application Support/TeamSQL',
+                '~/Library/Caches/io.teamsql.desktop*',
+                '~/Library/Cookies/io.teamsql.desktop.binarycookies',
+                '~/Library/Preferences/ByHost/io.teamsql.desktop*',
+                '~/Library/Preferences/io.teamsql.desktop*',
+                '~/Library/Saved Application State/io.teamsql.desktop.savedState',
+              ]
 end
