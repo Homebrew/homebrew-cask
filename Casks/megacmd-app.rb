@@ -9,7 +9,7 @@ cask 'megacmd-app' do
   app 'MEGAcmd.app'
   binary "#{appdir}/MEGAcmd.app/Contents/MacOS/MEGAcmdLoader", target: 'megacmd'
 
-  zap trash: '~.megaCmd'
+  zap trash: '~/.megaCmd'
 
   caveats <<-EOS.undent
     #{token} only works if called from /Applications, so you may need to install it with
