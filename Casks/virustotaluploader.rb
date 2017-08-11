@@ -7,4 +7,7 @@ cask 'virustotaluploader' do
   homepage 'https://www.virustotal.com/'
 
   app 'VirusTotalUploader.app'
+
+  zap delete: '~/Library/Saved Application State/com.virustotal.VirusTotalUploader.savedState',
+      trash:  '~/Library/Preferences/com.virustotal.VirusTotal Uploader.plist'
 end
