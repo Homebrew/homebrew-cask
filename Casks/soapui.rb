@@ -46,5 +46,29 @@ cask 'soapui' do
                                   ],
                     }
 
+  postflight do
+    "/Applications/SoapUI-#{version}.app/Contents/vmoptions.txt".tap do |file|
+      break unless File.exist? file
+      # Does it already exist in the file?
+      break if File.read(file) =~ %r{^\s*-Dsoapui\.browser\.disabled=true(?:\s+.*)?$}i
+
+      File.open(file, 'a') { |f| f.puts '-Dsoapui.browser.disabled=true' }
+    end
+
+    "/Applications/SoapUI-#{version}.app/Contents/java/app/bin/soapui.sh".tap do |file|
+      break unless File.exist? file
+      # Does it already exist in the file?
+      break if File.read(file) =~ %r{^(?<!#)JAVA_OPTS=".+-Dsoapui\.browser\.disabled=true(?:\s.*)?"(?:\s+.*)?$}i
+
+      system %Q{sed -i'' -e 's/#.*\\(JAVA_OPTS=".*-Dsoapui\\.browser\\.disabled=true".*\\)$/\\1/g' "#{file}" 1>/dev/null}
+    end
+  end
+
   uninstall delete: "/Applications/SoapUI-#{version}.app"
+
+  zap trash: [
+               '~/.soapuios',
+               '~/default-soapui-workspace.xml',
+               '~/soapui-settings.xml',
+             ]
 end
