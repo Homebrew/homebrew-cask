@@ -9,4 +9,10 @@ cask 'aria2gui' do
   homepage 'https://github.com/yangshun1029/aria2gui'
 
   app 'Aria2GUI.app'
+
+  zap delete: [
+                '~/Library/Caches/com.Aria2GUI',
+                '~/Library/Saved Application State/com.Aria2GUI.savedState',
+              ],
+      trash:  '~/Library/Preferences/com.Aria2GUI.plist'
 end
