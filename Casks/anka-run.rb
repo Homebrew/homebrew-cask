@@ -1,12 +1,12 @@
 cask 'anka-run' do
-  version '1.0_41'
-  sha256 'e1d820a93785d26ff34b46e9aaf53315f9586554e5c50076f8a3b30168df8bd6'
+  version '1.0.47'
+  sha256 '3e5d469f60756c9d4f62525459ee5f628ea6b053a6b8d69157ff966d837ff120'
 
   # d1efqjhnhbvc57.cloudfront.net was verified as official when first introduced to the cask
   url "https://d1efqjhnhbvc57.cloudfront.net/AnkaRun-#{version}.pkg",
       referer: 'https://veertu.com/download-anka-run/'
   appcast 'https://ankadoc.bitbucket.io/release-notes/index.html',
-          checkpoint: '4a79fa8cf76c46a8bc86fc2f09d5fb60da10b4aab9c467178bc22024c4b9b961'
+          checkpoint: '6d50548a07e71d0a5e76211710715fb8b8611d45872e0af3cfb7a3996e547541'
   name 'Veertu Anka Run'
   homepage 'https://veertu.com/'
 
