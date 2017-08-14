@@ -1,6 +1,6 @@
 cask 'sauce-connect' do
-  version '4.4.8'
-  sha256 'efd6aee54d7ab7e677d813876166b26a7d51161dc81a4f4e5b7899864f671339'
+  version '4.4.9'
+  sha256 'c88731ffe03c1f0c7ff98e0036a467ea5bce1ff757b27b31c85d6e6e219cdfc5'
 
   url "https://saucelabs.com/downloads/sc-#{version}-osx.zip"
   name 'Sauce Connect'

@@ -11,9 +11,14 @@ cask 'dripcap' do
 
   app 'Dripcap.app'
 
-  uninstall launchctl: 'org.dripcap.DripcapHelper',
-            delete:    [
-                         '/Library/LaunchDaemons/org.dripcap.DripcapHelper.plist',
-                         '/Library/PrivilegedHelperTools/org.dripcap.DripcapHelper',
-                       ]
+  uninstall delete:    '/Library/PrivilegedHelperTools/org.dripcap.DripcapHelper',
+            launchctl: 'org.dripcap.DripcapHelper'
+
+  zap delete: '~/Library/Saved Application State/com.electron.dripcap.savedState',
+      trash:  [
+                '~/.dripcap',
+                '~/Library/Application Support/Dripcap',
+                '~/Library/Preferences/com.electron.dripcap.helper.plist',
+                '~/Library/Preferences/com.electron.dripcap.plist',
+              ]
 end

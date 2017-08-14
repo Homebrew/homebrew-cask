@@ -13,12 +13,19 @@ cask 'bartender' do
 
   app "Bartender #{version.major}.app"
 
-  uninstall login_item: "Bartender #{version.major}"
+  uninstall delete:     [
+                          '/Library/Audio/Plug-Ins/HAL/BartenderAudioPlugIn.plugin',
+                          '/Library/PrivilegedHelperTools/com.surteesstudios.Bartender.BartenderInstallHelper',
+                          '/Library/ScriptingAdditions/BartenderHelper.osax',
+                          '/System/Library/ScriptingAdditions/BartenderSystemHelper.osax',
+                        ],
+            launchctl:  'com.surteesstudios.Bartender.BartenderInstallHelper',
+            login_item: "Bartender #{version.major}",
+            quit:       'com.surteesstudios.Bartender'
 
   zap delete: [
-                '/Library/ScriptingAdditions/BartenderHelper.osax',
-                '~/Library/Preferences/com.surteesstudios.Bartender.plist',
-                '/Library/PrivilegedHelperTools/com.surteesstudios.Bartender.BartenderInstallHelper',
-                '/System/Library/ScriptingAdditions/BartenderSystemHelper.osax',
-              ]
+                '~/Library/Caches/com.surteesstudios.Bartender',
+                '~/Library/Cookies/com.surteesstudios.Bartender.binarycookies',
+              ],
+      trash:  '~/Library/Preferences/com.surteesstudios.Bartender.plist'
 end

@@ -10,4 +10,15 @@ cask 'debookee' do
   homepage 'https://debookee.com/'
 
   app "Debookee #{version}/Debookee.app"
+
+  uninstall delete:    '/Library/PrivilegedHelperTools/com.iwaxx.Debookee.PacketTool',
+            launchctl: 'com.iwaxx.Debookee.PacketTool'
+
+  zap delete: [
+                '~/Library/Caches/com.iwaxx.Debookee',
+                '~/Library/Cookies/com.iwaxx.Debookee.binarycookies',
+                '~/Library/Saved Application State/com.iwaxx.Debookee.savedState',
+                '~/Library/WebKit/com.iwaxx.Debookee',
+              ],
+      trash:  '~/Library/Preferences/com.iwaxx.Debookee.plist'
 end
