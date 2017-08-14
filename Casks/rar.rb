@@ -1,6 +1,6 @@
 cask 'rar' do
-  version '5.5.b6'
-  sha256 :no_check # required as upstream package is updated in-place
+  version '5.5.0'
+  sha256 'aac47555add3aeb65693bc35738c28a8ba215097a3371f2f162c06588b36265c'
 
   url "http://www.rarlab.com/rar/rarosx-#{version}.tar.gz"
   name 'RAR Archiver'
