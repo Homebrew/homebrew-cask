@@ -11,4 +11,11 @@ cask 'vimr' do
 
   app 'VimR.app'
   binary "#{appdir}/VimR.app/Contents/Resources/vimr"
+
+  zap delete: [
+                '~/Library/Caches/com.qvacua.VimR',
+                '~/Library/Saved Application State/com.qvacua.VimR.savedState',
+                '~/Library/WebKit/com.qvacua.VimR',
+              ],
+      trash:  '~/Library/Preferences/com.qvacua.VimR.plist'
 end
