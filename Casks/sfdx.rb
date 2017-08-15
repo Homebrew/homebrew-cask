@@ -4,7 +4,7 @@ cask 'sfdx' do
 
   url 'https://developer.salesforce.com/media/salesforce-cli/sfdx-osx.pkg'
   name 'Salesforce DX CLI'
-  homepage 'https://developer.salesforce.com/fr/tools/sfdxcli'
+  homepage 'https://developer.salesforce.com/tools/sfdxcli'
 
   pkg 'sfdx-osx.pkg'
 
