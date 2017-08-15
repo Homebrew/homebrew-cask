@@ -7,5 +7,5 @@ cask 'gif-for-mac' do
   name 'GIF for Mac'
   homepage 'https://tenor.com/mac'
 
-  app 'GIF for Mac.app'
+  app 'Tenor.app'
 end
