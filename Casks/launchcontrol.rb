@@ -4,9 +4,11 @@ cask 'launchcontrol' do
 
   url "http://www.soma-zone.com/download/files/LaunchControl_#{version}.tar.bz2"
   appcast 'http://www.soma-zone.com/LaunchControl/a/appcast.xml',
-          checkpoint: 'e7bfa5b7ee9691c7fe8a3926412265956eed2e32ffbd85aa6342a41e3a156944'
+          checkpoint: 'b8c7a5ff5248ef2801bf7d15f77bb96cd99065e5a8ddabb9003e497a386acd48'
   name 'LaunchControl'
   homepage 'http://www.soma-zone.com/LaunchControl/'
+
+  auto_updates true
 
   app 'LaunchControl.app'
 

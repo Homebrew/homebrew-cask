@@ -4,14 +4,15 @@ cask 'vfuse' do
 
   url "https://github.com/chilcote/vfuse/releases/download/#{version}/vfuse-#{version}.pkg"
   appcast 'https://github.com/chilcote/vfuse/releases.atom',
-          checkpoint: 'f5d38ca75355943d5ac09be7d6e6d6b8b41c006a02c63e3ada15d1b76dfced62'
+          checkpoint: '50c159b942047b892c5f2f26aad2f01016fb0202f1ce5d996fb9a4d432d62bfb'
   name 'vfuse'
   homepage 'https://github.com/chilcote/vfuse'
 
   pkg "vfuse-#{version}.pkg"
   binary '/usr/local/vfuse/vfuse'
 
-  uninstall pkgutil: 'com.chilcote.vfuse'
+  uninstall launchctl: 'com.chilcote.vfused',
+            pkgutil:   'com.chilcote.vfuse'
 
   zap trash: '~/Library/Preferences/com.chilcote.vfused.plist'
 

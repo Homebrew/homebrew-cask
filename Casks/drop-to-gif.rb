@@ -5,7 +5,7 @@ cask 'drop-to-gif' do
   # github.com/mortenjust/droptogif was verified as official when first introduced to the cask
   url "https://github.com/mortenjust/droptogif/releases/download/#{version}/Drop.to.GIF#{version.no_dots}.zip"
   appcast 'https://github.com/mortenjust/droptogif/releases.atom',
-          checkpoint: '7eacc43be64331ef18cdd791042d4e9f4b75efc63529dbffd652dbf893a03432'
+          checkpoint: '20d9472e25d99cbaa416cdc5417c742b74631c9781789eacf4039e5e0f3a5d5a'
   name 'Drop to GIF'
   homepage 'https://mortenjust.github.io/droptogif/'
 

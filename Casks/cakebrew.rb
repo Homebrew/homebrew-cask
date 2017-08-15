@@ -9,6 +9,7 @@ cask 'cakebrew' do
   name 'Cakebrew'
   homepage 'https://www.cakebrew.com/'
 
+  auto_updates true
   depends_on macos: '>= :mountain_lion'
 
   app 'Cakebrew.app'

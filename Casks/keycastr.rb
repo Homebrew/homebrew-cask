@@ -1,10 +1,10 @@
 cask 'keycastr' do
-  version '0.9.4'
-  sha256 '24e88923e8b3fe8920344f2715cc5b43f710f81fecc4ef1fcbe2e3a6f40b0d28'
+  version '0.9.5'
+  sha256 '42014ded107d922c7374fb2bb897ca34533ea246ac5643555b25136ab8768e69'
 
   url "https://github.com/keycastr/keycastr/releases/download/v#{version}/KeyCastr.app.zip"
   appcast 'https://github.com/keycastr/keycastr/releases.atom',
-          checkpoint: '94cc11a01ddd17976ee22fdf5672bb2d04e4f9cd33b6c940e85a9bd80c5d64ff'
+          checkpoint: '909822e4182c11b8f7e4c2e3de7c3e997edb57b39a3bdc9a9b72c5b31a7d8717'
   name 'KeyCastr'
   homepage 'https://github.com/keycastr/keycastr'
 

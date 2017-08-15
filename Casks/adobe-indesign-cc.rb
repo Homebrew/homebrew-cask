@@ -133,7 +133,7 @@ cask 'adobe-indesign-cc' do
     system_command "#{staged_path}/Adobe InDesign CC 2015/Install.app/Contents/MacOS/Install",
                    args: [
                            '--mode=silent',
-                           "--deploymentFile=#{staged_path}/Adobe\ InDesign\ CC\ 2015/deploy/remove.xml",
+                           "--deploymentFile=#{staged_path}/Adobe InDesign CC 2015/deploy/remove.xml",
                          ],
                    sudo: true
   end

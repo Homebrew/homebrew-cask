@@ -6,5 +6,7 @@ cask 'tormessenger' do
   name 'Tor Messenger'
   homepage 'https://trac.torproject.org/projects/tor/wiki/doc/TorMessenger'
 
+  auto_updates true
+
   app 'TorMessenger.app'
 end

@@ -4,11 +4,22 @@ cask 'outset' do
 
   url "https://github.com/chilcote/outset/releases/download/v#{version}/outset-#{version}.pkg"
   appcast 'https://github.com/chilcote/outset/releases.atom',
-          checkpoint: '5833059196488072b473f5d643bc4b3824fad10396f332a4c04282767a00f113'
+          checkpoint: '8ed3c6fc6d15646c0559d5aba558f65a3d3032a37d183e03ffd16b95b2ea7999'
   name 'outset'
   homepage 'https://github.com/chilcote/outset'
 
   pkg "outset-#{version}.pkg"
 
-  uninstall pkgutil: 'com.github.outset'
+  uninstall launchctl: [
+                         'com.github.outset.boot',
+                         'com.github.outset.cleanup',
+                         'com.github.outset.login',
+                         'com.github.outset.login-privileged',
+                         'com.github.outset.on-demand',
+                       ],
+            pkgutil:   'com.github.outset'
+
+  caveats do
+    files_in_usr_local
+  end
 end

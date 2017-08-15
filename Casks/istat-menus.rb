@@ -1,11 +1,13 @@
 cask 'istat-menus' do
   version '5.32'
-  sha256 '0dca05fb06315820c537b4c76b3148c79a4c55ace345b2f82167a29c9c98b7c9'
+  sha256 '99e1a262cddc9bf368cb01854610b64b8c5551ace4f5a89aad6d63ca054e5ecf'
 
   # amazonaws.com/bjango was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/bjango/files/istatmenus#{version.major}/istatmenus#{version}.zip"
   name 'iStats Menus'
   homepage 'https://bjango.com/mac/istatmenus/'
+
+  auto_updates true
 
   app 'iStat Menus.app'
 

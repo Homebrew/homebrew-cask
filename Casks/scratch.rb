@@ -1,10 +1,10 @@
 cask 'scratch' do
-  version '2.0,454'
-  sha256 '5da6ce46e860dac4be11093eac99f01834e21d9b385ba676c5026ad104041cbb'
+  version '2.0,456'
+  sha256 '8c5d15775d6d7e9e01b0be91c6a6889136cb7e5e284ec9285ab0c80687b58196'
 
   url "https://scratch.mit.edu/scratchr2/static/sa/Scratch-#{version.after_comma}.dmg"
   appcast 'https://scratch.mit.edu/scratchr2/static/sa/version.xml',
-          checkpoint: '9764185dc2913aa7974f9b59d41105abfb870a3e62591b1f5531c6c5cc4dc30d'
+          checkpoint: '354897fa6cf5d9de5f33a1d9857b9406f2841db67c80b92dd38cea4fa4a08f31'
   name 'Scratch'
   homepage 'https://scratch.mit.edu/download'
 
@@ -18,7 +18,7 @@ cask 'scratch' do
 
   uninstall script: {
                       executable: Hbc::Container::Air::INSTALLER_PATHNAME,
-                      args:       ['-uninstall', '-silent', "/Applications/Scratch\ #{version.major}.app"],
+                      args:       ['-uninstall', '-silent', "/Applications/Scratch #{version.major}.app"],
                       sudo:       true,
                     }
 end

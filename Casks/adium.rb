@@ -8,6 +8,8 @@ cask 'adium' do
   name 'Adium'
   homepage 'https://www.adium.im/'
 
+  auto_updates true
+
   app 'Adium.app'
 
   zap delete: [

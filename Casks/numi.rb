@@ -9,5 +9,20 @@ cask 'numi' do
   name 'Numi'
   homepage 'https://numi.io/'
 
+  auto_updates true
+
   app 'Numi.app'
+
+  uninstall launchctl: "com.dmitrynikolaev.numi#{version.major}helper",
+            quit:      'com.dmitrynikolaev.numi'
+
+  zap delete: [
+                '~/Library/Caches/com.crashlytics.data/com.dmitrynikolaev.numi',
+                '~/Library/Caches/com.dmitrynikolaev.numi',
+                '~/Library/Caches/io.fabric.sdk.mac.data/com.dmitrynikolaev.numi',
+              ],
+      trash:  [
+                '~/Library/Application Support/com.dmitrynikolaev.numi',
+                '~/Library/Preferences/com.dmitrynikolaev.numi.plist',
+              ]
 end

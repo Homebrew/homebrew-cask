@@ -1,10 +1,10 @@
 cask 'metasploit' do
-  version '4.15.5+20170729101202'
-  sha256 'aa4f1a533d39735c85ab0c1bb5272bd9d5e01f14d718085db20a3ac8cae5f06e'
+  version '4.15.7+20170813101407'
+  sha256 '76396b0cc1bd54c2528df54b50c95b332c3d013285bfbb8330a4db9dcaf343c9'
 
   url "https://osx.metasploit.com/metasploit-framework-#{version}-1rapid7-1.pkg"
   appcast 'https://osx.metasploit.com/LATEST',
-          checkpoint: 'd7c4e77a94f883fd52f796c92538513ec5744f16ae302372b082d40c1142f7d4'
+          checkpoint: '079a5600f84645e2eb47ded29ed8d1f3d79d8737d4151c0b35a5c7673c60d4cc'
   name 'Metasploit Framework'
   homepage 'https://www.metasploit.com/'
   gpg "#{url}.asc", key_id: '2007B954'
@@ -26,11 +26,12 @@ cask 'metasploit' do
   binary '/opt/metasploit-framework/bin/msfupdate'
   binary '/opt/metasploit-framework/bin/msfvenom'
 
-  uninstall_preflight do
-    system_command '/bin/rm',
-                   args: ['-rf', '/opt/metasploit-framework'],
-                   sudo: true
-  end
+  uninstall script: {
+                      executable: '/opt/metasploit-framework/bin/msfremove',
+                      input:      ['y'],
+                      sudo:       true,
+                    },
+            rmdir:  '/opt/metasploit-framework'
 
-  uninstall pkgutil: '.*metasploit.*'
+  zap trash: '~/.msf4'
 end

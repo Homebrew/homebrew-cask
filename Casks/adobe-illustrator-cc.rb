@@ -133,7 +133,7 @@ cask 'adobe-illustrator-cc' do
     system_command "#{staged_path}/Adobe Illustrator CC 2015/Install.app/Contents/MacOS/Install",
                    args: [
                            '--mode=silent',
-                           "--deploymentFile=#{staged_path}/Adobe\ Illustrator\ CC\ 2015/Deployment/uninstall.xml",
+                           "--deploymentFile=#{staged_path}/Adobe Illustrator CC 2015/Deployment/uninstall.xml",
                          ],
                    sudo: true
   end
