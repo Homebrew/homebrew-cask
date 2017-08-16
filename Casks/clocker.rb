@@ -11,7 +11,13 @@ cask 'clocker' do
 
   app 'Clocker.app'
 
-  zap trash: [
+  uninstall quit: 'com.abhishek.Clocker'
+
+  zap delete: [
+                '~/Library/Application Scripts/com.abhishek.Clocker',
+                '~/Library/Containers/com.abhishek.Clocker',
+              ],
+      trash:  [
                 '~/Library/Preferences/com.abhishek.Clocker.plist',
                 '~/Library/Preferences/com.abhishek.ClockerHelper.plist',
                 '~/Library/Preferences/com.abhishek.Clocker.prefs',
