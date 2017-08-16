@@ -10,9 +10,11 @@ cask 'hex-fiend' do
   homepage 'http://ridiculousfish.com/hexfiend/'
 
   app 'Hex Fiend.app'
+  binary "#{appdir}/Hex Fiend.app/Contents/Resources/hexf"
 
   zap delete: [
-                '~/Library/Preferences/com.ridiculousfish.HexFiend.LSSharedFileList.plist',
-                '~/Library/Preferences/com.ridiculousfish.HexFiend.plist',
-              ]
+                '~/Library/Caches/com.ridiculousfish.HexFiend',
+                '~/Library/Saved Application State/com.ridiculousfish.HexFiend.savedState',
+              ],
+      trash:  '~/Library/Preferences/com.ridiculousfish.HexFiend.plist'
 end
