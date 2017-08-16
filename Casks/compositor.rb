@@ -9,4 +9,10 @@ cask 'compositor' do
   homepage 'http://compositorapp.com/'
 
   app 'Compositor.app'
+
+  zap delete: [
+                '~/Library/Application Scripts/com.microlarge.Compositor',
+                '~/Library/Containers/com.microlarge.Compositor',
+              ],
+      trash:  '~/Library/Preferences/com.microlarge.Compositor.plist'
 end
