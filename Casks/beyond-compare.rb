@@ -9,6 +9,7 @@ cask 'beyond-compare' do
   homepage 'https://www.scootersoftware.com/'
 
   app 'Beyond Compare.app'
+  binary "#{appdir}/Beyond Compare.app/Contents/MacOS/bcomp"
 
   zap delete: [
                 '~/Library/Application Support/Beyond Compare',
