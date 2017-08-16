@@ -7,4 +7,6 @@ cask 'pingplotter' do
   homepage 'https://www.pingplotter.com/'
 
   app 'PingPlotter.app'
+
+  zap delete: '~/Library/Application Support/PingPlotter'
 end
