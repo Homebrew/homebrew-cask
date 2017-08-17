@@ -8,5 +8,5 @@ cask 'pingplotter' do
 
   app 'PingPlotter.app'
 
-  zap delete: '~/Library/Application Support/PingPlotter'
+  zap trash: '~/Library/Application Support/PingPlotter'
 end
