@@ -16,9 +16,9 @@ cask 'logisim-evolution' do
 
   preflight do
     IO.write shimscript, <<-EOS.undent
-      #!/bin/sh
-      cd "$(dirname "$(readlink -n $0)")" && \
-        java "$@" -jar 'logisim-evolution.jar'
+      #!/bin/bash
+      cd "$(dirname "$(readlink -n "${0}")")" && \
+        java "${@}" -jar 'logisim-evolution.jar'
     EOS
   end
 
