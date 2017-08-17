@@ -1,4 +1,4 @@
-cask 'drawio-desktop' do
+cask 'drawio' do
   version '7.1.6'
   sha256 '3513505d4c05c9c0f3c87612b24edf23b09ad5ad57b6bec0e44652df0d5308ca'
 
