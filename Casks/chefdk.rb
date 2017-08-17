@@ -1,11 +1,6 @@
 cask 'chefdk' do
-  if MacOS.version == :mountain_lion
-    version '0.11.2-1'
-    sha256 '56899eab322cacac7f445a24d3159af34fccb5910642f4535eff4ee47321fe56'
-  else
-    version '2.1.11'
-    sha256 '9b6f7cfc7d7c40f15adc174b185eabe920fc30b14715320426551e328c97b2d5'
-  end
+  version '2.1.11'
+  sha256 '9b6f7cfc7d7c40f15adc174b185eabe920fc30b14715320426551e328c97b2d5'
 
   url "https://packages.chef.io/files/stable/chefdk/#{version}/mac_os_x/#{MacOS.version}/chefdk-#{version}-1.dmg"
   appcast "https://www.chef.io/chef/metadata-chefdk?p=mac_os_x&pv=#{MacOS.version}&m=x86_64&v=latest&prerelease=false",
@@ -14,7 +9,7 @@ cask 'chefdk' do
   name 'ChefDK'
   homepage 'https://downloads.chef.io/chefdk'
 
-  depends_on macos: '>= :mountain_lion'
+  depends_on macos: '>= :yosemite'
 
   pkg "chefdk-#{version}-1.pkg"
 
