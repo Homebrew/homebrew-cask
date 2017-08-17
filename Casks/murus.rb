@@ -17,5 +17,5 @@ cask 'murus' do
                 '/etc/murus.sh',
                 '~/Library/Caches/it.murus.Murus',
               ],
-      trash: '~/Library/Preferences/it.murus.Murus.plist'
+      trash:  '~/Library/Preferences/it.murus.Murus.plist'
 end
