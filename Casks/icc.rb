@@ -9,4 +9,11 @@ cask 'icc' do
   pkg "ICCforMac.#{version.after_comma}.pkg"
 
   uninstall pkgutil: 'com.chessclub.*'
+
+  zap delete: '~/Library/Saved Application State/com.chessclub.desktop-icc.savedState',
+      trash:  [
+                '~/.cache/internet_chess_club',
+                '~/.internet_chess_club',
+                '~/Library/Preferences/com.chessclub.desktop-icc',
+              ]
 end
