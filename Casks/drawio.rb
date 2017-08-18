@@ -10,4 +10,10 @@ cask 'drawio' do
   homepage 'https://www.draw.io/'
 
   app 'draw.io.app'
+
+  zap delete: '~/Library/Saved Application State/com.jgraph.drawio.desktop.savedState',
+      trash:  [
+                '~/Library/Preferences/com.jgraph.drawio.desktop.helper.plist',
+                '~/Library/Preferences/com.jgraph.drawio.desktop.plist',
+              ]
 end
