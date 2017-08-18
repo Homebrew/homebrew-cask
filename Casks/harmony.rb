@@ -1,11 +1,11 @@
 cask 'harmony' do
-  version '0.7.0'
-  sha256 '1cf4de11453f18c28288c4cf2f00481528a43f46eea032f8111f369de462a9b4'
+  version '0.7.1'
+  sha256 '1123e27f7799c2575dde8c06bc8c7ae49baf6661c41fb91bd126c4593d34f5b7'
 
   # github.com/vincelwt/harmony was verified as official when first introduced to the cask
   url "https://github.com/vincelwt/harmony/releases/download/v#{version}/harmony-#{version}-mac.app.zip"
   appcast 'https://github.com/vincelwt/harmony/releases.atom',
-          checkpoint: '21bd1bce8a4ad1f59cd0acdd8bef98fdaa1f82743bcdb052bfbda1c31eb62366'
+          checkpoint: '7d13a305ee9f1984862a24f6b9ead0e3e84e6e95ef82ce25036bf3692ba1b208'
   name 'Harmony'
   homepage 'https://getharmony.xyz/'
 

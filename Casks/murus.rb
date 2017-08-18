@@ -13,7 +13,9 @@ cask 'murus' do
   zap delete: [
                 '/Library/Application Support/Murus',
                 '/Library/Preferences/it.murus.muruslibrary.plist',
+                '/etc/murus',
+                '/etc/murus.sh',
                 '~/Library/Caches/it.murus.Murus',
-                '~/Library/Preferences/it.murus.Murus.plist',
-              ]
+              ],
+      trash:  '~/Library/Preferences/it.murus.Murus.plist'
 end
