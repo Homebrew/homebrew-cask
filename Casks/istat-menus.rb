@@ -1,6 +1,6 @@
 cask 'istat-menus' do
   version '5.32'
-  sha256 '99e1a262cddc9bf368cb01854610b64b8c5551ace4f5a89aad6d63ca054e5ecf'
+  sha256 '208bc52e8ae6e04e6b001f9f3da7bfd57e919625f10f582ba078ff7032609401'
 
   # amazonaws.com/bjango was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/bjango/files/istatmenus#{version.major}/istatmenus#{version}.zip"
