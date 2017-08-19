@@ -1,4 +1,4 @@
-cask 'neon-wallet' do
+cask 'neon' do
   version '0.0.4'
   sha256 'abf1e550b0c83f54388d73b5fc423d74065df634e9f9f3228453c0da6e5b34e8'
 
