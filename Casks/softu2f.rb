@@ -19,7 +19,7 @@ cask 'softu2f' do
                    args: ['unload', launchd_plist],
                    sudo: true
 
-    set_ownership launchd_plist
+    set_ownership '~/Library/LaunchAgents'
 
     system_command '/bin/launchctl',
                    args: ['load', launchd_plist]
