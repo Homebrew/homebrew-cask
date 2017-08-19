@@ -8,6 +8,6 @@ cask 'media-center' do
 
   app "Media Center #{version.major}.app"
 
-  zap delete: '~/Library/Application Support/J River/'
-  zap devete: '~/Documents/JRiver/'
+  zap delete: '~/Library/Application Support/J River/',
+      trash:  '~/Documents/JRiver/'
 end
