@@ -29,8 +29,8 @@ cask 'docker' do
                 '~/Library/Containers/com.docker.docker',
                 '~/Library/Containers/com.docker.helper',
                 '~/Library/Group Containers/group.com.docker',
-                '~/Library/Preferences/com.docker.docker.plist',
               ],
+      trash:  '~/Library/Preferences/com.docker.docker.plist',
       rmdir:  [
                 '~/Library/Caches/KSCrashReports',
                 '~/Library/Caches/com.plausiblelabs.crashreporter.data',
