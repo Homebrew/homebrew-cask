@@ -1,10 +1,10 @@
 cask 'vfuse' do
-  version '1.0.3'
-  sha256 'be4b099134afcba71143991c4f169bea03baf37fe96cfee0f5fcff9adf9ce6c2'
+  version '1.0.5'
+  sha256 '2bfad0d1c91db75afa2cc7149298037c1bcfedf74c775eab2139efbb1265539e'
 
   url "https://github.com/chilcote/vfuse/releases/download/#{version}/vfuse-#{version}.pkg"
   appcast 'https://github.com/chilcote/vfuse/releases.atom',
-          checkpoint: '50c159b942047b892c5f2f26aad2f01016fb0202f1ce5d996fb9a4d432d62bfb'
+          checkpoint: 'a47858a7de4b5df3df3106149a694e8883397f46ffb51d55ae2eab39efff812c'
   name 'vfuse'
   homepage 'https://github.com/chilcote/vfuse'
 
@@ -12,7 +12,7 @@ cask 'vfuse' do
   binary '/usr/local/vfuse/vfuse'
 
   uninstall launchctl: 'com.chilcote.vfused',
-            pkgutil:   'com.chilcote.vfuse'
+            pkgutil:   'com.github.vfuse'
 
   zap trash: '~/Library/Preferences/com.chilcote.vfused.plist'
 
