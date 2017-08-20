@@ -9,4 +9,15 @@ cask 'amazon-chime' do
   homepage 'https://chime.aws/'
 
   app 'Amazon Chime.app'
+
+  zap delete: [
+                '~/Library/Caches/com.amazon.Amazon-Chime',
+                '~/Library/Logs/Amazon Chime',
+                '~/Library/WebKit/com.amazon.Amazon-Chime',
+              ],
+      trash:  [
+                '~/Library/Application Support/Amazon Chime',
+                '~/Library/Application Support/com.amazon.Amazon-Chime',
+                '~/Library/Preferences/com.amazon.Amazon-Chime.plist',
+              ]
 end
