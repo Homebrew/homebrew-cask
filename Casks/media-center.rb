@@ -12,7 +12,6 @@ cask 'media-center' do
                 "~/Library/Caches/com.jriver.MediaCenter#{version.major}",
                 "~/Library/Saved Application State/com.jriver.MediaCenter#{version.major}.savedState",
               ],
-
       trash:  [
                 '~/Library/Application Support/J River/',
                 '~/Documents/JRiver/',
