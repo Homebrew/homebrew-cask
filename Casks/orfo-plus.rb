@@ -20,7 +20,6 @@ cask 'orfo-plus' do
             login_item: 'OrfoUpdate'
 
   zap delete: '~/Library/Caches/com.informatic.OrfoUpdate',
-
       trash:  [
                 '/Library/Application Support/ORFO 2016',
                 '~/Library/Preferences/com.informatic.RussianCollection.plist',
