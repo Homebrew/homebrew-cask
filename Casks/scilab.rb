@@ -1,8 +1,8 @@
 cask 'scilab' do
-  version '5.5.2'
-  sha256 '6e855c4aae6f75d37ced77bea64ac5cf33f65f3925107c65547b2a5fede3bd91'
+  version '6.0.0'
+  sha256 '87ec97f04f64e1fe8133e639a784fc02ca0802adf6c7c2c98c6d8febf59cc40e'
 
-  url "https://www.scilab.org/download/#{version}/scilab-#{version}-x86_64_yosemite.dmg"
+  url "https://www.scilab.org/download/#{version}/scilab-#{version}-x86_64.dmg"
   name 'Scilab'
   homepage 'https://www.scilab.org/'
 

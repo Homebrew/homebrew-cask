@@ -12,10 +12,10 @@ cask 'fugio' do
                         'fftw',
                         'glew',
                         'lua',
+                        'opencv',
                         'portaudio',
                         'portmidi',
                         'snappy',
-                        'homebrew/science/opencv3',
                       ]
 
   suite 'Fugio'
