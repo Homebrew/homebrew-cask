@@ -8,8 +8,13 @@ cask 'media-center' do
 
   app "Media Center #{version.major}.app"
 
-  zap trash: [
-               '~/Library/Application Support/J River/',
-               '~/Documents/JRiver/',
-             ]
+  zap delete: [
+                "~/Library/Caches/com.jriver.MediaCenter#{version.major}",
+                "~/Library/Saved Application State/com.jriver.MediaCenter#{version.major}.savedState",
+              ],
+      trash:  [
+                '~/Library/Application Support/J River/',
+                '~/Documents/JRiver/',
+                "~/Library/Preferences/com.jriver.MediaCenter#{version.major}.plist",
+              ]
 end
