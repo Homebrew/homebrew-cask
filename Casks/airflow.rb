@@ -4,8 +4,19 @@ cask 'airflow' do
 
   # amazonaws.com/Airflow was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/Airflow/Download/Airflow%20#{version}.dmg"
+  appcast 'https://s3.amazonaws.com/Airflow/Updates/appcast-osx.xml',
+          checkpoint: 'c79058d162ded8201cdbe8f80acacf3c03c1aae4c5d0b3deacf5b642f1bd379c'
   name 'Airflow'
-  homepage 'http://airflowapp.com/'
+  homepage 'https://airflowapp.com/'
 
   app 'Airflow.app'
+
+  zap delete: [
+                '~/Library/Caches/com.bitcavehq.Airflow',
+                '~/Library/Saved Application State/com.bitcavehq.Airflow.savedState',
+              ],
+      trash:  [
+                '~/Library/Application Support/Airflow',
+                '~/Library/Preferences/com.bitcavehq.Airflow.plist',
+              ]
 end
