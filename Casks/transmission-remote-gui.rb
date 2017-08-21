@@ -9,4 +9,12 @@ cask 'transmission-remote-gui' do
   homepage 'https://github.com/leonsoft-kras/transmisson-remote-gui'
 
   app 'Transmission Remote GUI.app'
+
+  uninstall quit: 'com.transgui'
+
+  zap delete: '~/Library/Saved Application State/com.transgui.savedState',
+      trash:  [
+                '~/.config/Transmission Remote GUI/',
+                '~/Library/Preferences/com.transgui.plist',
+              ]
 end
