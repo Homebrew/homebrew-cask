@@ -9,5 +9,5 @@ cask 'avidemux' do
   name 'Avidemux'
   homepage 'https://www.avidemux.org/'
 
-  app "Avidemux#{version.major_minor}.app"
+  app "Avidemux_#{version}.app"
 end
