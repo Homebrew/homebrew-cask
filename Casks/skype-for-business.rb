@@ -24,5 +24,6 @@ cask 'skype-for-business' do
                 '~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.debuglogging.plist',
                 '~/Library/Application Support/com.microsoft.SkypeForBusinessTAP',
                 '~/Library/Application Support/Skype for Business',
-              ]
+              ],
+      rmdir:  '/Library/Application Support/Microsoft'
 end
