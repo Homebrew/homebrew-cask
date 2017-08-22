@@ -6,7 +6,7 @@ cask 'core-data-editor' do
   appcast 'https://github.com/ChristianKienle/Core-Data-Editor/releases.atom',
           checkpoint: 'c1ae29cc93ab5a9e1dedf21d06acf889e7364ace3a179c9b3ebaab2464e9ab4d'
   name 'Core Data Editor'
-  homepage 'https://github.com/ChristianKienle/Core-Data-Editor/releases'
+  homepage 'https://github.com/ChristianKienle/Core-Data-Editor/'
 
   depends_on macos: '>= :sierra'
 
