@@ -1,11 +1,11 @@
 cask 'teamsql' do
-  version '1.1.111'
-  sha256 'f0c52ad4b4c044500312a3d31b203b652738bbecb2001d974c5f68be9652b5ff'
+  version '1.3.116'
+  sha256 '32f1ca793c9fa706abcfc308f98a5f451db36e2dbf568444149294e7c39629b4'
 
   # dlpuop5av9e02.cloudfront.net/osx/stable was verified as official when first introduced to the cask
   url "https://dlpuop5av9e02.cloudfront.net/osx/stable/#{version}/TeamSQL-#{version}.dmg"
   appcast 'https://teamsql.io/whats-new',
-          checkpoint: '6c39bad7de24cb5bf9798f785f3b69d8de9da3e144ee9f883f3b377516b6341a'
+          checkpoint: '546c184b30f35d38d1c3683057d47e760c5d3dbf755ffecb8434530a6070087c'
   name 'TeamSQL'
   homepage 'https://teamsql.io/'
 
