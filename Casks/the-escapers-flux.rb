@@ -1,11 +1,11 @@
 cask 'the-escapers-flux' do
-  version '7.1.3'
-  sha256 'bb2e75e82b491e70893fb1cee172905afb968bee84d5795ac344b1098e11f9b7'
+  version '7.1.4'
+  sha256 '60c02c10ada8474c6dcc0c9d53443cde771839248ee3ef9ab63cf6b009c9e327'
 
   # amazonaws.com/Flux was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/Flux/FluxV#{version.major}.zip"
   appcast 'http://s3.amazonaws.com/Flux/flux.xml',
-          checkpoint: 'e8f26e3afdb06b7ffb3a3bbc18e1da5800a590a2914692b6a309cb606618ad3f'
+          checkpoint: '2d2da03ed273b921d60fe3c6916668044736ab9349d8b037e22c1cebeb4cffa3'
   name 'Flux'
   homepage 'http://www.theescapers.com/product.php?product=flux'
 
