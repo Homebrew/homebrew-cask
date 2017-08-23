@@ -11,10 +11,11 @@ cask 'bandage' do
 
   app 'Bandage.app'
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
-  binary staged_path / 'Bandage'
+  shimscript = "#{staged_path}/bandage.wrapper.sh"
+  binary shimscript, target: 'bandage'
 
   preflight do
-    IO.write staged_path / 'Bandage', <<-EOS.undent
+    IO.write shimscript, <<-EOS.undent
       #!/bin/sh
       exec '#{appdir}/Bandage.app/Contents/MacOS/Bandage' "$@"
     EOS
