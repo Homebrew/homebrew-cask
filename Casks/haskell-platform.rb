@@ -1,5 +1,5 @@
 cask 'haskell-platform' do
-  version '8.0.2'
+  version '8.2.1'
   sha256 '68436aeb0472069ee9055fc16a737af55c2751b65a5dbbc157cc46b7b5bb6701'
 
   url "https://haskell.org/platform/download/#{version}/Haskell%20Platform%20#{version}%20Full%2064bit-signed.pkg"
