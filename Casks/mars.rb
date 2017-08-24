@@ -7,14 +7,23 @@ cask 'mars' do
           checkpoint: '70ce3d91a35154b5e9a12ff552be743420074361d49d3a7e5676dc9686c87971'
   name 'MIPS Assembler and Runtime Simulator'
   name 'MARS'
-  name 'Mars'
   homepage 'http://courses.missouristate.edu/KenVollmar/mars/index.htm'
 
   container type: :naked
 
-  app "Mars#{version.before_comma.dots_to_underscores}.jar", target: "Mars #{version.before_comma}.jar"
+  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/mars.wrapper.sh"
+  binary shimscript, target: 'mars'
+
+  preflight do
+    IO.write shimscript, <<-EOS.undent
+      #!/bin/bash
+      cd "$(dirname "$(readlink -n "${0}")")" && \
+        java "${@}" -jar 'Mars#{version.before_comma.dots_to_underscores}.jar'
+    EOS
+  end
 
   caveats do
-    depends_on_java('5+')
+    depends_on_java
   end
 end
