@@ -9,4 +9,12 @@ cask 'oni' do
   homepage 'https://github.com/extr0py/oni'
 
   app 'Oni.app'
+
+  zap delete: '~/Library/Saved Application State/com.extropy.oni.savedState',
+      trash:  [
+                '~/.oni',
+                '~/Library/Application Support/oni',
+                '~/Library/Preferences/com.extropy.oni.helper.plist',
+                '~/Library/Preferences/com.extropy.oni.plist',
+              ]
 end
