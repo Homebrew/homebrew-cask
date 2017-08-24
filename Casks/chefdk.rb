@@ -1,22 +1,17 @@
 cask 'chefdk' do
-  if MacOS.version == :mountain_lion
-    version '0.11.2-1'
-    sha256 '56899eab322cacac7f445a24d3159af34fccb5910642f4535eff4ee47321fe56'
-  else
-    version '2.0.28-1'
-    sha256 'c9e576c09f40a519c73887598409c3bb6d8611378bfd8858f081c4701c0ae309'
-  end
+  version '2.1.11'
+  sha256 '9b6f7cfc7d7c40f15adc174b185eabe920fc30b14715320426551e328c97b2d5'
 
-  url "https://packages.chef.io/stable/mac_os_x/#{MacOS.version}/chefdk-#{version}.dmg"
+  url "https://packages.chef.io/files/stable/chefdk/#{version}/mac_os_x/#{MacOS.version}/chefdk-#{version}-1.dmg"
   appcast "https://www.chef.io/chef/metadata-chefdk?p=mac_os_x&pv=#{MacOS.version}&m=x86_64&v=latest&prerelease=false",
-          checkpoint: '0f0f5f7eb2921d75761cf1a8c47fe3887164ecaa19b6fdeff8517b5e9790fe45'
+          checkpoint: '2fa1a65b38de562785da3f2aeeffec3286ced9df486677dd548e8a20854937aa'
   name 'Chef Development Kit'
   name 'ChefDK'
   homepage 'https://downloads.chef.io/chefdk'
 
-  depends_on macos: '>= :mountain_lion'
+  depends_on macos: '>= :yosemite'
 
-  pkg "chefdk-#{version}.pkg"
+  pkg "chefdk-#{version}-1.pkg"
 
   # When updating this cask, please verify the list of paths to delete (and
   # add to it if necessary):
