@@ -4,7 +4,7 @@ cask 'xact' do
 
   url "http://xact.scottcbrown.org/xACT#{version}.zip"
   appcast 'http://xactupdate.scottcbrown.org/xACT.xml',
-          checkpoint: 'fa6609d60f370b73dc848148371b97d1831cb94916592b79ca214eb78cc0c8ed'
+          checkpoint: '95e91191e16dd18be47b2462fc861a78cdf47a85ec000f40577a7f246c335395'
   name 'xACT'
   homepage 'http://xact.scottcbrown.org/'
 
