@@ -11,7 +11,8 @@ cask 'clocker' do
 
   app 'Clocker.app'
 
-  uninstall quit: 'com.abhishek.Clocker'
+  uninstall launchctl: 'com.abhishek.ClockerHelper',
+            quit:      'com.abhishek.Clocker'
 
   zap delete: [
                 '~/Library/Application Scripts/com.abhishek.Clocker',

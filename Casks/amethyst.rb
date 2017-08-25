@@ -6,13 +6,13 @@ cask 'amethyst' do
     version '0.10.1'
     sha256 '9fd1ac2cfb8159b2945a4482046ee6d365353df617f4edbabc4e8cadc448c1e7'
   else
-    version '0.11.3'
-    sha256 '8574e41178714fd52a8e5c8e8e2b580eb3e604b3c4d4579cbf84ff49472c55e8'
+    version '0.11.4'
+    sha256 '60239205a4376ff624e48e94d894d2967b93b1edd35c9542952e4185cab1f1e7'
   end
 
   url "https://ianyh.com/amethyst/versions/Amethyst-#{version}.zip"
   appcast 'https://ianyh.com/amethyst/appcast.xml',
-          checkpoint: '260eea33504e9dcc4d535110e727180abc42b0bf28f41ebe0d59613284902de1'
+          checkpoint: 'adfbc2e1cab357a3a1b84984e6c49113bbb16da91c0cf08de7ea5a24af1e1da4'
   name 'Amethyst'
   homepage 'https://ianyh.com/amethyst/'
 
