@@ -1,8 +1,8 @@
 cask 'paragon-ntfs' do
-  version '15'
+  version '15.0.911_000'
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "http://dl.paragon-software.com/demo/ntfsmac#{version}_trial.dmg"
+  url "http://dl.paragon-software.com/esd/Paragon-1091-PEU_MacInstallUnlock_#{version}.dmg"
   name 'Paragon NTFS for Mac'
   homepage 'https://www.paragon-software.com/ufsdhome/ntfs-mac/'
 
