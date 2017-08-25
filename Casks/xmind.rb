@@ -1,6 +1,6 @@
 cask 'xmind' do
-  version '8-update2'
-  sha256 '4c2d3a367c84754ff969a1a9e28725af85e79121648555ed99fd60a94d9ea5ab'
+  version '8-update3'
+  sha256 '3312d8bdd00b12662114d20144ee5aaf2daa990c2d39b2cd082ed87557606825'
 
   url "https://www.xmind.net/xmind/downloads/xmind-#{version}-macosx.dmg"
   name 'XMind'
