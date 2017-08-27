@@ -1,5 +1,5 @@
 cask 'tableplus' do
-  version '1.0'
+  version '1.0,59'
   sha256 'db93faa8a2d4634b64de9c8aaa3584d25fc94e2d36483109a747af2a7fafb3fe'
 
   url 'https://tableplus.io/release/osx/tableplus_latest.zip'
