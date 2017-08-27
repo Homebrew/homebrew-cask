@@ -6,5 +6,8 @@ cask 'festify' do
   name 'Festify'
   homepage 'https://github.com/festify'
 
+  appcast 'https://github.com/Festify/app/releases.atom',
+            checkpoint: '03af11f99136809bbc144b48fb06ff51cb404e58af6a3bbe3487c7c932530056'
+
   app 'Festify.app'
 end
