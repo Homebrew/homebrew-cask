@@ -9,4 +9,11 @@ cask 'festify' do
   homepage 'https://github.com/festify/app'
 
   app 'Festify.app'
+
+  zap delete: '~/Library/Saved Application State/rocks.festify.app.savedState',
+      trash:  [
+                '~/Library/Application Support/Festify',
+                '~/Library/Preferences/rocks.festify.app.helper.plist',
+                '~/Library/Preferences/rocks.festify.app.plist',
+              ]
 end
