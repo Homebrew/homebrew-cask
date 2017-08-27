@@ -10,5 +10,10 @@ cask 'torrent-file-editor' do
 
   app 'Torrent File Editor.app'
 
-  zap delete: '~/Library/Preferences/net.sourceforge.torrent-file-editor.plist'
+  zap delete: [
+                '~/Library/Caches/net.sourceforge.torrent-file-editor',
+                '~/Library/Cookies/net.sourceforge.torrent-file-editor.binarycookies',
+                '~/Library/Saved Application State/net.sourceforge.torrent-file-editor.savedState',
+              ],
+      trash:  '~/Library/Preferences/net.sourceforge.torrent-file-editor.plist'
 end
