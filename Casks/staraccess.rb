@@ -4,7 +4,7 @@ cask 'staraccess' do
 
   url 'https://my.ukrsibbank.com/common/upload/StarAccess/SA_Launcher_macOs.zip'
   name 'Star Access'
-  homepage 'https://my.ukrsibbank.com/en/personal/'
+  homepage 'https://my.ukrsibbank.com/'
 
   app 'StarAccess.app'
 
