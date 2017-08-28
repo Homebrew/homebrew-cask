@@ -4,7 +4,7 @@ cask 'mousepose' do
 
   url "https://cdn.boinx.com/software/mousepose/Boinx_Mousepose_#{version}-10878.app.zip"
   name 'Mouseposé'
-  homepage 'https://www.boinx.com/mousepose/overview/'
+  homepage 'https://boinx.com/mousepose/overview/'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   # Original discussion: https://github.com/caskroom/homebrew-cask/pull/15708
