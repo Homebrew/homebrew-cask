@@ -4,7 +4,7 @@ cask 'galileo-arduino' do
 
   url "https://downloadmirror.intel.com/24355/eng/IntelArduino-#{version}-OSX.zip"
   name 'Intel Galileo Arduino SW'
-  homepage 'https://downloadcenter.intel.com/download/24355/Intel-Galileo-Board-Software-Package'
+  homepage 'https://downloadcenter.intel.com/download/26418?v=t'
 
   app 'Arduino.app'
 end
