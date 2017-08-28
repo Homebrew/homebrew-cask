@@ -7,7 +7,7 @@ cask 'prusa-slic3r' do
   appcast 'https://github.com/prusa3d/Slic3r/releases.atom',
           checkpoint: '13fb6d5c7b1c2eb1c2b5b4758b84bc21c487de079188024f8b2b12faff46f801'
   name 'Slic3r - Prusa Edition'
-  homepage 'http://www.prusa3d.com/slic3r-prusa-edition/'
+  homepage 'https://www.prusa3d.com/slic3r-prusa-edition/'
 
   conflicts_with cask: 'slic3r'
 
