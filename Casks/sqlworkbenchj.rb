@@ -6,7 +6,7 @@ cask 'sqlworkbenchj' do
   appcast 'http://www.sql-workbench.net/wb_news.xml',
           checkpoint: '4f827732f42157be2e184039f03b4988bcab7da975e52287430eec9738dfd5ca'
   name 'SQL Workbench/J'
-  homepage 'http://www.sql-workbench.net/'
+  homepage 'https://www.sql-workbench.net/'
 
   app 'SQLWorkbenchJ.app'
 
