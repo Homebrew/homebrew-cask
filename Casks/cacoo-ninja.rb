@@ -4,7 +4,7 @@ cask 'cacoo-ninja' do
 
   url 'http://assets.cacoo.com/extension/151111/CacooNinjaInstaller.dmg'
   name 'Cacoo Ninja'
-  homepage 'https://cacoo.com/extension'
+  homepage 'https://support.cacoo.com/extension'
 
   depends_on cask: 'adobe-air'
 
