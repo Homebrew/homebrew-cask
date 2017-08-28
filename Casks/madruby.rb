@@ -6,7 +6,7 @@ cask 'madruby' do
   appcast 'http://www.wingsforpigs.com/MadRuby/Download.html',
           checkpoint: '262a3a8eb1cd5d4322fe9d306ea2f595d44a11b64e8de873f664cdf083b07620'
   name 'MadRuby'
-  homepage 'http://www.wingsforpigs.com/MadRuby/MadRuby.html'
+  homepage 'https://www.wingsforpigs.com/MadRuby/MadRuby.html'
 
   app 'MadRuby.app'
 end
