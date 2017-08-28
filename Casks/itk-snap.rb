@@ -7,7 +7,7 @@ cask 'itk-snap' do
   appcast "https://sourceforge.net/projects/itk-snap/rss?path=/itk-snap/#{version.major_minor_patch}",
           checkpoint: 'cbcb8043f900839c85287548d79ba588f88a1b7756cea163ef901f2671bff3b9'
   name 'ITK-SNAP'
-  homepage 'http://www.itksnap.org/'
+  homepage 'http://www.itksnap.org/pmwiki/pmwiki.php'
 
   app 'ITK-SNAP.app'
 end
