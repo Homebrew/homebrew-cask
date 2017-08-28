@@ -7,7 +7,7 @@ cask 'kactus' do
   appcast 'https://github.com/kactus-io/kactus/releases.atom',
           checkpoint: 'ce6902d4aade77ed5f22683313d826806107317becc80a48c27ca7aa46c800cc'
   name 'Kactus'
-  homepage 'http://kactus.io/'
+  homepage 'https://kactus.io/'
 
   depends_on cask: 'sketch'
 
