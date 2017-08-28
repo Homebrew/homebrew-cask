@@ -7,7 +7,7 @@ cask 'dvdstyler' do
   appcast 'https://sourceforge.net/projects/dvdstyler/rss',
           checkpoint: 'f5dcdcddef5bfa8da5cb8c688cd58e432d2cb5742b3193f99d9a34043c831eee'
   name 'DVDStyler'
-  homepage 'http://www.dvdstyler.org/'
+  homepage 'https://www.dvdstyler.org/'
 
   depends_on macos: '>= :yosemite'
 
