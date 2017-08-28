@@ -5,7 +5,7 @@ cask 'microsoft-azure-storage-explorer' do
   # microsoft.com was verified as official when first introduced to the cask
   url 'https://go.microsoft.com/fwlink/?LinkId=708342'
   name 'Microsoft Azure Storage Explorer'
-  homepage 'http://storageexplorer.com/'
+  homepage 'https://azure.microsoft.com/en-us/features/storage-explorer/'
 
   app 'MicrosoftAzureStorageExplorer/Microsoft Azure Storage Explorer.app'
 end
