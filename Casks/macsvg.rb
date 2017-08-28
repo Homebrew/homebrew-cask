@@ -7,7 +7,7 @@ cask 'macsvg' do
   appcast 'https://github.com/dsward2/macSVG/releases.atom',
           checkpoint: 'b916ae46cba7c27f792c427f06ea14d772d1c99b65472a47d242dd904e08a3dc'
   name 'macSVG'
-  homepage 'http://macsvg.org/'
+  homepage 'https://macsvg.org/'
 
   app 'macSVG.app'
 

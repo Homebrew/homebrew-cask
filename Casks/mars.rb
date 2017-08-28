@@ -7,7 +7,7 @@ cask 'mars' do
           checkpoint: '70ce3d91a35154b5e9a12ff552be743420074361d49d3a7e5676dc9686c87971'
   name 'MIPS Assembler and Runtime Simulator'
   name 'MARS'
-  homepage 'http://courses.missouristate.edu/KenVollmar/mars/index.htm'
+  homepage 'https://courses.missouristate.edu/KenVollmar/mars/index.htm'
 
   container type: :naked
 
