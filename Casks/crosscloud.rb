@@ -4,7 +4,7 @@ cask 'crosscloud' do
 
   url 'https://update-2.crosscloud.me/release/darwin_x64/CrossCloud-latest.dmg'
   name 'CrossCloud'
-  homepage 'https://crosscloud.me/'
+  homepage 'https://crosscloud.io/'
 
   app 'CrossCloud.app'
 end
