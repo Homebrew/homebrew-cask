@@ -1,11 +1,12 @@
 cask 'aliwangwang' do
-  version '7.08.00-8659'
-  sha256 'b35e67920b72941e5ddee9a9297aa56d9a6c5c4eba23cc3b2bd9b2978f00e28d'
+  version '20170818-1459-8.00.28'
+  sha256 '343fbba48ce26b2f8f82ad8a8e65a553dead4bd128773cb7a5775ad4e33d0fe1'
 
   # dbison.alicdn.com was verified as official when first introduced to the cask
-  url "https://dbison.alicdn.com/updates/MacWW_7_6_10-#{version}.dmg"
+  url "https://alimarket.taobao.com/markets/qnww/aliww-download?wh_from=macos"
+  
   name 'Ali Wangwang'
-  homepage 'https://wangwang.taobao.com/'
+  homepage 'https://alimarket.taobao.com/markets/qnww/portal-group/ww/index'
 
   app 'AliWangwang.app'
 
