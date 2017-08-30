@@ -23,4 +23,11 @@ cask 'visual-studio-code' do
                 '~/Library/Preferences/com.microsoft.VSCode.plist',
                 '~/Library/Saved Application State/com.microsoft.VSCode.savedState',
               ]
+
+  caveats <<-EOS.undent
+          By default this application collects crash dumps and telemetry
+          data and sends them to Microsoft. Please visit
+          https://code.visualstudio.com/docs/supporting/FAQ
+          if you need to disable these reportings.
+          EOS
 end
