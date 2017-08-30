@@ -1,9 +1,9 @@
 cask 'mammon' do
-  version '0.2.3'
-  sha256 'b234bdfafa646e91f598e424d9f0fb93fbbf55b971dec7a8a6d87bfa6823797a'
+  version :latest
+  sha256 :no_check
 
-  # u5790728.dl.dropboxusercontent.com was verified as official when first introduced to the cask
-  url 'https://u5790728.dl.dropboxusercontent.com/u/5790728/Mammon-latest.zip'
+  # dl.dropboxusercontent.com/u/5790728 was verified as official when first introduced to the cask
+  url 'https://dl.dropboxusercontent.com/u/5790728/Mammon-latest.zip'
   name 'Mammon'
   homepage 'https://teamfox.co/mammon/'
 
