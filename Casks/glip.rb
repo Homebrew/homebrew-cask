@@ -5,7 +5,7 @@ cask 'glip' do
   # downloads.ringcentral.com/glip/rc was verified as official when first introduced to the cask
   url "https://downloads.ringcentral.com/glip/rc/#{version}/mac/Glip-#{version}.dmg"
   name 'Glip'
-  homepage 'https://www.glip.com/'
+  homepage 'https://glip.com/'
 
   app 'Glip.app'
 

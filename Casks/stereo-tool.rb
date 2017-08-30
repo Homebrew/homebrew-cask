@@ -6,7 +6,7 @@ cask 'stereo-tool' do
   appcast 'http://www.stereotool.com/version_history.shtml',
           checkpoint: '65fc8b88b49fb5600e56c379be8b85ec483d8e615ac3222cb0b6819c102988b3'
   name 'Stereo Tool'
-  homepage 'http://www.stereotool.com/'
+  homepage 'https://www.stereotool.com/'
 
   app 'stereo_tool.app'
 end

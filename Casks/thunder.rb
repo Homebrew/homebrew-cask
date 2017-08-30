@@ -1,6 +1,6 @@
 cask 'thunder' do
-  version '3.1.2.3078'
-  sha256 '60ddd58c725194817d3b7ebc61c077610ffab5c5c33679a110b8add4dbb5f0e0'
+  version '3.1.3.3106'
+  sha256 '9792b2f316c360fd258eceba3d78c9a480206480bf4e241ccaa6358e2f281f12'
 
   # down.sandai.net was verified as official when first introduced to the cask
   url "http://down.sandai.net/mac/thunder_#{version}.dmg"

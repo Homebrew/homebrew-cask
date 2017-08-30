@@ -6,7 +6,7 @@ cask 'textbar' do
   appcast 'http://www.richsomerfield.com/apps/textbar/sparkle_textbar.xml',
           checkpoint: 'ec2733787571d3fd463b998fc66e9682cfb7626aa569dccfe9c56af888668f6b'
   name 'TextBar'
-  homepage 'http://www.richsomerfield.com/apps/'
+  homepage 'http://richsomerfield.com/apps/'
 
   depends_on macos: '>= :mountain_lion'
 

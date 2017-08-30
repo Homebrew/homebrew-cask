@@ -6,7 +6,7 @@ cask 'yujitach-menumeters' do
   appcast 'https://github.com/yujitach/MenuMeters/releases.atom',
           checkpoint: '3fc1845ad638f6b32312a4dd61c640d60d5ef4cf2684f7470c98c2b3eaeb54d9'
   name 'MenuMeters for El Capitan (and later)'
-  homepage 'http://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/'
+  homepage 'https://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/'
 
   depends_on macos: '>= :el_capitan'
 

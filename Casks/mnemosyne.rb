@@ -7,7 +7,7 @@ cask 'mnemosyne' do
   appcast 'https://sourceforge.net/projects/mnemosyne-proj/rss?path=/mnemosyne',
           checkpoint: '43fb5c0bf4be29f6e67f10a3cef5994da60864520723073c22f8280860546272'
   name 'Mnemosyne'
-  homepage 'http://mnemosyne-proj.org/'
+  homepage 'https://mnemosyne-proj.org/'
 
   app 'Mnemosyne.app'
 end

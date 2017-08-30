@@ -10,7 +10,8 @@ cask 'santa' do
 
   pkg "santa-#{version}.pkg"
 
-  uninstall kext:      'com.google.santa-driver',
+  uninstall delete:    '/usr/local/bin/santactl',
+            kext:      'com.google.santa-driver',
             launchctl: ['com.google.santad', 'com.google.santagui'],
             pkgutil:   'com.google.santa'
 end

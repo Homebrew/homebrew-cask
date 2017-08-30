@@ -7,7 +7,7 @@ cask 'dbeaver-community' do
   appcast 'https://github.com/serge-rider/dbeaver/releases.atom',
           checkpoint: 'cb702cead4abdc1d103efcdb5c515e53c37e4e2fef63d618daf33c0d31df6619'
   name 'DBeaver Community Edition'
-  homepage 'http://dbeaver.jkiss.org/'
+  homepage 'https://dbeaver.jkiss.org/'
 
   app 'DBeaver.app'
 

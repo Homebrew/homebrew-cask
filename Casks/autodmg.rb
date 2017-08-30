@@ -4,15 +4,16 @@ cask 'autodmg' do
 
   url "https://github.com/MagerValp/AutoDMG/releases/download/v#{version}/AutoDMG-#{version}.dmg"
   appcast 'https://github.com/MagerValp/AutoDMG/releases.atom',
-          checkpoint: 'd81a5ea27380dc044e607407017bcc1c4c5f1b457ec9b8fba34862c4f6df99a1'
+          checkpoint: 'd68422cdd4d6e69d0dad795ae3a90b09b25bc65180cc818d97a95b290eef6f86'
   name 'AutoDMG'
   homepage 'https://github.com/MagerValp/AutoDMG'
 
   app 'AutoDMG.app'
 
-  zap delete: [
-                '~/Library/Preferences/se.gu.it.AutoDMG.plist',
-                '~/Library/Application Support/AutoDMG',
-                '~/Library/Caches/se.gu.it.AutoDMG',
-              ]
+  zap trash: [
+               '~/Library/Application Support/AutoDMG',
+               '~/Library/Caches/se.gu.it.AutoDMG',
+               '~/Library/Logs/AutoDMG',
+               '~/Library/Preferences/se.gu.it.AutoDMG.plist',
+             ]
 end

@@ -6,7 +6,7 @@ cask 'acorn' do
   appcast "http://www.flyingmeat.com/download/acorn#{version.major}update.xml",
           checkpoint: 'dc4f32f693746f7fa984b1fc9feab1d0871a252edfb4784b842b465ffffb4285'
   name 'Acorn'
-  homepage 'http://flyingmeat.com/acorn/'
+  homepage 'https://flyingmeat.com/acorn/'
 
   auto_updates true
 

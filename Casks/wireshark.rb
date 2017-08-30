@@ -1,10 +1,10 @@
 cask 'wireshark' do
-  version '2.4.0'
-  sha256 '20c2e5fa8ec302fc47100ad42f8d2020e629a72b75a7343929206d3274bd08b2'
+  version '2.4.1'
+  sha256 'cbf1f66020d049e645edd9ee8f0ebdd7d71d019d3fb2c44e028fcd65195b268b'
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
   appcast 'https://www.wireshark.org/download/osx/',
-          checkpoint: '0645b35f9985b5ccd49a2d59603dbd57efeaadbd71439dc9cfe8271798d61e0d'
+          checkpoint: '4a217edc73d35668ce432c60a01043c8e32a21d38b91d5e4654ae4f4cbf23af1'
   name 'Wireshark'
   homepage 'https://www.wireshark.org/'
 
