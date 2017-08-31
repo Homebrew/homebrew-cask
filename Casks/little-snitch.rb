@@ -15,6 +15,8 @@ cask 'little-snitch' do
 
   zap delete: [
                 '/Library/Application Support/Objective Development/Little Snitch',
+                '/Library/Logs/LittleSnitchDaemon.log',
+                '/Library/LaunchDaemons/at.obdev.littlesnitchd.plist',
                 '~/Library/Application Support/Little Snitch',
                 '~/Library/Caches/at.obdev.LittleSnitchAgent',
                 '~/Library/Caches/at.obdev.LittleSnitchConfiguration',
