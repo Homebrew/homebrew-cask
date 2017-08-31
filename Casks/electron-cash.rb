@@ -4,9 +4,9 @@ cask 'electron-cash' do
 
   url "https://electroncash.org/downloads/#{version}/mac/Electron-Cash-#{version}-macosx.dmg"
   name 'Electron Cash'
-  homepage 'http://www.electroncash.org/#downld'
+  homepage 'https://www.electroncash.org/'
 
-  app 'electron-cash.app'
+  app 'Electron-Cash.app'
 
   zap trash: '~/.electron-cash'
 end
