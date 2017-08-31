@@ -25,6 +25,7 @@ cask 'virtualbox' do
 
   zap delete: [
                 '/Library/Application Support/VirtualBox',
+                '/Library/LaunchDaemons/org.virtualbox.startup.plist',
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualbox.sfl',
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualboxvm.sfl',
                 '~/Library/VirtualBox',
