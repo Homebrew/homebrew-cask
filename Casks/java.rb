@@ -68,6 +68,8 @@ cask 'java' do
                          'net.java.openjdk.cmd', # Java Control Panel
                        ],
             delete:    [
+                         '/Library/LaunchDaemons/com.oracle.java.Helper-Tool.plist',
+                         '/Library/Preferences/com.oracle.java.Helper-Tool.plist',
                          '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin',
                          "/Library/Java/JavaVirtualMachines/jdk#{version.split('-')[0]}.jdk/Contents",
                          '/Library/PreferencePanes/JavaControlPanel.prefPane',
