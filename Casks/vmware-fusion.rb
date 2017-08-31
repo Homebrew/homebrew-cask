@@ -48,6 +48,7 @@ cask 'vmware-fusion' do
 
   zap delete: [
                 '/Library/Logs/VMware Fusion Services.log',
+                '/Library/Logs/VMware USB Arbitrator Service.log',
                 '/Library/Logs/VMware',
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vmware.fusion.sfl',
                 '~/Library/Caches/com.vmware.fusion',
