@@ -18,6 +18,7 @@ cask 'teamviewer' do
                          '/Library/PrivilegedHelperTools/com.teamviewer.Helper',
                          '/Library/Security/SecurityAgentPlugins/TeamViewerAuthPlugin.bundle',
                          '/Library/LaunchDaemons/com.teamviewer.teamviewer_service.plist',
+                         '/Library/LaunchDaemons/com.teamviewer.Helper.plist',
                        ],
             launchctl: [
                          'com.teamviewer.Helper',
