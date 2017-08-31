@@ -12,6 +12,7 @@ cask 'murus' do
 
   zap delete: [
                 '/Library/Application Support/Murus',
+                '/Library/LaunchDaemons/it.murus.murusfirewallrules.plist',
                 '/Library/Preferences/it.murus.muruslibrary.plist',
                 '/etc/murus',
                 '/etc/murus.sh',
