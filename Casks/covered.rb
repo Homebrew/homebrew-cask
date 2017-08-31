@@ -4,7 +4,7 @@ cask 'covered' do
 
   url "http://robheague.com/s/Covered-#{version.no_dots}.zip"
   name 'Covered'
-  homepage 'http://robheague.com/covered'
+  homepage 'https://robheague.com/covered'
 
   app 'Covered.app'
 end

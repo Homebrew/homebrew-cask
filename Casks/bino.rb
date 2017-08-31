@@ -7,7 +7,7 @@ cask 'bino' do
   appcast 'http://devernay.free.fr/hacks/bino/',
           checkpoint: '7f37618abb83b7b1c1a5cf954b3396d5cb729bb3184a88505efeff6c47cc6259'
   name 'Bino'
-  homepage 'http://bino3d.org/'
+  homepage 'https://bino3d.org/'
 
   app 'Bino.app'
 end

@@ -1,6 +1,6 @@
 cask 'carbon-copy-cloner' do
-  version '4.1.18.4592'
-  sha256 'f2beabeb9d6c0a3c7bbc842abb21d7d999f1a6ef587a7e74a962dca64d4bfef4'
+  version '5.0.5061'
+  sha256 '1fcd53c453ece31d25f0b1d86b5ffff8590f267aa4355711458db1940c2fe74c'
 
   url "https://bombich.com/software/download_ccc.php?v=#{version}"
   name 'Carbon Copy Cloner'

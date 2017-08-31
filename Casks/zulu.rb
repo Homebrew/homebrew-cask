@@ -5,7 +5,7 @@ cask 'zulu' do
   url "https://cdn.azul.com/zulu/bin/zulu#{version.after_comma}-jdk#{version.minor}.#{version.patch}.#{version.before_comma.sub(%r{.*_}, '')}-macosx_x64.dmg",
       referer: 'https://www.azul.com/downloads/zulu/zulu-mac/'
   name 'Azul Zulu Java Standard Edition Development Kit'
-  homepage 'http://www.azul.com/downloads/zulu/zulu-mac/'
+  homepage 'https://www.azul.com/downloads/zulu/zulu-mac/'
 
   conflicts_with cask: 'java'
 

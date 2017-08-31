@@ -7,7 +7,7 @@ cask 'keytty' do
   appcast 'https://updates.devmate.com/com.keytty.Keytty.xml',
           checkpoint: '7fd0b94dd90eab19e4be001ec520fb3ad5c1558c6d53acf8631639b561818b53'
   name 'Keytty'
-  homepage 'http://keytty.com/'
+  homepage 'https://keytty.com/'
 
   app 'Keytty.app'
 

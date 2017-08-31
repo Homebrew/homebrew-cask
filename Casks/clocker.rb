@@ -7,7 +7,7 @@ cask 'clocker' do
   appcast 'https://github.com/abhishekbanthia/Clocker/releases.atom',
           checkpoint: 'a3c5d15412fc810a77449d8a0e1fa722820f870d074c552bc628fc3137bcc7f8'
   name 'Clocker'
-  homepage 'https://abhishekbanthia.com/Clocker'
+  homepage 'https://abhishekbanthia.com/Clocker/'
 
   app 'Clocker.app'
 

@@ -4,7 +4,7 @@ cask 'miniconda' do
 
   url 'https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh'
   name 'Continuum Analytics Miniconda'
-  homepage 'https://www.continuum.io/why-anaconda'
+  homepage 'https://www.continuum.io/what-is-anaconda'
 
   auto_updates true
   depends_on macos: '>= :lion'
