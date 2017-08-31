@@ -1,10 +1,10 @@
 cask 'nix' do
-  version '1.11.13'
-  sha256 '54376012e8d6825560602015719fb31e19ca66c17ea0919bb1f6455a9d972115'
+  version '1.11.14'
+  sha256 '1bbf5940ea3ce04f44004ad0e734fa2f1f52b034301d6ea0c7b33cbb7ad36f0a'
 
   url "https://nixos.org/releases/nix/nix-#{version}/nix-#{version}-x86_64-darwin.tar.bz2"
   appcast 'https://nixos.org/releases/nix/latest/',
-          checkpoint: 'e156d4dfa377a5e52805fe3cb9ae42bd49e64dbf65f396406be2ba880fff82c3'
+          checkpoint: 'e366f802361e0e3a972ea580474102cb7fa169b014cacd05ceb49f130c3362c7'
   name 'nix'
   homepage 'https://nixos.org/nix/'
 
