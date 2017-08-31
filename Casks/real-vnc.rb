@@ -23,8 +23,10 @@ cask 'real-vnc' do
                        ]
 
   zap delete: [
+                '/Library/Logs/vncserver.log.bak',
                 '~/Library/Saved Application State/com.realvnc.vnclicensewiz.savedState',
                 '~/Library/Saved Application State/com.realvnc.vncviewer.savedState',
                 '~/Library/Saved Application State/com.realvnc.vncserver.savedState',
+                '/Library/LaunchAgents/com.realvnc.vncserver.peruser.plist',
               ]
 end
