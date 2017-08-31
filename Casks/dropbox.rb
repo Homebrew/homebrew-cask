@@ -14,6 +14,7 @@ cask 'dropbox' do
 
   zap delete: [
                 '/Library/DropboxHelperTools',
+                '~/Library/Application Scripts/com.getdropbox.dropbox.garcon',
                 '~/Library/Caches/CloudKit/com.apple.bird/iCloud.com.getdropbox.Dropbox',
                 '~/Library/Caches/com.dropbox.DropboxMacUpdate',
                 '~/Library/Caches/com.getdropbox.dropbox',
@@ -24,7 +25,6 @@ cask 'dropbox' do
               ],
       trash:  [
                 '~/.dropbox',
-                '~/Library/Application Scripts/com.getdropbox.dropbox.garcon',
                 '~/Library/Application Support/Dropbox',
                 '~/Library/Dropbox',
                 '~/Library/Preferences/com.dropbox.DropboxMacUpdate.plist',
