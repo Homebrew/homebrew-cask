@@ -6,7 +6,7 @@ cask 'fotomagico' do
   appcast 'https://www.boinx.com/d/connect/histories/fotomagico',
           checkpoint: '9727c0a09a7f2ce884677cdd74963cb201899f2f552b1d85ea6a5ec25e2faea7'
   name 'FotoMagico'
-  homepage 'https://www.boinx.com/fotomagico/'
+  homepage 'https://boinx.com/fotomagico/'
 
   app "FotoMagico #{version.major}.app"
 end

@@ -1,6 +1,6 @@
 cask 'freefilesync' do
-  version '9.2'
-  sha256 'ddd1068b5ce8b4efacd9af64d98fb987f8b58b2913501adc44b2c0f1046a6860'
+  version '9.3'
+  sha256 '03bf3a00ceae583e87c9e2afae255e75ece6ff218a2021b5fd9ccfdcdda6c33d'
 
   url "http://www.freefilesync.org/download/FreeFileSync_#{version}_macOS.zip",
       user_agent: :fake

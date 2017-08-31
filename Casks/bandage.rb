@@ -5,9 +5,19 @@ cask 'bandage' do
   # github.com/rrwick/Bandage was verified as official when first introduced to the cask
   url "https://github.com/rrwick/Bandage/releases/download/v#{version}/Bandage_Mac_v#{version.dots_to_underscores}.zip"
   appcast 'https://github.com/rrwick/Bandage/releases.atom',
-          checkpoint: '31d89821f7d090aa6a4ed73752942e232ba1309fc2338ced357adf5bcbb5faab'
+          checkpoint: '538b835e813476438dcfb0fca69c044b4c2766c5e65b5bba1980c3c33c1dc81f'
   name 'Bandage'
   homepage 'https://rrwick.github.io/Bandage/'
 
   app 'Bandage.app'
+  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/bandage.wrapper.sh"
+  binary shimscript, target: 'bandage'
+
+  preflight do
+    IO.write shimscript, <<-EOS.undent
+      #!/bin/sh
+      exec '#{appdir}/Bandage.app/Contents/MacOS/Bandage' "$@"
+    EOS
+  end
 end

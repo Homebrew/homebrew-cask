@@ -4,7 +4,7 @@ cask 'bossman' do
 
   url "https://github.com/ianclarksmith/Bossman/releases/download/#{version}/Bossman.zip"
   appcast 'https://github.com/ianclarksmith/Bossman/releases.atom',
-          checkpoint: 'fe7abd2bc606f39d8fb69029bd6bdc7e546598d1e7ceabd4c93496d6d52f72fb'
+          checkpoint: 'f682f7274122f138acf357d2214a91e11466ea840e04c39b73ca1b32ceb08a44'
   name 'Bossman'
   homepage 'https://github.com/ianclarksmith/Bossman'
 

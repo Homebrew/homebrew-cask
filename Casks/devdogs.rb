@@ -4,7 +4,7 @@ cask 'devdogs' do
 
   url "https://github.com/ragingwind/devdogs/releases/download/v#{version}/Devdogs-#{version}.zip"
   appcast 'https://github.com/ragingwind/devdogs/releases.atom',
-          checkpoint: 'a7376c6ffe714969b60b94a478fb74e8eb0a34fed5a4e372d566257bfc35dd52'
+          checkpoint: '6e2731d0405cd98e1e9242ba097893ddab3efa8dea80200da8c4c3f00cacc2d4'
   name 'Devdogs'
   homepage 'https://github.com/ragingwind/devdogs'
 

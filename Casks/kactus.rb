@@ -1,13 +1,13 @@
 cask 'kactus' do
-  version '0.1.14'
-  sha256 'cf5ba67e11e9a3ac7583dd5b90d1653d77149a4ec799aebaca3bdc1def12309f'
+  version '0.2.6'
+  sha256 'e689e10903196cab231b372a0f5b811fe7881bef30d8eaa7a973c0bccc0937b1'
 
   # github.com/kactus-io/kactus was verified as official when first introduced to the cask
   url "https://github.com/kactus-io/kactus/releases/download/v#{version}/Kactus-macos.zip"
   appcast 'https://github.com/kactus-io/kactus/releases.atom',
-          checkpoint: '23743bc8f8c0791b844e0d19868222628e96584c30fc1ac7a2afe2c4b220c419'
+          checkpoint: 'bcfb454afb3d4069a76e153e0e7068502c18844ab8166133ae1e74eb05b179c9'
   name 'Kactus'
-  homepage 'http://kactus.io/'
+  homepage 'https://kactus.io/'
 
   depends_on cask: 'sketch'
 

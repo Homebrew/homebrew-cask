@@ -6,7 +6,7 @@ cask 'robofont' do
   appcast 'http://doc.robofont.com/version-history/',
           checkpoint: '4c873452fed5d8b3ba9e9d533bd6f5395d520a77dca0284bcd8af7becae27136'
   name 'RoboFont'
-  homepage 'http://doc.robofont.com/'
+  homepage 'https://doc.robofont.com/'
 
   depends_on macos: '>= :mavericks'
 

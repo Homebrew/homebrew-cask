@@ -5,7 +5,7 @@ cask 'cmucl' do
   # common-lisp.net/project/cmucl was verified as official when first introduced to the cask
   url "https://common-lisp.net/project/cmucl/downloads/release/#{version}/cmucl-#{version}-x86-darwin.tar.bz2"
   appcast 'https://common-lisp.net/project/cmucl/downloads/release/',
-          checkpoint: '532de0c79a895ca878da189f81b785852cb583ac892d02208abffafaa65ace17'
+          checkpoint: '3fba3d06219fd1dee10e62801d0a957775443059d58d2026c5d637649795a4da'
   name 'Cmucl'
   homepage 'https://www.cons.org/cmucl/'
 

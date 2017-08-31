@@ -1,10 +1,10 @@
 cask 'brisk' do
-  version '1.0.1'
-  sha256 '75efe333c1f5e20c58e010f443dae505a679b651f5fecf6f6a49e5d5763475ac'
+  version '1.1.1'
+  sha256 '0a4ba3fe9a48ad95ebd313b09dab57e11b1940238019bbb9e77ce72dc2c3864b'
 
   url "https://github.com/br1sk/brisk/releases/download/#{version}/Brisk.app.tar.gz"
   appcast 'https://github.com/br1sk/brisk/releases.atom',
-          checkpoint: '5e8c5b48f8af9de1dab910ab3e1cc4960e0c9b577745b22db677febdfe66ec82'
+          checkpoint: 'caf4d4d20cb70c806f92e01d30b8e8dc213da21c54a1449a37b18f5d7ea50cca'
   name 'Brisk'
   homepage 'https://github.com/br1sk/brisk'
 

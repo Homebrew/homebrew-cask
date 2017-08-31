@@ -10,4 +10,11 @@ cask 'wifi-explorer' do
   homepage 'https://www.adriangranados.com/apps/wifi-explorer'
 
   app 'WiFi Explorer.app'
+
+  zap delete: [
+                '~/Library/Caches/wifiexplorer',
+                '~/Library/Cookies/wifiexplorer.binarycookies',
+                '~/Library/Saved Application State/wifiexplorer.savedState',
+              ],
+      trash:  '~/Library/Preferences/wifiexplorer.plist'
 end

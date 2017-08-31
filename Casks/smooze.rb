@@ -1,10 +1,10 @@
 cask 'smooze' do
-  version '1.2.4'
-  sha256 '649f9ae5a0e23903c85bf62cc2a3d494f60baa1f5e6e502c196bc653b06a5c69'
+  version '1.3.5'
+  sha256 'ebe00f105e1d143cbdd08e0769f4021ad79793bcecdb2a2339efc8e9d7e5a225'
 
   url 'https://smooze.co/updates/Smooze.dmg'
   appcast 'https://smooze.co/updates/update.xml',
-          checkpoint: 'ad1e8fe7b7d567c8f212cbf458156eec0670f0ba9619fa3f1c8c0e0f05102455'
+          checkpoint: '9301be4996a0ea2924dfd59d32dc852f23dac06867f3e9ba1bda3d2a7b25a94c'
   name 'Smooze'
   homepage 'https://smooze.co/'
 

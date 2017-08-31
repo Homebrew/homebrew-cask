@@ -6,13 +6,13 @@ cask 'geekbench' do
     # cdn.primatelabs.com was verified as official when first introduced to the cask
     url "https://cdn.primatelabs.com/Geekbench-#{version}-Mac.zip"
   else
-    version '4.1.0'
-    sha256 '66ccd91e95bf825de551ba19954c57448c550dd9a37779c08bda7ce5b38657f9'
+    version '4.1.1'
+    sha256 'a0051df2d9df184d08805f88af99cdba6473008e7f9cfaee53a3dc68d9e76170'
 
     # cdn.primatelabs.com was verified as official when first introduced to the cask
     url "https://cdn.primatelabs.com/Geekbench-#{version}-Mac.dmg"
     appcast "https://www.primatelabs.com/appcast/geekbench#{version.major}.xml",
-            checkpoint: 'bd46ef81977d4cb677c1f768f2bc204f4a20a7fd4edfde7a9e7a8a3dc9472f6d'
+            checkpoint: '4b9153b8802d9f29cc3c2117512d98620918011994c5a131f28f795917732d5d'
   end
 
   name 'Geekbench'

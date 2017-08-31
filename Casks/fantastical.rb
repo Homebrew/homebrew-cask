@@ -8,6 +8,8 @@ cask 'fantastical' do
   name 'Fantastical'
   homepage 'https://flexibits.com/fantastical'
 
+  auto_updates true
+
   app "Fantastical #{version.major}.app"
 
   zap trash: '~/Library/Preferences/com.flexibits.fantastical.plist'

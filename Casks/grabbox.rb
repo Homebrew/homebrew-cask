@@ -1,10 +1,10 @@
 cask 'grabbox' do
-  version '2.0.0'
-  sha256 '7d8d01aff457666380c38c1a8799c64851c90dc1d5c84f5697f55cfae6b27036'
+  version '2.0.2'
+  sha256 '4413c7e9035b4b0e18e979d3cb74dade8c9672bdca409cf3771af80e592ec3e3'
 
   url "https://grabbox.bitspatter.com/updates/GrabBox-#{version}.zip"
   appcast 'https://grabbox.bitspatter.com/updates/appcast.xml',
-          checkpoint: '3a10ed571d39005e4b3af39c3d56b6ce5c181bfcf3615c0478df6f126fab5548'
+          checkpoint: 'fd68ecdde99fa9c2ef46c5954487c9429d6035db816afac20902a53ad072bc88'
   name 'GrabBox'
   homepage 'https://grabbox.bitspatter.com/'
 

@@ -1,12 +1,12 @@
 cask 'the-unarchiver' do
   version '3.11.1'
-  sha256 '2b9e1c0f6bcad958c19bfa0b5b1c59ad0681574100918004c0bcad2e43dc0761'
+  sha256 '12d1af6475149647f996f1b0510e067f057444852f1aa08a8dad75d6debe6ddf'
 
-  url "https://unarchiver.c3.cx/downloads/TheUnarchiver#{version}.zip"
-  appcast 'https://unarchiver.c3.cx/updates.rss',
-          checkpoint: '12b3e96559528c84b7353ce25f66d685b3813a4f86b3802835988f9b90084228'
+  url 'https://theunarchiver.com/downloads/TheUnarchiver.zip'
+  appcast 'https://theunarchiver.com/updates.rss',
+          checkpoint: 'ccc12c475bce837e293f6ac608eb6f5a8a3ff07728410899a39d9b3c48457aa3'
   name 'The Unarchiver'
-  homepage 'https://unarchiver.c3.cx/unarchiver'
+  homepage 'https://theunarchiver.com/'
 
   auto_updates true
   depends_on macos: '>= :lion'
@@ -16,6 +16,6 @@ cask 'the-unarchiver' do
   zap delete: [
                 '~/Library/Caches/cx.c3.theunarchiver',
                 '~/Library/Cookies/cx.c3.theunarchiver.binarycookies',
-                '~/Library/Preferences/cx.c3.theunarchiver.plist',
-              ]
+              ],
+      trash:  '~/Library/Preferences/cx.c3.theunarchiver.plist'
 end

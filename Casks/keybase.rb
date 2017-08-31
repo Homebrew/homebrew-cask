@@ -1,10 +1,10 @@
 cask 'keybase' do
-  version '1.0.26-20170724171020,b095a794e'
-  sha256 '8b802cae8fe7edb393177ce9dca5ebe7602011239de858aef138749d22ec4537'
+  version '1.0.28-20170815205142,c36e316c3'
+  sha256 'ca55f80915afe085555e0863bf812323d9ad744a997c2f49cbfbddc213c54914'
 
   url "https://prerelease.keybase.io/darwin/Keybase-#{version.before_comma}%2B#{version.after_comma}.dmg"
   appcast 'https://prerelease.keybase.io/update-darwin-prod-v2.json',
-          checkpoint: 'fa09c46b1e76dc989bf5e14b21e8acabdcdee38612c29363cb7469986ab40160'
+          checkpoint: '98592694ab6ee6fd25f64fd177363e85d2e5299aea95ef24819acf6a1978924b'
   name 'Keybase'
   homepage 'https://keybase.io/'
 
@@ -17,7 +17,8 @@ cask 'keybase' do
                    args: ["--app-path=#{appdir}/Keybase.app", '--run-mode=prod', '--timeout=10']
   end
 
-  uninstall launchctl:  'keybase.Helper',
+  uninstall delete:     '/Library/PrivilegedHelperTools/keybase.Helper',
+            launchctl:  'keybase.Helper',
             login_item: 'Keybase',
             signal:     [
                           ['TERM', 'keybase.Electron'],
@@ -31,18 +32,15 @@ cask 'keybase' do
                         }
 
   zap delete: [
-                '~/Library/Application Support/Keybase',
                 '~/Library/Caches/Keybase',
                 '~/Library/Group Containers/keybase',
-                '~/Library/Logs/Keybase.app.log',
-                '~/Library/Logs/keybase.kbfs.log',
-                '~/Library/Logs/keybase.service.log',
-                '~/Library/Logs/keybase.start.log',
-                '~/Library/Logs/keybase.updater.log',
-                '~/Library/Preferences/keybase.Electron.plist',
-                '~/Library/Preferences/keybase.ElectronHelper.plist',
-                '/Library/Logs/keybase.system.log',
-                '/Library/PrivilegedHelperTools/keybase.Helper',
+                '~/Library/Logs/Keybase*',
+                '~/Library/Logs/keybase*',
+                '/Library/Logs/keybase*',
+              ],
+      trash:  [
+                '~/Library/Application Support/Keybase',
+                '~/Library/Preferences/keybase*',
               ],
       rmdir:  '/keybase'
 end

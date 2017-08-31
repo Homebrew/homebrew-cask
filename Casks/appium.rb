@@ -1,16 +1,20 @@
 cask 'appium' do
-  version '1.5.3'
-  sha256 '1ab149ef4410d69ec757d435fd3613ab333ec69b09cdf6cf3800fe66731f71a4'
+  version '1.1.1'
+  sha256 'bdb212c3e71b47e0c36ed246cb3bc10e704cc50c3f87de0447cc111be317e7b2'
 
-  # bitbucket.org/appium/appium.app was verified as official when first introduced to the cask
-  url "https://bitbucket.org/appium/appium.app/downloads/appium-#{version}.dmg"
-  name 'Appium'
+  # github.com/appium/appium-desktop was verified as official when first introduced to the cask.
+  url "https://github.com/appium/appium-desktop/releases/download/v#{version}/appium-desktop-#{version}-mac.zip"
+  appcast 'https://github.com/appium/appium-desktop/releases.atom',
+          checkpoint: '7d0ddbc3fae9396cb02d4cea56dead044c1055b9f09c5f061275f8be922f8fb3'
+  name 'Appium Desktop'
   homepage 'https://appium.io/'
 
   app 'Appium.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.appium.Appium.plist',
-                '~/Library/Caches/com.appium.Appium',
+  zap delete: '~/Library/Saved Application State/io.appium.desktop.savedState',
+      trash:  [
+                '~/Library/Application Support/appium-desktop',
+                '~/Library/Preferences/io.appium.desktop.helper.plist',
+                '~/Library/Preferences/io.appium.desktop.plist',
               ]
 end

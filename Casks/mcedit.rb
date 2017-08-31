@@ -7,7 +7,7 @@ cask 'mcedit' do
   appcast 'https://github.com/Khroki/MCEdit-Unified/releases.atom',
           checkpoint: '6d45b83ded8e642ca2c53c5210f7dc45c52e4865cfe8d2c790c06838fa79aed0'
   name 'MCEdit-Unified'
-  homepage 'http://www.mcedit-unified.net/'
+  homepage 'https://www.mcedit-unified.net/'
 
   app 'mcedit.app'
 end

@@ -4,7 +4,7 @@ cask 'context-free' do
 
   url "http://www.contextfreeart.org/download/ContextFree#{version}.dmg"
   appcast 'https://github.com/MtnViewJohn/context-free/releases.atom',
-          checkpoint: 'e870c4c9ad2c4e7dcd36b196f0008000a4f821cf6f86a55237067f37769f809b'
+          checkpoint: '54b9e3003e60d4ae9ad25ba74a4fa0b78f6837d4a28adb55cfe078c103c81e3f'
   name 'Context Free'
   homepage 'https://www.contextfreeart.org/'
 

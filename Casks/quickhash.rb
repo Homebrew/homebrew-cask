@@ -4,7 +4,7 @@ cask 'quickhash' do
 
   url "http://quickhash-gui.org/download/quickhash-v#{version.before_comma.dots_to_hyphens}-for-apple-mac-osx/?wpdmdl=#{version.after_comma}"
   name 'Quickhash'
-  homepage 'http://quickhash-gui.org/'
+  homepage 'https://quickhash-gui.org/'
 
   app "QuickHash-v#{version.before_comma}-OSX"
 end

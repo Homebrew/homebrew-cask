@@ -9,4 +9,10 @@ cask 'netspot' do
   homepage 'https://www.netspotapp.com/'
 
   app 'NetSpot.app'
+
+  zap delete: '~/Library/Caches/com.etwok.netspotwifi',
+      trash:  [
+                '~/Library/Application Support/NetSpot',
+                '~/Library/Preferences/com.etwok.netspotwifi.plist',
+              ]
 end

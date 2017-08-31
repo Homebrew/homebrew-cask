@@ -5,7 +5,7 @@ cask 'beotsmusic' do
   # github.com/kiding/beotsmusic was verified as official when first introduced to the cask
   url "https://github.com/kiding/beotsmusic/releases/download/#{version}/BeotsMusic.dmg"
   appcast 'https://github.com/kiding/beotsmusic/releases.atom',
-          checkpoint: '6cd63e1261d3a157a90f0555f4be6c906e6980780a02f0e952efcd66a07c0405'
+          checkpoint: 'a3d8588b8a84346c5831e7175f86d50336af540b3eece41a4741b9b38b1d0794'
   name 'BeotsMusic'
   homepage 'http://beotsmusic.kiding.net/'
 

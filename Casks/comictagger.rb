@@ -4,7 +4,7 @@ cask 'comictagger' do
 
   url "https://github.com/davide-romanini/comictagger/releases/download/#{version}/ComicTagger-#{version}.dmg"
   appcast 'https://github.com/davide-romanini/comictagger/releases.atom',
-          checkpoint: 'f7b51d43427127ee247bb47425d9419c8cd59df043063fa29345bdb12928900d'
+          checkpoint: '6f8c330b4be724d22619da7536028e38c4a86d126fd636ce8e1bd64b3451beb0'
   name 'ComicTagger'
   homepage 'https://github.com/davide-romanini/comictagger'
 
