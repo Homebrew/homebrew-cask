@@ -27,6 +27,5 @@ cask 'real-vnc' do
                 '~/Library/Saved Application State/com.realvnc.vnclicensewiz.savedState',
                 '~/Library/Saved Application State/com.realvnc.vncviewer.savedState',
                 '~/Library/Saved Application State/com.realvnc.vncserver.savedState',
-                '/Library/LaunchAgents/com.realvnc.vncserver.peruser.plist',
               ]
 end
