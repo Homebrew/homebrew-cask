@@ -8,5 +8,5 @@ cask 'hype' do
   name 'Tumult Hype'
   homepage 'https://tumult.com/hype/'
 
-  app "Hype #{version.major}.app"
+  app 'Hype 3.app'
 end
