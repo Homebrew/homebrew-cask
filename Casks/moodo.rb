@@ -3,7 +3,7 @@ cask 'moodo' do
   sha256 'c4d7d446cee0faa37cce36f930ddcc8b68d423e8e6dadf4776d6ac9580e404f1'
 
   # github.com/MooDoApp/MooDoApp.github.io was verified as official when first introduced to the cask
-  url 'https://github.com/MooDoApp/MooDoApp.github.io/releases/download/v1.0.6/Moo.do-1.0.6-mac.zip'
+  url "https://github.com/MooDoApp/MooDoApp.github.io/releases/download/v#{version}/Moo.do-#{version}-mac.zip"
   appcast 'https://github.com/MooDoApp/MooDoApp.github.io/releases.atom',
           checkpoint: 'd95a5384b386f950183595d4dd703764d41b634cf96627dfcafc0021a9519d9d'
   name 'Moo.do'
