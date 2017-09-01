@@ -9,6 +9,11 @@ cask 'mactex' do
   name 'MacTeX'
   homepage 'https://www.tug.org/mactex/'
 
+  conflicts_with cask: [
+                         'mactex-no-ghostscript',
+                         'basictex',
+                       ]
+
   pkg "mactex-#{version}.pkg"
 
   uninstall pkgutil: [
