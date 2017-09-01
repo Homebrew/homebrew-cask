@@ -9,7 +9,7 @@ cask 'duplicati' do
   homepage 'https://www.duplicati.com/'
 
   app 'Duplicati.app'
-  
+
   zap delete: [
                 '~/Library/Application Support/Duplicati',
                 '~/.config/Duplicati',
