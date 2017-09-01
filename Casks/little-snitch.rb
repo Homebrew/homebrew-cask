@@ -14,8 +14,8 @@ cask 'little-snitch' do
   installer manual: 'Little Snitch Installer.app'
 
   uninstall launchctl: [
-                         'at.obdev.LittleSnitchUIAgent.plist',
-                         'at.obdev.littlesnitchd.plist',
+                         'at.obdev.LittleSnitchUIAgent',
+                         'at.obdev.littlesnitchd',
                        ]
 
   zap delete: [
