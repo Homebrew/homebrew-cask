@@ -8,5 +8,6 @@ cask 'hype' do
   name 'Tumult Hype'
   homepage 'https://tumult.com/hype/'
 
-  app "Hype #{version.major}.app"
+  # Renamed for consistency: app name is different in the Finder and in a shell
+  app 'Hype2.app', target: "Hype #{version.major}.app"
 end
