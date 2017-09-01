@@ -16,6 +16,6 @@ cask 'imageoptim' do
                 '~/Library/Caches/net.pornel.ImageOptim',
                 '~/Library/Caches/ImageOptimResults.db',
                 '~/Library/Saved Application State/net.pornel.ImageOptim.savedState',
-              ]
-       trash: '~/Library/Preferences/net.pornel.ImageOptim.plist'
+              ],
+      trash:  '~/Library/Preferences/net.pornel.ImageOptim.plist'
 end
