@@ -21,5 +21,5 @@ cask 'emacs' do
                 '~/Library/Saved Application State/org.gnu.Emacs.savedState',
                 '~/Library/Caches/org.gnu.Emacs',
               ],
-       trash: '~/Library/Preferences/org.gnu.Emacs.plist',
+      trash:  '~/Library/Preferences/org.gnu.Emacs.plist'
 end
