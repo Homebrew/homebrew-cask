@@ -1,4 +1,4 @@
-cask 'mactex' do
+cask 'mactex-no-ghostscript' do
   version '20170524'
   sha256 '0caf76027c9e0534a0b636f2b880ace4a0463105a7ad5774ccacede761be8c2d'
 
@@ -10,14 +10,34 @@ cask 'mactex' do
   homepage 'https://www.tug.org/mactex/'
 
   conflicts_with cask: [
-                         'mactex-no-ghostscript',
+                         'mactex',
                          'basictex',
                        ]
+  depends_on formula: 'ghostscript'
 
-  pkg "mactex-#{version}.pkg"
+  pkg "mactex-#{version}.pkg",
+      choices: [
+                 {
+                   # TeXLive
+                   'choiceIdentifier' => 'choice1',
+                   'choiceAttribute'  => 'selected',
+                   'attributeSetting' => 1,
+                 },
+                 {
+                   # GUI-Applications
+                   'choiceIdentifier' => 'choice2',
+                   'choiceAttribute'  => 'selected',
+                   'attributeSetting' => 1,
+                 },
+                 {
+                   # Ghostscript
+                   'choiceIdentifier' => 'choice3',
+                   'choiceAttribute'  => 'selected',
+                   'attributeSetting' => 0,
+                 },
+               ]
 
   uninstall pkgutil: [
-                       'org.tug.mactex.ghostscript9.21',
                        'org.tug.mactex.gui2017',
                        'org.tug.mactex.texlive2017',
                      ],
@@ -52,4 +72,8 @@ cask 'mactex' do
                 '/usr/local/texlive',
                 '~/Library/texlive',
               ]
+
+  caveats <<-EOS.undent
+    This Cask installs ghostscript from Homebrew instead of the one packaged with MacTeX.
+  EOS
 end
