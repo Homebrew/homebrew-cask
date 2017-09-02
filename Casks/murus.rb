@@ -10,12 +10,16 @@ cask 'murus' do
 
   app 'Murus.app'
 
+  uninstall launchctl: 'it.murus.murusfirewallrules'
+
   zap delete: [
                 '/Library/Application Support/Murus',
-                '/Library/Preferences/it.murus.muruslibrary.plist',
                 '/etc/murus',
                 '/etc/murus.sh',
                 '~/Library/Caches/it.murus.Murus',
               ],
-      trash:  '~/Library/Preferences/it.murus.Murus.plist'
+      trash:  [
+                '~/Library/Preferences/it.murus.Murus.plist',
+                '/Library/Preferences/it.murus.muruslibrary.plist',
+              ]
 end
