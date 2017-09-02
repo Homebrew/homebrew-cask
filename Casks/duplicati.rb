@@ -4,9 +4,14 @@ cask 'duplicati' do
 
   url "https://updates.duplicati.com/beta/duplicati-#{version.before_comma}_beta_#{version.after_comma}.dmg"
   appcast 'https://github.com/duplicati/duplicati/releases.atom',
-          checkpoint: 'a62964fa18b2896ce5de9ac6c7a2012457c1bfb4b36d9cf2ae4f336aca5e65fd'
+          checkpoint: '1d9839044f40dd3ee88a76d1074c8c34b7162a0960512932deeaa1e2d94fe9ee'
   name 'Duplicati'
   homepage 'https://www.duplicati.com/'
 
   app 'Duplicati.app'
+
+  zap trash: [
+               '~/Library/Application Support/Duplicati',
+               '~/.config/Duplicati',
+             ]
 end

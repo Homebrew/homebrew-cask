@@ -13,8 +13,14 @@ cask 'little-snitch' do
 
   installer manual: 'Little Snitch Installer.app'
 
+  uninstall launchctl: [
+                         'at.obdev.LittleSnitchUIAgent',
+                         'at.obdev.littlesnitchd',
+                       ]
+
   zap delete: [
                 '/Library/Application Support/Objective Development/Little Snitch',
+                '/Library/Logs/LittleSnitchDaemon.log',
                 '~/Library/Application Support/Little Snitch',
                 '~/Library/Caches/at.obdev.LittleSnitchAgent',
                 '~/Library/Caches/at.obdev.LittleSnitchConfiguration',
@@ -24,12 +30,14 @@ cask 'little-snitch' do
                 '~/Library/Logs/Little Snitch Agent.log',
                 '~/Library/Logs/Little Snitch Installer.log',
                 '~/Library/Logs/Little Snitch Network Monitor.log',
+                '~/Library/Saved Application State/at.obdev.LittleSnitchInstaller.savedState',
+              ],
+      trash:  [
                 '~/Library/Preferences/at.obdev.LittleSnitchAgent.plist',
                 '~/Library/Preferences/at.obdev.LittleSnitchConfiguration.plist',
                 '~/Library/Preferences/at.obdev.LittleSnitchInstaller.plist',
                 '~/Library/Preferences/at.obdev.LittleSnitchNetworkMonitor.plist',
                 '~/Library/Preferences/at.obdev.LittleSnitchSoftwareUpdate.plist',
-                '~/Library/Saved Application State/at.obdev.LittleSnitchInstaller.savedState',
               ],
       rmdir:  '/Library/Application Support/Objective Development'
 
