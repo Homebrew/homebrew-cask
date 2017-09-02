@@ -17,16 +17,19 @@ cask 'mactex-no-ghostscript' do
   pkg "mactex-#{version}.pkg",
       choices: [
                  {
+                   # TeXLive
                    'choiceIdentifier' => 'choice1',
                    'choiceAttribute'  => 'selected',
                    'attributeSetting' => 1,
                  },
                  {
+                   # GUI-Applications
                    'choiceIdentifier' => 'choice2',
                    'choiceAttribute'  => 'selected',
                    'attributeSetting' => 1,
                  },
                  {
+                   # Ghostscript
                    'choiceIdentifier' => 'choice3',
                    'choiceAttribute'  => 'selected',
                    'attributeSetting' => 0,
@@ -68,4 +71,8 @@ cask 'mactex-no-ghostscript' do
                 '/usr/local/texlive',
                 '~/Library/texlive',
               ]
+
+  caveats <<-EOS.undent
+    This Cask installs ghostscript from Homebrew instead of the one packaged with MacTex.
+  EOS
 end
