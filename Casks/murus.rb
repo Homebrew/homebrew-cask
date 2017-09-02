@@ -14,7 +14,6 @@ cask 'murus' do
 
   zap delete: [
                 '/Library/Application Support/Murus',
-
                 '/etc/murus',
                 '/etc/murus.sh',
                 '~/Library/Caches/it.murus.Murus',
