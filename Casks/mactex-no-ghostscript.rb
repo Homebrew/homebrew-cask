@@ -74,6 +74,6 @@ cask 'mactex-no-ghostscript' do
               ]
 
   caveats <<-EOS.undent
-    This Cask installs ghostscript from Homebrew instead of the one packaged with MacTex.
+    This Cask installs ghostscript from Homebrew instead of the one packaged with MacTeX.
   EOS
 end
