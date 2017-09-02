@@ -4,7 +4,8 @@ cask 'bitcore' do
 
   # github.com/LIMXTEC/BitCore was verified as official when first introduced to the cask
   url "https://github.com/LIMXTEC/BitCore/releases/download/#{version.before_comma}/BitCore-Qt-#{version.before_comma.dots_to_hyphens}-#{version.after_comma}.dmg"
-  appcast 'https://github.com/LIMXTEC/BitCore/releases.atom', checkpoint: '5897114ca17bf280d2f48c8e2b83a78e3fd995527b965296f5233f74103f28ab'
+  appcast 'https://github.com/LIMXTEC/BitCore/releases.atom',
+          checkpoint: '5897114ca17bf280d2f48c8e2b83a78e3fd995527b965296f5233f74103f28ab'
   name 'BitCore Core'
   homepage 'https://bitcore.cc/'
 
