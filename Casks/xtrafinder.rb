@@ -8,7 +8,7 @@ cask 'xtrafinder' do
   name 'XtraFinder'
   homepage 'https://www.trankynam.com/xtrafinder/'
 
-  pkg 'XtraFinder.pkg'
+  pkg 'XtraFinderInstaller.pkg'
 
   uninstall pkgutil: 'com.trankynam.xtrafinder.*'
 end
