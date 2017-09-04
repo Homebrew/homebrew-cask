@@ -1,17 +1,20 @@
 cask 'ship' do
-  version '2.6.3'
-  sha256 '67588cdfedf1b94edbdf79ce45c07583ec2ad1c7bacb9bcbbf66cfe72827698e'
+  version :latest
+  sha256 :no_check
 
-  url "https://www.realartists.com/builds/#{version.major}.0/Ship.app.zip"
-  appcast "https://www.realartists.com/builds/#{version.major}.0/sparkle.xml",
-          checkpoint: '32810777a8715056dcd5250a250d324f0ab8edf92c4dcf989f22b27906354332'
+  url 'https://www.realartists.com/builds/2.0/Ship.app.zip'
+  appcast 'https://www.realartists.com/builds/2.0/sparkle.xml',
+          checkpoint: '22b8b7320532a014ac88154ecf0e04583d063af9aa4bb936816a3621178c0865'
   name 'Ship'
   homepage 'https://www.realartists.com/'
 
+  auto_updates true
+
   app 'Ship.app'
 
-  zap trash: [
-               '~/Library/Preferences/com.realartists.Ship.plist',
-               '~/Library/Application Support/Ship',
-             ]
+  zap delete: [
+                '~/Library/Application Support/com.realartists.Ship2',
+                '~/Library/Preferences/com.realartists.Ship2.plist',
+                '~/Library/RealArtists/Ship2',
+              ]
 end
