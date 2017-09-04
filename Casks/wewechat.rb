@@ -9,4 +9,11 @@ cask 'wewechat' do
   homepage 'https://github.com/trazyn/weweChat'
 
   app 'weweChat.app'
+
+  zap delete: '~/Library/Saved Application State/gh.trazyn.wewechat.savedState',
+      trash:  [
+                '~/Library/Application Support/wewechat',
+                '~/Library/Preferences/gh.trazyn.wewechat.helper.plist',
+                '~/Library/Preferences/gh.trazyn.wewechat.plist',
+              ]
 end
