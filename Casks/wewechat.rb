@@ -4,8 +4,8 @@ cask 'wewechat' do
 
   url "https://github.com/trazyn/weweChat/releases/download/#{version}/weweChat-#{version}-mac.dmg"
   appcast 'https://github.com/trazyn/weweChat/releases.atom',
-  checkpoint: 'b5208df52528a359ba47cbb6d1a6a67bd12683fd1d25ceb9537f62e25a6be7e0'
-  name 'wewechat'
+          checkpoint: 'b5208df52528a359ba47cbb6d1a6a67bd12683fd1d25ceb9537f62e25a6be7e0'
+  name 'weweChat'
   homepage 'https://github.com/trazyn/weweChat'
 
   app 'weweChat.app'
