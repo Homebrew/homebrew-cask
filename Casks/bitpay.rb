@@ -5,10 +5,12 @@ cask 'bitpay' do
   # github.com/bitpay/copay was verified as official when first introduced to the cask
   url "https://github.com/bitpay/copay/releases/download/v#{version}/BitPay.dmg"
   appcast 'https://github.com/bitpay/copay/releases.atom',
-          checkpoint: 'de673f5a2182368cbb1d0edf10d9d68c99cbecc3391b06d4e834467abe21696c'
+          checkpoint: 'a489cf8938c1d1b05fc10ddc9101271030b52fa78d17d81315eac244e7bdfd23'
   name 'BitPay'
   homepage 'https://bitpay.com/'
   gpg "#{url}.sig", key_id: '9d17e656bb3b6163ae9d71725cd600a61112cfa1'
 
   app 'BitPay.app'
+
+  zap trash: '~/Library/Application Support/bitpay'
 end
