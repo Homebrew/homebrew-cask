@@ -14,8 +14,8 @@ cask 'cargo' do
   homepage 'https://crates.io/'
 
   binary "#{Utils.distname}/cargo/bin/cargo"
-  artifact "#{Utils.distname}/cargo/share/man/man1/cargo.1", target: '/usr/local/share/man/man1/cargo.1'
+  artifact "#{Utils.distname}/cargo/share/man/man1/cargo.1", target: "#{HOMEBREW_PREFIX}/share/man/man1/cargo.1"
   ['LICENSE-APACHE', 'LICENSE-MIT', 'LICENSE-THIRD-PARTY', 'README.md'].each do |doc_file|
-    artifact "#{Utils.distname}/cargo/share/doc/cargo/#{doc_file}", target: "/usr/local/share/doc/cargo/#{doc_file}"
+    artifact "#{Utils.distname}/cargo/share/doc/cargo/#{doc_file}", target: "#{HOMEBREW_PREFIX}/share/doc/cargo/#{doc_file}"
   end
 end
