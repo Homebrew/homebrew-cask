@@ -19,24 +19,24 @@ cask 'ncar-ncl' do
   depends_on formula: 'gcc'
   depends_on macos: '>= :el_capitan'
 
-  artifact 'include', target: "/usr/local/ncl-#{version}/include"
-  artifact 'bin', target: "/usr/local/ncl-#{version}/bin"
-  artifact 'lib', target: "/usr/local/ncl-#{version}/lib"
+  artifact 'include', target: "#{HOMEBREW_PREFIX}/ncl-#{version}/include"
+  artifact 'bin', target: "#{HOMEBREW_PREFIX}/ncl-#{version}/bin"
+  artifact 'lib', target: "#{HOMEBREW_PREFIX}/ncl-#{version}/lib"
 
   preflight do
-    system_command '/bin/mkdir', args: ['-p', "/usr/local/ncl-#{version}"], sudo: true
+    system_command '/bin/mkdir', args: ['-p', "#{HOMEBREW_PREFIX}/ncl-#{version}"], sudo: true
   end
 
-  uninstall delete: "/usr/local/ncl-#{version}"
+  uninstall delete: "#{HOMEBREW_PREFIX}/ncl-#{version}"
 
   caveats <<-EOS.undent
-    To use ncar-ncl, you must add the $NCARG_ROOT/bin directory
+    To use ncar-ncl, you must add the ${NCARG_ROOT}/bin directory
     to your PATH environment variable.
 
     For bash shell, add these lines to ~/.bash_profile:
 
-      export NCARG_ROOT=/usr/local/ncl-#{version}
-      export PATH=$NCARG_ROOT/bin:"$PATH"
+      export NCARG_ROOT="#{HOMEBREW_PREFIX}/ncl-#{version}"
+      export PATH="${NCARG_ROOT}/bin:${PATH}"
 
     You may also need to modify your DYLD_FALLBACK_LIBRARY_PATH
     environment variable:
