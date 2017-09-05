@@ -4,7 +4,7 @@ cask 'mattermost' do
 
   url "https://releases.mattermost.com/desktop/#{version}/mattermost-desktop-#{version}-osx.tar.gz"
   appcast 'https://github.com/mattermost/desktop/releases.atom',
-          checkpoint: 'c6603f09018f6b6aed410862479a67886be33e32f00ac331da6e9e2105e35858'
+          checkpoint: '547ac8a75d459980ae21a9fbd2de8188a04b9c6aefc6a6d987435a182f51dbf5'
   name 'Mattermost'
   homepage 'https://about.mattermost.com/'
 
