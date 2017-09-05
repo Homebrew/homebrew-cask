@@ -9,7 +9,7 @@ cask 'jad' do
   homepage 'https://varaneckas.com/jad/'
 
   binary 'jad'
-  artifact 'jad.1', target: '/usr/local/share/man/man1/jad.1'
+  artifact 'jad.1', target: "#{HOMEBREW_PREFIX}/share/man/man1/jad.1"
 
   caveats <<-EOS.undent
     Instructions on using jad are available in
