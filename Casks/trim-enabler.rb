@@ -18,4 +18,17 @@ cask 'trim-enabler' do
   homepage 'https://cindori.org/trimenabler/'
 
   app 'Trim Enabler.app'
+
+  zap delete: [
+                '/Library/LaunchDaemons/org.cindori.TEHelper.plist',
+                '/Library/PrivilegedHelperTools/org.cindori.TEHelper',
+                '~/Library/Application Support/CrashReporter/Trim Enabler_*.plist',
+                '~/Library/Application Support/Trim Enabler',
+                '~/Library/Application Support/org.cindori.TrimEnabler4',
+                '~/Library/Caches/org.cindori.TrimEnabler4',
+                '~/Library/Cookies/org.cindori.TrimEnabler4.binarycookies',
+                '~/Library/Logs/DiagnosticReports/Trim Enabler_*.crash',
+                '~/Library/Preferences/org.cindori.TrimEnabler.plist',
+                '~/Library/Preferences/org.cindori.TrimEnabler4.plist'
+              ]
 end
