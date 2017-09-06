@@ -5,7 +5,7 @@ cask 'electron' do
   # github.com/electron/electron was verified as official when first introduced to the cask
   url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-x64.zip"
   appcast 'https://github.com/electron/electron/releases.atom',
-          checkpoint: '55660b1856ec43765a9f80066c6575be8885e0ac59135ab4c81d2a436bf4086f'
+          checkpoint: 'c165766f9ab0c4b5226422cd6c1e68d3f726cadd0f925058665fafb231b528db'
   name 'Electron'
   homepage 'https://electron.atom.io/'
 
