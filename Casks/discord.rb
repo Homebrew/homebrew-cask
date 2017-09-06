@@ -6,6 +6,8 @@ cask 'discord' do
   name 'Discord'
   homepage 'https://discordapp.com/'
 
+  auto_updates true
+
   app 'Discord.app'
 
   zap delete: [
