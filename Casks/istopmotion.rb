@@ -6,7 +6,7 @@ cask 'istopmotion' do
   appcast 'https://www.boinx.com/d/connect/histories/istopmotion',
           checkpoint: '27df05aa9511e2bdfa3b70434664de287efabcc6e80d316eb5b8acf63093c456'
   name 'iStopMotion'
-  homepage 'https://www.boinx.com/istopmotion/mac/'
+  homepage 'https://boinx.com/istopmotion/mac/'
 
   app 'iStopMotion.app'
 end

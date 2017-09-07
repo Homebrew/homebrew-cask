@@ -8,4 +8,6 @@ cask 'haroopad' do
   homepage 'http://pad.haroopress.com/'
 
   app 'Haroopad.app'
+
+  zap trash: '~/Library/Application Support/Haroopad'
 end

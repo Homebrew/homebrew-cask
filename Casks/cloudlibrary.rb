@@ -7,12 +7,12 @@ cask 'cloudlibrary' do
 
     app '3MCloudLibrary.app'
   else
-    version '2.1.1701121409'
-    sha256 'd16f2a0acda5f68937d0220992a94ec7b0e1b8c221f9cc653956a99d5aab31e0'
+    version '2.2.1706151134'
+    sha256 'd84ab4416933f33eb46617d11dde2a8efd0db04a0b0131d2e9cd677e00926bba'
 
     url "http://download.yourcloudlibrary.com/apps/mac/cloudLibrary-#{version}.pkg"
     appcast 'http://www.yourcloudlibrary.com/index.php/en-us/downloads/software?format=rss',
-            checkpoint: '3f3008860d59afc9c064e0150256bfd83b2abffef7cb0fc6380c0061e3083723'
+            checkpoint: '6b8ef699b4bfa6d53abd56031b04f09a121c547b6e892a7ac5cb18c98877792a'
 
     pkg "cloudLibrary-#{version}.pkg"
 

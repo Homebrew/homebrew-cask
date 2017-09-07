@@ -13,7 +13,7 @@ cask 'totalfinder' do
   uninstall pkgutil: 'com.binaryage.pkg.totalfinder.app',
             script:  {
                        executable: 'TotalFinder Uninstaller.app/Contents/MacOS/TotalFinder Uninstaller',
-                       args:       %w[--headless],
+                       args:       ['--headless'],
                        sudo:       true,
                      }
 end

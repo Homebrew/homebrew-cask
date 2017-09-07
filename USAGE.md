@@ -109,7 +109,7 @@ List all installed Casks:
 
 ```bash
 $ brew cask list
-adium          google-chrome     onepassword
+atom          google-chrome     onepassword
 ```
 
 Show details about a specific Cask:

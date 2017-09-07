@@ -1,10 +1,10 @@
 cask 'prott' do
-  version '1.0.4'
-  sha256 '85bfe372f750accd70fc26354c17648120b3c663fd4bad47e5e4bdcbd4e03272'
+  version '1.0.5'
+  sha256 '65f86f2c6c417d142927b430ed1e4d97c8c306620eedb275d0811f1c156e1cf3'
 
   url 'https://dl.prottapp.com/apps/prott.dmg'
   appcast 'https://dl.prottapp.com/apps/appcast.xml',
-          checkpoint: '79a70452a0e815f8652800256c954675280d4d285ec392070daba075635a2364'
+          checkpoint: '8a9e1c1fcb311cf6c1b369d7b58bf2abafb4c894fa54107735379e5218b66f02'
   name 'Prott'
   homepage 'https://prottapp.com/'
 

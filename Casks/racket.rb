@@ -1,11 +1,10 @@
 cask 'racket' do
-  version '6.9'
-  sha256 '03e093aa5f4100c021087749ff56900dc9adfc8067f18a51065f436f58a3bd50'
+  version '6.10'
+  sha256 '1b9813c53bb55cc443f794e607f6bbfb14d734ceb02fa1e264c9f9e790f2b676'
 
-  # cs.utah.edu/plt/installers was verified as official when first introduced to the cask
-  url "https://www.cs.utah.edu/plt/installers/#{version}/racket-#{version}-x86_64-macosx.dmg"
+  url "https://mirror.racket-lang.org/installers/#{version}/racket-#{version}-x86_64-macosx.dmg"
   appcast 'https://download.racket-lang.org/all-versions.html',
-          checkpoint: 'fa3b5479dc4027a247f4d97304a7c25e717c8ce36121d5a8222c807b60bdfa80'
+          checkpoint: 'fd8e1ab40210ae188f13986e6fe4665f8e90563ffc9c20601e6dfb7de3654fad'
   name 'Racket'
   homepage 'https://racket-lang.org/'
 

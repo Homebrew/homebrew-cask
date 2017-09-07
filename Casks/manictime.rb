@@ -4,7 +4,7 @@ cask 'manictime' do
 
   url "http://cdn.manictime.com/setup/mac/ManicTime-v#{version}.dmg"
   name 'ManicTime'
-  homepage 'http://www.manictime.com/Mac'
+  homepage 'https://www.manictime.com/Mac'
 
   pkg "ManicTime-#{version}.pkg"
 

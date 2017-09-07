@@ -1,12 +1,12 @@
 cask 'grabbox' do
-  version '0.4.2'
-  sha256 'e6f92efce8585b58d1b5d9afc4a2187e07bf76c14961aff1b83a8422fb342f2f'
+  version '2.0.2'
+  sha256 '4413c7e9035b4b0e18e979d3cb74dade8c9672bdca409cf3771af80e592ec3e3'
 
-  url "http://grabbox.devsoft.no/updates/GrabBox%20Beta%20v#{version}.zip"
-  appcast 'http://grabbox.devsoft.no/appcastBeta.xml',
-          checkpoint: '984e696e4034f787eae08c3977eb9a85fd5f8a02756f3b92fde13975f17dc334'
+  url "https://grabbox.bitspatter.com/updates/GrabBox-#{version}.zip"
+  appcast 'https://grabbox.bitspatter.com/updates/appcast.xml',
+          checkpoint: 'fd68ecdde99fa9c2ef46c5954487c9429d6035db816afac20902a53ad072bc88'
   name 'GrabBox'
-  homepage 'http://grabbox.devsoft.no/'
+  homepage 'https://grabbox.bitspatter.com/'
 
   app 'GrabBox.app'
 end

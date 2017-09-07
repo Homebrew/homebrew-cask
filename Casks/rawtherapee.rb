@@ -1,6 +1,6 @@
 cask 'rawtherapee' do
-  version '5.1'
-  sha256 '0490769c37dd8b70a6aa35f51b36e2acbdd7b9f4f4b3707a967abf8ad0edcd5f'
+  version '5.2'
+  sha256 '12cddd1ea1e827b17bc81f23381641e6788902f3403c054dec99ab0d451a7abe'
 
   url "http://www.rawtherapee.com/shared/builds/mac/RawTherapee_OSX_10.9_64_#{version}.zip"
   name 'RawTherapee'

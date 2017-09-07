@@ -20,9 +20,11 @@ cask 'daisydisk' do
 
   app 'DaisyDisk.app'
 
-  zap delete: [
-                '/Library/LaunchDaemons/com.daisydiskapp.DaisyDiskAdminHelper.plist',
-                '/Library/PrivilegedHelperTools/com.daisydiskapp.DaisyDiskAdminHelper',
+  uninstall delete:    '/Library/PrivilegedHelperTools/com.daisydiskapp.DaisyDiskAdminHelper',
+            launchctl: 'com.daisydiskapp.DaisyDiskAdminHelper'
+
+  zap delete: '~/Library/Caches/com.daisydiskapp.DaisyDiskStandAlone',
+      trash:  [
                 '~/Library/Application Support/DaisyDisk',
                 '~/Library/Preferences/com.daisydiskapp.DaisyDiskStandAlone.plist',
               ]

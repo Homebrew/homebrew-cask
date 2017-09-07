@@ -7,7 +7,7 @@ cask 'tableflip' do
   appcast "https://update.christiantietze.de/tableflip/v#{version.major}/release.xml",
           checkpoint: 'e881fb683ddad4ca7408759a2a59db55c08f775785d157e4ad6dde403d8d4a6c'
   name 'TableFlip'
-  homepage 'http://tableflipapp.com/'
+  homepage 'https://tableflipapp.com/'
 
   auto_updates true
 

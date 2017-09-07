@@ -1,6 +1,6 @@
 cask 'java-jdk-javadoc' do
-  version '1.8.0_131-b11,d54c1d3a095b4ff2b6607d096fa80163'
-  sha256 'd97fceb4dc4420f74b2e74508957ef1ff0e83c458d15cf9fbc5dbcda46f7b258'
+  version '1.8.0_144-b01,090f390dda5b47b9b721c7dfaa008135'
+  sha256 'ae2b2fdb162ca5716fe60d8fddbe7b0d2059d2b571311d27d488a20a40c6b3be'
 
   java_update = version.sub(%r{.*_(\d+)-.*}, '\1')
   url "http://download.oracle.com/otn-pub/java/jdk/#{version.minor}u#{version.before_comma.split('_').last}/#{version.after_comma}/jdk-#{version.minor}u#{java_update}-docs-all.zip",
@@ -31,5 +31,7 @@ cask 'java-jdk-javadoc' do
     License Agreement for Java SE at
 
       https://www.oracle.com/technetwork/java/javase/terms/license/index.html
+
+     #{token} will be uninstalled when the Java Cask is uninstalled or reinstalled
   EOS
 end

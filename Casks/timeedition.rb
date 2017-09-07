@@ -7,7 +7,7 @@ cask 'timeedition' do
   appcast 'https://sourceforge.net/projects/timeedition/rss',
           checkpoint: '73d626d54d33b2511ece8e0566359a2e446b0043dd8b90690372deaad6774be9'
   name 'timeEdition'
-  homepage 'https://www.timeedition.com/old/en/'
+  homepage 'https://www.timeedition.com/'
 
   app "timeEdition #{version}/timeEdition.app"
 

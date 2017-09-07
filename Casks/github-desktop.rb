@@ -1,17 +1,18 @@
 cask 'github-desktop' do
-  version '0.6.1-70b96643'
-  sha256 'a13a7668fe9b38721d66e1acc4b41a44a0be04a15022f9994c1fb17a4072c187'
+  version '0.8.0-364fa5b9'
+  sha256 'beb280364ffbf7372579099b18816b05e6204650bc99c14a5c3461d1a8acf15d'
 
   # githubusercontent.com was verified as official when first introduced to the cask
   url "https://desktop.githubusercontent.com/releases/#{version}/GitHubDesktop.zip"
   appcast 'https://github.com/desktop/desktop/releases.atom',
-          checkpoint: '3cacd26df75697062adbdb45c81b78379ccfff451d6ac3a0fcf30f37af71b0a9'
+          checkpoint: 'ae5b274f6bb859cc3d3841e9c653683191b829d9115cf35646fd7e3a73d49b10'
   name 'GitHub Desktop'
   homepage 'https://desktop.github.com/'
 
   auto_updates true
 
   app 'GitHub Desktop.app'
+  binary "#{appdir}/GitHub Desktop.app/Contents/Resources/app/static/github.sh", target: 'github'
 
   zap delete: [
                 '~/Library/Application Support/GitHub Desktop',

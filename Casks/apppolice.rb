@@ -4,7 +4,7 @@ cask 'apppolice' do
 
   url "https://github.com/fuyu/apppolice/releases/download/v#{version}/apppolice.dmg"
   appcast 'https://github.com/fuyu/apppolice/releases.atom',
-          checkpoint: 'aea2e42c4edb5da3fbb801ba34de8aec4462e298d0afa1eb4faeb34d342aea82'
+          checkpoint: '79cb6a58e825b9b79b72f8fe4f35736c92e58bc2dd66304a3205a39a05ea3b6b'
   name 'AppPolice'
   homepage 'https://github.com/fuyu/apppolice'
 

@@ -1,6 +1,6 @@
 cask 'libreoffice' do
-  version '5.3.3'
-  sha256 '292f4e8b8b8cf89ba64922c5ba4e8824ecfdd6de24bad601e404d0e276094010'
+  version '5.4.1'
+  sha256 'ba0499e8f994ac514f18937a06b0c22c3971e031f402753038e26c42b4c0e0cc'
 
   # documentfoundation.org was verified as official when first introduced to the cask
   url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg"
@@ -34,7 +34,10 @@ cask 'libreoffice' do
 
   zap delete: [
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.libreoffice.script.sfl',
-                '~/Library/Application Support/LibreOffice',
                 '~/Library/Saved Application State/org.libreoffice.script.savedState',
+              ],
+      trash:  [
+                '~/Library/Application Support/LibreOffice',
+                '~/Library/Preferences/org.libreoffice.script.plist',
               ]
 end

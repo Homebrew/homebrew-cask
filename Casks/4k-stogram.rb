@@ -1,10 +1,10 @@
 cask '4k-stogram' do
-  version '2.4.1.1296'
-  sha256 'ec2b4dad2fc0ec7f46ff2d6eada87ad9fa84426e79298725b15172f84051d379'
+  version '2.5.1.1346'
+  sha256 '68366a9a51879193f260e9e8634ddb09c05316ed6f665f8526e060c3a034c745'
 
-  url "https://downloads2.4kdownload.com/app/4kstogram_#{version.major_minor}.dmg"
+  url "https://downloads2.4kdownload.com/app/4kstogram_#{version.major_minor_patch}.dmg"
   appcast 'https://www.4kdownload.com/download',
-          checkpoint: '29846a3e3c2576f8500fe70c2df014c24e61d3b809f69e9dee980614916f56d3'
+          checkpoint: '8de0a5725c670e5fa688b8f7ede33e197766ff2acd12e1de4b8d6bb5a267fdd3'
   name '4K Stogram'
   homepage 'https://www.4kdownload.com/products/product-stogram'
 

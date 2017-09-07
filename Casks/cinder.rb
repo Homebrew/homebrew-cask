@@ -4,7 +4,7 @@ cask 'cinder' do
 
   url "https://libcinder.org/static/releases/cinder_#{version}_mac.zip"
   appcast 'https://github.com/cinder/cinder/releases.atom',
-          checkpoint: 'e0db8a004ea98e9cd20247a819305bc1e74486f059e1374fe522dbf09c44c2a0'
+          checkpoint: '7976c5140bdbaaab1907056c7646a0f4a0a8dfd9691d2aeb4a3c50781a30c12d'
   name 'Cinder'
   homepage 'https://libcinder.org/'
 

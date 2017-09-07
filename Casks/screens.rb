@@ -1,11 +1,11 @@
 cask 'screens' do
-  version '4.0.4,8058'
-  sha256 '36519924ffbd5e61c727c98508211a9c650877f48a0f80d5a9a4d3635736c8eb'
+  version '4.1.4,8346'
+  sha256 '70e39bb2568047d8fd5a84a7836d9e31ee219750180b7a25262e53ad5b2e1c8c'
 
   # dl.devmate.com was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.edovia.screens4.mac/Screens#{version.major}.dmg"
   appcast "https://updates.devmate.com/com.edovia.screens#{version.major}.mac.xml",
-          checkpoint: '51434aa449ba67ab17ab46b9f350ca3970e23aecc9a7ffdd8e8f30e1c14fc179'
+          checkpoint: '16ebd7e4037c31235e179162267717416b8387d777247e73910ccf6267873ec4'
   name 'Screens'
   homepage 'https://edovia.com/screens-mac/'
 
@@ -16,7 +16,9 @@ cask 'screens' do
 
   zap delete: [
                 "~/Library/Application Scripts/com.edovia.screens#{version.major}.mac",
+                '~/Library/Application Scripts/com.edovia.screens.launcher',
                 "~/Library/Containers/com.edovia.screens#{version.major}.mac",
+                '~/Library/Containers/com.edovia.screens.launcher',
                 '~/Library/Logs/Screens',
               ]
 end

@@ -1,10 +1,10 @@
 cask 'jclasslib-bytecode-viewer' do
-  version '5.1'
-  sha256 '02231f57c3672851ea3ce8d9a304641a3c278e4e71abb73067f9db0c6e5f5d64'
+  version '5.2'
+  sha256 '50771508ee35f57f138f46a0def4f31927f00d3f1275c25259247faf223fa7b4'
 
   url "https://github.com/ingokegel/jclasslib/releases/download/#{version}/jclasslib_macos_#{version.dots_to_underscores}.dmg"
   appcast 'https://github.com/ingokegel/jclasslib/releases.atom',
-          checkpoint: 'e2942d241e41f411bde1977a2ba61570497f1a3f1d7bed9d95f1956b44db231f'
+          checkpoint: 'bc4fe9a7dd836e7b5c3fc8b628bfcc8cb376570b999894742c350a0843c3a918'
   name 'jclasslib bytecode viewer'
   homepage 'https://github.com/ingokegel/jclasslib'
 

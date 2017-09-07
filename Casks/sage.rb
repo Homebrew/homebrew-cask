@@ -1,33 +1,34 @@
 cask 'sage' do
   if MacOS.version <= :mavericks
-    version '7.2'
+    version '7.2,10.9.5'
     sha256 'a4cd5c6f3207cd9c429642bb58a6310ba05e6da9fddbf36dc1aa5e47c5904c96'
-    # mit.edu/sage was verified as official when first introduced to the cask
-    url "http://mirrors.mit.edu/sage/osx/intel/sage-#{version}-OSX_10.9.5-x86_64.app.dmg"
   elsif MacOS.version <= :el_capitan
-    version '7.6'
+    version '7.6,10.11.6'
     sha256 'ba9ffba5dea394dc808c31a7b71af4d0db9759d9440b4dc2e35c921bd03e916f'
-    # mit.edu/sage was verified as official when first introduced to the cask
-    url "http://mirrors.mit.edu/sage/osx/intel/sage-#{version}-OSX_10.11.6-x86_64.app.dmg"
   else
-    version '7.6'
-    sha256 'dbd5e79825ad505dbf852c8c794cd604a3bd560151fb3ec08a9df7f9c5626ab2'
-    # mit.edu/sage was verified as official when first introduced to the cask
-    url "http://mirrors.mit.edu/sage/osx/intel/sage-#{version}-OSX_10.12.3-x86_64.app.dmg"
+    version '8.0,10.12.6'
+    sha256 'a0954764e570284d934acd647b834722ac6b8ec55ead14f24f7b6b7a94c4717f'
   end
 
+  # mirrors.mit.edu/sage/osx/intel was verified as official when first introduced to the cask
+  url "http://mirrors.mit.edu/sage/osx/intel/sage-#{version.before_comma}-OSX_#{version.after_comma}-x86_64.app.dmg"
   name 'Sage'
   homepage 'https://www.sagemath.org/'
 
   depends_on macos: '>= :lion'
 
-  app "SageMath-#{version}.app"
-  binary "#{appdir}/SageMath-#{version}.app/Contents/Resources/sage/sage"
+  app "SageMath-#{version.before_comma}.app"
+  binary "#{appdir}/SageMath-#{version.before_comma}.app/Contents/Resources/sage/sage"
+
+  uninstall quit: 'org.sagemath.Sage'
 
   zap delete: [
-                '~/.sage',
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.sagemath.sage.sfl',
                 '~/Library/Logs/sage.log',
+
+              ],
+      trash:  [
+                '~/.sage',
                 '~/Library/Preferences/org.sagemath.Sage.plist',
               ]
 end

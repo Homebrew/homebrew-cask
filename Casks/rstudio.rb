@@ -1,6 +1,6 @@
 cask 'rstudio' do
-  version '1.0.143'
-  sha256 '8db4f32f9e2758117c2d294f4f76c760d1851dfe04ad783fae2cf459864ea001'
+  version '1.0.153'
+  sha256 'a33d6c0bc02307b10c1f88b938c9b76209d37eb02ceff17661a99a4463aafcbd'
 
   # rstudio.org was verified as official when first introduced to the cask
   url "https://download1.rstudio.org/RStudio-#{version}.dmg"
@@ -16,7 +16,7 @@ cask 'rstudio' do
     There are different ways to satisfy that dependency and we don’t want to impose one, so it is up to you to satisfy it.
     We suggest you do so by running one of:
 
-      brew install homebrew/science/r
+      brew install r
       brew cask install r-app
   EOS
 end

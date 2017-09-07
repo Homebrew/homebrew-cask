@@ -4,7 +4,7 @@ cask 'conductor' do
 
   url "https://github.com/keith/conductor/releases/download/#{version}/Conductor.app.zip"
   appcast 'https://github.com/keith/conductor/releases.atom',
-          checkpoint: 'fb271592f0a88f92c680d2645a036b12da17d13d391b0bb6ce3641c4003723eb'
+          checkpoint: 'a0cb2e172d6824138153f58f0b16cdf642128525861b2f11f979cef6ffad510c'
   name 'Conductor'
   homepage 'https://github.com/keith/conductor'
 

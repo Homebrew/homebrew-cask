@@ -1,10 +1,10 @@
 cask 'gitkraken' do
-  version '2.6.0'
-  sha256 '83375b055240a3284d1fa9493e8972694c7790cea272e210b8a1f599987fbdd6'
+  version '3.0.0'
+  sha256 '3f075c916f5d6a52a301fee146528d6b5856be74db3a46f9e38f6d0127f78782'
 
   url "https://release.gitkraken.com/darwin/v#{version}.zip"
   appcast 'https://release.gitkraken.com/darwin/RELEASES',
-          checkpoint: '9f50a52c11208da590f3c8a2a848064232229f93ddd1c09b31cddefe8d7be66c'
+          checkpoint: 'ffb7eb9c84d9da2ba8da95125f0d43eb0f6e6e06fef4661bc33e67cb97fabe68'
   name 'GitKraken'
   homepage 'https://www.gitkraken.com/'
 
@@ -13,12 +13,16 @@ cask 'gitkraken' do
   app 'GitKraken.app'
 
   zap delete: [
+                '~/Library/Caches/GitKraken',
+                '~/Library/Caches/com.axosoft.gitkraken.ShipIt',
+                '~/Library/Caches/com.axosoft.gitkraken',
+                '~/Library/Saved Application State/com.axosoft.gitkraken.savedState',
+              ],
+      trash:  [
                 '~/Library/Application Support/com.axosoft.gitkraken.ShipIt',
                 '~/Library/Application Support/GitKraken',
-                '~/Library/Caches/GitKraken',
-                '~/Library/Caches/com.axosoft.gitkraken',
+                '~/Library/Preferences/com.axosoft.gitkraken.helper.plist',
                 '~/Library/Preferences/com.axosoft.gitkraken.plist',
-                '~/Library/Saved Application State/com.axosoft.gitkraken.savedState',
                 '~/.gitkraken',
               ]
 end

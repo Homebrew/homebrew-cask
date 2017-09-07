@@ -5,7 +5,7 @@ cask 'edm' do
   url "https://package-data.enthought.com/edm/osx_x86_64/#{version.major_minor}/edm_#{version}.pkg"
   name 'Enthought Deployment Manager'
   name 'EDM'
-  homepage 'https://www.enthought.com/products/edm/'
+  homepage 'https://www.enthought.com/product/enthought-deployment-manager'
 
   pkg "edm_#{version}.pkg"
 

@@ -2,10 +2,10 @@ cask 'writefull' do
   version '3.0.0-beta19'
   sha256 '0b424a82bbf184661ca7f0dd6459a8248ccb643cf07855fadab1481e10445c8d'
 
-  # d3aw1w08kaciwn.cloudfront.net was verified as official when first introduced to the cask
-  url "https://d3aw1w08kaciwn.cloudfront.net/#{version}/Writefull.dmg"
+  # s3-eu-west-1.amazonaws.com/writefull-binaries was verified as official when first introduced to the cask
+  url "https://s3-eu-west-1.amazonaws.com/writefull-binaries/#{version}/Writefull.dmg"
   appcast 'https://writefullapp.com/js/download-urls.js',
-          checkpoint: '76d2df0a07491e39623b71e3183612afc49f36e49e4eef2caf0187c549ed935c'
+          checkpoint: 'd83cc103b252b411627472e3db8d521236139ac8e74529acf36a379047948260'
   name 'Writefull'
   homepage 'https://writefullapp.com/'
 

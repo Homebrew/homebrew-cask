@@ -4,7 +4,7 @@ cask 'coda' do
 
   url "https://download.panic.com/coda/Coda%20#{version}.zip"
   appcast 'https://library.panic.com/releasenotes/coda2/',
-          checkpoint: '11cfe92d5dbf54bbfc8484b70cd016b2088d1489835377af84eec8090ecd1db5'
+          checkpoint: '0033294a433cd14446fff6c392ee0e9d0e1215c0dad433ec745803862929939d'
   name 'Panic Coda'
   homepage 'https://panic.com/coda/'
 

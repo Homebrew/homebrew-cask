@@ -13,7 +13,7 @@ cask 'dusty' do
 
   installer script: {
                       executable: 'brew-install.sh',
-                      args:       %W[#{staged_path}],
+                      args:       [staged_path],
                       sudo:       true,
                     }
   binary 'dusty'

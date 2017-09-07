@@ -4,7 +4,7 @@ cask 'gitee' do
 
   url "https://github.com/Nightonke/Gitee/releases/download/v#{version}/Gitee#{version.no_dots}.zip"
   appcast 'https://github.com/Nightonke/Gitee/releases.atom',
-          checkpoint: '3e105770946d502430d806f754c9ea9443c4f56f2e27539657a2ae7e77684cce'
+          checkpoint: 'f48264788a072502c7e12091f6f8d4d27fbca12071df0eba0c86fc5fbc910029'
   name 'Gitee'
   homepage 'https://github.com/Nightonke/Gitee'
 

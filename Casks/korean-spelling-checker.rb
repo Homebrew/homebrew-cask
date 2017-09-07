@@ -5,9 +5,9 @@ cask 'korean-spelling-checker' do
   # github.com/miname/Korean-Spelling-Checker-Workflow was verified as official when first introduced to the cask
   url "https://github.com/miname/Korean-Spelling-Checker-Workflow/archive/#{version}.tar.gz"
   appcast 'https://github.com/miname/Korean-Spelling-Checker-Workflow/releases.atom',
-          checkpoint: 'a51b690a1fa84faae276e0d7ba92837346d99a6824cd6863bdc2b99b4fe70599'
+          checkpoint: '26961cb38bacb3b5f803d1f94d6cfc6247ec6c5e24d8cd13921486104a60e1dd'
   name '한국어 맞춤법 검사기'
-  homepage 'https://appletree.or.kr//google-chrome-extensions/'
+  homepage 'https://appletree.or.kr/google-chrome-extensions/'
 
   service "Korean-Spelling-Checker-Workflow-#{version}/✔ 선택한 글의 한국어 맞춤법 검사하기.workflow"
 

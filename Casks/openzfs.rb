@@ -22,10 +22,9 @@ cask 'openzfs' do
 
   if MacOS.version >= :el_capitan
     uninstall_preflight do
-      system_command '/usr/bin/sed',
-                     args: ['-i', '.bak', 's|/usr/sbin/zpool|/usr/local/bin/zpool|', "#{staged_path}/Docs & Scripts/uninstall-openzfsonosx.sh"]
-      system_command '/usr/bin/sed',
-                     args: ['-i', '.bak', 's|/usr/sbin/zfs|/usr/local/bin/zfs|', "#{staged_path}/Docs & Scripts/uninstall-openzfsonosx.sh"]
+      uninstall_zfs = "#{staged_path}/Docs & Scripts/uninstall-openzfsonosx.sh"
+      IO.write(uninstall_zfs, IO.read(uninstall_zfs).gsub('/usr/sbin/zpool', '/usr/local/bin/zpool'))
+      IO.write(uninstall_zfs, IO.read(uninstall_zfs).gsub('/usr/sbin/zfs', '/usr/local/bin/zfs'))
     end
   end
 

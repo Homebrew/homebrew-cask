@@ -4,7 +4,7 @@ cask 'ealeksandrov-cd-to' do
 
   url "https://github.com/ealeksandrov/cdto/releases/download/#{version.dots_to_underscores}/cd_to_#{version.major_minor.dots_to_underscores}.zip"
   appcast 'https://github.com/ealeksandrov/cdto/releases.atom',
-          checkpoint: 'a4e8fc8ff9b2927e3b12198d1d9cf9d309be58f5c88261d11ef38363e2c07957'
+          checkpoint: 'be0f914c9f7966980ef8d8c8c52cdf18ba782ebb2035c6939611d92c2e43f17f'
   name 'cd_to'
   homepage 'https://github.com/ealeksandrov/cdto'
 

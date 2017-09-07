@@ -4,7 +4,7 @@ cask 'betwixt' do
 
   url "https://github.com/kdzwinel/betwixt/releases/download/#{version}/Betwixt-darwin-x64.zip"
   appcast 'https://github.com/kdzwinel/betwixt/releases.atom',
-          checkpoint: 'a6c22caa32dc8c0cb85b7f1ad816e5e471f7dda4b81b31f94ba1b882d16bd641'
+          checkpoint: 'cea22ba54350c69a99f4d0a46003c588475741b598bac92ecb92838bd7742c4d'
   name 'Betwixt'
   homepage 'https://github.com/kdzwinel/betwixt'
 

@@ -6,7 +6,7 @@ cask 'versions' do
   appcast 'https://updates.blackpixel.com/updates?app=vs',
           checkpoint: 'c21288f5920256d3fe7fa74bd9bc18163631ba4a1551e5a5ce237a2df1b93fcf'
   name 'Versions'
-  homepage 'http://versionsapp.com/'
+  homepage 'https://versionsapp.com/'
 
   app 'Versions.app'
 end

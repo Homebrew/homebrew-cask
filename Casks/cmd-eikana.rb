@@ -4,7 +4,7 @@ cask 'cmd-eikana' do
 
   url "https://github.com/iMasanari/cmd-eikana/releases/download/v#{version}/eikana-#{version}.app.zip"
   appcast 'https://github.com/iMasanari/cmd-eikana/releases.atom',
-          checkpoint: 'e40616ed8d7a7b08955274084c954db289fe30e7abfe12989c01e3abf08bf2aa'
+          checkpoint: '3c6423032f1850dfd5358f8fac7e22d4aded4d3039c2b81b412d688aadcf773e'
   name 'cmd-eikana'
   name '⌘英かな'
   homepage 'https://github.com/iMasanari/cmd-eikana'

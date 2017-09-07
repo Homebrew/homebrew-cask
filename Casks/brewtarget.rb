@@ -5,7 +5,7 @@ cask 'brewtarget' do
   # launchpad.net/brewtarget was verified as official when first introduced to the cask
   url "https://launchpad.net/brewtarget/trunk/#{version}/+download/Brewtarget-#{version}.dmg"
   appcast 'https://github.com/Brewtarget/brewtarget/releases.atom',
-          checkpoint: '9418fa17df72d60adaf439fef0511aeeeedb568682a3d04aa2f808cbc76ade7e'
+          checkpoint: 'fc9391fbd448175fc7c673a19b3d66220e78dbaf5fe69a2c487efa48f8bb2a44'
   name 'brewtarget'
   homepage 'http://www.brewtarget.org/'
 

@@ -5,7 +5,7 @@ cask 'jadengeller-helium' do
   # github.com/JadenGeller/Helium was verified as official when first introduced to the cask
   url "https://github.com/JadenGeller/Helium/releases/download/#{version}/Helium.app.zip"
   appcast 'https://github.com/JadenGeller/Helium/releases.atom',
-          checkpoint: '2fb1a80e559af39a44b95846c074775692bc31cab09507d988b762c1bd5d861f'
+          checkpoint: 'b2b11db11f6092bbd99e62038730c98ccd4565040187890f40042d8a3485fbd7'
   name 'Helium'
   homepage 'http://heliumfloats.com/'
 

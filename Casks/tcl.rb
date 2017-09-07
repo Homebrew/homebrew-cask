@@ -1,15 +1,15 @@
 cask 'tcl' do
-  version '8.6.4.1.299124'
-  sha256 '6dff63e0250a059f64cd1b7b2ceb4bb1dff58571345c8ebdfbae1ebfef39d760'
+  version '8.6.6.8606,402457'
+  sha256 '83f6cd8e06832546b8a23f4821165619c47ac8ce6878e154ef8d3456039839cb'
 
   # downloads.activestate.com/ActiveTcl was verified as official when first introduced to the cask
-  url "https://downloads.activestate.com/ActiveTcl/releases/#{version.sub(%r{\.\d+$}, '')}/ActiveTcl#{version}-macosx10.5-i386-x86_64-threaded.dmg"
+  url "https://downloads.activestate.com/ActiveTcl/releases/#{version.before_comma}/ActiveTcl-#{version.before_comma}-macosx10.9-x86_64-#{version.after_comma}.pkg"
   name 'ActiveTcl'
   homepage 'https://tcl.tk/'
 
-  depends_on macos: '>= :leopard'
+  depends_on macos: '>= :mavericks'
 
-  pkg "ActiveTcl-#{version.sub(%r{^(\d+)\.(\d+).*}, '\1.\2')}.pkg"
+  pkg "ActiveTcl-#{version.before_comma}-macosx10.9-x86_64-#{version.after_comma}.pkg"
 
-  uninstall pkgutil: "com.activestate.pkg.ActiveTcl#{version.sub(%r{^(\d+)\.(\d+).*}, '\1\2')}"
+  uninstall pkgutil: "com.activestate.pkg.ActiveTcl#{version.major_minor}"
 end

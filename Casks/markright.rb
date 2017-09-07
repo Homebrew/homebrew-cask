@@ -4,7 +4,7 @@ cask 'markright' do
 
   url "https://github.com/dvcrn/markright/releases/download/#{version}/MarkRight_Mac.dmg"
   appcast 'https://github.com/dvcrn/markright/releases.atom',
-          checkpoint: '22f02dc7556d19456dcd5f7aed4c9ed078db8b26d0890ba950b60a81fde542ab'
+          checkpoint: '390d273e0e50e5560cb447d2a3f6efbd4742fd82a18c6a7ee6345075357b5fc9'
   name 'MarkRight'
   homepage 'https://github.com/dvcrn/markright'
 

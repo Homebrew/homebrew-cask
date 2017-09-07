@@ -5,7 +5,7 @@ cask 'cdock' do
   # github.com/w0lfschild/cDock2 was verified as official when first introduced to the cask
   url "https://github.com/w0lfschild/cDock2/releases/download/v#{version}/cDock.zip"
   appcast 'https://github.com/w0lfschild/cDock2/releases.atom',
-          checkpoint: '42e6fbcf3ea7399effd7b23f2a51d7e15df99d335110b2b4d00ca63f0b62e5ce'
+          checkpoint: 'dbb05a1906f9b1572f35a4ada2212f784e0d1f0a02f94fa0cdf025d6a004ec02'
   name 'cDock2'
   homepage 'https://w0lfschild.github.io/cdock'
 

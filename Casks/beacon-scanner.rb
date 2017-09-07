@@ -4,7 +4,7 @@ cask 'beacon-scanner' do
 
   url "https://github.com/mlwelles/BeaconScanner/releases/download/#{version}/Beacon.Scanner.zip"
   appcast 'https://github.com/mlwelles/BeaconScanner/releases.atom',
-          checkpoint: '0d519e3cfa636ace2d9c385d70cea818ec9f5c325a2f4521278fb6c44f09de5e'
+          checkpoint: 'bd753dc63baf03d9a954bdf044848959520b948219e578fc3a98599df138bb71'
   name 'BeaconScanner'
   homepage 'https://github.com/mlwelles/BeaconScanner/'
 

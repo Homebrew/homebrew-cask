@@ -194,7 +194,7 @@ We maintain separate Taps for different types of binaries. Our nomenclature is:
 + **Walled**: When the download URL is both behind a login/registration form and from a host that differs from the homepage.
 + **Font**: Data file containing a set of glyphs, characters, or symbols, that changes typed text.
 + **eID**: Software to install electronic identity card software of various countries.
-+ **Driver**: Software with the sole goal of making a hardware peripheral recognisable by the system.
++ **Driver**: Software to make a hardware peripheral recognisable and usable by the system. If the software is useless without the peripheral, it’s considered a driver.
 
 ### Stable Versions
 
@@ -304,7 +304,7 @@ If you are using [GitHub two-factor authentication](https://help.github.com/arti
 
 Now go to the [`homebrew-cask` GitHub repository](https://github.com/caskroom/homebrew-cask). GitHub will often show your `my-new-cask` branch with a handy button to `Compare & pull request`. Otherwise, click the `New pull request` button and choose to `compare across forks`. The base fork should be `caskroom/homebrew-cask @ master`, and the head fork should be `my-github-username/homebrew-cask @ my-new-cask`. You can also add any further comments to your pull request at this stage.
 
-Congratulations! You are done now, and your Cask should be pulled in or otherwise noticed in a while. If a maintainer suggests some changes, just make them on the `my-new-cask` branch locally, [squash](#squashing), and [push](#pushing).
+Congratulations! You are done now, and your Cask should be pulled in or otherwise noticed in a while. If a maintainer suggests some changes, just make them on the `my-new-cask` branch locally and [push](#pushing).
 
 ## Cleaning up
 

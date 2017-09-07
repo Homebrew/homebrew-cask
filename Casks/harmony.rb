@@ -1,20 +1,26 @@
 cask 'harmony' do
-  version '0.6.0'
-  sha256 'c992bf32f9910dd9673a661924cbd5a1e5c93d3007ea6811c2e2460ed4391886'
+  version '0.7.2'
+  sha256 '4e98f31b65c4949d34f9407e050a1e8778dd586b1861f7ed92ff4ac18085d004'
 
   # github.com/vincelwt/harmony was verified as official when first introduced to the cask
   url "https://github.com/vincelwt/harmony/releases/download/v#{version}/harmony-#{version}-mac.app.zip"
   appcast 'https://github.com/vincelwt/harmony/releases.atom',
-          checkpoint: 'f6460b5fa551bdea54f1b7cc3a1082897843f9fe847d29827709fb0458b94abc'
+          checkpoint: 'c2ffbf77ccb017182edbdc2295b50fa7fb3729473508b07ce968d5c45ea975a9'
   name 'Harmony'
   homepage 'https://getharmony.xyz/'
 
   app 'Harmony.app'
 
-  zap delete: [
+  uninstall signal: [
+                      ['TERM', 'com.vincelwt.harmony'],
+                      ['TERM', 'com.vincelwt.harmony.helper'],
+                    ]
+
+  zap delete: '~/Library/Saved Application State/com.vincelwt.harmony.savedState',
+      trash:  [
+                '~/.config/configstore/harmony.json',
                 '~/Library/Application Support/Harmony',
                 '~/Library/Preferences/com.vincelwt.harmony.helper.plist',
                 '~/Library/Preferences/com.vincelwt.harmony.plist',
-                '~/Library/Saved Application State/com.vincelwt.harmony.savedState',
               ]
 end

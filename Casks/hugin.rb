@@ -1,10 +1,10 @@
 cask 'hugin' do
-  version '2016.2.0'
-  sha256 '31c36dc9d8116c34f5f208a98bf1711fbf8b37f20dd82058561aa59f48d9143c'
+  version '2017.0.0'
+  sha256 '4caa1f6d541c78e778d2689a90e1a641df1a51b40aa7246e0811a75f66ca0e2f'
 
   url "https://downloads.sourceforge.net/hugin/Hugin-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/hugin/rss',
-          checkpoint: '7c098890c5f1723f0fa0160a96c2cec13fbdf24706ad5a2a54394a0d971ac47d'
+          checkpoint: 'dc3cd74ac990811372b6c1605129e13100b97aed1483147f6fa52e4b394e153e'
   name 'Hugin'
   homepage 'http://hugin.sourceforge.net/'
 

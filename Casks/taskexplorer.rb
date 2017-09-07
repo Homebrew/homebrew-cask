@@ -12,4 +12,11 @@ cask 'taskexplorer' do
   depends_on macos: '>= :mountain_lion'
 
   app 'TaskExplorer.app'
+
+  uninstall_preflight do
+    set_ownership "#{appdir}/TaskExplorer.app"
+  end
+
+  zap delete: '~/Library/Caches/com.objective-see.TaskExplorer',
+      trash:  '~/Library/Preferences/com.objective-see.TaskExplorer.plist'
 end

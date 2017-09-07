@@ -1,10 +1,10 @@
 cask 'championify' do
-  version '2.0.4'
-  sha256 '9209be663ef541b49012356c2797b6b499235fa3ec1ee27d2eaa0f47cbfe6a64'
+  version '2.0.7'
+  sha256 '4e1d3a5c8a3c62bd2b1c7683f895c796532867b6e82b885dbbe0b34b52c506b6'
 
   url "https://github.com/dustinblackman/Championify/releases/download/#{version}/Championify-OSX-#{version}.dmg"
   appcast 'https://github.com/dustinblackman/Championify/releases.atom',
-          checkpoint: 'abac4f5d49633034571c75bf18900ad2df0197de54eebab5ef4a0afcc6fd33c6'
+          checkpoint: 'e1d0e3de98c194fae1fd3a5bc5e147d9e7251ec9f63121c2fef08ccae7cb315b'
   name 'Championify'
   homepage 'https://github.com/dustinblackman/Championify/'
 

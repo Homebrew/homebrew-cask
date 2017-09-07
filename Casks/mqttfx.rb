@@ -9,7 +9,7 @@ cask 'mqttfx' do
 
   installer script: {
                       executable: 'MQTT.fx Installer.app/Contents/MacOS/JavaApplicationStub',
-                      args:       %w[-q],
+                      args:       ['-q'],
                       sudo:       true,
                     }
 

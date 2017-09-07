@@ -6,7 +6,7 @@ cask 'reaper' do
   appcast 'http://www.reaper.fm/whatsnew.txt',
           checkpoint: 'adf9905d3a534285a4c1394dd9d40a7b857071ab98cd0cc1a88df296be2674cf'
   name 'REAPER'
-  homepage 'http://www.reaper.fm/'
+  homepage 'https://www.reaper.fm/'
 
   app 'REAPER64.app'
   app 'ReaMote64.app'

@@ -1,15 +1,14 @@
 cask 'prey' do
-  version '1.6.6'
-  sha256 '9320748f34804fa69f9526692151fa0a2c21de175e095f676fc5b41f64a55530'
+  version '1.6.8'
+  sha256 '85e6ff86a50e4a3e4cf59d153c36e1fbc99ed4187d993c75aa80a49de4dc7b11'
 
-  # prey-releases.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "https://prey-releases.s3.amazonaws.com/node-client/#{version}/prey-mac-#{version}-x86.pkg"
+  url "https://downloads.preyproject.com/prey-client-releases/node-client/#{version}/prey-mac-#{version}-x64.pkg"
   appcast 'https://github.com/prey/prey-node-client/releases.atom',
-          checkpoint: '83e37aa898a33accd7860a9a600e5979155b24d150f7476a6938465a3078247c'
+          checkpoint: '1833d6ba69ae2188b08f768d2ad368f1d7718a3c17c14b82ff9aa6a409e7d549'
   name 'Prey'
   homepage 'https://www.preyproject.com/'
 
-  pkg "prey-mac-#{version}-x86.pkg"
+  pkg "prey-mac-#{version}-x64.pkg"
 
   uninstall pkgutil:   'com.prey.agent',
             launchctl: 'com.prey.agent'

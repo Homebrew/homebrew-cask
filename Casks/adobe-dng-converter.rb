@@ -6,8 +6,8 @@ cask 'adobe-dng-converter' do
     version '9.6.1'
     sha256 '087eac5026667e4e6e3c156fd13243c9ea00f6c0238cbbb94d3099ae8772603f'
   else
-    version '9.10.1'
-    sha256 '32acfe8ad7af708d018725f115feadfbbbaeef0c82da4c49e6e70857a5a3accc'
+    version '9.12'
+    sha256 'd0416718aa096b928b5877544077f480fc56c771cb9eb27a2a2aa712d233b56c'
   end
 
   url "http://download.adobe.com/pub/adobe/dng/mac/DNGConverter_#{version.dots_to_underscores}.dmg"

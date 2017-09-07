@@ -5,7 +5,7 @@ cask 'boxer' do
   # github.com/alunbestor/Boxer was verified as official when first introduced to the cask
   url "https://github.com/alunbestor/Boxer/releases/download/v#{version}/boxer-#{version}.zip"
   appcast 'https://github.com/alunbestor/Boxer/releases.atom',
-          checkpoint: '290c7bdf1159dfcfa2ce3e861028d063701cd57c34e48a48e44f81f26a6b569c'
+          checkpoint: 'c66630ba8fb6c5bb86815eaab61b1f7a73bb7bfa13ed01a4c590547e34f3c23c'
   name 'Boxer'
   homepage 'http://boxerapp.com/'
 

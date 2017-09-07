@@ -1,10 +1,10 @@
 cask 'apm-planner' do
-  version '2.0.24'
-  sha256 '5215a277a52b7518b9d3789d5545d954ffb8f039bcbb2161a5a08e9ac168a4e3'
+  version '2.0.25'
+  sha256 '97208e8589c44465167d2b84794d8e483c9ffba001df5e81a9e7f9de11fc2cb3'
 
   url "http://firmware.ardupilot.org/Tools/APMPlanner/apm_planner_#{version}_osx.dmg"
   appcast 'http://firmware.ardupilot.org/Tools/APMPlanner/apm_planner_version.json',
-          checkpoint: 'c05e845dcfbcd54d6aaa3a597495483a526c5550cd06f6631ecee0cdfd68ab08'
+          checkpoint: 'bba48c18d3188f090cca7b0c8445020aa6cb7babae225f35d6b668209286b74c'
   name 'APM Planner'
   homepage 'http://ardupilot.org/'
 

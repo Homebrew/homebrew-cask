@@ -1,24 +1,34 @@
 cask 'google-play-music-desktop-player' do
-  version '4.3.0'
-  sha256 '0b9ae207fbc9c38d7fddba5d7185be99d741d2b318e1933332f6cda7b48b3c6e'
+  version '4.4.1'
+  sha256 'f0c604360af08115e0338f3e6534e3486f00b55c9b7d922f060f9698a70d820b'
 
   # github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL- was verified as official when first introduced to the cask
   url "https://github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL-/releases/download/v#{version}/Google.Play.Music.Desktop.Player.OSX.zip"
   appcast 'https://github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL-/releases.atom',
-          checkpoint: '27cf7147e022a5f64ca7fb4dea73597499e6e584cbfdee2ea269b9e0c30899cd'
+          checkpoint: '98e867b126312ab43c8d276170db530d93035099956e41d3b3f0faecff369ba4'
   name 'Google Play Music Desktop Player'
   homepage 'https://www.googleplaymusicdesktopplayer.com/'
 
   app 'Google Play Music Desktop Player.app'
 
+  uninstall login_item: 'Google Play Music Desktop Player',
+            signal:     [
+                          ['TERM', 'google-play-music-desktop-player'],
+                          ['TERM', 'google-play-music-desktop-player.helper'],
+                        ]
+
   zap delete: [
-                '~/Library/Application\ Support/Google\ Play\ Music\ Desktop\ Player',
-                '~/Library/Application\ Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/google-play-music-desktop-player.sfl',
-                '~/Library/Application\ Support/google-play-music-desktop-player.ShipIt',
-                '~/Library/Caches/Google\ Play\ Music\ Desktop\ Player',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/google-play-music-desktop-player.sfl',
+                '~/Library/Caches/Google Play Music Desktop Player',
+                '~/Library/Caches/google-play-music-desktop-player.ShipIt',
                 '~/Library/Caches/google-play-music-desktop-player',
                 '~/Library/Cookies/google-play-music-desktop-player.binarycookies',
+                '~/Library/Saved Application State/google-play-music-desktop-player.savedState',
+              ],
+      trash:  [
+                '~/Library/Application Support/Google Play Music Desktop Player',
+                '~/Library/Application Support/google-play-music-desktop-player.ShipIt',
+                '~/Library/Preferences/google-play-music-desktop-player.helper.plist',
                 '~/Library/Preferences/google-play-music-desktop-player.plist',
-                '~/Library/Saved\ Application\ State/google-play-music-desktop-player.savedState',
               ]
 end

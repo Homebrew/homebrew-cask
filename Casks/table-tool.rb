@@ -1,10 +1,10 @@
 cask 'table-tool' do
-  version '1.1.2'
-  sha256 '7aa342aa3aaed6f6ecbf86c57a50de5f86add19b2ccb07c76c400f225fb828b9'
+  version '1.2.1'
+  sha256 'e405f5aff5b74a8bb57f9e7dbc483a47d9c7d3d2ef095728d04e030e84017de1'
 
   url "https://github.com/jakob/TableTool/releases/download/v#{version}/tabletool-#{version}.zip"
   appcast 'https://github.com/jakob/TableTool/releases.atom',
-          checkpoint: '21684c0cab56de4fd2cf9e73f3df14969995c17ca378dc752a56274c2f0965c9'
+          checkpoint: '11fb30c84b07c0291295a349a7a10ba001b6f013de6597dc176fc9cf6d0f6ee0'
   name 'Table Tool'
   homepage 'https://github.com/jakob/TableTool'
 

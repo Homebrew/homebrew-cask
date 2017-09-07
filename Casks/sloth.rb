@@ -9,4 +9,7 @@ cask 'sloth' do
   homepage 'https://sveinbjorn.org/sloth'
 
   app 'Sloth.app'
+
+  zap delete: '~/Library/Saved Application State/org.sveinbjorn.Sloth.savedState',
+      trash:  '~/Library/Preferences/org.sveinbjorn.Sloth.plist'
 end

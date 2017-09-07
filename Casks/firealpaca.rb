@@ -2,7 +2,8 @@ cask 'firealpaca' do
   version :latest
   sha256 :no_check
 
-  url 'http://firealpaca.com/download.php?os=mac&key=17813449013210197561d4f66c5aca8c'
+  url 'http://firealpaca.com/download/mac',
+      referer: 'http://firealpaca.com/'
   name 'Fire Alpaca'
   homepage 'https://firealpaca.com/'
 

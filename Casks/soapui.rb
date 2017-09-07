@@ -46,5 +46,19 @@ cask 'soapui' do
                                   ],
                     }
 
+  postflight do
+    soapui_sh = "/Applications/SoapUI-#{version}.app/Contents/java/app/bin/soapui.sh"
+    IO.write(soapui_sh, IO.read(soapui_sh).gsub('#   JAVA_OPTS="$JAVA_OPTS -Dsoapui.browser.disabled=true"', '   JAVA_OPTS="$JAVA_OPTS -Dsoapui.browser.disabled=true"'))
+
+    vmoptions_txt = "/Applications/SoapUI-#{version}.app/Contents/vmoptions.txt"
+    IO.write(vmoptions_txt, '-Dsoapui.browser.disabled=true')
+  end
+
   uninstall delete: "/Applications/SoapUI-#{version}.app"
+
+  zap trash: [
+               '~/.soapuios',
+               '~/default-soapui-workspace.xml',
+               '~/soapui-settings.xml',
+             ]
 end

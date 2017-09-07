@@ -4,7 +4,7 @@ cask 'electrum-ltc' do
 
   url "https://electrum-ltc.org/download/Electrum-LTC-#{version}.dmg"
   appcast 'https://electrum-ltc.org/',
-          checkpoint: 'b72a5a867e5ecaf73e47bdfdda36160b13659d10719894c2fbf74dda79fdaab0'
+          checkpoint: '535f25b27942fb2a54b3309bd979f2523bd139f90a40e5ab0633bc559331ce35'
   name 'Electrum-LTC'
   homepage 'https://electrum-ltc.org/'
   gpg "#{url}.asc", key_id: '9914864dfc33499c6ca2beea22453004695506fd'

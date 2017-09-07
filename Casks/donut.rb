@@ -5,7 +5,7 @@ cask 'donut' do
   # github.com/harshjv/donut was verified as official when first introduced to the cask
   url "https://github.com/harshjv/donut/releases/download/#{version}/donut-#{version}.dmg"
   appcast 'https://github.com/harshjv/donut/releases.atom',
-          checkpoint: '7d57c0616555224cdd707890102c283c3ea6daf3a557167b78fe75eed1bf53c0'
+          checkpoint: '51dbb61af89a2dd2d170623a81a7d121facd4532130ae3ca6743b5d9ded49be4'
   name 'donut'
   homepage 'https://harshjv.github.io/donut/'
 

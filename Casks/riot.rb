@@ -1,10 +1,10 @@
 cask 'riot' do
-  version '0.10.1'
-  sha256 'f6e9924b2695cd98ac15d5c11bc2e0763fe765ca29bf5a5c2d7f5cee7243089d'
+  version '0.12.2'
+  sha256 '453ae7e1ebb31855312974e887efd419f22dc05d5bd58b65a308bbcf34fd345d'
 
   url "https://riot.im/download/desktop/install/macos/Riot-#{version}.dmg"
   appcast 'https://github.com/vector-im/riot-web/releases.atom',
-          checkpoint: '3cc69eb34a551a9799dc113a3672ad3ab9c837a26d6e02800b9d5a60a85caab0'
+          checkpoint: '1c984c31b9ac73a91e410732e586127a31cc80c03ccf1911ce8afa1cb32098cc'
   name 'Riot'
   homepage 'https://about.riot.im/'
 

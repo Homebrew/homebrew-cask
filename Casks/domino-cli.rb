@@ -10,13 +10,13 @@ cask 'domino-cli' do
 
   installer script: {
                       executable: 'Domino Installer.app/Contents/MacOS/JavaApplicationStub',
-                      args:       %w[-q -c -overwrite],
+                      args:       ['-q', '-c', '-overwrite'],
                       sudo:       true,
                     }
 
   uninstall script: {
                       executable: '/Applications/domino/Domino Uninstaller.app/Contents/MacOS/JavaApplicationStub',
-                      args:       %w[-q -c],
+                      args:       ['-q', '-c'],
                       sudo:       true,
                     }
 

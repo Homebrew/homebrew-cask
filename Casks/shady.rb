@@ -6,7 +6,7 @@ cask 'shady' do
   appcast 'http://instinctivecode.com/appcasts/shady.xml',
           checkpoint: '6baf05284e288255a3d703ee4f1b4c248269661da205c0e4e88f8aa6052e3072'
   name 'Shady'
-  homepage 'http://instinctivecode.com/shady/'
+  homepage 'https://instinctivecode.com/shady/'
 
   app 'Shady.app'
 end

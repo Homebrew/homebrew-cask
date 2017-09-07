@@ -4,7 +4,7 @@ cask 'buildasaur' do
 
   url "https://github.com/buildasaurs/Buildasaur/releases/download/v#{version}/Buildasaur.app.zip"
   appcast 'https://github.com/buildasaurs/Buildasaur/releases.atom',
-          checkpoint: '126961234739cef575f5157814b101437b87866a53d3ec7df7c01ab55e63bbee'
+          checkpoint: '345e1dc3cfa636cce48bda3a2fc2f74d30164095151ed5a012dc05aa9f6f3285'
   name 'Buildasaur'
   homepage 'https://github.com/buildasaurs/Buildasaur'
 

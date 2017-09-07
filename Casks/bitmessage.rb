@@ -5,7 +5,7 @@ cask 'bitmessage' do
   # github.com/Bitmessage/PyBitmessage was verified as official when first introduced to the cask
   url "https://github.com/Bitmessage/PyBitmessage/releases/download/v#{version}/bitmessage-v#{version}.dmg"
   appcast 'https://github.com/Bitmessage/PyBitmessage/releases.atom',
-          checkpoint: 'b27234668b54eae0824731a8326cae2aea1de0bf74b3b1d4251d5c4a5062a928'
+          checkpoint: '2616f7341b2d3f00152e31f56953c8692f6c349ee3591570a70699c83c88722b'
   name 'Bitmessage'
   homepage 'https://bitmessage.org/'
 

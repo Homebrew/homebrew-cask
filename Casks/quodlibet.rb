@@ -1,11 +1,11 @@
 cask 'quodlibet' do
-  version '3.9.0'
-  sha256 '82b24c2cf41ea18df2b8c7a7823331ea84ce076a2a9c3d0eea8c6b263d2905a7'
+  version '3.9.1'
+  sha256 '3f26a9ddd7659a3b29f9e04f522122ad077e900b2e30591404a649527254fbf4'
 
-  # bitbucket.org/lazka/quodlibet was verified as official when first introduced to the cask
-  url "https://bitbucket.org/lazka/quodlibet/downloads/QuodLibet-#{version}.dmg"
+  # github.com/quodlibet/quodlibet was verified as official when first introduced to the cask
+  url "https://github.com/quodlibet/quodlibet/releases/download/release-#{version}/QuodLibet-#{version}.dmg"
   appcast 'https://github.com/quodlibet/quodlibet/releases.atom',
-          checkpoint: '1cb6bed33dc0a4c621a01ac5d6148a59ef525c3d9c5449c2a760c22f45ab3a7d'
+          checkpoint: '07c8c61a85c2371138c696b28aa175857d84645a59d2a2d99dc9a73341d141ed'
   name 'Quod Libet'
   homepage 'https://quodlibet.readthedocs.io/'
 

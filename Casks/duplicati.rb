@@ -1,12 +1,17 @@
 cask 'duplicati' do
-  version '2.0.1.61,2017-05-30'
-  sha256 '8ac19a3fa8aea4429476dbac9255c917030fe4b14ce1e1e47df2128a15108e1a'
+  version '2.0.2.1,2017-08-01'
+  sha256 '2f1f8ada0a8e09db6d967adcb76ce976d41d53318fdbba3bbdd279ca849e8e27'
 
-  url "https://updates.duplicati.com/experimental/duplicati-#{version.before_comma}_experimental_#{version.after_comma}.dmg"
+  url "https://updates.duplicati.com/beta/duplicati-#{version.before_comma}_beta_#{version.after_comma}.dmg"
   appcast 'https://github.com/duplicati/duplicati/releases.atom',
-          checkpoint: '9a9880a9a5dd39d00934715988b8a100cd8623065d07cb005c4569e2e665bd63'
+          checkpoint: '1d9839044f40dd3ee88a76d1074c8c34b7162a0960512932deeaa1e2d94fe9ee'
   name 'Duplicati'
   homepage 'https://www.duplicati.com/'
 
   app 'Duplicati.app'
+
+  zap trash: [
+               '~/Library/Application Support/Duplicati',
+               '~/.config/Duplicati',
+             ]
 end

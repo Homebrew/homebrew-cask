@@ -5,7 +5,7 @@ cask 'caption' do
   # github.com/gielcobben/Caption was verified as official when first introduced to the cask
   url "https://github.com/gielcobben/Caption/releases/download/v#{version}/Caption-v#{version}-darwin_x64.dmg"
   appcast 'https://github.com/gielcobben/Caption/releases.atom',
-          checkpoint: '6aa505fc423552f3f54de9ee65a740e89984a7072168623c31221c14656fa64b'
+          checkpoint: '47d58b45edc6acdeed040d1a93d5b98562a05a78f78d0a3765335e544cdc2081'
   name 'Caption'
   homepage 'https://getcaption.co/'
 

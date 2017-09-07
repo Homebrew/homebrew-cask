@@ -4,7 +4,7 @@ cask 'asset-catalog-tinkerer' do
 
   url "https://github.com/insidegui/AssetCatalogTinkerer/releases/download/#{version}/AssetCatalogTinkerer_v#{version}.zip"
   appcast 'https://github.com/insidegui/AssetCatalogTinkerer/releases.atom',
-          checkpoint: 'e4eddf825266995ad02b1bb1eaef219aa00d44153ad01a4011b0fca71b2860b1'
+          checkpoint: 'a1a11ef5ebe65978f31dd93039911862022963f4e8600c7c131986a6980dbb67'
   name 'Asset Catalog Tinkerer'
   homepage 'https://github.com/insidegui/AssetCatalogTinkerer'
 

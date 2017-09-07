@@ -1,9 +1,9 @@
 cask 'playmemories-home' do
-  version '3.3.00'
-  sha256 '3b0755157bd0d5d4fcae5f6199eac3f6d158bafe018fcd15dd79f56aabfac98b'
+  version '3.4.00'
+  sha256 'fca410865b2aed641bfbe2bb498d8225d7b651820767ce187e0fe446ca249de7'
 
   # pmb.update.sony.net/PMH was verified as official when first introduced to the cask
-  url "http://pmb.update.sony.net/PMH/ZwznMvYM3l/PMHOME_#{version.no_dots}DL.dmg"
+  url "http://pmb.update.sony.net/PMH/74jlw3pwMn/PMHOME_#{version.no_dots}DL.dmg"
   name 'PlayMemories Home'
   homepage 'https://support.d-imaging.sony.co.jp/www/disoft/int/download/playmemories-home/mac/en/'
 

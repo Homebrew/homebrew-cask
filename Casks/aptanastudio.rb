@@ -5,7 +5,7 @@ cask 'aptanastudio' do
   # github.com/aptana/studio3 was verified as official when first introduced to the cask
   url "https://github.com/aptana/studio3/releases/download/v#{version}/Aptana_Studio_3_Setup_#{version}.dmg"
   appcast "https://github.com/aptana/studio#{version.major}/releases.atom",
-          checkpoint: '4224b40e653538aafadb99463b5cd695a561bed7f7570d14fe9c1071131471e9'
+          checkpoint: '391e75dcd2dbdb84c856d44d12b242ffdcf51deb92434b720b507505713eb89f'
   name 'Aptana Studio'
   homepage 'http://www.aptana.com/'
 

@@ -4,7 +4,7 @@ cask 'barmaid' do
 
   url "https://github.com/zenonas/barmaid/releases/download/v#{version}/Barmaid-v#{version.no_hyphens}.dmg"
   appcast 'https://github.com/zenonas/barmaid/releases.atom',
-          checkpoint: 'c562d8eba3f6537c2b78dc2d8492b1464ddad324e3b6ffbf18119623dcb5845a'
+          checkpoint: '38fd5a240b1f68fbcfac7eb5db7bb3d5454abfb79e4e86e40bda82c5056e0a66'
   name 'Barmaid'
   homepage 'https://github.com/zenonas/barmaid'
 

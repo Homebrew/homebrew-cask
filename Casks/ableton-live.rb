@@ -1,8 +1,8 @@
 cask 'ableton-live' do
-  version '9.7.1'
-  sha256 '6f6dfd07da7ab2a539293fc6591b9c4d9ef29daacf622aef17d2408328513b72'
+  version '9.7.4'
+  sha256 '34f67535edcad7053a1078aefbd571867c1f089520a3b6839f042d8e2e6a70fb'
 
-  url "http://cdn2-downloads.ableton.com/channels/#{version}/ableton_live_trial_#{version}_64.dmg"
+  url "http://cdn-downloads.ableton.com/channels/#{version}/ableton_live_trial_#{version}_64.dmg"
   name 'Ableton Live'
   homepage 'https://www.ableton.com/en/live/'
 
@@ -10,5 +10,4 @@ cask 'ableton-live' do
 
   zap delete: '~/Library/*/*[Aa]bleton*',
       rmdir:  '~/Music/Ableton/Factory Packs'
-  # trash: '~/Music/Ableton/User Library'
 end

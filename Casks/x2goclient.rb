@@ -10,7 +10,7 @@ cask 'x2goclient' do
   end
 
   name 'X2Go Client'
-  homepage 'http://wiki.x2go.org/doku.php'
+  homepage 'https://wiki.x2go.org/doku.php'
 
   app 'x2goclient.app'
 end

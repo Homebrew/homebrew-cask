@@ -7,4 +7,15 @@ cask 'pingplotter' do
   homepage 'https://www.pingplotter.com/'
 
   app 'PingPlotter.app'
+
+  uninstall quit: 'com.pingman.pingplotter.mac'
+
+  zap delete: [
+                '~/Library/Logs/PingPlotter',
+                '~/Library/Saved Application State/com.pingman.pingplotter.mac.savedState',
+              ],
+      trash:  [
+                '~/Library/Application Support/PingPlotter',
+                '~/Library/Preferences/com.pingman.pingplotter.mac.plist',
+              ]
 end

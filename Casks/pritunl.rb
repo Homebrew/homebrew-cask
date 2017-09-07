@@ -1,11 +1,11 @@
 cask 'pritunl' do
-  version '1.0.1364.29'
-  sha256 'becddef266b34eaf082d0824e1194e141094aa53eb6850b5e69fe5ecfd5c5e2a'
+  version '1.0.1442.97'
+  sha256 'f3be2c4ec1ad2dcdae7b458682c7617d0e6659562d4173617a3478c2dfff96a5'
 
   # github.com/pritunl/pritunl-client-electron was verified as official when first introduced to the cask
   url "https://github.com/pritunl/pritunl-client-electron/releases/download/#{version}/Pritunl.pkg.zip"
   appcast 'https://github.com/pritunl/pritunl-client-electron/releases.atom',
-          checkpoint: '9fdabdf6411f99bc79a9e91031d8a8863ba2287411113c327002a1508e014bb8'
+          checkpoint: '4fa4e3b03c625ea9fc62abad90b57972cf18ed2890d082e0416e9a903dde60d9'
   name 'Pritunl OpenVPN Client'
   homepage 'https://client.pritunl.com/'
 
@@ -15,11 +15,12 @@ cask 'pritunl' do
             launchctl: [
                          'com.pritunl.client',
                          'com.pritunl.service',
-                       ]
+                       ],
+            signal:    ['TERM', 'com.electron.pritunl']
 
-  zap delete: [
+  zap delete: '~/Library/Caches/pritunl',
+      trash:  [
                 '~/Library/Application Support/pritunl',
-                '~/Library/Caches/pritunl',
-                '~/Library/Preferences/com.electron.pritunl.plist',
+                '~/Library/Preferences/com.electron.pritunl*',
               ]
 end

@@ -1,83 +1,83 @@
 cask 'torbrowser' do
-  version '7.0.1'
+  version '7.0.5'
 
   language 'ar' do
-    sha256 '96127d410647bc63b592238e7a5473a63c9588a88fbc501cbce93b02e546bf2e'
+    sha256 'f7fe5b8996e223cf781b5df3736a6941a9fe673fb1e2de7dfe11aa6b98ad98a7'
     'ar'
   end
 
   language 'de' do
-    sha256 '2e72480ac503b95aa77d7fbce22202dc7b08901efa78b006e58f80bcc4fcb387'
+    sha256 '09eea8e7aa1dd25a3330a2fdcd233882ddbb7503ee34526d409c054661f6226a'
     'de'
   end
 
   language 'en', default: true do
-    sha256 '7ebbede7a17fe69767f313181da7b1a55cfac5dda749bc7a5a9eeb7b37464a50'
+    sha256 'a908263d0d20f88570e73e5a4dbc37b08b17bcd3db32572b34831ef8ad6a7758'
     'en-US'
   end
 
   language 'es' do
-    sha256 'f3e9c12dc366d6523a1c37b8d724d7211ea0effcedbde9630d24221b2dd40591'
+    sha256 'bf8168e84025da45eda1a2e427fe9c1dc06b1c54ba6f0e2660869a6b7d4d9634'
     'es-ES'
   end
 
   language 'fa' do
-    sha256 'a0db74f53d544434100adb6fce0874f87779c03d0ab2a9116ed55c1f17547f54'
+    sha256 'd4eafbf9c0fdf9cd05094ef41978429634abd8576a1149de5d00a04597c82a38'
     'fa'
   end
 
   language 'fr' do
-    sha256 '05f65f1fb05ed3a463470a4b4457cdd0e278d73d198955ecd1a3ed1e8522c3aa'
+    sha256 'cfe41c8f5abc8be3e68f010c05dd00bb51ee785c4e3bfadd5b944c3c74422a15'
     'fr'
   end
 
   language 'it' do
-    sha256 '5efbfa0fa5023cbc54a6082b2bde4caa2e8d593ec1910e138262a337e3078018'
+    sha256 '30037e3fed9d0da52ba4443adee2ad0f1642d6f64b82d294411da939ededb7b8'
     'it'
   end
 
   language 'ja' do
-    sha256 'fc6ce46c923328e33949c98653bd3eb373ab8df86dfb6708326416ecec547824'
+    sha256 'adabfd0b1cf962affc0aa2ac772928a0d4c66239a618a749a5baca2352c1779f'
     'ja'
   end
 
   language 'ko' do
-    sha256 '0d84991dbd8b539fdb52a9fa6bbb20bd95a7c8121c7b050b5fa2c7384ec4e2e3'
+    sha256 '49a3891cee8dadb7b3f66d4676d17614c54196d31357de1e93f17b93645dcea6'
     'ko'
   end
 
   language 'nl' do
-    sha256 '0658df5d9d63a641d3b864557e374da5aa50173dfe487239eb1ac6b4bddf38e6'
+    sha256 'd771ca63de564bb9761d91a2012bfab603b6547627cd8924c796acbe0c49a0bf'
     'nl'
   end
 
   language 'pl' do
-    sha256 'd5a52259400bb0340729d6d83d4ec09cf3043bbf59e8fb639d14f55a4baa1749'
+    sha256 'bc384dbe501ce3d2c556b55adac84d2f028a202399ee2975913bc6c0b4f5f6bd'
     'pl'
   end
 
   language 'pt' do
-    sha256 '75cc33c958f746134ad63730c5007aa2bbaf61649f8078d4ff98d05b6b6bf0f3'
+    sha256 '4f72d08b2f8318f1ef9231e2a7e78bd6ce29d6d7629796954876a8a772ef7a19'
     'pt-BR'
   end
 
   language 'ru' do
-    sha256 '44e354e5b11c6d75a2218962733b20bd47cc3384dcd8cf1362dd552253215466'
+    sha256 'bc9843b9de0a887249c7dd79265e4e7c61ab785b70ebb95401f497aadb24b16d'
     'ru'
   end
 
   language 'tr' do
-    sha256 '9dc7bcc993c01cc56e0d760c9be79db0107a80497efaa60a6fcb1a282662bb5e'
+    sha256 '87099c78bef51477c4cb4b191374158473d70ca0ff8a93ac9242232079d38ade'
     'tr'
   end
 
   language 'vi' do
-    sha256 '03cf91e76553cc8eedd9192604ca2ce7d643fd2cebacb3d85b46d05f35346500'
+    sha256 'e9e59d5fbe53100d58b0f2feb5dd2b5e3ad43c42ffe5d2893a799df87881ff84'
     'vi'
   end
 
   language 'zh' do
-    sha256 'addd02e8246e7fe775c2407a58f6a6521a12958b8ab05e699b5588f95af9f01d'
+    sha256 'a51b48370ac4f968887174e8cf663ce9ed785094f6623b9f2d266b371d9ce552'
     'zh-CN'
   end
 
@@ -90,9 +90,10 @@ cask 'torbrowser' do
 
   app 'TorBrowser.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.tor browser.sfl',
+  zap delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.tor browser.sfl',
+      trash:  [
                 '~/Library/Application Support/TorBrowser-Data',
                 '~/Library/Preferences/org.mozilla.tor browser.plist',
+                '~/Library/Preferences/org.torproject.torbrowser.plist',
               ]
 end

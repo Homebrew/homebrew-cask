@@ -14,7 +14,7 @@ When `caveats` is a string, it is evaluated at compile time. The following metho
 | `version`          | the Cask version
 | `homepage`         | the Cask homepage
 | `caskroom_path`    | the containing directory for all staged Casks, typically `/usr/local/Caskroom` (only available with block form)
-| `staged_path`      | the staged location for this Cask, including version number, *eg* `/usr/local/Caskroom/adium/1.5.10` (only available with block form)
+| `staged_path`      | the staged location for this Cask, including version number: `/usr/local/Caskroom/{{token}}/{{version}}` (only available with block form)
 
 Example:
 

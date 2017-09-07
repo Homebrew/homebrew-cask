@@ -7,12 +7,12 @@ cask 'yasu' do
     appcast 'https://yasuformac.com/appcasts/10.11/yasu.xml',
             checkpoint: 'd13bbaeca2a2c3610fa770ed3b2080fa040f525bbcc15c144d1802ecaf3ee487'
   else
-    version '4.0.3,603'
-    sha256 'aff402cdad7574e39705968f4ed2e35a05ef64260bf3cae85acf62d22e15f920'
+    version '4.0.4,604'
+    sha256 '31b03f6d3da590586cd75ba807092649eb18663383020b022d5fc15546251e9c'
     url "https://yasuformac.com/appcasts/10.12/yasuformac_#{version.after_comma}.zip",
         user_agent: :fake
     appcast 'https://yasuformac.com/appcasts/10.12/yasu.xml',
-            checkpoint: '26699f36f3b2d0b95d5c25342d6fae72ad6dceda732679718701223127b5e7ce'
+            checkpoint: 'dc07865140cc29a803f9c3ced2fdf81ae5bd2ab94b8f6b14b30d9dc966369ab3'
   end
 
   name 'Yasu'

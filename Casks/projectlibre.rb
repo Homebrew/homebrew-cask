@@ -7,7 +7,7 @@ cask 'projectlibre' do
   appcast 'https://sourceforge.net/projects/projectlibre/rss?path=/ProjectLibre',
           checkpoint: '0097cef0c2be756e33fa9c0c73557f1cfe62121e824c08b8cb8ee6c56bc72b08'
   name 'ProjectLibre'
-  homepage 'http://www.projectlibre.com/'
+  homepage 'https://www.projectlibre.com/'
 
   app 'ProjectLibre.app'
 end

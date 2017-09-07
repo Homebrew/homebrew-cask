@@ -1,11 +1,11 @@
 cask 'chunky' do
-  version '1.4.2'
-  sha256 'b35eec9fd6247555e5ab0d97f5644fee38215483f6370bc6860e43af523903c5'
+  version '1.4.3'
+  sha256 '609d67f7a4c269db5725ca37d527615a01b3a386a794dea78d50fba60b833eb0'
 
   # launchpad.net/chunky was verified as official when first introduced to the cask
   url "https://launchpad.net/chunky/#{version.major_minor}/#{version}/+download/Chunky-#{version}.dmg"
   appcast 'https://github.com/llbit/chunky/releases.atom',
-          checkpoint: '6699de9c9d8b5be1f6a53fd042b514dc496a1274f9731538c5042bac0981ccbb'
+          checkpoint: '51d774038fb55d2a83b201e44c60938c0380387598f91acff3077b148e29fb28'
   name 'Chunky'
   homepage 'https://chunky.llbit.se/'
 

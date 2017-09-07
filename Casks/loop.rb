@@ -4,7 +4,7 @@ cask 'loop' do
 
   url "https://github.com/twostairs/loop/releases/download/v#{version}/loop_#{version}.dmg"
   appcast 'https://github.com/twostairs/loop/releases.atom',
-          checkpoint: '55fc6c3031b3a4ac84eefa2343f3565ae915919fd0706dff4c796aa0c10c0ead'
+          checkpoint: 'c15d4422ac11760cbe8b8380bd63b116d7c98654f6a711fc4e1fa8d0e5779ff6'
   name 'Loop'
   homepage 'https://github.com/twostairs/loop'
 

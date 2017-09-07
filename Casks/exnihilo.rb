@@ -1,11 +1,11 @@
 cask 'exnihilo' do
-  version '1.6.0'
-  sha256 '0a2aff5d9d57a83c087bf983f0a2114b66f7863fe562ca60cd2e9c5f5df898e6'
+  version '1.7.4'
+  sha256 'a926c50ceb23b7e9b4b46ac96aaf4b028b95254c768a318c74450d8c4c0e70df'
 
   # github.com/Vayn/ex-nihilo was verified as official when first introduced to the cask
   url "https://github.com/Vayn/ex-nihilo/releases/download/#{version}/ExNihilo.zip"
   appcast 'https://github.com/vayn/ex-nihilo/releases.atom',
-          checkpoint: 'f2914099d73bf06be5b89dc26d11d804f7bf6d2466d6d880cdc33ded12bfd890'
+          checkpoint: 'f4bf79ba08c1a6fa069c0ddc4ad09b73fd72e82d614d0b3524be5601be2b4eac'
   name 'Ex nihilo'
   homepage 'https://vayn.github.io/ex-nihilo/'
 

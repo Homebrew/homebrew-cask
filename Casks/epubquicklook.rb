@@ -4,7 +4,7 @@ cask 'epubquicklook' do
 
   url "https://github.com/jaketmp/ePub-quicklook/releases/download/v#{version}/epub.qlgenerator.zip"
   appcast 'https://github.com/jaketmp/ePub-quicklook/releases.atom',
-          checkpoint: '4ce0d3ba1834210a5eabc0b3fc1424c0f8b7a304f8db73beb6c2ffd11fe78756'
+          checkpoint: '5d6c50f8872783e53e5e4024e900e2ea35c45c84dd0a072c7f8cb8a4d29e0533'
   name 'EPUB QuickLook'
   homepage 'https://github.com/jaketmp/ePub-quicklook'
 

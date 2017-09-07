@@ -4,21 +4,32 @@ cask 'shadowsocksx-ng' do
 
   url "https://github.com/shadowsocks/ShadowsocksX-NG/releases/download/v#{version}/ShadowsocksX-NG.#{version}.zip"
   appcast 'https://github.com/shadowsocks/ShadowsocksX-NG/releases.atom',
-          checkpoint: 'c8b1338ed43eaa7aea4d700c7729a880d00c2b42bb5bbee26531b2d41f0fba97'
+          checkpoint: 'f9fb51bfb0f2c0c28093eea5b84e87ba7269b15694a56f544895780e978fcc70'
   name 'ShadowsocksX-NG'
   homepage 'https://github.com/shadowsocks/ShadowsocksX-NG/'
 
   conflicts_with cask: 'shadowsocksx'
+  depends_on macos: '>= :el_capitan'
 
   app 'ShadowsocksX-NG.app'
 
-  zap delete: [
-                '/Library/Application Support/ShadowsocksX-NG',
+  uninstall delete:    '/Library/Application Support/ShadowsocksX-NG',
+            launchctl: [
+                         'com.qiuyuzhou.shadowsocksX-NG.http',
+                         'com.qiuyuzhou.shadowsocksX-NG.kcptun',
+                         'com.qiuyuzhou.shadowsocksX-NG.local',
+                         'com.qiuyuzhou.ShadowsocksX-NG.LaunchHelper',
+                       ],
+            quit:      'com.qiuyuzhou.ShadowsocksX-NG',
+            script:    {
+                         executable: '/Library/Application Support/ShadowsocksX-NG/proxy_conf_helper',
+                         args:       ['--mode', 'off'],
+                       }
+
+  zap delete: '~/Library/Caches/com.qiuyuzhou.ShadowsocksX-NG',
+      trash:  [
                 '~/.ShadowsocksX-NG',
                 '~/Library/Application Support/ShadowsocksX-NG',
-                '~/Library/Caches/com.qiuyuzhou.ShadowsocksX-NG',
-                '~/Library/LaunchAgents/com.qiuyuzhou.shadowsocksX-NG.http.plist',
-                '~/Library/LaunchAgents/com.qiuyuzhou.shadowsocksX-NG.local.plist',
                 '~/Library/Preferences/com.qiuyuzhou.ShadowsocksX-NG.plist',
               ]
 end

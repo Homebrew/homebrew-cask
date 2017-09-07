@@ -1,11 +1,11 @@
 cask 'lifesize' do
-  version '10.3.5-224'
-  sha256 '9ed0f8f45385dcba95bd61d42a6753a493cd1386150439b38e5109a76fdd99dc'
+  version '10.3.6-228'
+  sha256 'aa8f2d7d03b69bc4dc82d61ccb5d9906f72223550afa4fd3d5bd57a33e7e1230'
 
   # cdn.lifesizecloud.com was verified as official when first introduced to the cask
   url "https://cdn.lifesizecloud.com/LifesizeCloud-#{version}-signed.pkg"
   appcast 'https://cdn.lifesizecloud.com/OSX_Clients/Sparkle_Upgrades/LifesizeAppcast.xml',
-          checkpoint: 'f508b0aa56c8d4b0736018cfd3166878122c3df409a02c3b4ce7dab0149ae4b8'
+          checkpoint: '126706cb81da1c6dc55ccda30fc14e8d79e42c210170222e2324f76567e71e40'
   name 'lifesize'
   homepage 'https://www.lifesize.com/'
 

@@ -4,7 +4,7 @@ cask 'timer' do
 
   url 'http://www.apimac.com/download/Timer.zip'
   name 'Timer'
-  homepage 'http://www.apimac.com/mac/timer/'
+  homepage 'https://www.apimac.com/mac/timer/'
 
   app 'Timer.app'
 

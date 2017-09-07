@@ -5,7 +5,7 @@ cask 'disk-arbitrator' do
   # kainjow.com was verified as official when first introduced to the cask
   url "https://github.com/aburgh/Disk-Arbitrator/releases/download/v#{version}/Disk.Arbitrator-#{version.major_minor}.dmg"
   appcast 'https://github.com/aburgh/Disk-Arbitrator/releases.atom',
-          checkpoint: 'f8858ef5754234e6e18aba2a209c53b321fcea92931eefca50476ee3dede1306'
+          checkpoint: '982ad9843fdc9cf39b31d45010a9eab3ffe07fb71156759ba2a667d7e9923a51'
   name 'Disk Arbitrator'
   homepage 'https://github.com/aburgh/Disk-Arbitrator'
 

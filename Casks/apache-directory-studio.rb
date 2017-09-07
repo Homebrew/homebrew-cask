@@ -4,7 +4,7 @@ cask 'apache-directory-studio' do
 
   url "http://www.us.apache.org/dist/directory/studio/#{version}/ApacheDirectoryStudio-#{version}-macosx.cocoa.x86_64.dmg"
   appcast 'http://apache.mirror.serversaustralia.com.au/directory/studio/',
-          checkpoint: '4ea9e27adef6c8b151664210452725d6f78d280ff0067d264207be9d91de8361'
+          checkpoint: '455c45a043e17bf557b58c9fcb4c50ca8a1054c88093087ed4fb2bdbf59f65c0'
   name 'Apache Directory Studio'
   homepage 'https://directory.apache.org/studio/'
 

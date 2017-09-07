@@ -10,10 +10,6 @@
 
 header 'Running before_script.sh...'
 
-# Required workarounds
-run curl -sSL https://rvm.io/mpapis.asc | gpg2 --import - # Required by RVM: https://rvm.io/rvm/security
-run rvm get stable # Required due to Travis bug: https://github.com/travis-ci/travis-ci/issues/6307#issuecomment-233315824
-
 # see https://github.com/travis-ci/travis-ci/issues/2666
 run export BRANCH_COMMIT="${TRAVIS_COMMIT_RANGE##*.}"
 run export TARGET_COMMIT="${TRAVIS_COMMIT_RANGE%%.*}"

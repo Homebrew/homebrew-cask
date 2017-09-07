@@ -120,7 +120,7 @@ cask 'adobe-photoshop-cc' do
     system_command "#{staged_path}/Adobe Photoshop CC 2015/Install.app/Contents/MacOS/Install",
                    args: [
                            '--mode=silent',
-                           "--deploymentFile=#{staged_path}/Adobe\ Photoshop\ CC\ 2015/Deployment/#{language}_Deployment.xml",
+                           "--deploymentFile=#{staged_path}/Adobe Photoshop CC 2015/Deployment/#{language}_Deployment.xml",
                          ],
                    sudo: true
   end

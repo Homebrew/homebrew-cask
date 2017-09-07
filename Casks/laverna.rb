@@ -9,5 +9,5 @@ cask 'laverna' do
   name 'Laverna'
   homepage 'https://laverna.cc/'
 
-  app 'Laverna.app'
+  app 'laverna.app'
 end

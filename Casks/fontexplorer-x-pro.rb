@@ -10,15 +10,24 @@ cask 'fontexplorer-x-pro' do
 
   app 'FontExplorer X Pro.app'
 
+  uninstall delete:    '/Library/PrivilegedHelperTools/com.linotype.FontExplorerX.securityhelper',
+            launchctl: [
+                         'com.linotype.FontExplorerX.securityhelper',
+                         'com.linotype.FontFolderProtector',
+                       ],
+            quit:      'com.linotype.FontExplorerX'
+
   zap delete: [
-                '/Library/PrivilegedHelperTools/com.linotype.FontExplorerX.securityhelper',
-                '/Library/LaunchDaemons/com.linotype.FontExplorerX.securityhelper.plist',
-                '~/Library/Application Support/Linotype/FontExplorer X',
-                '~/Library/Application\ Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.linotype.fontexplorerx.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.linotype.fontexplorerx.sfl',
                 '~/Library/Caches/com.linotype.FontExplorerX',
+                '~/Library/Caches/Metadata/FontExplorer X',
                 '~/Library/Cookies/com.linotype.FontExplorerX.binarycookies',
-                '~/Library/LaunchAgents/com.linotype.FontFolderProtector.plist',
+                '~/Library/Saved Application State/com.linotype.FontExplorerX.savedState',
+              ],
+      trash:  [
+                '~/Library/Application Support/Linotype/FontExplorer X',
                 '~/Library/Preferences/com.linotype.FontExplorerX.plist',
-                '~/Library/Saved\ Application\ State/com.linotype.FontExplorerX.savedState',
+                '/Users/Shared/.FontExplorer X Server',
+                '/Users/Shared/FontExplorer X Server',
               ]
 end

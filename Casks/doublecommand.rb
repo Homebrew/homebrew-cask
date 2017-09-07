@@ -4,7 +4,7 @@ cask 'doublecommand' do
 
   url "http://doublecommand.sourceforge.net/files/DoubleCommand-#{version}.dmg"
   appcast 'https://github.com/mbaltaks/doublecommand/releases.atom',
-          checkpoint: '094eeb41e5a274d0eb3e01c4d2049efca7da3f5badeb62ef92431515e08203ef'
+          checkpoint: '3b4f7064893eb668a43ffcbd82993b469a116b23404dfeacc29895faf13d7ac8'
   name 'DoubleCommand'
   homepage 'http://doublecommand.sourceforge.net/'
 

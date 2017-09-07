@@ -8,5 +8,5 @@ cask 'xtabulator' do
   name 'XTabulator'
   homepage 'https://www.bartastechnologies.com/products/xtabulator/'
 
-  app "XTabulator #{version.major}/XTabulator.app"
+  app 'XTabulator.app'
 end

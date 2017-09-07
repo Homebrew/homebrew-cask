@@ -9,9 +9,9 @@ cask 'laullon-gitx' do
   name 'GitX (L)'
   homepage 'http://gitx.laullon.com/'
 
-  conflicts_with cask: %w[
-                         gitx
-                         rowanj-gitx
+  conflicts_with cask: [
+                         'gitx',
+                         'rowanj-gitx',
                        ]
 
   app 'GitX.app'

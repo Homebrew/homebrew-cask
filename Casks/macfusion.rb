@@ -8,7 +8,7 @@ cask 'macfusion' do
   name 'Macfusion'
   homepage 'http://macfusionapp.org/'
 
-  depends_on formula: 'homebrew/core/sshfs'
+  depends_on formula: 'sshfs'
 
   app 'Macfusion.app'
 

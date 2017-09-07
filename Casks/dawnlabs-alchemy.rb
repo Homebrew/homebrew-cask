@@ -4,7 +4,7 @@ cask 'dawnlabs-alchemy' do
 
   url "https://github.com/dawnlabs/alchemy/releases/download/#{version}/Alchemy-darwin-x64.zip"
   appcast 'https://github.com/dawnlabs/alchemy/releases.atom',
-          checkpoint: '23d096e36fcf11c25f99573b539f6a5d864df15a609907861969b575e628597d'
+          checkpoint: 'adb171e7d3a8c14df0393d0c9ab94f712619ae694fa28154e8beb65597bdfe0f'
   name 'Alchemy'
   homepage 'https://github.com/dawnlabs/alchemy'
 

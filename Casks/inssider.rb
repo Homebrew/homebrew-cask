@@ -5,7 +5,7 @@ cask 'inssider' do
   # metageek.net was verified as official when first introduced to the cask
   url "http://files.metageek.net/downloads/inSSIDer#{version.major}-installer.dmg"
   name 'inSSIDer'
-  homepage 'http://www.metageek.com/products/inssider/'
+  homepage 'https://www.metageek.com/products/inssider/'
 
   app 'inSSIDer.app'
 end

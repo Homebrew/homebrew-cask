@@ -1,10 +1,10 @@
 cask 'nordvpn' do
-  version '3.1.4'
-  sha256 'fc97804a1b7fbc51fa73fa59cb17b7bb4246fed155aa4ad3216647827351d719'
+  version '3.3.8'
+  sha256 'e274d18c42f7f3397bf195f027a51b21f1add2b7b57578a46498888d41104713'
 
   url 'https://nordvpn.com/api/osxapp/latest'
   appcast 'https://downloads.nordvpn.com/apps/osx/update.xml',
-          checkpoint: '70c5c63a5fa409dafd86d7e6bae9df796fa7a9183833e233caf1b79b44618909'
+          checkpoint: '589e0827c0a95f54ba267fdd61bc61d7cde34068951828e151b8578415385955'
   name 'NordVPN'
   homepage 'https://nordvpn.com/'
 

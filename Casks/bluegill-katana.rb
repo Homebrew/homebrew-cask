@@ -5,7 +5,7 @@ cask 'bluegill-katana' do
   # github.com/bluegill/katana was verified as official when first introduced to the cask
   url "https://github.com/bluegill/katana/releases/download/v#{version}/katana-#{version}-mac.zip"
   appcast 'https://github.com/bluegill/katana/releases.atom',
-          checkpoint: '182dca3e37fd246414b9fec5b3034df2c826fd779b0ab8e93c3b08b9a2daa4bf'
+          checkpoint: '4ea7ef6c6c4aca75a63b6fff9bb15b78a53a40112e660a1d980e4d825e93e38f'
   name 'Katana'
   homepage 'https://getkatana.com/'
 

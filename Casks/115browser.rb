@@ -4,7 +4,7 @@ cask '115browser' do
 
   url "https://down.115.com/client/mac/115br_v#{version}.dmg"
   appcast 'https://pc.115.com/#mac',
-          checkpoint: '3226edb24d62209969e17ad1dbd21953bfc71043dfe5893658501d3c196eec89'
+          checkpoint: 'e2ea2eb6965afff80577b6faf59e14b696a40db8a0e1a1c7caa14c3f689ed982'
   name '115Browser'
   name '115浏览器'
   homepage 'https://pc.115.com/'

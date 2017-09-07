@@ -15,12 +15,16 @@ cask 'textmate' do
   binary "#{appdir}/TextMate.app/Contents/Resources/mate"
 
   zap delete: [
+                '~/Library/Saved Application State/com.macromates.TextMate.savedState',
+                '~/Library/Caches/com.macromates.TextMate',
+              ],
+      trash:  [
                 '~/Library/Application Support/Avian',
                 '~/Library/Application Support/TextMate',
                 '~/Library/Preferences/com.macromates.TextMate.preview.LSSharedFileList.plist',
                 '~/Library/Preferences/com.macromates.TextMate.preview.plist',
+                '~/Library/Preferences/com.macromates.TextMate.plist',
                 '~/Library/Preferences/com.macromates.textmate.webpreview.plist',
-                '~/Library/Preferences/com.macromates.textmate.plist',
                 '~/Library/Preferences/com.macromates.textmate.latex_config.plist',
               ]
 end

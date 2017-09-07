@@ -4,7 +4,7 @@ cask 'bilibili' do
 
   url "https://github.com/typcn/bilibili-mac-client/releases/download/#{version}/Bilibili.dmg"
   appcast 'https://github.com/typcn/bilibili-mac-client/releases.atom',
-          checkpoint: '51ac10a613683a37d4d6de604e58904a7b750d3ba1b6b341c112256680bf29d3'
+          checkpoint: '8461ea5e003dc46cc903ec83284d9a2508c7e68bf38d01e2cf53d361619646a4'
   name 'Bilibili'
   homepage 'https://github.com/typcn/bilibili-mac-client/'
 
