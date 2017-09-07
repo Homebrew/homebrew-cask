@@ -6,13 +6,13 @@ cask 'quicksilver' do
     version '1.2.0'
     sha256 '08c5aeaa7fe89427bcec30a9700eb0b7484bd68b647776b2c82c95355d1679d4'
   else
-    version '1.5.5'
-    sha256 '3c29fdd4bcd8fb2e54dd0c84aecdc065a142ba27a9f26604d3a52d9481ff1835'
+    version '1.5.6'
+    sha256 '526c9ea6d4b23f0e95f78dac5ee55f7176a5a2cc53c79f0ec1ea8c1ffb1166fb'
   end
 
   url "https://qsapp.com/archives/downloads/Quicksilver%20#{version}.dmg"
   appcast 'https://qsapp.com/archives/',
-          checkpoint: '69aac3141ea83d2b51054a058338630e5bf964c2bda59ddf618d9003c3b7ef61'
+          checkpoint: '8567448f8f1f3be984b501b5c863abd4cc8e7d9cc968b77f22afc6e4eff7cc4a'
   name 'Quicksilver'
   homepage 'https://qsapp.com/'
 
