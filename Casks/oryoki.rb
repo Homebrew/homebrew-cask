@@ -1,5 +1,3 @@
-# coding: utf-8
-
 cask 'oryoki' do
   version '0.2.0'
   sha256 'cf1c7ef670a59d7d057124d4c317c3364ddf9b5af56d7a5a6bb04cb265a84d0a'
