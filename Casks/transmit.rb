@@ -4,7 +4,7 @@ cask 'transmit' do
 
   url "https://www.panic.com/transmit/d/Transmit%20#{version}.zip"
   appcast "https://library.panic.com/releasenotes/transmit#{version.major}",
-          checkpoint: 'bca72152497f631aea8bd4bd44a6f792cc45cbf167f497f31b8a2eac8405a25a'
+          checkpoint: '015159a7a1fd6a1cb14729e22fd4d2bb6b561539c084e9dac15f2cba4ae13392'
   name 'Transmit'
   homepage 'https://panic.com/transmit/'
 
