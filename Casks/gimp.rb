@@ -7,6 +7,7 @@ cask 'gimp' do
   homepage 'https://www.gimp.org/'
 
   app 'GIMP.app'
+  binary "#{appdir}/GIMP.app/Contents/MacOS/GIMP", target: 'gimp'
 
   postflight do
     set_permissions "#{appdir}/GIMP.app/Contents/MacOS/GIMP", 'a+rx'
