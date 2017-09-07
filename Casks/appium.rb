@@ -5,7 +5,7 @@ cask 'appium' do
   # github.com/appium/appium-desktop was verified as official when first introduced to the cask.
   url "https://github.com/appium/appium-desktop/releases/download/v#{version}/appium-desktop-#{version}-mac.zip"
   appcast 'https://github.com/appium/appium-desktop/releases.atom',
-          checkpoint: '7d0ddbc3fae9396cb02d4cea56dead044c1055b9f09c5f061275f8be922f8fb3'
+          checkpoint: '5f70b8d7cd1b44401759d741dc53d8776c9f67c052ede4c270c763bbab4e144e'
   name 'Appium Desktop'
   homepage 'https://appium.io/'
 
