@@ -11,7 +11,7 @@ cask 'coccoc' do
   app 'CocCoc.app'
 
   zap delete: [
-    '~/Library/Application Support/Coccoc',
-    '~/Library/Caches/Coccoc'
-  ]
+                '~/Library/Application Support/Coccoc',
+                '~/Library/Caches/Coccoc',
+              ]
 end
