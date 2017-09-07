@@ -4,14 +4,21 @@ cask 'coccoc' do
 
   url 'https://files.coccoc.com/browser/mac/coccoc.dmg'
   name 'Cốc Cốc'
-  homepage 'http://coccoc.com/'
+  homepage 'https://coccoc.com/'
 
   auto_updates true
 
   app 'CocCoc.app'
 
+  uninstall launchctl: 'com.coccoc.CocCoc'
+
   zap delete: [
-                '~/Library/Application Support/Coccoc',
                 '~/Library/Caches/Coccoc',
+                '~/Library/Caches/com.coccoc.Coccoc',
+                '~/Library/Saved Application State/com.coccoc.Coccoc.savedState',
+              ],
+      trash:  [
+                '~/Library/Application Support/Coccoc',
+                '~/Library/Preferences/com.coccoc.Coccoc.plist',
               ]
 end
