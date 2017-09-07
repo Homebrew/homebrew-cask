@@ -4,7 +4,7 @@ cask 'airfoil' do
 
   url 'https://rogueamoeba.com/airfoil/download/Airfoil.zip'
   appcast 'https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&bundleid=com.rogueamoeba.Airfoil&platform=osx',
-          checkpoint: 'd8e99a22465aa4eed0e5e59e9f91487bf615b7f8925fd4f19bfdac33e2876e01'
+          checkpoint: 'c1954b71e71ef9708e60b4091f8e78dfa1ba959e69e952edb329aa18825a6365'
   name 'Airfoil'
   homepage 'https://www.rogueamoeba.com/airfoil/mac/'
 
