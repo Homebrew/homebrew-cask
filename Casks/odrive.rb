@@ -8,7 +8,7 @@ cask 'odrive' do
   name 'odrive'
   homepage 'https://www.odrive.com/'
 
-  pkg "odrive.#{version}.pkg"
+  pkg "odrive.#{version}.pkg", allow_untrusted: true
 
   uninstall pkgutil: 'com.oxygen.odrive.*'
 end
