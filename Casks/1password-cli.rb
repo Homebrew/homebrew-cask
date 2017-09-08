@@ -8,6 +8,7 @@ cask '1password-cli' do
           checkpoint: 'a0c73938742c33399b0d408dac38e5aaa23a56e8a76ba0603876398f7cc38ccb'
   name '1Password CLI'
   homepage 'https://support.1password.com/command-line/'
+  gpg 'op.sig', key_url: 'https://keybase.io/1password/pgp_keys.asc'
 
   binary 'op'
 
