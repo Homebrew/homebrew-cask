@@ -4,7 +4,8 @@ cask 'iota-wallet' do
 
   # github.com/iotaledger/wallet was verified as official when first introduced to the cask
   url "https://github.com/iotaledger/wallet/releases/download/v#{version}/IOTA.Wallet-#{version}.dmg"
-  appcast 'https://github.com/iotaledger/wallet/releases.atom'
+  appcast 'https://github.com/iotaledger/wallet/releases.atom',
+          checkpoint: 'f1e4a8683d0bc575989ca022baf66cabbdff143f509e4db3ba5b7f645c858fb0'
   name 'IOTA Wallet'
   homepage 'https://iota.org/'
 
