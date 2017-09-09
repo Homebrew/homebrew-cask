@@ -1,11 +1,11 @@
 cask 'nanobox' do
-  version '2.2.0'
-  sha256 'a601fbef6ae9403d0139a188d380ed852b31cc8adbb7836d41573a452bb27034'
+  version '2.3.0'
+  sha256 'db475905b0907afdd46e03227ebd7c3df0e3270f28544f2fd16de54142656e2e'
 
   # s3.amazonaws.com/tools.nanobox.io was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/tools.nanobox.io/installers/v#{version.major}/mac/Nanobox.pkg"
   appcast 'https://github.com/nanobox-io/nanobox/releases.atom',
-          checkpoint: 'c8bab1b2a3f6216c4bae24b692a8e4c6327c3fbc8dd87928d58bbd6710269e8a'
+          checkpoint: '9c76c6fe3909ff7e2dd99a7468a7c59cf93d80a63e81947a340d48fa7994a71c'
   name 'nanobox'
   homepage 'https://www.nanobox.io/'
 
