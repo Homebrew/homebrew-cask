@@ -4,7 +4,7 @@ cask 'beyerdynamicvs' do
 
   url 'http://www.beyerdynamic.com/fileadmin/editors/downloads/virtualstudio/beyerdynamic-virtual-studio_04-13.zip'
   appcast 'https://north-america.beyerdynamic.com/virtual-studio.html',
-          checkpoint: '46e123a5e5793766ef6b45cb58bf75013e0afee5a7f66b252526ed1b56cd144e'
+          checkpoint: 'ba8f7ddb47051294e40540a982933aaab91f8e3ff9cbe042688cfec3671aba60'
   name 'beyerdynamic Virtual Studio'
   homepage 'https://www.beyerdynamic.com/virtual-studio.html'
 
