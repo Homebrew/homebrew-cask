@@ -4,7 +4,7 @@ cask 'audioscrobbler' do
 
   url "https://github.com/mxcl/Audioscrobbler.app/releases/download/#{version}/Audioscrobbler-#{version}.zip"
   appcast 'https://github.com/mxcl/Audioscrobbler.app/releases.atom',
-          checkpoint: 'c222292ffd9650b768c3d0777af0afcba066cd7c099870f7bb47da8c54c33956'
+          checkpoint: '1edc614869d23531590f02ca14870b2a439d98cf23fb141c9f23412b8b822d35'
   name 'Audioscrobbler'
   homepage 'https://github.com/mxcl/Audioscrobbler.app'
 
