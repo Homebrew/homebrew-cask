@@ -1,11 +1,11 @@
 cask 'displaycal' do
-  version '3.3.3.0'
-  sha256 '4f548434dc4703a3983c7e74b0a50530275a47eb24a3974998ea7068267b069e'
+  version '3.3.4.0'
+  sha256 '0be4018e6d51adbf998ffbff1f4fa14c8dfb09ea466140fc60670c5a6237948f'
 
   # sourceforge.net/dispcalgui was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/dispcalgui/release/#{version}/DisplayCAL-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/dispcalgui/rss?path=/release',
-          checkpoint: '8c09bd1859ffe35a2826de1b87909db3cf942219412e2a90cf33b18e8ee54aa1'
+          checkpoint: '235f8cf4054858a81a691b129e05097c78197e297b1ea746d3360d2a9f70a6d5'
   name 'DisplayCAL'
   homepage 'https://displaycal.net/'
 
