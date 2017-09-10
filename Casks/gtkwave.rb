@@ -1,10 +1,10 @@
 cask 'gtkwave' do
-  version '3.3.83'
-  sha256 'e69abb812f5533c12cd8f3499ba14d7b825c1d7ec4ced270f45faeca438abcba'
+  version '3.3.84'
+  sha256 'c503fb140f94a433dcfdc6417110890c77938b97f4d32cd4640155585d738b7c'
 
   url "https://downloads.sourceforge.net/gtkwave/gtkwave-#{version}-osx-app/gtkwave.zip"
   appcast 'https://sourceforge.net/projects/gtkwave/rss',
-          checkpoint: '272dbc66b1cd6541141748429764cad8cd0df9fba8125ff66efd4fe51d76c23a'
+          checkpoint: '32f014bffe849d4bc2a975e662ecb6a38ce83507dd39f03ebc874252d551bc33'
   name 'GTKWave'
   homepage 'http://gtkwave.sourceforge.net/'
 

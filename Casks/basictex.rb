@@ -7,6 +7,11 @@ cask 'basictex' do
   name 'BasicTeX'
   homepage 'https://www.tug.org/mactex/morepackages.html'
 
+  conflicts_with cask: [
+                         'mactex-no-ghostscript',
+                         'mactex',
+                       ]
+
   pkg "mactex-basictex-#{version.no_dots}.pkg"
 
   uninstall pkgutil: "org.tug.mactex.basictex#{version.major}",

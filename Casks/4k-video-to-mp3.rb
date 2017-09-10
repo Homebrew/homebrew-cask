@@ -4,7 +4,7 @@ cask '4k-video-to-mp3' do
 
   url "https://downloads2.4kdownload.com/app/4kvideotomp3_#{version.major_minor}.dmg"
   appcast 'https://www.4kdownload.com/download',
-          checkpoint: '49ff507a887439ff101f36b84c58788834a7a4a7638127609c8a49fa6278b627'
+          checkpoint: 'c54b263fa24e27e9adf0941a0339b323768dce5b037022ba6f44e2c632ed1051'
   name '4K Video to MP3'
   homepage 'https://www.4kdownload.com/products/product-videotomp3'
 
