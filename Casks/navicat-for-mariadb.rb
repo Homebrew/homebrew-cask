@@ -1,10 +1,10 @@
 cask 'navicat-for-mariadb' do
-  version '12.0.12'
-  sha256 '654aacf22e480b59b3e051906e9364c911eb6962d92aeb307addae1cbdc99540'
+  version '12.0.13'
+  sha256 'a433a3e7a732fdcc942280f6d21e27f421c5057b9c7ad771b6ccbfd76aef3027'
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_mariadb_en.dmg"
   appcast 'https://www.navicat.com/products/navicat-for-mariadb-release-note#M',
-          checkpoint: 'ba19637b935660d205ae7b8342d63ab77c5988387d58aa41e40e03649927eb91'
+          checkpoint: '2b24e475590a81623e797baecea68b92cf2e4f7f2d212d272ba6ae6b9fcfe12c'
   name 'Navicat for MariaDB'
   homepage 'https://www.navicat.com/products/navicat-for-mariadb'
 
