@@ -6,12 +6,16 @@ cask 'sourcetree' do
     version '2.0.5.5'
     sha256 'f23129587703a706a37d5fdd9b2390875305b482a2b4e4b0e34bd49cba9b63c9'
   else
-    version '2.6.2c'
-    sha256 '488e7077afd3f493f9a32678eb6c11087ab3917a15f2ee220cecff6a5cee5b0d'
+    version '2.6.3a'
+    sha256 '4b951e2d113a2ca5f8bb88be06b64c9390eae13b4339f983b4a0867c602dca53'
   end
 
   # atlassian.com was verified as official when first introduced to the cask
-  url "https://downloads.atlassian.com/software/sourcetree/SourceTree_#{version}.zip"
+  if version == '2.6.3a'
+    url "https://downloads.atlassian.com/software/sourcetree/Sourcetree_#{version}.zip"
+  else
+    url "https://downloads.atlassian.com/software/sourcetree/SourceTree_#{version}.zip"
+  end
   appcast 'https://www.sourcetreeapp.com/update/SparkleAppcast.xml',
           checkpoint: '6031bd143374559a84872d0b9ecef5420173e11fb3a0453cfaa092878c6bc908'
   name 'Atlassian SourceTree'
