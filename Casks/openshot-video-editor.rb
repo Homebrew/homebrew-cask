@@ -1,11 +1,11 @@
 cask 'openshot-video-editor' do
-  version '2.3.4'
-  sha256 '637d2c4e0a72f2a4ae4e81c255e79e5eda6433ed7b6ac1346760c8fbed149e7e'
+  version '2.4.0'
+  sha256 '45cb011d65a5c09bbee192cf3230bf568079f90b119522c482bf19e76af287e6'
 
   # github.com/OpenShot/openshot-qt was verified as official when first introduced to the cask
   url "https://github.com/OpenShot/openshot-qt/releases/download/v#{version}/OpenShot-v#{version}-x86_64.dmg"
   appcast 'https://github.com/OpenShot/openshot-qt/releases.atom',
-          checkpoint: '542e05435129515489447249319896c57fb7c779d509577e21407a80699ccb69'
+          checkpoint: '88dc2210e7c60a5e5093b12dc2810ba4c37b1156fac666ca43a3e2d7130e7ae7'
   name 'OpenShot Video Editor'
   homepage 'https://openshot.org/'
 

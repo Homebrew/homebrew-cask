@@ -1,10 +1,10 @@
 cask 'electrum-ltc' do
-  version '2.6.4.2'
-  sha256 '38dcf0c7cb49a6bcb5daa350c0b225b4ca464263d78a2d28fb87eb5b9ede8e7b'
+  version '2.9.3.1'
+  sha256 '1e016660eb002d7bb8f62be360fc377498432ff8b8ad49b05af69e6426064132'
 
-  url "https://electrum-ltc.org/download/Electrum-LTC-#{version}.dmg"
+  url "https://electrum-ltc.org/download/electrum-ltc-#{version}.dmg"
   appcast 'https://electrum-ltc.org/',
-          checkpoint: '535f25b27942fb2a54b3309bd979f2523bd139f90a40e5ab0633bc559331ce35'
+          checkpoint: 'e0b146fa16071eecc7062175f7c02e68e9abd0643a6b5620c6b6322dc57cc511'
   name 'Electrum-LTC'
   homepage 'https://electrum-ltc.org/'
   gpg "#{url}.asc", key_id: '9914864dfc33499c6ca2beea22453004695506fd'

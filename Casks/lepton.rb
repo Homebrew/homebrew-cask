@@ -5,9 +5,16 @@ cask 'lepton' do
   # github.com/hackjutsu/Lepton was verified as official when first introduced to the cask
   url "https://github.com/hackjutsu/Lepton/releases/download/v#{version}/Lepton-#{version}-mac.zip"
   appcast 'https://github.com/hackjutsu/Lepton/releases.atom',
-          checkpoint: '124c8050699216554e54dcd4879081179dd43ad5ed9ebdc0223d26800a776979'
+          checkpoint: '88a670eba018a3308f3c157e3ec544bf44db6fa2b8c4b65b289c064af3b3f500'
   name 'Lepton'
   homepage 'http://hackjutsu.com/Lepton/'
 
   app 'Lepton.app'
+
+  zap delete: '~/Library/Saved Application State/com.cosmox.lepton.savedState',
+      trash:  [
+                '~/Library/Application Support/Lepton',
+                '~/Library/Preferences/com.cosmox.lepton.helper.plist',
+                '~/Library/Preferences/com.cosmox.lepton.plist',
+              ]
 end

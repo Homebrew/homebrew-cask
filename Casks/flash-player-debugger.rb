@@ -1,6 +1,6 @@
 cask 'flash-player-debugger' do
-  version '26.0.0.151'
-  sha256 '88e4a78743d70023cefe22adaf893fa6fed2f30f3656e5230e2ecdeb3a4ef8a7'
+  version '27.0.0.130'
+  sha256 'f9f91ddd972f8864d76fc55272ce9ed68ac3ad2ba4667900a082c192926901db'
 
   # macromedia.com was verified as official when first introduced to the cask
   url "https://fpdownload.macromedia.com/pub/flashplayer/updaters/#{version.major}/flashplayer_#{version.major}_sa_debug.dmg"

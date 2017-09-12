@@ -1,6 +1,6 @@
 cask 'deploystudio' do
-  version '1.7.7'
-  sha256 '9c21ce8e325b7ed5a244e1830244f10f8a09180030eaca8fb28a429e0a532d09'
+  version '1.7.8'
+  sha256 'a7d71ed8e72498c8f7b37349458afd0cd74ba7a95313f26ea1ba05f4d1362071'
 
   url "http://www.deploystudio.com/Downloads/DeployStudioServer_v#{version}.dmg"
   name 'DeployStudio Server'
