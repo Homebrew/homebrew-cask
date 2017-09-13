@@ -8,5 +8,5 @@ cask 'markcat' do
   name 'MarkCat'
   homepage 'https://github.com/ma-tu/markcat'
 
-  app 'MarkCat.app'
+  app 'MarkCat-darwin-x64/MarkCat.app'
 end
