@@ -9,4 +9,14 @@ cask 'koko' do
   homepage 'https://github.com/KokoIRC/koko'
 
   app 'koko.app'
+
+  zap delete: [
+                '~/Library/Caches/koko',
+                '~/Library/Saved Application State/net.noraesae.koko.savedState',
+                '/tmp/koko Crashes',
+              ],
+      trash:  [
+                '~/Library/Application Support/koko',
+                '~/Library/Preferences/net.noraesae.koko.plist',
+              ]
 end
