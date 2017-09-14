@@ -2,7 +2,7 @@ cask 'setapp' do
   version :latest
   sha256 :no_check
 
-  # devmate.com/com.setapp.InstallSetapp/ was verified as official when first introduced to the cask
+  # devmate.com/com.setapp.InstallSetapp was verified as official when first introduced to the cask
   url 'https://dl.devmate.com/com.setapp.InstallSetapp/InstallSetapp.zip'
   name 'Setapp'
   homepage 'https://setapp.com/'
@@ -19,7 +19,7 @@ cask 'setapp' do
                 '~/Library/Caches/com.setapp.DesktopClient',
                 '~/Library/Caches/com.setapp.DesktopClient.SetappAgent',
                 '~/Library/Logs/Setapp',
-                '~/Library/Preferences/com.setapp.DesktopClient.SetappAgent.plist',
                 '~/Library/Saved Application State/com.setapp.DesktopClient.savedState',
-              ]
+              ],
+      trash:  '~/Library/Preferences/com.setapp.DesktopClient.SetappAgent.plist'
 end
