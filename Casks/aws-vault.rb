@@ -4,7 +4,7 @@ cask 'aws-vault' do
 
   url "https://github.com/99designs/aws-vault/releases/download/v#{version}/aws-vault-darwin-amd64"
   appcast 'https://github.com/99designs/aws-vault/releases.atom',
-          checkpoint: 'e488758959ceca83a9d195654494384942b9b72bb080c1ddad6eef967b652a13'
+          checkpoint: 'd51fb4d46c3337a84fa83aba696719cde153480ee56aa1191e67531baa6e5551'
   name 'aws-vault'
   homepage 'https://github.com/99designs/aws-vault'
 
