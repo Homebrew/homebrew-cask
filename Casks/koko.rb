@@ -13,7 +13,6 @@ cask 'koko' do
   zap delete: [
                 '~/Library/Caches/koko',
                 '~/Library/Saved Application State/net.noraesae.koko.savedState',
-                '/tmp/koko Crashes',
               ],
       trash:  [
                 '~/Library/Application Support/koko',
