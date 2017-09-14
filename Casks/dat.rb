@@ -10,4 +10,17 @@ cask 'dat' do
   homepage 'https://datproject.org/'
 
   app 'Dat.app'
+
+  zap delete: [
+                '~/Library/Caches/com.datproject.dat',
+                '~/Library/Caches/com.datproject.dat.ShipIt',
+                '~/Library/Saved Application State/com.datproject.dat.savedState',
+              ],
+      trash:  [
+                '~/Library/Application Support/Dat',
+                '~/Library/Preferences/com.datproject.dat.helper.plist',
+                '~/Library/Preferences/com.datproject.dat.plist',
+                '~/.dat',
+                '~/.dat-desktop',
+              ]
 end

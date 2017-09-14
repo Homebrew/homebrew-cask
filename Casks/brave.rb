@@ -5,7 +5,7 @@ cask 'brave' do
   # github.com/brave/browser-laptop was verified as official when first introduced to the cask
   url "https://github.com/brave/browser-laptop/releases/download/v#{version}dev/Brave-#{version}.dmg"
   appcast 'https://github.com/brave/browser-laptop/releases.atom',
-          checkpoint: '209322263d943d71cf62082115b46d18ae1c23d5d36ab3c12500f0f9e520abe5'
+          checkpoint: '9297b46ccde5ec5493b739b1d3ca5b787477c49fc88d0011dffbe9ba9805d25c'
   name 'Brave'
   homepage 'https://brave.com/'
 
@@ -14,8 +14,9 @@ cask 'brave' do
 
   app 'Brave.app'
 
-  zap delete: [
-                '~/Library/Application Support/Brave',
+  zap delete: '~/Library/Saved Application State/com.electron.brave.savedState',
+      trash:  [
+                '~/Library/Application Support/brave',
                 '~/Library/Preferences/com.electron.brave.plist',
               ]
 end

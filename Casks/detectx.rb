@@ -1,11 +1,11 @@
 cask 'detectx' do
-  version '2.77'
-  sha256 '1c8477ccce9ac082905c0a8c9345f49d211cb45e7f8f0a8c3b5c2f01c1c1003d'
+  version '2.78'
+  sha256 '45a7c3cc1df565940848d6428c7a05a4b3ff6b2806e70c86bbbaba148eb45911'
 
   # amazonaws.com/sqwarq.com was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/sqwarq.com/PublicZips/DetectX.app.zip'
   appcast 'https://s3.amazonaws.com/sqwarq.com/AppCasts/detectx.xml',
-          checkpoint: 'a04cb1f77905a3766c0870e2d680749b1f3c1738a266029123d1eae13d7e1cc6'
+          checkpoint: '5d8ebe26d585164be4eb897feed84659dac70862804078975ca86a80e4fafd8a'
   name 'DetectX'
   homepage 'https://sqwarq.com/detectx/'
 
