@@ -15,7 +15,11 @@ cask 'brave' do
   app 'Brave.app'
 
   zap delete: [
-                '~/Library/Application Support/Brave',
+                '~/Library/Saved Application State/com.electron.brave.savedState',
+                '/tmp/Brave Developers Crashes',
+              ],
+      trash:  [
+                '~/Library/Application Support/brave',
                 '~/Library/Preferences/com.electron.brave.plist',
               ]
 end
