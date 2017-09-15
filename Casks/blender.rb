@@ -1,14 +1,14 @@
 cask 'blender' do
-  version '2.78c'
-  sha256 'cf24ac9a65ae58cee7f36681a1f6381fe1a51475b3291b7eb0b727d46eaf89ea'
+  version '2.79'
+  sha256 '953fbb77080300466cb084ad02f847d188e94573f1dd4a6edaa7c505dd55c88e'
 
-  url "https://download.blender.org/release/Blender#{version.major_minor}/blender-#{version}-OSX_10.6-x86_64.zip"
+  url "https://download.blender.org/release/Blender#{version.major_minor}/blender-#{version}-macOS-10.6.tar.gz"
   name 'Blender'
   homepage 'https://www.blender.org/'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
-  app "blender-#{version}-OSX_10.6-x86_64/blender.app", target: 'Blender.app'
-  app "blender-#{version}-OSX_10.6-x86_64/blenderplayer.app", target: 'Blenderplayer.app'
+  app "blender-#{version}-macOS-10.6/blender.app", target: 'Blender.app'
+  app "blender-#{version}-macOS-10.6/blenderplayer.app", target: 'Blenderplayer.app'
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/blender.wrapper.sh"
   binary shimscript, target: 'blender'
