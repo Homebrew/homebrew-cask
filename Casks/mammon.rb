@@ -2,8 +2,8 @@ cask 'mammon' do
   version :latest
   sha256 :no_check
 
-  # dropbox.com/s/kc8a9rcq2kpt94x was verified as official when first introduced to the cask
-  url 'https://www.dropbox.com/s/kc8a9rcq2kpt94x/Mammon-latest.zip'
+  # dropboxusercontent.com/s/kc8a9rcq2kpt94x was verified as official when first introduced to the cask
+  url 'https://dl.dropboxusercontent.com/s/kc8a9rcq2kpt94x/Mammon-latest.zip'
   name 'Mammon'
   homepage 'https://teamfox.co/mammon/'
 
