@@ -13,7 +13,7 @@ cask 'pgadmin4' do
   zap delete: [
                 '~/.pgadmin',
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.pgadmin.pgadmin4.sfl',
-                '~/Library/Preferences/org.pgadmin.pgAdmin 4.plist',
+                '~/Library/Preferences/org.pgadmin.pgadmin4.plist',
                 '~/Library/Saved Application State/org.pgadmin.pgAdmin4.savedState',
               ]
 end
