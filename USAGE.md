@@ -66,7 +66,7 @@ Note that `uninstall --force` is currently imperfect. See the man page for more 
 ## Other Commands
 
 * `info` — displays information about the given Cask
-* `list` — with no args, lists installed Casks; given installed Casks, lists staged files
+* `list` — with no args, lists installed Casks; given installed Casks, lists staged files (with `--full-name`, include tap name)
 * `fetch` — downloads remote application files for the given Cask to the local cache (with `--force`, re-download even if already cached)
 * `doctor` — checks for configuration issues
 * `cleanup` — cleans up cached downloads (with `--outdated`, only cleans old downloads)
