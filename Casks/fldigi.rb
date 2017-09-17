@@ -4,7 +4,7 @@ cask 'fldigi' do
 
   url "https://downloads.sourceforge.net/fldigi/fldigi/fldigi-#{version}_i386.dmg"
   appcast 'https://sourceforge.net/projects/fldigi/rss?path=/fldigi',
-          checkpoint: 'e5ffd672f246bebb73f677f1b771b69f8b8751df2c9da437f51591a77265b3ef'
+          checkpoint: '2baa7fe03d9a6f22e8388d3533713a59ff4f6170881afdec34732ed0cad3c139'
   name 'fldigi'
   homepage 'https://sourceforge.net/projects/fldigi/files/fldigi/'
 
