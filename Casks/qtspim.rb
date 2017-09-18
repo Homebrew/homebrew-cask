@@ -8,7 +8,7 @@ cask 'qtspim' do
   name 'QtSpim'
   homepage 'http://spimsimulator.sourceforge.net/'
 
-  pkg "QtSpim.mpkg"
+  pkg 'QtSpim.mpkg'
 
   uninstall pkgutil: 'org.larusstone.pkg.QtSpim'
 end
