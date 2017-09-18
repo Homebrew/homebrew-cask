@@ -15,9 +15,14 @@ cask 'android-studio' do
                 '~/Library/Android/sdk',
                 "~/Library/Application Support/AndroidStudio#{version.major_minor}",
                 "~/Library/Caches/AndroidStudio#{version.major_minor}",
-                "~/Library/Preferences/AndroidStudio#{version.major_minor}",
-                '~/Library/Preferences/com.google.android.studio.plist',
                 "~/Library/Logs/AndroidStudio#{version.major_minor}",
+                '~/Library/Saved Application State/com.google.android.studio.savedState',
+              ],
+      trash:  [
+                "~/Library/Application Support/AndroidStudio#{version.major_minor}",
+                "~/Library/Preferences/AndroidStudio#{version.major_minor}",
+                '~/Library/Preferences/com.android.Emulator.plist',
+                '~/.android',
               ],
       rmdir:  [
                 '~/AndroidStudioProjects',
