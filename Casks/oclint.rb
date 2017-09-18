@@ -12,6 +12,6 @@ cask 'oclint' do
   binary "oclint-#{version.before_comma}/bin/oclint"
   binary "oclint-#{version.before_comma}/bin/oclint-json-compilation-database"
   binary "oclint-#{version.before_comma}/bin/oclint-xcodebuild"
-  binary "oclint-#{version.before_comma}/lib/oclint", target: '/usr/local/lib/oclint'
-  binary "oclint-#{version.before_comma}/include/c++", target: '/usr/local/include/c++'
+  binary "oclint-#{version.before_comma}/lib/oclint", target: "#{HOMEBREW_PREFIX}/lib/oclint"
+  binary "oclint-#{version.before_comma}/include/c++", target: "#{HOMEBREW_PREFIX}/include/c++"
 end

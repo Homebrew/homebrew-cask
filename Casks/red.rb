@@ -1,6 +1,6 @@
 cask 'red' do
   version '0.6.3'
-  sha256 '8fa0aecd8c0cc21ea87c2b26ce940a8cb53ef61d78f1b9e350d2fa8a4e5e7990'
+  sha256 '3558eb6c7973443c91361b9d2b5824a4b3229209af0a13a580f46ae0f4043e81'
 
   url "http://static.red-lang.org/dl/mac/red-#{version.no_dots}"
   name 'Red Programming Language'

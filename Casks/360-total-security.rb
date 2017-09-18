@@ -4,7 +4,7 @@ cask '360-total-security' do
 
   url "https://free.360totalsecurity.com/totalsecurity/mac/360ts_mac_#{version}.dmg"
   appcast 'https://www.360totalsecurity.com/en/version/360-total-security-mac/',
-          checkpoint: 'c685b0fff73b631e5eaa20e1ac07d37999807191be9e297fef3ac70378f7cf42'
+          checkpoint: 'a265dc1b1421f71e170af65ba5e703d608f46a6ef703bfd8b37b4a65212067fd'
   name '360 Total Security'
   homepage 'https://www.360totalsecurity.com/features/360-total-security-mac/'
 

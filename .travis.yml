@@ -1,6 +1,6 @@
 language: ruby
 
-sudo: false
+sudo: true
 
 matrix:
   include:

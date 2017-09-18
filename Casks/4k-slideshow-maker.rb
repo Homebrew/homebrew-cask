@@ -4,7 +4,7 @@ cask '4k-slideshow-maker' do
 
   url "https://downloads2.4kdownload.com/app/4kslideshowmaker_#{version.major_minor}.dmg"
   appcast 'https://www.4kdownload.com/download',
-          checkpoint: '9b7b2dfa4aa59157701cff076b8e877ebb922521c4ba7adabd6bee2038e9e962'
+          checkpoint: 'c54b263fa24e27e9adf0941a0339b323768dce5b037022ba6f44e2c632ed1051'
   name '4K Slideshow Maker'
   homepage 'https://www.4kdownload.com/products/product-slideshowmaker'
 

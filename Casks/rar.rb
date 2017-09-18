@@ -8,8 +8,8 @@ cask 'rar' do
 
   binary 'rar/rar'
   binary 'rar/unrar'
-  artifact 'rar/default.sfx', target: '/usr/local/lib/default.sfx'
-  artifact 'rar/rarfiles.lst', target: '/usr/local/etc/rarfiles.lst'
+  artifact 'rar/default.sfx', target: "#{HOMEBREW_PREFIX}/lib/default.sfx"
+  artifact 'rar/rarfiles.lst', target: "#{HOMEBREW_PREFIX}/etc/rarfiles.lst"
 
   caveats <<-EOS.undent
     Instructions on using rar and unrar are available in

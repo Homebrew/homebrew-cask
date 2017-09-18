@@ -8,7 +8,7 @@ cask 'eldeveloper-macfusion' do
   name 'Macfusion'
   homepage "https://github.com/ElDeveloper/macfusion#{version.major}/"
 
-  depends_on formula: 'homebrew/fuse/sshfs'
+  depends_on formula: 'sshfs'
 
   app 'Macfusion.app'
 
