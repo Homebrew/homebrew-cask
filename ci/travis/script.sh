@@ -16,6 +16,8 @@ for file in "${modified_ruby_files[@]}"; do
   [[ "${file}" == 'Casks/'* ]] && modified_casks+=("${file}") || casks_wrong_dir+=("${file}")
 done
 
+run brew cask list
+
 if [[ ${#casks_wrong_dir[@]} -gt 0 ]]; then
   odie "Casks added outside Casks directory: ${casks_wrong_dir[*]}"
 elif [[ ${#modified_casks[@]} -gt 0 ]]; then
