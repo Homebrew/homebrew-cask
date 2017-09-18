@@ -1,10 +1,10 @@
 cask 'scrutiny' do
-  version '7.5.6'
-  sha256 '578b60fbd7b7017921b51f0142bbc66a7819a4e68113a9410269367b1c397211'
+  version '7.5.8'
+  sha256 '08e9c1b278971f528f023f54dffdf36df398a11e885b45fd00f56ea30053e564'
 
   url 'http://peacockmedia.software/mac/scrutiny/scrutiny.dmg'
   appcast 'http://peacockmedia.software/mac/scrutiny/version_history.html',
-          checkpoint: '4ce1b0577e2fbc051a6e6cd541eedce36d152abe8015922537ab2c5c69b2f9f6'
+          checkpoint: 'a1d9ed4a055ce65901ed87c998556191ca1187ec16ebddfabe67818cdceb179e'
   name 'Scrutiny'
   homepage 'http://peacockmedia.software/mac/scrutiny/'
 
