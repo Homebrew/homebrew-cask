@@ -10,5 +10,5 @@ cask 'winbox' do
 
   app 'Winbox4Mac.app'
 
-  zap trash: '~/Library/Preferences/WinBox65683188Wine.wineskin.prefs.plist'
+  zap trash: '~/Library/Preferences/WinBox*Wine.wineskin.prefs.plist'
 end
