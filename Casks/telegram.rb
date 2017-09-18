@@ -12,4 +12,14 @@ cask 'telegram' do
   depends_on macos: '>= 10.11'
 
   app 'Telegram.app'
+
+  zap delete: [
+                '~/Library/Application Scripts/ru.keepcoder.Telegram',
+                '~/Library/Application Scripts/ru.keepcoder.Telegram.TelegramShare',
+                '~/Library/Containers/ru.keepcoder.Telegram',
+                '~/Library/Containers/ru.keepcoder.Telegram.TelegramShare',
+                '~/Library/Group Containers/*.ru.keepcoder.Telegram',
+                '~/Library/Saved Application State/ru.keepcoder.Telegram.savedState',
+              ],
+      trash:  '~/Library/Preferences/ru.keepcoder.Telegram.plist'
 end
