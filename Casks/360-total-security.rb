@@ -9,5 +9,5 @@ cask '360-total-security' do
   homepage 'https://www.360totalsecurity.com/features/360-total-security-mac/'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
-  app '360Safe.app', target: '360 Total Security.app'
+  app '360Safe.app', target: '360Safe.app'
 end
