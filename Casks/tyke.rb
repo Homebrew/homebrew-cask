@@ -9,4 +9,6 @@ cask 'tyke' do
   app 'tyke.app'
 
   uninstall quit: 'org.torrez.tyke'
+
+  zap trash: '~/Library/Preferences/org.torrez.tyke.plist'
 end
