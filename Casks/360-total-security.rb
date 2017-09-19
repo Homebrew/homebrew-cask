@@ -4,10 +4,10 @@ cask '360-total-security' do
 
   url "https://free.360totalsecurity.com/totalsecurity/mac/360ts_mac_#{version}.dmg"
   appcast 'https://www.360totalsecurity.com/en/version/360-total-security-mac/',
-          checkpoint: 'a265dc1b1421f71e170af65ba5e703d608f46a6ef703bfd8b37b4a65212067fd'
+          checkpoint: 'cbbe129c78691310d2ffa8274aa5709ce28cddfaa6f4f74ad0877716ec917b8e'
   name '360 Total Security'
   homepage 'https://www.360totalsecurity.com/features/360-total-security-mac/'
 
-  # Renamed for consistency: app name is different in the Finder and in a shell.
-  app '360Safe.app', target: '360Safe.app'
+  # App name is different in the Finder and in a shell.
+  app '360Safe.app'
 end
