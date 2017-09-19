@@ -1,4 +1,4 @@
-cask '360-total-security' do
+cask '360safe' do
   version '1.1.2'
   sha256 '6fdef1e93f9930f48ecf7144ed2412663138a1cee492aaa371550907999db8d9'
 
@@ -8,6 +8,5 @@ cask '360-total-security' do
   name '360 Total Security'
   homepage 'https://www.360totalsecurity.com/features/360-total-security-mac/'
 
-  # App name is different in the Finder and in a shell.
   app '360Safe.app'
 end
