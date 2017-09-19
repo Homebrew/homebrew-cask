@@ -11,6 +11,7 @@ cask 'keybase' do
   auto_updates true
 
   app 'Keybase.app'
+  binary "#{appdir}/Keybase.app/Contents/SharedSupport/bin/keybase"
 
   postflight do
     system_command "#{appdir}/Keybase.app/Contents/Resources/KeybaseInstaller.app/Contents/MacOS/Keybase",
