@@ -16,7 +16,8 @@ cask 'boom3d' do
   uninstall launchctl: [
                          'com.globaldelight.Boom3D',
                          'com.globaldelight.Boom3DHelper',
-                       ]
+                       ],
+            quit:      ['com.globaldelight.Boom3D']
 
   zap trash: [
                '~/Library/Application Support/Boom3D',
