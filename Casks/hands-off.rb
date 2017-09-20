@@ -1,10 +1,10 @@
 cask 'hands-off' do
-  version '3.2.2'
-  sha256 '5feba20a5557de862078d053d528d0dc3869cdd4bc8a0dd165628f2a0bc95442'
+  version '3.2.3'
+  sha256 'd0bd5bc3085ab68f3f02ab8f3eac1e291ddba879c131aae2d523d1ba50c09c7a'
 
   url "https://www.oneperiodic.com/files/Hands%20Off!%20v#{version}.dmg"
   appcast "https://www.oneperiodic.com/handsoff#{version.major}.xml",
-          checkpoint: 'ac2dcf5861f8bed9a7015c3475addedf4384fdc72aa921bb83a6cdb276fd650e'
+          checkpoint: '06fc57c034f4563e17ead4dfd359c94ebcb380f71dcd3eaf2c68fb88400b0387'
   name 'Hands Off!'
   homepage 'https://www.oneperiodic.com/products/handsoff/'
 
