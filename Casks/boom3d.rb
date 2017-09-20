@@ -18,10 +18,10 @@ cask 'boom3d' do
                          'com.globaldelight.Boom3DHelper',
                        ]
 
-  zap delete: [
-                '~/Library/Application Support/Boom3D',
-                '~/Library/Application Support/com.globaldelight.Boom3D',
-                '~/Library/Preferences/com.globaldelight.Boom3D.plist',
-                '~/Library/Preferences/com.globaldelight.Boom3DHelper.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Boom3D',
+               '~/Library/Application Support/com.globaldelight.Boom3D',
+               '~/Library/Preferences/com.globaldelight.Boom3D.plist',
+               '~/Library/Preferences/com.globaldelight.Boom3DHelper.plist',
+             ]
 end
