@@ -17,11 +17,6 @@ cask 'lulu' do
                       sudo:       true,
                     }
 
-  preflight do
-    configure = "#{staged_path}/configure.sh"
-    IO.write(configure, IO.read(configure).gsub('exit 1', 'exit 0'))
-  end
-
   uninstall script: {
                       executable: 'configure.sh',
                       args:       ['-uninstall'],
