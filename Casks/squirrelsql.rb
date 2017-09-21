@@ -1,11 +1,11 @@
 cask 'squirrelsql' do
-  version '3.7.1'
-  sha256 '4ee542f0fc51489de5c529d242b5731140cb993beeba853ee7675c010cdc81e3'
+  version '3.8.0'
+  sha256 '607f8db4bc04236e353b22c4aa1fd3b3c6770280c0fd8715caed40bda4b50192'
 
   # sourceforge.net/squirrel-sql was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/squirrel-sql/1-stable/#{version}/squirrel-sql-#{version}-MACOSX-install.jar"
   appcast 'https://sourceforge.net/projects/squirrel-sql/rss?path=/1-stable',
-          checkpoint: 'f3b56771efd0140b885e5a74f7c2528f984109f2c8c8de0adee5447419bde5b1'
+          checkpoint: '5f5fe3be12de88ac138ae5d2bbea900eb759aa45c83efcb0bca24326135c3e88'
   name 'SQuirrel SQL'
   homepage 'http://www.squirrelsql.org/'
 
