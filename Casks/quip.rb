@@ -1,6 +1,6 @@
 cask 'quip' do
-  version '5.0.92'
-  sha256 '48607814a7265deb651501f3799cf10bee2b168322cf52223dc7ffd939126280'
+  version '5.1.07'
+  sha256 'a27d1846790ba75150aa83f8f361bccf6be567a36399a5938993401a1e83cd0b'
 
   # d2i1pl9gz4hwa7.cloudfront.net was verified as official when first introduced to the cask
   url "https://d2i1pl9gz4hwa7.cloudfront.net/macosx_#{version}.dmg"
