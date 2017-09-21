@@ -1,4 +1,4 @@
-cask 'boom3d' do
+cask 'boom-3d' do
   version '1.1,1504086631'
   sha256 'e6d176a0858aa9f49e26eb07e0d3cd96ac460db42a701795dcbd31c150e054a5'
 
