@@ -17,7 +17,7 @@ cask 'boom3d' do
                          'com.globaldelight.Boom3D',
                          'com.globaldelight.Boom3DHelper',
                        ],
-            quit:      ['com.globaldelight.Boom3D']
+            quit:      'com.globaldelight.Boom3D'
 
   zap trash: [
                '~/Library/Application Support/Boom3D',
