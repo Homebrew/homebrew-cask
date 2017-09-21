@@ -80,17 +80,19 @@ cask 'java' do
                          end,
                        ].keep_if { |v| !v.nil? }
 
-  zap       delete: [
-                      '~/Library/Application Support/Java/',
-                      '~/Library/Application Support/Oracle/Java',
-                      '~/Library/Caches/com.oracle.java.Java-Updater',
-                      '~/Library/Caches/Oracle.MacJREInstaller',
-                      '~/Library/Caches/net.java.openjdk.cmd',
-                      '~/Library/Preferences/com.oracle.java.Java-Updater.plist',
-                      '~/Library/Preferences/com.oracle.java.JavaAppletPlugin.plist',
-                      '~/Library/Preferences/com.oracle.javadeployment.plist',
-                    ],
-            rmdir:  '~/Library/Application Support/Oracle/'
+  zap delete: [
+                '~/Library/Caches/com.oracle.java.Java-Updater',
+                '~/Library/Caches/Oracle.MacJREInstaller',
+                '~/Library/Caches/net.java.openjdk.cmd',
+              ],
+      trash:  [
+                '~/Library/Application Support/Java/',
+                '~/Library/Application Support/Oracle/Java',
+                '~/Library/Preferences/com.oracle.java.Java-Updater.plist',
+                '~/Library/Preferences/com.oracle.java.JavaAppletPlugin.plist',
+                '~/Library/Preferences/com.oracle.javadeployment.plist',
+              ],
+      rmdir:  '~/Library/Application Support/Oracle/'
 
   caveats <<-EOS.undent
     This Cask makes minor modifications to the JRE to prevent issues with
