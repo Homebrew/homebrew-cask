@@ -12,10 +12,12 @@ cask 'remote-desktop-manager' do
   app 'Remote Desktop Manager.app'
 
   zap delete: [
+                '~/Library/Caches/com.devolutions.remotedesktopmanager',
+                '~/Library/Saved Application State/com.devolutions.remotedesktopmanager.savedState',
+              ],
+      trash:  [
                 '~/Library/Application Support/Remote Desktop Manager',
                 '~/Library/Application Support/com.devolutions.remotedesktopmanager',
-                '~/Library/Caches/com.devolutions.remotedesktopmanager',
                 '~/Library/Preferences/com.devolutions.remotedesktopmanager.plist',
-                '~/Library/Saved Application State/com.devolutions.remotedesktopmanager.savedState',
               ]
 end
