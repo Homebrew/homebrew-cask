@@ -9,7 +9,7 @@ cask 'trym' do
   app 'Trym.app'
 
   zap trash: [
-                '~/Library/Application Support/Trym',
-                '~/Library/Preferences/com.kontentapps.svgtool.plist',
-              ]
+               '~/Library/Application Support/Trym',
+               '~/Library/Preferences/com.kontentapps.svgtool.plist',
+             ]
 end
