@@ -1,6 +1,6 @@
 cask 'sketchup' do
   version '2017'
-  sha256 '9a515fac2a3a4c0d32c90c2570e887395ae5c79511310d183624f24a6e436efa'
+  sha256 'a534d77d1ea9622b19463258abf21768cb8bb8126734bd40329dd4088b04d79f'
 
   # downloads can be found at https://www.sketchup.com/download/all
   # dl.trimble.com/sketchup was verified as official when first introduced to the cask
