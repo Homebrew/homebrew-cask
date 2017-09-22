@@ -2,9 +2,10 @@ cask 'anaconda' do
   version '4.4.0'
   sha256 '10fe58f09ae524df2548d17b8bb1e75db17da597a6ec10d695ce01387a2d7422'
 
+  # repo.continuum.io/archive was verified as official when first introduced to the cask
   url "https://repo.continuum.io/archive/Anaconda3-#{version}-MacOSX-x86_64.sh"
   name 'Continuum Analytics Anaconda'
-  homepage 'https://www.continuum.io/what-is-anaconda'
+  homepage 'https://www.anaconda.com/what-is-anaconda/'
 
   depends_on macos: '>= :lion'
   container type: :naked

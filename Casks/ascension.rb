@@ -9,4 +9,13 @@ cask 'ascension' do
   homepage 'https://github.com/ansilove/Ascension'
 
   app 'Ascension.app'
+
+  zap delete: [
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.byteproject.ascension.sfl',
+                '~/Library/Saved Application State/com.byteproject.Ascension.savedState',
+              ],
+      trash:  [
+                '~/Library/Application Support/Ascension',
+                '~/Library/Preferences/com.byteproject.Ascension.plist',
+              ]
 end

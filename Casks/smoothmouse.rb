@@ -8,6 +8,8 @@ cask 'smoothmouse' do
   name 'SmoothMouse'
   homepage 'http://smoothmouse.com/'
 
+  depends_on macos: '<= :el_capitan'
+
   pkg 'SmoothMouse.pkg'
 
   uninstall launchctl: [
@@ -21,4 +23,8 @@ cask 'smoothmouse' do
                          'com.cyberic.pkg.SmoothMouseKext2',
                        ],
             delete:    '/usr/bin/smoothmouse'
+
+  caveats do
+    discontinued
+  end
 end

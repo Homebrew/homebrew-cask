@@ -1,10 +1,10 @@
 cask 'atext' do
-  version '2.20'
-  sha256 'ad7fb1a093ee0048011deb43a268cff57b09c0364522ea52b8a5acb8a26227f7'
+  version '2.21'
+  sha256 '8ef2fc8f136f15ab4c1218a74097a9a83407ede3f79e6e616eade920bfff02ba'
 
   url 'https://www.trankynam.com/atext/downloads/aText.dmg'
   appcast 'https://www.trankynam.com/atext/aText-Appcast.xml',
-          checkpoint: 'b7ff5d927a3ffdee10503b3ac12b2ddb7ab35eb232a0f6d369cf86d7d7c66467'
+          checkpoint: '9d96d77e7584acfe70ee83f0d00342fbe0b9d0b39e23685f9c92001bbd12f983'
   name 'aText'
   homepage 'https://www.trankynam.com/atext/'
 
