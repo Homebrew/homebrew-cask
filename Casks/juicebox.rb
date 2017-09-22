@@ -8,7 +8,7 @@ cask 'juicebox' do
   homepage 'http://aidenlab.org/juicebox/'
 
   app 'Juicebox.app'
-  
+
   caveats do
     depends_on_java('8')
   end
