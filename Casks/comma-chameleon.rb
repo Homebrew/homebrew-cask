@@ -9,5 +9,5 @@ cask 'comma-chameleon' do
   name 'Comma Chameleon'
   homepage 'https://comma-chameleon.io/'
 
-  app 'comma-chameleon-darwin-x64/comma-chameleon.app'
+  app 'Comma Chameleon-darwin-x64/Comma Chameleon.app'
 end
