@@ -26,8 +26,8 @@ cask 'openoffice' do
     'pt'
   end
 
-  # sourceforge.net/openofficeorg.mirror was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/openofficeorg.mirror/Apache_OpenOffice_#{version}_MacOS_x86-64_install_#{language}.dmg"
+  # sourceforge.net/project/openofficeorg.mirror was verified at 4.1.3 (2017-09-23)
+  url "https://downloads.sourceforge.net/project/openofficeorg.mirror/#{version}/binaries/#{language}/Apache_OpenOffice_#{version}_MacOS_x86-64_install_#{language}.dmg"
   appcast 'https://sourceforge.net/projects/openofficeorg.mirror/rss',
           checkpoint: 'd8e2de0c68d131c8548113c6f46d062af1721f8501aad420be84640cc704c504'
   name 'Apache OpenOffice'
