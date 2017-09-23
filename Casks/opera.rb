@@ -6,5 +6,7 @@ cask 'opera' do
   name 'Opera'
   homepage 'https://www.opera.com/'
 
+  auto_updates true
+
   app 'Opera.app'
 end
