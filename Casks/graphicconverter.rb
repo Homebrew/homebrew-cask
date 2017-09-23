@@ -5,7 +5,7 @@ cask 'graphicconverter' do
   # lemkesoft.info was verified as official when first introduced to the cask
   url "https://www.lemkesoft.info/files/graphicconverter/gc#{version.major}_build#{version.after_comma}.zip"
   appcast "https://www.lemkesoft.info/sparkle/graphicconverter/graphicconverter#{version.major}.xml",
-          checkpoint: 'ae0955655230f81245d05b3d54e7ba5b3b3862f80c038ab0e503e18d970a8126'
+          checkpoint: '95af0a7b6f48146ff2db7a33560aa7f7c2ebe20c45c569c99169b7a5b2ddcc47'
   name 'GraphicConverter'
   homepage 'https://www.lemkesoft.de/en/products/graphicconverter/'
 
