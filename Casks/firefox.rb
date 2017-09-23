@@ -117,8 +117,17 @@ cask 'firefox' do
   app 'Firefox.app'
 
   zap delete: [
+                '/Library/Logs/DiagnosticReports/firefox_*',
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.firefox.sfl',
                 '~/Library/Application Support/Firefox',
+                # '~/Library/Application Support/Mozilla', #Don't delete; may also contain non-Firefox data
+                '~/Library/Preferences/org.mozilla.firefox.plist',
                 '~/Library/Caches/Firefox',
+                '~/Library/Caches/Mozilla/updates/Applications/Firefox',
+              ],
+      rmdir:  [
+                '~/Library/Caches/Mozilla/updates/Applications',
+                '~/Library/Caches/Mozilla/updates',
+                '~/Library/Caches/Mozilla',
               ]
 end
