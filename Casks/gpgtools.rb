@@ -39,10 +39,15 @@ cask 'gpgtools' do
                          'org.gpgtools.macgpg2.shutdown-gpg-agent',
                          'org.gpgtools.macgpg2.updater',
                          'org.gpgtools.macgpg2.gpg-agent',
+                         'org.gpgtools.gpgmail.enable-bundles',
+                         'org.gpgtools.gpgmail.user-uuid-patcher',
+                         'org.gpgtools.gpgmail.uuid-patcher',
+                         'org.gpgtools.updater',
                        ],
             delete:    [
                          '/Library/Services/GPGServices.service',
                          '/Library/Mail/Bundles/GPGMail.mailbundle',
+                         '/Library/Mail/Bundles.gpgmail*',
                          '/Network/Library/Mail/Bundles/GPGMail.mailbundle',
                          '/usr/local/MacGPG2',
                          '/private/etc/paths.d/MacGPG2',
@@ -58,12 +63,14 @@ cask 'gpgtools' do
                 '~/Library/Mail/Bundles/GPGMail.mailbundle',
                 '~/Library/PreferencePanes/GPGPreferences.prefPane',
                 '~/Library/LaunchAgents/org.gpgtools.*',
-                '~/Library/Preferences/org.gpgtools.*',
                 '~/Library/Containers/com.apple.mail/Data/Library/Preferences/org.gpgtools.*',
-                '~/Library/Application Support/GPGTools',
                 '~/Library/Frameworks/Libmacgpg.framework',
                 '~/Containers/com.apple.mail/Data/Library/Frameworks/Libmacgpg.framework',
                 '~/Library/Caches/org.gpgtools.gpg*',
+              ],
+      trash:  [
+                '~/Library/Application Support/GPGTools',
+                '~/Library/Preferences/org.gpgtools.*',
               ]
 
   caveats do
