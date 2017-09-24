@@ -1,10 +1,10 @@
 cask 'gitee' do
-  version '1.0.2.4'
-  sha256 'f70d571e9aa2e455828a0fa05bf63dac589473fb29f8d83d78bc6e1c823967b0'
+  version '1.0.2.5'
+  sha256 '3e5a712f998b10274393a4cb8dddd36f28e8cc95e9f19e06bff1f249c4083bae'
 
-  url "https://github.com/Nightonke/Gitee/releases/download/v#{version}/Gitee#{version.no_dots}.zip"
+  url "https://github.com/Nightonke/Gitee/releases/download/v#{version}/Gitee.#{version}.zip"
   appcast 'https://github.com/Nightonke/Gitee/releases.atom',
-          checkpoint: 'f48264788a072502c7e12091f6f8d4d27fbca12071df0eba0c86fc5fbc910029'
+          checkpoint: '80f53f0820bf57a1ffeeb7edca03e05574fa607db5ad13f0948a4a7c944e69cc'
   name 'Gitee'
   homepage 'https://github.com/Nightonke/Gitee'
 
