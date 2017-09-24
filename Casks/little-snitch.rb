@@ -10,8 +10,9 @@ cask 'little-snitch' do
 
   auto_updates true
   depends_on macos: '>= :el_capitan'
+  container type: :naked
 
-  installer manual: 'Little Snitch Installer.app'
+  installer manual: "LittleSnitch-#{version}.dmg/Little Snitch Installer.app"
 
   uninstall launchctl: [
                          'at.obdev.LittleSnitchUIAgent',
