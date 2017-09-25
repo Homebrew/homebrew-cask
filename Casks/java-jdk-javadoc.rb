@@ -1,17 +1,16 @@
 cask 'java-jdk-javadoc' do
-  version '1.8.0_144-b01,090f390dda5b47b9b721c7dfaa008135'
-  sha256 'ae2b2fdb162ca5716fe60d8fddbe7b0d2059d2b571311d27d488a20a40c6b3be'
+  version '1.9,181'
+  sha256 '54d65f4b8f4192a51a5d90816a2e118da45377be21091351d05389b5a2cfa127'
 
-  java_update = version.sub(%r{.*_(\d+)-.*}, '\1')
-  url "http://download.oracle.com/otn-pub/java/jdk/#{version.minor}u#{version.before_comma.split('_').last}/#{version.after_comma}/jdk-#{version.minor}u#{java_update}-docs-all.zip",
+  url "http://download.oracle.com/otn-pub/java/jdk/#{version.minor}+#{version.after_comma}/jdk-#{version.minor}_doc-all.zip",
       cookies: {
                  'oraclelicense' => 'accept-securebackup-cookie',
                }
   name 'Java Standard Edition Development Kit Documentation'
-  homepage 'http://www.oracle.com/technetwork/java/javase/documentation/jdk8-doc-downloads-2133158.html'
+  homepage "http://www.oracle.com/technetwork/java/javase/documentation/jdk#{version.minor}-doc-downloads-3850606.html"
 
   postflight do
-    `/usr/libexec/java_home -v #{version.before_comma.split('-').first} -X | grep -B0 -A1 JVMHomePath | sed -n -e 's/[[:space:]]*<string>\\(.*\\)<\\/string>/\\1/p'`.split("\n").each do |path|
+    `/usr/libexec/java_home -v #{version.minor} -X | grep -B0 -A1 JVMHomePath | sed -n -e 's/[[:space:]]*<string>\\(.*\\)<\\/string>/\\1/p'`.split("\n").each do |path|
       system_command '/bin/cp',
                      args: ['-rp', "#{staged_path}/docs", "#{path}/"],
                      sudo: true
@@ -19,7 +18,7 @@ cask 'java-jdk-javadoc' do
   end
 
   uninstall_postflight do
-    `/usr/libexec/java_home -v #{version.before_comma.split('-').first} -X | grep -B0 -A1 JVMHomePath | sed -n -e 's/[[:space:]]*<string>\\(.*\\)<\\/string>/\\1/p'`.split("\n").each do |path|
+    `/usr/libexec/java_home -v #{version.minor} -X | grep -B0 -A1 JVMHomePath | sed -n -e 's/[[:space:]]*<string>\\(.*\\)<\\/string>/\\1/p'`.split("\n").each do |path|
       system_command '/bin/rm',
                      args: ['-rf', "#{path}/docs"],
                      sudo: true
