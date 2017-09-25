@@ -21,23 +21,6 @@ fi
 run export MERGE_BASE="${MERGE_BASE}"
 run export TRAVIS_COMMIT_RANGE="${MERGE_BASE}...${BRANCH_COMMIT}"
 
-# capture system ruby and gem locations
-run export SYSTEM_RUBY_HOME="/usr/local/Homebrew/Library/Homebrew/vendor/portable-ruby/2.3.3"
-run export SYSTEM_RUBY_BINDIR="${SYSTEM_RUBY_HOME}/bin"
-run export SYSTEM_GEM_HOME="$(gem_homes="${SYSTEM_RUBY_HOME}/lib/ruby/gems/"*; echo ${gem_homes[${#gem_homes[@]}-1]})"
-run export SYSTEM_GEM_BINDIR="${SYSTEM_GEM_HOME}/bin"
-
-# capture user gem locations
-run export GEM_HOME="${HOME}/.gem/ruby/${SYSTEM_GEM_HOME##*/}"
-run export GEM_BINDIR="${GEM_HOME}/bin"
-
-# ensure that the gems we install are used before system gems
-run export GEM_PATH="${GEM_HOME}:${SYSTEM_GEM_HOME}"
-run export PATH="${GEM_BINDIR}:${SYSTEM_GEM_BINDIR}:${SYSTEM_RUBY_BINDIR}:${PATH}"
-
-# ensure that brew uses the ruby we want it to
-#run export HOMEBREW_RUBY_PATH="${SYSTEM_RUBY_BINDIR}/ruby"
-
 # make sure brew is on master branch
 run export HOMEBREW_DEVELOPER=1
 
