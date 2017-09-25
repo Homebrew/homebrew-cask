@@ -34,6 +34,4 @@ cask 'openoffice' do
   homepage 'https://www.openoffice.org/'
 
   app 'OpenOffice.app'
-
-  zap trash: '~/Library/Application Support/OpenOffice'
 end
