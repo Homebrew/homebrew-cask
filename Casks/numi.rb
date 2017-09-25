@@ -1,11 +1,11 @@
 cask 'numi' do
-  version '3.17.1,134:1502275053'
-  sha256 '1a01370a5dd7ca9b7f1a7cc3253d39c0b57aed65127b1ee2741336326a72cb37'
+  version '3.17.2,136:1505825011'
+  sha256 '2951e3d3f7b0d3dbd10cc926e41492b7a1e40005921c658b580cbb972933b41f'
 
   # dl.devmate.com/com.dmitrynikolaev.numi was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.dmitrynikolaev.numi/#{version.after_comma.before_colon}/#{version.after_colon}/Numi-#{version.after_comma.before_colon}.zip"
   appcast 'http://updates.devmate.com/com.dmitrynikolaev.numi.xml',
-          checkpoint: 'e36b71a82c8eb8d35cbfeb660f237e88a10e46551b678a8e0338906b28962729'
+          checkpoint: 'a5f4deb1539c1303535c587f552d677a38cffe5153588cad3ef163bf9adfcc8a'
   name 'Numi'
   homepage 'https://numi.io/'
 
