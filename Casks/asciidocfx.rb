@@ -1,11 +1,11 @@
 cask 'asciidocfx' do
-  version '1.5.5'
-  sha256 '368756a759175ff5e0a321db8b5665928bcc5b18eadeba4a788ce76ff6ab3c75'
+  version '1.5.6'
+  sha256 '4b210b2ef4079bdc41109a8481f4f986e6042325dcca794e85393068268eaba9'
 
   # github.com/asciidocfx/AsciidocFX was verified as official when first introduced to the cask
   url "https://github.com/asciidocfx/AsciidocFX/releases/download/v#{version}/AsciidocFX_Mac.dmg"
   appcast 'https://github.com/asciidocfx/AsciidocFX/releases.atom',
-          checkpoint: '9e3703d63f0923fd1d2d3abf5326da6558400635fbfeec18aaecc252cc6a1dab'
+          checkpoint: '4d3b225ac337c5434862f9ced9ddbb4b114e48ba4597e69f119ae1b9e93d6bcd'
   name 'AsciidocFX'
   homepage 'http://www.asciidocfx.com/'
 
