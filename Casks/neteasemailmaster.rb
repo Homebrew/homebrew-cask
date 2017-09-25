@@ -1,8 +1,8 @@
 cask 'neteasemailmaster' do
-  version '1.2.1'
-  sha256 'b53a7c069f7c908c8b138c14ab1886a4bac0d2b102a9ca25dc301a917b725f6b'
+  version :latest
+  sha256 :no_check
 
-  url "http://client.dl.126.net/macmail/dashi/mailmaster.dmg"
+  url 'http://client.dl.126.net/macmail/dashi/mailmaster.dmg'
   name 'NetEase Mail Master'
   name '网易邮箱大师'
   homepage 'http://mail.163.com/dashi/'
