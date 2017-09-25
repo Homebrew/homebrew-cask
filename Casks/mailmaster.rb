@@ -1,4 +1,4 @@
-cask 'neteasemailmaster' do
+cask 'mailmaster' do
   version :latest
   sha256 :no_check
 
