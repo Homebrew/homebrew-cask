@@ -5,10 +5,10 @@ cask 'clamxav' do
   url "https://www.clamxav.com/downloads/ClamXAV_#{version}.zip"
   appcast 'https://www.clamxav.com/sparkle/appcast.xml',
           checkpoint: '1d3ae4e367c7cf4fd41d742be49533165d5fa4a2b33c7d19e32717b15289f72b'
-  name 'ClamXav'
+  name 'ClamXAV'
   homepage 'https://www.clamxav.com/'
 
-  app 'ClamXav.app'
+  app 'ClamXAV.app'
 
   zap delete: [
                 '~/Library/Caches/uk.co.markallan.clamxav',
