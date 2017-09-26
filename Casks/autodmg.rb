@@ -1,10 +1,10 @@
 cask 'autodmg' do
-  version '1.7.3'
-  sha256 '73dac1837902cad7779d6fa64c8ebad4da808b00475c3ebd211505558ecb61d9'
+  version '1.8'
+  sha256 '595c32f269b613739ef7db49b04c3fa7aa830594545e5393811fb42bbc49a8da'
 
   url "https://github.com/MagerValp/AutoDMG/releases/download/v#{version}/AutoDMG-#{version}.dmg"
   appcast 'https://github.com/MagerValp/AutoDMG/releases.atom',
-          checkpoint: '231c2baf5086578fb698859a0304d47872ffc4ce916d3fe20f09b531e65bea2a'
+          checkpoint: 'c4e649d69f24ca008a9d5f7e22b695af1c1d1762ed6fceaaf8f87620f6673151'
   name 'AutoDMG'
   homepage 'https://github.com/MagerValp/AutoDMG'
 
