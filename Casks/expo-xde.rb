@@ -1,9 +1,9 @@
 cask 'expo-xde' do
-  version :latest
-  sha256 :no_check
+  version '2.20.1'
+  sha256 '53309014713ea1064499891767b1137d0d0202afc23c56f7fd513fe6284e7b1e'
 
-  # exponentjs.com was verified as official when first introduced to the cask
-  url 'https://xde-updates.exponentjs.com/download/mac'
+  # github.com was verified as official when first introduced to the cask
+  url "https://github.com/expo/xde/releases/download/v#{version}/xde-#{version}.dmg"
   name 'Expo Development Environment (XDE)'
   homepage 'https://expo.io/'
 
