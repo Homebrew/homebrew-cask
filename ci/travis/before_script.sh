@@ -10,17 +10,6 @@
 
 header 'Running before_script.sh...'
 
-# see https://github.com/travis-ci/travis-ci/issues/2666
-run export BRANCH_COMMIT="${TRAVIS_COMMIT_RANGE##*.}"
-run export TARGET_COMMIT="${TRAVIS_COMMIT_RANGE%%.*}"
-# shellcheck disable=SC2016
-if ! run 'MERGE_BASE="$(git merge-base "${BRANCH_COMMIT}" "${TARGET_COMMIT}")"'; then
-  run git fetch --unshallow
-  run 'MERGE_BASE="$(git merge-base "${BRANCH_COMMIT}" "${TARGET_COMMIT}")"'
-fi
-run export MERGE_BASE="${MERGE_BASE}"
-run export TRAVIS_COMMIT_RANGE="${MERGE_BASE}...${BRANCH_COMMIT}"
-
 # make sure brew is on master branch
 run export HOMEBREW_DEVELOPER=1
 
