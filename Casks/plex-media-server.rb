@@ -8,7 +8,7 @@ cask 'plex-media-server' do
   name 'Plex Media Server'
   homepage 'https://www.plex.tv/'
 
-  depends_on macos: '>= :mountain_lion'
+  depends_on macos: '>= :mavericks'
 
   app 'Plex Media Server.app'
 
@@ -16,9 +16,11 @@ cask 'plex-media-server' do
             launchctl: 'com.plexapp.mediaserver'
 
   zap delete: [
-                '~/Library/Application Support/Plex Media Server/',
                 '~/Library/Caches/PlexMediaServer/',
                 '~/Library/Logs/Plex Media Server/',
+              ],
+      trash:  [
+                '~/Library/Application Support/Plex Media Server/',
                 '~/Library/Preferences/com.plexapp.plexmediaserver.plist',
               ]
 end
