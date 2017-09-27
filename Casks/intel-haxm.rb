@@ -17,4 +17,10 @@ cask 'intel-haxm' do
                       executable:   'silent_install.sh',
                       args:         ['-u'],
                     }
+
+  caveats <<-EOS.undent
+    Installing this Cask means you have AGREED to the Intel® Hardware Accelerated Execution Manager End-User License Agreement - macOS at
+
+      https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager-end-user-license-agreement-macosx
+  EOS
 end
