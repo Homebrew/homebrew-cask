@@ -6,5 +6,7 @@ cask 'catlight' do
   name 'catlight'
   homepage 'https://catlight.io/'
 
+  depends_on macos: '<= 10.12'
+
   app 'Catlight.app'
 end
