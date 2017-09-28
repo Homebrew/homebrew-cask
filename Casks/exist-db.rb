@@ -9,7 +9,7 @@ cask 'exist-db' do
 
   app 'eXist-db.app'
 
-  zap delete: '~/Library/Application Support/org.exist'
+  zap trash: '~/Library/Application Support/org.exist'
 
   caveats do
     depends_on_java('8')
