@@ -1,10 +1,10 @@
 cask 'screenflow' do
-  version '7.0'
-  sha256 '25b010fe9bf1c8f7721fb7950619c2cdaf68ae448b4da90464ed2e4c37207e5b'
+  version '7.1'
+  sha256 '584d16451aea1be65adcd60cdca27a8ceee7342bbb0b99df3d8d4adedf3a293e'
 
   url "https://www.telestream.net/download-files/screenflow/#{version.major_minor.dots_to_hyphens}/ScreenFlow-#{version}.dmg"
   appcast 'https://www.telestream.net/updater/screenflow/appcast.xml',
-          checkpoint: '9b5177fa05ec22ef90bd78f0e43fae0da4722df250c897b33ea12fa9d3990bc1'
+          checkpoint: '8283f97fdbd4f5374acf9dcef4fe2359e68f5d5196620bb063ff884e0814fbc1'
   name 'ScreenFlow'
   homepage 'https://www.telestream.net/screenflow/'
 
