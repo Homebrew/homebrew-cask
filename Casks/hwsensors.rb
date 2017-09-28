@@ -1,23 +1,23 @@
 cask 'hwsensors' do
-  version '6.25.1426,45'
-  sha256 '3054903d8e4cc26b5e60e5409ee969282a0766dc8ca061bcde6c6d4934380148'
+  version '6.26.1440'
+  sha256 '1ea229bebb1cdfa3b6091cacfd7ab04da781cd6191db9ed08a73eb901aefa418'
 
-  url "http://www.hwsensors.com/content/01-releases/#{version.after_comma}-release-#{version.patch}/HWSensors.#{version.before_comma}.pkg"
-  appcast 'http://hwsensors.com/appcast/appcast.xml',
-          checkpoint: '286d37069a5634bc60d8f716bad0bc1359a452dc060b58303c76fb1cd30eb1a6'
+  url "https://github.com/kozlek/HWSensors/releases/download/#{version.major_minor}/HWSensors.#{version}.pkg.zip"
+  appcast 'https://github.com/kozlek/HWSensors/releases.atom',
+          checkpoint: '4fed1f0bcce711f67f27dbbe1e05e8610ac0757080e2ef4048cc5825339b4c69'
   name 'HWSensors'
-  homepage 'http://www.hwsensors.com/'
+  homepage 'https://github.com/kozlek/HWSensors/'
 
   auto_updates true
 
-  pkg "HWSensors.#{version.before_comma}.pkg"
+  pkg "HWSensors.#{version}.pkg"
 
   uninstall login_item: 'HWMonitor',
             pkgutil:    'org.hwsensors.HWMonitor',
             quit:       'org.hwsensors.HWMonitor'
 
-  zap delete: [
-                '~/Library/Application Support/HWMonitor',
-                '~/Library/Preferences/org.hwsensors.HWMonitor.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/HWMonitor',
+               '~/Library/Preferences/org.hwsensors.HWMonitor.plist',
+             ]
 end
