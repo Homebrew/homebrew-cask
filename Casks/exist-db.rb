@@ -8,4 +8,10 @@ cask 'exist-db' do
   homepage 'https://exist-db.org/exist/apps/homepage/index.html'
 
   app 'eXist-db.app'
+
+  zap trash: '~/Library/Application Support/org.exist'
+
+  caveats do
+    depends_on_java('8')
+  end
 end
