@@ -1,6 +1,6 @@
 cask 'skype' do
-  version :latest
-  sha256 :no_check
+  version '7.58'
+  sha256 '14dfca8f79f35b4c994c11d3a514b2d7537640803c72d1b18dc8631e80db515a'
 
   url 'https://www.skype.com/go/getskype-macosx.dmg'
   name 'Skype'
