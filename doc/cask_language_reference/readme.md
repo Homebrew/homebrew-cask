@@ -50,7 +50,7 @@ if MacOS.version <= :mavericks     # symbolic name
 if MacOS.version <= '10.9'         # version string
 ```
 
-The available symbols for macOS versions are: `:cheetah`, `:puma`, `:jaguar`, `:panther`, `:tiger`, `:leopard`, `:snow_leopard`, `:lion`, `:mountain_lion`, `:mavericks`, `:yosemite`, `:el_capitan`, and `:sierra`. The corresponding numeric version strings should be given as major releases containing a single dot.
+The available symbols for macOS versions are: `:cheetah`, `:puma`, `:jaguar`, `:panther`, `:tiger`, `:leopard`, `:snow_leopard`, `:lion`, `:mountain_lion`, `:mavericks`, `:yosemite`, `:el_capitan`, `:sierra`, and `:high_sierra`. The corresponding numeric version strings should be given as major releases containing a single dot.
 
 ### Always Fall Through to the Newest Case
 
