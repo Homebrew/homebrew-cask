@@ -7,6 +7,8 @@ cask 'postman' do
   name 'Postman'
   homepage 'https://www.getpostman.com/'
 
+  auto_updates true
+
   app 'Postman.app'
 
   zap delete: [
