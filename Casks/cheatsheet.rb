@@ -11,7 +11,8 @@ cask 'cheatsheet' do
 
   app 'CheatSheet.app'
 
-  zap delete: [
+  zap delete: '~/Library/Caches/com.mediaatelier.CheatSheet',
+      trash:  [
                 '~/Library/Application Support/com.mediaatelier.CheatSheet',
                 '~/Library/Preferences/com.mediaatelier.CheatSheet.plist',
               ]
