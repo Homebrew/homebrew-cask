@@ -4,6 +4,8 @@ cask 'zeebe-modeler' do
 
   # github.com/zeebe-io/zeebe-modeler was verified as official when first introduced to the cask
   url "https://github.com/zeebe-io/zeebe-modeler/releases/download/#{version}/zeebe-modeler-darwin-x64.tar.gz"
+  appcast 'https://github.com/zeebe-io/zeebe-modeler/releases.atom',
+          checkpoint: 'a6fd861e57d3b58668b4cc1615b60c203cb4d229c24fc5c1035a993925083034'
   name 'Zeebe Modeler'
   homepage 'https://zeebe.io/'
 
