@@ -1,4 +1,4 @@
-cask 'avi-metaedit' do
+cask 'avi-metaedit-app' do
   version '1.0.1'
   sha256 '88bcb94241bd852e3b7ecf8243426da4285576a3dd412c52f7eaaf11daf117f3'
 
