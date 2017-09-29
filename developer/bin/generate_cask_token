@@ -1,4 +1,4 @@
-#!/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby
+#!/System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby
 #
 # generate_cask_token
 #
