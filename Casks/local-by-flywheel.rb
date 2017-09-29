@@ -3,7 +3,7 @@ cask 'local-by-flywheel' do
   sha256 'ca0fc617dd1bf0f38d0274b54362c75f06d25411e3c7221aa198aab08cc7235d'
 
   # local-by-flywheel-flywheel.netdna-ssl.com/releases was verified as official when first introduced to the cask
-  url "https://local-by-flywheel-flywheel.netdna-ssl.com/releases/#{version.dots_to_underscores}/local-by-flywheel-#{version.dots_to_hyphens}-mac.zip"
+  url "https://local-by-flywheel-flywheel.netdna-ssl.com/releases/#{version.dots_to_hyphens}/local-by-flywheel-#{version.dots_to_hyphens}-mac.zip"
   name 'Local by Flywheel'
   homepage 'https://local.getflywheel.com/'
 
