@@ -2,6 +2,7 @@ cask 'java' do
   version '1.9,181'
   sha256 '0755e848c061419313510a88508512b8d58ae9c79bd01d460e6b436dc13dfac1'
 
+  # test
   url "http://download.oracle.com/otn-pub/java/jdk/#{version.minor}+#{version.after_comma}/jdk-#{version.minor}_osx-x64_bin.dmg",
       cookies: {
                  'oraclelicense' => 'accept-securebackup-cookie',

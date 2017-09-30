@@ -2,6 +2,7 @@ cask 'vfuse' do
   version '1.0.5'
   sha256 '2bfad0d1c91db75afa2cc7149298037c1bcfedf74c775eab2139efbb1265539e'
 
+  # test
   url "https://github.com/chilcote/vfuse/releases/download/#{version}/vfuse-#{version}.pkg"
   appcast 'https://github.com/chilcote/vfuse/releases.atom',
           checkpoint: 'a47858a7de4b5df3df3106149a694e8883397f46ffb51d55ae2eab39efff812c'
