@@ -6,7 +6,10 @@ cask 'google-photos-backup-and-sync' do
   name 'Google Photos Backup And Sync'
   homepage 'https://photos.google.com/apps'
 
-  conflicts_with cask: 'google-backup-and-sync'
+  conflicts_with cask: [
+                         'google-backup-and-sync',
+                         'google-drive-file-stream',
+                       ]
   depends_on macos: '>= :mavericks'
 
   app 'Backup and Sync.app'
