@@ -3,21 +3,21 @@ cask 'adobe-after-effects-cc' do
   sha256 '398f9401f524ac10462b2b8cd91389b2b6aee841bd328b6daeaa8fa232bee41a'
 
   language('en', default: true) { 'en_US' }
-  language('en-GB') { 'en_GB' }
-  language('en-AE') { 'en_AE' }
-  language('en-IL') { 'en_IL' }
-  language('fr') { 'fr_FR' }
-  language('fr-CA') { 'fr_CA' }
-  language('fr-MA') { 'fr_MA' }
-  language('de') { 'de_DE' }
-  language('es') { 'es_ES' }
-  language('es-MX') { 'es_MX' }
-  language('it') { 'it_IT' }
-  language('ja') { 'ja_JP' }
-  language('ko') { 'ko_KR' }
-  language('pt') { 'pt_BR' }
-  language('zh') { 'zh_CN' }
-  language('ru') { 'ru_RU' }
+  language('en-GB')             { 'en_GB' }
+  language('en-AE')             { 'en_AE' }
+  language('en-IL')             { 'en_IL' }
+  language('fr')                { 'fr_FR' }
+  language('fr-CA')             { 'fr_CA' }
+  language('fr-MA')             { 'fr_MA' }
+  language('de')                { 'de_DE' }
+  language('es')                { 'es_ES' }
+  language('es-MX')             { 'es_MX' }
+  language('it')                { 'it_IT' }
+  language('ja')                { 'ja_JP' }
+  language('ko')                { 'ko_KR' }
+  language('pt')                { 'pt_BR' }
+  language('zh')                { 'zh_CN' }
+  language('ru')                { 'ru_RU' }
 
   url "https://trials3.adobe.com/AdobeProducts/AEFT/#{version.dots_to_underscores}/osx10-64/AfterEffects_#{version.dots_to_underscores}_LS20.dmg",
       user_agent: :fake,

@@ -2,113 +2,33 @@ cask 'adobe-photoshop-cc' do
   version '16'
   sha256 'c5a30a102299215b7df7e0cc519d3d63c20a63b0fecf54bc41eb68061c96dec7'
 
-  language 'cs' do
-    'cs_CZ'
-  end
-
-  language 'da' do
-    'da_DK'
-  end
-
-  language 'de' do
-    'de_DE'
-  end
-
-  language 'en-AE' do
-    'en_AE'
-  end
-
-  language 'en-GB' do
-    'en_GB'
-  end
-
-  language 'en-IL' do
-    'en_IL'
-  end
-
-  language 'en' do
-    'en_US'
-  end
-
-  language 'es-MX' do
-    'es_MX'
-  end
-
-  language 'es' do
-    'es_ES'
-  end
-
-  language 'fi' do
-    'fi_FI'
-  end
-
-  language 'fr-CA' do
-    'fr_CA'
-  end
-
-  language 'fr-MA' do
-    'fr_MA'
-  end
-
-  language 'fr' do
-    'fr_FR'
-  end
-
-  language 'hu' do
-    'hu_HU'
-  end
-
-  language 'it' do
-    'it_IT'
-  end
-
-  language 'ja' do
-    'ja_JP'
-  end
-
-  language 'ko' do
-    'ko_KR'
-  end
-
-  language 'nb' do
-    'nb_NO'
-  end
-
-  language 'nl' do
-    'nl_NL'
-  end
-
-  language 'pl' do
-    'pl_PL'
-  end
-
-  language 'pt' do
-    'pt_BR'
-  end
-
-  language 'ru' do
-    'ru_RU'
-  end
-
-  language 'sv' do
-    'sv_SE'
-  end
-
-  language 'tr' do
-    'tr_TR'
-  end
-
-  language 'uk' do
-    'uk_UA'
-  end
-
-  language 'zh-TW' do
-    'zh_TW'
-  end
-
-  language 'zh' do
-    'zh_CN'
-  end
+  language('cs')                { 'cs_CZ' }
+  language('da')                { 'da_DK' }
+  language('de')                { 'de_DE' }
+  language('en-AE')             { 'en_AE' }
+  language('en-GB')             { 'en_GB' }
+  language('en-IL')             { 'en_IL' }
+  language('en', default: true) { 'en_US' }
+  language('es-MX')             { 'es_MX' }
+  language('es')                { 'es_ES' }
+  language('fi')                { 'fi_FI' }
+  language('fr-CA')             { 'fr_CA' }
+  language('fr-MA')             { 'fr_MA' }
+  language('fr')                { 'fr_FR' }
+  language('hu')                { 'hu_HU' }
+  language('it')                { 'it_IT' }
+  language('ja')                { 'ja_JP' }
+  language('ko')                { 'ko_KR' }
+  language('nb')                { 'nb_NO' }
+  language('nl')                { 'nl_NL' }
+  language('pl')                { 'pl_PL' }
+  language('pt')                { 'pt_BR' }
+  language('ru')                { 'ru_RU' }
+  language('sv')                { 'sv_SE' }
+  language('tr')                { 'tr_TR' }
+  language('uk')                { 'uk_UA' }
+  language('zh-TW')             { 'zh_TW' }
+  language('zh')                { 'zh_CN' }
 
   url "http://trials3.adobe.com/AdobeProducts/PHSP/#{version}/osx10/Photoshop_#{version.major}_LS20.dmg",
       user_agent: :fake,
