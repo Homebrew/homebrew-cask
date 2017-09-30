@@ -11,7 +11,7 @@ cask 'metasploit' do
 
   depends_on formula: 'nmap'
 
-  pkg "metasploit-framework-#{version}-1rapid7-1.pkg"
+  pkg "metasploit-framework-#{version.gsub('+', ' ')}-1rapid7-1.pkg"
   binary '/opt/metasploit-framework/bin/metasploit-aggregator'
   binary '/opt/metasploit-framework/bin/msfbinscan'
   binary '/opt/metasploit-framework/bin/msfconsole'
