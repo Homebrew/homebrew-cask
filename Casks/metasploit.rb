@@ -1,17 +1,17 @@
 cask 'metasploit' do
-  version '4.16.9+20170923102137'
-  sha256 'aecbc70a245225ad4dee778b429bfdaf8298ad840adf3903df46c680adf6b9d2'
+  version '4.16.10+20170930102428'
+  sha256 '40b938e1722f2cfad9f5770149abbf977873805d8f0890e39e64e52a2c6744d0'
 
   url "https://osx.metasploit.com/metasploit-framework-#{version}-1rapid7-1.pkg"
   appcast 'https://osx.metasploit.com/LATEST',
-          checkpoint: '023251abb87b2f6c27b873e2a523905f6c57e4ebb90f8d8a87eb539fdb6a8fc1'
+          checkpoint: '9239d4ae3341e0d6c4cb7cabf8209f85b0ba1bf213de982a800e83da4b143da3'
   name 'Metasploit Framework'
   homepage 'https://www.metasploit.com/'
   gpg "#{url}.asc", key_id: '2007B954'
 
   depends_on formula: 'nmap'
 
-  pkg "metasploit-framework-#{version}-1rapid7-1.pkg"
+  pkg "metasploit-framework-#{version.gsub('+', ' ')}-1rapid7-1.pkg"
   binary '/opt/metasploit-framework/bin/metasploit-aggregator'
   binary '/opt/metasploit-framework/bin/msfbinscan'
   binary '/opt/metasploit-framework/bin/msfconsole'
