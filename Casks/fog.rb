@@ -1,10 +1,10 @@
 cask 'fog' do
-  version '1.3.0'
-  sha256 '2d34cb88b862bf21dafb836b8b5d84539fe944be1c6ddcd219390b70a8896e1a'
+  version '1.3.1'
+  sha256 'c270a0d61d62350787621ffaa08f12d901dd5df3673e73ebc437f51c51ed913c'
 
   url "https://github.com/vitorgalvao/fog/releases/download/#{version}/Fog-macos-#{version}.zip"
   appcast 'https://github.com/vitorgalvao/fog/releases.atom',
-          checkpoint: '673383a0d6cfc13c5873b24d4f3ec44b58875e9d37e993e098ebeba597975868'
+          checkpoint: '28e6527fa32f3d245a7e78cc48a4c2b7238e3de22fd5bc54e48b9dd74e5d7346'
   name 'Fog'
   homepage 'https://github.com/vitorgalvao/fog'
 
