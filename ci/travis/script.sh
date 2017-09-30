@@ -22,8 +22,11 @@ elif [[ ${#modified_casks[@]} -gt 0 ]]; then
   run brew cask _audit_modified_casks "${TRAVIS_COMMIT_RANGE}"
   run brew cask style "${modified_casks[@]}"
   if [[ ${#modified_casks[@]} -le 10 ]]; then
-    run brew cask reinstall "${modified_casks[@]}"
-    run brew cask uninstall "${modified_casks[@]}"
+  	for cask in "${modified_casks[@]}";
+    do 
+    run brew cask reinstall "${cask}";
+    run brew cask uninstall "${cask}";
+    done
   else
     ohai 'More than 10 casks modified, skipping install'
   fi
