@@ -9,14 +9,12 @@ cask 'zandronum' do
   app 'Zandronum.app'
   app 'Doomseeker.app'
 
-  zap delete: [
-                '~/Library/Preferences/zandronum.ini',
-                '~/Library/Application Support/Doomseeker',
-                '~/Library/Preferences/org.doomseeker.app.plist',
-                '~/Library/Saved Application State/org.doomseeker.app.savedState',
-              ],
+  zap delete: '~/Library/Saved Application State/org.doomseeker.app.savedState',
       trash:  [
+                '~/Library/Application Support/Doomseeker',
                 '~/Library/Application Support/zandronum',
                 '~/Library/Preferences/Doomseeker',
+                '~/Library/Preferences/org.doomseeker.app.plist',
+                '~/Library/Preferences/zandronum.ini',
               ]
 end
