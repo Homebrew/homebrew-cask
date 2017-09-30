@@ -7,5 +7,17 @@ cask 'local-by-flywheel' do
   name 'Local by Flywheel'
   homepage 'https://local.getflywheel.com/'
 
+  depends_on cask: 'virtualbox'
+
   app 'Local by Flywheel.app'
+
+  zap delete: [
+                '~/Library/Logs/local-by-flywheel.log',
+                '~/Library/Saved Application State/com.getflywheel.local.savedState',
+              ],
+      trash:  [
+                '~/Library/Application Support/Local by Flywheel',
+                '~/Library/Preferences/com.getflywheel.local.plist',
+                '~/Library/Preferences/com.getflywheel.local.helper.plist',
+              ]
 end
