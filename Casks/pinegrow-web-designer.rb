@@ -1,8 +1,7 @@
 cask 'pinegrow' do
   version '3.1'
-  sha256 '4939f9df33471a4390fdcf3b49ab3d9bb20311b2d5eab860a9ce845929958092'
+  sha256 'c0f1d8c2a224083dd945ff4acf4fbb92187c76b5f4df024affc42d49f825181c'
 
-  # pinegrow.s3.amazonaws.com was verified as official when first introduced to the cask
   url "http://download.pinegrow.com/PinegrowMac.#{version}.dmg"
   name 'Pinegrow'
   homepage 'https://pinegrow.com/'
