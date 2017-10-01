@@ -19,8 +19,8 @@ cask 'zandronum' do
               ]
 
   caveats <<-EOS.undent
-	  Install IWADs to ~/Library/Application Support/Zandronum/
+    Install IWADs to ~/Library/Application Support/Zandronum/
 
-	  For more information, see: https://wiki.zandronum.com/Zandronum_and_IWAD_Files
+    For more information, see: https://wiki.zandronum.com/Zandronum_and_IWAD_Files
   EOS
 end
