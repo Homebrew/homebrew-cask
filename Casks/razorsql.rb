@@ -1,10 +1,10 @@
 cask 'razorsql' do
-  version '7.3.7'
-  sha256 '6a5990f73a7907993c25e29abb7a165fa8e54d189991f96d59fbd9ba20cdbe74'
+  version '7.3.8'
+  sha256 'b7a8de58e6d9d6484dd50355b758928a2107672f40e1b602f618bf5b41290943'
 
   url "http://downloads.razorsql.com/downloads/#{version.dots_to_underscores}/razorsql#{version.dots_to_underscores}_x64.dmg"
   appcast 'https://razorsql.com/updates.html',
-          checkpoint: '31ca05e278d9e8b7cc3c423d4220b24b15a30d8653f5a5eab2500e2d2fbc0b35'
+          checkpoint: '592246f5ad611eea977593162da4e5b057acce92319d24916bf1ed45c51c5279'
   name 'RazorSQL'
   homepage 'https://razorsql.com/download_mac.html'
 
