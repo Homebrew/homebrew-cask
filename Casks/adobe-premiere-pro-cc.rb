@@ -2,22 +2,22 @@ cask 'adobe-premiere-pro-cc' do
   version '9'
   sha256 '33200d0b2aa9f118f8f06629946c5e25b8acbcc54e96d0ab49df652288ac81e0'
 
-  language('de') { 'de_DE' }
-  language('ja') { 'ja_JP' }
-  language('it') { 'it_IT' }
-  language('fr') { 'fr_FR' }
-  language('fr-CA') { 'fr_CA' }
-  language('fr-MA') { 'fr_MA' }
-  language('zh') { 'zh_CN' }
-  language('en-GB') { 'en_GB' }
-  language('en-AE') { 'en_AE' }
-  language('en-IL') { 'en_IL' }
+  language('de')                { 'de_DE' }
+  language('ja')                { 'ja_JP' }
+  language('it')                { 'it_IT' }
+  language('fr')                { 'fr_FR' }
+  language('fr-CA')             { 'fr_CA' }
+  language('fr-MA')             { 'fr_MA' }
+  language('zh')                { 'zh_CN' }
+  language('en-GB')             { 'en_GB' }
+  language('en-AE')             { 'en_AE' }
+  language('en-IL')             { 'en_IL' }
   language('en', default: true) { 'en_US' }
-  language('es') { 'es_ES' }
-  language('es-MX') { 'es_MX' }
-  language('ko') { 'ko_KR' }
-  language('ru') { 'ru_RU' }
-  language('pt') { 'pt_BR' }
+  language('es')                { 'es_ES' }
+  language('es-MX')             { 'es_MX' }
+  language('ko')                { 'ko_KR' }
+  language('ru')                { 'ru_RU' }
+  language('pt')                { 'pt_BR' }
 
   url "http://trials3.adobe.com/AdobeProducts/PPRO/#{version}/osx10-64/PremierePro_#{version}_LS20.dmg",
       user_agent: :fake,
