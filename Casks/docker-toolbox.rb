@@ -9,7 +9,36 @@ cask 'docker-toolbox' do
   name 'Docker Toolbox'
   homepage 'https://www.docker.com/products/docker-toolbox'
 
-  pkg "DockerToolbox-#{version}.pkg"
+  depends_on cask: 'virtualbox'
+
+  pkg "DockerToolbox-#{version}.pkg",
+      choices: [
+                 {
+                   'choiceIdentifier' => 'choiceDockerComposeCLI',
+                   'choiceAttribute'  => 'selected',
+                   'attributeSetting' => 1,
+                 },
+                 {
+                   'choiceIdentifier' => 'choiceDockerQuickstartTerminalAPP',
+                   'choiceAttribute'  => 'selected',
+                   'attributeSetting' => 1,
+                 },
+                 {
+                   'choiceIdentifier' => 'choiceKitematicAPP',
+                   'choiceAttribute'  => 'selected',
+                   'attributeSetting' => 1,
+                 },
+                 {
+                   'choiceIdentifier' => 'choiceVBox',
+                   'choiceAttribute'  => 'selected',
+                   'attributeSetting' => 0,
+                 },
+                 {
+                   'choiceIdentifier' => 'choiceBoot2DockerISO',
+                   'choiceAttribute'  => 'selected',
+                   'attributeSetting' => 1,
+                 },
+               ]
 
   postflight do
     set_ownership '~/.docker'
@@ -23,4 +52,6 @@ cask 'docker-toolbox' do
                        'io.docker.pkg.dockerquickstartterminalapp',
                        'io.docker.pkg.kitematicapp',
                      ]
+
+  zap trash: '~/.docker'
 end
