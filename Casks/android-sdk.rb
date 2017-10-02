@@ -1,5 +1,5 @@
 cask 'android-sdk' do
-  version '3859397,26.0.1'
+  version '3859397,26.0.2'
   sha256 '4a81754a760fce88cba74d69c364b05b31c53d57b26f9f82355c61d5fe4b9df9'
 
   # dl.google.com/android/repository was verified as official when first introduced to the cask
