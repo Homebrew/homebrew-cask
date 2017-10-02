@@ -1,10 +1,10 @@
 cask 'docker' do
-  version '17.06.2-ce-mac27,19124'
-  sha256 '2622992cb2e56291748548e904b1e19c22e947b73dd7012535efedf1de86122a'
+  version '17.09.0-ce-mac32,19506'
+  sha256 'f1fa68cee41b73894fc39123b9b913cda190c8228d38dc56e55ff98c4ff27efa'
 
   url "https://download.docker.com/mac/stable/#{version.after_comma}/Docker.dmg"
   appcast 'https://download.docker.com/mac/stable/appcast.xml',
-          checkpoint: 'bfc1c47f408ed0781822f9e36912d1dee69f75659223b96f5fe220c86e0b79fe'
+          checkpoint: 'af6537bc69311e202a023db21f87179020a1a02a26ea5224386b29e0b358c0a4'
   name 'Docker Community Edition'
   name 'Docker CE'
   homepage 'https://www.docker.com/community-edition'
