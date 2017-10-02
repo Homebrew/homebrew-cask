@@ -2,33 +2,33 @@ cask 'adobe-media-encoder-cc' do
   version '9'
   sha256 'bb074010df2a65cf519b443e1bd86f69581196673ca9468ade6d36555b5b26e7'
 
-  language('cs') { 'cs_CZ' }
-  language('da') { 'da_DK' }
-  language('de') { 'de_DE' }
-  language('en-AE') { 'en_AE' }
-  language('en-GB') { 'en_GB' }
-  language('en-IL') { 'en_IL' }
+  language('cs')                { 'cs_CZ' }
+  language('da')                { 'da_DK' }
+  language('de')                { 'de_DE' }
+  language('en-AE')             { 'en_AE' }
+  language('en-GB')             { 'en_GB' }
+  language('en-IL')             { 'en_IL' }
   language('en', default: true) { 'en_US' }
-  language('es-MX') { 'es_MX' }
-  language('es') { 'es_ES' }
-  language('fi') { 'fi_FI' }
-  language('fr-CA') { 'fr_CA' }
-  language('fr-MA') { 'fr_MA' }
-  language('fr') { 'fr_FR' }
-  language('hu') { 'hu_HU' }
-  language('it') { 'it_IT' }
-  language('ja') { 'ja_JP' }
-  language('ko') { 'ko_KR' }
-  language('nb') { 'nb_NO' }
-  language('nl') { 'nl_NL' }
-  language('pl') { 'pl_PL' }
-  language('pt') { 'pt_BR' }
-  language('ru') { 'ru_RU' }
-  language('sv') { 'sv_SE' }
-  language('tr') { 'tr_TR' }
-  language('uk') { 'uk_UA' }
-  language('zh-TW') { 'zh_TW' }
-  language('zh') { 'zh_CN' }
+  language('es-MX')             { 'es_MX' }
+  language('es')                { 'es_ES' }
+  language('fi')                { 'fi_FI' }
+  language('fr-CA')             { 'fr_CA' }
+  language('fr-MA')             { 'fr_MA' }
+  language('fr')                { 'fr_FR' }
+  language('hu')                { 'hu_HU' }
+  language('it')                { 'it_IT' }
+  language('ja')                { 'ja_JP' }
+  language('ko')                { 'ko_KR' }
+  language('nb')                { 'nb_NO' }
+  language('nl')                { 'nl_NL' }
+  language('pl')                { 'pl_PL' }
+  language('pt')                { 'pt_BR' }
+  language('ru')                { 'ru_RU' }
+  language('sv')                { 'sv_SE' }
+  language('tr')                { 'tr_TR' }
+  language('uk')                { 'uk_UA' }
+  language('zh-TW')             { 'zh_TW' }
+  language('zh')                { 'zh_CN' }
 
   url "http://trials3.adobe.com/AdobeProducts/AME/#{version}/osx10-64/AdobeMediaEncoder_#{version}_LS20.dmg",
       user_agent: :fake,

@@ -9,7 +9,7 @@ cask 'starcraft' do
 
   depends_on macos: '>= :el_capitan'
 
-  installer manual: 'StarCraft Launcher.app'
+  installer manual: 'StarCraft-Setup.app'
 
   uninstall delete: '/Applications/StarCraft'
 
