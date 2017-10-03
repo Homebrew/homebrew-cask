@@ -11,6 +11,6 @@ cask 'vagrant-manager' do
 
   app 'Vagrant Manager.app'
 
-  zap trash: ['~/Library/Preferences/lanayo.Vagrant-Manager.plist',
-              '~/Library/Caches/lanayo.Vagrant-Manager']
+  zap delete: '~/Library/Caches/lanayo.Vagrant-Manager',
+      trash:  '~/Library/Preferences/lanayo.Vagrant-Manager.plist'
 end
