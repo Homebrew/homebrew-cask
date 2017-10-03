@@ -16,10 +16,12 @@ cask 'flux' do
             quit:       'org.herf.Flux'
 
   zap delete: [
-                '~/Library/Preferences/org.herf.Flux.plist',
                 '~/Library/Caches/org.herf.Flux',
-                '~/Library/Cookies/org.herf.Flux.binarycookies',
-                '~/Library/Application Support/Flux',
                 '~/Library/Containers/com.justgetflux.flux',
+                '~/Library/Cookies/org.herf.Flux.binarycookies',
+              ],
+      trash:  [
+                '~/Library/Application Support/Flux',
+                '~/Library/Preferences/org.herf.Flux.plist',
               ]
 end
