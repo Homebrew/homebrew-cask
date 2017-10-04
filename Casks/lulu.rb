@@ -9,7 +9,7 @@ cask 'lulu' do
   name 'LuLu'
   homepage 'https://objective-see.com/products/lulu.html'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :yosemite'
 
   installer script: {
                       executable: 'configure.sh',
