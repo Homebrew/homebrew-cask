@@ -1,10 +1,10 @@
 cask 'bitkeeper' do
-  version '7.3.1ce'
-  sha256 '25607370fbf3312e5f19785c438fb1db1b62f38eeb4ec1707acbe8bd85a21163'
+  version '7.3.2'
+  sha256 '2e2ec30061627e325f156340ef75e58d900bd4604a799669bb72bc98553a9982'
 
   url "http://www.bitkeeper.org/downloads/#{version}/bk-#{version}-x86_64-macosx.pkg"
   appcast 'http://www.bitkeeper.org/download.html',
-          checkpoint: '012486fc8f110b56139f497338253996bf6629c2f47c80d8b2a88ede9fc404ee'
+          checkpoint: '0b79344fd9171b203e32754c1b6e3bc7937c19231371d4b2bbc5682ce94c0bef'
   name 'BitKeeper'
   homepage 'http://www.bitkeeper.org/'
 
