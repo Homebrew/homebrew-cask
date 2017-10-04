@@ -7,7 +7,7 @@ cask 'discovercare' do
   end
 
   language 'de' do
-    sha256 '4f536f7e1c92787ee8a750fd4245c1d64c163807fb683ea8a59427aac57c18af'
+    sha256 '1368c12cd3fa8fd0baef6cbcb9d130205778c4d249498422737b854b41b8f996'
     'de'
   end
 
