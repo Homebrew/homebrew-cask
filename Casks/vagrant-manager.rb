@@ -5,11 +5,12 @@ cask 'vagrant-manager' do
   # github.com/lanayotech/vagrant-manager was verified as official when first introduced to the cask
   url "https://github.com/lanayotech/vagrant-manager/releases/download/#{version}/vagrant-manager-#{version}.dmg"
   appcast 'https://github.com/lanayotech/vagrant-manager/releases.atom',
-          checkpoint: '45ea6d317d36c8244cb17c7b60d4a138adcabe2553c544edca13ab6d0ccfc2f2'
+          checkpoint: 'a6d3c3340cdfba7d45050e104530e7ad480d378975bf8217b8daa9863d92da9e'
   name 'Vagrant Manager'
   homepage 'http://vagrantmanager.com/'
 
   app 'Vagrant Manager.app'
 
-  zap trash: '~/Library/Preferences/lanayo.Vagrant-Manager.plist'
+  zap delete: '~/Library/Caches/lanayo.Vagrant-Manager',
+      trash:  '~/Library/Preferences/lanayo.Vagrant-Manager.plist'
 end
