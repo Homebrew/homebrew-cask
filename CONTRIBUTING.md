@@ -50,6 +50,7 @@ Notice an application that's not in Homebrew-Cask yet? Make sure it's not yet in
 
 With a bit of work, you can create a Cask for it. [This document](doc/development/adding_a_cask.md) will walk you through creating a new Cask, testing it, and submitting it to us.
 
+If the Cask is meant to support or requires a specific piece of hardware, then it belongs in the drivers caskroom.  This is the difference between a screen utility that works for any display vs one meant to work with a specific manufacturer.
 
 ## Style guide
 
