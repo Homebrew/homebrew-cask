@@ -1,10 +1,10 @@
 cask 'mist' do
-  version '0.9.0'
-  sha256 'daf781fb64312400c3c85a1899f989a42a568d1b527c318b78d83084d31c4664'
+  version '0.9.1'
+  sha256 '0c8a03232fbb8493e8b146812d0d553e49b8054bd7a7801b1e5046b901ab5e29'
 
   url "https://github.com/ethereum/mist/releases/download/v#{version}/Mist-macosx-#{version.dots_to_hyphens}.dmg"
   appcast 'https://github.com/ethereum/mist/releases.atom',
-          checkpoint: '2d21d2003f91bff6b6eb3ecc232b6f675faca97e224bb318cc3a8595916f2ba2'
+          checkpoint: 'dcb48d1e593f132f3c46cfcf9488a4fb8ce4aaa0c74ab13805eb56e1a341259a'
   name 'Mist'
   homepage 'https://github.com/ethereum/mist'
 
