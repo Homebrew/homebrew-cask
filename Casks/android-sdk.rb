@@ -66,13 +66,16 @@ cask 'android-sdk' do
     FileUtils.rm("#{HOMEBREW_PREFIX}/share/android-sdk")
   end
 
-  caveats <<-EOS.undent
-    We will install android-sdk-tools, platform-tools, and build-tools for you.
-    You can control android sdk packages via the sdkmanager command.
-    You may want to add to your profile:
-      'export ANDROID_SDK_ROOT=#{HOMEBREW_PREFIX}/share/android-sdk'
+  caveats do
+    depends_on_java('8')
+    <<-EOS.undent
+      We will install android-sdk-tools, platform-tools, and build-tools for you.
+      You can control android sdk packages via the sdkmanager command.
+      You may want to add to your profile:
+        'export ANDROID_SDK_ROOT=#{HOMEBREW_PREFIX}/share/android-sdk'
 
-    This operation may take up to 10 minutes depending on your internet connection.
-    Please, be patient.
-  EOS
+      This operation may take up to 10 minutes depending on your internet connection.
+      Please, be patient.
+    EOS
+  end
 end
