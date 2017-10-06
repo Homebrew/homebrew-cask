@@ -8,5 +8,6 @@ cask 'kapow' do
 
   app 'Kapow.app'
 
-  zap trash: '~/Library/Application Support/GottCode/Kapow/'
+  zap trash: '~/Library/Application Support/GottCode/Kapow',
+      rmdir: '~/Library/Application Support/GottCode'
 end
