@@ -1,6 +1,6 @@
 cask 'haskell-platform' do
   version '8.2.1'
-  sha256 'b0182bb721b5dff3d66794cbdcea93cec562dc254fcf23c0e7a1a7a8d680aaa7'
+  sha256 '05fc22d2cefdf67f1da2f62a90fda73a746accd08b44ec197046972b82afee06'
 
   url "https://haskell.org/platform/download/#{version}/Haskell%20Platform%20#{version}%20Full%2064bit-signed.pkg"
   appcast 'https://github.com/haskell/haskell-platform/releases.atom',
