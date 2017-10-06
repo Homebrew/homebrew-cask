@@ -8,5 +8,6 @@ cask 'focuswriter' do
 
   app 'FocusWriter.app'
 
-  zap trash: '~/Library/Application Support/GottCode/FocusWriter'
+  zap trash: '~/Library/Application Support/GottCode/FocusWriter',
+      rmdir: '~/Library/Application Support/GottCode'
 end
