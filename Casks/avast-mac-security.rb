@@ -6,7 +6,7 @@ cask 'avast-mac-security' do
   name 'Avast Mac Security'
   homepage 'https://www.avast.com/'
 
-  pkg 'Avast Mac Security.pkg'
+  pkg 'Avast Security.pkg'
 
   uninstall script: {
                       executable:   '/Library/Application Support/Avast/hub/uninstall.sh',
