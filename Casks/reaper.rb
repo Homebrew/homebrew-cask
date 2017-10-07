@@ -1,10 +1,10 @@
 cask 'reaper' do
-  version '5.51'
-  sha256 '1b37f2ad46373825e4cac487b1dcde1359212168e37fe1d6367e6e8bd4aaeb01'
+  version '5.52'
+  sha256 '8834de7d806d530206634ebdfc76430f5c092c2fb7dc604cc60093f628f762a1'
 
   url "https://www.reaper.fm/files/#{version.major}.x/reaper#{version.no_dots}_x86_64.dmg"
   appcast 'https://www.reaper.fm/download.php',
-          checkpoint: '06ec6403d1b48178149d5399f1998ace3907d2c12b12aed4a324355df6dba052'
+          checkpoint: '81350794dc588bdee83ed5e93ee215b8d02dc7645e924de8c7d60ad9430c8363'
   name 'REAPER'
   homepage 'https://www.reaper.fm/'
 
