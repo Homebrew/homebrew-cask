@@ -10,6 +10,7 @@ cask 'dropshare' do
   homepage 'https://getdropsha.re/'
 
   app "Dropshare #{version.major}.app"
+  binary "#{appdir}/Dropshare #{version.major}.app/Contents/Resources/ds.sh", target: 'ds'
 
   zap delete: [
                 '~/Library/Application Support/Dropshare 4',
