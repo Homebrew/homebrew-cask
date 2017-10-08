@@ -16,7 +16,7 @@ cask 'coteditor' do
     url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   else
     version '3.2.2'
-    sha256 '40fc060e10ae03a7172a1d1c5856271e3943918c03f13b7c6970e867345fcd1f'
+    sha256 'ae60871c9d3634c8a38223a13396deccb94192b11be59c5215fcd3d144e6b233'
     # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
     url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   end
