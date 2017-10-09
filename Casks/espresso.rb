@@ -1,11 +1,10 @@
 cask 'espresso' do
-  version '5.0.3'
-  sha256 '462a57b2364764f15b62da95cab24633cb59b3dca1c4f05ac6ad85701372dda4'
+  version '5.0.4'
+  sha256 '336312d0a8940a553018eef1d019f47b4673ca8c2419ab47e839812917f5f538'
 
-  # static.macrabbit.com was verified as official when first introduced to the cask
-  url "https://static.macrabbit.com/downloads/Espresso%20v#{version.major}.zip"
+  url "https://presto.espressoapp.com/downloads/Espresso%20v#{version}.zip"
   appcast "https://update.macrabbit.com/espresso/#{version}.xml",
-          checkpoint: '1a136a83d4663679501479c433d99ad45e8284a1f5296701686e974d357fa143'
+          checkpoint: '19fce25d2f4bad0db881c5c48d99f42ea2176618ef9e4cd47aa892a6d52b49ec'
   name 'Espresso'
   homepage 'https://espressoapp.com/'
 
