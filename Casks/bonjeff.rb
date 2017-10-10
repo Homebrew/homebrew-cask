@@ -12,5 +12,8 @@ cask 'bonjeff' do
 
   app 'Bonjeff.app'
 
-  zap delete: '~/Library/Application Scripts/com.lapcatsoftware.bonjeff'
+  zap delete: [
+                '~/Library/Application Scripts/com.lapcatsoftware.bonjeff',
+                '~/Library/Containers/com.lapcatsoftware.bonjeff',
+              ]
 end
