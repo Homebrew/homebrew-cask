@@ -4,6 +4,8 @@ cask 'casparcg-client' do
 
   # downloads.sourceforge.net/casparcg/CasparCG_Client was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/casparcg/CasparCG_Client/CasparCG_Client_#{version.major_minor}/CasparCG_Client_#{version}_Mac.dmg"
+  appcast "https://sourceforge.net/projects/casparcg/rss?path=/CasparCG_Client/CasparCG_Client_#{version.major_minor}",
+          checkpoint: '536d00ac77dbbec53779c273091a1e7a0a35a28237dd1f5edf9a048bad2d03b8'
   name 'CasparCG Client'
   homepage 'http://casparcg.com/'
 
