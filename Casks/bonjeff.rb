@@ -8,9 +8,9 @@ cask 'bonjeff' do
   name 'Bonjeff'
   homepage 'https://github.com/lapcat/Bonjeff'
 
+  depends_on macos: '>= :sierra'
+
   app 'Bonjeff.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/com.lapcatsoftware.bonjeff',
-              ]
+  zap delete: '~/Library/Application Scripts/com.lapcatsoftware.bonjeff'
 end
