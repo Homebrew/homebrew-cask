@@ -4,7 +4,7 @@ cask 'xamarin-ios' do
 
   url "https://dl.xamarin.com/MonoTouch/Mac/xamarin.ios-#{version}.pkg"
   appcast 'https://xampubdl.blob.core.windows.net/static/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
-          checkpoint: 'ae14679a7064f0aba35c3117a65dd47a8c61e8ed560c7b166ac514fb45195e67'
+          checkpoint: '6c0206cd7b4e66ca36952c28faba171fee84cb5af10ef6e6701b59e97745a88a'
   name 'Xamarin.iOS'
   homepage 'https://www.xamarin.com/platform'
 
