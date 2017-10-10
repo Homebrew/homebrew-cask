@@ -1,12 +1,12 @@
-cask 'avast-mac-security' do
+cask 'avast-security' do
   version :latest
   sha256 :no_check
 
-  url 'http://download.ff.avast.com/mac/avast_free_mac_security.dmg'
-  name 'Avast Mac Security'
+  url 'http://download.ff.avast.com/mac/avast_security_online.dmg'
+  name 'Avast Security'
   homepage 'https://www.avast.com/'
 
-  pkg 'Avast Mac Security.pkg'
+  pkg 'Avast Security.pkg'
 
   uninstall script: {
                       executable:   '/Library/Application Support/Avast/hub/uninstall.sh',

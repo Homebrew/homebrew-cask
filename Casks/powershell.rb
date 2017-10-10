@@ -1,10 +1,10 @@
 cask 'powershell' do
-  version '6.0.0-beta.7'
-  sha256 '6aaec8ccf6b910d389036cb68c9cb5bb462f231a37b5d3624f52d8899ad5dbab'
+  version '6.0.0-beta.8'
+  sha256 '29e33f0a19c089a9a00e1987783803b6120b1379b370fab33b8f74c56956a10a'
 
   url "https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}-osx.10.12-x64.pkg"
   appcast 'https://github.com/PowerShell/PowerShell/releases.atom',
-          checkpoint: '3aafba4d09c554e0502144ff649254221019364623b14bb84ea80ca13d4484c3'
+          checkpoint: 'd2c97f3b17085b17c5dab20fd0b93b7afd1e4c4dc0a08ce588723bebd312b9e4'
   name 'PowerShell'
   homepage 'https://github.com/PowerShell/PowerShell'
 
@@ -15,17 +15,17 @@ cask 'powershell' do
 
   uninstall pkgutil: 'powershell'
 
-  zap delete: [
-                '~/.cache/powershell',
-                '~/.config/PowerShell',
-                '~/.local/share/powershell',
-              ],
-      rmdir:  [
-                '~/.cache',
-                '~/.config',
-                '~/.local/share',
-                '~/.local',
-              ]
+  zap trash: [
+               '~/.cache/powershell',
+               '~/.config/PowerShell',
+               '~/.local/share/powershell',
+             ],
+      rmdir: [
+               '~/.cache',
+               '~/.config',
+               '~/.local/share',
+               '~/.local',
+             ]
 
   caveats <<-EOS.undent
     A OpenSSL-backed libcurl is required for custom handling of certificates.
