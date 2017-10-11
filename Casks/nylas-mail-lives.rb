@@ -5,7 +5,7 @@ cask 'nylas-mail-lives' do
   url "https://github.com/nylas-mail-lives/nylas-mail/releases/download/#{version}/nylas-#{version}.dmg"
   appcast 'https://github.com/nylas-mail-lives/nylas-mail/releases.atom',
           checkpoint: '745e3750c0293d39210d2bc4bef742724d59b02fc88ab26453f99bbe2b83526f'
-  name 'Nylas Mail'
+  name 'Nylas Mail Lives'
   homepage 'https://github.com/nylas-mail-lives/nylas-mail'
 
   conflicts_with cask: 'nylas-mail'
