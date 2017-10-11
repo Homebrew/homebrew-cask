@@ -8,6 +8,8 @@ cask 'nylas-mail-lives' do
   name 'Nylas Mail'
   homepage 'https://github.com/nylas-mail-lives/nylas-mail'
 
+  conflicts_with cask: 'nylas-mail'
+
   app 'Nylas Mail.app'
 
   zap delete: [
