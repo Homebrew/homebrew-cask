@@ -1,19 +1,19 @@
 cask 'lego-mindstorms-ev3' do
   # note: "3" is not a version number, but an intrinsic part of the product name
-  version '1.2.2'
-  sha256 '79bbb5931e674c80de6bd59c1da3732b2b2de731a0aefd3369eff7ff2e580626'
+  version '1.3.0'
+  sha256 'ce5e0b047c096886d1a74540b306e704d6249c0c7eb09c76f58389841abe3528'
 
-  # esd.lego.com.edgesuite.net/digitaldelivery/mindstorms was verified as official when first introduced to the cask
-  url 'http://esd.lego.com.edgesuite.net/digitaldelivery/mindstorms/6ecda7c2-1189-4816-b2dd-440e22d65814/public/LMS-EV3-OSX-ENUS-01-02-02-full-setup.dmg'
+  # le-www-live-s.legocdn.com/downloads/LMS-EV3 was verified as official when first introduced to the cask
+  url "https://le-www-live-s.legocdn.com/downloads/LMS-EV3/LMS-EV3_Full-setup_#{version}_en-us_osx.dmg"
   name 'Lego Mindstorms EV3 Home Edition'
   homepage 'https://www.lego.com/en-us/mindstorms'
 
   pkg 'LEGO MINDSTORMS EV3 Home Edition.pkg'
 
   uninstall pkgutil: [
-                       "com.ni.pkg.lego.ev3.Eng.#{version}",
-                       "com.ni.pkg.lego.x3.#{version}.core",
-                       "com.ni.pkg.lego.x3.#{version}.update",
+                       "com.ni.pkg.lego.ev3.Eng.#{version.major_minor}",
+                       "com.ni.pkg.lego.x3.#{version.major_minor}.core",
+                       "com.ni.pkg.lego.x3.#{version.major_minor}.update",
                      ]
 
   zap pkgutil: 'com.ni.pkg.legodriver'
