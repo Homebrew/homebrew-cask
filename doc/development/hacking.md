@@ -76,5 +76,3 @@ brew cask _stanza <stanza_name> [ --table | --yaml | --inspect | --quiet ] [ <ca
 If no `<cask_token>`’s are given, then data for all Casks is returned. On failure, a blank line is returned to the standard output.
 
 For example, `brew cask _stanza appcast atom` outputs the [`appcast` for the Cask atom.rb](https://github.com/caskroom/homebrew-cask/blob/43ad9d8ddbad71fbeee42710d567861f080fedf8/Casks/atom.rb#L7), namely `https://github.com/atom/atom/releases.atom`.
-
-# ♥ Thank you! ♥
