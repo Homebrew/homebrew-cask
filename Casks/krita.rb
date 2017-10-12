@@ -10,4 +10,11 @@ cask 'krita' do
   depends_on macos: '>= :mavericks'
 
   app 'Krita.app'
+
+  zap delete: '~/Library/Saved Application State/org.krita.savedState',
+      trash:  [
+                '~/Library/Application Support/krita',
+                '~/Library/Preferences/kritadisplayrc',
+                '~/Library/Preferences/kritarc',
+              ]
 end
