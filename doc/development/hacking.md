@@ -17,12 +17,6 @@ Homebrew-Cask is still young, and should be considered in alpha.
 
 We have good support for a variety of artifacts such as apps, pkgs, binaries, plugins, and [fonts](https://github.com/caskroom/homebrew-fonts/). Homebrew-Cask can install and uninstall any of those. However, these commands don’t work well with multiple versions, and most importantly, we currently can’t `upgrade` ([but are working on it](https://github.com/caskroom/homebrew-cask/issues/29301)).
 
-## Homebrew and Homebrew-Cask
-
-Homebrew-Cask is implemented as a Homebrew [external command](http://docs.brew.sh/External-Commands.html) called `cask`, and we try to match semantics with Homebrew wherever possible. That means that similar functionality should have similar flags and parameters.
-
-However, very little backend code is shared between the two projects. The Homebrew codebase is based on how Homebrew Formulae work, and our Casks are very different from Formulae.
-
 ### Casks and Formulae
 
 Homebrew Formulae deal with many different build processes, and often include arbitrary Ruby code.
@@ -37,15 +31,7 @@ For software with unusual needs that are not covered by the DSL, we generally ac
 
 ### Setup
 
-The setup is similar to that for contibuting to the core code of Homebrew — consult Homebrew’s [documentation for maintainers](https://github.com/Homebrew/brew/tree/master/docs#maintainers) for more information.
-
-### Forcing a Ruby Interpreter
-
-You can force a specific version of the Ruby interpreter, and/or an alternate version of the `brew-cask` subcommand, by invoking `brew cask` with fully-qualified paths, like this:
-
-```bash
-$ /System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby /usr/local/Homebrew/Library/Homebrew/cask/cmd/brew-cask.rb help
-```
+The Homebrew-Cask core code is included in [Homebrew](https://github.com/Homebrew/brew). Consult Homebrew’s [documentation for contributors](https://github.com/Homebrew/brew/tree/master/docs#contributors) for more information.
 
 ### Forcing a Specific Homebrew-Cask Subcommand
 
@@ -55,8 +41,6 @@ If you are developing a subcommand, you can force `brew cask` to dispatch a spec
 $ brew cask /usr/local/Homebrew/Library/Homebrew/cask/lib/hbc/cli/info.rb google-chrome
 ```
 
-This form can also be combined with a specific Ruby interpreter as above.
-
 ### Forcing a Specific macOS Release
 
 The environment variable `$MACOS_VERSION` can be overridden at the command line for test purposes:
@@ -64,10 +48,6 @@ The environment variable `$MACOS_VERSION` can be overridden at the command line 
 ```bash
 $ MACOS_VERSION=10.9 brew cask info <cask>
 ```
-
-### Target Ruby Versions
-
-Homebrew-Cask requires a Ruby interpreter version 2.0 or above. This is the default system Ruby on Mavericks (10.9) and later.
 
 ### Submitting Your Changes
 
@@ -79,9 +59,11 @@ The first line of a commit message (the summary line) is like the subject line o
 
 ## External Commands
 
-Advanced users may create their own external commands for Homebrew-Cask by following conventions similar to external commands for git or Homebrew. An external command may be any executable on your `$PATH` which follows the form `brewcask-<command>`. (So long as `<command>` does not conflict with an existing command verb.) The command will be invoked by `exec` and passed any unprocessed arguments from the original command-line. An external command may also be implemented as an executable Ruby file, on your `$PATH`, which follows the form `brewcask-<command>.rb`. The Ruby file will be `required` and will have full access to the Ruby environments of both Homebrew-Cask and Homebrew.
+Advanced users may create their own external commands for Homebrew-Cask by following conventions similar to external commands for git or Homebrew. An external command may be any executable on your `$PATH` which follows the form `brewcask-<command>`. (So long as `<command>` does not conflict with an existing command.) The command will be invoked by `exec` and passed any unprocessed arguments from the original command-line. An external command may also be implemented as an executable Ruby file, on your `$PATH`, which follows the form `brewcask-<command>.rb`. The Ruby file will be `required` and will have full access to the Ruby environments of both Homebrew-Cask and Homebrew.
 
-### The External Command `_stanza`
+Instead of in the `$PATH`, an external command can also be located in the `cmd` subdirectory of a Tap.
+
+### The Internal Command `_stanza`
 
 [`_stanza`](https://github.com/Homebrew/brew/blob/master/Library/Homebrew/cask/lib/hbc/cli/internal_stanza.rb) is a useful command to contributors who want to build a tool that leans on the information from Homebrew-Cask. It extracts and renders a specific stanza for either a given Cask or every Cask.
 
@@ -95,4 +77,4 @@ If no `<cask_token>`’s are given, then data for all Casks is returned. On fail
 
 For example, `brew cask _stanza appcast atom` outputs the [`appcast` for the Cask atom.rb](https://github.com/caskroom/homebrew-cask/blob/43ad9d8ddbad71fbeee42710d567861f080fedf8/Casks/atom.rb#L7), namely `https://github.com/atom/atom/releases.atom`.
 
-# <3 THANK YOU! <3
+# ♥ Thank you! ♥
