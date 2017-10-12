@@ -5,5 +5,6 @@ cask 'noteplan' do
   url 'http://noteplan.co/download'
   name 'Noteplan'
   homepage 'http://noteplan.co'
+
   app 'NotePlan.app'
 end
