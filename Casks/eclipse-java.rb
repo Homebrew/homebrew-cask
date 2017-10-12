@@ -1,6 +1,6 @@
 cask 'eclipse-java' do
-  version '4.7.0,oxygen:R'
-  sha256 '3a078c191c668364422e9990c36beb7429a86ca394cb99f795f053aed45d162a'
+  version '4.7.1,oxygen:1a'
+  sha256 'c34cfb1cc7d781f652c3695d1dfe03e5e852bf465bbeb2262e602b49dc035e03'
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-java-#{version.after_comma.before_colon}-#{version.after_colon}-macosx-cocoa-x86_64.dmg&r=1"
   name 'Eclipse IDE for Java Developers'
