@@ -1,16 +1,14 @@
-cask 'nylas-mail' do
-  version '2.0.32-fec7941'
-  sha256 '493e42d9913903d317827c75fa8cca2c1204e3b988c016491823f3c45dbb4cfb'
+cask 'nylas-mail-lives' do
+  version '2.2.0'
+  sha256 '84dfaeff9f5b2658169f0ee6e1bafac1f265cee8916e4a3eef434bc06a0a144e'
 
-  # edgehill.s3-us-west-2.amazonaws.com was verified as official when first introduced to the cask
-  url "https://edgehill.s3-us-west-2.amazonaws.com/#{version}/darwin/x64/NylasMail.dmg"
-  appcast 'https://edgehill.nylas.com/update-check?platform=darwin&arch=64',
-          checkpoint: 'c333095da7f2b03c74c7c8b44605108502566725fed36e20ad1f7099533fc23b'
-  name 'Nylas Mail'
-  homepage 'https://www.nylas.com/'
+  url "https://github.com/nylas-mail-lives/nylas-mail/releases/download/#{version}/nylas-#{version}.dmg"
+  appcast 'https://github.com/nylas-mail-lives/nylas-mail/releases.atom',
+          checkpoint: '745e3750c0293d39210d2bc4bef742724d59b02fc88ab26453f99bbe2b83526f'
+  name 'Nylas Mail Lives'
+  homepage 'https://github.com/nylas-mail-lives/nylas-mail'
 
-  auto_updates true
-  conflicts_with cask: 'nylas-mail-lives'
+  conflicts_with cask: 'nylas-mail'
 
   app 'Nylas Mail.app'
 

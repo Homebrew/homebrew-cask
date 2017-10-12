@@ -5,7 +5,7 @@ cask 'bestres' do
   # devmate.com/com.icyberon.BestRes was verified as official when first introduced to the cask
   url 'https://dl.devmate.com/com.icyberon.BestRes/BestRes.zip'
   name 'BestRes'
-  homepage 'http://icyberon.com/bestres/'
+  homepage 'https://bestres.wojtek.im/'
 
   depends_on macos: '>= :yosemite'
 

@@ -23,8 +23,8 @@ elif [[ ${#modified_casks[@]} -gt 0 ]]; then
   run brew cask style "${modified_casks[@]}"
   if [[ ${#modified_casks[@]} -le 10 ]]; then
     for cask in "${modified_casks[@]}"; do
-      run brew cask reinstall "${cask}"
-      run brew cask uninstall "${cask}"
+      run brew cask reinstall --verbose "${cask}"
+      run brew cask uninstall --verbose "${cask}"
     done
   else
     ohai 'More than 10 casks modified, skipping install'
