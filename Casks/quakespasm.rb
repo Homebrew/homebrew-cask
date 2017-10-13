@@ -8,7 +8,12 @@ cask 'quakespasm' do
   name 'QuakeSpasm'
   homepage 'http://quakespasm.sourceforge.net/'
 
-  app '', target: 'QuakeSpasm'
+  suite 'QuakeSpasm'
+
+  preflight do
+    # There is no sub-folder; the root *is* the folder
+    FileUtils.mv(staged_path.children, staged_path.join('QuakeSpasm').tap(&:mkpath))
+  end
 
   caveats <<-EOS.undent
     To complete the installation of #{token}, you will have to copy the file 'pak0.pak' and 'pak1.pak'
