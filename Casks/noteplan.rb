@@ -6,7 +6,7 @@ cask 'noteplan' do
   url 'https://rink.hockeyapp.net/api/2/apps/304b4477155e428780c345bcab69b380/?format=zip'
   appcast 'https://rink.hockeyapp.net/api/2/apps/304b4477155e428780c345bcab69b380',
           checkpoint: '5ccfecc72b7c1f398c209db3ab4c124b223e04bc4ca262c237a241507adb79c4'
-  name 'Noteplan'
+  name 'NotePlan'
   homepage 'http://noteplan.co/'
 
   app 'NotePlan.app'
