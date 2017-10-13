@@ -1,4 +1,4 @@
-<sup><sub>[Go back](sha256_mismatch_error_fix_icomplete.md)</sup></sub>
+<sup><sub>[Go back](checksum_does_not_match_error_fix_icomplete.md)</sup></sub>
 
 Let's bring the cask up to date. It’ll likely need a new version, but it’s possible the version has remained the same (happens occasionally when the vendor updates the app in place).
 
