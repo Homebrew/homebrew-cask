@@ -10,17 +10,18 @@ cask 'nylas-mail' do
   homepage 'https://www.nylas.com/'
 
   auto_updates true
+  conflicts_with cask: 'nylas-mail-lives'
 
   app 'Nylas Mail.app'
 
   zap delete: [
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nylas.nylas-mail.sfl',
                 '~/Library/Caches/com.nylas.nylas-mail',
                 '~/Library/Caches/com.nylas.nylas-mail.ShipIt',
                 '~/Library/Caches/Nylas Mail',
                 '~/Library/Saved Application State/com.nylas.nylas-mail.savedState',
               ],
       trash:  [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nylas.nylas-mail.sfl',
                 '~/Library/Application Support/com.nylas.nylas-mail.ShipIt',
                 '~/Library/Application Support/Nylas Mail',
                 '~/Library/Preferences/com.nylas.nylas-mail.helper.plist',

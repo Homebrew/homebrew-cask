@@ -6,7 +6,6 @@ Homebrew-Cask extends [Homebrew](http://brew.sh) and brings its elegance, simpli
 
 We do this by providing a friendly Homebrew-style CLI workflow for the administration of macOS applications distributed as binaries.
 
-[![Build Status](https://img.shields.io/travis/caskroom/homebrew-cask/master.svg)](https://travis-ci.org/caskroom/homebrew-cask)
 [![Join the chat at https://gitter.im/caskroom/homebrew-cask](https://img.shields.io/badge/gitter-join%20chat-blue.svg)](https://gitter.im/caskroom/homebrew-cask)
 
 ## Let’s try it!
@@ -52,7 +51,7 @@ If your issue persists, search for it before opening a new one. If you find an o
 * A cask fails to install:
   * [`curl` error](doc/reporting_bugs/a_cask_fails_to_install.md#curl-error)
   * [`Permission denied` error](doc/reporting_bugs/a_cask_fails_to_install.md#permission-denied-error)
-  * [`sha256 mismatch` error](doc/reporting_bugs/a_cask_fails_to_install.md#sha256-mismatch-error)
+  * [`Checksum does not match` error](doc/reporting_bugs/a_cask_fails_to_install.md#checksum-does-not-match-error)
   * [`source is not there` error](doc/reporting_bugs/a_cask_fails_to_install.md#source-is-not-there-error)
   * [`wrong number of arguments` error](doc/reporting_bugs/a_cask_fails_to_install.md#wrong-number-of-arguments-error)
   * [Unlisted reason](doc/reporting_bugs/a_cask_fails_to_install.md#unlisted-reason)

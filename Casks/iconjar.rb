@@ -1,11 +1,11 @@
 cask 'iconjar' do
-  version '1.5.1,23478:1502744181'
-  sha256 'afb6e99284816e918c283ddae31a8b1726b12a6511af7391e8b062fef41001a0'
+  version '1.7.0,24306:1505718850'
+  sha256 '86e090dc53129ac60115dd9b0f1a1ae611bd0c7b1c4ccf2b56014f6ac7f28709'
 
   # dl.devmate.com/com.iconjar.iconjar was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.iconjar.iconjar/#{version.after_comma.before_colon}/#{version.after_colon}/Iconjar-#{version.after_comma.before_colon}.zip"
   appcast 'https://updates.devmate.com/com.iconjar.iconjar.xml',
-          checkpoint: '52d71a83f754582fe7c2491204fe5778a64d607d5d7e85f6bc7fd266f06967f1'
+          checkpoint: '708aae86c27058420ab69307458cfa2715a834dbdf3e661e43c7fa8cd7722c45'
   name 'IconJar'
   homepage 'https://geticonjar.com/'
 

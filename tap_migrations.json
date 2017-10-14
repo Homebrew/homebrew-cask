@@ -64,6 +64,7 @@
   "microsoft-intellipoint": "caskroom/drivers",
   "microsoft-intellitype": "caskroom/drivers",
   "mitmproxy": "homebrew/core",
+  "mosh": "homebrew/core",
   "netgeargenie": "caskroom/drivers",
   "nike-plus-connect": "caskroom/drivers",
   "nmap": "homebrew/core",

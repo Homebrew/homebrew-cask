@@ -1,11 +1,11 @@
 cask 'popchar' do
-  version '8.1'
-  sha256 '6fa7f2de944baa44c778ccc62be48ff0183e2b468fa0034cde455623a0d7860c'
+  version '8.2'
+  sha256 '32cab3a02c9fc867a6e668ba6804ffa2c573e0719b6fdaf3fa59668ba67b5bf8'
 
   url "http://www.ergonis.com/downloads/products/popcharx/PopCharX#{version.no_dots}-Install.dmg",
       user_agent: :fake
   appcast 'http://www.ergonis.com/products/popcharx/history.html',
-          checkpoint: '0aa80cebf90408f4a58b602bad14d53108b2d485a47b1f3893141c5136bcbd02'
+          checkpoint: 'a79e524cb513ae1ca80a4a08875e1f9dea0f77427abeeef9456edf7f662f3f59'
   name 'PopChar X'
   homepage 'http://www.ergonis.com/products/popcharx/'
 

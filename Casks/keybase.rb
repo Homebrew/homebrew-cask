@@ -1,10 +1,10 @@
 cask 'keybase' do
-  version '1.0.30-20170915193210,8c3c799f2'
-  sha256 'd462c1d88733a0714b6abcad43881bbcfd8ad15350e1561d6971815396bee29c'
+  version '1.0.33-20171003193446,d9ceb86ac'
+  sha256 '0e605bbf7dc353e76de9b017f4d146a99db6bd0d71b74bc3f2a1f1fd86b0d2db'
 
   url "https://prerelease.keybase.io/darwin/Keybase-#{version.before_comma}%2B#{version.after_comma}.dmg"
   appcast 'https://prerelease.keybase.io/update-darwin-prod-v2.json',
-          checkpoint: '0f3cd31ed6ce46d9ee85d5ed5d432bcf361b86c4102e7c2bd4d1979839fa19fa'
+          checkpoint: '929e156cffcb59f1b6fbd396fa708f0d50f1e05ac3294afbe6c0fb830870c8bb'
   name 'Keybase'
   homepage 'https://keybase.io/'
 
@@ -13,8 +13,8 @@ cask 'keybase' do
   app 'Keybase.app'
 
   postflight do
-    system_command "#{appdir}/Keybase.app/Contents/Resources/KeybaseInstaller.app/Contents/MacOS/Keybase",
-                   args: ["--app-path=#{appdir}/Keybase.app", '--run-mode=prod', '--timeout=10']
+    system_command "#{appdir}/Keybase.app/Contents/SharedSupport/bin/keybase",
+                   args: ['install-auto']
   end
 
   uninstall delete:     '/Library/PrivilegedHelperTools/keybase.Helper',

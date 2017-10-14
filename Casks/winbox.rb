@@ -9,4 +9,6 @@ cask 'winbox' do
   homepage 'http://joshaven.com/resources/tools/winbox-for-mac/'
 
   app 'Winbox4Mac.app'
+
+  zap trash: '~/Library/Preferences/WinBox*Wine.wineskin.prefs.plist'
 end

@@ -1,10 +1,10 @@
 cask 'rider' do
-  version '2017.1.2,171.4456.3568'
-  sha256 '8292e143e717e47d702b3121a2070b687371faf8fa995eb83d6b55a9d5aa6ffd'
+  version '2017.2,172.4144.1459'
+  sha256 'eeb6f1cb1c83eee627603d3e2b1f81898c8b62a7a608080b1c5dad83256c0f0a'
 
   url "https://download.jetbrains.com/resharper/JetBrains.Rider-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=RD&latest=true&type=release',
-          checkpoint: '35c8421a55cc7099078f9483843f6ce74ceaabfffe3ab75334ee966883ce7a6f'
+          checkpoint: '5626181012c54ef310ee2c177753f31a1c023e4a4e8cafe5a63f4c09c5cd1b2e'
   name 'Jetbrains Rider'
   homepage 'https://www.jetbrains.com/rider/'
 

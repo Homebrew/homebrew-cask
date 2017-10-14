@@ -1,10 +1,10 @@
 cask 'charles' do
-  version '4.1.4'
-  sha256 'ab1bc4ce5f8da1f57cb8b5a1f9ac8c9c554ec6debd556760afecfbbd3c45b91e'
+  version '4.2'
+  sha256 '60f74649848c69673071eb7cb83b941f5fa9a6e29b762a17c69af0597f22e1bf'
 
   url "https://www.charlesproxy.com/assets/release/#{version}/charles-proxy-#{version}.dmg"
   appcast 'https://www.charlesproxy.com/latest.do',
-          checkpoint: 'a3914fd7cd415317fc032da8fcb4da08800114b0772bd389d0fdf621626fc61c'
+          checkpoint: 'c84057e14bca4c902bb887688cbb3bec69461b864a5d804b8e1e4e06d3bba148'
   name 'Charles'
   homepage 'https://www.charlesproxy.com/'
 
