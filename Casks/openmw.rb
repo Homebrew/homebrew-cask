@@ -10,4 +10,5 @@ cask 'openmw' do
   homepage 'https://openmw.org/'
 
   app 'OpenMW.app'
+  app 'OpenMW-CS.app'
 end
