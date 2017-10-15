@@ -13,5 +13,5 @@ cask 'nvidia-geforce-now' do
   zap trash: [
                '~/Library/Application Support/NVIDIA/GeForceNOW',
                '~/Library/Preferences/com.nvidia.gfnpc.mall.helper.plist',
-             ]  
+             ]
 end
