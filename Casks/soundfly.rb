@@ -2,9 +2,9 @@ cask 'soundfly' do
   version :latest
   sha256 :no_check
 
-  url 'http://abyssoft.com/software/soundfly/downloads/soundfly.zip'
+  url 'https://web.archive.org/web/20160702033228/https://abyssoft.com/software/soundfly/downloads/soundfly.zip'
   name 'Soundfly'
-  homepage 'http://abyssoft.com/software/soundfly/'
+  homepage 'https://web.archive.org/web/20161204183837/https://abyssoft.com/software/soundfly'
 
   depends_on cask: 'soundflower'
 
