@@ -1,9 +1,9 @@
 cask 'mailmaster' do
-  version :latest
-  sha256 :no_check
+  version '2.0.1.1063'
+  sha256 'a8327583e10bfb419aae3b713a9166f218e76529e04eefd43838ef2d0089d13a'
 
-  # client.dl.126.net/macmail/dashi was verified as official when first introduced to the cask
-  url 'http://client.dl.126.net/macmail/dashi/mailmaster.dmg'
+  # fm.dl.126.net was verified as official when first introduced to the cask
+  url "http://fm.dl.126.net/mailmaster/updatemac/mailmaster-#{version}.dmg"
   name 'NetEase Mail Master'
   name '网易邮箱大师'
   homepage 'http://mail.163.com/dashi/'
