@@ -10,5 +10,5 @@ cask 'nvidia-geforce-now' do
 
   app 'GeForceNOW.app'
   
-  zap trash: '~/Library/Application Support/NVIDIA'
+  zap trash: '~/Library/Application Support/NVIDIA/GeForceNOW'
 end
