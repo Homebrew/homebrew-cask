@@ -1,4 +1,4 @@
-cask 'blue-jeans-launcher' do
+cask 'blue-jeans' do
   version '1.6.8'
   sha256 '9f76c386659697c11752b8e0c04d40c4a07c08733a6c928bbff11210303789db'
 
