@@ -1,4 +1,4 @@
-cask 'safe-launcher' do
+cask 'safe' do
   version '0.11.0'
   sha256 '4dd918574e835e32aaeb4a0fc23e2572df8641a432e82e201dd0c0b0c47fba3d'
 
