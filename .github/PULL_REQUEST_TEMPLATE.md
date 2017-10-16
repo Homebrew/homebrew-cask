@@ -10,7 +10,7 @@ Additionally, if **updating only the `sha256`**:
 
 ### Do not assume you know what this means! Read the linked instructions before proceeding!
 
-- [ ] [**I followed the instructions**][version-checksum] to verify this change is legitimate and am providing confirmation below:
+- [ ] I followed the [**instructions**][version-checksum] to verify this change is legitimate and am providing confirmation below:
 
 Additionally, if **adding a new cask**:
 
