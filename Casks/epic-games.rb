@@ -1,4 +1,4 @@
-cask 'epic-games-launcher' do
+cask 'epic-games' do
   version '2.12.24-3321064'
   sha256 'b1e37a5ff042fb5e13cd904d71acb14496bd65036612a726ff3b509947779c1d'
 
