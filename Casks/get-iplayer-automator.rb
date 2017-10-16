@@ -4,7 +4,7 @@ cask 'get-iplayer-automator' do
 
   url "https://github.com/Ascoware/get-iplayer-automator/releases/download/v#{version.major_minor_patch}/Get.iPlayer.Automator.v#{version}.zip"
   appcast 'https://github.com/Ascoware/get-iplayer-automator/releases.atom',
-          checkpoint: '98f4d0c791f23778e8fe7e86735ed1eed02537375014c2106c5bf78ce340add4'
+          checkpoint: '9fea70d5cea96eab97dd350e4aab97b1afa1035fa2f4f44749ee1d2103397968'
   name 'Get iPlayer Automator'
   homepage 'https://github.com/Ascoware/get-iplayer-automator'
 
