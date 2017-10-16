@@ -1,11 +1,11 @@
 cask 'sogouinput' do
-  version '3.8.0.2054'
-  sha256 '18807c27d26460d8db76a086d403efe783f7406d90cad7248b829111f981ed09'
+  version '4.3.0.4743'
+  sha256 '2b9d2862d5879e8fdedcffe1427a73912b5b2c8728d9ae19d9bb1ec0c242d684'
 
-  url "http://cdn1.ime.sogou.com/SogouInput_V#{version}.dmg"
+  url "http://sw.bos.baidu.com/sw-search-sp/software/bc71a062de2c9/SogouInput_mac_#{version}.dmg"
   name 'Sogou Input Method'
   name '搜狗输入法'
-  homepage 'https://pinyin.sogou.com/mac/'
+  homepage 'https://rj.baidu.com/'
 
   installer manual: '安装搜狗输入法.app'
 
