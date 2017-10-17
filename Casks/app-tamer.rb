@@ -1,10 +1,10 @@
 cask 'app-tamer' do
-  version '2.3.2'
-  sha256 '1c87155f06357738c03890092e0f68173d4ea3fbe847090b50b687e406b13b0a'
+  version '2.3.3'
+  sha256 '9fe9bda04d2dd33c83598fa90fe579631be79e1bb1c473c10d17d2a157a977af'
 
   url "https://www.stclairsoft.com/download/AppTamer-#{version}.dmg"
   appcast 'https://www.stclairsoft.com/cgi-bin/sparkle.cgi?AT',
-          checkpoint: 'b1b8915f3970e3132d8b0401ad43b8766cf82a36b6c5eadc0dc96e9d2a32dbbb'
+          checkpoint: 'bb25b0c3eb8ae2c2df14d62fa01e6c2a987cae7b0dfcc280b51e7cf4d7f426e6'
   name 'AppTamer'
   homepage 'https://www.stclairsoft.com/AppTamer/'
 
