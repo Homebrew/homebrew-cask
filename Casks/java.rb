@@ -13,25 +13,25 @@ cask 'java' do
 
   postflight do
     system_command '/usr/libexec/PlistBuddy',
-                   args: ['-c', 'Add :JavaVM:JVMCapabilities: string BundledApp', "/Library/Java/JavaVirtualMachines/jdk-#{version.major}.jdk/Contents/Info.plist"],
+                   args: ['-c', 'Add :JavaVM:JVMCapabilities: string BundledApp', "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Info.plist"],
                    sudo: true
     system_command '/usr/libexec/PlistBuddy',
-                   args: ['-c', 'Add :JavaVM:JVMCapabilities: string JNI', "/Library/Java/JavaVirtualMachines/jdk-#{version.major}.jdk/Contents/Info.plist"],
+                   args: ['-c', 'Add :JavaVM:JVMCapabilities: string JNI', "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Info.plist"],
                    sudo: true
     system_command '/usr/libexec/PlistBuddy',
-                   args: ['-c', 'Add :JavaVM:JVMCapabilities: string WebStart', "/Library/Java/JavaVirtualMachines/jdk-#{version.major}.jdk/Contents/Info.plist"],
+                   args: ['-c', 'Add :JavaVM:JVMCapabilities: string WebStart', "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Info.plist"],
                    sudo: true
     system_command '/usr/libexec/PlistBuddy',
-                   args: ['-c', 'Add :JavaVM:JVMCapabilities: string Applets', "/Library/Java/JavaVirtualMachines/jdk-#{version.major}.jdk/Contents/Info.plist"],
+                   args: ['-c', 'Add :JavaVM:JVMCapabilities: string Applets', "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Info.plist"],
                    sudo: true
     system_command '/bin/ln',
-                   args: ['-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk-#{version.major}.jdk/Contents/Home", '/Library/Java/Home'],
+                   args: ['-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Home", '/Library/Java/Home'],
                    sudo: true
     system_command '/bin/mkdir',
-                   args: ['-p', '--', "/Library/Java/JavaVirtualMachines/jdk-#{version.major}.jdk/Contents/Home/bundle/Libraries"],
+                   args: ['-p', '--', "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Home/bundle/Libraries"],
                    sudo: true
     system_command '/bin/ln',
-                   args: ['-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk-#{version.major}.jdk/Contents/Home/lib/server/libjvm.dylib", "/Library/Java/JavaVirtualMachines/jdk-#{version.major}.jdk/Contents/Home/bundle/Libraries/libserver.dylib"],
+                   args: ['-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Home/lib/server/libjvm.dylib", "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Home/bundle/Libraries/libserver.dylib"],
                    sudo: true
 
     if MacOS.version <= :mavericks
@@ -39,7 +39,7 @@ cask 'java' do
                      args: ['-rf', '--', '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'],
                      sudo: true
       system_command '/bin/ln',
-                     args: ['-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk-#{version.major}.jdk/Contents", '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'],
+                     args: ['-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents", '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'],
                      sudo: true
     end
   end
@@ -51,7 +51,7 @@ cask 'java' do
   end
 
   uninstall pkgutil:   [
-                         "com.oracle.jdk-#{version.major}",
+                         "com.oracle.jdk-#{version.before_comma}",
                          'com.oracle.jre',
                        ],
             launchctl: [
@@ -64,7 +64,7 @@ cask 'java' do
                        ],
             delete:    [
                          '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin',
-                         "/Library/Java/JavaVirtualMachines/jdk-#{version.major}.jdk/Contents",
+                         "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents",
                          '/Library/PreferencePanes/JavaControlPanel.prefPane',
                          '/Library/Java/Home',
                          if MacOS.version <= :mavericks
@@ -91,7 +91,7 @@ cask 'java' do
                 '~/Library/Preferences/com.oracle.javadeployment.plist',
               ],
       rmdir:  [
-                "/Library/Java/JavaVirtualMachines/jdk-#{version.major}.jdk",
+                "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk",
                 '~/Library/Application Support/Oracle/',
               ]
 
