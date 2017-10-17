@@ -1,15 +1,15 @@
 cask 'java' do
-  version '9,181'
-  sha256 '0755e848c061419313510a88508512b8d58ae9c79bd01d460e6b436dc13dfac1'
+  version '9.0.1,11'
+  sha256 'e87f9c83045f68546e78ee24a61724d06180581b0712ffdcdcac8faf6a3eca56'
 
-  url "http://download.oracle.com/otn-pub/java/jdk/#{version.major}+#{version.after_comma}/jdk-#{version.major}_osx-x64_bin.dmg",
+  url "http://download.oracle.com/otn-pub/java/jdk/#{version.before_comma}+#{version.after_comma}/jdk-#{version.before_comma}_osx-x64_bin.dmg",
       cookies: {
                  'oraclelicense' => 'accept-securebackup-cookie',
                }
   name 'Java Standard Edition Development Kit'
   homepage "https://www.oracle.com/technetwork/java/javase/downloads/jdk#{version.major}-downloads-3848520.html"
 
-  pkg "JDK #{version.major}.pkg"
+  pkg "JDK #{version.before_comma}.pkg"
 
   postflight do
     system_command '/usr/libexec/PlistBuddy',
