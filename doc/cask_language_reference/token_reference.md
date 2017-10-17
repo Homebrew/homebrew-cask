@@ -43,6 +43,8 @@ Details of software names and brands will inevitably be lost in the conversion t
 
 * Remove from the end: “Launcher”, “Quick Launcher”.
 
+* Remove from the end: strings such as “Desktop”, “for Desktop”.
+
 * Remove from the end: strings such as “Mac”, “for Mac”, “for OS X”, “macOS”, “for macOS”. These terms are generally added to ported software such as “MAME OS X.app”. Exception: when the software is not a port, and “Mac” is an inseparable part of the name, without which the name would be inherently nonsensical, as in [PlayOnMac.app](../../Casks/playonmac.rb).
 
 * Remove from the end: hardware designations such as “for x86”, “32-bit”, “ppc”.
