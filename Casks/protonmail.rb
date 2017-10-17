@@ -1,4 +1,4 @@
-cask 'protonmail-desktop' do
+cask 'protonmail' do
   version '0.5.1'
   sha256 'a02877dcc1760f75133245f12eb6768eb5c4201b152e2b56ae61720146e484ea'
 
