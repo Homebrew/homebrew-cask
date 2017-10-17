@@ -4,7 +4,7 @@ cask 'apple-juice' do
 
   url "https://github.com/raphaelhanneken/apple-juice/releases/download/#{version}/Apple.Juice.dmg"
   appcast 'https://github.com/raphaelhanneken/apple-juice/releases.atom',
-        checkpoint: '8eab87ff2f3bc47e3259d7b0f5f2da4bc8ae6c25fd71edd49212544ed01baba9'
+          checkpoint: '8eab87ff2f3bc47e3259d7b0f5f2da4bc8ae6c25fd71edd49212544ed01baba9'
   name 'Apple Juice'
   homepage 'https://github.com/raphaelhanneken/apple-juice'
 
