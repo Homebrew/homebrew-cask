@@ -12,5 +12,8 @@ cask 'cardhop' do
 
   app 'Cardhop.app'
 
+  uninstall launchctl: 'com.flexibits.cardhop.mac.launcher',
+            quit:      'com.flexibits.cardhop.mac'
+
   zap trash: '~/Library/Preferences/com.flexibits.cardhop.plist'
 end
