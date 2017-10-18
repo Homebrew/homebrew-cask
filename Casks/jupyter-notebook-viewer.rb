@@ -6,7 +6,6 @@ cask 'jupyter-notebook-viewer' do
   appcast 'https://github.com/tuxu/nbviewer-app/releases.atom',
           checkpoint: '91dd5229cdb8130c9c101554af84b040555fc8600d774b2729b363ed76e5a7c3'
   name 'Jupyter Notebook Viewer'
-  name 'nbviewer-app'
   homepage 'https://github.com/tuxu/nbviewer-app'
 
   app 'Jupyter Notebook Viewer.app'
