@@ -11,5 +11,7 @@ cask 'openra' do
 
   depends_on cask: 'mono-mdk'
 
-  app 'OpenRA.app'
+  app 'OpenRA - Dune 2000.app'
+  app 'OpenRA - Red Alert.app'
+  app 'OpenRA - Tiberian Dawn.app'
 end
