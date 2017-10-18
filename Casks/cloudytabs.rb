@@ -4,7 +4,7 @@ cask 'cloudytabs' do
 
   url "https://github.com/josh-/CloudyTabs/releases/download/v#{version}/CloudyTabs.zip"
   appcast 'https://github.com/josh-/CloudyTabs/releases.atom',
-          checkpoint: '5f2c823f1891600d3a521bf7c90f05da9038af80aeba06f2567f59f4bb77fac1'
+          checkpoint: '3fc3f54a91ed4853c2baa31c2f167d4c322ee0f6bd57d10441035ac8a0ef6fcb'
   name 'CloudyTabs'
   homepage 'https://github.com/josh-/CloudyTabs/'
 
