@@ -1,6 +1,6 @@
 cask 'cloudytabs' do
-  version '1.6'
-  sha256 '0007f978204e55f3d52b099b143ee8dedb418f3d25ab1805ee1ce16e75a13983'
+  version '1.7'
+  sha256 '7cf09822233e13be6d2b229a42f20cb06519939b722e10ee28eed50ff4dac22e'
 
   url "https://github.com/josh-/CloudyTabs/releases/download/v#{version}/CloudyTabs.zip"
   appcast 'https://github.com/josh-/CloudyTabs/releases.atom',
