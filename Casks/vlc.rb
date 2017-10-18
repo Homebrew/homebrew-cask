@@ -17,7 +17,7 @@ cask 'vlc' do
   binary shimscript, target: 'vlc'
 
   preflight do
-    IO.write shimscript, <<-EOS.undent
+    IO.write shimscript, <<~EOS
       #!/bin/sh
       '#{appdir}/VLC.app/Contents/MacOS/VLC' "$@"
     EOS

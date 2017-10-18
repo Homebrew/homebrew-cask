@@ -10,7 +10,7 @@ cask 'ealeksandrov-cd-to' do
 
   app "cd_to_#{version.major_minor.dots_to_underscores}/terminal/cd_to.app"
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     To complete installation:
     1. Open the the Applications folder in finder.
     2. Drag "cd_to.app" onto the Finder toolbar while holding down the command(⌘) and option(⌥) keys.

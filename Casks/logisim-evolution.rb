@@ -15,7 +15,7 @@ cask 'logisim-evolution' do
   binary shimscript, target: 'logisim-evolution'
 
   preflight do
-    IO.write shimscript, <<-EOS.undent
+    IO.write shimscript, <<~EOS
       #!/bin/bash
       cd "$(dirname "$(readlink -n "${0}")")" && \
         java "${@}" -jar 'logisim-evolution.jar'

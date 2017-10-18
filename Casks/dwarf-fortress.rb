@@ -11,7 +11,7 @@ cask 'dwarf-fortress' do
   binary shimscript, target: 'dwarf-fortress'
 
   preflight do
-    IO.write shimscript, <<-EOS.undent
+    IO.write shimscript, <<~EOS
       #!/bin/sh
       exec '#{staged_path}/df_osx/df' "$@"
     EOS

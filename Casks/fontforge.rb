@@ -14,7 +14,7 @@ cask 'fontforge' do
 
   app 'FontForge.app'
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     #{token} will only run from within /Applications,
     and will request to be moved at launch.
   EOS

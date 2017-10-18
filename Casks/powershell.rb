@@ -27,7 +27,7 @@ cask 'powershell' do
                '~/.local',
              ]
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     A OpenSSL-backed libcurl is required for custom handling of certificates.
     This is rarely needed, but you can install it with
       brew install curl --with-openssl

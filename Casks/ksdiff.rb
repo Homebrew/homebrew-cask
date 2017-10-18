@@ -12,7 +12,7 @@ cask 'ksdiff' do
 
   uninstall pkgutil: 'com.blackpixel.kaleidoscope.ksdiff.installer.pkg'
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     The #{token} Cask is not needed when installing Kaleidoscope via Cask. It
     is provided for users who have purchased Kaleidoscope via the App Store.
   EOS

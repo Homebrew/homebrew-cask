@@ -10,7 +10,7 @@ cask 'jsl' do
 
   binary "jsl-#{version}-mac/jsl"
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     Test and configuration files for JavaScript Lint are available in
 
       #{staged_path}

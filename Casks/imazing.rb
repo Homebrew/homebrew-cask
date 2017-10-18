@@ -32,7 +32,7 @@ cask 'imazing' do
                '/Users/Shared/iMazing',
              ]
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     Performing a zap on this cask removes files pertaining to both #{token}
     and imazing-mini, so it should not be done if you only want to uninstall one of them.
   EOS

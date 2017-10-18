@@ -13,7 +13,7 @@ cask 'korean-spelling-checker' do
 
   uninstall delete: '~/Library/Services/✔ 선택한 글의 한국어 맞춤법 검사하기.workflow'
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     #{token} only works when you install it manually via Service Installer,
     so you may need to run the installer with
 

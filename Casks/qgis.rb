@@ -13,7 +13,7 @@ cask 'qgis' do
 
   uninstall pkgutil: 'org.qgis.qgis-*'
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     #{token} requires matplotlib in a specific location. Please run the following to finish install:
 
       sudo ln -s /System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python /Library/Python/2.7/site-packages/matplotlib-override

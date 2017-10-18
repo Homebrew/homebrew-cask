@@ -37,7 +37,7 @@ cask 'adobe-air-sdk' do
       'swfdump',
     ].each do |shimscript|
       # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
-      IO.write "#{staged_path}/bin/#{shimscript}.wrapper.sh", <<-EOS.undent
+      IO.write "#{staged_path}/bin/#{shimscript}.wrapper.sh", <<~EOS
         #!/bin/sh
         exec '#{staged_path}/bin/#{shimscript}' "$@"
       EOS
@@ -52,7 +52,7 @@ cask 'adobe-air-sdk' do
     FileUtils.rm("#{HOMEBREW_PREFIX}/share/adobe-air-sdk")
   end
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     You may want to add to your profile:
       'export ADOBE_AIR_HOME=#{HOMEBREW_PREFIX}/share/adobe-air-sdk'
 

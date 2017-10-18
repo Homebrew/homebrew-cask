@@ -26,7 +26,7 @@ cask 'wine-stable' do
                      ],
             delete:  '/Applications/Wine stable.app'
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     #{token} installs support for running 64 bit applications in Wine, which is considered experimental.
     If you do not want 64 bit support, you should download and install the #{token} package manually.
   EOS
