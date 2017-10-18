@@ -4,7 +4,7 @@ cask 'ieasemusic' do
 
   url "https://github.com/trazyn/ieaseMusic/releases/download/v#{version}/ieaseMusic-#{version}-mac.dmg"
   appcast 'https://github.com/trazyn/ieaseMusic/releases.atom',
-          checkpoint: 'a2bce12704796cc87a98a58271c271b942b40af2fc86bbbc89b352d0eb6d7d82'
+          checkpoint: '013ba308fe925775cac061e34e7389e6ab0f491cb715b218dcb842d0f4bbcdc4'
   name 'ieaseMusic'
   homepage 'https://github.com/trazyn/ieaseMusic'
 
