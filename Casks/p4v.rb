@@ -1,6 +1,6 @@
 cask 'p4v' do
   version '2017.2'
-  sha256 '3ca645e4c55848b377181f27854cf0cf2b99c9bd288a570c49c98f35baeb22b1'
+  sha256 'b24a68eaac73003c252ccfc235d8191c58dc3a0aa1abe035081ed8b76f834dd3'
 
   url "http://cdist2.perforce.com/perforce/r#{version.sub(%r{\A20(\d\d\.\d+).*}, '\1')}/bin.macosx1011x86_64/P4V.dmg"
   name 'Perforce Visual Client'
