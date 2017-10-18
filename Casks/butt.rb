@@ -1,11 +1,11 @@
 cask 'butt' do
-  version '0.1.15'
-  sha256 'e24c4e16e51fa21e897b88c371e57e248da66eae02d15df9b2dcab67530fcd2c'
+  version '0.1.16'
+  sha256 'eab9446889684a186b7d78cd935fdaa871166f5aab6c7002ff5dc22a0c5e5f82'
 
   # sourceforge.net/butt was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/butt/butt-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/butt/rss',
-          checkpoint: 'a173d19c3d3a1ae54671f7e423fdb153db757e17d4aebe84da1becd6d16e99ff'
+          checkpoint: 'c2d23fd3b8d099f41d97f4df22774b4acda19255e88a7a67db8f908417ec32b2'
   name 'Broadcast Using This Tool'
   homepage 'https://danielnoethen.de/'
 

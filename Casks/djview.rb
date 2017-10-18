@@ -1,10 +1,10 @@
 cask 'djview' do
-  version '4.10.6'
-  sha256 '46b6042e9414e800d651d7dd484126737d379a7a4a79137a81a142cb35d5e5d0'
+  version '4.10.6,57c'
+  sha256 '6ad1fe387434da4d103cbe343a7d6bb0da0fa139787069b3ba76f124651402a2'
 
-  url "https://downloads.sourceforge.net/djvu/DjVuLibre-3.5.27%2BDjView-#{version}-qt57b-intel64.dmg"
+  url "https://downloads.sourceforge.net/djvu/DjVuLibre-3.5.27%2BDjView-#{version.before_comma}-qt#{version.after_comma}-intel64.dmg"
   appcast 'https://sourceforge.net/projects/djvu/rss',
-          checkpoint: 'aeacee2c4f4de38de4aad7d682d2728a3b10153c943f386e30b0621879efd920'
+          checkpoint: '608eefef3e99391add5aa043ba70bee99d2cea3a7276fab6d96398e11877dd39'
   name 'DjView'
   homepage 'http://djvu.sourceforge.net/'
 

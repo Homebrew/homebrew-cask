@@ -33,17 +33,19 @@ cask 'xquartz' do
                          '/private/etc/paths.d/40-XQuartz',
                        ]
 
-  zap       delete: [
-                      '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.macosforge.xquartz.x11.sfl',
-                      '~/Library/Application Support/XQuartz',
-                      '~/Library/Caches/org.macosforge.xquartz.X11',
-                      '~/Library/Cookies/org.macosforge.xquartz.X11.binarycookies',
-                      '~/Library/Logs/X11',
-                      '~/Library/Logs/X11.org.macosforge.xquartz.log',
-                      '~/Library/Logs/X11.org.macosforge.xquartz.log.old',
-                      '~/Library/Preferences/org.macosforge.xquartz.X11.plist',
-                      '~/Library/Saved Application State/org.macosforge.xquartz.X11.savedState',
-                      '~/.Xauthority',
-                    ],
-            rmdir:  '~/.fonts'
+  zap delete: [
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.macosforge.xquartz.x11.sfl',
+                '~/Library/Caches/org.macosforge.xquartz.X11',
+                '~/Library/Cookies/org.macosforge.xquartz.X11.binarycookies',
+                '~/Library/Logs/X11',
+                '~/Library/Logs/X11.org.macosforge.xquartz.log',
+                '~/Library/Logs/X11.org.macosforge.xquartz.log.old',
+                '~/Library/Saved Application State/org.macosforge.xquartz.X11.savedState',
+              ],
+      trash:  [
+                '~/Library/Application Support/XQuartz',
+                '~/Library/Preferences/org.macosforge.xquartz.X11.plist',
+                '~/.Xauthority',
+              ],
+      rmdir:  '~/.fonts'
 end

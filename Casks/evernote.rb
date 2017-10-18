@@ -6,13 +6,13 @@ cask 'evernote' do
     version '6.8_453748'
     sha256 '53fb93884fbd8f966ef43248dad3a7570ad18eb43fd289ad614ee8cff3a26d33'
   else
-    version '6.12.2_455489'
-    sha256 '0f9441a07a6659b060325397a096b737c18d4624f4bae37cf5752a551163474b'
+    version '6.12.3_455520'
+    sha256 'fdda9701f1d8ff56a5e8bcadcf5b04dba66ad7e08511700de4675d20fda2bc71'
   end
 
   url "https://cdn1.evernote.com/mac-smd/public/Evernote_RELEASE_#{version}.dmg"
   appcast 'https://update.evernote.com/public/ENMacSMD/EvernoteMacUpdate.xml',
-          checkpoint: '695a5a12783602df101dc95526b13fe66eb2e4f10bda60c37fdb9b2e1457d195'
+          checkpoint: 'c7302d6a89105b6bd3ed418719491d8b138dc4bab5979b9c87881f0095334f9e'
   name 'Evernote'
   homepage 'https://evernote.com/'
 

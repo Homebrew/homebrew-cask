@@ -1,10 +1,10 @@
 cask 'imageoptim' do
-  version '1.7.1'
-  sha256 '7d5dfb69568559d6932cbe5a512e0d0b4af56fbc364e67302affe2bef07b8a7f'
+  version '1.7.3'
+  sha256 '38e91550366c66d89a59efe8a2245164c84e74f54d6495c0726862c1ca9863a1'
 
   url "https://imageoptim.com/ImageOptim#{version}.tar.bz2"
   appcast 'https://imageoptim.com/appcast.xml',
-          checkpoint: '931c407d8ceddf9d2a1c4c5de280c6ed0602118a9f35b6466d296f74a109b53f'
+          checkpoint: '5b4cb5073146408ba1d6af650e91932bf6bc7a77a802b13fce8510d8cd11e015'
   name 'ImageOptim'
   homepage 'https://imageoptim.com/mac'
 

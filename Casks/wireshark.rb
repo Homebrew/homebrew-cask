@@ -1,10 +1,10 @@
 cask 'wireshark' do
-  version '2.4.1'
-  sha256 'cbf1f66020d049e645edd9ee8f0ebdd7d71d019d3fb2c44e028fcd65195b268b'
+  version '2.4.2'
+  sha256 '111ff7313055ebbc72a2fee4f7b691c723e182c777f5341fd74b279b106686e8'
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
   appcast 'https://www.wireshark.org/download/osx/',
-          checkpoint: '4a217edc73d35668ce432c60a01043c8e32a21d38b91d5e4654ae4f4cbf23af1'
+          checkpoint: 'cbc1a63057cb15e99867a1b890a8eb4c5e434968d466a547d8def6096f94fabb'
   name 'Wireshark'
   homepage 'https://www.wireshark.org/'
 
@@ -26,14 +26,6 @@ cask 'wireshark' do
 
   uninstall_preflight do
     set_ownership '/Library/Application Support/Wireshark'
-
-    system_command '/usr/sbin/dseditgroup',
-                   args: [
-                           '-o',
-                           'delete',
-                           'access_bpf',
-                         ],
-                   sudo: true
   end
 
   uninstall pkgutil:   'org.wireshark.*',
@@ -51,7 +43,13 @@ cask 'wireshark' do
                          '/usr/local/bin/text2pcap',
                          '/usr/local/bin/tshark',
                          '/usr/local/bin/wireshark',
-                       ]
+                       ],
+            script:    {
+                         executable:   '/usr/sbin/dseditgroup',
+                         args:         ['-o', 'delete', 'access_bpf'],
+                         must_succeed: false,
+                         sudo:         true,
+                       }
 
   zap delete: '~/Library/Saved Application State/org.wireshark.Wireshark.savedState'
 end

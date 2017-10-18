@@ -9,8 +9,8 @@ cask 'sourcetree' do
 
   auto_updates true
 
-  app 'SourceTree.app'
-  binary "#{appdir}/SourceTree.app/Contents/Resources/stree"
+  app 'Sourcetree.app'
+  binary "#{appdir}/Sourcetree.app/Contents/Resources/stree"
 
   uninstall launchctl: 'com.atlassian.SourceTreePrivilegedHelper2',
             quit:      'com.torusknot.SourceTreeNotMAS'

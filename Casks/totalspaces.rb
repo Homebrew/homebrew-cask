@@ -12,12 +12,12 @@ cask 'totalspaces' do
     uninstall pkgutil: 'com.switchstep.totalspaces',
               quit:    'com.binaryage.TotalSpaces'
   else
-    version '2.5.4'
-    sha256 '8b53eea81e432df5a61ccdc0c9e727cd4e7c2bb265db454d536356c106bdc5c0'
+    version '2.6.14'
+    sha256 'f1408daa923e69c0a2bd702f618692ddda9197f449f106683a3a6395d8437110'
 
     url "http://downloads.binaryage.com/TotalSpaces#{version.major}-#{version}.dmg"
     appcast "http://updates-s3.binaryage.com/totalspaces#{version.major}.xml",
-            checkpoint: 'b3650a22599c6be19c377b65f1c1f838acb6222b254c7b8616785a099e28398d'
+            checkpoint: '288cf8fb910b4a9c7268a879c294f2e9c5d14b38407d30b8805a148263eac0e1'
 
     installer manual: "TotalSpaces#{version.major}.app"
 
