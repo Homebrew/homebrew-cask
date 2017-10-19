@@ -1,10 +1,10 @@
 cask 'virtualbox' do
-  version '5.1.28-117968'
-  sha256 'a85053baaf4e56a7be100d585ebff3c11dc3b48b20b8e1446a1caeeb913e42eb'
+  version '5.2.0-118431'
+  sha256 'bda9f0e51ba04c23e3483a50bccede122049b805cd517d6715ca9fb161e84849'
 
   url "http://download.virtualbox.org/virtualbox/#{version.sub(%r{-.*}, '')}/VirtualBox-#{version}-OSX.dmg"
   appcast 'http://download.virtualbox.org/virtualbox/LATEST.TXT',
-          checkpoint: '099e2663f469a58f937b661f041089c268f30b6c9212a518b5f31b71cb62deb5'
+          checkpoint: 'e791457c25b99d69f3d5ca028f6a7f6d88f7e2d85af5162a92a8c5f3aecf59b0'
   name 'Oracle VirtualBox'
   homepage 'https://www.virtualbox.org/'
 
@@ -24,14 +24,16 @@ cask 'virtualbox' do
             pkgutil: 'org.virtualbox.pkg.*'
 
   zap delete: [
-                '/Library/Application Support/VirtualBox',
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualbox.sfl',
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualboxvm.sfl',
+                '~/Library/Saved Application State/org.virtualbox.app.VirtualBox.savedState',
+                '~/Library/Saved Application State/org.virtualbox.app.VirtualBoxVM.savedState',
+              ],
+      trash:  [
+                '/Library/Application Support/VirtualBox',
                 '~/Library/VirtualBox',
                 '~/Library/Preferences/org.virtualbox.app.VirtualBox.plist',
                 '~/Library/Preferences/org.virtualbox.app.VirtualBoxVM.plist',
-                '~/Library/Saved Application State/org.virtualbox.app.VirtualBox.savedState',
-                '~/Library/Saved Application State/org.virtualbox.app.VirtualBoxVM.savedState',
               ],
       rmdir:  '~/VirtualBox VMs'
 end

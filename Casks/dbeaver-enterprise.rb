@@ -4,11 +4,11 @@ cask 'dbeaver-enterprise' do
 
   url "https://dbeaver.com/files/#{version}/dbeaver-ee-#{version}-macos.dmg"
   appcast 'https://dbeaver.com/files/',
-          checkpoint: '3c4c8b473915ee3d7a2b78d96c1ba171be65af702377c21ca98aa27374d76cf4'
+          checkpoint: '476f8e064acf08b2c082c65c88709abea20ea6b019e861f91df25320cd2f636e'
   name 'DBeaver Enterprise Edition'
   homepage 'https://dbeaver.com/'
 
-  app 'Dbeaver.app'
+  app 'DBeaver.app'
 
   caveats do
     depends_on_java('8+')

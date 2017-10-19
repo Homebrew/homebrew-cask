@@ -1,10 +1,10 @@
 cask 'apache-directory-studio' do
-  version '2.0.0.v20161101-M12'
-  sha256 '84b4ec5b529205d326d73f383430c41a2002f1fa3857fff8f93d76bfd0f28340'
+  version '2.0.0.v20170904-M13'
+  sha256 '17df069735317034737a51439e463e61a1f8e283ea464e299ef023d68cc15dc3'
 
   url "http://www.us.apache.org/dist/directory/studio/#{version}/ApacheDirectoryStudio-#{version}-macosx.cocoa.x86_64.dmg"
   appcast 'http://apache.mirror.serversaustralia.com.au/directory/studio/',
-          checkpoint: '455c45a043e17bf557b58c9fcb4c50ca8a1054c88093087ed4fb2bdbf59f65c0'
+          checkpoint: '7aae695e4e2fad067f3a4e5b4fe026c8d12eb39b9143901e70a17c3c4cf1398f'
   name 'Apache Directory Studio'
   homepage 'https://directory.apache.org/studio/'
 

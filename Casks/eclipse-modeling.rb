@@ -1,6 +1,6 @@
 cask 'eclipse-modeling' do
-  version '4.7.0,oxygen:R'
-  sha256 '3e5d3e6cf6044854510e18fd5c7173fbf846a33241da39490d77b8ab070ef4a6'
+  version '4.7.1,oxygen:1a'
+  sha256 'b4fd0e241b51edfe5fd42032b63ddb32e82dd0beb640b6ecf051ee9ae06e59ca'
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-modeling-#{version.after_comma.before_colon}-#{version.after_colon}-macosx-cocoa-x86_64.dmg&r=1"
   name 'Eclipse Modeling Tools'

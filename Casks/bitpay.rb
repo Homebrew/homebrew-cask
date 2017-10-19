@@ -1,6 +1,6 @@
 cask 'bitpay' do
   version '3.8.2'
-  sha256 'b575724fb840c6af5c3824dfb80d374b9e9bb700c5ac5208085d040d16f46643'
+  sha256 '2c501d536d69ceb56344e06ed8999285bdd4d6191eef7402c324964b55f51346'
 
   # github.com/bitpay/copay was verified as official when first introduced to the cask
   url "https://github.com/bitpay/copay/releases/download/v#{version}/BitPay.dmg"

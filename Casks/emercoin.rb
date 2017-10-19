@@ -1,11 +1,11 @@
 cask 'emercoin' do
-  version '0.6.3'
-  sha256 '9e6d125c19c206066d45ad0ac54adb361eaa031e50f551605b6918ef1c7305fc'
+  version '0.6.3.1'
+  sha256 'd7fea4653c855f22acd78453e2b109a3ceb7c6b5c2579447aa2c70abfba1dc88'
 
   # sourceforge.net/emercoin was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/emercoin/emercoin-#{version}-osx.dmg"
   appcast 'https://sourceforge.net/projects/emercoin/rss',
-          checkpoint: '8b2ecc18e7c7e58f58600f7fb1e89cde0fd49d0ca8f21cf6b56736294056b295'
+          checkpoint: '091d13be309ff27d4fa954ab309d13268adaedd5178e25d04f10da16a2c501c2'
   name 'Emercoin'
   homepage 'https://emercoin.com/'
 

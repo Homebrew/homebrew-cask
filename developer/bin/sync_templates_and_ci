@@ -31,7 +31,7 @@ function copy_templates_and_ci {
   local repo_name
 
   repo_name="${1}"
-  rsync --archive --delete "${main_repo_dir}"/{.editorconfig,.gitattributes,.github,.gitignore,.travis.yml,ci} '.'
+  rsync --archive --delete "${main_repo_dir}"/{.editorconfig,.gitattributes,.github,.gitignore,.travis.yml,ci,CODE_OF_CONDUCT.md} '.'
   /usr/bin/sed -i '' -E "s:homebrew-cask/(pulls|issues):${repo_name}/\1:" '.github/PULL_REQUEST_TEMPLATE.md' # PULL_REQUEST_TEMPLATE has repo-specific links
 }
 

@@ -10,7 +10,7 @@
 
 header 'Running script.sh...'
 
-modified_ruby_files=($(git diff --name-only --diff-filter=AM "${TRAVIS_COMMIT_RANGE}" -- *.rb))
+modified_ruby_files=($(git diff --name-only --diff-filter=AMR "${TRAVIS_COMMIT_RANGE}" -- *.rb))
 
 for file in "${modified_ruby_files[@]}"; do
   [[ "${file}" == 'Casks/'* ]] && modified_casks+=("${file}") || casks_wrong_dir+=("${file}")
@@ -22,7 +22,10 @@ elif [[ ${#modified_casks[@]} -gt 0 ]]; then
   run brew cask _audit_modified_casks "${TRAVIS_COMMIT_RANGE}"
   run brew cask style "${modified_casks[@]}"
   if [[ ${#modified_casks[@]} -le 10 ]]; then
-    run brew cask install "${modified_casks[@]}"
+    for cask in "${modified_casks[@]}"; do
+      run brew cask reinstall --verbose "${cask}"
+      run brew cask uninstall --verbose "${cask}"
+    done
   else
     ohai 'More than 10 casks modified, skipping install'
   fi

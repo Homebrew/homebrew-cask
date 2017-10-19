@@ -1,14 +1,14 @@
 cask 'gitee' do
-  version '1.0.2.5'
-  sha256 '3e5a712f998b10274393a4cb8dddd36f28e8cc95e9f19e06bff1f249c4083bae'
+  version '1.0.2.7'
+  sha256 '9eec18ba7c2e4458223916bca87d7221c2b38b345a6aae087b5a3a3ab5059299'
 
-  url "https://github.com/Nightonke/Gitee/releases/download/v#{version}/Gitee.#{version}.zip"
+  url "https://github.com/Nightonke/Gitee/releases/download/v#{version}/Gitee.zip"
   appcast 'https://github.com/Nightonke/Gitee/releases.atom',
-          checkpoint: '80f53f0820bf57a1ffeeb7edca03e05574fa607db5ad13f0948a4a7c944e69cc'
+          checkpoint: '9ada4b72963708f30efe244edf6697dd40cba476bbb30a5698610bd9869c7d48'
   name 'Gitee'
   homepage 'https://github.com/Nightonke/Gitee'
 
-  app "Gitee #{version}.app"
+  app 'Gitee.app'
 
   zap delete: [
                 '~/Library/Application Support/com.nightonke.VHGithubNotifier',

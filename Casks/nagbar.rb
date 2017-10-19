@@ -1,6 +1,6 @@
 cask 'nagbar' do
-  version '1.3.1'
-  sha256 '48e395a42d07c3433905b8d7382a19ebe8a3972c4e00c2d9cf165db637182ad3'
+  version '1.3.2'
+  sha256 '4df51d327d43a5a20f621abbd8f52542bb6efdc27b775f3dafb021d905864491'
 
   url "https://sites.google.com/site/nagbarapp/NagBar-#{version}.zip?attredirects=0&d=1"
   name 'NagBar'

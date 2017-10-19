@@ -1,5 +1,5 @@
 cask 'android-sdk' do
-  version '3859397,26.0.1'
+  version '3859397,26.0.2'
   sha256 '4a81754a760fce88cba74d69c364b05b31c53d57b26f9f82355c61d5fe4b9df9'
 
   # dl.google.com/android/repository was verified as official when first introduced to the cask
@@ -66,13 +66,16 @@ cask 'android-sdk' do
     FileUtils.rm("#{HOMEBREW_PREFIX}/share/android-sdk")
   end
 
-  caveats <<-EOS.undent
-    We will install android-sdk-tools, platform-tools, and build-tools for you.
-    You can control android sdk packages via the sdkmanager command.
-    You may want to add to your profile:
-      'export ANDROID_SDK_ROOT=#{HOMEBREW_PREFIX}/share/android-sdk'
+  caveats do
+    depends_on_java('8')
+    <<-EOS.undent
+      We will install android-sdk-tools, platform-tools, and build-tools for you.
+      You can control android sdk packages via the sdkmanager command.
+      You may want to add to your profile:
+        'export ANDROID_SDK_ROOT=#{HOMEBREW_PREFIX}/share/android-sdk'
 
-    This operation may take up to 10 minutes depending on your internet connection.
-    Please, be patient.
-  EOS
+      This operation may take up to 10 minutes depending on your internet connection.
+      Please, be patient.
+    EOS
+  end
 end

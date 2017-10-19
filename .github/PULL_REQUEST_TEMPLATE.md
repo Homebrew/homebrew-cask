@@ -6,11 +6,6 @@ After making all changes to the cask:
 - [ ] `brew cask style --fix {{cask_file}}` reports no offenses.
 - [ ] The commit message includes the cask’s name and version.
 
-Additionally, if **updating a cask**:
-
-- [ ] `sha256` changed but `version` stayed the same ([what is this?][version-checksum]).  
-      I’m providing public confirmation below.
-
 Additionally, if **adding a new cask**:
 
 - [ ] Named the cask according to the [token reference].
