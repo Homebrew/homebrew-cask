@@ -5,7 +5,7 @@ cask 'byteball' do
   # github.com/byteball/byteball was verified as official when first introduced to the cask
   url "https://github.com/byteball/byteball/releases/download/v#{version}/Byteball-osx64.dmg"
   appcast 'https://github.com/byteball/byteball/releases.atom',
-          checkpoint: '2e7bcf4e94856a0347deaaab99ba1ee7a59cd66a064b6a6ad6de1021ce7f64d4'
+          checkpoint: '51782cb795fc22ce346a968d33814c9eeb4e5f5f42fa035a8b0b581c971355b7'
   name 'Byteball'
   homepage 'https://byteball.org/'
 
