@@ -20,6 +20,7 @@ cask 'google-drive-file-stream' do
 
   zap delete: '~/Library/Caches/com.google.drivefs',
       trash:  [
+                '~/Library/Application Support/Google/DriveFS',
                 '~/Library/Preferences/Google Drive File Stream Helper.plist',
                 '~/Library/Preferences/com.google.drivefs.plist',
               ]

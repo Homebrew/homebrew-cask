@@ -1,10 +1,10 @@
 cask 'a-better-finder-attributes' do
-  version '6.05'
-  sha256 'f1eeaedfed5a9fe1fe6777bca8e5e265e2d3e71aedb398ccf8782d8e5ac165ac'
+  version '6.06'
+  sha256 '0cbc3fa2ffb29f5f0df9b2dac970f01781b086b1d7f333269ff3a2a98d99e65e'
 
   url 'http://www.publicspace.net/download/ABFAX.dmg'
   appcast "http://www.publicspace.net/app/signed_abfa#{version.major}.xml",
-          checkpoint: '13f663c360067db8891ceea870526b27e1d35ed7c9363e80bf2c835e5b2d9af3'
+          checkpoint: '8304cd55decfcfda6eab143f0f611707a7ae24fd3f69ab67d4214dcc48696808'
   name 'A Better Finder Attributes'
   homepage 'http://www.publicspace.net/ABetterFinderAttributes/'
 

@@ -1,6 +1,6 @@
 cask 'droplr' do
-  version '4.6.5,94'
-  sha256 '8236d94a9ffd900fa35815c80fb1071c0f62211adb3a8840211115f01bea262e'
+  version '4.6.9,101'
+  sha256 '17b7477a3c7ee86374f59c80b0c78ce3aca2c648f9fcdb83126d389317d7d8f8'
 
   # files.droplr.com.s3.amazonaws.com was verified as official when first introduced to the cask
   url "http://files.droplr.com.s3.amazonaws.com/apps/mac/Droplr+#{version.after_comma}.zip"
