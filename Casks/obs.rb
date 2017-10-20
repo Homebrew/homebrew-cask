@@ -9,7 +9,7 @@ cask 'obs' do
   name 'OBS'
   homepage 'https://obsproject.com/'
 
-  pkg "obs-mac-#{version}-installer.pkg"
+  pkg "obs-mac-#{version.major_minor}-installer.pkg"
 
   uninstall pkgutil: [
                        'org.obsproject.pkg.obs-studio',
