@@ -1,12 +1,20 @@
 cask 'welly' do
-  version '3.0.2'
-  sha256 '015a579f92bdf6a7a47db591bbb52d5ab9b1842d758eb783e0a1aae6ad07210c'
+  if MacOS.version <= :snow_leopard
+    version '2.64'
+    sha256 '9403a92d74f5e7e02974a0fe8641ab1e320523948a67add596c964b2c4c13cae'
+    url "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/welly/Welly.v#{version}.zip"
+  else
+    version '2.7'
+    sha256 'cb24a26432d8927b1159a1865602c3f30b5190f628167c954e4d6cc723cfcb0f'
+    url "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/welly/Welly.v#{version}.fix.zip"
+  end
 
-  url "https://github.com/clyang/welly/releases/download/#{version}/Welly.v#{version}.zip"
-  appcast 'https://github.com/clyang/welly/releases.atom',
-          checkpoint: 'df6f6353cfeef2c71dec2d9066dc79d496a9cf603fb18daf465285720f1ca076'
   name 'Welly'
-  homepage 'https://github.com/clyang/welly'
+  homepage 'https://code.google.com/archive/p/welly'
 
   app 'Welly.app'
+
+  caveats do
+    discontinued
+  end
 end
