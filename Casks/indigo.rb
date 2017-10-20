@@ -1,6 +1,6 @@
 cask 'indigo' do
-  version '7.0.4'
-  sha256 '13a22988a397f4fb1f84f8f237a5b66169293e09d27e78330863657927b3294b'
+  version '7.1.0'
+  sha256 'e50f9c5aea09fb9c1afcfc3ef76e7ee3c7ec60632caf561f9b3985102e7b68cf'
 
   # goprism.com was verified as official when first introduced to the cask
   url "http://cloud.goprism.com/download/Indigo_#{version.dots_to_underscores}.dmg"
@@ -10,20 +10,22 @@ cask 'indigo' do
 
   pkg 'Indigo Installer.pkg'
 
-  uninstall pkgutil:   [
-                         "com.perceptiveautomation.pkg.indigo_client#{version.major}",
-                         'com.perceptiveautomation.pkg.indigo_drivers',
-                         "com.perceptiveautomation.pkg.indigo_server#{version.major}",
-                         "com.perceptiveautomation.pkg.indigo_server_plugins#{version.major}",
-                         "com.perceptiveautomation.pkg.indigo_server_scripts#{version.major}",
-                       ],
-            launchctl: 'com.perceptiveautomation.IndigoServer2'
+  uninstall launchctl: 'com.perceptiveautomation.IndigoServer2',
+            pkgutil:   'com.perceptiveautomation.pkg.indigo*',
+            quit:      [
+                         'com.perceptiveautomation.indigo-client6',
+                         'com.perceptiveautomation.indigo-server',
+                       ]
 
   zap delete: [
                 "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.perceptiveautomation.indigo-client#{version.major}.sfl",
-                '~/Library/LaunchAgents/com.perceptiveautomation.IndigoServer2.plist',
-                "~/Library/Preferences/com.perceptiveautomation.indigo-client#{version.major}.plist",
+                '~/Library/Caches/com.perceptiveautomation.indigo-client6',
+                '~/Library/Caches/com.perceptiveautomation.indigo-server',
+              ],
+      trash:  [
+                "/Library/Application Support/Perceptive Automation/Indigo #{version.major}",
+                '~/Library/Preferences/com.perceptiveautomation.indigo-client6.plist',
+                "~/Library/Preferences/Indigo #{version.major} Client Prefs.indiPref",
                 "~/Library/Preferences/Indigo #{version.major} Client Settings.indiPref",
-
               ]
 end
