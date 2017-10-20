@@ -20,7 +20,7 @@ cask 'radio-silence' do
                           },
             quit:         'com.radiosilenceapp.client',
             kext:         'com.radiosilenceapp.nke.filter',
-            pkgutil:      'com.radiosilenceapp.radioSilence.*',
+            pkgutil:      'com.radiosilenceapp.*',
             launchctl:    [
                             'com.radiosilenceapp.trial',
                             'com.radiosilenceapp.agent',
