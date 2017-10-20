@@ -1,10 +1,10 @@
 cask 'radio-silence' do
-  version '2.2'
-  sha256 '657a80c8b2ac76e63ed09f0f332f8bbf42b1fb4cd416dcb37c1797306e19bfe6'
+  version '2.3'
+  sha256 '0127f722cb15768392437b917d2beed2cbcab35eeccee2d77c61ac2a5997ebd1'
 
   url "https://radiosilenceapp.com/downloads/Radio_Silence_#{version}.pkg"
   appcast 'https://radiosilenceapp.com/update',
-          checkpoint: '5d359c3bfd4bd081b10e8c71b6947f6448ab108be39080d44bf38b947e6d4475'
+          checkpoint: 'd3f64a45603b0db6cb97cf04e833f399018d8397203d31c5144c40a470aacbf2'
   name 'Radio Silence'
   homepage 'https://radiosilenceapp.com/'
 
