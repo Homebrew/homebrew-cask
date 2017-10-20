@@ -8,5 +8,16 @@ cask 'clyang-welly' do
   name 'Welly'
   homepage 'https://github.com/clyang/welly'
 
+  auto_updates true
+  depends_on macos: '>= 10.6'
+
   app 'Welly.app'
+
+  zap delete: [
+                '~/Library/Application Support/Welly',
+                '~/Library/Caches/Welly',
+                '~/Library/Caches/org.net9.Welly',
+                '~/Library/Cookies/org.net9.Welly.binarycookies',
+                '~/Library/Preferences/org.net9.Welly.plist',
+              ]
 end
