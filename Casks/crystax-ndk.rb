@@ -33,7 +33,7 @@ cask 'crystax-ndk' do
   end
 
   caveats <<~EOS
-   You may want to add to your profile:
-      'export ANDROID_NDK_HOME="#{HOMEBREW_PREFIX}/share/crystax-ndk"'
+    You may want to add to your profile:
+       'export ANDROID_NDK_HOME="#{HOMEBREW_PREFIX}/share/crystax-ndk"'
   EOS
 end

@@ -34,7 +34,7 @@ cask 'android-ndk' do
   end
 
   caveats <<~EOS
-   You may want to add to your profile:
-      'export ANDROID_NDK_HOME="#{HOMEBREW_PREFIX}/share/android-ndk"'
+    You may want to add to your profile:
+       'export ANDROID_NDK_HOME="#{HOMEBREW_PREFIX}/share/android-ndk"'
   EOS
 end
