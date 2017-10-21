@@ -17,7 +17,7 @@ cask 'v2rayx' do
 
   uninstall launchctl: 'v2rayproject.v2rayx.v2ray-core',
             script:    {
-                         executable: '/Library/Application Support/V2RayX/v2rayx_sysconf',
+                         executable: '"#{staged_path}/V2RayX.app/Contents/Resources/v2rayx_sysconf",
                          args:       ['off'],
                          sudo:       true,
                        },
