@@ -1,4 +1,4 @@
-cask 'github-desktop' do
+cask 'github' do
   version '1.0.4-6e5e9664'
   sha256 'd9a42e8ba064c1870b4d1499895a2c39d9c787eec74b033f1dc292b91aaa2dd5'
 
