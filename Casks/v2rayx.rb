@@ -1,11 +1,11 @@
 cask 'v2rayx' do
   # note: "2" is not a version number, but an intrinsic part of the product name
-  version '0.7.8'
-  sha256 'b7be7a26626bf65c7f5ce2801b52a56f7cd3cbb63c1b9db83cc5bf50cb2dd09c'
+  version '0.7.9'
+  sha256 'e795cd85d9114d36e2e85b8bfeb286f17e04dd80ea486837c00bd10a7c2845cf'
 
-  url "https://github.com/Cenmrev/V2RayX/releases/download/v#{version}/V2RayX.dmg"
+  url "https://github.com/Cenmrev/V2RayX/releases/download/v#{version}/V2RayX.app.zip"
   appcast 'https://github.com/Cenmrev/V2RayX/releases.atom',
-          checkpoint: '75a333b75a20cb9ada9d23b923466899e432d9c43d137ea5df0238693ad92cf1'
+          checkpoint: '6186100ef99bd78105ae978b4583424f11e30e9ad66d00a0e16d01beef5b60f3'
   name 'V2RayX'
   homepage 'https://github.com/Cenmrev/V2RayX'
 
@@ -18,7 +18,7 @@ cask 'v2rayx' do
   uninstall delete:    '/Library/Application Support/V2RayX',
             launchctl: 'v2rayproject.v2rayx.v2ray-core',
             script:    {
-                         executable: '/Library/Application Support/V2RayX/v2rayx_sysconf',
+                         executable: "#{appdir}/V2RayX.app/Contents/Resources/v2rayx_sysconf",
                          args:       ['off'],
                          sudo:       true,
                        },
