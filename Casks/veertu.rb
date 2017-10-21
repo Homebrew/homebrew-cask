@@ -1,4 +1,4 @@
-cask 'veertu-desktop' do
+cask 'veertu' do
   version '1.2.97'
   sha256 '982500c343119bda7d49eaa037d485937ee36b3bf51934b165931339d85a114c'
 
