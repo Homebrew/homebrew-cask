@@ -15,8 +15,7 @@ cask 'v2rayx' do
     set_ownership '/Library/Application Support/V2RayX'
   end
 
-  uninstall delete:    '/Library/Application Support/V2RayX',
-            launchctl: 'v2rayproject.v2rayx.v2ray-core',
+  uninstall launchctl: 'v2rayproject.v2rayx.v2ray-core',
             script:    {
                          executable: '/Library/Application Support/V2RayX/v2rayx_sysconf',
                          args:       ['off'],
