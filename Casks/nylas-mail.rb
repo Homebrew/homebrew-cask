@@ -28,4 +28,8 @@ cask 'nylas-mail' do
                 '~/Library/Preferences/com.nylas.nylas-mail.plist',
                 '~/.nylas-mail',
               ]
+
+  caveats do
+    discontinued
+  end
 end
