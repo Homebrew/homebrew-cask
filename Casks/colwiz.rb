@@ -1,4 +1,4 @@
-cask 'colwiz-desktop' do
+cask 'colwiz' do
   version :latest
   sha256 :no_check
 
