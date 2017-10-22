@@ -14,7 +14,7 @@ cask 'eid-ee' do
                       input:      ['y'],
                     }
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     DigiDoc3 Client and ID-card Utility are available in the App Store:
       http://appstore.com/mac/ria
   EOS
