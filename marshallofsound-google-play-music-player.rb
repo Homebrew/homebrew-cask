@@ -1,4 +1,4 @@
-cask 'google-play-music-desktop-player' do
+cask 'marshallofsound-google-play-music-player' do
   version '4.4.1'
   sha256 'f0c604360af08115e0338f3e6534e3486f00b55c9b7d922f060f9698a70d820b'
 
