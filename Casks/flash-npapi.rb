@@ -9,6 +9,8 @@ cask 'flash-npapi' do
   name 'Adobe Flash Player NPAPI (plugin for Safari and Firefox)'
   homepage 'https://get.adobe.com/flashplayer/'
 
+  auto_updates true
+
   pkg 'Install Adobe Flash Player.app/Contents/Resources/Adobe Flash Player.pkg'
 
   uninstall pkgutil: 'com.adobe.pkg.FlashPlayer',

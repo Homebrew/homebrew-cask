@@ -8,6 +8,8 @@ cask 'proxifier' do
   name 'Proxifier'
   homepage 'https://www.proxifier.com/mac/'
 
+  auto_updates true
+
   app 'Proxifier.app'
 
   zap delete: [
