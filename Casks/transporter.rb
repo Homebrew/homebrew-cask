@@ -1,4 +1,4 @@
-cask 'transporter-desktop' do
+cask 'transporter' do
   version '4.2.12_22430,2.5'
   sha256 '76f61d2df639b2539d47319d9afa6c80cffe511de520b4e5bcec05173d9f6cb3'
 
