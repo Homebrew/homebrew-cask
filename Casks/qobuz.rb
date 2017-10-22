@@ -1,4 +1,4 @@
-cask 'qobuz-desktop' do
+cask 'qobuz' do
   version :latest
   sha256 :no_check
 
