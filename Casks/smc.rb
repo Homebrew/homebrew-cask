@@ -1,4 +1,4 @@
-cask 'secret-maryo-chronicles' do
+cask 'smc' do
   version '1.9'
   sha256 'b3317346483140b5969a8137f13ecf1162200e631179e5facb5dc65a5140a9fa'
 
