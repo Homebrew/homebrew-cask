@@ -16,4 +16,8 @@ cask 'litecoin' do
   postflight do
     set_permissions "#{appdir}/Litecoin-Qt.app", '0555'
   end
+
+  uninstall_preflight do
+    set_permissions "#{appdir}/Litecoin-Qt.app", '0755'
+  end
 end
