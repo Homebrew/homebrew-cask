@@ -10,6 +10,8 @@ cask 'xld' do
   name 'XLD'
   homepage 'http://tmkk.undo.jp/xld/index_e.html'
 
+  auto_updates true
+
   app 'XLD.app'
 
   zap delete: [

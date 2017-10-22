@@ -8,6 +8,8 @@ cask 'flash-ppapi' do
   name 'Adobe Flash Player PPAPI (plugin for Opera and Chromium)'
   homepage 'https://get.adobe.com/flashplayer/otherversions/'
 
+  auto_updates true
+
   pkg 'Install Adobe Pepper Flash Player.app/Contents/Resources/Adobe Flash Player.pkg'
 
   uninstall pkgutil: 'com.adobe.pkg.PepperFlashPlayer',
