@@ -1,4 +1,4 @@
-cask 'myphonedesktop' do
+cask 'myphone' do
   version '2.2.0'
   sha256 'df30b2ed62c074c3ccd5118f1a42521a6b170069781c491a4c93b1b3a581d335'
 
