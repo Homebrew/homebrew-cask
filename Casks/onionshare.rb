@@ -8,8 +8,7 @@ cask 'onionshare' do
           checkpoint: '278463a88f6461ee37dcd0c66304a1212adf7243da9bbcaf38cda972cca82eb9'
   name 'OnionShare'
   homepage 'https://onionshare.org/'
-  gpg "#{url}.sig",
-      key_url: 'https://onionshare.org/signing-key.asc'
+  gpg "#{url}.sig", key_url: 'https://onionshare.org/signing-key.asc'
 
   pkg 'OnionShare.pkg'
 
