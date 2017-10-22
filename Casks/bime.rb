@@ -1,4 +1,4 @@
-cask 'bimedesktop' do
+cask 'bime' do
   version :latest
   sha256 :no_check
 
