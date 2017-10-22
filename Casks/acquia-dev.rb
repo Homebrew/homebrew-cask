@@ -1,4 +1,4 @@
-cask 'acquia-dev-desktop' do
+cask 'acquia-dev' do
   version '2-2017-02-01'
   sha256 'b6f3af47241028b28d32ab494887095a51bacd7b766f4e3181993ecc2948febc'
 

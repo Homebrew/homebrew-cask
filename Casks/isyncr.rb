@@ -1,4 +1,4 @@
-cask 'isyncr-desktop' do
+cask 'isyncr' do
   version '5.2.0'
   sha256 'd7f7fb2701f64e904160b9fb71ed334c8b632080528322274d73940606436d32'
 

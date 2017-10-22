@@ -1,4 +1,4 @@
-cask 'jump-desktop' do
+cask 'jump' do
   version '7.1'
   sha256 '04ed00b7b8541a401cc82581104717d0907b5caa89bb0dd3bf47cd150fbfec3e'
 
