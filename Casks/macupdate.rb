@@ -1,4 +1,4 @@
-cask 'macupdate-desktop' do
+cask 'macupdate' do
   version '6.1.9'
   sha256 'dce250e6c000809ab25f52706f4bbce3ca1321f34de57c949f64d65638c38ceb'
 
