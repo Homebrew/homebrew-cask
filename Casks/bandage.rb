@@ -15,7 +15,7 @@ cask 'bandage' do
   binary shimscript, target: 'bandage'
 
   preflight do
-    IO.write shimscript, <<-EOS.undent
+    IO.write shimscript, <<~EOS
       #!/bin/sh
       exec '#{appdir}/Bandage.app/Contents/MacOS/Bandage' "$@"
     EOS

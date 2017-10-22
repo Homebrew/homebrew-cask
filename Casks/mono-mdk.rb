@@ -13,7 +13,7 @@ cask 'mono-mdk' do
   uninstall delete:  '/private/etc/paths.d/mono-commands',
             pkgutil: 'com.xamarin.mono-*'
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     Installing #{token} removes mono and mono dependant formula binaries in
     /usr/local/bin and adds #{token} to /private/etc/paths.d/
     You may want to:

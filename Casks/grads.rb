@@ -14,7 +14,7 @@ cask 'grads' do
   binary "grads-#{version}/bin/stnmap"
   binary "grads-#{version}/bin/wgrib"
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     In order to use the GrADS tools, you will need
     the GrADS fonts and maps data sets, and may need
     to set some environmental variables.

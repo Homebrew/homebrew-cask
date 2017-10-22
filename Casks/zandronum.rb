@@ -18,7 +18,7 @@ cask 'zandronum' do
                 '~/Library/Preferences/zandronum.ini',
               ]
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     Install IWADs to ~/Library/Application Support/Zandronum/
 
     For more information, see: https://wiki.zandronum.com/Zandronum_and_IWAD_Files

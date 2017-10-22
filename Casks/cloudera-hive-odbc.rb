@@ -10,7 +10,7 @@ cask 'cloudera-hive-odbc' do
 
   uninstall pkgutil: 'cloudera.hiveodbc'
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     For configuration instructions, see
 
       /opt/cloudera/hiveodbc/Readme.txt

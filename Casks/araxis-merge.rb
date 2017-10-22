@@ -46,7 +46,7 @@ cask 'araxis-merge' do
                 '~/Library/Preferences/com.araxis.merge.plist',
               ]
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     For instructions to integrate Araxis Merge with Finder or other applications,
     see https://www.araxis.com/merge/documentation-os-x/installing.en
   EOS

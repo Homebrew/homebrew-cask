@@ -22,7 +22,7 @@ cask 'glimmerblocker' do
                       '/Library/Logs/GlimmerBlocker',
                     ]
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     You must deactivate GlimmerBlocker from the installed preference
     pane before uninstalling. See http://glimmerblocker.org/wiki/Uninstall.
   EOS

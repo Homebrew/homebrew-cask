@@ -15,7 +15,7 @@ cask 'copyq' do
   binary shimscript, target: 'copyq'
 
   preflight do
-    IO.write shimscript, <<-EOS.undent
+    IO.write shimscript, <<~EOS
       #!/bin/bash
       exec '#{appdir}/CopyQ.app/Contents/MacOS/copyq' "$@"
     EOS

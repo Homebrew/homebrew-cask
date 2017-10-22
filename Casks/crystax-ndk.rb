@@ -13,7 +13,7 @@ cask 'crystax-ndk' do
   preflight do
     FileUtils.ln_sf("#{staged_path}/crystax-ndk-#{version}", "#{HOMEBREW_PREFIX}/share/crystax-ndk")
 
-    IO.write shimscript, <<-EOS.undent
+    IO.write shimscript, <<~EOS
       #!/bin/bash
       readonly executable="#{staged_path}/crystax-ndk-#{version}/$(basename ${0})"
       test -f "${executable}" && exec "${executable}" "${@}"
@@ -32,8 +32,8 @@ cask 'crystax-ndk' do
     FileUtils.rm("#{HOMEBREW_PREFIX}/share/crystax-ndk")
   end
 
-  caveats <<-EOS.undent
-   You may want to add to your profile:
-      'export ANDROID_NDK_HOME="#{HOMEBREW_PREFIX}/share/crystax-ndk"'
+  caveats <<~EOS
+    You may want to add to your profile:
+       'export ANDROID_NDK_HOME="#{HOMEBREW_PREFIX}/share/crystax-ndk"'
   EOS
 end

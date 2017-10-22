@@ -95,7 +95,7 @@ cask 'java' do
                 '~/Library/Application Support/Oracle/',
               ]
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     This Cask makes minor modifications to the JRE to prevent issues with
     packaged applications, as discussed here:
 

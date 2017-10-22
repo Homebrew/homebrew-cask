@@ -14,7 +14,7 @@ cask 'fiddler' do
   binary shimscript, target: 'fiddler'
 
   preflight do
-    IO.write shimscript, <<-EOS.undent
+    IO.write shimscript, <<~EOS
       #!/bin/bash
       cd "$(dirname "$(readlink -n "${0}")")" && \
         mono Fiddler.exe "${@}"

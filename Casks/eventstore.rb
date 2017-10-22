@@ -14,13 +14,13 @@ cask 'eventstore' do
   testclient_shimscript = "#{staged_path}/EventStore-OSS-MacOSX-v#{version}/eventstore-testclient"
 
   preflight do
-    IO.write eventstore_shimscript, <<-EOS.undent
+    IO.write eventstore_shimscript, <<~EOS
       #!/bin/sh
       cd "#{staged_path}/EventStore-OSS-MacOSX-v#{version}"
       exec "#{staged_path}/EventStore-OSS-MacOSX-v#{version}/run-node.sh" "$@"
     EOS
 
-    IO.write testclient_shimscript, <<-EOS.undent
+    IO.write testclient_shimscript, <<~EOS
       #!/bin/sh
       exec "#{staged_path}/EventStore-OSS-MacOSX-v#{version}/testclient" "$@"
     EOS
