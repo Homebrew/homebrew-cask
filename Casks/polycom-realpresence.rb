@@ -1,4 +1,4 @@
-cask 'polycom-realpresence-desktop' do
+cask 'polycom-realpresence' do
   version '3.7.0_64705'
   sha256 '3cddfa1c64bb3cf1d26ab6d8c440c5a30f19054ad350be97cce55bf1ab59782a'
 
