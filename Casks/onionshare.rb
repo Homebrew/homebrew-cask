@@ -5,7 +5,7 @@ cask 'onionshare' do
   # github.com/micahflee/onionshare was verified as official when first introduced to the cask
   url "https://github.com/micahflee/onionshare/releases/download/v#{version}/OnionShare.pkg"
   appcast 'https://github.com/micahflee/onionshare/releases.atom',
-          checkpoint: '0dc406cac580f0440817a9c45ad3c039702f8b9740d56abbda86bfe0fbf31bae'
+          checkpoint: '278463a88f6461ee37dcd0c66304a1212adf7243da9bbcaf38cda972cca82eb9'
   name 'OnionShare'
   homepage 'https://onionshare.org/'
   gpg "#{url}.sig",
@@ -13,5 +13,5 @@ cask 'onionshare' do
 
   pkg 'OnionShare.pkg'
 
-  uninstall pkgutil: 'org.pythonmac.unspecified.OnionShare'
+  uninstall pkgutil: 'com.micahflee.onionshare'
 end
