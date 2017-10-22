@@ -1,6 +1,6 @@
 cask 'sonic-pi' do
   version '3.0.1'
-  sha256 '6c8b789a8e226da6d1fe0a24110ef6f7cd2971e67cfc3339735bbccfc566ec51'
+  sha256 ' d9eea57df86da3d39a2a068358fcc256e0dd0181a110fa2d83ad16ad153b10fd'
 
   url "http://sonic-pi.net/files/releases/v#{version}/Sonic-Pi-for-Mac-v#{version}.dmg"
   appcast 'https://github.com/samaaron/sonic-pi/releases.atom',
