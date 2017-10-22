@@ -1,11 +1,11 @@
-cask 'messenger-for-desktop' do
+cask 'aluxian-messenger' do
   version '2.0.9'
   sha256 'd6a550e1f1303a4a3196d61ebdeff499bff7cc6a946c1e5ad3e8f33ebf6987b6'
 
   # github.com/aluxian/Messenger-for-Desktop was verified as official when first introduced to the cask
   url "https://github.com/aluxian/Messenger-for-Desktop/releases/download/v#{version}/messengerfordesktop-#{version}-osx.dmg"
   appcast 'https://github.com/aluxian/Messenger-for-Desktop/releases.atom',
-          checkpoint: 'a396e88b7b59176e7bb36e222102b4dd0fb1c660f95b958c6c2009b7a6e281f2'
+          checkpoint: '6e086c442958580c749ef28b6fda0946a9f8ae20215407548f476380963bf00b'
   name 'Messenger for Desktop'
   homepage 'https://messengerfordesktop.com/'
 
