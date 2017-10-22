@@ -1,4 +1,4 @@
-cask 'slingplayer-desktop' do
+cask 'slingplayer' do
   version '5.0.92'
   sha256 '8abd54ef4525ed31b6da7622ed3198d7963b32ce4f7966fbbd267f43f99f8e39'
 
