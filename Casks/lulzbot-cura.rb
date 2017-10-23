@@ -1,6 +1,6 @@
 cask 'lulzbot-cura' do
-  version '21.04-d244'
-  sha256 '46c8e74c57edf36680fe41c8ab9cd1d863f0f32800289e5cddab652f13d4a0f7'
+  version '21.08-f2748'
+  sha256 'c03ee9aec222641408c0a98d957aead05a2f4fa037e7380f6226a74b37952d0f'
 
   # download.alephobjects.com/lulzbot was verified as official when first introduced to the cask
   url "https://download.alephobjects.com/lulzbot/Software/Cura/Packages/Cura_#{version.major_minor}/cura_#{version}.dmg"
