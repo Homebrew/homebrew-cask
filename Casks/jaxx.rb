@@ -1,8 +1,8 @@
 cask 'jaxx' do
-  version '1.2.30'
-  sha256 'd271b813bb7444aa7e3a50b168dbb4148c52439d32736110114fc186bc698d47'
+  version '1.3.3'
+  sha256 'b6060efa747afeca4f7cc2acc32891edf66057ebad5141b127f6b015a0a5799a'
 
-  url "https://jaxx.io/files/#{version}/Jaxx-#{version.dots_to_hyphens}.osx.dmg"
+  url "https://jaxx.io/files/#{version}/Jaxx-#{version}.dmg"
   name 'Jaxx Blockchain Wallet'
   homepage 'https://jaxx.io/'
 
