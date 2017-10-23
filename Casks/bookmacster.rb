@@ -2,7 +2,7 @@ cask 'bookmacster' do
   version :latest
   sha256 :no_check
 
-  url 'https://sheepsystems.com/bookmacster/BookMacster.dmg'
+  url 'https://sheepsystems.com/bookmacster/BookMacster.zip'
   name 'BookMacster'
   homepage 'https://sheepsystems.com/products/bookmacster.html'
 
