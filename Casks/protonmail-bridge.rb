@@ -3,7 +3,7 @@ cask 'protonmail-bridge' do
   sha256 :no_check
 
   url 'https://protonmail.com/download/Bridge-Installer.dmg'
-  name 'ProtonMail Brigde'
+  name 'ProtonMail Bridge'
   homepage 'https://protonmail.com/bridge/'
 
   app 'ProtonMail Bridge.app'
