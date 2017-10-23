@@ -11,9 +11,9 @@ cask 'openvisualtraceroute' do
 
   app 'OpenVisualTraceroute.app'
 
-  zap delete: '~/ovtr'
+  zap trash: '~/ovtr'
 
   caveats do
-    depends_on_java('6')
+    depends_on_java('8')
   end
 end
