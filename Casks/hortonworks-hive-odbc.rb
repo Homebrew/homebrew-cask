@@ -10,7 +10,7 @@ cask 'hortonworks-hive-odbc' do
 
   uninstall pkgutil: 'hortonworks.hiveodbc'
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     For configuration instructions, see
 
       /opt/hortonworks/hiveodbc/Readme.txt

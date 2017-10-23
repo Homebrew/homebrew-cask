@@ -11,7 +11,7 @@ cask 'rar' do
   artifact 'rar/default.sfx', target: "#{HOMEBREW_PREFIX}/lib/default.sfx"
   artifact 'rar/rarfiles.lst', target: "#{HOMEBREW_PREFIX}/etc/rarfiles.lst"
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     Instructions on using rar and unrar are available in
 
       #{staged_path}/rar/rar.txt

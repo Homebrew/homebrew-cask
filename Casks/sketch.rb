@@ -8,6 +8,8 @@ cask 'sketch' do
   name 'Sketch'
   homepage 'https://www.sketchapp.com/'
 
+  auto_updates true
+
   app 'Sketch.app'
 
   zap delete: [

@@ -13,7 +13,7 @@ cask 'prey' do
   uninstall pkgutil:   'com.prey.agent',
             launchctl: 'com.prey.agent'
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     Prey requires your API key, found in the bottom-left corner of
     the Prey web account Settings page, to complete installation.
     The API key may be set as an environment variable as follows:

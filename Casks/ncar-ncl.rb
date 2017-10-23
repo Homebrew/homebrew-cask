@@ -29,7 +29,7 @@ cask 'ncar-ncl' do
 
   uninstall delete: "#{HOMEBREW_PREFIX}/ncl-#{version}"
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     To use ncar-ncl, you must add the ${NCARG_ROOT}/bin directory
     to your PATH environment variable.
 

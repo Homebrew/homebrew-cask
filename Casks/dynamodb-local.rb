@@ -12,7 +12,7 @@ cask 'dynamodb-local' do
   binary shimscript, target: 'dynamodb-local'
 
   preflight do
-    IO.write shimscript, <<-EOS.undent
+    IO.write shimscript, <<~EOS
       #!/bin/sh
       cd "$(dirname "$(readlink -n "${0}")")" && \
         java -Djava.library.path='./DynamoDBLocal_lib' -jar 'DynamoDBLocal.jar' "$@"

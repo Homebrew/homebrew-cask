@@ -6,6 +6,8 @@ cask 'media-center' do
   name 'JRiver Media Center'
   homepage 'https://www.jriver.com/'
 
+  auto_updates true
+
   app "Media Center #{version.major}.app"
 
   zap delete: [

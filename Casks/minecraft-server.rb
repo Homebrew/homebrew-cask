@@ -14,7 +14,7 @@ cask 'minecraft-server' do
   binary shimscript, target: 'minecraft-server'
 
   preflight do
-    IO.write shimscript, <<-EOS.undent
+    IO.write shimscript, <<~EOS
       #!/bin/sh
       cd "$(dirname "$(readlink -n $0)")" && \
         java -Xmx1024M -Xms1024M -jar 'minecraft_server.#{version}.jar' nogui
@@ -29,7 +29,7 @@ cask 'minecraft-server' do
   end
 
   caveats do
-    <<-EOS.undent
+    <<~EOS
       To run this app, type "#{token}" in terminal.
       To configure the server take a look at the files staged at #{staged_path}
     EOS

@@ -15,7 +15,7 @@ cask 'kdiff3' do
   binary shimscript, target: 'kdiff3'
 
   preflight do
-    IO.write shimscript, <<-EOS.undent
+    IO.write shimscript, <<~EOS
       #!/bin/bash
       '#{appdir}/kdiff3.app/Contents/MacOS/kdiff3' "$@"
     EOS

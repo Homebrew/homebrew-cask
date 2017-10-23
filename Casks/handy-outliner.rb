@@ -17,7 +17,7 @@ cask 'handy-outliner' do
   shimscript = "#{staged_path}/handy-outliner"
 
   preflight do
-    IO.write shimscript, <<-EOS.undent
+    IO.write shimscript, <<~EOS
       # !/bin/sh
       BASEDIR="$(dirname "$(readlink -n $0)")"
       $BASEDIR/handyoutliner_#{version}/start-macos

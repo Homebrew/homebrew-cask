@@ -14,7 +14,7 @@ cask 'cmucl' do
   artifact 'man/man1/cmucl.1', target: "#{HOMEBREW_PREFIX}/share/man/man1/cmucl.1"
   artifact 'man/man1/lisp.1', target: "#{HOMEBREW_PREFIX}/share/man/man1/lisp.1"
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     Instructions on using cmucl are available in
 
       #{staged_path}/doc/cmucl

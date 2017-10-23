@@ -26,7 +26,7 @@ cask 'amazon-music' do
                 '~/Library/Application Support/Amazon Music/',
               ]
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     If the app will not launch after installation, try
 
       brew cask zap #{token}

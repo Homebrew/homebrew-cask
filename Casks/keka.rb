@@ -5,11 +5,12 @@ cask 'keka' do
   # github.com/aonez/Keka was verified as official when first introduced to the cask
   url "https://github.com/aonez/Keka/releases/download/v#{version}/Keka-#{version}.dmg"
   appcast 'https://github.com/aonez/Keka/releases.atom',
-          checkpoint: '212380406d7e26aeb7b3cd2c7a9edf51ce2f12d62f50501808c5a8866686e91e'
+          checkpoint: '3c19d0972d4868f6cd0ddd0dcfc42494606be820db6af7ff5688f4cad65b15f6'
   name 'Keka'
   homepage 'http://www.kekaosx.com/'
 
   auto_updates true
+  conflicts_with cask: 'keka-beta'
   depends_on macos: '>= :lion'
 
   app 'Keka.app'

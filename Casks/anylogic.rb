@@ -20,7 +20,7 @@ cask 'anylogic' do
   caveats do
     depends_on_java('8')
 
-    <<-EOS.undent
+    <<~EOS
       For activation instructions, check up on
         http://www.anylogic.com/upload/activation-guides/AnyLogic_#{version.slice(%r{\w+})}_PLE_License.pdf
     EOS

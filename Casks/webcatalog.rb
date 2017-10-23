@@ -1,11 +1,11 @@
 cask 'webcatalog' do
-  version '7.0.7'
-  sha256 '3e99a1d7681b8c1550b31b51dcc8b91ffc0b82eb7901ee00a87509b10acd40ea'
+  version '7.1.0'
+  sha256 'fd9007c004577394a6d298a652afacb57d024beeca57dd7c941755f2274a566f'
 
   # github.com/webcatalog/desktop/releases/download/ was verified as official when first introduced to the cask
   url "https://github.com/webcatalog/desktop/releases/download/v#{version}/WebCatalog-#{version}.dmg"
   appcast 'https://github.com/webcatalog/desktop/releases.atom',
-          checkpoint: 'abc62fa7874fe5137cf33d4e70f163d96a3704e7c3ff3231a479a92bc614d1cb'
+          checkpoint: 'c277c1dcc5370753fe46a2828d1040f3ce9514eec7b91c78f7f1d858c1371ac8'
   name 'WebCatalog'
   homepage 'https://webcatalog.io/download/mac'
 

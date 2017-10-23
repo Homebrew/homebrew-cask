@@ -73,7 +73,7 @@ cask 'mactex-no-ghostscript' do
                 '~/Library/texlive',
               ]
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     This Cask installs ghostscript from Homebrew instead of the one packaged with MacTeX.
   EOS
 end

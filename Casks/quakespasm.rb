@@ -15,7 +15,7 @@ cask 'quakespasm' do
     FileUtils.mv(staged_path.children, staged_path.join('QuakeSpasm').tap(&:mkpath))
   end
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     To complete the installation of #{token}, you will have to copy the file 'pak0.pak' and 'pak1.pak'
     from your Quake 1 installation support directory into #{appdir}/QuakeSpasm/id1/
   EOS

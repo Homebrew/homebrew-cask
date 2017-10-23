@@ -18,7 +18,7 @@ cask 'datadog-agent' do
 
   zap delete: '/opt/datadog-agent'
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     You will need to update /opt/datadog-agent/etc/datadog.conf and replace APIKEY with your api key
 
     If you ever want to start/stop the Agent, please use the Datadog Agent App or datadog-agent command.

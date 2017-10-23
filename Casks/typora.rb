@@ -8,6 +8,8 @@ cask 'typora' do
   name 'Typora'
   homepage 'https://typora.io/'
 
+  auto_updates true
+
   app 'Typora.app'
 
   zap delete: [
