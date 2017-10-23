@@ -8,10 +8,10 @@ cask 'protonmail-bridge' do
 
   app 'ProtonMail Bridge.app'
 
-  zap trash: [
-               '~/Library/Application Support/protonmail',
-               '~/Library/Caches/protonmail',
-               '~/Library/Caches/ProtonMail\ Bridge',
-               '~/Library/LaunchAgents/ProtonMail\ Bridge.plist',
-             ]
+  zap trash: '~/Library/Application Support/protonmail',
+      delete: [
+                '~/Library/Caches/protonmail',
+                '~/Library/Caches/ProtonMail Bridge',
+                '~/Library/LaunchAgents/ProtonMail Bridge.plist',
+              ]
 end
