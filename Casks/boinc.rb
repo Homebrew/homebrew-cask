@@ -1,6 +1,6 @@
 cask 'boinc' do
-  version '7.8.2'
-  sha256 'cacc5297afe896cb204383556ce1a12a540e1615998013ed86ebbb9dee544549'
+  version '7.8.3'
+  sha256 '726e328058a1514f37344c264c2d0f2e1e433cf3ed73afbca0aa1acc76156502'
 
   url "https://boinc.berkeley.edu/dl/boinc_#{version}_macOSX_x86_64.zip"
   name 'Berkeley Open Infrastructure for Network Computing'
