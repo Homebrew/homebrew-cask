@@ -54,7 +54,7 @@ cask 'adobe-air-sdk' do
 
   caveats <<~EOS
     You may want to add to your profile:
-      'export ADOBE_AIR_HOME=#{HOMEBREW_PREFIX}/share/adobe-air-sdk'
+      'export ADOBE_AIR_HOME="#{HOMEBREW_PREFIX}/share/adobe-air-sdk"'
 
     This operation may take up to 10 minutes depending on your internet connection.
     Please, be patient.

@@ -1,9 +1,9 @@
 cask 'hackhands' do
-  version '1.4.11'
-  sha256 '638d4726d721592b4147403402b4b51bcdc848621f83d665320c03d44457c616'
+  version '2.0.0'
+  sha256 '4c428f65ee63dac8ed6f122d4830cef5c76d6abb033d7344eef90ecebb7c7b74'
 
-  # desktop.hackhands.com.s3-website-us-west-1.amazonaws.com was verified as official when first introduced to the cask
-  url "http://desktop.hackhands.com.s3-website-us-west-1.amazonaws.com/osx/#{version}/HackHands.zip"
+  # s.pluralsight.com/mentors/desktop was verified as official when first introduced to the cask
+  url "https://s.pluralsight.com/mentors/desktop/HackHands-#{version}.dmg"
   name 'HackHands'
   homepage 'https://hackhands.com/desktop/'
 
