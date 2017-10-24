@@ -1,6 +1,6 @@
 cask 'daylite' do
-  version '6.2.2'
-  sha256 '0d06044df60535f6b36164c081ab3133a283a2bd9a3b92c5dd13270e8636e38a'
+  version '6.2.3'
+  sha256 '6b10b811ce2dee364ad7cbf8685d16bec107bd9b3222326fe0ddfaba97c06a55'
 
   url "https://download.marketcircle.com/daylite/daylitedma#{version.no_dots}.dmg"
   name 'Daylite'
