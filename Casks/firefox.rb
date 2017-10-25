@@ -96,14 +96,14 @@ cask 'firefox' do
     'uk'
   end
 
-  language 'zh' do
-    sha256 '0632278b85a649647094f156a3325d87fa1a74b336be4464a307929dd93074d1'
-    'zh-CN'
-  end
-
   language 'zh-TW' do
     sha256 '2161259176506d9d6d304623b8de8654e7d368c7f38e95a04696bdd947916c33'
     'zh-TW'
+  end
+
+  language 'zh' do
+    sha256 '0632278b85a649647094f156a3325d87fa1a74b336be4464a307929dd93074d1'
+    'zh-CN'
   end
 
   url "https://ftp.mozilla.org/pub/firefox/releases/#{version}/mac/#{language}/Firefox%20#{version}.dmg"
