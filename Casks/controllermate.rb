@@ -11,12 +11,28 @@ cask 'controllermate' do
 
   pkg '#temp#/ControllerMate.pkg'
 
-  uninstall pkgutil: 'com.orderedbytes.controllermate.*'
+  uninstall launchctl: [
+                         'com.orderedbytes.ControllerMateHelper',
+                         'com.orderedbytes.ControllerMate.KextHelper',
+                       ],
+            kext:      [
+                         'com.orderedbytes.driver.CMUSBDevices',
+                         'com.orderedbytes.driver.ControllerMateFamily',
+                       ],
+            pkgutil:   'com.orderedbytes.controllermate.*',
+            signal:    [
+                         ['TERM', "com.orderedbytes.ControllerMate#{version.major}"],
+                         ['TERM', 'com.orderedbytes.ControllerMateHelper'],
+                       ]
 
-  zap       delete: [
-                      '~/Library/Application Support/ControllerMate',
-                      '~/Library/Caches/com.orderedbytes.ControllerMate4',
-                      '~/Library/Logs/ControllerMate MIDI',
-                      '~/Library/Logs/ControllerMate',
-                    ]
+  zap delete: [
+                '~/Library/Application Support/ControllerMate',
+                '~/Library/Caches/com.orderedbytes.ControllerMate4',
+                '~/Library/Logs/ControllerMate MIDI',
+                '~/Library/Logs/ControllerMate',
+              ]
+
+  caveats do
+    reboot
+  end
 end
