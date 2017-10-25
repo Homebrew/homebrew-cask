@@ -6,5 +6,5 @@ cask 'native-access' do
   name 'Native Access'
   homepage 'https://www.native-instruments.com/en/specials/native-access/'
 
-  app 'Native Access.app'
+  app 'Native Access.app', target: '/Applications/Native Instruments/Native Access.app'
 end
