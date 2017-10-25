@@ -8,6 +8,8 @@ cask 'totalterminal' do
   name 'TotalTerminal'
   homepage 'https://totalterminal.binaryage.com/'
 
+  depends_on macos: '<= :yosemite'
+
   pkg 'TotalTerminal.pkg'
 
   uninstall pkgutil: 'com.binaryage.pkg.totalterminal.app',
