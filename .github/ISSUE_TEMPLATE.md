@@ -22,3 +22,15 @@
 ```
 {{replace this}}
 ```
+
+#### Output of `brew doctor`
+
+```
+{{replace this}}
+```
+
+#### Output of `brew config`
+
+```
+{{replace this}}
+```
