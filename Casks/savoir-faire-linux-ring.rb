@@ -1,4 +1,4 @@
-cask 'sfl-ring' do
+cask 'savoir-faire-linux-ring' do
   version '201710201455'
   sha256 'df32a8cb54eca20fd2412521ba2b523afc27244941722676b0ff5397e090e305'
 
