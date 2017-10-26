@@ -1,11 +1,11 @@
 cask 'gogland' do
   # Gogland is EAP only for now
-  version '1.0 EAP,173.3188.63'
-  sha256 'b1eb5535875ab52c7ba891209020f53a3bf927045050e4f508c207bc4d275d3d'
+  version '1.0 EAP,173.3415.23'
+  sha256 'dc4cf68a0dbb60d4658d8ed83d835b5db1f0256469cb2c91e329ec9447f13be8'
 
   url "https://download.jetbrains.com/go/gogland-#{version.after_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=GO&latest=true&type=eap',
-          checkpoint: '7181bef5500dbe2fa796014c70c03a9fe9872a26d84278904f2af847e1b389c2'
+          checkpoint: 'd9a0453b9d3d32336761147aeadc2de4c59580730ade2b7e83bf664126d8c643'
   name 'Gogland'
   name 'Gogland EAP'
   homepage 'https://www.jetbrains.com/go/'
