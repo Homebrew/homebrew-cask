@@ -9,7 +9,7 @@ cask 'gfortran' do
 
   depends_on macos: '>= :el_capitan'
 
-  pkg 'gfortran-6.1-ElCapitan/gfortran.pkg'
+  pkg "gfortran-#{version}-ElCapitan/gfortran.pkg"
 
   uninstall delete: [
                       '/usr/local/gfortran',
