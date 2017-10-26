@@ -1,13 +1,13 @@
 cask 'emby-server' do
-  version :latest
-  sha256 :no_check
+  version '3.2.34.0'
+  sha256 '056ae9eb2c4b8876ae7b28caeb708a80630024f384987949bd40568c62f47668'
 
-  # github.com/MediaBrowser/MediaBrowser.Releases was verified as official when first introduced to the cask
-  url 'https://github.com/MediaBrowser/MediaBrowser.Releases/raw/master/Server/Emby.Server.Mac.pkg'
+  # github.com/MediaBrowser/Emby was verified as official when first introduced to the cask
+  url "https://github.com/MediaBrowser/Emby/releases/download/v#{version}/embyserver-osx-x64-v#{version}.zip"
   name 'Emby Server'
   homepage 'https://emby.media/'
 
-  pkg 'Emby.Server.Mac.pkg'
+  app 'EmbyServer.app'
 
-  uninstall pkgutil: 'com.MediaBrowser.MediaBrowser.Server.Mac'
+  zap trash: '~/.config/emby-server'
 end
