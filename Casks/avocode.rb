@@ -1,6 +1,6 @@
 cask 'avocode' do
-  version '2.16.0'
-  sha256 '4b00edfa6d8c83ca0da372e0e2a14fd6e59de2be718e6a79d3b4f19b6da02d6c'
+  version '2.16.1'
+  sha256 '446849544f70150d9e18ef375c43160f075b48c338ecb2831f06c94a8f12e0b4'
 
   url "http://media.avocode.com/download/avocode-app/#{version}/Avocode-#{version}-mac.zip"
   name 'Avocode'
@@ -11,12 +11,14 @@ cask 'avocode' do
   app 'Avocode.app'
 
   zap delete: [
-                '~/.avocode',
-                '~/Library/Application Support/Avocode',
                 '~/Library/Caches/com.madebysource.avocode',
                 '~/Library/Caches/com.madebysource.avocode.ShipIt',
+                '~/Library/Saved Application State/com.madebysource.avocode.savedState',
+              ],
+      trash:  [
+                '~/.avocode',
+                '~/Library/Application Support/Avocode',
                 '~/Library/Preferences/com.madebysource.avocode.helper.plist',
                 '~/Library/Preferences/com.madebysource.avocode.plist',
-                '~/Library/Saved Application State/com.madebysource.avocode.savedState',
               ]
 end
