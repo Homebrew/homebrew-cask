@@ -12,17 +12,21 @@ cask 'araxis-merge' do
     sha256 '7ba0fb79a0ef1a6e3c1f569e6b6c384d9d83d09a255faf4ed200252a8db85c8f'
     url "https://www.araxis.com/download/Merge#{version}-OSX10.10.dmg"
   elsif MacOS.version <= :el_capitan
-    version '2017.4855'
-    sha256 'feb0d1d33cb4911269dfa8a356cfcabb488c6db9963a7ede1ec3687959b123fb'
+    version '2017.4937'
+    sha256 'a9a6ebfcf13a1fb30633dc5fe83633725052420fffb6743e85a8acea24909514'
     url "https://www.araxis.com/download/Merge#{version}-OSX10.11.dmg"
-  else
-    version '2017.4884'
-    sha256 'a92e38a640343e3d6c1069494fbd69234c5d8eb61cc813806bd66682485163d6'
+  elsif MacOS.version <= :sierra
+    version '2017.4937'
+    sha256 'e9e4cf7fed08a25327ca16ce18e799422b6c44cd5fc3a078844ca0ed6584e289'
     url "https://www.araxis.com/download/Merge#{version}-macOS10.12.dmg"
+  else
+    version '2017.4937'
+    sha256 '5173d6e2bf1a0f289ddb6bb07f7f5aebbf455cbf10f1c25958a2fbc43f5b4304'
+    url "https://www.araxis.com/download/Merge#{version}-macOS10.13.dmg"
   end
 
   appcast 'https://www.araxis.com/news-feed.atom',
-          checkpoint: '71c2e471ff2cdee1efce0cdea832e1404c8346c439f4cab14ac15c01e86eecbb'
+          checkpoint: 'c298dbcf8d6c2de5c2331c7569a6ad25795a0bb3efc696d95d9d1bfa17bfaf64'
   name 'Araxis Merge'
   homepage 'https://www.araxis.com/merge/'
 
@@ -32,11 +36,11 @@ cask 'araxis-merge' do
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisgitdiff"
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisopendiff"
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxissvndiff"
-  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/compare"
+  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/compare", target: 'araxiscompare'
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisgitmerge"
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisp4diff"
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxissvndiff3"
-  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/compare2"
+  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/compare2", target: 'araxiscompare2'
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxishgmerge"
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisp4winmrg"
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxissvnmerge"
