@@ -14,4 +14,3 @@ cask 'andy' do
     malware('35212266')
   end
 end
-
