@@ -9,4 +9,8 @@ cask 'andy' do
   pkg 'Andy.pkg'
 
   uninstall pkgutil: 'net.andyroid.andy.player.osx'
+
+  caveats do
+    malware('35212266')
+  end
 end
