@@ -3,7 +3,7 @@ cask 'xload' do
   sha256 :no_check
 
   url "http://s.sudre.free.fr/Software/files/Xload.dmg.gz"
-  name 'Concept2 Utility'
+  name 'XLoad'
   homepage 'http://s.sudre.free.fr/Software/Xload.html'
   license :gratis
 
