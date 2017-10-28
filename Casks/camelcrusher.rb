@@ -1,4 +1,4 @@
-cask 'camel-crusher' do
+cask 'camelcrusher' do
   version '1.0.1'
   sha256 '03a0fe8e76314020b7938b9c43376a047e5190e2b469c04d651975ede08323f2'
 
