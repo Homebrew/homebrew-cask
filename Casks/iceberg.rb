@@ -8,5 +8,14 @@ cask 'iceberg' do
   name 'Iceberg'
   homepage 'http://s.sudre.free.fr/Software/Iceberg.html'
 
-  app 'Iceberg.app'
+  pkg 'Iceberg.mpkg'
+
+  uninstall pkgutil: [
+                       'fr.white.iceberg.pkg.*',
+                       'fr.whitebox.pkg.*',
+                     ],
+            script:  {
+                       executable: 'uninstall.sh',
+                       sudo:       true,
+                     }
 end
