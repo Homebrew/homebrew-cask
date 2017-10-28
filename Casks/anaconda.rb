@@ -6,9 +6,8 @@ cask 'anaconda' do
   url "https://repo.continuum.io/archive/Anaconda3-#{version}-MacOSX-x86_64.sh"
   name 'Continuum Analytics Anaconda'
   homepage 'https://www.anaconda.com/what-is-anaconda/'
-  
-  auto_updates true
 
+  auto_updates true
   depends_on macos: '>= :lion'
   container type: :naked
 
