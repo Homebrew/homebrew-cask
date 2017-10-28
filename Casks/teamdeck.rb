@@ -6,5 +6,5 @@ cask 'teamdeck' do
   name 'Teamdeck'
   homepage 'https://teamdeck.io/'
 
-  app 'Teamdeck.app'
+  app 'teamdeck.app'
 end
