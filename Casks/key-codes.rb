@@ -11,4 +11,9 @@ cask 'key-codes' do
   auto_updates true
 
   app 'Key Codes.app'
+
+  zap delete: [
+                '~/Library/Caches/com.manytricks.KeyCodes',
+                '~/Library/Preferences/com.manytricks.KeyCodes.plist',
+              ]
 end
