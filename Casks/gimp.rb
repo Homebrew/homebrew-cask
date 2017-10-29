@@ -15,5 +15,6 @@ cask 'gimp' do
   zap delete: [
                 '~/Library/Application Support/GIMP',
                 '~/Library/Saved Application State/org.gnome.gimp.savedState',
-              ]
+              ],
+      trash:  '~/Library/Preferences/org.gnome.gimp.plist'
 end
