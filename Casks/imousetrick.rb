@@ -12,8 +12,5 @@ cask 'imousetrick' do
 
   uninstall quit: 'com.beecubu.iMouseTrick'
 
-  zap delete: [
-                '~/Library/Preferences/com.beecubu.iMouseTrick.plist',
-                '/private/var/folders/*/*/*/com.beecubu.iMouseTrick',
-              ]
+  zap delete: '~/Library/Preferences/com.beecubu.iMouseTrick.plist'
 end
