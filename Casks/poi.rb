@@ -1,11 +1,11 @@
 cask 'poi' do
-  version '7.9.1'
-  sha256 '5f1156e3f656be6d7dd180da24b3d1443c2d45313be6c0eef3267abd8525702f'
+  version '7.10.0'
+  sha256 '0c80361ca4a66f6c5b90ee0f9a03d2fd7cc0ab98561ca50c88f48cb375bfd12d'
 
   # github.com/poooi/poi was verified as official when first introduced to the cask
   url "https://github.com/poooi/poi/releases/download/v#{version}/poi-#{version}.dmg"
   appcast 'https://github.com/poooi/poi/releases.atom',
-          checkpoint: 'ee2467e717010b9382dc5949d65b5ef64e3b44fc26ca602f8e4905dfdda5292d'
+          checkpoint: 'e877afee72dd7da60b18d3c650b72d79ba1e80b6611a5bb84bd51de4cc64be54'
   name 'poi'
   homepage 'https://poi.io/'
 
