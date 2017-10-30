@@ -2,7 +2,7 @@ cask 'skype' do
   version :latest
   sha256 :no_check
 
-  url 'https://www.skype.com/go/getskype-macosx.dmg'
+  url 'https://go.skype.com/mac.download'
   name 'Skype'
   homepage 'https://www.skype.com/'
 
