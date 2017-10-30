@@ -2,7 +2,7 @@ cask 'comparemerge' do
   version '2.03x'
   sha256 'ed6f53dd59481868ff29dc1d8800f5a821d918ce7fee1677f450bf302f23025c'
 
-  url "https://sourceforge.net/projects/comparemergenosandbox/files/CompareMerge%20#{version}.zip/download"
+  url "https://downloads.sourceforge.net/comparemergenosandbox/CompareMerge%20#{version}.zip"
   name 'CompareMerge'
   homepage 'https://sourceforge.net/projects/comparemergenosandbox/'
 
