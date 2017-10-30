@@ -1,10 +1,10 @@
 cask 'typora' do
-  version '0.9.9.10.8'
-  sha256 'fb10530170ba2fbab885f7fea9d23e1e5c1ab3370fdf982ac8dbfc6c14ca1c98'
+  version '0.9.9.10.9'
+  sha256 '67f05f029c61cf2db7277844ed34572000e0ec4f37070638c80002ab093c662f'
 
   url 'https://typora.io/download/Typora.dmg'
   appcast 'https://www.typora.io/download/dev_update.xml',
-          checkpoint: '5824207ab434e6a2db6cf5e8493803645c68dd8c123b3cd72c0bf8fde589c817'
+          checkpoint: '868c36bca39f9e4cb6df96260541d677fd719c78d147aa075b2fc0e6537fd012'
   name 'Typora'
   homepage 'https://typora.io/'
 
