@@ -7,4 +7,11 @@ cask 'signal' do
   homepage 'https://signal.org/'
 
   app 'Signal.app'
+
+  zap delete: '~/Library/Saved Application State/org.whispersystems.signal-desktop.savedState',
+      trash:  [
+                '~/Library/Application Support/Signal',
+                '~/Library/Preferences/org.whispersystems.signal-desktop.helper.plist',
+                '~/Library/Preferences/org.whispersystems.signal-desktop.plist',
+              ]
 end
