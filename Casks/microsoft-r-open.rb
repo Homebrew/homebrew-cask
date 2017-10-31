@@ -10,9 +10,8 @@ cask 'microsoft-r-open' do
   pkg "microsoft-r-open-#{version}.pkg"
 
   uninstall pkgutil: [
-                       'com.microsoft.pkg.untitled_package',
-                       'com.microsoft.rservices.mro2',
-                       'com.microsoft.rservices.mro1',
+                       'com.microsoft.pkg.mro-framework',
+                       'com.microsoft.pkg.mro-gui',
                      ],
             delete:  [
                        '/usr/bin/R',
