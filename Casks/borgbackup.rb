@@ -5,7 +5,7 @@ cask 'borgbackup' do
   # github.com/borgbackup/borg was verified as official when first introduced to the cask
   url "https://github.com/borgbackup/borg/releases/download/#{version}/borg-macosx64"
   appcast 'https://github.com/borgbackup/borg/releases.atom',
-          checkpoint: '99df3e9400b721345bd8c21e6e94b9957ce8d38fbff0b88d1be8d984b0d40147'
+          checkpoint: 'd22128da1dc5618f4a497403238d1930c39555764fa0b02926a1c23195b351b7'
   name 'BorgBackup'
   homepage 'https://borgbackup.readthedocs.io/en/stable/'
   gpg "#{url}.asc", key_id: '51F78E01'
