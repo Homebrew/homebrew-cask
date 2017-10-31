@@ -9,4 +9,6 @@ cask 'max' do
   homepage 'https://sbooth.org/Max/'
 
   app "Max-#{version}/Max.app"
+
+  zap trash: '~/Library/Preferences/comorg.sbooth.Max.plist'
 end
