@@ -9,11 +9,11 @@ cask 'sogouinput' do
 
   installer manual: '安装搜狗输入法.app'
 
-  uninstall delete: [
-                      '/Library/Input Methods/SogouInput.app',
-                      '/Library/LaunchAgents/com.sogou.SogouServices.plist',
-                      '/Library/QuickLook/SogouSkinFileQuickLook.qlgenerator',
-                    ]
+  uninstall delete:    [
+                         '/Library/Input Methods/SogouInput.app',
+                         '/Library/QuickLook/SogouSkinFileQuickLook.qlgenerator',
+                       ],
+            launchctl: 'com.sogou.SogouServices'
 
   zap trash:  [
                 '~/.sogouinput',
