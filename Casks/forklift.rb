@@ -1,10 +1,10 @@
 cask 'forklift' do
-  version '3.0.6'
-  sha256 'c2755a0538a8d9facf04af721368eab8bbb8b1568adf5b5132c7f78b7c1b36bd'
+  version '3.0.8'
+  sha256 '366d58504b4cd9f2eccf5a1e85c146de51c41279b01519592c1e1cf750d67906'
 
   url "http://download.binarynights.com/ForkLift#{version}.zip"
   appcast "https://updates.binarynights.com/ForkLift#{version.major}/update.xml",
-          checkpoint: '04cc308dec0dd16770e9c327f3ead161934af8a4241fb69c499aedc4db3f0e3e'
+          checkpoint: '8ac4cf3eee7db69bf963f3ca5695b01f7ee825edeb9a267da697ed31c009cd3b'
   name 'ForkLift'
   homepage 'https://binarynights.com/forklift/'
 
