@@ -11,6 +11,6 @@ cask 'rekordbox' do
 
   pkg "Install_rekordbox_#{version.dots_to_underscores}.pkg"
 
-  uninstall pkgutil: 'com.pioneer.rekordbox.5.*',
-            delete:  '/Applications/rekordbox 5/'
+  uninstall pkgutil: "com.pioneer.rekordbox.#{version.major}.*",
+            delete:  "/Applications/rekordbox #{version.major}"
 end
