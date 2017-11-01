@@ -1,4 +1,4 @@
-cask 'snapheal-pro' do
+cask 'snapheal-ck' do
   version '1.6.1193'
   sha256 '0989dcf995c1058c3f80f8898a8f590e079ae1aebedfd7f84dbef6a8bed72874'
 
