@@ -6,5 +6,5 @@ cask 'snagit' do
   name 'Snagit'
   homepage 'https://www.techsmith.com/snagit.html'
 
-  app 'Snagit.app'
+  app 'Snagit 2018.app'
 end
