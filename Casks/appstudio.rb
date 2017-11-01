@@ -3,7 +3,7 @@ cask 'appstudio' do
   sha256 :no_check
 
   # dl.dropboxusercontent.com/s/2w81ksjilfn2pu8 was verified as official when first introduced to the cask
-  url 'https://dl.dropboxusercontent.com/s/2w81ksjilfn2pu8/AppStudio.dmg?dl=0'
+  url 'https://dl.dropboxusercontent.com/s/2w81ksjilfn2pu8/AppStudio.dmg'
   name 'NSB/AppStudio'
   homepage 'https://www.nsbasic.com/'
 
