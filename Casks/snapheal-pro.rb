@@ -6,16 +6,16 @@ cask 'snapheal-pro' do
   url "https://creativekit.s3.amazonaws.com/SnaphealCK/SnaphealCKNA_Distribution_v#{version.dots_to_underscores}.zip"
   appcast 'http://cdn.macphun.com/updates/SnaphealMacPRO/appcast.xml',
           checkpoint: '41be23f355c922362ddf47f2847cfd5050122ecfb5a1e57860187f16b04765b6'
-  name 'Macphun Snapheal Pro'
+  name 'Macphun Snapheal CK'
   homepage 'https://macphun.com/snapheal'
 
-  app 'Snapheal Pro.app'
+  app 'Snapheal CK.app'
 
   uninstall quit: 'com.macphun.snaphealpro'
 
   zap delete: [
                 '~/Library/Caches/com.macphun.snaphealpro',
-                '~/Library/Application Support/Snapheal Pro',
+                '~/Library/Application Support/Snapheal CK',
                 '~/Library/Preferences/com.macphun.snaphealpro.plist',
               ]
 end
