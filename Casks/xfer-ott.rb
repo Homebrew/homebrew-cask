@@ -8,5 +8,5 @@ cask 'xfer-ott' do
 
   pkg 'Install_Xfer_OTT.pkg'
 
-  uninstall pkgutil: %r{com.xfer.OTT.*}
+  uninstall pkgutil: 'com.xfer.OTT.*'
 end
