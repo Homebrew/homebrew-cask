@@ -6,6 +6,8 @@ cask 'vyprvpn' do
   name 'VyprVPN'
   homepage 'https://www.goldenfrog.com/vyprvpn'
 
+  auto_updates true
+
   app 'VyprVPN.app'
 
   uninstall quit:      'com.goldenfrog.VyprVPN*',
