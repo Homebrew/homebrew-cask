@@ -1,40 +1,40 @@
 cask 'world-of-tanks' do
-  version '2.0.10'
+  version '2.0.12'
 
   # wot.gcdn.co was verified as official when first introduced to the cask
   language 'AT', 'BE', 'BG', 'CH', 'CZ', 'DE', 'DK', 'ES', 'FI', 'FR', 'GB', 'GR', 'HR', 'HU', 'IE', 'IT', 'LI', 'LT', 'LV', 'NL', 'NO', 'PL', 'PT', 'RO', 'RS', 'SE', 'SI', 'SK', 'TR' do
-    sha256 '429f70b03935ad464c8b856204af9ab119a8707b9c2046e7f7004f5498ceffab'
+    sha256 'dad35d658ccb1e2a688c67983e211a6ea46ba90774a7108c2c5d7556a55737a4'
 
     url 'https://wot.gcdn.co/eu/files/osx/worldoftanks_eu.dmg'
     appcast 'https://wot.gcdn.co/eu/files/osx/WoT_OSX_update_eu.xml',
-            checkpoint: '40b1f7f1bc25d9b7874d3b9b57c07eb9df951a60b6860f1b0d26d27e969c3470'
+            checkpoint: '0eb7e801e576dd1c4dab041e97dcb8b203a2499a19562afd174bcfc9414d4c98'
     homepage 'https://worldoftanks.eu/'
   end
 
   language 'CA', 'US', default: true do
-    sha256 '1269aa18b0cee5546413a91ca91da640d71ba2c79e997488055cfe905b4bc74e'
+    sha256 '2f814d414b64f1091d53dc4ca883c09f4417790b1fc05028a6b4796a8d3760fc'
 
     url 'https://wot.gcdn.co/us/files/osx/worldoftanks_na.dmg'
     appcast 'https://wot.gcdn.co/us/files/osx/WoT_OSX_update_na.xml',
-            checkpoint: 'd3f029945a0ca26d22e6b918308f6b2c243c060e891d16ebf2b7348ea5fbc858'
+            checkpoint: '98f407f3a2e3a16f80e0903c17086a4e6047da467ef47d02f67c4405deec0c1d'
     homepage 'https://worldoftanks.com/'
   end
 
   language 'CN', 'ID', 'IN', 'JP', 'KR', 'PH', 'SG', 'TH', 'TW', 'VN' do
-    sha256 '098241dde316754f6e7239a06695de62995035a6babab0780abfea19a1ef1f58'
+    sha256 '9a0a6e4fb8eb6c871df486beae3f825cfef574bab8c677a62d8975c3108ad340'
 
     url 'https://wot.gcdn.co/sea/files/osx/worldoftanks_asia.dmg'
     appcast 'https://wot.gcdn.co/sea/files/osx/WoT_OSX_update_asia.xml',
-            checkpoint: 'cd935dbefe8a98d6f2c3d1ebb176e85c3d5e57ae8286bbacf2e542b23cf8f874'
+            checkpoint: '19da07e443b58c5ae36f380b5084a410d38228592f316017125917f7b04599da'
     homepage 'https://worldoftanks.asia/'
   end
 
   language 'RU' do
-    sha256 '3553824ff2dd708fefc6d7d0e3ddb8b71b8237b02dfa676ba2dc5af91f452e16'
+    sha256 '4d404668635e7af7a3b3a1c094fd8e229e1a780e5badc8bd5cd55cdac2ebc338'
 
     url 'https://wot.gcdn.co/ru/files/osx/worldoftanks_ru.dmg'
     appcast 'https://wot.gcdn.co/ru/files/osx/WoT_OSX_update_ru.xml',
-            checkpoint: 'bb8f9ac59abd1d415c115a55468c4821f26043859067c7895264082878294858'
+            checkpoint: '8c912ed75f22062a97665477553d43f262b6aca71b0cd97df2f0cca8f2c9310a'
     homepage 'https://worldoftanks.ru/'
   end
 
