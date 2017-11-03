@@ -6,7 +6,5 @@ cask 'clickcharts' do
   name 'ClickCharts'
   homepage 'http://www.nchsoftware.com/'
 
-  container nested: 'ClickCharts_i.dmg'
-
   app 'ClickCharts.app'
 end
