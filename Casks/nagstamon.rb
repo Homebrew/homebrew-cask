@@ -1,15 +1,15 @@
 cask 'nagstamon' do
-  version '2.0.1'
-  sha256 'f4f89aee83592c3f6d0aa2453bede94a52fe9b8e5aebbea418c924c8784b2274'
+  version '3.0.1'
+  sha256 '3c99264e6665d0a8866ce1392a34432c596839732b7de1dfed30139dbf3850fa'
 
   # github.com/HenriWahl/Nagstamon was verified as official when first introduced to the cask
-  url "https://github.com/HenriWahl/Nagstamon/releases/download/#{version}/Nagstamon-#{version}.dmg"
+  url "https://github.com/HenriWahl/Nagstamon/releases/download/#{version}/Nagstamon.#{version}.dmg"
   appcast 'https://github.com/HenriWahl/Nagstamon/releases.atom',
-          checkpoint: '976107551883bf12bde9f40e9819997d5258ea91418d1bcb485178e3a052ac67'
+          checkpoint: 'cae04f1f3195434c1f84dca7e4f6ed90676883b552483eb1f754c02a5c19ec08'
   name 'Nagstamon'
   homepage 'https://nagstamon.ifw-dresden.de/'
 
-  app "Nagstamon-#{version}.app"
+  app 'Nagstamon.app'
 
   zap trash: '~/.nagstamon'
 end
