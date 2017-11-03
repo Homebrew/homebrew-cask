@@ -8,7 +8,7 @@ cask 'quicken-2018' do
 
   depends_on macos: '>= :yosemite'
 
-  app 'Quicken2018.app'
+  app 'Quicken.app'
 
   zap trash: [
                '~/Library/Perferences/com.quicken.Quicken.plist',
