@@ -9,7 +9,7 @@ cask 'nagstamon' do
   name 'Nagstamon'
   homepage 'https://nagstamon.ifw-dresden.de/'
 
-  app "Nagstamon-#{version}.app"
+  app 'Nagstamon.app'
 
   zap trash: '~/.nagstamon'
 end
