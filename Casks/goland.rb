@@ -1,4 +1,4 @@
-cask 'gogland' do
+cask 'goland' do
   # GoLand is EAP only for now
   version '1.0 EAP,173.3531.21'
   sha256 'd99a60d18c4c2621fa4643408963284630d74724019bf359bbf419707d1c2ab1'
@@ -18,6 +18,7 @@ cask 'gogland' do
     ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'Gogland') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }
   end
 
+  # The folders GoLand creates are still named Gogland. This should be checked after the first non-EAP release.
   zap delete: [
                 "~/Library/Caches/Gogland#{version.major_minor}",
                 "~/Library/Logs/Gogland#{version.major_minor}",
