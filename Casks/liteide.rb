@@ -5,7 +5,7 @@ cask 'liteide' do
   # downloads.sourceforge.net/liteide/liteidex was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/liteide/liteidex#{version}.macosx-qt5.zip"
   appcast 'https://github.com/visualfc/liteide/releases.atom',
-          checkpoint: 'dc7b56da16d71a7fb457ce0d12a74da6c4f31a99df129167e88c4a554deeab4e'
+          checkpoint: '9cfb38e688538cc323b96ba3dc99569f7a32b30f0759f532e64f02fecccc3245'
   name 'LiteIDE'
   homepage 'https://github.com/visualfc/liteide'
 
