@@ -1,10 +1,10 @@
 cask 'cloudytabs' do
-  version '1.7'
-  sha256 '7cf09822233e13be6d2b229a42f20cb06519939b722e10ee28eed50ff4dac22e'
+  version '1.8'
+  sha256 'fbaece85ea803f74fa6c1abf089445bd2722dae39649a1738d58cfeea03d5877'
 
   url "https://github.com/josh-/CloudyTabs/releases/download/v#{version}/CloudyTabs.zip"
   appcast 'https://github.com/josh-/CloudyTabs/releases.atom',
-          checkpoint: '3fc3f54a91ed4853c2baa31c2f167d4c322ee0f6bd57d10441035ac8a0ef6fcb'
+          checkpoint: 'b1a3921bc8e07b1c932632b5bea35f3e10899640ee37088c5897564396c78e03'
   name 'CloudyTabs'
   homepage 'https://github.com/josh-/CloudyTabs/'
 
