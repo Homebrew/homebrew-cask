@@ -9,5 +9,5 @@ cask 'phon' do
   name 'Phon'
   homepage 'https://www.phon.ca/phontrac'
 
-  app "Phon #{version.major}.#{version.minor}.app"
+  app "Phon #{version.major_minor}.app"
 end
