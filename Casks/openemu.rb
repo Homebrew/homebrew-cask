@@ -10,7 +10,7 @@ cask 'openemu' do
   # github.com/OpenEmu/OpenEmu was verified as official when first introduced to the cask
   url "https://github.com/OpenEmu/OpenEmu/releases/download/v#{version}/OpenEmu_#{version}.zip"
   appcast 'https://github.com/OpenEmu/OpenEmu/releases.atom',
-          checkpoint: '84f97c413ec9761bd524a6c058b7dacc2b85f8e1aa178fb18333e20f3d88fc3d'
+          checkpoint: '8bddce9919d7fe75e087a84265428d1a87cdf29b99ab52aec36f67cbc32641de'
   name 'OpenEmu'
   homepage 'http://openemu.org/'
 
