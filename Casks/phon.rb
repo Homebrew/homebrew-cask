@@ -10,6 +10,4 @@ cask 'phon' do
   homepage 'https://www.phon.ca/phontrac'
 
   app "Phon #{version.major}.#{version.minor}.app"
-
-  caveats 'Phon uses several unicode fonts which are not installed with the application. To ensure the best possible experience, please ensure these fonts are installed. Please visit https://www.phon.ca/phontrac/wiki/CompleteInstall'
 end
