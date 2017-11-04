@@ -19,6 +19,7 @@ cask 'openemu' do
   zap delete: [
                 '~/Library/Caches/org.openemu.OpenEmu',
                 '~/Library/Saved Application State/org.openemu.OpenEmu.savedState',
+                '~/Library/Cookies/org.openemu.OpenEmu.binarycookies',
               ],
       trash:  [
                 '~/Library/Application Support/OpenEmu',
@@ -45,5 +46,6 @@ cask 'openemu' do
                 '~/Library/Preferences/org.openemu.TwoMbit.plist',
                 '~/Library/Preferences/org.openemu.VecXGL.plist',
                 '~/Library/Preferences/org.openemu.VisualBoyAdvance.plist',
+                '~/Library/Preferences/org.openemu.mGBA.plist',
               ]
 end
