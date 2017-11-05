@@ -9,5 +9,5 @@ cask 'keystore-explorer' do
   name 'KeyStore Explorer'
   homepage 'http://keystore-explorer.org/'
 
-  app "KeyStore Explorer #{version}.app"
+  app 'KeyStore Explorer.app'
 end
