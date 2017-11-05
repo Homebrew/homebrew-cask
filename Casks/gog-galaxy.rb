@@ -18,9 +18,14 @@ cask 'gog-galaxy' do
                        ]
 
   zap delete: [
-                '/Library/PrivilegedHelperTools/com.gog.galaxy.ClientService',
-                '/Users/Shared/GOG.com',
-                '~/Library/Preferences/com.gog.galaxy.cef.renderer.plist',
                 '~/Library/Saved Application State/com.gog.galaxy.savedState',
+                '/Library/LaunchDaemons/com.gog.galaxy.ClientService.plist',
+                '/Library/PrivilegedHelperTools/com.gog.galaxy.ClientService',
+              ],
+      trash:  [
+                '~/Library/Application Support/GOG.com',
+                '~/Library/Preferences/com.gog.galaxy.cef.renderer.plist',
+                '~/Library/Preferences/com.gog.galaxy.plist',
+                '/Users/Shared/GOG.com',
               ]
 end
