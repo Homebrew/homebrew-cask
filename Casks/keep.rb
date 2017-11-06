@@ -1,6 +1,6 @@
 cask 'keep' do
   version '0.4.0'
-  sha256 :no_check
+  sha256 'e7a750deb250f21ef8b0e11bb01c62299d1574779bcfc83d74c5e238f1e40889'
 
   url "https://github.com/tmcinerney/keep/releases/download/v#{version}/keep.v#{version}.zip"
   appcast 'https://github.com/tmcinerney/keep/releases.atom',
@@ -12,12 +12,17 @@ cask 'keep' do
 
   app 'Keep.app'
 
-  uninstall quit: 'com.electron.keep'
+  uninstall signal: [
+                      ['TERM', 'com.electron.keep'],
+                      ['TERM', 'com.electron.keep.helper'],
+                    ]
 
-  zap delete: '~/Library/Caches/com.electron.keep',
+  zap delete: [
+                '~/Library/Caches/com.electron.keep',
+                '~/Library/Saved Application State/com.electron.keep.savedState',
+              ],
       trash:  [
                 '~/Library/Application Support/Keep',
-                '~/Library/Saved Application State/com.electron.keep.savedState',
                 '~/Library/Preferences/com.electron.keep.plist',
                 '~/Library/Preferences/com.electron.keep.helper.plist',
               ]
