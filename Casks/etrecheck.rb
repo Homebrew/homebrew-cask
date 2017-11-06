@@ -8,9 +8,9 @@ cask 'etrecheck' do
 
   app 'EtreCheck.app'
 
-  zap trash:  '~/Library//Preferences/com.etresoft.EtreCheck.plist',
-      delete: [
+  zap delete: [
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.etresoft.etrecheck.sfl',
                 '~/Library/Caches/com.etresoft.EtreCheck',
-              ]
+              ],
+      trash:  '~/Library//Preferences/com.etresoft.EtreCheck.plist'
 end
