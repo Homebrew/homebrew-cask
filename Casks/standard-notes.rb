@@ -13,5 +13,5 @@ cask 'standard-notes' do
 
   app 'Standard Notes.app'
 
-  zap delete: '~/Library/Application Support/Standard Notes'
+  zap trash: '~/Library/Application Support/Standard Notes'
 end
