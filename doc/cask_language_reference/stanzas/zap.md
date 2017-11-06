@@ -23,4 +23,4 @@ The form of `zap` stanza follows the [`uninstall` stanza](uninstall.md). All of 
 
 For removing user-generated data such as preferences and application support files and folders, use only the `trash:` key.
 
-Example: [injection.rb](https://github.com/caskroom/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/injection.rb#L16)
+Example: [dropbox.rb](https://github.com/caskroom/homebrew-cask/blob/4690b1cfe65ab4bec1b1a2545e2275450aba52d5/Casks/dropbox.rb#L26)
