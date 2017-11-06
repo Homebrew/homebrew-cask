@@ -13,5 +13,9 @@ cask 'standard-notes' do
 
   app 'Standard Notes.app'
 
-  zap trash: '~/Library/Application Support/Standard Notes'
+  zap trash: [
+               '~/Library/Application Support/Standard Notes',
+               '~/Library/Preferences/org.standardnotes.standardnotes.plist',
+               '~/Library/Preferences/org.standardnotes.standardnotes.helper.plist',
+             ]
 end
