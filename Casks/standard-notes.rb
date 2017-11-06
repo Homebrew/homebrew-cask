@@ -9,5 +9,7 @@ cask 'standard-notes' do
   name 'Standard Notes'
   homepage 'https://standardnotes.org/'
 
+  auto_updates true
+
   app 'Standard Notes.app'
 end
