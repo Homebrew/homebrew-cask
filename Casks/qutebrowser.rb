@@ -11,9 +11,9 @@ cask 'qutebrowser' do
 
   app 'qutebrowser.app'
 
-  zap delete: [
+  zap delete: '~/Library/Caches/qutebrowser',
+      trash:  [
                 '~/Library/Application Support/qutebrowser',
                 '~/Library/Preferences/qutebrowser',
-                '~/Library/Caches/qutebrowser',
               ]
 end
