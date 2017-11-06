@@ -35,7 +35,7 @@ Since `pkg` installers can do arbitrary things, different techniques are needed 
   - `sudo:` - set to `true` if the script needs `sudo`
 * `delete:` (string or array) - single-quoted, absolute paths of files or directory trees to remove. `delete:` should only be used as a last resort. `pkgutil:` is strongly preferred.
 * `rmdir:` (string or array) - single-quoted, absolute paths of directories to remove if empty
-* `trash:` (string or array) - single-quoted, absolute paths of files or directory trees to move to Trash. `trash:` should only be used for user-generated data (i.e. preferences).
+* `trash:` (string or array) - single-quoted, absolute paths of files or directory trees to move to Trash. `trash:` should only be used for user-generated data (i.e. preferences, application support).
 
 Each `uninstall` technique is applied according to the order above. The order in which `uninstall` keys appear in the Cask file is ignored.
 
