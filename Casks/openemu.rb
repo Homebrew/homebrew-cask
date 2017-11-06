@@ -17,9 +17,13 @@ cask 'openemu' do
   app 'OpenEmu.app'
 
   zap delete: [
+                '~/Library/Caches/org.openemu.OpenEmu',
+                '~/Library/Saved Application State/org.openemu.OpenEmu.savedState',
+                '~/Library/Cookies/org.openemu.OpenEmu.binarycookies',
+              ],
+      trash:  [
                 '~/Library/Application Support/OpenEmu',
                 '~/Library/Application Support/org.openemu.OEXPCCAgent.Agents',
-                '~/Library/Caches/org.openemu.OpenEmu',
                 '~/Library/Preferences/org.openemu.Atari800.plist',
                 '~/Library/Preferences/org.openemu.Bliss.plist',
                 '~/Library/Preferences/org.openemu.CrabEmu.plist',
@@ -42,6 +46,6 @@ cask 'openemu' do
                 '~/Library/Preferences/org.openemu.TwoMbit.plist',
                 '~/Library/Preferences/org.openemu.VecXGL.plist',
                 '~/Library/Preferences/org.openemu.VisualBoyAdvance.plist',
-                '~/Library/Saved Application State/org.openemu.OpenEmu.savedState',
+                '~/Library/Preferences/org.openemu.mGBA.plist',
               ]
 end

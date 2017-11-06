@@ -7,7 +7,7 @@ cask 'aluxian-messenger' do
   appcast 'https://github.com/aluxian/Messenger-for-Desktop/releases.atom',
           checkpoint: '6e086c442958580c749ef28b6fda0946a9f8ae20215407548f476380963bf00b'
   name 'Messenger for Desktop'
-  homepage 'https://messengerfordesktop.com/'
+  homepage 'https://messengerfordesktop.org/'
 
   auto_updates true
 

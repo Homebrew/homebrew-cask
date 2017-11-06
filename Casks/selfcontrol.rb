@@ -3,13 +3,13 @@ cask 'selfcontrol' do
     version '1.5.1'
     sha256 'd3823a1e9ba0b47dc2cb39c93cd51837c2dafc7d5a5a564825f4a440fd2ab9ad'
   else
-    version '2.2.1'
-    sha256 'aee5d3f5d48c8e073aee1d5ad15feb966018c8b5f9a3ca217c30e87c934d8d74'
+    version '2.2.2'
+    sha256 '2cf92f8f142d630ed8cf77308599fa00fd610ec9fbafafcea27773974afdd4e1'
   end
 
   url "http://downloads.selfcontrolapp.com/SelfControl-#{version}.zip"
   appcast 'https://selfcontrolapp.com/SelfControlAppcast.xml',
-          checkpoint: 'b61ac0ef34e3b92390b5c178293c2a72cc59d46040d43c99cc8ea084dcd99abd'
+          checkpoint: '1c9bb5002cfcf7deed8d96532d27ba3a07ffb38e9dbe2354ae7a0eddf000842a'
   name 'SelfControl'
   homepage 'https://selfcontrolapp.com/'
 

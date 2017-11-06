@@ -1,10 +1,10 @@
 cask 'festify' do
-  version '0.2.8'
-  sha256 'd465c7e2df2762a2e39e05f56086be36a6707834fac1420a95fe9201329d2856'
+  version '0.2.10'
+  sha256 '884b9f0f5e6413fdcec547f0c414c8ed7ab3992bf348218cd0e298557522ee3d'
 
   url "https://github.com/festify/app/releases/download/v#{version}/Festify-#{version}.dmg"
   appcast 'https://github.com/Festify/app/releases.atom',
-          checkpoint: 'b23017ef4a2fa2efd2ba9a4c738f2eb0ba801cb0505de8bbf65730f7ebb1a4a9'
+          checkpoint: '02408830be2ec73a2b0d8c09af58fad2b55b0da7f9ce72b0df27581c95375403'
   name 'Festify'
   homepage 'https://github.com/festify/app'
 
