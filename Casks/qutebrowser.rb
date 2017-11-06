@@ -5,9 +5,15 @@ cask 'qutebrowser' do
   # github.com/qutebrowser/qutebrowser was verified as official when first introduced to the cask
   url "https://github.com/qutebrowser/qutebrowser/releases/download/v#{version}/qutebrowser-#{version}.dmg"
   appcast 'https://github.com/qutebrowser/qutebrowser/releases.atom',
-          checkpoint: '84277963356ff7826c4a03cf358ae22231b1cbcd995beba14814a13876b34808'
+          checkpoint: '36765055620918390d2ef6507087adea18f18ef0bdadd69213d077489a298a60'
   name 'qutebrowser'
   homepage 'https://www.qutebrowser.org/'
 
   app 'qutebrowser.app'
+
+  zap delete: '~/Library/Caches/qutebrowser',
+      trash:  [
+                '~/Library/Application Support/qutebrowser',
+                '~/Library/Preferences/qutebrowser',
+              ]
 end
