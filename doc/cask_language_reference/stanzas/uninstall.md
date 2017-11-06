@@ -173,11 +173,13 @@ Arguments to `uninstall delete:` should use the following basic rules:
 * Paths must be absolute.
 * Glob expansion is performed using the [standard set of characters](https://en.wikipedia.org/wiki/Glob_(programming)).
 
-To remove user-specific files, use the `zap` stanza.
+To delete user-specific files such as caches and saved application states, use the `zap` stanza instead of `uninstall`.
 
 ## uninstall Key trash:
 
-*stub* - currently a synonym for `delete:`. In the future this will cause files to be moved to the Trash. It is best not to use this stub until it gains the proper functionality.
+`trash:` arguments follow the same rules listed above for `delete:`.
+
+To trash user-specific files such as preferences and application support, use the `zap` stanza instead of `uninstall`.
 
 ## Working With a pkg File Manually
 
