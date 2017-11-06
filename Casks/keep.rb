@@ -8,8 +8,6 @@ cask 'keep' do
   name 'Keep'
   homepage 'https://github.com/tmcinerney/keep/'
 
-  auto_updates true
-
   app 'Keep.app'
 
   uninstall signal: [
