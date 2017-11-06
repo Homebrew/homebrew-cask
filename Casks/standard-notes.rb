@@ -12,4 +12,6 @@ cask 'standard-notes' do
   auto_updates true
 
   app 'Standard Notes.app'
+  
+  zap trash: '~/Library/Application Support/Standard Notes'
 end
