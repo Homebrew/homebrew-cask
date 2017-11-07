@@ -12,4 +12,15 @@ cask 'standard-notes' do
   auto_updates true
 
   app 'Standard Notes.app'
+
+  zap delete: [
+                '~/Library/Caches/org.standardnotes.standardnotes',
+                '~/Library/Caches/org.standardnotes.standardnotes.ShipIt',
+                '~/Library/Saved Application State/org.standardnotes.standardnotes.savedState',
+              ],
+      trash:  [
+                '~/Library/Application Support/Standard Notes',
+                '~/Library/Preferences/org.standardnotes.standardnotes.plist',
+                '~/Library/Preferences/org.standardnotes.standardnotes.helper.plist',
+              ]
 end
