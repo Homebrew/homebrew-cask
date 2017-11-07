@@ -11,4 +11,10 @@ cask 'mpv' do
 
   app 'mpv.app'
   binary "#{appdir}/mpv.app/Contents/MacOS/mpv"
+
+  zap delete: '~/Library/Logs/mpv.log',
+      trash:  [
+                '~/.config/mpv',
+                '~/Library/Preferences/io.mpv.plist',
+              ]
 end
