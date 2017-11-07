@@ -18,12 +18,12 @@ cask 'atom' do
 
   zap delete: [
                 '~/.atom',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.atom.sfl',
                 '~/Library/Caches/com.github.atom',
                 '~/Library/Caches/com.github.atom.ShipIt',
                 '~/Library/Saved Application State/com.github.atom.savedState',
               ],
       trash:  [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.atom.sfl',
                 '~/Library/Application Support/ShipIt_stderr.log',
                 '~/Library/Application Support/Atom',
                 '~/Library/Application Support/ShipIt_stdout.log',
