@@ -8,4 +8,6 @@ cask 'kiibohd-configurator' do
   homepage 'http://kiibohd.com/'
 
   app 'Kiibohd Configurator.app'
+
+  depends_on formula: 'dfu-util'
 end
