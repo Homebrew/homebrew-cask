@@ -12,7 +12,7 @@ cask 'djview' do
 
   zap delete: [
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.djvu.djview.sfl',
-                '~/Library/Preferences/org.djvu.DjView.plist',
                 '~/Library/Saved Application State/org.djvu.DjView.savedState',
-              ]
+              ],
+      trash:  '~/Library/Preferences/org.djvu.DjView.plist'
 end
