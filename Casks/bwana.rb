@@ -7,4 +7,7 @@ cask 'bwana' do
   homepage 'https://www.bruji.com/bwana/'
 
   app 'Bwana.app'
+
+  zap delete: '~/Library/Caches/Bwana',
+      trash:  '~/Library/Preferences/com.bruji.bwana.plist'
 end
