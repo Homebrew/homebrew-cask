@@ -4,7 +4,7 @@ cask 'keepingyouawake' do
 
   url "https://github.com/newmarcel/KeepingYouAwake/releases/download/#{version}/KeepingYouAwake-#{version}.zip"
   appcast 'https://github.com/newmarcel/KeepingYouAwake/releases.atom',
-          checkpoint: '6753757455cfc3cba1d75219b941fa5abc7cc1df322c090764cf020caa8bd0b7'
+          checkpoint: '27d3c30f31fafcec101e4f902ffd27ef62091b5ff28cd0c9f3bd7c77c49a0134'
   name 'KeepingYouAwake'
   homepage 'https://github.com/newmarcel/KeepingYouAwake'
 
@@ -16,9 +16,11 @@ cask 'keepingyouawake' do
 
   zap delete: [
                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/info.marcel-dierkes.keepingyouawake.sfl',
-                '~/Library/Application Support/info.marcel-dierkes.KeepingYouAwake',
                 '~/Library/Caches/info.marcel-dierkes.KeepingYouAwake',
-                '~/Library/Preferences/info.marcel-dierkes.KeepingYouAwake.plist',
                 '~/Library/Saved Application State/info.marcel-dierkes.KeepingYouAwake.savedState',
+              ],
+      trash:  [
+                '~/Library/Application Support/info.marcel-dierkes.KeepingYouAwake',
+                '~/Library/Preferences/info.marcel-dierkes.KeepingYouAwake.plist',
               ]
 end
