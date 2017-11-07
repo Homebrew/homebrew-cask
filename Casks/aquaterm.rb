@@ -12,5 +12,5 @@ cask 'aquaterm' do
 
   uninstall pkgutil: 'net.sourceforge.aquaterm.aquaterm.*'
 
-  zap       delete: '~/Library/Preferences/net.sourceforge.aquaterm.plist'
+  zap trash: '~/Library/Preferences/net.sourceforge.aquaterm.plist'
 end
