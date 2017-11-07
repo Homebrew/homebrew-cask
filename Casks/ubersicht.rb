@@ -13,10 +13,12 @@ cask 'ubersicht' do
   uninstall login_item: 'Übersicht'
 
   zap delete: [
+                '~/Library/Caches/tracesOf.Uebersicht',
+                '~/Library/WebKit/tracesOf.Uebersicht',
+              ],
+      trash:  [
                 '~/Library/Application Support/tracesOf.Uebersicht',
                 '~/Library/Application Support/Übersicht',
-                '~/Library/Caches/tracesOf.Uebersicht',
                 '~/Library/Preferences/tracesOf.Uebersicht.plist',
-                '~/Library/WebKit/tracesOf.Uebersicht',
               ]
 end
