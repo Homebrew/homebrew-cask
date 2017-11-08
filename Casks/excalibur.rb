@@ -9,4 +9,7 @@ cask 'excalibur' do
   homepage 'http://excalibur.sourceforge.net/'
 
   app 'Excalibur.app'
+
+  zap delete: '~/Library/Saved Application State/edu.bucknell.Excalibur.savedState',
+      trash:  '~/Library/Preferences/Excalibur Preferences'
 end
