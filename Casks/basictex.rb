@@ -22,7 +22,7 @@ cask 'basictex' do
                        '/Library/TeX',
                      ]
 
-  zap delete: "~/Library/texlive/#{version.major}2017",
+  zap delete: "~/Library/texlive/#{version.major}basic",
       trash:  '/usr/local/texlive/texmf-local',
       rmdir:  [
                 '/usr/local/texlive',
