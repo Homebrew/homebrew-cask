@@ -1,4 +1,4 @@
-cask 'high-sierra-media-key-enabler' do
+cask 'highsierramediakeyenabler' do
   version :latest
   sha256 :no_check
 
