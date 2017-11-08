@@ -1,10 +1,10 @@
 cask 'flume' do
   version '2.8.2'
-  sha256 '8fee477756acca8abdb2fb615d22d05ddaf812b993aca5c29fa9ab2e39109147'
+  sha256 'fcaf509db286979a713c73d23755b2f9927f23e108383fda2738d61ea60cadee'
 
   url "https://flumeapp.com/files/Flume-#{version}.zip"
   appcast 'https://rink.hockeyapp.net/api/2/apps/c88c56b02dcd4dd3acceb6d7a24f7122',
-          checkpoint: 'a5e5d44a7bf0bd72a1474088dc89fef61e51b95f290aab0706d8c788a02924a1'
+          checkpoint: 'b05bf16264e66bfe94cd090d515f74015eed0243cd3d0a0a8e6c463fd0df60ca'
   name 'Flume'
   homepage 'https://flumeapp.com/'
 
