@@ -15,5 +15,13 @@ cask 'cardhop' do
   uninstall launchctl: 'com.flexibits.cardhop.mac.launcher',
             quit:      'com.flexibits.cardhop.mac'
 
-  zap trash: '~/Library/Preferences/com.flexibits.cardhop.plist'
+  zap trash: [
+               '~/Library/Preferences/com.flexibits.cardhop.mac.plist',
+               '~/Library/Application Scripts/com.flexibits.cardhop.mac',
+               '~/Library/Application Scripts/com.flexibits.cardhop.mac.launcher',
+               '~/Library/Application Scripts/com.flexibits.cardhop.mac.BluetoothDialer',
+               '~/Library/Containers/com.flexibits.cardhop.mac',
+               '~/Library/Containers/com.flexibits.cardhop.mac.launcher',
+               '~/Library/Containers/com.flexibits.cardhop.mac.BluetoothDialer',
+             ]
 end
