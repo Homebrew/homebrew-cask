@@ -14,8 +14,12 @@ cask 'colorsnapper' do
   uninstall quit: 'com.koolesache.ColorSnapper2'
 
   zap delete: [
-                '~/Library/Application Support/ColorSnapper2',
                 '~/Library/Caches/com.koolesache.ColorSnapper2',
+                '~/Library/Cookies/com.koolesache.ColorSnapper2.binarycookies',
+              ],
+      trash:  [
+                '~/Library/Application Support/ColorSnapper2',
+                '~/Library/Application Support/com.koolesache.ColorSnapper2',
                 '~/Library/Preferences/com.koolesache.ColorSnapper2.plist',
               ]
 end
