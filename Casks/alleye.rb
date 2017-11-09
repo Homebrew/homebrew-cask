@@ -7,5 +7,5 @@ cask 'alleye' do
   name 'AllEye'
   homepage 'http://all-eye.io/'
 
-  app 'allEye.app'
+  app '▲llEye.app'
 end
