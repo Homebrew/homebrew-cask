@@ -14,16 +14,16 @@ cask 'skype-for-business' do
   uninstall pkgutil:    [
                           'com.microsoft.SkypeForBusiness',
                           'com.microsoft.SkypeForBusiness.MeetingJoinPlugin',
-                          'com.microsoft.package.Microsoft_AutoUpdate.app',
                         ],
             login_item: 'Skype for Business'
 
-  zap delete: [
-                '/Library/Internet Plug-Ins/MeetingJoinPlugin.plugin',
-                '~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.plist',
-                '~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.debuglogging.plist',
-                '~/Library/Application Support/com.microsoft.SkypeForBusinessTAP',
-                '~/Library/Application Support/Skype for Business',
-              ],
-      rmdir:  '/Library/Application Support/Microsoft'
+  zap delete:  [
+                 '/Library/Internet Plug-Ins/MeetingJoinPlugin.plugin',
+                 '~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.plist',
+                 '~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.debuglogging.plist',
+                 '~/Library/Application Support/com.microsoft.SkypeForBusinessTAP',
+                 '~/Library/Application Support/Skype for Business',
+               ],
+      rmdir:   '/Library/Application Support/Microsoft',
+      pkgutil: 'com.microsoft.package.Microsoft_AutoUpdate.app'
 end
