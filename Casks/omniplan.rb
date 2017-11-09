@@ -10,6 +10,8 @@ cask 'omniplan' do
 
   zap trash: [
                '~/Library/Application Scripts/com.omnigroup.OmniPlan3',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.omnigroup.omniplan3.sfl',
                '~/Library/Containers/com.omnigroup.OmniPlan3',
+               '~/Library/Preferences/com.omnigroup.OmniPlan3.plist',
              ]
 end
