@@ -20,6 +20,12 @@ cask 'basictex' do
                        '/etc/paths.d/TeX',
                        '/etc/manpaths.d/TeX',
                        '/Library/TeX',
-                     ],
-            rmdir:   '/usr/local/texlive'
+                     ]
+
+  zap delete: "~/Library/texlive/#{version.major}basic",
+      trash:  '/usr/local/texlive/texmf-local',
+      rmdir:  [
+                '/usr/local/texlive',
+                '~/Library/texlive',
+              ]
 end
