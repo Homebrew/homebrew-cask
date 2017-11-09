@@ -11,4 +11,15 @@ cask 'texshop' do
   depends_on macos: '>= :mountain_lion'
 
   app 'TeXShop.app'
+
+  zap delete: [
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/texshop.sfl*',
+                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/TeXShop Help*',
+                '~/Library/Caches/TeXShop',
+                '~/Library/TeXShop',
+              ],
+      trash:  [
+                '~/Library/Application Support/TeXShop',
+                '~/Library/Preferences/TeXShop.plist',
+              ]
 end
