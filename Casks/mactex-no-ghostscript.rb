@@ -45,35 +45,42 @@ cask 'mactex-no-ghostscript' do
                        '/usr/local/texlive/2017',
                        '/Applications/TeX',
                        '/Library/PreferencePanes/TeXDistPrefPane.prefPane',
+                       '/Library/TeX',
                        '/etc/paths.d/TeX',
                        '/etc/manpaths.d/TeX',
                      ]
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/texshop.sfl*',
-                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/TeXShop Help*',
-                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/edu.ucsd.cs.mmccrack.bibdesk.help',
-                '~/Library/Caches/edu.ucsd.cs.mmccrack.bibdesk',
-                '~/Library/Caches/fr.chachatelier.pierre.LaTeXiT',
-                '~/Library/Caches/TeXShop',
-                '~/Library/Saved Application State/edu.bucknell.Excalibur.savedState',
-                '~/Library/texlive/2017',
-                '~/Library/TeXShop',
-              ],
-      trash:  [
-                '/usr/local/texlive/texmf-local',
-                '~/Library/Application Support/BibDesk',
-                '~/Library/Application Support/TeXShop',
-                '~/Library/Application Support/TeX Live Utility',
-                '~/Library/Preferences/edu.ucsd.cs.mmccrack.bibdesk.plist',
-                '~/Library/Preferences/Excalibur Preferences',
-                '~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist',
-                '~/Library/Preferences/TeXShop.plist',
-              ],
-      rmdir:  [
-                '/usr/local/texlive',
-                '~/Library/texlive',
-              ]
+  zap trash: [
+               '/usr/local/texlive/texmf-local',
+               '~/Library/texlive/2017',
+               # TexShop:
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/texshop.sfl*',
+               '~/Library/Application Support/TeXShop',
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/TeXShop Help*',
+               '~/Library/Caches/TeXShop',
+               '~/Library/Preferences/TeXShop.plist',
+               '~/Library/TeXShop',
+               # BibDesk:
+               '~/Library/Application Support/BibDesk',
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/edu.ucsd.cs.mmccrack.bibdesk.help*',
+               '~/Library/Caches/edu.ucsd.cs.mmccrack.bibdesk',
+               '~/Library/Cookies/edu.ucsd.cs.mmccrack.bibdesk.binarycookies',
+               '~/Library/Preferences/edu.ucsd.cs.mmccrack.bibdesk.plist',
+               # LaTeXiT:
+               '~/Library/Caches/fr.chachatelier.pierre.LaTeXiT',
+               '~/Library/Cookies/fr.chachatelier.pierre.LaTeXiT.binarycookies',
+               '~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist',
+               # TeX Live Utility:
+               '~/Library/Application Support/TeX Live Utility',
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/TeX Live Utility Help*',
+               # Excalibur:
+               '~/Library/Preferences/Excalibur Preferences',
+               '~/Library/Saved Application State/edu.bucknell.Excalibur.savedState',
+             ],
+      rmdir: [
+               '/usr/local/texlive',
+               '~/Library/texlive',
+             ]
 
   caveats <<~EOS
     This Cask installs ghostscript from Homebrew instead of the one packaged with MacTeX.
