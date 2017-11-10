@@ -9,5 +9,5 @@ cask 'abricotine' do
   name 'abricotine'
   homepage 'https://abricotine.brrd.fr/'
 
-  app 'Abricotine-darwin-x64/Abricotine.app'
+  app 'Abricotine.app'
 end
