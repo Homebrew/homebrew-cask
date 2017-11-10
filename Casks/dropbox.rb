@@ -10,7 +10,8 @@ cask 'dropbox' do
 
   app 'Dropbox.app'
 
-  uninstall login_item: 'Dropbox'
+  uninstall login_item: 'Dropbox',
+            launchctl:  'com.dropbox.DropboxMacUpdate.agent.plist'
 
   zap delete: [
                 '/Library/DropboxHelperTools',
@@ -23,7 +24,6 @@ cask 'dropbox' do
                 '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.dropbox.DropboxMacUpdate',
                 '~/Library/Containers/com.getdropbox.dropbox.garcon',
                 '~/Library/Group Containers/com.getdropbox.dropbox.garcon',
-                '~/Library/LaunchAgents/com.dropbox.DropboxMacUpdate.agent.plist',
                 '~/Library/Logs/Dropbox_debug.log',
               ],
       trash:  [
