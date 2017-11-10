@@ -1,10 +1,10 @@
 cask 'electrum' do
-  version '2.9.3'
-  sha256 '228fd5d7e4bc151604ba814fbe5b25be994dfb33e51f3b7ecf58246856aef0b4'
+  version '3.0.1'
+  sha256 'b2961dfda31aa7b2365bc438b56a6937b248e0bd94a5d9698f4bebfedafb5701'
 
   url "https://download.electrum.org/#{version}/electrum-#{version}.dmg"
   appcast 'https://github.com/spesmilo/electrum/releases.atom',
-          checkpoint: 'cc6fee2cd1357ad49eeed0dafccf340e6133ebf1202ab5508d4de9e567a85144'
+          checkpoint: 'e4bb1abefa115062034ffffaea9faddc97cb6a70e8fd361afee4e61b16e496e7'
   name 'Electrum'
   homepage 'https://electrum.org/'
   gpg "#{url}.asc", key_id: '6694d8de7be8ee5631bed9502bd5824b7f9470e6'
