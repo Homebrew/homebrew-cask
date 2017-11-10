@@ -9,5 +9,7 @@ cask 'blockstack' do
   name 'Blockstack'
   homepage 'https://blockstack.org/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Blockstack.app'
 end
