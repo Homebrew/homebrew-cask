@@ -13,7 +13,7 @@ cask 'coda' do
   app "Coda #{version.major}.app"
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.panic.coda2.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.panic.coda2.sfl*',
                 "~/Library/Caches/com.apple.helpd/Generated/com.panic.Coda#{version.major}.help",
                 "~/Library/Caches/com.panic.Coda#{version.major}",
                 "~/Library/Saved Application State/com.panic.Coda#{version.major}.savedState",

@@ -90,7 +90,7 @@ cask 'torbrowser' do
 
   app 'TorBrowser.app'
 
-  zap delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.tor browser.sfl',
+  zap delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.tor browser.sfl*',
       trash:  [
                 '~/Library/Application Support/TorBrowser-Data',
                 '~/Library/Preferences/org.mozilla.tor browser.plist',

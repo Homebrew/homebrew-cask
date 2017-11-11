@@ -12,7 +12,7 @@ cask 'base' do
 
   zap delete: [
                 '~/Library/Application Support/Base',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/uk.co.menial.base.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/uk.co.menial.base.sfl*',
                 '~/Library/Caches/com.apple.helpd/Generated/uk.co.menial.base.help',
                 '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/uk.co.menial.base.help*',
                 '~/Library/Caches/uk.co.menial.Base',

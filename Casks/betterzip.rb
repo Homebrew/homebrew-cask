@@ -15,7 +15,7 @@ cask 'betterzip' do
 
   zap delete: [
                 '~/Library/Application Scripts/com.macitbetter.betterzip.findersyncextension',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macitbetter.betterzip.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macitbetter.betterzip.sfl*',
                 '~/Library/Caches/com.apple.helpd/Generated/com.macitbetter.betterzip.help',
                 '~/Library/Caches/com.macitbetter.betterzip',
                 '~/Library/Containers/com.macitbetter.betterzip.findersyncextension',

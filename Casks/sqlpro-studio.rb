@@ -11,6 +11,6 @@ cask 'sqlpro-studio' do
 
   zap delete: [
                 '~/Library/Containers/com.hankinsoft.osx.sqlprostudio',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.sqlprostudio.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.sqlprostudio.sfl*',
               ]
 end

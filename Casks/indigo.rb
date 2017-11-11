@@ -18,7 +18,7 @@ cask 'indigo' do
                        ]
 
   zap delete: [
-                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.perceptiveautomation.indigo-client#{version.major}.sfl",
+                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.perceptiveautomation.indigo-client#{version.major}.sfl*",
                 '~/Library/Caches/com.perceptiveautomation.indigo-client6',
                 '~/Library/Caches/com.perceptiveautomation.indigo-server',
               ],

@@ -12,6 +12,6 @@ cask 'luminance-hdr' do
 
   zap delete: [
                 '~/Library/Preferences/com.luminance-hdr.plist',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.luminance-hdr.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.luminance-hdr.sfl*',
               ]
 end

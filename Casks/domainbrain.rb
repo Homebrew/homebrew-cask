@@ -15,7 +15,7 @@ cask 'domainbrain' do
 
   zap delete: [
                 '~/Library/Application Support/DomainBrain',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.onebuttonmouse.domainbrain2.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.onebuttonmouse.domainbrain2.sfl*',
                 '~/Library/Preferences/com.onebuttonmouse.DomainBrain2.plist',
               ]
 end

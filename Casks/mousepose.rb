@@ -15,6 +15,6 @@ cask 'mousepose' do
                 '~/Library/Caches/com.boinx.Mousepose/',
                 '~/Library/Cookies/com.boinx.Mousepose.binarycookies',
                 '~/Library/Preferences/com.boinx.Mousepose.plist',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.boinx.mousepose.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.boinx.mousepose.sfl*',
               ]
 end

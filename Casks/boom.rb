@@ -22,8 +22,8 @@ cask 'boom' do
 
   zap delete: [
                 '~/Library/Application Support/com.globaldelight.Boom2',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.globaldelight.boom2.sfl',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.globaldelight.boom2daemon.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.globaldelight.boom2.sfl*',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.globaldelight.boom2daemon.sfl*',
                 '~/Library/Preferences/com.globaldelight.Boom2.plist',
                 '~/Library/Preferences/com.globaldelight.Boom2Daemon.plist',
               ]

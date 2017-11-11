@@ -11,6 +11,6 @@ cask 'sqlpro-for-mssql' do
 
   zap delete: [
                 '~/Library/Containers/com.hankinsoft.osx.tinysqlstudio',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.tinysqlstudio.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.tinysqlstudio.sfl*',
               ]
 end

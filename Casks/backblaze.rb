@@ -16,8 +16,8 @@ cask 'backblaze' do
 
   zap       delete: [
                       '/Library/Backblaze.bzpkg',
-                      '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.backblaze.backblazebackup.sfl',
-                      '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.backblaze.bzdoinstall.sfl',
+                      '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.backblaze.backblazebackup.sfl*',
+                      '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.backblaze.bzdoinstall.sfl*',
                       '~/Library/Logs/BackblazeGUIInstaller',
                     ]
 end

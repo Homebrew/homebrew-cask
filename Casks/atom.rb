@@ -17,7 +17,7 @@ cask 'atom' do
   binary "#{appdir}/Atom.app/Contents/Resources/app/atom.sh", target: 'atom'
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.atom.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.atom.sfl*',
                 '~/Library/Application Support/ShipIt_stderr.log',
                 '~/Library/Application Support/ShipIt_stdout.log',
                 '~/Library/Caches/com.github.atom',

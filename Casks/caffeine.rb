@@ -11,7 +11,7 @@ cask 'caffeine' do
   app 'Caffeine.app'
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.lightheadsw.caffeine.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.lightheadsw.caffeine.sfl*',
                 '~/Library/Preferences/com.lightheadsw.Caffeine.plist',
               ]
 end

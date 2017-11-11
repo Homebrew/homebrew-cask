@@ -34,7 +34,7 @@ cask 'xquartz' do
                        ]
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.macosforge.xquartz.x11.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.macosforge.xquartz.x11.sfl*',
                 '~/Library/Caches/org.macosforge.xquartz.X11',
                 '~/Library/Cookies/org.macosforge.xquartz.X11.binarycookies',
                 '~/Library/Logs/X11/org.macosforge.xquartz.log',

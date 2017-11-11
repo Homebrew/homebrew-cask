@@ -13,7 +13,7 @@ cask 'spectacle-editor' do
 
   zap delete: [
                 '~/Library/Application Support/Spectacle Editor',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.formidable.spectacle-editor.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.formidable.spectacle-editor.sfl*',
                 '~/Library/Preferences/com.formidable.spectacle-editor.plist',
               ]
 end

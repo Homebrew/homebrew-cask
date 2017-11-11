@@ -9,7 +9,7 @@ cask 'unseen' do
   app "Unseen_v#{version}.app"
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.unseen.client.sfl ',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.unseen.client.sfl* ',
                 '~/Library/Saved Application State/com.unseen.client.savedState',
               ],
       trash:  [
