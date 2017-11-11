@@ -37,6 +37,9 @@ cask 'little-snitch' do
                 '~/Library/Logs/Little Snitch Network Monitor.log',
                 '~/Library/Saved Application State/at.obdev.LittleSnitchInstaller.savedState',
                 '~/Library/WebKit/at.obdev.LittleSnitchConfiguration',
+                # These kext's should not be uninstalled by Cask
+                '/Library/Extensions/LittleSnitch.kext',
+                '/Library/StagedExtensions/Library/Extensions/LittleSnitch.kext',
               ],
       trash:  [
                 '~/Library/Application Support/Little Snitch',
