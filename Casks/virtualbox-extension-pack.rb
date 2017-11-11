@@ -24,6 +24,7 @@ cask 'virtualbox-extension-pack' do
   end
 
   uninstall_postflight do
+    next unless File.exist?('/usr/local/bin/VBoxManage')
     system_command '/usr/local/bin/VBoxManage',
                    args: [
                            'extpack', 'uninstall',
