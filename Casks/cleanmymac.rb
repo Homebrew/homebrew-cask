@@ -33,7 +33,7 @@ cask 'cleanmymac' do
                 "~/Library/Application Support/CleanMyMac #{version.major}",
                 "~/Library/Application Support/CleanMyMac #{version.major} Menu",
                 "~/Library/Caches/CleanMyMac #{version.major}",
-                "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.macpaw.CleanMyMac#{version.major}.help",
+                "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.macpaw.CleanMyMac#{version.major}.help*",
                 "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}",
                 "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}.KnowledgeBase",
                 "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}.Menu",
