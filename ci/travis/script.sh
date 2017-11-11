@@ -27,8 +27,8 @@ elif [[ ${#modified_casks[@]} -gt 0 ]]; then
       run brew cask uninstall --verbose "${cask}"
     done
   else
-    ohai 'More than 3 casks modified, skipping install'
+    ohai 'More than 3 Casks modified, skipping install'
   fi
 else
-  ohai 'No casks modified, skipping'
+  ohai 'No Casks modified, skipping'
 fi
