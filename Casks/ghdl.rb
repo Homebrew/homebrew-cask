@@ -9,7 +9,7 @@ cask 'ghdl' do
   name 'GHDL'
   homepage 'http://ghdl.free.fr/'
 
-  pkg "ghdl-#{version}-llvm-darwin13.pkg"
+  pkg "ghdl-v#{version}-llvm-darwin13.pkg"
 
   uninstall pkgutil: "com.ktz.pkg.ghdl-#{version.no_dots}-llvm-darwin13"
 end
