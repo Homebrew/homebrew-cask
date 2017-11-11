@@ -1,4 +1,4 @@
-cask 'unity-mono-develop' do
+cask 'unity-monodevelop' do
   version '2017.2.0f3,46dda1414e51'
   sha256 '1d52791a505c9e6071df3d22de25c0e6002c5e57dc66d214c913900fd50c5189'
 
