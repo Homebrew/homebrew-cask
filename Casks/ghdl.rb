@@ -11,5 +11,5 @@ cask 'ghdl' do
 
   pkg "ghdl-v#{version}-llvm-darwin13.pkg"
 
-  uninstall pkgutil: "com.ktz.pkg.ghdl-#{version.no_dots}-llvm-darwin13"
+  uninstall pkgutil: "com.ktz.pkg.ghdl-#{version}-llvm-darwin13"
 end
