@@ -9,7 +9,7 @@ cask 'wondershare-video-converter-ultimate' do
   app 'Wondershare Video Converter Ultimate.app'
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.wondershare.video-converter-ultimate.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.wondershare.video-converter-ultimate.sfl*',
                 '~/Library/Caches/com.Wondershare.Video-Converter-Ultimate',
                 '~/Library/Caches/com.wondershare.helper_compact',
                 '~/Library/Cookies/com.Wondershare.Video-Converter-Ultimate.binarycookies',

@@ -11,6 +11,6 @@ cask 'sqlpro-for-mysql' do
 
   zap delete: [
                 '~/Library/Containers/com.hankinsoft.osx.mysql',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.mysql.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.mysql.sfl*',
               ]
 end

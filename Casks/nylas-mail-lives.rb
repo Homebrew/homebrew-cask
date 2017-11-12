@@ -13,7 +13,7 @@ cask 'nylas-mail-lives' do
   app 'Nylas Mail.app'
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nylas.nylas-mail.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nylas.nylas-mail.sfl*',
                 '~/Library/Caches/com.nylas.nylas-mail',
                 '~/Library/Caches/com.nylas.nylas-mail.ShipIt',
                 '~/Library/Caches/Nylas Mail',

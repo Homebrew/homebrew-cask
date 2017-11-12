@@ -23,7 +23,7 @@ cask 'sage' do
   uninstall quit: 'org.sagemath.Sage'
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.sagemath.sage.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.sagemath.sage.sfl*',
                 '~/Library/Logs/sage.log',
 
               ],

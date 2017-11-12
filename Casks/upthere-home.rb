@@ -10,7 +10,7 @@ cask 'upthere-home' do
 
   zap delete: [
                 '~/Library/Application Support/Upthere',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.upthere.home.osx.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.upthere.home.osx.sfl*',
                 '~/Library/Caches/com.crashlytics.data/com.upthere.home.osx',
                 '~/Library/Caches/com.upthere.home.osx',
                 '~/Library/Caches/io.fabric.sdk.mac.data/com.upthere.home.osx',

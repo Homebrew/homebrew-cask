@@ -18,8 +18,8 @@ cask 'obs' do
 
   zap delete: [
                 '/Library/Application Support/obs-studio',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.obsproject.obs-studio.sfl',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/zakk.lol.syphoninject.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.obsproject.obs-studio.sfl*',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/zakk.lol.syphoninject.sfl*',
                 '~/Library/Application Support/obs-studio',
                 '/private/var/db/receipts/zakk.lol.SyphonInject.bom',
                 '/private/var/db/receipts/zakk.lol.SyphonInject.plist',

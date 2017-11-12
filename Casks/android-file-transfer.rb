@@ -13,7 +13,7 @@ cask 'android-file-transfer' do
 
   zap delete: [
                 '~/Library/Application Support/Google/Android File Transfer',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.android.mtpviewer.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.android.mtpviewer.sfl*',
                 '~/Library/Preferences/com.google.android.mtpviewer.plist',
               ],
       rmdir:  '~/Library/Application Support/Google/'

@@ -17,7 +17,7 @@ cask 'macdown' do
 
   zap delete: [
                 '~/Library/Application Support/MacDown',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.uranusjr.macdown.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.uranusjr.macdown.sfl*',
                 '~/Library/Caches/com.uranusjr.macdown',
                 '~/Library/Cookies/com.uranusjr.macdown.binarycookies',
                 '~/Library/Preferences/com.uranusjr.macdown.plist',

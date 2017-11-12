@@ -21,14 +21,14 @@ if [[ ${#casks_wrong_dir[@]} -gt 0 ]]; then
 elif [[ ${#modified_casks[@]} -gt 0 ]]; then
   run brew cask _audit_modified_casks "${TRAVIS_COMMIT_RANGE}"
   run brew cask style "${modified_casks[@]}"
-  if [[ ${#modified_casks[@]} -le 10 ]]; then
+  if [[ ${#modified_casks[@]} -le 3 ]]; then
     for cask in "${modified_casks[@]}"; do
       run brew cask reinstall --verbose "${cask}"
       run brew cask uninstall --verbose "${cask}"
     done
   else
-    ohai 'More than 10 casks modified, skipping install'
+    ohai 'More than 3 Casks modified, skipping install'
   fi
 else
-  ohai 'No casks modified, skipping'
+  ohai 'No Casks modified, skipping'
 fi

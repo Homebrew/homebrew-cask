@@ -13,7 +13,7 @@ cask 'hackety-hack' do
 
   zap delete: [
                 '~/.hacketyhack',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.hackety.hacketyhack.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.hackety.hacketyhack.sfl*',
                 '~/Library/Caches/org.hackety.hacketyhack',
               ]
 end

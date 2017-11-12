@@ -12,7 +12,7 @@ cask 'nagbar' do
   app 'NagBar.app'
 
   zap delete: [
-                '~/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.volendavidov.nagbar.sfl',
+                '~/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.volendavidov.nagbar.sfl*',
                 '~/Caches/com.volendavidov.NagBar',
               ],
       trash:  '~/Preferences/com.volendavidov.NagBar.plist'

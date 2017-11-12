@@ -29,7 +29,7 @@ cask 'karabiner' do
                       '~/Library/Preferences/org.pqrs.Karabiner.plist',
                       '~/Library/Preferences/org.pqrs.Karabiner.EventViewer.plist',
                       '~/Library/Caches/org.pqrs.Karabiner',
-                      '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.pqrs.karabine.sfl',
-                      '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.pqrs.karabine.eventviewer.sfl',
+                      '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.pqrs.karabine.sfl*',
+                      '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.pqrs.karabine.eventviewer.sfl*',
                     ]
 end

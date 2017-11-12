@@ -15,7 +15,7 @@ cask 'detectx' do
 
   zap delete: [
                 '~/Library/Application Support/com.sqwarq.DetectX',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sqwarq.detectx.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sqwarq.detectx.sfl*',
                 '~/Library/Preferences/com.sqwarq.DetectX.plist',
               ]
 end

@@ -24,8 +24,8 @@ cask 'cleanmymac' do
 
   zap delete: [
                 "/private/var/run/com.macpaw.CleanMyMac#{version.major}.Agent.socket",
-                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac#{version.major}.sfl",
-                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac#{version.major}.scheduler.sfl",
+                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac#{version.major}.sfl*",
+                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac#{version.major}.scheduler.sfl*",
               ],
       trash:  [
                 "/Users/Shared/CleanMyMac #{version.major}",
@@ -33,7 +33,7 @@ cask 'cleanmymac' do
                 "~/Library/Application Support/CleanMyMac #{version.major}",
                 "~/Library/Application Support/CleanMyMac #{version.major} Menu",
                 "~/Library/Caches/CleanMyMac #{version.major}",
-                "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.macpaw.CleanMyMac#{version.major}.help",
+                "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.macpaw.CleanMyMac#{version.major}.help*",
                 "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}",
                 "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}.KnowledgeBase",
                 "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}.Menu",

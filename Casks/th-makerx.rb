@@ -12,6 +12,6 @@ cask 'th-makerx' do
 
   zap delete: [
                 '~/Library/Preferences/jp.ne.wind.miko.ThMakerX3.plist',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jp.ne.wind.miko.thmakerx3.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jp.ne.wind.miko.thmakerx3.sfl*',
               ]
 end

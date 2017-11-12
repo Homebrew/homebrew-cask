@@ -38,7 +38,7 @@ cask 'omnifocus' do
                   "~/Library/Preferences/com.omnigroup.OmniFocus#{version}.LSSharedFileList.plist",
                   '~/Library/Preferences/com.omnigroup.OmniSoftwareUpdate.plist',
                   "~/Library/Caches/Metadata/com.omnigroup.OmniFocus#{version}",
-                  "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.omnigroup.omnifocus#{version}.sfl",
+                  "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.omnigroup.omnifocus#{version}.sfl*",
                   '~/Library/Group Containers/34YW5XSRB7.com.omnigroup.OmniFocus',
                   "~/Library/Saved Application State/com.omnigroup.OmniFocus#{version}.savedState",
                 ]

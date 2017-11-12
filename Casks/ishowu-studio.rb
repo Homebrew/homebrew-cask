@@ -8,5 +8,5 @@ cask 'ishowu-studio' do
 
   app 'iShowU Studio.app'
 
-  zap delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.shinywhitebox.ishowu-studio.sfl'
+  zap delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.shinywhitebox.ishowu-studio.sfl*'
 end

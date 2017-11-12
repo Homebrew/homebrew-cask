@@ -13,7 +13,7 @@ cask 'suspicious-package' do
   app 'Suspicious Package.app'
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mothersruin.suspiciouspackageapp.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mothersruin.suspiciouspackageapp.sfl*',
                 '~/Library/Caches/com.mothersruin.SuspiciousPackageApp',
                 '~/Library/Caches/com.mothersruin.XPCService.UpdateChecker',
                 '~/Library/WebKit/com.mothersruin.SuspiciousPackageApp',
