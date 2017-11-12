@@ -35,4 +35,11 @@ cask 'anka-flow' do
                 '~/Library/Application Support/Veertu',
                 '/Library/Application Support/Veertu',
               ]
+
+  caveats <<~EOS
+    Installing this Cask means you have AGREED to the
+    Veertu End User License Agreement at
+
+    https://veertu.com/terms-and-conditions/
+  EOS
 end
