@@ -11,7 +11,7 @@ cask 'ascension' do
   app 'Ascension.app'
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.byteproject.ascension.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.byteproject.ascension.sfl*',
                 '~/Library/Saved Application State/com.byteproject.Ascension.savedState',
               ],
       trash:  [

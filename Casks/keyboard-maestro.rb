@@ -12,7 +12,7 @@ cask 'keyboard-maestro' do
   app 'Keyboard Maestro.app'
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.stairways.keyboardmaestro.editor.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.stairways.keyboardmaestro.editor.sfl*',
                 '~/Library/Application Support/Keyboard Maestro',
                 '~/Library/Caches/com.stairways.keyboardmaestro.editor',
                 '~/Library/Caches/com.stairways.keyboardmaestro.engine',

@@ -20,6 +20,6 @@ cask 'airtool' do
 
   zap delete: [
                 '/Library/Application Support/Airtool',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.adriangranados.airtool.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.adriangranados.airtool.sfl*',
               ]
 end

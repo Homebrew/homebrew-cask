@@ -33,7 +33,7 @@ cask 'libreoffice' do
   end
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.libreoffice.script.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.libreoffice.script.sfl*',
                 '~/Library/Saved Application State/org.libreoffice.script.savedState',
               ],
       trash:  [

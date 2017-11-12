@@ -24,7 +24,7 @@ cask 'tunnelblick' do
             quit:      'net.tunnelblick.tunnelblick'
 
   zap delete: [
-                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/net.tunnelblick.tunnelblick.help',
+                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/net.tunnelblick.tunnelblick.help*',
                 '~/Library/Caches/net.tunnelblick.tunnelblick',
               ],
       trash:  [

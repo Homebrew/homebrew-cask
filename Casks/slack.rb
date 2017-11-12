@@ -15,7 +15,7 @@ cask 'slack' do
 
   zap delete: [
                 '~/Library/Application Scripts/com.tinyspeck.slackmacgap',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tinyspeck.slackmacgap.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tinyspeck.slackmacgap.sfl*',
                 '~/Library/Caches/com.tinyspeck.slackmacgap',
                 '~/Library/Caches/com.tinyspeck.slackmacgap.ShipIt',
                 '~/Library/Containers/com.tinyspeck.slackmacgap',

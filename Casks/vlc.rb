@@ -24,7 +24,7 @@ cask 'vlc' do
   end
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.videolan.vlc.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.videolan.vlc.sfl*',
                 '~/Library/Application Support/org.videolan.vlc',
                 '~/Library/Application Support/VLC',
                 '~/Library/Preferences/org.videolan.vlc',

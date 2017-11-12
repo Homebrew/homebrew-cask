@@ -10,7 +10,7 @@ cask 'mongodb-compass' do
 
   zap delete: [
                 '~/Library/Application Support/MongoDB Compass',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mongodb.compass.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mongodb.compass.sfl*',
                 '~/Library/Caches/MongoDB Compass/',
                 '~/Library/Preferences/com.mongodb.compass.plist',
                 '~/Library/Saved Application State/com.mongodb.compass.savedState',

@@ -10,7 +10,7 @@ cask 'filepane' do
   app 'FilePane.app'
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mymixapps.filepane.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mymixapps.filepane.sfl*',
                 '~/Library/Caches/com.mymixapps.FilePane',
               ],
       trash:  [

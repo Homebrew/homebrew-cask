@@ -20,7 +20,7 @@ cask 'veertu' do
                        ]
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.veertu.veertu.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.veertu.veertu.sfl*',
                 '~/Library/Caches/com.veertu.Veertu',
                 '~/Library/Containers/com.veertu.Veertu',
                 '~/Library/Preferences/com.veertu.Veertu.plist',

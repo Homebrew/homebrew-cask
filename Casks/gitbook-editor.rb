@@ -9,7 +9,7 @@ cask 'gitbook-editor' do
   app 'GitBook Editor.app'
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/gitbook-editor.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/gitbook-editor.sfl*',
                 '~/Library/Saved Application State/gitbook-editor.savedState',
               ],
       trash:  [

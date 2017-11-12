@@ -12,6 +12,6 @@ cask 'lingo' do
   zap delete: [
                 '~/Library/Preferences/com.lingoapp.Lingo.plist',
                 '~/Library/Application Support/com.lingoapp.Lingo',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.lingoapp.lingo.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.lingoapp.lingo.sfl*',
               ]
 end

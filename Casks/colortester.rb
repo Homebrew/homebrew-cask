@@ -12,6 +12,6 @@ cask 'colortester' do
   zap delete: [
                 '~/Library/Preferences/com.alfasado.colortester',
                 '~/Library/Preferences/com.alfasado.colortester.plist',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.alfasado.colortester.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.alfasado.colortester.sfl*',
               ]
 end

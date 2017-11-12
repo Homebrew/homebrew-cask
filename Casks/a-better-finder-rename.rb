@@ -14,7 +14,7 @@ cask 'a-better-finder-rename' do
   app "A Better Finder Rename #{version.major}.app"
 
   zap delete: [
-                "~/Library/Caches/com.apple.helpd/Generated/net.publicspace.abfr#{version.major}.help",
+                "~/Library/Caches/com.apple.helpd/Generated/net.publicspace.abfr#{version.major}.help*",
                 "~/Library/Caches/net.publicspace.abfr#{version.major}",
                 "~/Library/Cookies/net.publicspace.abfr#{version.major}.binarycookies",
                 "~/Library/Saved Application State/net.publicspace.abfr#{version.major}.savedState",

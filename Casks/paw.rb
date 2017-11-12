@@ -12,7 +12,7 @@ cask 'paw' do
 
   zap delete: [
                 '~/Library/Application Scripts/com.luckymarmot.Paw',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.luckymarmot.paw.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.luckymarmot.paw.sfl*',
                 '~/Library/Containers/com.luckymarmot.Paw',
                 '~/Library/Saved Application State/com.luckymarmot.Paw.savedState',
               ],

@@ -12,7 +12,7 @@ cask 'linear' do
   app 'linear.app'
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.linear.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.linear.sfl*',
                 '~/Library/Caches/linear',
                 '~/Library/Saved Application State/com.electron.linear.savedState',
               ],

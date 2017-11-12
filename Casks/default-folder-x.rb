@@ -10,7 +10,7 @@ cask 'default-folder-x' do
 
   zap delete: [
                 '~/Library/Application Support/.com.stclairsoft',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.stclairsoft.defaultfolderx5.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.stclairsoft.defaultfolderx5.sfl*',
                 '~/Library/Application Support/com.stclairsoft.DefaultFolderX5',
                 '~/Library/Caches/com.stclairsoft.DefaultFolderX5',
                 '~/Library/Preferences/com.stclairsoft.DefaultFolderX5.plist',

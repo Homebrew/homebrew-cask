@@ -14,7 +14,7 @@ cask 'smcfancontrol' do
 
   zap delete: [
                 '~/Library/Application Support/smcFanControl',
-                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.eidac.smcfancontrol#{version.major}.sfl",
+                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.eidac.smcfancontrol#{version.major}.sfl*",
                 "~/Library/Caches/com.eidac.smcFanControl#{version.major}",
               ]
 end

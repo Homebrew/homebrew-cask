@@ -8,6 +8,6 @@ cask 'regexhibit' do
 
   app 'RegExhibit.app'
 
-  zap delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.jollyrogersoft.regexhibit.sfl',
+  zap delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.jollyrogersoft.regexhibit.sfl*',
       trash:  '~/Library/Preferences/com.JollyRogerSoft.RegExhibit.plist'
 end

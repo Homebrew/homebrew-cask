@@ -17,7 +17,7 @@ cask 'github' do
   zap delete: [
                 '~/Library/Application Support/ShipIt_stderr.log',
                 '~/Library/Application Support/ShipIt_stdout.log',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.GitHubClient.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.GitHubClient.sfl*',
                 '~/Library/Caches/com.github.GitHubClient',
                 '~/Library/Caches/com.github.GitHubClient.ShipIt',
               ],

@@ -15,6 +15,6 @@ cask 'quitter' do
   zap delete: [
                 '~/Library/Preferences/com.marcoarment.quitter.plist',
                 '~/Library/Caches/com.marcoarment.quitter',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.marcoarment.quitter.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.marcoarment.quitter.sfl*',
               ]
 end

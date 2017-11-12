@@ -11,8 +11,8 @@ cask 'sketchup' do
   suite "SketchUp #{version}"
 
   zap delete: [
-                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sketchup.sketchup.#{version}.sfl",
-                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sketchup.stylebuilder.#{version}.sfl",
+                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sketchup.sketchup.#{version}.sfl*",
+                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sketchup.stylebuilder.#{version}.sfl*",
                 "~/Library/Application Support/SketchUp #{version}",
                 "~/Library/Caches/com.sketchup.SketchUp.#{version}",
                 "~/Library/Cookies/com.sketchup.SketchUp.#{version}.binarycookies",

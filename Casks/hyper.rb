@@ -12,7 +12,7 @@ cask 'hyper' do
   app 'Hyper.app'
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.zeit.hyper.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.zeit.hyper.sfl*',
                 '~/Library/Caches/co.zeit.hyper',
                 '~/Library/Caches/co.zeit.hyper.ShipIt',
                 '~/Library/Saved Application State/co.zeit.hyper.savedState',

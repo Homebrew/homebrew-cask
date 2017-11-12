@@ -26,6 +26,6 @@ cask 'amethyst' do
                        '~/Library/Caches/com.amethyst.Amethyst',
                        '~/Library/Preferences/com.amethyst.Amethyst.plist',
                        '~/Library/Cookies/com.amethyst.Amethyst.binarycookies',
-                       '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.amethyst.amethyst.sfl',
+                       '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.amethyst.amethyst.sfl*',
                      ]
 end

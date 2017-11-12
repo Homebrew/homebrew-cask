@@ -14,7 +14,7 @@ cask 'gitx' do
   binary "#{appdir}/GitX.app/Contents/Resources/gitx"
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/nl.frim.gitx.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/nl.frim.gitx.sfl*',
                 '~/Library/Caches/nl.frim.GitX',
                 '~/Library/Preferences/nl.frim.GitX.plist',
                 '~/Library/Saved Application State/nl.frim.GitX.savedState',
