@@ -34,7 +34,7 @@ cask 'google-chrome' do
                 '~/Library/Saved Application State/com.google.Chrome.savedState',
                 '~/Library/WebKit/com.google.Chrome',
               ],
-      teash:  [
+      trash:  [
                 '~/Library/Application Support/Google/Chrome',
                 '~/Library/Preferences/com.google.Chrome.plist',
                 '~/Library/Preferences/com.google.Keystone.Agent.plist',
