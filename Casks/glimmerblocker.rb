@@ -17,10 +17,10 @@ cask 'glimmerblocker' do
                        ],
             delete:    '/Library/PreferencePanes/GlimmerBlocker.prefPane'
 
-  zap       delete: [
-                      '/Library/GlimmerBlocker',
-                      '/Library/Logs/GlimmerBlocker',
-                    ]
+  zap delete: [
+                '/Library/GlimmerBlocker',
+                '/Library/Logs/GlimmerBlocker',
+              ]
 
   caveats <<~EOS
     You must deactivate GlimmerBlocker from the installed preference

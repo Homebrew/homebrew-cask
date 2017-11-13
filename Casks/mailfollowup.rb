@@ -34,5 +34,5 @@ cask 'mailfollowup' do
                        'net.welchwold.mailfollowup.*',
                      ]
 
-  zap       delete: '~/Library/Mail/Bundles/MailFollowUp.mailbundle/'
+  zap delete: '~/Library/Mail/Bundles/MailFollowUp.mailbundle/'
 end

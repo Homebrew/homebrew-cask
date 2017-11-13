@@ -20,18 +20,18 @@ cask 'bluestacks' do
                        ],
             delete:    '/Library/PrivilegedHelperTools/com.BlueStacks.AppPlayer.bstservice_helper'
 
-  zap       delete: [
-                      '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks.sfl*',
-                      '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks-support-tool.sfl*',
-                      '~/Library/BlueStacks',
-                      '~/Library/Caches/com.bluestacks.BlueStacks',
-                      '~/Library/Caches/com.bluestacks.BlueStacks-Support-Tool',
-                      '~/Library/Caches/KSCrashReports/BlueStacks',
-                      '~/Library/Logs/BlueStacks',
-                      '~/Library/Preferences/com.BlueStacks.AppPlayer.DiagnosticTimestamp.txt',
-                      '~/Library/Preferences/com.BlueStacks.AppPlayer.plist',
-                      '~/Library/Preferences/com.BlueStacks.AppPlayer.SavedFrame.plist',
-                      '~/Library/Preferences/com.bluestacks.BlueStacks.plist',
-                    ],
-            rmdir:  '~/Library/Caches/KSCrashReports'
+  zap delete: [
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks.sfl*',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks-support-tool.sfl*',
+                '~/Library/BlueStacks',
+                '~/Library/Caches/com.bluestacks.BlueStacks',
+                '~/Library/Caches/com.bluestacks.BlueStacks-Support-Tool',
+                '~/Library/Caches/KSCrashReports/BlueStacks',
+                '~/Library/Logs/BlueStacks',
+                '~/Library/Preferences/com.BlueStacks.AppPlayer.DiagnosticTimestamp.txt',
+                '~/Library/Preferences/com.BlueStacks.AppPlayer.plist',
+                '~/Library/Preferences/com.BlueStacks.AppPlayer.SavedFrame.plist',
+                '~/Library/Preferences/com.bluestacks.BlueStacks.plist',
+              ],
+      rmdir:  '~/Library/Caches/KSCrashReports'
 end
