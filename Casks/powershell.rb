@@ -8,8 +8,8 @@ cask 'powershell' do
   name 'PowerShell'
   homepage 'https://github.com/PowerShell/PowerShell'
 
-  depends_on formula: 'openssl'
-  depends_on macos: '>= :sierra'
+  depends_on formula: 'openssl',
+             macos:   '>= :sierra'
 
   pkg "powershell-#{version}-osx.10.12-x64.pkg"
 

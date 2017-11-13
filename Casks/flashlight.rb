@@ -10,8 +10,8 @@ cask 'flashlight' do
   homepage 'https://github.com/w0lfschild/Flashlight/'
 
   auto_updates true
-  depends_on macos: '>= :yosemite'
-  depends_on cask: 'mysimbl'
+  depends_on cask:  'mysimbl',
+             macos: '>= :yosemite'
 
   app 'Flashlight.app'
 end

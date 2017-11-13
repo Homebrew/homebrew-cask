@@ -9,8 +9,8 @@ cask 'cdock' do
   name 'cDock2'
   homepage 'https://w0lfschild.github.io/cdock'
 
-  depends_on cask: 'easysimbl'
-  depends_on macos: '>= :mavericks'
+  depends_on cask:  'easysimbl',
+             macos: '>= :mavericks'
 
   app 'cDock.app'
 

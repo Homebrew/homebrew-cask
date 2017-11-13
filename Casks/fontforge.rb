@@ -9,8 +9,8 @@ cask 'fontforge' do
   name 'FontForge'
   homepage 'https://fontforge.github.io/en-US/'
 
-  depends_on x11: true
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :yosemite',
+             x11:   true
 
   app 'FontForge.app'
 

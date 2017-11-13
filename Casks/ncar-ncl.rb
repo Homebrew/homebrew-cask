@@ -15,9 +15,9 @@ cask 'ncar-ncl' do
   name 'ncl'
   homepage 'https://www.ncl.ucar.edu/'
 
-  depends_on cask: 'xquartz'
-  depends_on formula: 'gcc'
-  depends_on macos: '>= :el_capitan'
+  depends_on cask:    'xquartz',
+             formula: 'gcc',
+             macos:   '>= :el_capitan'
 
   artifact 'include', target: "#{HOMEBREW_PREFIX}/ncl-#{version}/include"
   artifact 'bin', target: "#{HOMEBREW_PREFIX}/ncl-#{version}/bin"

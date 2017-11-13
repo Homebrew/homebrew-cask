@@ -6,8 +6,8 @@ cask 'qgis' do
   name 'QGIS'
   homepage 'http://www.kyngchaos.com/software/qgis'
 
-  depends_on cask: 'gdal-framework'
-  depends_on formula: 'homebrew/science/matplotlib'
+  depends_on cask:    'gdal-framework',
+             formula: 'homebrew/science/matplotlib'
 
   pkg '4 Install QGIS.pkg'
 
