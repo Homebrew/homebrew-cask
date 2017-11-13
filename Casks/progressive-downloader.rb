@@ -6,7 +6,7 @@ cask 'progressive-downloader' do
   name 'Progressive Downloader'
   homepage 'https://www.macpsd.net/'
 
-  depends_on macos: '>= :mavericks'
+  depends_on macos: '>= :yosemite'
 
   app 'Progressive Downloader.app'
 
