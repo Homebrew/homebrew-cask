@@ -50,7 +50,7 @@ cask 'vmware-fusion' do
                 '/Library/Logs/VMware Fusion Services.log',
                 '/Library/Logs/VMware USB Arbitrator Service.log',
                 '/Library/Logs/VMware',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vmware.fusion.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vmware.fusion.sfl*',
                 '~/Library/Caches/com.vmware.fusion',
                 '~/Library/Logs/VMware Fusion',
                 '~/Library/Logs/VMware Graphics Service.log',

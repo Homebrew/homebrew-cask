@@ -9,7 +9,7 @@ cask 'ui-browser' do
   app 'UI Browser.app'
 
   zap delete: [
-                '~/Library/Caches/com.apple.helpd/Generated/com.pfiddlesoft.uibrowser.help',
+                '~/Library/Caches/com.apple.helpd/Generated/com.pfiddlesoft.uibrowser.help*',
                 '~/Library/Preferences/com.pfiddlesoft.uibrowser.plist',
               ]
 end

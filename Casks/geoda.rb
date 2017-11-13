@@ -1,11 +1,11 @@
 cask 'geoda' do
-  version '1.10.0.12'
-  sha256 'ffebd2577cd167f262e40cc8c6475de005914ba236b127d9048bf3a0423b476e'
+  version '1.12.0.0'
+  sha256 '73c88679a1e51aabc634aa2cb42ba4de97f1ddedd41e6d8fe8e212fca34d94cc'
 
   # s3-us-west-2.amazonaws.com/geodasoftware was verified as official when first introduced to the cask
-  url "https://s3-us-west-2.amazonaws.com/geodasoftware/GeoDa#{version.major_minor}-Installer.dmg"
+  url "https://s3-us-west-2.amazonaws.com/geodasoftware/GeoDa#{version}-Installer.dmg"
   appcast 'https://github.com/GeoDaCenter/geoda/releases.atom',
-          checkpoint: '16850f39be7bf3f3fde047d1806db42dec822ec294ef61283d4b2123d09c965e'
+          checkpoint: 'cb0aab92920cfb28255679102b3e94f259611e9258fcf0f333cc9ce7ecc4ea1d'
   name 'GeoDa'
   homepage 'https://geodacenter.github.io/'
 

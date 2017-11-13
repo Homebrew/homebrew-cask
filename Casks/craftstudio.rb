@@ -14,5 +14,5 @@ cask 'craftstudio' do
   uninstall quit:    'com.sparklinlabs.CraftStudioLauncher',
             pkgutil: 'com.sparklinlabs.CraftStudioLauncher'
 
-  zap       delete: '~/Library/CraftStudio'
+  zap delete: '~/Library/CraftStudio'
 end

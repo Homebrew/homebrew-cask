@@ -16,7 +16,7 @@ cask 'marked' do
 
   zap delete: [
                 "~/Library/Application Support/Marked #{version.major}",
-                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.brettterpstra.marked#{version.major}.sfl",
+                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.brettterpstra.marked#{version.major}.sfl*",
                 "~/Library/Caches/Marked #{version.major}",
                 "~/Library/Caches/com.brettterpstra.marked#{version.major}",
                 "~/Library/Logs/Marked #{version.major}",

@@ -118,7 +118,7 @@ cask 'firefox' do
 
   zap delete: [
                 '/Library/Logs/DiagnosticReports/firefox_*',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.firefox.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.firefox.sfl*',
                 '~/Library/Caches/Firefox',
                 '~/Library/Caches/Mozilla/updates/Applications/Firefox',
               ],

@@ -15,7 +15,7 @@ cask 'iina' do
   app 'IINA.app'
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.colliderli.iina.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.colliderli.iina.sfl*',
                 '~/Library/Caches/com.colliderli.iina',
                 '~/Library/Cookies/com.colliderli.iina.binarycookies',
                 '~/Library/Logs/DiagnosticReports/IINA*.crash',

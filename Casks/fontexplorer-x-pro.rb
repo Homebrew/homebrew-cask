@@ -18,7 +18,7 @@ cask 'fontexplorer-x-pro' do
             quit:      'com.linotype.FontExplorerX'
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.linotype.fontexplorerx.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.linotype.fontexplorerx.sfl*',
                 '~/Library/Caches/com.linotype.FontExplorerX',
                 '~/Library/Caches/Metadata/FontExplorer X',
                 '~/Library/Cookies/com.linotype.FontExplorerX.binarycookies',

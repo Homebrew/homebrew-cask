@@ -26,7 +26,7 @@ cask 'qz-tray' do
   uninstall login_item: 'QZ Tray'
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/:no-bundle:qz t.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/:no-bundle:qz t.sfl*',
                 '~/Library/Application Support/qz',
               ]
 end

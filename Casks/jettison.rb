@@ -16,7 +16,7 @@ cask 'jettison' do
   uninstall login_item: 'Jettison'
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.stclairsoft.jettison.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.stclairsoft.jettison.sfl*',
                 '~/Library/Application Support/Jettison',
                 '~/Library/Preferences/com.stclairsoft.Jettison.plist',
                 '~/Library/Preferences/com.stclairsoft.Jettison.AppStore.plist',

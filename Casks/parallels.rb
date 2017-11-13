@@ -34,13 +34,13 @@ cask 'parallels' do
                       '/usr/local/bin/prlsrvctl',
                     ]
 
-  zap       delete: [
-                      '~/.parallels_settings',
-                      '~/Library/Caches/com.parallels.desktop.console',
-                      '~/Library/Preferences/com.parallels.desktop.console.LSSharedFileList.plist',
-                      '~/Library/Preferences/com.parallels.desktop.console.plist',
-                      '~/Library/Preferences/com.parallels.Parallels Desktop Statistics.plist',
-                      '~/Library/Preferences/com.parallels.Parallels Desktop.plist',
-                      '~/Library/Preferences/com.parallels.Parallels.plist',
-                    ]
+  zap delete: [
+                '~/.parallels_settings',
+                '~/Library/Caches/com.parallels.desktop.console',
+                '~/Library/Preferences/com.parallels.desktop.console.LSSharedFileList.plist',
+                '~/Library/Preferences/com.parallels.desktop.console.plist',
+                '~/Library/Preferences/com.parallels.Parallels Desktop Statistics.plist',
+                '~/Library/Preferences/com.parallels.Parallels Desktop.plist',
+                '~/Library/Preferences/com.parallels.Parallels.plist',
+              ]
 end

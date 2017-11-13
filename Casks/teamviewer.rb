@@ -27,17 +27,17 @@ cask 'teamviewer' do
                        ],
             quit:      'com.teamviewer.TeamViewer'
 
-  zap       delete: [
-                      '~/Library/Caches/com.teamviewer.TeamViewer',
-                      '~/Library/Cookies/com.teamviewer.TeamViewer.binarycookies',
-                      '~/Library/Logs/TeamViewer',
-                      '~/Library/Saved Application State/com.teamviewer.TeamViewer.savedState',
-                    ],
-            trash:  [
-                      '/Library/Preferences/com.teamviewer.teamviewer.preferences.plist',
-                      '~/Library/Application Support/TeamViewer',
-                      '~/Library/Preferences/com.teamviewer.TeamViewer.plist',
-                      '~/Library/Preferences/com.teamviewer.teamviewer.preferences.Machine.plist',
-                      '~/Library/Preferences/com.teamviewer.teamviewer.preferences.plist',
-                    ]
+  zap delete: [
+                '~/Library/Caches/com.teamviewer.TeamViewer',
+                '~/Library/Cookies/com.teamviewer.TeamViewer.binarycookies',
+                '~/Library/Logs/TeamViewer',
+                '~/Library/Saved Application State/com.teamviewer.TeamViewer.savedState',
+              ],
+      trash:  [
+                '/Library/Preferences/com.teamviewer.teamviewer.preferences.plist',
+                '~/Library/Application Support/TeamViewer',
+                '~/Library/Preferences/com.teamviewer.TeamViewer.plist',
+                '~/Library/Preferences/com.teamviewer.teamviewer.preferences.Machine.plist',
+                '~/Library/Preferences/com.teamviewer.teamviewer.preferences.plist',
+              ]
 end

@@ -13,7 +13,7 @@ cask 'nimble' do
 
   zap delete: [
                 '~/.nimble-options.json',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.nimble.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.nimble.sfl*',
                 '~/Library/Application Support/com.electron.nimble.ShipIt',
                 '~/Library/Application Support/Nimble',
                 '~/Library/Caches/com.electron.nimble',

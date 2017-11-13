@@ -15,7 +15,7 @@ cask 'appearin' do
   zap delete: [
                 '~/Library/Application Support/appear.in',
                 '~/Library/Caches/appear.in',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vitorgalvao.appear.in.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vitorgalvao.appear.in.sfl*',
                 '~/Library/Saved Application State/com.vitorgalvao.appear.in.savedState',
               ]
 end

@@ -48,7 +48,7 @@ cask 'onyx' do
   app 'OnyX.app'
 
   zap delete: [
-                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.titanium.OnyX.help',
+                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.titanium.OnyX.help*',
                 '~/Library/Logs/OnyX.log',
                 '~/Library/Saved Application State/com.titanium.OnyX.savedState',
               ],

@@ -15,8 +15,8 @@ cask 'flash-ppapi' do
   uninstall pkgutil: 'com.adobe.pkg.PepperFlashPlayer',
             delete:  '/Library/Internet Plug-Ins/PepperFlashPlayer'
 
-  zap       delete: [
-                      '~/Library/Caches/Adobe/Flash Player',
-                      '~/Library/Logs/FlashPlayerInstallManager.log',
-                    ]
+  zap delete: [
+                '~/Library/Caches/Adobe/Flash Player',
+                '~/Library/Logs/FlashPlayerInstallManager.log',
+              ]
 end

@@ -13,7 +13,7 @@ cask 'ubar' do
   app 'uBar.app'
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ca.brawer.ubar.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ca.brawer.ubar.sfl*',
                 '~/Library/Caches/ca.brawer.uBar',
               ],
       trash:  [

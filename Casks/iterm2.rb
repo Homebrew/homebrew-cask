@@ -15,7 +15,7 @@ cask 'iterm2' do
   app 'iTerm.app'
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.googlecode.iterm2.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.googlecode.iterm2.sfl*',
                 '~/Library/Caches/com.googlecode.iterm2',
                 '~/Library/Saved Application State/com.googlecode.iterm2.savedState',
               ],

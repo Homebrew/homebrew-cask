@@ -11,7 +11,7 @@ cask 'upterm' do
   app 'Upterm.app'
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.railsware.upterm.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.railsware.upterm.sfl*',
                 '~/Library/Saved Application State/com.github.railsware.upterm.savedState',
               ],
       trash:  [

@@ -11,6 +11,6 @@ cask 'sqlpro-for-sqlite' do
 
   zap delete: [
                 '~/Library/Containers/com.hankinsoft.osx.sqliteprofessional',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.sqliteprofessional.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.sqliteprofessional.sfl*',
               ]
 end

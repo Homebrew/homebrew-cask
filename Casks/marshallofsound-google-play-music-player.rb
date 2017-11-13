@@ -18,7 +18,7 @@ cask 'marshallofsound-google-play-music-player' do
                         ]
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/google-play-music-desktop-player.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/google-play-music-desktop-player.sfl*',
                 '~/Library/Caches/Google Play Music Desktop Player',
                 '~/Library/Caches/google-play-music-desktop-player.ShipIt',
                 '~/Library/Caches/google-play-music-desktop-player',
