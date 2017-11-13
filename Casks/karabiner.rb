@@ -20,16 +20,16 @@ cask 'karabiner' do
                        sudo:       true,
                      }
 
-  zap       delete: [
-                      '~/Library/Application Support/Karabiner',
-                      '~/Library/Application Support/KeyRemap4MacBook',
-                      '~/Library/Caches/org.pqrs.KeyRemap4MacBook',
-                      '~/Library/Preferences/org.pqrs.Karabiner-AXNotifier.plist',
-                      '~/Library/Preferences/org.pqrs.Karabiner.multitouchextension.plist',
-                      '~/Library/Preferences/org.pqrs.Karabiner.plist',
-                      '~/Library/Preferences/org.pqrs.Karabiner.EventViewer.plist',
-                      '~/Library/Caches/org.pqrs.Karabiner',
-                      '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.pqrs.karabine.sfl*',
-                      '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.pqrs.karabine.eventviewer.sfl*',
-                    ]
+  zap delete: [
+                '~/Library/Application Support/Karabiner',
+                '~/Library/Application Support/KeyRemap4MacBook',
+                '~/Library/Caches/org.pqrs.KeyRemap4MacBook',
+                '~/Library/Preferences/org.pqrs.Karabiner-AXNotifier.plist',
+                '~/Library/Preferences/org.pqrs.Karabiner.multitouchextension.plist',
+                '~/Library/Preferences/org.pqrs.Karabiner.plist',
+                '~/Library/Preferences/org.pqrs.Karabiner.EventViewer.plist',
+                '~/Library/Caches/org.pqrs.Karabiner',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.pqrs.karabine.sfl*',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.pqrs.karabine.eventviewer.sfl*',
+              ]
 end

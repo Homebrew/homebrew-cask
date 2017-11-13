@@ -10,5 +10,5 @@ cask 'manictime' do
 
   uninstall pkgutil: 'com.finkit.manictime.tracker'
 
-  zap       delete:  '~/Library/Application Support/ManicTime'
+  zap delete: '~/Library/Application Support/ManicTime'
 end

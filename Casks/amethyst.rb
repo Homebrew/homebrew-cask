@@ -20,12 +20,12 @@ cask 'amethyst' do
 
   app 'Amethyst.app'
 
-  uninstall  login_item: 'Amethyst'
+  uninstall login_item: 'Amethyst'
 
-  zap        delete: [
-                       '~/Library/Caches/com.amethyst.Amethyst',
-                       '~/Library/Preferences/com.amethyst.Amethyst.plist',
-                       '~/Library/Cookies/com.amethyst.Amethyst.binarycookies',
-                       '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.amethyst.amethyst.sfl*',
-                     ]
+  zap delete: [
+                '~/Library/Caches/com.amethyst.Amethyst',
+                '~/Library/Preferences/com.amethyst.Amethyst.plist',
+                '~/Library/Cookies/com.amethyst.Amethyst.binarycookies',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.amethyst.amethyst.sfl*',
+              ]
 end

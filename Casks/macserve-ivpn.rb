@@ -21,10 +21,10 @@ cask 'macserve-ivpn' do
                          'com.macserve.ppp.pptp',
                        ]
 
-  zap       delete: [
-                      '~/Library/Preferences/com.MacServe.iVPN.plist',
-                      '/Library/LaunchDaemons/com.macserve.ppp.l2tp.plist',
-                      '/Library/LaunchDaemons/com.macserve.ppp.pptp.plist',
-                      '/private/etc/ppp/',
-                    ]
+  zap delete: [
+                '~/Library/Preferences/com.MacServe.iVPN.plist',
+                '/Library/LaunchDaemons/com.macserve.ppp.l2tp.plist',
+                '/Library/LaunchDaemons/com.macserve.ppp.pptp.plist',
+                '/private/etc/ppp/',
+              ]
 end

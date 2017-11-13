@@ -23,11 +23,11 @@ cask 'karabiner-elements' do
                        sudo:       true,
                      }
 
-  zap       delete: [
-                      '~/Library/Application Support/Karabiner-Elements',
-                      '~/.karabiner.d',
-                      '~/.config/karabiner',
-                      '~/Library/Preferences/org.pqrs.Karabiner-Elements-Updater.plist',
-                      '~/Library/Caches/org.pqrs.Karabiner-Elements-Updater',
-                    ]
+  zap delete: [
+                '~/Library/Application Support/Karabiner-Elements',
+                '~/.karabiner.d',
+                '~/.config/karabiner',
+                '~/Library/Preferences/org.pqrs.Karabiner-Elements-Updater.plist',
+                '~/Library/Caches/org.pqrs.Karabiner-Elements-Updater',
+              ]
 end
