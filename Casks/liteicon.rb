@@ -1,10 +1,10 @@
 cask 'liteicon' do
-  version '3.8.1'
-  sha256 '11c055b968eba4a8949e87f96ca894530f24e38527d14ac8c797ce0886ca9269'
+  version '3.8.2'
+  sha256 'ede528b762f4f979b488973db002442260c6eda36d4875655887956e62576e62'
 
   url "https://www.freemacsoft.net/downloads/LiteIcon_#{version}.zip"
   appcast 'https://freemacsoft.net/liteicon/updates.xml',
-          checkpoint: '3690ac894e3d8e1be71eeda725ff5d4fa5794f9e73381be122f188cd8269939a'
+          checkpoint: '65a5e1eb06fe9c12c5bf1e0f37e0e68ededa6318e72eecbc8c32a348c7bb4f6f'
   name 'LiteIcon'
   homepage 'https://freemacsoft.net/liteicon/'
 
