@@ -1,5 +1,5 @@
 cask 'hotswitch' do
-  version '1.16'
+  version '1.16,2017-09-24 08-37-27'
   sha256 '2dd931790fc3d1a251be927c00056117d07149aae8dca596366921f01764bfbd'
 
   url 'https://oniatsu.github.io/HotSwitch/release/zip/HotSwitch.zip'
@@ -8,5 +8,5 @@ cask 'hotswitch' do
   name 'HotSwitch'
   homepage 'https://oniatsu.github.io/HotSwitch/'
 
-  app 'HotSwitch.app'
+  app "HotSwitch #{version.after_comma}/HotSwitch.app"
 end
