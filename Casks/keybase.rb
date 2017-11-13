@@ -32,6 +32,7 @@ cask 'keybase' do
                         }
 
   zap delete: [
+                '~/Library/LaunchAgents/keybase*',
                 '~/Library/Caches/Keybase',
                 '~/Library/Group Containers/keybase',
                 '~/Library/Logs/Keybase*',
