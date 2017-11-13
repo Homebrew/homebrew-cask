@@ -1,11 +1,11 @@
 cask 'vellum' do
-  version '20400'
-  sha256 '9ee621ceaaf1699190e7b472d8dddff4df40caf4c477f3c91db9970db75a2c79'
+  version '20500'
+  sha256 '18299e204edc4aff335146632a64245956265f5db55b91856bdf28410e1d1f9f'
 
   # 180g.s3.amazonaws.com/downloads was verified as official when first introduced to the cask
   url "https://180g.s3.amazonaws.com/downloads/Vellum-#{version}.zip"
   appcast 'https://get.180g.co/updates/vellum/',
-          checkpoint: '0d204086d6fe2c397d5401330a3a9eb9a7c559ec0645abd2fd07adef2caa4ece'
+          checkpoint: 'e4148c4a5415ac31d1b92b1a17005dd7e4ebd91fe8da45ed55664603758c114c'
   name 'Vellum'
   homepage 'https://vellum.pub/'
 
