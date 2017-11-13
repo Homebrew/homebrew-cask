@@ -6,7 +6,6 @@ cask 'fugio' do
   name 'Fugio'
   homepage 'https://www.bigfug.com/software/fugio/'
 
-  depends_on macos: '>= 10.9'
   depends_on formula: [
                         'ffmpeg',
                         'fftw',
@@ -16,7 +15,8 @@ cask 'fugio' do
                         'portaudio',
                         'portmidi',
                         'snappy',
-                      ]
+                      ],
+             macos:   '>= :mavericks'
 
   suite 'Fugio'
 end
