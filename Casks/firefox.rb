@@ -1,5 +1,5 @@
 cask 'firefox' do
-  version '57.0.0'
+  version '57.0'
 
   language 'cs' do
     sha256 '54d4e5c1b2f8d5f966067cbfccd4d9c6331317d3f58c96a003aa91c1d21fb01e'
@@ -108,7 +108,7 @@ cask 'firefox' do
 
   url "https://ftp.mozilla.org/pub/firefox/releases/#{version}/mac/#{language}/Firefox%20#{version}.dmg"
   appcast "https://aus5.mozilla.org/update/3/Firefox/#{version}/0/Darwin_x86_64-gcc3-u-i386-x86_64/en-US/release/Darwin%2015.3.0/default/default/update.xml?force=1",
-          checkpoint: 'f2ac1ccfd7f5342bdab5589bb5d803b45e5a5fb31997a3503d2f9e72efa4cf55'
+          checkpoint: 'e0dadbc9cd1f1bd8ce3118cc3383e0d0f6d147f055265d498d99deea956ba00f'
   name 'Mozilla Firefox'
   homepage 'https://www.mozilla.org/firefox/'
 
