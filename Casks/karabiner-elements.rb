@@ -12,10 +12,14 @@ cask 'karabiner-elements' do
 
   pkg 'Karabiner-Elements.sparkle_guided.pkg'
 
-  uninstall quit:    'org.pqrs.Karabiner-Elements',
+  uninstall signal:  [
+                       ['TERM', 'org.pqrs.Karabiner-Elements'],
+                       ['TERM', 'karabiner_grabber'],
+                       ['TERM', 'karabiner_console_user_server'],
+                     ],
             pkgutil: 'org.pqrs.Karabiner-Elements',
             script:  {
-                       executable: '/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall.sh',
+                       executable: '/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall_core.sh',
                        sudo:       true,
                      }
 
