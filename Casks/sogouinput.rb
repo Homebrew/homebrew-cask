@@ -15,13 +15,7 @@ cask 'sogouinput' do
                        ],
             launchctl: 'com.sogou.SogouServices'
 
-  zap trash:  [
-                '~/.sogouinput',
-                '~/Library/Application Support/Sogou/EmojiPanel',
-                '~/Library/Application Support/Sogou/InputMethod',
-                '~/Library/Preferences/com.sogou.SogouPreference.plist',
-              ],
-      delete: [
+  zap delete: [
                 '~/Library/Caches/SogouServices',
                 '~/Library/Caches/com.sogou.SGAssistPanel',
                 '~/Library/Caches/com.sogou.SogouPreference',
@@ -30,6 +24,12 @@ cask 'sogouinput' do
                 '~/Library/Cookies/com.sogou.SogouPreference.binarycookies',
                 '~/Library/Cookies/com.sogou.inputmethod.sogou.binarycookies',
                 '~/Library/Saved Application State/com.sogou.SogouInstaller.savedState',
+              ],
+      trash:  [
+                '~/.sogouinput',
+                '~/Library/Application Support/Sogou/EmojiPanel',
+                '~/Library/Application Support/Sogou/InputMethod',
+                '~/Library/Preferences/com.sogou.SogouPreference.plist',
               ],
       rmdir:  '~/Library/Application Support/Sogou'
 end
