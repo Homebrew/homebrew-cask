@@ -3,8 +3,8 @@ cask 'bartender' do
     version '2.1.6'
     sha256 '013bb1f5dcc29ff1ecbc341da96b6e399dc3c85fc95bd8c7bee153ab0d8756f5'
   else
-    version '3.0.27'
-    sha256 'd7d2634a2f5723b35bc5fac1b831cc68197839593a592153ef0b0316e9f0b3b6'
+    version '3.0.28'
+    sha256 'd05bbda030ee039266b86b8a6c63bc36016eb0fc3cf819a8c3248df97775b50f'
   end
 
   url "https://macbartender.com/B2/updates/#{version.dots_to_hyphens}/Bartender%20#{version.major}.zip",
