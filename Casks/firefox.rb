@@ -65,6 +65,11 @@ cask 'firefox' do
     sha256 '7a784410ae55352a2ce2d369a10148cf7b6a7893f31fef2c15c271f33fa0a6a9'
     'ja-JP-mac'
   end
+  
+  language 'ko' do
+    sha256 'fd9cfd3efd0572000cade085faffce1d242bb3f666684e0cf239db9634290c85'
+    'ko'
+  end
 
   language 'nl' do
     sha256 'e8f55c5420dc41c93fa271b1df33e2b953977dc4d749599fd710909938ffecaa'
