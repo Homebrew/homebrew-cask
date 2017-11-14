@@ -12,8 +12,6 @@ cask 'pdfextractor' do
 
   app 'PDFExtractor.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.briksoftware.pdfextractor.plist',
-                '~/Library/Saved Application State/com.briksoftware.pdfextractor.savedState',
-              ]
+  zap delete: '~/Library/Saved Application State/com.briksoftware.pdfextractor.savedState',
+      trash:  '~/Library/Preferences/com.briksoftware.pdfextractor.plist'
 end
