@@ -6,7 +6,7 @@ cask 'yasu' do
         user_agent: :fake
     appcast 'https://yasuformac.com/appcasts/10.11/yasu.xml',
             checkpoint: 'd13bbaeca2a2c3610fa770ed3b2080fa040f525bbcc15c144d1802ecaf3ee487'
-  elsif MacOS.version <= :el_capitan
+  elsif MacOS.version <= :sierra
     version '4.0.5,605'
     sha256 'dc18c2ee91144bd37b94ce6bab5cf2861b698432a301d1dd03be2bba23dbd609'
     url "https://yasuformac.com/appcasts/10.12/yasuformac_#{version.after_comma}.zip",
