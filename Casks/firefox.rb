@@ -66,6 +66,11 @@ cask 'firefox' do
     'ja-JP-mac'
   end
 
+  language 'ko' do
+    sha256 'fd9cfd3efd0572000cade085faffce1d242bb3f666684e0cf239db9634290c85'
+    'ko'
+  end
+
   language 'nl' do
     sha256 'e8f55c5420dc41c93fa271b1df33e2b953977dc4d749599fd710909938ffecaa'
     'nl'
@@ -108,7 +113,7 @@ cask 'firefox' do
 
   url "https://ftp.mozilla.org/pub/firefox/releases/#{version}/mac/#{language}/Firefox%20#{version}.dmg"
   appcast "https://aus5.mozilla.org/update/3/Firefox/#{version}/0/Darwin_x86_64-gcc3-u-i386-x86_64/en-US/release/Darwin%2015.3.0/default/default/update.xml?force=1",
-          checkpoint: 'e0dadbc9cd1f1bd8ce3118cc3383e0d0f6d147f055265d498d99deea956ba00f'
+          checkpoint: '51b8b184309bc940e83e9a3783a58fa8c21e30c43007f749de64fffcb9896af2'
   name 'Mozilla Firefox'
   homepage 'https://www.mozilla.org/firefox/'
 
