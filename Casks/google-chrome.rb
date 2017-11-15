@@ -7,6 +7,10 @@ cask 'google-chrome' do
   homepage 'https://www.google.com/chrome/'
 
   auto_updates true
+  conflicts_with cask: [
+                         'google-chrome-beta',
+                         'google-chrome-dev',
+                       ]
   depends_on macos: '>= :mavericks'
 
   app 'Google Chrome.app'
