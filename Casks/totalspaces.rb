@@ -1,10 +1,10 @@
 cask 'totalspaces' do
-  version '2.6.14'
-  sha256 'f1408daa923e69c0a2bd702f618692ddda9197f449f106683a3a6395d8437110'
+  version '2.6.15'
+  sha256 'e0ef0851ba2922547657051e515e79151205f1d80ecfb730d1be7121839247fb'
 
   url "http://downloads.binaryage.com/TotalSpaces#{version.major}-#{version}.dmg"
   appcast "http://updates-s3.binaryage.com/totalspaces#{version.major}.xml",
-          checkpoint: '288cf8fb910b4a9c7268a879c294f2e9c5d14b38407d30b8805a148263eac0e1'
+          checkpoint: '188c44f1165a021d5f17e39ec6b7d6948e81d8bdd1c10feaefeb3686c55638a5'
   name 'TotalSpaces'
   homepage 'https://totalspaces.binaryage.com/'
 
