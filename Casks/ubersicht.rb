@@ -8,6 +8,8 @@ cask 'ubersicht' do
   name 'Übersicht'
   homepage 'http://tracesof.net/uebersicht/'
 
+  auto_updates true
+
   app 'Übersicht.app'
 
   uninstall login_item: 'Übersicht'
