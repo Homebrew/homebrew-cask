@@ -5,7 +5,7 @@ cask 'buttercup' do
   # github.com/buttercup/buttercup-desktop was verified as official when first introduced to the cask
   url "https://github.com/buttercup/buttercup-desktop/releases/download/v#{version}/buttercup-desktop-#{version}-mac.zip"
   appcast 'https://github.com/buttercup/buttercup-desktop/releases.atom',
-          checkpoint: '6e7cf74a4f1e1515e5c2060c6956cd4912ab6cef83c94b51bc6c3b928c8b731e'
+          checkpoint: 'e0f718fabadedc4b6ad8593a83dd5e90ec4e5a291cc2b15b96851ff6a402db41'
   name 'Buttercup'
   homepage 'https://buttercup.pw/'
 
