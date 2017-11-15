@@ -32,7 +32,7 @@ cask 'torbrowser' do
   end
 
   language 'it' do
-    sha256 '63e6ed6d5cd401a044d886f11f847b275c25500d3353e34e99b7f0529fa07d70 '
+    sha256 '63e6ed6d5cd401a044d886f11f847b275c25500d3353e34e99b7f0529fa07d70'
     'it'
   end
 
