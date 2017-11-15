@@ -31,7 +31,5 @@ cask 'java-jdk-javadoc' do
     License Agreement for Java SE at
 
       https://www.oracle.com/technetwork/java/javase/terms/license/index.html
-
-     #{token} will be uninstalled when the Java Cask is uninstalled or reinstalled
   EOS
 end
