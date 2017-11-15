@@ -47,7 +47,7 @@ cask 'torbrowser' do
   end
 
   language 'nl' do
-    sha256 '53f286469ed9b5d9ea47c71b3d08e3b9f1ce725980269d2311e498bf7e15ab9f '
+    sha256 '53f286469ed9b5d9ea47c71b3d08e3b9f1ce725980269d2311e498bf7e15ab9f'
     'nl'
   end
 
