@@ -5,7 +5,7 @@ cask 'github' do
   # githubusercontent.com was verified as official when first introduced to the cask
   url "https://desktop.githubusercontent.com/releases/#{version}/GitHubDesktop.zip"
   appcast 'https://github.com/desktop/desktop/releases.atom',
-          checkpoint: 'd87604d34a2463e5b29cf4e207cfcc5111c4bf515c3edb6bd0b2f6ef42b8b71c'
+          checkpoint: '4324bb9dc78728d711b91872622bb2a178505f31acd4c8980edc67c5bf5aa901'
   name 'GitHub Desktop'
   homepage 'https://desktop.github.com/'
 
