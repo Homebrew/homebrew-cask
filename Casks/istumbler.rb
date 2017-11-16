@@ -8,13 +8,13 @@ cask 'istumbler' do
     sha256 '71f6a6b0e255a853664ed4900835a42f2d23dcb05de35acfb3ac2ec1c5fb2edc'
     url "https://istumbler.net/downloads/istumbler-#{version}.dmg"
   else
-    version '102.2'
-    sha256 '443fa9e3cf34008a45a4a7e23e79305ac10d490f0d914f510239ef5c7c616e15'
+    version '103.1'
+    sha256 'd7cdc9d777b6b6577ed91c16a9b047221e32486c4c4fbb72ecf617e087ad3283'
     url "https://istumbler.net/downloads/istumbler-#{version}.dmg"
   end
 
   appcast 'https://istumbler.net/feeds/appcast.rss',
-          checkpoint: '233058c80ad41c0daec3e1fe923326209087fae045becfb86be74d969cbe6bf7'
+          checkpoint: '7230af845d185f077d820513c534ad88aa336172e189daa69d64166152dcae2a'
   name 'iStumbler'
   homepage 'https://istumbler.net/'
 
