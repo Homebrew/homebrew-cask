@@ -1,11 +1,11 @@
 cask 'eqmac' do
-  version '2.0.7'
-  sha256 'caa97a681371f60173aabd3949e381f8b53234fb9642340d49795a495df0fa15'
+  version '2.0.6'
+  sha256 '565544e1c7b12f3cf361176896fd8917857f188ff8b875d2e18e9da8231be79f'
 
   # github.com/romankisil/eqMac was verified as official when first introduced to the cask
   url "https://github.com/romankisil/eqMac#{version.major}/releases/download/v#{version}/eqMac#{version.major}.dmg"
   appcast "https://github.com/romankisil/eqMac#{version.major}/releases.atom",
-          checkpoint: '734ff65d148b0f3d7ef6988ecdc5a84870f7523986ee8cbe5bede0b905536e4e'
+          checkpoint: '03e18588a03e2b6efb51da18b709589a2dc30df15a717d17581cc09a904bdc1a'
   name 'eqMac'
   homepage 'https://www.bitgapp.com/eqmac/'
 
