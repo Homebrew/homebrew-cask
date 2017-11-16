@@ -30,9 +30,13 @@ cask 'calibre' do
   binary "#{appdir}/calibre.app/Contents/MacOS/markdown-calibre"
   binary "#{appdir}/calibre.app/Contents/MacOS/web2disk"
 
-  zap delete: '~/Library/Caches/calibre',
+  zap delete: [
+                '~/Library/Caches/calibre',
+                '~/Library/Saved Application State/com.calibre-ebook.ebook-viewer.savedState',
+                '~/Library/Saved Application State/net.kovidgoyal.calibre.savedState',
+              ],
       trash:  [
-                '~/Library/Preferences/net.kovidgoyal.calibre.plist',
                 '~/Library/Preferences/calibre',
+                '~/Library/Preferences/net.kovidgoyal.calibre.plist',
               ]
 end
