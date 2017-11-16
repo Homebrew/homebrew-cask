@@ -8,7 +8,7 @@ cask 'vk-messenger' do
   homepage 'https://vk.com/messenger'
 
   auto_updates true
-  depends_on macos: '>= 10.9'
+  depends_on macos: '>= :mavericks'
 
   app 'VK Messenger.app'
 
