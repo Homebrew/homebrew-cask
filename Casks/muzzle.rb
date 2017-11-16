@@ -8,7 +8,7 @@ cask 'muzzle' do
   name 'Muzzle'
   homepage 'https://muzzleapp.com/'
 
-  depends_on macos: '>= 10.11'
+  depends_on macos: '>= :el_capitan'
 
   app 'Muzzle.app'
 end

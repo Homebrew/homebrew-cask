@@ -8,7 +8,7 @@ cask 'imazing-mini' do
   homepage 'https://imazing.com/mini'
 
   conflicts_with cask: 'imazing'
-  depends_on macos: '>= 10.8'
+  depends_on macos: '>= :mountain_lion'
 
   app 'iMazing Mini.app'
 

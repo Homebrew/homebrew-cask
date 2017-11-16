@@ -6,7 +6,7 @@ cask 'appgate-sdp-client' do
   name 'AppGate SDP Client for macOS'
   homepage 'https://www.cryptzone.com/downloadcenter/appgate'
 
-  depends_on macos: '>= 10.10'
+  depends_on macos: '>= :yosemite'
 
   pkg 'AppGate Installer.pkg'
 
