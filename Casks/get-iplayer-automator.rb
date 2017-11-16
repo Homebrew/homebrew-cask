@@ -8,7 +8,7 @@ cask 'get-iplayer-automator' do
   name 'Get iPlayer Automator'
   homepage 'https://github.com/Ascoware/get-iplayer-automator'
 
-  depends_on macos: '>= 10.7'
+  depends_on macos: '>= :lion'
 
   app 'Get iPlayer Automator.app'
 end
