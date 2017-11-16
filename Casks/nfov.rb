@@ -11,7 +11,7 @@ cask 'nfov' do
   app 'nfov.app'
 
   zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.nfov.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.nfov.sfl*',
                 '~/Library/Saved Application State/com.electron.nfov.savedState',
               ],
       trash:  [
