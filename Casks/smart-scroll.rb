@@ -8,5 +8,5 @@ cask 'smart-scroll' do
   name 'Smart Scroll'
   homepage 'https://www.marcmoini.com/sx_en.html'
 
-  prefpane "Smart Scroll #{version}.prefPane"
+  prefpane 'Smart Scroll.prefPane'
 end
