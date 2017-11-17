@@ -1,6 +1,6 @@
 cask 'popmaker' do
-  version '0.1'
-  sha256 '2c24014bdca713969d49227ed6eceae0072a933421d8d60f7162f4bd4c5ac947'
+  version '0.2'
+  sha256 'f1314838c6710a86be51c41f944f966847516f4a1815d7fd6cf98610cc9f3799'
 
   url "http://cdn3.brettterpstra.com/downloads/PopMaker#{version}.zip"
   name 'PopMaker'
