@@ -1,11 +1,11 @@
 cask 'fontplop' do
-  version '1.1.0'
-  sha256 'a98f595d8687eed977ad64aa1d924aa309dd97b2bfcc0ed7be889963ecf2d569'
+  version '1.2.0'
+  sha256 'b842509b4208c9a0b9a3c82a850b066e6fb395bede746b2ec2710a0555bc3dd0'
 
   # github.com/matthewgonzalez/fontplop was verified as official when first introduced to the cask
   url "https://github.com/matthewgonzalez/fontplop/releases/download/v#{version}/fontplop-#{version}.dmg"
   appcast 'https://github.com/matthewgonzalez/fontplop/releases.atom',
-          checkpoint: '29dd325da8bcfac866fd7999c16b1764d7c48285e9a1b65428b5e3df30f4e120'
+          checkpoint: 'f44322ad99ee9f7609997e1be5d9a7215397fccf60ca265023c73f5186a2edb8'
   name 'Fontplop'
   homepage 'http://www.fontplop.com/'
 
