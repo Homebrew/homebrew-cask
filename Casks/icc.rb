@@ -1,6 +1,6 @@
 cask 'icc' do
-  version '1.0,r7564'
-  sha256 '28b8fbd96efc571bc00f8088c41dd836a118451cbe39d69e83ba0c5d52c00491'
+  version '1.0,r7587'
+  sha256 '01f4ad8775900654d3209b90132491a3d6325945f20228f6b09a5651a64a19fa'
 
   url "http://download.chessclub.com/desktop/mac/ICCforMac.#{version.after_comma}.pkg"
   name 'ICC for Mac'
