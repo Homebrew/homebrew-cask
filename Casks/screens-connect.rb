@@ -21,9 +21,9 @@ cask 'screens-connect' do
                          'com.edovia.screens.connect',
                        ],
             script:    {
-                         executable:   '/bin/bash',
-                         args:         ['-c', "#{appdir}/Screens Connect.app/Contents/Resources/sc-uninstaller.tool"],
+                         executable:   "#{appdir}/Screens Connect.app/Contents/Resources/sc-uninstaller.tool",
                          must_succeed: false,
+                         sudo:         true,
                        }
 
   zap delete: [
