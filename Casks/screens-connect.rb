@@ -1,11 +1,11 @@
 cask 'screens-connect' do
-  version '4.2'
-  sha256 '87546e86b647c03ccea2cf3f0f1dff0ab8adc33e19888077ea35956fb7848e09'
+  version '4.4.5450,1509106836'
+  sha256 'a4c530e8af65dd6b29ca96894356f9b815d86f8cdbe0ffe91c84446cd4907960'
 
-  # edovia.com was verified as official when first introduced to the cask
-  url "https://download.edovia.com/screensconnect/ScreensConnect_#{version}.zip"
+  # dl.devmate.com/com.edovia.Screens-Connect was verified as official when first introduced to the cask
+  url "https://dl.devmate.com/com.edovia.Screens-Connect/#{version.patch}/#{version.after_comma}/ScreensConnect-#{version.patch}.zip"
   appcast 'https://updates.devmate.com/com.edovia.Screens-Connect.xml',
-          checkpoint: 'da582d3160a5ec150a42260a318f0b007ec58173a05617a314804e461bd5ba2b'
+          checkpoint: '746a8d75118580c1519f4d8bfabeef8b09f9e4fac7d7e7c0ba1cd0288dd8261c'
   name 'Screens Connect'
   homepage 'https://screensconnect.com/'
 
@@ -21,8 +21,9 @@ cask 'screens-connect' do
                          'com.edovia.screens.connect',
                        ],
             script:    {
-                         executable:   'Screens Connect.app/Contents/Resources/sc-uninstaller.tool',
+                         executable:   "#{appdir}/Screens Connect.app/Contents/Resources/sc-uninstaller.tool",
                          must_succeed: false,
+                         sudo:         true,
                        }
 
   zap delete: [
