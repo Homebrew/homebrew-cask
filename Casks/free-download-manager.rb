@@ -2,11 +2,11 @@ cask 'free-download-manager' do
   version '5.1'
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "http://dn3.freedownloadmanager.org/#{version.major}/#{version}-latest/fdm.dmg"
+  url "https://dn3.freedownloadmanager.org/#{version.major}/#{version}-latest/fdm.dmg"
   name 'Free Download Manager'
-  homepage 'http://www.freedownloadmanager.org/'
+  homepage 'https://www.freedownloadmanager.org/'
 
-  depends_on macos: '>= 10.9'
+  depends_on macos: '>= :mavericks'
 
   app 'Free Download Manager.app'
 

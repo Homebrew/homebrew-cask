@@ -9,7 +9,7 @@ cask 'dockstation' do
   name 'DockStation'
   homepage 'https://dockstation.io/'
 
-  depends_on macos: '>= 10.11'
+  depends_on macos: '>= :el_capitan'
 
   app 'DockStation.app'
 

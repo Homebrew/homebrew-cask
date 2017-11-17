@@ -1,7 +1,7 @@
 cask 'prime95' do
   # note: "95" is not a version number, but an intrinsic part of the product name
-  version '28.9'
-  sha256 'c8e58f032dbbf0402d97ea81272153faeae61d6ef4461c1f88c99ecbf3fdcc32'
+  version '29.3'
+  sha256 '2ded6c91ba068ffae48219e441aa6a4bafb50d727df89dc04370fb71f47b809a'
 
   url "https://www.mersenne.org/ftp_root/gimps/p95v#{version.no_dots}.MacOSX.zip"
   name 'Prime95'

@@ -10,6 +10,7 @@ cask 'transmission' do
   homepage 'https://transmissionbt.com/'
 
   auto_updates true
+  conflicts_with cask: 'transmission-nightly'
 
   app 'Transmission.app'
 

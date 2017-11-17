@@ -7,6 +7,7 @@ cask 'dropbox' do
   homepage 'https://www.dropbox.com/'
 
   auto_updates true
+  conflicts_with cask: 'dropbox-beta'
 
   app 'Dropbox.app'
 
