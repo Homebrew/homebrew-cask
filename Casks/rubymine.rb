@@ -16,12 +16,10 @@ cask 'rubymine' do
     ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'mine') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }
   end
 
-  zap delete: [
-                "~/Library/Caches/RubyMine#{version.major_minor}",
-                "~/Library/Logs/RubyMine#{version.major_minor}",
-              ],
-      trash:  [
-                "~/Library/Application Support/RubyMine#{version.major_minor}",
-                "~/Library/Preferences/RubyMine#{version.major_minor}",
-              ]
+  zap trash: [
+               "~/Library/Caches/RubyMine#{version.major_minor}",
+               "~/Library/Logs/RubyMine#{version.major_minor}",
+               "~/Library/Application Support/RubyMine#{version.major_minor}",
+               "~/Library/Preferences/RubyMine#{version.major_minor}",
+             ]
 end

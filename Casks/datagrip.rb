@@ -16,12 +16,10 @@ cask 'datagrip' do
     ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'datagrip') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }
   end
 
-  zap delete: [
-                "~/Library/Caches/DataGrip#{version.major_minor}",
-                "~/Library/Logs/DataGrip#{version.major_minor}",
-              ],
-      trash:  [
-                "~/Library/Preferences/DataGrip#{version.major_minor}",
-                "~/Library/Application Support/DataGrip#{version.major_minor}",
-              ]
+  zap trash: [
+               "~/Library/Caches/DataGrip#{version.major_minor}",
+               "~/Library/Logs/DataGrip#{version.major_minor}",
+               "~/Library/Preferences/DataGrip#{version.major_minor}",
+               "~/Library/Application Support/DataGrip#{version.major_minor}",
+             ]
 end

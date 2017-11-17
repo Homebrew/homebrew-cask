@@ -16,13 +16,11 @@ cask 'mps' do
     ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'mps') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }
   end
 
-  zap delete: [
-                "~/MPSSamples.#{version.before_comma.major_minor}",
-                "~/Library/Caches/MPS#{version.before_comma.major_minor}",
-                "~/Library/Logs/MPS#{version.before_comma.major_minor}",
-              ],
-      trash:  [
-                "~/Library/Application Support/MPS#{version.before_comma.major_minor}",
-                "~/Library/Preferences/MPS#{version.before_comma.major_minor}",
-              ]
+  zap trash: [
+               "~/MPSSamples.#{version.before_comma.major_minor}",
+               "~/Library/Caches/MPS#{version.before_comma.major_minor}",
+               "~/Library/Logs/MPS#{version.before_comma.major_minor}",
+               "~/Library/Application Support/MPS#{version.before_comma.major_minor}",
+               "~/Library/Preferences/MPS#{version.before_comma.major_minor}",
+             ]
 end
