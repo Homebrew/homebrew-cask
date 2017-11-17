@@ -5,7 +5,7 @@ cask 'jupyter-notebook-ql' do
   url "https://github.com/jendas1/jupyter-notebook-quick-look/releases/download/v#{version}/jupyter-notebook-quick-look.qlgenerator.zip"
   appcast 'https://github.com/jendas1/jupyter-notebook-quick-look/releases.atom',
           checkpoint: 'b1e47a1c8de07f5a3bb11a1b66d0321a81de4ac4cd31ecad4fd643aa1e762507'
-  name 'Jupyter notebok Quick Look'
+  name 'Jupyter Notebook Quick Look'
   homepage 'https://github.com/jendas1/jupyter-notebook-quick-look'
 
   qlplugin 'jupyter-notebook-quick-look.qlgenerator'
