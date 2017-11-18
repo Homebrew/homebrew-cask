@@ -12,8 +12,8 @@ cask 'lingon-x' do
 
   app 'Lingon X.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/com.peterborgapps.LingonX5',
-                '~/Library/Containers/com.peterborgapps.LingonX5',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/com.peterborgapps.LingonX5',
+               '~/Library/Containers/com.peterborgapps.LingonX5',
+             ]
 end
