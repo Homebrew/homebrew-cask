@@ -10,7 +10,7 @@ cask 'xamarin' do
 
   uninstall delete: '/Applications/Xamarin Studio.app'
 
-  zap delete: '~/Library/Developer/Xamarin'
+  zap trash: '~/Library/Developer/Xamarin'
 
   caveats do
     depends_on_java

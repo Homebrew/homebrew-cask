@@ -10,9 +10,9 @@ cask '5kplayer' do
 
   uninstall quit: 'com.digiarty.5kplayer'
 
-  zap delete: [
-                '~/Library/Caches/com.digiarty.5kplayer',
-                '~/Library/Preferences/com.digiarty.5kplayer.plist',
-                '~/Library/Saved Application State/com.digiarty.5kplayer.savedState',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.digiarty.5kplayer',
+               '~/Library/Preferences/com.digiarty.5kplayer.plist',
+               '~/Library/Saved Application State/com.digiarty.5kplayer.savedState',
+             ]
 end
