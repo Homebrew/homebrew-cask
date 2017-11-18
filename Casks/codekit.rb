@@ -12,11 +12,11 @@ cask 'codekit' do
 
   app 'CodeKit.app'
 
-  zap delete: [
-                "~/Library/Application Support/com.incident57.CodeKit#{version.major}",
-                "~/Library/Caches/com.incident57.CodeKit#{version.major}",
-                "~/Library/Cookies/com.incident57.CodeKit#{version.major}.binarycookies",
-                "~/Library/Preferences/com.incident57.CodeKit#{version.major}.plist",
-                "~/Library/Saved Application State/com.incident57.CodeKit#{version.major}.savedState",
-              ]
+  zap trash: [
+               "~/Library/Application Support/com.incident57.CodeKit#{version.major}",
+               "~/Library/Caches/com.incident57.CodeKit#{version.major}",
+               "~/Library/Cookies/com.incident57.CodeKit#{version.major}.binarycookies",
+               "~/Library/Preferences/com.incident57.CodeKit#{version.major}.plist",
+               "~/Library/Saved Application State/com.incident57.CodeKit#{version.major}.savedState",
+             ]
 end

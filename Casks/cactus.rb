@@ -10,9 +10,9 @@ cask 'cactus' do
 
   app 'Cactus.app'
 
-  zap delete: [
-                '~/Library/Caches/com.nektar.Cactus',
-                '~/Library/Preferences/com.nektar.Cactus.LSSharedFileList.plist',
-                '~/Library/Preferences/com.nektar.Cactus.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.nektar.Cactus',
+               '~/Library/Preferences/com.nektar.Cactus.LSSharedFileList.plist',
+               '~/Library/Preferences/com.nektar.Cactus.plist',
+             ]
 end

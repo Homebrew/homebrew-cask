@@ -16,15 +16,13 @@ cask 'clipy' do
   uninstall login_item: 'Clipy',
             quit:       'com.clipy-app.Clipy'
 
-  zap delete: [
-                '~/Library/Caches/com.clipy-app.Clipy',
-                '~/Library/Caches/com.crashlytics.data/com.clipy-app.Clipy',
-                '~/Library/Caches/io.fabric.sdk.mac.data/com.clipy-app.Clipy',
-                '~/Library/Cookies/com.clipy-app.Clipy.binarycookies',
-              ],
-      trash:  [
-                '~/Library/Application Support/Clipy',
-                '~/Library/Application Support/com.clipy-app.Clipy',
-                '~/Library/Preferences/com.clipy-app.Clipy.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Clipy',
+               '~/Library/Application Support/com.clipy-app.Clipy',
+               '~/Library/Caches/com.clipy-app.Clipy',
+               '~/Library/Caches/com.crashlytics.data/com.clipy-app.Clipy',
+               '~/Library/Caches/io.fabric.sdk.mac.data/com.clipy-app.Clipy',
+               '~/Library/Cookies/com.clipy-app.Clipy.binarycookies',
+               '~/Library/Preferences/com.clipy-app.Clipy.plist',
+             ]
 end

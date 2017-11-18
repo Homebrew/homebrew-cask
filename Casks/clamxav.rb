@@ -10,10 +10,10 @@ cask 'clamxav' do
 
   app 'ClamXAV.app'
 
-  zap delete: [
-                '~/Library/Caches/uk.co.markallan.clamxav',
-                '~/Library/Logs/clamXav-scan.*',
-              ]
+  zap trash: [
+               '~/Library/Caches/uk.co.markallan.clamxav',
+               '~/Library/Logs/clamXav-scan.*',
+             ]
 
   caveats do
     # this happens sometime after installation, but still worth warning about
