@@ -10,12 +10,10 @@ cask 'marta' do
 
   app 'Marta.app'
 
-  zap delete: [
-                '~/Library/Caches/org.yanex.marta',
-                '~/Library/Saved Application State/org.yanex.marta.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/org.yanex.marta',
-                '~/Library/Preferences/org.yanex.marta.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/org.yanex.marta',
+               '~/Library/Caches/org.yanex.marta',
+               '~/Library/Preferences/org.yanex.marta.plist',
+               '~/Library/Saved Application State/org.yanex.marta.savedState',
+             ]
 end

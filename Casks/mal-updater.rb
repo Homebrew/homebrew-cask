@@ -11,8 +11,8 @@ cask 'mal-updater' do
 
   app 'MAL Updater OS X.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.chikorita157.MAL-Updater-OS-X.plist',
-                '~/Library/Application Support/MAL Updater OS X',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.chikorita157.MAL-Updater-OS-X.plist',
+               '~/Library/Application Support/MAL Updater OS X',
+             ]
 end

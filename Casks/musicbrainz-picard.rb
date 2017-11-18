@@ -10,12 +10,10 @@ cask 'musicbrainz-picard' do
 
   app 'MusicBrainz Picard.app'
 
-  zap delete: [
-                '~/Library/Caches/MusicBrainz',
-                '~/Library/Saved Application State/org.musicbrainz.picard.savedState',
-              ],
-      trash:  [
-                '~/.config/MusicBrainz',
-                '~/Library/Preferences/org.musicbrainz.picard.plist',
-              ]
+  zap trash: [
+               '~/.config/MusicBrainz',
+               '~/Library/Caches/MusicBrainz',
+               '~/Library/Preferences/org.musicbrainz.picard.plist',
+               '~/Library/Saved Application State/org.musicbrainz.picard.savedState',
+             ]
 end

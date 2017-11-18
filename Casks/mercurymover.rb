@@ -8,5 +8,5 @@ cask 'mercurymover' do
 
   prefpane 'MercuryMover.prefPane'
 
-  zap delete: '~/Library/Preferences/com.heliumfoot.MyWiAgent.plist'
+  zap trash: '~/Library/Preferences/com.heliumfoot.MyWiAgent.plist'
 end

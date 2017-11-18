@@ -10,8 +10,8 @@ cask 'makemkv' do
 
   app 'MakeMKV.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.makemkv.MakeMKV.plist',
-                '~/Library/Saved Application State/com.makemkv.MakeMKV.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.makemkv.MakeMKV.plist',
+               '~/Library/Saved Application State/com.makemkv.MakeMKV.savedState',
+             ]
 end

@@ -10,8 +10,8 @@ cask 'mac2imgur' do
 
   app 'mac2imgur.app'
 
-  zap delete: [
-                '~/Library/Caches/com.mileswd.mac2imgur',
-                '~/Library/Preferences/com.mileswd.mac2imgur.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.mileswd.mac2imgur',
+               '~/Library/Preferences/com.mileswd.mac2imgur.plist',
+             ]
 end

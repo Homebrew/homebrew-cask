@@ -19,9 +19,9 @@ cask 'mobius' do
                        'com.circularlabs.mobius2.osc.pkg',
                      ]
 
-  zap delete: [
-                '/Library/Audio/Plug-Ins/Components/Mobius 2.component',
-                '/Library/Audio/Plug-Ins/VST/Mobius 2.vst',
-                '/Library/Application Support/Mobius 2',
-              ]
+  zap trash: [
+               '/Library/Audio/Plug-Ins/Components/Mobius 2.component',
+               '/Library/Audio/Plug-Ins/VST/Mobius 2.vst',
+               '/Library/Application Support/Mobius 2',
+             ]
 end

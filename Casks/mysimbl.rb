@@ -12,14 +12,14 @@ cask 'mysimbl' do
 
   app 'mySIMBL.app'
 
-  zap delete: [
-                '~/Library/Application Support/mySIMBL',
-                '~/Library/Caches/org.w0lf.mySIMBL',
-                '~/Library/Caches/org.w0lf.mySIMBLAgent',
-                '~/Library/Preferences/org.w0lf.SIMBLAgent.plist',
-                '~/Library/Preferences/org.w0lf.mySIMBL.plist',
-                '~/Library/Preferences/org.w0lf.mySIMBLAgent.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/mySIMBL',
+               '~/Library/Caches/org.w0lf.mySIMBL',
+               '~/Library/Caches/org.w0lf.mySIMBLAgent',
+               '~/Library/Preferences/org.w0lf.SIMBLAgent.plist',
+               '~/Library/Preferences/org.w0lf.mySIMBL.plist',
+               '~/Library/Preferences/org.w0lf.mySIMBLAgent.plist',
+             ]
 
   caveats 'System Integrity Protection must be disabled to install SIMBL.'
 end

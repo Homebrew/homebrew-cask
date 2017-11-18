@@ -17,18 +17,16 @@ cask 'marshallofsound-google-play-music-player' do
                           ['TERM', 'google-play-music-desktop-player.helper'],
                         ]
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/google-play-music-desktop-player.sfl*',
-                '~/Library/Caches/Google Play Music Desktop Player',
-                '~/Library/Caches/google-play-music-desktop-player.ShipIt',
-                '~/Library/Caches/google-play-music-desktop-player',
-                '~/Library/Cookies/google-play-music-desktop-player.binarycookies',
-                '~/Library/Saved Application State/google-play-music-desktop-player.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/Google Play Music Desktop Player',
-                '~/Library/Application Support/google-play-music-desktop-player.ShipIt',
-                '~/Library/Preferences/google-play-music-desktop-player.helper.plist',
-                '~/Library/Preferences/google-play-music-desktop-player.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/google-play-music-desktop-player.sfl*',
+               '~/Library/Application Support/Google Play Music Desktop Player',
+               '~/Library/Application Support/google-play-music-desktop-player.ShipIt',
+               '~/Library/Caches/Google Play Music Desktop Player',
+               '~/Library/Caches/google-play-music-desktop-player.ShipIt',
+               '~/Library/Caches/google-play-music-desktop-player',
+               '~/Library/Cookies/google-play-music-desktop-player.binarycookies',
+               '~/Library/Preferences/google-play-music-desktop-player.helper.plist',
+               '~/Library/Preferences/google-play-music-desktop-player.plist',
+               '~/Library/Saved Application State/google-play-music-desktop-player.savedState',
+             ]
 end
