@@ -15,5 +15,5 @@ cask 'gitup' do
   app 'GitUp.app'
   binary "#{appdir}/GitUp.app/Contents/SharedSupport/gitup"
 
-  zap delete: '~/Library/Preferences/co.gitup.mac.plist'
+  zap trash: '~/Library/Preferences/co.gitup.mac.plist'
 end

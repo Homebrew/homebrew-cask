@@ -17,15 +17,13 @@ cask 'google-backup-and-sync' do
   uninstall login_item: 'Backup and sync from Google',
             quit:       'com.google.GoogleDrive'
 
-  zap delete: [
-                '~/Library/Application Scripts/com.google.GoogleDrive.FinderSyncAPIExtension',
-                '~/Library/Caches/com.google.GoogleDrive',
-                '~/Library/Containers/com.google.GoogleDrive.FinderSyncAPIExtension',
-                '~/Library/Cookies/com.google.GoogleDrive.binarycookies',
-                '~/Library/Group Containers/google_drive',
-              ],
-      trash:  [
-                '~/Library/Application Support/Google/Drive',
-                '~/Library/Preferences/com.google.GoogleDrive.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/com.google.GoogleDrive.FinderSyncAPIExtension',
+               '~/Library/Application Support/Google/Drive',
+               '~/Library/Caches/com.google.GoogleDrive',
+               '~/Library/Containers/com.google.GoogleDrive.FinderSyncAPIExtension',
+               '~/Library/Cookies/com.google.GoogleDrive.binarycookies',
+               '~/Library/Group Containers/google_drive',
+               '~/Library/Preferences/com.google.GoogleDrive.plist',
+             ]
 end

@@ -14,8 +14,8 @@ cask 'grids' do
 
   uninstall quit: 'com.thinktimecreations.Grids'
 
-  zap delete: [
-                '~/Library/Application Support/ThinkTimeCreations/Grids',
-                '~/Library/Preferences/com.thinktimecreations.Grids.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/ThinkTimeCreations/Grids',
+               '~/Library/Preferences/com.thinktimecreations.Grids.plist',
+             ]
 end

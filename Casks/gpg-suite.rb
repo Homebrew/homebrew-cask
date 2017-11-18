@@ -61,20 +61,18 @@ cask 'gpg-suite' do
                          '/Library/Frameworks/Libmacgpg.framework',
                        ]
 
-  zap delete: [
-                '~/Library/Services/GPGServices.service',
-                '~/Library/Mail/Bundles/GPGMail.mailbundle',
-                '~/Library/PreferencePanes/GPGPreferences.prefPane',
-                '~/Library/LaunchAgents/org.gpgtools.*',
-                '~/Library/Containers/com.apple.mail/Data/Library/Preferences/org.gpgtools.*',
-                '~/Library/Frameworks/Libmacgpg.framework',
-                '~/Containers/com.apple.mail/Data/Library/Frameworks/Libmacgpg.framework',
-                '~/Library/Caches/org.gpgtools.gpg*',
-              ],
-      trash:  [
-                '~/Library/Application Support/GPGTools',
-                '~/Library/Preferences/org.gpgtools.*',
-              ]
+  zap trash: [
+               '~/Library/Services/GPGServices.service',
+               '~/Library/Mail/Bundles/GPGMail.mailbundle',
+               '~/Library/PreferencePanes/GPGPreferences.prefPane',
+               '~/Library/LaunchAgents/org.gpgtools.*',
+               '~/Library/Containers/com.apple.mail/Data/Library/Preferences/org.gpgtools.*',
+               '~/Library/Frameworks/Libmacgpg.framework',
+               '~/Containers/com.apple.mail/Data/Library/Frameworks/Libmacgpg.framework',
+               '~/Library/Caches/org.gpgtools.gpg*',
+               '~/Library/Application Support/GPGTools',
+               '~/Library/Preferences/org.gpgtools.*',
+             ]
 
   caveats do
     files_in_usr_local

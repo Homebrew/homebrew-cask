@@ -18,10 +18,10 @@ cask 'google-drive-file-stream' do
             quit:       'com.google.drivefs',
             pkgutil:    'com.google.drivefs'
 
-  zap delete: '~/Library/Caches/com.google.drivefs',
-      trash:  [
-                '~/Library/Application Support/Google/DriveFS',
-                '~/Library/Preferences/Google Drive File Stream Helper.plist',
-                '~/Library/Preferences/com.google.drivefs.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Google/DriveFS',
+               '~/Library/Caches/com.google.drivefs',
+               '~/Library/Preferences/Google Drive File Stream Helper.plist',
+               '~/Library/Preferences/com.google.drivefs.plist',
+             ]
 end
