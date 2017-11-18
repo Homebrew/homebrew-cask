@@ -9,8 +9,8 @@ cask 'sqlpro-for-postgres' do
 
   app 'SQLPro for Postgres.app'
 
-  zap delete: [
-                '~/Library/Containers/com.hankinsoft.osx.sqlpropostgres',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.sqlpropostgres.sfl*',
-              ]
+  zap trash: [
+               '~/Library/Containers/com.hankinsoft.osx.sqlpropostgres',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.sqlpropostgres.sfl*',
+             ]
 end

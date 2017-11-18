@@ -14,15 +14,13 @@ cask 'shifty' do
   uninstall launchctl: 'io.natethompson.ShiftyHelper',
             quit:      'io.natethompson.Shifty'
 
-  zap delete: [
-                '~/Library/Application Scripts/io.natethompson.ShiftyHelper',
-                '~/Library/Caches/com.crashlytics.data/io.natethompson.Shifty',
-                '~/Library/Caches/io.fabric.sdk.mac.data/io.natethompson.Shifty',
-                '~/Library/Caches/io.natethompson.Shifty',
-                '~/Library/Containers/io.natethompson.ShiftyHelper',
-              ],
-      trash:  [
-                '~/Library/Application Support/io.natethompson.Shifty',
-                '~/Library/Preferences/io.natethompson.Shifty.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/io.natethompson.ShiftyHelper',
+               '~/Library/Application Support/io.natethompson.Shifty',
+               '~/Library/Caches/com.crashlytics.data/io.natethompson.Shifty',
+               '~/Library/Caches/io.fabric.sdk.mac.data/io.natethompson.Shifty',
+               '~/Library/Caches/io.natethompson.Shifty',
+               '~/Library/Containers/io.natethompson.ShiftyHelper',
+               '~/Library/Preferences/io.natethompson.Shifty.plist',
+             ]
 end

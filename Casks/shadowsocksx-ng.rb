@@ -26,10 +26,10 @@ cask 'shadowsocksx-ng' do
                          args:       ['--mode', 'off'],
                        }
 
-  zap delete: '~/Library/Caches/com.qiuyuzhou.ShadowsocksX-NG',
-      trash:  [
-                '~/.ShadowsocksX-NG',
-                '~/Library/Application Support/ShadowsocksX-NG',
-                '~/Library/Preferences/com.qiuyuzhou.ShadowsocksX-NG.plist',
-              ]
+  zap trash: [
+               '~/.ShadowsocksX-NG',
+               '~/Library/Application Support/ShadowsocksX-NG',
+               '~/Library/Caches/com.qiuyuzhou.ShadowsocksX-NG',
+               '~/Library/Preferences/com.qiuyuzhou.ShadowsocksX-NG.plist',
+             ]
 end

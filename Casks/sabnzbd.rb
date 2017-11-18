@@ -13,5 +13,5 @@ cask 'sabnzbd' do
 
   app 'SABnzbd.app'
 
-  zap delete: '~/Library/Application Support/SABnzbd'
+  zap trash: '~/Library/Application Support/SABnzbd'
 end

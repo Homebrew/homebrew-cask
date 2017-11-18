@@ -9,8 +9,8 @@ cask 'sqlpro-for-mysql' do
 
   app 'SQLPro for MySQL.app'
 
-  zap delete: [
-                '~/Library/Containers/com.hankinsoft.osx.mysql',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.mysql.sfl*',
-              ]
+  zap trash: [
+               '~/Library/Containers/com.hankinsoft.osx.mysql',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.mysql.sfl*',
+             ]
 end

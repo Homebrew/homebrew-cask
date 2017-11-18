@@ -11,15 +11,13 @@ cask 'stride' do
 
   app 'Stride.app'
 
-  zap delete: [
-                '~/Library/Caches/com.atlassian.stride.desktop.ShipIt/',
-                '~/Library/Caches/com.atlassian.stride.desktop/',
-                '~/Library/Logs/Stride',
-                '~/Library/Saved Application State/com.atlassian.stride.desktop.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/Stride',
-                '~/Library/Preferences/com.atlassian.stride.desktop.helper.plist',
-                '~/Library/Preferences/com.atlassian.stride.desktop.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Stride',
+               '~/Library/Caches/com.atlassian.stride.desktop.ShipIt/',
+               '~/Library/Caches/com.atlassian.stride.desktop/',
+               '~/Library/Logs/Stride',
+               '~/Library/Preferences/com.atlassian.stride.desktop.helper.plist',
+               '~/Library/Preferences/com.atlassian.stride.desktop.plist',
+               '~/Library/Saved Application State/com.atlassian.stride.desktop.savedState',
+             ]
 end

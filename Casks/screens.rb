@@ -14,11 +14,11 @@ cask 'screens' do
   uninstall launchctl: 'com.edovia.screens.launcher',
             quit:      "com.edovia.screens#{version.major}.mac"
 
-  zap delete: [
-                "~/Library/Application Scripts/com.edovia.screens#{version.major}.mac",
-                '~/Library/Application Scripts/com.edovia.screens.launcher',
-                "~/Library/Containers/com.edovia.screens#{version.major}.mac",
-                '~/Library/Containers/com.edovia.screens.launcher',
-                '~/Library/Logs/Screens',
-              ]
+  zap trash: [
+               "~/Library/Application Scripts/com.edovia.screens#{version.major}.mac",
+               '~/Library/Application Scripts/com.edovia.screens.launcher',
+               "~/Library/Containers/com.edovia.screens#{version.major}.mac",
+               '~/Library/Containers/com.edovia.screens.launcher',
+               '~/Library/Logs/Screens',
+             ]
 end

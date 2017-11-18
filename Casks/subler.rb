@@ -13,10 +13,10 @@ cask 'subler' do
 
   app 'Subler.app'
 
-  zap delete: [
-                '~/Library/Preferences/org.galad.Subler.plist',
-                '~/Library/Application Support/Subler',
-                '~/Library/Caches/org.galad.Subler',
-                '~/Library/Saved Application State/org.galad.Subler.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/org.galad.Subler.plist',
+               '~/Library/Application Support/Subler',
+               '~/Library/Caches/org.galad.Subler',
+               '~/Library/Saved Application State/org.galad.Subler.savedState',
+             ]
 end

@@ -26,8 +26,8 @@ cask 'screens-connect' do
                          sudo:         true,
                        }
 
-  zap delete: [
-                '~/Library/Preferences/com.edovia.Screens-Connect.plist',
-                '~/Library/Preferences/com.edovia.ScreensConnect.Shared.plist',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.edovia.Screens-Connect.plist',
+               '~/Library/Preferences/com.edovia.ScreensConnect.Shared.plist',
+             ]
 end

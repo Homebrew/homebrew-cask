@@ -13,14 +13,12 @@ cask 'speechify' do
   uninstall launchctl: 'com.brianhans.LaunchOnLogin',
             quit:      'com.cliffweitzman.speechifydesktop1'
 
-  zap delete: [
-                '~/Library/Caches/com.cliffweitzman.speechifydesktop1',
-                '~/Library/Caches/com.crashlytics.data/com.cliffweitzman.speechifydesktop1',
-                '~/Library/Caches/io.fabric.sdk.mac.data/com.cliffweitzman.speechifydesktop1',
-                '~/Library/Cookies/com.cliffweitzman.speechifydesktop1.binarycookies',
-              ],
-      trash:  [
-                '~/Library/Application Support/com.cliffweitzman.speechifydesktop1',
-                '~/Library/Preferences/com.cliffweitzman.speechifydesktop1.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.cliffweitzman.speechifydesktop1',
+               '~/Library/Caches/com.cliffweitzman.speechifydesktop1',
+               '~/Library/Caches/com.crashlytics.data/com.cliffweitzman.speechifydesktop1',
+               '~/Library/Caches/io.fabric.sdk.mac.data/com.cliffweitzman.speechifydesktop1',
+               '~/Library/Cookies/com.cliffweitzman.speechifydesktop1.binarycookies',
+               '~/Library/Preferences/com.cliffweitzman.speechifydesktop1.plist',
+             ]
 end

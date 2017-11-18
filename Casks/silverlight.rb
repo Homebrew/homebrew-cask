@@ -11,10 +11,10 @@ cask 'silverlight' do
   uninstall pkgutil: 'com.microsoft.silverlight.plugin',
             delete:  '/Library/Internet Plug-Ins/Silverlight.plugin'
 
-  zap delete: [
-                '~/Library/Application Support/Microsoft/Silverlight',
-                '~/Library/Preferences/com.microsoft.silverlight.plist',
-                '~/Library/Saved Application State/com.microsoft.silverlight.savedState',
-              ],
-      rmdir:  '~/Library/Application Support/Microsoft/'
+  zap trash: [
+               '~/Library/Application Support/Microsoft/Silverlight',
+               '~/Library/Preferences/com.microsoft.silverlight.plist',
+               '~/Library/Saved Application State/com.microsoft.silverlight.savedState',
+             ],
+      rmdir: '~/Library/Application Support/Microsoft/'
 end

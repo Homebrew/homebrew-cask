@@ -10,8 +10,8 @@ cask 'second-life-viewer' do
 
   app 'Second Life Viewer.app'
 
-  zap delete: [
-                '~/Library/Application Support/SecondLife',
-                '~/Library/Caches/SecondLife',
-              ]
+  zap trash: [
+               '~/Library/Application Support/SecondLife',
+               '~/Library/Caches/SecondLife',
+             ]
 end

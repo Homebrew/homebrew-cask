@@ -15,13 +15,11 @@ cask 'smooze' do
   uninstall login_item: 'Smooze',
             quit:       'co.smooze.macos'
 
-  zap delete: [
-                '~/Library/Caches/co.smooze.macos',
-                '~/Library/Caches/io.fabric.sdk.mac.data/co.smooze.macos',
-              ],
-      trash:  [
-                '~/Library/Application Support/co.smooze.macos',
-                '~/Library/Application Support/Smooze',
-                '~/Library/Preferences/co.smooze.macos.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/co.smooze.macos',
+               '~/Library/Application Support/Smooze',
+               '~/Library/Caches/co.smooze.macos',
+               '~/Library/Caches/io.fabric.sdk.mac.data/co.smooze.macos',
+               '~/Library/Preferences/co.smooze.macos.plist',
+             ]
 end
