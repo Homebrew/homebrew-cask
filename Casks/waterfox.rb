@@ -9,12 +9,10 @@ cask 'waterfox' do
 
   app 'Waterfox.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.waterfox.sfl*',
-                '~/Library/Caches/Waterfox',
-              ],
-      trash:  [
-                '~/Library/Application Support/Waterfox',
-                '~/Library/Preferences/org.waterfoxproject.waterfox.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.waterfox.sfl*',
+               '~/Library/Application Support/Waterfox',
+               '~/Library/Caches/Waterfox',
+               '~/Library/Preferences/org.waterfoxproject.waterfox.plist',
+             ]
 end

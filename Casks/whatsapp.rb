@@ -12,11 +12,11 @@ cask 'whatsapp' do
 
   app 'WhatsApp.app'
 
-  zap delete: '~/Library/Caches/WhatsApp',
-      trash:  [
-                '~/Library/Application Support/WhatsApp',
-                '~/Library/Application Support/WhatsApp.ShipIt',
-                '~/Library/Preferences/WhatsApp.plist',
-                '~/Library/Preferences/WhatsApp-Helper.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/WhatsApp',
+               '~/Library/Application Support/WhatsApp.ShipIt',
+               '~/Library/Caches/WhatsApp',
+               '~/Library/Preferences/WhatsApp.plist',
+               '~/Library/Preferences/WhatsApp-Helper.plist',
+             ]
 end
