@@ -11,6 +11,8 @@ cask 'foobarplus' do
 
   app 'FoobarPlus.app'
 
-  zap delete: '~/Library/Caches/com.weirdrocketeer.FoobarPlus',
-      trash:  '~/Library/Preferences/com.weirdrocketeer.FoobarPlus.plist'
+  zap trash: [
+               '~/Library/Caches/com.weirdrocketeer.FoobarPlus',
+               '~/Library/Preferences/com.weirdrocketeer.FoobarPlus.plist',
+             ]
 end

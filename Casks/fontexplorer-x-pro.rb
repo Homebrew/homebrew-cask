@@ -17,17 +17,15 @@ cask 'fontexplorer-x-pro' do
                        ],
             quit:      'com.linotype.FontExplorerX'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.linotype.fontexplorerx.sfl*',
-                '~/Library/Caches/com.linotype.FontExplorerX',
-                '~/Library/Caches/Metadata/FontExplorer X',
-                '~/Library/Cookies/com.linotype.FontExplorerX.binarycookies',
-                '~/Library/Saved Application State/com.linotype.FontExplorerX.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/Linotype/FontExplorer X',
-                '~/Library/Preferences/com.linotype.FontExplorerX.plist',
-                '/Users/Shared/.FontExplorer X Server',
-                '/Users/Shared/FontExplorer X Server',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Linotype/FontExplorer X',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.linotype.fontexplorerx.sfl*',
+               '~/Library/Caches/com.linotype.FontExplorerX',
+               '~/Library/Caches/Metadata/FontExplorer X',
+               '~/Library/Cookies/com.linotype.FontExplorerX.binarycookies',
+               '~/Library/Preferences/com.linotype.FontExplorerX.plist',
+               '~/Library/Saved Application State/com.linotype.FontExplorerX.savedState',
+               '/Users/Shared/.FontExplorer X Server',
+               '/Users/Shared/FontExplorer X Server',
+             ]
 end

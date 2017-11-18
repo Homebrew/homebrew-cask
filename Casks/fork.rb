@@ -12,12 +12,10 @@ cask 'fork' do
 
   app 'Fork.app'
 
-  zap delete: [
-                '~/Library/Caches/com.DanPristupov.Fork',
-                '~/Library/Saved Application State/com.DanPristupov.Fork.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/com.DanPristupov.Fork',
-                '~/Library/Preferences/com.DanPristupov.Fork.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.DanPristupov.Fork',
+               '~/Library/Caches/com.DanPristupov.Fork',
+               '~/Library/Preferences/com.DanPristupov.Fork.plist',
+               '~/Library/Saved Application State/com.DanPristupov.Fork.savedState',
+             ]
 end
