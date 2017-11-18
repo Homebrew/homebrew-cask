@@ -11,10 +11,10 @@ cask 'wifi-explorer' do
 
   app 'WiFi Explorer.app'
 
-  zap delete: [
-                '~/Library/Caches/wifiexplorer',
-                '~/Library/Cookies/wifiexplorer.binarycookies',
-                '~/Library/Saved Application State/wifiexplorer.savedState',
-              ],
-      trash:  '~/Library/Preferences/wifiexplorer.plist'
+  zap trash: [
+               '~/Library/Caches/wifiexplorer',
+               '~/Library/Cookies/wifiexplorer.binarycookies',
+               '~/Library/Preferences/wifiexplorer.plist',
+               '~/Library/Saved Application State/wifiexplorer.savedState',
+             ]
 end

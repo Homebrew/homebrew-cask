@@ -51,5 +51,5 @@ cask 'wireshark' do
                          sudo:         true,
                        }
 
-  zap delete: '~/Library/Saved Application State/org.wireshark.Wireshark.savedState'
+  zap trash: '~/Library/Saved Application State/org.wireshark.Wireshark.savedState'
 end

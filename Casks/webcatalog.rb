@@ -11,12 +11,12 @@ cask 'webcatalog' do
 
   app 'WebCatalog.app'
 
-  zap delete: [
-                '~/Library/Application Support/WebCatalog',
-                '~/Library/Cookies/com.webcatalog.app.binarycookies',
-                '~/Library/Preferences/WebCatalog_Alt.plist',
-                '~/Library/Preferences/com.webcatalog.app.helper.plist',
-                '~/Library/Preferences/com.webcatalog.app.plist',
-                '~/Library/Saved Application State/com.webcatalog.app.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/WebCatalog',
+               '~/Library/Cookies/com.webcatalog.app.binarycookies',
+               '~/Library/Preferences/WebCatalog_Alt.plist',
+               '~/Library/Preferences/com.webcatalog.app.helper.plist',
+               '~/Library/Preferences/com.webcatalog.app.plist',
+               '~/Library/Saved Application State/com.webcatalog.app.savedState',
+             ]
 end
