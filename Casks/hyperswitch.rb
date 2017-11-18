@@ -10,8 +10,8 @@ cask 'hyperswitch' do
 
   app 'HyperSwitch.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.bahoom.HyperSwitch.plist',
-                '~/Library/Caches/com.bahoom.HyperSwitch',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.bahoom.HyperSwitch.plist',
+               '~/Library/Caches/com.bahoom.HyperSwitch',
+             ]
 end
