@@ -11,9 +11,9 @@ cask 'axure-rp' do
 
   app "Axure RP #{version.major}.app"
 
-  zap delete: [
-                "~/Library/Preferences/com.axure.AxureRP#{version.major}.plist",
-                "~/Library/Saved Application State/com.axure.AxureRP#{version.major}.savedState",
-                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.axure.axurerp#{version.major}.sfl*",
-              ]
+  zap trash: [
+               "~/Library/Preferences/com.axure.AxureRP#{version.major}.plist",
+               "~/Library/Saved Application State/com.axure.AxureRP#{version.major}.savedState",
+               "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.axure.axurerp#{version.major}.sfl*",
+             ]
 end

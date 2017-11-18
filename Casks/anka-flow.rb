@@ -24,17 +24,17 @@ cask 'anka-flow' do
                          sudo:       true,
                        }
 
-  zap delete: [
-                '~/.anka',
-                '~/Library/Application Support/Veertu/Anka',
-                '~/Library/Logs/Anka',
-                '~/Library/Preferences/com.veertu.ankaview.plist',
-                '/Library/Application Support/Veertu/Anka',
-              ],
-      rmdir:  [
-                '~/Library/Application Support/Veertu',
-                '/Library/Application Support/Veertu',
-              ]
+  zap trash: [
+               '~/.anka',
+               '~/Library/Application Support/Veertu/Anka',
+               '~/Library/Logs/Anka',
+               '~/Library/Preferences/com.veertu.ankaview.plist',
+               '/Library/Application Support/Veertu/Anka',
+             ],
+      rmdir: [
+               '~/Library/Application Support/Veertu',
+               '/Library/Application Support/Veertu',
+             ]
 
   caveats <<~EOS
     Installing this Cask means you have AGREED to the

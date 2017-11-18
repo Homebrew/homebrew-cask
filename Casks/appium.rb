@@ -11,10 +11,10 @@ cask 'appium' do
 
   app 'Appium.app'
 
-  zap delete: '~/Library/Saved Application State/io.appium.desktop.savedState',
-      trash:  [
-                '~/Library/Application Support/appium-desktop',
-                '~/Library/Preferences/io.appium.desktop.helper.plist',
-                '~/Library/Preferences/io.appium.desktop.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/appium-desktop',
+               '~/Library/Preferences/io.appium.desktop.helper.plist',
+               '~/Library/Preferences/io.appium.desktop.plist',
+               '~/Library/Saved Application State/io.appium.desktop.savedState',
+             ]
 end

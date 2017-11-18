@@ -10,12 +10,10 @@ cask 'ascension' do
 
   app 'Ascension.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.byteproject.ascension.sfl*',
-                '~/Library/Saved Application State/com.byteproject.Ascension.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/Ascension',
-                '~/Library/Preferences/com.byteproject.Ascension.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Ascension',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.byteproject.ascension.sfl*',
+               '~/Library/Preferences/com.byteproject.Ascension.plist',
+               '~/Library/Saved Application State/com.byteproject.Ascension.savedState',
+             ]
 end

@@ -11,11 +11,11 @@ cask 'apache-couchdb' do
 
   app 'Apache CouchDB.app'
 
-  zap delete: [
-                '~/Library/Application Support/CouchDB',
-                '~/Library/Caches/org.apache.couchdb',
-                '~/Library/Logs/couchdb.log',
-                '~/Library/Logs/couchdb.log.old',
-                '~/Library/Preferences/org.apache.couchdb.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/CouchDB',
+               '~/Library/Caches/org.apache.couchdb',
+               '~/Library/Logs/couchdb.log',
+               '~/Library/Logs/couchdb.log.old',
+               '~/Library/Preferences/org.apache.couchdb.plist',
+             ]
 end

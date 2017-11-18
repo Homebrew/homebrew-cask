@@ -13,15 +13,15 @@ cask 'aluxian-messenger' do
 
   app 'Messenger for Desktop.app'
 
-  zap delete: [
-                '/Library/Logs/DiagnosticReports/Messenger For Desktop*',
-                '~/Library/Application Support/Messenger For Desktop',
-                '~/Library/Caches/com.aluxian.messengerfd',
-                '~/Library/Caches/com.aluxian.messengerfd.ShipIt',
-                '~/Library/Cookies/com.aluxian.messengerfd.binarycookies',
-                '~/Library/Preferences/ByHost/com.aluxian.messengerfd.ShipIt*',
-                '~/Library/Preferences/com.aluxian.messengerfd.helper.plist',
-                '~/Library/Preferences/com.aluxian.messengerfd.plist',
-                '~/Library/Saved Application State/com.aluxian.messengerfd.savedState',
-              ]
+  zap trash: [
+               '/Library/Logs/DiagnosticReports/Messenger For Desktop*',
+               '~/Library/Application Support/Messenger For Desktop',
+               '~/Library/Caches/com.aluxian.messengerfd',
+               '~/Library/Caches/com.aluxian.messengerfd.ShipIt',
+               '~/Library/Cookies/com.aluxian.messengerfd.binarycookies',
+               '~/Library/Preferences/ByHost/com.aluxian.messengerfd.ShipIt*',
+               '~/Library/Preferences/com.aluxian.messengerfd.helper.plist',
+               '~/Library/Preferences/com.aluxian.messengerfd.plist',
+               '~/Library/Saved Application State/com.aluxian.messengerfd.savedState',
+             ]
 end

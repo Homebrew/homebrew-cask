@@ -10,11 +10,11 @@ cask 'audirvana-plus' do
 
   app 'Audirvana Plus.app'
 
-  zap delete: [
-                '/Library/LaunchDaemons/com.audirvana.Audirvana-Plus.plist',
-                '/Library/PrivilegedHelperTools/com.audirvana.Audirvana-Plus',
-                '~/Library/Caches/com.audirvana.Audirvana-Plus',
-                '~/Library/Cookies/com.audirvana.Audirvana-Plus.binarycookies',
-                '~/Library/Preferences/com.audirvana.Audirvana-Plus.plist',
-              ]
+  zap trash: [
+               '/Library/LaunchDaemons/com.audirvana.Audirvana-Plus.plist',
+               '/Library/PrivilegedHelperTools/com.audirvana.Audirvana-Plus',
+               '~/Library/Caches/com.audirvana.Audirvana-Plus',
+               '~/Library/Cookies/com.audirvana.Audirvana-Plus.binarycookies',
+               '~/Library/Preferences/com.audirvana.Audirvana-Plus.plist',
+             ]
 end

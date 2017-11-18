@@ -10,14 +10,12 @@ cask 'amazon-chime' do
 
   app 'Amazon Chime.app'
 
-  zap delete: [
-                '~/Library/Caches/com.amazon.Amazon-Chime',
-                '~/Library/Logs/Amazon Chime',
-                '~/Library/WebKit/com.amazon.Amazon-Chime',
-              ],
-      trash:  [
-                '~/Library/Application Support/Amazon Chime',
-                '~/Library/Application Support/com.amazon.Amazon-Chime',
-                '~/Library/Preferences/com.amazon.Amazon-Chime.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Amazon Chime',
+               '~/Library/Application Support/com.amazon.Amazon-Chime',
+               '~/Library/Caches/com.amazon.Amazon-Chime',
+               '~/Library/Logs/Amazon Chime',
+               '~/Library/Preferences/com.amazon.Amazon-Chime.plist',
+               '~/Library/WebKit/com.amazon.Amazon-Chime',
+             ]
 end

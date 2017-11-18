@@ -10,15 +10,13 @@ cask 'avocode' do
 
   app 'Avocode.app'
 
-  zap delete: [
-                '~/Library/Caches/com.madebysource.avocode',
-                '~/Library/Caches/com.madebysource.avocode.ShipIt',
-                '~/Library/Saved Application State/com.madebysource.avocode.savedState',
-              ],
-      trash:  [
-                '~/.avocode',
-                '~/Library/Application Support/Avocode',
-                '~/Library/Preferences/com.madebysource.avocode.helper.plist',
-                '~/Library/Preferences/com.madebysource.avocode.plist',
-              ]
+  zap trash: [
+               '~/.avocode',
+               '~/Library/Application Support/Avocode',
+               '~/Library/Caches/com.madebysource.avocode',
+               '~/Library/Caches/com.madebysource.avocode.ShipIt',
+               '~/Library/Preferences/com.madebysource.avocode.helper.plist',
+               '~/Library/Preferences/com.madebysource.avocode.plist',
+               '~/Library/Saved Application State/com.madebysource.avocode.savedState',
+             ]
 end

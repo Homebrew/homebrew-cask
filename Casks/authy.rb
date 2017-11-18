@@ -11,14 +11,12 @@ cask 'authy' do
 
   app 'Authy Desktop.app'
 
-  zap delete: [
-                '~/Library/Caches/com.authy.authy-mac',
-                '~/Library/Caches/com.authy.authy-mac.ShipIt',
-                '~/Library/Cookies/com.authy.authy-mac.binarycookies',
-              ],
-      trash:  [
-                '~/Library/Application Support/Authy Desktop',
-                '~/Library/Preferences/com.authy.authy-mac.helper.plist',
-                '~/Library/Preferences/com.authy.authy-mac.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Authy Desktop',
+               '~/Library/Caches/com.authy.authy-mac',
+               '~/Library/Caches/com.authy.authy-mac.ShipIt',
+               '~/Library/Cookies/com.authy.authy-mac.binarycookies',
+               '~/Library/Preferences/com.authy.authy-mac.helper.plist',
+               '~/Library/Preferences/com.authy.authy-mac.plist',
+             ]
 end

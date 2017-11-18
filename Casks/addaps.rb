@@ -9,14 +9,12 @@ cask 'addaps' do
 
   app 'Addap\'s beta.app'
 
-  zap delete: [
-                '~/Library/Logs/Addap\'s beta',
-                '~/Library/Saved Application State/com.electron.addaps.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/Addap\'s',
-                '~/Library/Application Support/Addap\'s beta',
-                '~/Library/Preferences/com.electron.addaps.helper.plist',
-                '~/Library/Preferences/com.electron.addaps.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Addap\'s',
+               '~/Library/Application Support/Addap\'s beta',
+               '~/Library/Logs/Addap\'s beta',
+               '~/Library/Preferences/com.electron.addaps.helper.plist',
+               '~/Library/Preferences/com.electron.addaps.plist',
+               '~/Library/Saved Application State/com.electron.addaps.savedState',
+             ]
 end

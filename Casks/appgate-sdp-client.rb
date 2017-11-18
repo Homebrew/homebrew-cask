@@ -20,15 +20,13 @@ cask 'appgate-sdp-client' do
                        ],
             pkgutil:   'com.appgate.pkg.appgatetun.component'
 
-  zap delete: [
-                '~/Library/Caches/com.cryptzone.appgate.xdp.uninstall',
-                '~/Library/Saved Application State/com.electron.appgate.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/appgate-ui',
-                '~/Library/Application Support/appgatexdp-ui',
-                '~/Library/Preferences/com.cryptzone.appgate.xdp*',
-                '~/Library/Preferences/com.electron.appgate.helper.plist',
-                '~/Library/Preferences/com.electron.appgate.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/appgate-ui',
+               '~/Library/Application Support/appgatexdp-ui',
+               '~/Library/Caches/com.cryptzone.appgate.xdp.uninstall',
+               '~/Library/Preferences/com.cryptzone.appgate.xdp*',
+               '~/Library/Preferences/com.electron.appgate.helper.plist',
+               '~/Library/Preferences/com.electron.appgate.plist',
+               '~/Library/Saved Application State/com.electron.appgate.savedState',
+             ]
 end
