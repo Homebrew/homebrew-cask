@@ -8,11 +8,11 @@ cask 'dropdmg' do
 
   app 'DropDMG.app'
 
-  zap delete: [
-                '~/Library/Application Support/DropDMG',
-                '~/Library/Automator/DropDMG.action',
-                '~/Library/Automator/Expand Disk Image.action',
-                '~/Library/Caches/com.c-command.DropDMG',
-                '~/Library/Preferences/com.c-command.DropDMG.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/DropDMG',
+               '~/Library/Automator/DropDMG.action',
+               '~/Library/Automator/Expand Disk Image.action',
+               '~/Library/Caches/com.c-command.DropDMG',
+               '~/Library/Preferences/com.c-command.DropDMG.plist',
+             ]
 end

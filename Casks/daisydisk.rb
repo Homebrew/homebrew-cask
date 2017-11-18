@@ -23,9 +23,9 @@ cask 'daisydisk' do
   uninstall delete:    '/Library/PrivilegedHelperTools/com.daisydiskapp.DaisyDiskAdminHelper',
             launchctl: 'com.daisydiskapp.DaisyDiskAdminHelper'
 
-  zap delete: '~/Library/Caches/com.daisydiskapp.DaisyDiskStandAlone',
-      trash:  [
-                '~/Library/Application Support/DaisyDisk',
-                '~/Library/Preferences/com.daisydiskapp.DaisyDiskStandAlone.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/DaisyDisk',
+               '~/Library/Caches/com.daisydiskapp.DaisyDiskStandAlone',
+               '~/Library/Preferences/com.daisydiskapp.DaisyDiskStandAlone.plist',
+             ]
 end

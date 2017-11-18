@@ -16,14 +16,12 @@ cask 'disk-sensei' do
   uninstall delete:    '/Library/PrivilegedHelperTools/org.cindori.SenseiTool',
             launchctl: 'org.cindori.SenseiTool'
 
-  zap delete: [
-                '~/Library/Caches/org.cindori.Disk-Sensei',
-                '~/Library/Cookies/org.cindori.Disk-Sensei.binarycookies',
-                '~/Library/Saved Application State/org.cindori.Disk-Sensei.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/Disk Sensei',
-                '~/Library/Application Support/org.cindori.Disk-Sensei',
-                '~/Library/Preferences/org.cindori.Disk-Sensei.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Disk Sensei',
+               '~/Library/Application Support/org.cindori.Disk-Sensei',
+               '~/Library/Caches/org.cindori.Disk-Sensei',
+               '~/Library/Cookies/org.cindori.Disk-Sensei.binarycookies',
+               '~/Library/Preferences/org.cindori.Disk-Sensei.plist',
+               '~/Library/Saved Application State/org.cindori.Disk-Sensei.savedState',
+             ]
 end

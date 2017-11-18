@@ -11,9 +11,9 @@ cask 'drawio' do
 
   app 'draw.io.app'
 
-  zap delete: '~/Library/Saved Application State/com.jgraph.drawio.desktop.savedState',
-      trash:  [
-                '~/Library/Preferences/com.jgraph.drawio.desktop.helper.plist',
-                '~/Library/Preferences/com.jgraph.drawio.desktop.plist',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.jgraph.drawio.desktop.helper.plist',
+               '~/Library/Preferences/com.jgraph.drawio.desktop.plist',
+               '~/Library/Saved Application State/com.jgraph.drawio.desktop.savedState',
+             ]
 end
