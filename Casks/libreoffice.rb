@@ -36,12 +36,10 @@ cask 'libreoffice' do
     EOS
   end
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.libreoffice.script.sfl*',
-                '~/Library/Saved Application State/org.libreoffice.script.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/LibreOffice',
-                '~/Library/Preferences/org.libreoffice.script.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/LibreOffice',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.libreoffice.script.sfl*',
+               '~/Library/Preferences/org.libreoffice.script.plist',
+               '~/Library/Saved Application State/org.libreoffice.script.savedState',
+             ]
 end
