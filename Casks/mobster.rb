@@ -4,7 +4,7 @@ cask 'mobster' do
 
   url "https://github.com/dillonkearns/mobster/releases/download/v#{version}/Mobster-#{version}.dmg"
   appcast 'https://github.com/dillonkearns/mobster/releases.atom',
-         checkpoint: '77bcee9deaaf040bb57776d2fadef7ab2046f6b157f748adf0fd7541e9bd3b95'
+          checkpoint: '77bcee9deaaf040bb57776d2fadef7ab2046f6b157f748adf0fd7541e9bd3b95'
   name 'Mobster'
   homepage 'https://github.com/dillonkearns/mobster/'
 
