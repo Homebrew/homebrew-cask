@@ -1,10 +1,10 @@
 cask 'geotag' do
-  version '4.0.2'
-  sha256 '513b422ea25c21630cb9946dd597d44dbc46199c25c66ace1736037dc296c97f'
+  version '4.0.23'
+  sha256 '9fbf9fcbd27130ad5c333e8434747868c50b4b75cbcbd00245174c6489ec444c'
 
   url "https://www.snafu.org/GeoTag/GeoTag-#{version}.dmg"
   appcast 'https://www.snafu.org/GeoTag/',
-          checkpoint: 'e34194cba9d767551e615c05bd5e5547a9e688587c3e4e6eedf7e2b976954719'
+          checkpoint: '792da791f2d5d043e2a3bf74215501fc6ca046319a945a9889d9df950d6ac05a'
   name 'GeoTag'
   homepage 'https://www.snafu.org/GeoTag/'
 
