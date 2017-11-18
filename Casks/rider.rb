@@ -16,14 +16,12 @@ cask 'rider' do
     ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'rider') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }
   end
 
-  zap delete: [
-                "~/Library/Caches/Rider#{version.major_minor}",
-                "~/Library/Logs/Rider#{version.major_minor}",
-                '~/Library/Saved Application State/com.jetbrains.rider.savedState',
-              ],
-      trash:  [
-                "~/Library/Application Support/Rider#{version.major_minor}",
-                "~/Library/Preferences/Rider#{version.major_minor}",
-                '~/Library/Preferences/jetbrains.rider.71e559ef.plist',
-              ]
+  zap trash: [
+               "~/Library/Caches/Rider#{version.major_minor}",
+               "~/Library/Logs/Rider#{version.major_minor}",
+               '~/Library/Saved Application State/com.jetbrains.rider.savedState',
+               "~/Library/Application Support/Rider#{version.major_minor}",
+               "~/Library/Preferences/Rider#{version.major_minor}",
+               '~/Library/Preferences/jetbrains.rider.71e559ef.plist',
+             ]
 end

@@ -16,12 +16,10 @@ cask 'pycharm' do
     ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'charm') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }
   end
 
-  zap delete: [
-                "~/Library/Caches/PyCharm#{version.major_minor}",
-                "~/Library/Logs/PyCharm#{version.major_minor}",
-              ],
-      trash:  [
-                "~/Library/Application Support/PyCharm#{version.major_minor}",
-                "~/Library/Preferences/PyCharm#{version.major_minor}",
-              ]
+  zap trash: [
+               "~/Library/Caches/PyCharm#{version.major_minor}",
+               "~/Library/Logs/PyCharm#{version.major_minor}",
+               "~/Library/Application Support/PyCharm#{version.major_minor}",
+               "~/Library/Preferences/PyCharm#{version.major_minor}",
+             ]
 end
