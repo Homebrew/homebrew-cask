@@ -14,8 +14,8 @@ cask 'logmein-hamachi' do
                       sudo:       true,
                     }
 
-  zap delete: [
-                '/Library/Application Support/LogMeIn Hamachi',
-                '~/Library/Application Support/LogMeIn Hamachi',
-              ]
+  zap trash: [
+               '/Library/Application Support/LogMeIn Hamachi',
+               '~/Library/Application Support/LogMeIn Hamachi',
+             ]
 end

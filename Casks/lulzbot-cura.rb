@@ -13,10 +13,10 @@ cask 'lulzbot-cura' do
 
   uninstall quit: "com.ultimaker.Cura-#{version.major_minor}"
 
-  zap delete: [
-                '~/.cura',
-                '~/Library/Application Support/Cura',
-                "~/Library/Preferences/com.ultimaker.Cura-#{version.major_minor}.plist",
-                "~/Library/Saved Application State/com.ultimaker.Cura-#{version.major_minor}.savedState",
-              ]
+  zap trash: [
+               '~/.cura',
+               '~/Library/Application Support/Cura',
+               "~/Library/Preferences/com.ultimaker.Cura-#{version.major_minor}.plist",
+               "~/Library/Saved Application State/com.ultimaker.Cura-#{version.major_minor}.savedState",
+             ]
 end

@@ -11,8 +11,8 @@ cask 'lantern' do
   uninstall quit:      'com.getlantern.lantern',
             launchctl: 'org.getlantern'
 
-  zap delete: [
-                '~/Library/Application Support/Lantern',
-                '~/Library/Logs/Lantern',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Lantern',
+               '~/Library/Logs/Lantern',
+             ]
 end

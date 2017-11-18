@@ -10,9 +10,9 @@ cask 'lyn' do
 
   app 'Lyn.app'
 
-  zap delete: [
-                '~/Library/Application Support/Lyn',
-                '~/Library/Caches/com.lynapp.lyn',
-                '~/Library/Preferences/com.lynapp.lyn.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Lyn',
+               '~/Library/Caches/com.lynapp.lyn',
+               '~/Library/Preferences/com.lynapp.lyn.plist',
+             ]
 end
