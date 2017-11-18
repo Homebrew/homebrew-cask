@@ -13,7 +13,7 @@ cask 'powershell' do
 
   pkg "powershell-#{version}-osx.10.12-x64.pkg"
 
-  uninstall pkgutil: 'powershell'
+  uninstall pkgutil: 'com.microsoft.powershell'
 
   zap trash: [
                '~/.cache/powershell',
