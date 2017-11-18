@@ -12,16 +12,14 @@ cask 'typora' do
 
   app 'Typora.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/abnerworks.typora.sfl*',
-                '~/Library/Caches/abnerworks.Typora',
-                '~/Library/Cookies/abnerworks.Typora.binarycookies',
-                '~/Library/Saved Application State/abnerworks.Typora.savedState',
-                '~/Library/WebKit/abnerworks.Typora',
-              ],
-      trash:  [
-                '~/Library/Application Support/Typora',
-                '~/Library/Application Support/abnerworks.Typora',
-                '~/Library/Preferences/abnerworks.Typora.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/abnerworks.typora.sfl*',
+               '~/Library/Application Support/Typora',
+               '~/Library/Application Support/abnerworks.Typora',
+               '~/Library/Caches/abnerworks.Typora',
+               '~/Library/Cookies/abnerworks.Typora.binarycookies',
+               '~/Library/Preferences/abnerworks.Typora.plist',
+               '~/Library/Saved Application State/abnerworks.Typora.savedState',
+               '~/Library/WebKit/abnerworks.Typora',
+             ]
 end

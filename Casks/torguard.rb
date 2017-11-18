@@ -13,8 +13,8 @@ cask 'torguard' do
 
   uninstall pkgutil: 'net.torguard.TorGuardDesktopQt'
 
-  zap delete: [
-                '~/Library/Preferences/net.torguard.TorGuard*.plist',
-                '~/Library/Saved Application State/net.torguard.TorGuardDesktopQt.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/net.torguard.TorGuard*.plist',
+               '~/Library/Saved Application State/net.torguard.TorGuardDesktopQt.savedState',
+             ]
 end

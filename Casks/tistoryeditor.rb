@@ -11,9 +11,9 @@ cask 'tistoryeditor' do
 
   app 'TistoryEditor.app'
 
-  zap delete: '~/Library/Saved Application State/net.joostory.tistory-editor.savedState',
-      trash:  [
-                '~/Library/Preferences/net.joostory.tistory-editor.helper.plist',
-                '~/Library/Preferences/net.joostory.tistory-editor.plist',
-              ]
+  zap trash: [
+               '~/Library/Preferences/net.joostory.tistory-editor.helper.plist',
+               '~/Library/Preferences/net.joostory.tistory-editor.plist',
+               '~/Library/Saved Application State/net.joostory.tistory-editor.savedState',
+             ]
 end

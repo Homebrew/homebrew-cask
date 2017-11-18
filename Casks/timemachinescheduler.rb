@@ -10,11 +10,11 @@ cask 'timemachinescheduler' do
 
   app 'TimeMachineScheduler.app'
 
-  zap delete: [
-                '/Library/LaunchDaemons/com.klieme.TimeMachineScheduler.plist',
-                '/Library/Preferences/com.klieme.TimeMachineScheduler.plist',
-                '~/Library/Caches/com.klieme.TimeMachineScheduler',
-                '~/Library/Preferences/com.klieme.TimeMachineScheduler.plist',
-                '~/Library/Saved Application State/com.klieme.TimeMachineScheduler.savedState',
-              ]
+  zap trash: [
+               '/Library/LaunchDaemons/com.klieme.TimeMachineScheduler.plist',
+               '/Library/Preferences/com.klieme.TimeMachineScheduler.plist',
+               '~/Library/Caches/com.klieme.TimeMachineScheduler',
+               '~/Library/Preferences/com.klieme.TimeMachineScheduler.plist',
+               '~/Library/Saved Application State/com.klieme.TimeMachineScheduler.savedState',
+             ]
 end

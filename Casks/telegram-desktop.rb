@@ -15,9 +15,9 @@ cask 'telegram-desktop' do
   # Renamed to avoid conflict with telegram
   app 'Telegram.app', target: 'Telegram Desktop.app'
 
-  zap delete: [
-                '~/Library/Application Support/Telegram Desktop',
-                '~/Library/Preferences/com.tdesktop.Telegram.plist',
-                '~/Library/Saved Application State/com.tdesktop.Telegram.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Telegram Desktop',
+               '~/Library/Preferences/com.tdesktop.Telegram.plist',
+               '~/Library/Saved Application State/com.tdesktop.Telegram.savedState',
+             ]
 end

@@ -10,12 +10,12 @@ cask 'tg-pro' do
 
   app 'TG Pro.app'
 
-  zap delete: [
-                '/Library/LaunchDaemons/com.tunabellysoftware.TGFanHelper.plist',
-                '/Library/PrivilegedHelperTools/com.tunabellysoftware.TGFanHelper',
-                '~/Library/Application Support/TG Pro',
-                '~/Library/Caches/com.tunabellysoftware.tgpro',
-                '~/Library/Cookies/com.tunabellysoftware.tgpro.binarycookies',
-                '~/Library/Preferences/com.tunabellysoftware.tgpro.plist',
-              ]
+  zap trash: [
+               '/Library/LaunchDaemons/com.tunabellysoftware.TGFanHelper.plist',
+               '/Library/PrivilegedHelperTools/com.tunabellysoftware.TGFanHelper',
+               '~/Library/Application Support/TG Pro',
+               '~/Library/Caches/com.tunabellysoftware.tgpro',
+               '~/Library/Cookies/com.tunabellysoftware.tgpro.binarycookies',
+               '~/Library/Preferences/com.tunabellysoftware.tgpro.plist',
+             ]
 end
