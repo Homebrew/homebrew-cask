@@ -12,14 +12,12 @@ cask 'texshop' do
 
   app 'TeXShop.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/texshop.sfl*',
-                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/TeXShop Help*',
-                '~/Library/Caches/TeXShop',
-                '~/Library/TeXShop',
-              ],
-      trash:  [
-                '~/Library/Application Support/TeXShop',
-                '~/Library/Preferences/TeXShop.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/texshop.sfl*',
+               '~/Library/Application Support/TeXShop',
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/TeXShop Help*',
+               '~/Library/Caches/TeXShop',
+               '~/Library/Preferences/TeXShop.plist',
+               '~/Library/TeXShop',
+             ]
 end
