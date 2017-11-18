@@ -6,9 +6,7 @@ cask 'google-backup-and-sync' do
   name 'Google Backup and Sync'
   homepage 'https://www.google.com/drive/download/'
 
-  conflicts_with cask: [
-                         'google-photos-backup-and-sync',
-                       ]
+  conflicts_with cask: 'google-photos-backup-and-sync'
   depends_on macos: '>= :mavericks'
 
   app 'Backup and Sync.app'
@@ -26,5 +24,9 @@ cask 'google-backup-and-sync' do
                '~/Library/Preferences/com.google.GoogleDrive.plist',
              ]
 
-  caveats "Although #{token} may be installed alongside google-drive-file-stream, you should not use the same account with both."
+  caveats <<~EOS
+    Although #{token} may be installed alongside google-drive-file-stream, you should not use the same account with both.
+
+      https://support.google.com/a/answer/7496409#allowboth
+  EOS
 end
