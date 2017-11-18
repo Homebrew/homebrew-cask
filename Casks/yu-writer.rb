@@ -11,10 +11,10 @@ cask 'yu-writer' do
 
   app 'Yu Writer.app'
 
-  zap delete: '~/Library/Caches/Yu Writer',
-      trash:  [
-                '~/Library/Application Support/Yu Writer',
-                '~/Library/Preferences/com.github.yu-writer.helper.plist',
-                '~/Library/Preferences/com.github.yu-writer.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Yu Writer',
+               '~/Library/Caches/Yu Writer',
+               '~/Library/Preferences/com.github.yu-writer.helper.plist',
+               '~/Library/Preferences/com.github.yu-writer.plist',
+             ]
 end
