@@ -17,12 +17,12 @@ cask 'nordvpn' do
             delete:     '/Library/PrivilegedHelperTools/com.nordvpn.NordVPN.Helper',
             login_item: 'NordVPN'
 
-  zap delete: [
-                '~/Library/Application Support/com.nordvpn.NordVPN',
-                '~/Library/Caches/com.nordvpn.NordVPN',
-                '~/Library/Logs/NordVPN/',
-                '~/Library/Preferences/com.nordvpn.NordVPN.plist',
-                '~/Library/Saved Application State/com.nordvpn.NordVPN.savedState',
-                '~/Library/Cookies/com.nordvpn.NordVPN.binarycookies',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.nordvpn.NordVPN',
+               '~/Library/Caches/com.nordvpn.NordVPN',
+               '~/Library/Logs/NordVPN/',
+               '~/Library/Preferences/com.nordvpn.NordVPN.plist',
+               '~/Library/Saved Application State/com.nordvpn.NordVPN.savedState',
+               '~/Library/Cookies/com.nordvpn.NordVPN.binarycookies',
+             ]
 end

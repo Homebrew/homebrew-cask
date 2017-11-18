@@ -10,8 +10,8 @@ cask 'netlogo' do
 
   suite "NetLogo #{version}"
 
-  zap delete: [
-                '~/Library/Preferences/org.nlogo.netlogo.plist',
-                '~/Library/Saved Application State/org.nlogo.NetLogo.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/org.nlogo.netlogo.plist',
+               '~/Library/Saved Application State/org.nlogo.NetLogo.savedState',
+             ]
 end
