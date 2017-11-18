@@ -13,12 +13,12 @@ cask 'kaleidoscope' do
   app 'Kaleidoscope.app'
   binary "#{appdir}/Kaleidoscope.app/Contents/Resources/bin/ksdiff"
 
-  zap delete: [
-                '~/Library/Application Support/Kaleidoscope',
-                '~/Library/Caches/com.blackpixel.kaleidoscope',
-                '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.blackpixel.kaleidoscope',
-                '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.blackpixel.kaleidoscope/queued_reports',
-                '~/Library/Preferences/com.blackpixel.kaleidoscope.plist',
-                '~/Library/Saved Application State/com.blackpixel.kaleidoscope.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Kaleidoscope',
+               '~/Library/Caches/com.blackpixel.kaleidoscope',
+               '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.blackpixel.kaleidoscope',
+               '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.blackpixel.kaleidoscope/queued_reports',
+               '~/Library/Preferences/com.blackpixel.kaleidoscope.plist',
+               '~/Library/Saved Application State/com.blackpixel.kaleidoscope.savedState',
+             ]
 end

@@ -11,11 +11,11 @@ cask 'kitematic' do
 
   app 'Kitematic (Beta).app'
 
-  zap delete: [
-                '~/Kitematic',
-                '~/Library/Application Support/Kitematic',
-                '~/Library/Caches/Kitematic',
-                '~/Library/Preferences/com.electron.kitematic_(beta).plist',
-                '~/Library/Saved Application State/com.electron.kitematic_(beta).savedState',
-              ]
+  zap trash: [
+               '~/Kitematic',
+               '~/Library/Application Support/Kitematic',
+               '~/Library/Caches/Kitematic',
+               '~/Library/Preferences/com.electron.kitematic_(beta).plist',
+               '~/Library/Saved Application State/com.electron.kitematic_(beta).savedState',
+             ]
 end
