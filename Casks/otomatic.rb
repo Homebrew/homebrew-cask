@@ -12,14 +12,12 @@ cask 'otomatic' do
 
   app 'Otomatic.app'
 
-  zap delete: [
-                '~/Library/Caches/com.codingcurious.Otomatic',
-                '~/Library/Logs/Otomatic Helper',
-              ],
-      trash:  [
-                '~/Library/Application Support/Otomatic',
-                '~/Library/Application Support/Otomatic Helper',
-                '~/Library/Preferences/com.codingcurious.Otomatic.plist',
-                '~/Library/Preferences/com.codingcurious.Otomatic-Helper.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Otomatic',
+               '~/Library/Application Support/Otomatic Helper',
+               '~/Library/Caches/com.codingcurious.Otomatic',
+               '~/Library/Logs/Otomatic Helper',
+               '~/Library/Preferences/com.codingcurious.Otomatic.plist',
+               '~/Library/Preferences/com.codingcurious.Otomatic-Helper.plist',
+             ]
 end

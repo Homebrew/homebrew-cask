@@ -11,14 +11,12 @@ cask 'openbazaar' do
 
   app "OpenBazaar#{version.major}.app"
 
-  zap delete: [
-                "~/Library/Caches/com.electron.openbazaar#{version.major}",
-                "~/Library/Caches/com.electron.openbazaar#{version.major}.ShipIt",
-                '~/Library/Caches/com.electron.openbazaar',
-              ],
-      trash:  [
-                "~/Library/Application Support/OpenBazaar#{version.major_minor}",
-                "~/Library/Preferences/com.electron.openbazaar#{version.major}.helper.plist",
-                '~/Library/Preferences/com.electron.openbazaar.plist',
-              ]
+  zap trash: [
+               "~/Library/Application Support/OpenBazaar#{version.major_minor}",
+               "~/Library/Caches/com.electron.openbazaar#{version.major}",
+               "~/Library/Caches/com.electron.openbazaar#{version.major}.ShipIt",
+               '~/Library/Caches/com.electron.openbazaar',
+               "~/Library/Preferences/com.electron.openbazaar#{version.major}.helper.plist",
+               '~/Library/Preferences/com.electron.openbazaar.plist',
+             ]
 end
