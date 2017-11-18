@@ -10,6 +10,8 @@ cask 'prefs-editor' do
 
   app 'Prefs Editor.app'
 
-  zap delete: '~/Library/Saved Application State/org.tempel.prefseditor.savedState',
-      trash:  '~/Library/Preferences/org.tempel.prefseditor.plist'
+  zap trash: [
+               '~/Library/Preferences/org.tempel.prefseditor.plist',
+               '~/Library/Saved Application State/org.tempel.prefseditor.savedState',
+             ]
 end

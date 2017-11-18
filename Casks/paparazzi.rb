@@ -10,11 +10,11 @@ cask 'paparazzi' do
 
   app 'Paparazzi!.app'
 
-  zap delete: [
-                '~/Library/Application Support/Paparazzi!',
-                '~/Library/Caches/org.derailer.Paparazzi',
-                '~/Library/Cookies/org.derailer.Paparazzi.binarycookies',
-                '~/Library/Preferences/org.derailer.Paparazzi.plist',
-                '~/Library/Saved Application State/org.derailer.Paparazzi.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Paparazzi!',
+               '~/Library/Caches/org.derailer.Paparazzi',
+               '~/Library/Cookies/org.derailer.Paparazzi.binarycookies',
+               '~/Library/Preferences/org.derailer.Paparazzi.plist',
+               '~/Library/Saved Application State/org.derailer.Paparazzi.savedState',
+             ]
 end

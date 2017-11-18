@@ -11,14 +11,12 @@ cask 'parallels-toolbox' do
   uninstall delete: '/Applications/Parallels Toolbox.app',
             signal: ['TERM', 'com.parallels.toolbox']
 
-  zap delete: [
-                '~/Library/Group Containers/*.com.parallels.toolbox',
-                '~/Library/Logs/prl.toolbox.ceplog.log',
-                '~/Library/Logs/ParallelsToolbox',
-                '~/Library/Logs/prl.toolbox.ceplog.xml',
-              ],
-      trash:  [
-                '~/Library/Application Support/com.parallels.toolbox',
-                '~/Library/Preferences/com.parallels.toolbox.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.parallels.toolbox',
+               '~/Library/Group Containers/*.com.parallels.toolbox',
+               '~/Library/Logs/prl.toolbox.ceplog.log',
+               '~/Library/Logs/ParallelsToolbox',
+               '~/Library/Logs/prl.toolbox.ceplog.xml',
+               '~/Library/Preferences/com.parallels.toolbox.plist',
+             ]
 end

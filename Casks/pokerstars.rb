@@ -43,9 +43,9 @@ cask 'pokerstars' do
 
   app "PokerStars#{language[1]}.app"
 
-  zap delete: [
-                "~/Library/Preferences/com.pokerstars#{language[1]}.user.ini",
-                "~/Library/Preferences/com.pokerstars.PokerStars#{language[1]}.plist",
-                "~/Library/Application Support/PokerStars#{language[1]}",
-              ]
+  zap trash: [
+               "~/Library/Preferences/com.pokerstars#{language[1]}.user.ini",
+               "~/Library/Preferences/com.pokerstars.PokerStars#{language[1]}.plist",
+               "~/Library/Application Support/PokerStars#{language[1]}",
+             ]
 end
