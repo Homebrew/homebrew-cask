@@ -18,9 +18,9 @@ cask 'pritunl' do
                        ],
             signal:    ['TERM', 'com.electron.pritunl']
 
-  zap delete: '~/Library/Caches/pritunl',
-      trash:  [
-                '~/Library/Application Support/pritunl',
-                '~/Library/Preferences/com.electron.pritunl*',
-              ]
+  zap trash: [
+               '~/Library/Application Support/pritunl',
+               '~/Library/Caches/pritunl',
+               '~/Library/Preferences/com.electron.pritunl*',
+             ]
 end

@@ -8,5 +8,5 @@ cask 'printopia' do
 
   prefpane 'Printopia/Install Printopia.app/Contents/Resources/Printopia.prefPane'
 
-  zap delete: '~/Library/Preferences/com.ecamm.printopia.plist'
+  zap trash: '~/Library/Preferences/com.ecamm.printopia.plist'
 end

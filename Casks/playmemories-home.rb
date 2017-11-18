@@ -15,8 +15,8 @@ cask 'playmemories-home' do
                          'com.sony.WirelessAutoImportLauncher.agent',
                        ]
 
-  zap delete: [
-                '/Applications/PMHMac.app',
-                '/Applications/Wireless Auto Import.app',
-              ]
+  zap trash: [
+               '/Applications/PMHMac.app',
+               '/Applications/Wireless Auto Import.app',
+             ]
 end

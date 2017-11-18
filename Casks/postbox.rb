@@ -11,13 +11,13 @@ cask 'postbox' do
 
   app 'Postbox.app'
 
-  zap delete: [
-                '~/Library/Application Support/Postbox',
-                '~/Library/Caches/com.crashlytics.data/com.postbox-inc.postbox',
-                '~/Library/Caches/com.postbox-inc.postbox',
-                '~/Library/Caches/Postbox',
-                '~/Library/PDF Services/Mail PDF with Postbox',
-                '~/Library/Preferences/com.postbox-inc.postbox.plist',
-                '~/Library/Saved Application State/com.postbox-inc.postbox.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Postbox',
+               '~/Library/Caches/com.crashlytics.data/com.postbox-inc.postbox',
+               '~/Library/Caches/com.postbox-inc.postbox',
+               '~/Library/Caches/Postbox',
+               '~/Library/PDF Services/Mail PDF with Postbox',
+               '~/Library/Preferences/com.postbox-inc.postbox.plist',
+               '~/Library/Saved Application State/com.postbox-inc.postbox.savedState',
+             ]
 end

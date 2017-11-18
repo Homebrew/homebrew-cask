@@ -11,6 +11,8 @@ cask 'play' do
 
   app 'Play.app'
 
-  zap delete: '~/Library/Caches/Play',
-      trash:  '~/Library/Application Support/Play'
+  zap trash: [
+               '~/Library/Application Support/Play',
+               '~/Library/Caches/Play',
+             ]
 end

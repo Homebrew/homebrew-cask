@@ -14,14 +14,12 @@ cask 'porting-kit' do
 
   app 'Porting Kit.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/edu.ufrj.vitormm.porting-kit.sfl*',
-                '~/Library/Caches/edu.ufrj.vitormm.Porting-Kit',
-                '~/Library/Cookies/edu.ufrj.vitormm.Porting-Kit.binarycookies',
-                '~/Library/Saved Application State/edu.ufrj.vitormm.Porting-Kit.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/Porting-Kit',
-                '~/Library/Preferences/edu.ufrj.vitormm.Porting-Kit.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/edu.ufrj.vitormm.porting-kit.sfl*',
+               '~/Library/Application Support/Porting-Kit',
+               '~/Library/Caches/edu.ufrj.vitormm.Porting-Kit',
+               '~/Library/Cookies/edu.ufrj.vitormm.Porting-Kit.binarycookies',
+               '~/Library/Preferences/edu.ufrj.vitormm.Porting-Kit.plist',
+               '~/Library/Saved Application State/edu.ufrj.vitormm.Porting-Kit.savedState',
+             ]
 end
