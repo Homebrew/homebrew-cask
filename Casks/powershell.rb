@@ -1,10 +1,10 @@
 cask 'powershell' do
-  version '6.0.0-beta.9'
-  sha256 'c28b78d50426a2b6d4752d97b1c4655f5e43689aabc4110ddc3eb6abccd3e915'
+  version '6.0.0-rc'
+  sha256 '187dc2772e06319a8e71c71197a8a8287cb12515c4a9e6a9546dec717720609c'
 
   url "https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}-osx.10.12-x64.pkg"
   appcast 'https://github.com/PowerShell/PowerShell/releases.atom',
-          checkpoint: 'f7b7d9144973280e9da7824eed505f905e23da8578625c779001eb93ca3e552c'
+          checkpoint: 'd9937dd818ba87d17bd4410898582a5e4ab8d2937aa3c4715acc6dfa887e6960'
   name 'PowerShell'
   homepage 'https://github.com/PowerShell/PowerShell'
 
@@ -13,7 +13,7 @@ cask 'powershell' do
 
   pkg "powershell-#{version}-osx.10.12-x64.pkg"
 
-  uninstall pkgutil: 'powershell'
+  uninstall pkgutil: 'com.microsoft.powershell'
 
   zap trash: [
                '~/.cache/powershell',
