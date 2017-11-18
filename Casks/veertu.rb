@@ -19,13 +19,13 @@ cask 'veertu' do
                          '/usr/local/bin/vdlaunch',
                        ]
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.veertu.veertu.sfl*',
-                '~/Library/Caches/com.veertu.Veertu',
-                '~/Library/Containers/com.veertu.Veertu',
-                '~/Library/Preferences/com.veertu.Veertu.plist',
-                '~/Library/Saved Application State/com.veertu.Veertu.savedState',
-                '~/Library/Saved Application State/com.veertu.vmx.savedState',
-                '~/Library/WebKit/com.veertu.Veertu',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.veertu.veertu.sfl*',
+               '~/Library/Caches/com.veertu.Veertu',
+               '~/Library/Containers/com.veertu.Veertu',
+               '~/Library/Preferences/com.veertu.Veertu.plist',
+               '~/Library/Saved Application State/com.veertu.Veertu.savedState',
+               '~/Library/Saved Application State/com.veertu.vmx.savedState',
+               '~/Library/WebKit/com.veertu.Veertu',
+             ]
 end
