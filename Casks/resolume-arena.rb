@@ -9,6 +9,6 @@ cask 'resolume-arena' do
 
   pkg 'Resolume Arena Installer.pkg'
 
-  uninstall pkgutil: "com.resolume.pkg.ResolumeArena#{version.no_dots}",
-            delete:  "/Applications/Resolume Arena #{version}"
+  uninstall pkgutil: "com.resolume.pkg.ResolumeArena#{version.major}",
+            delete:  "/Applications/Resolume Arena #{version.major}"
 end
