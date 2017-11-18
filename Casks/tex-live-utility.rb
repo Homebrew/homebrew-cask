@@ -15,5 +15,5 @@ cask 'tex-live-utility' do
   zap trash: [
                '~/Library/Application Support/TeX Live Utility',
                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/TeX Live Utility Help*',
-             ],
+             ]
 end
