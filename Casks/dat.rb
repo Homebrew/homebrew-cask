@@ -11,16 +11,14 @@ cask 'dat' do
 
   app 'Dat.app'
 
-  zap delete: [
-                '~/Library/Caches/com.datproject.dat',
-                '~/Library/Caches/com.datproject.dat.ShipIt',
-                '~/Library/Saved Application State/com.datproject.dat.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/Dat',
-                '~/Library/Preferences/com.datproject.dat.helper.plist',
-                '~/Library/Preferences/com.datproject.dat.plist',
-                '~/.dat',
-                '~/.dat-desktop',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Dat',
+               '~/Library/Caches/com.datproject.dat',
+               '~/Library/Caches/com.datproject.dat.ShipIt',
+               '~/Library/Preferences/com.datproject.dat.helper.plist',
+               '~/Library/Preferences/com.datproject.dat.plist',
+               '~/Library/Saved Application State/com.datproject.dat.savedState',
+               '~/.dat',
+               '~/.dat-desktop',
+             ]
 end

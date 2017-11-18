@@ -18,9 +18,9 @@ cask 'displaycal' do
     FileUtils.mv(staged_path.children, staged_path.join('DisplayCAL').tap(&:mkpath))
   end
 
-  zap delete: [
-                '~/Library/Application Support/dispcalGUI',
-                '~/Library/Logs/dispcalGUI',
-                '~/Library/Preferences/dispcalGUI',
-              ]
+  zap trash: [
+               '~/Library/Application Support/dispcalGUI',
+               '~/Library/Logs/dispcalGUI',
+               '~/Library/Preferences/dispcalGUI',
+             ]
 end

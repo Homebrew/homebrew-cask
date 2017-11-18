@@ -11,10 +11,10 @@ cask 'deltawalker' do
 
   app 'DeltaWalker.app'
 
-  zap delete: [
-                '~/Library/Caches/com.deltopia.DeltaWalker',
-                '~/Library/Containers/com.deltopia.DeltaWalker',
-                '~/Library/Preferences/com.deltopia.DeltaWalker.plist',
-                '~/Library/Saved Application State/com.deltopia.DeltaWalker.savedState',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.deltopia.DeltaWalker',
+               '~/Library/Containers/com.deltopia.DeltaWalker',
+               '~/Library/Preferences/com.deltopia.DeltaWalker.plist',
+               '~/Library/Saved Application State/com.deltopia.DeltaWalker.savedState',
+             ]
 end

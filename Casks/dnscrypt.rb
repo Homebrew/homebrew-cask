@@ -20,6 +20,8 @@ cask 'dnscrypt' do
                        ],
             delete:    '/Library/PreferencePanes/DNSCrypt.prefPane'
 
-  zap delete: '/Library/Application Support/DNSCrypt',
-      trash:  '/usr/local/etc/dnscrypt-proxy.conf'
+  zap trash: [
+               '/Library/Application Support/DNSCrypt',
+               '/usr/local/etc/dnscrypt-proxy.conf',
+             ]
 end
