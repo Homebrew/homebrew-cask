@@ -12,5 +12,5 @@ cask 'bitcoin-unlimited' do
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app 'Bitcoin-Qt.app', target: 'Bitcoin Unlimited.app'
 
-  zap delete: '~/Library/Preferences/info.bitcoinunlimited.Bitcoin-Qt.plist'
+  zap trash: '~/Library/Preferences/info.bitcoinunlimited.Bitcoin-Qt.plist'
 end

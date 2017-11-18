@@ -8,8 +8,8 @@ cask 'bassshapes' do
 
   app 'BassShapes.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.yellQuietly.BassShapes.plist',
-                '~/Library/Saved Application State/com.yellQuietly.BassShapes.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.yellQuietly.BassShapes.plist',
+               '~/Library/Saved Application State/com.yellQuietly.BassShapes.savedState',
+             ]
 end

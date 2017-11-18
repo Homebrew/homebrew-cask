@@ -11,10 +11,10 @@ cask 'beyond-compare' do
   app 'Beyond Compare.app'
   binary "#{appdir}/Beyond Compare.app/Contents/MacOS/bcomp"
 
-  zap delete: [
-                '~/Library/Application Support/Beyond Compare',
-                '~/Library/Caches/com.apple.helpd/Generated/com.ScooterSoftware.BeyondCompare.help*',
-                '~/Library/Caches/com.ScooterSoftware.BeyondCompare',
-                '~/Library/Saved Application State/com.ScooterSoftware.BeyondCompare.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Beyond Compare',
+               '~/Library/Caches/com.apple.helpd/Generated/com.ScooterSoftware.BeyondCompare.help*',
+               '~/Library/Caches/com.ScooterSoftware.BeyondCompare',
+               '~/Library/Saved Application State/com.ScooterSoftware.BeyondCompare.savedState',
+             ]
 end

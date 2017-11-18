@@ -18,10 +18,10 @@ cask 'boostnote' do
                       ['TERM', 'com.maisin.boost'],
                     ]
 
-  zap delete: '~/Library/Saved Application State/com.maisin.boost.savedState',
-      trash:  [
-                '~/Library/Application Support/boost',
-                '~/Library/Preferences/com.maisin.boost.plist',
-                '~/Library/Preferences/com.maisin.boost.helper.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/boost',
+               '~/Library/Preferences/com.maisin.boost.plist',
+               '~/Library/Preferences/com.maisin.boost.helper.plist',
+               '~/Library/Saved Application State/com.maisin.boost.savedState',
+             ]
 end

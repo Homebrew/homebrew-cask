@@ -11,12 +11,10 @@ cask 'byteball' do
 
   app 'byteball.app'
 
-  zap delete: [
-                '~/Library/Caches/byteball',
-                '~/Library/Saved Application State/com.nw-builder.byteball.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/byteball',
-                '~/Library/Preferences/com.nw-builder.byteball.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/byteball',
+               '~/Library/Caches/byteball',
+               '~/Library/Preferences/com.nw-builder.byteball.plist',
+               '~/Library/Saved Application State/com.nw-builder.byteball.savedState',
+             ]
 end
