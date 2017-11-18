@@ -18,13 +18,13 @@ cask 'pycharm-ce' do
   end
 
   zap trash: [
+               "~/Library/Application Support/PyCharm#{version.major_minor}",
                "~/Library/Caches/PyCharmCE#{version.major_minor}",
                "~/Library/Caches/PyCharm#{version.major_minor}",
                "~/Library/Logs/PyCharm#{version.major_minor}",
                "~/Library/Logs/PyCharmCE#{version.major_minor}",
-               '~/Library/Saved Application State/com.jetbrains.pycharm.savedState',
-               "~/Library/Application Support/PyCharm#{version.major_minor}",
                "~/Library/Preferences/PyCharm#{version.major_minor}",
                "~/Library/Preferences/PyCharmCE#{version.major_minor}",
+               '~/Library/Saved Application State/com.jetbrains.pycharm.savedState',
              ]
 end

@@ -17,11 +17,11 @@ cask 'intellij-idea' do
   end
 
   zap trash: [
+               '~/Library/Preferences/com.jetbrains.intellij.plist',
                "~/Library/Caches/IntelliJIdea#{version.major_minor}",
                "~/Library/Logs/IntelliJIdea#{version.major_minor}",
-               '~/Library/Saved Application State/com.jetbrains.intellij.savedState',
                "~/Library/Application Support/IntelliJIdea#{version.major_minor}",
                "~/Library/Preferences/IntelliJIdea#{version.major_minor}",
-               '~/Library/Preferences/com.jetbrains.intellij.plist',
+               '~/Library/Saved Application State/com.jetbrains.intellij.savedState',
              ]
 end

@@ -17,11 +17,11 @@ cask 'rider' do
   end
 
   zap trash: [
+               "~/Library/Application Support/Rider#{version.major_minor}",
                "~/Library/Caches/Rider#{version.major_minor}",
                "~/Library/Logs/Rider#{version.major_minor}",
-               '~/Library/Saved Application State/com.jetbrains.rider.savedState',
-               "~/Library/Application Support/Rider#{version.major_minor}",
                "~/Library/Preferences/Rider#{version.major_minor}",
                '~/Library/Preferences/jetbrains.rider.71e559ef.plist',
+               '~/Library/Saved Application State/com.jetbrains.rider.savedState',
              ]
 end

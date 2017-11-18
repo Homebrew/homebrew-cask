@@ -17,9 +17,9 @@ cask 'clion' do
   end
 
   zap trash: [
+               "~/Library/Application Support/CLion#{version.major_minor}",
                "~/Library/Caches/CLion#{version.major_minor}",
                "~/Library/Logs/CLion#{version.major_minor}",
                "~/Library/Preferences/CLion#{version.major_minor}",
-               "~/Library/Application Support/CLion#{version.major_minor}",
              ]
 end
