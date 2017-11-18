@@ -16,19 +16,17 @@ cask 'atom' do
   binary "#{appdir}/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm", target: 'apm'
   binary "#{appdir}/Atom.app/Contents/Resources/app/atom.sh", target: 'atom'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.atom.sfl*',
-                '~/Library/Application Support/ShipIt_stderr.log',
-                '~/Library/Application Support/ShipIt_stdout.log',
-                '~/Library/Caches/com.github.atom',
-                '~/Library/Caches/com.github.atom.ShipIt',
-                '~/Library/Saved Application State/com.github.atom.savedState',
-              ],
-      trash:  [
-                '~/.atom',
-                '~/Library/Application Support/Atom',
-                '~/Library/Application Support/com.github.atom.ShipIt',
-                '~/Library/Preferences/com.github.atom.helper.plist',
-                '~/Library/Preferences/com.github.atom.plist',
-              ]
+  zap trash: [
+               '~/.atom',
+               '~/Library/Application Support/Atom',
+               '~/Library/Application Support/ShipIt_stderr.log',
+               '~/Library/Application Support/ShipIt_stdout.log',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.atom.sfl*',
+               '~/Library/Application Support/com.github.atom.ShipIt',
+               '~/Library/Caches/com.github.atom',
+               '~/Library/Caches/com.github.atom.ShipIt',
+               '~/Library/Preferences/com.github.atom.helper.plist',
+               '~/Library/Preferences/com.github.atom.plist',
+               '~/Library/Saved Application State/com.github.atom.savedState',
+             ]
 end
