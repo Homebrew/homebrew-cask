@@ -7,6 +7,7 @@ cask 'sql-operations-studio' do
   homepage 'https://docs.microsoft.com/sql/sql-operations-studio/'
 
   app 'SQL Operations Studio.app'
+  binary "#{appdir}/SQL Operations Studio.app/Contents/Resources/app/bin/code", target: 'sqlops'
 
   zap trash: [
                '~/Library/Application Support/sqlops',
