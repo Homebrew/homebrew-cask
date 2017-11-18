@@ -22,13 +22,11 @@ cask 'hammerspoon' do
   uninstall quit:       'org.hammerspoon.Hammerspoon',
             login_item: 'Hammerspoon'
 
-  zap delete: [
-                '~/Library/Caches/org.hammerspoon.Hammerspoon',
-                '~/Library/Saved Application State/org.hammerspoon.Hammerspoon.savedState',
-              ],
-      trash:  [
-                '~/.hammerspoon',
-                '~/Library/Application Support/com.crashlytics/org.hammerspoon.Hammerspoon',
-                '~/Library/Preferences/org.hammerspoon.Hammerspoon.plist',
-              ]
+  zap trash: [
+               '~/.hammerspoon',
+               '~/Library/Application Support/com.crashlytics/org.hammerspoon.Hammerspoon',
+               '~/Library/Caches/org.hammerspoon.Hammerspoon',
+               '~/Library/Preferences/org.hammerspoon.Hammerspoon.plist',
+               '~/Library/Saved Application State/org.hammerspoon.Hammerspoon.savedState',
+             ]
 end
