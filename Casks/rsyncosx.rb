@@ -10,9 +10,9 @@ cask 'rsyncosx' do
 
   app 'RsyncOSX.app'
 
-  zap delete: [
-                '~/Library/Caches/no.blogspot.RsyncOSX',
-                '~/Library/Preferences/no.blogspot.RsyncOSX.plist',
-                '~/Library/Saved Application State/no.blogspot.RsyncOSX.savedState',
-              ]
+  zap trash: [
+               '~/Library/Caches/no.blogspot.RsyncOSX',
+               '~/Library/Preferences/no.blogspot.RsyncOSX.plist',
+               '~/Library/Saved Application State/no.blogspot.RsyncOSX.savedState',
+             ]
 end

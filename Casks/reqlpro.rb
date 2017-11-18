@@ -11,10 +11,10 @@ cask 'reqlpro' do
 
   app 'ReQLPro.app'
 
-  zap delete: '~/Library/Saved Application State/com.electron.reqlpro.savedState',
-      trash:  [
-                '~/Library/Application Support/ReQLPro',
-                '~/Library/Preferences/com.electron.reqlpro.helper.plist',
-                '~/Library/Preferences/com.electron.reqlpro.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/ReQLPro',
+               '~/Library/Preferences/com.electron.reqlpro.helper.plist',
+               '~/Library/Preferences/com.electron.reqlpro.plist',
+               '~/Library/Saved Application State/com.electron.reqlpro.savedState',
+             ]
 end
