@@ -13,8 +13,8 @@ cask 'vellum' do
 
   app 'Vellum.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/co.180g.Vellum',
-                '~/Library/Containers/co.180g.Vellum',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/co.180g.Vellum',
+               '~/Library/Containers/co.180g.Vellum',
+             ]
 end

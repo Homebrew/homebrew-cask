@@ -12,13 +12,11 @@ cask 'vivaldi' do
 
   app 'Vivaldi.app'
 
-  zap delete: [
-                '~/Library/Caches/Vivaldi',
-                '~/Library/Caches/com.vivaldi.Vivaldi',
-                '~/Library/Saved Application State/com.vivaldi.Vivaldi.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/Vivaldi',
-                '~/Library/Preferences/com.vivaldi.Vivaldi.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Vivaldi',
+               '~/Library/Caches/Vivaldi',
+               '~/Library/Caches/com.vivaldi.Vivaldi',
+               '~/Library/Preferences/com.vivaldi.Vivaldi.plist',
+               '~/Library/Saved Application State/com.vivaldi.Vivaldi.savedState',
+             ]
 end

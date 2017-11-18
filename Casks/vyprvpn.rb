@@ -18,7 +18,7 @@ cask 'vyprvpn' do
                        ],
             kext:      'com.goldenfrog.VyprVPNMalwareFilter'
 
-  zap delete:    [
+  zap trash:     [
                    '/Library/LaunchDaemons/vyrpvpnservice.plist',
                    '/Library/PrivilegedHelperTools/vyprvpnservice',
                    '~/Library/Caches/com.goldenfrog.VyprVPN',

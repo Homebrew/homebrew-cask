@@ -13,15 +13,13 @@ cask 'visual-studio' do
 
   app 'Visual Studio.app'
 
-  zap delete: [
-                '~/Library/Application Support/CrashReporter/VisualStudio*',
-                '~/Library/Caches/VisualStudio',
-                '~/Library/Logs/VisualStudio',
-              ],
-      trash:  [
-                '~/Library/Preferences/Visual*Studio',
-                '~/Library/VisualStudio',
-                '/Applications/Xamarin Workbooks.app',
-                '/Applications/Xamarin Profiler.app',
-              ]
+  zap trash: [
+               '/Applications/Xamarin Workbooks.app',
+               '/Applications/Xamarin Profiler.app',
+               '~/Library/Application Support/CrashReporter/VisualStudio*',
+               '~/Library/Caches/VisualStudio',
+               '~/Library/Logs/VisualStudio',
+               '~/Library/Preferences/Visual*Studio',
+               '~/Library/VisualStudio',
+             ]
 end

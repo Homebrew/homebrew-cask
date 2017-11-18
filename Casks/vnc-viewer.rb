@@ -8,8 +8,8 @@ cask 'vnc-viewer' do
 
   app 'VNC Viewer.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.realvnc.vncviewer.plist',
-                '~/Library/Saved Application State/com.realvnc.vncviewer.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.realvnc.vncviewer.plist',
+               '~/Library/Saved Application State/com.realvnc.vncviewer.savedState',
+             ]
 end

@@ -25,5 +25,5 @@ cask 'vmware-remote-console' do
 
   uninstall quit: 'com.vmware.vmrc'
 
-  zap delete: '/Library/Logs/VMRC Services.log'
+  zap trash: '/Library/Logs/VMRC Services.log'
 end
