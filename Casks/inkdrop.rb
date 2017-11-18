@@ -11,11 +11,11 @@ cask 'inkdrop' do
 
   app 'Inkdrop.app'
 
-  zap delete: [
-                '~/Library/Application Support/inkdrop',
-                '~/Library/Saved Application State/info.pkpk.inkdrop.savedState',
-                '~/Library/Caches/info.pkpk.inkdrop',
-                '~/Library/Preferences/info.pkpk.inkdrop.plist',
-                '~/Library/Preferences/info.pkpk.inkdrop.helper.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/inkdrop',
+               '~/Library/Saved Application State/info.pkpk.inkdrop.savedState',
+               '~/Library/Caches/info.pkpk.inkdrop',
+               '~/Library/Preferences/info.pkpk.inkdrop.plist',
+               '~/Library/Preferences/info.pkpk.inkdrop.helper.plist',
+             ]
 end

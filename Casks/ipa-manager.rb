@@ -13,9 +13,9 @@ cask 'ipa-manager' do
 
   app 'IPA Manager.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.blugs.IPAManager.plist',
-                '~/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.blugs.ipamanager.sfl*',
-                '~/Library/Caches/com.blugs.IPAManager',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.blugs.IPAManager.plist',
+               '~/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.blugs.ipamanager.sfl*',
+               '~/Library/Caches/com.blugs.IPAManager',
+             ]
 end

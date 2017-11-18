@@ -12,5 +12,5 @@ cask 'injection' do
   uninstall pkgutil: 'com.injectionforxcode.injectionPluginForXcode.InjectionPlugin.pkg',
             quit:    'com.johnholdsworth.InjectionPluginIII'
 
-  zap delete: '~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/InjectionPlugin.xcplugin'
+  zap trash: '~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/InjectionPlugin.xcplugin'
 end
