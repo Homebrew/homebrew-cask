@@ -10,13 +10,11 @@ cask 'nfov' do
 
   app 'nfov.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.nfov.sfl*',
-                '~/Library/Saved Application State/com.electron.nfov.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/nfov',
-                '~/Library/Preferences/com.electron.nfov.helper.plist',
-                '~/Library/Preferences/com.electron.nfov.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.nfov.sfl*',
+               '~/Library/Application Support/nfov',
+               '~/Library/Preferences/com.electron.nfov.helper.plist',
+               '~/Library/Preferences/com.electron.nfov.plist',
+               '~/Library/Saved Application State/com.electron.nfov.savedState',
+             ]
 end

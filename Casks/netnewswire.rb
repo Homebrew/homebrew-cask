@@ -10,8 +10,8 @@ cask 'netnewswire' do
 
   app 'NetNewsWire.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/com.blackpixel.netnewswire',
-                '~/Library/Containers/com.blackpixel.netnewswire',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/com.blackpixel.netnewswire',
+               '~/Library/Containers/com.blackpixel.netnewswire',
+             ]
 end

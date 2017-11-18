@@ -11,10 +11,10 @@ cask 'ndm' do
 
   app 'ndm.app'
 
-  zap delete: [
-                '~/Library/Application Support/ndm',
-                '~/Library/Preferences/net.720kb.ndm.helper.plist',
-                '~/Library/Preferences/net.720kb.ndm.plist',
-                '~/Library/Saved Application State/net.720kb.ndm.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/ndm',
+               '~/Library/Preferences/net.720kb.ndm.helper.plist',
+               '~/Library/Preferences/net.720kb.ndm.plist',
+               '~/Library/Saved Application State/net.720kb.ndm.savedState',
+             ]
 end
