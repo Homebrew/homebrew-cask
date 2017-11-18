@@ -75,25 +75,23 @@ cask 'java' do
                          end,
                        ].keep_if { |v| !v.nil? }
 
-  zap delete: [
-                '~/Library/Caches/com.oracle.java.Java-Updater',
-                '~/Library/Caches/Oracle.MacJREInstaller',
-                '~/Library/Caches/net.java.openjdk.cmd',
-              ],
-      trash:  [
-                '/Library/Application Support/Oracle/Java',
-                '/Library/Preferences/com.oracle.java.Deployment.plist',
-                '/Library/Preferences/com.oracle.java.Helper-Tool.plist',
-                '~/Library/Application Support/Java/',
-                '~/Library/Application Support/Oracle/Java',
-                '~/Library/Preferences/com.oracle.java.Java-Updater.plist',
-                '~/Library/Preferences/com.oracle.java.JavaAppletPlugin.plist',
-                '~/Library/Preferences/com.oracle.javadeployment.plist',
-              ],
-      rmdir:  [
-                "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk",
-                '~/Library/Application Support/Oracle/',
-              ]
+  zap trash: [
+               '/Library/Application Support/Oracle/Java',
+               '/Library/Preferences/com.oracle.java.Deployment.plist',
+               '/Library/Preferences/com.oracle.java.Helper-Tool.plist',
+               '~/Library/Application Support/Java/',
+               '~/Library/Application Support/Oracle/Java',
+               '~/Library/Caches/com.oracle.java.Java-Updater',
+               '~/Library/Caches/Oracle.MacJREInstaller',
+               '~/Library/Caches/net.java.openjdk.cmd',
+               '~/Library/Preferences/com.oracle.java.Java-Updater.plist',
+               '~/Library/Preferences/com.oracle.java.JavaAppletPlugin.plist',
+               '~/Library/Preferences/com.oracle.javadeployment.plist',
+             ],
+      rmdir: [
+               "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk",
+               '~/Library/Application Support/Oracle/',
+             ]
 
   caveats <<~EOS
     This Cask makes minor modifications to the JRE to prevent issues with

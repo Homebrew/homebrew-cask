@@ -11,5 +11,5 @@ cask 'julia' do
   app "Julia-#{version.major_minor}.app"
   binary "#{appdir}/Julia-#{version.major_minor}.app/Contents/Resources/julia/bin/julia"
 
-  zap delete: '~/.julia'
+  zap trash: '~/.julia'
 end
