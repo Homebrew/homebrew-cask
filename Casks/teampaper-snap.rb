@@ -1,14 +1,14 @@
 cask 'teampaper-snap' do
-  version '2.0.8800'
-  sha256 'c07ce6ef63ef73515ad538912d2ad2a05e731da568d8303c2ffdb821287b7f7e'
+  version '2.1.1,8919:2017-06-26_10-33-18'
+  sha256 '3ff73c69e24b71a1c988ce1599d04ab9589ebfbc8d59050b56e52972527e0d7e'
 
-  url 'http://teampaper.me/snap/download/teampapersnap.dmg'
+  url "https://www.teampaper.me/sparkle/teampaper#{version.after_comma.before_colon}.zip"
   appcast 'https://www.teampaper.me/sparkle/sparkle.xml',
-          checkpoint: '2059b3de12837e57b08dc414228a7837373124cb8d19f8770d3807d366c05037'
+          checkpoint: 'bc9be0bf417f1da2c1919b62b6f1369864d36cda187b0ce12e5af176304a3785'
   name 'TeamPaper'
   homepage 'https://teampaper.me/snap/'
 
-  app 'Teampaper Snap.app'
+  app "Teampaper Snap #{version.after_colon.sub('_', ' ')}/Teampaper Snap.app"
 
   zap delete: [
                 '~/Library/Application Support/Teampaper Snap',
