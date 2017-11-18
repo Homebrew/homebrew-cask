@@ -15,13 +15,11 @@ cask 'keep' do
                       ['TERM', 'com.electron.keep.helper'],
                     ]
 
-  zap delete: [
-                '~/Library/Caches/com.electron.keep',
-                '~/Library/Saved Application State/com.electron.keep.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/Keep',
-                '~/Library/Preferences/com.electron.keep.plist',
-                '~/Library/Preferences/com.electron.keep.helper.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Keep',
+               '~/Library/Caches/com.electron.keep',
+               '~/Library/Preferences/com.electron.keep.plist',
+               '~/Library/Preferences/com.electron.keep.helper.plist',
+               '~/Library/Saved Application State/com.electron.keep.savedState',
+             ]
 end

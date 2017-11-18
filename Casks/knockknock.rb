@@ -13,9 +13,9 @@ cask 'knockknock' do
 
   app 'KnockKnock.app'
 
-  zap delete: [
-                '~/Library/Caches/com.objective-see.KnockKnock',
-                '~/Library/Saved Application State/com.objective-see.KnockKnock.savedState',
-              ],
-      trash:  '~/Library/Preferences/com.objective-see.KnockKnock.plist'
+  zap trash: [
+               '~/Library/Caches/com.objective-see.KnockKnock',
+               '~/Library/Preferences/com.objective-see.KnockKnock.plist',
+               '~/Library/Saved Application State/com.objective-see.KnockKnock.savedState',
+             ]
 end
