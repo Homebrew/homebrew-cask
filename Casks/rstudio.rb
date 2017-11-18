@@ -9,7 +9,7 @@ cask 'rstudio' do
 
   app 'RStudio.app'
 
-  zap delete: '~/.rstudio-desktop'
+  zap trash: '~/.rstudio-desktop'
 
   caveats <<~EOS
     #{token} depends on R.

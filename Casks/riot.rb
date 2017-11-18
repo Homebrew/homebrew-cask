@@ -10,10 +10,10 @@ cask 'riot' do
 
   app 'Riot.app'
 
-  zap delete: [
-                '~/Library/Application Support/Riot',
-                '~/Library/Preferences/im.riot.app.helper.plist',
-                '~/Library/Preferences/im.riot.app.plist',
-                '~/Library/Saved Application State/im.riot.app.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Riot',
+               '~/Library/Preferences/im.riot.app.helper.plist',
+               '~/Library/Preferences/im.riot.app.plist',
+               '~/Library/Saved Application State/im.riot.app.savedState',
+             ]
 end
