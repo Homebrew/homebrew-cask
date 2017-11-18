@@ -10,9 +10,9 @@ cask 'aria2gui' do
 
   app 'Aria2GUI.app'
 
-  zap delete: [
-                '~/Library/Caches/com.Aria2GUI',
-                '~/Library/Saved Application State/com.Aria2GUI.savedState',
-              ],
-      trash:  '~/Library/Preferences/com.Aria2GUI.plist'
+  zap trash: [
+               '~/Library/Caches/com.Aria2GUI',
+               '~/Library/Preferences/com.Aria2GUI.plist',
+               '~/Library/Saved Application State/com.Aria2GUI.savedState',
+             ]
 end

@@ -8,10 +8,10 @@ cask 'anonvpn' do
 
   app 'AnonVPN.app'
 
-  zap delete: [
-                '~/Library/Application Support/AnonVPN',
-                '~/Library/Application Support/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.proxpn.macos.anonvpn.sfl*',
-                '~/Library/Caches/com.proxpn.macos.AnonVPN',
-                '~/Library/Preferences/com.proxpn.macos.AnonVPN.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/AnonVPN',
+               '~/Library/Application Support/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.proxpn.macos.anonvpn.sfl*',
+               '~/Library/Caches/com.proxpn.macos.AnonVPN',
+               '~/Library/Preferences/com.proxpn.macos.AnonVPN.plist',
+             ]
 end

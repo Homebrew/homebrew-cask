@@ -11,10 +11,10 @@ cask 'android-file-transfer' do
 
   uninstall login_item: 'Android File'
 
-  zap delete: [
-                '~/Library/Application Support/Google/Android File Transfer',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.android.mtpviewer.sfl*',
-                '~/Library/Preferences/com.google.android.mtpviewer.plist',
-              ],
-      rmdir:  '~/Library/Application Support/Google/'
+  zap trash: [
+               '~/Library/Application Support/Google/Android File Transfer',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.android.mtpviewer.sfl*',
+               '~/Library/Preferences/com.google.android.mtpviewer.plist',
+             ],
+      rmdir: '~/Library/Application Support/Google/'
 end

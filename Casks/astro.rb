@@ -16,9 +16,9 @@ cask 'astro' do
   uninstall launchctl: 'com.pexlabs.Huskymail.mac.helper',
             quit:      'com.pexlabs.Huskymail.mac'
 
-  zap delete: '~/Library/Caches/com.pexlabs.Huskymail.mac',
-      trash:  [
-                '~/Library/Application Support/com.pexlabs.Huskymail.mac',
-                '~/Library/Preferences/com.pexlabs.Huskymail.mac.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.pexlabs.Huskymail.mac',
+               '~/Library/Caches/com.pexlabs.Huskymail.mac',
+               '~/Library/Preferences/com.pexlabs.Huskymail.mac.plist',
+             ]
 end
