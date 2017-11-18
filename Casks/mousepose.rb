@@ -10,11 +10,11 @@ cask 'mousepose' do
   # Original discussion: https://github.com/caskroom/homebrew-cask/pull/15708
   app 'Mousepose.app', target: "Mousepose\314\201.app"
 
-  zap delete: [
-                '~/Library/Application Support/com.boinx.Mousepose',
-                '~/Library/Caches/com.boinx.Mousepose/',
-                '~/Library/Cookies/com.boinx.Mousepose.binarycookies',
-                '~/Library/Preferences/com.boinx.Mousepose.plist',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.boinx.mousepose.sfl*',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.boinx.Mousepose',
+               '~/Library/Caches/com.boinx.Mousepose/',
+               '~/Library/Cookies/com.boinx.Mousepose.binarycookies',
+               '~/Library/Preferences/com.boinx.Mousepose.plist',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.boinx.mousepose.sfl*',
+             ]
 end

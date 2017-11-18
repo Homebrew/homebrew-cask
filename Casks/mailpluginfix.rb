@@ -8,5 +8,5 @@ cask 'mailpluginfix' do
 
   app 'MailPluginFix.app'
 
-  zap delete: '~/Library/Preferences/net.code2k.MailPluginFix.plist'
+  zap trash: '~/Library/Preferences/net.code2k.MailPluginFix.plist'
 end

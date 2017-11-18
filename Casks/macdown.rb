@@ -15,13 +15,13 @@ cask 'macdown' do
   app 'MacDown.app'
   binary "#{appdir}/MacDown.app/Contents/SharedSupport/bin/macdown"
 
-  zap delete: [
-                '~/Library/Application Support/MacDown',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.uranusjr.macdown.sfl*',
-                '~/Library/Caches/com.uranusjr.macdown',
-                '~/Library/Cookies/com.uranusjr.macdown.binarycookies',
-                '~/Library/Preferences/com.uranusjr.macdown.plist',
-                '~/Library/Saved Application State/com.uranusjr.macdown.savedState',
-                '~/Library/WebKit/com.uranusjr.macdown',
-              ]
+  zap trash: [
+               '~/Library/Application Support/MacDown',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.uranusjr.macdown.sfl*',
+               '~/Library/Caches/com.uranusjr.macdown',
+               '~/Library/Cookies/com.uranusjr.macdown.binarycookies',
+               '~/Library/Preferences/com.uranusjr.macdown.plist',
+               '~/Library/Saved Application State/com.uranusjr.macdown.savedState',
+               '~/Library/WebKit/com.uranusjr.macdown',
+             ]
 end

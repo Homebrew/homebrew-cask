@@ -11,8 +11,8 @@ cask 'mongodb' do
 
   app 'MongoDB.app'
 
-  zap delete: [
-                '~/Library/Caches/io.blimp.MongoDB',
-                '~/Library/Preferences/io.blimp.MongoDB.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/io.blimp.MongoDB',
+               '~/Library/Preferences/io.blimp.MongoDB.plist',
+             ]
 end

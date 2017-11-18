@@ -11,15 +11,13 @@ cask 'marp' do
 
   app 'Marp.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jp.yhatt.marp.sfl*',
-                '~/Library/Caches/jp.yhatt.marp',
-                '~/Library/Saved Application State/jp.yhatt.marp.savedState',
-                '~/Library/WebKit/jp.yhatt.marp',
-              ],
-      trash:  [
-                '~/Library/Application Support/Marp',
-                '~/Library/Preferences/jp.yhatt.marp.helper.plist',
-                '~/Library/Preferences/jp.yhatt.marp.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jp.yhatt.marp.sfl*',
+               '~/Library/Application Support/Marp',
+               '~/Library/Caches/jp.yhatt.marp',
+               '~/Library/Preferences/jp.yhatt.marp.helper.plist',
+               '~/Library/Preferences/jp.yhatt.marp.plist',
+               '~/Library/Saved Application State/jp.yhatt.marp.savedState',
+               '~/Library/WebKit/jp.yhatt.marp',
+             ]
 end

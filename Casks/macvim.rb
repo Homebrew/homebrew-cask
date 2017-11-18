@@ -22,9 +22,9 @@ cask 'macvim' do
     'mvimdiff',
   ].each { |link_name| binary "#{appdir}/MacVim.app/Contents/bin/mvim", target: link_name }
 
-  zap delete: [
-                '~/Library/Caches/org.vim.MacVim',
-                '~/Library/Preferences/org.vim.MacVim.LSSharedFileList.plist',
-                '~/Library/Preferences/org.vim.MacVim.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/org.vim.MacVim',
+               '~/Library/Preferences/org.vim.MacVim.LSSharedFileList.plist',
+               '~/Library/Preferences/org.vim.MacVim.plist',
+             ]
 end

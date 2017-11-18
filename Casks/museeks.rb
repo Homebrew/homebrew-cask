@@ -11,8 +11,8 @@ cask 'museeks' do
 
   app 'museeks-darwin-x64/Museeks.app'
 
-  zap delete: [
-                '~/Library/Application Support/museeks',
-                '~/Library/Saved Application State/com.electron.museeks.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/museeks',
+               '~/Library/Saved Application State/com.electron.museeks.savedState',
+             ]
 end
