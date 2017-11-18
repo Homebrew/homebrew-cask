@@ -111,7 +111,8 @@ cask 'firefox' do
     'zh-CN'
   end
 
-  url "https://ftp.mozilla.org/pub/firefox/releases/#{version}/mac/#{language}/Firefox%20#{version}.dmg"
+  # download-installer.cdn.mozilla.net/pub/firefox/releases was verified as official when first introduced to the cask
+  url "https://download-installer.cdn.mozilla.net/pub/firefox/releases/#{version}/mac/#{language}/Firefox%20#{version}.dmg"
   appcast "https://aus5.mozilla.org/update/3/Firefox/#{version}/0/Darwin_x86_64-gcc3-u-i386-x86_64/en-US/release/Darwin%2015.3.0/default/default/update.xml?force=1",
           checkpoint: '51b8b184309bc940e83e9a3783a58fa8c21e30c43007f749de64fffcb9896af2'
   name 'Mozilla Firefox'
