@@ -13,8 +13,8 @@ cask 'onenote-importer-preview' do
 
   uninstall pkgutil: 'com.microsoft.onenote.onenoteimporter'
 
-  zap delete: [
-                '~/Library/Application Support/OneNote Importer (Preview)',
-                '~/Library/Caches/com.microsoft.onenote.onenoteimporter',
-              ]
+  zap trash: [
+               '~/Library/Application Support/OneNote Importer (Preview)',
+               '~/Library/Caches/com.microsoft.onenote.onenoteimporter',
+             ]
 end

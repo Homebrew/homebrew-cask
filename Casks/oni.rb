@@ -12,11 +12,11 @@ cask 'oni' do
   app 'Oni.app'
   binary "#{appdir}/Oni.app/Contents/Resources/app/oni.sh", target: 'oni'
 
-  zap delete: '~/Library/Saved Application State/com.extropy.oni.savedState',
-      trash:  [
-                '~/.oni',
-                '~/Library/Application Support/oni',
-                '~/Library/Preferences/com.extropy.oni.helper.plist',
-                '~/Library/Preferences/com.extropy.oni.plist',
-              ]
+  zap trash: [
+               '~/.oni',
+               '~/Library/Application Support/oni',
+               '~/Library/Preferences/com.extropy.oni.helper.plist',
+               '~/Library/Preferences/com.extropy.oni.plist',
+               '~/Library/Saved Application State/com.extropy.oni.savedState',
+             ]
 end
