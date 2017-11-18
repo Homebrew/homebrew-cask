@@ -25,11 +25,11 @@ cask 'evernote' do
                     'com.evernote.EvernoteHelper',
                   ]
 
-  zap delete: '~/Library/Caches/com.evernote.Evernote',
-      trash:  [
-                '~/Library/Application Support/com.evernote.Evernote',
-                '~/Library/Application Support/com.evernote.EvernoteHelper',
-                '~/Library/Preferences/com.evernote.Evernote.plist',
-                '~/Library/Preferences/com.evernote.EvernoteHelper.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.evernote.Evernote',
+               '~/Library/Application Support/com.evernote.EvernoteHelper',
+               '~/Library/Caches/com.evernote.Evernote',
+               '~/Library/Preferences/com.evernote.Evernote.plist',
+               '~/Library/Preferences/com.evernote.EvernoteHelper.plist',
+             ]
 end
