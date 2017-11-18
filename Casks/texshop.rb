@@ -19,5 +19,5 @@ cask 'texshop' do
                '~/Library/Caches/TeXShop',
                '~/Library/Preferences/TeXShop.plist',
                '~/Library/TeXShop',
-             ],
+             ]
 end
