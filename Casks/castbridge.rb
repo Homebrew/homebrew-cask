@@ -14,10 +14,10 @@ cask 'castbridge' do
   uninstall login_item: 'Castbridge',
             signal:     ['TERM', 'com.ariporad.Castbridge']
 
-  zap delete: '~/Library/Saved Application State/com.ariporad.Castbridge.savedState',
-      trash:  [
-                '~/Library/Application Support/Castbridge',
-                '~/Library/Preferences/com.ariporad.Castbridge.helper.plist',
-                '~/Library/Preferences/com.ariporad.Castbridge.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Castbridge',
+               '~/Library/Preferences/com.ariporad.Castbridge.helper.plist',
+               '~/Library/Preferences/com.ariporad.Castbridge.plist',
+               '~/Library/Saved Application State/com.ariporad.Castbridge.savedState',
+             ]
 end

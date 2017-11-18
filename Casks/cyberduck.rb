@@ -10,9 +10,9 @@ cask 'cyberduck' do
 
   app 'Cyberduck.app'
 
-  zap delete: '~/Library/Caches/ch.sudo.cyberduck',
-      trash:  [
-                '~/Library/Application Support/Cyberduck',
-                '~/Library/Preferences/ch.sudo.cyberduck.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Cyberduck',
+               '~/Library/Caches/ch.sudo.cyberduck',
+               '~/Library/Preferences/ch.sudo.cyberduck.plist',
+             ]
 end

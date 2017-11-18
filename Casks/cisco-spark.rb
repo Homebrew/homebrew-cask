@@ -14,9 +14,9 @@ cask 'cisco-spark' do
                       ['TERM', 'Cisco-Systems.Spark'],
                     ]
 
-  zap delete: [
-                '~/Library/Preferences/Cisco-Systems.Spark.plist',
-                '~/Library/Caches/Cisco-Systems.Spark',
-                '~/Library/Logs/Spark',
-              ]
+  zap trash: [
+               '~/Library/Preferences/Cisco-Systems.Spark.plist',
+               '~/Library/Caches/Cisco-Systems.Spark',
+               '~/Library/Logs/Spark',
+             ]
 end

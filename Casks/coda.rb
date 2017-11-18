@@ -12,14 +12,12 @@ cask 'coda' do
 
   app "Coda #{version.major}.app"
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.panic.coda2.sfl*',
-                "~/Library/Caches/com.apple.helpd/Generated/com.panic.Coda#{version.major}.help*",
-                "~/Library/Caches/com.panic.Coda#{version.major}",
-                "~/Library/Saved Application State/com.panic.Coda#{version.major}.savedState",
-              ],
-      trash:  [
-                "~/Library/Application Support/Coda #{version.major}",
-                "~/Library/Preferences/com.panic.Coda#{version.major}.plist",
-              ]
+  zap trash: [
+               "~/Library/Application Support/Coda #{version.major}",
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.panic.coda2.sfl*',
+               "~/Library/Caches/com.apple.helpd/Generated/com.panic.Coda#{version.major}.help*",
+               "~/Library/Caches/com.panic.Coda#{version.major}",
+               "~/Library/Preferences/com.panic.Coda#{version.major}.plist",
+               "~/Library/Saved Application State/com.panic.Coda#{version.major}.savedState",
+             ]
 end

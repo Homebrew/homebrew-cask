@@ -10,9 +10,9 @@ cask 'compositor' do
 
   app 'Compositor.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/com.microlarge.Compositor',
-                '~/Library/Containers/com.microlarge.Compositor',
-              ],
-      trash:  '~/Library/Preferences/com.microlarge.Compositor.plist'
+  zap trash: [
+               '~/Library/Application Scripts/com.microlarge.Compositor',
+               '~/Library/Containers/com.microlarge.Compositor',
+               '~/Library/Preferences/com.microlarge.Compositor.plist',
+             ]
 end

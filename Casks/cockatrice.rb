@@ -19,12 +19,12 @@ cask 'cockatrice' do
                     'com.cockatrice.servatrice',
                   ]
 
-  zap delete: [
-                '~/Library/Application Support/Cockatrice',
-                '~/Library/Preferences/com.cockatrice.Cockatrice.plist',
-                '~/Library/Preferences/com.cockatrice.oracle.plist',
-                '~/Library/Preferences/de.cockatrice.Cockatrice.plist',
-                '~/Library/Saved Application State/com.cockatrice.cockatrice.savedState',
-                '~/Library/Saved Application State/com.cockatrice.oracle.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Cockatrice',
+               '~/Library/Preferences/com.cockatrice.Cockatrice.plist',
+               '~/Library/Preferences/com.cockatrice.oracle.plist',
+               '~/Library/Preferences/de.cockatrice.Cockatrice.plist',
+               '~/Library/Saved Application State/com.cockatrice.cockatrice.savedState',
+               '~/Library/Saved Application State/com.cockatrice.oracle.savedState',
+             ]
 end

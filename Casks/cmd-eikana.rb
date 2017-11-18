@@ -11,5 +11,5 @@ cask 'cmd-eikana' do
 
   app '⌘英かな.app'
 
-  zap delete: '~/Library/Preferences/io.github.imasanari.cmd-eikana.plist'
+  zap trash: '~/Library/Preferences/io.github.imasanari.cmd-eikana.plist'
 end

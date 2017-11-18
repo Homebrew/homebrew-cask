@@ -8,5 +8,5 @@ cask 'chainsaw' do
 
   app 'Chainsaw.app'
 
-  zap delete: '~/.chainsaw'
+  zap trash: '~/.chainsaw'
 end
