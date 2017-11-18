@@ -10,12 +10,12 @@ cask 'quail' do
 
   app 'Quail.app'
 
-  zap delete: [
-                '~/Library/Application Support/Quail',
-                '~/Library/Caches/net.1000ch.quail',
-                '~/Library/Caches/net.1000ch.quail.ShipIt',
-                '~/Library/Preferences/net.1000ch.quail.helper.plist',
-                '~/Library/Preferences/net.1000ch.quail.plist',
-                '~/Library/Saved Application State/net.1000ch.quail.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Quail',
+               '~/Library/Caches/net.1000ch.quail',
+               '~/Library/Caches/net.1000ch.quail.ShipIt',
+               '~/Library/Preferences/net.1000ch.quail.helper.plist',
+               '~/Library/Preferences/net.1000ch.quail.plist',
+               '~/Library/Saved Application State/net.1000ch.quail.savedState',
+             ]
 end

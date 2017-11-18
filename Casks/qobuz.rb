@@ -10,12 +10,12 @@ cask 'qobuz' do
 
   uninstall pkgutil: 'com.qobuz.QobuzDesktop.*'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.qobuz.qobuzdesktop.sfl*',
-                '~/Library/Application Support/QobuzDesktop',
-                '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.qobuz.QobuzDesktop',
-                '~/Library/Caches/com.qobuz.QobuzDesktop',
-                '~/Library/Logs/QobuzDesktop',
-                '~/Library/Preferences/com.qobuz.QobuzDesktop.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.qobuz.qobuzdesktop.sfl*',
+               '~/Library/Application Support/QobuzDesktop',
+               '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.qobuz.QobuzDesktop',
+               '~/Library/Caches/com.qobuz.QobuzDesktop',
+               '~/Library/Logs/QobuzDesktop',
+               '~/Library/Preferences/com.qobuz.QobuzDesktop.plist',
+             ]
 end

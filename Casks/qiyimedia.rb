@@ -10,9 +10,9 @@ cask 'qiyimedia' do
 
   app '爱奇艺.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/com.iqiyi.player',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.iqiyi.player.sfl*',
-                '~/Library/Containers/com.iqiyi.player',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/com.iqiyi.player',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.iqiyi.player.sfl*',
+               '~/Library/Containers/com.iqiyi.player',
+             ]
 end
