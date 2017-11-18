@@ -16,11 +16,11 @@ cask 'busycal' do
                        'N4RA379GBW.com.busymac.busycal3.alarm',
                      ]
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.busymac.busycal3.sfl*',
-                '~/Library/Containers/com.busymac.busycal3',
-                '~/Library/Containers/N4RA379GBW.com.busymac.busycal3.alarm',
-                '~/Library/Group Containers/com.busymac.busycal3',
-                '~/Library/Group Containers/N4RA379GBW.com.busymac.busycal3',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.busymac.busycal3.sfl*',
+               '~/Library/Containers/com.busymac.busycal3',
+               '~/Library/Containers/N4RA379GBW.com.busymac.busycal3.alarm',
+               '~/Library/Group Containers/com.busymac.busycal3',
+               '~/Library/Group Containers/N4RA379GBW.com.busymac.busycal3',
+             ]
 end
