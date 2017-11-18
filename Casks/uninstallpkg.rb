@@ -13,9 +13,9 @@ cask 'uninstallpkg' do
   uninstall delete:    '/Library/PrivilegedHelperTools/com.corecode.UninstallPKGDeleteHelper',
             launchctl: 'com.corecode.UninstallPKGDeleteHelper'
 
-  zap delete: '~/Library/Saved Application State/com.corecode.UninstallPKG.savedState',
-      trash:  [
-                '~/Library/Application Support/UninstallPKG',
-                '~/Library/Preferences/com.corecode.UninstallPKG.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/UninstallPKG',
+               '~/Library/Preferences/com.corecode.UninstallPKG.plist',
+               '~/Library/Saved Application State/com.corecode.UninstallPKG.savedState',
+             ]
 end
