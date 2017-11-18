@@ -14,17 +14,15 @@ cask 'transmission' do
 
   app 'Transmission.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.m0k.transmission.sfl*',
-                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/org.m0k.transmission.help',
-                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/Transmission Help*',
-                '~/Library/Caches/org.m0k.transmission',
-                '~/Library/Cookies/org.m0k.transmission.binarycookies',
-                '~/Library/Preferences/org.m0k.transmission.LSSharedFileList.plist',
-                '~/Library/Saved Application State/org.m0k.transmission.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/Transmission',
-                '~/Library/Preferences/org.m0k.transmission.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Transmission',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.m0k.transmission.sfl*',
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/Transmission Help*',
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/org.m0k.transmission.help',
+               '~/Library/Caches/org.m0k.transmission',
+               '~/Library/Cookies/org.m0k.transmission.binarycookies',
+               '~/Library/Preferences/org.m0k.transmission.LSSharedFileList.plist',
+               '~/Library/Preferences/org.m0k.transmission.plist',
+               '~/Library/Saved Application State/org.m0k.transmission.savedState',
+             ]
 end
