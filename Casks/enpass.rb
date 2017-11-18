@@ -11,10 +11,10 @@ cask 'enpass' do
 
   app 'Enpass.app'
 
-  zap delete: [
-                '~/Library/Caches/com.plausiblelabs.crashreporter.data/in.sinew.Enpass-Desktop',
-                '~/Library/Caches/in.sinew.Enpass-Desktop',
-                '~/Library/Preferences/in.sinew.Enpass-Desktop.plist',
-                '~/Library/Saved Application State/in.sinew.Enpass-Desktop.savedState',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.plausiblelabs.crashreporter.data/in.sinew.Enpass-Desktop',
+               '~/Library/Caches/in.sinew.Enpass-Desktop',
+               '~/Library/Preferences/in.sinew.Enpass-Desktop.plist',
+               '~/Library/Saved Application State/in.sinew.Enpass-Desktop.savedState',
+             ]
 end

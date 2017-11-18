@@ -11,10 +11,10 @@ cask 'etcher' do
 
   app 'Etcher.app'
 
-  zap delete: '~/Library/Saved Application State/io.resin.etcher.savedState',
-      trash:  [
-                '~/Library/Application Support/etcher',
-                '~/Library/Preferences/io.resin.etcher.helper.plist',
-                '~/Library/Preferences/io.resin.etcher.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/etcher',
+               '~/Library/Preferences/io.resin.etcher.helper.plist',
+               '~/Library/Preferences/io.resin.etcher.plist',
+               '~/Library/Saved Application State/io.resin.etcher.savedState',
+             ]
 end

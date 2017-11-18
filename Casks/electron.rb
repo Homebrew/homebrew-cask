@@ -11,10 +11,10 @@ cask 'electron' do
 
   app 'Electron.app'
 
-  zap delete: [
-                '~/Library/Application Support/Electron',
-                '~/Library/Caches/Electron',
-                '~/Library/Preferences/com.github.electron.helper.plist',
-                '~/Library/Preferences/com.github.electron.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Electron',
+               '~/Library/Caches/Electron',
+               '~/Library/Preferences/com.github.electron.helper.plist',
+               '~/Library/Preferences/com.github.electron.plist',
+             ]
 end
