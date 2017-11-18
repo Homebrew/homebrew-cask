@@ -17,9 +17,9 @@ cask 'datagrip' do
   end
 
   zap trash: [
+               "~/Library/Application Support/DataGrip#{version.major_minor}",
                "~/Library/Caches/DataGrip#{version.major_minor}",
                "~/Library/Logs/DataGrip#{version.major_minor}",
                "~/Library/Preferences/DataGrip#{version.major_minor}",
-               "~/Library/Application Support/DataGrip#{version.major_minor}",
              ]
 end

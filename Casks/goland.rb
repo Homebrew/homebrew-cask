@@ -20,9 +20,9 @@ cask 'goland' do
 
   # The folders GoLand creates are still named Gogland. This should be checked after the first non-EAP release.
   zap trash: [
+               "~/Library/Application Support/Gogland#{version.major_minor}",
                "~/Library/Caches/Gogland#{version.major_minor}",
                "~/Library/Logs/Gogland#{version.major_minor}",
                "~/Library/Preferences/Gogland#{version.major_minor}",
-               "~/Library/Application Support/Gogland#{version.major_minor}",
              ]
 end

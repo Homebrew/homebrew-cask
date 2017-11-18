@@ -18,9 +18,9 @@ cask 'pycharm-edu' do
   end
 
   zap trash: [
+               "~/Library/Application Support/PyCharmEdu#{version.major_minor.no_dots}",
                "~/Library/Caches/PyCharmEdu#{version.major_minor.no_dots}",
                "~/Library/Logs/PyCharmEdu#{version.major_minor.no_dots}",
-               "~/Library/Application Support/PyCharmEdu#{version.major_minor.no_dots}",
                "~/Library/Preferences/PyCharmEdu#{version.major_minor.no_dots}",
              ]
 end

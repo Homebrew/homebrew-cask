@@ -17,9 +17,9 @@ cask 'appcode' do
   end
 
   zap trash: [
+               "~/Library/Application Support/AppCode#{version.major_minor}",
                "~/Library/Caches/AppCode#{version.major_minor}",
                "~/Library/Logs/AppCode#{version.major_minor}",
                "~/Library/Preferences/AppCode#{version.major_minor}",
-               "~/Library/Application Support/AppCode#{version.major_minor}",
              ]
 end

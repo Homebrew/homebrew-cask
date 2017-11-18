@@ -18,9 +18,9 @@ cask 'mps' do
 
   zap trash: [
                "~/MPSSamples.#{version.before_comma.major_minor}",
+               "~/Library/Application Support/MPS#{version.before_comma.major_minor}",
                "~/Library/Caches/MPS#{version.before_comma.major_minor}",
                "~/Library/Logs/MPS#{version.before_comma.major_minor}",
-               "~/Library/Application Support/MPS#{version.before_comma.major_minor}",
                "~/Library/Preferences/MPS#{version.before_comma.major_minor}",
              ]
 end
