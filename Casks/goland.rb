@@ -1,11 +1,11 @@
 cask 'goland' do
   # GoLand is EAP only for now
-  version '1.0 EAP,173.3531.21'
-  sha256 'd99a60d18c4c2621fa4643408963284630d74724019bf359bbf419707d1c2ab1'
+  version '1.0 EAP,173.3727.24'
+  sha256 '8b9332fc78c11993ff671d418d3da282a49c4fc5f4c7493a7c2bbfd979163e1e'
 
   url "https://download.jetbrains.com/go/goland-#{version.after_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=GO&latest=true&type=eap',
-          checkpoint: 'a0b22fe9a3da17380d4c32aec623eeb0f2d13897d66cb39952ad497e13b2c1fe'
+          checkpoint: '058a7a8c0adb3a11608d69c27aeee26051d39488eae168b6e7a46d8ec7f841bf'
   name 'Goland'
   name 'Goland EAP'
   homepage 'https://www.jetbrains.com/go/'
