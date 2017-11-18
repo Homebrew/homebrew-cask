@@ -11,9 +11,9 @@ cask 'script-debugger' do
 
   app 'Script Debugger.app'
 
-  zap delete: [
-                '~/Library/Application Support/Script Debugger 6',
-                '~/Library/Caches/com.latenightsw.ScriptDebugger6',
-                '~/Library/Preferences/com.latenightsw.ScriptDebugger6.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Script Debugger 6',
+               '~/Library/Caches/com.latenightsw.ScriptDebugger6',
+               '~/Library/Preferences/com.latenightsw.ScriptDebugger6.plist',
+             ]
 end

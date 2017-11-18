@@ -9,10 +9,10 @@ cask 'swift-explorer' do
 
   app "SwiftExplorer-#{version}.app"
 
-  zap delete: [
-                "~/Library/Application Support/SwiftExplorer-#{version}",
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/swiftexplorer.sfl*',
-                '~/Library/Preferences/SwiftExplorer.plist',
-                '~/Library/Saved Application State/SwiftExplorer.savedState',
-              ]
+  zap trash: [
+               "~/Library/Application Support/SwiftExplorer-#{version}",
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/swiftexplorer.sfl*',
+               '~/Library/Preferences/SwiftExplorer.plist',
+               '~/Library/Saved Application State/SwiftExplorer.savedState',
+             ]
 end

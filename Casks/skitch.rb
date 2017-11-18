@@ -10,15 +10,15 @@ cask 'skitch' do
 
   app 'Skitch.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.plasq.skitch.plist',
-                '~/Library/Preferences/com.plasq.skitch.history',
-                '~/Library/Application Support/Skitch',
-                '~/Library/Application Support/com.skitch.skitch',
-                '~/Library/Caches/com.evernote.ENAttachmentToPDFHelper',
-                '~/Library/Caches/com.skitch.skitch',
-                '~/Library/Preferences/com.evernote.ENAttachmentToPDFHelper.plist',
-                '~/Library/Preferences/com.skitch.skitch.plist',
-                '~/Library/Saved Application State/com.skitch.skitch.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.plasq.skitch.plist',
+               '~/Library/Preferences/com.plasq.skitch.history',
+               '~/Library/Application Support/Skitch',
+               '~/Library/Application Support/com.skitch.skitch',
+               '~/Library/Caches/com.evernote.ENAttachmentToPDFHelper',
+               '~/Library/Caches/com.skitch.skitch',
+               '~/Library/Preferences/com.evernote.ENAttachmentToPDFHelper.plist',
+               '~/Library/Preferences/com.skitch.skitch.plist',
+               '~/Library/Saved Application State/com.skitch.skitch.savedState',
+             ]
 end

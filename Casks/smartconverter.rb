@@ -8,8 +8,8 @@ cask 'smartconverter' do
 
   app 'SmartConverter.app'
 
-  zap delete: [
-                '~/Library/Containers/com.shedworx.smartconverter',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.shedworx.smartconverter.sfl*',
-              ]
+  zap trash: [
+               '~/Library/Containers/com.shedworx.smartconverter',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.shedworx.smartconverter.sfl*',
+             ]
 end

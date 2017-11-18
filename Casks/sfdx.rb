@@ -11,15 +11,15 @@ cask 'sfdx' do
   uninstall pkgutil: 'com.sfdx.cli',
             delete:  '/usr/local/bin/sfdx'
 
-  zap delete: [
-                '~/.cache/sfdx',
-                '~/.config/sfdx',
-                '~/.local/share/sfdx',
-              ],
-      rmdir:  [
-                '~/.cache',
-                '~/.config',
-                '~/.local/share',
-                '~/.local',
-              ]
+  zap trash: [
+               '~/.cache/sfdx',
+               '~/.config/sfdx',
+               '~/.local/share/sfdx',
+             ],
+      rmdir: [
+               '~/.cache',
+               '~/.config',
+               '~/.local/share',
+               '~/.local',
+             ]
 end

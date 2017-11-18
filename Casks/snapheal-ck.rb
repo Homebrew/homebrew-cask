@@ -13,9 +13,9 @@ cask 'snapheal-ck' do
 
   uninstall quit: 'com.macphun.snaphealpro'
 
-  zap delete: '~/Library/Caches/com.macphun.snaphealpro',
-      trash:  [
-                '~/Library/Application Support/Snapheal CK',
-                '~/Library/Preferences/com.macphun.snaphealpro.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Snapheal CK',
+               '~/Library/Caches/com.macphun.snaphealpro',
+               '~/Library/Preferences/com.macphun.snaphealpro.plist',
+             ]
 end

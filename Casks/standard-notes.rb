@@ -13,14 +13,12 @@ cask 'standard-notes' do
 
   app 'Standard Notes.app'
 
-  zap delete: [
-                '~/Library/Caches/org.standardnotes.standardnotes',
-                '~/Library/Caches/org.standardnotes.standardnotes.ShipIt',
-                '~/Library/Saved Application State/org.standardnotes.standardnotes.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/Standard Notes',
-                '~/Library/Preferences/org.standardnotes.standardnotes.plist',
-                '~/Library/Preferences/org.standardnotes.standardnotes.helper.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Standard Notes',
+               '~/Library/Caches/org.standardnotes.standardnotes',
+               '~/Library/Caches/org.standardnotes.standardnotes.ShipIt',
+               '~/Library/Preferences/org.standardnotes.standardnotes.plist',
+               '~/Library/Preferences/org.standardnotes.standardnotes.helper.plist',
+               '~/Library/Saved Application State/org.standardnotes.standardnotes.savedState',
+             ]
 end

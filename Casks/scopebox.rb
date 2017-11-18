@@ -8,8 +8,8 @@ cask 'scopebox' do
 
   app 'ScopeBox.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.divergentmedia.scopebox.plist',
-                '~/Library/Application Support/ScopeBox',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.divergentmedia.scopebox.plist',
+               '~/Library/Application Support/ScopeBox',
+             ]
 end

@@ -10,12 +10,12 @@ cask 'sidneys-pb' do
 
   app 'PB for Desktop.app'
 
-  zap delete: [
-                '~/Library/Application Support/PB for Desktop',
-                '~/Library/Caches/de.sidneys.pb-for-desktop',
-                '~/Library/Logs/pb-for-desktop',
-                '~/Library/Preferences/de.sidneys.pb-for-desktop.plist',
-                '~/Library/Preferences/de.sidneys.pb-for-desktop.helper.plist',
-                '~/Library/Saved Application State/de.sidneys.pb-for-desktop.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/PB for Desktop',
+               '~/Library/Caches/de.sidneys.pb-for-desktop',
+               '~/Library/Logs/pb-for-desktop',
+               '~/Library/Preferences/de.sidneys.pb-for-desktop.plist',
+               '~/Library/Preferences/de.sidneys.pb-for-desktop.helper.plist',
+               '~/Library/Saved Application State/de.sidneys.pb-for-desktop.savedState',
+             ]
 end

@@ -17,7 +17,7 @@ cask 'skype-for-business' do
                         ],
             login_item: 'Skype for Business'
 
-  zap delete:  [
+  zap trash:   [
                  '/Library/Internet Plug-Ins/MeetingJoinPlugin.plugin',
                  '~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.plist',
                  '~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.debuglogging.plist',

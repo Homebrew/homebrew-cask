@@ -13,12 +13,12 @@ cask 'starcraft' do
 
   uninstall delete: '/Applications/StarCraft'
 
-  zap delete: [
-                '~/Library/Preferences/com.blizzard.Starcraft.plist',
-                '~/Library/Preferences/com.blizzard.systemsurvey.plist',
-                '~/Library/Preferences/net.battle.plist',
-                '/Users/Shared/Battle.net',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.blizzard.Starcraft.plist',
+               '~/Library/Preferences/com.blizzard.systemsurvey.plist',
+               '~/Library/Preferences/net.battle.plist',
+               '/Users/Shared/Battle.net',
+             ]
 
   caveats 'If you pick an installation directory other than /Applications when installing this cask, you will need to uninstall it manually'
 end
