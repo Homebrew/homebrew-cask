@@ -11,8 +11,8 @@ cask 'gitifier' do
 
   app 'Gitifier.app'
 
-  zap delete: [
-                '~/Library/Caches/net.psionides.Gitifier',
-                '~/Library/Preferences/net.psionides.Gitifier.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/net.psionides.Gitifier',
+               '~/Library/Preferences/net.psionides.Gitifier.plist',
+             ]
 end

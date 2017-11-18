@@ -12,9 +12,9 @@ cask 'geotag' do
 
   app 'GeoTag.app'
 
-  zap delete: [
-                '~/Library/Caches/org.snafu.GeoTag',
-                '~/Library/Saved Application State/org.snafu.GeoTag.savedState',
-              ],
-      trash:  '~/Library/Preferences/org.snafu.GeoTag.plist'
+  zap trash: [
+               '~/Library/Caches/org.snafu.GeoTag',
+               '~/Library/Preferences/org.snafu.GeoTag.plist',
+               '~/Library/Saved Application State/org.snafu.GeoTag.savedState',
+             ]
 end

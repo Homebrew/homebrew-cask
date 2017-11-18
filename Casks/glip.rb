@@ -14,14 +14,12 @@ cask 'glip' do
                       ['TERM', 'com.Glip.Glip'],
                     ]
 
-  zap delete: [
-                '~/Library/Caches/com.Glip.Glip',
-                '~/Library/Caches/com.Glip.Glip.ShipIt',
-                '~/Library/Saved Application State/com.Glip.Glip.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/Glip',
-                '~/Library/Preferences/com.Glip.Glip.helper.plist',
-                '~/Library/Preferences/com.Glip.Glip.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Glip',
+               '~/Library/Caches/com.Glip.Glip',
+               '~/Library/Caches/com.Glip.Glip.ShipIt',
+               '~/Library/Preferences/com.Glip.Glip.helper.plist',
+               '~/Library/Preferences/com.Glip.Glip.plist',
+               '~/Library/Saved Application State/com.Glip.Glip.savedState',
+             ]
 end
