@@ -23,15 +23,13 @@ cask 'tunnelblick' do
                        ],
             quit:      'net.tunnelblick.tunnelblick'
 
-  zap delete: [
-                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/net.tunnelblick.tunnelblick.help*',
-                '~/Library/Caches/net.tunnelblick.tunnelblick',
-              ],
-      trash:  [
-                '/Library/Application Support/Tunnelblick',
-                '~/Library/Application Support/Tunnelblick',
-                '~/Library/Preferences/net.tunnelblick.tunnelblick.plist',
-              ]
+  zap trash: [
+               '/Library/Application Support/Tunnelblick',
+               '~/Library/Application Support/Tunnelblick',
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/net.tunnelblick.tunnelblick.help*',
+               '~/Library/Caches/net.tunnelblick.tunnelblick',
+               '~/Library/Preferences/net.tunnelblick.tunnelblick.plist',
+             ]
 
   caveats <<~EOS
     For security reasons, #{token} must be installed to /Applications,

@@ -11,11 +11,11 @@ cask 'tusk' do
 
   app 'Tusk.app'
 
-  zap delete: '~/Library/Saved Application State/com.electron.tusk.savedState',
-      trash:  [
-                '~/.tusk.json',
-                '~/Library/Application Support/Tusk',
-                '~/Library/Preferences/com.electron.tusk.plist',
-                '~/Library/Preferences/com.electron.tusk.helper.plist',
-              ]
+  zap trash: [
+               '~/.tusk.json',
+               '~/Library/Application Support/Tusk',
+               '~/Library/Preferences/com.electron.tusk.plist',
+               '~/Library/Preferences/com.electron.tusk.helper.plist',
+               '~/Library/Saved Application State/com.electron.tusk.savedState',
+             ]
 end

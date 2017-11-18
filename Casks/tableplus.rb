@@ -12,10 +12,10 @@ cask 'tableplus' do
 
   app 'TablePlus.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.tinyapp.TablePlus',
-                '~/Library/Caches/com.tinyapp.TablePlus',
-                '~/Library/Cookies/com.tinyapp.TablePlus.binarycookies',
-                '~/Library/Preferences/com.tinyapp.TablePlus.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.tinyapp.TablePlus',
+               '~/Library/Caches/com.tinyapp.TablePlus',
+               '~/Library/Cookies/com.tinyapp.TablePlus.binarycookies',
+               '~/Library/Preferences/com.tinyapp.TablePlus.plist',
+             ]
 end

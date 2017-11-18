@@ -12,18 +12,16 @@ cask 'thunder' do
 
   app 'Thunder.app'
 
-  zap delete: [
-                '~/Library/Caches/com.xunlei.Thunder',
-                '~/Library/Caches/com.xunlei.XLPlayer',
-                '~/Library/Cookies/com.xunlei.Thunder.binarycookies',
-                '~/Library/Saved Application State/com.xunlei.Thunder.savedState',
-                '~/Library/Saved Application State/com.xunlei.XLPlayer.savedState',
-                '~/Library/WebKit/com.xunlei.Thunder',
-              ],
-      trash:  [
-                '~/Library/Application Support/Thunder',
-                '~/Library/Preferences/com.xunlei.Thunder.loginSDK.plist',
-                '~/Library/Preferences/com.xunlei.Thunder.plist',
-                '~/Library/Preferences/com.xunlei.XLPlayer.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Thunder',
+               '~/Library/Caches/com.xunlei.Thunder',
+               '~/Library/Caches/com.xunlei.XLPlayer',
+               '~/Library/Cookies/com.xunlei.Thunder.binarycookies',
+               '~/Library/Preferences/com.xunlei.Thunder.loginSDK.plist',
+               '~/Library/Preferences/com.xunlei.Thunder.plist',
+               '~/Library/Preferences/com.xunlei.XLPlayer.plist',
+               '~/Library/Saved Application State/com.xunlei.Thunder.savedState',
+               '~/Library/Saved Application State/com.xunlei.XLPlayer.savedState',
+               '~/Library/WebKit/com.xunlei.Thunder',
+             ]
 end
