@@ -7,7 +7,6 @@ cask 'google-drive-file-stream' do
   homepage 'https://www.google.com/drive/'
 
   conflicts_with cask: [
-                         'google-backup-and-sync',
                          'google-photos-backup-and-sync',
                        ]
   depends_on macos: '>= :el_capitan'
@@ -24,4 +23,6 @@ cask 'google-drive-file-stream' do
                '~/Library/Preferences/Google Drive File Stream Helper.plist',
                '~/Library/Preferences/com.google.drivefs.plist',
              ]
+
+  caveats "Although #{token} may be installed alongside google-backup-and-sync, you should not use the same account with both."
 end
