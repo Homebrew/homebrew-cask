@@ -14,15 +14,13 @@ cask 'iina' do
 
   app 'IINA.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.colliderli.iina.sfl*',
-                '~/Library/Caches/com.colliderli.iina',
-                '~/Library/Cookies/com.colliderli.iina.binarycookies',
-                '~/Library/Logs/DiagnosticReports/IINA*.crash',
-                '~/Library/Saved Application State/com.colliderli.iina.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/com.colliderli.iina',
-                '~/Library/Preferences/com.colliderli.iina.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.colliderli.iina',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.colliderli.iina.sfl*',
+               '~/Library/Caches/com.colliderli.iina',
+               '~/Library/Cookies/com.colliderli.iina.binarycookies',
+               '~/Library/Logs/DiagnosticReports/IINA*.crash',
+               '~/Library/Preferences/com.colliderli.iina.plist',
+               '~/Library/Saved Application State/com.colliderli.iina.savedState',
+             ]
 end

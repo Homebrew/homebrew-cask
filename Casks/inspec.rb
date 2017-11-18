@@ -21,5 +21,5 @@ cask 'inspec' do
   uninstall pkgutil: 'com.getchef.pkg.inspec',
             delete:  '/opt/inspec/'
 
-  zap delete: '~/.inspec/'
+  zap trash: '~/.inspec/'
 end

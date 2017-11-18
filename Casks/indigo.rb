@@ -17,15 +17,13 @@ cask 'indigo' do
                          'com.perceptiveautomation.indigo-server',
                        ]
 
-  zap delete: [
-                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.perceptiveautomation.indigo-client#{version.major}.sfl*",
-                '~/Library/Caches/com.perceptiveautomation.indigo-client6',
-                '~/Library/Caches/com.perceptiveautomation.indigo-server',
-              ],
-      trash:  [
-                "/Library/Application Support/Perceptive Automation/Indigo #{version.major}",
-                '~/Library/Preferences/com.perceptiveautomation.indigo-client6.plist',
-                "~/Library/Preferences/Indigo #{version.major} Client Prefs.indiPref",
-                "~/Library/Preferences/Indigo #{version.major} Client Settings.indiPref",
-              ]
+  zap trash: [
+               "/Library/Application Support/Perceptive Automation/Indigo #{version.major}",
+               "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.perceptiveautomation.indigo-client#{version.major}.sfl*",
+               '~/Library/Caches/com.perceptiveautomation.indigo-client6',
+               '~/Library/Caches/com.perceptiveautomation.indigo-server',
+               '~/Library/Preferences/com.perceptiveautomation.indigo-client6.plist',
+               "~/Library/Preferences/Indigo #{version.major} Client Prefs.indiPref",
+               "~/Library/Preferences/Indigo #{version.major} Client Settings.indiPref",
+             ]
 end

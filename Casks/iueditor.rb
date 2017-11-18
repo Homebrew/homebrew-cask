@@ -10,8 +10,8 @@ cask 'iueditor' do
 
   uninstall pkgutil: 'org.jdlab.IUEditor'
 
-  zap delete: [
-                '~/Library/Preferences/org.jdlab.IUEditor.LSSharedFileList.plist',
-                '~/Library/Preferences/org.jdlab.IUEditor.plist',
-              ]
+  zap trash: [
+               '~/Library/Preferences/org.jdlab.IUEditor.LSSharedFileList.plist',
+               '~/Library/Preferences/org.jdlab.IUEditor.plist',
+             ]
 end

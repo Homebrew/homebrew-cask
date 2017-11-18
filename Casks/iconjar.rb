@@ -13,9 +13,9 @@ cask 'iconjar' do
 
   app 'IconJar.app'
 
-  zap delete: [
-                '/Users/Shared/IconJar',
-                '~/Library/Application Support/IconJar',
-                '~/Library/Preferences/com.iconjar.iconjar.plist',
-              ]
+  zap trash: [
+               '/Users/Shared/IconJar',
+               '~/Library/Application Support/IconJar',
+               '~/Library/Preferences/com.iconjar.iconjar.plist',
+             ]
 end

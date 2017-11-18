@@ -10,10 +10,10 @@ cask 'ieasemusic' do
 
   app 'ieaseMusic.app'
 
-  zap delete: '~/Library/Saved Application State/gh.trazyn.ieasemusic.savedState',
-      trash:  [
-                '~/Library/Application Support/ieasemusic',
-                '~/Library/Preferences/gh.trazyn.ieasemusic.helper.plist',
-                '~/Library/Preferences/gh.trazyn.ieasemusic.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/ieasemusic',
+               '~/Library/Preferences/gh.trazyn.ieasemusic.helper.plist',
+               '~/Library/Preferences/gh.trazyn.ieasemusic.plist',
+               '~/Library/Saved Application State/gh.trazyn.ieasemusic.savedState',
+             ]
 end
