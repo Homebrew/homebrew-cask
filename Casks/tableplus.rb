@@ -1,10 +1,10 @@
 cask 'tableplus' do
-  version '1.0,69'
-  sha256 '1eb02426e4a1c64bf4fc3dfe0921870ede581f73753b1764a54479c53368f290'
+  version '1.0,71'
+  sha256 '4c07f7f485a5387d8c5fdbc7f0e118880722b47e06ee22779eb376a6d6f3d437'
 
   url 'https://tableplus.io/release/osx/tableplus_latest.zip'
   appcast 'https://tableplus.io/osx/version.xml',
-          checkpoint: '28f157420538ae50b5b06fe8cf5b895b37599932dbfa7a9472f32e487c5fb72b'
+          checkpoint: '4eac0dc2540f31e9f1d9f50032c574fafdd8f03796a68413082961161539804c'
   name 'TablePlus'
   homepage 'https://tableplus.io/'
 
