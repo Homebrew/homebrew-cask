@@ -6,10 +6,7 @@ cask 'google-photos-backup-and-sync' do
   name 'Google Photos Backup And Sync'
   homepage 'https://photos.google.com/apps'
 
-  conflicts_with cask: [
-                         'google-backup-and-sync',
-                         'google-drive-file-stream',
-                       ]
+  conflicts_with cask: 'google-backup-and-sync'
   depends_on macos: '>= :mavericks'
 
   app 'Backup and Sync.app'
@@ -26,4 +23,10 @@ cask 'google-photos-backup-and-sync' do
                '~/Library/Group Containers/google_drive',
                '~/Library/Preferences/com.google.GoogleDrive.plist',
              ]
+
+  caveats <<~EOS
+    Although #{token} may be installed alongside google-drive-file-stream, you should not use the same account with both.
+
+      https://support.google.com/a/answer/7496409#allowboth
+  EOS
 end
