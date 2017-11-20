@@ -13,7 +13,7 @@ cask 'atom' do
   depends_on macos: '>= :mountain_lion'
 
   app 'Atom.app'
-  binary "#{appdir}/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm", target: 'apm'
+  binary "#{appdir}/Atom.app/Contents/Resources/app/apm/bin/apm"
   binary "#{appdir}/Atom.app/Contents/Resources/app/atom.sh", target: 'atom'
 
   zap trash: [
