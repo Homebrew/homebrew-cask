@@ -21,8 +21,8 @@ cask 'libreoffice' do
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/senddoc"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/ui-previewer"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/uno"
+  binary "#{appdir}/LibreOffice.app/Contents/MacOS/unoinfo"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/unopkg"
-  binary "#{appdir}/LibreOffice.app/Contents/MacOS/urelibs"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/uri-encode"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/xpdfimport"
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
