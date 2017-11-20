@@ -10,10 +10,10 @@ cask 'webpack-dashboard' do
 
   app 'Webpack Dashboard.app'
 
-  zap delete: '~/Library/Saved Application State/org.formidable.WebpackDashboard.savedState',
-      trash:  [
-                '~/Library/Application Support/webpack-dashboard-app',
-                '~/Library/Preferences/org.formidable.WebpackDashboard.helper.plist',
-                '~/Library/Preferences/org.formidable.WebpackDashboard.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/webpack-dashboard-app',
+               '~/Library/Preferences/org.formidable.WebpackDashboard.helper.plist',
+               '~/Library/Preferences/org.formidable.WebpackDashboard.plist',
+               '~/Library/Saved Application State/org.formidable.WebpackDashboard.savedState',
+             ]
 end

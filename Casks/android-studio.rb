@@ -11,20 +11,18 @@ cask 'android-studio' do
 
   app 'Android Studio.app'
 
-  zap delete: [
-                "~/Library/Caches/AndroidStudio#{version.major_minor}",
-                "~/Library/Logs/AndroidStudio#{version.major_minor}",
-                '~/Library/Saved Application State/com.google.android.studio.savedState',
-              ],
-      trash:  [
-                '~/Library/Android/sdk',
-                "~/Library/Application Support/AndroidStudio#{version.major_minor}",
-                "~/Library/Preferences/AndroidStudio#{version.major_minor}",
-                '~/Library/Preferences/com.android.Emulator.plist',
-                '~/.android',
-              ],
-      rmdir:  [
-                '~/AndroidStudioProjects',
-                '~/Library/Android',
-              ]
+  zap trash: [
+               '~/Library/Android/sdk',
+               "~/Library/Application Support/AndroidStudio#{version.major_minor}",
+               "~/Library/Caches/AndroidStudio#{version.major_minor}",
+               "~/Library/Logs/AndroidStudio#{version.major_minor}",
+               "~/Library/Preferences/AndroidStudio#{version.major_minor}",
+               '~/Library/Preferences/com.android.Emulator.plist',
+               '~/Library/Saved Application State/com.google.android.studio.savedState',
+               '~/.android',
+             ],
+      rmdir: [
+               '~/AndroidStudioProjects',
+               '~/Library/Android',
+             ]
 end

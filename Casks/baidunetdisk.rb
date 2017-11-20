@@ -12,18 +12,18 @@ cask 'baidunetdisk' do
 
   app 'BaiduNetdisk_mac.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.baidu.BaiduNetdisk-mac',
-                '~/Library/Caches/com.baidu.BaiduNetdisk-mac',
-                '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.baidu.BaiduNetdisk-mac',
-                '~/Library/Cookies/com.baidu.BaiduNetdisk-mac.binarycookies',
-                '~/Library/Preferences/com.baidu.BaiduNetdisk-mac.plist',
-                '~/Library/sapi/wappass.baidu.com',
-                '~/Library/Saved Application State/com.baidu.BaiduNetdisk-mac.savedState',
-              ],
+  zap trash: [
+               '~/Library/Application Support/com.baidu.BaiduNetdisk-mac',
+               '~/Library/Caches/com.baidu.BaiduNetdisk-mac',
+               '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.baidu.BaiduNetdisk-mac',
+               '~/Library/Cookies/com.baidu.BaiduNetdisk-mac.binarycookies',
+               '~/Library/Preferences/com.baidu.BaiduNetdisk-mac.plist',
+               '~/Library/sapi/wappass.baidu.com',
+               '~/Library/Saved Application State/com.baidu.BaiduNetdisk-mac.savedState',
+             ],
       rmdir:
-              [
-                '~/Library/Caches/com.plausiblelabs.crashreporter.data',
-                '~/Library/sapi',
-              ]
+             [
+               '~/Library/Caches/com.plausiblelabs.crashreporter.data',
+               '~/Library/sapi',
+             ]
 end

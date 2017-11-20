@@ -16,11 +16,11 @@ cask 'harmony' do
                       ['TERM', 'com.vincelwt.harmony.helper'],
                     ]
 
-  zap delete: '~/Library/Saved Application State/com.vincelwt.harmony.savedState',
-      trash:  [
-                '~/.config/configstore/harmony.json',
-                '~/Library/Application Support/Harmony',
-                '~/Library/Preferences/com.vincelwt.harmony.helper.plist',
-                '~/Library/Preferences/com.vincelwt.harmony.plist',
-              ]
+  zap trash: [
+               '~/.config/configstore/harmony.json',
+               '~/Library/Application Support/Harmony',
+               '~/Library/Preferences/com.vincelwt.harmony.helper.plist',
+               '~/Library/Preferences/com.vincelwt.harmony.plist',
+               '~/Library/Saved Application State/com.vincelwt.harmony.savedState',
+             ]
 end

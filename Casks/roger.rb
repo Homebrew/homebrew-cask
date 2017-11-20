@@ -12,9 +12,9 @@ cask 'roger' do
   uninstall login_item: 'Roger',
             quit:       'com.placepixel.Roger'
 
-  zap delete: '~/Library/Caches/com.placepixel.Roger',
-      trash:  [
-                '~/Library/Preferences/com.placepixel.Roger.plist',
-                '~/Library/Application Support/com.placepixel.Roger',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.placepixel.Roger',
+               '~/Library/Preferences/com.placepixel.Roger.plist',
+               '~/Library/Application Support/com.placepixel.Roger',
+             ]
 end

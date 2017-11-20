@@ -14,12 +14,12 @@ cask 'botframework-emulator' do
 
   uninstall quit: 'com.electron.botframework-emulator'
 
-  zap delete: [
-                '~/Library/Application Support/botframework-emulator',
-                '~/Library/Caches/com.electron.botframework-emulator',
-                '~/Library/Caches/com.electron.botframework-emulator.ShipIt',
-                '~/Library/Preferences/com.electron.botframework-emulator.helper.plist',
-                '~/Library/Preferences/com.electron.botframework-emulator.plist',
-                '~/Library/Saved Application State/com.electron.botframework-emulator.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/botframework-emulator',
+               '~/Library/Caches/com.electron.botframework-emulator',
+               '~/Library/Caches/com.electron.botframework-emulator.ShipIt',
+               '~/Library/Preferences/com.electron.botframework-emulator.helper.plist',
+               '~/Library/Preferences/com.electron.botframework-emulator.plist',
+               '~/Library/Saved Application State/com.electron.botframework-emulator.savedState',
+             ]
 end

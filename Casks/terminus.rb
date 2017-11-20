@@ -11,10 +11,10 @@ cask 'terminus' do
 
   app 'Terminus.app'
 
-  zap delete: '~/Library/Saved Application State/org.terminus.savedState',
-      trash:  [
-                '~/Library/Application Support/terminus',
-                '~/Library/Preferences/org.terminus.helper.plist',
-                '~/Library/Preferences/org.terminus.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/terminus',
+               '~/Library/Preferences/org.terminus.helper.plist',
+               '~/Library/Preferences/org.terminus.plist',
+               '~/Library/Saved Application State/org.terminus.savedState',
+             ]
 end

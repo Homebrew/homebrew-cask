@@ -16,13 +16,11 @@ cask 'sublime-text' do
 
   uninstall quit: 'com.sublimetext.3'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sublimetext.3.sfl*',
-                '~/Library/Caches/com.sublimetext.3',
-                '~/Library/Saved Application State/com.sublimetext.3.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/Sublime Text 3',
-                '~/Library/Preferences/com.sublimetext.3.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sublimetext.3.sfl*',
+               '~/Library/Application Support/Sublime Text 3',
+               '~/Library/Caches/com.sublimetext.3',
+               '~/Library/Preferences/com.sublimetext.3.plist',
+               '~/Library/Saved Application State/com.sublimetext.3.savedState',
+             ]
 end

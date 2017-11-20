@@ -14,9 +14,9 @@ cask 'p4v' do
   app 'p4merge.app'
   binary 'p4vc'
 
-  zap delete: '~/Library/Saved Application State/com.perforce.p4v.savedState',
-      trash:  [
-                '~/Library/Preferences/com.perforce.p4v',
-                '~/Library/Preferences/com.perforce.p4v.plist',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.perforce.p4v',
+               '~/Library/Preferences/com.perforce.p4v.plist',
+               '~/Library/Saved Application State/com.perforce.p4v.savedState',
+             ]
 end

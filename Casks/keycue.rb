@@ -9,8 +9,8 @@ cask 'keycue' do
 
   app 'KeyCue.app'
 
-  zap delete: [
-                '~/Library/Application Support/KeyCue',
-                '~/Library/Preferences/com.macility.keycue.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/KeyCue',
+               '~/Library/Preferences/com.macility.keycue.plist',
+             ]
 end

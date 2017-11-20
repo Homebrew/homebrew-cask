@@ -12,13 +12,11 @@ cask 'proxifier' do
 
   app 'Proxifier.app'
 
-  zap delete: [
-                '~/Library/Caches/com.initex.proxifier.macosx',
-                '~/Library/Saved Application State/com.initex.proxifier.macosx.savedState',
-                '~/Library/Logs/Proxifier',
-              ],
-      trash:  [
-                '~/Library/Application Support/Proxifier',
-                '~/Library/Preferences/com.initex.proxifier.macosx.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Proxifier',
+               '~/Library/Caches/com.initex.proxifier.macosx',
+               '~/Library/Logs/Proxifier',
+               '~/Library/Preferences/com.initex.proxifier.macosx.plist',
+               '~/Library/Saved Application State/com.initex.proxifier.macosx.savedState',
+             ]
 end

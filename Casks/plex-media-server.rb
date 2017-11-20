@@ -15,12 +15,10 @@ cask 'plex-media-server' do
   uninstall quit:      'com.plexapp.plexmediaserver',
             launchctl: 'com.plexapp.mediaserver'
 
-  zap delete: [
-                '~/Library/Caches/PlexMediaServer/',
-                '~/Library/Logs/Plex Media Server/',
-              ],
-      trash:  [
-                '~/Library/Application Support/Plex Media Server/',
-                '~/Library/Preferences/com.plexapp.plexmediaserver.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Plex Media Server/',
+               '~/Library/Caches/PlexMediaServer/',
+               '~/Library/Logs/Plex Media Server/',
+               '~/Library/Preferences/com.plexapp.plexmediaserver.plist',
+             ]
 end

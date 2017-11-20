@@ -10,12 +10,10 @@ cask 'scrutiny' do
 
   app "Scrutiny #{version.major}.app"
 
-  zap delete: [
-                "~/Library/Caches/com.peacockmedia.Scrutiny-#{version.major}",
-                "~/Library/Cookies/com.peacockmedia.Scrutiny-#{version.major}.binarycookies",
-              ],
-      trash:  [
-                "~/Library/Application Support/Scrutiny #{version.major}",
-                "~/Library/Preferences/com.peacockmedia.Scrutiny-#{version.major}.plist",
-              ]
+  zap trash: [
+               "~/Library/Application Support/Scrutiny #{version.major}",
+               "~/Library/Caches/com.peacockmedia.Scrutiny-#{version.major}",
+               "~/Library/Cookies/com.peacockmedia.Scrutiny-#{version.major}.binarycookies",
+               "~/Library/Preferences/com.peacockmedia.Scrutiny-#{version.major}.plist",
+             ]
 end

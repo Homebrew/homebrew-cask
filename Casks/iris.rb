@@ -12,6 +12,8 @@ cask 'iris' do
   uninstall launchctl: 'co.iristech.Iris',
             quit:      'co.iristech.Iris'
 
-  zap delete: '~/Library/Saved Application State/co.iristech.Iris.savedState',
-      trash:  '~/Library/Preferences/com.iristech.Iris.plist'
+  zap trash: [
+               '~/Library/Preferences/com.iristech.Iris.plist',
+               '~/Library/Saved Application State/co.iristech.Iris.savedState',
+             ]
 end

@@ -11,10 +11,10 @@ cask 'krita' do
 
   app 'Krita.app'
 
-  zap delete: '~/Library/Saved Application State/org.krita.savedState',
-      trash:  [
-                '~/Library/Application Support/krita',
-                '~/Library/Preferences/kritadisplayrc',
-                '~/Library/Preferences/kritarc',
-              ]
+  zap trash: [
+               '~/Library/Application Support/krita',
+               '~/Library/Preferences/kritadisplayrc',
+               '~/Library/Preferences/kritarc',
+               '~/Library/Saved Application State/org.krita.savedState',
+             ]
 end

@@ -13,11 +13,11 @@ cask 'qbserve' do
 
   app 'Qbserve.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.qotoqot.qbserve.sfl*',
-                '~/Library/Application Support/Qbserve',
-                '~/Library/Caches/com.QotoQot.Qbserve',
-                '~/Library/Containers/com.QotoQot.QbserveLogin',
-                '~/Library/Preferences/com.qotoqot.qbserve.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.qotoqot.qbserve.sfl*',
+               '~/Library/Application Support/Qbserve',
+               '~/Library/Caches/com.QotoQot.Qbserve',
+               '~/Library/Containers/com.QotoQot.QbserveLogin',
+               '~/Library/Preferences/com.qotoqot.qbserve.plist',
+             ]
 end

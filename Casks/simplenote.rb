@@ -10,10 +10,10 @@ cask 'simplenote' do
 
   app 'Simplenote-darwin-x64/Simplenote.app'
 
-  zap delete: [
-                '~/Library/Application Support/Simplenote',
-                '~/Library/Caches/com.automattic.simplenote',
-                '~/Library/Caches/com.automattic.simplenote.ShipIt',
-                '~/Library/Saved Application State/com.automattic.simplenote.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Simplenote',
+               '~/Library/Caches/com.automattic.simplenote',
+               '~/Library/Caches/com.automattic.simplenote.ShipIt',
+               '~/Library/Saved Application State/com.automattic.simplenote.savedState',
+             ]
 end

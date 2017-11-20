@@ -13,13 +13,13 @@ cask 'hipchat' do
 
   app 'HipChat.app'
 
-  zap delete: [
-                '~/Library/Application Support/HipChat',
-                '~/Library/Caches/com.hipchat.HipChat',
-                '~/Library/HipChat',
-                '~/Library/Logs/HipChat',
-                '~/Library/Preferences/com.hipchat.HipChat.plist',
-                '~/Library/Saved Application State/com.hipchat.HipChat.savedState',
-                '~/Library/chat.hipchat.com',
-              ]
+  zap trash: [
+               '~/Library/Application Support/HipChat',
+               '~/Library/Caches/com.hipchat.HipChat',
+               '~/Library/HipChat',
+               '~/Library/Logs/HipChat',
+               '~/Library/Preferences/com.hipchat.HipChat.plist',
+               '~/Library/Saved Application State/com.hipchat.HipChat.savedState',
+               '~/Library/chat.hipchat.com',
+             ]
 end

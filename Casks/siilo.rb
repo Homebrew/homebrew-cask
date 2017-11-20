@@ -10,8 +10,8 @@ cask 'siilo' do
 
   uninstall quit: 'com.mv.siilo'
 
-  zap delete: [
-                '~/Library/Caches/com.mv.siilo',
-                '~/Library/Preferences/com.mv.siilo.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.mv.siilo',
+               '~/Library/Preferences/com.mv.siilo.plist',
+             ]
 end

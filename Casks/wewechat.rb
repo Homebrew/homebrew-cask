@@ -10,10 +10,10 @@ cask 'wewechat' do
 
   app 'weweChat.app'
 
-  zap delete: '~/Library/Saved Application State/gh.trazyn.wewechat.savedState',
-      trash:  [
-                '~/Library/Application Support/wewechat',
-                '~/Library/Preferences/gh.trazyn.wewechat.helper.plist',
-                '~/Library/Preferences/gh.trazyn.wewechat.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/wewechat',
+               '~/Library/Preferences/gh.trazyn.wewechat.helper.plist',
+               '~/Library/Preferences/gh.trazyn.wewechat.plist',
+               '~/Library/Saved Application State/gh.trazyn.wewechat.savedState',
+             ]
 end

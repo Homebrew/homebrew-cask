@@ -12,9 +12,9 @@ cask 'myworkspace' do
 
   uninstall quit: 'com.microsoft.MyWorkspace'
 
-  zap delete: '~/Library/Caches/com.microsoft.MyWorkspace',
-      trash:  [
-                '~/Library/Application Support/com.microsoft.MyWorkspace',
-                '~/Library/Preferences/com.microsoft.MyWorkspace.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.microsoft.MyWorkspace',
+               '~/Library/Caches/com.microsoft.MyWorkspace',
+               '~/Library/Preferences/com.microsoft.MyWorkspace.plist',
+             ]
 end

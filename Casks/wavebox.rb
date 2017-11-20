@@ -14,12 +14,12 @@ cask 'wavebox' do
   uninstall quit:       'io.wavebox.wavebox',
             login_item: 'Wavebox'
 
-  zap delete: [
-                '~/Library/Application Support/wavebox',
-                '~/Library/Caches/io.wavebox.wavebox',
-                '~/Library/Caches/io.wavebox.wavebox.ShipIt',
-                '~/Library/Preferences/io.wavebox.wavebox.helper.plist',
-                '~/Library/Preferences/io.wavebox.wavebox.plist',
-                '~/Library/Saved Application State/io.wavebox.wavebox.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/wavebox',
+               '~/Library/Caches/io.wavebox.wavebox',
+               '~/Library/Caches/io.wavebox.wavebox.ShipIt',
+               '~/Library/Preferences/io.wavebox.wavebox.helper.plist',
+               '~/Library/Preferences/io.wavebox.wavebox.plist',
+               '~/Library/Saved Application State/io.wavebox.wavebox.savedState',
+             ]
 end

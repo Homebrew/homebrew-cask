@@ -11,17 +11,15 @@ cask 'hyper' do
 
   app 'Hyper.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.zeit.hyper.sfl*',
-                '~/Library/Caches/co.zeit.hyper',
-                '~/Library/Caches/co.zeit.hyper.ShipIt',
-                '~/Library/Saved Application State/co.zeit.hyper.savedState',
-              ],
-      trash:  [
-                '~/.hyper.js',
-                '~/.hyper_plugins',
-                '~/Library/Application Support/Hyper',
-                '~/Library/Preferences/co.zeit.hyper.plist',
-                '~/Library/Preferences/co.zeit.hyper.helper.plist',
-              ]
+  zap trash: [
+               '~/.hyper.js',
+               '~/.hyper_plugins',
+               '~/Library/Application Support/Hyper',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.zeit.hyper.sfl*',
+               '~/Library/Caches/co.zeit.hyper',
+               '~/Library/Caches/co.zeit.hyper.ShipIt',
+               '~/Library/Preferences/co.zeit.hyper.plist',
+               '~/Library/Preferences/co.zeit.hyper.helper.plist',
+               '~/Library/Saved Application State/co.zeit.hyper.savedState',
+             ]
 end

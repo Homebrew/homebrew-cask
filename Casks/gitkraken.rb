@@ -12,17 +12,15 @@ cask 'gitkraken' do
 
   app 'GitKraken.app'
 
-  zap delete: [
-                '~/Library/Caches/GitKraken',
-                '~/Library/Caches/com.axosoft.gitkraken.ShipIt',
-                '~/Library/Caches/com.axosoft.gitkraken',
-                '~/Library/Saved Application State/com.axosoft.gitkraken.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/com.axosoft.gitkraken.ShipIt',
-                '~/Library/Application Support/GitKraken',
-                '~/Library/Preferences/com.axosoft.gitkraken.helper.plist',
-                '~/Library/Preferences/com.axosoft.gitkraken.plist',
-                '~/.gitkraken',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.axosoft.gitkraken.ShipIt',
+               '~/Library/Application Support/GitKraken',
+               '~/Library/Caches/GitKraken',
+               '~/Library/Caches/com.axosoft.gitkraken.ShipIt',
+               '~/Library/Caches/com.axosoft.gitkraken',
+               '~/Library/Preferences/com.axosoft.gitkraken.helper.plist',
+               '~/Library/Preferences/com.axosoft.gitkraken.plist',
+               '~/Library/Saved Application State/com.axosoft.gitkraken.savedState',
+               '~/.gitkraken',
+             ]
 end

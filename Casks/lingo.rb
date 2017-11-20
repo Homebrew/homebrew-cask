@@ -9,9 +9,9 @@ cask 'lingo' do
 
   app 'Lingo.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.lingoapp.Lingo.plist',
-                '~/Library/Application Support/com.lingoapp.Lingo',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.lingoapp.lingo.sfl*',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.lingoapp.Lingo.plist',
+               '~/Library/Application Support/com.lingoapp.Lingo',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.lingoapp.lingo.sfl*',
+             ]
 end

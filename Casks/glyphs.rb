@@ -12,11 +12,11 @@ cask 'glyphs' do
 
   app 'Glyphs.app'
 
-  zap delete: [
-                '~/Library/Application Support/Glyphs',
-                '~/Library/Application Support/com.GeorgSeifert.Glyphs2',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.georgseifert.glyphs2.sfl*',
-                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.GeorgSeifert.Glyphs2.help*',
-                '~/Library/Preferences/com.GeorgSeifert.Glyphs2.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Glyphs',
+               '~/Library/Application Support/com.GeorgSeifert.Glyphs2',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.georgseifert.glyphs2.sfl*',
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.GeorgSeifert.Glyphs2.help*',
+               '~/Library/Preferences/com.GeorgSeifert.Glyphs2.plist',
+             ]
 end

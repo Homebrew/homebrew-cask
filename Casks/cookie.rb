@@ -12,9 +12,9 @@ cask 'cookie' do
 
   app 'Cookie.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/com.sweetpproductions.Cookie5',
-                '~/Library/Containers/com.sweetpproductions.Cookie5',
-                '~/Library/Preferences/com.sweetpproductions.Cookie5.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/com.sweetpproductions.Cookie5',
+               '~/Library/Containers/com.sweetpproductions.Cookie5',
+               '~/Library/Preferences/com.sweetpproductions.Cookie5.plist',
+             ]
 end

@@ -19,12 +19,10 @@ cask 'postgres' do
                          "com.postgresapp.Postgres#{version.major}MenuHelper",
                        ]
 
-  zap delete: [
-                "~/Library/Caches/com.postgresapp.Postgres#{version.major}",
-                "~/Library/Cookies/com.postgresapp.Postgres#{version.major}.binarycookies",
-              ],
-      trash:  [
-                '~/Library/Application Support/Postgres',
-                "~/Library/Preferences/com.postgresapp.Postgres#{version.major}.plist",
-              ]
+  zap trash: [
+               '~/Library/Application Support/Postgres',
+               "~/Library/Caches/com.postgresapp.Postgres#{version.major}",
+               "~/Library/Cookies/com.postgresapp.Postgres#{version.major}.binarycookies",
+               "~/Library/Preferences/com.postgresapp.Postgres#{version.major}.plist",
+             ]
 end

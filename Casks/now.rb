@@ -15,14 +15,12 @@ cask 'now' do
             login_item: 'Now',
             signal:     ['TERM', 'co.zeit.now']
 
-  zap delete: [
-                '~/Library/Caches/co.zeit.now',
-                '~/Library/Caches/co.zeit.now.ShipIt',
-              ],
-      trash:  [
-                '~/.now.json',
-                '~/Library/Application Support/Now',
-                '~/Library/Preferences/co.zeit.now.plist',
-                '~/Library/Preferences/co.zeit.now.helper.plist',
-              ]
+  zap trash: [
+               '~/.now.json',
+               '~/Library/Application Support/Now',
+               '~/Library/Caches/co.zeit.now',
+               '~/Library/Caches/co.zeit.now.ShipIt',
+               '~/Library/Preferences/co.zeit.now.plist',
+               '~/Library/Preferences/co.zeit.now.helper.plist',
+             ]
 end

@@ -8,5 +8,5 @@ cask 'keepassx' do
 
   app 'KeePassX.app'
 
-  zap delete: '~/.keepassx'
+  zap trash: '~/.keepassx'
 end

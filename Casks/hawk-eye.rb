@@ -12,13 +12,13 @@ cask 'hawk-eye' do
 
   app 'Hawk Eye.app'
 
-  zap delete: [
-                '~/Library/Application Support/Hawk Eye',
-                '~/Library/Caches/harksys-hawkeye',
-                '~/Library/Caches/harksys-hawkeye.ShipIt',
-                '~/Library/Cookies/harksys-hawkeye.binarycookies',
-                '~/Library/Preferences/harksys-hawkeye.helper.plist',
-                '~/Library/Preferences/harksys-hawkeye.plist',
-                '~/Library/Saved Application State/harksys-hawkeye.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Hawk Eye',
+               '~/Library/Caches/harksys-hawkeye',
+               '~/Library/Caches/harksys-hawkeye.ShipIt',
+               '~/Library/Cookies/harksys-hawkeye.binarycookies',
+               '~/Library/Preferences/harksys-hawkeye.helper.plist',
+               '~/Library/Preferences/harksys-hawkeye.plist',
+               '~/Library/Saved Application State/harksys-hawkeye.savedState',
+             ]
 end

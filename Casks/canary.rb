@@ -14,8 +14,8 @@ cask 'canary' do
 
   app 'Canary.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/Sanghani.Canary',
-                '~/Library/Containers/Sanghani.Canary',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/Sanghani.Canary',
+               '~/Library/Containers/Sanghani.Canary',
+             ]
 end

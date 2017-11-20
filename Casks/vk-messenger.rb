@@ -12,9 +12,9 @@ cask 'vk-messenger' do
 
   app 'VK Messenger.app'
 
-  zap delete: '~/Library/Saved Application State/com.vk.messages.savedState',
-      trash:  [
-                '~/Library/Preferences/com.vk.messages.plist',
-                '~/Library/Preferences/com.vk.messages.helper.plist',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.vk.messages.plist',
+               '~/Library/Preferences/com.vk.messages.helper.plist',
+               '~/Library/Saved Application State/com.vk.messages.savedState',
+             ]
 end

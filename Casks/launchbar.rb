@@ -16,8 +16,8 @@ cask 'launchbar' do
 
   app 'LaunchBar.app'
 
-  zap delete: [
-                '~/Library/Preferences/at.obdev.LaunchBar.plist',
-                '~/Library/Application Support/LaunchBar',
-              ]
+  zap trash: [
+               '~/Library/Preferences/at.obdev.LaunchBar.plist',
+               '~/Library/Application Support/LaunchBar',
+             ]
 end

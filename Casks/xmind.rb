@@ -8,8 +8,8 @@ cask 'xmind' do
 
   app 'XMind.app'
 
-  zap delete: [
-                '~/Library/XMind',
-                '~/Library/Saved Application State/org.xmind.cathy.application.savedState',
-              ]
+  zap trash: [
+               '~/Library/XMind',
+               '~/Library/Saved Application State/org.xmind.cathy.application.savedState',
+             ]
 end

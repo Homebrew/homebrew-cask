@@ -11,11 +11,11 @@ cask 'rocket-chat' do
 
   app 'Rocket.Chat+.app'
 
-  zap delete: [
-                '~/Library/Application Support/Rocket.Chat+',
-                '~/Library/Caches/Rocket.Chat+',
-                '~/Library/Caches/chat.rocket',
-                '~/Library/Preferences/chat.rocket.plist',
-                '~/Library/Saved Application State/chat.rocket.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Rocket.Chat+',
+               '~/Library/Caches/Rocket.Chat+',
+               '~/Library/Caches/chat.rocket',
+               '~/Library/Preferences/chat.rocket.plist',
+               '~/Library/Saved Application State/chat.rocket.savedState',
+             ]
 end

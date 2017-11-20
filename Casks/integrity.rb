@@ -11,12 +11,10 @@ cask 'integrity' do
 
   app 'Integrity.app'
 
-  zap delete: [
-                '~/Library/Caches/com.peacockmedia.integrity',
-                '~/Library/Cookies/com.peacockmedia.integrity.binarycookies',
-              ],
-      trash:  [
-                '~/Library/Application Support/Integrity',
-                '~/Library/Preferences/com.peacockmedia.integrity.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Integrity',
+               '~/Library/Caches/com.peacockmedia.integrity',
+               '~/Library/Cookies/com.peacockmedia.integrity.binarycookies',
+               '~/Library/Preferences/com.peacockmedia.integrity.plist',
+             ]
 end

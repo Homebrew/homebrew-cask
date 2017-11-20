@@ -8,9 +8,9 @@ cask 'soundnode' do
 
   app 'Soundnode.app'
 
-  zap delete: [
-                '~/Library/Application Support/Soundnode',
-                '~/Library/Preferences/com.nw-builder.soundnode.plist',
-                '~/Library/Saved Application State/com.nw-builder.soundnode.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Soundnode',
+               '~/Library/Preferences/com.nw-builder.soundnode.plist',
+               '~/Library/Saved Application State/com.nw-builder.soundnode.savedState',
+             ]
 end

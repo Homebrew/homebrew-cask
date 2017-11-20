@@ -11,12 +11,10 @@ cask 'airflow' do
 
   app 'Airflow.app'
 
-  zap delete: [
-                '~/Library/Caches/com.bitcavehq.Airflow',
-                '~/Library/Saved Application State/com.bitcavehq.Airflow.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/Airflow',
-                '~/Library/Preferences/com.bitcavehq.Airflow.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Airflow',
+               '~/Library/Caches/com.bitcavehq.Airflow',
+               '~/Library/Preferences/com.bitcavehq.Airflow.plist',
+               '~/Library/Saved Application State/com.bitcavehq.Airflow.savedState',
+             ]
 end

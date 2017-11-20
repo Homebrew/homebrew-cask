@@ -8,9 +8,9 @@ cask 'bitwig-studio' do
 
   app 'Bitwig Studio.app'
 
-  zap delete: [
-                '~/Library/Application Support/Bitwig',
-                '~/Library/Caches/Bitwig',
-                '~/Library/Logs/Bitwig',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Bitwig',
+               '~/Library/Caches/Bitwig',
+               '~/Library/Logs/Bitwig',
+             ]
 end

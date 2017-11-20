@@ -1,11 +1,11 @@
 cask 'fips' do
-  version '3.2.0'
-  sha256 '7cfdc22654208a5017dde4c181ca6ada2e67e682de8b903a3ed2d69ca650a055'
+  version '3.2.2'
+  sha256 '3de1f88b2d7b5f08660bbe2c7c419f9abfcea96e9d76c9a42044c7167447fb6d'
 
   # github.com/matwey/fips3/releases was verified as official when first introduced to the cask
   url "https://github.com/matwey/fips3/releases/download/#{version}/Fips-#{version}-Darwin.dmg"
   appcast 'https://github.com/matwey/fips3/releases.atom',
-          checkpoint: 'e4cd19f9d0d9da47637a9d0bac136a68190a6a17dac0f83aba535527c701c1e5'
+          checkpoint: '83a027e18dd117084fa2aab135300d417aef8d6f3eb518fe010de1f9d4a4225e'
   name 'Fips'
   homepage 'http://fips.space/'
 

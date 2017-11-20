@@ -11,5 +11,5 @@ cask 'geoda' do
 
   app 'GeoDa.app'
 
-  zap delete: '~/Library/Saved Application State/edu.asu.geodacenter.GeoDa.savedState'
+  zap trash: '~/Library/Saved Application State/edu.asu.geodacenter.GeoDa.savedState'
 end

@@ -13,13 +13,13 @@ cask 'telegram' do
 
   app 'Telegram.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/ru.keepcoder.Telegram',
-                '~/Library/Application Scripts/ru.keepcoder.Telegram.TelegramShare',
-                '~/Library/Containers/ru.keepcoder.Telegram',
-                '~/Library/Containers/ru.keepcoder.Telegram.TelegramShare',
-                '~/Library/Group Containers/*.ru.keepcoder.Telegram',
-                '~/Library/Saved Application State/ru.keepcoder.Telegram.savedState',
-              ],
-      trash:  '~/Library/Preferences/ru.keepcoder.Telegram.plist'
+  zap trash: [
+               '~/Library/Application Scripts/ru.keepcoder.Telegram',
+               '~/Library/Application Scripts/ru.keepcoder.Telegram.TelegramShare',
+               '~/Library/Containers/ru.keepcoder.Telegram',
+               '~/Library/Containers/ru.keepcoder.Telegram.TelegramShare',
+               '~/Library/Group Containers/*.ru.keepcoder.Telegram',
+               '~/Library/Preferences/ru.keepcoder.Telegram.plist',
+               '~/Library/Saved Application State/ru.keepcoder.Telegram.savedState',
+             ]
 end

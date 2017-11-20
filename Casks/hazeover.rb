@@ -13,6 +13,8 @@ cask 'hazeover' do
   uninstall launchctl: 'com.pointum.hazeover.launcher',
             quit:      'com.pointum.hazeover'
 
-  zap delete: '~/Library/Caches/com.pointum.hazeover',
-      trash:  '~/Library/Preferences/com.pointum.hazeover.plist'
+  zap trash: [
+               '~/Library/Caches/com.pointum.hazeover',
+               '~/Library/Preferences/com.pointum.hazeover.plist',
+             ]
 end

@@ -25,12 +25,12 @@ cask 'controllermate' do
                          ['TERM', 'com.orderedbytes.ControllerMateHelper'],
                        ]
 
-  zap delete: [
-                '~/Library/Application Support/ControllerMate',
-                '~/Library/Caches/com.orderedbytes.ControllerMate4',
-                '~/Library/Logs/ControllerMate MIDI',
-                '~/Library/Logs/ControllerMate',
-              ]
+  zap trash: [
+               '~/Library/Application Support/ControllerMate',
+               '~/Library/Caches/com.orderedbytes.ControllerMate4',
+               '~/Library/Logs/ControllerMate MIDI',
+               '~/Library/Logs/ControllerMate',
+             ]
 
   caveats do
     reboot

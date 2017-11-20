@@ -10,9 +10,9 @@ cask 'progressive-downloader' do
 
   app 'Progressive Downloader.app'
 
-  zap delete: '~/Library/Caches/com.PS.PSD',
-      trash:  [
-                '~/Library/Application Support/Progressive Downloader Data',
-                '~/Library/Preferences/com.PS.PSD.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Progressive Downloader Data',
+               '~/Library/Caches/com.PS.PSD',
+               '~/Library/Preferences/com.PS.PSD.plist',
+             ]
 end

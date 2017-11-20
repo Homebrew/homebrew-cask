@@ -10,17 +10,15 @@ cask 'ubersicht' do
 
   auto_updates true
 
-  app 'Übersicht.app'
+  app 'Übersicht.app'
 
-  uninstall login_item: 'Übersicht'
+  uninstall login_item: 'Übersicht'
 
-  zap delete: [
-                '~/Library/Caches/tracesOf.Uebersicht',
-                '~/Library/WebKit/tracesOf.Uebersicht',
-              ],
-      trash:  [
-                '~/Library/Application Support/tracesOf.Uebersicht',
-                '~/Library/Application Support/Übersicht',
-                '~/Library/Preferences/tracesOf.Uebersicht.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Übersicht',
+               '~/Library/Application Support/tracesOf.Uebersicht',
+               '~/Library/Caches/tracesOf.Uebersicht',
+               '~/Library/Preferences/tracesOf.Uebersicht.plist',
+               '~/Library/WebKit/tracesOf.Uebersicht',
+             ]
 end

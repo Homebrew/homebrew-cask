@@ -10,9 +10,9 @@ cask 'diffmerge' do
 
   uninstall pkgutil: 'com.sourcegear.DiffMerge'
 
-  zap delete: [
-                '~/Library/Preferences/com.sourcegear.DiffMerge.plist',
-                '~/Library/Preferences/SourceGear DiffMerge Preferences',
-                '~/Library/Saved Application State/com.sourcegear.DiffMerge.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.sourcegear.DiffMerge.plist',
+               '~/Library/Preferences/SourceGear DiffMerge Preferences',
+               '~/Library/Saved Application State/com.sourcegear.DiffMerge.savedState',
+             ]
 end

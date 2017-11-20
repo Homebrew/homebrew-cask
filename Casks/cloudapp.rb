@@ -11,5 +11,5 @@ cask 'cloudapp' do
 
   app 'CloudApp.app'
 
-  zap delete: '~/Library/Preferences/com.linebreak.CloudAppMacOSX.plist'
+  zap trash: '~/Library/Preferences/com.linebreak.CloudAppMacOSX.plist'
 end

@@ -13,6 +13,8 @@ cask 'visitors' do
   uninstall login_item: 'Visitors',
             quit:       'com.mediaatelier.Visitors'
 
-  zap delete: '~/Library/Caches/com.mediaatelier.Visitors',
-      trash:  '~/Library/Preferences/com.mediaatelier.Visitors.plist'
+  zap trash: [
+               '~/Library/Caches/com.mediaatelier.Visitors',
+               '~/Library/Preferences/com.mediaatelier.Visitors.plist',
+             ]
 end

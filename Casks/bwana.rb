@@ -8,6 +8,8 @@ cask 'bwana' do
 
   app 'Bwana.app'
 
-  zap delete: '~/Library/Caches/Bwana',
-      trash:  '~/Library/Preferences/com.bruji.bwana.plist'
+  zap trash: [
+               '~/Library/Caches/Bwana',
+               '~/Library/Preferences/com.bruji.bwana.plist',
+             ]
 end

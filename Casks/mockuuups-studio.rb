@@ -9,13 +9,13 @@ cask 'mockuuups-studio' do
 
   app 'Mockuuups Studio.app'
 
-  zap delete: [
-                '~/Library/Application Support/Mockuuups Studio',
-                '~/Library/Caches/com.mockuuups.studio-app',
-                '~/Library/Caches/com.mockuuups.studio-app.ShipIt',
-                '~/Library/Cookies/com.mockuuups.studio-app.binarycookies',
-                '~/Library/Preferences/com.mockuuups.studio-app.helper.plist',
-                '~/Library/Preferences/com.mockuuups.studio-app.plist',
-                '~/Library/Saved Application State/com.mockuuups.studio-app.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Mockuuups Studio',
+               '~/Library/Caches/com.mockuuups.studio-app',
+               '~/Library/Caches/com.mockuuups.studio-app.ShipIt',
+               '~/Library/Cookies/com.mockuuups.studio-app.binarycookies',
+               '~/Library/Preferences/com.mockuuups.studio-app.helper.plist',
+               '~/Library/Preferences/com.mockuuups.studio-app.plist',
+               '~/Library/Saved Application State/com.mockuuups.studio-app.savedState',
+             ]
 end

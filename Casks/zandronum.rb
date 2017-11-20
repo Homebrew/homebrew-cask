@@ -9,14 +9,14 @@ cask 'zandronum' do
   app 'Zandronum.app'
   app 'Doomseeker.app'
 
-  zap delete: '~/Library/Saved Application State/org.doomseeker.app.savedState',
-      trash:  [
-                '~/Library/Application Support/Doomseeker',
-                '~/Library/Application Support/Zandronum',
-                '~/Library/Preferences/Doomseeker',
-                '~/Library/Preferences/org.doomseeker.app.plist',
-                '~/Library/Preferences/zandronum.ini',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Doomseeker',
+               '~/Library/Application Support/Zandronum',
+               '~/Library/Preferences/Doomseeker',
+               '~/Library/Preferences/org.doomseeker.app.plist',
+               '~/Library/Preferences/zandronum.ini',
+               '~/Library/Saved Application State/org.doomseeker.app.savedState',
+             ]
 
   caveats <<~EOS
     Install IWADs to ~/Library/Application Support/Zandronum/

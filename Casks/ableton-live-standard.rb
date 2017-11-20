@@ -8,6 +8,6 @@ cask 'ableton-live-standard' do
 
   app "Ableton Live #{version.major} Standard.app"
 
-  zap delete: '~/Library/*/*[Aa]bleton*',
-      rmdir:  '~/Music/Ableton/Factory Packs'
+  zap trash: '~/Library/*/*[Aa]bleton*',
+      rmdir: '~/Music/Ableton/Factory Packs'
 end

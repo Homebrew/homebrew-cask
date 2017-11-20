@@ -21,10 +21,10 @@ cask 'amazon-music' do
                        ],
             launchctl: 'com.amazon.music'
 
-  zap delete: [
-                '~/Library/Preferences/com.amazon.music.plist',
-                '~/Library/Application Support/Amazon Music/',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.amazon.music.plist',
+               '~/Library/Application Support/Amazon Music/',
+             ]
 
   caveats <<~EOS
     If the app will not launch after installation, try

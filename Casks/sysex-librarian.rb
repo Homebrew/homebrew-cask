@@ -17,9 +17,9 @@ cask 'sysex-librarian' do
                     'com.snoize.SysExLibrarian',
                   ]
 
-  zap delete: [
-                '~/Library/Preferences/com.snoize.SysExLibrarian.plist',
-                '~/Library/Caches/com.snoize.SysExLibrarian',
-                '~/Library/Saved Application State/com.snoize.SysExLibrarian.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.snoize.SysExLibrarian.plist',
+               '~/Library/Caches/com.snoize.SysExLibrarian',
+               '~/Library/Saved Application State/com.snoize.SysExLibrarian.savedState',
+             ]
 end

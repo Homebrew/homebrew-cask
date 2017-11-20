@@ -10,8 +10,8 @@ cask 'licecap' do
 
   app 'LICEcap.app'
 
-  zap delete: [
-                '~/Library/Application Support/LICEcap',
-                '~/Library/Preferences/com.cockos.LICEcap.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/LICEcap',
+               '~/Library/Preferences/com.cockos.LICEcap.plist',
+             ]
 end

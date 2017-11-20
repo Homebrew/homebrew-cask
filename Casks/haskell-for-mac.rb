@@ -13,10 +13,10 @@ cask 'haskell-for-mac' do
 
   app 'Haskell.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/com.haskellformac.Haskell.basic',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.haskellformac.haskell.basic.sfl*',
-                '~/Library/Containers/com.haskellformac.Haskell.basic',
-                '~/Library/Preferences/com.haskellformac.Haskell.basic.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/com.haskellformac.Haskell.basic',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.haskellformac.haskell.basic.sfl*',
+               '~/Library/Containers/com.haskellformac.Haskell.basic',
+               '~/Library/Preferences/com.haskellformac.Haskell.basic.plist',
+             ]
 end

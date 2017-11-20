@@ -10,9 +10,9 @@ cask 'hyne' do
 
   app "hyne-#{version}-osx64/Hyne.app"
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vin047.hyne.sfl*',
-                '~/Library/Preferences/com.vin047.hyne.plist',
-                '~/Library/Saved Application State/com.vin047.hyne.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vin047.hyne.sfl*',
+               '~/Library/Preferences/com.vin047.hyne.plist',
+               '~/Library/Saved Application State/com.vin047.hyne.savedState',
+             ]
 end

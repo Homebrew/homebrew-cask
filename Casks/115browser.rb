@@ -13,13 +13,11 @@ cask '115browser' do
 
   app '115Browser.app'
 
-  zap delete: [
-                '~/Library/Caches/115Browser',
-                '~/Library/Caches/org.115Browser.115Browser',
-                '~/Library/Saved Application State/org.115Browser.115Browser.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/115Browser',
-                '~/Library/Preferences/org.115Browser.115Browser.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/115Browser',
+               '~/Library/Caches/115Browser',
+               '~/Library/Caches/org.115Browser.115Browser',
+               '~/Library/Preferences/org.115Browser.115Browser.plist',
+               '~/Library/Saved Application State/org.115Browser.115Browser.savedState',
+             ]
 end

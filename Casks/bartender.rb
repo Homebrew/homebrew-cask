@@ -28,9 +28,9 @@ cask 'bartender' do
             login_item: "Bartender #{version.major}",
             quit:       'com.surteesstudios.Bartender'
 
-  zap delete: [
-                '~/Library/Caches/com.surteesstudios.Bartender',
-                '~/Library/Cookies/com.surteesstudios.Bartender.binarycookies',
-              ],
-      trash:  '~/Library/Preferences/com.surteesstudios.Bartender.plist'
+  zap trash: [
+               '~/Library/Caches/com.surteesstudios.Bartender',
+               '~/Library/Cookies/com.surteesstudios.Bartender.binarycookies',
+               '~/Library/Preferences/com.surteesstudios.Bartender.plist',
+             ]
 end

@@ -12,10 +12,10 @@ cask 'cura' do
 
   uninstall quit: 'nl.ultimaker.cura'
 
-  zap delete: [
-                '~/.cura',
-                '~/Library/Application Support/cura',
-                '~/Library/Preferences/nl.ultimaker.cura.Cura.plist',
-                '~/Library/Saved Application State/nl.ultimaker.cura.savedState',
-              ]
+  zap trash: [
+               '~/.cura',
+               '~/Library/Application Support/cura',
+               '~/Library/Preferences/nl.ultimaker.cura.Cura.plist',
+               '~/Library/Saved Application State/nl.ultimaker.cura.savedState',
+             ]
 end

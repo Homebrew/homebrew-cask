@@ -11,8 +11,8 @@ cask 'redis-app' do
 
   app 'Redis.app'
 
-  zap delete: [
-                '~/Library/Caches/io.blimp.Redis',
-                '~/Library/Preferences/io.blimp.Redis.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/io.blimp.Redis',
+               '~/Library/Preferences/io.blimp.Redis.plist',
+             ]
 end

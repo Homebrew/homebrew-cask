@@ -11,10 +11,10 @@ cask 'postico' do
 
   app 'Postico.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/at.eggerapps.Postico',
-                '~/Library/Containers/at.eggerapps.Postico',
-                '~/Library/Preferences/at.eggerapps.Postico.plist',
-                '~/Library/Saved Application State/at.eggerapps.Postico.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/at.eggerapps.Postico',
+               '~/Library/Containers/at.eggerapps.Postico',
+               '~/Library/Preferences/at.eggerapps.Postico.plist',
+               '~/Library/Saved Application State/at.eggerapps.Postico.savedState',
+             ]
 end

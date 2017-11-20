@@ -23,9 +23,9 @@ cask 'adobe-air' do
                       '/Applications/Adobe',
                     ]
 
-  zap delete: [
-                '~/Library/Application Support/Adobe/AIR',
-                '~/Library/Caches/com.adobe.air.ApplicationInstaller',
-              ],
-      rmdir:  '~/Library/Application Support/Adobe/'
+  zap trash: [
+               '~/Library/Application Support/Adobe/AIR',
+               '~/Library/Caches/com.adobe.air.ApplicationInstaller',
+             ],
+      rmdir: '~/Library/Application Support/Adobe/'
 end

@@ -14,5 +14,5 @@ cask 'avast-security' do
                       sudo:         true,
                     }
 
-  zap delete: '~/Library/Preferences/com.avast.avast!.plist'
+  zap trash: '~/Library/Preferences/com.avast.avast!.plist'
 end

@@ -16,5 +16,5 @@ cask 'bitcoin-classic' do
   app 'Bitcoin-Qt.app', target: 'Bitcoin Classic.app'
 
   # Bitcoin classic names it preferences file same as Bitcoin Core:
-  zap delete: '~/Library/Preferences/org.bitcoin.Bitcoin-Qt.plist'
+  zap trash: '~/Library/Preferences/org.bitcoin.Bitcoin-Qt.plist'
 end

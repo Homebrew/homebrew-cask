@@ -10,9 +10,9 @@ cask 'growl-fork' do
 
   uninstall delete: '/Library/PreferencePanes/Growl.prefPane'
 
-  zap delete: [
-                '~/Library/Application Scripts/com.Growl.GrowlHelperApp',
-                '~/Library/Containers/com.Growl.GrowlHelperApp',
-                '~/Library/Containers/com.growl.GrowlLauncher',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/com.Growl.GrowlHelperApp',
+               '~/Library/Containers/com.Growl.GrowlHelperApp',
+               '~/Library/Containers/com.growl.GrowlLauncher',
+             ]
 end

@@ -11,5 +11,5 @@ cask 'modelio' do
 
   app "Modelio #{version.major_minor}.app"
 
-  zap delete: '~/.modelio'
+  zap trash: '~/.modelio'
 end

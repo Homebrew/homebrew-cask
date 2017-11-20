@@ -10,8 +10,8 @@ cask 'xguardian' do
 
   app 'XGuardian.app'
 
-  zap delete: [
-                '~/Library/Application Support/xguardian',
-                '~/Library/Caches/cc.openscanner.XGuardian',
-              ]
+  zap trash: [
+               '~/Library/Application Support/xguardian',
+               '~/Library/Caches/cc.openscanner.XGuardian',
+             ]
 end

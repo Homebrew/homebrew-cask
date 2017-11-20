@@ -10,12 +10,12 @@ cask 'base' do
 
   app 'Base.app'
 
-  zap delete: [
-                '~/Library/Application Support/Base',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/uk.co.menial.base.sfl*',
-                '~/Library/Caches/com.apple.helpd/Generated/uk.co.menial.base.help*',
-                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/uk.co.menial.base.help*',
-                '~/Library/Caches/uk.co.menial.Base',
-                '~/Library/Preferences/uk.co.menial.Base.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Base',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/uk.co.menial.base.sfl*',
+               '~/Library/Caches/com.apple.helpd/Generated/uk.co.menial.base.help*',
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/uk.co.menial.base.help*',
+               '~/Library/Caches/uk.co.menial.Base',
+               '~/Library/Preferences/uk.co.menial.Base.plist',
+             ]
 end

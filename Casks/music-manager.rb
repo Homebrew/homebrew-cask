@@ -14,9 +14,9 @@ cask 'music-manager' do
             login_item: 'Music Manager',
             quit:       'com.google.musicmanager'
 
-  zap delete: '~/Library/Logs/MusicManager',
-      trash:  [
-                '~/Library/Application Support/Google/MusicManager',
-                '~/Library/Preferences/com.google.musicmanager.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Google/MusicManager',
+               '~/Library/Logs/MusicManager',
+               '~/Library/Preferences/com.google.musicmanager.plist',
+             ]
 end

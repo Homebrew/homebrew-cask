@@ -20,12 +20,10 @@ cask 'viscosity' do
             login_item: 'Viscosity',
             signal:     ['TERM', 'com.viscosityvpn.Viscosity']
 
-  zap delete: [
-                '~/Library/Caches/com.viscosityvpn.Viscosity',
-                '~/Library/Cookies/com.viscosityvpn.Viscosity.binarycookies',
-              ],
-      trash:  [
-                '~/Library/Application Support/Viscosity',
-                '~/Library/Preferences/com.viscosityvpn.Viscosity.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Viscosity',
+               '~/Library/Caches/com.viscosityvpn.Viscosity',
+               '~/Library/Cookies/com.viscosityvpn.Viscosity.binarycookies',
+               '~/Library/Preferences/com.viscosityvpn.Viscosity.plist',
+             ]
 end

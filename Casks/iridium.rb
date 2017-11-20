@@ -10,10 +10,10 @@ cask 'iridium' do
 
   app 'Iridium.app'
 
-  zap delete: [
-                '~/Library/Preferences/de.iridiumbrowser.plist',
-                '~/Library/Caches/de.iridiumbrowser',
-                '~/Library/Application Support/Iridium',
-                '~/Library/Saved Application State/de.iridiumbrowser.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/de.iridiumbrowser.plist',
+               '~/Library/Caches/de.iridiumbrowser',
+               '~/Library/Application Support/Iridium',
+               '~/Library/Saved Application State/de.iridiumbrowser.savedState',
+             ]
 end

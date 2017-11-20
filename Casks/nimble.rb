@@ -11,14 +11,14 @@ cask 'nimble' do
 
   app 'Nimble.app'
 
-  zap delete: [
-                '~/.nimble-options.json',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.nimble.sfl*',
-                '~/Library/Application Support/com.electron.nimble.ShipIt',
-                '~/Library/Application Support/Nimble',
-                '~/Library/Caches/com.electron.nimble',
-                '~/Library/Caches/Nimble',
-                '~/Library/Preferences/com.electron.nimble.plist',
-                '~/Library/Saved Application State/com.electron.nimble.savedState',
-              ]
+  zap trash: [
+               '~/.nimble-options.json',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.nimble.sfl*',
+               '~/Library/Application Support/com.electron.nimble.ShipIt',
+               '~/Library/Application Support/Nimble',
+               '~/Library/Caches/com.electron.nimble',
+               '~/Library/Caches/Nimble',
+               '~/Library/Preferences/com.electron.nimble.plist',
+               '~/Library/Saved Application State/com.electron.nimble.savedState',
+             ]
 end

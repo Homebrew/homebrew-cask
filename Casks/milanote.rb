@@ -9,14 +9,12 @@ cask 'milanote' do
 
   app 'Milanote.app'
 
-  zap delete: [
-                '~/Library/Caches/com.milanote.app',
-                '~/Library/Caches/com.milanote.app.ShipIt',
-                '~/Library/Library/Logs/Milanote',
-              ],
-      trash:  [
-                '~/Library/Application Support/Milanote',
-                '~/Library/Preferences/com.milanote.app.helper.plist',
-                '~/Library/Preferences/com.milanote.app.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Milanote',
+               '~/Library/Caches/com.milanote.app',
+               '~/Library/Caches/com.milanote.app.ShipIt',
+               '~/Library/Library/Logs/Milanote',
+               '~/Library/Preferences/com.milanote.app.helper.plist',
+               '~/Library/Preferences/com.milanote.app.plist',
+             ]
 end

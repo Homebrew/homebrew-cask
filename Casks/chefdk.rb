@@ -41,5 +41,5 @@ cask 'chefdk' do
                        '/usr/local/bin/rubocop',
                      ]
 
-  zap delete: '~/.chefdk/'
+  zap trash: '~/.chefdk/'
 end
