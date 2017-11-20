@@ -1,11 +1,11 @@
 cask 'amazon-music' do
-  version '20171103,212957f389'
-  sha256 'd2380a9e3b14acf8f69cf966f703bfe8833dfc467582da7f5ac6c0b3e14a5206'
+  version '20171114,013802f6c8'
+  sha256 '34e8b9cf0b822e6a26e617369fda3516302b1bdcd0baa9fa19180aa00e8982c5'
 
-  # ssl-images-amazon.com was verified as official when first introduced to the cask
+  # ssl-images-amazon.com/images was verified as official when first introduced to the cask
   url "https://images-na.ssl-images-amazon.com/images/G/01/digital/music/morpho/installers/#{version.before_comma}/#{version.after_comma}/AmazonMusicInstaller.dmg"
   name 'Amazon Music'
-  homepage 'https://www.amazon.com/b/ref=topnav_storetab_dmusic?node=14981443011'
+  homepage 'https://www.amazon.com/musicapps'
 
   installer script: {
                       executable: 'Amazon Music Installer.app/Contents/MacOS/osx-intel',
@@ -23,7 +23,7 @@ cask 'amazon-music' do
 
   zap trash: [
                '~/Library/Preferences/com.amazon.music.plist',
-               '~/Library/Application Support/Amazon Music/',
+               '~/Library/Application Support/Amazon Music',
              ]
 
   caveats <<~EOS
@@ -32,7 +32,6 @@ cask 'amazon-music' do
       brew cask zap #{token}
       brew cask install #{token}
 
-    then re-launch the app. You can read more about the issue on Amazon's customer forums
-    http://www.amazon.com/App-wont-open-OS-Yosemite/forum/FxZLHSK3AW6KZU/Tx1EJYW65OQ5TZS
+    then re-launch the app.
   EOS
 end
