@@ -1,6 +1,6 @@
 cask 'quicken' do
-  version '2018,5.2.2'
-  sha256 'cc7ba946e8439617bdf2ff744829baea368d7ec67bf3acfde5658664387237ea'
+  version '2018,5.3.1'
+  sha256 '171c4d77db991fd203fc2ae85472250a24ab3706060c46ec28a0e07d249fc885'
 
   url "https://download.quicken.com/mac/QuickenSub#{version.before_comma}/Quicken#{version.before_comma}.dmg"
   appcast "https://www.quicken.com/support/#{version.before_comma}-release-quicken-mac-release-notes",
