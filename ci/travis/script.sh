@@ -26,7 +26,7 @@ elif [[ ${#modified_casks[@]} -gt 0 ]]; then
       run brew cask reinstall --verbose "${cask}"
       run brew cask uninstall --verbose "${cask}"
       if brew cask _stanza pkg "${cask}" &> /dev/null; then
-        run /usr/sbin/pkgutil --pkgs | /usr/bin/grep --ignore-case --invert-match apple | /usr/bin/sort
+        run "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_recent_pkg_ids"
       fi
     done
   else
