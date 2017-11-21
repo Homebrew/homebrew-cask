@@ -25,7 +25,7 @@ elif [[ ${#modified_casks[@]} -gt 0 ]]; then
     for cask in "${modified_casks[@]}"; do
       run brew cask reinstall --verbose "${cask}"
       run brew cask uninstall --verbose "${cask}"
-      if brew cask _stanza pkg "${cask}" > /dev/null 2>&1; then
+      if brew cask _stanza pkg "${cask}" &> /dev/null; then
         run /usr/sbin/pkgutil --pkgs | /usr/bin/grep -iv apple | /usr/bin/sort
       fi
     done
