@@ -1,6 +1,6 @@
 cask 'adobe-connect' do
   version :latest
-  sha256 :no_check # required as upstream package is updated in-place
+  sha256 'd310bda05cac63fca5c90e7b3dae9b09accd7460e88e76482efed2bc763e6cfc'
 
   url 'http://download.adobe.com/pub/connect/updaters/meeting/9_7/AdobeConnect_982.437.dmg'
   name 'Adobe Connect'
