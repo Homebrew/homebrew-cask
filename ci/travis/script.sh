@@ -25,6 +25,9 @@ elif [[ ${#modified_casks[@]} -gt 0 ]]; then
     for cask in "${modified_casks[@]}"; do
       run brew cask reinstall --verbose "${cask}"
       run brew cask uninstall --verbose "${cask}"
+      if brew cask _stanza uninstall "${cask}" &> /dev/null; then
+        run "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_loaded_launchjob_ids"
+      fi
       if brew cask _stanza pkg "${cask}" &> /dev/null; then
         run "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_recent_pkg_ids"
       fi
