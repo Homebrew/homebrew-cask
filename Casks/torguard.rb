@@ -12,7 +12,7 @@ cask 'torguard' do
   pkg 'Install TorGuard.pkg'
 
   uninstall pkgutil: 'net.torguard.TorGuardDesktopQt',
-            delete:  "/Applications/TorGuard.app"
+            delete:  '/Applications/TorGuard.app'
 
   zap trash: [
                '~/Library/Preferences/net.torguard.TorGuard*.plist',
