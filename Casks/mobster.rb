@@ -1,10 +1,10 @@
 cask 'mobster' do
-  version '0.0.47'
-  sha256 '1bda2435bc22cc9925f6e1b09f9f5149c8d1a7135b616c4e4a6d067bed901d32'
+  version '0.0.48'
+  sha256 '47ab506e59d9a3491f06943baecd1b225277e472ce71bc5052efc9d152712233'
 
   url "https://github.com/dillonkearns/mobster/releases/download/v#{version}/Mobster-#{version}.dmg"
   appcast 'https://github.com/dillonkearns/mobster/releases.atom',
-          checkpoint: '77bcee9deaaf040bb57776d2fadef7ab2046f6b157f748adf0fd7541e9bd3b95'
+          checkpoint: '7ef8fc29d556691adc960218c740b1dbc3f657be1ee80e8c9a22842418e5513f'
   name 'Mobster'
   homepage 'https://github.com/dillonkearns/mobster/'
 
