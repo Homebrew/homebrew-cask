@@ -2,7 +2,8 @@ cask 'lantern' do
   version :latest
   sha256 :no_check
 
-  url 'https://getlantern.org/lantern-installer.dmg'
+  # raw.githubusercontent.com/getlantern/lantern-binaries was verified as official when first introduced to the cask
+  url 'https://raw.githubusercontent.com/getlantern/lantern-binaries/master/lantern-installer.dmg'
   name 'Lantern'
   homepage 'https://getlantern.org/'
 
