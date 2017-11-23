@@ -9,4 +9,11 @@ cask 'dingtalk' do
   homepage 'https://www.dingtalk.com/'
 
   app 'DingTalk.app'
+
+  zap trash: [
+               '~/Library/Application Support/DingTalk',
+               '~/Library/Caches/DingTalk',
+               '~/Library/Preferences/com.dingtalk.mac.plist',
+               '~/Library/Saved Application State/com.dingtalk.mac.savedState',
+             ]
 end
