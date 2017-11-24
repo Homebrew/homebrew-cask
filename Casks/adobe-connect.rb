@@ -9,11 +9,7 @@ cask 'adobe-connect' do
   auto_updates true
   depends_on macos: '>= :mavericks'
 
-  installer script: {
-                      executable: 'AdobeConnectInstaller.app/Contents/MacOS/AdobeConnectInstaller',
-                      args:       ['-silent'],
-                      sudo:       true,
-                    }
+  installer manual: 'AdobeConnectInstaller.app'
 
   uninstall pkgutil: 'com.adobe.connect.*',
             delete:  '/Applications/Adobe Connect/'
