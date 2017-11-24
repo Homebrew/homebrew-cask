@@ -11,5 +11,5 @@ cask 'adobe-connect' do
 
   installer manual: 'AdobeConnectInstaller.app'
 
-  uninstall delete:  '/Applications/Adobe Connect/'
+  uninstall delete: '/Applications/Adobe Connect'
 end
