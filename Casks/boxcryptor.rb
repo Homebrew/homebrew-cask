@@ -8,7 +8,7 @@ cask 'boxcryptor' do
   name 'Boxcryptor'
   homepage 'https://www.boxcryptor.com/en/'
 
-  depends_on macos: '>= :mavericks'
+  depends_on macos: '>= :yosemite'
 
   app 'Boxcryptor.app'
 end
