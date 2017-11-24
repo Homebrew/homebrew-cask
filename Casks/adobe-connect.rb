@@ -11,6 +11,5 @@ cask 'adobe-connect' do
 
   installer manual: 'AdobeConnectInstaller.app'
 
-  uninstall pkgutil: 'com.adobe.connect.*',
-            delete:  '/Applications/Adobe Connect/'
+  uninstall delete:  '/Applications/Adobe Connect/'
 end
