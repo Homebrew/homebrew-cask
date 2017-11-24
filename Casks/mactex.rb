@@ -23,6 +23,7 @@ cask 'mactex' do
                      ],
             delete:  [
                        '/usr/local/texlive/2017',
+                       '/usr/local/share/ghostscript/9.21',
                        '/Applications/TeX',
                        '/Library/PreferencePanes/TeXDistPrefPane.prefPane',
                        '/Library/TeX',
@@ -59,6 +60,7 @@ cask 'mactex' do
              ],
       rmdir: [
                '/usr/local/texlive',
+               '/usr/local/share/ghostscript',
                '~/Library/texlive',
              ]
 end
