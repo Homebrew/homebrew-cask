@@ -1,11 +1,11 @@
 cask 'macpass' do
-  version '0.7.2'
-  sha256 'dc140b02b1d99e589db58ac12d12fd28b99b7186f966eb50888cbfa4d3657bd5'
+  version '0.7.3'
+  sha256 '1551b9db0e275827ab99e80a14980dcc1c1e20e47bdb65c0140e618407f150c2'
 
   # github.com/mstarke/MacPass was verified as official when first introduced to the cask
   url "https://github.com/mstarke/MacPass/releases/download/#{version}/MacPass-#{version}.zip"
   appcast 'https://github.com/mstarke/MacPass/releases.atom',
-          checkpoint: '2c7f18670d33cf8537193edb7164fd74e39265257a139047b224ff0f3e21f855'
+          checkpoint: '15939b4b9530a717e6cdfda3a959f9a40b8cd2010a0a4246c251fcdb0ca92262'
   name 'MacPass'
   homepage 'https://mstarke.github.io/MacPass/'
 
