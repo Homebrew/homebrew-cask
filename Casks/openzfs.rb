@@ -6,7 +6,14 @@ cask 'openzfs' do
   name 'OpenZFS on OS X'
   homepage 'https://openzfsonosx.org/'
 
-  depends_on macos: '>= :mountain_lion'
+  # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
+  depends_on macos: [
+                      :mountain_lion,
+                      :mavericks,
+                      :yosemite,
+                      :el_capitan,
+                      :sierra,
+                    ]
 
   if MacOS.version == :mountain_lion
     pkg "OpenZFS on OS X #{version.before_comma} Mountain Lion.pkg"
@@ -16,7 +23,7 @@ cask 'openzfs' do
     pkg "OpenZFS on OS X #{version.before_comma} Yosemite.pkg"
   elsif MacOS.version == :el_capitan
     pkg "OpenZFS on OS X #{version.before_comma} El Capitan.pkg"
-  elsif MacOS.version >= :sierra
+  elsif MacOS.version == :sierra
     pkg "OpenZFS on OS X #{version.before_comma} Sierra.pkg"
   end
 
