@@ -13,6 +13,14 @@ cask 'docker' do
   depends_on macos: '>= :yosemite'
 
   app 'Docker.app'
+  bin = "#{appdir}/Docker.app/Contents/Resources/bin"
+  binary "#{bin}/docker"
+  binary "#{bin}/docker-compose"
+  binary "#{bin}/docker-credential-osxkeychain.bin", target: 'docker-credential-osxkeychain'
+  binary "#{bin}/docker-machine"
+  binary "#{bin}/hyperkit"
+  binary "#{bin}/notary.bin", target: 'notary'
+  binary "#{bin}/vpnkit"
 
   uninstall delete:    '/Library/PrivilegedHelperTools/com.docker.vmnetd',
             launchctl: [
