@@ -4,6 +4,8 @@ cask 'bartender' do
     sha256 '013bb1f5dcc29ff1ecbc341da96b6e399dc3c85fc95bd8c7bee153ab0d8756f5'
   else
     version '3.0.12'
+    # This version should match the appcast version
+    # https://github.com/caskroom/homebrew-cask/issues/41211
     sha256 '121e47f4da7b606bc0297b2dd34cc5de89911175e46234b6197384ea416ea31d'
   end
 
