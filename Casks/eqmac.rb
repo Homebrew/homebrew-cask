@@ -23,7 +23,7 @@ cask 'eqmac' do
                         }
 
   zap trash: [
-                "~/Library/Caches/com.bitgapp.eqMac#{version.major}",
-                "~/Library/Cookies/com.bitgapp.eqMac#{version.major}.binarycookies",
-              ]
+               "~/Library/Caches/com.bitgapp.eqMac#{version.major}",
+               "~/Library/Cookies/com.bitgapp.eqMac#{version.major}.binarycookies",
+             ]
 end
