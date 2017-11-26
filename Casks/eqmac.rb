@@ -22,7 +22,7 @@ cask 'eqmac' do
                           sudo:       true,
                         }
 
-  zap delete: [
+  zap trash: [
                 "~/Library/Caches/com.bitgapp.eqMac#{version.major}",
                 "~/Library/Cookies/com.bitgapp.eqMac#{version.major}.binarycookies",
               ]
