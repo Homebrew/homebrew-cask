@@ -23,5 +23,5 @@ cask 'blockblock' do
                       sudo:       true,
                     }
 
-  zap delete: '~/Library/Preferences/com.objectiveSee.BlockBlock.plist'
+  zap trash: '~/Library/Preferences/com.objectiveSee.BlockBlock.plist'
 end

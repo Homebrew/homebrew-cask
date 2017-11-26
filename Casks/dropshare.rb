@@ -12,11 +12,11 @@ cask 'dropshare' do
   app "Dropshare #{version.major}.app"
   binary "#{appdir}/Dropshare #{version.major}.app/Contents/Resources/ds.sh", target: 'ds'
 
-  zap delete: [
-                '~/Library/Application Support/Dropshare 4',
-                '~/Library/Caches/net.mkswap.Dropshare4',
-                '~/Library/Cookies/net.mkswap.Dropshare4.binarycookies',
-                '~/Library/Logs/Dropshare 4',
-                '~/Library/Preferences/net.mkswap.Dropshare4.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Dropshare 4',
+               '~/Library/Caches/net.mkswap.Dropshare4',
+               '~/Library/Cookies/net.mkswap.Dropshare4.binarycookies',
+               '~/Library/Logs/Dropshare 4',
+               '~/Library/Preferences/net.mkswap.Dropshare4.plist',
+             ]
 end

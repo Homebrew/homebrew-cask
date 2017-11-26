@@ -18,8 +18,8 @@ cask 'quicksilver' do
 
   app 'Quicksilver.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.blacktree.Quicksilver.plist',
-                '~/Library/Application Support/Quicksilver',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.blacktree.Quicksilver.plist',
+               '~/Library/Application Support/Quicksilver',
+             ]
 end

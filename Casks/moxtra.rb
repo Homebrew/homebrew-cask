@@ -12,9 +12,9 @@ cask 'moxtra' do
 
   uninstall quit: 'com.moxtra.desktop'
 
-  zap delete: [
-                '~/Library/Application Support/Moxtra',
-                '~/Library/Caches/com.moxtra.desktop',
-                '~/Library/Preferences/com.moxtra.desktop.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Moxtra',
+               '~/Library/Caches/com.moxtra.desktop',
+               '~/Library/Preferences/com.moxtra.desktop.plist',
+             ]
 end

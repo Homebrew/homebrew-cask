@@ -12,9 +12,9 @@ cask 'usage' do
 
   app 'Usage.app'
 
-  zap delete: '~/Library/Caches/com.mediaatelier.Usage',
-      trash:  [
-                '~/Library/Application Support/com.mediaatelier.Usage',
-                '~/Library/Preferences/com.mediaatelier.Usage.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.mediaatelier.Usage',
+               '~/Library/Caches/com.mediaatelier.Usage',
+               '~/Library/Preferences/com.mediaatelier.Usage.plist',
+             ]
 end

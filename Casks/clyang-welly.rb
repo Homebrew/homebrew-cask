@@ -12,13 +12,11 @@ cask 'clyang-welly' do
 
   app 'Welly.app'
 
-  zap delete: [
-                '~/Library/Caches/Welly',
-                '~/Library/Caches/org.net9.Welly',
-                '~/Library/Cookies/org.net9.Welly.binarycookies',
-              ],
-      trash:  [
-                '~/Library/Application Support/Welly',
-                '~/Library/Preferences/org.net9.Welly.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Welly',
+               '~/Library/Caches/Welly',
+               '~/Library/Caches/org.net9.Welly',
+               '~/Library/Cookies/org.net9.Welly.binarycookies',
+               '~/Library/Preferences/org.net9.Welly.plist',
+             ]
 end

@@ -11,16 +11,14 @@ cask 'webtorrent' do
 
   app 'WebTorrent.app'
 
-  zap delete: [
-                '~/Library/Caches/io.webtorrent.webtorrent',
-                '~/Library/Caches/io.webtorrent.webtorrent.ShipIt',
-                '~/Library/Caches/WebTorrent',
-                '~/Library/Saved Application State/io.webtorrent.webtorrent.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/io.webtorrent.webtorrent.ShipIt',
-                '~/Library/Application Support/WebTorrent',
-                '~/Library/Preferences/io.webtorrent.webtorrent-helper.plist',
-                '~/Library/Preferences/io.webtorrent.webtorrent.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/io.webtorrent.webtorrent.ShipIt',
+               '~/Library/Application Support/WebTorrent',
+               '~/Library/Caches/io.webtorrent.webtorrent',
+               '~/Library/Caches/io.webtorrent.webtorrent.ShipIt',
+               '~/Library/Caches/WebTorrent',
+               '~/Library/Preferences/io.webtorrent.webtorrent-helper.plist',
+               '~/Library/Preferences/io.webtorrent.webtorrent.plist',
+               '~/Library/Saved Application State/io.webtorrent.webtorrent.savedState',
+             ]
 end

@@ -11,13 +11,11 @@ cask 'local-by-flywheel' do
 
   app 'Local by Flywheel.app'
 
-  zap delete: [
-                '~/Library/Logs/local-by-flywheel.log',
-                '~/Library/Saved Application State/com.getflywheel.local.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/Local by Flywheel',
-                '~/Library/Preferences/com.getflywheel.local.plist',
-                '~/Library/Preferences/com.getflywheel.local.helper.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Local by Flywheel',
+               '~/Library/Logs/local-by-flywheel.log',
+               '~/Library/Preferences/com.getflywheel.local.plist',
+               '~/Library/Preferences/com.getflywheel.local.helper.plist',
+               '~/Library/Saved Application State/com.getflywheel.local.savedState',
+             ]
 end

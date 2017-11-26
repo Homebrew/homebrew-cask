@@ -13,12 +13,10 @@ cask 'filezilla' do
 
   app 'FileZilla.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/de.filezilla.sfl*',
-                '~/Library/Saved Application State/de.filezilla.savedState',
-              ],
-      trash:  [
-                '~/.config/filezilla',
-                '~/Library/Preferences/de.filezilla.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/de.filezilla.sfl*',
+               '~/Library/Saved Application State/de.filezilla.savedState',
+               '~/Library/Preferences/de.filezilla.plist',
+               '~/.config/filezilla',
+             ]
 end

@@ -11,9 +11,9 @@ cask 'min' do
 
   app 'Min.app'
 
-  zap delete: [
-                '~/Library/Application Support/Min',
-                '~/Library/Caches/Min',
-                '~/Library/Saved Application State/com.electron.min.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Min',
+               '~/Library/Caches/Min',
+               '~/Library/Saved Application State/com.electron.min.savedState',
+             ]
 end

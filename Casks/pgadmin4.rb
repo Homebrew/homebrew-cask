@@ -10,12 +10,10 @@ cask 'pgadmin4' do
 
   app 'pgAdmin 4.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.pgadmin.pgadmin4.sfl*',
-                '~/Library/Saved Application State/org.pgadmin.pgAdmin4.savedState',
-              ],
-      trash:  [
-                '~/.pgadmin',
-                '~/Library/Preferences/org.pgadmin.pgadmin4.plist',
-              ]
+  zap trash: [
+               '~/.pgadmin',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.pgadmin.pgadmin4.sfl*',
+               '~/Library/Preferences/org.pgadmin.pgadmin4.plist',
+               '~/Library/Saved Application State/org.pgadmin.pgAdmin4.savedState',
+             ]
 end

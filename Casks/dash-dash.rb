@@ -1,11 +1,11 @@
 cask 'dash-dash' do
-  version '0.12.2.0'
-  sha256 '652682710afa82bf256d9335aaf677d0ebe8db372d854cad078a47622142ec97'
+  version '0.12.2.1'
+  sha256 'dd6363895c6b15dcff4aec873b19d7fcee857e8de4f5331a85693d92c039d19f'
 
   # github.com/dashpay/dash was verified as official when first introduced to the cask
   url "https://github.com/dashpay/dash/releases/download/v#{version}/dashcore-#{version}-osx.dmg"
   appcast 'https://github.com/dashpay/dash/releases.atom',
-          checkpoint: '0ff584beb1ec4bb12d1212992a8287b6632bd15ff5dc140b396d4b6e10307e3b'
+          checkpoint: '15ad74f7f67d923ed4989824d5fc6a39171398708d107bf8f812d854d3e6d078'
   name 'Dash'
   homepage 'https://www.dash.org/'
 

@@ -28,12 +28,12 @@ cask 'seil' do
             kext:    'org.pqrs.driver.Seil',
             pkgutil: 'org.pqrs.driver.Seil'
 
-  zap delete: [
-                '~/Library/Caches/org.pqrs.PCKeyboardHack',
-                '~/Library/Caches/org.pqrs.Seil',
-                '~/Library/Preferences/org.pqrs.PCKeyboardHack.plist',
-                '~/Library/Preferences/org.pqrs.Seil.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/org.pqrs.PCKeyboardHack',
+               '~/Library/Caches/org.pqrs.Seil',
+               '~/Library/Preferences/org.pqrs.PCKeyboardHack.plist',
+               '~/Library/Preferences/org.pqrs.Seil.plist',
+             ]
 
   caveats do
     discontinued

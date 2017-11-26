@@ -17,10 +17,10 @@ cask 'devrantron' do
                           ['TERM', 'de.zerotask.theclassic.helper'],
                         ]
 
-  zap delete: '~/Library/Saved Application State/de.zerotask.theclassic.savedState',
-      trash:  [
-                '~/Library/Application Support/devrantron',
-                '~/Library/Preferences/de.zerotask.theclassic.helper.plist',
-                '~/Library/Preferences/de.zerotask.theclassic.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/devrantron',
+               '~/Library/Preferences/de.zerotask.theclassic.helper.plist',
+               '~/Library/Preferences/de.zerotask.theclassic.plist',
+               '~/Library/Saved Application State/de.zerotask.theclassic.savedState',
+             ]
 end

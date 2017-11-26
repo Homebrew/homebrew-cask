@@ -1,10 +1,10 @@
 cask 'virtualbox' do
-  version '5.2.0-118431'
-  sha256 'bda9f0e51ba04c23e3483a50bccede122049b805cd517d6715ca9fb161e84849'
+  version '5.2.2-119230'
+  sha256 '8b664e62700024d0f1dab4b2ec51f2553353509fd5b8e8555f15ddded210f222'
 
   url "http://download.virtualbox.org/virtualbox/#{version.sub(%r{-.*}, '')}/VirtualBox-#{version}-OSX.dmg"
   appcast 'http://download.virtualbox.org/virtualbox/LATEST.TXT',
-          checkpoint: 'e791457c25b99d69f3d5ca028f6a7f6d88f7e2d85af5162a92a8c5f3aecf59b0'
+          checkpoint: '486d2ad103a38d1f6f661e9d3191e024b7e2fae6e6ce99ff03b073f43cd0f65b'
   name 'Oracle VirtualBox'
   homepage 'https://www.virtualbox.org/'
 
@@ -23,17 +23,15 @@ cask 'virtualbox' do
                      },
             pkgutil: 'org.virtualbox.pkg.*'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualbox.sfl*',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualboxvm.sfl*',
-                '~/Library/Saved Application State/org.virtualbox.app.VirtualBox.savedState',
-                '~/Library/Saved Application State/org.virtualbox.app.VirtualBoxVM.savedState',
-              ],
-      trash:  [
-                '/Library/Application Support/VirtualBox',
-                '~/Library/VirtualBox',
-                '~/Library/Preferences/org.virtualbox.app.VirtualBox.plist',
-                '~/Library/Preferences/org.virtualbox.app.VirtualBoxVM.plist',
-              ],
-      rmdir:  '~/VirtualBox VMs'
+  zap trash: [
+               '/Library/Application Support/VirtualBox',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualbox.sfl*',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualboxvm.sfl*',
+               '~/Library/VirtualBox',
+               '~/Library/Preferences/org.virtualbox.app.VirtualBox.plist',
+               '~/Library/Preferences/org.virtualbox.app.VirtualBoxVM.plist',
+               '~/Library/Saved Application State/org.virtualbox.app.VirtualBox.savedState',
+               '~/Library/Saved Application State/org.virtualbox.app.VirtualBoxVM.savedState',
+             ],
+      rmdir: '~/VirtualBox VMs'
 end

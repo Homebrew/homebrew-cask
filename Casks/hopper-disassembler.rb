@@ -15,13 +15,11 @@ cask 'hopper-disassembler' do
   app "Hopper Disassembler v#{version.major}.app"
   binary "#{appdir}/Hopper Disassembler v#{version.major}.app/Contents/MacOS/hopper"
 
-  zap delete: [
-                "~/Library/Caches/com.cryptic-apps.hopper-web-#{version.major}",
-                "~/Library/Saved Application State/com.cryptic-apps.hopper-web-#{version.major}.savedState",
-              ],
-      trash:  [
-                '~/Library/Application Support/Hopper',
-                "~/Library/Application Support/Hopper Disassembler v#{version.major}",
-                "~/Library/Preferences/com.cryptic-apps.hopper-web-#{version.major}.plist",
-              ]
+  zap trash: [
+               '~/Library/Application Support/Hopper',
+               "~/Library/Application Support/Hopper Disassembler v#{version.major}",
+               "~/Library/Caches/com.cryptic-apps.hopper-web-#{version.major}",
+               "~/Library/Preferences/com.cryptic-apps.hopper-web-#{version.major}.plist",
+               "~/Library/Saved Application State/com.cryptic-apps.hopper-web-#{version.major}.savedState",
+             ]
 end

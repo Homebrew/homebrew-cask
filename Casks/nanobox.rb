@@ -18,8 +18,8 @@ cask 'nanobox' do
                          'io.nanobox.pkg.nanobox',
                        ]
 
-  zap delete: [
-                '~/.nanobox',
-                '/opt/nanobox',
-              ]
+  zap trash: [
+               '~/.nanobox',
+               '/opt/nanobox',
+             ]
 end

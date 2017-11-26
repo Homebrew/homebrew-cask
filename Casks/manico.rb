@@ -10,7 +10,7 @@ cask 'manico' do
 
   app 'Manico.app'
 
-  zap delete: [
-                '~/Library/Containers/im.manico.Manico',
-              ]
+  zap trash: [
+               '~/Library/Containers/im.manico.Manico',
+             ]
 end

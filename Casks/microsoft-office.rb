@@ -34,7 +34,7 @@ cask 'microsoft-office' do
                          '/Applications/Microsoft Word.app',
                        ]
 
-  zap delete:    [
+  zap trash:     [
                    '~/Library/Application Scripts/com.microsoft.Excel',
                    '~/Library/Application Scripts/com.microsoft.Office365ServiceV2',
                    '~/Library/Application Scripts/com.microsoft.Outlook',

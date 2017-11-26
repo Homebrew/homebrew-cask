@@ -10,9 +10,9 @@ cask 'eloquent' do
 
   app 'Eloquent.app'
 
-  zap delete: [
-                '~/Library/Application Support/Eloquent',
-                '~/Library/Caches/org.crosswire.Eloquent',
-                '~/Library/Logs/Eloquent.log',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Eloquent',
+               '~/Library/Caches/org.crosswire.Eloquent',
+               '~/Library/Logs/Eloquent.log',
+             ]
 end

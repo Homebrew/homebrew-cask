@@ -14,12 +14,12 @@ cask 'setapp' do
                       sudo:       true,
                     }
 
-  zap delete: [
-                '~/Library/Application Scripts/com.setapp.DesktopClient.SetappAgent.FinderSyncExt',
-                '~/Library/Caches/com.setapp.DesktopClient',
-                '~/Library/Caches/com.setapp.DesktopClient.SetappAgent',
-                '~/Library/Logs/Setapp',
-                '~/Library/Saved Application State/com.setapp.DesktopClient.savedState',
-              ],
-      trash:  '~/Library/Preferences/com.setapp.DesktopClient.SetappAgent.plist'
+  zap trash: [
+               '~/Library/Application Scripts/com.setapp.DesktopClient.SetappAgent.FinderSyncExt',
+               '~/Library/Caches/com.setapp.DesktopClient',
+               '~/Library/Caches/com.setapp.DesktopClient.SetappAgent',
+               '~/Library/Logs/Setapp',
+               '~/Library/Preferences/com.setapp.DesktopClient.SetappAgent.plist',
+               '~/Library/Saved Application State/com.setapp.DesktopClient.savedState',
+             ]
 end

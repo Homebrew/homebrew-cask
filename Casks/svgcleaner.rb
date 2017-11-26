@@ -11,8 +11,8 @@ cask 'svgcleaner' do
   app 'SVG Cleaner.app'
   binary "#{appdir}/SVG Cleaner.app/Contents/MacOS/svgcleaner-cli", target: 'svgcleaner'
 
-  zap delete: [
-                '~/Library/Preferences/com.svgcleaner.svgcleaner.plist',
-                '~/Library/Saved Application State/com.yourcompany.SVGCleaner.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.svgcleaner.svgcleaner.plist',
+               '~/Library/Saved Application State/com.yourcompany.SVGCleaner.savedState',
+             ]
 end

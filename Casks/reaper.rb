@@ -11,11 +11,11 @@ cask 'reaper' do
   app 'REAPER64.app'
   app 'ReaMote64.app'
 
-  zap delete: [
-                '~/Library/Saved Application State/com.cockos.reaper.savedState',
-                '~/Library/Saved Application State/com.cockos.reaperhosti386.savedState',
-                '~/Library/Saved Application State/com.cockos.reaperhostx8664.savedState',
-                '~/Library/Saved Application State/com.cockos.ReaMote.savedState',
-              ],
-      trash:  '~/Library/Application Support/REAPER'
+  zap trash: [
+               '~/Library/Application Support/REAPER',
+               '~/Library/Saved Application State/com.cockos.reaper.savedState',
+               '~/Library/Saved Application State/com.cockos.reaperhosti386.savedState',
+               '~/Library/Saved Application State/com.cockos.reaperhostx8664.savedState',
+               '~/Library/Saved Application State/com.cockos.ReaMote.savedState',
+             ]
 end

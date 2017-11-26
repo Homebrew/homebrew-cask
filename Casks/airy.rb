@@ -12,5 +12,5 @@ cask 'airy' do
 
   uninstall quit: 'com.eltima.Airy'
 
-  zap delete: '~/Library/Preferences/com.eltima.Airy.plist'
+  zap trash: '~/Library/Preferences/com.eltima.Airy.plist'
 end

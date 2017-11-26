@@ -13,9 +13,9 @@ cask 'cisco-proximity' do
                          ['TERM', 'com.cisco.experimental.Proximity'],
                        ]
 
-  zap delete: [
-                '~/Library/Preferences/com.cisco.experimental.proximity.plist',
-                '~/Library/Preferences/com.cisco.Proximity.plist',
-                '~/Library/Saved Application State/com.cisco.experimental.Proximity.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.cisco.experimental.proximity.plist',
+               '~/Library/Preferences/com.cisco.Proximity.plist',
+               '~/Library/Saved Application State/com.cisco.experimental.Proximity.savedState',
+             ]
 end

@@ -15,6 +15,8 @@ cask 'launchcontrol' do
   uninstall delete:    '/Library/PrivilegedHelperTools/com.soma-zone.LaunchControl.Helper',
             launchctl: 'com.soma-zone.LaunchControl.Helper'
 
-  zap delete: '~/Library/Caches/com.apple.helpd/Generated/com.soma-zone.LaunchControl.help*',
-      trash:  '~/Library/Preferences/com.soma-zone.LaunchControl.plist'
+  zap trash: [
+               '~/Library/Caches/com.apple.helpd/Generated/com.soma-zone.LaunchControl.help*',
+               '~/Library/Preferences/com.soma-zone.LaunchControl.plist',
+             ]
 end

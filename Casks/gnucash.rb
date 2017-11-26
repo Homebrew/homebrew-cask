@@ -12,9 +12,9 @@ cask 'gnucash' do
   app 'Gnucash.app'
   app 'FinanceQuote Update.app'
 
-  zap delete: '~/Library/Saved Application State/org.gnucash.Gnucash.savedState',
-      trash:  [
-                '~/Library/Application Support/Gnucash',
-                '~/Library/Preferences/org.gnucash.Gnucash.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Gnucash',
+               '~/Library/Preferences/org.gnucash.Gnucash.plist',
+               '~/Library/Saved Application State/org.gnucash.Gnucash.savedState',
+             ]
 end

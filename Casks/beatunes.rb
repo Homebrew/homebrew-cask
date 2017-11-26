@@ -10,10 +10,10 @@ cask 'beatunes' do
 
   app "beaTunes#{version.major}.app"
 
-  zap delete: [
-                '~/Library/Application Support/beaTunes',
-                '~/Library/Caches/beaTunes',
-                '~/Library/Logs/beaTunes',
-                '~/Library/Preferences/com.tagtraum.beatunes.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/beaTunes',
+               '~/Library/Caches/beaTunes',
+               '~/Library/Logs/beaTunes',
+               '~/Library/Preferences/com.tagtraum.beatunes.plist',
+             ]
 end

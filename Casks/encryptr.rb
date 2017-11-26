@@ -10,8 +10,8 @@ cask 'encryptr' do
 
   app 'Encryptr.app'
 
-  zap delete: [
-                '~/Library/Preferences/org.devgeeks.encryptr.plist',
-                '~/Library/Saved Application State/org.devgeeks.encryptr.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/org.devgeeks.encryptr.plist',
+               '~/Library/Saved Application State/org.devgeeks.encryptr.savedState',
+             ]
 end

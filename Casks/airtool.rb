@@ -18,8 +18,8 @@ cask 'airtool' do
             launchctl:  'com.adriangranados.airtool.airtool-bpf.pkg',
             login_item: 'Airtool'
 
-  zap delete: [
-                '/Library/Application Support/Airtool',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.adriangranados.airtool.sfl*',
-              ]
+  zap trash: [
+               '/Library/Application Support/Airtool',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.adriangranados.airtool.sfl*',
+             ]
 end

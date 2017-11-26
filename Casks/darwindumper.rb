@@ -10,10 +10,10 @@ cask 'darwindumper' do
 
   app 'DarwinDumper.app'
 
-  zap delete: [
-                '~/Library/Caches/com.DarwinDumper',
-                '~/Library/Preferences/com.DarwinDumper.plist',
-                '~/Library/Preferences/org.tom.DarwinDumper.plist',
-                '~/Library/Saved Application State/com.DarwinDumper.savedState',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.DarwinDumper',
+               '~/Library/Preferences/com.DarwinDumper.plist',
+               '~/Library/Preferences/org.tom.DarwinDumper.plist',
+               '~/Library/Saved Application State/com.DarwinDumper.savedState',
+             ]
 end

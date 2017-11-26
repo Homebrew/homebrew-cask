@@ -12,14 +12,12 @@ cask 'micloud' do
 
   uninstall quit: 'micloud.pc.xiaomi'
 
-  zap delete: [
-                '~/Library/Caches/micloud.pc.xiaomi',
-                '~/Library/Caches/micloud.pc.xiaomi.ShipIt',
-                '~/Library/Saved Application State/micloud.pc.xiaomi.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/MiCloud',
-                '~/Library/Preferences/micloud.pc.xiaomi.helper.plist',
-                '~/Library/Preferences/micloud.pc.xiaomi.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/MiCloud',
+               '~/Library/Caches/micloud.pc.xiaomi',
+               '~/Library/Caches/micloud.pc.xiaomi.ShipIt',
+               '~/Library/Preferences/micloud.pc.xiaomi.helper.plist',
+               '~/Library/Preferences/micloud.pc.xiaomi.plist',
+               '~/Library/Saved Application State/micloud.pc.xiaomi.savedState',
+             ]
 end

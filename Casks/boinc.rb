@@ -11,13 +11,13 @@ cask 'boinc' do
 
   uninstall pkgutil: 'edu.berkeley.boinc'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/edu.berkeley.boinc.sfl*',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/edu.berkeley.boinc.*.sfl*',
-                '~/Library/Application Support/BOINC',
-                '~/Library/Caches/edu.berkeley.boinc',
-                '~/Library/Preferences/BOINC Manager Preferences',
-                '~/Library/Preferences/edu.berkeley.boinc.plist',
-                '/Library/Screen Savers/BOINCSaver.saver',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/edu.berkeley.boinc.sfl*',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/edu.berkeley.boinc.*.sfl*',
+               '~/Library/Application Support/BOINC',
+               '~/Library/Caches/edu.berkeley.boinc',
+               '~/Library/Preferences/BOINC Manager Preferences',
+               '~/Library/Preferences/edu.berkeley.boinc.plist',
+               '/Library/Screen Savers/BOINCSaver.saver',
+             ]
 end

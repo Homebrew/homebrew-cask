@@ -10,12 +10,10 @@ cask 'autodmg' do
 
   app 'AutoDMG.app'
 
-  zap delete: [
-                '~/Library/Caches/se.gu.it.AutoDMG',
-                '~/Library/Logs/AutoDMG',
-              ],
-      trash:  [
-                '~/Library/Application Support/AutoDMG',
-                '~/Library/Preferences/se.gu.it.AutoDMG.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/AutoDMG',
+               '~/Library/Caches/se.gu.it.AutoDMG',
+               '~/Library/Logs/AutoDMG',
+               '~/Library/Preferences/se.gu.it.AutoDMG.plist',
+             ]
 end

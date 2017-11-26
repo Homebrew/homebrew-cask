@@ -10,8 +10,8 @@ cask 'luminance-hdr' do
 
   app "Luminance HDR #{version}.app"
 
-  zap delete: [
-                '~/Library/Preferences/com.luminance-hdr.plist',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.luminance-hdr.sfl*',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.luminance-hdr.plist',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.luminance-hdr.sfl*',
+             ]
 end

@@ -13,10 +13,10 @@ cask 'pphelper' do
 
   app 'pp助手.app'
 
-  zap delete: [
-                '~/Library/Application Support/PPHelper',
-                '~/Library/Caches/com.teiron.pphelper.mac',
-                '~/Library/Preferences/com.teiron.pphelper.mac.plist',
-                '~/Library/Saved Application State/com.teiron.pphelper.mac.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/PPHelper',
+               '~/Library/Caches/com.teiron.pphelper.mac',
+               '~/Library/Preferences/com.teiron.pphelper.mac.plist',
+               '~/Library/Saved Application State/com.teiron.pphelper.mac.savedState',
+             ]
 end

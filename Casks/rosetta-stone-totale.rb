@@ -12,9 +12,9 @@ cask 'rosetta-stone-totale' do
             quit:      'com.rosettastone.rosettastonedaemon',
             launchctl: 'com.rosettastone.rosettastonedaemon'
 
-  zap delete: [
-                '/Library/Application Support/Rosetta Stone/',
-                '/Library/Application Support/Rosetta Stone Backups/',
-                '/Library/Application Support/RosettaStoneDaemon/',
-              ]
+  zap trash: [
+               '/Library/Application Support/Rosetta Stone/',
+               '/Library/Application Support/Rosetta Stone Backups/',
+               '/Library/Application Support/RosettaStoneDaemon/',
+             ]
 end

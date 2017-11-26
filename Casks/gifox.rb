@@ -14,12 +14,10 @@ cask 'gifox' do
   uninstall launchctl: 'com.gifox.gifox.agent',
             quit:      'com.gifox.gifox'
 
-  zap delete: [
-                '~/Library/Caches/com.gifox.gifox',
-                '~/Library/Cookies/com.gifox.gifox.binarycookies',
-              ],
-      trash:  [
-                '~/Library/Application Support/Gifox',
-                '~/Library/Preferences/com.gifox.gifox.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Gifox',
+               '~/Library/Caches/com.gifox.gifox',
+               '~/Library/Cookies/com.gifox.gifox.binarycookies',
+               '~/Library/Preferences/com.gifox.gifox.plist',
+             ]
 end

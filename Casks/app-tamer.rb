@@ -10,10 +10,10 @@ cask 'app-tamer' do
 
   app 'App Tamer.app'
 
-  zap delete: [
-                '/Library/LaunchDaemons/com.stclairsoft.AppTamerAgent.plist',
-                '/Library/PrivilegedHelperTools/com.stclairsoft.AppTamerAgent',
-                '~/Library/Caches/com.stclairsoft.AppTamer',
-                '~/Library/Preferences/com.stclairsoft.AppTamer.plist',
-              ]
+  zap trash: [
+               '/Library/LaunchDaemons/com.stclairsoft.AppTamerAgent.plist',
+               '/Library/PrivilegedHelperTools/com.stclairsoft.AppTamerAgent',
+               '~/Library/Caches/com.stclairsoft.AppTamer',
+               '~/Library/Preferences/com.stclairsoft.AppTamer.plist',
+             ]
 end

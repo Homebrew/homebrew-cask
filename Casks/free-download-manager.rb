@@ -6,7 +6,7 @@ cask 'free-download-manager' do
   name 'Free Download Manager'
   homepage 'https://www.freedownloadmanager.org/'
 
-  depends_on macos: '>= 10.9'
+  depends_on macos: '>= :mavericks'
 
   app 'Free Download Manager.app'
 
@@ -19,12 +19,10 @@ cask 'free-download-manager' do
                          "org.freedownloadmanager.fdm#{version.major}.launcher",
                        ]
 
-  zap delete: [
-                "~/Library/Caches/org.freedownloadmanager.fdm#{version.major}",
-                "~/Library/Saved Application State/org.freedownloadmanager.fdm#{version.major}.savedState",
-              ],
-      trash:  [
-                '~/Library/Application Support/Free Download Manager',
-                "~/Library/Preferences/org.freedownloadmanager.fdm#{version.major}.plist",
-              ]
+  zap trash: [
+               '~/Library/Application Support/Free Download Manager',
+               "~/Library/Caches/org.freedownloadmanager.fdm#{version.major}",
+               "~/Library/Preferences/org.freedownloadmanager.fdm#{version.major}.plist",
+               "~/Library/Saved Application State/org.freedownloadmanager.fdm#{version.major}.savedState",
+             ]
 end

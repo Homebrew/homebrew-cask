@@ -10,5 +10,5 @@ cask 'liteicon' do
 
   app 'LiteIcon.app'
 
-  zap delete: '~/Library/Preferences/net.freemacsoft.LiteIcon.plist'
+  zap trash: '~/Library/Preferences/net.freemacsoft.LiteIcon.plist'
 end

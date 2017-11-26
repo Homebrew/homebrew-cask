@@ -27,14 +27,12 @@ cask 'teamviewer-host' do
                        ],
             quit:      'com.teamviewer.TeamViewerHost'
 
-  zap delete: [
-                '~/Library/Caches/com.teamviewer.TeamViewerHost',
-                '~/Library/Logs/TeamViewer',
-              ],
-      trash:  [
-                '/Library/Preferences/com.teamviewer.teamviewer.preferences.plist',
-                '~/Library/Application Support/TeamViewer Host',
-                '~/Library/Preferences/com.teamviewer.teamviewer.preferences.plist',
-                '~/Library/Preferences/com.teamviewer.TeamViewerHost.plist',
-              ]
+  zap trash: [
+               '/Library/Preferences/com.teamviewer.teamviewer.preferences.plist',
+               '~/Library/Application Support/TeamViewer Host',
+               '~/Library/Caches/com.teamviewer.TeamViewerHost',
+               '~/Library/Logs/TeamViewer',
+               '~/Library/Preferences/com.teamviewer.teamviewer.preferences.plist',
+               '~/Library/Preferences/com.teamviewer.TeamViewerHost.plist',
+             ]
 end

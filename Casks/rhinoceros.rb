@@ -13,9 +13,9 @@ cask 'rhinoceros' do
 
   app 'Rhinoceros.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.mcneel.rhinoceros.plist',
-                '~/Library/Caches/com.mcneel.rhinoceros',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mcneel.rhinoceros.sfl*',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.mcneel.rhinoceros.plist',
+               '~/Library/Caches/com.mcneel.rhinoceros',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mcneel.rhinoceros.sfl*',
+             ]
 end

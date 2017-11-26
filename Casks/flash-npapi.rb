@@ -16,9 +16,9 @@ cask 'flash-npapi' do
   uninstall pkgutil: 'com.adobe.pkg.FlashPlayer',
             delete:  '/Library/Internet Plug-Ins/Flash Player.plugin'
 
-  zap delete: [
-                '~/Library/Caches/Adobe/Flash Player',
-                '~/Library/Logs/FlashPlayerInstallManager.log',
-                '/Library/Internet Plug-Ins/flashplayer.xpt',
-              ]
+  zap trash: [
+               '~/Library/Caches/Adobe/Flash Player',
+               '~/Library/Logs/FlashPlayerInstallManager.log',
+               '/Library/Internet Plug-Ins/flashplayer.xpt',
+             ]
 end

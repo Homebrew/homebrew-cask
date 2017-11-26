@@ -12,9 +12,9 @@ cask 'smcfancontrol' do
 
   app 'smcFanControl.app'
 
-  zap delete: [
-                '~/Library/Application Support/smcFanControl',
-                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.eidac.smcfancontrol#{version.major}.sfl*",
-                "~/Library/Caches/com.eidac.smcFanControl#{version.major}",
-              ]
+  zap trash: [
+               '~/Library/Application Support/smcFanControl',
+               "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.eidac.smcfancontrol#{version.major}.sfl*",
+               "~/Library/Caches/com.eidac.smcFanControl#{version.major}",
+             ]
 end

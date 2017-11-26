@@ -1,10 +1,10 @@
 cask 'zerobranestudio' do
-  version '1.60'
-  sha256 'aa65d056f0e8c2c9cd5ed7dccb2c4fd6fe46a6c9e48dd8ca931a7bff3d31b3bf'
+  version '1.70'
+  sha256 'd5b3f68dc5a04873b2b0c139758c4872ed1def26b8b9717b3df909f65404e0be'
 
   url "https://download.zerobrane.com/ZeroBraneStudioEduPack-#{version}-macos.dmg"
   appcast 'https://raw.githubusercontent.com/pkulchenko/ZeroBraneStudio/master/CHANGELOG.md',
-          checkpoint: '5b1fd89c0baf7586e6da97e27e80e75352affcb83d1f8fb7f94547c4285a13c7'
+          checkpoint: '08d45a9ad607f91389d224fde821e17e153567d0025bca00347688e28364acea'
   name 'ZeroBrane Studio'
   homepage 'https://studio.zerobrane.com/'
 

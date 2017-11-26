@@ -9,8 +9,8 @@ cask 'sqlpro-studio' do
 
   app 'SQLPro Studio.app'
 
-  zap delete: [
-                '~/Library/Containers/com.hankinsoft.osx.sqlprostudio',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.sqlprostudio.sfl*',
-              ]
+  zap trash: [
+               '~/Library/Containers/com.hankinsoft.osx.sqlprostudio',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.sqlprostudio.sfl*',
+             ]
 end

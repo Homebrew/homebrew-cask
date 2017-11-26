@@ -8,9 +8,9 @@ cask 'bearychat' do
 
   app 'BearyChat.app'
 
-  zap delete: [
-                '~/Preferences/com.node-webkit-builder.bearychat.plist',
-                '~/Library/Application Support/BearyChat',
-                '~/Library/Application Support/BearyChat_V2',
-              ]
+  zap trash: [
+               '~/Preferences/com.node-webkit-builder.bearychat.plist',
+               '~/Library/Application Support/BearyChat',
+               '~/Library/Application Support/BearyChat_V2',
+             ]
 end

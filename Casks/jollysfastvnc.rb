@@ -14,10 +14,10 @@ cask 'jollysfastvnc' do
 
   uninstall quit: 'de.jinx.JollysFastVNC'
 
-  zap delete: [
-                '~/Library/Caches/de.jinx.JollysFastVNC',
-                '~/Library/Logs/JollysFastVNC.log*',
-                '~/Library/Preferences/de.jinx.JollysFastVNC.plist',
-                '~/Library/Saved Application State/de.jinx.JollysFastVNC.savedState',
-              ]
+  zap trash: [
+               '~/Library/Caches/de.jinx.JollysFastVNC',
+               '~/Library/Logs/JollysFastVNC.log*',
+               '~/Library/Preferences/de.jinx.JollysFastVNC.plist',
+               '~/Library/Saved Application State/de.jinx.JollysFastVNC.savedState',
+             ]
 end

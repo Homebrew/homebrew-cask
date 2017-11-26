@@ -10,10 +10,10 @@ cask 'a-better-finder-attributes' do
 
   app "A Better Finder Attributes #{version.major}.app"
 
-  zap delete: [
-                "~/Library/Caches/net.publicspace.abfa#{version.major}",
-                "~/Library/Cookies/net.publicspace.abfa#{version.major}.binarycookies",
-                "~/Library/Preferences/net.publicspace.abfa#{version.major}.plist",
-                "~/Library/Saved Application State/net.publicspace.abfa#{version.major}.savedState",
-              ]
+  zap trash: [
+               "~/Library/Caches/net.publicspace.abfa#{version.major}",
+               "~/Library/Cookies/net.publicspace.abfa#{version.major}.binarycookies",
+               "~/Library/Preferences/net.publicspace.abfa#{version.major}.plist",
+               "~/Library/Saved Application State/net.publicspace.abfa#{version.major}.savedState",
+             ]
 end

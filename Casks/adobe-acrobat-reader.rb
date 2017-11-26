@@ -19,11 +19,11 @@ cask 'adobe-acrobat-reader' do
                        'com.adobe.AdobeRdrCEF',
                      ]
 
-  zap delete: [
-                '~/Library/Preferences/com.adobe.Reader.plist',
-                '~/Library/Preferences/com.adobe.AdobeRdrCEFHelper.plist',
-                '~/Library/Preferences/com.adobe.crashreporter.plist',
-                '~/Library/Caches/com.adobe.Reader',
-                '/Library/Preferences/com.adobe.reader.DC.WebResource.plist',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.adobe.Reader.plist',
+               '~/Library/Preferences/com.adobe.AdobeRdrCEFHelper.plist',
+               '~/Library/Preferences/com.adobe.crashreporter.plist',
+               '~/Library/Caches/com.adobe.Reader',
+               '/Library/Preferences/com.adobe.reader.DC.WebResource.plist',
+             ]
 end

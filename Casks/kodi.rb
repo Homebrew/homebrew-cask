@@ -10,13 +10,11 @@ cask 'kodi' do
 
   app 'Kodi.app'
 
-  zap delete: [
-                '~/Library/Logs/kodi.log',
-                '~/Library/Logs/kodi.old.log',
-                '~/Library/Saved Application State/org.xbmc.kodi.savedState',
-              ],
-      trash:  [
-                '~/.kodi',
-                '~/Library/Application Support/Kodi',
-              ]
+  zap trash: [
+               '~/.kodi',
+               '~/Library/Application Support/Kodi',
+               '~/Library/Logs/kodi.log',
+               '~/Library/Logs/kodi.old.log',
+               '~/Library/Saved Application State/org.xbmc.kodi.savedState',
+             ]
 end

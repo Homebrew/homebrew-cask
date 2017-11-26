@@ -10,11 +10,11 @@ cask 'atlas-recall' do
 
   uninstall quit: 'co.atlasinformatics.Recall'
 
-  zap delete: [
-                '~/Library/Cookies/co.atlasinformatics.Recall.binarycookies',
-                '~/Library/Logs/Atlas',
-                '~/Library/Saved Application State/co.atlasinformatics.Recall.savedState',
-                '~/Library/WebKit/co.atlasinformatics.Recall',
-              ],
-      trash:  '~/Library/Preferences/co.atlasinformatics.Recall.plist'
+  zap trash: [
+               '~/Library/Cookies/co.atlasinformatics.Recall.binarycookies',
+               '~/Library/Logs/Atlas',
+               '~/Library/Preferences/co.atlasinformatics.Recall.plist',
+               '~/Library/Saved Application State/co.atlasinformatics.Recall.savedState',
+               '~/Library/WebKit/co.atlasinformatics.Recall',
+             ]
 end

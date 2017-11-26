@@ -10,6 +10,8 @@ cask 'excalibur' do
 
   app 'Excalibur.app'
 
-  zap delete: '~/Library/Saved Application State/edu.bucknell.Excalibur.savedState',
-      trash:  '~/Library/Preferences/Excalibur Preferences'
+  zap trash: [
+               '~/Library/Preferences/Excalibur Preferences',
+               '~/Library/Saved Application State/edu.bucknell.Excalibur.savedState',
+             ]
 end

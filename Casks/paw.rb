@@ -10,11 +10,11 @@ cask 'paw' do
 
   app 'Paw.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/com.luckymarmot.Paw',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.luckymarmot.paw.sfl*',
-                '~/Library/Containers/com.luckymarmot.Paw',
-                '~/Library/Saved Application State/com.luckymarmot.Paw.savedState',
-              ],
-      trash:  '~/Library/Preferences/com.luckymarmot.Paw.plist'
+  zap trash: [
+               '~/Library/Application Scripts/com.luckymarmot.Paw',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.luckymarmot.paw.sfl*',
+               '~/Library/Containers/com.luckymarmot.Paw',
+               '~/Library/Preferences/com.luckymarmot.Paw.plist',
+               '~/Library/Saved Application State/com.luckymarmot.Paw.savedState',
+             ]
 end

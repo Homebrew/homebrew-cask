@@ -19,16 +19,16 @@ cask 'google-nik-collection' do
                       '~/Library/Application Support/Adobe/Lightroom/External Editor Presets/Viveza2.lrtemplate',
                     ]
 
-  zap delete: [
-                '~/Library/Google/GoogleSoftwareUpdate/Actives/com.google.nikcollection',
-                '~/Library/Preferences/Google/Nik Collection',
-                '~/Library/Preferences/Google/Nik Collection Installer Logs',
-                '/Library/Preferences/Google/Analog Efex Pro 2',
-                '/Library/Preferences/Google/Color Efex Pro 4',
-                '/Library/Preferences/Google/Dfine 2',
-                '/Library/Preferences/Google/HDR Efex Pro 2',
-                '/Library/Preferences/Google/Sharpener Pro 3',
-                '/Library/Preferences/Google/Silver Efex Pro 2',
-              ],
-      rmdir:  '/Library/Preferences/Google'
+  zap trash: [
+               '~/Library/Google/GoogleSoftwareUpdate/Actives/com.google.nikcollection',
+               '~/Library/Preferences/Google/Nik Collection',
+               '~/Library/Preferences/Google/Nik Collection Installer Logs',
+               '/Library/Preferences/Google/Analog Efex Pro 2',
+               '/Library/Preferences/Google/Color Efex Pro 4',
+               '/Library/Preferences/Google/Dfine 2',
+               '/Library/Preferences/Google/HDR Efex Pro 2',
+               '/Library/Preferences/Google/Sharpener Pro 3',
+               '/Library/Preferences/Google/Silver Efex Pro 2',
+             ],
+      rmdir: '/Library/Preferences/Google'
 end

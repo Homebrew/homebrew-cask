@@ -14,10 +14,10 @@ cask 'the-unarchiver' do
 
   app 'The Unarchiver.app'
 
-  zap delete: [
-                '~/Library/Caches/cx.c3.theunarchiver',
-                '~/Library/Cookies/cx.c3.theunarchiver.binarycookies',
-                '~/Library/Saved Application State/cx.c3.theunarchiver.savedState',
-              ],
-      trash:  '~/Library/Preferences/cx.c3.theunarchiver.plist'
+  zap trash: [
+               '~/Library/Caches/cx.c3.theunarchiver',
+               '~/Library/Cookies/cx.c3.theunarchiver.binarycookies',
+               '~/Library/Preferences/cx.c3.theunarchiver.plist',
+               '~/Library/Saved Application State/cx.c3.theunarchiver.savedState',
+             ]
 end

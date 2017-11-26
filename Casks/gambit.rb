@@ -18,5 +18,5 @@ cask 'gambit' do
                        sudo:       true,
                      }
 
-  zap delete: '~/.gambit_history'
+  zap trash: '~/.gambit_history'
 end

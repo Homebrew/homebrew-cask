@@ -12,17 +12,15 @@ cask 'zoomus' do
 
   uninstall delete: '/Applications/zoom.us.app'
 
-  zap delete: [
-                '~/Library/Caches/us.zoom.xos',
-                '~/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin',
-                '~/Library/Logs/zoom.us',
-                '~/Library/Logs/zoominstall.log',
-                '~/Library/Saved Application State/us.zoom.xos.savedState',
-              ],
-      trash:  [
-                '~/Desktop/Zoom',
-                '~/Library/Application Support/zoom.us',
-                '~/Library/Preferences/ZoomChat.plist',
-                '~/Library/Preferences/us.zoom.xos.plist',
-              ]
+  zap trash: [
+               '~/Desktop/Zoom',
+               '~/Library/Application Support/zoom.us',
+               '~/Library/Caches/us.zoom.xos',
+               '~/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin',
+               '~/Library/Logs/zoom.us',
+               '~/Library/Logs/zoominstall.log',
+               '~/Library/Preferences/ZoomChat.plist',
+               '~/Library/Preferences/us.zoom.xos.plist',
+               '~/Library/Saved Application State/us.zoom.xos.savedState',
+             ]
 end

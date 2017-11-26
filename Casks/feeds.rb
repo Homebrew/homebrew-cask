@@ -11,9 +11,9 @@ cask 'feeds' do
 
   app 'Feeds.app'
 
-  zap delete: [
-                '~/Library/Caches/com.feedsapp.Feeds',
-                '~/Library/Logs/Feeds',
-                '~/Library/Preferences/com.feedsapp.Feeds.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.feedsapp.Feeds',
+               '~/Library/Logs/Feeds',
+               '~/Library/Preferences/com.feedsapp.Feeds.plist',
+             ]
 end

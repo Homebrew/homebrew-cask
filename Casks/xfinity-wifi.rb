@@ -24,12 +24,12 @@ cask 'xfinity-wifi' do
                          'com.smithmicro.netwise.osx.comcast.help',
                        ]
 
-  zap delete: [
-                '/Library/PrivilegedHelperTools/com.smithmicro.netwise.osx.helper',
-                '~/Library/Application Support/com.smithmicro.netwise.osx.comcast',
-                '~/Library/Caches/com.crashlytics.data/com.smithmicro.netwise.osx.comcast',
-                '~/Library/Caches/com.smithmicro.netwise.osx.comcast',
-                '~/Library/Logs/XFINITY WiFi',
-                '~/Library/Preferences/com.smithmicro.netwise.osx.comcast.plist',
-              ]
+  zap trash: [
+               '/Library/PrivilegedHelperTools/com.smithmicro.netwise.osx.helper',
+               '~/Library/Application Support/com.smithmicro.netwise.osx.comcast',
+               '~/Library/Caches/com.crashlytics.data/com.smithmicro.netwise.osx.comcast',
+               '~/Library/Caches/com.smithmicro.netwise.osx.comcast',
+               '~/Library/Logs/XFINITY WiFi',
+               '~/Library/Preferences/com.smithmicro.netwise.osx.comcast.plist',
+             ]
 end

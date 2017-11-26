@@ -19,15 +19,15 @@ cask 'r-app' do
                        '/usr/bin/Rscript',
                      ]
 
-  zap delete: '~/Library/Caches/org.R-project.R',
-      trash:  [
-                '~/.R',
-                '~/.Rapp.history',
-                '~/.RData',
-                '~/.Rhistory',
-                '~/.Rprofile',
-                '~/Library/R',
-              ]
+  zap trash: [
+               '~/.R',
+               '~/.Rapp.history',
+               '~/.RData',
+               '~/.Rhistory',
+               '~/.Rprofile',
+               '~/Library/R',
+               '~/Library/Caches/org.R-project.R',
+             ]
 
   caveats do
     files_in_usr_local

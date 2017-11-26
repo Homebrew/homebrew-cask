@@ -15,12 +15,10 @@ cask 'carbon-copy-cloner' do
                           'com.bombich.cccuseragent',
                         ]
 
-  zap delete: [
-                '~/Library/Caches/com.bombich.ccc',
-                '~/Library/Saved Application State/com.bombich.ccc.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/com.bombich.ccc',
-                '~/Library/Preferences/com.bombich.ccc.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.bombich.ccc',
+               '~/Library/Caches/com.bombich.ccc',
+               '~/Library/Preferences/com.bombich.ccc.plist',
+               '~/Library/Saved Application State/com.bombich.ccc.savedState',
+             ]
 end

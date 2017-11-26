@@ -1,10 +1,10 @@
 cask 'texshop' do
-  version '3.89'
-  sha256 'c2e071f80e3e396810fcc991db9f833de0aaa5b346a231c0f65c622a140f1f6c'
+  version '3.92'
+  sha256 '39874c04e306319206ec01bfde15c56689b3022a00b99a2e73c975c97aaade21'
 
   url "http://pages.uoregon.edu/koch/texshop/texshop-64/texshop#{version.no_dots}.zip"
   appcast 'http://pages.uoregon.edu/koch/texshop/texshop-64/texshopappcast.xml',
-          checkpoint: 'bf6eb94d0cb8a99bfca0d45765030110e8b5c8d0cbce2400af35347798ca38d4'
+          checkpoint: 'e557d3e81852a4c55b99196467e74b7faf0f96cc1138cd5bf70a0db71b79af6f'
   name 'TeXShop'
   homepage 'http://pages.uoregon.edu/koch/texshop/'
 
@@ -12,14 +12,12 @@ cask 'texshop' do
 
   app 'TeXShop.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/texshop.sfl*',
-                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/TeXShop Help*',
-                '~/Library/Caches/TeXShop',
-                '~/Library/TeXShop',
-              ],
-      trash:  [
-                '~/Library/Application Support/TeXShop',
-                '~/Library/Preferences/TeXShop.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/texshop.sfl*',
+               '~/Library/Application Support/TeXShop',
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/TeXShop Help*',
+               '~/Library/Caches/TeXShop',
+               '~/Library/Preferences/TeXShop.plist',
+               '~/Library/TeXShop',
+             ]
 end

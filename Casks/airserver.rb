@@ -1,6 +1,6 @@
 cask 'airserver' do
-  version '7.1.2'
-  sha256 'c5e406291158800f17121cd130a23e915a44f7612f8c9e419455d149b7a0b3fd'
+  version '7.1.4'
+  sha256 '4dc33693c68fedc8bbd93b54e23da8879f744feb130451e4a5bb4b5b6f1a47d3'
 
   url "http://dl.airserver.com/mac/AirServer-#{version}.dmg"
   appcast 'https://www.airserver.com/downloads/mac/appcast.xml',

@@ -13,15 +13,13 @@ cask 'insomnia' do
 
   app 'Insomnia.app'
 
-  zap delete: [
-                '~/Library/Caches/com.insomnia.app',
-                '~/Library/Caches/com.insomnia.app.ShipIt',
-                '~/Library/Cookies/com.insomnia.app.binarycookies',
-                '~/Library/Saved Application State/com.insomnia.app.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/Insomnia',
-                '~/Library/Preferences/com.insomnia.app.helper.plist',
-                '~/Library/Preferences/com.insomnia.app.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Insomnia',
+               '~/Library/Caches/com.insomnia.app',
+               '~/Library/Caches/com.insomnia.app.ShipIt',
+               '~/Library/Cookies/com.insomnia.app.binarycookies',
+               '~/Library/Preferences/com.insomnia.app.helper.plist',
+               '~/Library/Preferences/com.insomnia.app.plist',
+               '~/Library/Saved Application State/com.insomnia.app.savedState',
+             ]
 end

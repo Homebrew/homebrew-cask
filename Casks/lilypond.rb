@@ -33,8 +33,8 @@ cask 'lilypond' do
     end
   end
 
-  zap delete: [
-                '~/Library/Preferences/org.lilypond.lilypond.plist',
-                '~/Library/Preferences/org.lilypond.lilypond.LSSharedFileList.plist',
-              ]
+  zap trash: [
+               '~/Library/Preferences/org.lilypond.lilypond.plist',
+               '~/Library/Preferences/org.lilypond.lilypond.LSSharedFileList.plist',
+             ]
 end

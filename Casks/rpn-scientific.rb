@@ -10,10 +10,10 @@ cask 'rpn-scientific' do
 
   app 'RPN Scientific.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.industriouse!.rpnscientific.sfl*',
-                '~/Library/Caches/com.IndustriousE!.RPNScientific',
-                '~/Library/Preferences/com.IndustriousE!.RPNScientific.plist',
-                "~/Library/Preferences/com.IndustriousE!.RPNScientificV#{version.major_minor}.data.plist",
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.industriouse!.rpnscientific.sfl*',
+               '~/Library/Caches/com.IndustriousE!.RPNScientific',
+               '~/Library/Preferences/com.IndustriousE!.RPNScientific.plist',
+               "~/Library/Preferences/com.IndustriousE!.RPNScientificV#{version.major_minor}.data.plist",
+             ]
 end

@@ -13,8 +13,8 @@ cask 'panda' do
 
   app 'Panda.app'
 
-  zap delete: [
-                '~/Library/Caches/com.pablosproject.Panda',
-                '~/Library/Preferences/com.pablosproject.Panda.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.pablosproject.Panda',
+               '~/Library/Preferences/com.pablosproject.Panda.plist',
+             ]
 end

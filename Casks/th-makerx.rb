@@ -10,8 +10,8 @@ cask 'th-makerx' do
 
   app "Th-MakerX_#{version.no_dots}/Th-MakerX.app"
 
-  zap delete: [
-                '~/Library/Preferences/jp.ne.wind.miko.ThMakerX3.plist',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jp.ne.wind.miko.thmakerx3.sfl*',
-              ]
+  zap trash: [
+               '~/Library/Preferences/jp.ne.wind.miko.ThMakerX3.plist',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jp.ne.wind.miko.thmakerx3.sfl*',
+             ]
 end

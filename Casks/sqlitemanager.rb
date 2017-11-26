@@ -1,10 +1,10 @@
 cask 'sqlitemanager' do
-  version '4.6.8'
-  sha256 '52eed9dd1bca69aff6f337c08d29763a0eba90356679ed28fe2f26dc72374f7f'
+  version '4.7.0'
+  sha256 '04ba527cb257a6ff20ec86c088e7230d9860260ae37c3c30d8374c95d9d8eaaa'
 
   url 'http://www.sqlabs.com/download/SQLiteManager.zip'
   appcast 'http://www.sqlabs.com/news/sqlitemanager/',
-          checkpoint: '5ebb5f2628afcd81bda66a61c9c38964d9b7dbf30db4aa7820bb3e6287be05c7'
+          checkpoint: '1de5a44f6fc96af58f8f057eb0bb7a61f4ec39c44f12b9cf9ab3244d70a27ef6'
   name 'SQLiteManager'
   homepage 'http://www.sqlabs.com/sqlitemanager.php'
 

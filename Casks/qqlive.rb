@@ -12,13 +12,13 @@ cask 'qqlive' do
 
   app 'QQLive.app'
 
-  zap delete: [
-                '~/Library/Caches/com.tencent.tenvideo',
-                '~/Library/Containers/com.tencent.tenvideo',
-                '~/Library/Cookies/com.tencent.tenvideo.binarycookies',
-                '~/Library/Logs/QQLive',
-                '~/Library/Preferences/com.tencent.tenvideo.plist',
-                '~/Library/Saved Application State/com.tencent.tenvideo.savedState',
-                '~/Library/WebKit/com.tencent.tenvideo',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.tencent.tenvideo',
+               '~/Library/Containers/com.tencent.tenvideo',
+               '~/Library/Cookies/com.tencent.tenvideo.binarycookies',
+               '~/Library/Logs/QQLive',
+               '~/Library/Preferences/com.tencent.tenvideo.plist',
+               '~/Library/Saved Application State/com.tencent.tenvideo.savedState',
+               '~/Library/WebKit/com.tencent.tenvideo',
+             ]
 end

@@ -19,13 +19,11 @@ cask 'coconutbattery' do
   uninstall launchctl: 'com.coconut-flavour.coconutBattery-Menu',
             quit:      'com.coconut-flavour.coconutBattery-Menu'
 
-  zap delete: [
-                '~/Library/Caches/com.coconut-flavour.coconutBattery*',
-                '~/Library/Group Containers/*.coconut-flavour.coconutBattery',
-                '~/Library/Saved Application State/com.coconut-flavour.coconutBattery.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/coconutBattery',
-                '~/Library/Preferences/com.coconut-flavour.coconutBattery.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/coconutBattery',
+               '~/Library/Caches/com.coconut-flavour.coconutBattery*',
+               '~/Library/Group Containers/*.coconut-flavour.coconutBattery',
+               '~/Library/Preferences/com.coconut-flavour.coconutBattery.plist',
+               '~/Library/Saved Application State/com.coconut-flavour.coconutBattery.savedState',
+             ]
 end

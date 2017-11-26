@@ -12,6 +12,8 @@ cask 'tex-live-utility' do
 
   app 'TeX Live Utility.app'
 
-  zap delete: '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/TeX Live Utility Help*',
-      trash:  '~/Library/Application Support/TeX Live Utility'
+  zap trash: [
+               '~/Library/Application Support/TeX Live Utility',
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/TeX Live Utility Help*',
+             ]
 end

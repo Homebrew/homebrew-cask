@@ -2,6 +2,7 @@ cask 'eqmac' do
   version '2.1'
   sha256 '2a1aecd0f64d4e8f0b58840207bb55a600a4e753f3d1d973c3ffcb0d28ee6491'
 
+
   # github.com/romankisil/eqMac was verified as official when first introduced to the cask
   url "https://github.com/romankisil/eqMac#{version.major}/releases/download/V#{version}/eqMac#{version.major}.dmg"
   appcast "https://github.com/romankisil/eqMac#{version.major}/releases.atom",
@@ -22,8 +23,8 @@ cask 'eqmac' do
                           sudo:       true,
                         }
 
-  zap delete: [
-                "~/Library/Caches/com.bitgapp.eqMac#{version.major}",
-                "~/Library/Cookies/com.bitgapp.eqMac#{version.major}.binarycookies",
-              ]
+  zap trash: [
+               "~/Library/Caches/com.bitgapp.eqMac#{version.major}",
+               "~/Library/Cookies/com.bitgapp.eqMac#{version.major}.binarycookies",
+             ]
 end

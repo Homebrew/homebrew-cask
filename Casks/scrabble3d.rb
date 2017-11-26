@@ -12,10 +12,10 @@ cask 'scrabble3d' do
 
   uninstall pkgutil: 'com.company.Scrabble3D'
 
-  zap delete: [
-                '~/.config/Scrabble3D',
-                '~/Library/Preferences/com.company.Scrabble3D.plist',
-                '~/Library/Logs/Homebrew/scrabble3d',
-                '~/Library/Saved Application State/com.company.Scrabble3D.savedState',
-              ]
+  zap trash: [
+               '~/.config/Scrabble3D',
+               '~/Library/Preferences/com.company.Scrabble3D.plist',
+               '~/Library/Logs/Homebrew/scrabble3d',
+               '~/Library/Saved Application State/com.company.Scrabble3D.savedState',
+             ]
 end
