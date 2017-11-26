@@ -1,4 +1,4 @@
-cask 'process-explorer' do
+cask 'procexp' do
   version :latest
   sha256 :no_check
 
