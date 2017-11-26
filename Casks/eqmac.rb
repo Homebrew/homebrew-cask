@@ -1,24 +1,24 @@
 cask 'eqmac' do
-  version '2.0.6'
-  sha256 '565544e1c7b12f3cf361176896fd8917857f188ff8b875d2e18e9da8231be79f'
+  version '2.1'
+  sha256 '2a1aecd0f64d4e8f0b58840207bb55a600a4e753f3d1d973c3ffcb0d28ee6491'
 
   # github.com/romankisil/eqMac was verified as official when first introduced to the cask
-  url "https://github.com/romankisil/eqMac#{version.major}/releases/download/v#{version}/eqMac#{version.major}.dmg"
+  url "https://github.com/romankisil/eqMac#{version.major}/releases/download/V#{version}/eqMac#{version.major}.dmg"
   appcast "https://github.com/romankisil/eqMac#{version.major}/releases.atom",
-          checkpoint: '03e18588a03e2b6efb51da18b709589a2dc30df15a717d17581cc09a904bdc1a'
+          checkpoint: '0ab80132b42097dfdfe2cbeb90ae5a72c978d8a651959f4e48174cc7bb7dc4b8'
   name 'eqMac'
   homepage 'https://www.bitgapp.com/eqmac/'
 
   app "eqMac#{version.major}.app"
   installer script: {
-                      executable: "#{staged_path}/eqMac#{version.major}.app/Contents/Resources/install_new.sh",
+                      executable: "#{staged_path}/eqMac#{version.major}.app/Contents/Resources/install_driver.sh",
                       sudo:       true,
                     }
 
   uninstall login_item: "eqMac#{version.major}",
             quit:       "com.bitgapp.eqMac#{version.major}",
             script:     {
-                          executable: "#{appdir}/eqMac#{version.major}.app/Contents/Resources/uninstall_app.sh",
+                          executable: "#{appdir}/eqMac#{version.major}.app/Contents/Resources/uninstall_driver.sh",
                           sudo:       true,
                         }
 
