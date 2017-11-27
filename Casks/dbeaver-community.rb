@@ -1,11 +1,11 @@
 cask 'dbeaver-community' do
-  version '4.2.5'
-  sha256 '92d3b6b269ec7904adfab1c7429906adffaf2d6724c8cd20ae89d4678198a145'
+  version '4.2.6'
+  sha256 'efc4cf5ee19fe2023bd849a8aaa60aca099cd6f741cc8b8556638ece345d43d0'
 
   # github.com/serge-rider/dbeaver was verified as official when first introduced to the cask
   url "https://github.com/serge-rider/dbeaver/releases/download/#{version}/dbeaver-ce-#{version}-macos.dmg"
   appcast 'https://github.com/serge-rider/dbeaver/releases.atom',
-          checkpoint: 'd0f4f02640b0b29971bbc66154a117b8d6cb63834343b1b5a9abf291c163a01e'
+          checkpoint: '348fc4389c3ffbbb322d21d467e9a6d90ac575858dbb6be77dc85b344074696a'
   name 'DBeaver Community Edition'
   homepage 'https://dbeaver.jkiss.org/'
 
