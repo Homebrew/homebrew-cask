@@ -18,11 +18,10 @@ cask 'goland' do
     ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'goland') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }
   end
 
-  # The folders GoLand creates are still named Gogland. This should be checked after the first non-EAP release.
   zap trash: [
-               "~/Library/Application Support/Gogland#{version.major_minor}",
-               "~/Library/Caches/Gogland#{version.major_minor}",
-               "~/Library/Logs/Gogland#{version.major_minor}",
-               "~/Library/Preferences/Gogland#{version.major_minor}",
+               "~/Library/Application Support/GoLand#{version.major_minor}",
+               "~/Library/Caches/GoLand#{version.major_minor}",
+               "~/Library/Logs/GoLand#{version.major_minor}",
+               "~/Library/Preferences/GoLand#{version.major_minor}",
              ]
 end
