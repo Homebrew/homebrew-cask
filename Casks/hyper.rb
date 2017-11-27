@@ -1,5 +1,5 @@
 cask 'hyper' do
-  version '1.4.8'
+  version '2.1.1'
   sha256 'a8e48a5f7a810ff67a4524491f360d622284f76058344baab909b21352df8985'
 
   # github.com/zeit/hyper was verified as official when first introduced to the cask
