@@ -1,12 +1,12 @@
 cask 'transmission-remote-gui' do
-  version '5.11.0'
-  sha256 'e62776e7503624b12282e7efaa4d8bca9378495ba747525afce36ab752a88bb9'
+  version '5.12.0'
+  sha256 'af0fd073fe266d88bb0c6e7c4f3852d54ffc3f591616977ff97cce2bf4ca4037'
 
-  url "https://github.com/leonsoft-kras/transmisson-remote-gui/releases/download/v#{version}/transgui-#{version}.dmg"
-  appcast 'https://github.com/leonsoft-kras/transmisson-remote-gui/releases.atom',
-          checkpoint: 'e3a2a5f0c6f035a94e149c99cbad4f6415cad6a9466e4113d00d663e4b6e341f'
+  url "https://github.com/transmission-remote-gui/transgui/releases/download/v#{version}/transgui-#{version}.dmg"
+  appcast 'https://github.com/transmission-remote-gui/transgui/releases.atom',
+          checkpoint: '08e0f3ecf8ab4840650e1a10a4fbf9f5fecd7583a2ff6c7ce8d9334b83eff5f8'
   name 'Transmission Remote GUI'
-  homepage 'https://github.com/leonsoft-kras/transmisson-remote-gui'
+  homepage 'https://github.com/transmission-remote-gui/transgui'
 
   app 'Transmission Remote GUI.app'
 
