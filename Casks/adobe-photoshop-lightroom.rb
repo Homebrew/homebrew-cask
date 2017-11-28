@@ -27,10 +27,6 @@ cask 'adobe-photoshop-lightroom' do
                    sudo: true
   end
 
-  uninstall_preflight do
-    system_command 'brew', args: ['cask', 'uninstall', 'adobe-photoshop-lightroom600']
-  end
-
   zap trash: [
                '~/Library/Application Support/Adobe/Lightroom',
                "~/Library/Preferences/com.adobe.Lightroom#{version.major}.plist",
