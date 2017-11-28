@@ -5,7 +5,7 @@ cask 'mpv' do
   # laboratory.stolendata.net/~djinn/mpv_osx was verified as official when first introduced to the cask
   url "https://laboratory.stolendata.net/~djinn/mpv_osx/mpv-#{version}.tar.gz"
   appcast 'https://laboratory.stolendata.net/~djinn/mpv_osx/',
-          checkpoint: '4b64933554b8bd0da096fcc602f2ac9048bf8caa2bfe64f51ff161f1a323d040'
+          checkpoint: 'bd31d27b1f3a279fc42ee694b26f4889947104d2e38092477ab0b9ff5ca1211c'
   name 'mpv'
   homepage 'https://mpv.io/'
 
@@ -16,5 +16,6 @@ cask 'mpv' do
                '~/.config/mpv',
                '~/Library/Logs/mpv.log',
                '~/Library/Preferences/io.mpv.plist',
+               '~/Library/Preferences/mpv.plist',
              ]
 end

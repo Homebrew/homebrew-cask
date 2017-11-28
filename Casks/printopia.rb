@@ -1,12 +1,12 @@
 cask 'printopia' do
-  version '2.1.23'
-  sha256 '33d84e32df0222f55619aea2180b4df49dba592135cc13beafd2eac3726dc817'
+  version '3.0.4'
+  sha256 'a57d6f0ce253b57708a806c8065d29249dffc9679d10a5e8de89a9781c16619c'
 
   url "https://download.decisivetactics.com/products/printopia/dl/Printopia_#{version}.zip"
   name 'Printopia'
   homepage 'https://www.decisivetactics.com/products/printopia/'
 
-  prefpane 'Printopia/Install Printopia.app/Contents/Resources/Printopia.prefPane'
+  app 'Printopia.app'
 
   zap trash: '~/Library/Preferences/com.ecamm.printopia.plist'
 end

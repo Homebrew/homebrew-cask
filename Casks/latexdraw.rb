@@ -1,10 +1,10 @@
 cask 'latexdraw' do
-  version '3.3.6'
-  sha256 '01a29a4886cf71ad914724d38eb5d470fae707eac40f5f1e70d45673780e4b07'
+  version '3.3.7'
+  sha256 '7a4db698767e74ca9548d26caec385faf12c8565535c1c108d9ec450193b25e5'
 
   url "https://downloads.sourceforge.net/latexdraw/LaTeXDraw-#{version}.app.zip"
   appcast 'https://sourceforge.net/projects/latexdraw/rss?path=/latexdraw',
-          checkpoint: '652dd1b1e3145652e548c5eb84e68888ede7a61c52008fbd68be19c884a2fbdd'
+          checkpoint: '37de4623cbf3183c9fa9a7304d5bb489d8690f81c6c4eb88c24b10f49e25df86'
   name 'LaTexDraw'
   homepage 'http://latexdraw.sourceforge.net/'
 

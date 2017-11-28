@@ -1,11 +1,11 @@
 cask 'pikopixel' do
-  version '1.0-b7'
-  sha256 '6316f098a9f628fe195e56801dc688db8d27ee81eacc81e94c7b7635c08de20e'
+  version '1.0-b8'
+  sha256 'b99a077a3ab3cb2f06af70d145977c5c7339d81e861a9b8c3fa2ba39c690181d'
 
   url "http://twilightedge.com/downloads/PikoPixel.#{version}.dmg",
       user_agent: :fake
   appcast 'http://twilightedge.com/mac/pikopixel/history.html',
-          checkpoint: 'ed0c1ad08e1ad6e16901fec8a50cfe91c3fde3e5e02bfe39a29a42f6a0ae78fd'
+          checkpoint: '083969e644e961cfe61696bc5bec560608bbb5d60374216e05407fb9ad404eb1'
   name 'PikoPixel'
   homepage 'http://twilightedge.com/mac/pikopixel/'
 

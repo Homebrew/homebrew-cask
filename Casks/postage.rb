@@ -1,11 +1,11 @@
 cask 'postage' do
-  version '3.2.16'
-  sha256 '982d65c43ea3ad8484bbc513335bc0fe655813d8627df0af524be227385641c6'
+  version '3.2.18'
+  sha256 '001b40f7d96f84630cc2e2c410cbc340239473272abb5f30273360fd0c2cc999'
 
   # github.com/workflowproducts/postage was verified as official when first introduced to the cask
   url "https://github.com/workflowproducts/postage/releases/download/eV#{version}/Postage-#{version}.dmg"
   appcast 'https://github.com/workflowproducts/postage/releases.atom',
-          checkpoint: '97f98c7a4b42bc1d143bf40dfc8baa28872b599a2e8db732ec0606ed6c8732b5'
+          checkpoint: 'a5b95c9a13943cf10b196f3b11a0fd6e4052cf287971b0cef0cf316c53a5d2ef'
   name 'Postage'
   homepage 'https://www.workflowproducts.com/postage.html'
 
