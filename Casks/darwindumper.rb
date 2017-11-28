@@ -1,10 +1,10 @@
 cask 'darwindumper' do
-  version '3.0.3'
-  sha256 '15eca11d9c03c4af0ceb335efb844db02eb1a5ad1ce85691ec6ea7c6c30c7148'
+  version '3.0.4'
+  sha256 '29286070dd7f91d9289afa7fa7b52703252b255106934c8800b2db57edd3fa8b'
 
   url "https://bitbucket.org/blackosx/darwindumper/downloads/DarwinDumper_v#{version}.zip"
   appcast 'https://bitbucket.org/blackosx/darwindumper/wiki/DD_AppCast.xml',
-          checkpoint: 'c3da1e92be8ac71baabd3714c7758479684b59ead90adca0688522720f5bbc89'
+          checkpoint: '9b935c45c182f0e058c779240c6bd5388a9347b7824a749ecd0b8d41ecb34fdd'
   name 'DarwinDumper'
   homepage 'https://bitbucket.org/blackosx/darwindumper'
 
