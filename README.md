@@ -61,8 +61,8 @@ If your issue persists, search for it before opening a new one. If you find an o
 
 ## Requests
 
-Start an issue on GitHub following one of these templates:
-* [Feature request][feature_request]
+* Cask requests will be automatically closed. If you want a cask added, [submit a pull request](https://github.com/caskroom/homebrew-cask/blob/master/CONTRIBUTING.md#adding-a-cask).
+* For a feature request, [use this template][feature_request]
 
 ## Questions? Wanna chat?
 
