@@ -1,9 +1,9 @@
 cask 'mollyguard' do
-  version '1.0.0'
-  sha256 '1db2745811987d4dbb94aa586b91199eff3b5d715b684ab93c789231c0ca4f13'
+  version :latest
+  sha256 :no_check
 
   # dl.dropboxusercontent.com was verified as official when first introduced to the cask
-  url 'https://dl.dropboxusercontent.com/s/e2l2dk2qz1u93cb/MollyGuard.dmg?dl=1'
+  url 'https://dl.dropboxusercontent.com/s/e2l2dk2qz1u93cb/MollyGuard.dmg'
   name 'MollyGuard'
   homepage 'http://mollyguard.infinitemonkeytheory.com/'
 
