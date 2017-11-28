@@ -63,7 +63,6 @@ If your issue persists, search for it before opening a new one. If you find an o
 
 Start an issue on GitHub following one of these templates:
 * [Feature request][feature_request]
-* [Cask request][cask_request]
 
 ## Questions? Wanna chat?
 
@@ -76,5 +75,4 @@ We’re really rather friendly! Here are the best places to talk about the proje
 ## License
 Code is under the [BSD 2 Clause (NetBSD) license](LICENSE)
 
-[cask_request]: https://github.com/caskroom/homebrew-cask/issues/new?title=Cask%20request%3A%20%5Bapp%20name%20here%5D&body=%23%23%23%20Cask%20details%0A%0A%3C%21--%20Please%20fill%20out%20as%20much%20as%20possible.%20Before%20you%20do%2C%20note%20%2A%2Awe%20cannot%20support%20Mac%20App%20Store-only%20apps%2A%2A.%20--%3E%0A%0AName%3A%0A%0AHomepage%3A%0A%0ADownload%20URL%3A%0A%0ADescription%3A%0A
 [feature_request]: https://github.com/caskroom/homebrew-cask/issues/new?title=Feature%20request%3A&body=%23%23%23%20Description%20of%20feature%2Fenhancement%0A%0A%0A%0A%23%23%23%20Justification%0A%0A%0A%0A%23%23%23%20Example%20use%20case%0A%0A%0A%0A
