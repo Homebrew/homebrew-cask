@@ -40,4 +40,8 @@ cask 'openzfs' do
                       executable: "#{staged_path}/Docs & Scripts/uninstall-openzfsonosx.sh",
                       sudo:       true,
                     }
+
+  caveats do
+    kext
+  end
 end

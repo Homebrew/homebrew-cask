@@ -50,6 +50,7 @@ cask 'little-snitch' do
       rmdir: '/Library/Application Support/Objective Development'
 
   caveats do
+    kext
     reboot
   end
 end
