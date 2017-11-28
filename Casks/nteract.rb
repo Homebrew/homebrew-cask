@@ -4,7 +4,7 @@ cask 'nteract' do
 
   url "https://github.com/nteract/nteract/releases/download/v#{version}/nteract-#{version}.dmg"
   appcast 'https://github.com/nteract/nteract/releases.atom',
-          checkpoint: '91c108d7b5c3ee20d639ba0fffb3b3db39df23c4cdc82473e53f10fcbc804ca3'
+          checkpoint: 'df4f60423863e4a7239e99e8cb60ead047b0dad023922f111881193f5168ef9c'
   name 'nteract'
   homepage 'https://github.com/nteract/nteract'
 
