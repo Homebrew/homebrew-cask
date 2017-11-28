@@ -4,7 +4,7 @@ cask 'uninstallpkg' do
 
   url "https://www.corecode.io/downloads/uninstallpkg_#{version}.zip"
   appcast 'https://www.corecode.io/uninstallpkg/uninstallpkg.xml',
-          checkpoint: '274be382898eb3ec168bb1ade4ae7f184b82415e97ca7c9a495dc4702a25ee6d'
+          checkpoint: '52a8b967ee93c3500bfb877e6242ea71af0cf997c15e7398c8d787d25df1f70b'
   name 'UninstallPKG'
   homepage 'https://www.corecode.io/uninstallpkg/'
 
