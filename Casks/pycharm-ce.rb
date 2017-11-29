@@ -1,10 +1,10 @@
 cask 'pycharm-ce' do
-  version '2017.2.4,172.4343.24'
-  sha256 'f42fe4470ad6fa6244b2d0f4e43d2decbc3c98fc31846f08a92592dff98758bc'
+  version '2017.3,173.3727.137'
+  sha256 'dd0c75f9bc9b3a910a78100d49df2ba90511deb0ed06b6d80ea50de9b8bbefda'
 
   url "https://download.jetbrains.com/python/pycharm-community-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=PCC&latest=true&type=release',
-          checkpoint: '8ac6d33d0fce2f9e74c80a2377989ee4e5f0799be2cabd7a9db1f7c8862738fa'
+          checkpoint: '467896cb2cc3d51d25ae18ad2e5838054127314d996afab225894c7404a42c9a'
   name 'Jetbrains PyCharm Community Edition'
   name 'PyCharm CE'
   homepage 'https://www.jetbrains.com/pycharm/'
