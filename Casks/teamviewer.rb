@@ -1,8 +1,8 @@
 cask 'teamviewer' do
-  version '12'
-  sha256 :no_check # required as upstream package is updated in-place
+  version :latest
+  sha256 :no_check
 
-  url "https://download.teamviewer.com/download/version_#{version}x/TeamViewer.dmg"
+  url 'https://download.teamviewer.com/download/TeamViewer.dmg'
   name 'TeamViewer'
   homepage 'https://www.teamviewer.com/'
 
@@ -14,7 +14,7 @@ cask 'teamviewer' do
   uninstall pkgutil:   'com.teamviewer.*',
             delete:    [
                          '/Applications/TeamViewer.app',
-                         "/Library/Fonts/TeamViewer#{version}.otf",
+                         '/Library/Fonts/TeamViewer*.otf',
                          '/Library/PrivilegedHelperTools/com.teamviewer.Helper',
                          '/Library/Security/SecurityAgentPlugins/TeamViewerAuthPlugin.bundle',
                        ],
