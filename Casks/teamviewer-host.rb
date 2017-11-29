@@ -1,8 +1,8 @@
 cask 'teamviewer-host' do
-  version '12'
-  sha256 :no_check # required as upstream package is updated in-place
+  version :latest
+  sha256 :no_check
 
-  url "https://download.teamviewer.com/download/version_#{version}x/TeamViewerHost.dmg"
+  url 'https://download.teamviewer.com/download/TeamViewerHost.dmg'
   name 'TeamViewer Host'
   homepage 'https://www.teamviewer.com/'
 
@@ -14,7 +14,7 @@ cask 'teamviewer-host' do
   uninstall pkgutil:   'com.teamviewer.*',
             delete:    [
                          '/Applications/TeamViewerHost.app',
-                         "/Library/Fonts/TeamViewer#{version}Host.otf",
+                         '/Library/Fonts/TeamViewer*Host.otf',
                          '/Library/PrivilegedHelperTools/com.teamviewer.Helper',
                          '/Library/Security/SecurityAgentPlugins/TeamViewerAuthPlugin.bundle',
                        ],
