@@ -5,7 +5,7 @@ cask 'webcatalog' do
   # github.com/webcatalog/desktop/releases/download/ was verified as official when first introduced to the cask
   url "https://github.com/webcatalog/desktop/releases/download/v#{version}/WebCatalog-#{version}.dmg"
   appcast 'https://github.com/webcatalog/desktop/releases.atom',
-          checkpoint: '926faf90eeac604a7995205b722da465fa9d6f4de4740492ef2c23735e7c00a4'
+          checkpoint: 'e4a8e11615e820f9abd5d1c1da2f6bf6ca9599c56f6a39dffcf272c7fca0de73'
   name 'WebCatalog'
   homepage 'https://webcatalog.io/download/mac'
 
