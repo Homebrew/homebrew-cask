@@ -5,7 +5,7 @@ cask 'exodus' do
   # exodusbin.azureedge.net was verified as official when first introduced to the cask
   url "https://exodusbin.azureedge.net/releases/exodus-macos-#{version}.dmg"
   appcast 'https://www.exodus.io/releases/',
-          checkpoint: '84c6e41850e354840eaeabb56f689b4c2b9fca7fda64620ef0b705ad20c60ad8'
+          checkpoint: 'e9511058cd5bfaf30454509440d45dfa49b6d965d898b4377e9f678379bd1de8'
   name 'Exodus'
   homepage 'https://www.exodus.io/'
 
