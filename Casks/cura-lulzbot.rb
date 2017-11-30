@@ -6,8 +6,6 @@ cask 'cura-lulzbot' do
   name 'Cura LulzBot Edition'
   homepage 'https://www.lulzbot.com/learn/tutorials/cura-lulzbot-edition-installation-osx'
 
-  conflicts_with cask: 'cura'
-
   app 'cura-lulzbot.app'
 
   zap trash: [
