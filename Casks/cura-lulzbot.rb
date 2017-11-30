@@ -1,4 +1,4 @@
-cask 'lulzbot-cura' do
+cask 'cura-lulzbot' do
   version '2.6.52'
   sha256 '7ee482ba4823bcf36585c99b001c25cbe8881a94e0a65a0db0dfafa0a2f46435'
 
@@ -8,7 +8,7 @@ cask 'lulzbot-cura' do
 
   conflicts_with cask: 'cura'
 
-  app 'cura-lulzbot.app', target: 'Cura.app'
+  app 'cura-lulzbot.app'
 
   zap trash: [
                '~/.cura',
