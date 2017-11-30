@@ -1,22 +1,19 @@
 cask 'lulzbot-cura' do
-  version '21.08-f2748'
-  sha256 'c03ee9aec222641408c0a98d957aead05a2f4fa037e7380f6226a74b37952d0f'
+  version '2.6.52'
+  sha256 '7ee482ba4823bcf36585c99b001c25cbe8881a94e0a65a0db0dfafa0a2f46435'
 
-  # download.alephobjects.com/lulzbot was verified as official when first introduced to the cask
-  url "https://download.alephobjects.com/lulzbot/Software/Cura/Packages/Cura_#{version.major_minor}/cura_#{version}.dmg"
+  url "http://download.lulzbot.com/Software/cura-lulzbot/mac/cura-lulzbot_#{version}.dmg"
   name 'Cura LulzBot Edition'
   homepage 'https://www.lulzbot.com/learn/tutorials/cura-lulzbot-edition-installation-osx'
 
   conflicts_with cask: 'cura'
 
-  app 'Cura/Cura.app'
-
-  uninstall quit: "com.ultimaker.Cura-#{version.major_minor}"
+  app 'cura-lulzbot.app', target: 'Cura.app'
 
   zap trash: [
                '~/.cura',
-               '~/Library/Application Support/Cura',
-               "~/Library/Preferences/com.ultimaker.Cura-#{version.major_minor}.plist",
-               "~/Library/Saved Application State/com.ultimaker.Cura-#{version.major_minor}.savedState",
+               '~/Library/Application Support/cura-lulzbot',
+               '~/Library/Preferences/org.pythonmac.unspecified.cura-lulzbot.cura-lulzbot',
+               '~/Library/Saved Application State/org.pythonmac.unspecified.cura-lulzbot.savedState',
              ]
 end
