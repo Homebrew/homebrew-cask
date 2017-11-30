@@ -37,4 +37,8 @@ cask 'auristor-client' do
                          'com.auristor.XPCHelper',
                          'com.auristor.yfs-client',
                        ]
+
+  caveats do
+    kext
+  end
 end
