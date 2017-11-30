@@ -12,7 +12,7 @@ cask 'neteasemusic' do
 
   uninstall quit: 'com.netease.163music'
 
-  zap delee: [
+  zap delete: [
                '~/Library/Caches/com.netease.163music',
                '~/Library/Cookies/com.netease.163music.binarycookies',
                '~/Library/Saved Application State/com.netease.163music.savedState',
