@@ -1,11 +1,11 @@
 cask 'manuskript' do
-  version '0.5.0'
-  sha256 '1ffd46477693115a39c33dd2a45dae7b59105745630c1c85f50e5c0e540a2f3c'
+  version '0.6.0'
+  sha256 '1a1e1ef9d6efdce309097adf5eb7f481c654d342e8ab2bd6f451977bf184e9fb'
 
   # github.com/olivierkes/manuskript was verified as official when first introduced to the cask
   url "https://github.com/olivierkes/manuskript/releases/download/#{version}/manuskript-#{version}-osx.zip"
   appcast 'https://github.com/olivierkes/manuskript/releases.atom',
-          checkpoint: '147f7096ff6e485c250e1a0759704b40c4ea29fbae36dc19dcea32ec32d8b00a'
+          checkpoint: 'e9d48a2ce486d87e3a0fa4d435f54b52c061f0dcc7621c3cea48e914ef78a539'
   name 'Manuskript'
   homepage 'http://www.theologeek.ch/manuskript/'
 
