@@ -1,6 +1,6 @@
 cask 'bluestacks' do
   version '0.9.30.423902'
-  sha256 '261bf6978770a16d588abba51d6e550c6b44de6d12de9bf54a0c0a751290e547'
+  sha256 'ed2285c34ca561a9257a32a052c1ea3ae19310f8086c20ea7f463c00597760da'
 
   url "https://cdn.bluestacks.com/downloads/#{version}/BlueStacks-Installer.dmg"
   name 'BlueStacks'
