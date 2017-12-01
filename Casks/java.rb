@@ -61,13 +61,14 @@ cask 'java' do
                          "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents",
                          '/Library/PreferencePanes/JavaControlPanel.prefPane',
                          '/Library/Java/Home',
+                       ].concat(
                          if MacOS.version <= :mavericks
                            [
                              '/usr/lib/java/libjdns_sd.jnilib',
                              '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK',
                            ]
-                         end,
-                       ].keep_if { |v| !v.nil? }
+                         end
+                       ).keep_if { |v| !v.nil? }
 
   zap trash: [
                '/Library/Application Support/Oracle/Java',
