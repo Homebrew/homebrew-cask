@@ -67,6 +67,8 @@ cask 'java' do
                              '/usr/lib/java/libjdns_sd.jnilib',
                              '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK',
                            ]
+                         else
+                           []
                          end
                        ).keep_if { |v| !v.nil? }
 
