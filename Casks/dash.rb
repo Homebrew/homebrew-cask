@@ -15,7 +15,9 @@ cask 'dash' do
   zap trash: [
                '~/Library/Application Support/Dash',
                '~/Library/Application Support/com.kapeli.dashdoc',
-               '~/Library/Preferences/com.kapeli.dash.plist',
+               '~/Library/Caches/com.kapeli.dashdoc',
+               '~/Library/Cookies/com.kapeli.dashdoc.binarycookies',
+               '~/Library/Logs/Dash',
                '~/Library/Preferences/com.kapeli.dashdoc.plist',
              ]
 end
