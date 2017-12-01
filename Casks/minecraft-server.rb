@@ -16,16 +16,16 @@ cask 'minecraft-server' do
   preflight do
     IO.write shimscript, <<~EOS
       #!/bin/sh
-      cd "$(dirname "$(readlink -n $0)")" && \
-        java -Xmx1024M -Xms1024M -jar 'minecraft_server.#{version}.jar' nogui
+      cd "$(dirname "$(readlink -n "$0" || echo "$0")")" && \
+        /usr/bin/java -Xmx1024M -Xms1024M -jar 'minecraft_server.#{version}.jar' nogui
     EOS
   end
 
   postflight do
-    system_command 'minecraft-server'
+    system_command shimscript
 
     eula_file = "#{staged_path}/eula.txt"
-    IO.write(eula_file, IO.read(eula_file).gsub('false', 'TRUE'))
+    IO.write(eula_file, IO.read(eula_file).sub('eula=false', 'eula=TRUE'))
   end
 
   caveats do
