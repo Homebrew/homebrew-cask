@@ -1,17 +1,18 @@
 cask 'spotify' do
-  version :latest
-  sha256 :no_check
+  version '1.0.68.407.g6864aaaf-37'
+  sha256 '56081655d0b559d69fc2b3ed894c0ef77d82c53b6c9ae0336c6dd94131885264'
 
-  url 'https://download.spotify.com/Spotify.dmg'
+  url "https://upgrade.spotify.com/upgrade/client/osx-x86_64/spotify-autoupdate-#{version}.tbz"
   name 'Spotify'
   homepage 'https://www.spotify.com/'
 
   auto_updates true
   depends_on macos: '>= :lion'
 
-  app 'Spotify.app'
+  app '.', target: 'Spotify.app'
 
-  uninstall launchctl:  'com.spotify.webhelper',
+  uninstall quit:       'com.spotify.client',
+            launchctl:  'com.spotify.webhelper',
             login_item: 'Spotify'
 
   zap trash: [
