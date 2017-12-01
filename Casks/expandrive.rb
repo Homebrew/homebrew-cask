@@ -1,6 +1,6 @@
 cask 'expandrive' do
-  version '6.1.6'
-  sha256 '997a9613e94196dff26bd78afcbfa49c7a3a759bb8f2651836634961074cd2ec'
+  version '6.1.7'
+  sha256 '09712bbe12a35fa54ba908d379446f89c320883dc8ce63f60b9a22633d68675b'
 
   url "https://updates.expandrive.com/apps/expandrive/v/#{version.dots_to_hyphens}/download.dmg"
   name 'ExpanDrive'

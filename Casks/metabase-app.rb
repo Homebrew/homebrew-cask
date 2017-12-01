@@ -1,10 +1,10 @@
 cask 'metabase-app' do
-  version '0.26.2.0'
-  sha256 '94498d23002f699b5c5ae540fa9f7fe0e3cf793018d1d81680bced77a486a748'
+  version '0.27.1.0'
+  sha256 '51fb458eec63fb47d83bd6f3eec6aacfdb696090ec8249e40628d54a68958e7e'
 
   url "http://downloads.metabase.com/v#{version.major_minor_patch}/Metabase.dmg"
   appcast 'http://downloads.metabase.com/appcast.xml',
-          checkpoint: '873ccb567b1bba92a9de55ce05eb442bc5db1ae8c03db344162851af4b27d9f8'
+          checkpoint: '15b5cb5efbc3cb9eb946b70e2d8b89c48524c6b32403a50c8e34fc96012a52c3'
   name 'Metabase'
   homepage 'http://www.metabase.com/'
 

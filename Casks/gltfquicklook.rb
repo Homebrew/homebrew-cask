@@ -1,10 +1,10 @@
 cask 'gltfquicklook' do
-  version '0.2.0'
-  sha256 'fc9f333c25e089c6cf968ba84715c09e067a9b5191cda163c560d19671fc5834'
+  version '0.2.1'
+  sha256 '97d95a4c988d67bfea1e2d87ed27531442f4497d6e0a935ce328f6ae9d33d0cf'
 
   url "https://github.com/magicien/GLTFQuickLook/releases/download/v#{version}/GLTFQuickLook_v#{version}.zip"
   appcast 'https://github.com/magicien/GLTFQuickLook/releases.atom',
-          checkpoint: '85dc6cc58f9fdf928fc5dc2673be1135f70c7daa208045e7ff96c93fd35864b0'
+          checkpoint: '9ab71358c9941aa25da844aeda1172a06493159c092bbfac27f592eed138e30e'
   name 'GLTFQuickLook'
   homepage 'https://github.com/magicien/GLTFQuickLook'
 

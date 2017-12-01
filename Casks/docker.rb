@@ -14,7 +14,16 @@ cask 'docker' do
 
   app 'Docker.app'
 
-  uninstall delete:    '/Library/PrivilegedHelperTools/com.docker.vmnetd',
+  uninstall delete:    [
+                         '/Library/PrivilegedHelperTools/com.docker.vmnetd',
+                         '/usr/local/bin/docker',
+                         '/usr/local/bin/docker-compose',
+                         '/usr/local/bin/docker-credential-osxkeychain',
+                         '/usr/local/bin/docker-machine',
+                         '/usr/local/bin/hyperkit',
+                         '/usr/local/bin/notary',
+                         '/usr/local/bin/vpnkit',
+                       ],
             launchctl: [
                          'com.docker.helper',
                          'com.docker.vmnetd',
