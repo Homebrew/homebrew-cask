@@ -1,6 +1,6 @@
 cask 'qqmacmgr' do
-  version '2.4.1'
-  sha256 '50517f1fa76441886c1874c6dbfb2e910e3e2a20ad71316b7714485bb641c6cb'
+  version '2.4.7'
+  sha256 'ac3664a56667bd08d3538440507487ab0e0da70babdebe0eeb2c766c99c500bb'
 
   url "http://dlied6.qq.com/invc/xfspeed/mac/verupdate/QQMacMgr_#{version}.dmg"
   name '腾讯电脑管家'
