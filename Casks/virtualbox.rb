@@ -10,12 +10,6 @@ cask 'virtualbox' do
 
   pkg 'VirtualBox.pkg'
 
-  uninstall_preflight do
-    if File.exist?("#{HOMEBREW_PREFIX}/Caskroom/virtualbox-extension-pack")
-      system_command 'brew', args: ['cask', 'uninstall', 'virtualbox-extension-pack']
-    end
-  end
-
   uninstall script:  {
                        executable: 'VirtualBox_Uninstall.tool',
                        args:       ['--unattended'],
@@ -34,4 +28,8 @@ cask 'virtualbox' do
                '~/Library/Saved Application State/org.virtualbox.app.VirtualBoxVM.savedState',
              ],
       rmdir: '~/VirtualBox VMs'
+
+  caveats do
+    kext
+  end
 end

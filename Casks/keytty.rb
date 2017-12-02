@@ -11,6 +11,11 @@ cask 'keytty' do
 
   app 'Keytty.app'
 
-  zap quit:   'com.keytty.Keytty',
-      delete: ['~/Library/Preferences/com.keytty.Keytty.plist', '~/Library/Application Support/Keytty', '~/Library/Caches/com.keytty.Keytty']
+  uninstall quit: 'com.keytty.Keytty'
+
+  zap trash: [
+               '~/Library/Preferences/com.keytty.Keytty.plist',
+               '~/Library/Application Support/Keytty',
+               '~/Library/Caches/com.keytty.Keytty',
+             ]
 end

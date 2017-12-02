@@ -1,11 +1,11 @@
 cask 'goland' do
   # GoLand is EAP only for now
-  version '1.0 EAP,173.3727.73'
-  sha256 'a5a551b3f3c2416a0d0f4bc2d833df7e3f23c458c748ccf04ccec41c14bc47a7'
+  version '2017.3 EAP,173.3727.96'
+  sha256 'c64e67df12cc549e61e480bb68be1eec4b3eb5de4ee7fc463fc675a166f3ded1'
 
   url "https://download.jetbrains.com/go/goland-#{version.after_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=GO&latest=true&type=eap',
-          checkpoint: '07d8bc4b5a9e946af9bb007a86413d74ce58c500b9ecc525fa52038fe3924d51'
+          checkpoint: '068e574c0f457279e5b4eafd365d0b2c61fbf1f553b38ac83de3dba074a977fa'
   name 'Goland'
   name 'Goland EAP'
   homepage 'https://www.jetbrains.com/go/'
@@ -18,11 +18,10 @@ cask 'goland' do
     ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'goland') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }
   end
 
-  # The folders GoLand creates are still named Gogland. This should be checked after the first non-EAP release.
   zap trash: [
-               "~/Library/Application Support/Gogland#{version.major_minor}",
-               "~/Library/Caches/Gogland#{version.major_minor}",
-               "~/Library/Logs/Gogland#{version.major_minor}",
-               "~/Library/Preferences/Gogland#{version.major_minor}",
+               "~/Library/Application Support/GoLand#{version.major_minor}",
+               "~/Library/Caches/GoLand#{version.major_minor}",
+               "~/Library/Logs/GoLand#{version.major_minor}",
+               "~/Library/Preferences/GoLand#{version.major_minor}",
              ]
 end
