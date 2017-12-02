@@ -4,7 +4,7 @@ cask 'meteorologist' do
 
   url "https://downloads.sourceforge.net/heat-meteo/Meteorologist-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/heat-meteo/rss',
-          checkpoint: 'f9372f2126975f489d1cc38da454b641b00c919c84eb29c89a053c63e0fc508f'
+          checkpoint: '163b2844bfcff1d648e50e71335c8b57a00955a4c8ae3ce9b64cfd842c7cb25a'
   name 'Meteorologist'
   homepage 'http://heat-meteo.sourceforge.net/'
 
