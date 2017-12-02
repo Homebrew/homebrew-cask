@@ -1,6 +1,6 @@
 cask 'skim' do
-  version '1.4.21'
-  sha256 '7680a2747a0c9a18fab1dfc84da22b7bf8afec8fad7fb0f58d8c16e23ea3bcba'
+  version '1.4.31'
+  sha256 'e6577dab56f01661b31ed9019e18661c5eaa77861f411a99299973161447702a'
 
   url "https://downloads.sourceforge.net/skim-app/Skim/Skim-#{version}/Skim-#{version}.dmg"
   appcast 'http://skim-app.sourceforge.net/skim.xml',
