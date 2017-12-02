@@ -1,6 +1,6 @@
 cask 'xmind-zen' do
-  version 'beta3'
-  sha256 '07e26e3aac2a570a52fb63844b33146ceb57c825585bda12a1296aecfc114b48'
+  version 'beta4'
+  sha256 'd101e634816db82f1ff156f64667bb33288fd852827b5ab058c780de3067d8b2'
 
   url "http://dl2.xmind.net/xmind-downloads/XMind-ZEN-Setup-#{version}.zip"
   name 'XMind ZEN'
