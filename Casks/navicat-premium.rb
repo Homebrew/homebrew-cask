@@ -1,10 +1,10 @@
 cask 'navicat-premium' do
-  version '12.0.18'
-  sha256 '0677642723aaaddd4ec68c813adf6a5335f966c340faa071192e1c7345853e95'
+  version '12.0.19'
+  sha256 '3734226e32fb79f660326f6e0d37404dad87e432dd9cbd5f0a2cd1346835675d'
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_premium_en.dmg"
   appcast 'https://www.navicat.com/en/products/navicat-premium-release-note',
-          checkpoint: '0db83877b751bf764e06dca014856ecb89d4b249dbe270e8a6dcd4cf81cb3e79'
+          checkpoint: '49f2c18d7c7065a2ad4a498b3208ec1ad4b36e733dcf0e42e9920d9bcd068f70'
   name 'Navicat Premium'
   homepage 'https://www.navicat.com/products/navicat-premium'
 
