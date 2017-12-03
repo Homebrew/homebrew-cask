@@ -14,7 +14,7 @@ cask 'qlcolorcode' do
 
   postflight do
     # This sets the path to the highlight binary to the preferred one found in $PATH.
-    system 'defaults write org.n8gray.QLColorCode pathHL "$(which highlight)"'
+    system_command '/usr/bin/defaults', args: ['write', 'org.n8gray.QLColorCode', 'pathHL', Formula['highlight'].bin]
   end
 
   zap trash: '~/Library/Preferences/org.n8gray.QLColorCode.plist'

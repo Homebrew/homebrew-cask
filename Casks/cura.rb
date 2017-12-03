@@ -6,8 +6,6 @@ cask 'cura' do
   name 'Cura'
   homepage 'https://ultimaker.com/en/products/cura-software'
 
-  conflicts_with cask: 'lulzbot-cura'
-
   app 'Cura.app'
 
   uninstall quit: 'nl.ultimaker.cura'
