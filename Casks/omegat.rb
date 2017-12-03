@@ -9,7 +9,7 @@ cask 'omegat' do
   name 'OmegaT'
   homepage 'https://omegat.org/'
 
-  app "OmegaT_#{version}_Mac_Signed/OmegaT.app"
+  app 'OmegaT.app'
 
   caveats do
     depends_on_java('8+')
