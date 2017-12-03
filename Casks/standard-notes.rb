@@ -5,7 +5,7 @@ cask 'standard-notes' do
   # github.com/standardnotes/desktop was verified as official when first introduced to the cask
   url "https://github.com/standardnotes/desktop/releases/download/v#{version}/Standard-Notes-#{version}-mac.zip"
   appcast 'https://github.com/standardnotes/desktop/releases.atom',
-          checkpoint: 'b0c7fd6e9e577061cebebe516679c6e2aacc3671c87f6ecb67eaae439ec4274a'
+          checkpoint: '55338df2178f4b3517f424086061de44b7433a8fbab9eee780225fa36e3f0a1d'
   name 'Standard Notes'
   homepage 'https://standardnotes.org/'
 
