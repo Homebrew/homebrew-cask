@@ -9,5 +9,5 @@ cask 'oolite' do
   name 'oolite'
   homepage 'http://www.oolite.org/'
 
-  app "Oolite #{version}/Oolite.app"
+  app 'Oolite.app'
 end
