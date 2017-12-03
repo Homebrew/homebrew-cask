@@ -1,11 +1,11 @@
 cask 'altair' do
-  version '1.5.4'
-  sha256 'dfa06f1f07fc5d62ed00ffa4d99394e879e3915d3188822f8bf59441974e3b3d'
+  version '1.5.5'
+  sha256 'ee8858141cfd6824ad2e2b24fd1c3529d4c8733db6f1d9b1149e70ab99aa13c3'
 
   # github.com/imolorhe/altair was verified as official when first introduced to the cask
-  url "https://github.com/imolorhe/altair/releases/download/v#{version}/altair-darwin-x64-#{version}.zip"
+  url "https://github.com/imolorhe/altair/releases/download/v#{version}/altair-#{version}-mac.zip"
   appcast 'https://github.com/imolorhe/altair/releases.atom',
-          checkpoint: 'b65660182062a10f1cba531c6300cec1988982920c6fe95a94ae58ea27197083'
+          checkpoint: 'b5d7cfffe62e6829f0a163a7767f96b7a8666a203fa5c51c985201ad098f90ec'
   name 'Altair GraphQL Client'
   homepage 'https://altair.sirmuel.design/'
 
