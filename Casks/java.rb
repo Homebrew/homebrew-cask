@@ -33,15 +33,6 @@ cask 'java' do
     system_command '/bin/ln',
                    args: ['-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Home/lib/server/libjvm.dylib", "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Home/bundle/Libraries/libserver.dylib"],
                    sudo: true
-
-    if MacOS.version <= :mavericks
-      system_command '/bin/rm',
-                     args: ['-rf', '--', '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'],
-                     sudo: true
-      system_command '/bin/ln',
-                     args: ['-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents", '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'],
-                     sudo: true
-    end
   end
 
   uninstall pkgutil:   [
@@ -61,13 +52,7 @@ cask 'java' do
                          "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents",
                          '/Library/PreferencePanes/JavaControlPanel.prefPane',
                          '/Library/Java/Home',
-                         if MacOS.version <= :mavericks
-                           [
-                             '/usr/lib/java/libjdns_sd.jnilib',
-                             '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK',
-                           ]
-                         end,
-                       ].keep_if { |v| !v.nil? }
+                       ]
 
   zap trash: [
                '/Library/Application Support/Oracle/Java',
