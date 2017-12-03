@@ -9,5 +9,5 @@ cask 'overture' do
   name 'Overture Tool'
   homepage 'http://overturetool.org/'
 
-  app 'Overture.app'
+  app "Overture-#{version}-macosx.cocoa.x86_64/Overture.app"
 end
