@@ -1,11 +1,10 @@
 cask 'polyphone' do
-  version '1.8'
-  sha256 '877f149b19c12c03f4c97b5f06b4c0e9d0e2b84c674a93146619c1cc24b16b69'
+  version '1.9'
+  sha256 '40d6a28e941d7ccc398782154f93290e1f9e3fbe7b9754c394f32e6a92636efa'
 
-  # sourceforge.net/polyphone was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/polyphone/polyphone-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/polyphone/rss',
-          checkpoint: '609b92b4f61512809cb2bac131873deac0b62d085a2ae617415d2fe585107fc3'
+  url "https://polyphone-soundfonts.com/judownload/0_1512442550_rk9xVE/polyphone-#{version}.dmg"
+  appcast 'https://github.com/davy7125/polyphone/releases',
+          checkpoint: '9b28ebf9c77bc731936a19d72ac70a7fbe5e1d3c15a8ad14ffd0887bf555461d'
   name 'Polyphone'
   homepage 'https://polyphone-soundfonts.com/'
 
