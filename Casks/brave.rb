@@ -1,11 +1,11 @@
 cask 'brave' do
-  version '0.19.95'
-  sha256 '47669b0587818ef7d51955249baa327a734178447e666f60016fba9669377139'
+  version '0.19.105'
+  sha256 '7fbc1f5a9fb26e8c98f6dfe82c457cb8302443e1e29dc7cca532226ca6b1fcff'
 
   # github.com/brave/browser-laptop was verified as official when first introduced to the cask
   url "https://github.com/brave/browser-laptop/releases/download/v#{version}dev/Brave-#{version}.dmg"
   appcast 'https://github.com/brave/browser-laptop/releases.atom',
-          checkpoint: 'ad2e1df4ce1ee62446e27c22e4fb82a731e1ba6156bc77a43d421ead985a8093'
+          checkpoint: '7757fac2cf1e16998f6fff6bb810b584a9bcce3b39986e8fc462bc6985ba84c1'
   name 'Brave'
   homepage 'https://brave.com/'
 

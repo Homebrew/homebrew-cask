@@ -8,10 +8,7 @@ cask 'libreoffice' do
   homepage 'https://www.libreoffice.org/'
   gpg "#{url}.asc", key_id: 'c2839ecad9408fbe9531c3e9f434a1efafeeaea3'
 
-  conflicts_with cask: [
-                         'libreoffice-dev',
-                         'libreoffice-still',
-                       ]
+  conflicts_with cask: 'libreoffice-still'
   depends_on macos: '>= :mountain_lion'
 
   app 'LibreOffice.app'

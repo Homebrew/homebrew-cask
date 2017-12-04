@@ -14,7 +14,7 @@ cask 'microsoft-lync' do
                  'com.microsoft.mau.all.autoupdate.*',
                  'com.microsoft.merp.all.errorreporting.*',
                ],
-      delete:  [
+      trash:   [
                  '~/Library/Preferences/com.microsoft.Lync.plist',
                  '~/Library/Logs/Microsoft-Lync-0.log',
                  '~/Documents/Microsoft User Data/Microsoft Lync Data',
