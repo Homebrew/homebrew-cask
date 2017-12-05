@@ -4,9 +4,15 @@ cask 'ethereum-wallet' do
 
   url "https://github.com/ethereum/mist/releases/download/v#{version}/Ethereum-Wallet-macosx-#{version.dots_to_hyphens}.dmg"
   appcast 'https://github.com/ethereum/mist/releases.atom',
-          checkpoint: '3b1579bde3cc402ac1fd41a873b7ca38db1f58831f2347c098010d90cbe4ff55'
+          checkpoint: 'cbf17a1c3ba682ca375b75d518dd6b27581a4f108eb45e47571f155bc5f678d0'
   name 'Ethereum Wallet'
   homepage 'https://github.com/ethereum/mist'
 
   app 'Ethereum Wallet.app'
+
+  zap trash: [
+               '~/Library/Application Support/Ethereum Wallet',
+               '~/Library/Preferences/com.ethereum.wallet.plist',
+               '~/Library/Preferences/com.ethereum.wallet.helper.plist',
+             ]
 end
