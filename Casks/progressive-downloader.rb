@@ -1,6 +1,6 @@
 cask 'progressive-downloader' do
-  version '3.0.1'
-  sha256 'e398318ab642168ca4a25736584fc7cbe53660db2c143e75446807c8587fc36d'
+  version '3.0.5'
+  sha256 '2394e1d68b1ae8411a18faaca787194caa7f1250f591dd9db41da67bfb8618a8'
 
   url "https://www.macpsd.net/update/#{version}/PSD.dmg"
   name 'Progressive Downloader'
@@ -12,6 +12,7 @@ cask 'progressive-downloader' do
 
   zap trash: [
                '~/Library/Application Support/Progressive Downloader Data',
+               '~/Library/Caches/com.PS.Downloader',
                '~/Library/Caches/com.PS.PSD',
                '~/Library/Preferences/com.PS.PSD.plist',
              ]
