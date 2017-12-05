@@ -4,11 +4,16 @@ cask 'libreoffice' do
 
   # documentfoundation.org was verified as official when first introduced to the cask
   url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg"
+  appcast 'https://download.documentfoundation.org/libreoffice/stable/',
+          checkpoint: '8df6eaec89e8697b47cb460dee988e576bb735214d697ee7a24b65d6d1302d87'
   name 'LibreOffice'
   homepage 'https://www.libreoffice.org/'
   gpg "#{url}.asc", key_id: 'c2839ecad9408fbe9531c3e9f434a1efafeeaea3'
 
-  conflicts_with cask: 'libreoffice-still'
+  conflicts_with cask: [
+                         'libreoffice-rc',
+                         'libreoffice-still',
+                       ]
   depends_on macos: '>= :mountain_lion'
 
   app 'LibreOffice.app'
