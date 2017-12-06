@@ -3,6 +3,8 @@ cask 'sekey' do
   sha256 '86cd69753de6a186f5991c7148014e8349ecc59d6bd15da19823a24e62faa4db'
 
   url "https://github.com/ntrippar/sekey/releases/download/#{version}/SeKey-#{version}.zip"
+  appcast 'https://github.com/ntrippar/sekey/releases.atom',
+          checkpoint: 'ed0d4a9db584f983da245bf83ec70ecdf1fe0e7109d10660b2dd43225e2f53f8'
   name 'SeKey'
   homepage 'https://github.com/ntrippar/sekey'
 
