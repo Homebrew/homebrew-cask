@@ -4,7 +4,7 @@ cask 'mps' do
 
   url "https://download.jetbrains.com/mps/#{version.before_comma.major_minor}/MPS-#{version.before_comma}-macos-jdk-bundled.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=MPS&latest=true&type=release',
-          checkpoint: 'cb317613db4035696d1eac0dcde968b7fe5a33ce6125006ccc44b477c43f1a6c'
+          checkpoint: '9a6768c634431dfab713bd8ae2adfb21b4563a6813eedf1ebca3c4022c1ab661'
   name 'JetBrains MPS'
   homepage 'https://www.jetbrains.com/mps/'
 
