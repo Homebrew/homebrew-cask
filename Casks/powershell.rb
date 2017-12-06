@@ -32,6 +32,6 @@ cask 'powershell' do
     and default credentials for web requests.
     This is rarely needed, but you can install it with
       brew install curl --with-openssl --with-gssapi
-    See https://github.com/PowerShell/PowerShell/issues/2211
+    See https://github.com/PowerShell/PowerShell/issues/5638
   EOS
 end
