@@ -30,7 +30,7 @@ cask 'powershell' do
   caveats <<~EOS
     A OpenSSL-backed libcurl is required for custom handling of certificates.
     This is rarely needed, but you can install it with
-      brew install curl --with-openssl
+      brew install curl --with-openssl --with-gssapi
     See https://github.com/PowerShell/PowerShell/issues/2211
   EOS
 end
