@@ -2,8 +2,8 @@ cask 'awa' do
   version '1.4.2'
   sha256 :no_check
 
-  # download-d.awa.io was verified as official when first introduced to the cask
-  url 'https://download-d.awa.io/mac/stable/AWASetup-v1.4.2.dmg'
+  # download-d.awa.io/mac/stable was verified as official when first introduced to the cask
+  url "https://download-d.awa.io/mac/stable/AWASetup-v#{version}.dmg"
   name 'AWA'
   homepage 'https://awa.fm/'
 
