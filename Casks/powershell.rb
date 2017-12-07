@@ -28,9 +28,10 @@ cask 'powershell' do
              ]
 
   caveats <<~EOS
-    A OpenSSL-backed libcurl is required for custom handling of certificates.
+    A OpenSSL-backed libcurl with GSSAPI is required for custom handling
+    of certificates and default credentials for web requests.
     This is rarely needed, but you can install it with
-      brew install curl --with-openssl
-    See https://github.com/PowerShell/PowerShell/issues/2211
+      brew install curl --with-openssl --with-gssapi
+    See https://github.com/PowerShell/PowerShell/issues/5638
   EOS
 end
