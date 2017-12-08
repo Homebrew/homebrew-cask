@@ -8,5 +8,5 @@ cask 'healthi' do
   name 'healthi'
   homepage 'https://github.com/pablopunk/healthi-app'
 
-  app 'healthi.app'
+  app 'healthi-app.app'
 end
