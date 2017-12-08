@@ -8,5 +8,5 @@ cask 'dingtalk' do
   name '钉钉'
   homepage 'https://www.dingtalk.com/'
 
-  app '钉钉.app'
+  app 'DingTalk.app'
 end
