@@ -1,10 +1,10 @@
 cask 'compositor' do
-  version '0.9.16'
-  sha256 '9635237cc58a73d9ac5de500c91cdcb8839a1ec1dbdcc36c34f7f8e133337482'
+  version '0.9.17'
+  sha256 'ae58d823b8263b1d9437f95801f6c0d1b0f414d32e0fb47eb09747519985b0f9'
 
   url 'http://compositorapp.com/downloads/Compositor.dmg'
   appcast 'http://compositorapp.com/updates/appcast.xml',
-          checkpoint: '85d7de3d9587c6792587b69e2f06ec766399bfe5c3c29a09373c5c2961b56794'
+          checkpoint: '8997ec0c1c7f7ddf62da7871fb317d7954cc2bcb9278af610ca347ce0cdfdf50'
   name 'Compositor'
   homepage 'http://compositorapp.com/'
 
