@@ -1,15 +1,15 @@
 cask 'controllermate' do
-  version '4.10.3'
-  sha256 'a20f24420084fdaeccfd0e116f0d51d6195132892a6ff81bf24c2c0dbac621f2'
+  version '4.10.4'
+  sha256 'fdeb37ca8df145d927b9daef6dfa22ef6d1535f9ad1459c4f4ffcb52fbc19c3b'
 
   # amazonaws.com/orderedbytes was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/orderedbytes/ControllerMate#{version.no_dots}.zip"
   appcast 'https://www.orderedbytes.com/sparkle/appcast_cm460.xml',
-          checkpoint: '684bfc150d43530aabc7563ba0ad16f249eb90d3dca70c435f99314ae51f2cf7'
+          checkpoint: 'c28a14b30a4e7d0aa389f5bcf78736d29e79d19f409734eb624b30eccbe1a76a'
   name 'ControllerMate'
   homepage 'https://www.orderedbytes.com/controllermate/'
 
-  pkg '#temp#/ControllerMate.pkg'
+  pkg '#temp#/ControllerMate.sparkle_interactive.pkg'
 
   uninstall launchctl: [
                          'com.orderedbytes.ControllerMateHelper',
