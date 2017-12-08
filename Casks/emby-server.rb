@@ -5,7 +5,7 @@ cask 'emby-server' do
   # github.com/MediaBrowser/Emby was verified as official when first introduced to the cask
   url "https://github.com/MediaBrowser/Emby/releases/download/#{version}/embyserver-osx-x64-#{version}.zip"
   appcast 'https://github.com/MediaBrowser/Emby/releases.atom',
-          checkpoint: '4753cd74957ef927b539ba5b3b5d1a18eaa75ce6a5e27a9ce63650badf3625d0'
+          checkpoint: 'bbafec4c3a8be87398119c2817428486a4c17335a77f57bb12576917db988d31'
   name 'Emby Server'
   homepage 'https://emby.media/'
 
