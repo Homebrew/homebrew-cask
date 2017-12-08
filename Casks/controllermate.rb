@@ -9,7 +9,7 @@ cask 'controllermate' do
   name 'ControllerMate'
   homepage 'https://www.orderedbytes.com/controllermate/'
 
-  pkg '#temp#/ControllerMate.pkg'
+  pkg '#temp#/ControllerMate.sparkle_interactive.pkg'
 
   uninstall launchctl: [
                          'com.orderedbytes.ControllerMateHelper',
