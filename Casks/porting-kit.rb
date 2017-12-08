@@ -9,7 +9,7 @@ cask 'porting-kit' do
   homepage 'http://portingkit.com/en/'
 
   auto_updates true
-  conflicts_with cask: 'caskroom/versions/porting-kit-legacy'
+  conflicts_with cask: 'porting-kit-legacy'
   depends_on macos: '>= :mountain_lion'
 
   app 'Porting Kit.app'
