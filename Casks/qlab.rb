@@ -1,10 +1,10 @@
 cask 'qlab' do
-  version '4.1.4'
-  sha256 '524878b5c7503386a73fc72f1ac0a22c377d24a7ab8c7154b2c75239e3ea9a7e'
+  version '4.1.6'
+  sha256 '2b44fae326c032102f6e9e82af6feb7d900e79abd7d32b17bdadb663e569f4a9'
 
   url "https://figure53.com/qlab/downloads/QLab-#{version}.zip"
   appcast "https://figure53.com/qlab/downloads/appcast-v#{version.major}/",
-          checkpoint: '44a446009a8958ed98cc61703798d6562da301091d981743b3cd448086669924'
+          checkpoint: '3dac24a1b43c192de56da1c500ad00ef8d8f12d8304e3cbd6433a1d85ea09d7f'
   name 'QLab'
   homepage 'https://figure53.com/qlab/'
 
