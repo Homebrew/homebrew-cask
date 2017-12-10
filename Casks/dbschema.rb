@@ -4,7 +4,7 @@ cask 'dbschema' do
 
   url "https://www.dbschema.com/download/DbSchema_macos_#{version.dots_to_underscores}.tgz"
   name 'DbSchema'
-  homepage 'http://www.dbschema.com/'
+  homepage 'https://www.dbschema.com/'
 
   app 'DbSchema.app'
 end
