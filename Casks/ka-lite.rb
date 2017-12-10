@@ -4,9 +4,11 @@ cask 'ka-lite' do
 
   url "http://pantry.learningequality.org/downloads/ka-lite/#{version.major_minor}/installers/mac/KA-Lite-#{version}.dmg"
   appcast 'https://github.com/learningequality/ka-lite/releases.atom',
-          checkpoint: 'a701693e2b43a34bde3b2ad4940af6b94e262491a414b86b57c4c81ffeeafa05'
+          checkpoint: '3e57c69d45e5226579259c9924a8668ee3619f628b18cad44fd1261a2924ce8e'
   name 'Khan Academy Lite'
   homepage 'https://learningequality.org/ka-lite/'
+
+  depends_on formula: 'python'
 
   pkg 'KA-Lite.pkg'
 
@@ -14,7 +16,9 @@ cask 'ka-lite' do
             signal:  ['TERM', 'org.learningequality.kalite'],
             script:  {
                        executable: '/Applications/KA-Lite/KA-Lite_Uninstall.tool',
-                       args:       ['Yes', 'Yes'],
+                       args:       ['Yes', 'No'],
                        sudo:       true,
                      }
+
+  zap trash: '~/.kalite'
 end
