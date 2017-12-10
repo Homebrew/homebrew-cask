@@ -9,5 +9,5 @@ cask 'retroshare' do
   name 'RetroShare'
   homepage 'http://retroshare.sourceforge.net/'
 
-  app "retroshare.app"
+  app 'retroshare.app'
 end
