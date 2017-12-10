@@ -1,11 +1,11 @@
 cask 'disk-sensei' do
-  version '1.6.1'
-  sha256 '0260cdf936512c94f9867cdfe5e7e29c4629426d0eb561474dbbf467f88156d6'
+  version '1.6.3'
+  sha256 '7c534cf3cae64f70a2bbc6343bbd34283cbace6b3d5e21e45c25f115b30c40c8'
 
   # amazonaws.com/cindori was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/cindori/DiskSensei.zip'
   appcast 'https://www.cindori.org/updates/disksensei/DiskSensei.xml',
-          checkpoint: '65d0b4c09f93480e71ccbf745ab6fe538b9326ece94e3e7c01799d788b9a395a'
+          checkpoint: '1ea3730f833ce27ea547b4b9b0e4e8365c6afe84402647679167ac5d16e757c6'
   name 'Disk Sensei'
   homepage 'https://cindori.org/'
 
