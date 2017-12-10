@@ -11,5 +11,7 @@ cask 'snipaste' do
 
   app 'Snipaste.app'
 
+  uninstall quit: 'com.Snipaste'
+
   zap trash: '~/Library/Preferences/com.Snipaste.plist'
 end
