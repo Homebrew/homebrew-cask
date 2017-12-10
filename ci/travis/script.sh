@@ -54,6 +54,6 @@ for check in "${checks[@]}"; do
 
   if ! /usr/bin/diff "${HOME}/cask-checks/before/${check}" "${HOME}/cask-checks/after/${check}" > /dev/null; then 
     ohai "Leftover: ${check}"
-    /usr/bin/diff "${HOME}/cask-checks/before/${check}" "${HOME}/cask-checks/after/${check}" | /usr/bin/tail -n +2
+    /usr/bin/diff "${HOME}/cask-checks/before/${check}" "${HOME}/cask-checks/after/${check}" | grep '>'
   fi
 done
