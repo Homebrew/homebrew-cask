@@ -1,10 +1,10 @@
 cask 'wewechat' do
-  version '1.1.4'
-  sha256 '80a6155085f1dfe5685610e4ff84a6bc60d297787578dba22a5f8991a82255b3'
+  version '1.1.5'
+  sha256 'c4942bf6e325dc1d914602013315ce9f2a943b93c9ec48ec7c3f052f4d88f11e'
 
   url "https://github.com/trazyn/weweChat/releases/download/v#{version}/weweChat-#{version}-mac.dmg"
   appcast 'https://github.com/trazyn/weweChat/releases.atom',
-          checkpoint: 'a2bce12704796cc87a98a58271c271b942b40af2fc86bbbc89b352d0eb6d7d82'
+          checkpoint: '1d96bec4f18c88a3385ff9679ddb624d48a718bff38c50cb879fe2f15c7e500c'
   name 'weweChat'
   homepage 'https://github.com/trazyn/weweChat'
 
