@@ -18,7 +18,7 @@ pkgs () { "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bi
 
 checks=('apps' 'kexts' 'launchjob_install' 'launchjob_load' 'pkgs')
 
-mkdir -p "${HOME}/cask-checks/"{before,after}
+/bin/mkdir -p "${HOME}/cask-checks/"{before,after}
 
 for check in "${checks[@]}"; do
   "${check}" > "${HOME}/cask-checks/before/${check}"
@@ -46,6 +46,8 @@ elif [[ ${#modified_casks[@]} -gt 0 ]]; then
 else
   ohai 'No Casks modified, skipping'
 fi
+
+set +o errexit # set by helper.sh
 
 for check in "${checks[@]}"; do
   "${check}" > "${HOME}/cask-checks/after/${check}"
