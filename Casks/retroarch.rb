@@ -1,10 +1,10 @@
 cask 'retroarch' do
-  version '1.6.7'
-  sha256 '2e392c146b1b5292a51b83d5317d1c8ef0fd7ae831bf55ecbf92cd8fe116eff8'
+  version '1.6.9'
+  sha256 '8f40bda9663f3d5038d4794e9898a4ec556ed99388968fb9369c7fdb2602d033'
 
   url "https://buildbot.libretro.com/stable/#{version}/apple/osx/x86_64/RetroArch.dmg"
   appcast 'https://buildbot.libretro.com/stable/',
-          checkpoint: 'daceb535d46ef24d786082ba1d0ff0b13c6dab770268b3a4d945d6a89fab00a8'
+          checkpoint: 'fbfa45768b0f365098df211389b076a31ac4ef37e6df265d0e049f6a59187421'
   name 'RetroArch'
   homepage 'https://www.libretro.com/'
 
