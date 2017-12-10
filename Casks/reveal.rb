@@ -8,5 +8,7 @@ cask 'reveal' do
   name 'Reveal'
   homepage 'https://revealapp.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Reveal.app'
 end
