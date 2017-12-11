@@ -1,13 +1,17 @@
 cask 'clarify' do
-  version '2.0.8-209'
-  sha256 '76450580681426d12bea14fb4cc199d2a7b3c3febe5d2508d080fb7e7265abf3'
+  version '2.0.10-215'
+  sha256 '107f2853754fae851c28c1c882074861fdf84daec9dfa88b7205be1e224223da'
 
   # amazonaws.com/files.clarify-it.com was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/files.clarify-it.com/v2/installers/Clarify%20#{version}.dmg"
-  appcast "https://www.bluemangolearning.com/download/clarify/#{version.major_minor.dots_to_underscores}/auto_update/release/clarify_appcast.xml",
-          checkpoint: '168b1e6e383df8232bd9e3ac645975500c92705234f3188a9e1f89db18c23eef'
+  url "https://s3.amazonaws.com/files.clarify-it.com/v#{version.major}/updaters/release/#{version}/Clarify.app.zip"
+  appcast "https://s3.amazonaws.com/files.clarify-it.com/v#{version.major}/updaters/release/appcast.xml",
+          checkpoint: '61d4fc126e0055f654a8f781dacce21527b24437070c71e67fc7a2346431c9ae'
   name 'Clarify'
   homepage 'http://www.clarify-it.com/'
 
   app 'Clarify.app'
+  
+  caveats do
+    discontinued
+  end
 end
