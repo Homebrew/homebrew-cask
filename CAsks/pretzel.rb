@@ -3,7 +3,7 @@ cask 'pretzel' do
   sha256 :no_check
 
   url 'https://download.pretzel.rocks/PretzelDesktop.dmg'
-  name 'PretzelDesktop'
+  name 'Pretzel'
   homepage 'https://www.pretzel.rocks/'
 
   app 'Pretzel.app'
