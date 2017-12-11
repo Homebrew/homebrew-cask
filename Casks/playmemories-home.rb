@@ -1,6 +1,6 @@
 cask 'playmemories-home' do
-  version '3.5.00,6XZpdMN1Ie'
-  sha256 '3b3ab315fd203c64b07d00b82d8a6ae46a677ad3e604e955a42c4ce209d0ca93'
+  version '3.6.01,zb2OnHfINu'
+  sha256 '99de6ea54029d14b7c7b94d7a4d5096470a65a26a3aff53164213272b0d33896'
 
   # pmb.update.sony.net/PMH was verified as official when first introduced to the cask
   url "http://pmb.update.sony.net/PMH/#{version.after_comma}/PMHOME_#{version.before_comma.no_dots}DL.dmg"
