@@ -2,7 +2,7 @@ cask 'pretzel' do
   version '0.0.15'
   sha256 '4b8363b2f113abe9bd123e55922abc9d01bc64835e5ae812832d683905e6b72b'
 
-  url 'https://download.pretzel.rocks/PretzelDesktop.dmg'
+  url "https://download.pretzel.rocks/Pretzel-#{version}-mac.zip"
   name 'Pretzel'
   homepage 'https://www.pretzel.rocks/'
 
