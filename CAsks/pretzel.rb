@@ -1,6 +1,6 @@
 cask 'pretzel' do
   version '0.0.15'
-  sha256 '4b8363b2f113abe9bd123e55922abc9d01bc64835e5ae812832d683905e6b72b'
+  sha256 '8cda79066234d2d4fc8c0a3078b72c6d61e433e706e3eb15452dba0b1b7bdce5'
 
   url "https://download.pretzel.rocks/Pretzel-#{version}-mac.zip"
   appcast 'https://download.pretzel.rocks/latest-mac.json',
