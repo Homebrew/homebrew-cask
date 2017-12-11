@@ -12,5 +12,9 @@ cask 'jietu' do
   uninstall quit:      'com.tencent.JietuMac',
             launchctl: 'com.tencent.JietuHelperMac'
 
-  zap trash: '~/Library/Preferences/com.tencent.JietuMac.plist'
+  zap trash: [
+               '~/Library/Application Support/Jietu',
+               '~/Library/Caches/com.tencent.JietuMac',
+               '~/Library/Preferences/com.tencent.JietuMac.plist',
+             ]
 end
