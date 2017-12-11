@@ -1,6 +1,6 @@
 cask 'clarify' do
-  version '2.0.8-209'
-  sha256 '76450580681426d12bea14fb4cc199d2a7b3c3febe5d2508d080fb7e7265abf3'
+  version '2.0.10-215'
+  sha256 '107f2853754fae851c28c1c882074861fdf84daec9dfa88b7205be1e224223da'
 
   # amazonaws.com/files.clarify-it.com was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/files.clarify-it.com/v2/installers/Clarify%20#{version}.dmg"
