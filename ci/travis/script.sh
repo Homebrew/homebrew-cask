@@ -24,6 +24,10 @@ for check in "${checks[@]}"; do
   "${check}" > "${HOME}/cask-checks/before/${check}"
 done
 
+export HOMEBREW_NO_AUTO_UPDATE=1 # skip update triggered by brew tap
+brew tap homebrew/bundle
+brew bundle dump --file="${HOME}/Brewfile"
+
 modified_ruby_files=($(git diff --name-only --diff-filter=AMR "${TRAVIS_COMMIT_RANGE}" -- *.rb))
 
 for file in "${modified_ruby_files[@]}"; do
@@ -48,6 +52,7 @@ else
 fi
 
 set +o errexit # set by helper.sh
+brew bundle cleanup --force --file="${HOME}/Brewfile"
 
 for check in "${checks[@]}"; do
   "${check}" > "${HOME}/cask-checks/after/${check}"
