@@ -32,3 +32,20 @@ elif [[ ${#modified_casks[@]} -gt 0 ]]; then
 else
   ohai 'No Casks modified, skipping'
 fi
+
+export HOMEBREW_NO_AUTO_UPDATE=1
+
+brew tap caskroom/drivers
+brew tap caskroom/eid
+
+set +o errexit
+
+for cask in $(find /usr/local/Homebrew/Library/Taps/caskroom/homebrew-drivers/Casks -name '*.rb'); do
+  gtimeout 60 brew cask audit "${cask}"
+done
+
+for cask in $(find /usr/local/Homebrew/Library/Taps/caskroom/homebrew-eid/Casks -name '*.rb'); do
+  gtimeout 60 brew cask audit "${cask}"
+done
+
+
