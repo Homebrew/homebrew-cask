@@ -1,6 +1,6 @@
 cask 'teeworlds' do
   version '0.6.4'
-  sha256 'cb638bbe6f042262c4f8c25f913209e2c4b2d96efe9a8191d4acea6988572a6c'
+  sha256 '547e6535ea38895a148bec365752c915bad7a661fd224cb3d019e62012a5559c'
 
   url "https://downloads.teeworlds.com/teeworlds-#{version}-osx.dmg"
   appcast 'https://www.teeworlds.com/?page=downloads',
