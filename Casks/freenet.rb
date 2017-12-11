@@ -9,4 +9,3 @@ cask 'freenet' do
 
   app 'FreenetTray.app'
 end
-
