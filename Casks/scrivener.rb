@@ -9,5 +9,7 @@ cask 'scrivener' do
   name 'Scrivener'
   homepage 'https://literatureandlatte.com/scrivener.php'
 
+  depends_on macos: '>= :sierra'
+
   app 'Scrivener.app'
 end
