@@ -5,7 +5,7 @@ cask 'freenet' do
   # github.com was verified as official when first introduced to the cask
   url 'https://github.com/freenet/mactray/releases/download/v2.1.0/FreenetTray_2.1.0.zip'
   appcast 'https://github.com/freenet/mactray/releases.atom',
-  		checkpoint: 'eec8e91d4369875d291545af99043499207bb5fd99e3de841a55d0e863662209'
+          checkpoint: 'eec8e91d4369875d291545af99043499207bb5fd99e3de841a55d0e863662209'
   name 'Freenet'
   homepage 'https://freenetproject.org/'
 
