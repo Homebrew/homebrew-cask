@@ -10,4 +10,11 @@ cask 'franz' do
   homepage 'https://meetfranz.com/'
 
   app 'Franz.app'
+
+  zap trash: [
+               '~/Library/Application Support/Franz',
+               '~/Library/Preferences/com.electron.franz.helper.plist',
+               '~/Library/Preferences/com.electron.franz.plist',
+               '~/Library/Saved Application State/com.electron.franz.savedState',
+             ]
 end
