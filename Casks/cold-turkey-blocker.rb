@@ -1,5 +1,5 @@
-cask 'cold-turkey' do
-  version '3.1'
+cask 'cold-turkey-blocker' do
+  version :lastest
   sha256 :no_check
 
   url 'https://getcoldturkey.com/files/Cold_Turkey_Mac_Installer.pkg'
@@ -7,4 +7,6 @@ cask 'cold-turkey' do
   homepage 'https://getcoldturkey.com/'
 
   pkg 'Cold_Turkey_Mac_Installer.pkg'
+
+  uninstall pkgutil: 'com.getcoldturkey.coldTurkeyBlocker.ColdTurkeyBlocker.pkg'
 end
