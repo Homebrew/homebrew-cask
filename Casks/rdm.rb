@@ -5,7 +5,7 @@ cask 'rdm' do
   # github.com/uglide/RedisDesktopManager was verified as official when first introduced to the cask
   url "https://github.com/uglide/RedisDesktopManager/releases/download/#{version.sub(%r{-.*}, '')}/redis-desktop-manager-#{version}.dmg"
   appcast 'https://github.com/uglide/RedisDesktopManager/releases.atom',
-          checkpoint: 'abd6f9afffad1603078526f83060bd3f31f35c81243b6c3e7d384d68f4ce71b2'
+          checkpoint: 'f393b2adb7209c2dc984526e87895f220450050fffd40d8f8f0369943d24953e'
   name 'Redis Desktop Manager'
   homepage 'https://redisdesktop.com/'
 
