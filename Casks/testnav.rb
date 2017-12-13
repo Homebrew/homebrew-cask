@@ -4,7 +4,7 @@ cask 'testnav' do
 
   url "http://download.testnav.com/installers/testnav-#{version}.dmg"
   name 'TestNav'
-  homepage "http://download.testnav.com/"
+  homepage 'http://download.testnav.com/'
 
   app 'TestNav.app'
 end
