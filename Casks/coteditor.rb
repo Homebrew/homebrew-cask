@@ -27,7 +27,7 @@ cask 'coteditor' do
   homepage 'https://coteditor.com/'
 
   app 'CotEditor.app'
-  binary "#{appdir}/CotEditor.app/Contents/SharedSupport/bin/cot", target: 'cot'
+  binary "#{appdir}/CotEditor.app/Contents/SharedSupport/bin/cot"
 
   zap trash: [
                '~/Library/Application Scripts/com.coteditor.CotEditor',
