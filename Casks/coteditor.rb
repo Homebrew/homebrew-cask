@@ -15,19 +15,19 @@ cask 'coteditor' do
     # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
     url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   else
-    version '3.2.5'
-    sha256 '2161dc09084f4eaff597de9ab3fe3a0d160ec6787b2ccf76e63a936a11399896'
+    version '3.2.6'
+    sha256 '22573b99819be744860ae1e2ee19a4415b81d9663e8475b6329211e75b3e086e'
     # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
     url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   end
 
   appcast 'https://github.com/coteditor/CotEditor/releases.atom',
-          checkpoint: '0d7f0c0f8f7580bd6c8413e7ee4ea406e769765d5caaa26f9354da7dfd41ef0b'
+          checkpoint: '3a173d0e1f565b7357a3dd0d9e027fb05ad7f458d0f0414a6f019527dcebb10a'
   name 'CotEditor'
   homepage 'https://coteditor.com/'
 
   app 'CotEditor.app'
-  binary "#{appdir}/CotEditor.app/Contents/SharedSupport/bin/cot", target: 'cot'
+  binary "#{appdir}/CotEditor.app/Contents/SharedSupport/bin/cot"
 
   zap trash: [
                '~/Library/Application Scripts/com.coteditor.CotEditor',
