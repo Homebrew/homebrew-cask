@@ -4,8 +4,8 @@ cask 'lilypond' do
 
   # linuxaudio.org/lilypond was verified as official when first introduced to the cask
   url "https://download.linuxaudio.org/lilypond/binaries/darwin-x86/lilypond-#{version}.darwin-x86.tar.bz2"
-  appcast 'https://download.linuxaudio.org/lilypond/binaries/darwin-x86/',
-          checkpoint: 'dd561bea122f7be6e6314bd39f42d6325bd5cc701e1ea75ca5f866294da7f3c5'
+  appcast 'http://lilypond.org/macos-x.html',
+          checkpoint: '1b49752034aa258d4ff5dedbb2c09d73910d1dfe004b30801664e3e7f5b95871'
   name 'LilyPond'
   homepage 'http://lilypond.org/'
 
