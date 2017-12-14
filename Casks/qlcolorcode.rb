@@ -13,8 +13,7 @@ cask 'qlcolorcode' do
   qlplugin 'QLColorCode.qlgenerator'
 
   postflight do
-    # This sets the path to the highlight binary to the preferred one found in $PATH.
-    system_command '/usr/bin/defaults', args: ['write', 'org.n8gray.QLColorCode', 'pathHL', Formula['highlight'].bin]
+    system_command '/usr/bin/defaults', args: ['write', 'org.n8gray.QLColorCode', 'pathHL', "#{HOMEBREW_PREFIX}/bin/highlight"]
   end
 
   zap trash: '~/Library/Preferences/org.n8gray.QLColorCode.plist'
