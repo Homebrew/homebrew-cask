@@ -6,5 +6,6 @@ cask 'tencent-video' do
   name 'Tencent Video'
   homepage 'https://v.qq.com/download.html'
 
+  # Cask name is after product name in Chinese. I don't see the advantage of renaming at this point.
   app 'QQLive.app'
 end
