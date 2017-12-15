@@ -6,5 +6,7 @@ cask 'insync' do
   name 'Insync'
   homepage 'https://www.insynchq.com/'
 
+  conflicts_with cask: 'insync-beta'
+
   app 'Insync.app'
 end
