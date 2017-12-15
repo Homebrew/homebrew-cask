@@ -1,10 +1,10 @@
 cask 'zotero' do
-  version '5.0.30'
-  sha256 'c0e4619705c7532525c407b46d0f8c171feab8fb1b35ae2ae5f473d17a56afe6'
+  version '5.0.31'
+  sha256 '2bce8f23ac0a55a1166778e225f845d529028882a39e470ce5a6d5ec96ae74c5'
 
   url "https://download.zotero.org/client/release/#{version}/Zotero-#{version}.dmg"
   appcast 'https://github.com/zotero/zotero/releases.atom',
-          checkpoint: '0c630534ced0107932acfcac96a9abebc0d7c0602a575f276ae2ad42d73f44af'
+          checkpoint: '6c54ed5945a2bad7a6206000de19c3575851e061138f5a833a2eef3cfd7ae02a'
   name 'Zotero'
   homepage 'https://www.zotero.org/'
 
