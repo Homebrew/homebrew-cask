@@ -73,8 +73,8 @@ Note that `uninstall --force` is currently imperfect. See the man page for more 
 * `home` — opens the homepage of the given Cask; or with no arguments, the Homebrew-Cask project page
 * `update` — a synonym for `brew update`
 * `zap` — try to remove *all* files associated with a Cask (may include resources shared with other applications)
-* `outdated` - lists all outdated casks
-* `
+* `outdated` - lists all outdated Casks
+* `upgrade` - updates all outdated Casks; you can view all Casks that will be upgraded by running the `outdated` command
 
 The following commands are for Cask authors:
 
