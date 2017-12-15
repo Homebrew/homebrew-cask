@@ -10,4 +10,6 @@ cask 'electrum' do
   gpg "#{url}.asc", key_id: '6694d8de7be8ee5631bed9502bd5824b7f9470e6'
 
   app 'Electrum.app'
+
+  zap trash: '~/.electrum'
 end
