@@ -10,4 +10,9 @@ cask 'jaxx' do
   homepage 'https://jaxx.io/'
 
   app 'Jaxx.app'
+
+  zap trash: [
+               '~/Library/Application Support/jaxx',
+               '~/Library/Logs/jaxx',
+             ]
 end
