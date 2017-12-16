@@ -10,4 +10,11 @@ cask 'exodus' do
   homepage 'https://www.exodus.io/'
 
   app 'Exodus.app'
+
+  zap trash: [
+               '~/Library/Application Support/Exodus',
+               '~/Library/Preferences/com.electron.exodus.helper.plist',
+               '~/Library/Preferences/com.electron.exodus.plist',
+               '~/Library/Saved Application State/com.electron.exodus.savedState',
+             ]
 end
