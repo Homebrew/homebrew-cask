@@ -71,7 +71,6 @@ Note that `uninstall --force` is currently imperfect. See the man page for more 
 * `doctor` — checks for configuration issues
 * `cleanup` — cleans up cached downloads (with `--outdated`, only cleans old downloads)
 * `home` — opens the homepage of the given Cask; or with no arguments, the Homebrew-Cask project page
-* `update` — a synonym for `brew update`
 * `zap` — try to remove *all* files associated with a Cask (may include resources shared with other applications)
 
 The following commands are for Cask authors:
@@ -86,7 +85,6 @@ The following aliases and abbreviations are provided for convenience:
 * `ls` — `list`
 * `-S` — `search`
 * `rm`, `remove` — `uninstall`
-* `up` — `update`
 * `dr` — `doctor`
 
 ## Tab Completion
