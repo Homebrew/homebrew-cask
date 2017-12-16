@@ -4,7 +4,7 @@ cask 'dynalist' do
 
   url 'https://dynalist.io/standalone/download?file=Dynalist.dmg'
   name 'Dynalist'
-  homepage 'https://dynalist.io/download'
+  homepage 'https://dynalist.io/'
 
   app 'Dynalist.app'
 end
