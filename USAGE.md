@@ -74,7 +74,7 @@ Note that `uninstall --force` is currently imperfect. See the man page for more 
 * `update` — a synonym for `brew update`
 * `zap` — try to remove *all* files associated with a Cask (may include resources shared with other applications)
 * `outdated` - lists all outdated Casks
-* `upgrade` - updates all outdated Casks; you can view all Casks that will be upgraded by running the `outdated` command
+* `upgrade` - updates all outdated Casks
 
 The following commands are for Cask authors:
 
