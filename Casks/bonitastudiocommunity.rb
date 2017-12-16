@@ -1,4 +1,4 @@
-cask 'bonitastudio' do
+cask 'bonitastudiocommunity' do
   version '7.6.0'
   sha256 'bb5a12a233ca7f0ede813070fedf34ecd3343c16dfae0f255f4707da130dba32'
 
@@ -15,7 +15,7 @@ cask 'bonitastudio' do
                     }
 
   uninstall quit:   'org.bonitasoft.studio.product',
-            delete: "#{appdir}/BonitaStudioCommunity.app"
+            delete: '/Applications/BonitaStudioCommunity.app'
 
   zap trash: [
                '~/Library/Preferences/org.bonitasoft.studio.product.plist',
