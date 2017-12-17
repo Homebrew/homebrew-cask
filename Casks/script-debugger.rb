@@ -4,7 +4,7 @@ cask 'script-debugger' do
 
   # s3.amazonaws.com/latenightsw.com was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/latenightsw.com/ScriptDebugger#{version}.dmg"
-  appcast 'https://www.latenightsw.com/versions/com.latenightsw.ScriptDebugger6.php',
+  appcast "https://www.latenightsw.com/versions/com.latenightsw.ScriptDebugger#{version.major}.php",
           checkpoint: '36f8c4638dd2281f170026d8c3fc5154b1ce7d8c9de33798097d5312a25ed56b'
   name 'Script Debugger'
   homepage 'http://latenightsw.com/'
@@ -12,8 +12,8 @@ cask 'script-debugger' do
   app 'Script Debugger.app'
 
   zap trash: [
-               '~/Library/Application Support/Script Debugger 6',
-               '~/Library/Caches/com.latenightsw.ScriptDebugger6',
-               '~/Library/Preferences/com.latenightsw.ScriptDebugger6.plist',
+               "~/Library/Application Support/Script Debugger #{version.major}",
+               "~/Library/Caches/com.latenightsw.ScriptDebugger#{version.major}",
+               "~/Library/Preferences/com.latenightsw.ScriptDebugger#{version.major}.plist",
              ]
 end
