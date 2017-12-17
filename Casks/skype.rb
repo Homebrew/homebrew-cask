@@ -23,7 +23,7 @@ cask 'skype' do
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.skype.skype.sfl',
                '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.skype.skype',
                '~/Library/Caches/com.skype.skype',
-               '~/Library/Caches/com.skype.skype.ShipIt'
+               '~/Library/Caches/com.skype.skype.ShipIt',
                '~/Library/Containers/com.skype.skype.shareagent',
                '~/Library/Cookies/com.skype.skype.binarycookies',
                '~/Library/Group Containers/*.com.skype.skype',
