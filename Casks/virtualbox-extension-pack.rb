@@ -28,7 +28,7 @@ cask 'virtualbox-extension-pack' do
     system_command '/usr/local/bin/VBoxManage',
                    args: [
                            'extpack', 'uninstall',
-                           'Oracle VM VirtualBox Extension Pack'
+                           '"Oracle VM VirtualBox Extension Pack"'
                          ],
                    sudo: true
   end
