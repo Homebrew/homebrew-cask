@@ -6,5 +6,5 @@ cask 'multimc' do
   name 'Multi MC'
   homepage 'https://multimc.org/'
 
-  app 'mmc-stable-osx64-0.5.1-908/MultiMC.app'
+  app "mmc-stable-osx64-#{version}/MultiMC.app"
 end
