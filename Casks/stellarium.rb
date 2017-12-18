@@ -1,11 +1,11 @@
 cask 'stellarium' do
   version '0.16.1.2'
-  sha256 '273da715fad8752ca3d15911d95eade984bd277321d55dfda69fd9f4abf35d62'
+  sha256 '52115eee624de8e3a4be5bf017004cef3c2252aa18b70d1cdcb31b1362fb4e7a'
 
   # sourceforge.net/stellarium was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/stellarium/Stellarium-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/stellarium/rss',
-          checkpoint: 'fce3de0c25df487ef7189db5ac2f51af2da6c5cee37f17bb421c5a09171a678e'
+          checkpoint: 'a8730a9e14d676273eb371e3a36c2d7e9a03e2643ea1deb27896668a41fceb62'
   name 'Stellarium'
   homepage 'http://stellarium.org/'
 
