@@ -8,7 +8,7 @@ cask 'dingtalk' do
   name '钉钉'
   homepage 'https://www.dingtalk.com/'
 
-  app 'DingTalk.app'
+  app '钉钉.app'
 
   zap trash: [
                '~/Library/Application Support/DingTalk',
