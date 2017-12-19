@@ -1,8 +1,8 @@
 cask 'unity-android-support-for-editor' do
-  version '2017.2.0f3,46dda1414e51'
-  sha256 '58ee014bb314b743b9561bf816143f49ef0e53b119ed51c4c641f7cf1cce5255'
+  version '2017.2.1f1,94bf3f9e6b5e'
+  sha256 '67fdf0959c8ed5ad8ce241c5cbab44a53e2c2fc74d6ef44bbf0ec4f18b8a12fd'
 
-  url "http://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-#{version.before_comma}.pkg"
+  url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-#{version.before_comma}.pkg"
   name 'Unity Android Build Support'
   homepage 'https://unity3d.com/unity/'
 

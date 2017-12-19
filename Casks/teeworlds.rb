@@ -1,10 +1,11 @@
 cask 'teeworlds' do
   version '0.6.4'
-  sha256 'cb638bbe6f042262c4f8c25f913209e2c4b2d96efe9a8191d4acea6988572a6c'
+  sha256 '547e6535ea38895a148bec365752c915bad7a661fd224cb3d019e62012a5559c'
 
-  url "https://downloads.teeworlds.com/teeworlds-#{version}-osx.dmg"
-  appcast 'https://www.teeworlds.com/?page=downloads',
-          checkpoint: '801d1139239193f9036eaf817bbb1159546b05ae7e2b7d8c7490374b9bdf9f46'
+  # github.com/teeworlds/teeworlds was verified as official when first introduced to the cask
+  url "https://github.com/teeworlds/teeworlds/releases/download/#{version}-release/teeworlds-#{version}-osx.dmg"
+  appcast 'https://github.com/teeworlds/teeworlds/releases.atom',
+          checkpoint: 'e54d85d5de0177c90e1856fe8006074751faa23b83944b811d072d81c32497fe'
   name 'Teeworlds'
   homepage 'https://www.teeworlds.com/'
 

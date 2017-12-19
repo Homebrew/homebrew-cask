@@ -1,10 +1,10 @@
 cask 'coqide' do
-  version '8.7.0'
-  sha256 '2ce75694a60b45d9f43e3d138a974959bda7e82615b8527116ab7cc8e517bcf3'
+  version '8.7.1'
+  sha256 '664e1e2c0ef647ef23cd1d9a1017e8bd4ba1728f927c935eae99b142c760c715'
 
   url "https://coq.inria.fr/distrib/V#{version}/files/coq-#{version}-installer-macos.dmg"
   appcast 'https://github.com/coq/coq/releases.atom',
-          checkpoint: '940220c743905372e20c0e5edaaff11920a8b7765d722cf18b71426e4ad8c7c8'
+          checkpoint: '15ada4aaeeeaa592e3e543b44ec9961bced909adbbc3804ef7cb9e8e95319148'
   name 'Coq'
   homepage 'https://coq.inria.fr/'
 

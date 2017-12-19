@@ -1,10 +1,10 @@
 cask 'hockey' do
-  version '2.0.19,503'
-  sha256 '4f4b4c12921242c61e9c9bf12414a4bbb550bd1539973adbc93c5c60fb6181bb'
+  version '2.0.21,507'
+  sha256 '3ba93e54752891bc808a162c6426f006db07ab795123ad563bcfb403a99a935b'
 
   url "https://rink.hockeyapp.net/api/2/apps/67503a7926431872c4b6c1549f5bd6b1/app_versions/#{version.after_comma}?format=zip"
   appcast 'https://rink.hockeyapp.net/api/2/apps/67503a7926431872c4b6c1549f5bd6b1',
-          checkpoint: 'a9d73e714a0199766bf9860903ab810b84e5f4c03c4606a970660108cf2e1346'
+          checkpoint: 'fc6e44d563a04341b074b8d8fc438058851de68f24ce7d021028554e0dbd7575'
   name 'HockeyApp'
   homepage 'https://hockeyapp.net/releases/mac/'
 

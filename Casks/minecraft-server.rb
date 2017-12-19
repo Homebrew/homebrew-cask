@@ -13,25 +13,37 @@ cask 'minecraft-server' do
   shimscript = "#{staged_path}/minecraft-server.wrapper.sh"
   binary shimscript, target: 'minecraft-server'
 
+  config_dir = HOMEBREW_PREFIX.join('etc', 'minecraft-server')
+
   preflight do
+    FileUtils.mkdir_p config_dir
+
     IO.write shimscript, <<~EOS
       #!/bin/sh
-      cd "$(dirname "$(readlink -n "$0" || echo "$0")")" && \
-        /usr/bin/java -Xmx1024M -Xms1024M -jar 'minecraft_server.#{version}.jar' nogui
+      cd '#{config_dir}' && \
+        exec /usr/bin/java -Xmx1024M -Xms1024M -jar '#{staged_path}/minecraft_server.#{version}.jar' nogui
     EOS
   end
 
+  eula_file = config_dir.join('eula.txt')
+
   postflight do
     system_command shimscript
-
-    eula_file = "#{staged_path}/eula.txt"
     IO.write(eula_file, IO.read(eula_file).sub('eula=false', 'eula=TRUE'))
   end
 
+  uninstall_preflight do
+    FileUtils.rm_f eula_file
+  end
+
+  zap trash: config_dir
+
   caveats do
+    depends_on_java
     <<~EOS
-      To run this app, type "#{token}" in terminal.
-      To configure the server take a look at the files staged at #{staged_path}
+      Configuration files are located in
+
+        #{config_dir}
     EOS
   end
 end

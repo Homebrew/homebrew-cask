@@ -1,6 +1,6 @@
 cask 'synergy' do
-  version '2.0.2,b1153-665fa610'
-  sha256 '5290d727b4a83d2450ac2c5f784600c995fd92778d46cb633634335fe448f15d'
+  version '2.0.3,b1243-8a08e664'
+  sha256 '98c94eab66516fe2d9d840562cc12fca09696c0882e1f14692ba20d9a78aeb8b'
 
   url "https://binaries.symless.com/v#{version.before_comma}/Synergy_v#{version.before_comma}-stable_#{version.after_comma}.dmg"
   appcast 'https://github.com/symless/synergy-core/releases.atom',

@@ -3,14 +3,14 @@ cask 'bartender' do
     version '2.1.6'
     sha256 '013bb1f5dcc29ff1ecbc341da96b6e399dc3c85fc95bd8c7bee153ab0d8756f5'
   else
-    version '3.0.12'
-    sha256 '121e47f4da7b606bc0297b2dd34cc5de89911175e46234b6197384ea416ea31d'
+    version '3.0.32'
+    sha256 'bc37d1719d5067d3ca357406424d083e9f80c26009e064b86cbab426234496d1'
   end
 
   url "https://macbartender.com/B2/updates/#{version.dots_to_hyphens}/Bartender%20#{version.major}.zip",
       referer: 'https://www.macbartender.com'
   appcast 'https://www.macbartender.com/B2/updates/Appcast.xml',
-          checkpoint: '164ad62f5e279c24043f4f9a87f40fefeb058a57030789cfcbd536c0fe32e7b9'
+          checkpoint: '6161112c873aa58934018d4fb98782c440953d7335034a7d91f01faf16017fdd'
   name 'Bartender'
   homepage 'https://www.macbartender.com/'
 

@@ -1,10 +1,10 @@
 cask 'proxpn' do
-  version '4.5.0.0'
-  sha256 '7f636d130502f530ecef224664474e746dd30b258fbd62c7b939b0ddb386d1b1'
+  version '4.5.0.3'
+  sha256 '099fa83105d363f0baa9d472b3f09b4d9d7ce8f9bc3ef73381fae7e3508d1f4b'
 
   url "https://www.proxpn.com/updater/proXPN-MacOSX-10.7-#{version}.dmg"
   appcast 'https://www.proxpn.com/updater/appcast.rss',
-          checkpoint: 'a3ae70769f37488f80b4566f8f8eba45097a08725873ad6262a09e2eb8ba0859'
+          checkpoint: '0863a3315af99764e5a3cc34be826ffb4fd5438953fa9cbd37f8fd927354e833'
   name 'proXPN'
   homepage 'https://www.proxpn.com/'
 

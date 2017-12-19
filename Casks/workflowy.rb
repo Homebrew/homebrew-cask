@@ -1,11 +1,11 @@
 cask 'workflowy' do
-  version '1.0.8'
-  sha256 'ab8156ed42d767270600c2be9ac7ccaa37ec9f4ab1958ea600e16511f4b77ad0'
+  version '1.0.9'
+  sha256 'b34d5fa939b9667871f6149cb0d8095746ba8a7299f965e24cc9e32aa5ac0af5'
 
   # github.com/workflowy/desktop was verified as official when first introduced to the cask
   url "https://github.com/workflowy/desktop/releases/download/v#{version}/WorkFlowy.dmg"
   appcast 'https://github.com/workflowy/desktop/releases.atom',
-          checkpoint: 'bc483a7758f8ca5a8124b57c4e4b7ad0f5f5801be384a4fb55175eeab563b867'
+          checkpoint: '98e7c23a06871570fb338fb8d0c907c48fe64f3d721cbc04517c4e23d65413b2'
   name 'WorkFlowy'
   homepage 'https://workflowy.com/downloads/mac/'
 
