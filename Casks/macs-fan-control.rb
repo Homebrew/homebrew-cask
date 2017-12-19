@@ -1,10 +1,10 @@
 cask 'macs-fan-control' do
-  version '1.4.8.1'
-  sha256 'd5e84f099c5e1cb6e56ab376784be5e9e7e3552ce773af41494a1a22df20e8e6'
+  version '1.4.9'
+  sha256 '2a423e7f3652a3c6e7ec67827eda41f4418390e72109566dda60143f63f7dbaf'
 
   url 'https://www.crystalidea.com/downloads/macsfancontrol.zip'
   appcast 'https://www.crystalidea.com/macs-fan-control/release-notes',
-          checkpoint: 'fc88cb022f266ad06bbeb3f9fbb23847d2f1e0e7ccdac072738327aa4571a621'
+          checkpoint: 'ec031156fa9060e9f396fe7b9eb6e72f4686ce849835bc3867f9a32bdef134b9'
   name 'Macs Fan Control'
   homepage 'https://www.crystalidea.com/macs-fan-control'
 
