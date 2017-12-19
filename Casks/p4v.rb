@@ -1,10 +1,10 @@
 cask 'p4v' do
   version '2017.3'
-  sha256 'fb753bc17ae96ccf09e4c258474b2ba2ea12695140b1e5d7c6c58b6c6543a945'
+  sha256 '09a7a2f36bad7a742bc1db7bdb857fad392103c97990050ed0c48b78cfda040f'
 
   url "http://cdist2.perforce.com/perforce/r#{version.sub(%r{\A20(\d\d\.\d+).*}, '\1')}/bin.macosx1011x86_64/P4V.dmg"
   appcast "http://filehost.perforce.com/perforce/r#{version.sub(%r{\A20(\d\d\.\d+).*}, '\1')}/bin.macosx1011x86_64/SHA256SUMS",
-          checkpoint: '4a0f614a44c0cf4e38a7ce13def9b343abc9edb3f4b58ba7323a4664e85a2c62'
+          checkpoint: '4fbb1d0140f3a71064c7376446a4154f12e697877a28e98c52c4018b61d46e5c'
   name 'Perforce Visual Client'
   name 'P4V'
   homepage 'https://www.perforce.com/products/helix-core-apps/helix-visual-client-p4v'
