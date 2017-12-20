@@ -7,7 +7,7 @@ cask 'webcatalog' do
   appcast 'https://github.com/webcatalog/webcatalog/releases.atom',
           checkpoint: '762f0939782f5fb805bdfe8d28346d9f5d81772bdb08d369b90a5e475786bea4'
   name 'WebCatalog'
-  homepage 'https://webcatalog.io/download/mac'
+  homepage 'https://webcatalog.io/'
 
   app 'WebCatalog.app'
 
