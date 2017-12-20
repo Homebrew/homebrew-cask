@@ -1,11 +1,11 @@
 cask 'iota-wallet' do
-  version '2.5.4'
-  sha256 '07e21c8975b540f5e90cd9b370608947023cf23cd92e3f5b5a522912320bd24e'
+  version '2.5.5'
+  sha256 'da45578f534d3c31e49e1ff987260ccc8cda6b17f51669ba873fb322b28a3442'
 
   # github.com/iotaledger/wallet was verified as official when first introduced to the cask
   url "https://github.com/iotaledger/wallet/releases/download/v#{version}/IOTA.Wallet-#{version}.dmg"
   appcast 'https://github.com/iotaledger/wallet/releases.atom',
-          checkpoint: 'cd9f74ddba5669150bb7349c492f0ec9107b08ccb6938c04e10b9f5b51ec4f56'
+          checkpoint: '23aa9f98efe5f7d0e8f40772f159c101c4f74df6d15a003df195a4dbf07a2546'
   name 'IOTA Wallet'
   homepage 'https://iota.org/'
 
