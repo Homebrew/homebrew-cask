@@ -4,7 +4,7 @@ cask 'macs-fan-control' do
 
   url 'https://www.crystalidea.com/downloads/macsfancontrol.zip'
   appcast 'https://www.crystalidea.com/macs-fan-control/release-notes',
-          checkpoint: 'ec031156fa9060e9f396fe7b9eb6e72f4686ce849835bc3867f9a32bdef134b9'
+          checkpoint: 'ab027ece8db076a9920fd6156d73e43a194f50dfe2cc7f86fc134b3c54b52c0e'
   name 'Macs Fan Control'
   homepage 'https://www.crystalidea.com/macs-fan-control'
 
