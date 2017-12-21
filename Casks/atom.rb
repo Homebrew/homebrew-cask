@@ -5,12 +5,12 @@ cask 'atom' do
   # github.com/atom/atom was verified as official when first introduced to the cask
   url "https://github.com/atom/atom/releases/download/v#{version}/atom-mac.zip"
   appcast 'https://github.com/atom/atom/releases.atom',
-          checkpoint: 'e29f2eb5f429e88dc7c42d062a95e5e2a14cf1b6fe33baecb0d8c79dda80c8aa'
+          checkpoint: 'ff39504028ff760b856cfb1ce91d7adb7fe1aee97205a2380c2d82f4cc52cad2'
   name 'Github Atom'
   homepage 'https://atom.io/'
 
   auto_updates true
-  depends_on macos: '>= :mountain_lion'
+  depends_on macos: '>= :mavericks'
 
   app 'Atom.app'
   binary "#{appdir}/Atom.app/Contents/Resources/app/apm/bin/apm"
