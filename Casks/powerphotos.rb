@@ -8,13 +8,13 @@ cask 'powerphotos' do
     sha256 'b07eb9f8801fb397d55e3dd7e0569dbef5d3265debaf3ee68247062901d93fcb'
     url "https://www.fatcatsoftware.com/powerphotos/PowerPhotos_#{version.no_dots}.zip"
   else
-    version '1.3.2'
-    sha256 '92c368a9ba1d60af82242d946a9166fc8e399463a686ee58ee69af296d74db4f'
+    version '1.3.4'
+    sha256 'f2ba90528403737ba77e55a0527a0f9d946928cfde6382df84582eea9ed4924c'
     url 'https://www.fatcatsoftware.com/powerphotos/PowerPhotos.zip'
   end
 
   appcast 'https://www.fatcatsoftware.com/powerphotos/powerphotos_appcast.xml',
-          checkpoint: 'c354ca71424e31df598b4f27a75361be9ce06001aa5f752bea51c0e6fbea60dd'
+          checkpoint: '7af8bf476d184b74c14047fe844aa83859556a8c46466bbe7b535faa78057d1a'
   name 'PowerPhotos'
   homepage 'https://www.fatcatsoftware.com/powerphotos/'
 

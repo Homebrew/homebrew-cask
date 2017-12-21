@@ -21,10 +21,12 @@ cask 'freedome' do
                          sudo:       true,
                        }
 
-  zap delete: '~/Library/Caches/com.fsecure.freedome.osx',
-      rmdir:  [
-                '~/Library/Application Support/F-Secure/',
-                '/Library/Application Support/F-Secure',
-              ],
-      trash:  '~/Library/Application Support/F-Secure/FSFreedome'
+  zap trash: [
+               '~/Library/Application Support/F-Secure/FSFreedome',
+               '~/Library/Caches/com.fsecure.freedome.osx',
+             ],
+      rmdir: [
+               '~/Library/Application Support/F-Secure/',
+               '/Library/Application Support/F-Secure',
+             ]
 end

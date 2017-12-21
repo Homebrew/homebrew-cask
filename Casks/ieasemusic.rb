@@ -1,19 +1,19 @@
 cask 'ieasemusic' do
-  version '1.0.1'
-  sha256 '1c5f142656fd5c70717812025ed097dfa78b8c9aa47e06e662fd1bae92d5ccc0'
+  version '1.1.0'
+  sha256 'bb73b4302de2641625eb5e290228903eb8012b52e79a5920d72851303974874b'
 
   url "https://github.com/trazyn/ieaseMusic/releases/download/v#{version}/ieaseMusic-#{version}-mac.dmg"
   appcast 'https://github.com/trazyn/ieaseMusic/releases.atom',
-          checkpoint: '013ba308fe925775cac061e34e7389e6ab0f491cb715b218dcb842d0f4bbcdc4'
+          checkpoint: '4a641bc23767a3a56726f4c6d1477f9a0c13499da5008dfcacbcc9da2926ba5d'
   name 'ieaseMusic'
   homepage 'https://github.com/trazyn/ieaseMusic'
 
   app 'ieaseMusic.app'
 
-  zap delete: '~/Library/Saved Application State/gh.trazyn.ieasemusic.savedState',
-      trash:  [
-                '~/Library/Application Support/ieasemusic',
-                '~/Library/Preferences/gh.trazyn.ieasemusic.helper.plist',
-                '~/Library/Preferences/gh.trazyn.ieasemusic.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/ieasemusic',
+               '~/Library/Preferences/gh.trazyn.ieasemusic.helper.plist',
+               '~/Library/Preferences/gh.trazyn.ieasemusic.plist',
+               '~/Library/Saved Application State/gh.trazyn.ieasemusic.savedState',
+             ]
 end

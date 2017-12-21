@@ -11,10 +11,10 @@ cask 'lepton' do
 
   app 'Lepton.app'
 
-  zap delete: '~/Library/Saved Application State/com.cosmox.lepton.savedState',
-      trash:  [
-                '~/Library/Application Support/Lepton',
-                '~/Library/Preferences/com.cosmox.lepton.helper.plist',
-                '~/Library/Preferences/com.cosmox.lepton.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Lepton',
+               '~/Library/Preferences/com.cosmox.lepton.helper.plist',
+               '~/Library/Preferences/com.cosmox.lepton.plist',
+               '~/Library/Saved Application State/com.cosmox.lepton.savedState',
+             ]
 end

@@ -1,10 +1,10 @@
 cask 'rider' do
-  version '2017.2,172.4144.1459'
-  sha256 'eeb6f1cb1c83eee627603d3e2b1f81898c8b62a7a608080b1c5dad83256c0f0a'
+  version '2017.2.1,172.4144.1873'
+  sha256 '1aab149520a3b5db603f6b1adf258d2cc26068b3c55dc2fffa3ab03d20d0261d'
 
   url "https://download.jetbrains.com/resharper/JetBrains.Rider-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=RD&latest=true&type=release',
-          checkpoint: '5626181012c54ef310ee2c177753f31a1c023e4a4e8cafe5a63f4c09c5cd1b2e'
+          checkpoint: '6e2a653eebf973cdd18953e66547b0259dd96fa03189cddca8c5a68d127e0db5'
   name 'Jetbrains Rider'
   homepage 'https://www.jetbrains.com/rider/'
 
@@ -16,14 +16,12 @@ cask 'rider' do
     ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'rider') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }
   end
 
-  zap delete: [
-                "~/Library/Caches/Rider#{version.major_minor}",
-                "~/Library/Logs/Rider#{version.major_minor}",
-                '~/Library/Saved Application State/com.jetbrains.rider.savedState',
-              ],
-      trash:  [
-                "~/Library/Application Support/Rider#{version.major_minor}",
-                "~/Library/Preferences/Rider#{version.major_minor}",
-                '~/Library/Preferences/jetbrains.rider.71e559ef.plist',
-              ]
+  zap trash: [
+               "~/Library/Application Support/Rider#{version.major_minor}",
+               "~/Library/Caches/Rider#{version.major_minor}",
+               "~/Library/Logs/Rider#{version.major_minor}",
+               "~/Library/Preferences/Rider#{version.major_minor}",
+               '~/Library/Preferences/jetbrains.rider.71e559ef.plist',
+               '~/Library/Saved Application State/com.jetbrains.rider.savedState',
+             ]
 end

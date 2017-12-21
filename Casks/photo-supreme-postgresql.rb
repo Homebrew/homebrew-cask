@@ -6,7 +6,6 @@ cask 'photo-supreme-postgresql' do
   name 'Photo Supreme with PostreSQL'
   homepage 'http://www.idimager.com/WP/?page_id=20'
 
-  depends_on macos: '>= :lion'
   depends_on formula: 'postgresql'
 
   pkg "PhotoSupremePostgreSQL_V#{version}.pkg"

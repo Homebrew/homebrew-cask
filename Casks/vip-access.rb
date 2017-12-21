@@ -9,8 +9,8 @@ cask 'vip-access' do
 
   app 'VIP Access.app'
 
-  zap delete: [
-                '~/Library/Caches/com.symantec.VIP-Access',
-                '~/Library/Preferences/com.symantec.VIP-Access.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.symantec.VIP-Access',
+               '~/Library/Preferences/com.symantec.VIP-Access.plist',
+             ]
 end

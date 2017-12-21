@@ -11,8 +11,8 @@ cask 'macsvg' do
 
   app 'macSVG.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/com.arkphone.macsvg',
-                '~/Library/Containers/com.arkphone.macsvg',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/com.arkphone.macsvg',
+               '~/Library/Containers/com.arkphone.macsvg',
+             ]
 end

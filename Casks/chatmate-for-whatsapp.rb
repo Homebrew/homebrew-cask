@@ -9,12 +9,12 @@ cask 'chatmate-for-whatsapp' do
 
   app 'ChatMate for WhatsApp.app'
 
-  zap delete: [
-                '~/Library/Application Support/ChatMate for WhatsApp',
-                '~/Library/Application Support/ColdX/net.coldx.mac.WhatsApp',
-                '~/Library/Caches/net.coldx.mac.WhatsApp',
-                '~/Library/Cookies/net.coldx.mac.WhatsApp.binarycookies',
-                '~/Library/Preferences/net.coldx.mac.WhatsApp.plist',
-                '~/Library/WebKit/net.coldx.mac.WhatsApp',
-              ]
+  zap trash: [
+               '~/Library/Application Support/ChatMate for WhatsApp',
+               '~/Library/Application Support/ColdX/net.coldx.mac.WhatsApp',
+               '~/Library/Caches/net.coldx.mac.WhatsApp',
+               '~/Library/Cookies/net.coldx.mac.WhatsApp.binarycookies',
+               '~/Library/Preferences/net.coldx.mac.WhatsApp.plist',
+               '~/Library/WebKit/net.coldx.mac.WhatsApp',
+             ]
 end

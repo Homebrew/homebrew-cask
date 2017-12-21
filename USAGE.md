@@ -71,8 +71,9 @@ Note that `uninstall --force` is currently imperfect. See the man page for more 
 * `doctor` — checks for configuration issues
 * `cleanup` — cleans up cached downloads (with `--outdated`, only cleans old downloads)
 * `home` — opens the homepage of the given Cask; or with no arguments, the Homebrew-Cask project page
-* `update` — a synonym for `brew update`
 * `zap` — try to remove *all* files associated with a Cask (may include resources shared with other applications)
+* `outdated` - lists all outdated Casks
+* `upgrade` - updates all outdated Casks
 
 The following commands are for Cask authors:
 
@@ -86,7 +87,6 @@ The following aliases and abbreviations are provided for convenience:
 * `ls` — `list`
 * `-S` — `search`
 * `rm`, `remove` — `uninstall`
-* `up` — `update`
 * `dr` — `doctor`
 
 ## Tab Completion
@@ -109,7 +109,7 @@ List all installed Casks:
 
 ```bash
 $ brew cask list
-atom          google-chrome     onepassword
+atom          google-chrome     1password
 ```
 
 Show details about a specific Cask:
@@ -128,7 +128,7 @@ Caffeine.app (app)
 
 ## Updating/Upgrading Casks
 
-Since the Homebrew-Cask repository is a Homebrew Tap, you’ll pull down the latest Casks every time you issue the regular Homebrew command `brew update`. Currently, Homebrew-Cask cannot always detect if an application has been updated. You can force an update via the command `brew cask install --force`. We are working on improving this.
+Since the Homebrew-Cask repository is a Homebrew Tap, you’ll pull down the latest Casks every time you issue the regular Homebrew command `brew update`. You can check for outdated Casks with `brew cask outdated` and install the outdated Casks with `brew cask upgrade`.
 
 It is generally safe to run updates from within an application.
 

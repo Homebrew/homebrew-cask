@@ -10,8 +10,8 @@ cask 'magicprefs' do
 
   app 'MagicPrefs.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.vladalexa.MagicPrefs.MagicPrefsPlugins.plist',
-                '~/Library/Preferences/com.vladalexa.MagicPrefs.plist',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.vladalexa.MagicPrefs.MagicPrefsPlugins.plist',
+               '~/Library/Preferences/com.vladalexa.MagicPrefs.plist',
+             ]
 end

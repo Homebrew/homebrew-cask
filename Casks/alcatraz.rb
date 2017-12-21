@@ -11,5 +11,5 @@ cask 'alcatraz' do
 
   artifact 'Alcatraz.xcplugin', target: "#{ENV['HOME']}/Library/Application Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin"
 
-  zap delete: '~/Library/Application Support/Alcatraz'
+  zap trash: '~/Library/Application Support/Alcatraz'
 end

@@ -1,6 +1,6 @@
 cask 'leela' do
-  version '0.10.0'
-  sha256 '567ce9969675d04a4373a2604b8e9c84b2b2d25509edf62b317316e12b78f4a6'
+  version '0.11.0'
+  sha256 'f2c11799f7b548e1ca1f6ba8dca330d9ec44eed4d1a53439b5bceef86e0d0ae1'
 
   url "https://sjeng.org/dl/Leela_#{version}.dmg"
   name 'Leela'

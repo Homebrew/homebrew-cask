@@ -1,6 +1,6 @@
 cask 'visual-studio' do
-  version '7.2.2.7'
-  sha256 '4b81902383ee60da1f6386d21836c46a85f3207a7d73f208829949bb485252df'
+  version '7.2.2.11'
+  sha256 '5eab6f7e27ea5d0336cc3f62460b2d6b5935d6e303fa1338f2e1ca9f80d9120f'
 
   # dl.xamarin.com/VsMac was verified as official when first introduced to the cask
   url "https://dl.xamarin.com/VsMac/VisualStudioForMac-#{version}.dmg"
@@ -13,15 +13,13 @@ cask 'visual-studio' do
 
   app 'Visual Studio.app'
 
-  zap delete: [
-                '~/Library/Application Support/CrashReporter/VisualStudio*',
-                '~/Library/Caches/VisualStudio',
-                '~/Library/Logs/VisualStudio',
-              ],
-      trash:  [
-                '~/Library/Preferences/Visual*Studio',
-                '~/Library/VisualStudio',
-                '/Applications/Xamarin Workbooks.app',
-                '/Applications/Xamarin Profiler.app',
-              ]
+  zap trash: [
+               '/Applications/Xamarin Workbooks.app',
+               '/Applications/Xamarin Profiler.app',
+               '~/Library/Application Support/CrashReporter/VisualStudio*',
+               '~/Library/Caches/VisualStudio',
+               '~/Library/Logs/VisualStudio',
+               '~/Library/Preferences/Visual*Studio',
+               '~/Library/VisualStudio',
+             ]
 end

@@ -15,13 +15,11 @@ cask 'adobe-acrobat-pro' do
   uninstall pkgutil: "com.adobe.acrobat.#{version}.*",
             delete:  "/Applications/Adobe Acrobat #{version}/"
 
-  zap delete: [
-                '~/Library/Caches/Acrobat',
-                '~/Library/Caches/com.adobe.Acrobat.Pro',
-              ],
-      trash:  [
-                '~/Library/Application Support/Adobe/Acrobat/',
-                '~/Library/Preferences/Adobe/Acrobat/',
-                '~/Library/Preferences/com.adobe.Acrobat.Pro.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Adobe/Acrobat/',
+               '~/Library/Caches/Acrobat',
+               '~/Library/Caches/com.adobe.Acrobat.Pro',
+               '~/Library/Preferences/Adobe/Acrobat/',
+               '~/Library/Preferences/com.adobe.Acrobat.Pro.plist',
+             ]
 end

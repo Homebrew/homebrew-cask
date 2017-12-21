@@ -1,10 +1,10 @@
 cask 'pycharm' do
-  version '2017.2.4,172.4343.24'
-  sha256 'e132802d008b62ed695fdd48eb52d00c6022f95454dcf16b4011bc191c435139'
+  version '2017.3.1,173.3942.36'
+  sha256 'cfd589b60a08a76a0d26e703a75b3aa94589608bb5f6a94dd7b437e735365f60'
 
   url "https://download.jetbrains.com/python/pycharm-professional-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=PCP&latest=true&type=release',
-          checkpoint: 'dbb3c5cdd235b7f0b34e191df883dfa379f43d7d9781fa8b530f2559031d0c84'
+          checkpoint: '6a41d50077381593c998d6c40d00b91927ca9dde3446ca7f4637622ca88633a3'
   name 'PyCharm'
   homepage 'https://www.jetbrains.com/pycharm/'
 
@@ -16,12 +16,10 @@ cask 'pycharm' do
     ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'charm') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }
   end
 
-  zap delete: [
-                "~/Library/Caches/PyCharm#{version.major_minor}",
-                "~/Library/Logs/PyCharm#{version.major_minor}",
-              ],
-      trash:  [
-                "~/Library/Application Support/PyCharm#{version.major_minor}",
-                "~/Library/Preferences/PyCharm#{version.major_minor}",
-              ]
+  zap trash: [
+               "~/Library/Application Support/PyCharm#{version.major_minor}",
+               "~/Library/Caches/PyCharm#{version.major_minor}",
+               "~/Library/Logs/PyCharm#{version.major_minor}",
+               "~/Library/Preferences/PyCharm#{version.major_minor}",
+             ]
 end

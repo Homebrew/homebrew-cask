@@ -1,11 +1,11 @@
 cask 'go-server' do
-  version '17.7.0-5147'
-  sha256 '4c79237b7ba597d2c0bd3f1663965dac0ea31838d73a40bc9040e47e9fd1c269'
+  version '17.11.0-5520'
+  sha256 'dd394c2e6342c58dcf8d87b259f8edde4b64efdcfd9188f7d5e20aec3ad570fe'
 
   # download.gocd.io/binaries was verified as official when first introduced to the cask
   url "https://download.gocd.io/binaries/#{version}/osx/go-server-#{version}-osx.zip"
   appcast 'https://github.com/gocd/gocd/releases.atom',
-          checkpoint: 'f1cba4692ca4f0878fd95f276a55c43a4c2a435a96eae547070ac430689e19f1'
+          checkpoint: '9e3a88815202ffed76a1665fe59343076982308a8fcaa193606cbf3f92a03235'
   name 'Go Server'
   homepage 'https://www.gocd.org/'
 

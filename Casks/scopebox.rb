@@ -1,6 +1,6 @@
 cask 'scopebox' do
-  version '3.5.4'
-  sha256 'a5368385fb88ab8d5d9458649a97d0d9085c586ab6e738e562392f033c455cec'
+  version '3.5.5'
+  sha256 '6f5b880dc7c4cb16b4407117dd1ddc619020b906aa122a6cf20caaf90da726cf'
 
   url "https://www.divergentmedia.com/filedownload/ScopeBox%20#{version}.dmg"
   name 'ScopeBox'
@@ -8,8 +8,8 @@ cask 'scopebox' do
 
   app 'ScopeBox.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.divergentmedia.scopebox.plist',
-                '~/Library/Application Support/ScopeBox',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.divergentmedia.scopebox.plist',
+               '~/Library/Application Support/ScopeBox',
+             ]
 end

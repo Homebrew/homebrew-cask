@@ -20,11 +20,11 @@ cask 'orfo' do
             delete:     '/Library/PreferencePanes/ORFOSetup.prefPane',
             login_item: 'OrfoUpdate'
 
-  zap delete: '~/Library/Caches/com.informatic.OrfoUpdate',
-      trash:  [
-                '/Library/Application Support/ORFO 2016',
-                '~/Library/Preferences/com.informatic.RussianCollection.plist',
-              ]
+  zap trash: [
+               '/Library/Application Support/ORFO 2016',
+               '~/Library/Caches/com.informatic.OrfoUpdate',
+               '~/Library/Preferences/com.informatic.RussianCollection.plist',
+             ]
 
   caveats do
     reboot

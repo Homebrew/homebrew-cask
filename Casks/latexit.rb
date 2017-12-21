@@ -11,5 +11,9 @@ cask 'latexit' do
 
   app 'LaTeXiT.app'
 
-  zap delete: '~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist'
+  zap trash: [
+               '~/Library/Caches/fr.chachatelier.pierre.LaTeXiT',
+               '~/Library/Cookies/fr.chachatelier.pierre.LaTeXiT.binarycookies',
+               '~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist',
+             ]
 end

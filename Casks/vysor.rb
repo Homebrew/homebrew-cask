@@ -11,12 +11,12 @@ cask 'vysor' do
 
   app 'Vysor.app'
 
-  zap delete: [
-                '~/Library/Application Support/Vysor',
-                '~/Library/Caches/com.electron.vysor',
-                '~/Library/Caches/com.electron.vysor.ShipIt',
-                '~/Library/Preferences/com.electron.vysor.plist',
-                '~/Library/Preferences/com.electron.vysor.helper.plist',
-                '~/Library/Saved Application State/com.electron.vysor.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Vysor',
+               '~/Library/Caches/com.electron.vysor',
+               '~/Library/Caches/com.electron.vysor.ShipIt',
+               '~/Library/Preferences/com.electron.vysor.plist',
+               '~/Library/Preferences/com.electron.vysor.helper.plist',
+               '~/Library/Saved Application State/com.electron.vysor.savedState',
+             ]
 end

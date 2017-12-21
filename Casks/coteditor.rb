@@ -15,25 +15,25 @@ cask 'coteditor' do
     # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
     url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   else
-    version '3.2.4'
-    sha256 'f7ff7bb309c11716c4c9231e96cd06ab9ee1051a68c7cd1ce4cf1590e863c92b'
+    version '3.2.6'
+    sha256 '22573b99819be744860ae1e2ee19a4415b81d9663e8475b6329211e75b3e086e'
     # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
     url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   end
 
   appcast 'https://github.com/coteditor/CotEditor/releases.atom',
-          checkpoint: 'bb68d4aa03bad3aeb15b0b0a36daa91da28ca99efe3fb26e6299f02e9d8f51c6'
+          checkpoint: '3a173d0e1f565b7357a3dd0d9e027fb05ad7f458d0f0414a6f019527dcebb10a'
   name 'CotEditor'
   homepage 'https://coteditor.com/'
 
   app 'CotEditor.app'
-  binary "#{appdir}/CotEditor.app/Contents/SharedSupport/bin/cot", target: 'cot'
+  binary "#{appdir}/CotEditor.app/Contents/SharedSupport/bin/cot"
 
-  zap delete: [
-                '~/Library/Application Scripts/com.coteditor.CotEditor',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.coteditor.coteditor.sfl',
-                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.coteditor.CotEditor.help',
-                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/Japanese/HelpSDMIndexFile/com.coteditor.CotEditor.help',
-                '~/Library/Containers/com.coteditor.CotEditor',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/com.coteditor.CotEditor',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.coteditor.coteditor.sfl*',
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.coteditor.CotEditor.help*',
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/Japanese/HelpSDMIndexFile/com.coteditor.CotEditor.help*',
+               '~/Library/Containers/com.coteditor.CotEditor',
+             ]
 end

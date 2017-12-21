@@ -17,5 +17,5 @@ cask 'jitouch' do
 
   prefpane 'jitouch/Jitouch.prefPane'
 
-  zap delete: '~/Library/Preferences/com.jitouch.Jitouch.plist'
+  zap trash: '~/Library/Preferences/com.jitouch.Jitouch.plist'
 end

@@ -12,8 +12,8 @@ cask 'beardedspice' do
 
   app 'BeardedSpice.app'
 
-  zap delete: [
-                '~/Library/Caches/com.beardedspice.BeardedSpice',
-                '~/Library/Preferences/com.beardedspice.BeardedSpice.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.beardedspice.BeardedSpice',
+               '~/Library/Preferences/com.beardedspice.BeardedSpice.plist',
+             ]
 end

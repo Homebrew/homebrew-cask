@@ -1,6 +1,6 @@
 cask 'mqttfx' do
-  version '1.5.1'
-  sha256 '7a6b75862f3d77afaf5195d5a34fa49be7c65817a0c08fbdeac5929b12e95fd5'
+  version '1.5.2'
+  sha256 '54b534b0136514238b372288faf66901551d76bc5cd405bbe943799de9500a1a'
 
   # jensd.de/apps/mqttfx was verified as official when first introduced to the cask
   url "http://www.jensd.de/apps/mqttfx/#{version}/mqttfx-#{version}-macos.dmg"

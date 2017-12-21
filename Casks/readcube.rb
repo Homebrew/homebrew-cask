@@ -1,6 +1,6 @@
 cask 'readcube' do
-  version '2.0.12'
-  sha256 'fe833ae0b0317f85781344d422027fdb2b8e6dd6e30860fff8e427d60c1c5a3c'
+  version '2.1.0'
+  sha256 'cb3e54f08f57051252c70b9b45cb8cc2f001769a3ae25a5f5789abe55269eea4'
 
   url "https://download.readcube.com/desktop/#{version}/ReadCubeSetup.zip"
   name 'ReadCube'

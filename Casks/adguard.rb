@@ -10,13 +10,13 @@ cask 'adguard' do
 
   app 'Adguard.app'
 
-  zap delete: [
-                '/Library/Application Support/com.adguard.Adguard',
-                '~/Library/Application Support/Adguard',
-                '~/Library/Application Support/com.adguard.Adguard',
-                '~/Library/Caches/com.adguard.Adguard',
-                '~/Library/Cookies/com.adguard.Adguard.binarycookies',
-                '~/Library/Logs/Adguard',
-                '~/Library/Preferences/com.adguard.Adguard.plist',
-              ]
+  zap trash: [
+               '/Library/Application Support/com.adguard.Adguard',
+               '~/Library/Application Support/Adguard',
+               '~/Library/Application Support/com.adguard.Adguard',
+               '~/Library/Caches/com.adguard.Adguard',
+               '~/Library/Cookies/com.adguard.Adguard.binarycookies',
+               '~/Library/Logs/Adguard',
+               '~/Library/Preferences/com.adguard.Adguard.plist',
+             ]
 end

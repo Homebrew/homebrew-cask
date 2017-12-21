@@ -12,10 +12,10 @@ cask 'mailmaster' do
 
   uninstall quit: 'com.netease.macmail'
 
-  zap delete: [
-                '~/Library/Application Scripts/com.netease.macmail',
-                '~/Library/Containers/com.netease.macmail',
-                '~/Library/Preferences/com.netease.macmail.plist',
-                '~/Library/Saved Application State/com.netease.macmail.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/com.netease.macmail',
+               '~/Library/Containers/com.netease.macmail',
+               '~/Library/Preferences/com.netease.macmail.plist',
+               '~/Library/Saved Application State/com.netease.macmail.savedState',
+             ]
 end

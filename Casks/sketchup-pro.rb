@@ -69,8 +69,8 @@ cask 'sketchup-pro' do
 
   suite "SketchUp #{version}"
 
-  zap delete: [
-                "~/Library/Application Support/SketchUp #{version}",
-                "~/Library/Caches/com.sketchup.SketchUp.#{version}",
-              ]
+  zap trash: [
+               "~/Library/Application Support/SketchUp #{version}",
+               "~/Library/Caches/com.sketchup.SketchUp.#{version}",
+             ]
 end

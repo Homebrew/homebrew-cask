@@ -12,9 +12,9 @@ cask 'disk-drill' do
 
   uninstall delete: '/Library/Application Support/CleverFiles'
 
-  zap delete: [
-                '~/Library/Application Support/DiskDrill',
-                '~/Library/Caches/com.cleverfiles.Disk_Drill',
-                '~/Library/Logs/DiskDrill.log',
-              ]
+  zap trash: [
+               '~/Library/Application Support/DiskDrill',
+               '~/Library/Caches/com.cleverfiles.Disk_Drill',
+               '~/Library/Logs/DiskDrill.log',
+             ]
 end

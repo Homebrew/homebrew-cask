@@ -33,21 +33,6 @@ cask 'java' do
     system_command '/bin/ln',
                    args: ['-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Home/lib/server/libjvm.dylib", "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Home/bundle/Libraries/libserver.dylib"],
                    sudo: true
-
-    if MacOS.version <= :mavericks
-      system_command '/bin/rm',
-                     args: ['-rf', '--', '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'],
-                     sudo: true
-      system_command '/bin/ln',
-                     args: ['-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents", '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'],
-                     sudo: true
-    end
-  end
-
-  uninstall_preflight do
-    if File.exist?("#{HOMEBREW_PREFIX}/Caskroom/java-jdk-javadoc")
-      system_command 'brew', args: ['cask', 'uninstall', 'java-jdk-javadoc']
-    end
   end
 
   uninstall pkgutil:   [
@@ -67,33 +52,25 @@ cask 'java' do
                          "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents",
                          '/Library/PreferencePanes/JavaControlPanel.prefPane',
                          '/Library/Java/Home',
-                         if MacOS.version <= :mavericks
-                           [
-                             '/usr/lib/java/libjdns_sd.jnilib',
-                             '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK',
-                           ]
-                         end,
-                       ].keep_if { |v| !v.nil? }
+                       ]
 
-  zap delete: [
-                '~/Library/Caches/com.oracle.java.Java-Updater',
-                '~/Library/Caches/Oracle.MacJREInstaller',
-                '~/Library/Caches/net.java.openjdk.cmd',
-              ],
-      trash:  [
-                '/Library/Application Support/Oracle/Java',
-                '/Library/Preferences/com.oracle.java.Deployment.plist',
-                '/Library/Preferences/com.oracle.java.Helper-Tool.plist',
-                '~/Library/Application Support/Java/',
-                '~/Library/Application Support/Oracle/Java',
-                '~/Library/Preferences/com.oracle.java.Java-Updater.plist',
-                '~/Library/Preferences/com.oracle.java.JavaAppletPlugin.plist',
-                '~/Library/Preferences/com.oracle.javadeployment.plist',
-              ],
-      rmdir:  [
-                "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk",
-                '~/Library/Application Support/Oracle/',
-              ]
+  zap trash: [
+               '/Library/Application Support/Oracle/Java',
+               '/Library/Preferences/com.oracle.java.Deployment.plist',
+               '/Library/Preferences/com.oracle.java.Helper-Tool.plist',
+               '~/Library/Application Support/Java/',
+               '~/Library/Application Support/Oracle/Java',
+               '~/Library/Caches/com.oracle.java.Java-Updater',
+               '~/Library/Caches/Oracle.MacJREInstaller',
+               '~/Library/Caches/net.java.openjdk.cmd',
+               '~/Library/Preferences/com.oracle.java.Java-Updater.plist',
+               '~/Library/Preferences/com.oracle.java.JavaAppletPlugin.plist',
+               '~/Library/Preferences/com.oracle.javadeployment.plist',
+             ],
+      rmdir: [
+               "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk",
+               '~/Library/Application Support/Oracle/',
+             ]
 
   caveats <<~EOS
     This Cask makes minor modifications to the JRE to prevent issues with

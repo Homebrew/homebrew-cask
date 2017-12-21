@@ -9,16 +9,14 @@ cask 'dockstation' do
   name 'DockStation'
   homepage 'https://dockstation.io/'
 
-  depends_on macos: '>= 10.11'
+  depends_on macos: '>= :el_capitan'
 
   app 'DockStation.app'
 
-  zap delete: [
-                '~/Library/Saved Application State/org.dockstation.DockStation.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/dockstation',
-                '~/Library/Preferences/org.dockstation.DockStation.helper.plist',
-                '~/Library/Preferences/org.dockstation.DockStation.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/dockstation',
+               '~/Library/Preferences/org.dockstation.DockStation.helper.plist',
+               '~/Library/Preferences/org.dockstation.DockStation.plist',
+               '~/Library/Saved Application State/org.dockstation.DockStation.savedState',
+             ]
 end

@@ -15,5 +15,5 @@ cask 'dogecoin' do
     set_permissions "#{staged_path}/Dogecoin-Qt.app", '0755'
   end
 
-  zap delete: '~/Library/com.dogecoin.Dogecoin-Qt.plist'
+  zap trash: '~/Library/com.dogecoin.Dogecoin-Qt.plist'
 end

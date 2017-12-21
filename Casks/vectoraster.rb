@@ -10,9 +10,9 @@ cask 'vectoraster' do
 
   app 'Vectoraster.app'
 
-  zap delete: [
-                '~/Library/Caches/com.lostminds.Vectoraster',
-                '~/Library/Preferences/com.lostminds.Vectoraster.plist',
-                '~/Library/Application Support/Vectoraster',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.lostminds.Vectoraster',
+               '~/Library/Preferences/com.lostminds.Vectoraster.plist',
+               '~/Library/Application Support/Vectoraster',
+             ]
 end

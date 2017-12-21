@@ -1,10 +1,10 @@
 cask 'virtualbox-extension-pack' do
-  version '5.2.0-118431'
-  sha256 '005ba9211862643e2516d549e98b80942918047f1f6c55fcfe08c490dd1947bc'
+  version '5.2.4-119785'
+  sha256 '98e9df4f23212c3de827af9d770b391cf2dba8d21f4de597145512c1479302cd'
 
   url "http://download.virtualbox.org/virtualbox/#{version.sub(%r{-.*}, '')}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
   appcast 'http://download.virtualbox.org/virtualbox/LATEST.TXT',
-          checkpoint: 'e791457c25b99d69f3d5ca028f6a7f6d88f7e2d85af5162a92a8c5f3aecf59b0'
+          checkpoint: '003d27893bdd57babeee9db2074b2947da732fef6a3208a9e3871edf3f1f2850'
   name 'Oracle VirtualBox Extension Pack'
   homepage 'https://www.virtualbox.org/'
 
@@ -15,15 +15,16 @@ cask 'virtualbox-extension-pack' do
 
   postflight do
     system_command '/usr/local/bin/VBoxManage',
-                   args: [
-                           'extpack', 'install',
-                           '--replace', "#{staged_path}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack",
-                           '--accept-license=b674970f720eb020ad18926a9268607089cc1703908696d24a04aa870f34c8e8'
-                         ],
-                   sudo: true
+                   args:  [
+                            'extpack', 'install',
+                            '--replace', "#{staged_path}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
+                          ],
+                   input: 'y',
+                   sudo:  true
   end
 
   uninstall_postflight do
+    next unless File.exist?('/usr/local/bin/VBoxManage')
     system_command '/usr/local/bin/VBoxManage',
                    args: [
                            'extpack', 'uninstall',

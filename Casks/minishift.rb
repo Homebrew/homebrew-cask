@@ -1,10 +1,10 @@
 cask 'minishift' do
-  version '1.8.0'
-  sha256 'bd5b2a7c6ab05ee6252940c50d531724aeddc9dd540a4c03e7b4b314fe30e2a0'
+  version '1.10.0'
+  sha256 '7f4c5cc0f1c7ead530ecc2872346867803144e6cbd8d918217f3e0e35fe96e11'
 
   url "https://github.com/minishift/minishift/releases/download/v#{version}/minishift-#{version}-darwin-amd64.tgz"
   appcast 'https://github.com/minishift/minishift/releases.atom',
-          checkpoint: 'ccabbde35d10635e1316dd040ddb67e23ad2e42cbbd58808af7e0ea1654cbbd5'
+          checkpoint: 'e75c0d34e934e46230550fa345839aba546da786f025ba44fd30ed19d0bbdbc3'
   name 'Minishift'
   homepage 'https://github.com/minishift/minishift'
 

@@ -13,5 +13,5 @@ cask 'muruslogsvisualizer' do
   uninstall login_item: 'MurusLogsVisualizer',
             quit:       'it.murus.MurusLogsVisualizer'
 
-  zap delete: '~/Library/Preferences/it.murus.MurusLogsVisualizer.plist'
+  zap trash: '~/Library/Preferences/it.murus.MurusLogsVisualizer.plist'
 end

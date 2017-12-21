@@ -11,5 +11,5 @@ cask 'applepi-baker' do
 
   app 'ApplePi-Baker.app'
 
-  zap delete: '~/Library/Saved Application State/com.tweaking4all.PiBaker.savedState'
+  zap trash: '~/Library/Saved Application State/com.tweaking4all.PiBaker.savedState'
 end

@@ -8,9 +8,9 @@ cask 'post-haste' do
 
   app 'Post Haste.app'
 
-  zap delete: [
-                '~/Library/Application Support/Digital Rebellion/Post Haste/',
-                '~/Library/Preferences/com.digitalrebellion.PostHaste.plist',
-              ],
-      rmdir:  '~/Library/Application Support/Digital Rebellion'
+  zap trash: [
+               '~/Library/Application Support/Digital Rebellion/Post Haste/',
+               '~/Library/Preferences/com.digitalrebellion.PostHaste.plist',
+             ],
+      rmdir: '~/Library/Application Support/Digital Rebellion'
 end

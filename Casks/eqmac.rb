@@ -1,29 +1,29 @@
 cask 'eqmac' do
-  version '2.0.7'
-  sha256 'caa97a681371f60173aabd3949e381f8b53234fb9642340d49795a495df0fa15'
+  version '2.2'
+  sha256 'ff60579197b52571d9686bbfaec695dfa75797b8a9314fbf69a673bbeb12e1fc'
 
-  # github.com/romankisil/eqMac was verified as official when first introduced to the cask
-  url "https://github.com/romankisil/eqMac#{version.major}/releases/download/v#{version}/eqMac#{version.major}.dmg"
-  appcast "https://github.com/romankisil/eqMac#{version.major}/releases.atom",
-          checkpoint: '734ff65d148b0f3d7ef6988ecdc5a84870f7523986ee8cbe5bede0b905536e4e'
+  # github.com/nodeful/eqMac was verified as official when first introduced to the cask
+  url "https://github.com/nodeful/eqMac#{version.major}/releases/download/V#{version}/eqMac#{version.major}.dmg"
+  appcast "https://github.com/nodeful/eqMac#{version.major}/releases.atom",
+          checkpoint: '3eb76b4bdc9b935629de67bf2721479cf8381cbb3d4cff50eaa4154a16fc465d'
   name 'eqMac'
   homepage 'https://www.bitgapp.com/eqmac/'
 
   app "eqMac#{version.major}.app"
   installer script: {
-                      executable: "#{staged_path}/eqMac#{version.major}.app/Contents/Resources/install_new.sh",
+                      executable: "#{staged_path}/eqMac#{version.major}.app/Contents/Resources/install_driver.sh",
                       sudo:       true,
                     }
 
   uninstall login_item: "eqMac#{version.major}",
             quit:       "com.bitgapp.eqMac#{version.major}",
             script:     {
-                          executable: "#{appdir}/eqMac#{version.major}.app/Contents/Resources/uninstall_app.sh",
+                          executable: "#{appdir}/eqMac#{version.major}.app/Contents/Resources/uninstall_driver.sh",
                           sudo:       true,
                         }
 
-  zap delete: [
-                "~/Library/Caches/com.bitgapp.eqMac#{version.major}",
-                "~/Library/Cookies/com.bitgapp.eqMac#{version.major}.binarycookies",
-              ]
+  zap trash: [
+               "~/Library/Caches/com.bitgapp.eqMac#{version.major}",
+               "~/Library/Cookies/com.bitgapp.eqMac#{version.major}.binarycookies",
+             ]
 end

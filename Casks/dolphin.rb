@@ -10,8 +10,8 @@ cask 'dolphin' do
 
   app 'Dolphin.app'
 
-  zap delete: [
-                '~/Library/Application Support/Dolphin',
-                '~/Library/Preferences/org.dolphin-emu.dolphin.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Dolphin',
+               '~/Library/Preferences/org.dolphin-emu.dolphin.plist',
+             ]
 end

@@ -14,12 +14,10 @@ cask 'trailer' do
   uninstall login_item: 'Trailer',
             quit:       'com.housetrip.Trailer'
 
-  zap delete: [
-                '~/Library/Caches/com.housetrip.Trailer',
-                '~/Library/Group Containers/group.Trailer',
-              ],
-      trash:  [
-                '~/Library/Application Support/com.housetrip.Trailer',
-                '~/Library/Preferences/com.housetrip.Trailer.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.housetrip.Trailer',
+               '~/Library/Caches/com.housetrip.Trailer',
+               '~/Library/Group Containers/group.Trailer',
+               '~/Library/Preferences/com.housetrip.Trailer.plist',
+             ]
 end

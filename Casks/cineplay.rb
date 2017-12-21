@@ -10,5 +10,5 @@ cask 'cineplay' do
 
   uninstall pkgutil: 'com.digitalrebellion.pkg.CinePlay'
 
-  zap delete: '~/Library/Preferences/com.digitalrebellion.CinePlay.plist'
+  zap trash: '~/Library/Preferences/com.digitalrebellion.CinePlay.plist'
 end

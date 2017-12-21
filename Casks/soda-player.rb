@@ -10,10 +10,10 @@ cask 'soda-player' do
 
   app 'Soda Player.app'
 
-  zap delete: [
-                '~/Library/Application Support/Soda Player',
-                '~/Library/Preferences/com.sodaplayer.sodaplayer.plist',
-                '~/Library/Preferences/com.sodaplayer.sodaplayer-helper.plist',
-                '~/Library/Saved Application State/com.sodaplayer.sodaplayer.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Soda Player',
+               '~/Library/Preferences/com.sodaplayer.sodaplayer.plist',
+               '~/Library/Preferences/com.sodaplayer.sodaplayer-helper.plist',
+               '~/Library/Saved Application State/com.sodaplayer.sodaplayer.savedState',
+             ]
 end

@@ -1,30 +1,25 @@
 cask 'goland' do
-  # GoLand is EAP only for now
-  version '1.0 EAP,173.3531.21'
-  sha256 'd99a60d18c4c2621fa4643408963284630d74724019bf359bbf419707d1c2ab1'
+  version '2017.3,173.3727.144'
+  sha256 '32fd2e5e67ed14412d1b5a120680f30c61cd84088756dc220870a573c595c5fe'
 
-  url "https://download.jetbrains.com/go/goland-#{version.after_comma}.dmg"
-  appcast 'https://data.services.jetbrains.com/products/releases?code=GO&latest=true&type=eap',
-          checkpoint: 'a0b22fe9a3da17380d4c32aec623eeb0f2d13897d66cb39952ad497e13b2c1fe'
+  url "https://download.jetbrains.com/go/goland-#{version.before_comma}.dmg"
+  appcast 'https://data.services.jetbrains.com/products/releases?code=GO&latest=true&type=release',
+          checkpoint: 'c43024fbe8fe751ee7601c2c904804da1f31ebf92eedb73e16f870224baabc8a'
   name 'Goland'
-  name 'Goland EAP'
   homepage 'https://www.jetbrains.com/go/'
 
   auto_updates true
 
-  app "GoLand #{version.before_comma}.app"
+  app 'GoLand.app'
 
   uninstall_postflight do
     ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'goland') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }
   end
 
-  # The folders GoLand creates are still named Gogland. This should be checked after the first non-EAP release.
-  zap delete: [
-                "~/Library/Caches/Gogland#{version.major_minor}",
-                "~/Library/Logs/Gogland#{version.major_minor}",
-              ],
-      trash:  [
-                "~/Library/Preferences/Gogland#{version.major_minor}",
-                "~/Library/Application Support/Gogland#{version.major_minor}",
-              ]
+  zap trash: [
+               "~/Library/Application Support/GoLand#{version.major_minor}",
+               "~/Library/Caches/GoLand#{version.major_minor}",
+               "~/Library/Logs/GoLand#{version.major_minor}",
+               "~/Library/Preferences/GoLand#{version.major_minor}",
+             ]
 end

@@ -12,13 +12,13 @@ cask 'browser-chooserx' do
 
   app 'Browser ChooserX.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/com.bdevapps.Browser-ChooserX.Open-with-Browser-ChooserX',
-                '~/Library/Caches/com.bdevapps.Browser-ChooserX',
-                '~/Library/Containers/com.bdevapps.Browser-ChooserX.Open-with-Browser-ChooserX',
-                '~/Library/Cookies/com.bdevapps.Browser-ChooserX.binarycookies',
-                '~/Library/Group Containers/group.com.bdevapps.BrowserChooserX',
-                '~/Library/Preferences/com.bdevapps.Browser-ChooserX.plist',
-                '~/Library/Saved Application State/com.bdevapps.Browser-ChooserX.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/com.bdevapps.Browser-ChooserX.Open-with-Browser-ChooserX',
+               '~/Library/Caches/com.bdevapps.Browser-ChooserX',
+               '~/Library/Containers/com.bdevapps.Browser-ChooserX.Open-with-Browser-ChooserX',
+               '~/Library/Cookies/com.bdevapps.Browser-ChooserX.binarycookies',
+               '~/Library/Group Containers/group.com.bdevapps.BrowserChooserX',
+               '~/Library/Preferences/com.bdevapps.Browser-ChooserX.plist',
+               '~/Library/Saved Application State/com.bdevapps.Browser-ChooserX.savedState',
+             ]
 end

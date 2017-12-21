@@ -28,14 +28,12 @@ cask 'lulu' do
                       sudo:       true,
                     }
 
-  zap delete: [
-                '~/Library/Caches/com.objective-see.lulu',
-                '~/Library/Caches/com.objective-see.luluHelper',
-                '/Library/LaunchDaemons/com.objective-see.lulu.plist',
-                '/Library/Logs/LuLu.log',
-              ],
-      trash:  [
-                '~/Library/Preferences/com.objective-see.lulu.plist',
-                '~/Library/Preferences/com.objective-see.luluHelper.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.objective-see.lulu',
+               '~/Library/Caches/com.objective-see.luluHelper',
+               '~/Library/Preferences/com.objective-see.lulu.plist',
+               '~/Library/Preferences/com.objective-see.luluHelper.plist',
+               '/Library/LaunchDaemons/com.objective-see.lulu.plist',
+               '/Library/Logs/LuLu.log',
+             ]
 end

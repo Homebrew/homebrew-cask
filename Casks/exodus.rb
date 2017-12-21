@@ -1,13 +1,20 @@
 cask 'exodus' do
-  version '1.37.1'
-  sha256 '5d18bc5df12729ff6f76fc478fdda96bab6fb3ca66a83672babdf261ea221a7f'
+  version '1.40.0'
+  sha256 'ae6a56173efbda99622e0836d0838b7dc26a06d3d8423a164f2ea43105a3fd07'
 
   # exodusbin.azureedge.net was verified as official when first introduced to the cask
   url "https://exodusbin.azureedge.net/releases/exodus-macos-#{version}.dmg"
   appcast 'https://www.exodus.io/releases/',
-          checkpoint: '426cc8fedce9cfe30827ed465093b737434d000a2618b2b3d8715ec080ce843d'
+          checkpoint: '3fabf10e9e6f2cdb6bd6d0071659cbaa88df97cf3b9bb4d5c5a05dbdcbecce1c'
   name 'Exodus'
   homepage 'https://www.exodus.io/'
 
   app 'Exodus.app'
+
+  zap trash: [
+               '~/Library/Application Support/Exodus',
+               '~/Library/Preferences/com.electron.exodus.helper.plist',
+               '~/Library/Preferences/com.electron.exodus.plist',
+               '~/Library/Saved Application State/com.electron.exodus.savedState',
+             ]
 end

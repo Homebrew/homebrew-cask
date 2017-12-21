@@ -1,21 +1,22 @@
 cask 'oni' do
-  version '0.2.14'
-  sha256 'd9097e43f0953b692acd17349b4302968d55b32722f7a5cf44631bf984046d3e'
+  version '0.2.18'
+  sha256 'afaef5dea4806ca8bd28d8c82df12f4d1b3a727f46b3ae861d33cfa4831d7e20'
 
   # github.com/onivim/oni was verified as official when first introduced to the cask
   url "https://github.com/onivim/oni/releases/download/v#{version}/Oni-#{version}-osx.dmg"
   appcast 'https://github.com/onivim/oni/releases.atom',
-          checkpoint: '4f6abd3776bcc171ce2511bd4a8146d6e6408611576a9f33e35ab5d312b7db2c'
+          checkpoint: '8522cc8facc84b5e9cad5b6b6e9f02e4ee9d1f00ccc610e43353657575366a02'
   name 'Oni'
   homepage 'https://www.onivim.io/'
 
   app 'Oni.app'
+  binary "#{appdir}/Oni.app/Contents/Resources/app/oni.sh", target: 'oni'
 
-  zap delete: '~/Library/Saved Application State/com.extropy.oni.savedState',
-      trash:  [
-                '~/.oni',
-                '~/Library/Application Support/oni',
-                '~/Library/Preferences/com.extropy.oni.helper.plist',
-                '~/Library/Preferences/com.extropy.oni.plist',
-              ]
+  zap trash: [
+               '~/.oni',
+               '~/Library/Application Support/oni',
+               '~/Library/Preferences/com.extropy.oni.helper.plist',
+               '~/Library/Preferences/com.extropy.oni.plist',
+               '~/Library/Saved Application State/com.extropy.oni.savedState',
+             ]
 end

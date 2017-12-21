@@ -16,7 +16,7 @@ cask 'chatty' do
     FileUtils.mv(staged_path.children, staged_path.join('Chatty').tap(&:mkpath))
   end
 
-  zap delete: '~/.chatty'
+  zap trash: '~/.chatty'
 
   caveats do
     depends_on_java('7+')

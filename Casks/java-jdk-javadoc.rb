@@ -19,6 +19,7 @@ cask 'java-jdk-javadoc' do
 
   uninstall_postflight do
     `/usr/libexec/java_home -v #{version.before_comma} -X | grep -B0 -A1 JVMHomePath | sed -n -e 's/[[:space:]]*<string>\\(.*\\)<\\/string>/\\1/p'`.split("\n").each do |path|
+      next unless File.exist?("#{path}/docs")
       system_command '/bin/rm',
                      args: ['-rf', "#{path}/docs"],
                      sudo: true
@@ -30,7 +31,5 @@ cask 'java-jdk-javadoc' do
     License Agreement for Java SE at
 
       https://www.oracle.com/technetwork/java/javase/terms/license/index.html
-
-     #{token} will be uninstalled when the Java Cask is uninstalled or reinstalled
   EOS
 end

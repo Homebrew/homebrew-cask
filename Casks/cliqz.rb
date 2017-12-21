@@ -16,8 +16,8 @@ cask 'cliqz' do
 
   app 'CLIQZ.app'
 
-  zap delete: [
-                '~/Library/Application Support/CLIQZ',
-                '~/Library/Caches/CLIQZ',
-              ]
+  zap trash: [
+               '~/Library/Application Support/CLIQZ',
+               '~/Library/Caches/CLIQZ',
+             ]
 end

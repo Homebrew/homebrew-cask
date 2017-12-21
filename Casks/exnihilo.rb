@@ -15,9 +15,9 @@ cask 'exnihilo' do
 
   uninstall login_item: 'ExNihilo'
 
-  zap delete: [
-                '~/Library/Caches/com.soloinc.ExNihilo',
-                '~/Library/Preferences/com.soloinc.ExNihilo.plist',
-                '~/Library/Cookies/com.soloinc.ExNihilo.binarycookies',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.soloinc.ExNihilo',
+               '~/Library/Preferences/com.soloinc.ExNihilo.plist',
+               '~/Library/Cookies/com.soloinc.ExNihilo.binarycookies',
+             ]
 end

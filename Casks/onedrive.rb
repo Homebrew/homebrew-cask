@@ -1,6 +1,6 @@
 cask 'onedrive' do
-  version '17.3.6967.0824'
-  sha256 '3d63f2819cdf13432ad6ae53af48394708275c0106772f7d36e55b019e112c06'
+  version '17.3.7131.1115'
+  sha256 '69618865390d717d0a92721a1e6a4e4ca35f5ee30c67a46bed13aeee4bfb13d3'
 
   # oneclient.sfx.ms/Mac/Direct was verified as official when first introduced to the cask
   url "https://oneclient.sfx.ms/Mac/Direct/#{version}/OneDrive.pkg"
@@ -20,25 +20,25 @@ cask 'onedrive' do
                          'com.microsoft.OneDrive.FinderSync',
                        ]
 
-  zap delete: [
-                '~/Library/Application Support/OneDrive',
-                '~/Library/Application Support/com.microsoft.OneDrive',
-                '~/Library/Application Support/com.microsoft.OneDriveUpdater',
-                '~/Library/Application Support/OneDriveUpdater',
-                '~/Library/Application Scripts/com.microsoft.OneDrive.FinderSync',
-                '~/Library/Application Scripts/com.microsoft.OneDriveLauncher',
-                '~/Library/Caches/com.microsoft.OneDrive',
-                '~/Library/Caches/com.microsoft.OneDriveUpdater',
-                '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDrive',
-                '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDriveUpdater',
-                '~/Library/Containers/com.microsoft.OneDriveLauncher',
-                '~/Library/Containers/com.microsoft.OneDrive.FinderSync',
-                '~/Library/Cookies/com.microsoft.OneDrive.binarycookies',
-                '~/Library/Cookies/com.microsoft.OneDriveUpdater.binarycookies',
-                '~/Library/Group Containers/*.OneDriveStandaloneSuite',
-                '~/Library/Logs/OneDrive',
-                '~/Library/Preferences/com.microsoft.OneDrive.plist',
-                '~/Library/Preferences/com.microsoft.OneDriveUpdater.plist',
-                '~/Library/Preferences/*.OneDriveStandaloneSuite.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/OneDrive',
+               '~/Library/Application Support/com.microsoft.OneDrive',
+               '~/Library/Application Support/com.microsoft.OneDriveUpdater',
+               '~/Library/Application Support/OneDriveUpdater',
+               '~/Library/Application Scripts/com.microsoft.OneDrive.FinderSync',
+               '~/Library/Application Scripts/com.microsoft.OneDriveLauncher',
+               '~/Library/Caches/com.microsoft.OneDrive',
+               '~/Library/Caches/com.microsoft.OneDriveUpdater',
+               '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDrive',
+               '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDriveUpdater',
+               '~/Library/Containers/com.microsoft.OneDriveLauncher',
+               '~/Library/Containers/com.microsoft.OneDrive.FinderSync',
+               '~/Library/Cookies/com.microsoft.OneDrive.binarycookies',
+               '~/Library/Cookies/com.microsoft.OneDriveUpdater.binarycookies',
+               '~/Library/Group Containers/*.OneDriveStandaloneSuite',
+               '~/Library/Logs/OneDrive',
+               '~/Library/Preferences/com.microsoft.OneDrive.plist',
+               '~/Library/Preferences/com.microsoft.OneDriveUpdater.plist',
+               '~/Library/Preferences/*.OneDriveStandaloneSuite.plist',
+             ]
 end

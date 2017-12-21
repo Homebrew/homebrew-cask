@@ -11,11 +11,11 @@ cask 'bee' do
 
   app 'Bee.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/io.neat.Bee',
-                '~/Library/Application Scripts/io.neat.Bee-Mutator',
-                '~/Library/Application Scripts/io.neat.Bee-Updater',
-                '~/Library/Containers/io.neat.Bee',
-                '~/Library/Containers/io.neat.Bee-Mutator',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/io.neat.Bee',
+               '~/Library/Application Scripts/io.neat.Bee-Mutator',
+               '~/Library/Application Scripts/io.neat.Bee-Updater',
+               '~/Library/Containers/io.neat.Bee',
+               '~/Library/Containers/io.neat.Bee-Mutator',
+             ]
 end

@@ -9,5 +9,5 @@ cask 'epic-games' do
 
   app 'Epic Games Launcher.app'
 
-  zap delete: '~/Library/Caches/com.epicgames.EpicGamesLauncher'
+  zap trash: '~/Library/Caches/com.epicgames.EpicGamesLauncher'
 end

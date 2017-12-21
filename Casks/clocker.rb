@@ -14,13 +14,11 @@ cask 'clocker' do
   uninstall launchctl: 'com.abhishek.ClockerHelper',
             quit:      'com.abhishek.Clocker'
 
-  zap delete: [
-                '~/Library/Application Scripts/com.abhishek.Clocker',
-                '~/Library/Containers/com.abhishek.Clocker',
-              ],
-      trash:  [
-                '~/Library/Preferences/com.abhishek.Clocker.plist',
-                '~/Library/Preferences/com.abhishek.ClockerHelper.plist',
-                '~/Library/Preferences/com.abhishek.Clocker.prefs',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/com.abhishek.Clocker',
+               '~/Library/Containers/com.abhishek.Clocker',
+               '~/Library/Preferences/com.abhishek.Clocker.plist',
+               '~/Library/Preferences/com.abhishek.ClockerHelper.plist',
+               '~/Library/Preferences/com.abhishek.Clocker.prefs',
+             ]
 end

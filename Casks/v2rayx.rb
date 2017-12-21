@@ -24,8 +24,8 @@ cask 'v2rayx' do
                        },
             signal:    ['TERM', 'cenmrev.V2RayX']
 
-  zap delete: [
-                '~/Library/Application Support/V2RayX',
-                '~/Library/Preferences/cenmrev.V2RayX.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/V2RayX',
+               '~/Library/Preferences/cenmrev.V2RayX.plist',
+             ]
 end

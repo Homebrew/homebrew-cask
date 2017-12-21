@@ -1,9 +1,9 @@
 cask 'android-platform-tools' do
-  version :latest
-  sha256 :no_check
+  version '27.0.0'
+  sha256 '93720ae10382d54cc31d0d97f1e016ae91e1e1eb68d38ac15a3c396adb0da1c7'
 
   # google.com/android/repository/platform-tools was verified as official when first introduced to the cask
-  url 'https://dl.google.com/android/repository/platform-tools-latest-darwin.zip'
+  url "https://dl.google.com/android/repository/platform-tools_r#{version}-darwin.zip"
   name 'Android SDK Platform-Tools'
   homepage 'https://developer.android.com/studio/releases/platform-tools.html'
 

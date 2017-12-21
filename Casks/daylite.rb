@@ -22,12 +22,12 @@ cask 'daylite' do
                          ['KILL', '*.com.marketcircle.Daylite-Helper'],
                        ]
 
-  zap delete: [
-                '~/Library/Application Support/com.marketcircle.daylite',
-                '~/Library/Caches/com.marketcircle.daylite',
-                '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.marketcircle.daylite',
-                '~/Library/Group Containers/*.com.marketcircle.daylite',
-                '~/Library/Preferences/com.marketcircle.daylite.plist',
-                '~/Library/Saved Application State/com.marketcircle.daylite.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.marketcircle.daylite',
+               '~/Library/Caches/com.marketcircle.daylite',
+               '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.marketcircle.daylite',
+               '~/Library/Group Containers/*.com.marketcircle.daylite',
+               '~/Library/Preferences/com.marketcircle.daylite.plist',
+               '~/Library/Saved Application State/com.marketcircle.daylite.savedState',
+             ]
 end

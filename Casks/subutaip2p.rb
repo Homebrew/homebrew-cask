@@ -1,11 +1,11 @@
 cask 'subutaip2p' do
-  version '6.1.3'
-  sha256 '48c26b46ad2d84e786c50456f66a41729663b9fbbc15b1a0f649ffbb0106824a'
+  version '6.2.5'
+  sha256 '9bb401762662d8c2438fdab579cca74fd0d30c1038fc4a926feed6a6b05b8205'
 
   # cdn.subut.ai:8338/kurjun/rest/raw/ was verified as official when first introduced to the cask
   url 'https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=subutai-p2p.pkg'
   appcast 'https://github.com/subutai-io/p2p/releases.atom',
-          checkpoint: 'b7c5fd9ff412824769e5744234e5ea3da9ebda724251a960b6c2702d92ba07ec'
+          checkpoint: '34501198e26cfeccfe77710a421e85c908a2e1d166b609cf4de5aca1623e66cf'
   name 'Subutai P2P'
   homepage 'https://subutai.io/'
 
