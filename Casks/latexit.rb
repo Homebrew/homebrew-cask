@@ -9,6 +9,8 @@ cask 'latexit' do
   name 'LaTeXiT'
   homepage 'https://www.chachatelier.fr/latexit/'
 
+  auto_updates true
+
   app 'LaTeXiT.app'
 
   zap trash: [
