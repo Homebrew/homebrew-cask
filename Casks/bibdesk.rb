@@ -8,6 +8,8 @@ cask 'bibdesk' do
   name 'BibDesk'
   homepage 'http://bibdesk.sourceforge.net/'
 
+  auto_updates true
+
   app 'BibDesk.app'
 
   zap trash: [
