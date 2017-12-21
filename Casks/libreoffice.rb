@@ -10,6 +10,7 @@ cask 'libreoffice' do
   homepage 'https://www.libreoffice.org/'
   gpg "#{url}.asc", key_id: 'c2839ecad9408fbe9531c3e9f434a1efafeeaea3'
 
+  auto_updates true
   conflicts_with cask: [
                          'libreoffice-rc',
                          'libreoffice-still',
