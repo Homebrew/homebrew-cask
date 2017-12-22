@@ -4,7 +4,7 @@ cask 'gumi' do
 
   url 'https://gumiapp.com/download/gumi-app.zip'
   name 'gUMI'
-  homepage 'https://gumiapp.com'
+  homepage 'https://gumiapp.com/'
 
   app 'gumi.app'
 end
