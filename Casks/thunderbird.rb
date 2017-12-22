@@ -52,6 +52,11 @@ cask 'thunderbird' do
   end
 
   language 'pt' do
+    sha256 'ac77e37151fb35bf90c92330950a8b67b4d789b28d2df76d9fef04d68c191763'
+    'pt-PT'
+  end
+
+  language 'pt-BR' do
     sha256 '6318bf0448a6a81b685b88fb7af8d2af4e309ae7f3527dffe1f15be07b805230'
     'pt-BR'
   end
