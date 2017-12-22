@@ -1,11 +1,11 @@
 cask 'now' do
-  version '3.8.5'
-  sha256 'ee9f733ab12283b6d745be51747d271f4c7daecda6da3c12653489f207d57be6'
+  version '3.8.8'
+  sha256 '21899fbbf8d1ea1fe786a20a3d5f930ffc46c936bbf1f3867fb8b9fd32d82f14'
 
   # github.com/zeit/now-desktop was verified as official when first introduced to the cask
   url "https://github.com/zeit/now-desktop/releases/download/#{version}/now-desktop-#{version}-mac.zip"
   appcast 'https://github.com/zeit/now-desktop/releases.atom',
-          checkpoint: '862c29c137bd9374e1c89f6d8c5bbd2327c3c137398664eb8da6ef254f4a6bc6'
+          checkpoint: '8b9ed125ddd2dfb2630f3546118f880bb6d962944e077ff1672dd27f8cab7919'
   name 'Now'
   homepage 'https://zeit.co/now'
 
