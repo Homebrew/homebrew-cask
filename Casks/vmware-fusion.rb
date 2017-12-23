@@ -70,4 +70,8 @@ cask 'vmware-fusion' do
                '~/Library/Saved Application State/com.vmware.fusion.savedState',
                '~/Library/WebKit/com.vmware.fusion',
              ]
+
+  caveats do
+    kext
+  end
 end
