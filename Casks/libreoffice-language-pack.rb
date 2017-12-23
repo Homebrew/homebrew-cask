@@ -558,6 +558,8 @@ cask 'libreoffice-language-pack' do
 
   # documentfoundation.org was verified as official when first introduced to the cask
   url "http://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64_langpack_#{language}.dmg"
+  appcast 'https://download.documentfoundation.org/libreoffice/stable/',
+          checkpoint: 'e10b6d6d5b9d7d21174049291ce78cb5eca63d91ccf5aaed3f0b6715022629ca'
   name 'LibreOffice Language Pack'
   homepage 'https://www.libreoffice.org/'
   gpg "#{url}.asc", key_id: 'c2839ecad9408fbe9531c3e9f434a1efafeeaea3'
