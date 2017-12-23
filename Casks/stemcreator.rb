@@ -2,7 +2,7 @@ cask 'stemcreator' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.stems-music.com/download/stems-creator-installer-mac'
+  url 'https://www.stems-music.com/download/stems-creator-installer-mac'
   name 'Stem Creator'
   homepage 'http://www.stems-music.com/stem-creator-tool/'
 
