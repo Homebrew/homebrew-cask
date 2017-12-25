@@ -8,11 +8,11 @@ cask 'xeora-cli' do
 
   depends_on cask: 'dotnet-sdk'
 
+  binary 'xeora'
+
   preflight do
     FileUtils.mv "#{staged_path}/xeora", "#{staged_path}/xeora-cli"
-    File.open("#{staged_path}/xeora", "w") {|f| f.write("#!/bin/sh\nXEORAPATH=#{staged_path} #{staged_path}/xeora-cli $@\n") }
+    File.open("#{staged_path}/xeora", 'w') { |f| f.write("#!/bin/sh\nXEORAPATH=#{staged_path} #{staged_path}/xeora-cli $@\n") }
     set_permissions "#{staged_path}/xeora", '0755'
   end
-
-  binary "xeora"
 end
