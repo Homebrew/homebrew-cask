@@ -1,6 +1,6 @@
 cask 'xeora-cli' do
   version '1.0.17506'
-  sha256 :no_check
+  sha256 '9da57f2b699a66d15c93a269651fbcbb7e0a6f3c008dec815c87c8658c1649c1'
 
   url "http://www.xeora.org/Tools/CLI/xeora-cli_v#{version}_macos.tgz"
   name 'Xeora CLI'
