@@ -8,13 +8,14 @@ cask 'xeora-cli' do
 
   depends_on cask: 'dotnet-sdk'
 
-  xeorascript = "#{staged_path}/xeora-cli"
-  binary xeorascript, target: 'xeora'
+  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/xeora.wrapper.sh"
+  binary shimscript, target: 'xeora'
 
   preflight do
-    IO.write xeorascript, <<~EOS
+    IO.write shimscript, <<~EOS
       #!/bin/sh
       XEORAPATH="#{staged_path}" "#{staged_path}/xeora" "$@"
-     EOS
+    EOS
   end
 end
