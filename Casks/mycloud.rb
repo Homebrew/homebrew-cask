@@ -7,10 +7,17 @@ cask 'mycloud' do
   name 'Swisscom myCloud Desktop'
   homepage 'https://desktop.mycloud.ch/'
 
-  installer script: "#{staged_path}/myCloudDesktop-installer.app/Contents/MacOS/myCloudDesktop-installer"
+  container nested: 'myCloudDesktop-installer.app/Contents/Resources/app/application.zip'
 
-  uninstall quit:       'ch.swisscom.mycloud.desktop.finder',
-            signal:     ['KILL', 'ch.swisscom.mycloud.desktop'],
-            delete:     '/Applications/myCloudDesktop.app',
-            login_item: 'myCloudDesktop'
+  app 'myCloudDesktop.app'
+
+  uninstall login_item: 'myCloudDesktop',
+            quit:       'ch.swisscom.mycloud.desktop.finder',
+            signal:     ['TERM', 'ch.swisscom.mycloud.desktop']
+
+  zap trash: [
+               '~/Library/Application Support/myCloudDesktop',
+               '~/Library/Preferences/ch.swisscom.mycloud.desktop.plist',
+               '~/Library/Preferences/ch.swisscom.mycloud.desktop.helper.plist',
+             ]
 end
