@@ -1,4 +1,4 @@
-cask 'cura' do
+cask 'ultimaker-cura' do
   version '3.1.0'
   sha256 'd34f124dfdd0d72d089e7dcc2dc7c8763f3047402748e6e1d7c40bfc5b880de0'
 
