@@ -8,7 +8,8 @@ cask 'texshop' do
   name 'TeXShop'
   homepage 'http://pages.uoregon.edu/koch/texshop/'
 
-  depends_on macos: '>= :mountain_lion'
+  auto_updates true
+  depends_on macos: '>= :yosemite'
 
   app 'TeXShop.app'
 

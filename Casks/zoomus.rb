@@ -1,6 +1,6 @@
 cask 'zoomus' do
-  version '4.1.11049.1024'
-  sha256 '111640bbf99308aa57b60b49ad4f62a9a20a3c44b71870a7856e901e41690b72'
+  version '4.1.17379.1218'
+  sha256 '68d4a9b58ee523f66fcbe3e8d6ea6443adf32819a33861e89d60b701ef16580d'
 
   url "https://www.zoom.us/client/#{version}/zoomusInstaller.pkg"
   name 'Zoom.us'

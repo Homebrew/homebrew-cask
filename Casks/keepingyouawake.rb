@@ -9,6 +9,7 @@ cask 'keepingyouawake' do
   homepage 'https://github.com/newmarcel/KeepingYouAwake'
 
   auto_updates true
+  depends_on macos: '>= :yosemite'
 
   app 'KeepingYouAwake.app'
 

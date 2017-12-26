@@ -9,6 +9,9 @@ cask 'chalk' do
   name 'Chalk'
   homepage 'https://www.chachatelier.fr/chalk/'
 
+  auto_updates true
+  depends_on macos: '>= :mavericks'
+
   app 'Chalk.app'
 
   zap trash: [
