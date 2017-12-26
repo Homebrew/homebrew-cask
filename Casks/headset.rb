@@ -10,4 +10,11 @@ cask 'headset' do
   homepage 'http://headsetapp.co/'
 
   app 'Headset.app'
+
+  zap trash: [
+               '~/Library/Application Support/Headset',
+               '~/Library/Preferences/co.headsetapp.app.helper.plist',
+               '~/Library/Preferences/co.headsetapp.app.plist',
+               '~/Library/Saved Application State/co.headsetapp.app.savedState',
+             ]
 end
