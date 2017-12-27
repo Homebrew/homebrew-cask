@@ -7,10 +7,7 @@ cask 'homespun-instant-access' do
   name 'Homespun Instant Access'
   homepage 'https://www.homespun.com/direct-download/'
 
-  installer script: {
-                      executable: "#{staged_path}/Homespun Instant Access Installer.app/Contents/MacOS/Homespun Instant Access Installer",
-                      sudo:       true,
-                    }
+  installer manual: 'Homespun Instant Access Installer.app'
 
   uninstall quit:   'com..mm_launcher',
             delete: '/Applications/Homespun Instant Access.app'
