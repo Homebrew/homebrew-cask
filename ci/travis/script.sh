@@ -24,10 +24,6 @@ for check in "${checks[@]}"; do
   "${check}" > "${HOME}/cask-checks/before/${check}"
 done
 
-export HOMEBREW_NO_AUTO_UPDATE=1 # skip update triggered by brew tap
-brew tap homebrew/bundle
-brew bundle dump --file="${HOME}/Brewfile"
-
 modified_ruby_files=($(git diff --name-only --diff-filter=AMR "${TRAVIS_COMMIT_RANGE}" -- *.rb))
 
 for file in "${modified_ruby_files[@]}"; do
@@ -40,10 +36,18 @@ elif [[ ${#modified_casks[@]} -gt 0 ]]; then
   run brew cask _audit_modified_casks "${TRAVIS_COMMIT_RANGE}"
   run brew cask style "${modified_casks[@]}"
   if [[ ${#modified_casks[@]} -le 3 ]]; then
+    if /usr/bin/grep "depends_on cask:" "${modified_casks[@]}" > /dev/null; then
+      export HOMEBREW_NO_AUTO_UPDATE=1
+      run brew tap homebrew/bundle
+      run brew bundle dump --file="${HOME}/Brewfile"
+    fi
     for cask in "${modified_casks[@]}"; do
       run brew cask reinstall --verbose "${cask}"
       run brew cask uninstall --verbose "${cask}"
     done
+    if [ -f "${HOME}/Brewfile" ]; then
+      run brew bundle cleanup --force --file="${HOME}/Brewfile"
+    fi
   else
     ohai 'More than 3 Casks modified, skipping install'
   fi
@@ -51,14 +55,14 @@ else
   ohai 'No Casks modified, skipping'
 fi
 
-set +o errexit # set by helper.sh
-brew bundle cleanup --force --file="${HOME}/Brewfile"
+# set by helper.sh
+set +o errexit
 
 for check in "${checks[@]}"; do
   "${check}" > "${HOME}/cask-checks/after/${check}"
 
   if ! /usr/bin/diff "${HOME}/cask-checks/before/${check}" "${HOME}/cask-checks/after/${check}" > /dev/null; then 
     ohai "Leftover: ${check}"
-    /usr/bin/diff "${HOME}/cask-checks/before/${check}" "${HOME}/cask-checks/after/${check}" | grep '>'
+    /usr/bin/diff "${HOME}/cask-checks/before/${check}" "${HOME}/cask-checks/after/${check}" | /usr/bin/grep '>'
   fi
 done
