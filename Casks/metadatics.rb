@@ -9,4 +9,11 @@ cask 'metadatics' do
   homepage 'https://www.markvapps.com/metadatics'
 
   app 'Metadatics.app'
+
+  zap trash: [
+               '~/Library/Caches/com.markvapps.metadatics',
+               '~/Library/Cookies/com.markvapps.metadatics.binarycookies',
+               '~/Library/Preferences/com.markvapps.metadatics.plist',
+               '~/Library/Saved Application State/com.markvapps.metadatics.savedState',
+             ]
 end
