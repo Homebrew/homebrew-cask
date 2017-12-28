@@ -45,7 +45,7 @@ elif [[ ${#modified_casks[@]} -gt 0 ]]; then
       run brew cask reinstall --verbose "${cask}"
       run brew cask uninstall --verbose "${cask}"
     done
-    if [ -f "${HOME}/Brewfile" ]; then
+    if [[ -f "${HOME}/Brewfile" ]]; then
       run brew bundle cleanup --force --file="${HOME}/Brewfile"
     fi
   else
