@@ -1,10 +1,10 @@
 cask 'paintbrush' do
-  version '2.2'
-  sha256 '8cf110b7d9063f738dbcbbc3122e1125275adc06496eea2dbfdd79e2e916115f'
+  version '2.2.1'
+  sha256 '96ee40ce8052ffdb687a187e74f22bcce2ab40430d8b4c2f4b1d2637b3ad21a3'
 
   url "https://downloads.sourceforge.net/paintbrush/Paintbrush%202.x/Paintbrush%20#{version}/Paintbrush-#{version}.zip"
   appcast "https://paintbrush.sourceforge.io/updates#{version.major}x.xml",
-          checkpoint: '1dec7d587b2c7c806df31a1ac62ef27371dc7ea6034608aa9de1f216c58e1c18'
+          checkpoint: '6bc468d2a34ae1fac111333bc3543620848e86db852549e2350df6a531fb0235'
   name 'Paintbrush'
   homepage 'http://paintbrush.sourceforge.net/'
 
