@@ -11,5 +11,10 @@ cask 'electrum' do
 
   app 'Electrum.app'
 
-  zap trash: '~/.electrum'
+  zap trash: [
+               '~/.electrum',
+               '~/Library/Preferences/Electrum.plist',
+               '~/Library/Preferences/org.org.pythonmac.unspecified.Electrum.plist',
+               '~/Library/Saved Application State/Electrum.savedState',
+             ]
 end
