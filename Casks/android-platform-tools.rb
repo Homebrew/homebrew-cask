@@ -7,8 +7,6 @@ cask 'android-platform-tools' do
   name 'Android SDK Platform-Tools'
   homepage 'https://developer.android.com/studio/releases/platform-tools.html'
 
-  conflicts_with cask: 'android-sdk'
-
   binary "#{staged_path}/platform-tools/adb"
   binary "#{staged_path}/platform-tools/dmtracedump"
   binary "#{staged_path}/platform-tools/etc1tool"

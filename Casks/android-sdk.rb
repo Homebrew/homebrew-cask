@@ -7,8 +7,6 @@ cask 'android-sdk' do
   name 'android-sdk'
   homepage 'https://developer.android.com/index.html'
 
-  conflicts_with cask: 'android-platform-tools'
-
   binary "#{staged_path}/tools/android"
   binary "#{staged_path}/tools/bin/archquery"
   binary "#{staged_path}/tools/bin/avdmanager"
