@@ -119,6 +119,10 @@ cask 'firefox' do
   homepage 'https://www.mozilla.org/firefox/'
 
   auto_updates true
+  conflicts_with cask: [
+                         'firefox-beta',
+                         'firefox-esr',
+                       ]
 
   app 'Firefox.app'
 
