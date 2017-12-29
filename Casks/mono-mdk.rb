@@ -10,8 +10,15 @@ cask 'mono-mdk' do
 
   pkg "MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
 
-  uninstall delete:  '/private/etc/paths.d/mono-commands',
-            pkgutil: 'com.xamarin.mono-*'
+  uninstall delete:  [
+                       "/Library/Frameworks/Mono.framework/Versions/#{version.major_minor_patch}",
+                       '/private/etc/paths.d/mono-commands',
+                     ],
+            pkgutil: 'com.xamarin.mono-*',
+            rmdir:   [
+                       '/Library/Frameworks/Mono.framework/Versions',
+                       '/Library/Frameworks/Mono.framework',
+                     ]
 
   caveats <<~EOS
     Installing #{token} removes mono and mono dependant formula binaries in
