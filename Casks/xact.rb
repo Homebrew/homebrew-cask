@@ -8,5 +8,5 @@ cask 'xact' do
   name 'xACT'
   homepage 'http://xact.scottcbrown.org/'
 
-  app "xACT #{version}/xACT.app"
+  app "xACT#{version}/xACT.app"
 end
