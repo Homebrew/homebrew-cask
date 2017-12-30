@@ -1,6 +1,6 @@
 cask 'nanobox' do
-  version '2.3.0'
-  sha256 '19298f958d56856061d1a93750f01c3ff36a12f3e113b9839704810753684200'
+  version '2'
+  sha256 :no_check # required as upstream package is updated in-place
 
   # s3.amazonaws.com/tools.nanobox.io was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/tools.nanobox.io/installers/v#{version.major}/mac/Nanobox.pkg"
