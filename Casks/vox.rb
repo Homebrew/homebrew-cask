@@ -12,7 +12,16 @@ cask 'vox' do
   app 'VOX.app'
 
   zap trash: [
+               '~/Library/Application Scripts/com.coppertino.VOXAgent',
+               '~/Library/Application Scripts/com.coppertino.Vox',
+               '~/Library/Application Support/com.coppertino.Vox',
+               '~/Library/Caches/com.coppertino.Vox-Helper',
+               '~/Library/Containers/com.coppertino.VOXAgent',
                '~/Library/Containers/com.coppertino.Vox',
+               '~/Library/LaunchAgents/com.coppertino.VoxHelper.plist',
+               '~/Library/Preferences/com.coppertino.Vox-Helper.plist',
                '~/Library/Preferences/com.coppertino.Vox.plist',
+               '~/Library/Preferences/com.coppertino.VoxPrefs.plist',
+               '~/Library/Saved Application State/com.coppertino.Vox.savedState',
              ]
 end
