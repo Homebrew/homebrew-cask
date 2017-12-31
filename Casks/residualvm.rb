@@ -6,5 +6,7 @@ cask 'residualvm' do
   name 'ResidualVM'
   homepage 'http://www.residualvm.org/'
 
+  depends_on macos: :high_sierra
+
   app 'ResidualVM.app'
 end
