@@ -20,5 +20,7 @@ cask 'starcraft' do
                '/Users/Shared/Battle.net',
              ]
 
-  caveats 'If you pick an installation directory other than /Applications when installing this cask, you will need to uninstall it manually'
+  caveats <<~EOS
+    If you pick an installation directory other than /Applications when installing this cask, you will need to uninstall it manually
+  EOS
 end

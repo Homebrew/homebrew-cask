@@ -9,5 +9,7 @@ cask 'selflanguage-self-control' do
   app 'Self Control.app'
   binary 'Clean.snap', target: '/Users/Shared/Self/Clean.snap'
 
-  caveats 'A clean snapshot is available in /Users/Shared/Self/Clean.snap'
+  caveats <<~EOS
+    A clean snapshot is available in /Users/Shared/Self/Clean.snap
+  EOS
 end
