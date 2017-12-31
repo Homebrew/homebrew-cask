@@ -10,4 +10,9 @@ cask 'db-browser-for-sqlite' do
   homepage 'http://sqlitebrowser.org/'
 
   app 'DB Browser for SQLite.app'
+
+  zap trash: [
+               '~/Library/Preferences/net.sourceforge.sqlitebrowser.plist',
+               '~/Library/Saved Application State/net.sourceforge.sqlitebrowser.savedState',
+             ]
 end
