@@ -10,5 +10,7 @@ cask 'jupyter-notebook-ql' do
 
   qlplugin 'jupyter-notebook-quick-look.qlgenerator'
 
-  caveats 'You need python 3 and the nbconvert module to use this plugin.'
+  caveats <<~EOS
+    You need python 3 and the nbconvert module to use this plugin.
+  EOS
 end

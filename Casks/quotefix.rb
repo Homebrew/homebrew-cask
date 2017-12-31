@@ -19,5 +19,7 @@ cask 'quotefix' do
 
   uninstall delete: File.expand_path('~/Library/Mail/Bundles/QuoteFix.mailbundle')
 
-  caveats 'You may need to restart Mail.app before you can use QuoteFix'
+  caveats <<~EOS
+    You may need to restart Mail.app before you can use QuoteFix
+  EOS
 end
