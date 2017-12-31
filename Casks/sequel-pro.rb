@@ -13,5 +13,10 @@ cask 'sequel-pro' do
 
   app 'Sequel Pro.app'
 
-  zap trash: '~/Library/Application Support/Sequel Pro/Data'
+  zap trash: [
+               '~/Library/Application Support/Sequel Pro',
+               '~/Library/Caches/com.sequelpro.SequelPro',
+               '~/Library/Preferences/com.sequelpro.SequelPro.plist',
+               '~/Library/Saved Application State/com.sequelpro.SequelPro.savedState',
+             ]
 end
