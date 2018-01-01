@@ -10,4 +10,14 @@ cask 'caret' do
   homepage 'https://caret.io/'
 
   app 'Caret.app'
+
+  zap trash: [
+               '~/Library/Application Support/Caret',
+               '~/Library/Caches/io.caret',
+               '~/Library/Caches/io.caret.ShipIt',
+               '~/Library/Cookies/io.caret.binarycookies',
+               '~/Library/Preferences/io.caret.helper.plist',
+               '~/Library/Preferences/io.caret.plist',
+               '~/Library/Saved Application State/io.caret.savedState',
+             ]
 end
