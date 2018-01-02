@@ -1,10 +1,10 @@
 cask 'craftmanager' do
-  version '1.0.44'
-  sha256 'cd76f42fe63caaa0876736b0e9e3c27a5f4cb746808cc478e4068173638d5605'
+  version '1.0.45'
+  sha256 'd226dfe4769b3fdddf2db0aa365f0dbe4791503be2ddb0e1d294d80213562e39'
 
   url 'https://craft-assets.invisionapp.com/CraftManager/production/CraftManager.zip'
   appcast 'https://craft-assets.invisionapp.com/CraftManager/production/appcast.xml',
-          checkpoint: '2c9bb71d38c675d8990495aa41bf011af3fe9bf294d2451a41015003d16aee96'
+          checkpoint: '8128d744564c0cc7db6f034f76cbe60ef7da1e302467abd9fba5b3ef9590f95e'
   name 'CraftManager'
   homepage 'https://www.invisionapp.com/craft'
 
