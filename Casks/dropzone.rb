@@ -17,7 +17,7 @@ cask 'dropzone' do
                "~/Library/Caches/com.aptonic.Dropzone#{version.major}",
                "~/Library/Containers/com.aptonic.Dropzone#{version.major}",
                '~/Library/Containers/com.aptonic.LaunchAtLogin',
-               "~/Library/Preferences/com.aptonic.Dropzone.plist#{version.major}",
+               "~/Library/Preferences/com.aptonic.Dropzone#{version.major}.plist",
                "~/Library/Saved Application State/com.aptonic.Dropzone#{version.major}.savedState",
              ]
 end
