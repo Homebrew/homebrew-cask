@@ -11,13 +11,13 @@ cask 'dropzone' do
   app "Dropzone #{version.major}.app"
 
   zap trash: [
-               '~/Library/Application Scripts/com.aptonic.Dropzone3',
+               "~/Library/Application Scripts/com.aptonic.Dropzone#{version.major}",
                '~/Library/Application Scripts/com.aptonic.LaunchAtLogin',
-               '~/Library/Application Support/Dropzone 3',
-               '~/Library/Caches/com.aptonic.Dropzone3',
-               '~/Library/Containers/com.aptonic.Dropzone3',
+               "~/Library/Application Support/Dropzone #{version.major}",
+               "~/Library/Caches/com.aptonic.Dropzone#{version.major}",
+               "~/Library/Containers/com.aptonic.Dropzone#{version.major}",
                '~/Library/Containers/com.aptonic.LaunchAtLogin',
-               '~/Library/Preferences/com.aptonic.Dropzone3.plist',
-               '~/Library/Saved Application State/com.aptonic.Dropzone3.savedState',
+               "~/Library/Preferences/com.aptonic.Dropzone.plist#{version.major}",
+               "~/Library/Saved Application State/com.aptonic.Dropzone#{version.major}.savedState",
              ]
 end
