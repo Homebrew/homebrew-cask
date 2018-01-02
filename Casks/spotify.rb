@@ -2,7 +2,7 @@ cask 'spotify' do
   version :latest
   sha256 :no_check
 
-  url 'https://download.spotify.com/Spotify.dmg'
+  url 'https://download.scdn.co/Spotify.dmg'
   name 'Spotify'
   homepage 'https://www.spotify.com/'
 
