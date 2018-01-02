@@ -9,6 +9,7 @@ cask 'xquartz' do
   name 'XQuartz'
   homepage 'https://www.xquartz.org/'
 
+  auto_updates true
   conflicts_with cask: 'xquartz-beta'
 
   pkg 'XQuartz.pkg'

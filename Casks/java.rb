@@ -9,6 +9,8 @@ cask 'java' do
   name 'Java Standard Edition Development Kit'
   homepage "https://www.oracle.com/technetwork/java/javase/downloads/jdk#{version.major}-downloads-3848520.html"
 
+  depends_on macos: '>= :yosemite'
+
   pkg "JDK #{version.before_comma}.pkg"
 
   postflight do
@@ -68,6 +70,7 @@ cask 'java' do
                '~/Library/Preferences/com.oracle.javadeployment.plist',
              ],
       rmdir: [
+               '/Library/Application Support/Oracle/',
                "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk",
                '~/Library/Application Support/Oracle/',
              ]

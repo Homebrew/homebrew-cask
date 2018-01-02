@@ -1,10 +1,10 @@
 cask 'appcode' do
-  version '2017.3,173.3727.136'
-  sha256 '41ec2773f7e58f7c9fb6e86931e73f72e156cfb9d3f2bd1c25fad80af8e8b9b8'
+  version '2017.3.1,173.4127.30'
+  sha256 'f007c55fe4fdee1e88a884971209605741fb9cac483e13cce9f59123bfbcc1e1'
 
   url "https://download.jetbrains.com/objc/AppCode-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=AC&latest=true&type=release',
-          checkpoint: 'b80f1bfa6882b58d30a851d2ea12007b329714affc628f5d9a92595082ec2b5b'
+          checkpoint: '659a689dfcad1eeecbb8aff4f1153164e4308fa06b67dbff5b4e24bc20790987'
   name 'AppCode'
   homepage 'https://www.jetbrains.com/objc/'
 

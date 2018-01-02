@@ -1,6 +1,6 @@
 cask 'nanobox' do
   version '2.3.0'
-  sha256 '1ab3501db17a017debbdf8e1f3cba755ec62e2cf3bec90ac7bf9703e9583477a'
+  sha256 '19298f958d56856061d1a93750f01c3ff36a12f3e113b9839704810753684200'
 
   # s3.amazonaws.com/tools.nanobox.io was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/tools.nanobox.io/installers/v#{version.major}/mac/Nanobox.pkg"

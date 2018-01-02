@@ -12,4 +12,8 @@ cask 'keeweb' do
   auto_updates true
 
   app 'KeeWeb.app'
+
+  uninstall_preflight do
+    set_ownership "#{appdir}/KeeWeb.app"
+  end
 end
