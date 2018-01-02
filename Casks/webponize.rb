@@ -1,13 +1,13 @@
 cask 'webponize' do
-  version '1.2.2'
-  sha256 '54b248aa530c259b6bc8ada0a5936591ad2702a43b8099dadc050401577ca1f3'
+  version '2.1.0'
+  sha256 'ce394e91d07f636571a2a21cf183993ad9170794877e6744148ff1faf0ded2b3'
 
-  # github.com/1000ch/WebPonize was verified as official when first introduced to the cask
-  url 'https://github.com/1000ch/WebPonize/raw/master/webponize.tar.gz'
-  appcast 'https://raw.githubusercontent.com/1000ch/WebPonize/master/appcast.xml',
-          checkpoint: '3e3cfa7b4a7728f3eb45d7b53d04cbd44a2cd5905c65bd01f4eb6b524635face'
+  # github.com/webponize/webponize was verified as official when first introduced to the cask
+  url 'https://github.com/webponize/webponize/releases/download/v2.1.0/WebPonize.app.zip'
+  appcast 'https://webponize.org/appcast.xml',
+          checkpoint: '8447933d59c9a69610b891ff4ba95f02ba057b987d9058702f554658d3e9d395'
   name 'WebPonize'
-  homepage 'https://webponize.github.io/'
+  homepage 'https://webponize.org/'
 
   app 'WebPonize.app'
 end
