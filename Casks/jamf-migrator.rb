@@ -5,7 +5,7 @@ cask 'jamf-migrator' do
   url 'https://github.com/jamfprofessionalservices/JamfMigrator/releases/download/current/jamf-migrator.zip'
   appcast 'https://github.com/jamfprofessionalservices/JamfMigrator/releases.atom',
           checkpoint: 'f37156fc086e1864577aa11a93b1915566ca9cb46a44837e7151b2ea17b7ade5'
-  name 'jamf-migrator'
+  name 'JamfMigrator'
   homepage 'https://github.com/jamfprofessionalservices/JamfMigrator'
 
   app 'jamf-migrator.app'
