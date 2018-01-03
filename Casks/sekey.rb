@@ -11,9 +11,9 @@ cask 'sekey' do
   pkg "SeKey-#{version}.pkg"
   binary "#{appdir}/SeKey.app/Contents/MacOS/sekey"
 
-  launchd_plist = "#{ENV['HOME']}/Library/LaunchAgents/com.ntrippar.sekey.plist"
-
   postflight do
+    launchd_plist = "#{ENV['HOME']}/Library/LaunchAgents/com.ntrippar.sekey.plist"
+
     system_command '/bin/launchctl',
                    args: ['unload', '-F', launchd_plist],
                    sudo: true
@@ -24,13 +24,8 @@ cask 'sekey' do
                    args: ['load', '-F', launchd_plist]
   end
 
-  # early_script / delete is a workaround for uninstall launchctl permissions error
-  uninstall early_script: {
-                            executable: '/bin/launchctl',
-                            args:       ['unload', '-F', launchd_plist],
-                          },
-            delete:       launchd_plist,
-            pkgutil:      'com.ntrippar.sekey'
+  uninstall launchctl: 'com.ntrippar.sekey',
+            pkgutil:   'com.ntrippar.sekey'
 
   zap trash: '~/.sekey'
 
