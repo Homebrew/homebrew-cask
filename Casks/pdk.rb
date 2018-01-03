@@ -1,12 +1,12 @@
 cask 'pdk' do
-  version '1.3.0.0'
+  version '1.3.1.0'
 
   if MacOS.version <= :el_capitan
-    sha256 '5abf29565bfd250d47d4e98193e2e4eb56dc0218d5e4031e4c53e12e13bdc6d7'
+    sha256 '1dbae3da7a2ce0f26ed1a447a6bd407f6ad7c033985d9743a88df57825764d50'
     # puppet-pdk.s3.amazonaws.com/pdk was verified as official when first introduced to the cask
     url "https://puppet-pdk.s3.amazonaws.com/pdk/#{version}/repos/apple/10.11/PC1/x86_64/pdk-#{version}-1.osx10.11.dmg"
   else
-    sha256 '522277adc97f2d30c3b8a91899bc895924ac6850363a9730f9dd343a77097f8a'
+    sha256 'd2ed3bdb73cc05237667f586bce64a8e6e13685e82289136ccf221c0b306cfea'
     # puppet-pdk.s3.amazonaws.com/pdk was verified as official when first introduced to the cask
     url "https://puppet-pdk.s3.amazonaws.com/pdk/#{version}/repos/apple/10.12/PC1/x86_64/pdk-#{version}-1.osx10.12.dmg"
   end
