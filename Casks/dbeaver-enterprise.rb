@@ -4,7 +4,7 @@ cask 'dbeaver-enterprise' do
 
   url "https://dbeaver.com/files/#{version}/dbeaver-ee-#{version}-macos.dmg"
   appcast 'https://dbeaver.com/product/version.xml',
-          checkpoint: '40b5a163ee371231021d31fc7a908ba2ad4a540a2bdcf0dbe83ca870d316eba6'
+          checkpoint: '92df8a425b0e635172d1836be7a50e6311be6e35f4a29c455b09f42813bea3c0'
   name 'DBeaver Enterprise Edition'
   homepage 'https://dbeaver.com/'
 
