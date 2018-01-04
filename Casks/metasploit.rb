@@ -1,10 +1,10 @@
 cask 'metasploit' do
-  version '4.16.29+20171229131706'
-  sha256 'b19491918aef69ac30b131f1d15fc48be6dae9bc30b00d145b9bd3c7035cf5ae'
+  version '4.16.29+20180102131846'
+  sha256 '1c2aa4b9334828da20046c3c55995a9a28271273bc0116c41073e79417deb651'
 
   url "https://osx.metasploit.com/metasploit-framework-#{version}-1rapid7-1.pkg"
   appcast 'https://osx.metasploit.com/LATEST',
-          checkpoint: 'f993b0a87ab7337f989b4badace8479a4a8245308554b3e04eb16d0e814ff546'
+          checkpoint: '97d245722fad4b566fc339e2b0cdc0f69975e01a3d8f45c70f8158b95dcdfdb6'
   name 'Metasploit Framework'
   homepage 'https://www.metasploit.com/'
   gpg "#{url}.asc", key_id: '2007B954'
