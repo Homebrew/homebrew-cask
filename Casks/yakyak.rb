@@ -1,10 +1,10 @@
 cask 'yakyak' do
-  version '1.4.3'
-  sha256 'a8e220046279f2794087c8609bcc643e1171e83a84b93967b2c169362289a411'
+  version '1.5.0'
+  sha256 'c4e4eb42ff2224f26134a878110194ee106d139a7b029305bad01cff0c914c5b'
 
   url "https://github.com/yakyak/yakyak/releases/download/v#{version}/yakyak-#{version}-osx.zip"
   appcast 'https://github.com/yakyak/yakyak/releases.atom',
-          checkpoint: '0c3cfd8553b156fe6e0254af99722e069dc69903d45d95b090502dcfd3efd2c0'
+          checkpoint: '582157119d34959068d6e0f745f5e576c0dc267c413d23b8a9255812d4f4d48b'
   name 'Yakyak'
   homepage 'https://github.com/yakyak/yakyak'
 
