@@ -1,6 +1,6 @@
 cask 'exist-db' do
-  version '3.6.0'
-  sha256 '457288413a5e33468c3afc36c9f31c55b0a7cc3fae5d1283c87861d03f479147'
+  version '3.6.1'
+  sha256 'ad45b07e6388bbd415225a0948143dc492c50134676689dbcbc6c3bdddf7238e'
 
   # bintray.com/artifact/download/existdb was verified as official when first introduced to the cask
   url "https://bintray.com/artifact/download/existdb/releases/eXist-db-#{version}.dmg"
