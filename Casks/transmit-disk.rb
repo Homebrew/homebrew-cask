@@ -1,6 +1,6 @@
 cask 'transmit-disk' do
-  version '4.4.12'
-  sha256 '3a4e3515450e597fc7f0d75f0d53df215bea3b6d9615c0a960f471b1185602ef'
+  version '4.4.13'
+  sha256 'e1a8a1c7ca874b1126c023b22435ded74a4f8af168d487dd1cbac0c0a770a515'
 
   url "https://download.panic.com/transmit/Transmit%20Disk%20#{version}.pkg.zip"
   name 'transmit-disk'
