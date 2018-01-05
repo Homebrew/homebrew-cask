@@ -9,4 +9,10 @@ cask 'bitbar' do
   homepage 'https://github.com/matryer/bitbar/'
 
   app 'BitBar.app'
+
+  zap trash: [
+               '~/Library/BitBar Plugins',
+               '~/Library/Caches/com.matryer.BitBar',
+               '~/Library/Preferences/com.matryer.BitBar.plist',
+             ]
 end
