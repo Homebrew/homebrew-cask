@@ -18,8 +18,8 @@ cask 'fantastical' do
   zap trash: [
                '~/Library/Preferences/com.flexibits.fantastical.plist',
                '~/Library/Application Scripts/com.flexibits.fbcaldav.*',
-               '~/Library/Application Scripts/com.flexibits.fantastical2.*',
+               "~/Library/Application Scripts/com.flexibits.fantastical#{version.major}.*",
                '~/Library/Containers/com.flexibits.fbcaldav.*',
-               '~/Library/Containers/com.flexibits.fantastical2.*',
+               "~/Library/Containers/com.flexibits.fantastical#{version.major}.*",
              ]
 end
