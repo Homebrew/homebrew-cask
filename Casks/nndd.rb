@@ -10,10 +10,12 @@ cask 'nndd' do
 
   depends_on cask: 'adobe-air'
 
-  app 'NNDD.app'
+  installer script: {
+                      executable: "#{staged_path}/Install NNDD.app/Contents/MacOS/Install NNDD",
+                      args:       ['-silent', '-eulaAccepted', '-location', appdir],
+                    }
 
-  preflight do
-    system_command staged_path.join('Install NNDD.app/Contents/MacOS/Install NNDD'),
-                   args: ['-silent', '-eulaAccepted', '-location', staged_path]
-  end
+  uninstall trash: "#{appdir}/NNDD.app"
+
+  zap trash: '~/Library/Application Support/org.mineap.nndd'
 end
