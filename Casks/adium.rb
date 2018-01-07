@@ -9,7 +9,6 @@ cask 'adium' do
   homepage 'https://www.adium.im/'
 
   auto_updates true
-  conflicts_with cask: 'adium'
 
   app 'Adium.app'
 
