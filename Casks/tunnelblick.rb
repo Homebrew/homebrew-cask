@@ -28,10 +28,8 @@ cask 'tunnelblick' do
                '~/Library/Caches/net.tunnelblick.tunnelblick',
                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/Tunnelblick*',
                '~/Library/Cookies/net.tunnelblick.tunnelblick.binarycookies',
-               '~/Library/LaunchAgents/net.tunnelblick.tunnelblick.LaunchAtLogin.plist',
                '~/Library/Preferences/net.tunnelblick.tunnelblick.plist',
                '/Library/Application Support/Tunnelblick',
-               '/Library/LaunchDaemons/net.tunnelblick.tunnelblick.tunnelblickd.plist',
              ]
 
   caveats <<~EOS
