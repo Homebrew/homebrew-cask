@@ -14,5 +14,5 @@ cask 'simsim' do
             login_item: 'SimSim',
             kext:       'com.dsmelov.SimSim'
 
-  zap trash: ['~/Library/Preferences/com.dsmelov.SimSim.plist']
+  zap trash: '~/Library/Preferences/com.dsmelov.SimSim.plist'
 end
