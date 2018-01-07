@@ -1,10 +1,11 @@
 cask 'pingendo' do
-  version '3'
-  sha256 :no_check # required as upstream package is updated in-place
+  version '4.0'
+  sha256 '8bd102c73e98b4f5085b4908526b9af1b3dd24cbea9bb7d622674049258d1b69'
 
-  url "http://download.pingendo.com/v#{version}/Pingendo.dmg"
+  # pingendoauth.appspot.com was verified as official when first introduced to the cask
+  url "https://firebasestorage.googleapis.com/v0/b/pingendoauth.appspot.com/o/Pingendo%20#{version}.dmg?alt=media&amp;token=0621d7bf-a02b-4901-91ba-7d8a25f95395"
   name 'Pingendo'
   homepage 'https://pingendo.com/'
 
-  app "Pingendo#{version}.app"
+  app "Pingendo #{version}.app"
 end
