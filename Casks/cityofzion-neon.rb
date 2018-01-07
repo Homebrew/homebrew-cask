@@ -4,7 +4,7 @@ cask 'cityofzion-neon' do
 
   url "https://github.com/CityOfZion/neon-wallet/releases/download/#{version}/Neon-#{version}.Mac.dmg"
   appcast 'https://github.com/CityOfZion/neon-wallet/releases.atom',
-          checkpoint: '00888edfcf0a1f09c9002ea4ce2fea014e1089a82b6f3aa2dc24eb2e44a1a4b3'
+          checkpoint: '6b1d962ba9941f2063cba44e7dc6346efe2e9d641397038ff4e9c027a8675d99'
   name 'Neon Wallet'
   homepage 'https://github.com/CityOfZion/neon-wallet'
 
