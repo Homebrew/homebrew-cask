@@ -1,11 +1,11 @@
 cask 'etcher' do
-  version '1.3.0'
-  sha256 '37e33cae66362f90e472f8410f1058a5a0793ea68d686739a6c49d1893b20130'
+  version '1.2.1'
+  sha256 'a4faf8de586dd7f3233e599f3a64a6fbfab8c09087b53af4f3084079beda18c2'
 
   # github.com/resin-io/etcher/releases/download was verified as official when first introduced to the cask
   url "https://github.com/resin-io/etcher/releases/download/v#{version}/Etcher-#{version}.dmg"
   appcast 'https://github.com/resin-io/etcher/releases.atom',
-          checkpoint: 'd5443c75af28e37a0033fda0b98ce8a8687c4e89eb42e48544baab1ce73abb46'
+          checkpoint: '92185e78bfdf5bfc84e81c2fbebc2272a7feb50e07d6e5285adcbb65a0151fb2'
   name 'Etcher'
   homepage 'https://etcher.io/'
 
