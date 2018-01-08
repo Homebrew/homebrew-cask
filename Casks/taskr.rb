@@ -7,7 +7,7 @@ cask 'taskr' do
   appcast 'https://github.com/bukinoshita/taskr/releases.atom',
           checkpoint: 'b848fed3d524159b160e2f798c5e0f76ae27283b81a5a2d84464dc5d7a96fca1'
   name 'Taskr'
-  homepage 'https://gettaskr.now.sh/'
+  homepage 'https://taskr.now.sh/'
 
   app 'Taskr.app'
 end
