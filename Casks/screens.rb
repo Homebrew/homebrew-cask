@@ -1,6 +1,6 @@
 cask 'screens' do
-  version '4.3.7,11270:1515171433'
-  sha256 '52d7021139a3b3ea71b7530ebc9678d608dc3f49d15011e6dbc619747883d6d5'
+  version '4.3.7,11288:1515260218'
+  sha256 'a4e91d79e50d6293f3025a8497dfde487601758cb1425e32513bb9ed605d4c45'
 
   # dl.devmate.com/com.edovia.screens4.mac was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.edovia.screens4.mac/#{version.after_comma.before_colon}/#{version.after_colon}/Screens#{version.major}-#{version.after_comma.before_colon}.zip"
