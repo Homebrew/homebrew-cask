@@ -9,6 +9,6 @@ cask 'retroarch' do
   homepage 'https://www.libretro.com/'
 
   app 'RetroArch.app'
-  
+
   zap trash: '~/Library/Application Support/RetroArch'
 end
