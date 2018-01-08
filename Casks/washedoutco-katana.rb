@@ -1,4 +1,4 @@
-cask 'bluegill-katana' do
+cask 'washedoutco-katana' do
   version '1.1.1'
   sha256 'bb618628bd335c60dab87bc82c4e5d72df8e80e0baf5510c861962afda915fbc'
 
