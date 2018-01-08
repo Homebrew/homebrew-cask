@@ -9,5 +9,5 @@ cask 'taskr' do
   name 'Taskr'
   homepage 'https://taskr.now.sh/'
 
-  app 'Taskr.app'
+  app 'taskr.app'
 end
