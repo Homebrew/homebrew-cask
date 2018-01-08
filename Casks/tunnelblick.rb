@@ -24,11 +24,12 @@ cask 'tunnelblick' do
             quit:      'net.tunnelblick.tunnelblick'
 
   zap trash: [
-               '/Library/Application Support/Tunnelblick',
                '~/Library/Application Support/Tunnelblick',
-               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/net.tunnelblick.tunnelblick.help*',
                '~/Library/Caches/net.tunnelblick.tunnelblick',
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/Tunnelblick*',
+               '~/Library/Cookies/net.tunnelblick.tunnelblick.binarycookies',
                '~/Library/Preferences/net.tunnelblick.tunnelblick.plist',
+               '/Library/Application Support/Tunnelblick',
              ]
 
   caveats <<~EOS

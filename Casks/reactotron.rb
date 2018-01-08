@@ -1,10 +1,10 @@
 cask 'reactotron' do
-  version '1.14.0'
-  sha256 'eee19bd59d4267c6f9e20d12c26fa908ddc1b66eb0bc1d5e489f4b0fca61f567'
+  version '1.15.0'
+  sha256 '56c166b1b09dc8863422656dc7a23f2cf22a0c85bb8bef5532fe2a95e7bdaf44'
 
   url "https://github.com/infinitered/reactotron/releases/download/v#{version}/Reactotron.app.zip"
   appcast 'https://github.com/infinitered/reactotron/releases.atom',
-          checkpoint: '4c5d939b788fb2073057b56b729e27afb91a1ab8c73e64e86d0bbed678da48d5'
+          checkpoint: '9a1788a7e3ee20e68ccc146673425acaf64561bd2c374598c4b52b2263b7b817'
   name 'Reactotron'
   homepage 'https://github.com/infinitered/reactotron'
 

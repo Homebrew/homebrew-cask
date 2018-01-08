@@ -1,26 +1,21 @@
 cask 'lulu' do
-  version '0.9.1'
-  sha256 '9896eb5c068646efc13d699ac1ef6e41e045fe9f58a89a0179eec8abb6a5be80'
+  version '0.9.2'
+  sha256 '05147e83e25463f6cdd8963f69f4c38e390ac2b9462bc5e3f9ab9b04c22b8e0f'
 
   # github.com/objective-see/LuLu was verified as official when first introduced to the cask
   url "https://github.com/objective-see/LuLu/releases/download/#{version}/LuLu_#{version}.zip"
   appcast 'https://github.com/objective-see/LuLu/releases.atom',
-          checkpoint: 'db36355bf419ecded8696c8b7c6cc455fe7b186960bd9f08ed3654ff6bc1043e'
+          checkpoint: '7f88f41f7c8ca1453e3057e984595b535dbd1ccb1c1887f4b04673d49dd1c39b'
   name 'LuLu'
   homepage 'https://objective-see.com/products/lulu.html'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :yosemite'
 
   installer script: {
                       executable: 'configure.sh',
                       args:       ['-install'],
                       sudo:       true,
                     }
-
-  preflight do
-    configure = "#{staged_path}/configure.sh"
-    IO.write(configure, IO.read(configure).gsub('exit 1', 'exit 0'))
-  end
 
   uninstall script: {
                       executable: 'configure.sh',
