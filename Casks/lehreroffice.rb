@@ -1,10 +1,10 @@
 cask 'lehreroffice' do
-  version '2017.19.1'
-  sha256 'd77df280c163be70b1b814ca12b6d398d1e55b68c2a00b8b5bf62b275303bd39'
+  version '2017.19.2'
+  sha256 'a53f04159cb63791018237c89e253779d37ecd867e674a51f68ceefd019cf9d3'
 
   url 'https://www.lehreroffice.ch/lo/dateien/easy/lo_osx.dmg'
   appcast 'https://www.lehreroffice.ch/services/update/getcurrentversion.php?app=Desktop',
-          checkpoint: '891f6ad23d0554d4e2c87f2667d64ab326d8858883ff80fcd7fa92118a4607f7'
+          checkpoint: '951662e2da7713050ae216bb179ab2e11489198f5ae1926c76e7ee45c7e6578a'
   name 'LehrerOffice'
   homepage 'https://www.lehreroffice.ch/'
 
