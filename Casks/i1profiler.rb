@@ -10,7 +10,15 @@ cask 'i1profiler' do
 
   pkg 'i1Profiler.pkg'
 
-  uninstall pkgutil: 'com.xrite.i1profiler.*'
+  uninstall pkgutil:   [
+                         'com.xrite.i1profiler.*',
+                         'com.xrite.xritedeviceservices.*',
+                         'com.xrite.hasp.installer.*',
+                       ],
+            launchctl: [
+                         'com.xrite.device.softwareupdate.plist',
+                         'com.xrite.device.xrdd.plist',
+                       ]
 
   caveats do
     reboot
