@@ -16,7 +16,7 @@ launchjob_install () { "$(brew --repository)/Library/Taps/caskroom/homebrew-cask
 launchjob_load () { "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_loaded_launchjob_ids" ; }
 pkgs () { "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_recent_pkg_ids" ; }
 
-checks=('apps' 'kexts' 'launchjob_install' 'launchjob_load' 'pkgs')
+checks=('pkgs' 'apps' 'kexts' 'launchjob_install' 'launchjob_load')
 
 /bin/mkdir -p "${HOME}/cask-checks/"{before,after}
 
@@ -54,9 +54,6 @@ elif [[ ${#modified_casks[@]} -gt 0 ]]; then
 else
   ohai 'No Casks modified, skipping'
 fi
-
-# set by helper.sh
-set +o errexit
 
 for check in "${checks[@]}"; do
   "${check}" > "${HOME}/cask-checks/after/${check}"
