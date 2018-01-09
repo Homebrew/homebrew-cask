@@ -5,7 +5,7 @@ cask 'ganache' do
   # github.com/trufflesuite/ganache was verified as official when first introduced to the cask
   url "https://github.com/trufflesuite/ganache/releases/download/v#{version}/Ganache-#{version}.dmg"
   appcast 'https://github.com/trufflesuite/ganache/releases.atom',
-          checkpoint: '65a02e9d4c2b2d07c5ab34ae28b02da9f9b445ee243bf6340a236e9d8ff1dcbe'
+          checkpoint: '4ec6dfca043d894dab810fa8284b25773e53a4cad38496342e7cc9105253f9b2'
   name 'Ganache'
   homepage 'http://truffleframework.com/ganache/'
 
