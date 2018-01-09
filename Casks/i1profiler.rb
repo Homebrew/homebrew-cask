@@ -18,7 +18,9 @@ cask 'i1profiler' do
             launchctl: [
                          'com.xrite.device.softwareupdate.plist',
                          'com.xrite.device.xrdd.plist',
-                       ]
+                       ],
+            delete:    '/Applications/i1Profiler/i1Profiler.app',
+            rmdir:     '/Applications/i1Profiler'
 
   caveats do
     reboot
