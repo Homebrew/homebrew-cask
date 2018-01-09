@@ -16,7 +16,8 @@ cask 'pritunl' do
                          'com.pritunl.client',
                          'com.pritunl.service',
                        ],
-            signal:    ['TERM', 'com.electron.pritunl']
+            signal:    ['TERM', 'com.electron.pritunl'],
+            delete:    '/Applications/Pritunl.app'
 
   zap trash: [
                '~/Library/Application Support/pritunl',
