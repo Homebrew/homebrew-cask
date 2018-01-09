@@ -5,7 +5,7 @@ cask 'monal' do
   url 'http://monal.im/Monal-OSX/Monal-OSX.zip'
   appcast 'https://monal.im/Monal-OSX/appcast.xml',
           checkpoint: '8303a6fd9f0389e1288716f5ac4a6d6cba677f0713867766c9b526e26b10518f'
-  name 'Monal XMPP Beta'
+  name 'Monal XMPP'
   homepage 'https://monal.im/'
 
   app 'Monal.app'
