@@ -31,4 +31,8 @@ cask 'lulu' do
                '/Library/LaunchDaemons/com.objective-see.lulu.plist',
                '/Library/Logs/LuLu.log',
              ]
+
+  caveats do
+    kext
+  end
 end
