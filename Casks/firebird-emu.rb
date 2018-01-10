@@ -1,4 +1,4 @@
-cask 'firebird' do
+cask 'firebird-emu' do
   version '1.4'
   sha256 '65b4755ea5d72e6004972908ec8c416e96f9d5c466ab01379543c27e54439c6e'
 
@@ -8,5 +8,5 @@ cask 'firebird' do
   name 'firebird'
   homepage 'https://github.com/nspire-emus/firebird'
 
-  app 'firebird.app'
+  app 'firebird-emu.app'
 end
