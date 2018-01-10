@@ -4,7 +4,7 @@ cask 'firebird' do
 
   url "https://github.com/nspire-emus/firebird/releases/download/v#{version}/firebird-emu-mac.dmg"
   appcast 'https://github.com/nspire-emus/firebird/releases.atom',
-          checkpoint: '35d06123bf4aee8f5eef821600daffa5a4240ce91c53b07fe2577e827249ddf8'
+          checkpoint: '3d5d79db62eed582c732207e18f70b8289a93a6c95806e50a542b7caaf898705'
   name 'firebird'
   homepage 'https://github.com/nspire-emus/firebird'
 
