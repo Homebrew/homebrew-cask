@@ -1,5 +1,5 @@
 cask 'firebird' do
-  version '1.3'
+  version '1.4'
   sha256 'eaf84c7853326107628eec8b90fc8e1e78ea1afc84a7dfb3177ca50c273b7250'
 
   url "https://github.com/nspire-emus/firebird/releases/download/v#{version}/firebird-mac.dmg"
