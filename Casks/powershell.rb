@@ -4,7 +4,7 @@ cask 'powershell' do
 
   url "https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}-osx.10.12-x64.pkg"
   appcast 'https://github.com/PowerShell/PowerShell/releases.atom',
-          checkpoint: '396bbb5907fd0ec0bdfbfe0bf01961b52b4f1f1ceddc95467dd9ecd4fa5281df'
+          checkpoint: '339de99aebfd66bc07b2bb82fed802c3a37af3af480d47c2b5d1162f43350fba'
   name 'PowerShell'
   homepage 'https://github.com/PowerShell/PowerShell'
 
