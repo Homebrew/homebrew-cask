@@ -1,6 +1,6 @@
 cask 'plexamp' do
-  version '1.0.0'
-  sha256 'c9b00e8614e0686d2e4741259a95a0096b03041b1d281fab7bd3e7ef709dea9c'
+  version '1.0.1'
+  sha256 'cc0a31e19caaa301608ce9b0b895bb8f44ccdb9018ad92741d5ed9398fc83855'
 
   url "https://plexamp.plex.tv/plexamp.plex.tv/Plexamp-#{version}.dmg"
   name 'Plexamp'
