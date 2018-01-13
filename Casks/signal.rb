@@ -8,6 +8,8 @@ cask 'signal' do
   name 'Signal'
   homepage 'https://signal.org/'
 
+  auto_updates true
+
   app 'Signal.app'
 
   zap trash: [
