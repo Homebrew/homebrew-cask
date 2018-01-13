@@ -13,6 +13,7 @@ cask 'iina' do
   depends_on macos: '>= :yosemite'
 
   app 'IINA.app'
+  binary "#{appdir}/IINA.app/Contents/MacOS/iina-cli", target: 'iina'
 
   zap trash: [
                '~/Library/Application Support/com.colliderli.iina',
