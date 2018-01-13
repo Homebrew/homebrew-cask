@@ -1,11 +1,11 @@
 cask 'iina' do
-  version '0.0.14.1'
-  sha256 '87d04d497e8a4cad7129877e41244248e795593dfbd0a1c8cee086142993c0f1'
+  version '0.0.15'
+  sha256 '5492a131654eaaed1dd5992bde235467c573c994f4c3cd747f96aa7f26b2f33d'
 
   # dl-portal.iina.io was verified as official when first introduced to the cask
   url "https://dl-portal.iina.io/IINA.v#{version}.dmg"
   appcast 'https://www.iina.io/appcast.xml',
-          checkpoint: 'ddde026fa887ead81e1bd4b78e2dfd12abac7cd1f2c6155ee775ea38fc6b31a3'
+          checkpoint: 'b724e8fe515e656144f977091a30f8f8b367bf83d9e999ea6353e51e8fea2bed'
   name 'IINA'
   homepage 'https://lhc70000.github.io/iina/'
 
