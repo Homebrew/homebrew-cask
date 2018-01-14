@@ -1,8 +1,9 @@
 cask 'dropbox' do
-  version :latest
-  sha256 :no_check
+  version '41.4.80'
+  sha256 'bb69e170803c85e7fb2b9fdfcc99a2d1f3d2ce5cef605225dc79855e5409cb3a'
 
-  url 'https://www.dropbox.com/download?plat=mac&full=1'
+  # clientupdates.dropboxstatic.com was verified as official when first introduced to the cask
+  url "https://clientupdates.dropboxstatic.com/dbx-releng/client/Dropbox%20#{version}.dmg"
   name 'Dropbox'
   homepage 'https://www.dropbox.com/'
 
