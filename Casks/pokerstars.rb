@@ -3,31 +3,7 @@ cask 'pokerstars' do
   sha256 :no_check
 
   language 'US', default: true do
-    ['.com', '']
-  end
-
-  language 'AT' do
-    ['.eu', 'EU']
-  end
-
-  language 'DK' do
-    ['.dk', 'DK']
-  end
-
-  language 'GR' do
-    ['.gr', 'GR']
-  end
-
-  language 'IT' do
-    ['.it', 'IT']
-  end
-
-  language 'RO' do
-    ['.ro', 'RO']
-  end
-
-  language 'UK' do
-    ['.uk', 'UK']
+    ['.net', '.net']
   end
 
   language 'PT' do
