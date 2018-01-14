@@ -3,8 +3,6 @@ cask '115browser' do
   sha256 'cd882959237004eb5c7ad5b88424ec2d16a09a783dec59b16399c1c92f643feb'
 
   url "https://down.115.com/client/mac/115br_v#{version}.dmg"
-  appcast 'http://anxia.com/m/115brv84019dmg',
-          checkpoint: '5c607ad71eda1b808c35d9747cfe3255977b6808a2faf5178318f2ef6371109e'
   name '115Browser'
   name '115浏览器'
   homepage 'https://pc.115.com/'
