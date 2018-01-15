@@ -1,13 +1,12 @@
 cask 'electrum-dash' do
-  version '2.4.1'
-  sha256 '14c8685adc1aeaf15230378e3931ff4c20fd0f2efa74947005d4184dca7920c7'
+  version '2.9.3.1'
+  sha256 'a9a7f0f3b0d74984db62627331cebc1d1da331b0e5143176d8b0ae958e754a83'
 
-  url "https://www.dash.org/binaries/Electrum-DASH-#{version}-Installer.pkg"
+  # github.com/akhavr/electrum-dash was verified as official when first introduced to the cask
+  url "https://github.com/akhavr/electrum-dash/releases/download/#{version}/electrum-dash-#{version}-macosx.dmg"
   name 'Electrum-DASH'
-  homepage 'https://www.dash.org/'
-  gpg 'https://raw.githubusercontent.com/dashpay/dash-binaries/master/pgp/releases-maza-club.asc', key_id: '71fafcb71f0a961b23e7d7ef0a020276cbffb73c'
+  homepage 'https://electrum.dash.org/'
+  gpg "#{url}.asc", key_id: '64a3ba822f449d50'
 
-  pkg "Electrum-DASH-#{version}-Installer.pkg"
-
-  uninstall pkgutil: 'org.pythonmac.unspecified.Electrum-DASH'
+  app 'Electrum-DASH.app'
 end
