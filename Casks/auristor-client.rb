@@ -36,9 +36,6 @@ cask 'auristor-client' do
             launchctl: [
                          'com.auristor.XPCHelper',
                          'com.auristor.yfs-client',
-                       ]
-
-  caveats do
-    kext
-  end
+                       ],
+            kext:      'com.auristor.filesystems.yfs'
 end
