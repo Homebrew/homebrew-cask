@@ -8,6 +8,6 @@ cask 'deepanpot' do
 
   depends_on macos: '>= :lion'
 
-  audio_unit_plugin 'DeePanpot.component'
-  vst_plugin 'DeePanpot.vst'
+  audio_unit_plugin 'AudioUnit/DeePanpot.component'
+  vst_plugin 'VST/DeePanpot.vst'
 end
