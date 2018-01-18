@@ -8,5 +8,5 @@ cask 'djay-pro' do
   name 'Algoriddim djay Pro'
   homepage 'https://www.algoriddim.com/djay-pro-mac'
 
-  app 'djay Pro.app'
+  app "djay Pro #{version.major}.app"
 end
