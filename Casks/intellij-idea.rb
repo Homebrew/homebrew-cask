@@ -1,10 +1,10 @@
 cask 'intellij-idea' do
-  version '2017.3.2,173.4127.27'
-  sha256 'c9e95b4b54faff40ddc11a50276d2af716e8141a595ec7e80896ea090025869b'
+  version '2017.3.3,173.4301.25'
+  sha256 '313e4689675bb99871cbec08ced9504a5a851dc64c682f18d0439398e6a144e5'
 
   url "https://download.jetbrains.com/idea/ideaIU-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=IIU&latest=true&type=release',
-          checkpoint: 'bb5419bb66e8f9da7867e3f8a033368424d2ebb74f953af287205893d915239a'
+          checkpoint: '1347d813dc9431fc1c569fecf63c15af173a35d2e4e616a27ac8f9a2ff76a9aa'
   name 'IntelliJ IDEA Ultimate'
   homepage 'https://www.jetbrains.com/idea/'
 

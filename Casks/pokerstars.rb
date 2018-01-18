@@ -3,38 +3,30 @@ cask 'pokerstars' do
   sha256 :no_check
 
   language 'US', default: true do
-    ['.com', '']
-  end
-
-  language 'AT' do
-    ['.eu', 'EU']
+    ['.net', '.net', '.net']
   end
 
   language 'DK' do
-    ['.dk', 'DK']
+    ['.dk', '.net', '.net']
   end
 
   language 'GR' do
-    ['.gr', 'GR']
+    ['.gr', '.net', '.net']
   end
 
   language 'IT' do
-    ['.it', 'IT']
-  end
-
-  language 'RO' do
-    ['.ro', 'RO']
+    ['.it', '.net', '.net']
   end
 
   language 'UK' do
-    ['.uk', 'UK']
+    ['.uk', '.net', '.net']
   end
 
   language 'PT' do
-    ['.pt', 'PT']
+    ['.pt', 'PT', '.pt']
   end
 
-  url "http://www.pokerstars#{language[0]}/PokerStars#{language[1]}.app.zip"
+  url "http://www.pokerstars#{language[2]}/PokerStars#{language[1]}.app.zip"
   name 'PokerStars'
   homepage "http://www.pokerstars#{language[0]}"
 
