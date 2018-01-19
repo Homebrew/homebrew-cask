@@ -1,10 +1,10 @@
 cask 'suspicious-package' do
-  version '3.3'
-  sha256 '8b7f5149b042ef46e689689f19c306ef3b10436d46ca6c150852aa2de2636b8a'
+  version '3.3.1'
+  sha256 '49eee6dc930574b6d03534bea5820cdf47fd10c4f6b82be14afb8e1e76a06304'
 
   url 'http://www.mothersruin.com/software/downloads/SuspiciousPackage.dmg'
   appcast 'http://www.mothersruin.com/software/SuspiciousPackage/data/SuspiciousPackageVersionInfo.plist',
-          checkpoint: '520bbb902026f6393e55542b1aa188f4c6970ffa8a020e728fd8413ea5eea776'
+          checkpoint: 'eb576c7131af0571064bb963b63381ecadfe395b34a9663746e71beb7dd87ca8'
   name 'Suspicious Package'
   homepage 'http://www.mothersruin.com/software/SuspiciousPackage/'
 
