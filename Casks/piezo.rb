@@ -1,5 +1,5 @@
 cask 'piezo' do
-  version '1.5.5'
+  version '1.5.6'
   sha256 '2691ac0750e8f76fd9aead08189e437e08b715b0e7d655cd420bd20ccae10b85'
 
   url 'https://rogueamoeba.com/piezo/download/Piezo.zip'
