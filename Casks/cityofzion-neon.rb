@@ -9,4 +9,11 @@ cask 'cityofzion-neon' do
   homepage 'https://github.com/CityOfZion/neon-wallet'
 
   app 'Neon.app'
+
+  zap trash: [
+               '~/Library/Application Support/Neon',
+               '~/Library/Preferences/com.electron.neon.helper.plist',
+               '~/Library/Preferences/com.electron.neon.plist',
+               '~/Library/Saved Application State/com.electron.neon.savedState',
+             ]
 end
