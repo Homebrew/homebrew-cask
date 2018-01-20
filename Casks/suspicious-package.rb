@@ -11,6 +11,7 @@ cask 'suspicious-package' do
   auto_updates true
 
   app 'Suspicious Package.app'
+  binary "#{appdir}/Suspicious Package.app/Contents/SharedSupport/spkg"
 
   zap trash: [
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mothersruin.suspiciouspackageapp.sfl*',
