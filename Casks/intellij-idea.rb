@@ -1,10 +1,10 @@
 cask 'intellij-idea' do
-  version '2017.2.5,172.4343.14'
-  sha256 '0f5bd681fb6c36490ebabc5f9effbfbe1ec8d28cfdb6bc4247858144bd067a8d'
+  version '2017.3.3,173.4301.25'
+  sha256 '313e4689675bb99871cbec08ced9504a5a851dc64c682f18d0439398e6a144e5'
 
   url "https://download.jetbrains.com/idea/ideaIU-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=IIU&latest=true&type=release',
-          checkpoint: '34c38d07f0585edc7924f8005a02445c4f5ce2c7014a2a77ec31b1b67c5cc55a'
+          checkpoint: '1347d813dc9431fc1c569fecf63c15af173a35d2e4e616a27ac8f9a2ff76a9aa'
   name 'IntelliJ IDEA Ultimate'
   homepage 'https://www.jetbrains.com/idea/'
 
@@ -16,14 +16,12 @@ cask 'intellij-idea' do
     ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'idea') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }
   end
 
-  zap delete: [
-                "~/Library/Caches/IntelliJIdea#{version.major_minor}",
-                "~/Library/Logs/IntelliJIdea#{version.major_minor}",
-                '~/Library/Saved Application State/com.jetbrains.intellij.savedState',
-              ],
-      trash:  [
-                "~/Library/Application Support/IntelliJIdea#{version.major_minor}",
-                "~/Library/Preferences/IntelliJIdea#{version.major_minor}",
-                '~/Library/Preferences/com.jetbrains.intellij.plist',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.jetbrains.intellij.plist',
+               "~/Library/Caches/IntelliJIdea#{version.major_minor}",
+               "~/Library/Logs/IntelliJIdea#{version.major_minor}",
+               "~/Library/Application Support/IntelliJIdea#{version.major_minor}",
+               "~/Library/Preferences/IntelliJIdea#{version.major_minor}",
+               '~/Library/Saved Application State/com.jetbrains.intellij.savedState',
+             ]
 end

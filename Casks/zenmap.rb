@@ -44,6 +44,8 @@ cask 'zenmap' do
 
   uninstall pkgutil: 'org.insecure.nmap.zenmap'
 
-  zap delete: '~/Library/Saved Application State/org.insecure.Zenmap.savedState',
-      trash:  '~/.zenmap'
+  zap trash: [
+               '~/Library/Saved Application State/org.insecure.Zenmap.savedState',
+               '~/.zenmap',
+             ]
 end

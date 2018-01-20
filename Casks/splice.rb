@@ -13,9 +13,9 @@ cask 'splice' do
 
   uninstall quit: 'com.splice.Splice'
 
-  zap delete: [
-                '~/Library/Application Support/*Splice*',
-                '~/Library/Caches/com.splice*',
-                '~/Library/Preferences/com.splice*',
-              ]
+  zap trash: [
+               '~/Library/Application Support/*Splice*',
+               '~/Library/Caches/com.splice*',
+               '~/Library/Preferences/com.splice*',
+             ]
 end

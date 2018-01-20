@@ -11,7 +11,7 @@ cask 'password-gorilla' do
 
   app 'Password Gorilla.app'
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     Gatekeeper may need to be temporarily disabled for the first launch.
     See https://gorilla.dp100.com/downloads/MacOS-Gatekeeper.html
   EOS

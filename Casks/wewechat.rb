@@ -1,19 +1,19 @@
 cask 'wewechat' do
-  version '1.1.2'
-  sha256 'ad9835ec073888d479e781eba74a59ede016ee80475441e1a44c17b2054f278f'
+  version '1.1.5'
+  sha256 'c4942bf6e325dc1d914602013315ce9f2a943b93c9ec48ec7c3f052f4d88f11e'
 
   url "https://github.com/trazyn/weweChat/releases/download/v#{version}/weweChat-#{version}-mac.dmg"
   appcast 'https://github.com/trazyn/weweChat/releases.atom',
-          checkpoint: '5be045a9fb4b117bd7b9d7cafaa78752be5ef9ee850942bcb2f40841b6c92906'
+          checkpoint: '1d96bec4f18c88a3385ff9679ddb624d48a718bff38c50cb879fe2f15c7e500c'
   name 'weweChat'
   homepage 'https://github.com/trazyn/weweChat'
 
   app 'weweChat.app'
 
-  zap delete: '~/Library/Saved Application State/gh.trazyn.wewechat.savedState',
-      trash:  [
-                '~/Library/Application Support/wewechat',
-                '~/Library/Preferences/gh.trazyn.wewechat.helper.plist',
-                '~/Library/Preferences/gh.trazyn.wewechat.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/wewechat',
+               '~/Library/Preferences/gh.trazyn.wewechat.helper.plist',
+               '~/Library/Preferences/gh.trazyn.wewechat.plist',
+               '~/Library/Saved Application State/gh.trazyn.wewechat.savedState',
+             ]
 end

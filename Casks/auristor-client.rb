@@ -1,20 +1,20 @@
 cask 'auristor-client' do
-  version '0.162'
+  version '0.164'
 
   if MacOS.version == :mavericks
-    sha256 'cd147e18b2fd7e03530ce4ac8d08a802329e811bbcc6ca49c54a032552961d88'
+    sha256 '195fac51615abe4239c10c6ca3fa48dd07019f278f6087514cf890884c8feacc'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.9/AuriStor-client-#{version}-Mavericks.dmg"
   elsif MacOS.version == :yosemite
-    sha256 '416124a68e9c925cb73d5ae253ba9c2affa952a8ea19e793378323693872359b'
+    sha256 '45b47e801da08ffeb6e59153b1b23af8ee3abade08e3fcea05d3da3a13fe833b'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.10/AuriStor-client-#{version}-Yosemite.dmg"
   elsif MacOS.version == :el_capitan
-    sha256 'ec5e76c06d8a1342dfb41173cac303999fbfa31779acdcb9e0d472d22688cf17'
+    sha256 '6f38ca1b5dcb45385dd46d8d641a49de1072076290e41835d52bb5951930453b'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.11/AuriStor-client-#{version}-ElCapitan.dmg"
   elsif MacOS.version == :sierra
-    sha256 '6577b6fa6c723dd703132650215aec0a1c300b832afe4b6525cb989407eb530a'
+    sha256 '3ed2a84989b21c2f8bdfc925f8031a233ff1be44a7117a08e15f38859764b589'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.12/AuriStor-client-#{version}-Sierra.dmg"
   else
-    sha256 'b01815f0b3c4eb60bc0c19e17fa45da20fba7670cd156ca5f76a2b0260883690'
+    sha256 '108c30e88576bb512782a5996f4d8393de3163f71e63dcbab6198dca98b76ebd'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.13/AuriStor-client-#{version}-HighSierra.dmg"
   end
 
@@ -32,7 +32,13 @@ cask 'auristor-client' do
 
   pkg 'Auristor-Lite.pkg'
 
-  uninstall pkgutil:      'com.auristor.yfs-*',
-            early_script: 'Extras/Uninstall-OpenAFS.command',
-            script:       'Extras/Uninstall.command'
+  uninstall pkgutil:   'com.auristor.yfs-*',
+            launchctl: [
+                         'com.auristor.XPCHelper',
+                         'com.auristor.yfs-client',
+                       ]
+
+  caveats do
+    kext
+  end
 end

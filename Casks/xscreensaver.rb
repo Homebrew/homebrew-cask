@@ -1,10 +1,10 @@
 cask 'xscreensaver' do
-  version '5.37'
-  sha256 '9709db150ff3f5affaefd8f1e7e40caee9007e6cde1e9289367e7a4a4322a421'
+  version '5.38'
+  sha256 '5e302bc958b7329721951710d3d052dc8b74ba337bb4f7d80af14d2593e63b20'
 
   url "https://www.jwz.org/xscreensaver/xscreensaver-#{version}.dmg"
   appcast 'https://www.jwz.org/xscreensaver/changelog.html',
-          checkpoint: 'e57e0e761b9f9d596243640b8d790148dd2873df2a7dc71d273a67f2fe574570'
+          checkpoint: '2c5eb73d086c057201a09f1752d9eec633ea505196216a17785bcf2877f9cbc9'
   name 'XScreenSaver'
   homepage 'https://www.jwz.org/xscreensaver/'
 

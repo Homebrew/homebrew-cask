@@ -10,12 +10,14 @@ cask 'xld' do
   name 'XLD'
   homepage 'http://tmkk.undo.jp/xld/index_e.html'
 
+  auto_updates true
+
   app 'XLD.app'
 
-  zap delete: [
-                '~/Library/Application Support/XLD',
-                '~/Library/Preferences/jp.tmkk.XLD.plist',
-                '~/Library/Caches/jp.tmkk.XLD',
-                '~/Library/Saved Application State/jp.tmkk.XLD.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/XLD',
+               '~/Library/Preferences/jp.tmkk.XLD.plist',
+               '~/Library/Caches/jp.tmkk.XLD',
+               '~/Library/Saved Application State/jp.tmkk.XLD.savedState',
+             ]
 end

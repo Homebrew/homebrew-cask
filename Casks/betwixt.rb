@@ -10,8 +10,8 @@ cask 'betwixt' do
 
   app 'Betwixt-darwin-x64/Betwixt.app'
 
-  zap delete: [
-                '~/Library/Application Support/betwixt',
-                '~/Library/Caches/betwixt',
-              ]
+  zap trash: [
+               '~/Library/Application Support/betwixt',
+               '~/Library/Caches/betwixt',
+             ]
 end

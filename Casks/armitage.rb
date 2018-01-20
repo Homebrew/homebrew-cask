@@ -12,7 +12,7 @@ cask 'armitage' do
   binary shimscript, target: 'armitage'
 
   preflight do
-    IO.write shimscript, <<-EOS.undent
+    IO.write shimscript, <<~EOS
       #!/bin/sh
       java "$@" -jar '#{appdir}/Armitage.app/Contents/Java/armitage.jar'
     EOS

@@ -16,10 +16,10 @@ cask 'box-edit' do
                     'com.box.Box-Local-Com-Server',
                   ]
 
-  zap delete: '~/Library/Application Support/Box/Box Edit',
-      rmdir:  '~/Library/Application Support/Box'
+  zap trash: '~/Library/Application Support/Box/Box Edit',
+      rmdir: '~/Library/Application Support/Box'
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     Box Edit currently only works with Safari and Firefox.
     Restart your browser to load the plugin.
   EOS

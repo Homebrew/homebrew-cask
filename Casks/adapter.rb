@@ -12,9 +12,9 @@ cask 'adapter' do
 
   app 'Adapter.app'
 
-  zap delete: [
-                '~/Library/Application Support/Adapter',
-                '~/Library/Caches/com.macroplant.adapter',
-                '~/Library/com.macroplant.adapter.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Adapter',
+               '~/Library/Caches/com.macroplant.adapter',
+               '~/Library/com.macroplant.adapter.plist',
+             ]
 end

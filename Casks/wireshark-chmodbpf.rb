@@ -1,10 +1,10 @@
 cask 'wireshark-chmodbpf' do
-  version '2.4.1'
-  sha256 'cbf1f66020d049e645edd9ee8f0ebdd7d71d019d3fb2c44e028fcd65195b268b'
+  version '2.4.4'
+  sha256 'eb6d9a304b2697a90f267bd8734926a9fe37939aab8394a550cd4c272dd15e11'
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
   appcast 'https://www.wireshark.org/download/osx/',
-          checkpoint: '4a217edc73d35668ce432c60a01043c8e32a21d38b91d5e4654ae4f4cbf23af1'
+          checkpoint: '21ad6f76ce959441d89535a491cfef75e855c48a54213a22aaa55e83e4117127'
   name 'Wireshark-ChmodBPF'
   homepage 'https://www.wireshark.org/'
 
@@ -56,7 +56,7 @@ cask 'wireshark-chmodbpf' do
 
   caveats do
     reboot
-    <<-EOS.undent
+    <<~EOS
       This cask will install only the ChmodBPF package from the current Wireshark
       stable install package.
       An access_bpf group will be created and its members allowed access to BPF

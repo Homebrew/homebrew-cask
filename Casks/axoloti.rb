@@ -16,7 +16,7 @@ cask 'axoloti' do
   caveats do
     depends_on_java('8')
 
-    <<-EOS.undent
+    <<~EOS
       If you ever decide to uninstall #{token}, it is likely its runtime will no longer be of use to you.
       If that’s the case, uninstall it with:
 

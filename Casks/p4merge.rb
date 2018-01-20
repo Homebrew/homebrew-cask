@@ -8,13 +8,13 @@ cask 'p4merge' do
 
   app 'p4merge.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.perforce.p4merge',
-                '~/Library/Preferences/com.perforce.p4merge.plist',
-                '~/Library/Saved Application State/com.perforce.p4merge.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.perforce.p4merge',
+               '~/Library/Preferences/com.perforce.p4merge.plist',
+               '~/Library/Saved Application State/com.perforce.p4merge.savedState',
+             ]
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     git can be configured to use p4merge as a merge tool via
 
       https://pempek.net/articles/2014/04/18/git-p4merge/

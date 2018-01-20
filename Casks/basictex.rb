@@ -11,6 +11,7 @@ cask 'basictex' do
                          'mactex-no-ghostscript',
                          'mactex',
                        ]
+  depends_on macos: '>= :yosemite'
 
   pkg "mactex-basictex-#{version.no_dots}.pkg"
 
@@ -20,6 +21,14 @@ cask 'basictex' do
                        '/etc/paths.d/TeX',
                        '/etc/manpaths.d/TeX',
                        '/Library/TeX',
-                     ],
-            rmdir:   '/usr/local/texlive'
+                     ]
+
+  zap trash: [
+               '/usr/local/texlive/texmf-local',
+               "~/Library/texlive/#{version.major}basic",
+             ],
+      rmdir: [
+               '/usr/local/texlive',
+               '~/Library/texlive',
+             ]
 end

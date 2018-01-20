@@ -1,8 +1,10 @@
 cask 'wine-stable' do
-  version '2.0.2'
-  sha256 '863fd9cdf8d0874f689cd448e2fe21fc2b2470dc02f95ab4d038bac564c2eca8'
+  version '2.0.4'
+  sha256 'ecae2c1f86c0b3b1dc71e8e3c9f20963db014895215efa0abf95d5337fd403e9'
 
   url "https://dl.winehq.org/wine-builds/macosx/pool/winehq-stable-#{version}.pkg"
+  appcast 'https://dl.winehq.org/wine-builds/macosx/download.html',
+          checkpoint: 'ae39f5807510c74899907fc8e41019d17fba4c7b3e959cde578f57118b6962d3'
   name 'WineHQ-stable'
   homepage 'https://wiki.winehq.org/MacOS'
 
@@ -26,7 +28,7 @@ cask 'wine-stable' do
                      ],
             delete:  '/Applications/Wine stable.app'
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     #{token} installs support for running 64 bit applications in Wine, which is considered experimental.
     If you do not want 64 bit support, you should download and install the #{token} package manually.
   EOS

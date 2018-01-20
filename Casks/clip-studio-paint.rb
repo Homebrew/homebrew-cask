@@ -1,15 +1,16 @@
 cask 'clip-studio-paint' do
-  version '1.6.2'
-  sha256 'ecb8a6ebeccfe2464ca54c356f57ffb964f3af793d4751b0acc2598d9517728b'
+  version '1.6.7'
+  sha256 '113f1f7ea446a218403b5355876aac4bed169538236d1f5113c9a82c287d203f'
 
-  url "http://vd.clipstudio.net/clipcontent/en/lib/clipstudio/paint/data/#{version.no_dots}/CSP_#{version.no_dots}ENm_app.pkg"
+  url "http://vd.clipstudio.net/clipcontent/paint/app/#{version.no_dots}/CSP_#{version.no_dots}m_app.pkg"
   name 'CLIP STUDIO PAINT'
   homepage 'http://www.clipstudio.net/en'
 
-  pkg "CSP_#{version.no_dots}ENm_app.pkg"
+  pkg "CSP_#{version.no_dots}m_app.pkg"
 
   uninstall pkgutil: [
                        'jp.co.CELSYS.AggregateMdul.*',
+                       'jp.co.CELSYS.CertMdul.*',
                        'jp.co.CELSYS.ClipStudio*',
                      ]
 end

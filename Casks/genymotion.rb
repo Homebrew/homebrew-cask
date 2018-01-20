@@ -1,6 +1,6 @@
 cask 'genymotion' do
-  version '2.10.0'
-  sha256 'b05c2f9b09a2426e012efc37c11ac97cfa3cdf139d18336ddb2b2f53b5f77217'
+  version '2.11.0'
+  sha256 '4d3852b81e46540d473d1aa021f7351c35432bf02d122b9fc81c2cd05e434644'
 
   url "https://dl.genymotion.com/releases/genymotion-#{version}/genymotion-#{version}.dmg"
   name 'Genymotion'

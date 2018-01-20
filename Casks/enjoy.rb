@@ -11,9 +11,9 @@ cask 'enjoy' do
 
   app 'Enjoy2.app'
 
-  zap delete: [
-                '~/Library/Application Support/Enjoy2',
-                '~/Library/Preferences/net.tunah.Enjoy2.plist',
-                '~/Library/Saved Application State/net.tunah.Enjoy2.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Enjoy2',
+               '~/Library/Preferences/net.tunah.Enjoy2.plist',
+               '~/Library/Saved Application State/net.tunah.Enjoy2.savedState',
+             ]
 end

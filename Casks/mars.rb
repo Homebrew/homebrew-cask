@@ -16,7 +16,7 @@ cask 'mars' do
   binary shimscript, target: 'mars'
 
   preflight do
-    IO.write shimscript, <<-EOS.undent
+    IO.write shimscript, <<~EOS
       #!/bin/bash
       cd "$(dirname "$(readlink -n "${0}")")" && \
         java "${@}" -jar 'Mars#{version.before_comma.dots_to_underscores}.jar'

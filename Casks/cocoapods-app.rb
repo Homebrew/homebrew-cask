@@ -17,7 +17,7 @@ cask 'cocoapods-app' do
     system_command '/usr/bin/defaults', args: ['write', 'org.cocoapods.CocoaPods', 'CPDoNotRequestCLIToolInstallationAgain', '-bool', 'true']
   end
 
-  zap delete: [
-                '~/Library/Preferences/org.cocoapods.CocoaPods.plist',
-              ]
+  zap trash: [
+               '~/Library/Preferences/org.cocoapods.CocoaPods.plist',
+             ]
 end

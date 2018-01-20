@@ -13,11 +13,11 @@ cask 'appdelete' do
 
   app 'AppDelete.app'
 
-  zap delete: [
-                '~/Library/Application Support/AppDelete',
-                '~/Library/Caches/com.apps4macs.AppDelete',
-                '~/Library/Preferences/com.apps4macs.AppDelete.plist',
-                '~/Library/Saved Application State/com.apps4macs.AppDelete.savedState',
-                '~/Library/Services/AppDelete.workflow',
-              ]
+  zap trash: [
+               '~/Library/Application Support/AppDelete',
+               '~/Library/Caches/com.apps4macs.AppDelete',
+               '~/Library/Preferences/com.apps4macs.AppDelete.plist',
+               '~/Library/Saved Application State/com.apps4macs.AppDelete.savedState',
+               '~/Library/Services/AppDelete.workflow',
+             ]
 end

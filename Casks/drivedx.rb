@@ -1,6 +1,6 @@
 cask 'drivedx' do
-  version '1.5.1'
-  sha256 '32c9cc2cc5c28ce8a1800d4dc805fcdea040c0aab86f8ae9f658d94c5ff13668'
+  version '1.7.0'
+  sha256 '2eb4030e205260445dd6dbfcd6e456d4940e746e6db394e4ce6bdae7bd88e1e5'
 
   url "https://binaryfruit.com/download/drivedx/mac/1/bin/DriveDx.#{version}.zip"
   name 'DriveDX'

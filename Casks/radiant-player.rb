@@ -13,13 +13,11 @@ cask 'radiant-player' do
 
   uninstall quit: 'com.sajidanwar.Radiant-Player'
 
-  zap delete: [
-                '~/Library/Caches/com.sajidanwar.Radiant-Player',
-                '~/Library/Cookies/com.sajidanwar.Radiant-Player.binarycookies',
-                '~/Library/Saved Application State/com.sajidanwar.Radiant-Player.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/Radiant Player',
-                '~/Library/Preferences/com.sajidanwar.Radiant-Player.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Radiant Player',
+               '~/Library/Caches/com.sajidanwar.Radiant-Player',
+               '~/Library/Cookies/com.sajidanwar.Radiant-Player.binarycookies',
+               '~/Library/Preferences/com.sajidanwar.Radiant-Player.plist',
+               '~/Library/Saved Application State/com.sajidanwar.Radiant-Player.savedState',
+             ]
 end

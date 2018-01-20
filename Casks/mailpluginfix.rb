@@ -1,6 +1,6 @@
 cask 'mailpluginfix' do
-  version '1.3.0'
-  sha256 '921a65b098f7def758cbafcdfd1ed5f8459cb9cdb958e589679d6e9bc67d8184'
+  version '1.4.0'
+  sha256 '811cf27322a08d4ddbc4780c78cf34ea07595a269902b62ccdcdb6ac00142cf3'
 
   url "https://code2k.net/app/MailPluginFix-#{version}.zip"
   name 'MailPluginFix'
@@ -8,5 +8,5 @@ cask 'mailpluginfix' do
 
   app 'MailPluginFix.app'
 
-  zap delete: '~/Library/Preferences/net.code2k.MailPluginFix.plist'
+  zap trash: '~/Library/Preferences/net.code2k.MailPluginFix.plist'
 end

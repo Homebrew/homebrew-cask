@@ -9,14 +9,14 @@ cask 'lookback' do
 
   app 'Lookback.app'
 
-  zap delete: [
-                '~/Library/Application Support/io.lookback.browser',
-                '~/Library/Application Support/io.lookback.Lookback',
-                '~/Library/Application Support/Lookback',
-                '~/Library/Caches/com.crashlytics.data/io.lookback.Lookback',
-                '~/Library/Caches/io.fabric.sdk.mac.data/io.lookback.Lookback',
-                '~/Library/Caches/io.lookback.Lookback',
-                '~/Library/Caches/Lookback',
-                '~/Library/Preferences/io.lookback.Lookback.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/io.lookback.browser',
+               '~/Library/Application Support/io.lookback.Lookback',
+               '~/Library/Application Support/Lookback',
+               '~/Library/Caches/com.crashlytics.data/io.lookback.Lookback',
+               '~/Library/Caches/io.fabric.sdk.mac.data/io.lookback.Lookback',
+               '~/Library/Caches/io.lookback.Lookback',
+               '~/Library/Caches/Lookback',
+               '~/Library/Preferences/io.lookback.Lookback.plist',
+             ]
 end

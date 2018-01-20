@@ -1,8 +1,9 @@
 cask 'astah-professional' do
-  version '7.1.0,f2c212'
-  sha256 'c9da0c3fd403c4c2686740766624754f21e2aa8c6601e94a595c20a5d59880d7'
+  version '7.2.0,1ff236'
+  sha256 'e2faa50e8ecaaaa9f6f68dda143bf4495c0cc7b9f17fe7defda4645bb52e2751'
 
-  url "http://cdn.astah.net/downloads/astah-professional-#{version.before_comma.dots_to_underscores}-#{version.after_comma}-MacOs.dmg"
+  # cdn.change-vision.com/files was verified as official when first introduced to the cask
+  url "http://cdn.change-vision.com/files/astah-professional-#{version.before_comma.dots_to_underscores}-#{version.after_comma}-MacOs.dmg"
   name 'Change Vision Astah Professional'
   homepage 'http://astah.net/editions/professional'
 

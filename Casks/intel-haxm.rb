@@ -18,7 +18,7 @@ cask 'intel-haxm' do
                       args:         ['-u'],
                     }
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     Installing this Cask means you have AGREED to the Intel® Hardware Accelerated Execution Manager End-User License Agreement - macOS at
 
       https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager-end-user-license-agreement-macosx

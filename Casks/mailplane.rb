@@ -8,5 +8,5 @@ cask 'mailplane' do
 
   app 'Mailplane 3.app'
 
-  zap delete: '~/Library/Preferences/com.mailplaneapp.Mailplane.plist'
+  zap trash: '~/Library/Preferences/com.mailplaneapp.Mailplane.plist'
 end

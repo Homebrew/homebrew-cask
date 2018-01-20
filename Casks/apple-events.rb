@@ -12,9 +12,9 @@ cask 'apple-events' do
 
   app 'Apple Events.app'
 
-  zap delete: [
-                '~/Library/Application Support/br.com.guilhermerambo.Apple-Events',
-                '~/Library/Caches/br.com.guilhermerambo.Apple-Events',
-                '~/Library/Preferences/br.com.guilhermerambo.Apple-Events.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/br.com.guilhermerambo.Apple-Events',
+               '~/Library/Caches/br.com.guilhermerambo.Apple-Events',
+               '~/Library/Preferences/br.com.guilhermerambo.Apple-Events.plist',
+             ]
 end

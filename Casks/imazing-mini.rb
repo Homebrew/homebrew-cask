@@ -8,7 +8,7 @@ cask 'imazing-mini' do
   homepage 'https://imazing.com/mini'
 
   conflicts_with cask: 'imazing'
-  depends_on macos: '>= 10.8'
+  depends_on macos: '>= :mountain_lion'
 
   app 'iMazing Mini.app'
 
@@ -26,7 +26,7 @@ cask 'imazing-mini' do
                '/Users/Shared/iMazing Mini',
              ]
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     Performing a zap on this cask removes files pertaining to both #{token}
     and imazing, so it should not be done if you only want to uninstall one of them.
   EOS

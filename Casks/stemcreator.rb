@@ -2,7 +2,8 @@ cask 'stemcreator' do
   version :latest
   sha256 :no_check
 
-  url 'http://stems-music.com/downloads/StemCreator_Installer.dmg'
+  # stemsmusic.wpengine.com was verified as official when first introduced to the cask
+  url 'http://stemsmusic.wpengine.com/download/stems-creator-installer-mac/'
   name 'Stem Creator'
   homepage 'http://www.stems-music.com/stem-creator-tool/'
 

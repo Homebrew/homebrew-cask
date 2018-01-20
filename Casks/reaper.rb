@@ -1,21 +1,21 @@
 cask 'reaper' do
-  version '5.52'
-  sha256 '8834de7d806d530206634ebdfc76430f5c092c2fb7dc604cc60093f628f762a1'
+  version '5.70'
+  sha256 '560c2d806bec56ab6800e5d1ddacd24c96b2ef4c5bd4557c321a7e227a578fbe'
 
   url "https://www.reaper.fm/files/#{version.major}.x/reaper#{version.no_dots}_x86_64.dmg"
   appcast 'https://www.reaper.fm/download.php',
-          checkpoint: '81350794dc588bdee83ed5e93ee215b8d02dc7645e924de8c7d60ad9430c8363'
+          checkpoint: '9622c8fdd8b54fa901bac4f2ab3b57c4eebef9f1e647b402b7428b6a10630946'
   name 'REAPER'
   homepage 'https://www.reaper.fm/'
 
   app 'REAPER64.app'
   app 'ReaMote64.app'
 
-  zap delete: [
-                '~/Library/Saved Application State/com.cockos.reaper.savedState',
-                '~/Library/Saved Application State/com.cockos.reaperhosti386.savedState',
-                '~/Library/Saved Application State/com.cockos.reaperhostx8664.savedState',
-                '~/Library/Saved Application State/com.cockos.ReaMote.savedState',
-              ],
-      trash:  '~/Library/Application Support/REAPER'
+  zap trash: [
+               '~/Library/Application Support/REAPER',
+               '~/Library/Saved Application State/com.cockos.reaper.savedState',
+               '~/Library/Saved Application State/com.cockos.reaperhosti386.savedState',
+               '~/Library/Saved Application State/com.cockos.reaperhostx8664.savedState',
+               '~/Library/Saved Application State/com.cockos.ReaMote.savedState',
+             ]
 end

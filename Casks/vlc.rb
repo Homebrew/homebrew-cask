@@ -1,6 +1,6 @@
 cask 'vlc' do
-  version '2.2.6'
-  sha256 '9826a85aab0c6dca2361c70a97fa12d8f2aa140328bdc80e68b659f9228f22fd'
+  version '2.2.8'
+  sha256 '4406e025c566c5703ab11e53070d3e399680ddfb8994b60cb753079dffd2a027'
 
   url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}.dmg"
   appcast 'http://update.videolan.org/vlc/sparkle/vlc-intel64.xml',
@@ -17,19 +17,19 @@ cask 'vlc' do
   binary shimscript, target: 'vlc'
 
   preflight do
-    IO.write shimscript, <<-EOS.undent
+    IO.write shimscript, <<~EOS
       #!/bin/sh
       '#{appdir}/VLC.app/Contents/MacOS/VLC' "$@"
     EOS
   end
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.videolan.vlc.sfl',
-                '~/Library/Application Support/org.videolan.vlc',
-                '~/Library/Application Support/VLC',
-                '~/Library/Preferences/org.videolan.vlc',
-                '~/Library/Preferences/org.videolan.vlc.plist',
-                '~/Library/Saved Application State/org.videolan.vlc.savedState',
-                '~/Library/Caches/org.videolan.vlc',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.videolan.vlc.sfl*',
+               '~/Library/Application Support/org.videolan.vlc',
+               '~/Library/Application Support/VLC',
+               '~/Library/Preferences/org.videolan.vlc',
+               '~/Library/Preferences/org.videolan.vlc.plist',
+               '~/Library/Saved Application State/org.videolan.vlc.savedState',
+               '~/Library/Caches/org.videolan.vlc',
+             ]
 end

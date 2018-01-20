@@ -9,7 +9,13 @@ cask 'latexit' do
   name 'LaTeXiT'
   homepage 'https://www.chachatelier.fr/latexit/'
 
+  auto_updates true
+
   app 'LaTeXiT.app'
 
-  zap delete: '~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist'
+  zap trash: [
+               '~/Library/Caches/fr.chachatelier.pierre.LaTeXiT',
+               '~/Library/Cookies/fr.chachatelier.pierre.LaTeXiT.binarycookies',
+               '~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist',
+             ]
 end

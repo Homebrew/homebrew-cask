@@ -9,8 +9,8 @@ cask 'rocket' do
 
   app 'Rocket.app'
 
-  zap delete: [
-                '~/Library/Application Support/Rocket',
-                '~/Library/Preferences/net.matthewpalmer.Rocket.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Rocket',
+               '~/Library/Preferences/net.matthewpalmer.Rocket.plist',
+             ]
 end

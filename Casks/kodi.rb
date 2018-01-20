@@ -1,20 +1,20 @@
 cask 'kodi' do
-  version '17.4-Krypton'
-  sha256 'b7ba23a154cb1551c3670296f1448fbd93d286b0e90dee8d724b4b26a6e8a7e2'
+  version '17.6-Krypton'
+  sha256 '1c35b240f7a300455a2a76e7ea08b6290abdfe0f8c8d60e2a59d6fa5c3ce96ae'
 
   url "http://mirrors.kodi.tv/releases/osx/x86_64/kodi-#{version}-x86_64.dmg"
   appcast 'https://github.com/xbmc/xbmc/releases.atom',
-          checkpoint: 'd3a045daf4c1e117cb6acec422a927e7bc893aec1c75e66552ede8a795c43163'
+          checkpoint: '7549879e6648a1870c830256834e0b5ac2a5c7c00059de3902c1c6d84ecf9e33'
   name 'Kodi'
   homepage 'https://kodi.tv/'
 
   app 'Kodi.app'
 
-  zap delete: [
-                '~/.kodi',
-                '~/Library/Application Support/Kodi',
-                '~/Library/Logs/kodi.log',
-                '~/Library/Logs/kodi.old.log',
-                '~/Library/Saved Application State/org.xbmc.kodi.savedState',
-              ]
+  zap trash: [
+               '~/.kodi',
+               '~/Library/Application Support/Kodi',
+               '~/Library/Logs/kodi.log',
+               '~/Library/Logs/kodi.old.log',
+               '~/Library/Saved Application State/org.xbmc.kodi.savedState',
+             ]
 end

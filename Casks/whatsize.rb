@@ -1,10 +1,10 @@
 cask 'whatsize' do
-  version '6.5.4'
-  sha256 '116a45be975f37896c1f88cf6684f89f74c2b709e6c5a5201c7022e5ac14e9f8'
+  version '6.6.3'
+  sha256 '933dac86f177dd50805ad04edee1b633404cc203e82fd6430bad2b34531a828c'
 
   url "https://www.whatsizemac.com/software/whatsize#{version.major}/whatsize.dmg"
-  appcast 'http://www.id-design.com/software/whatsize/release/notes.xml',
-          checkpoint: 'a3939b96017d292cb2c10d7b3a024db78f734bf47d522b548c41e2ff71b74909'
+  appcast 'https://www.whatsizemac.com/software/whatsize6/release/notes.xml',
+          checkpoint: '9e3670b4920a885c07f73ae6dbed5692069f182d41e6b030cc1b9198d72c8c75'
   name 'WhatSize'
   homepage 'https://whatsizemac.com/'
 

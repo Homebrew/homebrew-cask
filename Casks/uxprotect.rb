@@ -12,9 +12,9 @@ cask 'uxprotect' do
 
   app 'UXProtect.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/com.digitasecurity.UXProtect',
-                '~/Library/Containers/com.digitasecurity.UXProtect',
-              ],
-      trash:  '~/Library/Preferences/com.digitasecurity.UXProtect.plist'
+  zap trash: [
+               '~/Library/Application Scripts/com.digitasecurity.UXProtect',
+               '~/Library/Containers/com.digitasecurity.UXProtect',
+               '~/Library/Preferences/com.digitasecurity.UXProtect.plist',
+             ]
 end

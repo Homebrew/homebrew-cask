@@ -8,9 +8,9 @@ cask 'jsl' do
   name 'JavaScript Lint'
   homepage 'http://www.javascriptlint.com/'
 
-  binary 'jsl'
+  binary "jsl-#{version}-mac/jsl"
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     Test and configuration files for JavaScript Lint are available in
 
       #{staged_path}

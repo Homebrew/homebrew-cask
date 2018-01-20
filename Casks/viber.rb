@@ -8,11 +8,11 @@ cask 'viber' do
 
   app 'Viber.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.viber.osx',
-                '~/Library/Application Support/ViberPC',
-                '~/Library/Caches/com.viber.osx',
-                '~/Library/Preferences/com.viber.*.plist',
-                '~/Library/Saved Application State/com.viber.osx.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.viber.osx',
+               '~/Library/Application Support/ViberPC',
+               '~/Library/Caches/com.viber.osx',
+               '~/Library/Preferences/com.viber.*.plist',
+               '~/Library/Saved Application State/com.viber.osx.savedState',
+             ]
 end

@@ -6,21 +6,21 @@ cask 'grads' do
   name 'Grid Analysis and Display System'
   homepage 'http://cola.gmu.edu/grads/grads.php'
 
-  binary 'bin/bufrscan'
-  binary 'bin/grads'
-  binary 'bin/grib2scan'
-  binary 'bin/gribmap'
-  binary 'bin/gribscan'
-  binary 'bin/stnmap'
-  binary 'bin/wgrib'
+  binary "grads-#{version}/bin/bufrscan"
+  binary "grads-#{version}/bin/grads"
+  binary "grads-#{version}/bin/grib2scan"
+  binary "grads-#{version}/bin/gribmap"
+  binary "grads-#{version}/bin/gribscan"
+  binary "grads-#{version}/bin/stnmap"
+  binary "grads-#{version}/bin/wgrib"
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     In order to use the GrADS tools, you will need
     the GrADS fonts and maps data sets, and may need
     to set some environmental variables.
 
     See the documentation at:
 
-      #{staged_path}/bin/INSTALL
+      #{staged_path}/grads-#{version}/bin/INSTALL
   EOS
 end

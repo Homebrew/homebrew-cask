@@ -9,7 +9,7 @@ cask 'kindlegen' do
 
   binary 'kindlegen'
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     Instructions on using KindleGen are available in
 
       #{staged_path}/manual.html

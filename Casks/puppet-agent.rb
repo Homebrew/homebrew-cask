@@ -1,20 +1,20 @@
 cask 'puppet-agent' do
-  version '1.10.4-1'
+  version '1.10.9-1'
 
   if MacOS.version == :yosemite
-    sha256 'e9c2dd30c2a81cf004f168782e2cc49161e2bd4ea041e43116a7d0be5b854dfb'
+    sha256 '05af4e30856de5b012e9e219872391d56b99e6966f874258fb2285269eebff09'
     # downloads.puppetlabs.com/mac was verified as official when first introduced to the cask
     url "https://downloads.puppetlabs.com/mac/10.10/PC1/x86_64/puppet-agent-#{version}.osx10.10.dmg"
   elsif MacOS.version == :el_capitan
-    sha256 'e37067d3a337492021895ca14a60e50be4eea82e0b9c431b63ecc95b63bf4876'
+    sha256 '4c7274ab07c82328d47d2365baa1f866687b3fcf04ac88e9bbb743fc6bfee7a2'
     # downloads.puppetlabs.com/mac was verified as official when first introduced to the cask
     url "https://downloads.puppetlabs.com/mac/10.11/PC1/x86_64/puppet-agent-#{version}.osx10.11.dmg"
   else
-    sha256 '32ff2b3dafbc9e98df979d4a3bb0ebc42963277430a5f5be7ae07e5123bbd143'
+    sha256 '8657902ca7aaffeebc16465a68f1b583844214fb874513f43e9f27fb49f775f7'
     # downloads.puppetlabs.com/mac was verified as official when first introduced to the cask
     url "https://downloads.puppetlabs.com/mac/10.12/PC1/x86_64/puppet-agent-#{version}.osx10.12.dmg"
     appcast 'https://downloads.puppetlabs.com/mac/10.12/PC1/x86_64/',
-            checkpoint: '695383430ebcfa2ff989958986134a1c07bc2bebd46abeb4d731dc5e49f6d82b'
+            checkpoint: '65fd80d62d954ecf8f13e309eb7721a385c1299740421f57c1c35bac6eee78bb'
   end
 
   name 'Puppet Agent'

@@ -1,11 +1,11 @@
 cask 'noti' do
-  version '0.2'
-  sha256 '2fcf8bb65f10fe2ad4dc68526f0a16acf0097d71f25eb24d30144ee92c17be47'
+  version '0.3'
+  sha256 '3063d4889cd41c4c0411f1e27fbd80497a3c9e40bc437e6c436c918493a4385a'
 
   # github.com/jariz/Noti was verified as official when first introduced to the cask
   url "https://github.com/jariz/Noti/releases/download/#{version}/Noti.dmg"
   appcast 'https://github.com/jariz/Noti/releases.atom',
-          checkpoint: '0995d4190edae02bb4a10ec1342d620c361333338d7b00b03c11f5fff5d15785'
+          checkpoint: '085086d6b394f4a495ecfce21c0b9691a81939364409d9a163096a953a471bb3'
   name 'Noti'
   homepage 'https://noti.center/'
 

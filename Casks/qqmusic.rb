@@ -10,11 +10,11 @@ cask 'qqmusic' do
 
   uninstall quit: 'com.tencent.QQMusicMac'
 
-  zap delete: [
-                '~/Library/Application Support/com.tencent.QQMusicMac',
-                '~/Library/Caches/com.tencent.QQMusicMac',
-                '~/Library/Containers/com.tencent.QQMusicMac',
-                '~/Library/Preferences/com.tencent.QQMusicMac.plist',
-                '~/Library/Saved Application State/com.tencent.QQMusicMac.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.tencent.QQMusicMac',
+               '~/Library/Caches/com.tencent.QQMusicMac',
+               '~/Library/Containers/com.tencent.QQMusicMac',
+               '~/Library/Preferences/com.tencent.QQMusicMac.plist',
+               '~/Library/Saved Application State/com.tencent.QQMusicMac.savedState',
+             ]
 end

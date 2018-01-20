@@ -1,10 +1,10 @@
 cask 'pyfa' do
-  version '1.32.0,yc119.9-1.3'
-  sha256 'f64f3be3fe3ebcd2bf729948e72e196c49e865ce3b17e0b9b362fbb9dcc624f9'
+  version '1.34.0,.arms.race-1.3'
+  sha256 '93c64b7fcee20c3dad94dbf7a6ca2ee5d48651f2119622a31e51a581960cd948'
 
   url "https://github.com/pyfa-org/Pyfa/releases/download/v#{version.before_comma}/pyfa-#{version.before_comma}-#{version.after_comma}-mac.zip"
   appcast 'https://github.com/pyfa-org/Pyfa/releases.atom',
-          checkpoint: 'd14fc399f50d9fcb8dce0386df4a0e6f5a6d4480b659e12ae5754474a8ab920d'
+          checkpoint: 'd5b8613c5c0a368fe5456a2884e809c5ce3602cdfab9ffafca8a778e1915ebc2'
   name 'pyfa'
   homepage 'https://github.com/pyfa-org/Pyfa'
 

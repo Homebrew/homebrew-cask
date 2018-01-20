@@ -14,7 +14,7 @@ cask 'logdna-agent' do
   uninstall pkgutil:   'com.logdna.logdna-agent',
             launchctl: 'com.logdna.logdna-agentd'
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     When you first start logdna-agent, you must set your LogDNA API key with the command:
       sudo logdna-agent -k <api-key>
 

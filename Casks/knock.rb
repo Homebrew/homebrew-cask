@@ -11,13 +11,13 @@ cask 'knock' do
 
   app 'Knock.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.knock.mac.plist',
-                '~/Library/Logs/Knock',
-                '~/Library/Caches/com.knock.mac',
-                '~/Library/Caches/com.crashlytics.data/com.knock.mac',
-              ],
-      rmdir:  [
-                '~/Library/Caches/com.crashlytics.data',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.knock.mac.plist',
+               '~/Library/Logs/Knock',
+               '~/Library/Caches/com.knock.mac',
+               '~/Library/Caches/com.crashlytics.data/com.knock.mac',
+             ],
+      rmdir: [
+               '~/Library/Caches/com.crashlytics.data',
+             ]
 end

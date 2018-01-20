@@ -12,5 +12,5 @@ cask 'huamim' do
 
   app 'HuaMiM.app'
 
-  zap delete: '~/Library/Preferences/com.warwithinme.HuaMiM.plist'
+  zap trash: '~/Library/Preferences/com.warwithinme.HuaMiM.plist'
 end

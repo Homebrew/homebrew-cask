@@ -11,7 +11,7 @@ cask 'perforce' do
   binary 'p4d'
   binary 'p4p'
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     Instructions on using the Helix Versioning Engine are available in
 
       #{staged_path}

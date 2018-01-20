@@ -8,9 +8,9 @@ cask 'pablodraw' do
 
   app 'PabloDraw.app'
 
-  zap delete: '~/Library/Saved Application State/ca.picoe.pablodraw.savedState',
-      trash:  [
-                '~/Library/Application Support/ca.picoe.pablodraw',
-                '~/Library/Preferences/ca.picoe.pablodraw.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/ca.picoe.pablodraw',
+               '~/Library/Preferences/ca.picoe.pablodraw.plist',
+               '~/Library/Saved Application State/ca.picoe.pablodraw.savedState',
+             ]
 end

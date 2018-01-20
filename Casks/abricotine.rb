@@ -1,13 +1,13 @@
 cask 'abricotine' do
-  version '0.5.0'
-  sha256 '4f133bc46da91b7bc8f6f94370f3b7e63b1fb52acebeb6798d55025713971a20'
+  version '0.6.0'
+  sha256 '083931133f303a9d7d48123e8616d35d79362b47532fb1249aa6a541bd5f68b8'
 
   # github.com/brrd/Abricotine was verified as official when first introduced to the cask
-  url "https://github.com/brrd/Abricotine/releases/download/#{version}/Abricotine-osx-x64.zip"
+  url "https://github.com/brrd/Abricotine/releases/download/#{version}/Abricotine-#{version}-osx-x64.zip"
   appcast 'https://github.com/brrd/Abricotine/releases.atom',
-          checkpoint: 'be9a4802d4d549f1c617a54b757bcbdbc6816abb26f08ae5acef89a838be43df'
+          checkpoint: '1dcd5d078062b71f2cde5bf91726394f8e0263c08bb6264683be97f4a49edb13'
   name 'abricotine'
   homepage 'https://abricotine.brrd.fr/'
 
-  app 'Abricotine-darwin-x64/Abricotine.app'
+  app 'Abricotine.app'
 end

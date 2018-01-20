@@ -10,9 +10,9 @@ cask 'aegisub' do
 
   uninstall quit: 'com.aegisub.aegisub'
 
-  zap delete: '~/Library/Saved Application State/com.aegisub.aegisub.savedState',
-      trash:  [
-                '~/Library/Application Support/Aegisub',
-                '~/Library/Preferences/com.aegisub.aegisub.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Aegisub',
+               '~/Library/Preferences/com.aegisub.aegisub.plist',
+               '~/Library/Saved Application State/com.aegisub.aegisub.savedState',
+             ]
 end

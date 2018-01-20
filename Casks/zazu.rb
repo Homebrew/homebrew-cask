@@ -11,10 +11,10 @@ cask 'zazu' do
 
   app 'Zazu.app'
 
-  zap delete: [
-                '~/Library/Application Support/Zazu',
-                '~/Library/Caches/Zazu',
-                '~/Library/Preferences/com.tinytacoteam.zazu.helper.plist',
-                '~/Library/Preferences/com.tinytacoteam.zazu.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Zazu',
+               '~/Library/Caches/Zazu',
+               '~/Library/Preferences/com.tinytacoteam.zazu.helper.plist',
+               '~/Library/Preferences/com.tinytacoteam.zazu.plist',
+             ]
 end

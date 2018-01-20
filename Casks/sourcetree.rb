@@ -1,6 +1,6 @@
 cask 'sourcetree' do
-  version '2.6.3a'
-  sha256 '4b951e2d113a2ca5f8bb88be06b64c9390eae13b4339f983b4a0867c602dca53'
+  version '2.7g'
+  sha256 '34529c5b0ff996a6c4ef45841bd0b0b33b29085d44b51ba90c666681c389f975'
 
   # atlassian.com/software/sourcetree was verified as official when first introduced to the cask
   url "https://downloads.atlassian.com/software/sourcetree/Sourcetree_#{version}.zip"
@@ -15,13 +15,11 @@ cask 'sourcetree' do
   uninstall launchctl: 'com.atlassian.SourceTreePrivilegedHelper2',
             quit:      'com.torusknot.SourceTreeNotMAS'
 
-  zap delete: [
-                '~/Library/Caches/com.torusknot.SourceTreeNotMAS',
-                '~/Library/Saved Application State/com.torusknot.SourceTreeNotMAS.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/SourceTree',
-                '~/Library/Preferences/com.torusknot.SourceTreeNotMAS.plist',
-                '~/Library/Preferences/com.torusknot.SourceTreeNotMAS.LSSharedFileList.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/SourceTree',
+               '~/Library/Caches/com.torusknot.SourceTreeNotMAS',
+               '~/Library/Preferences/com.torusknot.SourceTreeNotMAS.plist',
+               '~/Library/Preferences/com.torusknot.SourceTreeNotMAS.LSSharedFileList.plist',
+               '~/Library/Saved Application State/com.torusknot.SourceTreeNotMAS.savedState',
+             ]
 end

@@ -1,10 +1,10 @@
 cask 'sonic-pi' do
-  version '3.0.0'
-  sha256 '824e822c797547067952a7579b2c881fc2b90b1435f9ab1c824bfc3564869310'
+  version '3.0.1'
+  sha256 'd9eea57df86da3d39a2a068358fcc256e0dd0181a110fa2d83ad16ad153b10fd'
 
-  url "http://sonic-pi.net/files/releases/v#{version}/Sonic-Pi-for-Mac-v#{version.major}.dmg"
+  url "http://sonic-pi.net/files/releases/v#{version}/Sonic-Pi-for-Mac-v#{version}.dmg"
   appcast 'https://github.com/samaaron/sonic-pi/releases.atom',
-          checkpoint: '79311a5aa2256aec0bfa80f12338eace4daca987844fa9853c6a6e7de95c6a5d'
+          checkpoint: '8a9296c1835b8f4211157e08c06547c95513436615a5980a2832de4e23422234'
   name 'Sonic Pi'
   homepage 'http://sonic-pi.net/'
 

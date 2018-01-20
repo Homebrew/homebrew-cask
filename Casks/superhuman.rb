@@ -8,9 +8,9 @@ cask 'superhuman' do
 
   app 'Superhuman.app'
 
-  zap delete: '~/Library/Caches/Superhuman',
-      trash:  [
-                '~/Library/Application Support/Milanote',
-                '~/Library/Preferences/io.nwjs.nwjs.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Milanote',
+               '~/Library/Caches/Superhuman',
+               '~/Library/Preferences/io.nwjs.nwjs.plist',
+             ]
 end

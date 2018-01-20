@@ -16,7 +16,7 @@ cask 'squirrelsql' do
   preflight do
     # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
     File.open(installoptions, 'w') do |f|
-      f.print <<-EOS.undent
+      f.print <<~EOS
         <?xml version="1.0" encoding="UTF-8" standalone="no"?>
         <AutomatedInstallation langpack="eng">
         <com.izforge.izpack.panels.HelloPanel id="UNKNOWN (com.izforge.izpack.panels.HelloPanel)"/>
@@ -72,11 +72,11 @@ cask 'squirrelsql' do
   end
 
   postflight do
-    system_command 'java', args: ['-jar', "#{staged_path}/squirrel-sql-#{version}-MACOSX-install.jar", installoptions.to_s]
+    system_command '/usr/bin/java', args: ['-jar', "#{staged_path}/squirrel-sql-#{version}-MACOSX-install.jar", installoptions.to_s]
   end
 
   uninstall_postflight do
-    system_command 'java', args: ['-jar', "#{appdir}/SQuirreLSQL.app/Uninstaller/uninstaller.jar", '-f', '-c']
+    system_command '/usr/bin/java', args: ['-jar', "#{appdir}/SQuirreLSQL.app/Uninstaller/uninstaller.jar", '-f', '-c']
   end
 
   zap trash: '~/.squirrel-sql'
