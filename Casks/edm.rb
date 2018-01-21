@@ -1,6 +1,6 @@
 cask 'edm' do
-  version '1.8.3'
-  sha256 '40812c29030fea67f29ce646b7488f94697e8b8680dcd9be80d9b0f9253ac3aa'
+  version '1.9.0'
+  sha256 '583a2c9da395662ba1dd383a7b58d5ce3b7448bade2b1f9c0b798621a37a130a'
 
   url "https://package-data.enthought.com/edm/osx_x86_64/#{version.major_minor}/edm_#{version}.pkg"
   name 'Enthought Deployment Manager'

@@ -1,10 +1,10 @@
 cask 'discord' do
-  version '0.0.249'
-  sha256 '3df7bd3480c09f3a1ae2a9820694baa19148ba277aaa4e4f9760b9f4da5395a0'
+  version '0.0.250'
+  sha256 '85a0a722ceba54e368bab9d231f9ac92977fa1c7319339f4ac80596c6e8a2bac'
 
   url "https://cdn.discordapp.com/apps/osx/#{version}/Discord.dmg"
   appcast 'https://discordapp.com/api/stable/updates?platform=osx',
-          checkpoint: 'a90f03024a362020045c56b58f8f32973c0eaafd62133edac0472401f1a0ae27'
+          checkpoint: '0bca6e26a844f761d56ba49d709170a02930f24942809728452e6a8179a94c07'
   name 'Discord'
   homepage 'https://discordapp.com/'
 

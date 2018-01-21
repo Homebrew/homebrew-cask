@@ -4,9 +4,11 @@ cask 'signal' do
 
   url "https://updates.signal.org/desktop/signal-desktop-mac-#{version}.zip"
   appcast 'https://github.com/WhisperSystems/Signal-Desktop/releases.atom',
-          checkpoint: '536df6a136bec10125e216e1a8b0f286f3c952eb04628676a9d3226d59d2f601'
+          checkpoint: '004bd795c9fcc9aebc3a78952208b3f0cf6ceb63138013b35045b4c1294c9b78'
   name 'Signal'
   homepage 'https://signal.org/'
+
+  auto_updates true
 
   app 'Signal.app'
 

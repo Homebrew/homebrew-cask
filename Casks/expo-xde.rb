@@ -1,11 +1,11 @@
 cask 'expo-xde' do
-  version '2.22.0'
-  sha256 '1ed0228ebfdcb0516a77f2d5a9109be1ae4ec5fae8f5b5f92ea364c4bfea6ac0'
+  version '2.22.1'
+  sha256 '0a16308df67baa00538898f9747056ca6b2f59f10796d3244ec547c78afe8c0d'
 
   # github.com/expo/xde was verified as official when first introduced to the cask
   url "https://github.com/expo/xde/releases/download/v#{version}/xde-#{version}.dmg"
   appcast 'https://github.com/expo/xde/releases.atom',
-          checkpoint: 'd8b3587d746b09616a1e2ec661ba2b508297cd6813ed916dc40459c2465be907'
+          checkpoint: '7e609f8013c154addf4b2ab5d4fcc8914c8c48f6c7e8104c58e9afb6addd823d'
   name 'Expo Development Environment (XDE)'
   homepage 'https://expo.io/'
 

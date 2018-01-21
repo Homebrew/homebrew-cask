@@ -24,7 +24,7 @@ cask 'handy-outliner' do
     EOS
   end
 
-  caveats do
-    puts "To run this app, type 'handy-outliner' in terminal."
-  end
+  caveats <<~EOS
+    To run this app, type 'handy-outliner' in terminal.
+  EOS
 end
