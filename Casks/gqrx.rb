@@ -27,4 +27,14 @@ cask 'gqrx' do
   binary "#{appdir}/Gqrx.app/Contents/MacOS/rtl_test"
   binary "#{appdir}/Gqrx.app/Contents/MacOS/SoapySDRUtil", target: 'soapysdrutil'
   binary "#{appdir}/Gqrx.app/Contents/MacOS/volk_profile"
+  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/gqrx.wrapper.sh"
+  binary shimscript, target: 'gqrx'
+
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/sh
+      '#{appdir}/Gqrx.app/Contents/MacOS/gqrx' "$@"
+    EOS
+  end
 end
