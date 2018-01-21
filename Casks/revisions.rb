@@ -1,10 +1,10 @@
 cask 'revisions' do
-  version '2.3'
-  sha256 'a0fcd2241511574a401c571f1a13b74c2124ba01606ccb4bea3ef05398f15361'
+  version '3.0'
+  sha256 'e10572e35ee2421b6406cb599e8d4338d9cbc5d848378617362104f2069f14f1'
 
   url "https://revisionsapp.com/downloads/revisions-#{version}.dmg"
   appcast 'https://revisionsapp.com/releases',
-          checkpoint: '3d64ab59a74f6207b84529a5b51ca7073553002ce1ffbef03e37075ab93bedd1'
+          checkpoint: 'cdfa5b665f80b2f3584914cdbe9b17441e692df4e3e3169f64b27f36b60a1dd3'
   name 'Revisions'
   homepage 'https://revisionsapp.com/'
 
