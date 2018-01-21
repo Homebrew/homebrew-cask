@@ -13,7 +13,6 @@ cask 'gqrx' do
   binary "#{appdir}/Gqrx.app/Contents/MacOS/airspy_info"
   binary "#{appdir}/Gqrx.app/Contents/MacOS/airspy_rx"
   binary "#{appdir}/Gqrx.app/Contents/MacOS/airspy_spiflash"
-  binary "#{appdir}/Gqrx.app/Contents/MacOS/gqrx"
   binary "#{appdir}/Gqrx.app/Contents/MacOS/hackrf_cpldjtag"
   binary "#{appdir}/Gqrx.app/Contents/MacOS/hackrf_debug"
   binary "#{appdir}/Gqrx.app/Contents/MacOS/hackrf_info"
