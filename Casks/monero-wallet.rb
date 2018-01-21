@@ -9,4 +9,11 @@ cask 'monero-wallet' do
   homepage 'https://getmonero.org/'
 
   app 'monero-wallet-gui.app'
+
+  zap trash: [
+               '~/.bitmonero',
+               '~/Monero',
+               '~/Library/Preferences/org.getmonero.monero-core.plist',
+               '~/Library/Saved Application State/com.yourcompany.monero-wallet-gui.savedState',
+             ]
 end
