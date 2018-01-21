@@ -13,7 +13,7 @@ cask 'battle-net' do
   name 'Blizzard Battle.net'
   homepage 'https://www.battle.net/'
 
-  app 'Battle.net.app'
+  app 'Battle.net-Setup.app'
 
   zap trash: [
                '~/Library/Application Support/Battle.net',
