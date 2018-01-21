@@ -12,13 +12,13 @@ cask 'blockblock' do
   depends_on macos: '>= :mavericks'
 
   installer script: {
-                      executable: "#{staged_path}/BlockBlock_Installer.app/Contents/MacOS/BlockBlock",
+                      executable: "#{staged_path}/BlockBlock.app/Contents/MacOS/BlockBlock",
                       args:       ['-install'],
                       sudo:       true,
                     }
 
   uninstall script: {
-                      executable: "#{staged_path}/BlockBlock_Installer.app/Contents/MacOS/BlockBlock",
+                      executable: "#{staged_path}/BlockBlock.app/Contents/MacOS/BlockBlock",
                       args:       ['-uninstall'],
                       sudo:       true,
                     }
