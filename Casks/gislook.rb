@@ -4,7 +4,7 @@ cask 'gislook' do
 
   url 'http://www.cartography.oregonstate.edu/gislook/GISLook_GISMeta.pkg'
   name 'GISLook'
-  homepage 'http://cartography.oregonstate.edu/GISLook.html'
+  homepage 'http://www.cartography.oregonstate.edu/GISLook.html'
 
   depends_on macos: '>= :leopard'
 
