@@ -15,14 +15,14 @@ cask 'coteditor' do
     # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
     url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   else
-    version '3.2.7'
-    sha256 '579c1f4a8dd65163753dcf5222b3fa623aa00844700b6a7558ac9d190903e549'
+    version '3.2.8'
+    sha256 '73dd20d27b75c7b0c46242a465adb3df5b5f0b901f42c5a9a85777a57c4a17d6'
     # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
     url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   end
 
   appcast 'https://github.com/coteditor/CotEditor/releases.atom',
-          checkpoint: '65296811220d079faaddadf4f77243058077759b0cfe364585a2abdfa71bebc4'
+          checkpoint: '378d03256e9ccba3e9ec33fcfb3378966011d6d1a65edea7a492b3600bfbb25f'
   name 'CotEditor'
   homepage 'https://coteditor.com/'
 
