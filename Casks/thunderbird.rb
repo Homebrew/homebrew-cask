@@ -88,8 +88,10 @@ cask 'thunderbird' do
   homepage 'https://www.mozilla.org/thunderbird/'
 
   auto_updates true
-
-  app 'Thunderbird.app'
+  conflicts_with cask: [
+                         'thunderbird-beta',
+                         'thunderbird-daily',
+                       ]
 
   zap trash: [
                '~/Library/Thunderbird',
