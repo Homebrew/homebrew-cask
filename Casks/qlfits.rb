@@ -1,6 +1,6 @@
 cask 'qlfits' do
   version '3.1.2'
-  sha256 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+  sha256 '52748bb989d86132e77b302e9ec5e9949295899292bb817ee30ab14ae02395ff'
 
   url "https://github.com/onekiloparsec/QLFits/releases/download/#{version}/QLFits3.qlgenerator.zip"
   name 'QLFits'
