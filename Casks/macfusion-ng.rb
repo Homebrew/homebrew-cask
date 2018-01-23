@@ -1,8 +1,8 @@
-cask 'eldeveloper-macfusion' do
+cask 'macfusion-ng' do
   version '2.1.1-dev.3'
   sha256 '3e6e356f36623dde805aa3de941e29f6256b02cfe0720bcbd70df4526e2a7198'
 
-  url "https://github.com/ElDeveloper/macfusion#{version.major}/releases/download/#{version}/Macfusion.zip"
+  url "https://github.com/macfusion-ng/macfusion#{version.major}/releases/download/#{version}/Macfusion.zip"
   appcast 'https://github.com/macfusion-ng/macfusion2/releases.atom',
           checkpoint: '501d54473744c385e7a060ff5890907ada340ce0f95ca48c2dd45c58947d3b53'
   name 'Macfusion'
