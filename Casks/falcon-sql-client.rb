@@ -1,11 +1,11 @@
 cask 'falcon-sql-client' do
-  version '2.4.0'
-  sha256 'b1a4aca3015b482a2687103e02a48e444abb5536b0b5bd0ca3bcfc0c788c1c86'
+  version '2.5.0'
+  sha256 '3b8238a2dbfabfc87e63039b027421d17b71df9ce014d27d4d42b161589f0242'
 
   # github.com/plotly/falcon-sql-client was verified as official when first introduced to the cask
   url "https://github.com/plotly/falcon-sql-client/releases/download/v#{version}/mac-falcon-v#{version}.zip"
   appcast 'https://github.com/plotly/falcon-sql-client/releases.atom',
-          checkpoint: '50cab7fd7217005da62161e9b7339a5b7710cc0396db7d44d2d99d43b5f986d9'
+          checkpoint: 'd8a98a13f3695c205b3ac9cb383120921c2c7808d301fbaa24a802e4724603dd'
   name 'Falcon SQL Client'
   homepage 'https://plot.ly/free-sql-client-download'
 
