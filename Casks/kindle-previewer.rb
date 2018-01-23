@@ -7,7 +7,6 @@ cask 'kindle-previewer' do
   name 'Kindle Previewer 3'
   homepage 'https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1003018611'
 
-
   pkg 'KindlePreviewerInstaller.pkg'
 
   uninstall pkgutil: 'Amazon.Kindle.Previewer.pkg'
