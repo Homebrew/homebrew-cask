@@ -5,7 +5,7 @@ cask 'cocoapods-app' do
   # github.com/CocoaPods/CocoaPods was verified as official when first introduced to the cask
   url "https://github.com/CocoaPods/CocoaPods-app/releases/download/#{version}/CocoaPods.app-#{version}.tar.bz2"
   appcast 'https://app.cocoapods.org/sparkle',
-          checkpoint: '6463abf2126b0a28912c9f08c4f1feed20c84ffdf4ab11b919e88c85d64d8c82'
+          checkpoint: '6206c5a93fbaa1502ed6dd0ba6bebe6785cc9a5eadc6f3eb08ea51cd295c36b8'
   name 'CocoaPods.app'
   homepage 'https://cocoapods.org/'
 
