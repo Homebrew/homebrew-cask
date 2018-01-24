@@ -4,7 +4,7 @@ cask 'twine' do
 
   # github.com/klembot/twinejs was verified as official when first introduced to the cask
   url "https://github.com/klembot/twinejs/releases/download/#{version}/twine_#{version}_osx.zip"
-  appcast 'https://github.com/klembot/twinejs/releases.atom'
+  appcast 'https://github.com/klembot/twinejs/releases.atom',
           checkpoint: 'f294c0940f5ae844f73b1c49cf867a7ff84f30c6ee17a28ffda8c1f5c1270981'
   name 'Twine'
   homepage 'https://twinery.org/'
