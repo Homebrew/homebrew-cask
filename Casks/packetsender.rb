@@ -1,11 +1,11 @@
 cask 'packetsender' do
-  version '5.4.2,2017-09-01'
-  sha256 'b65428cda04eadcf956976fe30e9eb78e422c13602ff66f3134e7b6aa48fba7c'
+  version '5.6.2'
+  sha256 '9ad99a69466e741858a2a4276a16537b01f87c3e4accbb4316d5361b1ed43564'
 
   # github.com/dannagle/PacketSender was verified as official when first introduced to the cask
-  url "https://github.com/dannagle/PacketSender/releases/download/v#{version.before_comma}/PacketSender_v#{version.before_comma.dots_to_underscores}_#{version.after_comma}.dmg"
+  url "https://github.com/dannagle/PacketSender/releases/download/v#{version}/PacketSender_v#{version.dots_to_underscores}.dmg"
   appcast 'https://github.com/dannagle/PacketSender/releases.atom',
-          checkpoint: '272e1505776fff4d212eb4f3dd468fb595d3712973cd077e834f99f89baa4055'
+          checkpoint: '242c7a7b8d23e1e0fc76176852b91a491445e26b99aff872c0a0b0034566befe'
   name 'Packet Sender'
   homepage 'https://packetsender.com/'
 

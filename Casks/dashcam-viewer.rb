@@ -1,12 +1,14 @@
 cask 'dashcam-viewer' do
-  version '2.6.8'
-  sha256 '72ae74866a81c8dff2730ba67f115ee3c2ee57bf918ccba2ec96547d54c1be0b'
+  version '2.7.6'
+  sha256 '974bc2a01db630126d301beb6e368957289e16e40a5b81bdd865d5b7306ab01a'
 
-  # dropboxusercontent.com/u/25150850 was verified as official when first introduced to the cask
-  url "https://dl.dropboxusercontent.com/u/25150850/Dashcam_Viewer_v#{version}.dmg"
+  # s3.amazonaws.com/aws-website-dcv-downloads-c8kwd/dcv was verified as official when first introduced to the cask
+  url "https://s3.amazonaws.com/aws-website-dcv-downloads-c8kwd/dcv/Dashcam_Viewer_v#{version}.dmg"
   name 'Dashcam Viewer'
   name 'Dashcam Viewer by Earthshine Software'
   homepage 'https://dashcamviewer.com/'
+
+  depends_on macos: '>= :mountain_lion'
 
   app 'Dashcam Viewer.app'
 end

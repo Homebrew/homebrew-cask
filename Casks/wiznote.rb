@@ -1,6 +1,6 @@
 cask 'wiznote' do
-  version '2.5.7,2017-08-17'
-  sha256 '5611e0bf905e63e3ffb1c1d00dd262aae94689af80a7ec221ad80efa0c2a4396'
+  version '2.5.8,2018-01-12'
+  sha256 '5428cf52af8544c741009d9b56fc0264b53aa4bd7b6ee8b8a08160fa9a546d3b'
 
   url "https://get.wiz.cn/wiznote-macos-#{version.after_comma}.dmg"
   name 'WizNote'

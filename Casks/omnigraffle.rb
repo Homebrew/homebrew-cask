@@ -1,12 +1,12 @@
 cask 'omnigraffle' do
-  version '7.5'
-  sha256 'd8d8963a85ee34270d7d0148aaaa7aee75bc7d3fffc1bb89e64626546c943d34'
+  version '7.6'
+  sha256 'db55ebb65e0d5253e2e0f55ceb637698450278de9ae69f4af898aac0b5a66844'
 
-  url "https://downloads.omnigroup.com/software/MacOSX/10.11/OmniGraffle-#{version}.dmg"
+  url "https://downloads.omnigroup.com/software/MacOSX/10.12/OmniGraffle-#{version}.dmg"
   name 'OmniGraffle'
   homepage 'https://www.omnigroup.com/omnigraffle/'
 
-  depends_on macos: '>= :el_capitan'
+  depends_on macos: '>= :sierra'
 
   app 'OmniGraffle.app'
 

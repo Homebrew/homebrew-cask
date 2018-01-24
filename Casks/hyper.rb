@@ -9,6 +9,8 @@ cask 'hyper' do
   name 'Hyper'
   homepage 'https://hyper.is/'
 
+  auto_updates true
+
   app 'Hyper.app'
 
   zap trash: [

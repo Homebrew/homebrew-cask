@@ -1,10 +1,10 @@
 cask 'rubymine' do
-  version '2017.3.1,173.3942.35'
-  sha256 '70905841d306c4913bc40cdf6b8e6e2f4586ab265c7e5553749025d5f673231e'
+  version '2017.3.2,173.4301.17'
+  sha256 'ee0d9bafb5d01b1eafa849169e04d4651525ab161b3d80b04e8407eea9146f6b'
 
   url "https://download.jetbrains.com/ruby/RubyMine-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=RM&latest=true&type=release',
-          checkpoint: '2683bbc81682a2572c387f33d763dd72418085720c04536554a828786ec8fce3'
+          checkpoint: '41ffb56c3bd78d1f0efce00db3314fac6ea7ac5a8a0b19535cbf870b8f2515d0'
   name 'RubyMine'
   homepage 'https://www.jetbrains.com/ruby/'
 

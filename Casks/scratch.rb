@@ -1,10 +1,10 @@
 cask 'scratch' do
-  version '2.0,456'
-  sha256 '8c5d15775d6d7e9e01b0be91c6a6889136cb7e5e284ec9285ab0c80687b58196'
+  version '2.0,458.0.1'
+  sha256 '52c115cc8ab1df6e55b2e2b2e0662484c26b5e5713acd4cf63d03e8d24895e0f'
 
   url "https://scratch.mit.edu/scratchr2/static/sa/Scratch-#{version.after_comma}.dmg"
   appcast 'https://scratch.mit.edu/scratchr2/static/sa/version.xml',
-          checkpoint: '354897fa6cf5d9de5f33a1d9857b9406f2841db67c80b92dd38cea4fa4a08f31'
+          checkpoint: '36a3f46c516aeb0230bfc4dac736d1c13ef9586967db08b821c1ad7f1db3c8ca'
   name 'Scratch'
   homepage 'https://scratch.mit.edu/download'
 
