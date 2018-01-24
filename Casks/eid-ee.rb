@@ -1,6 +1,6 @@
 cask 'eid-ee' do
-  version '17.11.0.1762'
-  sha256 '0edaff51d72b864602f3d18dd4363157fccfe7e4651d42e67879ad649abe1af8'
+  version '17.12.0.1770'
+  sha256 '74aed82ed10ea0f3b851c2e6b3b48b106445f017c2e708db8398cf77ae002e55'
 
   url "https://installer.id.ee/media/osx/Open-EID_#{version}.dmg"
   name 'Electronic identity card software for Estonia'
@@ -17,6 +17,6 @@ cask 'eid-ee' do
 
   caveats <<~EOS
     DigiDoc3 Client and ID-card Utility are available in the App Store:
-      http://appstore.com/mac/ria
+      https://appstore.com/mac/ria
   EOS
 end
