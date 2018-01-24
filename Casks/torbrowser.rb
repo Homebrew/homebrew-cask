@@ -85,7 +85,7 @@ cask 'torbrowser' do
   appcast 'https://dist.torproject.org/torbrowser/',
           checkpoint: 'f1f3e429dfab01a5e9bc2ca7e4751ad43c9117f85202eef57c15e1364476368a'
   name 'Tor Browser'
-  homepage 'https://www.torproject.org/projects/torbrowser.html/'
+  homepage 'https://www.torproject.org/projects/torbrowser.html'
   gpg "#{url}.asc", key_id: 'ef6e286dda85ea2a4ba7de684e2c6e8793298290'
 
   auto_updates true
