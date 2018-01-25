@@ -1,11 +1,11 @@
 cask 'veusz' do
-  version '2.0.1'
-  sha256 'dbf5a1c9ae26f2a40e05bf1afd537ad4927ab41c15a0ad4d717a216909f37ceb'
+  version '2.1.1'
+  sha256 '61e705bafc9ffdc3a3170a5e89616ba3ea9d6f1651a4c59b382fefc4e98c68ad'
 
   # github.com/veusz/veusz was verified as official when first introduced to the cask
   url "https://github.com/veusz/veusz/releases/download/veusz-#{version}/veusz-#{version}-AppleOSX.dmg"
   appcast 'https://github.com/veusz/veusz/releases.atom',
-          checkpoint: '0467aa1c96bee854e07fbeacb97232e73daa2d15921050f2f850935ea85e292b'
+          checkpoint: 'fb8670130f2ebbe93fd1388066445110e64b13900e2e7e56696dfa7e63a04526'
   name 'Veusz'
   homepage 'https://veusz.github.io/'
 
