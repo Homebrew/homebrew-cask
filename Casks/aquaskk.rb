@@ -10,5 +10,5 @@ cask 'aquaskk' do
 
   pkg 'AquaSKK.pkg'
 
-  uninstall pkgutil: 'jp.sourceforge.inputmethod.aquaskk.pkg'
+  uninstall pkgutil: 'org.codefirst.aquaskk.pkg'
 end
