@@ -4,7 +4,7 @@ cask 'foobar2000' do
 
   url "https://www.foobar2000.org/files/264a0d9bf25006ad99fca992b6740779/foobar2000-v#{version}.dmg"
   name 'foobar2000'
-  homepage 'https://www.foobar2000.org/'
+  homepage 'https://www.foobar2000.org/mac'
 
   app 'foobar2000.app'
 end
