@@ -1,4 +1,5 @@
 cask 'foobar2000' do
+  # note: "2000" is not a version number, but an intrinsic part of the product name
   version '2.1.7'
   sha256 '750ab9ebb817a7f4f4dd6b9d17990619037a9b6f829bca8964455ee2c09929c6'
 
