@@ -1,6 +1,6 @@
 cask 'krita' do
-  version '3.3.2'
-  sha256 'ea84d5b9f13f4fef6393bc7e9b5e6a066890c78631f5f813c9b4268f76ac2cdc'
+  version '3.3.3'
+  sha256 '0024c8fed6d5455d3135fb52431a0bf6fe3d47bbae84e7f4dc145926d3e23dfd'
 
   # kde.org/stable/krita was verified as official when first introduced to the cask
   url "http://download.kde.org/stable/krita/#{version}/krita-#{version}.dmg"
@@ -11,10 +11,10 @@ cask 'krita' do
 
   app 'Krita.app'
 
-  zap delete: '~/Library/Saved Application State/org.krita.savedState',
-      trash:  [
-                '~/Library/Application Support/krita',
-                '~/Library/Preferences/kritadisplayrc',
-                '~/Library/Preferences/kritarc',
-              ]
+  zap trash: [
+               '~/Library/Application Support/krita',
+               '~/Library/Preferences/kritadisplayrc',
+               '~/Library/Preferences/kritarc',
+               '~/Library/Saved Application State/org.krita.savedState',
+             ]
 end

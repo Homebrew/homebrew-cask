@@ -1,10 +1,10 @@
 cask 'fish' do
-  version '2.6.0'
-  sha256 '9cd25bc469dbd0415dda125acedfc1a9512c28847b4bec52ce3fd127b78f6ecd'
+  version '2.7.0'
+  sha256 '4097dffb7f530eeecf5f832ddfa04469139e336a7886447693e77544d1852543'
 
   url "https://fishshell.com/files/#{version}/fish-#{version}.app.zip"
   appcast 'https://fishshell.com/release_notes.html',
-          checkpoint: '6bb8e589c1e26f8c6285c96e1771e11969c36ccce3fd6d5e15a39a1e57c1865d'
+          checkpoint: '6fc14d03c1de8fcbfe74778ee00dc500776c0ce13f1ad5995d78365f68e74152'
   name 'Fish App'
   homepage 'https://fishshell.com/'
 

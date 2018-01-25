@@ -16,7 +16,7 @@ cask 'datadog-agent' do
 
   uninstall pkgutil: 'com.datadoghq.agent'
 
-  zap delete: '/opt/datadog-agent'
+  zap trash: '/opt/datadog-agent'
 
   caveats <<~EOS
     You will need to update /opt/datadog-agent/etc/datadog.conf and replace APIKEY with your api key

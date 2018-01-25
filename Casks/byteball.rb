@@ -1,22 +1,20 @@
 cask 'byteball' do
-  version '1.11.1'
-  sha256 'f67a287f04c0e49d5ed6eab237c9006e5eefbd6f11026097ad119748725e3e12'
+  version '2.1.0'
+  sha256 '60e1d4adade4b3a38a930ee70a5c24397aba5be93950d39141a5792df1abde2b'
 
   # github.com/byteball/byteball was verified as official when first introduced to the cask
   url "https://github.com/byteball/byteball/releases/download/v#{version}/Byteball-osx64.dmg"
   appcast 'https://github.com/byteball/byteball/releases.atom',
-          checkpoint: '51782cb795fc22ce346a968d33814c9eeb4e5f5f42fa035a8b0b581c971355b7'
+          checkpoint: 'bc766ea84b52d2f54a8965fe229c349293a4c925fe33de07da4452ff209ce219'
   name 'Byteball'
   homepage 'https://byteball.org/'
 
   app 'byteball.app'
 
-  zap delete: [
-                '~/Library/Caches/byteball',
-                '~/Library/Saved Application State/com.nw-builder.byteball.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/byteball',
-                '~/Library/Preferences/com.nw-builder.byteball.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/byteball',
+               '~/Library/Caches/byteball',
+               '~/Library/Preferences/com.nw-builder.byteball.plist',
+               '~/Library/Saved Application State/com.nw-builder.byteball.savedState',
+             ]
 end

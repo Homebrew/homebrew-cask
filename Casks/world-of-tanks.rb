@@ -42,9 +42,9 @@ cask 'world-of-tanks' do
 
   app 'World of Tanks.app'
 
-  zap delete: '~/Library/Saved Application State/com.codeweavers.worldoftanks.savedState',
-      trash:  [
-                '~/Documents/World_of_Tanks',
-                '~/Library/Application Support/World of Tanks',
-              ]
+  zap trash: [
+               '~/Documents/World_of_Tanks',
+               '~/Library/Application Support/World of Tanks',
+               '~/Library/Saved Application State/com.codeweavers.worldoftanks.savedState',
+             ]
 end

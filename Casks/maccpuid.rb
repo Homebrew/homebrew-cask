@@ -8,5 +8,5 @@ cask 'maccpuid' do
 
   app 'MacCPUID.app'
 
-  zap delete: '~/Library/Caches/com.intel.MacCPUID'
+  zap trash: '~/Library/Caches/com.intel.MacCPUID'
 end

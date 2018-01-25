@@ -12,8 +12,8 @@ cask 'moom' do
 
   app 'Moom.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.manytricks.Moom.plist',
-                '~/Library/Application Support/Many Tricks',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.manytricks.Moom.plist',
+               '~/Library/Application Support/Many Tricks',
+             ]
 end

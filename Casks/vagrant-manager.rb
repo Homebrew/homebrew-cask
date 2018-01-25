@@ -14,6 +14,8 @@ cask 'vagrant-manager' do
   uninstall login_item: 'Vagrant Manager',
             quit:       'lanayo.Vagrant-Manager'
 
-  zap delete: '~/Library/Caches/lanayo.Vagrant-Manager',
-      trash:  '~/Library/Preferences/lanayo.Vagrant-Manager.plist'
+  zap trash: [
+               '~/Library/Caches/lanayo.Vagrant-Manager',
+               '~/Library/Preferences/lanayo.Vagrant-Manager.plist',
+             ]
 end

@@ -10,11 +10,11 @@ cask 'auganizer' do
 
   app 'Auganizer.app'
 
-  zap delete: [
-                '~/Library/Application Support/Auganizer',
-                '~/Library/Caches/com.auganizer.aurora',
-                '~/Library/Preferences/com.auganizer.aurora.australis.plist',
-                '~/Library/Preferences/com.auganizer.aurora.plist',
-                '~/Library/Saved Application State/com.auganizer.aurora.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Auganizer',
+               '~/Library/Caches/com.auganizer.aurora',
+               '~/Library/Preferences/com.auganizer.aurora.australis.plist',
+               '~/Library/Preferences/com.auganizer.aurora.plist',
+               '~/Library/Saved Application State/com.auganizer.aurora.savedState',
+             ]
 end

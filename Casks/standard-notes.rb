@@ -1,11 +1,11 @@
 cask 'standard-notes' do
-  version '2.0.3'
-  sha256 'f16be6ee64ce1ccca09f1c923a7339aed5655c6ee9c4fb56c61f8511d76c8cdc'
+  version '2.0.42'
+  sha256 'aa3e88989b3b9c81fb3b1629fd9945fd8a09b7a83933f6bc2d81035871e61bc1'
 
   # github.com/standardnotes/desktop was verified as official when first introduced to the cask
   url "https://github.com/standardnotes/desktop/releases/download/v#{version}/Standard-Notes-#{version}-mac.zip"
   appcast 'https://github.com/standardnotes/desktop/releases.atom',
-          checkpoint: '97a6545e773c73ab9995f0f4b76d910dfe73f2bf3bb3c7ec483b65fa8e506f90'
+          checkpoint: 'b03f5bd462074dbd0caf7c69065b9c79c25e79d93c6971ca4a9bafcb44a2e61f'
   name 'Standard Notes'
   homepage 'https://standardnotes.org/'
 
@@ -13,14 +13,12 @@ cask 'standard-notes' do
 
   app 'Standard Notes.app'
 
-  zap delete: [
-                '~/Library/Caches/org.standardnotes.standardnotes',
-                '~/Library/Caches/org.standardnotes.standardnotes.ShipIt',
-                '~/Library/Saved Application State/org.standardnotes.standardnotes.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/Standard Notes',
-                '~/Library/Preferences/org.standardnotes.standardnotes.plist',
-                '~/Library/Preferences/org.standardnotes.standardnotes.helper.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Standard Notes',
+               '~/Library/Caches/org.standardnotes.standardnotes',
+               '~/Library/Caches/org.standardnotes.standardnotes.ShipIt',
+               '~/Library/Preferences/org.standardnotes.standardnotes.plist',
+               '~/Library/Preferences/org.standardnotes.standardnotes.helper.plist',
+               '~/Library/Saved Application State/org.standardnotes.standardnotes.savedState',
+             ]
 end

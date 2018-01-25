@@ -1,10 +1,10 @@
 cask 'smooze' do
-  version '1.5.2'
-  sha256 'f06665156f045649d919ddab6e1e46cfd5e954fc2eae0cad471d34d32723d17c'
+  version '1.5.7'
+  sha256 '7e938cc994e2df76d5fae6dc4b3fdfe991f64bee3ed7960448067647d7c07464'
 
   url 'https://smooze.co/updates/Smooze.dmg'
   appcast 'https://smooze.co/updates/update.xml',
-          checkpoint: 'e96452daa89a71cc8e964b1639dfc15e04a2168ea0161a30445fc716cca2e5bb'
+          checkpoint: '2700696185144700781b11e5d81bfc42cc499fe6e27cda1f52e36f43fbd3b2d5'
   name 'Smooze'
   homepage 'https://smooze.co/'
 
@@ -15,13 +15,11 @@ cask 'smooze' do
   uninstall login_item: 'Smooze',
             quit:       'co.smooze.macos'
 
-  zap delete: [
-                '~/Library/Caches/co.smooze.macos',
-                '~/Library/Caches/io.fabric.sdk.mac.data/co.smooze.macos',
-              ],
-      trash:  [
-                '~/Library/Application Support/co.smooze.macos',
-                '~/Library/Application Support/Smooze',
-                '~/Library/Preferences/co.smooze.macos.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/co.smooze.macos',
+               '~/Library/Application Support/Smooze',
+               '~/Library/Caches/co.smooze.macos',
+               '~/Library/Caches/io.fabric.sdk.mac.data/co.smooze.macos',
+               '~/Library/Preferences/co.smooze.macos.plist',
+             ]
 end

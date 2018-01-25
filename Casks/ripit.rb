@@ -12,9 +12,9 @@ cask 'ripit' do
 
   app 'RipIt.app'
 
-  zap delete: '~/Library/Caches/com.thelittleappfactory.RipIt',
-      trash:  [
-                '~/Library/Preferences/.RipIt',
-                '~/Library/Preferences/com.thelittleappfactory.RipIt.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.thelittleappfactory.RipIt',
+               '~/Library/Preferences/.RipIt',
+               '~/Library/Preferences/com.thelittleappfactory.RipIt.plist',
+             ]
 end

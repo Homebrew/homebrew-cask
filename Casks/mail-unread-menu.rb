@@ -8,9 +8,9 @@ cask 'mail-unread-menu' do
 
   app 'Mail Unread Menu.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.loganrockmore.MailUnreadMenu.plist',
-                '~/Library/Application Support/Mail Unread Menu/',
-                '~/Library/Mail/Bundles/MailUnreadMenu.mailbundle',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.loganrockmore.MailUnreadMenu.plist',
+               '~/Library/Application Support/Mail Unread Menu/',
+               '~/Library/Mail/Bundles/MailUnreadMenu.mailbundle',
+             ]
 end

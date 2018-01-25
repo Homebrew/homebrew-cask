@@ -1,10 +1,10 @@
 cask 'keybase' do
-  version '1.0.34-20171027003854,8e989533a'
-  sha256 'd9550d1b7eead724f4bd4f275109eece37aa1d124bb679389f8820347be65f0d'
+  version '1.0.39-20180122031025,5e5798149'
+  sha256 'e8965e9bb66af7a73cfe918ebe4678deabc949bdb08891788bd40f5e8b5827ac'
 
   url "https://prerelease.keybase.io/darwin-updates/Keybase-#{version.before_comma}%2B#{version.after_comma}.zip"
   appcast 'https://prerelease.keybase.io/update-darwin-prod-v2.json',
-          checkpoint: 'f0108221817e4e760e293bba9c18b038a332f364f672b0655b61d821313e896f'
+          checkpoint: 'e7ea589d51f4100b987493f1fe58b6e56e15793b4d47393d5f5a2ba5b430861d'
   name 'Keybase'
   homepage 'https://keybase.io/'
 
@@ -31,16 +31,14 @@ cask 'keybase' do
                           args:       ['uninstall'],
                         }
 
-  zap delete: [
-                '~/Library/Caches/Keybase',
-                '~/Library/Group Containers/keybase',
-                '~/Library/Logs/Keybase*',
-                '~/Library/Logs/keybase*',
-                '/Library/Logs/keybase*',
-              ],
-      trash:  [
-                '~/Library/Application Support/Keybase',
-                '~/Library/Preferences/keybase*',
-              ],
-      rmdir:  '/keybase'
+  zap trash: [
+               '~/Library/Application Support/Keybase',
+               '~/Library/Caches/Keybase',
+               '~/Library/Group Containers/keybase',
+               '~/Library/Logs/Keybase*',
+               '~/Library/Logs/keybase*',
+               '~/Library/Preferences/keybase*',
+               '/Library/Logs/keybase*',
+             ],
+      rmdir: '/keybase'
 end

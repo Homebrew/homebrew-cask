@@ -8,4 +8,6 @@ cask 'detexify' do
   homepage 'http://detexify.kirelabs.org/classify.html'
 
   app 'Detexify.app'
+
+  zap trash: '~/Library/Preferences/org.kirelabs.Detexify-Mac.plist'
 end

@@ -18,5 +18,5 @@ cask 'kicad' do
     end
   end
 
-  zap delete: '~/Library/Preferences/kicad'
+  zap trash: '~/Library/Preferences/kicad'
 end

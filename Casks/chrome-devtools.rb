@@ -10,10 +10,10 @@ cask 'chrome-devtools' do
 
   app 'Chrome DevTools App.app'
 
-  zap delete: [
-                '~/Library/Application Support/Chrome DevTools App',
-                '~/Library/Caches/Chrome DevTools App',
-                '~/Library/Preferences/com.auchenberg.chrome-devtools-app.plist',
-                '~/Library/Saved Application State/com.auchenberg.chrome-devtools-app.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Chrome DevTools App',
+               '~/Library/Caches/Chrome DevTools App',
+               '~/Library/Preferences/com.auchenberg.chrome-devtools-app.plist',
+               '~/Library/Saved Application State/com.auchenberg.chrome-devtools-app.savedState',
+             ]
 end

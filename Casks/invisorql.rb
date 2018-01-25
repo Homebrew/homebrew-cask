@@ -8,7 +8,6 @@ cask 'invisorql' do
   name 'Invisor QuickLook Plug-In'
   homepage 'https://www.pozdeev.com/invisor/'
 
-  depends_on macos: '>= :lion'
   depends_on cask: 'invisor-lite'
 
   qlplugin 'InvisorQL.qlgenerator'

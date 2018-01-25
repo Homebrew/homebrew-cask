@@ -18,5 +18,5 @@ cask 'avira-antivirus' do
                      },
             pkgutil: 'com.avira.pkg.AviraMacSecurity'
 
-  zap delete: '~/Library/Saved Application State/com.avira.controlcenter.savedState'
+  zap trash: '~/Library/Saved Application State/com.avira.controlcenter.savedState'
 end

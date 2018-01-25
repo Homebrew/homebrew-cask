@@ -12,5 +12,5 @@ cask 'macdropany' do
 
   app 'MacDropAny.app'
 
-  zap delete: '~/Library/Services/Sync via MacDropAny.workflow'
+  zap trash: '~/Library/Services/Sync via MacDropAny.workflow'
 end

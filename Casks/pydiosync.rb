@@ -10,5 +10,5 @@ cask 'pydiosync' do
 
   uninstall pkgutil: 'io.pyd.sync.installer.PydioSync'
 
-  zap delete: '~/Pydio'
+  zap trash: '~/Pydio'
 end

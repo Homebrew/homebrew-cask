@@ -12,10 +12,10 @@ cask 'geogebra' do
             login_item: 'GeoGebra',
             pkgutil:    'org.geogebra6.mac'
 
-  zap delete: [
-                '~/Library/GeoGebra',
-                '~/Library/Preferences/org.geogebra.mathapps.helper.plist',
-                '~/Library/Preferences/org.geogebra.mathapps.plist',
-                '~/Library/Saved Application State/org.geogebra.mathapps.savedState',
-              ]
+  zap trash: [
+               '~/Library/GeoGebra',
+               '~/Library/Preferences/org.geogebra.mathapps.helper.plist',
+               '~/Library/Preferences/org.geogebra.mathapps.plist',
+               '~/Library/Saved Application State/org.geogebra.mathapps.savedState',
+             ]
 end

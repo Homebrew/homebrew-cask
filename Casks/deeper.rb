@@ -19,6 +19,7 @@ cask 'deeper' do
                       :yosemite,
                       :el_capitan,
                       :sierra,
+                      :high_sierra,
                     ]
 
   app 'Deeper.app'

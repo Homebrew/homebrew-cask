@@ -11,11 +11,11 @@ cask 'mplayerx' do
 
   app 'MPlayerX.app'
 
-  zap delete: [
-                '~/.mplayer',
-                '~/Library/Application Support/MPlayerX',
-                '~/Library/Preferences/org.niltsh.MPlayerX.LSSharedFileList.plist',
-                '~/Library/Preferences/org.niltsh.MPlayerX.plist',
-                '~/Library/Caches/org.niltsh.MPlayerX',
-              ]
+  zap trash: [
+               '~/.mplayer',
+               '~/Library/Application Support/MPlayerX',
+               '~/Library/Preferences/org.niltsh.MPlayerX.LSSharedFileList.plist',
+               '~/Library/Preferences/org.niltsh.MPlayerX.plist',
+               '~/Library/Caches/org.niltsh.MPlayerX',
+             ]
 end

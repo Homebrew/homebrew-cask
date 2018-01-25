@@ -16,15 +16,13 @@ cask 'moodo' do
                     'com.moodo.moodomac',
                   ]
 
-  zap delete: [
-                '~/Library/Caches/com.moodo.moodomac',
-                '~/Library/Caches/com.moodo.moodomac.ShipIt',
-                '~/Library/Cookies/com.moodo.moodomac.binarycookies',
-                '~/Library/Saved Application State/com.moodo.moodomac.savedState ',
-              ],
-      trash:  [
-                '~/Library/Application Support/Moo.do',
-                '~/Library/Preferences/com.moodo.moodomac.helper.plist',
-                '~/Library/Preferences/com.moodo.moodomac.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Moo.do',
+               '~/Library/Caches/com.moodo.moodomac',
+               '~/Library/Caches/com.moodo.moodomac.ShipIt',
+               '~/Library/Cookies/com.moodo.moodomac.binarycookies',
+               '~/Library/Preferences/com.moodo.moodomac.helper.plist',
+               '~/Library/Preferences/com.moodo.moodomac.plist',
+               '~/Library/Saved Application State/com.moodo.moodomac.savedState ',
+             ]
 end

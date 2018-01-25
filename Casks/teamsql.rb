@@ -11,15 +11,13 @@ cask 'teamsql' do
 
   app 'TeamSQL.app'
 
-  zap delete: [
-                '~/Caches/io.teamsql.desktop*',
-                '~/Library/Caches/io.teamsql.desktop*',
-                '~/Library/Cookies/io.teamsql.desktop.binarycookies',
-                '~/Library/Saved Application State/io.teamsql.desktop.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/TeamSQL',
-                '~/Library/Preferences/ByHost/io.teamsql.desktop*',
-                '~/Library/Preferences/io.teamsql.desktop*',
-              ]
+  zap trash: [
+               '~/Library/Application Support/TeamSQL',
+               '~/Caches/io.teamsql.desktop*',
+               '~/Library/Caches/io.teamsql.desktop*',
+               '~/Library/Cookies/io.teamsql.desktop.binarycookies',
+               '~/Library/Preferences/ByHost/io.teamsql.desktop*',
+               '~/Library/Preferences/io.teamsql.desktop*',
+               '~/Library/Saved Application State/io.teamsql.desktop.savedState',
+             ]
 end

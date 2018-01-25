@@ -9,13 +9,13 @@ cask 'chatmate-for-facebook' do
 
   app 'ChatMate for Facebook.app'
 
-  zap delete: [
-                '~/Library/Application Support/ChatMate for Facebook',
-                '~/Library/Application Support/ColdX/net.coldx.mac.Facebook',
-                '~/Library/Caches/net.coldx.mac.Facebook',
-                '~/Library/Cookies/net.coldx.mac.Facebook.binarycookies',
-                '~/Library/Logs/net.coldx.mac.Facebook',
-                '~/Library/Preferences/net.coldx.mac.Facebook.plist',
-                '~/Library/WebKit/net.coldx.mac.Facebook',
-              ]
+  zap trash: [
+               '~/Library/Application Support/ChatMate for Facebook',
+               '~/Library/Application Support/ColdX/net.coldx.mac.Facebook',
+               '~/Library/Caches/net.coldx.mac.Facebook',
+               '~/Library/Cookies/net.coldx.mac.Facebook.binarycookies',
+               '~/Library/Logs/net.coldx.mac.Facebook',
+               '~/Library/Preferences/net.coldx.mac.Facebook.plist',
+               '~/Library/WebKit/net.coldx.mac.Facebook',
+             ]
 end

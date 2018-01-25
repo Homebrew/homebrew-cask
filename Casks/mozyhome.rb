@@ -14,10 +14,10 @@ cask 'mozyhome' do
                        'com.mozy.status.pkg',
                      ]
 
-  zap delete: [
-                '/Library/Application Support/MozyHome',
-                '/Library/Caches/MozyHome',
-                '~/Library/Preferences/com.mozy.decrypt.plist',
-                '~/Library/Preferences/com.mozy.status.plist',
-              ]
+  zap trash: [
+               '/Library/Application Support/MozyHome',
+               '/Library/Caches/MozyHome',
+               '~/Library/Preferences/com.mozy.decrypt.plist',
+               '~/Library/Preferences/com.mozy.status.plist',
+             ]
 end

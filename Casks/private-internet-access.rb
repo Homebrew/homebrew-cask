@@ -14,5 +14,5 @@ cask 'private-internet-access' do
 
   uninstall delete: '/Applications/Private Internet Access.app'
 
-  zap delete: '~/.pia_manager'
+  zap trash: '~/.pia_manager'
 end

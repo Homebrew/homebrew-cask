@@ -10,12 +10,10 @@ cask 'bookmacster' do
 
   app 'BookMacster.app'
 
-  zap delete: [
-                '~/Library/Caches/com.sheepsystems.BookMacster',
-                '~/Library/Saved Application State/com.sheepsystems.BookMacster.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/BookMacster',
-                '~/Library/Preferences/com.sheepsystems.BookMacster.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/BookMacster',
+               '~/Library/Caches/com.sheepsystems.BookMacster',
+               '~/Library/Preferences/com.sheepsystems.BookMacster.plist',
+               '~/Library/Saved Application State/com.sheepsystems.BookMacster.savedState',
+             ]
 end

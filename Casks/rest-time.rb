@@ -12,6 +12,8 @@ cask 'rest-time' do
 
   app 'Rest Time.app'
 
-  zap delete: '~/Library/Caches/net.publicspace.resttime',
-      trash:  '~/Library/Preferences/net.publicspace.resttime.plist'
+  zap trash: [
+               '~/Library/Caches/net.publicspace.resttime',
+               '~/Library/Preferences/net.publicspace.resttime.plist',
+             ]
 end

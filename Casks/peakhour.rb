@@ -13,16 +13,14 @@ cask 'peakhour' do
   uninstall launchctl: "com.digitician.peakhour#{version.major}.launchAtLoginHelper",
             quit:      "com.digitician.peakhour#{version.major}"
 
-  zap delete: [
-                "~/Library/Application Scripts/com.digitician.peakhour#{version.major}.launchAtLoginHelper",
-                "~/Library/Caches/com.digitician.peakhour#{version.major}",
-                "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.digitician.peakhour#{version.major}",
-                "~/Library/Containers/com.digitician.peakhour#{version.major}.launchAtLoginHelper",
-                "~/Library/Cookies/com.digitician.peakhour#{version.major}.binarycookies",
-              ],
-      trash:  [
-                "~/Library/Application Support/com.digitician.peakhour#{version.major}",
-                '~/Library/Application Support/PeakHour*',
-                "~/Library/Preferences/com.digitician.peakhour#{version.major}.plist",
-              ]
+  zap trash: [
+               "~/Library/Application Scripts/com.digitician.peakhour#{version.major}.launchAtLoginHelper",
+               "~/Library/Application Support/com.digitician.peakhour#{version.major}",
+               '~/Library/Application Support/PeakHour*',
+               "~/Library/Caches/com.digitician.peakhour#{version.major}",
+               "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.digitician.peakhour#{version.major}",
+               "~/Library/Containers/com.digitician.peakhour#{version.major}.launchAtLoginHelper",
+               "~/Library/Cookies/com.digitician.peakhour#{version.major}.binarycookies",
+               "~/Library/Preferences/com.digitician.peakhour#{version.major}.plist",
+             ]
 end

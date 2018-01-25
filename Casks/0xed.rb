@@ -8,8 +8,8 @@ cask '0xed' do
 
   app '0xED.app'
 
-  zap delete: [
-                '~/Library/Caches/com.suavetech.0xED',
-                '~/Library/Logs/0xED.log',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.suavetech.0xED',
+               '~/Library/Logs/0xED.log',
+             ]
 end

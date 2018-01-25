@@ -14,5 +14,7 @@ cask 'syphon-virtual-screen' do
   uninstall kext:   'EWProxyFrameBuffer',
             delete: '/System/Library/Caches/com.apple.kext.caches'
 
-  caveats 'To use different resolutions modify EWProxyFramebuffer.kext/Contents/Info.plist'
+  caveats <<~EOS
+    To use different resolutions modify EWProxyFramebuffer.kext/Contents/Info.plist
+  EOS
 end

@@ -23,13 +23,13 @@ cask 'onyx' do
     version '3.3.1'
     sha256 '887272335926005f49bbd35f66eb3ea5a6c19d3a35a8fada68357ab5860a7c1b'
   else
-    version '3.3.8'
-    sha256 '207028633f062656b4bf32cdd5440e1b8602b5778d91ea819c6f7b09c70ca676'
+    version '3.4.1'
+    sha256 '6804d6bf5aa20fb414c9229012955e8dd160352dd90f082a8d044a8a573fd996'
   end
 
   url "https://www.titanium-software.fr/download/#{macos_release}/OnyX.dmg"
-  appcast 'http://www.titanium-software.fr/en/release_onyx.html',
-          checkpoint: '99104ea8b60011c6a3ec00cf66d7271131aa5e721b7c63b46ab35d9c006a0251'
+  appcast 'https://www.titanium-software.fr/en/release_onyx.html',
+          checkpoint: 'd53d1eaaf651e27578348a9178c6e5daf4201f2670fb1ef4c10dd66ea3e25638'
   name 'OnyX'
   homepage 'https://www.titanium-software.fr/en/onyx.html'
 
@@ -47,13 +47,11 @@ cask 'onyx' do
 
   app 'OnyX.app'
 
-  zap delete: [
-                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.titanium.OnyX.help',
-                '~/Library/Logs/OnyX.log',
-                '~/Library/Saved Application State/com.titanium.OnyX.savedState',
-              ],
-      trash:  [
-                '~/Library/Preferences/OnyX.plist',
-                '~/Library/Preferences/com.titanium.OnyX.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.titanium.OnyX.help*',
+               '~/Library/Logs/OnyX.log',
+               '~/Library/Preferences/OnyX.plist',
+               '~/Library/Preferences/com.titanium.OnyX.plist',
+               '~/Library/Saved Application State/com.titanium.OnyX.savedState',
+             ]
 end

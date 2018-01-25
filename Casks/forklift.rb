@@ -1,10 +1,10 @@
 cask 'forklift' do
-  version '3.0.9'
-  sha256 'fb9742731476ead8af7444c9cf65783b805ae0b5c42a51f75712424a2fe1eafa'
+  version '3.1.1'
+  sha256 '60b2d01ee71d047125b28a8f5df736922c5fc3a9b435faefc962dea006c88799'
 
-  url "http://download.binarynights.com/ForkLift#{version}.zip"
+  url "https://download.binarynights.com/ForkLift#{version}.zip"
   appcast "https://updates.binarynights.com/ForkLift#{version.major}/update.xml",
-          checkpoint: '752b4273c59ad2e7dfd2e3886990540201fffd7126c25ce9982def9cce3a848a'
+          checkpoint: '60a79eeba6570d8da7ba5a9845790c0b0286ab59e274bd84a5e79b354dc96dce'
   name 'ForkLift'
   homepage 'https://binarynights.com/forklift/'
 
@@ -23,16 +23,14 @@ cask 'forklift' do
                          'com.binarynights.ForkLiftMini',
                        ]
 
-  zap delete: [
-                "~/Library/Caches/com.binarynights.ForkLift-#{version.major}",
-                "~/Library/Cookies/com.binarynights.ForkLift-#{version.major}.binarycookies",
-                '~/Library/Logs/ForkLift',
-                '~/Library/Logs/ForkLiftMini',
-                "~/Library/Saved Application State/com.binarynights.ForkLift-#{version.major}.savedState",
-              ],
-      trash:  [
-                '~/Library/Application Support/ForkLift',
-                "~/Library/Preferences/com.binarynights.ForkLift-#{version.major}.plist",
-                '~/Library/Preferences/com.binarynights.ForkLiftMini.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/ForkLift',
+               "~/Library/Caches/com.binarynights.ForkLift-#{version.major}",
+               "~/Library/Cookies/com.binarynights.ForkLift-#{version.major}.binarycookies",
+               '~/Library/Logs/ForkLift',
+               '~/Library/Logs/ForkLiftMini',
+               "~/Library/Preferences/com.binarynights.ForkLift-#{version.major}.plist",
+               '~/Library/Preferences/com.binarynights.ForkLiftMini.plist',
+               "~/Library/Saved Application State/com.binarynights.ForkLift-#{version.major}.savedState",
+             ]
 end

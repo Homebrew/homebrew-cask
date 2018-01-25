@@ -13,9 +13,9 @@ cask 'mmex' do
 
   app 'MMEX.app'
 
-  zap delete: [
-                '~/Library/Application Support/MoneyManagerEx',
-                '~/Library/Caches/com.yourcompany.MMEX',
-                '~/Library/Preferences/com.yourcompany.MMEX.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/MoneyManagerEx',
+               '~/Library/Caches/com.yourcompany.MMEX',
+               '~/Library/Preferences/com.yourcompany.MMEX.plist',
+             ]
 end

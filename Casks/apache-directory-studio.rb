@@ -10,5 +10,5 @@ cask 'apache-directory-studio' do
 
   app 'ApacheDirectoryStudio.app'
 
-  zap delete: '~/.ApacheDirectoryStudio'
+  zap trash: '~/.ApacheDirectoryStudio'
 end

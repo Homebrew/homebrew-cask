@@ -1,20 +1,20 @@
 cask 'transmission-remote-gui' do
-  version '5.11.0'
-  sha256 'e62776e7503624b12282e7efaa4d8bca9378495ba747525afce36ab752a88bb9'
+  version '5.13.0'
+  sha256 '6e91ab6e9a8c8d704fb38bdb6b37647f05635a2d75dd3a3738d5ddf5097fb712'
 
-  url "https://github.com/leonsoft-kras/transmisson-remote-gui/releases/download/v#{version}/transgui-#{version}.dmg"
-  appcast 'https://github.com/leonsoft-kras/transmisson-remote-gui/releases.atom',
-          checkpoint: 'e3a2a5f0c6f035a94e149c99cbad4f6415cad6a9466e4113d00d663e4b6e341f'
+  url "https://github.com/transmission-remote-gui/transgui/releases/download/v#{version}/transgui-#{version}.dmg"
+  appcast 'https://github.com/transmission-remote-gui/transgui/releases.atom',
+          checkpoint: '07003f14d0c8962865be85459fe5acf625175db1a69c3ca1f27d851d186bf09c'
   name 'Transmission Remote GUI'
-  homepage 'https://github.com/leonsoft-kras/transmisson-remote-gui'
+  homepage 'https://github.com/transmission-remote-gui/transgui'
 
   app 'Transmission Remote GUI.app'
 
   uninstall quit: 'com.transgui'
 
-  zap delete: '~/Library/Saved Application State/com.transgui.savedState',
-      trash:  [
-                '~/.config/Transmission Remote GUI/',
-                '~/Library/Preferences/com.transgui.plist',
-              ]
+  zap trash: [
+               '~/.config/Transmission Remote GUI/',
+               '~/Library/Preferences/com.transgui.plist',
+               '~/Library/Saved Application State/com.transgui.savedState',
+             ]
 end

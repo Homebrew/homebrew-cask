@@ -10,5 +10,5 @@ cask 'sdformatter' do
 
   uninstall pkgutil: 'com.tuxera.pkg.SD_Card_Formatter'
 
-  zap delete: '~/Library/Caches/com.tuxera.SDCardFormatter'
+  zap trash: '~/Library/Caches/com.tuxera.SDCardFormatter'
 end

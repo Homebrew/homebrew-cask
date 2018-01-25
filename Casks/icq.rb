@@ -9,10 +9,10 @@ cask 'icq' do
 
   app 'ICQ.app'
 
-  zap delete: [
-                '~/Library/Application Support/ICQ',
-                '~/Library/Caches/com.icq.macicq',
-                '~/Library/Preferences/com.icq.macicq.plist',
-                '~/Library/Saved Application State/com.icq.macicq.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/ICQ',
+               '~/Library/Caches/com.icq.macicq',
+               '~/Library/Preferences/com.icq.macicq.plist',
+               '~/Library/Saved Application State/com.icq.macicq.savedState',
+             ]
 end

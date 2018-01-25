@@ -11,10 +11,10 @@ cask 'bluesense' do
 
   app 'BlueSense.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.inspira.bluesense.plist',
-                '~/Library/Application Support/BlueSense',
-                '~/Library/Caches/com.inspira.bluesense',
-              ],
-      rmdir:  '~/Library/Application Scripts/com.inspira.bluesense'
+  zap trash: [
+               '~/Library/Preferences/com.inspira.bluesense.plist',
+               '~/Library/Application Support/BlueSense',
+               '~/Library/Caches/com.inspira.bluesense',
+             ],
+      rmdir: '~/Library/Application Scripts/com.inspira.bluesense'
 end

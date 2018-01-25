@@ -8,5 +8,7 @@ cask 'harvest' do
   name 'Harvest'
   homepage 'https://www.getharvest.com/mac-time-tracking'
 
+  auto_updates true
+
   app 'Harvest.app'
 end

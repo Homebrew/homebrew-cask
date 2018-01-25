@@ -12,10 +12,10 @@ cask 'adium' do
 
   app 'Adium.app'
 
-  zap delete: [
-                '~/Library/Application Support/Adium 2.0',
-                '~/Library/Caches/Adium',
-                '~/Library/Caches/com.adiumX.adiumX',
-                '~/Library/Preferences/com.adiumX.adiumX.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Adium 2.0',
+               '~/Library/Caches/Adium',
+               '~/Library/Caches/com.adiumX.adiumX',
+               '~/Library/Preferences/com.adiumX.adiumX.plist',
+             ]
 end

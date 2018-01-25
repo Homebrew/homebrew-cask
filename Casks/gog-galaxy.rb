@@ -1,6 +1,6 @@
 cask 'gog-galaxy' do
-  version '1.2.26.10'
-  sha256 'd13906e183f8e501c4e49d3b1eaa2e2deffb067af92eb7869d1fbde72ad8556f'
+  version '1.2.34.6'
+  sha256 '68fbfb0078af41bfeda254e086991976093069e2f695a4d89307d090a8d6eceb'
 
   url "https://cdn.gog.com/open/galaxy/client/galaxy_client_#{version}.pkg"
   name 'GOG Galaxy Client'
@@ -17,15 +17,13 @@ cask 'gog-galaxy' do
                          'com.gog.galaxy.commservice',
                        ]
 
-  zap delete: [
-                '~/Library/Saved Application State/com.gog.galaxy.savedState',
-                '/Library/LaunchDaemons/com.gog.galaxy.ClientService.plist',
-                '/Library/PrivilegedHelperTools/com.gog.galaxy.ClientService',
-              ],
-      trash:  [
-                '~/Library/Application Support/GOG.com',
-                '~/Library/Preferences/com.gog.galaxy.cef.renderer.plist',
-                '~/Library/Preferences/com.gog.galaxy.plist',
-                '/Users/Shared/GOG.com',
-              ]
+  zap trash: [
+               '/Library/LaunchDaemons/com.gog.galaxy.ClientService.plist',
+               '/Library/PrivilegedHelperTools/com.gog.galaxy.ClientService',
+               '/Users/Shared/GOG.com',
+               '~/Library/Application Support/GOG.com',
+               '~/Library/Preferences/com.gog.galaxy.cef.renderer.plist',
+               '~/Library/Preferences/com.gog.galaxy.plist',
+               '~/Library/Saved Application State/com.gog.galaxy.savedState',
+             ]
 end

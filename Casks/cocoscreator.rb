@@ -19,9 +19,9 @@ cask 'cocoscreator' do
     EOS
   end
 
-  zap delete: [
-                '~/Library/Application Support/CocosCreator',
-                '~/Library/Preferences/com.cocos.creator.plist',
-                '~/Library/Preferences/com.cocos.apps.simulator.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/CocosCreator',
+               '~/Library/Preferences/com.cocos.creator.plist',
+               '~/Library/Preferences/com.cocos.apps.simulator.plist',
+             ]
 end

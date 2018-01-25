@@ -1,10 +1,10 @@
 cask 'synergy' do
-  version '1.8.8,25a8cb2'
-  sha256 'b09d8ffdb47ecde761e06e9beea672ad4b6999e09104fa9239ae30ae0f69b9c2'
+  version '2.0.4,b1322-fcb59be4'
+  sha256 'f2069f7097e7b2cf7f3160e17d5df04125b0d28ac6a9b32d9e97762e234b0789'
 
-  url "https://binaries.symless.com/v#{version.before_comma}/synergy-v#{version.before_comma}-stable-#{version.after_comma}-MacOSX-x86_64.dmg"
+  url "https://binaries.symless.com/v#{version.before_comma}/Synergy_v#{version.before_comma}-stable_#{version.after_comma}.dmg"
   appcast 'https://github.com/symless/synergy-core/releases.atom',
-          checkpoint: '627fed8c44fa46631f2041e8080615dbbb7fe1f4b28be9269464ecd41b30ef1f'
+          checkpoint: '30225dbfbca4a5ccb30bf3f54cd7fe1b0603cf5cdab715c10d3207aac4c76e95'
   name 'Synergy'
   homepage 'https://symless.com/synergy'
 

@@ -1,10 +1,10 @@
 cask 'clyang-welly' do
-  version '3.0.2'
-  sha256 '015a579f92bdf6a7a47db591bbb52d5ab9b1842d758eb783e0a1aae6ad07210c'
+  version '3.1.1.1'
+  sha256 'f17aa74d8668d02ff7c6eee81ae7e0c06d76a51d4aa50624ffe757c95f498ecf'
 
   url "https://github.com/clyang/welly/releases/download/#{version}/Welly.v#{version}.zip"
   appcast 'https://github.com/clyang/welly/releases.atom',
-          checkpoint: 'df6f6353cfeef2c71dec2d9066dc79d496a9cf603fb18daf465285720f1ca076'
+          checkpoint: 'c8c5b24aa48e9914680ee0313b7e3e4d7663f73b23110ab269235d5f8ad5520e'
   name 'Welly'
   homepage 'https://github.com/clyang/welly'
 
@@ -12,13 +12,11 @@ cask 'clyang-welly' do
 
   app 'Welly.app'
 
-  zap delete: [
-                '~/Library/Caches/Welly',
-                '~/Library/Caches/org.net9.Welly',
-                '~/Library/Cookies/org.net9.Welly.binarycookies',
-              ],
-      trash:  [
-                '~/Library/Application Support/Welly',
-                '~/Library/Preferences/org.net9.Welly.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Welly',
+               '~/Library/Caches/Welly',
+               '~/Library/Caches/org.net9.Welly',
+               '~/Library/Cookies/org.net9.Welly.binarycookies',
+               '~/Library/Preferences/org.net9.Welly.plist',
+             ]
 end

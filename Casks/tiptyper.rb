@@ -18,8 +18,8 @@ cask 'tiptyper' do
 
   app 'TipTyper.app'
 
-  zap delete: [
-                '~/Library/Caches/com.brunophilipe.TipTyper',
-                '~/Library/Preferences/com.brunophilipe.TipTyper.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.brunophilipe.TipTyper',
+               '~/Library/Preferences/com.brunophilipe.TipTyper.plist',
+             ]
 end

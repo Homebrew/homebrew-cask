@@ -14,13 +14,11 @@ cask 'kubernetic' do
                       ['TERM', 'com.kubernetic.desktop'],
                     ]
 
-  zap delete: [
-                '~/Library/Logs/Kubernetic',
-                '~/Library/Saved Application State/com.kubernetic.desktop.*',
-              ],
-      trash:  [
-                '~/.kubernetic',
-                '~/Library/Application Support/Kubernetic',
-                '~/Library/Preferences/com.kubernetic.desktop.*',
-              ]
+  zap trash: [
+               '~/.kubernetic',
+               '~/Library/Application Support/Kubernetic',
+               '~/Library/Logs/Kubernetic',
+               '~/Library/Preferences/com.kubernetic.desktop.*',
+               '~/Library/Saved Application State/com.kubernetic.desktop.*',
+             ]
 end

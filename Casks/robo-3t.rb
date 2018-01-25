@@ -10,8 +10,8 @@ cask 'robo-3t' do
 
   uninstall quit: 'Robo 3T'
 
-  zap delete: [
-                '~/.3T/robo-3t/',
-                '~/Library/Saved Application State/Robo 3T.savedState',
-              ]
+  zap trash: [
+               '~/.3T/robo-3t/',
+               '~/Library/Saved Application State/Robo 3T.savedState',
+             ]
 end

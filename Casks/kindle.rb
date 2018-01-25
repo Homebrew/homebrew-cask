@@ -9,10 +9,10 @@ cask 'kindle' do
 
   app 'Kindle.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.amazon.Kindle.plist',
-                '~/Library/Application Support/Kindle/',
-                '~/Library/Saved Application State/com.amazon.Kindle.savedState/',
-                '~/Library/Caches/com.amazon.Kindle-Crash-Reporter/',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.amazon.Kindle.plist',
+               '~/Library/Application Support/Kindle/',
+               '~/Library/Saved Application State/com.amazon.Kindle.savedState/',
+               '~/Library/Caches/com.amazon.Kindle-Crash-Reporter/',
+             ]
 end

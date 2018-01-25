@@ -8,5 +8,5 @@ cask 'cgoban' do
 
   app 'CGoban.app'
 
-  zap delete: '~/Library/Preferences/org.igoweb.cgoban.plist'
+  zap trash: '~/Library/Preferences/org.igoweb.cgoban.plist'
 end

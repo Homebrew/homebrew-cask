@@ -15,5 +15,5 @@ cask 'bitpim' do
 
   uninstall quit: 'org.bitpim.bitpim'
 
-  zap delete: '~/Library/Preferences/org.bitpim.bitpim.plist'
+  zap trash: '~/Library/Preferences/org.bitpim.bitpim.plist'
 end

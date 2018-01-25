@@ -8,6 +8,8 @@ cask 'nvivo' do
 
   app 'NVivo.app'
 
-  zap delete: '~/Library/Caches/com.qsrinternational.NVivo',
-      trash:  '~/Library/Preferences/com.qsrinternational.NVivo.plist'
+  zap trash: [
+               '~/Library/Caches/com.qsrinternational.NVivo',
+               '~/Library/Preferences/com.qsrinternational.NVivo.plist',
+             ]
 end

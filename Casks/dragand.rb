@@ -8,9 +8,9 @@ cask 'dragand' do
 
   app 'Dragand.app'
 
-  zap delete: '~/Library/Preferences/com.node-webkit-builder.dragand.plist',
-      trash:  [
-                '~/Library/Application Support/Dragand',
-                '~/Library/Saved Application State/com.node-webkit-builder.dragand.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Dragand',
+               '~/Library/Preferences/com.node-webkit-builder.dragand.plist',
+               '~/Library/Saved Application State/com.node-webkit-builder.dragand.savedState',
+             ]
 end

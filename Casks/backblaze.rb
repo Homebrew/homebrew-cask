@@ -14,10 +14,10 @@ cask 'backblaze' do
                        ],
             delete:    '/Library/PreferencePanes/BackblazeBackup.prefPane'
 
-  zap       delete: [
-                      '/Library/Backblaze.bzpkg',
-                      '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.backblaze.backblazebackup.sfl',
-                      '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.backblaze.bzdoinstall.sfl',
-                      '~/Library/Logs/BackblazeGUIInstaller',
-                    ]
+  zap trash: [
+               '/Library/Backblaze.bzpkg',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.backblaze.backblazebackup.sfl*',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.backblaze.bzdoinstall.sfl*',
+               '~/Library/Logs/BackblazeGUIInstaller',
+             ]
 end

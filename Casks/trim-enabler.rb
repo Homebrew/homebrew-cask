@@ -14,18 +14,16 @@ cask 'trim-enabler' do
   uninstall delete:    '/Library/PrivilegedHelperTools/org.cindori.TEHelper',
             launchctl: 'org.cindori.TEHelper'
 
-  zap delete: [
-                "~/Library/Caches/org.cindori.TrimEnabler#{version}",
-                "~/Library/Caches/com.plausiblelabs.crashreporter.data/org.cindori.TrimEnabler#{version}",
-                "~/Library/Cookies/org.cindori.TrimEnabler#{version}.binarycookies",
-                "~/Library/Logs/DiagnosticReports/Trim Enabler_#{version}.crash",
-                "~/Library/Saved Application State/org.cindori.TrimEnabler#{version}.savedState",
-              ],
-      trash:  [
-                "~/Library/Application Support/CrashReporter/Trim Enabler_#{version}.plist",
-                "~/Library/Application Support/org.cindori.TrimEnabler#{version}",
-                '~/Library/Application Support/Trim Enabler',
-                '~/Library/Preferences/org.cindori.TrimEnabler.plist',
-                "~/Library/Preferences/org.cindori.TrimEnabler#{version}.plist",
-              ]
+  zap trash: [
+               "~/Library/Application Support/CrashReporter/Trim Enabler_#{version}.plist",
+               "~/Library/Application Support/org.cindori.TrimEnabler#{version}",
+               '~/Library/Application Support/Trim Enabler',
+               "~/Library/Caches/org.cindori.TrimEnabler#{version}",
+               "~/Library/Caches/com.plausiblelabs.crashreporter.data/org.cindori.TrimEnabler#{version}",
+               "~/Library/Cookies/org.cindori.TrimEnabler#{version}.binarycookies",
+               "~/Library/Logs/DiagnosticReports/Trim Enabler_#{version}.crash",
+               '~/Library/Preferences/org.cindori.TrimEnabler.plist',
+               "~/Library/Preferences/org.cindori.TrimEnabler#{version}.plist",
+               "~/Library/Saved Application State/org.cindori.TrimEnabler#{version}.savedState",
+             ]
 end

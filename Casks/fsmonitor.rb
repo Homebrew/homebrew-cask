@@ -14,14 +14,12 @@ cask 'fsmonitor' do
   uninstall delete:    '/Library/PrivilegedHelperTools/com.tristan.fseventstool',
             launchctl: 'com.tristan.fseventstool'
 
-  zap delete: [
-                '~/Library/Caches/com.tristan.FSMonitor',
-                '~/Library/Saved Application State/com.tristan.FSMonitor.savedState',
-              ],
-      trash:  [
-                '/Users/Shared/FSMonitor',
-                '~/Library/Application Support/FSMonitor',
-                '~/Library/Application Support/com.tristan.FSMonitor',
-                '~/Library/Preferences/com.tristan.FSMonitor.plist',
-              ]
+  zap trash: [
+               '/Users/Shared/FSMonitor',
+               '~/Library/Application Support/FSMonitor',
+               '~/Library/Application Support/com.tristan.FSMonitor',
+               '~/Library/Caches/com.tristan.FSMonitor',
+               '~/Library/Preferences/com.tristan.FSMonitor.plist',
+               '~/Library/Saved Application State/com.tristan.FSMonitor.savedState',
+             ]
 end

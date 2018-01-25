@@ -1,8 +1,9 @@
 cask 'stamp' do
-  version '4.7.6'
-  sha256 '8ab85042df337f6c1bcc6ffbe11f116ee8d879ef7ecf257a643071e88e56ccd4'
+  version '4.7.8'
+  sha256 '999549b26da5cdbc576c06b680fa39964cb16d57aa258216a5450d4962aa1e6c'
 
-  url "https://freeyourmusic.com/media/STAMP#{version.no_dots}.dmg"
+  # dzqeytqqx888.cloudfront.net was verified as official when first introduced to the cask
+  url "https://dzqeytqqx888.cloudfront.net/STAMP#{version.no_dots}.dmg"
   name 'Stamp'
   homepage 'https://freeyourmusic.com/'
 

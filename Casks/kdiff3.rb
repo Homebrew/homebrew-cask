@@ -21,5 +21,5 @@ cask 'kdiff3' do
     EOS
   end
 
-  zap delete: '~/.kdiff3rc'
+  zap trash: '~/.kdiff3rc'
 end

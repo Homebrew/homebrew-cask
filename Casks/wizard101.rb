@@ -1,10 +1,10 @@
 cask 'wizard101' do
-  version '1.11'
-  sha256 '798275e58e986ad7e7ee917987d49d4d398ced9c1917885d5b516a24b970ae17'
+  version '1.13'
+  sha256 'e994b59a6b53f2255168316b832962415b899260244ae36dfd4ba0aba201fcb9'
 
   url 'http://versionec.us.wizard101.com/Wizard101.dmg'
   appcast 'http://versionec.us.wizard101.com/Wizard101.xml',
-          checkpoint: '80b9b93fc2b08d9526c963e6d71ca92a4e7d97f44a0d2e8cb96c62d210ad5abe'
+          checkpoint: '20cdfeddb4bdcf8bca22c4c65b23525f8d2e58d7bbba049821f486a0cb79e85a'
   name 'Wizard101'
   homepage 'https://www.wizard101.com/'
 

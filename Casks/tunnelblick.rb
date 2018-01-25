@@ -1,11 +1,11 @@
 cask 'tunnelblick' do
-  version '3.7.4,4900'
-  sha256 '497127ce8a8790b38f7b5ab77240b69ca3d348b9e8cd3bd43e8dca89ad7957e7'
+  version '3.7.4b,4921'
+  sha256 '3963a2588d1fcbfbc627a5c7b8ce0242c2b36dc4cd3fc1ae83f12dd32c0dfca8'
 
   # github.com/Tunnelblick/Tunnelblick/releases/download was verified as official when first introduced to the cask
   url "https://github.com/Tunnelblick/Tunnelblick/releases/download/v#{version.before_comma}/Tunnelblick_#{version.before_comma}_build_#{version.after_comma}.dmg"
   appcast 'https://github.com/Tunnelblick/Tunnelblick/releases.atom',
-          checkpoint: '25fed445d9974e8a0450a826a991ee4b79268f0ef072f22ead6f5b50887469d0'
+          checkpoint: '3a0425f39e2aefa8d0b4112afc3a716acca2aefc96c70480d120c7f105c60efb'
   name 'Tunnelblick'
   homepage 'https://www.tunnelblick.net/'
 
@@ -23,15 +23,14 @@ cask 'tunnelblick' do
                        ],
             quit:      'net.tunnelblick.tunnelblick'
 
-  zap delete: [
-                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/net.tunnelblick.tunnelblick.help',
-                '~/Library/Caches/net.tunnelblick.tunnelblick',
-              ],
-      trash:  [
-                '/Library/Application Support/Tunnelblick',
-                '~/Library/Application Support/Tunnelblick',
-                '~/Library/Preferences/net.tunnelblick.tunnelblick.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Tunnelblick',
+               '~/Library/Caches/net.tunnelblick.tunnelblick',
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/Tunnelblick*',
+               '~/Library/Cookies/net.tunnelblick.tunnelblick.binarycookies',
+               '~/Library/Preferences/net.tunnelblick.tunnelblick.plist',
+               '/Library/Application Support/Tunnelblick',
+             ]
 
   caveats <<~EOS
     For security reasons, #{token} must be installed to /Applications,

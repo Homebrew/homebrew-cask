@@ -10,8 +10,8 @@ cask 'hint' do
 
   app 'Hint/Hint.app'
 
-  zap delete: [
-                '~/Library/Containers/com.crsmithdev.Hint',
-                '~/Library/Application Scripts/com.crsmithdev.Hint',
-              ]
+  zap trash: [
+               '~/Library/Containers/com.crsmithdev.Hint',
+               '~/Library/Application Scripts/com.crsmithdev.Hint',
+             ]
 end

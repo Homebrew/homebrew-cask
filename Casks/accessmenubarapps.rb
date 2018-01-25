@@ -12,8 +12,8 @@ cask 'accessmenubarapps' do
 
   uninstall quit: 'de.ortisoft.AccessMenuBarApps'
 
-  zap delete: [
-                '~/Library/Caches/de.ortisoft.AccessMenuBarApps',
-                '~/Library/Preferences/de.ortisoft.AccessMenuBarApps.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/de.ortisoft.AccessMenuBarApps',
+               '~/Library/Preferences/de.ortisoft.AccessMenuBarApps.plist',
+             ]
 end

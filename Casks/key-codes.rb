@@ -12,8 +12,8 @@ cask 'key-codes' do
 
   app 'Key Codes.app'
 
-  zap delete: [
-                '~/Library/Caches/com.manytricks.KeyCodes',
-                '~/Library/Preferences/com.manytricks.KeyCodes.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.manytricks.KeyCodes',
+               '~/Library/Preferences/com.manytricks.KeyCodes.plist',
+             ]
 end

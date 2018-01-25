@@ -10,6 +10,8 @@ cask 'unicodechecker' do
 
   app "UnicodeChecker #{version}/UnicodeChecker.app"
 
-  zap delete: '~/Library/Caches/net.earthlingsoft.UnicodeChecker',
-      trash:  '~/Library/Preferences/net.earthlingsoft.UnicodeChecker.plist'
+  zap trash: [
+               '~/Library/Caches/net.earthlingsoft.UnicodeChecker',
+               '~/Library/Preferences/net.earthlingsoft.UnicodeChecker.plist',
+             ]
 end

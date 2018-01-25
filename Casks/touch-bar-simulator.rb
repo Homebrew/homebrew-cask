@@ -12,9 +12,9 @@ cask 'touch-bar-simulator' do
 
   app 'Touch Bar Simulator.app'
 
-  zap delete: [
-                '~/Library/Caches/com.sindresorhus.Touch-Bar-Simulator',
-                '~/Library/Cookies/com.sindresorhus.Touch-Bar-Simulator.binarycookies',
-                '~/Library/Preferences/com.sindresorhus.Touch-Bar-Simulator.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.sindresorhus.Touch-Bar-Simulator',
+               '~/Library/Cookies/com.sindresorhus.Touch-Bar-Simulator.binarycookies',
+               '~/Library/Preferences/com.sindresorhus.Touch-Bar-Simulator.plist',
+             ]
 end

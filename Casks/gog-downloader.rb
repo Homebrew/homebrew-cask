@@ -10,10 +10,10 @@ cask 'gog-downloader' do
 
   app 'GOG Downloader.app'
 
-  zap delete: [
-                '~/Library/Application Support/GOG Downloader',
-                '~/Library/Caches/com.gog.downloader',
-                '~/Library/Preferences/com.gog.downloader.plist',
-                '~/Library/Saved Application State/com.gog.downloader.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/GOG Downloader',
+               '~/Library/Caches/com.gog.downloader',
+               '~/Library/Preferences/com.gog.downloader.plist',
+               '~/Library/Saved Application State/com.gog.downloader.savedState',
+             ]
 end

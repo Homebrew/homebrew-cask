@@ -10,8 +10,8 @@ cask 'breeze' do
 
   uninstall quit: 'com.autumnapps.direct.Breeze'
 
-  zap delete: [
-                '~/Library/Caches/com.autumnapps.direct.Breeze',
-                '~/Library/Preferences/com.autumnapps.direct.Breeze.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.autumnapps.direct.Breeze',
+               '~/Library/Preferences/com.autumnapps.direct.Breeze.plist',
+             ]
 end

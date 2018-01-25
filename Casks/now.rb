@@ -1,11 +1,11 @@
 cask 'now' do
-  version '3.3.2'
-  sha256 '0f6d65207b7d8a0c15aea30ef101cf7b15d81fe6da106f6f1e8b158faa8ae727'
+  version '3.8.11'
+  sha256 '9f87b919c1981d680c3d205c5714973d706117a5ddc2e81414974c88ba73491f'
 
   # github.com/zeit/now-desktop was verified as official when first introduced to the cask
   url "https://github.com/zeit/now-desktop/releases/download/#{version}/now-desktop-#{version}-mac.zip"
   appcast 'https://github.com/zeit/now-desktop/releases.atom',
-          checkpoint: 'ab9a71aa5b243b85afc80f8985d3d691ddce7d96c5e7c05e09e5ca2bd1d34275'
+          checkpoint: '8f622cace581dfeb33c9b9a1911fa27bcee0506f02cbf5d4e51f0808710d6d08'
   name 'Now'
   homepage 'https://zeit.co/now'
 
@@ -15,14 +15,12 @@ cask 'now' do
             login_item: 'Now',
             signal:     ['TERM', 'co.zeit.now']
 
-  zap delete: [
-                '~/Library/Caches/co.zeit.now',
-                '~/Library/Caches/co.zeit.now.ShipIt',
-              ],
-      trash:  [
-                '~/.now.json',
-                '~/Library/Application Support/Now',
-                '~/Library/Preferences/co.zeit.now.plist',
-                '~/Library/Preferences/co.zeit.now.helper.plist',
-              ]
+  zap trash: [
+               '~/.now.json',
+               '~/Library/Application Support/Now',
+               '~/Library/Caches/co.zeit.now',
+               '~/Library/Caches/co.zeit.now.ShipIt',
+               '~/Library/Preferences/co.zeit.now.plist',
+               '~/Library/Preferences/co.zeit.now.helper.plist',
+             ]
 end

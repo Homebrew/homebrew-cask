@@ -18,6 +18,6 @@ cask 'prey' do
     the Prey web account Settings page, to complete installation.
     The API key may be set as an environment variable as follows:
 
-      API_KEY="abcdef123456" brew cask install prey
+      HOMEBREW_NO_ENV_FILTERING=1 API_KEY="abcdef123456" brew cask install prey
   EOS
 end

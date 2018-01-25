@@ -10,10 +10,10 @@ cask 'tablauncher' do
 
   app 'TabLauncher.app'
 
-  zap delete: [
-                '~/Library/Caches/com.oktoid.tablauncher',
-                '~/Library/Cookies/com.oktoid.tablauncher.binarycookies',
-                '~/Library/Preferences/com.oktoid.tablauncher.plist',
-                '~/Library/TabLauncher',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.oktoid.tablauncher',
+               '~/Library/Cookies/com.oktoid.tablauncher.binarycookies',
+               '~/Library/Preferences/com.oktoid.tablauncher.plist',
+               '~/Library/TabLauncher',
+             ]
 end

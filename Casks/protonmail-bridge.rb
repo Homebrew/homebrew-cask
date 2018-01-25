@@ -11,9 +11,9 @@ cask 'protonmail-bridge' do
   uninstall launchctl: 'ProtonMail Bridge',
             quit:      'com.protonmail.bridge'
 
-  zap delete: [
-                '~/Library/Caches/protonmail',
-                '~/Library/Caches/ProtonMail Bridge',
-              ],
-      trash:  '~/Library/Application Support/protonmail'
+  zap trash: [
+               '~/Library/Application Support/protonmail',
+               '~/Library/Caches/protonmail',
+               '~/Library/Caches/ProtonMail Bridge',
+             ]
 end

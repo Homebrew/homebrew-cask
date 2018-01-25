@@ -10,10 +10,10 @@ cask 'devdocs' do
 
   app 'DevDocs.app'
 
-  zap delete: [
-                '~/Library/Application Support/DevDocs',
-                '~/Library/Preferences/com.egoistian.devdocs-app.helper.plist',
-                '~/Library/Preferences/com.egoistian.devdocs-app.plist',
-                '~/Library/Saved Application State/com.egoistian.devdocs-app.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/DevDocs',
+               '~/Library/Preferences/com.egoistian.devdocs-app.helper.plist',
+               '~/Library/Preferences/com.egoistian.devdocs-app.plist',
+               '~/Library/Saved Application State/com.egoistian.devdocs-app.savedState',
+             ]
 end

@@ -10,7 +10,8 @@ cask 'aquaterm' do
 
   pkg 'AquaTermInstaller.pkg'
 
-  uninstall pkgutil: 'net.sourceforge.aquaterm.aquaterm.*'
+  uninstall pkgutil: 'net.sourceforge.aquaterm.aquaterm.*',
+            delete:  '/Library/Frameworks/AquaTerm.framework'
 
   zap trash: '~/Library/Preferences/net.sourceforge.aquaterm.plist'
 end

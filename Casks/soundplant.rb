@@ -8,9 +8,9 @@ cask 'soundplant' do
 
   app "Soundplant #{version}.app"
 
-  zap delete: [
-                '~/Library/Application Support/Soundplant',
-                '~/Library/Preferences/com.marcelblum.soundplant.plist',
-                '~/Library/Saved Application State/com.marcelblum.soundplant.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Soundplant',
+               '~/Library/Preferences/com.marcelblum.soundplant.plist',
+               '~/Library/Saved Application State/com.marcelblum.soundplant.savedState',
+             ]
 end

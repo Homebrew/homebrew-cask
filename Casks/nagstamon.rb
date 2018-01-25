@@ -1,11 +1,10 @@
 cask 'nagstamon' do
-  version '3.0.1'
-  sha256 '3c99264e6665d0a8866ce1392a34432c596839732b7de1dfed30139dbf3850fa'
+  version '3.0.2'
+  sha256 '824e4ceaf23d831a56df5ef95fef10d645c5db9bff4db380542a326b421a5b8a'
 
-  # github.com/HenriWahl/Nagstamon was verified as official when first introduced to the cask
-  url "https://github.com/HenriWahl/Nagstamon/releases/download/#{version}/Nagstamon.#{version}.dmg"
-  appcast 'https://github.com/HenriWahl/Nagstamon/releases.atom',
-          checkpoint: 'cae04f1f3195434c1f84dca7e4f6ed90676883b552483eb1f754c02a5c19ec08'
+  url "https://nagstamon.ifw-dresden.de/files/stable/Nagstamon%20#{version}.dmg"
+  appcast 'https://nagstamon.ifw-dresden.de/files/stable/sha256sums.txt',
+          checkpoint: '931e37957a4e3bc32f0399df254a4de551f18685165c94bd4947098c9e07d812'
   name 'Nagstamon'
   homepage 'https://nagstamon.ifw-dresden.de/'
 

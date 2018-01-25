@@ -6,8 +6,8 @@ cask 'adobe-dng-converter' do
     version '9.6.1'
     sha256 '087eac5026667e4e6e3c156fd13243c9ea00f6c0238cbbb94d3099ae8772603f'
   else
-    version '10.0'
-    sha256 'ee87cbfa948ef6c86b9cb6fd3c5730572b1c69ec2ab709182c6e793a883385a0'
+    version '10.1'
+    sha256 '1dea5da4483e6e4b7f143121823ddea83e2f376722ea10371fe7851ccf1ffc71'
   end
 
   url "http://download.adobe.com/pub/adobe/dng/mac/DNGConverter_#{version.dots_to_underscores}.dmg"
@@ -16,6 +16,9 @@ cask 'adobe-dng-converter' do
 
   pkg "DNGConverter_#{version.dots_to_underscores}.pkg"
 
-  uninstall pkgutil: 'com.adobe.DNGConverter',
+  uninstall pkgutil: [
+                       'com.adobe.CameraRawProfiles',
+                       'com.adobe.DNGConverter',
+                     ],
             quit:    'com.adobe.DNGConverter'
 end

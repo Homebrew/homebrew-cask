@@ -15,10 +15,10 @@ cask 'keka' do
 
   app 'Keka.app'
 
-  zap delete: [
-                '~/Library/Application Support/Keka',
-                '~/Library/Caches/com.aone.keka',
-                '~/Library/Preferences/com.aone.keka.plist',
-                '~/Library/Saved Application State/com.aone.keka.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Keka',
+               '~/Library/Caches/com.aone.keka',
+               '~/Library/Preferences/com.aone.keka.plist',
+               '~/Library/Saved Application State/com.aone.keka.savedState',
+             ]
 end

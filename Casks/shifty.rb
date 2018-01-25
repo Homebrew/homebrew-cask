@@ -1,11 +1,11 @@
 cask 'shifty' do
-  version '0.3'
-  sha256 'a84e0cef821dcdd77c7cd00e6ac474c7a2081feea63998e44f3a132c1a5ac349'
+  version '0.5.1'
+  sha256 'c43afb9b6836d907649d5346ff0a22279bd754ddc115616b4e96e71983624d95'
 
   # github.com/thompsonate/Shifty was verified as official when first introduced to the cask
   url "https://github.com/thompsonate/Shifty/releases/download/#{version}/Shifty-#{version}.dmg"
   appcast 'https://github.com/thompsonate/Shifty/releases.atom',
-          checkpoint: '65de5b4a6c2a41b1f4a398500c44ed61956e23d7c541e73844273940a67799d2'
+          checkpoint: 'ae71658ae4c92a4d34cdf97a104cd1a89fb21f292c0ce684383b2cfebc83949f'
   name 'Shifty'
   homepage 'http://shifty.natethompson.io/'
 
@@ -14,15 +14,13 @@ cask 'shifty' do
   uninstall launchctl: 'io.natethompson.ShiftyHelper',
             quit:      'io.natethompson.Shifty'
 
-  zap delete: [
-                '~/Library/Application Scripts/io.natethompson.ShiftyHelper',
-                '~/Library/Caches/com.crashlytics.data/io.natethompson.Shifty',
-                '~/Library/Caches/io.fabric.sdk.mac.data/io.natethompson.Shifty',
-                '~/Library/Caches/io.natethompson.Shifty',
-                '~/Library/Containers/io.natethompson.ShiftyHelper',
-              ],
-      trash:  [
-                '~/Library/Application Support/io.natethompson.Shifty',
-                '~/Library/Preferences/io.natethompson.Shifty.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/io.natethompson.ShiftyHelper',
+               '~/Library/Application Support/io.natethompson.Shifty',
+               '~/Library/Caches/com.crashlytics.data/io.natethompson.Shifty',
+               '~/Library/Caches/io.fabric.sdk.mac.data/io.natethompson.Shifty',
+               '~/Library/Caches/io.natethompson.Shifty',
+               '~/Library/Containers/io.natethompson.ShiftyHelper',
+               '~/Library/Preferences/io.natethompson.Shifty.plist',
+             ]
 end

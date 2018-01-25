@@ -1,11 +1,11 @@
 cask 'screens' do
-  version '4.3,11036'
-  sha256 '18aa501ec38c5141ff7787ee04ece6b1d62f98d41af5a2359e4ee05863892fdc'
+  version '4.3.8,11306:1515781169'
+  sha256 '79f17e9ba61fe00134628b9ae35b24aaf0b47d8ce831cc3ca8b83e39655a55a9'
 
-  # dl.devmate.com was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.edovia.screens4.mac/Screens#{version.major}.dmg"
+  # dl.devmate.com/com.edovia.screens4.mac was verified as official when first introduced to the cask
+  url "https://dl.devmate.com/com.edovia.screens4.mac/#{version.after_comma.before_colon}/#{version.after_colon}/Screens#{version.major}-#{version.after_comma.before_colon}.zip"
   appcast "https://updates.devmate.com/com.edovia.screens#{version.major}.mac.xml",
-          checkpoint: 'f78f39f6351b45a5c55b3abc3f3bdd68d35405c0132895cb9e941d0f182cf16d'
+          checkpoint: 'e241e8c97bb45e9ac2f11ab90b4753cb836f457d57b5ef236baebb7c4e4afcdb'
   name 'Screens'
   homepage 'https://edovia.com/screens-mac/'
 
@@ -14,11 +14,11 @@ cask 'screens' do
   uninstall launchctl: 'com.edovia.screens.launcher',
             quit:      "com.edovia.screens#{version.major}.mac"
 
-  zap delete: [
-                "~/Library/Application Scripts/com.edovia.screens#{version.major}.mac",
-                '~/Library/Application Scripts/com.edovia.screens.launcher',
-                "~/Library/Containers/com.edovia.screens#{version.major}.mac",
-                '~/Library/Containers/com.edovia.screens.launcher',
-                '~/Library/Logs/Screens',
-              ]
+  zap trash: [
+               "~/Library/Application Scripts/com.edovia.screens#{version.major}.mac",
+               '~/Library/Application Scripts/com.edovia.screens.launcher',
+               "~/Library/Containers/com.edovia.screens#{version.major}.mac",
+               '~/Library/Containers/com.edovia.screens.launcher',
+               '~/Library/Logs/Screens',
+             ]
 end

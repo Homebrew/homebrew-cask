@@ -19,6 +19,7 @@ cask 'maintenance' do
                       :yosemite,
                       :el_capitan,
                       :sierra,
+                      :high_sierra,
                     ]
 
   app 'Maintenance.app'

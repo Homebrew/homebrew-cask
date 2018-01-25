@@ -23,13 +23,11 @@ cask 'oversight' do
                       sudo:       true,
                     }
 
-  zap delete: [
-                '~/Library/Caches/com.objective-see.OverSight',
-                '~/Library/Caches/com.objective-see.OverSightHelper',
-              ],
-      trash:  [
-                '~/Library/Application Support/Objective-See/OverSight',
-                '~/Library/Preferences/com.objective-see.OverSight.plist',
-                '~/Library/Preferences/com.objective-see.OverSightHelper.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Objective-See/OverSight',
+               '~/Library/Caches/com.objective-see.OverSight',
+               '~/Library/Caches/com.objective-see.OverSightHelper',
+               '~/Library/Preferences/com.objective-see.OverSight.plist',
+               '~/Library/Preferences/com.objective-see.OverSightHelper.plist',
+             ]
 end

@@ -8,9 +8,9 @@ cask 'recent-menu' do
 
   app 'Recent Menu.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/com.timschroeder.recentmenu',
-                '~/Library/Containers/com.timschroeder.recentmenu',
-                '~/Library/Preferences/com.timschroeder.recentmenu.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/com.timschroeder.recentmenu',
+               '~/Library/Containers/com.timschroeder.recentmenu',
+               '~/Library/Preferences/com.timschroeder.recentmenu.plist',
+             ]
 end

@@ -1,22 +1,22 @@
 cask 'webcatalog' do
-  version '7.3.0'
-  sha256 '08f644cb713d2ca22717b80d3b4f6a85767010858a30c2171b8e773bff6110a9'
+  version '8.0.5'
+  sha256 '8ff24b0e9162b69346fc6a8863df93e7b61f3ed38bf2910d82d73d2d69bd911d'
 
-  # github.com/webcatalog/desktop/releases/download/ was verified as official when first introduced to the cask
-  url "https://github.com/webcatalog/desktop/releases/download/v#{version}/WebCatalog-#{version}.dmg"
-  appcast 'https://github.com/webcatalog/desktop/releases.atom',
-          checkpoint: '4659c71da5dcfd4c818e0b6b3dda4b9763613b91904b08cf27c285f9d54b7ca9'
+  # github.com/webcatalog/webcatalog/ was verified as official when first introduced to the cask
+  url "https://github.com/webcatalog/webcatalog/releases/download/v#{version}/WebCatalog-#{version}.dmg"
+  appcast 'https://github.com/webcatalog/webcatalog/releases.atom',
+          checkpoint: '762f0939782f5fb805bdfe8d28346d9f5d81772bdb08d369b90a5e475786bea4'
   name 'WebCatalog'
-  homepage 'https://webcatalog.io/download/mac'
+  homepage 'https://webcatalog.io/'
 
   app 'WebCatalog.app'
 
-  zap delete: [
-                '~/Library/Application Support/WebCatalog',
-                '~/Library/Cookies/com.webcatalog.app.binarycookies',
-                '~/Library/Preferences/WebCatalog_Alt.plist',
-                '~/Library/Preferences/com.webcatalog.app.helper.plist',
-                '~/Library/Preferences/com.webcatalog.app.plist',
-                '~/Library/Saved Application State/com.webcatalog.app.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/WebCatalog',
+               '~/Library/Cookies/com.webcatalog.app.binarycookies',
+               '~/Library/Preferences/WebCatalog_Alt.plist',
+               '~/Library/Preferences/com.webcatalog.app.helper.plist',
+               '~/Library/Preferences/com.webcatalog.app.plist',
+               '~/Library/Saved Application State/com.webcatalog.app.savedState',
+             ]
 end

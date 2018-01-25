@@ -10,12 +10,10 @@ cask 'koko' do
 
   app 'koko.app'
 
-  zap delete: [
-                '~/Library/Caches/koko',
-                '~/Library/Saved Application State/net.noraesae.koko.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/koko',
-                '~/Library/Preferences/net.noraesae.koko.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/koko',
+               '~/Library/Caches/koko',
+               '~/Library/Preferences/net.noraesae.koko.plist',
+               '~/Library/Saved Application State/net.noraesae.koko.savedState',
+             ]
 end

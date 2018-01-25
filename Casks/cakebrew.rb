@@ -14,9 +14,9 @@ cask 'cakebrew' do
 
   app 'Cakebrew.app'
 
-  zap delete: [
-                '~/Library/Caches/com.brunophilipe.Cakebrew',
-                '~/Library/Preferences/com.brunophilipe.Cakebrew.plist',
-                '~/Library/Saved Application State/com.brunophilipe.Cakebrew.savedState',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.brunophilipe.Cakebrew',
+               '~/Library/Preferences/com.brunophilipe.Cakebrew.plist',
+               '~/Library/Saved Application State/com.brunophilipe.Cakebrew.savedState',
+             ]
 end

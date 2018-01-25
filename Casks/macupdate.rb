@@ -10,12 +10,12 @@ cask 'macupdate' do
 
   app 'MacUpdate Desktop.app'
 
-  zap delete: [
-                "~/Library/Application Support/MacUpdate/MacUpdate Desktop #{version.major}",
-                "~/Library/Caches/com.macupdate.desktop#{version.major}",
-                "~/Library/Cookies/com.macupdate.desktop#{version.major}.binarycookies",
-                '~/Library/Logs/MacUpdate Desktop',
-                "~/Library/Preferences/com.macupdate.desktop#{version.major}.plist",
-                "~/Library/Saved Application State/com.macupdate.desktop#{version.major}.savedState",
-              ]
+  zap trash: [
+               "~/Library/Application Support/MacUpdate/MacUpdate Desktop #{version.major}",
+               "~/Library/Caches/com.macupdate.desktop#{version.major}",
+               "~/Library/Cookies/com.macupdate.desktop#{version.major}.binarycookies",
+               '~/Library/Logs/MacUpdate Desktop',
+               "~/Library/Preferences/com.macupdate.desktop#{version.major}.plist",
+               "~/Library/Saved Application State/com.macupdate.desktop#{version.major}.savedState",
+             ]
 end

@@ -9,4 +9,10 @@ cask 'blueharvest' do
   homepage 'http://zeroonetwenty.com/blueharvest/'
 
   app 'BlueHarvest.app'
+
+  uninstall delete:     '/Library/PrivilegedHelperTools/com.zeroonetwenty.BlueHarvestHelper630',
+            launchctl:  'com.zeroonetwenty.BlueHarvestHelper630',
+            login_item: 'BlueHarvest'
+
+  zap trash: '~/Library/Preferences/com.zeroonetwenty.BlueHarvest5.plist'
 end

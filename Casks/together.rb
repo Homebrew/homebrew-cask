@@ -10,12 +10,12 @@ cask 'together' do
 
   app "Together #{version.major}.app"
 
-  zap delete: [
-                "~/Library/Application Support/Together #{version.major}",
-                '~/Library/Caches/Together',
-                "~/Library/Caches/com.reinvented.Together#{version.major}",
-                "~/Library/Preferences/com.reinvented.Together#{version.major}.shared.plist",
-                "~/Library/Preferences/com.reinvented.Together#{version.major}.plist",
-                "~/Library/Saved Application State/com.reinvented.Together#{version.major}.savedState",
-              ]
+  zap trash: [
+               "~/Library/Application Support/Together #{version.major}",
+               '~/Library/Caches/Together',
+               "~/Library/Caches/com.reinvented.Together#{version.major}",
+               "~/Library/Preferences/com.reinvented.Together#{version.major}.shared.plist",
+               "~/Library/Preferences/com.reinvented.Together#{version.major}.plist",
+               "~/Library/Saved Application State/com.reinvented.Together#{version.major}.savedState",
+             ]
 end

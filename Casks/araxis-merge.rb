@@ -45,10 +45,10 @@ cask 'araxis-merge' do
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisp4winmrg"
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxissvnmerge"
 
-  zap delete: [
-                '~/Library/Preferences/com.araxis.merge.LSSharedFileList.plist',
-                '~/Library/Preferences/com.araxis.merge.plist',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.araxis.merge.LSSharedFileList.plist',
+               '~/Library/Preferences/com.araxis.merge.plist',
+             ]
 
   caveats <<~EOS
     For instructions to integrate Araxis Merge with Finder or other applications,

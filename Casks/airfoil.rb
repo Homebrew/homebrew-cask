@@ -1,10 +1,10 @@
 cask 'airfoil' do
-  version '5.6.4'
-  sha256 'd12a256e9c35c5a71ff028bf39216475400a34d147fe323c79d810b98bfc0e32'
+  version '5.6.5'
+  sha256 '664995254e31232e30399f22072a574b4f79d043c521dfd4db219f361590af74'
 
   url 'https://rogueamoeba.com/airfoil/download/Airfoil.zip'
   appcast 'https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&bundleid=com.rogueamoeba.Airfoil&platform=osx',
-          checkpoint: '33f7e7ab6b0fb74f0b442f98e09cec467cd2673313d3ca2aab1e7197cddaa10a'
+          checkpoint: '016dd6913a28f27211cae2f5091961526374dea9262474ad2522d93bbac3ff77'
   name 'Airfoil'
   homepage 'https://www.rogueamoeba.com/airfoil/mac/'
 
@@ -14,20 +14,21 @@ cask 'airfoil' do
   app 'Airfoil/Airfoil Satellite.app'
   app 'Airfoil/Airfoil.app'
 
-  zap quit:       [
-                    'com.rogueamoeba.Airfoil',
-                    'com.rogueamoeba.AirfoilSpeakers',
-                  ],
-      login_item: 'Airfoil Satellite',
-      delete:     [
-                    '/Library/Audio/Plug-Ins/HAL/InstantOn.driver',
-                    '~/Library/Application Support/Airfoil',
-                    '~/Library/Application Support/Airfoil Satellite',
-                    '~/Library/Caches/com.rogueamoeba.Airfoil',
-                    '~/Library/Caches/com.rogueamoeba.AirfoilSpeakers',
-                    '~/Library/Preferences/com.rogueamoeba.Airfoil.plist',
-                    '~/Library/Preferences/com.rogueamoeba.AirfoilSpeakers.plist',
-                    '~/Library/Saved Application State/com.rogueamoeba.Airfoil.savedState',
-                    '~/Library/Saved Application State/com.rogueamoeba.AirfoilSpeakers.savedState',
-                  ]
+  uninstall delete:     '/Library/Audio/Plug-Ins/HAL/InstantOn.driver',
+            login_item: 'Airfoil Satellite',
+            quit:       [
+                          'com.rogueamoeba.Airfoil',
+                          'com.rogueamoeba.AirfoilSpeakers',
+                        ]
+
+  zap trash: [
+               '~/Library/Application Support/Airfoil',
+               '~/Library/Application Support/Airfoil Satellite',
+               '~/Library/Caches/com.rogueamoeba.Airfoil',
+               '~/Library/Caches/com.rogueamoeba.AirfoilSpeakers',
+               '~/Library/Preferences/com.rogueamoeba.Airfoil.plist',
+               '~/Library/Preferences/com.rogueamoeba.AirfoilSpeakers.plist',
+               '~/Library/Saved Application State/com.rogueamoeba.Airfoil.savedState',
+               '~/Library/Saved Application State/com.rogueamoeba.AirfoilSpeakers.savedState',
+             ]
 end

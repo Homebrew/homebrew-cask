@@ -10,5 +10,7 @@ cask 'halla' do
 
   app 'Halla.app'
 
-  caveats 'See https://github.com/rstacruz/halla/blob/master/README.md on creating your ~/.hallarc'
+  caveats <<~EOS
+    See https://github.com/rstacruz/halla/blob/master/README.md on creating your ~/.hallarc
+  EOS
 end

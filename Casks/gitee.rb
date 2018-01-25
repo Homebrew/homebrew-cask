@@ -10,10 +10,10 @@ cask 'gitee' do
 
   app 'Gitee.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.nightonke.VHGithubNotifier',
-                '~/Library/Caches/com.nightonke.VHGithubNotifier',
-                '~/Library/Cookies/com.nightonke.VHGithubNotifier.binarycookies',
-                '~/Library/Preferences/com.nightonke.VHGithubNotifier.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.nightonke.VHGithubNotifier',
+               '~/Library/Caches/com.nightonke.VHGithubNotifier',
+               '~/Library/Cookies/com.nightonke.VHGithubNotifier.binarycookies',
+               '~/Library/Preferences/com.nightonke.VHGithubNotifier.plist',
+             ]
 end

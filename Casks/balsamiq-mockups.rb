@@ -10,12 +10,10 @@ cask 'balsamiq-mockups' do
 
   app "Balsamiq Mockups #{version.major}.app"
 
-  zap delete: [
-                "~/Library/Caches/BalsamiqMockups#{version.major}.*",
-                "~/Library/Saved Application State/BalsamiqMockups#{version.major}.*",
-              ],
-      trash:  [
-                "~/Library/Preferences/BalsamiqMockups#{version.major}",
-                "~/Library/Preferences/BalsamiqMockups#{version.major}.*",
-              ]
+  zap trash: [
+               "~/Library/Caches/BalsamiqMockups#{version.major}.*",
+               "~/Library/Preferences/BalsamiqMockups#{version.major}",
+               "~/Library/Preferences/BalsamiqMockups#{version.major}.*",
+               "~/Library/Saved Application State/BalsamiqMockups#{version.major}.*",
+             ]
 end

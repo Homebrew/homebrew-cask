@@ -1,6 +1,6 @@
 cask 'mendeley' do
-  version '1.17.11'
-  sha256 '5f953c5e6d68216d4cc14e8375ab8a3639dc2fc9e91ab9233248439de7897495'
+  version '1.17.13'
+  sha256 'd1316eafbf661adfedfdb2daad8527c177036a9fa30b9ba7b2eac696c0a1d54f'
 
   url "https://desktop-download.mendeley.com/download/Mendeley-Desktop-#{version}-OSX-Universal.dmg"
   name 'Mendeley'

@@ -20,5 +20,5 @@ cask 'dusty' do
 
   uninstall launchctl: 'com.gamechanger.dusty'
 
-  zap delete: '/etc/dusty'
+  zap trash: '/etc/dusty'
 end

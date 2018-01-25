@@ -1,6 +1,6 @@
 cask 'gyazo' do
-  version '3.5.0'
-  sha256 'b1123c34d967724687a17773ebed112d6a57832c45332c3f45f6a7ac0090c667'
+  version '3.5.3'
+  sha256 'e828ba162c69ca2f9b4cde7346e08d669d610702d3a205701d9b4e4c8e3c99c8'
 
   url "https://files.gyazo.com/setup/Gyazo-#{version}.dmg"
   name 'Nota Gyazo GIF'
@@ -9,10 +9,10 @@ cask 'gyazo' do
   app 'Gyazo.app'
   app 'Gyazo GIF.app'
 
-  zap delete: [
-                '~/Library/Caches/com.gyazo.gif',
-                '~/Library/Caches/com.gyazo.mac',
-                '~/Library/Preferences/com.gyazo.gif.plist',
-                '~/Library/Preferences/com.gyazo.mac.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.gyazo.gif',
+               '~/Library/Caches/com.gyazo.mac',
+               '~/Library/Preferences/com.gyazo.gif.plist',
+               '~/Library/Preferences/com.gyazo.mac.plist',
+             ]
 end

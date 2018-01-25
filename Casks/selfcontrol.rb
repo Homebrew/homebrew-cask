@@ -17,5 +17,5 @@ cask 'selfcontrol' do
 
   app 'SelfControl.app'
 
-  zap delete: '~/Library/Preferences/org.eyebeam.SelfControl.plist'
+  zap trash: '~/Library/Preferences/org.eyebeam.SelfControl.plist'
 end

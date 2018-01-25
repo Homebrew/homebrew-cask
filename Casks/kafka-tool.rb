@@ -13,7 +13,7 @@ cask 'kafka-tool' do
 
   uninstall delete: '/Applications/Kafka Tool.app'
 
-  zap delete: '~/.kafkatool'
+  zap trash: '~/.kafkatool'
 
   caveats do
     depends_on_java('8')

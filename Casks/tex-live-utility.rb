@@ -11,4 +11,9 @@ cask 'tex-live-utility' do
   auto_updates true
 
   app 'TeX Live Utility.app'
+
+  zap trash: [
+               '~/Library/Application Support/TeX Live Utility',
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/TeX Live Utility Help*',
+             ]
 end

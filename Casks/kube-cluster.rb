@@ -10,5 +10,5 @@ cask 'kube-cluster' do
 
   app 'Kube-Cluster.app'
 
-  zap delete: '~/kube-cluster'
+  zap trash: '~/kube-cluster'
 end

@@ -10,9 +10,9 @@ cask 'mobile-mouse-server' do
 
   uninstall quit: 'com.rpatechnology.mobilemouse'
 
-  zap delete: [
-                '/Users/tangestani/Library/Caches/com.crashlytics.data/com.rpatechnology.mobilemouse',
-                '/Users/tangestani/Library/Caches/com.rpatechnology.mobilemouse',
-                '/Users/tangestani/Library/Preferences/com.rpatechnology.mobilemouse.plist',
-              ]
+  zap trash: [
+               '/Users/tangestani/Library/Caches/com.crashlytics.data/com.rpatechnology.mobilemouse',
+               '/Users/tangestani/Library/Caches/com.rpatechnology.mobilemouse',
+               '/Users/tangestani/Library/Preferences/com.rpatechnology.mobilemouse.plist',
+             ]
 end

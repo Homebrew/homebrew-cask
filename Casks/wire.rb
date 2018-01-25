@@ -17,5 +17,5 @@ cask 'wire' do
                        ['TERM', 'com.wearezeta.zclient.mac'],
                      ]
 
-  zap delete: '~/Library/Containers/com.wearezeta.zclient.mac'
+  zap trash: '~/Library/Containers/com.wearezeta.zclient.mac'
 end

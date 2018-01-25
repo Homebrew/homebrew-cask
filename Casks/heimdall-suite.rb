@@ -12,10 +12,10 @@ cask 'heimdall-suite' do
   uninstall pkgutil: 'au.com.glassechidna.HeimdallSuite',
             kext:    'au.com.glassechidna.heimdall_usb_shield'
 
-  zap delete: [
-                '~/Library/Preferences/com.yourcompany.heimdall-frontend.plist',
-                '~/Library/Saved Application State/com.yourcompany.heimdall-frontend.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.yourcompany.heimdall-frontend.plist',
+               '~/Library/Saved Application State/com.yourcompany.heimdall-frontend.savedState',
+             ]
 
   caveats do
     reboot

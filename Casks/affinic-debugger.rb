@@ -10,6 +10,8 @@ cask 'affinic-debugger' do
 
   app 'Affinic Debugger.app'
 
-  zap delete: '~/Library/Saved Application State/com.affinic.adg.savedState',
-      trash:  '~/Library/Preferences/com.adg-setting.plist'
+  zap trash: [
+               '~/Library/Preferences/com.adg-setting.plist',
+               '~/Library/Saved Application State/com.affinic.adg.savedState',
+             ]
 end

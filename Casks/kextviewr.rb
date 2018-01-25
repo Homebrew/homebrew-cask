@@ -13,5 +13,5 @@ cask 'kextviewr' do
 
   app 'KextViewr.app'
 
-  zap delete: '~/Library/Caches/com.objective-see.KextViewr'
+  zap trash: '~/Library/Caches/com.objective-see.KextViewr'
 end

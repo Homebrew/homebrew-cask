@@ -11,14 +11,12 @@ cask 'sciencefair' do
 
   app 'ScienceFair.app'
 
-  zap delete: [
-                '~/Library/Logs/sciencefair',
-                '~/Library/Saved Application State/org.codeforscience.sciencefair.savedState',
-              ],
-      trash:  [
-                '~/Documents/sciencefair',
-                '~/Library/Application Support/sciencefair',
-                '~/Library/Preferences/org.codeforscience.sciencefair.helper.plist',
-                '~/Library/Preferences/org.codeforscience.sciencefair.plist',
-              ]
+  zap trash: [
+               '~/Documents/sciencefair',
+               '~/Library/Application Support/sciencefair',
+               '~/Library/Logs/sciencefair',
+               '~/Library/Preferences/org.codeforscience.sciencefair.helper.plist',
+               '~/Library/Preferences/org.codeforscience.sciencefair.plist',
+               '~/Library/Saved Application State/org.codeforscience.sciencefair.savedState',
+             ]
 end
