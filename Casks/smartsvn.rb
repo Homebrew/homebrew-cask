@@ -10,9 +10,9 @@ cask 'smartsvn' do
 
   app "SmartSVN #{version.major_minor}.app"
 
-  zap delete: '~/Library/Saved Application State/com.syntevo.smartsvn.savedState',
-      trash:  [
-                '~/Library/Preferences/com.syntevo.smartsvn.plist',
-                '~/Library/Preferences/SmartSVN',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.syntevo.smartsvn.plist',
+               '~/Library/Preferences/SmartSVN',
+               '~/Library/Saved Application State/com.syntevo.smartsvn.savedState',
+             ]
 end

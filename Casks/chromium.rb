@@ -9,10 +9,10 @@ cask 'chromium' do
 
   app 'chrome-mac/Chromium.app'
 
-  zap delete: [
-                '~/Library/Preferences/org.chromium.Chromium.plist',
-                '~/Library/Caches/Chromium',
-                '~/Library/Application Support/Chromium',
-                '~/Library/Saved Application State/org.chromium.Chromium.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/org.chromium.Chromium.plist',
+               '~/Library/Caches/Chromium',
+               '~/Library/Application Support/Chromium',
+               '~/Library/Saved Application State/org.chromium.Chromium.savedState',
+             ]
 end

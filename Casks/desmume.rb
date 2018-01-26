@@ -9,4 +9,11 @@ cask 'desmume' do
   homepage 'https://sourceforge.net/projects/desmume/'
 
   app 'DeSmuME.app'
+
+  zap trash: [
+               '~/Library/Application Support/DeSmuME',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.desmume.desmume.sfl*',
+               '~/Library/Saved Application State/org.desmume.DeSmuME.savedState',
+               '~/Library/Preferences/org.desmume.DeSmuME.plist',
+             ]
 end

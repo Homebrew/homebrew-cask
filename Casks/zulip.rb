@@ -1,11 +1,11 @@
 cask 'zulip' do
-  version '1.4.0'
-  sha256 '43468572eb05071adddeae820884c503b97a787fb6fd0e21d6b1d7f11a79ac9b'
+  version '1.7.0'
+  sha256 'a4aac2e02893d4cb9b635bfc3fcb561abdfd4c1d5f014aa3d18d633446321937'
 
   # github.com/zulip/zulip-electron was verified as official when first introduced to the cask
   url "https://github.com/zulip/zulip-electron/releases/download/v#{version}/Zulip-#{version}-mac.zip"
   appcast 'https://github.com/zulip/zulip-electron/releases.atom',
-          checkpoint: 'ea9704fc70e859bef7d10f54210ca858da018461bb90f7528df888fb9b8d56f0'
+          checkpoint: 'dfa95171dc99ff77b5e7adebc77e3b64c4831ee3986bd1f901a25b54f052b491'
   name 'Zulip'
   homepage 'https://zulipchat.com/'
 

@@ -1,10 +1,10 @@
 cask 'clion' do
-  version '2017.2.3,172.4343.16'
-  sha256 '81df9ed4fb86b9e2e49b7a9be9d89e2d2248ea44270ad09752122f094a6052fc'
+  version '2017.3.2,173.4301.33'
+  sha256 '8eebfd8423e6fc2ca932b4eb1e28c95980d0df84c7d2ed17eb9010a3bed60e77'
 
   url "https://download.jetbrains.com/cpp/CLion-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=CL&latest=true&type=release',
-          checkpoint: 'eb4dbf907a119bde482c518dc9171cb60707274cd63ca09c6db6d4538b2d4236'
+          checkpoint: '4cf60eae4bf2333762fc18efa6bf72f443afc9677eea297218f35037f40d5faa'
   name 'CLion'
   homepage 'https://www.jetbrains.com/clion/'
 
@@ -16,12 +16,10 @@ cask 'clion' do
     ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'clion') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }
   end
 
-  zap delete: [
-                "~/Library/Caches/CLion#{version.major_minor}",
-                "~/Library/Logs/CLion#{version.major_minor}",
-              ],
-      trash:  [
-                "~/Library/Preferences/CLion#{version.major_minor}",
-                "~/Library/Application Support/CLion#{version.major_minor}",
-              ]
+  zap trash: [
+               "~/Library/Application Support/CLion#{version.major_minor}",
+               "~/Library/Caches/CLion#{version.major_minor}",
+               "~/Library/Logs/CLion#{version.major_minor}",
+               "~/Library/Preferences/CLion#{version.major_minor}",
+             ]
 end

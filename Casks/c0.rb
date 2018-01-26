@@ -10,8 +10,8 @@ cask 'c0' do
 
   app 'C0.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/smdls.C0',
-                '~/Library/Containers/smdls.C0',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/smdls.C0',
+               '~/Library/Containers/smdls.C0',
+             ]
 end

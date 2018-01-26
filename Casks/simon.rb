@@ -13,17 +13,15 @@ cask 'simon' do
   uninstall login_item: 'Simon Launcher',
             quit:       'com.dejal.simon'
 
-  zap delete: [
-                '~/Library/Caches/com.crashlytics.data/com.dejal.simon',
-                '~/Library/Caches/com.dejal.simon',
-                '~/Library/Caches/io.fabric.sdk.mac.data/com.dejal.simon',
-                '~/Library/Cookies/com.dejal.simon.binarycookies',
-                '~/Library/Saved Application State/com.dejal.simon.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/.Dejal/Simon.dejallicenses',
-                '~/Library/Application Support/com.crashlytics/com.dejal.simon',
-                '~/Library/Application Support/Dejal/Simon',
-                '~/Library/Preferences/com.dejal.simon.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/.Dejal/Simon.dejallicenses',
+               '~/Library/Application Support/com.crashlytics/com.dejal.simon',
+               '~/Library/Application Support/Dejal/Simon',
+               '~/Library/Caches/com.crashlytics.data/com.dejal.simon',
+               '~/Library/Caches/com.dejal.simon',
+               '~/Library/Caches/io.fabric.sdk.mac.data/com.dejal.simon',
+               '~/Library/Cookies/com.dejal.simon.binarycookies',
+               '~/Library/Preferences/com.dejal.simon.plist',
+               '~/Library/Saved Application State/com.dejal.simon.savedState',
+             ]
 end

@@ -17,9 +17,9 @@ cask 'emacs' do
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin/emacsclient"
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin/etags"
 
-  zap delete: [
-                '~/Library/Saved Application State/org.gnu.Emacs.savedState',
-                '~/Library/Caches/org.gnu.Emacs',
-              ],
-      trash:  '~/Library/Preferences/org.gnu.Emacs.plist'
+  zap trash: [
+               '~/Library/Caches/org.gnu.Emacs',
+               '~/Library/Preferences/org.gnu.Emacs.plist',
+               '~/Library/Saved Application State/org.gnu.Emacs.savedState',
+             ]
 end

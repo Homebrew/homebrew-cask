@@ -10,21 +10,20 @@ cask 'textmate' do
   homepage 'https://macromates.com/'
 
   auto_updates true
+  depends_on macos: '>= :mountain_lion'
 
   app 'TextMate.app'
   binary "#{appdir}/TextMate.app/Contents/Resources/mate"
 
-  zap delete: [
-                '~/Library/Saved Application State/com.macromates.TextMate.savedState',
-                '~/Library/Caches/com.macromates.TextMate',
-              ],
-      trash:  [
-                '~/Library/Application Support/Avian',
-                '~/Library/Application Support/TextMate',
-                '~/Library/Preferences/com.macromates.TextMate.preview.LSSharedFileList.plist',
-                '~/Library/Preferences/com.macromates.TextMate.preview.plist',
-                '~/Library/Preferences/com.macromates.TextMate.plist',
-                '~/Library/Preferences/com.macromates.textmate.webpreview.plist',
-                '~/Library/Preferences/com.macromates.textmate.latex_config.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Avian',
+               '~/Library/Application Support/TextMate',
+               '~/Library/Caches/com.macromates.TextMate',
+               '~/Library/Preferences/com.macromates.TextMate.preview.LSSharedFileList.plist',
+               '~/Library/Preferences/com.macromates.TextMate.preview.plist',
+               '~/Library/Preferences/com.macromates.TextMate.plist',
+               '~/Library/Preferences/com.macromates.textmate.webpreview.plist',
+               '~/Library/Preferences/com.macromates.textmate.latex_config.plist',
+               '~/Library/Saved Application State/com.macromates.TextMate.savedState',
+             ]
 end

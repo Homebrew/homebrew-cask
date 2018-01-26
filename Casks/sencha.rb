@@ -22,7 +22,7 @@ cask 'sencha' do
                       sudo:       true,
                     }
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     Installing this Cask means you have AGREED to the Sencha Cmd License
 
       https://www.sencha.com/legal/sencha-tools-software-license-agreement/

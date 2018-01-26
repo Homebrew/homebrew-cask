@@ -12,8 +12,9 @@ cask 'gimp' do
     set_permissions "#{appdir}/GIMP.app/Contents/MacOS/GIMP", 'a+rx'
   end
 
-  zap delete: [
-                '~/Library/Application Support/GIMP',
-                '~/Library/Saved Application State/org.gnome.gimp.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/org.gnome.gimp.plist',
+               '~/Library/Application Support/GIMP',
+               '~/Library/Saved Application State/org.gnome.gimp.savedState',
+             ]
 end

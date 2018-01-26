@@ -1,11 +1,11 @@
 cask 'astro' do
-  version '2.0.20,3183'
-  sha256 '6d71eff13e7a18961a1c54eb70919d2ced27d783373587afa939df88eadc99f8'
+  version '3.0.0,3693'
+  sha256 'c18db2edaee328a258b85bda766fcedf7c61dc42857639e4740815eb7dcf492a'
 
   # pexlabs-updates-xvuif5mcicazzducz2j2xy3lki.s3-us-west-2.amazonaws.com was verified as official when first introduced to the cask
   url "https://pexlabs-updates-xvuif5mcicazzducz2j2xy3lki.s3-us-west-2.amazonaws.com/Astro-#{version.after_comma}.dmg"
   appcast 'https://pexlabs-updates-xvuif5mcicazzducz2j2xy3lki.s3-us-west-2.amazonaws.com/pexappcast.xml',
-          checkpoint: 'b62c9e05a3e9cd282a5980547a75cf316a2935d5158fd2c079d89e9442cf6278'
+          checkpoint: 'd1a1e104f730d711d4513d1128e05be6baadf882d73c7bd3da8cb64dd94586bf'
   name 'Astro'
   homepage 'https://www.helloastro.com/'
 
@@ -16,9 +16,9 @@ cask 'astro' do
   uninstall launchctl: 'com.pexlabs.Huskymail.mac.helper',
             quit:      'com.pexlabs.Huskymail.mac'
 
-  zap delete: '~/Library/Caches/com.pexlabs.Huskymail.mac',
-      trash:  [
-                '~/Library/Application Support/com.pexlabs.Huskymail.mac',
-                '~/Library/Preferences/com.pexlabs.Huskymail.mac.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.pexlabs.Huskymail.mac',
+               '~/Library/Caches/com.pexlabs.Huskymail.mac',
+               '~/Library/Preferences/com.pexlabs.Huskymail.mac.plist',
+             ]
 end

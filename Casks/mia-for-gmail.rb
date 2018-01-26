@@ -15,11 +15,11 @@ cask 'mia-for-gmail' do
   uninstall quit:       'com.sovapps.gmailnotifier',
             login_item: 'Mia for Gmail'
 
-  zap delete: [
-                '~/Library/Preferences/com.sovapps.gmailnotifier.plist',
-                '~/Library/Caches/com.sovapps.gmailnotifier',
-                '~/Library/Containers/com.sovapps.launchAtLoginHelper',
-                '~/Library/Application Scripts/com.sovapps.gmailnotifier',
-                '~/Library/Application Scripts/com.sovapps.launchAtLoginHelper',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.sovapps.gmailnotifier.plist',
+               '~/Library/Caches/com.sovapps.gmailnotifier',
+               '~/Library/Containers/com.sovapps.launchAtLoginHelper',
+               '~/Library/Application Scripts/com.sovapps.gmailnotifier',
+               '~/Library/Application Scripts/com.sovapps.launchAtLoginHelper',
+             ]
 end

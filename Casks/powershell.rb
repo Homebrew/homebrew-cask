@@ -1,10 +1,10 @@
 cask 'powershell' do
-  version '6.0.0-beta.8'
-  sha256 '29e33f0a19c089a9a00e1987783803b6120b1379b370fab33b8f74c56956a10a'
+  version '6.0.1'
+  sha256 'cabed843a513666a658702a5e96deeb6d02d895410ddcb81da3481bde8ca2093'
 
   url "https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}-osx.10.12-x64.pkg"
   appcast 'https://github.com/PowerShell/PowerShell/releases.atom',
-          checkpoint: 'd2c97f3b17085b17c5dab20fd0b93b7afd1e4c4dc0a08ce588723bebd312b9e4'
+          checkpoint: '91832eeb758cfd5d68a18a5b8d1284ae135dea6c6ac45460fe3c290f2987d363'
   name 'PowerShell'
   homepage 'https://github.com/PowerShell/PowerShell'
 
@@ -13,7 +13,7 @@ cask 'powershell' do
 
   pkg "powershell-#{version}-osx.10.12-x64.pkg"
 
-  uninstall pkgutil: 'powershell'
+  uninstall pkgutil: 'com.microsoft.powershell'
 
   zap trash: [
                '~/.cache/powershell',
@@ -27,10 +27,11 @@ cask 'powershell' do
                '~/.local',
              ]
 
-  caveats <<-EOS.undent
-    A OpenSSL-backed libcurl is required for custom handling of certificates.
+  caveats <<~EOS
+    A OpenSSL-backed libcurl with GSSAPI is required for custom handling
+    of certificates and default credentials for web requests.
     This is rarely needed, but you can install it with
-      brew install curl --with-openssl
-    See https://github.com/PowerShell/PowerShell/issues/2211
+      brew install curl --with-openssl --with-gssapi
+    See https://github.com/PowerShell/PowerShell/issues/5638
   EOS
 end

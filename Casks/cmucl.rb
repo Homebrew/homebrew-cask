@@ -1,11 +1,11 @@
 cask 'cmucl' do
-  version '21b'
-  sha256 'c492d71fed7aed11c34f9a3be5355e12df3f60badbcea99c4a1a42beb7e92c9c'
+  version '21c'
+  sha256 'ee08a8d9117aecf8b073b6100ce815e7b4ae9ed557a59660a074b3a0af5b452e'
 
   # common-lisp.net/project/cmucl was verified as official when first introduced to the cask
   url "https://common-lisp.net/project/cmucl/downloads/release/#{version}/cmucl-#{version}-x86-darwin.tar.bz2"
   appcast 'https://common-lisp.net/project/cmucl/downloads/release/',
-          checkpoint: '3fba3d06219fd1dee10e62801d0a957775443059d58d2026c5d637649795a4da'
+          checkpoint: 'cbf92cd84281ac26cff1ae36a7a5e3c9f0d6c4386377b230b606e758624d24c8'
   name 'Cmucl'
   homepage 'https://www.cons.org/cmucl/'
 
@@ -14,7 +14,7 @@ cask 'cmucl' do
   artifact 'man/man1/cmucl.1', target: "#{HOMEBREW_PREFIX}/share/man/man1/cmucl.1"
   artifact 'man/man1/lisp.1', target: "#{HOMEBREW_PREFIX}/share/man/man1/lisp.1"
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     Instructions on using cmucl are available in
 
       #{staged_path}/doc/cmucl

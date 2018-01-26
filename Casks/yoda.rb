@@ -10,12 +10,10 @@ cask 'yoda' do
 
   app 'Yoda.app'
 
-  zap delete: [
-                '~/Library/Caches/yoda',
-                '~/Library/Saved Application State/com.whoisandie.yoda.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/yoda',
-                '~/Library/Preferences/com.whoisandie.yoda.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/yoda',
+               '~/Library/Caches/yoda',
+               '~/Library/Preferences/com.whoisandie.yoda.plist',
+               '~/Library/Saved Application State/com.whoisandie.yoda.savedState',
+             ]
 end

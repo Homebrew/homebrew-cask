@@ -13,8 +13,8 @@ cask 'muzei' do
   uninstall login_item: 'Muzei',
             quit:       'com.naman14.muzeimacos'
 
-  zap delete: [
-                '~/Library/Application Scripts/com.naman14.muzeimacos',
-                '~/Library/Containers/com.naman14.muzeimacos',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/com.naman14.muzeimacos',
+               '~/Library/Containers/com.naman14.muzeimacos',
+             ]
 end

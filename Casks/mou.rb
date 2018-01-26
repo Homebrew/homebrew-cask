@@ -12,10 +12,10 @@ cask 'mou' do
 
   app 'Mou.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.mouapp.Mou.plist',
-                '~/Library/Preferences/com.mouapp.Mou.LSSharedFileList.plist',
-                '~/Library/Application Support/Mou',
-                '~/Library/Caches/com.mouapp.Mou',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.mouapp.Mou.plist',
+               '~/Library/Preferences/com.mouapp.Mou.LSSharedFileList.plist',
+               '~/Library/Application Support/Mou',
+               '~/Library/Caches/com.mouapp.Mou',
+             ]
 end

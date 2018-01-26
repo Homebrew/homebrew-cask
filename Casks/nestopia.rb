@@ -8,9 +8,9 @@ cask 'nestopia' do
 
   app 'Nestopia.app'
 
-  zap delete: [
-                '~/Library/Application Support/Bannister/Nestopia',
-                '~/Library/Preferences/com.bannister.nestopia.plist',
-                '~/Library/Saved Application State/com.bannister.nestopia.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Bannister/Nestopia',
+               '~/Library/Preferences/com.bannister.nestopia.plist',
+               '~/Library/Saved Application State/com.bannister.nestopia.savedState',
+             ]
 end

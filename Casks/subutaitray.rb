@@ -1,11 +1,11 @@
 cask 'subutaitray' do
-  version '6.0.2'
-  sha256 '26de83957d95ae38d2ef124a3e00462e44bf47e31f70b12a2e350bf276a465b9'
+  version '6.3.0'
+  sha256 '9afa78a7d343bab130e42dc6a7e5a4fa4b2b1bdb401ec0af2949bc834a10fb3a'
 
   # cdn.subut.ai:8338/kurjun/rest/raw/ was verified as official when first introduced to the cask
   url 'https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=subutai-tray.pkg'
   appcast 'https://github.com/subutai-io/tray/releases.atom',
-          checkpoint: '49db1d9212bc91293be4d38869e38c2c9f22539ae72d32b72291dec867167534'
+          checkpoint: 'f942a393cdd1c8f86f90bd85250d7df33297d141571eb2e13894feb1eaddb311'
   name 'Subutai Tray'
   homepage 'https://subutai.io/'
 

@@ -16,10 +16,10 @@ cask 'limechat' do
 
   app 'LimeChat.app'
 
-  zap delete: [
-                '~/Library/Application Support/LimeChat',
-                '~/Library/Caches/net.limechat.LimeChat',
-                '~/Library/Preferences/net.limechat.LimeChat.plist',
-                '~/Library/Preferences/net.limechat.LimeChat-AppStore.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/LimeChat',
+               '~/Library/Caches/net.limechat.LimeChat',
+               '~/Library/Preferences/net.limechat.LimeChat.plist',
+               '~/Library/Preferences/net.limechat.LimeChat-AppStore.plist',
+             ]
 end

@@ -15,7 +15,7 @@ cask 'ostiarius' do
 
   uninstall quit:   'com.objectiveSee.Ostiarius',
             kext:   'com.objective-see.OstiariusKext',
-            delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.objectivesee.ostiarius.sfl'
+            delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.objectivesee.ostiarius.sfl*'
 
   caveats do
     discontinued

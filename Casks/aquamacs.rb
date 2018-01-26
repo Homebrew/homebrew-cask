@@ -11,5 +11,5 @@ cask 'aquamacs' do
 
   app 'Aquamacs.app'
 
-  zap delete: '~/Library/Caches/Aquamacs Emacs'
+  zap trash: '~/Library/Caches/Aquamacs Emacs'
 end

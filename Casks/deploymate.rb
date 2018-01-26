@@ -11,9 +11,9 @@ cask 'deploymate' do
 
   app 'Deploymate.app'
 
-  zap delete: [
-                '~/Library/Caches/com.ivanvasic.deploymate',
-                '~/Library/Preferences/com.ivanvasic.deploymate.plist',
-                '~/Library/Preferences/com.ivanvasic.deploymate.LSSharedFileList.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.ivanvasic.deploymate',
+               '~/Library/Preferences/com.ivanvasic.deploymate.plist',
+               '~/Library/Preferences/com.ivanvasic.deploymate.LSSharedFileList.plist',
+             ]
 end

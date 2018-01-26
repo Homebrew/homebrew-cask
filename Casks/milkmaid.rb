@@ -10,7 +10,7 @@ cask 'milkmaid' do
 
   app 'MilkMaid.app'
 
-  zap delete: '~/Library/Preferences/com.jga.MilkMaid.plist'
+  zap trash: '~/Library/Preferences/com.jga.MilkMaid.plist'
 
   caveats do
     discontinued

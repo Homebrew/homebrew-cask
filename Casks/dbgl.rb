@@ -1,6 +1,6 @@
 cask 'dbgl' do
-  version '0.81'
-  sha256 '71f7ae2e1cb3787415f7051f08567090117306169e44db9a9c109fc873624be2'
+  version '0.82'
+  sha256 'b5d1b67b9b4a6e6d16ff4c603c3caa2d03ad6d12bc1f58d0246aeeb8f3d837bf'
 
   url "http://members.quicknet.nl/blankendaalr/dbgl/download/dbgl#{version.no_dots}.dmg"
   name 'DBGL'

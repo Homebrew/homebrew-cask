@@ -13,9 +13,9 @@ cask 'baiducloud' do
 
   uninstall quit: 'com.baidu.netdiskmac'
 
-  zap delete: [
-                '~/Library/Application Support/百度云同步盘',
-                '~/Library/Preferences/com.baidu.netdiskmac.plist',
-                '~/Library/Caches/com.baidu.netdiskmac',
-              ]
+  zap trash: [
+               '~/Library/Application Support/百度云同步盘',
+               '~/Library/Preferences/com.baidu.netdiskmac.plist',
+               '~/Library/Caches/com.baidu.netdiskmac',
+             ]
 end

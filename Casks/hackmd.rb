@@ -10,8 +10,8 @@ cask 'hackmd' do
 
   app 'HackMD.app'
 
-  zap delete: [
-                '~/Library/Application Support/HackMD',
-                '~/Library/Saved Application State/com.hackmd.desktop.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/HackMD',
+               '~/Library/Saved Application State/com.hackmd.desktop.savedState',
+             ]
 end

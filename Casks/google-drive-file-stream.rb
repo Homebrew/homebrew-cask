@@ -6,10 +6,6 @@ cask 'google-drive-file-stream' do
   name 'Google Drive File Stream'
   homepage 'https://www.google.com/drive/'
 
-  conflicts_with cask: [
-                         'google-backup-and-sync',
-                         'google-photos-backup-and-sync',
-                       ]
   depends_on macos: '>= :el_capitan'
 
   pkg 'GoogleDriveFileStream.pkg'
@@ -18,10 +14,16 @@ cask 'google-drive-file-stream' do
             quit:       'com.google.drivefs',
             pkgutil:    'com.google.drivefs'
 
-  zap delete: '~/Library/Caches/com.google.drivefs',
-      trash:  [
-                '~/Library/Application Support/Google/DriveFS',
-                '~/Library/Preferences/Google Drive File Stream Helper.plist',
-                '~/Library/Preferences/com.google.drivefs.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Google/DriveFS',
+               '~/Library/Caches/com.google.drivefs',
+               '~/Library/Preferences/Google Drive File Stream Helper.plist',
+               '~/Library/Preferences/com.google.drivefs.plist',
+             ]
+
+  caveats <<~EOS
+    Although #{token} may be installed alongside Google Backup and Sync, you should not use the same account with both.
+
+      https://support.google.com/a/answer/7496409#allowboth
+  EOS
 end

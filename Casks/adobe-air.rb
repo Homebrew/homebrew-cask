@@ -1,5 +1,5 @@
 cask 'adobe-air' do
-  version '27.0'
+  version '28.0'
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://airdownload.adobe.com/air/mac/download/#{version}/AdobeAIR.dmg"
@@ -23,9 +23,9 @@ cask 'adobe-air' do
                       '/Applications/Adobe',
                     ]
 
-  zap delete: [
-                '~/Library/Application Support/Adobe/AIR',
-                '~/Library/Caches/com.adobe.air.ApplicationInstaller',
-              ],
-      rmdir:  '~/Library/Application Support/Adobe/'
+  zap trash: [
+               '~/Library/Application Support/Adobe/AIR',
+               '~/Library/Caches/com.adobe.air.ApplicationInstaller',
+             ],
+      rmdir: '~/Library/Application Support/Adobe/'
 end

@@ -5,8 +5,7 @@ cask 'electrum-dash' do
   url "https://www.dash.org/binaries/Electrum-DASH-#{version}-Installer.pkg"
   name 'Electrum-DASH'
   homepage 'https://www.dash.org/'
-  gpg 'https://raw.githubusercontent.com/dashpay/dash-binaries/master/pgp/releases-maza-club.asc',
-      key_id: '71fafcb71f0a961b23e7d7ef0a020276cbffb73c'
+  gpg 'https://raw.githubusercontent.com/dashpay/dash-binaries/master/pgp/releases-maza-club.asc', key_id: '71fafcb71f0a961b23e7d7ef0a020276cbffb73c'
 
   pkg "Electrum-DASH-#{version}-Installer.pkg"
 

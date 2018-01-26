@@ -1,6 +1,6 @@
 cask 'android-ndk' do
-  version '15c'
-  sha256 '846ce931e27668665fef9d31faa2cce683ccebe4c6ca0e68f0eb9920bc70e55f'
+  version '16b'
+  sha256 '9654a692ed97713e35154bfcacb0028fdc368128d636326f9644ed83eec5d88b'
 
   # dl.google.com/android/repository/android-ndk was verified as official when first introduced to the cask
   url "https://dl.google.com/android/repository/android-ndk-r#{version}-darwin-x86_64.zip"
@@ -14,7 +14,7 @@ cask 'android-ndk' do
   preflight do
     FileUtils.ln_sf("#{staged_path}/android-ndk-r#{version}", "#{HOMEBREW_PREFIX}/share/android-ndk")
 
-    IO.write shimscript, <<-EOS.undent
+    IO.write shimscript, <<~EOS
       #!/bin/bash
       readonly executable="#{staged_path}/android-ndk-r#{version}/$(basename ${0})"
       test -f "${executable}" && exec "${executable}" "${@}"
@@ -33,8 +33,8 @@ cask 'android-ndk' do
     FileUtils.rm("#{HOMEBREW_PREFIX}/share/android-ndk")
   end
 
-  caveats <<-EOS.undent
-   You may want to add to your profile:
-      'export ANDROID_NDK_HOME="#{HOMEBREW_PREFIX}/share/android-ndk"'
+  caveats <<~EOS
+    You may want to add to your profile:
+       'export ANDROID_NDK_HOME="#{HOMEBREW_PREFIX}/share/android-ndk"'
   EOS
 end

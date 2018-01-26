@@ -8,6 +8,8 @@ cask 'virustotaluploader' do
 
   app 'VirusTotalUploader.app'
 
-  zap delete: '~/Library/Saved Application State/com.virustotal.VirusTotalUploader.savedState',
-      trash:  '~/Library/Preferences/com.virustotal.VirusTotal Uploader.plist'
+  zap trash: [
+               '~/Library/Preferences/com.virustotal.VirusTotal Uploader.plist',
+               '~/Library/Saved Application State/com.virustotal.VirusTotalUploader.savedState',
+             ]
 end

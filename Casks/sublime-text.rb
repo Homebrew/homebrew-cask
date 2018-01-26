@@ -9,20 +9,18 @@ cask 'sublime-text' do
   homepage 'https://www.sublimetext.com/3'
 
   auto_updates true
-  conflicts_with cask: 'caskroom/versions/sublime-text-dev'
+  conflicts_with cask: 'sublime-text-dev'
 
   app 'Sublime Text.app'
   binary "#{appdir}/Sublime Text.app/Contents/SharedSupport/bin/subl"
 
   uninstall quit: 'com.sublimetext.3'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sublimetext.3.sfl',
-                '~/Library/Caches/com.sublimetext.3',
-                '~/Library/Saved Application State/com.sublimetext.3.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/Sublime Text 3',
-                '~/Library/Preferences/com.sublimetext.3.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sublimetext.3.sfl*',
+               '~/Library/Application Support/Sublime Text 3',
+               '~/Library/Caches/com.sublimetext.3',
+               '~/Library/Preferences/com.sublimetext.3.plist',
+               '~/Library/Saved Application State/com.sublimetext.3.savedState',
+             ]
 end

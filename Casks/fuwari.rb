@@ -14,13 +14,11 @@ cask 'fuwari' do
   uninstall login_item: 'Fuwari',
             quit:       'com.appknop.Fuwari'
 
-  zap delete: [
-                '~/Library/Caches/com.appknop.Fuwari',
-                '~/Library/Caches/com.crashlytics.data/com.appknop.Fuwari',
-                '~/Library/Caches/io.fabric.sdk.mac.data/com.appknop.Fuwari',
-              ],
-      trash:  [
-                '~/Library/Application Support/com.appknop.Fuwari',
-                '~/Library/Preferences/com.appknop.Fuwari.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.appknop.Fuwari',
+               '~/Library/Caches/com.appknop.Fuwari',
+               '~/Library/Caches/com.crashlytics.data/com.appknop.Fuwari',
+               '~/Library/Caches/io.fabric.sdk.mac.data/com.appknop.Fuwari',
+               '~/Library/Preferences/com.appknop.Fuwari.plist',
+             ]
 end

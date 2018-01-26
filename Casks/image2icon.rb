@@ -11,12 +11,12 @@ cask 'image2icon' do
 
   app 'Image2Icon.app'
 
-  zap delete: [
-                '~/Library/Caches/net.shinyfrog.image2icon',
-                '~/Library/Preferences/net.shinyfrog.image2icon.plist',
-                '~/Library/Containers/net.shinyfrog.image2icon',
-                '~/Library/Containers/net.shinyfrog.image2icon.templateRenderer',
-                '~/Library/Containers/net.shinyfrog.templateRenderer',
-                '~/Library/Saved Application State/net.shinyfrog.image2icon.savedState',
-              ]
+  zap trash: [
+               '~/Library/Caches/net.shinyfrog.image2icon',
+               '~/Library/Preferences/net.shinyfrog.image2icon.plist',
+               '~/Library/Containers/net.shinyfrog.image2icon',
+               '~/Library/Containers/net.shinyfrog.image2icon.templateRenderer',
+               '~/Library/Containers/net.shinyfrog.templateRenderer',
+               '~/Library/Saved Application State/net.shinyfrog.image2icon.savedState',
+             ]
 end

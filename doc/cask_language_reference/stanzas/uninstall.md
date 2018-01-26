@@ -35,7 +35,7 @@ Since `pkg` installers can do arbitrary things, different techniques are needed 
   - `sudo:` - set to `true` if the script needs `sudo`
 * `delete:` (string or array) - single-quoted, absolute paths of files or directory trees to remove. `delete:` should only be used as a last resort. `pkgutil:` is strongly preferred.
 * `rmdir:` (string or array) - single-quoted, absolute paths of directories to remove if empty
-* `trash:` (string or array) - currently a synonym for `delete:`. In the future this will cause files to be moved to the Trash.
+* `trash:` (string or array) - single-quoted, absolute paths of files or directory trees to move to Trash.
 
 Each `uninstall` technique is applied according to the order above. The order in which `uninstall` keys appear in the Cask file is ignored.
 
@@ -173,11 +173,11 @@ Arguments to `uninstall delete:` should use the following basic rules:
 * Paths must be absolute.
 * Glob expansion is performed using the [standard set of characters](https://en.wikipedia.org/wiki/Glob_(programming)).
 
-To remove user-specific files, use the `zap` stanza.
+To remove user-specific files, use the [`zap` stanza](https://github.com/caskroom/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/zap.md).
 
 ## uninstall Key trash:
 
-*stub* - currently a synonym for `delete:`. In the future this will cause files to be moved to the Trash. It is best not to use this stub until it gains the proper functionality.
+`trash:` arguments follow the same rules listed above for `delete:`.
 
 ## Working With a pkg File Manually
 

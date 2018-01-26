@@ -20,11 +20,11 @@ cask 'citrix-receiver' do
                        ],
             pkgutil:   'com.citrix.ICAClient'
 
-  zap delete: [
-                '~/Library/Application Support/Citrix Receiver',
-                '~/Library/Preferences/com.citrix.receiver.nomas.plist',
-                '~/Library/Preferences/com.citrix.receiver.nomas.plist.lockfile',
-                '~/Library/Preferences/com.citrix.ReceiverFTU.AccountRecords.plist',
-                '~/Library/Preferences/com.citrix.ReceiverFTU.AccountRecords.plist.lockfile',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Citrix Receiver',
+               '~/Library/Preferences/com.citrix.receiver.nomas.plist',
+               '~/Library/Preferences/com.citrix.receiver.nomas.plist.lockfile',
+               '~/Library/Preferences/com.citrix.ReceiverFTU.AccountRecords.plist',
+               '~/Library/Preferences/com.citrix.ReceiverFTU.AccountRecords.plist.lockfile',
+             ]
 end

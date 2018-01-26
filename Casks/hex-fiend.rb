@@ -12,9 +12,9 @@ cask 'hex-fiend' do
   app 'Hex Fiend.app'
   binary "#{appdir}/Hex Fiend.app/Contents/Resources/hexf"
 
-  zap delete: [
-                '~/Library/Caches/com.ridiculousfish.HexFiend',
-                '~/Library/Saved Application State/com.ridiculousfish.HexFiend.savedState',
-              ],
-      trash:  '~/Library/Preferences/com.ridiculousfish.HexFiend.plist'
+  zap trash: [
+               '~/Library/Caches/com.ridiculousfish.HexFiend',
+               '~/Library/Preferences/com.ridiculousfish.HexFiend.plist',
+               '~/Library/Saved Application State/com.ridiculousfish.HexFiend.savedState',
+             ]
 end

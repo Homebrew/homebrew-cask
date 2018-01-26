@@ -1,10 +1,10 @@
 cask 'quickhash' do
-  version '2.8.2,396'
-  sha256 '527670f17fdfec451c8808e62baeb44d2c831efb019f195bbaebad8e0addec34'
+  version '2.8.4,639'
+  sha256 '1c8208d3714cb8eeb30a6da6c25175379da5a817c447b91a5613347ed1b04cb4'
 
   url "http://quickhash-gui.org/download/quickhash-v#{version.before_comma.dots_to_hyphens}-for-apple-mac-osx/?wpdmdl=#{version.after_comma}"
   name 'Quickhash'
   homepage 'https://quickhash-gui.org/'
 
-  app "QuickHash-v#{version.before_comma}-OSX"
+  app 'QuickHash.app'
 end

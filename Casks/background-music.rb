@@ -8,7 +8,7 @@ cask 'background-music' do
   name 'Background Music'
   homepage 'https://github.com/kyleneideck/BackgroundMusic'
 
-  depends_on macos: '>= 10.10'
+  depends_on macos: '>= :yosemite'
 
   pkg "BackgroundMusic-#{version}.pkg"
 

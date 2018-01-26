@@ -13,7 +13,7 @@ cask 'virtual-ii' do
     FileUtils.mv(staged_path.children, staged_path.join('Virtual ][').tap(&:mkpath))
   end
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     This app requires a ROM image, which must be downloaded and installed
     separately. See #{homepage}VirtualIIHelp/virtual_II_help.html#ROMImage
     for more info.

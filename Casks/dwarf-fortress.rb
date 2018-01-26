@@ -11,7 +11,7 @@ cask 'dwarf-fortress' do
   binary shimscript, target: 'dwarf-fortress'
 
   preflight do
-    IO.write shimscript, <<-EOS.undent
+    IO.write shimscript, <<~EOS
       #!/bin/sh
       exec '#{staged_path}/df_osx/df' "$@"
     EOS
@@ -21,5 +21,7 @@ cask 'dwarf-fortress' do
     FileUtils.cp_r("#{staged_path}/df_osx/data/save", '/tmp/dwarf-fortress-save/') if Dir.exist?("#{staged_path}/df_osx/data/save")
   end
 
-  caveats 'During uninstall, your save data will be copied to /tmp/dwarf-fortress-save'
+  caveats <<~EOS
+    During uninstall, your save data will be copied to /tmp/dwarf-fortress-save
+  EOS
 end

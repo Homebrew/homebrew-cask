@@ -21,5 +21,5 @@ cask 'chronycontrol' do
                          '/Library/LaunchDaemons/org.tuxfamily.chronyc',
                        ]
 
-  zap delete: '/var/log/chrony'
+  zap trash: '/var/log/chrony'
 end

@@ -7,4 +7,6 @@ cask 'mocha-keyboard' do
   homepage 'https://www.mochasoft.dk/mochakeyboard.htm'
 
   app 'Mocha Keyboard.app'
+
+  zap trash: '~/Library/Containers/dk.mochasoft.mochakeyboardwithlicense'
 end

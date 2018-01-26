@@ -10,7 +10,7 @@ cask 'cd-to' do
 
   app "cdto_#{version.dots_to_underscores.gsub(%r{_\d$}, '')}/terminal/cd to.app"
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     To complete installation:
     1. Open the the Applications folder in finder.
     2. Drag "cd to.app" onto the Finder toolbar while holding down the command(⌘) and option(⌥) keys.

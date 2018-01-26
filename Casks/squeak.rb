@@ -8,5 +8,5 @@ cask 'squeak' do
 
   app "Squeak#{version}-32bit-All-in-One.app"
 
-  zap delete: "~/Library/Saved Application State/org.squeak.Squeak#{version.major_minor}.32.All-in-One.savedState"
+  zap trash: "~/Library/Saved Application State/org.squeak.Squeak#{version.major_minor}.32.All-in-One.savedState"
 end

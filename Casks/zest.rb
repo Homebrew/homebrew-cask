@@ -11,12 +11,12 @@ cask 'zest' do
 
   app 'Zest.app'
 
-  zap delete: [
-                '~/Library/Application Support/zest',
-                '~/Library/Caches/zest',
-                '~/Library/Preferences/org.zestdocs.plist',
-                '~/Library/Saved Application State/org.zestdocs.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/zest',
+               '~/Library/Caches/zest',
+               '~/Library/Preferences/org.zestdocs.plist',
+               '~/Library/Saved Application State/org.zestdocs.savedState',
+             ]
 
   caveats do
     discontinued

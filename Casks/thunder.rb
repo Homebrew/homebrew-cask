@@ -1,6 +1,6 @@
 cask 'thunder' do
-  version '3.1.4.3146'
-  sha256 '5c2348ade859b3e82ede769f1809469c0099a4cafefdda8e89dab44ae2a42ead'
+  version '3.1.9.3378'
+  sha256 '7869ef18c5b30ace6aeac0da4b5f0ab19eaca3ae64096e1d6434b84dbbdbb823'
 
   # down.sandai.net was verified as official when first introduced to the cask
   url "http://down.sandai.net/mac/thunder_#{version}.dmg"
@@ -12,18 +12,16 @@ cask 'thunder' do
 
   app 'Thunder.app'
 
-  zap delete: [
-                '~/Library/Caches/com.xunlei.Thunder',
-                '~/Library/Caches/com.xunlei.XLPlayer',
-                '~/Library/Cookies/com.xunlei.Thunder.binarycookies',
-                '~/Library/Saved Application State/com.xunlei.Thunder.savedState',
-                '~/Library/Saved Application State/com.xunlei.XLPlayer.savedState',
-                '~/Library/WebKit/com.xunlei.Thunder',
-              ],
-      trash:  [
-                '~/Library/Application Support/Thunder',
-                '~/Library/Preferences/com.xunlei.Thunder.loginSDK.plist',
-                '~/Library/Preferences/com.xunlei.Thunder.plist',
-                '~/Library/Preferences/com.xunlei.XLPlayer.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Thunder',
+               '~/Library/Caches/com.xunlei.Thunder',
+               '~/Library/Caches/com.xunlei.XLPlayer',
+               '~/Library/Cookies/com.xunlei.Thunder.binarycookies',
+               '~/Library/Preferences/com.xunlei.Thunder.loginSDK.plist',
+               '~/Library/Preferences/com.xunlei.Thunder.plist',
+               '~/Library/Preferences/com.xunlei.XLPlayer.plist',
+               '~/Library/Saved Application State/com.xunlei.Thunder.savedState',
+               '~/Library/Saved Application State/com.xunlei.XLPlayer.savedState',
+               '~/Library/WebKit/com.xunlei.Thunder',
+             ]
 end

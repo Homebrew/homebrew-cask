@@ -1,10 +1,10 @@
 cask 'bonjeff' do
-  version '1.0.0'
-  sha256 '7d0a8631a1ff2d6dac635bfe222f08d27d0ef21ab7d1ea143c2d84940398704f'
+  version '1.0.3'
+  sha256 'f083ca2e5f46e1a3a012863e7e6012087e700ef7b7e8cd3354f123a649522984'
 
   url "https://github.com/lapcat/Bonjeff/releases/download/v#{version}/Bonjeff.#{version}.zip"
   appcast 'https://github.com/lapcat/Bonjeff/releases.atom',
-          checkpoint: 'f2a1fd88272bcff67512db40c5bb637ed688e3ffaa706b7aa8f9ab7db93109c7'
+          checkpoint: '1b6822f478c8e50b0f2e69ed0514647e8e91aa10e9e0d78f338e427bb5396e8e'
   name 'Bonjeff'
   homepage 'https://github.com/lapcat/Bonjeff'
 
@@ -12,8 +12,8 @@ cask 'bonjeff' do
 
   app 'Bonjeff.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/com.lapcatsoftware.bonjeff',
-                '~/Library/Containers/com.lapcatsoftware.bonjeff',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/com.lapcatsoftware.bonjeff',
+               '~/Library/Containers/com.lapcatsoftware.bonjeff',
+             ]
 end

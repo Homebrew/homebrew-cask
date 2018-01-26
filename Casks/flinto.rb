@@ -1,6 +1,6 @@
 cask 'flinto' do
-  version '2.2.5'
-  sha256 'ba36564afbe622df1adfdb86598ee5239ac757a61ff21f5c026fe541db9b64c5'
+  version '24.2'
+  sha256 'a7c60c1535506bf7a158c930e7811ae52b559652c0abbec10678da11df200a39'
 
   url "https://www.flinto.com/assets/Flinto-#{version}.dmg"
   name 'Flinto'

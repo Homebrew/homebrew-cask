@@ -8,7 +8,7 @@ cask 'firestormos' do
 
   app 'FirestormOS-Releasex64.app'
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     This version does not contain Havok engine (does not matter if you're not a content creator).
     Most problems that crop up during updates can be resolved or fixed by performing a clean install:
 

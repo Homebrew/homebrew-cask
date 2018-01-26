@@ -1,10 +1,10 @@
 cask 'console' do
-  version '0.1.0'
-  sha256 '83bf53d860f24e0dce2f400db2d564462ecacb9b90a5550014b38088c76a2642'
+  version '0.2.0'
+  sha256 'b49df2c4df4e99a9f4b50d8b426b1084f0d64a3d037a7e9960c5e87968f03b87'
 
   url "https://github.com/macmade/Console/releases/download/#{version}/Console.app.zip"
   appcast 'https://github.com/macmade/Console/releases.atom',
-          checkpoint: '78300bdb5f5ae6813a81730ae5e8309c6932d31c8e144088bac17ecdf434b7b5'
+          checkpoint: '92aa5293b80b88bfc7c52a82eb8be6ccec7ee81afb0571167ae7d8ae316638c2'
   name 'Console'
   homepage 'https://github.com/macmade/Console'
 

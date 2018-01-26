@@ -11,8 +11,8 @@ cask 'flightgear' do
 
   app 'FlightGear.app'
 
-  zap delete: [
-                '/Library/Logs/DiagnosticReports/fgfs*',
-                '~/Library/Application Support/FlightGear',
-              ]
+  zap trash: [
+               '/Library/Logs/DiagnosticReports/fgfs*',
+               '~/Library/Application Support/FlightGear',
+             ]
 end

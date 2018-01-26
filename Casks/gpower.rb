@@ -1,10 +1,10 @@
 cask 'gpower' do
-  version '3.1.9.2'
-  sha256 'ee4eb27493959fc6614b6061829c6b7d2aee9edf0fe0c1bf3d143ee2fa74c3e6'
+  version '3.1.9.3'
+  sha256 'f851661a55993cacf4f255ebba79c185bd1186667345fe3b2d8aefd0436a5321'
 
   url "http://www.gpower.hhu.de/fileadmin/redaktion/Fakultaeten/Mathematisch-Naturwissenschaftliche_Fakultaet/Psychologie/AAP/gpower/GPowerMac_#{version}.zip"
   appcast 'http://www.gpower.hhu.de/',
-          checkpoint: '3d30f9976dfc848cd099a3a1508f8214d87169cb7b889465dd5b890367ae9491'
+          checkpoint: 'e3b34cca13aa049cf00a93d9341df77d8bcf8e2bd2076cdae9509411d4561502'
   name 'G*Power'
   homepage 'http://www.gpower.hhu.de/'
 

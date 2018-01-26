@@ -11,8 +11,8 @@ cask 'brackets' do
 
   app 'Brackets.app'
 
-  zap delete: [
-                '~/Library/Application Support/Brackets',
-                '~/Library/Preferences/io.brackets.appshell.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Brackets',
+               '~/Library/Preferences/io.brackets.appshell.plist',
+             ]
 end

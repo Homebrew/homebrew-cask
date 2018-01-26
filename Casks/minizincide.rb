@@ -1,11 +1,11 @@
 cask 'minizincide' do
-  version '2.1.5'
-  sha256 'fd427fda74ba0972a9706a09c52fe8bbd19947e54c7c7e52e4c809122acb76b8'
+  version '2.1.7'
+  sha256 '45a25ebb179220637dd1b38d727c4b620bcff7562c5f5984438b1135f1de94e5'
 
   # github.com/MiniZinc/MiniZincIDE was verified as official when first introduced to the cask
   url "https://github.com/MiniZinc/MiniZincIDE/releases/download/#{version}/MiniZincIDE-#{version}-bundled.dmg"
   appcast 'https://github.com/MiniZinc/MiniZincIDE/releases.atom',
-          checkpoint: '209b6573001b7200fbf592591124c31a8d77baa0076410a1af445b63e8b504c3'
+          checkpoint: 'ecb8f9927cb2831ede6602baa9e66a95967f66ed150ee227b51a4b65c7dc1161'
   name 'MiniZincIDE'
   homepage 'http://www.minizinc.org/ide/index.html'
 

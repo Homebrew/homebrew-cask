@@ -1,10 +1,12 @@
 cask 'vyprvpn' do
-  version '2.14.0.5485'
-  sha256 '40076ef12cf2c5589f3f1205216471c1bf31eae1c9e5a40a35bd3c3d20c64883'
+  version '2.16.0.6009'
+  sha256 'b14ce85fbe6d0a562c628149495939f7357c8b16e5f7480149074f118811c83a'
 
   url "https://www.goldenfrog.com/downloads/vyprvpn/desktop/mac/production/#{version}/VyprVPN_v#{version}.dmg"
   name 'VyprVPN'
   homepage 'https://www.goldenfrog.com/vyprvpn'
+
+  auto_updates true
 
   app 'VyprVPN.app'
 
@@ -16,7 +18,7 @@ cask 'vyprvpn' do
                        ],
             kext:      'com.goldenfrog.VyprVPNMalwareFilter'
 
-  zap delete:    [
+  zap trash:     [
                    '/Library/LaunchDaemons/vyrpvpnservice.plist',
                    '/Library/PrivilegedHelperTools/vyprvpnservice',
                    '~/Library/Caches/com.goldenfrog.VyprVPN',

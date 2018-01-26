@@ -12,4 +12,10 @@ cask 'knockknock' do
   depends_on macos: '>= :mountain_lion'
 
   app 'KnockKnock.app'
+
+  zap trash: [
+               '~/Library/Caches/com.objective-see.KnockKnock',
+               '~/Library/Preferences/com.objective-see.KnockKnock.plist',
+               '~/Library/Saved Application State/com.objective-see.KnockKnock.savedState',
+             ]
 end

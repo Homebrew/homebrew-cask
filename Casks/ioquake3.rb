@@ -9,7 +9,7 @@ cask 'ioquake3' do
 
   suite 'ioquake3'
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     To complete the installation of #{token}, you will have to copy the file 'pak0.pk3' from your Quake 3 Arena installation support directory into
 
     #{appdir}/ioquake3/baseq3/ or ~/Library/Application Support/Quake3/baseq3/

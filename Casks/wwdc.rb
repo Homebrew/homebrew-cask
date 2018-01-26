@@ -13,10 +13,10 @@ cask 'wwdc' do
 
   app 'WWDC.app'
 
-  zap delete: [
-                '~/Library/Application Support/io.wwdc.app',
-                '~/Library/Application Support/io.wwdc.app.TranscriptIndexingService',
-                '~/Library/Application Support/WWDC',
-                '~/Library/Preferences/io.wwdc.app.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/io.wwdc.app',
+               '~/Library/Application Support/io.wwdc.app.TranscriptIndexingService',
+               '~/Library/Application Support/WWDC',
+               '~/Library/Preferences/io.wwdc.app.plist',
+             ]
 end

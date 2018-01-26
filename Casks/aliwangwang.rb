@@ -10,11 +10,11 @@ cask 'aliwangwang' do
 
   uninstall quit: 'com.taobao.aliwangwang'
 
-  zap delete: [
-                '~/Library/Caches/com.taobao.aliwangwang',
-                '~/Library/Containers/com.taobao.aliwangwang',
-                '~/Library/Internet Plug-Ins/WangwangPlugin.plugin',
-                '~/Library/Preferences/com.taobao.aliwangwang.plist',
-                '~/Library/Saved Application State/com.taobao.aliwangwang.savedState',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.taobao.aliwangwang',
+               '~/Library/Containers/com.taobao.aliwangwang',
+               '~/Library/Internet Plug-Ins/WangwangPlugin.plugin',
+               '~/Library/Preferences/com.taobao.aliwangwang.plist',
+               '~/Library/Saved Application State/com.taobao.aliwangwang.savedState',
+             ]
 end

@@ -11,8 +11,8 @@ cask 'cartographica' do
 
   app 'Cartographica.app'
 
-  zap delete: [
-                '~/Library/Application Support/Cartographica',
-                '~/Library/Preferences/com.ClueTrust.Cartographica.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Cartographica',
+               '~/Library/Preferences/com.ClueTrust.Cartographica.plist',
+             ]
 end

@@ -12,6 +12,8 @@ cask 'apple-juice' do
 
   uninstall quit: 'io.raphaelhanneken.applejuice'
 
-  zap delete: '~/Library/Caches/io.raphaelhanneken.applejuice',
-      trash:  '~/Library/Preferences/io.raphaelhanneken.applejuice.plist'
+  zap trash: [
+               '~/Library/Caches/io.raphaelhanneken.applejuice',
+               '~/Library/Preferences/io.raphaelhanneken.applejuice.plist',
+             ]
 end

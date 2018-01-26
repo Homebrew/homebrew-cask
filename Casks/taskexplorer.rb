@@ -17,6 +17,8 @@ cask 'taskexplorer' do
     set_ownership "#{appdir}/TaskExplorer.app"
   end
 
-  zap delete: '~/Library/Caches/com.objective-see.TaskExplorer',
-      trash:  '~/Library/Preferences/com.objective-see.TaskExplorer.plist'
+  zap trash: [
+               '~/Library/Caches/com.objective-see.TaskExplorer',
+               '~/Library/Preferences/com.objective-see.TaskExplorer.plist',
+             ]
 end

@@ -10,9 +10,9 @@ cask 'appshelf' do
 
   app 'AppShelf.app'
 
-  zap delete: [
-                '~/Library/Application Support/AppShelf',
-                '~/Library/Caches/com.kedisoft.AppShelf',
-                '~/Library/Preferences/com.kedisoft.AppShelf.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/AppShelf',
+               '~/Library/Caches/com.kedisoft.AppShelf',
+               '~/Library/Preferences/com.kedisoft.AppShelf.plist',
+             ]
 end

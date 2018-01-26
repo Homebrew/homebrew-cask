@@ -11,8 +11,8 @@ cask 'jasper' do
 
   app 'Jasper.app'
 
-  zap delete: [
-                '~/Library/Application Support/jasper',
-                '~/Library/Containers/io.jasperapp',
-              ]
+  zap trash: [
+               '~/Library/Application Support/jasper',
+               '~/Library/Containers/io.jasperapp',
+             ]
 end

@@ -8,5 +8,9 @@ cask 'keepassx' do
 
   app 'KeePassX.app'
 
-  zap delete: '~/.keepassx'
+  uninstall_preflight do
+    set_ownership "#{appdir}/KeePassX.app"
+  end
+
+  zap trash: '~/.keepassx'
 end

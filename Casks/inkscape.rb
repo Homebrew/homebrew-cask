@@ -11,5 +11,5 @@ cask 'inkscape' do
   app 'Inkscape.app'
   binary "#{appdir}/Inkscape.app/Contents/Resources/bin/inkscape"
 
-  zap delete: '~/.inkscape-etc'
+  zap trash: '~/.inkscape-etc'
 end

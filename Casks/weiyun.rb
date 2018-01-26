@@ -11,8 +11,8 @@ cask 'weiyun' do
 
   uninstall quit: 'com.tencent.MacWeiyun'
 
-  zap delete: [
-                '~/Library/Preferences/com.tencent.MacWeiyun.plist',
-                '~/Library/Saved Application State/com.tencent.MacWeiyun.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.tencent.MacWeiyun.plist',
+               '~/Library/Saved Application State/com.tencent.MacWeiyun.savedState',
+             ]
 end

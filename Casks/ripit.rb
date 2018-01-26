@@ -11,4 +11,10 @@ cask 'ripit' do
   auto_updates true
 
   app 'RipIt.app'
+
+  zap trash: [
+               '~/Library/Caches/com.thelittleappfactory.RipIt',
+               '~/Library/Preferences/.RipIt',
+               '~/Library/Preferences/com.thelittleappfactory.RipIt.plist',
+             ]
 end

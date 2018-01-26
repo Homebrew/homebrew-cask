@@ -15,9 +15,9 @@ cask 'box-sync' do
                       '/Library/PrivilegedHelperTools/com.box.sync.bootstrapper',
                     ]
 
-  zap delete: [
-                '~/Library/Application Support/Box/Box Sync',
-                '~/Library/Logs/Box/Box Sync',
-              ],
-      rmdir:  '~/Library/Application Support/Box'
+  zap trash: [
+               '~/Library/Application Support/Box/Box Sync',
+               '~/Library/Logs/Box/Box Sync',
+             ],
+      rmdir: '~/Library/Application Support/Box'
 end

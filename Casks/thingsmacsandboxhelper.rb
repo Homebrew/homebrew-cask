@@ -1,11 +1,11 @@
 cask 'thingsmacsandboxhelper' do
-  version '3.5'
-  sha256 '5df5902a0e28ebd1da5b6b02776ae78fb16ff69fb9a644841884cff8d6ce8cbd'
+  version '3.10'
+  sha256 '238763169c381b0a518f8bd771507bbb14fb36f0ca9845575ec407db041a623b'
 
   # culturedcode.cachefly.net was verified as official when first introduced to the cask
   url "https://culturedcode.cachefly.net/things/thingssandboxhelper/#{version}/ThingsHelper.zip"
   name 'ThingsMacSandboxHelper'
-  homepage 'https://culturedcode.com/things/mac/help/things-sandboxing-helper-download/'
+  homepage "https://culturedcode.com/things/mac/help/things-sandboxing-helper-things#{version.major}/"
 
   app 'ThingsMacSandboxHelper.app'
 end

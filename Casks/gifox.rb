@@ -1,11 +1,11 @@
 cask 'gifox' do
-  version '010300.00'
-  sha256 'c5e1bd3bf6595bdf43463a2a150a20f1459dd9c239a79af8c3b86b54f7888c7a'
+  version '010400.02'
+  sha256 'c0f9fb1be9f1086ad54f85e6d02319dbdfbd1f2c155cb67642cd2240c57692b8'
 
   # s3.eu-central-1.amazonaws.com/dstlalgzor/gifox was verified as official when first introduced to the cask
   url "https://s3.eu-central-1.amazonaws.com/dstlalgzor/gifox/#{version}.dmg"
   appcast 'https://s3.eu-central-1.amazonaws.com/dstlalgzor/gifox/appcast.xml',
-          checkpoint: '28c984b4a54afb70cc6820d7e4d0af841d64cf0ae306ef0fcb222f46f7834a6b'
+          checkpoint: '56064af28f246bba075adbb0f18f01f7a19c0922f1445e83c777e4bb35fc3522'
   name 'gifox'
   homepage 'https://gifox.io/'
 
@@ -14,12 +14,10 @@ cask 'gifox' do
   uninstall launchctl: 'com.gifox.gifox.agent',
             quit:      'com.gifox.gifox'
 
-  zap delete: [
-                '~/Library/Caches/com.gifox.gifox',
-                '~/Library/Cookies/com.gifox.gifox.binarycookies',
-              ],
-      trash:  [
-                '~/Library/Application Support/Gifox',
-                '~/Library/Preferences/com.gifox.gifox.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Gifox',
+               '~/Library/Caches/com.gifox.gifox',
+               '~/Library/Cookies/com.gifox.gifox.binarycookies',
+               '~/Library/Preferences/com.gifox.gifox.plist',
+             ]
 end

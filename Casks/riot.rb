@@ -1,19 +1,19 @@
 cask 'riot' do
-  version '0.12.7'
-  sha256 '905e165d94efd2eae0803f0e7fa972d88c43aa6a95cfd8f9e41d7b0e2d202003'
+  version '0.13.4'
+  sha256 '100b102d9cdc6ecf528555619c71a42f3eed4be20d20784d32c8c094ba37ffa5'
 
   url "https://riot.im/download/desktop/install/macos/Riot-#{version}.dmg"
   appcast 'https://github.com/vector-im/riot-web/releases.atom',
-          checkpoint: '98b00a9a54ef0854ae165d3c597a407eccbaa2f36da3dc42b5c3f363c6842b4c'
+          checkpoint: 'f86ea60e45f3858752688c2d1f326c4157696026e3ec45734b179b77377c9bbe'
   name 'Riot'
   homepage 'https://about.riot.im/'
 
   app 'Riot.app'
 
-  zap delete: [
-                '~/Library/Application Support/Riot',
-                '~/Library/Preferences/im.riot.app.helper.plist',
-                '~/Library/Preferences/im.riot.app.plist',
-                '~/Library/Saved Application State/im.riot.app.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Riot',
+               '~/Library/Preferences/im.riot.app.helper.plist',
+               '~/Library/Preferences/im.riot.app.plist',
+               '~/Library/Saved Application State/im.riot.app.savedState',
+             ]
 end

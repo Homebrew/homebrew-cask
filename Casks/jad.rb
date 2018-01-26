@@ -11,7 +11,7 @@ cask 'jad' do
   binary 'jad'
   artifact 'jad.1', target: "#{HOMEBREW_PREFIX}/share/man/man1/jad.1"
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     Instructions on using jad are available in
 
       #{staged_path}/Readme.txt

@@ -9,14 +9,16 @@ cask 'kap' do
   name 'Kap'
   homepage 'https://getkap.co/'
 
+  auto_updates true
+
   app 'Kap.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.wulkano.kap.plist',
-                '~/Library/Preferences/com.wulkano.kap.helper.plist',
-                '~/Library/Application Support/Kap',
-                '~/Library/Saved Application State/com.wulkano.kap.savedState',
-                '~/Library/Caches/com.wulkano.kap',
-                '~/Library/Caches/com.wulkano.kap.ShipIt',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.wulkano.kap.plist',
+               '~/Library/Preferences/com.wulkano.kap.helper.plist',
+               '~/Library/Application Support/Kap',
+               '~/Library/Saved Application State/com.wulkano.kap.savedState',
+               '~/Library/Caches/com.wulkano.kap',
+               '~/Library/Caches/com.wulkano.kap.ShipIt',
+             ]
 end

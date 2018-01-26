@@ -21,11 +21,11 @@ cask 'texpad' do
 
   app 'Texpad.app'
 
-  zap delete: [
-                '~/Library/Application Support/Texpad',
-                '~/Library/Caches/com.vallettaventures.Texpad',
-                '~/Library/Cookies/com.vallettaventures.Texpad.binarycookies',
-                '~/Library/Preferences/com.vallettaventures.Texpad.plist',
-                '~/Library/Saved Application State/com.vallettaventures.Texpad.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Texpad',
+               '~/Library/Caches/com.vallettaventures.Texpad',
+               '~/Library/Cookies/com.vallettaventures.Texpad.binarycookies',
+               '~/Library/Preferences/com.vallettaventures.Texpad.plist',
+               '~/Library/Saved Application State/com.vallettaventures.Texpad.savedState',
+             ]
 end

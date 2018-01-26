@@ -8,5 +8,5 @@ cask 'install-disk-creator' do
 
   app 'Install Disk Creator.app'
 
-  zap delete: '~/Library/Saved Application State/io.macdaddy.Install-Disk-Creator.savedState'
+  zap trash: '~/Library/Saved Application State/io.macdaddy.Install-Disk-Creator.savedState'
 end

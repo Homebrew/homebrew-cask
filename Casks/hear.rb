@@ -11,7 +11,7 @@ cask 'hear' do
   app 'Hear.app'
 
   # TODO: an uninstall stanza should be provided, and this message removed
-  caveats <<-EOS.undent
+  caveats <<~EOS
     To uninstall, open Hear.app and choose the menu item "Hear > Uninstall"
   EOS
 end

@@ -1,11 +1,11 @@
 cask 'insomnia' do
-  version '5.9.6'
-  sha256 '57c73e41654cc53370312ed270358070dfb961737e1f10e2eda2e217b623dd29'
+  version '5.12.4'
+  sha256 '220f0bd8d1741c6a1edc3f1f8856a5810d41bb7d5c62a98a670aec1621ac1066'
 
   # github.com/getinsomnia/insomnia was verified as official when first introduced to the cask
   url "https://github.com/getinsomnia/insomnia/releases/download/v#{version}/Insomnia-#{version}.dmg"
   appcast 'https://github.com/getinsomnia/insomnia/releases.atom',
-          checkpoint: 'a1b42bcbf0715c2d38e1b7f08e7af6d407bec4f26bb205c2312cb491ffa9ab5a'
+          checkpoint: '1338d3fb0e98efc57b487eeb366932816f88d3ef83b1c36819a3bdd006137138'
   name 'Insomnia'
   homepage 'https://insomnia.rest/'
 
@@ -13,15 +13,13 @@ cask 'insomnia' do
 
   app 'Insomnia.app'
 
-  zap delete: [
-                '~/Library/Caches/com.insomnia.app',
-                '~/Library/Caches/com.insomnia.app.ShipIt',
-                '~/Library/Cookies/com.insomnia.app.binarycookies',
-                '~/Library/Saved Application State/com.insomnia.app.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/Insomnia',
-                '~/Library/Preferences/com.insomnia.app.helper.plist',
-                '~/Library/Preferences/com.insomnia.app.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Insomnia',
+               '~/Library/Caches/com.insomnia.app',
+               '~/Library/Caches/com.insomnia.app.ShipIt',
+               '~/Library/Cookies/com.insomnia.app.binarycookies',
+               '~/Library/Preferences/com.insomnia.app.helper.plist',
+               '~/Library/Preferences/com.insomnia.app.plist',
+               '~/Library/Saved Application State/com.insomnia.app.savedState',
+             ]
 end

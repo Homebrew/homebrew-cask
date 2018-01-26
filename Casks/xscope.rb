@@ -11,9 +11,9 @@ cask 'xscope' do
 
   app 'xScope.app'
 
-  zap delete: [
-                '~/Library/Caches/com.iconfactory.xScope',
-                '~/Library/Caches/com.iconfactory.xScope.cache',
-                '~/Library/Preferences/com.iconfactory.xScope.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.iconfactory.xScope',
+               '~/Library/Caches/com.iconfactory.xScope.cache',
+               '~/Library/Preferences/com.iconfactory.xScope.plist',
+             ]
 end
