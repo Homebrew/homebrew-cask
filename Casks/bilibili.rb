@@ -11,7 +11,7 @@ cask 'bilibili' do
   auto_updates true
 
   app 'Bilibili.app'
-  
+
   zap trash: [
                '~/Library/Application Support/com.typcn.bilibili',
                '~/Library/Application Support/com.crashlytics/com.typcn.bilibili',
