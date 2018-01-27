@@ -6,7 +6,7 @@ cask 'bdinfo' do
   name 'BDInfo'
   homepage 'https://www.videohelp.com/software/BDInfo'
 
-  app 'BDInfo OSX.app', target: 'BDInfo.app'
+  app 'BDInfo OSX.app'
 
   zap trash: [
                '~/Library/Preferences/com.yourcompany.BDInfo-OSX.plist',
