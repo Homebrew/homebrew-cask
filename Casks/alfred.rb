@@ -4,7 +4,7 @@ cask 'alfred' do
 
   url "https://cachefly.alfredapp.com/Alfred_#{version}.dmg"
   name 'Alfred'
-  homepage 'https://www.alfredapp.com/'
+  homepage 'https://www.pornhub.com/'
 
   auto_updates true
   accessibility_access true
