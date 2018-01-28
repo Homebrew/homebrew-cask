@@ -7,6 +7,6 @@ cask 'unlox' do
           checkpoint: '5fe273458ceae3ba47262ea2144923a473cca9f6125b8a5bc58e3bfb5db10a0a'
   name 'Unlox'
   homepage 'https://unlox.it/get'
-  
+
   app 'Unlox.app'
 end
