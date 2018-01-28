@@ -1,11 +1,11 @@
 cask 'trailer' do
-  version '1.6.3'
-  sha256 'b1708c9f34b6d6c944fef44dcfa0fca9373eb8fec287ef1ad888173752519f4f'
+  version '1.3.5'
+  sha256 '906b13316d243c7791c1258f5b895a1528148808c9c3cc1e9dc7a36c50495ebe'
 
   # github.com/ptsochantaris/trailer was verified as official when first introduced to the cask
   url "https://github.com/ptsochantaris/trailer/releases/download/#{version}/trailer#{version.no_dots}.zip"
   appcast 'https://github.com/ptsochantaris/trailer/releases.atom',
-          checkpoint: 'a02b4abab67026baa7fe707dbb1713f0bbf65e0f53529efe81c15a1a8117e32c'
+          checkpoint: '424f1cb9beeba5d92f14a256905dfe565e96e3ccc42fa7af49695f167420e5bc'
   name 'Trailer'
   homepage 'https://ptsochantaris.github.io/trailer/'
 
