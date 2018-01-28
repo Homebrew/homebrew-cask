@@ -1,11 +1,11 @@
 cask 'forecast' do
-  version '0.9_121'
-  sha256 'fcec57220598991a4e3894ae7d7a3323811d87096f94e9bf1a81b75bbdc2ea08'
+  version '0.9_124'
+  sha256 '809af9ba53df7cbc77cb00cce4d99e82b02311f00574dc529762542fd2ca5432'
 
   # d2uzvmey2c90kn.cloudfront.net/appcast_download was verified as official when first introduced to the cask
   url "https://d2uzvmey2c90kn.cloudfront.net/appcast_download/Forecast_#{version}.zip"
   appcast 'https://overcast.fm/appcast/Forecast.xml',
-          checkpoint: '4560de67ed227ddf2035bc6b13209fcc26c0fb490bf483ea79fd476649af50a2'
+          checkpoint: '511888d9ac28bf8361f269ceaf310c1a28d672af4866f7d604786b905504f642'
   name 'Forecast'
   homepage 'https://overcast.fm/forecast'
 
