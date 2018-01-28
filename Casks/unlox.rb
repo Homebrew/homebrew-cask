@@ -4,7 +4,7 @@ cask 'unlox' do
 
   url 'https://unlox.it/download/'
   appcast 'https://unlox.it/download/update.php',
-          checkpoint: '5fe273458ceae3ba47262ea2144923a473cca9f6125b8a5bc58e3bfb5db10a0a'
+          checkpoint: '8e932777b009577398658dacc56b581e704196af71df5047f4073d067a60782e'
   name 'Unlox'
   homepage 'https://unlox.it/get'
 
