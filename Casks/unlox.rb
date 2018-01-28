@@ -4,7 +4,7 @@ cask 'unlox' do
 
   url 'https://unlox.it/download/'
   name 'Unlox'
-  homepage 'https://unlox.it'
+  homepage 'https://unlox.it/'
 
   app 'Unlox.app'
 end
