@@ -1,6 +1,6 @@
 cask 'appshelf' do
-  version '1.6'
-  sha256 'cac1b74b9747cb19dabff7b166322cfc2abfcacb001de8075235a4ac1efc1fd4'
+  version '2.1'
+  sha256 'e46d7c7d58886f0a227bb0a0e054b329fd811db3f6c2f41129161b50cea45c4a'
 
   url "http://www.kedisoft.com/dl/appshelf/AppShelf-#{version}.dmg"
   appcast 'http://www.kedisoft.com/appcasts/appshelf.xml',
