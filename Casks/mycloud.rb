@@ -1,6 +1,6 @@
 cask 'mycloud' do
-  version '17.43.26'
-  sha256 '3d30ee7389686fce876949f7214881cceeb044f6ca0212021f5c06a83b969bd3'
+  version '18.2.17'
+  sha256 'b464f8f6bd99b79bd54b304d8a17220726ca949f5ed9b33659c956f6ca9c26c6'
 
   # download-syncclient-mac.prod.mdl.swisscom.ch was verified as official when first introduced to the cask
   url "https://download-syncclient-mac.prod.mdl.swisscom.ch/mac/myCloudDesktop-installer-#{version}.dmg"
