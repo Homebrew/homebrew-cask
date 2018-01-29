@@ -1,10 +1,10 @@
 cask 'ka-lite' do
-  version '0.17.3'
-  sha256 '911746e4dcd86feac0ed3c7b88fb8bd9e96d5bac77544282e7d344d8b9e1fc4b'
+  version '0.17.4'
+  sha256 '5c25cd1417bb3612d6c6efe15a2c0aab2550163d86fdab3661a75f9366e5a10d'
 
   url "http://pantry.learningequality.org/downloads/ka-lite/#{version.major_minor}/installers/mac/KA-Lite-#{version}.dmg"
   appcast 'https://github.com/learningequality/ka-lite/releases.atom',
-          checkpoint: '3e57c69d45e5226579259c9924a8668ee3619f628b18cad44fd1261a2924ce8e'
+          checkpoint: 'cbf2d8476b2d6495459b6797d46a1452c121cff9ac0f16dda3d75daed216a2f6'
   name 'Khan Academy Lite'
   homepage 'https://learningequality.org/ka-lite/'
 
