@@ -93,6 +93,8 @@ cask 'thunderbird' do
                          'thunderbird-daily',
                        ]
 
+  app 'Thunderbird.app'
+
   zap trash: [
                '~/Library/Thunderbird',
                '~/Library/Caches/Thunderbird',
