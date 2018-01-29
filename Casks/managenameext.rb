@@ -6,7 +6,7 @@ cask 'managenameext' do
   appcast 'throb.pagesperso-orange.fr/prg/Xojo/ManageNameExt_AffV.html',
           checkpoint: '48c241c749d43463b4f829520a97a22019cdbbef9389292636c262d3aab6ea2b'
   name 'ManageNameExt'
-  homepage 'throb.pagesperso-orange.fr/site/ind_JS.html?Prg_S.html&Prg_ApplisRB.html#ManageNameExt'
+  homepage 'http://throb.pagesperso-orange.fr/site/ind_JS.html?Prg_S.html&Prg_ApplisRB.html#ManageNameExt'
 
   depends_on macos: '>= :mavericks'
 
