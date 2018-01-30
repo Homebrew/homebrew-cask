@@ -1,6 +1,6 @@
 cask 'appgate-sdp-client' do
-  version '3.2.1'
-  sha256 'db178b54893c5d291553f35ab5084cd289bf4f92180893b127d0129c4ba181f7'
+  version '3.3.0'
+  sha256 '9d1fef5b99bd01d9b174e920c926fb78a1300deef422c36b281bc571257d788a'
 
   url "https://download.cryptzone.com/files/download/AppGate-#{version}/clients/AppGate-#{version}-Installer.dmg"
   name 'AppGate SDP Client for macOS'
