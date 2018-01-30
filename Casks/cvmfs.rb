@@ -4,8 +4,6 @@ cask 'cvmfs' do
 
   url "https://ecsft.cern.ch/dist/cvmfs/cvmfs-#{version}/cvmfs-#{version}.pkg"
   name 'CernVM File System'
-  name 'CernVM-FS'
-  name 'CVMFS'
   homepage 'https://cernvm.cern.ch/portal/filesystem'
 
   depends_on cask: 'osxfuse'
@@ -16,10 +14,5 @@ cask 'cvmfs' do
 
   caveats do
     files_in_usr_local
-
-    <<~EOS
-      For #{token} configuration and use instructions, see
-        http://cvmfs.readthedocs.io/en/#{version.major}.#{version.minor}/cpt-quickstart.html#mac-os-x
-    EOS
   end
 end
