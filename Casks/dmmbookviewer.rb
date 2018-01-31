@@ -16,5 +16,9 @@ cask 'dmmbookviewer' do
                        'jp.co.cyphertec.installer.info.CypherGuardAC',
                        'jp.co.cyphertec.installer.kext.nosigned',
                        'jp.co.cyphertec.installer.kext.signed',
+                     ],
+            kext:    [
+                       'jp.co.cyphertec.CypherGuardKa',
+                       'jp.co.cyphertec.CypherGuardAT',
                      ]
 end
