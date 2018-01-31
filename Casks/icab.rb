@@ -11,5 +11,5 @@ cask 'icab' do
 
   depends_on macos: '>= :lion'
 
-  app "iCab #{version} (64+32 Bit Intel Version for MacOSX 10.7-10.11)/iCab.app"
+  app "iCab #{version} (64+32 Bit Intel Version for MacOSX 10.7-10.12)/iCab.app"
 end
