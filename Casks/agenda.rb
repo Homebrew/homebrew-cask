@@ -1,10 +1,10 @@
 cask 'agenda' do
-  version '1.2'
-  sha256 '04f39bc4691924024f0f4192fccbd1c1bc06686e337eef95ac9a6a9361b43d2a'
+  version '1.3'
+  sha256 '8a17aa615e5cd44e8c1557db4da985e6c891e9b3237840772df1cf15283e757e'
 
   url "https://downloads.agenda.com/Agenda_#{version}.zip"
   appcast 'https://downloads.agenda.com/AgendaSparkleAppcast.xml',
-          checkpoint: '6dcc91355ad735e6f66a472c5e272981e181dc6f3d1c200765054ba7554c2ff2'
+          checkpoint: 'ace5f437c98924b639602763ae74624776eb42120207bd0449c52849e1f3811a'
   name 'Agenda'
   homepage 'https://agenda.com/'
 
