@@ -4,7 +4,7 @@ cask 'laravel-kit' do
 
   url "https://github.com/tarequemdhanif/laravel-kit/releases/download/v#{version}/laravel-kit-#{version}-mac.zip"
   appcast 'https://github.com/tarequemdhanif/laravel-kit/releases.atom',
-          checkpoint '32456f9dffdbdc7b4334a55ac258f4fd3780223f33e16876276c94449a09514f'
+          checkpoint: '32456f9dffdbdc7b4334a55ac258f4fd3780223f33e16876276c94449a09514f'
   name 'Laravel Kit'
   homepage 'https://github.com/tarequemdhanif/laravel-kit'
 
