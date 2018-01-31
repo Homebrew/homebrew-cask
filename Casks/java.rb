@@ -1,4 +1,4 @@
-cask 'java' do
+  cask 'java' do
   version '9.0.4,11:c2514751926b4512b076cc82f959763f'
   sha256 'f5c827ab4c3cf380827199005a3dfe8077a38c4d6e8b3fa37ec19ce6ca9aa658'
 
