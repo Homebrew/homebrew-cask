@@ -15,7 +15,7 @@ branches:
 
 cache:
   directories:
-    - $HOME/.gem
+    - /usr/local/Homebrew/Library/Homebrew/vendor/bundle
 
 install: true # skip install step
 
