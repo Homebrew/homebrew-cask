@@ -15,7 +15,7 @@ cask 'bonitastudiocommunity' do
                     }
 
   uninstall quit:   'org.bonitasoft.studio.product',
-            delete: '/Applications/BonitaStudioCommunity.app'
+            delete: "/Applications/BonitaStudioCommunity-#{version}.app"
 
   zap trash: [
                '~/Library/Preferences/org.bonitasoft.studio.product.plist',
