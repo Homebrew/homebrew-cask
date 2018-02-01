@@ -1,8 +1,8 @@
 cask 'objectivesharpie' do
-  version '3.3.0'
-  sha256 'a3f0b65895e55fa7628e3727772bed99fa7713cc059b716d3f30266b9b18ce0f'
+  version :latest
+  sha256 :no_check
 
-  url "https://download.xamarin.com/objective-sharpie/ObjectiveSharpie-#{version}.pkg"
+  url 'https://dl.xamarin.com/objective-sharpie/ObjectiveSharpie.pkg'
   name 'Objective Sharpie'
   homepage 'https://developer.xamarin.com/guides/cross-platform/macios/binding/objective-sharpie/'
 
