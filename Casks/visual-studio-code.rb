@@ -1,11 +1,11 @@
 cask 'visual-studio-code' do
-  version '1.19.2,490ef761b76b3f3b3832eff7a588aac891e5fe80'
-  sha256 '101c2eca589aec8f72f5cd54dd4bf0cb80ac4821c6143ee07b86519c728955d6'
+  version '1.19.3,7c4205b5c6e52a53b81c69d2b2dc8a627abaa0ba'
+  sha256 '0fbc3c63d5a6e9a44908c3b018bedb35b8d1b750c2e8dd08b65401ec4fda73a7'
 
   # az764295.vo.msecnd.net/stable was verified as official when first introduced to the cask
   url "https://az764295.vo.msecnd.net/stable/#{version.after_comma}/VSCode-darwin-stable.zip"
   appcast 'https://vscode-update.azurewebsites.net/api/update/darwin/stable/VERSION',
-          checkpoint: '5e48cd4d4fd0acae91b3576cb732deb38da67a3da7a674a5e33f9ef3075c06c7'
+          checkpoint: 'a17b52f5b32dcb7d17ba7575c89cc6ade8d602c0d2c5bda2fb8041b3f3489b62'
   name 'Microsoft Visual Studio Code'
   name 'VS Code'
   homepage 'https://code.visualstudio.com/'

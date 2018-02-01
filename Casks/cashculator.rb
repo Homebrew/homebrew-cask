@@ -1,10 +1,10 @@
 cask 'cashculator' do
-  version '1.3.7'
-  sha256 '81b9be9131bcabd87a2c740028e5511b2f3db25abc15acc401cf7df62df12e30'
+  version '1.3.8'
+  sha256 'bc16aa9de05f7308b42999eaaba7511128780fa0f2ddc65a3578c4c9a9802d82'
 
   url "https://dl.apparentsoft.com/Cashculator_#{version}.dmg"
   appcast 'https://dl.apparentsoft.com/cashculator.rss',
-          checkpoint: 'c5f684fdba54e32ba054459ec44f052bc76db4943bd284086516f351f50f902d'
+          checkpoint: 'cd773b3b4fb0a7e4ff186f877d924ecdaac5ddfb3915f566d8af6aa9e71daab9'
   name 'Cashculator'
   homepage 'https://www.apparentsoft.com/cashculator'
 

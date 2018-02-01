@@ -13,7 +13,9 @@ cask 'battle-net' do
   name 'Blizzard Battle.net'
   homepage 'https://www.battle.net/'
 
-  app 'Battle.net.app'
+  installer manual: 'Battle.net-Setup.app'
+
+  uninstall delete: '/Applications/Battle.net.app'
 
   zap trash: [
                '~/Library/Application Support/Battle.net',
@@ -29,4 +31,8 @@ cask 'battle-net' do
                '/Users/Shared/Blizzard',
              ],
       rmdir: '~/Blizzard'
+
+  caveats <<~EOS
+    If you pick an installation directory other than /Applications when installing this cask, you will need to uninstall it manually
+  EOS
 end
