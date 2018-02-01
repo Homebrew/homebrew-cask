@@ -1,10 +1,10 @@
 cask 'nylas-mail-lives' do
-  version '2.2.0'
-  sha256 '84dfaeff9f5b2658169f0ee6e1bafac1f265cee8916e4a3eef434bc06a0a144e'
+  version '2.2.2'
+  sha256 '4403231644c2cbca7d07c2763ff1a8116687ef499bd2e1ba544f1826f8cecfe2'
 
-  url "https://github.com/nylas-mail-lives/nylas-mail/releases/download/#{version}/nylas-#{version}.dmg"
+  url "https://github.com/nylas-mail-lives/nylas-mail/releases/download/#{version}/nylas-mail-#{version}.dmg"
   appcast 'https://github.com/nylas-mail-lives/nylas-mail/releases.atom',
-          checkpoint: '745e3750c0293d39210d2bc4bef742724d59b02fc88ab26453f99bbe2b83526f'
+          checkpoint: 'facf678c3480dd77ac1f31de0e99b82d1a6b695fa001be7b44b919551740c091'
   name 'Nylas Mail Lives'
   homepage 'https://github.com/nylas-mail-lives/nylas-mail'
 
