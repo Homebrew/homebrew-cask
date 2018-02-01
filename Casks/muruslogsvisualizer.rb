@@ -1,6 +1,6 @@
 cask 'muruslogsvisualizer' do
-  version '1.4.2'
-  sha256 'c36fc392a741588b9e270d45f0a791cf869473d5842e2d799d32a25b1a3a64e9'
+  version '1.4.3'
+  sha256 '43d7219580b8e3afd9a0dce3b258e66b19aa759bee023b2bc8b33266a8cd4c20'
 
   url "https://www.murusfirewall.com/downloads/muruslogsvisualizer-#{version}.zip"
   name 'Murus Logs Visualizer'
