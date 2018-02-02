@@ -1,4 +1,4 @@
-cask 'tiddlywiki' do
+cask 'tiddly' do
   version '0.0.12'
   sha256 'c75d8a68360ab10ebe15917eea3c570094f5adf23411435fd53190ab509785f5'
 
@@ -8,5 +8,5 @@ cask 'tiddlywiki' do
   name 'TiddlyWiki'
   homepage 'https://github.com/Jermolene/TiddlyDesktop'
 
-  app "TiddlyDesktop-mac64-v#{version}/TiddlyWiki.app"
+  app "TiddlyDesktop-mac64-v#{version}/TiddlyDesktop.app"
 end
