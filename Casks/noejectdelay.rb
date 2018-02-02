@@ -8,13 +8,14 @@ cask 'noejectdelay' do
   name 'NoEjectDelay'
   homepage 'https://pqrs.org/osx/karabiner/noejectdelay.html'
 
-  pkg 'NoEjectDelay.sparkle_guided.pkg'
-
   depends_on macos: '<= :el_capitan'
-  caveats do
-    discontinued
-  end
+
+  pkg 'NoEjectDelay.sparkle_guided.pkg'
 
   uninstall kext:    'org.pqrs.driver.NoEjectDelay',
             pkgutil: 'org.pqrs.driver.NoEjectDelay'
+
+  caveats do
+    discontinued
+  end
 end
