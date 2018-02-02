@@ -11,5 +11,5 @@ cask 'opentoonz' do
 
   pkg 'OpenToonz.pkg'
 
-  uninstall pkgutil: 'io.gothub.opentoonz'
+  uninstall pkgutil: 'io.github.opentoonz'
 end
