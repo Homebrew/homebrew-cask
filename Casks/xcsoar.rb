@@ -1,6 +1,6 @@
 cask 'xcsoar' do
-  version '6.8.9'
-  sha256 '746f8ab055f8b54f136c09156cf44fa394ad4299d10518010cb3fff2ba189288'
+  version '6.8.10'
+  sha256 'cdfa764a6164f51d9b5c5ce08836bef3ff8064622341217a2c8762f72e367e60'
 
   url "https://download.xcsoar.org/releases/#{version}/OSX/XCSoar.dmg"
   appcast 'https://download.xcsoar.org/releases/',
