@@ -4,7 +4,7 @@ cask 'lima' do
 
   url "https://update.api.meetlima.com/downloads/osx/dist/Lima_#{version}.dmg"
   name 'Lima'
-  homepage 'https://install.meetlima.com/'
+  homepage 'https://meetlima.com/'
 
   app 'Lima.app'
 end
