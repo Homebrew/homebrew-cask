@@ -4,12 +4,18 @@ cask 'noejectdelay' do
 
   url "https://pqrs.org/osx/karabiner/files/NoEjectDelay-#{version}.dmg"
   appcast 'https://github.com/tekezo/NoEjectDelay/releases.atom',
-          checkpoint: '4475b83ad5927875fbc16e19c890dbaba1e466a758afcc0351ec86bb0e00468d'
+          checkpoint: '8cf6b036077bd9db8bd105ec548f60866403c2986e760dcc6d0c8b5b99916710'
   name 'NoEjectDelay'
-  homepage 'https://pqrs.org/osx/karabiner/noejectdelay.html.en'
+  homepage 'https://pqrs.org/osx/karabiner/noejectdelay.html'
+
+  depends_on macos: '<= :el_capitan'
 
   pkg 'NoEjectDelay.sparkle_guided.pkg'
 
   uninstall kext:    'org.pqrs.driver.NoEjectDelay',
             pkgutil: 'org.pqrs.driver.NoEjectDelay'
+
+  caveats do
+    discontinued
+  end
 end
