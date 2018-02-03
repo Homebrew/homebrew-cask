@@ -18,5 +18,13 @@ cask 'station' do
                     'org.efounders.BrowserX.helper',
                   ]
 
-  zap trash: '~/Library/Application Support/Station/'
+  zap trash: [
+               '~/Library/Application Support/Station/',
+               '~/Library/Caches/org.efounders.BrowserX',
+               '~/Library/Caches/org.efounders.BrowserX.ShipIt',
+               '~/Library/Logs/Station',
+               '~/Library/Preferences/org.efounders.BrowserX.helper.plist',
+               '~/Library/Preferences/org.efounders.BrowserX.plist',
+               '~/Library/Saved Application State/org.efounders.BrowserX.savedState',
+             ]
 end
