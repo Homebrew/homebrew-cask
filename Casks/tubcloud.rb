@@ -10,5 +10,8 @@ cask 'tubcloud' do
 
   pkg 'tubCloud-latest.pkg'
 
-  uninstall pkgutil: 'de.tu-berlin.tubit.owncloud'
+  uninstall pkgutil: [
+                       'com.ownCloud.finderPlugin',
+                       'de.tu-berlin.tubcloud',
+                     ]
 end
