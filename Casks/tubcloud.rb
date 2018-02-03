@@ -8,7 +8,7 @@ cask 'tubcloud' do
 
   depends_on macos: '>= :yosemite'
 
-  pkg 'tubcloud-latest-macos.pkg'
+  pkg 'tubCloud-latest.pkg'
 
   uninstall pkgutil: 'de.tu-berlin.tubit.owncloud'
 end
