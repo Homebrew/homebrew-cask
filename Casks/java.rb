@@ -57,6 +57,7 @@ cask 'java' do
                          "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents",
                          '/Library/PreferencePanes/JavaControlPanel.prefPane',
                          '/Library/Java/Home',
+                         '/Library/Java/MacOS',
                        ]
 
   zap trash: [
