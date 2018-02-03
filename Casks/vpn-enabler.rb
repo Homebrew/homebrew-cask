@@ -16,7 +16,7 @@ cask 'vpn-enabler' do
   name 'VPN Enabler'
   homepage 'https://cutedgesystems.com/'
 
-  depends_on macos: [:el_capitan, :sierra, :high_sierra]
+  depends_on macos: '=> :high_sierra'
 
   app 'VPN Enabler.app'
 end
