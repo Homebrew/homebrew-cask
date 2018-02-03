@@ -1,6 +1,6 @@
 cask 'isyncr' do
-  version '5.2.0'
-  sha256 'd7f7fb2701f64e904160b9fb71ed334c8b632080528322274d73940606436d32'
+  version '5.6.3'
+  sha256 'e4de8de36b1e191aa511846549cac5f36727e44b0ad2607efa07a249fde55d91'
 
   url "http://www.jrtstudio.com/files/iSyncr%20Desktop%20#{version}.pkg"
   appcast 'http://www.jrtstudio.com/files/SlashiSyncr25.js',
@@ -10,6 +10,6 @@ cask 'isyncr' do
 
   pkg "iSyncr Desktop #{version}.pkg"
 
-  uninstall pkgutil: 'com.test.iSyncr.pkg',
+  uninstall pkgutil: 'com.jrtstudio.iSyncrDesktop',
             quit:    'com.JRTStudio.iSyncrWiFi'
 end

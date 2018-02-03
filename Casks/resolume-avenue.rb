@@ -1,9 +1,8 @@
 cask 'resolume-avenue' do
-  version '6.0.1'
-  sha256 '0c09ba4f28d227d487153e9f2a93895f2a053ea51a9b5dffb95f348008aa8a3a'
+  version '6.0.4'
+  sha256 'c0dd0a2b87094beaedf45cc12a7eafbeef3e04fc9d3016e8ff9c988b83d846ae'
 
-  # d19j6z4lvv1vde.cloudfront.net was verified as official when first introduced to the cask
-  url "https://d19j6z4lvv1vde.cloudfront.net/Resolume_Avenue_#{version.dots_to_underscores}_Installer.dmg"
+  url "https://resolume.com/download/Resolume_Avenue_#{version.dots_to_underscores}_Installer.dmg"
   name 'Resolume Avenue'
   homepage 'https://resolume.com/'
 

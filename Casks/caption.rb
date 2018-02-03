@@ -1,11 +1,11 @@
 cask 'caption' do
-  version '2.0.0'
-  sha256 '8736b33215a2128a46fe27830e38ca50a525a0916ba64d89826404b96e80712b'
+  version '2.0.1'
+  sha256 'bc3c2383ca3be4fb64adc5c8d97af2e372c163272132527db0b4ee5ab6a43605'
 
   # github.com/gielcobben/caption was verified as official when first introduced to the cask
   url "https://github.com/gielcobben/caption/releases/download/v#{version}/caption-#{version}-mac.zip"
   appcast 'https://github.com/gielcobben/caption/releases.atom',
-          checkpoint: '73cc9869034771e1f9f6a621ad89d8f65fff43b8e33851c22af3c481e4082603'
+          checkpoint: 'bff0081ad85952e53d879852ab45c01990587add30832a67595355eb6ea98c7c'
   name 'Caption'
   homepage 'https://getcaption.co/'
 

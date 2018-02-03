@@ -1,11 +1,11 @@
 cask 'station' do
-  version '1.2.0'
-  sha256 'e2439392c919855f1c5fbf7c72de2a3e59e8f1f3f587ee161a6360b3f5d1b575'
+  version '1.3.1'
+  sha256 '38a94789bd847f4e2f2d8b6051f81b8e19eff50158e8b043b50aff507e75cdb7'
 
   # github.com/getstation/desktop-app-releases was verified as official when first introduced to the cask
   url "https://github.com/getstation/desktop-app-releases/releases/download/#{version}/Station-#{version}-mac.zip"
   appcast 'https://github.com/getstation/desktop-app-releases/releases.atom',
-          checkpoint: '95c9a5da3826ddf2eeb0fe5ee9425851fed4b34f9c9545d0100e1be5afef1aca'
+          checkpoint: 'e5f819d1b59aa2517c837c82b7ef7d79c3fae45431739a2aaee8d68b46f42438'
   name 'Station'
   homepage 'https://getstation.com/'
 
@@ -18,5 +18,13 @@ cask 'station' do
                     'org.efounders.BrowserX.helper',
                   ]
 
-  zap trash: '~/Library/Application Support/Station/'
+  zap trash: [
+               '~/Library/Application Support/Station/',
+               '~/Library/Caches/org.efounders.BrowserX',
+               '~/Library/Caches/org.efounders.BrowserX.ShipIt',
+               '~/Library/Logs/Station',
+               '~/Library/Preferences/org.efounders.BrowserX.helper.plist',
+               '~/Library/Preferences/org.efounders.BrowserX.plist',
+               '~/Library/Saved Application State/org.efounders.BrowserX.savedState',
+             ]
 end

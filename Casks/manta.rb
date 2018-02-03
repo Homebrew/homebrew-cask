@@ -1,11 +1,11 @@
 cask 'manta' do
-  version '1.0.0'
-  sha256 '8677bff56254e96333f66f175e93a12da5cab98b9f366e68d5eb50a399c9e483'
+  version '1.1.2'
+  sha256 'f3907c15172e7effefcc8a555c53e322d668a8c33216d9702f50a371564a4cd3'
 
   # github.com/hql287/Manta was verified as official when first introduced to the cask
   url "https://github.com/hql287/Manta/releases/download/v#{version}/Manta-#{version}-mac.zip"
   appcast 'https://github.com/hql287/Manta/releases.atom',
-          checkpoint: 'b52668faff360f6743266b614e7aad5d8632ba8a1d2166c659960502a8f6f3c2'
+          checkpoint: '71e11321e83109b18ef39893a1aa7053b87f9865d756bfd8aa9eeb77c654592f'
   name 'Manta'
   homepage 'https://manta.life/'
 

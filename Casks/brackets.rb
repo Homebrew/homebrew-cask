@@ -5,7 +5,7 @@ cask 'brackets' do
   # github.com/adobe/brackets was verified as official when first introduced to the cask
   url "https://github.com/adobe/brackets/releases/download/release-#{version}/Brackets.Release.#{version}.dmg"
   appcast 'https://github.com/adobe/brackets/releases.atom',
-          checkpoint: 'e525c92ad8a10ef3d867a48bf043b688d58d6991acb1e177cc97ead215b4e0db'
+          checkpoint: '95a55c07f04ad09125640a48c75833498aafb719fb61d001bd10530a9fc8ed80'
   name 'Brackets'
   homepage 'http://brackets.io/'
 
