@@ -1,13 +1,15 @@
 cask 'manuscripts' do
-  version '1.2.9-71-GAF2A6,205'
-  sha256 '04ecd87ab1f4a1a7a1ce8aa6ede9dcb3c9b44430702a977cc4e038a62f43cdc5'
+  version '1.2.9-79-GE9ECE4,208'
+  sha256 '3e760270bcca7d38dd4d06bc2f708d170cf87a870c638ba272a5b58a4d70dbee'
 
   # hockeyapp.net/api/2/apps/280aaebd99e1f12edc41b48d909db0c4 was verified as official when first introduced to the cask
   url "https://rink.hockeyapp.net/api/2/apps/280aaebd99e1f12edc41b48d909db0c4/app_versions/#{version.after_comma}?format=zip"
   appcast 'https://rink.hockeyapp.net/api/2/apps/280aaebd99e1f12edc41b48d909db0c4',
-          checkpoint: '808b92eecdef01db7bf3748ecbae2bdccd80ff50f73d08a57bcc6a85b73a7af2'
+          checkpoint: '679b4a957565235403ea6b9b60e2d2243aefaf863bf5bbab99c4c455171df804'
   name 'Manuscripts'
   homepage 'https://www.manuscriptsapp.com/'
+
+  depends_on macos: '>= :yosemite'
 
   app 'Manuscripts.app'
 end
