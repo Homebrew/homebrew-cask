@@ -1,6 +1,6 @@
 cask 'cerebro' do
-  version '0.3.1'
-  sha256 '83fe4fa5baae56052eb44ae0a94a93880e2d99e52ad5d2e0d4201ddd2f960889'
+  version '0.3.2'
+  sha256 'a4df90aca836d6110ac65cd5c1427fb9121f93bdd36ed8527816befbda3dc833'
 
   # github.com/KELiON/cerebro was verified as official when first introduced to the cask
   url "https://github.com/KELiON/cerebro/releases/download/v#{version}/cerebro-#{version}.dmg"
