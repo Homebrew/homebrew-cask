@@ -1,4 +1,4 @@
-cask 'openclonk' do
+cask 'openclonk-app' do
   version '8.0,85d9c2c'
   sha256 'cba50deb936a70f0ba003313659b91c365f231a3f9d86d10e6918c3f32c7bced'
 
