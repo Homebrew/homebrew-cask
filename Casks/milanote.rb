@@ -5,7 +5,7 @@ cask 'milanote' do
   # milanote-app-releases.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://milanote-app-releases.s3.amazonaws.com/Milanote-#{version}.dmg"
   name 'Milanote'
-  homepage 'https://www.milanote.com/download-mac-app'
+  homepage 'https://www.milanote.com/'
 
   app 'Milanote.app'
 
