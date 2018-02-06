@@ -12,8 +12,9 @@ cask 'flash-ppapi' do
 
   pkg 'Install Adobe Pepper Flash Player.app/Contents/Resources/Adobe Flash Player.pkg'
 
-  uninstall pkgutil: 'com.adobe.pkg.PepperFlashPlayer',
-            delete:  '/Library/Internet Plug-Ins/PepperFlashPlayer'
+  uninstall pkgutil:   'com.adobe.pkg.PepperFlashPlayer',
+            launchctl: 'com.adobe.fpsaud',
+            delete:    '/Library/Internet Plug-Ins/PepperFlashPlayer'
 
   zap trash: [
                '~/Library/Caches/Adobe/Flash Player',
