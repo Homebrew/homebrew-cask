@@ -13,8 +13,9 @@ cask 'flash-npapi' do
 
   pkg 'Install Adobe Flash Player.app/Contents/Resources/Adobe Flash Player.pkg'
 
-  uninstall pkgutil: 'com.adobe.pkg.FlashPlayer',
-            delete:  '/Library/Internet Plug-Ins/Flash Player.plugin'
+  uninstall pkgutil:   'com.adobe.pkg.FlashPlayer',
+            launchctl: 'com.adobe.fpsaud',
+            delete:    '/Library/Internet Plug-Ins/Flash Player.plugin'
 
   zap trash: [
                '~/Library/Caches/Adobe/Flash Player',
