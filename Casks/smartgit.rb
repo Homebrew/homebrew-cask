@@ -1,10 +1,10 @@
 cask 'smartgit' do
-  version '17.1.3'
-  sha256 '01b409a3e3ab6b43c2876084294f9919e03ee6bf394406b019e6052083aaef9f'
+  version '17.1.4'
+  sha256 '502d4383b0c7bb35d75664314263d38edadcd7a10ee400f3e21176a575e5c505'
 
-  url "https://www.syntevo.com/static/smart/download/smartgit/smartgit-macosx-#{version.dots_to_underscores}.dmg"
+  url "https://www.syntevo.com/downloads/smartgit/smartgit-macosx-#{version.dots_to_underscores}.dmg"
   appcast 'https://www.syntevo.com/smartgit/changelog.txt',
-          checkpoint: '2d0842a34f992b8edf8bf61caef1d155b7898e9b2feb2b2ddb95a34c16e8c810'
+          checkpoint: 'ac063796a8db1a234286aa9e3d1bae901ca459ba9662d801af0b8d2445a45f62'
   name 'SmartGit'
   homepage 'https://www.syntevo.com/smartgit/'
 
