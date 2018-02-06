@@ -1,11 +1,11 @@
 cask 'supercollider' do
-  version '3.9.0'
-  sha256 '3a28058587cc849488e8023132bed58f0e4220fc87e8996012824e1af26483fa'
+  version '3.9.1'
+  sha256 '5b13cdc6d1fe9a6a947406fb22852d72f1ec623367f1cea0065b63ed86d5bdde'
 
   # github.com/supercollider/supercollider was verified as official when first introduced to the cask
   url "https://github.com/supercollider/supercollider/releases/download/Version-#{version}/SuperCollider-#{version}-macOS.zip"
   appcast 'https://github.com/supercollider/supercollider/releases.atom',
-          checkpoint: '581d5c9caac55fc65eca7ab9ba1b3153545f3e0122b67d4c49a66f6ac3a88811'
+          checkpoint: 'e59593baaa6ede02f4abfc079e0e144b49fad2b103acc5f332385be6626b3d1e'
   name 'SuperCollider'
   homepage 'https://supercollider.github.io/'
 
