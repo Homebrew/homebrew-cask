@@ -1,5 +1,5 @@
 cask 'papers' do
-  version '3.4.15,555'
+  version '3.4.16,555'
   sha256 'de4a61730a1a343ad06f0aa41fd9b9881d0cd11436db7aa8b61b11108c22a03e'
 
   # appcaster.papersapp.com/apps/mac/production/download was verified as official when first introduced to the cask
