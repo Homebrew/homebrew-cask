@@ -5,7 +5,7 @@ cask 'opencpn' do
   # opencpn.navnux.org was verified as official when first introduced to the cask
   url "http://opencpn.navnux.org/#{version}/OpenCPN_#{version}.dmg"
   appcast 'https://github.com/OpenCPN/OpenCPN/releases.atom',
-          checkpoint: '8b0d9d11476dcd28ab088ed9385fef75cd22ed5eed0cff4868453ef9fd3978ae'
+          checkpoint: 'a5abe6ccfc54897449fb98fa13f5b7f6f8047dd42505b1513bbac76677d2d6c3'
   name 'OpenCPN'
   homepage 'https://www.opencpn.org/'
 
