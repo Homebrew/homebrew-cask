@@ -1,10 +1,10 @@
 cask 'santa' do
-  version '0.9.21'
-  sha256 '2cfe09a114c3e2ce12b6e54b4078a5aabe975c040bbf29734ec2f2f01ec10a56'
+  version '0.9.22'
+  sha256 '8f97f53bce0bad2c99ab2bb1d62693565d0d67218f6708ee85f8a2f21f542e6b'
 
   url "https://github.com/google/santa/releases/download/#{version}/santa-#{version}.dmg"
   appcast 'https://github.com/google/santa/releases.atom',
-          checkpoint: 'e1fa78a6cc0fb47fe008083d360ad24d8c7f765406f2b9247aab4b311f9e178e'
+          checkpoint: 'fe9234a73834663fe2a0d0c5155359857c737d679a97f6bebff2d7023242a8c2'
   name 'Santa'
   homepage 'https://github.com/google/santa'
 
