@@ -11,7 +11,7 @@ cask 'gog-galaxy' do
 
   pkg "galaxy_client_#{version}.pkg"
 
-  uninstall delete:    '/Applications/GalaxyClient.app',
+  uninstall delete:    '/Applications/GOG Galaxy.app',
             launchctl: [
                          'com.gog.galaxy.ClientService',
                          'com.gog.galaxy.commservice',
