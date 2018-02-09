@@ -6,7 +6,7 @@ cask 'deploystudio' do
   name 'DeployStudio Server'
   homepage 'http://www.deploystudio.com/'
 
-  pkg "DeployStudioServer_v#{version}.mpkg"
+  pkg "DeployStudioServer_v#{version}.pkg"
 
   uninstall pkgutil: [
                        'com.deploystudio.admin.pkg',
