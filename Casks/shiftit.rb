@@ -1,10 +1,10 @@
 cask 'shiftit' do
-  version '1.6.4'
-  sha256 '20db9e67f70b77bf1be325b0fb6705ac469c79595348da83e5ae180fe3193773'
+  version '1.6.5'
+  sha256 'cadc68ddb7586e33f5404f993144c0234509cfb78a1f95f6b3e9033e224e9472'
 
-  url "https://github.com/fikovnik/ShiftIt/releases/download/version-#{version}/ShiftIt-#{version}.zip"
+  url "https://github.com/fikovnik/ShiftIt/releases/download/#{version}/ShiftIt-#{version}.zip"
   appcast 'https://github.com/fikovnik/ShiftIt/releases.atom',
-          checkpoint: '643bc93d3db52d965d0cc9022f12b8194db46b99eb04530b618f3620a4ab9107'
+          checkpoint: '575f49d7e67cfda3dce9a2518f7186747c92df02852de9a2831433ba5dfbacf0'
   name 'ShiftIt'
   homepage 'https://github.com/fikovnik/ShiftIt/'
 
