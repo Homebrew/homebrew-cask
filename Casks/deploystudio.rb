@@ -6,11 +6,13 @@ cask 'deploystudio' do
   name 'DeployStudio Server'
   homepage 'http://www.deploystudio.com/'
 
-  pkg "DeployStudioServer_v#{version}.mpkg"
+  pkg "DeployStudioServer_v#{version}.pkg"
 
-  uninstall pkgutil: [
-                       'com.deploystudio.admin.pkg',
-                       'com.deploystudio.prefpanel.pkg',
-                       'com.deploystudio.replica.sync.pkg',
-                     ]
+  uninstall delete:    [
+                         '/Applications/Utilities/DeployStudio Admin.app',
+                         '/Applications/Utilities/DeployStudio Assistant.app',
+                         '/Applications/Utilities/DeployStudio Runtime.app',
+                       ],
+            launchctl: 'com.deploystudio.server',
+            pkgutil:   'com.deploystudio.*'
 end
