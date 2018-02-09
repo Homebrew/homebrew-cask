@@ -9,7 +9,9 @@ cask 'falcon-sql-client' do
   name 'Falcon SQL Client'
   homepage 'https://plot.ly/free-sql-client-download'
 
-  app 'release/Mac-64bit/Falcon SQL Client-darwin-x64/Falcon SQL Client.app'
+  container nested: "release/Falcon SQL Client-#{version}.dmg"
+
+  app 'Falcon SQL Client.app'
 
   zap trash: [
                '~/.plotly',
