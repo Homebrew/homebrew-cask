@@ -1,10 +1,10 @@
 cask 'tiddly' do
-  version '0.0.12'
-  sha256 'c75d8a68360ab10ebe15917eea3c570094f5adf23411435fd53190ab509785f5'
+  version '0.0.13'
+  sha256 '8125475c3c18fdd029c38361287d64abb4ced1552bf8b60fb9ae86e98e9bddbe'
 
   url "https://github.com/Jermolene/TiddlyDesktop/releases/download/v#{version}/tiddlydesktop-mac64-v#{version}.zip"
   appcast 'https://github.com/Jermolene/TiddlyDesktop/releases.atom',
-          checkpoint: '985ae77d9351beb2c4cb57eb8255fb08d166c170c09e03a2f01bab24e582da54'
+          checkpoint: '314219c2be7f5bb73d9f2926910df7c4d205765c2023dfb67a0cbbc120c62cd4'
   name 'TiddlyWiki'
   homepage 'https://github.com/Jermolene/TiddlyDesktop'
 

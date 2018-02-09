@@ -1,10 +1,10 @@
 cask 'tripmode' do
-  version '2.1.0-583'
-  sha256 '98ccbe84fa054ce160c2ebe1823b7362605090a3330fb16ae21e41a9260d0353'
+  version '2.1.1-595'
+  sha256 '533d6696b17e1571c080f57f5ae80f00370be22ff61e2e35657eb1a19c0201b1'
 
   url "https://www.tripmode.ch/app/TripMode-#{version}-app-Release.dmg"
-  appcast 'http://updates.tripmode.ch/app/appcast.xml',
-          checkpoint: '1c589ebad8ed5f9c36a702b070882b73612030eb42bd23587d2106c1399d5e8e'
+  appcast 'https://www.tripmode.ch/app/appcast.xml',
+          checkpoint: 'da80b5877de1d7190298dbe7e253315b4d755c263a0af61012007905352308b1'
   name 'TripMode'
   homepage 'https://www.tripmode.ch/'
 
