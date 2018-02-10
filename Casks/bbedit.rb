@@ -12,4 +12,11 @@ cask 'bbedit' do
   depends_on macos: '>= :mavericks'
 
   app 'BBEdit.app'
+
+  zap trash: [
+               '~/Library/Application Support/BBEdit',
+               '~/Library/Preferences/com.barebones.bbedit.plist',
+               '~/Library/BBEdit',
+               '~/Library/Caches/com.barebones.bbedit',
+             ]
 end
