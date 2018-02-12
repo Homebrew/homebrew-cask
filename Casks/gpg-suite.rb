@@ -1,10 +1,10 @@
 cask 'gpg-suite' do
-  version '2017.3'
-  sha256 'a110b73a85f715baf2e633c01fe13c2af15afee22725e5caad3c1d4596c884e3'
+  version '2018.1'
+  sha256 'f2be13ca1aeb7d29ba46134d1d38f88de9c52eb1270ac00fd5f1bc305fd5921e'
 
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
   appcast 'https://gpgtools.org/releases/gka/appcast.xml',
-          checkpoint: '23af47be58c4a81948edc2d1f31a665bf134031f93398f2719fae0a78531e7b5'
+          checkpoint: 'b2e1337302be3f5bec480c10a26bf00eec28e29928ead4b1f544b3d98fb2a112'
   name 'GPG Suite'
   homepage 'https://gpgtools.org/'
   gpg "#{url}.sig", key_url: 'https://gpgtools.org/GPGTools%2000D026C4.asc'
