@@ -1,10 +1,10 @@
-cask 'margin' do
+cask 'leonardo' do
   version :latest
   sha256 :no_check
 
   url 'http://www.marginsoftware.de/downloads/leonArdo-osx.dmg'
-  name 'margin'
+  name 'leonArdo'
   homepage 'http://www.marginsoftware.de/'
 
-  app 'leonardo.app', target: 'margin.app'
+  app 'leonArdo.app'
 end
