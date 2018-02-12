@@ -1,6 +1,6 @@
 cask 'unity-monodevelop' do
-  version '2017.3.0f3,a9f86dcd79df'
-  sha256 'b4988e91c5d6fe31a1f2d306f02dab52d62f9fc9e8f9bd2c35dcff6143ec5a21'
+  version '2017.3.1f1,fc1d3344e6ea'
+  sha256 'a419840ba0b256e235b0e5548c5c659f60307297b163d351403d4a9a36e7be01'
 
   url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacMonoDevelopInstaller/UnityMonoDevelop.pkg"
   name 'Unity MonoDevelop'
