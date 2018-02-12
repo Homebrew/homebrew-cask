@@ -1,6 +1,6 @@
 cask 'printopia' do
-  version '3.0.4'
-  sha256 'a57d6f0ce253b57708a806c8065d29249dffc9679d10a5e8de89a9781c16619c'
+  version '3.0.7'
+  sha256 'b9614b1efbde5cd73a25e660a9b81c16871905fb97561d37f5cd72568a911366'
 
   url "https://download.decisivetactics.com/products/printopia/dl/Printopia_#{version}.zip"
   name 'Printopia'

@@ -1,8 +1,8 @@
 cask 'xmind-zen' do
-  version 'beta4'
-  sha256 'd101e634816db82f1ff156f64667bb33288fd852827b5ab058c780de3067d8b2'
+  version 'Update1'
+  sha256 'f6fd76550af6f6251a100f468a03f9827e2b137127002804eed9d0a62aec2d1d'
 
-  url "http://dl2.xmind.net/xmind-downloads/XMind-ZEN-Setup-#{version}.zip"
+  url "http://dl3.xmind.net/XMind-ZEN-#{version}-for-macOS.zip"
   name 'XMind ZEN'
   homepage 'https://www.xmind.net/zen/'
 

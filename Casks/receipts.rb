@@ -1,10 +1,10 @@
 cask 'receipts' do
-  version '1.6.2.2'
-  sha256 '4038903fd7d0761396e0dc9fb879363bac460f455529a7e089828530c63d5d73'
+  version '1.6.3'
+  sha256 '314ffaba255ea79e214d1b2e75faf0c517806dd94742b0a31fda8fe7ffb4a492'
 
   url "https://www.receipts-app.com/download/Receipts-#{version}.zip"
   appcast 'https://www.receipts-app.com/updater.php',
-          checkpoint: 'ee085994981ad3d7c90a9da6d1fc9d44725710436f6f44d1027b863d66a381ec'
+          checkpoint: 'b6fa5f3c18d74a111152539b72fd4177d7f7207997eb4253b48d81a4fe13b40b'
   name 'Receipts'
   homepage 'https://www.receipts-app.com/'
 

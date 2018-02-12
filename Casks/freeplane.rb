@@ -1,10 +1,10 @@
 cask 'freeplane' do
-  version '1.6.12'
-  sha256 '97b79f51fae95cc5890b55417c2e6c02019687c847eaf14c7f8b875d2251a757'
+  version '1.6.13'
+  sha256 '21fea08960f65be82a005998b11e294dfa505245ebb686a10ff1dc804f8c11d2'
 
   url "https://downloads.sourceforge.net/freeplane/freeplane%20stable/freeplane_app_jre-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/freeplane/rss?path=/freeplane%20stable',
-          checkpoint: 'cb369a16417ceb1f2b0250b119d5cfa1a9537ee01f69807fd1733464a6b5eb24'
+          checkpoint: 'ebceb77339cd382a5ea45fd5753271c75d66b24eef65622ddf3ca2c539824cda'
   name 'Freeplane'
   homepage 'http://freeplane.sourceforge.net/'
 
