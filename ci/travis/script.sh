@@ -10,10 +10,9 @@
 
 header 'Running script.sh...'
 
-# fix `Calling <<-EOS.undent is deprecated` for `java`
-# can be removed for `java` > 9.0.1 and/or `java8` > 1.8.0_152
-# this was added when `java` == 1.8.0_112
-run /bin/rm -rf "$(brew --prefix)"/Caskroom/java/.metadata
+run brew pull https://github.com/Homebrew/brew/pull/3801
+
+run brew cask reinstall java
 
 apps () { /usr/bin/find /Applications -type d -name '*.app' -maxdepth 2 ; }
 kexts () { "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_loaded_kext_ids" ; }
