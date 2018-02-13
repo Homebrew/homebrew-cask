@@ -1,6 +1,6 @@
 cask 'bathyscaphe' do
-  version '280-v988'
-  sha256 '12f1036e7881a9a8bd61cfe0493fe7c4684e7b139438018790b219e04e7b1c30'
+  version '300-v1057'
+  sha256 '7fa8d7b374d8feb87762cf5e560ed90d24416122c6ed2535805c05a58d1d0946'
 
   # bitbucket.org/bathyscaphe/public/downloads was verified as official when first introduced to the cask
   url "https://bitbucket.org/bathyscaphe/public/downloads/BathyScaphe-#{version}.dmg"
