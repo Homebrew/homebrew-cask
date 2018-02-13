@@ -55,6 +55,8 @@ else
   ohai 'No Casks modified, skipping'
 fi
 
+sleep 5 # Rerunning the checks too soon can result in false positives
+
 for check in "${checks[@]}"; do
   "${check}" > "${HOME}/cask-checks/after/${check}"
 
