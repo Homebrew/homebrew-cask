@@ -7,4 +7,10 @@ cask 'backwords' do
   homepage 'https://backwords.fyi/'
 
   app 'Backwords.app'
+
+  uninstall login_item: 'Backwords',
+            signal:     [
+                          ['TERM', 'com.backwords.app.helper'],
+                          ['TERM', 'com.backwords.app'],
+                        ]
 end
