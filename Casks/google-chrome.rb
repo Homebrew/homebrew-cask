@@ -1,10 +1,10 @@
 cask 'google-chrome' do
-  version '64.0.3282.140'
-  sha256 '706c20d0490249ac11620323fb2bab9f2be5582b6cded521191ffe39f03310c6'
+  version '64.0.3282.167'
+  sha256 '9480948dcd1763a870149e1c135f2cc72692fe72e47e79fa44fd5f82cedfe25b'
 
   url 'https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg'
   appcast 'https://omahaproxy.appspot.com/history?os=mac;channel=stable',
-          checkpoint: 'd590cdf287516dc1850b0e356b4ddadad9927a5278aafdb477d9356f2c79e25d'
+          checkpoint: '04d2d8ffe54c59d7f5fe318d72d158b0980df09fdfd3ce8712df0888b92e0d8b'
   name 'Google Chrome'
   homepage 'https://www.google.com/chrome/'
 
