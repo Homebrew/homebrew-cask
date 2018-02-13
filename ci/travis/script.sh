@@ -10,6 +10,10 @@
 
 header 'Running script.sh...'
 
+run brew pull https://github.com/Homebrew/brew/pull/3801
+
+run brew cask reinstall java
+
 apps () { /usr/bin/find /Applications -type d -name '*.app' -maxdepth 2 ; }
 kexts () { "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_loaded_kext_ids" ; }
 launchjob_install () { "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_installed_launchjob_ids" ; }
