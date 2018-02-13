@@ -15,7 +15,7 @@ cask 'ncar-ncl' do
   name 'ncl'
   homepage 'https://www.ncl.ucar.edu/'
 
-  depends_on cask: 'xquartz'
+  depends_on x11: true
   depends_on formula: 'gcc'
   depends_on macos: '>= :el_capitan'
 
