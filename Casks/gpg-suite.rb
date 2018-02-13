@@ -10,10 +10,7 @@ cask 'gpg-suite' do
   gpg "#{url}.sig", key_url: 'https://gpgtools.org/GPGTools%2000D026C4.asc'
 
   auto_updates true
-  conflicts_with cask: [
-                         'gpg-suite-beta',
-                         'gpg-suite-nightly',
-                       ]
+  conflicts_with cask: 'gpg-suite-nightly'
 
   pkg 'Install.pkg'
 
