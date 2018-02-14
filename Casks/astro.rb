@@ -1,11 +1,11 @@
 cask 'astro' do
-  version '3.0.2,3706'
-  sha256 '52790a06ad13510365fc199b797558d1325d4071eff6557ad9564615047bf199'
+  version '3.0.4,3745'
+  sha256 '6bcb35c466a15700bceaeb2af95120e02353997b225598d21f25efd2ecc02afb'
 
   # pexlabs-updates-xvuif5mcicazzducz2j2xy3lki.s3-us-west-2.amazonaws.com was verified as official when first introduced to the cask
   url "https://pexlabs-updates-xvuif5mcicazzducz2j2xy3lki.s3-us-west-2.amazonaws.com/Astro-#{version.after_comma}.dmg"
   appcast 'https://pexlabs-updates-xvuif5mcicazzducz2j2xy3lki.s3-us-west-2.amazonaws.com/pexappcast.xml',
-          checkpoint: '9f0a903a00e9e4c7e7c336ec5adc6ed1e53d3b251a534d704a58dcabd154df3b'
+          checkpoint: '77938345d5b29395b377ca1a19b343977b6897e18ebabd7eaf54a5df949a4419'
   name 'Astro'
   homepage 'https://www.helloastro.com/'
 
