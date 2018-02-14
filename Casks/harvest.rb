@@ -1,6 +1,6 @@
 cask 'harvest' do
   version '2.1.3'
-  sha256 'e7d70cff4aeb14eed42f27e6229544efbcfb6c36813d0e334cdb2497e3923dac'
+  sha256 '0524300d7fe98035e71502833977025f2f7b63a5af726521b0acd7fed57cab70'
 
   url "https://www.getharvest.com/harvest/mac/Harvest.#{version}.zip"
   appcast 'https://www.getharvest.com/harvest/mac/appcast.xml',
