@@ -10,5 +10,7 @@ cask 'starleaf' do
 
   pkg 'StarLeaf.pkg'
 
-  uninstall pkgutil: 'com.starleaf.breeze2.mac'
+  uninstall login_item: 'StarLeaf',
+            pkgutil:    'com.starleaf.breeze2.mac',
+            quit:       'Starleaf.breeze2'
 end
