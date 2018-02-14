@@ -8,5 +8,6 @@ cask 'parallels-client' do
 
   pkg "RasClient-Mac-#{version}.pkg"
 
-  uninstall pkgutil: 'com.2X.Client.Mac'
+  uninstall pkgutil: 'com.2X.Client.Mac',
+            quit:    'com.2X.Client.Mac'
 end
