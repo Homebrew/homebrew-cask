@@ -11,17 +11,22 @@ cask 'adobe-acrobat-reader' do
 
   pkg "AcroRdrDC_#{version.no_dots}_MUI.pkg"
 
-  uninstall pkgutil: [
-                       'com.adobe.acrobat.DC.reader.*',
-                       'com.adobe.RdrServicesUpdater',
-                       'com.adobe.armdc.app.pkg',
-                     ],
-            delete:  '/Applications/Adobe Acrobat Reader DC.app',
-            quit:    [
-                       'com.adobe.Reader',
-                       'com.adobe.AdobeRdrCEFHelper',
-                       'com.adobe.AdobeRdrCEF',
-                     ]
+  uninstall pkgutil:   [
+                         'com.adobe.acrobat.DC.reader.*',
+                         'com.adobe.RdrServicesUpdater',
+                         'com.adobe.armdc.app.pkg',
+                       ],
+            delete:    '/Applications/Adobe Acrobat Reader DC.app',
+            quit:      [
+                         'com.adobe.Reader',
+                         'com.adobe.AdobeRdrCEFHelper',
+                         'com.adobe.AdobeRdrCEF',
+                       ],
+            launchctl: [
+                         'com.adobe.ARMDC.Communicator',
+                         'com.adobe.ARMDC.SMJobBlessHelper',
+                         'com.adobe.ARMDCHelper.cc24aef4a1b90ed56a725c38014c95072f92651fb65e1bf9c8e43c37a23d420d',
+                       ]
 
   zap trash: [
                '~/Library/Preferences/com.adobe.Reader.plist',
