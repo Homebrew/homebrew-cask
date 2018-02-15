@@ -72,6 +72,7 @@ cask 'xscreensaver' do
   screen_saver 'Screen Savers/Engine.saver'
   screen_saver 'Screen Savers/Epicycle.saver'
   screen_saver 'Screen Savers/Eruption.saver'
+  screen_saver 'Screen Savers/Esper.saver'
   screen_saver 'Screen Savers/Euler2D.saver'
   screen_saver 'Screen Savers/Extrusion.saver'
   screen_saver 'Screen Savers/FadePlot.saver'
