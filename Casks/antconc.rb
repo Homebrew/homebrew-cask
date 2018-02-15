@@ -1,11 +1,6 @@
 cask 'antconc' do
-  if MacOS.version <= :snow_leopard
-    version '3.4.1'
-    sha256 '03c353c059b8c0762b01d9be83f435321f5396cbf203bd8b36c6a56682b6a240'
-  else
-    version '3.5.2'
-    sha256 'a7dcdd2473d6e07f3e8afffd9630a4232abcafac4ceef46b8f1a479aeabbec73'
-  end
+  version '3.5.2'
+  sha256 'a7dcdd2473d6e07f3e8afffd9630a4232abcafac4ceef46b8f1a479aeabbec73'
 
   url "http://www.laurenceanthony.net/software/antconc/releases/AntConc#{version.no_dots}/AntConc.zip"
   appcast 'http://www.laurenceanthony.net/software/antconc/releases/',
