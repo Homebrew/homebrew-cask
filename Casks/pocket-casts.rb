@@ -1,10 +1,10 @@
 cask 'pocket-casts' do
-  version '0.9.4'
-  sha256 '04eea0f1434598f8385e0bc320d4ac4a11e7dfc93228f1ef9a92982ca2081f49'
+  version '0.9.5'
+  sha256 'af22a56f8392a5265fb026005a8a242c8024da835826a1d677885eef266a2024'
 
   url 'https://static.pocketcasts.com/mac/PocketCasts.zip'
   appcast 'https://static2.pocketcasts.com/mac/appcast.xml',
-          checkpoint: '70deef38c45ca95b95147207f261fab7811ff853dc3baf6dea6b73aa3c23f7cd'
+          checkpoint: 'fe5c0164713ef586e7996fa33ff28555dd8e3c3ecb37a6acd1461b62393e4ff2'
   name 'Pocket Casts'
   homepage 'https://play.pocketcasts.com/'
 
