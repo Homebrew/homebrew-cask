@@ -5,7 +5,7 @@ cask 'joplin' do
   # github.com/laurent22/joplin was verified as official when first introduced to the cask
   url "https://github.com/laurent22/joplin/releases/download/v#{version}/Joplin-#{version}.dmg"
   appcast 'https://github.com/laurent22/joplin/releases.atom',
-          checkpoint: '303f434baff9307a61b5138991665e6e71c627ceb65f9118c0f5223cd2d1ae73'
+          checkpoint: 'fb1cf317972b3ca588ddc4e4c14b22f1aa9b24cd1643c446f729e80fdf53069e'
   name 'Joplin'
   homepage 'http://joplin.cozic.net/'
 
