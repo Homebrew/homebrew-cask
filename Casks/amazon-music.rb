@@ -16,10 +16,11 @@ cask 'amazon-music' do
                          'com.amazon.music',
                          'com.amazon.music-renderer',
                        ],
-            delete:    [
-                         '/Applications/Amazon Music.app',
-                       ],
-            launchctl: 'com.amazon.music'
+            delete:    '/Applications/Amazon Music.app',
+            launchctl: [
+                         'com.amazon.music',
+                         'com.amazon.music.startup',
+                       ]
 
   zap trash: [
                '~/Library/Preferences/com.amazon.music.plist',
