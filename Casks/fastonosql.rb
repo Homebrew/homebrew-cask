@@ -1,10 +1,10 @@
 cask 'fastonosql' do
-  version '1.15.1'
-  sha256 'be819f417c0175698273a5b5d995a860b0cd47a9e5fa05743a4fe141f3751c2c'
+  version '1.16.3'
+  sha256 '9b60d88fcd5fa860a7260bb1a7471ebead5fedb4fe6cfadd6248de8f6be98497'
 
   url "https://www.fastonosql.com/trial_users_downloads/macosx/fastonosql-#{version}-x86_64.dmg"
   appcast 'https://github.com/fastogt/fastonosql/releases.atom',
-          checkpoint: '835b2b356a2c8b02b46ec081fe77867ca4583f52342aec70ae9238390398b2f9'
+          checkpoint: '0aa5af5f704c186fe0c948108df9d2f4cb42421db7718301ced7e737da9c195c'
   name 'FastoNoSQL'
   homepage 'https://www.fastonosql.com/'
 
