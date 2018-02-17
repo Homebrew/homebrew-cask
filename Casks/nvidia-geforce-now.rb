@@ -8,7 +8,7 @@ cask 'nvidia-geforce-now' do
 
   depends_on macos: '>= :yosemite'
 
-  app 'GeForceNOW.app'
+  app 'NVIDIA GeForce NOW.app'
 
   zap trash: [
                '~/Library/Application Support/NVIDIA/GeForceNOW',
