@@ -1,4 +1,4 @@
-cask 'bluemix-cli' do
+cask 'ibm-cloud-cli' do
   version '0.6.5'
   sha256 '718a6dd70b3bc1af43c9371bf0f432ffb2918c8defb26b4de7a554aef9c8fdf4'
 
@@ -25,14 +25,37 @@ cask 'bluemix-cli' do
                      sudo: true
     end
 
-    system('/usr/bin/sed', '-E', '-i', '.bluemix_uninstall_bak', '-e', '/^### Added by the Bluemix CLI$/d', '-e', '/^source \/usr\/local\/Bluemix\/bx\/bash_autocomplete$/d', "#{ENV['HOME']}/.bashrc") if File.exist?("#{ENV['HOME']}/.bashrc")
-    system('/usr/bin/sed', '-E', '-i', '.bluemix_uninstall_bak', '-e', '/^### Added by the Bluemix CLI$/d', '-e', '/^source \/usr\/local\/Bluemix\/bx\/zsh_autocomplete$/d', "#{ENV['HOME']}/.zshrc") if File.exist?("#{ENV['HOME']}/.zshrc")
+    if File.exist?("#{ENV['HOME']}/.bashrc")
+      system_command '/usr/bin/sed',
+                     args: [
+                             '-E',
+                             '-i', '.bluemix_uninstall_bak',
+                             '-e', '/^### Added by the Bluemix CLI$/d',
+                             '-e', '/^source \/usr\/local\/Bluemix\/bx\/bash_autocomplete$/d',
+                             "#{ENV['HOME']}/.bashrc"
+                           ]
+    end
+
+    if File.exist?("#{ENV['HOME']}/.zshrc")
+      system_command '/usr/bin/sed',
+                     args: [
+                             '-E',
+                             '-i', '.bluemix_uninstall_bak',
+                             '-e', '/^### Added by the Bluemix CLI$/d',
+                             '-e', '/^source \/usr\/local\/Bluemix\/bx\/zsh_autocomplete$/d',
+                             "#{ENV['HOME']}/.zshrc"
+                           ]
+    end
   end
 
   uninstall pkgutil: 'com.ibm.cloud.cli',
             delete:  [
                        '/usr/local/Bluemix',
-                       '/usr/local/bin/bx',
                        '/usr/local/bin/bluemix',
+                       '/usr/local/bin/bluemix-analytics',
                      ]
+
+  caveats do
+    files_in_usr_local
+  end
 end
