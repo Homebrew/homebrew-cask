@@ -1,10 +1,10 @@
 cask 'patchwork' do
-  version '3.8.6'
-  sha256 '14d0ca43f5fb94805d64dfb2a198054e8ddbc265d4951e0ae7f6b85a887fda46'
+  version '3.8.8'
+  sha256 'c98a566f7fb3843048ce7d6ae17b6c6315a2f67c751827e97a4f0e2fe02b0bc4'
 
   url "https://github.com/ssbc/patchwork/releases/download/v#{version}/Patchwork-#{version}-mac.dmg"
   appcast 'https://github.com/ssbc/patchwork/releases.atom',
-          checkpoint: '59837a5ffc3ed04be9a9af01aa907f0eb36d02e6156d0f44a67741a554b42397'
+          checkpoint: '7b12049462445401d19932e28d9512d3531ffa15047c31549bb331c7481d2ab8'
   name 'Patchwork'
   homepage 'https://github.com/ssbc/patchwork'
 
