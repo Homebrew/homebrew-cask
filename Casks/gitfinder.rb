@@ -10,4 +10,18 @@ cask 'gitfinder' do
   homepage 'https://gitfinder.com/'
 
   app 'GitFinder.app'
+
+  uninstall launchctl: 'ag.zigz.GitFInder.GitFinderLauncher',
+            quit:      [
+                         'ag.zigz.GitFinder',
+                         'ag.zigz.GitFinder.GitFinderSync',
+                       ]
+
+  zap trash: [
+               '~/Library/Application Scripts/ag.zigz.GitFinder*',
+               '~/Library/Application Scripts/ag.zigz.GitFInder.GitFinderLauncher',
+               '~/Library/Containers/ag.zigz.GitFinder*',
+               '~/Library/Containers/ag.zigz.GitFInder.GitFinderLauncher',
+               '~/Library/Group Containers/*.ag.zigz.GitFinder',
+             ]
 end
