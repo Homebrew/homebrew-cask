@@ -1,12 +1,14 @@
 cask 'agenda' do
-  version '1.3'
-  sha256 '8a17aa615e5cd44e8c1557db4da985e6c891e9b3237840772df1cf15283e757e'
+  version '1.4'
+  sha256 'd3e33bebdc3795bc726810be13e73edac2afa896611541b3cff0527c8b3fb332'
 
   url "https://downloads.agenda.com/Agenda_#{version}.zip"
   appcast 'https://downloads.agenda.com/AgendaSparkleAppcast.xml',
-          checkpoint: 'ace5f437c98924b639602763ae74624776eb42120207bd0449c52849e1f3811a'
+          checkpoint: '89e84e70260e49d610810f491ff5008d002ccb50ef72288cf0e206e9aa72b8f4'
   name 'Agenda'
   homepage 'https://agenda.com/'
+
+  depends_on macos: '>= :sierra'
 
   app 'Agenda.app'
 end
