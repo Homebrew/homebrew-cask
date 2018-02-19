@@ -18,7 +18,7 @@ cask 'ibm-cloud-cli' do
                      args: [
                              '-E',
                              '-i', '.bluemix_uninstall_bak',
-                             '-e', '/^### Added by the Bluemix CLI$/d',
+                             '-e', '/^### Added by IBM Cloud CLI$/d',
                              '-e', '/^source \/usr\/local\/Bluemix\/bx\/bash_autocomplete$/d',
                              '/etc/profile'
                            ],
@@ -30,7 +30,7 @@ cask 'ibm-cloud-cli' do
                      args: [
                              '-E',
                              '-i', '.bluemix_uninstall_bak',
-                             '-e', '/^### Added by the Bluemix CLI$/d',
+                             '-e', '/^### Added by IBM Cloud CLI$/d',
                              '-e', '/^source \/usr\/local\/Bluemix\/bx\/bash_autocomplete$/d',
                              "#{ENV['HOME']}/.bashrc"
                            ]
@@ -41,7 +41,7 @@ cask 'ibm-cloud-cli' do
                      args: [
                              '-E',
                              '-i', '.bluemix_uninstall_bak',
-                             '-e', '/^### Added by the Bluemix CLI$/d',
+                             '-e', '/^### Added by IBM Cloud CLI$/d',
                              '-e', '/^source \/usr\/local\/Bluemix\/bx\/zsh_autocomplete$/d',
                              "#{ENV['HOME']}/.zshrc"
                            ]
