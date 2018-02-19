@@ -1,10 +1,10 @@
 cask 'physicseditor' do
-  version '1.6.3'
-  sha256 '93aafef2881d2c428016b30590e7a173d546735629e0d4fb616171841447bced'
+  version '1.6.4'
+  sha256 'b009ba02b40c3c7b7a36845bce978acd006b1df9bd0c166a7329d4309cde0f7e'
 
   url "https://www.codeandweb.com/download/physicseditor/#{version}/PhysicsEditor-#{version}-uni.dmg"
   appcast 'https://www.codeandweb.com/releases/PhysicsEditor/appcast-mac-release.xml',
-          checkpoint: '17c0bca63a4fd3bf046d49eec67c25164969e1c7dee761a6c05ff5192aa7c03d'
+          checkpoint: '6218bb475ad17ca5307d2c85e6224b7992667764617514a89a433da12b804f49'
   name 'PhysicsEditor'
   homepage 'https://www.codeandweb.com/physicseditor'
 
