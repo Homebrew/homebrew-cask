@@ -17,7 +17,7 @@ cask 'termhere' do
                '~/Library/Caches/ws.hbang.TermHere',
                '~/Library/Containers/ws.hbang.TermHere.TermHere-Finder-Extension',
                '~/Library/Cookies/ws.hbang.TermHere.binarycookies',
-               '~/Library/Group Containers/N2LN9ZT493.group.ws.hbang.TermHere',
+               '~/Library/Group Containers/*.group.ws.hbang.TermHere',
                '~/Library/Logs/DiagnosticReports/TermHere Finder Extension*',
                '~/Library/Preferences/ws.hbang.TermHere.plist',
              ]
