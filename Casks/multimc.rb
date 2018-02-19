@@ -1,13 +1,12 @@
 cask 'multimc' do
-  version '0.5.1-908'
-  sha256 'cf963b590b1be1be57fde76cc1b5a2bd5af99c041b34f82549ed3efe4868eb4e'
+  version '0.6.1'
+  sha256 '4776c57b2473665f71a1e6289f768df3545296c355f6e47434e3c56cecc0a73d'
 
-  # github.com/MultiMC/MultiMC5 was verified as official when first introduced to the cask
-  url "https://github.com/MultiMC/MultiMC5/releases/download/#{version.major_minor_patch}/mmc-stable-osx64-#{version}.tar.gz"
+  url 'https://files.multimc.org/downloads/mmc-stable-osx64.tar.gz'
   appcast 'https://github.com/MultiMC/MultiMC5/releases.atom',
-          checkpoint: 'd7e8647e53c6dcb5d1ce8b9850641a9928e5ed1b44e72d909a78077882352a5e'
+          checkpoint: '1660252b8319042e3c5c75e650f11563aad6dbd8e4e23adb9d3772cd6ba14c60'
   name 'Multi MC'
   homepage 'https://multimc.org/'
 
-  app "mmc-stable-osx64-#{version}/MultiMC.app"
+  app 'MultiMC/MultiMC.app'
 end
