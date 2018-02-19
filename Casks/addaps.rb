@@ -1,6 +1,6 @@
 cask 'addaps' do
-  version '0.4.38'
-  sha256 'e1b29370d68483703d236964592cedea8b1f95eee354245887d52e7904d3bd37'
+  version '0.5.0'
+  sha256 '83d93b13d42aed02627e1fc8178c0e9701f4c0b94c5528fb8bf0274a1819e557'
 
   # s3.amazonaws.com/addaps-beta was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/addaps-beta/Addap's+beta-#{version}-mac.zip"
