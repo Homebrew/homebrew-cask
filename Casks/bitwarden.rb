@@ -1,11 +1,11 @@
 cask 'bitwarden' do
-  version '0.0.5'
-  sha256 '01b9dd63fb30edf806bc1a5df2b1a2c886e93557baf5e37eb22783012536729a'
+  version '0.0.6'
+  sha256 '6efa96814df91af1bf7f1340d4f4fff2180e181c759808e8fcda7200aa80e065'
 
   # github.com/bitwarden/desktop was verified as official when first introduced to the cask
   url "https://github.com/bitwarden/desktop/releases/download/v#{version}/bitwarden-#{version}-mac.zip"
   appcast 'https://github.com/bitwarden/desktop/releases.atom',
-          checkpoint: '12e2fa0af28b7672619b17b96a7ba9c62cfbe9d0f6685839572b0b014f0fae05'
+          checkpoint: '983bc21cc62e88713179669cae859c272690a1c7c78feccc75dbf226de896370'
   name 'Bitwarden'
   homepage 'https://bitwarden.com/'
 
