@@ -8,4 +8,6 @@ cask 'synthesia' do
   homepage 'https://www.synthesiagame.com/'
 
   app 'Synthesia.app'
+
+  zap trash: '~/Library/Application Support/Synthesia'
 end
