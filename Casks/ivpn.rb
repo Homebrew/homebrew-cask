@@ -3,6 +3,8 @@ cask 'ivpn' do
   sha256 'c5837cbad898e3e5bbc7d9d9a32a64710076a8a9dfdf2959f4c9a076643e0cc5'
 
   url "https://www.ivpn.net/releases/osx/IVPN-#{version}.dmg"
+  appcast 'https://www.ivpn.net/setup/mac-changelog.html',
+          checkpoint: '8b326cf5ef72bc63de1f751acfe6229276d32b1061a91bfd6037720f19b711fe'
   name 'IVPN'
   homepage 'https://www.ivpn.net/apps-macos'
 
