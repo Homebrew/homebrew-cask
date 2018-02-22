@@ -9,5 +9,7 @@ cask 'devonthink-pro' do
   name 'DEVONthink Pro'
   homepage 'https://www.devontechnologies.com/products/devonthink/devonthink-pro.html'
 
+  auto_updates true
+
   app 'DEVONthink Pro.app'
 end

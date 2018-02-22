@@ -9,6 +9,7 @@ cask 'devonthink' do
   name 'DEVONthink Personal'
   homepage 'https://www.devontechnologies.com/products/devonthink/devonthink-personal.html'
 
+  auto_updates true
   depends_on macos: '>= :mountain_lion'
 
   app 'DEVONthink.app'
