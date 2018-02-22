@@ -9,4 +9,7 @@ cask 'quickradar' do
   homepage 'http://www.quickradar.com/'
 
   app 'QuickRadar.app'
+
+  uninstall login_item: 'QuickRadar',
+            quit:       'com.quickradar.QuickRadar'
 end
