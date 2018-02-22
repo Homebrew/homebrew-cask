@@ -9,6 +9,7 @@ cask 'devonthink-pro-office' do
   name 'DEVONthink Pro Office'
   homepage 'https://www.devontechnologies.com/products/devonthink/devonthink-pro-office.html'
 
+  auto_updates true
   depends_on macos: '>= :mountain_lion'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
