@@ -8,7 +8,7 @@ cask 'skyfonts' do
   name 'SkyFonts'
   homepage 'https://skyfonts.com/'
 
-  installer manual: 'SkyFonts.app'
+  installer manual: 'Install SkyFonts.app'
 
   uninstall quit:      [
                          'com.mti.Monotype-SkyFonts',
