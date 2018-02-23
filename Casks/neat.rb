@@ -1,9 +1,8 @@
 cask 'neat' do
-  version '4.3.0.36'
-  sha256 '4db396a5e9e6dbf1d03670830959fbba5753caeb77d279a60f6f251f376f3f1d'
+  version '4.5.0.99'
+  sha256 '84bc54c01a239997bf18b86347161bde0a94ed66c222fe9bb1e977f4df1e3cdb'
 
-  # neatco.com was verified as official when first introduced to the cask
-  url "http://cdn.neatco.com/Neat-#{version}-Release.dmg"
+  url "http://www.neat.com/wp-content/uploads/helpcenter/software/Neat-#{version}.dmg"
   name 'Neat for Mac'
   homepage 'https://www.neat.com/'
 
