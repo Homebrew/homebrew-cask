@@ -27,7 +27,8 @@ cask 'nix' do
     end
   end
 
-  uninstall delete: '/nix'
+  uninstall delete:    '/nix',
+            launchctl: 'org.nixos.nix-daemon'
 
   zap trash: [
                '~/.nix-channels',
