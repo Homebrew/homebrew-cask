@@ -1,4 +1,4 @@
-cask 'easytaxag' do
+cask 'easytax-ag' do
   version '2017,1.1'
   sha256 'a488bf84734f45d0c95e017aa05e04ec4baf33f758eab368801d1b4406df133d'
 
