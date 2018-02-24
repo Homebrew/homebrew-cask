@@ -6,19 +6,14 @@ cask 'easytaxag' do
   name 'EasyTax AG'
   homepage 'https://msg-easytax.ch/'
 
-  preflight do
-    system_command "#{staged_path}/EasyTax #{version.before_comma} AG Installationsprogramm.app/Contents/MacOS/JavaApplicationStub",
-                   args:         [
-                                   '-q',
-                                 ],
-                   print_stderr: false
-  end
+  installer script: {
+                      executable: "EasyTax #{version.before_comma} AG Installationsprogramm.app/Contents/MacOS/JavaApplicationStub",
+                      args:       ['-q'],
+                    }
 
-  uninstall_preflight do
-    system_command "#{staged_path}/EasyTax #{version.before_comma} AG Deinstallationsprogramm.app/Contents/MacOS/JavaApplicationStub",
-                   args:         [
-                                   '-q',
-                                 ],
-                   print_stderr: false
-  end
+  uninstall script: {
+                      executable: "/Applications/EasyTax/AG#{version.before_comma}/EasyTax #{version.before_comma} AG Deinstallationsprogramm.app/Contents/MacOS/JavaApplicationStub",
+                      args:       ['-q'],
+                    },
+            rmdir:  '/Applications/EasyTax'
 end
