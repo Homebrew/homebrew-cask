@@ -9,5 +9,7 @@ cask 'savoir-faire-linux-ring' do
   name 'Ring'
   homepage 'https://ring.cx/'
 
+  auto_updates true
+
   app 'Ring.app'
 end
