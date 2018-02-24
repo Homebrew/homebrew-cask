@@ -9,4 +9,9 @@ cask 'appgrid' do
   homepage 'https://github.com/sdegutis/AppGrid'
 
   app 'AppGrid.app'
+
+  uninstall login_item: 'AppGrid',
+            quit:       'com.sdegutis.AppGrid'
+
+  zap trash: '~/Library/Preferences/com.sdegutis.AppGrid.plist'
 end
