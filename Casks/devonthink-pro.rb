@@ -5,11 +5,12 @@ cask 'devonthink-pro' do
   # amazonaws.com/DTWebsiteSupport was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/#{version}/DEVONthink_Pro.app.zip"
   appcast 'http://www.devon-technologies.com/fileadmin/templates/filemaker/sparkle.php?product=300030707&format=xml',
-          checkpoint: '34e525574a0e9dd88366dd3096ea60e07342a90aa0ba94d510d92536e429ba16'
+          checkpoint: '43d628815d312a19ec87ba8f9d03f668626e6b186f00f74591f2bcf573212e63'
   name 'DEVONthink Pro'
   homepage 'https://www.devontechnologies.com/products/devonthink/devonthink-pro.html'
 
   auto_updates true
+  depends_on macos: '>= :mavericks'
 
   app 'DEVONthink Pro.app'
 end
