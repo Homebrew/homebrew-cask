@@ -1,6 +1,6 @@
 cask 'lego-digital-designer' do
-  version '4.3.10'
-  sha256 'd48ccbf6b3eb6cf0115d07cf499c45c10c479f7f6e8ac32a3d44821325b56908'
+  version '4.3.11'
+  sha256 '48d32b97c1ee65ad18a1206a1bfe253a03565ca464bc4c0c6be4fe2b453d55e1'
 
   # lc-www-live-s.legocdn.com was verified as official when first introduced to the cask
   url "https://lc-www-live-s.legocdn.com/downloads/ldd2.0/installer/setupLDD-MAC-#{version.dots_to_underscores}.zip"
