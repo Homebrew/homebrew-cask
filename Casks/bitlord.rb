@@ -1,8 +1,8 @@
 cask 'bitlord' do
-  version '2.3.2'
-  sha256 'd9af26b1626fd471550fbc3374158b09ae7c129bd3ab17ffbdf559d813e42af1'
+  version '2.4.5'
+  sha256 '33684392bb216e9715155d67cbe20b0a57c5c9b6cfde26cb1ad37f61cf5de5da'
 
-  url "http://www.bitlord.com/osx/BitLord-Lion-#{version}.dmg"
+  url "https://www.bitlord.com/osx/BitLord-osx.dmg"
   name 'BitLord'
   homepage 'https://www.bitlord.com/'
 
