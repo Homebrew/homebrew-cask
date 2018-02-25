@@ -9,9 +9,5 @@ cask 'lego-digital-designer' do
 
   pkg 'LDD.pkg'
 
-  uninstall pkgutil: [
-                       'com.lego.LDD.pkg',
-                       'com.lego.legoDigitalDesigner.postflight.pkg',
-                       'com.lego.legoDigitalDesigner.preflight.pkg',
-                     ]
+  uninstall pkgutil: 'com.LEGO.LDD'
 end
