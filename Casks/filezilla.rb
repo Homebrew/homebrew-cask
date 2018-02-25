@@ -1,11 +1,11 @@
 cask 'filezilla' do
-  version '3.30.0'
-  sha256 '946051d8349caf6707093e1d6a97931b8d80f33c31d247c7d10316d06079f4c2'
+  version '3.31.0'
+  sha256 '188e8d9af77dbcdd6176fb7eeca19083fff6f22e41331a1927c78c73c1faa769'
 
   # sourceforge.net/filezilla was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/filezilla/FileZilla_Client/#{version}/FileZilla_#{version}_macosx-x86.app.tar.bz2"
   appcast 'https://sourceforge.net/projects/filezilla/rss?path=/FileZilla_Client',
-          checkpoint: '23b6f61812fb31de664aad70a3dc9de6a23ca93591bbc1ee6b1ea02e9c901f9f'
+          checkpoint: '098d16fde9aa950ea2989b0b2c51ff340eb1c05b997497f7512f37dd7c86f177'
   name 'FileZilla'
   homepage 'https://filezilla-project.org/'
 
