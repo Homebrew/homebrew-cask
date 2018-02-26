@@ -1,6 +1,6 @@
 cask 'jprofiler' do
-  version '10.0.4'
-  sha256 'c0280d829b84f1c96bf45eab3b702b9bfb0510528fb4433b7d6b9739d127a70f'
+  version '10.1'
+  sha256 '45329d4c06ebcc2d04049744b919ab22e0bf0e4bf9b977934f9e9e3784532d60'
 
   url "https://download-keycdn.ej-technologies.com/jprofiler/jprofiler_macos_#{version.dots_to_underscores}.dmg"
   appcast 'http://feeds.ej-technologies.com/jprofiler',
