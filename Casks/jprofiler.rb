@@ -4,7 +4,7 @@ cask 'jprofiler' do
 
   url "https://download-keycdn.ej-technologies.com/jprofiler/jprofiler_macos_#{version.dots_to_underscores}.dmg"
   appcast 'http://feeds.ej-technologies.com/jprofiler',
-          checkpoint: '58961ffc0f5502fb5759e2123780c40126fa91c85d4f189986e4d4f641faa0de'
+          checkpoint: 'dd09d6df528eb20b8cfb0b42a4b41e9cc42a622ed9b85a7faca3977cf7858018'
   name 'JProfiler'
   homepage 'https://www.ej-technologies.com/products/jprofiler/overview.html'
 
