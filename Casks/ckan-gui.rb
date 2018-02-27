@@ -1,4 +1,4 @@
-cask 'ckan' do
+cask 'ckan-gui' do
   version '1.24.0'
   sha256 '4c116febeeaf4ed95cc6327ca3b220d22f16c8c601d878627367606573c205f8'
 
