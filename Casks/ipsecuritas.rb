@@ -5,6 +5,7 @@ cask 'ipsecuritas' do
   else
     version '4.8'
     sha256 '4dea27a69d4dd6a03ddd7dfd2ea9b088643621f21b5ebf2524ea68b5af3b31ee'
+  end
 
   url "http://www.lobotomo.com/products/downloads/IPSecuritas%20#{version}.dmg"
   name 'IPSecuritas'
