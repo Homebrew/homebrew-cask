@@ -10,4 +10,6 @@ cask 'rambox' do
   homepage 'http://rambox.pro/'
 
   app 'Rambox.app'
+
+  uninstall login_item: 'Rambox'
 end
