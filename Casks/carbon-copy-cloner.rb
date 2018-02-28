@@ -9,6 +9,8 @@ cask 'carbon-copy-cloner' do
   
   auto_updates true
 
+  auto_updates true
+
   app 'Carbon Copy Cloner.app'
 
   uninstall login_item: 'CCC User Agent',
