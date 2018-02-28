@@ -14,11 +14,11 @@ cask 'lego-mindstorms-ev3' do
                        "com.ni.pkg.lego.ev3.Eng.#{version.major_minor_patch}",
                        "com.ni.pkg.lego.x3.#{version.major_minor_patch}.core",
                        "com.ni.pkg.lego.x3.#{version.major_minor_patch}.update",
-                       "com.ximian.mono-2.10.9"
                      ]
 
   zap pkgutil:  [
                   'com.ni.pkg.legodriver',
-                  'com.microsoft.silverlight.plugin'
+                  'com.microsoft.silverlight.plugin',
+                  'com.ximian.mono-*',
                 ]
 end
