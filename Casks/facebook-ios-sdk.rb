@@ -1,6 +1,6 @@
 cask 'facebook-ios-sdk' do
-  version '4.30.0'
-  sha256 '46e65f5d5aeed3734feb1e32c86e00e439ef76e0d6e0f0b07dd1dc87e4530db8'
+  version '4.31.0'
+  sha256 'c5cd8646326339169bed8d8c71df6df2a5128853de0d2469bb799d607a55728b'
 
   url "https://origincache.facebook.com/developers/resources/?id=FacebookSDKs-iOS-#{version}.zip"
   name 'Facebook SDK for iOS'
