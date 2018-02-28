@@ -6,6 +6,10 @@ cask 'carbon-copy-cloner' do
   url "https://bombich.scdn1.secure.raxcdn.com/software/files/ccc-#{version}.zip"
   name 'Carbon Copy Cloner'
   homepage 'https://bombich.com/'
+  
+  auto_updates true
+
+  auto_updates true
 
   app 'Carbon Copy Cloner.app'
 
