@@ -11,5 +11,7 @@ cask 'ipsecuritas' do
   name 'IPSecuritas'
   homepage 'http://www.lobotomo.com/products/IPSecuritas/'
 
+  depends_on macos: '>= :yosemite'
+
   app 'IPSecuritas.app'
 end
