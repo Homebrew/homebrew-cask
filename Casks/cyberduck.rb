@@ -8,6 +8,8 @@ cask 'cyberduck' do
   name 'Cyberduck'
   homepage 'https://cyberduck.io/'
 
+  auto_updates true
+
   app 'Cyberduck.app'
 
   zap trash: [
