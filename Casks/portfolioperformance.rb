@@ -10,6 +10,8 @@ cask 'portfolioperformance' do
   homepage 'http://www.portfolio-performance.info/portfolio/'
 
   app 'PortfolioPerformance.app'
+  
+  auto_updates true
 
   caveats do
     depends_on_java('8+')
