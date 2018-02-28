@@ -7,6 +7,8 @@ cask 'carbon-copy-cloner' do
   name 'Carbon Copy Cloner'
   homepage 'https://bombich.com/'
 
+  auto_updates true
+
   app 'Carbon Copy Cloner.app'
 
   uninstall login_item: 'CCC User Agent',
