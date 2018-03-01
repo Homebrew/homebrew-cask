@@ -12,4 +12,8 @@ cask 'quickradar' do
 
   uninstall login_item: 'QuickRadar',
             quit:       'com.quickradar.QuickRadar'
+
+  caveats do
+    discontinued
+  end
 end
