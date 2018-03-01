@@ -1,4 +1,4 @@
-cask 'epi2me-agent' do
+cask 'epi2meagent' do
   version '2.52.1202033'
   sha256 '06b94d9d11e31b44b28bd4e52fd68327aa59d8e3a07953527c6192b099620e44'
 
