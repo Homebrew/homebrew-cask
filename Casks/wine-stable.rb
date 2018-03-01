@@ -8,7 +8,7 @@ cask 'wine-stable' do
   name 'WineHQ-stable'
   homepage 'https://wiki.winehq.org/MacOS'
 
-  depends_on cask: 'xquartz'
+  depends_on x11: true
 
   pkg "winehq-stable-#{version}.pkg",
       choices: [

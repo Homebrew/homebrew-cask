@@ -1,6 +1,6 @@
 cask 'media-center' do
-  version '23.00.83'
-  sha256 '5888f39f3f4d72d6af8d5a87d3615666fb23a2f4bbfa9e6973ce51aca14c485f'
+  version '23.0.103'
+  sha256 '067a3f7a99d2d7a30f4f90a2c59f7438cf062a3c4479d930c955dfe3a860c9bd'
 
   url "http://files.jriver.com/mediacenter/channels/v#{version.major}/stable/MediaCenter#{version.no_dots}.dmg"
   name 'JRiver Media Center'
@@ -14,6 +14,7 @@ cask 'media-center' do
                '~/Documents/JRiver/',
                '~/Library/Application Support/J River/',
                "~/Library/Caches/com.jriver.MediaCenter#{version.major}",
+               "~/Library/Cookies/com.jriver.MediaCenter#{version.major}*",
                "~/Library/Preferences/com.jriver.MediaCenter#{version.major}.plist",
                "~/Library/Saved Application State/com.jriver.MediaCenter#{version.major}.savedState",
              ]

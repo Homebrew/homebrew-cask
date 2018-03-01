@@ -1,6 +1,6 @@
 cask 'retroarch-cg' do
-  version '1.7.0'
-  sha256 '477bee18c45e45dec415054c8730b2b6dd10eeaa035da8d90c7c5c0b46318cd6'
+  version '1.7.1'
+  sha256 'a744620d1ef082822f339e9b083fc2a96b79855fb0c6ac2468fbbb191560e12a'
 
   url "https://buildbot.libretro.com/stable/#{version}/apple/osx/x86_64/RetroArch_CG.dmg"
   name 'RetroArch CG'

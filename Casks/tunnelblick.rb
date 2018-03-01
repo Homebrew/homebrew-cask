@@ -5,9 +5,10 @@ cask 'tunnelblick' do
   # github.com/Tunnelblick/Tunnelblick/releases/download was verified as official when first introduced to the cask
   url "https://github.com/Tunnelblick/Tunnelblick/releases/download/v#{version.before_comma}/Tunnelblick_#{version.before_comma}_build_#{version.after_comma}.dmg"
   appcast 'https://github.com/Tunnelblick/Tunnelblick/releases.atom',
-          checkpoint: '3a0425f39e2aefa8d0b4112afc3a716acca2aefc96c70480d120c7f105c60efb'
+          checkpoint: '7a61b553040d1d65b8d9462dbb12a9d67a4840da6496678e4f46e56f6e392165'
   name 'Tunnelblick'
   homepage 'https://www.tunnelblick.net/'
+  gpg "#{url}.asc", key_id: '76df975a1c5642774fb09868ff5fd80e6bb9367e'
 
   auto_updates true
 

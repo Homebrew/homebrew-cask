@@ -1,30 +1,26 @@
 cask 'coteditor' do
-  if MacOS.version <= :snow_leopard
-    version '1.3.1'
-    sha256 '5c871bd9de30fc3c76fc66acb4ea258d4d3762ae341181d65a7ef1f8de4751c5'
-    # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
-    url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}_For10.4.dmg"
-  elsif MacOS.version <= :lion
+  if MacOS.version <= :lion
     version '1.5.4'
     sha256 '444133083698c7c94c2b029644f39a0e36982ae34c24745789fa890626188347'
-    # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
-    url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   elsif MacOS.version <= :mavericks
     version '2.5.7'
     sha256 'f2c6eed9bfa31999f559396642e7bec0eb90ce0e3398f266fed8b3db5bdab37c'
-    # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
-    url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
-  else
+  elsif MacOS.version <= :yosemite
     version '3.2.8'
     sha256 '73dd20d27b75c7b0c46242a465adb3df5b5f0b901f42c5a9a85777a57c4a17d6'
-    # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
-    url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
+  else
+    version '3.3.3'
+    sha256 'a33b90f2c99bd68c0ad9ae94d259df13913e01ffeaf992fb408a2a35fb2bc11b'
   end
 
+  # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
+  url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   appcast 'https://github.com/coteditor/CotEditor/releases.atom',
-          checkpoint: '378d03256e9ccba3e9ec33fcfb3378966011d6d1a65edea7a492b3600bfbb25f'
+          checkpoint: '3127cc079f9d39c95914d496680590374b63fc1499b5166f224a724e6617fb9e'
   name 'CotEditor'
   homepage 'https://coteditor.com/'
+
+  depends_on macos: '>= :lion'
 
   app 'CotEditor.app'
   binary "#{appdir}/CotEditor.app/Contents/SharedSupport/bin/cot"

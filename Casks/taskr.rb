@@ -1,11 +1,11 @@
 cask 'taskr' do
-  version '0.3.1'
-  sha256 'cbfe77a5e5c2078b865ed3682faca75c9d40b8ace277d19d4d1340491c4d5fb8'
+  version '1.0.0'
+  sha256 '6471c2337768dd2d58c231225a382536a1a0417d91caef68ebf1758a1ef1d4e9'
 
   # github.com/bukinoshita/taskr was verified as official when first introduced to the cask
   url "https://github.com/bukinoshita/taskr/releases/download/#{version}/taskr-#{version}-mac.zip"
   appcast 'https://github.com/bukinoshita/taskr/releases.atom',
-          checkpoint: 'b848fed3d524159b160e2f798c5e0f76ae27283b81a5a2d84464dc5d7a96fca1'
+          checkpoint: 'c92b3c149081305a131890732d15c78a0896e1c352fae683d6e22a2d3acc42dc'
   name 'Taskr'
   homepage 'https://taskr.now.sh/'
 

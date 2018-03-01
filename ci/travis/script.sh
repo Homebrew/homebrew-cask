@@ -43,7 +43,7 @@ elif [[ ${#modified_casks[@]} -gt 0 ]]; then
     fi
     for cask in "${modified_casks[@]}"; do
       run brew cask reinstall --verbose "${cask}"
-      run brew cask uninstall --verbose "${cask}"
+      run brew cask zap --verbose "${cask}"
     done
     if [[ -f "${HOME}/Brewfile" ]]; then
       run brew bundle cleanup --force --file="${HOME}/Brewfile"
@@ -54,6 +54,8 @@ elif [[ ${#modified_casks[@]} -gt 0 ]]; then
 else
   ohai 'No Casks modified, skipping'
 fi
+
+sleep 5 # Rerunning the checks too soon can result in false positives
 
 for check in "${checks[@]}"; do
   "${check}" > "${HOME}/cask-checks/after/${check}"

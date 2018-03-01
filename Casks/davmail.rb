@@ -1,10 +1,10 @@
 cask 'davmail' do
-  version '4.8.2-2524'
-  sha256 '719931f9e9340dec0ab243ec52de103e713080bddccba7cff6056d88609ca505'
+  version '4.8.3-2554'
+  sha256 '5e9eead4513a5198801a204de6ffb35e0846b059f399166e346d12a9219a5e44'
 
   url "https://downloads.sourceforge.net/davmail/DavMail-MacOSX-#{version}.app.zip"
   appcast 'https://sourceforge.net/projects/davmail/rss',
-          checkpoint: 'd0859a214e8c38825f7cc872a5ce1b83c64e9269c62fa939e962fe52c1883263'
+          checkpoint: '3c8ccb118331ad32345173770e4d63b61f89736beb93a988e1c8b3444541976a'
   name 'DavMail'
   homepage 'http://davmail.sourceforge.net/'
 

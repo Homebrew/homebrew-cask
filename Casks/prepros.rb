@@ -1,11 +1,11 @@
 cask 'prepros' do
-  version '6.0.18'
-  sha256 'c9ffe7884803b26bfa35e28779230a6395f73ec71795820f74d91d2bc38257ce'
+  version '6.1.1'
+  sha256 '65cdd13b1409f5c031e74af691ff80a980ff73b1e6d7bf6b845adcb47a9ff9a1'
 
   # s3-us-west-2.amazonaws.com/prepros-io-releases was verified as official when first introduced to the cask
   url "https://s3-us-west-2.amazonaws.com/prepros-io-releases/stable/Prepros-Mac-#{version}.zip"
   appcast 'https://prepros.io/changelog',
-          checkpoint: '85831615c1cd9a7e4c00ac75d084737c910ed9ee8f0c746db1b74fcd23816c5b'
+          checkpoint: '0f7f5ae7cd7052b98ed786e8896a6fbded2740b6fab066257a3567ac3e58b5e8'
   name 'Prepros'
   homepage 'https://prepros.io/'
 

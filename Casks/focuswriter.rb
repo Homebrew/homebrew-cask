@@ -1,6 +1,6 @@
 cask 'focuswriter' do
-  version '1.6.8'
-  sha256 '0ccc581d6f895fc218f25abc5c91cc0de73af5e8cbac5bb8e2f0997e9a9d2c09'
+  version '1.6.10'
+  sha256 '9a4a5c51edabeee4c54e866e1dfe16a4f2dd577ecba174d54dffed5747a58f4b'
 
   url "https://gottcode.org/focuswriter/FocusWriter_#{version}.dmg"
   name 'FocusWriter'

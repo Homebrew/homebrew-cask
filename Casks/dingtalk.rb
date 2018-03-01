@@ -1,6 +1,6 @@
 cask 'dingtalk' do
-  version '3.5.6.1'
-  sha256 'f3a6288e839a86b1863412029370fcc327fbe63a15be765de8b951c820bc53be'
+  version '4.2.39.2'
+  sha256 '77390679f0171bffd75f9d8f7cc9bfb3aa124456a861de0906c10c2a243d0f57'
 
   # download.alicdn.com/dingtalk-desktop was verified as official when first introduced to the cask
   url "https://download.alicdn.com/dingtalk-desktop/mac_dmg/Release/DingTalk_v#{version}.dmg"
@@ -8,7 +8,7 @@ cask 'dingtalk' do
   name '钉钉'
   homepage 'https://www.dingtalk.com/'
 
-  app '钉钉.app'
+  app 'DingTalk.app'
 
   zap trash: [
                '~/Library/Application Support/DingTalk',

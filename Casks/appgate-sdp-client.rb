@@ -1,6 +1,6 @@
 cask 'appgate-sdp-client' do
-  version '3.2.1'
-  sha256 'db178b54893c5d291553f35ab5084cd289bf4f92180893b127d0129c4ba181f7'
+  version '3.3.2'
+  sha256 '00ee27a8bc338b19ccec4541fdbd0603673d1851f51471daba4e5fe143f3eca0'
 
   url "https://download.cryptzone.com/files/download/AppGate-#{version}/clients/AppGate-#{version}-Installer.dmg"
   name 'AppGate SDP Client for macOS'
@@ -8,7 +8,7 @@ cask 'appgate-sdp-client' do
 
   depends_on macos: '>= :yosemite'
 
-  pkg 'AppGate Installer.pkg'
+  pkg 'AppGate SDP Installer.pkg'
 
   uninstall launchctl: [
                          'com.cryptzone.appgate.tun',

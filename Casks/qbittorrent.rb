@@ -1,11 +1,11 @@
 cask 'qbittorrent' do
-  version '4.0.3'
-  sha256 '38521093cca0a2eb4332422faf7b425318b60a004d1b2c972a803c44ead1cadd'
+  version '4.0.4'
+  sha256 '848f6362309a2538197bcd0b3a593c43cbce286c331be244ec29b924b81aaabe'
 
   # sourceforge.net/qbittorrent was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/qbittorrent/qbittorrent-mac/qbittorrent-#{version}/qbittorrent-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/qbittorrent/rss?path=/qbittorrent-mac',
-          checkpoint: '85ac69fc348d4536277a79c5b632b8ddc3cec0329d73133aa6fa02af7b570cb1'
+          checkpoint: '057ab0a219434df2054234dfeb18bddf1877cefd886ef21850d873996dd64f15'
   name 'qBittorrent'
   homepage 'https://www.qbittorrent.org/'
 

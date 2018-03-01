@@ -8,4 +8,10 @@ cask 'synthesia' do
   homepage 'https://www.synthesiagame.com/'
 
   app 'Synthesia.app'
+
+  zap trash: [
+               '~/Library/Application Support/Synthesia',
+               '~/Library/Autosave Information/com.synthesiallc.synthesia.plist',
+               '~/Library/Saved Application State/com.synthesiallc.synthesia.savedState',
+             ]
 end

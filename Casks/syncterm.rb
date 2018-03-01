@@ -10,5 +10,8 @@ cask 'syncterm' do
 
   uninstall pkgutil: 'net.synchro.syncterm.SyncTERM.pkg'
 
-  zap trash: '~/Library/Preferences/SyncTERM'
+  zap trash: [
+               '~/Library/Preferences/SyncTERM',
+               '~/Library/Preferences/syncterm.plist',
+             ]
 end

@@ -1,10 +1,10 @@
 cask 'endicia' do
-  version '218v746'
-  sha256 '1d58d75fa2a72274592524a4e8024ca62ebac906fb8f01737688f9913cb3bcdb'
+  version '2181v747'
+  sha256 '04cc596b2ddc217eba402be79580f4f62bced466d0c481e3eecccae24a2a3f38'
 
   url "https://download.endiciaformac.com/EndiciaForMac#{version.no_dots}.dmg"
   appcast 'https://s3.amazonaws.com/endiciaformac/EndiciaForMacSparkle.xml',
-          checkpoint: '490b94eb283d756b51e3b09d226069ada7f463198a70fcf7e19a2627f00dbd8b'
+          checkpoint: '7c1ef8af297627665d30038a42a4f133e714131d12434c47d0e89af39d3b74b0'
   name 'Endicia for Mac'
   homepage 'https://endiciaformac.com/'
 

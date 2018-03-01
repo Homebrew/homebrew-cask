@@ -1,10 +1,10 @@
 cask 'signal' do
-  version '1.2.0'
-  sha256 '3cb3170e690c7686cae0574c5e435df6845b8049abf377d61aff4ad5f5724207'
+  version '1.5.0'
+  sha256 '1224d03cad29e41727b2d0930852d0f0a7a6992cc766ac13e9e18b96dc0387c6'
 
   url "https://updates.signal.org/desktop/signal-desktop-mac-#{version}.zip"
-  appcast 'https://github.com/WhisperSystems/Signal-Desktop/releases.atom',
-          checkpoint: '41ae9ec6e0b6287bd5aa32e274f515daf9bf847dc599f8ce80224837d4e83374'
+  appcast 'https://github.com/signalapp/Signal-Desktop/releases.atom',
+          checkpoint: 'a73a7db07d59a46133a2ac89eaa3bdca38956090a913c92b247d4abd0cd34aa8'
   name 'Signal'
   homepage 'https://signal.org/'
 
