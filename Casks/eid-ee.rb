@@ -1,6 +1,6 @@
 cask 'eid-ee' do
-  version '17.12.0.1770'
-  sha256 '74aed82ed10ea0f3b851c2e6b3b48b106445f017c2e708db8398cf77ae002e55'
+  version '18.2.0.1778'
+  sha256 '3aec337cbfea4709139c43bda2162ab92bcef8a569a21b421175f670efb400b0'
 
   url "https://installer.id.ee/media/osx/Open-EID_#{version}.dmg"
   name 'Electronic identity card software for Estonia'
