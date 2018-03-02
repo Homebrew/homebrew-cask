@@ -5,7 +5,7 @@ cask 'vysor' do
   # github.com/koush/vysor.io was verified as official when first introduced to the cask
   url "https://github.com/koush/vysor.io/releases/download/#{version}/Vysor-mac.zip"
   appcast 'https://github.com/koush/vysor.io/releases.atom',
-          checkpoint: '16574e5b6b3dc897079babc6444a4e591660429c108cf3b4cb5e67ac2d653aa0'
+          checkpoint: '5224bbe15b9e8da3b5ca918782a8bac14f9a99781cffe81e74bc2a704fa41955'
   name 'Vysor'
   homepage 'https://www.vysor.io/'
 
