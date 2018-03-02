@@ -1,10 +1,8 @@
 cask 'macupdate' do
-  version '6.2.1'
-  sha256 '684c07a1b8e6a832008b1740358d31578e4ba2aef9c2bcb2a7d1ae3354a104f3'
+  version :latest
+  sha256 :no_check
 
   url 'https://www.macupdate.com/mud-download'
-  appcast 'https://www.macupdate.com/app/mac/8544/macupdate-desktop',
-          checkpoint: 'b30b300765edb19c4334d9de0fafd5eb93568145a22de23adce52a6efd05b9e6'
   name 'MacUpdate Desktop'
   homepage 'https://www.macupdate.com/desktop'
 
