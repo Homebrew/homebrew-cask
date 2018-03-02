@@ -9,5 +9,5 @@ cask 'merit' do
   name 'Merit'
   homepage 'http://www.merit.me/'
 
-  app 'Merit Core.app'
+  app 'Merit-Qt.app', target: 'Merit Core.app'
 end
