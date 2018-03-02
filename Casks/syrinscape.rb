@@ -4,7 +4,7 @@ cask 'syrinscape' do
 
   # syrinscape-us.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://syrinscape-us.s3.amazonaws.com/files/syrinscape-mac-#{version}.dmg"
-  name 'Syrinscape'
+  name 'Syrinscape Fantasy Player'
   homepage 'https://syrinscape.com/'
 
   app 'Syrinscape.app'
