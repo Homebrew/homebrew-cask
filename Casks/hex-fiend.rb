@@ -16,5 +16,6 @@ cask 'hex-fiend' do
                '~/Library/Caches/com.ridiculousfish.HexFiend',
                '~/Library/Preferences/com.ridiculousfish.HexFiend.plist',
                '~/Library/Saved Application State/com.ridiculousfish.HexFiend.savedState',
+               '/usr/local/bin/hexf',
              ]
 end
