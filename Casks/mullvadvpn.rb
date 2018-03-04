@@ -1,4 +1,4 @@
-cask 'mullvad' do
+cask 'mullvadvpn' do
   version '2018.1'
   sha256 '9a0c912ed0cf2222649f9367c6cfea338e02c737865bd556f230353096c49f37'
 
