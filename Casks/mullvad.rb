@@ -9,5 +9,5 @@ cask 'mullvad' do
   homepage 'https://mullvad.net/'
   gpg "#{url}.asc", key_id: 'a1198702fc3e0a09a9ae5b75d5a1d4f266de8ddf'
 
-  app 'Mullvad.app'
+  app 'MullvadVPN.app'
 end
