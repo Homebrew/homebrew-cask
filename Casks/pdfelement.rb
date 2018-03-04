@@ -6,5 +6,6 @@ cask 'pdfelement' do
   name 'Wondershare PDFelement for Mac'
   homepage 'https://pdf.wondershare.com/'
 
-  app 'PDFelement.app'
+  # Renamed for consistency: app name is different in the Finder and in a shell.
+  app "PDFelementStd#{version.major}.app", target: "PDFelement #{version.major}.app"
 end
