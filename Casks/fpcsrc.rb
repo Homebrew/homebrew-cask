@@ -1,5 +1,5 @@
 cask 'fpcsrc' do
-  version '3.0.4,20180226'
+  version '3.0.4,20171204'
   sha256 'f52c5da5da38e56336f7671d068d5fc5e838af4283bdaf885475867e6dc17215'
 
   # sourceforge.net/lazarus was verified as official when first introduced to the cask
