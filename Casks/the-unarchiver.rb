@@ -1,5 +1,5 @@
 cask 'the-unarchiver' do
-  version '3.11.4'
+  version '3.11.4,116:1520347991'
   sha256 '0b65ed1af57766c9ce4db9207390f31ffc3a2c1c274616ac20749739661e4929'
 
   # devmate.com/cx.c3.theunarchiver was verified as official when first introduced to the cask
