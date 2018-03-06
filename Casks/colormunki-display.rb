@@ -9,5 +9,9 @@ cask 'colormunki-display' do
 
   pkg 'ColorMunki Display.pkg'
 
-  uninstall pkgutil: 'com.xrite.colormunkiDisplay.*'
+  uninstall pkgutil: [
+                       'com.xrite.colormunkiDisplay.*',
+                       'com.xrite.colormunkiTray.plist.pkg',
+                       'com.xrite.xritedeviceservices.installer.pkg',
+                     ]
 end
