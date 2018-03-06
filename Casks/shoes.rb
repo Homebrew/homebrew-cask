@@ -1,11 +1,11 @@
 cask 'shoes' do
-  version '3.3.5'
-  sha256 '57e83556ef3a9d9b4bf2c5b297ba65d0c61a7cdd83e99f532139f5a70105280f'
+  version '3.3.6'
+  sha256 '8f23e236e49465f939005ffcdc10adbd2f3d677f46fd441b17b7bb5978a5daaf'
 
   # shoes.mvmanila.com/public/shoes was verified as official when first introduced to the cask
   url "https://shoes.mvmanila.com/public/shoes/shoes-#{version}-osx-10.9.tgz"
   appcast 'http://shoesrb.com/downloads/',
-          checkpoint: 'edee7a15d206085bedc9055173c84eee4107eda61228f39f6f20eb53faea9740'
+          checkpoint: '3a2a4cca3c4d86f4bed3575bcadec8a72c2416bb75549119ddfad1fb727bbe85'
   name 'Shoes'
   homepage 'http://shoesrb.com/'
 
