@@ -11,7 +11,7 @@ cask 'gambit' do
 
   pkg "gambit-v#{version.dots_to_underscores}-macosx-intel64.pkg"
 
-  uninstall pkgutil: 'marc.feeley.gambc',
+  uninstall pkgutil: 'marc.feeley.gambit',
             script:  {
                        executable: "/Library/Gambit/v#{version}/bin/uninstall-gambit",
                        args:       ["v#{version}"],
