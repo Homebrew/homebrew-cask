@@ -1,6 +1,6 @@
 cask 'towerim-tower' do
-  version '0.6.3'
-  sha256 '666e58cc2ba8dfae1147f92b34ab59826b4b59d9b4fc3e3c3d4899d94966db02'
+  version '0.6.4'
+  sha256 'b776b2d71ce0b2ccdc6093979b80239adc387177765381276ffc160a7ebbe863'
 
   # towerfiles.oss-cn-hangzhou.aliyuncs.com/electron/mac was verified as official when first introduced to the cask
   url "https://towerfiles.oss-cn-hangzhou.aliyuncs.com/electron/mac/Tower-#{version}.dmg"
