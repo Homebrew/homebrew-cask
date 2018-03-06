@@ -9,6 +9,6 @@ cask 'factor' do
   suite 'factor'
 
   caveats do
-    path_environment_variable "#{staged_path}/factor"
+    path_environment_variable "#{appdir}/factor"
   end
 end
