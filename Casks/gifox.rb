@@ -1,11 +1,11 @@
 cask 'gifox' do
-  version '010400.02'
-  sha256 'c0f9fb1be9f1086ad54f85e6d02319dbdfbd1f2c155cb67642cd2240c57692b8'
+  version '010501.01'
+  sha256 'ed25c3a2678ebe409535356f9ebf2e1583dfc75a928fc9787ef96f09f86720b6'
 
   # s3.eu-central-1.amazonaws.com/dstlalgzor/gifox was verified as official when first introduced to the cask
   url "https://s3.eu-central-1.amazonaws.com/dstlalgzor/gifox/#{version}.dmg"
   appcast 'https://s3.eu-central-1.amazonaws.com/dstlalgzor/gifox/appcast.xml',
-          checkpoint: '56064af28f246bba075adbb0f18f01f7a19c0922f1445e83c777e4bb35fc3522'
+          checkpoint: 'b91b7581bb57a40a1cde0ca06b323fe9f4d951d4144c05eb6dcaad9bdbadee00'
   name 'gifox'
   homepage 'https://gifox.io/'
 
