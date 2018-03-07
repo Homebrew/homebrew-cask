@@ -8,6 +8,8 @@ cask 'shiftit' do
   name 'ShiftIt'
   homepage 'https://github.com/fikovnik/ShiftIt/'
 
+  auto_updates true
+
   app 'ShiftIt.app'
 
   zap trash: [
