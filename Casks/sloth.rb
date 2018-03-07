@@ -1,10 +1,10 @@
 cask 'sloth' do
-  version '2.1'
-  sha256 '9f55d880ff8b054245b4d8c8f175da45a17831f9c7744c4ffad241c61f24f62e'
+  version '2.2'
+  sha256 '147bf44eb1dca7e522d781cd22405a7724e9fdaedd142193a9bf83ce7c2c17a7'
 
   url "https://sveinbjorn.org/files/software/sloth/sloth-#{version}.zip"
   appcast 'https://sveinbjorn.org/files/appcasts/SlothAppcast.xml',
-          checkpoint: '9645898b8502aebd19427ef24549d211f6cb72ff5f7a3fe64099b9351620940d'
+          checkpoint: 'ce194ccf0cb33ddbe89e41555b3e164dd50353597580a8bb9fcb2d235a5ce2cc'
   name 'Sloth'
   homepage 'https://sveinbjorn.org/sloth'
 
