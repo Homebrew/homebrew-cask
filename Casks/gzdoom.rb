@@ -1,11 +1,10 @@
 cask 'gzdoom' do
-  version '3.2.4'
-  sha256 'c699b005023cf0770d487a0981a7629d19f578a5ed7d992006876deacbb90810'
+  version '3.2.5a'
+  sha256 '9d27195c089e8a4303d302c33f35d1450527759ce04f407ae3c8f84648a093db'
 
-  # github.com/coelckers/gzdoom was verified as official when first introduced to the cask
-  url "https://github.com/coelckers/gzdoom/releases/download/g#{version}/gzdoom-bin-#{version.dots_to_hyphens}.dmg"
+  url "https://zdoom.org/files/gzdoom/bin/gzdoom-bin-#{version.dots_to_hyphens}.dmg"
   appcast 'https://github.com/coelckers/gzdoom/releases.atom',
-          checkpoint: 'fb1f4384574c59c0a1181509f9dce8c7b1273ff3863fa979c15e46798587686b'
+          checkpoint: '181a0c034f31ed48223a675b59814e6a9ed0e5b1ce649d5ef5eaa50b6c97764c'
   name 'gzdoom'
   homepage 'https://zdoom.org/index'
 
