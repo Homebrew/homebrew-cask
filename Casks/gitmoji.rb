@@ -16,4 +16,8 @@ cask 'gitmoji' do
                '~/Library/Preferences/com.Meadowcottage.Gitmoji.plist',
                '~/Library/Saved Application State/com.Meadowcottage.Gitmoji.savedState',
              ]
+
+  caveats do
+    discontinued
+  end
 end
