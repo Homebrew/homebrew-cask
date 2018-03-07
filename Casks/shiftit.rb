@@ -9,4 +9,10 @@ cask 'shiftit' do
   homepage 'https://github.com/fikovnik/ShiftIt/'
 
   app 'ShiftIt.app'
+
+  zap trash: [
+               '~/Library/Application Support/ShiftIt',
+               '~/Library/Caches/org.shiftitapp.ShiftIt',
+               '~/Library/Preferences/org.shiftitapp.ShiftIt.plist',
+             ]
 end
