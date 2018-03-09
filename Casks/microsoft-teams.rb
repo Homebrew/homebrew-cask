@@ -8,5 +8,7 @@ cask 'microsoft-teams' do
   name 'Microsoft Teams'
   homepage 'https://teams.microsoft.com/downloads'
 
+  auto_updates true
+
   app 'Microsoft Teams.app'
 end
