@@ -15,4 +15,10 @@ cask 'edrawmax' do
   name 'EdrawMax'
 
   app 'EdrawMax.app'
+
+  zap trash: [
+               '~/Library/Edraw',
+               '~/Library/Preferences/com.edrawsoft.edrawmax.plist',
+               '~/Library/Saved Application State/com.edrawsoft.edrawmax.savedState',
+             ]
 end
