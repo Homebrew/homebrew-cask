@@ -12,6 +12,7 @@ cask 'cutter' do
   app 'cutter.app'
 
   zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/test.cutter.sfl*',
                '~/Library/Preferences/com.cutter.cutter.plist*',
                '~/Library/Preferences/test.cutter.plist',
                '~/Library/Saved Application State/test.cutter.savedState',
