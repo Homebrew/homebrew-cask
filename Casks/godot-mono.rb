@@ -9,5 +9,7 @@ cask 'godot-mono' do
   name 'Godot Engine Mono'
   homepage 'https://godotengine.org/'
 
+  depends_on formula: 'mono'
+
   app 'Godot_v3.0.2-stable_mono_osx64.app', target: 'Godot Mono.app'
 end
