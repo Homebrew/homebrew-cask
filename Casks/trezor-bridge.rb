@@ -1,16 +1,15 @@
 cask 'trezor-bridge' do
-  version '1.2.1'
-  sha256 'd87255da91d4815ab289e79d2e1609888589c42a0a22b6861f26816a4ad920da'
+  version '2.0.9'
+  sha256 '1bcdc7a7916664c7896a64717fea1db4a38e9044236010ab730261123fcc7241'
 
-  # wallet.mytrezor.com/data/bridge was verified as official when first introduced to the cask
-  url "https://wallet.mytrezor.com/data/bridge/#{version}/trezor-bridge-#{version}.pkg"
-  appcast 'https://wallet.mytrezor.com/data/bridge/latest.txt',
-          checkpoint: '6cf4e084b47f33c9b02ef79279d157833868f8f70514169a768be353ee328fea'
+  url "https://wallet.trezor.io/data/bridge/#{version}/trezor-bridge-#{version}.pkg"
+  appcast 'https://wallet.trezor.io/data/bridge/latest.txt',
+          checkpoint: '9943c6efcaa36240f00e89fe037263ffa336c2999049cc278b3914c185a2fea4'
   name 'TREZOR Bridge'
   homepage 'https://wallet.trezor.io/'
 
   pkg "trezor-bridge-#{version}.pkg"
 
-  uninstall pkgutil:   'com.bitcointrezor.pkg.TREZORBridge',
+  uninstall pkgutil:   'com.bitcointrezor.pkg.TREZORBridge*',
             launchctl: 'com.bitcointrezor.trezorBridge.trezord'
 end
