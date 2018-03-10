@@ -1,10 +1,10 @@
 cask 'nwjs' do
-  version '0.28.2'
-  sha256 'b01ca673630ec0a3c5b1a81386bff4bb781a097f6c95ac6c7f1fe992dfd6d734'
+  version '0.29.0'
+  sha256 'e1d6cb76fdd11864593a418396b594f15e917a66126331a81d0b339737e8ac6f'
 
   url "https://dl.nwjs.io/v#{version}/nwjs-sdk-v#{version}-osx-x64.zip"
   appcast 'https://github.com/nwjs/nw.js/releases.atom',
-          checkpoint: 'c329586162b5c11fd7f0a1acf95a2e845ddc19865b4b38c46e108ee97f81ced7'
+          checkpoint: '3713cd196faf67492aab2a6542797425e69bb09c5d361b12c895cc6b1ba99b8d'
   name 'NW.js'
   homepage 'https://nwjs.io/'
 

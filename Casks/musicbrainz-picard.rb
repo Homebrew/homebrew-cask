@@ -4,9 +4,11 @@ cask 'musicbrainz-picard' do
 
   url "http://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-#{version}.dmg"
   appcast 'https://picard.musicbrainz.org/changelog/',
-          checkpoint: '7693e05f7c2c194a8ad62a063e785c49fbe03a41c91020d447e654295a31f10c'
+          checkpoint: '0c45c97c6847ff5462ccd16e7a95f0a2544eb34b2614c1deafa4b0c4ce03ac51'
   name 'MusicBrainz Picard'
   homepage 'https://picard.musicbrainz.org/'
+
+  depends_on macos: '>= :lion'
 
   app 'MusicBrainz Picard.app'
 

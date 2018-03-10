@@ -1,10 +1,10 @@
 cask 'evergreen' do
-  version '1.0d30'
-  sha256 'f9290d0fb028980e95d3d1cb1770f1f352d376317684cef6ea63ecd7aa844dc2'
+  version '1.0d42'
+  sha256 '952f6f920d9ed94d29e72590a7dafa55a50a56b1c0ce65026ca31db78a2eaabb'
 
   url "https://ranchero.com/downloads/Evergreen#{version}.zip"
   appcast 'https://ranchero.com/downloads/evergreen-beta.xml',
-          checkpoint: '8e32778a4f5c31bf091df662426dd12834af89fde814bcb6dd2668c57644302b'
+          checkpoint: '0b1636b5a2d4cb7b8fdac70b09cf39681fb3f2ea259c29280adc05f303fc40ce'
   name 'Evergreen'
   homepage 'https://ranchero.com/evergreen/'
 

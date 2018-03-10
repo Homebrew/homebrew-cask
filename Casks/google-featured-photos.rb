@@ -1,6 +1,6 @@
 cask 'google-featured-photos' do
-  version '1.0.0.152'
-  sha256 'b1dcae63a6144dedcabdb37106cd2f9990340b24a667c010d9345b8113a33c67'
+  version '1.0.0.208'
+  sha256 '4d4abc378b38278b0cd247e99a008c730a3b6b77824437b01db0bf8beaf24bfb'
 
   url "https://dl.google.com/featuredphotosscreensaver/GoogleFeaturedPhotos-#{version}.dmg"
   name 'Google Featured Photos'

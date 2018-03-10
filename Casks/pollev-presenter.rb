@@ -1,6 +1,6 @@
 cask 'pollev-presenter' do
-  version '2.12.0'
-  sha256 'ca8c43bdbe592512f5488da3a12d42d980285c4830dec8b622a389a737ca633f'
+  version '2.14.0'
+  sha256 '636aa88b5819f13c0cd50e143f8782c9ddea8d4d7ebea0db6858acd59c596647'
 
   # amazonaws.com/polleverywhere-app was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/polleverywhere-app/mac-stable/#{version}/pollev.dmg"

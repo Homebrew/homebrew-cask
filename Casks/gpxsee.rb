@@ -1,11 +1,11 @@
 cask 'gpxsee' do
-  version '4.19'
-  sha256 '73079c39947a4c386bd5259482538679dfb8acdb3c1affdfb2b68e078fd6c72f'
+  version '5.3'
+  sha256 '8c6f929faf3458d1c927363d179aed5e3d912599729ba70112b5f1474f349ad7'
 
   # sourceforge.net/gpxsee/Mac%20OS%20X was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/gpxsee/Mac%20OS%20X/GPXSee-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/gpxsee/rss?path=/Mac%20OS%20X',
-          checkpoint: '603494ac861bab6bbf950ba1333c0d33156ca5f64e421e14e76dbbacf699af12'
+          checkpoint: 'ca34e74bb7bb22931a8955f40e29c161db131ba0d5117d16d191597d21b86f90'
   name 'GPXSee'
   homepage 'http://www.gpxsee.org/'
 

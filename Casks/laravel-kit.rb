@@ -1,10 +1,10 @@
 cask 'laravel-kit' do
-  version '1.2.0'
-  sha256 '7836d5dffbee19efb6d5b86d817045fecf84106c553160461add4226adf28722'
+  version '1.2.1'
+  sha256 '2da9fa8d34f95ef5140cdfc777f5756db5db458a2fb88bd0ea3567fe33cf6081'
 
   url "https://github.com/tarequemdhanif/laravel-kit/releases/download/v#{version}/laravel-kit-#{version}-mac.zip"
   appcast 'https://github.com/tarequemdhanif/laravel-kit/releases.atom',
-          checkpoint: '4d87a5800107e917d622e0bbd25bf3af6c26fc67a9107490eb21ab5e1b63df07'
+          checkpoint: '9ee31fb21354736268a71da30b2c0405a194cbae4248493a4990a6621b336f63'
   name 'Laravel Kit'
   homepage 'https://github.com/tarequemdhanif/laravel-kit'
 

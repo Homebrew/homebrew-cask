@@ -1,6 +1,6 @@
 cask 'kindle-comic-converter' do
-  version '5.4.3'
-  sha256 '2b4994689c15dbfd5c18bcb099de40d95a1605d30647445f96b3f888b0ef0183'
+  version '5.4.4'
+  sha256 '61fb5ef618745c15d56d4dfad388bca20f446ac43a6c838e5f722beeddd65da2'
 
   url "https://kcc.iosphe.re/OSX/KindleComicConverter_osx_#{version}.dmg"
   name 'Kindle Comic Converter'

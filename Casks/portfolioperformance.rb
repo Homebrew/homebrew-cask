@@ -9,6 +9,8 @@ cask 'portfolioperformance' do
   name 'Portfolio Performance'
   homepage 'http://www.portfolio-performance.info/portfolio/'
 
+  auto_updates true
+
   app 'PortfolioPerformance.app'
 
   caveats do

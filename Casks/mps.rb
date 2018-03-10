@@ -1,10 +1,10 @@
 cask 'mps' do
-  version '2017.3.4,173.1734'
-  sha256 '628e1f254943746f2e9da0a595103c5eff43f00eb2743c77913efe2371588bf4'
+  version '2017.3.5,173.1767'
+  sha256 'c6a6fc03592d836861f7f2fc672cc002f2307e8b1e3741ca46b1881ee3698f55'
 
   url "https://download.jetbrains.com/mps/#{version.before_comma.major_minor}/MPS-#{version.before_comma}-macos-jdk-bundled.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=MPS&latest=true&type=release',
-          checkpoint: '3d60711e446730f6e8cbcd55383ce5ceb7322537c1d5266fae78dbc87a514449'
+          checkpoint: '1656435ecb208cc70d340317fa782fc56425097981aa673939b098f0c1770691'
   name 'JetBrains MPS'
   homepage 'https://www.jetbrains.com/mps/'
 

@@ -1,6 +1,6 @@
 cask 'whatpulse' do
-  version '2.8.1'
-  sha256 'e9b0435874830fb9de0ee32411e918e12a8651c0e676daf9eccf84946d8ffd6d'
+  version '2.8.2'
+  sha256 '7f4be7d68e068d2bcaaae9e29de42501bb20cc64a03836d241292e46c1ae4bf7'
 
   url "https://static.whatpulse.org/files/whatpulse-mac-#{version}.dmg"
   name 'WhatPulse'
