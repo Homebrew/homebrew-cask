@@ -23,13 +23,13 @@ cask 'onyx' do
     version '3.3.1'
     sha256 '887272335926005f49bbd35f66eb3ea5a6c19d3a35a8fada68357ab5860a7c1b'
   else
-    version '3.4.2'
-    sha256 '55af42b987194328253fa0f0ed0f1f8b9816fab7da45d9f459f82c3f9418c809'
+    version '3.4.3'
+    sha256 '9da5229dd8b99015e2101573e79e4b5175bfffc971382831eb7c5c8c3f0eb74b'
   end
 
   url "https://www.titanium-software.fr/download/#{macos_release}/OnyX.dmg"
   appcast 'https://www.titanium-software.fr/en/release_onyx.html',
-          checkpoint: 'bf4518a80da1e22d132b27c8f335b5367566eb382e1f1fa1a41c7db14a539df0'
+          checkpoint: 'e1f5042bc9853aed3abc1a8943a61a9586c257ceb98d100f65b9e95ce33691d4'
   name 'OnyX'
   homepage 'https://www.titanium-software.fr/en/onyx.html'
 
