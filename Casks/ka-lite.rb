@@ -8,7 +8,7 @@ cask 'ka-lite' do
   name 'Khan Academy Lite'
   homepage 'https://learningequality.org/ka-lite/'
 
-  depends_on formula: 'python'
+  depends_on formula: 'python@2'
 
   pkg 'KA-Lite.pkg'
 
