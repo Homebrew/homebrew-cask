@@ -9,4 +9,8 @@ cask 'ramme' do
   homepage 'https://github.com/terkelg/ramme/'
 
   app 'Ramme.app'
+
+  caveats do
+    discontinued
+  end
 end
