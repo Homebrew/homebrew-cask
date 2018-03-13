@@ -9,5 +9,5 @@ cask 'pollev-presenter' do
   name 'PollEv Presenter'
   homepage 'https://www.polleverywhere.com/'
 
-  app 'PollEv Presenter.app'
+  app 'Poll Everywhere.app'
 end
