@@ -8,5 +8,5 @@ cask 'minergate-cli' do
 
   binary "MinerGate-cli-#{version}-Mac/minergate-cli"
 
-  zap trash: ['~/Library/Application Support/minergate-cli']
+  zap trash: '~/Library/Application Support/minergate-cli'
 end
