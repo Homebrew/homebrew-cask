@@ -8,6 +8,8 @@ cask 'minergate' do
 
   app 'MinerGate.app'
 
-  zap trash: ['~/Library/Application Support/minergate',
-              '/Library/Logs/DiagnosticReports/minergate_*']
+  zap trash: [
+               '~/Library/Application Support/minergate',
+               '/Library/Logs/DiagnosticReports/minergate_*',
+             ]
 end
