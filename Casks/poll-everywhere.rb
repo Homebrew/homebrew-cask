@@ -1,4 +1,4 @@
-cask 'pollev-presenter' do
+cask 'poll-everywhere' do
   version '2.15.0'
   sha256 '3043a881170dcc38f86c1d9ae76566cf3a54a8c9733270f47793435d67350a3e'
 
