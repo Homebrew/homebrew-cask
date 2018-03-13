@@ -1,8 +1,8 @@
 cask 'goland' do
-  version '2017.3.3,173.4674.34'
-  sha256 '7ae3bb7df5404851b9257fc6fa0cf14f3c79a6a66fafa275404b10986c9ea0c6'
+  version '2018.1,181.4096.27'
+  sha256 '5b6fe8a9b0ee4cee5a454b5d9a497ce161535fde4667135a90e29947e2882689'
 
-  url "https://download.jetbrains.com/go/goland-#{version.before_comma}.dmg"
+  url "https://download.jetbrains.com/go/goland-#{version.after_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=GO&latest=true&type=release',
           checkpoint: 'af941295d78e95a0ffab9c4b538f97ba0d59f1285ed2248974c9c07a806794c5'
   name 'Goland'
