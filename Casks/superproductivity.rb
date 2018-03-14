@@ -7,8 +7,6 @@ cask 'superproductivity' do
   appcast 'https://github.com/johannesjo/super-productivity/releases.atom',
           checkpoint: 'fb1dc22a5e1a01d8e321ab8af61fdbea6ac0b9b4d9a9ef8f1cb37e5edc7d56a2'
   name 'Super Productivity'
-  name 'super-productivity'
-  name 'superProductivity'
   homepage 'https://super-productivity.com/'
 
   app 'superProductivity.app'
