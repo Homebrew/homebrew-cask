@@ -1,12 +1,12 @@
 cask 'anka-build' do
-  version '1.2.0.86'
-  sha256 'ef92461eca6adfe3a1e07b98b026fad6d9e4ecd97ae84e757e1dc140b2d63cf6'
+  version '1.2.1.87'
+  sha256 '24675a9e3e4671908b2874fe15da0d6ff2d1c76dd519ef6965e1b2ac2633f190'
 
   # d1efqjhnhbvc57.cloudfront.net was verified as official when first introduced to the cask
   url "https://d1efqjhnhbvc57.cloudfront.net/AnkaBuild-#{version}.pkg",
       referer: 'https://veertu.com/download-anka-build/'
   appcast 'https://ankadoc.bitbucket.io/release-notes/index.html',
-          checkpoint: 'c4718d935a280cfb8924ef081109d18227135dd5156dd68dc7af675dca317fd6'
+          checkpoint: '5d5691037787d28f8cf2d67543fabcc5053f8491cc827c3e9801c485f9fd3343'
   name 'Veertu Anka Build'
   homepage 'https://veertu.com/'
 
