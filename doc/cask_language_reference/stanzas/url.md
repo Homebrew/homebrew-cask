@@ -110,7 +110,7 @@ Similar to the `preflight`, `postflight`, `uninstall_preflight`, and `uninstall_
 url do
   require 'open-uri'
   # No known stable URL; fetching disposable URL from landing site
-  open('https://example.com/app/landing') do |landing_page|
+  URI('https://example.com/app/landing').open do |landing_page|
     content = landing_page.read
     parse(content) # => https://example.com/download?23309800482283
   end
