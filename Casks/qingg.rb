@@ -13,7 +13,7 @@ cask 'qingg' do
 
   pkg 'Qingg.pkg'
 
-  uninstall pkgutil: 'com.aodaren.Qingg.pkg'
+  uninstall pkgutil: 'com.aodaren.*'
 
   zap trash: [
                '~/Library/Application Support/Qingg',
