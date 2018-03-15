@@ -1,10 +1,10 @@
 cask 'r-app' do
-  version '3.4.3'
-  sha256 '97797d7689eb183f96b0e89fa6b43fb9fe4a5b11474cd5a3d7a8942ff6933416'
+  version '3.4.4'
+  sha256 'afa75787f21601efc82947ce094681f67ff69a4fc668bc2b8331a1c69cceef3c'
 
   url "https://cloud.r-project.org/bin/macosx/R-#{version}.pkg"
   appcast 'https://www.r-project.org/',
-          checkpoint: '192972a418e60142e3283e22e2aeebc642869e6f46049b96b583a44a51dbfffd'
+          checkpoint: 'b206f01fb8821dd7a9b368310e345bace49176974c5d025657cd0c481bab9393'
   name 'R'
   homepage 'https://www.r-project.org/'
 
