@@ -2,9 +2,9 @@ cask 'rpvoip' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.intercall.com/downloads/rpvoip_mac.pkg'
+  url 'https://www.intercall.com/downloads/rpvoip_mac.pkg'
   name 'RPVoIP'
-  homepage 'http://www.intercall.com/'
+  homepage 'https://www.intercall.com/'
 
   pkg 'rpvoip_mac.pkg'
 
