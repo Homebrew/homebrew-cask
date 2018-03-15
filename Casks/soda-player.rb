@@ -1,6 +1,6 @@
 cask 'soda-player' do
-  version '1.3.5'
-  sha256 '92b11b5095c9c67096ab438874690e90add73e817d6be4c7ac0337451eca74a1'
+  version '1.3.6'
+  sha256 '6075724e8db052538718b8904ec9417db16b8c3d1d41beb0855690319522394c'
 
   url "https://releases.sodaplayer.com/mac/Soda%20Player%20#{version}.dmg"
   name 'Soda Player'
