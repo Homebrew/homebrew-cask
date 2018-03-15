@@ -5,7 +5,7 @@ cask 'butterflight-configurator' do
   url "https://github.com/ButterFlight/butterflight-configurator/releases/download/v#{version}/butterflight-configurator_#{version}_macOS.dmg"
   appcast 'https://github.com/ButterFlight/butterflight-configurator/releases.atom',
           checkpoint: '0ede3dca5c9f5d9a8cff550a32b6e35cd2b6fb118c879c4269c920c01c322949'
-  name 'ButterFlight-Configurator'
+  name 'ButterFlight Configurator'
   homepage 'https://github.com/ButterFlight/butterflight-configurator'
 
   app 'ButterFlight Configurator.app'
