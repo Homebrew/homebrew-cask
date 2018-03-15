@@ -4,7 +4,7 @@ cask 'betaflight-configurator' do
 
   url "https://github.com/betaflight/betaflight-configurator/releases/download/#{version}/betaflight-configurator_#{version}_macOS.dmg"
   appcast 'https://github.com/betaflight/betaflight-configurator/releases.atom',
-          checkpoint: 'e88921861461d85427771b15833f8069b6e88728512035575c282609cc66a5eb'
+          checkpoint: 'b8e52a48f938b77f1b674932f546d148f0ffdf915edb1461eb3e7ea3e6a7a390'
   name 'Betaflight-Configurator'
   homepage 'https://github.com/betaflight/betaflight-configurator'
 
