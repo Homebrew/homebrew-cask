@@ -1,5 +1,5 @@
 cask 'clover-configurator' do
-  version '4.60.3.2'
+  version '4.60.3.3'
   sha256 'ab04b7dc4a1d1b94e09f3d11725799dd802e78eb37f141666075fda46e1d4957'
 
   url 'http://mackie100projects.altervista.org/apps/cloverconf/10.10/CCV.zip'
