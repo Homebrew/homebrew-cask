@@ -1,10 +1,10 @@
 cask 'clover-configurator' do
-  version '4.60.3.2'
-  sha256 '8b974884c0e33e853cd291c45cebac3758a98960fd20372062c16fed7a1024b9'
+  version '4.60.3.3'
+  sha256 'ab04b7dc4a1d1b94e09f3d11725799dd802e78eb37f141666075fda46e1d4957'
 
   url 'http://mackie100projects.altervista.org/apps/cloverconf/10.10/CCV.zip'
   appcast 'http://mackie100projects.altervista.org/apps/cloverconf/10.10/update.xml',
-          checkpoint: 'dd81c248c1013d04faacd85da450aaac111333ed7618bcfc6da3b97c79ca0010'
+          checkpoint: '9b3e0c89c656ad130b20a61639b1189a6ca1cbe7ebd8b8819b10c47fc61b3480'
   name 'Clover Configurator'
   homepage 'http://mackie100projects.altervista.org/'
 
