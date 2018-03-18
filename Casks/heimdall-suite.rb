@@ -7,7 +7,7 @@ cask 'heimdall-suite' do
   name 'Heimdall Suite'
   homepage 'http://glassechidna.com.au/heimdall/'
 
-  pkg "Heimdall Suite #{version}.pkg"
+  pkg "Heimdall\ Suite\ #{version}.pkg"
 
   uninstall pkgutil: 'au.com.glassechidna.HeimdallSuite',
             kext:    'au.com.glassechidna.heimdall_usb_shield'
