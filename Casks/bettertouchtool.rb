@@ -23,8 +23,8 @@ cask 'bettertouchtool' do
 
     # bettertouchtool.net/releases was verified as official when first introduced to the cask
     url "https://bettertouchtool.net/releases/btt#{version}.zip"
-    appcast 'https://updates.bettertouchtool.net/highsierra_new.xml',
-            checkpoint: '1c3a66a8fb4f1b9c2b8db6b14cead596110d4efc90e766e094e1d9f5e8cdaf80'
+    appcast 'https://updates.bettertouchtool.net/bettertouchtool_release_notes.html',
+            checkpoint: '4520ee4fcee23c2367b2262ac827e548ca635ac33000cfb9becf4f4fc663c16a'
   end
 
   name 'BetterTouchTool'
