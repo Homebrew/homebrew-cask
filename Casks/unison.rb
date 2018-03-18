@@ -12,11 +12,11 @@ cask 'unison' do
     # github.com/bcpierce00/unison/releases/download was verified as official when first introduced to the cask
     url "https://github.com/bcpierce00/unison/releases/download/#{version}/Unison-OS-X-#{version}.zip"
   else
-    version '2.48.15'
-    sha256 '89894d14c9ff3c4d6195cb6a8065a2849e6ad55951799eedf8879e1a257d3e11'
+    version '2.51.2'
+    sha256 '52142f3aa03b7beba03aaa8c61cb1e3287058cae825845b2355081d9e925b6de'
 
     # github.com/bcpierce00/unison/releases/download was verified as official when first introduced to the cask
-    url "https://github.com/bcpierce00/unison/releases/download/#{version}/Unison-OS-X-#{version}.zip"
+    url "https://github.com/bcpierce00/unison/releases/download/v#{version}/Unison-#{version}.OS.X.zip"
   end
 
   appcast 'https://github.com/bcpierce00/unison/releases.atom',
