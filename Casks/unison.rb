@@ -20,7 +20,7 @@ cask 'unison' do
   end
 
   appcast 'https://github.com/bcpierce00/unison/releases.atom',
-          checkpoint: 'e8eaa827b069c50db797d395b2722be0760a4d229f9f332d714f754efeaed467'
+          checkpoint: '98fc35df2c7db577517de4649c6886d82ba5c2034bcad1e7e46ad21b89237dce'
   name 'Unison'
   homepage 'https://www.cis.upenn.edu/~bcpierce/unison/'
 
