@@ -12,5 +12,13 @@ cask 'tripmode' do
 
   app 'TripMode.app'
 
-  zap trash: '~/Library/Preferences/ch.tripmode.TripMode.plist'
+  zap trash: [
+               '/Library/Application Support/Tripmode',
+               '/Library/LaunchDaemons/ch.tripmode.nke.TripMode.plist',
+               '/Library/LaunchDaemons/ch.tripmode.TripMode.HelperTool.plist',
+               '/Library/PrivilegedHelperTools/ch.tripmode.TripMode.HelperTool',
+               '~/Library/Application Support/Tripmode',
+               '~/Library/Caches/ch.tripmode.TripMode',
+               '~/Library/Preferences/ch.tripmode.TripMode.plist',
+             ]
 end
