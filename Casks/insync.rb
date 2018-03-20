@@ -1,6 +1,6 @@
 cask 'insync' do
-  version '1.4.3.37063'
-  sha256 '14fcfd792e0d4ef3070101652b771dceac777a79e73c582345ca79ee0d861e4f'
+  version '1.4.4.37065'
+  sha256 '1b74a89a0ea6df57a999dfd09f59cffaee7236f6e63011224b93ef69acfbc669'
 
   url "http://s.insynchq.com/builds/Insync-#{version}.dmg"
   name 'Insync'
