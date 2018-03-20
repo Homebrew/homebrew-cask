@@ -34,8 +34,15 @@ cask 'puppet-agent' do
 
   pkg "puppet-agent-#{version}-installer.pkg"
 
-  uninstall launchctl: ['puppet', 'pxp-agent', 'mcollective'],
+  uninstall launchctl: [
+                         'puppet',
+                         'pxp-agent',
+                         'mcollective',
+                       ],
             pkgutil:   'com.puppetlabs.puppet-agent'
 
-  zap trash: ['~/.puppetlabs', '/etc/puppetlabs']
+  zap trash: [
+               '~/.puppetlabs',
+               '/etc/puppetlabs',
+             ]
 end
