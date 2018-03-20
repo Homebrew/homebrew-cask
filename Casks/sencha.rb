@@ -1,6 +1,6 @@
 cask 'sencha' do
-  version '6.5.2.15'
-  sha256 '8095e5ea0e7b5dffb7fb38ce9d68fb8a40e50df885eea42709d62d900ea747af'
+  version '6.5.3.6'
+  sha256 '49fbbdc7c130932a982bd2e943a82241a742bcf710bc6185ee5d9039ccf1dc88'
 
   url "https://cdn.sencha.com/cmd/#{version}/jre/SenchaCmd-#{version}-osx.app.zip"
   name 'Sencha Cmd'
