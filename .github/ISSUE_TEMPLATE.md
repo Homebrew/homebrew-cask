@@ -28,3 +28,9 @@
 ```
 {{replace this}}
 ```
+
+#### Output of `env | grep HOMEBREW`
+
+```
+{{replace this}}
+```
