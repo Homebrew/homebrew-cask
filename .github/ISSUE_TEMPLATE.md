@@ -23,6 +23,12 @@
 {{replace this}}
 ```
 
+#### Output of `brew config`
+
+```
+{{replace this}}
+```
+
 #### Output of `brew tap`
 
 ```
