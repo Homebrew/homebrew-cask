@@ -12,7 +12,8 @@ cask 'tripmode' do
 
   app 'TripMode.app'
 
-  uninstall launchctl: [
+  uninstall signal:    ['TERM', 'ch.tripmode.TripMode'],
+            launchctl: [
                          'ch.tripmode.nke.TripMode',
                          'ch.tripmode.TripMode.HelperTool',
                        ],
