@@ -13,8 +13,8 @@ cask 'tripmode' do
   app 'TripMode.app'
 
   uninstall launchctl: [
-                         '/Library/LaunchDaemons/ch.tripmode.nke.TripMode.plist',
-                         '/Library/LaunchDaemons/ch.tripmode.TripMode.HelperTool.plist',
+                         'ch.tripmode.nke.TripMode',
+                         'ch.tripmode.TripMode.HelperTool',
                        ],
             delete:    '/Library/PrivilegedHelperTools/ch.tripmode.TripMode.HelperTool'
 
