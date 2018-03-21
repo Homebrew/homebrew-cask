@@ -4,9 +4,9 @@ cask 'nitroshare' do
 
   url "https://launchpad.net/nitroshare/#{version.major_minor}/#{version}/+download/nitroshare-#{version}-osx.dmg"
   appcast 'https://github.com/nitroshare/nitroshare-desktop/releases.atom',
-          checkpoint: '45c7228a8a574c480784af8e6e25d3a667cf7063872fbb95a3c6a119f4d12247'
+          checkpoint: 'ab6fa11eb8dcd73b1af93f41e43949dcb23dc9f6803d16bb311a0f49018dc9c0'
   name 'NitroShare'
   homepage 'https://launchpad.net/nitroshare'
 
-  app 'NitroShare.app'
+  app 'nitroshare.app'
 end

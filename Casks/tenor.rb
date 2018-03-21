@@ -1,11 +1,11 @@
 cask 'tenor' do
-  version '2.0.3'
-  sha256 '5d3fd1098f5fb01f1ce0e42cb31011c9517c90c4770e0513db69e77099e6db02'
+  version '2.0.4'
+  sha256 '42c666af0976b1bebdca02f0889071b9a81f5f712795de33db172ec515e0bd07'
 
   # media.tenor.co/mac/bin was verified as official when first introduced to the cask
   url 'https://media.tenor.co/mac/bin/GIFforMac.dmg'
   appcast 'https://media.tenor.co/mac/gif_for_mac_appcast.xml',
-          checkpoint: '7586e7ae85c17b626297abc252cd543df7b84cc82ab4a5921edbf54893404b32'
+          checkpoint: '3b2af09a9781777e7437c9e5a60bb674194a2cad417f8718ca43534949bc352d'
   name 'Tenor'
   homepage 'https://tenor.com/mac'
 

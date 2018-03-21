@@ -1,6 +1,6 @@
 cask 'dmmbookviewer' do
-  version '3.1.4'
-  sha256 '7644addebc62e7d83be305955883d74386253b208f643f687af29af0a7e6a33b'
+  version '3.1.5'
+  sha256 '00fbd0fca4ffa2d0ddd661af168636d0337abd302ff99945d3622eb91b11d307'
 
   # dmm.co.jp was verified as official when first introduced to the cask
   url "http://dl.aka.dmm.co.jp/dmmviewer/mac/DMMViewerSetup_Mac_#{version}.pkg"

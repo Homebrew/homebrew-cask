@@ -12,5 +12,17 @@ cask 'tripmode' do
 
   app 'TripMode.app'
 
-  zap trash: '~/Library/Preferences/ch.tripmode.TripMode.plist'
+  uninstall signal:    ['TERM', 'ch.tripmode.TripMode'],
+            launchctl: [
+                         'ch.tripmode.nke.TripMode',
+                         'ch.tripmode.TripMode.HelperTool',
+                       ],
+            delete:    '/Library/PrivilegedHelperTools/ch.tripmode.TripMode.HelperTool'
+
+  zap trash: [
+               '/Library/Application Support/Tripmode',
+               '~/Library/Application Support/Tripmode',
+               '~/Library/Caches/ch.tripmode.TripMode',
+               '~/Library/Preferences/ch.tripmode.TripMode.plist',
+             ]
 end

@@ -1,11 +1,11 @@
 cask 'qutebrowser' do
-  version '1.1.1'
-  sha256 'd1f9aa22f9c4e83e93839124be85224a13e940724def49441236e73c7c148371'
+  version '1.2.1'
+  sha256 '14d25d57ed9462978e4bc5d6f42c15676d98f84591ebb1f41f4140e27376556d'
 
   # github.com/qutebrowser/qutebrowser was verified as official when first introduced to the cask
   url "https://github.com/qutebrowser/qutebrowser/releases/download/v#{version}/qutebrowser-#{version}.dmg"
   appcast 'https://github.com/qutebrowser/qutebrowser/releases.atom',
-          checkpoint: '9238b54864d15db556421bedffd30726bc9e707ddaaa20a8fd6bded838aa03ff'
+          checkpoint: '16bd5c29c7e4a9cad78d0e50a824741256dcc623da1c92006e7c10c64b2613a3'
   name 'qutebrowser'
   homepage 'https://www.qutebrowser.org/'
 

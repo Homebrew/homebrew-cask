@@ -1,10 +1,10 @@
 cask 'fork' do
-  version '1.0.64.1'
-  sha256 '722f802b98ebff756b2988689e346f518f8b4d3d736c35a9c04b9f2552b6518d'
+  version '1.0.65.1'
+  sha256 '9582a2a7cf2a43e6a167199a0520d145c130dcf7555df7901b0f02e2611d75f6'
 
   url 'https://git-fork.com/update/files/Fork.dmg'
   appcast 'https://git-fork.com/update/feed.xml',
-          checkpoint: '8f2971127c89bbe519d0e47581473502f99e2ed1c895d6167222a5d6e3f81708'
+          checkpoint: 'fa2ef7f0fc096180267bb2332af0f0074d77088e7bfe1f00e8f4b39beb5e60eb'
   name 'Fork'
   homepage 'https://git-fork.com/'
 

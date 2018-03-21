@@ -1,12 +1,12 @@
 cask 'anka-flow' do
-  version '1.1.3.81'
-  sha256 '4cc4f0118518e44d5ccdb301a5c140cb13bbeda246202462000943ba178c130b'
+  version '1.2.1.87'
+  sha256 '6944c13c794a09cb8dc6229d1d1fffd618b5e7e7cf241a4ed4398f8ff09180a4'
 
   # d1efqjhnhbvc57.cloudfront.net was verified as official when first introduced to the cask
   url "https://d1efqjhnhbvc57.cloudfront.net/AnkaFlow-#{version}.pkg",
       referer: 'https://veertu.com/download-anka-run/'
   appcast 'https://ankadoc.bitbucket.io/release-notes/index.html',
-          checkpoint: '28374389f11edafe6d722ba4f8a79bc71fa571fce6e45c3f4e70ecd9a93ed09c'
+          checkpoint: '5d5691037787d28f8cf2d67543fabcc5053f8491cc827c3e9801c485f9fd3343'
   name 'Veertu Anka Flow'
   homepage 'https://veertu.com/'
 

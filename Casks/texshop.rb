@@ -1,10 +1,10 @@
 cask 'texshop' do
-  version '3.97'
-  sha256 'bef94b933128c3beac69ff15e309348cbc0ff4e7616394dbd503ef8615865b3b'
+  version '3.99'
+  sha256 '5a36a64cb8e0a608a9758824e3dd60fd7b1f801341db1a3cd83ec8e9e918189e'
 
   url "http://pages.uoregon.edu/koch/texshop/texshop-64/texshop#{version.no_dots}.zip"
   appcast 'http://pages.uoregon.edu/koch/texshop/texshop-64/texshopappcast.xml',
-          checkpoint: 'bc2a51352a317fe642a8a299e3dec9f92d082c9f58551f9b0d042fc33442302a'
+          checkpoint: '50a6a3d0b0a6b4c187bcddc38e1713de134d99a1ece815caa157d197915094b0'
   name 'TeXShop'
   homepage 'http://pages.uoregon.edu/koch/texshop/'
 
