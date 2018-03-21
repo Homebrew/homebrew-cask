@@ -1,10 +1,10 @@
 cask 'nteract' do
-  version '0.4.2'
-  sha256 '848513a52554888c096c648866c281f57b481b831e40ce652b6a91e165302326'
+  version '0.8.4'
+  sha256 'dcc993ac35e1b3e58057f0eb73240a695c681e7501c0454728b53550f6ebe160'
 
   url "https://github.com/nteract/nteract/releases/download/v#{version}/nteract-#{version}.dmg"
   appcast 'https://github.com/nteract/nteract/releases.atom',
-          checkpoint: 'df4f60423863e4a7239e99e8cb60ead047b0dad023922f111881193f5168ef9c'
+          checkpoint: '1b1402e6093e6d5a02e19951625ecbd2369792c30ebe4e2d743f434cceb020d9'
   name 'nteract'
   homepage 'https://github.com/nteract/nteract'
 

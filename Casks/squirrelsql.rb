@@ -1,11 +1,11 @@
 cask 'squirrelsql' do
-  version '3.8.0'
-  sha256 '418d7ae816b90cb34f5d7905ae444c06fbe7f3100ea1a7cc0857c7d8a9041d0a'
+  version '3.8.1'
+  sha256 'c3ff5203477536d347f9531a8070465267b1a81751e964b97e427cd13af224d9'
 
   # sourceforge.net/squirrel-sql was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/squirrel-sql/1-stable/#{version}/squirrel-sql-#{version}-MACOSX-install.jar"
   appcast 'https://sourceforge.net/projects/squirrel-sql/rss?path=/1-stable',
-          checkpoint: '2a7ce7d9f5393e4e3d8672e47e0691cefdb7e213944780c74d02b35dca9bcaf5'
+          checkpoint: '9c801e242da8fcd8e2aa9acf97f228e89db9546848027ff039f37454ea5943b6'
   name 'SQuirrel SQL'
   homepage 'http://www.squirrelsql.org/'
 
@@ -72,16 +72,16 @@ cask 'squirrelsql' do
   end
 
   postflight do
-    system_command 'java', args: ['-jar', "#{staged_path}/squirrel-sql-#{version}-MACOSX-install.jar", installoptions.to_s]
+    system_command '/usr/bin/java', args: ['-jar', "#{staged_path}/squirrel-sql-#{version}-MACOSX-install.jar", installoptions.to_s]
   end
 
   uninstall_postflight do
-    system_command 'java', args: ['-jar', "#{appdir}/SQuirreLSQL.app/Uninstaller/uninstaller.jar", '-f', '-c']
+    system_command '/usr/bin/java', args: ['-jar', "#{appdir}/SQuirreLSQL.app/Uninstaller/uninstaller.jar", '-f', '-c']
   end
 
   zap trash: '~/.squirrel-sql'
 
   caveats do
-    depends_on_java('6+')
+    depends_on_java('8+')
   end
 end

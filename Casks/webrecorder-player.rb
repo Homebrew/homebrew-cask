@@ -1,10 +1,10 @@
 cask 'webrecorder-player' do
-  version '1.0.5'
-  sha256 '43b6a05068d867b39e2c7b596485c611b43ddf7afbe0f13109c5a1e93eeffcc2'
+  version '1.0.9'
+  sha256 '4583299762d426eea22ef9b4c3a4985992e7da00cc39f5e6df64215b0d461c66'
 
-  url "https://github.com/webrecorder/webrecorderplayer-electron/releases/download/v#{version}/webrecorderplayer-electron-#{version}.dmg"
+  url "https://github.com/webrecorder/webrecorderplayer-electron/releases/download/v#{version}/webrecorderplayer-electron-osx-#{version}.dmg"
   appcast 'https://github.com/webrecorder/webrecorderplayer-electron/releases.atom',
-          checkpoint: '4b1bd7d5071576486bbbacf42051b1ffb59cb3f55c15182b885b835da7222e0d'
+          checkpoint: '070af3a0f8992330d3d311108754786c22480bc09f7cd02283bba6d338d9fc55'
   name 'Webrecorder Player'
   homepage 'https://github.com/webrecorder/webrecorderplayer-electron'
 

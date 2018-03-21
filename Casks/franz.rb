@@ -1,13 +1,20 @@
 cask 'franz' do
-  version '5.0.0-beta.14'
-  sha256 'ced44b6c9e6bd68e6c467aca283d901829aa6e9614c487fc898bb8076b044ae7'
+  version '5.0.0-beta.17'
+  sha256 '2b388cb82da5bac7fb1bd71e17bab894523c6fce26631b297bb66d78387985c3'
 
   # github.com/meetfranz/franz was verified as official when first introduced to the cask
   url "https://github.com/meetfranz/franz/releases/download/v#{version}/franz-#{version}.dmg"
   appcast 'https://github.com/meetfranz/franz/releases.atom',
-          checkpoint: 'e2ff1ff90f316ba2e14ddcd8e97f8f2a7f86e7cf500058531809ee59c71a49a9'
+          checkpoint: 'f1a1b87b70a4f88c6075a36199e605ee9c398882e5be509958a3888fb453591a'
   name 'Franz'
   homepage 'https://meetfranz.com/'
 
   app 'Franz.app'
+
+  zap trash: [
+               '~/Library/Application Support/Franz',
+               '~/Library/Preferences/com.electron.franz.helper.plist',
+               '~/Library/Preferences/com.electron.franz.plist',
+               '~/Library/Saved Application State/com.electron.franz.savedState',
+             ]
 end

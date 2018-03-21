@@ -1,12 +1,15 @@
 cask 'fish' do
-  version '2.6.0'
-  sha256 '9cd25bc469dbd0415dda125acedfc1a9512c28847b4bec52ce3fd127b78f6ecd'
+  version '2.7.1'
+  sha256 'd37f093702ef7f05e11333ceb8a1a859452395720b75f5bbbe4851e20157f452'
 
-  url "https://fishshell.com/files/#{version}/fish-#{version}.app.zip"
+  # github.com/fish-shell/fish-shell was verified as official when first introduced to the cask
+  url "https://github.com/fish-shell/fish-shell/releases/download/#{version}/fish-#{version}.app.zip"
   appcast 'https://fishshell.com/release_notes.html',
-          checkpoint: '6bb8e589c1e26f8c6285c96e1771e11969c36ccce3fd6d5e15a39a1e57c1865d'
+          checkpoint: 'd4345708490da3b072c98441c94e7b2c379d9dba141ed0e602e44f81624b62c3'
   name 'Fish App'
   homepage 'https://fishshell.com/'
+
+  depends_on macos: '>= :snow_leopard'
 
   app 'fish.app'
 end

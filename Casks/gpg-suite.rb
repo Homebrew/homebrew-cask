@@ -1,19 +1,16 @@
 cask 'gpg-suite' do
-  version '2017.1'
-  sha256 '01705da33b9dadaf5282d28f9ef58f2eb7cd8ff6f19b4ade78861bf87668a061'
+  version '2018.1'
+  sha256 'f2be13ca1aeb7d29ba46134d1d38f88de9c52eb1270ac00fd5f1bc305fd5921e'
 
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
   appcast 'https://gpgtools.org/releases/gka/appcast.xml',
-          checkpoint: '795641d52ba72f4b80236023007b29bee03a22e1911c51bf757578eb1a03c139'
+          checkpoint: 'b2e1337302be3f5bec480c10a26bf00eec28e29928ead4b1f544b3d98fb2a112'
   name 'GPG Suite'
   homepage 'https://gpgtools.org/'
   gpg "#{url}.sig", key_url: 'https://gpgtools.org/GPGTools%2000D026C4.asc'
 
   auto_updates true
-  conflicts_with cask: [
-                         'gpg-suite-beta',
-                         'gpg-suite-nightly',
-                       ]
+  conflicts_with cask: 'gpg-suite-nightly'
 
   pkg 'Install.pkg'
 

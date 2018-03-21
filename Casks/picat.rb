@@ -1,6 +1,6 @@
 cask 'picat' do
   version '2.2'
-  sha256 '9d08e44f155982600bb54c8b4890e08baaaa38d20f2919f9346a000c5fcac798'
+  sha256 'fa8336776da18d7669ce59e5a4836c7c3bfeed9d509d4a7a50f0e72862e8ed62'
 
   url "http://picat-lang.org/download/picat#{version.no_dots}_macx.tar.gz"
   appcast 'http://picat-lang.org/updates.txt',

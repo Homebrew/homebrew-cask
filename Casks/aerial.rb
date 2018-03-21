@@ -4,9 +4,11 @@ cask 'aerial' do
 
   url "https://github.com/JohnCoates/Aerial/releases/download/v#{version}/Aerial.zip"
   appcast 'https://github.com/JohnCoates/Aerial/releases.atom',
-          checkpoint: 'd0bd6cf01ee5c8330fd7e45ca543efa9234db9ffbee041e04f5640462552fa6b'
+          checkpoint: 'd3c4f87a1de8f8195033eeae1af72347d66cd95287c10c45de629753cb55368b'
   name 'Aerial Screensaver'
   homepage 'https://github.com/JohnCoates/Aerial'
 
   screen_saver 'Aerial.saver'
+
+  zap trash: '~/Library/Caches/Aerial'
 end

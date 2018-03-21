@@ -1,10 +1,10 @@
 cask 'moneywell' do
-  version '3.0.5'
-  sha256 'c2c888281b96922c8eff50034fca7565ef485ab693b7847f51de6cbd982345ce'
+  version '3.0.6'
+  sha256 'b9f1023f989e25d40446672ed15d509723be4398125232a920abef66400eae6d'
 
   url "https://moneywellapp.com/mw/builds/MoneyWell-#{version}.zip"
   appcast "https://moneywellapp.com/mw/feeds/#{version.major}x/appcast.xml",
-          checkpoint: 'eb5ad6e67142c0ca5b6c7e9d64425e4db0cab48f8d5f066696a778977efd3b12'
+          checkpoint: '6c0ac38624db461f5a1f2eec0d96e8c3625eddd849502d5249b38c2d11b2efcd'
   name 'MoneyWell'
   homepage 'https://moneywellapp.com/'
 

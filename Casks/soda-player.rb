@@ -1,8 +1,8 @@
 cask 'soda-player' do
-  version :latest
-  sha256 :no_check
+  version '1.3.6'
+  sha256 '6075724e8db052538718b8904ec9417db16b8c3d1d41beb0855690319522394c'
 
-  url 'https://releases.sodaplayer.com/mac/Soda%20Player.dmg'
+  url "https://releases.sodaplayer.com/mac/Soda%20Player%20#{version}.dmg"
   name 'Soda Player'
   homepage 'https://www.sodaplayer.com/'
 

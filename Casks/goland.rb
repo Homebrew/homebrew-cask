@@ -1,18 +1,16 @@
 cask 'goland' do
-  # GoLand is EAP only for now
-  version '2017.3 EAP,173.3727.96'
-  sha256 'c64e67df12cc549e61e480bb68be1eec4b3eb5de4ee7fc463fc675a166f3ded1'
+  version '2017.3.3,173.4674.34'
+  sha256 '7ae3bb7df5404851b9257fc6fa0cf14f3c79a6a66fafa275404b10986c9ea0c6'
 
-  url "https://download.jetbrains.com/go/goland-#{version.after_comma}.dmg"
-  appcast 'https://data.services.jetbrains.com/products/releases?code=GO&latest=true&type=eap',
-          checkpoint: '068e574c0f457279e5b4eafd365d0b2c61fbf1f553b38ac83de3dba074a977fa'
+  url "https://download.jetbrains.com/go/goland-#{version.before_comma}.dmg"
+  appcast 'https://data.services.jetbrains.com/products/releases?code=GO&latest=true&type=release',
+          checkpoint: 'af941295d78e95a0ffab9c4b538f97ba0d59f1285ed2248974c9c07a806794c5'
   name 'Goland'
-  name 'Goland EAP'
   homepage 'https://www.jetbrains.com/go/'
 
   auto_updates true
 
-  app "GoLand #{version.before_comma}.app"
+  app 'GoLand.app'
 
   uninstall_postflight do
     ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'goland') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }

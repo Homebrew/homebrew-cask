@@ -9,6 +9,8 @@ cask 'ipe' do
   name 'Ipe'
   homepage 'http://ipe.otfried.org/'
 
+  depends_on macos: '>= :mavericks'
+
   app 'Ipe.app'
 
   zap trash: [

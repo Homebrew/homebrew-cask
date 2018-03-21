@@ -1,11 +1,11 @@
 cask 'minikube' do
-  version '0.24.0'
-  sha256 '7db2045495db05a885c3ad9a0e5e7ff017ae1f2f1a835d9151142df0c6f1d192'
+  version '0.25.0'
+  sha256 '0d85ecc1cd064bae04ea4a8ef634d4fdc80318b65a2b8d14d105f1e15fcbced0'
 
   # storage.googleapis.com/minikube was verified as official when first introduced to the cask
   url "https://storage.googleapis.com/minikube/releases/v#{version}/minikube-darwin-amd64"
   appcast 'https://github.com/kubernetes/minikube/releases.atom',
-          checkpoint: '887bdc0d27dd79bb5a0326f0c7b248a2a62d1c22b80f172f0c3d530116ddf344'
+          checkpoint: 'b8788803f9a46137e5fed4dd40a123e1099c04916728bb9f01042228cf450978'
   name 'Minikube'
   homepage 'https://github.com/kubernetes/minikube'
 

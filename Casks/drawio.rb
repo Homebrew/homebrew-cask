@@ -1,11 +1,11 @@
 cask 'drawio' do
-  version '7.6.6'
-  sha256 'a58307cfd1f39b909bbf96347f3f81e6d875706af6e0576bcb694aea75ba5f13'
+  version '8.0.6'
+  sha256 '7a5407579a403ce9d1e79011998af08847394e6b1c0d34b46d5c5c04f1476213'
 
   # github.com/jgraph/drawio-desktop was verified as official when first introduced to the cask
   url "https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/draw.io-#{version}.dmg"
   appcast 'https://github.com/jgraph/drawio-desktop/releases.atom',
-          checkpoint: '60dcab7df088afce24739de76e8cf9838bd61e4aa808b472f0ed65cac5004082'
+          checkpoint: '007d2161784365c108a0c18cae64f57b3bff6c907f0f5dcb9f4841f9aeb92b73'
   name 'draw.io Desktop'
   homepage 'https://www.draw.io/'
 

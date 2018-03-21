@@ -1,10 +1,10 @@
 cask 'amm' do
-  version '0.4.3'
-  sha256 '181410cc890f9f13fb7500fcda3b51be205f150ab6ee8706340429f07d750510'
+  version '0.4.4'
+  sha256 '7d01e568658d3f4186ed501e55734563768f3a02063c33281c716ff5988db98d'
 
   url "https://github.com/15cm/AMM/releases/download/v#{version}/AMM_v#{version}.dmg"
   appcast 'https://github.com/15cm/AMM/releases.atom',
-          checkpoint: 'bf9903a6b584c3024b65045d8633ca4bfa112177af58af044f52f6fc263f04bd'
+          checkpoint: 'b961b8f53805616fdcd465fabe2d47df7262751ddd7edb06491d3a21ccc4e020'
   name 'AMM'
   homepage 'https://github.com/15cm/AMM'
 

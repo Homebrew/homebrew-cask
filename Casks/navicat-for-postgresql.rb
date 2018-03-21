@@ -1,10 +1,10 @@
 cask 'navicat-for-postgresql' do
-  version '12.0.18'
-  sha256 '50f9c800ff571406ee3e6c9b073454e41acc79bc613e3b2230f71106876c9d44'
+  version '12.0.23'
+  sha256 '62688e97dace5bc9c91cebd32dc123fcb09191a5b232889f978c8e253e4690e9'
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_pgsql_en.dmg"
   appcast 'https://www.navicat.com/en/products/navicat-for-postgresql-release-note',
-          checkpoint: '5d22dba09aa7c0f5f3e57334b883ac713fabb6da4cec8ef2085eb6b2e549973c'
+          checkpoint: '290960db13b3dac7d3f795f945cae9ab6fca0ef90a65483663fcd57673619517'
   name 'Navicat for PostgreSQL'
   homepage 'https://www.navicat.com/products/navicat-for-postgresql'
 

@@ -33,6 +33,11 @@ function copy_templates_and_ci {
   repo_name="${1}"
   rsync --archive --delete "${main_repo_dir}"/{.editorconfig,.gitattributes,.github,.gitignore,.travis.yml,ci,CODE_OF_CONDUCT.md} '.'
   /usr/bin/sed -i '' -E "s:homebrew-cask/(pulls|issues):${repo_name}/\1:" '.github/PULL_REQUEST_TEMPLATE.md' # PULL_REQUEST_TEMPLATE has repo-specific links
+  
+  # increase script.sh install cap for fonts repo
+  if [[ "${repo_name}" == 'homebrew-fonts' ]]; then
+    /usr/bin/sed -i '' -e 's:-le 3:-le 15:' -e 's:than 3 Casks:than 15 Casks:' 'ci/travis/script.sh'
+  fi
 }
 
 function push_changes {

@@ -1,11 +1,11 @@
 cask 'flash-npapi' do
-  version '27.0.0.187'
-  sha256 'f9fb07154525746ce23fc5dcf8f247c87ee9ca357fcae1ae9f063a8c448b2141'
+  version '29.0.0.113'
+  sha256 'c885f2750118e1bba40181ad468c7121e85605b1bc0f31c82f0e0b64722bf26a'
 
   # macromedia.com was verified as official when first introduced to the cask
   url "https://fpdownload.adobe.com/get/flashplayer/pdc/#{version}/install_flash_player_osx.dmg"
   appcast 'http://fpdownload2.macromedia.com/get/flashplayer/update/current/xml/version_en_mac_pl.xml',
-          checkpoint: '26279ca81dea1717dec4c2d638ee46a14c9caa731f6bd2bc9ac35380bdef0ec9'
+          checkpoint: 'a617234c8f9b680bc5d5f4ac249faf8d23cfc43f9d171a7665405b4a26f2c502'
   name 'Adobe Flash Player NPAPI (plugin for Safari and Firefox)'
   homepage 'https://get.adobe.com/flashplayer/'
 
@@ -13,8 +13,9 @@ cask 'flash-npapi' do
 
   pkg 'Install Adobe Flash Player.app/Contents/Resources/Adobe Flash Player.pkg'
 
-  uninstall pkgutil: 'com.adobe.pkg.FlashPlayer',
-            delete:  '/Library/Internet Plug-Ins/Flash Player.plugin'
+  uninstall pkgutil:   'com.adobe.pkg.FlashPlayer',
+            launchctl: 'com.adobe.fpsaud',
+            delete:    '/Library/Internet Plug-Ins/Flash Player.plugin'
 
   zap trash: [
                '~/Library/Caches/Adobe/Flash Player',

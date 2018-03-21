@@ -1,10 +1,10 @@
 cask 'burp-suite' do
-  version '1.7.29'
-  sha256 'ec475c8cf7e4b70f73ff53b3e5630bf9adcda033cb05552e266b54ffda514b2e'
+  version '1.7.32'
+  sha256 'a9a52bdf51bb7585f92b9b437512de5de7b00dd981cc58f4a9173c32bace7195'
 
   url "https://portswigger.net/burp/releases/download?product=community&version=#{version}&type=macosx"
   appcast 'https://portswigger.net/burp/releasesarchive/community',
-          checkpoint: 'c68f717624e967052f5d68880152348f001eab592ffa5d677efa413f1d7a8e31'
+          checkpoint: '1587f7a55e88b9a40dfa61d3dfdf0022835545f1fcfd34021f2731445c4fb041'
   name 'Burp Suite'
   homepage 'https://portswigger.net/burp/'
 

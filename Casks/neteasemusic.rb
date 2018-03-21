@@ -1,12 +1,12 @@
 cask 'neteasemusic' do
-  version '1.5.7_580'
-  sha256 'a1ede5a8e3ec027ec670fb989dbefa23bd5a5c021af56f16c2c24fa0ff26489a'
+  version '1.5.9_622'
+  sha256 '1c64dbb3d22f3bf7eea99d207b9bc850f75de02653d3e7b484d2855099122ade'
 
   # d1.music.126.net was verified as official when first introduced to the cask
-  url "http://d1.music.126.net/dmusic/NeteaseMusic_#{version}_web.dmg"
+  url "https://d1.music.126.net/dmusic/NeteaseMusic_#{version}_officialsite.dmg"
   name 'NetEase cloud music'
   name '网易云音乐'
-  homepage 'http://music.163.com/#/download'
+  homepage 'https://music.163.com/'
 
   app 'NeteaseMusic.app'
 

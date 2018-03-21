@@ -1,10 +1,10 @@
 cask 'beatport-pro' do
-  version '2.4.0_171'
-  sha256 '39343bd1ca97b109bd5f566f9d6b7edac34f7dc8dad946cac635224aa27fa69d'
+  version '2.4.1_173'
+  sha256 'e832d11e0eefcdd03754294eedff449cf48a3af06b4271bfd652d09be1fe7a15'
 
   url "https://pro.beatport.com/mac/#{version}/beatportpro_#{version}.zip"
   appcast 'https://pro.beatport.com/mac/appcast.xml',
-          checkpoint: '2170cc2428a791bab031169ea7c11dcc16310cc7cf0824310ab6a0e6f6d050bb'
+          checkpoint: '9a6be705d6936a5b723298645e86251cf5faa049b6ee1b74c8c17b08b0efa3c5'
   name 'Beatport Pro'
   homepage 'https://www.beatport.com/'
 

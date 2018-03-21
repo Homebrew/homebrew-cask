@@ -1,11 +1,11 @@
 cask 'iina' do
-  version '0.0.14.1'
-  sha256 '87d04d497e8a4cad7129877e41244248e795593dfbd0a1c8cee086142993c0f1'
+  version '0.0.15-build68'
+  sha256 '13a00db36b347229e65825b724f7823365016b14b59cfef80fa26dd782e3fc94'
 
   # dl-portal.iina.io was verified as official when first introduced to the cask
   url "https://dl-portal.iina.io/IINA.v#{version}.dmg"
   appcast 'https://www.iina.io/appcast.xml',
-          checkpoint: 'ddde026fa887ead81e1bd4b78e2dfd12abac7cd1f2c6155ee775ea38fc6b31a3'
+          checkpoint: 'f0333dfcf796aeee23f4fbf9115198b4143744dfc5198afa5ad7425688206b6b'
   name 'IINA'
   homepage 'https://lhc70000.github.io/iina/'
 
@@ -13,6 +13,7 @@ cask 'iina' do
   depends_on macos: '>= :yosemite'
 
   app 'IINA.app'
+  binary "#{appdir}/IINA.app/Contents/MacOS/iina-cli", target: 'iina'
 
   zap trash: [
                '~/Library/Application Support/com.colliderli.iina',
@@ -21,6 +22,7 @@ cask 'iina' do
                '~/Library/Cookies/com.colliderli.iina.binarycookies',
                '~/Library/Logs/DiagnosticReports/IINA*.crash',
                '~/Library/Preferences/com.colliderli.iina.plist',
+               '~/Library/Safari/Extensions/Open in IINA.safariextz',
                '~/Library/Saved Application State/com.colliderli.iina.savedState',
              ]
 end

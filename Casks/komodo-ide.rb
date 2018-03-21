@@ -1,6 +1,6 @@
 cask 'komodo-ide' do
-  version '11.0.1-90797'
-  sha256 '0d342dae4824c52498d4cfecd22588e0de06e3cdee7d980e1c8aa0bc37001484'
+  version '11.0.2-90813'
+  sha256 '62f8423ba92f94205aec1a2f34f6330ace7f4156d41f6d046b189c9ebe93a64c'
 
   url "https://downloads.activestate.com/Komodo/releases/#{version.sub(%r{-.*}, '')}/Komodo-IDE-#{version}-macosx-x86_64.dmg"
   name 'Komodo IDE'

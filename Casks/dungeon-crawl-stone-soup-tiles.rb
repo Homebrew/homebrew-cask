@@ -1,10 +1,10 @@
 cask 'dungeon-crawl-stone-soup-tiles' do
-  version '0.20.1'
-  sha256 '81bc57bb307b99d89dc8e5559ee8f30a5211b71eb162771ae07534c9f1d49948'
+  version '0.21.1'
+  sha256 'f9f646e8293872d8f647a53da771f633f3f939833b601af6e6acddb942c63472'
 
   url "https://crawl.develz.org/release/#{version.major_minor}/stone_soup-#{version}-tiles-macosx.zip"
   appcast 'https://github.com/crawl/crawl/releases.atom',
-          checkpoint: '957a105056d323391f7fb641d3b2443f87b02ec3fcc92eb15e3382bfac2a042c'
+          checkpoint: '87d8536b2af9d3adeb1aeec0d72397767b80d96cc144ed912a1bbb3863cd5cd4'
   name 'Dungeon Crawl Stone Soup'
   homepage 'https://crawl.develz.org/'
 

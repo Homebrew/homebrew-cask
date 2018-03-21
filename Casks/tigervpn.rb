@@ -7,4 +7,16 @@ cask 'tigervpn' do
   homepage 'https://www.tigervpn.com/'
 
   app 'tigerVPN.app'
+
+  zap trash: [
+               '~/Library/Application Support/tigerVPN',
+               '~/Library/Application Support/com.apple.toolsQA.CocoaApp_CD/tigerVPN.storedata',
+               '~/Library/Application Support/com.tigeratwork.tigerVPNmac',
+               '~/Library/Preferences/com.tigeratwork.tigerVPNmac.plist',
+               '~/Library/tigerVPN',
+               '~/Library/Caches/com.crashlytics.data/com.tigeratwork.tigerVPNmac',
+               '~/Library/Caches/tigerVPN',
+               '~/Library/Caches/com.tigeratwork.tigerVPNmac',
+               '~/Library/Caches/io.fabric.sdk.mac.data/com.tigeratwork.tigerVPNmac',
+             ]
 end

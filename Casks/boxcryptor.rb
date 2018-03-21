@@ -1,10 +1,10 @@
 cask 'boxcryptor' do
-  version '2.17.892'
-  sha256 '3d3069762effe09cf981e3b6668e53bef978725152706b641b0cc4dda5273d96'
+  version '2.21.923'
+  sha256 'de40f20ede52bd3bfee74475ffa5c951efd9798c6634cad5cb447d6eef4decb7'
 
   url "https://downloads.boxcryptor.com/boxcryptor/mac/Boxcryptor_v#{version}_Installer.dmg"
   appcast 'https://rink.hockeyapp.net/api/2/apps/7fd6db3e51a977132e3b120c613eaea8',
-          checkpoint: 'cc45bdd46499c1d7ca27750083b8c727f4ed76ca0108147ce43686d14c8264db'
+          checkpoint: 'e524059e0a9e9afcd974cfa400f1b6dfdf1ce6a6caa63eefe92b0e6c2fcf29fd'
   name 'Boxcryptor'
   homepage 'https://www.boxcryptor.com/en/'
 

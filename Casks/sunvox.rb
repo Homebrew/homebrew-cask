@@ -1,10 +1,10 @@
 cask 'sunvox' do
-  version '1.9.2'
-  sha256 'cca6ba7d72fed5c18d04c2ad49d065b956e184b8d0b2b308d7525d01fef0322c'
+  version '1.9.3b'
+  sha256 '0b3114e8f917bc412c251bffda4c4262a4f82e4df70fb94fb884477b30cbe44c'
 
   url "http://www.warmplace.ru/soft/sunvox/sunvox-#{version}.zip"
   name 'SunVox'
   homepage 'http://www.warmplace.ru/soft/sunvox/'
 
-  app 'sunvox/sunvox/osx/SunVox.app'
+  app 'sunvox/sunvox/macos/SunVox.app'
 end

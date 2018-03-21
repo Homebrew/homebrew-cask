@@ -1,10 +1,10 @@
 cask 'jetbrains-toolbox' do
-  version '1.6.2914'
-  sha256 '566a7043491635228ae31b58dabbb085ae77671cfb4317afd0e0f48dc4706079'
+  version '1.7.3593'
+  sha256 '7ce704754c7eddee812c138146714ad03b3e0db75d798b7f3513440d7c1b8e9d'
 
   url "https://download.jetbrains.com/toolbox/jetbrains-toolbox-#{version}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=TBA&latest=true&type=release',
-          checkpoint: '899b32790d088c94c377a8716fc74847b55ff8061614328c9c895532b776b19d'
+          checkpoint: '5eb3acc1031e3ee96c81fe5ffd7ec58d59d52f037286c35f7120dfe81fc51adb'
   name 'JetBrains Toolbox'
   homepage 'https://www.jetbrains.com/toolbox/app/'
 

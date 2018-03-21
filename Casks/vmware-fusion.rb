@@ -1,10 +1,10 @@
 cask 'vmware-fusion' do
-  version '10.0.1-6754183'
-  sha256 'ebd58107c1e63125d9d422b22fca4829de1561f5b812c3dfbad33e0b2f5717fe'
+  version '10.1.1-7520154'
+  sha256 '3c985a58233a4098347c80d00223b7953f2dc457b1baeb5469ad153e5b00f5b5'
 
   url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
   appcast 'https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml',
-          checkpoint: 'd31fda3d47feb3b33e36083fbe9dcc2579751b7fe28b4a918823878121655130'
+          checkpoint: '92aeece9c5838e3091750b41fd3c82b275d23a8dfa6f28d2f0dc91c7df6e1ae1'
   name 'VMware Fusion'
   homepage 'https://www.vmware.com/products/fusion.html'
 
@@ -70,4 +70,8 @@ cask 'vmware-fusion' do
                '~/Library/Saved Application State/com.vmware.fusion.savedState',
                '~/Library/WebKit/com.vmware.fusion',
              ]
+
+  caveats do
+    kext
+  end
 end

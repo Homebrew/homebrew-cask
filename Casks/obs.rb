@@ -1,15 +1,15 @@
 cask 'obs' do
-  version '20.1.0'
-  sha256 '8eb490f749b3717002fd55b0ee14e082191cc921c5913070890e95af8776445d'
+  version '21.0.3'
+  sha256 '16c4f71a965b7f3d0dc04a58a64c49192aad455ce8fc971b0d253babfdefbafc'
 
   # github.com/jp9000/obs-studio was verified as official when first introduced to the cask
-  url "https://github.com/jp9000/obs-studio/releases/download/#{version}/obs-mac-#{version.major_minor}-installer.pkg"
+  url "https://github.com/jp9000/obs-studio/releases/download/#{version}/obs-mac-#{version}-installer.pkg"
   appcast 'https://github.com/jp9000/obs-studio/releases.atom',
-          checkpoint: 'bce365214c203a68f6978094931f9748ddac61be3b8de71adbb55a6cdf0f584e'
+          checkpoint: '11a5b29ea1a3e7ce3f03dbadb0ccfbcb3a29ee8359226f15dc96b2bf303e94d7'
   name 'OBS'
   homepage 'https://obsproject.com/'
 
-  pkg "obs-mac-#{version.major_minor}-installer.pkg"
+  pkg "obs-mac-#{version}-installer.pkg"
 
   uninstall pkgutil: [
                        'org.obsproject.pkg.obs-studio',

@@ -1,8 +1,8 @@
 cask 'unity-standard-assets' do
-  version '2017.2.0f3,46dda1414e51'
-  sha256 'cc4db99b7ccac84040e53478045cba3d8272f27528a927e0e563f7ee0395e0d6'
+  version '2017.3.1f1,fc1d3344e6ea'
+  sha256 '6caa54b4d194f1763cdea47f6eea1afb60bacf7209f7d6e55be41c943d245123'
 
-  url "http://netstorage.unity3d.com/unity/#{version.after_comma}/MacStandardAssetsInstaller/StandardAssets-#{version.before_comma}.pkg"
+  url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacStandardAssetsInstaller/StandardAssets-#{version.before_comma}.pkg"
   name 'Unity Standard Assets'
   homepage 'https://unity3d.com/unity'
 

@@ -1,33 +1,29 @@
 cask 'coteditor' do
-  if MacOS.version <= :snow_leopard
-    version '1.3.1'
-    sha256 '5c871bd9de30fc3c76fc66acb4ea258d4d3762ae341181d65a7ef1f8de4751c5'
-    # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
-    url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}_For10.4.dmg"
-  elsif MacOS.version <= :lion
+  if MacOS.version <= :lion
     version '1.5.4'
     sha256 '444133083698c7c94c2b029644f39a0e36982ae34c24745789fa890626188347'
-    # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
-    url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   elsif MacOS.version <= :mavericks
     version '2.5.7'
     sha256 'f2c6eed9bfa31999f559396642e7bec0eb90ce0e3398f266fed8b3db5bdab37c'
-    # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
-    url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
+  elsif MacOS.version <= :yosemite
+    version '3.2.8'
+    sha256 '73dd20d27b75c7b0c46242a465adb3df5b5f0b901f42c5a9a85777a57c4a17d6'
   else
-    version '3.2.5'
-    sha256 '2161dc09084f4eaff597de9ab3fe3a0d160ec6787b2ccf76e63a936a11399896'
-    # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
-    url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
+    version '3.3.5'
+    sha256 '1e779c830409c622a02b8a57a6581f8d1f89d16e1472edc52dd93dd20a81540c'
   end
 
+  # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
+  url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   appcast 'https://github.com/coteditor/CotEditor/releases.atom',
-          checkpoint: '0d7f0c0f8f7580bd6c8413e7ee4ea406e769765d5caaa26f9354da7dfd41ef0b'
+          checkpoint: '97684407d1d6dc6a858d9376ead6e6906a1d65ed7ba00b118d5aac37437943a3'
   name 'CotEditor'
   homepage 'https://coteditor.com/'
 
+  depends_on macos: '>= :lion'
+
   app 'CotEditor.app'
-  binary "#{appdir}/CotEditor.app/Contents/SharedSupport/bin/cot", target: 'cot'
+  binary "#{appdir}/CotEditor.app/Contents/SharedSupport/bin/cot"
 
   zap trash: [
                '~/Library/Application Scripts/com.coteditor.CotEditor',

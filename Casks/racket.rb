@@ -1,10 +1,10 @@
 cask 'racket' do
-  version '6.11'
-  sha256 'b6196c80a7dc5c2e73c0bcb99d441e337f5e7337aa308352049e078a03d9d6ee'
+  version '6.12'
+  sha256 '54fbee6a967209c62c814f60ba00ca105f01c69a8f1a9f4bfa21525698398a31'
 
   url "https://mirror.racket-lang.org/installers/#{version}/racket-#{version}-x86_64-macosx.dmg"
   appcast 'https://download.racket-lang.org/all-versions.html',
-          checkpoint: '3c12b566b1367a36229138d66eb87295f8b6c36198989b667f43b2b0ece89d22'
+          checkpoint: '087ee282ac3b03af2070a6812e52188d578f4f1cbd7fb0d5e1e29d8aed5871c9'
   name 'Racket'
   homepage 'https://racket-lang.org/'
 

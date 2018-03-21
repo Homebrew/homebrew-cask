@@ -1,10 +1,10 @@
 cask 'bonjeff' do
-  version '1.0.2'
-  sha256 '4b5b2e277200698130dc3e9a5c656799c618ea2032c47da5c7c7a79edf97b91c'
+  version '1.0.3'
+  sha256 'f083ca2e5f46e1a3a012863e7e6012087e700ef7b7e8cd3354f123a649522984'
 
   url "https://github.com/lapcat/Bonjeff/releases/download/v#{version}/Bonjeff.#{version}.zip"
   appcast 'https://github.com/lapcat/Bonjeff/releases.atom',
-          checkpoint: '545f99d377a875b39d03ad037d298bbf44d6622f77f282ad6fc1ea1fd565eaa3'
+          checkpoint: '1b6822f478c8e50b0f2e69ed0514647e8e91aa10e9e0d78f338e427bb5396e8e'
   name 'Bonjeff'
   homepage 'https://github.com/lapcat/Bonjeff'
 

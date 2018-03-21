@@ -1,10 +1,10 @@
 cask 'encryptme' do
-  version '4.0.6.1'
-  sha256 '856ddf10498c1c8bc58961c4e8b757af14bcc7bf844b58001fe41dad9d6188cc'
+  version '4.1.0.8'
+  sha256 '977e7eacf448cb3d14e01cdb2b536e0eff2e8a18dad29275efe88bf553026469'
 
   url "https://static.encrypt.me/downloads/osx/updates/Release/EncryptMe-#{version}.dmg"
   appcast 'https://www.getcloak.com/updates/osx/public/',
-          checkpoint: 'cc2cd3a296eb8cb667426e368ad13b0231d038dca9b564d04cd0eac3b2255ca5'
+          checkpoint: 'b8ee09684565fd0dbe7449941bddc3acc09188996ffa265a3ed72697d9589304'
   name 'EncryptMe'
   name 'Cloak'
   homepage 'https://encrypt.me/'

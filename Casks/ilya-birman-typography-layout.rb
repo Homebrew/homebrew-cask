@@ -8,5 +8,7 @@ cask 'ilya-birman-typography-layout' do
 
   artifact 'Install Ilya Birman Typography Layout.app/Contents/Resources/Layout/Ilya Birman Typography Layout.bundle', target: Pathname.new(File.expand_path('~')).join('Library/Keyboard Layouts/Ilya Birman Typography Layout.bundle')
 
-  caveats "To enable new keyboard layouts, you must add them manually in System Preferences. More info on #{homepage}."
+  caveats <<~EOS
+    To enable new keyboard layouts, you must add them manually in System Preferences. More info on #{homepage}.
+  EOS
 end

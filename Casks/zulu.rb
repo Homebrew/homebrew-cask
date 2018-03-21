@@ -1,8 +1,8 @@
 cask 'zulu' do
-  version '9.0.1.3'
-  sha256 '191dcb021aeb49a4d6aac4a2ec93cc3f2c7b602322eb2476ca433277d0d42c8e'
+  version '9.0.4.1'
+  sha256 '77a3dc5f83a88c07dbab195aa54117c1619eb31c1bb59908bf6e0d6931b5cc79'
 
-  url "https://cdn.azul.com/zulu/bin/zulu#{version}-jdk#{version.major}.#{version.minor}.#{version.patch}-macosx_x64.dmg",
+  url "https://cdn.azul.com/zulu/bin/zulu#{version}-jdk#{version.major_minor_patch}-macosx_x64.dmg",
       referer: 'https://www.azul.com/downloads/zulu/zulu-mac/'
   name 'Azul Zulu Java Standard Edition Development Kit'
   homepage 'https://www.azul.com/downloads/zulu/zulu-mac/'
@@ -24,28 +24,12 @@ cask 'zulu' do
     system_command '/usr/libexec/PlistBuddy',
                    args: ['-c', 'Add :JavaVM:JVMCapabilities: string JNI', "/Library/Java/JavaVirtualMachines/zulu-#{version.major}.jdk/Contents/Info.plist"],
                    sudo: true
-
-    if MacOS.version <= :mavericks
-      system_command '/bin/rm',
-                     args: ['-rf', '--', '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'],
-                     sudo: true
-      system_command '/bin/ln',
-                     args: ['-nsf', '--', "/Library/Java/JavaVirtualMachines/zulu-#{version.major}.jdk/Contents", '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'],
-                     sudo: true
-    end
   end
 
-  uninstall pkgutil: [
-                       "com.azulsystems.zulu.#{version.major}",
-                     ],
+  uninstall pkgutil: "com.azulsystems.zulu.#{version.major}",
             delete:  [
                        "/Library/Java/JavaVirtualMachines/zulu-#{version}.jdk",
                        "/Library/Java/JavaVirtualMachines/zulu-#{version.major}.jdk",
                        '/Library/Java/Home',
-                       if MacOS.version <= :mavericks
-                         [
-                           '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK',
-                         ]
-                       end,
-                     ].keep_if { |v| !v.nil? }
+                     ]
 end

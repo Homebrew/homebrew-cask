@@ -9,6 +9,7 @@ cask 'ubersicht' do
   homepage 'http://tracesof.net/uebersicht/'
 
   auto_updates true
+  depends_on macos: '>= :yosemite'
 
   app 'Übersicht.app'
 

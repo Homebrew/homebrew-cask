@@ -1,10 +1,10 @@
 cask 'xtabulator' do
-  version '2.004'
-  sha256 '7778fde457c0a091bcb403755e3e7094e2c7e5263029400ca4bfe24fd6bbd410'
+  version '2.005'
+  sha256 '0cef655780087da24c9cc0d1006780bec81badc4432612a9db6ee59a7350aa7e'
 
   url "https://www.bartastechnologies.com/products/xtabulator/sparkleupdates/#{version}.zip"
   appcast 'https://www.bartastechnologies.com/products/xtabulator/sparkleupdates/xtappcast.php',
-          checkpoint: '4a20255ba27c3c8d7c84f4acc76d4675e0918f672fc33d0312d9fda275204a50'
+          checkpoint: '1f759acefe39bf47bdb164fb58cd74b99e2f4c093d708cafc81d848f670f57c9'
   name 'XTabulator'
   homepage 'https://www.bartastechnologies.com/products/xtabulator/'
 

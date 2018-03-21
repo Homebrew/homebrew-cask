@@ -1,17 +1,20 @@
 cask 'cleanmymac' do
-  version '3.9.2,1511452115'
-  sha256 'e8845b55c50a444db1f0456f8b8a97b10cf8a1552378ec7b09de882634969ff2'
+  version '3.9.4,1518187718'
+  sha256 '6bd7310bc9c2c5ed4feec6c0de76ddcc3ad3695ebf2bb0cfcbf4c06e166f5e5a'
 
   # devmate.com/com.macpaw.CleanMyMac was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.macpaw.CleanMyMac#{version.major}/#{version.major_minor_patch}/#{version.after_comma}/CleanMyMac3-#{version.major_minor_patch}.zip"
   appcast "https://updates.devmate.com/com.macpaw.CleanMyMac#{version.major}.xml",
-          checkpoint: 'f6eecaffbe7804993fbdffc2702f84ba50939c45d89559a2ac87a6329c78ab8c'
+          checkpoint: '3f595aa2bdbd3c16c45499f5e7e9553b7100f906f974bae5f25a791d6b118e27'
   name 'CleanMyMac'
   homepage 'https://macpaw.com/cleanmymac'
 
   app "CleanMyMac #{version.major}.app"
 
-  uninstall delete:     "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac#{version.major}.Agent",
+  uninstall delete:     [
+                          "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac#{version.major}.Agent",
+                          "/private/var/run/com.macpaw.CleanMyMac#{version.major}.Agent.socket",
+                        ],
             launchctl:  [
                           "com.macpaw.CleanMyMac#{version.major}.Agent",
                           "com.macpaw.CleanMyMac#{version.major}.Scheduler",
@@ -23,7 +26,6 @@ cask 'cleanmymac' do
                         ]
 
   zap trash: [
-               "/private/var/run/com.macpaw.CleanMyMac#{version.major}.Agent.socket",
                "/Users/Shared/CleanMyMac #{version.major}",
                "/Users/Shared/CleanMyMac #{version.major} Menu",
                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac#{version.major}.sfl*",

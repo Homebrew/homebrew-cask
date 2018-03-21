@@ -1,11 +1,11 @@
 cask 'transmission' do
-  version '2.92'
-  sha256 '926a878cac007e591cfcea987048abc0689d77e7729a28255b9ea7b73f22d693'
+  version '2.93'
+  sha256 '61cd9b74cc542458fe2e41be6ac76d8b4201a94293bf681f8d75e12e64bd8d95'
 
-  # github.com/transmission/transmission was verified as official when first introduced to the cask
-  url "https://github.com/transmission/transmission/releases/download/#{version}/transmission-#{version}.dmg"
+  # github.com/transmission/transmission-releases was verified as official when first introduced to the cask
+  url "https://github.com/transmission/transmission-releases/raw/master/Transmission-#{version}.dmg"
   appcast 'https://github.com/transmission/transmission/releases.atom',
-          checkpoint: '4b7b7fdacce37340016d52fb86696f07e9ce6baf3fd7ebb75901fe0feecb5752'
+          checkpoint: '9cbb6259a2b36d7352456015375c5b1f30f3fc5219a92b4773972ed4e278a41e'
   name 'Transmission'
   homepage 'https://transmissionbt.com/'
 

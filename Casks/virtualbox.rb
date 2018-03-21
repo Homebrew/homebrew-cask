@@ -1,10 +1,10 @@
 cask 'virtualbox' do
-  version '5.2.2-119230'
-  sha256 '8b664e62700024d0f1dab4b2ec51f2553353509fd5b8e8555f15ddded210f222'
+  version '5.2.8,121009'
+  sha256 '97764ad37c5fafdeccecfb660ce056f625e9048890af772befe0330ed2def1d8'
 
-  url "http://download.virtualbox.org/virtualbox/#{version.sub(%r{-.*}, '')}/VirtualBox-#{version}-OSX.dmg"
-  appcast 'http://download.virtualbox.org/virtualbox/LATEST.TXT',
-          checkpoint: '486d2ad103a38d1f6f661e9d3191e024b7e2fae6e6ce99ff03b073f43cd0f65b'
+  url "https://download.virtualbox.org/virtualbox/#{version.before_comma}/VirtualBox-#{version.before_comma}-#{version.after_comma}-OSX.dmg"
+  appcast 'https://download.virtualbox.org/virtualbox/LATEST.TXT',
+          checkpoint: '96cbba0b6bc9a09d588b1a2de0a078ffcb35a31827e7ff1aaa9817df42caac88'
   name 'Oracle VirtualBox'
   homepage 'https://www.virtualbox.org/'
 

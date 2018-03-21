@@ -1,10 +1,10 @@
 cask 'vlc' do
-  version '2.2.6'
-  sha256 '9826a85aab0c6dca2361c70a97fa12d8f2aa140328bdc80e68b659f9228f22fd'
+  version '3.0.1'
+  sha256 'ceea37fb888b810c1b11c558471f10fa35500c047d6eca5733f038eefb16d926'
 
   url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}.dmg"
   appcast 'http://update.videolan.org/vlc/sparkle/vlc-intel64.xml',
-          checkpoint: '2e8debe5851a85536ff4ef24cff5bbff2cbce7c17bc3902eeccbbf1636c4dc67'
+          checkpoint: '49349f13ebd0902cad880eea377d125a2af6361808e82d11f9a0949a1d7fa12c'
   name 'VLC media player'
   homepage 'https://www.videolan.org/vlc/'
   gpg "#{url}.asc", key_id: '65f7c6b4206bd057a7eb73787180713be58d1adc'

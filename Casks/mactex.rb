@@ -13,6 +13,7 @@ cask 'mactex' do
                          'mactex-no-ghostscript',
                          'basictex',
                        ]
+  depends_on macos: '>= :yosemite'
 
   pkg "mactex-#{version}.pkg"
 

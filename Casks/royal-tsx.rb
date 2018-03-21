@@ -1,11 +1,11 @@
 cask 'royal-tsx' do
-  version '3.2.5.1000'
-  sha256 '2b8d6b2f8fa26da0f3c9593ee97b963627e3513cb280db2ea4c10cceb72bd14b'
+  version '3.2.7.1000'
+  sha256 '7a6619af745169f9cf07161b058000174377ddf938cd4db8c4ce76d788ac4b08'
 
   # https://royaltsx-v3.royalapplications.com was verified as official when first introduced to the cask
   url "https://royaltsx-v3.royalapplications.com/updates/royaltsx_#{version}.dmg"
   appcast "https://royaltsx-v#{version.major}.royalapplications.com/updates_stable.php",
-          checkpoint: '8a880a488a47976046926f2e667b732a14dbebe40d910242a57772253b228869'
+          checkpoint: '2294eed90424d7a3771beada4737c76718e335851b67d6d7261bfc0a77d8c8e1'
   name 'Royal TSX'
   homepage 'https://www.royalapplications.com/ts/mac/features'
 
