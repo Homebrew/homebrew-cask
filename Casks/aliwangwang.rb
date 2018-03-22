@@ -1,6 +1,6 @@
 cask 'aliwangwang' do
-  version :latest
-  sha256 :no_check
+  version '8.00.44(11443)'
+  sha256 'f0e01f56cf7ae1343f50c815392a18a180e7dea7ed064c4e4ee43f66db279b3d'
 
   url 'https://alimarket.taobao.com/markets/qnww/aliww-download?wh_from=macos'
   name 'Ali Wangwang'
