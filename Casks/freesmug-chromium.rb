@@ -1,11 +1,11 @@
 cask 'freesmug-chromium' do
-  version '65.0.3325.162'
-  sha256 '34e35227a1764ad3f928e454807b727e2413da928d48a63f8ff72503f1627814'
+  version '65.0.3325.181'
+  sha256 'dd1d4a72a8ea7ac4fc110ef1852929192c55948a486a447fb63eb0f8c7740dc8'
 
   # sourceforge.net/osxportableapps was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/osxportableapps/Chromium_OSX_#{version}.dmg"
   appcast 'https://sourceforge.net/projects/osxportableapps/rss?path=/Chromium',
-          checkpoint: 'd334643ff735c9d9f2bb4fde6aab307ffb1a293a64d418013a1dcc59172e736f'
+          checkpoint: '21cc0005151ef3ab5e53cf134308f3460d90f931552ba1cfc539430b740687b4'
   name 'Chromium'
   homepage 'http://www.freesmug.org/chromium'
 
