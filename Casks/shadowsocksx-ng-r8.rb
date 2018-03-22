@@ -11,18 +11,8 @@ cask 'shadowsocksx-ng-r8' do
 
   app 'ShadowsocksX-NG-R8.app'
 
-  uninstall delete:    '/Library/Application Support/ShadowsocksX-NG',
-            launchctl: [
-                         'com.qiuyuzhou.shadowsocksX-NG.http',
-                         'com.qiuyuzhou.shadowsocksX-NG.kcptun',
-                         'com.qiuyuzhou.shadowsocksX-NG.local',
-                         'com.qiuyuzhou.ShadowsocksX-NG.LaunchHelper',
-                       ],
-            quit:      'com.qiuyuzhou.ShadowsocksX-NG',
-            script:    {
-                         executable: '/Library/Application Support/ShadowsocksX-NG/proxy_conf_helper',
-                         args:       ['--mode', 'off'],
-                       }
+  uninstall delete: '/Library/Application Support/ShadowsocksX-NG',
+            quit:   'com.qiuyuzhou.ShadowsocksX-NG'
 
   zap trash: [
                '~/.ShadowsocksX-NG',
