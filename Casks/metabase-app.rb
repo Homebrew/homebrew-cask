@@ -1,5 +1,5 @@
 cask 'metabase-app' do
-  version '0.28.2.0'
+  version '0.28.3.0'
   sha256 '3947f17e215956687c0d5988049062e7c35aabdd1f265cfa712101f421d1772f'
 
   # s3.amazonaws.com/downloads.metabase.com was verified as official when first introduced to the cask
