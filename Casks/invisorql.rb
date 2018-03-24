@@ -11,5 +11,5 @@ cask 'invisorql' do
   depends_on cask: 'invisor-lite'
   depends_on macos: '>= :mountain_lion'
 
-  qlplugin 'InvisorQL.qlgenerator'
+  qlplugin 'Invisor QuickLook.app/Contents/Library/InvisorQL.qlgenerator'
 end
