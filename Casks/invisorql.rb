@@ -8,8 +8,8 @@ cask 'invisorql' do
   name 'Invisor QuickLook Plug-In'
   homepage 'https://www.invisorapp.com/'
 
-  depends_on cask:  'invisor-lite',
-             macos: '>= :mountain_lion'
+  depends_on cask: 'invisor-lite'
+  depends_on macos: '>= :mountain_lion'
 
   qlplugin 'InvisorQL.qlgenerator'
 end
