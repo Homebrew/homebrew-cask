@@ -1,8 +1,8 @@
 cask 'photo-supreme-single-user' do
-  version '3'
-  sha256 '773c691f3e9574b86ebd4c612c6eb3b15fa9445f3fe3e7a4a31ea4f6cdd490cf'
+  version '4'
+  sha256 'a127ccaf4803eaea13258b8a65ef0977c166fc1db2586aff76817719d9360f30'
 
-  url "http://www.idimager.com/Trial/PhotoSupreme_V#{version}.pkg"
+  url "http://trial.idimager.com/PhotoSupreme_V#{version}.pkg"
   name 'Photo Supreme Single User'
   homepage 'http://www.idimager.com/WP/?page_id=20'
 
