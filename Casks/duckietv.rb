@@ -9,7 +9,7 @@ cask 'duckietv' do
   name 'duckieTV'
   homepage 'https://schizoduckie.github.io/DuckieTV/'
 
-  pkg "DuckieTV-#{version}-OSX-x64.pkg", allow_untrusted: true
+  pkg "DuckieTV-#{version}-OSX-x64.pkg"
 
   uninstall pkgutil: 'tv.duckie.base.pkg',
             delete:  [
