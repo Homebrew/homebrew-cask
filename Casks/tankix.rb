@@ -1,6 +1,6 @@
 cask 'tankix' do
-  version 'hydra3-14759'
-  sha256 '35c5a51a15c0a3245fcd0fc635a3d0c76cc052002cf61032fd9eb1c5195978ae'
+  version 'hydra1-15154'
+  sha256 'a1d424639d64485b7192d04abadc41d8f45b44a9437dc0062e1b68afb8ecb2af'
 
   url "http://static.tankix.com/app/StandaloneOSXIntel64/#{version}/TankiX.dmg"
   name 'Tanki X'
