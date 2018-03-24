@@ -10,5 +10,7 @@ cask 'veeer' do
 
   app 'VEEER.app'
 
+  uninstall login_item: 'VEEER'
+
   zap trash: '~/Library/Preferences/com.VEEER.veeer.plist'
 end
