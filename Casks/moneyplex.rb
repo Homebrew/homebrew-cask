@@ -9,5 +9,5 @@ cask 'moneyplex' do
 
   pkg 'moneyplex.pkg'
 
-  uninstall pkgutil: 'de.matrica.moneyplex.Moneyplex.pkg'
+  uninstall pkgutil: 'de.matrica.moneyplex.*'
 end
