@@ -6,7 +6,7 @@ cask 'xpra' do
   name 'Xpra'
   homepage 'https://www.xpra.org/'
 
-  pkg 'Xpra-x86_64.pkg', allow_untrusted: true
+  pkg 'Xpra-x86_64.pkg'
 
   uninstall pkgutil:  'org.xpra.pkg'
 
