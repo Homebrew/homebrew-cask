@@ -14,6 +14,8 @@ Subsequent arguments to `pkg` are key/value pairs which modify the install proce
 
 `pkg allow_untrusted: true` can be used to install the `.pkg` with an untrusted certificate passing `-allowUntrusted` to `/usr/sbin/installer`.
 
+This option is not permitted in official Homebrew-Cask taps, it is only provided for use in third-party taps or local Casks.
+
 Example ([alinof-timer.rb](https://github.com/caskroom/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/alinof-timer.rb#L10)):
 
 ```ruby
