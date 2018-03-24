@@ -8,5 +8,7 @@ cask 'veeer' do
 
   app 'VEEER.app'
 
+  accessibility_access true
+
   zap trash: '~/Library/Preferences/com.VEEER.veeer.plist'
 end
