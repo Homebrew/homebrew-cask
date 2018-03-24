@@ -8,7 +8,7 @@ cask 'hoster' do
   name 'Hoster'
   homepage 'http://www.redwinder.com/macapp/hoster/'
 
-  pkg "Hoster#{version.before_comma}#{version.after_comma}.mpkg", allow_untrusted: true
+  pkg "Hoster#{version.before_comma}#{version.after_comma}.mpkg"
 
   uninstall pkgutil: 'com.redwinder.hoster.hoster.pkg'
 end
