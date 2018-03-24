@@ -6,9 +6,9 @@ cask 'veeer' do
   name 'VEEER'
   homepage 'https://veeer.io/'
 
-  app 'VEEER.app'
-
   accessibility_access true
+
+  app 'VEEER.app'
 
   zap trash: '~/Library/Preferences/com.VEEER.veeer.plist'
 end
