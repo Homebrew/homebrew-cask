@@ -1,11 +1,11 @@
 cask 'knockknock' do
-  version '1.9.1'
-  sha256 '4adfba2ac018ab99200b57c4e2dbe9cbb7681b4af9384500e19a6e0c2dedf698'
+  version '1.9.2'
+  sha256 'acad0b3091db27483bed506d1442260e7efb0cda69f6364a7c747de25fd39163'
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/KnockKnock_#{version}.zip"
   appcast 'https://objective-see.com/products/changelogs/KnockKnock.txt',
-          checkpoint: 'bb686927f517b0ccdfb89e46d09dfe3d087203c5d63fc719bb075e41667a3c19'
+          checkpoint: 'f5d04e72277c4e36f225e3365cf28d711ddf0ad0c28cef0a23717487e6ee4bd3'
   name 'KnockKnock'
   homepage 'https://objective-see.com/products/knockknock.html'
 
