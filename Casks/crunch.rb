@@ -7,6 +7,8 @@ cask 'crunch' do
           checkpoint: '32a4d6304199eec025b2bbcecc1984e51558816e14cc0efbeac37c796bf5f0e4'
   name 'Crunch'
   homepage 'https://github.com/chrissimpkins/Crunch'
+  
+  depends_on formula: [ 'libpng', 'little-cms2' ]
 
   app 'Crunch.app'
 end
