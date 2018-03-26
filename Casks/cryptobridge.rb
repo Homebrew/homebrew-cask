@@ -1,4 +1,4 @@
-cask 'crypto-bridge' do
+cask 'cryptobridge' do
   version '0.10.5'
   sha256 '8b08168721b9954f941f2d77ea1d2ef5c893fefe5925b161420bf4b027977a53'
 
