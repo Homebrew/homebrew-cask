@@ -1,10 +1,10 @@
 cask 'crunch' do
-  version '1.0.0'
-  sha256 'd026dd0ad75327b9cdc7c26d7d48f69be195b5f339abc28c8446f8cae58ba8cc'
+  version '1.0.1'
+  sha256 'e5ddb785ffb7173e0a11e6813f3926da9f0dd85e99ed7b4188f86287f678bd87'
 
   url "https://github.com/chrissimpkins/Crunch/releases/download/v#{version}/Crunch-Installer.dmg"
   appcast 'https://github.com/chrissimpkins/Crunch/releases.atom',
-          checkpoint: '163804ec141e7f909a6707cf74f3bd0b0a07944e5c4e18fd4fecde781dfad0b0'
+          checkpoint: '8bbb2f6218e2e4e2dff086970b8d2d58a946c27f668d01cbb5b9116f68737657'
   name 'Crunch'
   homepage 'https://github.com/chrissimpkins/Crunch'
 
