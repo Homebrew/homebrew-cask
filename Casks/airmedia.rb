@@ -1,6 +1,6 @@
 cask 'airmedia' do
-  version '2.0.14'
-  sha256 'f40761616c814d005f4d47bc8b5ef6aba40fdb518c5e40358e2224d24429fb9b'
+  version '3.1.2'
+  sha256 '32869437df42f3a6321551a9251471e088e9faa16ebffc69ae1dd26b7bd0e750'
 
   url "https://www.crestron.com/downloads/software/airmedia_#{version}_macOS_guest_dmg.zip"
   name 'Crestron AirMedia'
