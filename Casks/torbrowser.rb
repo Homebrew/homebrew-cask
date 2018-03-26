@@ -1,5 +1,5 @@
 cask 'torbrowser' do
-  version '7.5.2'
+  version '7.5.3'
 
   language 'ar' do
     sha256 'd774f12c24391b9974366a0bfb7858cda10f2432021a7e8503886654b6fd937c'
