@@ -1,5 +1,5 @@
 cask 'intellij-idea-ce' do
-  version '2018.1'
+  version '2018.1,181.4203.550'
   sha256 '6213436abff98c2943c3deae798e4433afbcfe9b8261f2d3dc55a8e3eb812124'
 
   url "https://download.jetbrains.com/idea/ideaIC-#{version.before_comma}.dmg"
