@@ -1,6 +1,6 @@
 cask 'ridibooks' do
-  version '2.3.0'
-  sha256 'f62343cb25fe4ba2ab0b076c53a4623bbe2c81d723263fff7d74ca3b87610a02'
+  version '2.4.0'
+  sha256 '97db342df601c83d50a6aca3af31172358135f03c25037bed21df87f6d260ff7'
 
   url "https://viewer-ota.ridibooks.com/mac/ridibooks-#{version}.dmg"
   name 'Ridibooks'
