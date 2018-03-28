@@ -7,4 +7,9 @@ cask 'mendeley' do
   homepage 'https://www.mendeley.com/'
 
   app 'Mendeley Desktop.app'
+
+  preflight do
+    # FIX: add Application variable to prevent Mendeley from requiring discrete graphics card
+    system_command '/usr/libexec/PlistBuddy', args: ['-c', 'Add :NSSupportsAutomaticGraphicsSwitching bool true', "#{staged_path}/Mendeley Desktop.app/Contents/Info.plist"]
+  end
 end
