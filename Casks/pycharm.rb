@@ -1,5 +1,5 @@
 cask 'pycharm' do
-  version '2018.1'
+  version '2018.1,181.4203.547'
   sha256 '97f21916103703194031f4defc08241f76cb7e8015e507c8bdc84dccc2d5e9dd'
 
   url "https://download.jetbrains.com/python/pycharm-professional-#{version.before_comma}.dmg"
