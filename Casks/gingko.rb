@@ -11,7 +11,5 @@ cask 'gingko' do
 
   app 'Gingko.app'
 
-  zap delete: [
-                '~/Library/Application Support/Gingko'
-              ]
+  zap trash: '~/Library/Application Support/Gingko'
 end
