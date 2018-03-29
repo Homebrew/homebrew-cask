@@ -9,9 +9,9 @@ cask 'omniplan' do
   app 'OmniPlan.app'
 
   zap trash: [
-               '~/Library/Application Scripts/com.omnigroup.OmniPlan3',
-               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.omnigroup.omniplan3.sfl*',
-               '~/Library/Containers/com.omnigroup.OmniPlan3',
-               '~/Library/Preferences/com.omnigroup.OmniPlan3.plist',
+               "~/Library/Application Scripts/com.omnigroup.OmniPlan#{version.major}",
+               "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.omnigroup.omniplan#{version.major}.sfl*",
+               "~/Library/Containers/com.omnigroup.OmniPlan#{version.major}",
+               "~/Library/Preferences/com.omnigroup.OmniPlan#{version.major}.plist",
              ]
 end
