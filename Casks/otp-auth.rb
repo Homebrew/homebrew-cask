@@ -6,5 +6,5 @@ cask 'otp-auth' do
   name 'OTP Auth'
   homepage 'https://cooperrs.de/otpauth_macos.html'
 
-  app "OTP Auth.app"
+  app 'OTP Auth.app'
 end
