@@ -1,10 +1,10 @@
 cask 'transmit' do
-  version '5.1'
-  sha256 'e9e922e4c67871ae8c0c08fd9c7a614cb6909dad0983b31f232ad69da540e083'
+  version '5.1.1'
+  sha256 '57b3990710267152b06e28880fa494fde29ce6eeb33bdd79e23dbd799add199b'
 
   url "https://www.panic.com/transmit/d/Transmit%20#{version}.zip"
   appcast "https://library.panic.com/releasenotes/transmit#{version.major}/",
-          checkpoint: 'ad75424b4b41ba975ec6687a588bb5571c9e4848ced58e761b41333f15179b17'
+          checkpoint: 'fcd82b1dd72648f32e829de33c91c7959fbe2122f1c64079ffb49f8312fcc4e8'
   name 'Transmit'
   homepage 'https://panic.com/transmit/'
 
