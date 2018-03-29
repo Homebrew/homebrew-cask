@@ -7,7 +7,7 @@ cask 'mos' do
   appcast 'https://github.com/Caldis/Mos/releases.atom',
           checkpoint: '227c55156ad8d2ce6376806cb25f7c6aeef4e5f33ff2cdd1576eb9ffc4ef56a1'
   name 'Mos'
-  homepage 'http://mos.caldis.me/'
+  homepage 'https://mos.caldis.me/'
 
   app 'Mos.app'
 
