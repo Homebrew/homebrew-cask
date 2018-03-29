@@ -16,7 +16,8 @@ cask 'nordvpn' do
   uninstall quit:       'com.nordvpn.NordVPN',
             launchctl:  'com.nordvpn.NordVPN.Helper',
             delete:     '/Library/PrivilegedHelperTools/com.nordvpn.NordVPN.Helper',
-            login_item: 'NordVPN'
+            login_item: 'NordVPN',
+            pkgutil:    'com.nordvpn.NordVPN'
 
   zap trash: [
                '~/Library/Application Support/com.nordvpn.NordVPN',
