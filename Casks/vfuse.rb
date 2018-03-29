@@ -8,7 +8,7 @@ cask 'vfuse' do
   name 'vfuse'
   homepage 'https://github.com/chilcote/vfuse'
 
-  pkg "vfuse-#{version}.pkg"
+  pkg "vfuse-#{version}.pkg", allow_untrusted: true
 
   uninstall pkgutil: 'com.github.vfuse'
 
