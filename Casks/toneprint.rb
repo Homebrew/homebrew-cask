@@ -1,8 +1,8 @@
 cask 'toneprint' do
-  version '3.1'
-  sha256 '01e9fadd91510387ef09ab4a071314a06f117eb73902ce488c26cbe2a60008b2'
+  version '3.1.03.1526,7765018'
+  sha256 '0f965fb12666280ee345021b5951f9d5855cfe336ce7e786acba0b1d17dfe2b7'
 
-  url 'http://cdn-downloads.tcelectronic.com/media/5607727/toneprint-3100-r1373.dmg'
+  url "http://cdn-downloads.tcelectronic.com/media/#{version.after_comma}/toneprint-#{version.before_comma.no_dots}.dmg"
   name 'TonePrint Editor'
   homepage 'https://www.tcelectronic.com/toneprint-editor/support/'
 
