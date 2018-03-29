@@ -20,6 +20,8 @@ checks=('pkgs' 'apps' 'kexts' 'launchjob_install' 'launchjob_load')
 
 /bin/mkdir -p "${HOME}/cask-checks/"{before,after}
 
+run brew pull https://github.com/Homebrew/brew/pull/4002
+
 for check in "${checks[@]}"; do
   "${check}" > "${HOME}/cask-checks/before/${check}"
 done
