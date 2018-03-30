@@ -27,7 +27,7 @@ cask 'seamonkey' do
   end
 
   language 'ru' do
-    sha256 '44f30154148f6ae7754ea849e0fd93fe305eb9cf6ffdd9a42b1b57cab4b0048c'
+    sha256 '75f612a3d88f948a24037e279893800314f2e280cec1edcf6213858aacedbeb4'
     'ru'
   end
 
