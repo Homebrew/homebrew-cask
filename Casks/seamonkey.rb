@@ -1,5 +1,5 @@
 cask 'seamonkey' do
-  version '2.48'
+  version '2.49.2'
 
   language 'de' do
     sha256 'da2708b80251636955d802bb32de8a352a46df661337f23801fa3c0f847f40c5'
@@ -12,7 +12,7 @@ cask 'seamonkey' do
   end
 
   language 'en', default: true do
-    sha256 '53431df9cd50cb6b7442fa5496f57b4b5bca0e5e005c058401f8ca958ad96428'
+    sha256 '2647979382e7f92f32095bdc288d0e8395860b63e3df66c3e600ecb2f4f25d73'
     'en-US'
   end
 
