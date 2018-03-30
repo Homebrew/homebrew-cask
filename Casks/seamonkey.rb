@@ -7,7 +7,7 @@ cask 'seamonkey' do
   end
 
   language 'en-GB' do
-    sha256 'db5ed7989a2cac2c560dd8d3b5e231499a2cefbf944626eaf44b44445d1f5d1f'
+    sha256 'f33dc841580063dcb34b06791aeb92d0530d591ff5ff6d284aa17a979a4dba5c'
     'en-GB'
   end
 
