@@ -22,7 +22,7 @@ cask 'seamonkey' do
   end
 
   language 'it' do
-    sha256 '717a3f87c37bb76a712dfa81a6483ae17e179b9e5daf644585838ea03e961ee2'
+    sha256 'f91bf37c0ce1eafba887703dd1bcdad43a0e10fb2cd20bd9468acefe5690787a'
     'it'
   end
 
