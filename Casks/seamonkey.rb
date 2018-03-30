@@ -12,7 +12,7 @@ cask 'seamonkey' do
   end
 
   language 'en', default: true do
-    sha256 '2647979382e7f92f32095bdc288d0e8395860b63e3df66c3e600ecb2f4f25d73'
+    sha256 '5476e50af3fec54ebf1dc14c83d7849a695707a2a3582000e246093ee84a37f6'
     'en-US'
   end
 
