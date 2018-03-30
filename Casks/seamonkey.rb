@@ -12,12 +12,12 @@ cask 'seamonkey' do
   end
 
   language 'en', default: true do
-    sha256 '5476e50af3fec54ebf1dc14c83d7849a695707a2a3582000e246093ee84a37f6'
+    sha256 '2647979382e7f92f32095bdc288d0e8395860b63e3df66c3e600ecb2f4f25d73'
     'en-US'
   end
 
   language 'fr' do
-    sha256 '2ca2ec22cc28676721813d147355c2c0e3b3f9c97bba9fe00ef31bc642ee254f'
+    sha256 '9e582dd487afa8cc6e625ea8a817086793473a89d0a06a21050eb25576879130'
     'fr'
   end
 
