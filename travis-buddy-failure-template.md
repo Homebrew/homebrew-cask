@@ -1,9 +1,5 @@
-## Travis Buddy
-
 {{#jobs}}
-### {{displayName}}
 {{#scripts}}
-<details>
   <summary>
     <strong>
      {{command}}
@@ -13,7 +9,6 @@
 ```
 {{&contents}}
 ```
-</details>
 <br />
 {{/scripts}}
 {{/jobs}}
