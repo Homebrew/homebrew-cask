@@ -1,13 +1,20 @@
 cask 'wingfs' do
-  version '2.0.82'
-  sha256 'a9335af21fff081c2114a6f7cd0f9c53cd207d5c4e6f881d5cb31c6d8e46d639'
+  version '2.0.84'
+  sha256 '94e5a5eee89695caa487d183b8c40ade98dbeaedad6891da3c95684084d303a2'
 
   # s3.amazonaws.com/wingfs_downloads was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/wingfs_downloads/WingFS_#{version.major_minor}.dmg"
   name 'WingFS'
-  homepage 'http://www.wingfs.com/products/wingfs'
+  homepage 'http://p5.archiware.com/products/wingfs'
 
-  pkg 'WingFS.pkg', allow_untrusted: true
+  conflicts_with cask: 'osxfuse'
 
-  uninstall pkgutil: 'com.archiware.WingFS'
+  pkg 'WingFS.pkg'
+
+  uninstall kext:      'com.github.osxfuse.filesystems.osxfuse',
+            launchctl: 'com.github.osxfuse.filesystems.osxfusefs',
+            pkgutil:   [
+                         'com.archiware.WingFS',
+                         'com.github.osxfuse.pkg',
+                       ]
 end

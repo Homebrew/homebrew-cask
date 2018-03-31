@@ -1,10 +1,10 @@
 cask 'kitty' do
-  version '0.8.1'
-  sha256 '2e4b4003bb524de5bc45a7bcc628ff93ecfc9ba983f41f417c3e3ecc3ccb13f1'
+  version '0.8.2'
+  sha256 'b0fa3e4967822781891fa7cd1d9f2edaecd8b7c296fef35a8c60c38448ecbcc5'
 
   url "https://github.com/kovidgoyal/kitty/releases/download/v#{version}/kitty-#{version}.dmg"
   appcast 'https://github.com/kovidgoyal/kitty/releases.atom',
-          checkpoint: 'd7e3c6b8bec9416313ebf46dc9f41af035e0ac479135f094a747e4101f1c8879'
+          checkpoint: '5367d74595e105c890d91d3afb76258a4d63dd5a1f587fd5bf861533a7abf01e'
   name 'kitty'
   homepage 'https://github.com/kovidgoyal/kitty'
 
