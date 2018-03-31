@@ -6,5 +6,5 @@ cask 'bytecoinwallet' do
   name 'Bytecoin Wallet'
   homepage 'https://bytecoin.org/'
 
-  app 'bytecoinwallet.app'
+  app 'bytecoin-destop-#{version}-macos/bytecoinwallet.app'
 end
