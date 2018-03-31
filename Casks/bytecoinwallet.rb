@@ -1,8 +1,8 @@
 cask 'bytecoinwallet' do
-  version '1.1.9.3'
-  sha256 'bab3a9ba28428ecfbb071bd4857303b82f896b78b1ff5933621d376b13c86a01'
+  version '3.0.0'
+  sha256 '3bbafa6560f30b692184d2c59e0bdb55a38d4e3f8d6215605f7b46fcad7d0d50'
 
-  url "https://bytecoin.org/storage/wallets/bytecoin_wallet/BytecoinWallet-#{version}.dmg"
+  url "https://bytecoin.org/storage/wallets/bytecoin_wallet/bytecoin-desktop-#{version}-macos.zip"
   name 'Bytecoin Wallet'
   homepage 'https://bytecoin.org/'
 
