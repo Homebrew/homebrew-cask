@@ -1,10 +1,10 @@
 cask 'qingg' do
-  version '2.6.0'
-  sha256 '4cb0f6399c4f59bcfd2ecb557702adce6a7d9ccf718019827ec54630a1d80ea9'
+  version '2.6.1'
+  sha256 '873fb7be341aa9f9e2f4894001e8b08b365ca3f2da4afc9e4314b5d84bfc9ea8'
 
   url "https://qingg.im/download/Qingg-#{version}.dmg"
   appcast 'https://qingg.im/sparkle/appcast.php',
-          checkpoint: '447bd53ca90a8a5d919c765f8a01f9d09c0c47d3ef10af5eab8b39e3ce9b724a'
+          checkpoint: '798eddd96f2008f1c6472b73a07c72b67d5631cd76eb922a2593e5f15e3d9c89'
   name 'QinggIM'
   name '清歌输入法'
   homepage 'https://qingg.im/mac/'
