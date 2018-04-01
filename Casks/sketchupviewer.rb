@@ -6,8 +6,9 @@ cask 'sketchupviewer' do
   # dl.trimble.com/sketchup was verified as official when first introduced to the cask
   url 'https://dl.trimble.com/sketchup/SketchUpViewer-en.dmg'
   name 'SketchUpViewer'
-  homepage 'https://www.sketchup.com/products/sketchup-viewer'
-  license :gratis
+  homepage 'https://www.sketchup.com/products/sketchup-viewer/'
 
   app 'SketchUpViewer.app'
+
+  zap trash: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sketchup.sketchupviewer.sfl*'
 end

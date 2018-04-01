@@ -1,13 +1,17 @@
 cask 'freeze' do
-  version '2.4'
-  sha256 '74b9fb0f8943298434ce2a8ec27cc5039d5f337a0c1182515c675e5a907b6ad4'
+  version '3.4'
+  sha256 'bf19cfcd7138f754eef5076346f08e514b8f55816112e536aa2acf3111667586'
 
   url 'https://www.freezeapp.net/download/Freeze.zip'
   appcast 'https://www.freezeapp.net/appcast.xml',
-          checkpoint: 'a77c379106e7fc31ce5f29473628b3a910f7b1a875d5ddb053b78677a0bf4fa2'
+          checkpoint: '1818f1864e0239df8fc1f772641ee2203de45369bbd7307b2e0d86f06b4869eb'
   name 'Freeze'
   homepage 'https://www.freezeapp.net/'
-  license :freemium
 
   app 'Freeze.app'
+
+  zap trash: [
+               '~/Library/Application Scripts/seb.GlacierMac',
+               '~/Library/Containers/seb.GlacierMac',
+             ]
 end

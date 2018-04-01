@@ -5,8 +5,7 @@ cask 'qrfcview' do
   # github.com/downloads/saghul/qrfcview-osx was verified as official when first introduced to the cask
   url "https://github.com/downloads/saghul/qrfcview-osx/qRFCView-#{version}-1.dmg"
   name 'qRFCView'
-  homepage 'https://saghul.github.io/qrfcview-osx'
-  license :gpl
+  homepage 'https://saghul.github.io/qrfcview-osx/'
 
   app 'qRFCView.app'
 end

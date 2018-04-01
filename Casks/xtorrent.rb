@@ -6,7 +6,6 @@ cask 'xtorrent' do
   url "http://acquisition.dreamhosters.com/xtorrent/Xtorrent#{version}.dmg"
   name 'Xtorrent'
   homepage 'http://www.xtorrent.com/'
-  license :freemium
 
   app 'Xtorrent.app'
 end

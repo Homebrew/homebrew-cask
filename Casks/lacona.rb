@@ -1,20 +1,14 @@
 cask 'lacona' do
-  version '0.10.1'
-  sha256 'acc5b681774f9be2c702094d0d87baaa2728aee54529f6a27c6571342f8e13d3'
+  version '1.1.4'
+  sha256 '5a84412185c8cc8de6f627eb4400b81b314742a56e779db1cb65ba3e2b504230'
 
-  # lacona-download.firebaseapp.com was verified as official when first introduced to the cask
-  url "http://lacona-download.firebaseapp.com/packages/#{version}/LaconaBeta.zip"
-  appcast 'https://lacona-download.firebaseapp.com/appcast.xml',
-          checkpoint: '448b88e5ad9cd58e9f4d8cf7c5b58b9ac26c06b83539f7740538e15bf3882ca2'
+  url "https://download.lacona.io/packages/#{version}/Lacona.zip"
+  appcast 'https://download.lacona.io/appcast.xml',
+          checkpoint: '9452b814e95942b3310d42eb3d2f3873555bb134db81940f6058dea7c9759390'
   name 'Lacona'
-  homepage 'http://www.lacona.io'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.lacona.io/'
 
   auto_updates true
 
   app 'Lacona.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 end

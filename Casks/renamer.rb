@@ -1,12 +1,11 @@
 cask 'renamer' do
   version '5'
-  sha256 'cd63c92343eb68e62f3873959758c0b5fb6ab0b5583a1a8112ac6b2fd36ce494'
+  sha256 :no_check # required as upstream package is updated in-place
 
   # storage.googleapis.com/incrediblebee was verified as official when first introduced to the cask
-  url "https://storage.googleapis.com/incrediblebee/apps/Renamer-#{version}/Renamer.zip"
+  url "https://storage.googleapis.com/incrediblebee/apps/Renamer-#{version.major}/Renamer.zip"
   name 'Renamer'
-  homepage 'http://renamer.com'
-  license :commercial
+  homepage 'http://renamer.com/'
 
   app 'Renamer.app'
 end

@@ -1,13 +1,17 @@
 cask 'hapu' do
-  version '2.4'
-  sha256 '5a5a2d627b7862b43d231c00de849954340d00097bbab01c2615efefc0600be8'
+  version :latest
+  sha256 :no_check
 
-  url 'http://tars.mahdi.jp/squirrel/hapu.zip'
-  appcast 'https://mahdi.jp/apps/hapu/changelog',
-          checkpoint: '16e15f67997b466f0a378a3ad1c1f0bebb0fe89392cb977589bc981a8aacca3d'
+  url 'https://tars.mahdi.jp/squirrel/hapu.zip'
   name 'HAPU'
   homepage 'https://mahdi.jp/apps/hapu'
-  license :closed
 
   app 'HAPU.app'
+
+  zap trash: [
+               '~/Library/Caches/jp.mahdi.HAPU',
+               '~/Library/Preferences/jp.mahdi.HAPU.plist',
+               '~/Library/Cookies/jp.mahdi.HAPU.binarycookies',
+               '~/Library/Application Support/jp.mahdi.HAPU.ShipIt',
+             ]
 end

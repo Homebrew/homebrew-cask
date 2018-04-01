@@ -5,8 +5,7 @@ cask 'pubu' do
   # facecdn.u.qiniudn.com was verified as official when first introduced to the cask
   url "http://facecdn.u.qiniudn.com/downloads/%E7%80%91%E5%B8%83_OSX_V#{version}_Beta.zip"
   name '瀑布'
-  homepage 'https://pubu.im'
-  license :gratis
+  homepage 'https://pubu.im/'
 
   app '瀑布.app'
 end

@@ -1,12 +1,11 @@
 cask 'fuse' do
-  version '0.23.0.7041'
-  sha256 'dae0500a33b17866152fe1ddca4cd0327f6f6f6cbf0040ad7aa511cbda8f32ff'
+  version '1.1.0.13808'
+  sha256 '2ca9a5e60d2d504935a13ac6618b06df045aabc2d33ed50bec8ce5fd7768d598'
 
   # fuse-dl.azureedge.net was verified as official when first introduced to the cask
   url "https://fuse-dl.azureedge.net/releaseartifacts/fuse_osx_#{version.dots_to_underscores}.pkg"
   name 'Fuse Fusetools'
-  homepage 'https://www.fusetools.com'
-  license :closed
+  homepage 'https://www.fusetools.com/'
 
   pkg "fuse_osx_#{version.dots_to_underscores}.pkg"
 

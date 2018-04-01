@@ -1,11 +1,10 @@
 cask 'multipatch' do
-  version '1.5'
-  sha256 'd69af49969f035ae0eb4bebe55bb6bca78ebe816ee32eccdf0060e8bd3d1c893'
+  version '1.6.2'
+  sha256 '58e0fcf1da4aee262dbc93b3df3e36f572866d5246472671f11115284dd85622'
 
   url "http://projects.sappharad.com/tools/multipatch#{version.no_dots}.zip"
   name 'MultiPatch'
   homepage 'http://projects.sappharad.com/tools/multipatch.html'
-  license :gpl
 
   app 'MultiPatch/MultiPatch.app'
 end

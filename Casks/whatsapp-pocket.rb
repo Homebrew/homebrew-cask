@@ -5,7 +5,6 @@ cask 'whatsapp-pocket' do
   url 'http://www.fireebok.com/product/WhatsApp_Pocket_Mac.dmg'
   name 'WhatsApp Pocket'
   homepage 'http://www.fireebok.com/whatsapp-pocket.html'
-  license :commercial
 
   app 'WhatsApp Pocket.app'
 end

@@ -1,14 +1,28 @@
 cask 'vox' do
-  version '2810.6,1466704048'
-  sha256 '34dd198e7ad10ca543aaea644be450c66758e64f0034d377e9864c2e262d094e'
+  version '3.2.1'
+  sha256 '0000761ec5d874b374945a2ad54aeb41a3d637a483d3ebd813647f053ea96ebf'
 
   # devmate.com/com.coppertino.Vox was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.coppertino.Vox/#{version.before_comma}/#{version.after_comma}/Vox-#{version.before_comma}.zip"
+  url 'https://dl.devmate.com/com.coppertino.Vox/Vox.dmg'
   appcast 'https://updates.devmate.com/com.coppertino.Vox.xml',
-          checkpoint: 'fffc16ccbe21909e29645f197a7416a0728d6969e466e026c73f860510bf6495'
+          checkpoint: '027278951864ae54578aef216bfda8abbe68afdd5bca42632cfed19edae65b35'
   name 'VOX'
-  homepage 'https://coppertino.com/vox/mac'
-  license :freemium
+  homepage 'https://vox.rocks/mac-music-player'
 
-  app 'Vox.app'
+  app 'VOX.app'
+
+  uninstall launchctl: 'com.coppertino.VoxHelper'
+
+  zap trash: [
+               '~/Library/Application Scripts/com.coppertino.VOXAgent',
+               '~/Library/Application Scripts/com.coppertino.Vox',
+               '~/Library/Application Support/com.coppertino.Vox',
+               '~/Library/Caches/com.coppertino.Vox-Helper',
+               '~/Library/Containers/com.coppertino.VOXAgent',
+               '~/Library/Containers/com.coppertino.Vox',
+               '~/Library/Preferences/com.coppertino.Vox-Helper.plist',
+               '~/Library/Preferences/com.coppertino.Vox.plist',
+               '~/Library/Preferences/com.coppertino.VoxPrefs.plist',
+               '~/Library/Saved Application State/com.coppertino.Vox.savedState',
+             ]
 end

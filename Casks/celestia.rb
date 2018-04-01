@@ -4,10 +4,9 @@ cask 'celestia' do
 
   url "https://downloads.sourceforge.net/celestia/celestia-osx-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/celestia/rss',
-          checkpoint: '56994e2d3dcf5068e11639e2a32f6d76225cc54c077fc7811fad81cc2816a856'
+          checkpoint: 'f42adfe85c82138c4a0d34cb8212c552658765780d93faacd431ccce8ee2a553'
   name 'Celestia'
-  homepage 'http://sourceforge.net/projects/celestia'
-  license :gpl
+  homepage 'https://sourceforge.net/projects/celestia/'
 
   app 'Celestia.app'
 end

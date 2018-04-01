@@ -1,16 +1,13 @@
 cask 'art-of-illusion' do
-  version '3.0.2'
-  sha256 '6ce23726cb1f97b7b493713fb2494e237b5947ba6711a0bd24b33eb2dfb4f52b'
+  version '3.0.3'
+  sha256 '855683968480ef24520e998d157bf94865232b3dddd7d8b2431f4dc8d6782984'
 
   # sourceforge.net/aoi was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/aoi/ArtOfIllusion#{version.no_dots}-Mac.dmg"
   appcast 'https://sourceforge.net/projects/aoi/rss',
-          checkpoint: 'fae03e7c48c7884a973bf22bed829959c7b3cc314353939578aa4dea4ae958cf'
+          checkpoint: 'c3567644fffdb188afc15ceb664a9058867d65986c119a4429feeedcfd63d676'
   name 'Art of Illusion'
-  homepage 'http://www.artofillusion.org'
-  license :gpl
-
-  depends_on macos: '>= :snow_leopard'
+  homepage 'http://www.artofillusion.org/'
 
   app 'Art of Illusion/Art of Illusion.app'
 end

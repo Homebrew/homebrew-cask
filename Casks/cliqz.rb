@@ -1,17 +1,23 @@
 cask 'cliqz' do
-  version '1.2.1'
-  sha256 '387c4ef5b86f1c3605ff7bd54fd210ed23dda13f759a1280212cb2c3c29debf0'
+  version :latest
+  sha256 :no_check
 
-  # repository.cliqz.com.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "http://repository.cliqz.com.s3.amazonaws.com/dist/release/#{version}/de/CLIQZ-#{version}.de.mac.dmg"
+  language 'de' do
+    'de'
+  end
+
+  language 'en', default: true do
+    'en-US'
+  end
+
+  url "https://cdn.cliqz.com/browser-f/download/web0001/CLIQZ.#{language}.mac.dmg"
   name 'CLIQZ'
-  homepage 'https://cliqz.com'
-  license :oss
+  homepage 'https://cliqz.com/'
 
   app 'CLIQZ.app'
 
-  zap delete: [
-                '~/Library/Application Support/CLIQZ',
-                '~/Library/Caches/CLIQZ',
-              ]
+  zap trash: [
+               '~/Library/Application Support/CLIQZ',
+               '~/Library/Caches/CLIQZ',
+             ]
 end

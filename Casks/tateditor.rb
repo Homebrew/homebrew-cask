@@ -5,7 +5,6 @@ cask 'tateditor' do
   url 'http://www.cc4966.net/software/tateditor-osx.dmg'
   name 'TATEditor'
   homepage 'http://www.cc4966.net/'
-  license :gratis
 
   app 'tateditor.app'
 end

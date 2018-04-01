@@ -1,14 +1,13 @@
 cask 'eintopf' do
-  version '1.3.0'
-  sha256 '21af45808e774a20d6f7c71066ba5521de2c7f6842ff805aa384887d39b0df47'
+  version '1.3.2'
+  sha256 '49b0e1f6736e86326a307889147d29e51c0343c56cb538556265eb6e8084b456'
 
   # github.com/mazehall/eintopf was verified as official when first introduced to the cask
   url "https://github.com/mazehall/eintopf/releases/download/#{version}/eintopf_#{version}-x64.dmg"
   appcast 'https://github.com/mazehall/eintopf/releases.atom',
-          checkpoint: '08fb7a2f75150cf295efe239a3104ed297c68b57838207087b0f84357899fe14'
+          checkpoint: 'a8c2ba60ed12b1cdf2a2054c4d06a93c8dd3d3712f3bdb74baab179b4cec2ab0'
   name 'Eintopf'
-  homepage 'https://eintopf.io'
-  license :mit
+  homepage 'https://eintopf.io/'
 
   app 'Eintopf.app'
 end

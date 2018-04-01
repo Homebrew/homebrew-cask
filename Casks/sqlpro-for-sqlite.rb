@@ -1,17 +1,16 @@
 cask 'sqlpro-for-sqlite' do
-  version '1.0.88'
-  sha256 'b2b3e54ee9e6254f8b14b9054d21b717ea351c80c2aac80de1d6a95ee7b0f27b'
+  version '1.0.111'
+  sha256 '297fbccae014d9b59d19e09013e6a42be4ae76a29eb209cfdc00b50a607c99c3'
 
   # d3fwkemdw8spx3.cloudfront.net/sqlite was verified as official when first introduced to the cask
   url "https://d3fwkemdw8spx3.cloudfront.net/sqlite/SQLProSQLite.#{version}.app.zip"
   name 'SQLPro for SQLite'
-  homepage 'https://www.sqlitepro.com'
-  license :commercial
+  homepage 'https://www.sqlitepro.com/'
 
   app 'SQLPro for SQLite.app'
 
-  zap delete: [
-                '~/Library/Containers/com.hankinsoft.osx.sqliteprofessional',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.sqliteprofessional.sfl',
-              ]
+  zap trash: [
+               '~/Library/Containers/com.hankinsoft.osx.sqliteprofessional',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.sqliteprofessional.sfl*',
+             ]
 end

@@ -1,18 +1,13 @@
 cask 'flixster-video' do
-  version '2.6.5.535'
-  sha256 '24079b6027c4dcf3fcd0365db0c3a6e06d5ad332ac98978377face1a329479f3'
+  version '2.7.1.637'
+  sha256 'eef953f1b4636d158a594728a9bed6ded61f5af1402bd7432cce817e836f1346'
 
   # d1rtylazwb77ux.cloudfront.net was verified as official when first introduced to the cask
   url 'https://d1rtylazwb77ux.cloudfront.net/desktop/mac/FlixsterDesktop.zip'
   appcast 'https://d1rtylazwb77ux.cloudfront.net/desktop/mac/FlixsterDesktopMacAppcast.xml',
-          checkpoint: '8f88a3500d628926926f82f224c4013f7af90afe8786cf36b88eeb250127f2f5'
+          checkpoint: '7486cfdc8e89809389fa19117d196149086788eed99798948443892633a540a1'
   name 'Flixster Video'
-  homepage 'https://www.flixster.com/about/ultraviolet/'
-  license :gratis
+  homepage 'https://www.flixstervideo.com/apps'
 
   app 'Flixster Video.app'
-
-  postflight do
-    suppress_move_to_applications key: 'moveToApplicationsFolderAlertSuppress'
-  end
 end

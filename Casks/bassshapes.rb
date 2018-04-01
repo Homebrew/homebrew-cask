@@ -1,11 +1,15 @@
 cask 'bassshapes' do
   version '01.2'
-  sha256 '7f055b8114c9f5307bd1a0247532003b1e500974c5b60067e4770fcd24fae61e'
+  sha256 '69077a7ec35e39e1257b6957436b383e2af4176f2f9158360244d65dada9bc06'
 
-  url "http://yellquietly.com/downloads/BassShapes_v#{version.no_dots}.zip"
+  url "http://yellquietly.com/downloads/BassShapes_v#{version}.zip"
   name 'Bass Shapes'
   homepage 'http://yellquietly.com/bass-shapes/'
-  license :gratis
 
-  app "BassShapes_v#{version.no_dots}/BassShapes.app"
+  app 'BassShapes.app'
+
+  zap trash: [
+               '~/Library/Preferences/com.yellQuietly.BassShapes.plist',
+               '~/Library/Saved Application State/com.yellQuietly.BassShapes.savedState',
+             ]
 end

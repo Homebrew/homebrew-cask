@@ -6,7 +6,6 @@ cask 'dwarf-fortress-lnp' do
   url "http://dffd.bay12games.com/download.php?id=11412&f=Macnewbie_#{version.minor}.#{version.patch}.dmg"
   name 'Dwarf Fortress LNP (Macnewbie)'
   homepage 'http://www.bay12forums.com/smf/index.php?topic=128960.0'
-  license :gratis
 
   # Renamed for clarity: suite name is inconsistent with branding
   suite 'Macnewbie', target: 'Dwarf Fortress LNP'

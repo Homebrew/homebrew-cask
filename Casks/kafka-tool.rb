@@ -5,14 +5,15 @@ cask 'kafka-tool' do
   url 'http://www.kafkatool.com/download/kafkatool.dmg'
   name 'Kafka Tool'
   homepage 'http://www.kafkatool.com/index.html'
-  license :commercial
 
-  installer script: 'Kafka Tool Installer.app/Contents/MacOS/JavaApplicationStub',
-            args:   ['-q']
+  installer script: {
+                      executable: 'Kafka Tool Installer.app/Contents/MacOS/JavaApplicationStub',
+                      args:       ['-q'],
+                    }
 
   uninstall delete: '/Applications/Kafka Tool.app'
 
-  zap delete: '~/.kafkatool'
+  zap trash: '~/.kafkatool'
 
   caveats do
     depends_on_java('8')

@@ -1,11 +1,18 @@
 cask 'youku' do
-  version '1.0.5.5031'
-  sha256 'b7d9ff08bd87150dfa9a52a891d57002e0cbc3f73d181240adfa86a076793d55'
+  version '1.3.5.01166'
+  sha256 '5d9f2f546261e402468d0ba9b984c9060010cc0de1f6c94a549058eec6bcac1d'
 
-  url "http://desktop.youku.com/ugc/youkumac_#{version}.dmg"
-  name '优酷Mac客户端'
-  homepage 'http://pd.youku.com/pc'
-  license :gratis
+  url "http://pcclient.download.youku.com/ikumac/youkumac_#{version}.dmg"
+  name 'Youku'
+  name '优酷'
+  homepage 'https://pd.youku.com/pc'
+
+  depends_on macos: '>= :mavericks'
 
   app '优酷.app'
+
+  zap trash: [
+               '~/Library/Application Scripts/com.youku.mac',
+               '~/Library/Containers/com.youku.mac',
+             ]
 end

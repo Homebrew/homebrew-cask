@@ -8,14 +8,13 @@ cask 'changes' do
           checkpoint: '524b59ed2fd0b0cb7829bfa7d4729769d169dc6e391a113550082d44fd831806'
   name 'Changes'
   homepage 'http://martiancraft.com/products/changes.html'
-  license :commercial
 
   app 'Changes.app'
   binary "#{appdir}/Changes.app/Contents/Resources/chdiff"
 
-  zap delete: [
-                '~/Library/Preferences/com.bitbq.Changes.plist',
-                '~/Library/Application Support/Changes',
-                '~/Library/Caches/com.bitbq.Changes',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.bitbq.Changes.plist',
+               '~/Library/Application Support/Changes',
+               '~/Library/Caches/com.bitbq.Changes',
+             ]
 end

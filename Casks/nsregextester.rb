@@ -2,11 +2,10 @@ cask 'nsregextester' do
   version :latest
   sha256 :no_check
 
-  # vegh.ca/nsregextester was verified as official when first introduced to the cask
-  url 'http://vegh.ca/nsregextester/NSRegexTester.zip'
+  # raw.githubusercontent.com/aaronvegh/nsregextester/master was verified as official when first introduced to the cask
+  url 'https://raw.githubusercontent.com/aaronvegh/nsregextester/master/NSRegexTester.zip'
   name 'NSRegexTester'
   homepage 'https://github.com/aaronvegh/nsregextester'
-  license :oss
 
   app 'NSRegexTester.app'
 end

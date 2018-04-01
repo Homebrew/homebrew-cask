@@ -1,12 +1,11 @@
 cask 'speedcrunch' do
-  version '0.11'
-  sha256 '1ce5ef9d167614a2e63daad43a23bd8df60b8ea641df6be9aabdf826bbb5a826'
+  version '0.12'
+  sha256 '09a881ef4e5d8ee37f90b5291544fcabeb28c63bc57e6e5eabbd748e09c975be'
 
   # bitbucket.org/heldercorreia/speedcrunch was verified as official when first introduced to the cask
   url "https://bitbucket.org/heldercorreia/speedcrunch/downloads/SpeedCrunch-#{version}.dmg"
   name 'SpeedCrunch'
   homepage 'http://www.speedcrunch.org/'
-  license :gpl
 
   app 'SpeedCrunch.app'
 end

@@ -1,11 +1,23 @@
 cask 'the-unarchiver' do
-  version '3.11.1'
-  sha256 '2b9e1c0f6bcad958c19bfa0b5b1c59ad0681574100918004c0bcad2e43dc0761'
+  version '3.11.4,116:1520347991'
+  sha256 '0b65ed1af57766c9ce4db9207390f31ffc3a2c1c274616ac20749739661e4929'
 
-  url "https://unarchiver.c3.cx/downloads/TheUnarchiver#{version}.dmg"
+  # devmate.com/cx.c3.theunarchiver was verified as official when first introduced to the cask
+  url "https://dl.devmate.com/cx.c3.theunarchiver/#{version.after_comma.before_colon}/#{version.after_colon}/TheUnarchiver-#{version.after_comma.before_colon}.zip"
+  appcast 'https://updates.devmate.com/cx.c3.theunarchiver.xml',
+          checkpoint: 'f0af10046b5de56a0de92d6be04aca3dea66afabab0b06dc58914d85828bc326'
   name 'The Unarchiver'
-  homepage 'https://unarchiver.c3.cx/unarchiver'
-  license :oss
+  homepage 'https://theunarchiver.com/'
+
+  auto_updates true
+  depends_on macos: '>= :lion'
 
   app 'The Unarchiver.app'
+
+  zap trash: [
+               '~/Library/Caches/cx.c3.theunarchiver',
+               '~/Library/Cookies/cx.c3.theunarchiver.binarycookies',
+               '~/Library/Preferences/cx.c3.theunarchiver.plist',
+               '~/Library/Saved Application State/cx.c3.theunarchiver.savedState',
+             ]
 end

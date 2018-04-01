@@ -1,14 +1,17 @@
 cask 'chefdk' do
-  version '0.16.28-1'
-  sha256 'd92b6a3b1f7d826a39044cb5827f362cae4d5a61c149c81f651e61fba33af323'
+  version '2.5.3'
+  sha256 '54a909fd694e05eceda69ed0246cbdd644a6e7448a536f8b19781be81e8c4327'
 
-  url "https://packages.chef.io/stable/mac_os_x/10.11/chefdk-#{version}.dmg"
+  url "https://packages.chef.io/files/stable/chefdk/#{version}/mac_os_x/10.12/chefdk-#{version}-1.dmg"
+  appcast "https://www.chef.io/chef/metadata-chefdk?p=mac_os_x&pv=#{MacOS.version}&m=x86_64&v=latest&prerelease=false",
+          checkpoint: '3c672589db2f1326c4d7e3432f4cc48b7ad586b688e210fc7cf2a6b46ec3c16d'
   name 'Chef Development Kit'
   name 'ChefDK'
-  homepage 'https://downloads.chef.io/chef-dk/'
-  license :apache
+  homepage 'https://downloads.chef.io/chefdk'
 
-  pkg "chefdk-#{version}.pkg"
+  depends_on macos: '>= :yosemite'
+
+  pkg "chefdk-#{version}-1.pkg"
 
   # When updating this cask, please verify the list of paths to delete (and
   # add to it if necessary):
@@ -23,11 +26,12 @@ cask 'chefdk' do
                        '/usr/local/bin/chef-client',
                        '/usr/local/bin/chef-shell',
                        '/usr/local/bin/chef-solo',
-                       '/usr/local/bin/chef-zero',
+                       '/usr/local/bin/chef-vault',
                        '/usr/local/bin/cookstyle',
+                       '/usr/local/bin/dco',
                        '/usr/local/bin/delivery',
-                       '/usr/local/bin/fauxhai',
                        '/usr/local/bin/foodcritic',
+                       '/usr/local/bin/inspec',
                        '/usr/local/bin/kitchen',
                        '/usr/local/bin/knife',
                        '/usr/local/bin/ohai',
@@ -36,4 +40,6 @@ cask 'chefdk' do
                        '/usr/local/bin/pushy-service-manager',
                        '/usr/local/bin/rubocop',
                      ]
+
+  zap trash: '~/.chefdk/'
 end

@@ -5,7 +5,6 @@ cask 'petite-chez-scheme' do
   url "http://www.scheme.com/download/pcsv#{version}-ta6osx-1.pkg.tar.gz"
   name 'Petite Chez Scheme'
   homepage 'http://www.scheme.com/petitechezscheme.html'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "pcsv#{version}-ta6osx-1.pkg"
 

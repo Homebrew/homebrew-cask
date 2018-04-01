@@ -4,15 +4,14 @@ cask 'gameranger' do
 
   url 'https://gameranger.com/download/GameRanger.dmg'
   name 'GameRanger'
-  homepage 'https://gameranger.com'
-  license :gratis
+  homepage 'https://gameranger.com/'
 
   app 'GameRanger.app'
 
-  zap delete: [
-                '~/Library/Caches/com.gameranger.GameRanger',
-                '~/Library/Preferences/com.gameranger.GameRanger.plist',
-                '~/Library/Preferences/GameRanger Prefs',
-                '~/Library/Saved Application State/com.gameranger.GameRanger.savedState',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.gameranger.GameRanger',
+               '~/Library/Preferences/com.gameranger.GameRanger.plist',
+               '~/Library/Preferences/GameRanger Prefs',
+               '~/Library/Saved Application State/com.gameranger.GameRanger.savedState',
+             ]
 end

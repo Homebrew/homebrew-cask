@@ -1,20 +1,19 @@
 cask 'sling' do
-  version '4.9.1.309'
-  sha256 '8861d5370d890ddac57e60d2826ea1967279ce2d79c1a42e9c9e0e28984b0ba1'
+  version '5.0.0.321'
+  sha256 '7422424417eff1ea73f9b465dfd270639b9f37042d02b38fcb80fe3d25196fe3'
 
   # webapp.movetv.com was verified as official when first introduced to the cask
   url 'http://webapp.movetv.com/player/osx/slingtv.dmg'
   appcast 'http://webapp.movetv.com/config/desktopupdate/sling/osx/production/Sling-snowleopard-sparkle.xml',
-          checkpoint: '2a6ca0c0fcd53690e60ff5be34b7e1c07289228c52ed6e226a4ca5471df9fe86'
+          checkpoint: 'de5d79e53e3360f27b4574c426e3662cb93efabd78f3026ed1c8639353e64d8b'
   name 'Sling TV'
   homepage 'http://www.sling.com/'
-  license :gratis
 
   app 'Sling.app'
 
-  zap delete: [
-                '~/Library/Application Support/Sling-shell',
-                '~/Library/Caches/com.Echostar.Sling',
-                '~/Library//Preferences/com.Echostar.Sling.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Sling-shell',
+               '~/Library/Caches/com.Echostar.Sling',
+               '~/Library/Preferences/com.Echostar.Sling.plist',
+             ]
 end

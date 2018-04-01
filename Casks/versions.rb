@@ -1,13 +1,12 @@
 cask 'versions' do
-  version '1.3.3-1069'
-  sha256 'a8e281f2d0b3981a2af36a518aa6d1122c6cdfedd6c258505ca9c6a35c14a573'
+  version '1.4.0-1126'
+  sha256 '2012bbf92bba601e781fbd74a956fe2702f283c3c1017fa1735f3c3f96d2f73f'
 
-  url "http://cdn.versionsapp.com/releases/Versions-#{version}.zip"
+  url "https://cdn.versionsapp.com/releases/Versions-#{version}.zip"
   appcast 'https://updates.blackpixel.com/updates?app=vs',
-          checkpoint: '2ed6c00361f6f454c263250fd3a2ef34d7534ea15895fb65742cf2683ead995e'
+          checkpoint: 'b30875c95642cb07ffebc209298634efbc34650d152a53c511dde8002abea32d'
   name 'Versions'
-  homepage 'http://versionsapp.com/'
-  license :commercial
+  homepage 'https://versionsapp.com/'
 
   app 'Versions.app'
 end

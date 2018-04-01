@@ -1,13 +1,12 @@
 cask 'butler' do
-  version '4.1.20'
-  sha256 '067f39107d7b761f19216266fcea8109ddd3f666f31bab09651248d5414b5a9a'
+  version '4.1.23'
+  sha256 '7de67e08e0bcffbdf3c5a2af73f84654b7dc5db5e95d61e42e74d863eb3d06fc'
 
   url 'https://manytricks.com/download/butler'
-  appcast 'http://manytricks.com/butler/butlercast.xml',
-          checkpoint: 'd1174d6d7f7908cc657b52024197057f6eb5e4d63f332329703658ff315c04a5'
+  appcast 'https://manytricks.com/butler/appcast',
+          checkpoint: '4394035e267ef80ea13e9123556c5a99152e2b5271f386e31458012882fbfe8c'
   name 'Butler'
   homepage 'https://manytricks.com/butler/'
-  license :commercial
 
   auto_updates true
 

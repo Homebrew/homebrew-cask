@@ -5,11 +5,18 @@ cask 'avira-antivirus' do
   # install.avira-update.com was verified as official when first introduced to the cask
   url 'https://install.avira-update.com/package/wks_avira/osx/int/pecl/Avira_Antivirus.pkg'
   name 'Avira Antivirus'
-  homepage 'https://www.avira.com/en/free-antivirus-mac'
-  license :commercial
+  homepage 'https://www.avira.com/en/free-antivirus-mac/'
+
+  auto_updates true
+  depends_on macos: '>= :el_capitan'
 
   pkg 'Avira_Antivirus.pkg'
 
-  uninstall script:  '/Applications/Utilities/Avira-Uninstall.app/Contents/MacOS/uninstall',
+  uninstall script:  {
+                       executable: '/Applications/Utilities/Avira-Uninstall.app/Contents/MacOS/uninstall',
+                       sudo:       true,
+                     },
             pkgutil: 'com.avira.pkg.AviraMacSecurity'
+
+  zap trash: '~/Library/Saved Application State/com.avira.controlcenter.savedState'
 end

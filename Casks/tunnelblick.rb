@@ -1,26 +1,39 @@
 cask 'tunnelblick' do
-  if MacOS.release <= :snow_leopard
-    version '3.5.9_build_4270.4560'
-    sha256 '7651754cab92c5f61fc22b55448875cf14fcf8b6f5b3ba469899740c49b6fae3'
-  else
-    version '3.6.5_build_4566'
-    sha256 '43f983b9ef8b2c197360c59c42ef4af194adf3242018b3815e9f39ed751eaddd'
-  end
+  version '3.7.5,5010'
+  sha256 'd085fefadb49a2ff751804560ee26ed3bfac361f4595da1b547b811aa3ef8ed5'
 
-  url "https://www.tunnelblick.net/release/Tunnelblick_#{version}.dmg"
+  # github.com/Tunnelblick/Tunnelblick/releases/download was verified as official when first introduced to the cask
+  url "https://github.com/Tunnelblick/Tunnelblick/releases/download/v#{version.before_comma}/Tunnelblick_#{version.before_comma}_build_#{version.after_comma}.dmg"
+  appcast 'https://github.com/Tunnelblick/Tunnelblick/releases.atom',
+          checkpoint: '2ccf3cbdbaa130cd6c324956dcbf8d55c4601149281ed847685ee8ff3fedcba2'
   name 'Tunnelblick'
-  homepage 'https://www.tunnelblick.net'
-  license :gpl
+  homepage 'https://www.tunnelblick.net/'
+  gpg "#{url}.asc", key_id: '76df975a1c5642774fb09868ff5fd80e6bb9367e'
 
   auto_updates true
-  depends_on macos: '>= :tiger'
 
   app 'Tunnelblick.app'
 
-  uninstall launchctl: 'net.tunnelblick.tunnelblick.LaunchAtLogin',
+  uninstall_preflight do
+    set_ownership "#{appdir}/Tunnelblick.app"
+  end
+
+  uninstall launchctl: [
+                         'net.tunnelblick.tunnelblick.LaunchAtLogin',
+                         'net.tunnelblick.tunnelblick.tunnelblickd',
+                       ],
             quit:      'net.tunnelblick.tunnelblick'
 
-  caveats <<-EOS.undent
+  zap trash: [
+               '~/Library/Application Support/Tunnelblick',
+               '~/Library/Caches/net.tunnelblick.tunnelblick',
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/Tunnelblick*',
+               '~/Library/Cookies/net.tunnelblick.tunnelblick.binarycookies',
+               '~/Library/Preferences/net.tunnelblick.tunnelblick.plist',
+               '/Library/Application Support/Tunnelblick',
+             ]
+
+  caveats <<~EOS
     For security reasons, #{token} must be installed to /Applications,
     and will request to be moved at launch.
   EOS

@@ -5,9 +5,8 @@ cask 'mercurymover' do
   url 'http://www.heliumfoot.com/files/release/mercurymover/MercuryMover.dmg'
   name 'MercuryMover'
   homepage 'http://www.heliumfoot.com/mercurymover'
-  license :commercial
 
   prefpane 'MercuryMover.prefPane'
 
-  zap delete: '~/Library/Preferences/com.heliumfoot.MyWiAgent.plist'
+  zap trash: '~/Library/Preferences/com.heliumfoot.MyWiAgent.plist'
 end

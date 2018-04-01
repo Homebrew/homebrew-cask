@@ -4,16 +4,15 @@ cask 'diffmerge' do
 
   url "http://download.sourcegear.com/DiffMerge/#{version.sub(%r{\.\d+$}, '')}/DiffMerge.#{version}.intel.stable.pkg"
   name 'DiffMerge'
-  homepage 'https://www.sourcegear.com/diffmerge'
-  license :commercial
+  homepage 'https://www.sourcegear.com/diffmerge/'
 
   pkg "DiffMerge.#{version}.intel.stable.pkg"
 
   uninstall pkgutil: 'com.sourcegear.DiffMerge'
 
-  zap       delete: [
-                      '~/Library/Preferences/com.sourcegear.DiffMerge.plist',
-                      '~/Library/Preferences/SourceGear DiffMerge Preferences',
-                      '~/Library/Saved Application State/com.sourcegear.DiffMerge.savedState',
-                    ]
+  zap trash: [
+               '~/Library/Preferences/com.sourcegear.DiffMerge.plist',
+               '~/Library/Preferences/SourceGear DiffMerge Preferences',
+               '~/Library/Saved Application State/com.sourcegear.DiffMerge.savedState',
+             ]
 end

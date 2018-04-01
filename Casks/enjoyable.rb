@@ -7,9 +7,8 @@ cask 'enjoyable' do
           checkpoint: 'bca0054ee381155cd8c4e64191c3b7d7c8142ac1af91a029bab84a66e73e27ed'
   name 'Enjoyable'
   homepage 'https://yukkurigames.com/enjoyable/'
-  license :gratis
 
   app 'Enjoyable.app'
 
-  zap delete: '~/Library/Preferences/com.yukkurigames.Enjoyable.plist'
+  zap trash: '~/Library/Preferences/com.yukkurigames.Enjoyable.plist'
 end

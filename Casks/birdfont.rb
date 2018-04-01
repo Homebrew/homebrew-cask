@@ -1,11 +1,10 @@
 cask 'birdfont' do
-  version '2.10.5'
-  sha256 'e1bb495069d6f68664d32386d90f1b7d128467307754a2e9315efd9f2b477428'
+  version '3.6.2'
+  sha256 '4d261383ae72e370bc07fdb8dbf896d5a5a229c3771bbce006b88ddad0ba16ae'
 
   url "https://birdfont.org/download/birdfont-#{version}-free.dmg"
   name 'BirdFont'
   homepage 'https://birdfont.org/'
-  license :freemium
 
-  app 'BirdFont.app'
+  app 'BirdFontNonCommercial.app'
 end

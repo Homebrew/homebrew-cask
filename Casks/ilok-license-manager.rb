@@ -1,11 +1,10 @@
 cask 'ilok-license-manager' do
-  version '3.0.2_r33217'
-  sha256 '7dc4b7abdb5ee5cbcd0ff7cc42add6efbdce12253fabc4d12a9215072306a9de'
+  version :latest
+  sha256 :no_check
 
   url 'http://installers.ilok.com/iloklicensemanager/LicenseSupportInstallerMac.zip'
   name 'iLok License Manager'
   homepage 'https://ilok.com/#!license-manager'
-  license :gratis
 
   pkg 'License Support.pkg'
 

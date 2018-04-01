@@ -1,14 +1,13 @@
 cask 'protege' do
-  version '5.0.0'
-  sha256 'cc5dc98cb41a59fb86a710a61249437f1f9d1b4b79eb989b1ff5055df0722540'
+  version '5.2.0'
+  sha256 'a6f1c06f8740489c51245683e50493d62b7b019ffc409c137eb511a8d1d140be'
 
   # github.com/protegeproject/protege-distribution was verified as official when first introduced to the cask
-  url "https://github.com/protegeproject/protege-distribution/releases/download/protege-#{version}/Protege-#{version}-os-x.zip"
+  url "https://github.com/protegeproject/protege-distribution/releases/download/v#{version}/Protege-#{version}-os-x.zip"
   appcast 'https://github.com/protegeproject/protege-distribution/releases.atom',
-          checkpoint: '85a7963eb388f3eaca03ab284323423a4c3659fa2939b183c1a46ef222c6293c'
+          checkpoint: 'd303ee2d1e3f95ade575ac8b135155cb1beef2d7d241ca09a7bd419f61f2cd2e'
   name 'Protégé'
-  homepage 'http://protege.stanford.edu/'
-  license :bsd
+  homepage 'https://protege.stanford.edu/'
 
   app "Protege-#{version}/Protégé.app"
 end

@@ -5,7 +5,6 @@ cask 'cmb-security-plugin' do
   url 'https://site.cmbchina.com/download/CMBSecurityPlugin.dmg'
   name 'CMB Security Plugin'
   homepage 'https://www.cmbchina.com/'
-  license :closed
 
   pkg 'CMB Security Plugin.pkg'
 

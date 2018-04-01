@@ -5,7 +5,6 @@ cask 'product-hunt' do
   url 'https://s3.producthunt.com/mac/ProductHunt.dmg'
   name 'Product Hunt'
   homepage 'https://www.producthunt.com/apps/mac'
-  license :mit
 
   app 'Product Hunt.app'
 end

@@ -1,21 +1,13 @@
 cask 'ableton-live' do
-  version '9.2.1'
+  version '10.0.1'
+  sha256 '36abc5d8b9900fff2338ddc28bc854f98f40804958cf3fa9e3d812459f3f0263'
 
-  if Hardware::CPU.is_32_bit?
-    sha256 'ce37b5ec6c2f717c8db83e39a75398e462bd131d39df5a559b265fa27eba38f6'
-    url "http://cdn2-downloads.ableton.com/channels/#{version}/ableton_live_trial_#{version}_32.dmg"
-  else
-    sha256 '30599a21a857be855e687e3d5a162cefb84ff98491bc2757d0580e811114295e'
-    url "http://cdn2-downloads.ableton.com/channels/#{version}/ableton_live_trial_#{version}_64.dmg"
-  end
-
+  url "http://cdn-downloads.ableton.com/channels/#{version}/ableton_live_trial_#{version}_64.dmg"
   name 'Ableton Live'
-  homepage 'https://ableton.com/en/live'
-  license :commercial
+  homepage 'https://www.ableton.com/en/live/'
 
   app "Ableton Live #{version.major} Trial.app"
 
-  zap delete: '~/Library/*/*[Aa]bleton*',
-      rmdir:  '~/Music/Ableton/Factory Packs'
-  # trash: '~/Music/Ableton/User Library'
+  zap trash: '~/Library/*/*[Aa]bleton*',
+      rmdir: '~/Music/Ableton/Factory Packs'
 end

@@ -1,14 +1,12 @@
 cask 'apm-planner' do
-  version '2.0.20'
-  sha256 '2635f4d66dc4290a0f816bad7e6a029ab453385710fff428128f4bbf6926ced8'
+  version '2.0.25'
+  sha256 '97208e8589c44465167d2b84794d8e483c9ffba001df5e81a9e7f9de11fc2cb3'
 
-  # diydrones.com was verified as official when first introduced to the cask
-  url "http://firmware.diydrones.com/Tools/APMPlanner/apm_planner_#{version}_osx.dmg"
-  appcast 'http://firmware.diydrones.com/Tools/APMPlanner/apm_planner_version.json',
-          checkpoint: '3abbf4b7115646de8e41d974731c2697b59c34c0a6761de7220aaaa3c82d2d73'
+  url "http://firmware.ardupilot.org/Tools/APMPlanner/apm_planner_#{version}_osx.dmg"
+  appcast 'http://firmware.ardupilot.org/Tools/APMPlanner/apm_planner_version.json',
+          checkpoint: 'bba48c18d3188f090cca7b0c8445020aa6cb7babae225f35d6b668209286b74c'
   name 'APM Planner'
-  homepage 'http://planner2.ardupilot.com/'
-  license :gpl
+  homepage 'http://ardupilot.org/'
 
   app "APM Planner #{version.major_minor}.app"
   pkg 'FTDIUSBSerialDriver_10_4_10_5_10_6_10_7.mpkg'

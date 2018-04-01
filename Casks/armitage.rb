@@ -1,11 +1,20 @@
 cask 'armitage' do
-  version '14.11.20'
-  sha256 'b309fdef13c8a3a0d981ffc1ad2bfb4786a797f4e291dd4ef3bcc2806c1126f4'
+  version '15.08.13'
+  sha256 'f44af478248fd01e71ea7e7bcfa558e4c9b291a78b0d1df1ad245c34cabd896b'
 
   url "http://www.fastandeasyhacking.com/download/armitage#{version.no_dots}.dmg"
   name 'Armitage'
   homepage 'http://www.fastandeasyhacking.com/'
-  license :bsd
 
   app 'Armitage.app'
+  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/armitage.wrapper.sh"
+  binary shimscript, target: 'armitage'
+
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/sh
+      java "$@" -jar '#{appdir}/Armitage.app/Contents/Java/armitage.jar'
+    EOS
+  end
 end

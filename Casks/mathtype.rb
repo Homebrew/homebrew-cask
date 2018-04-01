@@ -4,8 +4,7 @@ cask 'mathtype' do
 
   url "https://www.dessci.com/en/dl/MTM#{version.no_dots}h_EN.pkg"
   name 'MathType'
-  homepage 'https://www.dessci.com'
-  license :commercial
+  homepage 'https://www.dessci.com/'
 
   installer manual: "MTM#{version.no_dots}h_EN.pkg"
 

@@ -1,9 +1,24 @@
-Before writing your issue, check our instructions for [reporting bugs](https://github.com/caskroom/homebrew-cask#reporting-bugs) or [making requests](https://github.com/caskroom/homebrew-cask#requests), as appropriate. Those will walk you through the process.
+#### General troubleshooting steps
 
-If none of those is appropriate, then **delete all this pre-inserted template text** and tell us your issue in as much detail as possible.
+- [ ] I have retried my command with `--force` and the issue is still present.
+- [ ] I have checked the instructions for [reporting bugs](https://github.com/caskroom/homebrew-cask#reporting-bugs) (or [making requests](https://github.com/caskroom/homebrew-cask#requests)) before opening the issue.
+  - [ ] None of the templates was appropriate for my issue, or I’m not sure.
+- [ ] I ran `brew update-reset && brew update` and retried my command.
+- [ ] I ran `brew doctor`, fixed as many issues as possible and retried my command.
+- [ ] I understand that [if I ignore these instructions, my issue may be closed without review](https://github.com/caskroom/homebrew-cask/blob/master/doc/faq/closing_issues_without_review.md).
 
-Please note that if it is apparent you ignored the instructions for reporting issues, your issue may be closed without review. When the guide isn‘t followed we get the same issues over and over. Having to repeatedly deal with the same solved and documented problems leads to maintainer burnout and a lot of wasted hours that could instead have been spent improving Homebrew-Cask itself and fixing real bugs.
+#### Description of issue
 
-If the guide itself was unclear, open *first* an issue or pull request stating what you found was confusing *and only then* your other issue.
+{{replace this}}
 
-Thank you for taking the time to make a correct report.
+#### Output of your command with `--verbose --debug`
+
+```
+{{replace this}}
+```
+
+#### Output of `brew cask doctor`
+
+```
+{{replace this}}
+```

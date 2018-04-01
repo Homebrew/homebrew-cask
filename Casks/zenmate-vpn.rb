@@ -6,7 +6,6 @@ cask 'zenmate-vpn' do
   url 'https://macos-update.s3.amazonaws.com/ZenMate_OSX_VPN.dmg'
   name 'ZenMate VPN'
   homepage 'https://zenmate.com/products/vpn-for-osx/'
-  license :commercial
 
   app 'ZenMate.app'
 end

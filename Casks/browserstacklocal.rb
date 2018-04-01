@@ -5,7 +5,6 @@ cask 'browserstacklocal' do
   url 'https://www.browserstack.com/browserstack-local/BrowserStackLocal-darwin-x64.zip'
   name 'BrowserStack Local'
   homepage 'https://www.browserstack.com/'
-  license :commercial
 
   binary 'BrowserStackLocal'
 end

@@ -5,7 +5,6 @@ cask 'genomebrowse' do
   url 'http://www.goldenhelix.com/download/GenomeBrowse/GenomeBrowse-MacOSX.dmg'
   name 'Genome Browse'
   homepage 'http://goldenhelix.com/products/GenomeBrowse/index.html'
-  license :other
 
   app 'GenomeBrowse.app'
 end

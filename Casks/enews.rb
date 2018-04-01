@@ -4,8 +4,7 @@ cask 'enews' do
 
   url "http://www.xinhuaenews.com/download/eNewsMac_v#{version}.zip"
   name 'eNews采集'
-  homepage 'http://www.xinhuaenews.com'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.xinhuaenews.com/'
 
   app 'eNews采集.app'
 end

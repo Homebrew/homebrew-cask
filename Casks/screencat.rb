@@ -1,14 +1,13 @@
 cask 'screencat' do
-  version '2.0.0'
-  sha256 'd0587d3c7c926825019d296ad677c4469fa6cdf47ab434f556d74c372e5a18e6'
+  version '4.2.0'
+  sha256 '08230919e4efd3bf75900276f61810bfdea1c6fb6ff7026195a0004733c20d0e'
 
   # github.com/maxogden/screencat was verified as official when first introduced to the cask
-  url "https://github.com/maxogden/screencat/releases/download/#{version}/ScreenCat.zip"
+  url "https://github.com/maxogden/screencat/releases/download/v#{version}/ScreenCat.zip"
   appcast 'https://github.com/maxogden/screencat/releases.atom',
-          checkpoint: 'ab6d5b16172351803d8ad9bd1d3200abade4df0c9abc60341d5a07f0d5ec3488'
+          checkpoint: '3e8451b689135fa55033b526c18366ec0b295af0896ccc8f53e978d29d715fd4'
   name 'ScreenCat'
   homepage 'https://maxogden.github.io/screencat/'
-  license :oss
 
   app 'ScreenCat.app'
 end

@@ -1,11 +1,10 @@
 cask 'wiznote' do
-  version '2015-12-03'
-  sha256 'b1db69a400712c9e750bde91fab7382935ac6cb95d081c8cac1872b2e59e26a1'
+  version '2.5.8,2018-01-12'
+  sha256 '5428cf52af8544c741009d9b56fc0264b53aa4bd7b6ee8b8a08160fa9a546d3b'
 
-  url "http://release.wiz.cn/wiznote-macos-#{version}.dmg"
+  url "https://get.wiz.cn/wiznote-macos-#{version.after_comma}.dmg"
   name 'WizNote'
-  homepage 'http://www.wiz.cn/wiznote-mac.html'
-  license :gratis
+  homepage 'https://www.wiz.cn/wiznote-mac.html'
 
   app 'WizNote.app'
 end

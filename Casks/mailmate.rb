@@ -6,12 +6,7 @@ cask 'mailmate' do
   url 'http://dl.mailmate-app.com/MailMate.tbz'
   name 'MailMate'
   homepage 'https://freron.com/'
-  license :commercial
 
   app 'MailMate.app'
   binary "#{appdir}/MailMate.app/Contents/Resources/emate"
-
-  caveats do
-    files_in_usr_local
-  end
 end

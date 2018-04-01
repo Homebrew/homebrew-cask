@@ -7,7 +7,6 @@ cask 'glimmerblocker' do
           checkpoint: 'c93a38d80349569f9b70ae6132ebf7ed02725268c76804349e3570ca18dd48af'
   name 'GlimmerBlocker'
   homepage 'https://glimmerblocker.org/'
-  license :gpl
 
   pkg 'GlimmerBlocker.pkg'
 
@@ -18,12 +17,12 @@ cask 'glimmerblocker' do
                        ],
             delete:    '/Library/PreferencePanes/GlimmerBlocker.prefPane'
 
-  zap       delete: [
-                      '/Library/GlimmerBlocker',
-                      '/Library/Logs/GlimmerBlocker',
-                    ]
+  zap trash: [
+               '/Library/GlimmerBlocker',
+               '/Library/Logs/GlimmerBlocker',
+             ]
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     You must deactivate GlimmerBlocker from the installed preference
     pane before uninstalling. See http://glimmerblocker.org/wiki/Uninstall.
   EOS

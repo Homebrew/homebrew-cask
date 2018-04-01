@@ -4,8 +4,7 @@ cask 'serialcloner' do
 
   url "http://serialbasics.free.fr/Serial_Cloner-Download_files/SerialCloner#{version.sub(%r{^(\d+)\.(\d+).*}, '\1-\2')}.dmg"
   name 'Serial Cloner'
-  homepage 'http://serialbasics.free.fr/Serial_Cloner.html'
-  license :gratis
+  homepage 'http://serialbasics.free.fr/Serial_Cloner.html/'
 
   app "SerialCloner#{version.sub(%r{^(\d+)\.(\d+).*}, '\1-\2')}/SerialCloner #{version.dots_to_hyphens}.app"
 end

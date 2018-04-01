@@ -1,14 +1,13 @@
 cask 'trolcommander' do
-  version '0.9.7'
-  sha256 'd67cdf6c195e3885daf7d22243e4596b39dbbeb45f67c465ed3f34b2468110bd'
+  version '0.9.9'
+  sha256 '143b62df9fa2ece807724b690692787cb10b3e42796faf6944f1f2d047db1d9e'
 
   # github.com/trol73/mucommander was verified as official when first introduced to the cask
   url "https://github.com/trol73/mucommander/releases/download/v#{version}/trolcommander-#{version.dots_to_underscores}.app.tar.gz?raw=true"
   appcast 'https://github.com/trol73/mucommander/releases.atom',
-          checkpoint: '76406c8c7d2abbe5b528701b73e7d19d4370a98cc5f0473a7fa644a11aa77f2c'
+          checkpoint: '22b048caa74885952e57ddeb25080a8a566e289b017386e38416d6f7309eb400'
   name 'trolCommander'
-  homepage 'http://trolsoft.ru/en/soft/trolcommander'
-  license :gpl
+  homepage 'https://trolsoft.ru/en/soft/trolcommander'
 
   app 'trolCommander.app'
 end

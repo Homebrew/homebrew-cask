@@ -5,7 +5,6 @@ cask 'mari0' do
   url 'http://stabyourself.net/dl.php?file=mari0-1006/mari0-osx.zip'
   name 'Mari0'
   homepage 'http://stabyourself.net/mari0/'
-  license :cc
 
   app 'Mari0.app'
 end

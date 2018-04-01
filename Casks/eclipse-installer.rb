@@ -1,14 +1,12 @@
 cask 'eclipse-installer' do
-  version :latest
-  sha256 :no_check
+  version '4.7.0,oxygen:R'
+  sha256 '610b28ad30fc9ba044c87cca87ef66abdbe938d3ea50d112a81e36f953a72c0e'
 
-  url 'https://eclipse.org/downloads/download.php?file=/oomph/epp/neon/R/eclipse-inst-mac64.tar.gz&r=1'
+  url "https://eclipse.org/downloads/download.php?file=/oomph/epp/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-inst-mac64.tar.gz&r=1"
   name 'Eclipse Installer'
   homepage 'https://eclipse.org/'
-  license :eclipse
 
   depends_on macos: '>= :leopard'
-  depends_on arch: :x86_64
 
   app 'Eclipse Installer.app'
 

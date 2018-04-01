@@ -4,10 +4,9 @@ cask 'soundflowerbed' do
 
   url "https://github.com/mLupine/SoundflowerBed/releases/download/#{version}-release/SoundflowerBed-#{version}-release.dmg"
   appcast 'https://github.com/mLupine/SoundflowerBed/releases.atom',
-          checkpoint: '2b823e11493170b24d4542d396c8f964792fa951b24443559a31141bb2b14a42'
+          checkpoint: '9ad33bf4936664c47ee0a00817062238d9612c511930b080e917354cb188b6a4'
   name 'SoundflowerBed'
   homepage 'https://github.com/mLupine/SoundflowerBed'
-  license :mit
 
   app 'SoundflowerBed.app'
 end

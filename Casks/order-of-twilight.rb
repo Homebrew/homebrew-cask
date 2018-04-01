@@ -5,7 +5,6 @@ cask 'order-of-twilight' do
   url 'http://stabyourself.net/dl.php?file=orderoftwilight/orderoftwilight-osx.zip'
   name 'Order of Twilight'
   homepage 'http://stabyourself.net/orderoftwilight/'
-  license :oss
 
   app 'Order of Twilight.app'
 end

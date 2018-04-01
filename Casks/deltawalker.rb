@@ -1,14 +1,20 @@
 cask 'deltawalker' do
-  version '2.3.0'
-  sha256 '567b17366dbc33518a6a914e140699485a37b840bf99acf8f7e5b1a86c83d664'
+  version '2.3.2'
+  sha256 '03d3e5c7ccc8252dbc12b15d86e647d1e71f59396deb33085b45169d20ea4d28'
 
   # amazonaws.com/deltawalker was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/deltawalker/DeltaWalker-#{version}_64.dmg"
+  url "https://s3.amazonaws.com/deltawalker/DeltaWalker-#{version}.dmg"
   name 'DeltaWalker'
-  homepage 'http://www.deltawalker.com/'
-  license :commercial
+  homepage 'https://www.deltawalker.com/'
 
   depends_on macos: '>= :tiger'
 
   app 'DeltaWalker.app'
+
+  zap trash: [
+               '~/Library/Caches/com.deltopia.DeltaWalker',
+               '~/Library/Containers/com.deltopia.DeltaWalker',
+               '~/Library/Preferences/com.deltopia.DeltaWalker.plist',
+               '~/Library/Saved Application State/com.deltopia.DeltaWalker.savedState',
+             ]
 end

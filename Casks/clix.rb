@@ -5,7 +5,6 @@ cask 'clix' do
   url 'ftp://rixstep.com/CLIX.tar.bz2'
   name 'CLIX'
   homepage 'http://rixstep.com/4/0/clix/'
-  license :gratis
 
   app "CLIX#{version}/CLIX.app"
 end

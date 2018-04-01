@@ -1,13 +1,12 @@
 cask 'beesoft' do
-  version '3.12.1'
-  sha256 '8b50dc85833870dc93dd7f59581557e6a58082e10c60f676b437a7287b8189f5'
+  version '3.15.1'
+  sha256 '8e55dd772af896516c1d5a3fc89875c4c71b25d64206eed89444d5e86bd60404'
 
   url "https://www.beeverycreative.com/public/software/BEESOFT/BEESOFT-#{version}/Mac-BEESOFT-#{version}.pkg"
   name 'Beesoft'
   homepage 'https://beeverycreative.com/beesoft/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "Mac-BEESOFT-#{version}.pkg"
 
-  uninstall pkgutil: 'com.beeerycreative.beesoft'
+  uninstall pkgutil: 'com.beeverycreative.beesoft'
 end

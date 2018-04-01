@@ -1,13 +1,12 @@
 cask 'texturepacker' do
-  version '4.2.2'
-  sha256 '55f58f840977f612abfbdf19cd873043010f6f3bd5b10c4b585b400124a4505f'
+  version '4.6.3'
+  sha256 '16eac43171c7a5e5cbdb25adb37990165f2b6ff8af225621353fed78051e95f0'
 
   url "https://www.codeandweb.com/download/texturepacker/#{version}/TexturePacker-#{version}-uni.dmg"
   appcast 'https://www.codeandweb.com/releases/TexturePacker/appcast-mac-release.xml',
-          checkpoint: '0fe851a0094ecd20943f818bdd7006e6f92e535e9f8e360a22ac7090f98cbeda'
+          checkpoint: 'aa627a4933cfa493f2e7b72d5e02b78f784cb44a09e4fd2036c6da4a8b559445'
   name 'TexturePacker'
   homepage 'https://www.codeandweb.com/texturepacker'
-  license :freemium
 
   app 'TexturePacker.app'
 end

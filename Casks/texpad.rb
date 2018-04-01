@@ -1,20 +1,31 @@
 cask 'texpad' do
-  if MacOS.release <= :mountain_lion
-    version '1.7.21'
-    sha256 'cae312b89d25752917bf66572fd1c6b6722097b651abe9a1a1b399dc36493512'
+  if MacOS.version <= :mountain_lion
+    version '1.6.14'
+    sha256 '18fcbe93e77e5b5bc848172546962fcde397a26fd543efcc1054004369192f7e'
+
+    url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.dots_to_underscores}.zip"
   else
-    version '1.7.28'
-    sha256 'f59a83923c70dd60ee2ad0acb07814b04ccc9b2ecea6d33d2340f49c54df70cc'
+    version '1.8.0,365,f27f248'
+    sha256 'e6657161f8df77bff4e6e2a8561ba99dca15dd400fdb971c8bc7b85594c1cd9f'
+
+    url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.before_comma.dots_to_underscores}__#{version.after_comma.before_comma}__#{version.after_comma.after_comma}.dmg"
+    appcast 'https://www.texpad.com/static-collected/upgrades/texpadappcast.xml',
+            checkpoint: '30c0dcf110015f71d53d2b2dc1ea85fff51177efb1ddbe8830df600aeab3c3e3'
   end
 
-  url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.dots_to_underscores}.zip"
-  appcast 'https://www.texpadapp.com/static-collected/upgrades/texpadappcast.xml',
-          checkpoint: 'cfcc73295708a553ca7a637d5d465c038cd1b547fc604a0cebb2d05df70816dc'
   name 'Texpad'
-  homepage 'https://www.texpadapp.com/osx'
-  license :commercial
+  homepage 'https://www.texpad.com/osx'
 
-  depends_on macos: '>= :snow_leopard'
+  auto_updates true
+  depends_on macos: '>= :lion'
 
   app 'Texpad.app'
+
+  zap trash: [
+               '~/Library/Application Support/Texpad',
+               '~/Library/Caches/com.vallettaventures.Texpad',
+               '~/Library/Cookies/com.vallettaventures.Texpad.binarycookies',
+               '~/Library/Preferences/com.vallettaventures.Texpad.plist',
+               '~/Library/Saved Application State/com.vallettaventures.Texpad.savedState',
+             ]
 end

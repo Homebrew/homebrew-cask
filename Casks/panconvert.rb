@@ -1,13 +1,20 @@
 cask 'panconvert' do
-  version '0.1.5'
-  sha256 '98ab46e9ac375b155d9361480e2d180fc2caf9905d55a64ea2faca3873b80ff9'
+  version '0.2.7'
+  sha256 '1533540b3a28fb2ba263e9a79a813e0968c674a5ad6d370ee0163fd828ba7c42'
 
-  url "https://downloads.sourceforge.net/panconvert/PanConvert-#{version}.dmg"
-  appcast 'https://raw.githubusercontent.com/apaeffgen/PanConvert/master/docs/changelog.md',
-          checkpoint: '619da3f895d1553f9a34f92385be79c158a6418ef8b3650af915586f9d7f81f5'
+  url "https://downloads.sourceforge.net/panconvert/Panconvert-#{version}-osx-installer.app.dmg"
+  appcast 'https://sourceforge.net/projects/panconvert/rss?path=/Newest',
+          checkpoint: '5464a597ae81046b9000a9ab4e0ec722579f68262cea6e13625770b87af67a7e'
   name 'PanConvert'
-  homepage 'http://panconvert.sourceforge.net'
-  license :gpl
+  homepage 'http://panconvert.sourceforge.net/'
 
-  app 'PanConvert.app'
+  installer script: {
+                      executable: "#{staged_path}/Panconvert-#{version}-osx-installer.app/Contents/MacOS/installbuilder.sh",
+                      args:       ['--mode', 'unattended'],
+                    }
+
+  uninstall script: {
+                      executable: "/Applications/Panconvert-#{version}/uninstall.app/Contents/MacOS/osx-intel",
+                      args:       ['--mode', 'unattended'],
+                    }
 end

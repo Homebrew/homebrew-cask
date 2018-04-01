@@ -6,8 +6,7 @@ cask 'activity-audit' do
   appcast 'https://version.dssw.co.uk/activityaudit/standard',
           checkpoint: 'b6f660015d4a8782fd78dfb75afb6242fc4c217d8c2e2954688f8e8c12263bf6'
   name 'Activity Audit'
-  homepage 'https://www.dssw.co.uk/activityaudit'
-  license :commercial
+  homepage 'https://www.dssw.co.uk/activityaudit/'
 
   app 'Activity Audit.app'
 end

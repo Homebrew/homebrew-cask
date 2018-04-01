@@ -5,7 +5,6 @@ cask 'rcdefaultapp' do
   url "http://www.rubicode.com/Downloads/RCDefaultApp-#{version}.X.dmg"
   name 'RCDefaultApp'
   homepage 'http://www.rubicode.com/Software/RCDefaultApp/'
-  license :gratis
 
   prefpane 'RCDefaultApp.prefPane'
 end

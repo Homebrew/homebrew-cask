@@ -1,11 +1,10 @@
 cask 'whatpulse' do
-  version '2.7.1'
-  sha256 '1fba8223d08056cc0ba6d7a3b647cbd581cd8808bf4e2d91ac666a6ee39f9747'
+  version '2.8.2'
+  sha256 '7f4be7d68e068d2bcaaae9e29de42501bb20cc64a03836d241292e46c1ae4bf7'
 
-  url "http://amcdn.whatpulse.org/files/whatpulse-mac-#{version}.dmg"
+  url "https://static.whatpulse.org/files/whatpulse-mac-#{version}.dmg"
   name 'WhatPulse'
-  homepage 'http://www.whatpulse.org/'
-  license :gratis
+  homepage 'https://whatpulse.org/'
 
   pkg "WhatPulse #{version}.mpkg"
 

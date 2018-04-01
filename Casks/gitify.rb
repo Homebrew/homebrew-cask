@@ -1,13 +1,24 @@
 cask 'gitify' do
-  version '1.0.0'
-  sha256 'c5dd7d775564fe2beae3283fd9925b5c32882cd97735014c127f40f06d588ea6'
+  version '2.0.2'
+  sha256 'c0d206b5160850c89dafcb330fa4df74c53de457154bf765257f7fe343f675f6'
 
-  url "https://github.com/ekonstantinidis/gitify/releases/download/#{version}/gitify-osx.zip"
-  appcast 'https://github.com/ekonstantinidis/gitify/releases.atom',
-          checkpoint: '3f8d4b86e6ff77bea861765a37b52b18ce82e632b2193c06331b88b403fc1317'
+  url "https://github.com/manosim/gitify/releases/download/#{version}/gitify-osx.zip"
+  appcast 'https://github.com/manosim/gitify/releases.atom',
+          checkpoint: '1a17101d1ec564960a3651bcb3cc57b2ae2dd8e48f53b4e33aedbecd96fc1d61'
   name 'Gitify'
-  homepage 'https://github.com/ekonstantinidis/gitify'
-  license :oss
+  homepage 'https://github.com/manosim/gitify'
 
   app 'Gitify.app'
+
+  uninstall quit: [
+                    'com.electron.gitify',
+                    'com.electron.gitify.helper',
+                  ]
+
+  zap trash: [
+               '~/Library/Application Support/gitify',
+               '~/Library/Preferences/com.electron.gitify.helper.plist',
+               '~/Library/Preferences/com.electron.gitify.plist',
+               '~/Library/Saved Application State/com.electron.gitify.savedState',
+             ]
 end

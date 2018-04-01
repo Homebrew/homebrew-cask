@@ -1,22 +1,22 @@
 cask 'openbazaar' do
-  version '1.1.5'
-  sha256 '1da6c90497980d1865d6c22701293bea7794661fc2b6fc1f4307a3a52876fa20'
+  version '2.0.21'
+  sha256 '6cee123476bb28955840d45eaec3eff88065379cc03403b3460fdb19889db944'
 
-  # github.com/OpenBazaar/OpenBazaar-Installer was verified as official when first introduced to the cask
-  url "https://github.com/OpenBazaar/OpenBazaar-Installer/releases/download/v#{version}/OpenBazaar-#{version}.dmg"
-  appcast 'https://github.com/OpenBazaar/OpenBazaar-Installer/releases.atom',
-          checkpoint: 'abb16a0a9005fdaa8c78bd8baacccc4ce9cea4574d7d028516cb8451f1b08653'
-  name 'OpenBazaar'
-  homepage 'https://openbazaar.org/'
-  license :mit
+  # github.com/OpenBazaar/openbazaar-desktop was verified as official when first introduced to the cask
+  url "https://github.com/OpenBazaar/openbazaar-desktop/releases/download/v#{version}/OpenBazaar#{version.major}-#{version.major_minor_patch}.dmg"
+  appcast 'https://github.com/OpenBazaar/openbazaar-desktop/releases.atom',
+          checkpoint: '578a5286821c054be9821d07426202f4d0bc9a64927eb14464e90968bfeceab9'
+  name "OpenBazaar#{version.major}"
+  homepage 'https://www.openbazaar.org/'
 
-  app 'OpenBazaar.app'
+  app "OpenBazaar#{version.major}.app"
 
-  zap delete: [
-                '~/Library/Application Support/OpenBazaar',
-                '~/Library/Caches/OpenBazaar',
-                '~/Library/Caches/com.electron.openbazaar',
-                '~/Library/Preferences/com.electron.openbazaar.plist',
-                '~/Library/Application Support/com.electron.openbazaar.ShipIt',
-              ]
+  zap trash: [
+               "~/Library/Application Support/OpenBazaar#{version.major_minor}",
+               "~/Library/Caches/com.electron.openbazaar#{version.major}",
+               "~/Library/Caches/com.electron.openbazaar#{version.major}.ShipIt",
+               '~/Library/Caches/com.electron.openbazaar',
+               "~/Library/Preferences/com.electron.openbazaar#{version.major}.helper.plist",
+               '~/Library/Preferences/com.electron.openbazaar.plist',
+             ]
 end

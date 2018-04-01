@@ -4,15 +4,14 @@ cask 'megasync' do
 
   url 'https://mega.nz/MEGAsyncSetup.dmg'
   name 'MEGAsync'
-  homepage 'https://mega.nz'
-  license :oss
+  homepage 'https://mega.nz/'
+
+  auto_updates true
 
   app 'MEGAsync.app'
 
-  caveats do
-    <<-EOS.undent
-      #{token} only works if called from /Applications, so you may need to install it with
-        brew cask install --appdir=/Applications #{token}
-    EOS
-  end
+  caveats <<~EOS
+    #{token} only works if called from /Applications, so you may need to install it with
+      brew cask install --appdir=/Applications #{token}
+  EOS
 end

@@ -3,10 +3,9 @@ cask 'bill' do
   sha256 :no_check
 
   # myownapp.com was verified as official when first introduced to the cask
-  url 'http://myownapp.com/downloads/Bill2.zip'
+  url 'https://myownapp.com/downloads/Bill2.zip'
   name 'Bill'
-  homepage 'http://billtheapp.com/'
-  license :commercial
+  homepage 'https://billtheapp.com/'
 
   app 'Bill 2.app'
 end

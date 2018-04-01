@@ -5,7 +5,6 @@ cask 'swift-clean' do
   url 'http://swiftcleanapp.com/sparky/Swift-Clean.zip'
   name 'Swift-Clean'
   homepage 'http://swiftcleanapp.com/'
-  license :commercial
 
   app 'Swift-Clean.app'
 end

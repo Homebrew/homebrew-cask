@@ -5,7 +5,6 @@ cask 'maczip4win' do
   url "http://ynomura.com/files/MacZip4win_#{version.dots_to_underscores}.zip"
   name 'MacZip4Win'
   homepage 'http://ynomura.com/home/?page_id=116'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app "MacZip4win #{version}/MacZip4Win.app"
 end

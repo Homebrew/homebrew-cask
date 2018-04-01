@@ -1,19 +1,25 @@
 cask 'fantastical' do
-  version '2.2.4'
-  sha256 'cc7d9d2d153526db9274be678fa58cf1c434784f12018fcacde3be1b7a82fcfe'
+  version '2.4.7'
+  sha256 'c32945e883702ff20ef38fa2939ba86bb6b43351e087e043ea473359eb320852'
 
   url "http://cdn.flexibits.com/Fantastical_#{version}.zip"
-  appcast 'https://flexibits.com/fantastical/appcast2.php',
-          checkpoint: 'c0a148abbbda30ca633e733c330cccfd8298bfb6cb5bdfbf1a5a905b9372ef58'
+  appcast "https://flexibits.com/fantastical/appcast#{version.major}.php",
+          checkpoint: '92303b33b61886e2863eae07a036bea9593493c744e78005d2adf6de4d980f04'
   name 'Fantastical'
   homepage 'https://flexibits.com/fantastical'
-  license :freemium
 
-  app 'Fantastical 2.app'
+  auto_updates true
 
-  postflight do
-    suppress_move_to_applications
-  end
+  app "Fantastical #{version.major}.app"
 
-  zap delete: '~/Library/Preferences/com.flexibits.fantastical.plist'
+  uninstall launchctl: "com.flexibits.fantastical#{version.major}.mac.launcher",
+            quit:      "com.flexibits.fantastical#{version.major}.mac"
+
+  zap trash: [
+               '~/Library/Preferences/com.flexibits.fantastical.plist',
+               '~/Library/Application Scripts/com.flexibits.fbcaldav.*',
+               "~/Library/Application Scripts/com.flexibits.fantastical#{version.major}.*",
+               '~/Library/Containers/com.flexibits.fbcaldav.*',
+               "~/Library/Containers/com.flexibits.fantastical#{version.major}.*",
+             ]
 end

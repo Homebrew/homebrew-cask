@@ -1,11 +1,15 @@
 cask 'tableau-public' do
-  version '9.3.0'
-  sha256 '73f82fb7eac3f99a52ed53f48457b031db2d38b9cf1a30462dffa655a4618012'
+  version '10.4.1'
+  sha256 'a3aa1c0c61659bb39ff9ca57775841e389e977954b7e60c3e28665b9e30cabcd'
 
   url "https://downloads.tableau.com/public/TableauPublic-#{version.dots_to_hyphens}.dmg"
   name 'Tableau Public'
-  homepage 'https://public.tableau.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://public.tableau.com/s/'
 
-  app 'Tableau Public.app'
+  pkg 'Tableau Public.pkg'
+
+  uninstall pkgutil: [
+                       'com.tableausoftware.FLEXNet.*',
+                       'com.tableausoftware.Public.app',
+                     ]
 end

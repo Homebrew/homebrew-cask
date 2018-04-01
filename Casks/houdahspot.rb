@@ -1,17 +1,12 @@
 cask 'houdahspot' do
-  version '4.2.2'
-  sha256 '609e002a403b6d561e883d7901cfc585d7845ac46419faa04bcce7590a53b0d3'
+  version '4.3.5'
+  sha256 '6f2890627fa698e60571da6006d1abecd6fc8d3b4590fceeb3765e25fea90e61'
 
   url "https://www.houdah.com/houdahSpot/updates/cast#{version.major}_assets/HoudahSpot#{version}.zip"
   appcast "https://www.houdah.com/houdahSpot/updates/cast#{version.major}.xml",
-          checkpoint: '58dd82d6c9de805828c06f22655e4ea2b8bdebddc33174a70b9e6ddfd5284bbd'
+          checkpoint: '0e00d503d88a1950841eab38dd186b8c6947486edfb81080175edd2092c0425b'
   name 'HoudahSpot'
   homepage 'https://www.houdah.com/houdahSpot/'
-  license :commercial
 
   app 'HoudahSpot.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 end

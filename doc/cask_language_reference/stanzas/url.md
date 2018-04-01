@@ -32,7 +32,7 @@ Where `URL_SECTION` is the smallest possible portion of the URL that uniquely id
 
 These comments must be added so a user auditing the cask knows the URL was verified by the Homebrew-Cask team as the one provided by the vendor, even though it may look unofficial or suspicious. It is our responsibility as Homebrew-Cask maintainers to verify both the `url` and `homepage` information when first added (or subsequently modified, apart from versioning).
 
-The comment doesn’t mean you should trust the source blindly, but we only approve casks in which users can easily verify its authenticity with basic means, such as checking the official homepage or public repository. occasionally, slightly more elaborate techniques may be used, such as inspecting an [`appcast`](appcast.md) we established as official. Cases where such quick verifications aren’t possible (e.g. when the download URL is behind a registration wall) are [treated in a stricter manner](../../development/adding-a-cask.md#unofficial-vendorless-and-walled-builds).
+The comment doesn’t mean you should trust the source blindly, but we only approve casks in which users can easily verify its authenticity with basic means, such as checking the official homepage or public repository. Occasionally, slightly more elaborate techniques may be used, such as inspecting an [`appcast`](appcast.md) we established as official. Cases where such quick verifications aren’t possible (e.g. when the download URL is behind a registration wall) are [treated in a stricter manner](../../development/adding_a_cask.md#unofficial-vendorless-and-walled-builds).
 
 ## Difficulty Finding a URL
 
@@ -108,6 +108,7 @@ Similar to the `preflight`, `postflight`, `uninstall_preflight`, and `uninstall_
 
 ```rb
 url do
+  require 'open-uri'
   # No known stable URL; fetching disposable URL from landing site
   open('https://example.com/app/landing') do |landing_page|
     content = landing_page.read
@@ -123,7 +124,7 @@ The block will be called immediately before downloading; its result value will b
 
 You can use the `url` stanza with either a direct argument or a block but not with both.
 
-Example for using the block syntax: [audacity.rb](https://github.com/caskroom/homebrew-cask/blob/c389d9ccbb46d30b6ac1cbdbadf49591ca8ff6cd/Casks/audacity.rb#L5-L15)
+Example for using the block syntax: [vlc-nightly.rb](https://github.com/caskroom/homebrew-versions/blob/2bf0f13dd49d263ebec0ca56e58ad8458633f789/Casks/vlc-nightly.rb#L5L10)
 
 ### Mixing Additional URL Parameters With the Block Syntax
 

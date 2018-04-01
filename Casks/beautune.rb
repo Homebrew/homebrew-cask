@@ -6,11 +6,10 @@ cask 'beautune' do
   url "http://download.fotor.com.s3.amazonaws.com/BeautuneMacInstaller_v#{version}_en.dmg"
   name 'Beautune'
   homepage 'http://www.everimaging.com/software/beautune/'
-  license :commercial
 
   pkg "Beautune_mac_en_V#{version}.100.pkg"
 
   uninstall pkgutil: 'com.everimaging.beautune.Beautune.pkg'
 
-  zap delete: '~/Library/Containers/com.everimaging.beautune'
+  zap trash: '~/Library/Containers/com.everimaging.beautune'
 end

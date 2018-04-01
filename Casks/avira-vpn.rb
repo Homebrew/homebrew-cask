@@ -5,10 +5,22 @@ cask 'avira-vpn' do
   # avira-update.com was verified as official when first introduced to the cask
   url 'https://install.avira-update.com/package/vpn/osx/int/vpn.pkg'
   name 'Avira Phantom VPN'
-  homepage 'http://www.avira.com/en/avira-phantom-vpn'
-  license :commercial
+  homepage 'https://www.avira.com/en/avira-phantom-vpn/'
+
+  depends_on macos: '>= :yosemite'
 
   pkg 'vpn.pkg'
 
-  uninstall pkgutil: 'com.avira.pkg.AviraPhantomVpn'
+  uninstall pkgutil:   'com.avira.pkg.AviraPhantomVpn',
+            quit:      'com.avira.macvpn',
+            launchctl: 'org.phantomDaemon',
+            delete:    '/Applications/Avira Phantom VPN.app'
+
+  zap trash:     [
+                   '~/Library/Preferences/com.avira.macvpn.plist',
+                   '~/Library/Application Support/PhantomVPN',
+                   '~/Library/Caches/PhantomVPN',
+                   '/Library/Application Support/PhantomVPN',
+                 ],
+      launchctl: 'org.openvpn'
 end

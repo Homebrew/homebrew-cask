@@ -7,7 +7,13 @@ cask 'openscad' do
           checkpoint: '1a0eefd0abc2d841c405c946a5fab130cf3e5f539b0d445f95210fc0d46202ed'
   name 'OpenSCAD'
   homepage 'http://www.openscad.org/'
-  license :gpl
 
   app 'OpenSCAD.app'
+  binary "#{appdir}/OpenSCAD.app/Contents/MacOS/OpenSCAD", target: 'openscad'
+
+  zap trash: [
+               '~/Library/Caches/org.openscad.OpenSCAD',
+               '~/Library/Preferences/org.openscad.OpenSCAD.plist',
+               '~/Library/Saved Application State/org.openscad.OpenSCAD.savedState',
+             ]
 end

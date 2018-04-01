@@ -1,17 +1,16 @@
 cask 'cloudera-hive-odbc' do
-  version '2.5.5'
-  sha256 'cf31ace79ca995e8b7b57f1b49761777168c9f4b103092a74f6cb111084d71d8'
+  version '2.5.25,1020'
+  sha256 'e9c13853068066fb8e24480774a40ea4bc709d1f3acc7e566cd8cd124d617f2c'
 
-  url "https://downloads.cloudera.com/connectors/hive-#{version}.1006/MacOSX/ClouderaHiveODBC.dmg"
+  url "https://downloads.cloudera.com/connectors/hive-#{version.before_comma}.#{version.after_comma}/OSX/ClouderaHiveODBC.dmg"
   name 'Cloudera ODBC Driver for Hive'
-  homepage 'http://www.cloudera.com'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.cloudera.com/'
 
   pkg 'ClouderaHiveODBC.pkg'
 
   uninstall pkgutil: 'cloudera.hiveodbc'
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     For configuration instructions, see
 
       /opt/cloudera/hiveodbc/Readme.txt

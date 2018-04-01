@@ -5,7 +5,6 @@ cask 'sdrdx' do
   url 'http://fyngyrz.com/SdrDx-AA7AS-Light.zip'
   name 'SdrDx'
   homepage 'http://fyngyrz.com/?p=915'
-  license :gratis
 
   app 'SdrDx.app'
 end

@@ -6,8 +6,7 @@ cask 'mention' do
   appcast 'https://web.mention.com/uploads/appcast-mention.xml',
           checkpoint: '87e9053220e4eff05ab00275283c876a28eb0bfcf84aff6b8acb2ef2f6ce9582'
   name 'Mention'
-  homepage 'https://en.mention.com/'
-  license :gratis
+  homepage 'https://mention.com/'
 
   app 'Mention.app'
 end

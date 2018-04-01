@@ -7,23 +7,18 @@ cask 'gitter' do
           checkpoint: '2e66cc6fbae814070ed373eed07831c2aaf2bcd88f53dd410e8043df4f8ef52b'
   name 'Gitter'
   homepage 'https://gitter.im/'
-  license :freemium
 
   app 'Gitter.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 
   uninstall quit: [
                     'com.troupe.gitter.mac.Gitter',
                     'com.troupe.gitter.mac.GitterHelperApp',
                   ]
 
-  zap delete: [
-                '~/Library/Application Support/Gitter',
-                '~/Library/Caches/com.troupe.gitter.mac.Gitter',
-                '~/Library/Preferences/com.troupe.gitter.mac.Gitter.plist',
-                '~/Library/Saved Application State/com.troupe.gitter.mac.Gitter.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Gitter',
+               '~/Library/Caches/com.troupe.gitter.mac.Gitter',
+               '~/Library/Preferences/com.troupe.gitter.mac.Gitter.plist',
+               '~/Library/Saved Application State/com.troupe.gitter.mac.Gitter.savedState',
+             ]
 end

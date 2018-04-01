@@ -8,15 +8,14 @@ cask 'slate' do
           checkpoint: 'ffad4d36b8b87ba512d18fd7d5346269c3feb32a91243859719df7fdf85f82fc'
   name 'Slate'
   homepage 'https://github.com/jigish/slate'
-  license :gpl
 
   accessibility_access true
 
   app 'Slate.app'
 
-  zap delete: [
-                '~/.slate',
-                '~/.slate.js',
-                '~/Library/Application Support/com.slate.Slate',
-              ]
+  zap trash: [
+               '~/.slate',
+               '~/.slate.js',
+               '~/Library/Application Support/com.slate.Slate',
+             ]
 end

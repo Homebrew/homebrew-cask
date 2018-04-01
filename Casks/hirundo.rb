@@ -1,13 +1,12 @@
 cask 'hirundo' do
-  version '0.8.5'
-  sha256 '9fc8400b4e8764eec913b89dd99f3ed4668abfa77886672063c068bdb6f4564f'
+  version '1.0.0'
+  sha256 '54e332363bac27c337fadba3d342eb360661f6d7ee5a839b0b5893c296ba616d'
 
-  url "https://stylemac.com/hirundo/versions/#{version}/Hirundo-#{version}.tgz"
+  url "https://stylemac.com/hirundo/versions/#{version}/Hirundo.zip"
   appcast 'https://stylemac.com/hirundo/versions/current.json',
-          checkpoint: '5ec54e3e8a65e5d4709d7fd085049e98bcfb5aafdf67a9a454611b98b3a3f92f'
+          checkpoint: '2426e6b12ee68b53ad4ebb41541fe9b8a133ef2554a89f4f248d449e465771fe'
   name 'Hirundo'
   homepage 'https://stylemac.com/hirundo/'
-  license :gratis
 
   app 'Hirundo.app'
 end

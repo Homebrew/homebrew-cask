@@ -5,11 +5,8 @@ cask 'fbreader' do
   url "https://fbreader.org/files/macos/FBReader%20#{version.gsub('-', '%20')}.dmg"
   name 'FBReader'
   homepage 'https://fbreader.org/content/macos'
-  license :gpl
 
   app 'FBReader.app'
 
-  zap delete: [
-                '~/.FBReader',
-              ]
+  zap trash: '~/.FBReader'
 end

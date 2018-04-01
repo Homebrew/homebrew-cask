@@ -5,13 +5,12 @@ cask 'kega-fusion' do
   url "http://www.carpeludum.com/download/Fusion#{version.no_dots}.zip"
   name 'Kega Fusion'
   homepage 'http://www.carpeludum.com/kega-fusion/'
-  license :gratis
 
-  app 'Kega Fusion.app'
+  app "Fusion#{version.no_dots}/Kega Fusion.app"
 
-  zap delete: [
-                '~/Library/Application Support/Kega Fusion',
-                '~/Library/Preferences/uk.co.reptilia-design.Kega_Fusion.plist',
-                '~/Library/Saved Application State/uk.co.reptilia-design.Kega_Fusion.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Kega Fusion',
+               '~/Library/Preferences/uk.co.reptilia-design.Kega_Fusion.plist',
+               '~/Library/Saved Application State/uk.co.reptilia-design.Kega_Fusion.savedState',
+             ]
 end

@@ -4,10 +4,11 @@ cask 'smoothmouse' do
 
   url "http://update.smoothmouse.com/SmoothMouse%20#{version}.zip"
   appcast 'http://update.smoothmouse.com/appcast.xml',
-          checkpoint: '5971898ce809ee4bad6a80918fc30d853f7dc98d88e35a05efa4f2c72b40b073'
+          checkpoint: '9007f7bdb7c06710be267bcaa11b07eebdf390eb6282111c22d6f2c72c17da07'
   name 'SmoothMouse'
-  homepage 'http://smoothmouse.com'
-  license :gratis
+  homepage 'http://smoothmouse.com/'
+
+  depends_on macos: '<= :el_capitan'
 
   pkg 'SmoothMouse.pkg'
 
@@ -22,4 +23,8 @@ cask 'smoothmouse' do
                          'com.cyberic.pkg.SmoothMouseKext2',
                        ],
             delete:    '/usr/bin/smoothmouse'
+
+  caveats do
+    discontinued
+  end
 end

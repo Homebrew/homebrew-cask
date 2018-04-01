@@ -7,12 +7,11 @@ cask 'chameleon-ssd-optimizer' do
           checkpoint: '2a8bd6379ca115fac6c6d6f8a69e3e94b1abda14d5288725d0520ebdf1606cae'
   name 'Chameleon SSD optimizer'
   homepage 'http://chameleon.alessandroboschini.com/'
-  license :gratis
 
   app 'Chameleon SSD Optimizer.app'
 
-  zap delete: [
-                '~/Library/Preferences/aletest.Chameleon-SSD-Optimizer.plist',
-                '~/Library/Caches/aletest.Chameleon-SSD-Optimizer/',
-              ]
+  zap trash: [
+               '~/Library/Preferences/aletest.Chameleon-SSD-Optimizer.plist',
+               '~/Library/Caches/aletest.Chameleon-SSD-Optimizer/',
+             ]
 end

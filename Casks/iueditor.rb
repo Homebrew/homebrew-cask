@@ -1,17 +1,17 @@
 cask 'iueditor' do
-  version '1.1.1.6'
-  sha256 'f644d8e8a4f0aab420cf76ce724fb8e680e4f592de1bdad54399f938342fa641'
+  version '2.0.6.13'
+  sha256 '4b21e63cda4808b1f29f78fb61f75d9e7c5b9694b9b63bc153fb3fa62a888794'
 
-  # iueditor.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "https://iueditor.s3.amazonaws.com/Release/IUEditorV#{version}.zip"
+  url "https://cdn.iueditor.org/release/IUEditorV#{version}.pkg"
   name 'JDLab IUEditor'
-  homepage 'http://www.iueditor.org'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.iueditor.org/'
 
-  app 'IUEditor.app'
+  pkg "IUEditorV#{version}.pkg"
 
-  zap delete: [
-                '~/Library/Preferences/org.jdlab.IUEditor.LSSharedFileList.plist',
-                '~/Library/Preferences/org.jdlab.IUEditor.plist',
-              ]
+  uninstall pkgutil: 'org.jdlab.IUEditor'
+
+  zap trash: [
+               '~/Library/Preferences/org.jdlab.IUEditor.LSSharedFileList.plist',
+               '~/Library/Preferences/org.jdlab.IUEditor.plist',
+             ]
 end

@@ -4,8 +4,7 @@ cask 'preferencecleaner' do
 
   url 'http://www.echomist.co.uk/software/downloads/PreferenceCleaner.dmg'
   name 'PreferenceCleaner'
-  homepage 'http://www.echomist.co.uk/software/PreferenceCleaner.php'
-  license :gratis
+  homepage 'https://www.echomist.co.uk/software/PreferenceCleaner.php'
 
   app 'PreferenceCleaner.app'
 end

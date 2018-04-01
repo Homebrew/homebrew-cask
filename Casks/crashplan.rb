@@ -1,15 +1,19 @@
 cask 'crashplan' do
-  version '4.7.0'
-  sha256 'ea138c87bb158fa47ba2aa5c7f5bcd43cccb9a7db9d83ace4a6954d1ae678d55'
+  version '4.8.4'
+  sha256 'b2ffb640e1083ee95d5de93b627cbfbdbe53dae3dd59f5ae93723621a575991e'
 
-  # crashplan.com was verified as official when first introduced to the cask
-  url "http://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_#{version}_Mac.dmg"
+  url "https://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_#{version}_Mac.dmg"
   name 'CrashPlan'
-  homepage 'https://www.code42.com/crashplan/'
-  license :gratis
+  homepage 'https://www.crashplan.com/'
+
+  auto_updates true
 
   pkg 'Install CrashPlan.pkg'
 
-  uninstall script:  'Uninstall.app/Contents/Resources/uninstall.sh',
-            pkgutil: 'com.crashplan.app.pkg'
+  uninstall launchctl: 'com.backup42.desktop',
+            pkgutil:   'com.crashplan.app.pkg',
+            script:    {
+                         executable: 'Uninstall.app/Contents/Resources/uninstall.sh',
+                         sudo:       true,
+                       }
 end

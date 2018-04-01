@@ -6,7 +6,6 @@ cask 'itunes-volume-control' do
   url "http://quantum-technologies.iap.uni-bonn.de/alberti/iTunesVolumeControl/iTunesVolumeControl-v#{version}.zip"
   name 'iTunes Volume Control'
   homepage 'https://github.com/alberti42/iTunes-Volume-Control'
-  license :oss
 
   auto_updates true
 

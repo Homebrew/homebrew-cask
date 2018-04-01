@@ -1,14 +1,13 @@
 cask 'avogadro' do
-  version '1.1.1'
-  sha256 '8e63b7ec07555fd30ea2c22ed7f070e1b692fd2c9fbb60a3c8e0ddd411bb6477'
+  version '1.90.0'
+  sha256 '71392555d2d38a486ea58d4a522304b59855fa8c3f71d88316bf3828f7a064da'
 
-  # sourceforge.net/avogadro was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/avogadro/Avogadro-#{version}.dmg.zip"
+  # sourceforge.net/avogadro/avogadro2 was verified as official when first introduced to the cask
+  url "https://downloads.sourceforge.net/avogadro/avogadro2/Avogadro2-#{version}-Darwin.dmg"
   appcast 'https://sourceforge.net/projects/avogadro/rss',
-          checkpoint: 'b4c194124e797b2c1962828bbbb16c54c624c9f38191bebcb6770259739208df'
+          checkpoint: '84f164280cc8b8c0749dc382dcd688cff57cc31eebf6ccb907fe4563b2d49152'
   name 'Avogadro'
-  homepage 'http://avogadro.openmolecules.net/'
-  license :gpl
+  homepage 'https://avogadro.cc/wiki/Main_Page'
 
-  app 'Avogadro.app'
+  app 'Avogadro2.app'
 end

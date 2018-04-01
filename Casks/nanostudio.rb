@@ -5,7 +5,6 @@ cask 'nanostudio' do
   url "http://downloads.blipinteractive2.co.uk/NanoStudio-#{version}.dmg.zip"
   name 'NanoStudio'
   homepage 'http://www.blipinteractive2.co.uk/'
-  license :commercial
 
   app 'NanoStudio.app'
   app 'NanoStudio-Phone.app'

@@ -54,7 +54,7 @@ fi
 appcast_http_response="$(curl --silent --head "${user_agent[@]}" --write-out '%{http_code}' "${appcast_url}" -o /dev/null)"
 [[ "${appcast_http_response}" != '200' ]] && appcast_found_error "returned a non-200 (OK) HTTP response code (${appcast_http_response})"
 
-appcast_checkpoint=$(curl --silent --compressed --location "${user_agent[@]}" "${appcast_url}" | sed 's|<pubDate>[^<]*</pubDate>||g' | shasum --algorithm 256 | awk '{ print $1 }')
+appcast_checkpoint=$(brew cask _appcast_checkpoint --calculate "${appcast_url}")
 [[ "${appcast_checkpoint}" == 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855' ]] && appcast_found_error 'seems to be empty'
 
 # output appcast

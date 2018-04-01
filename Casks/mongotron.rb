@@ -1,19 +1,18 @@
 cask 'mongotron' do
-  version '1.0.0-alpha.4'
-  sha256 'b5f435ada45b3a09b6803074b5e2a50883349f2e6a3aa6dfa5bf7c23927d50a1'
+  version '1.0.0-alpha.5'
+  sha256 'b20d014ae3a9355a112f84d98d2f81c27d3f99fd2dd7dc3455be465b27ab1e20'
 
   # github.com/officert/mongotron was verified as official when first introduced to the cask
   url "https://github.com/officert/mongotron/releases/download/#{version}/Mongotron-darwin-x64.zip"
   appcast 'https://github.com/officert/mongotron/releases.atom',
-          checkpoint: 'acecea0dbfae6addd49f0e0456ba3a85fede5bdfe353f8cc1dff38403644e4d1'
+          checkpoint: '6903d873fedb343ef9f999d7ef6144048e6c7fff42fcd31c572967485514b80a'
   name 'Mongotron'
   homepage 'http://mongotron.io/'
-  license :mit
 
   app 'Mongotron-darwin-x64/Mongotron.app'
 
-  zap delete: [
-                '~/Library/Application Support/Mongotron',
-                '~/Library/Caches/Mongotron',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Mongotron',
+               '~/Library/Caches/Mongotron',
+             ]
 end

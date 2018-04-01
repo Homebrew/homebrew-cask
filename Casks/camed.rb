@@ -1,13 +1,12 @@
 cask 'camed' do
-  version '3.2'
-  sha256 '7956c929a3518102a5364982e1ba978930228169d4d1eedb68c2db62fc4a86f1'
+  version '3.2.2'
+  sha256 '407e101a3a47566395606b03114388f94f48b488d3fa27041aecb937eb43bd12'
 
   url "https://downloads.sourceforge.net/camprocessor/CAMEd-#{version}-macosx-cocoa-x86_64.tar.gz"
   appcast 'https://sourceforge.net/projects/camprocessor/rss',
-          checkpoint: '1ec7ebc109fd8ebeb0e49f53a3339ef217e926b986ba48fe6d1ac76fc0f4787e'
+          checkpoint: '7681623843251ca6d019cab6d90aac7fb524cefb496c318f4f3882cea6849d14'
   name 'CAM Editor'
   homepage 'http://camprocessor.sourceforge.net/'
-  license :oss
 
   app "CAMEd-#{version}/CAMed.app"
 end

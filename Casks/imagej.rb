@@ -1,14 +1,17 @@
 cask 'imagej' do
-  version '1.49'
-  sha256 '539c816c10849cb9820663d46c28b9ae1d36f43a29cc50fe7b5d819e9e60dd44'
+  version '1.50'
+  sha256 '681bb1af1cc1797e2fe5eddd5828a38128d3fc5cf9ea05a268650466e2eb6b93'
 
-  url "http://imagej.nih.gov/ij/download/osx/ImageJ#{version.no_dots}.zip"
+  # wsr.imagej.net/distros/osx was verified as official when first introduced to the cask
+  url "https://wsr.imagej.net/distros/osx/ImageJ#{version.no_dots}.zip"
   name 'ImageJ'
-  homepage 'http://imagej.nih.gov/ij/index.html'
-  license :public_domain
+  homepage 'https://imagej.nih.gov/ij/index.html'
 
-  depends_on cask: 'java'
   depends_on macos: '>= :mountain_lion'
 
   suite 'ImageJ'
+
+  caveats do
+    depends_on_java
+  end
 end

@@ -8,7 +8,6 @@ cask 'feisty-dog-tag' do
           checkpoint: 'ce6634f8e74e8f0cc3f35f51e129063d950bef1c9b2e44fd5df5160c5b1610d0'
   name 'Tag'
   homepage 'https://www.feisty-dog.com/tag/'
-  license :commercial
 
   app 'Tag.app'
 end

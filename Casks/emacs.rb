@@ -1,18 +1,25 @@
 cask 'emacs' do
-  version '24.5-1'
-  sha256 'c99c3def07886c0897c7c4bfc4a19338ea3d5bbcc2986d48be98aae1401f5830'
+  version '25.3'
+  sha256 'b2bfc1e90a2e3a9e138fdd42ec1796bf38eeaf06021905f9ffbaf8b397ca64ac'
 
   url "https://emacsformacosx.com/emacs-builds/Emacs-#{version}-universal.dmg"
   appcast 'https://emacsformacosx.com/atom/release',
-          checkpoint: 'c68a8c31a4309b66b7cf8c69e431d739866a28bd9ad77b5e86ed3e2ad76a2d27'
+          checkpoint: 'dd284d2f08cac506fc34711eff27ac68268dbe0d2deab602d23c602222f88249'
   name 'Emacs'
   homepage 'https://emacsformacosx.com/'
-  license :gpl
+
+  conflicts_with formula: ['emacs', 'ctags']
 
   app 'Emacs.app'
-  binary "#{appdir}/Emacs.app/Contents/MacOS/bin/emacsclient"
+  binary "#{appdir}/Emacs.app/Contents/MacOS/Emacs", target: 'emacs'
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin/ctags"
-  binary "#{appdir}/Emacs.app/Contents/MacOS/bin/grep-changelog"
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin/ebrowse"
+  binary "#{appdir}/Emacs.app/Contents/MacOS/bin/emacsclient"
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin/etags"
+
+  zap trash: [
+               '~/Library/Caches/org.gnu.Emacs',
+               '~/Library/Preferences/org.gnu.Emacs.plist',
+               '~/Library/Saved Application State/org.gnu.Emacs.savedState',
+             ]
 end

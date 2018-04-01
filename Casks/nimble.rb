@@ -1,22 +1,24 @@
 cask 'nimble' do
-  version '1.3.2'
-  sha256 'cda59180d1cb7a0561121ef6f7a18f9646101ec4ffe3d17112787d1cd84c69c1'
+  version '1.3.3'
+  sha256 'ce669fc631ac88033d153b0096dbaef7809666ff8a6d7b4c932af83756207641'
 
   # github.com/Maybulb/Nimble was verified as official when first introduced to the cask
   url "https://github.com/Maybulb/Nimble/releases/download/#{version}/Nimble-#{version}.dmg"
   appcast 'https://github.com/Maybulb/Nimble/releases.atom',
-          checkpoint: '9d4b6d88196ed6314eee4821af48b6fe3d0b461343641103e15c56354a83da9a'
+          checkpoint: '59612688040237acec569456b374bcd12da6bbb39c0eaebd2f9753caa98d3a14'
   name 'Nimble'
-  homepage 'http://maybulb.com'
-  license :mit
+  homepage 'http://maybulb.com/'
 
   app 'Nimble.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.nimble.sfl',
-                '~/Library/Application Support/Nimble',
-                '~/Library/Caches/Nimble',
-                '~/Library/Preferences/com.electron.nimble.plist',
-                '~/Library/Saved Application State/com.electron.nimble.savedState',
-              ]
+  zap trash: [
+               '~/.nimble-options.json',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.nimble.sfl*',
+               '~/Library/Application Support/com.electron.nimble.ShipIt',
+               '~/Library/Application Support/Nimble',
+               '~/Library/Caches/com.electron.nimble',
+               '~/Library/Caches/Nimble',
+               '~/Library/Preferences/com.electron.nimble.plist',
+               '~/Library/Saved Application State/com.electron.nimble.savedState',
+             ]
 end

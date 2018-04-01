@@ -5,15 +5,14 @@ cask 'growl-fork' do
   url "https://bitbucket.org/pmetzger/growl/downloads/Growl-#{version}.dmg"
   name 'Growl'
   homepage 'https://bitbucket.org/pmetzger/growl'
-  license :bsd
 
   pkg 'Growl.pkg'
 
   uninstall delete: '/Library/PreferencePanes/Growl.prefPane'
 
-  zap       delete: [
-                      '~/Library/Application Scripts/com.Growl.GrowlHelperApp',
-                      '~/Library/Containers/com.Growl.GrowlHelperApp',
-                      '~/Library/Containers/com.growl.GrowlLauncher',
-                    ]
+  zap trash: [
+               '~/Library/Application Scripts/com.Growl.GrowlHelperApp',
+               '~/Library/Containers/com.Growl.GrowlHelperApp',
+               '~/Library/Containers/com.growl.GrowlLauncher',
+             ]
 end

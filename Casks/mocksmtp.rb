@@ -5,7 +5,8 @@ cask 'mocksmtp' do
   url 'http://mocksmtpapp.com/MockSmtp.zip'
   name 'MockSMTP'
   homepage 'http://mocksmtpapp.com/'
-  license :commercial
+
+  depends_on macos: '<= :yosemite'
 
   app 'MockSmtp.app'
 end

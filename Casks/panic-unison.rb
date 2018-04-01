@@ -3,9 +3,8 @@ cask 'panic-unison' do
   sha256 'b9d08af6ea52fbcf8fe0eebaec9b7b68c7a280d4455de030d99ca9731cca66d9'
 
   url "https://download.panic.com/unison/Unison%20#{version}.zip"
-  name 'Unison'
-  homepage 'https://panic.com/unison/'
-  license :gratis
+  name 'Panic Unison'
+  homepage 'https://panic.com/blog/the-future-of-unison/'
 
   app 'Unison.app'
 

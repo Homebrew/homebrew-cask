@@ -1,11 +1,10 @@
 cask 'tuxera-ntfs' do
-  version '2015.3'
-  sha256 'a263f405f8f3a7950e6c29e8d0ac511823a8b2e58f76211190ec179fbd62947a'
+  version '2018'
+  sha256 '84af4075f0ceaf42040928447d9f77240e4c3ae4359837e113cf35115400a19a'
 
   url "https://www.tuxera.com/mac/tuxerantfs_#{version}.dmg"
   name 'Tuxera NTFS'
   homepage 'https://www.tuxera.com/products/tuxera-ntfs-for-mac/'
-  license :closed
 
   pkg '.packages/Flat/Install Tuxera NTFS.mpkg'
 

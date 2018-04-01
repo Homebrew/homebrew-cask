@@ -1,11 +1,10 @@
 cask 'phd2' do
-  version '2.4.1'
-  sha256 'db2d0d7d6e8d2b81c2f0247c8bea7ee08e3c1fce96ba8196d4c6a810183a0cc8'
+  version '2.6.4'
+  sha256 '8587830bdf5a947affe26b4a6e811ec6ea28a9575aa382288f9a63aae6fb0b24'
 
-  url "http://openphdguiding.org/PHD2-v#{version}-OSX.zip"
+  url "https://openphdguiding.org/PHD2-#{version}-OSX.zip"
   name 'PHD2'
-  homepage 'http://openphdguiding.org/'
-  license :bsd
+  homepage 'https://openphdguiding.org/'
 
   app 'PHD2.app'
 end

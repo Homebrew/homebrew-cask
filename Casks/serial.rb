@@ -1,11 +1,12 @@
 cask 'serial' do
-  version '1.2.2'
-  sha256 '683e9cff5962f8871909315ed0f8b56d2e710046c054343866f84ef4dac1e486'
+  version '1.3.7'
+  sha256 '49742a64afe51348ac049c4d527cd685e85d00a63d4866467bd12152fb845588'
 
-  url "https://www.decisivetactics.com/lib/click?u=/products/serial/dl/Serial_#{version}.zip"
+  url "https://download.decisivetactics.com/products/serial/dl/Serial_#{version}.zip"
+  appcast 'https://www.decisivetactics.com/products/serial/release-notes',
+          checkpoint: '63c101da5c6693f95202bf5f82c7b6b265a0b579ee4fbb180c48714214341fcc'
   name 'Serial'
   homepage 'https://www.decisivetactics.com/products/serial/'
-  license :commercial
 
   app 'Serial.app'
 end

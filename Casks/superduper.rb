@@ -6,9 +6,8 @@ cask 'superduper' do
   url 'https://s3.amazonaws.com/shirtpocket/SuperDuper/SuperDuper!.dmg'
   name 'SuperDuper!'
   homepage 'http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html'
-  license :freemium
 
   app 'SuperDuper!.app'
 
-  zap delete: '~/Library/Application Support/SuperDuper!'
+  zap trash: '~/Library/Application Support/SuperDuper!'
 end

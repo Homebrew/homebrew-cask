@@ -1,14 +1,20 @@
 cask 'franz' do
-  version '3.1.0'
-  sha256 '1789fb44c47fd25db123c8ad6142e24007901fa07a8494263c312dbab7708eb9'
+  version '5.0.0-beta.16'
+  sha256 '656376a36f510295eaf3c54eebe968abd426162427d8919147040d3183aa4ff7'
 
-  # github.com/imprecision/franz-app was verified as official when first introduced to the cask
-  url "https://github.com/imprecision/franz-app/releases/download/#{version}/Franz-darwin-x64-#{version}.dmg"
-  appcast 'https://github.com/imprecision/franz-app/releases.atom',
-          checkpoint: '481bc974abafc69025c5907056373df7a8e5f795544a7a1949e58c3e5858de1b'
+  # github.com/meetfranz/franz was verified as official when first introduced to the cask
+  url "https://github.com/meetfranz/franz/releases/download/v#{version}/franz-#{version}.dmg"
+  appcast 'https://github.com/meetfranz/franz/releases.atom',
+          checkpoint: '62cd70cd039061bb6fc73a5b292f793380ccb0faadc78f01124f7e75172d3b0d'
   name 'Franz'
-  homepage 'http://meetfranz.com'
-  license :gratis
+  homepage 'https://meetfranz.com/'
 
   app 'Franz.app'
+
+  zap trash: [
+               '~/Library/Application Support/Franz',
+               '~/Library/Preferences/com.electron.franz.helper.plist',
+               '~/Library/Preferences/com.electron.franz.plist',
+               '~/Library/Saved Application State/com.electron.franz.savedState',
+             ]
 end

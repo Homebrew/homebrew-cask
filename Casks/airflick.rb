@@ -5,7 +5,6 @@ cask 'airflick' do
   url "http://ericasadun.com/ftp/AirPlay/AirFlick-#{version}.zip"
   name 'AirFlick'
   homepage 'http://ericasadun.com/ftp/AirPlay/'
-  license :gratis
 
   app 'AirFlick.app'
 end

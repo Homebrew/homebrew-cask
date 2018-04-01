@@ -4,8 +4,7 @@ cask 'iholdem-indicator' do
 
   url 'http://www.iholdemindicator.com/download/iHoldemIndicatorInstaller.pkg'
   name 'iHoldem Indicator'
-  homepage 'http://www.iholdemindicator.com'
-  license :commercial
+  homepage 'https://www.iholdemindicator.com/'
 
   pkg 'iHoldemIndicatorInstaller.pkg'
 
@@ -14,8 +13,7 @@ cask 'iholdem-indicator' do
                          'com.ckmn.iHoldemIndicator',
                          'com.ckmn.IndicatorHelper',
                        ],
-            pkgutil:   'iHoldemIndicatorInstaller',
-            delete:    '/Applications/iHoldemIndicator.app'
+            pkgutil:   'com.ckmn.iholdemIndicator.iHoldemIndicator.pkg'
 
-  zap delete: '~/Library/Application Support/iHoldemIndicator'
+  zap trash: '~/Library/Application Support/iHoldemIndicator'
 end

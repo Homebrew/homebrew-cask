@@ -1,13 +1,12 @@
 cask 'fredm-fuse' do
-  version '1.1.1.1'
-  sha256 '28533a6b1c31d1ca76b5509a408fb587f232b24392a0ffe1e45dac8e0a3e2880'
+  version '1.4.1'
+  sha256 '3c638d34fa8f015332bf71e4ed4d67aa29e4bdf3191556aaf2df8de05cbfd3bd'
 
-  url "https://downloads.sourceforge.net/fuse-for-macosx/fuse-for-macosx/#{version}/FuseForMacOSX-#{version}.zip"
+  url "https://downloads.sourceforge.net/fuse-for-macosx/fuse-for-macosx/#{version}/FuseForMacOS-#{version}.zip"
   appcast 'https://sourceforge.net/projects/fuse-for-macosx/rss?path=/fuse-for-macosx',
-          checkpoint: '0f03028636031305e1d68311f0c6319adb8ff5516e413d116362344302fba22d'
+          checkpoint: '7316e29750413452be8e76ec1f35f7a3fbaa4e720fb5de6070e9c90933ba38ff'
   name 'Fuse for Mac OS X'
   homepage 'http://fuse-for-macosx.sourceforge.net/'
-  license :gpl
 
-  app 'Fuse for Mac OS X/Fuse.app'
+  app 'Fuse for MacOS/Fuse.app'
 end

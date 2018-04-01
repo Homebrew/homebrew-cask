@@ -1,11 +1,10 @@
 cask 'jedict' do
-  version '4.9.6'
-  sha256 '99dc7bd641a708c4d09e975e136c0dd05597620f2f47a77817b4604fc1731b9b'
+  version '5.0.4'
+  sha256 '37b1dc2c70048a3f5d0b1f92fa8c535af270f7471dac58987ff4a5e73a480a74'
 
-  url "http://jedict.com/Downloads/JEDict#{version.no_dots}.zip"
+  url "http://jedict.com/Downloads/JEDict#{version.no_dots}.dmg"
   name 'Jedict'
   homepage 'http://www.jedict.com/'
-  license :commercial
 
   app 'JEDict.app'
 end

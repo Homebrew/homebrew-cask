@@ -5,10 +5,9 @@ cask 'nodeclipse' do
   # sourceforge.net/nodeclipse was verified as official when first introduced to the cask
   url 'https://downloads.sourceforge.net/nodeclipse/Enide-2015/7/Enide-2015-7-macosx-x64-20150706.zip'
   appcast 'https://sourceforge.net/projects/nodeclipse/rss',
-          checkpoint: 'a1066f2fca3aec174f2ba3bc32609868e4f7cf68f7218bcb0bcde620f2f54918'
+          checkpoint: 'fc3f1c9802ceb1fa0346e2f4a0b2a8f6bd1305d1cc0ec507a6481a9b5bcd60d9'
   name 'Nodeclipse'
   homepage 'http://www.nodeclipse.org/'
-  license :oss
 
   # Renamed for clarity: app name is inconsistent with its branding.
   # Also renamed to avoid conflict with other eclipse Casks.

@@ -4,10 +4,9 @@ cask 'art-directors-toolkit' do
 
   url "http://www.code-line.com/download/ArtDirectorsToolkit#{version.major}i.zip"
   name 'Art Directors Toolkit'
-  homepage 'https://code-line.com/artdirectorstoolkit'
-  license :commercial
+  homepage 'https://www.code-line.com/artdirectorstoolkit/'
 
   app "Art Directors Toolkit #{version.major}i.app"
 
-  zap delete: '~/Library/Preferences/com.code-line.artdirectorstoolkit*.plist'
+  zap trash: '~/Library/Preferences/com.code-line.artdirectorstoolkit*.plist'
 end

@@ -1,15 +1,24 @@
 cask 'parallels-access' do
-  version '3.0.2-30719'
-  sha256 'afafadd6f3e384c0e421b10eb827f83fa65b60206c938431c9c20083d6a0f252'
+  version '3.2.0-31423'
+  sha256 'e5fd360aa76f3ba5a681b065fbdeaa5b43a4fc8a6bae0b182a27bcdde55d183a'
 
-  url "https://download.parallels.com/pmobile/v#{version.major}/#{version.major_minor_patch}/ParallelsAccess-#{version}-mac.dmg"
+  url "https://download.parallels.com/pmobile/v#{version.major}/#{version}/ParallelsAccess-#{version}-mac.dmg"
   name 'Parallels Access'
   homepage 'https://www.parallels.com/products/access/'
-  license :closed
 
-  installer script: 'Parallels Access.app/Contents/MacOS/pm_ctl',
-            args:   %w[instance_install],
-            sudo:   true
+  # This .dmg cannot be extracted normally
+  # Original discussion: https://github.com/caskroom/homebrew-cask/issues/26872
+  container type: :naked
+
+  preflight do
+    system_command '/usr/bin/hdiutil',
+                   args: ['attach', '-nobrowse', "#{staged_path}/ParallelsAccess-#{version}-mac.dmg"]
+    system_command '/Volumes/Parallels Access/Parallels Access.app/Contents/MacOS/pm_ctl',
+                   args: ['instance_install'],
+                   sudo: true
+    system_command '/usr/bin/hdiutil',
+                   args: ['detach', '/Volumes/Parallels Access']
+  end
 
   uninstall launchctl: [
                          'com.parallels.mobile.startgui.launchagent',
@@ -30,11 +39,11 @@ cask 'parallels-access' do
                        ],
             delete:    '/Applications/Parallels Access.app'
 
-  zap delete: [
-                '~/Library/Cookies/com.parallels.mobile.prl_deskctl_agent.binarycookies',
-                '~/Library/Group Containers/4C6364ACXT.com.parallels.Access',
-                '~/Library/Preferences/com.parallels.Parallels Access.plist',
-                '~/Library/Preferences/com.parallels.Parallels Access.plist.sdb',
-                '~/Library/Preferences/com.parallels.mobile.plist',
-              ]
+  zap trash: [
+               '~/Library/Cookies/com.parallels.mobile.prl_deskctl_agent.binarycookies',
+               '~/Library/Group Containers/4C6364ACXT.com.parallels.Access',
+               '~/Library/Preferences/com.parallels.Parallels Access.plist',
+               '~/Library/Preferences/com.parallels.Parallels Access.plist.sdb',
+               '~/Library/Preferences/com.parallels.mobile.plist',
+             ]
 end

@@ -1,5 +1,5 @@
 cask 'themeengine' do
-  if MacOS.release <= :yosemite
+  if MacOS.version <= :yosemite
     version '0.0.4'
     sha256 '35a99145577cb300e2383d3432b47c13907e5d6ca24e720c44a83f4a1f990f4a'
 
@@ -10,14 +10,13 @@ cask 'themeengine' do
 
     url "https://github.com/alexzielenski/ThemeEngine/releases/download/#{version}/ThemeEngine_111.zip"
     appcast 'https://github.com/alexzielenski/ThemeEngine/releases.atom',
-            checkpoint: 'd821fde4587a4f20706dbdfe8913d7e9c8b757144680cdf31ce648674ab38e72'
+            checkpoint: '2a7e7a1de19bee26223d2c6d486064866309203aef57d77a77b247f9c9904a39'
   end
 
   name 'ThemeEngine'
   homepage 'https://github.com/alexzielenski/ThemeEngine/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'ThemeEngine.app'
 
-  zap delete: '~/Library/Preferences/com.alexzielenski.ThemeEngine.LSSharedFileList.plist'
+  zap trash: '~/Library/Preferences/com.alexzielenski.ThemeEngine.LSSharedFileList.plist'
 end

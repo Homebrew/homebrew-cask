@@ -5,7 +5,6 @@ cask 'oneswarm' do
   url 'http://www.oneswarm.org/builds/OneSwarm.dmg'
   name 'OneSwarm'
   homepage 'http://www.oneswarm.org/'
-  license :gpl
 
   app 'OneSwarm.app'
 end

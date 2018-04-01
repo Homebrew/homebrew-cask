@@ -1,13 +1,13 @@
 cask 'astah-professional' do
-  version '7.0.0'
-  sha256 'f9077dfe61f7ccf378c68031f9d888f2c5d349a83aeb34c9517cc046baca953e'
+  version '7.2.0,1ff236'
+  sha256 'e2faa50e8ecaaaa9f6f68dda143bf4495c0cc7b9f17fe7defda4645bb52e2751'
 
-  url "http://cdn.astah.net/downloads/astah-professional-#{version.dots_to_underscores}-846701-MacOs.dmg"
+  # cdn.change-vision.com/files was verified as official when first introduced to the cask
+  url "http://cdn.change-vision.com/files/astah-professional-#{version.before_comma.dots_to_underscores}-#{version.after_comma}-MacOs.dmg"
   name 'Change Vision Astah Professional'
   homepage 'http://astah.net/editions/professional'
-  license :commercial
 
-  pkg "astah professional ver #{version.dots_to_underscores}.pkg"
+  pkg "astah professional ver #{version.before_comma.dots_to_underscores}.pkg"
 
   uninstall pkgutil: 'com.change-vision.astahprofessional.astahprofessional.pkg'
 end

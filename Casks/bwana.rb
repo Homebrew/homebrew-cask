@@ -5,7 +5,11 @@ cask 'bwana' do
   url 'https://www.bruji.com/bwana/bwana.dmg'
   name 'Bwana'
   homepage 'https://www.bruji.com/bwana/'
-  license :mit
 
   app 'Bwana.app'
+
+  zap trash: [
+               '~/Library/Caches/Bwana',
+               '~/Library/Preferences/com.bruji.bwana.plist',
+             ]
 end

@@ -4,8 +4,7 @@ cask 'izip' do
 
   url 'http://www.izip.com/izip.dmg'
   name 'iZip'
-  homepage 'http://www.izip.com'
-  license :gratis
+  homepage 'http://www.izip.com/'
 
   app 'iZip.app'
 end

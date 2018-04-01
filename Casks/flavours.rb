@@ -7,7 +7,6 @@ cask 'flavours' do
           checkpoint: '89d3f77f9add647db73a55227497e09f585b556a93d5545de361a95bb40f9a47'
   name 'Flavours'
   homepage 'http://flavours.interacto.net/'
-  license :commercial
 
   app 'Flavours.app'
 

@@ -7,7 +7,14 @@ cask 'zeplin' do
   url 'https://zpl.io/download'
   name 'Zeplin'
   homepage 'https://zeplin.io/'
-  license :gratis
+
+  auto_updates true
 
   app 'Zeplin.app'
+
+  zap trash: [
+               '~/Library/Logs/Zeplin',
+               '~/Library/Caches/io.zeplin.osx',
+               '~/Library/Preferences/io.zeplin.osx.plist',
+             ]
 end

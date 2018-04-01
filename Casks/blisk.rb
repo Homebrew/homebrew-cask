@@ -1,12 +1,11 @@
 cask 'blisk' do
-  version '0.60.2491.72'
-  sha256 '7b8a74cd36aec00b87870914b20833ef0e58fff7bb81fd0e15369726d27abf78'
+  version '8.0.201.218'
+  sha256 'f7c6c99f1ac96ff43d41eb00528552c01c89364cfeb7279fe94a3b08a99c3069'
 
   # bliskcloudstorage.blob.core.windows.net was verified as official when first introduced to the cask
   url "https://bliskcloudstorage.blob.core.windows.net/mac-installers/BliskInstaller_#{version}.dmg"
   name 'Blisk Browser'
-  homepage 'https://blisk.io'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://blisk.io/'
 
   app 'Blisk.app'
 end

@@ -7,13 +7,12 @@ cask 'doubletwist' do
           checkpoint: 'a3f962a943107206797fc0c4352333e32d875750a507bd69932fc722f8c360f6'
   name 'doubleTwist'
   homepage 'https://www.doubletwist.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'doubleTwist.app'
 
-  zap delete: [
-                '~/Library/Application Support/doubleTwist',
-                '~/Library/Preferences/com.doubleTwist.desktop.plist',
-                '~/Library/Caches/com.doubleTwist.desktop',
-              ]
+  zap trash: [
+               '~/Library/Application Support/doubleTwist',
+               '~/Library/Preferences/com.doubleTwist.desktop.plist',
+               '~/Library/Caches/com.doubleTwist.desktop',
+             ]
 end

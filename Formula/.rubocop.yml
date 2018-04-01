@@ -1,5 +1,0 @@
-inherit_from:
-  - ../.rubocop.yml
-
-Style/HashSyntax:
-  EnforcedStyle: hash_rockets

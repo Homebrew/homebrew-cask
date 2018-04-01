@@ -1,13 +1,12 @@
 cask 'pyfa' do
-  version '1.21.1'
-  sha256 '668046e0d79e868e55aee00e4d7350e2a2fa4eb1a18aee425f67f8c5641156a0'
+  version '1.35.2,yc120.2-1.2'
+  sha256 'd9d2fa6daafb0937100c308ddcb96fc53ccb9929ce78b6b75bffef2467505465'
 
-  url "https://github.com/pyfa-org/Pyfa/releases/download/v#{version}/pyfa-#{version}-citadel-1.3-mac.zip"
+  url "https://github.com/pyfa-org/Pyfa/releases/download/v#{version.before_comma}/pyfa-#{version.before_comma}-#{version.after_comma}-mac.zip"
   appcast 'https://github.com/pyfa-org/Pyfa/releases.atom',
-          checkpoint: '443b0342f7a4b5b342de546ecdc50a3145ac6191640a65b04ef1d0e5fcec3298'
+          checkpoint: 'd5418c2f1947616f30b75605a654e987c1a59f047a8f708f37de564530a1814b'
   name 'pyfa'
   homepage 'https://github.com/pyfa-org/Pyfa'
-  license :gpl
 
   app 'pyfa.app'
 end

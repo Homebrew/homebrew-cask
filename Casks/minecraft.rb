@@ -6,7 +6,12 @@ cask 'minecraft' do
   url 'https://launcher.mojang.com/download/Minecraft.dmg'
   name 'Minecraft'
   homepage 'https://minecraft.net/'
-  license :commercial
 
   app 'Minecraft.app'
+
+  zap trash: [
+               '~/Library/Caches/com.mojang.minecraftlauncher',
+               '~/Library/Caches/com.mojang.minecraftlauncherupdater',
+               '~/Library/Application Support/Minecraft Launcher',
+             ]
 end

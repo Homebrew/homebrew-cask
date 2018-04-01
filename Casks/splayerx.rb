@@ -5,7 +5,6 @@ cask 'splayerx' do
   url "https://bitbucket.org/Tomasen/splayerx/downloads/SPlayerX_#{version}.zip"
   name 'SPlayerX'
   homepage 'https://bitbucket.org/Tomasen/splayerx/wiki/Home'
-  license :oss
 
   app 'SPlayerX.app'
 end

@@ -4,10 +4,9 @@ cask 'ckb' do
 
   url "https://github.com/ccMSC/ckb/releases/download/v#{version}/ckb.pkg"
   appcast 'https://github.com/ccMSC/ckb/releases.atom',
-          checkpoint: 'e78446bd6ad2ad006934a73a1165dbce61e7d99b3a6da6537dff6abe7de16e3d'
+          checkpoint: '7c4d9d7c8e23e91beb865efdf41512c8ed77b820fe28d11630dc67ab5fc710b9'
   name 'ckb'
   homepage 'https://github.com/ccMSC/ckb'
-  license :gpl
 
   pkg 'ckb.pkg'
 

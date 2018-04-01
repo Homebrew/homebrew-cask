@@ -1,11 +1,10 @@
 cask 'dbgl' do
-  version '0.80'
-  sha256 'd78ac70fd0e19140408ede8a735248d2ed6edcc324bbc91cbbc7d85184be4cc9'
+  version '0.82'
+  sha256 'b5d1b67b9b4a6e6d16ff4c603c3caa2d03ad6d12bc1f58d0246aeeb8f3d837bf'
 
   url "http://members.quicknet.nl/blankendaalr/dbgl/download/dbgl#{version.no_dots}.dmg"
   name 'DBGL'
   homepage 'http://members.quicknet.nl/blankendaalr/dbgl/'
-  license :gpl
 
   app 'DBGL.app'
 end

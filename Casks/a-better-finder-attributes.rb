@@ -1,13 +1,19 @@
 cask 'a-better-finder-attributes' do
-  version '5.36'
-  sha256 'c832782e8082e3ca03ab183eb4dcab14132be13e35fac13708174772211f16a8'
+  version '6.08'
+  sha256 '13a3871fb9c872dc9735e082a9d4bc0a16d9adea3d804f299f1a3e7b5c68adac'
 
   url 'http://www.publicspace.net/download/ABFAX.dmg'
-  appcast 'http://www.publicspace.net/app/signed_abfa5.xml',
-          checkpoint: '69f5290a982bad86445d04a983781edb7b36b28ddeb8d121a419873e0d0f841e'
+  appcast "http://www.publicspace.net/app/signed_abfa#{version.major}.xml",
+          checkpoint: '4ffa88745adc34d01698ca9b356d0504540eb907ba710a3c1a00e45f66e473e2'
   name 'A Better Finder Attributes'
   homepage 'http://www.publicspace.net/ABetterFinderAttributes/'
-  license :commercial
 
-  app 'A Better Finder Attributes 5.app'
+  app "A Better Finder Attributes #{version.major}.app"
+
+  zap trash: [
+               "~/Library/Caches/net.publicspace.abfa#{version.major}",
+               "~/Library/Cookies/net.publicspace.abfa#{version.major}.binarycookies",
+               "~/Library/Preferences/net.publicspace.abfa#{version.major}.plist",
+               "~/Library/Saved Application State/net.publicspace.abfa#{version.major}.savedState",
+             ]
 end

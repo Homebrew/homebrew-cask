@@ -1,14 +1,13 @@
 cask 'bit-slicer' do
-  version '1.7.6'
-  sha256 '03e9125481bd4c6459e379b3b0df69a2eecbde80f7cb11d9be8dfc9c0f8d3a58'
+  version '1.7.8'
+  sha256 '8e9b9398240f37e7da16c1c7328a1bd8a8a19f7e376c3144304ef51ed587f1b8'
 
   # zgcoder.net was verified as official when first introduced to the cask
   url "https://zgcoder.net/software/bitslicer/dist/stable/Bit_Slicer_#{version}.zip"
   appcast 'https://zgcoder.net/bitslicer/update/appcast.xml',
-          checkpoint: '98f4404442be353240a8e8f1c6172d008119e9d0ab1987cd973e9ebec3480bfa'
+          checkpoint: 'dd69176f604029d5e98592880a448fb2a9f04f1d11eec3a965f84864e42efcc9'
   name 'Bit Slicer'
   homepage 'https://github.com/zorgiepoo/bit-slicer/'
-  license :bsd
 
   app 'Bit Slicer.app'
 end

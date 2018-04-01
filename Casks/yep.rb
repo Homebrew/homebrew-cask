@@ -2,10 +2,9 @@ cask 'yep' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.ironicsoftware.com/downloads/Yep.zip'
+  url 'https://www.ironicsoftware.com/downloads/Yep.zip'
   name 'Yep'
-  homepage 'http://www.ironicsoftware.com/yep/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.ironicsoftware.com/yep/'
 
   app 'Yep.app'
 end

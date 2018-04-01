@@ -7,7 +7,6 @@ cask 'switchup' do
           checkpoint: '49a7d7939bd6087c8a3a11307f3cfd9095b5086e8065f575501a48982ed2b925'
   name 'SwitchUp'
   homepage 'https://www.irradiatedsoftware.com/switchup/'
-  license :commercial
 
   app 'SwitchUp.app'
 end

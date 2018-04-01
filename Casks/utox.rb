@@ -1,14 +1,13 @@
 cask 'utox' do
-  version '0.9.7'
-  sha256 'cec9cc990ad058159b843e3b6bd5e8e9fa7b33dbfd1b3895fbb1cfde8b9defc3'
+  version '0.16.1'
+  sha256 '722ef3e8d1145b7746db6544ccb50a85558da93e0d39a588223a4489479fd85d'
 
-  # github.com/GrayHatter/uTox was verified as official when first introduced to the cask
-  url "https://github.com/GrayHatter/uTox/releases/download/v#{version}/uTox-#{version}.dmg"
-  appcast 'https://github.com/GrayHatter/uTox/releases.atom',
-          checkpoint: '9061a5db2d3ceb5c63d33c519a31f612d4d348ec2ec2a8e66983040151c23374'
+  # github.com/uTox/uTox was verified as official when first introduced to the cask
+  url "https://github.com/uTox/uTox/releases/download/v#{version}/uTox-#{version}.dmg"
+  appcast 'https://github.com/uTox/uTox/releases.atom',
+          checkpoint: '762ca9b3d6015647546bcee5ca8859ff3b4f4f281373149511229b860413d651'
   name 'uTox'
-  homepage 'https://www.tox.chat'
-  license :oss
+  homepage 'https://www.tox.chat/'
 
   app 'uTox.app'
 end

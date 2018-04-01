@@ -2,10 +2,9 @@ cask 'chatwork' do
   version :latest
   sha256 :no_check
 
-  url 'http://desktop-app.chatwork.com/installer/ChatWork-darwin-setup.zip'
+  url 'http://desktop-app.chatwork.com/installer/ChatWork.dmg'
   name 'ChatWork'
-  homepage 'http://www.chatwork.com'
-  license :closed
+  homepage 'https://www.chatwork.com/'
 
   auto_updates true
 

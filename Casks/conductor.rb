@@ -1,13 +1,12 @@
 cask 'conductor' do
-  version '1.3.0'
-  sha256 'e1a63c988fbcc9de3307987b53799632de4101ab41c9215610f6c9a70c411816'
+  version '1.4.1'
+  sha256 'd0c467071f40a278b09fe3d82fa21745e86cec88246cd016b7a87bfa477a9c49'
 
   url "https://github.com/keith/conductor/releases/download/#{version}/Conductor.app.zip"
   appcast 'https://github.com/keith/conductor/releases.atom',
-          checkpoint: 'e9db5592440216e156b93dfe69a597508047dbda993e3ad8f528a5b54d448d00'
+          checkpoint: 'a0cb2e172d6824138153f58f0b16cdf642128525861b2f11f979cef6ffad510c'
   name 'Conductor'
   homepage 'https://github.com/keith/conductor'
-  license :mit
 
   accessibility_access true
 

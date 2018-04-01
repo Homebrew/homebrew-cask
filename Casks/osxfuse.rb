@@ -1,22 +1,32 @@
 cask 'osxfuse' do
-  version '2.8.3'
-  sha256 'b0f05fa6e74372b73417e89bfd103a46a0b968239f03832755e424bec09051e6'
+  version '3.7.1'
+  sha256 '0982bca1661d1b8df1c310e828984b25c11dfdc623a79566bfa6283779fad24c'
 
-  # sourceforge.net/osxfuse was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/osxfuse/osxfuse-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/osxfuse/rss',
-          checkpoint: 'd137ba68265d71c31ce6124b0db2918543b38d6deb4afdf42f13097420c00b6e'
+  # github.com/osxfuse was verified as official when first introduced to the cask
+  url "https://github.com/osxfuse/osxfuse/releases/download/osxfuse-#{version}/osxfuse-#{version}.dmg"
+  appcast 'https://github.com/osxfuse/osxfuse/releases.atom',
+          checkpoint: '4e0725b4347685f212e5a634db4af830a8db30c986f8f8ca608c523ba14ac424'
   name 'OSXFUSE'
   homepage 'https://osxfuse.github.io/'
-  license :bsd
 
-  pkg "Install OSXFUSE #{version.major_minor}.pkg"
+  auto_updates true
+
+  pkg "Extras/FUSE for macOS #{version}.pkg",
+      choices: [
+                 'choiceIdentifier' => 'com.github.osxfuse.pkg.MacFUSE',
+                 'choiceAttribute'  => 'selected',
+                 'attributeSetting' => 1,
+               ]
 
   postflight do
     set_ownership ['/usr/local/include', '/usr/local/lib']
   end
 
-  uninstall pkgutil: 'com.github.osxfuse.pkg.Core|com.github.osxfuse.pkg.PrefPane',
+  uninstall pkgutil: [
+                       'com.github.osxfuse.pkg.Core',
+                       'com.github.osxfuse.pkg.MacFUSE',
+                       'com.github.osxfuse.pkg.PrefPane',
+                     ],
             kext:    'com.github.osxfuse.filesystems.osxfusefs'
 
   caveats do

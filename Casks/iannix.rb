@@ -1,11 +1,10 @@
 cask 'iannix' do
-  version '0.9.16'
-  sha256 'b45d332fc450342ad9a5b73fedcd554c299d435f989f0fe099522554434d00de'
+  version '0.9.20'
+  sha256 '094ea79552b15589a9190a7105796cd80cd610fb624aa756d1ed7fcfda2498b1'
 
-  url "http://www.iannix.org/download/iannix_mac_64__#{version.dots_to_underscores}.dmg"
+  url "https://www.iannix.org/download/iannix_mac_64__#{version.dots_to_underscores}.dmg"
   name 'IanniX'
-  homepage 'http://www.iannix.org/'
-  license :gpl
+  homepage 'https://www.iannix.org/'
 
-  app 'IanniX/IanniX.app'
+  app 'IanniX.app'
 end

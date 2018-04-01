@@ -5,8 +5,7 @@ cask 'everweb' do
   # ragesw.com was verified as official when first introduced to the cask
   url 'https://www.ragesw.com/downloads/everweb/everweb.zip'
   name 'EverWeb'
-  homepage 'http://www.everwebapp.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.everwebapp.com/'
 
   app 'EverWeb.app'
 end

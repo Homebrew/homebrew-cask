@@ -7,7 +7,13 @@ cask 'accessmenubarapps' do
           checkpoint: '9e9937691350f21a7f51543e2c93fc1feca6c38ca57036b719220b731180a745'
   name 'AccessMenuBarApps'
   homepage 'http://www.ortisoft.de/accessmenubarapps/'
-  license :gratis
 
   app 'AccessMenuBarApps.app'
+
+  uninstall quit: 'de.ortisoft.AccessMenuBarApps'
+
+  zap trash: [
+               '~/Library/Caches/de.ortisoft.AccessMenuBarApps',
+               '~/Library/Preferences/de.ortisoft.AccessMenuBarApps.plist',
+             ]
 end

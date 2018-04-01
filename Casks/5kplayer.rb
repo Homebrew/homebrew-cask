@@ -2,10 +2,17 @@ cask '5kplayer' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.5kplayer.com/download/5kplayer.dmg'
+  url 'https://www.5kplayer.com/download/5kplayer.dmg'
   name '5KPlayer'
-  homepage 'http://www.5kplayer.com'
-  license :closed
+  homepage 'https://www.5kplayer.com/'
 
   app '5KPlayer.app'
+
+  uninstall quit: 'com.digiarty.5kplayer'
+
+  zap trash: [
+               '~/Library/Caches/com.digiarty.5kplayer',
+               '~/Library/Preferences/com.digiarty.5kplayer.plist',
+               '~/Library/Saved Application State/com.digiarty.5kplayer.savedState',
+             ]
 end

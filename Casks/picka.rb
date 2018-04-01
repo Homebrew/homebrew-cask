@@ -5,7 +5,6 @@ cask 'picka' do
   url 'https://getpicka.com/downloads/Picka.zip'
   name 'Picka'
   homepage 'https://getpicka.com/'
-  license :commercial
 
   app 'Picka.app'
 end

@@ -7,7 +7,13 @@ cask 'gfxcardstatus' do
           checkpoint: 'c52a51d2da8795e12eceb2d035f45ceb44197a480883408f9ea7cff96e7d2c90'
   name 'gfxCardStatus'
   homepage 'https://gfx.io/'
-  license :bsd
 
   app 'gfxCardStatus.app'
+
+  zap trash: [
+               '~/Library/Caches/com.codykrieger.gfxCardStatus',
+               '~/Library/Cookies/com.codykrieger.gfxCardStatus.binarycookies',
+               '~/Library/Preferences/com.codykrieger.gfxCardStatus-Preferences.plist',
+               '~/Library/Preferences/com.codykrieger.gfxCardStatus.plist',
+             ]
 end

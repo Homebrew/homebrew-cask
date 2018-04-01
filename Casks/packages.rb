@@ -1,11 +1,12 @@
 cask 'packages' do
-  version '1.1.3'
-  sha256 'fb9baad763db3a1767b047ab7b634ae764f22e94f0e8285d143d9c34e72c1672'
+  version '1.2.2'
+  sha256 'bbee49a09e63339600ff5a97dedcecd8a00e4271477f02623e88ce6ebf295288'
 
   url 'http://s.sudre.free.fr/Software/files/Packages.dmg'
+  appcast 'http://s.sudre.free.fr/Software/documentation/RemoteVersion.plist',
+          checkpoint: '36303735f67c30f292c67cdeed1c4d9ac050547eca212f9ca3cc184f90777181'
   name 'Packages'
   homepage 'http://s.sudre.free.fr/Software/Packages/about.html'
-  license :bsd
 
   pkg 'packages/Packages.pkg'
 

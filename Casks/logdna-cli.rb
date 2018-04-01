@@ -1,16 +1,15 @@
 cask 'logdna-cli' do
-  version '1.0.9'
-  sha256 '76531e0538c9c8945ade50fc5707e1d34945b364a6475f38af6ccd499aad2aaa'
+  version '1.2.2'
+  sha256 'd7d62422f20df8210b168404ba377c9c632e682e54005ce5ab608c720a181ccc'
 
   # github.com/logdna/logdna-cli was verified as official when first introduced to the cask
-  url "https://github.com/logdna/logdna-cli/releases/download/#{version}/logdna-mac-cli.pkg"
+  url "https://github.com/logdna/logdna-cli/releases/download/#{version}/logdna-cli.pkg"
   appcast 'https://github.com/logdna/logdna-cli/releases.atom',
-          checkpoint: '9c67fddd3ec1be4675c32dc6078380d100a379a5bd6de9f34bcf4d4052e66301'
+          checkpoint: '4c27044f3f87e451277966068e6d82526c2af20eda2adfe0a31e6a836720f24a'
   name 'LogDNA CLI'
-  homepage 'https://www.logdna.com/'
-  license :mit
+  homepage 'https://logdna.com/'
 
-  pkg 'logdna-mac-cli.pkg'
+  pkg 'logdna-cli.pkg'
 
   uninstall pkgutil: 'com.logdna.logdna-cli'
 end

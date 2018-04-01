@@ -7,21 +7,16 @@ cask 'colloquy' do
           checkpoint: '91009856ce35364f86861d42e3f06d6603648914ef374997cde0a28f860ae52f'
   name 'Colloquy'
   homepage 'http://colloquy.info/'
-  license :gpl
 
   auto_updates true
 
   app 'Colloquy.app'
 
-  postflight do
-    suppress_move_to_applications
-  end
-
-  zap delete: [
-                '~/Library/Application Support/Colloquy',
-                '~/Library/Caches/info.colloquy',
-                '~/Library/Preferences/info.colloquy.plist',
-                '~/Library/Saved Application State/info.colloquy.savedState',
-                '~/Library/Scripts/Applications/Colloquy',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Colloquy',
+               '~/Library/Caches/info.colloquy',
+               '~/Library/Preferences/info.colloquy.plist',
+               '~/Library/Saved Application State/info.colloquy.savedState',
+               '~/Library/Scripts/Applications/Colloquy',
+             ]
 end

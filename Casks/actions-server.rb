@@ -4,8 +4,7 @@ cask 'actions-server' do
 
   url 'http://getactionsapp.com/downloads/ActionsServer.dmg'
   name 'Actions Server'
-  homepage 'http://getactionsapp.com'
-  license :gratis
+  homepage 'http://getactionsapp.com/'
 
   app 'Actions Server.app'
 end

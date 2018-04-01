@@ -1,13 +1,13 @@
 cask 'hopper-disassembler' do
-  version '3.11.16'
-  sha256 '99ab92dada4d42e72ac053e3939ab30931035581bd2bda7da96b85094c338f9e'
+  version '4.3.16'
+  sha256 '2b67af1210fb771a721605c54a0469eb2f4df92ceb03cb847cc0f485a034668e'
 
-  url "http://www.hopperapp.com/HopperWeb/downloads/Hopper-#{version}.zip"
-  appcast "http://www.hopperapp.com/HopperWeb/appcast_v#{version.major}.php",
-          checkpoint: 'd24be268fb583328fac49d963e6ae4f93bc92c0ce49a744757752bba82352489'
+  # d2ap6ypl1xbe4k.cloudfront.net was verified as official when first introduced to the cask
+  url "https://d2ap6ypl1xbe4k.cloudfront.net/Hopper-#{version}-demo.dmg"
+  appcast "https://www.hopperapp.com/HopperWeb/appcast_v#{version.major}.php",
+          checkpoint: 'bb2120a84d8a474ef5f5482f1115097a82144481aa9b178f4a72d0e7167d779b'
   name 'Hopper Disassembler'
   homepage 'https://www.hopperapp.com/'
-  license :commercial
 
   auto_updates true
   depends_on macos: '>= :lion'
@@ -15,11 +15,11 @@ cask 'hopper-disassembler' do
   app "Hopper Disassembler v#{version.major}.app"
   binary "#{appdir}/Hopper Disassembler v#{version.major}.app/Contents/MacOS/hopper"
 
-  zap delete: [
-                '~/Library/Application Support/Hopper',
-                "~/Library/Application Support/Hopper Disassembler v#{version.major}",
-                "~/Library/Caches/com.cryptic-apps.hopper-web-#{version.major}",
-                "~/Library/Preferences/com.cryptic-apps.hopper-web-#{version.major}.plist",
-                "~/Library/Saved Application State/com.cryptic-apps.hopper-web-#{version.major}.savedState",
-              ]
+  zap trash: [
+               '~/Library/Application Support/Hopper',
+               "~/Library/Application Support/Hopper Disassembler v#{version.major}",
+               "~/Library/Caches/com.cryptic-apps.hopper-web-#{version.major}",
+               "~/Library/Preferences/com.cryptic-apps.hopper-web-#{version.major}.plist",
+               "~/Library/Saved Application State/com.cryptic-apps.hopper-web-#{version.major}.savedState",
+             ]
 end

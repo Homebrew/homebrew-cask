@@ -1,15 +1,14 @@
 cask 'flycut' do
-  version '1.8'
-  sha256 'f7fa218a4fee31208476ff400cd1044f3356bf2200a06e32731572498c7ce42a'
+  version '1.8.2'
+  sha256 '70e40de3fed82035bd16979bc4d99fda3588888720694fe6cd4e7f367a9004ba'
 
   url "https://github.com/TermiT/Flycut/releases/download/#{version}/Flycut.app.#{version}.zip"
   appcast 'https://github.com/TermiT/Flycut/releases.atom',
-          checkpoint: '02bb24f0420441a85701adebe5e145497146bd9c4923b321df6974042cbbffa4'
+          checkpoint: 'c978b2178af3240b1d123542b6aece9228dd4ef0c6a8e96a652fae7fc78edb45'
   name 'Flycut'
   homepage 'https://github.com/TermiT/Flycut'
-  license :mit
 
   app 'Flycut.app'
 
-  zap delete: '~/Library/Preferences/com.generalarcade.flycut.plist'
+  zap trash: '~/Library/Preferences/com.generalarcade.flycut.plist'
 end

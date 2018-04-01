@@ -5,10 +5,18 @@ cask 'hacker-menu' do
   # github.com/jingweno/hacker-menu was verified as official when first introduced to the cask
   url "https://github.com/jingweno/hacker-menu/releases/download/v#{version}/hacker-menu-mac.zip"
   appcast 'https://github.com/jingweno/hacker-menu/releases.atom',
-          checkpoint: 'a55f652b40c1db009dddf4d3ee763d13fe679d93d062c8c33f5675bad2a944cb'
+          checkpoint: '0ce6c5bab4f3bd022010f6c96aa0c8aa3885cfbb3a90d32d4f68ed87e8174001'
   name 'Hacker Menu'
   homepage 'https://hackermenu.io/'
-  license :mit
 
   app 'Hacker Menu.app'
+
+  zap trash: [
+               '~/Library/Application Support/Hacker Menu',
+               '~/Library/Application Support/com.electron.hacker_menu.ShipIt',
+               '~/Library/Caches/Hacker Menu',
+               '~/Library/Caches/com.electron.hacker_menu',
+               '~/Library/Preferences/com.electron.hacker_menu.plist',
+               '~/Library/Saved Application State/com.electron.hacker_menu.savedState',
+             ]
 end

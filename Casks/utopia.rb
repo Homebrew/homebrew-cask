@@ -1,11 +1,12 @@
 cask 'utopia' do
-  version '2.4.2'
-  sha256 'c9c0f76a0a9035fe9a8405c6e32368ddf594aac86d742cd6aefdfa64d699e20a'
+  version '3.1.0'
+  sha256 '8b36526c0993d284186776d875597efbda2a584670d4ab3f4d7f8ddcd7547231'
 
   url "http://utopiadocs.com/files/Utopia-#{version}-Mac.dmg"
   name 'Utopia Documents'
   homepage 'http://utopiadocs.com/'
-  license :gpl
+
+  depends_on macos: '>= :yosemite'
 
   app 'Utopia.app'
 end

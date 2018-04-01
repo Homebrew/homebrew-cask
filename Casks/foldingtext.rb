@@ -7,8 +7,7 @@ cask 'foldingtext' do
   appcast 'https://foldingtext.s3.amazonaws.com/FoldingText.rss',
           checkpoint: '5335e89ce209b69d8c69be935456c2708f5188f35f0a780c2282d948cefd0a4a'
   name 'FoldingText'
-  homepage 'http://www.foldingtext.com'
-  license :commercial
+  homepage 'http://www.foldingtext.com/'
 
   app 'FoldingText.app'
 end

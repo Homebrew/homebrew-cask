@@ -6,7 +6,6 @@ cask 'ionic-lab' do
   url 'https://ionic-io-assets.s3.amazonaws.com/labs/IonicLab.dmg'
   name 'IonicLab'
   homepage 'http://lab.ionic.io/'
-  license :gratis
 
   app 'Ionic Lab.app'
 end

@@ -4,8 +4,7 @@ cask 'crosspack-avr' do
 
   url "https://www.obdev.at/downloads/crosspack/CrossPack-AVR-#{version.no_hyphens}.dmg"
   name 'CrossPack'
-  homepage 'https://www.obdev.at/products/crosspack/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.obdev.at/products/crosspack/index.html'
 
   pkg 'CrossPack-AVR.pkg'
 
@@ -18,7 +17,7 @@ cask 'crosspack-avr' do
 
   caveats do
     files_in_usr_local
-    <<-EOS.undent
+    <<~EOS
       CrossPack-AVR can normally install multiple versions side-by-side.
       Therefore, running install will typically install multiple versions
       of the tools in /usr/local/ (e.g. /usr/local/CrossPack-AVR-20131216).

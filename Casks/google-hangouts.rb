@@ -5,7 +5,6 @@ cask 'google-hangouts' do
   url 'https://dl.google.com/googletalk/googletalkplugin/GoogleVoiceAndVideoSetup.dmg'
   name 'Google Hangouts'
   homepage 'https://www.google.com/tools/dlpage/hangoutplugin'
-  license :gratis
 
   pkg 'Google Voice and Video.pkg'
 

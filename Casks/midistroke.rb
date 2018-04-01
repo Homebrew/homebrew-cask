@@ -5,9 +5,8 @@ cask 'midistroke' do
   url 'http://www.charlie-roberts.com/midiStroke/midiStroke.app.zip'
   name 'midiStroke'
   homepage 'http://www.charlie-roberts.com/midiStroke/'
-  license :mit
 
   app 'midiStroke.app'
 
-  zap delete: '~/Library/Application Support/midiStroke'
+  zap trash: '~/Library/Application Support/midiStroke'
 end

@@ -1,14 +1,13 @@
 cask 'squirrelsql' do
-  version '3.7.1'
-  sha256 '4ee542f0fc51489de5c529d242b5731140cb993beeba853ee7675c010cdc81e3'
+  version '3.8.1'
+  sha256 'c3ff5203477536d347f9531a8070465267b1a81751e964b97e427cd13af224d9'
 
   # sourceforge.net/squirrel-sql was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/squirrel-sql/1-stable/#{version}/squirrel-sql-#{version}-MACOSX-install.jar"
   appcast 'https://sourceforge.net/projects/squirrel-sql/rss?path=/1-stable',
-          checkpoint: '2bf738ab989998ed5a58b9239464120247b7adeba9ed3aff1acb9bb7b4113123'
+          checkpoint: '9c801e242da8fcd8e2aa9acf97f228e89db9546848027ff039f37454ea5943b6'
   name 'SQuirrel SQL'
   homepage 'http://www.squirrelsql.org/'
-  license :gpl
 
   container type: :naked
 
@@ -17,13 +16,13 @@ cask 'squirrelsql' do
   preflight do
     # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
     File.open(installoptions, 'w') do |f|
-      f.print <<EOS.undent
+      f.print <<~EOS
         <?xml version="1.0" encoding="UTF-8" standalone="no"?>
         <AutomatedInstallation langpack="eng">
         <com.izforge.izpack.panels.HelloPanel id="UNKNOWN (com.izforge.izpack.panels.HelloPanel)"/>
         <com.izforge.izpack.panels.HTMLInfoPanel id="UNKNOWN (com.izforge.izpack.panels.HTMLInfoPanel)"/>
         <com.izforge.izpack.panels.TargetPanel id="UNKNOWN (com.izforge.izpack.panels.TargetPanel)">
-        <installpath>/Applications/SQuirreLSQL.app</installpath>
+        <installpath>#{appdir}/SQuirreLSQL.app</installpath>
         </com.izforge.izpack.panels.TargetPanel>
         <com.izforge.izpack.panels.PacksPanel id="UNKNOWN (com.izforge.izpack.panels.PacksPanel)">
         <pack index="0" name="Base" selected="true"/>
@@ -68,21 +67,21 @@ cask 'squirrelsql' do
         <com.izforge.izpack.panels.InstallPanel id="UNKNOWN (com.izforge.izpack.panels.InstallPanel)"/>
         <com.izforge.izpack.panels.FinishPanel id="UNKNOWN (com.izforge.izpack.panels.FinishPanel)"/>
         </AutomatedInstallation>
-EOS
+      EOS
     end
   end
 
   postflight do
-    system 'java', '-jar', "#{staged_path}/squirrel-sql-#{version}-MACOSX-install.jar", installoptions.to_s
+    system_command '/usr/bin/java', args: ['-jar', "#{staged_path}/squirrel-sql-#{version}-MACOSX-install.jar", installoptions.to_s]
   end
 
   uninstall_postflight do
-    system 'java', '-jar', '/Applications/SQuirreLSQL.app/Uninstaller/uninstaller.jar', '-f', '-c'
+    system_command '/usr/bin/java', args: ['-jar', "#{appdir}/SQuirreLSQL.app/Uninstaller/uninstaller.jar", '-f', '-c']
   end
 
-  zap delete: '~/.squirrel-sql'
+  zap trash: '~/.squirrel-sql'
 
   caveats do
-    depends_on_java('6+')
+    depends_on_java('8+')
   end
 end

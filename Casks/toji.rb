@@ -7,7 +7,6 @@ cask 'toji' do
           checkpoint: 'b08495ad3f1f328ed47f8f0e806efe30a4fde3c710c343de9c183553ceac7569'
   name 'Toji'
   homepage 'https://github.com/lvarayut/toji'
-  license :mit
 
   app 'Toji.app'
 end

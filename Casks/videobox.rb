@@ -5,7 +5,6 @@ cask 'videobox' do
   url "https://download.tastyapps.com/videobox_#{version}.dmg"
   name 'Videobox'
   homepage 'https://www.tastyapps.com/videobox/'
-  license :closed
 
   app 'Videobox.app'
 end

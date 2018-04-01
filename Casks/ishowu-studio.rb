@@ -5,7 +5,8 @@ cask 'ishowu-studio' do
   url 'https://www.shinywhitebox.com/store/file.php?p=12'
   name 'iShowU Studio'
   homepage 'https://www.shinywhitebox.com/ishowu-studio'
-  license :commercial
 
   app 'iShowU Studio.app'
+
+  zap trash: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.shinywhitebox.ishowu-studio.sfl*'
 end

@@ -5,7 +5,6 @@ cask 'mapture' do
   url "http://anatoo.jp/mapture/Mapture-#{version}.app.zip"
   name 'Mapture'
   homepage 'http://anatoo.jp/mapture/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app "Mapture-#{version}.app"
 end

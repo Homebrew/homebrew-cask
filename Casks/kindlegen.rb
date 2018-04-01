@@ -6,7 +6,12 @@ cask 'kindlegen' do
   url "https://kindlegen.s3.amazonaws.com/KindleGen_Mac_i386_v#{version.dots_to_underscores}.zip"
   name 'KindleGen'
   homepage 'https://www.amazon.com/gp/feature.html?docId=1000765211'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   binary 'kindlegen'
+
+  caveats <<~EOS
+    Instructions on using KindleGen are available in
+
+      #{staged_path}/manual.html
+  EOS
 end

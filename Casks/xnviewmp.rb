@@ -5,7 +5,8 @@ cask 'xnviewmp' do
   url 'http://download.xnview.com/XnViewMP-mac.tgz'
   name 'XnViewMP'
   homepage 'http://www.xnview.com/'
-  license :gratis
+
+  auto_updates true
 
   app 'XnViewMP.app'
 end

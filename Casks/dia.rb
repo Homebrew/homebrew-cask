@@ -5,16 +5,11 @@ cask 'dia' do
   # sourceforge.net/dia-installer/dia was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/dia-installer/dia/#{version.sub(%r{-.*}, '')}/Dia-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/dia-installer/rss?path=/dia',
-          checkpoint: '7eaa27518317fea3154dd57dbd257e04371d18599e4447e1ad501c7d275f60a9'
+          checkpoint: '655a11d5e8b2b7b980abea11f87435dd3faa6016646bcf6b98111a28e514666c'
   name 'Dia'
   homepage 'http://dia-installer.de/'
-  license :gpl
 
   depends_on x11: true
 
   app 'Dia.app'
-
-  postflight do
-    system '/usr/bin/sed', '-i', '--', 's/exec/exec env DISPLAY=:0/g', "#{appdir}/Dia.app/Contents/Resources/bin/dia"
-  end
 end

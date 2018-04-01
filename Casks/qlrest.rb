@@ -5,7 +5,6 @@ cask 'qlrest' do
   url 'https://github.com/downloads/cluther/qlrest/QLRest.qlgenerator.zip'
   name 'QLRest'
   homepage 'https://github.com/cluther/qlrest'
-  license :oss
 
   qlplugin 'QLRest.qlgenerator'
 end

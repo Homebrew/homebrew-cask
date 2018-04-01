@@ -1,22 +1,14 @@
 cask 'scala-ide' do
-  version '4.4.0'
+  version '4.7.0,2.12:20170929'
+  sha256 'b86a37066cb375615c2a9a61a0152b66a0b172b90e15a33c339f89d2516315f9'
 
-  if Hardware::CPU.is_32_bit?
-    # downloads.typesafe.com/scalaide-pack was verified as official when first introduced to the cask
-    url "http://downloads.typesafe.com/scalaide-pack/#{version}-vfinal-luna-211-20160401/scala-SDK-#{version}-vfinal-2.11-macosx.cocoa.x86.zip"
-    sha256 '271edecd517fe11cb34ca55fb2e654616daeb2cd84a1d7e47d9d622583182012'
-  else
-    # downloads.typesafe.com/scalaide-pack was verified as official when first introduced to the cask
-    url "http://downloads.typesafe.com/scalaide-pack/#{version}-vfinal-luna-211-20160401/scala-SDK-#{version}-vfinal-2.11-macosx.cocoa.x86_64.zip"
-    sha256 'c2b8a2d02fb6dd8586427cd171e3e3e8b55cf50afbb126e2bbf936052775e4b8'
-  end
-
+  # downloads.typesafe.com/scalaide-pack was verified as official when first introduced to the cask
+  url "https://downloads.typesafe.com/scalaide-pack/#{version.before_comma}-vfinal-oxygen-#{version.before_colon.after_comma.no_dots}-#{version.after_colon}/scala-SDK-#{version.before_comma}-vfinal-#{version.before_colon.after_comma}-macosx.cocoa.x86_64.zip"
   name 'Scala IDE'
   homepage 'http://scala-ide.org/'
-  license :bsd
 
   # Renamed for clarity: app name is inconsistent with its branding.
   # Also renamed to avoid conflict with other eclipse Casks.
   # Original discussion: https://github.com/caskroom/homebrew-cask/pull/2731
-  app 'eclipse/Eclipse.app', target: 'Scala IDE.app'
+  app 'eclipse.app', target: 'Scala IDE.app'
 end

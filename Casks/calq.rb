@@ -5,9 +5,8 @@ cask 'calq' do
   url "http://www.katoemba.net/download/Calq-#{version}.dmg.gz"
   name 'Calq'
   homepage 'http://www.katoemba.net/makesnosenseatall/calq/'
-  license :gratis
 
   app 'Calq.app'
 
-  zap delete: '~/Library/Preferences/com.katoemba.calq.plist'
+  zap trash: '~/Library/Preferences/com.katoemba.calq.plist'
 end

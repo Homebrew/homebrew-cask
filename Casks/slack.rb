@@ -1,14 +1,11 @@
 cask 'slack' do
-  version '2.0.3'
-  sha256 '0859a1742d339a1ae46fd5d68ff259da2efd649acdde1231f06a3d4e43810d47'
+  version '3.1.0'
+  sha256 'bbd028b423e4a18b8db8ba40fd2985babce6c3f4168dd5b339f1dbc99ca9e714'
 
-  # slack-ssb-updates.global.ssl.fastly.net was verified as official when first introduced to the cask
-  url "https://slack-ssb-updates.global.ssl.fastly.net/mac_public_releases/slack-#{version}.zip"
-  appcast 'https://rink.hockeyapp.net/api/2/apps/38e415752d573e7e78e06be8daf5acc1',
-          checkpoint: '16fdeec6794f180b946510dab4b4a5d844182d2631c81219f4601a931db4d104'
+  # downloads.slack-edge.com was verified as official when first introduced to the cask
+  url "https://downloads.slack-edge.com/mac_releases/Slack-#{version}-macOS.zip"
   name 'Slack'
   homepage 'https://slack.com/'
-  license :gratis
 
   auto_updates true
 
@@ -16,14 +13,19 @@ cask 'slack' do
 
   uninstall quit: 'com.tinyspeck.slackmacgap'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tinyspeck.slackmacgap.sfl',
-                '~/Library/Application Support/Slack',
-                '~/Library/Caches/com.tinyspeck.slackmacgap',
-                '~/Library/Containers/com.tinyspeck.slackmacgap',
-                '~/Library/Containers/com.tinyspeck.slackmacgap.SlackCallsService',
-                '~/Library/Cookies/com.tinyspeck.slackmacgap.binarycookies',
-                '~/Library/Preferences/com.tinyspeck.slackmacgap.plist',
-                '~/Library/Saved Application State/com.tinyspeck.slackmacgap.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/com.tinyspeck.slackmacgap',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tinyspeck.slackmacgap.sfl*',
+               '~/Library/Application Support/Slack',
+               '~/Library/Caches/com.tinyspeck.slackmacgap',
+               '~/Library/Caches/com.tinyspeck.slackmacgap.ShipIt',
+               '~/Library/Containers/com.tinyspeck.slackmacgap',
+               '~/Library/Containers/com.tinyspeck.slackmacgap.SlackCallsService',
+               '~/Library/Cookies/com.tinyspeck.slackmacgap.binarycookies',
+               '~/Library/Group Containers/*.com.tinyspeck.slackmacgap',
+               '~/Library/Group Containers/*.slack',
+               '~/Library/Preferences/com.tinyspeck.slackmacgap.helper.plist',
+               '~/Library/Preferences/com.tinyspeck.slackmacgap.plist',
+               '~/Library/Saved Application State/com.tinyspeck.slackmacgap.savedState',
+             ]
 end

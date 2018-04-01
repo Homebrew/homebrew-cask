@@ -4,10 +4,9 @@ cask 'eiskaltdcpp' do
 
   url "https://downloads.sourceforge.net/eiskaltdcpp/EiskaltDC++-#{version}-x86_64-qt5.dmg"
   appcast 'https://sourceforge.net/projects/eiskaltdcpp/rss',
-          checkpoint: 'b4fb28f10cc3fbd688aed28a882b31447f7deac8ce29a5300090b71a0e45b63c'
+          checkpoint: '70a68d8316c37dbd3ed23be4aa4319d9d876a190d0206f037c629cd77bf88485'
   name 'EiskaltDC++'
-  homepage 'http://sourceforge.net/projects/eiskaltdcpp/'
-  license :gpl
+  homepage 'https://sourceforge.net/projects/eiskaltdcpp/'
 
   app 'EiskaltDC++.app'
 end

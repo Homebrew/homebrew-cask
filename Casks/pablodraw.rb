@@ -5,7 +5,12 @@ cask 'pablodraw' do
   url "http://download.picoe.ca/pablodraw/#{version.sub(%r{\.\d+$}, '')}/PabloDrawMac-#{version}.zip"
   name 'PabloDraw'
   homepage 'http://picoe.ca/products/pablodraw/'
-  license :gratis
 
   app 'PabloDraw.app'
+
+  zap trash: [
+               '~/Library/Application Support/ca.picoe.pablodraw',
+               '~/Library/Preferences/ca.picoe.pablodraw.plist',
+               '~/Library/Saved Application State/ca.picoe.pablodraw.savedState',
+             ]
 end

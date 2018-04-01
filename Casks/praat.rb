@@ -1,19 +1,13 @@
 cask 'praat' do
-  if Hardware::CPU.is_32_bit? || MacOS.release <= :leopard
-    version '6.0.16'
-    sha256 'cd9d7b8c5d48e2d7f0673e0aa13e82e198f66e958d173d679e38a94abb1b2435'
-    url "http://www.fon.hum.uva.nl/praat/old/#{version.no_dots}/praat#{version.no_dots}_mac32.dmg"
-  else
-    version '6.0.18'
-    sha256 'b28fc804c8561f72af1b51ed516b92cf2c39725733b8147ae84797a051d1c387'
-    url "http://www.fon.hum.uva.nl/praat/praat#{version.no_dots}_mac64.dmg"
-    appcast 'https://github.com/praat/praat/releases.atom',
-            checkpoint: 'e251609874e851ae122fac81ee103ca1184751fb8543bf5b83f27a991bcc300f'
-  end
+  version '6.0.36'
+  sha256 '5fe22254c0ce2a9ddea7de4d497fd3d5d620725ce690d123381dda44cccd7c30'
 
+  # github.com/praat/praat/releases was verified as official when first introduced to the cask
+  url "https://github.com/praat/praat/releases/download/v#{version}/praat#{version.no_dots}_mac64.dmg"
+  appcast 'https://github.com/praat/praat/releases.atom',
+          checkpoint: '2a347fbe3d6ae15184feaf71a2856fdca856cb7e06daabc26d0fd3f88ed76709'
   name 'Praat'
   homepage 'http://www.fon.hum.uva.nl/praat/'
-  license :gpl
 
   app 'Praat.app'
   binary "#{appdir}/Praat.app/Contents/MacOS/Praat", target: 'praat'

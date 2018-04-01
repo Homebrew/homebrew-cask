@@ -1,19 +1,18 @@
 cask 'brackets' do
-  version '1.7'
-  sha256 '1631dd2603f69488171d29776fa6fad09266a6d22b4263b59ef7d1bc39d64ea8'
+  version '1.12'
+  sha256 '11805e056d01964c0a4226203db5e7bf55819294020c1a9194ed8e6e2fb60f7b'
 
   # github.com/adobe/brackets was verified as official when first introduced to the cask
   url "https://github.com/adobe/brackets/releases/download/release-#{version}/Brackets.Release.#{version}.dmg"
   appcast 'https://github.com/adobe/brackets/releases.atom',
-          checkpoint: '065e17a16458bf2a795e1933bd59dd47c87a43b31989a31d1fcd3e3b4ddff8d8'
+          checkpoint: 'b231daac3fbba80810f29cf89634545e7313e0a439b71157abc8f268246d5253'
   name 'Brackets'
-  homepage 'http://brackets.io'
-  license :mit
+  homepage 'http://brackets.io/'
 
   app 'Brackets.app'
 
-  zap delete: [
-                '~/Library/Application Support/Brackets',
-                '~/Library/Preferences/io.brackets.appshell.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Brackets',
+               '~/Library/Preferences/io.brackets.appshell.plist',
+             ]
 end

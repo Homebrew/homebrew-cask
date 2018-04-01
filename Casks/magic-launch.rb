@@ -5,9 +5,8 @@ cask 'magic-launch' do
   url "https://www.oneperiodic.com/files/Magic%20Launch%20v#{version}.zip"
   name 'Magic Launch'
   homepage 'https://www.oneperiodic.com/products/magiclaunch/'
-  license :commercial
 
   prefpane 'Magic Launch.prefPane'
 
-  zap delete: '~/Library/Preferences/com.metakine.magic-launch.agent.plist'
+  zap trash: '~/Library/Preferences/com.metakine.magic-launch.agent.plist'
 end

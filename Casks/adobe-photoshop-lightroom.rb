@@ -1,12 +1,12 @@
 cask 'adobe-photoshop-lightroom' do
-  version '6.5'
-  sha256 '7ad434e0cce0c24bd8caaf81adf80d2d5a57b5348c2a75b7eaa6bb29dd06311b'
+  version '6.14'
+  sha256 'a9fba25594181acdb72d713fcbba5a1f3816ad18b974af2918e41e9ba5cc63ab'
 
   url "http://swupdl.adobe.com/updates/oobe/aam20/mac/AdobeLightroom-#{version.major}.0/#{version}/setup.dmg"
   name 'Adobe Photoshop Lightroom'
   homepage 'https://www.adobe.com/products/photoshop-lightroom.html'
-  license :commercial
 
+  auto_updates true
   depends_on cask: 'caskroom/versions/adobe-photoshop-lightroom600'
 
   # staged_path not available in Installer/Uninstall Stanza, workaround by nesting with preflight/postflight
@@ -14,18 +14,29 @@ cask 'adobe-photoshop-lightroom' do
   # and https://github.com/caskroom/homebrew-versions/pull/296
 
   preflight do
-    system '/usr/bin/killall', '-kill', 'SafariNotificationAgent'
-    system '/usr/bin/sudo', '-E', '--', "#{staged_path}/AdobePatchInstaller.app/Contents/MacOS/AdobePatchInstaller", '--mode=silent'
+    processes = system_command '/bin/launchctl', args: ['list']
+
+    if processes.stdout.lines.any? { |line| line =~ %r{^\d+\t\d\tcom.apple.SafariNotificationAgent$} }
+      system_command '/usr/bin/killall', args: ['-kill', 'SafariNotificationAgent']
+    end
+
+    system_command "#{staged_path}/AdobePatchInstaller.app/Contents/MacOS/AdobePatchInstaller",
+                   args: [
+                           '--mode=silent',
+                         ],
+                   sudo: true
   end
 
   uninstall_preflight do
-    system 'brew', 'cask', 'uninstall', 'adobe-photoshop-lightroom600'
+    system_command 'brew', args: ['cask', 'uninstall', 'adobe-photoshop-lightroom600']
   end
 
-  zap delete: [
-                '~/Library/Application Support/Adobe/Lightroom',
-                "~/Library/Preferences/com.adobe.Lightroom#{version.major}.plist",
-              ]
+  zap trash: [
+               '~/Library/Application Support/Adobe/Lightroom',
+               "~/Library/Preferences/com.adobe.Lightroom#{version.major}.plist",
+             ]
 
-  caveats 'Installation or Uninstallation may fail with Exit Code 19 (Conflicting Processes running) if Browsers, Safari Notification Service or SIMBL Services are running or Adobe Creative Cloud or any other Adobe Products are already installed. See Logs in /Library/Logs/Adobe/Installers if Installation or Uninstallation fails, to identify the conflicting processes.'
+  caveats <<~EOS
+    Installation or Uninstallation may fail with Exit Code 19 (Conflicting Processes running) if Browsers, Safari Notification Service or SIMBL Services (e.g. Flashlight) are running or Adobe Creative Cloud or any other Adobe Products are already installed. See Logs in /Library/Logs/Adobe/Installers if Installation or Uninstallation fails, to identifify the conflicting processes.
+  EOS
 end

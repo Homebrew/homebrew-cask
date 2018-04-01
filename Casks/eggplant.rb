@@ -4,8 +4,7 @@ cask 'eggplant' do
 
   url 'http://downloads.testplant.com/downloads/Eggplant/eggPlant.dmg'
   name 'eggPlant Functional'
-  homepage 'http://www.testplant.com/dlds/eggplant-functional/'
-  license :commercial
+  homepage 'https://www.testplant.com/dlds/eggplant-functional/'
 
   app 'eggPlant.app'
 end

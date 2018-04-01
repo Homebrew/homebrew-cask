@@ -15,12 +15,12 @@ cask 'qingg' do
 
   pkg 'Qingg.pkg'
 
-  uninstall pkgutil: 'com.aodaren.Qingg.pkg'
+  uninstall pkgutil: 'com.aodaren.*'
 
-  zap delete: [
-                '~/Library/Application Support/Qingg',
-                '~/Library/Application Support/com.aodaren.inputmethod.Qingg',
-                '~/Library/Caches/com.aodaren.inputmethod.Qingg',
-                '~/Library/Preferences/com.aodaren.inputmethod.Qingg.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Qingg',
+               '~/Library/Application Support/com.aodaren.inputmethod.Qingg',
+               '~/Library/Caches/com.aodaren.inputmethod.Qingg',
+               '~/Library/Preferences/com.aodaren.inputmethod.Qingg.plist',
+             ]
 end

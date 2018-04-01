@@ -5,12 +5,11 @@ cask 'function-pilot' do
   url 'http://tinybird.com/download/FunctionPilot.dmg'
   name 'Function Pilot'
   homepage 'http://tinybird.com/mac/function-pilot.html'
-  license :gratis
 
   app 'Function Pilot.app'
 
-  zap delete: [
-                '~/Library/Application Support/FunctionPilot',
-                '~/Library/Caches/com.tinybird.functionpilot',
-              ]
+  zap trash: [
+               '~/Library/Application Support/FunctionPilot',
+               '~/Library/Caches/com.tinybird.functionpilot',
+             ]
 end

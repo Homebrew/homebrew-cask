@@ -1,21 +1,20 @@
 cask 'gnucash' do
-  version '2.6.13-1,a'
-  sha256 '722182df86530337b98ff8876a1836b21ecaa5453646ad9e711b02592de1323b'
+  version '2.6.19-1'
+  sha256 'd40de55c75fdb754c717ae37e25de5e411fce4ce1f7684f071fc492f939408d2'
 
   # github.com/Gnucash/gnucash was verified as official when first introduced to the cask
-  url "https://github.com/Gnucash/gnucash/releases/download/#{version.major_minor_patch}#{version.after_comma}/Gnucash-Intel-#{version.before_comma}.dmg"
+  url "https://github.com/Gnucash/gnucash/releases/download/#{version.major_minor_patch}/Gnucash-Intel-#{version}.dmg"
   appcast 'https://github.com/Gnucash/gnucash/releases.atom',
-          checkpoint: '186ebe2f93a3a6f6a1673d0f0e597e5eda375e881b10d0121938d8e0007ddbed'
+          checkpoint: '6735ed4e007673033c8c7d78eec7a76c7ab32ee57dc646f7d2662d89402688d6'
   name 'GnuCash'
-  homepage 'http://www.gnucash.org'
-  license :gpl
+  homepage 'https://www.gnucash.org/'
 
   app 'Gnucash.app'
   app 'FinanceQuote Update.app'
 
-  zap delete: [
-                '~/Library/Application Support/Gnucash',
-                '~/Library/Preferences/org.gnucash.Gnucash.plist',
-                '~/Library/Saved Application State/org.gnucash.Gnucash.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Gnucash',
+               '~/Library/Preferences/org.gnucash.Gnucash.plist',
+               '~/Library/Saved Application State/org.gnucash.Gnucash.savedState',
+             ]
 end

@@ -1,11 +1,12 @@
 cask 'vmware-fusion' do
-  version '8.1.1-3771013'
-  sha256 '29cad381a36374e58a85fb58f7aaad8cae41ad50ef07fdda0db6d782c95c0a95'
+  version '10.1.1-7520154'
+  sha256 '3c985a58233a4098347c80d00223b7953f2dc457b1baeb5469ad153e5b00f5b5'
 
   url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
+  appcast 'https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml',
+          checkpoint: '92aeece9c5838e3091750b41fd3c82b275d23a8dfa6f28d2f0dc91c7df6e1ae1'
   name 'VMware Fusion'
-  homepage 'https://www.vmware.com/products/fusion/'
-  license :commercial
+  homepage 'https://www.vmware.com/products/fusion.html'
 
   auto_updates true
 
@@ -35,24 +36,42 @@ cask 'vmware-fusion' do
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-vmx-stats"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/VMware OVF Tool/ovftool"
 
+  postflight do
+    system_command "#{appdir}/VMware Fusion.app/Contents/Library/Initialize VMware Fusion.tool",
+                   args: ['set'],
+                   sudo: true
+  end
+
   uninstall_preflight do
     set_ownership "#{appdir}/VMware Fusion.app"
   end
 
-  zap delete: [
-                # note: '~/Library/Application Support/VMware Fusion' is not safe
-                # to delete. In older versions, VM images were located there.
-                '/Library/Preferences/VMware Fusion',
-                '~/Library/Caches/com.vmware.fusion',
-                '~/Library/Logs/VMware',
-                '~/Library/Logs/VMware Fusion',
-                '~/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist',
-                '~/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist.lockfile',
-                '~/Library/Preferences/com.vmware.fusion.plist',
-                '~/Library/Preferences/com.vmware.fusion.plist.lockfile',
-                '~/Library/Preferences/com.vmware.fusionDaemon.plist',
-                '~/Library/Preferences/com.vmware.fusionDaemon.plist.lockfile',
-                '~/Library/Preferences/com.vmware.fusionStartMenu.plist',
-                '~/Library/Preferences/com.vmware.fusionStartMenu.plist.lockfile',
-              ]
+  zap trash: [
+               '/Library/Application Support/VMware',
+               '/Library/Logs/VMware Fusion Services.log',
+               '/Library/Logs/VMware USB Arbitrator Service.log',
+               '/Library/Logs/VMware',
+               '/Library/Preferences/VMware Fusion',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vmware.fusion.sfl*',
+               '~/Library/Application Support/VMware Fusion',
+               '~/Library/Caches/com.vmware.fusion',
+               '~/Library/Logs/VMware Fusion',
+               '~/Library/Logs/VMware Graphics Service.log',
+               '~/Library/Logs/VMware',
+               '~/Library/Preferences/VMware Fusion',
+               '~/Library/Preferences/com.vmware.fusion.plist',
+               '~/Library/Preferences/com.vmware.fusion.plist.lockfile',
+               '~/Library/Preferences/com.vmware.fusionDaemon.plist',
+               '~/Library/Preferences/com.vmware.fusionDaemon.plist.lockfile',
+               '~/Library/Preferences/com.vmware.fusionStartMenu.plist',
+               '~/Library/Preferences/com.vmware.fusionStartMenu.plist.lockfile',
+               '~/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist',
+               '~/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist.lockfile',
+               '~/Library/Saved Application State/com.vmware.fusion.savedState',
+               '~/Library/WebKit/com.vmware.fusion',
+             ]
+
+  caveats do
+    kext
+  end
 end

@@ -7,7 +7,6 @@ cask 'qlprettypatch' do
           checkpoint: 'bde7fda8ee5fa2d6b878a3353a1a9ee346491dc86f378ff8117bb0457957796e'
   name 'QLPrettyPatch'
   homepage 'https://github.com/atnan/QLPrettyPatch'
-  license :bsd
 
   qlplugin 'QLPrettyPatch.qlgenerator'
 end

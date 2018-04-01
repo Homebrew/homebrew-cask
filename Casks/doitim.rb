@@ -1,13 +1,12 @@
 cask 'doitim' do
-  version '4.2.3'
-  sha256 'd9cc46729385cf94f7fc653e7e425baa33f3a7c193bfe386255b4afc88e685eb'
+  version '4.2.6'
+  sha256 'bf875f3b200540a708a8d4f404e98bc73b355b81a27183d091d31af73fe4f122'
 
   url "http://version.doit.im/dl/doit.im.#{version}.zip"
   appcast 'http://version.doit.im/mac/update.xml',
-          checkpoint: '4e1f29318d7adf08a0a39da28d53a36ae4389db20b2f005ddfb92effe953c6a6'
+          checkpoint: '12e5c755ba8e9ea0acd8b1cc8c045f1195287c2bbf2671cbb8d60b6155d7c6eb'
   name 'Doit.im'
-  homepage 'http://doit.im/'
-  license :commercial
+  homepage 'https://doit.im/'
 
   app 'Doit.im.app'
 end

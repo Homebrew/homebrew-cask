@@ -1,13 +1,19 @@
 cask 'dingtalk' do
-  version '1.13.1'
-  sha256 '2630456faa3b99e5005d40b15f496abbb14e6f58a8e84b72f9c9f7146fb1e2a8'
+  version '4.3.0'
+  sha256 '987cd5866e21d7525ae958e0cb282c05e2eb1812a205e86aa034a0c0775c787e'
 
-  # taobaocdn.com/dingtalk-desktop was verified as official when first introduced to the cask
-  url "http://download.taobaocdn.com/dingtalk-desktop/Release/install/DingTalk_v#{version}.dmg"
+  # download.alicdn.com/dingtalk-desktop was verified as official when first introduced to the cask
+  url "https://download.alicdn.com/dingtalk-desktop/mac_dmg/Release/DingTalk_v#{version}.dmg"
   name 'DingTalk'
   name '钉钉'
-  homepage 'http://www.dingtalk.com/'
-  license :commercial
+  homepage 'https://www.dingtalk.com/'
 
-  app '钉钉.app'
+  app 'DingTalk.app'
+
+  zap trash: [
+               '~/Library/Application Support/DingTalk',
+               '~/Library/Caches/DingTalk',
+               '~/Library/Preferences/com.dingtalk.mac.plist',
+               '~/Library/Saved Application State/com.dingtalk.mac.savedState',
+             ]
 end

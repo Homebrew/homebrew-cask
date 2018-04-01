@@ -5,7 +5,6 @@ cask 'sizzlingkeys' do
   url 'http://www.yellowmug.com/download/SizzlingKeys.dmg'
   name 'SizzlingKeys'
   homepage 'http://www.yellowmug.com/sk4it/'
-  license :commercial
 
   app 'SizzlingKeys.app'
 end

@@ -6,11 +6,6 @@ cask 'fontstand' do
       user_agent: :fake
   name 'Fontstand'
   homepage 'https://fontstand.com/'
-  license :gratis
 
   app 'Fontstand.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 end

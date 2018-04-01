@@ -7,7 +7,6 @@ cask 'super-otr' do
           checkpoint: 'e6b1c672d73b888eb2a8533258b7c8b9dcb093d92c55ac5adc84838edb2b33ab'
   name 'Super OTR'
   homepage 'http://apfel-a.macbay.de/super-otr/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Super OTR.app'
 end

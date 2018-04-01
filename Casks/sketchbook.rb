@@ -1,11 +1,10 @@
 cask 'sketchbook' do
-  version '8.0'
-  sha256 'e5cf66721a94f1919fcc4d52682776895b90ed6e750dfce82bae7bccc576fa02'
+  version '8.5.1'
+  sha256 '5362b635735071ba9d60e60fa88b07e45a6f27e9d416b9ed4081fa1ba375c0a0'
 
   url "https://cdn.sketchbook.com/mac/SketchBook_v#{version}_mac.dmg"
   name 'Autodesk Sketchbook'
   homepage 'https://www.sketchbook.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   pkg "SketchBook_v#{version}_mac.pkg"
 

@@ -1,22 +1,17 @@
 cask 'dotnet' do
-  version '1.0.0-preview2-003121'
-  sha256 'c1ce17a46844291ee327c078e5c354cd5d90817ae2049c450a63522adf9b9c10'
+  version '2.0.6'
+  sha256 'dd0a68cf2ac8cab152c9963cef5840fa4791e506ffa0362cd419883d7af28118'
 
-  url "https://download.microsoft.com/download/0/A/3/0A372822-205D-4A86-BFA7-084D2CBE9EDF/dotnet-dev-osx-x64.#{version}.pkg"
-  name '.Net Core'
+  url "https://download.microsoft.com/download/8/D/A/8DA04DA7-565B-4372-BBCE-D44C7809A467/dotnet-runtime-#{version}-osx-x64.pkg"
+  name '.Net Core Runtime'
   homepage 'https://www.microsoft.com/net/core#macos'
-  license :mit
 
-  depends_on formula: 'openssl'
+  depends_on macos: '>= :sierra'
 
-  pkg "dotnet-dev-osx-x64.#{version}.pkg"
+  pkg "dotnet-runtime-#{version}-osx-x64.pkg"
 
-  uninstall pkgutil: 'com.microsoft.dotnet.*'
+  uninstall pkgutil: 'com.microsoft.dotnet.*',
+            delete:  '/etc/paths.d/dotnet'
 
-  caveats <<-EOS.undent
-    The latest version of OpenSS is required to use .NET Core.
-    It was already installed, but you may need to link it
-
-      brew link --force openssl
-  EOS
+  zap trash: '~/.nuget'
 end

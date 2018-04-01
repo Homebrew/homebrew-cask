@@ -5,8 +5,7 @@ cask 'quadrosync' do
   # amazonaws.com/quadro-downloads was verified as official when first introduced to the cask
   url 'https://s3-eu-west-1.amazonaws.com/quadro-downloads/daemon/mac/QuadroSync_mac.dmg'
   name 'QuadroSync'
-  homepage 'http://quadro.me/sync'
-  license :gratis
+  homepage 'https://www.quadro.me/sync'
 
   installer manual: 'QuadroInstaller.app'
 
@@ -21,5 +20,5 @@ cask 'quadrosync' do
             launchctl:  'com.quadro.QuadroInstaller.HelperTool',
             login_item: 'QuadroSync'
 
-  zap delete: '/Library/Application Support/Quadro'
+  zap trash: '/Library/Application Support/Quadro'
 end

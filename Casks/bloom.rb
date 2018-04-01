@@ -5,7 +5,6 @@ cask 'bloom' do
   url 'https://thebloomapp.com/dn/Bloom.pkg'
   name 'Bloom'
   homepage 'https://thebloomapp.com/features/'
-  license :commercial
 
   pkg 'Bloom.pkg'
 

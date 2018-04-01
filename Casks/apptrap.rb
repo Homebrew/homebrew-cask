@@ -4,10 +4,9 @@ cask 'apptrap' do
 
   url "http://onnati.net/apptrap/download/AppTrap#{version.dots_to_hyphens}.zip"
   appcast 'http://onnati.net/apptrap/ReleaseNotes.xml',
-          checkpoint: '561cc83e41aea261c0472d73369c19b7c738b95b764eb346508a654643d651d5'
+          checkpoint: '5808b1d59e4a2d49af25be84bc388e586ece3d22840a4c07368ee6044357ebf0'
   name 'AppTrap'
-  homepage 'http://onnati.net/apptrap'
-  license :other # see https://github.com/kvijayan/AppTrap/blob/master/LICENSE
+  homepage 'http://onnati.net/apptrap/'
 
   prefpane 'AppTrap.prefPane'
 end

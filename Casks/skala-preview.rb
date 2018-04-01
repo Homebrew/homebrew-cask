@@ -6,7 +6,6 @@ cask 'skala-preview' do
   url "https://s3.amazonaws.com/bjango/files/skalapreview/skalapreview#{version}.zip"
   name 'Skala Preview'
   homepage 'https://bjango.com/mac/skalapreview/'
-  license :gratis
 
   app 'Skala Preview.app'
 end

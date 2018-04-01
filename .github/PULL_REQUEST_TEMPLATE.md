@@ -1,27 +1,22 @@
-##### Instructions
+<!-- If there’s a checkbox you can’t complete for any reason, that's okay, just explain in detail why you weren’t able to do so. -->
 
-- Look for and complete the section relevant to your submission. Delete the others, including these `Instructions`.
-- `{{cask_file}}` represents the cask file you’re submitting/editing (if applicable).
-- If there’s a checkbox you can’t complete for any reason, that’s OK. Just explain in detail why you weren’t able to do so.
+After making all changes to the cask:
 
-### Changes to a cask
-#### Editing an existing cask
-
-- [ ] Commit message includes cask’s name (and new version, if applicable).
 - [ ] `brew cask audit --download {{cask_file}}` is error-free.
-- [ ] `brew cask style --fix {{cask_file}}` left no offenses.
+- [ ] `brew cask style --fix {{cask_file}}` reports no offenses.
+- [ ] The commit message includes the cask’s name and version.
 
-#### Adding a new cask
+Additionally, if **adding a new cask**:
 
-- [ ] Checked there aren’t open [pull requests](https://github.com/caskroom/homebrew-cask/pulls) for the same cask.
-- [ ] Checked there aren’t closed [issues](https://github.com/caskroom/homebrew-cask/issues) where that cask was already refused.
-- [ ] When naming the cask, followed the [token reference](https://github.com/caskroom/homebrew-cask/blob/master/doc/cask_language_reference/token_reference.md).
-- [ ] Commit message includes cask’s name.
-- [ ] `brew cask audit --download {{cask_file}}` is error-free.
-- [ ] `brew cask style --fix {{cask_file}}` left no offenses.
+- [ ] Named the cask according to the [token reference].
 - [ ] `brew cask install {{cask_file}}` worked successfully.
 - [ ] `brew cask uninstall {{cask_file}}` worked successfully.
+- [ ] Checked there are no [open pull requests] for the same cask.
+- [ ] Checked the cask was not already refused in [closed issues].
+- [ ] Checked the cask is submitted to [the correct repo].
 
-### Changes to the core
-
-- [ ] Followed [hacking.md](https://github.com/caskroom/homebrew-cask/blob/master/doc/development/hacking.md).
+[token reference]: https://github.com/caskroom/homebrew-cask/blob/master/doc/cask_language_reference/token_reference.md
+[open pull requests]: https://github.com/caskroom/homebrew-cask/pulls
+[closed issues]: https://github.com/caskroom/homebrew-cask/issues?q=is%3Aissue+is%3Aclosed
+[the correct repo]: https://github.com/caskroom/homebrew-cask/blob/master/doc/development/adding_a_cask.md#finding-a-home-for-your-cask
+[version-checksum]: https://github.com/caskroom/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/sha256.md#updating-the-sha256

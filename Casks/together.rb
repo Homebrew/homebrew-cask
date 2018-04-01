@@ -1,22 +1,21 @@
 cask 'together' do
-  version '3.5.8'
-  sha256 '2425411e6972a186d289c49b454041943fe6e594a445487cd42894166648b523'
+  version '3.8.8'
+  sha256 '689992d5d84f1137cbbd23e9b9114dd56545fbe8df40310ea19b715c447fbae2'
 
-  url "http://reinventedsoftware.com/together/downloads/Together_#{version}.dmg"
+  url "https://reinventedsoftware.com/together/downloads/Together_#{version}.dmg"
   appcast "https://reinventedsoftware.com/together/downloads/Together#{version.major}.xml",
-          checkpoint: '9d707f8da1a99bf4e85bdd61274b8310ee4578434146ba9d6fce778062aba7b9'
+          checkpoint: 'c48a8d1604cae34b5682560af9f43446a76a6482abc3b57654ddcfdedb0af2a0'
   name 'Together'
-  homepage 'http://reinventedsoftware.com/together/'
-  license :commercial
+  homepage 'https://reinventedsoftware.com/together/'
 
   app "Together #{version.major}.app"
 
-  zap delete: [
-                "~/Library/Application Support/Together #{version.major}",
-                '~/Library/Caches/Together',
-                "~/Library/Caches/com.reinvented.Together#{version.major}",
-                "~/Library/Preferences/com.reinvented.Together#{version.major}.shared.plist",
-                "~/Library/Preferences/com.reinvented.Together#{version.major}.plist",
-                "~/Library/Saved Application State/com.reinvented.Together#{version.major}.savedState",
-              ]
+  zap trash: [
+               "~/Library/Application Support/Together #{version.major}",
+               '~/Library/Caches/Together',
+               "~/Library/Caches/com.reinvented.Together#{version.major}",
+               "~/Library/Preferences/com.reinvented.Together#{version.major}.shared.plist",
+               "~/Library/Preferences/com.reinvented.Together#{version.major}.plist",
+               "~/Library/Saved Application State/com.reinvented.Together#{version.major}.savedState",
+             ]
 end

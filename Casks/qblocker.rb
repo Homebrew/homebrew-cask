@@ -7,17 +7,16 @@ cask 'qblocker' do
   appcast 'https://updates.devmate.com/uk.co.wearecocoon.QBlocker.xml',
           checkpoint: '9e2b0dd2a34cf6bb9349ed7671a9fd1926f574e38aebbf95266663866f6708bf'
   name 'QBlocker'
-  homepage 'http://qblocker.com/'
-  license :oss
+  homepage 'https://qblocker.com/'
 
   accessibility_access true
 
   app 'QBlocker.app'
 
-  zap delete: [
-                '~/Library/Application Support/uk.co.wearecocoon.QBlocker',
-                '~/Library/Caches/uk.co.wearecocoon.QBlocker',
-                '~/Library/Logs/uk.co.wearecocoon.QBlocker',
-                '~/Library/Preferences/uk.co.wearecocoon.QBlocker.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/uk.co.wearecocoon.QBlocker',
+               '~/Library/Caches/uk.co.wearecocoon.QBlocker',
+               '~/Library/Logs/uk.co.wearecocoon.QBlocker',
+               '~/Library/Preferences/uk.co.wearecocoon.QBlocker.plist',
+             ]
 end

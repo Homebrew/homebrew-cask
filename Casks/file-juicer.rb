@@ -1,11 +1,10 @@
 cask 'file-juicer' do
-  version :latest
-  sha256 :no_check
+  version '4.66'
+  sha256 'f8b13fc813b95af16c7d0a26ec254cca22cdfc46c499534fdfff3c29657d4345'
 
-  url 'http://echoone.com/filejuicer/FileJuicer.dmg'
+  url "https://echoone.com/filejuicer/FileJuicer-#{version}.zip"
   name 'File Juicer'
-  homepage 'http://echoone.com/filejuicer/'
-  license :commercial
+  homepage 'https://echoone.com/filejuicer/'
 
   app 'File Juicer.app'
 end

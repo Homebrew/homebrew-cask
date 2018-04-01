@@ -5,13 +5,12 @@ cask 'nestopia' do
   url 'http://www.bannister.org/cgi-bin/download.cgi?nestopia'
   name 'Nestopia'
   homepage 'http://www.bannister.org/software/nestopia.htm'
-  license :closed
 
   app 'Nestopia.app'
 
-  zap delete: [
-                '~/Library/Application Support/Bannister/Nestopia',
-                '~/Library/Preferences/com.bannister.nestopia.plist',
-                '~/Library/Saved Application State/com.bannister.nestopia.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Bannister/Nestopia',
+               '~/Library/Preferences/com.bannister.nestopia.plist',
+               '~/Library/Saved Application State/com.bannister.nestopia.savedState',
+             ]
 end

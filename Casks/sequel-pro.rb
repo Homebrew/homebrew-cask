@@ -5,14 +5,18 @@ cask 'sequel-pro' do
   # github.com/sequelpro/sequelpro was verified as official when first introduced to the cask
   url "https://github.com/sequelpro/sequelpro/releases/download/release-#{version}/sequel-pro-#{version}.dmg"
   appcast 'https://github.com/sequelpro/sequelpro/releases.atom',
-          checkpoint: 'dab1d8d845c8ced586958bc4ded12de724c9ec3013313ff3c2a4babc7cdd74fb'
+          checkpoint: 'dd327a631d7302069c3628f75454e419d9e490372607d08e428285a1fe69eb5c'
   name 'Sequel Pro'
-  homepage 'http://www.sequelpro.com/'
-  license :mit
+  homepage 'https://www.sequelpro.com/'
 
   depends_on macos: '>= :leopard'
 
   app 'Sequel Pro.app'
 
-  zap delete: '~/Library/Application Support/Sequel Pro/Data'
+  zap trash: [
+               '~/Library/Application Support/Sequel Pro',
+               '~/Library/Caches/com.sequelpro.SequelPro',
+               '~/Library/Preferences/com.sequelpro.SequelPro.plist',
+               '~/Library/Saved Application State/com.sequelpro.SequelPro.savedState',
+             ]
 end

@@ -4,8 +4,7 @@ cask 'macterm' do
 
   url 'http://www.macterm.net/updates/macterm-latest.dmg'
   name 'MacTerm'
-  homepage 'http://www.macterm.net/'
-  license :gpl
+  homepage 'https://www.macterm.net/'
 
   app 'MacTerm.app'
 end

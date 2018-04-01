@@ -7,7 +7,6 @@ cask 'validator-sac' do
           checkpoint: '77f03c3c2861b79981b146bca3ea710dd34747691c5a3828c301b56bace34e58'
   name 'Validator S.A.C.'
   homepage 'https://habilis.net/validator-sac/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'Validator-SAC.app'
 end

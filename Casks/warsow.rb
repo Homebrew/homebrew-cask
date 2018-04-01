@@ -1,11 +1,11 @@
 cask 'warsow' do
-  version '2.1'
-  sha256 '347c47b029dc706ab43b754ec7422c3766dde2b2ed9a3ce0f40cd0d52c64f94d'
+  version '2.1.2'
+  sha256 '176b037186e4d8a1c0fc740fe8660cd960339fc4eeca5e5eaaec4028b9bd6aba'
 
-  url "https://www.warsow.gg/download?dl=warsow#{version.no_dots}mac"
+  # sebastian.network/warsow was verified as official when first introduced to the cask
+  url "http://sebastian.network/warsow/warsow-#{version}.dmg"
   name 'Warsow'
-  homepage 'http://www.warsow.gg/'
-  license :gpl
+  homepage 'https://www.warsow.net/'
 
   app 'Warsow.app'
 end

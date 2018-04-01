@@ -5,7 +5,6 @@ cask 'voikkospellservice' do
   url "http://verteksi.net/files/osxspell/VoikkoSpellService-#{version}.dmg"
   name 'VoikkoSpellService'
   homepage 'http://verteksi.net/lab/osxspell/'
-  license :gpl
 
   depends_on macos: '>= :mavericks'
 

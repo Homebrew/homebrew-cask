@@ -1,13 +1,12 @@
 cask 'switchresx' do
-  version '4.5.3'
+  version '4.6.5'
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "http://www.madrau.com/data/switchresx/SwitchResX#{version.major}.zip"
+  url "https://www.madrau.com/data/switchresx/SwitchResX#{version.major}.zip"
   name 'SwitchResX'
-  homepage 'http://www.madrau.com'
-  license :freemium
+  homepage 'https://www.madrau.com/'
 
-  prefpane 'SwitchResX.prefPane'
+  prefpane 'SwitchResX.app/Contents/Resources/SwitchResX.prefPane'
 
   uninstall quit:   [
                       'fr.madrau.switchresx.app',

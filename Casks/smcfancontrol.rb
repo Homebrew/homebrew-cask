@@ -1,13 +1,20 @@
 cask 'smcfancontrol' do
-  version '2.5.2'
-  sha256 'e543b6a9fdb1bda6612699692f4dbaa9305007d451c987f2ae586950cbdf852b'
+  version '2.6'
+  sha256 '7662058e618537eb466307e3b12e540b857e61392646a5b09df51bec9ad6da38'
 
-  url "http://www.eidac.de/smcfancontrol/smcfancontrol_#{version.dots_to_underscores}.zip"
-  appcast 'http://www.eidac.de/smcfancontrol/smcfancontrol.xml',
-          checkpoint: '02ee10ec262f518ad8e099fe4230b78235d48ed26729c5ccd2241fe2d6291881'
+  url "https://www.eidac.de/smcfancontrol/smcfancontrol_#{version.dots_to_underscores}.zip"
+  appcast 'https://www.eidac.de/smcfancontrol/smcfancontrol.xml',
+          checkpoint: 'bc7b8543fabb7f80e378ea1f24a1559fea3717a4835248ab9b82b3b6ac41e5de'
   name 'smcFanControl'
-  homepage 'http://www.eidac.de/?cat=40'
-  license :gpl
+  homepage 'https://www.eidac.de/?cat=40'
+
+  depends_on macos: '>= :lion'
 
   app 'smcFanControl.app'
+
+  zap trash: [
+               '~/Library/Application Support/smcFanControl',
+               "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.eidac.smcfancontrol#{version.major}.sfl*",
+               "~/Library/Caches/com.eidac.smcFanControl#{version.major}",
+             ]
 end

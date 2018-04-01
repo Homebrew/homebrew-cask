@@ -4,8 +4,13 @@ cask 'kvirc' do
 
   url "ftp://ftp.kvirc.de/pub/kvirc/#{version}/binary/osx/KVIrc-#{version}-Equilibrium.dmg"
   name 'KVIrc'
-  homepage 'http://www.kvirc.de'
-  license :gpl
+  homepage 'http://www.kvirc.de/'
 
   app 'KVIrc.app'
+
+  zap trash: [
+               '~/Library/Preferences/com.kvirc.kvirc.plist',
+               '~/Library/Saved Application State/com.kvirc.kvirc.savedState',
+               '~/.kvirc*.rc',
+             ]
 end

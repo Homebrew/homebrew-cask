@@ -1,15 +1,22 @@
 cask 'codekit' do
-  version '2.8-19127'
-  sha256 '0f7665ac2e750437c83c2f4f887c0e5df5b5e3d1a8a1a4ae255321f16beddf28'
+  version '3.5.2,26330'
+  sha256 '78c1328d4c77c2c81face88d94693475ca1f4ca949b1681202111474ae5a0037'
 
-  url "https://incident57.com/codekit/files/codekit-#{version.sub(%r{.*-}, '')}.zip"
-  appcast 'https://incident57.com/codekit/appcast/ck2appcast.xml',
-          checkpoint: 'cfb61004b168fa9ca62a66b46c68e42f6a23b3f20b66effa1a0a5446f7240f8d'
+  url "https://codekitapp.com/binaries/codekit-#{version.after_comma}.zip"
+  appcast "https://codekitapp.com/api/#{version.major}/appcast.xml",
+          checkpoint: '07a0fcac80858b0aeb05ba3966a8e6750072a8f270560cd1af461c05ebddd887'
   name 'CodeKit'
-  homepage 'https://incident57.com/codekit/'
-  license :commercial
+  homepage 'https://codekitapp.com/'
 
   auto_updates true
 
   app 'CodeKit.app'
+
+  zap trash: [
+               "~/Library/Application Support/com.incident57.CodeKit#{version.major}",
+               "~/Library/Caches/com.incident57.CodeKit#{version.major}",
+               "~/Library/Cookies/com.incident57.CodeKit#{version.major}.binarycookies",
+               "~/Library/Preferences/com.incident57.CodeKit#{version.major}.plist",
+               "~/Library/Saved Application State/com.incident57.CodeKit#{version.major}.savedState",
+             ]
 end

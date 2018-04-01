@@ -5,7 +5,11 @@ cask 'textual' do
   url 'https://www.codeux.com/textual/downloads/Textual.dmg'
   name 'Textual'
   homepage 'https://www.codeux.com/textual/'
-  license :commercial
 
   app 'Textual.app'
+
+  zap trash: [
+               '~/Library/Preferences/com.codeux.apps.textual.plist',
+               '~/Library/Application Support/Textual',
+             ]
 end

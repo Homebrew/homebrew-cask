@@ -1,14 +1,13 @@
 cask 'overture' do
-  version '2.3.6'
-  sha256 '623355be84033257f3434d2f85a2a632f28f4adbeee4a897b92be53e147846a4'
+  version '2.6.0'
+  sha256 '9ecdaa3aee858459c9383c9277c82d7f2d28b1a6fba989d49c18223909f77ef6'
 
   # github.com/overturetool/overture was verified as official when first introduced to the cask
   url "https://github.com/overturetool/overture/releases/download/Release%2F#{version}/Overture-#{version}-macosx.cocoa.x86_64.zip"
   appcast 'https://github.com/overturetool/overture/releases.atom',
-          checkpoint: 'bc8eff785ac9f781aeeee6f94a37447ff529439b53918de3d8487bdca855c046'
+          checkpoint: '60e51d8d7b605de42480aba89cd6dadaa3e514fd90b27aabf8d9715cabfabd03'
   name 'Overture Tool'
   homepage 'http://overturetool.org/'
-  license :gpl
 
-  app 'Overture.app'
+  app "Overture-#{version}-macosx.cocoa.x86_64/Overture.app"
 end

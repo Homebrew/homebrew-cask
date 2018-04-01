@@ -1,14 +1,13 @@
 cask 'gpodder' do
-  version '3.9.0_2'
-  sha256 'c5dafe2685057545cf6505d9492c429ab9c585e159c04bec62847c9ba9a40c2f'
+  version '3.10.1'
+  sha256 '895bbb49594630db42f71e687942714fbf5db651d1d4844e75d44e99df2729f2'
 
-  # sourceforge.net/gpodder was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/gpodder/gPodder-#{version}.zip"
-  appcast 'https://sourceforge.net/projects/gpodder/rss',
-          checkpoint: '2e66a10eb5778906af6dbcccc6a1e46d9d43e63bb3d8216c9c67a81a5de4e838'
+  # github.com/gpodder/gpodder was verified as official when first introduced to the cask
+  url "https://github.com/gpodder/gpodder/releases/download/#{version}/macOS-gPodder-#{version}.zip"
+  appcast 'https://github.com/gpodder/gpodder/releases.atom',
+          checkpoint: 'c8e78117f11a8677c6b94d95ea1b04f6d40e6cc1232e464d49a55466baa40c58'
   name 'gPodder'
-  homepage 'http://gpodder.org/'
-  license :gpl
+  homepage 'https://gpodder.github.io/'
 
   app 'gPodder.app'
 end

@@ -1,25 +1,21 @@
 cask 'filezilla' do
-  if MacOS.release <= :snow_leopard
-    version '3.8.1'
-    sha256 '86c725246e2190b04193ce8e7e5ea89d5b9318e9f20f5b6f9cdd45b6f5c2d283'
-  else
-    version '3.20.1'
-    sha256 '25de076e7d1a48cfc26a185862ad8ce94af7d00b4aa8531ce4bbf49ca7bd5862'
-  end
+  version '3.31.0'
+  sha256 '188e8d9af77dbcdd6176fb7eeca19083fff6f22e41331a1927c78c73c1faa769'
 
-  # sourceforge.net/filezilla was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/filezilla/FileZilla_Client/#{version}/FileZilla_#{version}_macosx-x86.app.tar.bz2"
-  appcast 'https://sourceforge.net/projects/filezilla/rss?path=/FileZilla_Client',
-          checkpoint: 'e92d0877088496a24af1fbfcdad6df7829c43492dc72a9243a213655a7a9b09b'
+  url "https://download.filezilla-project.org/client/FileZilla_#{version}_macosx-x86.app.tar.bz2"
+  appcast 'https://filezilla-project.org/versions.php?type=client',
+          checkpoint: '9b1a081a82ba46468494ab610ca341f26790ccc431193bda585571cf9ca722e0'
   name 'FileZilla'
   homepage 'https://filezilla-project.org/'
-  license :gpl
+
+  depends_on macos: '>= :mavericks'
 
   app 'FileZilla.app'
 
-  zap delete: [
-                '~/.config/filezilla',
-                '~/Library/Saved Application State/de.filezilla.savedState',
-                '~/Library/Preferences/de.filezilla.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/de.filezilla.sfl*',
+               '~/Library/Saved Application State/de.filezilla.savedState',
+               '~/Library/Preferences/de.filezilla.plist',
+               '~/.config/filezilla',
+             ]
 end

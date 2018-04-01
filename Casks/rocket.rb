@@ -6,12 +6,11 @@ cask 'rocket' do
   url 'https://dl.devmate.com/net.matthewpalmer.Rocket/Rocket.dmg'
   name 'Rocket'
   homepage 'http://matthewpalmer.net/rocket/'
-  license :freemium
 
   app 'Rocket.app'
 
-  zap delete: [
-                '~/Library/Application Support/Rocket',
-                '~/Library/Preferences/net.matthewpalmer.Rocket.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Rocket',
+               '~/Library/Preferences/net.matthewpalmer.Rocket.plist',
+             ]
 end

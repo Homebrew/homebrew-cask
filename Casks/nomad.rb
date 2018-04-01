@@ -1,14 +1,20 @@
 cask 'nomad' do
-  version '0.3.2'
-  sha256 '96808b9b8056490026327bdc6614e1813cee7d42978676e0024085709fd3fcac'
+  version :latest
+  sha256 :no_check
 
-  # hashicorp.com/nomad was verified as official when first introduced to the cask
-  url "https://releases.hashicorp.com/nomad/#{version}/nomad_#{version}_darwin_amd64.zip"
-  appcast 'https://github.com/hashicorp/nomad/releases.atom',
-          checkpoint: 'b65196b74ce907895afc4e8fc5bc4e4545d431edb2477cf743a21bb2b953b140'
-  name 'Nomad'
-  homepage 'https://www.nomadproject.io/'
-  license :mpl
+  url 'https://www.nomad.menu/download/NoMAD.pkg'
+  name 'NoMAD'
+  homepage 'https://nomad.menu/'
 
-  binary 'nomad'
+  depends_on macos: '>= :yosemite'
+
+  pkg 'NoMAD.pkg'
+
+  uninstall pkgutil: 'com.trusourcelabs.NoMAD'
+
+  zap trash: [
+               '~/Library/Application Support/CrashReporter/NoMAD*',
+               '~/Library/Logs/DiagnosticReports/NoMAD*',
+               '~/Library/Preferences/com.trusourcelabs.NoMAD.plist',
+             ]
 end

@@ -1,17 +1,19 @@
 cask 'nagbar' do
-  version '1.2.5'
-  sha256 '9d98fc193dfdc73621e40b15bf49abf15711b05e41835abe0469d9da10017037'
+  version '1.3.4'
+  sha256 '04db2dfd7d1df586788bd24cd77c8b74c1484506f184694d2b8f4a28633029e1'
 
-  url "https://sites.google.com/site/nagbarapp/NagBar-#{version}.dmg?attredirects=0&d=1"
+  # github.com/volendavidov/NagBar was verified as official when first introduced to the cask
+  url "https://github.com/volendavidov/NagBar/releases/download/#{version}/NagBar.zip"
+  appcast 'https://github.com/volendavidov/NagBar/releases.atom',
+          checkpoint: 'dbf539729766eb917880f571b01be5d859d3d056708f0d7e9350e926471425dd'
   name 'NagBar'
   homepage 'https://sites.google.com/site/nagbarapp/home'
-  license :gratis
 
   app 'NagBar.app'
 
-  zap delete: [
-                '~/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.volendavidov.nagbar.sfl',
-                '~/Caches/com.volendavidov.NagBar',
-                '~/Preferences/com.volendavidov.NagBar.plist',
-              ]
+  zap trash: [
+               '~/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.volendavidov.nagbar.sfl*',
+               '~/Caches/com.volendavidov.NagBar',
+               '~/Preferences/com.volendavidov.NagBar.plist',
+             ]
 end

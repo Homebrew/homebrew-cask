@@ -1,17 +1,22 @@
 cask 'kicad' do
-  version '4.0.2'
-  sha256 '0e2db9ea09a5da4a4769caa2c024772336ca52edc4297d3e7d1bd11c000d28b3'
+  version '4.0.7'
+  sha256 '4ea15b3682f6213bb385a5abbdd2fd9b622045d68232855b460231beeaa58f4d'
 
   url "http://downloads.kicad-pcb.org/osx/stable/kicad-#{version}.dmg"
+  appcast 'http://downloads.kicad-pcb.org/osx/stable/',
+          checkpoint: '5bcd4d71ddbeb7a063c7e1907adb628f261a9f2843848a054574f2d2c8f18e9a'
   name 'KiCad'
-  homepage 'http://www.kicad-pcb.org/'
-  license :gpl
+  homepage 'http://kicad-pcb.org/'
 
   suite 'Kicad-apps', target: 'Kicad'
-  artifact 'kicad', target: "#{ENV['HOME']}/Library/Application Support/kicad"
+  artifact 'kicad', target: '/Library/Application Support/kicad'
 
   preflight do
-    system_command '/bin/mkdir', args: ['--', "#{staged_path}/Kicad-apps"]
-    system_command '/bin/mv', args: ['--', *Dir["#{staged_path}/Kicad/*.app"], "#{staged_path}/Kicad-apps/"]
+    FileUtils.cd staged_path do
+      FileUtils.mkdir 'Kicad-apps'
+      FileUtils.mv Dir.glob('Kicad/*.app'), 'Kicad-apps'
+    end
   end
+
+  zap trash: '~/Library/Preferences/kicad'
 end

@@ -1,8 +1,8 @@
 cask 'seil' do
-  if MacOS.release <= :mountain_lion
+  if MacOS.version <= :mountain_lion
     version '10.11.0'
     sha256 '4ee777bf0a7f023abadb1f6a836b08484cfc2db2a19dd0b28d8942a2b638f8e5'
-  elsif MacOS.release <= :yosemite
+  elsif MacOS.version <= :yosemite
     version '11.3.0'
     sha256 '5fd57db4f96b833c4f1005b3d68711bb9ea52f0db8e98a0793eb2a9ff5d290b2'
   else
@@ -15,11 +15,10 @@ cask 'seil' do
           checkpoint: 'bf1be761638c151d1780c80db40ecb489899e055f4fdd3ddfa56b8f5692c3912'
   name 'Seil'
   homepage 'https://pqrs.org/osx/karabiner/seil.html'
-  license :public_domain
 
-  depends_on macos: '>= :mountain_lion'
+  depends_on macos: '<= :el_capitan'
 
-  if MacOS.release <= :mountain_lion
+  if MacOS.version <= :mountain_lion
     pkg 'Seil.pkg'
   else
     pkg 'Seil.sparkle_guided.pkg'
@@ -29,10 +28,14 @@ cask 'seil' do
             kext:    'org.pqrs.driver.Seil',
             pkgutil: 'org.pqrs.driver.Seil'
 
-  zap       delete: [
-                      '~/Library/Caches/org.pqrs.PCKeyboardHack',
-                      '~/Library/Caches/org.pqrs.Seil',
-                      '~/Library/Preferences/org.pqrs.PCKeyboardHack.plist',
-                      '~/Library/Preferences/org.pqrs.Seil.plist',
-                    ]
+  zap trash: [
+               '~/Library/Caches/org.pqrs.PCKeyboardHack',
+               '~/Library/Caches/org.pqrs.Seil',
+               '~/Library/Preferences/org.pqrs.PCKeyboardHack.plist',
+               '~/Library/Preferences/org.pqrs.Seil.plist',
+             ]
+
+  caveats do
+    discontinued
+  end
 end

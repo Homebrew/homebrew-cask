@@ -1,11 +1,12 @@
 cask 'elyse' do
-  version '3.1.0'
-  sha256 'b66bf959d30045e2f80193a6b4f9de88341c9c9e13a691afa74ddcf44eee02d7'
+  version '4.0.1'
+  sha256 '4741a9d1ebf8d707489b2282a3ac0be3d5ea3c60042db2f3443b6b04412b1465'
 
   url "http://silkwoodsoftware.com/Elyse-#{version.no_dots}.dmg"
+  appcast 'http://silkwoodsoftware.com/download.html',
+          checkpoint: 'e547e0907e99999e52b81a396ffe5ed60066c670a7109f8ae24c17915c95aabd'
   name 'Elyse'
   homepage 'http://silkwoodsoftware.com/'
-  license :freemium
 
   app 'Elyse.app'
 end

@@ -6,7 +6,6 @@ cask 'tresorit' do
   url 'https://installerstorage.blob.core.windows.net/public/install/Tresorit.dmg'
   name 'Tresorit'
   homepage 'https://tresorit.com/'
-  license :gratis
 
   app 'Tresorit.app'
 end

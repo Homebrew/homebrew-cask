@@ -8,7 +8,6 @@ cask 'stand' do
           checkpoint: 'e8440576a4be7c429f6e1a1235992ddc259389767a7127c5ee2968c59c83584f'
   name 'Stand'
   homepage 'https://getstandapp.com/'
-  license :gratis
 
   app 'Stand.app'
 end

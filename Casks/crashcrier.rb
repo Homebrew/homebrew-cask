@@ -5,7 +5,6 @@ cask 'crashcrier' do
   url 'https://www.kainjow.com/downloads/CrashCrier.zip'
   name 'CrashCrier'
   homepage 'https://www.kainjow.com/'
-  license :mit
 
   app 'CrashCrier.app'
 

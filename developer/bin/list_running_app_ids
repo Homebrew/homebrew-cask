@@ -21,8 +21,8 @@ $opt_test = nil
 ###
 
 def check_ruby
-  if RUBY_VERSION.to_f < 1.9
-    print "You are currently using Ruby ", RUBY_VERSION, ", but version 1.9 or above is required."
+  if RUBY_VERSION.to_f < 2.0
+    print "You are currently using Ruby ", RUBY_VERSION, ", but version 2.0 or above is required."
     exit 1
   end
 end

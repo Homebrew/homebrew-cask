@@ -7,7 +7,6 @@ cask 'force-paste' do
           checkpoint: '15852a53ae4a1fd2d560607f39e1a1e593aa873bcc73c6f80635137a2e762997'
   name 'Force Paste'
   homepage 'https://github.com/EugeneDae/Force-Paste'
-  license :mit
 
   app 'Force Paste.app'
 end

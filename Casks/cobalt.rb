@@ -5,7 +5,6 @@ cask 'cobalt' do
   url 'http://assets.playcobalt.com/Cobalt.dmg'
   name 'Cobalt'
   homepage 'http://playcobalt.com/'
-  license :closed
 
   app 'Cobalt.app'
 end

@@ -5,7 +5,6 @@ cask 'magican' do
   url 'http://www.magicansoft.com/download/Magican.pkg'
   name 'Magican'
   homepage 'http://www.magicansoft.com/'
-  license :gratis
 
   pkg 'Magican.pkg'
 

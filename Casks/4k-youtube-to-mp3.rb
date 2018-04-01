@@ -1,12 +1,13 @@
 cask '4k-youtube-to-mp3' do
   # note: "3" is not a version number, but an intrinsic part of the product name
-  version '3.0'
-  sha256 '29b65a99f64ba5d6a1924df989b3cc1e0b7354fface7b4cbedc02eac17f2bd33'
+  version '3.3.3.1777'
+  sha256 'fa07045b9ea32cc7608a80462db35fbe96ed045691a16a112231ce4bec624486'
 
-  url "http://downloads.4kdownload.com/app/4kyoutubetomp3_#{version}.dmg"
+  url "https://dl.4kdownload.com/app/4kyoutubetomp3_#{version.major_minor_patch}.dmg"
+  appcast 'https://www.4kdownload.com/download',
+          checkpoint: '89c3a317a578aa5ef3291f295bb4ff1ffc73f87c026475924dbc3e9f50fe695b'
   name '4K YouTube to MP3'
   homepage 'https://www.4kdownload.com/products/product-youtubetomp3'
-  license :oss
 
   app '4K YouTube to MP3.app'
 end

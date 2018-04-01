@@ -1,12 +1,11 @@
 cask 'elasticwolf' do
-  version '5.1.6'
-  sha256 '32eccff8e2cff1187fbf4b8c614e61056ae9c371ebdba3174e021b413b973542'
+  version '5.1.7'
+  sha256 'c5a69e5c9038dd9724548848251df22bfe37b867c548eb47349358bfbc94c863'
 
-  # amazonaws.com/elasticwolf was verified as official when first introduced to the cask
+  # s3-us-gov-west-1.amazonaws.com/elasticwolf was verified as official when first introduced to the cask
   url "https://s3-us-gov-west-1.amazonaws.com/elasticwolf/ElasticWolf-osx-#{version}.zip"
   name 'AWS ElasticWolf Client Console'
-  homepage 'https://aws.amazon.com/developertools/9313598265692691'
-  license :gratis
+  homepage 'https://aws.amazon.com/tools/aws-elasticwolf-client-console/'
 
   app 'ElasticWolf.app'
 end

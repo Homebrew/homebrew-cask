@@ -5,14 +5,13 @@ cask 'hp-eprint' do
   url "https://ftp.hp.com/pub/softlib/software13/COL43009/ds-104730-8/HP-ePrint_v#{version}.dmg"
   name 'HP ePrint'
   homepage 'http://h20331.www2.hp.com/hpsub/us/en/eprint/overview.html'
-  license :gratis
 
   pkg 'HP ePrint Installer.pkg'
 
   uninstall pkgutil: 'com.hp.pkg.cloudprint.HP-ePrint-Mobile'
 
-  zap delete: [
-                '~/Library/Containers/com.hp.cloudprint.HP-ePrint-Mobile',
-                '~/Library/PDF Services/HP ePrint',
-              ]
+  zap trash: [
+               '~/Library/Containers/com.hp.cloudprint.HP-ePrint-Mobile',
+               '~/Library/PDF Services/HP ePrint',
+             ]
 end

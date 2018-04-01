@@ -1,16 +1,15 @@
 cask 'studiolinkcomponent' do
-  version '16.02.2-beta'
-  sha256 '1ed7524c6cb7a4635eb8c27310ca894f56df6db335dc08c9bcda5843be64f87a'
+  version '17.03.1-beta'
+  sha256 'f7cc98eec919a304127d9f50e54a54db29a7dd7c5c0d38d6762d7f49df118a95'
 
   # github.com/Studio-Link-v2/backend was verified as official when first introduced to the cask
   url "https://github.com/Studio-Link-v2/backend/releases/download/v#{version}/studio-link-plugin-osx.zip"
   appcast 'https://github.com/Studio-Link-v2/backend/releases.atom',
-          checkpoint: 'f12e402194581d2fc3c8230faa2b2b069a3b57d6d5ad5df3df3c0b83d6103098'
+          checkpoint: 'bff5b9f008c1b4203eb2d845f8ec1e197392e45a5417fb064ae5f1a55248bf48'
   name 'Studio Link Plugin'
   homepage 'https://doku.studio-link.de/plugin/installation-plugin.html'
-  license :bsd
 
   audio_unit_plugin 'StudioLink.component'
 
-  zap delete: '~/.studio-link-plugin'
+  zap trash: '~/.studio-link-plugin'
 end

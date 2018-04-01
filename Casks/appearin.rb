@@ -4,19 +4,18 @@ cask 'appearin' do
 
   url "https://github.com/vitorgalvao/appear.in/releases/download/#{version}/appear.in-osx-#{version}.zip"
   appcast 'https://github.com/vitorgalvao/appear.in/releases.atom',
-          checkpoint: '4640526b621a7f622b852eebb3940bb7c3ce6773e4679130efde1ba1fc5296a2'
+          checkpoint: '7524292c3e42d0f805a44991c2d8f9459891516317eab49a446a414163d8eb5d'
   name 'appear.in'
   homepage 'https://github.com/vitorgalvao/appear.in'
-  license :public_domain
 
   app 'appear.in.app'
 
   uninstall quit: 'com.vitorgalvao.appear.in'
 
-  zap delete: [
-                '~/Library/Application Support/appear.in',
-                '~/Library/Caches/appear.in',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vitorgalvao.appear.in.sfl',
-                '~/Library/Saved Application State/com.vitorgalvao.appear.in.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/appear.in',
+               '~/Library/Caches/appear.in',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vitorgalvao.appear.in.sfl*',
+               '~/Library/Saved Application State/com.vitorgalvao.appear.in.savedState',
+             ]
 end

@@ -5,7 +5,6 @@ cask 'zettelkasten' do
   url "http://zettelkasten.danielluedecke.de/download/Zettelkasten#{version.major}_mac.zip"
   name 'zettelkasten'
   homepage 'http://zettelkasten.danielluedecke.de/'
-  license :gpl
 
   app 'Zettelkasten.app'
 end

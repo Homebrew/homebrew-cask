@@ -1,13 +1,19 @@
 cask 'festify' do
-  version '1.4.2'
-  sha256 '07f3ad04bede2d6a622f3652382193e7024f6d1f308b6f1208a036d13c15413a'
+  version '0.2.10'
+  sha256 '884b9f0f5e6413fdcec547f0c414c8ed7ab3992bf348218cd0e298557522ee3d'
 
-  url "http://getfestify.com/updates/mac/packages/#{version}/Festify.zip"
-  appcast 'http://getfestify.com/updates/mac/festify.xml',
-          checkpoint: 'c38bc30efe3ecf2ac377a760cac281fbda793baf37949bbb331ad7359c082544'
+  url "https://github.com/festify/app/releases/download/v#{version}/Festify-#{version}.dmg"
+  appcast 'https://github.com/Festify/app/releases.atom',
+          checkpoint: '02408830be2ec73a2b0d8c09af58fad2b55b0da7f9ce72b0df27581c95375403'
   name 'Festify'
-  homepage 'http://getfestify.com/'
-  license :gratis
+  homepage 'https://github.com/festify/app'
 
   app 'Festify.app'
+
+  zap trash: [
+               '~/Library/Application Support/Festify',
+               '~/Library/Preferences/rocks.festify.app.helper.plist',
+               '~/Library/Preferences/rocks.festify.app.plist',
+               '~/Library/Saved Application State/rocks.festify.app.savedState',
+             ]
 end

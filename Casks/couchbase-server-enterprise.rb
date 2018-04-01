@@ -1,11 +1,15 @@
 cask 'couchbase-server-enterprise' do
-  version '4.1.0'
-  sha256 '237837598a1bf663debaea5c909bce36a39fbc673139cf4d4ebc55fb5c276313'
+  if MacOS.version <= :el_capitan
+    version '4.5.1'
+    sha256 'de014c7c134eb97ff00be6b2e6f5d0da84295ce05bbb7bb3a4d3c747a365cd22'
+  else
+    version '4.6.1'
+    sha256 'f1a8183bcc4c9b21db4c85a43fb18776f94be2843266a36cf401e47bf37c16b6'
+  end
 
-  url "http://packages.couchbase.com/releases/#{version}/couchbase-server-enterprise_#{version}-macos_x86_64.zip"
+  url "https://packages.couchbase.com/releases/#{version}/couchbase-server-enterprise_#{version}-macos_x86_64.zip"
   name 'Couchbase Server'
-  homepage 'http://www.couchbase.com/'
-  license :apache
+  homepage 'https://www.couchbase.com/'
 
-  app 'couchbase-server-enterprise_4/Couchbase Server.app'
+  app "couchbase-server-enterprise_#{version.major}/Couchbase Server.app"
 end

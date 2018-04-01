@@ -6,16 +6,15 @@ cask 'hubic' do
   url "http://mir7.ovh.net/ovh-applications/hubic/hubiC-OSX/#{version.major_minor_patch}/hubiC-OSX-#{version}-osx.pkg"
   name 'hubiC'
   homepage 'https://hubic.com/'
-  license :gratis
 
   pkg "hubiC-OSX-#{version}-osx.pkg"
 
   uninstall pkgutil: 'com.ovh.hubicmac'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.ovh.hubicfinderplugin.sfl',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.ovh.hubicmac.sfl',
-                '~/Library/Caches/com.ovh.hubicmac',
-                '~/Library/Cookies/com.ovh.hubicmac.binarycookies',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.ovh.hubicfinderplugin.sfl*',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.ovh.hubicmac.sfl*',
+               '~/Library/Caches/com.ovh.hubicmac',
+               '~/Library/Cookies/com.ovh.hubicmac.binarycookies',
+             ]
 end

@@ -1,12 +1,11 @@
 cask 'soapui' do
-  version '5.2.1'
-  sha256 '773cb3aaa269e14ed34f06d931b6898e6a8ad16d9d08d67cc4935e137bfbe37c'
+  version '5.4.0'
+  sha256 '9528936b416f8b4925c65d72a486108f8bf251cf102ebdcef5146a61a83ca9b5'
 
-  # downloads.smartbear.com/soapui-os was verified as official when first introduced to the cask
-  url "https://downloads.smartbear.com/soapui-os/SoapUI-#{version}.dmg"
+  # s3.amazonaws.com/downloads.eviware/soapuios was verified as official when first introduced to the cask
+  url "https://s3.amazonaws.com/downloads.eviware/soapuios/#{version}/SoapUI-#{version}.dmg"
   name 'SmartBear SoapUI'
-  homepage 'https://www.soapui.org'
-  license :oss
+  homepage 'https://www.soapui.org/'
 
   # Installer runs install4j from the distribution in quiet mode.
   #
@@ -27,24 +26,31 @@ cask 'soapui' do
   #   /Applications/SoapUI-${version}.app/Contents/java/app/.install4j/response.varfile
   #
   # And refer to the install4j command line options for additional information
-  #   http://resources.ej-technologies.com/install4j/help/doc/index.html
+  #   https://resources.ej-technologies.com/install4j/help/doc/index.html
   #
-  installer script: "SoapUI #{version} Installer.app/Contents/MacOS/JavaApplicationStub",
-            args:   [
-                      '-q',
-                      '-Vsys.adminRights$Boolean=true',
-                      '-Vsys.programGroupDisabled$Boolean=true',
-                      '-VcreateDesktopLinkAction$Boolean=false',
-                      '-Vsys.component.2393$Boolean=false',
-                      '-Vsys.component.132$Boolean=true',
-                      '-Vsys.component.1263$Boolean=false',
-                      '-Vsys.languageId=en',
-                      '-VshowFileAction$Boolean=false',
-                      '-Vsys.installationDir=/Applications',
-                      '-VexecutionLauncherAction$Boolean=false',
-                      '-Vsys.component.714$Boolean=true',
-                    ],
-            sudo:   false
+  installer script: {
+                      executable: "SoapUI #{version} Installer.app/Contents/MacOS/JavaApplicationStub",
+                      args:       [
+                                    '-q',
+                                    '-Vsys.adminRights$Boolean=true',
+                                    '-Vsys.programGroupDisabled$Boolean=true',
+                                    '-VcreateDesktopLinkAction$Boolean=false',
+                                    '-Vsys.component.2393$Boolean=false',
+                                    '-Vsys.component.132$Boolean=true',
+                                    '-Vsys.component.1263$Boolean=false',
+                                    '-Vsys.languageId=en',
+                                    '-VshowFileAction$Boolean=false',
+                                    '-Vsys.installationDir=/Applications',
+                                    '-VexecutionLauncherAction$Boolean=false',
+                                    '-Vsys.component.714$Boolean=true',
+                                  ],
+                    }
 
   uninstall delete: "/Applications/SoapUI-#{version}.app"
+
+  zap trash: [
+               '~/.soapuios',
+               '~/default-soapui-workspace.xml',
+               '~/soapui-settings.xml',
+             ]
 end

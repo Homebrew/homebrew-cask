@@ -6,14 +6,13 @@ cask 'optionspace' do
   appcast 'https://optionspace.co/app/appcast.xml',
           checkpoint: '1e660b15eb8800467a96484a1b6a3725a749db714f14dc9b159258adaad59934'
   name 'OptionSpace'
-  homepage 'https://optionspace.co'
-  license :freemium
+  homepage 'https://optionspace.co/'
 
   app 'OptionSpace.app'
 
-  zap delete: [
-                '~/Library/Application Support/OptionSpace',
-                '~/Library/Preferences/org.sparkle-project.Sparkle.Autoupdate.plist',
-                '~/Library/Preferences/MeAndUser.OptionSpace.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/OptionSpace',
+               '~/Library/Preferences/org.sparkle-project.Sparkle.Autoupdate.plist',
+               '~/Library/Preferences/MeAndUser.OptionSpace.plist',
+             ]
 end

@@ -1,13 +1,12 @@
 cask 'playlist-assist' do
-  version '1.2.4'
-  sha256 '85606254173bddf0c282affa24c9db3bce8c15d754a1d9ba3912932878260958'
+  version '1.3.1'
+  sha256 '2b7774114a4fb7654298997abda9ea3db224b0a8788737a8741c56d48a714ab9'
 
-  url "http://dougscripts.com/itunes/scrx/playlistassistv#{version.no_dots}.zip"
-  appcast 'http://dougscripts.com/itunes/itinfo/playlistassist_appcast.xml',
-          checkpoint: '7324b771b62991def6574252bab947e3df630beae5351b7365ad8c9046f6fe29'
+  url "https://dougscripts.com/itunes/scrx/playlistassistv#{version.no_dots}.zip"
+  appcast 'https://dougscripts.com/itunes/itinfo/playlistassist_appcast.xml',
+          checkpoint: 'df1c9407d36e8baabed9577d8d941b2a5a665b39f1d4f8186af07565dd9444d4'
   name 'Playlist Assist'
-  homepage 'http://dougscripts.com/apps/playlistassistapp.php'
-  license :commercial
+  homepage 'https://dougscripts.com/apps/playlistassistapp.php'
 
   app 'Playlist Assist.app'
 end

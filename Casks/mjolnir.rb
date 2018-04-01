@@ -7,8 +7,7 @@ cask 'mjolnir' do
   appcast 'https://github.com/sdegutis/mjolnir/releases.atom',
           checkpoint: 'bcbd84dc837113b342a6f780109b23825f3d6c6c208c7b68a193560eab832d80'
   name 'Mjolnir'
-  homepage 'http://mjolnir.io'
-  license :mit
+  homepage 'https://www.mjolnir.io/'
 
   app 'Mjolnir.app'
 end

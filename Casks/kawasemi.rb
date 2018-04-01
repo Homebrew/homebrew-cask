@@ -5,8 +5,7 @@ cask 'kawasemi' do
   url 'https://store.monokakido.jp/download/Kawasemi2/Kawasemi2.dmg'
   name 'Kawasemi'
   name 'かわせみ'
-  homepage 'https://www.monokakido.jp/mac/kawasemi2.html'
-  license :commercial
+  homepage 'https://www.monokakido.jp/kawasemi/kawasemi2/index.html'
 
   pkg 'Kawasemi2 Installer.app/Contents/Resources/Kawasemi2.pkg'
 
@@ -16,13 +15,13 @@ cask 'kawasemi' do
                          'jp.monokakido.Kawasemi2.Update.helper',
                        ]
 
-  zap delete: [
-                '/Library/Application Support/MONOKAKIDO/Kawasemi2',
-                '/Library/LaunchAgents/jp.monokakido.Kawasemi2.Enabler.plist',
-                '/Library/Preferences/jp.monokakido.inputmethod.Kawasemi2.registration.plist',
-                '~/Library/Preferences/jp.monokakido.Kawasemi2.Enabler.plist',
-                '~/Library/Preferences/jp.monokakido.inputmethod.Kawasemi2.registration.plist',
-              ]
+  zap trash: [
+               '/Library/Application Support/MONOKAKIDO/Kawasemi2',
+               '/Library/LaunchAgents/jp.monokakido.Kawasemi2.Enabler.plist',
+               '/Library/Preferences/jp.monokakido.inputmethod.Kawasemi2.registration.plist',
+               '~/Library/Preferences/jp.monokakido.Kawasemi2.Enabler.plist',
+               '~/Library/Preferences/jp.monokakido.inputmethod.Kawasemi2.registration.plist',
+             ]
 
   caveats do
     reboot

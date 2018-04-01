@@ -1,13 +1,12 @@
 cask 'irccloud' do
-  version '0.2.0'
-  sha256 'fee77d5ac13efb540c1040ede2bad959ad11db81746eccbee63f57dd9e73d31a'
+  version '0.6.0'
+  sha256 'f3d791032171fed6cca9d95878514b6c315a0ec13f7c7482d1b7e6b43d818440'
 
-  url "https://github.com/irccloud/irccloud-desktop/releases/download/v#{version}/irccloud-desktop-#{version}.dmg"
+  url "https://github.com/irccloud/irccloud-desktop/releases/download/v#{version}/IRCCloud-#{version}.dmg"
   appcast 'https://github.com/irccloud/irccloud-desktop/releases.atom',
-          checkpoint: '925fb5e8f45eef291326e093652187b2bfef06785327be6db1c442e4eb814e97'
+          checkpoint: '7d71a18d23d43899cfdb9d92695a35a387ae94b3d4e040db9972139023e78fb4'
   name 'IRCCloud Desktop'
   homepage 'https://github.com/irccloud/irccloud-desktop'
-  license :apache
 
   app 'IRCCloud.app'
 end

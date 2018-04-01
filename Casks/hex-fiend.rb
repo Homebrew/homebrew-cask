@@ -1,23 +1,20 @@
 cask 'hex-fiend' do
-  version '2.3.0'
-  sha256 '0e0a683971c872ee734af2a3440f1f2abb8d442609077bd5c3e212ab3b5439f7'
+  version '2.8.0'
+  sha256 '42dab86945759333669bbe2dc01c20294ee5ec5f87530e654454cdb2853736cb'
 
   # github.com/ridiculousfish/HexFiend was verified as official when first introduced to the cask
-  url "https://github.com/ridiculousfish/HexFiend/releases/download/v#{version}/Hex.Fiend.app.zip"
+  url "https://github.com/ridiculousfish/HexFiend/releases/download/v#{version}/Hex_Fiend_#{version.major_minor}.dmg"
   appcast 'https://github.com/ridiculousfish/HexFiend/releases.atom',
-          checkpoint: '2d09b3a576fc111777c4d5988be2d595651e163ee6f1b5d7dd12d608078d0a8c'
+          checkpoint: '356d40d0edce7acc0a69f8113ed7a39a0eba16846d384f4b5907ae9498500755'
   name 'Hex Fiend'
   homepage 'http://ridiculousfish.com/hexfiend/'
-  license :bsd
 
   app 'Hex Fiend.app'
+  binary "#{appdir}/Hex Fiend.app/Contents/Resources/hexf"
 
-  postflight do
-    set_permissions "#{appdir}/Hex Fiend.app/Contents/Frameworks/Sparkle.framework", 'a+rx'
-  end
-
-  zap delete: [
-                '~/Library/Preferences/com.ridiculousfish.HexFiend.LSSharedFileList.plist',
-                '~/Library/Preferences/com.ridiculousfish.HexFiend.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.ridiculousfish.HexFiend',
+               '~/Library/Preferences/com.ridiculousfish.HexFiend.plist',
+               '~/Library/Saved Application State/com.ridiculousfish.HexFiend.savedState',
+             ]
 end

@@ -1,11 +1,12 @@
 cask 'mudlet' do
-  version '2.1'
-  sha256 'c7c33cb0dba8223c094bed4caade243b0ae2fb70e71f0e18d2aa8434cc583bae'
+  version '3.7.1'
+  sha256 'b79a362d99e5b015ed239201cdb60a0803c4610c839456ff63aad481f64b397d'
 
-  url "http://www.mudlet.org/download/Mudlet-#{version}.zip"
+  url "https://www.mudlet.org/download/Mudlet-#{version}.dmg"
+  appcast 'https://github.com/Mudlet/Mudlet/releases.atom',
+          checkpoint: '9bf3128d71ee33fc2eece4c1bf445c45ae2c5b3579d718983a6cbbdca1d9e138'
   name 'Mudlet'
-  homepage 'http://www.mudlet.org'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.mudlet.org/'
 
-  app "Mudlet-#{version}.app"
+  app 'Mudlet.app'
 end

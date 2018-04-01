@@ -7,9 +7,8 @@ cask 'cord' do
           checkpoint: 'b95960f88d2b092cc0748a60dbffb498d5b3852023565c1abcdce076cc44f249'
   name 'CoRD'
   homepage 'http://cord.sourceforge.net/'
-  license :gpl
 
   app 'CoRD.app'
 
-  zap delete: '~/Library/Application Support/CoRD'
+  zap trash: '~/Library/Application Support/CoRD'
 end

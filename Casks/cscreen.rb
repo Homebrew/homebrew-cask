@@ -5,7 +5,6 @@ cask 'cscreen' do
   url "http://www.pyehouse.com/wp-content/uploads/#{version.dots_to_slashes}/cscreenIntel.dmg"
   name 'cscreen'
   homepage 'http://www.pyehouse.com/cscreen/'
-  license :gratis
 
   binary 'cscreen'
 end

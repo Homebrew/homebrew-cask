@@ -1,14 +1,13 @@
 cask 'tabula' do
-  version '1.0.1'
-  sha256 '85e75f120c450bc702c01aa88a4ca9c2d227ef2906ec7020e892e0f174a7d70b'
+  version '1.1.1'
+  sha256 '7b02fa0cc00719316332785c116cdae815b33c5dab2157da27cec44ccacf7593'
 
   # github.com/tabulapdf/tabula was verified as official when first introduced to the cask
-  url "https://github.com/tabulapdf/tabula/releases/download/v#{version}/tabula-mac-#{version}.zip"
+  url "https://github.com/tabulapdf/tabula/releases/download/v#{version.major_minor_patch}/tabula-mac-#{version}.zip"
   appcast 'https://github.com/tabulapdf/tabula/releases.atom',
-          checkpoint: '2e20dc186a93930ca4b59fe694ba278c4171776a19c6942273d1b6510d05755d'
+          checkpoint: '3d3f2d52a9ee3feb890d2f7594fcdaac2555cba78179552790fe184f56da1b91'
   name 'Tabula'
   homepage 'http://tabula.technology/'
-  license :mit
 
   app 'tabula/Tabula.app'
 end

@@ -6,7 +6,6 @@ cask 'amazon-workdocs' do
   url 'https://d28gdqadgmua23.cloudfront.net/mac/Amazon%20WorkDocs.pkg'
   name 'Amazon WorkDocs'
   homepage 'https://aws.amazon.com/workdocs/'
-  license :gratis
 
   pkg 'Amazon WorkDocs.pkg'
 

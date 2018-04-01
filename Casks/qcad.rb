@@ -1,14 +1,10 @@
 cask 'qcad' do
-  version '3.12.4'
-  sha256 'd2342b8d70e8d1e896698f9adce9502ef8efc5dbe7ba083eefbb2e3e1d5ad106'
+  version '3.19.2'
+  sha256 '7b4c6207d070789f8dabadf4d0bcde813362097ba87d6db85b51d938af279575'
 
-  url "http://www.qcad.org/archives/qcad/qcad-#{version}-osx-10.6-10.11.dmg"
+  url "https://www.qcad.org/archives/qcad/qcad-#{version}-trial-osx-10.9-10.13.dmg"
   name 'QCAD'
-  homepage 'http://www.qcad.org/'
-  license :gpl
-
-  depends_on macos: '>= :snow_leopard'
-  depends_on arch: :intel
+  homepage 'https://www.qcad.org/'
 
   app 'QCAD.app'
 end

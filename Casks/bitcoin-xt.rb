@@ -11,13 +11,16 @@ cask 'bitcoin-xt' do
           checkpoint: '843d6ef3717eaf20b2e88f78e3eacae10dc745a0c134f34187acfdbfcfdb4d8d'
   name 'Bitcoin XT'
   homepage 'https://bitcoinxt.software/'
-  license :mit
 
   conflicts_with cask: 'bitcoin-core'
 
   app 'Bitcoin-XT.app'
 
-  zap delete: [
-                '~/Library/Preferences/org.bitcoin.Bitcoin-Qt.plist',
-              ]
+  preflight do
+    set_permissions "#{staged_path}/Bitcoin-Xt.app", '0755'
+  end
+
+  zap trash: [
+               '~/Library/Preferences/org.bitcoin.Bitcoin-Qt.plist',
+             ]
 end
