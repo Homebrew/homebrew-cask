@@ -10,5 +10,6 @@ cask 'qlvideo' do
 
   pkg "QLVideo_#{version.no_dots}.pkg"
 
-  uninstall pkgutil: 'uk.org.marginal.qlvideo'
+  uninstall pkgutil:   'uk.org.marginal.qlvideo',
+            launchctl: 'uk.org.marginal.qlvideo.mdimporter'
 end
