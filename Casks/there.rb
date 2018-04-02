@@ -10,4 +10,7 @@ cask 'there' do
   homepage 'https://there.pm/'
 
   app 'There.app'
+
+  uninstall login_item: 'There',
+            signal:     ['TERM', 'pm.there.desktop']
 end
