@@ -6,7 +6,7 @@ cask 'there' do
   url "https://github.com/therepm/there-desktop/releases/download/v#{version}/there-desktop-#{version}-mac.zip"
   appcast 'https://github.com/therepm/there-desktop/releases.atom',
           checkpoint: '69ddda50ce43dafff2a63d86188ca70dcd8a4f4c92173c3b24f7f1e75a80a6d5'
-  name 'There Desktop'
+  name 'There'
   homepage 'https://there.pm/'
 
   app 'There.app'
