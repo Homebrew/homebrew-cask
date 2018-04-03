@@ -44,4 +44,6 @@ cask 'docker' do
                '~/Library/Caches/KSCrashReports',
                '~/Library/Caches/com.plausiblelabs.crashreporter.data',
              ]
+
+  caveats 'You need to launch Docker once to complete installation and get command-line utilities'
 end
