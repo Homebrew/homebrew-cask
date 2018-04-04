@@ -11,5 +11,5 @@ cask 'mos' do
 
   app 'Mos.app'
 
-  zap trash: '~/Library/Preferences/com.u2sk.Mos.plist'
+  zap trash: '~/Library/Preferences/com.caldis.Mos.plist'
 end
