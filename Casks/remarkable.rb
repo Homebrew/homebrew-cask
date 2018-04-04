@@ -1,8 +1,8 @@
 cask 'remarkable' do
-  version '1.0.0'
-  sha256 '5135c6878ebc1d1816aac4bc822b7cd0da3bb05c14167c201aefe20def1e05cf'
+  version '1.2.1'
+  sha256 'a33aa4a6eb86ca146ae678148bc343a53f80731819504a205940e31a4ed5c244'
 
-  url "http://technology.remarkable.com/remarkable-#{version}.dmg"
+  url "https://storage.googleapis.com/remarkable-client-software-540221a9321a8a52ec61a06bfab53423/desktop/production/mac/reMarkable-1.2.1.dmg"
   name 'reMarkable'
   homepage 'https://remarkable.com/'
 
