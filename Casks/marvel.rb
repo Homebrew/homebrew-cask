@@ -1,11 +1,11 @@
 cask 'marvel' do
-  version '7.4.1'
-  sha256 '4e4d3989b45bc7cb0feed5323c23f3aaa81add117350c51010311be50cd614c1'
+  version '7.4.2'
+  sha256 '609e1e9f1c8a785988f9d673dddd649ae470aef5bbe2df0884f24f3f763eb5bf'
 
   # storage.googleapis.com/sketch-plugin was verified as official when first introduced to the cask
   url 'https://storage.googleapis.com/sketch-plugin/Marvel.zip'
   appcast 'https://storage.googleapis.com/sketch-plugin/app.xml',
-          checkpoint: '86decc76fddbe699f8cf028759c1887e14cf649f2cc9090b9bbbf1b00cf88ed0'
+          checkpoint: '89c371f7ba088ad017a16c62d8ad0274a57e42ee21dec184566706800bb1be19'
   name 'Marvel'
   homepage 'https://marvelapp.com/'
 

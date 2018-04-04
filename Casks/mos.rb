@@ -5,9 +5,9 @@ cask 'mos' do
   # github.com/Caldis/Mos was verified as official when first introduced to the cask
   url "https://github.com/Caldis/Mos/releases/download/#{version}/Mos.Version.#{version}.dmg"
   appcast 'https://github.com/Caldis/Mos/releases.atom',
-          checkpoint: 'be74629b2b97a2e4f13e502c8609777a211ad2f42b502df8a193e1541b7921ce'
+          checkpoint: '227c55156ad8d2ce6376806cb25f7c6aeef4e5f33ff2cdd1576eb9ffc4ef56a1'
   name 'Mos'
-  homepage 'http://mos.caldis.me/'
+  homepage 'https://mos.caldis.me/'
 
   app 'Mos.app'
 

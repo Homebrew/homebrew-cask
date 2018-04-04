@@ -1,10 +1,10 @@
 cask 'netron' do
-  version '1.6.9'
-  sha256 'efa00a7e93b32fe31ced91e9a7bd87b433f0340e87f400c7866524f0dd59b027'
+  version '1.7.1'
+  sha256 'b0fc8bbf098d802b68c81e2abf572678806d32faa225e863008d3dbd316d7f5b'
 
   url "https://github.com/lutzroeder/Netron/releases/download/v#{version}/Netron-#{version}-mac.zip"
   appcast 'https://github.com/lutzroeder/Netron/releases.atom',
-          checkpoint: '8774f8ede98f2b1b0038310ca85ab4ccee22269bc3ca1bfade5c1c5822fa2ad0'
+          checkpoint: '5c2b2d67fc3232837eb5785a444122f1fc2686b5af412394bba096c1b08baf95'
   name 'Netron'
   homepage 'https://github.com/lutzroeder/Netron'
 
