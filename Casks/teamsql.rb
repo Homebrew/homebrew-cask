@@ -7,6 +7,8 @@ cask 'teamsql' do
   name 'TeamSQL'
   homepage 'https://teamsql.io/'
 
+  auto_updates true
+
   app 'TeamSQL.app'
 
   zap trash: [
