@@ -7,9 +7,9 @@ cask 'mos' do
   appcast 'https://github.com/Caldis/Mos/releases.atom',
           checkpoint: 'be74629b2b97a2e4f13e502c8609777a211ad2f42b502df8a193e1541b7921ce'
   name 'Mos'
-  homepage 'http://mos.u2sk.com/'
+  homepage 'http://mos.caldis.me/'
 
   app 'Mos.app'
 
-  zap trash: '~/Library/Preferences/com.u2sk.Mos.plist'
+  zap trash: '~/Library/Preferences/com.caldis.Mos.plist'
 end
