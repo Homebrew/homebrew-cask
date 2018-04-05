@@ -1,4 +1,4 @@
-cask 'brew-services-menubar' do
+cask 'brewservicesmenubar' do
   version '2.1.0'
   sha256 '59cc2a2cdb2dc3762071e2b67d8aa787af52f500141f3af4f481403c02999ddb'
 
@@ -9,4 +9,6 @@ cask 'brew-services-menubar' do
   homepage 'https://github.com/andrewn/brew-services-menubar'
 
   app 'BrewServicesMenubar.app'
+
+  uninstall quit: 'andrewnicolaou.BrewServicesMenubar'
 end
