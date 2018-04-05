@@ -8,5 +8,24 @@ cask 'fritzing' do
   name 'Fritzing'
   homepage 'http://fritzing.org/home/'
 
+  if version == '0.9.3b'
+    caveats <<~EOS
+      There's a known issue with Fritzing 0.9.3b, causing it to corrupt its own
+      parts-library on first-launch. To avoid this, you must launch Fritzing
+      *from the command-line* for the first time, like this:
+
+      $ /Applications/Fritzing.app/Contents/MacOS/Fritzing
+
+      Once open, you'll need to explicitly update the parts-library:
+
+        Help → Check for updates...
+
+      Thereafter, at least until the next time you want to update the
+      parts-library, you can safely launch it from the Finder.
+
+      (See: <https://github.com/fritzing/fritzing-app/issues/3308>)
+    EOS
+  end
+
   app 'Fritzing.app'
 end
