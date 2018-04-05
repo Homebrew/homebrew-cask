@@ -12,7 +12,7 @@ cask 'kube-solo' do
 
   zap trash: '~/kube-solo'
 
-  caveats <<~EOS
-    As of October 2017, this has been depricated in favof of minikube.
-  EOS
+  caveats do
+    discontinued
+  end
 end
