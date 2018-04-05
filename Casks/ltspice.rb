@@ -2,7 +2,6 @@ cask 'ltspice' do
   version :latest
   sha256 :no_check
 
-  # linear tech was sold to analog, along with ltspice
   url 'http://ltspice.analog.com/software/LTspiceIV.dmg'
   name 'LTspice'
   homepage 'http://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html'
