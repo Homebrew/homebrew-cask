@@ -8,6 +8,8 @@ cask 'fritzing' do
   name 'Fritzing'
   homepage 'http://fritzing.org/home/'
 
+  app 'Fritzing.app'
+
   caveats <<~EOS
     There's a known issue with Fritzing 0.9.3b, causing it to corrupt its own
     parts-library on first-launch. To avoid this, you must launch Fritzing
@@ -24,6 +26,4 @@ cask 'fritzing' do
 
     See: https://github.com/fritzing/fritzing-app/issues/3308 for more.
   EOS
-
-  app 'Fritzing.app'
 end
