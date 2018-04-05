@@ -1,6 +1,6 @@
 cask 'ebmac' do
-  version '1.42.2,69_89_938'
-  sha256 'b99b673d723f30104d12bc8a9d2fdccc5d8901be5995de5bd722746158d96b8e'
+  version '1.43,70_19_938'
+  sha256 '2f665b2aa17b7841f3fb2dc015f48045e39ba966d78d435b20427982d5b4ab91'
 
   # ftp.vector.co.jp was verified as official when first introduced to the cask
   url "http://ftp.vector.co.jp/#{version.after_comma.underscores_to_slashes}/EBMac#{version.before_comma}.dmg"
