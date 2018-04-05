@@ -7,7 +7,7 @@ cask 'moneyplex' do
   name 'moneyplex'
   homepage 'https://www.matrica.de/'
 
-  pkg 'moneyplex.pkg', allow_untrusted: true
+  pkg 'moneyplex.pkg'
 
-  uninstall pkgutil: 'de.matrica.moneyplex.Moneyplex.pkg'
+  uninstall pkgutil: 'de.matrica.moneyplex.*'
 end

@@ -35,12 +35,12 @@ cask 'cocktail' do
     appcast 'https://www.maintain.se/downloads/sparkle/sierra/sierra.xml',
             checkpoint: '18b69d9aa482719a98415788ca726c6a74618346471a705efdbcf102920202c3'
   else
-    version '11.4'
-    sha256 '72e190d637e45699d45a24f3b76c25a872b76b3bd1d18c5fd752cd5adaa8736f'
+    version '11.5'
+    sha256 '553b2759e2b45242a16dd6c510869442c0594246a4de0a4b538c9d9554f2040a'
 
     url "https://www.maintain.se/downloads/sparkle/highsierra/Cocktail_#{version}.zip"
     appcast 'https://www.maintain.se/downloads/sparkle/highsierra/highsierra.xml',
-            checkpoint: 'd1306a1c5ffa1c7cf7d8ef312913545c77b51a2a0f7f6cab182bda2b65063d4a'
+            checkpoint: 'e6b8a98bbc14c6524d21baff391d6a4e27654dcac0fdc71a9f5b1e78a65e378c'
   end
 
   name 'Cocktail'

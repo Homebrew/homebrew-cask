@@ -1,11 +1,11 @@
 cask 'exodus' do
-  version '1.47.1'
-  sha256 '5a3903c8e3c72d2931c12dded22403caf6fffbfcad92d36eceae4a1e88992235'
+  version '1.48.1'
+  sha256 '2b35cdb576757ba6229de95de6051d0cc0d4717fc6fc29fdfe83e1f47885d6cd'
 
   # exodusbin.azureedge.net was verified as official when first introduced to the cask
   url "https://exodusbin.azureedge.net/releases/exodus-macos-#{version}.dmg"
   appcast 'https://www.exodus.io/releases/',
-          checkpoint: '608262dfeca90cfd38244cdec7b890a0a59a306483a00e0a27103f83672d7cc9'
+          checkpoint: 'bf3516a1d46c80676ec93cae1e6651871c127322088150f20a6446291f75448f'
   name 'Exodus'
   homepage 'https://www.exodus.io/'
 

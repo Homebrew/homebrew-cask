@@ -1,10 +1,10 @@
 cask 'macdive' do
-  version '2.9.2'
-  sha256 'bfd8e7ee70a9c58908c163dc69263aaa72326a05d1c810296be8e42fe2ff2ac7'
+  version '2.9.4'
+  sha256 'b6735e8e7538ef50f4f68b78cb4f3626ceecc7bfbb2607f2e799f78f262fc395'
 
   url "http://mac-dive.com/shimmer/?download&appName=MacDive&appVariant=&appVersion=#{version}"
   appcast 'https://mac-dive.com/shimmer/?appcast&appName=MacDive',
-          checkpoint: '74973b8d594c898ae6ed5377d78db55023a31839c8e07af045caf2c37e888d39'
+          checkpoint: '4cd50289194b920bc451cf84c75f88a4d46371b42af600c39194c57e08e50eed'
   name 'MacDive'
   homepage 'https://www.mac-dive.com/'
 

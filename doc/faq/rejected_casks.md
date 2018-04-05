@@ -17,6 +17,7 @@ Common reasons to reject a Cask entirely:
 + The Cask is too obscure (for example, a self-submitted app from a GitHub repository that is [not notable enough](https://github.com/caskroom/homebrew-cask/pull/28103) (< 10 stars)).
 + The author has [specifically asked us not to include it](https://github.com/caskroom/homebrew-cask/pull/5342).
 + The Cask requires [SIP to be disabled](https://github.com/caskroom/homebrew-cask/pull/41890) to be installed and/or used.
++ The Cask is a `pkg` that requires [`allow_untrusted: true`](https://github.com/caskroom/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/pkg.md#pkg-allow_untrusted).
 
 Common reasons to reject a Cask from the main repo:
 
