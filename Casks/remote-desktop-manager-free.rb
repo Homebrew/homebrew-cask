@@ -16,4 +16,3 @@ cask 'remote-desktop-manager-free' do
                '~/Library/Preferences/com.devolutions.remotedesktopmanager.free',
              ]
 end
-
