@@ -1,6 +1,6 @@
 cask 'file-juicer' do
   version '4.66'
-  sha256 'f8b13fc813b95af16c7d0a26ec254cca22cdfc46c499534fdfff3c29657d4345'
+  sha256 '34ba205e5ac834cda950821ef4508f5b6d20f9a54b38c94eec961d62838831ce'
 
   url "https://echoone.com/filejuicer/FileJuicer-#{version}.zip"
   name 'File Juicer'
