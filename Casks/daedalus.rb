@@ -10,7 +10,7 @@ cask 'daedalus' do
   pkg "Daedalus-installer-#{version}.pkg"
 
   uninstall pkgutil: 'org.daedalus.pkg',
-            trash:   '/Applications/Daedalus.app'
+            delete:  '/Applications/Daedalus.app'
 
   zap trash: [
                '~/Library/Application Support/Daedalus',
