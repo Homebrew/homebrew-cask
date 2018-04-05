@@ -9,6 +9,7 @@ cask 'java' do
   name 'Java Standard Edition Development Kit'
   homepage "https://www.oracle.com/technetwork/java/javase/downloads/jdk#{version.major}-downloads-4416644.html"
 
+  # auto_updates true: JDK does not auto-update
   depends_on macos: '>= :yosemite'
 
   pkg "JDK #{version.before_comma}.pkg"
