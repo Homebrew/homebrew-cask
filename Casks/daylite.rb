@@ -14,7 +14,7 @@ cask 'daylite' do
                        ],
             launchctl: [
                          'com.marketcircle.persistence.autoupdate',
-                         '*.com.marketcircle.Daylite-Helper',
+                         'com.marketcircle.Daylite-Helper',
                        ],
             signal:    [
                          ['TERM', 'com.marketcircle.daylite'],
