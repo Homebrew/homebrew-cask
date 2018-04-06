@@ -15,7 +15,7 @@ cask 'fritzing' do
     parts-library on first-launch. To avoid this, you must launch Fritzing
     *from the command-line* for the first time:
 
-      $ /Applications/Fritzing.app/Contents/MacOS/Fritzing
+      $ #{appdir}/Fritzing.app/Contents/MacOS/Fritzing
 
     Once open, you'll need to explicitly update the parts-library:
 
