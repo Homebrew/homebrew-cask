@@ -1,8 +1,8 @@
 cask 'minergate' do
-  version '8.0'
-  sha256 '2211c1be48c09225dcd27e6223a8243d40334932951fba6257e53220a55afbe7'
+  version :latest
+  sha256 :no_check
 
-  url "https://download.minergate.com/mac/#{version}"
+  url 'https://download.minergate.com/mac'
   name 'MinerGate'
   homepage 'https://minergate.com/downloads/gui'
 
