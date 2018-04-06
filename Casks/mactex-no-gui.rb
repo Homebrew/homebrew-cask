@@ -60,8 +60,4 @@ cask 'mactex-no-gui' do
                '/usr/local/texlive',
                '~/Library/texlive',
              ]
-
-  caveats <<~EOS
-    This Cask does not install any of the gui apps packaged with MacTeX.
-  EOS
 end
