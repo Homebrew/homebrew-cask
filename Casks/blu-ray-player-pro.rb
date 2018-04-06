@@ -1,5 +1,5 @@
 cask 'blu-ray-player-pro' do
-  version '3.2.2'
+  version '3.2.22'
   sha256 'f90b39874b1c446fe20ade2a2b120bd3d4f4387b7b387a3309fbeadc60849762'
 
   url 'https://www.macblurayplayer.com/user/download/Macgo_Mac_Bluray_Player_Pro.dmg'
