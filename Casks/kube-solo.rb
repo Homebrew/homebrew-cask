@@ -11,4 +11,8 @@ cask 'kube-solo' do
   app 'Kube-Solo.app'
 
   zap trash: '~/kube-solo'
+
+  caveats do
+    discontinued
+  end
 end

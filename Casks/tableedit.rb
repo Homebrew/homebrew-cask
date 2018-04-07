@@ -1,10 +1,10 @@
 cask 'tableedit' do
-  version '1.3.0'
-  sha256 'a2e558b272f24ee7bdbb053bceb07ba9644711a0e344756f44ccf3742c155e56'
+  version '1.3.5'
+  sha256 '84920d15ecf3b3a6b8acba95ee45512506d272d4f806cc31242c3b6837c86ec0'
 
   url "https://www.corecode.io/downloads/tableedit_#{version}.zip"
   appcast 'https://www.corecode.io/tableedit/tableedit.xml',
-          checkpoint: 'f11827564699e7db4c695ea43c8b90acb66cd93407854f29f28fd321185aaac4'
+          checkpoint: '4fdc819e857d26f8bb50a5890e94000a70df18a84b5e8f228f84d236c2268135'
   name 'TableEdit'
   homepage 'https://www.corecode.io/tableedit/'
 
