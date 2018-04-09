@@ -10,7 +10,7 @@ cask 'onionshare' do
   homepage 'https://onionshare.org/'
   gpg "#{url}.sig", key_url: 'https://onionshare.org/signing-key.asc'
 
-  pkg 'OnionShare.pkg'
+  pkg "OnionShare-#{version}.pkg"
 
   uninstall pkgutil: 'com.micahflee.onionshare'
 end
