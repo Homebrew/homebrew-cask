@@ -10,8 +10,7 @@ cask 'icanhazshortcut' do
 
   app 'iCanHazShortcut.app'
 
-  uninstall quit:    'info.deseven.icanhazshortcut',
-            pkgutil: 'info.deseven.icanhazshortcut'
+  uninstall quit: 'info.deseven.icanhazshortcut'
 
   zap trash: '~/Library/Preference/info.deseven.icanhazshortcut'
 end
