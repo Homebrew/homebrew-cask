@@ -11,12 +11,21 @@ cask 'teamviewer-host' do
 
   pkg 'Install TeamViewerHost.pkg'
 
-  uninstall pkgutil:   'com.teamviewer.*',
+  # This pkg and file should not be added to uninstall or zap
+  # https://github.com/caskroom/homebrew-cask/pull/45718
+  # `pkg` com.teamviewer.teamviewer13AuthPlugin
+  # /Library/Security/SecurityAgentPlugins/TeamViewerAuthPlugin.bundle
+  uninstall pkgutil:   [
+                         "com.teamviewer.teamviewer#{version}Restarter",
+                         "com.teamviewer.teamviewer#{version}Agent",
+                         "com.teamviewer.teamviewer#{version}Font",
+                         "com.teamviewer.teamviewer#{version}",
+                         "com.teamviewer.teamviewer#{version}PriviledgedHelper",
+                       ],
             delete:    [
                          '/Applications/TeamViewerHost.app',
                          "/Library/Fonts/TeamViewer#{version}Host.otf",
                          '/Library/PrivilegedHelperTools/com.teamviewer.Helper',
-                         '/Library/Security/SecurityAgentPlugins/TeamViewerAuthPlugin.bundle',
                        ],
             launchctl: [
                          'com.teamviewer.Helper',
