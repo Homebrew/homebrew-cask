@@ -2,7 +2,7 @@ cask 'cmb-security-plugin' do
   version :latest
   sha256 :no_check
 
-  url 'https://site.cmbchina.com/download/CMBSecurityPlugin.dmg'
+  url 'http://site.cmbchina.com/download/CMBSecurityPlugin.dmg'
   name 'CMB Security Plugin'
   homepage 'https://www.cmbchina.com/'
 
