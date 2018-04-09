@@ -4,7 +4,7 @@ cask 'nwjs' do
 
   url "https://dl.nwjs.io/v#{version}/nwjs-sdk-v#{version}-osx-x64.zip"
   appcast 'https://github.com/nwjs/nw.js/releases.atom',
-          checkpoint: '4beb8d193f90dc519bba712fa4b2e92eefe0cdc913151eaa22fc91614b8f315f'
+          checkpoint: 'f5e796f0007d648e8d918e52c3cf6e1898cb9c60e7a0aba1983b0b386c25e8cb'
   name 'NW.js'
   homepage 'https://nwjs.io/'
 
