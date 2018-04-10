@@ -9,7 +9,7 @@ cask 'krita' do
 
   depends_on macos: '>= :el_capitan'
 
-  app 'Krita.app'
+  app 'krita.app'
 
   zap trash: [
                '~/Library/Application Support/krita',
