@@ -4,7 +4,7 @@ cask 'flash-ppapi' do
 
   url "https://fpdownload.adobe.com/pub/flashplayer/pdc/#{version}/install_flash_player_osx_ppapi.dmg"
   appcast 'http://fpdownload2.macromedia.com/get/flashplayer/update/current/xml/version_en_mac_pep.xml',
-          checkpoint: 'a617234c8f9b680bc5d5f4ac249faf8d23cfc43f9d171a7665405b4a26f2c502'
+          checkpoint: '53e0fa18b84d4d4c486059974a4d51e0cc9cef5b44f71ac6fe1f2e5b34aac950'
   name 'Adobe Flash Player PPAPI (plugin for Opera and Chromium)'
   homepage 'https://get.adobe.com/flashplayer/otherversions/'
 
