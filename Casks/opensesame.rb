@@ -1,6 +1,6 @@
 cask 'opensesame' do
-  version '3.2.2'
-  sha256 '02fbe080c163cef1060f927a0d9fde9a2b787bf59e249be098de384cb58f6952'
+  version '3.2.4'
+  sha256 '560c94f2e4d0060240a10c4f9b688c6cbcf980ce384f20c0fc5e53bfbc28b289'
 
   # github.com/smathot/OpenSesame was verified as official when first introduced to the cask
   url "https://github.com/smathot/OpenSesame/releases/download/release/#{version}/opensesame_#{version}-py2.7-macos-1.dmg"
