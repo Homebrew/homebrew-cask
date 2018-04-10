@@ -11,21 +11,7 @@ cask 'teamviewer' do
 
   pkg 'Install TeamViewer.pkg'
 
-  uninstall pkgutil:   'com.teamviewer.*',
-            delete:    [
-                         '/Applications/TeamViewer.app',
-                         "/Library/Fonts/TeamViewer#{version}.otf",
-                         '/Library/PrivilegedHelperTools/com.teamviewer.Helper',
-                         '/Library/Security/SecurityAgentPlugins/TeamViewerAuthPlugin.bundle',
-                       ],
-            launchctl: [
-                         'com.teamviewer.Helper',
-                         'com.teamviewer.desktop',
-                         'com.teamviewer.service',
-                         'com.teamviewer.teamviewer',
-                         'com.teamviewer.teamviewer_service',
-                       ],
-            quit:      'com.teamviewer.TeamViewer'
+  uninstall delete: "#{staged_path}/#{token}" # This Cask should be uninstalled manually.
 
   zap trash: [
                '/Library/Preferences/com.teamviewer.teamviewer.preferences.plist',

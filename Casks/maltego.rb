@@ -1,6 +1,6 @@
 cask 'maltego' do
-  version '4.1.0.10552'
-  sha256 'f7e869141ea4ccabd339e48a14fe74a6d34f5e8d408a93e891aba3affa30cb49'
+  version '4.1.6.11045'
+  sha256 '3dbc9a7dd27bae0fe4b47436d6040df2e301c7043e4dcba9ff7510da05be0265'
 
   url "https://www.paterva.com/malv#{version.major_minor.no_dots}/maltego_v#{version}.dmg"
   name 'Maltego'

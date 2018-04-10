@@ -1,10 +1,10 @@
 cask 'adguard' do
-  version '1.5.3'
-  sha256 'de1dc6e957094c9d05a935cb3896273bd8c8379c62e74c19922984d8f5c05a3d'
+  version '1.5.6'
+  sha256 '58cdf8d8b071b804784158031744cb61c83bdd02ac047207c384d63ab0570f53'
 
   url "https://static.adguard.com/mac/Adguard-#{version}.release.dmg"
   appcast 'https://static.adguard.com/mac/adguard-release-appcast.xml',
-          checkpoint: '4ec50d57e93abf9b9c196829ba11b6e20ecad7f7e035620a7f61aa691068e049'
+          checkpoint: 'd28a9e7c564cec267107c5a384e3c203fbc7191c11d50b12787eaafc063a47b2'
   name 'Adguard for Mac'
   homepage 'https://adguard.com/'
 

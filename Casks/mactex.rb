@@ -10,21 +10,40 @@ cask 'mactex' do
   homepage 'https://www.tug.org/mactex/'
 
   conflicts_with cask: [
-                         'mactex-no-ghostscript',
                          'basictex',
+                         'mactex-no-gui',
                        ]
+  depends_on formula: 'ghostscript'
   depends_on macos: '>= :yosemite'
 
-  pkg "mactex-#{version}.pkg"
+  pkg "mactex-#{version}.pkg",
+      choices: [
+                 {
+                   # TeXLive
+                   'choiceIdentifier' => 'choice1',
+                   'choiceAttribute'  => 'selected',
+                   'attributeSetting' => 1,
+                 },
+                 {
+                   # GUI-Applications
+                   'choiceIdentifier' => 'choice2',
+                   'choiceAttribute'  => 'selected',
+                   'attributeSetting' => 1,
+                 },
+                 {
+                   # Ghostscript
+                   'choiceIdentifier' => 'choice3',
+                   'choiceAttribute'  => 'selected',
+                   'attributeSetting' => 0,
+                 },
+               ]
 
   uninstall pkgutil: [
-                       'org.tug.mactex.ghostscript9.21',
                        'org.tug.mactex.gui2017',
                        'org.tug.mactex.texlive2017',
                      ],
             delete:  [
                        '/usr/local/texlive/2017',
-                       '/usr/local/share/ghostscript/9.21',
                        '/Applications/TeX',
                        '/Library/PreferencePanes/TeXDistPrefPane.prefPane',
                        '/Library/TeX',
@@ -61,7 +80,6 @@ cask 'mactex' do
              ],
       rmdir: [
                '/usr/local/texlive',
-               '/usr/local/share/ghostscript',
                '~/Library/texlive',
              ]
 end

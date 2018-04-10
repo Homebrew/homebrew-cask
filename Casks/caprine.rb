@@ -11,4 +11,12 @@ cask 'caprine' do
   auto_updates true
 
   app 'Caprine.app'
+
+  zap trash: [
+               '~/Library/Application Support/Caprine',
+               '~/Library/Logs/Caprine',
+               '~/Library/Preferences/com.sindresorhus.caprine.helper.plist',
+               '~/Library/Preferences/com.sindresorhus.caprine.plist',
+               '~/Library/Saved Application State/com.sindresorhus.caprine.savedState',
+             ]
 end

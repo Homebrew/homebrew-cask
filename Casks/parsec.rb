@@ -9,5 +9,9 @@ cask 'parsec' do
 
   pkg 'parsec-macos.pkg'
 
+  postflight do
+    set_ownership '~/.parsec'
+  end
+
   uninstall pkgutil: 'tv.parsec.www'
 end
