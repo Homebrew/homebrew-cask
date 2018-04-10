@@ -1,6 +1,6 @@
 cask 'flash-npapi' do
-  version '29.0.0.113'
-  sha256 'c885f2750118e1bba40181ad468c7121e85605b1bc0f31c82f0e0b64722bf26a'
+  version '29.0.0.140'
+  sha256 '173d1201269371761460f36656edf92c23b90d1b21389c2b288c47be093951ae'
 
   # macromedia.com was verified as official when first introduced to the cask
   url "https://fpdownload.adobe.com/get/flashplayer/pdc/#{version}/install_flash_player_osx.dmg"
