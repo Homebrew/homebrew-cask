@@ -1,6 +1,5 @@
 cask 'google-cloud-sdk' do
-  # we cannot use the actual version because when an update happen, all the installed gcloud components are lost / reset
-  version :latest
+  version :latest # Must remain unversioned, else all installed gcloud components would be lost on upgrade
   sha256 :no_check
 
   url 'https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz'
