@@ -1,6 +1,6 @@
 cask 'focus' do
-  version '1.8.7'
-  sha256 'd9f4db081e42811eea38b6463bffb69b9b2c2afe09bf5ae03e398ac783e1c65b'
+  version '1.8.9'
+  sha256 'f754bb633c9c9616118e9aa40fd69dbc4e0eb9ff304671b02eb04f748d3c1988'
 
   url "https://heyfocus.com/releases/Focus-#{version}.zip"
   name 'Focus'
