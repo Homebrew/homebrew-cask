@@ -8,6 +8,11 @@ cask 'unity-hub' do
 
   app 'Unity Hub.app'
 
-  uninstall quit:   'com.unity3d.unityhub',
-            delete: '/Applications/Unity/Hub'
+  uninstall quit: 'com.unity3d.unityhub'
+
+  zap trash: [
+               '/Applications/Unity/Hub',
+               '~/Library/Preferences/com.unity3d.unityhub.plist',
+               '~/Library/Preferences/com.unity3d.unityhub.helper.plist',
+             ]
 end
