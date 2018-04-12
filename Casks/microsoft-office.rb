@@ -77,5 +77,8 @@ cask 'microsoft-office' do
                    'com.microsoft.autoupdate.helpertool',
                    'com.microsoft.autoupdate.helper',
                  ],
-      pkgutil:   'com.microsoft.package.Microsoft_AutoUpdate.app'
+      pkgutil:   [
+                   'com.microsoft.package.Microsoft_AutoUpdate.app',
+                   'com.microsoft.OneDrive',
+                 ]
 end
