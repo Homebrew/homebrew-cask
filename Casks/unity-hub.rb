@@ -6,8 +6,8 @@ cask 'unity-hub' do
   name 'Unity Hub'
   homepage 'https://blogs.unity3d.com/2018/01/24/streamline-your-workflow-introducing-unity-hub-beta/'
 
-  uninstall quit: 'com.unity3d.unityhub',
-            delete: '/Applications/Unity/Hub'
-
   app 'Unity Hub.app'
+
+  uninstall quit:   'com.unity3d.unityhub',
+            delete: '/Applications/Unity/Hub'
 end
