@@ -1,6 +1,6 @@
 cask 'juicebox' do
-  version '1.8.8'
-  sha256 'f3e825c062184dc11ef8f5a7ca3df3667b943663734d84e4cec86e93427dd1db'
+  version '1.9.0'
+  sha256 '456d986e87f991be0d4afbe219483a26b33a8703f1d03f2682e4976c36b87acf'
 
   # s3.amazonaws.com/hicfiles.tc4ga.com/public/juicebox was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/hicfiles.tc4ga.com/public/juicebox/Juicebox_#{version}.dmg"
