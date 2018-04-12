@@ -9,6 +9,7 @@ cask 'karabiner-elements' do
   homepage 'https://pqrs.org/osx/karabiner/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   pkg 'Karabiner-Elements.sparkle_guided.pkg'
 
