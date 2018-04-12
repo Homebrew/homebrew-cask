@@ -3,6 +3,8 @@ cask 'intel-haxm' do
   sha256 'dbbf88dfad7c81abc2165d8db0bdaa42f8d48f4436dc27c02ed7556041122fdc'
 
   url "https://github.com/intel/haxm/releases/download/v#{version}/haxm-macosx_v#{version.dots_to_underscores}.zip"
+  appcast 'https://github.com/intel/haxm/releases.atom',
+          checkpoint: '13601cec1e9129ef60537e7196e91df7880a33dfa7d48d5d28733219190bb3cb'
   name 'Intel HAXM'
   homepage 'https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager'
 
