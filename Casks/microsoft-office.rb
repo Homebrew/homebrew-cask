@@ -76,6 +76,7 @@ cask 'microsoft-office' do
       launchctl: [
                    'com.microsoft.autoupdate.helpertool',
                    'com.microsoft.autoupdate.helper',
+                   'com.microsoft.OneDriveUpdaterDaemon',
                  ],
       pkgutil:   [
                    'com.microsoft.package.Microsoft_AutoUpdate.app',
