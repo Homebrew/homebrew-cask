@@ -9,5 +9,5 @@ cask 'socket-io-tester' do
   name 'socket-io-tester.app'
   homepage 'https://appsaloon.github.io/socket.io-tester/'
 
-  app 'socket-io-tester.app'
+  app 'socket-io-tester-darwin-x64/socket-io-tester.app'
 end
