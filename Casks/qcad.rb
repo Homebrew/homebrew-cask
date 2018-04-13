@@ -1,6 +1,6 @@
 cask 'qcad' do
-  version '3.20.0'
-  sha256 '656cc00a40a4fc142f990a1514b81a9725ed303cbe58c8166d8703e50a276495'
+  version '3.20.1'
+  sha256 'e24fb8ef40bf1dac7c830bfe1ab2c41810961b72d6231dcec883dbc15b1f1d8c'
 
   url "https://www.qcad.org/archives/qcad/qcad-#{version}-trial-osx-10.9-10.13.dmg"
   name 'QCAD'
