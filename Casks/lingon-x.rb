@@ -8,7 +8,7 @@ cask 'lingon-x' do
   name 'Lingon X'
   homepage 'https://www.peterborgapps.com/lingon/'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   app 'Lingon X.app'
 
