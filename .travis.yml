@@ -20,7 +20,7 @@ cache:
 install: true # skip install step
 
 before_script:
-  - . ci/travis/before_script.sh
+  - . ci/travis/not_a_script.sh
 
 script:
   - . ci/travis/script.sh
@@ -38,7 +38,7 @@ notifications:
     urls:
       - "https://webhooks.gitter.im/e/712d699360b239db14a5"
     on_success: never
-    on_failure: always
+    on_failure: never
     on_start: never
     on_cancel: never
     on_error: never
