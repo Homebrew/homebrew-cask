@@ -2,7 +2,7 @@ cask 'xit' do
   version '1.0b8'
   sha256 'd75ff6baa6743be50edcfb4e5c1dab12dba6759e397cf694eefe3885be231138'
 
-  url 'https://github.com/Uncommon/Xit/releases/download/1.0b8/Xit.zip'
+  url "https://github.com/Uncommon/Xit/releases/download/#{version}/Xit.zip"
   appcast 'https://github.com/Uncommon/Xit/releases.atom',
           checkpoint: '124eb7a3ebfac3e00781c69364aefb825323d7b81cb3c8c7bdc661d0be06aef2'
   name 'Xit'
