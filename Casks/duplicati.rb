@@ -1,10 +1,11 @@
 cask 'duplicati' do
-  version '2.0.3.3,2018-04-02'
-  sha256 '427a5ad9fe96ae63b85473b704f379c8d1ba064cfea619475e24cfe2d5ddf238'
+  version '2.0.3.5,2018-04-13'
+  sha256 'cb6482512b33e872cf700eb41ce1d7950f35fe1561db4effbabcc44eafc6560a'
 
-  url "https://updates.duplicati.com/beta/duplicati-#{version.before_comma}_beta_#{version.after_comma}.dmg"
+  # github.com/duplicati/duplicati was verified as official when first introduced to the cask
+  url "https://github.com/duplicati/duplicati/releases/download/v#{version.before_comma}-#{version.before_comma}_canary_#{version.after_comma}/duplicati-#{version.before_comma}_canary_#{version.after_comma}.dmg"
   appcast 'https://github.com/duplicati/duplicati/releases.atom',
-          checkpoint: '79b6bfbbc5faa210ce64de73388c8a458b2638450d966da5aef300178539106d'
+          checkpoint: '5f76021f6b6764682f02ae4d33dd93e9316c873bf6f4d7fd819119aeb70b2695'
   name 'Duplicati'
   homepage 'https://www.duplicati.com/'
 
