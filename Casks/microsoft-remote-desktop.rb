@@ -9,8 +9,11 @@ cask 'microsoft-remote-desktop' do
 
   pkg "Microsoft_Remote_Desktop_#{version}_installer.pkg"
 
-  uninstall pkgutil: [
-                       'com.microsoft.autoupdate2',
-                       'com.microsoft.rdc.macos',
-                     ]
+  uninstall pkgutil:   [
+                         'com.microsoft.autoupdate2',
+                         'com.microsoft.rdc.macos',
+                       ]
+            launchctl: [
+                         'com.microsoft.autoupdate.helper'
+                       ],
 end
