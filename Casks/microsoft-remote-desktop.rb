@@ -14,6 +14,6 @@ cask 'microsoft-remote-desktop' do
                          'com.microsoft.rdc.macos',
                        ],
             launchctl: [
-                         'com.microsoft.autoupdate.helper'
+                         'com.microsoft.autoupdate.helper',
                        ]
 end
