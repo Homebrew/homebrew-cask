@@ -9,5 +9,7 @@ cask 'get-backup-pro' do
   name "Get Backup Pro #{version.major}"
   homepage 'https://www.belightsoft.com/products/getbackup/'
 
+  auto_updates true
+
   app "Get Backup Pro #{version.major}.app"
 end
