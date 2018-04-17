@@ -5,7 +5,7 @@ cask 'mal-updater' do
   # github.com/Atelier-Shiori/malupdaterosx-cocoa was verified as official when first introduced to the cask
   url "https://github.com/Atelier-Shiori/malupdaterosx-cocoa/releases/download/#{version}/malupdaterosx-#{version}.dmg"
   appcast 'https://github.com/Atelier-Shiori/malupdaterosx-cocoa/releases.atom',
-          checkpoint: 'b2c751aae00799924f68b05b6aed17af4c64cfed969b026c0703dbbc1ffa2ed4'
+          checkpoint: '4e4d5e15393454b3944ebeb27b971e1f79f8d227e423f38c7312dbfe05afff34'
   name 'MAL Updater OS X'
   homepage 'https://malupdaterosx.ateliershiori.moe/'
 
