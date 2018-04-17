@@ -4,11 +4,11 @@ cask 'flycut' do
 
   url "https://github.com/TermiT/Flycut/releases/download/#{version}/Flycut.app.#{version}.zip"
   appcast 'https://github.com/TermiT/Flycut/releases.atom',
-          checkpoint: '1cb31799329d090ccf363ba982998f099eefe915826eae38e62aa5951da6d974'
+          checkpoint: 'c978b2178af3240b1d123542b6aece9228dd4ef0c6a8e96a652fae7fc78edb45'
   name 'Flycut'
   homepage 'https://github.com/TermiT/Flycut'
 
   app 'Flycut.app'
 
-  zap delete: '~/Library/Preferences/com.generalarcade.flycut.plist'
+  zap trash: '~/Library/Preferences/com.generalarcade.flycut.plist'
 end

@@ -11,5 +11,5 @@ cask 'helium' do
 
   uninstall quit: 'com.koushikdutta.Helium'
 
-  zap delete: '~/Library/Saved Application State/com.koushikdutta.Helium.savedState'
+  zap trash: '~/Library/Saved Application State/com.koushikdutta.Helium.savedState'
 end

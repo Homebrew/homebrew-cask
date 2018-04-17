@@ -4,11 +4,13 @@ cask 'awareness' do
 
   url "http://iamfutureproof.com/downloads/Awareness-#{version}.dmg"
   appcast 'http://iamfutureproof.com/tools/awareness/',
-          checkpoint: 'f0f5ed2738d3ed856768a5a6e2f0544d0547a4ef7ce8a11f2b2cafa8863e626b'
+          checkpoint: 'bc05c3972a62c5391c8dacee349b2d1c7a28774b395733bb0b567a9b4713af7a'
   name 'Awareness'
   homepage 'http://iamfutureproof.com/tools/awareness/'
 
+  depends_on macos: '>= :snow_leopard'
+
   app 'Awareness.app'
 
-  zap delete: '~/Library/Preferences/com.futureproof.awareness.plist'
+  zap trash: '~/Library/Preferences/com.futureproof.awareness.plist'
 end

@@ -4,7 +4,7 @@ cask 'soundstand' do
 
   url "https://github.com/ngtk/soundstand/releases/download/v#{version}/SoundStand.app.zip"
   appcast 'https://github.com/ngtk/soundstand/releases.atom',
-          checkpoint: 'd841d920c2fe0ef22425beb9f9412072bf235c1b7affa677445d92dab5e323bf'
+          checkpoint: '3558ed1ad642d52fdd7009431d73ba2212534306df1d3b80ec9aa93e075ae73d'
   name 'SoundStand'
   homepage 'https://github.com/ngtk/soundstand'
 

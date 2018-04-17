@@ -1,12 +1,14 @@
 cask 'marble' do
-  version '1.5.0'
-  sha256 '6d1bf3e02c34ef0df0d5d0311d580bfae1d5259e3db45036163a5330dc139c04'
+  version '2.2.0'
+  sha256 '51397a9723571b59d6773b7126ccdc1402b81d3023fb0d7e0828443e33d91e41'
 
-  url "https://files.kde.org/marble/downloads/MacOSX/Marble-#{version}.dmg"
+  url "http://files.kde.org/marble/downloads/MacOSX/Marble-#{version}.pkg"
   appcast 'https://marble.kde.org/install.php',
-          checkpoint: '2e380a4e00b3dd33424238e3f263c594baa4b5baf4c26ef51141bd9f94cf3fce'
+          checkpoint: 'd2ee5a5dd31d6e3cc5fbf35eefbd6e0203fb51867b81f50ab115cbb1bd625bab'
   name 'Marble'
   homepage 'https://marble.kde.org/'
 
-  app 'Marble.app'
+  pkg "Marble-#{version}.pkg"
+
+  uninstall pkgutil: 'org.kde.marbleV220.Marble.pkg'
 end

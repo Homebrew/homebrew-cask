@@ -1,16 +1,18 @@
 cask '4k-slideshow-maker' do
-  version '1.6'
-  sha256 '86f893e8b2e5e120e8c01fff359c73c3d58f8cc576d3bdefb016301c0c4812ca'
+  version '1.7.0.968'
+  sha256 '00c44ea17ce8c6bf2aa59d876d605f8fa4c3f6745ba716ed741d4056fe818aa5'
 
-  url "https://downloads.4kdownload.com/app/4kslideshowmaker_#{version}.dmg"
+  url "https://dl.4kdownload.com/app/4kslideshowmaker_#{version.major_minor_patch}.dmg"
+  appcast 'https://www.4kdownload.com/download',
+          checkpoint: 'bcc9ec5479e3d7db1f10175083eb4c73dd6590b8bfe3cab26f6d78efbbc4c583'
   name '4K Slideshow Maker'
   homepage 'https://www.4kdownload.com/products/product-slideshowmaker'
 
   app '4K Slideshow Maker.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.4kdownload.4K Slideshow Maker.plist',
-                '~/Library/Application Support/4kdownload.com',
-                '~/Library/Saved Application State/com.openmedia.4kslideshowmaker.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/4kdownload.com',
+               '~/Library/Preferences/com.4kdownload.4K Slideshow Maker.plist',
+               '~/Library/Saved Application State/com.openmedia.4kslideshowmaker.savedState',
+             ]
 end

@@ -4,13 +4,14 @@ cask 'aquaterm' do
 
   url "https://downloads.sourceforge.net/aquaterm/AquaTerm/v#{version}/AquaTerm-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/aquaterm/rss?path=/AquaTerm',
-          checkpoint: '7690e67a0a5101a228b261979ab45b525f57bddcfe0fa10409ad16bc7621afed'
+          checkpoint: '919b1aaf6bdb5814d370b76ea198c20ee2595a738ba0697f3dd88c4b96b46050'
   name 'AquaTerm'
   homepage 'https://sourceforge.net/projects/aquaterm/'
 
   pkg 'AquaTermInstaller.pkg'
 
-  uninstall pkgutil: 'net.sourceforge.aquaterm.aquaterm.*'
+  uninstall pkgutil: 'net.sourceforge.aquaterm.aquaterm.*',
+            delete:  '/Library/Frameworks/AquaTerm.framework'
 
-  zap       delete: '~/Library/Preferences/net.sourceforge.aquaterm.plist'
+  zap trash: '~/Library/Preferences/net.sourceforge.aquaterm.plist'
 end

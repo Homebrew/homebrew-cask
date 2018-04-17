@@ -4,7 +4,7 @@ cask 'ultrastardeluxe' do
 
   url "https://downloads.sourceforge.net/ultrastardx/UltraStarDeluxe-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/ultrastardx/rss',
-          checkpoint: 'c8c913a606b8e18c5b61cd28932cdfb3434ff9b7b98b2a9008b9cead3f84a8ce'
+          checkpoint: 'dd1bec8628b622ea9f1106c9f05275aa39f9f3c1d376f9811917dfb69222c223'
   name 'UltraStar Deluxe'
   homepage 'http://ultrastardx.sourceforge.net/'
 

@@ -1,13 +1,15 @@
 cask 'whatsyoursign' do
-  version '1.2.3'
-  sha256 '385415996a5ce57865d591df4af679b2023e58d27e1f6237a8a90c60c8052f88'
+  version '1.4.1'
+  sha256 '7abf5dbb70531a34698863c625064895fe6d274db42878f5cf538fa59a0edde2'
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/WhatsYourSign_#{version}.zip"
-  appcast 'https://objective-see.com/products.json',
-          checkpoint: 'b2004932186e0eb176a9ac01fe499de292d502d7a17559e900822f9cdbfa74d6'
+  appcast 'https://objective-see.com/products/changelogs/WhatsYourSign.txt',
+          checkpoint: 'c54874e48b5acfd632ca213692ce546f8e72404588114681221ab4f7f666a42e'
   name 'What\'s Your Sign?'
   homepage 'https://objective-see.com/products/whatsyoursign.html'
+
+  depends_on macos: '>= :yosemite'
 
   installer manual: 'WhatsYourSign_Installer.app'
 

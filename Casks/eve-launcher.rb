@@ -1,6 +1,6 @@
 cask 'eve-launcher' do
-  version '1104888'
-  sha256 '7bbb94efe41638e222d0cbfb6cb13803b07a6df6f075a0586e91669c9efde3fc'
+  version '1183418'
+  sha256 '76cf6bc68bb3c38cf2f584e8e8eb9010754e65489ffad3efa686c65e48cb1151'
 
   url "https://binaries.eveonline.com/EveLauncher-#{version}.dmg"
   name 'Eve Online'
@@ -10,9 +10,9 @@ cask 'eve-launcher' do
 
   app 'EVE Launcher.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.ccpgames.EVE.plist',
-                '~/Library/Application Support/EVE Online',
-                '~/Library/Application Support/CCP/EVE',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.ccpgames.EVE.plist',
+               '~/Library/Application Support/EVE Online',
+               '~/Library/Application Support/CCP/EVE',
+             ]
 end

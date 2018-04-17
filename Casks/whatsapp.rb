@@ -1,19 +1,22 @@
 cask 'whatsapp' do
-  version '0.2.3698'
-  sha256 'a780c03b102cbd14aedb0299b1a44b7115db02164ff959b1672b471e73935310'
+  version '0.2.8691'
+  sha256 '9ec513088b9c668a2803a2711d84af49e83bca6754caee1539186d24ca60a15e'
 
   url "https://web.whatsapp.com/desktop/mac/files/release-#{version}.zip"
   appcast 'https://web.whatsapp.com/desktop/mac/releases?platform=darwin&arch=x64',
-          checkpoint: '09646589f8c45cd9ba7d0d05a0fa0535d51ac782d6f7cd88b4afa97ba373e59b'
+          checkpoint: '71ca0707fff073fd7b9d29ff7363ea9a12d2aa2941344f4454721bdfdcef80db'
   name 'WhatsApp'
   homepage 'https://www.whatsapp.com/'
 
+  auto_updates true
+
   app 'WhatsApp.app'
 
-  zap delete: [
-                '~/Library/Application Support/WhatsApp',
-                '~/Library/Application Support/WhatsApp.ShipIt',
-                '~/Library/Caches/WhatsApp',
-                '~/Library/Preferences/WhatsApp.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/WhatsApp',
+               '~/Library/Application Support/WhatsApp.ShipIt',
+               '~/Library/Caches/WhatsApp',
+               '~/Library/Preferences/WhatsApp.plist',
+               '~/Library/Preferences/WhatsApp-Helper.plist',
+             ]
 end

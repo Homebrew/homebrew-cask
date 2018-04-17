@@ -1,11 +1,11 @@
 cask 'disk-arbitrator' do
-  version '0.7.0'
-  sha256 '1f27fccef99ffa65f4bcf7a266789bb6310aca0063f2accf34703bbf2db09cc8'
+  version '0.8.0'
+  sha256 '4dd2467c4a3a896ae0267087fe11df7bfc9d98c9f1bc049f401b58a59fca8533'
 
   # kainjow.com was verified as official when first introduced to the cask
   url "https://github.com/aburgh/Disk-Arbitrator/releases/download/v#{version}/Disk.Arbitrator-#{version.major_minor}.dmg"
   appcast 'https://github.com/aburgh/Disk-Arbitrator/releases.atom',
-          checkpoint: 'f8858ef5754234e6e18aba2a209c53b321fcea92931eefca50476ee3dede1306'
+          checkpoint: '2f0e338fe6f6b7d0adcfe2202b237154b94a0c041a2e8c233dcfb56e5330e243'
   name 'Disk Arbitrator'
   homepage 'https://github.com/aburgh/Disk-Arbitrator'
 
@@ -14,5 +14,5 @@ cask 'disk-arbitrator' do
   uninstall launchctl: 'us.burghardt.Disk-Arbitrator',
             quit:      'us.burghardt.Disk-Arbitrator'
 
-  zap delete: '~/Library/Preferences/us.burghardt.Disk-Arbitrator.plist'
+  zap trash: '~/Library/Preferences/us.burghardt.Disk-Arbitrator.plist'
 end

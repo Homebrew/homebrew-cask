@@ -1,10 +1,10 @@
 cask 'sauce-connect' do
-  version '4.4.2'
-  sha256 '9f7672902c7fbe99283b3a96603b2ebcc2a6383005a65f0d73fd56a3403c760e'
+  version '4.4.12'
+  sha256 '624f27fcef2b7797ab1b26d6149cc7559f40305e761ac4c6844c59e3125f1abf'
 
   url "https://saucelabs.com/downloads/sc-#{version}-osx.zip"
   name 'Sauce Connect'
-  homepage 'https://wiki.saucelabs.com/display/DOCS/Setting+Up+Sauce+Connect'
+  homepage 'https://wiki.saucelabs.com/display/DOCS/Sauce+Connect+Proxy'
 
   depends_on macos: '>= :mountain_lion'
 

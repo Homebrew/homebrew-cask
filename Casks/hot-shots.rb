@@ -4,7 +4,7 @@ cask 'hot-shots' do
 
   url "https://gngrwzrd.com/HotShots#{version.major}.zip"
   appcast "https://www.gngrwzrd.com/hotshots#{version.major}-appcast.xml",
-          checkpoint: 'bc2389f3e28b96748c5f94508d125124f0af2d188b810d397c412e12f166eb59'
+          checkpoint: '9f6489912f162d111824e489cdc9d42af56ea870ae5a653745b020f9d1955275'
   name 'Hot Shots'
   homepage 'https://gngrwzrd.com/hotshots/'
 

@@ -7,4 +7,10 @@ cask 'soundnode' do
   homepage 'http://www.soundnodeapp.com/'
 
   app 'Soundnode.app'
+
+  zap trash: [
+               '~/Library/Application Support/Soundnode',
+               '~/Library/Preferences/com.nw-builder.soundnode.plist',
+               '~/Library/Saved Application State/com.nw-builder.soundnode.savedState',
+             ]
 end

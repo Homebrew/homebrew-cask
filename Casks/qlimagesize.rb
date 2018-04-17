@@ -9,5 +9,20 @@ cask 'qlimagesize' do
 
   pkg 'qlImageSize.pkg'
 
-  uninstall pkgutil: 'io.whine.qlimagesize.pkg'
+  postflight do
+    set_ownership [
+                    '~/Library/QuickLook/qlImageSize.qlgenerator',
+                    '~/Library/Spotlight/mdImageSize.mdimporter',
+                  ]
+  end
+
+  uninstall delete:  [
+                       '~/Library/QuickLook/qlImageSize.qlgenerator',
+                       '~/Library/Spotlight/mdImageSize.mdimporter',
+                     ],
+            pkgutil: 'fr.whine.qlimagesize.pkg'
+
+  caveats do
+    reboot
+  end
 end

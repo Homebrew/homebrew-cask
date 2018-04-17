@@ -1,6 +1,6 @@
 cask 'subsurface' do
-  version '4.6.3'
-  sha256 '69ec5b237faddf1257663c62e9d959843913ae5f314cef2fc7b788b99dff26da'
+  version '4.7.8'
+  sha256 '9f3aae8562cc96f058c8a1aa62e9c1c8e8d4c351a97a4ad20bf3ec3efb572c43'
 
   url "https://subsurface-divelog.org/downloads/Subsurface-#{version}.dmg"
   name 'Subsurface'

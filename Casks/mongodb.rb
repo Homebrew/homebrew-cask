@@ -1,18 +1,18 @@
 cask 'mongodb' do
-  version '3.2.10-build.1'
-  sha256 '29b36cafb62e7ba6ac728fb98e8a264fd7a6494db4350975bdab4c38d332f87b'
+  version '3.4.10-build.2'
+  sha256 '4cb500267fa959abb185b288ff200291416547137ef752d349d57160795c87ad'
 
   # github.com/gcollazo/mongodbapp was verified as official when first introduced to the cask
   url "https://github.com/gcollazo/mongodbapp/releases/download/#{version}/MongoDB.zip"
   appcast 'https://github.com/gcollazo/mongodbapp/releases.atom',
-          checkpoint: 'a15fa1bae683ae3f98f514cc2955fa27baab6e69443b6bd7dbd3224f5396acca'
+          checkpoint: '45842de30fe7ff2992a5c6075d0de647577c16327397d948633b050b05cf5a2c'
   name 'MongoDB'
   homepage 'https://elweb.co/mongodb-app/'
 
   app 'MongoDB.app'
 
-  zap delete: [
-                '~/Library/Caches/io.blimp.MongoDB',
-                '~/Library/Preferences/io.blimp.MongoDB.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/io.blimp.MongoDB',
+               '~/Library/Preferences/io.blimp.MongoDB.plist',
+             ]
 end

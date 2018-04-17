@@ -7,7 +7,7 @@ cask 'fotowall' do
   appcast 'http://www.enricoros.com/opensource/fotowall/download/changelogs/',
           checkpoint: 'b28bf6caa8bc300f962ea1ea95cce071aa80a1623efabdc2db4182ff78e7dd6b'
   name 'Fotowall'
-  homepage 'http://www.enricoros.com/opensource/fotowall/'
+  homepage 'https://www.enricoros.com/opensource/fotowall/'
 
   app 'Fotowall.app'
 

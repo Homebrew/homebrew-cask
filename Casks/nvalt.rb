@@ -1,6 +1,6 @@
 cask 'nvalt' do
-  version '2.2.7-126'
-  sha256 '496e0fb87b255ac6b6746395ff676b788cc455eccd1e65b49a63d0e2812754c3'
+  version '2.2.8-128'
+  sha256 '85420c2a8d505a580b4aa4f0ef4662f08aa4af6139fb4ed448752b6b6e8fd671'
 
   # updates.designheresy.com/nvalt was verified as official when first introduced to the cask
   url "http://updates.designheresy.com/nvalt/nvALT#{version.no_hyphens}.dmg"
@@ -9,8 +9,8 @@ cask 'nvalt' do
 
   app 'nvALT.app'
 
-  zap delete: [
-                '~/Library/Preferences/net.elasticthreads.nv.plist',
-                '~/Library/Application Support/Notational Velocity',
-              ]
+  zap trash: [
+               '~/Library/Preferences/net.elasticthreads.nv.plist',
+               '~/Library/Application Support/Notational Velocity',
+             ]
 end

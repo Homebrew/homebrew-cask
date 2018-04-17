@@ -6,13 +6,15 @@ cask 'vuze' do
   name 'Vuze'
   homepage 'https://www.vuze.com/'
 
-  installer script: 'Vuze Installer.app/Contents/MacOS/JavaApplicationStub',
-            args:   ['-q'],
-            sudo:   true
+  installer script: {
+                      executable: 'Vuze Installer.app/Contents/MacOS/JavaApplicationStub',
+                      args:       ['-q'],
+                      sudo:       true,
+                    }
 
   uninstall delete: '/Applications/Vuze.app'
 
-  zap delete: '~/Library/Application Support/Vuze'
+  zap trash: '~/Library/Application Support/Vuze'
 
   caveats do
     depends_on_java

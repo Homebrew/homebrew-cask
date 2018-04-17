@@ -5,7 +5,7 @@ cask 'kakapo' do
   # github.com/bluedaniel/Kakapo-app was verified as official when first introduced to the cask
   url "https://github.com/bluedaniel/Kakapo-app/releases/download/v#{version}/Kakapo-#{version}-Mac.zip"
   appcast 'https://github.com/bluedaniel/Kakapo-app/releases.atom',
-          checkpoint: 'e87fbb21a94fabf4fe86d677d316717512dfa54b64fe34bfe0000a2c77fd1530'
+          checkpoint: '5f7ac5a61e63d1547b2427945a6744c5381d7b21269dee019e15ec0d3fc06ef2'
   name 'Kakapo'
   homepage 'http://www.kakapo.co/app.html'
 

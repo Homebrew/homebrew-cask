@@ -1,10 +1,10 @@
 cask 'chronycontrol' do
-  version '1.1.4'
-  sha256 '31fbe11a556befc2943f890d5786bd01270ba754c747b8507f862efe47e9089f'
+  version '1.2.1'
+  sha256 '35e030839de309bdd842aca40f8960b8511f70b20f5433743a54ced739c98323'
 
   url "https://www.whatroute.net/software/chronycontrol-#{version}.zip"
   appcast 'https://whatroute.net/chronycontrol.html',
-          checkpoint: '7d98fe2d5cc0741337a5e1e680928c6a631f5e048b14ed3c87d8647dca473d92'
+          checkpoint: 'f62ca16fea6cf7d647624ea89cbcf0a96fd3eff4a3bac643c9fd6774ee162e54'
   name 'ChronyControl'
   homepage 'https://whatroute.net/chronycontrol.html'
 
@@ -21,5 +21,5 @@ cask 'chronycontrol' do
                          '/Library/LaunchDaemons/org.tuxfamily.chronyc',
                        ]
 
-  zap delete: '/var/log/chrony'
+  zap trash: '/var/log/chrony'
 end

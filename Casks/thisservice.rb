@@ -4,7 +4,7 @@ cask 'thisservice' do
 
   url "http://wafflesoftware.net/thisservice/download/ThisService#{version}.zip"
   appcast 'http://wafflesoftware.net/thisservice/sparkle/sparkle.xml',
-          checkpoint: 'ceba6331ef9bcc0160f1acf09edf7c4d6325c6ac5aca63469e0477825b65ef51'
+          checkpoint: '44c4dee2a01a0be96cd57e53e1a0f5c0022035e92b92de2bc48ca746333bc21d'
   name 'ThisService'
   homepage 'http://wafflesoftware.net/thisservice/'
 

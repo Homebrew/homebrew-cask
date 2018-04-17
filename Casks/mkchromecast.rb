@@ -1,11 +1,11 @@
 cask 'mkchromecast' do
-  version '0.3.6'
-  sha256 'cf167c5770a5a5b03b81865ceab0cbc50c9d5f93ff826bc1b4c204e5f692b112'
+  version '0.3.8.1'
+  sha256 'f5283c183c38213b87d740deaf3794e65823c12383c43f27560a5afad2b3b178'
 
   # github.com/muammar/mkchromecast was verified as official when first introduced to the cask
   url "https://github.com/muammar/mkchromecast/releases/download/#{version}/mkchromecast_v#{version}.dmg"
   appcast 'https://github.com/muammar/mkchromecast/releases.atom',
-          checkpoint: '531ae62f7285a54c1b3e7540cd16bba20a0f0ef2036182c20bd696964919d464'
+          checkpoint: '95592248a4c493cce0211ca5524183d9deb3c6699e97ed55f91e1025b7502162'
   name 'mkchromecast'
   homepage 'http://mkchromecast.com/'
 

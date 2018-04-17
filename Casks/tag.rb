@@ -5,7 +5,7 @@ cask 'tag' do
   # sourceforge.net/tagosx was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/tagosx/Tag-#{version}.zip"
   appcast 'https://sourceforge.net/projects/tagosx/rss',
-          checkpoint: 'b5357cef243912765a97a2fb4294dba43b823045143608244feb4afb3500785e'
+          checkpoint: '544af180ce40d5fbad6d71da91f6451c499652a46cd717f5589460fe4ecfa530'
   name 'Tag'
   homepage 'https://sbooth.org/Tag/'
 

@@ -1,6 +1,6 @@
 cask 'indi-control-panel' do
-  version '2.2'
-  sha256 '93e7ad53810341ccbd649d9d47656aa7dae02c3c9dffaf041f2f4c4dbf0dc2d7'
+  version '2.3'
+  sha256 'c2671bc8d8aef40638242aa3877474251b930a94ab47aa64327749af6f160279'
 
   url "http://download.cloudmakers.eu/INDI_Control_Panel_#{version}.dmg"
   name 'INDI Control Panel'

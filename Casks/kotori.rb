@@ -1,15 +1,15 @@
 cask 'kotori' do
-  version '0.22'
-  sha256 'b8fbb9e7d35eb85ea82db0ebda6b491acea063d95e8475b412f2a65ef6bf3786'
+  version '0.25'
+  sha256 'd834a47b864cda419f9f778a40c82c3c7a01cc0d802999f0ec5de614229b81f7'
 
   url "https://github.com/Watson1978/kotori/releases/download/v#{version}/kotori_#{version}.dmg"
   appcast 'https://github.com/Watson1978/kotori/releases.atom',
-          checkpoint: '5707982aa7fa0e030f1cfd58ad975da1adb6d49e32b1f97b6db9ca1541128f2a'
+          checkpoint: 'dae5e202bd585b6e90060a3ba8e03bacca2345f489ea14854f35044b977230a9'
   name 'kotori'
   name '小鳥'
   homepage 'https://github.com/Watson1978/kotori'
 
   app 'kotori.app'
 
-  zap delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jp.cat-soft.kotori.sfl'
+  zap trash: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jp.cat-soft.kotori.sfl*'
 end

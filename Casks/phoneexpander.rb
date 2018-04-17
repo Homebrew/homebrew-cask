@@ -4,15 +4,11 @@ cask 'phoneexpander' do
 
   url "https://phoneexpander.com/downloads/PhoneExpander_#{version}.zip"
   appcast 'https://phoneexpander.com/appcast',
-          checkpoint: 'ebcdbc310920a916c79d4bc6041690a1dfc6799468ddc9c1e60173a4fa09dfd2'
+          checkpoint: '69e4a33ba8d1f2abd7ba5a5794a533506ccbecebfead08f94c35c3ce84bf3b38'
   name 'PhoneExpander'
   homepage 'https://phoneexpander.com/'
 
   auto_updates true
 
   app 'PhoneExpander.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 end

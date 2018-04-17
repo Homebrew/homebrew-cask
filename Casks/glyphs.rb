@@ -1,10 +1,10 @@
 cask 'glyphs' do
-  version '2.4.1-983'
-  sha256 '8f2beb8d5322ed602d7debc8b918aaed14e5fb8b5a2c791525dc06ba1de6d78f'
+  version '2.5-1131'
+  sha256 '128a8257acd582b6413aa77fc227a670904a58106ed81058754c55ce91b19282'
 
   url "https://updates.glyphsapp.com/Glyphs#{version}.zip"
   appcast "https://updates.glyphsapp.com/appcast#{version.major}.xml",
-          checkpoint: 'e90536931075a32aed280b693ac4fb89a9361be1c19530d9657890af2c9f2050'
+          checkpoint: '3cea9f43e341321674c6ae66e2aea92e2acc35c1519b41063b8027aec64df393'
   name 'Glyphs'
   homepage 'https://glyphsapp.com/'
 
@@ -12,11 +12,11 @@ cask 'glyphs' do
 
   app 'Glyphs.app'
 
-  zap delete: [
-                '~/Library/Application Support/Glyphs',
-                '~/Library/Application Support/com.GeorgSeifert.Glyphs2',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.georgseifert.glyphs2.sfl',
-                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.GeorgSeifert.Glyphs2.help',
-                '~/Library/Preferences/com.GeorgSeifert.Glyphs2.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Glyphs',
+               '~/Library/Application Support/com.GeorgSeifert.Glyphs2',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.georgseifert.glyphs2.sfl*',
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.GeorgSeifert.Glyphs2.help*',
+               '~/Library/Preferences/com.GeorgSeifert.Glyphs2.plist',
+             ]
 end

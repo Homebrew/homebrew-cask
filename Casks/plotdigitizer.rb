@@ -4,7 +4,7 @@ cask 'plotdigitizer' do
 
   url "https://downloads.sourceforge.net/plotdigitizer/PlotDigitizer_#{version}_MacOSX.dmg"
   appcast 'https://sourceforge.net/projects/plotdigitizer/rss',
-          checkpoint: '755ba0b18407b5cc8a7b3526876ca11d5d2f7b136481e9fe87956b9947dc942e'
+          checkpoint: 'c0fd9266dfc80997706665c54af4155ede4a9477c518011832cc67416fd04b1e'
   name 'Plot Digitizer'
   homepage 'http://plotdigitizer.sourceforge.net/'
 

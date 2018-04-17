@@ -4,7 +4,7 @@ cask 'moeditor' do
 
   url "https://github.com/Moeditor/Moeditor/releases/download/v#{version}-beta/Moeditor-#{version}-darwin-x64.zip"
   appcast 'https://github.com/Moeditor/Moeditor/releases.atom',
-          checkpoint: '24cdfe7506739ad20f9f5dd1f25c29504ca1b09fa2a7112f2e8405f57208f481'
+          checkpoint: '4339da0ee3f2a50193a784fc4a3b2a3977a3d92b96fd07fac15ce2de015cf966'
   name 'Moeditor'
   homepage 'https://github.com/Moeditor/Moeditor'
 

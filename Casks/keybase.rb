@@ -1,10 +1,10 @@
 cask 'keybase' do
-  version '1.0.20-20170317000044,73c5db6'
-  sha256 '2f31db3668db8d613ce85fc3ef4bf6f933c64eb2f46e8c664a777166b1f8e3e0'
+  version '1.0.47-20180410052738,f705a9510f'
+  sha256 '1f919cc2ef8d52d9e54a0e0b31383e42c6142994304271e3ac8a20d0a3c18802'
 
-  url "https://prerelease.keybase.io/darwin/Keybase-#{version.before_comma}%2B#{version.after_comma}.dmg"
+  url "https://prerelease.keybase.io/darwin-updates/Keybase-#{version.before_comma}%2B#{version.after_comma}.zip"
   appcast 'https://prerelease.keybase.io/update-darwin-prod-v2.json',
-          checkpoint: 'b37694bcb085744fdd02746801d646f7f5745ed861aa2866848cc4442a1a3f74'
+          checkpoint: '75b6d0ab6dfe8c1b1eaabe49cdee004320e2f9fd4579993c9795faae8f8c71e3'
   name 'Keybase'
   homepage 'https://keybase.io/'
 
@@ -13,15 +13,32 @@ cask 'keybase' do
   app 'Keybase.app'
 
   postflight do
-    system_command "#{appdir}/Keybase.app/Contents/Resources/KeybaseInstaller.app/Contents/MacOS/Keybase",
-                   args: ["--app-path=#{appdir}/Keybase.app", '--run-mode=prod', '--timeout=10']
+    system_command "#{appdir}/Keybase.app/Contents/SharedSupport/bin/keybase",
+                   args: ['install-auto']
   end
 
-  uninstall_preflight do
-    if system_command('launchctl', args: ['list']).stdout =~ %r{/^\d+.*keybase.Electron/}
-      system_command 'killall', args: ['-kill', 'Keybase']
-    end
-    system_command "#{appdir}/Keybase.app/Contents/SharedSupport/bin/keybase",
-                   args: ['uninstall']
-  end
+  uninstall delete:     '/Library/PrivilegedHelperTools/keybase.Helper',
+            launchctl:  'keybase.Helper',
+            login_item: 'Keybase',
+            signal:     [
+                          ['TERM', 'keybase.Electron'],
+                          ['TERM', 'keybase.ElectronHelper'],
+                          ['KILL', 'keybase.Electron'],
+                          ['KILL', 'keybase.ElectronHelper'],
+                        ],
+            script:     {
+                          executable: "#{appdir}/Keybase.app/Contents/SharedSupport/bin/keybase",
+                          args:       ['uninstall'],
+                        }
+
+  zap trash: [
+               '~/Library/Application Support/Keybase',
+               '~/Library/Caches/Keybase',
+               '~/Library/Group Containers/keybase',
+               '~/Library/Logs/Keybase*',
+               '~/Library/Logs/keybase*',
+               '~/Library/Preferences/keybase*',
+               '/Library/Logs/keybase*',
+             ],
+      rmdir: '/keybase'
 end

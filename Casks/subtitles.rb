@@ -10,5 +10,5 @@ cask 'subtitles' do
 
   app 'Subtitles.app'
 
-  zap delete: '~/Library/Application Support/Subtitles'
+  zap trash: '~/Library/Application Support/Subtitles'
 end

@@ -1,15 +1,15 @@
 cask 'inky' do
-  version '3.2.7_104'
-  sha256 '1254b7de7527b60727a87823bfb5863f30f3645e19a7f10c6824b0b8260ce950'
+  version '3.3.0_114'
+  sha256 '77627cef367177adbf081a7772863f7b448951261f0036ce759b96526cb70140'
 
-  url "https://download.inky.com/InkyInstall_osx_#{version}.dmg"
+  url "http://download.inky.com/InkyInstall_osx_#{version}.dmg"
   name 'Inky'
-  homepage 'https://inky.com/'
+  homepage 'http://inky.com/'
 
   app 'Inky.app'
 
-  zap delete: [
-                '~/Library/Application Support/Arcode',
-                '~/Library/Caches/com.arcode.inky',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Arcode',
+               '~/Library/Caches/com.arcode.inky',
+             ]
 end

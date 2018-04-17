@@ -4,7 +4,7 @@ cask 'droidid' do
 
   url 'http://www.suyashsrijan.com/droidid/download/DroidID.zip'
   name 'DroidID'
-  homepage 'http://www.suyashsrijan.com/droidid/'
+  homepage 'https://www.suyashsrijan.com/droidid/'
 
   app 'DroidID.app'
 end

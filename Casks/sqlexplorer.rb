@@ -4,7 +4,7 @@ cask 'sqlexplorer' do
 
   url "https://downloads.sourceforge.net/eclipsesql/SQL%20Explorer%20RCP%20%28exc%20JRE%29/#{version}/sqlexplorer_rcp-#{version}.macosx.cocoa.x86.tgz"
   appcast 'https://sourceforge.net/projects/eclipsesql/rss',
-          checkpoint: 'f2188cd9189d4190b70391dcb3b45d311959e6371344136939822f379f19c50f'
+          checkpoint: '855a9f6b5ca130b0b84b82a34b98ed60af4e8ea3f1408fa573ffaa3dc1cb7dfd'
   name 'Eclipse SQL Explorer'
   homepage 'http://eclipsesql.sourceforge.net/'
 

@@ -4,7 +4,7 @@ cask 'electronic-wechat' do
 
   url "https://github.com/geeeeeeeeek/electronic-wechat/releases/download/V#{version}/mac-osx.tar.gz"
   appcast 'https://github.com/geeeeeeeeek/electronic-wechat/releases.atom',
-          checkpoint: '376bc5e24b33e1f244068465de0491422e459039b7011e81fd0291a320914699'
+          checkpoint: 'c1ecc5779be1473be10667310df8d1a00790382af0ec0746cde056b737b5072f'
   name 'Electronic WeChat'
   homepage 'https://github.com/geeeeeeeeek/electronic-wechat'
 

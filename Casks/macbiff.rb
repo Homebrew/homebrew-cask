@@ -4,7 +4,7 @@ cask 'macbiff' do
 
   url "https://downloads.sourceforge.net/macbiff/macbiff/#{version}/MacBiff-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/macbiff/rss?path=/macbiff',
-          checkpoint: '7aabb0ea6d469d4d1c225c9be9e399eeccfc24b4cf1a0a161b401d9618e6df72'
+          checkpoint: 'b5e5e1a202e1fe450c696065ee80d9db8f7cf6e6cc58d3495124f80dbd3d40b8'
   name 'MacBiff'
   homepage 'http://macbiff.sourceforge.net/'
 

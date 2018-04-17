@@ -4,7 +4,7 @@ cask 'the-ur-quan-masters' do
 
   url "https://downloads.sourceforge.net/sc2/uqm-#{version}-macosx.dmg"
   appcast 'https://sourceforge.net/projects/sc2/rss',
-          checkpoint: '74e6fb7b18dc943aadb12bf7a5859788205790bc826b3decf39893dd0d3cf70e'
+          checkpoint: '3e25028c41088bc692420d9b64a8e11c0b32cba57beeb4a5fadfebbb10b63415'
   name 'The Ur-Quan Masters'
   homepage 'http://sc2.sourceforge.net/'
 

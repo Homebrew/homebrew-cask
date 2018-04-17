@@ -1,15 +1,15 @@
 cask 'invisorql' do
-  version '2.3'
-  sha256 '5c50a72af0edff9aa77e3209c3b9f48f36044c60ee83bc8f4afd993964ce4fa9'
+  version '3.0'
+  sha256 '12c98bb32dfe0281f9a0c9ce86ba5c8418094676b6e99b30d115ebf0eaf8997f'
 
-  url "http://www.pozdeev.com/invisor/download/InvisorQL-#{version}.dmg"
-  appcast 'http://www.pozdeev.com/invisor/changelog-ql.php',
-          checkpoint: '7f58ba19ad1422d0d949fc6d56ae24c623033e8b2fbadf5a1dae8509ed527ee6'
+  url "https://www.invisorapp.com/download/InvisorQuickLook-#{version}.dmg"
+  appcast 'https://www.invisorapp.com/changelog-ql.php',
+          checkpoint: '6f26eaf0bdd6f6f90ba8b614c7a9c26540bf69b1bc238556ac6fbf0d8117a806'
   name 'Invisor QuickLook Plug-In'
-  homepage 'https://www.pozdeev.com/invisor/'
+  homepage 'https://www.invisorapp.com/'
 
-  depends_on macos: '>= :lion'
   depends_on cask: 'invisor-lite'
+  depends_on macos: '>= :mountain_lion'
 
-  qlplugin 'InvisorQL.qlgenerator'
+  qlplugin 'Invisor QuickLook.app/Contents/Library/QuickLook/InvisorQL.qlgenerator'
 end

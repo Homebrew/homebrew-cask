@@ -12,5 +12,5 @@ cask 'finderminder' do
 
   app 'FinderMinder.app'
 
-  zap delete: '~/Library/Preferences/com.irradiatedsoftware.FinderMinder.plist'
+  zap trash: '~/Library/Preferences/com.irradiatedsoftware.FinderMinder.plist'
 end

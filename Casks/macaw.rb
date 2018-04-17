@@ -4,7 +4,7 @@ cask 'macaw' do
 
   url "http://download.macaw.co/#{version}/Macaw#{version}.dmg"
   appcast 'http://download.macaw.co/appcast.xml',
-          checkpoint: '965a05c732a828d55db7d563cb01d1f746c425e3c672233ba3f67ec998e7bf2e'
+          checkpoint: '4aaf6bfb2da0a9570750514cbf4db9038d541891eb61f12d4f49f0cfc9e902ab'
   name 'Macaw'
   homepage 'http://macaw.co/'
 

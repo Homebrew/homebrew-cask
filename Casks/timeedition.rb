@@ -5,9 +5,9 @@ cask 'timeedition' do
   # sourceforge.net/timeedition was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/timeedition/timeEdition#{version}-macosx.dmg.zip"
   appcast 'https://sourceforge.net/projects/timeedition/rss',
-          checkpoint: 'cec11e55eba60ac1f7da63f1f81d7924a0d72ad68640011d5db9fb56547d2d8d'
+          checkpoint: '73d626d54d33b2511ece8e0566359a2e446b0043dd8b90690372deaad6774be9'
   name 'timeEdition'
-  homepage 'https://www.timeedition.com/old/en/'
+  homepage 'https://www.timeedition.com/'
 
   app "timeEdition #{version}/timeEdition.app"
 

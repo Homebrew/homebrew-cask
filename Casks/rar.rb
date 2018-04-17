@@ -1,6 +1,6 @@
 cask 'rar' do
-  version '5.4.0'
-  sha256 '09a14f40718c68fc1c24b30acb55d0f2f90f3e13b372c48b6ef1e789d748b754'
+  version '5.5.0'
+  sha256 'aac47555add3aeb65693bc35738c28a8ba215097a3371f2f162c06588b36265c'
 
   url "http://www.rarlab.com/rar/rarosx-#{version}.tar.gz"
   name 'RAR Archiver'
@@ -8,10 +8,10 @@ cask 'rar' do
 
   binary 'rar/rar'
   binary 'rar/unrar'
-  artifact 'rar/default.sfx', target: '/usr/local/lib/default.sfx'
-  artifact 'rar/rarfiles.lst', target: '/usr/local/etc/rarfiles.lst'
+  artifact 'rar/default.sfx', target: "#{HOMEBREW_PREFIX}/lib/default.sfx"
+  artifact 'rar/rarfiles.lst', target: "#{HOMEBREW_PREFIX}/etc/rarfiles.lst"
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     Instructions on using rar and unrar are available in
 
       #{staged_path}/rar/rar.txt

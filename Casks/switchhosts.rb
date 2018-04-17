@@ -1,13 +1,13 @@
 cask 'switchhosts' do
-  version '3.2.3.4264'
-  sha256 'bd54356ffa87273f1a76240968931c89c03cba69c22ed4c6a4970551631ffe36'
+  version '3.3.11.5347'
+  sha256 '198519b5aa8fb8d567a6fcb51609d434df08c444623c7350a2d1b4b62dd48c8a'
 
   # github.com/oldj/SwitchHosts was verified as official when first introduced to the cask
   url "https://github.com/oldj/SwitchHosts/releases/download/v#{version.major_minor_patch}/SwitchHosts-macOS-x64_v#{version}.zip"
   appcast 'https://github.com/oldj/SwitchHosts/releases.atom',
-          checkpoint: 'cd4184a1aa5ef5e1c4b27269367770ea7d96327ae74cfd9b0293489bb9fa156b'
+          checkpoint: 'cf200f9f79455a6b611bec86249a14137ad9aad3dbb0c057376043615f6636ea'
   name 'SwitchHosts!'
   homepage 'https://oldj.github.io/SwitchHosts/'
 
-  app 'SwitchHosts!.app'
+  app 'SwitchHosts!-darwin-x64/SwitchHosts!.app'
 end

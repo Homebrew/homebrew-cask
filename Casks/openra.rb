@@ -1,15 +1,17 @@
 cask 'openra' do
-  version '20161019'
-  sha256 '216ed0d307a57b7c7c5d8e304ba227e11548aabfa696247446ada5e9f88e5e00'
+  version '20180307'
+  sha256 'a8cf3a77ff1cccfaa66d973f4abbfa1c30106f39da97ce4d0fd0e823cee86b52'
 
   # github.com/OpenRA/OpenRA was verified as official when first introduced to the cask
-  url "https://github.com/OpenRA/OpenRA/releases/download/release-#{version}/OpenRA-release-#{version}.zip"
+  url "https://github.com/OpenRA/OpenRA/releases/download/release-#{version}/OpenRA-release-#{version}.dmg"
   appcast 'https://github.com/OpenRA/OpenRA/releases.atom',
-          checkpoint: 'da02f72b8d7631c584ba88626c1dc82bec737f2ea0de0d1edb41e6a3ca6b800f'
+          checkpoint: 'aec2e5506d2e9ecea45add537487bfbbdbb7ad329ca018f1cdae88a9d7d911b3'
   name 'OpenRA'
   homepage 'http://www.openra.net/'
 
   depends_on cask: 'mono-mdk'
 
-  app 'OpenRA.app'
+  app 'OpenRA - Dune 2000.app'
+  app 'OpenRA - Red Alert.app'
+  app 'OpenRA - Tiberian Dawn.app'
 end

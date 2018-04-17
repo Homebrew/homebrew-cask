@@ -10,19 +10,15 @@ cask 'gitter' do
 
   app 'Gitter.app'
 
-  postflight do
-    suppress_move_to_applications
-  end
-
   uninstall quit: [
                     'com.troupe.gitter.mac.Gitter',
                     'com.troupe.gitter.mac.GitterHelperApp',
                   ]
 
-  zap delete: [
-                '~/Library/Application Support/Gitter',
-                '~/Library/Caches/com.troupe.gitter.mac.Gitter',
-                '~/Library/Preferences/com.troupe.gitter.mac.Gitter.plist',
-                '~/Library/Saved Application State/com.troupe.gitter.mac.Gitter.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Gitter',
+               '~/Library/Caches/com.troupe.gitter.mac.Gitter',
+               '~/Library/Preferences/com.troupe.gitter.mac.Gitter.plist',
+               '~/Library/Saved Application State/com.troupe.gitter.mac.Gitter.savedState',
+             ]
 end

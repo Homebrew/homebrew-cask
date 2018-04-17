@@ -4,6 +4,8 @@ cask 'bitpost' do
 
   # voluntary.net.s3.amazonaws.com was verified as official when first introduced to the cask
   url "http://voluntary.net.s3.amazonaws.com/Bitpost.#{version}.zip"
+  appcast 'https://voluntary.net/bitpost/',
+          checkpoint: '71fa037263757b22fd91e65c4331cc91c5c541623bd287a33ff3b6ecca236b39'
   name 'Bitpost'
   homepage 'https://voluntary.net/bitpost/'
 

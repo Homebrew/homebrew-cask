@@ -1,10 +1,10 @@
 cask 'wowza-streaming-engine' do
-  version '4.6.0'
-  sha256 '47364372ce212bc96996cc1cf46b7e50d0ef0194a080dc1a9437586397b87801'
+  version '4.7.3'
+  sha256 '6a79b0d0361fceb613444c9406113b401e65bb65496f4b8e47911ba5fcceab05'
 
   url "https://www.wowza.com/downloads/WowzaStreamingEngine-#{version.dots_to_hyphens}/WowzaStreamingEngine-#{version}-osx-installer.dmg"
   appcast 'https://www.wowza.com/rss/wowzastreamingengineupdates.xml',
-          checkpoint: '50fd05c522e636a2de7151e3e9c74250b623cab046208d9d5f89756af978e19d'
+          checkpoint: 'e5021c818a36050359df80b733e009f1dce1aa3764c9510af263cdd975fccb32'
   name 'Wowza Streaming Engine'
   homepage 'https://www.wowza.com/products/streaming-engine'
 

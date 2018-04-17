@@ -1,10 +1,10 @@
 cask 'appdelete' do
-  version '4.3.2'
-  sha256 '8ebdb3579dabd0d50382aca0101d58c9b31f3d70d909c7fa53948ed1ca313c16'
+  version '4.3.3'
+  sha256 'ac7ce8a55ad74eed68d79ccf69284a1174bf74a2a376f73c63e51ca8c4687547'
 
   url 'http://www.reggieashworth.com/downloads/AppDelete.dmg'
   appcast "http://www.reggieashworth.com/AD#{version.major}Appcast.xml",
-          checkpoint: 'b6256893f57e19683482cc32b9e73093b86814d9c74d60747d2b1dd0d6a9e772'
+          checkpoint: '843016cf398f3163565900b2589522f265402a7b6a37e2704c0adab10bc1ace6'
   name 'AppDelete'
   homepage 'http://www.reggieashworth.com/appdelete'
 
@@ -13,11 +13,11 @@ cask 'appdelete' do
 
   app 'AppDelete.app'
 
-  zap delete: [
-                '~/Library/Application Support/AppDelete',
-                '~/Library/Caches/com.apps4macs.AppDelete',
-                '~/Library/Preferences/com.apps4macs.AppDelete.plist',
-                '~/Library/Saved Application State/com.apps4macs.AppDelete.savedState',
-                '~/Library/Services/AppDelete.workflow',
-              ]
+  zap trash: [
+               '~/Library/Application Support/AppDelete',
+               '~/Library/Caches/com.apps4macs.AppDelete',
+               '~/Library/Preferences/com.apps4macs.AppDelete.plist',
+               '~/Library/Saved Application State/com.apps4macs.AppDelete.savedState',
+               '~/Library/Services/AppDelete.workflow',
+             ]
 end

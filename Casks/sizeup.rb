@@ -13,8 +13,8 @@ cask 'sizeup' do
 
   app 'SizeUp.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.irradiatedsoftware.SizeUp.plist',
-                '~/Library/Application Support/SizeUp',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.irradiatedsoftware.SizeUp.plist',
+               '~/Library/Application Support/SizeUp',
+             ]
 end

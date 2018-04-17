@@ -34,7 +34,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install).
 | `vst_plugin`       | yes                           | relative path to a VST Plugin that should be moved into the `~/Library/Audio/VST` folder on installation
 | `vst3_plugin`      | yes                           | relative path to a VST3 Plugin that should be moved into the `~/Library/Audio/VST3` folder on installation
 | `suite`            | yes                           | relative path to a containing directory that should be moved into the `/Applications` folder on installation (see also [Suite Stanza Details](stanzas/suite.md))
-| `artifact`         | yes                           | relative path to an arbitrary path that should be moved on installation. Must provide an absolute path as a `target` (example [alcatraz.rb](https://github.com/caskroom/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/alcatraz.rb#L12)). This is only for unusual cases. The `app` stanza is strongly preferred when linking `.app` bundles.
+| `artifact`         | yes                           | relative path to an arbitrary path that should be moved on installation. Must provide an absolute path as a `target` (example [alcatraz.rb](https://github.com/caskroom/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/alcatraz.rb#L12)). This is only for unusual cases. The `app` stanza is strongly preferred when moving `.app` bundles.
 | `installer`        | yes                           | describes an executable which must be run to complete the installation (see [Installer Stanza Details](stanzas/installer.md))
 | `stage_only`       | no                            | `true`. Assert that the Cask contains no activatable artifacts.
 

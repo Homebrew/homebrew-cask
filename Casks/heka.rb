@@ -4,7 +4,7 @@ cask 'heka' do
 
   url "https://github.com/mozilla-services/heka/releases/download/v#{version}/heka-#{version.dots_to_underscores}-darwin-amd64.dmg"
   appcast 'https://github.com/mozilla-services/heka/releases.atom',
-          checkpoint: '0fd98cf518a904404c8d9b07a4b1e04138ce07d39dd6e71b73a7ae7ed847cd58'
+          checkpoint: '3e86fb6e706ad786f14ce2ef23c156b5a831f5e3ae374a27fb5fe34d6e9ce848'
   name 'Mozilla heka'
   homepage 'https://github.com/mozilla-services/heka'
 

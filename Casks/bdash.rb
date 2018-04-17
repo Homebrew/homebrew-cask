@@ -1,10 +1,10 @@
 cask 'bdash' do
-  version '1.1.0'
-  sha256 '3ac716d55d7d615554256d443b9bef84b13fc3d1c99be3fe9fc0fe1e6946cea4'
+  version '1.2.2'
+  sha256 '3fd4764e7454ff8861562ade2162e0a1d28ea7d80b1ba466f4a7aa6095ac84dd'
 
   url "https://github.com/bdash-app/bdash/releases/download/#{version}/Bdash-#{version}-macOS.zip"
   appcast 'https://github.com/bdash-app/bdash/releases.atom',
-          checkpoint: '5e55b65296f57af1b74f22823e6e37e4794ac91f1670a6e87dcbc48ab4e7ee4a'
+          checkpoint: '3f5cebce3e85be302157f59b86f6dd26c595c0f60948fcbeafcd065bc5b3983c'
   name 'Bdash'
   homepage 'https://github.com/bdash-app/bdash'
 

@@ -4,7 +4,7 @@ cask 'gn-growler-utility' do
 
   url "http://wafflesoftware.net/growlergn/download/GNGrowler-#{version.no_dots}.zip"
   appcast 'http://wafflesoftware.net/growlergn/',
-          checkpoint: '89782e28614f1bf695d6f3fd367504ec2ccaf4c949bf0b2d443c8db74df0dd66'
+          checkpoint: '32ff0f5c44030ec6650f73f6395ee98ef800ece2780d9ffd05b4697815e36643'
   name 'Growler for Google Notifier'
   homepage 'http://wafflesoftware.net/growlergn/'
 

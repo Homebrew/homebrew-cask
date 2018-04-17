@@ -1,11 +1,11 @@
 cask 'gureumkim' do
-  version '1.8.9c'
-  sha256 'f0e69d60ac57b83f475313b2e38ca42c06b3d46cfec69ef77a274a89695ff9ae'
+  version '1.9.0c'
+  sha256 'eac1817137be39e0f36a9f2e2f0170c3eb3eeb6bf28ec25c5143c7de82a50050'
 
   # github.com/gureum/gureum was verified as official when first introduced to the cask
   url "https://github.com/gureum/gureum/releases/download/GureumKIM-#{version.delete('a-z')}/GureumKIM-#{version}.pkg"
   appcast 'https://github.com/gureum/gureum/releases.atom',
-          checkpoint: '241eb7bbf1ff3a4d272b6d4813c343fe885ef1258159311ec32e02fb291a5262'
+          checkpoint: '1fc78d534cc0f5fb120cb259137a7758a2a41b57e4e75229e286724c107f172c'
   name '구름 입력기'
   homepage 'http://gureum.io/'
 

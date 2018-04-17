@@ -1,6 +1,6 @@
 cask 'sonoair' do
-  version '1.0-beta-4.0'
-  sha256 '2f14f818322f5bbf96833880edb5aee46cda5fa74456d7c951e3d36372c09067'
+  version '1.0-beta-6.1'
+  sha256 'f2870a2ee7e7cc3faf5ac315e5a8e03bc592f95862112ad433c39306ebdbc4b7'
 
   url "http://sonoair.mihosoft.eu/releases/#{version}/SonoAir.zip"
   name 'SonoAir'

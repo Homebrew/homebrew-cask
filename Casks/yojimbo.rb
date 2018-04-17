@@ -1,17 +1,13 @@
 cask 'yojimbo' do
-  version '4.0.4'
-  sha256 '1da84ee26dffc3812ccf8bd2d9323e1dbd058be04648bf127f7f023d92039ecb'
+  version '4.1.1'
+  sha256 '401b36cb12910a61d53b86fef571dcd8794f3970808098e1f0849e7d8a47f8e0'
 
   # amazonaws.com/BBSW-download was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/BBSW-download/Yojimbo_#{version}.dmg"
   appcast 'https://versioncheck.barebones.com/Yojimbo.xml',
-          checkpoint: '20b638968b9c3d76a362758135d6a537de3a669b0811b3edd946204b343d86f6'
+          checkpoint: '398e62e09442015812d175f1e06546fd6ad7c44cd7591d24b6c5e35fdfe67d2f'
   name 'Yojimbo'
-  homepage 'http://www.barebones.com/products/yojimbo/'
+  homepage 'https://www.barebones.com/products/yojimbo/'
 
   app 'Yojimbo.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 end

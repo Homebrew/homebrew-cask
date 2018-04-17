@@ -1,6 +1,6 @@
 cask 'macid' do
-  version '1.3.5'
-  sha256 'fdb37485748ad774e6e78e5d9134ce355aa5227e2926206a0e2314cc660ae452'
+  version '1.3.7'
+  sha256 '788a081b6346c861472af9ad8e5e2f7ef172247e235aa93d5f2a89fe97d5cb82'
 
   url "https://macid.co/app/#{version}/MacID%20for%20macOS.zip"
   name 'MacID'
@@ -10,9 +10,5 @@ cask 'macid' do
 
   app 'MacID.app'
 
-  postflight do
-    suppress_move_to_applications
-  end
-
-  zap delete: '~/Library/Preferences/com.kanecheshire.MacIDOSX.plist'
+  zap trash: '~/Library/Preferences/com.kanecheshire.MacIDOSX.plist'
 end

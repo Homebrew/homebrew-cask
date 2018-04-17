@@ -4,7 +4,7 @@ cask 'watch-screenshot-magic' do
 
   url "https://github.com/Imperiopolis/WatchScreenshotMagic/releases/download/#{version}/WatchScreenshotMagic.tar.gz"
   appcast 'https://github.com/Imperiopolis/WatchScreenshotMagic/releases.atom',
-          checkpoint: '145af78b658f959a27b7e5862d16799845b49acc6a1a45d6b0b573cc40cd6218'
+          checkpoint: '1ae8570d9a996920cb960d65cb419af30bf5d475c4772de2e7c8661aa34a5033'
   name 'Watch Screenshot Magic'
   homepage 'https://github.com/Imperiopolis/WatchScreenshotMagic'
 

@@ -4,7 +4,7 @@ cask 'quicklook-pfm' do
 
   url "https://github.com/lnxbil/quicklook-pfm/releases/download/#{version}/quicklook-pfm-#{version}.zip"
   appcast 'https://github.com/lnxbil/quicklook-pfm/releases.atom',
-          checkpoint: '6bd737e8e514aed099b266761b2c0f223cbb689e2b5237872a7e3d782ea1a2e7'
+          checkpoint: '810c3859e5a5c837d86d260489e7514656ac03454a686dba72f5fedc85e209f1'
   name 'quicklook-pfm'
   homepage 'https://github.com/lnxbil/quicklook-pfm'
 

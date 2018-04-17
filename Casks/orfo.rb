@@ -7,6 +7,7 @@ cask 'orfo' do
   name 'ОРФО'
   homepage 'http://www.orfo.ru/'
 
+  auto_updates true
   conflicts_with cask: 'orfo-plus'
 
   pkg 'ORFO2016.pkg'
@@ -19,7 +20,11 @@ cask 'orfo' do
             delete:     '/Library/PreferencePanes/ORFOSetup.prefPane',
             login_item: 'OrfoUpdate'
 
-  zap delete: '/Library/Application Support/ORFO 2016'
+  zap trash: [
+               '/Library/Application Support/ORFO 2016',
+               '~/Library/Caches/com.informatic.OrfoUpdate',
+               '~/Library/Preferences/com.informatic.RussianCollection.plist',
+             ]
 
   caveats do
     reboot

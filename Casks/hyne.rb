@@ -4,15 +4,15 @@ cask 'hyne' do
 
   url "https://github.com/myst6re/hyne/releases/download/#{version}/Hyne-#{version}-osx64.tar.gz"
   appcast 'https://github.com/myst6re/hyne/releases.atom',
-          checkpoint: 'da938c2c2d76c46d384b6db7eb993d44b46a32cffd0eb99dfb09b958bf2fe5d1'
+          checkpoint: 'ce3d4525e66fc4b0454233846491c36ec4141653a70c002e9e83c9f5bd1d49a7'
   name 'Hyne'
   homepage 'https://github.com/myst6re/hyne'
 
   app "hyne-#{version}-osx64/Hyne.app"
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vin047.hyne.sfl',
-                '~/Library/Preferences/com.vin047.hyne.plist',
-                '~/Library/Saved Application State/com.vin047.hyne.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vin047.hyne.sfl*',
+               '~/Library/Preferences/com.vin047.hyne.plist',
+               '~/Library/Saved Application State/com.vin047.hyne.savedState',
+             ]
 end

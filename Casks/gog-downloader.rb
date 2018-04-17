@@ -4,16 +4,16 @@ cask 'gog-downloader' do
 
   url "https://static.gog.com/download/d3/mac-stable/GOG_Downloader_#{version}.zip"
   appcast 'https://api.gog.com/en/downloader2/status/mac-stable',
-          checkpoint: 'a3c972e56f751b534b16c9c63930e6e663c0643123a09f9cc6ec921a7b4d1afb'
+          checkpoint: '60f99d34cce116b973608660d9788c437cc1af77a9e447aee9b5b25e74c7cf2e'
   name 'GOG Downloader'
   homepage 'https://www.gog.com/downloader'
 
   app 'GOG Downloader.app'
 
-  zap delete: [
-                '~/Library/Application Support/GOG Downloader',
-                '~/Library/Caches/com.gog.downloader',
-                '~/Library/Preferences/com.gog.downloader.plist',
-                '~/Library/Saved Application State/com.gog.downloader.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/GOG Downloader',
+               '~/Library/Caches/com.gog.downloader',
+               '~/Library/Preferences/com.gog.downloader.plist',
+               '~/Library/Saved Application State/com.gog.downloader.savedState',
+             ]
 end

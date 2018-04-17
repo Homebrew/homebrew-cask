@@ -4,7 +4,7 @@ cask 'batchmod' do
 
   url "https://www.lagentesoft.com/resources/batchmod_#{version.no_dots}.zip"
   appcast 'http://www.macchampion.com/arbysoft/batchmodappcast.xml',
-          checkpoint: '8dc120c11cd4137e4bad1717e03e50fab99aeb762e3610ee96494850cb01e0df'
+          checkpoint: '5c80b00dcb0c15447bd8d2e3853c65ab0500d3d12907a9c0880e54c50be33d21'
   name 'BatChmod'
   homepage 'https://www.lagentesoft.com/batchmod/'
 

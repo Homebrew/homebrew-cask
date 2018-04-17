@@ -11,7 +11,7 @@ cask 'feed-the-beast' do
 
   app 'Feed The Beast.app'
 
-  zap delete: '~/Library/Application Support/ftblauncher'
+  zap trash: '~/Library/Application Support/ftblauncher'
 
   caveats do
     depends_on_java

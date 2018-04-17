@@ -4,7 +4,7 @@ cask 'createuserpkg' do
 
   url "https://magervalp.github.io/CreateUserPkg/Distributions/CreateUserPkg-#{version}.dmg"
   appcast 'https://github.com/MagerValp/CreateUserPkg/releases.atom',
-          checkpoint: 'e97f696d0d6e39e65357a56b62e91ae4fce4704097eb7a57659858a29c2c2fdf'
+          checkpoint: '2fd4863d641fb7b17c930de538d49e3665bc9392d0fa1cc94faedd4cbed3914c'
   name 'CreateUserPkg'
   homepage 'https://magervalp.github.io/CreateUserPkg/'
 

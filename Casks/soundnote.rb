@@ -4,7 +4,7 @@ cask 'soundnote' do
 
   url 'https://download.mrgeckosmedia.com/SoundNote.zip'
   appcast 'https://mrgeckosmedia.com/applications/releasenotes/SoundNote',
-          checkpoint: '05e074ad57f8d2c09ec8bf820797132dc79356c1bcd385669211972804f5fb38'
+          checkpoint: '3b86d61d96906e20e4d60b2806dd287b2f314f89a29974b218b845a8624e357b'
   name 'SoundNote'
   homepage 'https://mrgeckosmedia.com/applications/info/SoundNote'
 

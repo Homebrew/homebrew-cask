@@ -17,12 +17,12 @@ cask 'glimmerblocker' do
                        ],
             delete:    '/Library/PreferencePanes/GlimmerBlocker.prefPane'
 
-  zap       delete: [
-                      '/Library/GlimmerBlocker',
-                      '/Library/Logs/GlimmerBlocker',
-                    ]
+  zap trash: [
+               '/Library/GlimmerBlocker',
+               '/Library/Logs/GlimmerBlocker',
+             ]
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     You must deactivate GlimmerBlocker from the installed preference
     pane before uninstalling. See http://glimmerblocker.org/wiki/Uninstall.
   EOS

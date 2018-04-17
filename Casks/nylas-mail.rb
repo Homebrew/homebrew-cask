@@ -1,26 +1,33 @@
 cask 'nylas-mail' do
-  version '1.0.45-a95f866'
-  sha256 '57610a9746a1cf3a4c471030abcd01b883cabf5c1611fba52be275ee9f6bb086'
+  version '2.0.32-fec7941'
+  sha256 '493e42d9913903d317827c75fa8cca2c1204e3b988c016491823f3c45dbb4cfb'
 
   # edgehill.s3-us-west-2.amazonaws.com was verified as official when first introduced to the cask
-  url "https://edgehill.s3-us-west-2.amazonaws.com/#{version}/darwin/x64/NylasMail.zip"
+  url "https://edgehill.s3-us-west-2.amazonaws.com/#{version}/darwin/x64/NylasMail.dmg"
   appcast 'https://edgehill.nylas.com/update-check?platform=darwin&arch=64',
-          checkpoint: 'aab4ec5de2ded71c72a29c04bca8fa3d176741ef9666174efa189e9dac5f8c81'
+          checkpoint: 'c333095da7f2b03c74c7c8b44605108502566725fed36e20ad1f7099533fc23b'
   name 'Nylas Mail'
   homepage 'https://www.nylas.com/'
 
   auto_updates true
+  conflicts_with cask: 'nylas-mail-lives'
 
   app 'Nylas Mail.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nylas.nylas-mail.sfl',
-                '~/Library/Application Support/com.nylas.nylas-mail.ShipIt',
-                '~/Library/Application Support/Nylas Mail',
-                '~/Library/Caches/com.nylas.nylas-mail',
-                '~/Library/Caches/com.nylas.nylas-mail.ShipIt',
-                '~/Library/Caches/Nylas Mail',
-                '~/Library/Preferences/com.nylas.nylas-mail.plist',
-                '~/Library/Saved Application State/com.nylas.nylas-mail.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nylas.nylas-mail.sfl*',
+               '~/Library/Application Support/com.nylas.nylas-mail.ShipIt',
+               '~/Library/Application Support/Nylas Mail',
+               '~/Library/Caches/com.nylas.nylas-mail',
+               '~/Library/Caches/com.nylas.nylas-mail.ShipIt',
+               '~/Library/Caches/Nylas Mail',
+               '~/Library/Preferences/com.nylas.nylas-mail.helper.plist',
+               '~/Library/Preferences/com.nylas.nylas-mail.plist',
+               '~/Library/Saved Application State/com.nylas.nylas-mail.savedState',
+               '~/.nylas-mail',
+             ]
+
+  caveats do
+    discontinued
+  end
 end

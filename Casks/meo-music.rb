@@ -10,8 +10,8 @@ cask 'meo-music' do
 
   app 'MEO Music.app'
 
-  zap delete: [
-                '~/Library/Caches/pt.tmn.musicbox',
-                '~/Library/Caches/nmusic',
-              ]
+  zap trash: [
+               '~/Library/Caches/pt.tmn.musicbox',
+               '~/Library/Caches/nmusic',
+             ]
 end

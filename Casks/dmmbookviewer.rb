@@ -1,6 +1,6 @@
 cask 'dmmbookviewer' do
-  version '2.0.4'
-  sha256 'ac794dc71761a8a891dc237c11665866cfe76f7bcce68c20f7afb24a1a4a39b9'
+  version '3.1.5'
+  sha256 '00fbd0fca4ffa2d0ddd661af168636d0337abd302ff99945d3622eb91b11d307'
 
   # dmm.co.jp was verified as official when first introduced to the cask
   url "http://dl.aka.dmm.co.jp/dmmviewer/mac/DMMViewerSetup_Mac_#{version}.pkg"
@@ -9,6 +9,17 @@ cask 'dmmbookviewer' do
 
   pkg "DMMViewerSetup_Mac_#{version}.pkg"
 
-  uninstall pkgutil: 'com.dmm.DMMbookviewer',
-            delete:  '/Applications/DMMbookviewer.app'
+  uninstall pkgutil:   [
+                         'com.dmm.DMMbookviewer',
+                         'jp.co.cyphertec.installer.acwd.plist',
+                         'jp.co.cyphertec.installer.framework.CypherGuardAC',
+                         'jp.co.cyphertec.installer.info.CypherGuardAC',
+                         'jp.co.cyphertec.installer.kext.nosigned',
+                         'jp.co.cyphertec.installer.kext.signed',
+                       ],
+            kext:      [
+                         'jp.co.cyphertec.CypherGuardKa',
+                         'jp.co.cyphertec.CypherGuardAT',
+                       ],
+            launchctl: 'jp.co.cyphertec.acwd'
 end

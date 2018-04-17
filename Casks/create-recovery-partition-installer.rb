@@ -4,7 +4,7 @@ cask 'create-recovery-partition-installer' do
 
   url "https://github.com/MagerValp/Create-Recovery-Partition-Installer/releases/download/v#{version}/Create.Recovery.Partition.Installer-#{version}.dmg"
   appcast 'https://github.com/MagerValp/Create-Recovery-Partition-Installer/releases.atom',
-          checkpoint: '0a040c2c1f5e8caff03534c7b81e4061e41eb696edba4f50f773d503ddddd7d7'
+          checkpoint: '3283f1ad38653f2f9f72a5f1b3db2ba3d800fd4ed585c9b93f7cc6fe98cce0f6'
   name 'Create Recovery Partition Installer'
   homepage 'https://github.com/MagerValp/Create-Recovery-Partition-Installer/'
 

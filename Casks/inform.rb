@@ -1,10 +1,10 @@
 cask 'inform' do
   version '6M62'
-  sha256 '5302213a92122a98167e8e2994fd465ed3400b16aa571139edc772616e72b8b9'
+  sha256 '812f260e80fd5cf2ce2918d089b574b67f1dfe9082532c614d47ff98526ae389'
 
   url "http://inform7.com/download/content/#{version}/I7-#{version}-OSX.dmg"
   appcast 'http://inform7.com/download/',
-          checkpoint: '3fbbfa135f012ac8009b67422e0b98178c630ab2f95f902f1400d98a6149385a'
+          checkpoint: 'a7577ce030498d1d83c20ad957fcbb0b5129d7bb20158208eecaf7125d5de5d7'
   name 'Inform'
   homepage 'http://inform7.com/'
 

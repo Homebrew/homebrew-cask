@@ -1,11 +1,11 @@
 cask 'tigervnc-viewer' do
-  version '1.7.1'
-  sha256 '909c53f9a4b60d4569c4348e56ef6e9bf85b7d22ade219d7e545014ca16ff2de'
+  version '1.8.0'
+  sha256 'fdff189c864788a174066da081e9bd8991628df46a3a2b69bd7c593d3e62d426'
 
   # bintray.com/tigervnc was verified as official when first introduced to the cask
   url "https://bintray.com/tigervnc/stable/download_file?file_path=TigerVNC-#{version}.dmg"
   appcast 'https://github.com/TigerVNC/tigervnc/releases.atom',
-          checkpoint: '1cf83f9105fa22f1feed4e858f22618caa6e3c728649338325b62811be66b5cf'
+          checkpoint: '71af12586886fea31bc8134ab5083bbbaa594aa5e0a88079c8b739d667cc1125'
   name 'TigerVNC'
   homepage 'http://tigervnc.org/'
 

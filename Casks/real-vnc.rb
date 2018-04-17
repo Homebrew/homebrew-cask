@@ -1,6 +1,6 @@
 cask 'real-vnc' do
-  version '6.0.2'
-  sha256 'fad0e8ea750399b6af627a9a4f31321bf7e6c4551c8ca9ed9ecbec1e5fa0b012'
+  version '6.1.1'
+  sha256 '3b3437ba078774692b8073273163a93cefa9c5b936b718e2020a657d4496df79'
 
   url "https://www.realvnc.com/download/file/vnc.files/VNC-#{version}-MacOSX-x86_64.pkg"
   name 'Real VNC'
@@ -22,9 +22,10 @@ cask 'real-vnc' do
                          'com.realvnc.vncviewer.pkg',
                        ]
 
-  zap delete: [
-                '~/Library/Saved Application State/com.realvnc.vnclicensewiz.savedState',
-                '~/Library/Saved Application State/com.realvnc.vncviewer.savedState',
-                '~/Library/Saved Application State/com.realvnc.vncserver.savedState',
-              ]
+  zap trash: [
+               '/Library/Logs/vncserver.log.bak',
+               '~/Library/Saved Application State/com.realvnc.vnclicensewiz.savedState',
+               '~/Library/Saved Application State/com.realvnc.vncviewer.savedState',
+               '~/Library/Saved Application State/com.realvnc.vncserver.savedState',
+             ]
 end

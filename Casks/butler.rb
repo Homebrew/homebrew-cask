@@ -3,8 +3,8 @@ cask 'butler' do
   sha256 '7de67e08e0bcffbdf3c5a2af73f84654b7dc5db5e95d61e42e74d863eb3d06fc'
 
   url 'https://manytricks.com/download/butler'
-  appcast 'https://manytricks.com/butler/butlercast.xml',
-          checkpoint: '2ed9042374aac7064601c3b0576b9843979e6fe164fd260b2e4b43b15fc5595f'
+  appcast 'https://manytricks.com/butler/appcast',
+          checkpoint: '4394035e267ef80ea13e9123556c5a99152e2b5271f386e31458012882fbfe8c'
   name 'Butler'
   homepage 'https://manytricks.com/butler/'
 

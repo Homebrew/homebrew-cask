@@ -1,13 +1,15 @@
 cask 'bino' do
-  version '1.6.5'
-  sha256 '9d45fe15e4e475c4e8f889d53dd13f1d0ce9c6d78b6f74d22c5aefbf49d76218'
+  version '1.6.6'
+  sha256 '31f0c7590511c9c5bfb92f488de82565bdc4c945b934a1e8cd40a110beb49fd5'
 
   # devernay.free.fr/hacks/bino was verified as official when first introduced to the cask
-  url "http://devernay.free.fr/hacks/bino/Bino-#{version}-OSX-SnowLeopard-GPL.zip"
+  url "http://devernay.free.fr/hacks/bino/Bino-#{version}-OSX-Mavericks-GPL.zip"
   appcast 'http://devernay.free.fr/hacks/bino/',
-          checkpoint: '7f37618abb83b7b1c1a5cf954b3396d5cb729bb3184a88505efeff6c47cc6259'
+          checkpoint: '1fbe3a6c931f36c91debea2c2a00fb0a52dd4d7c1acd5551956879d5cc8f2fde'
   name 'Bino'
-  homepage 'http://bino3d.org/'
+  homepage 'https://bino3d.org/'
+
+  depends_on macos: '>= :mavericks'
 
   app 'Bino.app'
 end

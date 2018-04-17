@@ -4,7 +4,7 @@ cask 'gifrocket' do
 
   url "http://www.gifrocket.com/Gifrocket.#{version}.zip"
   appcast 'http://www.gifrocket.com/',
-          checkpoint: '7852e6ef7cdcd9018b37c88bb7b343820bfa1d864e0fdad7fa242f5ada27d41c'
+          checkpoint: 'f72d3ce46c380827047a7b68b571387b84c827bf480c32defa46f251b00a7cd4'
   name 'Gifrocket'
   homepage 'http://www.gifrocket.com/'
 

@@ -3,11 +3,11 @@ cask 'controlplane' do
     version '1.2.3'
     sha256 '37f93d3a3a17a6e2f24447f0bc74c7e89ec1581ca52e5970960544858c86f909'
   else
-    version '1.6.5'
-    sha256 '446da8ecb194f4a4c9e9d0a1984f1476cfcb7202a3415b6d36eff063f97db47c'
+    version '1.6.6'
+    sha256 'a9c9cdfe350bc9f038764a0b4c8f4337750113f44aacd68aa81b6f0aa391af1b'
 
     appcast 'https://www.controlplaneapp.com/appcast.xml',
-            checkpoint: 'e8e01bc8f468b991f72c731ab00a15d676ca26a0ccbe75af237d17d223ac81a6'
+            checkpoint: '72cb4d20072fb0d7a698553902cf87d7b03352e894103892e568d26c2113884d'
   end
 
   url "https://www.controlplaneapp.com/download/#{version}"
@@ -16,5 +16,5 @@ cask 'controlplane' do
 
   app 'ControlPlane.app'
 
-  zap delete: '~/Library/Preferences/com.dustinrue.ControlPlane.plist'
+  zap trash: '~/Library/Preferences/com.dustinrue.ControlPlane.plist'
 end

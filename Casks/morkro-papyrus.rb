@@ -4,7 +4,7 @@ cask 'morkro-papyrus' do
 
   url "https://github.com/morkro/papyrus/releases/download/#{version}/Papyrus-osx-#{version}.zip"
   appcast 'https://github.com/morkro/papyrus/releases.atom',
-          checkpoint: 'f22ccbcd9ec38efaf29618ee61c2c3ede100469afeb5c16502a943e0ddeb00d1'
+          checkpoint: 'ff73e8d692001f894192ce94aa67352fcae9a43f6fce5313852a39e63762586a'
   name 'Papyrus'
   homepage 'https://github.com/morkro/papyrus'
 

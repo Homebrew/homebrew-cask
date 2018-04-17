@@ -1,10 +1,10 @@
 cask 'functionflip' do
-  version '2.2.3'
-  sha256 '2c0613e173522b5baff5e321ab1ae551c8a4acc223a0901ef423671baded92af'
+  version '2.2.4'
+  sha256 '429a07deef5767534dee2d99ab147242c41ef860c48d0dbf0c68f2687fbe9db4'
 
   url "http://kevingessner.com/public/downloads/FunctionFlip/#{version}/FunctionFlip.prefPane.zip"
   appcast 'http://kevingessner.com/update/functionflip/',
-          checkpoint: '4d66ce434c5ffb80f286227e918f77e14a9bc80e7bcc445353c02d484c33b699'
+          checkpoint: '22c2879918c8d1c9cc3a21cc0851ea40baad61dd91464702ca50ced0839b4824'
   name 'FunctionFlip'
   homepage 'http://kevingessner.com/software/functionflip/'
 

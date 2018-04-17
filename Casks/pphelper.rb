@@ -7,7 +7,16 @@ cask 'pphelper' do
           checkpoint: '4dbd535d15e55337260838cc0a2313af0934e3d6bdf76aa1a9303e3ee0dc0a6b'
   name 'pphelper'
   name 'pp助手'
-  homepage 'http://pro.25pp.com/pp_mac_ios'
+  homepage 'https://pro.25pp.com/pp_mac_ios'
+
+  depends_on macos: '>= :lion'
 
   app 'pp助手.app'
+
+  zap trash: [
+               '~/Library/Application Support/PPHelper',
+               '~/Library/Caches/com.teiron.pphelper.mac',
+               '~/Library/Preferences/com.teiron.pphelper.mac.plist',
+               '~/Library/Saved Application State/com.teiron.pphelper.mac.savedState',
+             ]
 end

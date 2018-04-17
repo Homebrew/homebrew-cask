@@ -4,7 +4,7 @@ cask 'douban-fm' do
 
   url "https://github.com/cyrilis/Douban-FM-Express/releases/download/v#{version}/Douban.FM.app.#{version}.zip"
   appcast 'https://github.com/cyrilis/Douban-FM-Express/releases.atom',
-          checkpoint: '08e4664256c13f6458d2e6db82033d9cee1584084f4a01eab91b89022cd50ac3'
+          checkpoint: 'ae421d90e9aecdc7d893f0898ba20d369648acf93036d21266f949897e97fdff'
   name 'Douban FM'
   homepage 'https://github.com/cyrilis/Douban-FM-Express'
 

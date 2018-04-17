@@ -6,7 +6,7 @@ cask 'insomniax' do
   appcast 'http://insomniax.semaja2.net/profile/profileInfo.php',
           checkpoint: 'ffe4389e2a4f837fbe48aef4017ed326d203fd23068d30dde3b6ae8c5fa80842'
   name 'InsomniaX'
-  homepage 'https://semaja2.net/projects/insomniaxinfo/'
+  homepage 'http://semaja2.net/ye-ol-projects/insomniaxinfo/'
 
   app 'InsomniaX.app'
 end

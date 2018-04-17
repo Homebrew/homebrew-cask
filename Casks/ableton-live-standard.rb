@@ -1,14 +1,13 @@
 cask 'ableton-live-standard' do
-  version '9.5'
-  sha256 '5935fae913d2759e474f3c606ca247d90af419a4c24903de3f2f91f7959c3abe'
+  version '10.0.1'
+  sha256 '82bb60b0be9cf922a54261e20a2fd06d90943e3442dce28b455e181694cda64c'
 
-  url "http://cdn2-downloads.ableton.com/channels/#{version}/ableton_live_standard_#{version}_64.dmg"
+  url "http://cdn-downloads.ableton.com/channels/#{version}/ableton_live_standard_#{version}_64.dmg"
   name 'Ableton Live Standard'
   homepage 'https://www.ableton.com/en/live/'
 
   app "Ableton Live #{version.major} Standard.app"
 
-  zap delete: '~/Library/*/*[Aa]bleton*',
-      rmdir:  '~/Music/Ableton/Factory Packs'
-  #:trash => '~/Music/Ableton/User Library'
+  zap trash: '~/Library/*/*[Aa]bleton*',
+      rmdir: '~/Music/Ableton/Factory Packs'
 end

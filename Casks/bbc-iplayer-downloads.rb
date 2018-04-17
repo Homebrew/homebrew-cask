@@ -5,7 +5,7 @@ cask 'bbc-iplayer-downloads' do
   # bbci.co.uk was verified as official when first introduced to the cask
   url "https://a.files.bbci.co.uk/iplayer/downloads/BBC-iPlayer-Downloads-#{version}.dmg"
   name 'BBC iPlayer Downloads'
-  homepage 'http://www.bbc.co.uk/iplayer/install'
+  homepage 'https://www.bbc.co.uk/iplayer/install'
 
   app 'BBC iPlayer Downloads.app'
 end

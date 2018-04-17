@@ -5,7 +5,7 @@ cask 'chronocube' do
   # github.com/pablopunk/chronocube was verified as official when first introduced to the cask
   url "https://github.com/pablopunk/chronocube/releases/download/v#{version}/Chronocube-Mac.dmg"
   appcast 'https://github.com/pablopunk/chronocube/releases.atom',
-          checkpoint: '0a834802763635f2efdd91bce9443d92abb1046e59cd241b611656c10e5fafea'
+          checkpoint: '759d59106cc594bc439d71086e5762fabdd283b95fa156b46620ce1f8d4a15ee'
   name 'Chronocube'
   homepage 'http://chronocube.live/'
 

@@ -4,7 +4,7 @@ cask 'pdfmasher' do
 
   url "https://download.hardcoded.net/pdfmasher_osx_#{version.dots_to_underscores}.dmg"
   appcast 'https://www.hardcoded.net/updates/pdfmasher.appcast',
-          checkpoint: 'ac03fce02d8d6c6ede8159a0b59e1da5b25cbeb9895ca878081efd1be69ad1ef'
+          checkpoint: '0b0978dd0379ce2a1be57a4dd4618d3d253910f763bd4feff5cfc870f9f8f66b'
   name 'PdfMasher'
   homepage 'https://www.hardcoded.net/pdfmasher/'
 

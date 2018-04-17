@@ -1,6 +1,6 @@
 cask 'jalbum' do
-  version '13'
-  sha256 '1b6466ad6b2272addeaa23b70ac3714b4df3357d0c168ea58ff6060c8cf33e4c'
+  version '15.3'
+  sha256 '9104715d8633a68b59be873a33dd8922500c10a170259594371e538a31b02aed'
 
   url "http://download.jalbum.net/download/#{version}/MacOSX/jAlbum.dmg"
   name 'jAlbum'

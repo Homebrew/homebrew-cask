@@ -1,11 +1,11 @@
 cask 'tvrenamer' do
-  version '0.7.2'
-  sha256 '6d7ba27e26cbad16287f85db0d1b2b621f5ffd5c9a2dad73f1b63421eb2f0373'
+  version '0.8'
+  sha256 'fa250e1641d473d5ece9959c8f3091ab18ad9eddb5a6bccb062212c84cc6aca8'
 
   # github.com/tvrenamer/tvrenamer was verified as official when first introduced to the cask
-  url "https://github.com/tvrenamer/tvrenamer/releases/download/#{version}/TVRenamer-#{version}-osx64.zip"
+  url "https://github.com/tvrenamer/tvrenamer/releases/download/v#{version}/TVRenamer-#{version}-osx64.zip"
   appcast 'https://github.com/tvrenamer/tvrenamer/releases.atom',
-          checkpoint: '2bf2f27122580b34bb9c5d1c3c06ca9d6a629e09365b4db6ad5244573a6b8c18'
+          checkpoint: '8475acb1aec25d68caa91b17d0fab7afe3acd78aaeed49b3824425fb335e446f'
   name 'TVRenamer'
   homepage 'http://tvrenamer.org/'
 

@@ -11,8 +11,8 @@ cask 'rabbitmq-app' do
 
   app 'RabbitMQ.app'
 
-  zap delete: [
-                '~/Library/Caches/io.blimp.RabbitMQ',
-                '~/Library/Preferences/io.blimp.RabbitMQ.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/io.blimp.RabbitMQ',
+               '~/Library/Preferences/io.blimp.RabbitMQ.plist',
+             ]
 end

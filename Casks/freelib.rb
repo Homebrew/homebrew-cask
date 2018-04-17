@@ -4,7 +4,7 @@ cask 'freelib' do
 
   url "https://downloads.sourceforge.net/freelibdesign/#{version}/freeLib#{version}.dmg"
   appcast 'https://sourceforge.net/projects/freelibdesign/rss',
-          checkpoint: 'abd0f80a5e7116102db928960a6eb500f84c555187d873300f375b81886137a7'
+          checkpoint: 'a43073377c233b0a12191d6ab91935df66ddf93141153662450ad3051b5ffe72'
   name 'FreeLib'
   homepage 'http://freelibdesign.sourceforge.net/'
 

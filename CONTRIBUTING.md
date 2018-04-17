@@ -36,7 +36,7 @@ For manual updates, you'll need to fork the repository and add your copy as a re
 ```bash
 $ github_user='<my-github-username>'
 $ cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
-$ git remote add "$github_user" "https://github.com/$github_user/homebrew-cask"
+$ git remote add "${github_user}" "https://github.com/${github_user}/homebrew-cask"
 ```
 
 3: If you have already added your GitHub fork as a remote for your homebrew-cask Tap, ensure your fork is [up-to-date](https://help.github.com/articles/merging-an-upstream-repository-into-your-fork/).

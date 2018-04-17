@@ -4,7 +4,7 @@ cask 'meerkat' do
 
   url "http://codesorcery.net/downloads/Meerkat_#{version}.dmg"
   appcast 'http://codesorcery.net/appcasts/Meerkat.xml',
-          checkpoint: '6e199892ae71fbfb22838df4a03880132165e590a6b8422f270ec0f1008e7802'
+          checkpoint: 'b589bca03756dac389cb40a59f4b1724356354a05452ccbdeffacc9acdc90eee'
   name 'Meerkat'
   homepage 'http://codesorcery.net/meerkat'
 

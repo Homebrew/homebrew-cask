@@ -2,9 +2,9 @@ cask 'triumph' do
   version :latest
   sha256 :no_check
 
-  url 'https://www.audiofile-engineering.com/triumph/download/Triumph.dmg'
+  url 'http://triumph.aurchitect.com/downloads/Triumph.zip'
   name 'Triumph'
-  homepage 'https://www.audiofile-engineering.com/triumph/'
+  homepage 'https://triumph.aurchitect.com/'
 
   app 'Triumph.app'
 end

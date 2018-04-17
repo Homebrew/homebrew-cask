@@ -4,7 +4,7 @@ cask 'midi-monitor' do
 
   url "https://www.snoize.com/MIDIMonitor/MIDIMonitor_#{version.dots_to_underscores}.zip"
   appcast 'https://www.snoize.com/MIDIMonitor/MIDIMonitor.xml',
-          checkpoint: 'eb0ebc4edfa5274c5a051c7753c3bcf924cc75392ec9a69d33176184732a29a5'
+          checkpoint: 'de0c37ffdf1e4e8125532139efd591a57a69cb1f53401202848864aef5f2d19f'
   name 'MIDI Monitor'
   homepage 'https://www.snoize.com/MIDIMonitor/'
 
@@ -19,9 +19,9 @@ cask 'midi-monitor' do
                     'com.snoize.SnoizeMIDI',
                   ]
 
-  zap delete: [
-                '~/Library/Preferences/com.snoize.MIDIMonitor.plist',
-                '~/Library/Caches/com.snoize.MIDIMonitor',
-                '~/Library/Saved Application State/com.snoize.MIDIMonitor.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.snoize.MIDIMonitor.plist',
+               '~/Library/Caches/com.snoize.MIDIMonitor',
+               '~/Library/Saved Application State/com.snoize.MIDIMonitor.savedState',
+             ]
 end

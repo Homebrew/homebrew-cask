@@ -4,7 +4,7 @@ cask 'audioslicer' do
 
   url "https://downloads.sourceforge.net/audioslicer/AudioSlicer/#{version}/AudioSlicer-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/audioslicer/rss?path=/AudioSlicer',
-          checkpoint: '6d9e32d6082008a24ad9d89b196e90ccda2a085eb5a0224e41ad11c63606a963'
+          checkpoint: 'ab26db9b0c9258922696373309828bb0353b53d11c873e9b6fec6eaa3c451a86'
   name 'AudioSlicer'
   homepage 'http://audioslicer.sourceforge.net/'
 

@@ -1,16 +1,16 @@
 cask 'pd' do
-  version '0.47-1'
-  sha256 'cfa6b4a70859733f41b8d2d9f9610836bfd448d64e15199464efdb8b2757cde0'
+  version '0.48-1'
+  sha256 'b7064bb20266da39e8257a94d09d75849f35d4f43520ce2c704a20562176e804'
 
-  url "http://msp.ucsd.edu/Software/pd-#{version}-64bit.mac.tar.gz"
+  url "http://msp.ucsd.edu/Software/pd-#{version}.mac.tar.gz"
   appcast 'http://msp.ucsd.edu/software.html',
-          checkpoint: '9e546c7b55f3da74d3d82b31b51de5203dcd8caf6016976a21abf144ed5f4dd8'
+          checkpoint: 'e30ab3ff7597ee66a9c59014e05a0f254ec1c0575fd5afc7be8484dd754dac51'
   name 'Pd'
   homepage 'http://msp.ucsd.edu/software.html'
 
-  app "Pd-#{version}-64bit.app"
+  app "Pd-#{version}.app"
 
   postflight do
-    set_permissions "#{appdir}/Pd-#{version}-64bit.app", 'u+w'
+    set_permissions "#{appdir}/Pd-#{version}.app", 'u+w'
   end
 end

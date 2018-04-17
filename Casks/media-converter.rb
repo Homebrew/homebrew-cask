@@ -4,7 +4,7 @@ cask 'media-converter' do
 
   url "https://downloads.sourceforge.net/media-converter/media-converter/#{version}/media-converter-#{version}.zip"
   appcast 'https://sourceforge.net/projects/media-converter/rss?path=/media-converter',
-          checkpoint: '5208b7eac085a4a148c09386e67c210b45c637779a79c134ca1fc70a95fa8024'
+          checkpoint: 'fc743fb17b4a67e6b713818dc597975f7f3e31de83fdb57afb8ee6f361d6c0cc'
   name 'Media Converter'
   homepage 'http://media-converter.sourceforge.net/'
 

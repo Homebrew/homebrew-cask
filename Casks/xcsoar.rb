@@ -1,10 +1,10 @@
 cask 'xcsoar' do
-  version '6.8.7'
-  sha256 'c77ec3c1275a1c1c11d53ec43a3abc368267cd16ae027b52aea7467f41246fd8'
+  version '6.8.10'
+  sha256 'cdfa764a6164f51d9b5c5ce08836bef3ff8064622341217a2c8762f72e367e60'
 
   url "https://download.xcsoar.org/releases/#{version}/OSX/XCSoar.dmg"
   appcast 'https://download.xcsoar.org/releases/',
-          checkpoint: 'f5919c985813327e120ebe680bb44f5d11aee19b99864319ae4e36b7523bc0cb'
+          checkpoint: 'a1e618fc7b6d2880096a6e6d97bfdb0e261e5bd1b9b7a4becee03424bd68d232'
   name 'XCSoar'
   homepage 'https://www.xcsoar.org/'
 

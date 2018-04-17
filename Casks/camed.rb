@@ -4,7 +4,7 @@ cask 'camed' do
 
   url "https://downloads.sourceforge.net/camprocessor/CAMEd-#{version}-macosx-cocoa-x86_64.tar.gz"
   appcast 'https://sourceforge.net/projects/camprocessor/rss',
-          checkpoint: '5ab59fb30e50bdc03d3c91c757fe001a1c1bc50ecd851efa6e4b45062156b7a5'
+          checkpoint: '7681623843251ca6d019cab6d90aac7fb524cefb496c318f4f3882cea6849d14'
   name 'CAM Editor'
   homepage 'http://camprocessor.sourceforge.net/'
 

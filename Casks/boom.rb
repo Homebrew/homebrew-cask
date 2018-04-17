@@ -1,11 +1,11 @@
 cask 'boom' do
-  version '1.5.2,1484655577'
-  sha256 '50fe819fc6d310a92c45d15785ffa2d5a9d6e45abd01a0b54a86b407e0f14cf5'
+  version '1.6.4,1519799556'
+  sha256 'ef741c3566189a4c53fdeafdc3989e832ea64f6299d4849a14bb6dba22a2afd1'
 
   # devmate.com/com.globaldelight.Boom2 was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.globaldelight.Boom2/#{version.before_comma}/#{version.after_comma}/Boom2-#{version.before_comma}.dmg"
   appcast 'https://updates.devmate.com/com.globaldelight.Boom2.xml',
-          checkpoint: '03ee099fd30f66e6d8f7fef96f3f0690d80557ab8cc536d7ca7ce089d7bbbba8'
+          checkpoint: '783dac3171e18598d2b26906852fde9f7728f772974040ca4d0010ccce14cced'
   name 'Boom'
   homepage 'http://www.globaldelight.com/boom'
 
@@ -20,11 +20,11 @@ cask 'boom' do
                        ],
             signal:    ['TERM', 'com.globaldelight.Boom2']
 
-  zap delete: [
-                '~/Library/Application Support/com.globaldelight.Boom2',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.globaldelight.boom2.sfl',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.globaldelight.boom2daemon.sfl',
-                '~/Library/Preferences/com.globaldelight.Boom2.plist',
-                '~/Library/Preferences/com.globaldelight.Boom2Daemon.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.globaldelight.Boom2',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.globaldelight.boom2.sfl*',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.globaldelight.boom2daemon.sfl*',
+               '~/Library/Preferences/com.globaldelight.Boom2.plist',
+               '~/Library/Preferences/com.globaldelight.Boom2Daemon.plist',
+             ]
 end

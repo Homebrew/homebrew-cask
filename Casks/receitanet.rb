@@ -7,17 +7,23 @@ cask 'receitanet' do
   homepage 'http://idg.receita.fazenda.gov.br/interface/cidadao/irpf/2016/'
 
   app 'Receitanet.app'
-  installer script: "Receitanet-#{version}.app/Contents/MacOS/installer",
-            args:   %W[--response-file response --mode silent --prefix #{staged_path}],
-            sudo:   true
+  installer script: {
+                      executable: "Receitanet-#{version}.app/Contents/MacOS/installer",
+                      args:       [
+                                    '--response-file', 'response',
+                                    '--mode', 'silent',
+                                    '--prefix', staged_path
+                                  ],
+                      sudo:       true,
+                    }
 
   uninstall script: {
                       executable: 'Desinstalador',
-                      args:       %w[--mode silent],
+                      args:       ['--mode', 'silent'],
                       sudo:       true,
                     }
 
   caveats do
-    depends_on_java('7')
+    depends_on_java('7+')
   end
 end

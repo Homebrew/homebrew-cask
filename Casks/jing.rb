@@ -4,7 +4,7 @@ cask 'jing' do
 
   url 'https://download.techsmith.com/jing/mac/jing.dmg'
   appcast 'https://download.techsmith.com/update/jing/enu/appcast.xml',
-          checkpoint: '2bf893728361e8bf5a7a36af4a2c4299c0bd04274e51f6c89affdb1f6df02880'
+          checkpoint: '25aea2af9dcfde0834ef353d2c970b98344c42cf189d019b9d86e2001179f79f'
   name 'Jing'
   homepage 'https://www.techsmith.com/jing.html'
 

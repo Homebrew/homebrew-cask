@@ -4,7 +4,7 @@ cask 'pdf-images' do
 
   url "https://downloads.sourceforge.net/pdf-images/PDF-Images-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/pdf-images/rss',
-          checkpoint: 'a5203d844b1300bc54dd5a8a0089022f16897a6e906a7e89fc3805355f4d1718'
+          checkpoint: '26dbfa3983fbd894600cc76235def155f9d5f9609abdfdff183b049a289ffc07'
   name 'PDF-Images'
   homepage 'https://sourceforge.net/projects/pdf-images/'
 

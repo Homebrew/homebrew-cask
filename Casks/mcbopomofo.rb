@@ -1,11 +1,11 @@
 cask 'mcbopomofo' do
-  version '0.9.7'
-  sha256 '67781854868a4186e47eb431d0290eff7161f41cdfb7a200d1deb30c379bdcd2'
+  version '0.9.9'
+  sha256 'd49304cbd5511f29658b5be57a60d9915a55e57f3d7f2d1fa7a8ed1ead4849a4'
 
   # github.com was verified as official when first introduced to the cask
   url "https://github.com/openvanilla/McBopomofo/releases/download/#{version}/McBopomofo-Installer-#{version}.zip"
   appcast 'https://github.com/openvanilla/McBopomofo/releases.atom',
-          checkpoint: 'd664ecb07c906c48fd9f09a28b29e76413768ddb20f897e5272b73cee27aeccb'
+          checkpoint: '32bf5d9406b5e1937adbf488a1ae11fc33d27fa352d1eae1b46a520e0e1edcb2'
   name 'McBopomofo'
   homepage 'https://mcbopomofo.openvanilla.org/'
 

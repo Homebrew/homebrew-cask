@@ -1,14 +1,16 @@
 cask 'sencha' do
-  version '6.2.1.29'
-  sha256 '41713f045fb5d3c75992d4ea401ace967917efad837801b81547d53db6d31960'
+  version '6.5.3.6'
+  sha256 '49fbbdc7c130932a982bd2e943a82241a742bcf710bc6185ee5d9039ccf1dc88'
 
   url "https://cdn.sencha.com/cmd/#{version}/jre/SenchaCmd-#{version}-osx.app.zip"
   name 'Sencha Cmd'
   homepage 'https://www.sencha.com/products/sencha-cmd/'
 
-  installer script: "SenchaCmd-#{version}-osx.app/Contents/MacOS/JavaApplicationStub",
-            args:   ['-Djava.awt.headless=true', '-q', '-dir', "/opt/Sencha/Cmd/#{version}"],
-            sudo:   true
+  installer script: {
+                      executable: "SenchaCmd-#{version}-osx.app/Contents/MacOS/JavaApplicationStub",
+                      args:       ['-Djava.awt.headless=true', '-q', '-dir', "/opt/Sencha/Cmd/#{version}"],
+                      sudo:       true,
+                    }
 
   postflight do
     set_ownership '/opt/Sencha'
@@ -20,7 +22,7 @@ cask 'sencha' do
                       sudo:       true,
                     }
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     Installing this Cask means you have AGREED to the Sencha Cmd License
 
       https://www.sencha.com/legal/sencha-tools-software-license-agreement/

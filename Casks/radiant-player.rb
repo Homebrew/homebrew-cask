@@ -5,9 +5,19 @@ cask 'radiant-player' do
   # github.com/radiant-player/radiant-player-mac was verified as official when first introduced to the cask
   url "https://github.com/radiant-player/radiant-player-mac/releases/download/v#{version}/radiant-player-v#{version}.zip"
   appcast 'https://github.com/radiant-player/radiant-player-mac/releases.atom',
-          checkpoint: '548ec4c8abdfacc29f8bcfe70b12d4b00b5bed6b21d7f27b1eeaffd9e23cc65a'
+          checkpoint: 'f57a6409f37f830b42ceb4f0d8cedaab6a6f8a444aa26b2cdf6b49eadeb5b010'
   name 'Radiant Player'
   homepage 'https://radiant-player.github.io/radiant-player-mac/'
 
   app 'Radiant Player.app'
+
+  uninstall quit: 'com.sajidanwar.Radiant-Player'
+
+  zap trash: [
+               '~/Library/Application Support/Radiant Player',
+               '~/Library/Caches/com.sajidanwar.Radiant-Player',
+               '~/Library/Cookies/com.sajidanwar.Radiant-Player.binarycookies',
+               '~/Library/Preferences/com.sajidanwar.Radiant-Player.plist',
+               '~/Library/Saved Application State/com.sajidanwar.Radiant-Player.savedState',
+             ]
 end

@@ -1,11 +1,12 @@
 cask 'fluxcenter' do
-  version '1.2.4.44994'
-  sha256 'bdc036d665898263ea062336f928f61ae946cb745b6b3ca19f5acd2d3054f59a'
+  version '1.2.13.47658'
+  sha256 'c28ae7d6185e86c22cb3d293d33ba2dd9a696f1221fc254ad47a074e4da28486'
 
-  # files.flux.to was verified as official when first introduced to the cask
-  url "http://files.flux.to/files/Center/MacOS/Flux_FluxCenter_MacOSX_Installer_(#{version}).dmg"
+  url "https://fluxhome.com/wp-content/uploads/files/Center/MacOS/Flux_FluxCenter_MacOS_Installer_(#{version}).dmg"
   name 'FluxCenter'
   homepage 'http://www.fluxhome.com/'
+
+  depends_on macos: '>= :lion'
 
   app 'FluxCenter.app'
 end

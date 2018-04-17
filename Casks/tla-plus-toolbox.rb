@@ -1,9 +1,11 @@
 cask 'tla-plus-toolbox' do
-  version '1.5.2'
-  sha256 '4c35713d1c5cdb8c4b3883fcd002098dcc1d2e64f9251455857fcb71a44d00e6'
+  version '1.5.6'
+  sha256 'bd8419ceffd82a848ff28cad34c825720a677c58b9eae443d9e529727abbf4cf'
 
-  # tla.msr-inria.inria.fr/tlatoolbox was verified as official when first introduced to the cask
-  url "https://tla.msr-inria.inria.fr/tlatoolbox/products/TLAToolbox-#{version}-macosx.cocoa.x86_64.zip"
+  # github.com/tlaplus/tlaplus/releases/download was verified as official when first introduced to the cask
+  url "https://github.com/tlaplus/tlaplus/releases/download/v#{version}/TLAToolbox-#{version}-macosx.cocoa.x86_64.zip"
+  appcast 'https://github.com/tlaplus/tlaplus/releases.atom',
+          checkpoint: '85dc89cebceb8215158c150f9efefd15c9c4557f7f1164fc80435405b209c701'
   name 'TLA+ Toolbox'
   homepage 'https://lamport.azurewebsites.net/tla/toolbox.html'
 

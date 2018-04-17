@@ -1,11 +1,11 @@
 cask 'visualvm' do
-  version '1.3.9'
-  sha256 '969708277eacfbaf1a0bc465110db454efd8225aa43db090109676bedff386b6'
+  version '1.4'
+  sha256 '5515d7763aed38c87b567ca338a9c5042ca4a554e7312b15fd1e046dae997c26'
 
-  # github.com/visualvm/visualvm.src was verified as official when first introduced to the cask
-  url "https://github.com/visualvm/visualvm.src/releases/download/#{version}/VisualVM_#{version.no_dots}.dmg"
-  appcast 'https://github.com/visualvm/visualvm.src/releases.atom',
-          checkpoint: 'dde5d93c09ce408c053b472040a2e2bfb0c283152722968c7da55985489cac41'
+  # github.com/oracle/visualvm was verified as official when first introduced to the cask
+  url "https://github.com/oracle/visualvm/releases/download/#{version}/VisualVM_#{version.no_dots}.dmg"
+  appcast 'https://github.com/oracle/visualvm/releases.atom',
+          checkpoint: '402f0872372c908173b23aefbf9b83fc748e6ae3c88e77f37cec641c63926b55'
   name 'VisualVM'
   homepage 'https://visualvm.github.io/'
 

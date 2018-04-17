@@ -4,7 +4,7 @@ cask 'jotta' do
 
   url 'https://www.jottacloud.com/update/jottacloud/release/jottacloud.dmg'
   name 'Jottacloud'
-  homepage 'http://www.jottacloud.com/'
+  homepage 'https://www.jottacloud.com/'
 
   app 'Jotta.app'
 end

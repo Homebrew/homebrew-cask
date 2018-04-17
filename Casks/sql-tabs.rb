@@ -4,9 +4,9 @@ cask 'sql-tabs' do
 
   url 'http://www.sqltabs.com/download/SQL%20Tabs.app.zip'
   name 'SQL Tabs'
-  homepage 'http://www.sqltabs.com/'
+  homepage 'https://www.sqltabs.com/'
 
   app 'SQL Tabs.app'
 
-  zap delete: '~/.sqltabs'
+  zap trash: '~/.sqltabs'
 end

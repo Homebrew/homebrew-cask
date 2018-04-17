@@ -1,6 +1,6 @@
 cask 'nextiva' do
-  version '21.5.0.813'
-  sha256 '84d566d2eb996f74a76041310165e6dbad5e6c00aa981199e0f532bc03ebcd98'
+  version '21.6.2.44'
+  sha256 '8808426421fb8894c1d22dffdd1e56508f0a308311b5beae0d6d6f1ac616f8fc'
 
   url "https://dm.nextiva.com/dms/bc/pc/Nextiva_App.bc-uc.osx-#{version}.dmg"
   name 'Nextiva'

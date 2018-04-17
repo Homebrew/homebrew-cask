@@ -1,9 +1,9 @@
 cask 'simply-fortran' do
-  version '2.34'
-  sha256 '2684e6b6b01e4d3dfb05a15beb8c1ff249a1d8237bba340f29774d6591087d65'
+  version '2.41'
+  sha256 '355340df3167b993807f90c8c3d51cec7eb1e246cadfe7377585fc3ab2c308a2'
 
-  # download.approximatrix.com/sfortran was verified as official when first introduced to the cask
-  url "https://download.approximatrix.com/sfortran/#{version}/SimplyFortran-#{version}.dmg"
+  # download.approximatrix.com/simplyfortran was verified as official when first introduced to the cask
+  url "http://download.approximatrix.com/simplyfortran/#{version}/SimplyFortran-#{version}.dmg"
   name 'Simply Fortran'
   homepage 'https://simplyfortran.com/'
 

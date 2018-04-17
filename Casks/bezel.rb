@@ -4,7 +4,7 @@ cask 'bezel' do
 
   url "http://infinitapps.com/files/Bezel-#{version}.zip"
   appcast 'http://infinitapps.com/files/bezel-appcast.xml',
-          checkpoint: '1368230610ccd16f1464bcb09337419ed88bd133fffe59abe2536bb269fbfea8'
+          checkpoint: '8eeb0218fd54bd3db6ded165be1aa2b50098ffd5d69d90eb47b717317ebe4194'
   name 'bezel'
   homepage 'http://infinitapps.com/bezel/'
 

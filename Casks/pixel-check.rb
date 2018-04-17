@@ -4,7 +4,7 @@ cask 'pixel-check' do
 
   url "http://macguitar.me/apps/pixelcheck/PXC#{version}.zip"
   appcast 'http://macguitar.me/apps/pixelcheck/',
-          checkpoint: 'e87f9fbebae1a436a1af093213a02485d33db413be7e92be0a18b2964b840416'
+          checkpoint: 'e977f7053f5edd3a089b8bebfc4dc536b33e73f799ad113efac40666b900e385'
   name 'PiXel Check'
   homepage 'http://macguitar.me/apps/pixelcheck/'
 

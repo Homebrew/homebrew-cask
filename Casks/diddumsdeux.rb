@@ -8,5 +8,5 @@ cask 'diddumsdeux' do
 
   app 'DiddumsDeux.app'
 
-  zap delete: '~/Preferences/com.alasdairmonk.diddums.plist'
+  zap trash: '~/Preferences/com.alasdairmonk.diddums.plist'
 end

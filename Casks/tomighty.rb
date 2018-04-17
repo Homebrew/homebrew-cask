@@ -5,7 +5,7 @@ cask 'tomighty' do
   # github.com/tomighty/tomighty-osx was verified as official when first introduced to the cask
   url "https://github.com/tomighty/tomighty-osx/releases/download/#{version}/Tomighty-#{version}.dmg"
   appcast 'https://github.com/tomighty/tomighty-osx/releases.atom',
-          checkpoint: 'f9f70f4d9e024d104d6783c6aa0633ef31a61300ff65412eb2a457b191914a57'
+          checkpoint: '5922749fe4f9ac3cba82bc9e36741814c9d43d3eacae96a5ff2dd179d2d74676'
   name 'Tomighty'
   homepage 'http://tomighty.org/'
 

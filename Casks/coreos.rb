@@ -4,7 +4,7 @@ cask 'coreos' do
 
   url "https://github.com/TheNewNormal/coreos-osx/releases/download/v#{version}/CoreOS_v#{version}.dmg"
   appcast 'https://github.com/TheNewNormal/coreos-osx/releases.atom',
-          checkpoint: '00c7515b3d3e3e9fd868203a4b81688ff30015520cbb19f917a0c42caceb06fe'
+          checkpoint: 'a6a3e17d6fd81b4fb005ca1af23bac7d41e50b292f4265e957cc24872b5b760d'
   name 'CoreOS VM'
   homepage 'https://github.com/TheNewNormal/coreos-osx'
 
@@ -12,5 +12,5 @@ cask 'coreos' do
 
   app 'CoreOS.app'
 
-  zap delete: '~/coreos-osx'
+  zap trash: '~/coreos-osx'
 end

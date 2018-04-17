@@ -18,16 +18,24 @@ installer manual: 'Little Snitch Installer.app'
 
 | key             | value
 | ----------------|------------------------------
-| `script:`       | path to an install script to be run via `sudo`. (Required first key.)
+| `executable:`   | path to an install script to be run
 | `args:`         | array of arguments to the install script
 | `input:`        | array of lines of input to be sent to `stdin` of the script
 | `must_succeed:` | set to `false` if the script is allowed to fail
 | `sudo:`         | set to `true` if the script needs `sudo`
 
-The path may be absolute, or relative to the Cask. Example (from [adobe-air.rb](https://github.com/caskroom/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/adobe-air.rb#L10-#L12)):
+The path may be absolute, or relative to the Cask. Example (from [ransomwhere.rb](https://github.com/caskroom/homebrew-cask/blob/2a7499561420bd375e45e96082c273ca75b600d1/Casks/ransomwhere.rb#L12-L16)):
 
 ```ruby
-installer script: 'Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer',
-          args:   %w[-silent],
-          sudo:   true
+  installer script: {
+                      executable: "#{staged_path}/RansomWhere.app/Contents/MacOS/RansomWhere",
+                      args:       ['-install'],
+                      sudo:       true,
+                    }
+```
+
+If the `installer script:` does not require any of the key-values it can point directly to the path of the install script. Example (from [amazon-drive.rb](https://github.com/caskroom/homebrew-cask/blob/427c52acdc3ce0ab1e97950e6cee9896480d7353/Casks/amazon-drive.rb#L10)):
+
+```ruby
+installer script: 'Amazon Drive Installer.app/Contents/MacOS/Amazon Drive Installer'
 ```

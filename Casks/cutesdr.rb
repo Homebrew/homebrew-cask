@@ -1,10 +1,10 @@
 cask 'cutesdr' do
-  version '1.19'
-  sha256 '41bd2ee10bc9dad3da8d3d541452f594b928823946d7a4c52f03164b9af84341'
+  version '1.20'
+  sha256 'b666dc37dc7b866a044cfbce811a986c37576841ee5cb95796f9b14b50a71db2'
 
   url "https://downloads.sourceforge.net/cutesdr/CuteSdr#{version.no_dots}.dmg"
   appcast 'https://sourceforge.net/projects/cutesdr/rss',
-          checkpoint: '5619e8fccaa00f7ecbcd8726ea4942698c15d8dd760756cdf43de7da08bf595a'
+          checkpoint: '86dea7d6358236c7c6877071f55724ca61d94fef85c4569af0b3daf5828011d1'
   name 'CuteSDR'
   homepage 'https://sourceforge.net/projects/cutesdr/'
 

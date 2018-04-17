@@ -1,12 +1,15 @@
 cask 'kite' do
-  version '1.1'
-  sha256 '0f80766eb315d6e2188ea2c62ea86478f838719d34b6e70d1e42d07d8bde5519'
+  version '0.20180329.1'
+  sha256 'b03fe9355aa37502e6bdad3744d7069afc6e16c767be9d2e77052bbc948be300'
 
-  url 'https://kiteapp.co/downloads/KiteCompositor.dmg'
-  appcast 'https://api.kiteapp.co/kite_appcast.xml',
-          checkpoint: '4bf1b9e1686160f292d1de9e714d5fe74003df2be7a3c06ffa7870a4eb90ea69'
-  name 'Kite Compositor'
-  homepage 'https://kiteapp.co/'
+  # s3-us-west-1.amazonaws.com/kite-downloads was verified as official when first introduced to the cask
+  url "https://s3-us-west-1.amazonaws.com/kite-downloads/Kite-#{version}.dmg"
+  appcast 'https://release.kite.com/appcast.xml',
+          checkpoint: 'c47cf74ffc7cdd181a0e864b405beec4213da1c88bc62f99f199dcd569e7172c'
+  name 'Kite'
+  homepage 'https://kite.com/'
+
+  auto_updates true
 
   app 'Kite.app'
 end

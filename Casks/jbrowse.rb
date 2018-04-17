@@ -1,8 +1,8 @@
 cask 'jbrowse' do
-  version '1.12.1'
-  sha256 '8b6921c2057f5ff11e5b9531cc848744aba932984fc3f408550f396a34afefe6'
+  version '1.12.3'
+  sha256 '4b9c6ab17c7a00ffb8a60cac73774391a83b5a8833bcf2672172878ee81e08dc'
 
-  url "https://jbrowse.org/releases/JBrowse-#{version}-desktop-osx.zip"
+  url "https://jbrowse.org/releases/JBrowse-#{version}/JBrowse-#{version}-desktop-osx.zip"
   name 'jbrowse'
   homepage 'https://jbrowse.org/'
 

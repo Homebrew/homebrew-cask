@@ -1,12 +1,13 @@
 cask 'robofont' do
-  version '1.8.1,1612102134'
-  sha256 '923b0d7f72a4e155e86fc9afa1e657dc240662d7470f5d93162b13c2359dd936'
+  version '3.0'
+  sha256 '2f7dbd6d8f699e5365182d05fee16aff2c1724a50ad559989892e9402ac49fca'
 
-  url "http://robofont.com/downloads/RoboFont_#{version.after_comma}.dmg"
-  appcast 'http://robofont.com/downloads/',
-          checkpoint: 'a3ceaaa950defd4e2a878892b7486bfc788283d065459e1689b083911741f4eb'
+  # static.typemytype.com/robofont was verified as official when first introduced to the cask
+  url 'http://static.typemytype.com/robofont/RoboFont.dmg'
+  appcast 'https://doc.robofont.com/appcast.xml',
+          checkpoint: '10c7c710f11c3aa1ef0ebb29d68579e2cb99c2f2bbb54f482d5cf138d98c52da'
   name 'RoboFont'
-  homepage 'https://doc.robofont.com/'
+  homepage 'https://robofont.com/'
 
   depends_on macos: '>= :mavericks'
 

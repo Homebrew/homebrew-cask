@@ -1,6 +1,6 @@
 cask 'ovito' do
-  version '2.8.1'
-  sha256 'ece52b1dc5b0b7e18380c4df105ecc6a6ffb9e3a8fe7cdef100744457b5a8d2a'
+  version '2.9.0'
+  sha256 'c35a52c5cb9e2f081b234cd42b8854e71fa381a79e203547310379303ac4b477'
 
   url "https://ovito.org/download/#{version}/ovito-#{version}-macos.dmg"
   name 'OVITO'

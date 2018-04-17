@@ -5,14 +5,14 @@ cask 'mongotron' do
   # github.com/officert/mongotron was verified as official when first introduced to the cask
   url "https://github.com/officert/mongotron/releases/download/#{version}/Mongotron-darwin-x64.zip"
   appcast 'https://github.com/officert/mongotron/releases.atom',
-          checkpoint: 'c72d7d2bf8514e6f839b3fecd2a5240ed7fc976eee535a9e2905946c0227374f'
+          checkpoint: '6903d873fedb343ef9f999d7ef6144048e6c7fff42fcd31c572967485514b80a'
   name 'Mongotron'
   homepage 'http://mongotron.io/'
 
   app 'Mongotron-darwin-x64/Mongotron.app'
 
-  zap delete: [
-                '~/Library/Application Support/Mongotron',
-                '~/Library/Caches/Mongotron',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Mongotron',
+               '~/Library/Caches/Mongotron',
+             ]
 end

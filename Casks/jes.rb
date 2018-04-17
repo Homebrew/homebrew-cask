@@ -4,7 +4,7 @@ cask 'jes' do
 
   url "https://github.com/gatech-csl/jes/releases/download/#{version}/jes-#{version}-macosx.zip"
   appcast 'https://github.com/gatech-csl/jes/releases.atom',
-          checkpoint: '89cbf0688db38705320d068184ab288f79a4171edd257232ccaacda84f94f389'
+          checkpoint: '740b90e455acdd61965cb2d9db91b50cf2fdae7413e5445da011e028f0be242f'
   name 'JES'
   homepage 'https://github.com/gatech-csl/jes'
 

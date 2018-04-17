@@ -1,15 +1,15 @@
 cask 'quodlibet' do
-  version '3.8.1'
-  sha256 '6bc27b27be763f7c4fe48cfd62b7ccb0070474455a0b668ac36c8d3d844ab0b8'
+  version '4.0.2'
+  sha256 '6f9a98926e7e62cb26a34b41689616d60f709877fe20984af018843e76274060'
 
-  # bitbucket.org/lazka/quodlibet was verified as official when first introduced to the cask
-  url "https://bitbucket.org/lazka/quodlibet/downloads/QuodLibet-#{version}.dmg"
+  # github.com/quodlibet/quodlibet was verified as official when first introduced to the cask
+  url "https://github.com/quodlibet/quodlibet/releases/download/release-#{version}/QuodLibet-#{version}.dmg"
   appcast 'https://github.com/quodlibet/quodlibet/releases.atom',
-          checkpoint: '2c4aa5c46bf6b4ecb5a4321de3d63f015520f48ade3de3720a86a92a18143170'
+          checkpoint: 'dc693ef4c5916de3d359d5503dbb41daecd2c1c586931b5cfde48c80da3dd7bd'
   name 'Quod Libet'
   homepage 'https://quodlibet.readthedocs.io/'
 
   app 'QuodLibet.app'
 
-  zap delete: '~/.quodlibet'
+  zap trash: '~/.quodlibet'
 end

@@ -1,8 +1,8 @@
 cask 'unity-webgl-support-for-editor' do
-  version '5.5.2f1,3829d7f588f3'
-  sha256 '8b4dbca202a16270e614e2425d62d3fbe2b36c1fc46604dfdb25f3078a3f7590'
+  version '2017.3.1f1,fc1d3344e6ea'
+  sha256 'eec3a29b0dcf0aa4e7ad3243f4552534db5356cfdc936c1a185572f72d9f85c8'
 
-  url "http://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-WebGL-Support-for-Editor-#{version.before_comma}.pkg"
+  url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-WebGL-Support-for-Editor-#{version.before_comma}.pkg"
   name 'Unity WebGL Build Support'
   homepage 'https://unity3d.com/unity/'
 

@@ -4,7 +4,7 @@ cask 'youll-never-take-me-alive' do
 
   url "https://github.com/iSECPartners/yontma-mac/releases/download/#{version}/yontma-#{version}.dmg"
   appcast 'https://github.com/iSECPartners/yontma-mac/releases.atom',
-          checkpoint: '339c361859a83591df7bed56a83dc116b31da72a4014765de11b76face54ce69'
+          checkpoint: '6807d2dd84523e862d180777f126645c613b29978e899a5d8ba18a1e11f21dbb'
   name 'You\'ll Never Take Me Alive!'
   name 'YoNTMA'
   homepage 'https://github.com/iSECPartners/yontma-mac'

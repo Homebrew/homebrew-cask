@@ -5,7 +5,7 @@ cask 'qlstephen' do
   # github.com/whomwah/qlstephen was verified as official when first introduced to the cask
   url "https://github.com/whomwah/qlstephen/releases/download/#{version}/QLStephen.qlgenerator.#{version}.zip"
   appcast 'https://github.com/whomwah/qlstephen/releases.atom',
-          checkpoint: 'c7d3cacf504b6969a76ea0ebd067408b4d01efd62862db9f902cf810eefb4e5c'
+          checkpoint: '3f5376b9e01281eeb64251fc47b115d774641ec44a623430f132e2718dc1a422'
   name 'QLStephen'
   homepage 'https://whomwah.github.io/qlstephen/'
 

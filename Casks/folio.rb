@@ -9,5 +9,5 @@ cask 'folio' do
 
   app 'Folio.app'
 
-  zap delete: '~/Library/Application Support/co.ysberg.Folio'
+  zap trash: '~/Library/Application Support/co.ysberg.Folio'
 end

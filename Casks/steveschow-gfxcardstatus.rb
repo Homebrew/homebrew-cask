@@ -1,10 +1,10 @@
 cask 'steveschow-gfxcardstatus' do
-  version '2.4.3i'
-  sha256 '511ebc665cff319186753213684bf44bb7d0517716e65bd19ffd8db2fac2113e'
+  version '2.4.4i'
+  sha256 '69c0d6602808cca60158a6d833eab8d82d59f683d3c25de34d977c83fe208dd0'
 
   url "https://github.com/steveschow/gfxCardStatus/releases/download/v#{version}/gfxCardStatus.app.zip"
   appcast 'https://github.com/steveschow/gfxCardStatus/releases.atom',
-          checkpoint: '33d446605b692d858ffa9e512c2723ccfb13078c8a48fbd926adc042211ddc99'
+          checkpoint: '74b2f5f7a67db8d1b780184557a8fa4c981b86a7414bd7ea951e72034fbf249f'
   name 'gfxCardStatus'
   homepage 'https://github.com/steveschow/gfxCardStatus'
 

@@ -1,8 +1,8 @@
 cask 'unity-windows-support-for-editor' do
-  version '5.5.2f1,3829d7f588f3'
-  sha256 '950c63d769b673ffd4f22613f77c19efe127cfd2cb6a7495382ce3a062705787'
+  version '2017.3.1f1,fc1d3344e6ea'
+  sha256 '85f547669e927f108aeda1124f3eac7ace968cb3ac1017d38f61375a4b5e0a87'
 
-  url "http://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Windows-Support-for-Editor-#{version.before_comma}.pkg"
+  url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Windows-Support-for-Editor-#{version.before_comma}.pkg"
   name 'Unity Windows Build Support'
   homepage 'https://unity3d.com/unity/'
 

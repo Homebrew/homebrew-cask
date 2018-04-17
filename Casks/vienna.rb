@@ -1,19 +1,21 @@
 cask 'vienna' do
-  version '3.1.9'
-  sha256 '4b0bb5b1ad4574c540fd1104f04d5a3d83ccb03d2c95cd354b272758e7d1c2a0'
+  version '3.3.0'
+  sha256 'e528a70f46d7bc1d09937bd1b2b45b474bf27e1c7ac701993c098a63fac90b46'
 
   # bintray.com/viennarss was verified as official when first introduced to the cask
-  url "https://dl.bintray.com/viennarss/vienna-rss/Vienna#{version}.tar.gz"
+  url "https://dl.bintray.com/viennarss/vienna-rss/Vienna#{version}.tgz"
   appcast 'https://viennarss.github.io/sparkle-files/changelog.xml',
-          checkpoint: '0ba8a2208a3f5797f63ed0f6e3225aa9af6276ce57efbd182364d8f7c29a709d'
+          checkpoint: 'f5f1a20ea934e8693cfdb85b83e79ef9d79fe502fcb05627e595a3ec03349a74'
   name 'Vienna'
-  homepage 'http://www.vienna-rss.org/'
+  homepage 'http://www.vienna-rss.com/'
 
   app 'Vienna.app'
 
-  zap delete: [
-                '~/Library/Application Support/Vienna',
-                '~/Library/Caches/uk.co.opencommunity.vienna2',
-                '~/Library/Preferences/uk.co.opencommunity.vienna2.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Vienna',
+               '~/Library/Caches/uk.co.opencommunity.vienna2',
+               '~/Library/Cookies/uk.co.opencommunity.vienna2.binarycookies',
+               '~/Library/Preferences/uk.co.opencommunity.vienna2.plist',
+               '~/Library/Saved Application State/uk.co.opencommunity.vienna2.savedState',
+             ]
 end

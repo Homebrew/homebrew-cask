@@ -4,11 +4,10 @@ cask 'tsprint' do
 
   url 'http://www.terminalworks.com/downloads/tsprint/macosx/TSPrintClient.zip'
   name 'TSPrintClient'
-  homepage 'http://www.terminalworks.com/'
+  homepage 'https://www.terminalworks.com/'
 
   pkg 'TSPrintClient.pkg'
 
   uninstall quit:    'com.terminalworks.TSPrintClient',
-            trash:   '/Applications/TSPrintClient.app',
-            pkgutil: 'com.terminalworks.TSPrintClient'
+            pkgutil: 'com.terminalworks.tsprintclient.TSPrintClient.pkg'
 end

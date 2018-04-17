@@ -1,10 +1,10 @@
 cask 'eventstore' do
-  version '3.9.3'
-  sha256 'a4ceca878a833e4f30235b08ce1764d5072935484c126c93fb05ab2188a2a9ee'
+  version '3.9.4'
+  sha256 '337152fa65fa8472052cc02d5efaf872230b7ecad07e3d7979f5fd238e69e3f6'
 
-  url "http://download.geteventstore.com/binaries/EventStore-OSS-MacOSX-v#{version}.tar.gz"
+  url "https://eventstore.org/downloads/EventStore-OSS-MacOSX-v#{version}.tar.gz"
   name 'Event Store'
-  homepage 'https://geteventstore.com/'
+  homepage 'https://eventstore.org/'
 
   binary "EventStore-OSS-MacOSX-v#{version}/eventstore"
   binary "EventStore-OSS-MacOSX-v#{version}/eventstore-testclient"
@@ -14,13 +14,13 @@ cask 'eventstore' do
   testclient_shimscript = "#{staged_path}/EventStore-OSS-MacOSX-v#{version}/eventstore-testclient"
 
   preflight do
-    IO.write eventstore_shimscript, <<-EOS.undent
+    IO.write eventstore_shimscript, <<~EOS
       #!/bin/sh
       cd "#{staged_path}/EventStore-OSS-MacOSX-v#{version}"
       exec "#{staged_path}/EventStore-OSS-MacOSX-v#{version}/run-node.sh" "$@"
     EOS
 
-    IO.write testclient_shimscript, <<-EOS.undent
+    IO.write testclient_shimscript, <<~EOS
       #!/bin/sh
       exec "#{staged_path}/EventStore-OSS-MacOSX-v#{version}/testclient" "$@"
     EOS

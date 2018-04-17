@@ -4,11 +4,21 @@ cask 'hawk-eye' do
 
   url "https://github.com/harksys/HawkEye/releases/download/#{version}/hawkeye-#{version}-osx-x64.dmg"
   appcast 'https://github.com/harksys/HawkEye/releases.atom',
-          checkpoint: 'cdb54347126b720f323668e929ff42e88a2795a32a0cfc7a0a86c8ba5752e009'
+          checkpoint: '4538c950b3b0ea19563ec6134942866bcc105dd736730ee4acc4ee6269d1120f'
   name 'Hawk Eye'
   homepage 'https://github.com/harksys/HawkEye'
 
   auto_updates true
 
   app 'Hawk Eye.app'
+
+  zap trash: [
+               '~/Library/Application Support/Hawk Eye',
+               '~/Library/Caches/harksys-hawkeye',
+               '~/Library/Caches/harksys-hawkeye.ShipIt',
+               '~/Library/Cookies/harksys-hawkeye.binarycookies',
+               '~/Library/Preferences/harksys-hawkeye.helper.plist',
+               '~/Library/Preferences/harksys-hawkeye.plist',
+               '~/Library/Saved Application State/harksys-hawkeye.savedState',
+             ]
 end

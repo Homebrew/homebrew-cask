@@ -4,7 +4,7 @@ cask 'ansible-dk' do
 
   url "https://github.com/omniti-labs/ansible-dk/releases/download/#{version.major_minor_patch}/ansible-dk-#{version}.dmg"
   appcast 'https://github.com/omniti-labs/ansible-dk/releases.atom',
-          checkpoint: 'e4ff73165aeb8fbb73bf77422ce1ee68c80e8569d695ece740865aa121fce931'
+          checkpoint: 'acf8274f73fbdedb3c146a6dce1695fc196d789ffe25acac644c22c8ddeb523c'
   name 'Ansible DK'
   name 'Ansible Development Kit'
   homepage 'https://github.com/omniti-labs/ansible-dk'

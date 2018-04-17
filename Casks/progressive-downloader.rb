@@ -1,18 +1,19 @@
 cask 'progressive-downloader' do
-  version '2.10'
-  sha256 '60e7374b334f5637f823d40d199fb4c2f9fb79d178fa365927f8fc4c835a6b45'
+  version '3.5'
+  sha256 '3edd875402547a575be1e03ae405d617c4b528916bc3c54caf0b359bd58401e1'
 
   url "https://www.macpsd.net/update/#{version}/PSD.dmg"
   name 'Progressive Downloader'
   homepage 'https://www.macpsd.net/'
 
-  depends_on macos: '>= :mavericks'
+  depends_on macos: '>= :yosemite'
 
   app 'Progressive Downloader.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.PS.PSD.plist',
-                '~/Library/Application Support/Progressive Downloader Data',
-                '~/Library/Caches/com.PS.PSD',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Progressive Downloader Data',
+               '~/Library/Caches/com.PS.Downloader',
+               '~/Library/Caches/com.PS.PSD',
+               '~/Library/Preferences/com.PS.PSD.plist',
+             ]
 end

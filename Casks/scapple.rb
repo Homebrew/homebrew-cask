@@ -1,11 +1,11 @@
 cask 'scapple' do
-  version '1.2'
-  sha256 '1b9968a7927c29b5b4fa4d2c9e5ce78c56e5c3cfbb42847836c2e732018d92c1'
+  version '1.3.1'
+  sha256 'aacbabb14b4cb69ea8d6d93293ac2a20233be8174bd481ccb5dae479c8f39059'
 
   # scrivener.s3.amazonaws.com was verified as official when first introduced to the cask
-  url 'https://scrivener.s3.amazonaws.com/Scapple.dmg'
+  url 'http://scrivener.s3.amazonaws.com/Scapple.dmg'
   appcast 'https://www.literatureandlatte.com/downloads/scapple/scapple.xml',
-          checkpoint: '81c37dc0b445e6e8a5a1dbcdeff51f710598208bd78d31dfb79744ecf9b2f00a'
+          checkpoint: 'a17f37fc9750c5750051727f13c3645952b50f70284149e95e2f01affc8cccdc'
   name 'Scapple'
   homepage 'https://www.literatureandlatte.com/scapple.php'
 

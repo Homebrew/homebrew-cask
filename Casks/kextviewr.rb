@@ -4,10 +4,14 @@ cask 'kextviewr' do
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/KextViewr_#{version}.zip"
-  appcast 'https://objective-see.com/products.json',
-          checkpoint: 'b2004932186e0eb176a9ac01fe499de292d502d7a17559e900822f9cdbfa74d6'
+  appcast 'https://objective-see.com/products/changelogs/KextViewr.txt',
+          checkpoint: '1b2b64639aa6df6738e053d928918243299dd460cbae2c293fe0ee9fe035140b'
   name 'KextViewr'
   homepage 'https://objective-see.com/products/kextviewr.html'
 
+  depends_on macos: '>= :mountain_lion'
+
   app 'KextViewr.app'
+
+  zap trash: '~/Library/Caches/com.objective-see.KextViewr'
 end

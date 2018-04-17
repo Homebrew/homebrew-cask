@@ -1,36 +1,17 @@
 cask 'dotnet' do
-  version '1.1.1'
-  sha256 'd77898110caf4b715392b93310467f7354204440a38da00b7d50bb5796a3de18'
+  version '2.0.6'
+  sha256 'dd0a68cf2ac8cab152c9963cef5840fa4791e506ffa0362cd419883d7af28118'
 
-  url "https://download.microsoft.com/download/9/5/1/95198156-644E-4CCE-8DA1-C41F7658510C/dotnet-osx-x64.#{version}.pkg"
-  name '.Net Core'
+  url "https://download.microsoft.com/download/8/D/A/8DA04DA7-565B-4372-BBCE-D44C7809A467/dotnet-runtime-#{version}-osx-x64.pkg"
+  name '.Net Core Runtime'
   homepage 'https://www.microsoft.com/net/core#macos'
 
-  depends_on formula: 'openssl'
+  depends_on macos: '>= :sierra'
 
-  pkg "dotnet-osx-x64.#{version}.pkg"
-
-  # Patch .NET Core to use the latest version of OpenSSL installed via Homebrew.
-  # https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md#openssl
-  postflight do
-    dotnet_core = "/usr/local/share/dotnet/shared/Microsoft.NETCore.App/#{version}"
-    system_command '/usr/bin/install_name_tool',
-                   args: [
-                           "#{dotnet_core}/System.Security.Cryptography.Native.OpenSsl.dylib",
-                           '-add_rpath', "#{HOMEBREW_PREFIX}/opt/openssl/lib"
-                         ],
-                   sudo: true
-    system_command '/usr/bin/install_name_tool',
-                   args: [
-                           "#{dotnet_core}/System.Net.Http.Native.dylib",
-                           '-change', '/usr/lib/libcurl.4.dylib',
-                           "#{HOMEBREW_PREFIX}/opt/curl/lib/libcurl.4.dylib"
-                         ],
-                   sudo: true
-  end
+  pkg "dotnet-runtime-#{version}-osx-x64.pkg"
 
   uninstall pkgutil: 'com.microsoft.dotnet.*',
             delete:  '/etc/paths.d/dotnet'
 
-  zap delete: '~/.nuget'
+  zap trash: '~/.nuget'
 end

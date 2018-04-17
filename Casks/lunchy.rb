@@ -4,7 +4,7 @@ cask 'lunchy' do
 
   url "https://github.com/sosedoff/lunchy-go/releases/download/v#{version}/#{version}_darwin_amd64.zip"
   appcast 'https://github.com/sosedoff/lunchy-go/releases.atom',
-          checkpoint: '80d451b40d7c21b6d205d7d6e8be643c7bf4754ebb1ea52556472c61a5dabaaf'
+          checkpoint: '9e34e74a453684514db5a408e915312ee99526a89015ff01c68cf0fcbb81f99a'
   name 'Lunchy'
   homepage 'https://github.com/sosedoff/lunchy-go'
 

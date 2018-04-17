@@ -4,8 +4,8 @@ cask 'lockdown' do
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/Lockdown_#{version}.zip"
-  appcast 'https://objective-see.com/products.json',
-          checkpoint: 'b2004932186e0eb176a9ac01fe499de292d502d7a17559e900822f9cdbfa74d6'
+  appcast 'https://objective-see.com/products/changelogs/Lockdown.txt',
+          checkpoint: '864b3e63cc6594f204ae57f5539b293ac937748b828bf3b1543855e0296f12d7'
   name 'Lockdown'
   homepage 'https://objective-see.com/products/lockdown.html'
 

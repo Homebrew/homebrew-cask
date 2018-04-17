@@ -1,18 +1,21 @@
 cask 'auristor-client' do
-  version '0.149'
+  version '0.168'
 
   if MacOS.version == :mavericks
-    sha256 'e79579c9ac2cd609bedd2e01104c113a3417e082e6b5a9f8d333d74e8a6d5030'
+    sha256 'b921aa93872a3f5dadcb8abbb94bc1ebbf97db44d64e96c5ab5880be54da2205'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.9/AuriStor-client-#{version}-Mavericks.dmg"
   elsif MacOS.version == :yosemite
-    sha256 '966c115c1d87f239fb63521940e4a4142cf17e096548e9aaed92912c91f7202b'
+    sha256 '4f44569cecf28b9e318c17a5801f2691ca78f5ee6c9665bc505ae28177b74547'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.10/AuriStor-client-#{version}-Yosemite.dmg"
   elsif MacOS.version == :el_capitan
-    sha256 'b0a7eee25398e265304a7adfe672f8daa942b916ed7e069d45c3b871d023086f'
+    sha256 'a1d74ebab1ea9199afbc5675398c04ca877dc6eeb6ae71a808601023955dfa5e'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.11/AuriStor-client-#{version}-ElCapitan.dmg"
-  else
-    sha256 'a5b0cb5e14654e7e0558b779f3c5c32e03a691be10f3f88ea7857cebea2f66f1'
+  elsif MacOS.version == :sierra
+    sha256 '243ac6bc632c0070d5ffdfb93c49c8609b2842aac6d98b9d2bc562f01b70ed36'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.12/AuriStor-client-#{version}-Sierra.dmg"
+  else
+    sha256 '37f79fae30eb28a85d7da8983bfd036654000be1560356321c893fb8c6a91c66'
+    url "https://www.auristor.com/downloads/auristor/osx/macos-10.13/AuriStor-client-#{version}-HighSierra.dmg"
   end
 
   name 'AuriStor File System Client'
@@ -24,11 +27,15 @@ cask 'auristor-client' do
                       :yosemite,
                       :el_capitan,
                       :sierra,
+                      :high_sierra,
                     ]
 
   pkg 'Auristor-Lite.pkg'
 
-  uninstall pkgutil:      'com.auristor.yfs-*',
-            early_script: 'Extras/Uninstall-OpenAFS.command',
-            script:       'Extras/Uninstall.command'
+  uninstall pkgutil:   'com.auristor.yfs-*',
+            launchctl: [
+                         'com.auristor.XPCHelper',
+                         'com.auristor.yfs-client',
+                       ],
+            kext:      'com.auristor.filesystems.yfs'
 end

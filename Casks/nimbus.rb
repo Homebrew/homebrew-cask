@@ -4,7 +4,7 @@ cask 'nimbus' do
 
   url "https://github.com/jnordberg/irccloudapp/releases/download/#{version}/Nimbus.zip"
   appcast 'https://github.com/jnordberg/irccloudapp/releases.atom',
-          checkpoint: '5e6df56386d9d490159f8dd7a55e9cdafeafe48239d34d9516d0d8f2ef5c0dee'
+          checkpoint: 'ceb58e03536a9cef907651a7455a140fe475b267345b7056e91df650cc5b81b7'
   name 'Nimbus'
   homepage 'https://github.com/jnordberg/irccloudapp'
 

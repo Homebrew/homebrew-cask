@@ -1,14 +1,10 @@
 cask 'mightytext' do
-  version '2.92'
-  sha256 '36e1bf8098ed2dd6260d8c7b2a18f6bd788adcbd1577bfc65fb934b8cd9c521a'
+  version '3.90.2'
+  sha256 'c10f410492b323bd58c1ecd28cc6aa945e12e65a80042526055e7d86acc0fabe'
 
-  url "https://mightytext.net/downloads/desktop-beta/MightyText-v#{version}.dmg"
+  url "https://dl-desktop.mightytext.net/MightyText-#{version}.dmg"
   name 'MightyText'
   homepage 'https://mightytext.net/'
 
   app 'MightyText.app'
-
-  postflight do
-    suppress_move_to_applications key: 'suppressMoveToApplications'
-  end
 end

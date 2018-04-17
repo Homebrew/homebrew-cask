@@ -13,9 +13,9 @@ cask 'slate' do
 
   app 'Slate.app'
 
-  zap delete: [
-                '~/.slate',
-                '~/.slate.js',
-                '~/Library/Application Support/com.slate.Slate',
-              ]
+  zap trash: [
+               '~/.slate',
+               '~/.slate.js',
+               '~/Library/Application Support/com.slate.Slate',
+             ]
 end

@@ -4,7 +4,7 @@ cask 'disablemonitor' do
 
   url "https://github.com/Eun/DisableMonitor/releases/download/G#{version}/DisableMonitor-G#{version}.zip"
   appcast 'https://github.com/Eun/DisableMonitor/releases.atom',
-          checkpoint: 'fe771d9958403ea039c1ffa4e8edbc69dee465e1cff42456c18780d1dcbd91af'
+          checkpoint: '6d70f2b67ee19da19e6d5e87ee3a394a33de2da3afff0a963d64c54f80f4da6b'
   name 'DisableMonitor'
   homepage 'https://github.com/Eun/DisableMonitor'
 

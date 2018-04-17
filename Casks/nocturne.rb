@@ -4,7 +4,7 @@ cask 'nocturne' do
 
   url "https://github.com/Daij-Djan/nocturne/blob/master/Dist/#{version}.zip?raw=true"
   appcast 'https://raw.githubusercontent.com/Daij-Djan/nocturne/master/README.md',
-          checkpoint: '42900d719a13664d71d37c0e46a270ba87796613c7154a53afde9938d6cc9dc8'
+          checkpoint: '1d30cbaa07a0f631bf9ed0c2dfd205bf896c7fe1f3d4246cd34c4ead90ee5448'
   name 'Nocturne'
   homepage 'https://github.com/Daij-Djan/nocturne'
 

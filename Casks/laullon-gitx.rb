@@ -5,13 +5,13 @@ cask 'laullon-gitx' do
   # github.com/downloads/laullon was verified as official when first introduced to the cask
   url "https://github.com/downloads/laullon/gitx/GitX-L_v#{version}.zip"
   appcast 'http://gitx.laullon.com/appcast.xml',
-          checkpoint: '8514821f4dd35269cfe030744f84a5c586e30215db82c54abbadb43f68a2a26b'
+          checkpoint: 'e4fce47175b38b461d1065919a82a2072652afe233adfe43fb22cb438907e9db'
   name 'GitX (L)'
   homepage 'http://gitx.laullon.com/'
 
-  conflicts_with cask: %w[
-                         gitx
-                         rowanj-gitx
+  conflicts_with cask: [
+                         'gitx',
+                         'rowanj-gitx',
                        ]
 
   app 'GitX.app'

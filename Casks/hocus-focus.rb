@@ -10,9 +10,9 @@ cask 'hocus-focus' do
 
   app 'Hocus Focus.app'
 
-  zap delete: [
-                '~/Library/Caches/com.uglyapps.HocusFocus',
-                '~/Library/Application Support/com.uglyapps.HocusFocus',
-                '~/Library/Preferences/com.uglyapps.HocusFocus.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.uglyapps.HocusFocus',
+               '~/Library/Application Support/com.uglyapps.HocusFocus',
+               '~/Library/Preferences/com.uglyapps.HocusFocus.plist',
+             ]
 end

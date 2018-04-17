@@ -4,6 +4,8 @@ cask 'dendroscope' do
 
   # ab.inf.uni-tuebingen.de/data/software/dendroscope3 was verified as official when first introduced to the cask
   url "http://ab.inf.uni-tuebingen.de/data/software/dendroscope3/download/Dendroscope_macos_#{version.dots_to_underscores}.dmg"
+  appcast 'http://dendroscope.org/',
+          checkpoint: '55916803e86c3829aeb42795a4c79ce823376aa4a0e3b15bcd917a2bdf935cc4'
   name 'Dendroscope'
   homepage 'http://dendroscope.org/'
 

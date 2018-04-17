@@ -4,7 +4,7 @@ cask 'growlvoice' do
 
   url "http://www.growlvoice.com/trials/growlvoice-#{version}.zip"
   appcast 'http://www.growlvoice.com/trials/appcast.xml',
-          checkpoint: '415d7e6dcc19144b6f776d979521815c7d3768764d32a16c408890454d66ab83'
+          checkpoint: '50b95db0510b841fc1cbfe7110d043b1a1eb56239a2284636e399b6f2d436d4f'
   name 'GrowlVoice'
   homepage 'http://www.growlvoice.com/'
 

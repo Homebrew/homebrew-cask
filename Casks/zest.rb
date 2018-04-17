@@ -5,18 +5,18 @@ cask 'zest' do
   # github.com/zestdocs/zest was verified as official when first introduced to the cask
   url "https://github.com/zestdocs/zest/releases/download/v#{version}/zest-v#{version}.dmg"
   appcast 'https://github.com/zestdocs/zest/releases.atom',
-          checkpoint: '070f49a40e5db4448424a7ab4305fd05ecfee703f14e99b76c776961a760eed5'
+          checkpoint: '4e96ba4628f1ff8b6adec3c4b674af5bcb7b971cdb44d3a73367231550a7b221'
   name 'Zest'
-  homepage 'http://zestdocs.org/'
+  homepage 'https://zestdocs.github.io/'
 
   app 'Zest.app'
 
-  zap delete: [
-                '~/Library/Application Support/zest',
-                '~/Library/Caches/zest',
-                '~/Library/Preferences/org.zestdocs.plist',
-                '~/Library/Saved Application State/org.zestdocs.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/zest',
+               '~/Library/Caches/zest',
+               '~/Library/Preferences/org.zestdocs.plist',
+               '~/Library/Saved Application State/org.zestdocs.savedState',
+             ]
 
   caveats do
     discontinued

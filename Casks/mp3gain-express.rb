@@ -1,10 +1,10 @@
 cask 'mp3gain-express' do
-  version '1.2'
-  sha256 '4bf1f7f900e11830ccb0acf248d1873d14db8b6b0e87386770adf85b6b6eda35'
+  version '2.1'
+  sha256 'bde9b129a87525a7e39e11176bdb9045346a822e2b18539a72446de53f9bb472'
 
   url "http://projects.sappharad.com/mp3gain/mp3gain_mac#{version.no_dots}.zip"
   appcast 'http://projects.sappharad.com/mp3gain/updates.xml',
-          checkpoint: '15244c931d367a3cd64768c7a89a7ad73f53f7ae3a10fa238ea84060d52d908f'
+          checkpoint: '06cd08f6acd046ee5ed5a7370f39e8285ee3c759c0ee4b00a94348525e7c2ae9'
   name 'MP3Gain Express'
   homepage 'http://projects.sappharad.com/mp3gain/'
 

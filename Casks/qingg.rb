@@ -1,10 +1,10 @@
 cask 'qingg' do
-  version '2.4.5'
-  sha256 'f6b698c54a6428a176d22ea1ef050d9772bdf8057cfa792a2f05788df65201be'
+  version '2.6.1'
+  sha256 '873fb7be341aa9f9e2f4894001e8b08b365ca3f2da4afc9e4314b5d84bfc9ea8'
 
   url "https://qingg.im/download/Qingg-#{version}.dmg"
   appcast 'https://qingg.im/sparkle/appcast.php',
-          checkpoint: '2a89d61d695b68c1127ad42bef3772eaaa02004b220f15b1ee40bce4bbb6e704'
+          checkpoint: '798eddd96f2008f1c6472b73a07c72b67d5631cd76eb922a2593e5f15e3d9c89'
   name 'QinggIM'
   name '清歌输入法'
   homepage 'https://qingg.im/mac/'
@@ -13,12 +13,12 @@ cask 'qingg' do
 
   pkg 'Qingg.pkg'
 
-  uninstall pkgutil: 'com.aodaren.Qingg.pkg'
+  uninstall pkgutil: 'com.aodaren.*'
 
-  zap delete: [
-                '~/Library/Application Support/Qingg',
-                '~/Library/Application Support/com.aodaren.inputmethod.Qingg',
-                '~/Library/Caches/com.aodaren.inputmethod.Qingg',
-                '~/Library/Preferences/com.aodaren.inputmethod.Qingg.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Qingg',
+               '~/Library/Application Support/com.aodaren.inputmethod.Qingg',
+               '~/Library/Caches/com.aodaren.inputmethod.Qingg',
+               '~/Library/Preferences/com.aodaren.inputmethod.Qingg.plist',
+             ]
 end

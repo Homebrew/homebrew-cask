@@ -4,7 +4,7 @@ cask 'drawdown' do
 
   url "https://www.rwe-uk.com/uploads/updates/DrawDown_#{version}.zip"
   appcast 'https://www.rwe-uk.com/sparkle/drawdown',
-          checkpoint: 'f23f65b11c6005f28f84ed5e23cb82cf88f8c11d15e25fc46178346d7176dce0'
+          checkpoint: 'ead866c493e8b42b749ace72b20826c29052d6924294b18b1cb1e872b1462f67'
   name 'DrawDown'
   homepage 'https://www.rwe-uk.com/app/drawdown'
 

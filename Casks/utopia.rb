@@ -1,6 +1,6 @@
 cask 'utopia' do
-  version '3.0.0'
-  sha256 '2fc2f0ffae6ef37f803b30bee0dcd62237949fc27e29de51920c2b32fd82ab7c'
+  version '3.1.0'
+  sha256 '8b36526c0993d284186776d875597efbda2a584670d4ab3f4d7f8ddcd7547231'
 
   url "http://utopiadocs.com/files/Utopia-#{version}-Mac.dmg"
   name 'Utopia Documents'

@@ -10,7 +10,7 @@ cask 'maciasl' do
 
     url "https://downloads.sourceforge.net/maciasl/#{version}/MaciASL.zip"
     appcast 'https://sourceforge.net/projects/maciasl/rss',
-            checkpoint: 'f4ed78eaafcfa7fb4e14780508c7f7e6395f67a7dbe6a67857cd0f864718aadd'
+            checkpoint: '5d54d6eec240c14766700261db0f1bed7a0978ea7fd07ada29d5377d955de9b7'
   end
 
   name 'MaciASL'

@@ -5,7 +5,7 @@ cask 'logisim' do
   # sourceforge.net/circuit was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/circuit/#{version.sub(%r{\d+$}, 'x')}/#{version}/logisim-macosx-#{version}.tar.gz"
   appcast 'https://sourceforge.net/projects/circuit/rss',
-          checkpoint: '9ab854d47ec39e47fbe76d0ba4177f228c25bbbd05ebd2286d5899695c8837ec'
+          checkpoint: '2bc256abdc89d06b52713501a3b87c4fce54486d611139451548a007dd0640d7'
   name 'Logisim'
   homepage 'http://www.cburch.com/logisim/'
 

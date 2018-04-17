@@ -1,14 +1,12 @@
 cask 'linphone' do
-  version '3.10.2'
-  sha256 '5e88df179c1a238b229a4b334f6c1a94ec0a2cf9dbb62c8328f05ebab93c6eef'
+  version '4.1.1'
+  sha256 'b1a5e518c1c564d47f992adadb09ea8cdb51f35e1a0935d4e2060468f893328e'
 
-  url "https://www.linphone.org/releases/macosx/linphone-#{version}.pkg"
-  appcast 'https://github.com/BelledonneCommunications/linphone/releases.atom',
-          checkpoint: 'cd2cb1b2738546c49e84067fcb58231e2e7ab3bfd510edbd9a87b0adb849d02f'
+  url "https://www.linphone.org/releases/macosx/Linphone-#{version}-mac.dmg"
+  appcast 'https://www.linphone.org/releases/macosx/RELEASE',
+          checkpoint: '1c2e9c6b3dcf0ca0dad9a60ad32ee0de93f85c5239a0d56cd8119ca9af20d604'
   name 'Linphone'
   homepage 'https://www.linphone.org/'
 
-  pkg "linphone-#{version}.pkg"
-
-  uninstall pkgutil: 'org.linphone.linphone'
+  app 'Linphone.app'
 end

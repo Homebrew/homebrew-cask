@@ -4,7 +4,7 @@ cask 'management-tools' do
 
   url "https://github.com/univ-of-utah-marriott-library-apple/management_tools/releases/download/v#{version}/Management_Tools_#{version}.dmg"
   appcast 'https://github.com/univ-of-utah-marriott-library-apple/management_tools/releases.atom',
-          checkpoint: '1437803314ab96c09e68cf2f01571ca15e77fbc20cdbf61bc5c8d2627df821ff'
+          checkpoint: '6ad7926faa46926bbabe33b2eb5c7c1670b7b33d3b940716d15d4f81985b908b'
   name 'Management Tools'
   homepage 'https://github.com/univ-of-utah-marriott-library-apple/management_tools'
 

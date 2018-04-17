@@ -4,7 +4,7 @@ cask 'mattr-slate' do
 
   url "https://github.com/mattr-/slate/releases/download/v#{version}/Slate.zip"
   appcast 'https://github.com/mattr-/slate/releases.atom',
-          checkpoint: '12a305e83d56fb2eab4c1341df73ea1faf5591838dc0ec636d7e06d72200bdb0'
+          checkpoint: 'ada959445f98f2b87fe6eaf41251cbc799ba7917df1e430ef6eb11169d437627'
   name 'Slate'
   homepage 'https://github.com/mattr-/slate'
 
@@ -14,9 +14,9 @@ cask 'mattr-slate' do
 
   app 'Slate.app'
 
-  zap delete: [
-                '~/.slate',
-                '~/.slate.js',
-                '~/Library/Application Support/com.slate.Slate',
-              ]
+  zap trash: [
+               '~/.slate',
+               '~/.slate.js',
+               '~/Library/Application Support/com.slate.Slate',
+             ]
 end

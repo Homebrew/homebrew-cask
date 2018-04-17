@@ -1,11 +1,11 @@
 cask 'fontforge' do
-  version '20161005'
-  sha256 '30398f6e0ee7cff1c4dd77297fc9ae550dd554538fc7dcde00bb77903d183144'
+  version '20170731'
+  sha256 '980c66e00f0f5c7a722eadd8b78a0ef2b20a7ccd952149cbfdfeaae9e66e4d4e'
 
   # github.com/fontforge/fontforge was verified as official when first introduced to the cask
-  url "https://github.com/fontforge/fontforge/releases/download/#{version}/FontForge-20161004-Mac.zip"
+  url "https://github.com/fontforge/fontforge/releases/download/#{version}/FontForge-20170730-Mac.dmg"
   appcast 'https://github.com/fontforge/fontforge/releases.atom',
-          checkpoint: '6546727c4b0560a20af0aaaaf22e2080fa63526c6ad29b14517acc2004a3c1af'
+          checkpoint: 'aa306109b766f07dd7d0a1b7bea26df861d85c35d813a424d470b70539d084ed'
   name 'FontForge'
   homepage 'https://fontforge.github.io/en-US/'
 
@@ -14,7 +14,7 @@ cask 'fontforge' do
 
   app 'FontForge.app'
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     #{token} will only run from within /Applications,
     and will request to be moved at launch.
   EOS

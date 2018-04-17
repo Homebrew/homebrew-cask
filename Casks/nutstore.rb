@@ -17,9 +17,9 @@ cask 'nutstore' do
             login_item: 'Nutstore',
             delete:     '/Applications/Nutstore.app'
 
-  zap delete: [
-                '~/Library/Saved Application State/net.nutstore.osxapp.nutstoreInstaller.savedState',
-                '~/Library/Preferences/net.nutstore.osxapp.plist',
-                '~/Library/Preferences/net.nutstore.NutstoreJavaBE.plist',
-              ]
+  zap trash: [
+               '~/Library/Saved Application State/net.nutstore.osxapp.nutstoreInstaller.savedState',
+               '~/Library/Preferences/net.nutstore.osxapp.plist',
+               '~/Library/Preferences/net.nutstore.NutstoreJavaBE.plist',
+             ]
 end

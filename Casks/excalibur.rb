@@ -4,9 +4,14 @@ cask 'excalibur' do
 
   url "http://excalibur.sourceforge.net/get.php?id=#{version.no_dots}d"
   appcast 'http://excalibur.sourceforge.net/change_log.txt',
-          checkpoint: '9658dda2ecaf5784ebff74e2ca3110810e14ba4bda5dcd98c18a92959260e63e'
+          checkpoint: '8adb784f06cd8031ebcf28c368e8159ff15d095fe17d8ac6c380efc22d96edec'
   name 'Excalibur'
   homepage 'http://excalibur.sourceforge.net/'
 
   app 'Excalibur.app'
+
+  zap trash: [
+               '~/Library/Preferences/Excalibur Preferences',
+               '~/Library/Saved Application State/edu.bucknell.Excalibur.savedState',
+             ]
 end

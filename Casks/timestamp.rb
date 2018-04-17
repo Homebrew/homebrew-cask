@@ -5,7 +5,7 @@ cask 'timestamp' do
   # github.com/mzdr/timestamp was verified as official when first introduced to the cask
   url "https://github.com/mzdr/timestamp/releases/download/#{version}/Timestamp-#{version}-mac.zip"
   appcast 'https://github.com/mzdr/timestamp/releases.atom',
-          checkpoint: 'ac675221d957ad92f2707abaffdb0523bb97e17578dc1028b4dce4381f39866b'
+          checkpoint: '8b05dd311c62983d609520dc1006ea6d9f22b4ae4d8cd29af59e1b0afec12e2e'
   name 'Timestamp'
   homepage 'https://mzdr.github.io/timestamp/'
 

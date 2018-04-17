@@ -8,5 +8,5 @@ cask 'heroes-of-newerth' do
 
   app 'Heroes of Newerth.app'
 
-  zap delete: '~/Library/Application Support/Heroes of Newerth'
+  zap trash: '~/Library/Application Support/Heroes of Newerth'
 end

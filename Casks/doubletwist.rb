@@ -10,9 +10,9 @@ cask 'doubletwist' do
 
   app 'doubleTwist.app'
 
-  zap delete: [
-                '~/Library/Application Support/doubleTwist',
-                '~/Library/Preferences/com.doubleTwist.desktop.plist',
-                '~/Library/Caches/com.doubleTwist.desktop',
-              ]
+  zap trash: [
+               '~/Library/Application Support/doubleTwist',
+               '~/Library/Preferences/com.doubleTwist.desktop.plist',
+               '~/Library/Caches/com.doubleTwist.desktop',
+             ]
 end

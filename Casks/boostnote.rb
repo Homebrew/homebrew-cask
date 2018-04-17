@@ -1,11 +1,11 @@
 cask 'boostnote' do
-  version '0.8.7'
-  sha256 'c04a17c97426ccb4c780c45469f5f4e9f2a4d5af7afcbea099a89a1d1ef36f8b'
+  version '0.11.4'
+  sha256 '7be274ae983feb4a457886f23510ad6a1bf5fc25ed9c5505afd222f7dffd15b0'
 
   # github.com/BoostIO/boost-releases was verified as official when first introduced to the cask
   url "https://github.com/BoostIO/boost-releases/releases/download/v#{version}/Boostnote-mac.dmg"
   appcast 'https://github.com/BoostIO/boost-releases/releases.atom',
-          checkpoint: 'a92d744121e88bb9f117fde6c4ab8dabf99ef1050283d4122d96493cd1014b12'
+          checkpoint: '7e6e46de9cbd7d65dc9462facc83fd5c014792428fcdbcfbd9a02960231ded62'
   name 'Boostnote'
   homepage 'https://boostnote.io/'
 
@@ -13,9 +13,15 @@ cask 'boostnote' do
 
   app 'Boostnote.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.maisin.boost.plist',
-                '~/Library/Preferences/com.maisin.boost.helper.plist',
-                '~/Library/Saved Application State/com.maisin.boost.savedState',
-              ]
+  uninstall signal: [
+                      ['TERM', 'com.maisin.boost.helper'],
+                      ['TERM', 'com.maisin.boost'],
+                    ]
+
+  zap trash: [
+               '~/Library/Application Support/boost',
+               '~/Library/Preferences/com.maisin.boost.plist',
+               '~/Library/Preferences/com.maisin.boost.helper.plist',
+               '~/Library/Saved Application State/com.maisin.boost.savedState',
+             ]
 end

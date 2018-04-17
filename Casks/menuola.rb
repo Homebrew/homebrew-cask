@@ -4,7 +4,7 @@ cask 'menuola' do
 
   url "https://geocom.co.nz/downloads/Menuolav#{version.major}.dmg.zip"
   appcast 'https://www.geocom.co.nz/menuola.xml',
-          checkpoint: 'f63f98d9f170a4b50412465aac5b1fffa599ca5a0ebfe9e6c95ada321c8211af'
+          checkpoint: '45dfe18ac430f01028e927945a3701f37833f3a4142840e5f11f6db427896d6a'
   name 'Menuola'
   homepage 'https://www.geocom.co.nz/'
 

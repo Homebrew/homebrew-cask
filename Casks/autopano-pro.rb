@@ -4,7 +4,7 @@ cask 'autopano-pro' do
 
   url 'http://download.kolor.com/app/stable/macleopard'
   name 'Autopano Pro'
-  homepage 'http://www.kolor.com/autopano/'
+  homepage 'https://www.kolor.com/autopano/'
 
   pkg "Autopano Pro #{version.major_minor}.pkg"
 

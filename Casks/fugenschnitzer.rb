@@ -4,7 +4,7 @@ cask 'fugenschnitzer' do
 
   url "https://downloads.sourceforge.net/fugenschnitzer/fugenschnitzer_#{version}_macosx_i386_en.dmg"
   appcast 'https://sourceforge.net/projects/fugenschnitzer/rss',
-          checkpoint: '592a295cdda866a0320b4c63d665ed07a7f03a5f44b5bbe649b8a1c5c217f30d'
+          checkpoint: '3830521f40681903ac2667fb16c5ab13380294af2122ee6d54a2a7b183aa7f13'
   name 'fugenschnitzer'
   homepage 'http://fugenschnitzer.sourceforge.net/main_en.html'
 

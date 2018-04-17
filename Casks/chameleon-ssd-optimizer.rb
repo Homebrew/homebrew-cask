@@ -10,8 +10,8 @@ cask 'chameleon-ssd-optimizer' do
 
   app 'Chameleon SSD Optimizer.app'
 
-  zap delete: [
-                '~/Library/Preferences/aletest.Chameleon-SSD-Optimizer.plist',
-                '~/Library/Caches/aletest.Chameleon-SSD-Optimizer/',
-              ]
+  zap trash: [
+               '~/Library/Preferences/aletest.Chameleon-SSD-Optimizer.plist',
+               '~/Library/Caches/aletest.Chameleon-SSD-Optimizer/',
+             ]
 end

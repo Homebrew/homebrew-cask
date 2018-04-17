@@ -1,8 +1,8 @@
 cask 'bluegriffon' do
-  version '2.1.2'
-  sha256 '8a7a0586c8f4ae002886c3c80f4ddbff65648429c56c8e45d4d08dca9ac85b66'
+  version '3.0.1'
+  sha256 'b1fd87e24890d9d7f227da4051e384e327e418c80112f94fe376985697f7f1d9'
 
-  url "http://bluegriffon.org/freshmeat/#{version}/bluegriffon-#{version}.mac.dmg"
+  url "http://bluegriffon.org/freshmeat/#{version}/bluegriffon-#{version}.mac-x86_64.dmg"
   name 'BlueGriffon'
   homepage 'http://bluegriffon.org/'
 

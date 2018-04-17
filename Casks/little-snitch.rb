@@ -1,50 +1,56 @@
 cask 'little-snitch' do
-  if MacOS.version <= :mountain_lion
-    version '3.3.4'
-    sha256 '19dfcd33594fc14be321c3f54651059029b73f715158e0498ba01ceb69bf6c4a'
-    url "https://www.obdev.at/downloads/littlesnitch/legacy/LittleSnitch-#{version}.dmg"
-  elsif MacOS.version <= :mavericks
-    version '3.6.4'
-    sha256 '143070b3d8fd7370aa9c7881d3239efe33f05f4d4413a46e22988dd64f5b5223'
-    url "https://www.obdev.at/downloads/littlesnitch/legacy/LittleSnitch-#{version}.dmg"
-  else
-    version '3.7.3'
-    sha256 'd3074fe0fb57bef70a77c6630071845800dde2eebeaa28e01673ee2a749668f3'
-    url "https://www.obdev.at/downloads/littlesnitch/LittleSnitch-#{version}.dmg"
-  end
+  version '4.0.6'
+  sha256 'c8d21ad4efc2a0625574f8e6dbe5c79b59fb91468c7abae7581d9a58d24c1ff7'
 
+  url "https://www.obdev.at/downloads/littlesnitch/LittleSnitch-#{version}.dmg"
   appcast 'https://www.obdev.at/products/littlesnitch/releasenotes.html',
-          checkpoint: 'd6f25ded31a523078e1e1b6d41c3e92e7132bf56f6d1475b0a0ad03c3acdf8e0'
+          checkpoint: '2098e2706d5b9dfb73960931c22f9dbe455fc7a0785a3d9d574c7d2edf3e8338'
   name 'Little Snitch'
   homepage 'https://www.obdev.at/products/littlesnitch/index.html'
 
   auto_updates true
+  depends_on macos: '>= :el_capitan'
+  container type: :naked
 
-  installer manual: 'Little Snitch Installer.app'
+  installer manual: "LittleSnitch-#{version}.dmg/Little Snitch Installer.app"
 
-  zap delete: [
-                '/Library/Application Support/Objective Development/Little Snitch',
-                '~/Library/Application Support/Little Snitch',
-                '~/Library/Caches/at.obdev.LittleSnitchAgent',
-                '~/Library/Caches/at.obdev.LittleSnitchConfiguration',
-                '~/Library/Caches/at.obdev.LittleSnitchSoftwareUpdate',
-                '~/Library/Caches/com.apple.helpd/Generated/at.obdev.LittleSnitchConfiguration.help',
-                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/at.obdev.LittleSnitchConfiguration.help',
-                '~/Library/Logs/Little Snitch Agent.log',
-                '~/Library/Logs/Little Snitch Installer.log',
-                '~/Library/Logs/Little Snitch Network Monitor.log',
-                '~/Library/Preferences/at.obdev.LittleSnitchAgent.plist',
-                '~/Library/Preferences/at.obdev.LittleSnitchConfiguration.plist',
-                '~/Library/Preferences/at.obdev.LittleSnitchInstaller.plist',
-                '~/Library/Preferences/at.obdev.LittleSnitchNetworkMonitor.plist',
-                '~/Library/Preferences/at.obdev.LittleSnitchSoftwareUpdate.plist',
-                '~/Library/Saved Application State/at.obdev.LittleSnitchInstaller.savedState',
-              ],
-      rmdir:  [
-                '/Library/Application Support/Objective Development',
-              ]
+  uninstall launchctl: [
+                         'at.obdev.LittleSnitchUIAgent',
+                         'at.obdev.LittleSnitchHelper',
+                         'at.obdev.littlesnitchd',
+                       ]
+
+  zap trash: [
+               '/Library/Application Support/Objective Development/Little Snitch',
+               '/Library/Caches/at.obdev.LittleSnitchConfiguration',
+               '/Library/Little Snitch',
+               '/Library/Logs/LittleSnitchDaemon.log',
+               '~/Library/Application Support/Little Snitch',
+               '~/Library/Caches/at.obdev.LittleSnitchAgent',
+               '~/Library/Caches/at.obdev.LittleSnitchConfiguration',
+               '~/Library/Caches/at.obdev.LittleSnitchHelper',
+               '~/Library/Caches/at.obdev.LittleSnitchSoftwareUpdate',
+               '~/Library/Caches/com.apple.helpd/Generated/at.obdev.LittleSnitchConfiguration.help*',
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/at.obdev.LittleSnitchConfiguration.help*',
+               '~/Library/Logs/Little Snitch Agent.log',
+               '~/Library/Logs/Little Snitch Helper.log',
+               '~/Library/Logs/Little Snitch Installer.log',
+               '~/Library/Logs/Little Snitch Network Monitor.log',
+               '~/Library/Preferences/at.obdev.LittleSnitchAgent.plist',
+               '~/Library/Preferences/at.obdev.LittleSnitchConfiguration.plist',
+               '~/Library/Preferences/at.obdev.LittleSnitchInstaller.plist',
+               '~/Library/Preferences/at.obdev.LittleSnitchNetworkMonitor.plist',
+               '~/Library/Preferences/at.obdev.LittleSnitchSoftwareUpdate.plist',
+               '~/Library/Saved Application State/at.obdev.LittleSnitchInstaller.savedState',
+               '~/Library/WebKit/at.obdev.LittleSnitchConfiguration',
+               # These kext's should not be uninstalled by Cask
+               '/Library/Extensions/LittleSnitch.kext',
+               '/Library/StagedExtensions/Library/Extensions/LittleSnitch.kext',
+             ],
+      rmdir: '/Library/Application Support/Objective Development'
 
   caveats do
+    kext
     reboot
   end
 end

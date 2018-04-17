@@ -1,12 +1,13 @@
 cask 'openmsx' do
-  version '0.11.0'
-  sha256 'a8624b266258558dbecc3e9f67f4b7aeab9a44a46714c4a1a9f2881aa99f17b1'
+  version '0.14.0'
+  sha256 '05ab7470a116ddd09a8ae3320116372c97e4f682ccb642ce087f892a40d10cb4'
 
-  url "https://downloads.sourceforge.net/openmsx/openmsx-#{version}-mac-x86_64-bin.dmg"
-  appcast 'https://sourceforge.net/projects/openmsx/rss',
-          checkpoint: '797fc177f46bddd1950fb011b95188e334ca029c3cc25a3a4ab679f60bcebe56'
+  # github.com/openMSX/openMSX was verified as official when first introduced to the cask
+  url "https://github.com/openMSX/openMSX/releases/download/RELEASE_#{version.dots_to_underscores}/openmsx-#{version}-mac-x86_64-bin.dmg"
+  appcast 'https://github.com/openMSX/openMSX/releases.atom',
+          checkpoint: '7d7a5f34a29c093a5437146152637ab9c99df948e6e4d6b38a6d5508ef6fc729'
   name 'openMSX'
-  homepage 'http://openmsx.sourceforge.net/'
+  homepage 'https://openmsx.org/'
 
   app 'openMSX.app'
 end

@@ -9,4 +9,11 @@ cask 'accessmenubarapps' do
   homepage 'http://www.ortisoft.de/accessmenubarapps/'
 
   app 'AccessMenuBarApps.app'
+
+  uninstall quit: 'de.ortisoft.AccessMenuBarApps'
+
+  zap trash: [
+               '~/Library/Caches/de.ortisoft.AccessMenuBarApps',
+               '~/Library/Preferences/de.ortisoft.AccessMenuBarApps.plist',
+             ]
 end

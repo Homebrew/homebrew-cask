@@ -13,8 +13,8 @@ cask 'stack' do
             signal:     ['TERM', 'nl.transip.stack'],
             pkgutil:    'nl.transip.stack'
 
-  zap delete: [
-                '~/Library/Caches/nl.transip.stack',
-                '~/Library/Application Support/STACK/',
-              ]
+  zap trash: [
+               '~/Library/Caches/nl.transip.stack',
+               '~/Library/Application Support/STACK/',
+             ]
 end

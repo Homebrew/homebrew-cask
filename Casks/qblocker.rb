@@ -13,10 +13,10 @@ cask 'qblocker' do
 
   app 'QBlocker.app'
 
-  zap delete: [
-                '~/Library/Application Support/uk.co.wearecocoon.QBlocker',
-                '~/Library/Caches/uk.co.wearecocoon.QBlocker',
-                '~/Library/Logs/uk.co.wearecocoon.QBlocker',
-                '~/Library/Preferences/uk.co.wearecocoon.QBlocker.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/uk.co.wearecocoon.QBlocker',
+               '~/Library/Caches/uk.co.wearecocoon.QBlocker',
+               '~/Library/Logs/uk.co.wearecocoon.QBlocker',
+               '~/Library/Preferences/uk.co.wearecocoon.QBlocker.plist',
+             ]
 end

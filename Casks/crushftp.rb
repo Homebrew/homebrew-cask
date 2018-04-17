@@ -2,7 +2,7 @@ cask 'crushftp' do
   version :latest
   sha256 :no_check
 
-  url 'https://www.crushftp.com/early7/CrushFTP7_OSX.zip'
+  url 'https://www.crushftp.com/CrushFTP7_OSX.zip'
   name 'CrushFTP7'
   homepage 'https://www.crushftp.com/'
 

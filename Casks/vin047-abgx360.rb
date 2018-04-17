@@ -4,11 +4,11 @@ cask 'vin047-abgx360' do
 
   url "https://github.com/vin047/abgx360gui/releases/download/#{version}/abgx360.dmg"
   appcast 'https://github.com/vin047/abgx360gui/releases.atom',
-          checkpoint: '66aa25afd5cb6052b881fe18a75af2bf2c2e042ac50da962114f5825ea7902b1'
+          checkpoint: '391a82bddb542f27bc187a4674d9c9ec6b4b8a4ac9f54839f737048fead95368'
   name 'vin047-abgx360'
   homepage 'https://github.com/vin047/abgx360gui'
 
   app 'abgx360 GUI.app'
 
-  zap delete: '~/.abgx360'
+  zap trash: '~/.abgx360'
 end

@@ -4,7 +4,7 @@ cask 'ukrainian-typographic-keyboard' do
 
   url "https://github.com/denysdovhan/ukrainian-typographic-keyboard/releases/download/v#{version}/ukrainian-typographic-keyboard.dmg"
   appcast 'https://github.com/denysdovhan/ukrainian-typographic-keyboard/releases.atom',
-          checkpoint: '43397a9620d8fc34a55a68c7ebe8da2318b2181375015f97368020a905c3774b'
+          checkpoint: '814cdcbc789989545714e41e3ccfafdc8658491fa40b1718173b542b36cb068a'
   name 'Ukrainian Typographic Keyboard'
   homepage 'https://github.com/denysdovhan/ukrainian-typographic-keyboard/'
 

@@ -3,13 +3,13 @@ cask 'selfcontrol' do
     version '1.5.1'
     sha256 'd3823a1e9ba0b47dc2cb39c93cd51837c2dafc7d5a5a564825f4a440fd2ab9ad'
   else
-    version '2.1.1'
-    sha256 'ac492ce596f7189088db56c1e8a2663504d1036264745a66a7202fe5b4dca6e8'
+    version '2.2.2'
+    sha256 '2cf92f8f142d630ed8cf77308599fa00fd610ec9fbafafcea27773974afdd4e1'
   end
 
   url "http://downloads.selfcontrolapp.com/SelfControl-#{version}.zip"
   appcast 'https://selfcontrolapp.com/SelfControlAppcast.xml',
-          checkpoint: 'ed03ff3ec9c2616091c15546808a244f8780d8ba0d27499d4b3bd4316176fea9'
+          checkpoint: '1c9bb5002cfcf7deed8d96532d27ba3a07ffb38e9dbe2354ae7a0eddf000842a'
   name 'SelfControl'
   homepage 'https://selfcontrolapp.com/'
 
@@ -17,5 +17,5 @@ cask 'selfcontrol' do
 
   app 'SelfControl.app'
 
-  zap delete: '~/Library/Preferences/org.eyebeam.SelfControl.plist'
+  zap trash: '~/Library/Preferences/org.eyebeam.SelfControl.plist'
 end

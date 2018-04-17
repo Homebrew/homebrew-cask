@@ -1,10 +1,10 @@
 cask 'podcastmenu' do
-  version '1.2.1'
-  sha256 'bc4685be0b4501a7f31dd88755713812f96017a9fa01f28d59b3d29dfb38dbf1'
+  version '1.3'
+  sha256 'bff1a2b2b5f6c6eac37f567fdf917b696b1ef0b203f61725e44274461f957e31'
 
   url "https://github.com/insidegui/PodcastMenu/raw/master/Releases/PodcastMenu_v#{version}.zip"
   appcast 'https://github.com/insidegui/PodcastMenu/raw/master/Releases/appcast.xml',
-          checkpoint: '5517ad23d0ef1676e42820a8e6bd576b5b2c66d38947e747280edea6d5ec85f5'
+          checkpoint: '825cfe79ec4c6f76744905c4dc2be0502f32cac4db9251d6e5faf296635403e4'
   name 'PodcastMenu'
   homepage 'https://github.com/insidegui/PodcastMenu'
 
@@ -13,9 +13,9 @@ cask 'podcastmenu' do
 
   app 'PodcastMenu.app'
 
-  zap delete: [
-                '~/Library/Application Support/br.com.guilhermerambo.PodcastMenu',
-                '~/Library/Caches/br.com.guilhermerambo.PodcastMenu',
-                '~/Library/Preferences/br.com.guilhermerambo.PodcastMenu.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/br.com.guilhermerambo.PodcastMenu',
+               '~/Library/Caches/br.com.guilhermerambo.PodcastMenu',
+               '~/Library/Preferences/br.com.guilhermerambo.PodcastMenu.plist',
+             ]
 end

@@ -4,7 +4,7 @@ cask 'streakerbar' do
 
   url "https://github.com/chaserx/streakerbar/releases/download/v#{version}/streakerbar.zip"
   appcast 'https://github.com/chaserx/streakerbar/releases.atom',
-          checkpoint: '8200ff77a02d38672eeeb2b01bdd3a7f040c3f704c8468689c1e7c603a93b615'
+          checkpoint: '362c12ae2a99611e783ca3e5f5a173d6c307d7ce8389ecc255015cd57d12df7a'
   name 'streakerbar'
   homepage 'https://github.com/chaserx/streakerbar'
 

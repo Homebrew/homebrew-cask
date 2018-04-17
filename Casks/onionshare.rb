@@ -1,17 +1,16 @@
 cask 'onionshare' do
-  version '1.0'
-  sha256 '4586f3b2218188475610354f14c95e08b988d6d190eecc3f04258d25ca3543a6'
+  version '1.3'
+  sha256 '262d0653945a06737502fb78bf2a159dbfdc93de6ff020c9ff2252db5d1ecd25'
 
   # github.com/micahflee/onionshare was verified as official when first introduced to the cask
-  url "https://github.com/micahflee/onionshare/releases/download/v#{version}/OnionShare.pkg"
+  url "https://github.com/micahflee/onionshare/releases/download/v#{version}/OnionShare-#{version}.pkg"
   appcast 'https://github.com/micahflee/onionshare/releases.atom',
-          checkpoint: '72c38373f27461c9533ee32c87c2b13898f368779701213f0e625d51722337f9'
+          checkpoint: 'f230e50bf649344715d0b53668f059566f16cfe487deb61dddbd0583477f9952'
   name 'OnionShare'
   homepage 'https://onionshare.org/'
-  gpg "#{url}.sig",
-      key_url: 'https://onionshare.org/signing-key.asc'
+  gpg "#{url}.sig", key_url: 'https://onionshare.org/signing-key.asc'
 
-  pkg 'OnionShare.pkg'
+  pkg "OnionShare-#{version}.pkg"
 
-  uninstall pkgutil: 'org.pythonmac.unspecified.OnionShare'
+  uninstall pkgutil: 'com.micahflee.onionshare'
 end

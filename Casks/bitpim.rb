@@ -5,7 +5,7 @@ cask 'bitpim' do
   # sourceforge.net/bitpim was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/bitpim/bitpim/#{version}/LEOPARD-bitpim-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/bitpim/rss?path=/bitpim',
-          checkpoint: '66382187ace01bc30d808ef6b6654ed241d3bb90c21021dbf48c11cea5ea1b89'
+          checkpoint: '383c2680300bee506b373bcd023be88c8e1a20a055cecd49b28a0f70c5296f8f'
   name 'BitPim'
   homepage 'http://www.bitpim.org/'
 
@@ -15,5 +15,5 @@ cask 'bitpim' do
 
   uninstall quit: 'org.bitpim.bitpim'
 
-  zap delete: '~/Library/Preferences/org.bitpim.bitpim.plist'
+  zap trash: '~/Library/Preferences/org.bitpim.bitpim.plist'
 end

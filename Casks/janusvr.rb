@@ -4,7 +4,7 @@ cask 'janusvr' do
 
   url 'http://downloads.janusvr.com/janusvr.dmg'
   name 'Janus VR'
-  homepage 'http://janusvr.com/'
+  homepage 'https://janusvr.com/'
 
   app 'janusvr.app'
 end

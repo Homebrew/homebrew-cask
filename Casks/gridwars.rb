@@ -4,7 +4,7 @@ cask 'gridwars' do
 
   url 'http://gridwars.marune.de/bin/gridwars_osx_x86.zip'
   appcast 'http://gridwars.marune.de/',
-          checkpoint: '8cf5148b46ca27f4e6073b041b08040e3365b0a195cbc6dec98b1e2c02db4dfc'
+          checkpoint: '89626bba6f9a60543a764da0cfe6d2a18bccaf8f6b229a19645f80389f0182bc'
   name 'GridWars'
   homepage 'http://gridwars.marune.de/'
 

@@ -1,19 +1,19 @@
 cask 'lyx' do
-  version '2.2.2'
-  sha256 'eae722f4ef8057d37dcd9c118442922e5d9ba1c7460b28ef8bc7a4b264cf995b'
+  version '2.3.0'
+  sha256 '45a8da0cd9ccdc4f3764864048c890e9d234ef559a5a4db89cce93bbaaee46da'
 
-  url "ftp://ftp.lyx.org/pub/lyx/bin/#{version}/LyX-#{version}+qt5.6.2-x86_64-cocoa.dmg"
+  url "ftp://ftp.lyx.org/pub/lyx/bin/#{version}/LyX-#{version}+qt5-x86_64-cocoa.dmg"
   appcast 'https://www.lyx.org/misc/rss/lyx_news_feed.xml',
-          checkpoint: '175cd70d08d80abd933253e0753da3ba1fbc6f7512e8f4b673c1b2c7d460682c'
+          checkpoint: '995f3ebc635d68a5a578f20fe5a7e4ecc6159838771391f34b5f691e39357c5f'
   name 'LyX'
   homepage 'https://www.lyx.org/'
   gpg "#{url}.sig", key_id: 'de7a44fac7fb382d'
 
   app 'LyX.app'
 
-  zap delete: [
-                "~/Library/Application Support/LyX-#{version.major_minor}",
-                "~/Library/Preferences/org.lyx.LyX-#{version.major_minor}.plist",
-                '~/Library/Saved Application State/org.lyx.lyx.savedState',
-              ]
+  zap trash: [
+               "~/Library/Application Support/LyX-#{version.major_minor}",
+               "~/Library/Preferences/org.lyx.LyX-#{version.major_minor}.plist",
+               '~/Library/Saved Application State/org.lyx.lyx.savedState',
+             ]
 end

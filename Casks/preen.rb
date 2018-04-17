@@ -4,7 +4,7 @@ cask 'preen' do
 
   url "http://anomiesoftware.com/downloads/preenImage#{version}.dmg"
   appcast 'http://www.anomiesoftware.com/PreenAppcast.xml',
-          checkpoint: '5874e990f04b0cf0d11ba02bc0574eddf39be57ffaf91c5e2e5ee68d83b084b1'
+          checkpoint: '7cbce59b035f2d73297b933cb5040acba2960a4c5d1f17887677bad605c4474f'
   name 'Preen'
   homepage 'http://anomiesoftware.com/Anomie_Software/Preen.html'
 

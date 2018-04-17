@@ -1,8 +1,8 @@
 cask 'gcc-arm-embedded' do
-  version '6-2017-q1-update'
-  sha256 'de4de95b09740272aa95ca5a43bb234ba29c323eddcad2ee34e901eebda910a2'
+  version '7-2017-q4-major'
+  sha256 '89b776c7cf0591c810b5b60067e4dc113b5b71bc50084a536e71b894a97fdccb'
 
-  url "https://developer.arm.com/-/media/Files/downloads/gnu-rm/6_1-2017q1/gcc-arm-none-eabi-#{version}-mac.tar.bz2"
+  url "https://developer.arm.com/-/media/Files/downloads/gnu-rm/7-2017q4/gcc-arm-none-eabi-#{version}-mac.tar.bz2"
   name 'GCC ARM Embedded'
   homepage 'https://developer.arm.com/open-source/gnu-toolchain/gnu-rm'
 

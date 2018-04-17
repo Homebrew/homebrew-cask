@@ -66,13 +66,14 @@ Note that `uninstall --force` is currently imperfect. See the man page for more 
 ## Other Commands
 
 * `info` — displays information about the given Cask
-* `list` — with no args, lists installed Casks; given installed Casks, lists staged files
+* `list` — with no args, lists installed Casks; given installed Casks, lists staged files (with `--full-name`, include tap name)
 * `fetch` — downloads remote application files for the given Cask to the local cache (with `--force`, re-download even if already cached)
 * `doctor` — checks for configuration issues
 * `cleanup` — cleans up cached downloads (with `--outdated`, only cleans old downloads)
 * `home` — opens the homepage of the given Cask; or with no arguments, the Homebrew-Cask project page
-* `update` — a synonym for `brew update`
 * `zap` — try to remove *all* files associated with a Cask (may include resources shared with other applications)
+* `outdated` - lists all outdated Casks
+* `upgrade` - updates all outdated Casks
 
 The following commands are for Cask authors:
 
@@ -86,7 +87,6 @@ The following aliases and abbreviations are provided for convenience:
 * `ls` — `list`
 * `-S` — `search`
 * `rm`, `remove` — `uninstall`
-* `up` — `update`
 * `dr` — `doctor`
 
 ## Tab Completion
@@ -109,7 +109,7 @@ List all installed Casks:
 
 ```bash
 $ brew cask list
-adium          google-chrome     onepassword
+atom          google-chrome     1password
 ```
 
 Show details about a specific Cask:
@@ -128,7 +128,7 @@ Caffeine.app (app)
 
 ## Updating/Upgrading Casks
 
-Since the Homebrew-Cask repository is a Homebrew Tap, you’ll pull down the latest Casks every time you issue the regular Homebrew command `brew update`. Currently, Homebrew-Cask cannot always detect if an application has been updated. You can force an update via the command `brew cask install --force`. We are working on improving this.
+Since the Homebrew-Cask repository is a Homebrew Tap, you’ll pull down the latest Casks every time you issue the regular Homebrew command `brew update`. You can check for outdated Casks with `brew cask outdated` and install the outdated Casks with `brew cask upgrade`.
 
 It is generally safe to run updates from within an application.
 
@@ -143,8 +143,9 @@ The primary Homebrew-Cask Tap includes most of the Casks that a typical user wil
 | Tap name | description |
 | -------- | ----------- |
 | [caskroom/versions](https://github.com/caskroom/homebrew-versions) | contains alternate versions of Casks (e.g. betas, nightly releases, old versions)
-| [caskroom/fonts](https://github.com/caskroom/homebrew-fonts)       | contains Casks that install fonts, which are kept separate so we can educate users about the different licensing landscape around font installation/usage
+| [caskroom/fonts](https://github.com/caskroom/homebrew-fonts)       | contains Casks that install fonts
 | [caskroom/eid](https://github.com/caskroom/homebrew-eid)           | contains Casks that install electronic identity card software of various countries
+| [caskroom/drivers](https://github.com/caskroom/homebrew-drivers)   | contains Casks that install drivers for various devices
 
 You can tap any of the above with a `brew tap` command:
 
@@ -172,7 +173,6 @@ $ brew cask install caskroom/fonts/font-symbola
 
 You can also modify the default installation locations used when issuing `brew cask install`:
 
-* `--caskroom=/my/path` determines where the actual applications will be located. Default is `$(brew --prefix)/Caskroom`.
 * `--appdir=/my/path` changes the path where the applications will be moved. Default is `/Applications`.
 * `--fontdir=/my/path` changes the path for Fonts. Default is `~/Library/Fonts`.
 * See `man brew-cask` for the other default installation locations and the flags to change them.
@@ -181,7 +181,7 @@ To make these settings persistent, you might want to add the following line to y
 
 ```bash
 # Specify your defaults in this environment variable
-export HOMEBREW_CASK_OPTS="--appdir=~/Applications --caskroom=/etc/Caskroom"
+export HOMEBREW_CASK_OPTS="--appdir=~/Applications --fontdir=/Library/Fonts"
 ```
 
 Note that you still can override the environment variable `HOMEBREW_CASK_OPTS` by _explicitly_ providing options in the command line:

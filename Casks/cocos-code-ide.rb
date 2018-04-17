@@ -8,9 +8,9 @@ cask 'cocos-code-ide' do
 
   app 'Cocos Code IDE.app'
 
-  zap delete: [
-                '~/Library/Caches/org.cocos.platform.ide',
-                '~/Library/Saved Application State/org.cocos.platform.ide.savedState',
-                '~/Library/Preferences/org.cocos.platform.ide.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/org.cocos.platform.ide',
+               '~/Library/Saved Application State/org.cocos.platform.ide.savedState',
+               '~/Library/Preferences/org.cocos.platform.ide.plist',
+             ]
 end

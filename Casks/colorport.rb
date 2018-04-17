@@ -4,7 +4,7 @@ cask 'colorport' do
 
   url "https://downloads.xrite.com/downloads/software/ColorPort/v#{version}/ColorPort#{version.no_dots}.zip"
   name 'ColorPort Utility Software'
-  homepage 'http://www.xrite.com/service-support/product-support/formulation-and-qc-software/ColorPort-Utility-Software'
+  homepage 'http://www.xrite.com/service-support/product-support/formulation-and-qc-software/colorport-utility-software'
 
   pkg "ColorPort#{version.sub(%r{^(\d+)\.(\d+).*}, '\1\2')}Distribution.mpkg"
 

@@ -4,7 +4,7 @@ cask 'menubar-colors' do
 
   url "https://github.com/nvzqz/menubar-colors/releases/download/v#{version}/Menubar-Colors.zip"
   appcast 'https://github.com/nvzqz/menubar-colors/releases.atom',
-          checkpoint: '33fc643995e90f021081ec75b367cf6cda21706f0fa676f40d82f3ddd5328a3b'
+          checkpoint: '09c0d9918537c697c593da184a290d773a6b7c1cf9ead564dcef63721f2af1af'
   name 'Menubar Colors'
   homepage 'https://github.com/nvzqz/Menubar-Colors'
 

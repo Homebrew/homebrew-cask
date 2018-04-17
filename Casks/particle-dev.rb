@@ -9,8 +9,8 @@ cask 'particle-dev' do
 
   app 'Particle Dev.app'
 
-  zap delete: [
-                '~/.particle',
-                '~/.particledev',
-              ]
+  zap trash: [
+               '~/.particle',
+               '~/.particledev',
+             ]
 end

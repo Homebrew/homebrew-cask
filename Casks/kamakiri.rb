@@ -4,7 +4,7 @@ cask 'kamakiri' do
 
   url "https://mochidev.com/appresources/downloads/Kamakiri%20#{version.sub(%r{-.*$}, '')}%20(#{version.sub(%r{^.*-}, '')}).zip"
   appcast 'https://mochidev.com/appresources/updates/kamakiridd.xml',
-          checkpoint: 'a67664eb137f29dce44d5527d9a864f828e5734f9dcf7c8f0d8f551ddb249c78'
+          checkpoint: '5ac217895c1f06fb9b30b67b46630b8e26b4d3a7cbf9102cd38c12b521d94197'
   name 'Kamakiri'
   homepage 'https://mochidev.com/apps/kamakiri/'
 

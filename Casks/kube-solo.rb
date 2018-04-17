@@ -4,11 +4,15 @@ cask 'kube-solo' do
 
   url "https://github.com/TheNewNormal/kube-solo-osx/releases/download/v#{version}/Kube-Solo_v#{version}.dmg"
   appcast 'https://github.com/TheNewNormal/kube-solo-osx/releases.atom',
-          checkpoint: '011276cb76066f9e5503493ff92ce386bd4024ac4b825b6c1491c0582484db2f'
+          checkpoint: '6ba282b8234da950f8d0f4c3a9c7c86793b2cf0fa760e0a8c235ac6b64852987'
   name 'Kube-Solo'
   homepage 'https://github.com/TheNewNormal/kube-solo-osx'
 
   app 'Kube-Solo.app'
 
-  zap delete: '~/kube-solo'
+  zap trash: '~/kube-solo'
+
+  caveats do
+    discontinued
+  end
 end

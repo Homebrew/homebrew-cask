@@ -4,7 +4,7 @@ cask 'hipsterchat' do
 
   url "https://github.com/kvasir/hipsterchat/releases/download/v#{version}/HipsterChat-osx-#{version}.zip"
   appcast 'https://github.com/kvasir/hipsterchat/releases.atom',
-          checkpoint: '285d3ff9dc41f4de1043f21c62f84e886d8ddf7f52188e018c9f9144ff5a4d96'
+          checkpoint: '6a3cbe6cdf14af38682f17c750d5387a5172dddda941b6dab70c2b91007d6ae3'
   name 'HipsterChat'
   homepage 'https://github.com/kvasir/hipsterchat'
 

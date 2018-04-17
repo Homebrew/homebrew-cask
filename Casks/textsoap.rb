@@ -1,17 +1,23 @@
 cask 'textsoap' do
-  version '8.3.1'
-  sha256 '33f6c3015d6389ba38a6691b6d306586f544c283aa4a43071168528983848351'
+  version '8.4.5'
+  sha256 '65730afbd7af9021589a69ba42d07cbb9a96834fc3aaa2acb5549cd9a167f4dd'
 
   # unmarked.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://unmarked.s3.amazonaws.com/textsoap#{version.major}.zip"
   appcast "https://unmarked.s3.amazonaws.com/appcast/textsoap#{version.major}.xml",
-          checkpoint: 'b7a7dd38ee4f6205c9f0842089c6e8e52d3735ba6076b48290e0ce1f0656b90e'
+          checkpoint: 'edca4bf7f8652cfe4ca5fd05c184e53b063bf1808e2c58bae45794e96bbaa309'
   name 'TextSoap'
   homepage 'https://www.unmarked.com/textsoap/'
 
   app "textsoap#{version.major}.app"
 
-  postflight do
-    suppress_move_to_applications
-  end
+  zap trash: [
+               '~/Library/Application Support/TextSoap',
+               "~/Library/Application Support/com.unmarked.textsoap#{version.major}",
+               "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.unmarked.textsoap#{version.major}.help*",
+               "~/Library/Caches/com.unmarked.textsoap#{version.major}",
+               "~/Library/Cookies/com.unmarked.textsoap#{version.major}.binarycookies",
+               "~/Library/Preferences/com.unmarked.textsoap#{version.major}.plist",
+               "~/Library/Saved Application State/com.unmarked.textsoap#{version.major}.savedState",
+             ]
 end

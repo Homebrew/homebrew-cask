@@ -8,12 +8,11 @@ cask 'chromium' do
   homepage 'https://www.chromium.org/Home'
 
   app 'chrome-mac/Chromium.app'
-  binary "#{appdir}/Chromium.app/Contents/MacOS/Chromium", target: 'chromium'
 
-  zap delete: [
-                '~/Library/Preferences/org.chromium.Chromium.plist',
-                '~/Library/Caches/Chromium',
-                '~/Library/Application Support/Chromium',
-                '~/Library/Saved Application State/org.chromium.Chromium.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/org.chromium.Chromium.plist',
+               '~/Library/Caches/Chromium',
+               '~/Library/Application Support/Chromium',
+               '~/Library/Saved Application State/org.chromium.Chromium.savedState',
+             ]
 end

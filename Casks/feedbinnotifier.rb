@@ -5,7 +5,7 @@ cask 'feedbinnotifier' do
   # github.com/kmikael/FeedbinNotifier was verified as official when first introduced to the cask
   url "https://github.com/kmikael/FeedbinNotifier/releases/download/v#{version}/FeedbinNotifier.zip"
   appcast 'https://github.com/kmikael/FeedbinNotifier/releases.atom',
-          checkpoint: '1dc76597191bab28d4832ea7845cd6c274743d19f531336fec55a2e7c1ea35b6'
+          checkpoint: '8006f948e3624bf9e84482173acdd40bbd64e6d5e1b287500c622683637030f2'
   name 'Feedbin Notifier'
   homepage 'http://kmikael.com/FeedbinNotifier/'
 

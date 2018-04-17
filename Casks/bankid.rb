@@ -1,6 +1,6 @@
 cask 'bankid' do
-  version '7.2.0'
-  sha256 '9a3768cb9ea240faee5d4958679e17b73e5ffeb62765f3fdb2e34275ca0beb1a'
+  version '7.4.0'
+  sha256 'c014b5580b848cd649671b2e0e00c3eacba1e3c78e5fb8ac2166ea0a02f5d0d8'
 
   url "https://install.bankid.com/Repository/BankID_installation_#{version.dots_to_underscores}.pkg"
   name 'BankID'
@@ -8,5 +8,5 @@ cask 'bankid' do
 
   pkg "BankID_installation_#{version.dots_to_underscores}.pkg"
 
-  uninstall pkgutil: 'com.bankid.bankid.BankID.pkg'
+  uninstall pkgutil: 'com.bankid.BankID'
 end

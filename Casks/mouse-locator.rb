@@ -4,7 +4,7 @@ cask 'mouse-locator' do
 
   url 'http://www.2point5fish.com/files/MouseLocator.dmg'
   appcast 'http://www.2point5fish.com/index.html',
-          checkpoint: '50a55565a8d32833af28e28ea9bc0dee6380e4e640aa28525723ba892d71d1e2'
+          checkpoint: 'a8b0f836d98c729f8ea5f36c89456611c4ce17bd17dd362b202a1dee21b3c6bf'
   name 'Mouse Locator'
   homepage 'http://www.2point5fish.com/index.html'
 

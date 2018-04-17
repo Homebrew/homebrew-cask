@@ -1,9 +1,9 @@
 cask 'seafile-client' do
-  version '6.0.1'
-  sha256 'c6e95f7dc6ab8c2d1a6a886a79504a5e953edb921135b635066ce2984a28bdc1'
+  version '6.1.7'
+  sha256 '7d2c1c05d4e62af083d8d68732944fae0190a27afc80c8e144e33a45c8cbcd4b'
 
-  # bintray.com/artifact/download/seafile-org was verified as official when first introduced to the cask
-  url "https://bintray.com/artifact/download/seafile-org/seafile/seafile-client-#{version}.dmg"
+  # seadrive.org was verified as official when first introduced to the cask
+  url "https://download.seadrive.org/seafile-client-#{version}.dmg"
   name 'Seafile Client'
   homepage 'https://www.seafile.com/'
 

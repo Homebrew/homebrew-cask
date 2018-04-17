@@ -4,7 +4,7 @@ cask 'sysex-librarian' do
 
   url "https://www.snoize.com/SysExLibrarian/SysExLibrarian_#{version.dots_to_underscores}.zip"
   appcast 'https://www.snoize.com/SysExLibrarian/SysExLibrarian.xml',
-          checkpoint: '5932ad75281f34f7ed7dda012b8cabb61b0c9c95acf4f0429c06fdc6a41e34aa'
+          checkpoint: 'a349dd3b6dc82daf740319832f0ee72c1380ecb244a791df50a462c5537bfed8'
   name 'SysEx Librarian'
   homepage 'https://www.snoize.com/SysExLibrarian/'
 
@@ -17,9 +17,9 @@ cask 'sysex-librarian' do
                     'com.snoize.SysExLibrarian',
                   ]
 
-  zap delete: [
-                '~/Library/Preferences/com.snoize.SysExLibrarian.plist',
-                '~/Library/Caches/com.snoize.SysExLibrarian',
-                '~/Library/Saved Application State/com.snoize.SysExLibrarian.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.snoize.SysExLibrarian.plist',
+               '~/Library/Caches/com.snoize.SysExLibrarian',
+               '~/Library/Saved Application State/com.snoize.SysExLibrarian.savedState',
+             ]
 end

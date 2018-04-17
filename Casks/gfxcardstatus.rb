@@ -9,4 +9,11 @@ cask 'gfxcardstatus' do
   homepage 'https://gfx.io/'
 
   app 'gfxCardStatus.app'
+
+  zap trash: [
+               '~/Library/Caches/com.codykrieger.gfxCardStatus',
+               '~/Library/Cookies/com.codykrieger.gfxCardStatus.binarycookies',
+               '~/Library/Preferences/com.codykrieger.gfxCardStatus-Preferences.plist',
+               '~/Library/Preferences/com.codykrieger.gfxCardStatus.plist',
+             ]
 end

@@ -12,5 +12,5 @@ cask 'winfo' do
 
   app 'Winfo.app'
 
-  zap delete: '~/Library/Preferences/com.irradiatedsoftware.Winfo.plist'
+  zap trash: '~/Library/Preferences/com.irradiatedsoftware.Winfo.plist'
 end

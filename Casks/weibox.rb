@@ -4,7 +4,7 @@ cask 'weibox' do
 
   url "http://2.weiboformac.sinaapp.com/downloads/#{version}.release.zip"
   appcast 'https://weiboformac.sinaapp.com/appcast/wm2.xml',
-          checkpoint: '7eb49b121dd6b425d75716b599bbf748e61b171a5924f2d6dba0b612f042d41d'
+          checkpoint: '2aefd31728fb15674f7afd1bc2fd4b47f42b6720227f2ee81b8a6d80344815c3'
   name 'WeiboX'
   homepage 'https://weiboformac.sinaapp.com/'
 

@@ -4,7 +4,7 @@ cask 'zipcleaner' do
 
   url 'http://roger-jolly.nl/software/downloads/zipcleaner/ZipCleaner.zip'
   name 'ZipCleaner'
-  homepage 'http://roger-jolly.nl/software/#zipcleaner'
+  homepage 'https://roger-jolly.nl/software/#zipcleaner'
 
   app 'ZipCleaner.app'
 end

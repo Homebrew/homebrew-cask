@@ -1,11 +1,11 @@
 cask 'hipchat' do
-  version '4.29.0-732'
-  sha256 'b033c8e69686810e7f83e0895a90ed22d745af5956b5bb1cf4cda37756dc910b'
+  version '4.30.1-754'
+  sha256 'bf4456465f04a815093cb3a343fd6a09a54a32d6fb034143df54a36942a63e03'
 
   # amazonaws.com/downloads.hipchat.com/osx was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/downloads.hipchat.com/osx/HipChat-#{version}.zip"
   appcast 'https://www.hipchat.com/release_notes/appcast/mac',
-          checkpoint: 'c6b93e028f81c7881cd4e5713b85d3fc5af219c36d3fbe309bd40fa439842382'
+          checkpoint: '94dc2e3919fda990932c99ac99d01695e0c4a34db5a36174168e9f66020aae8b'
   name 'HipChat'
   homepage 'https://www.hipchat.com/'
 
@@ -13,17 +13,13 @@ cask 'hipchat' do
 
   app 'HipChat.app'
 
-  postflight do
-    suppress_move_to_applications
-  end
-
-  zap delete: [
-                '~/Library/Application Support/HipChat',
-                '~/Library/Caches/com.hipchat.HipChat',
-                '~/Library/HipChat',
-                '~/Library/Logs/HipChat',
-                '~/Library/Preferences/com.hipchat.HipChat.plist',
-                '~/Library/Saved Application State/com.hipchat.HipChat.savedState',
-                '~/Library/chat.hipchat.com',
-              ]
+  zap trash: [
+               '~/Library/Application Support/HipChat',
+               '~/Library/Caches/com.hipchat.HipChat',
+               '~/Library/HipChat',
+               '~/Library/Logs/HipChat',
+               '~/Library/Preferences/com.hipchat.HipChat.plist',
+               '~/Library/Saved Application State/com.hipchat.HipChat.savedState',
+               '~/Library/chat.hipchat.com',
+             ]
 end

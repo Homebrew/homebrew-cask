@@ -5,7 +5,7 @@ cask 'lionshare' do
   # github.com/lionsharecapital/lionshare-desktop was verified as official when first introduced to the cask
   url "https://github.com/lionsharecapital/lionshare-desktop/releases/download/v#{version}/Lionshare-#{version}-mac.zip"
   appcast 'https://github.com/lionsharecapital/lionshare-desktop/releases.atom',
-          checkpoint: '4cc64f2d727a19848192b7b589d71e4021cfaefcf7b46c86c09bfb0e8db49c0f'
+          checkpoint: 'ef7bc1afe1ade8dd8d74caf9062116885348530dbb52bbc1d72efa9003f8f57d'
   name 'Lionshare'
   homepage 'https://lionshare.capital/'
 

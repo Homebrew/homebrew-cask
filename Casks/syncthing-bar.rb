@@ -4,7 +4,7 @@ cask 'syncthing-bar' do
 
   url "https://github.com/m0ppers/syncthing-bar/releases/download/#{version}/syncthing-bar-#{version}.pkg"
   appcast 'https://github.com/m0ppers/syncthing-bar/releases.atom',
-          checkpoint: 'fbc5cd4a99b96d6e2b4a225fcafe621a1f94fbcde3bc479c36d42ace7cae60b6'
+          checkpoint: 'a9f84d194a0e681711edd3e68d406fdd4b6d632563d5b710f6227cd18cbec2da'
   name 'Syncthing bar'
   homepage 'https://github.com/m0ppers/syncthing-bar'
 
@@ -12,13 +12,12 @@ cask 'syncthing-bar' do
 
   uninstall quit:      'koeln.mop.syncthing-bar',
             pkgutil:   'koeln.mop.syncthing-bar',
-            launchctl: 'koeln.mop.syncthing-bar.agent',
-            delete:    '/Applications/syncthing-bar.app'
+            launchctl: 'koeln.mop.syncthing-bar.agent'
 
-  zap delete: [
-                '~/Library/Application Support/Syncthing',
-                '~/Library/Caches/koeln.mop.syncthing-bar',
-                '~/Library/Saved Application State/koeln.mop.syncthing-bar.savedState',
-                '/Library/LaunchAgents/koeln.mop.syncthing-bar.agent.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Syncthing',
+               '~/Library/Caches/koeln.mop.syncthing-bar',
+               '~/Library/Saved Application State/koeln.mop.syncthing-bar.savedState',
+               '/Library/LaunchAgents/koeln.mop.syncthing-bar.agent.plist',
+             ]
 end

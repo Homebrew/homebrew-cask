@@ -1,17 +1,17 @@
 cask 'mac2imgur' do
-  version 'b219'
-  sha256 'b554d3a2083ba88451d614f243a9b599cfc546a5c0844f02f4375f703f2f60b9'
+  version 'b223'
+  sha256 'b2e4dce409b2855a351beedd0151da08c7f90567cba8dd1f4f21ce02beb4f345'
 
   url "https://github.com/mileswd/mac2imgur/releases/download/#{version}/mac2imgur.zip"
   appcast 'https://mileswd.com/mac2imgur/update',
-          checkpoint: '76c8d74c003e2fdd4c9b2062acff9f7badb863fdab3f11c86fb745be59af3d15'
+          checkpoint: '57c7f3e153fb500c6db3534651d4fb93c291b399c4c7578cc427b4278715963c'
   name 'mac2imgur'
   homepage 'https://github.com/mileswd/mac2imgur'
 
   app 'mac2imgur.app'
 
-  zap delete: [
-                '~/Library/Caches/com.mileswd.mac2imgur',
-                '~/Library/Preferences/com.mileswd.mac2imgur.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.mileswd.mac2imgur',
+               '~/Library/Preferences/com.mileswd.mac2imgur.plist',
+             ]
 end

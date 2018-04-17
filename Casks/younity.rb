@@ -1,6 +1,6 @@
 cask 'younity' do
-  version '1.12.6'
-  sha256 '2b15141fb79f94a68dc14ad0c1c443620de2fa767e1fa95f36bc8d9c2596e6ed'
+  version '1.13.9'
+  sha256 '5b387311044c18366beb43dc368a7bba3d8546fe35a3f8970384eaa78397bed7'
 
   url 'http://downloads.getyounity.com/files/younityInstaller.dmg'
   name 'Younity'

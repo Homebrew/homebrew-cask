@@ -1,22 +1,25 @@
 cask 'ubersicht' do
-  version '1.1.45'
-  sha256 'ff2b6b61ef290a966a20cc96073a76f8914fed825b764b4a4258ba7449d16ab8'
+  version '1.2.53'
+  sha256 'e74dfc4d49e035269e44563541eb0b50b5de7c102fe948a09d5b075140ddf29e'
 
   url "http://tracesof.net/uebersicht/releases/Uebersicht-#{version}.app.zip"
   appcast 'http://tracesof.net/uebersicht/updates.xml.rss',
-          checkpoint: '987585f6b7169cafedce64f14b4f0542c435420ce7921065ad53bb29c078a86c'
+          checkpoint: '92ca85b82c7b917dfb05c8d9264a3bda800de4874c9df84d34a92d9d5dd3c6c3'
   name 'Übersicht'
   homepage 'http://tracesof.net/uebersicht/'
 
-  app 'Übersicht.app'
+  auto_updates true
+  depends_on macos: '>= :yosemite'
 
-  uninstall login_item: 'Übersicht'
+  app 'Übersicht.app'
 
-  zap delete: [
-                '~/Library/Application Support/tracesOf.Uebersicht',
-                '~/Library/Application Support/Übersicht',
-                '~/Library/Caches/tracesOf.Uebersicht',
-                '~/Library/Preferences/tracesOf.Uebersicht.plist',
-                '~/Library/WebKit/tracesOf.Uebersicht',
-              ]
+  uninstall login_item: 'Übersicht'
+
+  zap trash: [
+               '~/Library/Application Support/Übersicht',
+               '~/Library/Application Support/tracesOf.Uebersicht',
+               '~/Library/Caches/tracesOf.Uebersicht',
+               '~/Library/Preferences/tracesOf.Uebersicht.plist',
+               '~/Library/WebKit/tracesOf.Uebersicht',
+             ]
 end

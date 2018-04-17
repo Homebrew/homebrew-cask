@@ -1,10 +1,11 @@
 cask 'astah-community' do
-  version '7.1.0,f2c212'
-  sha256 'b2736dc7b980b6e617b5bc49bdcc986581a91a80644bf737759f9da54fed6297'
+  version '7.2.0,1ff236'
+  sha256 '81b12fc1145ec28ca82d87a0f13d2763362d55136759fe324192c65943215194'
 
-  url "http://cdn.astah.net/downloads/astah-community-#{version.before_comma.dots_to_underscores}-#{version.after_comma}-MacOs.dmg"
+  # cdn.change-vision.com was verified as official when first introduced to the cask
+  url "http://cdn.change-vision.com/files/astah-community-#{version.before_comma.dots_to_underscores}-#{version.after_comma}-MacOs.dmg"
   appcast 'http://astah.net/release-notes/community',
-          checkpoint: 'e2575a4b0a049bd7e5e044dd8cc68b518de49dc91c6f0873ab925d586a971f55'
+          checkpoint: '10700fb03bcc1534619812005dc11abb16f010f81418bb0ccb98fa3f750c862d'
   name 'Change Vision Astah Community'
   homepage 'http://astah.net/editions/community'
 

@@ -1,10 +1,10 @@
 cask 'usage' do
-  version '1.3'
-  sha256 'd976ad992a15cc8dc78ee8f5cfc68970fb654ae2ae6367020565ee14dd9a5521'
+  version '1.4.2'
+  sha256 'e42e63223b9e3a6882bc9b5eb4898c57c534573354cd2b6700c5704d7f7366c0'
 
   url "https://mediaatelier.com/Usage/Usage_#{version}.zip"
   appcast 'https://mediaatelier.com/Usage/feed.php',
-          checkpoint: 'a0294fb6625e0f98f3c988889a4ba77b4b8e96dd18f78a994c458a3b2762d160'
+          checkpoint: '22a37487aec18a80c4bc3de274c049422f00a08bdbbdc0e9dbe7de56e61b0b54'
   name 'Usage'
   homepage 'https://www.mediaatelier.com/Usage/'
 
@@ -12,8 +12,9 @@ cask 'usage' do
 
   app 'Usage.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.mediaatelier.Usage',
-                '~/Library/Caches/com.mediaatelier.Usage',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.mediaatelier.Usage',
+               '~/Library/Caches/com.mediaatelier.Usage',
+               '~/Library/Preferences/com.mediaatelier.Usage.plist',
+             ]
 end

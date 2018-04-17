@@ -4,15 +4,15 @@ cask 'valley' do
 
   url "https://assets.unigine.com/d/Unigine_Valley-#{version}.dmg"
   name 'Valley Benchmark'
-  homepage 'https://unigine.com/products/benchmarks/valley'
+  homepage 'https://benchmark.unigine.com/valley'
 
   depends_on macos: '>= mountain_lion'
 
   app 'Valley.app'
 
-  zap delete: [
-                '~/Library/Application Support/Valley',
-                '~/Library/Application Support/file__0.localstorage',
-                '~/Library/Saved Application State/com.Unigine.Valley.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Valley',
+               '~/Library/Application Support/file__0.localstorage',
+               '~/Library/Saved Application State/com.Unigine.Valley.savedState',
+             ]
 end

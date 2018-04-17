@@ -1,6 +1,6 @@
 cask 'wingide' do
-  version '6.0.1-1'
-  sha256 '5221f969f9b161b68672c260d71e55f77c6eaf0324e99b6ac6105dbb44b0a5fd'
+  version '6.0.7-1'
+  sha256 '4f577ad8f5083b828f43863119a625ac66c68c3f282e1234e667ed410d0427cb'
 
   url "https://wingware.com/pub/wingide/#{version.sub(%r{-\d+}, '')}/wingide-#{version}.dmg"
   name 'WingIDE'

@@ -7,4 +7,6 @@ cask 'ishowu-studio' do
   homepage 'https://www.shinywhitebox.com/ishowu-studio'
 
   app 'iShowU Studio.app'
+
+  zap trash: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.shinywhitebox.ishowu-studio.sfl*'
 end

@@ -1,11 +1,11 @@
 cask 'torguard' do
-  version '0.3.62'
-  sha256 'ae281721dcd40712242d5af9fcb79499befd2d0974c17538912c8655d3e5fea4'
+  version '0.3.81'
+  sha256 '5a596505f870259f261011c2dde19c6493ce1b537391a6aaa1be5059f2e2e528'
 
   # torguard.biz was verified as official when first introduced to the cask
   url "https://updates.torguard.biz/Software/MacOSX/TorGuard-v#{version}.dmg"
   appcast 'https://updates.torguard.biz/Software/MacOSX/checksums.sha256',
-          checkpoint: '4d96d9074f82fb86812fb585161b7cab6019701941fa78bceb8b5ac58d9f66ad'
+          checkpoint: '72144b87cbf70d58bcdfa1337b734678bc0c1fd17a897f6f80144fa80d611361'
   name 'TorGuard'
   homepage 'https://torguard.net/'
 
@@ -14,8 +14,8 @@ cask 'torguard' do
   uninstall pkgutil: 'net.torguard.TorGuardDesktopQt',
             delete:  '/Applications/TorGuard.app'
 
-  zap delete: [
-                '~/Library/Preferences/net.torguard.TorGuard*.plist',
-                '~/Library/Saved Application State/net.torguard.TorGuardDesktopQt.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/net.torguard.TorGuard*.plist',
+               '~/Library/Saved Application State/net.torguard.TorGuardDesktopQt.savedState',
+             ]
 end

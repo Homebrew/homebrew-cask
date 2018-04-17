@@ -7,4 +7,6 @@ cask 'install-disk-creator' do
   homepage 'https://macdaddy.io/install-disk-creator/'
 
   app 'Install Disk Creator.app'
+
+  zap trash: '~/Library/Saved Application State/io.macdaddy.Install-Disk-Creator.savedState'
 end

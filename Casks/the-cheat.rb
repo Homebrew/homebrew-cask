@@ -4,7 +4,7 @@ cask 'the-cheat' do
 
   url "https://chazmcgarvey.github.com/thecheat/thecheat-#{version}.dmg"
   appcast 'https://github.com/chazmcgarvey/thecheat/releases.atom',
-          checkpoint: 'e38cb81d6d520a74e3b1e4271faa1d469020dbf76928937adb831cf6aae71796'
+          checkpoint: '8ce8f326788585be0e5ddabb5441f8fb70a58bd0dc1bdea905141c7d3d98e4f9'
   name 'The Cheat'
   homepage 'https://github.com/chazmcgarvey/thecheat'
 

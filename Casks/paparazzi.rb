@@ -1,12 +1,20 @@
 cask 'paparazzi' do
-  version '1.0b3'
-  sha256 '62e7f8a2f64f91403b56732ce5ab7d0bb74e13ac9a88ec2c61395ecb4ff32673'
+  version '1.0b8'
+  sha256 '2abe968b1b7d96b9faeeeee3cae7e17dd892c9619eaf9a312a2e3b26d6c9cf1e'
 
   url "https://derailer.org/paparazzi/Paparazzi!%20#{version}.dmg"
   appcast 'https://derailer.org/paparazzi/appcast/',
-          checkpoint: '0334d834f5f9e180045c5b39963b5e8fa7479987644d97ca5ff2ccee535a8930'
+          checkpoint: 'e82fbce2d463f80b46dec1f37af447700ca51b20b3482f944a9fff3a48197009'
   name 'Paparazzi!'
   homepage 'https://derailer.org/paparazzi/'
 
   app 'Paparazzi!.app'
+
+  zap trash: [
+               '~/Library/Application Support/Paparazzi!',
+               '~/Library/Caches/org.derailer.Paparazzi',
+               '~/Library/Cookies/org.derailer.Paparazzi.binarycookies',
+               '~/Library/Preferences/org.derailer.Paparazzi.plist',
+               '~/Library/Saved Application State/org.derailer.Paparazzi.savedState',
+             ]
 end

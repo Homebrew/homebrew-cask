@@ -1,6 +1,6 @@
 cask 'mongodb-compass' do
-  version '1.6.0'
-  sha256 '9b9ee6ce65bd7deaf3bdd3aff96ce29395da10f00d70b8d9d4d131f5a9664265'
+  version '1.12.5'
+  sha256 '6e9ce59f2fd9d1bea3e8028c9970bfaccf76c5b36373c3f69d08401a207375ec'
 
   url "https://downloads.mongodb.com/compass/mongodb-compass-#{version}-darwin-x64.dmg"
   name 'MongoDB Compass'
@@ -8,11 +8,11 @@ cask 'mongodb-compass' do
 
   app 'MongoDB Compass.app'
 
-  zap delete: [
-                '~/Library/Application Support/MongoDB Compass',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mongodb.compass.sfl',
-                '~/Library/Caches/MongoDB Compass/',
-                '~/Library/Preferences/com.mongodb.compass.plist',
-                '~/Library/Saved Application State/com.mongodb.compass.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/MongoDB Compass',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mongodb.compass.sfl*',
+               '~/Library/Caches/MongoDB Compass/',
+               '~/Library/Preferences/com.mongodb.compass.plist',
+               '~/Library/Saved Application State/com.mongodb.compass.savedState',
+             ]
 end

@@ -1,10 +1,10 @@
 cask 'michaelvillar-timer' do
-  version '1.1.0'
-  sha256 'e0d75fbcd65b54127810b47ff06db4cb8be1b37585969155e3c00d2a7a482f24'
+  version '1.3'
+  sha256 '932c51f286993a6ebda1b9f73dc36d5c6c3024a8851994a1915644bc308bc21d'
 
   url "https://github.com/michaelvillar/timer-app/releases/download/#{version}/Timer.app.zip"
   appcast 'https://github.com/michaelvillar/timer-app/releases.atom',
-          checkpoint: '3d6519704a0620edb1f5e59ee7bb98f236bbcc496c28be53728616a3930ce4f7'
+          checkpoint: '80dbaedd30f85751f3ee872003104e8f89dfc179c066157ff80a1e692ca1e203'
   name 'Timer'
   homepage 'https://github.com/michaelvillar/timer-app'
 

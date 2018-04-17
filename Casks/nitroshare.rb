@@ -1,12 +1,12 @@
 cask 'nitroshare' do
-  version '0.3.3'
-  sha256 'a22ee3450f2dc8b72b98709fc44cc7cac4f43e95bb3a367b2b523331c82e0ba2'
+  version '0.3.4'
+  sha256 '64a3c62631ea8676ec2fc4f011aabf119ad5b4916de5c1ef969138096584b808'
 
   url "https://launchpad.net/nitroshare/#{version.major_minor}/#{version}/+download/nitroshare-#{version}-osx.dmg"
   appcast 'https://github.com/nitroshare/nitroshare-desktop/releases.atom',
-          checkpoint: '5e7923cad51870abc31d5adc65dedf76825b71f719a75ef05f3057ece9c62aff'
+          checkpoint: 'ab6fa11eb8dcd73b1af93f41e43949dcb23dc9f6803d16bb311a0f49018dc9c0'
   name 'NitroShare'
   homepage 'https://launchpad.net/nitroshare'
 
-  app 'NitroShare.app'
+  app 'nitroshare.app'
 end

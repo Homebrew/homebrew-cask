@@ -4,7 +4,7 @@ cask 'dnscrypt' do
 
   url "https://github.com/alterstep/dnscrypt-osxclient/releases/download/#{version}/dnscrypt-osxclient-#{version}.dmg"
   appcast 'https://github.com/alterstep/dnscrypt-osxclient/releases.atom',
-          checkpoint: 'cf446110029c1aff517ea539a5bac3278e27da6cc93eabd995d8dd30d8f9f7cb'
+          checkpoint: '6b13fdad0f4aea1215133d485319946f98a1ef63a263de7c3776bbc06a209b7e'
   name 'DNSCrypt'
   homepage 'https://github.com/alterstep/dnscrypt-osxclient'
 
@@ -17,5 +17,11 @@ cask 'dnscrypt' do
                          'com.github.dnscrypt-osxclient.DNSCryptConsoleChange',
                          'com.github.dnscrypt-osxclient.DNSCryptControlChange',
                          'com.github.dnscrypt-osxclient.DNSCryptNetworkChange',
-                       ]
+                       ],
+            delete:    '/Library/PreferencePanes/DNSCrypt.prefPane'
+
+  zap trash: [
+               '/Library/Application Support/DNSCrypt',
+               '/usr/local/etc/dnscrypt-proxy.conf',
+             ]
 end

@@ -4,7 +4,7 @@ cask 'hiss' do
 
   url 'http://collect3.com.au/hiss/Hiss.zip'
   appcast 'http://collect3.com.au/hiss/appcast.xml',
-          checkpoint: '39b84089688241802c5e76e7fa8c38c687f407c14086f0aa4532fb9ba8bc9a02'
+          checkpoint: '7d8ce78aa2f09d164f423b8f4c070840387c5ef1cffab072b27d559925e228fc'
   name 'Hiss'
   homepage 'http://collect3.com.au/hiss/'
 

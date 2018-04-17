@@ -6,8 +6,6 @@ cask 'mysql-utilities' do
   name 'MySQL Utilities'
   homepage 'https://dev.mysql.com/downloads/utilities/'
 
-  license :gpl
-
   depends_on macos: '>= :sierra'
 
   pkg "mysql-utilities-#{version}.pkg"

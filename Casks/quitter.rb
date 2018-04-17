@@ -12,13 +12,9 @@ cask 'quitter' do
 
   app 'Quitter.app'
 
-  postflight do
-    suppress_move_to_applications
-  end
-
-  zap delete: [
-                '~/Library/Preferences/com.marcoarment.quitter.plist',
-                '~/Library/Caches/com.marcoarment.quitter',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.marcoarment.quitter.sfl',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.marcoarment.quitter.plist',
+               '~/Library/Caches/com.marcoarment.quitter',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.marcoarment.quitter.sfl*',
+             ]
 end

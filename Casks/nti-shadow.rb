@@ -8,8 +8,8 @@ cask 'nti-shadow' do
 
   app 'NTI Shadow.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.achieva.NTIShadow41.plist',
-                '~/Library/Logs/NTI Shadow.log',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.achieva.NTIShadow41.plist',
+               '~/Library/Logs/NTI Shadow.log',
+             ]
 end

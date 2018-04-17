@@ -5,7 +5,7 @@ cask 'icultus' do
   # github.com/djyde/iCultus was verified as official when first introduced to the cask
   url "https://github.com/djyde/iCultus/releases/download/v#{version}/iCultus-#{version}-darwin-x64.zip"
   appcast 'https://github.com/djyde/iCultus/releases.atom',
-          checkpoint: '093578d94bc93c0dbbd6fbefd837faaf6824ad516add11ca6acc8b7f81a1fec8'
+          checkpoint: 'fb2ebdbd9ee141b04bfcc0f7cd38b93961baf6e6db8c755cc3e743acca8ebccc'
   name 'iCultus'
   homepage 'https://djyde.github.io/iCultus/'
 

@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+require 'open-uri'
+require 'json'
+require 'tmpdir'
+
+pr_url = ARGV[0]
+
+abort 'You need to give the script exactly one argument, the URL to a pull request on the Caskroom organisation' if ARGV[0].empty?
+abort 'URL is not from the Caskroom organization' if pr_url !~ %r{^https://github.com/caskroom/}
+
+pr_api = pr_url.sub(%r{^https://github.com/([^/]+)/([^/]+)/pull/([^/]+).*}, 'https://api.github.com/repos/\1/\2/pulls/\3/files')
+pr_json = JSON.parse(open(pr_api).read)
+
+abort 'PR needs to have a single file' if pr_json.count != 1
+
+file_raw_url = pr_json[0]['raw_url']
+file_name = File.basename(file_raw_url)
+local_file = "#{Dir.mktmpdir}/#{file_name}"
+IO.copy_stream(open(file_raw_url), local_file)
+
+system('brew', 'cask', 'audit', '--download', local_file)
+system('brew', 'cask', 'style', local_file)

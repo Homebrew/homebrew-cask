@@ -4,7 +4,7 @@ cask 'mou' do
 
   url 'http://25.io/mou/download/Mou.zip'
   appcast 'http://25.io/mou/up/updates.xml',
-          checkpoint: 'd97ac9eeef0a00c1f583ff7fd804ca12f63c970a61eeb0925bfb3b0f3d018eb6'
+          checkpoint: '6083ce9bf4aa466be104d2d72244db4d4de5570103832778c6dd977b27cfad73'
   name 'Mou'
   homepage 'http://25.io/mou/'
 
@@ -12,10 +12,10 @@ cask 'mou' do
 
   app 'Mou.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.mouapp.Mou.plist',
-                '~/Library/Preferences/com.mouapp.Mou.LSSharedFileList.plist',
-                '~/Library/Application Support/Mou',
-                '~/Library/Caches/com.mouapp.Mou',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.mouapp.Mou.plist',
+               '~/Library/Preferences/com.mouapp.Mou.LSSharedFileList.plist',
+               '~/Library/Application Support/Mou',
+               '~/Library/Caches/com.mouapp.Mou',
+             ]
 end

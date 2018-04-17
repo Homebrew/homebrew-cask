@@ -5,7 +5,7 @@ cask 'fwbuilder' do
   # sourceforge.net/fwbuilder was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/fwbuilder/fwbuilder-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/fwbuilder/rss',
-          checkpoint: '5eeec71160b49c41eb96bbac8d450d7fdec7698aec2e138773295a94e28f8b5a'
+          checkpoint: '7b84fcbff4ef7cfed656e80d66efa692e1d533c964089fff4585886329bd0807'
   name 'Firewall Builder'
   homepage 'http://www.fwbuilder.org/'
 

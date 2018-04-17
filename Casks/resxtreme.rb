@@ -8,5 +8,5 @@ cask 'resxtreme' do
 
   app 'ResXtreme.app'
 
-  zap delete: '~/Library/Preferences/info.chrismiles.ResXtreme.plist'
+  zap trash: '~/Library/Preferences/info.chrismiles.ResXtreme.plist'
 end

@@ -1,6 +1,6 @@
 cask 'nord-sound-manager' do
-  version '6.86'
-  sha256 '8d5881bcab0d2d7a4874686de08af27e6e71e8d9d2274f372f090383287e0e8b'
+  version '7.22'
+  sha256 '22ba06fe910248e5683101e2d6ce34394a0d272859533f79cefc210cd594f99c'
 
   url "http://www.nordkeyboards.com/sites/default/files/files/downloads/software/nord-sound-manager/Nord%20Sound%20Manager%20v#{version}.dmg"
   name 'Nord Sound Manager'

@@ -10,5 +10,5 @@ cask 'chicken' do
 
   app 'Chicken.app'
 
-  zap delete: '~/Library/Preferences/net.sourceforge.chicken.plist'
+  zap trash: '~/Library/Preferences/net.sourceforge.chicken.plist'
 end

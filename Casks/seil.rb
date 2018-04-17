@@ -16,7 +16,7 @@ cask 'seil' do
   name 'Seil'
   homepage 'https://pqrs.org/osx/karabiner/seil.html'
 
-  depends_on macos: '>= :mountain_lion'
+  depends_on macos: '<= :el_capitan'
 
   if MacOS.version <= :mountain_lion
     pkg 'Seil.pkg'
@@ -28,10 +28,14 @@ cask 'seil' do
             kext:    'org.pqrs.driver.Seil',
             pkgutil: 'org.pqrs.driver.Seil'
 
-  zap       delete: [
-                      '~/Library/Caches/org.pqrs.PCKeyboardHack',
-                      '~/Library/Caches/org.pqrs.Seil',
-                      '~/Library/Preferences/org.pqrs.PCKeyboardHack.plist',
-                      '~/Library/Preferences/org.pqrs.Seil.plist',
-                    ]
+  zap trash: [
+               '~/Library/Caches/org.pqrs.PCKeyboardHack',
+               '~/Library/Caches/org.pqrs.Seil',
+               '~/Library/Preferences/org.pqrs.PCKeyboardHack.plist',
+               '~/Library/Preferences/org.pqrs.Seil.plist',
+             ]
+
+  caveats do
+    discontinued
+  end
 end

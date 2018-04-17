@@ -4,15 +4,11 @@ cask 'sidekick' do
 
   url "http://releases.oomphalot.com/Sidekick/Sidekick_#{version}.zip"
   appcast 'http://updates.oomphalot.com/?app=Sidekick',
-          checkpoint: '3189e9a047142b750c4a04e2d5b1b83fb3424581e9430688b07a48c148767fe1'
+          checkpoint: '37c0364aa754db80dd18b04de35bd649c898cdcc8f78673321083db4f6daf88f'
   name 'Sidekick'
   homepage 'http://oomphalot.com/sidekick/'
 
   auto_updates true
 
   app 'Sidekick.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 end

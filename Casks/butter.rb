@@ -4,7 +4,7 @@ cask 'butter' do
 
   url "https://github.com/harukasan/butter/releases/download/v#{version}/Butter_#{version}.dmg"
   appcast 'https://github.com/harukasan/butter/releases.atom',
-          checkpoint: 'd937486f468c52c3aa12d45202c99356ae85c11dd365ba06899478b6801c5556'
+          checkpoint: '0146c9df120416cadb511007639d7a750b56dfe060b590bcaaaa49fb6c14b6c2'
   name 'Butter'
   homepage 'https://github.com/harukasan/butter'
 

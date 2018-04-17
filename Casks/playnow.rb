@@ -4,7 +4,7 @@ cask 'playnow' do
 
   url "https://github.com/marcboquet/PlayNow/releases/download/v#{version}/PlayNow.tgz"
   appcast 'https://github.com/marcboquet/PlayNow/releases.atom',
-          checkpoint: '8be659cc2770e4252406cd5e58c800a1de4774dfd8f5e10b7c496350e273dd51'
+          checkpoint: '78ad1ceb00ae216b3508c8b56e86b9bf8d2f8ca788714214d0165f016e367580'
   name 'PlayNow'
   homepage 'https://github.com/marcboquet/PlayNow/'
 

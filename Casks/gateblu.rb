@@ -11,6 +11,5 @@ cask 'gateblu' do
 
   pkg 'Gateblu Installer.pkg'
 
-  uninstall pkgutil: 'com.octoblu.*',
-            delete:  '/Applications/Gateblu.app'
+  uninstall pkgutil: 'com.octoblu.*'
 end

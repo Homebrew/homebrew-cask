@@ -1,13 +1,13 @@
 cask 'veracrypt' do
-  version '1.19'
-  sha256 'da098bba200d2cebb193bd699eef6dec7834c8eeb579ed40bcd21d45487e6ce7'
+  version '1.22'
+  sha256 'c72257380f5653e6130d4efdd88297b328f29819f4bad82f5563cb906679e2b7'
 
   # launchpad.net/veracrypt/trunk/ was verified as official when first introduced to the cask
   url "https://launchpad.net/veracrypt/trunk/#{version}/+download/VeraCrypt_#{version}.dmg"
   appcast 'https://github.com/veracrypt/VeraCrypt/releases.atom',
-          checkpoint: '7c26121dc95c7344b9413ad24b204adaa10c338d91eac4b77122e7ac0adf64e8'
+          checkpoint: '45f2781dc568f6801994fe77ff2492296622e7437c12594f667f71a9335d08c9'
   name 'VeraCrypt'
-  homepage 'https://veracrypt.codeplex.com/'
+  homepage 'https://www.veracrypt.fr/'
 
   depends_on cask: 'osxfuse'
 

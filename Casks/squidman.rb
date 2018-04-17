@@ -4,7 +4,13 @@ cask 'squidman' do
 
   url "http://squidman.net/resources/downloads/SquidMan#{version}.dmg"
   name 'SquidMan'
-  homepage 'http://squidman.net/squidman/'
+  homepage 'https://squidman.net/squidman/'
 
   app 'SquidMan.app'
+
+  zap trash: '/usr/local/squid'
+
+  caveats do
+    files_in_usr_local
+  end
 end

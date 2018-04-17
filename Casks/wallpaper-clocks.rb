@@ -4,7 +4,7 @@ cask 'wallpaper-clocks' do
 
   url 'http://files.vladstudio.com/wallpaperclock/WallpaperClocksOSX.zip'
   appcast 'http://www.vladstudio.com/wallpaperclock/wallclocks_en.xml',
-          checkpoint: '9c205568e9bdc28f73f8bcf82a44e4c03605020551fa0e286e51d681c4cd8dd3'
+          checkpoint: 'bd414f270da6eb929c24f85af3e29d56dd0604c999f87be862917ec992040636'
   name 'Wallpaper clocks'
   homepage 'http://www.vladstudio.com/wallpaperclocks/'
 

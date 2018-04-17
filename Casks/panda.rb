@@ -4,8 +4,8 @@ cask 'panda' do
 
   # github.com/pablosproject/Panda-Mac-app was verified as official when first introduced to the cask
   url "https://github.com/pablosproject/Panda-Mac-app/releases/download/#{version}/Panda.zip"
-  appcast 'http://pandapp.pablosproject.com/updates/appcast/appcast.xml',
-          checkpoint: '987cf7ea8613c260111c8a924f59e6c4b76801a10feacdfcf63d0b5ccffcbbde'
+  appcast 'https://github.com/pablosproject/Panda-Mac-app/releases.atom',
+          checkpoint: '01c9af95281d4243c9682a677f9828fa52f9bb01d2be7cd1caa3b70ec660b15b'
   name 'Panda'
   homepage 'http://pandapp.pablosproject.com/'
 
@@ -13,8 +13,8 @@ cask 'panda' do
 
   app 'Panda.app'
 
-  zap delete: [
-                '~/Library/Caches/com.pablosproject.Panda',
-                '~/Library/Preferences/com.pablosproject.Panda.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.pablosproject.Panda',
+               '~/Library/Preferences/com.pablosproject.Panda.plist',
+             ]
 end

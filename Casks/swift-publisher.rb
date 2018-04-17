@@ -1,13 +1,13 @@
 cask 'swift-publisher' do
-  version '4.0.4'
-  sha256 '743204d13b5945eda94a1b2d7b4589b522f680a1d4f4b5f83c0163c2409ec801'
+  version '5.0'
+  sha256 '6b353c818b894921fc32a3c13eae082675c7355e50c83c43014c8c78dcf29e17'
 
   # s3.amazonaws.com/belightsoft was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/belightsoft/SwiftPublisher.dmg'
   appcast "https://www.belightsoft.com/download/updates/appcast_SwiftPublisher#{version.major}.xml",
-          checkpoint: 'd6a4ec3a83b57ec88a5618ce44c518faa4618caa03e00234afd1d8da972af4ec'
+          checkpoint: 'd3cdfd79924fa72276b850efa6e1e04827cb06d4266f86dd9c0ddafe5099ea38'
   name 'Swift Publisher'
-  homepage 'https://www.belightsoft.com/products/swiftpublisher/'
+  homepage 'https://www.belightsoft.com/swift-publisher/'
 
   app "Swift Publisher #{version.major}.app"
 end

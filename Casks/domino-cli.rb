@@ -8,13 +8,15 @@ cask 'domino-cli' do
 
   auto_updates true
 
-  installer script: 'Domino Installer.app/Contents/MacOS/JavaApplicationStub',
-            args:   %w[-q -c -overwrite],
-            sudo:   true
+  installer script: {
+                      executable: 'Domino Installer.app/Contents/MacOS/JavaApplicationStub',
+                      args:       ['-q', '-c', '-overwrite'],
+                      sudo:       true,
+                    }
 
   uninstall script: {
                       executable: '/Applications/domino/Domino Uninstaller.app/Contents/MacOS/JavaApplicationStub',
-                      args:       %w[-q -c],
+                      args:       ['-q', '-c'],
                       sudo:       true,
                     }
 

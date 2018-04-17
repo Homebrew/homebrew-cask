@@ -4,7 +4,7 @@ cask 'filemaker-odbc' do
 
   url "http://fmdl.filemaker.com/UPDT/#{version.major}/FM#{version.major_minor}v1_xDBC_#{version}.dmg"
   appcast 'https://www.filemaker.com/support/updaters/updater_json.txt',
-          checkpoint: '1fbc16bd48c0cb8be68fb074b7ffb5128f3e866ba77e5433527b27e50ffd7eb7'
+          checkpoint: '513525e31f0a3e0579a96bf3eff1a65f2cbe4b551816895797caa2db89ea6847'
   name 'FileMaker ODBC Client Drivers'
   homepage 'https://www.filemaker.com/'
 

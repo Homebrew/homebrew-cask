@@ -1,10 +1,10 @@
 cask 'lighting' do
-  version '1.1.5'
-  sha256 '228ce357f1c6cd916cbd37c5fd80e7e63b1100bfcf26b714d51c3f16ad2e0ce6'
+  version '1.1.7'
+  sha256 '8cab328133decacb8a608b034dae899e1105c20d97ec791ff089ddbbb0510d4f'
 
   url "https://github.com/tatey/Lighting/releases/download/#{version}/Lighting-#{version}.zip"
   appcast 'https://github.com/tatey/Lighting/releases.atom',
-          checkpoint: '1578b1c7d4848473d239edbe356a208b439b784242619436216f62f45d74e65c'
+          checkpoint: '8d2bc2228d99b89bad367d7a1abbbf545c5b270708f93087f15026d10c8ea7fb'
   name 'Lighting'
   homepage 'https://github.com/tatey/Lighting'
 

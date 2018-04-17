@@ -1,10 +1,10 @@
 cask 'tapaal' do
-  version '3.2.1'
-  sha256 '701fb0fbe22cae05162e435c95ffbf6b1a5760947ac0a5e116f80624c8d55038'
+  version '3.4.0'
+  sha256 'e34ade264118bbce01b1d4835eff71161f7347f2be2baa88f41557bd7b45b766'
 
   url "http://www.tapaal.net/fileadmin/download/tapaal-#{version.major_minor}/tapaal-#{version}-mac64.dmg"
   appcast 'http://www.tapaal.net/',
-          checkpoint: '3464ec18189f3b4326a2f56e2cbb29a2d264db87331389b6bdfbc43e8561e8e5'
+          checkpoint: '0fcb1486bf83481d63dfeb827896adea9c64b5202db6c2e1d73d80ecb928ba12'
   name 'TAPAAL'
   homepage 'http://www.tapaal.net/'
 

@@ -1,11 +1,11 @@
 cask 'exnihilo' do
-  version '1.6.0'
-  sha256 '0a2aff5d9d57a83c087bf983f0a2114b66f7863fe562ca60cd2e9c5f5df898e6'
+  version '1.7.4'
+  sha256 'a926c50ceb23b7e9b4b46ac96aaf4b028b95254c768a318c74450d8c4c0e70df'
 
   # github.com/Vayn/ex-nihilo was verified as official when first introduced to the cask
   url "https://github.com/Vayn/ex-nihilo/releases/download/#{version}/ExNihilo.zip"
   appcast 'https://github.com/vayn/ex-nihilo/releases.atom',
-          checkpoint: '0581e9bbf9d7aab85e475b906f2b7429b6ccbd097745d16461a71ae12bb37fe4'
+          checkpoint: 'f4bf79ba08c1a6fa069c0ddc4ad09b73fd72e82d614d0b3524be5601be2b4eac'
   name 'Ex nihilo'
   homepage 'https://vayn.github.io/ex-nihilo/'
 
@@ -15,9 +15,9 @@ cask 'exnihilo' do
 
   uninstall login_item: 'ExNihilo'
 
-  zap delete: [
-                '~/Library/Caches/com.soloinc.ExNihilo',
-                '~/Library/Preferences/com.soloinc.ExNihilo.plist',
-                '~/Library/Cookies/com.soloinc.ExNihilo.binarycookies',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.soloinc.ExNihilo',
+               '~/Library/Preferences/com.soloinc.ExNihilo.plist',
+               '~/Library/Cookies/com.soloinc.ExNihilo.binarycookies',
+             ]
 end

@@ -4,11 +4,11 @@ cask 'kube-cluster' do
 
   url "https://github.com/TheNewNormal/kube-cluster-osx/releases/download/v#{version}/Kube-Cluster_v#{version}.dmg"
   appcast 'https://github.com/TheNewNormal/kube-cluster-osx/releases.atom',
-          checkpoint: '5bc6824a2043fe62cf5c44b4959f38f2aabb7f159213b7e8d0040c76250901c7'
+          checkpoint: 'ef4bf984c711141c7db3b433e716aa9f0bd41069463cbe174ffbe22f4fecf227'
   name 'Kube-Cluster'
   homepage 'https://github.com/TheNewNormal/kube-cluster-osx'
 
   app 'Kube-Cluster.app'
 
-  zap delete: '~/kube-cluster'
+  zap trash: '~/kube-cluster'
 end
