@@ -9,4 +9,8 @@ cask 'rasoft' do
   homepage 'https://www.rakocontrols.com/support/software/'
 
   app 'Rasoft Pro.app'
+
+  uninstall_preflight do
+    set_permissions "#{appdir}/Rasoft Pro.app", '0777'
+  end
 end
