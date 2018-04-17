@@ -17,7 +17,6 @@ cask 'wineskin-winery' do
                '~/Library/Caches/Wine',
                '~/Library/Preferences/com.urgesoftware.wineskin.wineskin.plist',
                '~/Library/Saved Application State/com.urgesoftware.wineskin.wineskinwinery.savedState',
-               '~/Library/Saved Application State/*Wine.wineskin.prefs.savedState',
              ],
       rmdir: '~/Applications/Wineskin'
 end
