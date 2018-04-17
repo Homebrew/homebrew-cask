@@ -1,6 +1,6 @@
 cask 'jedit-omega' do
-  version '1.20'
-  sha256 '2a9d993126e9dd4163622d188079c1122921e7c3fb48a5a22de81a5088a6c72a'
+  version '1.24'
+  sha256 '99ebefee3f7d805b8386f84a7ac77b8f021071fcce9dab0d3d5b7cd26128cd72'
 
   # artman21.co.jp was verified as official when first introduced to the cask
   url "http://download.artman21.co.jp/product/JeditOmega/JeditOmega#{version.no_dots}.dmg"

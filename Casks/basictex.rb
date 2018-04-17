@@ -8,7 +8,7 @@ cask 'basictex' do
   homepage 'https://www.tug.org/mactex/morepackages.html'
 
   conflicts_with cask: [
-                         'mactex-no-ghostscript',
+                         'mactex-no-gui',
                          'mactex',
                        ]
   depends_on macos: '>= :yosemite'

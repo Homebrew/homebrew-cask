@@ -1,11 +1,11 @@
 cask 'mgba' do
-  version '0.6.1,2017-10-01'
-  sha256 '25b8dd443d289559fa3bcecd22c47d3ef779f56907cf242074b6cb2b8fd61abf'
+  version '0.6.2,2018-04-04'
+  sha256 '0d52c37538d2ee9ac76f15bc9da072f217f3ce80ae7b2852ba515f407a48aa57'
 
   # github.com/mgba-emu/mgba was verified as official when first introduced to the cask
   url "https://github.com/mgba-emu/mgba/releases/download/#{version.before_comma}/mGBA-#{version.before_comma}-osx.tar.xz"
   appcast 'https://github.com/mgba-emu/mgba/releases.atom',
-          checkpoint: '085dd90225ad230c171f0d5b35c672f70b712f46a118ab6bb81f3de5a42b6e58'
+          checkpoint: 'ff4a4d29873933ef6722e27c89d19dee9712cd6a56783d2ce3e141ce6a96744d'
   name 'mGBA'
   homepage 'https://mgba.io/'
 

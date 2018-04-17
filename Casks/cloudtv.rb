@@ -1,11 +1,11 @@
 cask 'cloudtv' do
-  version '3.8.6'
-  sha256 'fb96cbfbf4cb5bc45fa03cdb01caec81a1249a95cda86ef4c76e5847e0da3c6a'
+  version '3.8.7'
+  sha256 'c3e4119c7cbd130d35b50a5daba64a34c63b49c0da728d9d1a3efc7f9ef0d51c'
 
   # dl.devmate.com/com.nonoche.CloudTV was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.nonoche.CloudTV/CloudTV.dmg?v=#{version}"
   appcast 'https://updates.devmate.com/com.nonoche.CloudTV.xml',
-          checkpoint: '260e36a28c5947855e9b904094049f573ca0f75aa55b2e6e272c7681a4084d30'
+          checkpoint: '51769677f884dfe8d46dab86e81d830eabd406731288daa8fefd2a9f5253cb77'
   name 'CloudTV'
   homepage 'https://cloudtvapp.net/'
 

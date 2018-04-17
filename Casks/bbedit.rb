@@ -1,11 +1,11 @@
 cask 'bbedit' do
-  version '12.1.2'
-  sha256 'd21677d69314489a61b92e93684afee2d2dc90a99d9960bdfc150d46e1bb7123'
+  version '12.1.3'
+  sha256 '77f1d3e6643336b06906df67653537d67f402ff16607973ea883d3854bf9071c'
 
   # s3.amazonaws.com/BBSW-download was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/BBSW-download/BBEdit_#{version}.dmg"
   appcast 'https://versioncheck.barebones.com/BBEdit.xml',
-          checkpoint: '078001a9ac34f3abb7bb12b59530c94d79fc3c5e9c1a5bc450be93e20c6d3dc8'
+          checkpoint: 'af1c49e0053c093578a816147a10afe8b3a0ddfa863d2490b19721c7d961ad5a'
   name 'BBEdit'
   homepage 'https://www.barebones.com/products/bbedit/'
 

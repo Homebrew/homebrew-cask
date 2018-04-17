@@ -11,5 +11,8 @@ cask 'dhs' do
 
   app 'DHS.app'
 
-  zap trash: '~/Library/Preferences/com.objective-see.DHS.plist'
+  zap trash: [
+               '~/Library/Preferences/com.objective-see.DHS.plist',
+               '~/Library/Saved Application State/com.objective-see.DHS.savedState',
+             ]
 end

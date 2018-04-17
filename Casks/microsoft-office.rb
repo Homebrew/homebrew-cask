@@ -1,6 +1,6 @@
 cask 'microsoft-office' do
-  version '16.11.18031100'
-  sha256 'f566c9ffe48d8a6bb72614ccb3ff91add5d57ff339274ce77e42c30148f57dfe'
+  version '16.12.18041000'
+  sha256 '27957e2a2111bd0bc321d1ac39774875309792de22353ac380c0efcf2d91977b'
 
   # officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/OfficeMac/ was verified as official when first introduced to the cask
   url "https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/OfficeMac/Microsoft_Office_2016_#{version}_Installer.pkg"
@@ -76,6 +76,10 @@ cask 'microsoft-office' do
       launchctl: [
                    'com.microsoft.autoupdate.helpertool',
                    'com.microsoft.autoupdate.helper',
+                   'com.microsoft.OneDriveUpdaterDaemon',
                  ],
-      pkgutil:   'com.microsoft.package.Microsoft_AutoUpdate.app'
+      pkgutil:   [
+                   'com.microsoft.package.Microsoft_AutoUpdate.app',
+                   'com.microsoft.OneDrive',
+                 ]
 end
