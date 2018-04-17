@@ -1,11 +1,11 @@
 cask 'qgroundcontrol' do
-  version '3.3.0'
-  sha256 '8f47006a3a56cf661d7abf4cb01a98ac9faa0dfad89f068e9089849c52b1f933'
+  version '3.3.2'
+  sha256 'fe9ad6822d795de62e7a7c8264d5f1425572ccdbf4712e442758208d6c6b1a77'
 
   # github.com/mavlink/qgroundcontrol/releases/download was verified as official when first introduced to the cask
   url "https://github.com/mavlink/qgroundcontrol/releases/download/v#{version}/QGroundControl.dmg"
   appcast 'https://github.com/mavlink/qgroundcontrol/releases.atom',
-          checkpoint: '64e502f3a117e54f5416b8faaaed598f1f2f3b4ffc7a5a9f15e67dcfa70745c3'
+          checkpoint: 'e00582895221bff664863be17b41b69e3fca1fb98e4485f72460cbd6f84ee8f7'
   name 'QGroundControl'
   homepage 'http://qgroundcontrol.com/'
 
