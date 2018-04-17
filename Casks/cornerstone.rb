@@ -4,7 +4,7 @@ cask 'cornerstone' do
 
   url "https://www.zennaware.com/cornerstone/downloads/Cornerstone-#{version}.zip"
   appcast "https://www.zennaware.com/cornerstone/appcast/feed#{version.major}.php",
-          checkpoint: 'a3b51cff0b3ebd79e59f0d63287f0786effcc0b94625cf6ef77bedd329740163'
+          checkpoint: '25602f6fa004698b9aaa4ff2ec442329a6c9be2ba28933582e25f42aa52484de'
   name 'Cornerstone'
   homepage 'https://www.zennaware.com/cornerstone/'
 
