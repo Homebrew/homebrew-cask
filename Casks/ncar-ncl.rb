@@ -3,14 +3,14 @@ cask 'ncar-ncl' do
 
   if MacOS.version == :el_capitan
     sha256 '2e1a2957dacd14835716f0f7309117a35e1f6255fa8569d0dc3038c42df9cbfd'
-    url 'https://www.earthsystemgrid.org/download/fileDownload.html?logicalFileId=1139ad88-fa02-11e6-a976-00c0f03d5b7c'
+    url "https://www.earthsystemgrid.org/dataset/ncl.#{version.no_dots}.dap/file/ncl_ncarg-#{version}-MacOS_10.11_64bit_gnu610.tar.gz"
   else
     sha256 '3db9396a6b33eff1a5d31b8e4d41eeac17f459a2740b614131fbbe943bc76a3c'
-    url 'https://www.earthsystemgrid.org/download/fileDownload.html?logicalFileId=0a459666-fa02-11e6-a976-00c0f03d5b7c'
+    url "https://www.earthsystemgrid.org/dataset/ncl.#{version.no_dots}.dap/file/ncl_ncarg-#{version}-MacOS_10.12_64bit_gnu530.tar.gz"
   end
 
   appcast 'https://www.ncl.ucar.edu/current_release.shtml',
-          checkpoint: '634aeb20f5c52736d0d800cf2a77abaa6c16685550a46e817590ef3dbd482d6b'
+          checkpoint: 'd56aa8f16bdc52e51a71fd6d052d65e3afe01afc613f623b38051162b9101b82'
   name 'NCAR Command Language'
   name 'ncl'
   homepage 'https://www.ncl.ucar.edu/'
