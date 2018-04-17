@@ -1,13 +1,11 @@
 cask 'zulu' do
-  version '9.0.4.1'
-  sha256 '77a3dc5f83a88c07dbab195aa54117c1619eb31c1bb59908bf6e0d6931b5cc79'
+  version '10.1,11'
+  sha256 '8888d8260cab86cba06c633d39a03b78982caff3d067c6e5bce7d28e03209b05'
 
-  url "https://cdn.azul.com/zulu/bin/zulu#{version}-jdk#{version.major_minor_patch}-macosx_x64.dmg",
+  url "https://cdn.azul.com/zulu/bin/zulu#{version.before_comma}+#{version.after_comma}-jdk#{version.major}-macosx_x64.dmg",
       referer: 'https://www.azul.com/downloads/zulu/zulu-mac/'
   name 'Azul Zulu Java Standard Edition Development Kit'
   homepage 'https://www.azul.com/downloads/zulu/zulu-mac/'
-
-  conflicts_with cask: 'java'
 
   pkg "Double-Click to Install Zulu #{version.major}.pkg"
 
