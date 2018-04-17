@@ -1,6 +1,6 @@
 cask 'mal-updater' do
   version '2.4.3'
-  sha256 '1664ec9acd283270d17d861983bf35a9455c2fab937ed126cd19e2377bf612bd'
+  sha256 '682540991b701896a4c664d930690e99f8acc0d4527369a9620332d2ba586df7'
 
   # github.com/Atelier-Shiori/malupdaterosx-cocoa was verified as official when first introduced to the cask
   url "https://github.com/Atelier-Shiori/malupdaterosx-cocoa/releases/download/#{version}/malupdaterosx-#{version}.dmg"
