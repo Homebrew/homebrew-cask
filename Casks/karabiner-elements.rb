@@ -19,11 +19,12 @@ cask 'karabiner-elements' do
                        ['TERM', 'karabiner_console_user_server'],
                      ],
             pkgutil: 'org.pqrs.Karabiner-Elements',
-            kext:    'org.pqrs.driver.Karabiner.VirtualHIDDevice.v060600',
             script:  {
                        executable: '/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall_core.sh',
                        sudo:       true,
                      }
+
+  # kext: 'org.pqrs.driver.Karabiner.VirtualHIDDevice.v*': Should not be uninstalled by Cask
 
   zap trash: [
                '~/Library/Application Support/Karabiner-Elements',
