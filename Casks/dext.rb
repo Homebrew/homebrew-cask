@@ -6,7 +6,7 @@ cask 'dext' do
   appcast 'https://github.com/DextApp/dext/releases.atom',
           checkpoint: '2a6de7371ace8b9e0804482ccbe8ca0fbb00ef6fccb82b5d3f0d6e925b86618b'
   name 'Dext'
-  homepage 'https://github.com/Dext/dext'
+  homepage 'https://github.com/DextApp/dext'
 
   app 'Dext-darwin-x64/Dext.app'
 end
