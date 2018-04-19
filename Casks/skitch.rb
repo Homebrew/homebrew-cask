@@ -1,6 +1,6 @@
 cask 'skitch' do
-  version '2.8'
-  sha256 '55a248250ee81011849b1f6c89c39391fddecf55375876d2d89966584cba4cbe'
+  version '2.8.1'
+  sha256 'd1ae1479960de2b3069a2ae1904d2fb304250e74d6ad7f5d4275b4004ae8f5c5'
 
   url "https://cdn1.evernote.com/skitch/mac/release/Skitch-#{version}.zip"
   name 'Skitch'
