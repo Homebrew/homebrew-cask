@@ -10,7 +10,5 @@ cask 'feather' do
 
   app 'Feather.app'
 
-  zap trash: [
-               '~/Library/Caches/com.lukakerr.feather',
-             ]
+  zap trash: '~/Library/Caches/com.lukakerr.feather'
 end
