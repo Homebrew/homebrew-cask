@@ -9,8 +9,8 @@ cask 'todo-cloud' do
   app 'Todo Cloud.app'
 
   zap trash: [
-               '~/Library/Preferences/com.appigo.todo10.plist',
-               '~/Library/Preferences/com.appigo.todo10.helper.plist',
-               '~/Library/Saved Application State/com.appigo.todo10.savedState',
+               "~/Library/Preferences/com.appigo.todo#{version.major}.plist",
+               "~/Library/Preferences/com.appigo.todo#{version.major}.helper.plist",
+               "~/Library/Saved Application State/com.appigo.todo#{version.major}.savedState",
              ]
 end
