@@ -10,10 +10,10 @@ cask 'xit' do
 
   app 'Xit.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.uncommonplace.xit.sfl*',
-                '~/Library/Caches/com.uncommonplace.Xit',
-                '~/Library/Preferences/com.uncommonplace.Xit.plist',
-                '~/Library/Saved Application State/com.uncommonplace.Xit.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.uncommonplace.xit.sfl*',
+               '~/Library/Caches/com.uncommonplace.Xit',
+               '~/Library/Preferences/com.uncommonplace.Xit.plist',
+               '~/Library/Saved Application State/com.uncommonplace.Xit.savedState',
+             ]
 end
