@@ -4,9 +4,10 @@ cask 'softraid' do
 
   url "https://softraid.com/updates/SoftRAID%20#{version}.dmg"
   appcast 'https://www.softraid.com/pages/support/download_latest_version.html',
-          checkpoint: 'a0ae713bfd5980bfd6c61f455acc5c2c3fdb5b278f9e798854b2b4cac3a9745e'
+          checkpoint: 'fdcaef7786fadbb9afef2a2ecf63a7cf0977385eed6f603ccfa557d6974abd3c'
   name 'SoftRAID'
   homepage 'https://www.softraid.com/'
 
   app "SoftRAID #{version}/SoftRAID #{version}.app"
+  app "SoftRAID #{version}/SoftRAID Easy Setup.app"
 end
