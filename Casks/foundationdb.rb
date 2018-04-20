@@ -8,6 +8,8 @@ cask 'foundationdb' do
 
   pkg "FoundationDB-#{version}.pkg"
 
-  uninstall pkgutil: ['FoundationDB-clients',
-                      'FoundationDB-server']
+  uninstall pkgutil: [
+                       'FoundationDB-clients',
+                       'FoundationDB-server'
+                     ]
 end
