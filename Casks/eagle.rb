@@ -1,6 +1,6 @@
 cask 'eagle' do
-  version '8.7.1'
-  sha256 '0beb43e0f615f336a9efc30f74f751ebb331a2b937d82fffb9abfe3445f5f349'
+  version '9.0.0'
+  sha256 'eeefc304222c0dd3f454c069d2d8da8a78b643bac6193fc9cf5bf3567bce95d0'
 
   url "https://eagle-updates.circuits.io/downloads/#{version.dots_to_underscores}/Autodesk_EAGLE_#{version}_English_Mac_64bit.pkg"
   name 'Autodesk EAGLE'
