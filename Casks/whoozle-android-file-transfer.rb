@@ -1,4 +1,4 @@
-cask 'android-file-transfer-linux' do
+cask 'whoozle-android-file-transfer' do
   version '3.2-62d1c79'
   sha256 '84469fd3adba4046a9137093c3e0731e60ae2220381502b452d767cd4de4e676'
 
