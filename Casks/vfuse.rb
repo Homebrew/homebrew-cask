@@ -1,10 +1,10 @@
 cask 'vfuse' do
-  version '2.0.0'
-  sha256 '5818e292500427a968b17007315e45de9bce3319248298e5f361fd3940704994'
+  version '2.0.4'
+  sha256 'f2c444a72cac7f99cbc3a63cbe422e4e94cb5047d4a71b1e2af9460e184b7408'
 
   url "https://github.com/chilcote/vfuse/releases/download/#{version}/vfuse-#{version}.pkg"
   appcast 'https://github.com/chilcote/vfuse/releases.atom',
-          checkpoint: '796026ea80a5adc3846abab852d5342f87c8203524ef2923fb7617f2fa47b61d'
+          checkpoint: 'fc1feecdc30efa24cd70e34e85e3f9213fd26e04acc026116a96502439198366'
   name 'vfuse'
   homepage 'https://github.com/chilcote/vfuse'
 

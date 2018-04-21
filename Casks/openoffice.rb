@@ -1,35 +1,35 @@
 cask 'openoffice' do
-  version '4.1.4'
+  version '4.1.5'
 
   language 'en', default: true do
-    sha256 'ec5f1b8ed570736a58fec93d6b6e52065e3e6662fe863716e2a5dbe166d3c1f4'
+    sha256 '6b68adad6da7713e3fa62f01209826e0f5f87fc648d39f78e463b2b4b8223c59'
     'en-US'
   end
 
   language 'fr' do
-    sha256 '5b3e7eeba133186e382e79fdf2c36b8833af5463d4f5cb89cc01b987bb6a2de4'
+    sha256 'bae9f86d936ee595fe074895886972c8d25f806a815e3e2e9d2e5acb7f86508f'
     'fr'
   end
 
   language 'gl' do
-    sha256 'b27988df0ceea64e2a1bde8e148dcd0dd9f322979320778027c63270d2967a0b'
+    sha256 'edfdd62c2f3ada01cb39f73e529ac0665b21b43b649b4a2699f69e6ebcbad26c'
     'gl'
   end
 
   language 'pt-BR' do
-    sha256 '54effa845b73388e814df9936b9960fd2ab8d9e80c087d8c10ee92c08492448c'
+    sha256 '2dd1e7f4161b34fe17e8f69d67186bdcda32d4df7ca0963dd3c8d87314d57699'
     'pt-BR'
   end
 
   language 'pt' do
-    sha256 '39ce75f2dbf1df1d5b10163921d492f5bad36291dedac963cc8e170df086c77f'
+    sha256 'deed9464b9c88dbf84228547fd9d6eb8384dd304bc513249d64996e1754fa78a'
     'pt'
   end
 
   # sourceforge.net/openofficeorg.mirror was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/openofficeorg.mirror/Apache_OpenOffice_#{version}_MacOS_x86-64_install_#{language}.dmg"
   appcast 'https://sourceforge.net/projects/openofficeorg.mirror/rss',
-          checkpoint: '5af9e638312f0728a6ada93777c209b1d660f5e582b2ea2374febcc7ad829756'
+          checkpoint: '778a03ce902c1ed63fb9b98c135142592639e15b47a90ca6efe98aa342d9023f'
   name 'Apache OpenOffice'
   homepage 'https://www.openoffice.org/'
 

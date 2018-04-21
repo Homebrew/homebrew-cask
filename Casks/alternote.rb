@@ -1,10 +1,10 @@
 cask 'alternote' do
-  version '1.0.10,1010'
-  sha256 '5d72b8d6d687ad2aa4a8dec64424b4d4292b16b7d1c9b41f4c9be078368686a7'
+  version '1.0.18,1018'
+  sha256 'b1a3c0d311b0633bae1a327d393c61a82bf21e2a0363109ef984e8f1c99549ff'
 
   url "http://alternoteapp.com/assets/downloads/Alternote#{version.after_comma}.zip"
   appcast 'http://alternoteapp.com/assets/appcast.xml',
-          checkpoint: '1b523b50485c377b875d00ac3b182ed7283a27ec6c4b356e6d117def11b3c836'
+          checkpoint: '1749dfd4555f9923cbce2c191079237108857042b1d7c54b7d21702262f064ba'
   name 'Alternote'
   homepage 'http://alternoteapp.com/'
 

@@ -1,10 +1,10 @@
 cask 'optimage' do
-  version '1.3.1'
-  sha256 '7c8ee97f67aefe167423aa7416a6900eca77312f45fbd0e2ee4a9fdcc80e8f30'
+  version '2.1.1'
+  sha256 'fdc04c3533ac40e3a19296b661bed46a02e50f0d0bd01a6eee652393d3d5e6d4'
 
   url 'https://getoptimage.com/download/optimage-mac.zip'
   appcast 'https://getoptimage.com/appcast.xml',
-          checkpoint: '3fa2ff66d0b31fd292b231dff48c65a9525133de4068c4e48b0c83dd22b092e5'
+          checkpoint: '3ebd1b5675ea7e774e3db4a2c9dff0fb1abd5a65a53acfbcc4be6581f45b85b3'
   name 'Optimage'
   homepage 'https://getoptimage.com/'
 

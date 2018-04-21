@@ -7,4 +7,13 @@ cask 'jira-client' do
   homepage 'http://almworks.com/jiraclient/overview.html'
 
   app 'JIRA Client.app'
+
+  zap trash: [
+               '~/Library/Application Support/JIRA Client',
+               '~/.JIRAClient',
+               '~/Library/Saved Application State/com.almworks.jiraclient37.savedState',
+               '~/Library/Preferences/com.almworks.jiraclient37.plist',
+               '~/Library/Preferences/com.almworks.jiraclient.plist',
+               '~/Library/Preferences/com.almworks.applications.plist',
+             ]
 end

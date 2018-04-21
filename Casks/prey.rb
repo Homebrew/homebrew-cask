@@ -1,10 +1,10 @@
 cask 'prey' do
-  version '1.7.3'
-  sha256 'c6d2ab4f89d2c192397a586369d2c2c815943404dd1bbaea357fdbf6186feae8'
+  version '1.7.4'
+  sha256 'f73fffbc62a65f916cdd5733371bf2799b81a819b5675394faef0be5e4dc6ab9'
 
   url "https://downloads.preyproject.com/prey-client-releases/node-client/#{version}/prey-mac-#{version}-x64.pkg"
   appcast 'https://github.com/prey/prey-node-client/releases.atom',
-          checkpoint: 'e044eb08fd14c86143fc3e5e6d4e54d10757694ef73aa04ee1083974bf1caba0'
+          checkpoint: 'ea5fe6af5be6603c553162a88deade4453deb8e0f5d57d6edd1cbbce393647ee'
   name 'Prey'
   homepage 'https://www.preyproject.com/'
 

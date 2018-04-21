@@ -1,11 +1,11 @@
 cask 'integrity' do
-  version '8.0.4'
-  sha256 '427b42be1887a1dbc7f416597f0231dd2ca03fc5ad0ed6b49341c85dbb76c379'
+  version '8.0.8'
+  sha256 '6d0131d7c13c684fc700d72c0c8c62f0248d3d0fd70348bba1ee8f5f67d20698'
 
   # peacockmedia.co.uk/integrity was verified as official when first introduced to the cask
   url 'http://peacockmedia.co.uk/integrity/integrity.dmg'
   appcast 'http://peacockmedia.software/mac/integrity/version_history.html',
-          checkpoint: '1114be583e6c3df7da31a522afa1b751bbcb75858d91a5bd9c389a5ec33a8b92'
+          checkpoint: 'd6010cec980fc6cf808b63086071a850a211517826476f87db23c8a7643a3eb4'
   name 'Integrity'
   homepage 'http://peacockmedia.software/mac/integrity/'
 

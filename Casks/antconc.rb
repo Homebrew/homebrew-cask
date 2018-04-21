@@ -1,10 +1,10 @@
 cask 'antconc' do
-  version '3.5.2'
-  sha256 'a7dcdd2473d6e07f3e8afffd9630a4232abcafac4ceef46b8f1a479aeabbec73'
+  version '3.5.6'
+  sha256 '7cf816ea30257c3663cbb0932bd598dc0378c42c1dd370cee59cfda0489a18e7'
 
   url "http://www.laurenceanthony.net/software/antconc/releases/AntConc#{version.no_dots}/AntConc.zip"
   appcast 'http://www.laurenceanthony.net/software/antconc/releases/',
-          checkpoint: '681d8baa01f5f99650baa9f64cb3ff496bce13bdb346c237441f207a02d7fd17'
+          checkpoint: '35a1e7bf4acabbec68ceb0e0d2170fe79aa9032c3313dbc9fa8f384a88887301'
   name 'AntConc'
   homepage 'http://www.laurenceanthony.net/software/antconc/'
 

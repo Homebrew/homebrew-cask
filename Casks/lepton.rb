@@ -1,11 +1,11 @@
 cask 'lepton' do
-  version '1.5.1'
-  sha256 'cc88cdeef38bd3023237ceb6b33efdfcfcfe8b7dfd065609234ee9a4e69eb5c3'
+  version '1.6.2'
+  sha256 '0a83b7b90bec91756e4c981fe06d3609d24220d68c36bf3118ce44bd2dc03deb'
 
   # github.com/hackjutsu/Lepton was verified as official when first introduced to the cask
   url "https://github.com/hackjutsu/Lepton/releases/download/v#{version}/Lepton-#{version}-mac.zip"
   appcast 'https://github.com/hackjutsu/Lepton/releases.atom',
-          checkpoint: '40a55bd5f283759cde6523c72c27aa0d64ef4263be9beee3bbc209221c8ae823'
+          checkpoint: 'd646e270c8af5900f96f0704c992b342be48339f526ba6ccb98d7b680e432b8d'
   name 'Lepton'
   homepage 'http://hackjutsu.com/Lepton/'
 

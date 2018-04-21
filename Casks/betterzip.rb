@@ -1,10 +1,10 @@
 cask 'betterzip' do
-  version '4.0.3'
-  sha256 '5ee39cb6ed0b6725d484c2a603329159d829153b8eebda4cc2a30e5f290399b6'
+  version '4.1.2'
+  sha256 '57a0579610d79e4375a0f2afb59d0cc6abccdc200ad44c6907e4035bf147ca9a'
 
   url "https://macitbetter.com/dl/BetterZip-#{version}.zip"
   appcast "https://macitbetter.com/BetterZip#{version.major}.rss",
-          checkpoint: '2d54028cb04e81d13bcdc66ea7c124a11547835379d3a3abe6bc587ec71a70ba'
+          checkpoint: '244c1438608b464bc1889e282e1bc4042efde2ca8a99cf5fb8ae926c2a2d3314'
   name 'BetterZip'
   homepage 'https://macitbetter.com/'
 

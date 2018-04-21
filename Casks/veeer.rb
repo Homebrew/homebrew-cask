@@ -6,7 +6,11 @@ cask 'veeer' do
   name 'VEEER'
   homepage 'https://veeer.io/'
 
+  accessibility_access true
+
   app 'VEEER.app'
+
+  uninstall login_item: 'VEEER'
 
   zap trash: '~/Library/Preferences/com.VEEER.veeer.plist'
 end

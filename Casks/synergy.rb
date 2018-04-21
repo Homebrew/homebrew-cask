@@ -1,6 +1,6 @@
 cask 'synergy' do
-  version '2.0.7,b1599-e4d1ed68'
-  sha256 '4e7355fef83e20049039c22d3e62aa91627db7213ec203795f57a4eab3047e4a'
+  version '2.0.9,b1697-4a1bbebe'
+  sha256 '8d9fd724a590b3fcbd38d0cef4ff732045e20a023586fb738963c028b2bbe3d7'
 
   url "https://binaries.symless.com/v#{version.before_comma}/Synergy_v#{version.before_comma}-stable_#{version.after_comma}.dmg"
   name 'Synergy'

@@ -1,6 +1,6 @@
 cask 'delta' do
-  version '0.9.2'
-  sha256 '0fdbf065ddcfa9372c1a93b99514746e76320cbb2ee67ed2195f9f1b89e8ccd3'
+  version '1.0.0'
+  sha256 'bd99115957d9235d2353a48aee1bef0cc9679796a26cf557873dec58c37d3385'
 
   url "https://static-assets.getdelta.io/desktop_app/Delta-#{version}.dmg"
   name 'Delta'

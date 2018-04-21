@@ -1,10 +1,10 @@
 cask 'otp-auth' do
-  version '1.0.0,243'
-  sha256 '69ad08a3eb32d422b8e86590a22db10ee448953656b29f57a239f5c57cebc785'
+  version '1.0.0,346'
+  sha256 '493343bb68124fda13905cd588eeac99a447ec3c8dc2da6b09d79a396a22a220'
 
-  url "https://cooperrs.de/downloads/OTPAuth_macOS_#{version.after_comma}.zip"
+  url "https://cooperrs.de/downloads/OTPAuth#{version.after_comma}.dmg"
   name 'OTP Auth'
   homepage 'https://cooperrs.de/otpauth_macos.html'
 
-  app "OTPAuth_macOS_#{version.after_comma}/OTP Auth.app"
+  app 'OTP Auth.app'
 end

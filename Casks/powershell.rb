@@ -1,10 +1,10 @@
 cask 'powershell' do
-  version '6.0.1'
-  sha256 'cabed843a513666a658702a5e96deeb6d02d895410ddcb81da3481bde8ca2093'
+  version '6.0.2'
+  sha256 'c757808305076570cc0945feab8433a3488500a3558dea4dd4bb8e5a770dea99'
 
   url "https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}-osx.10.12-x64.pkg"
   appcast 'https://github.com/PowerShell/PowerShell/releases.atom',
-          checkpoint: '91832eeb758cfd5d68a18a5b8d1284ae135dea6c6ac45460fe3c290f2987d363'
+          checkpoint: 'f9f11569508e46985e8ea51671f7d0966103c181f47372b02ebe29922dbdd508'
   name 'PowerShell'
   homepage 'https://github.com/PowerShell/PowerShell'
 

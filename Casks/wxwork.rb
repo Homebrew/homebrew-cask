@@ -1,6 +1,6 @@
 cask 'wxwork' do
-  version '2.4.5.213'
-  sha256 'e40b65b52507beacb782527e71cf62b6e13a42649e1d27a1b65c0922fd7db317'
+  version '2.4.16.2041'
+  sha256 '8857bed2a099f05fa7192938e5644dce35277d5f86ac11d626cb85ef01c873dd'
 
   url "https://dldir1.qq.com/foxmail/work_weixin/WXWork_#{version}.dmg"
   name 'Wechat Enterprise Version'

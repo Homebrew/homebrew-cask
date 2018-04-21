@@ -1,14 +1,15 @@
 cask 'java' do
-  version '9.0.4,11:c2514751926b4512b076cc82f959763f'
-  sha256 'f5c827ab4c3cf380827199005a3dfe8077a38c4d6e8b3fa37ec19ce6ca9aa658'
+  version '10.0.1,10:fb4372174a714e6b8c52526dc134031e'
+  sha256 'cf3d33be870788eed5bb5eeef8f52aa9d7601955c8742efbec0cf9fbd6245ceb'
 
   url "http://download.oracle.com/otn-pub/java/jdk/#{version.before_comma}+#{version.after_comma.before_colon}/#{version.after_colon}/jdk-#{version.before_comma}_osx-x64_bin.dmg",
       cookies: {
                  'oraclelicense' => 'accept-securebackup-cookie',
                }
   name 'Java Standard Edition Development Kit'
-  homepage "https://www.oracle.com/technetwork/java/javase/downloads/jdk#{version.major}-downloads-3848520.html"
+  homepage "https://www.oracle.com/technetwork/java/javase/downloads/jdk#{version.major}-downloads-4416644.html"
 
+  # auto_updates true: JDK does not auto-update
   depends_on macos: '>= :yosemite'
 
   pkg "JDK #{version.before_comma}.pkg"
