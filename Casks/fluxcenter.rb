@@ -1,6 +1,6 @@
 cask 'fluxcenter' do
-  version '1.2.13.47658'
-  sha256 'c28ae7d6185e86c22cb3d293d33ba2dd9a696f1221fc254ad47a074e4da28486'
+  version '1.2.14.47805'
+  sha256 'f6d62fa65188b46514952f9c98ca51473b33ed387b6a9351a19b9fb8844aaca2'
 
   url "https://fluxhome.com/wp-content/uploads/files/Center/MacOS/Flux_FluxCenter_MacOS_Installer_(#{version}).dmg"
   name 'FluxCenter'
