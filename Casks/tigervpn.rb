@@ -8,9 +8,10 @@ cask 'tigervpn' do
 
   app 'tigerVPN.app'
 
+  uninstall delete:    '/Library/PrivilegedHelperTools/com.tigeratwork.tigerVPNmacHelper',
+            launchctl: 'com.tigeratwork.tigerVPNmacHelper'
+
   zap trash: [
-               '/Library/PrivilegedHelperTools/com.tigeratwork.tigerVPNmacHelper',
-               '/Library/LaunchDaemons/com.tigeratwork.tigerVPNmacHelper.plist',
                '~/Library/Application Support/tigerVPN',
                '~/Library/Application Support/com.apple.toolsQA.CocoaApp_CD/tigerVPN.storedata',
                '~/Library/Application Support/com.tigeratwork.tigerVPNmac',
