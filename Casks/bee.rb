@@ -15,7 +15,9 @@ cask 'bee' do
                '~/Library/Application Scripts/io.neat.Bee',
                '~/Library/Application Scripts/io.neat.Bee-Mutator',
                '~/Library/Application Scripts/io.neat.Bee-Updater',
+               '~/Library/Caches/io.neat.Bee',
                '~/Library/Containers/io.neat.Bee',
                '~/Library/Containers/io.neat.Bee-Mutator',
+               '~/Library/Containers/io.neat.Bee-Updater',
              ]
 end
