@@ -1,6 +1,6 @@
 cask 'eloquent' do
   version '2.6.1'
-  sha256 'd5b8f47385f9ba0e82e7c8de28b74e514ec480ed886be65e6415b58c660ea215'
+  sha256 '813a6f7ab005c8f2c8c56efcfbe04c0084e5c197b7fe3d3f48a0d7e670b5df6c'
 
   url "https://github.com/mdbergmann/Eloquent/releases/download/#{version}/Eloquent-#{version}.app.zip"
   appcast 'https://github.com/mdbergmann/Eloquent/releases.atom',
