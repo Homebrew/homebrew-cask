@@ -1,9 +1,9 @@
 cask 'dwarf-fortress-lmp' do
-  version 'v0.44.05-dfhack-r2'
+  version '0.44.05-dfhack-r2'
   sha256 '33bf89854dc84a98b7f149e56368eedb2c204b64eeede572280cf5fc9485fa34'
 
   # dffd.bay12games.com was verified as official when first introduced to the cask
-  url 'http://dffd.bay12games.com/download.php?id=13338&f=Lazy+Mac+Pack.{version}.dmg'
+  url 'http://dffd.bay12games.com/download.php?id=13338&f=Lazy+Mac+Pack.v{version}.dmg'
   name 'Dwarf Fortress LMP (Lazy Mac Pack)'
   homepage 'http://www.bay12forums.com/smf/index.php?topic=128960.0'
 
