@@ -15,7 +15,4 @@ cask 'dwarf-fortress-lmp' do
                '~/Library/Preferences/com.phoenix-dev.setresx.plist',
                '~/Library/Saved Application State/Lazy Mac Pack.savedState',
              ]
-
-  # Caveats for Sierra and higher
-  caveats 'Be sure to run the script inside the folder once to make it work on macOS.'
 end
