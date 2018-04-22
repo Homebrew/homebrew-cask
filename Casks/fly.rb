@@ -1,10 +1,10 @@
 cask 'fly' do
-  version '3.10.0'
-  sha256 'fb87d8b5eec0117d56ed8002b23946fb458373eae5a96c32efa3de31e1ac1847'
+  version '3.11.0'
+  sha256 'e9e07f78f2fa013d6c57891fda8ec7ad3081ebe236ea3d0f53f52a004db7001b'
 
   url "https://github.com/concourse/concourse/releases/download/v#{version}/fly_darwin_amd64"
   appcast 'https://github.com/concourse/concourse/releases.atom',
-          checkpoint: 'ef7e7c2d3af404c61f838d6003a1876ab0de30b68c846e5bc096c5ab484748b5'
+          checkpoint: '28d13d7e815ca8d5ed08020a32014d3566befcbed8184f1b856ea57a7efbbe71'
   name 'fly'
   homepage 'https://github.com/concourse/fly'
 
