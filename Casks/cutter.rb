@@ -1,11 +1,11 @@
 cask 'cutter' do
-  version '1.3'
-  sha256 '880a229fac750976781d1bb82cd6a6622bd5274b90428583ee75e2e1362ea0e6'
+  version '1.4'
+  sha256 'd052e519403a14e6cee7182c71ac7f73a788b4bd262972c719cf4c21934d06e0'
 
   # github.com/radareorg/cutter was verified as official when first introduced to the cask
   url "https://github.com/radareorg/cutter/releases/download/v#{version}/cutter-v#{version}.dmg"
   appcast 'https://github.com/radareorg/cutter/releases.atom',
-          checkpoint: 'fbc1b3bec7fd59304b7074bac59976ccd662aa583e142c83bb272db3892c6fbf'
+          checkpoint: '72f24c97bab229c12258e7ec4d4d01d3f185045bca282df30832feb02261e315'
   name 'Cutter'
   homepage 'https://radare.org/cutter/'
 
