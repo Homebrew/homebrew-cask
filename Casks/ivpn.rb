@@ -1,6 +1,6 @@
 cask 'ivpn' do
-  version '2.7.5'
-  sha256 '3d18c69ee41f9e89ce172f0efec40c0907bc36667c03d14a5169adce41291bfc'
+  version '2.7.6'
+  sha256 '3ee7967a288e0f28b925dff40330f41b0401d9befafac8bcad1ef53ffef8ad6f'
 
   url "https://www.ivpn.net/releases/osx/IVPN-#{version}.dmg"
   name 'IVPN'
