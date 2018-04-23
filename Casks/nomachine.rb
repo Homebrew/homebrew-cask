@@ -9,15 +9,15 @@ cask 'nomachine' do
   pkg 'NoMachine.pkg'
 
   # A launchctl job ordinarily manages uninstall once the app bundle is removed
-  uninstall delete: '/Applications/NoMachine.app',
-  # However, we duplicate the uninstall process manually just in case
-            script: '/Library/Application Support/NoMachine/nxuninstall.sh',
-            quit:         'com.nomachine.nxdock',
-            kext:         [
-                            'com.nomachine.driver.nxau',
-                            'com.nomachine.driver.nxtun',
-                            'com.nomachine.kext.nxfs',
-                          ],
-            pkgutil:      'com.nomachine.nomachine.NoMachine.*',
-            launchctl:    'com.nomachine.uninstall'
+  uninstall delete:    '/Applications/NoMachine.app',
+            # However, we duplicate the uninstall process manually just in case
+            script:    '/Library/Application Support/NoMachine/nxuninstall.sh',
+            quit:      'com.nomachine.nxdock',
+            kext:      [
+                         'com.nomachine.driver.nxau',
+                         'com.nomachine.driver.nxtun',
+                         'com.nomachine.kext.nxfs',
+                       ],
+            pkgutil:   'com.nomachine.nomachine.NoMachine.*',
+            launchctl: 'com.nomachine.uninstall'
 end
