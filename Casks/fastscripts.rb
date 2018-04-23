@@ -1,6 +1,6 @@
 cask 'fastscripts' do
   version '2.6.12'
-  sha256 '8a5d218d2b0d031ada8c5e7a5b334f09747f3ddcc9de49e9108b95b2d5ca8cde'
+  sha256 '591b2d6808b4bdc4d770ebb16ec2ded06b9b1fa1463bfe3296ad1503533e0959'
 
   url "https://www.red-sweater.com/fastscripts/FastScripts#{version}.zip"
   appcast 'https://red-sweater.com/fastscripts/appcast2.php',
