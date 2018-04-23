@@ -19,5 +19,9 @@ cask 'nomachine' do
                          'com.nomachine.kext.nxfs',
                        ],
             pkgutil:   'com.nomachine.nomachine.NoMachine.*',
-            launchctl: 'com.nomachine.uninstall'
+            launchctl: [
+                         'com.nomachine.localnxserver',
+                         'com.nomachine.nxserver',
+                         'com.nomachine.uninstall',
+                       ]
 end
