@@ -18,13 +18,14 @@ cask 'subutaip2p' do
     system_command '/bin/mv', args: ['--', staged_path.join('get'), staged_path.join('subutai-p2p.pkg')]
   end
 
-  uninstall pkgutil: [
-                       'com.Subutai.P2P',
-                       'net.sf.tuntaposx.tap',
-                       'net.sf.tuntaposx.tun',
-                     ],
-            kext:    [
-                       'net.sf.tuntaposx.tap',
-                       'net.sf.tuntaposx.tun',
-                     ]
+  uninstall pkgutil:   [
+                         'com.Subutai.P2P',
+                         'net.sf.tuntaposx.tap',
+                         'net.sf.tuntaposx.tun',
+                       ],
+            kext:      [
+                         'net.sf.tuntaposx.tap',
+                         'net.sf.tuntaposx.tun',
+                       ],
+            launchctl: 'io.subutai.p2p.daemon'
 end
