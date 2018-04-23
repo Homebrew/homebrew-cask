@@ -1,6 +1,6 @@
 cask 'epic-games' do
-  version '7.9.0'
-  sha256 'f24f650627e8808807039dbe7bbcb56216caec2aa407cf8e3d6df7e628f4530c'
+  version '7.9.1'
+  sha256 '8ffdd210ac14fc7763e47407df7e67e97b10cdbceb8a10ca734255b904f96641'
 
   url "https://download.epicgames.com/Builds/UnrealEngineLauncher/Installers/EpicInstaller-#{version}.dmg"
   name 'Epic Games Launcher'
