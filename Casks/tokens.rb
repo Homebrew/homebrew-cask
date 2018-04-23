@@ -9,5 +9,7 @@ cask 'tokens' do
   name 'Tokens'
   homepage 'http://usetokens.com/'
 
+  auto_updates true
+
   app 'Tokens.app'
 end
