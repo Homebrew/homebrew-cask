@@ -1,10 +1,10 @@
 cask 'flux' do
-  version '39.983'
-  sha256 '7b04effd88f4b12029cc929d9b3a5646e35be89bb5ea4404157133e9c96348e6'
+  version '39.987'
+  sha256 'a94f0adc267700c933dba0ed71b3dd6ef4891499e94bbb6be0903a3dbc0692b2'
 
   url "https://justgetflux.com/mac/Flux#{version}.zip"
   appcast 'https://justgetflux.com/mac/macflux.xml',
-          checkpoint: '4bf6d537d257ade71e07a188d635e5c92afeb043eb04f0d6b0927ba202839159'
+          checkpoint: '990dd378d8fa7fcf3bbac37c1b96c30b88583dff95b8555c241c637dcabdbffa'
   name 'f.lux'
   homepage 'https://justgetflux.com/'
 
