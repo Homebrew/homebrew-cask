@@ -1,6 +1,6 @@
 cask 'kstars' do
-  version '2.9.4'
-  sha256 '27c78fcccb3c96cd37f9c2a71f557a60ee6698c5baf170d1adfac3571d5ff9a6'
+  version '2.9.5'
+  sha256 'a556f9283280911318766ffeefd108a74d9dab9772f267edfd056418d0363a1a'
 
   # indilib.org/jdownloads/kstars was verified as official when first introduced to the cask
   url "http://www.indilib.org/jdownloads/kstars/kstars-#{version}.dmg"
