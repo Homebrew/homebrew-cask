@@ -1,5 +1,5 @@
 cask 'scrutiny' do
-  version '8.0.8'
+  version '8.0.9'
   sha256 '7b1ddcf8e7f51982700dc586426bd55bc6de82af44abe880cd62af17c8e0f453'
 
   url 'http://peacockmedia.software/mac/scrutiny/scrutiny.dmg'
