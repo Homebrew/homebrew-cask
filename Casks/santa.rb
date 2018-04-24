@@ -4,7 +4,7 @@ cask 'santa' do
 
   url "https://github.com/google/santa/releases/download/#{version}/santa-#{version}.dmg"
   appcast 'https://github.com/google/santa/releases.atom',
-          checkpoint: 'd3310d7ce5cd5c940cf012ffce8cf268deb7bcfbcd43ceec549dbe2caf676dc8'
+          checkpoint: '3f5d9c04f23a9bdebf42bd8e7f785448aecbd35f60ebd1c922cbbf813d485d43'
   name 'Santa'
   homepage 'https://github.com/google/santa'
 
