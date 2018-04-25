@@ -1,10 +1,10 @@
 cask 'exifrenamer' do
-  version '2.1.3'
-  sha256 '638a95447a2d51312acffe48bb767694d935aa8f448963947ce48db0767bb10e'
+  version '2.2.0'
+  sha256 '9ab4382186943cbeaceaa2a5f22c0f6b69f095468a4aeb15537e68239820c60f'
 
   url 'http://www.qdev.de/downloads/files/ExifRenamer.dmg'
   appcast 'http://www.qdev.de/versions/ExifRenamer.txt',
-          checkpoint: '06e19dead69dcc16bc573cc9f24b68b69907f4cfd4afb9d70372cc6b462a9862'
+          checkpoint: 'edc8e395a5182e3b231816e191b303407d511f70c1d9cb6d532927cc559c507c'
   name 'ExifRenamer'
   homepage 'https://www.qdev.de/?location=mac/exifrenamer&forcelang=en'
 
