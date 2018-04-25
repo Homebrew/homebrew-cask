@@ -1,10 +1,10 @@
 cask 'datagrip' do
-  version '2017.3.7,173.4674.7'
-  sha256 'cac7b834618cc14d4a8da92f72202ab60127eb020438f1232276fdcc5dbfccd5'
+  version '2018.1.1,181.4668.2'
+  sha256 '6121bd38a03ce6fa2d6d5fa848bd0f813f81f33595bb6e9e16be4dbb4e29d776'
 
   url "https://download.jetbrains.com/datagrip/datagrip-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=DG&latest=true&type=release',
-          checkpoint: '939499163e71e9744e61e48a4d96d3a140575826a417c6772dfb927be1e87cdc'
+          checkpoint: 'c7a717d238760c4273c8dcabe11ebd47ba1f6d22c6149a563f90aa0ada2e9608'
   name 'DataGrip'
   homepage 'https://www.jetbrains.com/datagrip/'
 

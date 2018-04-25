@@ -1,12 +1,18 @@
 cask 'mediainfo' do
-  version '17.12'
-  sha256 '2e319a2cbe0a54ad5a421a7ed5b023cca2eec20fe78f03686487ce08ac84b93b'
+  version '18.03.1'
+  sha256 'e1742926c3539f2149138e92693c1b0ad978c10e7322f5bdfd366bfc8155f50b'
 
   url "https://mediaarea.net/download/binary/mediainfo-gui/#{version}/MediaInfo_GUI_#{version}_Mac.dmg"
   appcast 'https://mediaarea.net/rss/mediainfo_updates.xml',
-          checkpoint: '3a01b6cde3c5af91fc8fb3543b212a6f618c49382b0f0ab741ab4aacc409cce5'
+          checkpoint: '2299ebf1cb0723ec600c889cc095e95c8868db6f3f7e78a83da6dc6bcdd66f45'
   name 'MediaInfo'
   homepage 'https://mediaarea.net/en/MediaInfo'
 
   app 'MediaInfo.app'
+
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.mediaarea.mediainfo.mac-old.sfl*',
+               '~/Library/Preferences/net.mediaarea.mediainfo.mac-old.plist',
+               '~/Library/Saved Application State/net.mediaarea.mediainfo.mac-old.savedState',
+             ]
 end

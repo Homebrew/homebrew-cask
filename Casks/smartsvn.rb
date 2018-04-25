@@ -1,10 +1,10 @@
 cask 'smartsvn' do
-  version '9.2.1'
-  sha256 'e886077e9b793c01f899e8318a1608f8a5dba264ec1cc45300602e4e1fafc4f4'
+  version '9.3.0'
+  sha256 '23d1b3b00513638330498cbac1ae0682efa6eb831210ccfa139ff25c2695433a'
 
-  url "http://www.smartsvn.com/static/svn/download/smartsvn/smartsvn-macosx-#{version.dots_to_underscores}.dmg"
-  appcast 'http://www.smartsvn.com/smartsvn/changelog.txt',
-          checkpoint: '628f218bda9da25659726ef5e65da0ade60b80844451b7ae94be77e3e8198981'
+  url "https://www.smartsvn.com/downloads/smartsvn/smartsvn-macosx-#{version.dots_to_underscores}.dmg"
+  appcast 'https://www.smartsvn.com/documents/smartsvn/changelog.txt',
+          checkpoint: '942f20a0363b7402291ef1e49e9c734e22d28557ed6767ccb3c7ce521a329432'
   name 'SmartSVN'
   homepage 'http://www.smartsvn.com/'
 

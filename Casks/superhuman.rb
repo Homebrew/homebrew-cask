@@ -9,8 +9,14 @@ cask 'superhuman' do
   app 'Superhuman.app'
 
   zap trash: [
-               '~/Library/Application Support/Milanote',
+               '~/Library/Application Support/Superhuman',
+               '~/Library/Caches/com.superhuman.electron',
+               '~/Library/Caches/com.superhuman.electron.helper',
+               '~/Library/Caches/com.superhuman.electron.ShipIt',
                '~/Library/Caches/Superhuman',
-               '~/Library/Preferences/io.nwjs.nwjs.plist',
+               '~/Library/Logs/Superhuman',
+               '~/Library/Preferences/com.superhuman.electron.plist',
+               '~/Library/Preferences/com.superhuman.electron.helper.plist',
+               '~/Library/Preferences/com.superhuman.mail.plist',
              ]
 end

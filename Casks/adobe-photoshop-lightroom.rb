@@ -28,7 +28,7 @@ cask 'adobe-photoshop-lightroom' do
   end
 
   uninstall_preflight do
-    system_command 'brew', args: ['cask', 'uninstall', 'adobe-photoshop-lightroom600']
+    system_command "#{HOMEBREW_PREFIX}/bin/brew", args: ['cask', 'uninstall', 'adobe-photoshop-lightroom600']
   end
 
   zap trash: [

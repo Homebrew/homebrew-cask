@@ -6,7 +6,7 @@ cask 'alinof-timer' do
   name 'Alinof Timer'
   homepage 'https://www.alinofsoftware.ch/apps/products-timer/index.html'
 
-  pkg 'AlinofTimer.pkg', allow_untrusted: true
+  pkg 'AlinofTimer.pkg'
 
   uninstall pkgutil: 'com.alinofsoftware.alinoftimer'
 end

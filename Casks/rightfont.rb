@@ -1,10 +1,10 @@
 cask 'rightfont' do
-  version '4.6'
-  sha256 '7484e5b8a41084093766a0064037bd255b9ad5aae43cf035f8323eabb6efcd17'
+  version '4.10'
+  sha256 '9ff22c538b96cc928dca659abc63158be5f8b156c6fdef776392c0cbd6e2ab84'
 
   url "https://rightfontapp.com/downloads/#{version}/rightfont.zip"
   appcast 'https://rightfontapp.com/update/appcast.xml',
-          checkpoint: 'fafefa8ff0d05f8e67a778beb15139e9f87e14d7e84b25f71e5f6f6a4ca972c7'
+          checkpoint: 'dca3643a82ee35c88f8e7f0e4a075df0a7c92dfc7c97bab35d04a6898673c701'
   name 'RightFont'
   homepage 'https://rightfontapp.com/'
 

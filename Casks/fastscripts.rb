@@ -1,10 +1,10 @@
 cask 'fastscripts' do
-  version '2.6.11'
-  sha256 '17f4d185a32112d6d99665beaefec3bcb406fb360069791bbe12f5fa8522ccac'
+  version '2.6.12'
+  sha256 '591b2d6808b4bdc4d770ebb16ec2ded06b9b1fa1463bfe3296ad1503533e0959'
 
   url "https://www.red-sweater.com/fastscripts/FastScripts#{version}.zip"
   appcast 'https://red-sweater.com/fastscripts/appcast2.php',
-          checkpoint: '808cf814d4e07c80a26ec4a0a695c5edef8441584ddfff64de86620c8b733364'
+          checkpoint: 'a3c8821c03d51b36b0adda5a2e030dc27d052180e99c52e5b7bdae1d2bca1b62'
   name 'FastScripts'
   homepage 'https://red-sweater.com/fastscripts/'
 

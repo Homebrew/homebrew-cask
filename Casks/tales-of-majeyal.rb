@@ -1,6 +1,6 @@
 cask 'tales-of-majeyal' do
-  version '1.5.5'
-  sha256 'd0489f5973146ca19812be402af1492a71a3c024f876b622c4bb2be966a662a4'
+  version '1.5.7'
+  sha256 'aa1239eb377234d61b47b4f7112581bf32a51c5d3c72c000fd8569303b3f56ec'
 
   url "https://te4.org/dl/t-engine/t-engine4-osx-#{version}.zip"
   name 'Tales of Maj\'Eyal'

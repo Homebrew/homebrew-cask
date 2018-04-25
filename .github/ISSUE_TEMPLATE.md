@@ -11,13 +11,27 @@
 
 {{replace this}}
 
-#### Output of your command with `--verbose --debug`
+<!-- Please DO NOT delete the backticks. Only change the “{{replace this}}” text. -->
+
+#### Command that failed
+
+```
+{{replace this}}
+```
+
+#### Output of command with `--force --verbose --debug`
 
 ```
 {{replace this}}
 ```
 
 #### Output of `brew cask doctor`
+
+```
+{{replace this}}
+```
+
+#### Output of `brew tap`
 
 ```
 {{replace this}}

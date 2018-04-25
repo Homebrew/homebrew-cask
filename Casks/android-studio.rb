@@ -1,9 +1,9 @@
 cask 'android-studio' do
-  version '3.0.1.0,171.4443003'
-  sha256 'c4e0e3da447f4517128ee1a767ed130721fd2c0e0a1b311ce7dbc05766dcd221'
+  version '3.1.2.0,173.4720617'
+  sha256 '4665cb18c838a3695a417cebc7751cbe658a297a9d6c01cbd9e9a1979b8b167e'
 
   # google.com/dl/android/studio was verified as official when first introduced to the cask
-  url "https://dl.google.com/dl/android/studio/ide-zips/#{version.before_comma}/android-studio-ide-#{version.after_comma}-mac.zip"
+  url "https://dl.google.com/dl/android/studio/install/#{version.before_comma}/android-studio-ide-#{version.after_comma}-mac.dmg"
   name 'Android Studio'
   homepage 'https://developer.android.com/studio/index.html'
 

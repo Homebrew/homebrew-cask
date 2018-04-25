@@ -1,11 +1,11 @@
 cask 'flash-player-debugger-ppapi' do
-  version '28.0.0.161'
-  sha256 'c840024c95d88b2eb78be095c2ef84a383ce6c848d091d5c4230fa18abef5238'
+  version '29.0.0.140'
+  sha256 '6348c02b5d3e177f05c29f2321dabbaa8ba724fb1445e4c06a4c3d2afd1d0003'
 
   # macromedia.com was verified as official when first introduced to the cask
   url "https://fpdownload.macromedia.com/pub/flashplayer/updaters/#{version.major}/flashplayer_#{version.major}_ppapi_debug.dmg"
   appcast 'http://fpdownload2.macromedia.com/get/flashplayer/update/current/xml/version_en_mac_pep.xml',
-          checkpoint: '9328b81a03aa632970cd96be9f1d58a573a5e376debed48a59ab76e186e9786f'
+          checkpoint: '53e0fa18b84d4d4c486059974a4d51e0cc9cef5b44f71ac6fe1f2e5b34aac950'
   name 'Adobe Flash Player PPAPI (plugin for Opera and chromium) content debugger'
   homepage 'https://www.adobe.com/support/flashplayer/debug_downloads.html'
 

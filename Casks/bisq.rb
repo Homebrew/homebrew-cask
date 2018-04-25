@@ -1,11 +1,11 @@
 cask 'bisq' do
-  version '0.6.6'
-  sha256 '5756ff8b14b10d0c79083a4a0ef59fc673596d615e283e324338dc4b22f6ac9c'
+  version '0.6.7'
+  sha256 '8c7ad8f9887e67623cc2bea791f453ffe321be6c5ce3079fc89cf413bd43fa62'
 
-  # github.com/bisq-network/exchange was verified as official when first introduced to the cask
-  url "https://github.com/bisq-network/exchange/releases/download/v#{version}/Bisq-#{version}.dmg"
-  appcast 'https://github.com/bisq-network/exchange/releases.atom',
-          checkpoint: '7ce578f13f263192fdf5bb645f5546eb3fc5442c7435929ebd75dab7550111b2'
+  # github.com/bisq-network/bisq-desktop was verified as official when first introduced to the cask
+  url "https://github.com/bisq-network/bisq-desktop/releases/download/v#{version}/Bisq-#{version}.dmg"
+  appcast 'https://github.com/bisq-network/bisq-desktop/releases.atom',
+          checkpoint: '0cdbd7e724ca3c88060485491b5aa007217629f9f5adcb1be754f2632347cbd5'
   name 'Bisq'
   homepage 'https://bisq.io/'
   gpg "#{url}.asc", key_id: '1dc3c8c4316a698ac494039cf5b84436f379a1c6'

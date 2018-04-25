@@ -1,10 +1,10 @@
 cask 'qingg' do
-  version '2.4.5'
-  sha256 'f6b698c54a6428a176d22ea1ef050d9772bdf8057cfa792a2f05788df65201be'
+  version '2.6.2'
+  sha256 '8e85120cf7fb1abba0c2c9b6095a4b509e8751d4429a4fa58d523c8be01e6b7c'
 
   url "https://qingg.im/download/Qingg-#{version}.dmg"
   appcast 'https://qingg.im/sparkle/appcast.php',
-          checkpoint: '2a89d61d695b68c1127ad42bef3772eaaa02004b220f15b1ee40bce4bbb6e704'
+          checkpoint: 'bc2b6e26131538d64a135e94503d4da50c9f4741c0067fe119921d6f0537f505'
   name 'QinggIM'
   name '清歌输入法'
   homepage 'https://qingg.im/mac/'
@@ -13,7 +13,7 @@ cask 'qingg' do
 
   pkg 'Qingg.pkg'
 
-  uninstall pkgutil: 'com.aodaren.Qingg.pkg'
+  uninstall pkgutil: 'com.aodaren.*'
 
   zap trash: [
                '~/Library/Application Support/Qingg',
