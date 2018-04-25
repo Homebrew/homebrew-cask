@@ -1,9 +1,8 @@
 cask 'ebmac' do
-  version '1.43,70_19_938'
-  sha256 '2f665b2aa17b7841f3fb2dc015f48045e39ba966d78d435b20427982d5b4ab91'
+  version '1.43.2'
+  sha256 '5ab3a9ad75a66ffcc8c96a97707dfd978bc779a7b9b65435762593cab2cd4fe3'
 
-  # ftp.vector.co.jp was verified as official when first introduced to the cask
-  url "http://ftp.vector.co.jp/#{version.after_comma.underscores_to_slashes}/EBMac#{version.before_comma}.dmg"
+  url "http://ebstudio.info/download/ebpocket/EBMac#{version}.dmg"
   name 'EBMac'
   homepage 'http://ebstudio.info/manual/EBMac/'
 
