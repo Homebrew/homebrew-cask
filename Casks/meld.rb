@@ -11,4 +11,6 @@ cask 'meld' do
 
   app 'Meld.app'
   binary "#{appdir}/Meld.app/Contents/MacOS/Meld", target: 'meld'
+
+  zap trash: '~/Library/Preferences/org.gnome.meld.plist'
 end
