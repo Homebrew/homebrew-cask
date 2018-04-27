@@ -15,6 +15,7 @@ cask 'proxifier' do
   zap trash: [
                '~/Library/Application Support/Proxifier',
                '~/Library/Caches/com.initex.proxifier.macosx',
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/Proxifier Help*',
                '~/Library/Logs/Proxifier',
                '~/Library/Preferences/com.initex.proxifier.macosx.plist',
                '~/Library/Saved Application State/com.initex.proxifier.macosx.savedState',
