@@ -14,6 +14,7 @@ cask 'google-cloud-sdk' do
   binary 'google-cloud-sdk/bin/gcloud'
   binary 'google-cloud-sdk/bin/git-credential-gcloud.sh', target: 'git-credential-gcloud'
   binary 'google-cloud-sdk/bin/gsutil'
+  binary 'google-cloud-sdk/bin/docker-credential-gcloud'
 
   uninstall delete: "#{staged_path}/#{token}" # Not actually necessary, since it would be deleted anyway. It is present to make clear an uninstall was not forgotten and that for this cask it is indeed this simple.
 
