@@ -3,7 +3,7 @@ cask 'mactex-no-gui' do
   sha256 'e6ee8f69ca6e5ca5d20a31afc3dff3b4e5aa7a0b1b89ace9864ac22b10c34b98'
 
   # mirror.ctan.org/systems/mac/mactex was verified as official when first introduced to the cask
-  url "https://mirror.ctan.org/systems/mac/mactex/mactex-#{version}.pkg"
+  url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version}.pkg"
   appcast 'https://www.tug.org/mactex/downloading.html',
           checkpoint: 'd39276f0d9d85bed9f501efb30c15d4e9ec18681aa00b98ba0ab649c3a1ff331'
   name 'MacTeX'
