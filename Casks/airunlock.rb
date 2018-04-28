@@ -10,10 +10,4 @@ cask 'airunlock' do
   homepage 'http://airunlock.qtlin.tw/'
 
   app 'AirUnlock.app'
-
-  caveats <<~EOS
-    To run this app you need AirUnlock for Android:
-    https://github.com/pinetum/AirUnlock-for-Android
-    https://f-droid.org/packages/tw.qtlin.mac.airunlocker/
-  EOS
 end
