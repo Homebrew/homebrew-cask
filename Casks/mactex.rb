@@ -1,11 +1,11 @@
 cask 'mactex' do
-  version '20170524'
-  sha256 '0caf76027c9e0534a0b636f2b880ace4a0463105a7ad5774ccacede761be8c2d'
+  version '2018.0417'
+  sha256 'e6ee8f69ca6e5ca5d20a31afc3dff3b4e5aa7a0b1b89ace9864ac22b10c34b98'
 
   # mirror.ctan.org/systems/mac/mactex was verified as official when first introduced to the cask
-  url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version}.pkg"
+  url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version.no_dots}.pkg"
   appcast 'https://www.tug.org/mactex/downloading.html',
-          checkpoint: '2dd3e7c71fe586512a5241f2b26c24f93af3510d2bda2f56da1a404098b894ee'
+          checkpoint: 'd39276f0d9d85bed9f501efb30c15d4e9ec18681aa00b98ba0ab649c3a1ff331'
   name 'MacTeX'
   homepage 'https://www.tug.org/mactex/'
 
@@ -16,7 +16,7 @@ cask 'mactex' do
   depends_on formula: 'ghostscript'
   depends_on macos: '>= :yosemite'
 
-  pkg "mactex-#{version}.pkg",
+  pkg "mactex-#{version.no_dots}.pkg",
       choices: [
                  {
                    # TeXLive
@@ -39,11 +39,11 @@ cask 'mactex' do
                ]
 
   uninstall pkgutil: [
-                       'org.tug.mactex.gui2017',
-                       'org.tug.mactex.texlive2017',
+                       "org.tug.mactex.gui#{version.major}",
+                       "org.tug.mactex.texlive#{version.major}",
                      ],
             delete:  [
-                       '/usr/local/texlive/2017',
+                       "/usr/local/texlive/#{version.major}",
                        '/Applications/TeX',
                        '/Library/PreferencePanes/TeXDistPrefPane.prefPane',
                        '/Library/TeX',
@@ -53,7 +53,7 @@ cask 'mactex' do
 
   zap trash: [
                '/usr/local/texlive/texmf-local',
-               '~/Library/texlive/2017',
+               "~/Library/texlive/#{version.major}",
                # TexShop:
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/texshop.sfl*',
                '~/Library/Application Support/TeXShop',
