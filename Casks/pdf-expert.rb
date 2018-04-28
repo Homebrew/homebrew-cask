@@ -1,4 +1,4 @@
-cask 'pdfexpert' do
+cask 'pdf-expert' do
   version '2.4,511'
   sha256 '22026d0de90b25b1bf04d06e51bfd95e6a1b5388cd839a69a8144aac17a5f2de'
 
