@@ -1,8 +1,8 @@
 cask 'bluestacks' do
-  version '0.9.30.423902'
-  sha256 '261bf6978770a16d588abba51d6e550c6b44de6d12de9bf54a0c0a751290e547'
+  version '2.0.0.12'
+  sha256 '80896cb2c3f000ff75c7bda3e6481fbe65600b26ea1df9004fed3ed7e5e54f07'
 
-  url "https://cdn3.bluestacks.com/downloads/#{version}/BlueStacks-Installer.dmg"
+  url "https://cdn3.bluestacks.com/mac/#{version}/BlueStacksInstaller.dmg"
   name 'BlueStacks'
   homepage 'http://www.bluestacks.com/'
 
