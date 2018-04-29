@@ -15,4 +15,3 @@ cask 'cloud-station-drive' do
 
   zap trash: '~/Library/Preferences/com.synology.CloudStationUI.plist'
 end
-
