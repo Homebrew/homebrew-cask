@@ -1,11 +1,9 @@
 cask 'cocoscreator' do
-  number = '1.9.1'
-  date = '20180417'
-  version "#{number}_#{date}"
+  version '1.9.1,20180417'
   sha256 '9d848ce4af7dfb84974bd24db36bdb766620c4e0eb81aaaa0eaccf122e3bdc66'
 
   # download.cocos.com was verified as official when first introduced to the cask
-  url "http://download.cocos.com/CocosCreator/v#{number}/CocosCreator_v#{version}.dmg"
+  url "http://download.cocos.com/CocosCreator/v#{version.before_comma}/CocosCreator_v#{version.before_comma}_#{version.after_comma}.dmg"
   name 'CocosCreator'
   homepage 'http://www.cocos2d-x.org/'
 
