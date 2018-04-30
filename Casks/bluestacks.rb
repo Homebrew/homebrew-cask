@@ -6,7 +6,7 @@ cask 'bluestacks' do
   name 'BlueStacks'
   homepage 'http://www.bluestacks.com/'
 
-  app 'BlueStacks.app'
+  installer manual: 'BlueStacks Installer.app'
 
   uninstall_preflight do
     set_ownership "#{appdir}/BlueStacks.app"
