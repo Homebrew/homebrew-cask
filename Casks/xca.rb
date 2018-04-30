@@ -11,4 +11,3 @@ cask 'xca' do
 
   app 'xca.app'
 end
-
