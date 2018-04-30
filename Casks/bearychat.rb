@@ -4,6 +4,7 @@ cask 'bearychat' do
 
   url 'https://static.bearychat.com/v2/BearyChat.dmg'
   name 'BearyChat'
+  name '倍洽'
   homepage 'https://bearychat.com/'
 
   app '倍洽.app'
