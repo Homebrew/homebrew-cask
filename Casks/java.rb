@@ -59,7 +59,8 @@ cask 'java' do
                          '/Library/PreferencePanes/JavaControlPanel.prefPane',
                          '/Library/Java/Home',
                          '/Library/Java/MacOS',
-                       ]
+                       ],
+            rmdir:     "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk"
 
   zap trash: [
                '/Library/Application Support/Oracle/Java',
@@ -76,7 +77,6 @@ cask 'java' do
              ],
       rmdir: [
                '/Library/Application Support/Oracle/',
-               "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk",
                '~/Library/Application Support/Oracle/',
              ]
 
