@@ -6,7 +6,7 @@ cask 'bearychat' do
   name 'BearyChat'
   homepage 'https://bearychat.com/'
 
-  app 'BearyChat.app'
+  app '倍洽.app'
 
   zap trash: [
                '~/Preferences/com.node-webkit-builder.bearychat.plist',
