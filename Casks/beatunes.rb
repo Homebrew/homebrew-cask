@@ -1,6 +1,6 @@
 cask 'beatunes' do
-  version '5.1.4'
-  sha256 '4d1f1c6a32295d2796b453d2c46e03c41530729a306aa21126c0b5036b5489db'
+  version '5.1.5'
+  sha256 '19d383cacc9024bfc5bde8f77de3f2b7d770d32726a52c477307eb6b332ccf62'
 
   url "http://coxy.beatunes.com/download/beaTunes-#{version.dots_to_hyphens}.dmg"
   name 'beaTunes'
