@@ -5,7 +5,7 @@ cask 'xca' do
   # github.com/chris2511/xca was verified as official when first introduced to the cask
   url "https://github.com/chris2511/xca/releases/download/RELEASE.#{version}/xca-#{version}.dmg"
   appcast 'https://github.com/chris2511/xca/releases.atom',
-          checkpoint: '802f6d038e3e40197cfc9ea4f6b19bb786b1bddf1180821013c64a9e1a9af956'
+          checkpoint: '3789bafcf36898387b6a2db98ad3e3fca0dfa213e76f0df8152e6e0182304f2f'
   name 'XCA'
   homepage 'https://hohnstaedt.de/xca/'
 
