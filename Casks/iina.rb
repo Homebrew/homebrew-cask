@@ -1,6 +1,6 @@
 cask 'iina' do
-  version '0.0.15-build68'
-  sha256 '13a00db36b347229e65825b724f7823365016b14b59cfef80fa26dd782e3fc94'
+  version '0.0.15.1'
+  sha256 '5311c6ae8f00052720226c5e9ab8e3b3d6ab5e055e90b0fa606f4be5cc5358ff'
 
   # dl-portal.iina.io was verified as official when first introduced to the cask
   url "https://dl-portal.iina.io/IINA.v#{version}.dmg"
