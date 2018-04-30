@@ -1,6 +1,6 @@
 cask 'mactex' do
   version '2018.0417'
-  sha256 'e6ee8f69ca6e5ca5d20a31afc3dff3b4e5aa7a0b1b89ace9864ac22b10c34b98'
+  sha256 '8a4d13e5b39b6666c64fe2bb687237b6430402c295bbf96e554efacb359ca949'
 
   # mirror.ctan.org/systems/mac/mactex was verified as official when first introduced to the cask
   url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version.no_dots}.pkg"
