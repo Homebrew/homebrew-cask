@@ -1,6 +1,6 @@
 cask 'lulu' do
   version '0.9.4'
-  sha256 '7ed75e26527a96ef1367f9fe9365ab8e3fe131c161cf6681fde42bcc5b4203c5'
+  sha256 '2d19adffa19e4fedc9451bb8df6d990f2445c6df6f82051e854ff5453b14375a'
 
   # github.com/objective-see/LuLu was verified as official when first introduced to the cask
   url "https://github.com/objective-see/LuLu/releases/download/#{version}/LuLu_#{version.dots_to_underscores}.zip"
@@ -11,11 +11,7 @@ cask 'lulu' do
 
   depends_on macos: '>= :yosemite'
 
-  installer script: {
-                      executable: "#{staged_path}/Lulu Installer.app/Contents/Resources/configure.sh",
-                      args:       ['-install'],
-                      sudo:       true,
-                    }
+  installer manual: 'Lulu Installer.app'
 
   uninstall script: {
                       executable: "#{staged_path}/Lulu Installer.app/Contents/Resources/configure.sh",
