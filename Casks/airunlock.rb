@@ -7,7 +7,7 @@ cask 'airunlock' do
   appcast 'https://github.com/pinetum/AirUnlock-for-Mac/releases.atom',
           checkpoint: '9726ba88fbaae1966769444d7dc4f845602b2c4e0fdcb723ae9ef792db696bdb'
   name 'AirUnlock'
-  homepage 'http://airunlock.qtlin.tw/'
+  homepage 'https://airunlock.qtlin.tw/'
 
   app 'AirUnlock.app'
 end
