@@ -11,11 +11,7 @@ cask 'lulu' do
 
   depends_on macos: '>= :yosemite'
 
-  installer script: {
-                      executable: "#{staged_path}/Lulu Installer.app/Contents/Resources/configure.sh",
-                      args:       ['-install'],
-                      sudo:       true,
-                    }
+  installer manual: 'Lulu Installer.app'
 
   uninstall script: {
                       executable: "#{staged_path}/Lulu Installer.app/Contents/Resources/configure.sh",
