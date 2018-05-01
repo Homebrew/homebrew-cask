@@ -5,7 +5,7 @@ cask 'sabaki' do
   # github.com/SabakiHQ/Sabaki was verified as official when first introduced to the cask
   url "https://github.com/SabakiHQ/Sabaki/releases/download/v#{version}/sabaki-v#{version}-mac-x64.7z"
   appcast 'https://github.com/SabakiHQ/Sabaki/releases.atom',
-          checkpoint: '8437de691c3ef2f4b886ca18ab6c8e7a66f2ca8a0e88ead9d753854a2e1b6180'
+          checkpoint: '899592c5f2fcaf66b0497a644d8398a3ee313bb451792b616d5e3bad5618ba83'
   name 'Sabaki'
   homepage 'http://sabaki.yichuanshen.de/'
 
