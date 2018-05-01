@@ -26,4 +26,8 @@ cask 'programmer-dvorak' do
                        '/System/Library/Caches/com.apple.IntlDataCache.le*',
                        '/private/var/folders/*/*/-Caches-/com.apple.IntlDataCache.le*',
                      ]
+
+  caveats do
+    reboot
+  end
 end

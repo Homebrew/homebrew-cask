@@ -1,10 +1,10 @@
 cask 'tinymediamanager' do
-  version '2.9.8_6644bb9'
-  sha256 '02687a49ae252c30a96e467b4286d1783c23377662e9504fef7f6bee1dbb64cc'
+  version '2.9.10_a5ff08a'
+  sha256 '72eec5d6ba414ac796df3983ff79cdc465413fda22394ecedbe856b0a45860c9'
 
   url "https://release.tinymediamanager.org/dist/tmm_#{version}_mac.zip"
   appcast 'https://release.tinymediamanager.org/',
-          checkpoint: 'daaa35bd818ca2d7412abca29079af4ffde5bdb833ae87f843c6136ada4c4239'
+          checkpoint: '8be22db36327aa033aa20ae80ba534b1b27a1b426fce101210f3cdc8f7a4501c'
   name 'tinyMediaManager'
   homepage 'https://www.tinymediamanager.org/'
 

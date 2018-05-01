@@ -1,11 +1,11 @@
 cask 'copyq' do
-  version '3.3.1'
-  sha256 'd540025f8cce65973869781e733cd3238cdbff1a9d9083c35366945f32bcde5b'
+  version '3.4.0'
+  sha256 '8b8f066c1383debb23d0e2e4832f42f889ec0d830410a3da6115a4dd3a8d6810'
 
   # github.com/hluk/CopyQ was verified as official when first introduced to the cask
   url "https://github.com/hluk/CopyQ/releases/download/v#{version}/CopyQ.dmg"
   appcast 'https://github.com/hluk/CopyQ/releases.atom',
-          checkpoint: '760bc59649dfb15adb109f61732066bf285caab551eca2417e0708f82db038f2'
+          checkpoint: 'e5569c6f53e7b2ee83a40b6e146fa58809c8ffddd769238eb0bc7047184612cf'
   name 'CopyQ'
   homepage 'https://hluk.github.io/CopyQ/'
 

@@ -1,6 +1,6 @@
 cask 'unity-linux-support-for-editor' do
-  version '2017.3.1f1,fc1d3344e6ea'
-  sha256 '58e7166b0d354cfb82e37bbc07b790cf3d295416479f8ee52ec1b41bc5959da8'
+  version '2017.4.1f1,9231f953d9d3'
+  sha256 '2497328952944e9f6aab796e96e549046d272641f7bc026c5c6348669ca5f6d4'
 
   url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Linux-Support-for-Editor-#{version.before_comma}.pkg"
   name 'Unity Linux Build Support'
