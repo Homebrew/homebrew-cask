@@ -4,7 +4,7 @@ cask 'mtmr' do
 
   url "https://github.com/Toxblh/MTMR/releases/download/v#{version}/MTMR-#{version}.dmg"
   appcast 'https://github.com/Toxblh/MTMR/releases.atom',
-          checkpoint: '0c4e9767c884935ab3675c200ef121cdb5d0872e7794d41ba5256dd30fbeb3a2'
+          checkpoint: '56a4be29f5be421c9f5d9098b2a536faa78f3dd5c2785c0c983331f521408a10'
   name 'My TouchBar. My rules'
   homepage 'https://github.com/Toxblh/MTMR'
 
