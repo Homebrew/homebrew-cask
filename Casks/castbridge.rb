@@ -1,11 +1,11 @@
 cask 'castbridge' do
-  version '1.0.5'
-  sha256 '1df0898d856e0743f0c871199c8e71847706185dacf305576cb53b4f136394c3'
+  version '1.0.7'
+  sha256 '9cb9b74e73735c8e3dcbc95c329d1431b522d8d8c61b0e9749391665ee667b22'
 
   # s3.amazonaws.com/updates.castbridge.io was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/updates.castbridge.io/Castbridge-#{version}-mac.zip"
   appcast 'https://s3.amazonaws.com/updates.castbridge.io/latest-mac.json',
-          checkpoint: '878a480ac7b53f0166d33a2c95da9cf0501ed75c6c6cf7241268945b232f496d'
+          checkpoint: '4020c048dacd6ec25b5404af53108e2ff716e4e52b9e9388845815bbdf0d0784'
   name 'Castbridge'
   homepage 'https://castbridge.io/'
 
