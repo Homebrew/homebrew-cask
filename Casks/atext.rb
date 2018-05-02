@@ -8,6 +8,8 @@ cask 'atext' do
   name 'aText'
   homepage 'https://www.trankynam.com/atext/'
 
+  auto_updates true
+
   app 'aText.app'
 
   zap trash: [
