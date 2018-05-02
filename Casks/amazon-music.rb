@@ -7,6 +7,8 @@ cask 'amazon-music' do
   name 'Amazon Music'
   homepage 'https://www.amazon.com/musicapps'
 
+  auto_updates true
+
   installer script: {
                       executable: 'Amazon Music Installer.app/Contents/MacOS/osx-intel',
                       args:       ['--unattendedmodeui', 'none'],
