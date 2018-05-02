@@ -1,6 +1,6 @@
 cask 'avocode' do
-  version '2.24.0'
-  sha256 '0a8808130b42a922ff621b0f469f26130fcea6a2a1fbafd89c693c18f9ebb18e'
+  version '2.25.2'
+  sha256 '94c657bc3bcfbf8ac46e8f089abb6b09a215372aaa74609fc5e61c5ff0e545d8'
 
   url "https://media.avocode.com/download/avocode-app/#{version}/Avocode-#{version}-mac.zip"
   name 'Avocode'
