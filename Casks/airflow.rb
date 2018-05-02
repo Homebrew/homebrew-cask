@@ -9,6 +9,8 @@ cask 'airflow' do
   name 'Airflow'
   homepage 'https://airflowapp.com/'
 
+  auto_updates true
+
   app 'Airflow.app'
 
   zap trash: [
