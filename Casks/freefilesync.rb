@@ -7,6 +7,10 @@ cask 'freefilesync' do
   name 'FreeFileSync'
   homepage 'https://www.freefilesync.org/'
 
-  app 'FreeFileSync.app'
-  app 'RealTimeSync.app'
+  pkg "FreeFileSync_#{version}_macOS.pkg"
+
+  uninstall pkgutil: [
+                       'org.freefilesync.pkg.FreeFileSync',
+                       'org.freefilesync.pkg.RealTimeSync',
+                     ]
 end
