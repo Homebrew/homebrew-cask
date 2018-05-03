@@ -8,7 +8,7 @@ cask 'camtwist' do
 
   pkg 'CamTwist.pkg'
 
-  uninstall script:  { executable: 'Manual Install/CamTwist/uninstall.command' },
-            pkgutil: 'com.allocinit.camtwist.*',
-            launchd: 'com.allocinit.camtwist.dal'
+  uninstall script:    { executable: 'Manual Install/CamTwist/uninstall.command' },
+            pkgutil:   'com.allocinit.camtwist.*',
+            launchctl: 'com.allocinit.camtwist.dal'
 end
