@@ -3,13 +3,13 @@ cask 'screaming-frog-seo-spider' do
     version '2.40'
     sha256 'f37a517cb1ddb13a0621ae2ef98eba148027b3a2b5ce56b6e6b4ca756e40329b'
   else
-    version '8.3'
-    sha256 'd5b0123c57f6294cd1aed83a9a4efd48549177de700b5832d1730a6970838e4c'
+    version '9.2'
+    sha256 'f7162a978b5412bc437580117f1a20a459594a3533c3e9caa5d6e1f7900a20b2'
   end
 
   url "https://download.screamingfrog.co.uk/products/seo-spider/ScreamingFrogSEOSpider-#{version}.dmg"
   appcast 'https://www.screamingfrog.co.uk/wp-content/themes/screamingfrog/inc/download-modal.php',
-          checkpoint: '25054900a5f73770ce702561681f366552b070932c63a1ae582459650c9a82ff'
+          checkpoint: 'ca3f7b45b66efdc6e74aee182f83352b9f21f279466b74f35424057f4711baf3'
   name 'Screaming Frog SEO Spider'
   homepage 'https://www.screamingfrog.co.uk/seo-spider/'
 
