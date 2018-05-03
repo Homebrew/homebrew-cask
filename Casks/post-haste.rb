@@ -1,10 +1,12 @@
 cask 'post-haste' do
-  version '2.6.1,2610'
-  sha256 '935b89c608765a144bc9f3c472a6960032904ee5cc09963fdbb93953a5428453'
+  version '2.6.3,2630'
+  sha256 'effe6fd53599e039dcc9b636cf6f0c09c72edbc1f2913213a426a762a079f60d'
 
   url "https://www.digitalrebellion.com/download/posthaste?version=#{version.after_comma}"
   name 'Post Haste'
   homepage 'https://www.digitalrebellion.com/posthaste/'
+
+  depends_on macos: '>= :mountain_lion'
 
   app 'Post Haste.app'
 
