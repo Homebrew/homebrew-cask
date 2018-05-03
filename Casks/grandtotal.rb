@@ -4,9 +4,9 @@ cask 'grandtotal' do
 
   url "https://mediaatelier.com/GrandTotal#{version.major}/GrandTotal_#{version}.zip"
   appcast "https://mediaatelier.com/GrandTotal#{version.major}/feed.php",
-          checkpoint: '36f9f96d1cedbc9cfc533fcedf45caae91c26a47c8c344bf47385d3ff6df7168'
+          checkpoint: '71a8a512a3dcfbe13db2652050c02f894560198ce426cffe2f1c3333e71b4183'
   name 'GrandTotal'
-  homepage 'https://www.mediaatelier.com/GrandTotal5/'
+  homepage "https://www.mediaatelier.com/GrandTotal#{version.major}/"
 
   depends_on macos: '>= :mountain_lion'
 
