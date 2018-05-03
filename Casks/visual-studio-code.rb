@@ -5,7 +5,7 @@ cask 'visual-studio-code' do
   # az764295.vo.msecnd.net/stable was verified as official when first introduced to the cask
   url "https://az764295.vo.msecnd.net/stable/#{version.after_comma}/VSCode-darwin-stable.zip"
   appcast 'https://vscode-update.azurewebsites.net/api/update/darwin/stable/VERSION',
-          checkpoint: '5e76fa46be9175bf3c77e0b12a3d912d566004fff21d97ea1b87fabe8c164c51'
+          checkpoint: 'f52d96a5ab4d9b86cf3efbdf221450f0ca0eb61e4f64de655be446c0cba58aec'
   name 'Microsoft Visual Studio Code'
   name 'VS Code'
   homepage 'https://code.visualstudio.com/'
