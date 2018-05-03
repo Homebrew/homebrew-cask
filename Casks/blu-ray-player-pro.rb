@@ -1,10 +1,10 @@
 cask 'blu-ray-player-pro' do
-  version '3.2.22'
-  sha256 'f90b39874b1c446fe20ade2a2b120bd3d4f4387b7b387a3309fbeadc60849762'
+  version '3.2.23'
+  sha256 'cd3a0e67b1f3cd740475e40c5236b22f470c71c0ee6003b937d560591408fb18'
 
   url 'https://www.macblurayplayer.com/user/download/Macgo_Mac_Bluray_Player_Pro.dmg'
   appcast 'https://macblurayplayer.com/products/mac-bluray-player-pro/Appcast.xml',
-          checkpoint: 'a246aad9a7b262a9a7ae7cb701a7db30d72b6fda1f0113d765c8e49c51e22232'
+          checkpoint: '6678ca6d4f96fbd88f0a0bfa796104ec59d664b71767d5aea886761ec6d1077e'
   name 'Macgo Mac Blu-ray Player Pro'
   homepage 'https://www.macblurayplayer.com/'
 
