@@ -4,7 +4,7 @@ cask 'next' do
 
   url "https://github.com/nEXT-Browser/nEXT/releases/download/#{version}/nEXT.dmg"
   appcast 'https://github.com/nEXT-Browser/nEXT/releases.atom',
-          checkpoint: 'f5dec83b8e73c75011c335ec2e57be3a9b4c60f52246650657f68a89247db1e4'
+          checkpoint: '87d4619eaf4bb026c226f87fb2a57dbf601a64f21698dfbcc8ff43cb49b4516d'
   name 'nEXT-Browser'
   homepage 'https://github.com/nEXT-Browser/nEXT'
 
