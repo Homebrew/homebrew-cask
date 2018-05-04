@@ -10,4 +10,8 @@ cask 'spek' do
   homepage 'http://spek.cc/'
 
   app 'Spek.app'
+
+  if MacOS.version >= :high_sierra
+    opoo 'Spek may not work for some users on High Sierra. There are forks with compatibility, but they are not currently available on Homebrew. See https://github.com/caskroom/homebrew-cask/pull/46109 for more information.'
+  end
 end
