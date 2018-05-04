@@ -8,7 +8,7 @@ cask 'svgcleaner' do
   name 'SVG Cleaner'
   homepage 'https://github.com/RazrFalcon/svgcleaner-gui/'
 
-  app 'SVG Cleaner.app'
+  app 'SVGCleaner.app'
   binary "#{appdir}/SVG Cleaner.app/Contents/MacOS/svgcleaner-cli", target: 'svgcleaner'
 
   zap trash: [
