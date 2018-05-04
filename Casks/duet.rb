@@ -5,7 +5,7 @@ cask 'duet' do
   # duet.nyc3.digitaloceanspaces.com/Mac was verified as official when first introduced to the cask
   url "https://duet.nyc3.digitaloceanspaces.com/Mac/#{version.major_minor.dots_to_underscores}/duet-#{version.dots_to_hyphens}.zip"
   appcast 'https://updates.duetdisplay.com/checkMacUpdates',
-          checkpoint: 'c0c43acdfb45bb85c673c36e191d16a74c46105f8bfdbb185de75bd9172b1624'
+          checkpoint: '270f84ed37f5dddc8fabcb31e3a3bccd71942cf00612782f7e127ed770b5822f'
   name 'Duet'
   homepage 'https://www.duetdisplay.com/'
 
