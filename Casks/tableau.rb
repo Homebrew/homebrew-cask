@@ -13,6 +13,7 @@ cask 'tableau' do
   uninstall pkgutil: [
                        'com.amazon.redshiftodbc',
                        'simba.sparkodbc',
+                       'com.simba.sparkodbc',
                        'com.simba.sqlserverodbc',
                        'com.tableausoftware.Desktop.app',
                        'com.tableausoftware.DesktopShortcut',
