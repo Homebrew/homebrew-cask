@@ -1,5 +1,5 @@
 cask 'karabiner-elements' do
-  if MacOS.version <= :el_capitan
+  if MacOS.version = :el_capitan
     version '11.6.0'
     sha256 'c1b06252ecc42cdd8051eb3d606050ee47b04532629293245ffdfa01bbc2430d'
   else
@@ -14,7 +14,7 @@ cask 'karabiner-elements' do
   homepage 'https://pqrs.org/osx/karabiner/'
 
   auto_updates true
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :el_capitan'
 
   pkg 'Karabiner-Elements.sparkle_guided.pkg'
 
