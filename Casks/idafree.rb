@@ -7,7 +7,7 @@ cask 'idafree' do
   homepage 'https://www.hex-rays.com/index.shtml'
 
   installer script: {
-                      executable: "idafree#{version.no_dots}_mac.app/Contents/MacOS/installbuilder.sh",
+                      executable: "idafree-#{version}-osx-installer.app/Contents/MacOS/installbuilder.sh",
                       args:       ['--mode', 'unattended'],
                     }
 
