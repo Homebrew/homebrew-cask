@@ -62,7 +62,7 @@ If your issue persists, search for it before opening a new one. If you find an o
 ## Requests
 
 * Cask requests will be automatically closed. If you want a cask added, [submit a pull request](https://github.com/caskroom/homebrew-cask/blob/master/CONTRIBUTING.md#adding-a-cask).
-* For a feature request, [use this template][feature_request]
+* For a feature request, [use this template](/issues/new?template=feature_request.md).
 
 ## Questions? Wanna chat?
 
@@ -74,5 +74,3 @@ We’re really rather friendly! Here are the best places to talk about the proje
 
 ## License
 Code is under the [BSD 2 Clause (NetBSD) license](LICENSE)
-
-[feature_request]: https://github.com/caskroom/homebrew-cask/issues/new?title=Feature%20request%3A&body=%23%23%23%20Description%20of%20feature%2Fenhancement%0A%0A%0A%0A%23%23%23%20Justification%0A%0A%0A%0A%23%23%23%20Example%20use%20case%0A%0A%0A%0A
