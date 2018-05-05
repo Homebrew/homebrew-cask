@@ -28,19 +28,19 @@ cask 'cocktail' do
     appcast 'https://www.maintain.se/downloads/sparkle/elcapitan/elcapitan.xml',
             checkpoint: '7d3fd5bf0b5816bc3971adfea9e571619e589ee6c30c6fcd6f0c5a1de21026da'
   elsif MacOS.version == :sierra
-    version '10.7'
-    sha256 '3a95af784d20292a1c13facf8b2723d04b851be6b5588ccb04feb66fd662a3e1'
+    version '10.7.1'
+    sha256 'c964f766e778a68012245f55b82b3fab7db513c4d5d1e602652fd953aa0e534a'
 
     url "https://www.maintain.se/downloads/sparkle/sierra/Cocktail_#{version}.zip"
     appcast 'https://www.maintain.se/downloads/sparkle/sierra/sierra.xml',
-            checkpoint: '0d23c39ce963bd9cb04b9e5abd3b83257514aa984a769a473c2925371dda860d'
+            checkpoint: '15833c8b6a5bba370593e19a22545a1d28f0acbd1d3886fef41a65bd22425f77'
   else
-    version '11.5.1'
-    sha256 'b3cb51e2cffe60c6d9d6c319af91a09c3ae9e71108e1e64a78cea6f7f2ad4f38'
+    version '11.5.2'
+    sha256 'a84008849db3bc511a27e26f8f9476c0822d7da6494f4c1dfe01df4583af6746'
 
     url "https://www.maintain.se/downloads/sparkle/highsierra/Cocktail_#{version}.zip"
     appcast 'https://www.maintain.se/downloads/sparkle/highsierra/highsierra.xml',
-            checkpoint: '54a0357632e39ef388819be6ce846dacb6b7163340d3d7e3e14bb74f9dc4b77a'
+            checkpoint: '893765d804c2d1df015a5ba1a123292487de609809abffba6db9eee5a599a36c'
   end
 
   name 'Cocktail'
