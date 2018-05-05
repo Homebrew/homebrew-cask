@@ -8,7 +8,7 @@ cask 'fuse' do
 
   depends_on macos: '>= :mavericks'
 
-  pkg "fuse_osx_#{version.dots_to_underscores}"
+  pkg "fuse_osx_#{version.dots_to_underscores}.pkg"
 
   uninstall pkgutil: 'com.fusetools.fuse'
 end
