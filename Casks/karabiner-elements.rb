@@ -1,5 +1,5 @@
 cask 'karabiner-elements' do
-  if MacOS.version = :el_capitan
+  if MacOS.version == :el_capitan
     version '11.6.0'
     sha256 'c1b06252ecc42cdd8051eb3d606050ee47b04532629293245ffdfa01bbc2430d'
   else
