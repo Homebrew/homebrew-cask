@@ -4,8 +4,8 @@ cask 'qdesktop' do
 
   # github.com/qvacua/qdesktop was verified as official when first introduced to the cask
   url "https://github.com/qvacua/qdesktop/releases/download/v#{version}/Qdesktop-#{version.major_minor_patch}.zip"
-  appcast 'http://qvacua.com/qdesktop/appcast.xml',
-          checkpoint: '0b0de69503c4c5c113458705f0ca13e91bc87c0ca91e8a395ca25d5d80d39384'
+  appcast 'https://github.com/qvacua/qdesktop/releases.atom',
+          checkpoint: '3315189f2786ae5c1423da690d6d512af3b3f8f0b309eecf0b78e0f3c607798c'
   name 'Qdesktop'
   homepage 'http://qvacua.com/'
 
