@@ -62,7 +62,7 @@ If your issue persists, search for it before opening a new one. If you find an o
 ## Requests
 
 * Cask requests will be automatically closed. If you want a cask added, [submit a pull request](https://github.com/caskroom/homebrew-cask/blob/master/CONTRIBUTING.md#adding-a-cask).
-* For a feature request, [use this template](/issues/new?template=feature_request.md).
+* For a feature request, [use this template](https://github.com/caskroom/homebrew-cask/issues/new?template=02_feature_request.md).
 
 ## Questions? Wanna chat?
 
