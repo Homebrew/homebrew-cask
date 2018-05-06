@@ -1,11 +1,11 @@
 cask 'oni' do
-  version '0.3.2'
-  sha256 '86f45c6e933f128402a48ec4e62028acd0a4e2e90b6d17f6bb5db08bd9ac8fff'
+  version '0.3.4'
+  sha256 'a1570ab7b4b878c5aab1a9b872e0d59d48f0197ab6d719bf36e1d288dd62eefe'
 
   # github.com/onivim/oni was verified as official when first introduced to the cask
   url "https://github.com/onivim/oni/releases/download/v#{version}/Oni-#{version}-osx.dmg"
   appcast 'https://github.com/onivim/oni/releases.atom',
-          checkpoint: 'bed10e7113934eb3b96bdc5841d6784e870370800ba43f905a752642898a030a'
+          checkpoint: '97cdb2e4f24ce64f80a0d8461bda74a4aaf5d3826e8df24ffdbeef7909bdde3d'
   name 'Oni'
   homepage 'https://www.onivim.io/'
 
