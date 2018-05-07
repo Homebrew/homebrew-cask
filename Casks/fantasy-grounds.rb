@@ -1,4 +1,4 @@
-cask 'fantasygrounds' do
+cask 'fantasy-grounds' do
   version :latest
   sha256 :no_check
 
