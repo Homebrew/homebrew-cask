@@ -4,7 +4,7 @@ cask 'ricochet' do
 
   url "https://ricochet.im/releases/#{version.major_minor_patch}/ricochet-#{version}-macos.dmg"
   appcast 'https://github.com/ricochet-im/ricochet/releases.atom',
-          checkpoint: 'a4e6947602fdb6f03be93ab1f0cd18426a21e6486c61a28a1d1b12696713fbb4'
+          checkpoint: 'fc41c126784651701522d0621c28b0c6b2a2f22e3f213511bffe5cbd9f67e172'
   name 'Ricochet'
   homepage 'https://ricochet.im/'
   gpg "#{url}.asc", key_id: '9032cae4cbfa933a5a2145d5ff97c53f183c045d'
