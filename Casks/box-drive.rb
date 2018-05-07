@@ -10,25 +10,25 @@ cask 'box-drive' do
   app 'Box.app'
   pkg 'Box.pkg'
 
-  uninstall quit:[
-    'com.box.Box-Local-Com-Server',
-    'com.box.desktop',
-    'com.box.desktop.findersyncext',
-    'com.box.desktop.helper',
-    'com.box.desktop.ui'
-  ],
-    script: {
-      executable: "/Library/Application Support/Box/uninstall_box_drive"
-    }
+  uninstall quit:   [
+                      'com.box.Box-Local-Com-Server',
+                      'com.box.desktop',
+                      'com.box.desktop.findersyncext',
+                      'com.box.desktop.helper',
+                      'com.box.desktop.ui',
+                    ],
+            script: {
+                      executable: '/Library/Application Support/Box/uninstall_box_drive',
+                    }
 
   zap trash: [
                '~/Library/Application Support/Box/Box',
                '~/Library/Logs/Box/Box',
              ],
       rmdir: [
-        '~/Library/Application Support/Box/Box',
-        '~/Library/Containers/com.box.desktop.findersyncext'
-      ]
+               '~/Library/Application Support/Box/Box',
+               '~/Library/Containers/com.box.desktop.findersyncext',
+             ]
 
   caveats <<~EOS
     If you currently have Box Sync installed, uninstall Box Sync before installing Box Drive.
