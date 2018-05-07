@@ -13,7 +13,7 @@ cask 'box-drive' do
 
   uninstall pkgutil:   'com.box.desktop.installer.*',
             launchctl: 'com.box.desktop.*',
-            script:    { executable: '/Library/Application Support/Box/uninstall_box_drive' },
+            script:    { executable: '/Library/Application Support/Box/uninstall_box_drive', sudo: true },
             quit:      [
                          'com.box.Box-Local-Com-Server',
                          'com.box.desktop',
