@@ -4,7 +4,7 @@ cask 'fog' do
 
   url "https://github.com/vitorgalvao/fog/releases/download/#{version}/Fog-#{version}-mac.zip"
   appcast 'https://github.com/vitorgalvao/fog/releases.atom',
-          checkpoint: '24393c6b6e6171304c85a179b4e54ff1f2fd4b432a2b1f104be1261021ce438b'
+          checkpoint: 'bce87096bbb42438431dac20096735cbd5fbf820d6d38ee7f3e87b5248e73422'
   name 'Fog'
   homepage 'https://github.com/vitorgalvao/fog'
 
