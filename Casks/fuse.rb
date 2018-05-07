@@ -7,8 +7,15 @@ cask 'fuse' do
   homepage 'https://www.fusetools.com/'
 
   depends_on macos: '>= :mavericks'
+  container type: :pkg
 
-  pkg "fuse_osx_#{version.dots_to_underscores}.pkg"
+  pkg 'fuse.pkg'
+
+  # This is a horrible hack to force the file extension.
+  # The backend code should be fixed so that this is not needed.
+  preflight do
+    system_command '/bin/mv', args: ['--', staged_path.join('osx'), staged_path.join('fuse.pkg')]
+  end
 
   uninstall pkgutil: 'com.fusetools.fuse'
 end
