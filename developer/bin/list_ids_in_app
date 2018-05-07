@@ -146,7 +146,7 @@ Bundle IDs attributed to Apple and common developer frameworks
 are excluded from the output.
 
 If a given app is currently running, it will be followed by a plus
-symbol '(+)' in the output.  This can be verified via the command
+symbol '(+)' in the output. This can be verified via the command
 
     list_running_app_ids | grep 'app.id.goes.here'
 
