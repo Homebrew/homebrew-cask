@@ -5,7 +5,7 @@ cask 'onionshare' do
   # github.com/micahflee/onionshare was verified as official when first introduced to the cask
   url "https://github.com/micahflee/onionshare/releases/download/v#{version}/OnionShare-#{version}.pkg"
   appcast 'https://github.com/micahflee/onionshare/releases.atom',
-          checkpoint: 'f230e50bf649344715d0b53668f059566f16cfe487deb61dddbd0583477f9952'
+          checkpoint: 'b55b8645a8d5ebf916ff4d753d84ae152a59990ec0a16cee9e49aa983435b862'
   name 'OnionShare'
   homepage 'https://onionshare.org/'
   gpg "#{url}.sig", key_url: 'https://onionshare.org/signing-key.asc'
