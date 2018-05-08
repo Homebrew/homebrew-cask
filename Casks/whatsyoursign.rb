@@ -11,7 +11,7 @@ cask 'whatsyoursign' do
 
   depends_on macos: '>= :yosemite'
 
-  installer manual: 'WhatsYourSign_Installer.app'
+  installer manual: 'WhatsYourSign Installer.app'
 
   uninstall_preflight do
     system_command '/usr/bin/pluginkit', args: ['-r', '/Applications/WhatsYourSign.app/Contents/PlugIns/WhatsYourSign.appex']
