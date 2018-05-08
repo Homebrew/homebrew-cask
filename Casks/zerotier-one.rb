@@ -10,5 +10,6 @@ cask 'zerotier-one' do
 
   pkg 'ZeroTier One.pkg'
 
-  uninstall pkgutil: 'com.zerotier.pkg.ZeroTierOne'
+  uninstall pkgutil: 'com.zerotier.pkg.ZeroTierOne',
+            kext:    'com.zerotier.tap'
 end
