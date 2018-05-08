@@ -1,11 +1,11 @@
 cask 'subutai-control-center' do
-  version '6.9.2'
-  sha256 'a766fe8d765f571302a8ecc71c66c596c2d17e50ede07310f0eb2e58186e3e1a'
+  version '6.10.0'
+  sha256 '6d11367d7ae44124aea364c35e00217118c29f58b5288a2b567d1aee884dd755'
 
   # cdn.subutai.io:8338/kurjun/rest/raw was verified as official when first introduced to the cask
   url 'https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center.pkg'
   appcast 'https://github.com/subutai-io/control-center/releases.atom',
-          checkpoint: 'f730e1aafcfba07def5f1284f3741039e4e94317d62d7622707babfb0e17c1ce'
+          checkpoint: 'e9212afc4368bd27fc509dd59b030a194316180793f3f4123b46f6e7eaa3a194'
   name 'Subutai Tray'
   homepage 'https://subutai.io/'
 
