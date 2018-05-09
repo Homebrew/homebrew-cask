@@ -5,7 +5,7 @@ cask 'sage' do
   elsif MacOS.version <= :el_capitan
     version '7.6,10.11.6'
     sha256 'ba9ffba5dea394dc808c31a7b71af4d0db9759d9440b4dc2e35c921bd03e916f'
-    elif MacOS.version <= :sierra
+  elsif MacOS.version <= :sierra
     version '8.1,10.12.6'
     sha256 'bd795369398873ccd26bae7e4ccc67370799d3038bebab911a626f496eba6d33'
   else
