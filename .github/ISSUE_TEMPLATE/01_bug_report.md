@@ -1,7 +1,13 @@
+---
+name: Bug Report
+about: Create a report to help us improve
+
+---
+
 #### General troubleshooting steps
 
 - [ ] I have retried my command with `--force` and the issue is still present.
-- [ ] I have checked the instructions for [reporting bugs](https://github.com/caskroom/homebrew-cask#reporting-bugs) (or [making requests](https://github.com/caskroom/homebrew-cask#requests)) before opening the issue.
+- [ ] I have checked the instructions for [reporting bugs](https://github.com/caskroom/homebrew-cask#reporting-bugs).
   - [ ] None of the templates was appropriate for my issue, or I’m not sure.
 - [ ] I ran `brew update-reset && brew update` and retried my command.
 - [ ] I ran `brew doctor`, fixed as many issues as possible and retried my command.

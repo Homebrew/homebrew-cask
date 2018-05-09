@@ -1,12 +1,12 @@
 cask 'listen1' do
   # note: "1" is not a version number, but an intrinsic part of the product name
-  version '1.5.2'
-  sha256 '69b1c07a91a0a2e3ff90ecebe54faf021978248cfe016fd821d02fd1ca437f89'
+  version '1.6.0'
+  sha256 '036281f54d0d9bb53ee48a265f60c97e57d3dc51b30ca28d2bc05d91c7b9d756'
 
   # github.com/listen1/listen1_desktop was verified as official when first introduced to the cask
-  url "https://github.com/listen1/listen1_desktop/releases/download/v#{version}/Listen1_#{version}_mac.dmg"
+  url "https://github.com/listen1/listen1_desktop/releases/download/v#{version}/Listen1_#{version}_mac.dmg.zip"
   appcast 'https://github.com/listen1/listen1_desktop/releases.atom',
-          checkpoint: '75c58a7854e9bbd5a371a34b8793a5c7ead5ee83cc5efdebad3e8006074b723a'
+          checkpoint: '56e02d4ccc421e2d395eaecec1c3affea2246758c8b43dcc51a54acc26d0f136'
   name 'Listen 1'
   homepage 'https://listen1.github.io/listen1/'
 

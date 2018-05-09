@@ -1,8 +1,8 @@
 cask 'autopano-pro' do
-  version '4.2.3'
-  sha256 '07fb35d00fa7f8926e00ede0031ef1c56a6e0e89d1f3d7485b4fa00da765fb99'
+  version '4.4.1'
+  sha256 '6cd18f7be14e12e3bec9c9b409c5e3d0e2d095d291dfd1e75923589f0ac052b1'
 
-  url 'http://download.kolor.com/app/stable/macleopard'
+  url 'http://download.kolor.com/app/stable/mac'
   name 'Autopano Pro'
   homepage 'https://www.kolor.com/autopano/'
 

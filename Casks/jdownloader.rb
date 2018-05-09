@@ -16,8 +16,8 @@ cask 'jdownloader' do
                                    '-q',
                                    '-Dinstall4j.suppressStdout=true',
                                    '-Dinstall4j.debug=false',
-                                   '-VcreateDesktopLinkAction\$Boolean=false',
-                                   '-VaddToDockAction\$Boolean=false'
+                                   '-VcreateDesktopLinkAction$Boolean=false',
+                                   '-VaddToDockAction$Boolean=false'
                                  ],
                    print_stderr: false
   end

@@ -1,10 +1,10 @@
 cask 'keep' do
-  version '1.1.0'
-  sha256 'a99cfdb175ef78c7c4a28e9eb474f17cfc5b6ee445916a54b0bc1d17cecf3b93'
+  version '1.2.0'
+  sha256 'e5753208da6a1ae9a401e34389fa4cf71080647986981cbe389eed40ba86e9d5'
 
   url "https://github.com/tmcinerney/keep/releases/download/v#{version}/keep.v#{version}.zip"
   appcast 'https://github.com/tmcinerney/keep/releases.atom',
-          checkpoint: 'cbb5e057b2d05a48a142c24359c17e0f52ef199d8892e206641f1386dc2adefc'
+          checkpoint: '5684ce7a304df84d34b1c7e7c78b123f87df1fd9f60dc132ba995c7671fb60eb'
   name 'Keep'
   homepage 'https://github.com/tmcinerney/keep/'
 

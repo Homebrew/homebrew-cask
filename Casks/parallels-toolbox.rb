@@ -1,6 +1,6 @@
 cask 'parallels-toolbox' do
-  version '2.0.2-1213'
-  sha256 '6c11c2bae46dbe7138cf48a921ca595bedec91b977153ea1908484af36d0d0eb'
+  version '2.5.1-1406'
+  sha256 'c6afc9a2c624d2c298ed37fda840b13782d8858dcf671076d9b37c7a3a9859ce'
 
   url "https://download.parallels.com/toolbox/v#{version.major}/#{version}/ParallelsToolbox-#{version}.dmg"
   name 'Parallels Toolbox'

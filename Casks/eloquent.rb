@@ -1,10 +1,10 @@
 cask 'eloquent' do
-  version '2.6.0'
-  sha256 '759fce0eb74900858e9eb8146f515f9fc05fa1e519708576f9322f13164261d2'
+  version '2.6.2'
+  sha256 'b3c979608b74757cc6ff4acc0c753394960f75a2d0e15f908a8895e1f2113ecb'
 
   url "https://github.com/mdbergmann/Eloquent/releases/download/#{version}/Eloquent-#{version}.app.zip"
   appcast 'https://github.com/mdbergmann/Eloquent/releases.atom',
-          checkpoint: '192dd4e82b93dc6cbbc7a5206f304694358e957d69aac610323174489df160b4'
+          checkpoint: 'd528eebc120b918aea3997822d21a1feab04a29e2ef18f788b00d46b698e7644'
   name 'Eloquent'
   homepage 'https://github.com/mdbergmann/Eloquent'
 

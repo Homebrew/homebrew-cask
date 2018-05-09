@@ -1,11 +1,11 @@
 cask 'vagrant' do
-  version '2.0.4'
-  sha256 '105fb631d5ae29f9f01d9680f52ba31e63727fefd77f360df9e91a528c354d01'
+  version '2.1.1'
+  sha256 '9d1798396f05b8c39f65f1e7878f088302546a5baa59846fbf461589d76e3e1f'
 
   # hashicorp.com/vagrant was verified as official when first introduced to the cask
   url "https://releases.hashicorp.com/vagrant/#{version}/vagrant_#{version}_x86_64.dmg"
   appcast 'https://github.com/hashicorp/vagrant/releases.atom',
-          checkpoint: '623a632723cdac4d06686439afa55f4c30385522340dfcd709ebaca504b5103b'
+          checkpoint: '7250082af1d3bcc5f7db5046b1815a3eea721a950003ac8054e0a662a1844af3'
   name 'Vagrant'
   homepage 'https://www.vagrantup.com/'
 

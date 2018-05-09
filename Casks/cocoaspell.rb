@@ -28,7 +28,7 @@ cask 'cocoaspell' do
              ]
 
   caveats <<~EOS
-    Non-English dictionaries must be installed separately.  For more information, see
+    Non-English dictionaries must be installed separately. For more information, see
 
       http://people.ict.usc.edu/~leuski/cocoaspell/install_dict.php
   EOS

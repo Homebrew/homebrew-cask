@@ -1,6 +1,6 @@
 cask 'stubbymanager' do
-  version '0.1.0,6782984'
-  sha256 'b6b7bf8aee217ca66c2fb99a079e89d90f3c251c37bdcc07ef8706702f157c3d'
+  version '0.2.0,6782984'
+  sha256 'be6dd379d8fc9c5dc05352ba97f901d86380621b1e0e6acbe771448a8618e191'
 
   url "https://dnsprivacy.org/wiki/download/attachments/#{version.after_comma}/StubbyManager.pkg"
   name 'StubbyManager'

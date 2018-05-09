@@ -1,6 +1,6 @@
 cask 'geneious' do
-  version '11.0.3'
-  sha256 '3081659f25dc9686bf390dab5bbb46f8a8e18ec7b5614f4773206cf06ba52cf4'
+  version '11.1.4'
+  sha256 'c7bde6956e7dd35178d60c5fa7aca5f0475cff0fc9e9ab35f492eae8c9f39aea'
 
   url "https://assets.geneious.com/installers/geneious/release/Geneious_mac64_#{version.dots_to_underscores}_with_jre.dmg"
   name 'Geneious'

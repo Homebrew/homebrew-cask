@@ -1,6 +1,6 @@
 cask 'todour' do
-  version '2.07'
-  sha256 '739d3c94d87953aff53f2a25a495b82987c90b8c3fe858db2f1dfd2f58e366af'
+  version '2.10'
+  sha256 'e5f1fb8b4d115793155662937aa36fae99d78463e3b47990e0147610e83ab613'
 
   url "http://nerdur.com/Todour-#{version}.dmg"
   name 'Todour'
