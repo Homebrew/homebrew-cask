@@ -4,7 +4,7 @@ cask 'starlogo-tng' do
 
   url "http://web.mit.edu/mitstep/starlogo-tng/download/version#{version.dots_to_hyphens}/tngmavericks.dmg"
   name 'StarLogo TNG'
-  homepage 'https://web.mit.edu/mitstep/starlogo-tng/download/index.html'
+  homepage 'http://web.mit.edu/mitstep/starlogo-tng/download/index.html'
 
   suite "StarLogo TNG #{version} Mac"
 end
