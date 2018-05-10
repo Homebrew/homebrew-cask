@@ -8,10 +8,8 @@ cask 'zwift' do
 
   pkg 'ZwiftInstaller.pkg'
 
-  uninstall \
-    quit:    'com.zwift.ZwiftLauncher',
-    pkgutil: 'com.zwift.ZwiftLauncher',
-    trash:   ['/Application/Zwift.app']
+  uninstall quit:    'com.zwift.ZwiftLauncher',
+            pkgutil: 'com.zwift.ZwiftLauncher'
 
-  zap trash: ['~/Library/Application Support/Zwift/']
+  zap trash: '~/Library/Application Support/Zwift'
 end
