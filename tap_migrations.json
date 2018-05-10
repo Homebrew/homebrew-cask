@@ -31,6 +31,7 @@
   "packer": "homebrew/core",
   "pandoc": "homebrew/core",
   "pgloader": "homebrew/core",
+  "pgweb": "homebrew/core",
   "phantomjs": "homebrew/core",
   "purescript": "homebrew/core",
   "python": "homebrew/core",
