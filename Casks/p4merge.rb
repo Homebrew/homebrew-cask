@@ -13,10 +13,4 @@ cask 'p4merge' do
                '~/Library/Preferences/com.perforce.p4merge.plist',
                '~/Library/Saved Application State/com.perforce.p4merge.savedState',
              ]
-
-  caveats <<~EOS
-    git can be configured to use p4merge as a merge tool via
-
-      https://pempek.net/articles/2014/04/18/git-p4merge/
-  EOS
 end
