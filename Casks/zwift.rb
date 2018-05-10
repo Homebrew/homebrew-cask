@@ -2,7 +2,7 @@ cask 'zwift' do
   version :latest
   sha256 :no_check
 
-  url 'http://cdn.zwift.com/app/ZwiftOSX.dmg'
+  url 'https://cdn.zwift.com/app/ZwiftOSX.dmg'
   name 'Zwift'
   homepage 'https://www.zwift.com/'
 
