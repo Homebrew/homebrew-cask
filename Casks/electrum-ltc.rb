@@ -7,7 +7,7 @@ cask 'electrum-ltc' do
           checkpoint: 'b8d74bacd2d111626a41944cf69b0c35fbafa2389ea55c4eecc49f49f0e216b0'
   name 'Electrum-LTC'
   homepage 'https://electrum-ltc.org/'
-  gpg "#{url}.asc", key_id: '9914864dfc33499c6ca2beea22453004695506fd'
+  gpg "#{url}.asc", key_id: 'CAE1092AD3553FFD21C05DE36FC4C9F7F1BE8FEA'
 
   app 'Electrum-LTC.app'
 end
