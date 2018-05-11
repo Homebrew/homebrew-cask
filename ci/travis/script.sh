@@ -36,7 +36,7 @@ if [[ ${#casks_wrong_dir[@]} -gt 0 ]]; then
   odie "Casks added outside Casks directory: ${casks_wrong_dir[*]}"
 elif [[ ${#modified_casks[@]} -gt 0 ]]; then
   for cask in "${modified_casks[@]}"; do
-    if brew cask _stanza gpg "${cask}" > /dev/null; then
+    if brew cask _stanza gpg "${cask}" &> /dev/null; then
       run brew outdated gnupg || run brew upgrade gnupg
     fi
   done
