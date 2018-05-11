@@ -8,5 +8,7 @@ cask 'pdfpen' do
   name 'PDFpen'
   homepage 'https://smilesoftware.com/PDFpen'
 
+  depends_on macos: '>= 10.12'
+
   app 'PDFpen.app'
 end
