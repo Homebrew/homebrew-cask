@@ -4,7 +4,7 @@ cask 'netlogo' do
 
   url "https://ccl.northwestern.edu/netlogo/#{version}/NetLogo-#{version}.dmg"
   appcast 'https://ccl.northwestern.edu/netlogo/oldversions.shtml',
-          checkpoint: '1351f25e5c59bbf9f6a08cda8371fa2b7aec4f0d75c3736020cb408656833473'
+          checkpoint: 'b0ff96ad08709796d91ff19f1525f9059b3fa36a9e38e8da8c1293d980a8b5ef'
   name 'NetLogo'
   homepage 'https://ccl.northwestern.edu/netlogo/'
 
