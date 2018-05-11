@@ -1,6 +1,6 @@
 cask 'navicat-data-modeler' do
-  version '2.1.15'
-  sha256 '26e33929023bdcad43c434f362b8e9240de4b0f4fc74ef0835916913095b182d'
+  version '2.1.17'
+  sha256 '94fb444b011d77d634f08d650bd636b6a726b6818ebb7a5ccbc2dc44044ebd41'
 
   url "http://download.navicat.com/download/modeler0#{version.major_minor.no_dots}_en.dmg"
   name 'Navicat Data Modeler'
