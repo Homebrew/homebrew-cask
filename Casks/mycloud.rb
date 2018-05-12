@@ -7,7 +7,7 @@ cask 'mycloud' do
   name 'Swisscom myCloud Desktop'
   homepage 'https://desktop.mycloud.ch/'
 
-  pkg 'myCloud Desktop installer.pkg'
+  installer manual: 'myCloud Desktop installer.pkg'
 
   uninstall pkgutil:    'com.github.tornaia.desktop-client',
             login_item: 'myCloudDesktop',
