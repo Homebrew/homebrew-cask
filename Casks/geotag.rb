@@ -8,8 +8,8 @@ cask 'geotag' do
   name 'GeoTag'
   homepage 'https://www.snafu.org/GeoTag/'
 
-  depends_on formula: 'exiftool',
-             macos:   '>= :yosemite'
+  depends_on macos: '>= :yosemite'
+  depends_on formula: 'exiftool'
 
   app 'GeoTag.app'
 
