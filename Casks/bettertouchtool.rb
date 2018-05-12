@@ -18,13 +18,13 @@ cask 'bettertouchtool' do
     # bettertouchtool.net/releases was verified as official when first introduced to the cask
     url "https://bettertouchtool.net/releases/btt#{version}_final_10_9.zip"
   else
-    version '2.500'
-    sha256 'ddabc9dc9030e56e2dc7a99eb589cb0fe220ca80d2aa34949e387a08a8aa85dc'
+    version '2.503'
+    sha256 '4a3cb5ebf15051d66aecb8bb963fa0bbd6fc3e63537420524455a34b1e2903fe'
 
     # bettertouchtool.net/releases was verified as official when first introduced to the cask
     url "https://bettertouchtool.net/releases/btt#{version}.zip"
     appcast 'https://updates.bettertouchtool.net/bettertouchtool_release_notes.html',
-            checkpoint: 'a2a9ffdb86d9b7d41a801244e7eecde669b020f791bd7b9c95a2ea47b637c8a1'
+            checkpoint: '2030b18524e6c5d2f4e66dc6c05e308f2c63a3889901b3ee3bb0811a6c9f6885'
   end
 
   name 'BetterTouchTool'
