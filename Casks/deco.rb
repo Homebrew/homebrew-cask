@@ -9,7 +9,7 @@ cask 'deco' do
   name 'Deco'
   homepage 'https://www.decosoftware.com/'
 
-  # pkg cannot be installed manually and the .zip of `app` has errors
+  # pkg cannot be installed automatically and the .zip of `app` has errors
   installer manual: "Deco-#{version}.pkg"
 
   uninstall pkgutil: 'com.decosoftware.Deco'
