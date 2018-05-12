@@ -11,5 +11,8 @@ cask 'splashtop-business' do
 
   pkg 'Splashtop Business.pkg'
 
-  uninstall pkgutil: 'com.splashtop.stb.*'
+  uninstall pkgutil: [
+                       'com.splashtop.stb.*',
+                       'com.splashtop.splashtopBusiness.*',
+                     ]
 end
