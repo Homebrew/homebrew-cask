@@ -1,10 +1,10 @@
 cask 'rest-time' do
-  version '1.03'
-  sha256 '1c9a70f780fad700b1fd58d63a82200c777da4d47ed6a112a0ee484a0e585acd'
+  version '1.08'
+  sha256 '3a9659e17af7cb60de4a1309b800c791c8f8a16a586fd9faefe5e5ddbecc4d0f'
 
   url 'http://www.publicspace.net/download/RestTime.dmg'
   appcast 'http://www.publicspace.net/app/resttime.xml',
-          checkpoint: 'ff19a758a930721474ef4120e27cf4b8755443c6ea803ff48f3aa404860d8323'
+          checkpoint: 'f0e8f26562c1dd7be6c9bca3e6903e1d8e5985e67b296ce5472ab44a952c9765'
   name 'Rest Time'
   homepage 'http://www.publicspace.net/RestTime/'
 
