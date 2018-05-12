@@ -6,7 +6,9 @@ cask 'transkribus' do
   name 'Transkribus'
   homepage 'https://transkribus.eu/'
 
-  depends_on cask: 'java'
-
   app 'Transkribus.app'
+
+  caveats do
+    depends_on_java
+  end
 end
