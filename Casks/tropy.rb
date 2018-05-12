@@ -1,11 +1,11 @@
 cask 'tropy' do
-  version '1.1.1'
-  sha256 '7999c453504e12de525cb2c6f51a3c0d7e8ab1d6636e93318734a534d12c2a2b'
+  version '1.1.3'
+  sha256 '9018be948268bdee52e79a6e5a15f4d53cd893a83e8a80598d27f350a2b7ae82'
 
   # github.com/tropy/tropy was verified as official when first introduced to the cask
   url "https://github.com/tropy/tropy/releases/download/#{version}/tropy-#{version}.dmg"
   appcast 'https://github.com/tropy/tropy/releases.atom',
-          checkpoint: '5158f64950cee9e470b8c323fe9e849d5ff524a4f48cb9fdc9997af21108e602'
+          checkpoint: 'bccba5114049a1fc500c3c23526ba956e2521ee61e0cb93de3b558ec8da439f8'
   name 'Tropy'
   homepage 'https://tropy.org/'
 
