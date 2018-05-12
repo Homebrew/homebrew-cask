@@ -9,7 +9,7 @@ cask 'deco' do
   name 'Deco'
   homepage 'https://www.decosoftware.com/'
 
-  pkg "Deco-#{version}.pkg"
+  installer manual: "Deco-#{version}.pkg"
 
   uninstall pkgutil: 'com.decosoftware.Deco'
 
