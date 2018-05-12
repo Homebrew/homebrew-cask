@@ -1,13 +1,14 @@
 cask 'geotag' do
-  version '4.2'
-  sha256 'fe98f72a40138d87a103a88427cbff635cd02ca3a3ff9d6a1d9bb8305ef87cbe'
+  version '4.3'
+  sha256 '054aa3db26340c21b04c7173934de2a6d03f825d2568480e5396e2a38f8f6ae8'
 
   url "https://www.snafu.org/GeoTag/GeoTag-#{version}.dmg"
   appcast 'https://www.snafu.org/GeoTag/',
-          checkpoint: '8a0dd8267f56b2dd19db3d2fc4e6d9ed953b7e9848523b900e4ed8951db255da'
+          checkpoint: '05ff7fae8f65957da0854ab832c5181d417c7113af8af7530c0920ad0481683e'
   name 'GeoTag'
   homepage 'https://www.snafu.org/GeoTag/'
 
+  depends_on macos: '>= :yosemite'
   depends_on formula: 'exiftool'
 
   app 'GeoTag.app'
