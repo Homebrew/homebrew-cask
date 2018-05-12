@@ -1,6 +1,6 @@
 cask 'ffworks' do
-  version '1.0.10'
-  sha256 'b4897d9ceba0dbba3f642dbfd1c84955fac646733d666c5bea9fd59443e3d428'
+  version :latest
+  sha256 :no_check
 
   url 'http://www.ffworks.net/ffWorks.dmg'
   name 'ff·Works'
