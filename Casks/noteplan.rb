@@ -1,11 +1,11 @@
 cask 'noteplan' do
-  version '1.6.24'
-  sha256 '73e208c0467561e05bb678e2019c5355b708e6460039dbfac5034b46321d5772'
+  version '1.6.25'
+  sha256 '5bc778be8f4620aac021606a0ad1db94af2b1241c6fb34fc1bcb93a1ac915aa5'
 
   # rink.hockeyapp.net/api/2/apps/304b4477155e428780c345bcab69b380 was verified as official when first introduced to the cask
   url 'https://rink.hockeyapp.net/api/2/apps/304b4477155e428780c345bcab69b380/?format=zip'
   appcast 'https://rink.hockeyapp.net/api/2/apps/304b4477155e428780c345bcab69b380',
-          checkpoint: '2f406cdb29f0a2805c86d3e05c97df8ad0eba548256d132be33a32c41e89d063'
+          checkpoint: 'f9255ceadec4ed03ce4be87460aaddc45cd90ccd16ccfccdac1fbd511af8cfa1'
   name 'NotePlan'
   homepage 'http://noteplan.co/'
 
