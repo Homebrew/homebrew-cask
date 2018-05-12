@@ -8,7 +8,7 @@ cask 'pdfpenpro' do
   name 'PDFpenPro'
   homepage 'https://smilesoftware.com/PDFpenPro'
 
-  depends_on :macos '>= :sierra'
+  depends_on macos: '>= :sierra'
 
   app 'PDFpenPro.app'
 end
