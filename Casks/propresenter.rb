@@ -4,7 +4,7 @@ cask 'propresenter' do
 
   url "https://www.renewedvision.com/downloads/ProPresenter#{version.major}_#{version}.dmg"
   appcast "https://www.renewedvision.com/update/ProPresenter#{version.major}.php",
-          checkpoint: '83d1c48633f39eeb5d36964a87531b5f696065673e4e838e673da3f23b989662'
+          checkpoint: '7bab7adac4b19ec59b080528250ac430dd347734d0167559f3ec094f9c44e66b'
   name 'ProPresenter'
   homepage 'https://www.renewedvision.com/propresenter.php'
 
