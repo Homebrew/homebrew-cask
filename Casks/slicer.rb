@@ -1,11 +1,11 @@
 cask 'slicer' do
-  version '4.8.0.26489,700005'
-  sha256 '9a13ef5084b1aee1fd56891c7c61cd5d8f093f17168fe996f067548cf4e825c8'
+  version '4.8.1.26813,738961'
+  sha256 '3ed4c47aa032ed12dbba4151a55362c4d8a83a4bb2b03cb1026660053bdcd25a'
 
   # slicer.kitware.com/midas3 was verified as official when first introduced to the cask
   url "https://slicer.kitware.com/midas3/download?bitstream=#{version.after_comma}"
   appcast 'https://github.com/Slicer/Slicer/releases.atom',
-          checkpoint: '51525b99e07c45a2001ee17dbd400a25060d465255498344d9e132931787b91d'
+          checkpoint: '0312d49a5ea7818787d0795b0ff9b5b4d9760624a226d47172a4026be0c9b96f'
   name '3D Slicer'
   homepage 'https://www.slicer.org/'
 
