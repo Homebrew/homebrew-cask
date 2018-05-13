@@ -19,5 +19,5 @@ cask 'subutai-control-center' do
   end
 
   uninstall pkgutil: 'com.Subutai.Control.Center',
-            trash:   '/Applications/SubutaiControlCenter.app'
+            delete:  '/Applications/SubutaiControlCenter.app'
 end
