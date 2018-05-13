@@ -1,10 +1,10 @@
 cask 'tweet-tray' do
-  version '1.1.0'
-  sha256 'cae9989b1e151cc7b04076cf5cc69c87e7f19a0d6cef950840296e0cfdcdcade'
+  version '1.1.3'
+  sha256 '611afd3ee43464de47ac1e4587fdae71f85205cb6d4075fa550c241214ed7298'
 
   url "https://github.com/jonathontoon/tweet-tray/releases/download/v#{version}/tweet-tray-#{version}.dmg"
   appcast 'https://github.com/jonathontoon/tweet-tray/releases.atom',
-          checkpoint: 'b1f59eb4dc071f9f2401a3cae031c4baf7d1278b825799813913aa1fe7232a4f'
+          checkpoint: 'cb72d26c6ddc47d9d40a8783e4978af6b0b6b57ae7bb1744fba6e10b76a41e7c'
   name 'Tweet Tray'
   homepage 'https://github.com/jonathontoon/tweet-tray'
 
