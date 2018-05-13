@@ -1,11 +1,11 @@
 cask 'subutaip2p' do
-  version '6.3.1'
-  sha256 '36f2cd5c3bf7b7cae6c7c7f00a779bd440419f1ed29ad7c1e67f3a3afea5ed94'
+  version '7.0.0'
+  sha256 '1da9728bd538b7782f71aa742a69c2202faa25593e22dce37a39993504f8e021'
 
   # cdn.subutai.io:8338/kurjun/rest/raw was verified as official when first introduced to the cask
   url 'https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p.pkg'
   appcast 'https://github.com/subutai-io/p2p/releases.atom',
-          checkpoint: 'c823531b976ea937fa8d9d17dcb29777a58bf718804108c6ee767d93c96101f0'
+          checkpoint: '483912f563dd3c9023b962f897ac69bd4a0e9cb9df9d58e160878a3c82cc8d29'
   name 'Subutai P2P'
   homepage 'https://subutai.io/'
 
@@ -27,5 +27,6 @@ cask 'subutaip2p' do
                          'net.sf.tuntaposx.tap',
                          'net.sf.tuntaposx.tun',
                        ],
-            launchctl: 'io.subutai.p2p.daemon'
+            launchctl: 'io.subutai.p2p.daemon',
+            delete:    '/Applications/SubutaiP2P.app'
 end
