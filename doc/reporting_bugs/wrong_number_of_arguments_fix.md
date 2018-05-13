@@ -2,6 +2,4 @@
 
 Make sure the issue really lies with your macOS version. To do so, try to install the software manually. If it is incompatible with your macOS version, it will tell you. In that case, there is nothing we can do to help you install the software, but we can add a [`depends_on macos:`](https://github.com/caskroom/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/depends_on.md#depends_on-macos) stanza to prevent the cask from trying to install on incompatible macOS versions.
 
-Follow the instructions to [submit a fix](../../CONTRIBUTING.md#updating-a-cask), and make the change to the cask. If using `cask-repair`, you may give it the `--edit-cask` flag when calling it on the command-line to step right into editing it. If you’re having trouble submitting the fix or manually installing the software worked without a problem, open an issue [with this template][01_bug_report] explaining your steps so far and the current situation.
-
-[01_bug_report]: https://github.com/caskroom/homebrew-cask/issues/new?template=01_bug_report.md
+Follow the instructions to [submit a fix](../../CONTRIBUTING.md#updating-a-cask), and make the change to the cask. If using `cask-repair`, you may give it the `--edit-cask` flag when calling it on the command-line to step right into editing it. If you’re having trouble submitting the fix or manually installing the software worked without a problem, [open an issue](https://github.com/caskroom/homebrew-cask/issues/new?template=01_bug_report.md) explaining your steps so far and the current situation.
