@@ -11,4 +11,8 @@ cask 'ckb' do
   pkg 'ckb.pkg'
 
   uninstall pkgutil: 'com.ckb.ckb'
+
+  caveats do
+    discontinued
+  end
 end
