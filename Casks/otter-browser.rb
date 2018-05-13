@@ -1,11 +1,11 @@
 cask 'otter-browser' do
-  version '0.9.97-rc7'
-  sha256 '71af2a3de43bffc059030f50a9f90d882df10713d0e8bed0e54be1a5f6f378c8'
+  version '0.9.98-rc8'
+  sha256 '82315c5351a381c45f3408fac9ed0563cd34a62660a052359ecad20cc19e1658'
 
   # sourceforge.net/otter-browser was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/otter-browser/otter-browser-#{version}-setup.dmg"
   appcast 'https://sourceforge.net/projects/otter-browser/rss',
-          checkpoint: '88fce898da990c99de75b194fb39fd57e22c80666cfc7d8bf1d47ac95e172a5d'
+          checkpoint: '9fab938e579ef9bb07a7e4d46444aabbc7829fb070e73b2e26b88d8b7fd5e4ca'
   name 'Otter Browser'
   homepage 'https://otter-browser.org/'
 
