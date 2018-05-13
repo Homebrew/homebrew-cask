@@ -1,10 +1,10 @@
 cask 'haskell-platform' do
-  version '8.2.2'
-  sha256 '24d6ec3a30e06a6484108a6f6ca01a3260b1aadcef2ba4c4404348945ad77b92'
+  version '8.4.2'
+  sha256 'bae4dad218a8aa19dd8cd7297e538d5a2c6894616edcecc0b4b874c1101a68f0'
 
   url "https://haskell.org/platform/download/#{version}/Haskell%20Platform%20#{version}%20Full%2064bit-signed.pkg"
   appcast 'https://github.com/haskell/haskell-platform/releases.atom',
-          checkpoint: '7eb030d6bca927ea8cb39a42191efc44a407bda40b2cae74816fa35db0a0683c'
+          checkpoint: '130ebdffff4eb3659662a01c16a929352f68ba0139d7b7b9d1b5149b07e55266'
   name 'Haskell Platform'
   homepage 'https://www.haskell.org/platform/'
 
