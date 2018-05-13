@@ -1,14 +1,17 @@
 cask 'ckb' do
-  version '0.2.6'
-  sha256 '724f7ee9a0e363304bc2b0b82713582bf366a07f2e4c4639389bb6f7efb7ebbf'
+  version '0.3.0'
+  sha256 '697819054404efaaaf833c43faaa7510b523670c84e344587a5f7456e0ed1977'
 
-  url "https://github.com/ccMSC/ckb/releases/download/v#{version}/ckb.pkg"
-  appcast 'https://github.com/ccMSC/ckb/releases.atom',
-          checkpoint: '7c4d9d7c8e23e91beb865efdf41512c8ed77b820fe28d11630dc67ab5fc710b9'
-  name 'ckb'
-  homepage 'https://github.com/ccMSC/ckb'
+  url "https://github.com/ckb-next/ckb-next/releases/download/v#{version}/ckb-next_v#{version}.dmg"
+  appcast 'https://github.com/ckb-next/ckb-next/releases.atom',
+          checkpoint: '7aa55122c4e94be6ce97559daf9ce1e391c48bfe0bd99189c1782ad28ddfaa36'
+  name 'ckb-next'
+  homepage 'https://github.com/ckb-next/ckb-next'
 
-  pkg 'ckb.pkg'
+  pkg 'ckb-next.mpkg'
 
-  uninstall pkgutil: 'com.ckb.ckb'
+  uninstall pkgutil: [
+                       'org.ckb-next.ckb',
+                       'org.ckb-next.daemon',
+                     ]
 end
