@@ -14,7 +14,5 @@ cask 'ckb-next' do
                          'org.ckb-next.ckb',
                          'org.ckb-next.daemon',
                        ],
-            launchctl: [
-                         'org.ckb-next.daemon',
-                       ]
+            launchctl: 'org.ckb-next.daemon'
 end
