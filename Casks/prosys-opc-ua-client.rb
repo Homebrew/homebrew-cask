@@ -1,10 +1,10 @@
 cask 'prosys-opc-ua-client' do
-  version '2.3.3-170'
-  sha256 '3bf668006e6f2918cf6dc65c62d4d4a7e490fbb229b48142448e4d32c33400fe'
+  version '3.0.0-256'
+  sha256 'cf6906c027e0511f50f81dc07f90a00c5e6ff76cc1a3861969223765b4f44150'
 
   url "https://www.prosysopc.com/opcua/apps/JavaClient/dist/#{version}/prosys-opc-ua-client-#{version}.dmg"
   appcast 'https://downloads.prosysopc.com/opc-ua-client-downloads.php',
-          checkpoint: '15253a3c96c82e0f64b9238be860490896d39b97ce9b72f53d86cb694021c9dc'
+          checkpoint: 'a3eca93e23fb41f14493cf1336aec69785438079727634827a76ee27128120d6'
   name 'Prosys OPC UA Client'
   homepage 'https://www.prosysopc.com/products/opc-ua-client/'
 
