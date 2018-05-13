@@ -8,7 +8,7 @@ cask 'aquaskk' do
   name 'AquaSKK'
   homepage 'https://github.com/codefirst/aquaskk'
 
-  pkg 'AquaSKK.pkg'
+  pkg "AquaSKK-#{version}.pkg"
 
   uninstall pkgutil: 'org.codefirst.aquaskk.pkg'
 end
