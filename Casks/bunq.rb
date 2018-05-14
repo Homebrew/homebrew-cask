@@ -1,11 +1,11 @@
 cask 'bunq' do
-  version '0.8.4'
-  sha256 'cbc87ef6394a0370c47ed7ff3214c99ce63eda1a6920467078803c07fc8b4618'
+  version '0.8.5'
+  sha256 'b0d2a326332ff999d8613af8c4d13fe0e85098fae21d1b7975cf70ff3d12d42b'
 
   # github.com/BunqCommunity/BunqDesktop was verified as official when first introduced to the cask
   url "https://github.com/BunqCommunity/BunqDesktop/releases/download/#{version}/BunqDesktop-#{version}.dmg"
   appcast 'https://github.com/BunqCommunity/BunqDesktop/releases.atom',
-          checkpoint: '83d6c9a1f07091141b8f9a4c8c3b3937a3cead46bf998cd9dd9be0a07af8aac9'
+          checkpoint: '1bde93a8405cfb996054e0eecf970a36b15f94aec5af64a57845962eac38fa56'
   name 'BunqDesktop'
   homepage 'https://bunqdesktop.com/'
 
