@@ -1,4 +1,4 @@
-cask 'real-vnc' do
+cask 'vnc-connect' do
   version '6.2.1'
   sha256 '7c105880fffee5cd350d713adee7ca8bef029325799f9bc483043ca27de503cd'
 
