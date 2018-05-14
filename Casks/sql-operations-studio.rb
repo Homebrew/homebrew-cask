@@ -9,7 +9,7 @@ cask 'sql-operations-studio' do
   name 'SQL Operations Studio'
   homepage 'https://docs.microsoft.com/sql/sql-operations-studio/'
 
-  auto_updates
+  auto_updates true
 
   app 'SQL Operations Studio.app'
   binary "#{appdir}/SQL Operations Studio.app/Contents/Resources/app/bin/code", target: 'sqlops'
