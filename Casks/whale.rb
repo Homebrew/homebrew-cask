@@ -1,10 +1,10 @@
 cask 'whale' do
-  version '0.14.0'
-  sha256 'dccaee8cae9ee9191aa125247a99cf549bb37eba1138e7144af32f9634b2eb6b'
+  version '0.15.0'
+  sha256 '0d976584673d5ae1a7240f5a4f6b0e2a970d2bbb890b2e22395d4242b2bb6407'
 
   url "https://github.com/1000ch/whale/releases/download/v#{version}/Whale-macos-v#{version}.zip"
   appcast 'https://github.com/1000ch/whale/releases.atom',
-          checkpoint: '96f8a0ac31f68adb34fdb0705b034049e38d6e2fd246299c178fac0e8aefc664'
+          checkpoint: '304f94ed869d8e7bcda243d740f77e5e01b005297f08a64c76768b646ae2e290'
   name 'Whale'
   homepage 'https://github.com/1000ch/whale'
 
