@@ -27,6 +27,10 @@ cask 'subutaip2p' do
                          'net.sf.tuntaposx.tap',
                          'net.sf.tuntaposx.tun',
                        ],
-            launchctl: 'io.subutai.p2p.daemon',
+            launchctl: [
+                         'io.subutai.p2p.daemon',
+                         'net.sf.tuntaposx.tap',
+                         'net.sf.tuntaposx.tun',
+                       ],
             delete:    '/Applications/SubutaiP2P.app'
 end
