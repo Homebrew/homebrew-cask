@@ -1,4 +1,4 @@
-cask 'rale' do
+cask 'roku-advanced-layout-editor' do
   version :latest
   sha256 :no_check
 
