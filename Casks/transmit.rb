@@ -8,6 +8,8 @@ cask 'transmit' do
   name 'Transmit'
   homepage 'https://panic.com/transmit/'
 
+  auto_updates true
+
   app 'Transmit.app'
 
   zap trash: [
