@@ -1,11 +1,11 @@
 cask 'fuwari' do
-  version '0.3'
-  sha256 '1542069425d44d49c5b06690fccb0e52fcd66fab2bf58ed0ca7b3fe70e03ce06'
+  version '0.4'
+  sha256 'e6cd64a016f86ec363bcdaf99e5ae2613fc8b03fb293ab7066e7c2d39bd2baed'
 
   # github.com/kentya6/Fuwari was verified as official when first introduced to the cask
   url "https://github.com/kentya6/Fuwari/releases/download/v#{version}/Fuwari_#{version}.dmg"
   appcast 'https://github.com/kentya6/Fuwari/releases.atom',
-          checkpoint: '3c4b5d021ab65b728c4b90f12f44b800ad89bb7e3894900991c28ad2a579f0ed'
+          checkpoint: 'd0c33c84d8a087a6547d2eef6014ff19f74fd0b33083c936a1c21883441a5a04'
   name 'Fuwari'
   homepage 'https://fuwari-app.com/'
 
