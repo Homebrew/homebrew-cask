@@ -1,14 +1,14 @@
 cask 'macid' do
-  version '1.3.7'
-  sha256 '788a081b6346c861472af9ad8e5e2f7ef172247e235aa93d5f2a89fe97d5cb82'
+  version '2.0.2'
+  sha256 '20a5fa4b1120f23b99a8ee3171d06c6a3e75797a40216e7e480f860ff19d3da0'
 
-  url "https://macid.co/app/#{version}/MacID%20for%20macOS.zip"
-  name 'MacID'
-  homepage 'https://macid.co/'
+  url 'https://unlox.it/download/'
+  name 'Unlox'
+  homepage 'https://unlox.it/'
 
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :high_sierra'
 
-  app 'MacID.app'
+  app 'Unlox.app'
 
-  zap trash: '~/Library/Preferences/com.kanecheshire.MacIDOSX.plist'
+  zap trash: '~/Library/Preferences/com.kanecheshire.macID-macOS.plist'
 end
