@@ -1,11 +1,11 @@
 cask 'webtorrent' do
-  version '0.19.0'
-  sha256 'b05c4f9f10d7aedbb2af7836b4cf0366db887e9695439b9475e5e357b917c720'
+  version '0.20.0'
+  sha256 '80b0c58632139e7e537d1a2ee2bbf26e6b65f1e9abde3a5ad7a5a073c3c8f228'
 
   # github.com/webtorrent/webtorrent-desktop was verified as official when first introduced to the cask
   url "https://github.com/webtorrent/webtorrent-desktop/releases/download/v#{version}/WebTorrent-v#{version}.dmg"
   appcast 'https://github.com/webtorrent/webtorrent-desktop/releases.atom',
-          checkpoint: '52d90076b0eccfb1af7651adca3240e0605429aa8ddeceb7b1a432371ecc759f'
+          checkpoint: 'c674150a9fd57253c652159f177b45b20a8b122cf65a604fb740485245b6eb1e'
   name 'WebTorrent Desktop'
   homepage 'https://webtorrent.io/desktop/'
 
