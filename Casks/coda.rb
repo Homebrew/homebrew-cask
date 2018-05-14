@@ -4,12 +4,11 @@ cask 'coda' do
 
   url "https://download.panic.com/coda/Coda%20#{version}.zip"
   appcast 'https://library.panic.com/releasenotes/coda2/',
-          checkpoint: '7837f39afc013539a735dffcecfa18c31dce0dacd311db1aa510cb3183899a9c'
+          checkpoint: '3db11e8548e3b8c61f42296c0868861e8e3160c259bed78674ac2261695258cc'
   name 'Panic Coda'
   homepage 'https://panic.com/coda/'
 
   auto_updates true
-
   depends_on macos: '>= :lion'
 
   app "Coda #{version.major}.app"
