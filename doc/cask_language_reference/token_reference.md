@@ -94,6 +94,8 @@ To convert the App’s Simplified Name (above) to a token:
 * Expand the `+` symbol into a separated English word: `-plus-`.
 * Expand the `@` symbol into a separated English word: `-at-`.
 * Spaces become hyphens.
+* Underscores become hyphens.
+* Middots/Interpuncts become hyphens.
 * Hyphens stay hyphens.
 * Digits stay digits.
 * Delete any character which is not alphanumeric or a hyphen.
