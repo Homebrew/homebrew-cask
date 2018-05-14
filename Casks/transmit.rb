@@ -8,7 +8,7 @@ cask 'transmit' do
   name 'Transmit'
   homepage 'https://panic.com/transmit/'
 
-  auto_updates
+  auto_updates true
 
   app 'Transmit.app'
 
