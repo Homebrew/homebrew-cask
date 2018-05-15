@@ -1,4 +1,4 @@
-cask 'ffworks' do
+cask 'ff-works' do
   version :latest
   sha256 :no_check
 
