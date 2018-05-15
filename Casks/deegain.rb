@@ -1,6 +1,6 @@
 cask 'deegain' do
   version '1.1.0'
-  sha256 '7440f83665b04be13e0cb1f3f948a4261011f68db7ca0fd4b1ef7d3ec7795aba'
+  sha256 '8f8b713a35290009ab6eede4322ac07b5d22c2902a47ee6fd402a0ce9ce014f6'
 
   url "https://dotec-audio.com/release/DeeGain/DeeGainMacA_#{version}.zip"
   name 'DOTEC-AUDIO DeeGain'
