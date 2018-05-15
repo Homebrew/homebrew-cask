@@ -8,5 +8,6 @@ cask 'pdftk' do
 
   pkg 'pdftk_server-2.02-mac_osx-10.11-setup.pkg'
 
-  uninstall pkgutil: 'com.pdflabs.pdftkThePdfToolkit.pdftk.pkg'
+  uninstall pkgutil: 'com.pdflabs.pdftkThePdfToolkit.pdftk.pkg',
+            delete: '/usr/local/bin/pdftk'
 end
