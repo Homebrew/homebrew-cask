@@ -1,11 +1,11 @@
 cask 'mal-updater' do
-  version '2.4.4'
-  sha256 'efe4b238a0dee5d9baf74af330e6dabd758ce858c4e1ca33d476ac3c1c56af8b'
+  version '2.4.5'
+  sha256 '8dd53e039d43a7d32c6cfd51070d86e8cf5ba238f3b8cf3dd9dba104445ec0f6'
 
   # github.com/Atelier-Shiori/malupdaterosx-cocoa was verified as official when first introduced to the cask
   url "https://github.com/Atelier-Shiori/malupdaterosx-cocoa/releases/download/#{version}/malupdaterosx-#{version}.dmg"
   appcast 'https://github.com/Atelier-Shiori/malupdaterosx-cocoa/releases.atom',
-          checkpoint: 'f0e79ff5bc4c29b1e2bdfb5d50f4edc5f09123f7bd67fd9c758a4e22a8226985'
+          checkpoint: 'a0d071fd59cbbd1d9ef99b99460a4edacafc02f480f436931476cd0914ece797'
   name 'MAL Updater OS X'
   homepage 'https://malupdaterosx.ateliershiori.moe/'
 
