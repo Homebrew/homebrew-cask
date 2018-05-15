@@ -1,6 +1,6 @@
 cask 'abyss-web-server' do
   version 'x1'
-  sha256 '2130e3da4d97c71d2c932261f51ed31cbb3bcadfc600db5eb6b7f646ccf31707'
+  sha256 '1df93374340a939c9bdb34e39eef06a317c7c1240d119784f5f75773f3e9da4c'
 
   url "https://aprelium.com/data/abws#{version}.dmg"
   name 'Abyss Web Server'
