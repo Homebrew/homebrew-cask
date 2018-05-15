@@ -1,8 +1,9 @@
 cask 'blast2go' do
-  version '4.1'
-  sha256 '5bb520f33900544c291f8f968d66072db613a77546aa351afac434581b4b5d95'
+  version '5.1.1'
+  sha256 'e38393288ad869bdd665ad34b40f048e92831277921f284eb70661648a1f9a8e'
 
-  url "http://download.blast2go.com/html/software/blast2go/latest/#{version.dots_to_underscores}/Blast2GO_macos_#{version.dots_to_underscores}.dmg"
+  # biobam.com/software/blast2go was verified as official when first introduced to the cask
+  url "http://resources.biobam.com/software/blast2go/nico/Blast2GO_macos_#{version.dots_to_underscores}.dmg"
   name 'Blast2GO'
   homepage 'https://www.blast2go.com/'
 
