@@ -2,11 +2,13 @@ cask 'easytether' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.mobile-stream.com/beta/easytether.dmg'
+  url 'http://www.mobile-stream.com/beta/darwin/easytether-yosemite-b12.pkg'
   name 'EasyTether'
   homepage 'http://www.mobile-stream.com/easytether/'
 
-  pkg 'EasyTetherUSBEthernet.pkg'
+  depends_on macos: '>= :yosemite'
+
+  pkg 'easytether-yosemite-b12.pkg'
 
   uninstall pkgutil: 'com.mobile-stream.pkg.EasyTether'
 end
