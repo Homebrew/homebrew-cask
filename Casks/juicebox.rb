@@ -10,6 +10,6 @@ cask 'juicebox' do
   app 'Juicebox.app'
 
   caveats do
-    depends_on_java('8+')
+    depends_on_java '8+'
   end
 end

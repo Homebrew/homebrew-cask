@@ -25,6 +25,6 @@ cask 'jdownloader' do
   uninstall delete: '/Applications/JDownloader2.app'
 
   caveats do
-    depends_on_java('8')
+    depends_on_java '8'
   end
 end

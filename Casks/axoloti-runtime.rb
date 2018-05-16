@@ -12,6 +12,6 @@ cask 'axoloti-runtime' do
   suite 'axoloti_runtime'
 
   caveats do
-    depends_on_java('8')
+    depends_on_java '8'
   end
 end

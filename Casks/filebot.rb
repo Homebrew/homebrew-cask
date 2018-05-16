@@ -15,6 +15,6 @@ cask 'filebot' do
   zap trash: '~/Library/Preferences/net.filebot.ui.plist'
 
   caveats do
-    depends_on_java('8')
+    depends_on_java '8'
   end
 end
