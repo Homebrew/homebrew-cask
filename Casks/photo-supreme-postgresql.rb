@@ -1,8 +1,8 @@
 cask 'photo-supreme-postgresql' do
-  version '4'
-  sha256 '5adb6a010e48398cbdf84a11acc8581ef2ce757cefa236b201f7cf97c2a8e7c3'
+  version '4.1.0'
+  sha256 '0439f51291f4ae9778f2b41b46dbfd229515bb36d4cce66cbdc7ae8b0224336f'
 
-  url "http://trial.idimager.com/PhotoSupremePostgreSQL_V#{version}.pkg"
+  url "http://trial.idimager.com/PhotoSupremePostgreSQL_V#{version.major}.pkg"
   name 'Photo Supreme with PostreSQL'
   homepage 'http://www.idimager.com/WP/?page_id=20'
 
