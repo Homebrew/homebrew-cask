@@ -8,5 +8,5 @@ cask 'baidumusic' do
   name '百度音乐'
   homepage 'https://music.baidu.com/'
 
-  app '百度音乐.app'
+  app 'BaiduMusic.app'
 end
