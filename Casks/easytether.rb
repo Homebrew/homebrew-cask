@@ -10,5 +10,6 @@ cask 'easytether' do
 
   pkg 'easytether-yosemite-b12.pkg'
 
-  uninstall pkgutil: 'com.mobile-stream.pkg.EasyTether'
+  uninstall pkgutil:   'com.mobile-stream.pkg.EasyTether',
+            launchctl: 'com.mobile-stream.easytether-usb'
 end
