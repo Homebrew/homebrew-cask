@@ -8,7 +8,7 @@ cask 'photo-supreme-postgresql' do
 
   depends_on formula: 'postgresql'
 
-  pkg "PhotoSupremePostgreSQL_V#{version}.pkg"
+  pkg "PhotoSupremePostgreSQL_V#{version.major}.pkg"
 
   uninstall pkgutil: 'com.idimager.idimagersu'
 end
