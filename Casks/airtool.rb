@@ -18,7 +18,7 @@ cask 'airtool' do
                           'com.adriangranados.airtool.airtool-bpf.*',
                           'com.adriangranados.airtool.Airtool.pkg',
                         ],
-            launchctl:  'com.adriangranados.airtool.airtool-bpf.pkg',
+            launchctl:  'com.adriangranados.airtool.airtool-bpf',
             login_item: 'Airtool',
             delete:     '/Library/Application Support/Airtool'
 
