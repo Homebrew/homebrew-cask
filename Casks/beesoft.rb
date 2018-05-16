@@ -6,7 +6,7 @@ cask 'beesoft' do
   name 'Beesoft'
   homepage 'https://beeverycreative.com/beesoft/'
 
-  pkg "Mac-BEESOFT-#{version}.pkg"
+  pkg "BEESOFT-#{version}.pkg"
 
   uninstall pkgutil: 'com.beeverycreative.beesoft'
 end
