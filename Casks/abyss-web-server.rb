@@ -9,4 +9,8 @@ cask 'abyss-web-server' do
   homepage 'https://aprelium.com/abyssws/'
 
   app 'Abyss Web Server/Abyss Web Server.app'
+
+  preflight do
+    set_permissions "#{staged_path}/Abyss Web Server/Abyss Web Server.app", '0755'
+  end
 end
