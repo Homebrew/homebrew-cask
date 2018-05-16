@@ -28,7 +28,7 @@ cask 'android-sdk' do
   end
 
   caveats do
-    depends_on_java('8')
+    depends_on_java '8'
     <<~EOS
       You can control android sdk packages via the sdkmanager command.
       You may want to add to your profile:

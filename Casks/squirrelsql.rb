@@ -82,6 +82,6 @@ cask 'squirrelsql' do
   zap trash: '~/.squirrel-sql'
 
   caveats do
-    depends_on_java('8+')
+    depends_on_java '8+'
   end
 end

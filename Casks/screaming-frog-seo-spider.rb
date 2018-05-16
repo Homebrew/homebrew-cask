@@ -16,6 +16,6 @@ cask 'screaming-frog-seo-spider' do
   app 'Screaming Frog SEO Spider.app'
 
   caveats do
-    depends_on_java('7+')
+    depends_on_java '7+'
   end
 end

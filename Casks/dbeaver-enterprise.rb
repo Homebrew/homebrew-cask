@@ -11,6 +11,6 @@ cask 'dbeaver-enterprise' do
   app 'DBeaverEE.app'
 
   caveats do
-    depends_on_java('8+')
+    depends_on_java '8+'
   end
 end
