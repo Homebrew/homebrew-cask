@@ -6,5 +6,5 @@ cask 'photozoom-pro' do
   name 'PhotoZoom Pro'
   homepage 'https://www.benvista.com/photozoompro'
 
-  app 'PhotoZoom Pro 6.app'
+  pkg 'PhotoZoom Pro 7 Installer.mpkg'
 end
