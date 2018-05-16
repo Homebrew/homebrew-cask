@@ -7,5 +7,5 @@ cask 'poolside-fm' do
   name 'Poolside FM'
   homepage 'http://poolside.fm/mac/'
 
-  app "Poolside FM #{vesion}/Poolside FM.app"
+  app "Poolside FM #{version}/Poolside FM.app"
 end
