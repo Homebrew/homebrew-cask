@@ -1,11 +1,11 @@
 cask 'hopper-disassembler' do
-  version '4.3.21'
-  sha256 'a66d98d69b1b3e0782f3756991718b35783e745a5bb1f5a00b7ad30fc16e315e'
+  version '4.3.22'
+  sha256 'efaab7fc002aec5fc1cf10b3780cf3025556593c1eadd16069a9dc2a288eb6ef'
 
   # d2ap6ypl1xbe4k.cloudfront.net was verified as official when first introduced to the cask
   url "https://d2ap6ypl1xbe4k.cloudfront.net/Hopper-#{version}-demo.dmg"
-  appcast "https://www.hopperapp.com/HopperWeb/appcast_v#{version.major}.php",
-          checkpoint: '5319c087c4ca56dd971645a0e22d38b19577619a606a1fbe1c718c068627110a'
+  appcast 'https://www.hopperapp.com/rss/html_changelog.php',
+          checkpoint: 'f21241f12028670de1cb4f87409607ebcf0d5147f94cb2eb76f85375a10e1e55'
   name 'Hopper Disassembler'
   homepage 'https://www.hopperapp.com/'
 
