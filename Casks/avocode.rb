@@ -4,7 +4,7 @@ cask 'avocode' do
 
   url "https://media.avocode.com/download/avocode-app/#{version}/Avocode-#{version}-mac.zip"
   appcast 'https://avocode.com/changelog',
-          checkpoint: '780a90dce80aa33af8577a711626f07d39b743dbb202ca47a6538b7d251423ba'
+          checkpoint: 'c827b4d299e3807df1ea78d5ff1f15a320cbc8bed3d1479995116363a035db48'
   name 'Avocode'
   homepage 'https://avocode.com/'
 
