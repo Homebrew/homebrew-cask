@@ -3,8 +3,6 @@ cask 'avocode' do
   sha256 'f532333f06ad5208c676588ec8a45b29cb06c45b4deeef05b3a6c3d09d261886'
 
   url "https://media.avocode.com/download/avocode-app/#{version}/Avocode-#{version}-mac.zip"
-  appcast 'https://avocode.com/changelog',
-          checkpoint: 'c827b4d299e3807df1ea78d5ff1f15a320cbc8bed3d1479995116363a035db48'
   name 'Avocode'
   homepage 'https://avocode.com/'
 
