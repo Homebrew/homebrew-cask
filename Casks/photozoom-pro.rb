@@ -7,4 +7,6 @@ cask 'photozoom-pro' do
   homepage 'https://www.benvista.com/photozoompro'
 
   pkg 'PhotoZoom Pro 7 Installer.mpkg'
+
+  uninstall pkgutil: 'com.benvista.pkg.PhotoZoom-Pro-7.app'
 end
