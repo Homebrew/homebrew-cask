@@ -12,7 +12,13 @@ cask 'adobe-acrobat-pro' do
 
   pkg 'Acrobat DC/Acrobat DC Installer.pkg'
 
-  uninstall pkgutil: "com.adobe.acrobat.#{version}.*",
+  uninstall pkgutil: [
+                       'com.adobe.acrobat.DC.*',
+                       'com.adobe.PDApp.AdobeApplicationManager.installer.pkg',
+                       'com.adobe.AcroServicesUpdater',
+                       'com.adobe.armdc.app.pkg',
+                     ],
+
             delete:  '/Applications/Adobe Acrobat DC/'
 
   zap trash: [
