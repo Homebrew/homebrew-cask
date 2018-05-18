@@ -10,10 +10,10 @@ cask 'adobe-acrobat-pro' do
 
   depends_on macos: '>= :mavericks'
 
-  pkg "Acrobat #{version}/Acrobat #{version} Installer.pkg"
+  pkg 'Acrobat DC/Acrobat DC Installer.pkg'
 
   uninstall pkgutil: "com.adobe.acrobat.#{version}.*",
-            delete:  "/Applications/Adobe Acrobat #{version}/"
+            delete:  '/Applications/Adobe Acrobat DC/'
 
   zap trash: [
                '~/Library/Application Support/Adobe/Acrobat/',
