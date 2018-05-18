@@ -5,7 +5,7 @@ cask 'epictask' do
   # s3.amazonaws.com/epictask-releases/electron was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/epictask-releases/electron/epictask-macos-#{version}.dmg"
   appcast 'https://github.com/densebrain/epictask/releases.atom',
-          checkpoint: '2bcc3e30b3104cda8b173237bffc51c5929c351582ec90f7bcfab78c4ad2a956'
+          checkpoint: '568520ef343110d71d8f6d3800b59b788bc2556d2bdd738d3d94e8b33c6d23e5'
   name 'Epictask'
   homepage 'http://epictask.run/'
 
