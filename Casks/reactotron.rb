@@ -12,5 +12,8 @@ cask 'reactotron' do
 
   zap trash: [
                '~/Library/Application Support/Reactotron',
+               '~/Library/Preferences/com.reactotron.app.helper.plist',
+               '~/Library/Preferences/com.reactotron.app.plist',
+               '~/Library/Saved Application State/com.reactotron.app.savedState',
              ]
 end
