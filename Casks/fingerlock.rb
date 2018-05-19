@@ -7,7 +7,8 @@ cask 'fingerlock' do
   appcast 'https://fingerkeyapp.azurewebsites.net/Appcast.xml',
           checkpoint: '9ab9b0250633642871fda51edcd63c1bb960b87b1e349bf04defc216b04ca3e2'
   name 'FingerLock'
+  name 'FingerKey'
   homepage 'http://www.fingerkeyapp.com/'
 
-  app 'FingerLock.app'
+  app 'FingerKey.app'
 end
