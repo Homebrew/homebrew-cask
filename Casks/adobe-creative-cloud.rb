@@ -10,5 +10,5 @@ cask 'adobe-creative-cloud' do
 
   installer manual: 'Creative Cloud Installer.app'
 
-  uninstall delete: "#{staged_path}/#{token}" # needs to be uninstalled manually
+  uninstall delete: "#{staged_path}/#{token}" # Needs to be uninstalled manually
 end
