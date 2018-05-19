@@ -1,6 +1,6 @@
 cask 'resolume-avenue' do
-  version '6.0.4'
-  sha256 'c0dd0a2b87094beaedf45cc12a7eafbeef3e04fc9d3016e8ff9c988b83d846ae'
+  version '6.0.7'
+  sha256 '6edbf4afdf3bf41f503862aac041384f59557f2ccf94c1bd9203a6ed25cfa2bf'
 
   url "https://resolume.com/download/Resolume_Avenue_#{version.dots_to_underscores}_Installer.dmg"
   name 'Resolume Avenue'
