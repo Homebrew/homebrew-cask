@@ -2,7 +2,7 @@ cask 'photozoom-pro' do
   version '7'
   sha256 :no_check # required as upstream package is updated in-place
 
-  url 'https://www.benvista.com/photozoompro/download/mac'
+  url "http://files.benvista.com/PhotoZoom_Pro_#{version}.dmg"
   name 'PhotoZoom Pro'
   homepage 'https://www.benvista.com/photozoompro'
 
