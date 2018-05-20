@@ -2,6 +2,7 @@ cask 'hunantv' do
   version '3.3.3_20180514'
   sha256 'f457b02aa7bca895677a21e55fd3c7fa05d02cfaefdc46c8558fc99b577e3c5a'
 
+  # URL_SECTION was verified as official when first introduced to the cask
   url "http://downloadimgo.hunantv.com/app/mac/mgtv_#{version}_release.dmg"
   name 'hunantv'
   name '芒果视频'
