@@ -1,8 +1,10 @@
 cask 'resolume-avenue' do
-  version '6.0.4'
-  sha256 'c0dd0a2b87094beaedf45cc12a7eafbeef3e04fc9d3016e8ff9c988b83d846ae'
+  version '6.0.7'
+  sha256 '6edbf4afdf3bf41f503862aac041384f59557f2ccf94c1bd9203a6ed25cfa2bf'
 
   url "https://resolume.com/download/Resolume_Avenue_#{version.dots_to_underscores}_Installer.dmg"
+  appcast 'https://resolume.com/update/avenue_mac.xml',
+          checkpoint: '6f87f513b75530818aaf1ddaa78454da3b16cfc0c5f00955621736eca9d5374b'
   name 'Resolume Avenue'
   homepage 'https://resolume.com/'
 
