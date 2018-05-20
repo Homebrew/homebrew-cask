@@ -1,12 +1,12 @@
 cask 'photozoom-pro' do
-  version :latest
-  sha256 :no_check
+  version '7'
+  sha256 :no_check # required as upstream package is updated in-place
 
   url 'https://www.benvista.com/photozoompro/download/mac'
   name 'PhotoZoom Pro'
   homepage 'https://www.benvista.com/photozoompro'
 
-  pkg 'PhotoZoom Pro 7 Installer.mpkg'
+  pkg "PhotoZoom Pro #{version} Installer.mpkg"
 
-  uninstall pkgutil: 'com.benvista.pkg.PhotoZoom-Pro-7.app'
+  uninstall pkgutil: "com.benvista.pkg.PhotoZoom-Pro-#{version}.app"
 end
