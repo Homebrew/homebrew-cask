@@ -8,30 +8,8 @@ cask 'monogame' do
 
   pkg 'MonoGame.pkg'
 
-  uninstall_script = "#{staged_path}/uninstall.sh"
-
-  preflight do
-    IO.write uninstall_script, <<~EOS
-      #!/bin/bash
-
-      if [ -d '/Applications/Visual Studio.app' ]
-      then
-        /Applications/Visual\\ Studio.app/Contents/MacOS/vstool setup uninstall MonoDevelop.MonoGame_IDE_VisualStudioForMac -y
-      fi
-
-      if [ -d '/Applications/Xamarin Studio.app' ]
-      then
-        /Applications/Xamarin\\ Studio.app/Contents/MacOS/mdtool setup uninstall MonoDevelop.MonoGame -y
-      fi
-    EOS
-  end
-
   uninstall pkgutil: 'com.monogame.*',
-            script:  {
-                       executable: "#{staged_path}/uninstall.sh",
-                       sudo:       true,
-                     },
-            trash:   [
+            delete:  [
                        '/Library/Frameworks/MonoGame.framework',
                        '/usr/local/bin/mgcb',
                        '/usr/local/bin/monogame-uninstall',
