@@ -1,4 +1,4 @@
-cask 'hunantv' do
+cask 'imgotv' do
   version '3.3.3_20180514'
   sha256 'f457b02aa7bca895677a21e55fd3c7fa05d02cfaefdc46c8558fc99b577e3c5a'
 
