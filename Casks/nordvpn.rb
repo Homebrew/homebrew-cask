@@ -17,7 +17,7 @@ cask 'nordvpn' do
             launchctl:  'com.nordvpn.NordVPN.Helper',
             delete:     '/Library/PrivilegedHelperTools/com.nordvpn.NordVPN.Helper',
             login_item: 'NordVPN',
-            pkgutil:    'com.nordvpn.NordVPN'
+            pkgutil:    'com.nordvpn.osx'
 
   zap trash: [
                '~/Library/Application Support/com.nordvpn.NordVPN',
