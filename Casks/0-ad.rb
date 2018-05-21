@@ -1,4 +1,4 @@
-cask '0ad' do
+cask '0-ad' do
   version '0.0.23-alpha'
   sha256 'c9de859ad0e2cc6b1085803d1fc107094423520e16c55b32175f43df11475441'
 
