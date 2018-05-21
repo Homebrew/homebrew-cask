@@ -1,15 +1,15 @@
 cask 'chefdk' do
-  version '2.5.3'
-  sha256 '54a909fd694e05eceda69ed0246cbdd644a6e7448a536f8b19781be81e8c4327'
+  version '3.0.36'
+  sha256 'fb641d694a7545949df2fd6e94a53b5da4b6085b60ac9f742ef8d3079fd0c8e4'
 
-  url "https://packages.chef.io/files/stable/chefdk/#{version}/mac_os_x/10.12/chefdk-#{version}-1.dmg"
+  url "https://packages.chef.io/files/stable/chefdk/#{version}/mac_os_x/10.13/chefdk-#{version}-1.dmg"
   appcast "https://www.chef.io/chef/metadata-chefdk?p=mac_os_x&pv=#{MacOS.version}&m=x86_64&v=latest&prerelease=false",
-          checkpoint: '3c672589db2f1326c4d7e3432f4cc48b7ad586b688e210fc7cf2a6b46ec3c16d'
+          checkpoint: 'ee66291c945a890f9c5c79cef3e2de9280615d98dfaef080fe77d1e66bad522b'
   name 'Chef Development Kit'
   name 'ChefDK'
   homepage 'https://downloads.chef.io/chefdk'
 
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :el_capitan'
 
   pkg "chefdk-#{version}-1.pkg"
 
@@ -38,7 +38,6 @@ cask 'chefdk' do
                        '/usr/local/bin/push-apply',
                        '/usr/local/bin/pushy-client',
                        '/usr/local/bin/pushy-service-manager',
-                       '/usr/local/bin/rubocop',
                      ]
 
   zap trash: '~/.chefdk/'
