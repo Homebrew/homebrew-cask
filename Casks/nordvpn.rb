@@ -11,7 +11,7 @@ cask 'nordvpn' do
 
   auto_updates true
 
-  pkg "Release_#{version}/NordVPN.sparkle_guided.pkg"
+  pkg 'exports/NordVPN_OVPN.pkg'
 
   uninstall quit:       'com.nordvpn.NordVPN',
             launchctl:  'com.nordvpn.NordVPN.Helper',
