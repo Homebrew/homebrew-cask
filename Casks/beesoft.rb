@@ -1,6 +1,6 @@
 cask 'beesoft' do
   version '4.0.5'
-  sha256 'f5557e4f13ac056e4fb05688ee111187b0cfe4d29774d95229b629d9ad47cd20'
+  sha256 '6cf5cc5873f9c6a78292f9d4586682b0cceb1c0336666617ad4924783ca793ea'
 
   url "https://www.beeverycreative.com/public/software/BEESOFT/BEESOFT%20-%20#{version.major_minor}/Desktop%20Version/BEESOFT-#{version}.pkg"
   name 'Beesoft'
