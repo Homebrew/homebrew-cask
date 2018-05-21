@@ -8,7 +8,7 @@ cask 'polar-websync' do
   homepage 'https://support.polar.com/support/downloads/Polar_WebSync_Software'
 
   # cannot be installed automatically, because it presents a choice
-  # See more: https://github.com/caskroom/homebrew-cask/pull/11040#issuecomment-100454926
+  # See more: https://github.com/Homebrew/homebrew-cask/pull/11040#issuecomment-100454926
   installer manual: 'Polar WebSync.pkg'
 
   uninstall pkgutil: 'fi.polar.websync.pkg',

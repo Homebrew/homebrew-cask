@@ -10,7 +10,7 @@ cask 'copyq' do
   homepage 'https://hluk.github.io/CopyQ/'
 
   app 'CopyQ.app'
-  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/copyq.wrapper.sh"
   binary shimscript, target: 'copyq'
 

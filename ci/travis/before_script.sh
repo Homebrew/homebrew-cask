@@ -11,7 +11,7 @@
 header 'Running before_script.sh...'
 
 # this is not normally required but does prevent problems with outdated forks and/or deleted casks
-# see https://github.com/caskroom/homebrew-cask/pull/43164
+# see https://github.com/Homebrew/homebrew-cask/pull/43164
 run export BRANCH_COMMIT="${TRAVIS_COMMIT_RANGE##*.}"
 run export TARGET_COMMIT="${TRAVIS_COMMIT_RANGE%%.*}"
 # shellcheck disable=SC2016

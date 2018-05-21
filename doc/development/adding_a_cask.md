@@ -1,4 +1,4 @@
-**Note**: Before taking the time to craft a new cask, make sure it can be accepted by checking the [Rejected Casks FAQ document](https://github.com/caskroom/homebrew-cask/blob/master/doc/faq/rejected_casks.md).
+**Note**: Before taking the time to craft a new cask, make sure it can be accepted by checking the [Rejected Casks FAQ document](https://github.com/Homebrew/homebrew-cask/blob/master/doc/faq/rejected_casks.md).
 
 ## Adding a Cask
 
@@ -67,13 +67,13 @@ The Cask **token** is the mnemonic string people will use to interact with the C
 The easiest way to generate a token for a Cask is to run this command:
 
 ```bash
-$ "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/generate_cask_token" '/full/path/to/new/software.app'
+$ "$(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/generate_cask_token" '/full/path/to/new/software.app'
 ```
 
 If the software you wish to Cask is not installed, or does not have an associated App bundle, just give the full proper name of the software instead of a pathname:
 
 ```bash
-$ "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/generate_cask_token" 'Google Chrome'
+$ "$(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/generate_cask_token" 'Google Chrome'
 ```
 
 If the `generate_cask_token` script does not work for you, see [Cask Token Details](#cask-token-details).
@@ -164,13 +164,13 @@ brew cask audit my-new-cask --download
 You should also check stylistic details with `brew cask style`:
 
 ```bash
-$ cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
+$ cd "$(brew --repository)"/Library/Taps/Homebrew/homebrew-cask
 $ brew cask style Casks/my-new-cask.rb [--fix]
 ```
 
 Keep in mind all of these checks will be made when you submit your PR, so by doing them in advance you’re saving everyone a lot of time and trouble.
 
-If your application and Homebrew-Cask do not work well together, feel free to [file an issue](https://github.com/caskroom/homebrew-cask#reporting-bugs) after checking out open issues.
+If your application and Homebrew-Cask do not work well together, feel free to [file an issue](https://github.com/Homebrew/homebrew-cask#reporting-bugs) after checking out open issues.
 
 ## Finding a Home For Your Cask
 
@@ -193,7 +193,7 @@ We maintain separate Taps for different types of binaries. Our nomenclature is:
 
 ### Stable Versions
 
-Stable versions live in the main repository at [caskroom/homebrew-cask](https://github.com/caskroom/homebrew-cask). They should run on the latest release of macOS or the previous point release (High Sierra and Sierra as of late 2017).
+Stable versions live in the main repository at [Homebrew/homebrew-cask](https://github.com/Homebrew/homebrew-cask). They should run on the latest release of macOS or the previous point release (High Sierra and Sierra as of late 2017).
 
 ### But There Is No Stable Version!
 
@@ -201,7 +201,7 @@ When an App is only available as beta, development, or unstable versions, or in 
 
 ### Beta, Unstable, Development, Nightly, or Legacy
 
-When an App has a main stable version, alternative versions should be submitted to [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
+When an App has a main stable version, alternative versions should be submitted to [Homebrew/homebrew-cask-versions](https://github.com/Homebrew/homebrew-cask-versions).
 
 ### Regional and Localized
 
@@ -221,17 +221,17 @@ We do not accept these casks since they offer a higher-than-normal security risk
 
 ### Fonts
 
-Font Casks live in the [caskroom/homebrew-fonts](https://github.com/caskroom/homebrew-fonts) repository. See the font repo [CONTRIBUTING.md](../../../../../homebrew-fonts/blob/master/CONTRIBUTING.md)
+Font Casks live in the [Homebrew/homebrew-cask-fonts](https://github.com/Homebrew/homebrew-cask-fonts) repository. See the font repo [CONTRIBUTING.md](../../../../../homebrew-cask-fonts/blob/master/CONTRIBUTING.md)
 for details.
 
 ### eIDs
 
-eID Casks live in the [caskroom/homebrew-eid](https://github.com/caskroom/homebrew-eid) repository. See the eid repo [CONTRIBUTING.md](../../../../../homebrew-eid/blob/master/CONTRIBUTING.md)
+eID Casks live in the [Homebrew/homebrew-cask-eid](https://github.com/Homebrew/homebrew-cask-eid) repository. See the eid repo [CONTRIBUTING.md](../../../../../homebrew-cask-eid/blob/master/CONTRIBUTING.md)
 for details.
 
 ### Drivers
 
-Driver Casks live in the [caskroom/homebrew-drivers](https://github.com/caskroom/homebrew-drivers) repository. See the drivers repo [CONTRIBUTING.md](../../../../../homebrew-drivers/blob/master/CONTRIBUTING.md)
+Driver Casks live in the [Homebrew/homebrew-cask-drivers](https://github.com/Homebrew/homebrew-cask-drivers) repository. See the drivers repo [CONTRIBUTING.md](../../../../../homebrew-cask-drivers/blob/master/CONTRIBUTING.md)
 for details.
 
 ## Submitting Your Changes
@@ -239,7 +239,7 @@ for details.
 Hop into your Tap and check to make sure your new Cask is there:
 
 ```bash
-$ cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
+$ cd "$(brew --repository)"/Library/Taps/Homebrew/homebrew-cask
 $ git status
 # On branch master
 # Untracked files:
@@ -297,7 +297,7 @@ If you are using [GitHub two-factor authentication](https://help.github.com/arti
 
 ### Filing a Pull Request on GitHub
 
-Now go to the [`homebrew-cask` GitHub repository](https://github.com/caskroom/homebrew-cask). GitHub will often show your `my-new-cask` branch with a handy button to `Compare & pull request`. Otherwise, click the `New pull request` button and choose to `compare across forks`. The base fork should be `caskroom/homebrew-cask @ master`, and the head fork should be `my-github-username/homebrew-cask @ my-new-cask`. You can also add any further comments to your pull request at this stage.
+Now go to the [`homebrew-cask` GitHub repository](https://github.com/Homebrew/homebrew-cask). GitHub will often show your `my-new-cask` branch with a handy button to `Compare & pull request`. Otherwise, click the `New pull request` button and choose to `compare across forks`. The base fork should be `Homebrew/homebrew-cask @ master`, and the head fork should be `my-github-username/homebrew-cask @ my-new-cask`. You can also add any further comments to your pull request at this stage.
 
 Congratulations! You are done now, and your Cask should be pulled in or otherwise noticed in a while. If a maintainer suggests some changes, just make them on the `my-new-cask` branch locally and [push](#pushing).
 
@@ -306,6 +306,6 @@ Congratulations! You are done now, and your Cask should be pulled in or otherwis
 After your Pull Request is submitted, you should get yourself back onto `master`, so that `brew update` will pull down new Casks properly:
 
 ```bash
-cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
+cd "$(brew --repository)"/Library/Taps/Homebrew/homebrew-cask
 git checkout master
 ```

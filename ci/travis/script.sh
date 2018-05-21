@@ -11,9 +11,9 @@
 header 'Running script.sh...'
 
 apps () { /usr/bin/find /Applications -type d -name '*.app' -maxdepth 2 ; }
-launchjob_install () { "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_installed_launchjob_ids" ; }
-launchjob_load () { "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_loaded_launchjob_ids" ; }
-pkgs () { "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_recent_pkg_ids" ; }
+launchjob_install () { "$(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/list_installed_launchjob_ids" ; }
+launchjob_load () { "$(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/list_loaded_launchjob_ids" ; }
+pkgs () { "$(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/list_recent_pkg_ids" ; }
 
 checks=('pkgs' 'apps' 'launchjob_install' 'launchjob_load')
 
