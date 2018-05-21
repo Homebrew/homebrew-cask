@@ -1,6 +1,6 @@
 cask 'murus' do
-  version '1.4.16'
-  sha256 'c23b2375d97e36d3d5621d1540cd6b940e6628a5134ecc619b2b6a7d44e5b5e7'
+  version '1.4.17'
+  sha256 'c2631b66d45791d1000654d2f203ed5634dc3239106c8c966f84ea365e38c6d5'
 
   url "https://www.murusfirewall.com/downloads/murus-#{version}.zip"
   name 'Murus Firewall'
