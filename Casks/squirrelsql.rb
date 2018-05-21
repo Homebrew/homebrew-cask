@@ -14,7 +14,7 @@ cask 'squirrelsql' do
   installoptions = "#{staged_path}/install-options.xml"
 
   preflight do
-    # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+    # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
     File.open(installoptions, 'w') do |f|
       f.print <<~EOS
         <?xml version="1.0" encoding="UTF-8" standalone="no"?>

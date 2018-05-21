@@ -7,7 +7,7 @@
 
 The value should be another Cask token, needed by the current Cask.
 
-Example use: [`SSHFS`](https://github.com/caskroom/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/sshfs.rb#L12) depends on OSXFUSE:
+Example use: [`SSHFS`](https://github.com/Homebrew/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/sshfs.rb#L12) depends on OSXFUSE:
 
 ```ruby
 depends_on cask: 'osxfuse'

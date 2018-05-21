@@ -13,6 +13,6 @@ cask 'devonthink-pro-office' do
   depends_on macos: '>= :mavericks'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
-  # Original discussion: https://github.com/caskroom/homebrew-cask/pull/3838
+  # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/3838
   app 'DEVONthink Pro.app', target: 'DEVONthink Pro Office.app'
 end

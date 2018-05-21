@@ -6,7 +6,7 @@ cask 'dwarf-fortress' do
   name 'Dwarf Fortress'
   homepage 'http://www.bay12games.com/dwarves/'
 
-  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/df_osx/df.wrapper.sh"
   binary shimscript, target: 'dwarf-fortress'
 

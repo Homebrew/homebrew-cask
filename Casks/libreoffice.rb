@@ -27,7 +27,7 @@ cask 'libreoffice' do
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/unopkg"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/uri-encode"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/xpdfimport"
-  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/soffice.wrapper.sh"
   binary shimscript, target: 'soffice'
 

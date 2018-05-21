@@ -8,6 +8,6 @@ cask 'futuniuniu' do
   homepage 'https://hk.futu5.com/'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
-  # Original discussion: https://github.com/caskroom/homebrew-cask/pull/7435
+  # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/7435
   app 'FutuNiuniu.app', target: '富途牛牛.app'
 end
