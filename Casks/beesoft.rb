@@ -8,5 +8,5 @@ cask 'beesoft' do
 
   pkg "BEESOFT-#{version}.pkg"
 
-  uninstall pkgutil: 'com.beeverycreative.beesoft'
+  uninstall pkgutil: 'com.beeverycreative.beeweb'
 end
