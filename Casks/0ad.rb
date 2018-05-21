@@ -11,5 +11,5 @@ cask '0ad' do
 
   depends_on macos: '>= :mountain_lion'
 
-  app '0ad.app'
+  app '0 A.D..app'
 end
