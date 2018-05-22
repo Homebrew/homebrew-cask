@@ -10,5 +10,6 @@ cask 'expressvpn' do
 
   pkg "expressvpn-install_v#{version}.pkg"
 
-  uninstall pkgutil: 'com.expressvpn.ExpressVPN'
+  uninstall pkgutil:   'com.expressvpn.ExpressVPN',
+            launchctl: 'com.expressvpn.ExpressVPN.agent'
 end
