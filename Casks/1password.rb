@@ -15,7 +15,7 @@ cask '1password' do
     url "https://cache.agilebits.com/dist/1P/mac4/1Password-#{version}.zip"
 
     app "1Password #{version.major}.app"
-  elsif MacOS.version <= :sierra
+  elsif MacOS.version <= :el_capitan
     version '6.8.9'
     sha256 'd7cc24dc354f27441929350b9e6e2e4a710d6ed0bdab06f0e9be07160fe04200'
 
