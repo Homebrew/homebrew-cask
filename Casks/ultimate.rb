@@ -1,6 +1,6 @@
 cask 'ultimate' do
-  version '3.0.9.320'
-  sha256 'ef6fefd87ecee86b33284dd5a2d2dbb26f61daea1804e7c2f55817ad94c8f1bc'
+  version '3.0.10.508'
+  sha256 '31db9176b93e6b1ac9b35e2aa6f9768f4bfbb91f2238aad0d8079894f2576f77'
 
   url 'http://download.epubor.com/epubor_ultimate.zip'
   name 'Ultimate Converter'
