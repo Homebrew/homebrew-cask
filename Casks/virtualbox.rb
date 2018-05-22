@@ -28,8 +28,4 @@ cask 'virtualbox' do
                '~/Library/Saved Application State/org.virtualbox.app.VirtualBoxVM.savedState',
              ],
       rmdir: '~/VirtualBox VMs'
-
-  caveats do
-    kext
-  end
 end
