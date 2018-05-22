@@ -31,6 +31,8 @@ cask '1password' do
     url "https://c.1password.com/dist/1P/mac7/1Password-#{version}.pkg"
 
     pkg "1Password-#{version}.pkg"
+
+    uninstall pkgutil: 'com.agilebits.pkg.onepassword'
   end
 
   appcast 'https://app-updates.agilebits.com/product_history/OPM7',
@@ -39,8 +41,6 @@ cask '1password' do
   homepage 'https://1password.com/'
 
   auto_updates true
-
-  uninstall pkgutil: 'com.agilebits.pkg.onepassword'
 
   zap trash: [
                '~/Library/Application Scripts/2BUA8C4S2C.com.agilebits.onepassword-osx-helper',
