@@ -40,7 +40,7 @@ cask '1password' do
 
   auto_updates true
 
-  uninstall pkgutil: '1Password*'
+  uninstall pkgutil: 'com.agilebits.pkg.onepassword'
 
   zap trash: [
                '~/Library/Application Scripts/2BUA8C4S2C.com.agilebits.onepassword-osx-helper',
