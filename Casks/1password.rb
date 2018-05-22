@@ -16,17 +16,16 @@ cask '1password' do
 
     app "1Password #{version.major}.app"
   else
-    version '6.8.9'
+    version '7.0.0'
     sha256 'd7cc24dc354f27441929350b9e6e2e4a710d6ed0bdab06f0e9be07160fe04200'
 
-    # cache.agilebits.com/dist/1P/mac4 was verified as official when first introduced to the cask
-    url "https://cache.agilebits.com/dist/1P/mac4/1Password-#{version}.zip"
+    url "https://app-updates.agilebits.com/download/OPM7"
 
     app "1Password #{version.major}.app"
   end
 
-  appcast 'https://app-updates.agilebits.com/product_history/OPM4',
-          checkpoint: 'eb8b60476f30a53f496a84e809b948faf81ea9f9ab442f4c923e48720e5a1f2a'
+  appcast 'https://app-updates.agilebits.com/product_history/OPM7',
+          checkpoint: '8e429ed32182657fe4b490486947246d91251853f0f39778d0976b2f8b3ba573'
   name '1Password'
   homepage 'https://1password.com/'
 
