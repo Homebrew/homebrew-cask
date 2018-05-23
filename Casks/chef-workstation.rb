@@ -10,9 +10,8 @@ cask 'chef-workstation' do
 
   pkg "chef-workstation-#{version}-1.pkg"
 
-  # When updating this cask, please verify the list of paths to delete (and
-  # add to it if necessary):
-  #  find /usr/local/bin -lname '/opt/chef-workstation/*'
+  # When updating this cask, please verify the list of paths to delete and correct it if necessary:
+  #  find /usr/local/bin -lname '/opt/chef-workstation/*' | sed -E "s/^(.*)$/'\1',/"
   uninstall pkgutil: 'com.getchef.pkg.chef-workstation',
             delete:  [
                        '/opt/chef-workstation/',
