@@ -6,5 +6,7 @@ cask 'airtable' do
   name 'Airtable'
   homepage 'https://airtable.com/'
 
+  auto_updates true
+
   app 'Airtable.app'
 end
