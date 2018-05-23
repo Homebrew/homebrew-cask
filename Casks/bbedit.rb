@@ -9,7 +9,7 @@ cask 'bbedit' do
   name 'BBEdit'
   homepage 'https://www.barebones.com/products/bbedit/'
 
-  depends_on macos: '>= :mavericks'
+  depends_on macos: '>= :el_capitan'
 
   app 'BBEdit.app'
 
