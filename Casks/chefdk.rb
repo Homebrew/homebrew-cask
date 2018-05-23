@@ -13,9 +13,8 @@ cask 'chefdk' do
 
   pkg "chefdk-#{version}-1.pkg"
 
-  # When updating this cask, please verify the list of paths to delete (and
-  # add to it if necessary):
-  #  find /usr/local/bin -lname '/opt/chefdk/*'
+  # When updating this cask, please verify the list of paths to delete and correct it if necessary:
+  #   find /usr/local/bin -lname '/opt/chefdk/*' | sed -E "s/^(.*)$/'\1',/"
   # (Source: https://docs.chef.io/install_dk.html#mac-os-x)
   uninstall pkgutil: 'com.getchef.pkg.chefdk',
             delete:  [
