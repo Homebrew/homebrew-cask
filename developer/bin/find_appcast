@@ -10,44 +10,6 @@ function absolute_path {
   echo "$(cd "$(dirname "${1}")" && pwd)/$(basename "${1}")"
 }
 
-function appcast_found {
-  local http_response checkpoint
-
-  # validate appcast
-  http_response="$(curl --silent --head "${user_agent[@]}" --write-out '%{http_code}' "${url}" -o /dev/null)"
-  [[ "${http_response}" != '200' ]] && appcast_found_error "${url}" "returned a non-200 (OK) HTTP response code (${http_response})"
-
-  checkpoint=$(brew cask _appcast_checkpoint --calculate "${url}")
-  [[ "${checkpoint}" == 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855' ]] && appcast_found_error "${url}" 'seems to be empty'
-
-  # output appcast
-  echo "An appcast was found. You should add it to your cask as:
-
-      appcast '${url}',
-              checkpoint: '${checkpoint}'
-
-    You should likely also add 'auto_updates true'
-  "
-
-  exit 0
-}
-
-function appcast_found_error {
-  local url error
-
-  url="${1}"
-  error="${2}"
-
-  echo "An appcast was found pointing to ${url}, but it ${error}. You should:
-
-    1. Check your internet connection.
-    2. Try again later.
-    3. Contact the developer.
-  "
-
-  exit 1
-}
-
 function url_exists {
   local url
 
@@ -55,6 +17,22 @@ function url_exists {
 
   [[ "$(curl --silent "${url}")" == '[]' ]] && return 1 # Special case for empty devmate appcasts
   curl --output /dev/null --silent --head --fail "${url}"
+}
+
+function verify_appcast {
+  local appcast_type url
+
+  appcast_type="${1}"
+  url="${2}"
+
+  echo -n "Looking for ${appcast_type} appcast… "
+
+  if url_exists "${url}"; then
+    echo 'Found!'
+    echo "  ${url}"
+  else
+    echo 'Not found.'
+  fi
 }
 
 function find_sparkle {
@@ -65,9 +43,7 @@ function find_sparkle {
 
   url="$(defaults read "${plist}" 'SUFeedURL' 2>/dev/null)"
 
-  if url_exists "${url}"; then
-    appcast_found "${url}"
-  fi
+  verify_appcast 'Sparkle' "${url}"
 }
 
 function find_hockeyapp {
@@ -79,9 +55,7 @@ function find_hockeyapp {
   identifier_hex="$(strings "${binary}" | grep --extended-regexp '^[a-f0-9]{32}$')"
   url="https://rink.hockeyapp.net/api/2/apps/${identifier_hex}"
 
-  if url_exists "${url}"; then
-    appcast_found "${url}"
-  fi
+  verify_appcast 'HockeyApp' "${url}"
 }
 
 function find_devmate {
@@ -92,12 +66,10 @@ function find_devmate {
 
   url="https://updates.devmate.com/${bundle_id}.xml"
 
-  if url_exists "${url}"; then
-    appcast_found "${url}"
-  fi
+  verify_appcast 'DevMate' "${url}"
 }
 
-# exit if no argument (or more than one) was given
+# Exit if no argument (or more than one) was given
 if [[ -z "${1}" ]] || [[ -n "${2}" ]]; then
   usage
   exit 1
@@ -114,5 +86,3 @@ fi
 find_sparkle "${path_to_app}"
 find_hockeyapp "${path_to_app}"
 find_devmate "${path_to_app}"
-
-echo 'This script was not able to detect an appcast on this app.'
