@@ -17,6 +17,7 @@ cask 'anka-flow' do
   uninstall launchctl: [
                          'com.veertu.nlimit',
                          'com.veertu.vlaunch',
+                         'com.veertu.anka.lupd',
                        ],
             script:    {
                          executable: '/Library/Application Support/Veertu/Anka/tools/uninstall.sh',
