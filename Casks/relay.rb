@@ -7,8 +7,6 @@ cask 'relay' do
   name 'Relay'
   homepage 'https://getrelay.com/'
 
-  license :commercial
-
   app 'Relay.app'
 
   zap trash: [
