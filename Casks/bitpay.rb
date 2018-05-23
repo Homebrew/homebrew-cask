@@ -1,14 +1,16 @@
 cask 'bitpay' do
-  version '3.4.0'
-  sha256 '32a7f0339b54669b45604646d73bd93fc512834d1e078997c2c139dec3bda568'
+  version '4.3.5'
+  sha256 '1ec8279677570c0c82ba7dfd6544fc66a0a2a3494680edbc7f91694275d2d7ba'
 
   # github.com/bitpay/copay was verified as official when first introduced to the cask
   url "https://github.com/bitpay/copay/releases/download/v#{version}/BitPay.dmg"
   appcast 'https://github.com/bitpay/copay/releases.atom',
-          checkpoint: 'fb1285278a060ae1a67ac5e8058146a28037fd47cd26257673d858d33b2f00ed'
+          checkpoint: 'eab3dfc008886b760f0e3c4c8f81a4e6a832db0b6fe66683eb0dfc1063a97ef9'
   name 'BitPay'
   homepage 'https://bitpay.com/'
   gpg "#{url}.sig", key_id: '9d17e656bb3b6163ae9d71725cd600a61112cfa1'
 
   app 'BitPay.app'
+
+  zap trash: '~/Library/Application Support/bitpay'
 end

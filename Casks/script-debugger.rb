@@ -1,19 +1,19 @@
 cask 'script-debugger' do
-  version '6.0.4-6A198'
-  sha256 '2fa7c1362023ead44cefc91526b4d2d73aa34839f3bf80d4047fafc9ce149aac'
+  version '7.0.2-7A51'
+  sha256 '87d2333d34d61c9442f375324caf4ccacf9734a042b0f5e72bd4fff69350d608'
 
   # s3.amazonaws.com/latenightsw.com was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/latenightsw.com/ScriptDebugger#{version}.dmg"
-  appcast 'https://river.yodns.com/~alldritt/versions/com.latenightsw.ScriptDebugger6.php',
-          checkpoint: '1b229674e207008bce3c67d461d178c2f6a7796ac0c57f518153a503518240f3'
+  appcast "https://www.latenightsw.com/versions/com.latenightsw.ScriptDebugger#{version.major}.php",
+          checkpoint: 'f3c5698d64f95c976c730f4431cbab945d2fa1cbdb50e7c4d1e7514b44437b1b'
   name 'Script Debugger'
   homepage 'http://latenightsw.com/'
 
   app 'Script Debugger.app'
 
-  zap delete: [
-                '~/Library/Application Support/Script Debugger 6',
-                '~/Library/Caches/com.latenightsw.ScriptDebugger6',
-                '~/Library/Preferences/com.latenightsw.ScriptDebugger6.plist',
-              ]
+  zap trash: [
+               "~/Library/Application Support/Script Debugger #{version.major}",
+               "~/Library/Caches/com.latenightsw.ScriptDebugger#{version.major}",
+               "~/Library/Preferences/com.latenightsw.ScriptDebugger#{version.major}.plist",
+             ]
 end

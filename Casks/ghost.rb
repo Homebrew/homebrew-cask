@@ -1,13 +1,15 @@
 cask 'ghost' do
-  version '1.3.0'
-  sha256 '0c871ed93f9d0536e910d7cbce22ad0eac7a84fd131f19d7b75aca7671dee041'
+  version '1.5.2'
+  sha256 '775f45ba458f457a453b51783297b0354bf76d48c4ff7403bd2d8b50ab58f087'
 
   # github.com/TryGhost/Ghost-Desktop was verified as official when first introduced to the cask
-  url "https://github.com/TryGhost/Ghost-Desktop/releases/download/v#{version}/ghost-desktop-#{version}-osx.zip"
+  url "https://github.com/TryGhost/Ghost-Desktop/releases/download/v#{version}/ghost-desktop-#{version}-osx.dmg"
   appcast 'https://github.com/TryGhost/Ghost-Desktop/releases.atom',
-          checkpoint: '63116eb7bdc8c0f15dda0e4819c65b06dd3f17081d41076a18442a7e57c8455f'
+          checkpoint: 'ecc58393423feca65bdf5573c3cf337d24e581a5b39d99daa381e0159e20b327'
   name 'Ghost Desktop'
   homepage 'https://ghost.org/downloads/'
+
+  depends_on macos: '>= :mavericks'
 
   app 'Ghost.app'
 end

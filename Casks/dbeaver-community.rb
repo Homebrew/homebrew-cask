@@ -1,17 +1,17 @@
 cask 'dbeaver-community' do
-  version '4.1.0'
-  sha256 '5e775008555f11204f49761c43de99f66e016de75022621b8c977a96ce63799a'
+  version '5.0.5'
+  sha256 'bebd2df71c1261a1128b3e752dfefaea044af3189f70312e528803896aa14ee2'
 
-  # github.com/serge-rider/dbeaver was verified as official when first introduced to the cask
-  url "https://github.com/serge-rider/dbeaver/releases/download/#{version}/dbeaver-ce-#{version}-macos.dmg"
-  appcast 'https://github.com/serge-rider/dbeaver/releases.atom',
-          checkpoint: '8c27449d66211e0df84e62db3acf3b0981efd11b80d49dffef100f189217e4ad'
+  # github.com/dbeaver/dbeaver was verified as official when first introduced to the cask
+  url "https://github.com/dbeaver/dbeaver/releases/download/#{version}/dbeaver-ce-#{version}-macos.dmg"
+  appcast 'https://github.com/dbeaver/dbeaver/releases.atom',
+          checkpoint: '0f5b582ccc7923e3aef84579786d96ffe10b5e305e8a38f6df980c46e97889f9'
   name 'DBeaver Community Edition'
-  homepage 'http://dbeaver.jkiss.org/'
+  homepage 'https://dbeaver.jkiss.org/'
 
   app 'DBeaver.app'
 
   caveats do
-    depends_on_java('8+')
+    depends_on_java '8+'
   end
 end

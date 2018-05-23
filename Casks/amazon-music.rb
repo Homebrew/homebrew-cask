@@ -1,11 +1,13 @@
 cask 'amazon-music' do
-  version '20170609,030623c6bb'
-  sha256 '285439b394833ff8c4fa36b9296951f91ecb97a83a33b79b2da3da2b25c87964'
+  version '20180516,19425382c5'
+  sha256 '690f4cd5ad26950a70cf85fd0af008ac53f0d6428f69e1f52651f09e61a94b12'
 
-  # ssl-images-amazon.com was verified as official when first introduced to the cask
+  # ssl-images-amazon.com/images was verified as official when first introduced to the cask
   url "https://images-na.ssl-images-amazon.com/images/G/01/digital/music/morpho/installers/#{version.before_comma}/#{version.after_comma}/AmazonMusicInstaller.dmg"
   name 'Amazon Music'
-  homepage 'https://www.amazon.com/b/ref=topnav_storetab_dmusic?node=14981443011'
+  homepage 'https://www.amazon.com/musicapps'
+
+  auto_updates true
 
   installer script: {
                       executable: 'Amazon Music Installer.app/Contents/MacOS/osx-intel',
@@ -16,23 +18,23 @@ cask 'amazon-music' do
                          'com.amazon.music',
                          'com.amazon.music-renderer',
                        ],
-            delete:    [
-                         '/Applications/Amazon Music.app',
-                       ],
-            launchctl: 'com.amazon.music'
+            delete:    '/Applications/Amazon Music.app',
+            launchctl: [
+                         'com.amazon.music',
+                         'com.amazon.music.startup',
+                       ]
 
-  zap delete: [
-                '~/Library/Preferences/com.amazon.music.plist',
-                '~/Library/Application Support/Amazon Music/',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.amazon.music.plist',
+               '~/Library/Application Support/Amazon Music',
+             ]
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     If the app will not launch after installation, try
 
       brew cask zap #{token}
       brew cask install #{token}
 
-    then re-launch the app. You can read more about the issue on Amazon's customer forums
-    http://www.amazon.com/App-wont-open-OS-Yosemite/forum/FxZLHSK3AW6KZU/Tx1EJYW65OQ5TZS
+    then re-launch the app.
   EOS
 end

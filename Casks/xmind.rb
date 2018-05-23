@@ -1,6 +1,6 @@
 cask 'xmind' do
-  version '8-update2'
-  sha256 '4c2d3a367c84754ff969a1a9e28725af85e79121648555ed99fd60a94d9ea5ab'
+  version '8-update7'
+  sha256 '0ae1b9d4f4c7c8206ddc8864e8fff019ac58bc944a857197ffd74e917c5272a4'
 
   url "https://www.xmind.net/xmind/downloads/xmind-#{version}-macosx.dmg"
   name 'XMind'
@@ -8,8 +8,8 @@ cask 'xmind' do
 
   app 'XMind.app'
 
-  zap delete: [
-                '~/Library/XMind',
-                '~/Library/Saved Application State/org.xmind.cathy.application.savedState',
-              ]
+  zap trash: [
+               '~/Library/XMind',
+               '~/Library/Saved Application State/org.xmind.cathy.application.savedState',
+             ]
 end

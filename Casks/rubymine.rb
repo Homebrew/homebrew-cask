@@ -1,10 +1,10 @@
 cask 'rubymine' do
-  version '2017.1.4,171.4694.21'
-  sha256 '9f817bb10bc4fc94ed24cffef4f6067f5ab7c66a3c102d3b0cac0ca995f9df5d'
+  version '2018.1.2,181.4668.84'
+  sha256 'a91ab0160863c7860356122840e69dabbc9448afc1ddd7dc31c211cfbde2fef7'
 
   url "https://download.jetbrains.com/ruby/RubyMine-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=RM&latest=true&type=release',
-          checkpoint: 'd27505bcec5df90d561c04bf7b21b32bb97d31ea4731a8e20eb1aea971fe5c81'
+          checkpoint: 'e5b9dd256965b485ca45b5b42bb51553ecc14636b30ca1f29a2fd5a22a087149'
   name 'RubyMine'
   homepage 'https://www.jetbrains.com/ruby/'
 
@@ -13,13 +13,13 @@ cask 'rubymine' do
   app 'RubyMine.app'
 
   uninstall_postflight do
-    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'mine') }.each { |path| File.delete(path) if File.exist?(path) }
+    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'mine') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }
   end
 
-  zap delete: [
-                "~/Library/Application Support/RubyMine#{version.major_minor}",
-                "~/Library/Preferences/RubyMine#{version.major_minor}",
-                "~/Library/Caches/RubyMine#{version.major_minor}",
-                "~/Library/Logs/RubyMine#{version.major_minor}",
-              ]
+  zap trash: [
+               "~/Library/Application Support/RubyMine#{version.major_minor}",
+               "~/Library/Caches/RubyMine#{version.major_minor}",
+               "~/Library/Logs/RubyMine#{version.major_minor}",
+               "~/Library/Preferences/RubyMine#{version.major_minor}",
+             ]
 end

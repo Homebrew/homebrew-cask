@@ -1,10 +1,10 @@
 cask 'folx' do
-  version '5.2.1.13688'
-  sha256 'e5e4b4c8d07a193b546c3b10e35b5eb0d9ac7933ff39c449b13beba0594e8412'
+  version '5.4.13714'
+  sha256 'd5bdeee601d647c3171806404d7f7204c5d99cdc3ac4fa3cb3ec2f29a8d1623f'
 
-  url "http://www.eltima.com/download/folx-update/downloader_mac_#{version}.dmg"
-  appcast 'http://mac.eltima.com/download/folx-updater/folx.xml',
-          checkpoint: 'b6f25be10612b6095b4375674bba50cf93d836a841627bbe0ae2ad060597399f'
+  url "https://cdn.eltima.com/download/folx-updater/downloader_mac_#{version}.dmg"
+  appcast 'https://cdn.eltima.com/download/folx-updater/folx.xml',
+          checkpoint: '1e422ddd6e03809c293e0cd98d6b2a2e8a1e544fc3334310bc3a0729eebbb2bf'
   name 'Folx'
   homepage 'https://mac.eltima.com/download-manager.html'
 
@@ -12,14 +12,14 @@ cask 'folx' do
 
   app 'Folx.app'
 
-  zap delete: [
-                '~/Library/Application Support/Eltima Software/Folx3',
-                '~/Library/Caches/com.eltima.Folx3',
-                '~/Library/Internet Plug-Ins/Folx3Plugin.plugin',
-                '~/Library/Logs/Folx.log',
-                '~/Library/Logs/Folx3.log',
-                '~/Library/Preferences/com.eltima.Folx3.plist',
-                '~/Library/Preferences/com.eltima.FolxAgent.plist',
-                '~/Library/Saved Application State/com.eltima.Folx3.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Eltima Software/Folx3',
+               '~/Library/Caches/com.eltima.Folx3',
+               '~/Library/Internet Plug-Ins/Folx3Plugin.plugin',
+               '~/Library/Logs/Folx.log',
+               '~/Library/Logs/Folx3.log',
+               '~/Library/Preferences/com.eltima.Folx3.plist',
+               '~/Library/Preferences/com.eltima.FolxAgent.plist',
+               '~/Library/Saved Application State/com.eltima.Folx3.savedState',
+             ]
 end

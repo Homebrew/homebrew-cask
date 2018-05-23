@@ -16,8 +16,8 @@ cask 'jdownloader' do
                                    '-q',
                                    '-Dinstall4j.suppressStdout=true',
                                    '-Dinstall4j.debug=false',
-                                   '-VcreateDesktopLinkAction\$Boolean=false',
-                                   '-VaddToDockAction\$Boolean=false'
+                                   '-VcreateDesktopLinkAction$Boolean=false',
+                                   '-VaddToDockAction$Boolean=false'
                                  ],
                    print_stderr: false
   end
@@ -25,6 +25,6 @@ cask 'jdownloader' do
   uninstall delete: '/Applications/JDownloader2.app'
 
   caveats do
-    depends_on_java
+    depends_on_java '8'
   end
 end

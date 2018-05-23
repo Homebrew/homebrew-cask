@@ -1,15 +1,22 @@
 cask 'bbedit' do
-  version '11.6.7'
-  sha256 'cd9dfd6513269f9f46a8031e713513a3590ae04330bcb049946b72c174bc2137'
+  version '12.1.4'
+  sha256 '92a23607b4c22c4eab050592c4f0fd243c489690180e8fabaf11c30854ac9aec'
 
   # s3.amazonaws.com/BBSW-download was verified as official when first introduced to the cask
-  url "http://s3.amazonaws.com/BBSW-download/BBEdit_#{version}.dmg"
+  url "https://s3.amazonaws.com/BBSW-download/BBEdit_#{version}.dmg"
   appcast 'https://versioncheck.barebones.com/BBEdit.xml',
-          checkpoint: 'a6fcea1acefa6b99c3d85a60db86a57afb924d0e3b9d94bf87a2589dfeb7c9a8'
+          checkpoint: 'bb98b564e338cadadc2d12c0e59d93d8ace90b274b5f60b28aabdd5e2e0d3482'
   name 'BBEdit'
   homepage 'https://www.barebones.com/products/bbedit/'
 
-  depends_on macos: '>= :mavericks'
+  depends_on macos: '>= :el_capitan'
 
   app 'BBEdit.app'
+
+  zap trash: [
+               '~/Library/Application Support/BBEdit',
+               '~/Library/Preferences/com.barebones.bbedit.plist',
+               '~/Library/BBEdit',
+               '~/Library/Caches/com.barebones.bbedit',
+             ]
 end

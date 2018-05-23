@@ -10,10 +10,10 @@ cask 'gfxcardstatus' do
 
   app 'gfxCardStatus.app'
 
-  zap delete: [
-                '~/Library/Caches/com.codykrieger.gfxCardStatus',
-                '~/Library/Cookies/com.codykrieger.gfxCardStatus.binarycookies',
-                '~/Library/Preferences/com.codykrieger.gfxCardStatus-Preferences.plist',
-                '~/Library/Preferences/com.codykrieger.gfxCardStatus.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.codykrieger.gfxCardStatus',
+               '~/Library/Cookies/com.codykrieger.gfxCardStatus.binarycookies',
+               '~/Library/Preferences/com.codykrieger.gfxCardStatus-Preferences.plist',
+               '~/Library/Preferences/com.codykrieger.gfxCardStatus.plist',
+             ]
 end

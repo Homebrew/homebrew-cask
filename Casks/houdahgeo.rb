@@ -1,6 +1,6 @@
 cask 'houdahgeo' do
-  version '5.1.9'
-  sha256 '281fecfc41209f36b34d37ba730a3d03c1aac07c27b6eb3b8e085bef36c82358'
+  version '5.2.1'
+  sha256 'df70d5aa0e8f454ee5767b7d125e2c6d9ad7e69ad132c70ee60dbed200ec9643'
 
   url "https://www.houdah.com/houdahGeo/download_assets/HoudahGeo#{version}.zip"
   name 'HoudahGeo'

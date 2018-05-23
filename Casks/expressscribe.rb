@@ -13,8 +13,8 @@ cask 'expressscribe' do
   uninstall quit:       'com.nchsoftware.expressscribe-free',
             login_item: 'ExpressScribe'
 
-  zap delete: [
-                '~/Library/Preferences/com.nchsoftware.expressscribe-free.plist',
-                '~/Library/Saved Application State/com.nchsoftware.expressscribe-free.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.nchsoftware.expressscribe-free.plist',
+               '~/Library/Saved Application State/com.nchsoftware.expressscribe-free.savedState',
+             ]
 end

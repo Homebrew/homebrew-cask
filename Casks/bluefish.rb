@@ -1,11 +1,11 @@
 cask 'bluefish' do
-  version '2.2.10'
-  sha256 'e6edd693b174c186be5eb2d2a8a89ae2608e8661f6441edbcaf27d2457d616fa'
+  version '2.2.10-2'
+  sha256 '018eacd5bb2d8fcd2f2ffc01aff65c0f49f98ad9bf921045975d4c5f8e3e0633'
 
   # bennewitz.com was verified as official when first introduced to the cask
   url "https://www.bennewitz.com/bluefish/stable/binaries/macosx/Bluefish-#{version}.dmg"
   appcast 'http://www.bennewitz.com/bluefish/stable/binaries/macosx/',
-          checkpoint: '8caecd64ed7ba8bfe38f7bec653ebbba19372c885ccde58d12f6a67cd10cadec'
+          checkpoint: 'b85971f90d968525cca72197640d58eb39140e98712b2fe915773f042b98a2b7'
   name 'Bluefish'
   homepage 'http://bluefish.openoffice.nl/index.html'
 

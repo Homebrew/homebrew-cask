@@ -1,12 +1,13 @@
 cask 'fluor' do
-  version '1.1'
-  sha256 '23078f21bc8460df9336452e66e9033366a10ad504bb25622dbf868f2fd0c292'
+  version '2.0.2'
+  sha256 'a1a90ca6b1cb4194f08ba29181331fdfd2786e99ae6d684fcb9e1a0034915753'
 
-  url "https://github.com/Pyroh/Fluor/releases/download/#{version}/Fluor.#{version}.dmg"
-  appcast 'https://github.com/Pyroh/Fluor/releases.atom',
-          checkpoint: '7a5dde65aa88f8554c8ccb64e7f148872c25e1cdcf9a5ade3c9c732958dc1b92'
+  # pyrolyse.it was verified as official when first introduced to the cask
+  url "https://resources.pyrolyse.it/distrib/Fluor/Fluor%20#{version}.dmg"
+  appcast 'https://updates.pyrolyse.it/Fluor/2.0/appcast.xml',
+          checkpoint: 'cccc963ccce69e956a1a135bb816a6a9f81ecf97a6bc9b5172d6533fdcb75476'
   name 'Fluor'
-  homepage 'https://github.com/Pyroh/Fluor/'
+  homepage 'https://fluorapp.net/'
 
   app 'Fluor.app'
 end

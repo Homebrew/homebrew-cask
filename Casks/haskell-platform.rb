@@ -1,10 +1,10 @@
 cask 'haskell-platform' do
-  version '8.0.2'
-  sha256 '68436aeb0472069ee9055fc16a737af55c2751b65a5dbbc157cc46b7b5bb6701'
+  version '8.4.2'
+  sha256 'bae4dad218a8aa19dd8cd7297e538d5a2c6894616edcecc0b4b874c1101a68f0'
 
   url "https://haskell.org/platform/download/#{version}/Haskell%20Platform%20#{version}%20Full%2064bit-signed.pkg"
   appcast 'https://github.com/haskell/haskell-platform/releases.atom',
-          checkpoint: '31f2660e7087247e584b74c9dfed5587dca3e12d5389795366e9f46ce4b26bd6'
+          checkpoint: '130ebdffff4eb3659662a01c16a929352f68ba0139d7b7b9d1b5149b07e55266'
   name 'Haskell Platform'
   homepage 'https://www.haskell.org/platform/'
 
@@ -12,7 +12,7 @@ cask 'haskell-platform' do
 
   uninstall script:  {
                        executable: '/Library/Haskell/bin/uninstall-hs',
-                       args:       %w[all --remove],
+                       args:       ['all', '--remove'],
                        sudo:       true,
                      },
             pkgutil: 'org.haskell.HaskellPlatform.*'

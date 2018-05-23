@@ -1,10 +1,10 @@
 cask 'codekit' do
-  version '3.1-25813'
-  sha256 '5856af9a5035c25fac01875efc053f33f4da282c5f089b8dca9ef800fed47bd9'
+  version '3.6.1,26680'
+  sha256 'b1e3b7ff805bca2a017a7d6c2018d58bcdceb7cb135135db6747b49129085272'
 
-  url "https://codekitapp.com/binaries/codekit-#{version.sub(%r{.*-}, '')}.zip"
+  url "https://codekitapp.com/binaries/codekit-#{version.after_comma}.zip"
   appcast "https://codekitapp.com/api/#{version.major}/appcast.xml",
-          checkpoint: '8a4e8e10d0d73b681d18252c8c8bd8cdd0a7c1a0ac18921b7f2596605c51e489'
+          checkpoint: '8106a048d789e6324815660b06952b2dc7b25ddf27121d462d196e892c75b3aa'
   name 'CodeKit'
   homepage 'https://codekitapp.com/'
 
@@ -12,11 +12,11 @@ cask 'codekit' do
 
   app 'CodeKit.app'
 
-  zap delete: [
-                "~/Library/Application Support/com.incident57.CodeKit#{version.major}",
-                "~/Library/Caches/com.incident57.CodeKit#{version.major}",
-                "~/Library/Cookies/com.incident57.CodeKit#{version.major}.binarycookies",
-                "~/Library/Preferences/com.incident57.CodeKit#{version.major}.plist",
-                "~/Library/Saved Application State/com.incident57.CodeKit#{version.major}.savedState",
-              ]
+  zap trash: [
+               "~/Library/Application Support/com.incident57.CodeKit#{version.major}",
+               "~/Library/Caches/com.incident57.CodeKit#{version.major}",
+               "~/Library/Cookies/com.incident57.CodeKit#{version.major}.binarycookies",
+               "~/Library/Preferences/com.incident57.CodeKit#{version.major}.plist",
+               "~/Library/Saved Application State/com.incident57.CodeKit#{version.major}.savedState",
+             ]
 end

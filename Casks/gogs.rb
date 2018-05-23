@@ -1,11 +1,11 @@
 cask 'gogs' do
-  version '0.11.19'
-  sha256 'd2f609a7f7abc0ba58968992136dde2c517534343869d6eb2b4101b979c40f8d'
+  version '0.11.43'
+  sha256 'cdb4e2178d0e0a4f2ef79c31326150c7cbd9a029cc4fa565a12a5e3c67292a41'
 
   # github.com/gogits/gogs was verified as official when first introduced to the cask
   url "https://github.com/gogits/gogs/releases/download/v#{version}/darwin_amd64.zip"
   appcast 'https://github.com/gogits/gogs/releases.atom',
-          checkpoint: 'b7e205e24b18e58698a65436d394196ff78c17a749c019568119a34d85f23254'
+          checkpoint: '9c96f53b46dcf12c568b093001360acce49ed5eb25d2408218f4b68cfca1bc8e'
   name 'Go Git Service'
   homepage 'https://gogs.io/'
 
@@ -15,7 +15,7 @@ cask 'gogs' do
   binary shimscript, target: 'gogs'
 
   preflight do
-    IO.write shimscript, <<-EOS.undent
+    IO.write shimscript, <<~EOS
       #!/bin/sh
       cd '#{staged_path}/gogs' && ./gogs "$@"
     EOS

@@ -8,10 +8,10 @@ cask 'unseen' do
 
   app "Unseen_v#{version}.app"
 
-  zap delete: [
-                '~/Library/Application Support/Unseen',
-                '~/Library/Preferences/com.unseen.client.plist',
-                '~/Library/Saved Application State/com.unseen.client.savedState',
-                '~/Library/Application\ Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.unseen.client.sfl ',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.unseen.client.sfl* ',
+               '~/Library/Application Support/Unseen',
+               '~/Library/Preferences/com.unseen.client.plist',
+               '~/Library/Saved Application State/com.unseen.client.savedState',
+             ]
 end

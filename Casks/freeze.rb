@@ -1,10 +1,10 @@
 cask 'freeze' do
-  version '3.1'
-  sha256 '9f52561b5ce5a5fa1f27c9b7995056a3a55e527ff0cbd5fb905e99436ed32ca2'
+  version '3.5'
+  sha256 '6511d7bb80e7768ac26211eebb968410c6e593b05ebed7d35c482914e8f26ce7'
 
   url 'https://www.freezeapp.net/download/Freeze.zip'
   appcast 'https://www.freezeapp.net/appcast.xml',
-          checkpoint: '513cb9770685ede58a1c14ec9e859f1d2db06da8a46e848557e22d61449b7127'
+          checkpoint: '469858afa8355814ac364932739aa1b812fd2ed7e6d6dda636739bf9a4b745a6'
   name 'Freeze'
   homepage 'https://www.freezeapp.net/'
 

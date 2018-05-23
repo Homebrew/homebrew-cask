@@ -1,9 +1,9 @@
 cask 'soapui' do
-  version '5.3.0'
-  sha256 '3d82a64d0573f136511b3591c060d59d78e8db356fc03df4d003dce83ec967c8'
+  version '5.4.0'
+  sha256 '9528936b416f8b4925c65d72a486108f8bf251cf102ebdcef5146a61a83ca9b5'
 
-  # cdn01.downloads.smartbear.com/soapui was verified as official when first introduced to the cask
-  url "http://cdn01.downloads.smartbear.com/soapui/#{version}/SoapUI-#{version}.dmg"
+  # s3.amazonaws.com/downloads.eviware/soapuios was verified as official when first introduced to the cask
+  url "https://s3.amazonaws.com/downloads.eviware/soapuios/#{version}/SoapUI-#{version}.dmg"
   name 'SmartBear SoapUI'
   homepage 'https://www.soapui.org/'
 
@@ -47,4 +47,10 @@ cask 'soapui' do
                     }
 
   uninstall delete: "/Applications/SoapUI-#{version}.app"
+
+  zap trash: [
+               '~/.soapuios',
+               '~/default-soapui-workspace.xml',
+               '~/soapui-settings.xml',
+             ]
 end

@@ -1,14 +1,12 @@
 cask 'paragon-extfs' do
   version '11'
-  sha256 '3e000e689433e95087b054e1d3ad8ddb79171c2db2d4e000ac3b05b6b056d9f5'
+  sha256 :no_check # required as upstream package is updated in-place
 
   url "http://dl.paragon-software.com/demo/trial_extfs#{version}.dmg"
   name 'Paragon ExtFS'
   homepage 'https://www.paragon-software.com/ufsdhome/extfs-mac/'
 
-  container nested: 'FSInstaller.app/Contents/Resources/product.zip'
-
-  pkg 'product.pkg'
+  installer manual: "Install Paragon ExtFS for Mac #{version}.app"
 
   uninstall kext:      'com.paragon-software.filesystems.extfs',
             launchctl: 'com.paragon-software.extfs*',

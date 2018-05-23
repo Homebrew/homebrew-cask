@@ -15,10 +15,10 @@ cask 'gitify' do
                     'com.electron.gitify.helper',
                   ]
 
-  zap delete: [
-                '~/Library/Application Support/gitify',
-                '~/Library/Preferences/com.electron.gitify.helper.plist',
-                '~/Library/Preferences/com.electron.gitify.plist',
-                '~/Library/Saved Application State/com.electron.gitify.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/gitify',
+               '~/Library/Preferences/com.electron.gitify.helper.plist',
+               '~/Library/Preferences/com.electron.gitify.plist',
+               '~/Library/Saved Application State/com.electron.gitify.savedState',
+             ]
 end

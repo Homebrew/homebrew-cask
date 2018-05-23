@@ -1,19 +1,21 @@
 cask 'iridium' do
-  version '58.0.0'
-  sha256 'f4d4e634f879a0df1ca70fccd827975f33789265930d06cb4213830bd432e88e'
+  version '2017.11-1'
+  sha256 'c60de6ccd8de35b3cf2f75b0f00274c50ced0eeb2a5eb0525b1905fb1039b61c'
 
-  url "https://downloads.iridiumbrowser.de/macosx/#{version}/iridium_browser_#{version}_osx_x64.dmg"
-  appcast 'https://downloads.iridiumbrowser.de/macosx/',
-          checkpoint: '512bf95c7d4448ab7dca6af5c544b349f2c59649d0507d05abf67cecd59997f8'
+  url "https://downloads.iridiumbrowser.de/macos/#{version}/iridium_browser_#{version}_macos_x64.dmg"
+  appcast 'https://downloads.iridiumbrowser.de/macos/',
+          checkpoint: '8030b33d6c451429d6098e802548c1f47dc8fbe12851ba1b55cb54502b434cbf'
   name 'Iridium Browser'
   homepage 'https://iridiumbrowser.de/'
 
+  depends_on macos: '>= :mavericks'
+
   app 'Iridium.app'
 
-  zap delete: [
-                '~/Library/Preferences/de.iridiumbrowser.plist',
-                '~/Library/Caches/de.iridiumbrowser',
-                '~/Library/Application Support/Iridium',
-                '~/Library/Saved Application State/de.iridiumbrowser.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/de.iridiumbrowser.plist',
+               '~/Library/Caches/de.iridiumbrowser',
+               '~/Library/Application Support/Iridium',
+               '~/Library/Saved Application State/de.iridiumbrowser.savedState',
+             ]
 end

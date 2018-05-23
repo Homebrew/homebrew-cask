@@ -5,8 +5,8 @@ cask 'ipartition' do
 
     url "https://coriolis-systems.com/downloads/iPartition-#{version}.zip"
   else
-    version '3.6.0'
-    sha256 '9d5806d74a3dd796583b43ca10e48810a3347c76cbecd460c257c36d2ae51fff'
+    version '3.6.2'
+    sha256 '46e17302cd7153d6b4c6ef46ba84fa8ee1112b65789a4d244b78b7e6d8c2f6c2'
 
     url "https://coriolis-systems.com/downloads/iPartition-#{version}.dmg"
   end

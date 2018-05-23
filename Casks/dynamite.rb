@@ -1,10 +1,10 @@
 cask 'dynamite' do
-  version '3.2.4'
-  sha256 'de0d67eba6affd46ac8a5fe1d0d6dd741860d791730b6c53891fafc6c8ac6d97'
+  version '3.2.6'
+  sha256 '8aceec8920ba0ca0fe143b646aa42539640eee941050f0b01ce0e89772e66bd6'
 
   url "https://mediaatelier.com/DynaMite3/DynaMite_#{version}.zip"
   appcast 'https://mediaatelier.com/DynaMite3/feed.xml',
-          checkpoint: '41b74f7891c163d44169226f44e97fc1992978e188b46847aca6cb302f1d965f'
+          checkpoint: 'b204b7b36cf64ce83d1d23034e458da365c256f10e87721994501ffd9901ea0b'
   name 'DynaMite'
   homepage 'https://www.mediaatelier.com/DynaMite3/'
 

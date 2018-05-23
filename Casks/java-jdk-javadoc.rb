@@ -1,17 +1,16 @@
 cask 'java-jdk-javadoc' do
-  version '1.8.0_131-b11,d54c1d3a095b4ff2b6607d096fa80163'
-  sha256 'd97fceb4dc4420f74b2e74508957ef1ff0e83c458d15cf9fbc5dbcda46f7b258'
+  version '10.0.1,10:fb4372174a714e6b8c52526dc134031e'
+  sha256 '884738a0ba6f18c9fd0850f21cbdade252c00e7b18bf0647d8a09150c21d8342'
 
-  java_update = version.sub(%r{.*_(\d+)-.*}, '\1')
-  url "http://download.oracle.com/otn-pub/java/jdk/#{version.minor}u#{version.before_comma.split('_').last}/#{version.after_comma}/jdk-#{version.minor}u#{java_update}-docs-all.zip",
+  url "http://download.oracle.com/otn-pub/java/jdk/#{version.before_comma}+#{version.after_comma.before_colon}/#{version.after_colon}/jdk-#{version.before_comma}_doc-all.zip",
       cookies: {
                  'oraclelicense' => 'accept-securebackup-cookie',
                }
   name 'Java Standard Edition Development Kit Documentation'
-  homepage 'http://www.oracle.com/technetwork/java/javase/documentation/jdk8-doc-downloads-2133158.html'
+  homepage "http://www.oracle.com/technetwork/java/javase/documentation/jdk#{version.major}-doc-downloads-4417029.html"
 
   postflight do
-    `/usr/libexec/java_home -v #{version.before_comma.split('-').first} -X | grep -B0 -A1 JVMHomePath | sed -n -e 's/[[:space:]]*<string>\\(.*\\)<\\/string>/\\1/p'`.split("\n").each do |path|
+    `/usr/libexec/java_home -v #{version.before_comma} -X | grep -B0 -A1 JVMHomePath | sed -n -e 's/[[:space:]]*<string>\\(.*\\)<\\/string>/\\1/p'`.split("\n").each do |path|
       system_command '/bin/cp',
                      args: ['-rp', "#{staged_path}/docs", "#{path}/"],
                      sudo: true
@@ -19,17 +18,15 @@ cask 'java-jdk-javadoc' do
   end
 
   uninstall_postflight do
-    `/usr/libexec/java_home -v #{version.before_comma.split('-').first} -X | grep -B0 -A1 JVMHomePath | sed -n -e 's/[[:space:]]*<string>\\(.*\\)<\\/string>/\\1/p'`.split("\n").each do |path|
+    `/usr/libexec/java_home -v #{version.before_comma} -X | grep -B0 -A1 JVMHomePath | sed -n -e 's/[[:space:]]*<string>\\(.*\\)<\\/string>/\\1/p'`.split("\n").each do |path|
+      next unless File.exist?("#{path}/docs")
       system_command '/bin/rm',
                      args: ['-rf', "#{path}/docs"],
                      sudo: true
     end
   end
 
-  caveats <<-EOS.undent
-    Installing this Cask means you have AGREED to the Oracle Binary Code
-    License Agreement for Java SE at
-
-      https://www.oracle.com/technetwork/java/javase/terms/license/index.html
-  EOS
+  caveats do
+    license 'https://www.oracle.com/technetwork/java/javase/terms/license/index.html'
+  end
 end

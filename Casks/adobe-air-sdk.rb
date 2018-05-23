@@ -1,6 +1,6 @@
 cask 'adobe-air-sdk' do
-  version '26.0'
-  sha256 'dececd6dc01f6fdd53f410a6c7dc70037f34af07de49ca8ccd54c945c4284af1'
+  version '29.0'
+  sha256 '89fa59a03b4bc828fb36bfde2ab87b8413a1ce4e138f18dbeb3c5920e9cc4a0e'
 
   url "https://airdownload.adobe.com/air/mac/download/#{version}/AIRSDK_Compiler.dmg"
   name 'Adobe AIR SDK'
@@ -21,23 +21,23 @@ cask 'adobe-air-sdk' do
   binary 'bin/swfdump.wrapper.sh',    target: 'swfdump'
 
   preflight do
-    %w[
-      aasdoc
-      acompc
-      adl
-      adt
-      amxmlc
-      asdoc
-      compc
-      fdb
-      fontswf
-      mxmlc
-      optimizer
-      swcdepends
-      swfdump
+    [
+      'aasdoc',
+      'acompc',
+      'adl',
+      'adt',
+      'amxmlc',
+      'asdoc',
+      'compc',
+      'fdb',
+      'fontswf',
+      'mxmlc',
+      'optimizer',
+      'swcdepends',
+      'swfdump',
     ].each do |shimscript|
       # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
-      IO.write "#{staged_path}/bin/#{shimscript}.wrapper.sh", <<-EOS.undent
+      IO.write "#{staged_path}/bin/#{shimscript}.wrapper.sh", <<~EOS
         #!/bin/sh
         exec '#{staged_path}/bin/#{shimscript}' "$@"
       EOS
@@ -52,9 +52,9 @@ cask 'adobe-air-sdk' do
     FileUtils.rm("#{HOMEBREW_PREFIX}/share/adobe-air-sdk")
   end
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     You may want to add to your profile:
-      'export ADOBE_AIR_HOME=#{HOMEBREW_PREFIX}/share/adobe-air-sdk'
+      'export ADOBE_AIR_HOME="#{HOMEBREW_PREFIX}/share/adobe-air-sdk"'
 
     This operation may take up to 10 minutes depending on your internet connection.
     Please, be patient.

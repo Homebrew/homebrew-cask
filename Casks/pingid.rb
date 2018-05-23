@@ -7,7 +7,7 @@ cask 'pingid' do
   name 'PingID'
   homepage 'https://www.pingidentity.com/'
 
-  pkg 'PingID.pkg', allow_untrusted: true
+  pkg 'PingID.pkg'
 
   uninstall pkgutil: 'com.pingidentity.pingid.pcclient'
 end

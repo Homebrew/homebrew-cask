@@ -1,42 +1,33 @@
 cask 'r-app' do
-  if MacOS.version <= :mountain_lion
-    version '3.2.1'
-    sha256 '88b9a20af00a916f3902ccac83098643b95a2801eb4775d38130b26871323a3f'
-    url "https://cloud.r-project.org/bin/macosx/R-#{version}-snowleopard.pkg"
-    pkg "R-#{version}-snowleopard.pkg"
-  else
-    version '3.4.0'
-    sha256 '6ec412a0d9b8eaef19f69f3e25a993dcfd53a8294ee17d04052c243037554646'
-    url "https://cloud.r-project.org/bin/macosx/R-#{version}.pkg"
-    pkg "R-#{version}.pkg"
-  end
+  version '3.5.0'
+  sha256 '7e56ea676e0bdfff5f88ed7db2201afd0feb7debc07ed803b0da96f3867cc16d'
 
+  url "https://cloud.r-project.org/bin/macosx/R-#{version}.pkg"
   appcast 'https://www.r-project.org/',
-          checkpoint: 'cc725ddf69caa3a397b6f188de9d9e3c3e0cbfc6a03cb0bc67a0d27f9a6c3192'
+          checkpoint: '27ab5ed070c8f6e1a01b989134bed0b2ed3d093e148a20fdac4e64ee2f22ff62'
   name 'R'
   homepage 'https://www.r-project.org/'
 
-  uninstall pkgutil: [
-                       'org.r-project.R.maverics.fw.pkg',
-                       'org.r-project.R.maverics.GUI.pkg',
-                       'org.r-project.x86_64.tcltk.x11',
-                       'org.r-project.x86_64.texinfo',
-                     ],
+  depends_on macos: '>= :el_capitan'
+
+  pkg "R-#{version}.pkg"
+
+  uninstall pkgutil: 'org.r-project*',
             delete:  [
                        '/Library/Frameworks/R.Framework',
                        '/usr/bin/R',
                        '/usr/bin/Rscript',
                      ]
 
-  zap       delete: [
-                      '~/.R',
-                      '~/.Rapp.history',
-                      '~/.RData',
-                      '~/.Rhistory',
-                      '~/.Rprofile',
-                      '~/Library/Caches/org.R-project.R',
-                      '~/Library/R',
-                    ]
+  zap trash: [
+               '~/.R',
+               '~/.Rapp.history',
+               '~/.RData',
+               '~/.Rhistory',
+               '~/.Rprofile',
+               '~/Library/R',
+               '~/Library/Caches/org.R-project.R',
+             ]
 
   caveats do
     files_in_usr_local

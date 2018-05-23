@@ -1,11 +1,11 @@
 language: ruby
 
-sudo: false
+sudo: true
 
 matrix:
   include:
     - os: osx
-      osx_image: xcode8.3
+      osx_image: xcode9.3
       rvm: system
   fast_finish: true
 
@@ -15,7 +15,7 @@ branches:
 
 cache:
   directories:
-    - $HOME/.gem
+    - /usr/local/Homebrew/Library/Homebrew/vendor/bundle
 
 install: true # skip install step
 
@@ -37,6 +37,8 @@ notifications:
   webhooks:
     urls:
       - "https://webhooks.gitter.im/e/712d699360b239db14a5"
-    on_success: change
+    on_success: never
     on_failure: always
     on_start: never
+    on_cancel: never
+    on_error: never

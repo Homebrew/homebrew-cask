@@ -13,15 +13,15 @@ cask 'cleanapp' do
 
   app 'CleanApp.app'
 
-  zap delete: [
-                '/Library/Application Support/CleanApp',
-                '/Library/LaunchDaemons/com.syniumsoftware.CleanAppDaemon.plist',
-                '~/Library/Application Support/CleanApp',
-                '~/Library/Caches/com.syniumsoftware.CleanApp',
-                '~/Library/PreferencePanes/CleanApp Logging Service.prefPane',
-                '~/Library/Preferences/com.syniumsoftware.CleanApp.plist',
-                '~/Library/Preferences/com.syniumsoftware.CleanAppDaemon.plist',
-                '~/Library/Preferences/com.syniumsoftware.stats_config.plist',
-                '~/Library/Saved Application State/com.syniumsoftware.CleanApp.savedState',
-              ]
+  zap trash: [
+               '/Library/Application Support/CleanApp',
+               '/Library/LaunchDaemons/com.syniumsoftware.CleanAppDaemon.plist',
+               '~/Library/Application Support/CleanApp',
+               '~/Library/Caches/com.syniumsoftware.CleanApp',
+               '~/Library/PreferencePanes/CleanApp Logging Service.prefPane',
+               '~/Library/Preferences/com.syniumsoftware.CleanApp.plist',
+               '~/Library/Preferences/com.syniumsoftware.CleanAppDaemon.plist',
+               '~/Library/Preferences/com.syniumsoftware.stats_config.plist',
+               '~/Library/Saved Application State/com.syniumsoftware.CleanApp.savedState',
+             ]
 end

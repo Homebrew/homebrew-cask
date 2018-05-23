@@ -4,7 +4,7 @@ cask 'chitchat' do
 
   url "https://github.com/stonesam92/ChitChat/releases/download/v#{version}/ChitChat.zip"
   appcast 'https://github.com/stonesam92/ChitChat/releases.atom',
-          checkpoint: '69a46ab6fcee6ee92bee663a47fbfd141845ef87de39a97ee90dee5b98dfc9b2'
+          checkpoint: 'dbf95f4eac9084b8b95eb773f93bd8906de08451c32891ddcfdc23edfd3f283c'
   name 'ChitChat'
   homepage 'https://github.com/stonesam92/ChitChat'
 

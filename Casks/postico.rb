@@ -1,6 +1,6 @@
 cask 'postico' do
-  version '1.1.2'
-  sha256 '07b6382f74524c462c6c637f2cd81649314a98a7e4e510504528df9eb7a868d6'
+  version '1.3.5'
+  sha256 '985a5985f8c88337430f10d4459c87937e07f91c9f3b288964e5e88285f7296e'
 
   # amazonaws.com/eggerapps-downloads was verified as official when first introduced to the cask
   url "https://s3-eu-west-1.amazonaws.com/eggerapps-downloads/postico-#{version}.zip"
@@ -11,10 +11,10 @@ cask 'postico' do
 
   app 'Postico.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/at.eggerapps.Postico',
-                '~/Library/Containers/at.eggerapps.Postico',
-                '~/Library/Preferences/at.eggerapps.Postico.plist',
-                '~/Library/Saved Application State/at.eggerapps.Postico.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/at.eggerapps.Postico',
+               '~/Library/Containers/at.eggerapps.Postico',
+               '~/Library/Preferences/at.eggerapps.Postico.plist',
+               '~/Library/Saved Application State/at.eggerapps.Postico.savedState',
+             ]
 end

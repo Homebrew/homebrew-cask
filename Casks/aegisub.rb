@@ -7,4 +7,12 @@ cask 'aegisub' do
   homepage 'http://www.aegisub.org/'
 
   app 'Aegisub.app'
+
+  uninstall quit: 'com.aegisub.aegisub'
+
+  zap trash: [
+               '~/Library/Application Support/Aegisub',
+               '~/Library/Preferences/com.aegisub.aegisub.plist',
+               '~/Library/Saved Application State/com.aegisub.aegisub.savedState',
+             ]
 end

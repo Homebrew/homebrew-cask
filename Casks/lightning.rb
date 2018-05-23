@@ -1,6 +1,6 @@
 cask 'lightning' do
-  version '1.8.4'
-  sha256 '98eca9d7ea7e8f35c213d646830f773f923b28abf13df81eb6560ba488d5d80f'
+  version '1.8.7'
+  sha256 'e935a4a2109de23eb314b2f3992efbdf80ac4ce8916200484cbd86b828652852'
 
   url "https://fwdl.filewave.com/lightning/FileWave_Lightning-#{version}.dmg"
   name 'FileWave Lightning'

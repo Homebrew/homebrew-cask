@@ -8,6 +8,6 @@ cask 'maratis' do
   name 'Maratis'
   homepage 'http://www.maratis3d.org/'
 
-  app 'Maratis.app'
-  app 'MaratisPlayer.app'
+  app "Maratis-#{version}-osx/Bin/Maratis.app"
+  app "Maratis-#{version}-osx/Bin/MaratisPlayer.app"
 end

@@ -5,7 +5,7 @@ cask 'cfxr' do
   # github.com/downloads/nevyn/cfxr was verified as official when first introduced to the cask
   url "https://github.com/downloads/nevyn/cfxr/cfxr%20#{version}.zip"
   appcast 'https://github.com/nevyn/cfxr/releases.atom',
-          checkpoint: '8df7001dcf306208bbaff94b3348320ac1771efc59fe61c6704b07aca238ebbe'
+          checkpoint: 'f20d57995b59ad0d4ecbf1edd9935221f655a7d0879c45b9d829157941d7ac73'
   name 'cfxr'
   homepage 'http://thirdcog.eu/apps/cfxr'
 

@@ -1,11 +1,11 @@
 cask 'cocoapods-app' do
-  version '1.2.0'
-  sha256 '189e40d887364027645d5471a8fc733a22dc006dec112ad6bc33cd3ea8f417a4'
+  version '1.5.2'
+  sha256 '03aa37afb129d6ae515d3b9ee7a81c30ba91050131e2dfbb3683bdd2f05ac67a'
 
   # github.com/CocoaPods/CocoaPods was verified as official when first introduced to the cask
   url "https://github.com/CocoaPods/CocoaPods-app/releases/download/#{version}/CocoaPods.app-#{version}.tar.bz2"
   appcast 'https://app.cocoapods.org/sparkle',
-          checkpoint: '083584b4914d17892691e80a248a15ee7f773bdd1677554eb4e13480d7c9e777'
+          checkpoint: 'ca6d25f4b987885e0bd17e91c33e52852a084b445340dbafe8cc9694c7e373c8'
   name 'CocoaPods.app'
   homepage 'https://cocoapods.org/'
 
@@ -17,7 +17,7 @@ cask 'cocoapods-app' do
     system_command '/usr/bin/defaults', args: ['write', 'org.cocoapods.CocoaPods', 'CPDoNotRequestCLIToolInstallationAgain', '-bool', 'true']
   end
 
-  zap delete: [
-                '~/Library/Preferences/org.cocoapods.CocoaPods.plist',
-              ]
+  zap trash: [
+               '~/Library/Preferences/org.cocoapods.CocoaPods.plist',
+             ]
 end

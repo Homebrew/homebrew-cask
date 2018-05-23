@@ -1,11 +1,11 @@
 cask 'canary' do
-  version '0.994,320,251'
-  sha256 '9d404b135e5a056442b34b5aba571bb86f3beafa26ed150f21e3f05122becc54'
+  version '2.04,413'
+  sha256 '2a374f7b1cf6392f3f408c462921f6ccd814616ab18e5203922bb8b2d74f00c9'
 
   # rink.hockeyapp.net/api was verified as official when first introduced to the cask
   url "https://rink.hockeyapp.net/api/2/apps/b36ac4a380ea4907940c2054f6163050/app_versions/#{version.after_comma}?format=zip"
   appcast 'https://rink.hockeyapp.net/api/2/apps/b36ac4a380ea4907940c2054f6163050',
-          checkpoint: '4f8986f6f5a647bda2951725fc5169da519043b6cd15ed3f9886250b32ae99e1'
+          checkpoint: 'd913e447cb8f580ee57076fb7de0213f488d218cabc4d8fe7a2a131533ad95a6'
   name 'Canary'
   homepage 'https://canarymail.io/'
 
@@ -14,8 +14,8 @@ cask 'canary' do
 
   app 'Canary.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/Sanghani.Canary',
-                '~/Library/Containers/Sanghani.Canary',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/Sanghani.Canary',
+               '~/Library/Containers/Sanghani.Canary',
+             ]
 end

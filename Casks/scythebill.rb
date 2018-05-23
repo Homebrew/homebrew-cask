@@ -1,13 +1,13 @@
 cask 'scythebill' do
-  version '13.6.0'
-  sha256 'c331db9215c1f67f325ca8bf701a4ed26160c1272c84069f28c32aacc2633871'
+  version '13.9.4'
+  sha256 '70ab53b1ac6c5d25fcab6e1f42882439155966d9c1a07c584b6143096a287528'
 
-  # amazonaws.com/downloads.scythebill.com was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/downloads.scythebill.com/Scythebill-#{version}.dmg"
-  appcast 'http://www.scythebill.com/download.html',
-          checkpoint: 'bd019e0885d4e16340f8bb00be73b0ad01a26ff69e9fbf126f8d2102b345c4e8'
+  # storage.googleapis.com/scythebill-releases was verified as official when first introduced to the cask
+  url "https://storage.googleapis.com/scythebill-releases/Scythebill-#{version}.dmg"
+  appcast 'https://www.scythebill.com/download.html',
+          checkpoint: 'cf04943a59004fb799c6845a29ad2a8f5c9188549dc0705fd2944de7d3012228'
   name 'Scythebill'
-  homepage 'http://www.scythebill.com/'
+  homepage 'https://www.scythebill.com/'
 
   app 'Scythebill.app'
 

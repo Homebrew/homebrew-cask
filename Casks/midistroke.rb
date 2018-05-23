@@ -8,5 +8,5 @@ cask 'midistroke' do
 
   app 'midiStroke.app'
 
-  zap delete: '~/Library/Application Support/midiStroke'
+  zap trash: '~/Library/Application Support/midiStroke'
 end

@@ -7,4 +7,10 @@ cask 'pablodraw' do
   homepage 'http://picoe.ca/products/pablodraw/'
 
   app 'PabloDraw.app'
+
+  zap trash: [
+               '~/Library/Application Support/ca.picoe.pablodraw',
+               '~/Library/Preferences/ca.picoe.pablodraw.plist',
+               '~/Library/Saved Application State/ca.picoe.pablodraw.savedState',
+             ]
 end

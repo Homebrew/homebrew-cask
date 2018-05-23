@@ -1,11 +1,10 @@
 cask 'komodo-ide' do
-  version '10.2.2-89895'
-  sha256 '21a103a8c30a87bd5e69d1f37af410cd1fe5e27f4d5f7f73a53cf16c2c959fe0'
+  version '11.0.2-90813'
+  sha256 '62f8423ba92f94205aec1a2f34f6330ace7f4156d41f6d046b189c9ebe93a64c'
 
-  # activestate.com/Komodo was verified as official when first introduced to the cask
   url "https://downloads.activestate.com/Komodo/releases/#{version.sub(%r{-.*}, '')}/Komodo-IDE-#{version}-macosx-x86_64.dmg"
   name 'Komodo IDE'
-  homepage 'https://komodoide.com/'
+  homepage 'https://www.activestate.com/komodo-ide/'
 
   app "Komodo IDE #{version.major}.app"
 end

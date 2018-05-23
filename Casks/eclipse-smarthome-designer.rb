@@ -8,8 +8,8 @@ cask 'eclipse-smarthome-designer' do
 
   app 'Eclipse SmartHome Designer.app'
 
-  zap delete: [
-                '~/Library/Caches/org.eclipse.smarthome.designer.product',
-                '~/Library/Preferences/org.eclipse.smarthome.designer.product.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/org.eclipse.smarthome.designer.product',
+               '~/Library/Preferences/org.eclipse.smarthome.designer.product.plist',
+             ]
 end

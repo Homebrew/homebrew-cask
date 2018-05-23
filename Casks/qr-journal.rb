@@ -1,6 +1,6 @@
 cask 'qr-journal' do
-  version '1.5'
-  sha256 '19aaa82efc8ef52e529b83aa33ed69c6a6f0d966833fdd1f3915cc70abf02e8c'
+  version '1.6'
+  sha256 'f263d0fab5a6ca5dee751cb249d5d2c1472285e10d08bc66c125841c0f603948'
 
   url "http://www.joshjacob.com/mac-development/QRJournal#{version}.dmg"
   name 'QR Journal'
@@ -8,9 +8,9 @@ cask 'qr-journal' do
 
   app 'QR Journal.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.joshjacob.qrjournal.sfl',
-                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.joshjacob.qrjournal.help',
-                '~/Library/Containers/com.joshjacob.qrjournal',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.joshjacob.qrjournal.sfl*',
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.joshjacob.qrjournal.help*',
+               '~/Library/Containers/com.joshjacob.qrjournal',
+             ]
 end

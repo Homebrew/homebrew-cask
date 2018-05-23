@@ -1,10 +1,10 @@
 cask 'cool-retro-term' do
-  version '1.0.0'
-  sha256 'ccb1c78b54e1c2dcde1a660730da2b0f6d2e4213e3748e5ad81a5653926c920e'
+  version '1.0.1'
+  sha256 '1cddb173251290388cee2d24fc668585da03d3cb1f30123efd70c0500ba74b5a'
 
-  url "https://github.com/Swordfish90/cool-retro-term/releases/download/v#{version}/cool-retro-term#{version.delete('.')}.dmg"
+  url "https://github.com/Swordfish90/cool-retro-term/releases/download/#{version}/cool-retro-term.dmg"
   appcast 'https://github.com/Swordfish90/cool-retro-term/releases.atom',
-          checkpoint: '632a816c2e5f8f150f26396e21d0526c87159595fd79bdaff6dabaad8629d1fc'
+          checkpoint: '1fa432ae6057c8ab1677b1bcd084348381d9a2190b0ec8e7cd10bd94936cd352'
   name 'cool-retro-term'
   homepage 'https://github.com/Swordfish90/cool-retro-term'
 

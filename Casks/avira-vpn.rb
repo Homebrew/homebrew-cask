@@ -16,7 +16,7 @@ cask 'avira-vpn' do
             launchctl: 'org.phantomDaemon',
             delete:    '/Applications/Avira Phantom VPN.app'
 
-  zap delete:    [
+  zap trash:     [
                    '~/Library/Preferences/com.avira.macvpn.plist',
                    '~/Library/Application Support/PhantomVPN',
                    '~/Library/Caches/PhantomVPN',

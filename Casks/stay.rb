@@ -10,9 +10,9 @@ cask 'stay' do
 
   app 'Stay.app'
 
-  zap delete: [
-                '~/Library/Application Support/Stay',
-                '~/Library/Application Support/com.cordlessdog.Stay',
-                '~/Library/Preferences/com.cordlessdog.Stay.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Stay',
+               '~/Library/Application Support/com.cordlessdog.Stay',
+               '~/Library/Preferences/com.cordlessdog.Stay.plist',
+             ]
 end

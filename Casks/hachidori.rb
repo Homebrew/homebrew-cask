@@ -1,13 +1,15 @@
 cask 'hachidori' do
-  version '2.0b8'
-  sha256 '74da8cb0a48b894dca503cf8fd498da652d9a1bc14a37482e186d4b8641098e4'
+  version '2.2.4'
+  sha256 'a9368e9ef2529d828d34c50b6997f0163f257b52c07f377b62a1e181778d62e6'
 
   # github.com/Atelier-Shiori/hachidori was verified as official when first introduced to the cask
-  url "https://github.com/Atelier-Shiori/hachidori/releases/download/#{version}/Hachidori-#{version}.dmg"
+  url "https://github.com/Atelier-Shiori/hachidori/releases/download/#{version}/hachidori-#{version}.dmg"
   appcast 'https://github.com/Atelier-Shiori/hachidori/releases.atom',
-          checkpoint: 'f07684030a1b5aa4eb7293758fa7338a5fa89da0577571b195a3b60d9cd3e61d'
+          checkpoint: 'e008cca070d3d01a96ed0f9a89449bf05936dd459b933547cda5e1d3e0a1ce41'
   name 'Hachidori'
   homepage 'https://hachidori.ateliershiori.moe/'
+
+  depends_on macos: '>= :mavericks'
 
   app 'Hachidori.app'
 end

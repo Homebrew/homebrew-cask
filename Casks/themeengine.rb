@@ -18,5 +18,5 @@ cask 'themeengine' do
 
   app 'ThemeEngine.app'
 
-  zap delete: '~/Library/Preferences/com.alexzielenski.ThemeEngine.LSSharedFileList.plist'
+  zap trash: '~/Library/Preferences/com.alexzielenski.ThemeEngine.LSSharedFileList.plist'
 end

@@ -26,23 +26,18 @@ cask 'shuttle' do
 end
 ```
 
-And here is one for `airstream`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check` (necessary since the checksum will change when a new distribution is made available). This combination of `version :latest` and `sha256 :no_check` is currently the preferred mechanism when a versioned download URL is not available.
+And here is one for `advancedcolors`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check` (necessary since the checksum will change when a new distribution is made available). This combination of `version :latest` and `sha256 :no_check` is currently the preferred mechanism when a versioned download URL is not available.
 
 ```ruby
-cask 'airstream' do
+cask 'advancedcolors' do
   version :latest
   sha256 :no_check
 
-  # amazonaws.com/airstream-clients was verified as official when first introduced to the cask
-  url 'https://s3-us-west-2.amazonaws.com/airstream-clients/mac/airstream-mac.dmg'
-  name 'AirStream'
-  homepage 'http://airstream.io/download/'
+  url 'http://advancedcolors.com/AdvancedColors.zip'
+  name 'Advanced Colors'
+  homepage 'http://advancedcolors.com/'
 
-  app 'AirStream.app'
-
-  caveats do
-    depends_on_java('6')
-  end
+  app 'AdvancedColors.app'
 end
 ```
 
@@ -194,11 +189,11 @@ We maintain separate Taps for different types of binaries. Our nomenclature is:
 + **Walled**: When the download URL is both behind a login/registration form and from a host that differs from the homepage.
 + **Font**: Data file containing a set of glyphs, characters, or symbols, that changes typed text.
 + **eID**: Software to install electronic identity card software of various countries.
-+ **Driver**: Software with the sole goal of making a hardware peripheral recognisable by the system.
++ **Driver**: Software to make a hardware peripheral recognisable and usable by the system. If the software is useless without the peripheral, it’s considered a driver.
 
 ### Stable Versions
 
-Stable versions live in the main repository at [caskroom/homebrew-cask](https://github.com/caskroom/homebrew-cask). They should run on the latest release of macOS or the previous point release (which are Sierra and El Capitan as of late 2016).
+Stable versions live in the main repository at [caskroom/homebrew-cask](https://github.com/caskroom/homebrew-cask). They should run on the latest release of macOS or the previous point release (High Sierra and Sierra as of late 2017).
 
 ### But There Is No Stable Version!
 
@@ -304,7 +299,7 @@ If you are using [GitHub two-factor authentication](https://help.github.com/arti
 
 Now go to the [`homebrew-cask` GitHub repository](https://github.com/caskroom/homebrew-cask). GitHub will often show your `my-new-cask` branch with a handy button to `Compare & pull request`. Otherwise, click the `New pull request` button and choose to `compare across forks`. The base fork should be `caskroom/homebrew-cask @ master`, and the head fork should be `my-github-username/homebrew-cask @ my-new-cask`. You can also add any further comments to your pull request at this stage.
 
-Congratulations! You are done now, and your Cask should be pulled in or otherwise noticed in a while. If a maintainer suggests some changes, just make them on the `my-new-cask` branch locally, [squash](#squashing), and [push](#pushing).
+Congratulations! You are done now, and your Cask should be pulled in or otherwise noticed in a while. If a maintainer suggests some changes, just make them on the `my-new-cask` branch locally and [push](#pushing).
 
 ## Cleaning up
 

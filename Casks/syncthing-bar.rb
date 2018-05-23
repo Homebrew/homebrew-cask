@@ -14,10 +14,10 @@ cask 'syncthing-bar' do
             pkgutil:   'koeln.mop.syncthing-bar',
             launchctl: 'koeln.mop.syncthing-bar.agent'
 
-  zap delete: [
-                '~/Library/Application Support/Syncthing',
-                '~/Library/Caches/koeln.mop.syncthing-bar',
-                '~/Library/Saved Application State/koeln.mop.syncthing-bar.savedState',
-                '/Library/LaunchAgents/koeln.mop.syncthing-bar.agent.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Syncthing',
+               '~/Library/Caches/koeln.mop.syncthing-bar',
+               '~/Library/Saved Application State/koeln.mop.syncthing-bar.savedState',
+               '/Library/LaunchAgents/koeln.mop.syncthing-bar.agent.plist',
+             ]
 end

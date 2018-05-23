@@ -1,10 +1,10 @@
 cask 'easy-move-plus-resize' do
-  version '1.1.0'
-  sha256 '9160327ba2e4cfeb17ffd084d2642421ad3fc4ac24ba0449593a0c3f4a544937'
+  version '1.2.0'
+  sha256 '2060d10fedaf7e52b762645ef36716ce9a370d9d6895b7464faf7d79f3c0afd4'
 
-  url "https://github.com/dmarcotte/easy-move-resize/releases/download/#{version}/Easy.Move.Resize.zip"
+  url "https://github.com/dmarcotte/easy-move-resize/releases/download/#{version}/Easy.Move.Resize.app.zip"
   appcast 'https://github.com/dmarcotte/easy-move-resize/releases.atom',
-          checkpoint: 'c3473b96895a84448586da51b6683c27a9b1241f9726bd79bd2b845d383e4043'
+          checkpoint: '2c58e92fbb985277d4a8ea4ca931d712f1badf61459b65f41f951c0f6be2acec'
   name 'Easy Move+Resize'
   homepage 'https://github.com/dmarcotte/easy-move-resize'
 

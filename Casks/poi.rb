@@ -1,15 +1,18 @@
 cask 'poi' do
-  version '7.8.0'
-  sha256 '840fc068b106b07de19098f06c98b6590dc6626e43587d3a65bf5c519a5dc3ba'
+  version '8.2.0'
+  sha256 '2bdcf7e07e053d632633e5e71573acdd167a896b028ee68e5c51eba44004ed49'
 
   # github.com/poooi/poi was verified as official when first introduced to the cask
   url "https://github.com/poooi/poi/releases/download/v#{version}/poi-#{version}.dmg"
   appcast 'https://github.com/poooi/poi/releases.atom',
-          checkpoint: '6e500d26ec04e58eb2cab4ef67b706ea027024f20543020ef19133e1a963d65f'
+          checkpoint: 'e347320518da9d3471fe14b236996c7e06f36a9035ff13d7e450206bd65a855c'
   name 'poi'
   homepage 'https://poi.io/'
 
   app 'poi.app'
 
-  zap trash: '~/Library/Application Support/poi/'
+  zap trash: [
+               '~/Library/Application Support/poi/',
+               '~/Library/Preferences/org.poooi.poi.helper.plist',
+             ]
 end

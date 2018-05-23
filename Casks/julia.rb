@@ -1,8 +1,8 @@
 cask 'julia' do
-  version '0.6.0'
-  sha256 '0ad3eb9e52a1c38850d04c833fd2375f588fdc4c48804e976ec7bc9c563bf717'
+  version '0.6.2'
+  sha256 'caeb50ed975ebc9ccd154eba9e8fbc04098a2a532042a573ac31ecef5b8fada7'
 
-  url "https://julialang-s3.julialang.org/bin/osx/x64/#{version.major_minor}/julia-#{version}-osx10.7+.dmg"
+  url "https://julialang-s3.julialang.org/bin/mac/x64/#{version.major_minor}/julia-#{version}-mac64.dmg"
   name 'Julia'
   homepage 'https://julialang.org/'
 
@@ -11,5 +11,5 @@ cask 'julia' do
   app "Julia-#{version.major_minor}.app"
   binary "#{appdir}/Julia-#{version.major_minor}.app/Contents/Resources/julia/bin/julia"
 
-  zap delete: '~/.julia'
+  zap trash: '~/.julia'
 end

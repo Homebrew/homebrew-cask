@@ -1,6 +1,6 @@
 cask 'kicad-extras' do
-  version '4.0.6'
-  sha256 '06a9f9c7ad99dd82115011e63dd40e21519ccc433ccd091b363106afe45302aa'
+  version '4.0.7'
+  sha256 '913dd8553d72a79ae94b5746ce78b44ee1ff9479238b70b05cea17086f059487'
 
   url "http://downloads.kicad-pcb.org/osx/stable/kicad-extras-#{version}.dmg"
   name 'KiCad Extras'

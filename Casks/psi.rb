@@ -1,11 +1,11 @@
 cask 'psi' do
-  version '0.15'
-  sha256 '76d50b5314d0a7d9f9a0a71d90e0f806f2da25436135dbd90bd1959286747742'
+  version '1.3'
+  sha256 '6dc17cc1583d6f5f921a13af9667391950537c5c268fd10d0f8bddfbc5b4d8c7'
 
   # sourceforge.net/psi was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/psi/Psi-#{version}.dmg"
+  url "https://downloads.sourceforge.net/psi/psi-#{version}-mac.dmg"
   appcast 'https://sourceforge.net/projects/psi/rss',
-          checkpoint: '0d09910e33ca40f7eff86b8089494a2b2d7c105f124297262b5ff064a3567130'
+          checkpoint: '785e92bcbeaa2c7ee2e2e06e43952ff74a449a63e9ee34c47c4266353393ad06'
   name 'Psi'
   homepage 'http://psi-im.org/'
 
@@ -13,9 +13,9 @@ cask 'psi' do
 
   uninstall quit: 'org.psi-im'
 
-  zap delete: [
-                '~/Library/Saved Application State/org.psi-im.savedState',
-                '~/Library/Caches/Psi',
-                '~/Library/Application Support/Psi',
-              ]
+  zap trash: [
+               '~/Library/Saved Application State/org.psi-im.savedState',
+               '~/Library/Caches/Psi',
+               '~/Library/Application Support/Psi',
+             ]
 end

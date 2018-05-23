@@ -8,12 +8,14 @@ cask 'adium' do
   name 'Adium'
   homepage 'https://www.adium.im/'
 
+  auto_updates true
+
   app 'Adium.app'
 
-  zap delete: [
-                '~/Library/Application Support/Adium 2.0',
-                '~/Library/Caches/Adium',
-                '~/Library/Caches/com.adiumX.adiumX',
-                '~/Library/Preferences/com.adiumX.adiumX.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Adium 2.0',
+               '~/Library/Caches/Adium',
+               '~/Library/Caches/com.adiumX.adiumX',
+               '~/Library/Preferences/com.adiumX.adiumX.plist',
+             ]
 end

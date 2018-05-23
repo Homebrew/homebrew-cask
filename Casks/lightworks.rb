@@ -10,5 +10,5 @@ cask 'lightworks' do
 
   app 'Lightworks.app'
 
-  zap delete: '~/Library/Saved Application State/com.editshare.lightworks.savedState'
+  zap trash: '~/Library/Saved Application State/com.editshare.lightworks.savedState'
 end

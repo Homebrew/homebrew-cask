@@ -8,5 +8,5 @@ cask 'hot-shots' do
   name 'Hot Shots'
   homepage 'https://gngrwzrd.com/hotshots/'
 
-  app "Hot Shots #{version.major}.app"
+  app 'Hot Shots.app'
 end

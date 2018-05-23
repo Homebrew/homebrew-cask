@@ -10,9 +10,9 @@ cask 'mixlr' do
 
   uninstall pkgutil: 'com.mixlr.pkg.Mixlr'
 
-  zap delete: [
-                '~/Library/Application Support/mixlr',
-                '~/Library/Preferences/com.mixlr.Broadcaster.plist',
-                '~/Library/Saved Application State/com.mixlr.Broadcaster.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/mixlr',
+               '~/Library/Preferences/com.mixlr.Broadcaster.plist',
+               '~/Library/Saved Application State/com.mixlr.Broadcaster.savedState',
+             ]
 end

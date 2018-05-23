@@ -1,20 +1,20 @@
 cask 'paw' do
-  version '3.1.1,1'
-  sha256 '67c668359f76666d7261a4be62cf6dc91a33698a31d93092343259459a24d92b'
+  version '3.1.7-3001007002'
+  sha256 'c2ede505c1173cc0407e4c0a9f93469abae88d8170cd8b53ae93b23971b13b6f'
 
-  url "https://cdn-builds.paw.cloud/paw/Paw-#{version.major_minor_patch}-#{version.major}#{version.minor.rjust(3, '0')}#{version.patch.rjust(3, '0')}#{version.after_comma.rjust(3, '0')}.zip"
+  url "https://cdn-builds.paw.cloud/paw/Paw-#{version}.zip"
   appcast 'https://paw.cloud/api/v2/updates/appcast',
-          checkpoint: 'ba015192ce07c426b07054d851572a98863ed51f477df986e2ac7e062cb386fb'
+          checkpoint: 'd68041584463d1be1ebba490d7bbf94573b23347e445fe728561799c6bb96c9d'
   name 'Paw'
   homepage 'https://paw.cloud/'
 
   app 'Paw.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/com.luckymarmot.Paw',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.luckymarmot.paw.sfl',
-                '~/Library/Containers/com.luckymarmot.Paw',
-                '~/Library/Preferences/com.luckymarmot.Paw.plist',
-                '~/Library/Saved Application State/com.luckymarmot.Paw.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/com.luckymarmot.Paw',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.luckymarmot.paw.sfl*',
+               '~/Library/Containers/com.luckymarmot.Paw',
+               '~/Library/Preferences/com.luckymarmot.Paw.plist',
+               '~/Library/Saved Application State/com.luckymarmot.Paw.savedState',
+             ]
 end

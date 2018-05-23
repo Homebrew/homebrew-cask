@@ -5,15 +5,20 @@ cask 'dripcap' do
   # github.com/dripcap was verified as official when first introduced to the cask
   url "https://github.com/dripcap/dripcap/releases/download/v#{version}/dripcap-darwin-amd64.dmg"
   appcast 'https://github.com/dripcap/dripcap/releases.atom',
-          checkpoint: '54544b11d6daeb65f53b52af517ed4599144b055522cf7720c30c072b929a9c7'
+          checkpoint: '7dc2b234e46244e85ce6736b4454a5fb819a149061d04b77a55caccac3e09d5b'
   name 'Dripcap'
   homepage 'https://dripcap.org/'
 
   app 'Dripcap.app'
 
-  uninstall launchctl: 'org.dripcap.DripcapHelper',
-            delete:    [
-                         '/Library/LaunchDaemons/org.dripcap.DripcapHelper.plist',
-                         '/Library/PrivilegedHelperTools/org.dripcap.DripcapHelper',
-                       ]
+  uninstall delete:    '/Library/PrivilegedHelperTools/org.dripcap.DripcapHelper',
+            launchctl: 'org.dripcap.DripcapHelper'
+
+  zap trash: [
+               '~/.dripcap',
+               '~/Library/Application Support/Dripcap',
+               '~/Library/Preferences/com.electron.dripcap.helper.plist',
+               '~/Library/Preferences/com.electron.dripcap.plist',
+               '~/Library/Saved Application State/com.electron.dripcap.savedState',
+             ]
 end

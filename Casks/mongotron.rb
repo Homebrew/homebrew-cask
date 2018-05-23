@@ -11,8 +11,8 @@ cask 'mongotron' do
 
   app 'Mongotron-darwin-x64/Mongotron.app'
 
-  zap delete: [
-                '~/Library/Application Support/Mongotron',
-                '~/Library/Caches/Mongotron',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Mongotron',
+               '~/Library/Caches/Mongotron',
+             ]
 end

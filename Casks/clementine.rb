@@ -5,18 +5,18 @@ cask 'clementine' do
   # github.com/clementine-player/Clementine was verified as official when first introduced to the cask
   url "https://github.com/clementine-player/Clementine/releases/download/#{version}/clementine-#{version}.dmg"
   appcast 'https://github.com/clementine-player/Clementine/releases.atom',
-          checkpoint: 'f2e34fdf3d07c9437f30a4119e66d57f6b4dc72c3782e695330a55ab1b865356'
+          checkpoint: '095c6ab8b2c10c84122bba3d39c13fee4124640913fed4a7f0480251b5b84bf4'
   name 'Clementine'
   homepage 'https://www.clementine-player.org/'
 
-  conflicts_with cask: 'caskroom/versions/clementine-rc'
+  conflicts_with cask: 'clementine-rc'
 
   app 'clementine.app'
 
-  zap delete: [
-                '~/Library/Application Support/Clementine',
-                '~/Library/Caches/org.clementine-player.Clementine',
-                '~/Library/Preferences/org.clementine-player.Clementine.plist',
-                '~/Library/Saved Application State/org.clementine-player.Clementine.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Clementine',
+               '~/Library/Caches/org.clementine-player.Clementine',
+               '~/Library/Preferences/org.clementine-player.Clementine.plist',
+               '~/Library/Saved Application State/org.clementine-player.Clementine.savedState',
+             ]
 end

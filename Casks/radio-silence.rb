@@ -1,10 +1,10 @@
 cask 'radio-silence' do
-  version '2.1'
-  sha256 '64500a1f683ca17b1e7fe2b05f870a871765352472c2f51b158607aa393b26d0'
+  version '2.3'
+  sha256 '0127f722cb15768392437b917d2beed2cbcab35eeccee2d77c61ac2a5997ebd1'
 
   url "https://radiosilenceapp.com/downloads/Radio_Silence_#{version}.pkg"
   appcast 'https://radiosilenceapp.com/update',
-          checkpoint: 'fc370e4a6397e4b72f6a81c3b840ae1c45376e23d55b258f2f52b01fae037949'
+          checkpoint: 'd3f64a45603b0db6cb97cf04e833f399018d8397203d31c5144c40a470aacbf2'
   name 'Radio Silence'
   homepage 'https://radiosilenceapp.com/'
 
@@ -20,7 +20,7 @@ cask 'radio-silence' do
                           },
             quit:         'com.radiosilenceapp.client',
             kext:         'com.radiosilenceapp.nke.filter',
-            pkgutil:      'com.radiosilenceapp.radioSilence.*',
+            pkgutil:      'com.radiosilenceapp.*',
             launchctl:    [
                             'com.radiosilenceapp.trial',
                             'com.radiosilenceapp.agent',

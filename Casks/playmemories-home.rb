@@ -1,9 +1,9 @@
 cask 'playmemories-home' do
-  version '3.3.00'
-  sha256 '3b0755157bd0d5d4fcae5f6199eac3f6d158bafe018fcd15dd79f56aabfac98b'
+  version '3.6.01,zb2OnHfINu'
+  sha256 '99de6ea54029d14b7c7b94d7a4d5096470a65a26a3aff53164213272b0d33896'
 
   # pmb.update.sony.net/PMH was verified as official when first introduced to the cask
-  url "http://pmb.update.sony.net/PMH/ZwznMvYM3l/PMHOME_#{version.no_dots}DL.dmg"
+  url "http://pmb.update.sony.net/PMH/#{version.after_comma}/PMHOME_#{version.before_comma.no_dots}DL.dmg"
   name 'PlayMemories Home'
   homepage 'https://support.d-imaging.sony.co.jp/www/disoft/int/download/playmemories-home/mac/en/'
 
@@ -15,8 +15,8 @@ cask 'playmemories-home' do
                          'com.sony.WirelessAutoImportLauncher.agent',
                        ]
 
-  zap delete: [
-                '/Applications/PMHMac.app',
-                '/Applications/Wireless Auto Import.app',
-              ]
+  zap trash: [
+               '/Applications/PMHMac.app',
+               '/Applications/Wireless Auto Import.app',
+             ]
 end

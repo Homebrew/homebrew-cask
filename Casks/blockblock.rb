@@ -1,11 +1,11 @@
 cask 'blockblock' do
-  version '0.9.7'
-  sha256 '12be9b1f7a320222105f76404a2a7caf70555213c3d4f344a7a4a07f954083c5'
+  version '0.9.9.1'
+  sha256 'e3c3043a6628e6fc455edc39068d59e91d11186a30a08cd3e505a5d65c26e964'
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/BlockBlock_#{version}.zip"
   appcast 'https://objective-see.com/products/changelogs/BlockBlock.txt',
-          checkpoint: 'e61c1c20e0447c983b548ae6939666608fb5c0ecade0ce2179186e580054f731'
+          checkpoint: 'c6b1c0717efd633e59199878fdb509e811ac7ae47bc7ed79d23e8f40042ccc63'
   name 'BlockBlock'
   homepage 'https://objective-see.com/products/blockblock.html'
 
@@ -23,5 +23,5 @@ cask 'blockblock' do
                       sudo:       true,
                     }
 
-  zap delete: '~/Library/Preferences/com.objectiveSee.BlockBlock.plist'
+  zap trash: '~/Library/Preferences/com.objectiveSee.BlockBlock.plist'
 end

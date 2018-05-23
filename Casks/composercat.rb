@@ -1,6 +1,6 @@
 cask 'composercat' do
-  version '0.3.1'
-  sha256 '6944ccd5d9e641dc7ffac35107d18a776858a01c9f6518aa54496a796caed944'
+  version '0.4.0'
+  sha256 '32cbc8da97b13050aee645dc84e4fb799e105603920375a3212b83f7c4be9fa6'
 
   url "https://downloads.getcomposercat.com/composercat/Composercat-#{version}.dmg"
   name 'Composercat'

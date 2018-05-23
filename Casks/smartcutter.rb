@@ -8,12 +8,12 @@ cask 'smartcutter' do
 
   app 'SmartCutter.app'
 
-  zap delete: [
-                '~/Library/Application Support/FameRing/SmartCutter',
-                '~/Library/Preferences/fltk.org/fltk.prefs',
-              ],
-      rmdir:  [
-                '~/Library/Application Support/FameRing',
-                '~/Library/Preferences/fltk.org',
-              ]
+  zap trash: [
+               '~/Library/Application Support/FameRing/SmartCutter',
+               '~/Library/Preferences/fltk.org/fltk.prefs',
+             ],
+      rmdir: [
+               '~/Library/Application Support/FameRing',
+               '~/Library/Preferences/fltk.org',
+             ]
 end

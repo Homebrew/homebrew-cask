@@ -1,20 +1,25 @@
 cask 'typora' do
-  version '0.9.9.9.4.2'
-  sha256 '9a35ffef9e10ccc66d67097744a0e76bd3f30ae340b8916c3e0172709c116dfa'
+  version '0.9.9.15.3'
+  sha256 '63abc28fe0ff5563b5d0841288515501c415587ed14fcc1998ba7e08ebf92f85'
 
-  url "https://www.typora.io/download/typora_#{version}.zip"
+  url "https://www.typora.io/download/Typora-#{version}.dmg"
   appcast 'https://www.typora.io/download/dev_update.xml',
-          checkpoint: '91910bbfb5a02ae7f6293314c2b82ee714cf2070c6a1ab70e36d8e0e00ea894d'
+          checkpoint: 'fc50aa57db2a814508e166bfdb18063d3413e99091ec96cdcce027f03ae2e30a'
   name 'Typora'
   homepage 'https://typora.io/'
 
+  auto_updates true
+
   app 'Typora.app'
 
-  zap delete: [
-                '~/Library/Application Support/abnerworks.Typora',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/abnerworks.typora.sfl',
-                '~/Library/Caches/abnerworks.Typora',
-                '~/Library/Cookies/abnerworks.Typora.binarycookies',
-                '~/Library/Preferences/abnerworks.Typora.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/abnerworks.typora.sfl*',
+               '~/Library/Application Support/Typora',
+               '~/Library/Application Support/abnerworks.Typora',
+               '~/Library/Caches/abnerworks.Typora',
+               '~/Library/Cookies/abnerworks.Typora.binarycookies',
+               '~/Library/Preferences/abnerworks.Typora.plist',
+               '~/Library/Saved Application State/abnerworks.Typora.savedState',
+               '~/Library/WebKit/abnerworks.Typora',
+             ]
 end

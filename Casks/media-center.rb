@@ -1,12 +1,21 @@
 cask 'media-center' do
-  version '22.00.88'
-  sha256 '6f6776197f7034f73d131ebe73c95b0fadfc889a067f8933cd9e543cfd9051f0'
+  version '24.00.25'
+  sha256 '97c99e6ff006fd80cc5667082519bb4804a08035465c48e6b28db05da5654fd8'
 
   url "http://files.jriver.com/mediacenter/channels/v#{version.major}/stable/MediaCenter#{version.no_dots}.dmg"
   name 'JRiver Media Center'
   homepage 'https://www.jriver.com/'
 
+  auto_updates true
+
   app "Media Center #{version.major}.app"
 
-  zap delete: '~/Library/Application Support/J River/'
+  zap trash: [
+               '~/Documents/JRiver/',
+               '~/Library/Application Support/J River/',
+               "~/Library/Caches/com.jriver.MediaCenter#{version.major}",
+               "~/Library/Cookies/com.jriver.MediaCenter#{version.major}*",
+               "~/Library/Preferences/com.jriver.MediaCenter#{version.major}.plist",
+               "~/Library/Saved Application State/com.jriver.MediaCenter#{version.major}.savedState",
+             ]
 end

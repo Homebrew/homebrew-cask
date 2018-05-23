@@ -1,10 +1,22 @@
 cask 'the-archive-browser' do
-  version '1.11.1'
-  sha256 '67bd39f6951179653e25fa8d63eef5c85e4921b702b01b228091bfc7a8e98a5d'
+  version :latest
+  sha256 :no_check
 
-  url "https://wakaba.c3.cx/releases/TheArchiveBrowser/TheArchiveBrowser#{version}.zip"
+  # dl.devmate.com/cx.c3.thearchivebrowser was verified as official when first introduced to the cask
+  url 'https://dl.devmate.com/cx.c3.thearchivebrowser/TheArchiveBrowser.zip'
   name 'The Archive Browser'
-  homepage 'https://archivebrowser.c3.cx/'
+  homepage 'https://theunarchiver.com/archive-browser'
+
+  auto_updates true
 
   app 'The Archive Browser.app'
+
+  zap trash: [
+               '~/Library/Cookies/cx.c3.thearchivebrowser.binarycookies',
+               '~/Library/Preferences/cx.c3.thearchivebrowser.plist',
+             ],
+      rmdir: [
+               '~/Library/Application Support/The Archive Browser',
+               '~/Library/Caches/cx.c3.thearchivebrowser',
+             ]
 end

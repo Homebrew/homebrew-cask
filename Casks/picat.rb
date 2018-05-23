@@ -1,10 +1,10 @@
 cask 'picat' do
-  version '2.1'
-  sha256 '2a51c892388ffc48a7a55b336dfcf7c7dbb0c347bbcaf4038d2f1ea10f9b0097'
+  version '2.4'
+  sha256 '6b5da2bcf5a7d62576018c0968e406677cf4c8f207c4db2ed6939701a5f13e06'
 
   url "http://picat-lang.org/download/picat#{version.no_dots}_macx.tar.gz"
   appcast 'http://picat-lang.org/updates.txt',
-          checkpoint: 'c2e35787d2c61d8e73ef38369fa0c139e153a24169d43bb8f43a33ba58ae0a39'
+          checkpoint: 'ca2fcc9224520e6222e1e3b50bcf1eb7a80f5bca3a2900486fcb86fd2e7eb9ed'
   name 'Picat'
   homepage 'http://www.picat-lang.org/'
 

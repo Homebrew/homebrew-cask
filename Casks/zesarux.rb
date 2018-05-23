@@ -1,12 +1,12 @@
 cask 'zesarux' do
-  version '5.0'
-  sha256 '5b76f749aae19c11913c7a993fc019ee23a25f38f80c97e4ebe035409ca99c0c'
+  version '6.0'
+  sha256 '39b0bf63d0dca442fec6168bfc3092f5a1173ebbae5121115751e522f1d17621'
 
-  url "https://downloads.sourceforge.net/zesarux/ZEsarUX_bin-#{version}-macos_opengl.dmg.gz"
-  appcast 'https://sourceforge.net/projects/zesarux/rss',
-          checkpoint: 'f2e8c05960aed20b184630b690813fa45e415a61fa6e30b79568cb0a86365ba2'
+  url "https://github.com/chernandezba/zesarux/releases/download/v#{version}/ZEsarUX_macos_opengl-#{version}.dmg.gz"
+  appcast 'https://github.com/chernandezba/zesarux/releases.atom',
+          checkpoint: 'd36e576e46c8110967f984e4cc518f30e7230b81168bce58a60fd10506cd15ea'
   name 'ZEsarUX'
-  homepage 'https://sourceforge.net/projects/zesarux/'
+  homepage 'https://github.com/chernandezba/zesarux'
 
   app 'ZEsarUX.app'
 end

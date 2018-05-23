@@ -1,10 +1,10 @@
 cask 'jmc' do
-  version '0.1-pre'
-  sha256 'ff088c349987adcb2fc12fb1636955c4ac0532d3c151b2e405e4a74bbafda284'
+  version '0.3-beta'
+  sha256 'b6e9303815d80948b80e1f94d797e1ee4ce1017940b236284930abc583ce6e41'
 
   url "https://github.com/jcm93/jmc/releases/download/v#{version}/jmc.app.zip"
   appcast 'https://github.com/jcm93/jmc/releases.atom',
-          checkpoint: 'c8afebeff0e6d8d5e4e4b12883153b7899213652bfbd6347ff5f980dabbf1d69'
+          checkpoint: 'e6caffd897c1dba961506df3a55b8f90c85b242cb7b3be1d937f0ab1c1004a4d'
   name 'jmc'
   homepage 'https://github.com/jcm93/jmc'
 

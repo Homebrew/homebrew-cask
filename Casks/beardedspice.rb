@@ -4,7 +4,7 @@ cask 'beardedspice' do
 
   url "https://github.com/beardedspice/beardedspice/releases/download/v#{version}/BeardedSpice-#{version}.zip"
   appcast 'https://github.com/beardedspice/beardedspice/releases.atom',
-          checkpoint: 'c5da76281bc705c8623e716cc2e04bc434fd3bbf7efe4524243e0c967cc243ce'
+          checkpoint: 'c8f0c708725b5784f6b7d5d2c915becde12fccab8373396f335f088270e3286f'
   name 'BeardedSpice'
   homepage 'https://github.com/beardedspice/beardedspice/'
 
@@ -12,8 +12,8 @@ cask 'beardedspice' do
 
   app 'BeardedSpice.app'
 
-  zap delete: [
-                '~/Library/Caches/com.beardedspice.BeardedSpice',
-                '~/Library/Preferences/com.beardedspice.BeardedSpice.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.beardedspice.BeardedSpice',
+               '~/Library/Preferences/com.beardedspice.BeardedSpice.plist',
+             ]
 end

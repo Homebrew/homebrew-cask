@@ -1,10 +1,10 @@
 cask 'datagrip' do
-  version '2017.1.5,171.4694.58'
-  sha256 '4f5b9cb3cac291b38a7be16c2c685aa576b6f3fed2c670bc4cb908d200b0ccee'
+  version '2018.1.3,181.5087.19'
+  sha256 'dd26486fd438dab32c887f2ca1e77ef4c53cf9fa38a65af37bbc1b7c72f0dc01'
 
   url "https://download.jetbrains.com/datagrip/datagrip-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=DG&latest=true&type=release',
-          checkpoint: 'e0a32a7ddeded056c902d7d15208b4d2d12b7abb07d966142c2d17836f19f011'
+          checkpoint: 'eb4af824cefd72931f26a5da958e2a78881ef7c951c7ba1dcc5ec9f51f18f421'
   name 'DataGrip'
   homepage 'https://www.jetbrains.com/datagrip/'
 
@@ -13,13 +13,13 @@ cask 'datagrip' do
   app 'DataGrip.app'
 
   uninstall_postflight do
-    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'datagrip') }.each { |path| File.delete(path) if File.exist?(path) }
+    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'datagrip') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }
   end
 
-  zap delete: [
-                "~/Library/Preferences/DataGrip#{version.major_minor}",
-                "~/Library/Application Support/DataGrip#{version.major_minor}",
-                "~/Library/Caches/DataGrip#{version.major_minor}",
-                "~/Library/Logs/DataGrip#{version.major_minor}",
-              ]
+  zap trash: [
+               "~/Library/Application Support/DataGrip#{version.major_minor}",
+               "~/Library/Caches/DataGrip#{version.major_minor}",
+               "~/Library/Logs/DataGrip#{version.major_minor}",
+               "~/Library/Preferences/DataGrip#{version.major_minor}",
+             ]
 end

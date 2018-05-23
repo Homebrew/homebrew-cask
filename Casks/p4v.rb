@@ -1,8 +1,10 @@
 cask 'p4v' do
-  version '2017.2'
-  sha256 '1c758ce705703e1ce8f643308b44105699f5f871aa4fcb554ce0c77ed78a15f5'
+  version '2018.2'
+  sha256 'f45c0bf6e7f1f773b00225a4dce11a4b25d01a5c6a9aa793ba194a37c9921cb8'
 
-  url "http://cdist2.perforce.com/perforce/r#{version.sub(%r{\A20(\d\d\.\d+).*}, '\1')}/bin.macosx1011x86_64/P4V.dmg"
+  url "http://cdist2.perforce.com/perforce/r#{version.sub(%r{\A20(\d\d\.\d+).*}, '\1')}/bin.macosx1013x86_64/P4V.dmg"
+  appcast "http://filehost.perforce.com/perforce/r#{version.sub(%r{\A20(\d\d\.\d+).*}, '\1')}/bin.macosx1013x86_64/SHA256SUMS",
+          checkpoint: '173a0d9432e3dc9cd15eb5b37aa90cd1402165e0036494407ac932e187b358c6'
   name 'Perforce Visual Client'
   name 'P4V'
   homepage 'https://www.perforce.com/products/helix-core-apps/helix-visual-client-p4v'
@@ -12,9 +14,9 @@ cask 'p4v' do
   app 'p4merge.app'
   binary 'p4vc'
 
-  zap delete: [
-                '~/Library/Preferences/com.perforce.p4v',
-                '~/Library/Preferences/com.perforce.p4v.plist',
-                '~/Library/Saved Application State/com.perforce.p4v.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.perforce.p4v',
+               '~/Library/Preferences/com.perforce.p4v.plist',
+               '~/Library/Saved Application State/com.perforce.p4v.savedState',
+             ]
 end

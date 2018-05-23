@@ -4,9 +4,15 @@ cask 'bitbar' do
 
   url "https://github.com/matryer/bitbar/releases/download/v#{version}/BitBar-v#{version}.zip"
   appcast 'https://github.com/matryer/bitbar/releases.atom',
-          checkpoint: '8bd4ba29559d382ffd9b98ade89882b74f40ce8207ea94253507e901aeb5f502'
+          checkpoint: '8934f1db55d0b38e5ae09f6dcdc477b7d76f2cfb453472c2d0131592fab326aa'
   name 'BitBar'
   homepage 'https://github.com/matryer/bitbar/'
 
   app 'BitBar.app'
+
+  zap trash: [
+               '~/Library/BitBar Plugins',
+               '~/Library/Caches/com.matryer.BitBar',
+               '~/Library/Preferences/com.matryer.BitBar.plist',
+             ]
 end

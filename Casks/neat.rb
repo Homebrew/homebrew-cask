@@ -1,14 +1,34 @@
 cask 'neat' do
-  version '4.3.0.36'
-  sha256 '4db396a5e9e6dbf1d03670830959fbba5753caeb77d279a60f6f251f376f3f1d'
+  version '1.5.2.11'
+  sha256 'c00a69a137b0515e621abe3df939c3469b30e6f0480c5c2aec71df4f770b9374'
 
-  # neatco.com was verified as official when first introduced to the cask
-  url "http://cdn.neatco.com/Neat-#{version}-Release.dmg"
-  name 'Neat for Mac'
+  # neatsupport.wpengine.com was verified as official when first introduced to the cask
+  url 'https://neatsupport.wpengine.com/wp-content/uploads/helpcenter/software/Neat-Mac.dmg'
+  appcast 'https://s3.amazonaws.com/helium-updater/Autoupdate/UPDATE.XML',
+          checkpoint: 'c09e03bd27235fabd426d0e35dc1847783d5b015fc59b5beecac3dab100afdeb'
+  name 'Neat'
   homepage 'https://www.neat.com/'
 
-  pkg 'Install Neat.pkg'
+  auto_updates true
 
-  uninstall pkgutil: 'com.neat.pkg.NeatBall',
-            quit:    'com.neatreceipts.nrm'
+  installer script: {
+                      executable: "#{staged_path}/Neat-Installer.app/Contents/MacOS/installbuilder.sh",
+                      args:       ['--mode', 'unattended'],
+                      sudo:       true,
+                    }
+
+  uninstall quit:   'com.neat.helium',
+            script: {
+                      executable: '/Applications/The Neat Company/Neat Smart Organization System/uninstall.app/Contents/MacOS/installbuilder.sh',
+                      args:       ['--mode', 'unattended'],
+                      sudo:       true,
+                    }
+
+  zap trash: [
+               '~/Neat-Helium-Logs',
+               '~/Library/Application Support/Neat',
+               '~/Library/Caches/Neat',
+               '~/Library/Preferences/com.neat.helium.plist',
+               '~/Library/Saved Application State/com.neat.helium.savedState',
+             ]
 end

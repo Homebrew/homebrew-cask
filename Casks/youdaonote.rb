@@ -12,12 +12,12 @@ cask 'youdaonote' do
 
   app 'YoudaoNote.app'
 
-  zap delete: [
-                '~/Library/Caches/com.crashlytics.data/com.youdao.YoudaoDict',
-                '~/Library/Caches/com.youdao.YoudaoDict',
-                '~/Library/Caches/io.fabric.sdk.mac.data/com.youdao.YoudaoDict',
-                '~/Library/Containers/com.youdao.note.YoudaoNoteMac',
-                '~/Library/Saved Application State/com.youdao.YoudaoDict.savedState',
-                '~/Library/com.youdao.YoudaoDict',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.crashlytics.data/com.youdao.YoudaoDict',
+               '~/Library/Caches/com.youdao.YoudaoDict',
+               '~/Library/Caches/io.fabric.sdk.mac.data/com.youdao.YoudaoDict',
+               '~/Library/Containers/com.youdao.note.YoudaoNoteMac',
+               '~/Library/Saved Application State/com.youdao.YoudaoDict.savedState',
+               '~/Library/com.youdao.YoudaoDict',
+             ]
 end

@@ -4,15 +4,18 @@ cask 'electron-api-demos' do
 
   url "https://github.com/electron/electron-api-demos/releases/download/v#{version}/electron-api-demos-mac.zip"
   appcast 'https://github.com/electron/electron-api-demos/releases.atom',
-          checkpoint: '3183363297478ddd29e40ce54b36bd6af491431bc6daf84d6281dd76c74619eb'
+          checkpoint: '677193eb3022a2627a43ffeae39a2373f3aacc0da0a920424f66e91303383292'
   name 'Electron API Demos'
   homepage 'https://github.com/electron/electron-api-demos'
 
   app 'Electron API Demos.app'
 
-  zap delete: [
-                '~/Library/Application Support/Electron API Demos',
-                '~/Library/Caches/com.electron.electron-api-demos',
-                '~/Library/Saved Application State/com.electron.electron-api-demos.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Electron API Demos',
+               '~/Library/Caches/com.electron.electron-api-demos',
+               '~/Library/Caches/com.electron.electron-api-demos.ShipIt',
+               '~/Library/Preferences/com.electron.electron-api-demos.helper.plist',
+               '~/Library/Preferences/com.electron.electron-api-demos.plist',
+               '~/Library/Saved Application State/com.electron.electron-api-demos.savedState',
+             ]
 end

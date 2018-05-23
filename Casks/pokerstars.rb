@@ -3,38 +3,30 @@ cask 'pokerstars' do
   sha256 :no_check
 
   language 'US', default: true do
-    %w[.com]
-  end
-
-  language 'AT' do
-    %w[.eu EU]
+    ['.net', '.net', '.net']
   end
 
   language 'DK' do
-    %w[.dk DK]
+    ['.dk', '.net', '.net']
   end
 
   language 'GR' do
-    %w[.gr GR]
+    ['.gr', '.net', '.net']
   end
 
   language 'IT' do
-    %w[.it IT]
-  end
-
-  language 'RO' do
-    %w[.ro RO]
+    ['.it', '.net', '.net']
   end
 
   language 'UK' do
-    %w[.uk UK]
+    ['.uk', '.net', '.net']
   end
 
   language 'PT' do
-    %w[.pt PT]
+    ['.pt', 'PT', '.pt']
   end
 
-  url "http://www.pokerstars#{language[0]}/PokerStars#{language[1]}.app.zip"
+  url "http://www.pokerstars#{language[2]}/PokerStars#{language[1]}.app.zip"
   name 'PokerStars'
   homepage "http://www.pokerstars#{language[0]}"
 
@@ -43,9 +35,9 @@ cask 'pokerstars' do
 
   app "PokerStars#{language[1]}.app"
 
-  zap delete: [
-                "~/Library/Preferences/com.pokerstars#{language[1]}.user.ini",
-                "~/Library/Preferences/com.pokerstars.PokerStars#{language[1]}.plist",
-                "~/Library/Application Support/PokerStars#{language[1]}",
-              ]
+  zap trash: [
+               "~/Library/Preferences/com.pokerstars#{language[1]}.user.ini",
+               "~/Library/Preferences/com.pokerstars.PokerStars#{language[1]}.plist",
+               "~/Library/Application Support/PokerStars#{language[1]}",
+             ]
 end

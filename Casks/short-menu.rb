@@ -9,10 +9,10 @@ cask 'short-menu' do
 
   app 'Short Menu.app'
 
-  zap delete: [
-                '~/Library/Application Support/Short Menu',
-                '~/Library/Containers/com.floschliep.Short-Menu',
-                '~/Library/Logs/com.floschliep.Short-Menu',
-                '~/Library/Cookies/com.floschliep.Short\-Menu.binarycookies',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Short Menu',
+               '~/Library/Containers/com.floschliep.Short-Menu',
+               '~/Library/Logs/com.floschliep.Short-Menu',
+               '~/Library/Cookies/com.floschliep.Short-Menu.binarycookies',
+             ]
 end

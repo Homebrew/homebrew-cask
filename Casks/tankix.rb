@@ -1,8 +1,8 @@
 cask 'tankix' do
-  version '660'
-  sha256 '3f50a7534d139718e72137fa9acee1efffbcd48d4b1fc6b466dc9eeb3cda13ba'
+  version 'andromeda3-18059'
+  sha256 '6afb78dac2227db038c1e1bc153c70bce80027c9ac081e332631e5805b655845'
 
-  url "http://static.tankix.com/app/StandaloneOSXIntel64/prod_#{version}/TankiX.dmg"
+  url "http://static.tankix.com/app/StandaloneOSXIntel64/#{version}/TankiX.dmg"
   name 'Tanki X'
   homepage 'https://www.tankix.com/'
 
@@ -10,10 +10,10 @@ cask 'tankix' do
 
   app 'tankix.app'
 
-  zap delete: [
-                '/Library/Logs/DiagnosticReports/tankix*',
-                '~/Library/Application Support/CrashReporter/tankix*',
-                '~/Library/Preferences/unity.AlternativaPlatform.TankiX.plist',
-                '~/Library/Saved Application State/unity.AlternativaPlatform.TankiX.savedState',
-              ]
+  zap trash: [
+               '/Library/Logs/DiagnosticReports/tankix*',
+               '~/Library/Application Support/CrashReporter/tankix*',
+               '~/Library/Preferences/unity.AlternativaPlatform.TankiX.plist',
+               '~/Library/Saved Application State/unity.AlternativaPlatform.TankiX.savedState',
+             ]
 end

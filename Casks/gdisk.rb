@@ -1,10 +1,10 @@
 cask 'gdisk' do
-  version '1.0.1'
-  sha256 '5a13fe14fd8f05ccf7d336ec9b116829712a65afdc72403aeceed20468b1e4b9'
+  version '1.0.3'
+  sha256 '11a738629d4e40d5830c122ab063f9f07ffab80f0df9294e78f6e85f5f30930c'
 
   url "https://downloads.sourceforge.net/gptfdisk/gdisk-#{version}.pkg"
   appcast 'https://sourceforge.net/projects/gptfdisk/rss',
-          checkpoint: '8cbd4a8261f6342d94cb53c726a2b33ee5dd8961abb2601dc9e86c0eaeb36f76'
+          checkpoint: '81f3940defdef59fb07dc30395b7ec8173fa1073c6d1f242a28178aaa039d34a'
   name 'GPT fdisk'
   homepage 'https://sourceforge.net/projects/gptfdisk/'
 

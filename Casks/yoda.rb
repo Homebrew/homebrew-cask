@@ -9,4 +9,11 @@ cask 'yoda' do
   homepage 'https://github.com/whoisandy/yoda'
 
   app 'Yoda.app'
+
+  zap trash: [
+               '~/Library/Application Support/yoda',
+               '~/Library/Caches/yoda',
+               '~/Library/Preferences/com.whoisandie.yoda.plist',
+               '~/Library/Saved Application State/com.whoisandie.yoda.savedState',
+             ]
 end

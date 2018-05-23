@@ -16,17 +16,19 @@ cask 'cocoaspell' do
   uninstall pkgutil: 'net.leuski.cocoaspell.*',
             delete:  [
                        '/Application Support/cocoAspell/aspell6-en-6.0-0',
+                       '/Library/Application Support/cocoAspell',
                        '/Library/PreferencePanes/Spelling.prefPane',
                      ]
 
-  zap delete: [
-                '~/.aspell.conf',
-                '~/.aspell.en.prepl',
-                '~/.aspell.en.pws',
-              ]
+  zap trash: [
+               '~/.aspell.conf',
+               '~/.aspell.en.prepl',
+               '~/.aspell.en.pws',
+               '~/Library/Preferences/cocoAspell',
+             ]
 
-  caveats <<-EOS.undent
-    Non-English dictionaries must be installed separately.  For more information, see
+  caveats <<~EOS
+    Non-English dictionaries must be installed separately. For more information, see
 
       http://people.ict.usc.edu/~leuski/cocoaspell/install_dict.php
   EOS

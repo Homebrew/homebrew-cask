@@ -1,6 +1,6 @@
 cask 'tuxera-ntfs' do
-  version '2016.1'
-  sha256 'd957b207b13b705f9ef5e4f54942af0b41fb335219ca0833c34627ce95e968f9'
+  version '2018'
+  sha256 '84af4075f0ceaf42040928447d9f77240e4c3ae4359837e113cf35115400a19a'
 
   url "https://www.tuxera.com/mac/tuxerantfs_#{version}.dmg"
   name 'Tuxera NTFS'

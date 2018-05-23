@@ -9,9 +9,9 @@ cask 'command-tab-plus' do
 
   app 'Command-Tab Plus.app'
 
-  zap delete: [
-                '/Users/Shared/Command-Tab Plus',
-                '~/Library/Application Support/Command-Tab Plus',
-                '~/Library/Caches/com.sergey-gerasimenko.Command-Tab',
-              ]
+  zap trash: [
+               '/Users/Shared/Command-Tab Plus',
+               '~/Library/Application Support/Command-Tab Plus',
+               '~/Library/Caches/com.sergey-gerasimenko.Command-Tab',
+             ]
 end

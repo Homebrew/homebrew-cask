@@ -7,15 +7,13 @@ cask 'bittorrent' do
   name 'BitTorrent'
   homepage 'https://www.bittorrent.com/'
 
-  installer manual: 'Bittorrent.app'
+  app 'BitTorrent.app'
 
-  uninstall delete: '/Applications/BitTorrent.app'
-
-  zap delete: [
-                '~/Library/Preferences/com.com.bittorrent.BitTorrent.plist',
-                '~/Library/Application Support/BitTorrent',
-                '~/Library/Saved Application State/com.com.bittorrent.BitTorrent.savedState',
-                '~/Library/Caches/com.com.bittorrent.BitTorrent',
-                '~/Library/LaunchAgents/com.bittorrent.BitTorrent.plist',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.bittorrent.BitTorrent.plist',
+               '~/Library/Application Support/BitTorrent',
+               '~/Library/Saved Application State/com.bittorrent.BitTorrent.savedState',
+               '~/Library/Caches/com.bittorrent.BitTorrent',
+               '~/Library/LaunchAgents/com.bittorrent.BitTorrent.plist',
+             ]
 end

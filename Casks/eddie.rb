@@ -1,6 +1,6 @@
 cask 'eddie' do
-  version '2.12.4'
-  sha256 '898abec0155bfe90f5b04c5c22dc20339cc21a59fc5083284550c430acd4b761'
+  version '2.13.6'
+  sha256 '7982140549b13b18892bbb171c7e4b2ed333c99f59b20e9d4c85fd5b047ea40f'
 
   # eddie.website was verified as official when first introduced to the cask
   url "https://eddie.website/download/?platform=macos&arch=x64&ui=ui&format=disk.dmg&version=#{version}"

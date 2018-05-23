@@ -12,12 +12,12 @@ cask 'jungle-disk-workgroup' do
 
   app 'Jungle Disk Workgroup.app'
 
-  zap delete: [
-                '/Library/Caches/jungledisk/wg-cache',
-                '/Library/Application Support/Jungle Disk Workgroup/',
-                '/Library/PrivilegedHelperTools/com.jungledisk.JungleDiskWorkgroup.DaemonHelperTool',
-                '/Library/LaunchDaemons/com.jungledisk.workgroupservice.plist',
-                '/Library/LaunchDaemons/com.jungledisk.JungleDiskWorkgroup.DaemonHelperTool.plist',
-                '~/Library/Application Support/Jungle Disk Workgroup/',
-              ]
+  zap trash: [
+               '/Library/Caches/jungledisk/wg-cache',
+               '/Library/Application Support/Jungle Disk Workgroup/',
+               '/Library/PrivilegedHelperTools/com.jungledisk.JungleDiskWorkgroup.DaemonHelperTool',
+               '/Library/LaunchDaemons/com.jungledisk.workgroupservice.plist',
+               '/Library/LaunchDaemons/com.jungledisk.JungleDiskWorkgroup.DaemonHelperTool.plist',
+               '~/Library/Application Support/Jungle Disk Workgroup/',
+             ]
 end

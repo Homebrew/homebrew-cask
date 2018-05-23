@@ -4,9 +4,9 @@ cask 'mailplane' do
 
   url 'http://update.mailplaneapp.com/mailplane_3.php'
   name 'Mailplane'
-  homepage 'http://mailplaneapp.com/'
+  homepage 'https://mailplaneapp.com/'
 
   app 'Mailplane 3.app'
 
-  zap delete: '~/Library/Preferences/com.mailplaneapp.Mailplane.plist'
+  zap trash: '~/Library/Preferences/com.mailplaneapp.Mailplane.plist'
 end

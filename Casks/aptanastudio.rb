@@ -1,11 +1,11 @@
 cask 'aptanastudio' do
   version '3.6.1'
-  sha256 '1eed9a94ce9b9bf03743f0bfdc5efd752b3470842170ba571ee25d2810c3c8f0'
+  sha256 '0d7ea3079822b26105e74d27d8a64bb138f5ab57705f6451a67432190c0697d8'
 
   # github.com/aptana/studio3 was verified as official when first introduced to the cask
-  url "https://github.com/aptana/studio3/releases/download/v#{version}/Aptana_Studio_3_Setup_#{version}.dmg"
+  url "https://github.com/aptana/studio3/releases/download/v#{version}/Aptana_Studio_#{version}_Setup.dmg"
   appcast "https://github.com/aptana/studio#{version.major}/releases.atom",
-          checkpoint: '4224b40e653538aafadb99463b5cd695a561bed7f7570d14fe9c1071131471e9'
+          checkpoint: 'bc7e44cbfb6450a4af49e41a1ceb499ea9ea90a7f86bd8f58be7dc29a9743daa'
   name 'Aptana Studio'
   homepage 'http://www.aptana.com/'
 

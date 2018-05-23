@@ -5,9 +5,11 @@ cask 'spek' do
   # github.com/alexkay/spek was verified as official when first introduced to the cask
   url "https://github.com/alexkay/spek/releases/download/v#{version}/spek-#{version}.dmg"
   appcast 'https://github.com/alexkay/spek/releases.atom',
-          checkpoint: '2ed5efa777cb07040d9d44e658bec267111b978d4701bbd8d6f6d3e1c1264f49'
+          checkpoint: '3035522c6bd5754965a890aa89038e549f5d6251b985106c2d0ccbd2af08d31d'
   name 'Spek'
   homepage 'http://spek.cc/'
+
+  depends_on macos: '<= :sierra'
 
   app 'Spek.app'
 end

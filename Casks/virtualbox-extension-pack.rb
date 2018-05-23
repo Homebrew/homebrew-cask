@@ -1,10 +1,10 @@
 cask 'virtualbox-extension-pack' do
-  version '5.1.22-115126'
-  sha256 '244e6f450cba64e0b025711050db3c43e6ce77e12cd80bcd08796315a90c8aaf'
+  version '5.2.12,122591'
+  sha256 '4c36d129f17dcab2bb37292022f1b1adfefa5f32a3161b0d5d40784bc8acf4d0'
 
-  url "http://download.virtualbox.org/virtualbox/#{version.sub(%r{-.*}, '')}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
-  appcast 'http://download.virtualbox.org/virtualbox/LATEST.TXT',
-          checkpoint: '4bc244bbabe0bdb1c33d1813128589ceb3112be9ccebfccc1100ff6ca358b1c3'
+  url "https://download.virtualbox.org/virtualbox/#{version.before_comma}/Oracle_VM_VirtualBox_Extension_Pack-#{version.before_comma}-#{version.after_comma}.vbox-extpack"
+  appcast 'https://download.virtualbox.org/virtualbox/LATEST.TXT',
+          checkpoint: 'ca92bf35359ba81093787992fa315c6458297fc132425d6d914552c85e658795'
   name 'Oracle VirtualBox Extension Pack'
   homepage 'https://www.virtualbox.org/'
 
@@ -15,15 +15,16 @@ cask 'virtualbox-extension-pack' do
 
   postflight do
     system_command '/usr/local/bin/VBoxManage',
-                   args: [
-                           'extpack', 'install',
-                           '--replace', "#{staged_path}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack",
-                           '--accept-license=715c7246dc0f779ceab39446812362b2f9bf64a55ed5d3a905f053cfab36da9e'
-                         ],
-                   sudo: true
+                   args:  [
+                            'extpack', 'install',
+                            '--replace', "#{staged_path}/Oracle_VM_VirtualBox_Extension_Pack-#{version.before_comma}-#{version.after_comma}.vbox-extpack"
+                          ],
+                   input: 'y',
+                   sudo:  true
   end
 
   uninstall_postflight do
+    next unless File.exist?('/usr/local/bin/VBoxManage')
     system_command '/usr/local/bin/VBoxManage',
                    args: [
                            'extpack', 'uninstall',
@@ -32,10 +33,7 @@ cask 'virtualbox-extension-pack' do
                    sudo: true
   end
 
-  caveats <<-EOS.undent
-    Installing this Cask means you have AGREED to the
-    VirtualBox Personal Use and Evaluation License at
-
-    https://www.virtualbox.org/wiki/VirtualBox_PUEL
-  EOS
+  caveats do
+    license 'https://www.virtualbox.org/wiki/VirtualBox_PUEL'
+  end
 end

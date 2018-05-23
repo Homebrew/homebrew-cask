@@ -1,10 +1,10 @@
 cask 'sqleditor' do
-  version '3.1.9'
-  sha256 '8419446979c5e6fd4c6ab4753bf7ccb7e6fdbbf59a93c6bb9b3b1d0007249603'
+  version '3.3.5'
+  sha256 'b70a48b8e1a5175195e82e5fc9c1001e88b2feb4f34ccb6fe2e847078d0d2ef7'
 
   url "https://www.malcolmhardie.com/sqleditor/releases/#{version}/SQLEditor-#{version.dots_to_hyphens}.zip"
   appcast 'https://www.malcolmhardie.com/sqleditor/appcast/sq2release.xml',
-          checkpoint: '53be5419c1a2c4479ff42c771a99913e4157d63312c63e9709ead5a26c91b20e'
+          checkpoint: '34db2e166e7c91e9f6fca5fa787bcdb7065d124253871d62bd5ce9480c90af73'
   name 'SQLEditor'
   homepage 'https://www.malcolmhardie.com/sqleditor/'
 

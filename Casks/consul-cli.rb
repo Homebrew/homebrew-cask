@@ -4,7 +4,7 @@ cask 'consul-cli' do
 
   url "https://github.com/mantl/consul-cli/releases/download/v#{version}/consul-cli_#{version}_darwin_amd64.tar.gz"
   appcast 'https://github.com/mantl/consul-cli/releases.atom',
-          checkpoint: 'c36477c52076633cd49524cf5226968915e7212bb8211d23cd70a7163134c5b7'
+          checkpoint: '4208559e8f8f13401b81ad7686a8a05debb8fb7ea0e3da1daab9d3ac750af86e'
   name 'Consul CLI'
   homepage 'https://github.com/mantl/consul-cli/wiki'
 

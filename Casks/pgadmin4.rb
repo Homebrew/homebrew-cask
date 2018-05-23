@@ -1,6 +1,6 @@
 cask 'pgadmin4' do
-  version '1.5'
-  sha256 'c1d40c2eacea2b9e934551e22183d9404674946cae544651248aaf086630567a'
+  version '3.0'
+  sha256 '9c0b6e68655f0c10fb457f66f173e62cde6e745e28033ed06849fd157b72dc04'
 
   # ftp.postgresql.org was verified as official when first introduced to the cask
   url "https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v#{version}/macos/pgadmin4-#{version}.dmg"
@@ -10,10 +10,10 @@ cask 'pgadmin4' do
 
   app 'pgAdmin 4.app'
 
-  zap delete: [
-                '~/.pgadmin',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.pgadmin.pgadmin4.sfl',
-                '~/Library/Preferences/org.pgadmin.pgAdmin 4.plist',
-                '~/Library/Saved Application State/org.pgadmin.pgAdmin4.savedState',
-              ]
+  zap trash: [
+               '~/.pgadmin',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.pgadmin.pgadmin4.sfl*',
+               '~/Library/Preferences/org.pgadmin.pgadmin4.plist',
+               '~/Library/Saved Application State/org.pgadmin.pgAdmin4.savedState',
+             ]
 end

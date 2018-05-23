@@ -1,10 +1,10 @@
 cask 'keybase' do
-  version '1.0.24-20170619144856,91a6943'
-  sha256 '7e05d634bba135ad4e1d0d2eabf73c39364e98c8d6fd946a3cc311626430c9b7'
+  version '1.0.48-20180516160420,b56432f520'
+  sha256 'f10e2af4884a905aa1d2768cedbe0be0d43c8a7768a61e9cce068d67db15ea5a'
 
-  url "https://prerelease.keybase.io/darwin/Keybase-#{version.before_comma}%2B#{version.after_comma}.dmg"
+  url "https://prerelease.keybase.io/darwin-updates/Keybase-#{version.before_comma}%2B#{version.after_comma}.zip"
   appcast 'https://prerelease.keybase.io/update-darwin-prod-v2.json',
-          checkpoint: 'a83dbddd60ea8b26bfa3959ec6a855453ba8364b7662c36dd0f1028403144501'
+          checkpoint: '9fbdbedc9cedd23730089c6d1035630b23f9156e31437cbdb5e2624780a6b312'
   name 'Keybase'
   homepage 'https://keybase.io/'
 
@@ -13,11 +13,12 @@ cask 'keybase' do
   app 'Keybase.app'
 
   postflight do
-    system_command "#{appdir}/Keybase.app/Contents/Resources/KeybaseInstaller.app/Contents/MacOS/Keybase",
-                   args: ["--app-path=#{appdir}/Keybase.app", '--run-mode=prod', '--timeout=10']
+    system_command "#{appdir}/Keybase.app/Contents/SharedSupport/bin/keybase",
+                   args: ['install-auto']
   end
 
-  uninstall launchctl:  'keybase.Helper',
+  uninstall delete:     '/Library/PrivilegedHelperTools/keybase.Helper',
+            launchctl:  'keybase.Helper',
             login_item: 'Keybase',
             signal:     [
                           ['TERM', 'keybase.Electron'],
@@ -30,19 +31,14 @@ cask 'keybase' do
                           args:       ['uninstall'],
                         }
 
-  zap delete: [
-                '~/Library/Application Support/Keybase',
-                '~/Library/Caches/Keybase',
-                '~/Library/Group Containers/keybase',
-                '~/Library/Logs/Keybase.app.log',
-                '~/Library/Logs/keybase.kbfs.log',
-                '~/Library/Logs/keybase.service.log',
-                '~/Library/Logs/keybase.start.log',
-                '~/Library/Logs/keybase.updater.log',
-                '~/Library/Preferences/keybase.Electron.plist',
-                '~/Library/Preferences/keybase.ElectronHelper.plist',
-                '/Library/Logs/keybase.system.log',
-                '/Library/PrivilegedHelperTools/keybase.Helper',
-              ],
-      rmdir:  '/keybase'
+  zap trash: [
+               '~/Library/Application Support/Keybase',
+               '~/Library/Caches/Keybase',
+               '~/Library/Group Containers/keybase',
+               '~/Library/Logs/Keybase*',
+               '~/Library/Logs/keybase*',
+               '~/Library/Preferences/keybase*',
+               '/Library/Logs/keybase*',
+             ],
+      rmdir: '/keybase'
 end

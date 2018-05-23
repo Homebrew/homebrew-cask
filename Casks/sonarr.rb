@@ -10,9 +10,9 @@ cask 'sonarr' do
 
   app 'Sonarr.app'
 
-  zap delete: [
-                '~/Library/Application Support/Sonarr',
-                '~/.config/NzbDrone',
-                '~/Library/Preferences/tv.sonarr.Sonarr.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Sonarr',
+               '~/.config/NzbDrone',
+               '~/Library/Preferences/tv.sonarr.Sonarr.plist',
+             ]
 end

@@ -4,7 +4,7 @@ cask 'dwihn0r-keepassx' do
 
   url "https://github.com/dwihn0r/keepassx/releases/download/v#{version}/KeePassX-#{version}-OSX.zip"
   appcast 'https://github.com/dwihn0r/keepassx/releases.atom',
-          checkpoint: '21740efbed9a2569c815ba7a581d122c140ef249069b134f5c63ab3ba56e1a46'
+          checkpoint: '6331bb51a7d1d6d396eff1828a8a2eec42f35d721d9fe32c89ddce2a5cfa6b43'
   name 'KeePassX'
   homepage 'https://github.com/dwihn0r/keepassx/'
 

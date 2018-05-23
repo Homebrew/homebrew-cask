@@ -1,10 +1,10 @@
 cask 'lacaille' do
-  version '2.2.2'
-  sha256 '3885a55a4fe1b80f9340271972372ab4b4fe234aad37c27f849e6d78fbd6fcb2'
+  version '2.3'
+  sha256 'd5246e4ec20d7cec913c304f7999378713ffe090e55127e5062ca6c5ee18d17b'
 
   url "http://lacaille.jpn.org/Lacaille_#{version}.dmg"
   appcast 'http://lacaille.jpn.org',
-          checkpoint: '9278d72ed9b5179467c1cf8888fc8d981ba32fc085bad32cf09119cf836c3ec4'
+          checkpoint: '9927f500f302dde5f1b0a1ca41aba87d130815cfb0dd60edad5bfd34aa7d3459'
   name 'Lacaille'
   homepage 'http://lacaille.jpn.org/'
 
@@ -12,5 +12,5 @@ cask 'lacaille' do
 
   uninstall login_item: 'Lacaille'
 
-  zap delete: '~/Library/Preferences/org.jpn.lacaille.Lacaille.plist'
+  zap trash: '~/Library/Preferences/org.jpn.lacaille.Lacaille.plist'
 end

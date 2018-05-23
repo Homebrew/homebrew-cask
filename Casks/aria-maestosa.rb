@@ -9,4 +9,11 @@ cask 'aria-maestosa' do
   homepage 'http://ariamaestosa.sourceforge.net/'
 
   app "AriaMaestosa-#{version}/Aria Maestosa.app"
+
+  zap trash: [
+               '~/Library/Preferences/AriaMaestosa',
+               '~/Library/Saved Application State/org.AriaMaestosa.savedState',
+               '~/Library/Autosave Information/org.AriaMaestosa.plist',
+               '~/Library/Application Support/Aria Maestosa',
+             ]
 end

@@ -12,5 +12,5 @@ cask 'keymo' do
 
   app 'Keymo.app'
 
-  zap delete: '~/Library/Preferences/com.manytricks.Keymo.plist'
+  zap trash: '~/Library/Preferences/com.manytricks.Keymo.plist'
 end

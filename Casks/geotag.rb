@@ -1,25 +1,21 @@
 cask 'geotag' do
-  if MacOS.version <= :mountain_lion
-    version '2.2'
-    sha256 'c5553af3b37903b7e4f402d8c9fbeced63492295c6bdd25987dd70ab367c32e9'
-  else
-    version '3.5.8'
-    sha256 '02dcf8c87b69ab517f0c7919104da97ca09028c41f1b8c408026331b29a36685'
-  end
+  version '4.3'
+  sha256 '054aa3db26340c21b04c7173934de2a6d03f825d2568480e5396e2a38f8f6ae8'
 
   url "https://www.snafu.org/GeoTag/GeoTag-#{version}.dmg"
   appcast 'https://www.snafu.org/GeoTag/',
-          checkpoint: '30f80a387e9aad3cf530878242d2d8bc4489ddb1cdbd1b0b3f2127cc4058d837'
+          checkpoint: '05ff7fae8f65957da0854ab832c5181d417c7113af8af7530c0920ad0481683e'
   name 'GeoTag'
   homepage 'https://www.snafu.org/GeoTag/'
 
+  depends_on macos: '>= :yosemite'
   depends_on formula: 'exiftool'
 
   app 'GeoTag.app'
 
-  zap delete: [
-                '~/Library/Caches/org.snafu.GeoTag',
-                '~/Library/Saved Application State/org.snafu.GeoTag.savedState',
-              ],
-      trash:  '~/Library/Preferences/org.snafu.GeoTag.plist'
+  zap trash: [
+               '~/Library/Caches/org.snafu.GeoTag',
+               '~/Library/Preferences/org.snafu.GeoTag.plist',
+               '~/Library/Saved Application State/org.snafu.GeoTag.savedState',
+             ]
 end

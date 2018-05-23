@@ -1,18 +1,18 @@
 cask 'museeks' do
-  version '0.8.1'
-  sha256 '9911b286039acf41c8c896ab40e06513a2af943843530a4bfc6b46b61fdda02c'
+  version '0.9.4'
+  sha256 '18db8e10a07ba82344e7500c2f81f87ebfcdb7b2b497f0cae307caf07fda3546'
 
   # github.com/KeitIG/museeks was verified as official when first introduced to the cask
-  url "https://github.com/KeitIG/museeks/releases/download/#{version}/museeks-darwin-x64.zip"
+  url "https://github.com/KeitIG/museeks/releases/download/#{version}/museeks.dmg"
   appcast 'https://github.com/KeitIG/museeks/releases.atom',
-          checkpoint: 'b665ed884240a10c70c82c499ab38d549267f6425a69d527a569cf4ad70cf8ca'
+          checkpoint: '2cd2819d1c682c26aff331565e8bbfdf11f7bd9873ec2a7b2d4953aacea72cde'
   name 'Museeks'
   homepage 'https://museeks.io/'
 
-  app 'museeks-darwin-x64/Museeks.app'
+  app 'Museeks.app'
 
-  zap delete: [
-                '~/Library/Application Support/museeks',
-                '~/Library/Saved Application State/com.electron.museeks.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/museeks',
+               '~/Library/Saved Application State/com.electron.museeks.savedState',
+             ]
 end

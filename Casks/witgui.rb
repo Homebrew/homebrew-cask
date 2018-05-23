@@ -1,10 +1,10 @@
 cask 'witgui' do
-  version '2.2.6'
-  sha256 'd147cf2d06623641a0e2b49bb5780e7f20a8da5d71e68aa067fad837dc678e8b'
+  version '2.2.10'
+  sha256 '5ebd626a9bacc631d208f8f1944c34f8329d7027ba3399c287e8729f3701be81'
 
   url "http://desairem.altervista.org/witgui/download.php?version=#{version}"
   appcast 'http://desairem.altervista.org/witgui/appcast.xml',
-          checkpoint: '385d3a172a15b155e9ed72e5f41c14ed4c3d6cd696a978814e92c3d297eeb884'
+          checkpoint: '13dcc2824f8a9ee76f3f2f18de46be91f72cfd619f8126a9f9f9fdb437ba44b3'
   name 'Witgui'
   homepage 'http://desairem.altervista.org/wordpress/witgui/'
 

@@ -1,14 +1,14 @@
 cask 'qtspim' do
-  version '9.1.18'
-  sha256 '5e51b50d0a497e3704808e03f314c15a501686aa7dc36b74c63cc7ae065e75d8'
+  version '9.1.20'
+  sha256 '69ea4d4e8e7cf4788aaf3cd366a3876fb500bcfa3fe979c0a52de76a4d46a284'
 
   url "https://downloads.sourceforge.net/spimsimulator/QtSpim_#{version}_mac.mpkg.zip"
   appcast 'https://sourceforge.net/projects/spimsimulator/rss',
-          checkpoint: 'eb3d8ed497f272fe2a6fd73fb6d53a39af4f25a03b552e3843ed4eab9f830aed'
+          checkpoint: '50cf28d7d09bf1c94251e0cebdf5f47a517507b089f022171b443ee200ef85db'
   name 'QtSpim'
   homepage 'http://spimsimulator.sourceforge.net/'
 
-  pkg "QtSpim_#{version}_mac.mpkg"
+  pkg 'QtSpim.mpkg'
 
   uninstall pkgutil: 'org.larusstone.pkg.QtSpim'
 end

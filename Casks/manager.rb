@@ -1,9 +1,9 @@
 cask 'manager' do
-  version :latest
-  sha256 :no_check
+  version '18.5.9'
+  sha256 '24831d62c89871578f71d58a03523e550621eccb8d41a66675649fd25c1f478e'
 
-  # mngr.s3.amazonaws.com was verified as official when first introduced to the cask
-  url 'https://mngr.s3.amazonaws.com/Manager.dmg'
+  # d2ap5zrlkavzl7.cloudfront.net was verified as official when first introduced to the cask
+  url "https://d2ap5zrlkavzl7.cloudfront.net/#{version}/Manager.dmg"
   name 'Manager'
   homepage 'https://www.manager.io/'
 

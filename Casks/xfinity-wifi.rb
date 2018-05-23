@@ -10,8 +10,8 @@ cask 'xfinity-wifi' do
 
   pkg 'XFINITY_WiFi.pkg'
 
-  # This is a horrible hack to force the file extension.  The
-  # backend code should be fixed so that this is not needed.
+  # This is a horrible hack to force the file extension.
+  # The backend code should be fixed so that this is not needed.
   preflight do
     system_command '/bin/mv', args: ['--', staged_path.join('download_mac.php'), staged_path.join('XFINITY_WiFi.pkg')]
   end
@@ -24,12 +24,12 @@ cask 'xfinity-wifi' do
                          'com.smithmicro.netwise.osx.comcast.help',
                        ]
 
-  zap delete: [
-                '/Library/PrivilegedHelperTools/com.smithmicro.netwise.osx.helper',
-                '~/Library/Application Support/com.smithmicro.netwise.osx.comcast',
-                '~/Library/Caches/com.crashlytics.data/com.smithmicro.netwise.osx.comcast',
-                '~/Library/Caches/com.smithmicro.netwise.osx.comcast',
-                '~/Library/Logs/XFINITY WiFi',
-                '~/Library/Preferences/com.smithmicro.netwise.osx.comcast.plist',
-              ]
+  zap trash: [
+               '/Library/PrivilegedHelperTools/com.smithmicro.netwise.osx.helper',
+               '~/Library/Application Support/com.smithmicro.netwise.osx.comcast',
+               '~/Library/Caches/com.crashlytics.data/com.smithmicro.netwise.osx.comcast',
+               '~/Library/Caches/com.smithmicro.netwise.osx.comcast',
+               '~/Library/Logs/XFINITY WiFi',
+               '~/Library/Preferences/com.smithmicro.netwise.osx.comcast.plist',
+             ]
 end

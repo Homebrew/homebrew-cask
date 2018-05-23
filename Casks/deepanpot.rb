@@ -1,11 +1,13 @@
 cask 'deepanpot' do
-  version '2.0.0'
-  sha256 '4a63172f715cd912cbc7f3439855f0878a8579e27c798b89513cc10315e6bb60'
+  version '2.1.1'
+  sha256 'f7b52a83ecfeacdfa2c3d2c1ea10d56c9449908aa11b317cb0243bc5168c2a12'
 
-  url "https://dotec-audio.com/release/DeePanpot/DeePanpotMac_#{version}.zip"
+  url "https://dotec-audio.com/release/DeePanpot/DeePanpotMacA_#{version}.zip"
   name 'DOTEC-AUDIO DeePanpot'
   homepage 'https://dotec-audio.com/deepanpot.html'
 
-  audio_unit_plugin 'DeePanpot.component'
-  vst_plugin 'DeePanpot.vst'
+  depends_on macos: '>= :lion'
+
+  audio_unit_plugin 'AudioUnit/DeePanpot.component'
+  vst_plugin 'VST/DeePanpot.vst'
 end

@@ -98,7 +98,7 @@ Package IDs designated by Apple or common development frameworks
 will be excluded from the output.
 
 If a package id is already installed, it will be followed by
-a plus symbol '(+)' in the output.  This can be verified via
+a plus symbol '(+)' in the output. This can be verified via
 the command
 
     /usr/sbin/pkgutil --pkg-info 'package.id.goes.here'

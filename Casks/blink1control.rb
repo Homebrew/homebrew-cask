@@ -5,7 +5,7 @@ cask 'blink1control' do
   # github.com/todbot/blink1 was verified as official when first introduced to the cask
   url "https://github.com/todbot/blink1/releases/download/v#{version}/Blink1Control-mac.zip"
   appcast 'https://github.com/todbot/blink1/releases.atom',
-          checkpoint: 'a2c1b1807df8f633e5e9aaa9b29242929fdb4dec7e84cc011a15ec03ef305cf1'
+          checkpoint: '24cfd383676be45990be81aac906b73ff876b13437af6f6f8b4cba6cc119e384'
   name 'Blink1Control'
   homepage 'https://blink1.thingm.com/'
 

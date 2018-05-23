@@ -1,8 +1,8 @@
 cask 'qqmusic' do
-  version '5.0Build03'
-  sha256 '7feecd3a290dd9277226e077a1270f79dad4db53049a69f0fa3c8fd8726e615a'
+  version :latest
+  sha256 :no_check
 
-  url "https://dldir1.qq.com/music/clntupate/mac/QQMusicMac#{version}.dmg"
+  url 'https://dldir1.qq.com/music/clntupate/mac/QQMusicMac_Mgr.dmg'
   name 'QQ音乐'
   homepage 'https://y.qq.com/'
 
@@ -10,11 +10,11 @@ cask 'qqmusic' do
 
   uninstall quit: 'com.tencent.QQMusicMac'
 
-  zap delete: [
-                '~/Library/Application Support/com.tencent.QQMusicMac',
-                '~/Library/Caches/com.tencent.QQMusicMac',
-                '~/Library/Containers/com.tencent.QQMusicMac',
-                '~/Library/Preferences/com.tencent.QQMusicMac.plist',
-                '~/Library/Saved Application State/com.tencent.QQMusicMac.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.tencent.QQMusicMac',
+               '~/Library/Caches/com.tencent.QQMusicMac',
+               '~/Library/Containers/com.tencent.QQMusicMac',
+               '~/Library/Preferences/com.tencent.QQMusicMac.plist',
+               '~/Library/Saved Application State/com.tencent.QQMusicMac.savedState',
+             ]
 end

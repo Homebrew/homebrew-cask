@@ -1,15 +1,15 @@
 cask 'cloudapp' do
-  version '4.2.4'
-  sha256 '7b1a7d836ae23c60fbfef3e187f584015178a25684a615df9b8741a83fe4d408'
+  version '4.3.3'
+  sha256 '3938c226d1e14455f758039a93d5205d3b79544b20e5c5c82b74229afbefbf94'
 
   # amazonaws.com/downloads.getcloudapp.com was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/downloads.getcloudapp.com/mac/CloudApp-#{version}.zip"
   appcast 'https://updates.getcloudapp.com/appcast.xml',
-          checkpoint: '770e1b76aec53bd5b3d90f0d745e03e27de0de52ffa002bf552e762e0f50703d'
+          checkpoint: 'c38fc4b75def18c8270b651da1bc87fe1917b5a6e90544231158730550bfc435'
   name 'CloudApp'
   homepage 'https://www.getcloudapp.com/'
 
   app 'CloudApp.app'
 
-  zap delete: '~/Library/Preferences/com.linebreak.CloudAppMacOSX.plist'
+  zap trash: '~/Library/Preferences/com.linebreak.CloudAppMacOSX.plist'
 end

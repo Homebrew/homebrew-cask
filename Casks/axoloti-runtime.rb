@@ -1,17 +1,17 @@
 cask 'axoloti-runtime' do
-  version '1.0.12-1'
-  sha256 '433c965b0814f4e01cd8d5d827ba18ea5bda6b6dd798ac8f6f6f29d0b0c9e77d'
+  version '1.0.12-2'
+  sha256 '30e887a81caf1e7ea375c0e795294f6352a3dc7291ff092a8afbf6f7f61c6736'
 
   # github.com/axoloti/axoloti was verified as official when first introduced to the cask
-  url "https://github.com/axoloti/axoloti/releases/download/#{version}/axo_runtime_mac_#{version}.dmg"
+  url "https://github.com/axoloti/axoloti/releases/download/#{version}/axo_runtime_mac_#{version.major_minor_patch}.dmg"
   appcast 'https://github.com/axoloti/axoloti/releases.atom',
-          checkpoint: 'b5ac28c3d438cb88140ef924d860a46cd73ca19f474ddcfb403c41c26030d538'
+          checkpoint: '448924453923cd34c05f2005ea556c447d609b96ef9ecb35d2038d450f2e1cea'
   name 'Axoloti Runtime'
   homepage 'http://www.axoloti.com/'
 
   suite 'axoloti_runtime'
 
   caveats do
-    depends_on_java('8')
+    depends_on_java '8'
   end
 end

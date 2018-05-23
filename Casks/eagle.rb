@@ -1,10 +1,10 @@
 cask 'eagle' do
-  version '8.2.2'
-  sha256 '39836bea001b2709cbc16951753674a2042355bc9a9039965c7217af44cc4e3a'
+  version '9.0.0'
+  sha256 'eeefc304222c0dd3f454c069d2d8da8a78b643bac6193fc9cf5bf3567bce95d0'
 
-  url "http://trial2.autodesk.com/NET17SWDLD/2017/EGLPRM/ESD/Autodesk_EAGLE_#{version}_English_Mac_64bit.pkg"
-  name 'CadSoft EAGLE'
-  homepage 'https://www.autodesk.com/products/eagle/overview'
+  url "https://eagle-updates.circuits.io/downloads/#{version.dots_to_underscores}/Autodesk_EAGLE_#{version}_English_Mac_64bit.pkg"
+  name 'Autodesk EAGLE'
+  homepage 'https://circuits.io/eagle/'
 
   pkg "Autodesk_EAGLE_#{version}_English_Mac_64bit.pkg"
 

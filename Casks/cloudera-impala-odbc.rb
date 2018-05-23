@@ -1,6 +1,6 @@
 cask 'cloudera-impala-odbc' do
-  version '2.5.37.1014'
-  sha256 '9ef149fe28a4e0fa4c7b18dda5f078cfb10fb1e261d461af7fa7b38c6815f4fe'
+  version '2.5.41.1029'
+  sha256 '84519e6582be94d7ac1f1fa3946da224966b4cde0f2eb566edfb864576ac90f6'
 
   url "https://downloads.cloudera.com/connectors/impala_odbc_#{version}/OSX/ClouderaImpalaODBC.dmg"
   name 'Cloudera ODBC Driver for Impala'

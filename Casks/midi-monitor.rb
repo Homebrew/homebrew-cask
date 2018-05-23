@@ -19,9 +19,9 @@ cask 'midi-monitor' do
                     'com.snoize.SnoizeMIDI',
                   ]
 
-  zap delete: [
-                '~/Library/Preferences/com.snoize.MIDIMonitor.plist',
-                '~/Library/Caches/com.snoize.MIDIMonitor',
-                '~/Library/Saved Application State/com.snoize.MIDIMonitor.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.snoize.MIDIMonitor.plist',
+               '~/Library/Caches/com.snoize.MIDIMonitor',
+               '~/Library/Saved Application State/com.snoize.MIDIMonitor.savedState',
+             ]
 end

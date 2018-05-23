@@ -12,17 +12,24 @@ cask 'unison' do
     # github.com/bcpierce00/unison/releases/download was verified as official when first introduced to the cask
     url "https://github.com/bcpierce00/unison/releases/download/#{version}/Unison-OS-X-#{version}.zip"
   else
-    version '2.48.15'
-    sha256 '89894d14c9ff3c4d6195cb6a8065a2849e6ad55951799eedf8879e1a257d3e11'
+    version '2.51.2'
+    sha256 '52142f3aa03b7beba03aaa8c61cb1e3287058cae825845b2355081d9e925b6de'
 
     # github.com/bcpierce00/unison/releases/download was verified as official when first introduced to the cask
-    url "https://github.com/bcpierce00/unison/releases/download/#{version}/Unison-OS-X-#{version}.zip"
+    url "https://github.com/bcpierce00/unison/releases/download/v#{version}/Unison-#{version}.OS.X.zip"
   end
 
   appcast 'https://github.com/bcpierce00/unison/releases.atom',
-          checkpoint: 'e8eaa827b069c50db797d395b2722be0760a4d229f9f332d714f754efeaed467'
+          checkpoint: '98fc35df2c7db577517de4649c6886d82ba5c2034bcad1e7e46ad21b89237dce'
   name 'Unison'
   homepage 'https://www.cis.upenn.edu/~bcpierce/unison/'
 
+  conflicts_with formula: 'unison'
+
   app 'Unison.app'
+  binary "#{appdir}/Unison.app/Contents/MacOS/cltool", target: 'unison'
+
+  postflight do
+    system_command '/usr/bin/defaults', args: ['write', 'edu.upenn.cis.Unison', 'CheckCltool', '-bool', 'false']
+  end
 end

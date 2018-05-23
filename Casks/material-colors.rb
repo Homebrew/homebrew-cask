@@ -10,11 +10,11 @@ cask 'material-colors' do
 
   app 'Material Colors.app'
 
-  zap delete: [
-                '~/Library/Application Support/net.nurik.roman.materialcolors.ShipIt',
-                '~/Library/Application Support/Material Colors',
-                '~/Library/Caches/Material Colors',
-                '~/Library/Caches/net.nurik.roman.materialcolors',
-                '~/Library/Preferences/net.nurik.roman.materialcolors.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/net.nurik.roman.materialcolors.ShipIt',
+               '~/Library/Application Support/Material Colors',
+               '~/Library/Caches/Material Colors',
+               '~/Library/Caches/net.nurik.roman.materialcolors',
+               '~/Library/Preferences/net.nurik.roman.materialcolors.plist',
+             ]
 end

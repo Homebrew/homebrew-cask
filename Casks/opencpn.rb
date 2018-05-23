@@ -1,11 +1,11 @@
 cask 'opencpn' do
-  version '4.4.0'
-  sha256 'aedb42ed43a4f5776422410079b946dd87e05a117ba4289733e32c1e6657d6e7'
+  version '4.8.4'
+  sha256 'bf50048c0b304cbb109228821dba521c1994f183e07675bb922855224186efa7'
 
   # opencpn.navnux.org was verified as official when first introduced to the cask
   url "http://opencpn.navnux.org/#{version}/OpenCPN_#{version}.dmg"
   appcast 'https://github.com/OpenCPN/OpenCPN/releases.atom',
-          checkpoint: '169b89252300cc760dab9f554ad9384183e3d3c7dbad746dfcdf44e69c2e6e93'
+          checkpoint: '159b317704d0bf5502abb5fc4aa73df2c3d4707c3d3db089b5f4d1d3cecebf22'
   name 'OpenCPN'
   homepage 'https://www.opencpn.org/'
 

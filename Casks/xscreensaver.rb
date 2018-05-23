@@ -1,10 +1,10 @@
 cask 'xscreensaver' do
-  version '5.36'
-  sha256 '3b1936ef9907bb819444dc01d27f4c27d555dd80e1f17a5957eb730742ed3d5d'
+  version '5.39'
+  sha256 '099a354288a6b2923b994b8a253981814e93db2b34c618f6d08ed9ec2b21db87'
 
   url "https://www.jwz.org/xscreensaver/xscreensaver-#{version}.dmg"
   appcast 'https://www.jwz.org/xscreensaver/changelog.html',
-          checkpoint: '3e458d1f83dfa71b43797aa040d41ab5571d6eabdffa3f042a0e67ab5a3c38a6'
+          checkpoint: 'c9da5c735fdcd864016968208a72f5b0768d4139ffdf64d6a43c2109f466e044'
   name 'XScreenSaver'
   homepage 'https://www.jwz.org/xscreensaver/'
 
@@ -46,6 +46,7 @@ cask 'xscreensaver' do
   screen_saver 'Screen Savers/Compass.saver'
   screen_saver 'Screen Savers/Coral.saver'
   screen_saver 'Screen Savers/Crackberg.saver'
+  screen_saver 'Screen Savers/Crumbler.saver'
   screen_saver 'Screen Savers/Crystal.saver'
   screen_saver 'Screen Savers/Cube21.saver'
   screen_saver 'Screen Savers/Cubenetic.saver'
@@ -72,6 +73,7 @@ cask 'xscreensaver' do
   screen_saver 'Screen Savers/Engine.saver'
   screen_saver 'Screen Savers/Epicycle.saver'
   screen_saver 'Screen Savers/Eruption.saver'
+  screen_saver 'Screen Savers/Esper.saver'
   screen_saver 'Screen Savers/Euler2D.saver'
   screen_saver 'Screen Savers/Extrusion.saver'
   screen_saver 'Screen Savers/FadePlot.saver'
@@ -135,6 +137,7 @@ cask 'xscreensaver' do
   screen_saver 'Screen Savers/Loop.saver'
   screen_saver 'Screen Savers/m6502.saver'
   screen_saver 'Screen Savers/Maze.saver'
+  screen_saver 'Screen Savers/Maze3D.saver'
   screen_saver 'Screen Savers/MemScroller.saver'
   screen_saver 'Screen Savers/Menger.saver'
   screen_saver 'Screen Savers/MetaBalls.saver'
@@ -152,6 +155,7 @@ cask 'xscreensaver' do
   screen_saver 'Screen Savers/NoseGuy.saver'
   screen_saver 'Screen Savers/Pacman.saver'
   screen_saver 'Screen Savers/Pedal.saver'
+  screen_saver 'Screen Savers/Peepers.saver'
   screen_saver 'Screen Savers/Penetrate.saver'
   screen_saver 'Screen Savers/Penrose.saver'
   screen_saver 'Screen Savers/Petri.saver'
@@ -174,6 +178,7 @@ cask 'xscreensaver' do
   screen_saver 'Screen Savers/QuasiCrystal.saver'
   screen_saver 'Screen Savers/Queens.saver'
   screen_saver 'Screen Savers/RaverHoop.saver'
+  screen_saver 'Screen Savers/RazzleDazzle.saver'
   screen_saver 'Screen Savers/RDbomb.saver'
   screen_saver 'Screen Savers/Ripples.saver'
   screen_saver 'Screen Savers/Rocks.saver'
@@ -218,6 +223,7 @@ cask 'xscreensaver' do
   screen_saver 'Screen Savers/Unicrud.saver'
   screen_saver 'Screen Savers/UnknownPleasures.saver'
   screen_saver 'Screen Savers/Vermiculate.saver'
+  screen_saver 'Screen Savers/Vigilance.saver'
   screen_saver 'Screen Savers/Voronoi.saver'
   screen_saver 'Screen Savers/Wander.saver'
   screen_saver 'Screen Savers/WebCollage.saver'

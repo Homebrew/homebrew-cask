@@ -1,10 +1,11 @@
 cask 'anaconda' do
-  version '4.4.0'
-  sha256 '10fe58f09ae524df2548d17b8bb1e75db17da597a6ec10d695ce01387a2d7422'
+  version '5.1.0'
+  sha256 'be705b3c3a0ca29ee32ce7658890bb5edb32a9eadedc09dec3d7e3cfbfd23cb7'
 
+  # repo.continuum.io/archive was verified as official when first introduced to the cask
   url "https://repo.continuum.io/archive/Anaconda3-#{version}-MacOSX-x86_64.sh"
   name 'Continuum Analytics Anaconda'
-  homepage 'https://www.continuum.io/why-anaconda'
+  homepage 'https://www.anaconda.com/what-is-anaconda/'
 
   depends_on macos: '>= :lion'
   container type: :naked
@@ -24,10 +25,10 @@ cask 'anaconda' do
                       '/Applications/Anaconda-Navigator.app',
                     ]
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.io.sfl',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.python.sfl',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.io.sfl*',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.python.sfl*',
+             ]
 
   caveats do
     path_environment_variable "#{HOMEBREW_PREFIX}/anaconda3/bin"

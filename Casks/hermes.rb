@@ -13,9 +13,9 @@ cask 'hermes' do
 
   app 'Hermes.app'
 
-  zap delete: [
-                '~/Library/Application Support/Hermes',
-                '~/Library/Caches/com.alexcrichton.Hermes',
-                '~/Library/Preferences/com.alexcrichton.Hermes.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Hermes',
+               '~/Library/Caches/com.alexcrichton.Hermes',
+               '~/Library/Preferences/com.alexcrichton.Hermes.plist',
+             ]
 end

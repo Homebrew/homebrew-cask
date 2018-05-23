@@ -1,11 +1,11 @@
 cask 'praat' do
-  version '6.0.29'
-  sha256 'b9dd8f7740fb76529b2c9ea77b77fd1dd75e72dc981d2274bfa21e38aff63661'
+  version '6.0.40'
+  sha256 '117531be1476545d5f70a032dedb09a748117fd9a6aa0d0c3da984a6c17d6b4f'
 
   # github.com/praat/praat/releases was verified as official when first introduced to the cask
   url "https://github.com/praat/praat/releases/download/v#{version}/praat#{version.no_dots}_mac64.dmg"
   appcast 'https://github.com/praat/praat/releases.atom',
-          checkpoint: 'fbbaffeae204e976fe348e78bedcf41f49dc93c2be7f3f43b7d129d99e43f85b'
+          checkpoint: 'c65fb16eb92e1aab257a9096fd1f2a919223a16c5d850aec8ce69daff0431e68'
   name 'Praat'
   homepage 'http://www.fon.hum.uva.nl/praat/'
 

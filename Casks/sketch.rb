@@ -1,23 +1,25 @@
 cask 'sketch' do
-  version '44.1-41455'
-  sha256 '71763d491875adc79e18197ca484a3d7b401c7774e4966f6e30e6fa0a85a8e90'
+  version '50.2-55047'
+  sha256 '24d2af81f516d403526dcc0b60079fa3af369d2971d6075656f0a59457acb3a5'
 
   url "https://download.sketchapp.com/sketch-#{version}.zip"
   appcast 'https://download.sketchapp.com/sketch-versions.xml',
-          checkpoint: '047dbe69e7e14cfe5e24db92c5a1e0621b34e4396a36af99111876f8c38874c4'
+          checkpoint: '155a587345f8b81439d76876366ce5cfa74eeceac5d0f1cfae0cc0e80248ffce'
   name 'Sketch'
   homepage 'https://www.sketchapp.com/'
 
+  auto_updates true
+
   app 'Sketch.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bohemiancoding.sketch3.sfl',
-                '~/Library/Application Support/com.bohemiancoding.sketch3',
-                '~/Library/Caches/com.bohemiancoding.sketch3',
-                '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.bohemiancoding.sketch3',
-                '~/Library/Logs/com.bohemiancoding.sketch3',
-                '~/Library/Preferences/com.bohemiancoding.sketch3.LSSharedFileList.plist',
-                '~/Library/Preferences/com.bohemiancoding.sketch3.plist',
-                '~/Library/Cookies/com.bohemiancoding.sketch3.binarycookies',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bohemiancoding.sketch3.sfl*',
+               '~/Library/Application Support/com.bohemiancoding.sketch3',
+               '~/Library/Caches/com.bohemiancoding.sketch3',
+               '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.bohemiancoding.sketch3',
+               '~/Library/Logs/com.bohemiancoding.sketch3',
+               '~/Library/Preferences/com.bohemiancoding.sketch3.LSSharedFileList.plist',
+               '~/Library/Preferences/com.bohemiancoding.sketch3.plist',
+               '~/Library/Cookies/com.bohemiancoding.sketch3.binarycookies',
+             ]
 end

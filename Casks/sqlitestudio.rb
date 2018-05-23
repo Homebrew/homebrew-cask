@@ -10,6 +10,8 @@ cask 'sqlitestudio' do
 
   app 'SQLiteStudio.app'
 
-  zap delete: '~/Library/Saved Application State/com.yourcompany.SQLiteStudio.savedState',
-      trash:  '~/.config/sqlitestudio'
+  zap trash: [
+               '~/.config/sqlitestudio',
+               '~/Library/Saved Application State/com.yourcompany.SQLiteStudio.savedState',
+             ]
 end

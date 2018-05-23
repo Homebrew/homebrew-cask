@@ -10,4 +10,13 @@ cask 'hacker-menu' do
   homepage 'https://hackermenu.io/'
 
   app 'Hacker Menu.app'
+
+  zap trash: [
+               '~/Library/Application Support/Hacker Menu',
+               '~/Library/Application Support/com.electron.hacker_menu.ShipIt',
+               '~/Library/Caches/Hacker Menu',
+               '~/Library/Caches/com.electron.hacker_menu',
+               '~/Library/Preferences/com.electron.hacker_menu.plist',
+               '~/Library/Saved Application State/com.electron.hacker_menu.savedState',
+             ]
 end

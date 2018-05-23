@@ -20,7 +20,7 @@ cask 'bitcoin-xt' do
     set_permissions "#{staged_path}/Bitcoin-Xt.app", '0755'
   end
 
-  zap delete: [
-                '~/Library/Preferences/org.bitcoin.Bitcoin-Qt.plist',
-              ]
+  zap trash: [
+               '~/Library/Preferences/org.bitcoin.Bitcoin-Qt.plist',
+             ]
 end

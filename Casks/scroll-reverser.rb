@@ -17,8 +17,8 @@ cask 'scroll-reverser' do
 
   app 'Scroll Reverser.app'
 
-  zap delete: [
-                '~/Library/Caches/com.pilotmoon.scroll-reverser',
-                '~/Library/Preferences/com.pilotmoon.scroll-reverser.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.pilotmoon.scroll-reverser',
+               '~/Library/Preferences/com.pilotmoon.scroll-reverser.plist',
+             ]
 end

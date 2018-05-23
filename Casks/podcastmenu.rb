@@ -13,9 +13,9 @@ cask 'podcastmenu' do
 
   app 'PodcastMenu.app'
 
-  zap delete: [
-                '~/Library/Application Support/br.com.guilhermerambo.PodcastMenu',
-                '~/Library/Caches/br.com.guilhermerambo.PodcastMenu',
-                '~/Library/Preferences/br.com.guilhermerambo.PodcastMenu.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/br.com.guilhermerambo.PodcastMenu',
+               '~/Library/Caches/br.com.guilhermerambo.PodcastMenu',
+               '~/Library/Preferences/br.com.guilhermerambo.PodcastMenu.plist',
+             ]
 end

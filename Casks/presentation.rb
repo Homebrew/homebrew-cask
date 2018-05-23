@@ -8,5 +8,5 @@ cask 'presentation' do
   name 'Présentation'
   homepage 'http://iihm.imag.fr/blanch/software/osx-presentation/'
 
-  app 'Présentation.app'
+  app 'Présentation.app'
 end

@@ -5,7 +5,7 @@ cask 'xamarin-studio' do
   # dl.xamarin.com/MonoDevelop/Mac was verified as official when first introduced to the cask
   url "https://dl.xamarin.com/MonoDevelop/Mac/XamarinStudio-#{version}.dmg"
   appcast 'https://xampubdl.blob.core.windows.net/static/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
-          checkpoint: 'd1c454ead2e12eb823776ab1e0f18c35cb9372379ac93aacff7107c0c76b8c0b'
+          checkpoint: 'd060f69255a71e32aa0b00d74750c04cd5fe27df410929deec0abac8fe2956bb'
   name 'Xamarin Studio'
   homepage 'https://www.visualstudio.com/vs/visual-studio-mac/'
 

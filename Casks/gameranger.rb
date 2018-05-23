@@ -8,10 +8,10 @@ cask 'gameranger' do
 
   app 'GameRanger.app'
 
-  zap delete: [
-                '~/Library/Caches/com.gameranger.GameRanger',
-                '~/Library/Preferences/com.gameranger.GameRanger.plist',
-                '~/Library/Preferences/GameRanger Prefs',
-                '~/Library/Saved Application State/com.gameranger.GameRanger.savedState',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.gameranger.GameRanger',
+               '~/Library/Preferences/com.gameranger.GameRanger.plist',
+               '~/Library/Preferences/GameRanger Prefs',
+               '~/Library/Saved Application State/com.gameranger.GameRanger.savedState',
+             ]
 end

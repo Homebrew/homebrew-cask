@@ -1,10 +1,10 @@
 cask 'phpstorm' do
-  version '2017.1.4,171.4694.2'
-  sha256 '6f69545fd44b89e15f981fc8bf12908a22a892787ae5603a4aa9598dfcfd1761'
+  version '2018.1.4,181.5087.24'
+  sha256 'f96a949dcfad46c066aaac9531f57a0bb93503374e82b43bd12320ca78f2124f'
 
   url "https://download.jetbrains.com/webide/PhpStorm-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=PS&latest=true&type=release',
-          checkpoint: 'd19b8f27fe6ba05de60567ca1802fec1c0b0f81814884ce7f65d8ae6b9783104'
+          checkpoint: '77644490a357a9b0ef63599680670093d06f8f621373e48ef4d897ee7017dc68'
   name 'JetBrains PhpStorm'
   homepage 'https://www.jetbrains.com/phpstorm/'
 
@@ -13,14 +13,14 @@ cask 'phpstorm' do
   app 'PhpStorm.app'
 
   uninstall_postflight do
-    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'pstorm') }.each { |path| File.delete(path) if File.exist?(path) }
+    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'pstorm') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }
   end
 
-  zap delete: [
-                "~/Library/Preferences/PhpStorm#{version.major_minor}",
-                "~/Library/Caches/PhpStorm#{version.major_minor}",
-                "~/Library/Logs/PhpStorm#{version.major_minor}",
-                "~/Library/Application Support/PhpStorm#{version.major_minor}",
-                '~/Library/Preferences/jetbrains.phpstorm.*.plist',
-              ]
+  zap trash: [
+               "~/Library/Application Support/PhpStorm#{version.major_minor}",
+               "~/Library/Caches/PhpStorm#{version.major_minor}",
+               "~/Library/Logs/PhpStorm#{version.major_minor}",
+               "~/Library/Preferences/PhpStorm#{version.major_minor}",
+               '~/Library/Preferences/jetbrains.phpstorm.*.plist',
+             ]
 end

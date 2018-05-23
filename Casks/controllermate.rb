@@ -1,22 +1,38 @@
 cask 'controllermate' do
-  version '4.10.2'
-  sha256 'fbbfe4bf7140314a732f1d9ed0b42ddf54d0ee30a13c3d8f9560e5933da8addf'
+  version '4.10.6'
+  sha256 'f5093f29532e072e821758dd3cd3ef93bfafe8372b0db19342a15eb515422df7'
 
   # amazonaws.com/orderedbytes was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/orderedbytes/ControllerMate#{version.no_dots}.zip"
   appcast 'https://www.orderedbytes.com/sparkle/appcast_cm460.xml',
-          checkpoint: '745392e35517416f967acbb0fa5831acd50f7a57187b81c4f062c12488a8dabf'
+          checkpoint: '85aed7061f3df8ea38953d37c2626fab1ce0857e8bc5737954fce5cc338f4373'
   name 'ControllerMate'
   homepage 'https://www.orderedbytes.com/controllermate/'
 
-  pkg '#temp#/ControllerMate.pkg'
+  pkg '#temp#/ControllerMate.sparkle_interactive.pkg'
 
-  uninstall pkgutil: 'com.orderedbytes.controllermate.*'
+  uninstall launchctl: [
+                         'com.orderedbytes.ControllerMateHelper',
+                         'com.orderedbytes.ControllerMate.KextHelper',
+                       ],
+            kext:      [
+                         'com.orderedbytes.driver.CMUSBDevices',
+                         'com.orderedbytes.driver.ControllerMateFamily',
+                       ],
+            pkgutil:   'com.orderedbytes.controllermate.*',
+            signal:    [
+                         ['TERM', "com.orderedbytes.ControllerMate#{version.major}"],
+                         ['TERM', 'com.orderedbytes.ControllerMateHelper'],
+                       ]
 
-  zap       delete: [
-                      '~/Library/Application Support/ControllerMate',
-                      '~/Library/Caches/com.orderedbytes.ControllerMate4',
-                      '~/Library/Logs/ControllerMate MIDI',
-                      '~/Library/Logs/ControllerMate',
-                    ]
+  zap trash: [
+               '~/Library/Application Support/ControllerMate',
+               '~/Library/Caches/com.orderedbytes.ControllerMate4',
+               '~/Library/Logs/ControllerMate MIDI',
+               '~/Library/Logs/ControllerMate',
+             ]
+
+  caveats do
+    reboot
+  end
 end

@@ -1,15 +1,10 @@
-*If there’s a checkbox you can’t complete for any reason, that's okay, just explain in detail why you weren’t able to do so.*
+<!-- If there’s a checkbox you can’t complete for any reason, that's okay, just explain in detail why you weren’t able to do so. -->
 
 After making all changes to the cask:
 
 - [ ] `brew cask audit --download {{cask_file}}` is error-free.
 - [ ] `brew cask style --fix {{cask_file}}` reports no offenses.
 - [ ] The commit message includes the cask’s name and version.
-
-Additionally, if **updating a cask**:
-
-- [ ] [If the `sha256` changed but the `version` didn’t][version-checksum],  
-      provide public confirmation by the developer: {{link}}
 
 Additionally, if **adding a new cask**:
 

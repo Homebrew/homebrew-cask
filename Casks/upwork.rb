@@ -1,6 +1,6 @@
 cask 'upwork' do
-  version '4_2_153_0_tkzkho5lhz15j08q'
-  sha256 '6bc3c9688f5057d0f60b9d73614eb87d0e345b6f4275618d0ee8c185a8637f03'
+  version '5_1_0_509_87zq7fllb6sf8y49'
+  sha256 '00d740020497ffa39df2bd4ca19047320492c71e332b9972a30207bcb61d30ee'
 
   url "https://updates-desktopapp.upwork.com/binaries/v#{version}/Upwork.dmg"
   name 'Upwork'

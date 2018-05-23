@@ -5,9 +5,11 @@ cask 'goldencheetah' do
   # github.com/GoldenCheetah/GoldenCheetah was verified as official when first introduced to the cask
   url "https://github.com/GoldenCheetah/GoldenCheetah/releases/download/V3.4/GoldenCheetah_V#{version.major_minor}_build_#{version.after_comma.before_colon}_Qt#{version.after_colon}_64bit.dmg"
   appcast 'https://github.com/GoldenCheetah/GoldenCheetah/releases.atom',
-          checkpoint: '9989aa51d87df94e902f239cd8bfb17aaeeb328034a5fc0948e79439caa4a26e'
+          checkpoint: '3bcf97f4be2aad76e915db03c070cf86a2812278921d043fec5129109ed95461'
   name 'GoldenCheetah'
   homepage 'http://www.goldencheetah.org/'
+
+  depends_on macos: '>= :lion'
 
   app 'GoldenCheetah.app'
 end

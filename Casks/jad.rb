@@ -4,14 +4,14 @@ cask 'jad' do
 
   url "https://www.varaneckas.com/jad/jad#{version.no_dots}.mac.intel.zip"
   appcast 'https://varaneckas.com/jad/',
-          checkpoint: '3e17e5ad6e2154b16d1a69d8f6acd5e983ae450a5107e128963c4e33b4eb3609'
+          checkpoint: 'bb55710550b36e3add01abe3d3746f0c12e6d9b1dbecc7c8898f997742b325d2'
   name 'Jad - the fast Java Decompiler'
   homepage 'https://varaneckas.com/jad/'
 
   binary 'jad'
-  artifact 'jad.1', target: '/usr/local/share/man/man1/jad.1'
+  artifact 'jad.1', target: "#{HOMEBREW_PREFIX}/share/man/man1/jad.1"
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     Instructions on using jad are available in
 
       #{staged_path}/Readme.txt

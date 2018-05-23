@@ -15,10 +15,10 @@ cask 'gitter' do
                     'com.troupe.gitter.mac.GitterHelperApp',
                   ]
 
-  zap delete: [
-                '~/Library/Application Support/Gitter',
-                '~/Library/Caches/com.troupe.gitter.mac.Gitter',
-                '~/Library/Preferences/com.troupe.gitter.mac.Gitter.plist',
-                '~/Library/Saved Application State/com.troupe.gitter.mac.Gitter.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Gitter',
+               '~/Library/Caches/com.troupe.gitter.mac.Gitter',
+               '~/Library/Preferences/com.troupe.gitter.mac.Gitter.plist',
+               '~/Library/Saved Application State/com.troupe.gitter.mac.Gitter.savedState',
+             ]
 end

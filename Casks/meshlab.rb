@@ -3,9 +3,9 @@ cask 'meshlab' do
   sha256 '1a9d81f7bb7fb3da223e83768d13601b4728abde9276a415049bbb33b74baecf'
 
   # github.com/cnr-isti-vclab/meshlab was verified as official when first introduced to the cask
-  url "http://github.com/cnr-isti-vclab/meshlab/releases/download/v#{version}/MeshLab#{version}.dmg"
-  appcast 'http://github.com/cnr-isti-vclab/meshlab/releases.atom',
-          checkpoint: '77a82ca5a2c0050b6d3790364e35d0330423e6df854021bf9691a14e018029f2'
+  url "https://github.com/cnr-isti-vclab/meshlab/releases/download/v#{version}/MeshLab#{version}.dmg"
+  appcast 'https://github.com/cnr-isti-vclab/meshlab/releases.atom',
+          checkpoint: '88f54b6cd8c0d74a89cb6274b67a6af5e7b853d9eeefee183974c5ecfe28d4cb'
   name 'MeshLab'
   homepage 'http://www.meshlab.net/'
 

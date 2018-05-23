@@ -5,7 +5,7 @@ cask 'getrasplex' do
   # github.com/RasPlex/rasplex-installer was verified as official when first introduced to the cask
   url "https://github.com/RasPlex/rasplex-installer/releases/download/#{version}/GetRasplex-#{version}.dmg"
   appcast 'https://github.com/RasPlex/rasplex-installer/releases.atom',
-          checkpoint: 'f290c270cd1944fa25186e8f290f63ab3a9b880a2ca03e50666792f2628bca02'
+          checkpoint: '7923f2385ad8b4575332deb4fbd14a95ea3724db4497498b3971c2cf6b703c0b'
   name 'Rasplex Installer'
   homepage 'http://www.rasplex.com/'
 

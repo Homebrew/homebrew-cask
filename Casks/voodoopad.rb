@@ -1,12 +1,15 @@
 cask 'voodoopad' do
-  version '5.1.6'
-  sha256 '5cfb9d420169ab72dba5bb8137b9f0b930e1f8943671d8f5d6a3c3a6fb96ea21'
+  version '5.2.0'
+  sha256 '2aee788f666b7b1109f173914e0cce1d40b991c79c1500af8e749c6abee65d37'
 
-  url "https://plausible.coop/static/download/VoodooPad-#{version}.zip"
-  appcast 'https://plausible.coop/voodoopad/release_notes',
-          checkpoint: 'd8ee7913b9d061ce99ab45c7171aba17460ae22ca3528156da2fba50cdcf69d6'
+  # voodoopad.s3.amazonaws.com was verified as official when first introduced to the cask
+  url "https://voodoopad.s3.amazonaws.com/VoodooPad-#{version}.zip"
+  appcast 'https://www.voodoopad.com/download/',
+          checkpoint: '3d4dc6d9679d7dff6744c4f7bfa1300705071df0393272e42e67ce9619e09b94'
   name 'VoodooPad'
-  homepage 'https://plausible.coop/voodoopad/'
+  homepage 'https://www.voodoopad.com/'
+
+  depends_on macos: '>= :lion'
 
   app 'VoodooPad.app'
 end
