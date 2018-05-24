@@ -2,7 +2,6 @@ cask 'ccleaner' do
   version '1.15.507'
   sha256 '3795e8cff1404237838936fe1d17a29b645126bb32bff8873f8ece81a6c7b227'
 
-  # URL_SECTION piriform.com download link no longer works. Correct link now from ccleaner.com
   url "https://download.ccleaner.com/mac/CCMacSetup#{version.sub(%r{^(\d+)\.(\d+).*}, '\1\2')}.dmg"
   name 'Piriform CCleaner'
   homepage 'https://www.ccleaner.com/ccleaner-mac'
