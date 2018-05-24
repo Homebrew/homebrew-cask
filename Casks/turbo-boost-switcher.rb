@@ -1,6 +1,6 @@
 cask 'turbo-boost-switcher' do
-  version '2.6.1'
-  sha256 '2eb8136587a9beeb769cb47f28e433429bd1efc97730b1927cf7c796335a3e19'
+  version '2.7.0'
+  sha256 'b19ee25afc80bc9bad72c09fe3c7b1104817045d56bb6cedba3d0478619ab9db'
 
   # s3.amazonaws.com/turbo-boost-switcher was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/turbo-boost-switcher/Turbo+Boost+Switcher_#{version}.zip"
