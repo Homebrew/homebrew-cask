@@ -14,7 +14,7 @@ cask 'puppet-bolt' do
   name 'Puppet Bolt'
   homepage 'https://github.com/puppetlabs/bolt'
 
-  depends_on macos: '>= 10.11'
+  depends_on macos: '>= :el_capitan'
 
   pkg "puppet-bolt-#{version}-1-installer.pkg"
 
