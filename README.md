@@ -70,7 +70,7 @@ We’re really rather friendly! Here are the best places to talk about the proje
 
 * If none of the templates above is appropriate, [open an issue](https://github.com/Homebrew/homebrew-cask/issues/new).
 * Join us (and [caskbot](https://github.com/passcod/caskbot)) on IRC at `#homebrew-cask` on Freenode
-* Join us on [Gitter](https://gitter.im/Homebrew/homebrew-cask)
+* Join us on [Gitter](https://gitter.im/caskroom/homebrew-cask)
 
 ## License
 Code is under the [BSD 2 Clause (NetBSD) license](LICENSE)
