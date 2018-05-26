@@ -1,10 +1,10 @@
 cask 'plant' do
-  version '1.4.0.5'
-  sha256 '47cc8e1b527bdb5a600117dd5b24181f419f2fb8e565d3f93002383b0211c288'
+  version '1.4.0.6'
+  sha256 '3bc0212f34cdaf6ff01a1452655bf940954a15c4827b80a69e6e8f4c8f177972'
 
   url "https://projects.plantapp.io/app/plant_v#{version}.dmg"
   appcast 'https://projects.plantapp.io/app/changelog.xml',
-          checkpoint: '2434e1ce5c2b213335bdb3f2b676f2293610a60d941b6717aa2f4f78d511d5ae'
+          checkpoint: 'acd9230ce4595c5171386f196c9aeaf5effa0cbcddb8319b7a52076973720ff0'
   name 'Plant'
   homepage 'https://plantapp.io/'
 
