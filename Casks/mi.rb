@@ -4,7 +4,7 @@ cask 'mi' do
 
   url "https://www.mimikaki.net/download/mi#{version}.dmg"
   name 'mi'
-  homepage 'https://www.mimikaki.net/download/'
+  homepage 'https://www.mimikaki.net/'
 
   depends_on macos: '>= :lion'
 
