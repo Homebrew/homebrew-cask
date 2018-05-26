@@ -8,12 +8,13 @@ cask 'serviio' do
 
   pkg "Serviio-#{version}.pkg"
 
-  uninstall pkgutil: [
-                       'org.serviio.pkg.autostart',
-                       'org.serviio.pkg.JRE',
-                       'org.serviio.pkg.ServiioConsole',
-                       'org.serviio.pkg.Serviio',
-                     ]
+  uninstall pkgutil:   [
+                         'org.serviio.pkg.autostart',
+                         'org.serviio.pkg.JRE',
+                         'org.serviio.pkg.ServiioConsole',
+                         'org.serviio.pkg.Serviio',
+                       ],
+            launchctl: 'org.serviio.server'
 
   zap trash: [
                '/Library/Application Support/Serviio',
