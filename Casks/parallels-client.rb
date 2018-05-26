@@ -1,10 +1,10 @@
 cask 'parallels-client' do
-  version '16.2.2-19300'
-  sha256 'c89cba2abf932f2cdae75970423279fce46cbddeb74ac5b418b771e9f265fad0'
+  version '16.2.3-19419'
+  sha256 '6ca634274386a46578cd62696a6bf7f990ab003ad2e50d85e397e288b8375c71'
 
   url "https://download.parallels.com/ras/v#{version.major}/#{version.hyphens_to_dots}/RasClient-Mac-#{version}.pkg"
   appcast "https://download.parallels.com/ras/v#{version.major}/RAS%20Client%20for%20Mac%20Changelog.txt",
-          checkpoint: 'bd774820d008ca14388354ea60d3e85d82c0e5da61cba218902a2d5263a4d712'
+          checkpoint: '79e4c66f02cc47cd2593124a2a2a8063e27ab2f699f8f11f9ce5cec85e178359'
   name 'Parallels Client'
   homepage 'https://www.parallels.com/products/ras/features/rdp-client/'
 
