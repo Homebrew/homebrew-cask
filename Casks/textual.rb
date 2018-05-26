@@ -1,10 +1,10 @@
 cask 'textual' do
-  version '7.0.9,0a0f88319'
-  sha256 '1773900202e49ee33f4869a453312aea79699b3f795f8d2c209debfa4e3df37c'
+  version '7.0.10,91ee6772a'
+  sha256 '667d86e74803703433685e2dbd3838e45e6b360541d199e53e1394b9f4195449'
 
   url "https://cached.codeux.com/textual/downloads/resources/builds/standard-release/Textual-#{version.after_comma}.dmg"
   appcast 'https://help.codeux.com/textual/Direct-Download-Links.kb',
-          checkpoint: '2e0746046a9375df885ac94b380ac1f34f84fca35aedd7c238c5dca9f6b31e05'
+          checkpoint: '6f5e1379f78d54e682775701df4a72fb73ba7cb1522cae0377adb13a02685470'
   name 'Textual'
   homepage 'https://www.codeux.com/textual/'
 
