@@ -1,12 +1,12 @@
 cask 'guitar-pro' do
-  version :latest
-  sha256 :no_check
+  version '7'
+  sha256 :no_check # required as upstream package is updated in-place
 
-  url 'https://alt-downloads.guitar-pro.com/gp7/stable/guitar-pro-7-setup.pkg'
+  url "https://alt-downloads.guitar-pro.com/gp7/stable/guitar-pro-#{version}-setup.pkg"
   name 'Guitar Pro'
   homepage 'https://www.guitar-pro.com/'
 
-  pkg 'guitar-pro-7-setup.pkg'
+  pkg "guitar-pro-#{version}-setup.pkg"
 
-  uninstall pkgutil: 'com.arobas-music.guitarpro7.*'
+  uninstall pkgutil: 'com.arobas-music.guitarpro*'
 end
