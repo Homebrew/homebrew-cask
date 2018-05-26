@@ -1,11 +1,11 @@
 cask 'sql-operations-studio' do
-  version '0.29.3'
-  sha256 '4d5cb335a8745d92f074a0349dc6c5718bfa44e64078e1badced9f53ae47dd79'
+  version '0.30.2'
+  sha256 '6e377eb683b45201b06194aabe7929bea17a36ff37ffea6ed3ac0d54abb043d3'
 
   # github.com/Microsoft/sqlopsstudio was verified as official when first introduced to the cask
   url "https://github.com/Microsoft/sqlopsstudio/releases/download/#{version}/sqlops-macos-#{version}.zip"
   appcast 'https://github.com/Microsoft/sqlopsstudio/releases.atom',
-          checkpoint: '326e7d85426b9f6de5e94556b16a5fa8a9a87ba68ccb9cc0d622291fa4c12848'
+          checkpoint: '690ab979a67b84b0e2bc5c760e0fbccf77ac6141cfc4b86732a0192fdb375932'
   name 'SQL Operations Studio'
   homepage 'https://docs.microsoft.com/sql/sql-operations-studio/'
 
