@@ -3,7 +3,7 @@ cask 'hider' do
   sha256 'd41a442075fde63a087a97654e047989b0de3a993b27859a4c0c3ff31b4886a6'
 
   # dl.devmate.com/com.macpaw.site.Hider was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.macpaw.site.Hider2/#{version.before_comma}/#{version.after_comma}/MacPawHider#{version.major}-#{version.before_comma}.zip"
+  url "https://dl.devmate.com/com.macpaw.site.Hider#{version.major}/#{version.before_comma}/#{version.after_comma}/MacPawHider#{version.major}-#{version.before_comma}.zip"
   appcast "https://updates.devmate.com/com.macpaw.site.Hider#{version.major}.xml",
           checkpoint: '2b20fface20e364318920e005f7ab488aac7104285205518d138101a91a3ad51'
   name 'MacPaw Hider'
