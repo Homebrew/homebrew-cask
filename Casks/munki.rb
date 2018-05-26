@@ -12,5 +12,8 @@ cask 'munki' do
   pkg "munkitools-#{version}.pkg"
 
   uninstall pkgutil:   'com.googlecode.munki.*',
-            launchctl: 'com.googlecode.munki.app_usage_monitor'
+            launchctl: [
+                        'com.googlecode.munki.app_usage_monitor',
+                        'com.googlecode.munki.appusaged',
+                       ]
 end
