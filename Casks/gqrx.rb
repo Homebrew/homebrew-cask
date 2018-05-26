@@ -1,11 +1,11 @@
 cask 'gqrx' do
-  version '2.11.4'
-  sha256 '56bfcfe071e1e3ca19fe599f91150894ef1206a4babd0e08f23efa9999825e01'
+  version '2.11.5'
+  sha256 '896cefcb2825840178b6dbfb894b01543b1c8225539e6969052133223a59ffee'
 
   # github.com/csete/gqrx was verified as official when first introduced to the cask
   url "https://github.com/csete/gqrx/releases/download/v#{version.major_minor_patch}/Gqrx-#{version}.dmg"
   appcast 'https://github.com/csete/gqrx/releases.atom',
-          checkpoint: '2602e49adc35a61db9d2f7e1843d1502078be353e6b7a3a9c77492710b1591f6'
+          checkpoint: 'c980d956978147a115019e46179eac9843792a7653407af703cc2ec5039ba287'
   name 'Gqrx'
   homepage 'http://gqrx.dk/'
 
