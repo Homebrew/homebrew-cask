@@ -1,11 +1,11 @@
 cask 'flightgear' do
-  version '2018.1.1'
-  sha256 '473d4c54be9342861433189a87e2de9892f3d273a90969458427e2923052ce00'
+  version '2018.2.1'
+  sha256 'e2e82e0c2ae157f1dcab0667c2e2878826756c2b723c3039ece7823807244886'
 
   # sourceforge.net/flightgear was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/flightgear/FlightGear-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/flightgear/rss',
-          checkpoint: '1f0c965acda11e42fa01a17c153da182e64312291844492e6e75d319164ba806'
+          checkpoint: 'b3a6b7ba0dab123611a7294fbce85c847446fea7ad5ba9813085fd279dbd3f0b'
   name 'FlightGear'
   homepage 'http://www.flightgear.org/'
 
