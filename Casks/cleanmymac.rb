@@ -1,11 +1,11 @@
 cask 'cleanmymac' do
-  version '3.9.5,1523547038'
-  sha256 'ffb67132debdca46d0df7ee715c7c6c1ba9755de91e7bc38fb302c91460650cd'
+  version '3.9.6,1527255630'
+  sha256 '24cc5875af3ad0a1803123860e03c862ff78ea00d42b26e1f84b634a97e1fe40'
 
   # devmate.com/com.macpaw.CleanMyMac was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.macpaw.CleanMyMac#{version.major}/#{version.major_minor_patch}/#{version.after_comma}/CleanMyMac3-#{version.major_minor_patch}.zip"
   appcast "https://updates.devmate.com/com.macpaw.CleanMyMac#{version.major}.xml",
-          checkpoint: '3dd76d55d35bfcc618ffd2980ac1e60d06b59f92eb1008b8907ad5bac9865897'
+          checkpoint: '004841de20c5a3945fd4132ba371d9ad35c4210b1a852b3ddbdcae12bf1a3ed2'
   name 'CleanMyMac'
   homepage 'https://macpaw.com/cleanmymac'
 
