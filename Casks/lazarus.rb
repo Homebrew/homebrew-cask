@@ -1,11 +1,11 @@
 cask 'lazarus' do
-  version '1.8.2'
-  sha256 '8be9f23af6055475e7dd092d5bb0a5145782c9c32ad32fdfc64ca8f7bddad4e0'
+  version '1.8.4'
+  sha256 '7764e9ece462072658528d2c1d7996e4eb6d419fd26412f0e25c69671115d36a'
 
   # sourceforge.net/lazarus was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/lazarus/lazarus-#{version}-i686-macosx.dmg"
   appcast 'https://sourceforge.net/projects/lazarus/rss',
-          checkpoint: 'd911d118f867bdcc4e710d24da8515eea62f76328ef65238e1db3df77897268f'
+          checkpoint: 'e0081b64f9832570a27fb5c6fd86873f7d1f6335e188f5218907c14bf31bc901'
   name 'Lazarus'
   homepage 'https://www.lazarus-ide.org/'
 

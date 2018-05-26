@@ -1,11 +1,11 @@
 cask 'ibettercharge' do
-  version '1.0.10,1443542332'
-  sha256 'd4c3b410b77836ecc97bf6133e7109934c2d0a6b64349083d2c03b0280e21985'
+  version '1.0.11,1526399595'
+  sha256 '569052ef59312935d38ab48009bfdaf39b9d21e08316b2d5bd487d56bfb033b1'
 
   # devmate.com/com.softorino.iBetterCharge was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.softorino.iBetterCharge/#{version.before_comma}/#{version.after_comma}/iBetterCharge-#{version.before_comma}.zip"
-  appcast 'http://hook.softorino.com/ibc/appcast.xml',
-          checkpoint: '928b6c64636011e7c75492c6cd2adbaa7e15d38c7773d30bac6aca1745a72cb2'
+  appcast 'http://updates.devmate.com/com.softorino.iBetterCharge.xml',
+          checkpoint: '290a5dbaeea8256d23cfe74c0ad1414f4b8116df14ca198f4d735db0d5808e54'
   name 'iBetterCharge'
   homepage 'https://softorino.com/ibettercharge/'
 

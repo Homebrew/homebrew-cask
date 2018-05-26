@@ -1,5 +1,5 @@
 cask 'integrity' do
-  version '8.1.01'
+  version '8.1.0'
   sha256 '257b6093fe05bbd20b285c487c24f1d3245c4a8a3b05ae26d908edf26efc1d69'
 
   # peacockmedia.co.uk/integrity was verified as official when first introduced to the cask
