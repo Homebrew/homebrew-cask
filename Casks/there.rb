@@ -1,5 +1,5 @@
 cask 'there' do
-  version '1.4.7'
+  version '1.5.3'
   sha256 'b4bb8a372ded5ac041d6720368bba2c6628cfe6e78a69be7abde61f49b0670b5'
 
   # github.com/therepm/there-desktop was verified as official when first introduced to the cask
