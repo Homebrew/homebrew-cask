@@ -14,7 +14,7 @@ cask 'axoloti' do
   app 'Axoloti.app'
 
   caveats do
-    depends_on_java('8')
+    depends_on_java '8'
 
     <<~EOS
       If you ever decide to uninstall #{token}, it is likely its runtime will no longer be of use to you.

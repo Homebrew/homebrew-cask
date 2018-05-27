@@ -10,4 +10,9 @@ cask 'mgba' do
   homepage 'https://mgba.io/'
 
   app "mGBA-#{version}-osx/mGBA.app"
+
+  zap trash: [
+               '~/Library/Preferences/com.endrift.mgba-qt.plist',
+               '~/Library/Saved Application State/com.endrift.mgba-qt.savedState',
+             ]
 end

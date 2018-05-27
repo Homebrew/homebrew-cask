@@ -4,7 +4,7 @@ cask 'qlmarkdown' do
 
   url "https://github.com/toland/qlmarkdown/releases/download/v#{version}/QLMarkdown.qlgenerator.zip"
   appcast 'https://github.com/toland/qlmarkdown/releases.atom',
-          checkpoint: '34011e782f042d65d5f64c7e7355a757d09e97466cd981cf7b67826075e37c61'
+          checkpoint: '717694274e431e47a407e8dc5f2b8971e208ad8614d967a62d4e05301d08aa1e'
   name 'QLMarkdown'
   homepage 'https://github.com/toland/qlmarkdown'
 

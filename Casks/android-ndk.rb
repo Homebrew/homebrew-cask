@@ -9,7 +9,7 @@ cask 'android-ndk' do
 
   conflicts_with cask: 'crystax-ndk'
 
-  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/ndk_exec.sh"
   preflight do
     FileUtils.ln_sf("#{staged_path}/android-ndk-r#{version}", "#{HOMEBREW_PREFIX}/share/android-ndk")

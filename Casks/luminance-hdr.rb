@@ -4,11 +4,11 @@ cask 'luminance-hdr' do
 
   url "https://downloads.sourceforge.net/qtpfsgui/Luminance_HDR_#{version}.dmg"
   appcast 'https://sourceforge.net/projects/qtpfsgui/rss',
-          checkpoint: '3ecae87283d3f01c31c1905d25cf0320518d9947577af0d2f3edc3ac8d89ded2'
+          checkpoint: 'bb40b691589df70b49a561e25867d5e63147c07f79f2850c3558a33968c636b9'
   name 'Luminance HDR'
   homepage 'http://qtpfsgui.sourceforge.net/'
 
-  app "Luminance HDR #{version}.app"
+  app "Luminance HDR #{version.major_minor_patch}.app"
 
   zap trash: [
                '~/Library/Preferences/com.luminance-hdr.plist',

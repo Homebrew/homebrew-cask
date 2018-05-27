@@ -1,6 +1,6 @@
 cask 'mkvtools' do
-  version '3.7.0'
-  sha256 '33446c3e62c2b9a02a242e4e61d51e4a102a04a5f978aedd85f077a69d9d8fe0'
+  version '3.7.1'
+  sha256 '0726c2816f1012565fe75eba410d553c97e64f607d85fcaa54b5d623965c9ab4'
 
   url "http://www.emmgunn.com/downloads/mkvtools#{version}.zip"
   name 'MKVtools'

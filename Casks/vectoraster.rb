@@ -1,10 +1,10 @@
 cask 'vectoraster' do
-  version '7.2.5'
-  sha256 '1c685fa7d507c447f37c6d72e0da2bb2d956c8424d8aa2a0e2eed1dab975348b'
+  version '7.2.6'
+  sha256 '4998eeeb0660df95d73c903c23292fa7135b2f7866e4933f102a3b9ae627e9a1'
 
   url "https://www.lostminds.com/downloads/vectoraster#{version.major}.dmg"
   appcast "https://www.lostminds.com/vectoraster#{version.major}/version_history.php",
-          checkpoint: '001dbe0570906ae686dd46679e5c4b84649de1540a340046bfa05850ad35acfb'
+          checkpoint: 'fec3dd5b67a68f8a251e5230d06192306c110b0c037b1352ad0771977a4cabfa'
   name 'Vectoraster'
   homepage "https://www.lostminds.com/vectoraster#{version.major}/"
 

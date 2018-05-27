@@ -1,10 +1,12 @@
 cask 'airtable' do
-  version '1.2.4'
-  sha256 'a76f5e21f832652c19f79bca96ae83903f079d6fb94c2ffd27a1da9bf21a9bf3'
+  version '1.3.0'
+  sha256 'e6cd7e0e419de8ec77884ec4eb404365f861e8eaf1b1fc864dda30d88540cf6f'
 
   url "https://static.airtable.com/download/macos/Airtable-#{version}.dmg"
   name 'Airtable'
   homepage 'https://airtable.com/'
+
+  auto_updates true
 
   app 'Airtable.app'
 end

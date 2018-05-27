@@ -9,7 +9,7 @@ cask 'gogs' do
   name 'Go Git Service'
   homepage 'https://gogs.io/'
 
-  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/gogs.wrapper.sh"
 
   binary shimscript, target: 'gogs'

@@ -1,12 +1,14 @@
 cask 'deckset' do
-  version '2.0.3,2481'
-  sha256 '00693f21e8c61676ab1ae15d06efe02181cea43525d7192ca43372d8da6486df'
+  version '2.0.5,2488'
+  sha256 '52438a91eea2844a2acb27ac2c7f5bed3e8f6059495eee656da99329f4290e6c'
 
   url "https://dl.decksetapp.com/Deckset+#{version.before_comma}+(#{version.after_comma}).dmg"
   appcast 'https://dl.decksetapp.com/appcast.xml',
-          checkpoint: '05ffb357f546a6437d897d83ec70fef22a2d2f03cbe36297c71171acf0b450fe'
+          checkpoint: '9d707349d48682282b98ba464e86969fe917482ca0b177062e220c6ec0513c68'
   name 'Deckset'
   homepage 'https://www.decksetapp.com/'
+
+  depends_on macos: '>= :el_capitan'
 
   app 'Deckset.app'
 end

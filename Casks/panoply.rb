@@ -9,6 +9,6 @@ cask 'panoply' do
   app 'Panoply.app'
 
   caveats do
-    depends_on_java('8+')
+    depends_on_java '8+'
   end
 end

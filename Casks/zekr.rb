@@ -12,6 +12,6 @@ cask 'zekr' do
   app 'Zekr.app'
 
   caveats do
-    depends_on_java('6+')
+    depends_on_java '6+'
   end
 end

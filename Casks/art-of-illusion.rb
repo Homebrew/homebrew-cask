@@ -9,5 +9,5 @@ cask 'art-of-illusion' do
   name 'Art of Illusion'
   homepage 'http://www.artofillusion.org/'
 
-  app 'Art of Illusion/Art of Illusion.app'
+  app "Art Of Illusion #{version}/Art Of Illusion #{version}.app"
 end

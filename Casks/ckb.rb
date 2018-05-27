@@ -10,5 +10,10 @@ cask 'ckb' do
 
   pkg 'ckb.pkg'
 
-  uninstall pkgutil: 'com.ckb.ckb'
+  uninstall pkgutil:   'com.ckb.ckb',
+            launchctl: 'com.ckb.daemon'
+
+  caveats do
+    discontinued
+  end
 end

@@ -4,6 +4,8 @@ cask 'yacreader' do
 
   # bitbucket.org/luisangelsm/yacreader was verified as official when first introduced to the cask
   url "https://bitbucket.org/luisangelsm/yacreader/downloads/YACReader-#{version}-MacOSX-Intel.dmg"
+  appcast 'https://github.com/YACReader/yacreader/releases.atom',
+          checkpoint: 'c334461f28f4d5a2591ba1190145f5b5fbfd9366f979eaa13174b1213a3e583a'
   name 'YACReader'
   homepage 'http://www.yacreader.com/'
 

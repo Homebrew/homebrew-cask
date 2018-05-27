@@ -1,6 +1,6 @@
 cask 'editready' do
-  version '2.1.1'
-  sha256 '95ae7db03343920df21dc4617b926ab341ff9a487e02f70dea2e088b8233322c'
+  version '2.1.5'
+  sha256 '64c3658955fdad476576fd1f6faf31292ed725ec5364bc5e23026ec1ad55432d'
 
   url "https://www.divergentmedia.com/filedownload/editready%20#{version}.dmg"
   name 'divergent media EditReady'

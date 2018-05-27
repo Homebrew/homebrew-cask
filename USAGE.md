@@ -119,7 +119,7 @@ $ brew cask info caffeine
 caffeine: 1.1.1
 http://lightheadsw.com/caffeine/
 Not installed
-From: https://github.com/caskroom/homebrew-cask/blob/master/Casks/caffeine.rb
+From: https://github.com/Homebrew/homebrew-cask/blob/master/Casks/caffeine.rb
 ==> Name
 Caffeine
 ==> Artifacts
@@ -134,7 +134,7 @@ It is generally safe to run updates from within an application.
 
 ## Updating/Upgrading the Homebrew-Cask Tool
 
-Homebrew [automatically taps and keeps Homebrew-Cask updated](https://github.com/caskroom/homebrew-cask/pull/15381). `brew update` is all that is required.
+Homebrew [automatically taps and keeps Homebrew-Cask updated](https://github.com/Homebrew/homebrew-cask/pull/15381). `brew update` is all that is required.
 
 ## Additional Taps (optional)
 
@@ -142,10 +142,10 @@ The primary Homebrew-Cask Tap includes most of the Casks that a typical user wil
 
 | Tap name | description |
 | -------- | ----------- |
-| [caskroom/versions](https://github.com/caskroom/homebrew-versions) | contains alternate versions of Casks (e.g. betas, nightly releases, old versions)
-| [caskroom/fonts](https://github.com/caskroom/homebrew-fonts)       | contains Casks that install fonts
-| [caskroom/eid](https://github.com/caskroom/homebrew-eid)           | contains Casks that install electronic identity card software of various countries
-| [caskroom/drivers](https://github.com/caskroom/homebrew-drivers)   | contains Casks that install drivers for various devices
+| [Homebrew/cask-versions](https://github.com/Homebrew/homebrew-cask-versions) | contains alternate versions of Casks (e.g. betas, nightly releases, old versions)
+| [Homebrew/cask-fonts](https://github.com/Homebrew/homebrew-cask-fonts)       | contains Casks that install fonts
+| [Homebrew/cask-eid](https://github.com/Homebrew/homebrew-cask-eid)           | contains Casks that install electronic identity card software of various countries
+| [Homebrew/cask-drivers](https://github.com/Homebrew/homebrew-cask-drivers)   | contains Casks that install drivers for various devices
 
 You can tap any of the above with a `brew tap` command:
 
@@ -158,7 +158,7 @@ after which, Casks from the new Tap will be available to `search` or `install` j
 You may also specify a fully-qualified Cask token (which includes the Tap) for any `brew cask` command. This will implicitly add the Tap if you have not previously added it with `brew tap`:
 
 ```bash
-$ brew cask install caskroom/fonts/font-symbola
+$ brew cask install homebrew/cask-fonts/font-symbola
 ```
 
 ## Options
@@ -206,12 +206,12 @@ google-chrome
 Most `brew cask` commands can accept a Cask token as an argument. As described above, the token on the command line can take the form of:
 
 * A token as returned by `brew cask search`, _eg_: `google-chrome`.
-* A fully-qualified token which includes the Tap, _eg_: `caskroom/fonts/font-symbola`.
+* A fully-qualified token which includes the Tap, _eg_: `homebrew/cask-fonts/font-symbola`.
 
 `brew cask` also accepts three other forms as arguments:
 
-* A path to a Cask file, _eg_: `/usr/local/Library/Taps/caskroom/homebrew-cask/Casks/google-chrome.rb`.
-* A `curl`-retrievable URI to a Cask file, _eg_: `https://raw.githubusercontent.com/caskroom/homebrew-cask/f25b6babcd398abf48e33af3d887b2d00de1d661/Casks/google-chrome.rb`.
+* A path to a Cask file, _eg_: `/usr/local/Library/Taps/Homebrew/homebrew-cask/Casks/google-chrome.rb`.
+* A `curl`-retrievable URI to a Cask file, _eg_: `https://raw.githubusercontent.com/Homebrew/homebrew-cask/f25b6babcd398abf48e33af3d887b2d00de1d661/Casks/google-chrome.rb`.
 * A file in the current working directory, _eg_: `my-modfied-google-chrome.rb`. Note that matching Tapped Cask tokens will be preferred over this form when there is a conflict. To force the use of a Cask file in the current directory, specify a pathname with slashes, _eg_: `./google-chrome.rb`.
 
 The last three forms are intended for users who wish to maintain private Casks.

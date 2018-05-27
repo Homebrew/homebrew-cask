@@ -35,7 +35,7 @@ Tests on the following values are known to be acceptable:
 
 | value                       | examples
 | ----------------------------|--------------------------------------
-| `MacOS.version`             | [macports.rb](https://github.com/caskroom/homebrew-cask/blob/90e2d103a0069b9366e9d6cd5346c98686c40dce/Casks/macports.rb#L4#L29), [coconutbattery.rb](https://github.com/caskroom/homebrew-cask/blob/2c801af44be29fff7f3cb2996455fce5dd95d1cc/Casks/coconutbattery.rb#L3#L17)
+| `MacOS.version`             | [macports.rb](https://github.com/Homebrew/homebrew-cask/blob/90e2d103a0069b9366e9d6cd5346c98686c40dce/Casks/macports.rb#L4#L29), [coconutbattery.rb](https://github.com/Homebrew/homebrew-cask/blob/2c801af44be29fff7f3cb2996455fce5dd95d1cc/Casks/coconutbattery.rb#L3#L17)
 
 ### Version Comparisons
 
@@ -54,7 +54,7 @@ The available symbols for macOS versions are: `:cheetah`, `:puma`, `:jaguar`, `:
 
 ### Always Fall Through to the Newest Case
 
-Conditionals should be constructed so that the default is the newest OS version. When using an `if` statement, test for older versions, and then let the `else` statement hold the latest and greatest. This makes it more likely that the Cask will work without alteration when a new OS is released. Example (from [coconutbattery.rb](https://github.com/caskroom/homebrew-cask/blob/2c801af44be29fff7f3cb2996455fce5dd95d1cc/Casks/coconutbattery.rb)):
+Conditionals should be constructed so that the default is the newest OS version. When using an `if` statement, test for older versions, and then let the `else` statement hold the latest and greatest. This makes it more likely that the Cask will work without alteration when a new OS is released. Example (from [coconutbattery.rb](https://github.com/Homebrew/homebrew-cask/blob/2c801af44be29fff7f3cb2996455fce5dd95d1cc/Casks/coconutbattery.rb)):
 
 ```ruby
 if MacOS.version <= :tiger

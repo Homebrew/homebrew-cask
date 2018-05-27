@@ -7,7 +7,7 @@ cask 'dynamodb-local' do
   name 'Amazon DynamoDB Local'
   homepage 'https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html'
 
-  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/dynamodb-local.wrapper.sh"
   binary shimscript, target: 'dynamodb-local'
 
@@ -20,6 +20,6 @@ cask 'dynamodb-local' do
   end
 
   caveats do
-    depends_on_java('6+')
+    depends_on_java '6+'
   end
 end

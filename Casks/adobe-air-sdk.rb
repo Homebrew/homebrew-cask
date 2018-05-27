@@ -36,7 +36,7 @@ cask 'adobe-air-sdk' do
       'swcdepends',
       'swfdump',
     ].each do |shimscript|
-      # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+      # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
       IO.write "#{staged_path}/bin/#{shimscript}.wrapper.sh", <<~EOS
         #!/bin/sh
         exec '#{staged_path}/bin/#{shimscript}' "$@"

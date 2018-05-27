@@ -57,18 +57,18 @@ If your issue persists, search for it before opening a new one. If you find an o
   * [Unlisted reason](doc/reporting_bugs/a_cask_fails_to_install.md#unlisted-reason)
 * [`uninstall` wrongly reports cask as not installed](doc/reporting_bugs/uninstall_wrongly_reports_cask_as_not_installed.md)
 * [`Error: Unknown command: cask` error](doc/reporting_bugs/error_unknown_command_cask.md)
-* [My problem isn’t listed](https://github.com/caskroom/homebrew-cask/issues/new)
+* [My problem isn’t listed](https://github.com/Homebrew/homebrew-cask/issues/new)
 
 ## Requests
 
-* Cask requests will be automatically closed. If you want a cask added, [submit a pull request](https://github.com/caskroom/homebrew-cask/blob/master/CONTRIBUTING.md#adding-a-cask).
-* For a feature request, [use this template](https://github.com/caskroom/homebrew-cask/issues/new?template=02_feature_request.md).
+* Cask requests will be automatically closed. If you want a cask added, [submit a pull request](https://github.com/Homebrew/homebrew-cask/blob/master/CONTRIBUTING.md#adding-a-cask).
+* For a feature request, [use this template](https://github.com/Homebrew/homebrew-cask/issues/new?template=02_feature_request.md).
 
 ## Questions? Wanna chat?
 
 We’re really rather friendly! Here are the best places to talk about the project:
 
-* If none of the templates above is appropriate, [open an issue](https://github.com/caskroom/homebrew-cask/issues/new).
+* If none of the templates above is appropriate, [open an issue](https://github.com/Homebrew/homebrew-cask/issues/new).
 * Join us (and [caskbot](https://github.com/passcod/caskbot)) on IRC at `#homebrew-cask` on Freenode
 * Join us on [Gitter](https://gitter.im/caskroom/homebrew-cask)
 

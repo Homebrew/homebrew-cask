@@ -33,10 +33,7 @@ cask 'virtualbox-extension-pack' do
                    sudo: true
   end
 
-  caveats <<~EOS
-    Installing this Cask means you have AGREED to the
-    VirtualBox Personal Use and Evaluation License at
-
-    https://www.virtualbox.org/wiki/VirtualBox_PUEL
-  EOS
+  caveats do
+    license 'https://www.virtualbox.org/wiki/VirtualBox_PUEL'
+  end
 end

@@ -1,16 +1,16 @@
 #!/bin/bash
 
-readonly caskroom_online='https://github.com/caskroom'
-readonly caskroom_repos_dir="$(mktemp -d)"
+readonly homebrew_online='https://github.com/Homebrew'
+readonly repos_dir="$(mktemp -d)"
 readonly main_repo_dir="$(mktemp -d)" # From where files will be copied
-readonly caskroom_repos=(homebrew-versions homebrew-fonts homebrew-eid homebrew-drivers) # homebrew-cask is absent since it's the repo all the others are compared against
+readonly cask_repos=(homebrew-cask-versions homebrew-cask-fonts homebrew-cask-eid homebrew-cask-drivers) # homebrew-cask is absent since it's the repo all the others are compared against
 
 function message {
   echo "${1}"
 }
 
 function get_main_repo {
-  curl --silent --location "${caskroom_online}/homebrew-cask/archive/master.zip" | ditto -xk - "${main_repo_dir}"
+  curl --silent --location "${homebrew_online}/homebrew-cask/archive/master.zip" | ditto -xk - "${main_repo_dir}"
   mv "${main_repo_dir}/homebrew-cask-master/"{,.[^.]}* "${main_repo_dir}"
   rmdir "${main_repo_dir}/homebrew-cask-master"
 }
@@ -19,11 +19,11 @@ function get_repo {
   local repo_name repo_dir
 
   repo_name="${1}"
-  repo_dir="${caskroom_repos_dir}/${repo_name}"
+  repo_dir="${repos_dir}/${repo_name}"
 
-  cd "${caskroom_repos_dir}" || exit 1
+  cd "${repos_dir}" || exit 1
   message "Cloning ${repo_name}…"
-  git clone "${caskroom_online}/${repo_name}.git" --quiet
+  git clone "${homebrew_online}/${repo_name}.git" --quiet
   cd "${repo_dir}" || exit 1
 }
 
@@ -36,7 +36,7 @@ function copy_templates_and_ci {
   /usr/bin/sed -i '' -E "s:homebrew-cask/(pulls|issues):${repo_name}/\1:" '.github/PULL_REQUEST_TEMPLATE.md' # PULL_REQUEST_TEMPLATE has repo-specific links
 
   # increase script.sh install cap for fonts repo
-  if [[ "${repo_name}" == 'homebrew-fonts' ]]; then
+  if [[ "${repo_name}" == 'homebrew-cask-fonts' ]]; then
     /usr/bin/sed -i '' -e 's:-le 3:-le 15:' -e 's:than 3 Casks:than 15 Casks:' 'ci/travis/script.sh'
   fi
 }
@@ -58,7 +58,7 @@ function push_changes {
 }
 
 get_main_repo
-for repo in "${caskroom_repos[@]}"; do
+for repo in "${cask_repos[@]}"; do
   get_repo "${repo}"
   copy_templates_and_ci "${repo}"
   push_changes

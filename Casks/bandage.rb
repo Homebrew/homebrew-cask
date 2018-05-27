@@ -10,7 +10,7 @@ cask 'bandage' do
   homepage 'https://rrwick.github.io/Bandage/'
 
   app 'Bandage.app'
-  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/bandage.wrapper.sh"
   binary shimscript, target: 'bandage'
 

@@ -17,6 +17,6 @@ cask 'dbvisualizer' do
   zap trash: '~/.dbvis'
 
   caveats do
-    depends_on_java('8')
+    depends_on_java '8'
   end
 end

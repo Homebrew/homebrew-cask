@@ -13,7 +13,7 @@ cask 'handy-outliner' do
 
   binary 'handy-outliner'
 
-  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/handy-outliner"
 
   preflight do
