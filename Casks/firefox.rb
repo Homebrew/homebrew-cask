@@ -81,14 +81,14 @@ cask 'firefox' do
     'pl'
   end
 
-  language 'pt' do
-    sha256 'e90c0b0cb92d73010b58df89155ed49782cc7b5feaf896367e1fd41c357cf932'
-    'pt-PT'
-  end
-
   language 'pt-BR' do
     sha256 '17e6fedf953fb4dbad4927c60ef3379f93395ee6bc648a7bb2f399d2b58b9e60'
     'pt-BR'
+  end
+
+  language 'pt' do
+    sha256 'e90c0b0cb92d73010b58df89155ed49782cc7b5feaf896367e1fd41c357cf932'
+    'pt-PT'
   end
 
   language 'ru' do
@@ -106,14 +106,14 @@ cask 'firefox' do
     'uk'
   end
 
-  language 'zh' do
-    sha256 '3379ee85e903c54cda37ef9e08e4c0738b0aec405d688cf9c44e96ccc548bbaa'
-    'zh-CN'
-  end
-
   language 'zh-TW' do
     sha256 '4e4e2e39b994d155604ec9b344be197a7a110eb94bbd0c2153f084b345392065'
     'zh-TW'
+  end
+
+  language 'zh' do
+    sha256 '3379ee85e903c54cda37ef9e08e4c0738b0aec405d688cf9c44e96ccc548bbaa'
+    'zh-CN'
   end
 
   # download-installer.cdn.mozilla.net/pub/firefox/releases was verified as official when first introduced to the cask
