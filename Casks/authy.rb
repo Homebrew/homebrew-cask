@@ -4,7 +4,6 @@ cask 'authy' do
 
   # s3.amazonaws.com/authy-electron-repository-production was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/authy-electron-repository-production/authy/stable/#{version}/darwin/x64/Authy%20Desktop-#{version}.dmg"
-  
   name 'Authy Desktop'
   homepage 'https://authy.com/'
 
