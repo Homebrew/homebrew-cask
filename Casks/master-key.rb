@@ -1,10 +1,10 @@
 cask 'master-key' do
-  version '5.6.5.3.612'
-  sha256 'cfae689409eb520ef59c64a5bbe9ee321ea04d4485670cc723eb77b8b1c80dc5'
+  version '6.0.0.3.48'
+  sha256 'b64b43a0ca30995cff4c604cdf3432d1b7002148d219461da88257cb046d8788'
 
-  url 'https://macinmind.com/MasterKey.dmg'
+  url "https://macinmind.com/MasterKey#{version.major}.dmg"
   appcast 'https://macinmind.com/pads/MasterKeyappcast.xml',
-          checkpoint: 'd3a3d167853a10e608842dd51c9820fcc78394244e1140bc2771014dcc59bbdf'
+          checkpoint: '2251ed519e1ddcae599b13755e42a2be4dd9c030806294e616b803f50c826e74'
   name 'Master Key'
   homepage 'https://macinmind.com/?area=app&app=masterkey&pg=info'
 
