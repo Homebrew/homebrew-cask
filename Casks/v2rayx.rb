@@ -1,11 +1,11 @@
 cask 'v2rayx' do
   # note: "2" is not a version number, but an intrinsic part of the product name
-  version '0.9.1'
-  sha256 '4fed7e7d9fabcaceb79599e2a214ac9cd682e041d485177d8342c78c9a19766d'
+  version '1.1.1'
+  sha256 '02bb2c5732654af8fbc75e7893900d6a2bcca032ce079da964ad2728d1198074'
 
   url "https://github.com/Cenmrev/V2RayX/releases/download/v#{version}/V2RayX.app.zip"
   appcast 'https://github.com/Cenmrev/V2RayX/releases.atom',
-          checkpoint: '086799a372593433ee01a87cca4da784ca5289a54e95480114e789fe4d347dfd'
+          checkpoint: '51c7723f69a910ef069988eb939b7bdbc6b033610d2e4144d27033109ddfe73c'
   name 'V2RayX'
   homepage 'https://github.com/Cenmrev/V2RayX'
 
