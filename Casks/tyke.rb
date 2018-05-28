@@ -2,9 +2,9 @@ cask 'tyke' do
   version :latest
   sha256 :no_check
 
-  url 'http://tyke.io/tyke.dmg'
+  url 'https://tyke.app/tyke.dmg'
   name 'Tyke'
-  homepage 'http://tyke.io/'
+  homepage 'https://tyke.app/'
 
   app 'tyke.app'
 
