@@ -1,10 +1,10 @@
 cask 'cracked' do
-  version '0.1.6'
-  sha256 '3e113bb4f1134e8a51711454f53cd8ecf0c129e78a81c217d439fb30c6146cb0'
+  version '1.7'
+  sha256 'd439497ec38f685ceaeaf6093d8f2e21a0028a318d8a206953eaf6575d75a432'
 
-  url "https://github.com/billorcutt/Cracked/releases/download/#{version}/Cracked.dmg"
+  url "https://github.com/billorcutt/Cracked/releases/download/#{version}-Release/Cracked.dmg"
   appcast 'https://github.com/billorcutt/Cracked/releases.atom',
-          checkpoint: '80a81a52c0d580dbb4af5578b9d15366872d307c0f2aacae6b4ab48f051ee30f'
+          checkpoint: 'c7ab0ef3793d74d78b5e74a2c5436ad373e78a077d49e5da109815791ef59984'
   name 'Cracked'
   homepage 'https://github.com/billorcutt/Cracked'
 
