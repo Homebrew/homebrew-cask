@@ -1,6 +1,6 @@
 cask 'shiba' do
   version '1.2.0'
-  sha256 '8d5da51fba5ead6343e4f35532103c6c3cf28b649322d363b3ce188f62886bb4'
+  sha256 '9df054565afadd0b7ae808dd8f47725bacb5737edb9db9ec635150a0398f603f'
 
   url "https://github.com/rhysd/Shiba/releases/download/v#{version}/Shiba-darwin-x64.zip"
   appcast 'https://github.com/rhysd/Shiba/releases.atom',
