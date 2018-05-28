@@ -574,6 +574,6 @@ cask 'libreoffice-language-pack' do
   end
 
   caveats <<~EOS
-    #{token} assumes LibreOffice is installed in #{appdir}. If it is not, you’ll need to run #{staged_path}/LibreOffice Language Pack.app manually.
+    #{token} assumes LibreOffice is installed in '#{appdir}'. If it is not, you’ll need to run '#{staged_path}/LibreOffice Language Pack.app' manually.
   EOS
 end
