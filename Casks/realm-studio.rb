@@ -1,10 +1,10 @@
 cask 'realm-studio' do
-  version '1.21.0'
-  sha256 'a14489dcaa5dd7b53480251c8b26e4677f0c5503dd7ab5820ac2b2aebba2a327'
+  version '1.21.1'
+  sha256 'f9ee8191d58095e1a56f1d815b1abbf0b57868aa3cd71b036790aa44ea4ed6fa'
 
   url "https://static.realm.io/downloads/realm-studio/Realm%20Studio-#{version}-mac.zip"
   appcast 'https://static.realm.io/downloads/realm-studio/latest-mac.yml',
-          checkpoint: '5d3283239bc50410a0c473d788bd5945a07f4b34243dfe5e962eae83dbd596c9'
+          checkpoint: 'ada7f7c1b7e73e6295d5f9172224908c9909eb2b30a8d7d10656b4d3cf9fc9e6'
   name 'Realm Studio'
   homepage 'https://realm.io/products/realm-studio/'
 
