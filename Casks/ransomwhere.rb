@@ -1,11 +1,11 @@
 cask 'ransomwhere' do
-  version '1.2.3'
-  sha256 'c9f21c0d5ba0512e97a89e12635f6380ada2b294ba49ce45d97bb8db3b53cefe'
+  version '1.2.4'
+  sha256 'ab3ebabc5165cce6e020a77f073b40afa0719576f2c981db5fb1f53d89c5f1e8'
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/RansomWhere_#{version}.zip"
   appcast 'https://objective-see.com/products/changelogs/RansomWhere.txt',
-          checkpoint: '597301ae2d39100b0edb041933a5aa51cf07f481bb4363790bb4eca428e2964d'
+          checkpoint: 'f32e55747315e270a77f6a1554f7501b01386ab046d49de52a8007ea68980b72'
   name 'RansomWhere'
   homepage 'https://objective-see.com/products/ransomwhere.html'
 
