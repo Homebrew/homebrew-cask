@@ -16,6 +16,16 @@ cask 'google-chrome' do
   depends_on macos: '>= :mavericks'
 
   app 'Google Chrome.app'
+  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/google-chrome.wrapper.sh"
+  binary shimscript, target: 'google-chrome'
+
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/bash
+      exec  "#{appdir}/Google Chrome.app/Contents/MacOS/Google Chrome" "$@"
+    EOS
+  end
 
   uninstall launchctl: [
                          'com.google.keystone.agent',
