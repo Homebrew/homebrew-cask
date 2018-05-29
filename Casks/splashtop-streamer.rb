@@ -1,11 +1,11 @@
 cask 'splashtop-streamer' do
-  version '3.2.2.0'
-  sha256 'd52ec43249097917610b1b73360017264243e35a33cf25886ef9f98850eda0e4'
+  version '3.2.4.0'
+  sha256 '0f3e2d63aea84b4f43b58bd4732b30b94c8f4f98fe664b04c18bfeb00b6b497a'
 
   # d17kmd0va0f0mp.cloudfront.net was verified as official when first introduced to the cask
   url "https://d17kmd0va0f0mp.cloudfront.net/mac/Splashtop_Streamer_Mac_INSTALLER_v#{version}.dmg"
   appcast 'https://www.splashtop.com/wp-content/themes/responsive/downloadx.php?platform=mac',
-          checkpoint: '854099d5dea13379cd2e386c94fc5c1b5326af3e4b81c769c5a667cd9282b6b6'
+          checkpoint: '2dc42a142c4349030ed4f705ec5c4d4ace57d087ecf7c55159617a7d1b34846b'
   name 'Splashtop Streamer'
   homepage 'https://www.splashtop.com/downloads'
 
