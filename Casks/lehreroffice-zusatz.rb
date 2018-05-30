@@ -1,10 +1,10 @@
 cask 'lehreroffice-zusatz' do
-  version '2018.8.0'
-  sha256 'a16c3cd0e9b1f1ebbb06d42e5b595cb0913feaf5cb8e4c9fe149e2a11454f8c8'
+  version '2018.8.1'
+  sha256 'a1fca5bccee47bab7c8baee0af10e96968f54a65916415879242775b31d3c3e0'
 
-  url 'https://www.lehreroffice.ch/lo/dateien/zusatz/lo_zusatz_osx.dmg'
+  url 'https://www.lehreroffice.ch/lo/dateien/zusatz/lo_zusatz_macos.dmg'
   appcast 'https://www.lehreroffice.ch/services/update/getcurrentversion.php?app=Zusatz',
-          checkpoint: '4e3fc3526921b7e9827a053ccf1b87494c0d3c8281fe30857084285a94ed4653'
+          checkpoint: '24c55b7df2e4293f19168f978da2e0bba582a19bb52aba5f08521d5154e39a96'
   name 'LehrerOffice Zusatz'
   homepage 'https://www.lehreroffice.ch/'
 
