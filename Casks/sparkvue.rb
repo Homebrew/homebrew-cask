@@ -12,6 +12,7 @@ cask 'sparkvue' do
   uninstall pkgutil: 'com.pasco.SPARKvue'
 
   zap trash: [
+               '~/Library/Application Support/CrashReporter/SPARKvue_*.plist',
                '~/Library/Application Support/SPARKvueUI',
                '~/Library/Preferences/com.pasco.SPARKvue.plist',
                '~/Library/Caches/com.pasco.SPARKvue',
