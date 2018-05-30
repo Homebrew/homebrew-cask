@@ -18,6 +18,7 @@ cask 'idisplay' do
   zap trash: '~/Library/Preferences/com.shapeservices.idisplay-host-full.plist'
 
   caveats do
+    kext
     reboot
   end
 end
