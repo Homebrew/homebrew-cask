@@ -16,10 +16,13 @@ cask 'visual-studio' do
   zap trash: [
                '/Applications/Xamarin Workbooks.app',
                '/Applications/Xamarin Profiler.app',
+               '~/Library/Application Support/VisualStudio',
                '~/Library/Application Support/CrashReporter/VisualStudio*',
                '~/Library/Caches/VisualStudio',
                '~/Library/Logs/VisualStudio',
                '~/Library/Preferences/Visual*Studio',
+               '~/Library/Preferences/Xamarin',
+               '~/Library/Developer/Xamarin',
                '~/Library/VisualStudio',
              ]
 end
