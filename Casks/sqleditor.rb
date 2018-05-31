@@ -1,6 +1,6 @@
 cask 'sqleditor' do
-  version '3.3.5'
-  sha256 'b70a48b8e1a5175195e82e5fc9c1001e88b2feb4f34ccb6fe2e847078d0d2ef7'
+  version '3.3.7'
+  sha256 '82a5b35d0e0f9ddd3d8df302c01cb24633c0404fdb924984a6c7f8ef965de2e9'
 
   url "https://www.malcolmhardie.com/sqleditor/releases/#{version}/SQLEditor-#{version.dots_to_hyphens}.zip"
   appcast 'https://www.malcolmhardie.com/sqleditor/appcast/sq2release.xml',
