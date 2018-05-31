@@ -3,13 +3,13 @@ cask 'trickster' do
     version '2.1.1'
     sha256 'cddc4a27c3c2a016f86d1688ef9708d3e8c605cfe06302470471309ccdc241db'
   else
-    version '2.7'
-    sha256 '88938097eaafff496e1705c08e288519e93bf36fc1d10fd9f55e8cb9bc6d4453'
+    version '2.8'
+    sha256 '4d2e4196e5baf7ace6e7258c867eae7e5310acb1de263c4bc631ae6a95e075b6'
   end
 
   url "https://dl.apparentsoft.com/Trickster_#{version}.zip"
   appcast 'https://dl.apparentsoft.com/trickster.rss',
-          checkpoint: 'c355b5d2c6ec4c7ea505df1f9b93f555779567a0355e2707e099aaaba8d4e983'
+          checkpoint: 'abf09bfbfcf986d4f984a83c6edb3cb9ad7cfff265b9f0804186c9179d5280c8'
   name 'Trickster'
   homepage 'https://www.apparentsoft.com/trickster/'
 
