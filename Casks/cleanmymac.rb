@@ -1,5 +1,5 @@
 cask 'cleanmymac' do
-  version '3.9.6,1527255630'
+  version '3.9.6'
   sha256 'c23d50e5521340919a98809b487e82b3872d4606f1c5ce774c6eb4a0120ee4d2'
 
   # devmate.com/com.macpaw.CleanMyMac was verified as official when first introduced to the cask
