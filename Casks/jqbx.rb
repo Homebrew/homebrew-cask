@@ -6,5 +6,7 @@ cask 'jqbx' do
   name 'JQBX'
   homepage 'https://www.jqbx.fm/'
 
+  depends_on cask: 'spotify'
+
   app 'JQBX.app'
 end
