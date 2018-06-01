@@ -1,5 +1,5 @@
 cask 'fork' do
-  version '1.0.67.1'
+  version '1.0.67.2'
   sha256 'cdb07e4774e44da5662d67780b7b6f1f17fc7a4d2734b7e61f80c8fa409298cc'
 
   url 'https://git-fork.com/update/files/Fork.dmg'
