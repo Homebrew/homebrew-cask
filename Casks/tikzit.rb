@@ -5,7 +5,7 @@ cask 'tikzit' do
   # downloads.sourceforge.net/tikzit was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/tikzit/TikZiT-osx-#{version}.zip"
   appcast 'https://github.com/tikzit/tikzit/releases.atom',
-          checkpoint: '7a5402e6ce2389222002a5b3c6c7d1adb1282aafa99fd0f36bcdd74bd10103d8'
+          checkpoint: '1609bfd62f4456d9c1f5b3eca7fe6db2c2ff71b1a81dbfe3d41f32b283608dcc'
   name 'TikZiT'
   homepage 'http://tikzit.github.io/'
 
