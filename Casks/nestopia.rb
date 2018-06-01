@@ -6,6 +6,8 @@ cask 'nestopia' do
   name 'Nestopia'
   homepage 'http://www.bannister.org/software/nestopia.htm'
 
+  depends_on macos: '>= :el_capitan'
+
   app "Nestopia v#{version}/Nestopia.app"
 
   zap trash: [
