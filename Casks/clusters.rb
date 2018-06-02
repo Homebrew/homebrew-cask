@@ -14,4 +14,8 @@ cask 'clusters' do
                '~/Library/Application Support/Clusters',
                '~/Library/Preferences/com.latenitesoft.Clusters*',
              ]
+
+  caveats do
+    discontinued
+  end
 end
