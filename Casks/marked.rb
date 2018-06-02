@@ -1,10 +1,10 @@
 cask 'marked' do
-  version '2.5.16949'
-  sha256 '56fc0bcdd8421e2313ee3977c85b9c49edcb940708716d741726ff2b838957ca'
+  version '2.5.17950'
+  sha256 '38f0bc6d5ea13ef202a18ea770cb5ee0f2097755c80e6632da3f368036202278'
 
   url "https://updates.marked2app.com/Marked#{version}.zip"
   appcast 'https://updates.marked2app.com/marked.xml',
-          checkpoint: '3ece90574ffc3263bc2b18bddcbc4b712cd66a5a7134760b3c97f0435afcc8a5'
+          checkpoint: '2be7502e88a0499ce8695297dad3a4a6e2b36afec4e3c7e14b18cc9a07babe81'
   name 'Marked'
   homepage 'http://marked2app.com/'
 
