@@ -4,7 +4,7 @@ cask 'qsync-client' do
 
   url "https://download.qnap.com/Storage/Utility/QNAPQsyncClientMac-#{version}.dmg"
   appcast 'http://update.qnap.com/SoftwareRelease.xml',
-          checkpoint: 'a0ffcabcbe3dae0bfa1a914c426309ce503b2d35f338be3667549e81254f732b'
+          checkpoint: '0be220a5b3cfc50ff612274dd0beeba199e1592b13e7cd479b9ca553bcd8cbf5'
   name 'Qnap Qsync'
   homepage 'https://www.qnap.com/i/in/utility/#block_3'
 
