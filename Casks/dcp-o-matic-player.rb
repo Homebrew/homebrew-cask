@@ -8,5 +8,5 @@ cask 'dcp-o-matic-player' do
   name 'DCP-o-matic Player'
   homepage 'https://dcpomatic.com/'
 
-  app "DCP-o-matic #{version} Player.app"
+  app "DCP-o-matic #{version.major} Player.app"
 end
