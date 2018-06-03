@@ -8,5 +8,5 @@ cask 'dcp-o-matic-encode-server' do
   name 'DCP-o-matic Encode Server'
   homepage 'https://dcpomatic.com/'
 
-  app 'DCP-o-matic #{version.major} Encode Server.app'
+  app "DCP-o-matic #{version.major} Encode Server.app"
 end
