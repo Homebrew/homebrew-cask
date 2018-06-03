@@ -4,9 +4,9 @@ cask 'dcp-o-matic' do
 
   url "https://dcpomatic.com/dl.php?id=osx-main&version=#{version}"
   appcast 'https://dcpomatic.com/download',
-          checkpoint: "510616fe834b672a089e02a95abbb43f7bee5ba80793d30c4adfb48b8de1411d"
+          checkpoint: '510616fe834b672a089e02a95abbb43f7bee5ba80793d30c4adfb48b8de1411d'
   name 'DCP-o-matic'
   homepage 'https://dcpomatic.com/'
 
-  app 'DCP-o-matic #{version.major}.app'
+  app "DCP-o-matic #{version.major}.app"
 end
