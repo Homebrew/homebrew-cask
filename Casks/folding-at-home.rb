@@ -10,7 +10,7 @@ cask 'folding-at-home' do
 
   pkg "fah-installer_#{version}_x86_64.pkg"
 
-  uninstall pkgutil:   'edu.stanford.folding.*',
+  uninstall pkgutil:   'org.foldingathome.*',
             launchctl: 'edu.stanford.folding.fahclient',
             quit:      [
                          'edu.stanford.folding.fahviewer',
