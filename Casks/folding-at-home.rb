@@ -8,7 +8,7 @@ cask 'folding-at-home' do
   name 'Folding@home'
   homepage 'https://folding.stanford.edu/'
 
-  pkg "fah-installer_#{version}_x86_64.mpkg"
+  pkg "fah-installer_#{version}_x86_64.pkg"
 
   uninstall pkgutil:   'edu.stanford.folding.*',
             launchctl: 'edu.stanford.folding.fahclient',
