@@ -5,7 +5,7 @@ cask 'dcp-o-matic-kdm-creator' do
   url "https://dcpomatic.com/dl.php?id=osx-kdm&version=#{version}"
   appcast 'https://dcpomatic.com/download',
            checkpoint: '510616fe834b672a089e02a95abbb43f7bee5ba80793d30c4adfb48b8de1411d'
-  name 'DCP-o-matic 2 KDM Creator'
+  name 'DCP-o-matic KDM Creator'
   homepage 'https://dcpomatic.com/'
 
   app "DCP-o-matic #{verson.major} KDM Creator.app"
