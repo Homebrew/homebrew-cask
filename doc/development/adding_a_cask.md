@@ -151,6 +151,8 @@ Example:
 
 ## Testing Your New Cask
 
+You should set the enviroment variable `HOMEBREW_NO_AUTO_UPDATE` to `1` to prevent brew to automaticly update your casks and checking the master branch out.
+
 Give it a shot with `brew cask install my-new-cask`.
 
 Did it install? If something went wrong, `brew cask uninstall my-new-cask` and edit your Cask with `brew cask edit my-new-cask` to fix it.
