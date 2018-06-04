@@ -1,11 +1,11 @@
 cask 'insteadman' do
-  version '3.1.0'
-  sha256 '7e236a9bd2f25187179f2a3e2adc18e087315a2f1b2aea3cdb9e9a5181ba7441'
+  version '3.1.1'
+  sha256 '6be571c6ddb16c6f034c66cce7e8699c2e79133ff3a012d3edbd14b6910f8938'
 
   # github.com/jhekasoft/insteadman3 was verified as official when first introduced to the cask
   url "https://github.com/jhekasoft/insteadman3/releases/download/v#{version}/InsteadMan-#{version}.dmg"
   appcast 'https://github.com/jhekasoft/insteadman3/releases.atom',
-          checkpoint: '1581287c8be5a45dc22abd1a4e45484eaaa0e7d2220fd319aa7abada781c6ef8'
+          checkpoint: '060cd37a9110e76b0e9fab28d83cd59a847eca2ac9272c8984ecd03d3241c16b'
   name 'InsteadMan'
   homepage 'http://jhekasoft.github.io/insteadman/en/'
 
