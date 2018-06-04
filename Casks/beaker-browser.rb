@@ -1,11 +1,11 @@
 cask 'beaker-browser' do
-  version '0.8.0-prerelease.5'
-  sha256 '5712914c3c6ea0a824e66c8ae1c180cb69b179086e5b80f2f66c8d9601621bab'
+  version '0.8.0-prerelease.6'
+  sha256 '0382d8cf7d563677c444d01d5f9d9281e87ec97a714c14a1a183cffe4f85a5fb'
 
   # github.com/beakerbrowser/beaker was verified as official when first introduced to the cask
   url "https://github.com/beakerbrowser/beaker/releases/download/#{version}/beaker-browser-#{version}.dmg"
   appcast 'https://github.com/beakerbrowser/beaker/releases.atom',
-          checkpoint: 'fa46ebab5e79c4fde9698bc69eb32753a90ee33a64916da7cb9f8ab17d740697'
+          checkpoint: '89b0d100a7ba329de0ee36491fa92c9a929ea06d4f058a9969854da5e8c9b0e7'
   name 'Beaker Browser'
   homepage 'https://beakerbrowser.com/'
 
