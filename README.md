@@ -6,7 +6,7 @@ Homebrew-Cask extends [Homebrew](http://brew.sh) and brings its elegance, simpli
 
 We do this by providing a friendly Homebrew-style CLI workflow for the administration of macOS applications distributed as binaries.
 
-[![Join the chat at https://gitter.im/caskroom/homebrew-cask](https://img.shields.io/badge/gitter-join%20chat-blue.svg)](https://gitter.im/caskroom/homebrew-cask)
+[![Join the chat at https://gitter.im/Homebrew/homebrew-cask](https://img.shields.io/badge/gitter-join%20chat-blue.svg)](https://gitter.im/Homebrew/homebrew-cask)
 
 ## Let’s try it!
 
@@ -70,7 +70,7 @@ We’re really rather friendly! Here are the best places to talk about the proje
 
 * If none of the templates above is appropriate, [open an issue](https://github.com/Homebrew/homebrew-cask/issues/new).
 * Join us (and [caskbot](https://github.com/passcod/caskbot)) on IRC at `#homebrew-cask` on Freenode
-* Join us on [Gitter](https://gitter.im/caskroom/homebrew-cask)
+* Join us on [Gitter](https://gitter.im/Homebrew/homebrew-cask)
 
 ## License
 Code is under the [BSD 2 Clause (NetBSD) license](LICENSE)

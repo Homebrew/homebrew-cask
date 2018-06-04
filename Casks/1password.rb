@@ -1,11 +1,11 @@
 cask '1password' do
-  version '7.0.2'
-  sha256 '08842d5b579437f887504d7f8cbfd2acfbebee1fedff4c3606801fef3f2f634d'
+  version '7.0.4'
+  sha256 '77f625f3ad28c98342e3ab68a417b4ece7cc762179a6de9279ce714f298ef7c4'
 
   # 1password.com was verified as official when first introduced to the cask
   url "https://c.1password.com/dist/1P/mac#{version.major}/1Password-#{version}.zip"
   appcast "https://app-updates.agilebits.com/product_history/OPM#{version.major}",
-          checkpoint: '9713c42cdbd7d9e04ece3c86f2f9e452d0ad63a2cba6efbee2f4c44f65a09b6a'
+          checkpoint: '78086a6d237499c65b5b5c8efb32b452a4bafeb77814ea5875973626699aeba7'
   name '1Password'
   homepage 'https://1password.com/'
 

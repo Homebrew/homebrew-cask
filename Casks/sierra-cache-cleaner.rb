@@ -7,10 +7,9 @@ cask 'sierra-cache-cleaner' do
   name 'SCC'
   homepage 'http://www.northernsoftworks.com/sierracachecleaner.html'
 
-  depends_on macos: '<= :sierra'
-  if MacOS.version >= :lion
-    app 'Sierra Cache Cleaner.app'
-  else
+  if MacOS.version <= :mountain_lion
     app 'Sierra Cache Cleaner Legacy.app'
+  else
+    app 'Sierra Cache Cleaner.app'
   end
 end

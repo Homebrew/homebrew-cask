@@ -1,5 +1,5 @@
 cask 'blocs' do
-  version '2.5.2'
+  version '2.6.0'
   sha256 'a3488866a28e8b36cc856df0de85044fa5f6975ff0f0f9f86b4e3c66f5073964'
 
   # uistore.io was verified as official when first introduced to the cask

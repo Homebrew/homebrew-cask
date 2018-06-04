@@ -1,6 +1,6 @@
 cask 'findings' do
-  version '1.4.5,3581'
-  sha256 '43fc8cbf8689773348343cd3d30163c77a21ca0aea24122007b39aacf6da1684'
+  version '2.0.3,5423'
+  sha256 'eafb235e8fbcc071bc3d09e824d8ed3964b28fbe6ca6254bde7c91b9b1f7a971'
 
   url "http://downloads.findingsapp.com/Findings_#{version.after_comma}_#{version.before_comma}.zip"
   appcast 'http://downloads.findingsapp.com/appcast.xml',
@@ -8,7 +8,7 @@ cask 'findings' do
   name 'Findings'
   homepage 'http://findingsapp.com/'
 
-  depends_on macos: '>= :mavericks'
+  depends_on macos: '>= :el_capitan'
 
   app 'Findings.app'
 end
