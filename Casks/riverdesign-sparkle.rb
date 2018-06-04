@@ -2,7 +2,8 @@ cask 'riverdesign-sparkle' do
   version :latest
   sha256 :no_check
 
-  url 'https://sparkleapp.com/download'
+  # sparklesoftware.s3.amazonaws.com was verified as official when first introduced to the cask
+  url 'https://sparklesoftware.s3.amazonaws.com/store/Sparkle.zip'
   name 'Sparkle'
   homepage 'https://sparkleapp.com/'
 
