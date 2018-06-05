@@ -1,6 +1,6 @@
 cask 'isyncr' do
-  version '5.6.3'
-  sha256 'e4de8de36b1e191aa511846549cac5f36727e44b0ad2607efa07a249fde55d91'
+  version '5.14.0'
+  sha256 '68e65554b12083c35b0180c6535cefcc7897c0aa4902848dcf706459ecfab3ad'
 
   url "http://www.jrtstudio.com/files/iSyncr%20Desktop%20#{version}.pkg"
   appcast 'http://www.jrtstudio.com/files/SlashiSyncr25.js',
