@@ -4,7 +4,7 @@ cask 'wtlibrary' do
 
   # downloads.sourceforge.net/wtlibrary was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/wtlibrary/WtLibrary_#{version.dots_to_underscores}.dmg"
-  name 'Watchtower Library'
+  name 'Watchtower Library for Mac'
   homepage 'http://www.wtlibrary.net/'
 
   app 'WtLibrary.app'
