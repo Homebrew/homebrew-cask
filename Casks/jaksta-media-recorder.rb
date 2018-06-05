@@ -8,6 +8,8 @@ cask 'jaksta-media-recorder' do
   name 'Jaksta'
   homepage 'https://www.jaksta.com/products'
 
+  container type: :naked
+
   pkg 'JMR.pkg'
 
   # This is a horrible hack to force the file extension.
