@@ -1,6 +1,6 @@
 cask 'dymo-label' do
-  version '8.6.2'
-  sha256 'efda7c1428974261c77b765d94751502eaf58521f179c8bc169362f9fddaee6e'
+  version '8.7.2'
+  sha256 'cd626b5107b36f935103d68543c1d4fffc37cea26bf3f9996856fda14b08386f'
 
   url "http://download.dymo.com/dymo/Software/Mac/DLS#{version.major}Setup.#{version}.dmg"
   name 'Dymo Label'
@@ -8,21 +8,17 @@ cask 'dymo-label' do
 
   pkg "DYMO Label v.#{version.major}.pkg"
 
-  uninstall launchctl: 'com.dymo.pnpd',
+  uninstall launchctl: [
+                         'com.dymo.dls.webservice',
+                         'com.dymo.pnpd',
+                       ],
             pkgutil:   [
                          'com.dymo.cups',
-                         'com.dymo.dls.addressbook.addin',
-                         'com.dymo.dls.application',
-                         'com.dymo.dls.appsupport',
-                         'com.dymo.dls.documents',
-                         'com.dymo.dls.frameworks',
-                         'com.dymo.dls.npapi.addin',
-                         'com.dymo.dls.office.addins',
-                         'com.dymo.dls.safari.addin',
+                         'com.dymo.dls.*',
                        ]
 
-  zap delete: [
-                '~/Library/Preferences/com.dymo.dls.plist',
-                '~/Library/Caches/com.dymo.dls',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.dymo.dls.plist',
+               '~/Library/Caches/com.dymo.dls',
+             ]
 end
