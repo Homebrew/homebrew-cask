@@ -9,4 +9,11 @@ cask 'vimediamanager' do
   homepage 'https://github.com/vidalvanbergen/ViMediaManager'
 
   app 'ViMediaManager.app'
+
+  zap trash: [
+               '~/Library/Application Support/ViMediaManager',
+               '~/Library/Caches/com.vidalvanbergen.vimediamanager-alpha',
+               '~/Library/Preferences/com.vidalvanbergen.vimediamanager-alpha.plist',
+               '~/Library/Saved Application State/com.vidalvanbergen.vimediamanager-alpha.savedState',
+             ]
 end
