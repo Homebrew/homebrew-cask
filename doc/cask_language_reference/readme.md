@@ -35,7 +35,7 @@ Tests on the following values are known to be acceptable:
 
 | value                       | examples
 | ----------------------------|--------------------------------------
-| `MacOS.version`             | [macports.rb](https://github.com/Homebrew/homebrew-cask/blob/90e2d103a0069b9366e9d6cd5346c98686c40dce/Casks/macports.rb#L4#L29), [coconutbattery.rb](https://github.com/Homebrew/homebrew-cask/blob/2c801af44be29fff7f3cb2996455fce5dd95d1cc/Casks/coconutbattery.rb#L3#L17)
+| `MacOS.version`             | [coconutbattery.rb](https://github.com/Homebrew/homebrew-cask/blob/a11ee55e8ed8255f7dab77120dfb1fb955789559/Casks/coconutbattery.rb#L2-L16), [yasu.rb](https://github.com/Homebrew/homebrew-cask/blob/21d3f7ac8a4adac0fe474b3d4b020d284eeef88d/Casks/yasu.rb#L2-L23)
 
 ### Version Comparisons
 
