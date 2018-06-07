@@ -1,11 +1,11 @@
 cask 'jet' do
-  version '2.6.0'
-  sha256 '35428fea9ee9eae916cf84b6327bb21228bef04effebbf01ced6d70b5fe1d435'
+  version '2.6.1'
+  sha256 '1bc2cb084eeb643938778d93b98d53362dc0760e5bcf7220cbc6918dc4bcc9e0'
 
   # s3.amazonaws.com/codeship-jet-releases was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/codeship-jet-releases/#{version}/jet-darwin_amd64_#{version}.tar.gz"
   appcast 'https://documentation.codeship.com/pro/jet-cli/release-notes/',
-          checkpoint: 'ad4e8df437bea5785079ee027e2e3fd76020ac4627d909eb034678c77e3dd034'
+          checkpoint: '609a41fe543f2f21c957ad28156e52b4135c32f2335ffbf60769d4ded136cf3d'
   name 'Codeship Jet'
   homepage 'https://documentation.codeship.com/pro/builds-and-configuration/cli/'
 
