@@ -1,10 +1,10 @@
 cask 'screaming-frog-seo-spider' do
-  version '9.3'
-  sha256 'cbc9ea9ba1140b5955d6dd20a147ed7071e46c901a9be9df3aafd1fbaf8f0875'
+  version '9.4'
+  sha256 'e9304e032ca241b11dcb5f3e8337838fa6cea2140cdd3ea5ff0ede9d320ed989'
 
   url "https://download.screamingfrog.co.uk/products/seo-spider/ScreamingFrogSEOSpider-#{version}.dmg"
   appcast 'https://www.screamingfrog.co.uk/wp-content/themes/screamingfrog/inc/download-modal.php',
-          checkpoint: '7fee4b2b3c3138d4a0ea6b91614931e97804ffa00222471a95d9ef28a80293bc'
+          checkpoint: '5562f0660faf386cf8b0443e501cec1a4870c7c4287dc4b0c3faf5c629fd6011'
   name 'Screaming Frog SEO Spider'
   homepage 'https://www.screamingfrog.co.uk/seo-spider/'
 
