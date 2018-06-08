@@ -1,10 +1,10 @@
 cask 'dawnlabs-alchemy' do
-  version '0.4.1'
-  sha256 '0034f844f547cddf1a06a7227aa80710c2253a3a1f76f0a231b8cc8508a54540'
+  version 'v0.5.0'
+  sha256 '77d7e1664d29b381af892502f076d435fccbe47ba6e32536b3986a839c46dc44'
 
   url "https://github.com/dawnlabs/alchemy/releases/download/#{version}/Alchemy-mac.zip"
   appcast 'https://github.com/dawnlabs/alchemy/releases.atom',
-          checkpoint: '2d5f8938b10c9cef7666d3f06079252334e3cf4d186b7724642086a05a902825'
+          checkpoint: '04e6d3d999af11cf783a0f755d13c1edb5396a40dbfa03a667e06ed46a1fe3ee'
   name 'Alchemy'
   homepage 'https://github.com/dawnlabs/alchemy'
 
