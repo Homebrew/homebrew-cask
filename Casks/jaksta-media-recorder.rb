@@ -18,5 +18,6 @@ cask 'jaksta-media-recorder' do
     system_command '/bin/mv', args: ['--', staged_path.join(version.to_s), staged_path.join('JMR.pkg')]
   end
 
-  uninstall pkgutil: 'com.shedworx.Jaksta'
+  uninstall pkgutil:   'com.shedworx.Jaksta',
+            launchctl: 'com.ProxyConfigDaemon'
 end
