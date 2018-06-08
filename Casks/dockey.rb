@@ -4,7 +4,7 @@ cask 'dockey' do
 
   url 'http://dockey.publicspace.co/download/Dockey-latest.zip'
   name 'dockey'
-  homepage 'http://dockey.publicspace.co'
+  homepage 'http://dockey.publicspace.co/'
 
   app 'dockey.app'
 
