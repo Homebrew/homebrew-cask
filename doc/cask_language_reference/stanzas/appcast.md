@@ -2,12 +2,6 @@
 
 The value of the `appcast` stanza is a string, holding the URL for an appcast which provides information on future updates.
 
-## Required Appcast Parameters
-
-| key           | value       |
-| ------------- | ----------- |
-| `checkpoint:` | a string holding a custom checksum of the most recent appcast which matches the current Cask versioning. Use `brew cask _appcast_checkpoint --calculate "{{appcast_url}}"` to calculate it.
-
 Example: [`atom.rb`](https://github.com/Homebrew/homebrew-cask/blob/4d5a2dd2376f42c726148cfccaefe839f21e42ab/Casks/atom.rb#L7L8)
 
 There are a few different ways the `appcast` can be determined:
@@ -24,4 +18,4 @@ There are a few different ways the `appcast` can be determined:
 
 * An appcast can be any URL hosted by the app’s developer that changes every time a new release is out (e.g. a changelog HTML page). (Example: [`shortcat.rb`](https://github.com/Homebrew/homebrew-cask/blob/60531a2812005dd5f17dc92f3ce7419af3c5d019/Casks/shortcat.rb#L6L7))
 
-The [`find_appcast`](https://github.com/Homebrew/homebrew-cask/blob/master/developer/bin/find_appcast) script can automatically identify some of these. You can run it with `"$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/find_sparkle_appcast" '{{/path/to/software.app'}}` to find the `appcast` and `checkpoint` automatically.
+The [`find_appcast`](https://github.com/Homebrew/homebrew-cask/blob/master/developer/bin/find_appcast) script can automatically identify some of these. You can run it with `"$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/find_appcast" '{{/path/to/software.app'}}` to find the `appcast` automatically.
