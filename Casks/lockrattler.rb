@@ -7,5 +7,7 @@ cask 'lockrattler' do
   name 'Lock Rattler'
   homepage 'https://eclecticlight.co/downloads/'
 
+  depends_on macos: '>= :el_capitan'
+
   app "lockrattler#{version.before_comma.no_dots}/LockRattler.app"
 end
