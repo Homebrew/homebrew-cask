@@ -29,7 +29,7 @@ cask 'onyx' do
 
   url "https://www.titanium-software.fr/download/#{macos_release}/OnyX.dmg"
   appcast 'https://www.titanium-software.fr/en/release_onyx.html',
-          checkpoint: '1488b5bb845826383d71e20256f9715387bc82622964dbe9ada91e2fc0e7e54d'
+          checkpoint: 'c389b388414948331abf700ef74906351e1685d1128d504a8ae55cb38793a3e4'
   name 'OnyX'
   homepage 'https://www.titanium-software.fr/en/onyx.html'
 
