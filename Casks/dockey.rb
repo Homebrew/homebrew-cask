@@ -5,6 +5,7 @@ cask 'dockey' do
   url 'http://dockey.publicspace.co/download/Dockey-latest.zip'
   name 'dockey'
   homepage 'http://dockey.publicspace.co/'
+  depends_on :macos => '>= :high_sierra'
 
   app 'dockey.app'
 
