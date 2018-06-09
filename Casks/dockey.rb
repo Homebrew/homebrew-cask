@@ -9,5 +9,4 @@ cask 'dockey' do
   app 'dockey.app'
 
   uninstall quit: 'com.igorstumberger.dockey'
-
 end
