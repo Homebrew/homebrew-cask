@@ -6,6 +6,7 @@ cask 'p4v' do
   appcast "http://filehost.perforce.com/perforce/r#{version.sub(%r{\A20(\d\d\.\d+).*}, '\1')}/bin.macosx1013x86_64/SHA256SUMS",
           checkpoint: '5849985f910219ef9ba1d8cde5a3c8853e5c8706419483ab8d139f10641857de'
   name 'Perforce Visual Client'
+  name 'P4Merge'
   name 'P4V'
   homepage 'https://www.perforce.com/products/helix-core-apps/helix-visual-client-p4v'
 
