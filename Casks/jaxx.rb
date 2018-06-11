@@ -1,11 +1,11 @@
 cask 'jaxx' do
-  version '1.3.15'
-  sha256 'b054de8f5fe423c2c671494ac53acef4c25a310fddcb3088fdc34e15f4d95759'
+  version '1.3.17'
+  sha256 '2341f751f6485e1044d54bc2b27696856cd00c92e51058512ec9d85e5e23cef8'
 
   # github.com/Jaxx-io/Jaxx was verified as official when first introduced to the cask
   url "https://github.com/Jaxx-io/Jaxx/releases/download/v#{version}/Jaxx-#{version}.dmg"
   appcast 'https://github.com/Jaxx-io/Jaxx/releases.atom',
-          checkpoint: '8e47b7e7b92e53145c3d3864cad1e0351ce0b02e2e8d8d641ab84a277a30cf94'
+          checkpoint: 'c490b3a7eceb3614d7ad858aacb487236d56fce5d3b6c76565fd79f39010df43'
   name 'Jaxx Blockchain Wallet'
   homepage 'https://jaxx.io/'
 
