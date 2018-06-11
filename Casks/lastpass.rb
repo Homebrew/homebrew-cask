@@ -9,7 +9,7 @@ cask 'lastpass' do
   installer manual: 'LastPass Installer/LastPass Installer.app'
 
   uninstall script: {
-                      executable: 'Uninstaller.app/Contents/Resources/uninstall.sh',
+                      executable: 'LastPass Installer/Uninstaller.app/Contents/Resources/uninstall.sh',
                       sudo:       true,
                     }
 end
