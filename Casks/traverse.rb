@@ -1,11 +1,11 @@
 cask 'traverse' do
-  version '0.8.7'
-  sha256 'ecf47a04e0069220fe57731c2eea9317f1100a74e44747cf0d306fd18f874360'
+  version '0.9.1'
+  sha256 '2c5570ad3879d2784fa776edf8f2e2bf3a7bd0e2514478dbf8b67b488b2e8e4a'
 
   # traverseapp.nyc3.digitaloceanspaces.com was verified as official when first introduced to the cask
   url "https://traverseapp.nyc3.digitaloceanspaces.com/builds/Traverse-#{version}-mac.zip"
   appcast 'https://traverse.site/release-notes',
-          checkpoint: 'f03dd1f911b95c57d291d74cec55d3a46101eba805c629a29beb1b3d49fe501b'
+          checkpoint: '3c9b2a2516310e225f78b7962c43a4e792dc3ffbf3ddd4e5ee99c46d6664cf04'
   name 'Traverse'
   homepage 'https://traverse.site/'
 
