@@ -10,6 +10,7 @@ cask 'fork' do
   auto_updates true
 
   app 'Fork.app'
+  binary "#{appdir}/Fork.app/Contents/Resources/fork_cli", target: 'fork'
 
   zap trash: [
                '~/Library/Application Support/com.DanPristupov.Fork',
