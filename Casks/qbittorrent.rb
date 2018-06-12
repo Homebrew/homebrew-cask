@@ -4,8 +4,7 @@ cask 'qbittorrent' do
 
   # sourceforge.net/qbittorrent was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/qbittorrent/qbittorrent-mac/qbittorrent-#{version}/qbittorrent-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/qbittorrent/rss?path=/qbittorrent-mac',
-          checkpoint: 'b2642abac94959e03893946592682ec037cc2271c71b999f1f79e3dab1149898'
+  appcast 'https://sourceforge.net/projects/qbittorrent/rss?path=/qbittorrent-mac'
   name 'qBittorrent'
   homepage 'https://www.qbittorrent.org/'
 

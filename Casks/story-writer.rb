@@ -4,8 +4,7 @@ cask 'story-writer' do
 
   # github.com/suziwen/markdownxiaoshujiang was verified as official when first introduced to the cask
   url "https://github.com/suziwen/markdownxiaoshujiang/releases/download/v#{version}/Story-writer-osx64.zip"
-  appcast 'https://github.com/suziwen/markdownxiaoshujiang/releases.atom',
-          checkpoint: '812823c5071c30f0cf186eecf163d741b3849cce11e238ecf0c54f5bf61644b3'
+  appcast 'https://github.com/suziwen/markdownxiaoshujiang/releases.atom'
   name 'Story Writer'
   homepage 'http://soft.xiaoshujiang.com/'
 

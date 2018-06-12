@@ -4,8 +4,7 @@ cask 'wwdc' do
 
   # github.com/insidegui/WWDC was verified as official when first introduced to the cask
   url "https://github.com/insidegui/WWDC/releases/download/#{version}/WWDC_v#{version}.zip"
-  appcast 'https://github.com/insidegui/WWDC/releases.atom',
-          checkpoint: '97444f7edaedbe67c6877d27ecef552fd378cee29c3b47ffc8af1f37f22048c7'
+  appcast 'https://github.com/insidegui/WWDC/releases.atom'
   name 'WWDC'
   homepage 'https://wwdc.io/'
 

@@ -4,8 +4,7 @@ cask 'tusk' do
 
   # github.com/klauscfhq/tusk was verified as official when first introduced to the cask
   url "https://github.com/klauscfhq/tusk/releases/download/v#{version}/tusk-macos-#{version}.dmg"
-  appcast 'https://github.com/klauscfhq/tusk/releases.atom',
-          checkpoint: '59ae315fe80a7ef969c7f96628455b179ed3883c104a5d9a15d30330f4c259ea'
+  appcast 'https://github.com/klauscfhq/tusk/releases.atom'
   name 'Tusk'
   homepage 'https://klauscfhq.github.io/tusk/'
 

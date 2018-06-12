@@ -4,8 +4,7 @@ cask 'pyzo' do
 
   # github.com/pyzo/pyzo was verified as official when first introduced to the cask
   url "https://github.com/pyzo/pyzo/releases/download/v#{version}/pyzo-#{version}-osx64.dmg"
-  appcast 'https://github.com/pyzo/pyzo/releases.atom',
-          checkpoint: '975fff49a5a76855abb7a6dad04851dba6d86ebe5f0562a35951178da84e3ecb'
+  appcast 'https://github.com/pyzo/pyzo/releases.atom'
   name 'Pyzo'
   homepage 'http://www.pyzo.org/'
 

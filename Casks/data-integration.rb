@@ -4,8 +4,7 @@ cask 'data-integration' do
 
   # sourceforge.net/pentaho was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/pentaho/pdi-ce-#{version}.zip"
-  appcast 'https://sourceforge.net/projects/pentaho/rss?path=/Data%20Integration',
-          checkpoint: '41154713ae8665c1087df19b6beb4038a17c2e4fbfcf0215e9094cc9d98efa05'
+  appcast 'https://sourceforge.net/projects/pentaho/rss?path=/Data%20Integration'
   name 'Pentaho Data Integration'
   homepage 'http://community.pentaho.com/'
 

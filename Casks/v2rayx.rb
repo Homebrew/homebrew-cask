@@ -4,8 +4,7 @@ cask 'v2rayx' do
   sha256 '02bb2c5732654af8fbc75e7893900d6a2bcca032ce079da964ad2728d1198074'
 
   url "https://github.com/Cenmrev/V2RayX/releases/download/v#{version}/V2RayX.app.zip"
-  appcast 'https://github.com/Cenmrev/V2RayX/releases.atom',
-          checkpoint: '51c7723f69a910ef069988eb939b7bdbc6b033610d2e4144d27033109ddfe73c'
+  appcast 'https://github.com/Cenmrev/V2RayX/releases.atom'
   name 'V2RayX'
   homepage 'https://github.com/Cenmrev/V2RayX'
 

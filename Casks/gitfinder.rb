@@ -4,8 +4,7 @@ cask 'gitfinder' do
 
   # zigz.ag/GitFinder was verified as official when first introduced to the cask
   url 'https://zigz.ag/GitFinder/updates/GitFinder.dmg'
-  appcast 'https://zigz.ag/GitFinder/updates/stablecast.xml',
-          checkpoint: '369d5678fa01f3b4600f70e70fd787f86ed31176f55ef3b8d1c8053e5b6ca046'
+  appcast 'https://zigz.ag/GitFinder/updates/stablecast.xml'
   name 'GitFinder'
   homepage 'https://gitfinder.com/'
 

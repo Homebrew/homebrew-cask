@@ -4,8 +4,7 @@ cask 'metaz' do
 
   # github.com/griff/metaz was verified as official when first introduced to the cask
   url "https://github.com/griff/metaz/releases/download/v#{version}/MetaZ-#{version}.zip"
-  appcast 'https://github.com/griff/metaz/releases.atom',
-          checkpoint: '51560bb781c5d022800a848ad695a6ad5803db5b881f2cbe588afcf3a99f2e26'
+  appcast 'https://github.com/griff/metaz/releases.atom'
   name 'MetaZ'
   homepage 'https://griff.github.io/metaz/'
 

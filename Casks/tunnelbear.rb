@@ -4,8 +4,7 @@ cask 'tunnelbear' do
 
   # s3.amazonaws.com/tunnelbear was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/tunnelbear/downloads/mac/TunnelBear-#{version}.zip"
-  appcast 'https://s3.amazonaws.com/tunnelbear/downloads/mac/appcast.xml',
-          checkpoint: '3c0cfa95061de15f280df41004ab7a824e756978c89aa0f48ff4c4f551340a82'
+  appcast 'https://s3.amazonaws.com/tunnelbear/downloads/mac/appcast.xml'
   name 'TunnelBear'
   homepage 'https://www.tunnelbear.com/'
 

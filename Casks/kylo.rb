@@ -4,8 +4,7 @@ cask 'kylo' do
 
   # github.com/teamkylo/kylo-browser/releases/download was verified as official when first introduced to the cask
   url "https://github.com/teamkylo/kylo-browser/releases/download/v#{version}/kylo-setup-#{version.dots_to_underscores}.dmg"
-  appcast 'https://github.com/teamkylo/kylo-browser/releases.atom',
-          checkpoint: 'e5a8bad8a4356c16dc1d79126c49e8905b2ea44c390fdeba1089f9b11005a2f3'
+  appcast 'https://github.com/teamkylo/kylo-browser/releases.atom'
   name 'Kylo'
   homepage 'http://kylo.tv/'
 

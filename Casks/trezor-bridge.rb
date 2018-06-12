@@ -3,8 +3,7 @@ cask 'trezor-bridge' do
   sha256 '01cdc05500c1d465300c73235d6cc65ad3eacb733144f10cc64768ba4e7c0ccf'
 
   url "https://wallet.trezor.io/data/bridge/#{version}/trezor-bridge-#{version}.pkg"
-  appcast 'https://wallet.trezor.io/data/bridge/latest.txt',
-          checkpoint: '06727ff5fc1efe87efc71bed58294573cc94effaf6f31ef22fc3819da0518e6b'
+  appcast 'https://wallet.trezor.io/data/bridge/latest.txt'
   name 'TREZOR Bridge'
   homepage 'https://wallet.trezor.io/'
 

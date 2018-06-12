@@ -82,8 +82,7 @@ cask 'torbrowser' do
   end
 
   url "https://dist.torproject.org/torbrowser/#{version}/TorBrowser-#{version}-osx64_#{language}.dmg"
-  appcast 'https://dist.torproject.org/torbrowser/',
-          checkpoint: '1f6a6048c267091441e35f62bebabe98a4362af32f6a2f7d692aa514b82ea8d1'
+  appcast 'https://dist.torproject.org/torbrowser/'
   name 'Tor Browser'
   homepage 'https://www.torproject.org/projects/torbrowser.html'
   gpg "#{url}.asc", key_id: 'ef6e286dda85ea2a4ba7de684e2c6e8793298290'

@@ -4,8 +4,7 @@ cask 'journey' do
 
   # github.com/2-App-Studio/journey-releases was verified as official when first introduced to the cask
   url "https://github.com/2-App-Studio/journey-releases/releases/download/v#{version}/Journey-darwin-x64-#{version}.dmg"
-  appcast 'https://github.com/2-App-Studio/journey-releases/releases.atom',
-          checkpoint: 'ee5a64febe2d69828deca5b9b48e388877ecf58840051ed1e230160fac1c3c8b'
+  appcast 'https://github.com/2-App-Studio/journey-releases/releases.atom'
   name 'Journey'
   homepage 'https://2appstudio.com/journey/'
 

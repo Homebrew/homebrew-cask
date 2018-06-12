@@ -3,8 +3,7 @@ cask 'ubersicht' do
   sha256 'e74dfc4d49e035269e44563541eb0b50b5de7c102fe948a09d5b075140ddf29e'
 
   url "http://tracesof.net/uebersicht/releases/Uebersicht-#{version}.app.zip"
-  appcast 'http://tracesof.net/uebersicht/updates.xml.rss',
-          checkpoint: '92ca85b82c7b917dfb05c8d9264a3bda800de4874c9df84d34a92d9d5dd3c6c3'
+  appcast 'http://tracesof.net/uebersicht/updates.xml.rss'
   name 'Übersicht'
   homepage 'http://tracesof.net/uebersicht/'
 

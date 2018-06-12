@@ -4,8 +4,7 @@ cask 'cloudtv' do
 
   # dl.devmate.com/com.nonoche.CloudTV was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.nonoche.CloudTV/#{version.before_comma}/#{version.after_comma}/CloudTV-#{version.before_comma}.zip"
-  appcast 'https://updates.devmate.com/com.nonoche.CloudTV.xml',
-          checkpoint: '42cca602c9207f63a334fee9f94854f5c1e84619c9165d89495e503003c30ded'
+  appcast 'https://updates.devmate.com/com.nonoche.CloudTV.xml'
   name 'CloudTV'
   homepage 'https://cloudtvapp.net/'
 

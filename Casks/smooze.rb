@@ -3,8 +3,7 @@ cask 'smooze' do
   sha256 '7e4669f21f102c3e6575a6925d062c1ed76cd6b143ac66eaf47521a2a082e40c'
 
   url 'https://smooze.co/updates/Smooze.dmg'
-  appcast 'https://smooze.co/updates/update.xml',
-          checkpoint: 'e3b03973279535b4a4db5514143a71886d7d87087f7b0f409ae0e52ef8941e40'
+  appcast 'https://smooze.co/updates/update.xml'
   name 'Smooze'
   homepage 'https://smooze.co/'
 

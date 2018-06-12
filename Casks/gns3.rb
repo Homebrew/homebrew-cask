@@ -5,8 +5,7 @@ cask 'gns3' do
 
   # github.com/GNS3/gns3-gui was verified as official when first introduced to the cask
   url "https://github.com/GNS3/gns3-gui/releases/download/v#{version}/GNS3-#{version}.dmg"
-  appcast 'https://github.com/GNS3/gns3-gui/releases.atom',
-          checkpoint: 'ce4428ec7e0f931072e37a21eb78150a3963b897443f64cddb4925bd6c0a0cf5'
+  appcast 'https://github.com/GNS3/gns3-gui/releases.atom'
   name 'GNS3'
   homepage 'https://www.gns3.com/'
 

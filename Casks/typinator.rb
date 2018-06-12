@@ -4,8 +4,7 @@ cask 'typinator' do
 
   url "http://www.ergonis.com/downloads/products/typinator/Typinator#{version.no_dots}-Install.dmg",
       user_agent: :fake
-  appcast 'http://www.ergonis.com/products/typinator/history.html',
-          checkpoint: 'd0b882aa259304909c9b1488b513717a355faad296ac2e4f5514067b4a8a7696'
+  appcast 'http://www.ergonis.com/products/typinator/history.html'
   name 'Typinator'
   homepage 'http://www.ergonis.com/'
 

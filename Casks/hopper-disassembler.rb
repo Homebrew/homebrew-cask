@@ -4,8 +4,7 @@ cask 'hopper-disassembler' do
 
   # d2ap6ypl1xbe4k.cloudfront.net was verified as official when first introduced to the cask
   url "https://d2ap6ypl1xbe4k.cloudfront.net/Hopper-#{version}-demo.dmg"
-  appcast 'https://www.hopperapp.com/rss/html_changelog.php',
-          checkpoint: 'ffd515918805a36112062fbda7ee61f29c9c0dc63b03c5038e684d0c07c59fd1'
+  appcast 'https://www.hopperapp.com/rss/html_changelog.php'
   name 'Hopper Disassembler'
   homepage 'https://www.hopperapp.com/'
 

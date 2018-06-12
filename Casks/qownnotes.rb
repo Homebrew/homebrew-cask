@@ -4,8 +4,7 @@ cask 'qownnotes' do
 
   # github.com/pbek/QOwnNotes was verified as official when first introduced to the cask
   url "https://github.com/pbek/QOwnNotes/releases/download/macosx-#{version.after_comma}/QOwnNotes-#{version.before_comma}.dmg"
-  appcast 'https://github.com/pbek/QOwnNotes/releases.atom',
-          checkpoint: '74a44c488a8df011b4e10352db7a10d7ad0e8ab7cf1f22ed17e4133d7a2e4a78'
+  appcast 'https://github.com/pbek/QOwnNotes/releases.atom'
   name 'QOwnNotes'
   homepage 'https://www.qownnotes.org/'
 

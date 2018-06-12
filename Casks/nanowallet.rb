@@ -4,8 +4,7 @@ cask 'nanowallet' do
 
   # github.com/NemProject/NanoWallet was verified as official when first introduced to the cask
   url "https://github.com/NemProject/NanoWallet/releases/download/#{version}/NanoWallet-#{version}-osx64.zip"
-  appcast 'https://github.com/NemProject/NanoWallet/releases.atom',
-          checkpoint: '9c02975e470aac2a7e059ab94a19e4ed5e7027046f5ff7a850341a135a8f2ade'
+  appcast 'https://github.com/NemProject/NanoWallet/releases.atom'
   name 'NanoWallet'
   homepage 'https://nem.io/'
 

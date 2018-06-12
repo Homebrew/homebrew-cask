@@ -14,8 +14,7 @@ cask 'evernote' do
   end
 
   url "https://cdn1.evernote.com/mac-smd/public/Evernote_RELEASE_#{version}.dmg"
-  appcast 'https://update.evernote.com/public/ENMacSMD/EvernoteMacUpdate.xml',
-          checkpoint: '1eaaaae0a4ecfc0dddff37c96b05be5091539edb642f951589912896dc87657c'
+  appcast 'https://update.evernote.com/public/ENMacSMD/EvernoteMacUpdate.xml'
   name 'Evernote'
   homepage 'https://evernote.com/'
 

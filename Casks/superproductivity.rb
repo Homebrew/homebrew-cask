@@ -4,8 +4,7 @@ cask 'superproductivity' do
 
   # github.com/johannesjo/super-productivity was verified as official when first introduced to the cask
   url "https://github.com/johannesjo/super-productivity/releases/download/v#{version}/superProductivity-#{version}-mac.zip"
-  appcast 'https://github.com/johannesjo/super-productivity/releases.atom',
-          checkpoint: '43aca981bfe92069b043a26a05ea1c8f7d64eb0bf070fbde1fdbf87db7a30716'
+  appcast 'https://github.com/johannesjo/super-productivity/releases.atom'
   name 'Super Productivity'
   homepage 'https://super-productivity.com/'
 

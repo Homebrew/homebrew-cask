@@ -4,8 +4,7 @@ cask 'yu-writer' do
 
   # github.com/ivarptr/yu-writer.site was verified as official when first introduced to the cask
   url "https://github.com/ivarptr/yu-writer.site/releases/download/#{version.hyphens_to_dots}/yu-writer-#{version}-macos.dmg"
-  appcast 'https://github.com/ivarptr/yu-writer.site/releases.atom',
-          checkpoint: 'e53e9b92ade621a00f3d772948831e7a77fb0d20467ed7df588ab37df98db971'
+  appcast 'https://github.com/ivarptr/yu-writer.site/releases.atom'
   name 'Yu Writer'
   homepage 'https://ivarptr.github.io/yu-writer.site/'
 

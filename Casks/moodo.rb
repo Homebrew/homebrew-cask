@@ -4,8 +4,7 @@ cask 'moodo' do
 
   # github.com/MooDoApp/MooDoApp.github.io was verified as official when first introduced to the cask
   url "https://github.com/MooDoApp/MooDoApp.github.io/releases/download/v#{version}/Moo.do-#{version}-mac.zip"
-  appcast 'https://github.com/MooDoApp/MooDoApp.github.io/releases.atom',
-          checkpoint: '1f31f359b66469571a6d2b39e43c06c03ac4460ea5d1ca3e46c7a5aaf327dcd6'
+  appcast 'https://github.com/MooDoApp/MooDoApp.github.io/releases.atom'
   name 'Moo.do'
   homepage 'https://www.moo.do/'
 

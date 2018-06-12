@@ -19,8 +19,7 @@ cask 'unison' do
     url "https://github.com/bcpierce00/unison/releases/download/v#{version}/Unison-#{version}.OS.X.zip"
   end
 
-  appcast 'https://github.com/bcpierce00/unison/releases.atom',
-          checkpoint: 'd3bc408807276d276906f10771f8332609da1f99de651937f256666db8268737'
+  appcast 'https://github.com/bcpierce00/unison/releases.atom'
   name 'Unison'
   homepage 'https://www.cis.upenn.edu/~bcpierce/unison/'
 

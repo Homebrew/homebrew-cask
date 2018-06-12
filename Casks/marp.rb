@@ -4,8 +4,7 @@ cask 'marp' do
 
   # github.com/yhatt/marp was verified as official when first introduced to the cask
   url "https://github.com/yhatt/marp/releases/download/v#{version}/#{version}-Marp-darwin-x64.dmg"
-  appcast 'https://github.com/yhatt/marp/releases.atom',
-          checkpoint: '784caa17c9ed9c7aed6fdb22d7e266ebf6f6e6c21e8906c3f0d8918c9cc30fbf'
+  appcast 'https://github.com/yhatt/marp/releases.atom'
   name 'Marp'
   homepage 'https://yhatt.github.io/marp/'
 

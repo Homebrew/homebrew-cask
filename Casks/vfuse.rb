@@ -3,8 +3,7 @@ cask 'vfuse' do
   sha256 'fff3b4f960b7ec0f131a12ba53a1b556e20741aea53eb3b85d04539f836a0648'
 
   url "https://github.com/chilcote/vfuse/releases/download/#{version}/vfuse-#{version}.pkg"
-  appcast 'https://github.com/chilcote/vfuse/releases.atom',
-          checkpoint: '108f22f1587093b89db239aa4e0b878136b04600ad6f950927ac2cc3a2465524'
+  appcast 'https://github.com/chilcote/vfuse/releases.atom'
   name 'vfuse'
   homepage 'https://github.com/chilcote/vfuse'
 

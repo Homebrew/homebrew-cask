@@ -4,8 +4,7 @@ cask 'sparkle' do
 
   # github.com/sparkle-project/Sparkle was verified as official when first introduced to the cask
   url "https://github.com/sparkle-project/Sparkle/releases/download/#{version}/Sparkle-#{version}.tar.bz2"
-  appcast 'https://github.com/sparkle-project/Sparkle/releases.atom',
-          checkpoint: 'e30d9ea91f318ff1e1522bb26beaee4a4ed4fc18a1df311a311452642df8dea4'
+  appcast 'https://github.com/sparkle-project/Sparkle/releases.atom'
   name 'Sparkle'
   homepage 'https://sparkle-project.org/'
 

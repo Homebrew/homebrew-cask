@@ -4,8 +4,7 @@ cask 'papers' do
 
   # appcaster.papersapp.com/apps/mac/production/download was verified as official when first introduced to the cask
   url "http://appcaster.papersapp.com/apps/mac/production/download/#{version.after_comma}/papers_#{version.before_comma.no_dots}_#{version.after_comma}.dmg"
-  appcast 'https://appcaster.papersapp.com/apps/mac/production/appcast.xml',
-          checkpoint: '97c2077a60542c82a63f062d26ffdebd13c203ca88b670fdbe8b17fcb90dbca7'
+  appcast 'https://appcaster.papersapp.com/apps/mac/production/appcast.xml'
   name 'Papers'
   homepage 'https://www.readcube.com/papers/'
 

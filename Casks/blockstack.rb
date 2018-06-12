@@ -4,8 +4,7 @@ cask 'blockstack' do
 
   # github.com/blockstack/blockstack-browser was verified as official when first introduced to the cask
   url "https://github.com/blockstack/blockstack-browser/releases/download/v#{version}/Blockstack-for-macOS-v#{version}.dmg"
-  appcast 'https://github.com/blockstack/blockstack-browser/releases.atom',
-          checkpoint: 'c69e66f8764011a140a3d014f1e27019d5fea0e106fa0a22f4c5c6f690c06f80'
+  appcast 'https://github.com/blockstack/blockstack-browser/releases.atom'
   name 'Blockstack'
   homepage 'https://blockstack.org/'
 

@@ -4,8 +4,7 @@ cask 'googleappengine' do
 
   # storage.googleapis.com/appengine-sdks was verified as official when first introduced to the cask
   url "https://storage.googleapis.com/appengine-sdks/featured/GoogleAppEngineLauncher-#{version}.dmg"
-  appcast 'https://storage.googleapis.com/appengine-sdks',
-          checkpoint: '454a640b5b63498c88c73bd77471d66ea12e6832522fbc0b3ee583119abfb823'
+  appcast 'https://storage.googleapis.com/appengine-sdks'
   name 'Google App Engine'
   homepage 'https://cloud.google.com/appengine/'
 

@@ -4,8 +4,7 @@ cask 'metasequoia' do
 
   # metaseq2.sakura.ne.jp was verified as official when first introduced to the cask
   url "http://metaseq2.sakura.ne.jp/metaseq/Metasequoia-#{version}-Installer.dmg"
-  appcast 'http://www.metaseq.net/en/release_note.html',
-          checkpoint: '3240d82f4f54fc6f2466ee46c0dc7002603802b70cdc6e156d172eff293c6863'
+  appcast 'http://www.metaseq.net/en/release_note.html'
   name 'Metasequoia'
   homepage 'http://www.metaseq.net/'
 

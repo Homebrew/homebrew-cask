@@ -4,8 +4,7 @@ cask 'keepassxc' do
 
   # github.com/keepassxreboot/keepassxc was verified as official when first introduced to the cask
   url "https://github.com/keepassxreboot/keepassxc/releases/download/#{version}/KeePassXC-#{version}.dmg"
-  appcast 'https://github.com/keepassxreboot/keepassxc/releases.atom',
-          checkpoint: 'd8fd1f18b891d646d5021bd25a0fc9f2a8ccc4e57d2631ce4b286950ed73b765'
+  appcast 'https://github.com/keepassxreboot/keepassxc/releases.atom'
   name 'KeePassXC'
   homepage 'https://keepassxc.org/'
   gpg "#{url}.sig", key_url: 'https://keepassxc.org/keepassxc_master_signing_key.asc'

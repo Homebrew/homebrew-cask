@@ -4,8 +4,7 @@ cask 'sciencefair' do
 
   # github.com/codeforscience/sciencefair was verified as official when first introduced to the cask
   url "https://github.com/codeforscience/sciencefair/releases/download/v#{version}/scienceFair-#{version}.dmg"
-  appcast 'https://github.com/codeforscience/sciencefair/releases.atom',
-          checkpoint: '03cd606296568d873429c91f1ac2ed99946e3794bfa4e6ce12b25ab1f7b64a9b'
+  appcast 'https://github.com/codeforscience/sciencefair/releases.atom'
   name 'ScienceFair'
   homepage 'http://sciencefair-app.com/'
 

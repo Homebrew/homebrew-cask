@@ -4,8 +4,7 @@ cask 'mailbutler' do
 
   # mailbutler-data.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://mailbutler-data.s3.amazonaws.com/downloads/Mailbutler_#{version}.zip"
-  appcast "https://www.mailbutler.io/appcast#{version.major}.php",
-          checkpoint: '3b1161aea019107a2991d8c4912769daf473700d3405a55c0495f2d4fd011a4a'
+  appcast "https://www.mailbutler.io/appcast#{version.major}.php"
   name 'MailButler'
   homepage 'https://www.mailbutler.io/'
 

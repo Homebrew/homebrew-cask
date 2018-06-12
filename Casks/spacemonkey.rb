@@ -4,8 +4,7 @@ cask 'spacemonkey' do
 
   # hockeyapp.net/api/2/apps/aa33b6780fdfc71247b2995fa47b5d7c was verified as official when first introduced to the cask
   url "https://rink.hockeyapp.net/api/2/apps/aa33b6780fdfc71247b2995fa47b5d7c/app_versions/#{version.after_comma}?format=zip"
-  appcast 'https://rink.hockeyapp.net/api/2/apps/aa33b6780fdfc71247b2995fa47b5d7c',
-          checkpoint: '0ef471057224f3fd5dfc3e2ba54b90e0ce3c0ef7bd870705bb85abd724fe1c5d'
+  appcast 'https://rink.hockeyapp.net/api/2/apps/aa33b6780fdfc71247b2995fa47b5d7c'
   name 'Space Monkey'
   homepage 'https://www.spacemonkey.com/'
 

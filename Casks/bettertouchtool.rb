@@ -23,8 +23,7 @@ cask 'bettertouchtool' do
 
     # bettertouchtool.net/releases was verified as official when first introduced to the cask
     url "https://bettertouchtool.net/releases/btt#{version}.zip"
-    appcast 'https://updates.bettertouchtool.net/bettertouchtool_release_notes.html',
-            checkpoint: '633e84b7a658ece4eb436c8c77d8003db2e60fcd6fbe1055f445e71d13179b06'
+    appcast 'https://updates.bettertouchtool.net/bettertouchtool_release_notes.html'
   end
 
   name 'BetterTouchTool'

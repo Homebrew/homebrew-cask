@@ -11,8 +11,7 @@ cask 'quicksilver' do
   end
 
   url "https://qsapp.com/archives/downloads/Quicksilver%20#{version}.dmg"
-  appcast 'https://qsapp.com/archives/',
-          checkpoint: 'eef69e586c9a1ddc88f6c5440205dcd5e8aa1bb34beaa22918f703360e3125a6'
+  appcast 'https://qsapp.com/archives/'
   name 'Quicksilver'
   homepage 'https://qsapp.com/'
 

@@ -4,8 +4,7 @@ cask 'synalyze-it-pro' do
 
   # synalyze-it.com/Downloads was verified as official when first introduced to the cask
   url "https://www.synalyze-it.com/Downloads/SynalyzeItProTA_#{version}.zip"
-  appcast 'https://www.synalyze-it.com/SynalyzeItPro/appcast.xml',
-          checkpoint: '53d05b609afad7ba2c429242f7fd48f86844ff63905c5dc2995c8d5047524767'
+  appcast 'https://www.synalyze-it.com/SynalyzeItPro/appcast.xml'
   name 'Synalyze It! Pro'
   homepage 'https://www.synalysis.net/'
 

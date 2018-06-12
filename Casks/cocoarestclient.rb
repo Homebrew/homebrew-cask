@@ -4,8 +4,7 @@ cask 'cocoarestclient' do
 
   # github.com/mmattozzi/cocoa-rest-client was verified as official when first introduced to the cask
   url "https://github.com/mmattozzi/cocoa-rest-client/releases/download/#{version}/CocoaRestClient-#{version}.dmg"
-  appcast 'https://github.com/mmattozzi/cocoa-rest-client/releases.atom',
-          checkpoint: 'b7f2b3c50e647e5d3c126fb4dc1e4092a70bdf95fc413b1b98190bfb8b6a2f5c'
+  appcast 'https://github.com/mmattozzi/cocoa-rest-client/releases.atom'
   name 'CocoaRestClient'
   homepage 'https://mmattozzi.github.io/cocoa-rest-client/'
 

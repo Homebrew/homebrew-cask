@@ -4,8 +4,7 @@ cask 'syphon-virtual-screen' do
 
   # github.com/andreacremaschi/Syphon-virtual-screen was verified as official when first introduced to the cask
   url "https://github.com/andreacremaschi/Syphon-virtual-screen/releases/download/#{version}/Syphon.Virtual.Screen.mpkg.zip"
-  appcast 'https://github.com/andreacremaschi/Syphon-virtual-screen/releases.atom',
-          checkpoint: 'c098af4d1da0a0e62abf1474a37c7f91fd085b4eef16e24925cb48a82915d166'
+  appcast 'https://github.com/andreacremaschi/Syphon-virtual-screen/releases.atom'
   name 'Syphon Virtual Screen'
   homepage 'https://andreacremaschi.github.io/Syphon-virtual-screen/'
 

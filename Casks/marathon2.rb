@@ -5,8 +5,7 @@ cask 'marathon2' do
 
   # github.com/Aleph-One-Marathon/alephone was verified as official when first introduced to the cask
   url "https://github.com/Aleph-One-Marathon/alephone/releases/download/release-#{version}/Marathon2-#{version}-Mac.dmg"
-  appcast 'https://github.com/Aleph-One-Marathon/alephone/releases.atom',
-          checkpoint: '7960a0eee7bd6c594b7a6cf6ce093a71d31715522774224c9def5903390479d6'
+  appcast 'https://github.com/Aleph-One-Marathon/alephone/releases.atom'
   name 'Marathon 2'
   homepage 'https://alephone.lhowon.org/'
 

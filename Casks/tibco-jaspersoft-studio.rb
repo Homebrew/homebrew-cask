@@ -4,8 +4,7 @@ cask 'tibco-jaspersoft-studio' do
 
   # sourceforge.net/jasperstudio was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/jasperstudio/JaspersoftStudio-#{version}/TIB_js-studiocomm_#{version}_macosx_x86_64.dmg"
-  appcast 'https://sourceforge.net/projects/jasperstudio/rss',
-          checkpoint: '7e3c8dfe1a7b127c403e001a4e73c5783e1e2fe49fe85ed78cadfb1fc88a667c'
+  appcast 'https://sourceforge.net/projects/jasperstudio/rss'
   name 'TIBCO Jaspersoft Studio'
   homepage 'https://community.jaspersoft.com/project/jaspersoft-studio'
 

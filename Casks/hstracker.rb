@@ -4,8 +4,7 @@ cask 'hstracker' do
 
   # github.com/HearthSim/HSTracker was verified as official when first introduced to the cask
   url "https://github.com/HearthSim/HSTracker/releases/download/#{version}/HSTracker.app.zip"
-  appcast 'https://github.com/HearthSim/HSTracker/releases.atom',
-          checkpoint: 'b6a569bad10b3ba3cb02a24b83ba7757b72d6601ebd7b029ea2009564d073900'
+  appcast 'https://github.com/HearthSim/HSTracker/releases.atom'
   name 'Hearthstone Deck Tracker'
   homepage 'https://hsdecktracker.net/'
 

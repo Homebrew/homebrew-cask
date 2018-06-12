@@ -4,8 +4,7 @@ cask 'imageplay' do
 
   # github.com/cpvrlab/ImagePlay was verified as official when first introduced to the cask
   url "https://github.com/cpvrlab/ImagePlay/releases/download/#{version}/ImagePlay-#{version}.dmg"
-  appcast 'https://github.com/cpvrlab/ImagePlay/releases.atom',
-          checkpoint: 'e30fd8bb653449d1439fb4868a6717743ee43797d5e98d68bed5b8f0ffd2b7b1'
+  appcast 'https://github.com/cpvrlab/ImagePlay/releases.atom'
   name 'ImagePlay'
   homepage 'https://imageplay.io/'
 

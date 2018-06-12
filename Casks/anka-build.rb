@@ -5,8 +5,7 @@ cask 'anka-build' do
   # d1efqjhnhbvc57.cloudfront.net was verified as official when first introduced to the cask
   url "https://d1efqjhnhbvc57.cloudfront.net/AnkaBuild-#{version}.pkg",
       referer: 'https://veertu.com/download-anka-build/'
-  appcast 'https://ankadoc.bitbucket.io/release-notes/index.html',
-          checkpoint: 'e138f8dce8d0d13c635499a4ee797a6b543327b87a2715763c85097bc83848db'
+  appcast 'https://ankadoc.bitbucket.io/release-notes/index.html'
   name 'Veertu Anka Build'
   homepage 'https://veertu.com/'
 

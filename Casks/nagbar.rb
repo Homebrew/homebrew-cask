@@ -4,8 +4,7 @@ cask 'nagbar' do
 
   # github.com/volendavidov/NagBar was verified as official when first introduced to the cask
   url "https://github.com/volendavidov/NagBar/releases/download/#{version}/NagBar.zip"
-  appcast 'https://github.com/volendavidov/NagBar/releases.atom',
-          checkpoint: 'e38ad9f99cf1aab3710a6150254f3abcd922a608860dbccfba81a79bca7a5a3e'
+  appcast 'https://github.com/volendavidov/NagBar/releases.atom'
   name 'NagBar'
   homepage 'https://sites.google.com/site/nagbarapp/home'
 

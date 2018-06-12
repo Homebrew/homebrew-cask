@@ -4,8 +4,7 @@ cask 'bonitastudiocommunity' do
 
   # download.forge.ow2.org was verified as official when first introduced to the cask
   url "https://download.forge.ow2.org/bonita/BonitaStudioCommunity-#{version}-x86_64.dmg"
-  appcast 'https://documentation.bonitasoft.com/release-notes',
-          checkpoint: 'e8aae39c58eaa350abe1e7b9415c49208ed65bdc560b3d0a6001732a7f725adc'
+  appcast 'https://documentation.bonitasoft.com/release-notes'
   name 'Bonita Studio Community Edition'
   homepage 'https://www.bonitasoft.com/downloads'
 

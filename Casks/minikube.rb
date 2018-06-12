@@ -4,8 +4,7 @@ cask 'minikube' do
 
   # storage.googleapis.com/minikube was verified as official when first introduced to the cask
   url "https://storage.googleapis.com/minikube/releases/v#{version}/minikube-darwin-amd64"
-  appcast 'https://github.com/kubernetes/minikube/releases.atom',
-          checkpoint: '028278d641434c5f594414d5cbf1d9a16bcdbdb36bff70b2cc90773e30e3ad66'
+  appcast 'https://github.com/kubernetes/minikube/releases.atom'
   name 'Minikube'
   homepage 'https://github.com/kubernetes/minikube'
 

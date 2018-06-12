@@ -4,8 +4,7 @@ cask 'ransomwhere' do
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/RansomWhere_#{version}.zip"
-  appcast 'https://objective-see.com/products/changelogs/RansomWhere.txt',
-          checkpoint: 'f32e55747315e270a77f6a1554f7501b01386ab046d49de52a8007ea68980b72'
+  appcast 'https://objective-see.com/products/changelogs/RansomWhere.txt'
   name 'RansomWhere'
   homepage 'https://objective-see.com/products/ransomwhere.html'
 

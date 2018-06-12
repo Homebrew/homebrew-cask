@@ -4,8 +4,7 @@ cask 'storyboarder' do
 
   # github.com/wonderunit/storyboarder was verified as official when first introduced to the cask
   url "https://github.com/wonderunit/storyboarder/releases/download/v#{version}/storyboarder-#{version}-mac.zip"
-  appcast 'https://github.com/wonderunit/storyboarder/releases.atom',
-          checkpoint: 'f70635447c7fbb8603cdd234da7854d99df097743587a80f0c8d5642baf87d41'
+  appcast 'https://github.com/wonderunit/storyboarder/releases.atom'
   name 'Wonder Unit Storyboarder'
   homepage 'https://wonderunit.com/storyboarder/'
 

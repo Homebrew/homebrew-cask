@@ -4,8 +4,7 @@ cask 'munki' do
 
   # github.com/munki/munki was verified as official when first introduced to the cask
   url "https://github.com/munki/munki/releases/download/v#{version.major_minor_patch}/munkitools-#{version}.pkg"
-  appcast 'https://github.com/munki/munki/releases.atom',
-          checkpoint: 'fcdf4a4a7172c5a0108006afa462524d2510bf985506b1eba081dfefba621ee1'
+  appcast 'https://github.com/munki/munki/releases.atom'
   name 'Munki'
   homepage 'https://www.munki.org/munki/'
 

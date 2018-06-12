@@ -4,8 +4,7 @@ cask 'gpxsee' do
 
   # sourceforge.net/gpxsee/Mac%20OS%20X was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/gpxsee/Mac%20OS%20X/GPXSee-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/gpxsee/rss?path=/Mac%20OS%20X',
-          checkpoint: '5fce1d62582c69b3df03c3bd8f711869e93a9e1b218b4f1c950d2d69ab664387'
+  appcast 'https://sourceforge.net/projects/gpxsee/rss?path=/Mac%20OS%20X'
   name 'GPXSee'
   homepage 'http://www.gpxsee.org/'
 

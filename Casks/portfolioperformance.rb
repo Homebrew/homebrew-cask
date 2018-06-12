@@ -4,8 +4,7 @@ cask 'portfolioperformance' do
 
   # bintray.com/buchen/downloads was verified as official when first introduced to the cask
   url "https://bintray.com/buchen/downloads/download_file?file_path=#{version}%2FPortfolioPerformance-#{version}-macosx.cocoa.x86_64.tar.gz"
-  appcast 'https://github.com/buchen/portfolio/releases.atom',
-          checkpoint: '9d654b422d7407562378780a06649e7a083af02a77096190dbfc0bfc43b4924e'
+  appcast 'https://github.com/buchen/portfolio/releases.atom'
   name 'Portfolio Performance'
   homepage 'http://www.portfolio-performance.info/portfolio/'
 

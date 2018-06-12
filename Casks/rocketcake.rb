@@ -4,8 +4,7 @@ cask 'rocketcake' do
 
   # ambiera.at was verified as official when first introduced to the cask
   url "http://www.ambiera.at/downloads/RocketCake-#{version.major_minor}.dmg"
-  appcast 'https://www.ambiera.com/rocketcake/download.html',
-          checkpoint: '5fdb9d8eb636f0ae3451f32364789698b7151838391444e2bce5888261f32e77'
+  appcast 'https://www.ambiera.com/rocketcake/download.html'
   name 'RocketCake'
   homepage 'http://www.ambiera.com/rocketcake/index.html'
 

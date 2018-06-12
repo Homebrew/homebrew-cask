@@ -4,8 +4,7 @@ cask 'gurps-character-sheet' do
 
   # github.com/richardwilkes/gcs/releases/download was verified as official when first introduced to the cask
   url "https://github.com/richardwilkes/gcs/releases/download/gcs-#{version}/gcs-#{version}-mac.zip"
-  appcast 'https://github.com/richardwilkes/gcs/releases.atom',
-          checkpoint: '0ecd208e6c435d965fb3fecd035d23b141b6cd323e2fef786e7925dafdda5e47'
+  appcast 'https://github.com/richardwilkes/gcs/releases.atom'
   name 'GURPS Character Sheet'
   homepage 'http://gurpscharactersheet.com/'
 

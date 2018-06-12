@@ -4,8 +4,7 @@ cask 'wineskin-winery' do
 
   # sourceforge.net/wineskin was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/wineskin/Wineskin%20Winery.app%20Version%20#{version}.zip"
-  appcast 'https://sourceforge.net/projects/wineskin/rss',
-          checkpoint: '772cac8256c559ef5c0d5471b1fd6ded3ca08ef07aadabcd79a5c4a0d9cc7a82'
+  appcast 'https://sourceforge.net/projects/wineskin/rss'
   name 'Wineskin Winery'
   homepage 'http://wineskin.urgesoftware.com/tiki-index.php'
 

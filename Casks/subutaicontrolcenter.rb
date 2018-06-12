@@ -4,8 +4,7 @@ cask 'subutaicontrolcenter' do
 
   # cdn.subutai.io:8338/kurjun/rest/raw was verified as official when first introduced to the cask
   url 'https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center.pkg'
-  appcast 'https://github.com/subutai-io/control-center/releases.atom',
-          checkpoint: '986178fb005d81b2858f70ddbfc3aff2346aa6f570deb08661004c3bf5fa4c2d'
+  appcast 'https://github.com/subutai-io/control-center/releases.atom'
   name 'Subutai Control Center'
   homepage 'https://subutai.io/'
 

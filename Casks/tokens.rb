@@ -4,8 +4,7 @@ cask 'tokens' do
 
   # peerassembly.net/apps/tokens was verified as official when first introduced to the cask
   url "https://peerassembly.net/apps/tokens/#{version}/Tokens.zip"
-  appcast 'https://peerassembly.net/apps/tokens/stable.xml',
-          checkpoint: '96cf1a8dec3e8a96c7eff2a6d79e89f014afee33d57a18ae30ae1466d13774cb'
+  appcast 'https://peerassembly.net/apps/tokens/stable.xml'
   name 'Tokens'
   homepage 'http://usetokens.com/'
 

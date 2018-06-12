@@ -4,8 +4,7 @@ cask 'envkey' do
 
   # github.com/envkey/envkey-app was verified as official when first introduced to the cask
   url "https://github.com/envkey/envkey-app/releases/download/darwin-x64-prod-v#{version}/EnvKey-#{version}-mac.zip"
-  appcast 'https://github.com/envkey/envkey-app/releases.atom',
-          checkpoint: '0390a998b90d0236f66d3e0e0c517227bffa20ca1615155e4ca04853744836db'
+  appcast 'https://github.com/envkey/envkey-app/releases.atom'
   name 'EnvKey'
   homepage 'https://www.envkey.com/'
 

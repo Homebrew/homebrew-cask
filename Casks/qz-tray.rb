@@ -4,8 +4,7 @@ cask 'qz-tray' do
 
   # github.com/qzind/tray was verified as official when first introduced to the cask
   url "https://github.com/qzind/tray/releases/download/v#{version.major_minor_patch}/qz-tray-#{version}.pkg"
-  appcast 'https://github.com/qzind/tray/releases.atom',
-          checkpoint: '07ddf9328642c9bb9ca21922b83935e9313bd8086e46373f9b7a7ea334f775c8'
+  appcast 'https://github.com/qzind/tray/releases.atom'
   name 'QZ Tray'
   homepage 'https://qz.io/'
 
