@@ -17,8 +17,7 @@ cask 'itsycal' do
 
     # s3.amazonaws.com/itsycal was verified as official when first introduced to the cask
     url "https://s3.amazonaws.com/itsycal/Itsycal-#{version}.zip"
-    appcast 'https://s3.amazonaws.com/itsycal/itsycal.xml',
-            checkpoint: '8cb9022a6cfc9c4afac0f3720e8e94a920e039b90c025b446780f0bd904f5c40'
+    appcast 'https://s3.amazonaws.com/itsycal/itsycal.xml'
   end
 
   name 'Itsycal'

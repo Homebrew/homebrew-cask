@@ -4,8 +4,7 @@ cask 'ganttproject' do
 
   # github.com/bardsoftware/ganttproject/releases/download was verified as official when first introduced to the cask
   url "https://github.com/bardsoftware/ganttproject/releases/download/ganttproject-#{version.before_comma}/ganttproject-#{version.before_comma}-#{version.after_comma}.dmg"
-  appcast 'https://github.com/bardsoftware/ganttproject/releases.atom',
-          checkpoint: 'd2915538665b4b10aa5aaa49de208b05e46dea8b81fff5f7dc436945537b9b62'
+  appcast 'https://github.com/bardsoftware/ganttproject/releases.atom'
   name 'GanttProject'
   homepage 'https://www.ganttproject.biz/'
 

@@ -4,8 +4,7 @@ cask 'lbry' do
 
   # github.com/lbryio/lbry-app was verified as official when first introduced to the cask
   url "https://github.com/lbryio/lbry-app/releases/download/v#{version}/LBRY_#{version}.dmg"
-  appcast 'https://github.com/lbryio/lbry-app/releases.atom',
-          checkpoint: '71cdfb6985b94b2558790e7a8dd16a9384b8d069b38a70e91d17413b00f07c27'
+  appcast 'https://github.com/lbryio/lbry-app/releases.atom'
   name 'LBRY'
   homepage 'https://lbry.io/'
 

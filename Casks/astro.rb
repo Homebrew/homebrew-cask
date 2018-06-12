@@ -4,8 +4,7 @@ cask 'astro' do
 
   # pexlabs-updates-xvuif5mcicazzducz2j2xy3lki.s3-us-west-2.amazonaws.com was verified as official when first introduced to the cask
   url "https://pexlabs-updates-xvuif5mcicazzducz2j2xy3lki.s3-us-west-2.amazonaws.com/Astro-#{version.after_comma}.dmg"
-  appcast 'https://pexlabs-updates-xvuif5mcicazzducz2j2xy3lki.s3-us-west-2.amazonaws.com/pexappcast.xml',
-          checkpoint: 'da45cb31f01fcbcc5abed7af9e35b1a593fff26ab57179b1288a85a0af8ce4a7'
+  appcast 'https://pexlabs-updates-xvuif5mcicazzducz2j2xy3lki.s3-us-west-2.amazonaws.com/pexappcast.xml'
   name 'Astro'
   homepage 'https://www.helloastro.com/'
 

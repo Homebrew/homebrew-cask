@@ -4,8 +4,7 @@ cask 'vnote' do
 
   # github.com/tamlok/vnote was verified as official when first introduced to the cask
   url "https://github.com/tamlok/vnote/releases/download/v#{version}/VNote-#{version}-x64.dmg"
-  appcast 'https://github.com/tamlok/vnote/releases.atom',
-          checkpoint: '72c578ac4156edc9ebdd18abe939a9b7372f04c9641bf9785bdd3a11841fd4a4'
+  appcast 'https://github.com/tamlok/vnote/releases.atom'
   name 'VNote'
   homepage 'https://tamlok.github.io/vnote/'
 

@@ -4,8 +4,7 @@ cask 'wifispoof' do
 
   # sweetpproductions.com/products was verified as official when first introduced to the cask
   url "https://sweetpproductions.com/products/wifispoof#{version.major}/WiFiSpoof#{version.major}.dmg"
-  appcast "https://sweetpproductions.com/products/wifispoof#{version.major}/appcast.xml",
-          checkpoint: '345ce939e4759b27ddef38c60ff41bc5d97513d2ae6c79d709a97ce0963aa9ba'
+  appcast "https://sweetpproductions.com/products/wifispoof#{version.major}/appcast.xml"
   name 'WiFiSpoof'
   homepage 'https://wifispoof.com/'
 

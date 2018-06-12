@@ -4,8 +4,7 @@ cask 'blocs' do
 
   # uistore.io was verified as official when first introduced to the cask
   url "http://downloads.uistore.io/blocs/version-#{version.major}/Blocs.zip"
-  appcast "https://uistore.io/blocs/#{version.major}.0/info.xml",
-          checkpoint: 'ef341b2eb12b43da9231b216c377af66a2c5e0b9c1749979dc8af40099617b5a'
+  appcast "https://uistore.io/blocs/#{version.major}.0/info.xml"
   name 'Blocs'
   homepage 'https://blocsapp.com/'
 

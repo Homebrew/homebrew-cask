@@ -4,8 +4,7 @@ cask 'webtorrent' do
 
   # github.com/webtorrent/webtorrent-desktop was verified as official when first introduced to the cask
   url "https://github.com/webtorrent/webtorrent-desktop/releases/download/v#{version}/WebTorrent-v#{version}.dmg"
-  appcast 'https://github.com/webtorrent/webtorrent-desktop/releases.atom',
-          checkpoint: 'c674150a9fd57253c652159f177b45b20a8b122cf65a604fb740485245b6eb1e'
+  appcast 'https://github.com/webtorrent/webtorrent-desktop/releases.atom'
   name 'WebTorrent Desktop'
   homepage 'https://webtorrent.io/desktop/'
 

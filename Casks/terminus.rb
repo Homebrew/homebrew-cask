@@ -4,8 +4,7 @@ cask 'terminus' do
 
   # github.com/Eugeny/terminus was verified as official when first introduced to the cask
   url "https://github.com/Eugeny/terminus/releases/download/v#{version}/Terminus-#{version}.dmg"
-  appcast 'https://github.com/Eugeny/terminus/releases.atom',
-          checkpoint: '21c52642a0f4dba12ceec6df6e8aa3ea2a6c3530d9f6455f20dd4eb4230c146c'
+  appcast 'https://github.com/Eugeny/terminus/releases.atom'
   name 'Terminus'
   homepage 'https://eugeny.github.io/terminus/'
 

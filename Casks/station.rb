@@ -4,8 +4,7 @@ cask 'station' do
 
   # github.com/getstation/desktop-app-releases was verified as official when first introduced to the cask
   url "https://github.com/getstation/desktop-app-releases/releases/download/#{version}/Station-#{version}.dmg"
-  appcast 'https://github.com/getstation/desktop-app-releases/releases.atom',
-          checkpoint: '0b98ad6e1593807adc57ffa7bb123b7d1fe628c2e185ad56750a734698cd1f0e'
+  appcast 'https://github.com/getstation/desktop-app-releases/releases.atom'
   name 'Station'
   homepage 'https://getstation.com/'
 

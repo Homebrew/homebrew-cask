@@ -4,8 +4,7 @@ cask 'bitwarden' do
 
   # github.com/bitwarden/desktop was verified as official when first introduced to the cask
   url "https://github.com/bitwarden/desktop/releases/download/v#{version}/bitwarden-#{version}-mac.zip"
-  appcast 'https://github.com/bitwarden/desktop/releases.atom',
-          checkpoint: '146a6f7a095672276291e86889905854a60f1fedc3089ae044d479d08afba234'
+  appcast 'https://github.com/bitwarden/desktop/releases.atom'
   name 'Bitwarden'
   homepage 'https://bitwarden.com/'
 

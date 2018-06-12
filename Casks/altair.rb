@@ -4,8 +4,7 @@ cask 'altair' do
 
   # github.com/imolorhe/altair was verified as official when first introduced to the cask
   url "https://github.com/imolorhe/altair/releases/download/v#{version}/altair-#{version}-mac.zip"
-  appcast 'https://github.com/imolorhe/altair/releases.atom',
-          checkpoint: '9ffed0ab668bccc71f3d60c6891e2d12f413e16ac9d6545d40511f117ee7affc'
+  appcast 'https://github.com/imolorhe/altair/releases.atom'
   name 'Altair GraphQL Client'
   homepage 'https://altair.sirmuel.design/'
 

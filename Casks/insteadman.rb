@@ -4,8 +4,7 @@ cask 'insteadman' do
 
   # github.com/jhekasoft/insteadman3 was verified as official when first introduced to the cask
   url "https://github.com/jhekasoft/insteadman3/releases/download/v#{version}/InsteadMan-#{version}.dmg"
-  appcast 'https://github.com/jhekasoft/insteadman3/releases.atom',
-          checkpoint: '060cd37a9110e76b0e9fab28d83cd59a847eca2ac9272c8984ecd03d3241c16b'
+  appcast 'https://github.com/jhekasoft/insteadman3/releases.atom'
   name 'InsteadMan'
   homepage 'http://jhekasoft.github.io/insteadman/en/'
 

@@ -4,8 +4,7 @@ cask 'fuwari' do
 
   # github.com/kentya6/Fuwari was verified as official when first introduced to the cask
   url "https://github.com/kentya6/Fuwari/releases/download/v#{version}/Fuwari_#{version}.dmg"
-  appcast 'https://github.com/kentya6/Fuwari/releases.atom',
-          checkpoint: 'd0c33c84d8a087a6547d2eef6014ff19f74fd0b33083c936a1c21883441a5a04'
+  appcast 'https://github.com/kentya6/Fuwari/releases.atom'
   name 'Fuwari'
   homepage 'https://fuwari-app.com/'
 

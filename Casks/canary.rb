@@ -4,8 +4,7 @@ cask 'canary' do
 
   # rink.hockeyapp.net/api was verified as official when first introduced to the cask
   url "https://rink.hockeyapp.net/api/2/apps/b36ac4a380ea4907940c2054f6163050/app_versions/#{version.after_comma}?format=zip"
-  appcast 'https://rink.hockeyapp.net/api/2/apps/b36ac4a380ea4907940c2054f6163050',
-          checkpoint: 'd913e447cb8f580ee57076fb7de0213f488d218cabc4d8fe7a2a131533ad95a6'
+  appcast 'https://rink.hockeyapp.net/api/2/apps/b36ac4a380ea4907940c2054f6163050'
   name 'Canary'
   homepage 'https://canarymail.io/'
 

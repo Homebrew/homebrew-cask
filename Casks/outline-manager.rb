@@ -4,8 +4,7 @@ cask 'outline-manager' do
 
   # github.com/Jigsaw-Code/outline-server was verified as official when first introduced to the cask
   url "https://github.com/Jigsaw-Code/outline-server/releases/download/v#{version}/Outline-Manager.dmg"
-  appcast 'https://github.com/Jigsaw-Code/outline-server/releases.atom',
-          checkpoint: '9855dda731018f9e60a8fb1b6e0b55f059d3ea593d12b7ceafe64b155cb6835d'
+  appcast 'https://github.com/Jigsaw-Code/outline-server/releases.atom'
   name 'Outline Manager'
   homepage 'https://www.getoutline.org/'
 

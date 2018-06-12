@@ -4,8 +4,7 @@ cask 'activedock' do
 
   # dl.devmate.com/com.sergey-gerasimenko.ActiveDock was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.sergey-gerasimenko.ActiveDock/#{version.before_comma}/#{version.after_comma}/ActiveDock-#{version.before_comma}.zip"
-  appcast 'https://updates.devmate.com/com.sergey-gerasimenko.ActiveDock.xml',
-          checkpoint: 'd0b6f1b431d7a56b3f7efc7843d0b1b52811beabffd764382c9915861b5deb6b'
+  appcast 'https://updates.devmate.com/com.sergey-gerasimenko.ActiveDock.xml'
   name 'ActiveDock'
   homepage 'http://www.noteifyapp.com/activedock/'
 

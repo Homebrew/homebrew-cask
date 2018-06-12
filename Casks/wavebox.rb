@@ -4,8 +4,7 @@ cask 'wavebox' do
 
   # github.com/wavebox/waveboxapp was verified as official when first introduced to the cask
   url "https://github.com/wavebox/waveboxapp/releases/download/v#{version}/Wavebox_#{version.dots_to_underscores}_osx.dmg"
-  appcast 'https://github.com/wavebox/waveboxapp/releases.atom',
-          checkpoint: 'c586c63c609b32855e9c35a91f21c6bfc965f5795418858cc273f94105e622f8'
+  appcast 'https://github.com/wavebox/waveboxapp/releases.atom'
   name 'Wavebox'
   homepage 'https://wavebox.io/'
 

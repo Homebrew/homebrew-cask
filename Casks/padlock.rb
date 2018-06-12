@@ -4,8 +4,7 @@ cask 'padlock' do
 
   # github.com/MaKleSoft/padlock was verified as official when first introduced to the cask
   url "https://github.com/MaKleSoft/padlock/releases/download/v#{version}/Padlock-#{version}.dmg"
-  appcast 'https://github.com/MaKleSoft/padlock/releases.atom',
-          checkpoint: 'df0d5f5f53e5b43bdc8a8ac5f530ec8be4327cf6f18d8679775dc9c34a684abd'
+  appcast 'https://github.com/MaKleSoft/padlock/releases.atom'
   name 'Padlock'
   homepage 'https://padlock.io/'
 

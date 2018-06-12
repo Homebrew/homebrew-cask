@@ -9,8 +9,7 @@ cask 'ncar-ncl' do
     url "https://www.earthsystemgrid.org/dataset/ncl.#{version.no_dots}.dap/file/ncl_ncarg-#{version}-MacOS_10.12_64bit_gnu530.tar.gz"
   end
 
-  appcast 'https://www.ncl.ucar.edu/current_release.shtml',
-          checkpoint: 'd56aa8f16bdc52e51a71fd6d052d65e3afe01afc613f623b38051162b9101b82'
+  appcast 'https://www.ncl.ucar.edu/current_release.shtml'
   name 'NCAR Command Language'
   name 'ncl'
   homepage 'https://www.ncl.ucar.edu/'

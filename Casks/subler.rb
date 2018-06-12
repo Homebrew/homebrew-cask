@@ -4,8 +4,7 @@ cask 'subler' do
 
   # bitbucket.org/galad87/subler was verified as official when first introduced to the cask
   url "https://bitbucket.org/galad87/subler/downloads/Subler-#{version}.zip"
-  appcast 'https://subler.org/appcast/appcast.xml',
-          checkpoint: '8ed3358629f9085410e52ba23340036b0692bd9b7f70cf291c225f151f35108c'
+  appcast 'https://subler.org/appcast/appcast.xml'
   name 'Subler'
   homepage 'https://subler.org/'
 

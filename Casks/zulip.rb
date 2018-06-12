@@ -4,8 +4,7 @@ cask 'zulip' do
 
   # github.com/zulip/zulip-electron was verified as official when first introduced to the cask
   url "https://github.com/zulip/zulip-electron/releases/download/v#{version}/Zulip-#{version}-mac.zip"
-  appcast 'https://github.com/zulip/zulip-electron/releases.atom',
-          checkpoint: '32af0a26c48c045d806a5f6ae950bd78e0ed85147d16fbee5c7fdaa240800b48'
+  appcast 'https://github.com/zulip/zulip-electron/releases.atom'
   name 'Zulip'
   homepage 'https://zulipchat.com/'
 

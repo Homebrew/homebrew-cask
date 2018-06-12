@@ -4,8 +4,7 @@ cask 'trailrunner' do
 
   # rink.hockeyapp.net was verified as official when first introduced to the cask
   url "https://rink.hockeyapp.net/api/2/apps/83c4086e3f968b874757ba689e71f610/app_versions/#{version.after_comma}?format=zip"
-  appcast 'https://rink.hockeyapp.net/api/2/apps/83c4086e3f968b874757ba689e71f610',
-          checkpoint: 'be5fd9426fe7418a35164e31c78d7a275f56797bbe8767936507e54dff69cbac'
+  appcast 'https://rink.hockeyapp.net/api/2/apps/83c4086e3f968b874757ba689e71f610'
   name 'TrailRunner'
   homepage 'http://www.trailrunnerx.com/'
 

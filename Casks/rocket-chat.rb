@@ -4,8 +4,7 @@ cask 'rocket-chat' do
 
   # github.com/RocketChat/Rocket.Chat.Electron was verified as official when first introduced to the cask
   url "https://github.com/RocketChat/Rocket.Chat.Electron/releases/download/#{version}/rocketchat-#{version}.dmg"
-  appcast 'https://github.com/RocketChat/Rocket.Chat.Electron/releases.atom',
-          checkpoint: '1a11011df20012156d8b64cac6c8dd93fde8b7232e31585db6765f8e204f245a'
+  appcast 'https://github.com/RocketChat/Rocket.Chat.Electron/releases.atom'
   name 'Rocket.Chat'
   homepage 'https://rocket.chat/'
 

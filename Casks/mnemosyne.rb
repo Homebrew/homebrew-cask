@@ -4,8 +4,7 @@ cask 'mnemosyne' do
 
   # sourceforge.net/mnemosyne-proj was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/mnemosyne-proj/mnemosyne/mnemosyne-#{version}/Mnemosyne-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/mnemosyne-proj/rss?path=/mnemosyne',
-          checkpoint: '5c80600a3f49a12dc1db4aa65b048c306d04af6928b4027aa984f2cde627fb75'
+  appcast 'https://sourceforge.net/projects/mnemosyne-proj/rss?path=/mnemosyne'
   name 'Mnemosyne'
   homepage 'https://mnemosyne-proj.org/'
 

@@ -4,8 +4,7 @@ cask 'displaycal' do
 
   # sourceforge.net/dispcalgui was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/dispcalgui/release/#{version}/DisplayCAL-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/dispcalgui/rss?path=/release',
-          checkpoint: '92e1b9b6d5a749357d9e050e5fe7cc0ac3c5a17f0b23295a2a08493802ef8775'
+  appcast 'https://sourceforge.net/projects/dispcalgui/rss?path=/release'
   name 'DisplayCAL'
   homepage 'https://displaycal.net/'
 

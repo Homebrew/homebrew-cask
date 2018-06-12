@@ -4,8 +4,7 @@ cask 'sia-ui' do
 
   # github.com/NebulousLabs/Sia-UI was verified as official when first introduced to the cask
   url "https://github.com/NebulousLabs/Sia-UI/releases/download/v#{version}/Sia-UI-v#{version}-osx-x64.zip"
-  appcast 'https://github.com/NebulousLabs/Sia-UI/releases.atom',
-          checkpoint: '002db845cfcb30491b06d5c2ee4ab9ff152c778de130954ec1062fd3c2aa7fd1'
+  appcast 'https://github.com/NebulousLabs/Sia-UI/releases.atom'
   name 'Sia-UI'
   homepage 'https://sia.tech/'
 

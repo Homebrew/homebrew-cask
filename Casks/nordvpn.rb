@@ -4,8 +4,7 @@ cask 'nordvpn' do
 
   # downloads.nordcdn.com/apps was verified as official when first introduced to the cask
   url 'https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/latest/NordVPN.zip'
-  appcast 'https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/latest/update_pkg.xml',
-          checkpoint: 'e63e7722d47e647736d11021c76d063c7cd4233fee7bb609ec02fd071d998183'
+  appcast 'https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/latest/update_pkg.xml'
   name 'NordVPN'
   homepage 'https://nordvpn.com/'
 

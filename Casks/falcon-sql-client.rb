@@ -4,8 +4,7 @@ cask 'falcon-sql-client' do
 
   # github.com/plotly/falcon-sql-client was verified as official when first introduced to the cask
   url "https://github.com/plotly/falcon-sql-client/releases/download/v#{version}/mac-falcon-v#{version}.zip"
-  appcast 'https://github.com/plotly/falcon-sql-client/releases.atom',
-          checkpoint: '56bec73f750d39b1010f1dab1ca50468b699946d79cbf00ff7f41beb18dd3a38'
+  appcast 'https://github.com/plotly/falcon-sql-client/releases.atom'
   name 'Falcon SQL Client'
   homepage 'https://plot.ly/free-sql-client-download'
 

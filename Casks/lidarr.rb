@@ -4,8 +4,7 @@ cask 'lidarr' do
 
   # github.com/lidarr/Lidarr was verified as official when first introduced to the cask
   url "https://github.com/lidarr/Lidarr/releases/download/v#{version}/Lidarr.develop.#{version}.osx-app.zip"
-  appcast 'https://github.com/lidarr/Lidarr/releases.atom',
-          checkpoint: '33a70363b276f35d4500cfc1287fbfd02ae8b75efa94c0fd8779e40be34aadf3'
+  appcast 'https://github.com/lidarr/Lidarr/releases.atom'
   name 'Lidarr'
   homepage 'http://lidarr.audio/'
 

@@ -4,8 +4,7 @@ cask 'openrefine' do
 
   # github.com/OpenRefine/OpenRefine was verified as official when first introduced to the cask
   url "https://github.com/OpenRefine/OpenRefine/releases/download/#{version}/openrefine-mac-#{version}.dmg"
-  appcast 'https://github.com/OpenRefine/OpenRefine/releases.atom',
-          checkpoint: '70f2487fabca2d098f90697ff2fe497dfe45ca3774bade19c8c2c56c1c228bf3'
+  appcast 'https://github.com/OpenRefine/OpenRefine/releases.atom'
   name 'OpenRefine'
   homepage 'http://openrefine.org/'
 

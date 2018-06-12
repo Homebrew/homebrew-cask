@@ -4,8 +4,7 @@ cask 'shotcut' do
 
   # github.com/mltframework/shotcut was verified as official when first introduced to the cask
   url "https://github.com/mltframework/shotcut/releases/download/v#{version.major_minor}/shotcut-osx-x86_64-#{version.no_dots}.dmg"
-  appcast 'https://github.com/mltframework/shotcut/releases.atom',
-          checkpoint: '43f62dad679bdcebffc40635a45e583b6f8acbdf105e5c6a100c238008d175d7'
+  appcast 'https://github.com/mltframework/shotcut/releases.atom'
   name 'Shotcut'
   homepage 'https://www.shotcut.org/'
 

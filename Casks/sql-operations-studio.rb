@@ -4,8 +4,7 @@ cask 'sql-operations-studio' do
 
   # github.com/Microsoft/sqlopsstudio was verified as official when first introduced to the cask
   url "https://github.com/Microsoft/sqlopsstudio/releases/download/#{version}/sqlops-macos-#{version}.zip"
-  appcast 'https://github.com/Microsoft/sqlopsstudio/releases.atom',
-          checkpoint: 'e7c59a5daafb8550c60d7aefe6d9bf403b5cf4810db51a0a3a95a8a6d7e50489'
+  appcast 'https://github.com/Microsoft/sqlopsstudio/releases.atom'
   name 'SQL Operations Studio'
   homepage 'https://docs.microsoft.com/sql/sql-operations-studio/'
 

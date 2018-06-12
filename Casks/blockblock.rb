@@ -4,8 +4,7 @@ cask 'blockblock' do
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/BlockBlock_#{version}.zip"
-  appcast 'https://objective-see.com/products/changelogs/BlockBlock.txt',
-          checkpoint: 'c6b1c0717efd633e59199878fdb509e811ac7ae47bc7ed79d23e8f40042ccc63'
+  appcast 'https://objective-see.com/products/changelogs/BlockBlock.txt'
   name 'BlockBlock'
   homepage 'https://objective-see.com/products/blockblock.html'
 

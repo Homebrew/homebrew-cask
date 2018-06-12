@@ -17,8 +17,7 @@ cask 'paraview' do
     app "ParaView-#{version}.app"
   end
 
-  appcast 'http://www.paraview.org/files/paraview-download.js',
-          checkpoint: '8683c78bb9b0ba282c39b73a055f081916b29e740ae86672bb951bb2be3de5c9'
+  appcast 'http://www.paraview.org/files/paraview-download.js'
   name 'ParaView'
   homepage 'https://www.paraview.org/'
 end

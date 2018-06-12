@@ -4,8 +4,7 @@ cask 'startupizer' do
 
   # dl.devmate.com/com.gentlebytes.Startupizer2 was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.gentlebytes.Startupizer2/#{version.after_comma.before_colon}/#{version.after_colon}/Startupizer#{version.major}-#{version.after_comma.before_colon}.zip"
-  appcast "https://updates.devmate.com/com.gentlebytes.Startupizer#{version.major}.xml",
-          checkpoint: '769e18682d1178f8aff38043f51ef3176cf24e1f3e69e16eb19309d4eafddac3'
+  appcast "https://updates.devmate.com/com.gentlebytes.Startupizer#{version.major}.xml"
   name "Startupizer#{version.major}"
   homepage 'http://gentlebytes.com/startupizer/'
 

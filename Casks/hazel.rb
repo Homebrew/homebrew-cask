@@ -4,8 +4,7 @@ cask 'hazel' do
 
   # s3.amazonaws.com/Noodlesoft was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/Noodlesoft/Hazel-#{version}.dmg"
-  appcast 'https://www.noodlesoft.com/Products/Hazel/generate-appcast.php',
-          checkpoint: '41004fec384a5d9cc007f5d834e25f9150f90e7cc40feeb5c5c363005e065de6'
+  appcast 'https://www.noodlesoft.com/Products/Hazel/generate-appcast.php'
   name 'Hazel'
   homepage 'https://www.noodlesoft.com/'
 

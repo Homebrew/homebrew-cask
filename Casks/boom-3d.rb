@@ -4,8 +4,7 @@ cask 'boom-3d' do
 
   # devmate.com/com.globaldelight.Boom3D was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.globaldelight.Boom3D/#{version.before_comma}/#{version.after_comma}/Boom3D-#{version.before_comma}.dmg"
-  appcast 'https://updates.devmate.com/com.globaldelight.Boom3D.xml',
-          checkpoint: '0efeb31ff3a8a51810002b0f7383a6281f05e230fac3d8e3bc6efa0fafbceb00'
+  appcast 'https://updates.devmate.com/com.globaldelight.Boom3D.xml'
   name 'Boom 3D'
   homepage 'http://www.globaldelight.com/boom3d'
 

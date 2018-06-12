@@ -4,8 +4,7 @@ cask 'etcher' do
 
   # github.com/resin-io/etcher/releases/download was verified as official when first introduced to the cask
   url "https://github.com/resin-io/etcher/releases/download/v#{version}/Etcher-#{version}.dmg"
-  appcast 'https://github.com/resin-io/etcher/releases.atom',
-          checkpoint: 'ad732fe09130bbb97d0e083bd8e081e8d8e63ac910bbfbbfda94a0031497728c'
+  appcast 'https://github.com/resin-io/etcher/releases.atom'
   name 'Etcher'
   homepage 'https://etcher.io/'
 

@@ -4,8 +4,7 @@ cask 'kactus' do
 
   # github.com/kactus-io/kactus was verified as official when first introduced to the cask
   url "https://github.com/kactus-io/kactus/releases/download/v#{version}/Kactus-macos.zip"
-  appcast 'https://github.com/kactus-io/kactus/releases.atom',
-          checkpoint: '3b9299c719b19312c0414de1a0039ea6176a6dee31af3a4c5b6b07f3d3f65f07'
+  appcast 'https://github.com/kactus-io/kactus/releases.atom'
   name 'Kactus'
   homepage 'https://kactus.io/'
 

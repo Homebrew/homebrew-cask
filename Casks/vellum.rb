@@ -4,8 +4,7 @@ cask 'vellum' do
 
   # 180g.s3.amazonaws.com/downloads was verified as official when first introduced to the cask
   url "https://180g.s3.amazonaws.com/downloads/Vellum-#{version.no_dots}00.zip"
-  appcast 'https://get.180g.co/updates/vellum/',
-          checkpoint: '73688907d4f17260e14d922c9d0c086e5f6b050cc11ac5ca442c32ba7acc66f5'
+  appcast 'https://get.180g.co/updates/vellum/'
   name 'Vellum'
   homepage 'https://vellum.pub/'
 

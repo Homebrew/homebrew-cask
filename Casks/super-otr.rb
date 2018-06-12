@@ -4,8 +4,7 @@ cask 'super-otr' do
 
   url "http://apfel-a.macbay.de/wordpress/wp-content/downloads/#{version.after_comma.dots_to_slashes}/Super_OTR_#{version.before_comma}_neu.zip",
       user_agent: :fake
-  appcast 'http://apfel-a.macbay.de/software/superotr/appcast-superotr.xml',
-          checkpoint: '80fd936889d18af4abecb6156ccc19d43d1d6d3a684ca52337dc12ee093d7344'
+  appcast 'http://apfel-a.macbay.de/software/superotr/appcast-superotr.xml'
   name 'Super OTR'
   homepage 'http://apfel-a.macbay.de/super-otr/'
 

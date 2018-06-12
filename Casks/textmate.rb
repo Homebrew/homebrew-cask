@@ -4,8 +4,7 @@ cask 'textmate' do
 
   # github.com/textmate/textmate was verified as official when first introduced to the cask
   url "https://github.com/textmate/textmate/releases/download/v#{version}/TextMate_#{version}.tbz"
-  appcast 'https://github.com/textmate/textmate/releases.atom',
-          checkpoint: '6846b06f45244454de4164613cb56c06219241ca140e9ff964d30e77e18b1ac9'
+  appcast 'https://github.com/textmate/textmate/releases.atom'
   name 'TextMate'
   homepage 'https://macromates.com/'
 

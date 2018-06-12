@@ -3,8 +3,7 @@ cask 'master-key' do
   sha256 'b64b43a0ca30995cff4c604cdf3432d1b7002148d219461da88257cb046d8788'
 
   url "https://macinmind.com/MasterKey#{version.major}.dmg"
-  appcast 'https://macinmind.com/pads/MasterKeyappcast.xml',
-          checkpoint: '2251ed519e1ddcae599b13755e42a2be4dd9c030806294e616b803f50c826e74'
+  appcast 'https://macinmind.com/pads/MasterKeyappcast.xml'
   name 'Master Key'
   homepage 'https://macinmind.com/?area=app&app=masterkey&pg=info'
 

@@ -3,8 +3,7 @@ cask 'gpg-suite' do
   sha256 'cc772725dae73c5bc1f98b8fa264068db2e9584094590db88074cf77f7f7407b'
 
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
-  appcast 'https://gpgtools.org/releases/gka/appcast.xml',
-          checkpoint: '824b50812def7b0bdb1c1311562cffd0894a952af5e7e86db8119b07d9916d71'
+  appcast 'https://gpgtools.org/releases/gka/appcast.xml'
   name 'GPG Suite'
   homepage 'https://gpgtools.org/'
   gpg "#{url}.sig", key_url: 'https://gpgtools.org/GPGTools-00D026C4.asc'

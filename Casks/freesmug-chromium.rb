@@ -4,8 +4,7 @@ cask 'freesmug-chromium' do
 
   # sourceforge.net/osxportableapps was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/osxportableapps/Chromium_OSX_#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/osxportableapps/rss?path=/Chromium',
-          checkpoint: '27caeac244c23f3778fde1ec7e24238f4a328583b19af7292c9d8086cf19b0a7'
+  appcast 'https://sourceforge.net/projects/osxportableapps/rss?path=/Chromium'
   name 'Chromium'
   homepage 'http://www.freesmug.org/chromium'
 

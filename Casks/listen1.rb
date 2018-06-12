@@ -5,8 +5,7 @@ cask 'listen1' do
 
   # github.com/listen1/listen1_desktop was verified as official when first introduced to the cask
   url "https://github.com/listen1/listen1_desktop/releases/download/v#{version}/Listen1_#{version}_mac.dmg.zip"
-  appcast 'https://github.com/listen1/listen1_desktop/releases.atom',
-          checkpoint: '56e02d4ccc421e2d395eaecec1c3affea2246758c8b43dcc51a54acc26d0f136'
+  appcast 'https://github.com/listen1/listen1_desktop/releases.atom'
   name 'Listen 1'
   homepage 'https://listen1.github.io/listen1/'
 

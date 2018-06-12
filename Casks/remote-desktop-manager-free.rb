@@ -4,8 +4,7 @@ cask 'remote-desktop-manager-free' do
 
   # devolutions.net was verified as official when first introduced to the cask
   url "http://cdn.devolutions.net/download/Mac/Devolutions.RemoteDesktopManager.Free.Mac.#{version}.dmg"
-  appcast 'http://cdn.devolutions.net/download/Mac/RemoteDesktopManagerFree.xml',
-          checkpoint: 'c3fa9e6d76b53e67e60bf92c076d592aab673e39223b7285e0be293dd6a662e8'
+  appcast 'http://cdn.devolutions.net/download/Mac/RemoteDesktopManagerFree.xml'
   name 'Remote Desktop Manager Free'
   homepage 'https://mac.remotedesktopmanager.com/'
 

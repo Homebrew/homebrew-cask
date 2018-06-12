@@ -4,8 +4,7 @@ cask '1password' do
 
   # 1password.com was verified as official when first introduced to the cask
   url "https://c.1password.com/dist/1P/mac#{version.major}/1Password-#{version}.zip"
-  appcast "https://app-updates.agilebits.com/product_history/OPM#{version.major}",
-          checkpoint: '78086a6d237499c65b5b5c8efb32b452a4bafeb77814ea5875973626699aeba7'
+  appcast "https://app-updates.agilebits.com/product_history/OPM#{version.major}"
   name '1Password'
   homepage 'https://1password.com/'
 

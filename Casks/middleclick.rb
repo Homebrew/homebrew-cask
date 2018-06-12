@@ -4,8 +4,7 @@ cask 'middleclick' do
 
   # github.com was verified as official when first introduced to the cask
   url "https://github.com/cl3m/MiddleClick/releases/download/#{version}/MiddleClick.zip"
-  appcast 'https://github.com/cl3m/MiddleClick/releases.atom',
-          checkpoint: '56cc9aa7f59fd6d6db671678ff4b72a5289becb98dbe32ce1587cc746d411db9'
+  appcast 'https://github.com/cl3m/MiddleClick/releases.atom'
   name 'MiddleClick'
   homepage 'https://rouge41.com/labs/'
 

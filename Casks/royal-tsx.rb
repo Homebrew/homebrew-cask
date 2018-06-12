@@ -4,8 +4,7 @@ cask 'royal-tsx' do
 
   # https://royaltsx-v3.royalapplications.com was verified as official when first introduced to the cask
   url "https://royaltsx-v3.royalapplications.com/updates/royaltsx_#{version}.dmg"
-  appcast "https://royaltsx-v#{version.major}.royalapplications.com/updates_stable.php",
-          checkpoint: '4b55f978e3f00d544e3c28131924c4a9180d8e7bfa59798e925516599193e239'
+  appcast "https://royaltsx-v#{version.major}.royalapplications.com/updates_stable.php"
   name 'Royal TSX'
   homepage 'https://www.royalapplications.com/ts/mac/features'
 
