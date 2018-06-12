@@ -4,8 +4,7 @@ cask 'fips' do
 
   # github.com/matwey/fips3/releases was verified as official when first introduced to the cask
   url "https://github.com/matwey/fips3/releases/download/#{version}/Fips-#{version}-Darwin.dmg"
-  appcast 'https://github.com/matwey/fips3/releases.atom',
-          checkpoint: '83a027e18dd117084fa2aab135300d417aef8d6f3eb518fe010de1f9d4a4225e'
+  appcast 'https://github.com/matwey/fips3/releases.atom'
   name 'Fips'
   homepage 'http://fips.space/'
 

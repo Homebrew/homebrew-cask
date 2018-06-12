@@ -4,8 +4,7 @@ cask 'dragthing' do
 
   # amazonaws.com/tlasystems was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/tlasystems/DragThing-#{version}.dmg"
-  appcast 'https://www.dragthing.com/english/download.html',
-          checkpoint: '5d2dcc6c9cc11ff50f98d5d62153263b78db15a0aa2e5caf84afe49943ffb66e'
+  appcast 'https://www.dragthing.com/english/download.html'
   name 'DragThing'
   homepage 'https://www.dragthing.com/'
 

@@ -4,8 +4,7 @@ cask 'slender' do
 
   # downloads.dragonforged.com/ was verified as official when first introduced to the cask
   url "http://downloads.dragonforged.com/slender#{version.no_dots}.zip"
-  appcast 'http://dragonforged.com/slender/sparkle/?bundleId=com.dfsw.Slender',
-          checkpoint: '1ece434f3b6a656a5f0106b147ecc9fbbc1e9e731a34d531b37c42a9db8c6675'
+  appcast 'http://dragonforged.com/slender/sparkle/?bundleId=com.dfsw.Slender'
   name 'Slender'
   homepage 'http://martiancraft.com/products/slender.html'
 

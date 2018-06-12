@@ -4,8 +4,7 @@ cask 'mjolnir' do
 
   # github.com/sdegutis/mjolnir was verified as official when first introduced to the cask
   url "https://github.com/sdegutis/mjolnir/releases/download/#{version}/Mjolnir-#{version}.tgz"
-  appcast 'https://github.com/sdegutis/mjolnir/releases.atom',
-          checkpoint: 'bcbd84dc837113b342a6f780109b23825f3d6c6c208c7b68a193560eab832d80'
+  appcast 'https://github.com/sdegutis/mjolnir/releases.atom'
   name 'Mjolnir'
   homepage 'https://www.mjolnir.io/'
 

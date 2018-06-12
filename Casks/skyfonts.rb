@@ -3,8 +3,7 @@ cask 'skyfonts' do
   sha256 '58eab505b64d025207d1b418ac3bbe23b68a413b81af74ad9d279964046a280d'
 
   url "http://cdn1.skyfonts.com/client/Monotype_SkyFonts_Mac64_#{version}.dmg"
-  appcast 'https://www.fonts.com/other/skyfonts/getskyfontsclientdownloadinfo',
-          checkpoint: '7b40834d20dbe6b093e403e15b0ebfc31f7596ca6183bdbb302400ebd0eb35cd'
+  appcast 'https://www.fonts.com/other/skyfonts/getskyfontsclientdownloadinfo'
   name 'SkyFonts'
   homepage 'https://skyfonts.com/'
 

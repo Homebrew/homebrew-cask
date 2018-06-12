@@ -4,8 +4,7 @@ cask 'tiled' do
 
   # github.com/bjorn/tiled was verified as official when first introduced to the cask
   url "https://github.com/bjorn/tiled/releases/download/v#{version}/Tiled-#{version}-macos.zip"
-  appcast 'https://github.com/bjorn/tiled/releases.atom',
-          checkpoint: '2aed54160b6bd64b59f4326f6542086946b35ee291218360f2a040e81a8ea67e'
+  appcast 'https://github.com/bjorn/tiled/releases.atom'
   name 'Tiled'
   homepage 'http://www.mapeditor.org/'
 

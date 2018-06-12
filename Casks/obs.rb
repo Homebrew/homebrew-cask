@@ -4,8 +4,7 @@ cask 'obs' do
 
   # github.com/obsproject/obs-studio was verified as official when first introduced to the cask
   url "https://github.com/obsproject/obs-studio/releases/download/#{version}/obs-mac-#{version}-installer.pkg"
-  appcast 'https://github.com/obsproject/obs-studio/releases.atom',
-          checkpoint: '4c487c3ce8a5cc21469607cb3382b0704d0cae40dd3af1a110a1ea4b064c7412'
+  appcast 'https://github.com/obsproject/obs-studio/releases.atom'
   name 'OBS'
   homepage 'https://obsproject.com/'
 

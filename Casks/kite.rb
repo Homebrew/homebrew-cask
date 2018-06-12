@@ -4,8 +4,7 @@ cask 'kite' do
 
   # s3-us-west-1.amazonaws.com/kite-downloads was verified as official when first introduced to the cask
   url "https://s3-us-west-1.amazonaws.com/kite-downloads/Kite-#{version}.dmg"
-  appcast 'https://release.kite.com/appcast.xml',
-          checkpoint: '1923e043a0566104e9432fb3a74b253cebc9380bc0d89223157b86006411cc04'
+  appcast 'https://release.kite.com/appcast.xml'
   name 'Kite'
   homepage 'https://kite.com/'
 

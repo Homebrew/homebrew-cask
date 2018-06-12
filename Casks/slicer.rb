@@ -4,8 +4,7 @@ cask 'slicer' do
 
   # slicer.kitware.com/midas3 was verified as official when first introduced to the cask
   url "https://slicer.kitware.com/midas3/download?bitstream=#{version.after_comma}"
-  appcast 'https://github.com/Slicer/Slicer/releases.atom',
-          checkpoint: '0312d49a5ea7818787d0795b0ff9b5b4d9760624a226d47172a4026be0c9b96f'
+  appcast 'https://github.com/Slicer/Slicer/releases.atom'
   name '3D Slicer'
   homepage 'https://www.slicer.org/'
 

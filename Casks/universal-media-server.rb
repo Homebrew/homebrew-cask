@@ -4,8 +4,7 @@ cask 'universal-media-server' do
 
   # sourceforge.net/unimediaserver was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/unimediaserver/Official%20Releases/OS%20X/UMS-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/unimediaserver/rss?path=/Official%20Releases',
-          checkpoint: '8122b8947bec5bd6beb1f122b09c958aea3e591ccc84daec77babc39124a59e6'
+  appcast 'https://sourceforge.net/projects/unimediaserver/rss?path=/Official%20Releases'
   name 'Universal Media Server'
   homepage 'http://www.universalmediaserver.com/'
 

@@ -4,8 +4,7 @@ cask 'apache-couchdb' do
 
   # bintray.com/apache/couchdb was verified as official when first introduced to the cask
   url "https://dl.bintray.com/apache/couchdb/mac/#{version}/Apache-CouchDB-#{version}.zip"
-  appcast 'https://github.com/apache/couchdb/releases.atom',
-          checkpoint: '9b6339769352a4b5e9396691b84174c0b8f0e92b361fa8deca33aaa558f638d9'
+  appcast 'https://github.com/apache/couchdb/releases.atom'
   name 'Apache CouchDB'
   homepage 'https://couchdb.apache.org/'
 

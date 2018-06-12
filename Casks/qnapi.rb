@@ -4,8 +4,7 @@ cask 'qnapi' do
 
   # github.com/QNapi/qnapi was verified as official when first introduced to the cask
   url "https://github.com/QNapi/qnapi/releases/download/#{version}/QNapi-#{version}.dmg"
-  appcast 'https://github.com/QNapi/qnapi/releases.atom',
-          checkpoint: '0aa41961e853473ceb4559e3c9319dd660a00022e98d0053fa650b75f0b53e5b'
+  appcast 'https://github.com/QNapi/qnapi/releases.atom'
   name 'QNapi'
   homepage 'https://qnapi.github.io/'
 

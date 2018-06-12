@@ -4,8 +4,7 @@ cask 'detectx' do
 
   # amazonaws.com/sqwarq.com was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/sqwarq.com/PublicZips/DetectX.app.zip'
-  appcast 'https://s3.amazonaws.com/sqwarq.com/AppCasts/detectx.xml',
-          checkpoint: 'de70041dda4fcf77d5e682db2cb4a6d1ff04370911f4518a7f009dd3bd8fe8ff'
+  appcast 'https://s3.amazonaws.com/sqwarq.com/AppCasts/detectx.xml'
   name 'DetectX'
   homepage 'https://sqwarq.com/detectx/'
 

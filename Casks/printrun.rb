@@ -4,8 +4,7 @@ cask 'printrun' do
 
   # koti.kapsi.fi/~kliment/printrun was verified as official when first introduced to the cask
   url "http://koti.kapsi.fi/~kliment/printrun/Printrun-Mac-#{version}.zip"
-  appcast 'http://koti.kapsi.fi/~kliment/printrun/',
-          checkpoint: '8b00c0ea9cbf9040a86eb73fecda80b45397517bfc7fe4377148126a8b989318'
+  appcast 'http://koti.kapsi.fi/~kliment/printrun/'
   name 'Printrun'
   homepage 'https://github.com/kliment/Printrun'
 

@@ -4,8 +4,7 @@ cask 'oni' do
 
   # github.com/onivim/oni was verified as official when first introduced to the cask
   url "https://github.com/onivim/oni/releases/download/v#{version}/Oni-#{version}-osx.dmg"
-  appcast 'https://github.com/onivim/oni/releases.atom',
-          checkpoint: '97cdb2e4f24ce64f80a0d8461bda74a4aaf5d3826e8df24ffdbeef7909bdde3d'
+  appcast 'https://github.com/onivim/oni/releases.atom'
   name 'Oni'
   homepage 'https://www.onivim.io/'
 

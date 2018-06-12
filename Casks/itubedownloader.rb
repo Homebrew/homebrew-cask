@@ -4,8 +4,7 @@ cask 'itubedownloader' do
 
   # dl.devmate.com/com.AlphaSoft.iTubeDownloader was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.AlphaSoft.iTubeDownloader/#{version.before_comma.no_dots}/#{version.after_comma}/iTubeDownloader-#{version.before_comma.no_dots}.zip"
-  appcast 'https://updates.devmate.com/com.AlphaSoft.iTubeDownloader.xml',
-          checkpoint: 'ed10589cfc2c2dd7b29cd8dca515ed8371de081a29c677ead57a9cdb0f25148a'
+  appcast 'https://updates.devmate.com/com.AlphaSoft.iTubeDownloader.xml'
   name 'iTubeDownloader'
   homepage 'http://alphasoftware.co/'
 

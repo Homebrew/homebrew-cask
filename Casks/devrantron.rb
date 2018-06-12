@@ -4,8 +4,7 @@ cask 'devrantron' do
 
   # github.com/tahnik/devRantron was verified as official when first introduced to the cask
   url "https://github.com/tahnik/devRantron/releases/download/v#{version}/devrantron-#{version}.dmg"
-  appcast 'https://github.com/tahnik/devRantron/releases.atom',
-          checkpoint: '4689266365a4f84e78dd1fbb667117684485e85f9d4ef82428ef77e1db88bd48'
+  appcast 'https://github.com/tahnik/devRantron/releases.atom'
   name 'devRantron'
   homepage 'https://devrantron.firebaseapp.com/'
 

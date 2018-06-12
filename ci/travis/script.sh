@@ -34,11 +34,6 @@ run export HOMEBREW_NO_AUTO_UPDATE=1
 if [[ ${#casks_wrong_dir[@]} -gt 0 ]]; then
   odie "Casks added outside Casks directory: ${casks_wrong_dir[*]}"
 elif [[ ${#modified_casks[@]} -gt 0 ]]; then
-  for cask in "${modified_casks[@]}"; do
-    if brew cask _stanza gpg "${cask}" &> /dev/null; then
-      run brew outdated gnupg || run brew upgrade gnupg
-    fi
-  done
   run brew cask _audit_modified_casks "${TRAVIS_COMMIT_RANGE}"
   run brew cask style "${modified_casks[@]}"
   if [[ ${#modified_casks[@]} -le 3 ]]; then

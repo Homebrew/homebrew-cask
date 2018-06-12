@@ -15,8 +15,7 @@ cask 'coteditor' do
 
   # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
   url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
-  appcast 'https://github.com/coteditor/CotEditor/releases.atom',
-          checkpoint: '820521c19ba856fe653600374cda86287be35a6391d356590bdfa6d13c073ddc'
+  appcast 'https://github.com/coteditor/CotEditor/releases.atom'
   name 'CotEditor'
   homepage 'https://coteditor.com/'
 

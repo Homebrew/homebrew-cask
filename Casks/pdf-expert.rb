@@ -4,8 +4,7 @@ cask 'pdf-expert' do
 
   # readdle-test-binaries.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://readdle-test-binaries.s3.amazonaws.com/versions/#{version.after_comma}/PDFExpert.dmg"
-  appcast 'https://readdle-test-binaries.s3.amazonaws.com/release/appcast.xml',
-          checkpoint: '4376404cf45c6b5a80fb6c256cc45903ece6c0c8911d0bea56dc3f569f302b12'
+  appcast 'https://readdle-test-binaries.s3.amazonaws.com/release/appcast.xml'
   name 'PDF Expert'
   homepage 'https://pdfexpert.com/'
 

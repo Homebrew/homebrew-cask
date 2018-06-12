@@ -4,8 +4,7 @@ cask 'whoozle-android-file-transfer' do
 
   # github.com/whoozle/android-file-transfer-linux was verified as official when first introduced to the cask
   url "https://github.com/whoozle/android-file-transfer-linux/releases/download/v#{version.split('-')[0]}/AFTOSX-#{version}.dmg"
-  appcast 'https://github.com/whoozle/android-file-transfer-linux/releases.atom',
-          checkpoint: 'bd62e37c3b26874adbf882b3e25808cfefef05ff788654cf15a3e5f97975dd03'
+  appcast 'https://github.com/whoozle/android-file-transfer-linux/releases.atom'
   name 'Android File Transfer'
   homepage 'https://whoozle.github.io/android-file-transfer-linux/'
 

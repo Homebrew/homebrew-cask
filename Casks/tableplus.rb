@@ -4,8 +4,7 @@ cask 'tableplus' do
 
   # s3.amazonaws.com/tableplus-osx-builds was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/tableplus-osx-builds/#{version.after_comma}/TablePlus.zip"
-  appcast 'https://tableplus.io/osx/version.xml',
-          checkpoint: 'd99e55be60f47c0e8738b3c8c070fddad7e20f7bf9fd37a47ed80527f24a0359'
+  appcast 'https://tableplus.io/osx/version.xml'
   name 'TablePlus'
   homepage 'https://tableplus.io/'
 

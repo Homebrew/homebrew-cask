@@ -4,8 +4,7 @@ cask 'godot' do
 
   # downloads.tuxfamily.org/godotengine was verified as official when first introduced to the cask
   url "https://downloads.tuxfamily.org/godotengine/#{version}/Godot_v#{version}-stable_osx.fat.zip"
-  appcast 'https://github.com/godotengine/godot/releases.atom',
-          checkpoint: '1f75e2ac01a411812c9cee3d4db561728b6eba1baed5186b92b659a6a938db15'
+  appcast 'https://github.com/godotengine/godot/releases.atom'
   name 'Godot Engine'
   homepage 'https://godotengine.org/'
 

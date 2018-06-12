@@ -4,8 +4,7 @@ cask 'textexpander' do
 
   # cdn.textexpander.com/mac was verified as official when first introduced to the cask
   url "https://cdn.textexpander.com/mac/TextExpander_#{version}.zip"
-  appcast "https://smilesoftware.com/appcast/TextExpander#{version.major}.xml",
-          checkpoint: 'e7dfa96ec679e52bc5a23c69ddc0276987d0f6714de01ff98b62058958d8f878'
+  appcast "https://smilesoftware.com/appcast/TextExpander#{version.major}.xml"
   name 'TextExpander'
   homepage 'https://smilesoftware.com/TextExpander'
 

@@ -4,8 +4,7 @@ cask 'mellowplayer' do
 
   # github.com/ColinDuquesnoy/MellowPlayer was verified as official when first introduced to the cask
   url "https://github.com/ColinDuquesnoy/MellowPlayer/releases/download/#{version}/MellowPlayer.dmg"
-  appcast 'https://github.com/ColinDuquesnoy/MellowPlayer/releases.atom',
-          checkpoint: 'a6e76be5d54d9563261991e6854199a5d5806931dc24e24f0c5e4aa943a01560'
+  appcast 'https://github.com/ColinDuquesnoy/MellowPlayer/releases.atom'
   name 'MellowPlayer'
   homepage 'https://colinduquesnoy.github.io/MellowPlayer/'
 

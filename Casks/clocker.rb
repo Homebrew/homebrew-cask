@@ -4,8 +4,7 @@ cask 'clocker' do
 
   # github.com/abhishekbanthia/Clocker was verified as official when first introduced to the cask
   url "https://github.com/abhishekbanthia/Clocker/releases/download/v#{version}/Clocker.zip"
-  appcast 'https://github.com/abhishekbanthia/Clocker/releases.atom',
-          checkpoint: 'a3c5d15412fc810a77449d8a0e1fa722820f870d074c552bc628fc3137bcc7f8'
+  appcast 'https://github.com/abhishekbanthia/Clocker/releases.atom'
   name 'Clocker'
   homepage 'https://abhishekbanthia.com/Clocker/'
 

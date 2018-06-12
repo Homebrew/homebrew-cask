@@ -4,8 +4,7 @@ cask 'hachidori' do
 
   # github.com/Atelier-Shiori/hachidori was verified as official when first introduced to the cask
   url "https://github.com/Atelier-Shiori/hachidori/releases/download/#{version}/hachidori-#{version}.dmg"
-  appcast 'https://github.com/Atelier-Shiori/hachidori/releases.atom',
-          checkpoint: 'e008cca070d3d01a96ed0f9a89449bf05936dd459b933547cda5e1d3e0a1ce41'
+  appcast 'https://github.com/Atelier-Shiori/hachidori/releases.atom'
   name 'Hachidori'
   homepage 'https://hachidori.ateliershiori.moe/'
 

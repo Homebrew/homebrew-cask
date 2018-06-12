@@ -4,8 +4,7 @@ cask 'stella' do
 
   # github.com/stella-emu/stella/releases/download was verified as official when first introduced to the cask
   url "https://github.com/stella-emu/stella/releases/download/#{version}/Stella-#{version}-macosx.dmg"
-  appcast 'https://github.com/stella-emu/stella/releases.atom',
-          checkpoint: '7ef53c4c02c4abbd71e2e5b986c90c4a155606bfccd61824b68f0721a46e9cd4'
+  appcast 'https://github.com/stella-emu/stella/releases.atom'
   name 'Stella'
   homepage 'https://stella-emu.github.io/'
 

@@ -4,8 +4,7 @@ cask 'pdfsam-basic' do
 
   # github.com/torakiki/pdfsam was verified as official when first introduced to the cask
   url "https://github.com/torakiki/pdfsam/releases/download/v#{version}/PDFsam-#{version}.dmg"
-  appcast 'https://github.com/torakiki/pdfsam/releases.atom',
-          checkpoint: 'd3f42385f6d99a2c1458ac801f3d7fae143338a6cc27844e3e9fc75c8f1aa508'
+  appcast 'https://github.com/torakiki/pdfsam/releases.atom'
   name 'PDFsam Basic'
   homepage 'http://www.pdfsam.org/'
 

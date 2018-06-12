@@ -4,8 +4,7 @@ cask 'the-unarchiver' do
 
   # devmate.com/com.macpaw.site.theunarchiver was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.macpaw.site.theunarchiver/#{version.after_comma.before_colon}/#{version.after_colon}/TheUnarchiver-#{version.after_comma.before_colon}.zip"
-  appcast 'https://updates.devmate.com/com.macpaw.site.theunarchiver.xml',
-          checkpoint: '0179cd684e073cdc32de47a7d653059e8ede3ff69abfd7140393012c7a5543f4'
+  appcast 'https://updates.devmate.com/com.macpaw.site.theunarchiver.xml'
   name 'The Unarchiver'
   homepage 'https://theunarchiver.com/'
 

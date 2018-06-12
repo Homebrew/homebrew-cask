@@ -4,8 +4,7 @@ cask 'numi' do
 
   # dl.devmate.com/com.dmitrynikolaev.numi was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.dmitrynikolaev.numi/#{version.after_comma.before_colon}/#{version.after_colon}/Numi-#{version.after_comma.before_colon}.zip"
-  appcast 'https://updates.devmate.com/com.dmitrynikolaev.numi.xml',
-          checkpoint: '7d9dd6fc6bffacadb2ddf68fc5afef554dea9d7d073f4750465b423429a0231d'
+  appcast 'https://updates.devmate.com/com.dmitrynikolaev.numi.xml'
   name 'Numi'
   homepage 'https://numi.io/'
 

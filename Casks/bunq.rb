@@ -4,8 +4,7 @@ cask 'bunq' do
 
   # github.com/BunqCommunity/BunqDesktop was verified as official when first introduced to the cask
   url "https://github.com/BunqCommunity/BunqDesktop/releases/download/#{version}/BunqDesktop-#{version}.dmg"
-  appcast 'https://github.com/BunqCommunity/BunqDesktop/releases.atom',
-          checkpoint: 'c45ad1a1b84662c96fa0ee9bd7aa6f01fca6b26ee51e89be4e91dff04619d4c2'
+  appcast 'https://github.com/BunqCommunity/BunqDesktop/releases.atom'
   name 'BunqDesktop'
   homepage 'https://bunqdesktop.com/'
 

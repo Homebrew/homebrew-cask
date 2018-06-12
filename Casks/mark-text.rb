@@ -4,8 +4,7 @@ cask 'mark-text' do
 
   # github.com/marktext/marktext was verified as official when first introduced to the cask
   url "https://github.com/marktext/marktext/releases/download/v#{version}/marktext-#{version}.dmg"
-  appcast 'https://github.com/marktext/marktext/releases.atom',
-          checkpoint: 'f7c7bea54c9be8ede7870a0c25602128a0aa1e9740781a50e4690eac7b43cdb6'
+  appcast 'https://github.com/marktext/marktext/releases.atom'
   name 'Mark Text'
   homepage 'https://marktext.github.io/website/'
 

@@ -4,8 +4,7 @@ cask 'mu' do
 
   # github.com/mu-editor/mu was verified as official when first introduced to the cask
   url "https://github.com/mu-editor/mu/releases/download/v#{version}/mu-#{version}.osx.zip"
-  appcast 'https://github.com/mu-editor/mu/releases.atom',
-          checkpoint: 'cbe2231bdb545bf8892858ba81325c1d7c5fc4e7b2827f26ae572d8608907d9b'
+  appcast 'https://github.com/mu-editor/mu/releases.atom'
   name 'Mu'
   homepage 'https://codewith.mu/'
 

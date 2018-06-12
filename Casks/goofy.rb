@@ -4,8 +4,7 @@ cask 'goofy' do
 
   # github.com/danielbuechele/goofy was verified as official when first introduced to the cask
   url "https://github.com/danielbuechele/goofy/releases/download/v#{version}/goofy-core-#{version}-mac.zip"
-  appcast 'https://github.com/danielbuechele/goofy/releases.atom',
-          checkpoint: '48776e9bc3abf02a6f4068913e67f83e6ed224f08811dc5db0e606056eb46979'
+  appcast 'https://github.com/danielbuechele/goofy/releases.atom'
   name 'Goofy'
   homepage 'http://www.goofyapp.com/'
 

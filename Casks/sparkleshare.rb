@@ -4,8 +4,7 @@ cask 'sparkleshare' do
 
   # github.com/hbons/SparkleShare was verified as official when first introduced to the cask
   url "https://github.com/hbons/SparkleShare/releases/download/#{version}/sparkleshare-mac-#{version}.zip"
-  appcast 'https://github.com/hbons/SparkleShare/releases.atom',
-          checkpoint: 'c89ad2c18fd529f96f7822eda90b3ac8f7aac25d137ebb736191f22d8e3ddf93'
+  appcast 'https://github.com/hbons/SparkleShare/releases.atom'
   name 'SparkleShare'
   homepage 'https://sparkleshare.org/'
 

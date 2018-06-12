@@ -4,8 +4,7 @@ cask 'script-debugger' do
 
   # s3.amazonaws.com/latenightsw.com was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/latenightsw.com/ScriptDebugger#{version}.dmg"
-  appcast "https://www.latenightsw.com/versions/com.latenightsw.ScriptDebugger#{version.major}.php",
-          checkpoint: 'f3c5698d64f95c976c730f4431cbab945d2fa1cbdb50e7c4d1e7514b44437b1b'
+  appcast "https://www.latenightsw.com/versions/com.latenightsw.ScriptDebugger#{version.major}.php"
   name 'Script Debugger'
   homepage 'http://latenightsw.com/'
 

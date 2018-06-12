@@ -4,8 +4,7 @@ cask 'gingko' do
 
   # github.com/gingko/client was verified as official when first introduced to the cask
   url "https://github.com/gingko/client/releases/download/v#{version}/gingko-client-#{version}-mac.zip"
-  appcast 'https://github.com/gingko/client/releases.atom',
-          checkpoint: '5a67c3b56f03182c28a6e7fe25db766a30b8cf76dc14a1d8dd71a23fc13b7ce3'
+  appcast 'https://github.com/gingko/client/releases.atom'
   name 'Gingko'
   homepage 'https://gingko.io/'
 

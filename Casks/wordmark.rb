@@ -4,8 +4,7 @@ cask 'wordmark' do
 
   # github.com/wordmark/wordmark was verified as official when first introduced to the cask
   url "https://github.com/wordmark/wordmark/releases/download/v#{version}/wordmark-#{version}-mac.zip"
-  appcast 'https://github.com/wordmark/wordmark/releases.atom',
-          checkpoint: '78779c9c8a97899acfb17bfdb905ab8387669a6871932c9961942b5fe613a063'
+  appcast 'https://github.com/wordmark/wordmark/releases.atom'
   name "WordMark #{version.major}"
   homepage 'https://wordmarkapp.com/'
 

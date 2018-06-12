@@ -4,8 +4,7 @@ cask 'fingerkey' do
 
   # fingerkeyapp.azurewebsites.net was verified as official when first introduced to the cask
   url 'https://fingerkeyapp.azurewebsites.net/download/FingerKey-osx.zip'
-  appcast 'https://fingerkeyapp.azurewebsites.net/Appcast.xml',
-          checkpoint: '9ab9b0250633642871fda51edcd63c1bb960b87b1e349bf04defc216b04ca3e2'
+  appcast 'https://fingerkeyapp.azurewebsites.net/Appcast.xml'
   name 'FingerKey'
   homepage 'http://www.fingerkeyapp.com/'
 

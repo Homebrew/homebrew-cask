@@ -28,6 +28,7 @@ cask 'onyx' do
   end
 
   url "https://www.titanium-software.fr/download/#{macos_release}/OnyX.dmg"
+  appcast 'https://www.titanium-software.fr/en/release_onyx.html'
   name 'OnyX'
   homepage 'https://www.titanium-software.fr/en/onyx.html'
 

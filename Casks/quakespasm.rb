@@ -3,8 +3,7 @@ cask 'quakespasm' do
   sha256 '4f071806ab0eae7a2321de760ae5ca4e041ce9bfc4dec99e17795e7a31513635'
 
   url "https://downloads.sourceforge.net/quakespasm/Mac/QuakeSpasm-#{version}-osx.zip"
-  appcast 'https://sourceforge.net/projects/quakespasm/rss?path=/Mac',
-          checkpoint: 'eb82827aa6f7c7c92527ad5519a710b4380a57cc475c2c55a39534762ce641ae'
+  appcast 'https://sourceforge.net/projects/quakespasm/rss?path=/Mac'
   name 'QuakeSpasm'
   homepage 'http://quakespasm.sourceforge.net/'
 

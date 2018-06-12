@@ -4,8 +4,7 @@ cask 'textsoap' do
 
   # unmarked.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://unmarked.s3.amazonaws.com/textsoap#{version.major}.zip"
-  appcast "https://unmarked.s3.amazonaws.com/appcast/textsoap#{version.major}.xml",
-          checkpoint: '06802a7ac882a40941499e9702901f518a9ff36914eb5f3e2c60aaffdd077653'
+  appcast "https://unmarked.s3.amazonaws.com/appcast/textsoap#{version.major}.xml"
   name 'TextSoap'
   homepage 'https://www.unmarked.com/textsoap/'
 
