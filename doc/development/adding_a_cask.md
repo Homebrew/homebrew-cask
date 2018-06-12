@@ -15,8 +15,7 @@ cask 'shuttle' do
 
   # github.com/fitztrev/shuttle was verified as official when first introduced to the cask
   url "https://github.com/fitztrev/shuttle/releases/download/v#{version}/Shuttle.zip"
-  appcast 'https://github.com/fitztrev/shuttle/releases.atom',
-          checkpoint: 'c3dea2ed479b3ebba7c56ace6040901795f6dc6be92f9ffc30cc808d31723f17'
+  appcast 'https://github.com/fitztrev/shuttle/releases.atom'
   name 'Shuttle'
   homepage 'https://fitztrev.github.io/shuttle/'
 
@@ -49,8 +48,7 @@ cask 'airdisplay' do
   sha256 'db84a66fe3522929a0afa58a4fe0189977baded89df0035ead1ccd334f7b8126'
 
   url "https://www.avatron.com/updates/software/airdisplay/ad#{version.no_dots}.zip"
-  appcast 'https://avatron.com/updates/software/airdisplay/appcast.xml',
-          checkpoint: '938bdb9fbee793dce92818366cb2c19ba84c5b0cd6853fd893897d4a40689bc2'
+  appcast 'https://avatron.com/updates/software/airdisplay/appcast.xml'
   name 'Air Display'
   homepage 'https://avatron.com/apps/air-display/'
 

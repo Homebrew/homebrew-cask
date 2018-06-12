@@ -122,8 +122,7 @@ sha256
 language
 
 url
-appcast,
-  checkpoint: # shown here as it is required with `appcast`
+appcast
 name
 homepage
 gpg, key_id: # on same line, since first part is typically small
