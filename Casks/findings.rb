@@ -3,7 +3,7 @@ cask 'findings' do
   sha256 '9a41fb186bb2f204653d2bc20a9f7e12753bdeec6ffd9408f8b17a6e56b4316b'
 
   url "http://downloads.findingsapp.com/Findings_#{version.after_comma}_#{version.before_comma}.zip"
-  appcast 'https://s3.amazonaws.com/downloads.findingsapp.com/appcastv2.xml'
+  appcast "https://s3.amazonaws.com/downloads.findingsapp.com/appcastv#{version.major}.xml"
   name 'Findings'
   homepage 'http://findingsapp.com/'
 
