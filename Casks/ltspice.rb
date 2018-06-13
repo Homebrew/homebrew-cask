@@ -10,7 +10,7 @@ cask 'ltspice' do
 
   zap trash: [
                '~/Documents/LTspice/examples',
-               '~/Library/Applicaiton Support/LTspice',
+               '~/Library/Application Support/LTspice',
              ],
       rmdir: '~/Documents/LTspice'
 end
