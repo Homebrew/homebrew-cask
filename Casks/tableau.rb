@@ -17,7 +17,7 @@ cask 'tableau' do
                        'com.simba.sqlserverodbc',
                        'com.tableausoftware.Desktop.app',
                        'com.tableausoftware.DesktopShortcut',
-                       'com.tableausoftware.FLEXNet.11.14.0',
+                       'com.tableausoftware.FLEXNet.11.*',
                        'com.tableausoftware.mysql',
                        'com.tableausoftware.oracle',
                        'com.tableausoftware.postgresql',
