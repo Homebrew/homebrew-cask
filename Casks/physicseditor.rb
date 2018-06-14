@@ -1,6 +1,6 @@
 cask 'physicseditor' do
-  version '1.7.0'
-  sha256 '86c7798a0539bab218a96d89d3bfc9575dce73f993ed81d1915d14953652b3d1'
+  version '1.8.0'
+  sha256 '2d97266cf30a5dd6d56758d9f50aada38e8b35c9c804a90dfa96019629005346'
 
   url "https://www.codeandweb.com/download/physicseditor/#{version}/PhysicsEditor-#{version}-uni.dmg"
   appcast 'https://www.codeandweb.com/releases/PhysicsEditor/appcast-mac-release.xml'
