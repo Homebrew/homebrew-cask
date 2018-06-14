@@ -10,5 +10,5 @@ cask 'godot-mono' do
 
   depends_on formula: 'mono'
 
-  app "Godot_mono.app"
+  app 'Godot_mono.app'
 end
