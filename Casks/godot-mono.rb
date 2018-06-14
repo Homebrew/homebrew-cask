@@ -10,5 +10,5 @@ cask 'godot-mono' do
 
   depends_on formula: 'mono'
 
-  app "Godot_v#{version}-stable_mono_osx64.app"
+  app "Godot_mono.app"
 end
