@@ -8,5 +8,5 @@ cask 'fldigi' do
   homepage 'https://sourceforge.net/projects/fldigi/files/fldigi/'
 
   app "fldigi-#{version}.app"
-  app 'flarq-4.3.6.app'
+  app 'flarq-4.3.7.app'
 end
