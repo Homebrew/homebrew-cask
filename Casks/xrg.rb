@@ -8,4 +8,11 @@ cask 'xrg' do
   homepage 'http://www.gauchosoft.com/Products/XRG/'
 
   app 'XRG.app'
+
+  zap trash: [
+               '~/Library/Caches/com.apple.helpd/Generated/XRG Help*',
+               '~/Library/Caches/com.piatekjimenez.XRG',
+               '~/Library/Cookies/com.piatekjimenez.XRG.binarycookies',
+               '~/Library/Preferences/com.piatekjimenez.XRG.plist',
+             ]
 end
