@@ -9,4 +9,8 @@ cask 'logisim' do
   homepage 'http://www.cburch.com/logisim/'
 
   app 'Logisim.app'
+
+  zap trash: [
+               '~/Library/Preferences/com.cburch.logisim.plist',
+             ]
 end
