@@ -10,7 +10,5 @@ cask 'logisim' do
 
   app 'Logisim.app'
 
-  zap trash: [
-               '~/Library/Preferences/com.cburch.logisim.plist',
-             ]
+  zap trash: '~/Library/Preferences/com.cburch.logisim.plist'
 end
