@@ -7,6 +7,6 @@ cask 'fldigi' do
   name 'fldigi'
   homepage 'https://sourceforge.net/projects/fldigi/files/fldigi/'
 
-  app "fldigi-#{versionbefore_comma}.app"
+  app "fldigi-#{version.before_comma}.app"
   app "flarq-#{version.after_comma}.app"
 end
