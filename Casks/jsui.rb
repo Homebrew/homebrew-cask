@@ -10,4 +10,6 @@ cask 'jsui' do
   auto_updates true
 
   app 'JSUI.app'
+
+  zap trash: '~/Library/Application Support/jsui'
 end
