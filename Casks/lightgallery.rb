@@ -9,4 +9,10 @@ cask 'lightgallery' do
   homepage 'https://sachinchoolur.github.io/lightgallery-desktop/'
 
   app 'lightgallery.app'
+
+  zap trash: [
+               '~/Library/Application Support/Lightgallery',
+               '~/Library/Caches/Lightgallery',
+               '~/Library/Preferences/lightgallery-desktop.plist',
+             ]
 end
