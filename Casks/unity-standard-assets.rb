@@ -1,6 +1,6 @@
 cask 'unity-standard-assets' do
-  version '2018.1.4f1,1a308f4ebef1'
-  sha256 '4fd6bae28f6bdc0463c965316c18283accabc75f862016e56c04b19eeecba2c1'
+  version '2018.1.5f1,732dbf75922d'
+  sha256 '86b301a9fd4f14cdd4b7c9a3e425bfc4a735dcdad7282f32c854e24fdcf480c6'
 
   url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacStandardAssetsInstaller/StandardAssets-#{version.before_comma}.pkg"
   appcast 'https://unity3d.com/get-unity/update'
