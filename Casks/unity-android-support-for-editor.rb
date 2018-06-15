@@ -3,6 +3,7 @@ cask 'unity-android-support-for-editor' do
   sha256 '4e21ddccca6bff448a94bc1ccb9000735ffcf840ae98a8115cae738412c3eb74'
 
   url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-#{version.before_comma}.pkg"
+  appcast 'https://unity3d.com/get-unity/update'
   name 'Unity Android Build Support'
   homepage 'https://unity3d.com/unity/'
 

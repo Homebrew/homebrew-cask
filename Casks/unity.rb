@@ -3,6 +3,7 @@ cask 'unity' do
   sha256 'de1aa7e035ae24c8ac6cae2e3d706dde7bf30809acee722487aab749255bf9fc'
 
   url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorInstaller/Unity.pkg"
+  appcast 'https://unity3d.com/get-unity/update'
   name 'Unity Editor'
   homepage 'https://unity3d.com/unity/'
 

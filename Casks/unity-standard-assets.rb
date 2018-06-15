@@ -3,6 +3,7 @@ cask 'unity-standard-assets' do
   sha256 '4fd6bae28f6bdc0463c965316c18283accabc75f862016e56c04b19eeecba2c1'
 
   url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacStandardAssetsInstaller/StandardAssets-#{version.before_comma}.pkg"
+  appcast 'https://unity3d.com/get-unity/update'
   name 'Unity Standard Assets'
   homepage 'https://unity3d.com/unity'
 
