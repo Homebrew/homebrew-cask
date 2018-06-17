@@ -6,7 +6,7 @@ cask 'cockatrice' do
   url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.after_comma.before_colon}-Release-#{version.before_comma}/Cockatrice-#{version.after_colon}-#{version.before_comma}.dmg"
   appcast 'https://github.com/Cockatrice/Cockatrice/releases.atom'
   name 'Cockatrice'
-  homepage 'http://www.woogerworks.com/'
+  homepage 'https://cockatrice.github.io/'
 
   app 'cockatrice.app'
   app 'oracle.app'
