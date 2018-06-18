@@ -8,5 +8,5 @@ cask 'gurps-character-sheet' do
   name 'GURPS Character Sheet'
   homepage 'http://gurpscharactersheet.com/'
 
-  app "gcs-#{version}-mac/GURPS Character Sheet.app"
+  app "GURPS Character Sheet/GURPS Character Sheet.app"
 end
