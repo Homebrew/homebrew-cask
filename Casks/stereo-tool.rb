@@ -1,5 +1,5 @@
 cask 'stereo-tool' do
-  version '8.54'
+  version '9.00'
   sha256 'e2fa88bdaa32517adb8b515ff30f6e00fbfb9b09dfce9e69665c9d5ec9f53d57'
 
   url 'http://www.stereotool.com/download/stereo_tool.zip'
