@@ -1,6 +1,6 @@
 cask 'prizmo' do
-  version '3.5.0.1'
-  sha256 '7e22f923312bd1dc862e5b9c8fa89f68f47d23f0e027a2b81e4aac871dbca6d5'
+  version '3.5.1'
+  sha256 '151e8106d013e5f3b6bd5afa2fc0271a6c77b69609ee1faced8e0fd6cc1414d3'
 
   url "https://www.creaceed.com/downloads/prizmo#{version.major}_#{version}.zip"
   appcast "https://www.creaceed.com/appcasts/prizmo#{version.major}.xml"
