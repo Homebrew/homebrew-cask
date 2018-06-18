@@ -1,6 +1,6 @@
 cask 'osxfuse' do
-  version '3.8.1'
-  sha256 'b0e719212f4da6577d25421c07c7f2d26af14cac91441539ec479449fb0c8ebb'
+  version '3.8.0'
+  sha256 '4661f160e678e46d83a9a63fd0b7eb10903f688f7d37ea066c543a37781a0007'
 
   # github.com/osxfuse was verified as official when first introduced to the cask
   url "https://github.com/osxfuse/osxfuse/releases/download/osxfuse-#{version}/osxfuse-#{version}.dmg"
