@@ -4,7 +4,7 @@ cask 'otter-browser' do
 
   # sourceforge.net/otter-browser was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/otter-browser/otter-browser-#{version}-setup.dmg"
-  appcast 'https://sourceforge.net/projects/otter-browser/rss'
+  appcast 'https://github.com/OtterBrowser/otter-browser/releases.atom'
   name 'Otter Browser'
   homepage 'https://otter-browser.org/'
 
