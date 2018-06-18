@@ -12,5 +12,5 @@ cask 'mtmr' do
 
   app 'MTMR.app'
 
-  zap delete: '~/Library/Application Support/MTMR'
+  zap trash: '~/Library/Application Support/MTMR'
 end
