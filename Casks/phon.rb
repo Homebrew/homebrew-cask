@@ -6,7 +6,7 @@ cask 'phon' do
   url "https://github.com/phon-ca/phon/releases/download/#{version}/Phon_macos_#{version.dots_to_underscores}.dmg"
   appcast 'https://github.com/phon-ca/phon/releases.atom'
   name 'Phon'
-  homepage 'https://www.phon.ca/phontrac'
+  homepage 'https://www.phon.ca/'
 
   app "Phon #{version.major_minor}.app"
 end
