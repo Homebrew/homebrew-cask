@@ -60,7 +60,7 @@ end
 
 ### Generating a Token for the Cask
 
-The Cask **token** is the mnemonic string people will use to interact with the Cask via `brew cask install`, `brew cask search`, etc. The name of the Cask **file** is simply the token with the extension `.rb` appended.
+The Cask **token** is the mnemonic string people will use to interact with the Cask via `brew cask install`, etc. The name of the Cask **file** is simply the token with the extension `.rb` appended.
 
 The easiest way to generate a token for a Cask is to run this command:
 
