@@ -1,6 +1,6 @@
 cask 'sql-operations-studio' do
-  version '0.30.4'
-  sha256 'f75091a90a5769bc8d99872e9fbe9f480f94bc5f277276093153f588f13354ec'
+  version '0.30.5'
+  sha256 '625639a41f4e21c316a1636e696df31a77b78888b5b6b3879e6900e97a636849'
 
   # github.com/Microsoft/sqlopsstudio was verified as official when first introduced to the cask
   url "https://github.com/Microsoft/sqlopsstudio/releases/download/#{version}/sqlops-macos-#{version}.zip"
