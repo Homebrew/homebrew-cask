@@ -1,6 +1,6 @@
 cask 'onionshare' do
-  version '1.3'
-  sha256 '262d0653945a06737502fb78bf2a159dbfdc93de6ff020c9ff2252db5d1ecd25'
+  version '1.3.1'
+  sha256 '6d748022b28ae0ae105ad595fa5d6428d7ce9e9882bc8808951f9870499519a2'
 
   # github.com/micahflee/onionshare was verified as official when first introduced to the cask
   url "https://github.com/micahflee/onionshare/releases/download/v#{version}/OnionShare-#{version}.pkg"
