@@ -1,6 +1,6 @@
 cask 'numi' do
-  version '3.18.2,184:1528282321'
-  sha256 'c71b6917a7af934283e128acf00ce69c3e457d3bf0cc485c7ce3fbc822a22230'
+  version '3.18.3,185:1529144261'
+  sha256 '115977662d8d6aa42db12b7f6c7d89d127f86a99a28f68a367cb760c6d0a7566'
 
   # dl.devmate.com/com.dmitrynikolaev.numi was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.dmitrynikolaev.numi/#{version.after_comma.before_colon}/#{version.after_colon}/Numi-#{version.after_comma.before_colon}.zip"
