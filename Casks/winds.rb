@@ -4,7 +4,7 @@ cask 'winds' do
 
   # s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/winds-#{version.major}.0-releases/releases/Winds-#{version}.dmg"
-  appcast 'https://github.com/GetStream/Winds/releases.atom'
+  appcast "https://s3.amazonaws.com/winds-#{version.major}.0-releases/latest.html"
   name 'Winds'
   homepage 'https://getstream.io/winds/'
 
