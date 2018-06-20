@@ -1,9 +1,9 @@
 cask 'sql-operations-studio' do
-  version '0.29.3,7099922c35bc3b3e223228c972cc03cee5abbe25'
-  sha256 '4d5cb335a8745d92f074a0349dc6c5718bfa44e64078e1badced9f53ae47dd79'
+  version '0.30.6'
+  sha256 'a4efe685458ce71b92f33f75eef6944532e47326603b6b2f1b6cdfe26f67df1d'
 
-  # sqlopsbuilds.blob.core.windows.net/stable was verified as official when first introduced to the cask
-  url "https://sqlopsbuilds.blob.core.windows.net/stable/#{version.after_comma}/sqlops-macos-#{version.before_comma}.zip"
+  # sqlopsbuilds.blob.core.windows.net/release was verified as official when first introduced to the cask
+  url "https://sqlopsbuilds.blob.core.windows.net/release/#{version}/sqlops-macos-#{version}.zip"
   appcast 'https://sqlops-update.azurewebsites.net/api/update/darwin/stable/VERSION'
   name 'SQL Operations Studio'
   homepage 'https://docs.microsoft.com/sql/sql-operations-studio/'
