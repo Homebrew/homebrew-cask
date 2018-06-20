@@ -7,5 +7,5 @@ cask 'annotation-edit' do
   name 'Annotation Edit'
   homepage 'http://www.zeitanker.com/content/tools/zeitanker_tools/zeitanker_annotation_edit/'
 
-  suite "Annotation Edit #{version.major_minor_patch}"
+  suite "Annotation Edit #{version}"
 end
