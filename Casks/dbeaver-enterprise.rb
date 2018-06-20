@@ -3,7 +3,7 @@ cask 'dbeaver-enterprise' do
   sha256 '7f42b824972087f6465fb1cfaf9796753acfdbd2dfd4b85494567febab3aeb74'
 
   url "https://dbeaver.com/files/#{version}/dbeaver-ee-#{version}-macos.dmg"
-  appcast 'https://dbeaver.com/product/version.xml'
+  appcast 'https://dbeaver.com/files/'
   name 'DBeaver Enterprise Edition'
   homepage 'https://dbeaver.com/'
 
