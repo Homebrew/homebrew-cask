@@ -11,6 +11,7 @@ cask 'resolume-avenue' do
   pkg 'Resolume Avenue Installer.pkg'
 
   uninstall pkgutil: [
+                       "com.resolume.pkg.ResolumeAvenue#{version.major}",
                        'com.resolume.pkg.ResolumeDXV',
                        'com.resolume.pkg.ResolumeQuickLook',
                      ]
