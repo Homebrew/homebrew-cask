@@ -1,6 +1,6 @@
 cask 'reaper' do
-  version '5.91'
-  sha256 'b4d8d6edfa0773634e24d59b0411454e626b9e246e04474f3131820b5124456f'
+  version '5.92'
+  sha256 '81c69ec6c0e0af818a180475c24f1c989df5769337d2ea1f442a52860ad93417'
 
   url "https://www.reaper.fm/files/#{version.major}.x/reaper#{version.no_dots}_x86_64.dmg"
   appcast 'https://www.reaper.fm/download.php'
