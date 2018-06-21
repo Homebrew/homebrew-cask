@@ -7,12 +7,11 @@ cask 'sip2sip' do
   name 'SIP2SIP'
   homepage 'http://sip2sip.info/'
 
+  app 'SIP2SIP.app'
 
   zap trash: [
                '~/Library/Application Support/SIP2SIP',
                '~/Library/Caches/com.agprojects.SIP2SIP',
-               '~/Library/Preferences/com.agprojects.SIP2SIP.plist'
+               '~/Library/Preferences/com.agprojects.SIP2SIP.plist',
              ]
-
-  app 'SIP2SIP.app'
 end
