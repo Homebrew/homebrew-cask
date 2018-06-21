@@ -1,6 +1,6 @@
 cask 'subutaicontrolcenter' do
-  version '7.1.0'
-  sha256 '8a3846795928419bdac260e43dbb849aab746947c9aae28eec100a7b6e3d8ab6'
+  version '7.1.1'
+  sha256 '8613d1fb3237ec27ecb28d8a050aab91ccf18a381113ea5eefe9338444a336cb'
 
   # cdn.subutai.io:8338/kurjun/rest/raw was verified as official when first introduced to the cask
   url 'https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center.pkg'
