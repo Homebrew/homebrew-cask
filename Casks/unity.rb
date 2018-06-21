@@ -1,6 +1,6 @@
 cask 'unity' do
-  version '2018.1.5f1,732dbf75922d'
-  sha256 'e44414968e84ff2c80640eeada373a945e7643ac8278b84fe628ebf2e857fc15'
+  version '2018.1.6,57cc34175ccf'
+  sha256 '06c76b8dcc39fdcdcda212b3b24a41eb4c4ddfe6de23f606aeacec0a4e4a1c23'
 
   url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorInstaller/Unity.pkg"
   appcast 'https://unity3d.com/get-unity/download/archive'
