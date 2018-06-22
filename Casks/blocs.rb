@@ -1,6 +1,6 @@
 cask 'blocs' do
-  version '2.6.0'
-  sha256 'a3488866a28e8b36cc856df0de85044fa5f6975ff0f0f9f86b4e3c66f5073964'
+  version '2.6.1'
+  sha256 'ef48ca2977685b45f0077c91af58764fd6ec78cb73abedce57605729a6c189b3'
 
   # uistore.io was verified as official when first introduced to the cask
   url "http://downloads.uistore.io/blocs/version-#{version.major}/Blocs.zip"
