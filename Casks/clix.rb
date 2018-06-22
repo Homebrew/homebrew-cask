@@ -7,4 +7,12 @@ cask 'clix' do
   homepage 'http://rixstep.com/4/0/clix/'
 
   app "CLIX/#{version.no_dots}/CLIX.app"
+
+  preflight do
+    set_permissions "#{staged_path}/CLIX/#{version.no_dots}/CLIX.app", '0755'
+  end
+
+  postflight do
+    set_permissions "#{appdir}/CLIX/#{version.no_dots}/CLIX.app", '0700'
+  end
 end
