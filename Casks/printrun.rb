@@ -7,5 +7,5 @@ cask 'printrun' do
   name 'Printrun'
   homepage 'https://github.com/kliment/Printrun'
 
-  app "Printrun-Mac-#{version}.app"
+  app "Printrun-Mac-#{version.after_comma}.app"
 end
