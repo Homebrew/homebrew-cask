@@ -7,5 +7,5 @@ cask 'chronicle' do
   name 'Chronicle'
   homepage 'http://chronicleapp.com/'
 
-  app 'Chronicle.app'
+  app "Chronicle #{version.major}.app"
 end
