@@ -6,7 +6,7 @@ cask 'photo-supreme-single-user' do
   name 'Photo Supreme Single User'
   homepage 'http://www.idimager.com/WP/?page_id=20'
 
-  pkg "PhotoSupreme_V#{version}.pkg"
+  pkg "PhotoSupreme_V#{version.major}.pkg"
 
   uninstall pkgutil: 'com.idimager.idimagersu'
 end
