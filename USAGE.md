@@ -88,16 +88,14 @@ The following aliases and abbreviations are provided for convenience:
 
 ## Tab Completion
 
-[Homebrew/homebrew-completions](https://github.com/Homebrew/homebrew-completions) supports `bash` and `fish` completions (only for `brew-cask` right now). Install them with:
+Homebrew-Cask comes with `bash` and `zsh` completion for the `brew cask` command.
+
+See https://docs.brew.sh/Shell-Completion for more information.
+
+`fish` completions can be installed with:
 
 ```bash
 $ brew install brew-cask-completion
-```
-
-For `zsh` completion support, simply run:
-
-```bash
-$ brew install zsh-completions
 ```
 
 ## Inspecting Installed Casks
