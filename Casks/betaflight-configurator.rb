@@ -1,6 +1,6 @@
 cask 'betaflight-configurator' do
-  version '10.2.0'
-  sha256 '44d7010baa81936df9356a615b09547958bf40a732784bbbfa29882dc5e82e13'
+  version '10.3.0'
+  sha256 'b1e5f32e48ff61d12343fe77165b241be1d180356fcd2ecdc94bf515e322db6b'
 
   url "https://github.com/betaflight/betaflight-configurator/releases/download/#{version}/betaflight-configurator_#{version}_macOS.dmg"
   appcast 'https://github.com/betaflight/betaflight-configurator/releases.atom'
