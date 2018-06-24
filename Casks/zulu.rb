@@ -11,10 +11,10 @@ cask 'zulu' do
 
   postflight do
     system_command '/bin/mv',
-                   args: ['-f', '--', "/Library/Java/JavaVirtualMachines/zulu-#{version.major}.jdk", "/Library/Java/JavaVirtualMachines/zulu-#{version}.jdk"],
+                   args: ['-f', '--', "/Library/Java/JavaVirtualMachines/zulu-#{version.major}.jdk", "/Library/Java/JavaVirtualMachines/zulu-#{version.before_comma}+#{version.after_comma.before_colon}.jdk"],
                    sudo: true
     system_command '/bin/ln',
-                   args: ['-nsf', '--', "/Library/Java/JavaVirtualMachines/zulu-#{version}.jdk", "/Library/Java/JavaVirtualMachines/zulu-#{version.major}.jdk"],
+                   args: ['-nsf', '--', "/Library/Java/JavaVirtualMachines/zulu-#{version.before_comma}+#{version.after_comma.before_colon}.jdk", "/Library/Java/JavaVirtualMachines/zulu-#{version.major}.jdk"],
                    sudo: true
     system_command '/bin/ln',
                    args: ['-nsf', '--', "/Library/Java/JavaVirtualMachines/zulu-#{version.major}.jdk/Contents/Home", '/Library/Java/Home'],
@@ -26,7 +26,7 @@ cask 'zulu' do
 
   uninstall pkgutil: "com.azulsystems.zulu.#{version.major}",
             delete:  [
-                       "/Library/Java/JavaVirtualMachines/zulu-#{version}.jdk",
+                       "/Library/Java/JavaVirtualMachines/zulu-#{version.before_comma}+#{version.after_comma.before_colon}.jdk",
                        "/Library/Java/JavaVirtualMachines/zulu-#{version.major}.jdk",
                        '/Library/Java/Home',
                      ]
