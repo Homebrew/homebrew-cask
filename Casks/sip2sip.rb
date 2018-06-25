@@ -4,6 +4,7 @@ cask 'sip2sip' do
 
   # blink.sipthor.net was verified as official when first introduced to the cask
   url 'https://blink.sipthor.net/download-sip2sip.phtml'
+  appcast 'https://blink.sipthor.net/SIP2SIPAppcast.xml'
   name 'SIP2SIP'
   homepage 'http://sip2sip.info/'
 
