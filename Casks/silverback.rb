@@ -1,5 +1,5 @@
 cask 'silverback' do
-  version '2.6.6'
+  version '2.7'
   sha256 'bee6233d3cc94ccd972b6c29f6777f329a4ac862dda5e699deab525491d82cae'
 
   # silverback.s3.amazonaws.com was verified as official when first introduced to the cask
