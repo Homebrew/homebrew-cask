@@ -1,4 +1,4 @@
-cask 'mu' do
+cask 'mu-editor' do
   version '1.0.0,16'
   sha256 'ae10cf856dca285bf53da5284fb77127fddf7773aa05c7c6104708af5fe054a8'
 
