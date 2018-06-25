@@ -1,6 +1,6 @@
 cask 'godot-mono' do
-  version '3.0.3'
-  sha256 '84554bc4d0a6a427c7d289df3b73bbe18d03f974632a2d7e847746af74ff2524'
+  version '3.0.4'
+  sha256 '1354d4c80fe15ad8bef5ed342e3920c74f30b51113ca8e54cecd6e12dc42b13c'
 
   # downloads.tuxfamily.org/godotengine was verified as official when first introduced to the cask
   url "https://downloads.tuxfamily.org/godotengine/#{version}/mono/Godot_v#{version}-stable_mono_osx.fat.zip"
