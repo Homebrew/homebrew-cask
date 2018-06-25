@@ -1,4 +1,4 @@
-cask 'filemaker-advanced' do
+cask 'filemaker-pro-advanced' do
   version '17.0.1.143'
   sha256 'b4c56c516886949ef20ce2783acde1a4ba3a3d1b17dde4a2409f55fcfd31c44b'
 
