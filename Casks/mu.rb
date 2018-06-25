@@ -8,5 +8,5 @@ cask 'mu' do
   name 'Mu'
   homepage 'https://codewith.mu/'
 
-  app 'Mu.app'
+  app 'mu-editor.app'
 end
