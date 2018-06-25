@@ -4,8 +4,7 @@ cask 'laullon-gitx' do
 
   # github.com/downloads/laullon was verified as official when first introduced to the cask
   url "https://github.com/downloads/laullon/gitx/GitX-L_v#{version}.zip"
-  appcast 'http://gitx.laullon.com/appcast.xml',
-          checkpoint: 'e4fce47175b38b461d1065919a82a2072652afe233adfe43fb22cb438907e9db'
+  appcast 'http://gitx.laullon.com/appcast.xml'
   name 'GitX (L)'
   homepage 'http://gitx.laullon.com/'
 

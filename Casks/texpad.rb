@@ -4,8 +4,7 @@ cask 'texpad' do
 
   # download.texpadapp.com was verified as official when first introduced to the cask
   url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.before_comma.dots_to_underscores}__#{version.after_comma.before_comma}__#{version.after_comma.after_comma}.dmg"
-  appcast 'https://www.texpad.com/static-collected/upgrades/texpadappcast.xml',
-          checkpoint: '70324384fc8fdcd1d93ecb153a5308210768eafdebbf82b09ab24fe5e4e8223e'
+  appcast 'https://www.texpad.com/static-collected/upgrades/texpadappcast.xml'
   name 'Texpad'
   homepage 'https://www.texpad.com/osx'
 

@@ -3,8 +3,7 @@ cask 'airtool' do
   sha256 '68fa07f9c3d452a34f505f454640e3920f919236b6017dda0a16d5f486f41b2d'
 
   url "https://www.adriangranados.com/downloads/airtool_#{version}.pkg"
-  appcast 'https://updates.devmate.com/com.adriangranados.Airtool.xml',
-          checkpoint: 'f958fc2ca7c337d9991fe150deeb1a22d6e2030eb0d0a3c7946b9070adf2f38e'
+  appcast 'https://updates.devmate.com/com.adriangranados.Airtool.xml'
   name 'Airtool'
   homepage 'https://www.adriangranados.com/apps/airtool'
 

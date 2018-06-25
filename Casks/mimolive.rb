@@ -1,10 +1,9 @@
 cask 'mimolive' do
-  version '4.1-25475'
-  sha256 '80deae64507c7f6ee3e3ab3a907470de9bf499e4acae85671d1957068116cad4'
+  version '4.1.1-25483'
+  sha256 '401d1d798d3a4cfb0f0322e6e18cd614bc1fef4b9b960560cd5670dda6303d12'
 
   url "https://cdn.boinx.com/software/mimolive/Boinx_mimoLive_#{version}.app.zip"
-  appcast 'https://boinx.com/d/connect/histories/mimolive',
-          checkpoint: '111086d7d4590aff9dcba3892e12312d01ab596769338bd3c3a49a8590596d57'
+  appcast 'https://boinx.com/d/connect/histories/mimolive'
   name 'mimoLive'
   homepage 'https://boinx.com/mimolive/'
 

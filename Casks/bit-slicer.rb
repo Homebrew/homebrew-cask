@@ -4,8 +4,7 @@ cask 'bit-slicer' do
 
   # zgcoder.net was verified as official when first introduced to the cask
   url "https://zgcoder.net/software/bitslicer/dist/stable/Bit_Slicer_#{version}.zip"
-  appcast 'https://zgcoder.net/bitslicer/update/appcast.xml',
-          checkpoint: 'dd69176f604029d5e98592880a448fb2a9f04f1d11eec3a965f84864e42efcc9'
+  appcast 'https://zgcoder.net/bitslicer/update/appcast.xml'
   name 'Bit Slicer'
   homepage 'https://github.com/zorgiepoo/bit-slicer/'
 

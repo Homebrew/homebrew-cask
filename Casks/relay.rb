@@ -1,6 +1,6 @@
 cask 'relay' do
-  version '1.0.0'
-  sha256 '122e6d8ed1ddbeab4c914f527e9460d2fadbce378802f6d43ebad7d6701b7adb'
+  version '1.0.1'
+  sha256 '5016c4efb2aa79a8fb151864c32f4562f6b1de9110c456d06abc782de1579b7c'
 
   # dl-getrelay-com.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://dl-getrelay-com.s3.amazonaws.com/desktop/Relay-#{version}.dmg"

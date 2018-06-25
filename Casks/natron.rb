@@ -4,8 +4,7 @@ cask 'natron' do
 
   url "https://downloads.natron.fr/Mac/releases/Natron-#{version}.dmg",
       referer: 'https://natron.fr/download/?os=Mac'
-  appcast 'https://github.com/NatronGithub/Natron/releases.atom',
-          checkpoint: 'e06bdcd33435996c605465315ce39726c7265e150cf9b520d6d38026e3745af6'
+  appcast 'https://github.com/NatronGithub/Natron/releases.atom'
   name 'Natron'
   homepage 'https://natron.fr/'
 

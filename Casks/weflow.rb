@@ -4,8 +4,7 @@ cask 'weflow' do
 
   # github.com/Tencent/WeFlow was verified as official when first introduced to the cask
   url "https://github.com/Tencent/WeFlow/releases/download/#{version}/WeFlow-#{version}.dmg"
-  appcast 'https://github.com/Tencent/WeFlow/releases.atom',
-          checkpoint: 'c2f0d97df2ef5927578e33903fd04750991ef833ef52565b2a12a3d0c7881aa3'
+  appcast 'https://github.com/Tencent/WeFlow/releases.atom'
   name 'WeFlow'
   homepage 'https://weflow.io/'
 

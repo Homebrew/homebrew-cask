@@ -1,8 +1,9 @@
 cask 'todour' do
-  version '2.10'
-  sha256 'e5f1fb8b4d115793155662937aa36fae99d78463e3b47990e0147610e83ab613'
+  version '2.12'
+  sha256 'df5452d5fc0f5c4d71ed6a3dd853b517ac0433c962daf300b599fea6f79b73c7'
 
   url "http://nerdur.com/Todour-#{version}.dmg"
+  appcast 'https://github.com/SverrirValgeirsson/Todour/releases.atom'
   name 'Todour'
   homepage 'http://nerdur.com/todour-pl/'
 

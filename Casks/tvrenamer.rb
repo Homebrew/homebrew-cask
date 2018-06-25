@@ -4,8 +4,7 @@ cask 'tvrenamer' do
 
   # github.com/tvrenamer/tvrenamer was verified as official when first introduced to the cask
   url "https://github.com/tvrenamer/tvrenamer/releases/download/v#{version}/TVRenamer-#{version}-osx64.zip"
-  appcast 'https://github.com/tvrenamer/tvrenamer/releases.atom',
-          checkpoint: '8475acb1aec25d68caa91b17d0fab7afe3acd78aaeed49b3824425fb335e446f'
+  appcast 'https://github.com/tvrenamer/tvrenamer/releases.atom'
   name 'TVRenamer'
   homepage 'http://tvrenamer.org/'
 

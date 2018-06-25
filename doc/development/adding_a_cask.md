@@ -15,8 +15,7 @@ cask 'shuttle' do
 
   # github.com/fitztrev/shuttle was verified as official when first introduced to the cask
   url "https://github.com/fitztrev/shuttle/releases/download/v#{version}/Shuttle.zip"
-  appcast 'https://github.com/fitztrev/shuttle/releases.atom',
-          checkpoint: 'c3dea2ed479b3ebba7c56ace6040901795f6dc6be92f9ffc30cc808d31723f17'
+  appcast 'https://github.com/fitztrev/shuttle/releases.atom'
   name 'Shuttle'
   homepage 'https://fitztrev.github.io/shuttle/'
 
@@ -49,8 +48,7 @@ cask 'airdisplay' do
   sha256 'db84a66fe3522929a0afa58a4fe0189977baded89df0035ead1ccd334f7b8126'
 
   url "https://www.avatron.com/updates/software/airdisplay/ad#{version.no_dots}.zip"
-  appcast 'https://avatron.com/updates/software/airdisplay/appcast.xml',
-          checkpoint: '938bdb9fbee793dce92818366cb2c19ba84c5b0cd6853fd893897d4a40689bc2'
+  appcast 'https://avatron.com/updates/software/airdisplay/appcast.xml'
   name 'Air Display'
   homepage 'https://avatron.com/apps/air-display/'
 
@@ -62,7 +60,7 @@ end
 
 ### Generating a Token for the Cask
 
-The Cask **token** is the mnemonic string people will use to interact with the Cask via `brew cask install`, `brew cask search`, etc. The name of the Cask **file** is simply the token with the extension `.rb` appended.
+The Cask **token** is the mnemonic string people will use to interact with the Cask via `brew cask install`, etc. The name of the Cask **file** is simply the token with the extension `.rb` appended.
 
 The easiest way to generate a token for a Cask is to run this command:
 
@@ -193,7 +191,7 @@ We maintain separate Taps for different types of binaries. Our nomenclature is:
 
 ### Stable Versions
 
-Stable versions live in the main repository at [Homebrew/homebrew-cask](https://github.com/Homebrew/homebrew-cask). They should run on the latest release of macOS or the previous point release (High Sierra and Sierra as of late 2017).
+Stable versions live in the main repository at [Homebrew/homebrew-cask](https://github.com/Homebrew/homebrew-cask). They should run on the latest release of macOS or the previous point release (High Sierra and Mojave as of late 2018).
 
 ### But There Is No Stable Version!
 

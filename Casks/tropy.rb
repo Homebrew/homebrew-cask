@@ -4,8 +4,7 @@ cask 'tropy' do
 
   # github.com/tropy/tropy was verified as official when first introduced to the cask
   url "https://github.com/tropy/tropy/releases/download/#{version}/tropy-#{version}.dmg"
-  appcast 'https://github.com/tropy/tropy/releases.atom',
-          checkpoint: '6a9ace634ee4365ec0293436b68c10a4c775770ffccb57ca98e887027b41ffa3'
+  appcast 'https://github.com/tropy/tropy/releases.atom'
   name 'Tropy'
   homepage 'https://tropy.org/'
 

@@ -4,8 +4,7 @@ cask 'integrity' do
 
   # peacockmedia.co.uk/integrity was verified as official when first introduced to the cask
   url 'http://peacockmedia.co.uk/integrity/integrity.dmg'
-  appcast 'http://peacockmedia.software/mac/integrity/version_history.html',
-          checkpoint: '8f9e7706c97a53a5cda20dc62476b8d74c9d81d2c7771396a61017a2611a6bae'
+  appcast 'http://peacockmedia.software/mac/integrity/version_history.html'
   name 'Integrity'
   homepage 'http://peacockmedia.software/mac/integrity/'
 

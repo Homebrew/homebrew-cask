@@ -4,8 +4,7 @@ cask 'liteide' do
 
   # github.com/visualfc/liteide was verified as official when first introduced to the cask
   url "https://github.com/visualfc/liteide/releases/download/x#{version.before_comma}/liteidex#{version.before_comma}.macosx-qt#{version.after_comma}.zip"
-  appcast 'https://github.com/visualfc/liteide/releases.atom',
-          checkpoint: 'ed5ec42ee9567478e224a13ad303ab12c9232a286f44a05dbf7b02c025bec8fe'
+  appcast 'https://github.com/visualfc/liteide/releases.atom'
   name 'LiteIDE'
   homepage 'http://liteide.org/'
 

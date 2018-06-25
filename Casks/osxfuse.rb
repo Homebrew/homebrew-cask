@@ -4,8 +4,7 @@ cask 'osxfuse' do
 
   # github.com/osxfuse was verified as official when first introduced to the cask
   url "https://github.com/osxfuse/osxfuse/releases/download/osxfuse-#{version}/osxfuse-#{version}.dmg"
-  appcast 'https://github.com/osxfuse/osxfuse/releases.atom',
-          checkpoint: '5f2842f35951a4ace6f475017f2653a890c28edc3d3aa780cd31b9f6cad37e4e'
+  appcast 'https://github.com/osxfuse/osxfuse/releases.atom'
   name 'OSXFUSE'
   homepage 'https://osxfuse.github.io/'
 

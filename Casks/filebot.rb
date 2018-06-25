@@ -4,8 +4,7 @@ cask 'filebot' do
 
   # sourceforge.net/filebot was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/filebot/filebot/FileBot_#{version}/FileBot_#{version}-darwin.tar.xz"
-  appcast 'https://app.filebot.net/update.xml',
-          checkpoint: 'cfc707d5378dd6e9ca479a4d20f92801e4a18ce326909ff31b99d417649a4fae'
+  appcast 'https://app.filebot.net/update.xml'
   name 'FileBot'
   homepage 'https://www.filebot.net/'
 

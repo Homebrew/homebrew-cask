@@ -4,8 +4,7 @@ cask 'visualboyadvance-m' do
 
   # github.com/visualboyadvance-m/visualboyadvance-m was verified as official when first introduced to the cask
   url "https://github.com/visualboyadvance-m/visualboyadvance-m/releases/download/v#{version}/visualboyadvance-m-Mac.zip"
-  appcast 'https://github.com/visualboyadvance-m/visualboyadvance-m/releases.atom',
-          checkpoint: '2a176560f40052fd7a6af786b02cb910495a29d8ad29710133d8e6a2dc5e25d4'
+  appcast 'https://github.com/visualboyadvance-m/visualboyadvance-m/releases.atom'
   name 'Visual Boy Advance - M'
   homepage 'http://vba-m.com/'
 

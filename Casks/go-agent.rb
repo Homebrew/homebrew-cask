@@ -4,8 +4,7 @@ cask 'go-agent' do
 
   # download.gocd.io/binaries was verified as official when first introduced to the cask
   url "https://download.gocd.io/binaries/#{version}/osx/go-agent-#{version}-osx.zip"
-  appcast 'https://github.com/gocd/gocd/releases.atom',
-          checkpoint: 'c53e6d95ddaf9a7d3a51b82011f8348a7f9e81ff702b088a885f5f58291a8113'
+  appcast 'https://github.com/gocd/gocd/releases.atom'
   name 'Go Agent'
   homepage 'https://www.gocd.org/'
 

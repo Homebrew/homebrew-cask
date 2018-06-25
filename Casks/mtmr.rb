@@ -1,10 +1,9 @@
 cask 'mtmr' do
-  version '0.16'
-  sha256 '523545c994b81527041b5a611cc2a0ba339d6b94753e12850f85790189338f77'
+  version '0.16.1'
+  sha256 'f26f8ed80d0f72c65e7693c62180bd001e7ce8d9754518da7124ea0bff4a4b03'
 
   url "https://github.com/Toxblh/MTMR/releases/download/v#{version}/MTMR.#{version}.dmg"
-  appcast 'https://github.com/Toxblh/MTMR/releases.atom',
-          checkpoint: '12de116f2cb92d3ddb52ac3ace8c681548e16fd39ad41f4b9f6c5d15f2f8b8d1'
+  appcast 'https://github.com/Toxblh/MTMR/releases.atom'
   name 'My TouchBar. My rules'
   homepage 'https://github.com/Toxblh/MTMR'
 
@@ -13,5 +12,5 @@ cask 'mtmr' do
 
   app 'MTMR.app'
 
-  zap delete: '~/Library/Application Support/MTMR'
+  zap trash: '~/Library/Application Support/MTMR'
 end

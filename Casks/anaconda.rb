@@ -1,11 +1,10 @@
 cask 'anaconda' do
-  version '5.1.0'
-  sha256 'be705b3c3a0ca29ee32ce7658890bb5edb32a9eadedc09dec3d7e3cfbfd23cb7'
+  version '5.2.0'
+  sha256 'c8089121dc89ffe8f9a0c01205bab75a112821a13d413152d6690f5eef094afa'
 
-  # repo.continuum.io/archive was verified as official when first introduced to the cask
-  url "https://repo.continuum.io/archive/Anaconda3-#{version}-MacOSX-x86_64.sh"
+  url "https://repo.anaconda.com/archive/Anaconda3-#{version}-MacOSX-x86_64.sh"
   name 'Continuum Analytics Anaconda'
-  homepage 'https://www.anaconda.com/what-is-anaconda/'
+  homepage 'https://www.anaconda.com/'
 
   depends_on macos: '>= :lion'
   container type: :naked

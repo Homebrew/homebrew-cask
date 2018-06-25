@@ -1,11 +1,10 @@
 cask 'lando' do
-  version '3.0.0-beta.45'
-  sha256 'd381cfff62784b7452091385913646042d6ba681cd34b5715a7a376f68fde830'
+  version '3.0.0-beta.47'
+  sha256 '074f0e1d48ae815894c67aaad8326442c0c3beba958b875d2ad5141a32a0e68a'
 
   # github.com/lando/lando was verified as official when first introduced to the cask
   url "https://github.com/lando/lando/releases/download/v#{version}/lando-v#{version}.dmg"
-  appcast 'https://github.com/lando/lando/releases.atom',
-          checkpoint: '900d124f3087e13820ea7be19a1a8bf1d789bf5bf39900c479d315a46b49f8e6'
+  appcast 'https://github.com/lando/lando/releases.atom'
   name 'Lando'
   homepage 'https://docs.devwithlando.io/'
 

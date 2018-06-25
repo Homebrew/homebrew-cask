@@ -4,8 +4,7 @@ cask 'gambit' do
 
   # iro.umontreal.ca/~gambit/download/gambit was verified as official when first introduced to the cask
   url "https://www.iro.umontreal.ca/~gambit/download/gambit/v#{version.major_minor}/prebuilt/gambit-v#{version.dots_to_underscores}-macosx-intel64.dmg"
-  appcast 'https://github.com/gambit/gambit/releases.atom',
-          checkpoint: 'bea4e240e07be723439ba5a9ad7f246d4e3aadac6a574bc81670e760d47e0892'
+  appcast 'https://github.com/gambit/gambit/releases.atom'
   name 'Gambit'
   homepage 'http://gambitscheme.org/'
 

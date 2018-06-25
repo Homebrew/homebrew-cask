@@ -4,8 +4,7 @@ cask 'subutaip2p' do
 
   # cdn.subutai.io:8338/kurjun/rest/raw was verified as official when first introduced to the cask
   url 'https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p.pkg'
-  appcast 'https://github.com/subutai-io/p2p/releases.atom',
-          checkpoint: '483912f563dd3c9023b962f897ac69bd4a0e9cb9df9d58e160878a3c82cc8d29'
+  appcast 'https://github.com/subutai-io/p2p/releases.atom'
   name 'Subutai P2P'
   homepage 'https://subutai.io/'
 
@@ -13,7 +12,8 @@ cask 'subutaip2p' do
 
   pkg 'subutai-p2p.pkg'
 
-  # This is a hack to force the file extension.
+  # This is a horrible hack to force the file extension.
+  # The backend code should be fixed so that this is not needed.
   preflight do
     system_command '/bin/mv', args: ['--', staged_path.join('get'), staged_path.join('subutai-p2p.pkg')]
   end

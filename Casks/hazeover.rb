@@ -3,8 +3,7 @@ cask 'hazeover' do
   sha256 '235e521e581a2d509dfe60704109ba15fce6c15455c4ca30a926eec0b3526514'
 
   url 'https://hazeover.com/HazeOver.dmg'
-  appcast 'https://hazeover.com/updates.xml',
-          checkpoint: 'd6fd039ed6610bf3d96c76d14768d012911be3055e1327242b150ab94f9c8fe0'
+  appcast 'https://hazeover.com/updates.xml'
   name 'HazeOver'
   homepage 'https://hazeover.com/'
 

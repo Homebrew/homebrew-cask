@@ -4,8 +4,7 @@ cask 'trailer' do
 
   # github.com/ptsochantaris/trailer was verified as official when first introduced to the cask
   url "https://github.com/ptsochantaris/trailer/releases/download/#{version}/trailer#{version.no_dots}.zip"
-  appcast 'https://github.com/ptsochantaris/trailer/releases.atom',
-          checkpoint: '27711012a8c7b48fbe0df732582624e310c6d28a9a16aa1d0ffc495741f165d6'
+  appcast 'https://github.com/ptsochantaris/trailer/releases.atom'
   name 'Trailer'
   homepage 'https://ptsochantaris.github.io/trailer/'
 

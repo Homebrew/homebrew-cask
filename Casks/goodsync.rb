@@ -1,10 +1,9 @@
 cask 'goodsync' do
-  version '10.9.0'
-  sha256 'ad93acdea828d49325fdcb59804a0b0ffccd4f89d62cf9bdef14599d6a42fbd0'
+  version '10.9.2'
+  sha256 '3b8dc3e2ae9fe7f3c5434207fba73e3d922e48eaf51aea34663f5d6b8f3b14b0'
 
   url "https://www.goodsync.com/download/goodsync-v#{version.major}-mac.dmg"
-  appcast 'https://www.goodsync.com/download',
-          checkpoint: '236553cd33b05bf55a58afb335f3a8653a54bda4cf93309ba56018a98e44de4a'
+  appcast 'https://www.goodsync.com/download'
   name 'GoodSync'
   homepage 'https://www.goodsync.com/'
 

@@ -4,8 +4,7 @@ cask 'qtox' do
 
   # github.com/qTox/qTox was verified as official when first introduced to the cask
   url "https://github.com/qTox/qTox/releases/download/v#{version}/qTox.dmg"
-  appcast 'https://github.com/qTox/qTox/releases.atom',
-          checkpoint: '41a7c64bb401642f7062f7df2e3e675ad1fce6ef1e9c932872aa4d94f8dedb0a'
+  appcast 'https://github.com/qTox/qTox/releases.atom'
   name 'qTox'
   homepage 'https://qtox.github.io/'
 
