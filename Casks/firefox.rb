@@ -129,6 +129,7 @@ cask 'firefox' do
                        ]
 
   app 'Firefox.app'
+  binary "#{appdir}/Firefox.app/Contents/MacOS/firefox"
 
   zap trash: [
                '/Library/Logs/DiagnosticReports/firefox_*',
