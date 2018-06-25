@@ -1,10 +1,9 @@
 cask 'shortcat' do
-  version '0.7.8'
-  sha256 'e72cacfdd32db9b97d48e866a447bec4d18f6b4012159069c4de4b0b87e683b9'
+  version '0.7.9'
+  sha256 'a6fb545f12783cde33f3b50b393e77bb721c32446dbf37fc71bb7a7a6a9b427e'
 
   url "https://files.shortcatapp.com/v#{version}/Shortcat.zip"
-  appcast 'https://shortcatapp.com/updates/appcast.xml',
-          checkpoint: '3bc007d7634d28348b2245d88902ae3d32992d74bd41cbd209e50a389f7a3c2a'
+  appcast 'https://shortcatapp.com/updates/appcast.xml'
   name 'Sproutcube Shortcat'
   homepage 'https://shortcatapp.com/'
 

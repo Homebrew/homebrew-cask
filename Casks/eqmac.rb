@@ -4,8 +4,7 @@ cask 'eqmac' do
 
   # github.com/nodeful/eqMac was verified as official when first introduced to the cask
   url "https://github.com/nodeful/eqMac#{version.major}/releases/download/V#{version}/eqMac#{version.major}.dmg"
-  appcast "https://github.com/nodeful/eqMac#{version.major}/releases.atom",
-          checkpoint: '3eb76b4bdc9b935629de67bf2721479cf8381cbb3d4cff50eaa4154a16fc465d'
+  appcast "https://github.com/nodeful/eqMac#{version.major}/releases.atom"
   name 'eqMac'
   homepage 'https://www.bitgapp.com/eqmac/'
 

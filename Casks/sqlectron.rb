@@ -4,8 +4,7 @@ cask 'sqlectron' do
 
   # github.com/sqlectron/sqlectron-gui was verified as official when first introduced to the cask
   url "https://github.com/sqlectron/sqlectron-gui/releases/download/v#{version}/Sqlectron-#{version}-mac.zip"
-  appcast 'https://github.com/sqlectron/sqlectron-gui/releases.atom',
-          checkpoint: '7f85aa677f1439576f06889d4042a0d2665cf0b665c25ab52b9025dd98241015'
+  appcast 'https://github.com/sqlectron/sqlectron-gui/releases.atom'
   name 'Sqlectron'
   homepage 'https://sqlectron.github.io/'
 

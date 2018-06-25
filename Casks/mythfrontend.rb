@@ -4,8 +4,7 @@ cask 'mythfrontend' do
 
   # downloads.sourceforge.net was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/mythtvformacosx/MythFrontend-#{version.major_minor}-intel-10.9-v#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/mythtvformacosx/rss?path=/',
-          checkpoint: 'ab4861cf53ab2a9d006aec31ed89378ad242bef1199eb1864436076f3e39c583'
+  appcast 'https://sourceforge.net/projects/mythtvformacosx/rss?path=/'
   name 'MythFrontend'
   homepage 'https://www.mythtv.org/'
 

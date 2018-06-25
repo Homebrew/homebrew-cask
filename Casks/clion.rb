@@ -1,10 +1,9 @@
 cask 'clion' do
-  version '2018.1.2,181.4668.70'
-  sha256 '2d0353fcea8f85d80116b30a9776b698251c1d80611791ac852262d8dc189cd1'
+  version '2018.1.5,181.5281.33'
+  sha256 'f6e793bbabfdee337bc9d6fdf73105a49000d4a3345436803484c7f43b0e8dc9'
 
   url "https://download.jetbrains.com/cpp/CLion-#{version.before_comma}.dmg"
-  appcast 'https://data.services.jetbrains.com/products/releases?code=CL&latest=true&type=release',
-          checkpoint: '6c9d8fc431251545227181d81b88e12f50f102b79e5225884070fd8e3d9779ac'
+  appcast 'https://data.services.jetbrains.com/products/releases?code=CL&latest=true&type=release'
   name 'CLion'
   homepage 'https://www.jetbrains.com/clion/'
 

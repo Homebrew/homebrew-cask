@@ -4,8 +4,7 @@ cask 'armory' do
 
   # github.com was verified as official when first introduced to the cask
   url "https://github.com/goatpig/BitcoinArmory/releases/download/v#{version}/armory_#{version}_osx.tar.gz"
-  appcast 'https://github.com/goatpig/BitcoinArmory/releases.atom',
-          checkpoint: 'f686c411e125209fb5c852cf90cb3ea901e757f950e731e2d5582151e6d428d7'
+  appcast 'https://github.com/goatpig/BitcoinArmory/releases.atom'
   name 'Armory'
   homepage 'https://btcarmory.com/'
 

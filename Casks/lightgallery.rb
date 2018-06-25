@@ -4,10 +4,15 @@ cask 'lightgallery' do
 
   # github.com/sachinchoolur/lightgallery-desktop was verified as official when first introduced to the cask
   url "https://github.com/sachinchoolur/lightgallery-desktop/releases/download/#{version}/lightgallery_#{version}.dmg-mac.zip"
-  appcast 'https://github.com/sachinchoolur/lightgallery-desktop/releases.atom',
-          checkpoint: '0b289b08e63fd75c148761f82e012bdd2b486bbfdab7e933114951323c9e201c'
+  appcast 'https://github.com/sachinchoolur/lightgallery-desktop/releases.atom'
   name 'lightgallery'
   homepage 'https://sachinchoolur.github.io/lightgallery-desktop/'
 
   app 'lightgallery.app'
+
+  zap trash: [
+               '~/Library/Application Support/Lightgallery',
+               '~/Library/Caches/Lightgallery',
+               '~/Library/Preferences/lightgallery-desktop.plist',
+             ]
 end

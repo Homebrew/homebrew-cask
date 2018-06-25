@@ -4,8 +4,7 @@ cask 'whatsyoursign' do
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/WhatsYourSign_#{version}.zip"
-  appcast 'https://objective-see.com/products/changelogs/WhatsYourSign.txt',
-          checkpoint: '8ae427edbf036ab38b1bb9039dedc0e1be3756d0fa4a040db655721502532cf0'
+  appcast 'https://objective-see.com/products/changelogs/WhatsYourSign.txt'
   name 'What\'s Your Sign?'
   homepage 'https://objective-see.com/products/whatsyoursign.html'
 

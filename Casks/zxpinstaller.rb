@@ -4,8 +4,7 @@ cask 'zxpinstaller' do
 
   # github.com/CreativeDo/ZXPInstaller was verified as official when first introduced to the cask
   url "https://github.com/CreativeDo/ZXPInstaller/releases/download/#{version}/ZXPInstaller.dmg"
-  appcast 'https://github.com/CreativeDo/ZXPInstaller/releases.atom',
-          checkpoint: 'a9e95e5ee12c086bdc392f5e0f9cbb034a5b3c8d46ae17d44c2b1794699abf6a'
+  appcast 'https://github.com/CreativeDo/ZXPInstaller/releases.atom'
   name 'ZXPInstaller'
   homepage 'http://zxpinstaller.com/'
 

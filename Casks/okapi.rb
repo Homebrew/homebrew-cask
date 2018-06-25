@@ -10,6 +10,6 @@ cask 'okapi' do
   suite "Okapi_#{version}"
 
   caveats do
-    depends_on_java('8+')
+    depends_on_java '8+'
   end
 end

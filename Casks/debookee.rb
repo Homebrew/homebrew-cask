@@ -4,8 +4,7 @@ cask 'debookee' do
 
   # iwaxx.com/debookee was verified as official when first introduced to the cask
   url 'https://www.iwaxx.com/debookee/debookee.zip'
-  appcast 'https://www.iwaxx.com/debookee/appcast.php',
-          checkpoint: '78654d9057ca16b745a36d283846fa2532d2dc0669b0d7eb02eac074bba6f89c'
+  appcast 'https://www.iwaxx.com/debookee/appcast.php'
   name 'Debookee'
   homepage 'https://debookee.com/'
 

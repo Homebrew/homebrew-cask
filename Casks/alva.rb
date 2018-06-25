@@ -4,8 +4,7 @@ cask 'alva' do
 
   # github.com/meetalva/alva was verified as official when first introduced to the cask
   url "https://github.com/meetalva/alva/releases/download/v#{version}/Alva-#{version}-mac.zip"
-  appcast 'https://github.com/meetalva/alva/releases.atom',
-          checkpoint: '345afc0994022649d69ad7a9d2b5e698122b987f7997610f46b9812d6574637b'
+  appcast 'https://github.com/meetalva/alva/releases.atom'
   name 'Alva'
   homepage 'https://meetalva.io/'
 

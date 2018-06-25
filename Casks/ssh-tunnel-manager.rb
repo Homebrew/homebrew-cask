@@ -4,6 +4,7 @@ cask 'ssh-tunnel-manager' do
 
   # dl.devmate.com/org.tynsoe.sshtunnelmanager was verified as official when first introduced to the cask
   url "https://dl.devmate.com/org.tynsoe.sshtunnelmanager/#{version.before_comma}/#{version.after_comma}/SSHTunnelManager-#{version.before_comma}.zip"
+  appcast 'https://updates.devmate.com/org.tynsoe.sshtunnelmanager.xml'
   name 'SSH Tunnel Manager'
   homepage 'https://www.tynsoe.org/v2/stm/'
 

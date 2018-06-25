@@ -4,8 +4,7 @@ cask 'airflow' do
 
   # amazonaws.com/Airflow was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/Airflow/Download/Airflow%20#{version}.zip"
-  appcast 'https://s3.amazonaws.com/Airflow/Updates/appcast-osx.xml',
-          checkpoint: '012c22c7bce1061485202a328111f2e7cb51188b90d009ccab884e5dcc8aa61c'
+  appcast 'https://s3.amazonaws.com/Airflow/Updates/appcast-osx.xml'
   name 'Airflow'
   homepage 'https://airflowapp.com/'
 

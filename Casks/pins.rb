@@ -2,10 +2,9 @@ cask 'pins' do
   version :latest
   sha256 :no_check
 
-  # pinsapp.s3.amazonaws.com/downloads was verified as official when first introduced to the cask
-  url 'https://pinsapp.s3.amazonaws.com/downloads/Pins.dmg'
+  url 'http://pinsapp.com/download/Pins.dmg'
   name 'Pins'
-  homepage 'https://pinsapp.com/'
+  homepage 'http://pinsapp.com/'
 
   app 'Pins.app'
 

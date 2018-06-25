@@ -7,8 +7,7 @@ cask 'plug' do
     version '2.0.17'
     sha256 'ecde912d29f83afa386f08dd86ba39a01f96d10d2d3693bb3e2b6415449069ee'
     url "https://www.plugformac.com/updates/plug#{version.major}/Plug-latest.dmg"
-    appcast "https://www.plugformac.com/updates/plug#{version.major}/sparklecast.xml",
-            checkpoint: '0611f580e5927da3b4de186008a74fd1429f14c95749a75c75e852a7683b5b05'
+    appcast "https://www.plugformac.com/updates/plug#{version.major}/sparklecast.xml"
   end
 
   name 'Plug'

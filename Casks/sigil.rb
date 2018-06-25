@@ -4,8 +4,7 @@ cask 'sigil' do
 
   # github.com/Sigil-Ebook/Sigil was verified as official when first introduced to the cask
   url "https://github.com/Sigil-Ebook/Sigil/releases/download/#{version}/Sigil-#{version}-Mac-Package.dmg"
-  appcast 'https://github.com/Sigil-Ebook/Sigil/releases.atom',
-          checkpoint: 'e640fbe036146b047813cc43b919c9f55c47cd7c0ac7f87e710b108f69ba3b15'
+  appcast 'https://github.com/Sigil-Ebook/Sigil/releases.atom'
   name 'Sigil'
   homepage 'https://sigil-ebook.com/'
 

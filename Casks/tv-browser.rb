@@ -4,8 +4,7 @@ cask 'tv-browser' do
 
   # sourceforge.net/tvbrowser was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/tvbrowser/tvbrowser_#{version}_macjava.dmg"
-  appcast 'https://sourceforge.net/projects/tvbrowser/rss',
-          checkpoint: '9ea7b46492ef993bef0f498ef62fcb8255c10ab0220fff228ca2d04e8017720e'
+  appcast 'https://sourceforge.net/projects/tvbrowser/rss'
   name 'TV-Browser'
   homepage 'http://www.tvbrowser.org/'
 

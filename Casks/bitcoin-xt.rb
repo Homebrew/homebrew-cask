@@ -7,8 +7,7 @@ cask 'bitcoin-xt' do
       cookies: {
                  'i_follow_redirects' => 'yes',
                }
-  appcast 'https://github.com/bitcoinxt/bitcoinxt/releases.atom',
-          checkpoint: '843d6ef3717eaf20b2e88f78e3eacae10dc745a0c134f34187acfdbfcfdb4d8d'
+  appcast 'https://github.com/bitcoinxt/bitcoinxt/releases.atom'
   name 'Bitcoin XT'
   homepage 'https://bitcoinxt.software/'
 

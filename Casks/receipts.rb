@@ -1,12 +1,13 @@
 cask 'receipts' do
-  version '1.7.4-183'
-  sha256 '016430d49a5b1df2b416a913020178fba3ba2844f63d841954e9e2f4bd413bb2'
+  version '1.8.0-192'
+  sha256 '32dea2c25bee86ba0dd18f39869a749e6c220c9a6d726fe01a97f297c4f8d8da'
 
   url "https://www.receipts-app.com/update/download/Receipts-#{version}.zip"
-  appcast 'https://www.receipts-app.com/updater.php',
-          checkpoint: 'c6354604204e765de37ac78b65f79bd90b26038f255f075f92849e3a4250d992'
+  appcast 'https://www.receipts-app.com/updater.php'
   name 'Receipts'
   homepage 'https://www.receipts-app.com/'
+
+  depends_on macos: '>= :yosemite'
 
   app 'Receipts.app'
 end

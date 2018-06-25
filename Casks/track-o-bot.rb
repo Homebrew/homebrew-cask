@@ -4,8 +4,7 @@ cask 'track-o-bot' do
 
   # github.com/stevschmid/track-o-bot was verified as official when first introduced to the cask
   url "https://github.com/stevschmid/track-o-bot/releases/download/#{version}/Track-o-Bot_#{version}.dmg"
-  appcast 'https://github.com/stevschmid/track-o-bot/releases.atom',
-          checkpoint: '48df135240023aaf90a27ba89429853409947748019c9a42979242460ebf7473'
+  appcast 'https://github.com/stevschmid/track-o-bot/releases.atom'
   name 'Track-o-Bot'
   homepage 'https://trackobot.com/'
 

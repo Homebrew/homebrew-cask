@@ -1,11 +1,10 @@
 cask 'station' do
-  version '1.11.2'
-  sha256 '5c0bf5e0689547cd3c89110ac4e5efa10b6a698ccd52306955127a758dc64ec0'
+  version '1.14.1'
+  sha256 '6dd940dc531df893cb220468bd8e8290a510673d105408e21c74e15b2be17f18'
 
   # github.com/getstation/desktop-app-releases was verified as official when first introduced to the cask
-  url "https://github.com/getstation/desktop-app-releases/releases/download/#{version}/Station-#{version}-mac.zip"
-  appcast 'https://github.com/getstation/desktop-app-releases/releases.atom',
-          checkpoint: '0a8bf61f63c114486573a212b384f9a9c9a22eb6e903c15bc5ae1038c06c122c'
+  url "https://github.com/getstation/desktop-app-releases/releases/download/#{version}/Station-#{version}.dmg"
+  appcast 'https://github.com/getstation/desktop-app-releases/releases.atom'
   name 'Station'
   homepage 'https://getstation.com/'
 

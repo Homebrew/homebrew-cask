@@ -4,8 +4,7 @@ cask 'openvisualtraceroute' do
 
   # downloads.sourceforge.net/openvisualtrace was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/openvisualtrace/#{version}/OpenVisualTraceRoute#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/openvisualtrace/rss',
-          checkpoint: '407fb59baa4b9eb7651d9243b89c30b7481590947ef78bd5a4c24f5810f56531'
+  appcast 'https://sourceforge.net/projects/openvisualtrace/rss'
   name 'OpenVisualTraceroute'
   homepage 'http://visualtraceroute.net/'
 
@@ -14,6 +13,6 @@ cask 'openvisualtraceroute' do
   zap trash: '~/ovtr'
 
   caveats do
-    depends_on_java('8')
+    depends_on_java '8'
   end
 end

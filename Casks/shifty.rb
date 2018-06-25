@@ -4,8 +4,7 @@ cask 'shifty' do
 
   # github.com/thompsonate/Shifty was verified as official when first introduced to the cask
   url "https://github.com/thompsonate/Shifty/releases/download/#{version}/Shifty-#{version}.dmg"
-  appcast 'https://github.com/thompsonate/Shifty/releases.atom',
-          checkpoint: 'ae71658ae4c92a4d34cdf97a104cd1a89fb21f292c0ce684383b2cfebc83949f'
+  appcast 'https://github.com/thompsonate/Shifty/releases.atom'
   name 'Shifty'
   homepage 'http://shifty.natethompson.io/'
 

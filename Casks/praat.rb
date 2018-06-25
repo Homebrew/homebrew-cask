@@ -4,8 +4,7 @@ cask 'praat' do
 
   # github.com/praat/praat/releases was verified as official when first introduced to the cask
   url "https://github.com/praat/praat/releases/download/v#{version}/praat#{version.no_dots}_mac64.dmg"
-  appcast 'https://github.com/praat/praat/releases.atom',
-          checkpoint: 'c65fb16eb92e1aab257a9096fd1f2a919223a16c5d850aec8ce69daff0431e68'
+  appcast 'https://github.com/praat/praat/releases.atom'
   name 'Praat'
   homepage 'http://www.fon.hum.uva.nl/praat/'
 

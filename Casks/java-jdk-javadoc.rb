@@ -26,10 +26,7 @@ cask 'java-jdk-javadoc' do
     end
   end
 
-  caveats <<~EOS
-    Installing this Cask means you have AGREED to the Oracle Binary Code
-    License Agreement for Java SE at
-
-      https://www.oracle.com/technetwork/java/javase/terms/license/index.html
-  EOS
+  caveats do
+    license 'https://www.oracle.com/technetwork/java/javase/terms/license/index.html'
+  end
 end

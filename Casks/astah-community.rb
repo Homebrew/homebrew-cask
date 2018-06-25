@@ -4,8 +4,7 @@ cask 'astah-community' do
 
   # cdn.change-vision.com was verified as official when first introduced to the cask
   url "http://cdn.change-vision.com/files/astah-community-#{version.before_comma.dots_to_underscores}-#{version.after_comma}-MacOs.dmg"
-  appcast 'http://astah.net/release-notes/community',
-          checkpoint: '10700fb03bcc1534619812005dc11abb16f010f81418bb0ccb98fa3f750c862d'
+  appcast 'http://astah.net/release-notes/community'
   name 'Change Vision Astah Community'
   homepage 'http://astah.net/editions/community'
 

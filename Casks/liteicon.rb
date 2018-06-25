@@ -8,8 +8,7 @@ cask 'liteicon' do
   end
 
   url "https://www.freemacsoft.net/downloads/LiteIcon_#{version}.zip"
-  appcast 'https://freemacsoft.net/liteicon/updates.xml',
-          checkpoint: '65a5e1eb06fe9c12c5bf1e0f37e0e68ededa6318e72eecbc8c32a348c7bb4f6f'
+  appcast 'https://freemacsoft.net/liteicon/updates.xml'
   name 'LiteIcon'
   homepage 'https://freemacsoft.net/liteicon/'
 

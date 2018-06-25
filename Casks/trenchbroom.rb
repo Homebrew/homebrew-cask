@@ -4,8 +4,7 @@ cask 'trenchbroom' do
 
   # github.com/kduske/TrenchBroom/releases/download was verified as official when first introduced to the cask
   url "https://github.com/kduske/TrenchBroom/releases/download/v#{version}/TrenchBroom-MacOSX-v#{version}-Release.dmg"
-  appcast 'https://github.com/kduske/TrenchBroom/releases.atom',
-          checkpoint: '718180147efceea6ab7c2a6cbf682b72aa5be61fc7d8846830b2b17635070259'
+  appcast 'https://github.com/kduske/TrenchBroom/releases.atom'
   name 'TrenchBroom'
   homepage 'http://kristianduske.com/trenchbroom/'
 

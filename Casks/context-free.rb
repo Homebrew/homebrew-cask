@@ -3,8 +3,7 @@ cask 'context-free' do
   sha256 '5baae1cf7487ea0902f781f0891d3f7dc2c01071ab9546a1e2523676ea45c0da'
 
   url "http://www.contextfreeart.org/download/ContextFree#{version}.dmg"
-  appcast 'https://github.com/MtnViewJohn/context-free/releases.atom',
-          checkpoint: '673ebd22da9d419065bb8f57dee7ba6e5d318df2d30875088d78fadb3710159b'
+  appcast 'https://github.com/MtnViewJohn/context-free/releases.atom'
   name 'Context Free'
   homepage 'https://www.contextfreeart.org/'
 

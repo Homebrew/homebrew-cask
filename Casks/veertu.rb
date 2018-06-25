@@ -4,8 +4,7 @@ cask 'veertu' do
 
   # d2sje6b9huarvp.cloudfront.net was verified as official when first introduced to the cask
   url "https://d2sje6b9huarvp.cloudfront.net/VeertuDesktop-#{version}.dmg"
-  appcast 'https://d2sje6b9huarvp.cloudfront.net/vdoaupd.rss',
-          checkpoint: 'fadbb21aa91efd48ebc69bf71a09cf13134dd1f7ea454d2e4df98d2b3c655611'
+  appcast 'https://d2sje6b9huarvp.cloudfront.net/vdoaupd.rss'
   name 'Veertu Desktop'
   homepage 'https://veertu.com/'
 

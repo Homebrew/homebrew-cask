@@ -1,6 +1,6 @@
 cask 'microsoft-r-open' do
-  version '3.4.4'
-  sha256 '290bdd23e045f28b30f4dc346abf1ac5fb4b8ac9e560df1170320d6b7baf6ffc'
+  version '3.5.0'
+  sha256 '105551bc5e6d4d6e1b24d328d27cae01c63fe0a357076bb2599c9be40e296f3a'
 
   # mran.blob.core.windows.net was verified as official when first introduced to the cask
   url "https://mran.blob.core.windows.net/install/mro/#{version}/microsoft-r-open-#{version}.pkg"

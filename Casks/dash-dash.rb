@@ -4,8 +4,7 @@ cask 'dash-dash' do
 
   # github.com/dashpay/dash was verified as official when first introduced to the cask
   url "https://github.com/dashpay/dash/releases/download/v#{version}/dashcore-#{version}-osx.dmg"
-  appcast 'https://github.com/dashpay/dash/releases.atom',
-          checkpoint: '0b3aafa287ffd57f2e1f5cb672b449c655166e3249f976848ccccb0852822f78'
+  appcast 'https://github.com/dashpay/dash/releases.atom'
   name 'Dash'
   homepage 'https://www.dash.org/'
 

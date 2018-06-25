@@ -1,10 +1,9 @@
 cask 'audirvana-plus' do
-  version '3.2.7'
-  sha256 'f00216760fcbdb27dd75470ce3e0d37091cd7c22daa6f1043de8bfeda63cf67c'
+  version '3.2.8'
+  sha256 '94633707ca487620edbdb8d1b004caef83e8aa504822db4bf7cc868293fb31f1'
 
   url "https://audirvana.com/delivery/AudirvanaPlus_#{version}.dmg"
-  appcast "https://audirvana.com/delivery/audirvanaplus#{version.major}_appcast.xml",
-          checkpoint: '82bd50967eba5d32b00152835a684f5a69ef9f5c0d3a28b10b3db0e312c32b91'
+  appcast "https://audirvana.com/delivery/audirvanaplus#{version.major}_appcast.xml"
   name "Audirvana Plus #{version.major}"
   homepage 'https://audirvana.com/'
 

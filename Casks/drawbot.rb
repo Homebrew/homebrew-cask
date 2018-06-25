@@ -4,8 +4,7 @@ cask 'drawbot' do
 
   # typemytype.com/drawBot was verified as official when first introduced to the cask
   url 'http://static.typemytype.com/drawBot/DrawBot.dmg'
-  appcast 'https://raw.githubusercontent.com/typemytype/drawbot/master/drawBot/drawBotSettings.py',
-          checkpoint: '221eff636e2e25ba8a15d67bcd2040ef83b58e7b9894753112f5ab444f46d69f'
+  appcast 'https://raw.githubusercontent.com/typemytype/drawbot/master/drawBot/drawBotSettings.py'
   name 'DrawBot'
   homepage 'http://www.drawbot.com/'
 

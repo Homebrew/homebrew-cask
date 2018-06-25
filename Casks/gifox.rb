@@ -4,8 +4,7 @@ cask 'gifox' do
 
   # s3.eu-central-1.amazonaws.com/dstlalgzor/gifox was verified as official when first introduced to the cask
   url "https://s3.eu-central-1.amazonaws.com/dstlalgzor/gifox/#{version}.dmg"
-  appcast 'https://s3.eu-central-1.amazonaws.com/dstlalgzor/gifox/appcast.xml',
-          checkpoint: 'c74d6a5d6b45d32ddf878eddd040bfe8bf6c84c7944cb6f116afc1ac177afa8b'
+  appcast 'https://s3.eu-central-1.amazonaws.com/dstlalgzor/gifox/appcast.xml'
   name 'gifox'
   homepage 'https://gifox.io/'
 
