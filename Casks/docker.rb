@@ -29,18 +29,22 @@ cask 'docker' do
                        ],
             quit:      'com.docker.docker'
 
-  zap trash: [
-               '~/Library/Application Scripts/com.docker.helper',
-               '~/Library/Caches/KSCrashReports/Docker',
-               '~/Library/Caches/com.docker.docker',
-               '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.docker.docker',
-               '~/Library/Containers/com.docker.docker',
-               '~/Library/Containers/com.docker.helper',
-               '~/Library/Group Containers/group.com.docker',
-               '~/Library/Preferences/com.docker.docker.plist',
-             ],
-      rmdir: [
-               '~/Library/Caches/KSCrashReports',
-               '~/Library/Caches/com.plausiblelabs.crashreporter.data',
-             ]
+  zap trash:  [
+                '/usr/local/bin/docker-compose.backup',
+                '/usr/local/bin/docker-machine.backup',
+                '/usr/local/bin/docker.backup',
+                '~/Library/Application Scripts/com.docker.helper',
+                '~/Library/Caches/KSCrashReports/Docker',
+                '~/Library/Caches/com.docker.docker',
+                '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.docker.docker',
+                '~/Library/Containers/com.docker.docker',
+                '~/Library/Containers/com.docker.helper',
+                '~/Library/Group Containers/group.com.docker',
+                '~/Library/Preferences/com.docker.docker.plist',
+              ],
+      delete: '/private/var/tmp/com.docker.vmnetd.socket',
+      rmdir:  [
+                '~/Library/Caches/KSCrashReports',
+                '~/Library/Caches/com.plausiblelabs.crashreporter.data',
+              ]
 end
