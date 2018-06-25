@@ -4,8 +4,7 @@ cask 'clipy' do
 
   # github.com/Clipy/Clipy was verified as official when first introduced to the cask
   url "https://github.com/Clipy/Clipy/releases/download/#{version}/Clipy_#{version}.dmg"
-  appcast 'https://github.com/Clipy/Clipy/releases.atom',
-          checkpoint: '4393207c4f4497023a687700bd8cf9a46d579e8217af0e3cff2ae06d94e8e5a5'
+  appcast 'https://github.com/Clipy/Clipy/releases.atom'
   name 'Clipy'
   homepage 'https://clipy-app.com/'
 

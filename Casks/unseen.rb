@@ -1,6 +1,6 @@
 cask 'unseen' do
-  version '0.4.6'
-  sha256 'ec9a750d3d1a6c2ffe9a772c7694be12e10d328f68a13b5a8fbf21946b127147'
+  version '0.4.7'
+  sha256 '3a6a6dc53bb85722cca2993966a47bb18ee93c431e4248866a8136e3b32bba2f'
 
   url "https://download.unseen.is/unseenapp-is-v#{version}/unseenapp-beta-v#{version}-osx.zip"
   name 'Unseen'

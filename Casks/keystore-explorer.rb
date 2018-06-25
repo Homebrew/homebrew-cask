@@ -4,8 +4,7 @@ cask 'keystore-explorer' do
 
   # github.com/kaikramer/keystore-explorer was verified as official when first introduced to the cask
   url "https://github.com/kaikramer/keystore-explorer/releases/download/v#{version}/kse-#{version.no_dots}.dmg"
-  appcast 'https://github.com/kaikramer/keystore-explorer/releases.atom',
-          checkpoint: '9b91815d3deb31a4e834bd482ab8bb3446e5d1d59c91c6c6ef948b9bd9a2e64c'
+  appcast 'https://github.com/kaikramer/keystore-explorer/releases.atom'
   name 'KeyStore Explorer'
   homepage 'http://keystore-explorer.org/'
 

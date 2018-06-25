@@ -1,10 +1,9 @@
 cask 'therm' do
-  version '0.1.7'
-  sha256 '465c225ef5c4289eb0176bc118ec16629390aa2fc114ffd53b2faa19eb6af009'
+  version '0.1.8'
+  sha256 'b83448377566beab5600f716c0503f54ae0151c45c3b5e0fed723560fedaa19b'
 
   url "https://github.com/trufae/Therm/releases/download/#{version}/Therm.app.zip"
-  appcast 'https://github.com/trufae/Therm/releases.atom',
-          checkpoint: 'f1a90097be98412d23fe0f31b47f2347504c56e751ce9dd3636dc1339cd9e7f4'
+  appcast 'https://github.com/trufae/Therm/releases.atom'
   name 'Therm'
   homepage 'https://github.com/trufae/Therm'
 

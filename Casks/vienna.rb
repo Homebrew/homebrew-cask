@@ -4,8 +4,7 @@ cask 'vienna' do
 
   # bintray.com/viennarss was verified as official when first introduced to the cask
   url "https://dl.bintray.com/viennarss/vienna-rss/Vienna#{version}.tgz"
-  appcast 'https://viennarss.github.io/sparkle-files/changelog.xml',
-          checkpoint: 'f5f1a20ea934e8693cfdb85b83e79ef9d79fe502fcb05627e595a3ec03349a74'
+  appcast 'https://viennarss.github.io/sparkle-files/changelog.xml'
   name 'Vienna'
   homepage 'http://www.vienna-rss.com/'
 

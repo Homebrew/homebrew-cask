@@ -3,8 +3,7 @@ cask 'apple-juice' do
   sha256 'b77a9deefe429ce875c8b628e3fb41b4fb6dbe4408401dd9ec3b9a845b51bc45'
 
   url "https://github.com/raphaelhanneken/apple-juice/releases/download/#{version}/Apple.Juice.dmg"
-  appcast 'https://github.com/raphaelhanneken/apple-juice/releases.atom',
-          checkpoint: '54ca7b9e5b7ddeba0af9430ef15c2518d074010c6ec2c2be9179b241ca226fa0'
+  appcast 'https://github.com/raphaelhanneken/apple-juice/releases.atom'
   name 'Apple Juice'
   homepage 'https://github.com/raphaelhanneken/apple-juice'
 

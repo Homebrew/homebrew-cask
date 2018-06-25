@@ -4,8 +4,7 @@ cask 'librecad' do
 
   # github.com/LibreCAD/LibreCAD was verified as official when first introduced to the cask
   url "https://github.com/LibreCAD/LibreCAD/releases/download/#{version}/LibreCAD_#{version.dots_to_hyphens}.dmg"
-  appcast 'https://github.com/LibreCAD/LibreCAD/releases.atom',
-          checkpoint: '490f293425e95a3ca9833b74cf2034bb98c434d78b13e0db2da77e2f4eb9ccf0'
+  appcast 'https://github.com/LibreCAD/LibreCAD/releases.atom'
   name 'LibreCAD'
   homepage 'http://librecad.org/cms/home.html'
 

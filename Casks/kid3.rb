@@ -4,8 +4,7 @@ cask 'kid3' do
   sha256 '07844015af79674461e9cf46eef5991aac02cbeecd9dee9b88c33200b4a508e2'
 
   url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin.dmg"
-  appcast 'https://sourceforge.net/projects/kid3/rss',
-          checkpoint: '9f70ca398a4588a6175ef15aa998627b2bd3b61931cd72c44345495d2aaa2b81'
+  appcast 'https://sourceforge.net/projects/kid3/rss'
   name 'Kid3'
   homepage 'http://kid3.sourceforge.net/'
 

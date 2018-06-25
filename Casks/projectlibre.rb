@@ -4,8 +4,7 @@ cask 'projectlibre' do
 
   # sourceforge.net/projectlibre was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/projectlibre/ProjectLibre/#{version.major_minor}/ProjectLibre-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/projectlibre/rss?path=/ProjectLibre',
-          checkpoint: '81de9423473f85272160e65781f4221e2c4e9cde9e9dfa8423744e93690a15b0'
+  appcast 'https://sourceforge.net/projects/projectlibre/rss?path=/ProjectLibre'
   name 'ProjectLibre'
   homepage 'https://www.projectlibre.com/'
 

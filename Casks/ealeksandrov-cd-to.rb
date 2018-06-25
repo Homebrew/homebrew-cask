@@ -3,8 +3,7 @@ cask 'ealeksandrov-cd-to' do
   sha256 'bcc450c23da12a2e3b82ad60ca3698b0464ee96b11cc077348d26ad1b2439600'
 
   url "https://github.com/ealeksandrov/cdto/releases/download/#{version.dots_to_underscores}/cd_to_#{version.major_minor.dots_to_underscores}.zip"
-  appcast 'https://github.com/ealeksandrov/cdto/releases.atom',
-          checkpoint: 'be0f914c9f7966980ef8d8c8c52cdf18ba782ebb2035c6939611d92c2e43f17f'
+  appcast 'https://github.com/ealeksandrov/cdto/releases.atom'
   name 'cd_to'
   homepage 'https://github.com/ealeksandrov/cdto'
 

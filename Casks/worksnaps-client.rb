@@ -1,6 +1,6 @@
 cask 'worksnaps-client' do
-  version '1.1.20170828'
-  sha256 'd537df5184a89094a83a48a892e8efc774f2c51b7fc1f429abc064f03a80a99f'
+  version '1.1.20171212'
+  sha256 '4b8d5b6b79394ee4d74d070c1f15b1e88b69a4ff1fcd558186654e732df8467d'
 
   # worksnaps-download.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://worksnaps-download.s3.amazonaws.com/WSClient-mac-10.9-#{version}.dmg"

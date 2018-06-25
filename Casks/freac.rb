@@ -4,8 +4,7 @@ cask 'freac' do
 
   # sourceforge.net/bonkenc was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/bonkenc/freac-#{version}-macosx.dmg"
-  appcast 'https://sourceforge.net/projects/bonkenc/rss',
-          checkpoint: '25db413c755d23ab096e7b01300a158cd25b06422d50dd93b38c1ac579b6113a'
+  appcast 'https://sourceforge.net/projects/bonkenc/rss'
   name 'fre:ac'
   homepage 'https://www.freac.org/'
 

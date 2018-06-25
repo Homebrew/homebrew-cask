@@ -4,8 +4,7 @@ cask 'microblog' do
 
   # s3.amazonaws.com/micro.blog was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/micro.blog/mac/Micro.blog_#{version}.zip"
-  appcast 'https://s3.amazonaws.com/micro.blog/mac/appcast.xml',
-          checkpoint: '6d9b59e5aeb334a95299f1226ca0c1b4730e18ebcd960fbf95762d6ea4b07251'
+  appcast 'https://s3.amazonaws.com/micro.blog/mac/appcast.xml'
   name 'Micro.blog'
   homepage 'http://help.micro.blog/2017/mac-version/'
 

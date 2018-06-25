@@ -1,16 +1,16 @@
 cask 'fork' do
-  version '1.0.67.2'
-  sha256 'cdb07e4774e44da5662d67780b7b6f1f17fc7a4d2734b7e61f80c8fa409298cc'
+  version '1.0.67.5'
+  sha256 'f02fc78fe635dbd2a8f2e93e6053d58907d6b4a9a25be30f67f0eb3cc2cbb653'
 
   url 'https://git-fork.com/update/files/Fork.dmg'
-  appcast 'https://git-fork.com/update/feed.xml',
-          checkpoint: '84ec63c7dbaa75d07f2d0fd8d98fb750b9005883d70432e4485a8f74f7e7c609'
+  appcast 'https://git-fork.com/update/feed.xml'
   name 'Fork'
   homepage 'https://git-fork.com/'
 
   auto_updates true
 
   app 'Fork.app'
+  binary "#{appdir}/Fork.app/Contents/Resources/fork_cli", target: 'fork'
 
   zap trash: [
                '~/Library/Application Support/com.DanPristupov.Fork',

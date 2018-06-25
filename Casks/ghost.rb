@@ -4,8 +4,7 @@ cask 'ghost' do
 
   # github.com/TryGhost/Ghost-Desktop was verified as official when first introduced to the cask
   url "https://github.com/TryGhost/Ghost-Desktop/releases/download/v#{version}/ghost-desktop-#{version}-osx.dmg"
-  appcast 'https://github.com/TryGhost/Ghost-Desktop/releases.atom',
-          checkpoint: 'd06349f3893b35d2622cb81fdd9c05ac65c4deef113bfcc5d5a840a23796af7e'
+  appcast 'https://github.com/TryGhost/Ghost-Desktop/releases.atom'
   name 'Ghost Desktop'
   homepage 'https://ghost.org/downloads/'
 

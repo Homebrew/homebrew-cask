@@ -4,8 +4,7 @@ cask 'screens-connect' do
 
   # dl.devmate.com/com.edovia.Screens-Connect was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.edovia.Screens-Connect/#{version.patch}/#{version.after_comma}/ScreensConnect-#{version.patch}.zip"
-  appcast 'https://updates.devmate.com/com.edovia.Screens-Connect.xml',
-          checkpoint: '409637746d87046c8eb746d6971955cd21d9b01b06833698dc1ff7c4b805829c'
+  appcast 'https://updates.devmate.com/com.edovia.Screens-Connect.xml'
   name 'Screens Connect'
   homepage 'https://screensconnect.com/'
 

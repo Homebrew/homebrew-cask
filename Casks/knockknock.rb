@@ -4,8 +4,7 @@ cask 'knockknock' do
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/KnockKnock_#{version}.zip"
-  appcast 'https://objective-see.com/products/changelogs/KnockKnock.txt',
-          checkpoint: '2df38711440d62d4504ad9007a20452ee4448227e011230a3d2934a764f06f02'
+  appcast 'https://objective-see.com/products/changelogs/KnockKnock.txt'
   name 'KnockKnock'
   homepage 'https://objective-see.com/products/knockknock.html'
 

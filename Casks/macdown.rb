@@ -4,8 +4,7 @@ cask 'macdown' do
 
   # github.com/MacDownApp/macdown was verified as official when first introduced to the cask
   url "https://github.com/MacDownApp/macdown/releases/download/v#{version}/MacDown.app.zip"
-  appcast 'https://macdown.uranusjr.com/sparkle/macdown/stable/appcast.xml',
-          checkpoint: '0f66f2a2ec60b25ce7b15cf153db4245badf0c1252196e2bfda8a9d401767789'
+  appcast 'https://macdown.uranusjr.com/sparkle/macdown/stable/appcast.xml'
   name 'MacDown'
   homepage 'https://macdown.uranusjr.com/'
 

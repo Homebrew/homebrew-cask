@@ -4,8 +4,7 @@ cask 'framer' do
 
   # devmate.com/com.motif.framer was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.motif.framer/#{version.before_comma}/#{version.after_comma}/FramerStudio-#{version.before_comma}.zip"
-  appcast 'https://updates.devmate.com/com.motif.framer.xml',
-          checkpoint: '898a621173c2e4bd2f309db086b5e02144234512617eca0aa84b8e607cbc3735'
+  appcast 'https://updates.devmate.com/com.motif.framer.xml'
   name 'Framer'
   homepage 'https://framer.com/'
 

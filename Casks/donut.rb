@@ -4,8 +4,7 @@ cask 'donut' do
 
   # github.com/EtherbitHQ/donut was verified as official when first introduced to the cask
   url "https://github.com/EtherbitHQ/donut/releases/download/#{version}/donut-#{version}.dmg"
-  appcast 'https://github.com/EtherbitHQ/donut/releases.atom',
-          checkpoint: 'dbf5e29c7e259c8cc72a3a664106b10d032070da9e7c45cedc26fdd914730db2'
+  appcast 'https://github.com/EtherbitHQ/donut/releases.atom'
   name 'donut'
   homepage 'https://www.etherbit.in/pages/donut'
 

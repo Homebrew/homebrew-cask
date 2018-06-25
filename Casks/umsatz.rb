@@ -4,8 +4,7 @@ cask 'umsatz' do
 
   # moapp.software was verified as official when first introduced to the cask
   url 'https://download.moapp.software/Umsatz.zip'
-  appcast 'https://sparkle.moapp.software/umsatz.xml',
-          checkpoint: '2accc2924ed429dfefdcfe0fddc29c7b0f4da7cfc01adc2b17eab9433b809b74'
+  appcast 'https://sparkle.moapp.software/umsatz.xml'
   name 'Umsatz'
   homepage 'https://umsatz-programm.de/'
 

@@ -4,8 +4,7 @@ cask 'bitshares' do
 
   # github.com/bitshares/bitshares-ui was verified as official when first introduced to the cask
   url "https://github.com/bitshares/bitshares-ui/releases/download/#{version}/BitShares-#{version}.dmg"
-  appcast 'https://github.com/bitshares/bitshares-ui/releases.atom',
-          checkpoint: '20827331fc4a19cdb7457c605567f8308eb636c1f71e86fd1da334e3274ae4c8'
+  appcast 'https://github.com/bitshares/bitshares-ui/releases.atom'
   name 'BitShares'
   homepage 'https://bitshares.org/'
 

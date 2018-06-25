@@ -1,10 +1,9 @@
 cask 'vuescan' do
-  version '9.6.09'
-  sha256 '0a32afbd83e90eb39613ce1322df6b6fd3e3792ba2bc5f2e94f53a7440c0459f'
+  version '9.6.10'
+  sha256 '15835048b4af7ba309fb4c432424ed8c821f7f23c3ae02e5b75b57bf328e3c33'
 
   url "https://www.hamrick.com/files/vuex64#{version.major_minor.no_dots}.dmg"
-  appcast 'https://www.hamrick.com/old-versions.html',
-          checkpoint: 'a075a05ef70015aede6012e2049bee95678cd558596e4e8fb20248df988a5006'
+  appcast 'https://www.hamrick.com/old-versions.html'
   name 'VueScan'
   homepage 'https://www.hamrick.com/'
 

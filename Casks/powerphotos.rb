@@ -13,8 +13,7 @@ cask 'powerphotos' do
     url 'https://www.fatcatsoftware.com/powerphotos/PowerPhotos.zip'
   end
 
-  appcast 'https://www.fatcatsoftware.com/powerphotos/powerphotos_appcast.xml',
-          checkpoint: '70bdaf4f30db2f4d91457a4609a23f511f3e0f6e4e372b3569a8e0d8d187acb0'
+  appcast 'https://www.fatcatsoftware.com/powerphotos/powerphotos_appcast.xml'
   name 'PowerPhotos'
   homepage 'https://www.fatcatsoftware.com/powerphotos/'
 

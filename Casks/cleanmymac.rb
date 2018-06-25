@@ -4,8 +4,7 @@ cask 'cleanmymac' do
 
   # devmate.com/com.macpaw.CleanMyMac was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.macpaw.CleanMyMac#{version.major}/#{version.major_minor_patch}/#{version.after_comma}/CleanMyMac3-#{version.major_minor_patch}.zip"
-  appcast "https://updates.devmate.com/com.macpaw.CleanMyMac#{version.major}.xml",
-          checkpoint: '9a77615d0963f5eff9a207d71bcb409313946c40f00ffaf521fe4b07b6deb7ba'
+  appcast "https://updates.devmate.com/com.macpaw.CleanMyMac#{version.major}.xml"
   name 'CleanMyMac'
   homepage 'https://macpaw.com/cleanmymac'
 

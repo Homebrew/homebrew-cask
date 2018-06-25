@@ -4,8 +4,7 @@ cask 'avibrazil-rdm' do
 
   # avi.alkalay.net/software/RDM was verified as official when first introduced to the cask
   url "https://avi.alkalay.net/software/RDM/RDM-#{version}.pkg"
-  appcast 'https://avi.alkalay.net/software/RDM/',
-          checkpoint: 'cedd8af3916e693ad4d46cb484f5fa10870915f9e975cf88bc2c3d44781ebfbc'
+  appcast 'https://avi.alkalay.net/software/RDM/'
   name 'RDM'
   homepage 'https://github.com/avibrazil/RDM'
 

@@ -4,8 +4,7 @@ cask 'satellite-eyes' do
 
   # satellite-eyes.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://satellite-eyes.s3.amazonaws.com/satellite-eyes-#{version}.zip"
-  appcast 'https://satellite-eyes.s3.amazonaws.com/appcast.xml',
-          checkpoint: 'dd1aad6e1a3ccf91e4ed36daddc83b040efae2b77e74c04a9e4538081d901ee2'
+  appcast 'https://satellite-eyes.s3.amazonaws.com/appcast.xml'
   name 'Satellite Eyes'
   homepage 'http://satelliteeyes.tomtaylor.co.uk/'
 

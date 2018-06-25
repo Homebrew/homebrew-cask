@@ -1,14 +1,18 @@
 cask 'resolume-avenue' do
-  version '6.0.8.60677'
-  sha256 'f6f45145d66966ad29ac1e0d0a8e1ae28f73cb94b6005cca47724e99ede284de'
+  version '6.0.9'
+  sha256 '6a231157fa631fef4568d29b18248eefe0c6aaadebfe87b3fabfb992b88f1944'
 
-  url "https://resolume.com/download/Resolume_Avenue_#{version.major_minor_patch.dots_to_underscores}_Installer.dmg"
-  appcast 'https://resolume.com/update/avenue_mac.xml',
-          checkpoint: 'e75261f671a70a2eabf7181c339782c2be1305d313472d6557f9905005abb34a'
+  # dd5sgwxv3xok.cloudfront.net was verified as official when first introduced to the cask
+  url "https://dd5sgwxv3xok.cloudfront.net/Resolume_Avenue_#{version.dots_to_underscores}_Installer.dmg"
+  appcast 'https://resolume.com/update/avenue_mac.xml'
   name 'Resolume Avenue'
   homepage 'https://resolume.com/'
 
   pkg 'Resolume Avenue Installer.pkg'
 
-  uninstall pkgutil: 'com.resolume.pkg.ResolumeAvenue*'
+  uninstall pkgutil: [
+                       "com.resolume.pkg.ResolumeAvenue#{version.major}",
+                       'com.resolume.pkg.ResolumeDXV',
+                       'com.resolume.pkg.ResolumeQuickLook',
+                     ]
 end

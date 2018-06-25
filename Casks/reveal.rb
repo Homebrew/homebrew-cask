@@ -1,10 +1,9 @@
 cask 'reveal' do
-  version '15'
-  sha256 '57186d7df6c74ac763853adfb541c5c21255e857c227b1d8833a034a95a76bae'
+  version '16'
+  sha256 '17e67e58b0ec8766c06c996a572b53e6b3b2beeb1f823d9d3412de9b6a38ede6'
 
   url "https://download.revealapp.com/Reveal.app-#{version}.zip"
-  appcast 'https://revealapp.com/download/',
-          checkpoint: '0db8c6eeadc17d917952e4866d36ea3f0d7a953df52ce2cd98bce1c114e5e85f'
+  appcast 'https://revealapp.com/download/'
   name 'Reveal'
   homepage 'https://revealapp.com/'
 

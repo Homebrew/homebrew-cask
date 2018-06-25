@@ -4,8 +4,7 @@ cask 'lulu' do
 
   # github.com/objective-see/LuLu was verified as official when first introduced to the cask
   url "https://github.com/objective-see/LuLu/releases/download/#{version}/LuLu_#{version.dots_to_underscores}.zip"
-  appcast 'https://github.com/objective-see/LuLu/releases.atom',
-          checkpoint: 'c27550974f8fd1af3f306a1e08d20d9994e8ea0bc41d949134f567ba29ada088'
+  appcast 'https://github.com/objective-see/LuLu/releases.atom'
   name 'LuLu'
   homepage 'https://objective-see.com/products/lulu.html'
 
