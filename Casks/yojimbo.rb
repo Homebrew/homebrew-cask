@@ -4,8 +4,7 @@ cask 'yojimbo' do
 
   # amazonaws.com/BBSW-download was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/BBSW-download/Yojimbo_#{version}.dmg"
-  appcast 'https://versioncheck.barebones.com/Yojimbo.xml',
-          checkpoint: '398e62e09442015812d175f1e06546fd6ad7c44cd7591d24b6c5e35fdfe67d2f'
+  appcast 'https://versioncheck.barebones.com/Yojimbo.xml'
   name 'Yojimbo'
   homepage 'https://www.barebones.com/products/yojimbo/'
 

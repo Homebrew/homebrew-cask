@@ -4,8 +4,7 @@ cask 'abricotine' do
 
   # github.com/brrd/Abricotine was verified as official when first introduced to the cask
   url "https://github.com/brrd/Abricotine/releases/download/#{version}/Abricotine-#{version}-osx-x64.zip"
-  appcast 'https://github.com/brrd/Abricotine/releases.atom',
-          checkpoint: '1dcd5d078062b71f2cde5bf91726394f8e0263c08bb6264683be97f4a49edb13'
+  appcast 'https://github.com/brrd/Abricotine/releases.atom'
   name 'abricotine'
   homepage 'https://abricotine.brrd.fr/'
 

@@ -4,8 +4,7 @@ cask 'writefull' do
 
   # s3-eu-west-1.amazonaws.com/writefull-binaries was verified as official when first introduced to the cask
   url "https://s3-eu-west-1.amazonaws.com/writefull-binaries/#{version}/Writefull.dmg"
-  appcast 'https://writefullapp.com/js/download-urls.js',
-          checkpoint: 'd83cc103b252b411627472e3db8d521236139ac8e74529acf36a379047948260'
+  appcast 'https://writefullapp.com/js/download-urls.js'
   name 'Writefull'
   homepage 'https://writefullapp.com/'
 

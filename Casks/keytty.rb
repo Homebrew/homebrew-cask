@@ -4,8 +4,7 @@ cask 'keytty' do
 
   # dl.devmate.com/com.keytty.Keytty was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.keytty.Keytty/#{version.before_comma}/#{version.after_comma}/keytty-#{version.before_comma}.zip"
-  appcast 'https://updates.devmate.com/com.keytty.Keytty.xml',
-          checkpoint: 'b9f59064f4adf618ee15fd434d4616c9affa565bbbbdcdc808504f55e0892ced'
+  appcast 'https://updates.devmate.com/com.keytty.Keytty.xml'
   name 'Keytty'
   homepage 'https://keytty.com/'
 

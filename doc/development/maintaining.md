@@ -8,7 +8,7 @@ __^^ NOTE - DRAFT DOC! ^^__
 
 As a relatively large open source project with plenty of daily activity, Homebrew-Cask requires regular care and feeding. This includes reviewing and merging PRs, diagnosing bugs, improving documentation, discussing project policy and features, and plenty more!
 
-This responsibility is shared by @caskroom/maintainers - a team of humans spanning the globe each of whom has agreed to dedicate some of their spare time to helping our dear users. What a kind and friendly bunch they must be! (It’s true, they are.)
+This responsibility is shared by @Homebrew/cask - a team of humans spanning the globe each of whom has agreed to dedicate some of their spare time to helping our dear users. What a kind and friendly bunch they must be! (It’s true, they are.)
 
 As the project matures and grows, so does the team of maintainers. It’s becoming more and more important to write down things that once were done ad-hoc.
 
@@ -44,7 +44,7 @@ Label | Description | Issues | Pull Requests
 **documentation** | Relates to the documentation. | &#x2713; | &#x2713;
 **duplicate** | An issue or pull request that is essentially the same as another. Should be immediately closed. | &#x2713; | &#x2713;
 **enhancement** | Something we want implemented. Must always be accompanied by **cask** or **core**. | &#x2713; | &#x2713;
-**future** | Something that can currently only be referenced and will only be possible to act upon in the future, after certain conditions are met. Currently references [changes to the installation behaviour](https://github.com/caskroom/homebrew-cask/issues/13201). To be used sparingly. | &#x2713; | &#x2713;
+**future** | Something that can currently only be referenced and will only be possible to act upon in the future, after certain conditions are met. Currently references [changes to the installation behaviour](https://github.com/Homebrew/homebrew-cask/issues/13201). To be used sparingly. | &#x2713; | &#x2713;
 **meta** | Relates to Homebrew-Cask itself as a project and its policies/decisions. | &#x2713; |
 **on hold** | A pull request that depends on another being merged before it itself can be as well. |  | &#x2713;
 **roadmap** | Roadmap for feature implementation. | &#x2713; |
@@ -53,7 +53,7 @@ Label | Description | Issues | Pull Requests
 **upstream** | Something we have no hand in, and can only be fixed with intervention from developers outside Homebrew-Cask. Always refers to a cask, and never to the core. | &#x2713; | &#x2713;
 **awaiting maintainer feedback** | A maintainer requires input from other maintainers to proceed. Other maintainers should occasionally check this label and give their feedback on the subject, if able. | &#x2713; | &#x2713;
 **awaiting user reply** | A maintainer requires further action or information from the original poster to proceed. Particularly useful to weed out those cases where issues and pull requests would otherwise be left open indefinitely because the original poster never replies. | &#x2713; | &#x2713;
-**awaiting verification** | A pull request that [requires verification](https://github.com/caskroom/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/sha256.md#updating-the-sha256) of a `sha256` change. |  | &#x2713;
+**awaiting verification** | A pull request that [requires verification](https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/sha256.md#updating-the-sha256) of a `sha256` change. |  | &#x2713;
 
 ## Handling Cask Update PRs
 
@@ -65,7 +65,7 @@ Lastly, if you see an outdated cask that just needs a version bump, you can use 
 
 ## Tips
 
-* To keep your repository up to date with caskroom/master, you can create a custom bash function to save some typing. Feel free to adapt the following set of commands to your specific needs --> `cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask; git checkout master; git pull origin; git push "${GITHUB_USERNAME}" master; git remote prune origin; git fetch -p origin; git remote update --prune`
+* To keep your repository up to date, you can create a custom bash function to save some typing. Feel free to adapt the following set of commands to your specific needs --> `cd "$(brew --repository)"/Library/Taps/Homebrew/homebrew-cask; git checkout master; git pull origin; git push "${GITHUB_USERNAME}" master; git remote prune origin; git fetch -p origin; git remote update --prune`
 
 ## Ideas for other things to include here
 

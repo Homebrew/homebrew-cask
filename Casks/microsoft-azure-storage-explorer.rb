@@ -6,7 +6,7 @@ cask 'microsoft-azure-storage-explorer' do
   name 'Microsoft Azure Storage Explorer'
   homepage 'https://azure.microsoft.com/en-us/features/storage-explorer/'
 
-  pkg 'MicrosoftAzureStorageExplorer-2/Microsoft Azure Storage Explorer.pkg'
+  pkg 'MicrosoftAzureStorageExplorer/Microsoft Azure Storage Explorer.pkg'
 
   uninstall pkgutil: 'com.microsoft.StorageExplorer.*'
 end

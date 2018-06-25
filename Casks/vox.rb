@@ -4,8 +4,7 @@ cask 'vox' do
 
   # devmate.com/com.coppertino.Vox was verified as official when first introduced to the cask
   url 'https://dl.devmate.com/com.coppertino.Vox/Vox.dmg'
-  appcast 'https://updates.devmate.com/com.coppertino.Vox.xml',
-          checkpoint: '027278951864ae54578aef216bfda8abbe68afdd5bca42632cfed19edae65b35'
+  appcast 'https://updates.devmate.com/com.coppertino.Vox.xml'
   name 'VOX'
   homepage 'https://vox.rocks/mac-music-player'
 

@@ -8,8 +8,7 @@ cask 'witch' do
     sha256 '49b636bced9a0c0add8a8404bcd4d3d1886ae7b94b7eaf05688f30cf49358bd4'
 
     url 'https://manytricks.com/download/witch'
-    appcast 'https://manytricks.com/witch/appcast.xml',
-            checkpoint: '461bedccb57d2dd83a6a1a300135b8873d76745ef458ee5ec1459604d165462a'
+    appcast 'https://manytricks.com/witch/appcast.xml'
   end
 
   name 'Witch'

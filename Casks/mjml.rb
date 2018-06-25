@@ -4,8 +4,7 @@ cask 'mjml' do
 
   # github.com/mjmlio/mjml-app was verified as official when first introduced to the cask
   url "https://github.com/mjmlio/mjml-app/releases/download/v#{version}/mjml-app-#{version}-mac.zip"
-  appcast 'https://github.com/mjmlio/mjml-app/releases.atom',
-          checkpoint: 'c20d1ee114df11de8c39b494cd7f23195584a21b7ac2ee61ecd7c7c98bc5f650'
+  appcast 'https://github.com/mjmlio/mjml-app/releases.atom'
   name 'MJML'
   homepage 'https://mjmlio.github.io/mjml-app/'
 

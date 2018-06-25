@@ -4,8 +4,7 @@ cask 'vagrant-vmware-utility' do
 
   # releases.hashicorp.com/vagrant-vmware-utility was verified as official when first introduced to the cask
   url "https://releases.hashicorp.com/vagrant-vmware-utility/#{version}/vagrant-vmware-utility_#{version}_x86_64.dmg"
-  appcast 'https://releases.hashicorp.com/vagrant-vmware-utility/',
-          checkpoint: '8d47d24d4e6f134eea18d1f41f4106b3431409630973664624a530274fcfb84f'
+  appcast 'https://releases.hashicorp.com/vagrant-vmware-utility/'
   name 'Vagrant VMware Utility'
   homepage 'https://www.vagrantup.com/vmware/downloads.html'
 

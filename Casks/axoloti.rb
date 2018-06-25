@@ -4,8 +4,7 @@ cask 'axoloti' do
 
   # github.com/axoloti/axoloti was verified as official when first introduced to the cask
   url "https://github.com/axoloti/axoloti/releases/download/#{version}/axoloti-mac-#{version}.dmg"
-  appcast 'https://github.com/axoloti/axoloti/releases.atom',
-          checkpoint: '448924453923cd34c05f2005ea556c447d609b96ef9ecb35d2038d450f2e1cea'
+  appcast 'https://github.com/axoloti/axoloti/releases.atom'
   name 'Axoloti Core'
   homepage 'http://www.axoloti.com/'
 
@@ -14,7 +13,7 @@ cask 'axoloti' do
   app 'Axoloti.app'
 
   caveats do
-    depends_on_java('8')
+    depends_on_java '8'
 
     <<~EOS
       If you ever decide to uninstall #{token}, it is likely its runtime will no longer be of use to you.

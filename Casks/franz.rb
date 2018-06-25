@@ -4,8 +4,7 @@ cask 'franz' do
 
   # github.com/meetfranz/franz was verified as official when first introduced to the cask
   url "https://github.com/meetfranz/franz/releases/download/v#{version}/franz-#{version}.dmg"
-  appcast 'https://github.com/meetfranz/franz/releases.atom',
-          checkpoint: '87912613aed376fe9ecd33b06f5c0f9629764a9c12c846b8a2136cdd8febeeba'
+  appcast 'https://github.com/meetfranz/franz/releases.atom'
   name 'Franz'
   homepage 'https://meetfranz.com/'
 

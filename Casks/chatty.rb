@@ -4,8 +4,7 @@ cask 'chatty' do
 
   # github.com/chatty/chatty was verified as official when first introduced to the cask
   url "https://github.com/chatty/chatty/releases/download/v#{version}/Chatty_#{version}.zip"
-  appcast 'https://github.com/chatty/chatty/releases.atom',
-          checkpoint: 'd15defdb7b11d3500b6ebf6bdc372beb545d7655f03dc8dcfa566155fa3a5d00'
+  appcast 'https://github.com/chatty/chatty/releases.atom'
   name 'Chatty'
   homepage 'https://chatty.github.io/'
 
@@ -19,6 +18,6 @@ cask 'chatty' do
   zap trash: '~/.chatty'
 
   caveats do
-    depends_on_java('7+')
+    depends_on_java '7+'
   end
 end

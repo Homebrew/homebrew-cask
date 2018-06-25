@@ -3,8 +3,7 @@ cask 'macfusion' do
   sha256 '6693241fd54d686013864adb86a6ea7eef6c1291546573b628b3ddf7889ef71c'
 
   url "http://macfusionapp.org/releases/Macfusion_#{version}.zip"
-  appcast 'http://macfusionapp.org/appcast.xml',
-          checkpoint: 'a729fa91bda8853699381f87427e24c155d7bbef62a9b2e58720ce6415871d20'
+  appcast 'http://macfusionapp.org/appcast.xml'
   name 'Macfusion'
   homepage 'http://macfusionapp.org/'
 

@@ -4,8 +4,7 @@ cask 'texstudio' do
 
   # github.com/texstudio-org/texstudio was verified as official when first introduced to the cask
   url "https://github.com/texstudio-org/texstudio/releases/download/#{version}/texstudio-#{version}-osx.dmg"
-  appcast 'https://github.com/texstudio-org/texstudio/releases.atom',
-          checkpoint: '4eef2d36c8465ab84c2ee2dd940dad4af05fe06f4ec192aecd2fc0c4fbd1aac7'
+  appcast 'https://github.com/texstudio-org/texstudio/releases.atom'
   name 'TeXstudio'
   homepage 'http://texstudio.org/'
 

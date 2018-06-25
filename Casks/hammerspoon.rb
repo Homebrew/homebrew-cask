@@ -9,8 +9,7 @@ cask 'hammerspoon' do
 
   # github.com/Hammerspoon/hammerspoon was verified as official when first introduced to the cask
   url "https://github.com/Hammerspoon/hammerspoon/releases/download/#{version}/Hammerspoon-#{version}.zip"
-  appcast 'https://github.com/Hammerspoon/hammerspoon/releases.atom',
-          checkpoint: 'de373165de7e377f26d43cb6acea29dec849f78e75458b11ba81afa7e4415d45'
+  appcast 'https://github.com/Hammerspoon/hammerspoon/releases.atom'
   name 'Hammerspoon'
   homepage 'http://www.hammerspoon.org/'
 

@@ -4,8 +4,7 @@ cask 'teeworlds' do
 
   # github.com/teeworlds/teeworlds was verified as official when first introduced to the cask
   url "https://github.com/teeworlds/teeworlds/releases/download/#{version}-release/teeworlds-#{version}-osx.dmg"
-  appcast 'https://github.com/teeworlds/teeworlds/releases.atom',
-          checkpoint: 'e54d85d5de0177c90e1856fe8006074751faa23b83944b811d072d81c32497fe'
+  appcast 'https://github.com/teeworlds/teeworlds/releases.atom'
   name 'Teeworlds'
   homepage 'https://www.teeworlds.com/'
 

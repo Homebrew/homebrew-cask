@@ -1,11 +1,10 @@
 cask 'textexpander' do
-  version '6.2.5'
-  sha256 'a3bca4a50993f60d9bffa901e90709bbccb64a6667b216ce45eaba191956149d'
+  version '6.2.6'
+  sha256 '9516038d25490a5c6e2529e0c81cc686d0bd1475504bbe21e46921bc0d51739e'
 
   # cdn.textexpander.com/mac was verified as official when first introduced to the cask
   url "https://cdn.textexpander.com/mac/TextExpander_#{version}.zip"
-  appcast "https://smilesoftware.com/appcast/TextExpander#{version.major}.xml",
-          checkpoint: '1e80f157eb7bac6e3f1ef14ea4ce09f79ecf34c751983458d3b69e64948c8560'
+  appcast "https://smilesoftware.com/appcast/TextExpander#{version.major}.xml"
   name 'TextExpander'
   homepage 'https://smilesoftware.com/TextExpander'
 

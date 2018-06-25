@@ -4,8 +4,7 @@ cask 'pgmanage' do
 
   # github.com/pgManage/pgManage was verified as official when first introduced to the cask
   url "https://github.com/pgManage/pgManage/releases/download/v#{version}/pgManage-#{version}.dmg"
-  appcast 'https://github.com/pgManage/pgManage/releases.atom',
-          checkpoint: 'fd6af1225a18ea35a0889ecb9171e3b502c37bc150a3a6af35ca9a2b6efa1f5d'
+  appcast 'https://github.com/pgManage/pgManage/releases.atom'
   name 'pgManage'
   homepage 'https://www.workflowproducts.com/services.html#software'
 

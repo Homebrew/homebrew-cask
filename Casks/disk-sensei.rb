@@ -4,8 +4,7 @@ cask 'disk-sensei' do
 
   # amazonaws.com/cindori was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/cindori/DiskSensei.zip'
-  appcast 'https://www.cindori.org/updates/disksensei/DiskSensei.xml',
-          checkpoint: '1ea3730f833ce27ea547b4b9b0e4e8365c6afe84402647679167ac5d16e757c6'
+  appcast 'https://www.cindori.org/updates/disksensei/DiskSensei.xml'
   name 'Disk Sensei'
   homepage 'https://cindori.org/'
 

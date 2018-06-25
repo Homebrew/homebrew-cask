@@ -4,8 +4,7 @@ cask 'arkclient' do
 
   # github.com/ArkEcosystem/ark-desktop was verified as official when first introduced to the cask
   url "https://github.com/ArkEcosystem/ark-desktop/releases/download/#{version}/ArkClient-MacOS-#{version}.dmg"
-  appcast 'https://github.com/ArkEcosystem/ark-desktop/releases.atom',
-          checkpoint: '001eb2cad60cdb8a76b729ac25fc7da871404b1ba0ca43e5e2686f50c71f402d'
+  appcast 'https://github.com/ArkEcosystem/ark-desktop/releases.atom'
   name 'Ark Client'
   homepage 'https://ark.io/'
 

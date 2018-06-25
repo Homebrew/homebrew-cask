@@ -4,8 +4,7 @@ cask 'tigervnc-viewer' do
 
   # bintray.com/tigervnc was verified as official when first introduced to the cask
   url "https://bintray.com/tigervnc/stable/download_file?file_path=TigerVNC-#{version}.dmg"
-  appcast 'https://github.com/TigerVNC/tigervnc/releases.atom',
-          checkpoint: '71af12586886fea31bc8134ab5083bbbaa594aa5e0a88079c8b739d667cc1125'
+  appcast 'https://github.com/TigerVNC/tigervnc/releases.atom'
   name 'TigerVNC'
   homepage 'http://tigervnc.org/'
 

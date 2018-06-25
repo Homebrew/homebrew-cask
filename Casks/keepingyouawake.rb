@@ -3,8 +3,7 @@ cask 'keepingyouawake' do
   sha256 '7e18482692401147d3d4ac1f38e0ace3993d69e7c864b4ef54373cbf10763202'
 
   url "https://github.com/newmarcel/KeepingYouAwake/releases/download/#{version}/KeepingYouAwake-#{version}.zip"
-  appcast 'https://github.com/newmarcel/KeepingYouAwake/releases.atom',
-          checkpoint: '27d3c30f31fafcec101e4f902ffd27ef62091b5ff28cd0c9f3bd7c77c49a0134'
+  appcast 'https://github.com/newmarcel/KeepingYouAwake/releases.atom'
   name 'KeepingYouAwake'
   homepage 'https://github.com/newmarcel/KeepingYouAwake'
 
