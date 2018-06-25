@@ -14,8 +14,7 @@ cask 'amethyst' do
     url "https://github.com/ianyh/Amethyst/releases/download/v#{version}/Amethyst-#{version}.zip"
   end
 
-  appcast 'https://ianyh.com/amethyst/appcast.xml',
-          checkpoint: '4bfc1fb4b264b2508b3f33dca188a22264ef196598dcd16c08219f1c55f8f0c6'
+  appcast 'https://ianyh.com/amethyst/appcast.xml'
   name 'Amethyst'
   homepage 'https://ianyh.com/amethyst/'
 

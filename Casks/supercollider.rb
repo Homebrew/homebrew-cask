@@ -4,8 +4,7 @@ cask 'supercollider' do
 
   # github.com/supercollider/supercollider was verified as official when first introduced to the cask
   url "https://github.com/supercollider/supercollider/releases/download/Version-#{version}/SuperCollider-#{version}-macOS.zip"
-  appcast 'https://github.com/supercollider/supercollider/releases.atom',
-          checkpoint: '72ee8bd7b4c3325c616a0eca42db28464b46904434215af74addfcad5f2a19f0'
+  appcast 'https://github.com/supercollider/supercollider/releases.atom'
   name 'SuperCollider'
   homepage 'https://supercollider.github.io/'
 

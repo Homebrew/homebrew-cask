@@ -4,8 +4,7 @@ cask 'studiolinkstandalone' do
 
   # github.com/Studio-Link-v2/backend was verified as official when first introduced to the cask
   url "https://github.com/Studio-Link-v2/backend/releases/download/v#{version}/studio-link-standalone-osx.zip"
-  appcast 'https://github.com/Studio-Link-v2/backend/releases.atom',
-          checkpoint: 'bff5b9f008c1b4203eb2d845f8ec1e197392e45a5417fb064ae5f1a55248bf48'
+  appcast 'https://github.com/Studio-Link-v2/backend/releases.atom'
   name 'Studio Link Standalone'
   homepage 'https://doku.studio-link.de/standalone/installation-standalone.html'
 

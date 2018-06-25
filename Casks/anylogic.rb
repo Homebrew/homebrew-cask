@@ -18,7 +18,7 @@ cask 'anylogic' do
              ]
 
   caveats do
-    depends_on_java('8')
+    depends_on_java '8'
 
     <<~EOS
       For activation instructions, check up on

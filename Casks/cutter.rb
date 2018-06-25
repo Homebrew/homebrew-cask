@@ -4,8 +4,7 @@ cask 'cutter' do
 
   # github.com/radareorg/cutter was verified as official when first introduced to the cask
   url "https://github.com/radareorg/cutter/releases/download/v#{version}/Cutter-v#{version}.dmg"
-  appcast 'https://github.com/radareorg/cutter/releases.atom',
-          checkpoint: '9a701c98fea005734f0c3b28edf585bb9ce09eae138531c1aeb13e61ab42e1c5'
+  appcast 'https://github.com/radareorg/cutter/releases.atom'
   name 'Cutter'
   homepage 'https://radare.org/cutter/'
 

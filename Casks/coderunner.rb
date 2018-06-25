@@ -4,8 +4,7 @@ cask 'coderunner' do
 
   # dktfof1z89xc1.cloudfront.net was verified as official when first introduced to the cask
   url "https://dktfof1z89xc1.cloudfront.net/CodeRunner-#{version}.zip"
-  appcast 'https://coderunnerapp.com/appcast.xml',
-          checkpoint: '87172e03eba24a1b2929044da1165c1b6dd9cac928f628595c27b9e5667b77de'
+  appcast 'https://coderunnerapp.com/appcast.xml'
   name 'CodeRunner'
   homepage 'https://coderunnerapp.com/'
 

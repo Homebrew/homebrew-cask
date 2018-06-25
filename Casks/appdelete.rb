@@ -3,8 +3,7 @@ cask 'appdelete' do
   sha256 'ac7ce8a55ad74eed68d79ccf69284a1174bf74a2a376f73c63e51ca8c4687547'
 
   url 'http://www.reggieashworth.com/downloads/AppDelete.dmg'
-  appcast "http://www.reggieashworth.com/AD#{version.major}Appcast.xml",
-          checkpoint: '843016cf398f3163565900b2589522f265402a7b6a37e2704c0adab10bc1ace6'
+  appcast "http://www.reggieashworth.com/AD#{version.major}Appcast.xml"
   name 'AppDelete'
   homepage 'http://www.reggieashworth.com/appdelete'
 

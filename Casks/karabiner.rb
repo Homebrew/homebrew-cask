@@ -3,8 +3,7 @@ cask 'karabiner' do
   sha256 'b05560f26b16c19eea076f5589b58124dc9346c69be3df25a23c65c77f6d9554'
 
   url "https://pqrs.org/osx/karabiner/files/Karabiner-#{version}.dmg"
-  appcast 'https://pqrs.org/osx/karabiner/files/appcast.xml',
-          checkpoint: '38438b15c3af9c23215ac7d23af13c0b32cbc7b06e96ed02f7b50c29b65924b2'
+  appcast 'https://pqrs.org/osx/karabiner/files/appcast.xml'
   name 'Karabiner'
   homepage 'https://pqrs.org/osx/karabiner/'
 

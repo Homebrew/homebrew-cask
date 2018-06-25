@@ -22,15 +22,14 @@ cask 'sencha' do
                       sudo:       true,
                     }
 
-  caveats <<~EOS
-    Installing this Cask means you have AGREED to the Sencha Cmd License
+  caveats do
+    license 'https://www.sencha.com/legal/sencha-tools-software-license-agreement/'
+    <<~EOS
+      Sencha Cmd appends 1 line to your ~/.bash_profile or ~/.profile file:
 
-      https://www.sencha.com/legal/sencha-tools-software-license-agreement/
+        export PATH="/opt/Sencha/Cmd:$PATH"
 
-    Sencha Cmd appends 1 line to your ~/.bash_profile or ~/.profile file:
-
-      export PATH="/opt/Sencha/Cmd:$PATH"
-
-    If you are a zshell user, append both lines to your .zshrc file.
-  EOS
+      If you are a zshell user, append both lines to your .zshrc file.
+    EOS
+  end
 end

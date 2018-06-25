@@ -4,8 +4,7 @@ cask 'changes' do
 
   # bitbq_changes.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://bitbq_changes.s3.amazonaws.com/changes-#{version}.zip"
-  appcast 'https://bitbq_changes.s3.amazonaws.com/changes-production.xml',
-          checkpoint: '524b59ed2fd0b0cb7829bfa7d4729769d169dc6e391a113550082d44fd831806'
+  appcast 'https://bitbq_changes.s3.amazonaws.com/changes-production.xml'
   name 'Changes'
   homepage 'http://martiancraft.com/products/changes.html'
 

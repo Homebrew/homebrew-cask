@@ -9,7 +9,7 @@ cask 'minecraft-server' do
 
   container type: :naked
 
-  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/minecraft-server.wrapper.sh"
   binary shimscript, target: 'minecraft-server'
 

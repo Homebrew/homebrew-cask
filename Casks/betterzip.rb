@@ -3,8 +3,7 @@ cask 'betterzip' do
   sha256 'b9cc6fffa8ef2f20e008e2932a53258dfc7b2c226bb6301f0056240ad77f8d56'
 
   url "https://macitbetter.com/dl/BetterZip-#{version}.zip"
-  appcast "https://macitbetter.com/BetterZip#{version.major}.rss",
-          checkpoint: 'c706c2960cac00194b3b01109ba37fa03554366e456564c169ce8e035d160c24'
+  appcast "https://macitbetter.com/BetterZip#{version.major}.rss"
   name 'BetterZip'
   homepage 'https://macitbetter.com/'
 

@@ -4,8 +4,7 @@ cask 'biba' do
 
   # amazonaws.com/downloads.biba.com was verified as official when first introduced to the cask
   url "https://s3-us-west-1.amazonaws.com/downloads.biba.com/builds/Biba-OSX-#{version}.dmg"
-  appcast 'https://s3-us-west-1.amazonaws.com/downloads.biba.com/appcast/mac',
-          checkpoint: 'd7911a41219399add67186fbf55dec340318d9c1ba8277d5c4943fa869f86ed3'
+  appcast 'https://s3-us-west-1.amazonaws.com/downloads.biba.com/appcast/mac'
   name 'Biba'
   homepage 'http://www.biba.com/'
 

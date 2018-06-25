@@ -4,8 +4,7 @@ cask 'protege' do
 
   # github.com/protegeproject/protege-distribution was verified as official when first introduced to the cask
   url "https://github.com/protegeproject/protege-distribution/releases/download/v#{version}/Protege-#{version}-os-x.zip"
-  appcast 'https://github.com/protegeproject/protege-distribution/releases.atom',
-          checkpoint: 'd303ee2d1e3f95ade575ac8b135155cb1beef2d7d241ca09a7bd419f61f2cd2e'
+  appcast 'https://github.com/protegeproject/protege-distribution/releases.atom'
   name 'Protégé'
   homepage 'https://protege.stanford.edu/'
 

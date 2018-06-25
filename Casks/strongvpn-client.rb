@@ -4,8 +4,7 @@ cask 'strongvpn-client' do
 
   # mirror2.reliablehosting.com/mac was verified as official when first introduced to the cask
   url "https://mirror2.reliablehosting.com/mac/StrongVPN_Mac_#{version.before_comma}.zip"
-  appcast 'https://colomovers.com/mac.xml',
-          checkpoint: '734a1bf789034d192b42a82bb470a4eebb9d1800bb646fa9178583fb632b269b'
+  appcast 'https://colomovers.com/mac.xml'
   name 'StrongVPN'
   homepage 'https://strongvpn.com/setup.html/'
 

@@ -11,9 +11,9 @@
 header 'Running script.sh...'
 
 apps () { /usr/bin/find /Applications -type d -name '*.app' -maxdepth 2 ; }
-launchjob_install () { "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_installed_launchjob_ids" ; }
-launchjob_load () { "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_loaded_launchjob_ids" ; }
-pkgs () { "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/list_recent_pkg_ids" ; }
+launchjob_install () { "$(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/list_installed_launchjob_ids" ; }
+launchjob_load () { "$(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/list_loaded_launchjob_ids" ; }
+pkgs () { "$(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/list_recent_pkg_ids" ; }
 
 checks=('pkgs' 'apps' 'launchjob_install' 'launchjob_load')
 
@@ -34,11 +34,13 @@ run export HOMEBREW_NO_AUTO_UPDATE=1
 if [[ ${#casks_wrong_dir[@]} -gt 0 ]]; then
   odie "Casks added outside Casks directory: ${casks_wrong_dir[*]}"
 elif [[ ${#modified_casks[@]} -gt 0 ]]; then
-  for cask in "${modified_casks[@]}"; do
-    if brew cask _stanza gpg "${cask}" &> /dev/null; then
-      run brew outdated gnupg || run brew upgrade gnupg
-    fi
-  done
+  if [[ ${#modified_casks[@]} -le 3 ]]; then
+    for cask in "${modified_casks[@]}"; do
+      if brew cask _stanza gpg "${cask}" &> /dev/null; then
+        run brew outdated gnupg || run brew upgrade gnupg
+      fi
+    done
+  fi
   run brew cask _audit_modified_casks "${TRAVIS_COMMIT_RANGE}"
   run brew cask style "${modified_casks[@]}"
   if [[ ${#modified_casks[@]} -le 3 ]]; then

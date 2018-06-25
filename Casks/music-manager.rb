@@ -7,7 +7,7 @@ cask 'music-manager' do
   homepage 'https://play.google.com/music/listen'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
-  # Original discussion: https://github.com/caskroom/homebrew-cask/pull/4282
+  # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/4282
   app 'MusicManager.app', target: 'Music Manager.app'
 
   uninstall delete:     '~/Library/PreferencePanes/MusicManager.prefPane',

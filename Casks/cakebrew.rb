@@ -4,8 +4,7 @@ cask 'cakebrew' do
 
   # cakebrew-377a.kxcdn.com was verified as official when first introduced to the cask
   url "https://cakebrew-377a.kxcdn.com/cakebrew-#{version}.dmg"
-  appcast 'https://www.cakebrew.com/appcast/profileInfo.php',
-          checkpoint: '425c0d51a81dda9dc7747fb6deb77d8569d241f35cfe37221fabede63cba2aa4'
+  appcast 'https://www.cakebrew.com/appcast/profileInfo.php'
   name 'Cakebrew'
   homepage 'https://www.cakebrew.com/'
 

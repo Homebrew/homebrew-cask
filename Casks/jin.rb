@@ -4,8 +4,7 @@ cask 'jin' do
 
   # sourceforge.net/jin was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/jin/jin/jin-#{version}/jin-#{version}-macosx-lion.dmg"
-  appcast 'https://sourceforge.net/projects/jin/rss?path=/jin',
-          checkpoint: '71e7b29ab62ebcd3a8b823f43a289b95f93514d4a4b0936a03423e1a634394c6'
+  appcast 'https://sourceforge.net/projects/jin/rss?path=/jin'
   name 'Jin'
   homepage 'http://www.jinchess.com/'
 

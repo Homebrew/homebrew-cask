@@ -4,8 +4,7 @@ cask 'mkchromecast' do
 
   # github.com/muammar/mkchromecast was verified as official when first introduced to the cask
   url "https://github.com/muammar/mkchromecast/releases/download/#{version}/mkchromecast_v#{version}.dmg"
-  appcast 'https://github.com/muammar/mkchromecast/releases.atom',
-          checkpoint: '95592248a4c493cce0211ca5524183d9deb3c6699e97ed55f91e1025b7502162'
+  appcast 'https://github.com/muammar/mkchromecast/releases.atom'
   name 'mkchromecast'
   homepage 'http://mkchromecast.com/'
 

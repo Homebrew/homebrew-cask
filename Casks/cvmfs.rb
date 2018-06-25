@@ -1,6 +1,6 @@
 cask 'cvmfs' do
-  version '2.4.4'
-  sha256 '86c915b0e9ab7f811e9e9e86ced02c51cd0c1d247a70b20b85c18e17d70592a1'
+  version '2.5.0'
+  sha256 '006a93a921858b584469303961f232d40fb10215f21091dbbca40b18fc83e4f1'
 
   url "https://ecsft.cern.ch/dist/cvmfs/cvmfs-#{version}/cvmfs-#{version}.pkg"
   name 'CernVM File System'

@@ -4,8 +4,7 @@ cask 'openvanilla' do
 
   # github.com/openvanilla/openvanilla/ was verified as official when first introduced to the cask
   url "https://github.com/openvanilla/openvanilla/releases/download/#{version}/OpenVanilla-Installer-Mac-#{version}.zip"
-  appcast 'https://github.com/openvanilla/openvanilla/releases.atom',
-          checkpoint: '73df68e023311f6e106d061effe396b2b563c68e57ac39dc7804370f5bea81fb'
+  appcast 'https://github.com/openvanilla/openvanilla/releases.atom'
   name 'OpenVanilla'
   homepage 'https://openvanilla.org/'
 

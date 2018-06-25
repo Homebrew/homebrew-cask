@@ -3,6 +3,7 @@ cask 'anonvpn' do
   sha256 '76dfb3f3f62eb6a0739b1d4350ee20bcbd81fca5821fdaf35cfd57b3032817e2'
 
   url "https://anonvpn.io/updater/AnonVPN-MacOSX-10.7-#{version}.dmg"
+  appcast 'https://api.anonvpn.io/updater/appcast.rss'
   name 'AnonVPN'
   homepage 'https://anonvpn.io/'
 

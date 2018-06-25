@@ -4,8 +4,7 @@ cask 'x-moto' do
 
   # github.com/vasi/xmoto-build/releases/download was verified as official when first introduced to the cask
   url "https://github.com/vasi/xmoto-build/releases/download/v#{version}-r1/xmoto-#{version}-macosx.zip"
-  appcast 'https://github.com/vasi/xmoto-build/releases.atom',
-          checkpoint: '875e3da9790c98b94db17bf6d3f0d94dc0427a8fe6acfb02055652f075f2eb34'
+  appcast 'https://github.com/vasi/xmoto-build/releases.atom'
   name 'XMoto'
   homepage 'https://xmoto.tuxfamily.org/'
 

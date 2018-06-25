@@ -4,9 +4,9 @@ Ever since the inception of Homebrew-Cask, various requests fell under the umbre
 
 Examples of requests under this same theme:
 
-+ [Separate by categories](https://github.com/caskroom/homebrew-cask/issues/5425).
-+ [Rank by popularity](https://github.com/caskroom/homebrew-cask/issues/4323).
-+ [Add descriptions](https://github.com/caskroom/homebrew-cask/issues/16089).
++ [Separate by categories](https://github.com/Homebrew/homebrew-cask/issues/5425).
++ [Rank by popularity](https://github.com/Homebrew/homebrew-cask/issues/4323).
++ [Add descriptions](https://github.com/Homebrew/homebrew-cask/issues/16089).
 
 Amongst other things, the logistics of such requests are unsustainable for Homebrew-Cask. Before making a request of this nature, you must read through those issues, as well as any other issues they link to, to get a full understanding of why that is the case, and why “but project *x* does *y*” arguments aren’t applicable, and not every package manager is the same.
 
