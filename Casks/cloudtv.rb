@@ -1,6 +1,6 @@
 cask 'cloudtv' do
-  version '3.9,1529671901'
-  sha256 '1b0278ff2c8230be6ab20fb1cdb02001a27861abc7c62d65db6f54737c91dab7'
+  version '3.9.1,1529958457'
+  sha256 '913dbf05d59431d3ba6b8123de8dcba77352fb7134c1ab49dbae6429a15b7414'
 
   # dl.devmate.com/com.nonoche.CloudTV was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.nonoche.CloudTV/#{version.before_comma}/#{version.after_comma}/CloudTV-#{version.before_comma}.zip"
