@@ -1,6 +1,6 @@
 cask 'vagrant' do
-  version '2.1.1'
-  sha256 '9d1798396f05b8c39f65f1e7878f088302546a5baa59846fbf461589d76e3e1f'
+  version '2.1.2'
+  sha256 'dd9cacd2d1fcf03e22343de9698f89c1547ab74cfb4a64b7deb8ed1b3e12bb16'
 
   # hashicorp.com/vagrant was verified as official when first introduced to the cask
   url "https://releases.hashicorp.com/vagrant/#{version}/vagrant_#{version}_x86_64.dmg"
