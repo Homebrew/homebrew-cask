@@ -1,9 +1,9 @@
 cask 'lilypond' do
-  version '2.19.82-1'
-  sha256 '558ffac7ba7543b39f2f87ed4a4141a29951d44772893c9af89a89ed33f16176'
+  version '2.18.2-1'
+  sha256 '824aa2bf03912ce90453cf2c58e21cd9299e6900916a82980a3416de261d4d8a'
 
   url "http://lilypond.org/downloads/binaries/darwin-x86/lilypond-#{version}.darwin-x86.tar.bz2"
-  appcast 'http://lilypond.org/download/binaries/darwin-x86/'
+  appcast 'http://lilypond.org/macos-x.html'
   name 'LilyPond'
   homepage 'http://lilypond.org/'
 
