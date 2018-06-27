@@ -1,4 +1,4 @@
-cask 'minecraft-ed' do
+cask 'minecraftpe' do
   version :latest
   sha256 :no_check
 
