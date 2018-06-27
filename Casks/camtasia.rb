@@ -8,5 +8,7 @@ cask 'camtasia' do
   name 'Camtasia'
   homepage 'https://www.techsmith.com/camtasia.html'
 
+  auto_updates true
+
   app "Camtasia #{version.major}.app"
 end
