@@ -9,10 +9,10 @@ cask 'atok' do
   pkg 'ATOK インストーラ.pkg'
 
   uninstall pkgutil:   [
-                         "com.justsystems.atok#{version.before_comma}.doc.pkg",
-                         "com.justsystems.atok#{version.before_comma}.pkg",
-                         "com.justsystems.atok#{version.before_comma}.quicklook.pkg",
-                         "com.justsystems.atok#{version.before_comma}.sync.pkg",
+                         "com.justsystems.atok#{version.after_comma}.doc.pkg",
+                         "com.justsystems.atok#{version.after_comma}.pkg",
+                         "com.justsystems.atok#{version.after_comma}.quicklook.pkg",
+                         "com.justsystems.atok#{version.after_comma}.sync.pkg",
                          'com.justsystems.JustOnlineUpdate.pkg',
                          'com.justsystems.pkg.lma',
                        ],
