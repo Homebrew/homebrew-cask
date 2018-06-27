@@ -4,7 +4,7 @@ cask 'yt-music' do
 
   url "https://github.com/steve228uk/YouTube-Music/releases/download/#{version}/YT.Music.app.zip"
   appcast 'https://github.com/steve228uk/YouTube-Music/releases.atom'
-  name 'YouTube-Music'
+  name 'YouTube Music'
   homepage 'https://github.com/steve228uk/YouTube-Music'
 
   app 'YT Music.app'
