@@ -7,7 +7,7 @@ cask 'dingtalk' do
   name 'DingTalk'
   name '钉钉'
   homepage 'https://www.dingtalk.com/'
-  
+
   auto_updates true
 
   app 'DingTalk.app'
