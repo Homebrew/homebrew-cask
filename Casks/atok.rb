@@ -6,7 +6,7 @@ cask 'atok' do
   name 'ATOK'
   homepage 'https://www.justsystems.com/jp/products/atokmac/'
 
-  pkg "ATOK インストーラ.pkg"
+  pkg 'ATOK インストーラ.pkg'
 
   uninstall pkgutil:   [
                          "com.justsystems.atok#{version.before_comma}.doc.pkg",
