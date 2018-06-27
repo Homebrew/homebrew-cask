@@ -21,6 +21,7 @@ cask 'atok' do
                          'com.justsystems.launchd.jslmaUI',
                          'com.justsystems.launchd.UpdateChecker',
                          "com.justsystems.launchd.Atok#{version.after_comma}.AlBg",
+                         'com.justsystems.atok#{version.after_comma}.enabler',
                          'com.justsystems.OnlineUpdate',
                          'com.justsystems.launchd.jslmad',
                        ],
