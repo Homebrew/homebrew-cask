@@ -6,15 +6,19 @@ cask 'vulkan-sdk' do
   name 'LunarG Vulkan SDK'
   homepage 'https://vulkan.lunarg.com/sdk/home'
 
+  depends_on macos: '>= :el_capitan'
+
   binary "#{staged_path}/vulkansdk-macos-#{version}/macOS/bin/vulkaninfo"
 
-  caveats "You must define a few environment variables for this SDK to work:\n"\
-          "export VULKAN_SDK=#{staged_path}/vulkansdk-macos-#{version}/macOS\n"\
-          "export VK_ICD_FILENAMES=#{staged_path}/vulkansdk-macos-#{version}/macOS/etc/vulkan/icd.d/MoltenVK_icd.json\n"\
-          "export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:#{staged_path}/vulkansdk-macos-#{version}/macOS/lib\n"\
-          "export VK_LAYER_PATH=#{staged_path}/vulkansdk-macos-#{version}/macOS/etc/vulkan/explicit_layer.d"
   caveats do
-    license 'https://vulkan.lunarg.com/sdk/home#sdk-license'
     path_environment_variable "#{staged_path}/vulkansdk-macos-#{version}/macOS/bin"
+    license 'https://vulkan.lunarg.com/sdk/home#sdk-license'
+    <<~EOS
+      You must define a few environment variables for this SDK to work:
+        export VULKAN_SDK=#{staged_path}/vulkansdk-macos-#{version}/macOS
+        export VK_ICD_FILENAMES=#{staged_path}/vulkansdk-macos-#{version}/macOS/etc/vulkan/icd.d/MoltenVK_icd.json
+        export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:#{staged_path}/vulkansdk-macos-#{version}/macOS/lib
+        export VK_LAYER_PATH=#{staged_path}/vulkansdk-macos-#{version}/macOS/etc/vulkan/explicit_layer.d
+    EOS
   end
 end
