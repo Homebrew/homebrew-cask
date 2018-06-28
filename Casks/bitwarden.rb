@@ -18,7 +18,6 @@ cask 'bitwarden' do
                   ]
 
   zap trash: [
-               "~/Downloads/BitWarden-#{version}",
                '~/Library/Logs/Bitwarden',
                '~/Library/Preferences/com.bitwarden.desktop.plist',
                '~/Library/Preferences/com.bitwarden.desktop.helper.plist',
