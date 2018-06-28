@@ -1,6 +1,6 @@
 cask 'natron' do
-  version '2.3.12'
-  sha256 '8de9937134119c365ec592a5ed813b969dd1170d75b2d02b78f73c8290e1346e'
+  version '2.3.13'
+  sha256 '117aa5df7843a25e48941cd904236d510c679740b17c1eca98e94cccf7925e4c'
 
   url "https://downloads.natron.fr/Mac/releases/Natron-#{version}.dmg",
       referer: 'https://natron.fr/download/?os=Mac'
