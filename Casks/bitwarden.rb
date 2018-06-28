@@ -13,12 +13,14 @@ cask 'bitwarden' do
   app 'Bitwarden.app'
 
   uninstall quit: [
-               "com.bitwarden.desktop",
-               "com.bitwarden.desktop.helper"
+                    'com.bitwarden.desktop',
+                    'com.bitwarden.desktop.helper',
                   ]
+
   zap trash: [
                "~/Downloads/BitWarden-#{version}",
-               "~/Library/Logs/Bitwarden",
-               "~/Library/Preferences/com.bitwarden*"
+               '~/Library/Logs/Bitwarden',
+               '~/Library/Preferences/com.bitwarden.desktop.plist',
+               '~/Library/Preferences/com.bitwarden.desktop.helper.plist',
              ]
 end
