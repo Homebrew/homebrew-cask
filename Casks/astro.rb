@@ -1,6 +1,6 @@
 cask 'astro' do
-  version '3.0.12,4006'
-  sha256 'acb5973fc65b6c2f2b827fc81537369ba1280e301d83b6c13ac9e2dd9eb7a6d0'
+  version '3.0.13,4066'
+  sha256 '83fa7373d09c959f26068bd4b044ddb50a5cefc3b86e1eac3c40502d8e4eb730'
 
   # pexlabs-updates-xvuif5mcicazzducz2j2xy3lki.s3-us-west-2.amazonaws.com was verified as official when first introduced to the cask
   url "https://pexlabs-updates-xvuif5mcicazzducz2j2xy3lki.s3-us-west-2.amazonaws.com/Astro-#{version.after_comma}.dmg"
