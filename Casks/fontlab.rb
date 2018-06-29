@@ -1,11 +1,10 @@
 cask 'fontlab' do
   version :latest
-  sha256 :nocheck
+  sha256 :no_check
 
-  # download.fontlab.com is official when first introduced to the cask
   url 'https://download.fontlab.com/fontlab-vi/get-mac.php'
-  name 'Fontlab VI'
-  homepage 'https://www.fontlab.com/font-editor/fontlab-vi/#download'
+  name 'Fontlab'
+  homepage 'https://www.fontlab.com/font-editor/fontlab-vi'
 
   app 'FontLab VI.app'
 end
