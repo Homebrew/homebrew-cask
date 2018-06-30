@@ -8,6 +8,8 @@ cask 'find-any-file' do
   name 'Find Any File'
   homepage 'http://apps.tempel.org/FindAnyFile/'
 
+  auto_updates true
+
   app 'Find Any File.app'
 
   zap trash: '~/Library/Application Support/Find Any File'
