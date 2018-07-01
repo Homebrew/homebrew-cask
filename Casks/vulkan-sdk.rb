@@ -8,17 +8,24 @@ cask 'vulkan-sdk' do
 
   depends_on macos: '>= :el_capitan'
 
-  binary "#{staged_path}/vulkansdk-macos-#{version}/macOS/bin/vulkaninfo"
+  #Move contents of redundant folder (that matches the name of the archive) up a folder
+  #and then delete that folder.
+  preflight do
+    system_command '/usr/bin/ditto', args: ["--", "#{staged_path}/vulkansdk-macos-#{version}", "#{staged_path}"]
+    system_command '/bin/rm', args: ["-rf", "#{staged_path}/vulkansdk-macos-#{version}"]
+  end
+
+  binary "#{staged_path}/macOS/bin/vulkaninfo"
 
   caveats do
-    path_environment_variable "#{staged_path}/vulkansdk-macos-#{version}/macOS/bin"
     license 'https://vulkan.lunarg.com/sdk/home#sdk-license'
+    path_environment_variable "#{staged_path}/macOS/bin"
     <<~EOS
       You must define a few environment variables for this SDK to work:
-        export VULKAN_SDK=#{staged_path}/vulkansdk-macos-#{version}/macOS
-        export VK_ICD_FILENAMES=#{staged_path}/vulkansdk-macos-#{version}/macOS/etc/vulkan/icd.d/MoltenVK_icd.json
-        export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:#{staged_path}/vulkansdk-macos-#{version}/macOS/lib
-        export VK_LAYER_PATH=#{staged_path}/vulkansdk-macos-#{version}/macOS/etc/vulkan/explicit_layer.d
+        export VULKAN_SDK=#{staged_path}/macOS
+        export VK_ICD_FILENAMES=#{staged_path}/macOS/etc/vulkan/icd.d/MoltenVK_icd.json
+        export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:#{staged_path}/macOS/lib
+        export VK_LAYER_PATH=#{staged_path}/macOS/etc/vulkan/explicit_layer.d
     EOS
   end
 end
