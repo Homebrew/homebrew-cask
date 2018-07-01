@@ -9,6 +9,7 @@ cask 'qpad' do
   app 'qpad.app'
 
   zap trash: [
+               '~/.qpad',
                '~/Library/Preferences/com.spap.qpad.plist',
                '~/Library/Saved Application State/com.spap.qpad.savedState',
              ]
