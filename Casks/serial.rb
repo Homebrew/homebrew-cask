@@ -1,6 +1,6 @@
 cask 'serial' do
-  version '1.3.7'
-  sha256 '49742a64afe51348ac049c4d527cd685e85d00a63d4866467bd12152fb845588'
+  version '1.3.8'
+  sha256 'f23de6aa96bc1847f740ac1b57bfbad27c15367156b54afd233b7ae2bb351ff1'
 
   url "https://www.decisivetactics.com/products/serial/dl/Serial_#{version}.zip"
   appcast 'https://www.decisivetactics.com/products/serial/release-notes'

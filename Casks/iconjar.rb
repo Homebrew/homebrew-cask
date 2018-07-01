@@ -1,6 +1,6 @@
 cask 'iconjar' do
-  version '1.9.1,27710:1522175139'
-  sha256 '34792f023955d9e6ddf7e4060b92b09d5820ebce09bfc7404a2512358105750b'
+  version '1.10.1,28427:1530305421'
+  sha256 '30a14dafe5bdfe830707310658d3b4ac1db4420167490d62c3754d76beb653b4'
 
   # dl.devmate.com/com.iconjar.iconjar was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.iconjar.iconjar/#{version.after_comma.before_colon}/#{version.after_colon}/Iconjar-#{version.after_comma.before_colon}.zip"
