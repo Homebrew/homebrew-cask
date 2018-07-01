@@ -7,4 +7,9 @@ cask 'qpad' do
   homepage 'https://houqiming.github.io/qpad/'
 
   app 'qpad.app'
+
+  zap trash: [
+               '~/Library/Preferences/com.spap.qpad.plist',
+               '~/Library/Saved Application State/com.spap.qpad.savedState',
+             ]
 end
