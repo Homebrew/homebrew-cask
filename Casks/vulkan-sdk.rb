@@ -8,14 +8,14 @@ cask 'vulkan-sdk' do
 
   depends_on macos: '>= :el_capitan'
 
-  #Move contents of redundant folder (that matches the name of the archive) up a folder
-  #and then delete that folder.
-  preflight do
-    system_command '/usr/bin/ditto', args: ["--", "#{staged_path}/vulkansdk-macos-#{version}", "#{staged_path}"]
-    system_command '/bin/rm', args: ["-rf", "#{staged_path}/vulkansdk-macos-#{version}"]
-  end
-
   binary "#{staged_path}/macOS/bin/vulkaninfo"
+
+  # Move contents of redundant folder (that matches the name of the archive) up a folder
+  # and then delete that folder.
+  preflight do
+    system_command '/usr/bin/ditto', args: ['--', "#{staged_path}/vulkansdk-macos-#{version}", staged_path.to_s]
+    system_command '/bin/rm', args: ['-rf', "#{staged_path}/vulkansdk-macos-#{version}"]
+  end
 
   caveats do
     license 'https://vulkan.lunarg.com/sdk/home#sdk-license'
