@@ -8,6 +8,8 @@ cask 'texstudio' do
   name 'TeXstudio'
   homepage 'http://texstudio.org/'
 
+  conflicts_with cask: 'texstudio-beta'
+
   app 'texstudio.app'
 
   zap trash: [
