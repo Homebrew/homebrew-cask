@@ -1,6 +1,6 @@
 cask 'printnode' do
-  version '4.17.14'
-  sha256 'e3ea051a22112ef18bb35d1d37834555df08ba2dcd542eb1244cabf670b5249b'
+  version '4.18.6'
+  sha256 '69470c0dcbcd13cd000e934a84e4ef1812b82cc37c067de61cfa5cec196e47dd'
 
   url "https://app.printnode.com/bundles/printnodemain/downloads/printnode/#{version}/PrintNode-#{version}.dmg"
   name 'PrintNode'

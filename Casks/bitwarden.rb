@@ -8,5 +8,18 @@ cask 'bitwarden' do
   name 'Bitwarden'
   homepage 'https://bitwarden.com/'
 
+  depends_on macos: '>= :mavericks'
+
   app 'Bitwarden.app'
+
+  uninstall quit: [
+                    'com.bitwarden.desktop',
+                    'com.bitwarden.desktop.helper',
+                  ]
+
+  zap trash: [
+               '~/Library/Logs/Bitwarden',
+               '~/Library/Preferences/com.bitwarden.desktop.plist',
+               '~/Library/Preferences/com.bitwarden.desktop.helper.plist',
+             ]
 end
