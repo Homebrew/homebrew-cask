@@ -1,6 +1,6 @@
 cask 'gifox' do
-  version '010601.02'
-  sha256 '6e563695a1872b3f61474afc56b5ebb6905cec7ccaff6b3d53e03c0e0c44a6af'
+  version '010601.03'
+  sha256 'b0dea197c7c0f1533de4ca2d0402247780bc0463eecdfd8dfa3928f81e5399a9'
 
   # s3.eu-central-1.amazonaws.com/dstlalgzor/gifox was verified as official when first introduced to the cask
   url "https://s3.eu-central-1.amazonaws.com/dstlalgzor/gifox/#{version}.dmg"
