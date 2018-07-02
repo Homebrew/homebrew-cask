@@ -14,7 +14,7 @@ cask 'vulkan-sdk' do
   # and then delete that folder.
   preflight do
     FileUtils.mv Dir.glob("#{staged_path}/vulkansdk-macos-#{version}/*"), staged_path.to_s
-    FileUtils.remove_dir "#{staged_path}/vulkansdk-macos-#{version}", force: true
+    FileUtils.remove_dir "#{staged_path}/vulkansdk-macos-#{version}"
   end
 
   caveats do
