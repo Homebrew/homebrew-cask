@@ -1,6 +1,6 @@
 cask 'ieasemusic' do
-  version '1.1.9'
-  sha256 'e006d001b4afb25f3ace06b563b7c15633a1ff04d4a530258c462f945c64ecf8'
+  version '1.2.0'
+  sha256 '57847dec202fe706fe2dd9af2173381f97b80e28c240d2e666dbd860202fef6c'
 
   url "https://github.com/trazyn/ieaseMusic/releases/download/v#{version}/ieaseMusic-#{version}-mac.dmg"
   appcast 'https://github.com/trazyn/ieaseMusic/releases.atom'
