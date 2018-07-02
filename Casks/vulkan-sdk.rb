@@ -10,8 +10,7 @@ cask 'vulkan-sdk' do
 
   binary "#{staged_path}/macOS/bin/vulkaninfo"
 
-  # Move contents of redundant folder (that matches the name of the archive) up a folder
-  # and then delete that folder.
+  # Move contents from versioned directory to simplify `export` in shell.
   preflight do
     FileUtils.mv Dir.glob("#{staged_path}/vulkansdk-macos-#{version}/*"), staged_path.to_s
     FileUtils.remove_dir "#{staged_path}/vulkansdk-macos-#{version}"
