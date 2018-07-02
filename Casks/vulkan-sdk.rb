@@ -13,8 +13,8 @@ cask 'vulkan-sdk' do
   # Move contents of redundant folder (that matches the name of the archive) up a folder
   # and then delete that folder.
   preflight do
-    system_command '/usr/bin/ditto', args: ['--', "#{staged_path}/vulkansdk-macos-#{version}", staged_path.to_s]
-    system_command '/bin/rm', args: ['-rf', "#{staged_path}/vulkansdk-macos-#{version}"]
+    FileUtils.mv Dir.glob("#{staged_path}/vulkansdk-macos-#{version}/*"), staged_path.to_s
+    FileUtils.remove_dir "#{staged_path}/vulkansdk-macos-#{version}", force: true
   end
 
   caveats do
