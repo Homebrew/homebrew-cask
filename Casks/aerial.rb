@@ -9,5 +9,8 @@ cask 'aerial' do
 
   screen_saver 'Aerial.saver'
 
-  zap trash: '~/Library/Caches/Aerial'
+  zap trash: [
+               '~/Library/Caches/Aerial',
+               '~/Library/Screen Savers/Aerial.saver',
+             ]
 end
