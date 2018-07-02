@@ -8,8 +8,7 @@ cask 'lunastudio' do
 
   installer manual: 'lunaInstaller.app'
 
-  uninstall delete: '/Applications/LunaStudio.app',
-            trash:  '~/.luna/config/luna-studio'
+  uninstall delete: '/Applications/LunaStudio.app'
 
   zap trash: '~/.luna'
 end

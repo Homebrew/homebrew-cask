@@ -8,7 +8,7 @@ cask 'readcube' do
 
   installer manual: 'Install ReadCube.app'
 
-  uninstall trash: '/Applications/ReadCube.app'
+  uninstall delete: '/Applications/ReadCube.app'
 
   zap trash: '~/Library/Preferences/com.readcube.Desktop/'
 end
