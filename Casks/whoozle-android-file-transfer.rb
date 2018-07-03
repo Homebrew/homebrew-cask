@@ -10,5 +10,5 @@ cask 'whoozle-android-file-transfer' do
 
   conflicts_with cask: 'android-file-transfer'
 
-  app 'Android File Transfer.app'
+  app 'Android File Transfer for Linux.app'
 end
