@@ -1,6 +1,6 @@
 cask 'altair' do
-  version '1.7.4'
-  sha256 '9bbf533f32e53b1d25eaab54c3c0bde096a84571de59a5d5198342f2de5ba45e'
+  version '1.7.5'
+  sha256 '210763fa8f6385bd32931165f7b013b338017d6eed4a63fc02dd7183b2a22f67'
 
   # github.com/imolorhe/altair was verified as official when first introduced to the cask
   url "https://github.com/imolorhe/altair/releases/download/v#{version}/altair-#{version}-mac.zip"
