@@ -1,6 +1,6 @@
 cask 'hopper-disassembler' do
-  version '4.3.24'
-  sha256 '9bf51730be59cbe96bac64a7437195bda2bf9ded912be9d83f346c1b5274a76d'
+  version '4.3.25'
+  sha256 'c6b97097753651faeba6e9496cba77bbdf2ea5c4b0a7ee5d5b9f8245f4dd06d8'
 
   # d2ap6ypl1xbe4k.cloudfront.net was verified as official when first introduced to the cask
   url "https://d2ap6ypl1xbe4k.cloudfront.net/Hopper-#{version}-demo.dmg"
