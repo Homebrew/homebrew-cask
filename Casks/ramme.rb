@@ -1,6 +1,6 @@
 cask 'ramme' do
-  version '3.2.3'
-  sha256 '4213dfe8483f0a834b2ff906c1bf1524608d1e5ef761dcaeb87ef18e3b99bba2'
+  version '3.2.5'
+  sha256 '49a4f8d1623f855322a34e670e17261a8add1ac8b764ffcd027ccb71b82fb1b0'
 
   url "https://github.com/terkelg/ramme/releases/download/v#{version}/Ramme-#{version}.dmg"
   appcast 'https://github.com/terkelg/ramme/releases.atom'
