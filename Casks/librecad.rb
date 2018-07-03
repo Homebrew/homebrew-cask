@@ -6,7 +6,7 @@ cask 'librecad' do
   url "https://github.com/LibreCAD/LibreCAD/releases/download/#{version}/LibreCAD_#{version.dots_to_hyphens}.dmg"
   appcast 'https://github.com/LibreCAD/LibreCAD/releases.atom'
   name 'LibreCAD'
-  homepage 'http://librecad.org/cms/home.html'
+  homepage 'https://librecad.org/'
 
   app 'LibreCAD.app'
 end
