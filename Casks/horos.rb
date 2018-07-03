@@ -11,7 +11,7 @@ cask 'horos' do
   end
 
   url "https://horosproject.org/horos-content/Horos#{version}.dmg"
-  appcast 'https://github.com/horosproject/horos/releases.atom'
+  appcast 'https://horosproject.org/download/'
   name 'Horos – Free, open medical image viewer'
   homepage 'https://horosproject.org/'
 
