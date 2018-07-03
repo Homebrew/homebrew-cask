@@ -9,4 +9,10 @@ cask 'librecad' do
   homepage 'https://librecad.org/'
 
   app 'LibreCAD.app'
+
+  zap trash: [
+               '~/Library/Application Support/LibreCAD',
+               '~/Library/Preferences/com.librecad.LibreCAD.plist',
+               '~/Library/Saved Application State/com.yourcompany.LibreCAD.savedstate',
+             ]
 end
