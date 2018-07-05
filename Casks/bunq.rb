@@ -1,6 +1,6 @@
 cask 'bunq' do
-  version '0.8.9'
-  sha256 'aaac0bf9b15a640e8e958b26417f7332dcf4fc49696a0a9a93787797f39341db'
+  version '0.8.11'
+  sha256 'cda59e4653e747c0099c5078aaf5d59040d68f7f5784b5a6d94a6fcfff45d9b3'
 
   # github.com/BunqCommunity/BunqDesktop was verified as official when first introduced to the cask
   url "https://github.com/BunqCommunity/BunqDesktop/releases/download/#{version}/BunqDesktop-#{version}.dmg"
