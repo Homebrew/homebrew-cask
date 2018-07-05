@@ -8,6 +8,8 @@ cask 'hazel' do
   name 'Hazel'
   homepage 'https://www.noodlesoft.com/'
 
+  auto_updates true
+
   prefpane 'Install Hazel.app/Contents/Resources/Hazel.prefPane'
 
   uninstall quit: 'com.noodlesoft.HazelHelper'
