@@ -10,4 +10,12 @@ cask 'mullvadvpn' do
   gpg "#{url}.asc", key_id: 'a1198702fc3e0a09a9ae5b75d5a1d4f266de8ddf'
 
   app 'MullvadVPN.app'
+
+  zap trash: [
+               '~/Library/Application Support/MullvadVPN',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.mullvad.vpn.sfl*',
+               '~/Library/Logs/MullvadVPN',
+               '~/Library/Preferences/net.mullvad.vpn.plist',
+               '~/Library/Preferences/net.mullvad.vpn.helper.plist',
+             ]
 end
