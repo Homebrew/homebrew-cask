@@ -1,6 +1,6 @@
 cask 'liteide' do
-  version '33.3,5.9.5'
-  sha256 '0d8c86fe72f5583797932664943ad09f4af3785cbfab224a052b01735ee1007c'
+  version '33.4,5.9.5'
+  sha256 '9e01622e3bc8f982cb79ff999ebbbaa9377a2cbab5830a95cda8b319706e6723'
 
   # github.com/visualfc/liteide was verified as official when first introduced to the cask
   url "https://github.com/visualfc/liteide/releases/download/x#{version.before_comma}/liteidex#{version.before_comma}.macosx-qt#{version.after_comma}.zip"
