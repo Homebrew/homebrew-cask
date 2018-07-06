@@ -1,11 +1,10 @@
 cask 'mos' do
-  version '2.2.0'
-  sha256 'fc8f5359f9d6e826741ef59c975a8ffe9be1cadda22933e6d0f40929e2413da3'
+  version '2.2.6'
+  sha256 '803b3130c722b2cf08e166f347806ab1fd427feef98f07f9edd5439845c3247e'
 
   # github.com/Caldis/Mos was verified as official when first introduced to the cask
   url "https://github.com/Caldis/Mos/releases/download/#{version}/Mos.Versions.#{version}.dmg"
-  appcast 'https://github.com/Caldis/Mos/releases.atom',
-          checkpoint: '3ddaddac825c26ac3cb4dd57826770e524a498bd4d7d364627fac510baa20459'
+  appcast 'https://github.com/Caldis/Mos/releases.atom'
   name 'Mos'
   homepage 'https://mos.caldis.me/'
 

@@ -4,8 +4,7 @@ cask 'mplayer-osx-extended' do
 
   # github.com/sttz/MPlayer-OSX-Extended was verified as official when first introduced to the cask
   url "https://github.com/sttz/MPlayer-OSX-Extended/releases/download/#{version}/MPlayer-OSX-Extended_#{version}.zip"
-  appcast 'https://github.com/sttz/MPlayer-OSX-Extended/releases.atom',
-          checkpoint: '4c05f3c71bb35d180ae4b5821a5f50820ebd76f3293adda729b605e79d396ea6'
+  appcast 'https://github.com/sttz/MPlayer-OSX-Extended/releases.atom'
   name 'MPlayer OSX Extended'
   homepage 'https://mplayerosx.ch/'
 

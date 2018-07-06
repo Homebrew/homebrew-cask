@@ -4,8 +4,7 @@ cask 'reqlpro' do
 
   # amazonaws.com/reqlpro was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/reqlpro/ReQLPro_#{version}.dmg"
-  appcast 'https://reqlpro.com/download/',
-          checkpoint: '9c726f643dbe5437a9555ddd37eb6bbddac5fdee886ab2d4da0b7c10383259ef'
+  appcast 'https://reqlpro.com/download/'
   name 'ReQLPro'
   homepage 'https://reqlpro.com/'
 

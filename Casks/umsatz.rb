@@ -1,11 +1,10 @@
 cask 'umsatz' do
-  version '7.0'
-  sha256 'b3b4c48106b9615a4f3f7db361432862d63ccec5dd91e52a07696c21290f26ec'
+  version '7.2.1'
+  sha256 '357b447525d78a4b15da6d76b2376bf20cc3b0f216be1c041283112e8b247476'
 
   # moapp.software was verified as official when first introduced to the cask
   url 'https://download.moapp.software/Umsatz.zip'
-  appcast 'https://sparkle.moapp.software/umsatz.xml',
-          checkpoint: 'c376278a20068a3f8d7e00aee7642d71a91236427a48371c292aa00df6ca653a'
+  appcast 'https://sparkle.moapp.software/umsatz.xml'
   name 'Umsatz'
   homepage 'https://umsatz-programm.de/'
 

@@ -15,7 +15,7 @@ Homebrew-Cask is designed to work like a traditional Unix tool:
 
 Homebrew-Cask is still young, and should be considered in alpha.
 
-We have good support for a variety of artifacts such as apps, pkgs, binaries, plugins, and [fonts](https://github.com/caskroom/homebrew-fonts/). Homebrew-Cask can install and uninstall any of those. However, these commands don’t work well with multiple versions, and most importantly, we currently can’t `upgrade` ([but are working on it](https://github.com/caskroom/homebrew-cask/issues/29301)).
+We have good support for a variety of artifacts such as apps, pkgs, binaries, plugins, and [fonts](https://github.com/Homebrew/homebrew-cask-fonts/). Homebrew-Cask can install and uninstall any of those. However, these commands don’t work well with multiple versions, and most importantly, we currently can’t `upgrade` ([but are working on it](https://github.com/Homebrew/homebrew-cask/issues/29301)).
 
 ### Casks and Formulae
 
@@ -25,7 +25,7 @@ Casks, by contrast, only need to support the few installation methods used by ap
 
 We encourage Cask authors to use the DSL as much as possible, since that makes things easier for everyone: from maintainers who review pull requests, to first-time contributors, to people who are unfamiliar with Ruby but would like to help.
 
-For software with unusual needs that are not covered by the DSL, we generally accept Casks containing small hacks or arbitrary code (for example, though the use of [shims scripts](https://github.com/caskroom/homebrew-cask/issues/18809)). If the hack becomes common enough, we extend the DSL with a simple shorthand that offers the same (or better) functionality.
+For software with unusual needs that are not covered by the DSL, we generally accept Casks containing small hacks or arbitrary code (for example, though the use of [shims scripts](https://github.com/Homebrew/homebrew-cask/issues/18809)). If the hack becomes common enough, we extend the DSL with a simple shorthand that offers the same (or better) functionality.
 
 ## Contributing
 
@@ -75,4 +75,4 @@ brew cask _stanza <stanza_name> [ --table | --yaml | --inspect | --quiet ] [ <ca
 
 If no `<cask_token>`’s are given, then data for all Casks is returned. On failure, a blank line is returned to the standard output.
 
-For example, `brew cask _stanza appcast atom` outputs the [`appcast` for the Cask atom.rb](https://github.com/caskroom/homebrew-cask/blob/43ad9d8ddbad71fbeee42710d567861f080fedf8/Casks/atom.rb#L7), namely `https://github.com/atom/atom/releases.atom`.
+For example, `brew cask _stanza appcast atom` outputs the [`appcast` for the Cask atom.rb](https://github.com/Homebrew/homebrew-cask/blob/43ad9d8ddbad71fbeee42710d567861f080fedf8/Casks/atom.rb#L7), namely `https://github.com/atom/atom/releases.atom`.

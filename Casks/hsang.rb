@@ -1,9 +1,9 @@
 cask 'hsang' do
-  version '1.8.2'
-  sha256 'a1e54fc34b5ca82ed1b3e24f4618b832ef2df8e9d1bdb918573ac6f3d339e449'
+  version '1.8.7'
+  sha256 '34a77d461738327873a13410270e08b51435ddcd25a9ba842fd96d68094b93c4'
 
-  # nie.gdl.netease.com/lushi was verified as official when first introduced to the cask
-  url "http://nie.gdl.netease.com/lushi/HSAng_#{version}.dmg"
+  # opd.gdl.netease.com/ was verified as official when first introduced to the cask
+  url "http://opd.gdl.netease.com/HSAng_#{version}.dmg"
   name 'HSAng'
   homepage 'http://lushi.163.com/'
 

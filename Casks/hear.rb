@@ -3,8 +3,7 @@ cask 'hear' do
   sha256 '2711fbc44e318db8647afdb3f81f0d117946ecbe5e4d39b81732e1518dcfdcd8'
 
   url "https://downloads.prosofteng.com/hear/Hear_#{version}.dmg"
-  appcast 'https://www.prosofteng.com/resources/sparkle/sparkle.php?psProduct=Hear',
-          checkpoint: 'fda2626909b97d07dd5ff26d881b7df42ebf51fcf112d29437819b42c62a56c3'
+  appcast 'https://www.prosofteng.com/resources/sparkle/sparkle.php?psProduct=Hear'
   name 'Hear'
   homepage 'https://www.prosofteng.com/hear-audio-enhancer/'
 

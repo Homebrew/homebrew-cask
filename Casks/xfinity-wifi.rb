@@ -10,8 +10,8 @@ cask 'xfinity-wifi' do
 
   pkg 'XFINITY_WiFi.pkg'
 
-  # This is a horrible hack to force the file extension.  The
-  # backend code should be fixed so that this is not needed.
+  # This is a horrible hack to force the file extension.
+  # The backend code should be fixed so that this is not needed.
   preflight do
     system_command '/bin/mv', args: ['--', staged_path.join('download_mac.php'), staged_path.join('XFINITY_WiFi.pkg')]
   end

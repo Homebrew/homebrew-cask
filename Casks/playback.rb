@@ -4,8 +4,7 @@ cask 'playback' do
 
   # github.com/mafintosh/playback was verified as official when first introduced to the cask
   url "https://github.com/mafintosh/playback/releases/download/v#{version}/Playback.app.zip"
-  appcast 'https://github.com/mafintosh/playback/releases.atom',
-          checkpoint: '344d9c935d96a3656e6a5f30546e07981967dd92e783bdfe21f78544be8daa0e'
+  appcast 'https://github.com/mafintosh/playback/releases.atom'
   name 'Playback'
   homepage 'https://mafintosh.github.io/playback/'
 

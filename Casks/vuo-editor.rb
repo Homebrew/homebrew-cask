@@ -1,10 +1,9 @@
 cask 'vuo-editor' do
-  version '1.2.6'
-  sha256 '6a114d3e266a57d8ce82014784bdb3ead1ca1d2c02d564ade74a805f62a45aca'
+  version '1.2.7'
+  sha256 '7210b425fded394733c7b00e4cd5ba6128bd41e21b5ba83108473d771d1443ca'
 
   url "https://vuo.org/sites/default/files/vuo-#{version}-editor.zip"
-  appcast 'https://vuo.org/releases.rss',
-          checkpoint: '086d28c17c3adb3f46d2e71ff73bf030e0462a16c3056887c382d3885af05376'
+  appcast 'https://vuo.org/releases.rss'
   name 'Vuo'
   homepage 'https://vuo.org/'
 

@@ -1,14 +1,13 @@
 cask 'next' do
-  version '0.07'
-  sha256 '88f92765fe9963b0800de73775cf9bf5fd8d793674f9da1755676e832d523d2a'
+  version '0.08'
+  sha256 '5d2feef32815f79e776bb7db543bc2e8e7bfd7e5ecdefa4e92c1c0d846b1db8a'
 
-  url "https://github.com/nEXT-Browser/nEXT/releases/download/#{version}/nEXT.dmg"
-  appcast 'https://github.com/nEXT-Browser/nEXT/releases.atom',
-          checkpoint: 'f5dec83b8e73c75011c335ec2e57be3a9b4c60f52246650657f68a89247db1e4'
-  name 'nEXT-Browser'
-  homepage 'https://github.com/nEXT-Browser/nEXT'
+  url "https://github.com/next-browser/next/releases/download/#{version}/Next.dmg"
+  appcast 'https://github.com/next-browser/next/releases.atom'
+  name 'Next Browser'
+  homepage 'https://github.com/next-browser/next'
 
-  app 'nEXT.app'
+  app 'Next.app'
 
   zap trash: '~/Library/Caches/next.browser'
 end

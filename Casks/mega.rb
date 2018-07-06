@@ -6,5 +6,5 @@ cask 'mega' do
   name 'MEGA'
   homepage 'http://megasoftware.net/'
 
-  app "MEGA#{version}-mac.app"
+  app "MEGA#{version.major}.app"
 end

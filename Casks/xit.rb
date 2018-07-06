@@ -1,19 +1,18 @@
 cask 'xit' do
-  version '1.0b8'
-  sha256 'd75ff6baa6743be50edcfb4e5c1dab12dba6759e397cf694eefe3885be231138'
+  version '1.0b9'
+  sha256 'ae0ebb6b0e7bf77ecff22ea77530b496bdaf4c722297c8fe3bbc56ef64d8d659'
 
   url "https://github.com/Uncommon/Xit/releases/download/#{version}/Xit.zip"
-  appcast 'https://github.com/Uncommon/Xit/releases.atom',
-          checkpoint: '124eb7a3ebfac3e00781c69364aefb825323d7b81cb3c8c7bdc661d0be06aef2'
+  appcast 'https://github.com/Uncommon/Xit/releases.atom'
   name 'Xit'
   homepage 'https://github.com/Uncommon/Xit'
 
   app 'Xit.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.uncommonplace.xit.sfl*',
-                '~/Library/Caches/com.uncommonplace.Xit',
-                '~/Library/Preferences/com.uncommonplace.Xit.plist',
-                '~/Library/Saved Application State/com.uncommonplace.Xit.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.uncommonplace.xit.sfl*',
+               '~/Library/Caches/com.uncommonplace.Xit',
+               '~/Library/Preferences/com.uncommonplace.Xit.plist',
+               '~/Library/Saved Application State/com.uncommonplace.Xit.savedState',
+             ]
 end

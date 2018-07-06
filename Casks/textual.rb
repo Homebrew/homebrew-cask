@@ -1,8 +1,9 @@
 cask 'textual' do
-  version :latest
-  sha256 :no_check
+  version '7.0.10,91ee6772a'
+  sha256 '667d86e74803703433685e2dbd3838e45e6b360541d199e53e1394b9f4195449'
 
-  url 'https://www.codeux.com/textual/downloads/Textual.dmg'
+  url "https://cached.codeux.com/textual/downloads/resources/builds/standard-release/Textual-#{version.after_comma}.dmg"
+  appcast 'https://help.codeux.com/textual/Direct-Download-Links.kb'
   name 'Textual'
   homepage 'https://www.codeux.com/textual/'
 

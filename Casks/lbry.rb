@@ -1,11 +1,10 @@
 cask 'lbry' do
-  version '0.21.2'
-  sha256 'e6f5af33929484fb27f76761c24c901fe651f5dd389b87c4c09c867edbb33221'
+  version '0.22.0'
+  sha256 'c7c7ca5c0e8e051001d8bd269867b6f4df2233453e975e2ed79076ce31a45a5c'
 
   # github.com/lbryio/lbry-app was verified as official when first introduced to the cask
   url "https://github.com/lbryio/lbry-app/releases/download/v#{version}/LBRY_#{version}.dmg"
-  appcast 'https://github.com/lbryio/lbry-app/releases.atom',
-          checkpoint: '24b688185291edad7e006b36e7faa281f13d1c0c3daa96214538c6406c1c3c93'
+  appcast 'https://github.com/lbryio/lbry-app/releases.atom'
   name 'LBRY'
   homepage 'https://lbry.io/'
 

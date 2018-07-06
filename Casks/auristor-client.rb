@@ -1,20 +1,20 @@
 cask 'auristor-client' do
-  version '0.168'
+  version '0.170'
 
   if MacOS.version == :mavericks
-    sha256 'b921aa93872a3f5dadcb8abbb94bc1ebbf97db44d64e96c5ab5880be54da2205'
+    sha256 'cab27067e65c1ae467333f1fc4840faf7d8887a907f1d2723a91344181fcdf9d'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.9/AuriStor-client-#{version}-Mavericks.dmg"
   elsif MacOS.version == :yosemite
-    sha256 '4f44569cecf28b9e318c17a5801f2691ca78f5ee6c9665bc505ae28177b74547'
+    sha256 '6f47a61ba2184cc1a83284807ef685626ba4f480a7ad6d52e9a07cf50596e93c'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.10/AuriStor-client-#{version}-Yosemite.dmg"
   elsif MacOS.version == :el_capitan
-    sha256 'a1d74ebab1ea9199afbc5675398c04ca877dc6eeb6ae71a808601023955dfa5e'
+    sha256 'ce04a065f9609660cc06fdefc044ff7585888d4ca54bd943c786bca8ff04fc1c'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.11/AuriStor-client-#{version}-ElCapitan.dmg"
   elsif MacOS.version == :sierra
-    sha256 '243ac6bc632c0070d5ffdfb93c49c8609b2842aac6d98b9d2bc562f01b70ed36'
+    sha256 '3acb856ba898e01ad2352aa5c01de229806713bf51f7a3a5ef6d68e2ab87712c'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.12/AuriStor-client-#{version}-Sierra.dmg"
   else
-    sha256 '37f79fae30eb28a85d7da8983bfd036654000be1560356321c893fb8c6a91c66'
+    sha256 '6f9bcffeee74b38e9737f65ba7435fbddf7b41259cbf441637b0ea21d9916e85'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.13/AuriStor-client-#{version}-HighSierra.dmg"
   end
 

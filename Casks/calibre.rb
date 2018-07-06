@@ -1,10 +1,9 @@
 cask 'calibre' do
-  version '3.21.0'
-  sha256 'cc592cd935bffcff8c103b71cc747ebc9cac66c307e08d4e4ce5b2a5b4c57462'
+  version '3.27.0'
+  sha256 '8b8cb29a5c39b694e9d0d94bf0441ac7047fc33eed7f65bccb87ef4e4d846a2b'
 
   url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
-  appcast 'https://github.com/kovidgoyal/calibre/releases.atom',
-          checkpoint: '0f1968f68941a6f7268871ccfa55553182ff018e07438de835260e772d3317f0'
+  appcast 'https://github.com/kovidgoyal/calibre/releases.atom'
   name 'calibre'
   homepage 'https://calibre-ebook.com/'
 

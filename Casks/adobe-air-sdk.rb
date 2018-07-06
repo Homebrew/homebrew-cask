@@ -1,6 +1,6 @@
 cask 'adobe-air-sdk' do
-  version '29.0'
-  sha256 'c37f878ac78b3411358ff98045c2b75cc39df5bd67767a229bd8209a06d043ab'
+  version '30.0'
+  sha256 'f1f95129fbc48b0625cda9d94c4e02fa704f287698dd1ff7d5051a617fca3077'
 
   url "https://airdownload.adobe.com/air/mac/download/#{version}/AIRSDK_Compiler.dmg"
   name 'Adobe AIR SDK'
@@ -36,7 +36,7 @@ cask 'adobe-air-sdk' do
       'swcdepends',
       'swfdump',
     ].each do |shimscript|
-      # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+      # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
       IO.write "#{staged_path}/bin/#{shimscript}.wrapper.sh", <<~EOS
         #!/bin/sh
         exec '#{staged_path}/bin/#{shimscript}' "$@"

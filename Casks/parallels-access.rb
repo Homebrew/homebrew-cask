@@ -7,7 +7,7 @@ cask 'parallels-access' do
   homepage 'https://www.parallels.com/products/access/'
 
   # This .dmg cannot be extracted normally
-  # Original discussion: https://github.com/caskroom/homebrew-cask/issues/26872
+  # Original discussion: https://github.com/Homebrew/homebrew-cask/issues/26872
   container type: :naked
 
   preflight do

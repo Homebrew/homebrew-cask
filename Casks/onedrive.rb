@@ -1,6 +1,6 @@
 cask 'onedrive' do
-  version '18.044.0301.0005'
-  sha256 'eed36b44a5e6a8bcab7b712c7f924c72fcef9e1f1d4bf96b59ede18b0cdfaf28'
+  version '18.091.9506.0004'
+  sha256 '814bd894b4eacec8ac829526fcf7b4774226dd56c4a0eb5a7dea61ed12a30d49'
 
   # oneclient.sfx.ms/Mac/Direct was verified as official when first introduced to the cask
   url "https://oneclient.sfx.ms/Mac/Direct/#{version}/OneDrive.pkg"

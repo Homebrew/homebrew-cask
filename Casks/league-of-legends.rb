@@ -9,5 +9,12 @@ cask 'league-of-legends' do
 
   app 'League of Legends.app'
 
-  zap trash: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.riotgames.maccontainer.sfl*'
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.riotgames.maccontainer.sfl*',
+               '~/Library/Saved Application State/com.riotgames.LeagueofLegends.GameClient.savedState',
+               '~/Library/Saved Application State/com.riotgames.LeagueofLegends.LeagueClientUx.savedState',
+               '~/Library/Preferences/com.riotgames.LeagueofLegends.LeagueClientUxHelper.plist',
+               '~/Library/Caches/com.riotgames.LeagueofLegends.LeagueClient',
+             ],
+      rmdir: '~/Documents/League of Legends'
 end

@@ -1,11 +1,10 @@
 cask 'telegram-desktop' do
-  version '1.2.17'
-  sha256 'd5b3042de18979d8e3bc8affa54749af96cce3512b30e4ddbbae685211a19fd6'
+  version '1.3.9'
+  sha256 'fe2f9db73bb37f63c3ce0efe4419a7e8fbdab5a6da89cc630c14ce4971f1df02'
 
   # github.com/telegramdesktop/tdesktop/releases/download was verified as official when first introduced to the cask
   url "https://github.com/telegramdesktop/tdesktop/releases/download/v#{version}/tsetup.#{version}.dmg"
-  appcast 'https://github.com/telegramdesktop/tdesktop/releases.atom',
-          checkpoint: '561e8c3c8c21b4b271152ce1815e33c6e09e15f002d5266f4874bb82b4970cae'
+  appcast 'https://github.com/telegramdesktop/tdesktop/releases.atom'
   name 'Telegram Desktop'
   homepage 'https://desktop.telegram.org/'
 

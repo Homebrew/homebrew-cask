@@ -4,8 +4,7 @@ cask 'wire' do
 
   # github.com/wireapp/wire-desktop was verified as official when first introduced to the cask
   url "https://github.com/wireapp/wire-desktop/releases/download/release%2F#{version}/wire-#{version}.pkg"
-  appcast 'https://github.com/wireapp/wire-desktop/releases.atom',
-          checkpoint: 'ba06d3cc4687d5c1c2229eb2c5b14dd485e51a338ec267636553ce304581be6a'
+  appcast 'https://github.com/wireapp/wire-desktop/releases.atom'
   name 'Wire'
   homepage 'https://wire.com/'
 

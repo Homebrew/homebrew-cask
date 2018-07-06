@@ -1,11 +1,10 @@
 cask 'yu-writer' do
-  version 'beta-0.4.4'
-  sha256 '982af5671d31162212529a42221953ecc93bc7684f70f8ca32ba8dc4717026a1'
+  version 'beta-0.5.0'
+  sha256 '9781500ddebb7fad193dedb91907bf25a682712f2fab96892728bc73f6af5db5'
 
   # github.com/ivarptr/yu-writer.site was verified as official when first introduced to the cask
   url "https://github.com/ivarptr/yu-writer.site/releases/download/#{version.hyphens_to_dots}/yu-writer-#{version}-macos.dmg"
-  appcast 'https://github.com/ivarptr/yu-writer.site/releases.atom',
-          checkpoint: 'cfaa436b1d11555db172f778e671a30e7cc5d2ad71ab5a45fca75a3690b983c1'
+  appcast 'https://github.com/ivarptr/yu-writer.site/releases.atom'
   name 'Yu Writer'
   homepage 'https://ivarptr.github.io/yu-writer.site/'
 

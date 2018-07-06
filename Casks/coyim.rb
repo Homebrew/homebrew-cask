@@ -6,7 +6,6 @@ cask 'coyim' do
   url "https://dl.bintray.com/twstrike/coyim/v#{version}/mac-bundle/coyim.dmg"
   name 'CoyIM'
   homepage 'https://coy.im/'
-  gpg "#{url}.asc", key_id: '8756C4F765C9AC3CB6B85D62379CE192D401AB61'
 
   app 'CoyIM.app'
 end

@@ -1,13 +1,12 @@
 cask 'winds' do
-  version '0.3.0'
-  sha256 'f3d97376a9f060c6d4c1b3f32383332cfa4a96c294aed760306111759adc292b'
+  version '2.1.44'
+  sha256 'e0ea243ac97b672ac732e8be3f0ac617ad094156cea21cd1c2e03e17394b6c23'
 
-  # github.com/GetStream/Winds was verified as official when first introduced to the cask
-  url "https://github.com/GetStream/Winds/releases/download/v#{version}/Winds.zip"
-  appcast 'https://github.com/GetStream/Winds/releases.atom',
-          checkpoint: 'df63ab6bd453c34e983d5390c3541121380cbabcfce684faf20cf3b722c4a04e'
+  # s3.amazonaws.com was verified as official when first introduced to the cask
+  url "https://s3.amazonaws.com/winds-#{version.major}.0-releases/releases/Winds-#{version}.dmg"
+  appcast "https://s3.amazonaws.com/winds-#{version.major}.0-releases/latest.html"
   name 'Winds'
-  homepage 'https://winds.getstream.io/'
+  homepage 'https://getstream.io/winds/'
 
   app 'Winds.app'
 end

@@ -1,6 +1,6 @@
 cask 'mamp' do
-  version '4.4.1'
-  sha256 '5eab5e3bcca0e7c9641d4cf21c7ee4a5698fa0c2ed7980cdb6a728de7857084b'
+  version '4.5'
+  sha256 'f40292cba78df3fdfa1d13370a026601b76ccec9344a23a70c75fc506301ca0a'
 
   url "https://downloads.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}.pkg"
   name 'MAMP'

@@ -3,8 +3,7 @@ cask 'webpack-dashboard' do
   sha256 'aecc8a4831c8ca9d709c789821c6971f341596bccde8f6bf255cfeda3ecf43eb'
 
   url "https://github.com/FormidableLabs/electron-webpack-dashboard/releases/download/v#{version}/webpack-dashboard-app-#{version}.dmg"
-  appcast 'https://github.com/FormidableLabs/electron-webpack-dashboard/releases.atom',
-          checkpoint: '5d3abed0343cd890d44a8089cfab8871260cac0c2c9ca808f3f650cb0520da62'
+  appcast 'https://github.com/FormidableLabs/electron-webpack-dashboard/releases.atom'
   name 'Webpack Dashboard'
   homepage 'https://github.com/FormidableLabs/electron-webpack-dashboard'
 

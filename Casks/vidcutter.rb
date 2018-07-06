@@ -4,8 +4,7 @@ cask 'vidcutter' do
 
   # github.com/ozmartian/vidcutter was verified as official when first introduced to the cask
   url "https://github.com/ozmartian/vidcutter/releases/download/#{version}/VidCutter-#{version}-macOS.dmg"
-  appcast 'https://github.com/ozmartian/vidcutter/releases.atom',
-          checkpoint: '76cd38a8f0820106c0cb92f17292a7b3bb78dadb5736bb84b9a3b98edab8ea8c'
+  appcast 'https://github.com/ozmartian/vidcutter/releases.atom'
   name 'VidCutter'
   homepage 'https://vidcutter.ozmartians.com/'
 

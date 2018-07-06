@@ -4,8 +4,7 @@ cask 'core-tunnel' do
 
   # update.codinn.com/media/sparkle was verified as official when first introduced to the cask
   url "https://update.codinn.com/media/sparkle/Core_Tunnel-#{version.after_comma}.zip"
-  appcast 'https://update.codinn.com/sparkle/2/appcast.xml',
-          checkpoint: '478391272b0e0a7b3ffc740d12529ccaa43c60366f715e2e3bb1b1881328af3f'
+  appcast 'https://update.codinn.com/sparkle/2/appcast.xml'
   name 'Core Tunnel'
   homepage 'https://coressh.io/'
 

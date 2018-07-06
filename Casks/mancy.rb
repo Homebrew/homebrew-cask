@@ -4,8 +4,7 @@ cask 'mancy' do
 
   # github.com/princejwesley/Mancy was verified as official when first introduced to the cask
   url "https://github.com/princejwesley/Mancy/releases/download/v#{version}/Mancy-darwin-x64.zip"
-  appcast 'https://github.com/princejwesley/Mancy/releases.atom',
-          checkpoint: '4c9bb6d6549c38df42c1a9f54b1167ebb28db79de2121d603c5633a232e328f9'
+  appcast 'https://github.com/princejwesley/Mancy/releases.atom'
   name 'Mancy'
   homepage 'http://mancy-re.pl/'
 

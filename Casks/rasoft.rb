@@ -1,12 +1,15 @@
 cask 'rasoft' do
-  version '3.8'
-  sha256 'c077fdb0766938d336ac2f80fe8cf2d0ae3316142af8d39849932c59232e196c'
+  version '3.8.62'
+  sha256 '6a17d2a1bfe6a77b30621b295d8a8918492916450867214cd0fe495819868a1d'
 
-  url "https://www.rakocontrols.com/media/1399/rasoft-pro-#{version.no_dots}.dmg"
-  appcast 'https://www.rakocontrols.com/support/software/',
-          checkpoint: '37baa0073b1c79aebf41bc5ce5f4f54dee0694684d6aced04fd5bf155f5774e8'
+  url "https://rasoftx.rakocontrols.com/rasoftx/development/Rasoft%20Pro-#{version}.dmg"
+  appcast 'https://www.rakocontrols.com/support/software/'
   name 'Rasoft Pro'
   homepage 'https://www.rakocontrols.com/support/software/'
 
   app 'Rasoft Pro.app'
+
+  uninstall_preflight do
+    set_permissions "#{appdir}/Rasoft Pro.app", '0777'
+  end
 end

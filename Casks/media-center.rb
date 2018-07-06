@@ -1,6 +1,6 @@
 cask 'media-center' do
-  version '23.0.103'
-  sha256 '067a3f7a99d2d7a30f4f90a2c59f7438cf062a3c4479d930c955dfe3a860c9bd'
+  version '24.00.25'
+  sha256 '97c99e6ff006fd80cc5667082519bb4804a08035465c48e6b28db05da5654fd8'
 
   url "http://files.jriver.com/mediacenter/channels/v#{version.major}/stable/MediaCenter#{version.no_dots}.dmg"
   name 'JRiver Media Center'

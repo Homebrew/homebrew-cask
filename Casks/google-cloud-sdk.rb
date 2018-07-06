@@ -11,6 +11,7 @@ cask 'google-cloud-sdk' do
                       args:       ['--usage-reporting', 'false', '--bash-completion', 'false', '--path-update', 'false', '--rc-path', 'false', '--quiet'],
                     }
   binary 'google-cloud-sdk/bin/bq'
+  binary 'google-cloud-sdk/bin/docker-credential-gcloud'
   binary 'google-cloud-sdk/bin/gcloud'
   binary 'google-cloud-sdk/bin/git-credential-gcloud.sh', target: 'git-credential-gcloud'
   binary 'google-cloud-sdk/bin/gsutil'

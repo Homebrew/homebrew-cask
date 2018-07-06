@@ -1,11 +1,10 @@
 cask 'flash-npapi' do
-  version '29.0.0.140'
-  sha256 '173d1201269371761460f36656edf92c23b90d1b21389c2b288c47be093951ae'
+  version '30.0.0.113'
+  sha256 'd3cdfe22408ed1ae1308b1677c75fb578e7e02b9e28562ead181912c075e85ff'
 
   # macromedia.com was verified as official when first introduced to the cask
   url "https://fpdownload.adobe.com/get/flashplayer/pdc/#{version}/install_flash_player_osx.dmg"
-  appcast 'http://fpdownload2.macromedia.com/get/flashplayer/update/current/xml/version_en_mac_pl.xml',
-          checkpoint: '53e0fa18b84d4d4c486059974a4d51e0cc9cef5b44f71ac6fe1f2e5b34aac950'
+  appcast 'http://fpdownload2.macromedia.com/get/flashplayer/update/current/xml/version_en_mac_pl.xml'
   name 'Adobe Flash Player NPAPI (plugin for Safari and Firefox)'
   homepage 'https://get.adobe.com/flashplayer/'
 

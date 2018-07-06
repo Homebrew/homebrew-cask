@@ -107,7 +107,7 @@ pkg, which may be useful when writing a Cask uninstall stanza.
 
 The given package file need not be installed.
 
-The output attempts to be overly inclusive.  However, since
+The output attempts to be overly inclusive. However, since
 pkg files are allowed to run arbitrary scripts, there can be
 no guarantee that the output is exact.
 

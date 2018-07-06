@@ -3,8 +3,7 @@ cask 'gitify' do
   sha256 'c0d206b5160850c89dafcb330fa4df74c53de457154bf765257f7fe343f675f6'
 
   url "https://github.com/manosim/gitify/releases/download/#{version}/gitify-osx.zip"
-  appcast 'https://github.com/manosim/gitify/releases.atom',
-          checkpoint: '1a17101d1ec564960a3651bcb3cc57b2ae2dd8e48f53b4e33aedbecd96fc1d61'
+  appcast 'https://github.com/manosim/gitify/releases.atom'
   name 'Gitify'
   homepage 'https://github.com/manosim/gitify'
 
