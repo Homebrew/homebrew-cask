@@ -1,6 +1,6 @@
 cask 'jubler' do
-  version '5.1'
-  sha256 'db061825d731abc2eb96bfbed49df78f712d4b4c58c007d91f608ae670f19438'
+  version '6.0'
+  sha256 'ed330203ce9a16ee5fa8708fa89b66907e62475f089f463adc6fb51db2f6a4a0'
 
   # sourceforge.net/jubler was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/jubler/Jubler-#{version}.dmg"
