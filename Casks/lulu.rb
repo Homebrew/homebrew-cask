@@ -3,7 +3,7 @@ cask 'lulu' do
   sha256 'aa446a1a834242db595451657e565d3bc23e49050a36c6451cb1fe716e8e63a7'
 
   # github.com/objective-see/LuLu was verified as official when first introduced to the cask
-  url "https://github.com/objective-see/LuLu/releases/download/#{version}/LuLu.Installer.zip"
+  url "https://github.com/objective-see/LuLu/releases/download/#{version}/LuLu_#{version.dots_to_underscores}.zip"
   appcast 'https://github.com/objective-see/LuLu/releases.atom'
   name 'LuLu'
   homepage 'https://objective-see.com/products/lulu.html'
