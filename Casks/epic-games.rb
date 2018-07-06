@@ -1,6 +1,6 @@
 cask 'epic-games' do
-  version '7.12.0'
-  sha256 'c30e81771c0d178e5077f6c5aa4b9495722f23337a4cc07e9e990de16ca21467'
+  version '7.12.1'
+  sha256 '706c734473e606bac7f9213fc65f049d91740f028117196994008344ff663545'
 
   url "https://download-dynamic.epicgames.com/Builds/UnrealEngineLauncher/Installers/EpicInstaller-#{version}.dmg"
   appcast 'https://forums.unrealengine.com/unreal-engine/announcements-and-releases/1928-latest-launcher-release-notes'
