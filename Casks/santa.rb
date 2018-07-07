@@ -3,7 +3,7 @@ cask 'santa' do
   sha256 'd3d54d49efbb5dda26476d351a073191df4f7dcf6688e4e4663392f9a3390836'
 
   url "https://github.com/google/santa/releases/download/#{version}/santa-#{version}.dmg"
-  appcast 'https://github.com/google/santa/releases.atom'
+  appcast 'test'
   name 'Santa'
   homepage 'https://github.com/google/santa'
 
