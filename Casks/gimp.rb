@@ -6,7 +6,7 @@ cask 'gimp' do
   name 'GIMP'
   homepage 'https://www.gimp.org/'
 
-  app 'GIMP-2.10.app'
+  app "GIMP-#{version.major_minor}.app"
 
   postflight do
     set_permissions "#{appdir}/GIMP.app/Contents/MacOS/GIMP", 'a+rx'
