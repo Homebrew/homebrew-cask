@@ -1,6 +1,6 @@
 cask 'trenchbroom' do
-  version '2.0.2'
-  sha256 '1ec048bd602b8e6d0e944fe88f1c547aae28fc004b3312a9f1c0c7488a1af40b'
+  version '2.0.3'
+  sha256 '338a0ed80b86650b0aa3e787ac40d8e5fb77e60062f63a398b6b0d74744bd1c4'
 
   # github.com/kduske/TrenchBroom/releases/download was verified as official when first introduced to the cask
   url "https://github.com/kduske/TrenchBroom/releases/download/v#{version}/TrenchBroom-MacOSX-v#{version}-Release.dmg"
