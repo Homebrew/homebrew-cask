@@ -12,8 +12,8 @@ cask 'resolume-arena' do
   uninstall pkgutil: "com.resolume.pkg.ResolumeArena#{version.major}",
             delete:  "/Applications/Resolume Arena #{version.major}"
 
-  zap trash: [
-               'com.resolume.pkg.ResolumeDXV',
-               'com.resolume.pkg.ResolumeQuickLook',
-             ]
+  zap pkgutil: [
+                 'com.resolume.pkg.ResolumeDXV',
+                 'com.resolume.pkg.ResolumeQuickLook',
+               ]
 end
