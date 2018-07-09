@@ -8,9 +8,11 @@ cask 'resolume-arena' do
   homepage 'https://resolume.com/'
 
   pkg 'Resolume Arena Installer.pkg'
-
+  
+  uninstall pkgutil: "com.resolume.pkg.ResolumeArena#{version.major}",
+            delete:  "/Applications/Resolume Arena #{version.major}"
+  
   zap trash: [
-                "com.resolume.pkg.ResolumeArena#{version.major}",
                 'com.resolume.pkg.ResolumeDXV',
                 'com.resolume.pkg.ResolumeQuickLook',
              ]
