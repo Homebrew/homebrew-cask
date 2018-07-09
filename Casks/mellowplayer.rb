@@ -1,6 +1,6 @@
 cask 'mellowplayer' do
-  version '3.3.5'
-  sha256 '22c003f5f233ee24f9a8044dffe3959a71c45c1a935bc94e3d4cbc3edf3636b5'
+  version '3.4.0'
+  sha256 '0d7801211951de5ca3d3e8ce4c301bc2b3e29c18bdd90ec0a763f26b2bb1bafc'
 
   # github.com/ColinDuquesnoy/MellowPlayer was verified as official when first introduced to the cask
   url "https://github.com/ColinDuquesnoy/MellowPlayer/releases/download/#{version}/MellowPlayer.dmg"
