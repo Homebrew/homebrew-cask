@@ -5,7 +5,7 @@ cask 'macupdater' do
   url "https://www.corecode.io/downloads/macupdater_#{version}.zip"
   appcast 'https://www.corecode.io/macupdater/macupdater.xml'
   name 'MacUpdater'
-  homepage 'www.corecode.io/macupdater/index.html'
+  homepage 'https://www.corecode.io/macupdater/index.html'
 
   app 'MacUpdater.app'
 end
