@@ -1,6 +1,6 @@
 cask 'ganache' do
-  version '1.1.0'
-  sha256 'a24f2e1e4e76508dc324b13ec85ab7f931a521df0fa97f9e43e0a3fa6a6a489c'
+  version '1.2.0'
+  sha256 '068bf7aa9e7b76f95e966630f8de30f8e41ab4d82b45e9392c29ab9747ecf4b2'
 
   # github.com/trufflesuite/ganache was verified as official when first introduced to the cask
   url "https://github.com/trufflesuite/ganache/releases/download/v#{version}/Ganache-#{version}.dmg"
