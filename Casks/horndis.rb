@@ -1,13 +1,13 @@
 cask 'horndis' do
-  version '8'
-  sha256 'daca9f4e3e7d392821fa349403d349930e675d234cd27a5f43f2b46da34b5a92'
+  version '9.0'
+  sha256 '2b973b0c13f2138dd1a5a2fce61daf042894ee9b7b0e883b86e9d6c37d691c4d'
 
-  url "https://github.com/jwise/HoRNDIS/releases/download/rel#{version}/HoRNDIS-rel#{version}.pkg"
+  url "https://github.com/jwise/HoRNDIS/releases/download/rel#{version}/HoRNDIS-#{version}.pkg"
   appcast 'https://github.com/jwise/HoRNDIS/releases.atom'
   name 'HoRNDIS'
   homepage 'https://github.com/jwise/HoRNDIS'
 
-  pkg "HoRNDIS-rel#{version}.pkg"
+  pkg "HoRNDIS-#{version}.pkg"
 
   uninstall kext:    'com.joshuawise.kexts.HoRNDIS',
             pkgutil: 'com.joshuawise.*'
