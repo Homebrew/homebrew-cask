@@ -6,15 +6,15 @@ cask 'gimp' do
   name 'GIMP'
   homepage 'https://www.gimp.org/'
 
-  app "GIMP-#{version.major_minor}.app"
+  app "Gimp-#{version.major_minor}.app"
 
   postflight do
-    set_permissions "#{appdir}/GIMP.app/Contents/MacOS/GIMP", 'a+rx'
+    set_permissions "#{appdir}/GIMP.app/Contents/MacOS/gimp", 'a+rx'
   end
 
   zap trash: [
                '~/Library/Preferences/org.gnome.gimp.plist',
-               '~/Library/Application Support/GIMP',
+               '~/Library/Application Support/Gimp',
                '~/Library/Saved Application State/org.gnome.gimp.savedState',
              ]
 end
