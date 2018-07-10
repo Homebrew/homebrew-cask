@@ -24,8 +24,8 @@ cask 'cocktail' do
     url "https://www.maintain.se/downloads/sparkle/elcapitan/Cocktail_#{version}.zip"
     appcast 'https://www.maintain.se/downloads/sparkle/elcapitan/elcapitan.xml'
   elsif MacOS.version == :sierra
-    version '10.7.1'
-    sha256 'c964f766e778a68012245f55b82b3fab7db513c4d5d1e602652fd953aa0e534a'
+    version '10.8'
+    sha256 '54fb6665cd43f4fb1a536e475fe71d6f1ca12ff547948a35e6625f2fb7997578'
 
     url "https://www.maintain.se/downloads/sparkle/sierra/Cocktail_#{version}.zip"
     appcast 'https://www.maintain.se/downloads/sparkle/sierra/sierra.xml'
