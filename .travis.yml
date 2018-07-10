@@ -27,18 +27,3 @@ script:
 
 notifications:
   email: false
-  irc:
-    channels:
-      - "chat.freenode.net#homebrew-cask"
-    template:
-      - "(%{repository_name}) %{build_number}: %{branch}@%{commit} %{author} -> %{message} %{build_url}"
-    use_notice: true
-    skip_join: true
-  webhooks:
-    urls:
-      - "https://webhooks.gitter.im/e/712d699360b239db14a5"
-    on_success: never
-    on_failure: always
-    on_start: never
-    on_cancel: never
-    on_error: never
