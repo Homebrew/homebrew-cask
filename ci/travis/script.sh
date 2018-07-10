@@ -49,7 +49,7 @@ fi
 
 run brew cask _audit_modified_casks "${TRAVIS_COMMIT_RANGE}"
 
-if /usr/bin/grep "depends_on cask:" "${modified_casks[@]}" > /dev/null; then
+if /usr/bin/grep --quiet "depends_on cask:" "${modified_casks[@]}"; then
   run brew tap homebrew/bundle
   run brew bundle dump --file="${HOME}/Brewfile"
 fi
