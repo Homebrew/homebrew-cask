@@ -4,6 +4,7 @@ cask 'antdevtools' do
 
   # gw.alipayobjects.com was verified as official when first introduced to the cask
   url "https://gw.alipayobjects.com/os/Ant-devtools-Release/#{version.after_comma}/#{version.major}_#{version.minor}_#{version.patch}/AntDevtools.dmg"
+  name 'Ant Devtools'
   name '蚂蚁开发者工具'
   homepage 'https://mini.open.alipay.com/channel/miniIndex.htm'
 
