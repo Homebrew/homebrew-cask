@@ -16,7 +16,7 @@ cask 'scratch' do
                     }
 
   uninstall script: {
-                      executable: Hbc::Container::Air::INSTALLER_PATHNAME,
+                      executable: '/Applications/Utilities/Adobe AIR Application Installer.app/Contents/MacOS/Adobe AIR Application Installer',
                       args:       ['-uninstall', '-silent', "/Applications/Scratch #{version.major}.app"],
                       sudo:       true,
                     }
