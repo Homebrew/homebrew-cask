@@ -1,6 +1,6 @@
 cask 'sonar' do
-  version '0.6.9'
-  sha256 'e0e0fcac72f212f57e0f77e24e9581d4f79099de56d26cc91772fc7144c8a697'
+  version '0.6.12'
+  sha256 'f8d69381ec493cc556d03ddabd176c0b8c1204ef13c2a2708ec934dfc2452adc'
 
   # github.com/facebook/Sonar was verified as official when first introduced to the cask
   url "https://github.com/facebook/Sonar/releases/download/v#{version}/Sonar.zip"
