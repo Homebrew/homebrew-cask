@@ -1,6 +1,6 @@
 cask 'freac' do
-  version '1.1-alpha-20180306a'
-  sha256 'ba48db45a292da52065b598b7ba506eb96672b606e4efe764bc95d362e9c4ad1'
+  version '1.1-alpha-20180710'
+  sha256 '79e2780490722ea6359eaee329852c79a796a6047a5ca4b3a804bb1e28afb183'
 
   # sourceforge.net/bonkenc was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/bonkenc/freac-#{version}-macosx.dmg"
