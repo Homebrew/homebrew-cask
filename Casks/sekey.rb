@@ -10,19 +10,6 @@ cask 'sekey' do
   pkg "SeKey-#{version}.pkg"
   binary "#{appdir}/SeKey.app/Contents/MacOS/sekey"
 
-  postflight do
-    launchd_plist = "#{ENV['HOME']}/Library/LaunchAgents/com.ntrippar.sekey.plist"
-
-    system_command '/bin/launchctl',
-                   args: ['unload', '-F', launchd_plist],
-                   sudo: true
-
-    set_ownership launchd_plist
-
-    system_command '/bin/launchctl',
-                   args: ['load', '-F', launchd_plist]
-  end
-
   uninstall launchctl: 'com.ntrippar.sekey',
             pkgutil:   'com.ntrippar.sekey'
 
