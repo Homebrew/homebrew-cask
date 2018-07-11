@@ -1,6 +1,6 @@
 cask 'propresenter' do
-  version '6.3.4_b16151'
-  sha256 'e08bca4a597e3ce9b971d6a7597232b8fb8c5347b0ac0326eb321fd80be592ac'
+  version '6.3.5_b16156'
+  sha256 '54482ee8492211ed8c94eabbdfcc610285fee746278548ba52b3a84aacd9979f'
 
   url "https://www.renewedvision.com/downloads/ProPresenter#{version.major}_#{version}.dmg"
   appcast "https://www.renewedvision.com/update/ProPresenter#{version.major}.php"
