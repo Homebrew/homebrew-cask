@@ -1,6 +1,6 @@
 cask '4k-video-to-mp3' do
-  version '2.4.0.863'
-  sha256 '55ace78c0400b015eca916dfbafa91489e01044abcfaf0dde6c21799f94a7ff4'
+  version '2.4.1.873'
+  sha256 'fb7896f3670b8705edc0e7f1f331e22accc8d31a99b14908d7399bdd89f4348e'
 
   url "https://dl.4kdownload.com/app/4kvideotomp3_#{version.major_minor_patch}.dmg"
   appcast 'https://www.4kdownload.com/download'
