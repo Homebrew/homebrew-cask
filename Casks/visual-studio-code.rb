@@ -1,6 +1,6 @@
 cask 'visual-studio-code' do
-  version '1.25.0,0f080e5267e829de46638128001aeb7ca2d6d50e'
-  sha256 '9e3686bc376c70b40d761ac5e89a24df27b2707e72e8c21c4df053f7dee6b023'
+  version '1.25.1,1dfc5e557209371715f655691b1235b6b26a06be'
+  sha256 '765d6303312f0b08627c9dc2f777e8a4e73309d190ecdf49082cc8985b50edb5'
 
   # az764295.vo.msecnd.net/stable was verified as official when first introduced to the cask
   url "https://az764295.vo.msecnd.net/stable/#{version.after_comma}/VSCode-darwin-stable.zip"
