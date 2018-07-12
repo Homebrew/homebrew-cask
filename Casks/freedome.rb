@@ -1,32 +1,22 @@
 cask 'freedome' do
-  version :latest
-  sha256 :no_check
+  version '2.19.5374.0'
+  sha256 'c8211f6b8f69ec3b084fd1a33f1d1de36a775a6dadfeea66732a01377e95ce4b'
 
-  url 'https://download.sp.f-secure.com/freedome/installer/Freedome.dmg'
+  url 'https://download.sp.f-secure.com/freedome/installer/2/Freedome.pkg'
   name 'F-Secure Freedome'
   homepage 'https://www.f-secure.com/en_US/web/home_us/freedome'
 
-  app 'Freedome.app'
+  pkg 'Freedome.pkg'
 
-  uninstall_preflight do
-    set_ownership "#{appdir}/Freedome.app"
-  end
-
-  uninstall delete:    '/Library/Application Support/F-Secure/FSFreedome',
-            launchctl: 'com.fsecure.freedome.uninstall',
-            quit:      'com.fsecure.freedome.osx',
-            script:    {
-                         executable: '/Library/Application Support/F-Secure/FSFreedome/admin/UninstallFreedome.sh',
-                         args:       ["#{appdir}/Freedome.app"],
-                         sudo:       true,
-                       }
-
-  zap trash: [
-               '~/Library/Application Support/F-Secure/FSFreedome',
-               '~/Library/Caches/com.fsecure.freedome.osx',
-             ],
-      rmdir: [
-               '~/Library/Application Support/F-Secure/',
-               '/Library/Application Support/F-Secure',
-             ]
+  uninstall pkgutil:   [
+                         'com.f-secure.freedome.app',
+                         'com.f-secure.freedome.fsvpn',
+                       ],
+            launchctl: [
+                         'com.f-secure.freedome.uninstall',
+                         'com.f-secure.freedome.fsvpn-upstream.production',
+                         'com.f-secure.freedome.fsvpn-service-helper.production',
+                         'com.f-secure.freedome.fsvpn-service.production',
+                         'com.f-secure.freedome.gui',
+                       ]
 end
