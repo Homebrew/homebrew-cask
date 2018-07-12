@@ -5,7 +5,7 @@ cask 'dupeguru' do
   url "https://download.hardcoded.net/dupeguru_osx_#{version.dots_to_underscores}.dmg"
   appcast 'https://www.hardcoded.net/updates/dupeguru.appcast'
   name 'dupeGuru'
-  homepage 'https://www.hardcoded.net/dupeguru/'
+  homepage 'https://dupeguru.voltaicideas.net'
 
   app 'dupeGuru.app'
 end
