@@ -4,14 +4,15 @@ cask 'scidavis' do
 
   url "https://downloads.sourceforge.net/scidavis/scidavis-#{version}.pkg"
   appcast 'https://sourceforge.net/projects/scidavis/rss.xml'
-  name 'SciDAVis'
+  name 'scidavis'
   homepage 'http://scidavis.sourceforge.net/'
 
   depends_on macos: '>= :yosemite'
 
   pkg "scidavis-#{version}.pkg"
 
-  uninstall delete: '/Applications/scidavis.app'
+  uninstall pkgutil: 'SciDAVis'
+  # delete:  '/Applications/scidavis.app'
 
   # zap trash: '~/Library/Saved Application State/net.sourceforge.scidavis.savedState'
 end
