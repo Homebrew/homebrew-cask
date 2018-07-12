@@ -3,7 +3,7 @@ cask 'solvespace' do
   sha256 '2e93301bbfef9253b5ef614862d891e2ab84e18c6a1e4e36225c5d47cacabc2d'
 
   # github.com was verified as official when first introduced to the cask
-  url "https://github.com/solvespace/solvespace/releases/download/v#{version}/solvespace.dmg"
+  url "https://github.com/solvespace/solvespace/releases/download/v#{version}/solvespace.dmg" # this built does not work properly the /Applications/solvespace.app/Contents/MacOS/libz.dylib file should be removed manually afterward.
   appcast 'https://github.com/solvespace/solvespace/releases.atom'
   name 'SolveSpace'
   homepage 'http://solvespace.com/index.pl/'
