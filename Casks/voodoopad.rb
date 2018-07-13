@@ -4,7 +4,7 @@ cask 'voodoopad' do
 
   # voodoopad.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://voodoopad.s3.amazonaws.com/VoodooPad-#{version}.zip"
-  appcast 'https://www.voodoopad.com/download/'
+  appcast "https://www.primatelabs.com/appcast/voodoopad#{version.major}.xml"
   name 'VoodooPad'
   homepage 'https://www.voodoopad.com/'
 
