@@ -12,7 +12,6 @@ cask 'scidavis' do
   pkg "scidavis-#{version}.pkg"
 
   uninstall pkgutil: 'SciDAVis'
-  # delete:  '/Applications/scidavis.app'
 
-  # zap trash: '~/Library/Saved Application State/net.sourceforge.scidavis.savedState'
+  zap trash: '~/Library/Saved Application State/net.sourceforge.scidavis.savedState'
 end
