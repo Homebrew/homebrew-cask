@@ -1,6 +1,6 @@
 cask 'musescore' do
-  version '2.2.1'
-  sha256 'f1291f1f9ff5a85946215c926266f65cc51ab3558127e2cb554ac812d6fe320f'
+  version '2.3.1'
+  sha256 '6673507df422b4be77c3e62a3143d2c0b5b9d2f24e6bed22d2b747baa8d56318'
 
   # ftp.osuosl.org/pub/musescore was verified as official when first introduced to the cask
   url "https://ftp.osuosl.org/pub/musescore/releases/MuseScore-#{version.major_minor_patch}/MuseScore-#{version}.dmg"
