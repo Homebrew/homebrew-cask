@@ -6,8 +6,6 @@ cask 'expressscribe' do
   name 'Express Scribe Transcription Software'
   homepage 'http://www.nch.com.au/scribe/index.html'
 
-  auto_updates true
-
   app 'ExpressScribe.app'
 
   uninstall quit:       'com.nchsoftware.expressscribe-free',

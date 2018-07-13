@@ -6,8 +6,6 @@ cask 'myworkspace' do
   name 'My Workspace'
   homepage 'https://myworkspace.ms/'
 
-  auto_updates true
-
   app 'MyWorkspace.app'
 
   uninstall quit: 'com.microsoft.MyWorkspace'

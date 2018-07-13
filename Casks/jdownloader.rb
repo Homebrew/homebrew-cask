@@ -7,8 +7,6 @@ cask 'jdownloader' do
   name 'JDownloader 2'
   homepage 'http://jdownloader.org/'
 
-  auto_updates true
-
   preflight do
     system_command "#{staged_path}/JDownloader Installer.app/Contents/MacOS/JavaApplicationStub",
                    args:         [

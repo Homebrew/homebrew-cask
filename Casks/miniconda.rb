@@ -7,7 +7,6 @@ cask 'miniconda' do
   name 'Continuum Analytics Miniconda'
   homepage 'https://www.anaconda.com/what-is-anaconda/'
 
-  auto_updates true
   depends_on macos: '>= :lion'
   container type: :naked
 
