@@ -7,6 +7,8 @@ cask 'sookasa' do
   name 'Sookasa'
   homepage 'https://www.sookasa.com/'
 
+  depends_on cask: 'osxfuse'
+
   pkg "Sookasa_#{version}.pkg"
 
   uninstall quit:    'com.sookasa.Sookasa',
