@@ -7,8 +7,6 @@ cask 'steam' do
   name 'Steam'
   homepage 'http://store.steampowered.com/about/'
 
-  auto_updates true
-
   app 'Steam.app'
 
   uninstall quit:      [

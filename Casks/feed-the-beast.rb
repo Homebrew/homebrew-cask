@@ -7,8 +7,6 @@ cask 'feed-the-beast' do
   name 'Feed the Beast'
   homepage 'https://www.feed-the-beast.com/'
 
-  auto_updates true
-
   app 'Feed The Beast.app'
 
   zap trash: '~/Library/Application Support/ftblauncher'
