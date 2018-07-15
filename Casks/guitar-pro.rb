@@ -6,7 +6,7 @@ cask 'guitar-pro' do
   name 'Guitar Pro'
   homepage 'https://www.guitar-pro.com/'
 
-  pkg "guitar-pro-#{version}-setup.pkg"
+  pkg "guitar-pro-#{version.major}-setup.pkg"
 
   uninstall pkgutil: 'com.arobas-music.guitarpro*'
 end
