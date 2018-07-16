@@ -1,6 +1,6 @@
 cask 'zulip' do
-  version '2.3.2'
-  sha256 'a5f7b8dc1dfc5e9ba63aa2ebcd7b1d36db0117f80c09de3175675fb8504e47b2'
+  version '2.3.3'
+  sha256 '33f50ff39582a22b515c2d6c03073b6e1f98283e0f99355354c9bab25954486b'
 
   # github.com/zulip/zulip-electron was verified as official when first introduced to the cask
   url "https://github.com/zulip/zulip-electron/releases/download/v#{version}/Zulip-#{version}-mac.zip"
