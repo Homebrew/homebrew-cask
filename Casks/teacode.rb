@@ -7,5 +7,7 @@ cask 'teacode' do
   name 'TeaCode'
   homepage 'https://www.apptorium.com/teacode'
 
+  auto_updates true
+
   app 'TeaCode.app'
 end
