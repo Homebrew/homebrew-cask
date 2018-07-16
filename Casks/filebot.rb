@@ -3,11 +3,10 @@ cask 'filebot' do
   sha256 '20cd5761bc51a213d31ab035f28831fb0e4d9097727a80e32f2d477fcccb0525'
 
   url "https://get.filebot.net/filebot/FileBot_#{version}/FileBot_#{version}.app.tar.xz"
-  gpg "#{url}.asc", key_url: 'https://raw.githubusercontent.com/filebot/plugins/master/gpg/maintainer.pub'
   appcast 'https://app.filebot.net/update.xml'
-
   name 'FileBot'
   homepage 'https://www.filebot.net/'
+  gpg "#{url}.asc", key_url: 'https://raw.githubusercontent.com/filebot/plugins/master/gpg/maintainer.pub'
 
   app 'FileBot.app'
   binary 'FileBot.app/Contents/MacOS/filebot.sh', target: 'filebot'
