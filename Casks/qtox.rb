@@ -1,6 +1,6 @@
 cask 'qtox' do
-  version '1.16.1'
-  sha256 '0b797d3cf42b72c5789efd2e9d9d1b9e4fe5e6743cb8480fb7731ac83471bf45'
+  version '1.16.2'
+  sha256 '9c511a969877a06e5373e5dae1013dcc80062d73851a8aa94c2576e67a6acd84'
 
   # github.com/qTox/qTox was verified as official when first introduced to the cask
   url "https://github.com/qTox/qTox/releases/download/v#{version}/qTox.dmg"
