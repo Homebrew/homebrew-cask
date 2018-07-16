@@ -9,7 +9,7 @@ cask 'filebot' do
   gpg "#{url}.asc", key_url: 'https://raw.githubusercontent.com/filebot/plugins/master/gpg/maintainer.pub'
 
   app 'FileBot.app'
-  binary 'FileBot.app/Contents/MacOS/filebot.sh', target: 'filebot'
+  binary "#{appdir}/FileBot.app/Contents/MacOS/filebot.sh", target: 'filebot'
 
   zap trash: '~/Library/Preferences/net.filebot.ui.plist'
 
