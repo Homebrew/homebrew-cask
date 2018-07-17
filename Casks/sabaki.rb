@@ -8,7 +8,5 @@ cask 'sabaki' do
   name 'Sabaki'
   homepage 'http://sabaki.yichuanshen.de/'
 
-  depends_on formula: 'unar'
-
   app 'Sabaki.app'
 end
