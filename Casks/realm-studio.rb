@@ -1,6 +1,6 @@
 cask 'realm-studio' do
-  version '2.4.0'
-  sha256 'dd51125810ad227e5c5752e341b5174dda053fb8db68d30e3083c629b45af41d'
+  version '2.4.1'
+  sha256 'a868483812e70960517b276939368a8a696687908d74f73d58353a26a837d8d9'
 
   url "https://static.realm.io/downloads/realm-studio/Realm%20Studio-#{version}-mac.zip"
   appcast 'https://static.realm.io/downloads/realm-studio/latest-mac.yml'
