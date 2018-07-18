@@ -8,5 +8,5 @@ cask 'openbci-gui' do
   name 'OpenBCI GUI'
   homepage 'https://openbci.com/'
 
-  app 'OpenBCI_GUI.app'
+  app 'application.macosx/OpenBCI_GUI.app'
 end
