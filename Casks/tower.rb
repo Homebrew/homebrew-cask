@@ -8,6 +8,8 @@ cask 'tower' do
   name 'Tower'
   homepage 'https://www.git-tower.com/'
 
+  auto_updates true
+
   app 'Tower.app'
   binary "#{appdir}/Tower.app/Contents/MacOS/gittower"
 
