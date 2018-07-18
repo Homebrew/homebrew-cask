@@ -6,8 +6,6 @@ cask 'starleaf-breeze' do
   name 'Starleaf Breeze'
   homepage 'https://www.starleaf.com/'
 
-  auto_updates true
-
   pkg 'StarLeaf-Breeze-Installer-Mac-OS.pkg'
 
   uninstall pkgutil: 'com.starleaf.breeze.mac'

@@ -12,17 +12,6 @@ cask 'wireshark' do
 
   pkg "Wireshark #{version} Intel 64.pkg"
 
-  postflight do
-    system_command '/usr/sbin/dseditgroup',
-                   args: [
-                           '-o', 'edit',
-                           '-a', Etc.getpwuid(Process.euid).name,
-                           '-t', 'user',
-                           '--', 'access_bpf'
-                         ],
-                   sudo: true
-  end
-
   uninstall_preflight do
     set_ownership '/Library/Application Support/Wireshark'
   end

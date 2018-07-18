@@ -29,17 +29,6 @@ cask 'wireshark-chmodbpf' do
                  },
                ]
 
-  postflight do
-    system_command '/usr/sbin/dseditgroup',
-                   args: [
-                           '-o', 'edit',
-                           '-a', Etc.getpwuid(Process.euid).name,
-                           '-t', 'user',
-                           '--', 'access_bpf'
-                         ],
-                   sudo: true
-  end
-
   uninstall_preflight do
     set_ownership '/Library/Application Support/Wireshark'
   end

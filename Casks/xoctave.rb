@@ -7,8 +7,6 @@ cask 'xoctave' do
   name 'Xoctave'
   homepage 'http://www.xoctave.com/'
 
-  auto_updates true
-
   app 'Xoctave.app'
 
   uninstall quit: 'org.magnifier.magnifier'

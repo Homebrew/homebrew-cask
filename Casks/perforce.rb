@@ -1,5 +1,5 @@
 cask 'perforce' do
-  version '17.2'
+  version '18.1'
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://cdist2.perforce.com/perforce/r#{version}/bin.darwin90x86_64/helix-versioning-engine.tgz"

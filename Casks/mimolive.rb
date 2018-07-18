@@ -1,6 +1,6 @@
 cask 'mimolive' do
-  version '4.1.1-25483'
-  sha256 '401d1d798d3a4cfb0f0322e6e18cd614bc1fef4b9b960560cd5670dda6303d12'
+  version '4.2.1-25918'
+  sha256 '60e28286ac660991323c988fcb256103bb31765c42fdcf279640437038505dc4'
 
   url "https://cdn.boinx.com/software/mimolive/Boinx_mimoLive_#{version}.app.zip"
   appcast 'https://boinx.com/d/connect/histories/mimolive'

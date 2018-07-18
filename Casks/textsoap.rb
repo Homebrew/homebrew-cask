@@ -1,6 +1,6 @@
 cask 'textsoap' do
-  version '8.4.6'
-  sha256 'dfc1c066e14e5b6f341270a2856c7dce132c4da42ef333e47f17fbdae2a91dc7'
+  version '8.4.7'
+  sha256 '0d353399f3072875abc09563b2472d4e7ea69ad62cb47430f3b1dcbbac800237'
 
   # unmarked.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://unmarked.s3.amazonaws.com/textsoap#{version.major}.zip"

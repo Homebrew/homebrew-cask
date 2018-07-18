@@ -1,6 +1,6 @@
 cask '4k-slideshow-maker' do
-  version '1.7.0.968'
-  sha256 '00c44ea17ce8c6bf2aa59d876d605f8fa4c3f6745ba716ed741d4056fe818aa5'
+  version '1.7.1.978'
+  sha256 'e1fcf1b3ef7303c09431541d79cd52580037448e4ca22553ec33587c295d984f'
 
   url "https://dl.4kdownload.com/app/4kslideshowmaker_#{version.major_minor_patch}.dmg"
   appcast 'https://www.4kdownload.com/download'

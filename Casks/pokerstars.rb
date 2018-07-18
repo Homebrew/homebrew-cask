@@ -30,7 +30,6 @@ cask 'pokerstars' do
   name 'PokerStars'
   homepage "http://www.pokerstars#{language[0]}"
 
-  auto_updates true
   container nested: "PokerStars#{language[1]}/PokerStars#{language[1]}.dmg"
 
   app "PokerStars#{language[1]}.app"

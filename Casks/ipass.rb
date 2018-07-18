@@ -7,8 +7,6 @@ cask 'ipass' do
   name 'iPass'
   homepage 'https://www.ipass.com/'
 
-  auto_updates true
-
   pkg 'iPass.pkg'
 
   uninstall pkgutil: 'com.ipass.ipass.pkg'

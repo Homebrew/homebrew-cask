@@ -1,6 +1,6 @@
 cask 'marshallofsound-google-play-music-player' do
-  version '4.6.0'
-  sha256 '30b2d5bd5bf14356ae2d6e351c945208d19ea2fd5a0f6a47ffbb5102cddf83fe'
+  version '4.6.1'
+  sha256 '14bbaf4f81c302b787b36c1d0fdc44a990dcb73dd987e8b5fd0f259283a1fa2e'
 
   # github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL- was verified as official when first introduced to the cask
   url "https://github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL-/releases/download/v#{version}/Google.Play.Music.Desktop.Player.OSX.zip"
