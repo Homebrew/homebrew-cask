@@ -1,6 +1,6 @@
 cask 'ibm-cloud-cli' do
-  version '0.7.1'
-  sha256 'cbeb34b48167066fe39712587cf607c2d714a7c1df52eb3835a11956ef2d5673'
+  version '0.8.0'
+  sha256 'd4d11a8e3c9dcaffb2e67bc3ad50a56b833c24e3366536e8cdd9d6e81df6a989'
 
   # public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli was verified as official when first introduced to the cask
   url "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/#{version}/IBM_Cloud_CLI_#{version}.pkg"
