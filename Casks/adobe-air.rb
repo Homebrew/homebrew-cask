@@ -1,8 +1,9 @@
 cask 'adobe-air' do
-  version '30.0'
-  sha256 :no_check # required as upstream package is updated in-place
+  version '30.0.0.107'
+  sha256 '17be984bf8fc2d24f5db70b044a07da682f4bbd4394684c56f33b5101c2d0c72'
 
-  url "https://airdownload.adobe.com/air/mac/download/#{version}/AdobeAIR.dmg"
+  url "https://airdownload.adobe.com/air/mac/download/#{version.major_minor}/AdobeAIR.dmg"
+  appcast 'https://helpx.adobe.com/au/air/kb/archived-air-sdk-version.html'
   name 'Adobe AIR'
   homepage 'https://get.adobe.com/air/'
 
