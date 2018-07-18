@@ -7,7 +7,7 @@ cask 'qsync-client' do
   name 'Qnap Qsync'
   homepage 'https://www.qnap.com/i/in/utility/#block_3'
 
-  pkg 'Qsync Client.pkg'
+  installer manual: 'Qsync Client.pkg'
 
   uninstall pkgutil: 'com.qnap.qsync.*'
 end
