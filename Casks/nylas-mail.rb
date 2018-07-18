@@ -9,7 +9,6 @@ cask 'nylas-mail' do
   homepage 'https://www.nylas.com/'
 
   auto_updates true
-  conflicts_with cask: 'nylas-mail-lives'
 
   app 'Nylas Mail.app'
 
