@@ -4,6 +4,7 @@ cask 'yinxiangbiji' do
 
   url "https://cdn.yinxiang.com/mac-smd/public/YinxiangBiji_RELEASE_#{version}.dmg"
   name '印象笔记'
+  name 'Evernote'
   homepage 'https://www.yinxiang.com/'
 
   auto_updates true
