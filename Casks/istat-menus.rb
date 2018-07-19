@@ -1,5 +1,5 @@
 cask 'istat-menus' do
-  version '6.11'
+  version '6.20'
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://files.bjango.com/istatmenus#{version.major}/istatmenus#{version}.zip"
@@ -7,6 +7,7 @@ cask 'istat-menus' do
   homepage 'https://bjango.com/mac/istatmenus/'
 
   auto_updates true
+  depends_on macos: '>= :el_capitan'
 
   app 'iStat Menus.app'
 
