@@ -8,5 +8,7 @@ cask 'ledger-live' do
   name 'Ledger Live'
   homepage 'https://www.ledgerwallet.com/live'
 
+  auto_updates true
+
   app 'Ledger Live.app'
 end
