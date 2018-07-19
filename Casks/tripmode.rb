@@ -1,6 +1,6 @@
 cask 'tripmode' do
-  version '2.1.4-742'
-  sha256 '425e8b268472b800687067e7637fabbfa6450b52ad66720bca6025891cfcbc1b'
+  version '2.1.4-743'
+  sha256 'd72d4a37696fc927dbfab52420e6ac56d73860eb6d59e31586edd5a0c9802f92'
 
   url "https://www.tripmode.ch/app/TripMode-#{version}-app.dmg"
   appcast 'https://www.tripmode.ch/app/appcast.xml'
