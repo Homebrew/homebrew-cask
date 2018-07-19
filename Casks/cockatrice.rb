@@ -1,6 +1,6 @@
 cask 'cockatrice' do
-  version '2.6.0,2018-06-17:Father_of_Ruins'
-  sha256 'bbcd43059a1f130ffeaa32791b3ce52d012e5dddc1dba8f501c8cddfcdeb9d25'
+  version '2.6.1,2018-07-17:Father_of_Ruins_Revision_1'
+  sha256 'b35790a9391195d5bd9087f73a9eedac7e3cdd413b1dfeae65fe226bfa5354ac'
 
   # github.com/Cockatrice/Cockatrice was verified as official when first introduced to the cask
   url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.after_comma.before_colon}-Release-#{version.before_comma}/Cockatrice-#{version.after_colon}-#{version.before_comma}.dmg"
