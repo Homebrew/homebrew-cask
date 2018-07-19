@@ -11,7 +11,5 @@ cask 'desktop-curtain' do
 
   app 'Desktop Curtain.app'
 
-  zap trash: [
-               '~/Library/Preferences/com.manytricks.DesktopCurtain.plist',
-             ]
+  zap trash: '~/Library/Preferences/com.manytricks.DesktopCurtain.plist'
 end
