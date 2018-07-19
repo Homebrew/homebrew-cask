@@ -1,6 +1,6 @@
 cask 'musicbrainz-picard' do
-  version '1.4.2'
-  sha256 '003a50a5124cf0809da6f5fb5076dbe41222c6571609b499eb75d54e480d0307'
+  version '2.0'
+  sha256 'a8ae8f9d863bbf7ae244762d986b45c3f62e57a3ff5f3776992db0a4b4defc35'
 
   url "http://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-#{version}.dmg"
   appcast 'https://picard.musicbrainz.org/changelog/'
