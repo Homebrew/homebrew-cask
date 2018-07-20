@@ -8,5 +8,7 @@ cask 'hstracker' do
   name 'Hearthstone Deck Tracker'
   homepage 'https://hsdecktracker.net/'
 
+  auto_updates true
+
   app 'HSTracker.app'
 end
