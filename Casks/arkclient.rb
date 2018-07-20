@@ -1,6 +1,6 @@
 cask 'arkclient' do
-  version '1.6.0'
-  sha256 '588b92d889d0b23b28ece6b165ed49d592985e62d33a133390090eb75561997b'
+  version '1.6.1'
+  sha256 'b4a6ac066981c05cf6ebec389bea8b2d0610ea4e283870b6b469a67f95b76e37'
 
   # github.com/ArkEcosystem/ark-desktop was verified as official when first introduced to the cask
   url "https://github.com/ArkEcosystem/ark-desktop/releases/download/#{version}/ArkClient-MacOS-#{version}.dmg"
