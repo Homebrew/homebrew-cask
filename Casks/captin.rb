@@ -1,6 +1,6 @@
 cask 'captin' do
-  version '1.0.12,84:1520071833'
-  sha256 '6a84831ddd97e5a98215d9cd8b866a7093c4a55a97ee9b31d84e01f9ed231218'
+  version '1.0.13,86:1532095863'
+  sha256 '0d502c2bbc46dc0f3a5e45e25f68acbb303bd55139fdfed06e404212c5dd5a76'
 
   # dl.devmate.com/com.100hps.captin was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.100hps.captin/#{version.after_comma.before_colon}/#{version.after_colon}/Captin-#{version.after_comma.before_colon}.dmg"
