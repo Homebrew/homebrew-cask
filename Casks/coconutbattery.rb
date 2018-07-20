@@ -17,6 +17,8 @@ cask 'coconutbattery' do
   name 'coconutBattery'
   homepage 'https://www.coconut-flavour.com/coconutbattery/'
 
+  auto_updates true
+
   app 'coconutBattery.app'
 
   uninstall launchctl: 'com.coconut-flavour.coconutBattery-Menu',
