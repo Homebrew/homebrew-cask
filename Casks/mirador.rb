@@ -1,9 +1,9 @@
 cask 'mirador' do
-  version '1.5.0'
-  sha256 'bb65824a703a812b658f3956148500137be00de85e26d7045fdd5d10c998428f'
+  version '1.5.1'
+  sha256 '011ff609679258a0b5dc3f1ce1f0ad82f0c1c4730ff9d467c49581500cc6fc13'
 
   # github.com/mirador/mirador was verified as official when first introduced to the cask
-  url "https://github.com/mirador/mirador/releases/download/latest-macos/mirador-#{version}-macos.zip"
+  url 'https://github.com/mirador/mirador/archive/latest-macos.zip'
   appcast 'https://github.com/mirador/mirador/releases.atom'
   name 'Mirador'
   homepage 'https://fathom.info/mirador/'
