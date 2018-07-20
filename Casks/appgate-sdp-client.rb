@@ -1,5 +1,5 @@
 cask 'appgate-sdp-client' do
-  version '4.1.0'
+  version '4.0.1'
   sha256 'a334916941a58299d7a5b89aaadf51ee9f7b612fd479af51792fbef6f7bb1081'
 
   # sdpdownloads.cyxtera.com was verified as official when first introduced to the cask
