@@ -12,22 +12,21 @@ cask 'appgate-sdp-client' do
   pkg 'AppGate SDP Installer.pkg'
 
   uninstall launchctl: [
-                         'com.cryptzone.appgate.tun',
-                         'com.cryptzone.appgate.xdp.client.agent',
+                         'com.cyxtera.appgate.sdp.client.agent',
+                         'com.cyxtera.appgate.sdp.helper',
+                         'com.cyxtera.appgate.sdp.tun',
+                         'com.cyxtera.appgate.sdp.updater',
                        ],
-            quit:      'com.electron.appgate.helper',
+            quit:      'com.cyxtera.appgate.helper',
             signal:    [
-                         ['QUIT', 'com.electron.appgate'],
+                         ['QUIT', 'com.cyxtera.appgate'],
                        ],
             pkgutil:   'com.appgate.pkg.appgatetun.component'
 
   zap trash: [
                '~/Library/Application Support/appgate-ui',
-               '~/Library/Application Support/appgatexdp-ui',
-               '~/Library/Caches/com.cryptzone.appgate.xdp.uninstall',
-               '~/Library/Preferences/com.cryptzone.appgate.xdp*',
-               '~/Library/Preferences/com.electron.appgate.helper.plist',
-               '~/Library/Preferences/com.electron.appgate.plist',
-               '~/Library/Saved Application State/com.electron.appgate.savedState',
+               '~/Library/Caches/com.cyxtera.appgate.sdp.uninstall',
+               '~/Library/Preferences/com.cyxtera.appgate.sdp*',
+               '~/Library/Saved Application State/com.cyxtera.appgate.sdp.savedState',
              ]
 end
