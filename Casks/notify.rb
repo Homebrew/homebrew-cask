@@ -1,4 +1,4 @@
-cask 'spotify-notify' do
+cask 'notify' do
   version '0.2.3'
   sha256 '5c2fe95e781076f5f237f1d168aad1abc0634c3ce6bb730ae4c7543b00f80b03'
 
@@ -10,7 +10,5 @@ cask 'spotify-notify' do
 
   app 'Notify.app'
 
-  zap trash: [
-               '~/Library/Preferences/io.nahive.SpotifyNotify.plist',
-             ]
+  zap trash: '~/Library/Preferences/io.nahive.SpotifyNotify.plist'
 end
