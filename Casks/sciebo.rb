@@ -3,7 +3,7 @@ cask 'sciebo' do
   sha256 '7de4af04d0187ad2ed849e06d608e16576c85a10be31f9ce08c24865a9688ccc'
 
   url "https://www.sciebo.de/install/sciebo-#{version}.pkg"
-  name 'Sciebo'
+  name 'sciebo'
   homepage 'https://sciebo.de/'
 
   depends_on macos: '>= :lion'
