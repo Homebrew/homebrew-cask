@@ -7,7 +7,7 @@ cask 'musicbrainz-picard' do
   name 'MusicBrainz Picard'
   homepage 'https://picard.musicbrainz.org/'
 
-  depends_on macos: '>= :lion'
+  depends_on macos: '>= :yosemite'
 
   app 'MusicBrainz Picard.app'
 
