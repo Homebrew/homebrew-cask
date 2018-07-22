@@ -1,6 +1,6 @@
 cask 'lulu' do
-  version '0.9.6'
-  sha256 'aa446a1a834242db595451657e565d3bc23e49050a36c6451cb1fe716e8e63a7'
+  version '0.9.7'
+  sha256 '0a9f0f45f9fb7dfc447ca31a34fa09f637681f1f87968e230476d3214d0010f8'
 
   # github.com/objective-see/LuLu was verified as official when first introduced to the cask
   url "https://github.com/objective-see/LuLu/releases/download/#{version}/LuLu_#{version.dots_to_underscores}.zip"
