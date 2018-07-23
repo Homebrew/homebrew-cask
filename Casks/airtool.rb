@@ -1,6 +1,6 @@
 cask 'airtool' do
-  version '1.6.1'
-  sha256 '68fa07f9c3d452a34f505f454640e3920f919236b6017dda0a16d5f486f41b2d'
+  version '1.7'
+  sha256 'ea6521727b4d401bac6dc69a8c2a626994102796b36cb86d7c1b2ee42e18be46'
 
   url "https://www.adriangranados.com/downloads/airtool_#{version}.pkg"
   appcast 'https://updates.devmate.com/com.adriangranados.Airtool.xml'
