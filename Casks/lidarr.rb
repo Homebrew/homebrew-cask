@@ -1,6 +1,6 @@
 cask 'lidarr' do
-  version '0.3.0.430'
-  sha256 'e7990d43cb1b2efec926b178a277fb4d954e1a50bdbec5dcbd16f32466d99905'
+  version '0.3.1.471'
+  sha256 '475071405fb0bb96a4fd098d6f02fa2709497d0a15135ece42be4c84aa967013'
 
   # github.com/lidarr/Lidarr was verified as official when first introduced to the cask
   url "https://github.com/lidarr/Lidarr/releases/download/v#{version}/Lidarr.develop.#{version}.osx-app.zip"
