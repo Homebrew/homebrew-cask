@@ -8,5 +8,5 @@ cask 'tweeten' do
   name 'Tweeten'
   homepage 'http://tweetenapp.com/'
 
-  app 'tweeten-darwin-x64/Tweeten.app'
+  app 'Tweeten.app'
 end
