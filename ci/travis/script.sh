@@ -38,13 +38,6 @@ if [[ "${TRAVIS_REPO_SLUG}" != 'Homebrew/homebrew-cask-fonts' ]]; then
     run brew cask audit "${modified_casks[@]}"
     odie "More than 1 Cask modified, didn't check Cask checksums or URLs"
   fi
-
-  # check if gnupg is up to date for _audit_modified_casks
-  for cask in "${modified_casks[@]}"; do
-    if brew cask _stanza gpg "${cask}" &> /dev/null; then
-      run brew outdated gnupg || run brew upgrade gnupg
-    fi
-  done
 fi
 
 run brew cask _audit_modified_casks "${TRAVIS_COMMIT_RANGE}"
