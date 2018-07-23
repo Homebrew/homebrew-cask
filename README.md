@@ -57,7 +57,7 @@ If your issue persists, search for it before opening a new one. If you find an o
   * [Unlisted reason](doc/reporting_bugs/a_cask_fails_to_install.md#unlisted-reason)
 * [`uninstall` wrongly reports cask as not installed](doc/reporting_bugs/uninstall_wrongly_reports_cask_as_not_installed.md)
 * [`Error: Unknown command: cask` error](doc/reporting_bugs/error_unknown_command_cask.md)
-* [My problem isn’t listed](https://github.com/Homebrew/homebrew-cask/issues/new)
+* [My problem isn’t listed](https://github.com/Homebrew/homebrew-cask/issues/new?template=01_bug_report.md)
 
 ## Requests
 
