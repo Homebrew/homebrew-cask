@@ -4,7 +4,7 @@ cask 'cncjs' do
 
   # github.com/cncjs/cncjs was verified as official when first introduced to the cask
   url "https://github.com/cncjs/cncjs/releases/download/v#{version}/cncjs-app-#{version}-mac-x64.dmg"
-  appcast 'https://github.com/cncjs/cncjs/releases'
+  appcast 'https://github.com/cncjs/cncjs/releases.atom'
   name 'CNSjs'
   homepage 'https://cnc.js.org/'
 
