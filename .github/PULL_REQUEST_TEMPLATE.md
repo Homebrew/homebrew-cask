@@ -5,6 +5,7 @@ After making all changes to the cask:
 - [ ] `brew cask audit --download {{cask_file}}` is error-free.
 - [ ] `brew cask style --fix {{cask_file}}` reports no offenses.
 - [ ] The commit message includes the cask’s name and version.
+- [ ] The submission is for [a stable version](https://github.com/Homebrew/homebrew-cask/blob/master/doc/development/adding_a_cask.md#finding-a-home-for-your-cask) or [documented exception](https://github.com/Homebrew/homebrew-cask/blob/master/doc/development/adding_a_cask.md#but-there-is-no-stable-version).
 
 Additionally, if **adding a new cask**:
 
