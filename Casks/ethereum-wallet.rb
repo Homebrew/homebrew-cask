@@ -1,6 +1,6 @@
 cask 'ethereum-wallet' do
-  version '0.11.0'
-  sha256 'e3715fa1becb2ef3caae9b1e9f84f7d971b667c2421fb30607a57be7fb7d95cd'
+  version '0.11.1'
+  sha256 'df52a7ad6519aa92d17a743d0cb3bcf3080c2c72e31b1a58fbfa4581069dc4c8'
 
   url "https://github.com/ethereum/mist/releases/download/v#{version}/Ethereum-Wallet-macosx-#{version.dots_to_hyphens}.dmg"
   appcast 'https://github.com/ethereum/mist/releases.atom'
