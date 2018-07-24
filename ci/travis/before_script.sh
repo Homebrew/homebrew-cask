@@ -8,6 +8,8 @@
 # shellcheck disable=SC1090
 . "${TRAVIS_BUILD_DIR}/ci/travis/helpers.sh"
 
+env | sort
+
 header 'Running before_script.sh...'
 
 # this is not normally required but does prevent problems with outdated forks and/or deleted casks
