@@ -4,7 +4,7 @@ cask 'haptickey' do
 
   url "https://github.com/niw/HapticKey/releases/download/#{version}/HapticKey.app.zip"
   appcast 'https://github.com/niw/HapticKey/releases.atom'
-  name 'haptickey'
+  name 'HapticKey'
   homepage 'https://github.com/niw/HapticKey'
 
   app 'HapticKey.app'
