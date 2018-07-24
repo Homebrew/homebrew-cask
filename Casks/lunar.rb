@@ -1,6 +1,6 @@
 cask 'lunar' do
-  version '2.0.2'
-  sha256 '9a5d56095af3b8d370ca2a70e4a02ad08c7ec1af95d03ff937f2d9f136ec32ef'
+  version '2.0.3'
+  sha256 '6cde68e195c1951da8b49c7de2abdc0a575a7bc1effced578d0b5a4febcb0aa3'
 
   url "https://lunarapp.site/Lunar-#{version}.dmg"
   appcast 'https://lunarapp.site/appcast.xml'
