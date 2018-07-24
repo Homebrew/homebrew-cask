@@ -1,6 +1,6 @@
 cask 'flume' do
-  version '2.8.4.2'
-  sha256 '4ac0cc955f2ee70e4b4251a800a17c129795b1ff1e95d6c7d7a6606e2f55ceab'
+  version '2.8.5'
+  sha256 '3890f8ff648e64999b2f4f1b03ce7e917be6593472bb5aa7f186d5b6c2e21d0b'
 
   url "https://flumeapp.com/files/Flume-#{version}.zip"
   appcast 'https://rink.hockeyapp.net/api/2/apps/c88c56b02dcd4dd3acceb6d7a24f7122'
