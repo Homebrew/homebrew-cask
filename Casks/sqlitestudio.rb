@@ -1,8 +1,8 @@
 cask 'sqlitestudio' do
-  version '3.1.1'
-  sha256 'eb678313e35ee85adc12b71a75bbdedaf86ab96b7fdeb2d360289c5d5491cb35'
+  version '3.2.0'
+  sha256 'cef6047a15bc6798d1a7cb4134233c9fd606e88761150f275a7b8dfc0d729b67'
 
-  url "http://sqlitestudio.pl/files/sqlitestudio3/complete/macosx/sqlitestudio-#{version}.dmg"
+  url "https://sqlitestudio.pl/files/sqlitestudio#{version.major}/complete/macosx-inst/InstallSQLiteStudio-#{version}.dmg"
   appcast 'http://sqlitestudio.pl/rss.rvt'
   name 'SQLiteStudio'
   homepage 'https://sqlitestudio.pl/'
