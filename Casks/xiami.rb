@@ -1,9 +1,9 @@
 cask 'xiami' do
-  version '3.1.3-0508'
-  sha256 'f999b25f0ef6310f40163f856f5ffcc3ca645487ff3b3b5f3c84fdf8ed3080c8'
+  version '7.0.2'
+  sha256 '727822b0fdc7f45169e326b344e8cf1e98abccfbd86520ab3f5556c85cfd3cd1'
 
   # gxiami.alicdn.com/xiami-desktop was verified as official when first introduced to the cask
-  url "https://gxiami.alicdn.com/xiami-desktop/update/%E8%99%BE%E7%B1%B3%E9%9F%B3%E4%B9%90-#{version}.dmg"
+  url 'http://gxiami.alicdn.com/xiami-desktop/update/XiamiMac-07241753.dmg'
   name 'Xiami'
   name '虾米音乐'
   homepage 'http://www.xiami.com/'
@@ -13,7 +13,8 @@ cask 'xiami' do
   uninstall quit: 'com.xiami.client'
 
   zap trash: [
-               '~/Library/Application Support/XIAMI-MUSIC',
+               # '~/Library/Application Support/XIAMI-MUSIC',
+               '~/Library/Application Support/com.xiami.client',
                '~/Library/Preferences/com.xiami.client.helper.plist',
                '~/Library/Preferences/com.xiami.client.plist',
                '~/Library/Saved Application State/com.xiami.client.savedState',
