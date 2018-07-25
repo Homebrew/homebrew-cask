@@ -7,7 +7,7 @@ cask 'sqlitestudio' do
   name 'SQLiteStudio'
   homepage 'https://sqlitestudio.pl/'
 
-  app 'SQLiteStudio.app'
+  app "InstallSQLiteStudio-#{version}"
 
   zap trash: [
                '~/.config/sqlitestudio',
