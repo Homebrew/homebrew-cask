@@ -12,5 +12,5 @@ cask 'blue-jeans' do
                       ['TERM', 'com.bluejeansnet.Blue'],
                       ['TERM', 'com.bluejeansnet.BlueMenulet'],
                     ],
-            delete: '~/Applications/Blue Jeans.app'
+            delete: '/Applications/Blue Jeans.app'
 end
