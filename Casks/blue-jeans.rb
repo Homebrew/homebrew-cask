@@ -9,8 +9,8 @@ cask 'blue-jeans' do
   installer manual: 'BlueJeansInstaller.app'
 
   uninstall signal: [
-                      ['TERM', 'com.bluejeans.nw.app'],
-                      ['TERM', 'com.bluejeans.nw.helper'],
+                      ['TERM', 'com.bluejeansnet.Blue'],
+                      ['TERM', 'com.bluejeansnet.BlueMenulet'],
                     ],
             delete: '~/Applications/Blue Jeans.app'
 end
