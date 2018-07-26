@@ -6,7 +6,7 @@ cask 'blue-jeans' do
   name 'Blue Jeans videoconferencing'
   homepage 'https://www.bluejeans.com/'
 
-  installer manual: 'BlueJeanInstaller.app'
+  installer manual: 'BlueJeansInstaller.app'
 
   uninstall signal: [
                       ['TERM', 'com.bluejeans.nw.app'],
