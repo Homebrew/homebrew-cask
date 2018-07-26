@@ -4,7 +4,7 @@ cask 'textricator' do
 
   # repo1.maven.org/maven2/io/mfj/textricator verified as official when first introduced to the cask
   url "https://repo1.maven.org/maven2/io/mfj/textricator/#{version}/textricator-#{version}-bin.tgz"
-  appcast "https://github.com/measuresforjustice/textricator/releases.atom"
+  appcast 'https://github.com/measuresforjustice/textricator/releases.atom'
   name 'Textricator'
   homepage 'https://textricator.mfj.io/'
 
