@@ -1,6 +1,6 @@
 cask 'freedome' do
-  version '2.19.5374.0'
-  sha256 'c8211f6b8f69ec3b084fd1a33f1d1de36a775a6dadfeea66732a01377e95ce4b'
+  version :latest
+  sha256 :no_check
 
   url 'https://download.sp.f-secure.com/freedome/installer/2/Freedome.pkg'
   name 'F-Secure Freedome'
