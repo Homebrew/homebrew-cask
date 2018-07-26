@@ -1,6 +1,6 @@
 cask 'ocrkit' do
   version '18.7.15'
-  sha256 'b8054ebca6e1417eac12255bb47f3320422f736dc6a8ceb70f3198386f9869ea'
+  sha256 'f6cdae2d312279218e86ebfe4aff9e67bf21f130534f9ed29e249021bc148af7'
 
   # dl.exactcode.de was verified as official when first introduced to the cask
   url "http://dl.exactcode.de/sync/#{version.major}/OCRKit-#{version}.tar.gz"
