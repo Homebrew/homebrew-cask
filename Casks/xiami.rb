@@ -13,7 +13,7 @@ cask 'xiami' do
   uninstall quit: 'com.xiami.client'
 
   zap trash: [
-               # '~/Library/Application Support/XIAMI-MUSIC',
+               '~/Library/Application Support/XIAMI-MUSIC',
                '~/Library/Application Support/com.xiami.client',
                '~/Library/Preferences/com.xiami.client.helper.plist',
                '~/Library/Preferences/com.xiami.client.plist',
