@@ -1,6 +1,6 @@
 cask 'voodoopad' do
-  version '5.2.1'
-  sha256 'ef5b3c219e687a7c3428a2e9467488f9dd14ffcf055701f552709f5de17a14ba'
+  version '5.2.2'
+  sha256 '15ea060a90a71e7178403b3deba3cc3c3060053ed2a70f26775ca53326e4c312'
 
   # voodoopad.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://voodoopad.s3.amazonaws.com/VoodooPad-#{version}.zip"
