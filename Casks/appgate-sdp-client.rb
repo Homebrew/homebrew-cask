@@ -1,9 +1,9 @@
 cask 'appgate-sdp-client' do
-  version '4.0.1'
+  version '4.1.1'
   sha256 '81c78b112e70afe3ea174216361fbc0519e6a8cc071160a3f96436767b6c7a2c'
 
   # sdpdownloads.cyxtera.com was verified as official when first introduced to the cask
-  url "https://sdpdownloads.cyxtera.com/files/download/AppGate-SDP-#{version}/clients/AppGate-SDP-#{version}-Installer.dmg"
+  url "https://sdpdownloads.cyxtera.com/files/download/AppGate-SDP-#{version}/clients/AppGate-SDP-#{version.major_minor}.0-Installer.dmg"
   name 'AppGate SDP Client for macOS'
   homepage 'https://www.cryptzone.com/downloadcenter/appgate-sdp'
 
