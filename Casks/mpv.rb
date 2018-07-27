@@ -8,6 +8,8 @@ cask 'mpv' do
   name 'mpv'
   homepage 'https://mpv.io/'
 
+  depends_on macos: '>= :yosemite'
+
   app 'mpv.app'
   binary "#{appdir}/mpv.app/Contents/MacOS/mpv"
 
