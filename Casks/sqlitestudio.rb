@@ -1,13 +1,13 @@
 cask 'sqlitestudio' do
-  version '3.1.1'
-  sha256 'eb678313e35ee85adc12b71a75bbdedaf86ab96b7fdeb2d360289c5d5491cb35'
+  version '3.2.0'
+  sha256 'b6aba68a3f79cdfa5e215c60d8b3454792bf9747418ce2399ca5bafdcbcf3137'
 
-  url "http://sqlitestudio.pl/files/sqlitestudio3/complete/macosx/sqlitestudio-#{version}.dmg"
+  url "https://sqlitestudio.pl/files/sqlitestudio#{version.major}/complete/macosx/SQLiteStudio-#{version}.dmg"
   appcast 'http://sqlitestudio.pl/rss.rvt'
   name 'SQLiteStudio'
   homepage 'https://sqlitestudio.pl/'
 
-  app 'SQLiteStudio.app'
+  app 'SQLiteStudio'
 
   zap trash: [
                '~/.config/sqlitestudio',
