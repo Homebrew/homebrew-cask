@@ -1,6 +1,6 @@
 cask 'now' do
-  version '3.10.0'
-  sha256 '772087e8c9807c46d74125538a5e716e019cf73081c2711f79c093de74c202d7'
+  version '3.10.1'
+  sha256 'a416233dd6e3117b8cf7618d59b6deb72230d2fccdccc69587501d60f6a681d2'
 
   # github.com/zeit/now-desktop was verified as official when first introduced to the cask
   url "https://github.com/zeit/now-desktop/releases/download/#{version}/now-desktop-#{version}-mac.zip"
