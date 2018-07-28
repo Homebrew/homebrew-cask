@@ -8,5 +8,5 @@ cask 'aptanastudio' do
   name 'Aptana Studio'
   homepage 'http://www.aptana.com/'
 
-  app "Aptana Studio #{version.major}/AptanaStudio#{version.major}.app"
+  app 'AptanaStudio.app'
 end
