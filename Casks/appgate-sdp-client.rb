@@ -11,7 +11,7 @@ cask 'appgate-sdp-client' do
 
   pkg 'AppGate SDP Installer.pkg'
 
-  uninstall launchctl: 'com.cyxtera.appgate.sdp*',
+  uninstall launchctl: 'com.cyxtera.appgate.sdp.*',
             quit:      'com.cyxtera.appgate.helper',
             signal:    [
                          ['QUIT', 'com.cyxtera.appgate'],
