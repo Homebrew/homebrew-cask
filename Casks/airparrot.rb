@@ -8,4 +8,15 @@ cask 'airparrot' do
   homepage 'http://www.airsquirrels.com/airparrot/'
 
   app "AirParrot #{version.major}.app"
+
+  uninstall kext: [
+                    'com.squirrels.driver.AirParrotSpeakers',
+                    '/Library/Extensions/AirParrotDriver.kext',
+                    '/Library/Extensions/APExtFramebuffer.kext',
+                    '/System/Library/Extensions/AirParrotDriver.kext',
+                    '/System/Library/Extensions/APExtFramebuffer.kext',
+                  ],
+            quit: "com.squirrels.AirParrot-#{version.major}"
+
+  zap trash: '~/Library/Preferences/com.squirrels.AirParrot-*.plist'
 end
