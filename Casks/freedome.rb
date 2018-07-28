@@ -8,9 +8,6 @@ cask 'freedome' do
 
   pkg 'Freedome.pkg'
 
-  uninstall pkgutil:   [
-                         'com.f-secure.freedome.app',
-                         'com.f-secure.freedome.fsvpn',
-                       ],
+  uninstall pkgutil:   'com.f-secure.freedome*',
             launchctl: 'com.f-secure.freedome.*'
 end
