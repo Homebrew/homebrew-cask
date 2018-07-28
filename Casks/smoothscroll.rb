@@ -8,6 +8,4 @@ cask 'smoothscroll' do
   homepage 'https://www.smoothscroll.net/'
 
   app 'SmoothScroll.app'
-
-  caveats 'gSmoothScroll is not free and comes with a 21-day free trial.'
 end
