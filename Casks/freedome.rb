@@ -12,11 +12,5 @@ cask 'freedome' do
                          'com.f-secure.freedome.app',
                          'com.f-secure.freedome.fsvpn',
                        ],
-            launchctl: [
-                         'com.f-secure.freedome.uninstall',
-                         'com.f-secure.freedome.fsvpn-upstream.production',
-                         'com.f-secure.freedome.fsvpn-service-helper.production',
-                         'com.f-secure.freedome.fsvpn-service.production',
-                         'com.f-secure.freedome.gui',
-                       ]
+            launchctl: 'com.f-secure.freedome.*'
 end
