@@ -8,8 +8,6 @@ cask 'falcon-sql-client' do
   name 'Falcon SQL Client'
   homepage 'https://plot.ly/free-sql-client-download'
 
-  container nested: "release/mac-falcon-v#{version}.dmg"
-
   app 'Falcon SQL Client.app'
 
   zap trash: [
