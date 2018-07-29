@@ -10,7 +10,10 @@ cask 'freedome' do
 
   uninstall pkgutil:   'com.f-secure.freedome*',
             launchctl: [
-                         'com.f-secure.freedome.*',
-                         'com.f-secure.fsvpn*',
+                         'com.f-secure.freedome.gui',
+                         'com.f-secure.freedome.uninstall',
+                         'com.f-secure.fsvpn-service-helper.production',
+                         'com.f-secure.fsvpn-service.production',
+                         'com.f-secure.fsvpn-upstream.production',
                        ]
 end
