@@ -1,6 +1,6 @@
 cask 'bee' do
-  version '3.1.3,5462'
-  sha256 '7d66d70b4a7cce6170d5480f4c19b91101dfcbacf4a2ef1119838f1557d1956b'
+  version '3.1.4,5464'
+  sha256 '32278ec30960b2d8932adba655649ee653c551e077153f90d4258fdf1b63fc29'
 
   # bee-app.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://bee-app.s3.amazonaws.com/public/Bee-#{version.after_comma}-#{version.before_comma}.zip"
