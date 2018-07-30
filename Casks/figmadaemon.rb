@@ -8,7 +8,8 @@ cask 'figmadaemon' do
 
   pkg 'FigmaInstaller.pkg'
 
-  uninstall delete: '~/Library/Application Support/Figma/FigmaDaemon.app'
+  uninstall pkgutil: 'com.figma.daemon',
+            delete:  '~/Library/Application Support/Figma/FigmaDaemon.app'
 
   zap delete: [
                 '~/Library/Preferences/com.figma.FigmaDaemon.plist',
