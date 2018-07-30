@@ -1,6 +1,6 @@
 cask 'haptickey' do
-  version '0.4.4'
-  sha256 'f1f46a1686d8f9a2884e0f045acb407d6ad583053ec46b733bce71328240ff29'
+  version '0.4.5'
+  sha256 '5056bb49cb57236d7f957b73995d58a413ac870d541d02f36e9f040141af5a36'
 
   url "https://github.com/niw/HapticKey/releases/download/#{version}/HapticKey.app.zip"
   appcast 'https://github.com/niw/HapticKey/releases.atom'
