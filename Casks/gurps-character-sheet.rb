@@ -1,9 +1,9 @@
 cask 'gurps-character-sheet' do
-  version '4.11.0,4.11'
-  sha256 '71b2fe6a697ba0d7fe5fe16bdf0dfe1975f9fe7d6fb68d775e5d857e7c5fb5cd'
+  version '4.11.1'
+  sha256 '40d6801557ac10e3465a00aeefc76a38e2937b92b3a4efbbcbffb6a0fc9eff93'
 
   # github.com/richardwilkes/gcs was verified as official when first introduced to the cask
-  url "https://github.com/richardwilkes/gcs/releases/download/gcs-#{version.before_comma}/GURPS.Character.Sheet.#{version.after_comma}.dmg"
+  url "https://github.com/richardwilkes/gcs/releases/download/gcs-#{version}/GURPS.Character.Sheet.#{version}.dmg"
   appcast 'https://github.com/richardwilkes/gcs/releases.atom'
   name 'GURPS Character Sheet'
   homepage 'http://gurpscharactersheet.com/'
