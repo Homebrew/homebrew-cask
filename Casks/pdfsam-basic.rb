@@ -8,5 +8,5 @@ cask 'pdfsam-basic' do
   name 'PDFsam Basic'
   homepage 'http://www.pdfsam.org/'
 
-  app 'PDFsam.app'
+  app 'PDFsam Basic.app'
 end
