@@ -1,6 +1,6 @@
 cask 'coinpricebar' do
-  version '1.5'
-  sha256 '7da0e17bd64d357b44b80ad20acf9d9224a9f50cd8e65d222605b0cea42c203f'
+  version '1.5.0.13'
+  sha256 '9e59907f6cc9fe906715da3e622ff8ab27cc58465b8ad22c526a5f8d6ab7bb0a'
 
   url "https://github.com/T-Pham/CoinPriceBar/releases/download/#{version}/CoinPriceBar.app.zip"
   appcast 'https://github.com/T-Pham/CoinPriceBar/releases.atom'
