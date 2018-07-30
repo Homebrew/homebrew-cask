@@ -1,5 +1,5 @@
 cask 'xiami' do
-  version '7.0.4,07241753'
+  version '7.0.4,07271719'
   sha256 '01100e2a4e838acd2f8dec0f045a87da3003e91e12f597a60c79b1eca32c0f6f'
 
   # gxiami.alicdn.com/xiami-desktop was verified as official when first introduced to the cask
