@@ -6,7 +6,7 @@ cask 'clip-studio-paint' do
   name 'CLIP STUDIO PAINT'
   homepage 'http://www.clipstudio.net/en'
 
-  pkg "CSP_#{version.no_dots}m_app.pkg"
+  installer manual: "CSP_#{version.no_dots}m_app.pkg"
 
   uninstall pkgutil: [
                        'jp.co.CELSYS.AggregateMdul.*',
