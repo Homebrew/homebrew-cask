@@ -1,6 +1,6 @@
 cask 'cursorsense' do
-  version '1.3.5'
-  sha256 '67f3d3a7c82eb35cc326c134cfb5b6c4fd7ad78f2672912546108508b01a5381'
+  version '2.0'
+  sha256 '1dc68c102f5aab32397aba73d209607dc2215f0a809d2d65ddf8161d5dca5910'
 
   url "http://plentycom.jp/ctrl/files_cs/CursorSense#{version}.dmg"
   appcast 'http://plentycom.jp/en/cursorsense/download.php'
