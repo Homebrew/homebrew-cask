@@ -1,6 +1,6 @@
 cask 'nteract' do
-  version '0.10.0'
-  sha256 '2fbb06610d26de191f7631dc56fd04705242a2f9f9940b0d57d81da4d1530613'
+  version '0.11.2'
+  sha256 '34c7b4385b854d7a9140bbf81bea5e9c543e9de92b96de3697d892df106226bf'
 
   url "https://github.com/nteract/nteract/releases/download/v#{version}/nteract-#{version}.dmg"
   appcast 'https://github.com/nteract/nteract/releases.atom'
