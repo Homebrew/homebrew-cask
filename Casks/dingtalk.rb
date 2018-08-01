@@ -4,6 +4,7 @@ cask 'dingtalk' do
 
   # download.alicdn.com/dingtalk-desktop was verified as official when first introduced to the cask
   url "https://download.alicdn.com/dingtalk-desktop/mac_dmg/Release/DingTalk_v#{version}.dmg"
+  appcast 'https://im.dingtalk.com/manifest/appcast_en.xml'
   name 'DingTalk'
   name '钉钉'
   homepage 'https://www.dingtalk.com/'
