@@ -9,4 +9,6 @@ cask 'dosbox' do
   homepage 'https://www.dosbox.com/'
 
   app 'DOSBox.app'
+
+  zap trash: '~/Library/Preferences/DOSBox*'
 end
