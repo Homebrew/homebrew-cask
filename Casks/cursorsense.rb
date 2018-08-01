@@ -7,5 +7,7 @@ cask 'cursorsense' do
   name 'CursorSense'
   homepage 'http://plentycom.jp/en/cursorsense/'
 
+  depends_on macos: '>= :sierra'
+
   prefpane 'CursorSense.prefPane'
 end
