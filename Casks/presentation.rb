@@ -8,4 +8,5 @@ cask 'presentation' do
   homepage 'http://iihm.imag.fr/blanch/software/osx-presentation/'
 
   app 'Présentation.app'
+  binary "#{appdir}/Emacs.app/Contents/MacOS/presentation.py", target: 'presentation'
 end
