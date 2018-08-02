@@ -1,6 +1,6 @@
 cask 'udeler' do
-  version '1.6.1'
-  sha256 '3233862783a279ebd40ff2b4292fe615dbba9d3c85b3629230882bf95138ee7b'
+  version '1.6.2'
+  sha256 'd7eb6ca284f753cbb38ab12b260f9a44fc375485c74a6de6af3f681047c19cad'
 
   url "https://github.com/FaisalUmair/udemy-downloader-gui/releases/download/v#{version}/Udeler-#{version}-mac.zip"
   appcast 'https://github.com/FaisalUmair/udemy-downloader-gui/releases.atom'
