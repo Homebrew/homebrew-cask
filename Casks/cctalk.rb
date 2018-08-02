@@ -11,6 +11,6 @@ cask 'cctalk' do
   depends_on macos: '>= :yosemite'
 
   pkg "CCtalk.#{version.before_comma}-#{version.after_comma}.pkg"
-  
+
   uninstall pkgutil: 'com.hujiang.mac.cctalk'
 end
