@@ -9,6 +9,5 @@ cask 'vrouter' do
 
   app 'VRouter.app'
 
-  uninstall delete:    '/Library/Application Support/VRouter'
-
+  uninstall delete: '/Library/Application Support/VRouter'
 end
