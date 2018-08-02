@@ -10,5 +10,5 @@ cask 'cctalk' do
 
   depends_on macos: '>= :yosemite'
 
-  app 'CCtalk.app'
+  pkg "CCtalk.#{version.before_comma}-#{version.after_comma}.pkg"
 end
