@@ -50,10 +50,8 @@ module Hbc
 
           checks = {
             installed_apps: Diffable.new do
-              sleep(5) # Allow `mdfind` to refresh.
-              system_command!("/usr/bin/mdfind", args: ["-onlyin", "/", "kMDItemContentType == com.apple.application-bundle"], print_stderr: false)
-                .stdout
-                .split("\n")
+              ["/Applications", File.expand_path("~/Applications")]
+                .flat_map { |dir| Dir["#{dir}/**/*.app"] }
             end,
             installed_kexts: Diffable.new do
               system_command!("/usr/sbin/kextstat", args: ["-kl"], print_stderr: false)
