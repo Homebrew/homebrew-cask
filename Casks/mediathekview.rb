@@ -1,6 +1,6 @@
 cask 'mediathekview' do
-  version '13.1.0'
-  sha256 '6396e3279ef5306f735b0a09890e610012bbe97a946a8de7ed0ebdd6949a7b44'
+  version '13.1.1'
+  sha256 '5266e92735d262faaf1705c2c8339936edfc1cd830291928257eb4dd70742e57'
 
   url "https://download.mediathekview.de/stabil/MediathekView-#{version}.dmg"
   appcast 'https://mediathekview.de/changelog/index.xml'
