@@ -12,8 +12,8 @@ def capture
       begin
         yield
       ensure
-        $stdout.flush
-        $stderr.flush
+        w.flush
+        w.close
       end
     end
     thread.abort_on_exception = true
@@ -22,9 +22,15 @@ def capture
 
     loop do
       begin
-        output << r.readline_nonblock || ""
+        selected = IO.select([r], [], [], 1)
+
+        if reader = selected&.dig(0, 0)
+          output << (reader.readline_nonblock || "")
+        else
+          break if w.closed?
+        end
       rescue IO::WaitReadable
-        break unless thread.alive?
+        retry
       end
     end
 
