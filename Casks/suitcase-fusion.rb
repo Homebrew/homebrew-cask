@@ -1,6 +1,6 @@
 cask 'suitcase-fusion' do
-  version '8,19.1.0'
-  sha256 '780b33cd57cdb8cb49f68b0387cd7c1e45a7b05b8c91519045b801b9c7172db7'
+  version '8,19.1.1'
+  sha256 '7a1df59d333962cc3db4fd61331ab7d33733caeaeb21c96e2daa2361f6732db5'
 
   url "https://bin.extensis.com/SuitcaseFusion#{version.before_comma}-M-#{version.after_comma.dots_to_hyphens}.dmg"
   appcast "https://sparkle.extensis.com/u/ST/EN/suitcase#{version.after_comma.major}en.xml"
