@@ -11,8 +11,7 @@ cask 'musescore' do
 
   app "MuseScore #{version.major}.app"
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/musescore.wrapper.sh"
-  binary shimscript, target: 'musescore'
+  shimscript = "#{staged_path}/mscore.wrapper.sh"
   binary shimscript, target: 'mscore'
 
   preflight do
