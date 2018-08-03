@@ -5,7 +5,6 @@ require "utils/formatter"
 
 require_relative "lib/capture"
 require_relative "lib/diffable"
-require_relative "lib/github"
 require_relative "lib/travis"
 
 module Hbc
@@ -27,7 +26,7 @@ module Hbc
                            ruby_files_in_wrong_directory.join("\n")
         end
 
-        if modified_cask_files.count > 1 && pr_author && !maintainers.include?(pr_author)
+        if modified_cask_files.count > 1 && tap.name != "homebrew/cask-fonts"
           raise CaskError, "More than one cask modified; please submit a pull request for each cask separately."
         end
 
@@ -197,26 +196,6 @@ module Hbc
           Tap.fetch(ENV["TRAVIS_REPO_SLUG"])
         else
           Tap.from_path(Dir.pwd)
-        end
-      end
-
-      def pr_author
-        return unless ENV.key?("TRAVIS_PULL_REQUEST")
-        return unless ENV.key?("TRAVIS_REPO_SLUG")
-
-        @pr_author ||= begin
-          owner, repo = ENV["TRAVIS_REPO_SLUG"].split("/", 2)
-
-          pr = GitHub.pull_request(owner, repo, ENV["TRAVIS_PULL_REQUEST"])
-          pr.dig("user", "login")
-        end
-      end
-
-      def maintainers
-        @maintainers ||= begin
-          GitHub.members("Homebrew", team: "cask").map { |member| member.fetch("login") }
-        rescue GitHub::AuthenticationFailedError
-          []
         end
       end
 
