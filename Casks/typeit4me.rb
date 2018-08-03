@@ -1,11 +1,11 @@
 cask 'typeit4me' do
-  version '6.0.4b149'
-  sha256 '14fe8bb5f78b4e09cd4244792b6876fe7850f97c99478b9790c7f1c1043c8546'
+  version '6.0.5b156'
+  sha256 'b1912aba43111bc9193e9dcbf3ff669a7543aba952bf3df5a40755d59dd151ac'
 
-  url "http://ettoresoftware.com/download/TypeIt4Me#{version}.zip"
-  appcast 'http://ettoresoftware.com/download/TypeIt4MeAppcast.xml'
+  url "https://ettoresoftware.com/download/TypeIt4Me#{version}.zip"
+  appcast 'https://ettoresoftware.com/download/TypeIt4MeAppcast.xml'
   name 'TypeIt4Me'
-  homepage 'http://www.ettoresoftware.com/mac-apps/typeit4me/'
+  homepage 'https://www.ettoresoftware.com/mac-apps/typeit4me/'
 
   auto_updates true
 
