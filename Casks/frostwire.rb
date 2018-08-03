@@ -4,7 +4,7 @@ cask 'frostwire' do
 
   # downloads.sourceforge.net/frostwire was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/frostwire/frostwire-#{version.before_comma}.dmg"
-  appcast 'https://github.com/frostwire/frostwire//releases.atom'
+  appcast 'https://sourceforge.net/projects/frostwire/rss'
   name 'FrostWire'
   homepage 'http://www.frostwire.com/'
 
