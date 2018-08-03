@@ -7,7 +7,7 @@ cask 'gpg-sync' do
   name 'GPG Sync'
   homepage 'https://github.com/firstlookmedia/gpgsync/'
 
-  pkg 'GPGSync.pkg'
+  pkg "GPGSync-#{version}.pkg"
 
   uninstall pkgutil:   'org.firstlook.gpgsync',
             launchctl: 'org.firstlook.gpgsync'
