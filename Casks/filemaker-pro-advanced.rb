@@ -10,5 +10,14 @@ cask 'filemaker-pro-advanced' do
 
   pkg "FileMaker Pro #{version.major} Advanced.pkg"
 
+  preflight do
+    file = "#{staged_path}/Assisted Install.txt"
+    IO.write(file, IO.read(file).sub('AI_LICENSE_ACCEPTED=0', 'AI_LICENSE_ACCEPTED=1'))
+  end
+
   uninstall pkgutil: "com.filemaker.FMPA#{version.major}*"
+
+  caveats do
+    license 'https://www.filemaker.com/company/legal/docs/eula/fmpa_eula_wwe.pdf'
+  end
 end
