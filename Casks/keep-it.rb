@@ -1,4 +1,4 @@
-cask 'together' do
+cask 'keep-it' do
   version '1.4.3'
   sha256 'c940df2c8af03825ed408c59c448b749499fb87b420f8a98c07d1618084dd398'
 
