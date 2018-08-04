@@ -1,13 +1,14 @@
 cask 'flavours' do
-  version '1.1.16'
-  sha256 '54b9b06733ee9f58bf767ad101e3822b15884ac94cdfc37aa895381b6b8258b0'
+  version '224,23:07351795f8d0f89244aeb9bfec2b2d0a6e6c20e0'
+  sha256 '043973bd36f7767d2fc044d393bbb1a40a8bf5ee981881f69e3f6c5e4aa40f9a'
 
-  url "http://flavours-updates.interacto.net/Flavours_#{version}.dmg"
-  appcast 'http://flavours-updates.interacto.net/appcast.xml'
+  # rink.hockeyapp.net/api/2/apps/251163d75d6ed8f4f639239fb7e5a545 was verified as official when first introduced to the cask
+  url "https://rink.hockeyapp.net/api/2/apps/251163d75d6ed8f4f639239fb7e5a545/app_versions/#{version.after_comma.before_colon}?format=zip&avtoken=#{version.after_colon}"
+  appcast 'https://rink.hockeyapp.net/api/2/apps/251163d75d6ed8f4f639239fb7e5a545'
   name 'Flavours'
   homepage 'http://flavours.interacto.net/'
 
-  app 'Flavours.app'
+  app 'Flavours2.app'
 
   uninstall launchctl: 'net.interacto.flavours.helper',
             quit:      'net.interacto.Flavours',
