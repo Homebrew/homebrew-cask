@@ -1,20 +1,17 @@
 cask 'together' do
-  version '3.8.8'
-  sha256 '689992d5d84f1137cbbd23e9b9114dd56545fbe8df40310ea19b715c447fbae2'
+  version '1.4.3'
+  sha256 'c940df2c8af03825ed408c59c448b749499fb87b420f8a98c07d1618084dd398'
 
-  url "https://reinventedsoftware.com/together/downloads/Together_#{version}.dmg"
-  appcast "https://reinventedsoftware.com/together/downloads/Together#{version.major}.xml"
-  name 'Together'
-  homepage 'https://reinventedsoftware.com/together/'
+  url "https://reinventedsoftware.com/keepit/downloads/KeepIt_#{version}.dmg"
+  appcast 'https://reinventedsoftware.com/keepit/downloads/keepit.xml'
+  name 'Keep It'
+  homepage 'https://reinventedsoftware.com/keepit/'
 
-  app "Together #{version.major}.app"
+  app 'Keep It.app'
 
   zap trash: [
-               "~/Library/Application Support/Together #{version.major}",
-               '~/Library/Caches/Together',
-               "~/Library/Caches/com.reinvented.Together#{version.major}",
-               "~/Library/Preferences/com.reinvented.Together#{version.major}.shared.plist",
-               "~/Library/Preferences/com.reinvented.Together#{version.major}.plist",
-               "~/Library/Saved Application State/com.reinvented.Together#{version.major}.savedState",
+               '~/Library/Containers/com.reinvented.Keep-It-Indexing',
+               '~/Library/Containers/com.reinvented.Keep-It-Metadata',
+               '~/Library/Containers/com.reinvented.Keep It',
              ]
 end
