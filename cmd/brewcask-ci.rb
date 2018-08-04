@@ -163,6 +163,7 @@ module Hbc
 
         Travis.fold travis_id do
           print "#{Tty.bold}#{Tty.yellow}#{name}#{Tty.reset} "
+          $stdout.flush
 
           success, output = capture do
             begin
