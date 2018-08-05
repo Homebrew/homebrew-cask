@@ -43,6 +43,7 @@ $ git remote add "${github_user}" "https://github.com/${github_user}/homebrew-ca
 
 4: Switch to a new branch (ie. `new-feature`), and work from there: `git checkout -b new-feature`.
 
+5: Prevent automatic switching of git branches by setting the `HOMEBREW_DEVELOPER` variable: `export HOMEBREW_DEVELOPER=1`
 
 ## Adding a Cask
 
