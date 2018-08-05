@@ -6,5 +6,5 @@ cask 'aexol-remote-mouse' do
   name 'Aexol Remote Mouse'
   homepage 'http://remotemouse.aexol.com/'
 
-  app '/Volumes/Remote Mouse for Mac.app'
+  app 'Remote Mouse for Mac.app'
 end
