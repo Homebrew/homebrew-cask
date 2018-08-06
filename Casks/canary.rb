@@ -1,6 +1,6 @@
 cask 'canary' do
-  version '2.07,419'
-  sha256 'd646ba76c93a1a1f9ebce4e21aaa6e0c071bb2411f3060766e85f104bf9959d2'
+  version '2.09,430'
+  sha256 '9dced03eced6cd9d019030a2895d111cb25880c0e91924cfdc4a079ba65c7f7c'
 
   # rink.hockeyapp.net/api was verified as official when first introduced to the cask
   url "https://rink.hockeyapp.net/api/2/apps/b36ac4a380ea4907940c2054f6163050/app_versions/#{version.after_comma}?format=zip"
