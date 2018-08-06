@@ -1,6 +1,6 @@
 cask 'plant' do
-  version '1.4.1.3'
-  sha256 '0f6d4d97878a83d151cf207e494c7f620051cc1de49b54f316ffb8992a29d301'
+  version '1.4.2.2'
+  sha256 '68592ce1b709222ffac3b07734e642031b21e78866d7920b2022cf09fe659b45'
 
   url "https://projects.plantapp.io/app/plant_v#{version}.dmg"
   appcast 'https://projects.plantapp.io/app/changelog.xml'
