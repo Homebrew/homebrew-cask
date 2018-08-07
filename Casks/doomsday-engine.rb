@@ -1,6 +1,6 @@
 cask 'doomsday-engine' do
-  version '2.1.0-build2769'
-  sha256 'bbd6706ce7c71251b80e2284c87deff1eac4b1a233408f7823b7dbe55b14dfad'
+  version '2.1.0-build2774'
+  sha256 '37b4b4ab75dcf3122ebcfd7b4d04122c3a04af0af27f21354b766d1ae808c2f0'
 
   # sourceforge.net/deng was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/deng/doomsday_#{version}_x86_64.dmg"
