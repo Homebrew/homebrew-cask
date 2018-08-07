@@ -1,6 +1,6 @@
 cask 'studio-3t' do
-  version '2018.4.1'
-  sha256 '5d2b7815d74d1ed9c4bd4b14cffefa155c299f606c91ee702305f2d56224d919'
+  version '2018.4.2'
+  sha256 'a4c157d002417f5b3170dc700cf8829113e7f230c2965a113970d7122642c410'
 
   url "https://download.studio3t.com/studio-3t/mac/#{version}/Studio-3T.dmg"
   appcast 'https://files.studio3t.com/changelog/changelog.txt'
