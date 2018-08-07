@@ -87,10 +87,7 @@ cask 'thunderbird' do
   homepage 'https://www.mozilla.org/thunderbird/'
 
   auto_updates true
-  conflicts_with cask: [
-                         'thunderbird-beta',
-                         'thunderbird-daily',
-                       ]
+  conflicts_with cask: 'thunderbird-beta'
 
   app 'Thunderbird.app'
 
@@ -99,5 +96,6 @@ cask 'thunderbird' do
                '~/Library/Caches/Thunderbird',
                '~/Library/Saved Application State/org.mozilla.thunderbird.savedState',
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.thunderbird.sfl*',
+               '~/Library/Preferences/org.mozilla.thunderbird.plist',
              ]
 end
