@@ -1,4 +1,4 @@
-cask 'syncthing' do
+cask 'syncthing-app' do
   version '0.14.49-1'
   sha256 'cb42920780b27ffb7a85153416c79ffb05c68c6a5190fbe97477ed8f08cd1a8f'
 
