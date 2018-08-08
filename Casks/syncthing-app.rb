@@ -4,7 +4,7 @@ cask 'syncthing-app' do
 
   # github.com/syncthing/syncthing-macos was verified as official when first introduced to the cask
   url "https://github.com/syncthing/syncthing-macos/releases/download/v#{version}/Syncthing-#{version}.dmg"
-  appcast 'https://upgrades.syncthing.net/syncthing-macos/appcast.xml'
+  appcast 'https://github.com/syncthing/syncthing-macos/releases.atom'
   name 'Syncthing'
   homepage 'https://syncthing.net/'
 
