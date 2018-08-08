@@ -1,5 +1,5 @@
 cask 'clion' do
-  version '2018.2,182.3684.76'
+  version '2018.2,182.3911.40'
   sha256 'f81b2151e2ee9e109bc5bf490ffacea956f9e7d1aebdc9c0d8d5090fdf020a21'
 
   url "https://download.jetbrains.com/cpp/CLion-#{version.before_comma}.dmg"
