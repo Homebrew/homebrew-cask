@@ -4,7 +4,7 @@ cask 'sketchup' do
 
   # downloads can be found at https://www.sketchup.com/download/all
   # dl.trimble.com/sketchup was verified as official when first introduced to the cask
-  url "https://www.sketchup.com/sketchup/2017/en/sketchupmake-#{version.before_comma}-#{version.after_comma}-en-dmg"
+  url "https://www.sketchup.com/sketchup/#{version.before_comma}/en/sketchupmake-#{version.before_comma}-#{version.after_comma}-en-dmg"
   name 'SketchUp'
   homepage 'https://www.sketchup.com/'
 
