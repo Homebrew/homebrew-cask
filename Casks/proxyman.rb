@@ -4,7 +4,7 @@ cask 'proxyman' do
 
   # github.com/ProxymanApp/Proxyman was verified as official when first introduced to the cask
   url "https://github.com/ProxymanApp/Proxyman/releases/download/#{version}/Proxyman_#{version}.dmg"
-  appcast 'https://www.dropbox.com/s/w81h025655ln99d/appcast.xml?dl=1'
+  appcast 'https://github.com/ProxymanApp/Proxyman/releases.atom'
   name 'Proxyman'
   homepage 'https://proxyman.app/'
 
