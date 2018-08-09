@@ -30,7 +30,7 @@ function get_repo {
   cd "${repo_dir}" || exit 1
 }
 
-function copy_templates_and_ci {
+function copy_templates {
   local repo_name
 
   repo_name="${1}"
