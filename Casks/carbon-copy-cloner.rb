@@ -4,6 +4,7 @@ cask 'carbon-copy-cloner' do
 
   # bombich.scdn1.secure.raxcdn.com/software/files was verified as official when first introduced to the cask
   url "https://bombich.scdn1.secure.raxcdn.com/software/files/ccc-#{version}.zip"
+  appcast "https://bombich.com/software/updates/ccc.php?os_major=10&os_minor=14&os_bugfix=0&ccc=#{version.split('.').last}&beta=0"
   name 'Carbon Copy Cloner'
   homepage 'https://bombich.com/'
 
