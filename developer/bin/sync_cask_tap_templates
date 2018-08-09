@@ -66,6 +66,6 @@ function push_changes {
 get_main_repo
 for repo in "${cask_repos[@]}"; do
   get_repo "${repo}"
-  copy_templates_and_ci "${repo}"
+  copy_templates "${repo}"
   push_changes
 done
