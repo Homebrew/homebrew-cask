@@ -1,8 +1,9 @@
 cask 'wanwallet' do
-  version :latest
-  sha256 :no_check
+  version '2.1.0'
+  sha256 'd260cecc85ee72cf1c802f996bb5e5387fabe509c25c01186364146d9211d165'
 
-  url 'https://wanchain.org/download/macwallet2'
+  url "https://wanchain.org/download/macwallet#{version.major}"
+  appcast 'https://github.com/wanchain/wanwallet/releases.atom'
   name 'Wanchain Wallet GUI'
   homepage 'https://wanchain.org/'
 
