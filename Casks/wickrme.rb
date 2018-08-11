@@ -4,6 +4,7 @@ cask 'wickrme' do
 
   # s3.amazonaws.com/static.wickr.com was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/static.wickr.com/downloads/mac/me/WickrMe-#{version}.dmg"
+  appcast 'https://me-download.wickr.com/#/version/me'
   name 'Wickr Me'
   homepage 'https://wickr.com/products/personal/'
 
