@@ -1,4 +1,4 @@
-cask 'wickr-me' do
+cask 'wickrme' do
   version '4.51.7'
   sha256 'c8ec59d91c068e3f16a131cd98d657b12dca219cdabebf48f997c5d71603508b'
 
