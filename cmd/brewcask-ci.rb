@@ -15,6 +15,9 @@ module Hbc
           raise CaskError, "This command isn’t meant to be run locally."
         end
 
+        $stdout.sync = true
+        $stderr.sync = true
+
         unless tap
           raise CaskError, "This command must be run from inside a tap directory."
         end
@@ -96,7 +99,15 @@ module Hbc
 
         Travis.fold travis_id do
           print "#{Tty.bold}#{Tty.yellow}#{name}#{Tty.reset} "
-          $stdout.flush
+
+          real_stdout = $stdout.dup
+
+          travis_wait = Thread.new do
+            loop do
+              sleep 595
+              real_stdout.print "\u200b"
+            end
+          end
 
           success, output = capture do
             begin
@@ -107,9 +118,12 @@ module Hbc
             end
           end
 
+          travis_wait.kill
+          travis_wait.join
+
           if success
             puts Formatter.success("✔")
-            puts output
+            puts output unless output.empty?
           else
             puts Formatter.error("✘")
           end
@@ -118,9 +132,6 @@ module Hbc
         puts output unless success
 
         success
-      ensure
-        $stdout.flush
-        $stderr.flush
       end
 
       def tap
