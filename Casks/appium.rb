@@ -1,6 +1,6 @@
 cask 'appium' do
-  version '1.6.3'
-  sha256 'c30fa3b72954ce1e21c35cd879e3455f13b796316bba68b634dedab920731cc3'
+  version '1.6.2'
+  sha256 'a95306aaac264e68e880b269eda777fe9c1e0526b4d8b9409272faf1df051bf6'
 
   # github.com/appium/appium-desktop was verified as official when first introduced to the cask.
   url "https://github.com/appium/appium-desktop/releases/download/v#{version}/appium-desktop-#{version}-mac.zip"
