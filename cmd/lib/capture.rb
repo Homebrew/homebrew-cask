@@ -12,7 +12,6 @@ def capture
       begin
         yield
       ensure
-        w.flush
         w.close
       end
     end
