@@ -145,7 +145,6 @@ class Check
     end
 
     if loaded_launchjobs.any?
-      lines << "\n" unless s.empty?
       lines << Formatter.error("Some launch jobs were not unloaded, add them to #{Formatter.identifier("uninstall launchctl:")}", label: "Error")
       lines << loaded_launchjobs.join("\n")
     end
