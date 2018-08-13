@@ -13,5 +13,6 @@ cask 'mullvadvpn' do
 
   pkg "MullvadVPN-#{version}.pkg"
 
-  uninstall pkgutil: 'net.mullvad.vpn'
+  uninstall pkgutil:   'net.mullvad.vpn',
+            launchctl: 'net.mullvad.daemon'
 end
