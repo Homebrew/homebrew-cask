@@ -1,6 +1,6 @@
 cask 'pd' do
-  version '0.48-1'
-  sha256 'b7064bb20266da39e8257a94d09d75849f35d4f43520ce2c704a20562176e804'
+  version '0.48-2'
+  sha256 '7b000f68674bcbc333a7dfe0fac33d16d8c021f091cdff03eb1ef5d4181c056b'
 
   url "http://msp.ucsd.edu/Software/pd-#{version}.mac.tar.gz"
   appcast 'http://msp.ucsd.edu/software.html'
