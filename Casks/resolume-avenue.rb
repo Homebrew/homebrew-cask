@@ -13,8 +13,8 @@ cask 'resolume-avenue' do
             delete:    "/Applications/Resolume Avenue #{version.major}",
             launchctl: 'com.resolume.avenue'
 
-  zap trash: [
-               'com.resolume.pkg.ResolumeDXV',
-               'com.resolume.pkg.ResolumeQuickLook',
-             ]
+  zap pkgutil: [
+                 'com.resolume.pkg.ResolumeDXV',
+                 'com.resolume.pkg.ResolumeQuickLook',
+               ]
 end
