@@ -8,6 +8,8 @@ cask 'stellarium' do
   name 'Stellarium'
   homepage 'http://stellarium.org/'
 
+  depends_on macos: '>= :yosemite'
+
   app 'Stellarium.app'
 
   zap trash: '~/Library/Preferences/Stellarium'
