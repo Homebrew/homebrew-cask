@@ -11,13 +11,7 @@ cask 'mullvadvpn' do
 
   conflicts_with cask: 'mullvad-vpn-beta'
 
-  app 'MullvadVPN.app'
+  pkg "MullvadVPN-#{version}.pkg"
 
-  zap trash: [
-               '~/Library/Application Support/MullvadVPN',
-               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.mullvad.vpn.sfl*',
-               '~/Library/Logs/MullvadVPN',
-               '~/Library/Preferences/net.mullvad.vpn.plist',
-               '~/Library/Preferences/net.mullvad.vpn.helper.plist',
-             ]
+  uninstall pkgutil: 'net.mullvad.vpn'
 end
