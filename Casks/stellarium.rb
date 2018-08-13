@@ -7,7 +7,9 @@ cask 'stellarium' do
   appcast 'https://github.com/Stellarium/stellarium/releases.atom'
   name 'Stellarium'
   homepage 'http://stellarium.org/'
-
+  
+  depends_on macos: '>= :yosemite'
+  
   app 'Stellarium.app'
 
   zap trash: '~/Library/Preferences/Stellarium'
