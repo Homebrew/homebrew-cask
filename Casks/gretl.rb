@@ -1,6 +1,6 @@
 cask 'gretl' do
-  version '2018a'
-  sha256 '43336535c6d9f940b146a1197ffdc72f894755183ab2364d7950e562818c3e08'
+  version '2018b'
+  sha256 'f51628416425bdc6242cf2d69ac7cac337e6aa6805e9a54a4ec3324091a6cfc2'
 
   url "https://downloads.sourceforge.net/gretl/gretl-#{version}-quartz.pkg"
   appcast 'https://sourceforge.net/projects/gretl/rss?path=/gretl'
