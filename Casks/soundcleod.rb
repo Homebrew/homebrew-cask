@@ -4,8 +4,7 @@ cask 'soundcleod' do
 
   # github.com/salomvary/soundcleod was verified as official when first introduced to the cask
   url "https://github.com/salomvary/soundcleod/releases/download/v#{version}/SoundCleod-#{version}.dmg"
-  appcast 'https://github.com/salomvary/soundcleod/releases.atom',
-          checkpoint: '7d6ef0e71c5c6b80b063ae9076f3e88dc539fc6647e38cd4c2bfcad5d3f33b4e'
+  appcast 'https://github.com/salomvary/soundcleod/releases.atom'
   name 'SoundCleod'
   homepage 'https://soundcleod.com/'
 

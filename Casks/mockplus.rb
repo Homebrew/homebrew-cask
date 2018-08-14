@@ -1,6 +1,6 @@
 cask 'mockplus' do
-  version '3.2.10.2'
-  sha256 'f6d32bfa90d32c06e822416626ae8976f75a3ed971fa37207890f4b73726aec9'
+  version '3.3.2.4'
+  sha256 'ffdd94be31e66bcb0580921cb62b0b52da795cbd151db204c186d03fad62b86c'
 
   # s3-us-west-1.amazonaws.com/mockplus-static was verified as official when first introduced to the cask
   url "https://s3-us-west-1.amazonaws.com/mockplus-static/software/macos/Mockplus_v#{version}.dmg"

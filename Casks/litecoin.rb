@@ -1,6 +1,6 @@
 cask 'litecoin' do
   version '0.16.0'
-  sha256 '93b451d180b2c60495595df00c303de6b8e135187d0d77bd542b9df917f50286'
+  sha256 'e33fab8afa3c03eabcd958f4f7c2a4fdfdaf1f65eff7a861135e19fbc68423ad'
 
   url "https://download.litecoin.org/litecoin-#{version}/osx/litecoin-#{version}-osx.dmg"
   name 'Litecoin'

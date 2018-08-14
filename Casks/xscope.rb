@@ -4,8 +4,7 @@ cask 'xscope' do
 
   # iconfactory.com was verified as official when first introduced to the cask
   url "https://iconfactory.com/assets/software/xscope/xScope-#{version}.zip"
-  appcast 'https://iconfactory.com/appcasts/xScope/appcast.xml',
-          checkpoint: '2004f0da9bbe0b84678763014c466e4eef1d8bb50539f0324006bddc2f79754f'
+  appcast 'https://iconfactory.com/appcasts/xScope/appcast.xml'
   name 'xScope'
   homepage 'http://xscopeapp.com/'
 

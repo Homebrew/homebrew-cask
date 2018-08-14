@@ -4,8 +4,7 @@ cask 'unetbootin' do
 
   # github.com/unetbootin/unetbootin was verified as official when first introduced to the cask
   url "https://github.com/unetbootin/unetbootin/releases/download/#{version}/unetbootin-mac-#{version}.dmg"
-  appcast 'https://github.com/unetbootin/unetbootin/releases.atom',
-          checkpoint: 'd5ad9f2962f180e80c4e3459479a0d521a87169b7c4e402a4bc81076dd4ab676'
+  appcast 'https://github.com/unetbootin/unetbootin/releases.atom'
   name 'UNetbootin'
   homepage 'https://unetbootin.github.io/'
 

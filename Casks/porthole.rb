@@ -4,8 +4,7 @@ cask 'porthole' do
 
   # getporthole.com was verified as official when first introduced to the cask
   url 'https://download.getporthole.com/Porthole-latest.zip'
-  appcast 'https://update.getporthole.com/appcast.rss',
-          checkpoint: 'c6aa8f34c57cd1d19454bf1ab7a6684f2c396b6b109a510431e55bc52ae3fff5'
+  appcast 'https://update.getporthole.com/appcast.rss'
   name 'Porthole'
   homepage 'https://www.dangercove.com/porthole/'
 

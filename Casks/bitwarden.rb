@@ -1,13 +1,25 @@
 cask 'bitwarden' do
-  version '1.3.0'
-  sha256 'a8e24abd6c28b3deef00b30b9be632ab799e31c1557d26f3c732725b2439acb3'
+  version '1.5.0'
+  sha256 '81fcd0a5ecd5650a1d5901c2f7737445c67b798886487e4cf445d9217a7d34ee'
 
   # github.com/bitwarden/desktop was verified as official when first introduced to the cask
   url "https://github.com/bitwarden/desktop/releases/download/v#{version}/bitwarden-#{version}-mac.zip"
-  appcast 'https://github.com/bitwarden/desktop/releases.atom',
-          checkpoint: '146a6f7a095672276291e86889905854a60f1fedc3089ae044d479d08afba234'
+  appcast 'https://github.com/bitwarden/desktop/releases.atom'
   name 'Bitwarden'
   homepage 'https://bitwarden.com/'
 
+  depends_on macos: '>= :mavericks'
+
   app 'Bitwarden.app'
+
+  uninstall quit: [
+                    'com.bitwarden.desktop',
+                    'com.bitwarden.desktop.helper',
+                  ]
+
+  zap trash: [
+               '~/Library/Logs/Bitwarden',
+               '~/Library/Preferences/com.bitwarden.desktop.plist',
+               '~/Library/Preferences/com.bitwarden.desktop.helper.plist',
+             ]
 end

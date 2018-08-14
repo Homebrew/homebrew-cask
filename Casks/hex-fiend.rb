@@ -1,11 +1,10 @@
 cask 'hex-fiend' do
-  version '2.8.0'
-  sha256 '42dab86945759333669bbe2dc01c20294ee5ec5f87530e654454cdb2853736cb'
+  version '2.9.0'
+  sha256 'c3cd3aa704e123475a54bfa3f9a74c2e20594f40b69f51832518392bdd49848f'
 
   # github.com/ridiculousfish/HexFiend was verified as official when first introduced to the cask
   url "https://github.com/ridiculousfish/HexFiend/releases/download/v#{version}/Hex_Fiend_#{version.major_minor}.dmg"
-  appcast 'https://github.com/ridiculousfish/HexFiend/releases.atom',
-          checkpoint: 'cd523fdd9bb2b5222dfd5b276aa1cfdb10dfa3ed0e798d78ba3fc771d7208478'
+  appcast 'https://github.com/ridiculousfish/HexFiend/releases.atom'
   name 'Hex Fiend'
   homepage 'http://ridiculousfish.com/hexfiend/'
 

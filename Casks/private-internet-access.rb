@@ -1,6 +1,6 @@
 cask 'private-internet-access' do
-  version '80'
-  sha256 '7f46738910c38cdc6de5dfb18e417a26b1b5f245b9312a122e9ad38b75bd9403'
+  version '81'
+  sha256 'fd95bd129766d6af80b1d7bcdb4ca920215999b8c45b7e1af94bb122254af26b'
 
   url "https://installers.privateinternetaccess.com/download/pia-v#{version}-installer-mac.dmg"
   name 'Private Internet Access'

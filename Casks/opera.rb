@@ -1,6 +1,6 @@
 cask 'opera' do
-  version '53.0.2907.68'
-  sha256 'ab5bc09b750beba2a2c7fad62dce9f0a5de81e541d3b94fffd7959c3c1294bbb'
+  version '54.0.2952.64'
+  sha256 'f332bc940a5f05bb859a386dbf9091a76d595c4f0799ab66271dbf4e3b097c8b'
 
   url "https://get.geo.opera.com/pub/opera/desktop/#{version}/mac/Opera_#{version}_Setup.dmg"
   name 'Opera'

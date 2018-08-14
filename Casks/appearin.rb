@@ -3,8 +3,7 @@ cask 'appearin' do
   sha256 'ca3ac7a62950b7f87e0e7a3eeb3eabc51cade88486bf08d9d90707b77ecea976'
 
   url "https://github.com/vitorgalvao/appear.in/releases/download/#{version}/appear.in-#{version}-mac.zip"
-  appcast 'https://github.com/vitorgalvao/appear.in/releases.atom',
-          checkpoint: '06be291e9943fecc79fc5a4cc49b3227f76647e5c859e7135e0507b9ac33cc28'
+  appcast 'https://github.com/vitorgalvao/appear.in/releases.atom'
   name 'appear.in'
   homepage 'https://github.com/vitorgalvao/appear.in'
 

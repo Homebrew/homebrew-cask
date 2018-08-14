@@ -1,16 +1,16 @@
 cask 'unicodechecker' do
-  version '1.19'
-  sha256 '072d89e3b2b894288a7315f76c5ead3c023be24a4510cc90ee5ff7250c352e8b'
+  version '1.20'
+  sha256 '5f4c9e952b8e40e6d7dc01e1ab523f69ebadb3d5da645c71eaa2fd52d6c2671b'
 
   url 'https://earthlingsoft.net/UnicodeChecker/UnicodeChecker.zip'
-  appcast 'https://earthlingsoft.net/UnicodeChecker/appcast.xml',
-          checkpoint: '8d37aa4991bd746d9e5421b9190e219adee9f635751ea948cf1d0788c2a767be'
+  appcast 'https://earthlingsoft.net/UnicodeChecker/appcast.xml'
   name 'UnicodeChecker'
   homepage 'https://earthlingsoft.net/UnicodeChecker/'
 
   app "UnicodeChecker #{version}/UnicodeChecker.app"
 
   zap trash: [
+               '~/Library/Application Support/UnicodeChecker',
                '~/Library/Caches/net.earthlingsoft.UnicodeChecker',
                '~/Library/Preferences/net.earthlingsoft.UnicodeChecker.plist',
              ]

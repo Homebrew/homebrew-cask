@@ -4,8 +4,7 @@ cask 'narodmon' do
 
   # github.com/niki-timofe/NarodMonOSX was verified as official when first introduced to the cask
   url "https://github.com/niki-timofe/NarodMonOSX/releases/download/v#{version}/NarodMon.zip"
-  appcast 'https://github.com/niki-timofe/NarodMonOSX/releases.atom',
-          checkpoint: '238ef00d8eda38c5bee8a7f6c5867e3300dfa385dfee8010744fa24821ae96a6'
+  appcast 'https://github.com/niki-timofe/NarodMonOSX/releases.atom'
   name 'NarodMon'
   homepage 'https://narodmon.ru/'
 

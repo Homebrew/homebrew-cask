@@ -8,8 +8,7 @@ cask 'karabiner-elements' do
   end
 
   url "https://pqrs.org/osx/karabiner/files/Karabiner-Elements-#{version}.dmg"
-  appcast 'https://pqrs.org/osx/karabiner/files/karabiner-elements-appcast.xml',
-          checkpoint: '9eefcef483b220d58623de8f457b7c313d50db953135f09e5e3aff5170d62837'
+  appcast 'https://pqrs.org/osx/karabiner/files/karabiner-elements-appcast.xml'
   name 'Karabiner Elements'
   homepage 'https://pqrs.org/osx/karabiner/'
 

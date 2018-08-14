@@ -4,8 +4,7 @@ cask 'gateblu' do
 
   # s3-us-west-2.amazonaws.com/gateblu was verified as official when first introduced to the cask
   url 'https://s3-us-west-2.amazonaws.com/gateblu/gateblu-ui/latest/Gateblu.dmg'
-  appcast 'https://github.com/octoblu/gateblu/releases.atom',
-          checkpoint: '83432afb7d03af5e597d06b46cf039d7ac04948200b27224b736222fd924529e'
+  appcast 'https://github.com/octoblu/gateblu/releases.atom'
   name 'Gateblu'
   homepage 'https://gateblu.octoblu.com/'
 

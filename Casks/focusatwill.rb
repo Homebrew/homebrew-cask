@@ -1,6 +1,6 @@
 cask 'focusatwill' do
-  version '1.4.0'
-  sha256 'f8e9ca38e7bc893cf515f213ba6f9fd97d34a62a278bda56a8d49c18233c9a76'
+  version '1.5.0'
+  sha256 'bc5bc776a77bf9921403536bc91d3fceb80991ccb420efe14905bb39c93e82b6'
 
   # faw-desktop.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://faw-desktop.s3.amazonaws.com/focusatwill-#{version}.dmg"

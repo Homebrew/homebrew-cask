@@ -21,8 +21,7 @@ cask 'monolingual' do
 
   # github.com/IngmarStein/Monolingual was verified as official when first introduced to the cask
   url "https://github.com/IngmarStein/Monolingual/releases/download/v#{version}/Monolingual-#{version}.dmg"
-  appcast 'https://github.com/IngmarStein/Monolingual/releases.atom',
-          checkpoint: 'e6c6581fd3ac2a6bc14ac1ae25cfb68279dcb0c7f5fba91dab2c46d079030915'
+  appcast 'https://github.com/IngmarStein/Monolingual/releases.atom'
   name 'Monolingual'
   homepage 'https://ingmarstein.github.io/Monolingual/'
 

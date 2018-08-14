@@ -4,8 +4,7 @@ cask 'tad' do
 
   # github.com/antonycourtney/tad was verified as official when first introduced to the cask
   url "https://github.com/antonycourtney/tad/releases/download/v#{version}/tad-#{version}.dmg"
-  appcast 'https://github.com/antonycourtney/tad/releases.atom',
-          checkpoint: '047fd74d0603b63f2f51f2fecb8bae52128787cb664df1d5b3bcc0a1d2a3a5a1'
+  appcast 'https://github.com/antonycourtney/tad/releases.atom'
   name 'Tad'
   homepage 'http://tadviewer.com/'
 

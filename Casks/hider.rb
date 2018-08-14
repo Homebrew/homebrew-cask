@@ -4,8 +4,7 @@ cask 'hider' do
 
   # dl.devmate.com/com.macpaw.site.Hider was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.macpaw.site.Hider#{version.major}/#{version.before_comma}/#{version.after_comma}/MacPawHider#{version.major}-#{version.before_comma}.zip"
-  appcast "https://updates.devmate.com/com.macpaw.site.Hider#{version.major}.xml",
-          checkpoint: '2b20fface20e364318920e005f7ab488aac7104285205518d138101a91a3ad51'
+  appcast "https://updates.devmate.com/com.macpaw.site.Hider#{version.major}.xml"
   name 'MacPaw Hider'
   homepage 'https://macpaw.com/hider'
 

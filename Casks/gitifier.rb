@@ -4,8 +4,7 @@ cask 'gitifier' do
 
   # github.com/nschum/Gitifier was verified as official when first introduced to the cask
   url "https://github.com/nschum/Gitifier/releases/download/#{version}/Gitifier-#{version}.zip"
-  appcast 'https://github.com/nschum/Gitifier/releases.atom',
-          checkpoint: 'a0cce6c8ca814f0586a2c07e602183cb07e164ee26c543346b4e2a6a03e834b1'
+  appcast 'https://github.com/nschum/Gitifier/releases.atom'
   name 'Gitifier'
   homepage 'https://psionides.github.io/Gitifier/'
 

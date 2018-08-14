@@ -3,8 +3,7 @@ cask 'paw' do
   sha256 'c2ede505c1173cc0407e4c0a9f93469abae88d8170cd8b53ae93b23971b13b6f'
 
   url "https://cdn-builds.paw.cloud/paw/Paw-#{version}.zip"
-  appcast 'https://paw.cloud/api/v2/updates/appcast',
-          checkpoint: 'd68041584463d1be1ebba490d7bbf94573b23347e445fe728561799c6bb96c9d'
+  appcast 'https://paw.cloud/api/v2/updates/appcast'
   name 'Paw'
   homepage 'https://paw.cloud/'
 

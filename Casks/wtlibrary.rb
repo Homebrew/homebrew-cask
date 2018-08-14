@@ -4,8 +4,7 @@ cask 'wtlibrary' do
 
   # downloads.sourceforge.net/wtlibrary was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/wtlibrary/WtLibrary_#{version.dots_to_underscores}.dmg"
-  appcast 'https://sourceforge.net/projects/wtlibrary/rss',
-          checkpoint: '1b289175f9a987f487c6203f2335a5d036f670dd8b5705743c126217ea651cf5'
+  appcast 'https://sourceforge.net/projects/wtlibrary/rss'
   name 'Watchtower Library for Mac'
   homepage 'http://www.wtlibrary.net/'
 

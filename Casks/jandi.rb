@@ -7,8 +7,6 @@ cask 'jandi' do
   name 'JANDI'
   homepage 'https://www.jandi.com/landing/'
 
-  auto_updates true
-
   app 'JANDI.app'
 
   uninstall quit: 'com.jandi.osx.JANDI'

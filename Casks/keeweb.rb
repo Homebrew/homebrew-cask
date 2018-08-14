@@ -4,8 +4,7 @@ cask 'keeweb' do
 
   # github.com/keeweb/keeweb was verified as official when first introduced to the cask
   url "https://github.com/keeweb/keeweb/releases/download/v#{version}/KeeWeb-#{version}.mac.dmg"
-  appcast 'https://github.com/keeweb/keeweb/releases.atom',
-          checkpoint: '4913b4159a4eac3d588cdb18c5665adb9a2a2aed68b022e90e03a3df09199f7f'
+  appcast 'https://github.com/keeweb/keeweb/releases.atom'
   name 'KeeWeb'
   homepage 'https://keeweb.info/'
 

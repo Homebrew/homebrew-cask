@@ -4,8 +4,7 @@ cask 'noun-project' do
 
   # amazonaws.com/nounproject was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/nounproject/mac/Noun-Project-#{version}.dmg"
-  appcast 'https://thenounproject.com/for-mac/feed/',
-          checkpoint: '283a7c4feb1e9aa567d99f5816cceb3f22856cb7cd0038b4cd1888c3ba5678ab'
+  appcast 'https://thenounproject.com/for-mac/feed/'
   name 'Noun Project'
   homepage 'https://thenounproject.com/'
 

@@ -9,8 +9,7 @@ cask 'maciasl' do
     sha256 '24c0dbaa9a13231b8c8e364ef0e6d60656718320ce69d8bb23aa5bc27e82e87d'
 
     url "https://downloads.sourceforge.net/maciasl/#{version}/MaciASL.zip"
-    appcast 'https://sourceforge.net/projects/maciasl/rss',
-            checkpoint: '5d54d6eec240c14766700261db0f1bed7a0978ea7fd07ada29d5377d955de9b7'
+    appcast 'https://sourceforge.net/projects/maciasl/rss'
   end
 
   name 'MaciASL'

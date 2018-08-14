@@ -4,8 +4,7 @@ cask 'neat' do
 
   # neatsupport.wpengine.com was verified as official when first introduced to the cask
   url 'https://neatsupport.wpengine.com/wp-content/uploads/helpcenter/software/Neat-Mac.dmg'
-  appcast 'https://s3.amazonaws.com/helium-updater/Autoupdate/UPDATE.XML',
-          checkpoint: 'c09e03bd27235fabd426d0e35dc1847783d5b015fc59b5beecac3dab100afdeb'
+  appcast 'https://s3.amazonaws.com/helium-updater/Autoupdate/UPDATE.XML'
   name 'Neat'
   homepage 'https://www.neat.com/'
 

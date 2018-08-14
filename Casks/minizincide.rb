@@ -4,8 +4,7 @@ cask 'minizincide' do
 
   # github.com/MiniZinc/MiniZincIDE was verified as official when first introduced to the cask
   url "https://github.com/MiniZinc/MiniZincIDE/releases/download/#{version}/MiniZincIDE-#{version}-bundled.dmg"
-  appcast 'https://github.com/MiniZinc/MiniZincIDE/releases.atom',
-          checkpoint: 'b381f07fb5f0a7b2c97edcf3e53d47038c015df202fece1124de6c4a80b00690'
+  appcast 'https://github.com/MiniZinc/MiniZincIDE/releases.atom'
   name 'MiniZincIDE'
   homepage 'http://www.minizinc.org/ide/index.html'
 

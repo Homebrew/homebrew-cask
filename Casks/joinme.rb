@@ -6,8 +6,6 @@ cask 'joinme' do
   name 'join.me'
   homepage 'https://www.join.me/'
 
-  auto_updates true
-
   app 'join.me.app'
 
   zap trash: [

@@ -13,8 +13,7 @@ cask 'istumbler' do
     url "https://istumbler.net/downloads/istumbler-#{version}.dmg"
   end
 
-  appcast 'https://istumbler.net/feeds/appcast.rss',
-          checkpoint: 'efe23acb95dcf06592569075d061069e7d755a580234def1d34d7422de9a219d'
+  appcast 'https://istumbler.net/feeds/appcast.rss'
   name 'iStumbler'
   homepage 'https://istumbler.net/'
 

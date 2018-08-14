@@ -6,11 +6,12 @@ cask 'horos' do
     version '2.0.2'
     sha256 '5cc1d6c71c8ae643b4df4fecee93dbe3cfacbcffef52001a76a7683a2725ac08'
   else
-    version '2.4.0'
-    sha256 '1665f0aa31633b1affcbecfbff30e36d802316b207aff37575f74f1ac22f348e'
+    version '3.1.2'
+    sha256 'aad388ac771ba9fc6f7b2457a4577310f59c6a60156911357f1afe21b6fba45b'
   end
 
   url "https://horosproject.org/horos-content/Horos#{version}.dmg"
+  appcast 'https://horosproject.org/download/'
   name 'Horos – Free, open medical image viewer'
   homepage 'https://horosproject.org/'
 

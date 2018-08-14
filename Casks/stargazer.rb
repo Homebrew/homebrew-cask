@@ -4,8 +4,7 @@ cask 'stargazer' do
 
   # github.com/johansten/stargazer was verified as official when first introduced to the cask
   url "https://github.com/johansten/stargazer/releases/download/v#{version}/Stargazer-#{version}.dmg"
-  appcast 'https://github.com/johansten/stargazer/releases.atom',
-          checkpoint: '9339be3ea263f1b6626d914e1a3ac115a66e846d12f63dcd0a7b8d018e2d4681'
+  appcast 'https://github.com/johansten/stargazer/releases.atom'
   name 'Stargazer'
   homepage 'https://getstargazer.com/'
 

@@ -4,8 +4,7 @@ cask 'antetype' do
 
   # amazonaws.com/AntetypeDownload was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/AntetypeDownload/Antetype.zip'
-  appcast 'https://rink.hockeyapp.net/api/2/apps/6ab08fb043a94f51c9109c216e295a50',
-          checkpoint: '1c34ded90e4db5bd7cbec65b1e55fce4a28f0d014478f7a73fa7b60212eee20e'
+  appcast 'https://rink.hockeyapp.net/api/2/apps/6ab08fb043a94f51c9109c216e295a50'
   name 'Antetype'
   homepage 'http://antetype.com/'
 

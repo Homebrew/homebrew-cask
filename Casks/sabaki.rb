@@ -1,15 +1,12 @@
 cask 'sabaki' do
-  version '0.34.1'
-  sha256 'a392ceaf1e2f46254718a35e744c479b594e07c45532c597b776e7226ba88432'
+  version '0.35.1'
+  sha256 'c70229f75ced3b45d5b1b79224fdda3eceadcda352f50c2c4815c7043b192951'
 
   # github.com/SabakiHQ/Sabaki was verified as official when first introduced to the cask
   url "https://github.com/SabakiHQ/Sabaki/releases/download/v#{version}/sabaki-v#{version}-mac-x64.7z"
-  appcast 'https://github.com/SabakiHQ/Sabaki/releases.atom',
-          checkpoint: '68733f0b317d7c1b6ed135664cc7df5a7471641a833e700ec0ab580a9698c196'
+  appcast 'https://github.com/SabakiHQ/Sabaki/releases.atom'
   name 'Sabaki'
   homepage 'http://sabaki.yichuanshen.de/'
-
-  depends_on formula: 'unar'
 
   app 'Sabaki.app'
 end

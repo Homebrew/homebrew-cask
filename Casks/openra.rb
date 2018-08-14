@@ -4,8 +4,7 @@ cask 'openra' do
 
   # github.com/OpenRA/OpenRA was verified as official when first introduced to the cask
   url "https://github.com/OpenRA/OpenRA/releases/download/release-#{version}/OpenRA-release-#{version}.dmg"
-  appcast 'https://github.com/OpenRA/OpenRA/releases.atom',
-          checkpoint: 'aec2e5506d2e9ecea45add537487bfbbdbb7ad329ca018f1cdae88a9d7d911b3'
+  appcast 'https://github.com/OpenRA/OpenRA/releases.atom'
   name 'OpenRA'
   homepage 'http://www.openra.net/'
 

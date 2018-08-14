@@ -1,8 +1,9 @@
 cask 'unity-windows-support-for-editor' do
-  version '2018.1.3f1,a53ad04f7c7f'
-  sha256 'ffec80667f1d760dd9c222f4b384af8048a77d2de55d24602286c9078b3b35b2'
+  version '2018.2.2f1,c18cef34cbcd'
+  sha256 '64017ab5f5ec64f36157811e5fad23759220d7a45ce7c35c0738fa72041393b9'
 
   url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-#{version.before_comma}.pkg"
+  appcast 'https://unity3d.com/get-unity/download/archive'
   name 'Unity Windows (Mono) Build Support'
   homepage 'https://unity3d.com/unity/'
 

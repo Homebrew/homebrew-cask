@@ -4,8 +4,7 @@ cask 'robofont' do
 
   # static.typemytype.com/robofont was verified as official when first introduced to the cask
   url 'http://static.typemytype.com/robofont/RoboFont.dmg'
-  appcast 'https://doc.robofont.com/appcast.xml',
-          checkpoint: '10c7c710f11c3aa1ef0ebb29d68579e2cb99c2f2bbb54f482d5cf138d98c52da'
+  appcast 'https://doc.robofont.com/appcast.xml'
   name 'RoboFont'
   homepage 'https://robofont.com/'
 

@@ -8,8 +8,7 @@ cask 'hedgewars' do
   end
 
   url "http://www.hedgewars.org/download/releases/Hedgewars-#{version}.dmg"
-  appcast 'https://www.hedgewars.org/download/appcast.xml',
-          checkpoint: 'b568efa383a1243786b557c0d85dc0b3612afebcd310c77d91b5ec3c288a3264'
+  appcast 'https://www.hedgewars.org/download/appcast.xml'
   name 'Hedgewars'
   homepage 'https://hedgewars.org/'
 

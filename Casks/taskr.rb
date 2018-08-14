@@ -4,8 +4,7 @@ cask 'taskr' do
 
   # github.com/bukinoshita/taskr was verified as official when first introduced to the cask
   url "https://github.com/bukinoshita/taskr/releases/download/#{version}/taskr-#{version}-mac.zip"
-  appcast 'https://github.com/bukinoshita/taskr/releases.atom',
-          checkpoint: 'c92b3c149081305a131890732d15c78a0896e1c352fae683d6e22a2d3acc42dc'
+  appcast 'https://github.com/bukinoshita/taskr/releases.atom'
   name 'Taskr'
   homepage 'https://taskr.now.sh/'
 

@@ -17,8 +17,7 @@ cask 'araxis-merge' do
     url "https://www.araxis.com/download/Merge#{version}-macOS.dmg"
   end
 
-  appcast 'https://www.araxis.com/news-feed.atom',
-          checkpoint: 'c9780fd69328bea59065e1c62e1d34863c3d331e5d870bb5cc93ec97d8b9f97b'
+  appcast 'https://www.araxis.com/news-feed.atom'
   name 'Araxis Merge'
   homepage 'https://www.araxis.com/merge/'
 

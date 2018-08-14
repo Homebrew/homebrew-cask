@@ -4,8 +4,7 @@ cask 'daemon-tools' do
 
   # web-search-home.com was verified as official when first introduced to the cask
   url 'http://web-search-home.com/download/dtLiteMac'
-  appcast 'http://resources.web-search-home.com/xml/DAEMONToolsLite-appcast.xml',
-          checkpoint: 'a369e374d5729e2eeb77e35f721e2dec6e353fbc3696cb198db0cc7fea623807'
+  appcast 'http://resources.web-search-home.com/xml/DAEMONToolsLite-appcast.xml'
   name 'DAEMON Tools'
   homepage 'https://www.daemon-tools.cc/home'
 

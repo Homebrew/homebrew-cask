@@ -4,8 +4,7 @@ cask 'deploymate' do
 
   # amazonaws.com/deploymate was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/deploymate/download/Deploymate#{version.no_dots}.zip"
-  appcast 'http://www.deploymateapp.com/deploymate-updates.xml',
-          checkpoint: '2557bac19dee7963a93093aeb21c2dd2820a07c780275e3c3358f07534b24312'
+  appcast 'http://www.deploymateapp.com/deploymate-updates.xml'
   name 'Deploymate'
   homepage 'http://www.deploymateapp.com/'
 

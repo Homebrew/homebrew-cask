@@ -1,10 +1,9 @@
 cask 'xact' do
-  version '2.44'
-  sha256 '5c7c116f0ddef925e15e6be9ca801c4067138c47dbf6b2f81eac176fae4db2c7'
+  version '2.46'
+  sha256 '8d6736203d1e6289f9542e3db0a249c232e1f09c0fe85712a0ab33196ee9de95'
 
   url "http://xact.scottcbrown.org/xACT#{version}.zip"
-  appcast 'http://xactupdate.scottcbrown.org/xACT.xml',
-          checkpoint: '0ff9c6d87175313de71d04b72d55652d333eced7ea5065b83c51165b58e2a24f'
+  appcast 'http://xactupdate.scottcbrown.org/xACT.xml'
   name 'xACT'
   homepage 'http://xact.scottcbrown.org/'
 

@@ -4,8 +4,7 @@ cask 'deco' do
 
   # github.com/decosoftware/deco-ide was verified as official when first introduced to the cask
   url "https://github.com/decosoftware/deco-ide/releases/download/v#{version}/Deco-#{version}.pkg"
-  appcast 'https://github.com/decosoftware/deco-ide/releases.atom',
-          checkpoint: '73af73291153644892e7f1b2b91126a6cfc0634cc12f49da6452c90432dc4408'
+  appcast 'https://github.com/decosoftware/deco-ide/releases.atom'
   name 'Deco'
   homepage 'https://www.decosoftware.com/'
 

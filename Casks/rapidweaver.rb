@@ -4,8 +4,7 @@ cask 'rapidweaver' do
 
   # devmate.com/com.realmacsoftware.rapidweaver was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.realmacsoftware.rapidweaver/#{version.after_comma.major}/#{version.after_comma.minor}/RapidWeaver-#{version.after_comma.major}.zip"
-  appcast 'https://updates.devmate.com/com.realmacsoftware.rapidweaver.xml',
-          checkpoint: 'b079c3ecc4cc455a84dcd3f49edb575d18b3556165c558f4e5b8d42f15ffa709'
+  appcast 'https://updates.devmate.com/com.realmacsoftware.rapidweaver.xml'
   name 'RapidWeaver'
   homepage 'https://www.realmacsoftware.com/rapidweaver/'
 

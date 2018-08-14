@@ -4,8 +4,7 @@ cask 'xquartz' do
 
   # bintray.com/xquartz was verified as official when first introduced to the cask
   url "https://dl.bintray.com/xquartz/downloads/XQuartz-#{version}.dmg"
-  appcast 'https://www.xquartz.org/releases/sparkle/release.xml',
-          checkpoint: 'da07c258696e2593cbf3f6a451e7125db17a1d70f4f3135e617ba247cdb27a54'
+  appcast 'https://www.xquartz.org/releases/sparkle/release.xml'
   name 'XQuartz'
   homepage 'https://www.xquartz.org/'
 

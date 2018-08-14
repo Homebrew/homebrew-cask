@@ -1,11 +1,10 @@
 cask 'blockstack' do
-  version '0.29.1'
-  sha256 'ac92cd6b94fb4a6f119155bce5972b7a70117236394226eabc25816441d1879c'
+  version '0.31.0'
+  sha256 '33f22c66ded29d5c288275c18cf512483a9c354441530077b45d184c90369d70'
 
   # github.com/blockstack/blockstack-browser was verified as official when first introduced to the cask
   url "https://github.com/blockstack/blockstack-browser/releases/download/v#{version}/Blockstack-for-macOS-v#{version}.dmg"
-  appcast 'https://github.com/blockstack/blockstack-browser/releases.atom',
-          checkpoint: 'c69e66f8764011a140a3d014f1e27019d5fea0e106fa0a22f4c5c6f690c06f80'
+  appcast 'https://github.com/blockstack/blockstack-browser/releases.atom'
   name 'Blockstack'
   homepage 'https://blockstack.org/'
 

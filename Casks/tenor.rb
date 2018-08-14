@@ -4,8 +4,7 @@ cask 'tenor' do
 
   # media.tenor.co/mac/bin was verified as official when first introduced to the cask
   url 'https://media.tenor.co/mac/bin/GIFforMac.dmg'
-  appcast 'https://media.tenor.co/mac/gif_for_mac_appcast.xml',
-          checkpoint: '87b4c9a9f4711c97873a90584b95bdf3810011d43a2dd953dc5cf6ac888a1b5f'
+  appcast 'https://media.tenor.co/mac/gif_for_mac_appcast.xml'
   name 'Tenor'
   homepage 'https://tenor.com/mac'
 

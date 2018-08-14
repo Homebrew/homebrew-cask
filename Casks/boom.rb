@@ -4,8 +4,7 @@ cask 'boom' do
 
   # devmate.com/com.globaldelight.Boom2 was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.globaldelight.Boom2/#{version.before_comma}/#{version.after_comma}/Boom2-#{version.before_comma}.dmg"
-  appcast 'https://updates.devmate.com/com.globaldelight.Boom2.xml',
-          checkpoint: '783dac3171e18598d2b26906852fde9f7728f772974040ca4d0010ccce14cced'
+  appcast 'https://updates.devmate.com/com.globaldelight.Boom2.xml'
   name 'Boom'
   homepage 'http://www.globaldelight.com/boom'
 

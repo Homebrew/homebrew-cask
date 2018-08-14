@@ -8,8 +8,7 @@ cask 'launchbar' do
     sha256 '836f0f9d4f9f9b516cea1ec7e26ca94a08434ababc6bbc9ed34d5b0de05ab551'
 
     url "https://www.obdev.at/downloads/launchbar/LaunchBar-#{version}.dmg"
-    appcast "https://sw-update.obdev.at/update-feeds/launchbar-#{version.major}.plist",
-            checkpoint: '25d5e31a8a9033c2a5a3ac512243066a52c1244cf5d82870d32635882dcc1e71'
+    appcast "https://sw-update.obdev.at/update-feeds/launchbar-#{version.major}.plist"
   end
 
   name 'LaunchBar'

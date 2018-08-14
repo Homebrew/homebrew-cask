@@ -1,10 +1,9 @@
 cask 'blueharvest' do
-  version '7.0.4'
-  sha256 '569241d3259255e1251451da6c35aa8921388f4f8757c5706df2035e9c1d75a5'
+  version '7.0.7'
+  sha256 'cc0fe79c195547d31d5c0edfc7d5b326a83b11936d9d637742fd8db672adc84f'
 
   url "http://zeroonetwenty.com/downloads/BlueHarvest#{version.no_dots}.dmg"
-  appcast 'https://cp37.ezyreg.com/~zeroonet/downloads/versioninfo/sparkle/blueharvest6.xml',
-          checkpoint: 'b245af4b8935626ec2565a41f19c41e9cb654a5cbf988f416388a85f202f9320'
+  appcast 'https://cp37.ezyreg.com/~zeroonet/downloads/versioninfo/sparkle/blueharvest6.xml'
   name 'BlueHarvest'
   homepage 'http://zeroonetwenty.com/blueharvest/'
 

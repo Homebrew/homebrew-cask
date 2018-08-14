@@ -4,13 +4,11 @@ cask 'nylas-mail' do
 
   # edgehill.s3-us-west-2.amazonaws.com was verified as official when first introduced to the cask
   url "https://edgehill.s3-us-west-2.amazonaws.com/#{version}/darwin/x64/NylasMail.dmg"
-  appcast 'https://edgehill.nylas.com/update-check?platform=darwin&arch=64',
-          checkpoint: 'c333095da7f2b03c74c7c8b44605108502566725fed36e20ad1f7099533fc23b'
+  appcast 'https://edgehill.nylas.com/update-check?platform=darwin&arch=64'
   name 'Nylas Mail'
   homepage 'https://www.nylas.com/'
 
   auto_updates true
-  conflicts_with cask: 'nylas-mail-lives'
 
   app 'Nylas Mail.app'
 

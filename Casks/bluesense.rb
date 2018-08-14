@@ -6,7 +6,6 @@ cask 'bluesense' do
   name 'BlueSense'
   homepage 'https://apps.inspira.io/bluesense/'
 
-  auto_updates true
   depends_on macos: '>= :yosemite'
 
   app 'BlueSense.app'

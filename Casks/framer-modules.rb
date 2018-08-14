@@ -4,8 +4,7 @@ cask 'framer-modules' do
 
   # github.com/kysely/framer-modules was verified as official when first introduced to the cask
   url "https://github.com/kysely/framer-modules/releases/download/v#{version}/framer-modules-#{version}.dmg"
-  appcast 'https://github.com/kysely/framer-modules/releases.atom',
-          checkpoint: '7bc974f6b5a4dcc889a98e1bd9c217031322742ae4df9ca8c54eea4507c765dc'
+  appcast 'https://github.com/kysely/framer-modules/releases.atom'
   name 'Framer Modules'
   homepage 'https://www.framermodules.com/'
 

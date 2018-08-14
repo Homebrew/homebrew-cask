@@ -4,8 +4,7 @@ cask 'syncmyl2p' do
 
   # github.com/RobertKrajewski/Sync-my-L2P was verified as official when first introduced to the cask
   url "https://github.com/RobertKrajewski/Sync-my-L2P/releases/download/v#{version}/SyncMyL2P-#{version}-macos.dmg"
-  appcast 'https://github.com/RobertKrajewski/Sync-my-L2P/releases.atom',
-          checkpoint: '16ea2517965f960da547fd11d042d2607b45b1b8b2d6635be14f43fec6ff2c4a'
+  appcast 'https://github.com/RobertKrajewski/Sync-my-L2P/releases.atom'
   name 'Sync-my-L2P'
   homepage 'http://www.syncmyl2p.de/'
 

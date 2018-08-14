@@ -9,8 +9,7 @@ cask 'noise-machine' do
     url 'http://www.publicspace.net/download/NoiseMachine.dmg'
   end
 
-  appcast 'http://www.publicspace.net/app/nm.xml',
-          checkpoint: '3fd8dc56e7655c3e15bb7937ec9cf30a51bc492f3481724a53bedeedec2e05fd'
+  appcast 'http://www.publicspace.net/app/nm.xml'
   name 'Noise Machine'
   homepage 'http://www.publicspace.net/NoiseMachine/'
 

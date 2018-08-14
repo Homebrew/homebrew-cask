@@ -4,8 +4,7 @@ cask 'remomix' do
 
   # github.com/johndbritton/remomix-releases was verified as official when first introduced to the cask
   url "https://github.com/johndbritton/remomix-releases/releases/download/v#{version}/Remomix-#{version}-osx.zip"
-  appcast 'https://github.com/johndbritton/remomix-releases/releases.atom',
-          checkpoint: '73b44d814f16176f6496889ba4e9cf9166dad2cc8360c77a67f93305977bf68f'
+  appcast 'https://github.com/johndbritton/remomix-releases/releases.atom'
   name 'Remomix'
   homepage 'http://remomix.com/'
 

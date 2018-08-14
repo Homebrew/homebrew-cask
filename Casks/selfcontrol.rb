@@ -8,8 +8,7 @@ cask 'selfcontrol' do
   end
 
   url "http://downloads.selfcontrolapp.com/SelfControl-#{version}.zip"
-  appcast 'https://selfcontrolapp.com/SelfControlAppcast.xml',
-          checkpoint: '1c9bb5002cfcf7deed8d96532d27ba3a07ffb38e9dbe2354ae7a0eddf000842a'
+  appcast 'https://selfcontrolapp.com/SelfControlAppcast.xml'
   name 'SelfControl'
   homepage 'https://selfcontrolapp.com/'
 

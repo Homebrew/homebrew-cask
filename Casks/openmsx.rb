@@ -4,8 +4,7 @@ cask 'openmsx' do
 
   # github.com/openMSX/openMSX was verified as official when first introduced to the cask
   url "https://github.com/openMSX/openMSX/releases/download/RELEASE_#{version.dots_to_underscores}/openmsx-#{version}-mac-x86_64-bin.dmg"
-  appcast 'https://github.com/openMSX/openMSX/releases.atom',
-          checkpoint: '7d7a5f34a29c093a5437146152637ab9c99df948e6e4d6b38a6d5508ef6fc729'
+  appcast 'https://github.com/openMSX/openMSX/releases.atom'
   name 'openMSX'
   homepage 'https://openmsx.org/'
 

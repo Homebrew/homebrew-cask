@@ -4,8 +4,7 @@ cask 'gmail-notifr' do
 
   # s3.amazonaws.com/assets.ashchan.com/gmailnotifr was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/assets.ashchan.com/gmailnotifr/GmailNotifr-#{version}.zip"
-  appcast 'https://s3.amazonaws.com/assets.ashchan.com/gmailnotifr/update.xml',
-          checkpoint: 'a2d9ba8f53b14a5545ee1d1a6c82c81fffde9df8b132cef7b122400344b053c3'
+  appcast 'https://s3.amazonaws.com/assets.ashchan.com/gmailnotifr/update.xml'
   name 'Gmail Notifr'
   homepage 'https://ashchan.com/projects/gmail-notifr'
 

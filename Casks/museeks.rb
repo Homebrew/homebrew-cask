@@ -4,8 +4,7 @@ cask 'museeks' do
 
   # github.com/KeitIG/museeks was verified as official when first introduced to the cask
   url "https://github.com/KeitIG/museeks/releases/download/#{version}/museeks.dmg"
-  appcast 'https://github.com/KeitIG/museeks/releases.atom',
-          checkpoint: '2cd2819d1c682c26aff331565e8bbfdf11f7bd9873ec2a7b2d4953aacea72cde'
+  appcast 'https://github.com/KeitIG/museeks/releases.atom'
   name 'Museeks'
   homepage 'https://museeks.io/'
 

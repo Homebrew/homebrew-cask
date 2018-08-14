@@ -4,8 +4,7 @@ cask 'amanote' do
 
   # d3p3yxvb2sk2hj.cloudfront.net/release was verified as official when first introduced to the cask
   url "https://d3p3yxvb2sk2hj.cloudfront.net/release/Amanote-#{version}.dmg"
-  appcast 'https://amanote.com/assets/js/download.js',
-          checkpoint: '8ac7cc510474c08c5cd4368d6a59e21feba0c6be716c4a629bb7e53c9a4a7779'
+  appcast 'https://amanote.com/assets/js/download.js'
   name 'Amanote'
   homepage 'https://amanote.com/'
 

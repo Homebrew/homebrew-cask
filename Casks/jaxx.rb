@@ -4,8 +4,7 @@ cask 'jaxx' do
 
   # github.com/Jaxx-io/Jaxx was verified as official when first introduced to the cask
   url "https://github.com/Jaxx-io/Jaxx/releases/download/v#{version}/Jaxx-#{version}.dmg"
-  appcast 'https://github.com/Jaxx-io/Jaxx/releases.atom',
-          checkpoint: 'c490b3a7eceb3614d7ad858aacb487236d56fce5d3b6c76565fd79f39010df43'
+  appcast 'https://github.com/Jaxx-io/Jaxx/releases.atom'
   name 'Jaxx Blockchain Wallet'
   homepage 'https://jaxx.io/'
 

@@ -1,6 +1,6 @@
 cask 'webex-nbr-player' do
-  version 'T31L'
-  sha256 '76be3ec4e8d8c7d7efab8b6900e8d3d1e933faa9e9587293547d612c5b34b311'
+  version 'T33L'
+  sha256 '797604383a3b9b755d6a91933ec9472ec0ee426fa323176b3093e6ad58a7e228'
 
   url "https://welcome.webex.com/client/#{version}/mac/intel/webexnbrplayer_intel.dmg"
   name 'Webex Network Recording player'

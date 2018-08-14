@@ -4,8 +4,7 @@ cask 'overture' do
 
   # github.com/overturetool/overture was verified as official when first introduced to the cask
   url "https://github.com/overturetool/overture/releases/download/Release%2F#{version}/Overture-#{version}-macosx.cocoa.x86_64.zip"
-  appcast 'https://github.com/overturetool/overture/releases.atom',
-          checkpoint: '3e36e148a87639aa8ecbba654e1e1c8fb1b69337a69c5193041a654bb91168d5'
+  appcast 'https://github.com/overturetool/overture/releases.atom'
   name 'Overture Tool'
   homepage 'http://overturetool.org/'
 

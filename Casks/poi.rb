@@ -4,8 +4,7 @@ cask 'poi' do
 
   # github.com/poooi/poi was verified as official when first introduced to the cask
   url "https://github.com/poooi/poi/releases/download/v#{version}/poi-#{version}.dmg"
-  appcast 'https://github.com/poooi/poi/releases.atom',
-          checkpoint: 'e347320518da9d3471fe14b236996c7e06f36a9035ff13d7e450206bd65a855c'
+  appcast 'https://github.com/poooi/poi/releases.atom'
   name 'poi'
   homepage 'https://poi.io/'
 

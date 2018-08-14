@@ -4,8 +4,7 @@ cask 'instead' do
 
   # github.com/instead-hub/instead was verified as official when first introduced to the cask
   url "https://github.com/instead-hub/instead/releases/download/#{version}/Instead-#{version}.dmg"
-  appcast 'https://github.com/instead-hub/instead/releases.atom',
-          checkpoint: '06653147040958627385de015edd4f9c18d94e9c9c88b1ee2f449845cd92f32a'
+  appcast 'https://github.com/instead-hub/instead/releases.atom'
   name 'INSTEAD'
   homepage 'https://instead.syscall.ru/index.html'
 

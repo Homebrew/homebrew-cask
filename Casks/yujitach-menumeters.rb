@@ -4,8 +4,7 @@ cask 'yujitach-menumeters' do
 
   # github.com/yujitach/MenuMeters was verified as official when first introduced to the cask
   url "https://github.com/yujitach/MenuMeters/releases/download/#{version}/MenuMeters_#{version}.zip"
-  appcast 'https://github.com/yujitach/MenuMeters/releases.atom',
-          checkpoint: '3fc1845ad638f6b32312a4dd61c640d60d5ef4cf2684f7470c98c2b3eaeb54d9'
+  appcast 'https://github.com/yujitach/MenuMeters/releases.atom'
   name 'MenuMeters for El Capitan (and later)'
   homepage 'https://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/'
 

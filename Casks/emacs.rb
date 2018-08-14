@@ -3,8 +3,7 @@ cask 'emacs' do
   sha256 '2ea8d0b0055d5d0ba604771dbb2f9731dd5c815776eec6a9bca3c44d7ab40d99'
 
   url "https://emacsformacosx.com/emacs-builds/Emacs-#{version}-universal.dmg"
-  appcast 'https://emacsformacosx.com/atom/release',
-          checkpoint: '7665006fab5be71be22a48a82f0402825e42c6fd7168272492447782fae08b1d'
+  appcast 'https://emacsformacosx.com/atom/release'
   name 'Emacs'
   homepage 'https://emacsformacosx.com/'
 

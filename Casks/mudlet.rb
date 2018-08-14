@@ -1,10 +1,9 @@
 cask 'mudlet' do
-  version '3.9.0'
-  sha256 '5a412ab29a0d5910149a7c846ee19ac45731f34f6089e01359f8223e33272154'
+  version '3.11.1'
+  sha256 '2376c197f352c45c351bb698d79fdc4d3fe085424263e1fdafb6e3617ae3184c'
 
   url "https://www.mudlet.org/download/Mudlet-#{version}.dmg"
-  appcast 'https://github.com/Mudlet/Mudlet/releases.atom',
-          checkpoint: '0efaee2ba1dfb0f32be73bc6d6bd6e3ac58a67e9f92ad3b0faecd419ac2630f5'
+  appcast 'https://github.com/Mudlet/Mudlet/releases.atom'
   name 'Mudlet'
   homepage 'https://www.mudlet.org/'
 

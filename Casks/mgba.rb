@@ -4,8 +4,7 @@ cask 'mgba' do
 
   # github.com/mgba-emu/mgba was verified as official when first introduced to the cask
   url "https://github.com/mgba-emu/mgba/releases/download/#{version}/mGBA-#{version}-osx.tar.xz"
-  appcast 'https://github.com/mgba-emu/mgba/releases.atom',
-          checkpoint: 'e88ff06f527c5243ca7ab6c62b8af276b33aa4f809c391431aac7d7ed9a16e17'
+  appcast 'https://github.com/mgba-emu/mgba/releases.atom'
   name 'mGBA'
   homepage 'https://mgba.io/'
 

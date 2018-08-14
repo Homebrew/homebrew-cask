@@ -4,8 +4,7 @@ cask 'stretchly' do
 
   # github.com/hovancik/stretchly was verified as official when first introduced to the cask
   url "https://github.com/hovancik/stretchly/releases/download/v#{version}/stretchly-#{version}-mac.zip"
-  appcast 'https://github.com/hovancik/stretchly/releases.atom',
-          checkpoint: 'b51d9a3af616f01e3f655e39fdd94b923ca79cb4a81d778c5c86f49c189f1092'
+  appcast 'https://github.com/hovancik/stretchly/releases.atom'
   name 'stretchly'
   homepage 'https://hovancik.net/stretchly/'
 

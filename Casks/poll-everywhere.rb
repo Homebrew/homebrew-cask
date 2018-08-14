@@ -4,8 +4,7 @@ cask 'poll-everywhere' do
 
   # amazonaws.com/polleverywhere-app was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/polleverywhere-app/mac-stable/#{version}/pollev.dmg"
-  appcast 'https://s3.amazonaws.com/polleverywhere-app/mac-stable/appcast.xml',
-          checkpoint: 'dfa6e9aa15e0abc1ddfd3e74bc5384d447a874064b37795a2a6192c9b7051fb2'
+  appcast 'https://s3.amazonaws.com/polleverywhere-app/mac-stable/appcast.xml'
   name 'PollEv Presenter'
   homepage 'https://www.polleverywhere.com/'
 

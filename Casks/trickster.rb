@@ -8,8 +8,7 @@ cask 'trickster' do
   end
 
   url "https://dl.apparentsoft.com/Trickster_#{version}.zip"
-  appcast 'https://dl.apparentsoft.com/trickster.rss',
-          checkpoint: 'abf09bfbfcf986d4f984a83c6edb3cb9ad7cfff265b9f0804186c9179d5280c8'
+  appcast 'https://dl.apparentsoft.com/trickster.rss'
   name 'Trickster'
   homepage 'https://www.apparentsoft.com/trickster/'
 

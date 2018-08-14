@@ -4,8 +4,7 @@ cask 'aluxian-messenger' do
 
   # github.com/aluxian/Messenger-for-Desktop was verified as official when first introduced to the cask
   url "https://github.com/aluxian/Messenger-for-Desktop/releases/download/v#{version}/messengerfordesktop-#{version}-osx.dmg"
-  appcast 'https://github.com/aluxian/Messenger-for-Desktop/releases.atom',
-          checkpoint: '6e086c442958580c749ef28b6fda0946a9f8ae20215407548f476380963bf00b'
+  appcast 'https://github.com/aluxian/Messenger-for-Desktop/releases.atom'
   name 'Messenger for Desktop'
   homepage 'https://messengerfordesktop.org/'
 

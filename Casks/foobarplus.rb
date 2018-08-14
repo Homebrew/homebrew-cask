@@ -4,8 +4,7 @@ cask 'foobarplus' do
 
   # amazonaws.com/foobarapp was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/foobarapp/FoobarPlus+#{version.before_comma}+(#{version.after_comma}).zip"
-  appcast 'https://www.foobaz.io/sparkle/com.weirdrocketeer.FoobarPlus.xml',
-          checkpoint: 'e45f9b8de33f563e2f40d366d326a4fa612137257330e9a7b12ee4eb2be91c65'
+  appcast 'https://www.foobaz.io/sparkle/com.weirdrocketeer.FoobarPlus.xml'
   name 'FoobarPlus'
   homepage 'https://www.foobaz.io/plus/'
 

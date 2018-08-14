@@ -4,8 +4,7 @@ cask 'itch' do
 
   # github.com/itchio/itch was verified as official when first introduced to the cask
   url "https://github.com/itchio/itch/releases/download/v#{version}/itch-mac.dmg"
-  appcast 'https://github.com/itchio/itch/releases.atom',
-          checkpoint: '47ef6c169e20af25318dd8ef85a3b351856a6d333728a6112ef1f28f71f6a7dc'
+  appcast 'https://github.com/itchio/itch/releases.atom'
   name 'itch'
   homepage 'https://itch.io/app'
 

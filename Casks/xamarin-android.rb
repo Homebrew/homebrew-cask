@@ -3,8 +3,7 @@ cask 'xamarin-android' do
   sha256 '4171d93c81f1c3b3e59868e3f81a4b9a3f672209926623fdbbaa37429769a93e'
 
   url "https://dl.xamarin.com/MonoforAndroid/Mac/xamarin.android-#{version}.pkg"
-  appcast 'https://xampubdl.blob.core.windows.net/static/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
-          checkpoint: 'b86124b8760fa01636931c40f473476e40d303d4d9a321422973becbea1efc33'
+  appcast 'https://xampubdl.blob.core.windows.net/static/installer_assets/v3/Mac/Universal/InstallationManifest.xml'
   name 'Xamarin.Android'
   homepage 'https://www.xamarin.com/platform'
 

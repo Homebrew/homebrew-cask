@@ -4,8 +4,7 @@ cask 'sysdig-inspect' do
 
   # download.sysdig.com/stable/sysdig-inspect was verified as official when first introduced to the cask
   url "https://download.sysdig.com/stable/sysdig-inspect/sysdig-inspect-#{version}-mac.dmg"
-  appcast 'https://github.com/draios/sysdig-inspect/releases.atom',
-          checkpoint: 'd48ffed8b8d0f100488a2cbf4a04adbd1eb5ce000bfa0baab2c0991f3d093f9b'
+  appcast 'https://github.com/draios/sysdig-inspect/releases.atom'
   name 'Sysdig Inspect'
   homepage 'https://github.com/draios/sysdig-inspect'
 

@@ -4,8 +4,7 @@ cask 'lifesize' do
 
   # cdn.lifesizecloud.com was verified as official when first introduced to the cask
   url "https://cdn.lifesizecloud.com/LifesizeCloud-#{version}-signed.pkg"
-  appcast 'https://cdn.lifesizecloud.com/OSX_Clients/Sparkle_Upgrades/LifesizeAppcast.xml',
-          checkpoint: '632a8d4a035d6aa7184dd98f6448d3d09f5ce9da6acd155912e7cd0f4d60148a'
+  appcast 'https://cdn.lifesizecloud.com/OSX_Clients/Sparkle_Upgrades/LifesizeAppcast.xml'
   name 'lifesize'
   homepage 'https://www.lifesize.com/'
 

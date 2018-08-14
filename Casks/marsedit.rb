@@ -1,10 +1,9 @@
 cask 'marsedit' do
-  version '4.0'
-  sha256 'c57808eaf0be7d9afab2144f44a1022a055429d85b948e6f39855b4aa6622e4a'
+  version '4.1.2'
+  sha256 '6fb2abf9a07cc89b3998253e605c649105af252f038dbc13fd15535f180ac677'
 
   url "https://red-sweater.com/marsedit/MarsEdit#{version}.zip"
-  appcast 'https://red-sweater.com/marsedit/appcast3.php',
-          checkpoint: '73ef929583532fcccd1b664c6b3ebe829e491a1d7f727c6fd480070459e2e545'
+  appcast 'https://red-sweater.com/marsedit/appcast4.php'
   name 'MarsEdit'
   homepage 'https://red-sweater.com/marsedit/'
 

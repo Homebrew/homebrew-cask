@@ -4,8 +4,7 @@ cask 'dropshare' do
 
   # d2wvuuix8c9e48.cloudfront.net was verified as official when first introduced to the cask
   url "https://d2wvuuix8c9e48.cloudfront.net/Dropshare#{version.major}-#{version.after_comma}.app.zip"
-  appcast "https://getdropsha.re/sparkle/Dropshare#{version.major}.xml",
-          checkpoint: 'bd05339966d2eb0ba4f85d2af9253c6ce1483752abf248d71464a2694360f76d'
+  appcast "https://getdropsha.re/sparkle/Dropshare#{version.major}.xml"
   name 'Dropshare'
   homepage 'https://getdropsha.re/'
 

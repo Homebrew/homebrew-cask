@@ -4,8 +4,7 @@ cask 'redis-app' do
 
   # github.com/jpadilla/redisapp was verified as official when first introduced to the cask
   url "https://github.com/jpadilla/redisapp/releases/download/#{version}/Redis.zip"
-  appcast 'https://github.com/jpadilla/redisapp/releases.atom',
-          checkpoint: '4d483ef1a5aed23e6e4405d8454aff54e42eb8de3e45622ddfbfe5a590385957'
+  appcast 'https://github.com/jpadilla/redisapp/releases.atom'
   name 'Redis'
   homepage 'https://jpadilla.github.io/redisapp/'
 

@@ -4,8 +4,7 @@ cask 'lando' do
 
   # github.com/lando/lando was verified as official when first introduced to the cask
   url "https://github.com/lando/lando/releases/download/v#{version}/lando-v#{version}.dmg"
-  appcast 'https://github.com/lando/lando/releases.atom',
-          checkpoint: 'a946b51fbcbd476b5dffc4d31325a98dcf7c5d6aadcd36d2166059ca66a7b475'
+  appcast 'https://github.com/lando/lando/releases.atom'
   name 'Lando'
   homepage 'https://docs.devwithlando.io/'
 

@@ -4,8 +4,7 @@ cask 'ripple-wallet' do
 
   # s3.amazonaws.com/static.rippex.net/client was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/static.rippex.net/client/ripple-wallet-osx64-#{version}.zip"
-  appcast 'https://github.com/rippex/ripple-client-desktop/releases.atom',
-          checkpoint: '503582877ddf912d8761e5a1a3dc77440bf3527e22d3e0752d8e7ae7510dc8c5'
+  appcast 'https://github.com/rippex/ripple-client-desktop/releases.atom'
   name 'Ripple Wallet'
   homepage 'https://rippex.net/carteira-ripple.php#/'
 

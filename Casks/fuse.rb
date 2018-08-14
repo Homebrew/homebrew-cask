@@ -1,21 +1,16 @@
 cask 'fuse' do
-  version '1.8.1.15610'
-  sha256 '448fd88fef4dde6b258db3304dcbf8416237fd35ee928d48c4a0bc9d40d0556a'
+  version '1.9.0'
+  sha256 '31e737086d546176f436a2792baca604487f529008a21c424610baec25146a20'
 
-  url "https://www.fusetools.com/downloads/#{version}/osx"
+  # github.com/fuse-open/fuse-studio was verified as official when first introduced to the cask
+  url "https://github.com/fuse-open/fuse-studio/releases/download/#{version}/fuse_osx_#{version.dots_to_underscores}.pkg"
+  appcast 'https://github.com/fuse-open/fuse-studio/releases.atom'
   name 'Fuse Fusetools'
-  homepage 'https://www.fusetools.com/'
+  homepage 'https://fuse-open.github.io/'
 
   depends_on macos: '>= :mavericks'
-  container type: :pkg
 
-  pkg 'fuse.pkg'
-
-  # This is a horrible hack to force the file extension.
-  # The backend code should be fixed so that this is not needed.
-  preflight do
-    system_command '/bin/mv', args: ['--', staged_path.join('osx'), staged_path.join('fuse.pkg')]
-  end
+  pkg "fuse_osx_#{version.dots_to_underscores}.pkg"
 
   uninstall pkgutil: 'com.fusetools.fuse'
 end

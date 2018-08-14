@@ -11,8 +11,7 @@ cask 'seil' do
   end
 
   url "https://pqrs.org/osx/karabiner/files/Seil-#{version}.dmg"
-  appcast 'https://pqrs.org/osx/karabiner/files/seil-appcast.xml',
-          checkpoint: 'bf1be761638c151d1780c80db40ecb489899e055f4fdd3ddfa56b8f5692c3912'
+  appcast 'https://pqrs.org/osx/karabiner/files/seil-appcast.xml'
   name 'Seil'
   homepage 'https://pqrs.org/osx/karabiner/seil.html'
 

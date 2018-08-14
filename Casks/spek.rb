@@ -4,8 +4,7 @@ cask 'spek' do
 
   # github.com/alexkay/spek was verified as official when first introduced to the cask
   url "https://github.com/alexkay/spek/releases/download/v#{version}/spek-#{version}.dmg"
-  appcast 'https://github.com/alexkay/spek/releases.atom',
-          checkpoint: '3035522c6bd5754965a890aa89038e549f5d6251b985106c2d0ccbd2af08d31d'
+  appcast 'https://github.com/alexkay/spek/releases.atom'
   name 'Spek'
   homepage 'http://spek.cc/'
 

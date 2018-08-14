@@ -3,8 +3,7 @@ cask 'fritzing' do
   sha256 'a057ed849b842540b98a68ab2cb996e22b482278706dd2f8da21d1bccf70513f'
 
   url "http://fritzing.org/download/#{version}/mac-os-x-105/Fritzing#{version}.dmg"
-  appcast 'https://github.com/fritzing/fritzing-app/releases.atom',
-          checkpoint: '822adf0451f8360d88423cbc035b93cc781be7a2b174e5c38718ab1a9c1854cf'
+  appcast 'https://github.com/fritzing/fritzing-app/releases.atom'
   name 'Fritzing'
   homepage 'http://fritzing.org/home/'
 

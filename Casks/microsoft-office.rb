@@ -1,8 +1,8 @@
 cask 'microsoft-office' do
-  version '16.13.18052304'
-  sha256 '2dea603042c45b6866712408e3f60dbeead1457479de5c30cf64a229c09130eb'
+  version '16.15.18070902'
+  sha256 '2caa050dcc2a95f90f57449f9ab5b173437fa2580f282f4c1513a83918e49ffa'
 
-  # officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/OfficeMac/ was verified as official when first introduced to the cask
+  # officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/OfficeMac was verified as official when first introduced to the cask
   url "https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/OfficeMac/Microsoft_Office_2016_#{version}_Installer.pkg"
   name 'Microsoft Office 2016'
   homepage 'https://products.office.com/mac/microsoft-office-for-mac/'

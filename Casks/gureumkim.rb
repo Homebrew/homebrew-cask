@@ -4,8 +4,7 @@ cask 'gureumkim' do
 
   # github.com/gureum/gureum was verified as official when first introduced to the cask
   url "https://github.com/gureum/gureum/releases/download/GureumKIM-#{version.delete('a-z')}/GureumKIM-#{version}.pkg"
-  appcast 'https://github.com/gureum/gureum/releases.atom',
-          checkpoint: '1fc78d534cc0f5fb120cb259137a7758a2a41b57e4e75229e286724c107f172c'
+  appcast 'https://github.com/gureum/gureum/releases.atom'
   name '구름 입력기'
   homepage 'http://gureum.io/'
 

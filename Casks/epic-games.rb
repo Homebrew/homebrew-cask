@@ -1,11 +1,9 @@
 cask 'epic-games' do
-  # Auto-updates to a newer version than available on the homepage.
-  # Latest version is posted to the forum:
-  # https://forums.unrealengine.com/unreal-engine/announcements-and-releases/1928-latest-launcher-release-notes
-  version '7.11.0'
-  sha256 '08c2d362d211baead8106deaeba6ea1f07af226066772554294298a96c9c8d56'
+  version '7.12.1'
+  sha256 '706c734473e606bac7f9213fc65f049d91740f028117196994008344ff663545'
 
   url "https://download-dynamic.epicgames.com/Builds/UnrealEngineLauncher/Installers/EpicInstaller-#{version}.dmg"
+  appcast 'https://forums.unrealengine.com/unreal-engine/announcements-and-releases/1928-latest-launcher-release-notes'
   name 'Epic Games Launcher'
   homepage 'https://www.epicgames.com/'
 

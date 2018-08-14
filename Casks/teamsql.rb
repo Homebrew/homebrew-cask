@@ -1,6 +1,6 @@
 cask 'teamsql' do
-  version '3.3.203'
-  sha256 'd13e00db85ab62b38ef3a8122d757b252a780ab12315922532e26ce1036a29bb'
+  version '3.4.230'
+  sha256 '142b24e0d3195b4775d24a515173de0acca86b30443e8cb35dcd8ca7cae5b611'
 
   # dlpuop5av9e02.cloudfront.net/osx/stable was verified as official when first introduced to the cask
   url "https://dlpuop5av9e02.cloudfront.net/osx/stable/#{version}/TeamSQL-#{version}.dmg"

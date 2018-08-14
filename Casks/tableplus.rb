@@ -1,11 +1,10 @@
 cask 'tableplus' do
-  version '1.0,109'
-  sha256 '54413cbd4efc875d181ab2303db744179c763c16c6ba00feb62335f582a192e6'
+  version '1.0,119'
+  sha256 'a7d472e529c137864d08d011ed37348e035490daf2e6413e071ad7479a0e2962'
 
   # s3.amazonaws.com/tableplus-osx-builds was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/tableplus-osx-builds/#{version.after_comma}/TablePlus.zip"
-  appcast 'https://tableplus.io/osx/version.xml',
-          checkpoint: 'd99e55be60f47c0e8738b3c8c070fddad7e20f7bf9fd37a47ed80527f24a0359'
+  appcast 'https://tableplus.io/osx/version.xml'
   name 'TablePlus'
   homepage 'https://tableplus.io/'
 

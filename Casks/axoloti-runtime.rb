@@ -4,8 +4,7 @@ cask 'axoloti-runtime' do
 
   # github.com/axoloti/axoloti was verified as official when first introduced to the cask
   url "https://github.com/axoloti/axoloti/releases/download/#{version}/axo_runtime_mac_#{version.major_minor_patch}.dmg"
-  appcast 'https://github.com/axoloti/axoloti/releases.atom',
-          checkpoint: '448924453923cd34c05f2005ea556c447d609b96ef9ecb35d2038d450f2e1cea'
+  appcast 'https://github.com/axoloti/axoloti/releases.atom'
   name 'Axoloti Runtime'
   homepage 'http://www.axoloti.com/'
 

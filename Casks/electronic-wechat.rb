@@ -3,8 +3,7 @@ cask 'electronic-wechat' do
   sha256 'eba20a9164e917f1a9962fc3202d2c1255a3d26802ae2fd1fe229feaba5b6242'
 
   url "https://github.com/geeeeeeeeek/electronic-wechat/releases/download/V#{version}/mac-osx.tar.gz"
-  appcast 'https://github.com/geeeeeeeeek/electronic-wechat/releases.atom',
-          checkpoint: 'fcf75bf1c85650d594e46bfb8a50fa74546f7d77cc55eb189c6a9a0dda8cb1ae'
+  appcast 'https://github.com/geeeeeeeeek/electronic-wechat/releases.atom'
   name 'Electronic WeChat'
   homepage 'https://github.com/geeeeeeeeek/electronic-wechat'
 

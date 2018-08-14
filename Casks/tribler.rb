@@ -4,8 +4,7 @@ cask 'tribler' do
 
   # github.com/Tribler/tribler was verified as official when first introduced to the cask
   url "https://github.com/Tribler/tribler/releases/download/v#{version}/Tribler-#{version}.dmg"
-  appcast 'https://github.com/Tribler/tribler/releases.atom',
-          checkpoint: '8c44570a3bd0f56ba23e47046163b49d3a507bb75b8c10609df1e2ead269acdd'
+  appcast 'https://github.com/Tribler/tribler/releases.atom'
   name 'Tribler'
   homepage 'https://www.tribler.org/'
 

@@ -4,8 +4,7 @@ cask 'neofinder' do
 
   # wfs-apps.de was verified as official when first introduced to the cask
   url "https://www.wfs-apps.de/updates/neofinder.#{version}.zip"
-  appcast 'https://www.wfs-apps.de/updates/neofinder-appcast-64.xml',
-          checkpoint: 'd1a2fc760eeb3128a2361f782e61ccf6d864d53e1dd5b7610cbdb1affbe35399'
+  appcast 'https://www.wfs-apps.de/updates/neofinder-appcast-64.xml'
   name 'NeoFinder'
   homepage 'https://www.cdfinder.de/'
 

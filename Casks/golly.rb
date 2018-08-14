@@ -1,10 +1,9 @@
 cask 'golly' do
-  version '3.1'
-  sha256 '6084bc2464212366a03940d419f438af7df093c8b10ec84123e0fd0d912683db'
+  version '3.2'
+  sha256 '71c66136ef81d336ed0fc94a5f5a4d650e3727d99fe1f00c6036b8dc99eee8db'
 
   url "https://downloads.sourceforge.net/golly/golly/golly-#{version}/Golly-#{version}-Mac.dmg"
-  appcast 'https://sourceforge.net/projects/golly/rss?path=/golly',
-          checkpoint: '247566a932034bb028d6a88c12826f5683183e68a7f7de95a236d8f41c23a735'
+  appcast 'https://sourceforge.net/projects/golly/rss?path=/golly'
   name 'Golly'
   homepage 'http://golly.sourceforge.net/'
 

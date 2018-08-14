@@ -4,8 +4,7 @@ cask 'shoes' do
 
   # shoes.mvmanila.com/public/shoes was verified as official when first introduced to the cask
   url "https://shoes.mvmanila.com/public/shoes/shoes-#{version}-osx-10.10.tgz"
-  appcast 'http://shoesrb.com/downloads/',
-          checkpoint: '3a2a4cca3c4d86f4bed3575bcadec8a72c2416bb75549119ddfad1fb727bbe85'
+  appcast 'http://shoesrb.com/downloads/'
   name 'Shoes'
   homepage 'http://shoesrb.com/'
 

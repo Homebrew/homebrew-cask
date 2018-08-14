@@ -4,8 +4,7 @@ cask 'gogs' do
 
   # github.com/gogits/gogs was verified as official when first introduced to the cask
   url "https://github.com/gogits/gogs/releases/download/v#{version}/darwin_amd64.zip"
-  appcast 'https://github.com/gogits/gogs/releases.atom',
-          checkpoint: '9c96f53b46dcf12c568b093001360acce49ed5eb25d2408218f4b68cfca1bc8e'
+  appcast 'https://github.com/gogits/gogs/releases.atom'
   name 'Go Git Service'
   homepage 'https://gogs.io/'
 

@@ -4,8 +4,7 @@ cask 'salesx' do
 
   # dl.devmate.com/io.seedlab.salesx was verified as official when first introduced to the cask
   url 'http://dl.devmate.com/io.seedlab.salesx/SalesX.zip'
-  appcast 'https://updates.devmate.com/io.seedlab.salesx.xml',
-          checkpoint: '53d13c25d5b87c83bc52c5b85c5cc23ebdaa44c741052e6165e2e599f80794c5'
+  appcast 'https://updates.devmate.com/io.seedlab.salesx.xml'
   name 'SalesX'
   homepage 'http://salesx.in/'
 

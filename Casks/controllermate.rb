@@ -4,8 +4,7 @@ cask 'controllermate' do
 
   # amazonaws.com/orderedbytes was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/orderedbytes/ControllerMate#{version.no_dots}.zip"
-  appcast 'https://www.orderedbytes.com/sparkle/appcast_cm460.xml',
-          checkpoint: '85aed7061f3df8ea38953d37c2626fab1ce0857e8bc5737954fce5cc338f4373'
+  appcast 'https://www.orderedbytes.com/sparkle/appcast_cm460.xml'
   name 'ControllerMate'
   homepage 'https://www.orderedbytes.com/controllermate/'
 

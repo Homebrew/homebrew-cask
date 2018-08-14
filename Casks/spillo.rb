@@ -4,8 +4,7 @@ cask 'spillo' do
 
   # s3.amazonaws.com/bananafish-builds/spillo was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/bananafish-builds/spillo/spillo_#{version}.zip"
-  appcast 'https://bananafishsoftware.com/feeds/spillo.xml',
-          checkpoint: 'da4a586369b44cc5e04e7a3858de7e89ddf0b5c2fe94f04aa68da111ee99c8a4'
+  appcast 'https://bananafishsoftware.com/feeds/spillo.xml'
   name 'Spillo'
   homepage 'https://bananafishsoftware.com/products/spillo/'
 

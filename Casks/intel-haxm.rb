@@ -4,8 +4,7 @@ cask 'intel-haxm' do
 
   # github.com/intel/haxm was verified as official when first introduced to the cask
   url "https://github.com/intel/haxm/releases/download/v#{version}/haxm-macosx_v#{version.dots_to_underscores}.zip"
-  appcast 'https://github.com/intel/haxm/releases.atom',
-          checkpoint: '82fb6937eef3bce1ae7456b6894568d3d598af7d1ead2da8e2c12f076089b0ea'
+  appcast 'https://github.com/intel/haxm/releases.atom'
   name 'Intel HAXM'
   homepage 'https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager'
 

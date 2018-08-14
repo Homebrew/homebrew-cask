@@ -14,29 +14,26 @@ $ brew --version
 Homebrew-Cask is implemented as a subcommand of Homebrew. All Homebrew-Cask commands begin with `brew cask`. Homebrew-Cask has its own set of command verbs many of which are similar to Homebrew’s. The most frequently-used
 commands are:
 
-* `search` — searches all known Casks
 * `install` — installs the given Cask
 * `uninstall` — uninstalls the given Cask
+* `list` — lists installed Casks
 
 ## Searching for Casks
 
-The `brew cask search` command accepts a series of substring arguments, and returns tokens representing matching Casks. Let’s see if there’s a Cask for Google Chrome:
+To search for Casks, use `brew search`. Let’s see if there’s a Cask for Google Chrome:
 
 ```bash
-$ brew cask search chrome
+$ brew search google-chrome
+==> Casks
 google-chrome
-```
-
-A `search` command with no search term will list all available Casks:
-
-```bash
-$ brew cask search
-# <list of all available Casks>
+homebrew/cask-versions/google-chrome-beta
+homebrew/cask-versions/google-chrome-canary
+homebrew/cask-versions/google-chrome-dev
 ```
 
 ## Installing Casks
 
-The command `brew cask install` accepts a Cask token as returned by `brew cask search`. Let’s try to install Google Chrome:
+The command `brew cask install` accepts one or multiple Cask tokens. Let’s try to install Google Chrome:
 
 ```bash
 $ brew cask install google-chrome
@@ -91,16 +88,14 @@ The following aliases and abbreviations are provided for convenience:
 
 ## Tab Completion
 
-[Homebrew/homebrew-completions](https://github.com/Homebrew/homebrew-completions) supports `bash` and `fish` completions (only for `brew-cask` right now). Install them with:
+Homebrew-Cask comes with `bash` and `zsh` completion for the `brew cask` command.
+
+See https://docs.brew.sh/Shell-Completion for more information.
+
+`fish` completions can be installed with:
 
 ```bash
 $ brew install brew-cask-completion
-```
-
-For `zsh` completion support, simply run:
-
-```bash
-$ brew install zsh-completions
 ```
 
 ## Inspecting Installed Casks
@@ -192,20 +187,11 @@ Note that you still can override the environment variable `HOMEBREW_CASK_OPTS` b
 $ brew cask install --appdir="/Applications" google-chrome
 ```
 
-## Advanced Searching
-
-The default search algorithm is a lax substring approach, which does not use the command-line arguments exactly as given. If you need to specify a search more precisely, a single search argument enclosed in `/` characters will be taken as a Ruby regular expression:
-
-```bash
-$ brew cask search '/^google.c[a-z]rome$/'
-google-chrome
-```
-
 ## Other Ways to Specify a Cask
 
 Most `brew cask` commands can accept a Cask token as an argument. As described above, the token on the command line can take the form of:
 
-* A token as returned by `brew cask search`, _eg_: `google-chrome`.
+* A simple token, _eg_: `google-chrome`.
 * A fully-qualified token which includes the Tap, _eg_: `homebrew/cask-fonts/font-symbola`.
 
 `brew cask` also accepts three other forms as arguments:

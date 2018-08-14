@@ -4,8 +4,7 @@ cask 'emercoin' do
 
   # sourceforge.net/emercoin was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/emercoin/emercoin-#{version}-osx.dmg"
-  appcast 'https://sourceforge.net/projects/emercoin/rss',
-          checkpoint: '091d13be309ff27d4fa954ab309d13268adaedd5178e25d04f10da16a2c501c2'
+  appcast 'https://sourceforge.net/projects/emercoin/rss'
   name 'Emercoin'
   homepage 'https://emercoin.com/'
 

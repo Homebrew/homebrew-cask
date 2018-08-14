@@ -4,8 +4,7 @@ cask 'gisto' do
 
   # github.com/Gisto/Gisto was verified as official when first introduced to the cask
   url "https://github.com/Gisto/Gisto/releases/download/#{version}-beta/Gisto-v#{version}-macos-x64.dmg"
-  appcast 'https://github.com/Gisto/Gisto/releases.atom',
-          checkpoint: '8bf2c2f03d41ef837bbd15be0d822d7c820ce77cb157b62db9e7f32d5a3fa259'
+  appcast 'https://github.com/Gisto/Gisto/releases.atom'
   name 'Gisto'
   homepage 'https://www.gistoapp.com/'
 

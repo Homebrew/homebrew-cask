@@ -4,8 +4,7 @@ cask 'modelio' do
 
   # sourceforge.net/modeliouml was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/modeliouml/modelio-open-source-#{version}-macosx.cocoa.x86_64.tar.gz"
-  appcast 'https://sourceforge.net/projects/modeliouml/rss',
-          checkpoint: '909ad4be4bfb3fcf8a91da9ac5007531f06e2ac76e7374c072bf429df9847541'
+  appcast 'https://sourceforge.net/projects/modeliouml/rss'
   name 'Modelio'
   homepage 'https://www.modelio.org/'
 

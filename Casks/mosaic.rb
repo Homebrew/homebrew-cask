@@ -1,10 +1,9 @@
 cask 'mosaic' do
-  version '1.0.10'
-  sha256 'eae92c55c5c1b3ddfab4be6541ead5846919a057f1fbc0811c624ff27f2ac544'
+  version '1.1.2'
+  sha256 'afd19bc961ef322e9f695e2350c1f4e5d8e63a9b07d0b64544cd15447d4ef0de'
 
   url "http://lightpillar.com/appdata/mosaic/archive/Mosaic_#{version.dots_to_underscores}.pkg"
-  appcast 'http://lightpillar.com/appdata/mosaic/features/version-history.html',
-          checkpoint: '641c0a190fa1eae54acfc0ed7f8f0eec8f4357a7f4cd373dbaa7a58892f6ad13'
+  appcast 'http://lightpillar.com/appdata/mosaic/features/version-history.html'
   name 'Mosaic'
   homepage 'https://lightpillar.com/mosaic.html'
 

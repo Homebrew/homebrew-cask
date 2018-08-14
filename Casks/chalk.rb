@@ -4,8 +4,7 @@ cask 'chalk' do
 
   url "https://www.chachatelier.fr/chalk/downloads/Chalk-#{version.dots_to_underscores}.dmg",
       user_agent: :fake
-  appcast 'https://pierre.chachatelier.fr/chalk/downloads/chalk-sparkle-en.rss',
-          checkpoint: '164c4a75f74eabaf6e6af148bbd7f7f77af5466dbeedf1d0f217b20258618847'
+  appcast 'https://pierre.chachatelier.fr/chalk/downloads/chalk-sparkle-en.rss'
   name 'Chalk'
   homepage 'https://www.chachatelier.fr/chalk/'
 

@@ -3,8 +3,7 @@ cask 'sysex-librarian' do
   sha256 '8c1c56a2161b33a8451324eb1c05b7ca9b56abaf713129c511af6357873df834'
 
   url "https://www.snoize.com/SysExLibrarian/SysExLibrarian_#{version.dots_to_underscores}.zip"
-  appcast 'https://www.snoize.com/SysExLibrarian/SysExLibrarian.xml',
-          checkpoint: 'a349dd3b6dc82daf740319832f0ee72c1380ecb244a791df50a462c5537bfed8'
+  appcast 'https://www.snoize.com/SysExLibrarian/SysExLibrarian.xml'
   name 'SysEx Librarian'
   homepage 'https://www.snoize.com/SysExLibrarian/'
 

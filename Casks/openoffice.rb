@@ -28,8 +28,7 @@ cask 'openoffice' do
 
   # sourceforge.net/openofficeorg.mirror was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/openofficeorg.mirror/Apache_OpenOffice_#{version}_MacOS_x86-64_install_#{language}.dmg"
-  appcast 'https://sourceforge.net/projects/openofficeorg.mirror/rss',
-          checkpoint: '778a03ce902c1ed63fb9b98c135142592639e15b47a90ca6efe98aa342d9023f'
+  appcast 'https://sourceforge.net/projects/openofficeorg.mirror/rss'
   name 'Apache OpenOffice'
   homepage 'https://www.openoffice.org/'
 

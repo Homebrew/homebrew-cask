@@ -3,8 +3,7 @@ cask 'colloquy' do
   sha256 'b1c54047b9a4aed313e9a4a86073aa5b1215cb8a4ea462c59e7a52d8be6b1a93'
 
   url "http://colloquy.info/downloads/colloquy-#{version}.zip"
-  appcast 'http://colloquy.info/update.php?rss',
-          checkpoint: '91009856ce35364f86861d42e3f06d6603648914ef374997cde0a28f860ae52f'
+  appcast 'http://colloquy.info/update.php?rss'
   name 'Colloquy'
   homepage 'http://colloquy.info/'
 

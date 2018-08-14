@@ -4,8 +4,7 @@ cask 'traverse' do
 
   # traverseapp.nyc3.digitaloceanspaces.com was verified as official when first introduced to the cask
   url "https://traverseapp.nyc3.digitaloceanspaces.com/builds/Traverse-#{version}-mac.zip"
-  appcast 'https://traverse.site/release-notes',
-          checkpoint: '3c9b2a2516310e225f78b7962c43a4e792dc3ffbf3ddd4e5ee99c46d6664cf04'
+  appcast 'https://traverse.site/release-notes'
   name 'Traverse'
   homepage 'https://traverse.site/'
 

@@ -7,7 +7,6 @@ cask 'sketchpacks' do
   name 'Sketchpacks'
   homepage 'https://sketchpacks.com/'
 
-  auto_updates true
   depends_on macos: '>= :yosemite'
 
   app 'Sketchpacks.app'

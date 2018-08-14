@@ -8,8 +8,7 @@ cask 'pacifist' do
   end
 
   url "https://www.charlessoft.com/pacifist_download/Pacifist_#{version}.dmg"
-  appcast 'https://www.charlessoft.com/cgi-bin/pacifist_sparkle.cgi',
-          checkpoint: '7a416fcb387bab753bb583c1ac2d8d220da671c8fbfca1aac1f73e8d2834fb34'
+  appcast 'https://www.charlessoft.com/cgi-bin/pacifist_sparkle.cgi'
   name 'Pacifist'
   homepage 'https://www.charlessoft.com/'
 

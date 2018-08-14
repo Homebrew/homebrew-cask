@@ -6,8 +6,6 @@ cask 'moxtra' do
   name 'Moxtra'
   homepage 'http://moxtra.com/application/'
 
-  auto_updates true
-
   app 'Moxtra.app'
 
   uninstall quit: 'com.moxtra.desktop'

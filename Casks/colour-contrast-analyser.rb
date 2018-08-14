@@ -4,8 +4,7 @@ cask 'colour-contrast-analyser' do
 
   # github.com/ThePacielloGroup/CCA-OSX was verified as official when first introduced to the cask
   url "https://github.com/ThePacielloGroup/CCA-OSX/releases/download/#{version}/Colour.Contrast.Analyser.app.zip"
-  appcast 'https://github.com/ThePacielloGroup/CCA-OSX/releases.atom',
-          checkpoint: '10d49088990922251df30f27f96eb0a75a2d9ffe3495574336bed6ae0b918ab7'
+  appcast 'https://github.com/ThePacielloGroup/CCA-OSX/releases.atom'
   name 'Colour Contrast Analyser'
   homepage 'https://www.paciellogroup.com/resources/contrastanalyser/'
 

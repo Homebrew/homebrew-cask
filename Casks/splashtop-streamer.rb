@@ -4,8 +4,7 @@ cask 'splashtop-streamer' do
 
   # d17kmd0va0f0mp.cloudfront.net was verified as official when first introduced to the cask
   url "https://d17kmd0va0f0mp.cloudfront.net/mac/Splashtop_Streamer_Mac_INSTALLER_v#{version}.dmg"
-  appcast 'https://www.splashtop.com/wp-content/themes/responsive/downloadx.php?platform=mac',
-          checkpoint: '2dc42a142c4349030ed4f705ec5c4d4ace57d087ecf7c55159617a7d1b34846b'
+  appcast 'https://www.splashtop.com/wp-content/themes/responsive/downloadx.php?platform=mac'
   name 'Splashtop Streamer'
   homepage 'https://www.splashtop.com/downloads'
 

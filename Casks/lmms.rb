@@ -13,8 +13,7 @@ cask 'lmms' do
     url "https://github.com/LMMS/lmms/releases/download/v#{version}/lmms-#{version}-mac10.7.dmg"
   end
 
-  appcast 'https://github.com/LMMS/lmms/releases.atom',
-          checkpoint: '3c070a7735c4e1a14179cca21fe6232dfa3496ec2320d7d9ebda0927eaa73f16'
+  appcast 'https://github.com/LMMS/lmms/releases.atom'
   name 'LMMS'
   homepage 'https://lmms.io/'
 

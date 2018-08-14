@@ -4,8 +4,7 @@ cask 'leanote' do
 
   # sourceforge.net/leanote-desktop-app was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/leanote-desktop-app/#{version}/leanote-desktop-mac-v#{version}.zip"
-  appcast 'https://sourceforge.net/projects/leanote-desktop-app/rss?path=/',
-          checkpoint: 'f34c49f5116c4d1399c9e4abe91dfd83b9e349dc9c3698dfdd6e7f7c43a72d9e'
+  appcast 'https://sourceforge.net/projects/leanote-desktop-app/rss?path=/'
   name 'Leanote'
   homepage 'http://leanote.org/'
 

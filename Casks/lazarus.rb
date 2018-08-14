@@ -4,8 +4,7 @@ cask 'lazarus' do
 
   # sourceforge.net/lazarus was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/lazarus/lazarus-#{version}-i686-macosx.dmg"
-  appcast 'https://sourceforge.net/projects/lazarus/rss',
-          checkpoint: 'e0081b64f9832570a27fb5c6fd86873f7d1f6335e188f5218907c14bf31bc901'
+  appcast 'https://sourceforge.net/projects/lazarus/rss'
   name 'Lazarus'
   homepage 'https://www.lazarus-ide.org/'
 

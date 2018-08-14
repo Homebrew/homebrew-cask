@@ -4,8 +4,7 @@ cask 'oolite' do
 
   # github.com/OoliteProject/oolite was verified as official when first introduced to the cask
   url "https://github.com/OoliteProject/oolite/releases/download/#{version}/Oolite-#{version}.zip"
-  appcast 'https://github.com/OoliteProject/oolite/releases.atom',
-          checkpoint: 'c5d48ac5a3abc26df3333685ef890a61e51938a3f049472922d9e60a04551ad4'
+  appcast 'https://github.com/OoliteProject/oolite/releases.atom'
   name 'oolite'
   homepage 'http://www.oolite.org/'
 

@@ -1,11 +1,10 @@
 cask 'loginputmac' do
-  version '1.13,2729'
-  sha256 '9b61f528abfca0e3dfb638a72f759a57fa8748203333ca07d9fa7da184828edc'
+  version '1.15.1,2755'
+  sha256 'a0f277667f41bcfafa20dae87cfa2e017d33527ed2fe7358610f6503239af7ba'
 
   # nzhm461a0.qnssl.com was verified as official when first introduced to the cask
   url "https://nzhm461a0.qnssl.com/LogInputMac#{version.after_comma}.app.zip"
-  appcast 'https://im.logcg.com/appcast.xml',
-          checkpoint: '94ba58615844690fc7f537d36c1960c1bae27bb74b6d49c2ed1de7c5dbdc1c52'
+  appcast 'https://im.logcg.com/appcast.xml'
   name 'LoginputMac'
   homepage 'https://im.logcg.com/loginputmac'
 

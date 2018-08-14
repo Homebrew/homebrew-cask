@@ -4,8 +4,7 @@ cask 'manuskript' do
 
   # github.com/olivierkes/manuskript was verified as official when first introduced to the cask
   url "https://github.com/olivierkes/manuskript/releases/download/#{version}/manuskript-#{version}-osx.zip"
-  appcast 'https://github.com/olivierkes/manuskript/releases.atom',
-          checkpoint: 'e9d48a2ce486d87e3a0fa4d435f54b52c061f0dcc7621c3cea48e914ef78a539'
+  appcast 'https://github.com/olivierkes/manuskript/releases.atom'
   name 'Manuskript'
   homepage 'http://www.theologeek.ch/manuskript/'
 

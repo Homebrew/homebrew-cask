@@ -4,8 +4,7 @@ cask 'haskell-for-mac' do
 
   # dl.devmate.com/com.haskellformac.Haskell.basic was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.haskellformac.Haskell.basic/#{version.after_comma.dots_to_slashes}/Haskell%E2%80%94FunctionalProgrammingLab-#{version.after_comma.major}.zip"
-  appcast 'https://updates.devmate.com/com.haskellformac.Haskell.basic.xml',
-          checkpoint: '0ea33731abd1d8f6f02363c59f00e62d70fe19d281fe72a0b0db71c680c952bd'
+  appcast 'https://updates.devmate.com/com.haskellformac.Haskell.basic.xml'
   name 'Haskell for Mac'
   homepage 'http://haskellformac.com/'
 

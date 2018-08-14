@@ -4,8 +4,7 @@ cask 'virtualhostx' do
 
   # downloads-clickonideas.netdna-ssl.com/virtualhostx was verified as official when first introduced to the cask
   url "https://downloads-clickonideas.netdna-ssl.com/virtualhostx/virtualhostx#{version.after_comma}.zip"
-  appcast 'https://shine.clickontyler.com/appcast.php?id=33',
-          checkpoint: 'abc502561f01d542deb09c618e56b2af354a8fb3e7008482883c5c50c3fdafd2'
+  appcast 'https://shine.clickontyler.com/appcast.php?id=33'
   name 'VirtualHostX'
   homepage 'https://clickontyler.com/virtualhostx/'
 

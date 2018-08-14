@@ -1,9 +1,10 @@
 cask 'rocket' do
-  version :latest
-  sha256 :no_check
+  version '1.4,45:1516764069'
+  sha256 '3d1df422ced7200610ce929369c1851e6328b83069829687e21f618ebf829d95'
 
   # dl.devmate.com/net.matthewpalmer.Rocket was verified as official when first introduced to the cask
-  url 'https://dl.devmate.com/net.matthewpalmer.Rocket/Rocket.dmg'
+  url "https://dl.devmate.com/net.matthewpalmer.Rocket/#{version.after_comma.before_colon}/#{version.after_colon}/Rocket-#{version.after_comma.before_colon}.zip"
+  appcast 'https://updates.devmate.com/net.matthewpalmer.Rocket.xml'
   name 'Rocket'
   homepage 'http://matthewpalmer.net/rocket/'
 

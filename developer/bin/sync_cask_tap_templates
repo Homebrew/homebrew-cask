@@ -1,0 +1,71 @@
+#!/bin/bash
+
+set -o errexit
+set -o pipefail
+
+readonly homebrew_online='https://github.com/Homebrew'
+readonly repos_dir="$(mktemp -d)"
+readonly main_repo_dir="$(mktemp -d)" # From where files will be copied
+readonly cask_repos=(homebrew-cask-versions homebrew-cask-fonts homebrew-cask-eid homebrew-cask-drivers) # homebrew-cask is absent since it's the repo all the others are compared against
+
+function message {
+  echo "${1}"
+}
+
+function get_main_repo {
+  curl --silent --location "${homebrew_online}/homebrew-cask/archive/master.zip" | ditto -xk - "${main_repo_dir}"
+  mv "${main_repo_dir}/homebrew-cask-master/"{,.[^.]}* "${main_repo_dir}"
+  rmdir "${main_repo_dir}/homebrew-cask-master"
+}
+
+function get_repo {
+  local repo_name repo_dir
+
+  repo_name="${1}"
+  repo_dir="${repos_dir}/${repo_name}"
+
+  cd "${repos_dir}" || exit 1
+  message "Cloning ${repo_name}…"
+  git clone "${homebrew_online}/${repo_name}.git" --quiet --depth=1
+  cd "${repo_dir}" || exit 1
+}
+
+function copy_templates {
+  local repo_name
+
+  repo_name="${1}"
+  rsync --archive --prune-empty-dirs --delete \
+    --include '.editorconfig'                 \
+    --include '.gitattributes'                \
+    --include '.github/***'                   \
+    --include '.gitignore'                    \
+    --include '.travis.yml'                   \
+    --include 'CODE_OF_CONDUCT.md'            \
+    --exclude '*' "${main_repo_dir}/" '.'
+  rm '.github/ISSUE_TEMPLATE/02_feature_request.md' # Feature requests only make sense in the main repo
+  /usr/bin/sed -i '' -E "s:homebrew-cask/(pulls|issues|search):${repo_name}/\1:" '.github/PULL_REQUEST_TEMPLATE.md' # PULL_REQUEST_TEMPLATE has repo-specific links
+}
+
+function push_changes {
+  local is_repo_changed
+
+  is_repo_changed="$(git status --porcelain --ignore-submodules=dirty 2> /dev/null)"
+  if [[ -n "${is_repo_changed}" ]]; then
+    git add --all # Stage everything so 'git diff' does not miss aything (like new paths)
+
+    for modified_path in $(git diff --name-only --staged); do
+      echo -n "Detected changes to ${modified_path}. "
+      git commit "${modified_path}" --message "$(basename "${modified_path}"): update to match main repo" --quiet
+    done
+
+    echo 'Updating…'
+    git push origin master --quiet
+  fi
+}
+
+get_main_repo
+for repo in "${cask_repos[@]}"; do
+  get_repo "${repo}"
+  copy_templates "${repo}"
+  push_changes
+done

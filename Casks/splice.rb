@@ -4,8 +4,7 @@ cask 'splice' do
 
   # amazonaws.com/spliceosx was verified as official when first introduced to the cask
   url "https://s3-us-west-1.amazonaws.com/spliceosx/Splice.app-#{version}.zip"
-  appcast 'https://splice.com/appcast.xml',
-          checkpoint: 'a7725c36fa5b01d7ddc1641a04c6bfe987d7ea6c9da8a8975f1a93f5e1cf74ca'
+  appcast 'https://splice.com/appcast.xml'
   name 'Splice'
   homepage 'https://splice.com/'
 

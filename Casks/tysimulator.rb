@@ -4,8 +4,7 @@ cask 'tysimulator' do
 
   # github.com/luckytianyiyan/TySimulator was verified as official when first introduced to the cask
   url "https://github.com/luckytianyiyan/TySimulator/releases/download/#{version}/TySimulator.#{version}.dmg"
-  appcast 'https://github.com/luckytianyiyan/TySimulator/releases.atom',
-          checkpoint: '99063f91750cc8930888dd145978da4dcad4a6344b9238c36d3fcee281f88e9c'
+  appcast 'https://github.com/luckytianyiyan/TySimulator/releases.atom'
   name 'TySimulator'
   homepage 'https://tysimulator.com/'
 

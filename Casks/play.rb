@@ -4,8 +4,7 @@ cask 'play' do
 
   # github.com/pmsaue0/play was verified as official when first introduced to the cask
   url "https://github.com/pmsaue0/play/releases/download/v#{version}/play_#{version}.dmg.zip"
-  appcast 'https://github.com/pmsaue0/play/releases.atom',
-          checkpoint: '0871b39289a4618e0afcc7e1cd6e2cdd420220eea9b9ac43950769d69ff201ff'
+  appcast 'https://github.com/pmsaue0/play/releases.atom'
   name 'Play'
   homepage 'https://pmsaue0.github.io/play/'
 

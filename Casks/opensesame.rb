@@ -4,8 +4,7 @@ cask 'opensesame' do
 
   # github.com/smathot/OpenSesame was verified as official when first introduced to the cask
   url "https://github.com/smathot/OpenSesame/releases/download/release/#{version}/opensesame_#{version}-py2.7-macos-1.dmg"
-  appcast 'https://github.com/smathot/OpenSesame/releases.atom',
-          checkpoint: '313b8f7ef7123f624f4e38f60f89ac66b249834a714c79f4fc702731728594e0'
+  appcast 'https://github.com/smathot/OpenSesame/releases.atom'
   name 'OpenSesame'
   homepage 'https://osdoc.cogsci.nl/'
 

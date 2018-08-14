@@ -8,6 +8,7 @@ This document describes the algorithm implemented in the `generate_cask_token` s
 * [Cask Filenames](#cask-filenames)
 * [Cask Headers](#cask-headers)
 * [Cask Token Examples](#cask-token-examples)
+* [Tap Specific Cask Token Examples](#tap-specific-cask-token-examples)
 * [Token Overlap](#token-overlap)
 
 ## Purpose
@@ -123,6 +124,18 @@ App Name on Disk       | Simplified App Name | Cask Token       | Filename
 `BetterTouchTool.app`  | BetterTouchTool     | bettertouchtool  | `bettertouchtool.rb`
 `LPK25 Editor.app`     | LPK25 Editor        | lpk25-editor     | `lpk25-editor.rb`
 `Sublime Text 2.app`   | Sublime Text        | sublime-text     | `sublime-text.rb`
+
+## Tap Specific Cask Token Examples
+
+Cask taps have naming conventions specific to each tap.
+
+[Homebrew/cask-versions](https://github.com/Homebrew/homebrew-cask-versions/blob/master/CONTRIBUTING.md#naming-versions-casks)
+
+[Homebrew/cask-fonts](https://github.com/Homebrew/homebrew-cask-fonts/blob/master/CONTRIBUTING.md#naming-font-casks)
+
+[Homebrew/cask-drivers](https://github.com/Homebrew/homebrew-cask-drivers/blob/master/CONTRIBUTING.md#naming-driver-casks)
+
+[Homebrew/cask-eid](https://github.com/Homebrew/homebrew-cask-eid/blob/master/CONTRIBUTING.md#naming-eid-casks)
 
 # Token Overlap
 

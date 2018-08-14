@@ -4,8 +4,7 @@ cask 'sweet-home3d' do
 
   # sourceforge.net/sweethome3d was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/sweethome3d/SweetHome3D/SweetHome3D-#{version}/SweetHome3D-#{version}-macosx.dmg"
-  appcast 'https://sourceforge.net/projects/sweethome3d/rss?path=/SweetHome3D',
-          checkpoint: 'a4f001d6cc2e7b4acb4a610346d6a965f8d2777859f53c5f7cc474c7629ae84b'
+  appcast 'https://sourceforge.net/projects/sweethome3d/rss?path=/SweetHome3D'
   name 'Sweet Home 3D'
   homepage 'http://www.sweethome3d.com/'
 

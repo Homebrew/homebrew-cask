@@ -4,8 +4,7 @@ cask 'endlesssky' do
 
   # github.com/endless-sky/endless-sky was verified as official when first introduced to the cask
   url "https://github.com/endless-sky/endless-sky/releases/download/v#{version}/endless-sky-macosx-#{version}.dmg"
-  appcast 'https://github.com/endless-sky/endless-sky/releases.atom',
-          checkpoint: 'd89c3a725f46815f56dde4ca2f90b1c0f6047f4ac1a7666cb694ed39fd50720e'
+  appcast 'https://github.com/endless-sky/endless-sky/releases.atom'
   name 'Endless Sky'
   homepage 'https://endless-sky.github.io/'
 

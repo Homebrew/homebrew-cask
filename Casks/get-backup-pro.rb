@@ -4,8 +4,7 @@ cask 'get-backup-pro' do
 
   # belightsoft.s3.amazonaws.com/updates was verified as official when first introduced to the cask
   url "https://belightsoft.s3.amazonaws.com/updates/Get+Backup+Pro+#{version.major}.zip"
-  appcast "https://www.belightsoft.com/download/updates/appcast_getbackup_pro#{version.major}.xml",
-          checkpoint: '507d215b61bcd6493e08d33bbaa8a6385a0db59b1312d10b38c23d89696eaeb6'
+  appcast "https://www.belightsoft.com/download/updates/appcast_getbackup_pro#{version.major}.xml"
   name "Get Backup Pro #{version.major}"
   homepage 'https://www.belightsoft.com/products/getbackup/'
 

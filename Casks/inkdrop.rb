@@ -4,8 +4,7 @@ cask 'inkdrop' do
 
   # github.com/inkdropapp was verified as official when first introduced to the cask
   url "https://github.com/inkdropapp/releases/releases/download/v#{version}/Inkdrop-#{version}-Mac.zip"
-  appcast 'https://github.com/inkdropapp/releases/releases.atom',
-          checkpoint: '9c06270c85229a39adf1338a2a675152ced3517c160b28dd92cf974b437a6935'
+  appcast 'https://github.com/inkdropapp/releases/releases.atom'
   name 'Inkdrop'
   homepage 'https://www.inkdrop.info/'
 

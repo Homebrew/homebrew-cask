@@ -4,8 +4,7 @@ cask 'rhinoceros' do
 
   # mcneel.com was verified as official when first introduced to the cask
   url "https://files.mcneel.com/Releases/Rhino/#{version.major}.0/Mac/Rhinoceros_#{version}.dmg"
-  appcast "https://files.mcneel.com/rhino/#{version.major}.0/mac/#{version.major}CcommercialUpdates.xml",
-          checkpoint: '08ffc8e4773d87bada8e5ef9b18601d4df014389cfe60afc4fa6fb834f9a9962'
+  appcast "https://files.mcneel.com/rhino/#{version.major}.0/mac/#{version.major}CcommercialUpdates.xml"
   name 'Rhinoceros'
   homepage 'https://www.rhino3d.com/'
 

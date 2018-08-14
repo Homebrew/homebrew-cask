@@ -8,8 +8,7 @@ cask 'linkliar' do
   end
 
   url "https://github.com/halo/LinkLiar/releases/download/#{version}/LinkLiar.app.zip"
-  appcast 'https://github.com/halo/LinkLiar/releases.atom',
-          checkpoint: '193bc90972b6fd49fa43cc5ea5b5caf8bd5d79e2746c52f0c7388837655cf91f'
+  appcast 'https://github.com/halo/LinkLiar/releases.atom'
   name 'LinkLiar'
   homepage 'https://github.com/halo/LinkLiar'
 

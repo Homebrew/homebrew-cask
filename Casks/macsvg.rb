@@ -4,8 +4,7 @@ cask 'macsvg' do
 
   # github.com/dsward2/macSVG was verified as official when first introduced to the cask
   url "https://github.com/dsward2/macSVG/releases/download/v#{version}/macSVG-v#{version}.zip"
-  appcast 'https://github.com/dsward2/macSVG/releases.atom',
-          checkpoint: '038ebf8971782bd337976c643c7e91d879f9d1b236fc9f5da206cdbe085c0b1d'
+  appcast 'https://github.com/dsward2/macSVG/releases.atom'
   name 'macSVG'
   homepage 'https://macsvg.org/'
 

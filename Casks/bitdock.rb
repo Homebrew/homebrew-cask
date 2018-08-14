@@ -3,8 +3,7 @@ cask 'bitdock' do
   sha256 'df5ee64679b17759c63464524e49b8c9af6b099ce21cb86075a8f30172128eb0'
 
   url "https://github.com/chrisunderdown/bitdock/releases/download/v#{version}/Bitdock.dmg"
-  appcast 'https://github.com/chrisunderdown/bitdock/releases.atom',
-          checkpoint: 'e2270086c260206fe762048a56ecc03b28f869bdadca25883e7e2867d12422a8'
+  appcast 'https://github.com/chrisunderdown/bitdock/releases.atom'
   name 'Bitdock'
   homepage 'https://github.com/chrisunderdown/bitdock'
 

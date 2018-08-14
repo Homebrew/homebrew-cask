@@ -4,8 +4,7 @@ cask 'scapple' do
 
   # scrivener.s3.amazonaws.com was verified as official when first introduced to the cask
   url 'http://scrivener.s3.amazonaws.com/Scapple.dmg'
-  appcast 'https://www.literatureandlatte.com/downloads/scapple/scapple.xml',
-          checkpoint: 'a17f37fc9750c5750051727f13c3645952b50f70284149e95e2f01affc8cccdc'
+  appcast 'https://www.literatureandlatte.com/downloads/scapple/scapple.xml'
   name 'Scapple'
   homepage 'https://www.literatureandlatte.com/scapple.php'
 

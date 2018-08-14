@@ -3,8 +3,7 @@ cask 'radio-silence' do
   sha256 '0127f722cb15768392437b917d2beed2cbcab35eeccee2d77c61ac2a5997ebd1'
 
   url "https://radiosilenceapp.com/downloads/Radio_Silence_#{version}.pkg"
-  appcast 'https://radiosilenceapp.com/update',
-          checkpoint: 'd3f64a45603b0db6cb97cf04e833f399018d8397203d31c5144c40a470aacbf2'
+  appcast 'https://radiosilenceapp.com/update'
   name 'Radio Silence'
   homepage 'https://radiosilenceapp.com/'
 

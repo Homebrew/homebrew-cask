@@ -6,7 +6,7 @@ Homebrew-Cask extends [Homebrew](http://brew.sh) and brings its elegance, simpli
 
 We do this by providing a friendly Homebrew-style CLI workflow for the administration of macOS applications distributed as binaries.
 
-[![Join the chat at https://gitter.im/Homebrew/homebrew-cask](https://img.shields.io/badge/gitter-join%20chat-blue.svg)](https://gitter.im/Homebrew/homebrew-cask)
+[![Join us on https://discourse.brew.sh](https://img.shields.io/badge/Discourse-forum-blue.svg)](https://discourse.brew.sh)
 
 ## Let’s try it!
 
@@ -57,7 +57,7 @@ If your issue persists, search for it before opening a new one. If you find an o
   * [Unlisted reason](doc/reporting_bugs/a_cask_fails_to_install.md#unlisted-reason)
 * [`uninstall` wrongly reports cask as not installed](doc/reporting_bugs/uninstall_wrongly_reports_cask_as_not_installed.md)
 * [`Error: Unknown command: cask` error](doc/reporting_bugs/error_unknown_command_cask.md)
-* [My problem isn’t listed](https://github.com/Homebrew/homebrew-cask/issues/new)
+* [My problem isn’t listed](https://github.com/Homebrew/homebrew-cask/issues/new?template=01_bug_report.md)
 
 ## Requests
 
@@ -69,8 +69,7 @@ If your issue persists, search for it before opening a new one. If you find an o
 We’re really rather friendly! Here are the best places to talk about the project:
 
 * If none of the templates above is appropriate, [open an issue](https://github.com/Homebrew/homebrew-cask/issues/new).
-* Join us (and [caskbot](https://github.com/passcod/caskbot)) on IRC at `#homebrew-cask` on Freenode
-* Join us on [Gitter](https://gitter.im/Homebrew/homebrew-cask)
+* Join us on [discourse.brew.sh (forum)](https://discourse.brew.sh)
 
 ## License
 Code is under the [BSD 2 Clause (NetBSD) license](LICENSE)

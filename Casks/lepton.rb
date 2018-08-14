@@ -4,8 +4,7 @@ cask 'lepton' do
 
   # github.com/hackjutsu/Lepton was verified as official when first introduced to the cask
   url "https://github.com/hackjutsu/Lepton/releases/download/v#{version}/Lepton-#{version}-mac.zip"
-  appcast 'https://github.com/hackjutsu/Lepton/releases.atom',
-          checkpoint: 'd646e270c8af5900f96f0704c992b342be48339f526ba6ccb98d7b680e432b8d'
+  appcast 'https://github.com/hackjutsu/Lepton/releases.atom'
   name 'Lepton'
   homepage 'http://hackjutsu.com/Lepton/'
 

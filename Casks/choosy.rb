@@ -8,8 +8,7 @@ cask 'choosy' do
   end
 
   url "https://downloads.choosyosx.com/choosy_#{version}.zip"
-  appcast 'https://www.choosyosx.com/sparkle/feed',
-          checkpoint: '9db0cc8651f8f826450d5c6cb07a2303dc5727dabcab5fe779220ba2904cedb3'
+  appcast 'https://www.choosyosx.com/sparkle/feed'
   name 'Choosy'
   homepage 'https://www.choosyosx.com/'
 

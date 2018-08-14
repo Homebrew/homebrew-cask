@@ -1,8 +1,9 @@
 cask 'adobe-air-sdk' do
-  version '30.0'
+  version '30.0.0.107'
   sha256 'f1f95129fbc48b0625cda9d94c4e02fa704f287698dd1ff7d5051a617fca3077'
 
-  url "https://airdownload.adobe.com/air/mac/download/#{version}/AIRSDK_Compiler.dmg"
+  url "https://airdownload.adobe.com/air/mac/download/#{version.major_minor}/AIRSDK_Compiler.dmg"
+  appcast 'https://helpx.adobe.com/au/air/kb/archived-air-sdk-version.html'
   name 'Adobe AIR SDK'
   homepage 'https://www.adobe.com/devnet/air/air-sdk-download.html'
 

@@ -4,8 +4,7 @@ cask 'lightmod' do
 
   # github.com/oakes/Lightmod was verified as official when first introduced to the cask
   url "https://github.com/oakes/Lightmod/releases/download/#{version}/Lightmod-#{version}.dmg"
-  appcast 'https://github.com/oakes/Lightmod/releases.atom',
-          checkpoint: '708cecb2e297aacf956a6a3289f9793fc01512d9cfc291a67edafc940d2982c3'
+  appcast 'https://github.com/oakes/Lightmod/releases.atom'
   name 'Lightmod'
   homepage 'https://sekao.net/lightmod/'
 

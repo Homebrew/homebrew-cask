@@ -4,8 +4,7 @@ cask 'tikzit' do
 
   # bintray.com/tikzit/tikzit was verified as official when first introduced to the cask
   url "https://bintray.com/tikzit/tikzit/download_file?file_path=releases%2F#{version}%2FTikZiT-osx.zip"
-  appcast 'https://github.com/tikzit/tikzit/releases.atom',
-          checkpoint: '1609bfd62f4456d9c1f5b3eca7fe6db2c2ff71b1a81dbfe3d41f32b283608dcc'
+  appcast 'https://github.com/tikzit/tikzit/releases.atom'
   name 'TikZiT'
   homepage 'http://tikzit.github.io/'
 

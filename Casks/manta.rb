@@ -4,8 +4,7 @@ cask 'manta' do
 
   # github.com/hql287/Manta was verified as official when first introduced to the cask
   url "https://github.com/hql287/Manta/releases/download/v#{version}/Manta-#{version}-mac.zip"
-  appcast 'https://github.com/hql287/Manta/releases.atom',
-          checkpoint: '3f155e55dd8fb01cc72353f8c98058fbde6768e198ffe02c7bb7f650823e0044'
+  appcast 'https://github.com/hql287/Manta/releases.atom'
   name 'Manta'
   homepage 'https://manta.life/'
 

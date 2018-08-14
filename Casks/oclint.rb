@@ -4,8 +4,7 @@ cask 'oclint' do
 
   # github.com/oclint/oclint was verified as official when first introduced to the cask
   url "https://github.com/oclint/oclint/releases/download/v#{version.before_comma}/oclint-#{version.before_comma}-x86_64-darwin-#{version.after_comma}.tar.gz"
-  appcast 'https://github.com/oclint/oclint/releases.atom',
-          checkpoint: 'd60b959ae35a0632d8f60e6234e19f425a04d924a31520753bd45643b25a1a6d'
+  appcast 'https://github.com/oclint/oclint/releases.atom'
   name 'OCLint'
   homepage 'http://oclint.org/'
 
