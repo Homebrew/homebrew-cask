@@ -1,5 +1,5 @@
 cask 'appcode' do
-  version '2018.2,182.3684.143'
+  version '2018.2,182.3911.53'
   sha256 '4b2cf2db8dcbceb9e4e471e55e69b9d87145cbed83a461bf32f52b4f187f2241'
 
   url "https://download.jetbrains.com/objc/AppCode-#{version.before_comma}.dmg"
