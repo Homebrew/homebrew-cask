@@ -1,7 +1,7 @@
 cask 'sage' do
   if MacOS.version == :el_capitan
     version '8.2,10.11.6'
-    sha256 'a4cd5c6f3207cd9c429642bb58a6310ba05e6da9fddbf36dc1aa5e47c5904c96'
+    sha256 'f40867a8262b018550e449c4ca8c964cebde0776d8d02a83c91102a903726afe'
   elsif MacOS.version == :sierra
     version '8.1,10.12.6'
     sha256 'bd795369398873ccd26bae7e4ccc67370799d3038bebab911a626f496eba6d33'
