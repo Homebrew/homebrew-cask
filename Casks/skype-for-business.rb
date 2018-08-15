@@ -17,13 +17,14 @@ cask 'skype-for-business' do
                         ],
             login_item: 'Skype for Business'
 
-  zap trash:   [
-                 '/Library/Internet Plug-Ins/MeetingJoinPlugin.plugin',
-                 '~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.plist',
-                 '~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.debuglogging.plist',
-                 '~/Library/Application Support/com.microsoft.SkypeForBusinessTAP',
-                 '~/Library/Application Support/Skype for Business',
-               ],
-      rmdir:   '/Library/Application Support/Microsoft',
-      pkgutil: 'com.microsoft.package.Microsoft_AutoUpdate.app'
+  zap trash:      [
+                    '/Library/Internet Plug-Ins/MeetingJoinPlugin.plugin',
+                    '~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.plist',
+                    '~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.debuglogging.plist',
+                    '~/Library/Application Support/com.microsoft.SkypeForBusinessTAP',
+                    '~/Library/Application Support/Skype for Business',
+                  ],
+      launchctl:  'com.microsoft.autoupdate.helper',
+      rmdir:      '/Library/Application Support/Microsoft',
+      pkgutil:    'com.microsoft.package.Microsoft_AutoUpdate.app'
 end
