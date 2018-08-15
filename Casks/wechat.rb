@@ -7,6 +7,8 @@ cask 'wechat' do
   name '微信 Mac 版'
   homepage 'https://mac.weixin.qq.com/'
 
+  auto_updates true
+
   depends_on macos: '>= :yosemite'
 
   app 'WeChat.app'
