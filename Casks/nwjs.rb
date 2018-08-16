@@ -1,6 +1,6 @@
 cask 'nwjs' do
-  version '0.31.5'
-  sha256 'b6a632f28d65eab7745ae1ec6a4e94a25c880c5d19436b8f2741c30d05a567fb'
+  version '0.32.3'
+  sha256 '5f24d056f43f9fc6f6122f4f9122d55f84ac70479a5a02ae6689a995fb72cee6'
 
   url "https://dl.nwjs.io/v#{version}/nwjs-sdk-v#{version}-osx-x64.zip"
   appcast 'https://github.com/nwjs/nw.js/releases.atom'
