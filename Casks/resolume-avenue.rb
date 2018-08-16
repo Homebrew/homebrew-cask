@@ -9,10 +9,10 @@ cask 'resolume-avenue' do
 
   pkg 'Resolume Avenue Installer.pkg'
 
-  uninstall pkgutil:   "com.resolume.pkg.ResolumeAvenue#{version.major}",
+  uninstall pkgutil:   "com.resolume.pkg.ResolumeAvenue.*",
             delete:    "/Applications/Resolume Avenue #{version.major}",
             launchctl: 'com.resolume.avenue',
-            quit:      'com.resolume.avenue'
+            signal:    ['TERM', 'com.resolume.avenue']
 
   zap pkgutil: [
                  'com.resolume.pkg.ResolumeDXV',
