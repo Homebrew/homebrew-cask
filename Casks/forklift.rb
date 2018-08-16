@@ -1,6 +1,6 @@
 cask 'forklift' do
-  version '3.2.2'
-  sha256 '7f968b7d4b1c2be100f7ac26e7d9f3d2b93f109ac1edf5eb6dfab70041e2d277'
+  version '3.2.3'
+  sha256 '35b7fbe0278e8fbf99ef0d5e337f1fa68a3e456fb1c836eb814beca3a1005b1b'
 
   url "https://download.binarynights.com/ForkLift#{version}.zip"
   appcast "https://updates.binarynights.com/ForkLift#{version.major}/update.xml"
