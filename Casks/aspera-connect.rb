@@ -6,7 +6,7 @@ cask 'aspera-connect' do
   name 'Aspera Connect'
   homepage 'http://asperasoft.com/software/transfer-clients/connect-web-browser-plug-in/'
 
-  pkg 'AsperaConnectInstaller.pkg'
+  pkg 'IBMAsperaConnectInstaller.pkg'
 
   uninstall pkgutil: [
                        'com.aspera.AsperaWeb',
