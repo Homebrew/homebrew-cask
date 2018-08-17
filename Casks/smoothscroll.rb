@@ -1,6 +1,6 @@
 cask 'smoothscroll' do
-  version '1.1.9'
-  sha256 '6e231a8375cd25f980a34b60f1eee850ad9a71257c931c775bba05ab129a399e'
+  version '1.1.10'
+  sha256 '0c649cb3a9cfe64d89a9359c187b97a1c788bbc5f11fe4ae92163e04958b51d8'
 
   url 'https://www.smoothscroll.net/mac/download/SmoothScroll.app.zip'
   appcast 'https://updater.smoothscroll.net/mac/updater.xml'
