@@ -11,5 +11,5 @@ cask 'shortcutdetective' do
 
   app 'ShortcutDetective.app'
 
-  zap delete: '~/Library/Preferences/com.irradiatedsoftware.ShortcutDetective.plist'
+  zap trash: '~/Library/Preferences/com.irradiatedsoftware.ShortcutDetective.plist'
 end
