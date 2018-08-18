@@ -1,5 +1,5 @@
 cask 'atext' do
-  version '2.24'
+  version '2.25.2'
   sha256 '702826bac3cc0275b5a69f17302601a2788d3dd48f32d0afcb4f4d06606a2c63'
 
   url 'https://www.trankynam.com/atext/downloads/aText.dmg'
