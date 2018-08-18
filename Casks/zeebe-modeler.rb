@@ -1,6 +1,6 @@
 cask 'zeebe-modeler' do
-  version '0.1.3'
-  sha256 'fe33b31b69c0304864a8e212134adb0f264fe972319cbdcd58e010b2a6493d33'
+  version '0.1.4'
+  sha256 '42350c38fce8c0db169f234b180386e7537a23d2c1ece364f7bb6379a7e687ec'
 
   # github.com/zeebe-io/zeebe-modeler was verified as official when first introduced to the cask
   url "https://github.com/zeebe-io/zeebe-modeler/releases/download/#{version}/zeebe-modeler-darwin-x64.tar.gz"

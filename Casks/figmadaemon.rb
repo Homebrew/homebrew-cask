@@ -12,8 +12,8 @@ cask 'figmadaemon' do
             launchctl: 'com.figma.daemon',
             delete:    '~/Library/Application Support/Figma/FigmaDaemon.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.figma.FigmaDaemon.plist',
-                '~/Library/Caches/com.figma.FigmaDaemon',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.figma.FigmaDaemon.plist',
+               '~/Library/Caches/com.figma.FigmaDaemon',
+             ]
 end

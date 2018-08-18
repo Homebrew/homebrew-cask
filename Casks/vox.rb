@@ -1,6 +1,6 @@
 cask 'vox' do
-  version '3.3.0'
-  sha256 '534eb8bf45e20c129537f7ad4bd2822464af1aa26bb6ee7e2d8df24610d50d1e'
+  version '3.3.1'
+  sha256 '9217769f35c36ee4873639ffe664b832040f6069c0ee8ea0b7e236138b23ee2c'
 
   # devmate.com/com.coppertino.Vox was verified as official when first introduced to the cask
   url 'https://dl.devmate.com/com.coppertino.Vox/Vox.dmg'

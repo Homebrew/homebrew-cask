@@ -1,6 +1,6 @@
 cask 'xiami' do
-  version '7.0.6,08032038'
-  sha256 'd3acde7550b94be21dde01c379e49fa2d8d4ddfbe415b45a42c6fefd6f69c548'
+  version '7.1.2,08171654'
+  sha256 '4e1dafba7156da4e01ffada2fc3abf688c593bc5a7ba70ea56741fb7d7faf75d'
 
   # gxiami.alicdn.com/xiami-desktop was verified as official when first introduced to the cask
   url "http://gxiami.alicdn.com/xiami-desktop/update/XiamiMac-#{version.after_comma}.dmg"

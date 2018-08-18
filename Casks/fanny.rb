@@ -6,5 +6,5 @@ cask 'fanny' do
   name 'FannyWidget'
   homepage 'http://fannywidget.com/'
 
-  app "Fanny #{version}/fanny.app"
+  app "Fanny #{version}/Fanny.app"
 end

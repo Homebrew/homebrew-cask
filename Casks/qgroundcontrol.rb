@@ -1,6 +1,6 @@
 cask 'qgroundcontrol' do
-  version '3.3.2'
-  sha256 'fe9ad6822d795de62e7a7c8264d5f1425572ccdbf4712e442758208d6c6b1a77'
+  version '3.4.1'
+  sha256 'cd3dc9e6ef8f5775f6d49c606d6145c4097f3a950ed3ab0a1c378bf810459020'
 
   # github.com/mavlink/qgroundcontrol was verified as official when first introduced to the cask
   url "https://github.com/mavlink/qgroundcontrol/releases/download/v#{version}/QGroundControl.dmg"
