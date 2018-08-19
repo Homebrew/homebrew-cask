@@ -14,7 +14,6 @@ cask 'ripcord' do
 
   zap trash: [
                '~/Library/Application Support/Ripcord',
-               '~/Library/Cookies/com.hnc.Discord.binarycookies',
                '~/Library/Preferences/com.cancelfm.Ripcord.plist',
                '~/Library/Saved Application State/com.cancelfm.Ripcord.savedState',
              ]
