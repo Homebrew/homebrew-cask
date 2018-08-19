@@ -14,9 +14,13 @@ cask 'proxyman' do
 
   zap trash: [
                '~/Library/Application Support/com.proxyman',
+               '~/Library/Application Support/com.proxyman.NSProxy',
                '~/Library/Caches/Proxyman',
+               '~/Library/Caches/com.proxyman.NSProxy',
                '~/Library/Cookies/com.proxyman.binarycookies',
+               '~/Library/Cookies/com.proxyman.NSProxy.binarycookies',
                '~/Library/Preferences/com.proxyman.plist',
+               '~/Library/Preferences/com.proxyman.NSProxy.plist',
                '~/.proxyman',
              ]
 end
