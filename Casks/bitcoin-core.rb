@@ -1,6 +1,6 @@
 cask 'bitcoin-core' do
-  version '0.16.1'
-  sha256 'b96b992d7fe5aa78ceb92c240dde75e7f0004dfe233e67176077004937ff29ed'
+  version '0.16.2'
+  sha256 '083e48d4a0b2bd22995407c108d41cf1a33898aa27cd138cb5ba4164aae2c573'
 
   # bitcoin.org was verified as official when first introduced to the cask
   url "https://bitcoin.org/bin/bitcoin-core-#{version}/bitcoin-#{version}-osx.dmg"
