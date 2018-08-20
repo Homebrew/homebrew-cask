@@ -63,7 +63,7 @@ cask 'sketchup-pro' do
 
   # downloads can be found at http://www.sketchup.com/download/all
   # trimble.com/sketchup was verified as official when first introduced to the cask
-  url "https://dl.trimble.com/sketchup/SketchUpPro-#{language}.dmg"
+  url "https://www.sketchup.com/sketchup/SketchUpPro-#{language}-dmg"
   name 'SketchUp'
   homepage 'https://www.sketchup.com/'
 
