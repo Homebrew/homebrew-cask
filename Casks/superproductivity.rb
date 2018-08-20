@@ -8,5 +8,5 @@ cask 'superproductivity' do
   name 'Super Productivity'
   homepage 'https://super-productivity.com/'
 
-  app 'superProductivity.app'
+  app 'mac/superProductivity.app'
 end
