@@ -9,8 +9,8 @@ cask 'sage' do
     version '8.1,10.12.6'
     sha256 'bd795369398873ccd26bae7e4ccc67370799d3038bebab911a626f496eba6d33'
   else
-    version '8.2,10.13.4'
-    sha256 '3ff17cd1fe99295eb7a7dff2cd49be4f7703a3c605d87aa1601239f7ed14c4aa'
+    version '8.3,10.13.6'
+    sha256 'e2168405cac8a61562933b7523a7b124a4ca4aed1fbd531db2a99851b013f157'
   end
 
   # mirrors.mit.edu/sage/osx/intel was verified as official when first introduced to the cask
