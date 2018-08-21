@@ -1,11 +1,8 @@
 cask 'sage' do
-  if MacOS.version <= :mavericks
-    version '7.2,10.9.5'
-    sha256 'a4cd5c6f3207cd9c429642bb58a6310ba05e6da9fddbf36dc1aa5e47c5904c96'
-  elsif MacOS.version <= :el_capitan
-    version '7.6,10.11.6'
-    sha256 'ba9ffba5dea394dc808c31a7b71af4d0db9759d9440b4dc2e35c921bd03e916f'
-  elsif MacOS.version <= :sierra
+  if MacOS.version == :el_capitan
+    version '8.3,10.11.6'
+    sha256 '71bc5b85ffa251a6db38f27feec7eb725a2745ab769b752b55dca34ec8c75417'
+  elsif MacOS.version == :sierra
     version '8.1,10.12.6'
     sha256 'bd795369398873ccd26bae7e4ccc67370799d3038bebab911a626f496eba6d33'
   else
@@ -18,7 +15,7 @@ cask 'sage' do
   name 'Sage'
   homepage 'https://www.sagemath.org/'
 
-  depends_on macos: '>= :lion'
+  depends_on macos: '>= :el_capitan'
 
   app "SageMath-#{version.before_comma}.app"
   binary "#{appdir}/SageMath-#{version.before_comma}.app/Contents/Resources/sage/sage"
