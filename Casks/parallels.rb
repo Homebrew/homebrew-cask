@@ -1,6 +1,6 @@
 cask 'parallels' do
-  version '13.3.2-43368'
-  sha256 'a79bb516ed3ec81c5b2c9150b1d605c2a2fc596e426effe24177693939db795f'
+  version '14.0.0-45124'
+  sha256 '2a90e6d8b5d40645a93ecccde47f3a8bc94aeab221eba86e9a249699f56e4fa8'
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
   name 'Parallels Desktop'
