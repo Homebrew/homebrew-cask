@@ -61,8 +61,7 @@ cask 'sketchup-pro' do
     'zh-TW'
   end
 
-  # downloads can be found at http://www.sketchup.com/download/all
-  # trimble.com/sketchup was verified as official when first introduced to the cask
+  # downloads can be found at https://sketchup.com/download/all
   url "https://www.sketchup.com/sketchup/SketchUpPro-#{language}-dmg"
   name 'SketchUp'
   homepage 'https://www.sketchup.com/'
