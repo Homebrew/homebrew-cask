@@ -8,5 +8,6 @@ cask 'bforartists' do
   homepage 'http://www.bforartists.de/'
 
   app 'bforartists.app'
-  app 'blenderplayer.app', target: 'bforartists-player.app' # renamed to avoid conflict with blend
+  # Renamed to avoid conflict with blender
+  app 'blenderplayer.app', target: 'bforartists-player.app'
 end
