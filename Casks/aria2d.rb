@@ -1,9 +1,9 @@
 cask 'aria2d' do
-  version '1.2,1534259211'
-  sha256 '1e2649855f2d4c422c3c916be5d6b202d3dca069f979d2a42967208da29978c7'
+  version '1.2'
+  sha256 'd4dd0fcaf5f90862a114c33269707c11c2bd6b157de88048b0e4353a86f159b2'
 
   # dl.devmate.com/com.xjbeta.Aria2D was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.xjbeta.Aria2D/#{version.before_comma}/#{version.after_comma}/Aria2D-#{version.before_comma}.zip"
+  url 'https://dl.devmate.com/com.xjbeta.Aria2D/Aria2D.dmg'
   appcast 'https://updates.devmate.com/com.xjbeta.Aria2D.xml'
   name 'Aria2D'
   homepage 'https://github.com/xjbeta/Aria2D'
