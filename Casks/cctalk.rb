@@ -5,6 +5,7 @@ cask 'cctalk' do
   # n1other.hjfile.cn was verified as official when first introduced to the cask
   url 'https://www.cctalk.com/webapi/basic/v1.1/version/down?apptype=1&terminalType=8&versionType=103',
       user_agent: :fake
+  appcast 'http://f1.ct.hjfile.cn/api/AutoUpdate/newupdate/out/mac/cctalk/update/info.xml'
   name 'CCtalk'
   homepage 'https://www.cctalk.com/download/'
 
