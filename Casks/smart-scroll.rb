@@ -1,6 +1,6 @@
 cask 'smart-scroll' do
-  version '4.3.9'
-  sha256 '2ec6b7097a91940949128e52a174d72fbac7932a19f770b6b2108aa60e65d299'
+  version '4.3.11'
+  sha256 '99d798a213a502d1d08cc07d257b28b42fe26773827a5f93530c73f59ebfc3f9'
 
   url 'https://www.marcmoini.com/SmartScroll.dmg'
   appcast 'https://www.marcmoini.com/sxv_en.html'
