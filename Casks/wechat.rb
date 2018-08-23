@@ -11,4 +11,12 @@ cask 'wechat' do
   depends_on macos: '>= :yosemite'
 
   app 'WeChat.app'
+
+  uninstall quit: 'com.tencent.xinWeChat'
+
+  zap trash: [
+               '~/Library/Application Scripts/com.tencent.xinWeChat',
+               '~/Library/Containers/com.tencent.xinWeChat',
+               '~/Library/Group Containers/$(TeamIdentifierPrefix)com.tencent.xinWeChat',
+             ]
 end
