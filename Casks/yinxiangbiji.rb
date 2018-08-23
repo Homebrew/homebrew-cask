@@ -11,4 +11,18 @@ cask 'yinxiangbiji' do
   depends_on macos: '>= :el_capitan'
 
   app '印象笔记.app'
+
+  uninstall quit: [
+                    'com.yinxiang.Mac',
+                    'com.yinxiang.MacHelper',
+                  ]
+
+  zap trash: [
+               '~/Library/Application Support/com.yinxiang.Mac',
+               '~/Library/Application Support/com.yinxiang.MacHelper',
+               '~/Library/Caches/com.evernote.edam.usage',
+               '~/Library/Caches/com.yinxiang.Mac',
+               '~/Library/Preferences/com.yinxiang.Mac.plist',
+               '~/Library/Preferences/com.yinxiang.MacHelper.plist',
+             ]
 end
