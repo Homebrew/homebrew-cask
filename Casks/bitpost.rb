@@ -1,12 +1,11 @@
 cask 'bitpost' do
   version '0.9.8.3'
-  sha256 '8e58ddf022eae721bfca6ecb456edf40baa23ea31076ee9c1ad75e947b0cea2b'
+  sha256 '3145c4cce9d328a5af7330afd93d6ea0ab76fab9793ac67084c04eec07adf2aa'
 
-  # voluntary.net.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "http://voluntary.net.s3.amazonaws.com/Bitpost.#{version}.zip"
-  appcast 'https://voluntary.net/bitpost/'
+  url "https://voluntarylabs.org/bitpost/binaries/Bitpost.#{version}.zip"
+  appcast 'https://voluntarylabs.org/bitpost/index.html'
   name 'Bitpost'
-  homepage 'https://voluntary.net/bitpost/'
+  homepage 'https://voluntarylabs.org/bitpost/index.html'
 
   app 'Bitpost.app'
 end
