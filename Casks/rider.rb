@@ -1,5 +1,5 @@
 cask 'rider' do
-  version '2018.2'
+  version '2018.2,182.4231.193'
   sha256 '41b2e41bb1ffa3aad1f5bcf8c433a4b61876e3629ab90cb0302ec18f9e881ced'
 
   url "https://download.jetbrains.com/rider/JetBrains.Rider-#{version.before_comma}.dmg"
