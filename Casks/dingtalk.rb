@@ -13,10 +13,18 @@ cask 'dingtalk' do
 
   app 'DingTalk.app'
 
+  uninstall quit: 'com.alibaba.DingTalkMac'
+
   zap trash: [
-               '~/Library/Application Support/DingTalk',
+               '~/Library/Application Support/DingTalkMac',
                '~/Library/Caches/DingTalk',
+               '~/Library/Caches/com.alibaba.DingTalkInstaller',
+               '~/Library/Caches/com.alibaba.DingTalkMac',
                '~/Library/Preferences/com.dingtalk.mac.plist',
-               '~/Library/Saved Application State/com.dingtalk.mac.savedState',
+               '~/Library/Preferences/com.alibaba.DingTalkMac.plist',
+               '~/Library/Preferences/com.alibaba.DingTalkInstaller.plist',
+               '~/Library/Preferences/com.alibaba.DingTalk-Helper.plist',
+               '~/Library/Saved Application State/com.alibaba.DingTalkMac.savedState',
+               '~/Library/WebKit/com.alibaba.DingTalkMac',
              ]
 end
