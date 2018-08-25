@@ -1,5 +1,5 @@
 cask 'aria2d' do
-  version '1.2,1534259211'
+  version '1.2,1534341053'
   sha256 '1e2649855f2d4c422c3c916be5d6b202d3dca069f979d2a42967208da29978c7'
 
   # dl.devmate.com/com.xjbeta.Aria2D was verified as official when first introduced to the cask
