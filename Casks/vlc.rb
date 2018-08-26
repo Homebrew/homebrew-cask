@@ -9,6 +9,8 @@ cask 'vlc' do
   gpg "#{url}.asc", key_id: '65f7c6b4206bd057a7eb73787180713be58d1adc'
 
   auto_updates true
+  conflicts_with cask: 'vlc-nightly'
+  depends_on macos: '>= :lion'
 
   app 'VLC.app'
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
