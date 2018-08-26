@@ -1,6 +1,6 @@
 cask 'mtmr' do
-  version '0.16.2'
-  sha256 '6ed995e0a637cb71bade429844b2a5e992c2d8bf2737ca6dc00265a649be345e'
+  version '0.17'
+  sha256 '355ea507e2d38ecedba0c7250f3124ed89f00223110e138371d246d826253375'
 
   url "https://github.com/Toxblh/MTMR/releases/download/v#{version}/MTMR.#{version}.dmg"
   appcast 'https://github.com/Toxblh/MTMR/releases.atom'
