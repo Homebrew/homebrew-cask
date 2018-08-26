@@ -7,7 +7,7 @@ cask 'fog' do
   name 'Fog'
   homepage 'https://github.com/vitorgalvao/fog'
 
-  app 'Fog.app'
+  app 'mac/Fog.app'
 
   uninstall quit: 'com.vitorgalvao.fog'
 
