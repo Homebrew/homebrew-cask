@@ -9,6 +9,8 @@ cask 'vlc' do
   gpg "#{url}.asc", key_id: '65f7c6b4206bd057a7eb73787180713be58d1adc'
 
   auto_updates true
+  conflicts_with cask: 'vlc-nightly'
+  depends_on macos: '>= :lion'
 
   app 'VLC.app'
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
@@ -26,9 +28,9 @@ cask 'vlc' do
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.videolan.vlc.sfl*',
                '~/Library/Application Support/org.videolan.vlc',
                '~/Library/Application Support/VLC',
+               '~/Library/Caches/org.videolan.vlc',
                '~/Library/Preferences/org.videolan.vlc',
                '~/Library/Preferences/org.videolan.vlc.plist',
                '~/Library/Saved Application State/org.videolan.vlc.savedState',
-               '~/Library/Caches/org.videolan.vlc',
              ]
 end
