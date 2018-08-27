@@ -18,16 +18,16 @@ cask 'bettertouchtool' do
     # bettertouchtool.net/releases was verified as official when first introduced to the cask
     url "https://bettertouchtool.net/releases/btt#{version}_final_10_9.zip"
   else
-    version '2.604'
-    sha256 'b74465815087882bccaa7d59139395e8fffc4e5ba384d47300e71ae47d488343'
+    version '2.608'
+    sha256 '7376e94728c1faf5ae4ebeccb44f7065ffe592130870d30a01b1fd3c1d4d5708'
 
     # bettertouchtool.net/releases was verified as official when first introduced to the cask
     url "https://bettertouchtool.net/releases/btt#{version}.zip"
-    appcast 'https://updates.bettertouchtool.net/bettertouchtool_release_notes.html'
+    appcast 'https://bettertouchtool.net/releases/'
   end
 
   name 'BetterTouchTool'
-  homepage 'https://www.boastr.net/'
+  homepage 'https://folivora.ai/'
 
   auto_updates true
   accessibility_access true
