@@ -1,11 +1,10 @@
 cask 'gramps' do
-  version '4.2.5-1'
-  sha256 'a1b7e57c9349bf4137ee0d932f23882ff461460dcf99e7f03e3620e0edbf8d58'
+  version '4.2.8-1'
+  sha256 '0dcb09ec5d40c9e42b26223a30d74d57450572ececad8cb25a3d4ee8e1a3f80a'
 
   # github.com/gramps-project/gramps was verified as official when first introduced to the cask
   url "https://github.com/gramps-project/gramps/releases/download/v#{version.major_minor_patch}/Gramps-Intel-#{version}.dmg"
-  appcast 'https://github.com/gramps-project/gramps/releases.atom',
-          checkpoint: '602bb379cf541c40cbc5abd0d1a2b9aafdb731354b4f38b32fdddaa06b1c6a60'
+  appcast 'https://github.com/gramps-project/gramps/releases.atom'
   name 'Gramps'
   homepage 'https://gramps-project.org/introduction-WP/'
 

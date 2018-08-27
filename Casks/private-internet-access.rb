@@ -1,10 +1,12 @@
 cask 'private-internet-access' do
-  version 'v72'
-  sha256 '08c3e965d40351a81be0d36a1cb6570b39ada54ddad80e5833ca1fc0fd9a87b1'
+  version '81'
+  sha256 'fd95bd129766d6af80b1d7bcdb4ca920215999b8c45b7e1af94bb122254af26b'
 
-  url "https://installers.privateinternetaccess.com/download/pia-#{version}-installer-mac.dmg"
+  url "https://installers.privateinternetaccess.com/download/pia-v#{version}-installer-mac.dmg"
   name 'Private Internet Access'
   homepage 'https://www.privateinternetaccess.com/'
+
+  depends_on macos: '>= :yosemite'
 
   installer manual: 'Private Internet Access Installer.app'
 
@@ -14,5 +16,5 @@ cask 'private-internet-access' do
 
   uninstall delete: '/Applications/Private Internet Access.app'
 
-  zap       delete: '~/.pia_manager'
+  zap trash: '~/.pia_manager'
 end

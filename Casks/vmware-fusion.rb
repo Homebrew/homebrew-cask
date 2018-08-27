@@ -1,10 +1,9 @@
 cask 'vmware-fusion' do
-  version '8.5.8-5824040'
-  sha256 'fe74972b36960b43a092619105d5053d391d39c55f04991ea3fdce2e9680c035'
+  version '10.1.3-9472307'
+  sha256 'ac08b91b7369bd88af62c21b2d2d9f5629eab59da514743acd21e76bcf8b7aac'
 
   url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
-  appcast 'https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml',
-          checkpoint: 'ad9fd8c30e14e34d54f0878a3926773ca8e6ba5ff21eb25f124ca79f82a087e3'
+  appcast 'https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml'
   name 'VMware Fusion'
   homepage 'https://www.vmware.com/products/fusion.html'
 
@@ -46,29 +45,32 @@ cask 'vmware-fusion' do
     set_ownership "#{appdir}/VMware Fusion.app"
   end
 
-  zap delete: [
-                '/Library/Logs/VMware Fusion Services.log',
-                '/Library/Logs/VMware',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vmware.fusion.sfl',
-                '~/Library/Caches/com.vmware.fusion',
-                '~/Library/Logs/VMware Fusion',
-                '~/Library/Logs/VMware Graphics Service.log',
-                '~/Library/Logs/VMware',
-                '~/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist',
-                '~/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist.lockfile',
-                '~/Library/Saved Application State/com.vmware.fusion.savedState',
-                '~/Library/WebKit/com.vmware.fusion',
-              ],
-      trash:  [
-                '/Library/Application Support/VMware',
-                '/Library/Preferences/VMware Fusion',
-                '~/Library/Application Support/VMware Fusion',
-                '~/Library/Preferences/VMware Fusion',
-                '~/Library/Preferences/com.vmware.fusion.plist',
-                '~/Library/Preferences/com.vmware.fusion.plist.lockfile',
-                '~/Library/Preferences/com.vmware.fusionDaemon.plist',
-                '~/Library/Preferences/com.vmware.fusionDaemon.plist.lockfile',
-                '~/Library/Preferences/com.vmware.fusionStartMenu.plist',
-                '~/Library/Preferences/com.vmware.fusionStartMenu.plist.lockfile',
-              ]
+  zap trash: [
+               '/Library/Application Support/VMware',
+               '/Library/Logs/VMware Fusion Services.log',
+               '/Library/Logs/VMware USB Arbitrator Service.log',
+               '/Library/Logs/VMware',
+               '/Library/Preferences/VMware Fusion',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vmware.fusion.sfl*',
+               '~/Library/Application Support/VMware Fusion',
+               '~/Library/Caches/com.vmware.fusion',
+               '~/Library/Logs/VMware Fusion',
+               '~/Library/Logs/VMware Graphics Service.log',
+               '~/Library/Logs/VMware',
+               '~/Library/Preferences/VMware Fusion',
+               '~/Library/Preferences/com.vmware.fusion.plist',
+               '~/Library/Preferences/com.vmware.fusion.plist.lockfile',
+               '~/Library/Preferences/com.vmware.fusionDaemon.plist',
+               '~/Library/Preferences/com.vmware.fusionDaemon.plist.lockfile',
+               '~/Library/Preferences/com.vmware.fusionStartMenu.plist',
+               '~/Library/Preferences/com.vmware.fusionStartMenu.plist.lockfile',
+               '~/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist',
+               '~/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist.lockfile',
+               '~/Library/Saved Application State/com.vmware.fusion.savedState',
+               '~/Library/WebKit/com.vmware.fusion',
+             ]
+
+  caveats do
+    kext
+  end
 end

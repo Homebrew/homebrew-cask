@@ -16,13 +16,13 @@ cask 'license-control-center' do
                       '/Library/Receipts/POS.pkg',
                     ]
 
-  zap       delete: [
-                      '/Library/Application Support/Syncrosoft',
-                      '/Library/Application Support/eLicenser',
-                      '/Library/Syncrosoft',
-                      '/var/db/receipts/com.syncrosoft.*',
-                      '/var/db/receipts/com.eLicenser.*',
-                      '~/Library/Preferences/com.Syncrosoft.LCC.plist',
-                      '~/Library/Saved Application State/com.Syncrosoft.LCC.savedState',
-                    ]
+  zap trash: [
+               '/Library/Application Support/Syncrosoft',
+               '/Library/Application Support/eLicenser',
+               '/Library/Syncrosoft',
+               '/var/db/receipts/com.syncrosoft.*',
+               '/var/db/receipts/com.eLicenser.*',
+               '~/Library/Preferences/com.Syncrosoft.LCC.plist',
+               '~/Library/Saved Application State/com.Syncrosoft.LCC.savedState',
+             ]
 end

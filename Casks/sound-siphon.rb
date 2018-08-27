@@ -11,5 +11,7 @@ cask 'sound-siphon' do
 
   uninstall pkgutil: 'com.staticz.installer.soundsiphon.*'
 
-  caveats "You need to restart your Mac before using #{token}."
+  caveats <<~EOS
+    You need to restart your Mac before using #{token}.
+  EOS
 end

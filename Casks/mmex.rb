@@ -1,11 +1,10 @@
 cask 'mmex' do
   version '1.3.3'
-  sha256 '36380329f017c9edef4b7c00aa076605298830031f9ee2ccd0aba6f7911e0ea1'
+  sha256 '49eeb6b50a51bfa09da7f4bb063ad75c5695eeeac410ae13d4c8e8844ac43505'
 
   # github.com/moneymanagerex/moneymanagerex was verified as official when first introduced to the cask
-  url "https://github.com/moneymanagerex/moneymanagerex/releases/download/v#{version}/mmex_#{version}_macos10.9.dmg"
-  appcast 'https://github.com/moneymanagerex/moneymanagerex/releases.atom',
-          checkpoint: 'b7710b29a059b3f20a943e6d06dbcb95883f135eec8adc63ce625c93c98c0618'
+  url "https://github.com/moneymanagerex/moneymanagerex/releases/download/v#{version}/mmex_#{version}_macos10.9-wx3.0.2build.dmg"
+  appcast 'https://github.com/moneymanagerex/moneymanagerex/releases.atom'
   name 'Money Manager Ex'
   homepage 'http://www.moneymanagerex.org/'
 
@@ -13,9 +12,9 @@ cask 'mmex' do
 
   app 'MMEX.app'
 
-  zap delete: [
-                '~/Library/Application Support/MoneyManagerEx',
-                '~/Library/Caches/com.yourcompany.MMEX',
-                '~/Library/Preferences/com.yourcompany.MMEX.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/MoneyManagerEx',
+               '~/Library/Caches/com.yourcompany.MMEX',
+               '~/Library/Preferences/com.yourcompany.MMEX.plist',
+             ]
 end

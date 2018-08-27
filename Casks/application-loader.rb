@@ -1,6 +1,6 @@
 cask 'application-loader' do
-  version '3.0'
-  sha256 '529ad05c1c2e093607cbd017e45fc258c2bcde207bb73192b5db6411b78e5c62'
+  version '3.1'
+  sha256 '821c823b133234525d08f8d1f586e1e0301d427610073e8fcd17e63b40b64eb3'
 
   url "https://itunesconnect.apple.com/apploader/ApplicationLoader_#{version}.dmg"
   name 'Application Loader'
@@ -10,8 +10,8 @@ cask 'application-loader' do
 
   uninstall pkgutil: 'com.apple.pkg.ApplicationLoader'
 
-  zap delete: [
-                '~/Library/Caches/com.apple.itunes.connect.ApplicationLoader',
-                '~/Library/Preferences/com.apple.itunes.connect.ApplicationLoader.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.apple.itunes.connect.ApplicationLoader',
+               '~/Library/Preferences/com.apple.itunes.connect.ApplicationLoader.plist',
+             ]
 end

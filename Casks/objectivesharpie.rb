@@ -1,6 +1,6 @@
 cask 'objectivesharpie' do
-  version '3.3.0'
-  sha256 'a3f0b65895e55fa7628e3727772bed99fa7713cc059b716d3f30266b9b18ce0f'
+  version '3.4.0'
+  sha256 '4b4a9840f998f37709fb8c11dcd65c77a02872562d306540818b453a4ea9911b'
 
   url "https://download.xamarin.com/objective-sharpie/ObjectiveSharpie-#{version}.pkg"
   name 'Objective Sharpie'

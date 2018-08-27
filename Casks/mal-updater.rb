@@ -1,18 +1,19 @@
 cask 'mal-updater' do
-  version '2.3.5.3'
-  sha256 '655753754bfb50d0c159ba3b5db135bdc08adc8b21d7bb89a9432bd61ecf4d27'
+  version '2.4.5'
+  sha256 '8dd53e039d43a7d32c6cfd51070d86e8cf5ba238f3b8cf3dd9dba104445ec0f6'
 
   # github.com/Atelier-Shiori/malupdaterosx-cocoa was verified as official when first introduced to the cask
   url "https://github.com/Atelier-Shiori/malupdaterosx-cocoa/releases/download/#{version}/malupdaterosx-#{version}.dmg"
-  appcast 'https://github.com/Atelier-Shiori/malupdaterosx-cocoa/releases.atom',
-          checkpoint: '7ebb3a95686b8a2f775a5d8a4f45bf3d578388fc3faef2b7b17434a13e7727d4'
+  appcast 'https://github.com/Atelier-Shiori/malupdaterosx-cocoa/releases.atom'
   name 'MAL Updater OS X'
   homepage 'https://malupdaterosx.ateliershiori.moe/'
 
+  depends_on macos: '>= :mavericks'
+
   app 'MAL Updater OS X.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.chikorita157.MAL-Updater-OS-X.plist',
-                '~/Library/Application Support/MAL Updater OS X',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.chikorita157.MAL-Updater-OS-X.plist',
+               '~/Library/Application Support/MAL Updater OS X',
+             ]
 end

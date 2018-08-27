@@ -4,10 +4,11 @@ cask 'xquartz' do
 
   # bintray.com/xquartz was verified as official when first introduced to the cask
   url "https://dl.bintray.com/xquartz/downloads/XQuartz-#{version}.dmg"
-  appcast 'https://www.xquartz.org/releases/sparkle/release.xml',
-          checkpoint: 'da07c258696e2593cbf3f6a451e7125db17a1d70f4f3135e617ba247cdb27a54'
+  appcast 'https://www.xquartz.org/releases/sparkle/release.xml'
   name 'XQuartz'
   homepage 'https://www.xquartz.org/'
+
+  auto_updates true
 
   pkg 'XQuartz.pkg'
 
@@ -28,22 +29,24 @@ cask 'xquartz' do
                        ],
             pkgutil:   'org.macosforge.xquartz.pkg',
             delete:    [
-                         '/opt/X11/',
+                         '/opt/X11',
                          '/private/etc/manpaths.d/40-XQuartz',
                          '/private/etc/paths.d/40-XQuartz',
                        ]
 
-  zap       delete: [
-                      '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.macosforge.xquartz.x11.sfl',
-                      '~/Library/Application Support/XQuartz',
-                      '~/Library/Caches/org.macosforge.xquartz.X11',
-                      '~/Library/Cookies/org.macosforge.xquartz.X11.binarycookies',
-                      '~/Library/Logs/X11',
-                      '~/Library/Logs/X11.org.macosforge.xquartz.log',
-                      '~/Library/Logs/X11.org.macosforge.xquartz.log.old',
-                      '~/Library/Preferences/org.macosforge.xquartz.X11.plist',
-                      '~/Library/Saved Application State/org.macosforge.xquartz.X11.savedState',
-                      '~/.Xauthority',
-                    ],
-            rmdir:  '~/.fonts'
+  zap trash: [
+               '~/.Xauthority',
+               '~/Library/Application Support/XQuartz',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.macosforge.xquartz.x11.sfl*',
+               '~/Library/Caches/org.macosforge.xquartz.X11',
+               '~/Library/Cookies/org.macosforge.xquartz.X11.binarycookies',
+               '~/Library/Logs/X11/org.macosforge.xquartz.log',
+               '~/Library/Logs/X11/org.macosforge.xquartz.log.old',
+               '~/Library/Preferences/org.macosforge.xquartz.X11.plist',
+               '~/Library/Saved Application State/org.macosforge.xquartz.X11.savedState',
+             ],
+      rmdir: [
+               '~/.fonts',
+               '~/Library/Logs/X11',
+             ]
 end

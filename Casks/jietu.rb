@@ -1,8 +1,8 @@
 cask 'jietu' do
-  version '2.2.1(10927)'
-  sha256 '60cdd6a18092a4f889343595d64a35aa78dbd747f6f4dd9cd47c35f868d7e3d2'
+  version '2.2.2,11054'
+  sha256 '6b8c906a1f004e11aa956916fb3e652a3b72baee77d76f09e02a4199db8bddc4'
 
-  url "http://dldir1.qq.com/invc/tt/Jietu_#{version}.dmg"
+  url "https://dldir1.qq.com/invc/tt/QB/Jietu/Jietu_#{version.before_comma}(#{version.after_comma}).dmg"
   name 'Jietu'
   name '截图'
   homepage 'http://jietu.qq.com/'
@@ -12,5 +12,9 @@ cask 'jietu' do
   uninstall quit:      'com.tencent.JietuMac',
             launchctl: 'com.tencent.JietuHelperMac'
 
-  zap delete: '~/Library/Preferences/com.tencent.JietuMac.plist'
+  zap trash: [
+               '~/Library/Application Support/Jietu',
+               '~/Library/Caches/com.tencent.JietuMac',
+               '~/Library/Preferences/com.tencent.JietuMac.plist',
+             ]
 end

@@ -7,7 +7,7 @@ cask 'parallels-access' do
   homepage 'https://www.parallels.com/products/access/'
 
   # This .dmg cannot be extracted normally
-  # Original discussion: https://github.com/caskroom/homebrew-cask/issues/26872
+  # Original discussion: https://github.com/Homebrew/homebrew-cask/issues/26872
   container type: :naked
 
   preflight do
@@ -39,11 +39,11 @@ cask 'parallels-access' do
                        ],
             delete:    '/Applications/Parallels Access.app'
 
-  zap delete: [
-                '~/Library/Cookies/com.parallels.mobile.prl_deskctl_agent.binarycookies',
-                '~/Library/Group Containers/4C6364ACXT.com.parallels.Access',
-                '~/Library/Preferences/com.parallels.Parallels Access.plist',
-                '~/Library/Preferences/com.parallels.Parallels Access.plist.sdb',
-                '~/Library/Preferences/com.parallels.mobile.plist',
-              ]
+  zap trash: [
+               '~/Library/Cookies/com.parallels.mobile.prl_deskctl_agent.binarycookies',
+               '~/Library/Group Containers/4C6364ACXT.com.parallels.Access',
+               '~/Library/Preferences/com.parallels.Parallels Access.plist',
+               '~/Library/Preferences/com.parallels.Parallels Access.plist.sdb',
+               '~/Library/Preferences/com.parallels.mobile.plist',
+             ]
 end

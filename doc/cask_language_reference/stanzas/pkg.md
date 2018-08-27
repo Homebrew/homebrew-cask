@@ -14,7 +14,9 @@ Subsequent arguments to `pkg` are key/value pairs which modify the install proce
 
 `pkg allow_untrusted: true` can be used to install the `.pkg` with an untrusted certificate passing `-allowUntrusted` to `/usr/sbin/installer`.
 
-Example ([alinof-timer.rb](https://github.com/caskroom/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/alinof-timer.rb#L10)):
+This option is not permitted in official Homebrew-Cask taps, it is only provided for use in third-party taps or local Casks.
+
+Example ([alinof-timer.rb](https://github.com/Homebrew/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/alinof-timer.rb#L10)):
 
 ```ruby
 pkg 'AlinofTimer.pkg', allow_untrusted: true
@@ -32,9 +34,9 @@ $ installer -showChoicesXML -pkg '/path/to/my.pkg'
 
 will output an XML which you can use to extract the `choices:` values, as well as their equivalents to the GUI options.
 
-See [this pull request for wireshark-chmodbpf](https://github.com/caskroom/homebrew-cask/pull/26997) and [this one for wine-staging](https://github.com/caskroom/homebrew-cask/pull/27937) for some examples of the procedure.
+See [this pull request for wireshark-chmodbpf](https://github.com/Homebrew/homebrew-cask/pull/26997) and [this one for wine-staging](https://github.com/Homebrew/homebrew-cask/pull/27937) for some examples of the procedure.
 
-Example ([wireshark-chmodbpf.rb](https://github.com/caskroom/homebrew-cask/blob/f95b8a8306b91fe9da7908b842f4a5fa80f7afe0/Casks/wireshark-chmodbpf.rb#L9#L26)):
+Example ([wireshark-chmodbpf.rb](https://github.com/Homebrew/homebrew-cask/blob/f95b8a8306b91fe9da7908b842f4a5fa80f7afe0/Casks/wireshark-chmodbpf.rb#L9#L26)):
 ```ruby
 pkg "Wireshark #{version} Intel 64.pkg",
     choices: [
@@ -56,7 +58,7 @@ pkg "Wireshark #{version} Intel 64.pkg",
              ]
 ```
 
-Example ([wine-staging.rb](https://github.com/caskroom/homebrew-cask/blob/51b65f6a5a25a7f79af4d372e1a0bf1dc3849251/Casks/wine-staging.rb#L11#L18)):
+Example ([wine-staging.rb](https://github.com/Homebrew/homebrew-cask/blob/51b65f6a5a25a7f79af4d372e1a0bf1dc3849251/Casks/wine-staging.rb#L11#L18)):
 ```ruby
 pkg "winehq-staging-#{version}.pkg",
     choices: [

@@ -7,4 +7,10 @@ cask 'kvirc' do
   homepage 'http://www.kvirc.de/'
 
   app 'KVIrc.app'
+
+  zap trash: [
+               '~/Library/Preferences/com.kvirc.kvirc.plist',
+               '~/Library/Saved Application State/com.kvirc.kvirc.savedState',
+               '~/.kvirc*.rc',
+             ]
 end

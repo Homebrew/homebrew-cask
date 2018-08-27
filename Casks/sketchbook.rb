@@ -1,6 +1,6 @@
 cask 'sketchbook' do
-  version '8.4.3'
-  sha256 'ceeb4409312c2712ee636e7709e943680edc970f8da794aa9500d67c97468d1f'
+  version '8.6.1'
+  sha256 '6f7c1b4feb32fea7172068e3f3b02748a9fa9e21e099579c7ca7ce00648c2518'
 
   url "https://cdn.sketchbook.com/mac/SketchBook_v#{version}_mac.dmg"
   name 'Autodesk Sketchbook'

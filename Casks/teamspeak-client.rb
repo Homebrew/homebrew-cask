@@ -1,6 +1,6 @@
 cask 'teamspeak-client' do
-  version '3.1.4.2'
-  sha256 '2c59ff5d84811e1d3b1382bac2b0b7a511021cc11799481618c62c3dfca1a108'
+  version '3.2.1'
+  sha256 '04a53228267a9cdcb8f359355cd3ab109b6dd3157e7df4c77116adc5610903ce'
 
   # dl.4players.de/ts was verified as official when first introduced to the cask
   url "http://dl.4players.de/ts/releases/#{version}/TeamSpeak#{version.major}-Client-macosx-#{version}.dmg"

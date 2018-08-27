@@ -1,11 +1,10 @@
 cask 'postgres' do
-  version '2.0.4'
-  sha256 '505eebee7dffd3a37b3801279e0cdf31e9fc8ebf18942bc69933133847f18b48'
+  version '2.1.5'
+  sha256 '91296fa25ec45dd099f47d287a05ff07599b30aed4e6d665388b8a56f0b5cf8b'
 
   # github.com/PostgresApp/PostgresApp was verified as official when first introduced to the cask
   url "https://github.com/PostgresApp/PostgresApp/releases/download/v#{version}/Postgres-#{version}.dmg"
-  appcast 'https://github.com/PostgresApp/PostgresApp/releases.atom',
-          checkpoint: 'f1a89c7384d7a8e302b2a95cf96c25b73adc4c0f886b6fda53a78e66e875f8b7'
+  appcast 'https://github.com/PostgresApp/PostgresApp/releases.atom'
   name 'Postgres'
   homepage 'https://postgresapp.com/'
 
@@ -19,12 +18,10 @@ cask 'postgres' do
                          "com.postgresapp.Postgres#{version.major}MenuHelper",
                        ]
 
-  zap delete: [
-                "~/Library/Caches/com.postgresapp.Postgres#{version.major}",
-                "~/Library/Cookies/com.postgresapp.Postgres#{version.major}.binarycookies",
-              ],
-      trash:  [
-                '~/Library/Application Support/Postgres',
-                "~/Library/Preferences/com.postgresapp.Postgres#{version.major}.plist",
-              ]
+  zap trash: [
+               '~/Library/Application Support/Postgres',
+               "~/Library/Caches/com.postgresapp.Postgres#{version.major}",
+               "~/Library/Cookies/com.postgresapp.Postgres#{version.major}.binarycookies",
+               "~/Library/Preferences/com.postgresapp.Postgres#{version.major}.plist",
+             ]
 end

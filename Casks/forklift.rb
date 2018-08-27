@@ -1,10 +1,9 @@
 cask 'forklift' do
-  version '3.0.6'
-  sha256 'c2755a0538a8d9facf04af721368eab8bbb8b1568adf5b5132c7f78b7c1b36bd'
+  version '3.2.3'
+  sha256 'e9be8a8595926f26856f9d0b0aae9214c72ce5a4ceb2af9a46326a204a923e3d'
 
-  url "http://download.binarynights.com/ForkLift#{version}.zip"
-  appcast "https://updates.binarynights.com/ForkLift#{version.major}/update.xml",
-          checkpoint: '04cc308dec0dd16770e9c327f3ead161934af8a4241fb69c499aedc4db3f0e3e'
+  url "https://download.binarynights.com/ForkLift#{version}.zip"
+  appcast "https://updates.binarynights.com/ForkLift#{version.major}/update.xml"
   name 'ForkLift'
   homepage 'https://binarynights.com/forklift/'
 
@@ -23,16 +22,14 @@ cask 'forklift' do
                          'com.binarynights.ForkLiftMini',
                        ]
 
-  zap delete: [
-                "~/Library/Caches/com.binarynights.ForkLift-#{version.major}",
-                "~/Library/Cookies/com.binarynights.ForkLift-#{version.major}.binarycookies",
-                '~/Library/Logs/ForkLift',
-                '~/Library/Logs/ForkLiftMini',
-                "~/Library/Saved Application State/com.binarynights.ForkLift-#{version.major}.savedState",
-              ],
-      trash:  [
-                '~/Library/Application Support/ForkLift',
-                "~/Library/Preferences/com.binarynights.ForkLift-#{version.major}.plist",
-                '~/Library/Preferences/com.binarynights.ForkLiftMini.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/ForkLift',
+               "~/Library/Caches/com.binarynights.ForkLift-#{version.major}",
+               "~/Library/Cookies/com.binarynights.ForkLift-#{version.major}.binarycookies",
+               '~/Library/Logs/ForkLift',
+               '~/Library/Logs/ForkLiftMini',
+               "~/Library/Preferences/com.binarynights.ForkLift-#{version.major}.plist",
+               '~/Library/Preferences/com.binarynights.ForkLiftMini.plist',
+               "~/Library/Saved Application State/com.binarynights.ForkLift-#{version.major}.savedState",
+             ]
 end

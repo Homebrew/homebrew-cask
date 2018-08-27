@@ -4,17 +4,16 @@ cask 'cumulus' do
 
   # github.com/gillesdemey/Cumulus was verified as official when first introduced to the cask
   url "https://github.com/gillesdemey/Cumulus/releases/download/v#{version}/Cumulus-#{version}.dmg"
-  appcast 'https://github.com/gillesdemey/Cumulus/releases.atom',
-          checkpoint: '23d90b127f93df3db3c2199508ea31d3ce850699ceb937f505d33f389b7c8d9b'
+  appcast 'https://github.com/gillesdemey/Cumulus/releases.atom'
   name 'Cumulus'
   homepage 'https://gillesdemey.github.io/Cumulus/'
 
   app 'Cumulus.app'
 
-  zap delete: [
-                '~/Library/Application Support/Cumulus',
-                '~/Library/Caches/Cumulus',
-                '~/Library/Preferences/com.gillesdemey.cumulus.plist',
-                '~/Library/Saved Application State/com.gillesdemey.cumulus.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Cumulus',
+               '~/Library/Caches/Cumulus',
+               '~/Library/Preferences/com.gillesdemey.cumulus.plist',
+               '~/Library/Saved Application State/com.gillesdemey.cumulus.savedState',
+             ]
 end

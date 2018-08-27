@@ -1,11 +1,10 @@
 cask 'qz-tray' do
-  version '2.0.4'
-  sha256 '8f58eb7eef7670e1e930b02c0218e76fb5209e3b79d1502ef2e84302b88dc114'
+  version '2.0.7'
+  sha256 '0664bc19a004f40cdb2cf414a4eaad0cdfb7111b9691dde16a6ecc9ea6046e1a'
 
   # github.com/qzind/tray was verified as official when first introduced to the cask
-  url "https://github.com/qzind/tray/releases/download/v#{version}/qz-tray-#{version}.pkg"
-  appcast 'https://github.com/qzind/tray/releases.atom',
-          checkpoint: '5fab370b4376f9aebd6c8b2d519564d057be8495708d33f4964c5b9773090b83'
+  url "https://github.com/qzind/tray/releases/download/v#{version.major_minor_patch}/qz-tray-#{version}.pkg"
+  appcast 'https://github.com/qzind/tray/releases.atom'
   name 'QZ Tray'
   homepage 'https://qz.io/'
 
@@ -25,8 +24,8 @@ cask 'qz-tray' do
 
   uninstall login_item: 'QZ Tray'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/:no-bundle:qz t.sfl',
-                '~/Library/Application Support/qz',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/:no-bundle:qz t.sfl*',
+               '~/Library/Application Support/qz',
+             ]
 end

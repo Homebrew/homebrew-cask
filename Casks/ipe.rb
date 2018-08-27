@@ -4,18 +4,19 @@ cask 'ipe' do
 
   # bintray.com/otfried was verified as official when first introduced to the cask
   url "https://dl.bintray.com/otfried/generic/ipe/#{version.major_minor}/ipe-#{version}-mac.dmg"
-  appcast 'http://ipe.otfried.org/',
-          checkpoint: 'bd56cea213718b2f59da8fb146cd3f120e70d3b908c7364d230db6235c7b25ae'
+  appcast 'http://ipe.otfried.org/'
   name 'Ipe'
   homepage 'http://ipe.otfried.org/'
 
+  depends_on macos: '>= :mavericks'
+
   app 'Ipe.app'
 
-  zap delete: [
-                '~/.ipe',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.otfried.ipe.ipe.sfl',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.otfried.ipe.sfl',
-                '~/Library/Preferences/org.otfried.ipe.Ipe.plist',
-                '~/Library/Saved Application State/org.otfried.ipe.savedState',
-              ]
+  zap trash: [
+               '~/.ipe',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.otfried.ipe.ipe.sfl*',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.otfried.ipe.sfl*',
+               '~/Library/Preferences/org.otfried.ipe.Ipe.plist',
+               '~/Library/Saved Application State/org.otfried.ipe.savedState',
+             ]
 end

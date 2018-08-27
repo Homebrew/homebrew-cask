@@ -1,15 +1,14 @@
 cask 'geoda' do
-  version '1.10.0.12'
-  sha256 'ffebd2577cd167f262e40cc8c6475de005914ba236b127d9048bf3a0423b476e'
+  version '1.12.1.129'
+  sha256 '9cb343b41ba7d980cf3eda4363685457501c023f77b8f15a2c95acc8694a437b'
 
   # s3-us-west-2.amazonaws.com/geodasoftware was verified as official when first introduced to the cask
-  url "https://s3-us-west-2.amazonaws.com/geodasoftware/GeoDa#{version.major_minor}-Installer.dmg"
-  appcast 'https://github.com/GeoDaCenter/geoda/releases.atom',
-          checkpoint: '16850f39be7bf3f3fde047d1806db42dec822ec294ef61283d4b2123d09c965e'
+  url "https://s3-us-west-2.amazonaws.com/geodasoftware/GeoDa#{version}-Installer.dmg"
+  appcast 'https://geodacenter.github.io/download.html'
   name 'GeoDa'
   homepage 'https://geodacenter.github.io/'
 
   app 'GeoDa.app'
 
-  zap delete: '~/Library/Saved Application State/edu.asu.geodacenter.GeoDa.savedState'
+  zap trash: '~/Library/Saved Application State/edu.asu.geodacenter.GeoDa.savedState'
 end

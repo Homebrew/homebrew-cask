@@ -1,10 +1,9 @@
 cask 'shadowsocksx-ng' do
-  version '1.5.1'
-  sha256 '01925203cfeac54e580fbde10f896f54bf0eb5edea28ccbb7cf33c55b51ef9d9'
+  version '1.7.1'
+  sha256 '10ade4e4d81e000558323c8bd28dfbc46a345a2e4b20dfb66dc56b22cbba1862'
 
   url "https://github.com/shadowsocks/ShadowsocksX-NG/releases/download/v#{version}/ShadowsocksX-NG.#{version}.zip"
-  appcast 'https://github.com/shadowsocks/ShadowsocksX-NG/releases.atom',
-          checkpoint: 'f9fb51bfb0f2c0c28093eea5b84e87ba7269b15694a56f544895780e978fcc70'
+  appcast 'https://github.com/shadowsocks/ShadowsocksX-NG/releases.atom'
   name 'ShadowsocksX-NG'
   homepage 'https://github.com/shadowsocks/ShadowsocksX-NG/'
 
@@ -26,10 +25,10 @@ cask 'shadowsocksx-ng' do
                          args:       ['--mode', 'off'],
                        }
 
-  zap delete: '~/Library/Caches/com.qiuyuzhou.ShadowsocksX-NG',
-      trash:  [
-                '~/.ShadowsocksX-NG',
-                '~/Library/Application Support/ShadowsocksX-NG',
-                '~/Library/Preferences/com.qiuyuzhou.ShadowsocksX-NG.plist',
-              ]
+  zap trash: [
+               '~/.ShadowsocksX-NG',
+               '~/Library/Application Support/ShadowsocksX-NG',
+               '~/Library/Caches/com.qiuyuzhou.ShadowsocksX-NG',
+               '~/Library/Preferences/com.qiuyuzhou.ShadowsocksX-NG.plist',
+             ]
 end

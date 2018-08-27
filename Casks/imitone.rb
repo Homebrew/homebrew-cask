@@ -1,10 +1,9 @@
 cask 'imitone' do
-  version '0.9.2a'
-  sha256 'facbd3c2f252dd825ba1dde722d2c2a12b340adfa193a975965c0493481b2cd7'
+  version '0.9.2c'
+  sha256 '8bbe20c0ddbfb3a583b10e88eb8515174577bdfdc5f345d505fe6ddb2d2d8642'
 
   url "https://imitone.com/beta/imitone-#{version}.dmg"
-  appcast 'https://imitone.com/beta/',
-          checkpoint: '59102e59b3e16ec6ff79c87b2b2bbf090c027bab4d217c0d4a745c938f65b455'
+  appcast 'https://imitone.com/beta/'
   name 'imitone'
   homepage 'https://imitone.com/'
 

@@ -7,8 +7,6 @@ cask 'steam' do
   name 'Steam'
   homepage 'http://store.steampowered.com/about/'
 
-  auto_updates true
-
   app 'Steam.app'
 
   uninstall quit:      [
@@ -21,10 +19,10 @@ cask 'steam' do
                          'com.valvesoftware.steam.ipctool',
                        ]
 
-  zap delete: [
-                '~/Library/LaunchAgents/com.valvesoftware.steamclean.plist',
-                '~/Library/Preferences/com.valvesoftware.steam.helper.plist',
-                '~/Library/Application Support/Steam/',
-                '~/Library/Saved Application State/com.valvesoftware.steam.savedState/',
-              ]
+  zap trash: [
+               '~/Library/LaunchAgents/com.valvesoftware.steamclean.plist',
+               '~/Library/Preferences/com.valvesoftware.steam.helper.plist',
+               '~/Library/Application Support/Steam/',
+               '~/Library/Saved Application State/com.valvesoftware.steam.savedState/',
+             ]
 end

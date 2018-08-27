@@ -8,4 +8,6 @@ cask 'firealpaca' do
   homepage 'https://firealpaca.com/'
 
   app 'FireAlpaca.app'
+
+  zap trash: '~/Library/Application Support/FireAlpaca'
 end

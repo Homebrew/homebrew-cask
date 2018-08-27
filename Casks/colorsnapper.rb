@@ -4,8 +4,7 @@ cask 'colorsnapper' do
 
   # amazonaws.com/cs2-binaries was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/cs2-binaries/ColorSnapper2-#{version.dots_to_underscores}.zip"
-  appcast 'https://colorsnapper.com/app/appcast.xml',
-          checkpoint: '189b0b3b11a3116495c11cc64d59d78e6c5fa1cc8ed7645bb3551296f3a5476b'
+  appcast 'https://colorsnapper.com/app/appcast.xml'
   name 'ColorSnapper 2'
   homepage 'https://colorsnapper.com/'
 
@@ -13,9 +12,11 @@ cask 'colorsnapper' do
 
   uninstall quit: 'com.koolesache.ColorSnapper2'
 
-  zap delete: [
-                '~/Library/Application Support/ColorSnapper2',
-                '~/Library/Caches/com.koolesache.ColorSnapper2',
-                '~/Library/Preferences/com.koolesache.ColorSnapper2.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/ColorSnapper2',
+               '~/Library/Application Support/com.koolesache.ColorSnapper2',
+               '~/Library/Caches/com.koolesache.ColorSnapper2',
+               '~/Library/Cookies/com.koolesache.ColorSnapper2.binarycookies',
+               '~/Library/Preferences/com.koolesache.ColorSnapper2.plist',
+             ]
 end

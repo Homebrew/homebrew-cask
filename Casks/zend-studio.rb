@@ -1,6 +1,6 @@
 cask 'zend-studio' do
-  version '13.6.0'
-  sha256 '4f561a0f4aceb91478ea1c78bcbf61be69bfd29e7e3b855698f8d06f8cde518a'
+  version '13.6.1'
+  sha256 '7a78d4920c97b5df5ed97a305bf97c13387261bc05cfec0a9f665aefed1c5362'
 
   url "http://downloads.zend.com/studio-eclipse/#{version}/ZendStudio-#{version}-macosx.cocoa.x86_64.dmg"
   name 'Zend Studio'

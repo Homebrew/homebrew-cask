@@ -1,8 +1,8 @@
 cask 'mat' do
-  version '1.6.1.20161125'
-  sha256 '52dec1806f7490f614a4eba37493db59f96b0d1332cb55bd9de5c1db7563feda'
+  version '1.8.0.20180604'
+  sha256 '7cce1d33d8dd3f076c7ae574923b7ad1ce4ea947b8e9ff3f0f88013c8061e9b4'
 
-  url "http://www.eclipse.org/downloads/download.php?r=1&file=/mat/#{version.major_minor_patch}/rcp/MemoryAnalyzer-#{version}-macosx.cocoa.x86_64.zip"
+  url "http://www.eclipse.org/downloads/download.php?r=1&file=/mat/#{version.major_minor}/rcp/MemoryAnalyzer-#{version}-macosx.cocoa.x86_64.zip"
   name 'Eclipse Memory Analyzer'
   homepage 'https://www.eclipse.org/mat/'
 

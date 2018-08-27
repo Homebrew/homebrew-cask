@@ -8,7 +8,5 @@ cask 'fbreader' do
 
   app 'FBReader.app'
 
-  zap trash: [
-               '~/.FBReader',
-             ]
+  zap trash: '~/.FBReader'
 end

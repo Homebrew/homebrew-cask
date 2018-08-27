@@ -1,6 +1,6 @@
 cask 'enpass' do
-  version '5.5.8'
-  sha256 'f7a75036f95f4ba535ccff9c9f1be93250222c5c880e9d0d2aa19bfe749f4588'
+  version '5.6.11'
+  sha256 '0fdbfb3ed540b1d7c7f2d7d71f73ab5a32aaf4a66b4008ca3ddb62eb319b9fc1'
 
   # sinew.in was verified as official when first introduced to the cask
   url "https://dl.sinew.in/mac/setup/Enpass-#{version}.dmg"
@@ -11,10 +11,10 @@ cask 'enpass' do
 
   app 'Enpass.app'
 
-  zap delete: [
-                '~/Library/Caches/com.plausiblelabs.crashreporter.data/in.sinew.Enpass-Desktop',
-                '~/Library/Caches/in.sinew.Enpass-Desktop',
-                '~/Library/Preferences/in.sinew.Enpass-Desktop.plist',
-                '~/Library/Saved Application State/in.sinew.Enpass-Desktop.savedState',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.plausiblelabs.crashreporter.data/in.sinew.Enpass-Desktop',
+               '~/Library/Caches/in.sinew.Enpass-Desktop',
+               '~/Library/Preferences/in.sinew.Enpass-Desktop.plist',
+               '~/Library/Saved Application State/in.sinew.Enpass-Desktop.savedState',
+             ]
 end

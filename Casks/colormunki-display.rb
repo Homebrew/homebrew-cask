@@ -1,13 +1,17 @@
 cask 'colormunki-display' do
-  version '1.1.3'
-  sha256 '763a6b9e8e704452de79ec07d96853c6a9adbb204fe59376754d79eac5487b92'
+  version '1.1.5'
+  sha256 'acde3f292d97f8af4f07ddef15c44c5c691db5df3b7068732c2ddfc709542f56'
 
-  # downloads.xrite.com was verified as official when first introduced to the cask
-  url "http://downloads.xrite.com/Downloads/Software/ColorMunki/Display/#{version}/Mac/ColorMunki_Display.zip"
+  # my.xrite.com/Downloads/Software/ColorMunki/Display was verified as official when first introduced to the cask
+  url "https://my.xrite.com/Downloads/Software/ColorMunki/Display/#{version}/Mac/ColorMunki_Display.zip"
   name 'ColorMunki Display'
   homepage 'https://xritephoto.com/colormunki-display'
 
   pkg 'ColorMunki Display.pkg'
 
-  uninstall pkgutil: 'com.xrite.colormunkiDisplay.*'
+  uninstall pkgutil: [
+                       'com.xrite.colormunkiDisplay.*',
+                       'com.xrite.colormunkiTray.plist.pkg',
+                       'com.xrite.xritedeviceservices.installer.pkg',
+                     ]
 end

@@ -1,24 +1,21 @@
 cask 'dockstation' do
-  version '1.2.4'
-  sha256 '86826de5da20f9eb6ecf0cc2ca1d14ef6d1964eef9e2a11c703cbf011064f081'
+  version '1.4.1'
+  sha256 'e95606d7d780acb0b663c168348ddd1eeaf2810ea3d4a6639f81bc63bfe68606'
 
   # github.com/DockStation/dockstation was verified as official when first introduced to the cask
   url "https://github.com/DockStation/dockstation/releases/download/v#{version}/dockstation-#{version}.dmg"
-  appcast 'https://github.com/DockStation/dockstation/releases.atom',
-          checkpoint: '5e48f61d0e862dab3df692d9fb9023d8707e36018b52a6713fa9a7a1450e3b50'
+  appcast 'https://github.com/DockStation/dockstation/releases.atom'
   name 'DockStation'
   homepage 'https://dockstation.io/'
 
-  depends_on macos: '>= 10.11'
+  depends_on macos: '>= :el_capitan'
 
   app 'DockStation.app'
 
-  zap delete: [
-                '~/Library/Saved Application State/org.dockstation.DockStation.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/dockstation',
-                '~/Library/Preferences/org.dockstation.DockStation.helper.plist',
-                '~/Library/Preferences/org.dockstation.DockStation.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/dockstation',
+               '~/Library/Preferences/org.dockstation.DockStation.helper.plist',
+               '~/Library/Preferences/org.dockstation.DockStation.plist',
+               '~/Library/Saved Application State/org.dockstation.DockStation.savedState',
+             ]
 end

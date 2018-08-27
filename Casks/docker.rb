@@ -1,10 +1,9 @@
 cask 'docker' do
-  version '17.06.1-ce-mac24,18950'
-  sha256 'b2614dba7a75eb31c5f00ee3a80341c50903a797349559fd90e815aa945bc573'
+  version '18.06.0-ce-mac70,26399'
+  sha256 '5ca2ff76d9b717be10690248ff4bb4997158593a3b02058e8347f44592e3a2b5'
 
   url "https://download.docker.com/mac/stable/#{version.after_comma}/Docker.dmg"
-  appcast 'https://download.docker.com/mac/stable/appcast.xml',
-          checkpoint: '981d89d39c4a5395475ced1e02cdc384c6b4f39a663b1c2809450daa75011033'
+  appcast 'https://download.docker.com/mac/stable/appcast.xml'
   name 'Docker Community Edition'
   name 'Docker CE'
   homepage 'https://www.docker.com/community-edition'
@@ -14,25 +13,38 @@ cask 'docker' do
 
   app 'Docker.app'
 
-  uninstall delete:    '/Library/PrivilegedHelperTools/com.docker.vmnetd',
+  uninstall delete:    [
+                         '/Library/PrivilegedHelperTools/com.docker.vmnetd',
+                         '/private/var/tmp/com.docker.vmnetd.socket',
+                         '/usr/local/bin/docker',
+                         '/usr/local/bin/docker-compose',
+                         '/usr/local/bin/docker-credential-osxkeychain',
+                         '/usr/local/bin/docker-machine',
+                         '/usr/local/bin/hyperkit',
+                         '/usr/local/bin/notary',
+                         '/usr/local/bin/vpnkit',
+                       ],
             launchctl: [
                          'com.docker.helper',
                          'com.docker.vmnetd',
                        ],
             quit:      'com.docker.docker'
 
-  zap delete: [
-                '~/Library/Application Scripts/com.docker.helper',
-                '~/Library/Caches/KSCrashReports/Docker',
-                '~/Library/Caches/com.docker.docker',
-                '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.docker.docker',
-                '~/Library/Containers/com.docker.docker',
-                '~/Library/Containers/com.docker.helper',
-                '~/Library/Group Containers/group.com.docker',
-              ],
-      trash:  '~/Library/Preferences/com.docker.docker.plist',
-      rmdir:  [
-                '~/Library/Caches/KSCrashReports',
-                '~/Library/Caches/com.plausiblelabs.crashreporter.data',
-              ]
+  zap trash: [
+               '/usr/local/bin/docker-compose.backup',
+               '/usr/local/bin/docker-machine.backup',
+               '/usr/local/bin/docker.backup',
+               '~/Library/Application Scripts/com.docker.helper',
+               '~/Library/Caches/KSCrashReports/Docker',
+               '~/Library/Caches/com.docker.docker',
+               '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.docker.docker',
+               '~/Library/Containers/com.docker.docker',
+               '~/Library/Containers/com.docker.helper',
+               '~/Library/Group Containers/group.com.docker',
+               '~/Library/Preferences/com.docker.docker.plist',
+             ],
+      rmdir: [
+               '~/Library/Caches/KSCrashReports',
+               '~/Library/Caches/com.plausiblelabs.crashreporter.data',
+             ]
 end

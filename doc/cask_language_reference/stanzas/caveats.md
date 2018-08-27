@@ -14,7 +14,7 @@ When `caveats` is a string, it is evaluated at compile time. The following metho
 | `version`          | the Cask version
 | `homepage`         | the Cask homepage
 | `caskroom_path`    | the containing directory for all staged Casks, typically `/usr/local/Caskroom` (only available with block form)
-| `staged_path`      | the staged location for this Cask, including version number, *eg* `/usr/local/Caskroom/adium/1.5.10` (only available with block form)
+| `staged_path`      | the staged location for this Cask, including version number: `/usr/local/Caskroom/{{token}}/{{version}}` (only available with block form)
 
 Example:
 
@@ -32,17 +32,19 @@ There is a mini-DSL available within `caveats` blocks.
 
 The following methods may be called to generate standard warning messages:
 
-| method                            | description |
-| --------------------------------- | ----------- |
-| `path_environment_variable(path)` | users should make sure `path` is in their `$PATH` environment variable
-| `zsh_path_helper(path)`           | zsh users must take additional steps to make sure `path` is in their `$PATH` environment variable
-| `depends_on_java(version)`        | users should make sure they have the specified version of java installed. `version` can be exact (e.g. `6`), a minimum (e.g. `7+`), or omitted (when any version works).
-| `logout`                          | users should log out and log back in to complete installation
-| `reboot`                          | users should reboot to complete installation
-| `files_in_usr_local`              | the Cask installs files to `/usr/local`, which may confuse Homebrew
-| `discontinued`                    | all software development has been officially discontinued upstream
-| `free_license(web_page)`          | users may get an official license to use the software at `web_page`
-| `malware(radar_number)`           | app has been reported to bundle malware. See [the FAQ](https://github.com/caskroom/homebrew-cask/blob/master/doc/faq/apps_with_malware.md) for the necessary steps.
+| method                             | description |
+| ---------------------------------- | ----------- |
+| `path_environment_variable 'path'` | users should make sure `path` is in their `$PATH` environment variable.
+| `zsh_path_helper 'path'`           | zsh users must take additional steps to make sure `path` is in their `$PATH` environment variable.
+| `depends_on_java 'version'`        | users should make sure they have the specified version of java installed. `version` can be exact (e.g. `6`), a minimum (e.g. `7+`), or omitted (when any version works).
+| `logout`                           | users should log out and log back in to complete installation.
+| `reboot`                           | users should reboot to complete installation.
+| `files_in_usr_local`               | the Cask installs files to `/usr/local`, which may confuse Homebrew.
+| `discontinued`                     | all software development has been officially discontinued upstream.
+| `free_license 'web_page'`          | users may get an official license to use the software at `web_page`.
+| `malware 'radar_number'`           | app has been reported to bundle malware. See [the FAQ](https://github.com/Homebrew/homebrew-cask/blob/master/doc/faq/apps_with_malware.md) for the necessary steps.
+| `kext`                             | users may need to enable their kexts in System Preferences → Security & Privacy → General.
+| `license 'web_page'`               | software has a usage license at `web_page`.
 
 Example:
 

@@ -1,12 +1,15 @@
 cask 'ramme' do
-  version '3.2.2'
-  sha256 '7cb20a25a198c0dc1ccf915adb28319e8386dc98128e34ce01f65f99cdc94813'
+  version '3.2.5'
+  sha256 '49a4f8d1623f855322a34e670e17261a8add1ac8b764ffcd027ccb71b82fb1b0'
 
   url "https://github.com/terkelg/ramme/releases/download/v#{version}/Ramme-#{version}.dmg"
-  appcast 'https://github.com/terkelg/ramme/releases.atom',
-          checkpoint: 'd69bc670f9831c3085708d5a7ae3ab314e2b56b48178372725c1fe9ab484a06e'
+  appcast 'https://github.com/terkelg/ramme/releases.atom'
   name 'Ramme'
   homepage 'https://github.com/terkelg/ramme/'
 
   app 'Ramme.app'
+
+  caveats do
+    discontinued
+  end
 end

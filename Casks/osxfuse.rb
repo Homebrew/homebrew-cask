@@ -1,15 +1,15 @@
 cask 'osxfuse' do
-  version '3.6.3'
-  sha256 '64474821b8b9b663ff728f79fd0e7d361f972dc0ac0ea4e16f7d26cdb1655db2'
+  version '3.8.2'
+  sha256 '03a3e561803cdf9fa797c146dc33f0ec0d665cc2bf41cf2b68b3c5b34b03b758'
 
   # github.com/osxfuse was verified as official when first introduced to the cask
   url "https://github.com/osxfuse/osxfuse/releases/download/osxfuse-#{version}/osxfuse-#{version}.dmg"
-  appcast 'https://github.com/osxfuse/osxfuse/releases.atom',
-          checkpoint: '1786c47db49d68ecdec0c199b008651a8413ce5447428c485e4b37da6baf9ad7'
+  appcast 'https://github.com/osxfuse/osxfuse/releases.atom'
   name 'OSXFUSE'
   homepage 'https://osxfuse.github.io/'
 
   auto_updates true
+  conflicts_with cask: 'osxfuse-dev'
 
   pkg "Extras/FUSE for macOS #{version}.pkg",
       choices: [

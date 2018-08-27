@@ -6,15 +6,13 @@ cask 'moxtra' do
   name 'Moxtra'
   homepage 'http://moxtra.com/application/'
 
-  auto_updates true
-
   app 'Moxtra.app'
 
   uninstall quit: 'com.moxtra.desktop'
 
-  zap delete: [
-                '~/Library/Application Support/Moxtra',
-                '~/Library/Caches/com.moxtra.desktop',
-                '~/Library/Preferences/com.moxtra.desktop.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Moxtra',
+               '~/Library/Caches/com.moxtra.desktop',
+               '~/Library/Preferences/com.moxtra.desktop.plist',
+             ]
 end

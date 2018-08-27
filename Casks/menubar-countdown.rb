@@ -5,7 +5,7 @@ cask 'menubar-countdown' do
   # amazonaws.com/capablehands was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/capablehands/downloads/MenubarCountdown-#{version}.zip"
   name 'Menubar Countdown'
-  homepage 'http://capablehands.net/menubarcountdown'
+  homepage 'https://github.com/kristopherjohnson/MenubarCountdown'
 
   app "MenubarCountdown-#{version}/Menubar Countdown.app"
 end

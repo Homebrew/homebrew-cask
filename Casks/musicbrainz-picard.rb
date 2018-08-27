@@ -1,21 +1,20 @@
 cask 'musicbrainz-picard' do
-  version '1.4.2'
-  sha256 '003a50a5124cf0809da6f5fb5076dbe41222c6571609b499eb75d54e480d0307'
+  version '2.0.3'
+  sha256 '6bd1b37b48caa7a427bfbd1f875887c62a818e613711372b87fb3a0536deadaa'
 
   url "http://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-#{version}.dmg"
-  appcast 'https://picard.musicbrainz.org/changelog/',
-          checkpoint: '7693e05f7c2c194a8ad62a063e785c49fbe03a41c91020d447e654295a31f10c'
+  appcast 'https://picard.musicbrainz.org/changelog/'
   name 'MusicBrainz Picard'
   homepage 'https://picard.musicbrainz.org/'
 
+  depends_on macos: '>= :yosemite'
+
   app 'MusicBrainz Picard.app'
 
-  zap delete: [
-                '~/Library/Caches/MusicBrainz',
-                '~/Library/Saved Application State/org.musicbrainz.picard.savedState',
-              ],
-      trash:  [
-                '~/.config/MusicBrainz',
-                '~/Library/Preferences/org.musicbrainz.picard.plist',
-              ]
+  zap trash: [
+               '~/.config/MusicBrainz',
+               '~/Library/Caches/MusicBrainz',
+               '~/Library/Preferences/org.musicbrainz.picard.plist',
+               '~/Library/Saved Application State/org.musicbrainz.picard.savedState',
+             ]
 end

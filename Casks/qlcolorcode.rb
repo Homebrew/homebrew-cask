@@ -1,10 +1,9 @@
 cask 'qlcolorcode' do
-  version '2.0.8'
-  sha256 '598da4c881750943687b846a01a72cbaa2a91054db71d34bb4e7c8ffe4be9ac5'
+  version '2.1.0'
+  sha256 '104e048948ecd2c9da6e6cd24c49e0adc62b7d9623fa1fa091a8cbe8ec2fced4'
 
   url "https://github.com/anthonygelibert/QLColorCode/releases/download/release-#{version}/QLColorCode.qlgenerator.zip"
-  appcast 'https://github.com/anthonygelibert/QLColorCode/releases.atom',
-          checkpoint: '0f3ff11b8f32c32869669d669f3386e8a8de60a9a68278130af75a1e68274d67'
+  appcast 'https://github.com/anthonygelibert/QLColorCode/releases.atom'
   name 'QLColorCode'
   homepage 'https://github.com/anthonygelibert/QLColorCode'
 
@@ -13,8 +12,7 @@ cask 'qlcolorcode' do
   qlplugin 'QLColorCode.qlgenerator'
 
   postflight do
-    # This sets the path to the highlight binary to the preferred one found in $PATH.
-    system 'defaults write org.n8gray.QLColorCode pathHL "$(which highlight)"'
+    system_command '/usr/bin/defaults', args: ['write', 'org.n8gray.QLColorCode', 'pathHL', "#{HOMEBREW_PREFIX}/bin/highlight"]
   end
 
   zap trash: '~/Library/Preferences/org.n8gray.QLColorCode.plist'

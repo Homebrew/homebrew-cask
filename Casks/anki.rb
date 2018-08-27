@@ -1,14 +1,13 @@
 cask 'anki' do
-  version '2.0.47'
-  sha256 'f03b414991abc9fb881af0e7b2c97d60d2ea09ccbe313e9e99ec2bd23d115bf5'
+  version '2.1.2'
+  sha256 'be728bdcf0e2cfcead6dfc3e487736ed725b455475865177654b654dc76a03d7'
 
-  url "https://apps.ankiweb.net/downloads/current/anki-#{version}.dmg"
-  appcast 'https://apps.ankiweb.net/docs/changes.html',
-          checkpoint: 'bf5c4919534b2a51ac056da68bd56c0b333ee7a4b7b4bdc715c53bcf2326ab6b'
+  url "https://apps.ankiweb.net/downloads/current/anki-#{version}-mac.dmg"
+  appcast 'https://apps.ankiweb.net/docs/changes.html'
   name 'Anki'
   homepage 'https://apps.ankiweb.net/'
 
-  depends_on macos: '>= :lion'
+  depends_on macos: '>= :yosemite'
 
   app 'Anki.app'
 end

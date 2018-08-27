@@ -15,5 +15,5 @@ cask 'importio' do
     system_command '/bin/rm', args: ['-r', "#{staged_path}/importio.pkg", "#{staged_path}/install.pkg"]
   end
 
-  zap delete: '~/Library/Containers/import.io'
+  zap trash: '~/Library/Containers/import.io'
 end

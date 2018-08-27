@@ -1,6 +1,6 @@
 cask 'xampp' do
-  version '7.1.7-0'
-  sha256 'ebb07f7be66a5ca06c081b78ef0901d1ba21d3001afa33f4886998b9276fb7c1'
+  version '7.2.7-0'
+  sha256 '00256153d8171ccb68a4768614d7b2247c78c49d81eaa9e829195d1663ddfa96'
 
   # downloadsapachefriends.global.ssl.fastly.net/xampp-files was verified as official when first introduced to the cask
   url "https://downloadsapachefriends.global.ssl.fastly.net/xampp-files/#{version.major_minor_patch}/xampp-osx-#{version}-installer.dmg"

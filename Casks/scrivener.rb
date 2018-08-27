@@ -1,13 +1,14 @@
 cask 'scrivener' do
-  version '2.81.2,106'
-  sha256 'b4a09047b4b7f7522d58fdd5736f7de9d7250447f3573fd993964bfb3b6be1e1'
+  version '3.0.3,3032'
+  sha256 '776aa7a4ed46f6894bce4a15b4f4a53ea31044b6f2192fbd29234b3ddfd0c24a'
 
   # scrivener.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "https://scrivener.s3.amazonaws.com/mac_updates/Scrivener_#{version.after_comma}_#{version.before_comma}.zip"
-  appcast "https://www.literatureandlatte.com/downloads/scrivener-#{version.major}.xml",
-          checkpoint: 'd07056774e32c51cb38b9730c90fa41da16413d2de3af00a2dd6b8e50c097755'
+  url "https://scrivener.s3.amazonaws.com/mac_updates/Scrivener_1012_#{version.after_comma}.zip"
+  appcast "https://www.literatureandlatte.com/downloads/scrivener-#{version.major}.xml"
   name 'Scrivener'
   homepage 'https://literatureandlatte.com/scrivener.php'
+
+  depends_on macos: '>= :sierra'
 
   app 'Scrivener.app'
 end

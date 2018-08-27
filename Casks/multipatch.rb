@@ -7,4 +7,9 @@ cask 'multipatch' do
   homepage 'http://projects.sappharad.com/tools/multipatch.html'
 
   app 'MultiPatch/MultiPatch.app'
+
+  zap trash: [
+               '~/Library/Preferences/com.sappharad.MultiPatch.plist',
+               '~/Library/Saved Application State/com.sappharad.MultiPatch.savedState',
+             ]
 end

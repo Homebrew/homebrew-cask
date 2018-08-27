@@ -1,10 +1,9 @@
 cask 'whatroute' do
-  version '2.0.22'
-  sha256 '3d78079f4d0bf72de5d02c5c1b8edcb60909ce6ca3053cbb7135a8f89fa968e1'
+  version '2.1.5'
+  sha256 '8c77192491ecb6bd885a97f03d8a9d33f61a619c5c651bc61547f32ae4da2b1c'
 
   url "https://downloads.whatroute.net/software/whatroute-#{version}.zip"
-  appcast "https://www.whatroute.net/whatroute#{version.major}appcast.xml",
-          checkpoint: 'c1e70b8848633c76a64c3ed998d6111482dd131c0c8426fa5ff6e9d5681c3fe6'
+  appcast "https://www.whatroute.net/whatroute#{version.major}appcast.xml"
   name 'WhatRoute'
   homepage 'https://www.whatroute.net/'
 
@@ -19,9 +18,9 @@ cask 'whatroute' do
                        ],
             quit:      "net.whatroute.whatroute#{version.major}"
 
-  zap delete: [
-                "~/Library/Caches/net.whatroute.whatroute#{version.major}",
-                "~/Library/Logs/net.whatroute.whatroute#{version.major}",
-              ],
-      trash:  "~/Library/Preferences/net.whatroute.whatroute#{version.major}.plist"
+  zap trash: [
+               "~/Library/Caches/net.whatroute.whatroute#{version.major}",
+               "~/Library/Logs/net.whatroute.whatroute#{version.major}",
+               "~/Library/Preferences/net.whatroute.whatroute#{version.major}.plist",
+             ]
 end

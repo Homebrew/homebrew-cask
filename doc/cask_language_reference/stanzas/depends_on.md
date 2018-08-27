@@ -7,7 +7,7 @@
 
 The value should be another Cask token, needed by the current Cask.
 
-Example use: [`SSHFS`](https://github.com/caskroom/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/sshfs.rb#L12) depends on OSXFUSE:
+Example use: [`SSHFS`](https://github.com/Homebrew/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/sshfs.rb#L12) depends on OSXFUSE:
 
 ```ruby
 depends_on cask: 'osxfuse'
@@ -47,6 +47,7 @@ The available values for macOS releases are:
 | `:el_capitan`      | `'10.11'`
 | `:sierra`          | `'10.12'`
 | `:high_sierra`     | `'10.13'`
+| `:mojave`          | `'10.14'`
 
 Only major releases are covered (version numbers containing a single dot). The symbol form is preferred for readability. The following are all valid ways to enumerate the exact macOS release requirements for a Cask:
 

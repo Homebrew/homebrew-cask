@@ -1,6 +1,6 @@
 cask 'x-lite' do
-  version '4.9.8_84254'
-  sha256 '7a33cf0ea6f30e1373a71002dcd1102bc56b4e5a665f50ede00219bb9788f154'
+  version '5.3.3_92984'
+  sha256 '107fd6a6e9c727ba3d1d5a0126e5d2bb9e6631180a86fdbd13e41666b090a4b1'
 
   # counterpath.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://counterpath.s3.amazonaws.com/downloads/X-Lite_#{version}.dmg"

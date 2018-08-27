@@ -1,10 +1,9 @@
 cask 'rubymine' do
-  version '2017.2.1,172.3544.29'
-  sha256 'bd4e909c70660ac8dbf70ee0ff7f6e014edc8a22f3fa1c6fb9cf875ff27c515a'
+  version '2018.2.1,182.3911.41'
+  sha256 '16513cf89d197690827d98a787c8814c830c4d25e5aa6ff6307a79e002428c7e'
 
   url "https://download.jetbrains.com/ruby/RubyMine-#{version.before_comma}.dmg"
-  appcast 'https://data.services.jetbrains.com/products/releases?code=RM&latest=true&type=release',
-          checkpoint: 'd9a1e2a53aba031b11da3c2f82a48b21c6dc0db374afbaf174ad9624039ab2f4'
+  appcast 'https://data.services.jetbrains.com/products/releases?code=RM&latest=true&type=release'
   name 'RubyMine'
   homepage 'https://www.jetbrains.com/ruby/'
 
@@ -16,12 +15,10 @@ cask 'rubymine' do
     ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'mine') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }
   end
 
-  zap delete: [
-                "~/Library/Caches/RubyMine#{version.major_minor}",
-                "~/Library/Logs/RubyMine#{version.major_minor}",
-              ],
-      trash:  [
-                "~/Library/Application Support/RubyMine#{version.major_minor}",
-                "~/Library/Preferences/RubyMine#{version.major_minor}",
-              ]
+  zap trash: [
+               "~/Library/Application Support/RubyMine#{version.major_minor}",
+               "~/Library/Caches/RubyMine#{version.major_minor}",
+               "~/Library/Logs/RubyMine#{version.major_minor}",
+               "~/Library/Preferences/RubyMine#{version.major_minor}",
+             ]
 end

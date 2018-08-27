@@ -1,6 +1,6 @@
 cask 'ampps' do
-  version '3.7'
-  sha256 '62270b36bb45c9f6ec56e338e654c5a41b067a877d7c1f0b67e0af80ae37dd07'
+  version '3.8'
+  sha256 '56ec575ce053d9c99decb143832d2e5a8a1cfa26230503930dac61b5213c86de'
 
   url "http://files.ampps.com/AMPPS-#{version}.dmg"
   name 'AMPPS'

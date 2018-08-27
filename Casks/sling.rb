@@ -4,16 +4,15 @@ cask 'sling' do
 
   # webapp.movetv.com was verified as official when first introduced to the cask
   url 'http://webapp.movetv.com/player/osx/slingtv.dmg'
-  appcast 'http://webapp.movetv.com/config/desktopupdate/sling/osx/production/Sling-snowleopard-sparkle.xml',
-          checkpoint: 'de5d79e53e3360f27b4574c426e3662cb93efabd78f3026ed1c8639353e64d8b'
+  appcast 'http://webapp.movetv.com/config/desktopupdate/sling/osx/production/Sling-snowleopard-sparkle.xml'
   name 'Sling TV'
   homepage 'http://www.sling.com/'
 
   app 'Sling.app'
 
-  zap delete: [
-                '~/Library/Application Support/Sling-shell',
-                '~/Library/Caches/com.Echostar.Sling',
-                '~/Library/Preferences/com.Echostar.Sling.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Sling-shell',
+               '~/Library/Caches/com.Echostar.Sling',
+               '~/Library/Preferences/com.Echostar.Sling.plist',
+             ]
 end

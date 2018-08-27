@@ -6,15 +6,14 @@ cask 'bluesense' do
   name 'BlueSense'
   homepage 'https://apps.inspira.io/bluesense/'
 
-  auto_updates true
   depends_on macos: '>= :yosemite'
 
   app 'BlueSense.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.inspira.bluesense.plist',
-                '~/Library/Application Support/BlueSense',
-                '~/Library/Caches/com.inspira.bluesense',
-              ],
-      rmdir:  '~/Library/Application Scripts/com.inspira.bluesense'
+  zap trash: [
+               '~/Library/Preferences/com.inspira.bluesense.plist',
+               '~/Library/Application Support/BlueSense',
+               '~/Library/Caches/com.inspira.bluesense',
+             ],
+      rmdir: '~/Library/Application Scripts/com.inspira.bluesense'
 end

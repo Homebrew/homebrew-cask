@@ -1,10 +1,9 @@
 cask 'betterzip' do
-  version '4.0.1'
-  sha256 'd86d356efe3299d3ede725cd9821c8f3a36a791a8910aefc1c316b2aa4b1ba55'
+  version '4.1.3b'
+  sha256 'afa17b435a269b750e6ef4f109b9de995e807cf47658c910c5fe4c80034b3961'
 
   url "https://macitbetter.com/dl/BetterZip-#{version}.zip"
-  appcast "https://macitbetter.com/BetterZip#{version.major}.rss",
-          checkpoint: '3e463b0687c09b97515c0a492a33ede27a69ead8436604665b5c35ebc00d54a2'
+  appcast 'https://macitbetter.com/BetterZip.rss'
   name 'BetterZip'
   homepage 'https://macitbetter.com/'
 
@@ -13,18 +12,16 @@ cask 'betterzip' do
 
   app 'BetterZip.app'
 
-  zap delete: [
-                '~/Library/Application Scripts/com.macitbetter.betterzip.findersyncextension',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macitbetter.betterzip.sfl',
-                '~/Library/Caches/com.apple.helpd/Generated/com.macitbetter.betterzip.help',
-                '~/Library/Caches/com.macitbetter.betterzip',
-                '~/Library/Containers/com.macitbetter.betterzip.findersyncextension',
-                '~/Library/Group Containers/79RR9LPM2N.group.com.macitbetter.betterzip',
-                '~/Library/Group Containers/79RR9LPM2N.group.com.macitbetter.betterzip-setapp',
-                '~/Library/Saved Application State/com.macitbetter.betterzip.savedState',
-              ],
-      trash:  [
-                '~/Library/Application Support/com.macitbetter.betterzip',
-                '~/Library/Preferences/com.macitbetter.betterzip.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Scripts/com.macitbetter.betterzip.findersyncextension',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macitbetter.betterzip.sfl*',
+               '~/Library/Application Support/com.macitbetter.betterzip',
+               '~/Library/Caches/com.apple.helpd/Generated/com.macitbetter.betterzip.help*',
+               '~/Library/Caches/com.macitbetter.betterzip',
+               '~/Library/Containers/com.macitbetter.betterzip.findersyncextension',
+               '~/Library/Group Containers/79RR9LPM2N.group.com.macitbetter.betterzip',
+               '~/Library/Group Containers/79RR9LPM2N.group.com.macitbetter.betterzip-setapp',
+               '~/Library/Preferences/com.macitbetter.betterzip.plist',
+               '~/Library/Saved Application State/com.macitbetter.betterzip.savedState',
+             ]
 end

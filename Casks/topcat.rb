@@ -1,10 +1,9 @@
 cask 'topcat' do
-  version '4.4'
-  sha256 '60ac8689ff1aa0edce445a39d558946a8bfb2779e5d222550ad36c300bfb4560'
+  version '4.6-1'
+  sha256 'd26dcdec120d1498a4d97140396b93dd1ea7738364fcfa959e66a9e3201cadf2'
 
   url 'http://www.star.bris.ac.uk/~mbt/topcat/topcat-full.dmg'
-  appcast 'http://www.star.bris.ac.uk/~mbt/topcat/sun253/versions.html',
-          checkpoint: '5362ae0181d5c42defdd127047ebf31b56d15c4575cbf67bd090dcca59d20848'
+  appcast 'http://www.star.bris.ac.uk/~mbt/topcat/sun253/versions.html'
   name 'TOPCAT'
   homepage 'http://www.star.bris.ac.uk/~mbt/topcat/'
 

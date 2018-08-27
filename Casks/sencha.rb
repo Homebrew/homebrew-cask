@@ -1,6 +1,6 @@
 cask 'sencha' do
-  version '6.5.0.180'
-  sha256 '9de94fbc93f961ccd6cf069cfb181bbf590935f9bdbc27c35993839fe8f20119'
+  version '6.6.0.13'
+  sha256 'e9afc8c9f9d2eddf4f41d79869c68c3799ab6f237ba80e002d519cfd5a8a52b5'
 
   url "https://cdn.sencha.com/cmd/#{version}/jre/SenchaCmd-#{version}-osx.app.zip"
   name 'Sencha Cmd'
@@ -22,15 +22,14 @@ cask 'sencha' do
                       sudo:       true,
                     }
 
-  caveats <<-EOS.undent
-    Installing this Cask means you have AGREED to the Sencha Cmd License
+  caveats do
+    license 'https://www.sencha.com/legal/sencha-tools-software-license-agreement/'
+    <<~EOS
+      Sencha Cmd appends 1 line to your ~/.bash_profile or ~/.profile file:
 
-      https://www.sencha.com/legal/sencha-tools-software-license-agreement/
+        export PATH="/opt/Sencha/Cmd:$PATH"
 
-    Sencha Cmd appends 1 line to your ~/.bash_profile or ~/.profile file:
-
-      export PATH="/opt/Sencha/Cmd:$PATH"
-
-    If you are a zshell user, append both lines to your .zshrc file.
-  EOS
+      If you are a zshell user, append both lines to your .zshrc file.
+    EOS
+  end
 end

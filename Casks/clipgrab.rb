@@ -1,6 +1,6 @@
 cask 'clipgrab' do
-  version '3.6.5'
-  sha256 'a16c0c5858be5dfd7aa57d7c9885c8da3cba29082b2f3e19cdc90a2a26accbda'
+  version '3.6.9'
+  sha256 '7a4b15208a01c08e53f793802336e4930976e672bb04708f0a027d531250eeb8'
 
   url "https://download.clipgrab.org/ClipGrab-#{version}.dmg"
   name 'ClipGrab'
@@ -8,5 +8,5 @@ cask 'clipgrab' do
 
   app 'ClipGrab.app'
 
-  zap delete: '~/Library/Preferences/de.clipgrab.ClipGrab.plist'
+  zap trash: '~/Library/Preferences/de.clipgrab.ClipGrab.plist'
 end

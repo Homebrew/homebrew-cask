@@ -8,9 +8,7 @@ cask 'huamim' do
   name 'Flower Password'
   homepage 'https://flowerpassword.com/'
 
-  auto_updates true
-
   app 'HuaMiM.app'
 
-  zap delete: '~/Library/Preferences/com.warwithinme.HuaMiM.plist'
+  zap trash: '~/Library/Preferences/com.warwithinme.HuaMiM.plist'
 end

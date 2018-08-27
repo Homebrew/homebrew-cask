@@ -1,6 +1,6 @@
 cask 'keycue' do
-  version '8.5'
-  sha256 'f08c3cc847fbc08c3c31fcb5b77d773450c71b7f0a04f9d15584bf756feb4226'
+  version '9.0'
+  sha256 'ae6f2d7191377437cd5cee714c04909dae7fcd5dc9b7d4381212d332640013c8'
 
   url "http://www.ergonis.com/downloads/products/keycue/KeyCue#{version.no_dots}-Install.dmg",
       user_agent: :fake
@@ -9,8 +9,8 @@ cask 'keycue' do
 
   app 'KeyCue.app'
 
-  zap delete: [
-                '~/Library/Application Support/KeyCue',
-                '~/Library/Preferences/com.macility.keycue.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/KeyCue',
+               '~/Library/Preferences/com.macility.keycue.plist',
+             ]
 end

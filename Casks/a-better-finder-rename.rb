@@ -1,10 +1,9 @@
 cask 'a-better-finder-rename' do
-  version '10.20'
-  sha256 'f50cdb19192f1547d7257affd780852203dbc987216fdf468c486118d9b78d4f'
+  version '10.31'
+  sha256 '6d1a29d63a3275664cedcef13b8c8c046bd89d94ba90302fb1c5761d57e21fc1'
 
   url "http://www.publicspace.net/download/ABFRX#{version.major}.dmg"
-  appcast "http://www.publicspace.net/app/signed_abfr#{version.major}.xml",
-          checkpoint: '4f4cd6ccd15bcb0216ac8e8e54162a33172e07a489cd6397df425f82af31d1a4'
+  appcast "http://www.publicspace.net/app/signed_abfr#{version.major}.xml"
   name 'A Better Finder Rename'
   homepage 'http://www.publicspace.net/ABetterFinderRename/'
 
@@ -13,12 +12,12 @@ cask 'a-better-finder-rename' do
 
   app "A Better Finder Rename #{version.major}.app"
 
-  zap delete: [
-                "~/Library/Application Support/A Better Finder Rename #{version.major}",
-                "~/Library/Caches/com.apple.helpd/Generated/net.publicspace.abfr#{version.major}.help",
-                "~/Library/Caches/net.publicspace.abfr#{version.major}",
-                "~/Library/Cookies/net.publicspace.abfr#{version.major}.binarycookies",
-                "~/Library/Preferences/net.publicspace.abfr#{version.major}.plist",
-                "~/Library/Saved Application State/net.publicspace.abfr#{version.major}.savedState",
-              ]
+  zap trash: [
+               "~/Library/Application Support/A Better Finder Rename #{version.major}",
+               "~/Library/Caches/com.apple.helpd/Generated/net.publicspace.abfr#{version.major}.help*",
+               "~/Library/Caches/net.publicspace.abfr#{version.major}",
+               "~/Library/Cookies/net.publicspace.abfr#{version.major}.binarycookies",
+               "~/Library/Preferences/net.publicspace.abfr#{version.major}.plist",
+               "~/Library/Saved Application State/net.publicspace.abfr#{version.major}.savedState",
+             ]
 end

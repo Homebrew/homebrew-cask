@@ -4,16 +4,15 @@ cask 'spectacle-editor' do
 
   # github.com/FormidableLabs/spectacle-editor was verified as official when first introduced to the cask
   url "https://github.com/FormidableLabs/spectacle-editor/releases/download/v#{version}/Spectacle.Editor-#{version}.dmg"
-  appcast 'https://github.com/FormidableLabs/spectacle-editor/releases.atom',
-          checkpoint: 'd1035190c7acb31b161d495b84a919860f5b8901570a14430b22520243f1b789'
+  appcast 'https://github.com/FormidableLabs/spectacle-editor/releases.atom'
   name 'Spectacle Editor'
   homepage 'https://formidable.com/open-source/spectacle-editor/'
 
   app 'Spectacle Editor.app'
 
-  zap delete: [
-                '~/Library/Application Support/Spectacle Editor',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.formidable.spectacle-editor.sfl',
-                '~/Library/Preferences/com.formidable.spectacle-editor.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Spectacle Editor',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.formidable.spectacle-editor.sfl*',
+               '~/Library/Preferences/com.formidable.spectacle-editor.plist',
+             ]
 end

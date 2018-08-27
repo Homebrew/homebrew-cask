@@ -8,5 +8,5 @@ cask 'calq' do
 
   app 'Calq.app'
 
-  zap delete: '~/Library/Preferences/com.katoemba.calq.plist'
+  zap trash: '~/Library/Preferences/com.katoemba.calq.plist'
 end

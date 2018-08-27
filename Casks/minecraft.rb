@@ -9,9 +9,9 @@ cask 'minecraft' do
 
   app 'Minecraft.app'
 
-  zap delete: [
-                '~/Library/Caches/com.mojang.minecraftlauncher',
-                '~/Library/Caches/com.mojang.minecraftlauncherupdater',
-                '~/Library/Application Support/Minecraft Launcher',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.mojang.minecraftlauncher',
+               '~/Library/Caches/com.mojang.minecraftlauncherupdater',
+               '~/Library/Application Support/Minecraft Launcher',
+             ]
 end

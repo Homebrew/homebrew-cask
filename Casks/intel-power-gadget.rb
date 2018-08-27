@@ -1,6 +1,6 @@
 cask 'intel-power-gadget' do
-  version '3.0.7,553992'
-  sha256 '4474360bf027a76b69a5803a681ff9cded1e0a92c9e03c57bfc127d29eea0319'
+  version '3.5.3,655065'
+  sha256 'a148715a956f1049a81a420244c919cf6f1678bbece9f79a42167c5485e83ded'
 
   url "https://software.intel.com/file/#{version.after_comma}/download?#.dmg"
   name 'Intel Power Gadget'
@@ -8,5 +8,6 @@ cask 'intel-power-gadget' do
 
   pkg 'Install Intel Power Gadget.pkg'
 
-  uninstall pkgutil: 'com.intel.pkg.PowerGadget.*'
+  uninstall pkgutil: 'com.intel.pkg.PowerGadget.*',
+            kext:    'EnergyDriver'
 end

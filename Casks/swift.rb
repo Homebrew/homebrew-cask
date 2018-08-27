@@ -1,6 +1,6 @@
 cask 'swift' do
-  version '3.0'
-  sha256 '8849a59f0875f2d3e2c8a99a171b4f0177f98ecc2241deac92509056858f5024'
+  version '4.0'
+  sha256 '74840f20c470483ea752e8d1d97e74c8c705a435c43075e1f3e888a93692e35e'
 
   url "https://swift.im/downloads/releases/swift-#{version}/Swift-#{version}.dmg"
   name 'Swift XMPP Client'

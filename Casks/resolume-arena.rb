@@ -1,14 +1,21 @@
 cask 'resolume-arena' do
-  version '5.1.4'
-  sha256 '9d867a61e2860df24cc06a102d43776616ebbdc563cfe1c97b68e755011efb74'
+  version '6.0.11,61108'
+  sha256 '9d9498dd9f4fb844b88e603399df3581367ac19a039eb4e4fd06c1884c411e35'
 
-  # d19j6z4lvv1vde.cloudfront.net was verified as official when first introduced to the cask
-  url "https://d19j6z4lvv1vde.cloudfront.net/Resolume_Arena_#{version.dots_to_underscores}_Installer.dmg"
+  url "https://resolume.com/download/Resolume_Arena_#{version.major_minor_patch.dots_to_underscores}_rev_#{version.after_comma}_Installer.dmg"
+  appcast 'https://resolume.com/update/arena_mac.xml'
   name 'Resolume Arena'
   homepage 'https://resolume.com/'
 
-  pkg "Resolume Arena #{version} Installer.pkg"
+  pkg 'Resolume Arena Installer.pkg'
 
-  uninstall pkgutil: "com.resolume.pkg.ResolumeArena#{version.no_dots}",
-            delete:  "/Applications/Resolume Arena #{version}"
+  uninstall pkgutil:   'com.resolume.pkg.ResolumeArena.*',
+            delete:    "/Applications/Resolume Arena #{version.major}",
+            signal:    ['TERM', 'com.resolume.arena'],
+            launchctl: 'com.resolume.arena'
+
+  zap pkgutil: [
+                 'com.resolume.pkg.ResolumeDXV',
+                 'com.resolume.pkg.ResolumeQuickLook',
+               ]
 end

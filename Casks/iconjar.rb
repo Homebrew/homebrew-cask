@@ -1,11 +1,10 @@
 cask 'iconjar' do
-  version '1.5.0,23382:1501437355'
-  sha256 '51b024ae70a448ca45e6e851e8d7f0f6da88b67f4dcc93dfbc5ba18a5f41274e'
+  version '1.10.1,28427:1530305421'
+  sha256 '30a14dafe5bdfe830707310658d3b4ac1db4420167490d62c3754d76beb653b4'
 
   # dl.devmate.com/com.iconjar.iconjar was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.iconjar.iconjar/#{version.after_comma.before_colon}/#{version.after_colon}/Iconjar-#{version.after_comma.before_colon}.zip"
-  appcast 'https://updates.devmate.com/com.iconjar.iconjar.xml',
-          checkpoint: 'fb5f4480508778dd008a650894156f5bc0d5f241ac85a4b34943e02b8ed58e46'
+  appcast 'https://updates.devmate.com/com.iconjar.iconjar.xml'
   name 'IconJar'
   homepage 'https://geticonjar.com/'
 
@@ -13,9 +12,9 @@ cask 'iconjar' do
 
   app 'IconJar.app'
 
-  zap delete: [
-                '/Users/Shared/IconJar',
-                '~/Library/Application Support/IconJar',
-                '~/Library/Preferences/com.iconjar.iconjar.plist',
-              ]
+  zap trash: [
+               '/Users/Shared/IconJar',
+               '~/Library/Application Support/IconJar',
+               '~/Library/Preferences/com.iconjar.iconjar.plist',
+             ]
 end

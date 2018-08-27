@@ -1,6 +1,6 @@
 cask 'sqlpro-for-postgres' do
-  version '1.0.115'
-  sha256 '2e1bb4338436aa10c153fc6d80c78b1aa9e264e13e0ac75195d1ed11907f99a5'
+  version '1.0.127'
+  sha256 'dfee118e7003485cfb863ae7603173ad8c95064d585c8d9435af66745b25e8f6'
 
   # d3fwkemdw8spx3.cloudfront.net/postgres was verified as official when first introduced to the cask
   url "https://d3fwkemdw8spx3.cloudfront.net/postgres/SQLProPostgres.#{version}.app.zip"
@@ -9,8 +9,8 @@ cask 'sqlpro-for-postgres' do
 
   app 'SQLPro for Postgres.app'
 
-  zap delete: [
-                '~/Library/Containers/com.hankinsoft.osx.sqlpropostgres',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.sqlpropostgres.sfl',
-              ]
+  zap trash: [
+               '~/Library/Containers/com.hankinsoft.osx.sqlpropostgres',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.sqlpropostgres.sfl*',
+             ]
 end

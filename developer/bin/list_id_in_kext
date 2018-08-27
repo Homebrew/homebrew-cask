@@ -77,7 +77,7 @@ stanza, eg
 The kext need not be loaded for this script to work.
 
 If a given kext is currently loaded, it will be followed by a plus
-symbol '(+)' in the output.  This can be verified via the command
+symbol '(+)' in the output. This can be verified via the command
 
     /usr/sbin/kextstat -kl -b 'kext.id.goes.here'
 

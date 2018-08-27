@@ -1,6 +1,6 @@
 cask 'faw-circle' do
-  version '2.0.1'
-  sha256 'aa201dd641f7270cdf791065ec0f855b2d6949f60243cbf9675e63318b4aefed'
+  version '2.1.0-RC3'
+  sha256 '8d5cbcddb79f05c5bc463889fada3fac773d277d4fb246beb1a38181ad751e93'
 
   url "http://futureaudioworkshop.com/downloads/Circle-#{version}-setup.dmg"
   name 'FAW Circle'

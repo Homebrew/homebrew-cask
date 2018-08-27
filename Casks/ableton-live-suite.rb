@@ -1,14 +1,14 @@
 cask 'ableton-live-suite' do
-  version '9.7.3'
-  sha256 '97a8083b2b8776421a4f6a67f5074ce2f3b36def6b01f7d16e28ffdd86354dac'
+  version '10.0.2'
+  sha256 '94df1bcc1c5cc69a739aa1bf0eaac1651a528d37dbe3c62314d6937456ba6fb4'
 
-  url "http://cdn2-downloads.ableton.com/channels/#{version}/ableton_live_suite_#{version}_64.dmg"
+  url "http://cdn-downloads.ableton.com/channels/#{version}/ableton_live_suite_#{version}_64.dmg"
+  appcast "https://www.ableton.com/en/release-notes/live-#{version.major}/"
   name 'Ableton Live Suite'
   homepage 'https://www.ableton.com/en/live/'
 
-  app "Ableton Live #{version[0]} Suite.app"
+  app "Ableton Live #{version.major} Suite.app"
 
-  zap delete: '~/Library/*/*[Aa]bleton*',
-      rmdir:  '~/Music/Ableton/Factory Packs'
-  #:trash => '~/Music/Ableton/User Library'
+  zap trash: '~/Library/*/*[Aa]bleton*',
+      rmdir: '~/Music/Ableton/Factory Packs'
 end

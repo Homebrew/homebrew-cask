@@ -17,8 +17,8 @@ cask 'hma-pro-vpn' do
                          '/Library/PrivilegedHelperTools/com.privax.hmaprovpn.helper',
                        ]
 
-  zap delete: [
-                '~/Library/Preferences/com.privax.hmaprovpn.plist',
-                '~/Library/Saved Application State/com.privax.hmaprovpn.savedState',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.privax.hmaprovpn.plist',
+               '~/Library/Saved Application State/com.privax.hmaprovpn.savedState',
+             ]
 end

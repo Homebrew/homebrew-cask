@@ -1,10 +1,9 @@
 cask 'vmware-remote-console' do
-  version '10.0.1-5898794'
-  sha256 '4eaed6c0b192e6658d0d03999b9d25c1d527866d00e94b8d684a9ec8e1dbd6d6'
+  version '10.0.3-9300449'
+  sha256 'de55eb32d7dcd8207ecca864902f77f7000e6a89a751ce24046873a15e14b1a7'
 
   url "https://softwareupdate.vmware.com/cds/vmw-desktop/vmrc/#{version.hyphens_to_slashes}/macos/com.vmware.vmrc.zip.tar"
-  appcast 'https://softwareupdate.vmware.com/cds/vmw-desktop/vmrc-macos.xml',
-          checkpoint: 'b400380bbcfc3e5fecac84d28a02e592d96af0b3ab1ab1574a77d4ab10a00e25'
+  appcast 'https://softwareupdate.vmware.com/cds/vmw-desktop/vmrc-macos.xml'
   name 'VMware Remote Console for Mac'
   homepage 'https://www.vmware.com/support/pubs/vmrc_pubs.html'
 
@@ -25,5 +24,5 @@ cask 'vmware-remote-console' do
 
   uninstall quit: 'com.vmware.vmrc'
 
-  zap delete: '/Library/Logs/VMRC Services.log'
+  zap trash: '/Library/Logs/VMRC Services.log'
 end

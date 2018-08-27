@@ -4,6 +4,7 @@ cask 'moedict' do
 
   # github.com/racklin/moedict-desktop was verified as official when first introduced to the cask
   url "https://github.com/racklin/moedict-desktop/releases/download/#{version}/moedict-desktop.app-#{version}.dmg"
+  appcast 'https://github.com/racklin/moedict-desktop/releases.atom'
   name 'Moedict'
   homepage 'https://racklin.github.io/moedict-desktop/'
 

@@ -4,8 +4,7 @@ cask 'domainbrain' do
 
   # s3.amazonaws.com/joeworkman_downloads was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/joeworkman_downloads/DomainBrain.zip'
-  appcast "https://domainbrainapp.com/appcast_v#{version.major}.xml",
-          checkpoint: 'e38e9b967c88762e504ef9afaedece6e944d77ad0680ad2703aa00443fe20f1e'
+  appcast "https://domainbrainapp.com/appcast_v#{version.major}.xml"
   name 'DomainBrain'
   homepage 'https://domainbrainapp.com/'
 
@@ -13,9 +12,9 @@ cask 'domainbrain' do
 
   app 'DomainBrain.app'
 
-  zap delete: [
-                '~/Library/Application Support/DomainBrain',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.onebuttonmouse.domainbrain2.sfl',
-                '~/Library/Preferences/com.onebuttonmouse.DomainBrain2.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/DomainBrain',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.onebuttonmouse.domainbrain2.sfl*',
+               '~/Library/Preferences/com.onebuttonmouse.DomainBrain2.plist',
+             ]
 end

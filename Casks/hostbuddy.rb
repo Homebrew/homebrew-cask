@@ -4,8 +4,7 @@ cask 'hostbuddy' do
 
   # downloads-clickonideas.netdna-ssl.com/hostbuddy was verified as official when first introduced to the cask
   url "https://downloads-clickonideas.netdna-ssl.com/hostbuddy/hostbuddy_#{version}.zip"
-  appcast 'https://shine.clickontyler.com/appcast.php?id=22',
-          checkpoint: '5374460f8275768f75986c50d0a7a207bb259638b54fd9f0bf7795611d084606'
+  appcast 'https://shine.clickontyler.com/appcast.php?id=22'
   name 'Hostbuddy'
   homepage 'https://clickontyler.com/hostbuddy/'
 

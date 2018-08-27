@@ -9,5 +9,5 @@ cask 'touchosc-editor' do
   app "touchosc-editor-#{version}-osx/TouchOSC Editor.app"
   artifact "touchosc-editor-#{version}-osx/layouts", target: Pathname.new(File.expand_path('~')).join('Library/Application Support/TouchOSCEditor/layouts')
 
-  zap delete: '~/Library/*/*TouchOSCEditor*'
+  zap trash: '~/Library/*/*TouchOSCEditor*'
 end

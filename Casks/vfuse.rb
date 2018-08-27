@@ -1,20 +1,15 @@
 cask 'vfuse' do
-  version '1.0.5'
-  sha256 '2bfad0d1c91db75afa2cc7149298037c1bcfedf74c775eab2139efbb1265539e'
+  version '2.0.6'
+  sha256 '2aef3b69b8e3c108d41585897c1ed631e9717d0427b359d3dea171e358768bed'
 
   url "https://github.com/chilcote/vfuse/releases/download/#{version}/vfuse-#{version}.pkg"
-  appcast 'https://github.com/chilcote/vfuse/releases.atom',
-          checkpoint: 'a47858a7de4b5df3df3106149a694e8883397f46ffb51d55ae2eab39efff812c'
+  appcast 'https://github.com/chilcote/vfuse/releases.atom'
   name 'vfuse'
   homepage 'https://github.com/chilcote/vfuse'
 
   pkg "vfuse-#{version}.pkg"
-  binary '/usr/local/vfuse/vfuse'
 
-  uninstall launchctl: 'com.chilcote.vfused',
-            pkgutil:   'com.github.vfuse'
-
-  zap trash: '~/Library/Preferences/com.chilcote.vfused.plist'
+  uninstall pkgutil: 'com.github.vfuse'
 
   caveats do
     files_in_usr_local

@@ -6,7 +6,7 @@ cask 'mipony' do
   name 'Mipony'
   homepage 'http://www.mipony.net/'
 
-  pkg 'Mipony-Installer.pkg', allow_untrusted: true
+  pkg 'Mipony-Installer.pkg'
 
   uninstall pkgutil: 'net.installer.mipony.*'
 end

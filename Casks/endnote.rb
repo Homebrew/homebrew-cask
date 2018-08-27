@@ -10,12 +10,12 @@ cask 'endnote' do
 
   suite "EndNote X#{version}"
 
-  zap delete: [
-                '/Library/Application Support/ResearchSoft/EndNote',
-                '~/Library/Application Support/EndNote',
-                '~/Library/Caches/com.ThomsonResearchSoft.EndNote',
-                '~/Library/Services/ENService.app',
-                '~/Library/Spotlight/EndNote.mdimporter',
-              ],
-      trash:  '~/Library/Preferences/com.ThomsonResearchSoft.EndNote.plist'
+  zap trash: [
+               '/Library/Application Support/ResearchSoft/EndNote',
+               '~/Library/Application Support/EndNote',
+               '~/Library/Caches/com.ThomsonResearchSoft.EndNote',
+               '~/Library/Preferences/com.ThomsonResearchSoft.EndNote.plist',
+               '~/Library/Services/ENService.app',
+               '~/Library/Spotlight/EndNote.mdimporter',
+             ]
 end

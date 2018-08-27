@@ -7,14 +7,12 @@ cask 'steamcmd' do
   name 'SteamCMD'
   homepage 'https://developer.valvesoftware.com/wiki/SteamCMD'
 
-  auto_updates true
-
-  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/steamcmd.sh.wrapper.sh"
   binary shimscript, target: 'steamcmd'
 
   preflight do
-    IO.write shimscript, <<-EOS.undent
+    IO.write shimscript, <<~EOS
       #!/bin/sh
       exec '#{staged_path}/steamcmd.sh' "$@"
     EOS

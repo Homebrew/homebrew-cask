@@ -1,10 +1,9 @@
 cask 'wavesurfer' do
   version '1.8.8p5'
-  sha256 '961fb77a12d1de94f38b1af896ddd017f65f0bc13f335862cf6392631006bd9a'
+  sha256 '798f0eb2c542742892d1541554ff58245040b49c450ba93fbdcaacca129e8dca'
 
   url "https://downloads.sourceforge.net/wavesurfer/wavesurfer-#{version}-osx-i386.dmg"
-  appcast 'https://sourceforge.net/projects/wavesurfer/rss',
-          checkpoint: '620ae6885b402e925edfd9901f176336d056697bf9dc187da55cdb5047cc91bf'
+  appcast 'https://sourceforge.net/projects/wavesurfer/rss'
   name 'WaveSurfer'
   homepage 'https://sourceforge.net/projects/wavesurfer/'
 

@@ -1,13 +1,13 @@
 cask 'tunnelblick' do
-  version '3.7.2,4850'
-  sha256 '1a56e4335023de54985f68731b9ca114d0a2aa08124623642f2e8b200e67726d'
+  version '3.7.6a,5080'
+  sha256 '42b50bd09296f98e55bdf4262a33d42067d1922157b010a02976cc74f514b677'
 
-  # github.com/Tunnelblick/Tunnelblick/releases/download was verified as official when first introduced to the cask
+  # github.com/Tunnelblick/Tunnelblick was verified as official when first introduced to the cask
   url "https://github.com/Tunnelblick/Tunnelblick/releases/download/v#{version.before_comma}/Tunnelblick_#{version.before_comma}_build_#{version.after_comma}.dmg"
-  appcast 'https://github.com/Tunnelblick/Tunnelblick/releases.atom',
-          checkpoint: '340646a885d5388cb56ba925eb83db2cecdbbbbbccf0de29d9fbd82e5c3ab810'
+  appcast 'https://github.com/Tunnelblick/Tunnelblick/releases.atom'
   name 'Tunnelblick'
   homepage 'https://www.tunnelblick.net/'
+  gpg "#{url}.asc", key_id: '76df975a1c5642774fb09868ff5fd80e6bb9367e'
 
   auto_updates true
 
@@ -23,17 +23,16 @@ cask 'tunnelblick' do
                        ],
             quit:      'net.tunnelblick.tunnelblick'
 
-  zap delete: [
-                '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/net.tunnelblick.tunnelblick.help',
-                '~/Library/Caches/net.tunnelblick.tunnelblick',
-              ],
-      trash:  [
-                '/Library/Application Support/Tunnelblick',
-                '~/Library/Application Support/Tunnelblick',
-                '~/Library/Preferences/net.tunnelblick.tunnelblick.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Tunnelblick',
+               '~/Library/Caches/net.tunnelblick.tunnelblick',
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/Tunnelblick*',
+               '~/Library/Cookies/net.tunnelblick.tunnelblick.binarycookies',
+               '~/Library/Preferences/net.tunnelblick.tunnelblick.plist',
+               '/Library/Application Support/Tunnelblick',
+             ]
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     For security reasons, #{token} must be installed to /Applications,
     and will request to be moved at launch.
   EOS

@@ -4,8 +4,7 @@ cask 'nylas-mail' do
 
   # edgehill.s3-us-west-2.amazonaws.com was verified as official when first introduced to the cask
   url "https://edgehill.s3-us-west-2.amazonaws.com/#{version}/darwin/x64/NylasMail.dmg"
-  appcast 'https://edgehill.nylas.com/update-check?platform=darwin&arch=64',
-          checkpoint: 'c333095da7f2b03c74c7c8b44605108502566725fed36e20ad1f7099533fc23b'
+  appcast 'https://edgehill.nylas.com/update-check?platform=darwin&arch=64'
   name 'Nylas Mail'
   homepage 'https://www.nylas.com/'
 
@@ -13,15 +12,20 @@ cask 'nylas-mail' do
 
   app 'Nylas Mail.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nylas.nylas-mail.sfl',
-                '~/Library/Application Support/com.nylas.nylas-mail.ShipIt',
-                '~/Library/Application Support/Nylas Mail',
-                '~/Library/Caches/com.nylas.nylas-mail',
-                '~/Library/Caches/com.nylas.nylas-mail.ShipIt',
-                '~/Library/Caches/Nylas Mail',
-                '~/Library/Preferences/com.nylas.nylas-mail.plist',
-                '~/Library/Saved Application State/com.nylas.nylas-mail.savedState',
-                '~/.nylas-mail',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nylas.nylas-mail.sfl*',
+               '~/Library/Application Support/com.nylas.nylas-mail.ShipIt',
+               '~/Library/Application Support/Nylas Mail',
+               '~/Library/Caches/com.nylas.nylas-mail',
+               '~/Library/Caches/com.nylas.nylas-mail.ShipIt',
+               '~/Library/Caches/Nylas Mail',
+               '~/Library/Preferences/com.nylas.nylas-mail.helper.plist',
+               '~/Library/Preferences/com.nylas.nylas-mail.plist',
+               '~/Library/Saved Application State/com.nylas.nylas-mail.savedState',
+               '~/.nylas-mail',
+             ]
+
+  caveats do
+    discontinued
+  end
 end

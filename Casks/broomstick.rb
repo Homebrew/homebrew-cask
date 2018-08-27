@@ -4,7 +4,7 @@ cask 'broomstick' do
 
   url "http://downloads.zibity.com/Broomstick/Broomstick%20#{version}.zip"
   name 'Broomstick'
-  homepage 'http://www.zibity.com/goodies.html'
+  homepage 'https://www.zibity.com/goodies.html'
 
   app 'Broomstick.app'
 end

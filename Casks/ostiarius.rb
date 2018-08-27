@@ -4,8 +4,7 @@ cask 'ostiarius' do
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/Ostiarius_#{version}.zip"
-  appcast 'https://objective-see.com/products/changelogs/Ostiarius.txt',
-          checkpoint: 'cd88c0baf70a21fd24616cdfa6821e14804874e0725802cd9ff585eb38772a10'
+  appcast 'https://objective-see.com/products/changelogs/Ostiarius.txt'
   name 'Ostiarius'
   homepage 'https://objective-see.com/products/ostiarius.html'
 
@@ -15,7 +14,7 @@ cask 'ostiarius' do
 
   uninstall quit:   'com.objectiveSee.Ostiarius',
             kext:   'com.objective-see.OstiariusKext',
-            delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.objectivesee.ostiarius.sfl'
+            delete: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.objectivesee.ostiarius.sfl*'
 
   caveats do
     discontinued

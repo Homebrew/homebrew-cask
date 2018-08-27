@@ -1,10 +1,11 @@
 cask 'smart-scroll' do
-  version '4.3.5'
-  sha256 '8c8f72331f99315c848d085299dc7b7c5710dafe90967569f28feb2911f0efea'
+  version '4.3.11'
+  sha256 '99d798a213a502d1d08cc07d257b28b42fe26773827a5f93530c73f59ebfc3f9'
 
   url 'https://www.marcmoini.com/SmartScroll.dmg'
+  appcast 'https://www.marcmoini.com/sxv_en.html'
   name 'Smart Scroll'
   homepage 'https://www.marcmoini.com/sx_en.html'
 
-  prefpane "Smart Scroll #{version}.prefPane"
+  prefpane 'Smart Scroll.prefPane'
 end

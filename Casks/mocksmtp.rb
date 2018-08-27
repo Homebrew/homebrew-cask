@@ -6,5 +6,7 @@ cask 'mocksmtp' do
   name 'MockSMTP'
   homepage 'http://mocksmtpapp.com/'
 
+  depends_on macos: '<= :yosemite'
+
   app 'MockSmtp.app'
 end

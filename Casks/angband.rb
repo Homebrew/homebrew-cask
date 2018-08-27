@@ -1,10 +1,9 @@
 cask 'angband' do
-  version '4.1.0'
-  sha256 '3d4be91d4cacbec9bff959baefccb6ffdbb726fe5688f7b653a60623ab1b9595'
+  version '4.1.3'
+  sha256 'b196392e8607dcc3a10ce66649762131f0bf6fdf7c981fed25bf214c84ed3905'
 
   url "http://rephial.org/downloads/#{version.major_minor}/Angband-#{version}-osx.dmg"
-  appcast 'http://rephial.org/release/',
-          checkpoint: '9738caaca45468753fd5249b0c87e277774a51a8a457797db5fb1eea9177d2dc'
+  appcast 'http://rephial.org/release/'
   name 'Angband'
   homepage 'http://rephial.org/'
 

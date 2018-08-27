@@ -1,8 +1,8 @@
 cask 'no-ip-duc' do
-  version '3.2.1'
-  sha256 'b59b159d1f9e2b64d6514577946b77f2c7f11767aa507a9c2bc2aa39ae9e4ffd'
+  version '4.0.12'
+  sha256 '8c631c1c0c6b82b063c634f11c8b8d3ab2dd8dfb6b439f419055afc291ea42a0'
 
-  url "https://www.noip.com/client/mac/noip#{version}.dmg"
+  url "https://www.noip.com/client/macos/No-IP_DUC_v#{version}.dmg"
   name 'No-IP DUC'
   homepage 'https://www.noip.com/download?page=mac'
 

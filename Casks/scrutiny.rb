@@ -1,21 +1,18 @@
 cask 'scrutiny' do
-  version '7.4.3'
-  sha256 'cadb2c325a44c1e580f9289f1edd7c2dedce966971b5bdc4c21a22a35f6324e9'
+  version '8.1.8'
+  sha256 '7992af698bb28f0ee02e9a1ccd9b2d8cddc4e7720273590817f9f7cca1d3c401'
 
   url 'http://peacockmedia.software/mac/scrutiny/scrutiny.dmg'
-  appcast "http://peacockmedia.software/mac/scrutiny/updates/v#{version.major}currentversion.plist",
-          checkpoint: 'fffded6738d456779ce0e908a52dda4e2fe600515a1bb6b97fca07d838f6dee4'
+  appcast 'http://peacockmedia.software/mac/scrutiny/version_history.html'
   name 'Scrutiny'
   homepage 'http://peacockmedia.software/mac/scrutiny/'
 
   app "Scrutiny #{version.major}.app"
 
-  zap delete: [
-                "~/Library/Caches/com.peacockmedia.Scrutiny-#{version.major}",
-                "~/Library/Cookies/com.peacockmedia.Scrutiny-#{version.major}.binarycookies",
-              ],
-      trash:  [
-                "~/Library/Application Support/Scrutiny #{version.major}",
-                "~/Library/Preferences/com.peacockmedia.Scrutiny-#{version.major}.plist",
-              ]
+  zap trash: [
+               "~/Library/Application Support/Scrutiny #{version.major}",
+               "~/Library/Caches/com.peacockmedia.Scrutiny-#{version.major}",
+               "~/Library/Cookies/com.peacockmedia.Scrutiny-#{version.major}.binarycookies",
+               "~/Library/Preferences/com.peacockmedia.Scrutiny-#{version.major}.plist",
+             ]
 end

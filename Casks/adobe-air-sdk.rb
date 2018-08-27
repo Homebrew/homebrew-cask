@@ -1,8 +1,9 @@
 cask 'adobe-air-sdk' do
-  version '26.0'
-  sha256 'dececd6dc01f6fdd53f410a6c7dc70037f34af07de49ca8ccd54c945c4284af1'
+  version '30.0.0.107'
+  sha256 'f1f95129fbc48b0625cda9d94c4e02fa704f287698dd1ff7d5051a617fca3077'
 
-  url "https://airdownload.adobe.com/air/mac/download/#{version}/AIRSDK_Compiler.dmg"
+  url "https://airdownload.adobe.com/air/mac/download/#{version.major_minor}/AIRSDK_Compiler.dmg"
+  appcast 'https://helpx.adobe.com/au/air/kb/archived-air-sdk-version.html'
   name 'Adobe AIR SDK'
   homepage 'https://www.adobe.com/devnet/air/air-sdk-download.html'
 
@@ -36,8 +37,8 @@ cask 'adobe-air-sdk' do
       'swcdepends',
       'swfdump',
     ].each do |shimscript|
-      # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
-      IO.write "#{staged_path}/bin/#{shimscript}.wrapper.sh", <<-EOS.undent
+      # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+      IO.write "#{staged_path}/bin/#{shimscript}.wrapper.sh", <<~EOS
         #!/bin/sh
         exec '#{staged_path}/bin/#{shimscript}' "$@"
       EOS
@@ -52,9 +53,9 @@ cask 'adobe-air-sdk' do
     FileUtils.rm("#{HOMEBREW_PREFIX}/share/adobe-air-sdk")
   end
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     You may want to add to your profile:
-      'export ADOBE_AIR_HOME=#{HOMEBREW_PREFIX}/share/adobe-air-sdk'
+      'export ADOBE_AIR_HOME="#{HOMEBREW_PREFIX}/share/adobe-air-sdk"'
 
     This operation may take up to 10 minutes depending on your internet connection.
     Please, be patient.

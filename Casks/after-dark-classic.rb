@@ -14,9 +14,9 @@ cask 'after-dark-classic' do
                        'jp.co.infinisys.flyingToastersmowingmanAndBoris.MowingMan.pkg',
                      ]
 
-  zap delete: [
-                '~/Library/Preferences/ByHost/jp.co.infinisys.boris.*.plist',
-                '~/Library/Preferences/ByHost/jp.co.infinisys.flyingtoasters.*.plist',
-                '~/Library/Preferences/ByHost/jp.co.infinisys.mowingman.*.plist',
-              ]
+  zap trash: [
+               '~/Library/Preferences/ByHost/jp.co.infinisys.boris.*.plist',
+               '~/Library/Preferences/ByHost/jp.co.infinisys.flyingtoasters.*.plist',
+               '~/Library/Preferences/ByHost/jp.co.infinisys.mowingman.*.plist',
+             ]
 end

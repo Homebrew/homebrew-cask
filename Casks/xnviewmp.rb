@@ -6,7 +6,5 @@ cask 'xnviewmp' do
   name 'XnViewMP'
   homepage 'http://www.xnview.com/'
 
-  auto_updates true
-
   app 'XnViewMP.app'
 end

@@ -1,10 +1,9 @@
 cask 'tripmode' do
-  version '2.0.1-492'
-  sha256 '03ff98645a6512b9f2dba8f05d4e6437340b1a2eeea0701dafdea2213d511317'
+  version '2.1.4-743'
+  sha256 'd72d4a37696fc927dbfab52420e6ac56d73860eb6d59e31586edd5a0c9802f92'
 
   url "https://www.tripmode.ch/app/TripMode-#{version}-app.dmg"
-  appcast 'http://updates.tripmode.ch/app/appcast.xml',
-          checkpoint: '1c589ebad8ed5f9c36a702b070882b73612030eb42bd23587d2106c1399d5e8e'
+  appcast 'https://www.tripmode.ch/app/appcast.xml'
   name 'TripMode'
   homepage 'https://www.tripmode.ch/'
 
@@ -12,5 +11,17 @@ cask 'tripmode' do
 
   app 'TripMode.app'
 
-  zap trash: '~/Library/Preferences/ch.tripmode.TripMode.plist'
+  uninstall signal:    ['TERM', 'ch.tripmode.TripMode'],
+            launchctl: [
+                         'ch.tripmode.nke.TripMode',
+                         'ch.tripmode.TripMode.HelperTool',
+                       ],
+            delete:    '/Library/PrivilegedHelperTools/ch.tripmode.TripMode.HelperTool'
+
+  zap trash: [
+               '/Library/Application Support/Tripmode',
+               '~/Library/Application Support/Tripmode',
+               '~/Library/Caches/ch.tripmode.TripMode',
+               '~/Library/Preferences/ch.tripmode.TripMode.plist',
+             ]
 end

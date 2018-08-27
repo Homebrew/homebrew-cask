@@ -4,20 +4,19 @@ cask 'knock' do
 
   # knock-updates.s3.amazonaws.com was verified as official when first introduced to the cask
   url 'https://knock-updates.s3.amazonaws.com/Knock.zip'
-  appcast 'https://knock-updates.s3.amazonaws.com/Knock.xml',
-          checkpoint: 'ca44d5a1fdc3bc619f61202a52c92118da0dc37fb474beaab9d5c93b79431b9b'
+  appcast 'https://knock-updates.s3.amazonaws.com/Knock.xml'
   name 'Knock'
   homepage 'http://www.knocktounlock.com/'
 
   app 'Knock.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.knock.mac.plist',
-                '~/Library/Logs/Knock',
-                '~/Library/Caches/com.knock.mac',
-                '~/Library/Caches/com.crashlytics.data/com.knock.mac',
-              ],
-      rmdir:  [
-                '~/Library/Caches/com.crashlytics.data',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.knock.mac.plist',
+               '~/Library/Logs/Knock',
+               '~/Library/Caches/com.knock.mac',
+               '~/Library/Caches/com.crashlytics.data/com.knock.mac',
+             ],
+      rmdir: [
+               '~/Library/Caches/com.crashlytics.data',
+             ]
 end

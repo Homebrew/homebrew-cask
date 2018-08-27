@@ -10,8 +10,8 @@ cask 'hp-eprint' do
 
   uninstall pkgutil: 'com.hp.pkg.cloudprint.HP-ePrint-Mobile'
 
-  zap delete: [
-                '~/Library/Containers/com.hp.cloudprint.HP-ePrint-Mobile',
-                '~/Library/PDF Services/HP ePrint',
-              ]
+  zap trash: [
+               '~/Library/Containers/com.hp.cloudprint.HP-ePrint-Mobile',
+               '~/Library/PDF Services/HP ePrint',
+             ]
 end

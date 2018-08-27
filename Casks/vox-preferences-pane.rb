@@ -4,8 +4,7 @@ cask 'vox-preferences-pane' do
 
   # devmate.com/com.coppertino.VoxPrefs was verified as official when first introduced to the cask
   url 'https://dl.devmate.com/com.coppertino.VoxPrefs/VoxPrefs.dmg'
-  appcast 'http://updateinfo.devmate.com/com.coppertino.VoxPrefs/updates.xml',
-          checkpoint: 'f0e62eb9fa14eda0bf00e5298ae4ccff8f1126eb42642d8e4cee341af93e9e16'
+  appcast 'http://updateinfo.devmate.com/com.coppertino.VoxPrefs/updates.xml'
   name 'VOX Preferences'
   homepage 'https://vox.rocks/mac-music-player/control-extension-download'
 

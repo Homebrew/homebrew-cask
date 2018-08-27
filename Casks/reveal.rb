@@ -1,12 +1,13 @@
 cask 'reveal' do
-  version '8'
-  sha256 'c0cff3320276e465822f763a059d1fa7449d3e86fdf6b76df078c7826cd668b8'
+  version '17'
+  sha256 'c319812397b39062d05a445b5ee40f3d1eef304f26bb3871f1f2767bab8a8449'
 
   url "https://download.revealapp.com/Reveal.app-#{version}.zip"
-  appcast 'https://revealapp.com/download/',
-          checkpoint: '37ccf49372e6e047fb88af4cdaad7a485d7b5175183f4935db8797f8c36a0972'
+  appcast 'https://revealapp.com/download/'
   name 'Reveal'
   homepage 'https://revealapp.com/'
+
+  depends_on macos: '>= :sierra'
 
   app 'Reveal.app'
 end

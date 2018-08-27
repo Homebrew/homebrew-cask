@@ -1,11 +1,10 @@
 cask 'visual-studio' do
-  version '7.1.0.1297'
-  sha256 'c609479fd5e6aaaeddf4f5c60e839e852b8727baa3163c20156222e8f2196b97'
+  version '7.6.1.9'
+  sha256 '3e16f5e0ca4bb29dda608bea3e9d025b3c57a6fa9047e62b9b443c24e7cdefa8'
 
-  # dl.xamarin.com was verified as official when first introduced to the cask
+  # dl.xamarin.com/VsMac was verified as official when first introduced to the cask
   url "https://dl.xamarin.com/VsMac/VisualStudioForMac-#{version}.dmg"
-  appcast 'https://xampubdl.blob.core.windows.net/static/installer_assets/v3/vsmac/Mac/Universal/InstallationManifest.xml',
-          checkpoint: '90e28111c98e8261b07800d9b33a6b09c6af8f51c315d5976a586bd4c922bc00'
+  appcast 'https://xampubdl.blob.core.windows.net/static/installer_assets/v4/Mac/Universal/InstallationManifest.xml'
   name 'Visual Studio for Mac'
   homepage 'https://www.visualstudio.com/vs/visual-studio-mac/'
 
@@ -13,13 +12,16 @@ cask 'visual-studio' do
 
   app 'Visual Studio.app'
 
-  zap delete: [
-                '~/Library/VisualStudio',
-                '~/Library/Caches/VisualStudio',
-                '~/Library/Logs/VisualStudio',
-                '~/Library/Preferences/Visual*Studio',
-                '~/Library/Application Support/CrashReporter/VisualStudio*',
-                '/Applications/Xamarin Workbooks.app',
-                '/Applications/Xamarin Profiler.app',
-              ]
+  zap trash: [
+               '/Applications/Xamarin Workbooks.app',
+               '/Applications/Xamarin Profiler.app',
+               '~/Library/Application Support/VisualStudio',
+               '~/Library/Application Support/CrashReporter/VisualStudio*',
+               '~/Library/Caches/VisualStudio',
+               '~/Library/Logs/VisualStudio',
+               '~/Library/Preferences/Visual*Studio',
+               '~/Library/Preferences/Xamarin',
+               '~/Library/Developer/Xamarin',
+               '~/Library/VisualStudio',
+             ]
 end

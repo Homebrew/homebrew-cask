@@ -8,4 +8,10 @@ cask 'twitch' do
   homepage 'https://app.twitch.tv/'
 
   app 'Twitch.app'
+
+  zap trash: [
+               '~/Library/Preferences/com.twitch.twitchapp.helper.plist',
+               '~/Library/Preferences/com.twitch.twitchapp.plist',
+               '~/Library/Saved Application State/com.twitch.twitchapp.savedState',
+             ]
 end

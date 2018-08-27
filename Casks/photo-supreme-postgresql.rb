@@ -1,12 +1,11 @@
 cask 'photo-supreme-postgresql' do
-  version '3'
-  sha256 'dfb3dbaba71f834f56fcab55650ea972e2714a400f2aa9d7a371d5f30e153c72'
+  version '4'
+  sha256 :no_check # required as upstream package is updated in-place
 
-  url "http://www.idimager.com/Trial/PhotoSupremePostgreSQL_V#{version}.pkg"
+  url "http://trial.idimager.com/PhotoSupremePostgreSQL_V#{version}.pkg"
   name 'Photo Supreme with PostreSQL'
   homepage 'http://www.idimager.com/WP/?page_id=20'
 
-  depends_on macos: '>= :lion'
   depends_on formula: 'postgresql'
 
   pkg "PhotoSupremePostgreSQL_V#{version}.pkg"

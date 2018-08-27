@@ -4,8 +4,7 @@ cask 'couchpotato' do
 
   # github.com/CouchPotato/CouchPotatoServer was verified as official when first introduced to the cask
   url "https://github.com/CouchPotato/CouchPotatoServer/releases/download/build%2F#{version}/CouchPotato-#{version}.macosx-10_6-intel.zip"
-  appcast 'https://github.com/CouchPotato/CouchPotatoServer/releases.atom',
-          checkpoint: 'c86a3db5923c3cdb0d581e39706895abdd0b3a5a24daa7b7be448a5130bad0fd'
+  appcast 'https://github.com/CouchPotato/CouchPotatoServer/releases.atom'
   name 'CouchPotato'
   homepage 'https://couchpota.to/'
 

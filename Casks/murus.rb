@@ -1,6 +1,6 @@
 cask 'murus' do
-  version '1.4.11'
-  sha256 'a3f2e7c07fb6b117cd10cb0871ed922383c299e407700447a9a0215da457ad9c'
+  version '1.4.17'
+  sha256 'c2631b66d45791d1000654d2f203ed5634dc3239106c8c966f84ea365e38c6d5'
 
   url "https://www.murusfirewall.com/downloads/murus-#{version}.zip"
   name 'Murus Firewall'
@@ -10,12 +10,14 @@ cask 'murus' do
 
   app 'Murus.app'
 
-  zap delete: [
-                '/Library/Application Support/Murus',
-                '/Library/Preferences/it.murus.muruslibrary.plist',
-                '/etc/murus',
-                '/etc/murus.sh',
-                '~/Library/Caches/it.murus.Murus',
-              ],
-      trash:  '~/Library/Preferences/it.murus.Murus.plist'
+  uninstall launchctl: 'it.murus.murusfirewallrules'
+
+  zap trash: [
+               '/Library/Application Support/Murus',
+               '/etc/murus',
+               '/etc/murus.sh',
+               '~/Library/Caches/it.murus.Murus',
+               '~/Library/Preferences/it.murus.Murus.plist',
+               '/Library/Preferences/it.murus.muruslibrary.plist',
+             ]
 end

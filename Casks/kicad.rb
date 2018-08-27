@@ -1,10 +1,9 @@
 cask 'kicad' do
-  version '4.0.6'
-  sha256 '4dcb90384a1165120dbef9225b6cd4a94d07c910341c8d798f91bb6929225021'
+  version '5.0.0-1'
+  sha256 'e7045cc6ebe0e6fe6557a8dcf7a1d0e959e8be69d28de7cca0307938d876f618'
 
-  url "http://downloads.kicad-pcb.org/osx/stable/kicad-#{version}.dmg"
-  appcast 'http://downloads.kicad-pcb.org/osx/stable/',
-          checkpoint: '88ea715ba78f5303b3d0f9df4376ecbef44e8f041cd147adde482b91cc84dd5b'
+  url "http://downloads.kicad-pcb.org/osx/stable/kicad-unified-#{version}.dmg"
+  appcast 'http://downloads.kicad-pcb.org/osx/stable/'
   name 'KiCad'
   homepage 'http://kicad-pcb.org/'
 
@@ -18,5 +17,5 @@ cask 'kicad' do
     end
   end
 
-  zap delete: '~/Library/Preferences/kicad'
+  zap trash: '~/Library/Preferences/kicad'
 end

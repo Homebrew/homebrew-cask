@@ -1,27 +1,28 @@
 cask 'cocoscreator' do
-  version '1.5.1_2017061501'
-  sha256 'f882bc1b9a79dc07e02820baee2068ad449febd57585dec6e5af38271a23e365'
+  version '2.0.1,20180823'
+  sha256 '1738ace990ff863f0cc757e949b27c513625d71827c0c6ecda1a97b0e12b0e47'
 
-  url "http://cdn.cocos2d-x.org/CocosCreator_v#{version}.dmg"
+  # download.cocos.com was verified as official when first introduced to the cask
+  url "http://download.cocos.com/CocosCreator/v#{version.before_comma}/CocosCreator_v#{version.before_comma}_#{version.after_comma}.dmg"
   name 'CocosCreator'
   homepage 'http://www.cocos2d-x.org/'
 
-  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/cocos.wrapper.sh"
 
   app 'CocosCreator.app'
   binary shimscript, target: 'cocos'
 
   preflight do
-    IO.write shimscript, <<-EOS.undent
+    IO.write shimscript, <<~EOS
       #!/bin/sh
       cd '#{appdir}/CocosCreator.app/Contents/Resources/cocos2d-x/tools/cocos2d-console/bin' && ./cocos "$@"
     EOS
   end
 
-  zap delete: [
-                '~/Library/Application Support/CocosCreator',
-                '~/Library/Preferences/com.cocos.creator.plist',
-                '~/Library/Preferences/com.cocos.apps.simulator.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/CocosCreator',
+               '~/Library/Preferences/com.cocos.creator.plist',
+               '~/Library/Preferences/com.cocos.apps.simulator.plist',
+             ]
 end

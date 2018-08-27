@@ -16,11 +16,11 @@ cask 'avast-secureline-vpn' do
                        ],
             delete:    '/Applications/AvastSecureLine.app'
 
-  zap delete: [
-                '~/Library/Cookies/com.avast.osx.secureline.binarycookies',
-                '~/Library/Caches/com.avast.osx.secureline',
-                '~/Library/Group Containers/*.com.avast.osx.secureline*',
-                '~/Library/Preferences/*.com.avast.osx.secureline.plist',
-                '~/Library/Group Containers/*.group.com.avast.osx',
-              ]
+  zap trash: [
+               '~/Library/Cookies/com.avast.osx.secureline.binarycookies',
+               '~/Library/Caches/com.avast.osx.secureline',
+               '~/Library/Group Containers/*.com.avast.osx.secureline*',
+               '~/Library/Preferences/*.com.avast.osx.secureline.plist',
+               '~/Library/Group Containers/*.group.com.avast.osx',
+             ]
 end

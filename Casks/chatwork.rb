@@ -6,7 +6,5 @@ cask 'chatwork' do
   name 'ChatWork'
   homepage 'https://www.chatwork.com/'
 
-  auto_updates true
-
   app 'ChatWork.app'
 end

@@ -10,8 +10,8 @@ cask 'heaven' do
 
   app 'Heaven.app'
 
-  zap delete: [
-                '~/Library/Application Support/Heaven',
-                '~/Library/Saved Application State/com.Unigine.Heaven.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Heaven',
+               '~/Library/Saved Application State/com.Unigine.Heaven.savedState',
+             ]
 end

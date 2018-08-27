@@ -6,11 +6,9 @@ cask 'megasync' do
   name 'MEGAsync'
   homepage 'https://mega.nz/'
 
-  auto_updates true
-
   app 'MEGAsync.app'
 
-  caveats <<-EOS.undent
+  caveats <<~EOS
     #{token} only works if called from /Applications, so you may need to install it with
       brew cask install --appdir=/Applications #{token}
   EOS

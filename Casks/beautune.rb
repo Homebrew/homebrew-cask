@@ -11,5 +11,5 @@ cask 'beautune' do
 
   uninstall pkgutil: 'com.everimaging.beautune.Beautune.pkg'
 
-  zap delete: '~/Library/Containers/com.everimaging.beautune'
+  zap trash: '~/Library/Containers/com.everimaging.beautune'
 end

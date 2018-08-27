@@ -5,8 +5,7 @@ cask 'appcleaner' do
   else
     version '3.4'
     sha256 '0c60d929478c1c91e0bad76d3c04795665c07a05e45e33321db845429c9aefa8'
-    appcast 'https://freemacsoft.net/appcleaner/Updates.xml',
-            checkpoint: '2743c995613fd53c24e271384e2de79eb781dd4d21fd32627e3ac244704e1b04'
+    appcast 'https://freemacsoft.net/appcleaner/Updates.xml'
   end
 
   url "https://www.freemacsoft.net/downloads/AppCleaner_#{version}.zip"
@@ -20,10 +19,10 @@ cask 'appcleaner' do
 
   uninstall quit: 'net.freemacsoft.AppCleaner-SmartDelete'
 
-  zap delete: [
-                '~/Library/Caches/net.freemacsoft.AppCleaner',
-                '~/Library/Preferences/net.freemacsoft.AppCleaner.plist',
-                '~/Library/Saved Application State/net.freemacsoft.AppCleaner.savedState',
-                '~/Library/Preferences/net.freemacsoft.AppCleaner-SmartDelete.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/net.freemacsoft.AppCleaner',
+               '~/Library/Preferences/net.freemacsoft.AppCleaner.plist',
+               '~/Library/Saved Application State/net.freemacsoft.AppCleaner.savedState',
+               '~/Library/Preferences/net.freemacsoft.AppCleaner-SmartDelete.plist',
+             ]
 end

@@ -3,23 +3,32 @@ cask 'coconutbattery' do
     version '3.3.4'
     sha256 '0edf6bdaf28fb3cc9c242fd916c348fbbae30a5356ddc1d6e5158d50f96d740d'
     url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version.dots_to_underscores}.zip"
-  else
-    version '3.6.3'
-    sha256 '4ba6e7cb99d08444aa92d00f898eae4e1d22aa67e8aab953fc034c08ac3254c3'
+  elsif MacOS.version <= :yosemite
+    version '3.6.4'
+    sha256 '8e289fb4a75cb117fc1d7861020c9ab2384b09dfd18f066c7fadfc9d42c3ac56'
     url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version}.zip"
-    appcast 'https://coconut-flavour.com/updates/coconutBattery.xml',
-            checkpoint: 'e324ffa6292bd276745cdc8e6f27aff23873fea790726a01eaf614e7364535f5'
+  else
+    version '3.6.8'
+    sha256 'b3b9a582d93cc318df9bc98159e250ab316b2ca7f252ce05efbb8a76dd1516c3'
+    url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version}.zip"
+    appcast 'https://coconut-flavour.com/updates/coconutBattery.xml'
   end
 
   name 'coconutBattery'
   homepage 'https://www.coconut-flavour.com/coconutbattery/'
 
+  auto_updates true
+
   app 'coconutBattery.app'
 
-  zap delete: [
-                '~/Library/Application Support/coconutBattery',
-                '~/Library/Caches/com.coconut-flavour.coconutBattery',
-                '~/Library/Preferences/com.coconut-flavour.coconutBattery.plist',
-                '~/Library/Saved Application State/com.coconut-flavour.coconutBattery.savedState',
-              ]
+  uninstall launchctl: 'com.coconut-flavour.coconutBattery-Menu',
+            quit:      'com.coconut-flavour.coconutBattery-Menu'
+
+  zap trash: [
+               '~/Library/Application Support/coconutBattery',
+               '~/Library/Caches/com.coconut-flavour.coconutBattery*',
+               '~/Library/Group Containers/*.coconut-flavour.coconutBattery',
+               '~/Library/Preferences/com.coconut-flavour.coconutBattery.plist',
+               '~/Library/Saved Application State/com.coconut-flavour.coconutBattery.savedState',
+             ]
 end

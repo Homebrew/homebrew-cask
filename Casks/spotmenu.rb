@@ -1,10 +1,9 @@
 cask 'spotmenu' do
-  version '1.5'
-  sha256 '277938c0adeada123668d36e98f0d22be3c1de95ea9e82e5bb8dbec42fbff297'
+  version '1.8'
+  sha256 '06394ef8e6bc791fa2b3426dd9f58a7ac59af00b2cb0b50075c025f3bc1b58b0'
 
   url "https://github.com/kmikiy/SpotMenu/releases/download/v#{version}/SpotMenu.zip"
-  appcast 'https://github.com/kmikiy/SpotMenu/releases.atom',
-          checkpoint: '339bd2ea324cdf0c08b8c840009ebfb274ec9dd41a983700c7f5d9a6b476c001'
+  appcast 'https://github.com/kmikiy/SpotMenu/releases.atom'
   name 'SpotMenu'
   homepage 'https://github.com/kmikiy/SpotMenu'
 

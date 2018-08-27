@@ -1,10 +1,9 @@
 cask 'macspice' do
-  version '3.1.17'
-  sha256 'd66d5c2082d74ff01fde68d0048237b014d298e13fee5e445739b13302fe27d0'
+  version '3.1.20'
+  sha256 'eb5006a4f3963fa934698adc9591db26f63c908c93f32bd1514a5bd2f8ab2430'
 
   url "http://www.macspice.com/mirror/binaries/v#{version}/MacSpice3f5.dmg"
-  appcast 'http://www.macspice.com/AppCast-v2.xml',
-          checkpoint: 'b1dbf97e266f9ce8b26f14fbfc8cdb7158cd0ea48c76838d4bea3e7652c904d7'
+  appcast 'http://www.macspice.com/AppCast-v2.xml'
   name 'MacSpice'
   homepage 'https://www.macspice.com/'
 

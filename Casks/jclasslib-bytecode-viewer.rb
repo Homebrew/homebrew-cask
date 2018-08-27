@@ -1,10 +1,9 @@
 cask 'jclasslib-bytecode-viewer' do
-  version '5.2'
-  sha256 '50771508ee35f57f138f46a0def4f31927f00d3f1275c25259247faf223fa7b4'
+  version '5.3'
+  sha256 'f0117f256a34106732bca3d449dcbcb488dc0300e2569ef2171bef6ce026e8b5'
 
   url "https://github.com/ingokegel/jclasslib/releases/download/#{version}/jclasslib_macos_#{version.dots_to_underscores}.dmg"
-  appcast 'https://github.com/ingokegel/jclasslib/releases.atom',
-          checkpoint: 'bc4fe9a7dd836e7b5c3fc8b628bfcc8cb376570b999894742c350a0843c3a918'
+  appcast 'https://github.com/ingokegel/jclasslib/releases.atom'
   name 'jclasslib bytecode viewer'
   homepage 'https://github.com/ingokegel/jclasslib'
 
@@ -12,5 +11,5 @@ cask 'jclasslib-bytecode-viewer' do
 
   app 'jclasslib bytecode viewer.app'
 
-  zap delete: '~/Library/Saved Application State/com.install4j.*'
+  zap trash: '~/Library/Saved Application State/com.install4j.*'
 end

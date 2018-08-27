@@ -3,8 +3,7 @@ cask 'security-growler' do
   sha256 'ef00c7effca5fb1001498c3490190f9c923bbefa2a0dd2c21df15374bd23c962'
 
   url "https://github.com/pirate/security-growler/releases/download/v#{version}/Security.Growler.app.zip"
-  appcast 'https://github.com/pirate/security-growler/releases.atom',
-          checkpoint: 'c28136022a4fcdcdf84108fe6cffead9a05967a160bacd30dd9eb0f1bae783d4'
+  appcast 'https://github.com/pirate/security-growler/releases.atom'
   name 'Security Growler'
   homepage 'https://github.com/pirate/security-growler'
 

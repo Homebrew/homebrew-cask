@@ -1,6 +1,6 @@
 cask 'boonzi' do
-  version '42.4'
-  sha256 'a84fb3ffdb2358f01b3fe636428cde71f383e78389aec540bc6af7f5371d802d'
+  version '44.2'
+  sha256 '613bdc7342ffb225c892c40a2acfc4e81650f70b1b55b595cbdcc74ddad87a9e'
 
   url "http://www.boonzi.pt/releases/boonzi.#{version}.dmg"
   name 'Boonzi'

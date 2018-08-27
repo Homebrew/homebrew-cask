@@ -6,16 +6,19 @@ cask 'adobe-dng-converter' do
     version '9.6.1'
     sha256 '087eac5026667e4e6e3c156fd13243c9ea00f6c0238cbbb94d3099ae8772603f'
   else
-    version '9.12'
-    sha256 'd0416718aa096b928b5877544077f480fc56c771cb9eb27a2a2aa712d233b56c'
+    version '10.5'
+    sha256 '050c6b2b44d03c6b469e6c938c7c6529934fe45132230f4f4e03831d3bc3ab8c'
   end
 
-  url "http://download.adobe.com/pub/adobe/dng/mac/DNGConverter_#{version.dots_to_underscores}.dmg"
+  url "https://download.adobe.com/pub/adobe/dng/mac/DNGConverter_#{version.dots_to_underscores}.dmg"
   name 'Adobe Camera Raw and DNG Converter'
   homepage 'https://supportdownloads.adobe.com/product.jsp?product=106&platform=Macintosh'
 
   pkg "DNGConverter_#{version.dots_to_underscores}.pkg"
 
-  uninstall pkgutil: 'com.adobe.DNGConverter',
+  uninstall pkgutil: [
+                       'com.adobe.CameraRawProfiles',
+                       'com.adobe.DNGConverter',
+                     ],
             quit:    'com.adobe.DNGConverter'
 end

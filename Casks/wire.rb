@@ -1,15 +1,14 @@
 cask 'wire' do
-  version '2.15.2750'
-  sha256 '4c0ccf4c2993fab9fda12b40697f219dd78376eb7612d67a75e0dcccf93a4f38'
+  version '3.1.2822'
+  sha256 '969feb5757b956583d6da33445b840e51fa616924208eb941cb6e1610e0d90c4'
 
   # github.com/wireapp/wire-desktop was verified as official when first introduced to the cask
-  url "https://github.com/wireapp/wire-desktop/releases/download/macos%2F#{version}/Wire.pkg"
-  appcast 'https://github.com/wireapp/wire-desktop/releases.atom',
-          checkpoint: 'f1b7d2c79908b9113e5129a5fdff8cc203505069c6288fbd0bba79d5cfbcdda1'
+  url "https://github.com/wireapp/wire-desktop/releases/download/release%2F#{version}/wire-#{version}.pkg"
+  appcast 'https://github.com/wireapp/wire-desktop/releases.atom'
   name 'Wire'
   homepage 'https://wire.com/'
 
-  pkg 'Wire.pkg'
+  pkg "wire-#{version}.pkg"
 
   uninstall pkgutil: 'com.wearezeta.zclient.mac',
             signal:  [
@@ -17,5 +16,5 @@ cask 'wire' do
                        ['TERM', 'com.wearezeta.zclient.mac'],
                      ]
 
-  zap delete: '~/Library/Containers/com.wearezeta.zclient.mac'
+  zap trash: '~/Library/Containers/com.wearezeta.zclient.mac'
 end

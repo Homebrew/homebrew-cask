@@ -1,10 +1,9 @@
 cask 'archi' do
-  version '4.0.2'
-  sha256 'ad5c59e14ff09a1bd8cecb6bb739a5e8ff60bd9644fb8a0772224469d652686f'
+  version '4.2'
+  sha256 '6923830e1eac9fd11acddb56c241a7d5fb7f3ba6f90bed4e518a8da354977397'
 
-  url "http://www.archimatetool.com/downloads/release/v#{version.major}/Archi-mac-#{version}.zip"
-  appcast 'https://github.com/archimatetool/archi/releases.atom',
-          checkpoint: '53c09c7b5f52da00c23cd94c9b0870b1a655292eb4377d7660eb832f5032374a'
+  url "https://www.archimatetool.com/downloads/rel-#{version.no_dots}/Archi-Mac-#{version}.zip"
+  appcast 'https://github.com/archimatetool/archi/releases.atom'
   name 'Archi'
   homepage 'https://www.archimatetool.com/'
 

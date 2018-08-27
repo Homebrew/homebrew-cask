@@ -8,6 +8,7 @@ This document describes the algorithm implemented in the `generate_cask_token` s
 * [Cask Filenames](#cask-filenames)
 * [Cask Headers](#cask-headers)
 * [Cask Token Examples](#cask-token-examples)
+* [Tap Specific Cask Token Examples](#tap-specific-cask-token-examples)
 * [Token Overlap](#token-overlap)
 
 ## Purpose
@@ -23,7 +24,7 @@ The token itself should be:
 * Suitable for use as a filename
 * Mnemonic
 
-Details of software names and brands will inevitably be lost in the conversion to a minimal token. To capture the vendor’s full name for a distribution, use the [`name`](https://github.com/caskroom/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/name.md) within a Cask. `name` accepts an unrestricted UTF-8 string.
+Details of software names and brands will inevitably be lost in the conversion to a minimal token. To capture the vendor’s full name for a distribution, use the [`name`](https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/name.md) within a Cask. `name` accepts an unrestricted UTF-8 string.
 
 ## Finding the Simplified Name of the Vendor’s Distribution
 
@@ -39,9 +40,11 @@ Details of software names and brands will inevitably be lost in the conversion t
 
 * Remove from the end: version numbers or incremental release designations such as “alpha”, “beta”, or “release candidate”. Strings which distinguish different capabilities or codebases such as “Community Edition” are currently accepted. Exception: when a number is not an incremental release counter, but a differentiator for a different product from a different vendor, as in [pgadmin3.rb](../../Casks/pgadmin3.rb).
 
-* If the version number is arranged to occur in the middle of the App name, it should also be removed. Example: [IntelliJ IDEA 13 CE.app](../../../../../homebrew-versions/tree/master/Casks/intellij-idea-ce.rb).
+* If the version number is arranged to occur in the middle of the App name, it should also be removed. Example: [IntelliJ IDEA 13 CE.app](../../../../../homebrew-cask-versions/tree/master/Casks/intellij-idea-ce.rb).
 
 * Remove from the end: “Launcher”, “Quick Launcher”.
+
+* Remove from the end: strings such as “Desktop”, “for Desktop”.
 
 * Remove from the end: strings such as “Mac”, “for Mac”, “for OS X”, “macOS”, “for macOS”. These terms are generally added to ported software such as “MAME OS X.app”. Exception: when the software is not a port, and “Mac” is an inseparable part of the name, without which the name would be inherently nonsensical, as in [PlayOnMac.app](../../Casks/playonmac.rb).
 
@@ -92,6 +95,8 @@ To convert the App’s Simplified Name (above) to a token:
 * Expand the `+` symbol into a separated English word: `-plus-`.
 * Expand the `@` symbol into a separated English word: `-at-`.
 * Spaces become hyphens.
+* Underscores become hyphens.
+* Middots/Interpuncts become hyphens.
 * Hyphens stay hyphens.
 * Digits stay digits.
 * Delete any character which is not alphanumeric or a hyphen.
@@ -120,6 +125,18 @@ App Name on Disk       | Simplified App Name | Cask Token       | Filename
 `LPK25 Editor.app`     | LPK25 Editor        | lpk25-editor     | `lpk25-editor.rb`
 `Sublime Text 2.app`   | Sublime Text        | sublime-text     | `sublime-text.rb`
 
+## Tap Specific Cask Token Examples
+
+Cask taps have naming conventions specific to each tap.
+
+[Homebrew/cask-versions](https://github.com/Homebrew/homebrew-cask-versions/blob/master/CONTRIBUTING.md#naming-versions-casks)
+
+[Homebrew/cask-fonts](https://github.com/Homebrew/homebrew-cask-fonts/blob/master/CONTRIBUTING.md#naming-font-casks)
+
+[Homebrew/cask-drivers](https://github.com/Homebrew/homebrew-cask-drivers/blob/master/CONTRIBUTING.md#naming-driver-casks)
+
+[Homebrew/cask-eid](https://github.com/Homebrew/homebrew-cask-eid/blob/master/CONTRIBUTING.md#naming-eid-casks)
+
 # Token Overlap
 
 ## With another Cask
@@ -129,5 +146,3 @@ When the token for a new Cask would otherwise conflict with the token of an alre
 ## With a formula
 
 If a Homebrew formula and a Homebrew-Cask cask both exist with the same token and they both refer to the same app — respectively a CLI and a GUI — and the GUI app is simply a wrapper of the CLI tool but has been decided to provide enough value to warrant the inclusion of both the formula and the cask, the cask will have the `-app` suffix. This is the only instance where an `-app` suffix is allowed, precisely so the “why” is clear when you know the rule.
-
-# <3 THANK YOU TO ALL CONTRIBUTORS! <3

@@ -1,6 +1,6 @@
 cask 'jedit-x' do
-  version '2.54'
-  sha256 '3bd469b2d3702090d70444eba0a2dcd7e1bff4f498d2ff6aff7a9b293b5264d7'
+  version '2.56'
+  sha256 '32d9a99519eee645f1e60aef9d34f9f95192b1d8db4f149f353700733428eaf5'
 
   # artman21.org was verified as official when first introduced to the cask
   url "http://www.artman21.org/download/JeditX#{version.no_dots}.dmg"

@@ -8,8 +8,8 @@ cask 'scrolls' do
 
   app 'Scrolls.app'
 
-  zap delete: [
-                '~/Library/Application Support/Scrolls/',
-                '~/Library/Application Support/Scrolls Launcher/',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Scrolls/',
+               '~/Library/Application Support/Scrolls Launcher/',
+             ]
 end

@@ -1,12 +1,16 @@
 cask 'freefilesync' do
-  version '9.3'
-  sha256 '987e3f1d1d142ac43896c0c7c9d96498771590e6958c1b44e06938ec61cfb79c'
+  version '10.3'
+  sha256 '81d69b3e1040e40faa9c08b2721596620a05b46ecee06b4258bc09852b121a77'
 
   url "http://www.freefilesync.org/download/FreeFileSync_#{version}_macOS.zip",
       user_agent: :fake
   name 'FreeFileSync'
   homepage 'https://www.freefilesync.org/'
 
-  app 'FreeFileSync.app'
-  app 'RealTimeSync.app'
+  pkg "FreeFileSync_#{version}_macOS.pkg"
+
+  uninstall pkgutil: [
+                       'org.freefilesync.pkg.FreeFileSync',
+                       'org.freefilesync.pkg.RealTimeSync',
+                     ]
 end

@@ -1,10 +1,9 @@
 cask 'mt32emu' do
-  version '2.1.0'
-  sha256 'c9c39386ac04a97a29d7ec661021e43b2b365bbd7dcecb1edd7de135182b20bc'
+  version '2.3.0,1.7.1'
+  sha256 'd1f55f12ee641e8577154a49f24779bae2e708cd4b3c94edb17e8aaa39d8fb9c'
 
-  url "https://downloads.sourceforge.net/munt/munt/#{version}/OS%20X/MT32Emu-qt-1.5.0.dmg"
-  appcast 'https://sourceforge.net/projects/munt/rss?path=/munt',
-          checkpoint: '372b2206914571d17f480d2cc11dc718bbf4d134d9992f1bd592c91396288eba'
+  url "https://downloads.sourceforge.net/munt/munt/#{version.before_comma}/OS%20X/MT32Emu-qt-#{version.after_comma}.dmg"
+  appcast 'https://sourceforge.net/projects/munt/rss?path=/munt'
   name 'MT32Emu'
   homepage 'https://sourceforge.net/projects/munt/'
 

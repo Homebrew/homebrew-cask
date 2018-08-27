@@ -1,6 +1,6 @@
 cask 'electric-sheep' do
-  version '3.0'
-  sha256 'fb282864c10c9dfd4daa5612ca0f74e795d312bb2077be0fe8afffeed23dd7d7'
+  version '3.0.2'
+  sha256 'db689d0aeac776a3f189205efa32331c0c00b0bea608408b2e855557c56f5937'
 
   # d100rc88eim93q.cloudfront.net was verified as official when first introduced to the cask
   url "https://d100rc88eim93q.cloudfront.net/electricsheep-#{version}.dmg"

@@ -1,11 +1,10 @@
 cask 'jedit' do
-  version '5.4.0'
-  sha256 '5bef965e267a13cbac8dae12d4f3b1428298fb769c759cedd9d75be96a82c96a'
+  version '5.5.0'
+  sha256 '2573720e6b36dca2105d3b16bc2245b3d1dadcd7e84d40f2c41c3c285386d122'
 
   # sourceforge.net/jedit was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/jedit/jedit#{version}install.dmg"
-  appcast 'https://sourceforge.net/projects/jedit/rss',
-          checkpoint: '5ef477fd6b9583423dc6fca1816255d1e2c4da3057f8cd88d7783b904dcb8567'
+  appcast 'https://sourceforge.net/projects/jedit/rss'
   name 'jEdit'
   homepage 'http://www.jedit.org/'
 

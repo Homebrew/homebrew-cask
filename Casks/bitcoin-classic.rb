@@ -1,11 +1,10 @@
 cask 'bitcoin-classic' do
-  version '1.2.5'
-  sha256 '43376113b68a115ab3d04135527bd3d660b3183cd6a31d27471d93886de3051f'
+  version '1.3.8'
+  sha256 'af389592faa032d02a290b21e78d8c3473b9a4a50bf55d034649fff2cceb40d3'
 
   # github.com/bitcoinclassic was verified as official when first introduced to the cask
   url "https://github.com/bitcoinclassic/bitcoinclassic/releases/download/v#{version}/bitcoin-#{version}-osx.dmg"
-  appcast 'https://github.com/bitcoinclassic/bitcoinclassic/releases.atom',
-          checkpoint: '732baf9915ea324c4130292ee428b677da117adf3f797d4b09d8f957d12d38f8'
+  appcast 'https://github.com/bitcoinclassic/bitcoinclassic/releases.atom'
   name 'Bitcoin Classic'
   homepage 'https://bitcoinclassic.com/'
 
@@ -16,5 +15,5 @@ cask 'bitcoin-classic' do
   app 'Bitcoin-Qt.app', target: 'Bitcoin Classic.app'
 
   # Bitcoin classic names it preferences file same as Bitcoin Core:
-  zap delete: '~/Library/Preferences/org.bitcoin.Bitcoin-Qt.plist'
+  zap trash: '~/Library/Preferences/org.bitcoin.Bitcoin-Qt.plist'
 end

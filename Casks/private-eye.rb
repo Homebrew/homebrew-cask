@@ -9,7 +9,7 @@ cask 'private-eye' do
   pkg 'Private_Eye_for_OS_X_10.9_and_later.pkg'
 
   # We intentionally unload the kext twice as a workaround
-  # See https://github.com/caskroom/homebrew-cask/pull/1802#issuecomment-34171151
+  # See https://github.com/Homebrew/homebrew-cask/pull/1802#issuecomment-34171151
 
   uninstall early_script: {
                             executable:   '/sbin/kextunload',

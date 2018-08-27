@@ -1,11 +1,19 @@
 cask 'powerphotos' do
-  version '1.2.3'
-  sha256 'b07eb9f8801fb397d55e3dd7e0569dbef5d3265debaf3ee68247062901d93fcb'
+  if MacOS.version <= :yosemite
+    version '1.0.6'
+    sha256 '927c1095858d259b9469c86d20ce39cf0bfc350ad0b64ae8ba0ca0557b632305'
+    url "https://www.fatcatsoftware.com/powerphotos/PowerPhotos_#{version.no_dots}.zip"
+  elsif MacOS.version <= :el_capitan
+    version '1.2.3'
+    sha256 'b07eb9f8801fb397d55e3dd7e0569dbef5d3265debaf3ee68247062901d93fcb'
+    url "https://www.fatcatsoftware.com/powerphotos/PowerPhotos_#{version.no_dots}.zip"
+  else
+    version '1.4.8'
+    sha256 'ed9be64f4cb5a3d3848ad5177947bd8cd33e36846ea36266ef9d4d7b46813538'
+    url 'https://www.fatcatsoftware.com/powerphotos/PowerPhotos.zip'
+  end
 
-  # s3.amazonaws.com/fatcatsoftware/powerphotos was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/fatcatsoftware/powerphotos/PowerPhotos_#{version.no_dots}.zip"
-  appcast 'https://www.fatcatsoftware.com/powerphotos/powerphotos_appcast.xml',
-          checkpoint: 'de0223b548bbf05509395979a516b4ac8e6dc168332fc1a81eb454eb90241ebe'
+  appcast 'https://www.fatcatsoftware.com/powerphotos/powerphotos_appcast.xml'
   name 'PowerPhotos'
   homepage 'https://www.fatcatsoftware.com/powerphotos/'
 

@@ -3,8 +3,7 @@ cask 'quitter' do
   sha256 'ad4071a48aeed019fbb9ebf80ce717c1c15ade24298a33e823dc0d1c218baed4'
 
   url 'https://marco.org/appcasts/Quitter.zip'
-  appcast 'https://marco.org/appcasts/quitter.xml',
-          checkpoint: '51873371a0fbdd7664b2e143e17ccca9fb4d962602dcd42618812fe24be4134c'
+  appcast 'https://marco.org/appcasts/quitter.xml'
   name 'Quitter'
   homepage 'https://marco.org/apps#quitter'
 
@@ -12,9 +11,9 @@ cask 'quitter' do
 
   app 'Quitter.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.marcoarment.quitter.plist',
-                '~/Library/Caches/com.marcoarment.quitter',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.marcoarment.quitter.sfl',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.marcoarment.quitter.plist',
+               '~/Library/Caches/com.marcoarment.quitter',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.marcoarment.quitter.sfl*',
+             ]
 end

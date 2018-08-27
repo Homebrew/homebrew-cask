@@ -10,8 +10,8 @@ cask 'codelite' do
 
   app 'codelite.app'
 
-  zap delete: [
-                '~/Library/Application Support/codelite',
-                '~/Library/Preferences/codelite.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/codelite',
+               '~/Library/Preferences/codelite.plist',
+             ]
 end

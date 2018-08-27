@@ -1,6 +1,6 @@
 cask 'skype-for-business' do
-  version '16.8.0.196'
-  sha256 'a9b713ba254e035a0535d5ad2857d2ab8e890d02721c84dc39057f128ed0dfd1'
+  version '16.20.0.90'
+  sha256 '34bddff03ef6d314ac3e3ebf6facf1c892d7dd09f998a9c21edacb82528ffe2f'
 
   url "https://download.microsoft.com/download/D/0/5/D055DA17-C7B8-4257-89A1-78E7BBE3833F/SkypeForBusinessInstaller-#{version}.pkg"
   name 'Skype for Business'
@@ -14,16 +14,17 @@ cask 'skype-for-business' do
   uninstall pkgutil:    [
                           'com.microsoft.SkypeForBusiness',
                           'com.microsoft.SkypeForBusiness.MeetingJoinPlugin',
-                          'com.microsoft.package.Microsoft_AutoUpdate.app',
                         ],
             login_item: 'Skype for Business'
 
-  zap delete: [
-                '/Library/Internet Plug-Ins/MeetingJoinPlugin.plugin',
-                '~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.plist',
-                '~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.debuglogging.plist',
-                '~/Library/Application Support/com.microsoft.SkypeForBusinessTAP',
-                '~/Library/Application Support/Skype for Business',
-              ],
-      rmdir:  '/Library/Application Support/Microsoft'
+  zap trash:     [
+                   '/Library/Internet Plug-Ins/MeetingJoinPlugin.plugin',
+                   '~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.plist',
+                   '~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.debuglogging.plist',
+                   '~/Library/Application Support/com.microsoft.SkypeForBusinessTAP',
+                   '~/Library/Application Support/Skype for Business',
+                 ],
+      launchctl: 'com.microsoft.autoupdate.helper',
+      rmdir:     '/Library/Application Support/Microsoft',
+      pkgutil:   'com.microsoft.package.Microsoft_AutoUpdate.app'
 end

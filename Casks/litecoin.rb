@@ -1,11 +1,11 @@
 cask 'litecoin' do
-  version '0.13.2'
-  sha256 '5a86edc58c9bbc0ee059e933e5b94470f168caa76557bc8f255b35d3c8530954'
+  version '0.16.0'
+  sha256 'e33fab8afa3c03eabcd958f4f7c2a4fdfdaf1f65eff7a861135e19fbc68423ad'
 
   url "https://download.litecoin.org/litecoin-#{version}/osx/litecoin-#{version}-osx.dmg"
   name 'Litecoin'
   homepage 'https://litecoin.org/'
-  gpg "#{url}.asc", key_id: 'dc380da43082f16378c97414c37e4723969276f5'
+  gpg "#{url}.asc", key_id: 'fe3348877809386c'
 
   app 'Litecoin-Qt.app'
 
@@ -15,5 +15,9 @@ cask 'litecoin' do
 
   postflight do
     set_permissions "#{appdir}/Litecoin-Qt.app", '0555'
+  end
+
+  uninstall_preflight do
+    set_permissions "#{appdir}/Litecoin-Qt.app", '0755'
   end
 end
