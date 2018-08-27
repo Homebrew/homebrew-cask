@@ -8,5 +8,5 @@ cask 'syncovery' do
 
   pkg 'SyncoveryMac (double-click to install).pkg'
 
-  uninstall pkgutil: 'com.superflexible.syncovery.*'
+  uninstall pkgutil: 'com.company.Syncovery*'
 end
