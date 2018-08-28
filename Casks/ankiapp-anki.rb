@@ -1,4 +1,4 @@
-cask 'ankiapp-aki' do
+cask 'ankiapp-anki' do
   version :latest
   sha256 :no_check
 
