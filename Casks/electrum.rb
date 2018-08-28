@@ -6,7 +6,6 @@ cask 'electrum' do
   appcast 'https://github.com/spesmilo/electrum/releases.atom'
   name 'Electrum'
   homepage 'https://electrum.org/'
-  gpg "#{url}.asc", key_id: '6694d8de7be8ee5631bed9502bd5824b7f9470e6'
 
   app 'Electrum.app'
 

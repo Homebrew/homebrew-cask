@@ -7,7 +7,6 @@ cask '1password-cli' do
   appcast 'https://app-updates.agilebits.com/product_history/CLI'
   name '1Password CLI'
   homepage 'https://support.1password.com/command-line/'
-  gpg 'op.sig', key_url: 'https://keybase.io/1password/pgp_keys.asc'
 
   binary 'op'
 

@@ -7,7 +7,6 @@ cask 'copay' do
   appcast 'https://github.com/bitpay/copay/releases.atom'
   name 'Copay'
   homepage 'https://copay.io/'
-  gpg "#{url}.sig", key_id: '9d17e656bb3b6163ae9d71725cd600a61112cfa1'
 
   app 'Copay.app'
 

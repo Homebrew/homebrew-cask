@@ -7,7 +7,6 @@ cask 'bisq' do
   appcast 'https://github.com/bisq-network/bisq-desktop/releases.atom'
   name 'Bisq'
   homepage 'https://bisq.io/'
-  gpg "#{url}.asc", key_id: '1dc3c8c4316a698ac494039cf5b84436f379a1c6'
 
   app 'Bisq.app'
 end

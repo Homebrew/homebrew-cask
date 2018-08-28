@@ -6,7 +6,6 @@ cask 'filebot' do
   appcast 'https://app.filebot.net/update.xml'
   name 'FileBot'
   homepage 'https://www.filebot.net/'
-  gpg "#{url}.asc", key_url: 'https://raw.githubusercontent.com/filebot/plugins/master/gpg/maintainer.pub'
 
   app 'FileBot.app'
   binary "#{appdir}/FileBot.app/Contents/MacOS/filebot.sh", target: 'filebot'

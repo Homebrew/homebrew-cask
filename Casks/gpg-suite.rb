@@ -6,7 +6,6 @@ cask 'gpg-suite' do
   appcast 'https://gpgtools.org/releases/gka/appcast.xml'
   name 'GPG Suite'
   homepage 'https://gpgtools.org/'
-  gpg "#{url}.sig", key_url: 'https://gpgtools.org/GPGTools-00D026C4.asc'
 
   auto_updates true
   conflicts_with cask: 'gpg-suite-nightly'
