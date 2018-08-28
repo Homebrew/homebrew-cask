@@ -11,6 +11,6 @@ cask 'ankiapp-anki' do
   zap trash: [
                '~/Library/Application Support/AnkiApp',
                '~/Library/Preferences/com.electron.ankiapp.plist',
-               '~/Library/Preferences/com.electron.ankiapp.helper.plist'
+               '~/Library/Preferences/com.electron.ankiapp.helper.plist',
              ]
 end
