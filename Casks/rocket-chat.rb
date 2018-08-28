@@ -8,13 +8,15 @@ cask 'rocket-chat' do
   name 'Rocket.Chat'
   homepage 'https://rocket.chat/'
 
-  app 'Rocket.Chat+.app'
+  app 'Rocket.Chat.app'
 
   zap trash: [
-               '~/Library/Application Support/Rocket.Chat+',
-               '~/Library/Caches/Rocket.Chat+',
+               '~/Library/Application Support/Rocket.Chat',
                '~/Library/Caches/chat.rocket',
+               '~/Library/Caches/chat.rocket.ShipIt',
+               '~/Library/Caches/chat.rocket.electron.helper',
                '~/Library/Preferences/chat.rocket.plist',
+               '~/Library/Preferences/chat.rocket.electron.helper.plist',
                '~/Library/Saved Application State/chat.rocket.savedState',
              ]
 end
