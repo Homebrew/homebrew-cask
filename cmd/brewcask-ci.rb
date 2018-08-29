@@ -98,7 +98,7 @@ module Hbc
         output = nil
 
         Travis.fold travis_id do
-          print "#{Tty.bold}#{Tty.yellow}#{name}#{Tty.reset} "
+          print Formatter.headline("#{name} ", color: :yellow)
 
           real_stdout = $stdout.dup
 
