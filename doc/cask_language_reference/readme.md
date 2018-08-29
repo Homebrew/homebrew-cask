@@ -125,7 +125,6 @@ url
 appcast
 name
 homepage
-gpg, key_id: # on same line, since first part is typically small
 
 auto_updates
 accessibility_access
@@ -168,4 +167,4 @@ zap
 caveats
 ```
 
-Note that every stanza that has additional parameters (`:symbols` after a `,`) shall have them on separate lines, one per line, in alphabetical order. Exceptions are `gpg` and `target:` (when not applied to `url`) which typically consist of short lines.
+Note that every stanza that has additional parameters (`:symbols` after a `,`) shall have them on separate lines, one per line, in alphabetical order. An exception is `target:` which typically consists of short lines.
