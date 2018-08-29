@@ -7,7 +7,6 @@ cask 'tunnelblick' do
   appcast 'https://github.com/Tunnelblick/Tunnelblick/releases.atom'
   name 'Tunnelblick'
   homepage 'https://www.tunnelblick.net/'
-  gpg "#{url}.asc", key_id: '76df975a1c5642774fb09868ff5fd80e6bb9367e'
 
   auto_updates true
 

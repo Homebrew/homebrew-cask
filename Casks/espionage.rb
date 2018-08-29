@@ -6,7 +6,6 @@ cask 'espionage' do
   appcast "https://updates.taoeffect.com/espionage#{version.major}/appcast.xml"
   name 'Espionage'
   homepage 'https://www.espionageapp.com/'
-  gpg "#{url}.sig", key_url: 'https://www.taoeffect.com/other/A884B988.asc'
 
   app 'Espionage.app'
 end

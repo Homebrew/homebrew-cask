@@ -6,7 +6,6 @@ cask 'metasploit' do
   appcast 'https://osx.metasploit.com/LATEST'
   name 'Metasploit Framework'
   homepage 'https://www.metasploit.com/'
-  gpg "#{url}.asc", key_id: '2007B954'
 
   depends_on formula: 'nmap'
 

@@ -7,7 +7,6 @@ cask 'borgbackup' do
   appcast 'https://github.com/borgbackup/borg/releases.atom'
   name 'BorgBackup'
   homepage 'https://borgbackup.readthedocs.io/en/stable/'
-  gpg "#{url}.asc", key_id: '51F78E01'
 
   container type: :naked
 

@@ -7,7 +7,6 @@ cask 'keepassxc' do
   appcast 'https://github.com/keepassxreboot/keepassxc/releases.atom'
   name 'KeePassXC'
   homepage 'https://keepassxc.org/'
-  gpg "#{url}.sig", key_url: 'https://keepassxc.org/keepassxc_master_signing_key.asc'
 
   app 'KeePassXC.app'
 

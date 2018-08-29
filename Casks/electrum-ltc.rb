@@ -6,7 +6,6 @@ cask 'electrum-ltc' do
   appcast 'https://electrum-ltc.org/'
   name 'Electrum-LTC'
   homepage 'https://electrum-ltc.org/'
-  gpg "#{url}.asc", key_id: 'CAE1092AD3553FFD21C05DE36FC4C9F7F1BE8FEA'
 
   app 'Electrum-LTC.app'
 end

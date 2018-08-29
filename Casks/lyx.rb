@@ -6,7 +6,6 @@ cask 'lyx' do
   appcast 'https://www.lyx.org/misc/rss/lyx_news_feed.xml'
   name 'LyX'
   homepage 'https://www.lyx.org/'
-  gpg "#{url}.sig", key_id: 'de7a44fac7fb382d'
 
   app 'LyX.app'
 
