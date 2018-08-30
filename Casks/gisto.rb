@@ -1,9 +1,9 @@
 cask 'gisto' do
-  version '0.3.2'
-  sha256 '5a3666977eca39099f99e52e77c82244cb2baf52baeb8f21efcf3b369de27789'
+  version '1.9.85'
+  sha256 'f1048b2f06a0e8016ebd5911b83eda604686f57bfed8d3bd6baa2974ce2059f0'
 
   # github.com/Gisto/Gisto was verified as official when first introduced to the cask
-  url "https://github.com/Gisto/Gisto/releases/download/#{version}-beta/Gisto-v#{version}-macos-x64.dmg"
+  url "https://github.com/Gisto/Gisto/releases/download/v#{version}/Gisto-#{version}.dmg"
   appcast 'https://github.com/Gisto/Gisto/releases.atom'
   name 'Gisto'
   homepage 'https://www.gistoapp.com/'
