@@ -8,6 +8,10 @@ cask 'undercover' do
   homepage 'http://orbicule.com/undercover/'
 
   pkg 'undercover_mac.pkg'
-
-  uninstall pkgutil: 'com.orbicule.pkg.Undercover'
+  
+  uninstall pkgutil:   'com.orbicule.pkg.Undercover',
+            launchctl: [
+                          'com.orbicule.UCAgent',
+                          'com.orbicule.uc',
+                        ]
 end
