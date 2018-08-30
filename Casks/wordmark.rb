@@ -1,6 +1,6 @@
 cask 'wordmark' do
-  version '3.0.1-beta.9'
-  sha256 'f3b2383aa97455c8a862b1e3ef20f7f58951f03ef823c3c83633dc34d954a86f'
+  version '3.0.1-beta.10'
+  sha256 '667984c18c754450a6180b6514c32c472a1563c61997ece9a4879ddd207512b9'
 
   # github.com/wordmark/wordmark was verified as official when first introduced to the cask
   url "https://github.com/wordmark/wordmark/releases/download/v#{version}/wordmark-#{version}-mac.zip"
