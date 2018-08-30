@@ -1,6 +1,6 @@
 cask 'sql-operations-studio' do
-  version '0.31.4'
-  sha256 'd0aaeae73112a57c46cda98f0b9d2c16440280989bc231e6476f6ab0fb588429'
+  version '0.32.7'
+  sha256 '3a6d25d0f1ba95cea83ea4e58e5a32f1993e05d80147e830744caa61f3c2242c'
 
   # sqlopsbuilds.blob.core.windows.net/release was verified as official when first introduced to the cask
   url "https://sqlopsbuilds.blob.core.windows.net/release/#{version}/sqlops-macos-#{version}.zip"
