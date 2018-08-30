@@ -1,6 +1,6 @@
 cask 'museeks' do
-  version '0.9.4'
-  sha256 '18db8e10a07ba82344e7500c2f81f87ebfcdb7b2b497f0cae307caf07fda3546'
+  version '0.10.0'
+  sha256 '43563b9895c604ee07a51bb1d8cf90a6588ff6d98baf2d4f209351d0da910ee0'
 
   # github.com/KeitIG/museeks was verified as official when first introduced to the cask
   url "https://github.com/KeitIG/museeks/releases/download/#{version}/museeks.dmg"
