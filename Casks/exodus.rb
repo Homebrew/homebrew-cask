@@ -8,6 +8,8 @@ cask 'exodus' do
   name 'Exodus'
   homepage 'https://www.exodus.io/'
 
+  auto_updates true
+  
   app 'Exodus.app'
 
   zap trash: [
