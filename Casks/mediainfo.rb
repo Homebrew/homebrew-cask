@@ -1,6 +1,6 @@
 cask 'mediainfo' do
-  version '18.05'
-  sha256 '971061fda757c4a3d65b39a3e78a6f8484ba3ab306c9d2a47b045761f6ff3b49'
+  version '18.08'
+  sha256 '78d29a43ce3cc3c27faa58229166db2e7d42d7ffcca322e63018333efb91a76f'
 
   url "https://mediaarea.net/download/binary/mediainfo-gui/#{version}/MediaInfo_GUI_#{version}_Mac.dmg"
   appcast 'https://mediaarea.net/rss/mediainfo_updates.xml'
