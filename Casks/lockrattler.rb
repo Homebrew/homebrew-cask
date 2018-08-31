@@ -9,5 +9,5 @@ cask 'lockrattler' do
 
   depends_on macos: '>= :el_capitan'
 
-  app "lockrattler#{version.before_comma.no_dots}/LockRattler.app"
+  app "lockrattler#{version.before_comma.major}p#{version.before_comma.minor}/LockRattler.app"
 end
