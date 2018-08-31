@@ -1,6 +1,6 @@
 cask 'brook' do
-  version '20180707'
-  sha256 'bb5a736063aba9116aedf0f2f5901b5b94425302854feacca8a406c85249daeb'
+  version '20180909'
+  sha256 '116bc51aa8b85e767d360f58b6d9d26074ee1019183166d795a545fdcaece05e'
 
   url "https://github.com/txthinking/brook/releases/download/v#{version}/Brook.dmg"
   appcast 'https://github.com/txthinking/brook/releases.atom'
