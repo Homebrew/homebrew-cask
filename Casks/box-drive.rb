@@ -13,7 +13,7 @@ cask 'box-drive' do
 
   uninstall pkgutil:   'com.box.desktop.installer.*',
             launchctl: 'com.box.desktop.*',
-            script:    '/Library/Application Support/Box/uninstall_box_drive',
+            script:    '/Library/Application\ Support/Box/uninstall_box_drive',
             quit:      [
                          'com.box.Box-Local-Com-Server',
                          'com.box.desktop',
@@ -23,7 +23,7 @@ cask 'box-drive' do
                        ]
 
   zap trash: [
-               '~/Library/Application Support/Box/Box',
+               '~/Library/Application\ Support/Box/Box',
                '~/Library/Logs/Box/Box',
                '~/Library/Containers/com.box.desktop.findersyncext',
              ]
