@@ -23,7 +23,7 @@ cask 'box-drive' do
                        ]
 
   zap trash: [
-               '~/Library/Application Support/Box/Box',
+               '~/Library/Application\ Support/Box/Box',
                '~/Library/Logs/Box/Box',
                '~/Library/Containers/com.box.desktop.findersyncext',
              ]
