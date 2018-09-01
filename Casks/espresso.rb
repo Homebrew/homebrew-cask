@@ -1,6 +1,6 @@
 cask 'espresso' do
   version '5.2.0'
-  sha256 '133d970a329dd440ccc607e6e2779cf48ddaddeefcc7b53a5047c89f0d2aac3a'
+  sha256 '062e7fafb547501cc44d92307f8350eafd46228a36ed362a9d8e8562151589ff'
 
   url "https://espressoapp.com/updates/archives/Espresso-#{version}.zip"
   appcast 'https://espressoapp.com/updates/'
