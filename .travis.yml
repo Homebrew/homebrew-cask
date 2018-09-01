@@ -41,6 +41,7 @@ install:
     export HOMEBREW_NO_AUTO_UPDATE=1
     brew config # Trigger portable Ruby installation.
     rm -r "$(brew --cache)"
+    ls -al "$(brew --cache)"
     brew update
   - |
     # Mirror the repo as a tap.
