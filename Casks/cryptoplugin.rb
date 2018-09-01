@@ -6,11 +6,7 @@ cask 'cryptoplugin' do
   name 'PrivatBank Crypto Plugin'
   homepage 'https://client-bank.privatbank.ua/'
 
-  installer script: {
-                      executable: "#{staged_path}/cryptoplugin-#{version}.app/Contents/Resources/install.sh",
-                    }
+  installer script: executable: "#{staged_path}/cryptoplugin-#{version}.app/Contents/Resources/install.sh"
 
-  uninstall script: {
-                      executable: "#{staged_path}/cryptoplugin-#{version}.app/Contents/Resources/remove.sh",
-                    }
+  uninstall script: executable: "#{staged_path}/cryptoplugin-#{version}.app/Contents/Resources/remove.sh"
 end
