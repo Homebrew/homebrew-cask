@@ -7,7 +7,9 @@ cask 'prime95' do
   name 'Prime95'
   homepage 'https://www.mersenne.org/'
 
-  app 'Prime95.app'
+  depends_on macos: '>= :mavericks'
+
+  app "p95v#{version.no_dots}.MacOSX/Prime95.app"
 
   zap trash: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mersenne.prime95.sfl*'
 end
