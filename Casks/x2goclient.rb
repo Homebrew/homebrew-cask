@@ -25,16 +25,4 @@ cask 'x2goclient' do
   app 'x2goclient.app'
 
   zap trash: '~/Library/Preferences/x2goclient.plist'
-
-  caveats "The X2Go OS X client uses the OS X X11 server.
-  - The X11 server must be configured to accept remote sessions in its preferences.
-  - One must also enable a root screen in X11 preferences if one wants truly full screen view in X2Go.
-  - After installation of XQuartz, the user has to log off and log on again.
-  - Read further hints here: http://comments.gmane.org/gmane.linux.terminal-server.x2go.devel/525
-
-To make clipboard copy and paste - ⌘+V work normally use this one command:
-  echo \"*VT100.translations: #override Meta <KeyPress> V: insert-selection(PRIMARY, CUT_BUFFER0) \\n\" > ~/.Xdefaults
-
-System Preferences Config:
-  To use print, local media sharing, and sound, one must also enable Remote Login in the System Preferences."
 end
