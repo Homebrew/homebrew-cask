@@ -8,5 +8,5 @@ cask 'lynx' do
 
   pkg 'Lynx.pkg'
 
-  uninstall delete: '/Applications/Lynx.app'
+  uninstall pkgutil: 'uk.co.cleverproducts.lynx'
 end
