@@ -5,7 +5,6 @@ cask 'boxofsnoo-fairmount' do
   url "https://github.com/downloads/pmetzger/Fairmount/Fairmount-#{version}.dmg"
   name 'Fairmount'
   homepage 'https://github.com/BoxOfSnoo/Fairmount'
-  license :gpl
 
   app 'Fairmount.app'
 end

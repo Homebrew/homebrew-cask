@@ -1,14 +1,13 @@
 cask 'marker-import' do
-  version '2.1.2.0'
-  sha256 '82654c0b409af3ce609840e196c71989aa7a5c477488c9c99e773f01b8462917'
+  version '2.1.8.0'
+  sha256 'ca77d61b60a55fdd4253b351d2d7d7a8e36638428f22ca317d27797112732211'
 
-  # digitalrebellion.com is the official download host per the vendor homepage
+  # digitalrebellion.com was verified as official when first introduced to the cask
   url "http://www.digitalrebellion.com/download/markerimport?version=#{version.no_dots}"
   name 'Kollaborate Marker Import'
   homepage 'https://www.kollaborate.tv/resources'
-  license :gratis
 
   app 'Marker Import.app'
 
-  zap delete: '~/Library/Preferences/com.digitalrebellion.MarkerImport.plist'
+  zap trash: '~/Library/Preferences/com.digitalrebellion.MarkerImport.plist'
 end

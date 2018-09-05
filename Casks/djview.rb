@@ -1,11 +1,17 @@
 cask 'djview' do
-  version '4.10.2'
-  sha256 '71023ad00941f7d3a01f273db4dc2e5c9c12b621954d877b9fe34a9ecf4bf149'
+  version '4.10.6,57c'
+  sha256 '6ad1fe387434da4d103cbe343a7d6bb0da0fa139787069b3ba76f124651402a2'
 
-  url "https://downloads.sourceforge.net/sourceforge/djvu/DjVuLibre-3.5.27.1%2BDjView-#{version}-intel64.dmg"
+  url "https://downloads.sourceforge.net/djvu/DjVuLibre-3.5.27%2BDjView-#{version.before_comma}-qt#{version.after_comma}-intel64.dmg"
+  appcast 'https://sourceforge.net/projects/djvu/rss'
   name 'DjView'
   homepage 'http://djvu.sourceforge.net/'
-  license :gpl
 
   app 'DjView.app'
+
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.djvu.djview.sfl*',
+               '~/Library/Preferences/org.djvu.DjView.plist',
+               '~/Library/Saved Application State/org.djvu.DjView.savedState',
+             ]
 end

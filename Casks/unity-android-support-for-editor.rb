@@ -1,15 +1,15 @@
 cask 'unity-android-support-for-editor' do
-  version '5.3.1f1'
-  sha256 'c805d5ea4bf3ab089909427bc1ba6af82e05fd04cac832b3f154f27821b6d54a'
+  version '2018.2.6f1,c591d9a97a0b'
+  sha256 'be27982c29ac6f2a0d6a86591055069e11e77ed346093e6aed8681c7b7320461'
 
-  url "http://netstorage.unity3d.com/unity/cc9cbbcc37b4/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-#{version}.pkg"
+  url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-#{version.before_comma}.pkg"
+  appcast 'https://unity3d.com/get-unity/download/archive'
   name 'Unity Android Build Support'
   homepage 'https://unity3d.com/unity/'
-  license :commercial
 
   depends_on cask: 'unity'
 
-  pkg "UnitySetup-Android-Support-for-Editor-#{version}.pkg"
+  pkg "UnitySetup-Android-Support-for-Editor-#{version.before_comma}.pkg"
 
-  uninstall pkgutil: 'com.unity3d.AndroidSupport'
+  uninstall pkgutil: 'com.unity3d.AndroidPlayer'
 end

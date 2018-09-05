@@ -1,12 +1,11 @@
 cask 'pullover' do
-  version '0.3.2'
-  sha256 'a4208c33c2fbc6bca96c08c9085d90fbd4caa484cc7d2206db0a456f975f0052'
+  version '1.3.0'
+  sha256 '2e0805d6d358c76ffc776f0641b2e95c1cdd4696b5bc13361b8af990e3708787'
 
-  # sourceforge.net is the official download host per the vendor homepage
-  url "https://downloads.sourceforge.net/sourceforge/pullover/Pullover_#{version}.dmg"
+  url "https://github.com/cgrossde/Pullover/releases/download/#{version}/Pullover_#{version}.dmg"
+  appcast 'https://github.com/cgrossde/Pullover/releases.atom'
   name 'Pullover'
   homepage 'https://github.com/cgrossde/Pullover'
-  license :gpl
 
   app 'pullover.app'
 end

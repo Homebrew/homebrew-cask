@@ -2,11 +2,15 @@ cask 'ltspice' do
   version :latest
   sha256 :no_check
 
-  # tech.com is the official download host per the vendor homepage
-  url 'http://ltspice.linear-tech.com/LTspiceIV.dmg'
+  url 'http://ltspice.analog.com/software/LTspiceIV.dmg'
   name 'LTspice'
-  homepage 'http://www.linear.com/designtools/software/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'http://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html'
 
   app 'LTspice.app'
+
+  zap trash: [
+               '~/Documents/LTspice/examples',
+               '~/Library/Application Support/LTspice',
+             ],
+      rmdir: '~/Documents/LTspice'
 end

@@ -1,13 +1,11 @@
 cask 'provisionql' do
-  version '1.2.0'
-  sha256 'e159ecfb9acb6cd98149cf6b3b120d7782a1baa2578ede1f0f936b1b2d1017bb'
+  version '1.4.1'
+  sha256 'faebd520c79b0d8a598745a8d0a1ad7042d6b3d65cc4c49b29c0cc6b3c162e8d'
 
   url "https://github.com/ealeksandrov/ProvisionQL/releases/download/#{version}/ProvisionQL.zip"
-  appcast 'https://github.com/ealeksandrov/ProvisionQL/releases.atom',
-          checkpoint: 'cb20def872e0bc63a71a1942abe2d3c767a3615416dd081d1178d199a3758bd0'
+  appcast 'https://github.com/ealeksandrov/ProvisionQL/releases.atom'
   name 'ProvisionQL'
   homepage 'https://github.com/ealeksandrov/ProvisionQL'
-  license :mit
 
   qlplugin 'ProvisionQL.qlgenerator'
 end

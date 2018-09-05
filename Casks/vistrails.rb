@@ -1,14 +1,12 @@
 cask 'vistrails' do
-  version '2.2.2-358e9a9fc33c'
-  sha256 'efee1669d3ba39985079e44a423f6e7b6b17493669c5945a3bbd70ec8659fc22'
+  version '2.2.4-1519abc0ae2b'
+  sha256 '61811b0f65fceaa4873fcf7fc6486376fb146a688d12af8e81a325cdb117ccac'
 
-  # sourceforge.net is the official download host per the vendor homepage
-  url "http://downloads.sourceforge.net/project/vistrails/vistrails/v#{version.sub(%r{-.*}, '')}/vistrails-mac-10.6-intel-#{version}.dmg"
+  # sourceforge.net/vistrails was verified as official when first introduced to the cask
+  url "https://downloads.sourceforge.net/vistrails/vistrails-osx-#{version}.dmg"
+  appcast 'https://sourceforge.net/projects/vistrails/rss?path=/vistrails'
   name 'VisTrails'
-  homepage 'http://www.vistrails.org/'
-  license :bsd
-
-  depends_on macos: '>= :snow_leopard'
+  homepage 'https://www.vistrails.org/index.php/Main_Page'
 
   suite 'VisTrails'
 end

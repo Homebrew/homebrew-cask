@@ -1,13 +1,17 @@
 cask 'processing' do
-  version '3.0.1'
-  sha256 '1edc0b4a38c21a6e584f62784717b76967cdef14a4d75639c4e572419cd66db5'
+  version '3.4'
+  sha256 '242c1cf35395b64c60cce3a1410d5274eac8f1d8865a6f295fba68c74d81e763'
 
   url "http://download.processing.org/processing-#{version}-macosx.zip"
+  appcast 'https://github.com/processing/processing/releases.atom'
   name 'Processing'
   homepage 'https://processing.org/'
-  license :gpl
 
   app 'Processing.app'
 
-  zap delete: '~/Library/Processing/preferences.txt'
+  zap trash: [
+               '~/Library/Processing',
+               '~/Preferences/org.processing.app.plist',
+               '~/Preferences/processing.app.tools.plist',
+             ]
 end

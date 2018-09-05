@@ -1,11 +1,10 @@
 cask 'nozbe' do
-  version '3.0.0'
-  sha256 'dbe342d1131468eafd0a785c621bb1760c776fe39af269e1819dd5e2410bc8e2'
+  version '3.8.1'
+  sha256 'b676843813dc68c327244a9af1ab03e26c028c900033c659c18e5412bc15b575'
 
-  url "https://files.nozbe.com/#{version.no_dots}/Nozbe.app.zip"
+  url "https://files.nozbe.com/#{version.no_dots}/release/Nozbe.app.zip"
   name 'Nozbe'
-  homepage 'https://nozbe.com'
-  license :freemium
+  homepage 'https://nozbe.com/'
 
   app 'Nozbe.app'
 end

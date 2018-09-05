@@ -1,12 +1,11 @@
 cask 'preform' do
-  version '1.8.1_1'
-  sha256 '51ed43f83821c9ba10a50d315990aa59ede13a64e46bda438a3e113a93385209'
+  version '2.15.1,160'
+  sha256 'fefb279f62c2b7354c293de759d9180550ebf511e131bdf3f1587f205ebf1e50'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url "https://s3.amazonaws.com/FormlabsReleases/Release/#{version.sub(%r{_.*}, '')}/PreForm_#{version}.dmg"
+  # s3.amazonaws.com/FormlabsReleases was verified as official when first introduced to the cask
+  url "https://s3.amazonaws.com/FormlabsReleases/Release/#{version.before_comma}/PreForm_#{version.before_comma}_release_origin_release_#{version.before_comma}_build_#{version.after_comma}.dmg"
   name 'PreForm'
-  homepage 'http://formlabs.com/en/products/preform/'
-  license :gratis
+  homepage 'https://formlabs.com/tools/preform/'
 
   app 'PreForm.app'
 end

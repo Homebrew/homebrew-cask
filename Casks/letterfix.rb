@@ -1,13 +1,13 @@
 cask 'letterfix' do
-  version '2.3.2'
-  sha256 '0830e868adc90e71ddfb42ce3f4a2cd5592b0bb5e9df0caf3d45213e083cc9c0'
+  version '2.6.0,68346'
+  sha256 '89de44a2b0e6cb43915d9584615226811f939a42aed6d2a14ba099de18db2768'
 
-  url "http://dl.sourceforge.jp/letter-fix/62451/LetterFix-#{version}a.dmg"
+  url "http://onet.dl.osdn.jp/letter-fix/#{version.after_comma}/LetterFix-#{version.before_comma}.dmg"
+  appcast 'https://ja.osdn.net/projects/letter-fix/releases/rss'
   name 'LetterFix'
-  homepage 'https://sourceforge.jp/projects/letter-fix/'
-  license :mit
+  homepage 'https://osdn.jp/projects/letter-fix/'
 
-  pkg "LetterFix-#{version}.pkg"
+  pkg "LetterFix-#{version.before_comma}.pkg"
 
   uninstall pkgutil: 'org.kuri.letterfix.LetterFix.pkg'
 end

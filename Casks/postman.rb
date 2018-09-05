@@ -1,12 +1,22 @@
 cask 'postman' do
-  version '3.2.15.1'
-  sha256 '7b600a2aba09ab2ff49398fd58315c28c2525875f25a3cd28b37489f9a94bd0e'
+  version '6.2.5'
+  sha256 '3577f13e026aa766de354e9565a3113453aedd38d65ee352400d6dbc1e8e5105'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url "https://s3.amazonaws.com/postman-electron-builds/mac/postman-osx-#{version}.zip"
+  # dl.pstmn.io/download/version was verified as official when first introduced to the cask
+  url "https://dl.pstmn.io/download/version/#{version}/osx64"
   name 'Postman'
   homepage 'https://www.getpostman.com/'
-  license :closed
+
+  auto_updates true
 
   app 'Postman.app'
+
+  zap trash: [
+               '~/Library/Application Support/Postman',
+               '~/Library/Application Support/com.postmanlabs.mac.ShipIt',
+               '~/Library/Caches/Postman',
+               '~/Library/Caches/com.postmanlabs.mac',
+               '~/Library/Preferences/com.postmanlabs.mac.plist',
+               '~/Library/Saved Application State/com.postmanlabs.mac.savedState',
+             ]
 end

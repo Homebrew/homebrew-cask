@@ -2,10 +2,15 @@ cask 'recent-menu' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.timschroeder.net/recentmenu/RecentMenu.zip'
+  url 'https://www.timschroeder.net/files/RecentMenu.zip'
   name 'Recent Menu'
-  homepage 'http://www.timschroeder.net/recentmenu/'
-  license :oss
+  homepage 'https://www.timschroeder.net/recentmenu/'
 
   app 'Recent Menu.app'
+
+  zap trash: [
+               '~/Library/Application Scripts/com.timschroeder.recentmenu',
+               '~/Library/Containers/com.timschroeder.recentmenu',
+               '~/Library/Preferences/com.timschroeder.recentmenu.plist',
+             ]
 end

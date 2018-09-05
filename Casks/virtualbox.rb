@@ -1,27 +1,34 @@
 cask 'virtualbox' do
-  if MacOS.release <= :lion
-    version '4.3.32-103443'
-    sha256 'dcfbd1d3014ab393dc5944a9474eeabf8b33471e7d95cb4c94070dc7acab772c'
-  else
-    version '5.0.14-105127'
-    sha256 '4de41068712eb819749b5376c90dca47f9a1d6eecf4c516d83269ac12add2aa4'
-  end
+  version '5.2.18,124319'
+  sha256 '89af567ab76006409dae3652fc1d49ebe4867ac0ee3784bfd283c16695478377'
 
-  url "http://download.virtualbox.org/virtualbox/#{version.sub(%r{-.*}, '')}/VirtualBox-#{version}-OSX.dmg"
+  url "https://download.virtualbox.org/virtualbox/#{version.before_comma}/VirtualBox-#{version.before_comma}-#{version.after_comma}-OSX.dmg"
+  appcast 'https://download.virtualbox.org/virtualbox/LATEST.TXT'
   name 'Oracle VirtualBox'
-  homepage 'https://www.virtualbox.org'
-  license :gpl
-
-  auto_updates true
+  homepage 'https://www.virtualbox.org/'
 
   pkg 'VirtualBox.pkg'
 
-  uninstall script:  { executable: 'VirtualBox_Uninstall.tool', args: %w[--unattended] },
+  uninstall script:  {
+                       executable: 'VirtualBox_Uninstall.tool',
+                       args:       ['--unattended'],
+                       sudo:       true,
+                     },
             pkgutil: 'org.virtualbox.pkg.*'
 
-  zap delete: [
-                '/Library/Application Support/VirtualBox',
-                '~/Library/VirtualBox',
-              ],
-      rmdir:  '~/VirtualBox VMs'
+  zap trash: [
+               '/Library/Application Support/VirtualBox',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualbox.sfl*',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualboxvm.sfl*',
+               '~/Library/VirtualBox',
+               '~/Library/Preferences/org.virtualbox.app.VirtualBox.plist',
+               '~/Library/Preferences/org.virtualbox.app.VirtualBoxVM.plist',
+               '~/Library/Saved Application State/org.virtualbox.app.VirtualBox.savedState',
+               '~/Library/Saved Application State/org.virtualbox.app.VirtualBoxVM.savedState',
+             ],
+      rmdir: '~/VirtualBox VMs'
+
+  caveats do
+    kext
+  end
 end

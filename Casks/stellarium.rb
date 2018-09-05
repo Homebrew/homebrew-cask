@@ -1,12 +1,16 @@
 cask 'stellarium' do
-  version '0.14.2'
-  sha256 '6367e9d77743312fe638fa12965afbfb520dbe64228f9d24f952928bcaaa0fe3'
+  version '0.18.2'
+  sha256 '70ebd4c0259d246c0b45c5f350ae9582a893a292fa432f1db15d040390c39e4e'
 
-  # sourceforge.net is the official download host per the vendor homepage
-  url "http://downloads.sourceforge.net/sourceforge/stellarium/Stellarium-#{version}.dmg"
+  # github.com/Stellarium/stellarium was verified as official when first introduced to the cask
+  url "https://github.com/Stellarium/stellarium/releases/download/v#{version.major_minor_patch}/Stellarium-#{version}.dmg"
+  appcast 'https://github.com/Stellarium/stellarium/releases.atom'
   name 'Stellarium'
-  homepage 'http://stellarium.org'
-  license :gpl
+  homepage 'http://stellarium.org/'
+
+  depends_on macos: '>= :yosemite'
 
   app 'Stellarium.app'
+
+  zap trash: '~/Library/Preferences/Stellarium'
 end

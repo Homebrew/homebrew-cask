@@ -1,11 +1,11 @@
 cask 'splitshow' do
-  version '0.9.6-alpha'
-  sha256 '3625368cd798f8d7ed2c2bc6e850f8a6bce7430de06f9e5e2ab65e3a552d96ac'
+  version '0.9.10-alpha'
+  sha256 '2bd1a68dda450e1052a54499731f710d119728f85f34187436cdffb5707dccd4'
 
-  url "https://github.com/mpflanzer/splitshow/releases/download/#{version}/SplitShow.app.zip"
+  url "https://github.com/mpflanzer/splitshow/releases/download/v.#{version}/SplitShow.app.zip"
+  appcast 'https://github.com/mpflanzer/splitshow/releases.atom'
   name 'SplitShow'
   homepage 'https://github.com/mpflanzer/splitshow'
-  license :mit
 
   app 'SplitShow.app'
 end

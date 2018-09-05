@@ -1,11 +1,17 @@
 cask 'messenger' do
-  version '0.1.6.1455039740-1a2c4f98e1dad409'
-  sha256 'f208b27e82ebf52452a1536216ccb6f4f0db02492717ff49a1bc7146ed385b36'
+  version '0.1.13.1491443794-7b1777b58fef0bf9'
+  sha256 '6b6f9888c9bf4e7d8fb2db547331cea7e9df99b85f914322af12a476c47bc984'
 
-  url "http://fbmacmessenger.rsms.me/dist/Messenger-#{version}.zip"
+  url "https://fbmacmessenger.rsms.me/dist/Messenger-#{version}.zip"
+  appcast 'https://fbmacmessenger.rsms.me/changelog.xml'
   name 'Messenger'
-  homepage 'http://fbmacmessenger.rsms.me/'
-  license :mit
+  homepage 'https://fbmacmessenger.rsms.me/'
 
   app 'Messenger.app'
+
+  zap trash: [
+               '~/Library/Caches/me.rsms.fbmessenger',
+               '~/Library/Cookies/me.rsms.fbmessenger.binarycookies',
+               '~/Library/Preferences/me.rsms.fbmessenger.plist',
+             ]
 end

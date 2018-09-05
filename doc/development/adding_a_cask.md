@@ -1,63 +1,77 @@
+**Note**: Before taking the time to craft a new cask, make sure it can be accepted by checking the [Rejected Casks FAQ document](https://github.com/Homebrew/homebrew-cask/blob/master/doc/faq/rejected_casks.md).
+
 ## Adding a Cask
 
 Making a new Cask is easy. Follow the directions in [Getting Set Up To Contribute](../../CONTRIBUTING.md#getting-set-up-to-contribute) to begin.
 
 ### Examples
 
-Here’s a Cask for `shuttle` as an example:
+Here’s a Cask for `shuttle` as an example. Note the comment above `url`, which is needed when [the url and homepage hostnames differ](../cask_language_reference/stanzas/url.md#when-url-and-homepage-hostnames-differ-add-a-comment)
 
 ```ruby
 cask 'shuttle' do
-  version '1.2.5'
-  sha256 '7df182f506b80011222c0cdd470be76e0376f38e331f3fafbb6af9add3578023'
+  version '1.2.6'
+  sha256 '7b54529cd00332e423839cf768b732ac6c42e17de9325d0a093764180deeb611'
 
+  # github.com/fitztrev/shuttle was verified as official when first introduced to the cask
   url "https://github.com/fitztrev/shuttle/releases/download/v#{version}/Shuttle.zip"
-  appcast 'https://github.com/fitztrev/shuttle/releases.atom',
-          checkpoint: '9f66dbb98f73f69f4a1759d4bdb8d2552060d599548427740e239ca45185fe5c'
+  appcast 'https://github.com/fitztrev/shuttle/releases.atom'
   name 'Shuttle'
   homepage 'https://fitztrev.github.io/shuttle/'
-  license :mit
 
   app 'Shuttle.app'
 
-  zap delete: '~/.shuttle.json'
+  zap trash: '~/.shuttle.json'
 end
 ```
 
-And here is one for `gateblu`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check` (necessary since the checksum will change when a new distribution is made available). This combination of `version :latest` and `sha256 :no_check` is currently the preferred mechanism when a versioned download URL is not available. Also note the comment above `url`, which is needed when [the url and homepage hostnames differ](../cask_language_reference/stanzas/url.md#when-url-and-homepage-hostnames-differ-add-a-comment):
+And here is one for `advancedcolors`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check` (necessary since the checksum will change when a new distribution is made available). This combination of `version :latest` and `sha256 :no_check` is currently the preferred mechanism when a versioned download URL is not available.
 
 ```ruby
-cask 'gateblu' do
+cask 'advancedcolors' do
   version :latest
   sha256 :no_check
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url 'https://s3-us-west-2.amazonaws.com/gateblu/gateblu-ui/latest/Gateblu.dmg'
-  name 'Gateblu'
-  homepage 'https://gateblu.octoblu.com'
-  license :mit
+  url 'http://advancedcolors.com/AdvancedColors.zip'
+  name 'Advanced Colors'
+  homepage 'http://advancedcolors.com/'
 
-  pkg 'Gateblu Installer.pkg'
+  app 'AdvancedColors.app'
+end
+```
 
-  uninstall pkgutil: 'com.octoblu.*',
-            delete: '/Applications/Gateblu.app'
+Here is a last example for `airdisplay`, which uses a `pkg` installer to install the application instead of a stand-alone application bundle (`.app`). Note the [`uninstall pkgutil` stanza](../cask_language_reference/stanzas/uninstall.md#uninstall-key-pkgutil), which is needed to uninstall all files which were installed using the installer.
+
+```ruby
+cask 'airdisplay' do
+  version '3.0.3'
+  sha256 'db84a66fe3522929a0afa58a4fe0189977baded89df0035ead1ccd334f7b8126'
+
+  url "https://www.avatron.com/updates/software/airdisplay/ad#{version.no_dots}.zip"
+  appcast 'https://avatron.com/updates/software/airdisplay/appcast.xml'
+  name 'Air Display'
+  homepage 'https://avatron.com/apps/air-display/'
+
+  pkg 'Air Display Installer.pkg'
+
+  uninstall pkgutil: 'com.avatron.pkg.AirDisplay'
 end
 ```
 
 ### Generating a Token for the Cask
 
-The Cask **token** is the mnemonic string people will use to interact with the Cask via `brew cask install`, `brew cask search`, etc. The name of the Cask **file** is simply the token with the extension `.rb` appended.
+The Cask **token** is the mnemonic string people will use to interact with the Cask via `brew cask install`, etc. The name of the Cask **file** is simply the token with the extension `.rb` appended.
 
 The easiest way to generate a token for a Cask is to run this command:
 
 ```bash
-$ "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/generate_cask_token" '/full/path/to/new/software.app'
+$ "$(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/generate_cask_token" '/full/path/to/new/software.app'
 ```
 
 If the software you wish to Cask is not installed, or does not have an associated App bundle, just give the full proper name of the software instead of a pathname:
 
 ```bash
-$ "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/developer/bin/generate_cask_token" 'Google Chrome'
+$ "$(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/generate_cask_token" 'Google Chrome'
 ```
 
 If the `generate_cask_token` script does not work for you, see [Cask Token Details](#cask-token-details).
@@ -80,7 +94,6 @@ cask 'my-new-cask' do
   url ''
   name ''
   homepage ''
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app ''
 end
@@ -94,11 +107,10 @@ Fill in the following stanzas for your Cask:
 | ------------------ | ----------- |
 | `version`          | application version; give the value `:latest` if only an unversioned download is available
 | `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`. Can be suppressed by using the special value `:no_check`. (see [sha256](../cask_language_reference/stanzas/sha256.md))
-| `url`              | URL to the `.dmg`/`.zip`/`.tgz` file that contains the application. A [comment](../cask_language_reference/stanzas/url.md#when-url-and-homepage-hostnames-differ-add-a-comment) should be added if the hostnames in the `url` and `homepage` stanzas differ (see [URL Stanza Details](../cask_language_reference/stanzas/url.md))
+| `url`              | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application.<br />A [comment](../cask_language_reference/stanzas/url.md#when-url-and-homepage-hostnames-differ-add-a-comment) should be added if the hostnames in the `url` and `homepage` stanzas differ. Block syntax should be used for URLs that change on every visit.<br />See [URL Stanza Details](../cask_language_reference/stanzas/url.md) for more information.
 | `name`             | the full and proper name defined by the vendor, and any useful alternate names (see [Name Stanza Details](../cask_language_reference/stanzas/name.md))
 | `homepage`         | application homepage; used for the `brew cask home` command
-| `license`          | a symbol identifying the license for the application. Valid category licenses include `:oss`, `:closed`, and `:unknown`. It is OK to leave as `:unknown`. (see [License Stanza Details](../cask_language_reference/stanzas/license.md))
-| `app`              | relative path to an `.app` bundle that should be linked into the `~/Applications` folder on installation (see [App Stanza Details](../cask_language_reference/stanzas/app.md))
+| `app`              | relative path to an `.app` bundle that should be moved into the `/Applications` folder on installation (see [App Stanza Details](../cask_language_reference/stanzas/app.md))
 
 Other commonly-used stanzas are:
 
@@ -150,23 +162,22 @@ brew cask audit my-new-cask --download
 You should also check stylistic details with `brew cask style`:
 
 ```bash
-$ cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
+$ cd "$(brew --repository)"/Library/Taps/Homebrew/homebrew-cask
 $ brew cask style Casks/my-new-cask.rb [--fix]
 ```
 
 Keep in mind all of these checks will be made when you submit your PR, so by doing them in advance you’re saving everyone a lot of time and trouble.
 
-If your application and Homebrew-Cask do not work well together, feel free to [file an issue](https://github.com/caskroom/homebrew-cask#reporting-bugs) after checking out open issues.
+If your application and Homebrew-Cask do not work well together, feel free to [file an issue](https://github.com/Homebrew/homebrew-cask#reporting-bugs) after checking out open issues.
 
 ## Finding a Home For Your Cask
 
 We maintain separate Taps for different types of binaries. Our nomenclature is:
 
 + **Stable**: The latest version provided by the developer defined by them as such.
-+ **Beta, Development, Unstable**: Subsequent versions to **stable**, yet incomplete and under development, aiming to eventually become the new **stable**.
++ **Beta, Development, Unstable**: Subsequent versions to **stable**, yet incomplete and under development, aiming to eventually become the new **stable**. Also includes alternate versions specifically targeted at developers.
 + **Nightly**: Constantly up-to-date versions of the current development state.
 + **Legacy**: Any **stable** version that is not the most recent.
-+ **Alternative**: Alternative edition of an existing app, by the same vendor (developer editions, community editions, pro editions, …).
 + **Regional, Localized**: Any version that isn’t the US English one, when that exists.
 + **Trial**: Date-limited version that stops working entirely after it expires, requiring payment to lift the limitation.
 + **Freemium**: Gratis version that works indefinitely but with limitations that can be removed by paying.
@@ -174,22 +185,25 @@ We maintain separate Taps for different types of binaries. Our nomenclature is:
 + **Unofficial**: An *allegedly* unmodified compiled binary, by a third-party, of a binary that has no existing build by the owner of the source code.
 + **Vendorless**: A binary distributed without an official website, like a forum posting.
 + **Walled**: When the download URL is both behind a login/registration form and from a host that differs from the homepage.
++ **Font**: Data file containing a set of glyphs, characters, or symbols, that changes typed text.
++ **eID**: Software to install electronic identity card software of various countries.
++ **Driver**: Software to make a hardware peripheral recognisable and usable by the system. If the software is useless without the peripheral, it’s considered a driver.
 
 ### Stable Versions
 
-Stable versions live in the main repository at [caskroom/homebrew-cask](https://github.com/caskroom/homebrew-cask). They should run on the latest release of OS X or the previous point release (in 2015, for example, that meant El Capitan and Yosemite).
+Stable versions live in the main repository at [Homebrew/homebrew-cask](https://github.com/Homebrew/homebrew-cask). They should run on the latest release of macOS or the previous point release (High Sierra and Mojave as of late 2018).
 
 ### But There Is No Stable Version!
 
 When an App is only available as beta, development, or unstable versions, or in cases where such a version is the general standard, then said version can go into the main repo.
 
-### Beta, Unstable, Development, Nightly, Legacy, or Alternative Versions
+### Beta, Unstable, Development, Nightly, or Legacy
 
-When an App’s principal stable version already exists in the main repo, alternative versions should be submitted to [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions).
+When an App has a main stable version, alternative versions should be submitted to [Homebrew/homebrew-cask-versions](https://github.com/Homebrew/homebrew-cask-versions).
 
 ### Regional and Localized
 
-When an App exists in more than one language or has different regional editions, the US English one belongs in the main repo, and all the others in [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions). When not already part of the name of the App, a [regional identifier](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) and a [language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) are to be appended to the Cask’s token (both when available, or just the appropriate one when not).
+When an App exists in more than one language or has different regional editions, [the `language` stanza should be used to switch between languages or regions](../../doc/cask_language_reference/stanzas/language.md).
 
 ### Trial and Freemium Versions
 
@@ -201,11 +215,21 @@ Forks should have the vendor’s name as a prefix on the Cask’s file name and 
 
 ### Unofficial, Vendorless, and Walled Builds
 
-Please submit these to [caskroom/homebrew-unofficial](http://github.com/caskroom/homebrew-unofficial). If you’ve made an unofficial build and need a place to host it, contact our sister project [alehouse](https://github.com/alehouse).
+We do not accept these casks since they offer a higher-than-normal security risk. [alehouse/homebrew-unofficial](https://github.com/alehouse/homebrew-unofficial) is a sister repo where you may wish to submit your cask.
 
 ### Fonts
 
-Font Casks live in the [caskroom/homebrew-fonts](https://github.com/caskroom/homebrew-fonts) repository. See the font repo [CONTRIBUTING.md](../../../../../homebrew-fonts/blob/master/CONTRIBUTING.md)
+Font Casks live in the [Homebrew/homebrew-cask-fonts](https://github.com/Homebrew/homebrew-cask-fonts) repository. See the font repo [CONTRIBUTING.md](../../../../../homebrew-cask-fonts/blob/master/CONTRIBUTING.md)
+for details.
+
+### eIDs
+
+eID Casks live in the [Homebrew/homebrew-cask-eid](https://github.com/Homebrew/homebrew-cask-eid) repository. See the eid repo [CONTRIBUTING.md](../../../../../homebrew-cask-eid/blob/master/CONTRIBUTING.md)
+for details.
+
+### Drivers
+
+Driver Casks live in the [Homebrew/homebrew-cask-drivers](https://github.com/Homebrew/homebrew-cask-drivers) repository. See the drivers repo [CONTRIBUTING.md](../../../../../homebrew-cask-drivers/blob/master/CONTRIBUTING.md)
 for details.
 
 ## Submitting Your Changes
@@ -213,7 +237,7 @@ for details.
 Hop into your Tap and check to make sure your new Cask is there:
 
 ```bash
-$ cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
+$ cd "$(brew --repository)"/Library/Taps/Homebrew/homebrew-cask
 $ git status
 # On branch master
 # Untracked files:
@@ -264,29 +288,22 @@ Examples of difficult, unclear commit summaries:
 Push your changes to your GitHub account:
 
 ```bash
-$ github_user='<my-github-username>'
-$ git push "$github_user" my-new-cask
+$ git push <my-github-username> my-new-cask
 ```
 
 If you are using [GitHub two-factor authentication](https://help.github.com/articles/about-two-factor-authentication/) and set your remote repository as HTTPS you will need to set up a personal access token and use that instead of your password. Further information [here](https://help.github.com/articles/https-cloning-errors/#provide-access-token-if-2fa-enabled).
 
-### Squashing
-
-If your pull request has multiple commits which revise the same lines of code, or if you make some changes after comments from one of the maintainers, it is better to [squash](http://davidwalsh.name/squash-commits-git) those commits together into one logical unit.
-
-But you don’t always have to squash — it is fine for a pull request to contain multiple commits when there is a logical reason for the separation.
-
 ### Filing a Pull Request on GitHub
 
-Now go to the [`homebrew-cask` GitHub repository](https://github.com/caskroom/homebrew-cask). GitHub will often show your `my-new-cask` branch with a handy button to `Compare & pull request`. Otherwise, click the `New pull request` button and choose to `compare across forks`. The base fork should be `caskroom/homebrew-cask @ master`, and the head fork should be `my-github-username/homebrew-cask @ my-new-cask`. You can also add any further comments to your pull request at this stage.
+Now go to the [`homebrew-cask` GitHub repository](https://github.com/Homebrew/homebrew-cask). GitHub will often show your `my-new-cask` branch with a handy button to `Compare & pull request`. Otherwise, click the `New pull request` button and choose to `compare across forks`. The base fork should be `Homebrew/homebrew-cask @ master`, and the head fork should be `my-github-username/homebrew-cask @ my-new-cask`. You can also add any further comments to your pull request at this stage.
 
-Congratulations! You are done now, and your Cask should be pulled in or otherwise noticed in a while. If a maintainer suggests some changes, just make them on the `my-new-cask` branch locally, [squash](#squashing), and [push](#pushing).
+Congratulations! You are done now, and your Cask should be pulled in or otherwise noticed in a while. If a maintainer suggests some changes, just make them on the `my-new-cask` branch locally and [push](#pushing).
 
 ## Cleaning up
 
 After your Pull Request is submitted, you should get yourself back onto `master`, so that `brew update` will pull down new Casks properly:
 
 ```bash
-cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask
+cd "$(brew --repository)"/Library/Taps/Homebrew/homebrew-cask
 git checkout master
 ```

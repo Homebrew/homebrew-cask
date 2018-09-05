@@ -1,12 +1,12 @@
 cask 'sparkleshare' do
-  version '1.5'
-  sha256 '5000d3484e864c2ca94fb9e3ed40cdcb5d23664fe5708f351b73b8abe6d34f2a'
+  version '3.28'
+  sha256 'd0e561706b65d379ae947f77a2fc443395b69462d1dd968ac334155c73a38381'
 
-  # bitbucket.org is the official download host per the vendor homepage
-  url "https://bitbucket.org/hbons/sparkleshare/downloads/sparkleshare-mac-#{version}.zip"
+  # github.com/hbons/SparkleShare was verified as official when first introduced to the cask
+  url "https://github.com/hbons/SparkleShare/releases/download/#{version}/sparkleshare-mac-#{version}.zip"
+  appcast 'https://github.com/hbons/SparkleShare/releases.atom'
   name 'SparkleShare'
-  homepage 'http://sparkleshare.org/'
-  license :gpl
+  homepage 'https://sparkleshare.org/'
 
   app 'SparkleShare.app'
 end

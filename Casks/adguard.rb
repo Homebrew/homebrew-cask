@@ -1,13 +1,21 @@
 cask 'adguard' do
-  version '1.1.0'
-  sha256 '4d48a7c048e36d002b371e22765e68fef31dd011db18635bef35063e456c27f8'
+  version '1.5.8'
+  sha256 '421756ece1cad65b65f994ac803651e9b443ef61eda31c21ec8dec12d2379b1d'
 
   url "https://static.adguard.com/mac/Adguard-#{version}.release.dmg"
-  appcast 'https://static.adguard.com/mac/adguard-release-appcast.xml',
-          checkpoint: '6d78234d82be433e81311e85d5b78fd915323bb32fb59c0b17891561367c3c5b'
+  appcast 'https://static.adguard.com/mac/adguard-release-appcast.xml'
   name 'Adguard for Mac'
   homepage 'https://adguard.com/'
-  license :commercial
 
   app 'Adguard.app'
+
+  zap trash: [
+               '/Library/Application Support/com.adguard.Adguard',
+               '~/Library/Application Support/Adguard',
+               '~/Library/Application Support/com.adguard.Adguard',
+               '~/Library/Caches/com.adguard.Adguard',
+               '~/Library/Cookies/com.adguard.Adguard.binarycookies',
+               '~/Library/Logs/Adguard',
+               '~/Library/Preferences/com.adguard.Adguard.plist',
+             ]
 end

@@ -1,13 +1,31 @@
 cask 'mono-mdk' do
-  version '4.2.1.102'
-  sha256 :no_check # required as upstream package is updated in-place
+  version '5.14.0.177'
+  sha256 'a33636dc80f887332b1bd13bd836737007e78c6703478aa891efb99fd6db8779'
 
-  url "http://download.mono-project.com/archive/#{version.sub(%r{\.[^.]*$}, '')}/macos-10-universal/MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
+  url "https://download.mono-project.com/archive/#{version.major_minor_patch}/macos-10-universal/MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
+  appcast 'https://www.mono-project.com/download/stable/'
   name 'Mono'
-  homepage 'http://mono-project.com'
-  license :oss
+  homepage 'http://www.mono-project.com/'
 
   pkg "MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
 
-  uninstall pkgutil: 'com.xamarin.mono-*'
+  uninstall delete:  [
+                       "/Library/Frameworks/Mono.framework/Versions/#{version.major_minor_patch}",
+                       '/private/etc/paths.d/mono-commands',
+                     ],
+            pkgutil: 'com.xamarin.mono-*',
+            rmdir:   [
+                       '/Library/Frameworks/Mono.framework/Versions',
+                       '/Library/Frameworks/Mono.framework',
+                     ]
+
+  caveats <<~EOS
+    Installing #{token} removes mono and mono dependant formula binaries in
+    /usr/local/bin and adds #{token} to /private/etc/paths.d/
+    You may want to:
+
+      brew unlink {formula} && brew link {formula}
+
+    and/or remove /private/etc/paths.d/mono-commands
+  EOS
 end

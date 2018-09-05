@@ -5,7 +5,6 @@ cask 'a-slower-speed-of-light' do
   url "http://web.mit.edu/gambit/#{version}/speedoflight/beta/A_Slower_Speed_of_Light.dmg"
   name 'A Slower Speed of Light'
   homepage 'http://gamelab.mit.edu/games/a-slower-speed-of-light/'
-  license :gratis
 
   app 'A Slower Speed of Light.app'
 end

@@ -5,14 +5,13 @@ cask 'breeze' do
   url "https://autumnapps.com/downloads/Breeze#{version}.dmg"
   name 'Breeze'
   homepage 'https://autumnapps.com/breeze/'
-  license :freemium
 
   app 'Breeze.app'
 
   uninstall quit: 'com.autumnapps.direct.Breeze'
 
-  zap delete: [
-                '~/Library/Caches/com.autumnapps.direct.Breeze',
-                '~/Library/Preferences/com.autumnapps.direct.Breeze.plist',
-              ]
+  zap trash: [
+               '~/Library/Caches/com.autumnapps.direct.Breeze',
+               '~/Library/Preferences/com.autumnapps.direct.Breeze.plist',
+             ]
 end

@@ -1,13 +1,11 @@
 cask 'firetask' do
-  version '3.7.5'
-  sha256 'fe8ca19270ce248dd78fdba0183ee2e9f6b69a889f8e6b66974f4ed8e3b81e8d'
+  version '3.8.1'
+  sha256 '6cbec2939c62125baa371f982540b64df8524432ce58232eb43b2473b753f646'
 
   url "http://downloads.firetask.com/firetask-mac/Firetask-Mac-#{version}.zip"
-  appcast 'http://www.firetask.com/firetask-mac/updates/firetask-mac.xml',
-          checkpoint: '3dfbebabbaae47cc4dbafc49f00f616f4b10afc1af755ff0de9029e8d3e394bc'
+  appcast 'http://www.firetask.com/firetask-mac/updates/firetask-mac.xml'
   name 'FireTask'
-  homepage 'http://firetask.com'
-  license :commercial
+  homepage 'http://firetask.com/'
 
   depends_on macos: '>= :mountain_lion'
 

@@ -1,20 +1,50 @@
 cask 'docker' do
-  version '1.10.0'
-  sha256 'f8dc0c7ef2a7efbe0e062017822066e55a40c752b9e92a636359f59ef562d79f'
+  version '18.06.1-ce-mac73,26764'
+  sha256 '3429eac38cf0d198039ad6e1adce0016f642cdb914a34c67ce40f069cdb047a5'
 
-  url "https://get.docker.com/builds/Darwin/x86_64/docker-#{version}"
-  appcast 'https://github.com/docker/docker/releases.atom',
-          checkpoint: '6f0904fe8a632ba9adba98b66ff6af7e64bb8575a2fb3b494d9a0797377fe496'
-  name 'Docker Engine Client'
-  homepage 'https://docs.docker.com/engine/userguide/'
-  license :apache
+  url "https://download.docker.com/mac/stable/#{version.after_comma}/Docker.dmg"
+  appcast 'https://download.docker.com/mac/stable/appcast.xml'
+  name 'Docker Community Edition'
+  name 'Docker CE'
+  homepage 'https://www.docker.com/community-edition'
 
-  depends_on arch: :x86_64
-  container type: :naked
+  auto_updates true
+  depends_on macos: '>= :yosemite'
 
-  binary "docker-#{version}", target: 'docker'
+  app 'Docker.app'
 
-  postflight do
-    set_permissions "#{staged_path}/docker-#{version}", '0755'
-  end
+  uninstall delete:    [
+                         '/Library/PrivilegedHelperTools/com.docker.vmnetd',
+                         '/private/var/tmp/com.docker.vmnetd.socket',
+                         '/usr/local/bin/docker',
+                         '/usr/local/bin/docker-compose',
+                         '/usr/local/bin/docker-credential-osxkeychain',
+                         '/usr/local/bin/docker-machine',
+                         '/usr/local/bin/hyperkit',
+                         '/usr/local/bin/notary',
+                         '/usr/local/bin/vpnkit',
+                       ],
+            launchctl: [
+                         'com.docker.helper',
+                         'com.docker.vmnetd',
+                       ],
+            quit:      'com.docker.docker'
+
+  zap trash: [
+               '/usr/local/bin/docker-compose.backup',
+               '/usr/local/bin/docker-machine.backup',
+               '/usr/local/bin/docker.backup',
+               '~/Library/Application Scripts/com.docker.helper',
+               '~/Library/Caches/KSCrashReports/Docker',
+               '~/Library/Caches/com.docker.docker',
+               '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.docker.docker',
+               '~/Library/Containers/com.docker.docker',
+               '~/Library/Containers/com.docker.helper',
+               '~/Library/Group Containers/group.com.docker',
+               '~/Library/Preferences/com.docker.docker.plist',
+             ],
+      rmdir: [
+               '~/Library/Caches/KSCrashReports',
+               '~/Library/Caches/com.plausiblelabs.crashreporter.data',
+             ]
 end

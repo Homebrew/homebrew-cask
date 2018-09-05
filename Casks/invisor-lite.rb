@@ -1,13 +1,13 @@
 cask 'invisor-lite' do
-  version '3.5.1'
-  sha256 '77f481352cbabd583aec22d73273a5952c2febdb53bf16b6be3a5bbf3b9f879a'
+  version '3.9'
+  sha256 'f824e101c43339abc2ccca6af7e58b2acce1844b12d170f64ed032e189137772'
 
-  url "http://www.pozdeev.com/invisor/download/InvisorLite-#{version}.dmg"
-  appcast 'http://www.pozdeev.com/invisor/appcast_lite.xml',
-          checkpoint: '75c0326debf31fec37b3bfdc670a3a59b0c996ce184da9f5a9fef3923a038b3e'
+  url "https://www.invisorapp.com/download/InvisorLite-#{version}.dmg"
+  appcast 'https://www.invisorapp.com/appcast_lite.xml'
   name 'Invisor Lite'
-  homepage 'http://www.pozdeev.com/invisor/'
-  license :gratis
+  homepage 'https://www.invisorapp.com/'
+
+  depends_on macos: '>= :lion'
 
   app 'Invisor Lite.app'
 end

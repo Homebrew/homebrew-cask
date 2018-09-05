@@ -1,13 +1,11 @@
 cask 'dogestry' do
-  version '2.1.5'
-  sha256 '7629c0c143f86c45906a502906afe926b35252ba77588d5c63566c3ffceb5af0'
+  version '2.1.6'
+  sha256 '8d419c8ddfe66fca0727f5bbe8669e76e3c4ab0004bd15ffd4bccdb2c06c17c5'
 
   url "https://github.com/dogestry/dogestry/releases/download/v#{version}/dogestry-darwin-#{version}"
-  appcast 'https://github.com/dogestry/dogestry/releases.atom',
-          checkpoint: 'b18d1b3ed7f5ec24935c8a8f569ed4c5108303f254210b27947e72ccbd869c6f'
+  appcast 'https://github.com/dogestry/dogestry/releases.atom'
   name 'Dogestry'
   homepage 'https://github.com/dogestry/dogestry'
-  license :mit
 
   container type: :naked
 

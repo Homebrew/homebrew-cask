@@ -1,11 +1,16 @@
 cask 'luminance-hdr' do
-  version '2.4.0'
-  sha256 '8b97a9bf902aba0249091a70637df5f6040cdc25f9522aaa25bbb73aa9e297b9'
+  version '2.5.1_1'
+  sha256 'be4ae6c1110bbac4fd57358e1a0489871ba143f4f295a6d07f95be9aaecb4d18'
 
-  url "http://downloads.sourceforge.net/sourceforge/qtpfsgui/Luminance%20HDR%20#{version}-MacOSX-10.8.dmg"
+  url "https://downloads.sourceforge.net/qtpfsgui/Luminance_HDR_#{version}.dmg"
+  appcast 'https://sourceforge.net/projects/qtpfsgui/rss'
   name 'Luminance HDR'
   homepage 'http://qtpfsgui.sourceforge.net/'
-  license :gpl
 
-  app "Luminance HDR #{version}.app"
+  app "Luminance HDR #{version.major_minor_patch}.app"
+
+  zap trash: [
+               '~/Library/Preferences/com.luminance-hdr.plist',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.luminance-hdr.sfl*',
+             ]
 end

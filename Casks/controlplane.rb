@@ -1,23 +1,19 @@
 cask 'controlplane' do
-  if MacOS.release <= :snow_leopard
+  if MacOS.version <= :snow_leopard
     version '1.2.3'
     sha256 '37f93d3a3a17a6e2f24447f0bc74c7e89ec1581ca52e5970960544858c86f909'
   else
-    version '1.6.2'
-    sha256 '3464571449fa95776c79e32c9f5b20d7528d8969a9905b04e4248ce505143168'
+    version '1.6.6'
+    sha256 'a9c9cdfe350bc9f038764a0b4c8f4337750113f44aacd68aa81b6f0aa391af1b'
 
-    appcast 'http://www.controlplaneapp.com/appcast.xml',
-            checkpoint: 'a3abb9d2ae2daed7551c70a2953a235ee847055afaa2b0e7aa1471060f2c44e6'
+    appcast 'https://www.controlplaneapp.com/appcast.xml'
   end
 
-  url "http://www.controlplaneapp.com/download/#{version}"
+  url "https://www.controlplaneapp.com/download/#{version}"
   name 'ControlPlane'
-  homepage 'http://www.controlplaneapp.com/'
-  license :gpl
-
-  depends_on macos: '>= :snow_leopard'
+  homepage 'https://www.controlplaneapp.com/'
 
   app 'ControlPlane.app'
 
-  zap delete: '~/Library/Preferences/com.dustinrue.ControlPlane.plist'
+  zap trash: '~/Library/Preferences/com.dustinrue.ControlPlane.plist'
 end

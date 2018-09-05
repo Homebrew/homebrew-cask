@@ -1,17 +1,10 @@
 cask 'couchbase-server-community' do
-  version '4.0.0'
+  version '5.0.1'
+  sha256 '14ccc4fad7f4fc4cc66e6dcaa384781b1c5f18b60a5bb58c6b508dbc29bab9be'
 
-  if MacOS.release <= :yosemite
-    sha256 'ff994c89abf2efcc7dafa6753cfc25c821f3cc24935dccb7a979d170ced56162'
-    url "http://packages.couchbase.com/releases/#{version}/couchbase-server-community_#{version}-macos_x86_64.zip"
-  else
-    sha256 'ce39892b66c06d153004474e273d5775515710e7b073269f75637bf2c4f1f2c4'
-    url "http://packages.couchbase.com/releases/#{version}/couchbase-server-community_#{version}-elcapitan_x86_64.zip"
-  end
-
+  url "http://packages.couchbase.com/releases/#{version}/couchbase-server-community_#{version}-macos_x86_64.zip"
   name 'Couchbase Server'
-  homepage 'http://www.couchbase.com/'
-  license :apache
+  homepage 'https://www.couchbase.com/'
 
-  app 'Couchbase Server.app'
+  app "couchbase-server-community_#{version}/Couchbase Server.app"
 end

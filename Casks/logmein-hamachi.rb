@@ -2,14 +2,20 @@ cask 'logmein-hamachi' do
   version :latest
   sha256 :no_check
 
-  # logmein.com is the official download host per the vendor homepage
+  # logmein.com was verified as official when first introduced to the cask
   url 'https://secure.logmein.com/LogMeInHamachi.zip'
   name 'LogMeIn Hamachi'
-  homepage 'https://vpn.net'
-  license :freemium
+  homepage 'https://vpn.net/'
 
-  installer script: 'LogMeInHamachiInstaller.app/Contents/MacOS/Lili',
-            args:   ['-s']
+  installer manual: 'LogMeInHamachiInstaller.app'
 
-  uninstall script: '/Applications/LogMeIn Hamachi/HamachiUninstaller.app/Contents/Resources/uninstaller.sh'
+  uninstall script: {
+                      executable: '/Applications/LogMeIn Hamachi/HamachiUninstaller.app/Contents/Resources/uninstaller.sh',
+                      sudo:       true,
+                    }
+
+  zap trash: [
+               '/Library/Application Support/LogMeIn Hamachi',
+               '~/Library/Application Support/LogMeIn Hamachi',
+             ]
 end

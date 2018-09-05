@@ -1,40 +1,49 @@
 cask 'minecraft-server' do
-  version '1.8.8'
-  sha256 '39aef720dc5309476f56f2e96a516f3dd3041bbbf442cbfd47d63acbd06af31e'
+  version '1.12.2'
+  sha256 'fe1f9274e6dad9191bf6e6e8e36ee6ebc737f373603df0946aafcded0d53167e'
 
-  # amazonaws.com is the official download host per the vendor homepage
+  # s3.amazonaws.com/Minecraft.Download was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/Minecraft.Download/versions/#{version}/minecraft_server.#{version}.jar"
   name 'Minecraft Server'
   homepage 'https://minecraft.net/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   container type: :naked
 
-  binary 'minecraft-server'
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/minecraft-server.wrapper.sh"
+  binary shimscript, target: 'minecraft-server'
+
+  config_dir = HOMEBREW_PREFIX.join('etc', 'minecraft-server')
 
   preflight do
-    FileUtils.touch "#{staged_path}/minecraft-server"
-    minecraft_server = File.open "#{staged_path}/minecraft-server", 'w'
-    minecraft_server.puts '#!/bin/bash'
-    minecraft_server.puts 'BASEDIR=$(dirname "$(readlink -n $0)")'
-    minecraft_server.puts 'cd $BASEDIR'
-    minecraft_server.puts 'java -Xmx1024M -Xms1024M -jar minecraft_server.1.8.8.jar nogui'
-    minecraft_server.close
+    FileUtils.mkdir_p config_dir
+
+    IO.write shimscript, <<~EOS
+      #!/bin/sh
+      cd '#{config_dir}' && \
+        exec /usr/bin/java -Xmx1024M -Xms1024M -jar '#{staged_path}/minecraft_server.#{version}.jar' nogui
+    EOS
   end
+
+  eula_file = config_dir.join('eula.txt')
 
   postflight do
-    set_permissions "#{staged_path}/minecraft-server", '+x'
-    system 'minecraft-server'
-
-    file_name = "#{staged_path}/EULA.txt"
-    contents = File.read(file_name).gsub(%r{false}, 'true')
-    File.open(file_name, 'w') { |file| file.puts contents }
+    system_command shimscript
+    IO.write(eula_file, IO.read(eula_file).sub('eula=false', 'eula=TRUE'))
   end
 
+  uninstall_preflight do
+    FileUtils.rm_f eula_file
+  end
+
+  zap trash: config_dir
+
   caveats do
-    <<-EOS.undent
-      To run this app, type "#{token}" in terminal.
-      To configure the server take a look at the files staged at #{staged_path}
+    depends_on_java
+    <<~EOS
+      Configuration files are located in
+
+        #{config_dir}
     EOS
   end
 end

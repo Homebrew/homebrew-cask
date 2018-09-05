@@ -4,8 +4,7 @@ cask 'macdrops' do
 
   url "https://interfacelift.com/apps/macdrops/v1/Macdrops_v#{version}.dmg"
   name 'Macdrops'
-  homepage 'https://interfacelift.com/apps/macdrops/v1'
-  license :commercial
+  homepage 'https://interfacelift.com/apps/macdrops/v1/'
 
   app "Macdrops v#{version}.app"
 end

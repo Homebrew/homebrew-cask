@@ -68,7 +68,7 @@ if [[ $1 =~ ^-+h(elp)?$ ]]; then
 List all installed launchjob IDs, which may be useful
 in a Cask uninstall stanza, eg
 
-    uninstall :launchctl => 'job.id.goes.here'
+    uninstall launchctl: 'job.id.goes.here'
 
 Launchctl jobs attributed to Apple will be ommitted.
 

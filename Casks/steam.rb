@@ -2,12 +2,10 @@ cask 'steam' do
   version :latest
   sha256 :no_check
 
-  url 'http://media.steampowered.com/client/installer/steam.dmg'
+  # steamcdn-a.akamaihd.net was verified as official when first introduced to the cask
+  url 'https://steamcdn-a.akamaihd.net/client/installer/steam.dmg'
   name 'Steam'
   homepage 'http://store.steampowered.com/about/'
-  license :gratis
-
-  auto_updates true
 
   app 'Steam.app'
 
@@ -21,10 +19,10 @@ cask 'steam' do
                          'com.valvesoftware.steam.ipctool',
                        ]
 
-  zap delete: [
-                '~/Library/LaunchAgents/com.valvesoftware.steamclean.plist',
-                '~/Library/Preferences/com.valvesoftware.steam.helper.plist',
-                '~/Library/Application Support/Steam/',
-                '~/Library/Saved Application State/com.valvesoftware.steam.savedState/',
-              ]
+  zap trash: [
+               '~/Library/LaunchAgents/com.valvesoftware.steamclean.plist',
+               '~/Library/Preferences/com.valvesoftware.steam.helper.plist',
+               '~/Library/Application Support/Steam/',
+               '~/Library/Saved Application State/com.valvesoftware.steam.savedState/',
+             ]
 end

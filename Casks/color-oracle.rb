@@ -5,7 +5,6 @@ cask 'color-oracle' do
   url 'http://colororacle.org/ColorOracleMac.zip'
   name 'Color Oracle'
   homepage 'http://colororacle.org/'
-  license :mit
 
   app 'Color Oracle.app'
 end

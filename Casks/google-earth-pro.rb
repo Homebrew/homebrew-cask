@@ -1,24 +1,21 @@
 cask 'google-earth-pro' do
-  version :latest
-  sha256 :no_check
+  version '7.3.2.5491'
+  sha256 'a3a2699cdea4502b42ee6c82831331152d2b3188dc75dce612bf452ba2e793e6'
 
   url 'https://dl.google.com/earth/client/advanced/current/GoogleEarthProMac-Intel.dmg'
   name 'Google Earth Pro'
   homepage 'https://www.google.com/earth/'
-  license :gratis
 
-  pkg 'Install Google Earth.pkg'
+  pkg "Install Google Earth Pro #{version}.pkg"
 
   uninstall pkgutil: 'com.Google.GoogleEarthPro'
 
-  zap delete: [
-                '~/Library/Application Support/Google Earth',
-                '~/Library/Caches/Google Earth',
-                '~/Library/Caches/com.Google.GoogleEarthPro',
-              ]
-
-  caveats <<-EOS.undent
-    Using #{token} requires a license key. If you do not have a key, use your
-    email address and the key GEPFREE to sign in.
-  EOS
+  zap trash:   [
+                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.googleearthpro.sfl*',
+                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.googleearthupdatehelper.sfl*',
+                 '~/Library/Application Support/Google Earth',
+                 '~/Library/Caches/Google Earth',
+                 '~/Library/Caches/com.Google.GoogleEarthPro',
+               ],
+      pkgutil: 'com.google.pkg.Keystone'
 end

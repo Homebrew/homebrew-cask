@@ -1,20 +1,25 @@
 cask 'phpstorm' do
-  version '10.0.3'
-  sha256 'bd7d28974ef5587524389659dd27516c1067c35aebeee040821c638a18439e52'
+  version '2018.2.2,182.4129.45'
+  sha256 'f6166853261380645122729a29a42542985e70f53b91d8dac403acb01c81e787'
 
-  url "https://download.jetbrains.com/webide/PhpStorm-#{version}-custom-jdk-bundled.dmg"
-  name 'PhpStorm'
+  url "https://download.jetbrains.com/webide/PhpStorm-#{version.before_comma}.dmg"
+  appcast 'https://data.services.jetbrains.com/products/releases?code=PS&latest=true&type=release'
+  name 'JetBrains PhpStorm'
   homepage 'https://www.jetbrains.com/phpstorm/'
-  license :commercial
+
+  auto_updates true
 
   app 'PhpStorm.app'
 
-  zap delete: [
-                "~/.WebIde#{version.major_minor.no_dots}",
-                "~/Library/Caches/WebIde#{version.major_minor.no_dots}",
-                "~/Library/Logs/WebIde#{version.major_minor.no_dots}",
-                "~/Library/Application Support/WebIde#{version.major_minor.no_dots}",
-                "~/Library/Preferences/WebIde#{version.major_minor.no_dots}",
-                '~/Library/Preferences/com.jetbrains.PhpStorm.plist',
-              ]
+  uninstall_postflight do
+    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'pstorm') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }
+  end
+
+  zap trash: [
+               "~/Library/Application Support/PhpStorm#{version.major_minor}",
+               "~/Library/Caches/PhpStorm#{version.major_minor}",
+               "~/Library/Logs/PhpStorm#{version.major_minor}",
+               "~/Library/Preferences/PhpStorm#{version.major_minor}",
+               '~/Library/Preferences/jetbrains.phpstorm.*.plist',
+             ]
 end

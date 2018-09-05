@@ -1,11 +1,12 @@
 cask 'soulseek' do
-  version '2015-2-21'
-  sha256 '516f9dc0c9a23926c7929ef62d8abdd3a910cfb30e698e5faabcd21bc7090d45'
+  version '2017-2-25'
+  sha256 '9bc76b360fb326807c3c655fdb9af98ea4b5db30ee56a1baed9c65c0897fd5d4'
 
-  url "http://www.soulseekqt.net/SoulseekQt/Mac/SoulseekQt-#{version}.dmg"
+  url "https://www.slsknet.org/SoulseekQt/Mac/SoulseekQt-#{version}.dmg"
   name 'Soulseek'
-  homepage 'http://www.soulseekqt.net/'
-  license :gratis
+  homepage 'https://www.slsknet.org/'
+
+  depends_on macos: '>= :mavericks'
 
   app 'SoulseekQt.app'
 end

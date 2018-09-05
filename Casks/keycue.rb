@@ -1,11 +1,16 @@
 cask 'keycue' do
-  version '7.5'
-  sha256 '8d2ae27ac7a623e3cdcfe939caf996e81e39e3dbb7452f1a634b24dbe5050ad3'
+  version '9.0'
+  sha256 'ae6f2d7191377437cd5cee714c04909dae7fcd5dc9b7d4381212d332640013c8'
 
-  url "http://www.ergonis.com/downloads/products/keycue/KeyCue#{version.delete('.')}-Install.dmg"
+  url "http://www.ergonis.com/downloads/products/keycue/KeyCue#{version.no_dots}-Install.dmg",
+      user_agent: :fake
   name 'KeyCue'
   homepage 'http://www.ergonis.com/products/keycue/'
-  license :commercial
 
   app 'KeyCue.app'
+
+  zap trash: [
+               '~/Library/Application Support/KeyCue',
+               '~/Library/Preferences/com.macility.keycue.plist',
+             ]
 end

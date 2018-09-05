@@ -1,20 +1,22 @@
 cask 'ipe' do
-  version '7.2.2'
-  sha256 'ba4f9aa51a98a5fe6b495b4840ed8d0c8df1d40912b54998866bad2e63031270'
+  version '7.2.7'
+  sha256 '13bd32ecfb77d7c3e073436f4b7e8b8532706a80aeec9575172670dc91908b25'
 
-  # bintray.com is the official download host per the vendor homepage
-  url "https://dl.bintray.com/otfried/generic/ipe/#{version.to_f}/ipe-#{version}-mac.dmg"
+  # bintray.com/otfried was verified as official when first introduced to the cask
+  url "https://dl.bintray.com/otfried/generic/ipe/#{version.major_minor}/ipe-#{version}-mac.dmg"
+  appcast 'http://ipe.otfried.org/'
   name 'Ipe'
-  homepage 'http://ipe.otfried.org'
-  license :gpl
+  homepage 'http://ipe.otfried.org/'
+
+  depends_on macos: '>= :mavericks'
 
   app 'Ipe.app'
 
-  zap delete: [
-                '~/.ipe',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.otfried.ipe.ipe.sfl',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.otfried.ipe.sfl',
-                '~/Library/Preferences/org.otfried.ipe.Ipe.plist',
-                '~/Library/Saved Application State/org.otfried.ipe.savedState',
-              ]
+  zap trash: [
+               '~/.ipe',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.otfried.ipe.ipe.sfl*',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.otfried.ipe.sfl*',
+               '~/Library/Preferences/org.otfried.ipe.Ipe.plist',
+               '~/Library/Saved Application State/org.otfried.ipe.savedState',
+             ]
 end

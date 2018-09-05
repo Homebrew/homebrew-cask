@@ -4,14 +4,13 @@ cask 'apptivate' do
 
   url 'http://www.apptivateapp.com/resources/Apptivate.app.zip'
   name 'Apptivate'
-  homepage 'http://www.apptivateapp.com'
-  license :gratis
+  homepage 'http://www.apptivateapp.com/'
 
   app 'Apptivate.app'
 
-  zap delete: [
-                '~/Library/Application Support/Apptivate',
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/se.cocoabeans.apptivate.sfl',
-                '~/Library/Preferences/se.cocoabeans.apptivate.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/Apptivate',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/se.cocoabeans.apptivate.sfl*',
+               '~/Library/Preferences/se.cocoabeans.apptivate.plist',
+             ]
 end

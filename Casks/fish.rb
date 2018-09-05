@@ -1,13 +1,14 @@
 cask 'fish' do
-  version '2.2.0'
-  sha256 '8e430d1cadec82aa0c3c757ec6ee24abc18aa5d432ccf435dd9f8a58588970bc'
+  version '2.7.1'
+  sha256 'd37f093702ef7f05e11333ceb8a1a859452395720b75f5bbbe4851e20157f452'
 
-  url "http://fishshell.com/files/#{version}/fish.pkg"
-  name 'Fish Shell'
-  homepage 'http://fishshell.com'
-  license :gpl
+  # github.com/fish-shell/fish-shell was verified as official when first introduced to the cask
+  url "https://github.com/fish-shell/fish-shell/releases/download/#{version}/fish-#{version}.app.zip"
+  appcast 'https://fishshell.com/release_notes.html'
+  name 'Fish App'
+  homepage 'https://fishshell.com/'
 
-  pkg 'fish.pkg'
+  depends_on macos: '>= :snow_leopard'
 
-  uninstall pkgutil: 'com.ridiculousfish.fish-shell-pkg'
+  app 'fish.app'
 end

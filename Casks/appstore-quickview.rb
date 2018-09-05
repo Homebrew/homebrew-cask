@@ -2,10 +2,9 @@ cask 'appstore-quickview' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.marcmoini.com/App...StoreQuickview.zip'
+  url 'https://www.marcmoini.com/App...StoreQuickview.zip'
   name 'App...Store Quickview'
-  homepage 'http://www.marcmoini.com/aq_en.html'
-  license :closed
+  homepage 'https://www.marcmoini.com/aq_en.html'
 
   app 'App...Store Quickview.app'
 end

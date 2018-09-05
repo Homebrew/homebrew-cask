@@ -5,7 +5,6 @@ cask 'wowmatrix' do
   url 'http://swupdate.wowmatrix.com/mac/WowMatrix.zip'
   name 'WowMatrix'
   homepage 'https://www.wowmatrix.com/'
-  license :gratis
 
   app 'WowMatrix.app'
 end

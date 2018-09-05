@@ -1,20 +1,23 @@
 cask 'zest' do
-  version '0.1.0-alpha2'
-  sha256 '04bbe71994c7f14d4efcdfa81aac382cc75da75a98aaa875a5ccf964837daf7c'
+  version '0.1.1'
+  sha256 '9405fecb40731b47bb357e87714711afe6d1f6a9c3a4fa9d01b0109da9c3f947'
 
-  url "https://github.com/zestdocs/zest/releases/download/v#{version}/zest-v#{version}-pre.dmg"
-  appcast 'https://github.com/zestdocs/zest/releases.atom',
-          checkpoint: '187df1ed00ba73066526f98ea399c644b19f78c49792ebbcd8e1eb8627206d1a'
+  # github.com/zestdocs/zest was verified as official when first introduced to the cask
+  url "https://github.com/zestdocs/zest/releases/download/v#{version}/zest-v#{version}.dmg"
+  appcast 'https://github.com/zestdocs/zest/releases.atom'
   name 'Zest'
-  homepage 'https://zestdocs.org/'
-  license :mit
+  homepage 'https://zestdocs.github.io/'
 
   app 'Zest.app'
 
-  zap delete: [
-                '~/Library/Application Support/zest',
-                '~/Library/Caches/zest',
-                '~/Library/Preferences/org.zestdocs.plist',
-                '~/Library/Saved Application State/org.zestdocs.savedState',
-              ]
+  zap trash: [
+               '~/Library/Application Support/zest',
+               '~/Library/Caches/zest',
+               '~/Library/Preferences/org.zestdocs.plist',
+               '~/Library/Saved Application State/org.zestdocs.savedState',
+             ]
+
+  caveats do
+    discontinued
+  end
 end

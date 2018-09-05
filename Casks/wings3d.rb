@@ -1,12 +1,12 @@
 cask 'wings3d' do
-  version '1.5.3'
-  sha256 'ec1bc0302fc7a12c0e5f06162673782943ac4394c2a942a6111b3f321e8be6d5'
+  version '2.1.7'
+  sha256 '96556931eff7f1cec26ad3b9b944951b7ae9ed2e070bd724334c2827d11498bc'
 
-  # sourceforge.net is the official download host per the vendor homepage
-  url "http://downloads.sourceforge.net/sourceforge/wings/wings-#{version}-macosx.dmg"
+  # sourceforge.net/wings was verified as official when first introduced to the cask
+  url "https://downloads.sourceforge.net/wings/wings-#{version}-macosx.dmg"
+  appcast 'https://sourceforge.net/projects/wings/rss'
   name 'Wings 3D'
   homepage 'http://www.wings3d.com/'
-  license :oss
 
-  app "Wings3D #{version}.app"
+  app 'Wings3D.app'
 end

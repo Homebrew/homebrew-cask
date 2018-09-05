@@ -5,7 +5,6 @@ cask 'sixtyforce' do
   url 'http://sixtyforce.com/download/sixtyforce.zip'
   name 'sixtyforce'
   homepage 'http://sixtyforce.com/'
-  license :freemium
 
   app 'sixtyforce.app'
 end

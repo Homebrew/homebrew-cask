@@ -1,13 +1,11 @@
 cask 'preference-manager' do
-  version '4.3.2'
-  sha256 '39ba1f2e92cef296c8dc811dce7d7a972de3bda7838e9fad8c9c67e1e188dd75'
+  version '4.4.2.0'
+  sha256 'b39ece3b79d5d72987abf0aa79b8d5fcb996dfd29dff6016f37c3529fd3ecefd'
 
-  url 'http://download.digitalrebellion.com/Pref_Man.dmg'
-  appcast 'https://www.digitalrebellion.com/rss/appcasts/pref_man.xml',
-          checkpoint: '58f8aa3bed4124c5996f2ef60124412ab42b3a138dc5e308870b559ae9a9768f'
+  url "http://www.digitalrebellion.com/download/prefman?version=#{version.no_dots}"
+  appcast 'https://www.digitalrebellion.com/rss/appcasts/pref_man.xml'
   name 'Preference Manager'
-  homepage 'https://www.digitalrebellion.com/prefman'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.digitalrebellion.com/prefman/'
 
   app 'Preference Manager.app'
 end

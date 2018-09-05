@@ -30,7 +30,7 @@ if [[ $1 =~ ^-+h(elp)?$ ]]; then
 Print pkg receipt IDs for the 10 most-recently-installed packages,
 which may be useful in a Cask uninstall stanza, eg
 
-    uninstall :pkgutil => 'pkg.receipt.id.goes.here'
+    uninstall pkgutil: 'pkg.receipt.id.goes.here'
 
 Package IDs attributed to Apple are excluded from the output.
 

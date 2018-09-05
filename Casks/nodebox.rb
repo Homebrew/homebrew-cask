@@ -1,11 +1,14 @@
 cask 'nodebox' do
-  version '3.0.44'
-  sha256 '9181a1b886c4a02bc0d94f62b49865b5f1c1ea473ec5c8a7b93f1b9d95535b5a'
+  version '3.0.51'
+  sha256 '2187ebaa849de93f54c5550529678a8a160b06cf6186e8d21a66fc43f395e629'
 
-  url "https://secure.nodebox.net/downloads/NodeBox-#{version}.zip"
+  # github.com/nodebox/nodebox was verified as official when first introduced to the cask
+  url "https://github.com/nodebox/nodebox/releases/download/v#{version}/NodeBox-#{version}.zip"
+  appcast 'https://www.nodebox.net/node/release-notes.html'
   name 'NodeBox'
   homepage 'https://www.nodebox.net/node/'
-  license :gpl
+
+  depends_on macos: '>= :mountain_lion'
 
   app 'NodeBox.app'
 end

@@ -5,7 +5,6 @@ cask 'password-assistant' do
   url "https://github.com/downloads/tonymet/Password-Assistant/Password%20Assistant-#{version}.dmg"
   name 'Password Assistant'
   homepage 'https://github.com/tonymet/Password-Assistant'
-  license :gratis
 
   app 'Password Assistant.app'
 end

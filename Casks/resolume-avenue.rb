@@ -1,14 +1,21 @@
 cask 'resolume-avenue' do
-  version '4.2.1'
-  sha256 '996306b9ff0b4ec99e8b5338e8153c07e5ff194ae3ec7f350d791b8b336deb95'
+  version '6.0.11,60828'
+  sha256 '5b377a9be3d132a8695635475f27f0cff505f2063255641848d9e4b7842a10f4'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url "http://download.resolume.com.s3.amazonaws.com/Resolume_Avenue_#{version.gsub('.', '_')}_Installer.dmg"
+  url "https://resolume.com/download/Resolume_Avenue_#{version.major_minor_patch.dots_to_underscores}_rev_#{version.after_comma}_Installer.dmg"
+  appcast 'https://resolume.com/update/avenue_mac.xml'
   name 'Resolume Avenue'
-  homepage 'https://resolume.com'
-  license :freemium
+  homepage 'https://resolume.com/'
 
-  pkg "Resolume Avenue #{version} Installer.pkg"
+  pkg 'Resolume Avenue Installer.pkg'
 
-  uninstall pkgutil: 'com.resolume.*'
+  uninstall pkgutil:   'com.resolume.pkg.ResolumeAvenue.*',
+            delete:    "/Applications/Resolume Avenue #{version.major}",
+            launchctl: 'com.resolume.avenue',
+            signal:    ['TERM', 'com.resolume.avenue']
+
+  zap pkgutil: [
+                 'com.resolume.pkg.ResolumeDXV',
+                 'com.resolume.pkg.ResolumeQuickLook',
+               ]
 end

@@ -1,12 +1,51 @@
 cask 'istat-menus' do
-  version '5.11'
-  sha256 '5931ff8a024ea54f9268e66c650ae4a33b399ae25ca36586b7814d960ed77d19'
+  version '6.20'
+  sha256 :no_check # required as upstream package is updated in-place
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url "https://s3.amazonaws.com/bjango/files/istatmenus5/istatmenus#{version}.zip"
+  url "https://files.bjango.com/istatmenus#{version.major}/istatmenus#{version}.zip"
   name 'iStats Menus'
   homepage 'https://bjango.com/mac/istatmenus/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+
+  auto_updates true
+  depends_on macos: '>= :el_capitan'
 
   app 'iStat Menus.app'
+
+  uninstall delete:    [
+                         "/Library/Application Support/iStat Menus #{version.major}",
+                         '/Library/PrivilegedHelperTools/com.bjango.istatmenus.installerhelper',
+                       ],
+            launchctl: [
+                         'com.bjango.istatmenus.agent',
+                         'com.bjango.istatmenus.daemon',
+                         'com.bjango.istatmenusnotifications',
+                         'com.bjango.istatmenus.status',
+                         'com.bjango.istatmenus.installerhelper',
+                       ],
+            signal:    [
+                         ['TERM', 'com.bjango.iStat-Menus-Notifications'],
+                         ['TERM', 'com.bjango.iStatMenusAgent'],
+                         ['TERM', 'com.bjango.istatmenusstatus'],
+                         ['TERM', 'com.bjango.istatmenus'],
+                         ['HUP', 'com.bjango.istatmenus'],
+                       ]
+
+  zap trash: [
+               '~/Library/Application Support/iStat Menus',
+               '~/Library/Application Scripts/com.bjango.istatmenus.iStat-Menus-Widget',
+               '~/Library/Caches/com.bjango.istatmenus',
+               '~/Library/Caches/com.bjango.istatmenus.status',
+               '~/Library/Caches/com.bjango.istatmenus.agent',
+               '~/Library/Caches/com.bjango.iStat-Menus-Updater',
+               '~/Library/Caches/com.bjango.iStatMenusAgent',
+               '~/Library/Caches/iStat Menus',
+               '~/Library/Containers/com.bjango.istatmenus.iStat-Menus-Widget',
+               '~/Library/Cookies/com.bjango.istatmenus.binarycookies',
+               '~/Library/Logs/iStat Menus',
+               '~/Library/Preferences/com.bjango.istatmenus.plist',
+               "~/Library/Preferences/com.bjango.istatmenus#{version.major}.extras.plist",
+               '~/Library/Preferences/com.bjango.istatmenus.status.plist',
+               '/Library/Logs/iStat Menus',
+               '/Users/Shared/.iStatMenus',
+             ]
 end

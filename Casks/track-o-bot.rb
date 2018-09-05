@@ -1,14 +1,12 @@
 cask 'track-o-bot' do
-  version '0.7.1'
-  sha256 '728add570b07f401dbccce81d8c0abb5cfb550b7b6c499680b504ae8ea82ec6a'
+  version '0.9.0'
+  sha256 'b1e7eeea98b869e1526ad2babcc01b818e177bbe129acb361029a5477c43b409'
 
-  # github.com is the official download host per the vendor homepage
+  # github.com/stevschmid/track-o-bot was verified as official when first introduced to the cask
   url "https://github.com/stevschmid/track-o-bot/releases/download/#{version}/Track-o-Bot_#{version}.dmg"
-  appcast 'https://github.com/stevschmid/track-o-bot/releases.atom',
-          checkpoint: '53be5e4fccfa908f527f89e71383505904e6dc274c8e96e79125f9a0c4fb04bd'
+  appcast 'https://github.com/stevschmid/track-o-bot/releases.atom'
   name 'Track-o-Bot'
   homepage 'https://trackobot.com/'
-  license :gpl
 
   app 'Track-o-Bot.app'
 end

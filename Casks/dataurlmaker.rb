@@ -5,7 +5,6 @@ cask 'dataurlmaker' do
   url "https://github.com/sveinbjornt/Data-URL-Toolkit/raw/master/Releases/DataURLMaker-#{version}.zip"
   name 'DataURLMaker'
   homepage 'https://github.com/sveinbjornt/Data-URL-Toolkit'
-  license :gpl
 
   app 'DataURLMaker.app'
 end

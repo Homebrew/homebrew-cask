@@ -1,14 +1,12 @@
 cask 'aptanastudio' do
-  version '3.6.1'
-  sha256 '1eed9a94ce9b9bf03743f0bfdc5efd752b3470842170ba571ee25d2810c3c8f0'
+  version '3.7.2.201807301111'
+  sha256 '02d0dccd808d1dd7a16ef1aab199e472726b8476cb65728f1f1ad06f6eca2363'
 
-  # github.com is the official download host per the vendor homepage
-  url "https://github.com/aptana/studio3/releases/download/v#{version}/Aptana_Studio_3_Setup_#{version}.dmg"
-  appcast 'https://github.com/aptana/studio3/releases.atom',
-          checkpoint: '795dbb0123a994485eb2211e45340e23ceca4a7454ad68404758858310d9fa8a'
+  # github.com/aptana/studio3 was verified as official when first introduced to the cask
+  url "https://github.com/aptana/studio3/releases/download/#{version}/Aptana_Studio_#{version.major}.dmg"
+  appcast "https://github.com/aptana/studio#{version.major}/releases.atom"
   name 'Aptana Studio'
   homepage 'http://www.aptana.com/'
-  license :gpl
 
-  app 'Aptana Studio 3/AptanaStudio3.app'
+  app 'AptanaStudio.app'
 end

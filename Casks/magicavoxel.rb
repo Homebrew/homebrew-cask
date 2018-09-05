@@ -1,12 +1,11 @@
 cask 'magicavoxel' do
-  version '0.97'
-  sha256 '2dc3f5e445349575281f8c0d3ae584268fa5923bf27eabc0a4c33bfa23dfa026'
+  version '0.98.2'
+  sha256 'be65de92473a586e4a8392feac28e43506fa700ba25c660a0036ba7f8c25addd'
 
-  # 23.98.147.40 is the official download host per the vendor homepage
-  url "http://23.98.147.40/uploads/MagicaVoxel-#{version}-win-mac.zip"
+  # 192.241.207.218/uploads was verified as official when first introduced to the cask
+  url "http://192.241.207.218/uploads/MagicaVoxel-#{version}-mac.zip"
   name 'MagicaVoxel'
   homepage 'https://ephtracy.github.io/'
-  license :gpl
 
-  app 'MagicaVoxel_mac.app'
+  suite "MagicaVoxel-#{version}-mac"
 end

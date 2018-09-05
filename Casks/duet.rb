@@ -1,14 +1,12 @@
 cask 'duet' do
-  version '1.5.1.1'
-  sha256 'dc3e7adc8b07f1d921944403b0356815b9df84bd8de9524fd3e7d63878a14496'
+  version '2.0.1.5'
+  sha256 '94c25bde0bc6721c6cee4ca98dfbef595cd49f31986d3c879f90b383ab4150f4'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url "https://s3-us-west-1.amazonaws.com/duetmac/#{version.dots_to_underscores}/duet_#{version.dots_to_underscores}.zip"
-  appcast 'http://updates.duetdisplay.com/checkMacUpdates',
-          checkpoint: '01a04fe0630a818640a6e9fa9040113791192369529cb757f570a03e19b257f0'
+  # duet.nyc3.cdn.digitaloceanspaces.com/Mac was verified as official when first introduced to the cask
+  url "https://duet.nyc3.cdn.digitaloceanspaces.com/Mac/#{version.major_minor.dots_to_underscores}/duet-#{version.dots_to_hyphens}.zip"
+  appcast 'https://updates.duetdisplay.com/checkMacUpdates'
   name 'Duet'
-  homepage 'http://www.duetdisplay.com/'
-  license :gratis
+  homepage 'https://www.duetdisplay.com/'
 
   auto_updates true
 

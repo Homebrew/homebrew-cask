@@ -1,11 +1,13 @@
 cask 'double-commander' do
-  version '0.6.6-6327'
-  sha256 'bc4db662bedfb92ec0fe16566f4bb35689da418e9ad1c181690a867a1332ed56'
+  version '0.8.4-8272'
+  sha256 'fad2a1e184ca63635fe8ded675d0a9fbbc6cd70576bc921afcd3e975241f1623'
 
-  url "http://downloads.sourceforge.net/sourceforge/doublecmd/doublecmd-#{version}.qt.x86_64.dmg"
+  url "https://downloads.sourceforge.net/doublecmd/doublecmd-#{version}.qt.x86_64.dmg"
+  appcast 'https://sourceforge.net/projects/doublecmd/rss'
   name 'Double Commander'
   homepage 'http://doublecmd.sourceforge.net/'
-  license :gpl
+
+  depends_on macos: '>= :snow_leopard'
 
   app 'Double Commander.app'
 end

@@ -4,11 +4,9 @@ cask 'chat' do
 
   # devmate.com/com.perma.chat was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.perma.chat/#{version.sub(%r{-.*$}, '')}/#{version.sub(%r{.*?-}, '')}/Chat-#{version.sub(%r{-.*$}, '')}.zip"
-  appcast 'http://updateinfo.devmate.com/com.perma.chat/updates.xml',
-          checkpoint: 'd6f08b16a849fac36038aff4d15fa764f0e71ba531992c3770b9347d39a4dc48'
+  appcast 'http://updateinfo.devmate.com/com.perma.chat/updates.xml'
   name 'Chat'
-  homepage 'https://chatformac.com/'
-  license :gratis
+  homepage 'https://www.chatformac.com/'
 
   app 'Chat.app'
 end

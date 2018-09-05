@@ -1,11 +1,10 @@
 cask 'kkbox' do
-  version '5.2.82-93733c9'
-  sha256 '0cbf23a9efd190a22f6c523d3ed1e5efda44b1da0a667d2724c1b7b31b7d0550'
+  version '5.2.88-1c04d41'
+  sha256 '789e386baff3ad386eb2275322eef8ce85c90908a5e37d23121f1ee83fa93fb4'
 
   url "https://download.kkbox.com/files/KKBOX-#{version}.dmg"
   name 'KKBOX'
   homepage 'https://www.kkbox.com/'
-  license :commercial
 
   app 'KKBOX.app'
 end

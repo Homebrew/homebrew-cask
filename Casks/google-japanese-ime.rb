@@ -2,11 +2,10 @@ cask 'google-japanese-ime' do
   version :latest
   sha256 :no_check
 
-  # google.com is the official download host per the vendor homepage
+  # dl.google.com/japanese-ime was verified as official when first introduced to the cask
   url 'https://dl.google.com/japanese-ime/latest/GoogleJapaneseInput.dmg'
   name 'Google Japanese Input Method Editor'
   homepage 'https://www.google.co.jp/ime/'
-  license :gratis
 
   pkg 'GoogleJapaneseInput.pkg'
 

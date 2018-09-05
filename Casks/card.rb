@@ -5,7 +5,6 @@ cask 'card' do
   url 'https://github.com/Code-Hex/Card/blob/master/Card/Card.dmg?raw=true'
   name 'Card'
   homepage 'https://github.com/Code-Hex/Card'
-  license :gpl
 
   app 'Card.app'
 end

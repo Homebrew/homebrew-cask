@@ -3,9 +3,9 @@ cask 'the-cheat' do
   sha256 '24ed774cc21adc2355077123d04c2657295a41183fd5555c41a2342063c3dedc'
 
   url "https://chazmcgarvey.github.com/thecheat/thecheat-#{version}.dmg"
+  appcast 'https://github.com/chazmcgarvey/thecheat/releases.atom'
   name 'The Cheat'
   homepage 'https://github.com/chazmcgarvey/thecheat'
-  license :gratis
 
   app 'The Cheat.app'
 end

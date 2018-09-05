@@ -1,11 +1,11 @@
 cask 'segmentant' do
-  version '1.0.0'
-  sha256 '547a31a50389a342a6e22c4dea3828dfb3ef4d01dffbfb83fb75483b514c16d4'
+  version '1.1.3'
+  sha256 '4f6190aa9f2c9529d5e31517459fad8745acc47cd813d974138a01b129d58717'
 
-  url "http://www.laurenceanthony.net/software/segmentant/releases/SegmentAnt#{version.delete('.')}/SegmentAnt.zip"
+  url "http://www.laurenceanthony.net/software/segmentant/releases/SegmentAnt#{version.no_dots}/SegmentAnt.zip"
+  appcast 'http://www.laurenceanthony.net/software/segmentant/releases/'
   name 'SegmentAnt'
-  homepage 'http://www.laurenceanthony.net/software/segmentant'
-  license :gratis
+  homepage 'http://www.laurenceanthony.net/software/segmentant/'
 
   app 'SegmentAnt.app'
 end

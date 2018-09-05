@@ -1,14 +1,20 @@
 cask 'vagrant-manager' do
-  version '2.5.1'
-  sha256 '3056e833b9399fbb0b1d2b834ee19597f56c492ab79d222ec4a607f75d566fb6'
+  version '2.6.0'
+  sha256 'ed9ad3f1b6a97e82c959812b0779036946903630627914b02684d53ad71b1052'
 
-  # github.com is the official download host per the vendor homepage
+  # github.com/lanayotech/vagrant-manager was verified as official when first introduced to the cask
   url "https://github.com/lanayotech/vagrant-manager/releases/download/#{version}/vagrant-manager-#{version}.dmg"
-  appcast 'https://github.com/lanayotech/vagrant-manager/releases.atom',
-          checkpoint: '999bd2fd5a8eeae2a819f71523843c2ad139b4ca5576832ed1f4f9a18e547472'
+  appcast 'https://github.com/lanayotech/vagrant-manager/releases.atom'
   name 'Vagrant Manager'
   homepage 'http://vagrantmanager.com/'
-  license :mit
 
   app 'Vagrant Manager.app'
+
+  uninstall login_item: 'Vagrant Manager',
+            quit:       'lanayo.Vagrant-Manager'
+
+  zap trash: [
+               '~/Library/Caches/lanayo.Vagrant-Manager',
+               '~/Library/Preferences/lanayo.Vagrant-Manager.plist',
+             ]
 end

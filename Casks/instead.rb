@@ -1,12 +1,12 @@
 cask 'instead' do
-  version '2.2.0'
-  sha256 'cde4a7d23ec3556baf98d73bfc5d2b8add3fad22cd5eb52a2d5c408ecc73aa73'
+  version '3.2.1'
+  sha256 '34ca0aac226f4c2f87cb0db4217e09c8deed2a29c6d7d67871bef1087796caa7'
 
-  # sourceforge.net is the official download host per the vendor homepage
-  url "http://downloads.sourceforge.net/project/instead/instead/#{version}/Instead-#{version}.dmg"
+  # github.com/instead-hub/instead was verified as official when first introduced to the cask
+  url "https://github.com/instead-hub/instead/releases/download/#{version}/Instead-#{version}.dmg"
+  appcast 'https://github.com/instead-hub/instead/releases.atom'
   name 'INSTEAD'
-  homepage 'https://instead.syscall.ru/'
-  license :mit
+  homepage 'https://instead.syscall.ru/index.html'
 
   app 'Instead.app'
 end

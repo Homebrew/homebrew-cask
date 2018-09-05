@@ -1,21 +1,19 @@
 cask 'contexts' do
-  version '2.0.3'
-  sha256 '3cadaf3f5c77a62f1181282bffd37ea8eaf60501b8ece5fce45ca6af1b65dd62'
+  version '3.7.1'
+  sha256 'de5e4a660cc30276155606b539d1ae58684115a3983d69598f1505fcad499a87'
 
-  url "https://contexts.co/releases/Contexts-#{version}.zip"
-  appcast 'https://contexts.co/appcasts/stable.xml',
-          checkpoint: 'be92aad194057e5602d48ebaf62647980c07afd21f79cd1d95b982c0c0985c62'
+  url "https://contexts.co/releases/Contexts-#{version}.dmg"
+  appcast 'https://contexts.co/appcasts/stable.xml'
   name 'Contexts'
-  homepage 'https://contexts.co'
-  license :commercial
+  homepage 'https://contexts.co/'
 
   app 'Contexts.app'
 
   uninstall quit: 'com.contextsformac.Contexts'
 
-  zap delete: [
-                '~/Library/Application Support/.com.contextsformac.Contexts.plist',
-                '~/Library/Caches/com.contextsformac.Contexts',
-                '~/Library/Preferences/com.contextsformac.Contexts.plist',
-              ]
+  zap trash: [
+               '~/Library/Application Support/.com.contextsformac.Contexts.plist',
+               '~/Library/Caches/com.contextsformac.Contexts',
+               '~/Library/Preferences/com.contextsformac.Contexts.plist',
+             ]
 end

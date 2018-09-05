@@ -3,11 +3,9 @@ cask 'apptrap' do
   sha256 '39a8923698c2e1a38ff3fd7fc2c12b7a847566cf1f31f965d0fb57e2280aaa5c'
 
   url "http://onnati.net/apptrap/download/AppTrap#{version.dots_to_hyphens}.zip"
-  appcast 'http://onnati.net/apptrap/ReleaseNotes.xml',
-          checkpoint: '561cc83e41aea261c0472d73369c19b7c738b95b764eb346508a654643d651d5'
+  appcast 'http://onnati.net/apptrap/ReleaseNotes.xml'
   name 'AppTrap'
-  homepage 'http://onnati.net/apptrap'
-  license :other # see https://github.com/kvijayan/AppTrap/blob/master/LICENSE
+  homepage 'http://onnati.net/apptrap/'
 
   prefpane 'AppTrap.prefPane'
 end

@@ -1,13 +1,14 @@
 cask 'astah-community' do
-  version '7.0.0'
-  sha256 '27e05ceaf64bc4ebdb9dcce2d042380d7c141e35b6f2d8e2f91a7c1ff57703dd'
+  version '7.2.0,1ff236'
+  sha256 '81b12fc1145ec28ca82d87a0f13d2763362d55136759fe324192c65943215194'
 
-  url "http://cdn.astah.net/downloads/astah-community-#{version.gsub('.', '_')}-846701-MacOs.dmg"
+  # cdn.change-vision.com was verified as official when first introduced to the cask
+  url "http://cdn.change-vision.com/files/astah-community-#{version.before_comma.dots_to_underscores}-#{version.after_comma}-MacOs.dmg"
+  appcast 'http://astah.net/release-notes/community'
   name 'Change Vision Astah Community'
   homepage 'http://astah.net/editions/community'
-  license :gratis
 
-  pkg "astah community ver #{version.gsub('.', '_')}.pkg"
+  pkg "astah community ver #{version.before_comma.dots_to_underscores}.pkg"
 
   uninstall pkgutil: 'com.change-vision.astahcommunity.astahcommunity.pkg'
 end

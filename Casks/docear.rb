@@ -1,11 +1,10 @@
 cask 'docear' do
-  version :latest
-  sha256 :no_check
+  version '1.2.0.0_stable_build291'
+  sha256 '64b22b3e5529daff2fb9d929bdde5d6cfda364a6aa1acbbc80b249ef028f98df'
 
-  url 'http://docear.org/download/docear.dmg'
+  url 'https://docear.org/downloads/docear_macos.zip'
   name 'Docear'
-  homepage 'https://docear.org'
-  license :gpl
+  homepage 'https://www.docear.org/'
 
-  app 'Docear.app'
+  app "docear_macos/docear-#{version}/Docear.app"
 end

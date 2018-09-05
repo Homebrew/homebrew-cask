@@ -1,14 +1,12 @@
 cask 'gpodder' do
-  version '3.8.3_0'
-  sha256 '57fe1f006a691487452f80d924fa60fbadd865dbfb4cde2000aaf46db76d3065'
+  version '3.10.3'
+  sha256 'e8dadea1ec204cf537e09a303cbe5f3b0bbe59acabe949c7de451379f5e5f2a3'
 
-  # sourceforge.net is the official download host per the vendor homepage
-  url "https://downloads.sourceforge.net/sourceforge/gpodder/gPodder-#{version}.zip"
+  # github.com/gpodder/gpodder was verified as official when first introduced to the cask
+  url "https://github.com/gpodder/gpodder/releases/download/#{version}/macOS-gPodder-#{version}.zip"
+  appcast 'https://github.com/gpodder/gpodder/releases.atom'
   name 'gPodder'
-  homepage 'http://gpodder.org/'
-  license :gpl
-
-  depends_on x11: true
+  homepage 'https://gpodder.github.io/'
 
   app 'gPodder.app'
 end

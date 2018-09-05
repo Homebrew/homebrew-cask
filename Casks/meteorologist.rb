@@ -1,11 +1,11 @@
 cask 'meteorologist' do
-  version '2.0.1'
-  sha256 '1c1c85129e6fe904823a3ce83b056c7304505fec98d27ec0fb36dcf7cd16a16b'
+  version '3.1.4'
+  sha256 'ade644cbe2faad927c1bbede7479d873fe48471f94610da50dcdd8160ca0f812'
 
-  url "http://downloads.sourceforge.net/heat-meteo/Meteorologist-#{version}.dmg"
+  url "https://downloads.sourceforge.net/heat-meteo/Meteorologist-#{version}.dmg"
+  appcast 'https://sourceforge.net/projects/heat-meteo/rss'
   name 'Meteorologist'
   homepage 'http://heat-meteo.sourceforge.net/'
-  license :oss
 
   app 'Meteorologist.app'
 end

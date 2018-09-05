@@ -1,20 +1,17 @@
 cask 'ukelele' do
-  version '3.0.2'
-  sha256 '292330292854b788cd6a159af1da70304a8b50904091eb66e1b22bef159b19a7'
+  version '3.2.7'
+  sha256 '5fd6a3123e1e1967098fffa216a6becf34dbc3df4bdfc9767bd889f28dd7443d'
 
   url "https://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Ukelele_#{version}&filename=Ukelele_#{version}.dmg"
-  appcast 'https://dl.dropboxusercontent.com/u/60565698/Ukelele/Ukelele_appcast.xml',
-          checkpoint: '3baa19c697d7e4f53f541d404e09590bfebb6b2a99aefa293faf703cc4e5be4b'
   name 'Ukelele'
-  homepage 'https://scripts.sil.org/ukelele'
-  license :gratis
+  homepage 'http://scripts.sil.org/ukelele'
 
   app 'Ukelele.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.sil.ukelele.sfl',
-                '~/Library/Preferences/org.sil.ukelele.plist',
-                '~/Library/Preferences/Ukelele',
-                '~/Library/Caches/org.sil.Ukelele',
-              ]
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.sil.ukelele.sfl*',
+               '~/Library/Preferences/org.sil.ukelele.plist',
+               '~/Library/Preferences/Ukelele',
+               '~/Library/Caches/org.sil.Ukelele',
+             ]
 end

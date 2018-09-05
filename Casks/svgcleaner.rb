@@ -1,14 +1,17 @@
 cask 'svgcleaner' do
-  version '0.6.2'
-  sha256 '11a46910991b81aab8dc4f18859be9c518c62e1d03b2db2684f87f74de9edcf7'
+  version '0.9.5'
+  sha256 'd1f3098ad5008a8f727d53e764239844db063a0a9cc2aa21ac0b0bdef6011335'
 
-  # sourceforge.net is the official download host per the vendor homepage
-  url "http://downloads.sourceforge.net/sourceforge/svgcleaner/SVGCleaner.app_#{version}.zip"
-  name 'SVGCleaner'
-  homepage 'https://github.com/RazrFalcon/SVGCleaner/'
-  license :gpl
+  url "https://github.com/RazrFalcon/svgcleaner-gui/releases/download/v#{version}/svgcleaner_macos_#{version}.zip"
+  appcast 'https://github.com/RazrFalcon/svgcleaner-gui/releases.atom'
+  name 'SVG Cleaner'
+  homepage 'https://github.com/RazrFalcon/svgcleaner-gui/'
 
   app 'SVGCleaner.app'
+  binary "#{appdir}/SVGCleaner.app/Contents/MacOS/svgcleaner-cli", target: 'svgcleaner'
 
-  zap delete: '~/Library/Saved Application State/com.yourcompany.SVGCleaner.savedState'
+  zap trash: [
+               '~/Library/Preferences/com.svgcleaner.svgcleaner.plist',
+               '~/Library/Saved Application State/com.yourcompany.SVGCleaner.savedState',
+             ]
 end

@@ -1,13 +1,12 @@
 cask 'traktable' do
-  version '0.5.2'
-  sha256 '77d3800f02f2b5a2aef8a56e7986b731831738673e35c633d743df87bc556225'
+  version '0.6-alpha1,a'
+  sha256 '6bf5b2e30e8378d46e5c69494bc23617a3f410856ee4682899683607cb0dee79'
 
-  url "https://github.com/yo-han/Traktable/releases/download/#{version}/Traktable.zip"
-  appcast 'https://github.com/yo-han/Traktable/releases.atom',
-          checkpoint: 'ed5ed4c4b7c56e4a348823f162e8d23fb9f4395a0d456ca2ea8fe36b9e7e8d6e'
+  # github.com/yo-han/Traktable was verified as official when first introduced to the cask
+  url "https://github.com/yo-han/Traktable/releases/download/#{version.before_comma}/Traktable-#{version.before_comma}#{version.after_comma}.zip"
+  appcast 'https://github.com/yo-han/Traktable/releases.atom'
   name 'Traktable'
   homepage 'https://yo-han.github.io/Traktable/'
-  license :oss
 
   app 'Traktable.app'
 end

@@ -1,11 +1,11 @@
 cask 'protant' do
-  version '1.0.0'
-  sha256 '98906ca80b98ce8fc7ec11eea6bba29f629a072752bb1c2f9ba07a1355effee1'
+  version '1.2.1'
+  sha256 'ae3d9cb279723ec7ce4580ef16a43fd30745b0b3b196c7ba92e5aff713e086c2'
 
-  url "http://www.laurenceanthony.net/software/protant/releases/ProtAnt#{version.delete('.')}/ProtAnt.zip"
+  url "http://www.laurenceanthony.net/software/protant/releases/ProtAnt#{version.no_dots}/ProtAnt.zip"
+  appcast 'http://www.laurenceanthony.net/software/protant/releases/'
   name 'ProtAnt'
-  homepage 'http://www.laurenceanthony.net/software/protant'
-  license :gratis
+  homepage 'http://www.laurenceanthony.net/software/protant/'
 
   app 'ProtAnt.app'
 end

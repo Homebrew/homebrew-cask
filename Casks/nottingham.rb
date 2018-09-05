@@ -1,13 +1,12 @@
 cask 'nottingham' do
-  version '2.1.3'
-  sha256 'ccaceba0bc6566ba2850126ae2d456fd6d44b78122117b8e1f3e597ef812bd55'
+  version '3.1.0,5'
+  sha256 '54c861844846d8a1d21b089db0c33e4d9041f94d8b14c51900e5d59c6b3e7f05'
 
-  url "http://dl.clickontyler.com/nottingham/nottingham20_#{version}.zip"
-  appcast 'https://shine.clickontyler.com/appcast.php?id=11',
-          checkpoint: 'f5f9477be149a49ca79728c8d8b16feef8e183edd1ea6ee693d29e6d01256910'
+  # downloads-clickonideas.netdna-ssl.com/nottingham was verified as official when first introduced to the cask
+  url "https://downloads-clickonideas.netdna-ssl.com/nottingham/nottingham#{version.major}_#{version.after_comma}.zip"
+  appcast 'https://shine.clickontyler.com/appcast.php?id=35'
   name 'Nottingham'
   homepage 'https://clickontyler.com/nottingham/'
-  license :gratis
 
   app 'Nottingham.app'
 end

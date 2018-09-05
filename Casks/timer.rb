@@ -4,13 +4,12 @@ cask 'timer' do
 
   url 'http://www.apimac.com/download/Timer.zip'
   name 'Timer'
-  homepage 'http://www.apimac.com/mac/timer/'
-  license :commercial
+  homepage 'https://www.apimac.com/mac/timer/'
 
   app 'Timer.app'
 
-  zap delete: [
-                '~/Library/Preferences/Apimac',
-                '~/Library/Application Support/Apimac',
-              ]
+  zap trash: [
+               '~/Library/Preferences/Apimac',
+               '~/Library/Application Support/Apimac',
+             ]
 end

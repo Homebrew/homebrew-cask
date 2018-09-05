@@ -1,16 +1,13 @@
 cask 'intel-power-gadget' do
-  version '3.0.1'
-  sha256 '538a792721604e2155b3a48caa4084db751a91b170e5fa62bf0331d3147f2239'
+  version '3.5.3,655065'
+  sha256 'a148715a956f1049a81a420244c919cf6f1678bbece9f79a42167c5485e83ded'
 
-  url "https://software.intel.com/sites/default/files/managed/59/39/IntelPowerGadgetMac#{version}.zip"
+  url "https://software.intel.com/file/#{version.after_comma}/download"
   name 'Intel Power Gadget'
   homepage 'https://software.intel.com/en-us/articles/intel-power-gadget-20'
-  license :gratis
-
-  # this bogus-looking character accurately reflects an upstream error
-  container nested: 'IntelÆ Power Gadget.dmg'
 
   pkg 'Install Intel Power Gadget.pkg'
 
-  uninstall pkgutil: 'com.intel.pkg.PowerGadget.*'
+  uninstall pkgutil: 'com.intel.pkg.PowerGadget.*',
+            kext:    'EnergyDriver'
 end

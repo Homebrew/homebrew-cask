@@ -1,18 +1,16 @@
 cask 'xamarin-ios' do
-  version '9.4.1.25'
-  sha256 'b47d0e42bebfc02e7c85d7cedbedbe83d31af9d8b90d38839c745c98fde2c4ab'
+  version '11.14.0.14'
+  sha256 '82cd8be78459fdc5af02132d276492696d4382a905a2d570ed246d49ead872b9'
 
-  url "https://download.xamarin.com/MonoTouch/Mac/monotouch-#{version}.pkg"
-  appcast 'https://static.xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
-          checkpoint: '855d95a330efdd9cc13cbaabc6e49dfcda111db3b16cbc6345e3a0d17e769972'
+  url "https://dl.xamarin.com/MonoTouch/Mac/xamarin.ios-#{version}.pkg"
+  appcast 'https://xampubdl.blob.core.windows.net/static/installer_assets/v4/Mac/Universal/InstallationManifest.xml'
   name 'Xamarin.iOS'
-  homepage 'https://xamarin.com/ios'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.xamarin.com/platform'
 
-  pkg "monotouch-#{version}.pkg"
+  pkg "xamarin.ios-#{version}.pkg"
 
   uninstall pkgutil: [
-                       'com.xamarin.monotouch.pkg',
+                       'com.xamarin.xamarin.ios.pkg',
                        'com.xamarin.xamarin-ios-build-host.pkg',
                      ]
 end

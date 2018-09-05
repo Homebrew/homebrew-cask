@@ -1,14 +1,12 @@
 cask 'anvil' do
-  version '2015-09-30_10-05-46'
-  sha256 '13def7101b594964501f3bf32d76ffd16e4b7f97c6bf9bc81c1b891d75624cbe'
+  version '1.1.8,132'
+  sha256 '485fd6cdd21edbbb2c3801fa0f4a5f6a4ef7da65316946ef5599497c676d6b68'
 
-  # amazonaws.com is the official download host as per the vendor homepage
-  url "https://s3.amazonaws.com/sparkler_versions/versions/uploads/000/000/120/original/Anvil_#{version}.zip"
-  appcast 'https://sparkler.herokuapp.com/apps/3/updates.xml',
-          checkpoint: 'b5cb65926ab494ff667e2bc7b090173019719feed3ffde02dbf888aaf5dcc015'
+  # sparkler.herokuapp.com/apps/3/versions was verified as official when first introduced to the cask
+  url "https://sparkler.herokuapp.com/apps/3/versions/#{version.after_comma}/download"
+  appcast 'https://sparkler.herokuapp.com/apps/3/updates.xml'
   name 'Anvil'
-  homepage 'http://anvilformac.com/'
-  license :mit
+  homepage 'https://anvilformac.com/'
 
-  app "Anvil #{version.sub('_', ' ')}/Anvil.app"
+  app 'Anvil.app'
 end

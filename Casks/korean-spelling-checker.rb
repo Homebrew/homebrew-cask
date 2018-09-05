@@ -1,23 +1,21 @@
 cask 'korean-spelling-checker' do
-  version '1.4.1'
-  sha256 'f38e74be69f86c4c56aa60dfccb189e666979f519f69acbc0f5700442447661f'
+  version '1.7.4'
+  sha256 'ae31c0cd618bb5fe4458673045b191844d41362e114708278f66c9c4ae149127'
 
-  # github.com is the official download host per the vendor homepage
+  # github.com/miname/Korean-Spelling-Checker-Workflow was verified as official when first introduced to the cask
   url "https://github.com/miname/Korean-Spelling-Checker-Workflow/archive/#{version}.tar.gz"
+  appcast 'https://github.com/miname/Korean-Spelling-Checker-Workflow/releases.atom'
   name '한국어 맞춤법 검사기'
-  homepage 'http://appletree.or.kr/google-chrome-extensions/'
-  license :mit
+  homepage 'https://appletree.or.kr/google-chrome-extensions/'
 
   service "Korean-Spelling-Checker-Workflow-#{version}/✔ 선택한 글의 한국어 맞춤법 검사하기.workflow"
 
   uninstall delete: '~/Library/Services/✔ 선택한 글의 한국어 맞춤법 검사하기.workflow'
 
-  caveats do
-    <<-EOS.undent
-      #{token} only works when you install it manually via Service Installer,
-      so you may need to run the installer with
+  caveats <<~EOS
+    #{token} only works when you install it manually via Service Installer,
+    so you may need to run the installer with
 
-        open '~/Library/Services/✔ 선택한 글의 한국어 맞춤법 검사하기.workflow'
-    EOS
-  end
+      open '~/Library/Services/✔ 선택한 글의 한국어 맞춤법 검사하기.workflow'
+  EOS
 end

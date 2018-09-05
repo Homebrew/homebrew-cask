@@ -1,13 +1,18 @@
 cask 'xscope' do
-  version '4.1.4'
-  sha256 'd9f1eab342b885277344829eb7b10fa636b76991a9367fb2319f32a48a386ea2'
+  version '4.3.1'
+  sha256 '4af5cab62610247b9cca48ef11a6195d96886948b6ba88c195292fb3522ac8d9'
 
+  # iconfactory.com was verified as official when first introduced to the cask
   url "https://iconfactory.com/assets/software/xscope/xScope-#{version}.zip"
-  appcast 'https://iconfactory.com/appcasts/xScope/appcast.xml',
-          checkpoint: '8ca24804a212a277f857ed92478701e5433753f7c7e41299b7d6dc56e6dbdd38'
+  appcast 'https://iconfactory.com/appcasts/xScope/appcast.xml'
   name 'xScope'
-  homepage 'http://iconfactory.com/software/xscope'
-  license :commercial
+  homepage 'http://xscopeapp.com/'
 
   app 'xScope.app'
+
+  zap trash: [
+               '~/Library/Caches/com.iconfactory.xScope',
+               '~/Library/Caches/com.iconfactory.xScope.cache',
+               '~/Library/Preferences/com.iconfactory.xScope.plist',
+             ]
 end

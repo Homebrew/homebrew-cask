@@ -1,13 +1,22 @@
 cask 'dropzone' do
-  version '3.5.4'
-  sha256 '163f8c912dec520462581f5bdc053c930c72597e1c279397cd14429aec2a92c7'
+  version '3.6.8'
+  sha256 '15188b5adf399ef84b4952fc11f7a43f7e01987aa0dd2a9c0781af4e99888324'
 
   url "https://aptonic.com/dropzone3/sparkle/Dropzone-#{version}.zip"
-  appcast 'https://aptonic.com/dropzone3/sparkle/updates.xml',
-          checkpoint: '3369ac9be8ca4bcea11a1827b776eb3da857ee7666b45cac40ede350ba95d006'
+  appcast 'https://aptonic.com/sparkle/updates.xml'
   name 'Dropzone'
-  homepage 'https://aptonic.com'
-  license :commercial
+  homepage 'https://aptonic.com/'
 
   app "Dropzone #{version.major}.app"
+
+  zap trash: [
+               "~/Library/Application Scripts/com.aptonic.Dropzone#{version.major}",
+               '~/Library/Application Scripts/com.aptonic.LaunchAtLogin',
+               "~/Library/Application Support/Dropzone #{version.major}",
+               "~/Library/Caches/com.aptonic.Dropzone#{version.major}",
+               "~/Library/Containers/com.aptonic.Dropzone#{version.major}",
+               '~/Library/Containers/com.aptonic.LaunchAtLogin',
+               "~/Library/Preferences/com.aptonic.Dropzone#{version.major}.plist",
+               "~/Library/Saved Application State/com.aptonic.Dropzone#{version.major}.savedState",
+             ]
 end

@@ -1,13 +1,11 @@
 cask 'musique' do
-  version '1.4'
-  sha256 '9754ac4b22085915cefa8ad0b7e3534a7c53c40dbfa31f8bdd13119ae7187cfb'
+  version '1.5'
+  sha256 'b5e9c6716a3fe39214dcf7744a5053303d32005d07ed4eaa78679d4015bd048b'
 
   url 'http://flavio.tordini.org/files/musique/musique.dmg'
-  appcast 'http://flavio.tordini.org/musique-ws/appcast.xml',
-          checkpoint: '3cebec0525bba0365792d2863845951335a62c758ad585c84e52333a73b0e218'
+  appcast 'http://flavio.tordini.org/musique-ws/appcast.xml'
   name 'Musique'
   homepage 'http://flavio.tordini.org/musique'
-  license :commercial
 
   app 'Musique.app'
 end

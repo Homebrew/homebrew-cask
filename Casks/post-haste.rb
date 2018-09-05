@@ -1,17 +1,18 @@
 cask 'post-haste' do
-  version '2.5.8.0'
-  sha256 '14b92628f6b53c6cddcfa8ae059a491af445d5c84a5fdef418899edee1c71c8d'
+  version '2.6.3,2630'
+  sha256 'effe6fd53599e039dcc9b636cf6f0c09c72edbc1f2913213a426a762a079f60d'
 
-  url "https://www.digitalrebellion.com/download/posthaste?version=#{version.no_dots}"
+  url "https://www.digitalrebellion.com/download/posthaste?version=#{version.after_comma}"
   name 'Post Haste'
   homepage 'https://www.digitalrebellion.com/posthaste/'
-  license :gratis
+
+  depends_on macos: '>= :mountain_lion'
 
   app 'Post Haste.app'
 
-  zap delete: [
-                '~/Library/Application Support/Digital Rebellion/Post Haste/',
-                '~/Library/Preferences/com.digitalrebellion.PostHaste.plist',
-              ],
-      rmdir:  '~/Library/Application Support/Digital Rebellion'
+  zap trash: [
+               '~/Library/Application Support/Digital Rebellion/Post Haste/',
+               '~/Library/Preferences/com.digitalrebellion.PostHaste.plist',
+             ],
+      rmdir: '~/Library/Application Support/Digital Rebellion'
 end

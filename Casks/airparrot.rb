@@ -1,13 +1,22 @@
 cask 'airparrot' do
-  version '2.3.2'
-  sha256 'e15e2e868d7398c56ab0ad3e06c249e1e5b08da0979b78e8211dfb2f61a319dc'
+  version '2.7.3'
+  sha256 '5eea2a81ed32941ed8a169d53a3b3dcda26f5a3dcb30c4c0403f205f5de8577d'
 
-  url "https://download.airsquirrels.com/AirParrot2/Mac/AirParrot-#{version}.dmg"
-  appcast 'https://updates.airsquirrels.com/AirParrot2/Mac/AirParrot2.xml',
-          checkpoint: '0ed53a274ffa088d2157d7e37544d2b097f2cd961190d327a3b39c915c42dfa2'
+  url "https://download.airsquirrels.com/AirParrot#{version.major}/Mac/AirParrot-#{version}.dmg"
+  appcast "https://updates.airsquirrels.com/AirParrot#{version.major}/Mac/AirParrot#{version.major}.xml"
   name 'AirParrot'
   homepage 'http://www.airsquirrels.com/airparrot/'
-  license :commercial
 
-  app 'AirParrot 2.app'
+  app "AirParrot #{version.major}.app"
+
+  uninstall kext: [
+                    'com.squirrels.driver.AirParrotSpeakers',
+                    '/Library/Extensions/AirParrotDriver.kext',
+                    '/Library/Extensions/APExtFramebuffer.kext',
+                    '/System/Library/Extensions/AirParrotDriver.kext',
+                    '/System/Library/Extensions/APExtFramebuffer.kext',
+                  ],
+            quit: "com.squirrels.AirParrot-#{version.major}"
+
+  zap trash: '~/Library/Preferences/com.squirrels.AirParrot-*.plist'
 end

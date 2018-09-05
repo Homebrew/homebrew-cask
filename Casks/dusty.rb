@@ -1,24 +1,23 @@
 cask 'dusty' do
-  version '0.6.5'
-  sha256 '6e88894c7062f24bb8b4b7b2faa149b6b638c7d3fa2be86a56266e2d1789ea60'
+  version '0.7.3'
+  sha256 '6cf61f0dcdc541de123ffd1d8e035eb3fc36e51b626a072355df76c3efd15af9'
 
   url "https://github.com/gamechanger/dusty/releases/download/#{version}/dusty.tar.gz"
-  appcast 'https://github.com/gamechanger/dusty/releases.atom',
-          checkpoint: '14dd655e5ed3a55495436c0fc9fb426bedb461a600083d10f72f330c66181d7a'
+  appcast 'https://github.com/gamechanger/dusty/releases.atom'
   name 'Dusty'
   homepage 'https://github.com/gamechanger/dusty'
-  license :mit
 
-  depends_on cask: 'dockertoolbox'
+  depends_on cask: 'docker-toolbox'
   container type: :tar
 
-  installer script:       'brew-install.sh',
-            args:         %W[#{staged_path}],
-            must_succeed: true,
-            sudo:         true
+  installer script: {
+                      executable: 'brew-install.sh',
+                      args:       [staged_path],
+                      sudo:       true,
+                    }
   binary 'dusty'
 
   uninstall launchctl: 'com.gamechanger.dusty'
 
-  zap delete: '/etc/dusty'
+  zap trash: '/etc/dusty'
 end

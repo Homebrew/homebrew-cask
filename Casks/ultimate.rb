@@ -1,11 +1,10 @@
 cask 'ultimate' do
-  version '3.0.4.41'
-  sha256 'c49e7f55f427e23b55949f0debdda828e56e3eb4a0a666708f037f12224be776'
+  version '3.0.9.320'
+  sha256 'ef6fefd87ecee86b33284dd5a2d2dbb26f61daea1804e7c2f55817ad94c8f1bc'
 
   url 'http://download.epubor.com/epubor_ultimate.zip'
   name 'Ultimate Converter'
-  homepage 'http://www.epubor.com'
-  license :commercial
+  homepage 'https://www.epubor.com/'
 
   container nested: "epubor_ultimate/Ultimate_v#{version}.dmg"
 

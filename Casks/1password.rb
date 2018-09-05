@@ -1,40 +1,28 @@
 cask '1password' do
-  if MacOS.release <= :lion
-    version '3.8.22'
-    sha256 '3afd75f1bddf791dc7dbc9a7d92ab6eb91ee891407d750cedb7b5aff5fe8bf17'
+  version '7.1.1'
+  sha256 'ff60d1caf4a6ceb68e5ac90af76d558f8e2f4368606fef79027aa91fef479c98'
 
-    # cloudfront.net is the official download host per the vendor homepage
-    url "https://d13itkw33a7sus.cloudfront.net/dist/1P/mac/1Password-#{version}.zip"
-
-    app '1Password.app'
-  elsif MacOS.release <= :mavericks
-    version '4.4.3'
-    sha256 '6657fc9192b67dde63fa9f67b344dc3bc6b7ff3e501d3dbe0f5712a41d8ee428'
-
-    # cloudfront.net is the official download host per the vendor homepage
-    url "https://d13itkw33a7sus.cloudfront.net/dist/1P/mac4/1Password-#{version}.zip"
-
-    app "1Password #{version.major}.app"
-  else
-    version '6.0.2'
-    sha256 '28b79691e3985c15ea34cd0e25987971766cdd478c3cbe276aff476ab16bc922'
-
-    # cloudfront.net is the official download host per the vendor homepage
-    url "https://d13itkw33a7sus.cloudfront.net/dist/1P/mac4/1Password-#{version}.zip"
-
-    app "1Password #{version.major}.app"
-  end
-
+  url "https://c.1password.com/dist/1P/mac#{version.major}/1Password-#{version}.zip"
+  appcast "https://app-updates.agilebits.com/product_history/OPM#{version.major}"
   name '1Password'
-  homepage 'https://agilebits.com/onepassword'
-  license :commercial
+  homepage 'https://1password.com/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
-  zap delete: [
-                '~/Library/Application Scripts/2BUA8C4S2C.com.agilebits.onepassword-osx-helper',
-                '~/Library/Containers/2BUA8C4S2C.com.agilebits.onepassword-osx-helper',
-                '~/Library/Containers/com.agilebits.onepassword-osx',
-                '~/Library/Group Containers/2BUA8C4S2C.com.agilebits',
-              ]
+  app "1Password #{version.major}.app"
+
+  zap trash: [
+               "~/Library/Application Scripts/2BUA8C4S2C.com.agilebits.onepassword#{version.major}-helper",
+               "~/Library/Application Scripts/com.agilebits.onepassword#{version.major}",
+               "~/Library/Application Scripts/com.agilebits.onepassword#{version.major}-launcher",
+               '~/Library/Application Scripts/com.agilebits.onepasswordnativemessaginghost',
+               "~/Library/Containers/2BUA8C4S2C.com.agilebits.onepassword#{version.major}-helper",
+               "~/Library/Containers/com.agilebits.onepassword#{version.major}",
+               "~/Library/Containers/com.agilebits.onepassword#{version.major}-launcher",
+               '~/Library/Containers/com.agilebits.onepasswordnativemessaginghost',
+               '~/Library/Group Containers/2BUA8C4S2C.com.agilebits',
+               '~/Library/Logs/1Password',
+               "~/Library/Preferences/com.agilebits.onepassword#{version.major}.plist",
+             ]
 end

@@ -1,13 +1,13 @@
 cask 'pdfpen' do
-  version '734.0,1451347971'
-  sha256 '265eec35fa5f45c9623b7ee87bbfbc90f0afa2c146ca18a2e2da10774bee7389'
+  version '1012.1,1535511553'
+  sha256 '71e9b65414933a7627bb2f62512ae710f5c55ecb432358dabf0d78ebb98c8e20'
 
   url "https://dl.smilesoftware.com/com.smileonmymac.PDFpen/#{version.before_comma}/#{version.after_comma}/PDFpen-#{version.before_comma}.zip"
-  appcast 'https://updates.smilesoftware.com/com.smileonmymac.PDFpen.xml',
-          checkpoint: 'dfe4c3a82ad4c9f319722fb0dc2e58e73926d0d7fa8d4c2d5c82d71fb7ccbe7d'
+  appcast 'https://updates.smilesoftware.com/com.smileonmymac.PDFpen.xml'
   name 'PDFpen'
-  homepage 'https://smilesoftware.com/PDFpen/'
-  license :commercial
+  homepage 'https://smilesoftware.com/PDFpen'
+
+  depends_on macos: '>= :sierra'
 
   app 'PDFpen.app'
 end

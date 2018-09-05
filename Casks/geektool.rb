@@ -1,19 +1,20 @@
 cask 'geektool' do
-  version '3.1.3'
-  sha256 'f881d212dff433b302146ce3325cdcc79e73b8a7e871f9de8cd6d69173e33ec7'
+  version '331.014,1470733752'
+  sha256 '73cbb2361601048c7f4d05a6717e53e83b088d49ac75309b2f8e4dccc17df63c'
 
-  url "http://download.tynsoe.org/GeekTool-#{version}.zip"
+  # dl.devmate.com/org.tynsoe.GeekTool was verified as official when first introduced to the cask
+  url "https://dl.devmate.com/org.tynsoe.GeekTool/#{version.before_comma}/#{version.after_comma}/GeekTool-#{version.before_comma}.zip"
+  appcast 'https://updates.devmate.com/org.tynsoe.GeekTool.xml'
   name 'GeekTool'
-  homepage 'http://projects.tynsoe.org/en/geektool/'
-  license :mit
+  homepage 'https://www.tynsoe.org/v2/geektool/'
 
   app 'GeekTool.app'
 
-  zap delete: [
-                '~/Library/Preferences/org.tynsoe.GeekTool.plist',
-                '~/Library/Preferences/org.tynsoe.geeklet.file.plist',
-                '~/Library/Preferences/org.tynsoe.geeklet.image.plist',
-                '~/Library/Preferences/org.tynsoe.geeklet.shell.plist',
-                '~/Library/Preferences/org.tynsoe.geektool3.plist',
-              ]
+  zap trash: [
+               '~/Library/Preferences/org.tynsoe.GeekTool.plist',
+               '~/Library/Preferences/org.tynsoe.geeklet.file.plist',
+               '~/Library/Preferences/org.tynsoe.geeklet.image.plist',
+               '~/Library/Preferences/org.tynsoe.geeklet.shell.plist',
+               '~/Library/Preferences/org.tynsoe.geektool3.plist',
+             ]
 end

@@ -1,40 +1,41 @@
 cask 'ncar-ncl' do
-  version '6.3.0'
+  version '6.5.0'
 
-  if MacOS.release == :mountain_lion
-    sha256 '154914834df0eeb69b778698062900175a5dcc88dcd76545cc2c504551cd756a'
-    url 'https://www.earthsystemgrid.org/download/fileDownload.htm?logicalFileId=e0852fc5-cd9a-11e4-bb80-00c0f03d5b7c'
-  elsif MacOS.release == :mavericks
-    sha256 'abe78b6830c43f8056cad02f5fbcbf4de82c4948b95b757b0d8a72d4776cbbf6'
-    url 'https://www.earthsystemgrid.org/download/fileDownload.htm?logicalFileId=e0849384-cd9a-11e4-bb80-00c0f03d5b7c'
+  if MacOS.version == :sierra
+    sha256 'b107934b17085c39053467aa3faa07f00b4e18a89271a0b15eec6768d6ab06fb'
+    url "https://www.earthsystemgrid.org/dataset/ncl.#{version.no_dots}.dap/file/ncl_ncarg-#{version}-MacOS_10.12_64bit_gnu710.tar.gz"
   else
-    sha256 'b0a7a02d1044380b6f33d274ccd0e870e06f11fbb98e72a58844eee98c98ff8d'
-    url 'https://www.earthsystemgrid.org/download/fileDownload.htm?logicalFileId=e085cc06-cd9a-11e4-bb80-00c0f03d5b7c'
+    sha256 '18d95acc8a9904c930d61b24348d13603c53a28e7c50c86f28b4354f823dc3df'
+    url "https://www.earthsystemgrid.org/dataset/ncl.#{version.no_dots}.dap/file/ncl_ncarg-#{version}-MacOS_10.13_64bit_gnu730.tar.gz"
   end
 
+  appcast 'https://www.ncl.ucar.edu/current_release.shtml'
   name 'NCAR Command Language'
   name 'ncl'
   homepage 'https://www.ncl.ucar.edu/'
-  license :oss
 
-  depends_on cask: 'xquartz'
+  depends_on x11: true
   depends_on formula: 'gcc'
-  depends_on macos: ['10.8', '10.9', '10.10']
-  depends_on arch: :x86_64
+  depends_on macos: '>= :sierra'
 
-  artifact 'include', target: '/usr/local/ncl-6.3.0/include'
-  artifact 'bin', target: '/usr/local/ncl-6.3.0/bin'
-  artifact 'lib', target: '/usr/local/ncl-6.3.0/lib'
+  artifact 'include', target: "#{HOMEBREW_PREFIX}/ncl-#{version}/include"
+  artifact 'bin', target: "#{HOMEBREW_PREFIX}/ncl-#{version}/bin"
+  artifact 'lib', target: "#{HOMEBREW_PREFIX}/ncl-#{version}/lib"
 
-  caveats do
-    <<-EOS.undent
-    To use ncar-ncl, you must add the $NCARG_ROOT/bin directory
+  preflight do
+    system_command '/bin/mkdir', args: ['-p', "#{HOMEBREW_PREFIX}/ncl-#{version}"], sudo: true
+  end
+
+  uninstall delete: "#{HOMEBREW_PREFIX}/ncl-#{version}"
+
+  caveats <<~EOS
+    To use ncar-ncl, you must add the ${NCARG_ROOT}/bin directory
     to your PATH environment variable.
 
     For bash shell, add these lines to ~/.bash_profile:
 
-      export NCARG_ROOT=/usr/local/ncl-6.3.0
-      export PATH=$NCARG_ROOT/bin:"$PATH"
+      export NCARG_ROOT="#{HOMEBREW_PREFIX}/ncl-#{version}"
+      export PATH="${NCARG_ROOT}/bin:${PATH}"
 
     You may also need to modify your DYLD_FALLBACK_LIBRARY_PATH
     environment variable:
@@ -43,6 +44,5 @@ cask 'ncar-ncl' do
 
     For other information, please see:
     https://www.ncl.ucar.edu/Download/macosx.shtml
-    EOS
-  end
+  EOS
 end

@@ -2,11 +2,19 @@ cask 'league-of-legends' do
   version :latest
   sha256 :no_check
 
-  # riotgames.com is the official download host per the vendor homepage
-  url 'http://l3cdn.riotgames.com/Installer/NA_Mac_Installer/League%20of%20Legends%20NA.dmg'
+  # riotgamespatcher-a.akamaihd.net was verified as official when first introduced to the cask
+  url 'https://riotgamespatcher-a.akamaihd.net/releases/Maclive/installer/deploy/League%20of%20Legends%20installer%20NA.dmg'
   name 'League of Legends'
-  homepage 'http://leagueoflegends.com/'
-  license :gratis
+  homepage 'https://leagueoflegends.com/'
 
   app 'League of Legends.app'
+
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.riotgames.maccontainer.sfl*',
+               '~/Library/Saved Application State/com.riotgames.LeagueofLegends.GameClient.savedState',
+               '~/Library/Saved Application State/com.riotgames.LeagueofLegends.LeagueClientUx.savedState',
+               '~/Library/Preferences/com.riotgames.LeagueofLegends.LeagueClientUxHelper.plist',
+               '~/Library/Caches/com.riotgames.LeagueofLegends.LeagueClient',
+             ],
+      rmdir: '~/Documents/League of Legends'
 end

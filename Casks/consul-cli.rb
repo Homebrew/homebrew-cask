@@ -1,13 +1,11 @@
 cask 'consul-cli' do
-  version '0.1.1'
-  sha256 'cf4eada7fcd1207f06d957e43db6dbbcacbd046e80cf57b1a3621f306f3ac7f8'
+  version '0.3.1'
+  sha256 '245915c510547e37ad19ee3eb934d9981e9e39cf4db55c89fff82ca13555bb1c'
 
-  url "https://github.com/CiscoCloud/consul-cli/releases/download/v#{version}/consul-cli_#{version}_darwin_amd64.tar.gz"
-  appcast 'https://github.com/CiscoCloud/consul-cli/releases.atom',
-          checkpoint: '0b6589d1ae99511a97a71d911ac44f99f979d69f89a34823727bbd586426af4b'
+  url "https://github.com/mantl/consul-cli/releases/download/v#{version}/consul-cli_#{version}_darwin_amd64.tar.gz"
+  appcast 'https://github.com/mantl/consul-cli/releases.atom'
   name 'Consul CLI'
-  homepage 'https://github.com/CiscoCloud/consul-cli/wiki'
-  license :apache
+  homepage 'https://github.com/mantl/consul-cli/wiki'
 
   binary "consul-cli_#{version}_darwin_amd64/consul-cli"
 end

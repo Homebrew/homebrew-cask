@@ -1,13 +1,27 @@
 cask 'propresenter' do
-  version '6.0.14_b15078'
-  sha256 'c7509b1200722178471bfaf6e3b4f1e61908b8c7114dfedfcafcc3b4a26c1c2d'
+  version '6.3.5_b16156'
+  sha256 '54482ee8492211ed8c94eabbdfcc610285fee746278548ba52b3a84aacd9979f'
 
-  url "https://www.renewedvision.com/downloads/ProPresenter6_#{version}.dmg"
-  appcast 'https://www.renewedvision.com/update/ProPresenter6.php',
-          checkpoint: 'fbe5ac156afaa12f4cac313d6bf513e9713cd4290448a04e9e7e13ec7b0a7329'
+  url "https://www.renewedvision.com/downloads/ProPresenter#{version.major}_#{version}.dmg"
+  appcast "https://www.renewedvision.com/update/ProPresenter#{version.major}.php"
   name 'ProPresenter'
   homepage 'https://www.renewedvision.com/propresenter.php'
-  license :commercial
 
-  app 'ProPresenter 6.app'
+  app "ProPresenter #{version.major}.app"
+
+  zap trash: [
+               '~/Library/Application Support/RenewedVision/ProPresenter6',
+               '~/Library/Caches/KSCrashReports/ProPresenter 6',
+               '~/Library/Caches/Sessions/ProPresenter 6',
+               '~/Library/Caches/com.renewedvision.ProPresenter6',
+               '~/Library/Preferences/com.renewedvision.ProPresenter6.plist',
+               '/Library/Application Support/RenewedVision',
+               '/Library/Caches/com.renewedvision.ProPresenter6',
+               '/Users/Shared/Renewed Vision Media',
+             ],
+      rmdir: [
+               '~/Library/Application Support/RenewedVision',
+               '~/Library/Caches/KSCrashReports',
+               '~/Library/Caches/Sessions',
+             ]
 end

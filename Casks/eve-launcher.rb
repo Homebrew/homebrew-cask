@@ -1,17 +1,18 @@
 cask 'eve-launcher' do
-  version '998442'
-  sha256 '55ffa32f25fcbdcf063449842aa06d6fe8e143ea38f5890754725c2fc9b34be0'
+  version '1225328'
+  sha256 '69de8866d986b3d24615648f9296f042b3b000d30eb6413b1fcd0650de68318e'
 
   url "https://binaries.eveonline.com/EveLauncher-#{version}.dmg"
   name 'Eve Online'
   homepage 'https://www.eveonline.com/'
-  license :commercial
+
+  depends_on macos: '>= :mavericks'
 
   app 'EVE Launcher.app'
 
-  zap delete: [
-                '~/Library/Preferences/com.ccpgames.EVE.plist',
-                '~/Library/Application Support/EVE Online',
-                '~/Library/Application Support/CCP/EVE',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.ccpgames.EVE.plist',
+               '~/Library/Application Support/EVE Online',
+               '~/Library/Application Support/CCP/EVE',
+             ]
 end

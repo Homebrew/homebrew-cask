@@ -1,12 +1,12 @@
 cask 'prepros' do
-  version '5.9.5'
-  sha256 'f892d1ce768c7e71820b005f77a27648aa1d3025a43669b621c4a31d667716e8'
+  version '6.2.3'
+  sha256 'deda79eccb33814513569438a222b3682328a3ac074de242b16188034360d6b7'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url "http://prepros.io.s3.amazonaws.com/installers/Prepros-Mac-#{version}.zip"
+  # s3-us-west-2.amazonaws.com/prepros-io-releases was verified as official when first introduced to the cask
+  url "https://s3-us-west-2.amazonaws.com/prepros-io-releases/stable/Prepros-Mac-#{version}.zip"
+  appcast 'https://prepros.io/changelog'
   name 'Prepros'
   homepage 'https://prepros.io/'
-  license :commercial
 
   app 'Prepros.app'
 end

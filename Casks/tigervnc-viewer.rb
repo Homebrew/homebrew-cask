@@ -1,12 +1,12 @@
 cask 'tigervnc-viewer' do
-  version '1.5.0'
-  sha256 '927e956cbda7672c7efdfa9f5e49cb89043d1627132dd2e088a3c0009de4080e'
+  version '1.9.0'
+  sha256 '93969b609b4c6e3b171e1c1c6da408ddb715669a86c060a96fd9ecb83dfd632a'
 
-  # bintray.com is the official download host per the vendor homepage
-  url "https://bintray.com/artifact/download/tigervnc/stable/TigerVNC-#{version}.dmg"
+  # bintray.com/tigervnc was verified as official when first introduced to the cask
+  url "https://bintray.com/tigervnc/stable/download_file?file_path=TigerVNC-#{version}.dmg"
+  appcast 'https://github.com/TigerVNC/tigervnc/releases.atom'
   name 'TigerVNC'
   homepage 'http://tigervnc.org/'
-  license :gpl
 
   app "TigerVNC Viewer #{version}.app"
 end

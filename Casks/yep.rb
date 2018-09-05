@@ -1,11 +1,11 @@
 cask 'yep' do
-  version :latest
-  sha256 :no_check
+  version '3.8.5'
+  sha256 'ab067a3a570a5137c5d414f6fc77bc65dc04cf71fcd74baed37acc0cf0cd6f02'
 
-  url 'http://www.ironicsoftware.com/downloads/Yep.zip'
+  url 'https://www.ironicsoftware.com/downloads/Yep.zip'
+  appcast 'https://ironicsoftware.com/downloads/yep.xml'
   name 'Yep'
-  homepage 'http://www.ironicsoftware.com/yep/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.ironicsoftware.com/yep/'
 
   app 'Yep.app'
 end

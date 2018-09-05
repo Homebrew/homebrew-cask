@@ -1,15 +1,16 @@
 cask 'fluid' do
-  version '1.8.4'
-  sha256 'abf5c99d45b23be3df1b62da798beab7a4fed176d28d508c2629d2d089a491ce'
+  version '2.0.2'
+  sha256 'bcb77409f0453c3d6dadc5ee6d072a538f5c7f55ff2bc89eb709bef7c1356da8'
 
   url "http://fluidapp.com/dist/Fluid_#{version}.zip"
-  appcast 'http://fluidapp.com/appcast/fluid1.rss',
-          checkpoint: 'c90b9c819d4a6269f177bd496b6a3b43045e9b25c3d66973763d5b01af4fff53'
+  appcast "http://fluidapp.com/appcast/fluid#{version.major}.rss"
   name 'Fluid'
   homepage 'http://fluidapp.com/'
-  license :freemium
-
-  depends_on macos: '>= :snow_leopard'
 
   app 'Fluid.app'
+
+  zap trash: [
+               '~/Library/Application Support/Fluid',
+               '~/Library/Preferences/com.fluidapp.Fluid.plist',
+             ]
 end

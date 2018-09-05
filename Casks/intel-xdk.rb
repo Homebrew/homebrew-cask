@@ -1,11 +1,11 @@
 cask 'intel-xdk' do
-  version '2170'
-  sha256 'f10e883140921ef3f9f9231b58fb7d1b1b092728bc68fd13e1fda4a209a57145'
+  version '3641'
+  sha256 '303bf88cdf8153b8e4706274b04c3c7b4991ad7b953ee3714bab11df0d956179'
 
-  url "https://download.xdk.intel.com/xdk/xdk_web_mac_master_#{version}.dmg"
+  # xdk2-installers.s3.amazonaws.com/xdk was verified as official when first introduced to the cask
+  url "https://xdk2-installers.s3.amazonaws.com/xdk/xdk_web_mac_master_#{version}.dmg"
   name 'Intel XDK'
-  homepage 'http://xdk-software.intel.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://software.intel.com/en-us/intel-xdk'
 
   pkg "xdk_full_#{version}.pkg"
 

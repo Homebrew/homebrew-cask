@@ -1,11 +1,10 @@
 cask 'snagit' do
-  version :latest
-  sha256 :no_check
+  version '2018'
+  sha256 :no_check # required as upstream package is updated in-place
 
-  url 'http://download.techsmith.com/snagitmac/enu/Snagit.dmg'
+  url 'https://download.techsmith.com/snagitmac/enu/Snagit.dmg'
   name 'Snagit'
-  homepage 'https://www.techsmith.com/snagit.html'
-  license :commercial
+  homepage 'https://www.techsmith.com/screen-capture.html'
 
-  app 'Snagit.app'
+  app "Snagit #{version}.app"
 end

@@ -1,13 +1,14 @@
 cask 'sdformatter' do
-  version '4.0'
-  sha256 '5b88a851d375ef471523a0f8371edda144c4650d40cfc94902440fece77aa27e'
+  version '0.5.0.0'
+  sha256 '4dba087a5a639d12b9e34666834c1b9f09914e92dc0aec20bd9f43e2fffb1ba9'
 
-  url "https://www.sdcard.org/downloads/formatter_4/eula_mac/SDFormatter_#{version}0B.pkg"
+  url "https://www.sdcard.org/downloads/formatter_4/eula_mac/InstallSD_CardFormatter#{version.no_dots}.mpkg"
   name 'SD Formatter'
-  homepage 'https://www.sdcard.org'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.sdcard.org/'
 
-  pkg "SDFormatter_#{version}0B.pkg"
+  pkg "InstallSD_CardFormatter#{version.no_dots}.mpkg"
 
-  uninstall pkgutil: 'jp.co.trendy.sdformatter.SDFormatter.pkg'
+  uninstall pkgutil: 'com.tuxera.pkg.SD_Card_Formatter'
+
+  zap trash: '~/Library/Caches/com.tuxera.SDCardFormatter'
 end

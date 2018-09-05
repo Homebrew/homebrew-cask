@@ -4,14 +4,13 @@ cask 'xamarin' do
 
   url 'https://download.xamarin.com/Installer/Mac/XamarinInstaller.dmg'
   name 'Xamarin Platform'
-  homepage 'https://xamarin.com/platform'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.xamarin.com/platform'
 
   installer manual: 'Install Xamarin.app'
 
   uninstall delete: '/Applications/Xamarin Studio.app'
 
-  zap       delete: '~/Library/Developer/Xamarin'
+  zap trash: '~/Library/Developer/Xamarin'
 
   caveats do
     depends_on_java

@@ -1,11 +1,10 @@
 cask 'staruml' do
-  version '2.6.0'
-  sha256 '28653aaf023300b49f9e291ba837c8cc9addc1433fa5b63b89c49351447d445b'
+  version '3.0.2'
+  sha256 'd5481633893d2934711dd6c98689f593872b794c885a46453146876851d221ab'
 
-  url "http://staruml.io/download/release/v#{version}/StarUML-v#{version}.dmg"
+  url "http://staruml.io/download/releases/StarUML-#{version}.dmg"
   name 'StarUML'
   homepage 'http://staruml.io/'
-  license :commercial
 
   app 'StarUML.app'
 end

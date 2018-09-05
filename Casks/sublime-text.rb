@@ -1,26 +1,25 @@
 cask 'sublime-text' do
-  version '2.0.2'
-  sha256 '906e71e19ae5321f80e7cf42eab8355146d8f2c3fd55be1f7fe5c62c57165add'
+  version '3.176'
+  sha256 '68cc4a12f30511b3e9fa45e6240f18b1963407a613d8933a57dec0fddf504aaa'
 
-  # rackcdn.com is the official download host per the vendor homepage
-  url "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20#{version}.dmg"
-  appcast 'https://www.sublimetext.com/updates/2/stable/appcast_osx.xml',
-          checkpoint: '1f88d22b2ed5ba5a9213accf500ca8f1a9723b391fbbbc45ffb23cd98c98519c'
+  url "https://download.sublimetext.com/Sublime%20Text%20Build%20#{version.no_dots}.dmg"
+  appcast "https://www.sublimetext.com/updates/#{version.major}/stable/appcast_osx.xml"
   name 'Sublime Text'
-  homepage 'https://www.sublimetext.com/2'
-  license :closed
+  homepage "https://www.sublimetext.com/#{version.major}"
 
-  app 'Sublime Text 2.app'
-  binary 'Sublime Text 2.app/Contents/SharedSupport/bin/subl'
+  auto_updates true
+  conflicts_with cask: 'sublime-text-dev'
 
-  zap delete: [
-                '~/Library/Application Support/Sublime Text 2',
-                '~/Library/Preferences/com.sublimetext.2.plist',
-                '~/Library/Caches/com.sublimetext.2',
-                '~/Library/Saved Application State/com.sublimetext.2.savedState',
-              ]
+  app 'Sublime Text.app'
+  binary "#{appdir}/Sublime Text.app/Contents/SharedSupport/bin/subl"
 
-  caveats do
-    files_in_usr_local
-  end
+  uninstall quit: "com.sublimetext.#{version.major}"
+
+  zap trash: [
+               "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sublimetext.#{version.major}.sfl*",
+               "~/Library/Application Support/Sublime Text #{version.major}",
+               "~/Library/Caches/com.sublimetext.#{version.major}",
+               "~/Library/Preferences/com.sublimetext.#{version.major}.plist",
+               "~/Library/Saved Application State/com.sublimetext.#{version.major}.savedState",
+             ]
 end

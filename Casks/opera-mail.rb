@@ -4,8 +4,7 @@ cask 'opera-mail' do
 
   url "https://get-ash-1.opera.com/pub/opera/mail/#{version}/mac/Opera-Mail-#{version}-1040.i386.dmg"
   name 'Opera Mail'
-  homepage 'http://www.opera.com/computer/mail'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.opera.com/computer/mail'
 
   app 'Opera Mail.app'
 end

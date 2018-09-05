@@ -1,11 +1,12 @@
 cask 'supercollider' do
-  version '3.6.6'
-  sha256 '4cc59a3ab70cbac60ce64b0fb7b6b86e070456e8f597229b05057ea6c4e1edb9'
+  version '3.9.3'
+  sha256 '84cdad611aca022ff218aff46e92021a334c5bb8e6ac3dbbe0051fe7f57bae07'
 
-  url "http://downloads.sourceforge.net/project/supercollider/Mac%20OS%20X/3.6/SuperCollider-#{version}-OSX.dmg"
+  # github.com/supercollider/supercollider was verified as official when first introduced to the cask
+  url "https://github.com/supercollider/supercollider/releases/download/Version-#{version}/SuperCollider-#{version}-macOS.zip"
+  appcast 'https://github.com/supercollider/supercollider/releases.atom'
   name 'SuperCollider'
-  homepage 'http://supercollider.sourceforge.net/'
-  license :gpl
+  homepage 'https://supercollider.github.io/'
 
   app 'SuperCollider/SuperCollider.app'
 end

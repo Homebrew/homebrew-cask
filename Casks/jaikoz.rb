@@ -4,8 +4,7 @@ cask 'jaikoz' do
 
   url 'http://jthink.net/jaikoz/jsp/manualdownload/jaikoz-osx.dmg'
   name 'Jaikoz'
-  homepage 'http://jthink.net/jaikoz'
-  license :commercial
+  homepage 'http://www.jthink.net/jaikoz/'
 
   app 'Jaikoz.app'
 end

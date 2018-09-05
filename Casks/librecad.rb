@@ -1,19 +1,18 @@
 cask 'librecad' do
-  version '2.0.8'
+  version '2.1.3'
+  sha256 'e17f74be117c2cabbc9c5844ae459dd1d1e6f94b17d09f0e809ef23b936a8952'
 
-  if MacOS.release <= :mavericks
-    # sourceforge.net is the official download host per the vendor homepage
-    url "http://downloads.sourceforge.net/project/librecad/OSX/#{version}/LibreCAD-#{version}-Mavericks.dmg"
-    sha256 '83b33e4f8cb49eab76afbe001d521ceb59509b7fc87be396c12b8a4980192834'
-  else
-    # sourceforge.net is the official download host per the vendor homepage
-    url "http://downloads.sourceforge.net/project/librecad/OSX/#{version}/LibreCAD-#{version}-Yosemite.dmg"
-    sha256 '1c2590875deccd0915beb7da3305973140b66349474b3ef5790e17132e2918a8'
-  end
-
+  # github.com/LibreCAD/LibreCAD was verified as official when first introduced to the cask
+  url "https://github.com/LibreCAD/LibreCAD/releases/download/#{version}/LibreCAD_#{version.dots_to_hyphens}.dmg"
+  appcast 'https://github.com/LibreCAD/LibreCAD/releases.atom'
   name 'LibreCAD'
-  homepage 'http://librecad.org/'
-  license :gpl
+  homepage 'https://librecad.org/'
 
   app 'LibreCAD.app'
+
+  zap trash: [
+               '~/Library/Application Support/LibreCAD',
+               '~/Library/Preferences/com.librecad.LibreCAD.plist',
+               '~/Library/Saved Application State/com.yourcompany.LibreCAD.savedstate',
+             ]
 end

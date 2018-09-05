@@ -1,11 +1,16 @@
 cask 'sloth' do
-  version '1.5'
-  sha256 '01f8f9fec88d5bc0cb0edcf7391d5ed0ac085f7fa8dcb6682059a238d7786165'
+  version '2.5'
+  sha256 '92ee4a26b5347be2276f3807552f121a5a25f95801bea3751d63e322e33fef36'
 
-  url 'http://sveinbjorn.org/files/software/sloth.zip'
+  url "https://sveinbjorn.org/files/software/sloth/sloth-#{version}.zip"
+  appcast 'https://sveinbjorn.org/files/appcasts/SlothAppcast.xml'
   name 'Sloth'
-  homepage 'http://sveinbjorn.org/sloth'
-  license :gpl
+  homepage 'https://sveinbjorn.org/sloth'
 
-  app "Sloth-#{version}/Sloth.app"
+  app 'Sloth.app'
+
+  zap trash: [
+               '~/Library/Preferences/org.sveinbjorn.Sloth.plist',
+               '~/Library/Saved Application State/org.sveinbjorn.Sloth.savedState',
+             ]
 end

@@ -1,22 +1,24 @@
 cask 'appcode' do
-  version '3.3.2'
-  sha256 '8a49a3942f396717db09e8fd757ffc50de88b072ddb63e41c1ee895fc2cd68d1'
+  version '2018.2.2,182.4323.25'
+  sha256 '28f60ee2ed318884eb33404d0f4f9a7b0e09a14e71f7e86dc700ba3655e75477'
 
-  url "https://download.jetbrains.com/objc/AppCode-#{version}-custom-jdk-bundled.dmg"
+  url "https://download.jetbrains.com/objc/AppCode-#{version.before_comma}.dmg"
+  appcast 'https://data.services.jetbrains.com/products/releases?code=AC&latest=true&type=release'
   name 'AppCode'
   homepage 'https://www.jetbrains.com/objc/'
-  license :commercial
 
-  conflicts_with cask: 'appcode-eap'
+  auto_updates true
 
   app 'AppCode.app'
 
-  zap delete: [
-                "~/.Appcode#{version.major_minor.no_dots}",
-                '~/Library/Preferences/com.jetbrains.AppCode.plist',
-                "~/Library/Preferences/AppCode#{version.major_minor.no_dots}",
-                "~/Library/Application Support/AppCode#{version.major_minor.no_dots}",
-                "~/Library/Caches/AppCode#{version.major_minor.no_dots}",
-                "~/Library/Logs/AppCode#{version.major_minor.no_dots}",
-              ]
+  uninstall_postflight do
+    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'appcode') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }
+  end
+
+  zap trash: [
+               "~/Library/Application Support/AppCode#{version.major_minor}",
+               "~/Library/Caches/AppCode#{version.major_minor}",
+               "~/Library/Logs/AppCode#{version.major_minor}",
+               "~/Library/Preferences/AppCode#{version.major_minor}",
+             ]
 end

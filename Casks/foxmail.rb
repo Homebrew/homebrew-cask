@@ -4,8 +4,7 @@ cask 'foxmail' do
 
   url 'http://www.foxmail.com/mac/download'
   name 'Foxmail'
-  homepage 'http://www.foxmail.com'
-  license :gratis
+  homepage 'http://www.foxmail.com/'
 
   app 'Foxmail.app'
 end

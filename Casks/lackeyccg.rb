@@ -6,7 +6,6 @@ cask 'lackeyccg' do
       user_agent: :fake
   name 'LackeyCCG'
   homepage 'http://www.lackeyccg.com/'
-  license :gratis
 
   suite 'LackeyCCG'
 end

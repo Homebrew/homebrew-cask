@@ -4,8 +4,7 @@ cask 'sauce' do
 
   url 'https://saucelabs.com/downloads/Sauce-for-Mac.dmg'
   name 'Sauce'
-  homepage 'https://saucelabs.com/mac'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://saucelabs.com/'
 
   app 'Sauce.app'
 end

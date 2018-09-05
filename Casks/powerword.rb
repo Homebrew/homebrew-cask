@@ -1,12 +1,11 @@
 cask 'powerword' do
-  version '1.0.0'
-  sha256 '8bee28fa52bc967f91f6700d9642e00fc5e275cc41e0c15e5bf288fcac537c07'
+  version '1.0.1'
+  sha256 'bacf37532f98879761c098cfa93777ef0250ec9ae8e63392f87c5e34cd74c363'
 
-  url "http://mac.iciba.com/download/powerword_macosx_beta_#{version}.dmg"
-  name 'Powerword'
-  name '词霸'
-  homepage 'http://mac.iciba.com'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  url "https://download.iciba.com/mac/mac#{version}/PowerWord.dmg"
+  name 'PowerWord'
+  name '金山词霸'
+  homepage 'https://cp.iciba.com/mac/'
 
   app '金山词霸.app'
 end

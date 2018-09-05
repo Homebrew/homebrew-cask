@@ -1,11 +1,11 @@
 cask 'serial' do
-  version '1.2.2'
-  sha256 '683e9cff5962f8871909315ed0f8b56d2e710046c054343866f84ef4dac1e486'
+  version '1.3.8'
+  sha256 'f23de6aa96bc1847f740ac1b57bfbad27c15367156b54afd233b7ae2bb351ff1'
 
-  url "https://www.decisivetactics.com/lib/click?u=/products/serial/dl/Serial_#{version}.zip"
+  url "https://www.decisivetactics.com/products/serial/dl/Serial_#{version}.zip"
+  appcast 'https://www.decisivetactics.com/products/serial/release-notes'
   name 'Serial'
   homepage 'https://www.decisivetactics.com/products/serial/'
-  license :commercial
 
   app 'Serial.app'
 end

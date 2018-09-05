@@ -5,7 +5,14 @@ cask 'aegisub' do
   url "http://ftp.aegisub.org/pub/releases/Aegisub-#{version}.dmg"
   name 'Aegisub'
   homepage 'http://www.aegisub.org/'
-  license :oss
 
   app 'Aegisub.app'
+
+  uninstall quit: 'com.aegisub.aegisub'
+
+  zap trash: [
+               '~/Library/Application Support/Aegisub',
+               '~/Library/Preferences/com.aegisub.aegisub.plist',
+               '~/Library/Saved Application State/com.aegisub.aegisub.savedState',
+             ]
 end

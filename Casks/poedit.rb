@@ -1,25 +1,24 @@
 cask 'poedit' do
-  if MacOS.release <= :snow_leopard
+  if MacOS.version <= :snow_leopard
     version '1.5.7'
     sha256 '2017538011239f07924b709e4c13aa3fd7f83a96f76208b8b746fcee29251caf'
 
     url "https://poedit.net/dl/poedit-#{version}.dmg"
+  elsif MacOS.version <= :mavericks
+    version '1.8.12'
+    sha256 '0aa721a0733eb04635685d280093aeef56b28c0baddf0fc265e1c7d448dbc615'
+
+    url "https://poedit.net/dl/Poedit-#{version}.zip"
   else
-    version '1.8.7'
-    sha256 '10abc4201db285e0772e165e263ffd82e799b28f5a807d27a54884306b8f9845'
+    version '2.1.1'
+    sha256 '7e2113cd4ac355f726ec23f6fe0d965c0be23d187074667df0b7df0b6af8fd2a'
 
     url "https://download.poedit.net/Poedit-#{version}.zip"
-    appcast 'https://poedit.net/updates/osx/appcast',
-            checkpoint: '77d211625afe4d76bcc78f1a79fa2e9c975f41275ad4259b1eea10ca9485542f'
+    appcast 'https://poedit.net/updates/osx/appcast'
   end
 
   name 'Poedit'
-  homepage 'http://www.poedit.net'
-  license :mit
+  homepage 'https://poedit.net/'
 
   app 'Poedit.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 end

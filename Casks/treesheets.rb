@@ -5,7 +5,6 @@ cask 'treesheets' do
   url 'http://strlen.com/treesheets/treesheets_osx.zip'
   name 'TreeSheets'
   homepage 'http://strlen.com/treesheets/'
-  license :oss
 
   app 'TreeSheetsBeta/TreeSheets.app'
 end

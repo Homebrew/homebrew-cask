@@ -1,11 +1,12 @@
 cask 'butt' do
-  version '0.1.14'
-  sha256 'f12eac6ad2af8bc38717cccde3f7f139d426b6d098ef94f7dcd6ae7d1225f6ad'
+  version '0.1.16'
+  sha256 'eab9446889684a186b7d78cd935fdaa871166f5aab6c7002ff5dc22a0c5e5f82'
 
-  url "http://downloads.sourceforge.net/sourceforge/butt/butt-#{version}.dmg"
+  # sourceforge.net/butt was verified as official when first introduced to the cask
+  url "https://downloads.sourceforge.net/butt/butt-#{version}.dmg"
+  appcast 'https://sourceforge.net/projects/butt/rss'
   name 'Broadcast Using This Tool'
-  homepage 'http://butt.sourceforge.net/'
-  license :gpl
+  homepage 'https://danielnoethen.de/'
 
   app 'butt.app'
 end

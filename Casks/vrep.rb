@@ -1,11 +1,11 @@
 cask 'vrep' do
-  version '3.2.2'
-  sha256 '9aa17c04d2e61fcd0ae2270c22b0a460beea9c86819636912cd9051237b446ff'
+  version '3.5.0'
+  sha256 '751dcc1200803395358e788ffa42ad3f998278e380da15feb37f31fd88f3517c'
 
-  url "http://coppeliarobotics.com/V-REP_PRO_EDU_V#{version.gsub('.', '_')}_Mac.zip"
+  url "http://coppeliarobotics.com/files/V-REP_PRO_EDU_V#{version.dots_to_underscores}_Mac.zip"
+  appcast 'http://www.coppeliarobotics.com/helpFiles/en/versionInfo.htm'
   name 'V-REP'
   homepage 'http://www.coppeliarobotics.com/index.html'
-  license :other
 
-  suite "V-REP_PRO_EDU_V#{version.gsub('.', '_')}_Mac"
+  suite "V-REP_PRO_EDU_V#{version.dots_to_underscores}_Mac"
 end

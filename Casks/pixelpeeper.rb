@@ -4,8 +4,7 @@ cask 'pixelpeeper' do
 
   url 'https://www.irradiatedsoftware.com/download/PixelPeeper.zip'
   name 'PixelPeeper'
-  homepage 'https://www.irradiatedsoftware.com/labs'
-  license :gratis
+  homepage 'https://www.irradiatedsoftware.com/labs/'
 
   app 'PixelPeeper.app'
 end

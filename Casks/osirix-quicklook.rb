@@ -4,8 +4,7 @@ cask 'osirix-quicklook' do
 
   url 'http://www.osirix-viewer.com/Museum/OsiriXQuickLookInstaller.zip'
   name 'OsiriX DICOM QuickLook'
-  homepage 'http://www.osirix-viewer.com/'
-  license :gratis
+  homepage 'https://www.osirix-viewer.com/'
 
   pkg 'OsiriXQuickLookInstaller.pkg'
 

@@ -1,22 +1,46 @@
 cask 'world-of-tanks' do
-  version '1.0.25'
-  sha256 '2efd7dca4b678ad37fda74888ac77a6bf116a4f5979de33a7689a038af69fecc'
+  version '2.0.21'
 
-  # wargaming.net is the official download host per the vendor homepage
-  url 'http://redirect.wargaming.net/WoT/latest_mac_install_na'
-  appcast 'https://wot.gcdn.co/us/files/osx/WoT_OSX_update_na.xml',
-          checkpoint: '3ebe447ffe152d69a6e035b4075af292ff245cee5adfa8e54062df5138c33a42'
-  name 'World Of Tanks'
-  homepage 'http://worldoftanks.com/'
-  license :gratis
+  # wot.gcdn.co was verified as official when first introduced to the cask
+  language 'AT', 'BE', 'BG', 'CH', 'CZ', 'DE', 'DK', 'ES', 'FI', 'FR', 'GB', 'GR', 'HR', 'HU', 'IE', 'IT', 'LI', 'LT', 'LV', 'NL', 'NO', 'PL', 'PT', 'RO', 'RS', 'SE', 'SI', 'SK', 'TR' do
+    sha256 'ea319273e269e1554439d5ac2cc1e189b685f6c619444bb855f3358b68596008'
+
+    url 'https://wot.gcdn.co/eu/files/osx/worldoftanks_eu.dmg'
+    appcast 'https://wot.gcdn.co/eu/files/osx/WoT_OSX_update_eu.xml'
+    homepage 'https://worldoftanks.eu/'
+  end
+
+  language 'CA', 'US', default: true do
+    sha256 '133b3f3271eb957a4eea59cd59a6f79d2c4376a4297a980d8c9232ae9419a995'
+
+    url 'https://wot.gcdn.co/us/files/osx/worldoftanks_na.dmg'
+    appcast 'https://wot.gcdn.co/us/files/osx/WoT_OSX_update_na.xml'
+    homepage 'https://worldoftanks.com/'
+  end
+
+  language 'CN', 'ID', 'IN', 'JP', 'KR', 'PH', 'SG', 'TH', 'TW', 'VN' do
+    sha256 'c394a6a9a96914d72a035ccaa061840755f697099a5ff79417e3a5a213f060a2'
+
+    url 'https://wot.gcdn.co/sea/files/osx/worldoftanks_asia.dmg'
+    appcast 'https://wot.gcdn.co/sea/files/osx/WoT_OSX_update_asia.xml'
+    homepage 'https://worldoftanks.asia/'
+  end
+
+  language 'RU' do
+    sha256 '02d817184f4fd6268c59d68fc7d9ca039262d1fce997df14b5fdabb202dbaf7f'
+
+    url 'https://wot.gcdn.co/ru/files/osx/worldoftanks_ru.dmg'
+    appcast 'https://wot.gcdn.co/ru/files/osx/WoT_OSX_update_ru.xml'
+    homepage 'https://worldoftanks.ru/'
+  end
+
+  name 'World of Tanks'
 
   app 'World of Tanks.app'
 
-  zap delete: '~/Documents/World_of_Tanks'
-
-  caveats <<-EOS.undent
-    #{token} is specific to North America; if you're in a different region, you'll need to find your version in caskroom/versions
-      brew tap caskroom/versions
-      brew search #{token}
-  EOS
+  zap trash: [
+               '~/Documents/World_of_Tanks',
+               '~/Library/Application Support/World of Tanks',
+               '~/Library/Saved Application State/com.codeweavers.worldoftanks.savedState',
+             ]
 end

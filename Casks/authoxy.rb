@@ -4,13 +4,12 @@ cask 'authoxy' do
 
   url "http://www.hrsoftworks.net/downloads/Authoxy#{version}.dmg"
   name 'Authoxy'
-  homepage 'http://www.hrsoftworks.net'
-  license :gratis
+  homepage 'http://www.hrsoftworks.net/'
 
   pkg 'Authoxy (double click me).pkg'
 
   uninstall pkgutil: 'net.hrsoftworks.authoxy.*',
             delete:  '/tmp/authoxyd.pid'
 
-  zap       delete: '~/Library/Preferences/net.hrsoftworks.AuthoxyPref.plist'
+  zap trash: '~/Library/Preferences/net.hrsoftworks.AuthoxyPref.plist'
 end

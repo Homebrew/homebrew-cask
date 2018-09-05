@@ -1,14 +1,21 @@
 cask 'brave' do
-  version '0.7.13dev'
-  sha256 'df6c7500e6d67ec83aea11cf2955f590e8cad88abb4cc42779156e57a489150e'
+  version '0.23.105'
+  sha256 'f39751eb19e7584bc0c9bed6423e6037350ea6586fa631600ea04cd55411c2eb'
 
-  # github.com is the official download host per the vendor homepage
-  url "https://github.com/brave/browser-laptop/releases/download/v#{version}/Brave.dmg"
-  appcast 'https://github.com/brave/browser-laptop/releases.atom',
-          checkpoint: '54303cbe73ff4c36f9e7d0ffc15c560659375319a0ec4d3d50bf0042aba7ae6f'
+  # github.com/brave/browser-laptop was verified as official when first introduced to the cask
+  url "https://github.com/brave/browser-laptop/releases/download/v#{version}dev/Brave-#{version}.dmg"
+  appcast 'https://github.com/brave/browser-laptop/releases.atom'
   name 'Brave'
-  homepage 'http://brave.com'
-  license :mpl
+  homepage 'https://brave.com/'
+
+  auto_updates true
+  depends_on macos: '>= :mavericks'
 
   app 'Brave.app'
+
+  zap trash: [
+               '~/Library/Application Support/brave',
+               '~/Library/Preferences/com.electron.brave.plist',
+               '~/Library/Saved Application State/com.electron.brave.savedState',
+             ]
 end

@@ -1,13 +1,12 @@
 cask 'mysql-utilities' do
-  version '1.5.6'
-  sha256 '2553ae12323abe28ab3161ebdb6aff991fbb738dc6ef03946c0fae86aadac230'
+  version '1.6.5'
+  sha256 '114658256e846b4eeff141065e18ef3f779bcbe59e5d2828ab920d905e693db7'
 
-  url "http://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-utilities-#{version}-osx10.9.dmg"
+  url "https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-utilities-#{version}-macos10.12.dmg"
   name 'MySQL Utilities'
   homepage 'https://dev.mysql.com/downloads/utilities/'
-  license :gpl
 
-  depends_on macos: '<= :yosemite'
+  depends_on macos: '>= :sierra'
 
   pkg "mysql-utilities-#{version}.pkg"
 

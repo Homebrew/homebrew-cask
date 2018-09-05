@@ -1,12 +1,12 @@
 cask 'twine' do
-  version '2.0.10'
-  sha256 '3d073a624bd56817438105732e0e808b2ae9ff5bfebb455b70133cff80b0134f'
+  version '2.2.1'
+  sha256 '0282c9e21167c51fb57d1b276447d6560fa22f5489e87aac215a3616edc5887f'
 
-  # bitbucket.org is the official download host per the vendor homepage
-  url "https://bitbucket.org/klembot/twinejs/downloads/twine_#{version}_osx.zip"
+  # github.com/klembot/twinejs was verified as official when first introduced to the cask
+  url "https://github.com/klembot/twinejs/releases/download/#{version}/twine_#{version}_osx.zip"
+  appcast 'https://github.com/klembot/twinejs/releases.atom'
   name 'Twine'
-  homepage 'http://twinery.org/'
-  license :gpl
+  homepage 'https://twinery.org/'
 
   app 'Twine.app'
 end

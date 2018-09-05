@@ -1,13 +1,11 @@
 cask 'graphiql' do
-  version '0.3.1'
-  sha256 '8fd079699b5668a4207109fa6451225e9491d45025df6bf8822eac314760faf4'
+  version '0.7.2'
+  sha256 '204dd3db5c11bf265700d8d57defc4798cd0040651f751f35e2a646cb4846ac7'
 
-  url "https://github.com/skevy/graphiql-app/releases/download/#{version}/GraphiQL.zip"
-  appcast 'https://github.com/skevy/graphiql-app/releases.atom',
-          checkpoint: '1c077fe42d1c770cf0034ac821dc74ef3fac9aecec22966acabe8f70c21965a4'
+  url "https://github.com/skevy/graphiql-app/releases/download/v#{version}/graphiql-app-#{version}-mac.zip"
+  appcast 'https://github.com/skevy/graphiql-app/releases.atom'
   name 'GraphiQL App'
   homepage 'https://github.com/skevy/graphiql-app'
-  license :mit
 
   app 'GraphiQL.app'
 end

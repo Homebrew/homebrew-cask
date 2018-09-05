@@ -5,7 +5,6 @@ cask 'murasaki' do
   url "http://genjiapp.com/mac/murasaki/downloads/murasaki_v#{version}.zip"
   name 'Murasaki'
   homepage 'http://genjiapp.com/mac/murasaki/index_en.html'
-  license :gratis
 
   app 'Murasaki.app'
 end

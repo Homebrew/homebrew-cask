@@ -1,6 +1,6 @@
 # version
 
-`version`, while related to the app’s own versioning, doesn’t have to follow it exactly. It is common to change it slightly so it can be [interpolated](https://en.wikipedia.org/wiki/String_interpolation#Ruby) in other stanzas, usually in `url` to create a Cask that only needs `version` and `sha256` changes when updated. This can be taken further, when needed, with [ruby String methods](http://ruby-doc.org/core/String.html). 
+`version`, while related to the app’s own versioning, doesn’t have to follow it exactly. It is common to change it slightly so it can be [interpolated](https://en.wikipedia.org/wiki/String_interpolation#Ruby) in other stanzas, usually in `url` to create a Cask that only needs `version` and `sha256` changes when updated. This can be taken further, when needed, with [ruby String methods](https://ruby-doc.org/core/String.html).
 
 For example:
 
@@ -43,6 +43,7 @@ The examples above can become hard to read, however. Since many of these changes
 | `patch`                  | `1.2.3-a45,ccdd88` | `3`                |
 | `major_minor`            | `1.2.3-a45,ccdd88` | `1.2`              |
 | `major_minor_patch`      | `1.2.3-a45,ccdd88` | `1.2.3`            |
+| `minor_patch`            | `1.2.3-a45,ccdd88` | `2.3`              |
 | `before_comma`           | `1.2.3-a45,ccdd88` | `1.2.3-a45`        |
 | `after_comma`            | `1.2.3-a45,ccdd88` | `ccdd88`           |
 | `dots_to_hyphens`        | `1.2.3-a45,ccdd88` | `1-2-3-a45,ccdd88` |

@@ -1,12 +1,15 @@
 cask 'lazarus' do
-  version '1.4.2-20150711'
-  sha256 'a63ae1e6206044f60b7ab1640a33b7fb0de58a7e26c32efb17d15d94cbd7120c'
+  version '1.8.4'
+  sha256 '7764e9ece462072658528d2c1d7996e4eb6d419fd26412f0e25c69671115d36a'
 
-  # sourceforge.net is the official download host per the vendor homepage
-  url "http://downloads.sourceforge.net/lazarus/lazarus-#{version}-i386-macosx.dmg"
+  # sourceforge.net/lazarus was verified as official when first introduced to the cask
+  url "https://downloads.sourceforge.net/lazarus/lazarus-#{version}-i686-macosx.dmg"
+  appcast 'https://sourceforge.net/projects/lazarus/rss'
   name 'Lazarus'
-  homepage 'http://lazarus.freepascal.org/'
-  license :gpl
+  homepage 'https://www.lazarus-ide.org/'
+
+  depends_on formula: 'fpc'
+  depends_on cask: 'fpcsrc'
 
   pkg 'lazarus.pkg'
 

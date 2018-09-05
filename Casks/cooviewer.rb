@@ -5,7 +5,6 @@ cask 'cooviewer' do
   url "http://www.geocities.jp/coo_ona/cooviewer#{version}.dmg"
   name 'cooViewer'
   homepage 'http://www.geocities.jp/coo_ona/viewer.html'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'cooViewer/cooViewer.app'
 end

@@ -1,14 +1,13 @@
 cask 'kollaborate-transfer' do
-  version '1.3.0.0'
-  sha256 '3fcfd9bab9232133b2a78bcbfc6fecf1b4730adf014996d5bd2fdf57d2e5b734'
+  version '1.5.2.0'
+  sha256 'b5dab39e60846ec5f7926806120ad4f84ec42cbef0d0b57ac4eef2279d91a3ab'
 
-  # digitalrebellion.com is the official download host per the vendor homepage
+  # digitalrebellion.com was verified as official when first introduced to the cask
   url "http://www.digitalrebellion.com/download/kollabtransfer?version=#{version.no_dots}"
   name 'Kollaborate Transfer'
   homepage 'https://www.kollaborate.tv/resources'
-  license :gratis
 
   app 'Kollaborate Transfer.app'
 
-  zap delete: '~/Library/Preferences/com.digitalrebellion.KollabTransfer.plist'
+  zap trash: '~/Library/Preferences/com.digitalrebellion.KollabTransfer.plist'
 end

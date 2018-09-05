@@ -1,12 +1,11 @@
 cask 'tuxguitar' do
-  version '1.2'
-  sha256 '2d79ffdfdde9205073fdaa1c34701ea8f1961f822709b5270dc57555eb926d16'
+  version '1.5.2'
+  sha256 '0a08bacd93a1d3d685d79e7af490c63db0b95bb508e84deaca24f64853996e7c'
 
-  # sourceforge.net is the official download host per the vendor homepage
-  url "http://downloads.sourceforge.net/project/tuxguitar/TuxGuitar/TuxGuitar-#{version}/tuxguitar-#{version}-macosx10.5-cocoa-64.dmg"
+  url "https://downloads.sourceforge.net/tuxguitar/tuxguitar-#{version}-macosx-cocoa-64.app.tar.gz"
+  appcast 'https://sourceforge.net/projects/tuxguitar/rss?path=/TuxGuitar'
   name 'TuxGuitar'
-  homepage 'http://www.tuxguitar.com.ar/'
-  license :gpl
+  homepage 'https://sourceforge.net/projects/tuxguitar/'
 
-  app 'Tuxguitar.app'
+  app "tuxguitar-#{version}-macosx-cocoa-64.app"
 end

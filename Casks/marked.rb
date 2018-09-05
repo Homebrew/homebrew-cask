@@ -1,15 +1,26 @@
 cask 'marked' do
-  version '2.5.4915'
-  sha256 '35f305d124b92724cc7a9140561580949f2d06e0747d4124d860412cb62dbe79'
+  version '2.5.23958'
+  sha256 '9e06cecaadcade4ba25298fd0f0ff2f0837808a5d8d55cc7e6e41e2aa1a1b113'
 
-  url 'http://marked2app.com/download/Marked.zip'
-  appcast 'http://abyss.designheresy.com/marked/marked.xml',
-          checkpoint: 'fac95d3b4091df5d80910403d0f78c0944b908a1098642fcb43b332b930c285c'
+  url "https://updates.marked2app.com/Marked#{version}.zip"
+  appcast 'https://updates.marked2app.com/marked.xml'
   name 'Marked'
-  homepage 'http://marked2app.com'
-  license :commercial
+  homepage 'http://marked2app.com/'
 
   auto_updates true
+  depends_on macos: '>= :yosemite'
 
-  app 'Marked 2.app'
+  app "Marked #{version.major}.app"
+
+  uninstall quit: "com.brettterpstra.marked#{version.major}"
+
+  zap trash: [
+               "~/Library/Application Support/Marked #{version.major}",
+               "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.brettterpstra.marked#{version.major}.sfl*",
+               "~/Library/Caches/Marked #{version.major}",
+               "~/Library/Caches/com.brettterpstra.marked#{version.major}",
+               "~/Library/Logs/Marked #{version.major}",
+               "~/Library/Preferences/com.brettterpstra.marked#{version.major}.plist",
+               "~/Library/Saved Application State/com.brettterpstra.marked#{version.major}.savedState",
+             ]
 end

@@ -1,11 +1,11 @@
 cask 'chessx' do
-  version '1.3.2'
-  sha256 '7719eaf448d0b974d524fb3c180fb748b18494afe9a36c34b17ea138dbdad00f'
+  version '1.4.6'
+  sha256 '86bdd57667bf73d460fa39b45e1cdcf70fb122aeaed255d18ace79389271864b'
 
-  url "http://downloads.sourceforge.net/project/chessx/chessx/#{version}/chessx-#{version}.dmg"
+  url "https://downloads.sourceforge.net/chessx/chessx/#{version}/chessx-#{version}.dmg"
+  appcast 'https://sourceforge.net/projects/chessx/rss?path=/chessx'
   name 'ChessX'
   homepage 'http://chessx.sourceforge.net/'
-  license :gpl
 
   pkg 'chessx-installer.mpkg'
 

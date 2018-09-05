@@ -1,15 +1,11 @@
 cask 'mountain' do
-  version '1.6.2'
-  sha256 '474ec8db0f39a76ffb934ce0299205e5053498339908e77c6da0d2296fad2656'
+  version '1.6.5'
+  sha256 '86140c5469683ed64e9f275240e4e5e157b4b84b39aed65157e412e287c2c9dc'
 
-  url 'http://appgineers.de/mountain/files/Mountain.zip'
-  appcast 'http://appgineers.de/mountain/files/mountaincast.xml',
-          checkpoint: '3c848722a79d4cbf0e18f69ad041178446ad4471d276c573e73da6074f2406d3'
+  url 'https://appgineers.de/mountain/files/Mountain.zip'
+  appcast 'https://appgineers.de/mountain/files/mountaincast.xml'
   name 'Mountain'
-  homepage 'http://appgineers.de/mountain/'
-  license :commercial
-
-  depends_on macos: '>= :snow_leopard'
+  homepage 'https://appgineers.de/mountain/'
 
   app 'Mountain.app'
 end

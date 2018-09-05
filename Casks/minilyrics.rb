@@ -5,7 +5,6 @@ cask 'minilyrics' do
   url 'http://www.crintsoft.com/download/MiniLyrics.dmg'
   name 'MiniLyrics'
   homepage 'http://www.crintsoft.com/'
-  license :gratis
 
   pkg 'MiniLyrics.pkg'
 

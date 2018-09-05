@@ -1,37 +1,40 @@
 cask 'amazon-music' do
-  version '20151215_033955b5fb'
-  sha256 'c430be9914fe81c4c1162290e8665632b98962d8c7837a60b67afe671f4d53f8'
+  version '20180703,011039f163'
+  sha256 'b59813bd1878437015c603521188274337e4595756962baddb16cf161eafce9c'
 
-  url "https://images-na.ssl-images-amazon.com/images/G/01/digital/music/morpho/installers/#{version.sub(%r{_.*}, '')}/#{version.sub(%r{.*_}, '')}/AmazonMusicInstaller.dmg"
+  # ssl-images-amazon.com/images was verified as official when first introduced to the cask
+  url "https://images-na.ssl-images-amazon.com/images/G/01/digital/music/morpho/installers/#{version.before_comma}/#{version.after_comma}/AmazonMusicInstaller.dmg"
   name 'Amazon Music'
-  homepage 'https://www.amazon.com/gp/feature.html/?ie=UTF8&docId=1001067901'
-  license :gratis
+  homepage 'https://www.amazon.com/musicapps'
 
-  installer script: 'Amazon Music Installer.app/Contents/MacOS/osx-intel',
-            args:   ['--unattendedmodeui', 'none'],
-            sudo:   true
+  auto_updates true
+
+  installer script: {
+                      executable: 'Amazon Music Installer.app/Contents/MacOS/osx-intel',
+                      args:       ['--unattendedmodeui', 'none'],
+                    }
 
   uninstall quit:      [
                          'com.amazon.music',
                          'com.amazon.music-renderer',
                        ],
-            delete:    [
-                         '/Applications/Amazon Music.app',
-                       ],
-            launchctl: 'com.amazon.music'
+            delete:    '/Applications/Amazon Music.app',
+            launchctl: [
+                         'com.amazon.music',
+                         'com.amazon.music.startup',
+                       ]
 
-  zap delete: [
-                '~/Library/Preferences/com.amazon.music.plist',
-                '~/Library/Application Support/Amazon Music/',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.amazon.music.plist',
+               '~/Library/Application Support/Amazon Music',
+             ]
 
-  caveats <<-EOS.undent
-    If the app won't launch after installation, try
+  caveats <<~EOS
+    If the app will not launch after installation, try
 
       brew cask zap #{token}
       brew cask install #{token}
 
-    then re-launch the app. You can read more about the issue on Amazon's customer forums
-    http://www.amazon.com/App-wont-open-OS-Yosemite/forum/FxZLHSK3AW6KZU/Tx1EJYW65OQ5TZS
+    then re-launch the app.
   EOS
 end

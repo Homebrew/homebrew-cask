@@ -1,13 +1,12 @@
 cask 'autopano-pro' do
-  version :latest
-  sha256 :no_check
+  version '4.4.1'
+  sha256 '6cd18f7be14e12e3bec9c9b409c5e3d0e2d095d291dfd1e75923589f0ac052b1'
 
-  url 'http://download.kolor.com/app/stable/macleopard'
+  url 'http://download.kolor.com/app/stable/mac'
   name 'Autopano Pro'
-  homepage 'http://www.kolor.com/panorama-software-autopano-pro.html'
-  license :commercial
+  homepage 'https://www.kolor.com/autopano/'
 
-  pkg "Autopano Pro #{version}.pkg"
+  pkg "Autopano Pro #{version.major_minor}.pkg"
 
   uninstall pkgutil: [
                        'com.kolor.pkg.AutopanoPro.*',

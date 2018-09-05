@@ -1,11 +1,13 @@
 cask 'camranger' do
-  version '1.8.7'
-  sha256 'da68eeb0a19edf5a1658aee119ca37443dbe9af5d39c45f5fa34c3956fcdf29b'
+  version '2.0.1'
+  sha256 '28203ed3006a471fee52a3a83a37f9e56278bcce49f8270242819d2991c89932'
 
-  url "http://www.camranger.com/downloadFiles/CamRanger_#{version.gsub('.', '_')}.dmg"
+  url "https://www.camranger.com/downloadFiles/CamRanger_Mac_#{version.dots_to_underscores}.dmg",
+      user_agent: :fake
   name 'CamRanger'
-  homepage 'https://camranger.com/mac-downloads'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'http://camranger.com/mac-downloads/'
+
+  depends_on macos: '>= :mountain_lion'
 
   app 'CamRanger.app'
 end

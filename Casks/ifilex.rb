@@ -4,8 +4,7 @@ cask 'ifilex' do
 
   url 'http://www.osxbytes.com/iFileX.dmg'
   name 'iFileX'
-  homepage 'http://www.osxbytes.com/page3/'
-  license :gratis
+  homepage 'http://www.osxbytes.com/ifilex.html'
 
   app 'iFileX.app'
 end

@@ -1,12 +1,11 @@
 cask 'electric-sheep' do
-  version '2.7b36'
-  sha256 'e8b35e203264adc6e8801d2e7c725453cca2c3adadda29640144ea3b50d37869'
+  version '3.0.2'
+  sha256 'db689d0aeac776a3f189205efa32331c0c00b0bea608408b2e855557c56f5937'
 
-  # d100rc88eim93q.cloudfront.net is the official download host per the vendor homepage
+  # d100rc88eim93q.cloudfront.net was verified as official when first introduced to the cask
   url "https://d100rc88eim93q.cloudfront.net/electricsheep-#{version}.dmg"
   name 'Electric Sheep'
-  homepage 'http://www.electricsheep.org'
-  license :gpl
+  homepage 'https://gold.electricsheep.org/'
 
   pkg 'Electric Sheep.pkg'
 

@@ -1,12 +1,12 @@
 cask 'tv-browser' do
-  version '3.4.3'
-  sha256 '2b57c3e9d7d599045894b589c4c199f818336a46cffbde60f4565d8a035719cc'
+  version '4.0.1'
+  sha256 '0f881a81da4a10ee29622e1667df07b9445559746a900a1ac24000f6da9f1e0a'
 
-  # sourceforge.net is the official download host per the vendor homepage
-  url "http://downloads.sourceforge.net/sourceforge/tvbrowser/tvbrowser_#{version}_macjava.dmg"
+  # sourceforge.net/tvbrowser was verified as official when first introduced to the cask
+  url "https://downloads.sourceforge.net/tvbrowser/tvbrowser_#{version}_macjava.dmg"
+  appcast 'https://sourceforge.net/projects/tvbrowser/rss'
   name 'TV-Browser'
   homepage 'http://www.tvbrowser.org/'
-  license :gpl
 
   app 'TV-Browser.app'
 end

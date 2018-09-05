@@ -1,12 +1,14 @@
 cask 'itools' do
-  version '2.8.6'
-  sha256 '928a154c60a01a13c79273007a15403e7c0db50d40afb73e7691b7016c85ce6e'
+  version '2.9.2'
+  sha256 'cd74e55b8b92a8c1a75278ad7c02baf5521b51241505620c282e9547cd20afcd'
 
-  # itools.hk is the official download host per the vendor homepage
+  # dl2.itools.hk/dl was verified as official when first introduced to the cask
   url "http://dl2.itools.hk/dl/iTools64_#{version}.dmg"
+  appcast 'http://dl2.itools.hk/update/iTools64ForMacCast.xml'
   name 'iTools'
   homepage 'http://pro.itools.cn/mac/english'
-  license :gratis
+
+  depends_on macos: '>= :mountain_lion'
 
   app 'iTools.app'
 end

@@ -3,10 +3,9 @@ cask 'bordertool2' do
   version :latest
   sha256 :no_check
 
-  url 'http://xvi.rpc1.org/BorderTool%202.zip'
+  url 'http://xvi.rpc1.free.fr/BorderTool%202.zip'
   name 'BorderTool 2'
-  homepage 'http://xvi.rpc1.org/'
-  license :gratis
+  homepage 'http://xvi.rpc1.free.fr/'
 
   app 'BorderTool 2.app'
 end

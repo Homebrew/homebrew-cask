@@ -1,13 +1,19 @@
 cask 'electron' do
-  version '0.36.7'
-  sha256 '8bcabf4ae71be9695eba6545b4b0adf769a89357e0b51b4a4c2311815b69e2fd'
+  version '2.0.8'
+  sha256 '603de8aa2d59b923717cbbf3020d9ef9b7db5f856ac2e662ba60e1f680c7fbf6'
 
-  url "https://github.com/atom/electron/releases/download/v#{version}/electron-v#{version}-darwin-x64.zip"
-  appcast 'https://github.com/atom/electron/releases.atom',
-          checkpoint: 'ef0a96d414086e9704b0221f4e2169fe7606c89f4cf27c35ee3b29d97718ffff'
+  # github.com/electron/electron was verified as official when first introduced to the cask
+  url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-x64.zip"
+  appcast 'https://github.com/electron/electron/releases.atom'
   name 'Electron'
-  homepage 'http://electron.atom.io/'
-  license :mit
+  homepage 'https://electron.atom.io/'
 
   app 'Electron.app'
+
+  zap trash: [
+               '~/Library/Application Support/Electron',
+               '~/Library/Caches/Electron',
+               '~/Library/Preferences/com.github.electron.helper.plist',
+               '~/Library/Preferences/com.github.electron.plist',
+             ]
 end

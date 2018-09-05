@@ -1,42 +1,31 @@
 cask 'sage' do
-  if MacOS.release <= :mavericks
-    version '6.9'
-    sha256 '21f460c90db2a9ee83d196937587de5daab8c6712b0f24366b6a1c15a8dd592b'
-    # mit.edu/sage was verified as official when first introduced to the cask
-    url "http://mirrors.mit.edu/sage/osx/intel/sage-#{version}-x86_64-Darwin-OSX-10.7-app.dmg"
-  elsif MacOS.release <= :yosemite
-    version '6.9'
-    sha256 '03112bf747cf807f308d518f34c1982ca3c9599e65bf64a6782efc78136198a4'
-    # mit.edu/sage was verified as official when first introduced to the cask
-    url "http://mirrors.mit.edu/sage/osx/intel/sage-#{version}-x86_64-Darwin-OSX_10.10_x86_64-app.dmg"
+  if MacOS.version == :el_capitan
+    version '8.3,10.11.6'
+    sha256 '71bc5b85ffa251a6db38f27feec7eb725a2745ab769b752b55dca34ec8c75417'
+  elsif MacOS.version == :sierra
+    version '8.1,10.12.6'
+    sha256 'bd795369398873ccd26bae7e4ccc67370799d3038bebab911a626f496eba6d33'
   else
-    version '7.1.beta2'
-    sha256 '8e90498fb42136777c609b032933ab14ccffb79b9cd1dfb2c3f7762f32c6249b'
-    # go-parts.com/sage was verified as official when first introduced to the cask
-    url "http://mirrors-usa.go-parts.com/sage/sagemath/osx/intel/sage-#{version}-OSX_10.11.3-x86_64.app.dmg"
+    version '8.3,10.13.6'
+    sha256 'e2168405cac8a61562933b7523a7b124a4ca4aed1fbd531db2a99851b013f157'
   end
 
+  # mirrors.mit.edu/sage/osx/intel was verified as official when first introduced to the cask
+  url "http://mirrors.mit.edu/sage/osx/intel/sage-#{version.before_comma}-OSX_#{version.after_comma}-x86_64.app.dmg"
   name 'Sage'
-  homepage 'http://www.sagemath.org/'
-  license :gpl
+  homepage 'https://www.sagemath.org/'
 
-  depends_on macos: '>= :lion'
-  depends_on arch: :x86_64
+  depends_on macos: '>= :el_capitan'
 
-  if MacOS.release <= :yosemite
-    app "Sage-#{version}.app"
-    binary "Sage-#{version}.app/Contents/Resources/sage/sage"
-  else
-    app "SageMath-#{version}.app"
-    binary "SageMath-#{version}.app/Contents/Resources/sage/sage"
-  end
+  app "SageMath-#{version.before_comma}.app"
+  binary "#{appdir}/SageMath-#{version.before_comma}.app/Contents/Resources/sage/sage"
 
-  zap delete: [
-                '~/.sage',
-                '~/Library/Logs/sage.log',
-              ]
+  uninstall quit: 'org.sagemath.Sage'
 
-  caveats do
-    files_in_usr_local
-  end
+  zap trash: [
+               '~/.sage',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.sagemath.sage.sfl*',
+               '~/Library/Logs/sage.log',
+               '~/Library/Preferences/org.sagemath.Sage.plist',
+             ]
 end

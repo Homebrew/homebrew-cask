@@ -1,11 +1,11 @@
 cask 'sonic-pi' do
-  version '2.9.0'
-  sha256 'c9dcf6a9d05204b8cb51244f51f083ed5e68d36428814c768af752f4ff3686fa'
+  version '3.1.0'
+  sha256 'd1e232e39f875db717f4efab85362dfaac31cafb9e555b21136d7b12720c9a30'
 
   url "http://sonic-pi.net/files/releases/v#{version}/Sonic-Pi-for-Mac-v#{version}.dmg"
+  appcast 'https://github.com/samaaron/sonic-pi/releases.atom'
   name 'Sonic Pi'
   homepage 'http://sonic-pi.net/'
-  license :mit
 
   app 'Sonic Pi.app'
 end

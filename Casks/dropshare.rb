@@ -1,14 +1,21 @@
 cask 'dropshare' do
-  version '3.13.1'
-  sha256 'e695a456c39c33085e1f69f169e166fe8027a6a22350a445a016cbacee317e73'
+  version '4.9.3,4705'
+  sha256 '6b28deaa448922d026f77f0df2ba469023bf14920a43a0b34f85adeff101b967'
 
-  # cloudfront.net is the official download host per the vendor homepage
-  url 'https://d2wvuuix8c9e48.cloudfront.net/Dropshare-latest.zip'
-  appcast 'https://getdropsha.re/sparkle/Dropshare.xml',
-          checkpoint: 'f2833f0a77c01162d821d41e90f21812b97db9d0e4abc036404ba985e9dd1d26'
+  # d2wvuuix8c9e48.cloudfront.net was verified as official when first introduced to the cask
+  url "https://d2wvuuix8c9e48.cloudfront.net/Dropshare#{version.major}-#{version.after_comma}.app.zip"
+  appcast "https://getdropsha.re/sparkle/Dropshare#{version.major}.xml"
   name 'Dropshare'
   homepage 'https://getdropsha.re/'
-  license :commercial
 
-  app 'Dropshare.app'
+  app "Dropshare #{version.major}.app"
+  binary "#{appdir}/Dropshare #{version.major}.app/Contents/Resources/ds.sh", target: 'ds'
+
+  zap trash: [
+               '~/Library/Application Support/Dropshare 4',
+               '~/Library/Caches/net.mkswap.Dropshare4',
+               '~/Library/Cookies/net.mkswap.Dropshare4.binarycookies',
+               '~/Library/Logs/Dropshare 4',
+               '~/Library/Preferences/net.mkswap.Dropshare4.plist',
+             ]
 end

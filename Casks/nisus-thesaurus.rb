@@ -1,13 +1,11 @@
 cask 'nisus-thesaurus' do
-  version '1.1.1'
-  sha256 'ee9203ada1fa944ac4b7fc04f03ec58fd7c60ce1d73e6058321583f7dbf8ae5a'
+  version '1.1.4'
+  sha256 '463e4db2cf02766f606b86fb3e2e656a866358da4d0c8c444cb38bbebd6b9566'
 
-  url "http://nisus.com/files/free/Thesaurus-v#{version.delete('.')}.zip"
+  url "https://nisus.com/files/free/NisusThesaurus-v#{version.no_dots}.zip"
+  appcast 'https://nisus.com/Thesaurus/updates.php'
   name 'Nisus Thesaurus'
-  homepage 'http://nisus.com/Thesaurus/'
-  license :gratis
-
-  depends_on macos: '>= :snow_leopard'
+  homepage 'https://nisus.com/Thesaurus/'
 
   app 'Nisus Thesaurus.app'
 end

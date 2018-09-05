@@ -1,12 +1,12 @@
 cask 'splashtop-personal' do
-  version '2.6.2.1'
-  sha256 '9b0733ece58b9e36b5d4f566bbcf80e0e207ba751f0a0b188807738ba79cbbed'
+  version '2.6.8.0'
+  sha256 '8c867a3969399db29b4f7aa6abb2f70f06535503f35db7eb5ff58358f3cb91dd'
 
-  # cloudfront.net is the official download host per the vendor homepage
+  # d17kmd0va0f0mp.cloudfront.net was verified as official when first introduced to the cask
   url "https://d17kmd0va0f0mp.cloudfront.net/macclient/STP/Splashtop_Personal_v#{version}.dmg"
+  appcast 'https://www.splashtop.com/wp-content/themes/responsive/downloadx.php?product=stp&platform=mac-client'
   name 'Splashtop Personal'
-  homepage 'http://www.splashtop.com/personal'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.splashtop.com/personal'
 
   pkg 'Splashtop Personal.pkg'
 

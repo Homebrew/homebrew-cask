@@ -1,12 +1,20 @@
 cask 'knockknock' do
-  version '1.6.1'
-  sha256 'd99bb2a312e76a17a60656f9d45f32069a480e7b0a25029bcbc0cd58e04a6e29'
+  version '1.9.3'
+  sha256 '37f59fbeaa7e80fe92bd1a25bd6342d7b3f78778a248c307336e24cfebd3dbf8'
 
-  # bitbucket.org is the official download host per the vendor homepage
+  # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/KnockKnock_#{version}.zip"
+  appcast 'https://objective-see.com/products/changelogs/KnockKnock.txt'
   name 'KnockKnock'
   homepage 'https://objective-see.com/products/knockknock.html'
-  license :gratis
+
+  depends_on macos: '>= :mountain_lion'
 
   app 'KnockKnock.app'
+
+  zap trash: [
+               '~/Library/Caches/com.objective-see.KnockKnock',
+               '~/Library/Preferences/com.objective-see.KnockKnock.plist',
+               '~/Library/Saved Application State/com.objective-see.KnockKnock.savedState',
+             ]
 end

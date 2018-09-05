@@ -1,23 +1,29 @@
 cask 'tunnelbear' do
-  version '2.5.8'
-  sha256 '5c79dc8478572d4abbc8867e3badc0639a1f3468a8ca6e8f2bdeeb83453cd803'
+  version '3.7.1'
+  sha256 '67b29918887c6cbdd7dfdc88841f52761c27f7e35f11096cf96fcf9cbba2ebeb'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url "https://tunnelbear.s3.amazonaws.com/downloads/mac/TunnelBear-#{version}.zip"
-  appcast 'https://s3.amazonaws.com/tunnelbear/downloads/mac/appcast.xml',
-          checkpoint: '544799b7dc65c96cfcc5ef0f92cbcfcdedb687e7570c25080aa9491c3352e0cd'
+  # s3.amazonaws.com/tunnelbear was verified as official when first introduced to the cask
+  url "https://s3.amazonaws.com/tunnelbear/downloads/mac/TunnelBear-#{version}.zip"
+  appcast 'https://s3.amazonaws.com/tunnelbear/downloads/mac/appcast.xml'
   name 'TunnelBear'
   homepage 'https://www.tunnelbear.com/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app 'TunnelBear.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 
   uninstall quit:      'com.tunnelbear.mac.TunnelBear',
             launchctl: 'com.tunnelbear.mac.tbeard'
 
-  zap delete: '~/Library/Preferences/com.tunnelbear.mac.TunnelBear.plist'
+  zap trash: [
+               '~/Library/Preferences/com.tunnelbear.mac.TunnelBear.plist',
+               '~/Library/Caches/com.tunnelbear.mac.TunnelBear',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tunnelbear.mac.tunnelbear.sfl*',
+               '~/Library/Application Support/com.tunnelbear.mac.TunnelBear',
+               '~/Library/Application Support/TunnelBear',
+               '~/Library/Caches/com.crashlytics.data/com.tunnelbear.mac.TunnelBear',
+               '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.tunnelbear.mac.TunnelBear',
+               '~/Library/Caches/io.fabric.sdk.mac.data/com.tunnelbear.mac.TunnelBear',
+               '~/Library/Cookies/com.tunnelbear.mac.TunnelBear.binarycookies',
+               '~/Library/LaunchAgents/com.tunnelbear.mac.tbeara.plist',
+               '~/Library/Logs/TunnelBear',
+             ]
 end

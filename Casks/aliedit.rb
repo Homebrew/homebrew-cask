@@ -5,7 +5,6 @@ cask 'aliedit' do
   url 'https://download.alipay.com/sec/edit/wkaliedit.dmg'
   name '支付宝控件'
   homepage 'https://110.alipay.com/sc/aliedit/intro.htm'
-  license :closed
 
   pkg 'installer.pkg'
 

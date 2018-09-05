@@ -1,14 +1,16 @@
 cask 'blast2go' do
-  version '3.1'
-  sha256 '7160b1973437474508a1522cce9bee74e5ddd8f109fc17ddca81e3b914e819d6'
+  version '5.1.13'
+  sha256 'db37cac54493419690419d7d7e17e6c998c8c25e463552ff7b65b3a9e664828d'
 
-  url "http://download.blast2go.com/html/software/blast2go/latest/#{version.gsub('.', '_')}/Blast2GO_macos_#{version.gsub('.', '_')}.dmg"
+  # resources.biobam.com/software/blast2go was verified as official when first introduced to the cask
+  url "http://resources.biobam.com/software/blast2go/nico/Blast2GO_macos_#{version.dots_to_underscores}.dmg"
   name 'Blast2GO'
   homepage 'https://www.blast2go.com/'
-  license :freemium
 
-  installer script: 'Blast2GO Installer.app/Contents/MacOS/JavaApplicationStub',
-            args:   ['-q']
+  installer script: {
+                      executable: 'Blast2GO Installer.app/Contents/MacOS/JavaApplicationStub',
+                      args:       ['-q'],
+                    }
 
   uninstall delete: '/Applications/Blast2GO'
 

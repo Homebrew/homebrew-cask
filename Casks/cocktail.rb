@@ -1,51 +1,44 @@
 cask 'cocktail' do
-  if MacOS.release == :snow_leopard
-    version '5.1'
-    sha256 '630fc5236e95d5ec36c0de4b487f8ece76d8f02ecd00ec4b37124ddd0eed0f34'
-
-    url "http://www.maintain.se/downloads/sparkle/snowleopard/Cocktail_#{version}.zip"
-    appcast 'http://www.maintain.se/downloads/sparkle/snowleopard/nowleopard.xml',
-            checkpoint: '5b306e677c67821706e0fd1ec7fc244465492d67560ac3ba19a1eb5fa7f29e90'
-  elsif MacOS.release == :lion
-    version '5.6'
-    sha256 '9fa8ff2ade1face0a1a36baf36cfa384535179b261716c18538b0102f281ee60'
-
-    url "http://www.maintain.se/downloads/sparkle/lion/Cocktail_#{version}.zip"
-    appcast 'http://www.maintain.se/downloads/sparkle/lion/lion.xml',
-            checkpoint: '5b306e677c67821706e0fd1ec7fc244465492d67560ac3ba19a1eb5fa7f29e90'
-  elsif MacOS.release == :mountain_lion
+  if MacOS.version == :mountain_lion
     version '6.9'
     sha256 '309bac603a6ded301e9cc61b32bb522fc3a5208973cbd6c6f1a09d0e2c78d1e6'
 
-    url "http://www.maintain.se/downloads/sparkle/mountainlion/Cocktail_#{version}.zip"
-    appcast 'http://www.maintain.se/downloads/sparkle/mountainlion/mountainlion.xml',
-            checkpoint: '5b306e677c67821706e0fd1ec7fc244465492d67560ac3ba19a1eb5fa7f29e90'
-  elsif MacOS.release == :mavericks
+    url "https://www.maintain.se/downloads/sparkle/mountainlion/Cocktail_#{version}.zip"
+    appcast 'https://www.maintain.se/downloads/sparkle/mountainlion/mountainlion.xml'
+  elsif MacOS.version == :mavericks
     version '7.9.1'
     sha256 'b8b5c37df3a2c44406f9fdf1295357d03b8fca6a9112b61401f0cca2b8e37033'
 
-    url "http://www.maintain.se/downloads/sparkle/mavericks/Cocktail_#{version}.zip"
-    appcast 'http://www.maintain.se/downloads/sparkle/mavericks/mavericks.xml',
-            checkpoint: '5b306e677c67821706e0fd1ec7fc244465492d67560ac3ba19a1eb5fa7f29e90'
-  elsif MacOS.release == :yosemite
-    version '8.8'
-    sha256 'd179c3ac3e3a56d2db2e9715f62051b6a1835619bea975372442613ee260f252'
+    url "https://www.maintain.se/downloads/sparkle/mavericks/Cocktail_#{version}.zip"
+    appcast 'https://www.maintain.se/downloads/sparkle/mavericks/mavericks.xml'
+  elsif MacOS.version == :yosemite
+    version '8.9.2'
+    sha256 'acc7d191313fa0eb4109ae56f62f73e7ed6685f7d7d438d5138b85d68e40edd8'
 
-    url "http://www.maintain.se/downloads/sparkle/yosemite/Cocktail_#{version}.zip"
-    appcast 'http://www.maintain.se/downloads/sparkle/yosemite/yosemite.xml',
-            checkpoint: '5b306e677c67821706e0fd1ec7fc244465492d67560ac3ba19a1eb5fa7f29e90'
+    url "https://www.maintain.se/downloads/sparkle/yosemite/Cocktail_#{version}.zip"
+    appcast 'https://www.maintain.se/downloads/sparkle/yosemite/yosemite.xml'
+  elsif MacOS.version == :el_capitan
+    version '9.7'
+    sha256 'ca6b4a264ca60a08ff45761f82b0b6161cbe3412bd6cbeedd5dbecebc8d26712'
+
+    url "https://www.maintain.se/downloads/sparkle/elcapitan/Cocktail_#{version}.zip"
+    appcast 'https://www.maintain.se/downloads/sparkle/elcapitan/elcapitan.xml'
+  elsif MacOS.version == :sierra
+    version '10.8'
+    sha256 '54fb6665cd43f4fb1a536e475fe71d6f1ca12ff547948a35e6625f2fb7997578'
+
+    url "https://www.maintain.se/downloads/sparkle/sierra/Cocktail_#{version}.zip"
+    appcast 'https://www.maintain.se/downloads/sparkle/sierra/sierra.xml'
   else
-    version '9.2.1'
-    sha256 'd82d6f7a1bcb100c73e6b28435a391ce0dc4ce77f2d6d2cec657844b9ea71847'
+    version '11.6.2'
+    sha256 '3ebb51b302a16dabefe54a434b9d114d64627e30c6681b8c9ac8d8f6185b8f6c'
 
-    url "http://www.maintain.se/downloads/sparkle/elcapitan/Cocktail_#{version}.zip"
-    appcast 'http://www.maintain.se/downloads/sparkle/elcapitan/elcapitan.xml',
-            checkpoint: '2d4d9fe075cc50df67d78f77754f3e44fa6f42991f05ab10c21ebef00a145b2c'
+    url "https://www.maintain.se/downloads/sparkle/highsierra/Cocktail_#{version}.zip"
+    appcast 'https://www.maintain.se/downloads/sparkle/highsierra/highsierra.xml'
   end
 
   name 'Cocktail'
-  homepage 'http://www.maintain.se/cocktail/'
-  license :commercial
+  homepage 'https://www.maintain.se/cocktail/'
 
   app 'Cocktail.app'
 end

@@ -4,8 +4,7 @@ cask 'flymaster-firmware' do
 
   url 'http://downloads.flymaster.net/FirmwareInstaller.dmg'
   name 'Flymaster Firmware Installer'
-  homepage 'http://www.flymaster-avionics.com'
-  license :gratis
+  homepage 'https://www.flymaster.net/'
 
   app 'Firmware Installer.app'
 end

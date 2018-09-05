@@ -1,14 +1,11 @@
 cask 'chocolat' do
-  version '3.2.1'
-  sha256 'c924cc5eccaa9d6cfe97108cfb1ba31c0433d82485268a75313c5a8dcab53657'
+  version '3.4'
+  sha256 '43f1f96350c10aa2918719a2238c1e4ec20dd2cfa7a4930f6e7d74f92207c4fe'
 
-  # fileability.net is the official download host per the vendor homepage
-  url "http://files.fileability.net/Chocolat_#{version}.zip"
-  appcast 'https://chocolatapp.com/userspace/appcast/appcast_alpha.php',
-          checkpoint: '524ab33cc350ad000a05f6529eea17caef80343088d2f22dfeb86af430482283'
+  url "https://chocolatapp.com/versions/Chocolat_#{version}.zip"
+  appcast 'https://chocolatapp.com/userspace/appcast/appcast_alpha.php'
   name 'Chocolat'
   homepage 'https://chocolatapp.com/'
-  license :commercial
 
   app 'Chocolat.app'
 end

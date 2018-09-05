@@ -1,14 +1,12 @@
 cask 'sparkle' do
-  version '1.13.1'
-  sha256 '82cd7f675fa4f4a9f97943478afd7b0839767e479abe6bbd05ec67c0cc5b8056'
+  version '1.19.0'
+  sha256 '56541c5ddd0859a96ba3d2c708ca734088ccd674a2fea45cf1a1aa405bb26ad3'
 
-  # github.com is the official download host per the vendor homepage
+  # github.com/sparkle-project/Sparkle was verified as official when first introduced to the cask
   url "https://github.com/sparkle-project/Sparkle/releases/download/#{version}/Sparkle-#{version}.tar.bz2"
-  appcast 'https://github.com/sparkle-project/Sparkle/releases.atom',
-          checkpoint: 'f9aa708e34e51822a1744be663a93b608a887c3fe9e7928fc3af4f93233dbe15'
+  appcast 'https://github.com/sparkle-project/Sparkle/releases.atom'
   name 'Sparkle'
-  homepage 'http://sparkle-project.org/'
-  license :mit
+  homepage 'https://sparkle-project.org/'
 
   app 'Sparkle Test App.app'
 end

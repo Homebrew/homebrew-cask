@@ -1,18 +1,22 @@
 cask 'textsoap' do
-  version '7.4.3'
-  sha256 'ecb88cb6c2cc6fe873a1fccdd38fb6040f2721e3440f98f513b376a360d91f20'
+  version '8.4.7'
+  sha256 '0d353399f3072875abc09563b2472d4e7ea69ad62cb47430f3b1dcbbac800237'
 
-  # amazonaws.com is the official download host per the vendor homepage
+  # unmarked.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://unmarked.s3.amazonaws.com/textsoap#{version.major}.zip"
-  appcast "https://unmarked.s3.amazonaws.com/appcast/textsoap#{version.major}.xml",
-          checkpoint: 'ddbb0073e1116c64c75620c2fe43bd7af1befc07e82459a3cb614c92a294579d'
+  appcast "https://unmarked.s3.amazonaws.com/appcast/textsoap#{version.major}.xml"
   name 'TextSoap'
-  homepage 'http://www.unmarked.com/textsoap/'
-  license :commercial
+  homepage 'https://www.unmarked.com/textsoap/'
 
   app "textsoap#{version.major}.app"
 
-  postflight do
-    suppress_move_to_applications
-  end
+  zap trash: [
+               '~/Library/Application Support/TextSoap',
+               "~/Library/Application Support/com.unmarked.textsoap#{version.major}",
+               "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.unmarked.textsoap#{version.major}.help*",
+               "~/Library/Caches/com.unmarked.textsoap#{version.major}",
+               "~/Library/Cookies/com.unmarked.textsoap#{version.major}.binarycookies",
+               "~/Library/Preferences/com.unmarked.textsoap#{version.major}.plist",
+               "~/Library/Saved Application State/com.unmarked.textsoap#{version.major}.savedState",
+             ]
 end

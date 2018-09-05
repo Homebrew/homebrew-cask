@@ -1,13 +1,22 @@
 cask 'glyphs' do
-  version '2.2.2-827'
-  sha256 'd568094e9061c76cc84a11f271f33abf0e3b4d135e57a4430ac972f996722732'
+  version '2.5.2-1160'
+  sha256 '5382d0279b7d193e59b64d611afb3c67cbf90ec08b4d997328ba8cd8c953b8b5'
 
   url "https://updates.glyphsapp.com/Glyphs#{version}.zip"
-  appcast "https://updates.glyphsapp.com/appcast#{version.major}.xml",
-          checkpoint: 'b10745997b8d99117a86978cac37c88e487665b034df6835aac106679a22750a'
+  appcast "https://updates.glyphsapp.com/appcast#{version.major}.xml"
   name 'Glyphs'
-  homepage 'https://www.glyphsapp.com'
-  license :commercial
+  homepage 'https://glyphsapp.com/'
+
+  auto_updates true
+  depends_on macos: '>= :mavericks'
 
   app 'Glyphs.app'
+
+  zap trash: [
+               '~/Library/Application Support/Glyphs',
+               '~/Library/Application Support/com.GeorgSeifert.Glyphs2',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.georgseifert.glyphs2.sfl*',
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.GeorgSeifert.Glyphs2.help*',
+               '~/Library/Preferences/com.GeorgSeifert.Glyphs2.plist',
+             ]
 end

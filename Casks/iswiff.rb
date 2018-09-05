@@ -4,8 +4,7 @@ cask 'iswiff' do
 
   url 'http://echoone.com/iswiff/iSwiff.dmg'
   name 'iSwiff'
-  homepage 'http://echoone.com/iswiff/'
-  license :gratis
+  homepage 'https://echoone.com/iswiff/'
 
   app 'iSwiff.app'
 end

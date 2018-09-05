@@ -1,25 +1,33 @@
 cask 'bettertouchtool' do
-  if MacOS.release <= :snow_leopard
+  if MacOS.version <= :snow_leopard
     version '0.939'
     sha256 'fad5e9d36259c379bdb33188cf15d179fd9ff73023035c98f5734e7e3e13bb75'
 
-    # bettertouchtool.com is the official download host per the vendor homepage
-    url "https://bettertouchtool.net/btt#{version}.zip"
+    # bettertouchtool.net/releases was verified as official when first introduced to the cask
+    url "https://bettertouchtool.net/releases/btt#{version}.zip"
+  elsif MacOS.version <= :lion
+    version '1.922'
 
-    license :gratis
+    # bettertouchtool.net/releases was verified as official when first introduced to the cask
+    sha256 '7a5a7cc9a9e5ae77f4ee7470f26453d327ccb55c7fac7f78f1bbe14ae9f0e70c'
+    url "https://bettertouchtool.net/releases/btt#{version}_lion.zip"
+  elsif MacOS.version <= :mavericks
+    version '2.05'
+    sha256 '41013cfeffee286a038363651db3dd315ff3a1e0cf07774d9ce852111be50a5a'
+
+    # bettertouchtool.net/releases was verified as official when first introduced to the cask
+    url "https://bettertouchtool.net/releases/btt#{version}_final_10_9.zip"
   else
-    version '1.55'
-    sha256 'ca5abf05ef6f12a1a0a137eeb1fde636d85703b597878ca885f6e3ba5221ebdc'
+    version '2.626'
+    sha256 'cfadffa64d6eaa2ba4be54b5894d82998309a52a40ef7eee931a67e638ae66b3'
 
-    url "https://boastr.net/releases/btt#{version}.zip"
-    appcast 'http://appcast.boastr.net',
-            checkpoint: '2c3dfff592a79367230fde4045616f3b8b4707644e34c00977633e94026903d3'
-
-    license :commercial
+    # bettertouchtool.net/releases was verified as official when first introduced to the cask
+    url "https://bettertouchtool.net/releases/btt#{version}.zip"
+    appcast 'https://bettertouchtool.net/releases/'
   end
 
   name 'BetterTouchTool'
-  homepage 'https://boastr.net/'
+  homepage 'https://folivora.ai/'
 
   auto_updates true
   accessibility_access true
@@ -28,8 +36,8 @@ cask 'bettertouchtool' do
 
   uninstall login_item: 'BetterTouchTool'
 
-  zap delete: [
-                '~/Library/Preferences/com.hegenberg.BetterTouchTool.plist',
-                '~/Library/Application Support/BetterTouchTool',
-              ]
+  zap trash: [
+               '~/Library/Preferences/com.hegenberg.BetterTouchTool.plist',
+               '~/Library/Application Support/BetterTouchTool',
+             ]
 end

@@ -1,12 +1,14 @@
 cask 'unetbootin' do
-  version '613'
-  sha256 'b9356ad2ef3cfa6881690ddc1136c45e6d3f25063fdeaeeb477633500b0c7684'
+  version '661'
+  sha256 'b028a512515d6d8019c53536ec55e824cc1a0d89eb1fae9609d0e9d4385ff4b5'
 
-  # launchpad.net is the official download host per the vendor homepage
-  url "https://launchpad.net/unetbootin/trunk/#{version}/+download/unetbootin-mac-#{version}.zip"
+  # github.com/unetbootin/unetbootin was verified as official when first introduced to the cask
+  url "https://github.com/unetbootin/unetbootin/releases/download/#{version}/unetbootin-mac-#{version}.dmg"
+  appcast 'https://github.com/unetbootin/unetbootin/releases.atom'
   name 'UNetbootin'
   homepage 'https://unetbootin.github.io/'
-  license :gpl
 
   app 'unetbootin.app'
+
+  zap trash: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.yourcompany.unetbootin.sfl*'
 end

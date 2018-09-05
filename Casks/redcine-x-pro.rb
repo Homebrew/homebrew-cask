@@ -1,17 +1,16 @@
 cask 'redcine-x-pro' do
-  version '31.0.0'
-  sha256 '9393f84d839214ef4b692434ced8f4f9ecd12f8f49d8230d84c1bef9fe44d4db'
+  version '50.0.0,43840'
+  sha256 'c617328a331cf2c1dc10fd71e9a0827516b2de6c6cd71404f913d621a77564f1'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url "https://s3.amazonaws.com/red_3/downloads/software/rcx/REDCINE-X_PRO_Build_#{version.to_i}_OSX.zip"
+  url "http://downloads.red.com/software/rcx/mac/release/#{version.major}.#{version.after_comma}/REDCINE-X_PRO_Build_#{version.major_minor}.pkg"
   name 'REDCINE-X PRO'
-  homepage 'https://www.red.com/'
-  license :commercial
+  homepage 'http://www.red.com/'
 
-  pkg "REDCINE-X_PRO_Build_#{version.to_i}.pkg"
+  pkg "REDCINE-X_PRO_Build_#{version.major_minor}.pkg"
 
   uninstall pkgutil: [
                        'com.red.pkg.REDCINE-X PRO',
                        'com.red.pkg.SupportLibs',
-                     ]
+                     ],
+            delete:  '/Applications/REDCINE-X Professional'
 end

@@ -1,13 +1,18 @@
 cask 'key-codes' do
-  version '2.0.3'
-  sha256 '64de01480194eb0ee29402cdfa29ada9d4002cef828ad008127412945fb84b4f'
+  version '2.1'
+  sha256 '60ec4c0cef5e97943c91e4ed317434bcaddd4cdbce93368d8bca9db9d45c60e2'
 
-  url 'http://manytricks.com/download/keycodes'
-  appcast 'https://manytricks.com/keycodes/appcast.xml',
-          checkpoint: '4ce0a9a5c1a0137b2779eee1d91c3e83ae412d47cf4fcfadf767e44810723db3'
+  url 'https://manytricks.com/download/keycodes'
+  appcast 'https://manytricks.com/keycodes/appcast'
   name 'Key Codes'
   homepage 'https://manytricks.com/keycodes/'
-  license :gratis
+
+  auto_updates true
 
   app 'Key Codes.app'
+
+  zap trash: [
+               '~/Library/Caches/com.manytricks.KeyCodes',
+               '~/Library/Preferences/com.manytricks.KeyCodes.plist',
+             ]
 end

@@ -1,23 +1,35 @@
 cask 'vlc' do
-  version '2.2.2'
-  sha256 '0a68188a9d193a4d4614d28366a052355289a064571b79d0890e045caba5384a'
+  version '3.0.4'
+  sha256 '5cd095114e92b53f3da4af227229c702f73b47f75a58c46d69ddb6f135a02a3b'
 
   url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}.dmg"
-  appcast 'http://update.videolan.org/vlc/sparkle/vlc-intel64.xml',
-          checkpoint: '473cf8f5c4d23aec6524e2d50b4b2e4ab736db718bb350f4decbf6dd969e2741'
+  appcast 'http://update.videolan.org/vlc/sparkle/vlc-intel64.xml'
   name 'VLC media player'
   homepage 'https://www.videolan.org/vlc/'
-  license :oss
-  gpg "#{url}.asc",
-      key_id: '65f7c6b4206bd057a7eb73787180713be58d1adc'
+
+  auto_updates true
+  conflicts_with cask: 'vlc-nightly'
+  depends_on macos: '>= :lion'
 
   app 'VLC.app'
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/vlc.wrapper.sh"
+  binary shimscript, target: 'vlc'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.videolan.vlc.sfl',
-                '~/Library/Application Support/org.videolan.vlc',
-                '~/Library/Preferences/org.videolan.vlc',
-                '~/Library/Preferences/org.videolan.vlc.plist',
-                '~/Library/Saved Application State/org.videolan.vlc.savedState',
-              ]
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/VLC.app/Contents/MacOS/VLC' "$@"
+    EOS
+  end
+
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.videolan.vlc.sfl*',
+               '~/Library/Application Support/org.videolan.vlc',
+               '~/Library/Application Support/VLC',
+               '~/Library/Caches/org.videolan.vlc',
+               '~/Library/Preferences/org.videolan.vlc',
+               '~/Library/Preferences/org.videolan.vlc.plist',
+               '~/Library/Saved Application State/org.videolan.vlc.savedState',
+             ]
 end

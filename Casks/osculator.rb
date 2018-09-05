@@ -1,11 +1,12 @@
 cask 'osculator' do
-  version '2.13.3-12-g5f24bc9'
-  sha256 '30563bcb6f80a9498cf25d38a41c0baba3631f6bcec21a8733cbb267b1e67dfc'
+  version '3.1.2-63-gb9634423,2356a19f-47c4-4689-9f3b-5f5c83d6c85f'
+  sha256 '5868d7dcc1a6121945ee69286fc26e1c70a04e4e118e5ec05a877d74a8a2c722'
 
-  url "http://dl.osculator.net/releases/osculator-#{version}.dmg"
+  # distribution.wildora.net was verified as official when first introduced to the cask
+  url "https://distribution.wildora.net/products/osculator-v#{version.major}/revisions/#{version.after_comma}/osculator-#{version.before_comma}.dmg"
+  appcast 'https://osculator.net/downloadthanks.php?stable'
   name 'OSCulator'
-  homepage 'http://www.osculator.net'
-  license :commercial
+  homepage 'https://osculator.net/'
 
-  app 'OSCulator ƒ/OSCulator.app'
+  app 'OSCulator.app'
 end

@@ -1,11 +1,10 @@
 cask 'tuneinstructor' do
-  version '3.6'
-  sha256 'b5bc95a37d86af57ac607949e9eeeaa878d62031199438e6f70ebfbc485218c0'
+  version '3.7'
+  sha256 '17dd59a1be9663ec0d8cab4903e820ba8f153132bac4ff09feedd655470fce5c'
 
-  url "http://www.tune-instructor.de/resources/downloads/TuneInstructor#{version}.dmg"
+  url "https://www.tune-instructor.de/resources/downloads/TuneInstructor#{version}.dmg"
   name 'Tune•Instructor'
-  homepage 'http://www.tune-instructor.de/com/start.html'
-  license :commercial
+  homepage 'https://www.tune-instructor.de/com/start.html'
 
   depends_on macos: '>= :yosemite'
 

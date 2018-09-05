@@ -1,17 +1,15 @@
 cask 'mailplane' do
-  version :latest
-  sha256 :no_check
+  version '4.4516'
+  sha256 '8a4272daee8c38b4235cd824b8ca52a49e5562a22d72c27571ed869d5611df1f'
 
-  url 'http://update.mailplaneapp.com/mailplane_3.php'
+  url "https://update.mailplaneapp.com/builds/Mailplane_#{version.dots_to_underscores}.tbz"
+  appcast "https://mailplaneapp.com/releases/mailplane#{version.major}.html"
   name 'Mailplane'
-  homepage 'http://mailplaneapp.com'
-  license :commercial
+  homepage 'https://mailplaneapp.com/'
 
-  app 'Mailplane 3.app'
+  depends_on macos: '>= :sierra'
 
-  postflight do
-    suppress_move_to_applications
-  end
+  app 'Mailplane.app'
 
-  zap delete: '~/Library/Preferences/com.mailplaneapp.Mailplane.plist'
+  zap trash: '~/Library/Preferences/com.mailplaneapp.Mailplane.plist'
 end

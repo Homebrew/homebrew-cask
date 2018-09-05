@@ -1,12 +1,21 @@
 cask 'airflow' do
-  version '1.0.0-beta6'
-  sha256 'fc97c76c90232ed1a5f18134a4f4d5be1da622ea9c823b5f5290204269f077fa'
+  version '2.3.9u1'
+  sha256 '4562442dc8ed62c93ecb2d61c012fabeb5f8acddbfe0475f4d01b1668645cf85'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url "https://s3.amazonaws.com/Airflow/Download/Airflow%20#{version}.dmg"
+  # amazonaws.com/Airflow was verified as official when first introduced to the cask
+  url "https://s3.amazonaws.com/Airflow/Download/Airflow%20#{version}.zip"
+  appcast 'https://s3.amazonaws.com/Airflow/Updates/appcast-osx.xml'
   name 'Airflow'
-  homepage 'http://airflowapp.com/'
-  license :gratis
+  homepage 'https://airflowapp.com/'
+
+  auto_updates true
 
   app 'Airflow.app'
+
+  zap trash: [
+               '~/Library/Application Support/Airflow',
+               '~/Library/Caches/com.bitcavehq.Airflow',
+               '~/Library/Preferences/com.bitcavehq.Airflow.plist',
+               '~/Library/Saved Application State/com.bitcavehq.Airflow.savedState',
+             ]
 end

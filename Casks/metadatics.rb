@@ -1,13 +1,18 @@
 cask 'metadatics' do
-  version '1.5.5'
-  sha256 '5cedee6b91e1783946cdb87c457f448cad2550be17ae41b6b9231ce9cde413d8'
+  version '1.5.7'
+  sha256 'c8baea464a742d35ca0793128d7d2606e59358b7f3e156ac7e7a27694db67927'
 
-  url 'http://www.markvapps.com/applications/metadatics/Metadatics.zip'
-  appcast 'http://www.markvapps.com/applications/metadatics/metadatics_appcast.xml',
-          checkpoint: 'afba724f4a40692b4973f972c639be5dc81b78cf1034e2c0632cf0e2bddebf4b'
+  url 'https://www.markvapps.com/applications/metadatics/Metadatics.zip'
+  appcast 'https://www.markvapps.com/applications/metadatics/metadatics_appcast.xml'
   name 'Metadatics'
-  homepage 'http://markvapps.com/metadatics'
-  license :commercial
+  homepage 'https://www.markvapps.com/metadatics'
 
   app 'Metadatics.app'
+
+  zap trash: [
+               '~/Library/Caches/com.markvapps.metadatics',
+               '~/Library/Cookies/com.markvapps.metadatics.binarycookies',
+               '~/Library/Preferences/com.markvapps.metadatics.plist',
+               '~/Library/Saved Application State/com.markvapps.metadatics.savedState',
+             ]
 end

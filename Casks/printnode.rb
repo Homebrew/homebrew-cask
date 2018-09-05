@@ -1,11 +1,10 @@
 cask 'printnode' do
-  version '4.8.0'
-  sha256 '3c8203d7200de76deeb0274b7ff69b54fd21e91a7140210c1459fd46f78b04fa'
+  version '4.18.6'
+  sha256 '69470c0dcbcd13cd000e934a84e4ef1812b82cc37c067de61cfa5cec196e47dd'
 
-  url "https://app.printnode.com/bundles/printnodemain/downloads/printnode/#{version}/PrintNode-#{version}+dd7.dmg"
+  url "https://app.printnode.com/bundles/printnodemain/downloads/printnode/#{version}/PrintNode-#{version}.dmg"
   name 'PrintNode'
   homepage 'https://www.printnode.com/'
-  license :gratis
 
   depends_on macos: '>= :mountain_lion'
 

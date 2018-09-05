@@ -5,12 +5,11 @@ cask 'rest' do
   url 'https://dist.resttimer.com/mac/Rest.dmg'
   name 'Rest'
   homepage 'https://resttimer.com/en'
-  license :commercial
 
   app 'Rest.app'
 
   uninstall quit:      'dangelov.Rest-Lite',
             launchctl: 'dangelov.RestHelper'
 
-  zap delete: '~/Library/Preferences/dangelov.Rest-Lite.plist'
+  zap trash: '~/Library/Preferences/dangelov.Rest-Lite.plist'
 end

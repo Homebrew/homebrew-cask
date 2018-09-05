@@ -1,13 +1,11 @@
 cask 'epubquicklook' do
-  version '1.7'
-  sha256 '9d1816628d9718de0b6bfc97c30a4f0569561b4102f46c9e2e890502e9047456'
+  version '1.8'
+  sha256 '923b2ebcbffc4ee1da42550c2239b41bad088d61956b22b1a92b293329ef6fe5'
 
   url "https://github.com/jaketmp/ePub-quicklook/releases/download/v#{version}/epub.qlgenerator.zip"
-  appcast 'https://github.com/jaketmp/ePub-quicklook/releases.atom',
-          checkpoint: 'd26986359bcd57a5fd08e5f6fc04b7ca5c620b564f6d295f019f6c7eca0b83da'
+  appcast 'https://github.com/jaketmp/ePub-quicklook/releases.atom'
   name 'EPUB QuickLook'
   homepage 'https://github.com/jaketmp/ePub-quicklook'
-  license :bsd
 
   qlplugin 'epub.qlgenerator'
 end

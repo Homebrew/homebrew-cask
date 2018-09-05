@@ -1,23 +1,23 @@
 cask 'texpad' do
-  if MacOS.release >= :mavericks
-    version '1.7.21'
-    sha256 'cae312b89d25752917bf66572fd1c6b6722097b651abe9a1a1b399dc36493512'
-  elsif MacOS.release <= :mountain_lion && MacOS.release >= :snow_leopard
-    version '1.7.22'
-    sha256 'cae312b89d25752917bf66572fd1c6b6722097b651abe9a1a1b399dc36493512'
-  else
-    # If the app is used on MacOS lower than Snow Leopard,
-    # unexpected behaviour or failures can occur.
-  end
+  version '1.8.5,404,f8f30e5'
+  sha256 '676a1b071142c022cdfda57668c811f7747b36ded442548073fe6dda1b9ca934'
 
-  url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.gsub('.', '_')}.zip"
-  appcast 'https://www.texpadapp.com/static-collected/upgrades/texpadappcast.xml',
-          checkpoint: '9271b5b259bc459316233532c993e5f95fa772253d5245befa080235dca3e7a2'
+  # download.texpadapp.com was verified as official when first introduced to the cask
+  url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.before_comma.dots_to_underscores}__#{version.after_comma.before_comma}__#{version.after_comma.after_comma}.dmg"
+  appcast 'https://www.texpad.com/static-collected/upgrades/texpadappcast.xml'
   name 'Texpad'
-  homepage 'https://www.texpadapp.com/osx'
-  license :commercial
+  homepage 'https://www.texpad.com/osx'
 
-  depends_on macos: '>= :snow_leopard'
+  auto_updates true
+  depends_on macos: '>= :el_capitan'
 
   app 'Texpad.app'
+
+  zap trash: [
+               '~/Library/Application Support/Texpad',
+               '~/Library/Caches/com.vallettaventures.Texpad',
+               '~/Library/Cookies/com.vallettaventures.Texpad.binarycookies',
+               '~/Library/Preferences/com.vallettaventures.Texpad.plist',
+               '~/Library/Saved Application State/com.vallettaventures.Texpad.savedState',
+             ]
 end

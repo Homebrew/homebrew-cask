@@ -1,13 +1,22 @@
 cask 'radiant-player' do
-  version '1.6.2'
-  sha256 '41fe94faeb571c0393a80751b15fa86b73906ada515b3c12dbd71353b4426429'
+  version '1.11.4'
+  sha256 '4594e54498c526cc33c50efa09dbf22e5a35fcccb3dba84a195160c5c7171794'
 
+  # github.com/radiant-player/radiant-player-mac was verified as official when first introduced to the cask
   url "https://github.com/radiant-player/radiant-player-mac/releases/download/v#{version}/radiant-player-v#{version}.zip"
-  appcast 'https://github.com/radiant-player/radiant-player-mac/releases.atom',
-          checkpoint: 'fd476d1c9ce75b9b33de45259ccd6f45095ef5e0702219333edccd6aac6a06ab'
+  appcast 'https://github.com/radiant-player/radiant-player-mac/releases.atom'
   name 'Radiant Player'
   homepage 'https://radiant-player.github.io/radiant-player-mac/'
-  license :mit
 
   app 'Radiant Player.app'
+
+  uninstall quit: 'com.sajidanwar.Radiant-Player'
+
+  zap trash: [
+               '~/Library/Application Support/Radiant Player',
+               '~/Library/Caches/com.sajidanwar.Radiant-Player',
+               '~/Library/Cookies/com.sajidanwar.Radiant-Player.binarycookies',
+               '~/Library/Preferences/com.sajidanwar.Radiant-Player.plist',
+               '~/Library/Saved Application State/com.sajidanwar.Radiant-Player.savedState',
+             ]
 end

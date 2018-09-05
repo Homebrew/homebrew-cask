@@ -1,22 +1,32 @@
 cask 'screens-connect' do
-  version '3.6.1'
-  sha256 '18bb65623aadff7f931456598f12ba33f5c54bad9c1f7f2a3b10f9585f8bc771'
+  version '4.7.5790,1523046092'
+  sha256 '19cbf3dbbd7a2028b95efe1d6ccae8051f0ece032188195f08b56d02cc86384d'
 
-  # evodia.com was verified as official when first introduced to the cask
-  url "http://download.edovia.com/screensconnect/screensconnect%20#{version}.dmg"
+  # dl.devmate.com/com.edovia.Screens-Connect was verified as official when first introduced to the cask
+  url "https://dl.devmate.com/com.edovia.Screens-Connect/#{version.patch}/#{version.after_comma}/ScreensConnect-#{version.patch}.zip"
+  appcast 'https://updates.devmate.com/com.edovia.Screens-Connect.xml'
   name 'Screens Connect'
-  homepage 'https://screensconnect.com'
-  license :gratis
+  homepage 'https://screensconnect.com/'
 
-  depends_on macos: '>= :mountain_lion'
+  depends_on macos: '>= :el_capitan'
 
-  pkg 'Screens Connect.pkg'
+  app 'Screens Connect.app'
 
   # Uninstall script can fail when trying to remove legacy PKGIDS
-  # Original discussion: https://github.com/caskroom/homebrew-cask/pull/8833
-  uninstall script:  {
-                       executable:   'Uninstall Screens Connect.app/Contents/Resources/sc-uninstaller.tool',
-                       must_succeed: false,
-                     },
-            pkgutil: 'com.edovia.pkg.screens.connect.*'
+  # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/8833
+  uninstall quit:      'com.edovia.Screens-Connect',
+            launchctl: [
+                         'com.edovia.Screens-Connect.launcher',
+                         'com.edovia.screens.connect',
+                       ],
+            script:    {
+                         executable:   "#{appdir}/Screens Connect.app/Contents/Resources/sc-uninstaller.tool",
+                         must_succeed: false,
+                         sudo:         true,
+                       }
+
+  zap trash: [
+               '~/Library/Preferences/com.edovia.Screens-Connect.plist',
+               '~/Library/Preferences/com.edovia.ScreensConnect.Shared.plist',
+             ]
 end

@@ -1,25 +1,40 @@
 cask 'imazing' do
-  version '1.4.5,1452535083'
-  sha256 '194e27e1ed6db1d8f15517dce613a582cf1e4f7b0c7be2b44ec2ca93eba76056'
+  version '2.6.4,9302:1534860536'
+  sha256 'b68a31d0f23786e6920b5082e6eacc45364b6be9821d86c49360982be533abb0'
 
-  # devmate.com is the official download host per the vendor homepage
-  url "https://dl.devmate.com/com.DigiDNA.iMazingMac/#{version.before_comma}/#{version.after_comma}/iMazingforMac-#{version.before_comma}.dmg"
-  appcast 'https://updates.devmate.com/com.DigiDNA.iMazingMac.xml',
-          checkpoint: '1e417d7a7d967ec9e5fda0316191037a5bccb1d1f41627b6331244c57371d029'
+  # dl.devmate.com/com.DigiDNA.iMazing2Mac was verified as official when first introduced to the cask
+  url "https://dl.devmate.com/com.DigiDNA.iMazing2Mac/#{version.after_comma.before_colon}/#{version.after_colon}/iMazing#{version.major}forMac-#{version.after_comma.before_colon}.dmg"
+  appcast "https://updates.devmate.com/com.DigiDNA.iMazing#{version.major}Mac.xml"
   name 'iMazing'
   homepage 'https://imazing.com/'
-  license :commercial
 
-  depends_on macos: '>= :lion'
+  conflicts_with cask: 'imazing-mini'
+  depends_on macos: '>= :mountain_lion'
 
   app 'iMazing.app'
 
-  zap delete: [
-                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.digidna.imazingmac.sfl',
-                '~/Library/Application Support/iMazing',
-                '~/Library/Caches/com.DigiDNA.iMazingMac',
-                '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.DigiDNA.iMazingMac',
-                '~/Library/Caches/iMazing',
-                '~/Library/Preferences/com.DigiDNA.iMazingMac.plist',
-              ]
+  uninstall login_item: 'iMazing Mini',
+            quit:       [
+                          "com.DigiDNA.iMazing#{version}Mac",
+                          "com.DigiDNA.iMazing#{version}Mac.Mini",
+                        ]
+
+  zap trash: [
+               '~/Library/Application Support/iMazing',
+               '~/Library/Application Support/iMazing Mini',
+               '~/Library/Application Support/MobileSync/Backup/iMazing.Versions',
+               "~/Library/Caches/com.DigiDNA.iMazing#{version.major}Mac",
+               "~/Library/Caches/com.DigiDNA.iMazing#{version.major}Mac.Mini",
+               "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.DigiDNA.iMazing#{version.major}Mac.Mini",
+               '~/Library/Caches/iMazing',
+               "~/Library/Preferences/com.DigiDNA.iMazing#{version.major}Mac.plist",
+               "~/Library/Preferences/com.DigiDNA.iMazing#{version.major}Mac.Mini.plist",
+               '/Users/Shared/iMazing Mini',
+               '/Users/Shared/iMazing',
+             ]
+
+  caveats <<~EOS
+    Performing a zap on this cask removes files pertaining to both #{token}
+    and imazing-mini, so it should not be done if you only want to uninstall one of them.
+  EOS
 end

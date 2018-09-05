@@ -4,11 +4,12 @@ cask 'selflanguage-self-control' do
 
   url "http://files.selflanguage.org/releases/#{version.sub(%r{\.\d+$}, '')}/Self-#{version}.dmg"
   name 'Self'
-  homepage 'http://selflanguage.org/'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'http://www.selflanguage.org/'
 
   app 'Self Control.app'
   binary 'Clean.snap', target: '/Users/Shared/Self/Clean.snap'
 
-  caveats 'A clean snapshot is available in /Users/Shared/Self/Clean.snap'
+  caveats <<~EOS
+    A clean snapshot is available in /Users/Shared/Self/Clean.snap
+  EOS
 end

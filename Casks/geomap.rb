@@ -4,10 +4,9 @@ cask 'geomap' do
 
   url 'http://www.geomapapp.org/MapApp/GeoMapApp.dmg'
   name 'GeoMapApp'
-  homepage 'http://www.geomapapp.org'
-  license :gratis
+  homepage 'http://www.geomapapp.org/'
 
   app 'GeoMapApp.app'
 
-  zap delete: '~/.GMA'
+  zap trash: '~/.GMA'
 end

@@ -1,14 +1,29 @@
 cask 'itsycal' do
-  version '0.10.9'
-  sha256 '59a8c18ea0443a43a25a5858211abaaca1f269215c011fcc94715a171d986b88'
+  if MacOS.version <= :mavericks
+    version '0.8.15'
+    sha256 '6470719a1f702c807f98a992880def5f499858231bf35924eaf3e0d5df48b436'
 
-  # amazonaws.com is the official download host per the vendor homepage
-  url "https://s3.amazonaws.com/itsycal/Itsycal-#{version}.zip"
-  appcast 'https://s3.amazonaws.com/itsycal/itsycal.xml',
-          checkpoint: 'd7fa19383d434d948de626620d167f19692999ffe7cd57c46627abf6a6e19747'
+    # s3.amazonaws.com/itsycal was verified as official when first introduced to the cask
+    url "https://s3.amazonaws.com/itsycal/Itsycal-#{version}.zip"
+  elsif MacOS.version <= :el_capitan
+    version '0.10.16'
+    sha256 'dbf1b104c7a3a2ca3ead9879145cb0557955c29d53f35a92b42f48e68122957c'
+
+    # s3.amazonaws.com/itsycal was verified as official when first introduced to the cask
+    url "https://s3.amazonaws.com/itsycal/Itsycal-#{version}.zip"
+  else
+    version '0.11.12'
+    sha256 'ee0fe4e247604e9776948a9457dbd394983d00264208443d3af9e6e7b942cadb'
+
+    # s3.amazonaws.com/itsycal was verified as official when first introduced to the cask
+    url "https://s3.amazonaws.com/itsycal/Itsycal-#{version}.zip"
+    appcast 'https://s3.amazonaws.com/itsycal/itsycal.xml'
+  end
+
   name 'Itsycal'
-  homepage 'http://www.mowglii.com/itsycal/'
-  license :gratis
+  homepage 'https://www.mowglii.com/itsycal/'
+
+  depends_on macos: '>= :mountain_lion'
 
   app 'Itsycal.app'
 end

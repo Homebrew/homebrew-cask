@@ -5,7 +5,6 @@ cask 'teamviz' do
   url "http://www.teamviz.com/d/TeamViz.#{version}.dmg"
   name 'TeamViz'
   homepage 'http://www.teamviz.com/'
-  license :gratis
 
   app 'TeamViz.app'
 end

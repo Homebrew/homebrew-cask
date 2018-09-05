@@ -1,15 +1,13 @@
 cask 'better-window-manager' do
-  version '1.13.14'
-  sha256 '2d3e802c4317c0d9995cd42378d1a317fb9049086c7aafe9fece66970b81b6b1'
+  version '1.14.15'
+  sha256 'e6d0745aa969b793d78dd157f4447401ea79f56b03686735a2eb4e39b6321335'
 
   url "https://gngrwzrd.com/BetterWindowManager-#{version}.zip"
-  appcast 'https://www.gngrwzrd.com/betterwindowmanager-appcast.xml',
-          checkpoint: '2931f2c377563320bfc052fa3afd887340263a1a22c0d11bdedde710d9156353'
+  appcast 'https://www.gngrwzrd.com/betterwindowmanager-appcast.xml'
   name 'Better Window Manager'
   homepage 'https://www.gngrwzrd.com/better-window-manager/'
-  license :commercial
 
-  depends_on macos: '>= 10.10'
+  depends_on macos: '>= :yosemite'
 
   app 'Better Window Manager.app'
 end

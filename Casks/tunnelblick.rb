@@ -1,23 +1,37 @@
 cask 'tunnelblick' do
-  version '3.5.6_build_4270.4505'
-  sha256 '7f0376849fd1916174272faa024669513da599f6faa53727a474f2576098da9b'
+  version '3.7.6a,5080'
+  sha256 '42b50bd09296f98e55bdf4262a33d42067d1922157b010a02976cc74f514b677'
 
-  url "https://www.tunnelblick.net/release/Tunnelblick_#{version}.dmg"
-  appcast 'https://www.tunnelblick.net/appcast.rss',
-          checkpoint: 'b1ff110ba0ed2a142dff7fea95ac60264c57923191ac18c7ba553821ac311833'
+  # github.com/Tunnelblick/Tunnelblick was verified as official when first introduced to the cask
+  url "https://github.com/Tunnelblick/Tunnelblick/releases/download/v#{version.before_comma}/Tunnelblick_#{version.before_comma}_build_#{version.after_comma}.dmg"
+  appcast 'https://github.com/Tunnelblick/Tunnelblick/releases.atom'
   name 'Tunnelblick'
-  homepage 'https://www.tunnelblick.net'
-  license :gpl
+  homepage 'https://www.tunnelblick.net/'
 
   auto_updates true
-  depends_on macos: '>= :tiger'
 
   app 'Tunnelblick.app'
 
-  uninstall launchctl: 'net.tunnelblick.tunnelblick.LaunchAtLogin',
+  uninstall_preflight do
+    set_ownership "#{appdir}/Tunnelblick.app"
+  end
+
+  uninstall launchctl: [
+                         'net.tunnelblick.tunnelblick.LaunchAtLogin',
+                         'net.tunnelblick.tunnelblick.tunnelblickd',
+                       ],
             quit:      'net.tunnelblick.tunnelblick'
 
-  caveats <<-EOS.undent
+  zap trash: [
+               '~/Library/Application Support/Tunnelblick',
+               '~/Library/Caches/net.tunnelblick.tunnelblick',
+               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/Tunnelblick*',
+               '~/Library/Cookies/net.tunnelblick.tunnelblick.binarycookies',
+               '~/Library/Preferences/net.tunnelblick.tunnelblick.plist',
+               '/Library/Application Support/Tunnelblick',
+             ]
+
+  caveats <<~EOS
     For security reasons, #{token} must be installed to /Applications,
     and will request to be moved at launch.
   EOS

@@ -1,11 +1,11 @@
 cask 'quassel' do
-  version '0.12.2'
-  sha256 '4dd932e5e7a0908886427fc012886a76bbf1691cdd8832a67cdbc11a10be3682'
+  version '0.12.5'
+  sha256 'da76fae7ab612cdedf37e48b34fa68acf90385cdb20d5ec61f3c14bbac4a447e'
 
-  url "http://quassel-irc.org/pub/QuasselMono_MacOSX-x86_64_#{version}.dmg"
+  url "https://quassel-irc.org/pub/QuasselMono_MacOSX-x86_64_#{version}.dmg"
+  appcast 'https://github.com/quassel/quassel/releases.atom'
   name 'Quassel IRC'
-  homepage 'http://quassel-irc.org'
-  license :gpl
+  homepage 'https://quassel-irc.org/'
 
   app 'Quassel.app'
 end

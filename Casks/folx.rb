@@ -1,13 +1,24 @@
 cask 'folx' do
-  version '4.2.13332'
-  sha256 '5664c147dc0b848a2705659a206b02293e4b97f13dc1b5976a6e3435f1c41708'
+  version '5.5.13723'
+  sha256 'b31285b8eeccf7ca7124bc21a962361f95e326ea99db147f86ce1a7b6293fc22'
 
-  url "http://www.eltima.com/download/folx-update/downloader_mac_#{version}.dmg"
-  appcast 'http://mac.eltima.com/download/folx-updater/folx.xml',
-          checkpoint: '5842b05fba51144ad903c431987cb91de8876703065f3ab6801e2de0f7eb2a88'
+  url "https://cdn.eltima.com/download/folx-updater/downloader_mac_#{version}.dmg"
+  appcast 'https://cdn.eltima.com/download/folx-updater/folx.xml'
   name 'Folx'
-  homepage 'http://mac.eltima.com/download-manager.html'
-  license :freemium
+  homepage 'https://mac.eltima.com/download-manager.html'
+
+  auto_updates true
 
   app 'Folx.app'
+
+  zap trash: [
+               '~/Library/Application Support/Eltima Software/Folx3',
+               '~/Library/Caches/com.eltima.Folx3',
+               '~/Library/Internet Plug-Ins/Folx3Plugin.plugin',
+               '~/Library/Logs/Folx.log',
+               '~/Library/Logs/Folx3.log',
+               '~/Library/Preferences/com.eltima.Folx3.plist',
+               '~/Library/Preferences/com.eltima.FolxAgent.plist',
+               '~/Library/Saved Application State/com.eltima.Folx3.savedState',
+             ]
 end

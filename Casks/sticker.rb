@@ -1,11 +1,12 @@
 cask 'sticker' do
-  version '0.91'
-  sha256 'bedd5b8b5a05086201d41e58f789dfb86de28317fb0c71b577198ff86a6d7995'
+  version '1.0.3,8:1503613557'
+  sha256 '8e638c6c305fc2060145c2e2780948182bb73ee057da4f970e91975a7cba2256'
 
-  url 'http://www.chompstomp.com/uploads/2/9/4/0/29406957/sticker.zip'
+  # dl.devmate.com/com.chompstomp.Sticker was verified as official when first introduced to the cask
+  url "https://dl.devmate.com/com.chompstomp.Sticker/#{version.after_comma.before_colon}/#{version.after_colon}/Sticker-#{version.after_comma.before_colon}.zip"
+  appcast 'https://updates.devmate.com/com.chompstomp.Sticker.xml'
   name 'Sticker Window manager'
-  homepage 'http://www.chompstomp.com/sticker.html'
-  license :commercial
+  homepage 'http://www.chompstomp.com/sticker'
 
   app 'Sticker.app'
 end

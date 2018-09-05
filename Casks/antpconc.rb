@@ -1,11 +1,11 @@
 cask 'antpconc' do
-  version '1.1.0'
-  sha256 '3b8f25e876f4c3c6d5e9765b0891a377aae277e1a76adb8183b1ec948a23771c'
+  version '1.2.1'
+  sha256 '8b3332c3a0f71070783b6c847f203b257bff32b3d5095285c07572dc29c1b9b9'
 
-  url "http://www.laurenceanthony.net/software/antpconc/releases/AntPConc#{version.delete('.')}/AntPConc.zip"
+  url "http://www.laurenceanthony.net/software/antpconc/releases/AntPConc#{version.no_dots}/AntPConc.zip"
+  appcast 'http://www.laurenceanthony.net/software/antpconc/releases/'
   name 'AntPConc'
-  homepage 'http://www.laurenceanthony.net/software/antpconc'
-  license :gratis
+  homepage 'http://www.laurenceanthony.net/software/antpconc/'
 
   app 'AntPConc.app'
 end

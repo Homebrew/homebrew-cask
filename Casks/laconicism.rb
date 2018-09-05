@@ -4,8 +4,7 @@ cask 'laconicism' do
 
   url 'https://www.earslap.com/assets/laconicism/Laconicism.dmg'
   name 'Laconicism'
-  homepage 'https://www.earslap.com/weblog/music-release-laconicism.html'
-  license :cc
+  homepage 'https://earslap.com/weblog/music-release-laconicism.html'
 
   app 'Laconicism.app'
 end

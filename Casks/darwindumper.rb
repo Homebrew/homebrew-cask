@@ -1,11 +1,18 @@
 cask 'darwindumper' do
-  version '2.9.9.2'
-  sha256 '6971211171f5f562ad833ca530173d7783c5211222b2540cd599d47ac7f2576c'
+  version '3.0.4'
+  sha256 '29286070dd7f91d9289afa7fa7b52703252b255106934c8800b2db57edd3fa8b'
 
   url "https://bitbucket.org/blackosx/darwindumper/downloads/DarwinDumper_v#{version}.zip"
+  appcast 'https://bitbucket.org/blackosx/darwindumper/wiki/DD_AppCast.xml'
   name 'DarwinDumper'
   homepage 'https://bitbucket.org/blackosx/darwindumper'
-  license :gpl
 
-  app "DarwinDumper_v#{version}/DarwinDumper.app"
+  app 'DarwinDumper.app'
+
+  zap trash: [
+               '~/Library/Caches/com.DarwinDumper',
+               '~/Library/Preferences/com.DarwinDumper.plist',
+               '~/Library/Preferences/org.tom.DarwinDumper.plist',
+               '~/Library/Saved Application State/com.DarwinDumper.savedState',
+             ]
 end

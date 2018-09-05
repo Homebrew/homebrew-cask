@@ -1,19 +1,13 @@
 cask 'tangerine' do
-  version '1.4.3'
-  sha256 '67f03f203eef2efdce782d1ee249ac14bf276dcd3219287f218dc2d3ceaa73df'
+  version '1.4.3a'
+  sha256 '20577ac45e6fdcd1b7a22ca46e6aa06df88eb5e675c4da737e677b23c63e1949'
 
-  url 'http://distrib.karelia.com/downloads/Tangerine!-4010.zip'
-  appcast 'https://launch.karelia.com/appcast.php?version=0&product=13&appname=Tangerine!',
-          checkpoint: '074d108b7f07806dd2a3d9d86b5dbf7c4d0a362c6937f8a29c453829c9a212bb'
+  url 'http://distrib.karelia.com/downloads/Tangerine!-4011.zip'
+  appcast 'https://launch.karelia.com/appcast.php?version=0&product=13&appname=Tangerine!'
   name 'Tangerine!'
   homepage 'https://www.karelia.com/products/tangerine/'
-  license :commercial
 
   auto_updates true
 
   app 'Tangerine!.app'
-
-  postflight do
-    suppress_move_to_applications
-  end
 end

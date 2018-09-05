@@ -1,13 +1,12 @@
 cask 'papers' do
-  version '3.4.3,458'
-  sha256 '0bea17fde869cb3ee8057e888989abe2c39e35b1d0208d62fc9d7a14d636cc77'
+  version '3.4.18,566'
+  sha256 '15c226fd763479319fe115c710d1ee40180a7d8137954da71cf777b9ae0dfd7c'
 
+  # appcaster.papersapp.com/apps/mac/production/download was verified as official when first introduced to the cask
   url "http://appcaster.papersapp.com/apps/mac/production/download/#{version.after_comma}/papers_#{version.before_comma.no_dots}_#{version.after_comma}.dmg"
-  appcast 'http://appcaster.papersapp.com/apps/mac/production/appcast.xml',
-          checkpoint: '2fff083f0bbfada12a7855d93193879700be699a4a18288a3d2264ec75ed0f85'
+  appcast 'https://appcaster.papersapp.com/apps/mac/production/appcast.xml'
   name 'Papers'
-  homepage 'http://www.papersapp.com/'
-  license :commercial
+  homepage 'https://www.readcube.com/papers/'
 
   app 'Papers.app'
 end
