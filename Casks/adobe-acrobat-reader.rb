@@ -3,6 +3,7 @@ cask 'adobe-acrobat-reader' do
   sha256 '86027f1263a73b4d0cb0597b9db1d03b97c92f2385163e67ac364c5351122235'
 
   url "http://ardownload.adobe.com/pub/adobe/reader/mac/AcrobatDC/#{version.no_dots}/AcroRdrDC_#{version.no_dots}_MUI.dmg"
+  appcast 'http://get.adobe.com/reader/'
   name 'Adobe Acrobat Reader DC'
   homepage 'https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html'
 
