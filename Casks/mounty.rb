@@ -5,7 +5,6 @@ cask 'mounty' do
   url 'http://mounty.app/releases/Mounty.dmg'
   name 'Mounty for NTFS'
   homepage 'http://mounty.app/'
-  license :gratis
 
   app 'Mounty.app'
 end
