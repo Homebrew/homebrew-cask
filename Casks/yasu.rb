@@ -1,7 +1,7 @@
 cask 'yasu' do
   if MacOS.version <= :el_capitan
-    version '3.0.4,504'
-    sha256 'f1bd1e48a2ff0e9839f4b21c651e89a4e18d8aa85a9b9fa8642f333ef5b0053b'
+    version '3.0.9,509'
+    sha256 'bc7716b2852cdbdc02aca085b5fa70cbf5a0983ed5ff1f489de0a86348527a0e'
     url "https://yasuformac.com/appcasts/10.11/yasuformac_#{version.after_comma}.zip",
         user_agent: :fake
     appcast 'https://yasuformac.com/appcasts/10.11/yasu.xml'
