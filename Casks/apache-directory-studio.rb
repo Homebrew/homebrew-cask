@@ -10,4 +10,8 @@ cask 'apache-directory-studio' do
   app 'ApacheDirectoryStudio.app'
 
   zap trash: '~/.ApacheDirectoryStudio'
+
+  caveats do
+    depends_on_java '8+'
+  end
 end
