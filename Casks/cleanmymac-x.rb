@@ -1,11 +1,11 @@
-cask 'cleanmymac' do
+cask 'cleanmymac-x' do
   version '4.0.1,1536142248'
   sha256 '5aaa5a233884fb02b9c47ccdc30a3546f4a59368a9ba3babe5881be84e922368'
 
   # devmate.com/com.macpaw.CleanMyMac was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.macpaw.CleanMyMac#{version.major}/#{version.major_minor_patch}/#{version.after_comma}/CleanMyMacX-#{version.major_minor_patch}.zip"
   appcast "https://updates.devmate.com/com.macpaw.CleanMyMac#{version.major}.xml"
-  name 'CleanMyMac'
+  name 'CleanMyMac X'
   homepage 'https://macpaw.com/cleanmymac'
 
   app 'CleanMyMac X.app'
