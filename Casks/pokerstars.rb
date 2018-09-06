@@ -19,7 +19,7 @@ cask 'pokerstars' do
   end
 
   language 'UK' do
-    ['.uk', '.net', '.net']
+    ['.uk', 'UK', '.uk']
   end
 
   language 'PT' do
