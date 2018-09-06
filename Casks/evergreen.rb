@@ -1,14 +1,14 @@
 cask 'evergreen' do
-  version '1.0d42'
-  sha256 '952f6f920d9ed94d29e72590a7dafa55a50a56b1c0ce65026ca31db78a2eaabb'
+  version '5.0d3'
+  sha256 'b0ae90ac9a3e2f01856ed8679aa1fb10993c48d62b59c6230be381a350667702'
 
-  url "https://ranchero.com/downloads/Evergreen#{version}.zip"
-  appcast 'https://ranchero.com/downloads/evergreen-beta.xml'
-  name 'Evergreen'
-  homepage 'https://ranchero.com/evergreen/'
+  url "https://ranchero.com/downloads/NetNewsWire#{version}.zip"
+  appcast 'https://ranchero.com/downloads/netnewswire-beta.xml'
+  name 'NetNetsWire'
+  homepage 'https://ranchero.com/netnewswire/'
 
   auto_updates true
   depends_on macos: '>= :high_sierra'
 
-  app 'Evergreen.app'
+  app 'NetNewsWire.app'
 end
