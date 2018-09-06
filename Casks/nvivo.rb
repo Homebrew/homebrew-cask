@@ -1,12 +1,13 @@
 cask 'nvivo' do
-  version '11'
+  version '12.1.0.3068'
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "http://download.qsrinternational.com/Software/NVivo#{version}forMac/NVivo.dmg"
+  url "https://download.qsrinternational.com/Software/NVivo#{version.major}forMac/#{version}/NVivo%20#{version.major}.dmg"
+  appcast "https://download.qsrinternational.com/Software/NVivo#{version.major}forMac/appcast.xml"
   name 'NVivo'
   homepage 'http://www.qsrinternational.com/'
 
-  app 'NVivo.app'
+  app "NVivo #{version.major}.app"
 
   zap trash: [
                '~/Library/Caches/com.qsrinternational.NVivo',
