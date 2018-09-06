@@ -7,7 +7,7 @@ require_relative "lib/capture"
 require_relative "lib/check"
 require_relative "lib/travis"
 
-module Hbc
+module Cask
   class Cmd
     class Ci < AbstractCommand
       def run
