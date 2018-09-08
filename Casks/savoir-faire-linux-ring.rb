@@ -1,6 +1,6 @@
 cask 'savoir-faire-linux-ring' do
-  version '201808301733'
-  sha256 '93f925956cf2346a4ab2c2d913c6f0b81c8c1c529fcfbc16d2dd49854f0bbf8f'
+  version '201809041139'
+  sha256 'cdd463bd521230616ac36b0b508ebe41d8d0c4e649ae2347732c03cdf01caf8f'
 
   url "https://dl.ring.cx/mac_osx/ring-#{version}.dmg"
   appcast 'https://dl.ring.cx/mac_osx/sparkle-ring.xml'
