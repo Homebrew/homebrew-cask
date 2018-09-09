@@ -11,7 +11,7 @@ cask 'send-to-kindle' do
 
   uninstall launchctl: 'com.amazon.sendtokindle.launcher',
             pkgutil:   'com.amazon.SendToKindleMacInstaller.pkg',
-            quit:      'com.amazon.SendToKindle',
+            quit:      'com.amazon.SendToKindle'
 
   zap       delete: [
                       '~/Library/Application Support/Amazon/SendToKindle',
