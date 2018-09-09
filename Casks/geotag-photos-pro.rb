@@ -5,7 +5,7 @@ cask 'geotag-photos-pro' do
   # github.com/tappytaps was verified as official when first introduced to the cask
   url "https://github.com/tappytaps/geotag-desktop-app/releases/download/v#{version}/geotag-#{version}-mac.zip"
   appcast 'https://github.com/tappytaps/geotag-desktop-app/releases.atom'
-  name 'Geotag Photos Pro 2'
+  name 'Geotag Photos Pro'
   homepage 'https://www.geotagphotos.net/'
 
   app 'Geotag Photos Pro 2.app'
