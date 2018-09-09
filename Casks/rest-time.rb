@@ -1,6 +1,6 @@
 cask 'rest-time' do
-  version '1.10'
-  sha256 '8fac7e3f8caec3e68744c7d4b26cd36c7d4f0a4712711ba878d92ae0a2caba4f'
+  version '1.14'
+  sha256 '66c1de6fc8bd121687cd67627600111f2ef20a00d75db7e38306d2c84092fc67'
 
   url 'http://www.publicspace.net/download/RestTime.dmg'
   appcast 'http://www.publicspace.net/app/resttime.xml'
