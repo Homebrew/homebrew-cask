@@ -13,9 +13,9 @@ cask 'send-to-kindle' do
             pkgutil:   'com.amazon.SendToKindleMacInstaller.pkg',
             quit:      'com.amazon.SendToKindle'
 
-  zap       delete: [
-                      '~/Library/Application Support/Amazon/SendToKindle',
-                      '~/Library/Preferences/com.amazon.SendToKindle.plist',
-                      '~/Library/Logs/SendToKindleInstall.log',
-                    ]
+  zap trash: [
+               '~/Library/Application Support/Amazon/SendToKindle',
+               '~/Library/Preferences/com.amazon.SendToKindle.plist',
+               '~/Library/Logs/SendToKindleInstall.log',
+             ]
 end
