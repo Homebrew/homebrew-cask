@@ -5,7 +5,6 @@ cask 'shadowsocksx-ng-r' do
   url 'https://github.com/qinyuhang/ShadowsocksX-NG-R/releases/download/1.4.3-R8-build3/ShadowsocksX-NG-R8.dmg'
   appcast 'https://github.com/qinyuhang/ShadowsocksX-NG-R/releases.atom'
   name 'ShadowsocksX-NG-R'
-  name 'ShadowsocksX-NG-R8'
   homepage 'https://github.com/qinyuhang/ShadowsocksX-NG-R/'
 
   conflicts_with cask: 'shadowsocksx'
@@ -30,7 +29,6 @@ cask 'shadowsocksx-ng-r' do
                '~/.ShadowsocksX-NG',
                '~/Library/Application Support/ShadowsocksX-NG',
                '~/Library/Caches/com.qiuyuzhou.ShadowsocksX-NG',
-
                '~/Library/Preferences/com.qiuyuzhou.ShadowsocksX-NG.plist',
              ]
 end
