@@ -1,6 +1,6 @@
 cask 'setapp' do
-  version '1.14.2,1528985269'
-  sha256 '9a17ef57174a5033f6cbe371eba98042f0052eb41d508ab773644d618af62fbb'
+  version '1.16,1535717837'
+  sha256 'd380f99bdcfdcd445c2535d64081cca4bbb1d9a85629c788d3c3b6e9e8abf1d1'
 
   # devmate.com/com.setapp.InstallSetapp was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.setapp.InstallSetapp/#{version.before_comma}/#{version.after_comma}/InstallSetapp-#{version.before_comma}.zip"

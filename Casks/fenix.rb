@@ -8,5 +8,7 @@ cask 'fenix' do
   name 'Fenix'
   homepage 'https://fenixwebserver.com/'
 
+  container nested: "Fenix_#{version}.dmg"
+
   app 'Fenix.app'
 end

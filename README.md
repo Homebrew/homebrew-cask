@@ -1,16 +1,16 @@
-# Homebrew-Cask
+# Homebrew Cask
 
 _“To install, drag this icon…” no more!_
 
-Homebrew-Cask extends [Homebrew](http://brew.sh) and brings its elegance, simplicity, and speed to the installation and management of GUI macOS applications such as Atom and Google Chrome.
+Homebrew Cask extends [Homebrew](https://brew.sh) and brings its elegance, simplicity, and speed to the installation and management of GUI macOS applications such as Atom and Google Chrome.
 
-We do this by providing a friendly Homebrew-style CLI workflow for the administration of macOS applications distributed as binaries.
+We do this by providing a friendly CLI workflow for the administration of macOS applications distributed as binaries.
 
 [![Join us on https://discourse.brew.sh](https://img.shields.io/badge/Discourse-forum-blue.svg)](https://discourse.brew.sh)
 
 ## Let’s try it!
 
-To start using Homebrew-Cask, you just need [Homebrew](http://brew.sh/) installed.
+To start using Homebrew Cask, you just need [Homebrew](https://brew.sh/) installed.
 
 <img src="https://i.imgur.com/dPgmLax.gif" width="673" alt="Installing Atom (animated gif)">
 
@@ -33,7 +33,7 @@ And there we have it. Atom installed with one quick command: no clicking, no dra
 
 ## Learn More
 
-* Find basic documentation on using Homebrew-Cask in [USAGE.md](USAGE.md)
+* Find basic documentation on using Homebrew Cask in [USAGE.md](USAGE.md)
 * Want to contribute a Cask? Awesome! See [CONTRIBUTING.md](CONTRIBUTING.md)
 * Want to hack on our code? Also awesome! See [hacking.md](doc/development/hacking.md)
 * More project-related details and discussion are available in the [documentation](doc)
@@ -55,6 +55,7 @@ If your issue persists, search for it before opening a new one. If you find an o
   * [`source is not there` error](doc/reporting_bugs/a_cask_fails_to_install.md#source-is-not-there-error)
   * [`wrong number of arguments` error](doc/reporting_bugs/a_cask_fails_to_install.md#wrong-number-of-arguments-error)
   * [Unlisted reason](doc/reporting_bugs/a_cask_fails_to_install.md#unlisted-reason)
+* [The app can’t be opened because it is from an unidentified developer](doc/faq/the_app_cant_be_opened.md)
 * [`uninstall` wrongly reports cask as not installed](doc/reporting_bugs/uninstall_wrongly_reports_cask_as_not_installed.md)
 * [`Error: Unknown command: cask` error](doc/reporting_bugs/error_unknown_command_cask.md)
 * [My problem isn’t listed](https://github.com/Homebrew/homebrew-cask/issues/new?template=01_bug_report.md)

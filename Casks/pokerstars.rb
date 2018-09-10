@@ -18,8 +18,8 @@ cask 'pokerstars' do
     ['.it', '.net', '.net']
   end
 
-  language 'UK' do
-    ['.uk', '.net', '.net']
+  language 'GB' do
+    ['.uk', 'UK', '.uk']
   end
 
   language 'PT' do

@@ -7,8 +7,8 @@ require_relative "lib/capture"
 require_relative "lib/check"
 require_relative "lib/travis"
 
-module Hbc
-  class CLI
+module Cask
+  class Cmd
     class Ci < AbstractCommand
       def run
         unless ENV.key?("TRAVIS")
