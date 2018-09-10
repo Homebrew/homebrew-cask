@@ -1,6 +1,6 @@
 cask 'netnewswire' do
-  version '5.0d4'
-  sha256 '21a2823fbb1431b84746bc53101674ca49929afa9f04a421bab4f375a6ce7054'
+  version '5.0d5'
+  sha256 'f53e3f723f85697ca5757d2d4912662616ae78ce7726269b7c2bbbdc8ae61b37'
 
   url "https://ranchero.com/downloads/NetNewsWire#{version}.zip"
   appcast 'https://ranchero.com/downloads/netnewswire-beta.xml'
