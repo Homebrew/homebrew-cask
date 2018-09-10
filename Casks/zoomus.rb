@@ -12,7 +12,7 @@ cask 'zoomus' do
 
   uninstall delete: '/Applications/zoom.us.app',
             quit:   'us.zoom.ZoomOpener',
-            singal: [
+            signal: [
                       ['KILL', 'us.zoom.xos'],
                     ]
 
