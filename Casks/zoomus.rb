@@ -1,6 +1,6 @@
 cask 'zoomus' do
-  version '4.1.27695.0702'
-  sha256 '839ba26e98b9be3f4f63ab76e4ef6fe1bcb0b5010c95062015b2cb342eceb8bb'
+  version '4.1.31275.0831'
+  sha256 'e622f9bbf6bb23dc831d1e985c4b7d4b1e587c4fb0917cdd1968491956a6b82a'
 
   url "https://www.zoom.us/client/#{version}/zoomusInstaller.pkg"
   name 'Zoom.us'
@@ -10,7 +10,11 @@ cask 'zoomus' do
 
   pkg 'zoomusInstaller.pkg'
 
-  uninstall delete: '/Applications/zoom.us.app'
+  uninstall delete: '/Applications/zoom.us.app',
+            quit:   'us.zoom.ZoomOpener',
+            signal: [
+                      ['KILL', 'us.zoom.xos'],
+                    ]
 
   zap trash: [
                '~/Desktop/Zoom',
