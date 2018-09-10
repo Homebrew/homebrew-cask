@@ -11,9 +11,9 @@ cask 'zoomus' do
   pkg 'zoomusInstaller.pkg'
 
   uninstall delete: '/Applications/zoom.us.app',
-            quit:   [
-                      'us.zoom.ZoomOpener',
-                      'us.zoom.xos',
+            quit:   'us.zoom.ZoomOpener',
+            singal: [
+                      ['KILL', 'us.zoom.xos'],
                     ]
 
   zap trash: [
