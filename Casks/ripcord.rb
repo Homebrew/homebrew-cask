@@ -7,7 +7,6 @@ cask 'ripcord' do
   name 'Ripcord'
   homepage 'https://cancel.fm/ripcord/'
 
-  auto_updates true
   depends_on macos: '>= :sierra'
 
   app 'Ripcord.app'
