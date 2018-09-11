@@ -10,5 +10,10 @@ cask 'rescuetime' do
 
   uninstall pkgutil: 'com.rescuetime.RescueTime'
 
-  zap trash: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rescuetime.rescuetime.sfl*'
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rescuetime.rescuetime.sfl*',
+               '~/Library/Caches/com.rescuetime.RescueTime',
+               '~/Library/Preferences/com.rescuetime.RescueTime.plist',
+               '~/Library/RescueTime.com',
+             ]
 end
