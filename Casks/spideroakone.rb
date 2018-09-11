@@ -4,13 +4,15 @@ cask 'spideroakone' do
 
   if MacOS.version <= :sierra
     url 'https://spideroak.com/release/spideroak/osx'
-  else
+  elsif MacOS.version == :high_sierra
     url 'https://spideroak.com/release/spideroak/osx_hs'
+  else
+    url 'https://spideroak.com/release/spideroak/osx'
   end
   name 'SpiderOakOne'
   homepage 'https://spideroak.com/'
 
-  depends_on macos: '>= :mountain_lion'
+  depends_on macos: '>= :mavericks'
 
   pkg 'SpiderOakONE.pkg'
 
