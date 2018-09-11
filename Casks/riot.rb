@@ -1,6 +1,6 @@
 cask 'riot' do
-  version '0.16.3'
-  sha256 '12217231d22dbd3de2a5bb630ec8434df4a44a8f762143149616b6ffe02775a0'
+  version '0.16.4'
+  sha256 'a1ea8f91b93c28b8493844b6226bbfda2c289e996183cd5652368d99ca3d3ef8'
 
   url "https://riot.im/download/desktop/install/macos/Riot-#{version}.dmg"
   appcast 'https://github.com/vector-im/riot-web/releases.atom'
