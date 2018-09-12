@@ -6,10 +6,10 @@ cask 'gimp' do
   name 'GIMP'
   homepage 'https://www.gimp.org/'
 
-  app "Gimp-#{version.major_minor}.app"
+  app "GIMP-#{version.major_minor}.app"
 
   postflight do
-    set_permissions "#{appdir}/Gimp-#{version.major_minor}.app/Contents/MacOS/gimp", 'a+rx'
+    set_permissions "#{appdir}/GIMP-#{version.major_minor}.app/Contents/MacOS/gimp", 'a+rx'
   end
 
   zap trash: [
