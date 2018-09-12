@@ -7,5 +7,5 @@ cask 'vscodium' do
   name 'VSCodium'
   homepage 'https://github.com/VSCodium/vscodium'
 
-  app 'Code - OSS.app'
+  app 'VSCodium.app'
 end
