@@ -1,4 +1,4 @@
-cask 'devonagent-pro' do
+cask 'devonagent' do
   version '3.10'
   sha256 '950aa227f93b14cebd7856b0fd11926f29202086ea25422382109d0e7bfd47a3'
 
