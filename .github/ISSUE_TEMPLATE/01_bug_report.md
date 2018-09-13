@@ -28,18 +28,31 @@ about: Create a report to help us improve
 
 #### Output of command with `--force --verbose --debug`
 
+<details>
+<summary>output</summary>
+
 ```
 {{replace this}}
 ```
+</details>
 
 #### Output of `brew cask doctor`
 
+<details>
+<summary>brew cask doctor</summary>
+
 ```
 {{replace this}}
 ```
+</details>
+
 
 #### Output of `brew tap`
 
+<details>
+<summary>brew tap</summary>
+
 ```
 {{replace this}}
 ```
+</details>
