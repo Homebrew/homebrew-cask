@@ -14,4 +14,3 @@ cask 'writer' do
                '~/Library/Preferences/de.HendrikNoeller.Writer.plist',
              ]
 end
-
