@@ -7,7 +7,7 @@ cask 'daedalus' do
   name 'Daedalus'
   homepage 'https://daedaluswallet.io/'
 
-  pkg "daedalus-#{version}-cardano-sl-#{version.after_comma.before_colon}-mainnet-macos-#{version.after_comma.after_colon}.pkg"
+  pkg "daedalus-#{version.before_comma}-cardano-sl-#{version.after_comma.before_colon}-mainnet-macos-#{version.after_comma.after_colon}.pkg"
 
   uninstall pkgutil: 'org.Daedalus.pkg',
             delete:  '/Applications/Daedalus.app'
