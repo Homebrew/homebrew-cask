@@ -8,4 +8,8 @@ cask 'jumpfm' do
   homepage 'https://github.com/heywoodlh/jumpfm'
 
   app 'jumpfm.app'
+
+  zap trash: [
+    "~/Library/Application Support/jumpfm"
+  ]
 end
