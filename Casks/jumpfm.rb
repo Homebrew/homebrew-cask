@@ -1,0 +1,11 @@
+cask 'jumpfm' do
+  version '1.0.5'
+  sha256 '9cf3e5621a3e62acfabdaf8c9ac6100723072e23452a51a124603fe51beb7842'
+
+  url 'https://github.com/heywoodlh/jumpfm/releases/download/v1.0.5/jumpfm-1.0.5.dmg'
+  appcast 'https://github.com/heywoodlh/jumpfm/releases.atom'
+  name 'JumpFM'
+  homepage 'https://github.com/heywoodlh/jumpfm'
+
+  app 'jumpfm.app'
+end
