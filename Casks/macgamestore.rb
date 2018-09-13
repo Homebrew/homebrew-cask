@@ -8,7 +8,5 @@ cask 'macgamestore' do
 
   app 'MacGameStore.app'
 
-  zap "trash": [
-                 '~/Library/Application Support/MacGameStore.com',
-               ]
+  zap trash: '~/Library/Application Support/MacGameStore.com'
 end
