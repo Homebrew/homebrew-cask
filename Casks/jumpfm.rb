@@ -10,6 +10,6 @@ cask 'jumpfm' do
   app 'jumpfm.app'
 
   zap trash: [
-    "~/Library/Application Support/jumpfm"
-  ]
+               '~/Library/Application Support/jumpfm',
+             ]
 end
