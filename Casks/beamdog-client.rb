@@ -7,4 +7,13 @@ cask 'beamdog-client' do
   homepage 'https://beamdog.com/about/client'
 
   app 'Beamdog Client.app'
+
+  zap trash: [
+               '~/Library/Application Support/Beamdog Client',
+               '~/Library/Caches/Beamdog.BeamdogClient',
+               '~/Library/Caches/Beamdog.BeamdogClient.ShipIt',
+               '~/Library/Preferences/Beamdog.BeamdogClient.helper.plist',
+               '~/Library/Preferences/Beamdog.BeamdogClient.plist',
+               '~/Library/Saved Application State/Beamdog.BeamdogClient.savedState',
+             ]
 end
