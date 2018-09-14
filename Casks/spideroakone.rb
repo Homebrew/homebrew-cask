@@ -22,4 +22,6 @@ cask 'spideroakone' do
                        ['KILL', 'com.spideroak.orange.client'],
                      ],
             pkgutil: 'org.python.python'
+
+  zap trash: '~/Library/Application Support/SpiderOakONE'
 end
