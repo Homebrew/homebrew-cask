@@ -20,5 +20,6 @@ cask 'porting-kit' do
                '~/Library/Cookies/edu.ufrj.vitormm.Porting-Kit.binarycookies',
                '~/Library/Preferences/edu.ufrj.vitormm.Porting-Kit.plist',
                '~/Library/Saved Application State/edu.ufrj.vitormm.Porting-Kit.savedState',
+               '~/Library/WebKit/edu.ufrj.vitormm.Porting-Kit',
              ]
 end
