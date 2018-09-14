@@ -7,6 +7,8 @@ cask 'duplicati' do
   name 'Duplicati'
   homepage 'https://www.duplicati.com/'
 
+  depends_on formula: 'mono'
+
   app 'Duplicati.app'
 
   zap trash: [
