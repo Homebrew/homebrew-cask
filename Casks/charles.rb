@@ -1,6 +1,6 @@
 cask 'charles' do
-  version '4.2.6'
-  sha256 '164d21d1b5090cdf427e9985d4af8d1eef1c0ea733215121a18de886ffea299f'
+  version '4.2.7'
+  sha256 'f2ce639c3564ce2180d595e5d9918acf536498cd2ed6f2b3f41172344142fceb'
 
   url "https://www.charlesproxy.com/assets/release/#{version}/charles-proxy-#{version}.dmg"
   appcast 'https://www.charlesproxy.com/latest.do'
