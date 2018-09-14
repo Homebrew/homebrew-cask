@@ -14,6 +14,12 @@ cask 'spideroakone' do
 
   pkg 'SpiderOakONE.pkg'
 
-  uninstall quit:    'com.spideroak.orange.client',
+  uninstall signal:  [
+                       ['TERM', 'com.spideroak.orange.client'],
+                       ['QUIT', 'com.spideroak.orange.client'],
+                       ['INT',  'com.spideroak.orange.client'],
+                       ['HUP',  'com.spideroak.orange.client'],
+                       ['KILL', 'com.spideroak.orange.client'],
+                     ],
             pkgutil: 'org.python.python'
 end
