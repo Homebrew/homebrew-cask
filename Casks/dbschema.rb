@@ -1,6 +1,6 @@
 cask 'dbschema' do
-  version '8.0.6'
-  sha256 '9cd6c6c484fe8e1c459bd3dba0a32362bc626bb37223f5b94153a043d24bc84b'
+  version '8.0.7'
+  sha256 '4b59d2123762264b45b3ba35cdfcaa543680230d8f3ee1c1f7426a6ca47732b4'
 
   url "https://www.dbschema.com/download/DbSchema_macos_#{version.dots_to_underscores}.tgz"
   name 'DbSchema'
