@@ -13,8 +13,10 @@ cask 'microsoft-office' do
   pkg "Microsoft_Office_#{version}_Installer.pkg"
 
   uninstall pkgutil:   [
+                         'com.microsoft.OneDrive',
                          'com.microsoft.package.Fonts',
                          'com.microsoft.package.Frameworks',
+                         'com.microsoft.package.Microsoft_AutoUpdate.app',
                          'com.microsoft.package.Microsoft_Excel.app',
                          'com.microsoft.package.Microsoft_OneNote.app',
                          'com.microsoft.package.Microsoft_Outlook.app',
@@ -23,16 +25,15 @@ cask 'microsoft-office' do
                          'com.microsoft.package.Proofing_Tools',
                          'com.microsoft.pkg.licensing',
                        ],
-            launchctl: [
-                         'com.microsoft.office.licensing.helper',
-                         'com.microsoft.office.licensingV2.helper',
-                       ],
+            launchctl: 'com.microsoft.office.licensingV2.helper',
             delete:    [
+                         '/Applications/Microsoft AutoUpdate.app',
                          '/Applications/Microsoft Excel.app',
                          '/Applications/Microsoft OneNote.app',
                          '/Applications/Microsoft Outlook.app',
                          '/Applications/Microsoft PowerPoint.app',
                          '/Applications/Microsoft Word.app',
+                         '/Applications/OneDrive.app',
                        ]
 
   zap trash:     [
