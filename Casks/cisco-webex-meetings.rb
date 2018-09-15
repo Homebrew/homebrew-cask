@@ -1,4 +1,4 @@
-cask 'webex-meetings' do
+cask 'cisco-webex-meetings' do
   version '33.4.4-5'
   sha256 '51832c38ccd7cf40c3ec99cd41e37f7be8a3ad7c0aa75ad7f4f1b6958f24bdd1'
 
