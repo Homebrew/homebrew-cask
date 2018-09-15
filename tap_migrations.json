@@ -48,5 +48,6 @@
   "syncthing": "homebrew/core",
   "terraform": "homebrew/core",
   "vault": "homebrew/core",
+  "vfuse": "homebrew/core",
   "volatility": "homebrew/core"
 }
