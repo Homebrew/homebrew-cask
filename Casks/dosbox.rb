@@ -1,6 +1,6 @@
 cask 'dosbox' do
   version '0.74-2'
-  sha256 '582d17a29666cc36f9a2bb3804bcba2fadf4d26712ce801b7fbcf3c02f659348'
+  sha256 '8bdd3731404db05f9bbe14bb0226ae4e6feb3f9a21a90bbfc9235a7e6e71aa4e'
 
   # sourceforge.net/dosbox was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/dosbox/dosbox/#{version}/DOSBox-#{version}_Universal.dmg"
