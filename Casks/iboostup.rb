@@ -1,6 +1,6 @@
 cask 'iboostup' do
-  version '5.9.91'
-  sha256 '44d7c589f2cfd715ad00a3797d72878903aa2b87c5d5a9a86f79df2f412379ae'
+  version '6.0.11'
+  sha256 'cd235a7599e40411b5525478d495819dd647cec8aac25dbbaa691a2b591c2ae3'
 
   url 'https://www.iboostup.com/iboostup.dmg'
   appcast 'https://www.iboostup.com/updates'
