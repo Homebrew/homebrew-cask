@@ -8,5 +8,5 @@ cask 'securesafe' do
 
   pkg "SecureSafe_#{version}.pkg"
 
-  uninstall pkgutil: 'SecureSafe'
+  uninstall pkgutil: 'com.dswiss.securesafe.pkg.sync'
 end
