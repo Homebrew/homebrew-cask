@@ -14,8 +14,8 @@ cask 'cd-to-iterm' do
     1. Open the the Applications folder in finder.
     2. Drag "cd to.app" onto the Finder toolbar while holding down the command(⌘) and option(⌥) keys.
 
-    To use, just click on the new button and instantly opens a new Iterm window.
+    To use, just click on the new button and instantly opens a new iTerm window.
 
-    Only "cd to.app" for Iterm has been added to the Applications folder. The terminal and x11_term versions are also staged.
+    Only "cd to.app" for iTerm has been added to the Applications folder. The Terminal and x11_term versions are also staged.
   EOS
 end
