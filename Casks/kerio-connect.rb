@@ -12,5 +12,6 @@ cask 'kerio-connect' do
   uninstall pkgutil: [
                        'com.kerio.connect.server.pkg',
                        'com.kerio.connect.server.installer.pkg',
-                     ]
+                     ],
+            launchctl: 'KerioConnect'
 end
