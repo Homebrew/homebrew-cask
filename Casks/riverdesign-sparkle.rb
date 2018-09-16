@@ -1,6 +1,6 @@
 cask 'riverdesign-sparkle' do
-  version '2.6.1'
-  sha256 'cc9e72bbb09e22379b69430fc9e94ceedc7316db952a2d6fa392f6762a147f74'
+  version '2.6.3'
+  sha256 '15268166f2d8aa130883d722972e3c1db24649214a83e0ca78f5e71d124bdbaa'
 
   url 'https://sparkleapp.com/update/Sparkle.zip'
   appcast 'https://sparkleapp.com/update/appcast.php'
