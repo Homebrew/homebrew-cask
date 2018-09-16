@@ -1,12 +1,13 @@
 cask 'sonar' do
-  version '0.6.12'
-  sha256 'f8d69381ec493cc556d03ddabd176c0b8c1204ef13c2a2708ec934dfc2452adc'
+  version '0.7.1'
+  sha256 '0ebfa13be4537c4bd05d86ebd08f65213dfc41d5aa8f7855163f6882b44c0fd8'
 
-  # github.com/facebook/Sonar was verified as official when first introduced to the cask
-  url "https://github.com/facebook/Sonar/releases/download/v#{version}/Sonar.zip"
-  appcast 'https://github.com/facebook/Sonar/releases.atom'
+  # facebook.com was verified as official when first introduced to the cask
+  url 'https://www.facebook.com/fbflipper/public/mac'
+  appcast 'https://github.com/facebook/flipper/releases.atom'
   name 'Sonar'
-  homepage 'https://fbsonar.com/'
+  name 'Flipper'
+  homepage 'https://fbflipper.com/'
 
   app 'Sonar.app'
 end
