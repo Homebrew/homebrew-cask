@@ -16,10 +16,6 @@ cask 'spideroakone' do
 
   uninstall signal:  [
                        ['TERM', 'com.spideroak.orange.client'],
-                       ['QUIT', 'com.spideroak.orange.client'],
-                       ['INT',  'com.spideroak.orange.client'],
-                       ['HUP',  'com.spideroak.orange.client'],
-                       ['KILL', 'com.spideroak.orange.client'],
                      ],
             pkgutil: 'org.python.python'
 
