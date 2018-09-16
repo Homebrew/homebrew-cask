@@ -9,4 +9,12 @@ cask 'origin' do
   homepage 'https://www.origin.com/'
 
   app 'Origin.app'
+
+  zap trash: [
+               '~/Library/Application Support/Origin',
+               '~/Library/Saved Application State/com.ea.Origin.savedState',
+               '~/Library/LaunchAgents/com.ea.origin.WebHelper.plist',
+               '~/Library/Caches/com.ea.Origin',
+               '~/Library/Caches/Origin',
+             ]
 end
