@@ -9,5 +9,5 @@ cask 'sonar' do
   name 'Flipper'
   homepage 'https://fbflipper.com/'
 
-  app 'Sonar.app'
+  app 'Flipper.app'
 end
