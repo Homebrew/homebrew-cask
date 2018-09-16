@@ -7,7 +7,7 @@ cask 'kerio-connect' do
   name 'Kerio Connect'
   homepage 'https://www.kerio.de/products/kerio-connect'
 
-  pkg 'Kerio Connect Installer.app'
+  pkg 'Kerio Connect Installer.pkg'
 
   uninstall pkgutil: [
                        'com.kerio.connect.server.pkg',
