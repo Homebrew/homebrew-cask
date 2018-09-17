@@ -1,6 +1,6 @@
 cask 'roboform' do
-  version '8.5.0'
-  sha256 'ff313e50930bd959ae5e5cb90c434cd973b3c4ca67883d4803f15c900a931206'
+  version '8.5.1'
+  sha256 '871ea3fb99fad9c9a82f2848656fe57b030afa4854be52796c6f898caba55691'
 
   url "https://www.roboform.com/dist/roboform-mac-v#{version.major}.dmg"
   appcast 'https://www.roboform.com/news-mac'
