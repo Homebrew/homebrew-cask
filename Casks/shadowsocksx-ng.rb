@@ -21,7 +21,7 @@ cask 'shadowsocksx-ng' do
                        ],
             quit:      'com.qiuyuzhou.ShadowsocksX-NG',
             script:    {
-                         executable: '/Library/Application Support/ShadowsocksX-NG/proxy_conf_helper',
+                         executable: '/Applications/ShadowsocksX-NG.app/Contents/Resources/proxy_conf_helper',
                          args:       ['--mode', 'off'],
                        }
 
