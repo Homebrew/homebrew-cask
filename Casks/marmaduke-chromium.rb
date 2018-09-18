@@ -7,6 +7,6 @@ cask 'marmaduke-chromium' do
   appcast 'https://github.com/macchrome/macstable/releases.atom'
   name 'Chromium'
   homepage 'https://github.com/macchrome/macstable/releases'
+
   app 'Chromium.app'
 end
-
