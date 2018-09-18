@@ -10,7 +10,7 @@ cask 'copyclip' do
 
   app "CopyClip #{version.major}.app"
 
-  uninstall quit: 'com.fiplab.copyclip*',
+  uninstall quit: "com.fiplab.copyclip#{version.major}",
             zap:  [
                     '~/Library/Application Scripts/com.fiplab.copyclip*helper',
                     '~/Library/Application Scripts/com.fiplab.copyclip*',
