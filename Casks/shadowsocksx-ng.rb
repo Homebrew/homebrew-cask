@@ -1,6 +1,6 @@
 cask 'shadowsocksx-ng' do
-  version '1.7.1'
-  sha256 '10ade4e4d81e000558323c8bd28dfbc46a345a2e4b20dfb66dc56b22cbba1862'
+  version '1.8.0'
+  sha256 'c9b382a166394121da8571c966b04628ec9bc303e32bb4ec86e0c777ab1b920c'
 
   url "https://github.com/shadowsocks/ShadowsocksX-NG/releases/download/v#{version}/ShadowsocksX-NG.#{version}.zip"
   appcast 'https://github.com/shadowsocks/ShadowsocksX-NG/releases.atom'
@@ -21,8 +21,9 @@ cask 'shadowsocksx-ng' do
                        ],
             quit:      'com.qiuyuzhou.ShadowsocksX-NG',
             script:    {
-                         executable: '/Library/Application Support/ShadowsocksX-NG/proxy_conf_helper',
+                         executable: "#{appdir}/ShadowsocksX-NG.app/Contents/Resources/proxy_conf_helper",
                          args:       ['--mode', 'off'],
+                         sudo:       true,
                        }
 
   zap trash: [
