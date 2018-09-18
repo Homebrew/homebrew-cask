@@ -8,7 +8,7 @@ cask 'copyclip' do
   name 'CopyClip'
   homepage 'https://fiplab.com/apps/copyclip-for-mac'
 
-  app 'CopyClip 2.app'
+  app "CopyClip #{version.major}.app"
 
   uninstall quit: 'com.fiplab.copyclip2',
             zap:  [
