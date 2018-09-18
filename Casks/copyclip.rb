@@ -10,11 +10,11 @@ cask 'copyclip' do
 
   app "CopyClip #{version.major}.app"
 
-  uninstall quit: 'com.fiplab.copyclip2',
+  uninstall quit: 'com.fiplab.copyclip*',
             zap:  [
-                    '~/Library/Application Scripts/com.fiplab.copyclip2helper',
-                    '~/Library/Application Scripts/com.fiplab.copyclip2',
-                    '~/Library/Containers/com.fiplab.copyclip2helper',
-                    '~/Library/Containers/com.fiplab.copyclip2',
+                    '~/Library/Application Scripts/com.fiplab.copyclip*helper',
+                    '~/Library/Application Scripts/com.fiplab.copyclip*',
+                    '~/Library/Containers/com.fiplab.copyclip*helper',
+                    '~/Library/Containers/com.fiplab.copyclip*',
                   ]
 end
