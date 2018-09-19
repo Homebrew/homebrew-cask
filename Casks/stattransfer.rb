@@ -6,7 +6,7 @@ cask 'stattransfer' do
   name 'Stat/Transfer'
   homepage 'https://stattransfer.com/'
 
-  pkg "st_installer_v#{version}.pkg"
+  pkg "st_installer#{version}.pkg"
 
   uninstall pkgutil: 'com.circlesys.pkg'
 end
