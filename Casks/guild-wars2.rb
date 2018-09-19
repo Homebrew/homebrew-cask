@@ -9,4 +9,10 @@ cask 'guild-wars2' do
   homepage 'https://www.guildwars2.com/'
 
   app 'Guild Wars 2 64-bit.app'
+
+  zap trash: [
+               '~/Library/Application Support/Guild Wars 2',
+               '~/Library/Preferences/net.arena.Guild-Wars-2.plist',
+               '~/Library/Saved Application State/net.arena.Guild-Wars-2.savedState',
+             ]
 end
