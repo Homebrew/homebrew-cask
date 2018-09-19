@@ -1,8 +1,8 @@
 cask 'focus' do
-  version '1.8.9'
-  sha256 'f754bb633c9c9616118e9aa40fd69dbc4e0eb9ff304671b02eb04f748d3c1988'
+  version :latest
+  sha256 :no_check
 
-  url "https://heyfocus.com/releases/Focus-#{version}.zip"
+  url 'https://heyfocus.com/releases/Focus-latest.zip'
   name 'Focus'
   homepage 'https://heyfocus.com/'
 
