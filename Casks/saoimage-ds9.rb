@@ -21,5 +21,5 @@ cask 'saoimage-ds9' do
 
   depends_on macos: '>= :yosemite'
 
-  app 'SAOImage DS9.app'
+  app 'SAOImageDS9.app'
 end
