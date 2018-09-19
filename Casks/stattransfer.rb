@@ -8,5 +8,5 @@ cask 'stattransfer' do
 
   pkg "st_installer#{version}.pkg"
 
-  uninstall pkgutil: 'com.circlesys.pkg'
+  uninstall pkgutil: "com.circlesys.v#{version}.pkg"
 end
