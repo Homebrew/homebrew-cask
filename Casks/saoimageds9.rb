@@ -1,4 +1,4 @@
-cask 'saoimage-ds9' do
+cask 'saoimageds9' do
   version '7.6'
 
   if MacOS.version == :yosemite
