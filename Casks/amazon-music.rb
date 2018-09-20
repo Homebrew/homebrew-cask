@@ -10,7 +10,7 @@ cask 'amazon-music' do
   auto_updates true
 
   installer script: {
-                      executable: 'Amazon Music Installer.app/Contents/MacOS/installbuilder.sh'
+                      executable: 'Amazon Music Installer.app/Contents/MacOS/installbuilder.sh',
                     }
 
   uninstall quit:      [
