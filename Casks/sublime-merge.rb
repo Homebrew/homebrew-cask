@@ -9,4 +9,12 @@ cask 'sublime-merge' do
 
   app 'Sublime Merge.app'
   binary "#{appdir}/Sublime Merge.app/Contents/SharedSupport/bin/smerge"
+
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sublimemerge.sfl*',
+               '~/Library/Application Support/Sublime Merge',
+               '~/Library/Caches/com.sublimemerge/',
+               '~/Library/Preferences/com.sublimemerge.plist',
+               '~/Library/Saved Application State/com.sublimemerge.savedState',
+             ]
 end
