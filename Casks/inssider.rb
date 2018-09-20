@@ -1,6 +1,6 @@
 cask 'inssider' do
-  version '4.2.3.4'
-  sha256 'f499dce56c59a2a3091bcd994a85adc5a26c9e14917daa1f3bacabc0fc87a4b1'
+  version '4.2.4.1'
+  sha256 '767f947d6f8e9f7c738c98303c5c5bf29829286470d4da85641c597d87caee10'
 
   # metageek.net was verified as official when first introduced to the cask
   url "http://files.metageek.net/downloads/inSSIDer#{version.major}-installer.dmg"
