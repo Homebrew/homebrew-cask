@@ -7,8 +7,12 @@ cask 'sublime-merge' do
   name 'Sublime Merge'
   homepage 'https://www.sublimemerge.com/'
 
+  auto_updates true
+
   app 'Sublime Merge.app'
   binary "#{appdir}/Sublime Merge.app/Contents/SharedSupport/bin/smerge"
+
+  uninstall quit: 'com.sublimemerge'
 
   zap trash: [
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sublimemerge.sfl*',
