@@ -1,8 +1,10 @@
 cask 'ultraedit' do
-  version '16.10.0.22'
-  sha256 '33e5585ca04eb9f5f895fd2b22c3167adde568b47c9c9552240cb898d4d51797'
+  version '18.00.0.34'
+  sha256 '8525489ca804ac3400e71fb8ce86b6d873b8461f17cfe7d37b609c5004e465b9'
 
-  url  "http://www.ultraedit.com/files/uex/OSX/UltraEdit_#{version}.dmg"
+  url "https://downloads.ultraedit.com/main/ue/mac/UltraEdit_#{version}.dmg",
+      user_agent: :fake
+  appcast 'https://www.ultraedit.com/downloads/uex.html'
   name 'UltraEdit'
   homepage 'https://www.ultraedit.com/'
 
