@@ -6,8 +6,8 @@ cask 'horos' do
     version '2.0.2'
     sha256 '5cc1d6c71c8ae643b4df4fecee93dbe3cfacbcffef52001a76a7683a2725ac08'
   else
-    version '3.1.2'
-    sha256 'aad388ac771ba9fc6f7b2457a4577310f59c6a60156911357f1afe21b6fba45b'
+    version '3.2.1'
+    sha256 '20134d5be2fbc51f8605a5bdb6f31681423d5bb31b7cd3333fd54203838a968f'
   end
 
   url "https://horosproject.org/horos-content/Horos#{version}.dmg"
