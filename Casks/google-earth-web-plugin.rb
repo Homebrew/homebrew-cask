@@ -9,5 +9,8 @@ cask 'google-earth-web-plugin' do
 
   pkg 'Install Google Earth.pkg'
 
-  uninstall pkgutil: 'com.Google.GoogleEarthPlugin.plugin'
+  uninstall pkgutil: [
+                       'com.Google.GoogleEarthPlugin.plugin',
+                       'om.google.pkg.Keystone',
+                     ]
 end
