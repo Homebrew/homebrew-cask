@@ -7,6 +7,6 @@ cask 'ultimate' do
   homepage 'https://www.epubor.com/'
 
   pkg 'Ultimate.pkg'
-  
-  uninstall pkgutil:   'EpuborStudioUltimate2'
+
+  uninstall pkgutil: 'EpuborStudioUltimate2'
 end
