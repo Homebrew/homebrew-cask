@@ -168,7 +168,7 @@ $ brew cask style Casks/my-new-cask.rb [--fix]
 
 Keep in mind all of these checks will be made when you submit your PR, so by doing them in advance you’re saving everyone a lot of time and trouble.
 
-If your application and Homebrew-Cask do not work well together, feel free to [file an issue](https://github.com/Homebrew/homebrew-cask#reporting-bugs) after checking out open issues.
+If your application and Homebrew Cask do not work well together, feel free to [file an issue](https://github.com/Homebrew/homebrew-cask#reporting-bugs) after checking out open issues.
 
 ## Finding a Home For Your Cask
 
@@ -269,7 +269,7 @@ See [a note about git commit messages](http://tbaggery.com/2008/04/19/a-note-abo
 
 The first line of a commit message becomes the **title** of a pull request on GitHub, like the subject line of an email. Including the key info in the first line will help us respond faster to your pull.
 
-For Cask commits in the Homebrew-Cask project, we like to include the Application name, version number (or `:latest`), and purpose of the commit in the first line.
+For Cask commits in the Homebrew Cask project, we like to include the Application name, version number (or `:latest`), and purpose of the commit in the first line.
 
 Examples of good, clear commit summaries:
 
