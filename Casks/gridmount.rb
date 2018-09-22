@@ -7,8 +7,8 @@ cask 'gridmount' do
   homepage 'https://codingrange.com/gridmount'
 
   auto_updates true
-  depends_on macos: '>= :yosemite',
-             cask:  'osxfuse'
+  depends_on macos: '>= :yosemite'
+  depends_on cask:  'osxfuse'
 
   app 'GridMount.app'
 
