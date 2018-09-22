@@ -1,9 +1,9 @@
 cask 'sound-control' do
-  version '2.2.3'
-  sha256 'ca282e493693910b0d94e61828a391cd18503957b34b0d6f6bb442b0068e5214'
+  version '2.2.4'
+  sha256 '248b1dce993d001735335992c035115815be8dd1f3a7975bed3a746405eab560'
 
   # staticz.net was verified as official when first introduced to the cask
-  url "http://staticz.net/downloads/SoundControlInstaller_#{version}.dmg"
+  url "http://staticz.net/downloads/SoundControl_#{version}.dmg"
   name 'Sound Control'
   homepage 'https://staticz.com/soundcontrol/'
 
