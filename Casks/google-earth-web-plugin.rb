@@ -11,6 +11,6 @@ cask 'google-earth-web-plugin' do
 
   uninstall pkgutil: [
                        'com.Google.GoogleEarthPlugin.plugin',
-                       'om.google.pkg.Keystone',
+                       'xom.google.pkg.Keystone',
                      ]
 end
