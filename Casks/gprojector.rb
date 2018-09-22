@@ -1,6 +1,6 @@
 cask 'gprojector' do
-  version '2.2.0'
-  sha256 '292dc0b6049023cd97af6259c5f5a7aa36d0382eae88882eb8793663da4bbe73'
+  version '2.3.1'
+  sha256 'ec3e81494c288e7ce6c1b07d3382ec24ef6da42d87f1d67c35ab226052552df5'
 
   url "https://www.giss.nasa.gov/tools/gprojector/download/G.ProjectorMacOS-#{version}.dmg"
   name 'G.Projector'

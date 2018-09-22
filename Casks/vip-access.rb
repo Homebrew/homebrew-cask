@@ -7,7 +7,11 @@ cask 'vip-access' do
   name 'Symantec VIP Access'
   homepage 'https://vip.symantec.com/'
 
-  app 'VIP Access.app'
+  depends_on macos: '>= :el_capitan'
+
+  pkg 'VIP Access.pkg'
+
+  uninstall pkgutil: 'com.symantec.vippaccess'
 
   zap trash: [
                '~/Library/Caches/com.symantec.VIP-Access',

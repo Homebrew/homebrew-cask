@@ -20,6 +20,7 @@ cask 'java-jdk-javadoc' do
   uninstall_postflight do
     `/usr/libexec/java_home -v #{version.before_comma} -X | grep -B0 -A1 JVMHomePath | sed -n -e 's/[[:space:]]*<string>\\(.*\\)<\\/string>/\\1/p'`.split("\n").each do |path|
       next unless File.exist?("#{path}/docs")
+
       system_command '/bin/rm',
                      args: ['-rf', "#{path}/docs"],
                      sudo: true
