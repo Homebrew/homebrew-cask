@@ -6,7 +6,5 @@ cask 'ultimate' do
   name 'Ultimate Converter'
   homepage 'https://www.epubor.com/'
 
-  container nested: "epubor_ultimate/Ultimate_v#{version}.dmg"
-
-  app 'Ultimate.app'
+  pkg 'Ultimate.pkg'
 end
