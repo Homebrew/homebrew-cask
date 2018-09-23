@@ -7,6 +7,7 @@ cask 'prizmo' do
   name 'Prizmo'
   homepage 'https://creaceed.com/prizmo'
 
+  auto_updates true
   depends_on macos: '>= :yosemite'
 
   app 'Prizmo.app'
