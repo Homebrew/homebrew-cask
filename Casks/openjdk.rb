@@ -10,5 +10,24 @@ cask 'openjdk' do
   auto_updates true
 
   binary "/Library/Java/JavaVirtualMachines/#{version}/bin/java"
+  binary "/Library/Java/JavaVirtualMachines/#{version}/bin/javac"
   artifact "#{version}/", target: "/Library/Java/JavaVirtualMachines/#{version}"
+
+  uninstall launchctl: [
+                         'com.oracle.java.Helper-Tool',
+                         'com.oracle.java.Java-Updater',
+                       ],
+            delete:    [
+                         '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin',
+                         '~/Library/Preferences/com.oracle.java.Helper-Tool.plist',
+                         '/Library/PreferencePanes/JavaControlPanel.prefPane',
+                       ],
+            rmdir:     [
+                         "/Library/Java/JavaVirtualMachines/#{version}",
+                         '~/Library/Application Support/Java',
+                         '/Library/Application Support/Oracle/Java',
+                         '~/Library/Application Support/Oracle/Java',
+                         '~/Library/Application Support/JREInstaller',
+                         "/Library/Java/JavaVirtualMachines/#{version}",
+                       ]
 end
