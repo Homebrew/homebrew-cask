@@ -9,6 +9,7 @@ cask 'gpg-suite' do
 
   auto_updates true
   conflicts_with cask: 'gpg-suite-nightly'
+  depends_on macos: '>= :sierra'
 
   pkg 'Install.pkg'
 
