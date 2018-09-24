@@ -8,5 +8,5 @@ cask 'bunqcommunity-bunq' do
   name 'bunqcommunity-bunq'
   homepage 'https://bunqdesk.top/'
 
-  app 'bunqcommunity-bunq.app'
+  app 'bunqDesktop.app'
 end
