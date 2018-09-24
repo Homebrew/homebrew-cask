@@ -2,16 +2,6 @@
 
 `conflicts_with` is used to declare conflicts that keep a Cask from installing or working correctly.
 
-Several keys are accepted by `conflicts_with`, but not all of them are yet enforced by the backend implementation. It is fine to proactively add `conflicts_with` stanzas to Casks in anticipation of future backend support; they are currently just a type of structured comment.
-
-| key        | description |
-| ---------- | ----------- |
-| `formula:` | *stub - not yet functional*
-| `macos:`   | *stub - not yet functional*
-| `arch:`    | *stub - not yet functional*
-| `x11:`     | *stub - not yet functional*
-| `java:`    | *stub - not yet functional*
-
 ## conflicts_with cask:
 
 The value should be another Cask token.
@@ -20,4 +10,16 @@ Example use: [`wireshark`](https://github.com/Homebrew/homebrew-cask/blob/903493
 
 ```ruby
 conflicts_with cask: 'wireshark-chmodbpf'
+```
+
+## conflicts_with formula:
+
+Note: `conflicts_with formula:` is a stub and is not yet functional.
+
+The value should be another formula name.
+
+Example use: [`macvim`](https://github.com/Homebrew/homebrew-cask/blob/84b90afd7b571e581f8a48d4bdf9c7bb24ebff3b/Casks/macvim.rb#L10), which conflicts with the `macvim` formula.
+
+```ruby
+conflicts_with formula: 'macvim'
 ```
