@@ -7,7 +7,7 @@ cask 'sound-control' do
   name 'Sound Control'
   homepage 'https://staticz.com/soundcontrol/'
 
-  pkg 'Sound Control Installer.pkg'
+  app 'Sound Control.app'
 
   uninstall launchctl: 'com.staticz.soundcontrol.*',
             quit:      'com.staticz.SoundControl',
