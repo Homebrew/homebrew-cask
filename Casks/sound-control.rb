@@ -10,6 +10,5 @@ cask 'sound-control' do
   app 'Sound Control.app'
 
   uninstall launchctl: 'com.staticz.soundcontrol.*',
-            quit:      'com.staticz.SoundControl',
-            pkgutil:   'com.staticz.installer.soundcontrol.*'
+            quit:      'com.staticz.SoundControl'
 end
