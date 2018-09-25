@@ -1,5 +1,5 @@
 cask 'banktivity' do
-  version '6'
+  version '7'
   sha256 :no_check # required as upstream package is updated in-place
 
   # iggsoft.com was verified as official when first introduced to the cask
