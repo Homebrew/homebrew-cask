@@ -10,5 +10,9 @@ cask 'quodlibet' do
 
   app 'QuodLibet.app'
 
-  zap trash: '~/.quodlibet'
+  zap trash: [
+               '~/Library/Preferences/io.github.quodlibet.quodlibet.plist',
+               '~/Library/Saved Application State/io.github.quodlibet.quodlibet.savedState',
+               '~/.quodlibet',
+             ]
 end
