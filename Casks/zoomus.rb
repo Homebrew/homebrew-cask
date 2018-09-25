@@ -1,14 +1,12 @@
 cask 'zoomus' do
-  version '4.1.31275.0831'
-  sha256 'e622f9bbf6bb23dc831d1e985c4b7d4b1e587c4fb0917cdd1968491956a6b82a'
+  version :latest
+  sha256 :no_check
 
-  url "https://www.zoom.us/client/#{version}/zoomusInstaller.pkg"
+  url 'https://zoom.us/client/latest/Zoom.pkg'
   name 'Zoom.us'
   homepage 'https://www.zoom.us/'
 
-  auto_updates true
-
-  pkg 'zoomusInstaller.pkg'
+  pkg 'Zoom.pkg'
 
   uninstall delete: '/Applications/zoom.us.app',
             quit:   'us.zoom.ZoomOpener',
