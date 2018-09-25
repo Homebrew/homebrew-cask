@@ -81,7 +81,7 @@ Details of software names and brands will inevitably be lost in the conversion t
 
 ### Simplified Names of non-App Software
 
-* Currently, rules for generating a token are not well-defined for Preference Panes, QuickLook plugins, and several other types of software installable by Homebrew-Cask. Just create the best name you can, based on the filename on disk or the vendor’s web page. Watch out for duplicates.
+* Currently, rules for generating a token are not well-defined for Preference Panes, QuickLook plugins, and several other types of software installable by Homebrew Cask. Just create the best name you can, based on the filename on disk or the vendor’s web page. Watch out for duplicates.
 
   Non-app tokens should become more standardized in the future.
 
@@ -147,7 +147,7 @@ When the token for a new Cask would otherwise conflict with the token of an alre
 
 ## Token Overlap With a Formula
 
-If a Homebrew formula and a Homebrew-Cask cask both exist with the same token and they both refer to the same app — respectively a CLI and a GUI — and the GUI app is simply a wrapper of the CLI tool but has been decided to provide enough value to warrant the inclusion of both the formula and the cask, the cask will have the `-app` suffix. This is the only instance where an `-app` suffix is allowed, precisely so the “why” is clear when you know the rule.
+If a Homebrew formula and a Homebrew Cask cask both exist with the same token and they both refer to the same app — respectively a CLI and a GUI — and the GUI app is simply a wrapper of the CLI tool but has been decided to provide enough value to warrant the inclusion of both the formula and the cask, the cask will have the `-app` suffix. This is the only instance where an `-app` suffix is allowed, precisely so the “why” is clear when you know the rule.
 
 ## Potentially Misleading Name
 

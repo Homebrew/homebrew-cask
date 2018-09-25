@@ -8,5 +8,18 @@ cask 'paste' do
   name 'Paste'
   homepage 'https://pasteapp.me/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Paste.app'
+
+  uninstall launchctl: 'com.wiheads.paste.loginitem',
+            quit:      'com.wiheads.paste'
+
+  zap trash: [
+               '~/Library/Application Support/com.wiheads.paste',
+               '~/Library/Application Support/Paste',
+               '~/Library/Caches/com.wikiheads.paste',
+               '~/Library/Logs/Paste',
+               '~/Library/Preferences/com.wikiheads.paste.plist',
+             ]
 end

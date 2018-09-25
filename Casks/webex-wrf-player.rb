@@ -1,6 +1,6 @@
 cask 'webex-wrf-player' do
-  version 'T31L'
-  sha256 'bc4a62cca340e13933be580599611688c5bde5ab88576449be7d5f4f0317eb90'
+  version 'T33L'
+  sha256 '51e93739854124f44ecae8dc45efcad5c39d64801d928262816f26b147640303'
 
   url "https://welcome.webex.com/client/#{version}/mac/intel/webexplayer_intel.dmg"
   name 'WebEx Player'

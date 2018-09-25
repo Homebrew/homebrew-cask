@@ -14,7 +14,7 @@ If the error output includes something like
 curl: (22) The requested URL returned error: 403 Forbidden
 ```
 
-the problem was with the downloading itself (see how the error came from `curl`). Homebrew-Cask itself is fine and the problem is generally one of:
+the problem was with the downloading itself (see how the error came from `curl`). Homebrew Cask itself is fine and the problem is generally one of:
 
 1. App vendor or file in their server is down.
 2. Cask is outdated.
@@ -32,7 +32,7 @@ If the error output includes something like
 Error: Permission denied - (/usr/local/Caskroom/someapp/0.1/Someapp.app, /Applications/Someapp.app)
 ```
 
-the problem isn’t with Homebrew-Cask itself, but some permissions on your system.
+the problem isn’t with Homebrew Cask itself, but some permissions on your system.
 
 [Continue to the fix](permission_denied_error_fix_appdir.md)
 
@@ -63,7 +63,7 @@ If the error output includes something like
 Error: It seems the App source is not there: '/usr/local/Caskroom/…'
 ```
 
-the directory structure inside the app’s archive changed in some way. It must be fixed in Homebrew-Cask.
+the directory structure inside the app’s archive changed in some way. It must be fixed in Homebrew Cask.
 
 [Continue to the fix](source_is_not_there_fix.md)
 
