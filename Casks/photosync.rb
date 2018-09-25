@@ -4,7 +4,7 @@ cask 'photosync' do
 
   url "https://www.photosync-app.com/tl_files/photosync/publish/mac/photosync_#{version.dots_to_underscores}.dmg"
   appcast 'https://download.photosync-app.com/xml/photosyncmac-updates-standalone.xml'
-  name 'PhotoSync Companion for macOS'
+  name 'PhotoSync Companion'
   homepage 'https://www.photosync-app.com/photosync/en/home.html'
 
   app 'PhotoSync.app'
