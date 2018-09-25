@@ -8,6 +8,8 @@ cask 'vox' do
   name 'VOX'
   homepage 'https://vox.rocks/mac-music-player'
 
+  auto_updates true
+
   app 'VOX.app'
 
   uninstall launchctl: 'com.coppertino.VoxHelper'
