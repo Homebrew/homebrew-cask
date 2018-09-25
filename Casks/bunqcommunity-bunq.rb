@@ -5,7 +5,7 @@ cask 'bunqcommunity-bunq' do
   # github.com/bunqCommunity/bunqDesktop was verified as official when first introduced to the cask
   url "https://github.com/bunqCommunity/bunqDesktop/releases/download/#{version}/bunqDesktop-#{version}.dmg"
   appcast 'https://github.com/bunqCommunity/bunqDesktop/releases.atom'
-  name 'bunqcommunity-bunq'
+  name 'bunqDesktop'
   homepage 'https://bunqdesk.top/'
 
   app 'bunqDesktop.app'
