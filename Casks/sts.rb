@@ -1,13 +1,13 @@
 cask 'sts' do
-  version '3.9.5.RELEASE,4.8.0'
-  sha256 '6841719407b971be35a212f9c74e67301e8d059b235552206b59fc0c9db36ef0'
+  version '4.0.0.RELEASE,4.9.0'
+  sha256 'abed012ac90004fb8e4bb4a423cfbb03ef4ba38fe3c3f926c00a5b351fe85944'
 
   # download.springsource.com/release/STS was verified as official when first introduced to the cask
-  url "http://download.springsource.com/release/STS/#{version.before_comma}/dist/e#{version.after_comma.major_minor}/spring-tool-suite-#{version.before_comma}-e#{version.after_comma}-macosx-cocoa-x86_64.dmg"
+  url 'http://download.springsource.com/release/STS4/4.0.0.RELEASE/dist/e4.9/spring-tool-suite-4-4.0.0.RELEASE-e4.9.0-macosx.cocoa.x86_64.dmg'
   name 'Spring Tool Suite'
   homepage 'https://spring.io/tools/sts'
 
   auto_updates true
 
-  app 'STS.app'
+  app 'SpringToolSuite4.app'
 end
