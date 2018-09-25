@@ -1,4 +1,4 @@
-cask 'sierra-cache-cleaner' do
+cask 'mojave-cache-cleaner' do
   version :latest
   sha256 :no_check
 
