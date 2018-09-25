@@ -12,9 +12,11 @@ cask 'xdm' do
                       sudo:       true,
                     }
 
-  uninstall delete: ['/Applications/xdm.app/',
-                     '~/Library/LaunchAgents/org.sdg.xdman.plist',
-                     '~/Desktop/xdm.app']
+  uninstall delete: [
+                      '/Applications/xdm.app/',
+                      '~/Library/LaunchAgents/org.sdg.xdman.plist',
+                      '~/Desktop/xdm.app',
+                    ]
 
   zap trash: '~/.xdman'
 end
