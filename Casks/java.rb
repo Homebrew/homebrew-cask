@@ -7,7 +7,7 @@ cask 'java' do
                  'oraclelicense' => 'accept-securebackup-cookie',
                }
   name 'Java Standard Edition Development Kit'
-  homepage "https://www.oracle.com/technetwork/java/javase/downloads/jdk#{version.major}-downloads-4416644.html"
+  homepage 'https://www.oracle.com/technetwork/java/javase/overview/index.html'
 
   # auto_updates true: JDK does not auto-update
   depends_on macos: '>= :yosemite'
@@ -81,7 +81,7 @@ cask 'java' do
              ]
 
   caveats do
-    license 'https://www.oracle.com/technetwork/java/javase/terms/license/index.html'
+    license 'https://www.oracle.com/technetwork/java/javase/terms/license/javase-license.html'
     <<~EOS
       This Cask makes minor modifications to the JRE to prevent issues with
       packaged applications, as discussed here:
