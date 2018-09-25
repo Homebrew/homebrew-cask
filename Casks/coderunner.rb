@@ -1,6 +1,6 @@
 cask 'coderunner' do
-  version '2.3'
-  sha256 '0e086e416827b0262d65ca3bdcec82a81c5ba6eff5018582d324e0cd3a343dd8'
+  version '3.0'
+  sha256 'd452c388e857f7bb0af242b2e981e988d64b62489027e172791dde92c3089e32'
 
   # dktfof1z89xc1.cloudfront.net was verified as official when first introduced to the cask
   url "https://dktfof1z89xc1.cloudfront.net/CodeRunner-#{version}.zip"
