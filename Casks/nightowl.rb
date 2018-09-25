@@ -5,7 +5,7 @@ cask 'nightowl' do
   url 'https://nightowl.kramser.xyz/files/NightOwl0.2.6.zip'
   name 'nightowl'
   name 'NightOwl'
-  homepage 'https://nightowl.kramser.xyz'
+  homepage 'https://nightowl.kramser.xyz/'
 
   app 'NightOwl.app'
 end
