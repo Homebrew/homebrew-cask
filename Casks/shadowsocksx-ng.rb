@@ -1,6 +1,6 @@
 cask 'shadowsocksx-ng' do
-  version '1.8.0'
-  sha256 'c9b382a166394121da8571c966b04628ec9bc303e32bb4ec86e0c777ab1b920c'
+  version '1.8.1'
+  sha256 'c700654d0f4936e081bcc91479cb3ea7dd5f67d4b28b312a66221093726cd28d'
 
   url "https://github.com/shadowsocks/ShadowsocksX-NG/releases/download/v#{version}/ShadowsocksX-NG.#{version}.zip"
   appcast 'https://github.com/shadowsocks/ShadowsocksX-NG/releases.atom'
