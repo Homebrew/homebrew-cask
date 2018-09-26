@@ -12,5 +12,11 @@ cask 'trinity' do
 
   uninstall quit: 'org.iota.trinity'
 
-  zap trash: '~/Library/Application Support/Trinity'
+  zap trash: [
+               '~/Library/Application Support/Trinity',
+               '~/Library/Logs/Trinity',
+               '~/Library/Preferences/org.iota.trinity.helper.plist',
+               '~/Library/Preferences/org.iota.trinity.plist',
+               '~/Library/Saved Application State/org.iota.trinity.savedState',
+             ]
 end
