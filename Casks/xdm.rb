@@ -13,9 +13,8 @@ cask 'xdm' do
                     }
 
   uninstall delete: [
-                      '/Applications/xdm.app/',
+                      '/Applications/xdm.app',
                       '~/Library/LaunchAgents/org.sdg.xdman.plist',
-                      '~/Desktop/xdm.app',
                     ]
 
   zap trash: '~/.xdman'
