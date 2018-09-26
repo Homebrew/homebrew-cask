@@ -7,5 +7,5 @@ cask 'diskmaker-x' do
   name 'DiskMaker X'
   homepage 'https://diskmakerx.com/'
 
-  app "DiskMaker X #{version.major} for High Sierra.app"
+  app "DiskMaker X #{version.major} for macOS Mojave.app"
 end
