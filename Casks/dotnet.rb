@@ -11,8 +11,8 @@ cask 'dotnet' do
 
   pkg "dotnet-runtime-#{version}-osx-x64.pkg"
 
-  uninstall pkgutil: 'com.microsoft.dotnet.*',
-            delete:  '/etc/paths.d/dotnet'
+  uninstall pkgutil: "com.microsoft.dotnet.*#{version.major_minor}*"
 
-  zap trash: '~/.nuget'
+  zap delete: '/etc/paths.d/dotnet',
+      trash:  '~/.nuget'
 end
