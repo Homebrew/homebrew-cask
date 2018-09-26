@@ -1,6 +1,6 @@
 cask 'eid-ee' do
-  version '18.6.0.1791'
-  sha256 'd1f938969a02f94eaae3a1f063d0e91199b56b2e33fa74e2ab8bce59c191a179'
+  version '18.9.0.1792'
+  sha256 'fa2bb3c7a426d749fea8a863c1bdd95aa8219c912e4e121d19014148dff1b424'
 
   url "https://installer.id.ee/media/osx/Open-EID_#{version}.dmg"
   name 'Electronic identity card software for Estonia'
@@ -13,7 +13,8 @@ cask 'eid-ee' do
                       executable: 'uninstall.sh',
                       input:      ['y'],
                       sudo:       true,
-                    }
+                    },
+            quit:   'ee.ria.TokenSigningApp'
 
   caveats <<~EOS
     DigiDoc3 Client and ID-card Utility are available in the App Store:
