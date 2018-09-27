@@ -1,8 +1,8 @@
 cask 'monogame' do
-  version '3.6'
-  sha256 '2a948ff5a6e197c9487ec33b0c1cc9943d1f04b61ed15f25cf3942f90e319fc2'
+  version '3.7'
+  sha256 'fa8fa17f49222faaa8e4e3b61fc53a684a5f1f5736775596c8c0deca02117667'
 
-  url "http://www.monogame.net/releases/v#{version}/MonoGame.pkg"
+  url "https://github.com/MonoGame/MonoGame/releases/download/v3.7/MonoGame.pkg"
   name 'MonoGame'
   homepage 'http://www.monogame.net/'
 
