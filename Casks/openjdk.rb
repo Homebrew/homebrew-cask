@@ -13,21 +13,8 @@ cask 'openjdk' do
   binary "/Library/Java/JavaVirtualMachines/#{version}/bin/javac"
   artifact "jdk-#{version}/", target: "/Library/Java/JavaVirtualMachines/jdk-#{version}"
 
-  uninstall launchctl: [
-                         'com.oracle.java.Helper-Tool',
-                         'com.oracle.java.Java-Updater',
-                       ],
-            delete:    [
-                         '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin',
-                         '~/Library/Preferences/com.oracle.java.Helper-Tool.plist',
-                         '/Library/PreferencePanes/JavaControlPanel.prefPane',
-                       ],
-            rmdir:     [
-                         "/Library/Java/JavaVirtualMachines/jdk-#{version}",
-                         '~/Library/Application Support/Java',
-                         '/Library/Application Support/Oracle/Java',
-                         '~/Library/Application Support/Oracle/Java',
-                         '~/Library/Application Support/JREInstaller',
-                         "/Library/Java/JavaVirtualMachines/jdk-#{version}",
-                       ]
+  uninstall rmdir: [  "/Library/Java/JavaVirtualMachines/jdk-#{version}",
+                      '~/Library/Application Support/Java',
+                      '~/Library/Application Support/JREInstaller'
+  ]
 end
