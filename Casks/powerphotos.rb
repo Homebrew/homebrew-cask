@@ -9,7 +9,7 @@ cask 'powerphotos' do
     url "https://www.fatcatsoftware.com/powerphotos/PowerPhotos_#{version.no_dots}.zip"
   else
     version '1.4.8'
-    sha256 'ed9be64f4cb5a3d3848ad5177947bd8cd33e36846ea36266ef9d4d7b46813538'
+    sha256 'e6e19e0a597bfab9b9d8deb4e23fabad7c6ebe0dfb86565da504df62d5ecc613'
     url 'https://www.fatcatsoftware.com/powerphotos/PowerPhotos.zip'
   end
 
