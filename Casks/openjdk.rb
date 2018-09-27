@@ -1,17 +1,17 @@
 cask 'openjdk' do
-  version 'jdk8u172-b11'
-  sha256 'c271c5aeebfec5cd6f41c24092472a66fc55f893e3118e63f4c1ab1cb4446157'
+  version '10.0.2.13'
+  sha256 '5fe24ab7845005c94bddf5f28bd876b63a2a316f7ab757a5d1eddc24e229b7ae'
 
-  url "https://github.com/AdoptOpenJDK/openjdk8-releases/releases/download/#{version}/OpenJDK8_x64_Mac_#{version}.tar.gz"
-  appcast 'https://github.com/AdoptOpenJDK/openjdk8-releases/releases.atom'
+  url "https://github.com/AdoptOpenJDK/openjdk10-releases/releases/download/jdk-#{version}/OpenJDK10_x64_Mac_jdk-#{version}.tar.gz"
+  appcast 'https://github.com/AdoptOpenJDK/openjdk10-releases/releases.atom'
   name 'OpenJDK'
-  homepage 'https://github.com/AdoptOpenJDK/openjdk8-releases'
+  homepage 'https://github.com/AdoptOpenJDK/openjdk10-releases'
 
-  auto_updates true
+  auto_updates false
 
   binary "/Library/Java/JavaVirtualMachines/#{version}/bin/java"
   binary "/Library/Java/JavaVirtualMachines/#{version}/bin/javac"
-  artifact "#{version}/", target: "/Library/Java/JavaVirtualMachines/#{version}"
+  artifact "jdk-#{version}/", target: "/Library/Java/JavaVirtualMachines/jdk-#{version}"
 
   uninstall launchctl: [
                          'com.oracle.java.Helper-Tool',
@@ -23,11 +23,11 @@ cask 'openjdk' do
                          '/Library/PreferencePanes/JavaControlPanel.prefPane',
                        ],
             rmdir:     [
-                         "/Library/Java/JavaVirtualMachines/#{version}",
+                         "/Library/Java/JavaVirtualMachines/jdk-#{version}",
                          '~/Library/Application Support/Java',
                          '/Library/Application Support/Oracle/Java',
                          '~/Library/Application Support/Oracle/Java',
                          '~/Library/Application Support/JREInstaller',
-                         "/Library/Java/JavaVirtualMachines/#{version}",
+                         "/Library/Java/JavaVirtualMachines/jdk-#{version}",
                        ]
 end
