@@ -7,12 +7,17 @@ cask 'dotnet-sdk' do
   name '.NET Core SDK'
   homepage 'https://www.microsoft.com/net/core#macos'
 
+  conflicts_with cask: [
+                         'dotnet',
+                         'dotnet-preview',
+                         'dotnet-sdk-preview',
+                       ]
   depends_on macos: '>= :sierra'
 
   pkg "dotnet-sdk-#{version}-osx-x64.pkg"
 
-  uninstall pkgutil: "com.microsoft.dotnet.*#{version.major_minor}*"
+  uninstall pkgutil: 'com.microsoft.dotnet.*',
+            delete:  '/etc/paths.d/dotnet'
 
-  zap delete: '/etc/paths.d/dotnet',
-      trash:  '~/.nuget'
+  zap trash: '~/.nuget'
 end
