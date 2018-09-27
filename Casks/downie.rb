@@ -1,6 +1,6 @@
 cask 'downie' do
-  version '3.4.3,1874'
-  sha256 'd3518030149f3c6b2fb7080b2388efff7a90b24a68fe46f23e6eb4ac08992bd1'
+  version '3.4.5,1876'
+  sha256 '5bd3bddb35b4837fc0a80f6f1760ef6da676498b16bb027fc954bcab3d7abda1'
 
   url "https://trial.charliemonroe.net/downie/Downie_#{version.major}_#{version.after_comma}.zip"
   appcast "https://trial.charliemonroe.net/downie/updates_#{version.major}.xml"
