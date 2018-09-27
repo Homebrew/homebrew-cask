@@ -6,11 +6,6 @@ cask 'magicavoxel' do
   url "http://192.241.207.218/uploads/MagicaVoxel-#{version}-mac.zip"
   name 'MagicaVoxel'
   homepage 'https://ephtracy.github.io/'
-  
-  # rename folder
-  system 'mv /usr/local/Caskroom/magicavoxel/0.99.1-alpha/ /usr/local/Caskroom/magicavoxel/0.99.1-alpha-bak/'
-  system 'mkdir /usr/local/Caskroom/magicavoxel/0.99.1-alpha/'
-  system 'mv /usr/local/Caskroom/magicavoxel/0.99.1-alpha-bak/ /usr/local/Caskroom/magicavoxel/0.99.1-alpha/MagicaVoxel-0.99.1-alpha-mac/'
 
   suite "MagicaVoxel-#{version}-mac"
 end
