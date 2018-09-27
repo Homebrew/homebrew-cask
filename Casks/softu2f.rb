@@ -1,6 +1,6 @@
 cask 'softu2f' do
-  version '0.0.17'
-  sha256 '5587405776f3249732099059b7e8bc880bf67e7c1647f453ce77b727c0bcd052'
+  version '0.0.18'
+  sha256 '035eea8b9a1b28b639a2f582904f085c6b7f7fe1dfe05d82e7c460a341cd7e32'
 
   url "https://github.com/github/SoftU2F/releases/download/#{version}/SoftU2F.pkg"
   appcast 'https://github.com/github/SoftU2F/releases.atom'
