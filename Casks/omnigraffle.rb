@@ -12,6 +12,7 @@ cask 'omnigraffle' do
   name 'OmniGraffle'
   homepage 'https://www.omnigroup.com/omnigraffle/'
 
+  auto_updates true
   depends_on macos: '>= :sierra'
 
   app 'OmniGraffle.app'
