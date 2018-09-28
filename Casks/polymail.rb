@@ -1,6 +1,6 @@
 cask 'polymail' do
-  version '2.0.9'
-  sha256 '02786392e885901b254bb14a63683a70ff56ac885b5ade9dbf7d2e3b0e822726'
+  version '2.1.1'
+  sha256 'f0da2326c5c15642f336715f7e04713af5f97b8fd9c91b80c828769b5c5d5058'
 
   url "https://sparkle-updater.polymail.io/macos/builds/Polymail-v#{version}.zip"
   name 'Polymail'
