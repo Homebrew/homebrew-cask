@@ -6,7 +6,6 @@ cask 'phantomjs' do
   url "https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-#{version}-macosx.zip"
   name 'PhantomJS'
   homepage 'http://phantomjs.org/'
-  license :bsd
 
   binary "phantomjs-#{version}-macosx/bin/phantomjs"
 end
