@@ -35,6 +35,10 @@ cask 'on1-photo-raw' do
                "~/Library/Application Support/Adobe/Lightroom/External Editor Presets/ON1 Effects #{version}-suite.lrtemplate",
                "~/Library/Application Support/Adobe/Lightroom/Modules/ON1 Resize #{version}-suite.lrplugin",
                "~/Library/Application Support/Adobe/Lightroom/Modules/ON1 Photo RAW #{version}.lrplugin",
+               "~/Library/Application Support/com.ononesoftware.ON1PhotoRAW#{version}.premium",
+               "~/Library/Preferences/com.ononesoftware.ON1Layers#{version}.plist",
+               "~/Library/Preferences/com.ononesoftware.ON1PhotoRAW#{version}.premium.plist",
+               "~/Library/Preferences/com.ononesoftware.ON1Browse#{version}.plist",
              ],
       rmdir: '~/Library/Application Support/ON1'
 end
