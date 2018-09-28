@@ -9,5 +9,5 @@ cask 'thingsmacsandboxhelper' do
   name 'ThingsMacSandboxHelper'
   homepage "https://culturedcode.com/things/mac/help/things-sandboxing-helper-things#{version.major}/"
 
-  app 'Things Helper.app'
+  app 'ThingsMacSandboxHelper.app'
 end
