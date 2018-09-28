@@ -9,8 +9,6 @@ cask 'on1-photo-raw' do
 
   pkg "ON1 Photo RAW #{version}.pkg"
 
-  uninstall script: {
-                      executable: "/Library/Application Support/ON1/Remove ON1 Photo RAW #{version}.app/Contents/MacOS/applet",
-                      sudo:       true,
-                    }
+  uninstall pkgutil: 'com.ononesoftware.pluginsuite1200.premium',
+            delete: "/Applications/ON1 Photo RAW #{version}"
 end
