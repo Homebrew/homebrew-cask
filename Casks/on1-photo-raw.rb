@@ -10,5 +10,5 @@ cask 'on1-photo-raw' do
   pkg "ON1 Photo RAW #{version}.pkg"
 
   uninstall pkgutil: 'com.ononesoftware.pluginsuite1200.premium',
-            delete: "/Applications/ON1 Photo RAW #{version}"
+            delete:  "/Applications/ON1 Photo RAW #{version}"
 end
