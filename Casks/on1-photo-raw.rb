@@ -16,7 +16,8 @@ cask 'on1-photo-raw' do
                        "/Library/Application Support/Adobe/Plug-Ins/CC/ON1 Develop #{version}-suite.plugin",
                        "/Library/Application Support/Adobe/Plug-Ins/CC/ON1 Effects #{version}-suite.plugin",
                        "/Library/Application Support/Adobe/Plug-Ins/CC/ON1 Resize #{version}-suite.plugin",
-                     ]
+                     ],
+            rmdir:   '/Library/Application Support/ON1'
 
   zap trash: [
                "~/Library/Application Support/ON1/ON1 Layers #{version}",
@@ -29,5 +30,6 @@ cask 'on1-photo-raw' do
                "~/Library/Application Support/Adobe/Lightroom/External Editor Presets/ON1 Effects #{version}-suite.lrtemplate",
                "~/Library/Application Support/Adobe/Lightroom/Modules/ON1 Resize #{version}-suite.lrplugin",
                "~/Library/Application Support/Adobe/Lightroom/Modules/ON1 Photo RAW #{version}.lrplugin",
-             ]
+             ],
+      rmdir: '~/Library/Application Support/ON1'
 end
