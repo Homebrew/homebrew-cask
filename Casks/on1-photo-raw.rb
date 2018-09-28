@@ -10,5 +10,24 @@ cask 'on1-photo-raw' do
   pkg "ON1 Photo RAW #{version}.pkg"
 
   uninstall pkgutil: 'com.ononesoftware.pluginsuite1200.premium',
-            delete:  "/Applications/ON1 Photo RAW #{version}"
+            delete:  [
+                       "/Applications/ON1 Photo RAW #{version}",
+                       "/Library/Application Support/ON1/ON1 Layers #{version}",
+                       "/Library/Application Support/Adobe/Plug-Ins/CC/ON1 Develop #{version}-suite.plugin",
+                       "/Library/Application Support/Adobe/Plug-Ins/CC/ON1 Effects #{version}-suite.plugin",
+                       "/Library/Application Support/Adobe/Plug-Ins/CC/ON1 Resize #{version}-suite.plugin",
+                     ]
+
+  zap trash: [
+               "~/Library/Application Support/ON1/ON1 Layers #{version}",
+               "~/Library/Application Support/ON1/ON1 Photo RAW #{version}",
+               "~/Library/Application Support/ON1/ON1 Develop #{version}",
+               "~/Library/Application Support/ON1/ON1 Effects #{version}",
+               "~/Library/Application Support/ON1/ON1 Resize #{version}",
+               "~/Library/Application Support/Adobe/Lightroom/External Editor Presets/ON1 Enhance #{version}-suite.lrtemplate",
+               "~/Library/Application Support/Adobe/Lightroom/External Editor Presets/ON1 Resize #{version}-suite.lrtemplate",
+               "~/Library/Application Support/Adobe/Lightroom/External Editor Presets/ON1 Effects #{version}-suite.lrtemplate",
+               "~/Library/Application Support/Adobe/Lightroom/Modules/ON1 Resize #{version}-suite.lrplugin",
+               "~/Library/Application Support/Adobe/Lightroom/Modules/ON1 Photo RAW #{version}.lrplugin",
+             ]
 end
