@@ -1,6 +1,6 @@
 cask 'superduper' do
-  version '3.2,113'
-  sha256 '73bcdfcfe879544342972dc422eede574d8afcc0438d55c8975a0d6754e57943'
+  version '3.2.1,114'
+  sha256 'c45fe1c77f60be2db7507aba4570ed596322560942973f49237967f91a9c477a'
 
   # amazonaws.com/shirtpocket/SuperDuper was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/shirtpocket/SuperDuper/SuperDuper!.dmg'
