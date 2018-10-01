@@ -1,6 +1,6 @@
 cask 'deegain' do
   version '1.1.0'
-  sha256 '7440f83665b04be13e0cb1f3f948a4261011f68db7ca0fd4b1ef7d3ec7795aba'
+  sha256 :no_check # required as upstream package is updated in-place
 
   url "https://dotec-audio.com/release/DeeGain/DeeGainMacA_#{version}.zip"
   name 'DOTEC-AUDIO DeeGain'
