@@ -19,7 +19,12 @@ cask 'bitwarden' do
 
   zap trash: [
                '~/Library/Logs/Bitwarden',
+               '~/Library/Application Support/Bitwarden',
+               '~/Library/Caches/com.bitwarden.desktop',
+               '~/Library/Caches/com.bitwarden.desktop.ShipIt',
+               '~/Library/Preferences/ByHost/com.bitwarden.desktop.ShipIt.*.plist',
                '~/Library/Preferences/com.bitwarden.desktop.plist',
                '~/Library/Preferences/com.bitwarden.desktop.helper.plist',
+               '~/Library/Saved Application State/com.bitwarden.desktop.savedState',
              ]
 end
