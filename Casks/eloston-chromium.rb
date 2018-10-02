@@ -1,9 +1,9 @@
 cask 'eloston-chromium' do
-  version '68.0.3440.106-1'
-  sha256 'b64bf19e736f6af83df916179157ae0a5e45665917b0a36b0964b0ee5cffe720'
+  version '69.0.3497.100-1'
+  sha256 'b8f4aebf2c18847fbc654ed23a50768deb3812ed1ace0d21c93b059c609c6614'
 
-  # github.com/tectiv3/ungoogled-chromium-binaries was verified as official when first introduced to the cask
-  url "https://github.com/tectiv3/ungoogled-chromium-binaries/releases/download/#{version}/ungoogled-chromium_#{version}_macos.dmg"
+  # github.com/chase9/ungoogled-chromium-binaries was verified as official when first introduced to the cask
+  url "https://github.com/chase9/ungoogled-chromium-binaries/releases/download/#{version}/ungoogled-chromium_#{version}_macos.dmg"
   appcast 'https://ungoogled-software.github.io/ungoogled-chromium-binaries/releases/macos/'
   name 'Ungoogled Chromium'
   homepage 'https://ungoogled-software.github.io/ungoogled-chromium-binaries/'
