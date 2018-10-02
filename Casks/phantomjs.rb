@@ -8,4 +8,8 @@ cask 'phantomjs' do
   homepage 'http://phantomjs.org/'
 
   binary "phantomjs-#{version}-macosx/bin/phantomjs"
+
+  caveats do
+    discontinued
+  end
 end
