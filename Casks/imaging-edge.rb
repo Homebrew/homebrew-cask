@@ -19,4 +19,3 @@ cask 'imaging-edge' do
                '~/Library/Saved Application State/com.sony.Viewer.savedState',
              ]
 end
-
