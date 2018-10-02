@@ -7,5 +7,5 @@ cask 'data-rescue' do
   name "Data Rescue #{version.major}"
   homepage 'https://www.prosofteng.com/data-rescue-recovery-software/'
 
-  app "Data Rescue #{version.major}.app"
+  app "Data Rescue.app"
 end
