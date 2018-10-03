@@ -88,6 +88,11 @@ cask 'java' do
 
         https://bugs.eclipse.org/bugs/show_bug.cgi?id=411361
 
+      specifically in these comments on that issue discussion thread:
+
+       - https://bugs.eclipse.org/bugs/show_bug.cgi?id=411361#c20
+       - https://bugs.eclipse.org/bugs/show_bug.cgi?id=411361#c24
+
       If your Java application still asks for JRE installation, you might need
       to reboot or logout/login.
     EOS
