@@ -1,6 +1,6 @@
 cask 'comic-life' do
-  version '3.5.9'
-  sha256 'fa282d4f17b577f6c8b8c0838d21d172f22b5fa447e112a63cee550edc60f7bd'
+  version '3.5.10'
+  sha256 '982cfe8b8d17946c0a04ef4d3440884e80c64247c7174554847096fec5c69064'
 
   url "http://downloads.plasq.com/comiclife#{version.major}.zip"
   appcast "https://s3.amazonaws.com/updater.plasq.com/comiclife#{version.major}-appcast.xml"
