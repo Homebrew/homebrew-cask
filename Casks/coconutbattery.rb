@@ -9,7 +9,7 @@ cask 'coconutbattery' do
     url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version}.zip"
   else
     version '3.7'
-    sha256 'fe0338e808c76096d8fad8cd3ef2eb98f8f6860278abbb89a85507e9872bffe2'
+    sha256 '0993860896d498ffc4bf9c6b6f25d724bfa0a967b19fb211eb347547118f3a2e'
     url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version}.zip"
     appcast 'https://coconut-flavour.com/updates/coconutBattery.xml'
   end
