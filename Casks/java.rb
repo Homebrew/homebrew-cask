@@ -29,13 +29,15 @@ cask 'java' do
                    sudo: true
   end
 
-  uninstall pkgutil:   [
-                         "com.oracle.jdk-#{version.before_comma}",
-                       ],
-            delete:    [
-                         "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents",
-                         '/Library/Java/Home',
-                         '/Library/Java/MacOS',
-                       ],
-            rmdir:     "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk"
+  uninstall pkgutil: "com.oracle.jdk-#{version.before_comma}",
+            delete:  [
+                       "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents",
+                       '/Library/Java/Home',
+                       '/Library/Java/MacOS',
+                     ],
+            rmdir:   "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk"
+
+  caveats do
+    license 'https://www.oracle.com/technetwork/java/javase/terms/license/javase-license.html'
+  end
 end
