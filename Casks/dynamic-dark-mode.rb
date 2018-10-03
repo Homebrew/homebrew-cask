@@ -8,7 +8,7 @@ cask 'dynamic-dark-mode' do
   name 'Dynamic-Dark-Mode'
   homepage 'https://apollozhu.github.io/Dynamic-Dark-Mode/'
 
-  depends_on macos: '>= mojave'
+  depends_on macos: '>= :mojave'
 
-  app "Dynamic.app"
+  app 'Dynamic.app'
 end
