@@ -7,6 +7,11 @@ cask 'dotnet-sdk' do
   name '.NET Core SDK'
   homepage 'https://www.microsoft.com/net/core#macos'
 
+  conflicts_with cask: [
+                         'dotnet',
+                         'dotnet-preview',
+                         'dotnet-sdk-preview',
+                       ]
   depends_on macos: '>= :sierra'
 
   pkg "dotnet-sdk-#{version}-osx-x64.pkg"
