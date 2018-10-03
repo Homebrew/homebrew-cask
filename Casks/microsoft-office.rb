@@ -1,19 +1,22 @@
 cask 'microsoft-office' do
-  version '16.15.18070902'
-  sha256 '2caa050dcc2a95f90f57449f9ab5b173437fa2580f282f4c1513a83918e49ffa'
+  version '16.17.18090901'
+  sha256 '3ef365a5809f13d14dd3986f2cf90fbc39e149ae8b7591feb55cd1cebfc5d02a'
 
-  # officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/OfficeMac was verified as official when first introduced to the cask
-  url "https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/OfficeMac/Microsoft_Office_2016_#{version}_Installer.pkg"
-  name 'Microsoft Office 2016'
+  # officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/OfficeMac was verified as official when first introduced to the cask
+  url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/OfficeMac/Microsoft_Office_#{version}_Installer.pkg"
+  appcast 'https://docs.microsoft.com/en-us/officeupdates/update-history-office-for-mac'
+  name 'Microsoft Office'
   homepage 'https://products.office.com/mac/microsoft-office-for-mac/'
 
   auto_updates true
 
-  pkg "Microsoft_Office_2016_#{version}_Installer.pkg"
+  pkg "Microsoft_Office_#{version}_Installer.pkg"
 
   uninstall pkgutil:   [
+                         'com.microsoft.OneDrive',
                          'com.microsoft.package.Fonts',
                          'com.microsoft.package.Frameworks',
+                         'com.microsoft.package.Microsoft_AutoUpdate.app',
                          'com.microsoft.package.Microsoft_Excel.app',
                          'com.microsoft.package.Microsoft_OneNote.app',
                          'com.microsoft.package.Microsoft_Outlook.app',
@@ -22,16 +25,15 @@ cask 'microsoft-office' do
                          'com.microsoft.package.Proofing_Tools',
                          'com.microsoft.pkg.licensing',
                        ],
-            launchctl: [
-                         'com.microsoft.office.licensing.helper',
-                         'com.microsoft.office.licensingV2.helper',
-                       ],
+            launchctl: 'com.microsoft.office.licensingV2.helper',
             delete:    [
+                         '/Applications/Microsoft AutoUpdate.app',
                          '/Applications/Microsoft Excel.app',
                          '/Applications/Microsoft OneNote.app',
                          '/Applications/Microsoft Outlook.app',
                          '/Applications/Microsoft PowerPoint.app',
                          '/Applications/Microsoft Word.app',
+                         '/Applications/OneDrive.app',
                        ]
 
   zap trash:     [
