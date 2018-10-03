@@ -1,9 +1,10 @@
 cask 'chromium' do
-  version :latest
-  sha256 :no_check
+  version '596179'
+  sha256 '4aac476233875efb22d0da8c081189727aceb624170f8e961cb5b13395fa60ae'
 
-  # download-chromium.appspot.com was verified as official when first introduced to the cask
-  url 'https://download-chromium.appspot.com/dl/Mac?type=snapshots'
+  # commondatastorage.googleapis.com/chromium-browser-snapshots was verified as official when first introduced to the cask
+  url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/#{version}/chrome-mac.zip"
+  appcast 'https://download-chromium.appspot.com/rev/Mac?type=snapshots'
   name 'Chromium'
   homepage 'https://www.chromium.org/Home'
 
