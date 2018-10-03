@@ -12,6 +12,8 @@ cask 'daylite' do
   uninstall pkgutil:   [
                          'com.marketcircle.pkg.DLBase',
                          'com.marketcircle.pkg.DMABase',
+                         'com.marketcircle.daylite.installer',
+                         'com.marketcircle.daylite.mailassistant.installer',
                        ],
             launchctl: [
                          'com.marketcircle.persistence.autoupdate',
