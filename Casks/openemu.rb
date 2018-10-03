@@ -13,6 +13,8 @@ cask 'openemu' do
   name 'OpenEmu'
   homepage 'http://openemu.org/'
 
+  auto_updates true
+
   app 'OpenEmu.app'
 
   zap trash: [
