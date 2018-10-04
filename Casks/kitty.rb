@@ -7,6 +7,8 @@ cask 'kitty' do
   name 'kitty'
   homepage 'https://github.com/kovidgoyal/kitty'
 
+  depends_on macos: '>= :sierra'
+
   app 'kitty.app'
 
   zap trash: [

@@ -8,6 +8,8 @@ cask 'touche' do
   name 'Touché'
   homepage 'https://red-sweater.com/touche/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Touché.app'
 
   zap trash: [

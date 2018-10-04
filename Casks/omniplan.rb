@@ -6,6 +6,8 @@ cask 'omniplan' do
   name 'OmniPlan'
   homepage 'https://www.omnigroup.com/omniplan/'
 
+  depends_on macos: '>= :sierra'
+
   app 'OmniPlan.app'
 
   zap trash: [

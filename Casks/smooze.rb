@@ -8,6 +8,7 @@ cask 'smooze' do
   homepage 'https://smooze.co/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Smooze.app'
 

@@ -7,5 +7,7 @@ cask 'totals' do
   name 'Totals'
   homepage 'http://www.kedisoft.com/totals/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Totals.app'
 end

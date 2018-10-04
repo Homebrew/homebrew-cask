@@ -8,5 +8,7 @@ cask 'renamer' do
   name 'Renamer'
   homepage 'http://renamer.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Renamer.app'
 end

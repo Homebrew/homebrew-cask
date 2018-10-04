@@ -7,6 +7,8 @@ cask 'protonvpn' do
   name 'ProtonVPN'
   homepage 'https://protonvpn.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'ProtonVPN.app'
 
   uninstall launchctl: 'ch.protonvpn.ProtonVPNStarter',

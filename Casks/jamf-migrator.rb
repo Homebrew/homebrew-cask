@@ -7,5 +7,7 @@ cask 'jamf-migrator' do
   name 'JamfMigrator'
   homepage 'https://github.com/jamfprofessionalservices/JamfMigrator'
 
+  depends_on macos: '>= :sierra'
+
   app 'jamf-migrator.app'
 end

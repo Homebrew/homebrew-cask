@@ -7,5 +7,7 @@ cask 'unlox' do
   name 'Unlox'
   homepage 'https://unlox.it/get'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'Unlox.app'
 end

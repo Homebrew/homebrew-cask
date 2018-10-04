@@ -8,5 +8,7 @@ cask 'vanilla' do
   name 'Vanilla'
   homepage 'http://matthewpalmer.net/vanilla/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Vanilla.app'
 end

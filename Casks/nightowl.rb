@@ -7,5 +7,7 @@ cask 'nightowl' do
   name 'NightOwl'
   homepage 'https://nightowl.kramser.xyz/'
 
+  depends_on macos: '>= :mojave'
+
   app 'NightOwl.app'
 end

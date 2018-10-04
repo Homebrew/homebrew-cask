@@ -8,6 +8,8 @@ cask 'shifty' do
   name 'Shifty'
   homepage 'http://shifty.natethompson.io/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Shifty.app'
 
   uninstall launchctl: 'io.natethompson.ShiftyHelper',
