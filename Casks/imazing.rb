@@ -1,6 +1,6 @@
 cask 'imazing' do
-  version '2.7.1,9565:1538239236'
-  sha256 '66fd8b7950b00c2bfac809660af8c64f414e3cb9ae7eb0ed66fc5b1824e286a1'
+  version '2.7.2,9613:1538589987'
+  sha256 '8191cb9ba11436423e2fe3103a5806ebf7e93b44c9f167665338c03795026c8e'
 
   # dl.devmate.com/com.DigiDNA.iMazing2Mac was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.DigiDNA.iMazing2Mac/#{version.after_comma.before_colon}/#{version.after_colon}/iMazing#{version.major}forMac-#{version.after_comma.before_colon}.dmg"
