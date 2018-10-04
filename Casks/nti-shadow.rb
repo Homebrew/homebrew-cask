@@ -6,7 +6,7 @@ cask 'nti-shadow' do
   name "NTI Shadow #{version.major} for Mac"
   homepage 'http://www.nticorp.com/en/us/product/shadow_5_mac.asp'
 
-  app 'NTI Shadow.app'
+  app "NTI Shadow #{version.major}.app"
 
   zap trash: [
                '~/Library/Preferences/com.achieva.NTIShadow41.plist',
