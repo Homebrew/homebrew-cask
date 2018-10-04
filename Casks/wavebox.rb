@@ -8,6 +8,8 @@ cask 'wavebox' do
   name 'Wavebox'
   homepage 'https://wavebox.io/'
 
+  auto_updates true
+
   app 'Wavebox.app'
 
   uninstall quit:       'io.wavebox.wavebox',
