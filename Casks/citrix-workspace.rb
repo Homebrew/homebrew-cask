@@ -4,8 +4,8 @@ cask 'citrix-workspace' do
 
   # downloadplugins.citrix.com.edgesuite.net was verified as official when first introduced to the cask
   url 'http://downloadplugins.citrix.com.edgesuite.net/Mac/CitrixWorkspaceApp.dmg'
-  name 'Citrix Receiver'
-  homepage 'https://www.citrix.com/products/receiver/'
+  name 'Citrix Workspace'
+  homepage 'https://www.citrix.com/products/workspace-app/'
 
   pkg 'Install Citrix Workspace.pkg'
 
