@@ -6,7 +6,7 @@ cask 'creepy' do
   url "https://github.com/jkakavas/creepy/releases/download/v#{version}/cree.py_#{version}.dmg.zip"
   appcast 'https://github.com/jkakavas/creepy/releases.atom'
   name 'Creepy'
-  homepage 'http://www.geocreepy.com/'
+  homepage 'https://www.geocreepy.com/'
 
   app 'cree.py.app'
 end
