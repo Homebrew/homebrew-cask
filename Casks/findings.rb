@@ -7,7 +7,7 @@ cask 'findings' do
   name 'Findings'
   homepage 'http://findingsapp.com/'
 
-  depends_on macos: '>= :el_capitan'
+  depends_on macos: '>= :sierra'
 
   app 'Findings.app'
 end
