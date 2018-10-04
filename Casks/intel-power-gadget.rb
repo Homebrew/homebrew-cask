@@ -6,6 +6,8 @@ cask 'intel-power-gadget' do
   name 'Intel Power Gadget'
   homepage 'https://software.intel.com/en-us/articles/intel-power-gadget-20'
 
+  depends_on macos: '>= :high_sierra'
+
   pkg 'Install Intel Power Gadget.pkg'
 
   uninstall pkgutil: 'com.intel.pkg.PowerGadget.*',
