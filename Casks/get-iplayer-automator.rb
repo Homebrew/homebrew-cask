@@ -1,6 +1,6 @@
 cask 'get-iplayer-automator' do
-  version '1.13.13.b20180827002'
-  sha256 'f5c87ab3e16dea3e9f325fd29855f1b3ea5e68f61da3d08aea12b3fdbe5673d2'
+  version '1.13.15.b20180908001'
+  sha256 '456c3147b90f874478aa5566b21e1f235090aa8d58ea3a10c50c78590ebaa488'
 
   url "https://github.com/Ascoware/get-iplayer-automator/releases/download/v#{version.major_minor_patch}/Get.iPlayer.Automator.v#{version}.zip"
   appcast 'https://github.com/Ascoware/get-iplayer-automator/releases.atom'
