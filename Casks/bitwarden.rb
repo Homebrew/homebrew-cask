@@ -1,6 +1,6 @@
 cask 'bitwarden' do
-  version '1.7.0'
-  sha256 '7bbcb087bdf31d442fdbb7285aee6bc8f762f41ab19d9f9b4236d04e9b62e872'
+  version '1.8.0'
+  sha256 '21a27080084b80d339fdf773b125504b6214f10776912ecd1febef60f8016e31'
 
   # github.com/bitwarden/desktop was verified as official when first introduced to the cask
   url "https://github.com/bitwarden/desktop/releases/download/v#{version}/bitwarden-#{version}-mac.zip"
