@@ -11,7 +11,7 @@ cask 'azure-data-studio' do
   auto_updates true
 
   app 'Azure Data Studio.app'
-  binary "#{appdir}/Azure Data Studio.app/Contents/Resources/app/bin/code", target: 'azure-data-studio'
+  binary "#{appdir}/Azure Data Studio.app/Contents/Resources/app/bin/code", target: 'azuredatastudio'
 
   zap trash: [
                '~/Library/Application Support/azuredatastudio',
