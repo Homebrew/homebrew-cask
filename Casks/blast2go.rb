@@ -1,6 +1,6 @@
 cask 'blast2go' do
-  version '5.1.13'
-  sha256 'db37cac54493419690419d7d7e17e6c998c8c25e463552ff7b65b3a9e664828d'
+  version '5.2.0'
+  sha256 'fd1a77dc6fd562f9f36b5d046eb0a0d8cf7193914038fcc51a599fb2a764aeab'
 
   # resources.biobam.com/software/blast2go was verified as official when first introduced to the cask
   url "http://resources.biobam.com/software/blast2go/nico/Blast2GO_macos_#{version.dots_to_underscores}.dmg"
