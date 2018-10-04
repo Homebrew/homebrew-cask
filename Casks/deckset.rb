@@ -7,7 +7,7 @@ cask 'deckset' do
   name 'Deckset'
   homepage 'https://www.decksetapp.com/'
 
-  depends_on macos: '>= :el_capitan'
+  depends_on macos: '>= :sierra'
 
   app 'Deckset.app'
 end
