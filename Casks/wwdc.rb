@@ -9,7 +9,6 @@ cask 'wwdc' do
   homepage 'https://wwdc.io/'
 
   auto_updates true
-
   depends_on macos: '>= :sierra'
 
   app 'WWDC.app'

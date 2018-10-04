@@ -8,7 +8,6 @@ cask 'teacode' do
   homepage 'https://www.apptorium.com/teacode'
 
   auto_updates true
-
   depends_on macos: '>= :sierra'
 
   app 'TeaCode.app'

@@ -8,7 +8,6 @@ cask 'kaleidoscope' do
   homepage 'https://www.kaleidoscopeapp.com/'
 
   auto_updates true
-
   depends_on macos: '>= :sierra'
 
   app 'Kaleidoscope.app'

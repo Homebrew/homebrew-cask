@@ -8,7 +8,6 @@ cask 'barsoom' do
   homepage 'https://www.seense.com/barsoom/'
 
   auto_updates true
-
   depends_on macos: '>= :sierra'
 
   app 'Barsoom.app'
