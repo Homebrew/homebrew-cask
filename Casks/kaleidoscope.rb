@@ -9,6 +9,8 @@ cask 'kaleidoscope' do
 
   auto_updates true
 
+  depends_on macos: '>= :sierra'
+
   app 'Kaleidoscope.app'
   binary "#{appdir}/Kaleidoscope.app/Contents/Resources/bin/ksdiff"
 

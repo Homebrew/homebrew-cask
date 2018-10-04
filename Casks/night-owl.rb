@@ -9,5 +9,9 @@ cask 'night-owl' do
   name 'YoruFukurou'
   homepage 'https://sites.google.com/site/yorufukurou/home-en'
 
+  depends_on macos: '>= :mojave'
+
+  depends_on macos: '>= :sierra'
+
   app 'Night Owl.app'
 end

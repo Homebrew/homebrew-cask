@@ -8,5 +8,7 @@ cask 'archiver' do
   name 'Archiver'
   homepage 'http://archiverapp.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Archiver.app'
 end

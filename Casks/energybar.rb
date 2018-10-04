@@ -7,5 +7,7 @@ cask 'energybar' do
   name 'EnergyBar'
   homepage 'https://github.com/billziss-gh/EnergyBar'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'EnergyBar.app'
 end

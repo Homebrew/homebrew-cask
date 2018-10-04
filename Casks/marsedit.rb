@@ -7,5 +7,7 @@ cask 'marsedit' do
   name 'MarsEdit'
   homepage 'https://red-sweater.com/marsedit/'
 
+  depends_on macos: '>= :sierra'
+
   app 'MarsEdit.app'
 end

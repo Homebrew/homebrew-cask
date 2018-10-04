@@ -8,5 +8,7 @@ cask 'penc' do
   name 'Penc'
   homepage 'https://dgurkaynak.github.io/Penc/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'Penc.app'
 end

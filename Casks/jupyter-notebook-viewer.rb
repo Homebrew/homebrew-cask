@@ -7,5 +7,7 @@ cask 'jupyter-notebook-viewer' do
   name 'Jupyter Notebook Viewer'
   homepage 'https://github.com/tuxu/nbviewer-app'
 
+  depends_on macos: '>= :sierra'
+
   app 'Jupyter Notebook Viewer.app'
 end

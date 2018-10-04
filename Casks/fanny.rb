@@ -6,5 +6,7 @@ cask 'fanny' do
   name 'FannyWidget'
   homepage 'http://fannywidget.com/'
 
+  depends_on macos: '>= :sierra'
+
   app "Fanny #{version}/Fanny.app"
 end

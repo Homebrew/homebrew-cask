@@ -9,6 +9,8 @@ cask 'smooze' do
 
   auto_updates true
 
+  depends_on macos: '>= :sierra'
+
   app 'Smooze.app'
 
   uninstall login_item: 'Smooze',

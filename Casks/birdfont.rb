@@ -6,5 +6,7 @@ cask 'birdfont' do
   name 'BirdFont'
   homepage 'https://birdfont.org/'
 
+  depends_on macos: '>= :sierra'
+
   app 'BirdFontNonCommercial.app'
 end

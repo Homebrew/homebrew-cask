@@ -7,6 +7,8 @@ cask 'flinto' do
   name 'Flinto'
   homepage 'https://www.flinto.com/mac'
 
+  depends_on macos: '>= :sierra'
+
   app 'Flinto.app'
 
   uninstall pkgutil: 'com.flinto.*'

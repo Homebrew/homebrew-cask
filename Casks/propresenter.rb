@@ -7,6 +7,8 @@ cask 'propresenter' do
   name 'ProPresenter'
   homepage 'https://www.renewedvision.com/propresenter.php'
 
+  depends_on macos: '>= :sierra'
+
   app "ProPresenter #{version.major}.app"
 
   zap trash: [

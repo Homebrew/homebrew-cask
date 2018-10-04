@@ -10,6 +10,8 @@ cask 'wwdc' do
 
   auto_updates true
 
+  depends_on macos: '>= :sierra'
+
   app 'WWDC.app'
 
   zap trash: [

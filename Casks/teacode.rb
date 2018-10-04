@@ -9,5 +9,7 @@ cask 'teacode' do
 
   auto_updates true
 
+  depends_on macos: '>= :sierra'
+
   app 'TeaCode.app'
 end

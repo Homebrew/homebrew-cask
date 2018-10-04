@@ -9,6 +9,8 @@ cask 'sketch' do
 
   auto_updates true
 
+  depends_on macos: '>= :sierra'
+
   app 'Sketch.app'
 
   zap trash: [
