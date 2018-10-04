@@ -4,6 +4,7 @@ cask 'archipelago' do
 
   url 'https://archipelago-terminal.herokuapp.com/download/osx'
   name 'Archipelago'
+  homepage 'https://archipelago-terminal.herokuapp.com/download/osx'
 
   app 'Archipelago.app'
 end
