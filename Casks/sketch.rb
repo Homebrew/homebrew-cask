@@ -1,6 +1,6 @@
 cask 'sketch' do
-  version '51.3-57544'
-  sha256 '65b1152b90b961927894e26b1837f0328447fc0e928b4060dea935b38ad205dc'
+  version '52.1-67048'
+  sha256 '978f393e89fa869b740bd113c660ce64eb3d2cae8d0db5279ad4da56ad079887'
 
   url "https://download.sketchapp.com/sketch-#{version}.zip"
   appcast 'https://download.sketchapp.com/sketch-versions.xml'
