@@ -1,5 +1,5 @@
 cask 'imaging-edge' do
-  version '130_1807a,xMLy8RzMdE'
+  version '1.3.0_1807a,xMLy8RzMdE'
   sha256 '7fa732b6ac4ff5fb2c79ab54565e9c9dc3e4ed1c6bab816f99fe4fea126115ab'
 
   # ids.update.sony.net/IDC was verified as official when first introduced to the cask
