@@ -8,7 +8,7 @@ cask 'endnote' do
 
   container nested: "Install EndNote X#{version}.app/Contents/Resources/EndNote.zip"
 
-  suite "EndNote"
+  suite 'EndNote'
 
   zap trash: [
                '/Library/Application Support/ResearchSoft/EndNote',
