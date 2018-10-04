@@ -1,10 +1,10 @@
 cask 'museeks' do
-  version '0.10.0'
-  sha256 '43563b9895c604ee07a51bb1d8cf90a6588ff6d98baf2d4f209351d0da910ee0'
+  version '0.10.1'
+  sha256 'f067342e5ca1143eb726388caed59cafe973e569c8c80600085932f6c6e71397'
 
-  # github.com/KeitIG/museeks was verified as official when first introduced to the cask
-  url "https://github.com/KeitIG/museeks/releases/download/#{version}/museeks.dmg"
-  appcast 'https://github.com/KeitIG/museeks/releases.atom'
+  # github.com/martpie/museeks was verified as official when first introduced to the cask
+  url "https://github.com/martpie/museeks/releases/download/#{version}/museeks.dmg"
+  appcast 'https://github.com/martpie/museeks/releases.atom'
   name 'Museeks'
   homepage 'https://museeks.io/'
 
