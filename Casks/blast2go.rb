@@ -12,7 +12,8 @@ cask 'blast2go' do
                       args:       ['-q'],
                     }
 
-  uninstall delete: '/Applications/Blast2GO'
+  uninstall delete: '/Applications/Blast2GO',
+            quit:      'blast2goID'
 
   caveats do
     depends_on_java
