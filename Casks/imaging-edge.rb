@@ -9,7 +9,9 @@ cask 'imaging-edge' do
 
   pkg 'IE_INST.pkg'
 
-  uninstall pkgutil: "com.sony.ImagingEdgeVer.#{version.major}.pkg"
+  uninstall pkgutil: "com.sony.ImagingEdgeVer.#{version.major}.pkg",
+            delete:  '/Applications/Imaging Edge/Viewer.app',
+            rmdir:   '/Applications/Imaging Edge'
 
   zap trash: [
                '~/Library/Caches/com.sony.Viewer',
