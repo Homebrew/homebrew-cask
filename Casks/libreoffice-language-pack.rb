@@ -572,6 +572,8 @@ cask 'libreoffice-language-pack' do
   end
 
   caveats <<~EOS
+    You MUST have opened LibreOffice at least once before installing #{token}. If you did not, Gatekeeper will consider LibreOffice to be damaged.
+  
     #{token} assumes LibreOffice is installed in '#{appdir}'. If it is not, you’ll need to run '#{staged_path}/LibreOffice Language Pack.app' manually.
   EOS
 end
