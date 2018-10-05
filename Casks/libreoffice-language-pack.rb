@@ -567,11 +567,20 @@ cask 'libreoffice-language-pack' do
   stage_only true
 
   preflight do
+    system_command '/usr/bin/osascript', args: ['-e', <<~APPLESCRIPT]
+      if application "LibreOffice" is not running
+        tell application "LibreOffice" to activate
+        tell application "LibreOffice" to quit
+      end if
+    APPLESCRIPT
     system_command '/usr/bin/tar', args: ['-C', "#{appdir}/LibreOffice.app/", '-xjf', "#{staged_path}/LibreOffice Language Pack.app/Contents/tarball.tar.bz2"]
     system_command '/usr/bin/touch', args: ["#{appdir}/LibreOffice.app/Contents/Resources/extensions"]
   end
 
   caveats <<~EOS
+    LibreOffice MUST be opened at least once before installing #{token}.
+    This Cask will do it for you.
+
     #{token} assumes LibreOffice is installed in '#{appdir}'. If it is not, you’ll need to run '#{staged_path}/LibreOffice Language Pack.app' manually.
   EOS
 end
