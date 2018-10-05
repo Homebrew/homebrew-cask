@@ -6,7 +6,7 @@ cask 'bee' do
   url "https://bee-app.s3.amazonaws.com/public/Bee-#{version.after_comma}-#{version.before_comma}.zip"
   appcast 'https://s3.amazonaws.com/www.neat.io/bee/appcast.xml'
   name 'Bee'
-  homepage 'http://www.neat.io/bee/'
+  homepage 'https://www.neat.io/bee/'
 
   app 'Bee.app'
 

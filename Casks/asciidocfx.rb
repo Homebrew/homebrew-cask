@@ -6,7 +6,7 @@ cask 'asciidocfx' do
   url "https://github.com/asciidocfx/AsciidocFX/releases/download/v#{version}/AsciidocFX_Mac.dmg"
   appcast 'https://github.com/asciidocfx/AsciidocFX/releases.atom'
   name 'AsciidocFX'
-  homepage 'http://www.asciidocfx.com/'
+  homepage 'https://www.asciidocfx.com/'
 
   installer script: {
                       executable: 'AsciidocFX Installer.app/Contents/MacOS/JavaApplicationStub',

@@ -6,7 +6,7 @@ cask 'activedock' do
   url "https://dl.devmate.com/com.sergey-gerasimenko.ActiveDock/#{version.before_comma}/#{version.after_comma}/ActiveDock-#{version.before_comma}.zip"
   appcast 'https://updates.devmate.com/com.sergey-gerasimenko.ActiveDock.xml'
   name 'ActiveDock'
-  homepage 'http://www.noteifyapp.com/activedock/'
+  homepage 'https://www.noteifyapp.com/activedock/'
 
   app 'ActiveDock.app'
 end
