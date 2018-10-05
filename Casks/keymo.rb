@@ -1,6 +1,6 @@
 cask 'keymo' do
-  version '1.2.5'
-  sha256 '7eb685ae806e0bcf251cf74d18890ef07d75dc31bc92323ff66efdf8b56476a0'
+  version '1.2.6'
+  sha256 '5d9f74cfc915ea580b09b10db6e0170f310159e95d943910950bcc819819916c'
 
   url 'https://manytricks.com/download/keymo'
   appcast 'https://manytricks.com/keymo/appcast.xml'
