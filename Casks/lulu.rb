@@ -1,6 +1,6 @@
 cask 'lulu' do
-  version '1.1.0'
-  sha256 'd6e86dee0564811aac7a5ad305fe18697ff3dde0fd8777301610eb99e6a88fbf'
+  version '1.1.1'
+  sha256 '88ad8042b711a2f17f93ea9423f45927c4358af73f78feedf02c7885e795e817'
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/LuLu_#{version}.zip"
