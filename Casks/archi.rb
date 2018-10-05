@@ -1,6 +1,6 @@
 cask 'archi' do
   version '4.3'
-  sha256 '37a85ef876943e9956518bb14d3e869acfe86b94070cba1ee5c203a76d0eb44f'
+  sha256 'd3985e4ebb93ada39a24f232a68b27e95eb8cf3cccb1562de2c9a606ca1bd88f'
 
   url "https://www.archimatetool.com/downloads/root#{version.no_dots}/Archi-Mac-#{version}.zip",
       referer: 'https://www.archimatetool.com/download/'
