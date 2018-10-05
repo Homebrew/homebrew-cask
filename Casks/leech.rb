@@ -1,6 +1,6 @@
 cask 'leech' do
-  version '3.1'
-  sha256 'e8553da6c6eaca569e87b0188b7c0bb6eab64dbc874c8c151768c6bf96c2470e'
+  version '3.1.2'
+  sha256 '8b8c6bf84ced03e5b0b00229898c64befc3cb6e4be25d9f88356a78bb3e97c73'
 
   url 'https://manytricks.com/download/leech'
   appcast 'https://manytricks.com/leech/appcast'
