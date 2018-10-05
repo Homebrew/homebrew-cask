@@ -1,4 +1,4 @@
-cask 'keymo' do
+cask 'keymou' do
   version '1.2.6'
   sha256 '5d9f74cfc915ea580b09b10db6e0170f310159e95d943910950bcc819819916c'
 
