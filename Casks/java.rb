@@ -22,9 +22,5 @@ cask 'java' do
                    sudo: true
   end
 
-  uninstall_postflight do
-    system_command '/bin/rm',
-                   args: ['-rf', '--', "/Library/Java/JavaVirtualMachines/openjdk-#{version.before_comma}.jdk"],
-                   sudo: true
-  end
+  uninstall delete: "/Library/Java/JavaVirtualMachines/openjdk-#{version.before_comma}.jdk"
 end
