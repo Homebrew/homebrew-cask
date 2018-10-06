@@ -9,7 +9,12 @@ cask 'kerio-connect' do
 
   pkg 'Kerio Connect Installer.pkg'
 
-  uninstall pkgutil: [
+  uninstall early_script: {
+                            executable:   '/bin/launchctl',
+                            args:         ['unload, 'KerioConnect'],
+                            must_succeed: false,
+                          },
+            pkgutil: [
                        'com.kerio.connect.server.pkg',
                        'com.kerio.connect.server.installer.pkg',
                      ],
