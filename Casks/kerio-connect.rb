@@ -11,7 +11,7 @@ cask 'kerio-connect' do
 
   uninstall early_script: {
                             executable:   '/bin/launchctl',
-                            args:         ['unload, 'KerioConnect'],
+                            args:         ['unload', 'KerioConnect'],
                             must_succeed: false,
                           },
             pkgutil: [
