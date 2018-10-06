@@ -1,4 +1,4 @@
-cask 'screensleeves' do
+cask 'screensleeves-standalone' do
   version :latest
   sha256 :no_check
 
