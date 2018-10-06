@@ -1,6 +1,6 @@
 cask 'jaxx' do
-  version '1.3.17'
-  sha256 '2341f751f6485e1044d54bc2b27696856cd00c92e51058512ec9d85e5e23cef8'
+  version '1.3.18'
+  sha256 'cd23115f58cd6779ca1c90507126de279caadb34f8358001e01e167ba35f62a2'
 
   # github.com/Jaxx-io/Jaxx was verified as official when first introduced to the cask
   url "https://github.com/Jaxx-io/Jaxx/releases/download/v#{version}/Jaxx-#{version}.dmg"
