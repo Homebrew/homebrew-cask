@@ -1,5 +1,5 @@
 cask 'tap' do
-  version '1.5.16,72:1521529036'
+  version '1.5.17,73:1538120209'
   sha256 '6d04bf5f6ae1da65be616a9142d885267ed2d60f13eed92d1c6a23e3aee41515'
 
   # dl.devmate.com/com.pabix.tap was verified as official when first introduced to the cask
