@@ -6,5 +6,5 @@ cask 'screensleeves' do
   name 'ScreenSleeves screensaver'
   homepage 'https://peacockmedia.software/mac/screensleeves/'
 
-  screen_saver 'ScreenSleeves.saver'
+  app 'Screensleeves Standalone.app'
 end
