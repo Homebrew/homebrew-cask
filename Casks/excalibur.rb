@@ -2,10 +2,10 @@ cask 'excalibur' do
   version '4.0.7'
   sha256 'e4bf9d459b1df49d80753c9ef32cc8fa4fe6df9cfaa7c21f912052ffb2061202'
 
-  url "http://excalibur.sourceforge.net/get.php?id=#{version.no_dots}d"
-  appcast 'http://excalibur.sourceforge.net/change_log.txt'
+  url "https://excalibur.sourceforge.io/get.php?id=#{version.no_dots}d"
+  appcast 'https://excalibur.sourceforge.io/change_log.txt'
   name 'Excalibur'
-  homepage 'http://excalibur.sourceforge.net/'
+  homepage 'https://excalibur.sourceforge.io/'
 
   app 'Excalibur.app'
 

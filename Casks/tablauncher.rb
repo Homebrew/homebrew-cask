@@ -2,10 +2,10 @@ cask 'tablauncher' do
   version '2.9.5'
   sha256 '97aaf949e292cfabe16b7f59cceb7cf58780a23eddcad6bf875732f16d588b3d'
 
-  url "http://tablauncher.com/updates/TabLauncherV#{version}.dmg"
-  appcast 'http://tablauncher.com/updates/appcast.xml'
+  url "https://tablauncher.com/updates/TabLauncherV#{version}.dmg"
+  appcast 'https://tablauncher.com/updates/appcast.xml'
   name 'TabLauncher'
-  homepage 'http://tablauncher.com/'
+  homepage 'https://tablauncher.com/'
 
   app 'TabLauncher.app'
 

@@ -6,7 +6,7 @@ cask 'tranzport' do
   url "https://github.com/steverab/tranzport-mac/releases/download/#{version}/Tranzport.app.zip"
   appcast 'https://github.com/steverab/tranzport-mac/releases.atom'
   name 'Tranzport'
-  homepage 'http://steverab.com/tranzport-mac/'
+  homepage 'https://steverab.com/tranzport-mac/'
 
   app 'Tranzport.app'
 end

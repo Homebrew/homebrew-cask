@@ -3,10 +3,10 @@ cask 'xiami' do
   sha256 '902179161124bcab9edf3a4f6e0e928010e74cbf830a7bebe561dc990ff467c1'
 
   # gxiami.alicdn.com/xiami-desktop was verified as official when first introduced to the cask
-  url "http://gxiami.alicdn.com/xiami-desktop/update/XiamiMac-#{version.after_comma}.dmg"
+  url "https://gxiami.alicdn.com/xiami-desktop/update/XiamiMac-#{version.after_comma}.dmg"
   name 'Xiami'
   name '虾米音乐'
-  homepage 'http://www.xiami.com/'
+  homepage 'https://www.xiami.com/'
 
   app '虾米音乐.app'
 

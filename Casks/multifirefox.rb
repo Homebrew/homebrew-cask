@@ -6,7 +6,7 @@ cask 'multifirefox' do
   url "https://s3.amazonaws.com/mff_sparkle/MultiFirefox_#{version}.zip"
   appcast 'https://s3.amazonaws.com/mff_sparkle/MultiFirefoxAppcast2.xml'
   name 'MultiFirefox'
-  homepage 'http://davemartorana.com/multifirefox/'
+  homepage 'https://davemartorana.com/multifirefox/'
 
   app 'MultiFirefox.app'
 end

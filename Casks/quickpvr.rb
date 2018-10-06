@@ -4,7 +4,7 @@ cask 'quickpvr' do
 
   url "https://www.limbic.com/downloads/QuickPVR_v#{version.major}.zip"
   name 'QuickPVR'
-  homepage 'http://www.limbic.com/quickpvr.html'
+  homepage 'https://www.limbic.com/#games'
 
   qlplugin 'quickpvr.qlgenerator'
 end

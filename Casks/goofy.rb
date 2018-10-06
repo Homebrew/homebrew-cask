@@ -6,7 +6,7 @@ cask 'goofy' do
   url "https://github.com/danielbuechele/goofy/releases/download/v#{version}/goofy-core-#{version}-mac.zip"
   appcast 'https://github.com/danielbuechele/goofy/releases.atom'
   name 'Goofy'
-  homepage 'http://www.goofyapp.com/'
+  homepage 'https://www.goofyapp.com/'
 
   app 'Goofy.app'
 

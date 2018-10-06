@@ -2,9 +2,9 @@ cask 'swift-clean' do
   version :latest
   sha256 :no_check
 
-  url 'http://swiftcleanapp.com/sparky/Swift-Clean.zip'
+  url 'https://swiftcleanapp.com/sparky/Swift-Clean.zip'
   name 'Swift-Clean'
-  homepage 'http://swiftcleanapp.com/'
+  homepage 'https://swiftcleanapp.com/'
 
   app 'Swift-Clean.app'
 end

@@ -3,7 +3,7 @@ cask 'baidumusic' do
   sha256 :no_check
 
   # download.qianqian.com was verified as official when first introduced to the cask
-  url 'http://download.qianqian.com/channel/2/web_daohang'
+  url 'https://download.qianqian.com/channel/2/web_daohang'
   name 'Baidu Music'
   name '百度音乐'
   homepage 'https://music.baidu.com/'

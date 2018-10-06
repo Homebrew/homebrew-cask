@@ -5,7 +5,7 @@ cask 'smartsvn' do
   url "https://www.smartsvn.com/downloads/smartsvn/smartsvn-macosx-#{version.dots_to_underscores}.dmg"
   appcast 'https://www.smartsvn.com/documents/smartsvn/changelog.txt'
   name 'SmartSVN'
-  homepage 'http://www.smartsvn.com/'
+  homepage 'https://www.smartsvn.com/'
 
   app "SmartSVN #{version.major_minor}.app"
 

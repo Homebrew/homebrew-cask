@@ -6,7 +6,7 @@ cask 'sabaki' do
   url "https://github.com/SabakiHQ/Sabaki/releases/download/v#{version}/sabaki-v#{version}-mac-x64.7z"
   appcast 'https://github.com/SabakiHQ/Sabaki/releases.atom'
   name 'Sabaki'
-  homepage 'http://sabaki.yichuanshen.de/'
+  homepage 'https://sabaki.yichuanshen.de/'
 
   app 'Sabaki.app'
 end

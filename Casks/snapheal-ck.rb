@@ -4,7 +4,7 @@ cask 'snapheal-ck' do
 
   # amazonaws.com/SnaphealCK was verified as official when first introduced to the cask
   url "https://creativekit.s3.amazonaws.com/SnaphealCK/SnaphealCKNA_Distribution_v#{version.dots_to_underscores}.zip"
-  appcast 'http://cdn.macphun.com/updates/SnaphealMacPRO/appcast.xml'
+  appcast 'https://cdn.macphun.com/updates/SnaphealMacPRO/appcast.xml'
   name 'Macphun Snapheal CK'
   homepage 'https://macphun.com/snapheal'
 

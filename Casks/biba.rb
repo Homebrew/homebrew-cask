@@ -6,7 +6,7 @@ cask 'biba' do
   url "https://s3-us-west-1.amazonaws.com/downloads.biba.com/builds/Biba-OSX-#{version}.dmg"
   appcast 'https://s3-us-west-1.amazonaws.com/downloads.biba.com/appcast/mac'
   name 'Biba'
-  homepage 'http://www.biba.com/'
+  homepage 'https://web.archive.org/web/20161208050946/www.biba.com/'
 
   app 'Biba.app'
 end

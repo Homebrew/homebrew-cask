@@ -5,7 +5,7 @@ cask 'jietu' do
   url "https://dldir1.qq.com/invc/tt/QB/Jietu/Jietu_#{version.before_comma}(#{version.after_comma}).dmg"
   name 'Jietu'
   name '截图'
-  homepage 'http://jietu.qq.com/'
+  homepage 'https://jietu.qq.com/'
 
   app 'Jietu.app'
 

@@ -6,7 +6,7 @@ cask 'soube' do
   url "https://github.com/DracotMolver/Soube/releases/download/#{version}/soube-#{version}.dmg"
   appcast 'https://github.com/DracotMolver/Soube/releases.atom'
   name 'Soube'
-  homepage 'http://soube.diegomolina.cl/'
+  homepage 'https://web.archive.org/web/20171224130516/soube.diegomolina.cl/'
 
   app 'soube.app'
 end

@@ -7,7 +7,7 @@ cask 'xld' do
   appcast 'https://svn.code.sf.net/p/xld/code/appcast/xld-appcast_e.xml'
   name 'X Lossless Decoder'
   name 'XLD'
-  homepage 'http://tmkk.undo.jp/xld/index_e.html'
+  homepage 'https://tmkk.undo.jp/xld/index_e.html'
 
   auto_updates true
 

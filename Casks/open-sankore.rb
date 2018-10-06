@@ -5,7 +5,7 @@ cask 'open-sankore' do
   # cndp.fr/open-sankore was verified as official when first introduced to the cask
   url "http://www.cndp.fr/open-sankore/OpenSankore/Releases/v#{version}/Open-Sankore_MacOSX_#{version}.dmg"
   name 'Open-Sankore'
-  homepage 'http://open-sankore.org/'
+  homepage 'https://web.archive.org/web/20171028190857/open-sankore.org/'
 
   app 'Open-Sankore.app'
 end

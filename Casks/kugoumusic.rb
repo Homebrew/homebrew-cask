@@ -4,7 +4,7 @@ cask 'kugoumusic' do
 
   url "http://downmini.kugou.com/mac/Kugou_V#{version}.dmg"
   name 'Kugou Music'
-  homepage 'http://www.kugou.com/'
+  homepage 'https://www.kugou.com/'
 
   app 'KugouMusic.app'
 end

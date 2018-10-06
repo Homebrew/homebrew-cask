@@ -6,7 +6,7 @@ cask 'superduper' do
   url 'https://s3.amazonaws.com/shirtpocket/SuperDuper/SuperDuper!.dmg'
   appcast 'https://versioncheck.blacey.com/superduper/version.xml?VSN=100'
   name 'SuperDuper!'
-  homepage 'http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html'
+  homepage 'https://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html'
 
   app 'SuperDuper!.app'
 

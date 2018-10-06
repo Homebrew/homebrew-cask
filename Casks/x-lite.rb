@@ -5,7 +5,7 @@ cask 'x-lite' do
   # counterpath.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://counterpath.s3.amazonaws.com/downloads/X-Lite_#{version}.dmg"
   name 'X-Lite'
-  homepage 'http://www.counterpath.com/x-lite/'
+  homepage 'https://www.counterpath.com/x-lite/'
 
   app 'X-Lite.app'
 end

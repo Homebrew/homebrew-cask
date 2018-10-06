@@ -4,7 +4,7 @@ cask 'tongbu' do
 
   url "http://qd.tongbu.com/qd/tbzsqd/zsmac_#{version.split('_')[0]}/Tongbu_mac_v#{version}.dmg"
   name 'Tongbu'
-  homepage 'http://www.tongbu.com/mac'
+  homepage 'https://www.tongbu.com/mac'
 
   app 'Tongbu.app'
 end

@@ -2,7 +2,7 @@ cask 'ilok-license-manager' do
   version :latest
   sha256 :no_check
 
-  url 'http://installers.ilok.com/iloklicensemanager/LicenseSupportInstallerMac.zip'
+  url 'https://installers.ilok.com/iloklicensemanager/LicenseSupportInstallerMac.zip'
   name 'iLok License Manager'
   homepage 'https://ilok.com/#!license-manager'
 

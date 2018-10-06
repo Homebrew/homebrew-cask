@@ -6,7 +6,7 @@ cask 'shifty' do
   url "https://github.com/thompsonate/Shifty/releases/download/#{version}/Shifty-#{version}.dmg"
   appcast 'https://github.com/thompsonate/Shifty/releases.atom'
   name 'Shifty'
-  homepage 'http://shifty.natethompson.io/'
+  homepage 'https://shifty.natethompson.io/'
 
   depends_on macos: '>= :sierra'
 

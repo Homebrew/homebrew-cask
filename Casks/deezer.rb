@@ -4,7 +4,7 @@ cask 'deezer' do
 
   url "https://www.deezer.com/desktop/download/artifact/darwin/x64/#{version}"
   name 'Deezer'
-  homepage 'https://www.deezer.com/formac'
+  homepage 'https://www.deezer.com/download'
 
   app 'Deezer.app'
 
