@@ -1,6 +1,6 @@
 cask 'keytty' do
-  version '1.2.4,1510374995'
-  sha256 'ff6b8fa7d919e0f83ffe2a6787c998afda7bdf8541f679aa4cfcd0c7e5aafa8c'
+  version '1.2.5,1536241217'
+  sha256 '929e2c79637c8b1b9eef66d20383b8b19a3dda48c83376f98fdb456a6c411f9f'
 
   # dl.devmate.com/com.keytty.Keytty was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.keytty.Keytty/#{version.before_comma}/#{version.after_comma}/keytty-#{version.before_comma}.zip"
