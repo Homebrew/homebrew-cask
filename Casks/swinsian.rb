@@ -7,5 +7,7 @@ cask 'swinsian' do
   name 'Swinsian'
   homepage 'https://swinsian.com/'
 
+  auto_updates true
+
   app 'Swinsian.app'
 end
