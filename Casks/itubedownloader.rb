@@ -6,7 +6,7 @@ cask 'itubedownloader' do
   url "https://dl.devmate.com/com.AlphaSoft.iTubeDownloader/#{version.before_comma.no_dots}/#{version.after_comma}/iTubeDownloader-#{version.before_comma.no_dots}.zip"
   appcast 'https://updates.devmate.com/com.AlphaSoft.iTubeDownloader.xml'
   name 'iTubeDownloader'
-  homepage 'http://alphasoftware.co/'
+  homepage 'https://alphasoftware.co/'
 
   depends_on macos: '>= :yosemite'
 

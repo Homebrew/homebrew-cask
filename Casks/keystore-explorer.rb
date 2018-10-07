@@ -6,7 +6,7 @@ cask 'keystore-explorer' do
   url "https://github.com/kaikramer/keystore-explorer/releases/download/v#{version}/kse-#{version.no_dots}.dmg"
   appcast 'https://github.com/kaikramer/keystore-explorer/releases.atom'
   name 'KeyStore Explorer'
-  homepage 'http://keystore-explorer.org/'
+  homepage 'https://keystore-explorer.org/'
 
   app 'KeyStore Explorer.app'
 end

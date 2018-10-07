@@ -6,7 +6,7 @@ cask 'stellarium' do
   url "https://github.com/Stellarium/stellarium/releases/download/v#{version.major_minor_patch}/Stellarium-#{version}.dmg"
   appcast 'https://github.com/Stellarium/stellarium/releases.atom'
   name 'Stellarium'
-  homepage 'http://stellarium.org/'
+  homepage 'https://stellarium.org/'
 
   depends_on macos: '>= :yosemite'
 

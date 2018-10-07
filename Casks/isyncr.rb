@@ -7,9 +7,9 @@ cask 'isyncr' do
     sha256 '68e65554b12083c35b0180c6535cefcc7897c0aa4902848dcf706459ecfab3ad'
   end
 
-  url "http://www.jrtstudio.com/files/iSyncr%20Desktop%20#{version}.pkg"
+  url "https://www.jrtstudio.com/files/iSyncr%20Desktop%20#{version}.pkg"
   name 'iSyncr Desktop'
-  homepage 'http://www.jrtstudio.com/iSyncr-iTunes-for-Android'
+  homepage 'https://www.jrtstudio.com/iSyncr-iTunes-for-Android'
 
   depends_on macos: '>= :mountain_lion'
 

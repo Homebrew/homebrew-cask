@@ -6,7 +6,7 @@ cask 'tabula' do
   url "https://github.com/tabulapdf/tabula/releases/download/v#{version.major_minor_patch}/tabula-mac-#{version}.zip"
   appcast 'https://github.com/tabulapdf/tabula/releases.atom'
   name 'Tabula'
-  homepage 'http://tabula.technology/'
+  homepage 'https://tabula.technology/'
 
   app 'tabula/Tabula.app'
 end

@@ -13,7 +13,7 @@ cask 'tinderbox' do
     app "Tinderbox #{version.major}.app"
   end
 
-  url "http://www.eastgate.com/download/tbx#{version.no_dots}.dmg"
+  url "https://www.eastgate.com/download/tbx#{version.no_dots}.dmg"
   name 'Tinderbox'
-  homepage 'http://eastgate.com/Tinderbox/'
+  homepage 'https://eastgate.com/Tinderbox/'
 end

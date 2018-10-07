@@ -2,9 +2,9 @@ cask 'radi' do
   version :latest
   sha256 :no_check
 
-  url 'http://radiapp.com/Radi.zip'
+  url 'https://radiapp.com/Radi.zip'
   name 'Radi'
-  homepage 'http://radiapp.com/'
+  homepage 'https://radiapp.com/'
 
   app 'Radi.app'
 end

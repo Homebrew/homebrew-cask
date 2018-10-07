@@ -4,7 +4,7 @@ cask 'aspera-connect' do
 
   url "https://download.asperasoft.com/download/sw/connect/#{version.major_minor_patch}/IBMAsperaConnectInstaller-#{version}.dmg"
   name 'Aspera Connect'
-  homepage 'http://asperasoft.com/software/transfer-clients/connect-web-browser-plug-in/'
+  homepage 'https://asperasoft.com/software/transfer-clients/connect-web-browser-plug-in/'
 
   pkg 'IBMAsperaConnectInstaller.pkg'
 

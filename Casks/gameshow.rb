@@ -2,9 +2,9 @@ cask 'gameshow' do
   version :latest
   sha256 :no_check
 
-  url 'http://gameshow.net/downloads/Gameshow.dmg'
+  url 'https://gameshow.net/downloads/Gameshow.dmg'
   name 'Gameshow'
-  homepage 'http://gameshow.net/'
+  homepage 'https://gameshow.net/'
 
   app 'Gameshow.app'
 

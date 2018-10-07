@@ -6,7 +6,7 @@ cask 'imazing-mini' do
   url "https://dl.devmate.com/com.DigiDNA.iMazing2Mac.Mini/#{version.after_comma.before_colon}/#{version.after_colon}/iMazingMini2forMac-#{version.after_comma.before_colon}.dmg"
   appcast "https://updates.devmate.com/com.DigiDNA.iMazing#{version.major}Mac.Mini.xml"
   name 'iMazing Mini'
-  homepage 'https://imazing.com/mini'
+  homepage 'https://imazing.com/backup-iphone-ipad'
 
   conflicts_with cask: 'imazing'
   depends_on macos: '>= :mountain_lion'

@@ -5,7 +5,7 @@ cask 'speedcrunch' do
   # bitbucket.org/heldercorreia/speedcrunch was verified as official when first introduced to the cask
   url "https://bitbucket.org/heldercorreia/speedcrunch/downloads/SpeedCrunch-#{version}.dmg"
   name 'SpeedCrunch'
-  homepage 'http://www.speedcrunch.org/'
+  homepage 'https://www.speedcrunch.org/'
 
   app 'SpeedCrunch.app'
 end

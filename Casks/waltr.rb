@@ -4,7 +4,7 @@ cask 'waltr' do
 
   # dl.devmate.com/com.softorino.waltr2 was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.softorino.waltr2/#{version.before_comma}/#{version.after_comma}/Waltr#{version.major}-#{version.before_comma}.zip"
-  appcast "http://updates.devmate.com/com.softorino.waltr#{version.major}.xml"
+  appcast "https://updates.devmate.com/com.softorino.waltr#{version.major}.xml"
   name 'WALTR'
   homepage "https://softorino.com/w#{version.major}/"
 

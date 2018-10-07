@@ -6,7 +6,7 @@ cask 'minizincide' do
   url "https://github.com/MiniZinc/MiniZincIDE/releases/download/#{version}/MiniZincIDE-#{version}-bundled.dmg"
   appcast 'https://github.com/MiniZinc/MiniZincIDE/releases.atom'
   name 'MiniZincIDE'
-  homepage 'http://www.minizinc.org/ide/index.html'
+  homepage 'https://www.minizinc.org/ide/index.html'
 
   app 'MiniZincIDE.app'
 end

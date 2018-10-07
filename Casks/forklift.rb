@@ -5,7 +5,7 @@ cask 'forklift' do
   url "https://download.binarynights.com/ForkLift#{version}.zip"
   appcast "https://updates.binarynights.com/ForkLift#{version.major}/update.xml"
   name 'ForkLift'
-  homepage 'https://binarynights.com/forklift/'
+  homepage 'https://binarynights.com/'
 
   auto_updates true
   depends_on macos: '>= :el_capitan'

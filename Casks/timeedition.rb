@@ -6,7 +6,7 @@ cask 'timeedition' do
   url "https://downloads.sourceforge.net/timeedition/timeEdition#{version}-macosx.dmg.zip"
   appcast 'https://sourceforge.net/projects/timeedition/rss'
   name 'timeEdition'
-  homepage 'https://www.timeedition.com/'
+  homepage 'https://www.timeedition.com/en/'
 
   app "timeEdition #{version}/timeEdition.app"
 

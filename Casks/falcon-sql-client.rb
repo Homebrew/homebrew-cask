@@ -6,7 +6,7 @@ cask 'falcon-sql-client' do
   url "https://github.com/plotly/falcon-sql-client/releases/download/v#{version}/mac-falcon-v#{version}.zip"
   appcast 'https://github.com/plotly/falcon-sql-client/releases.atom'
   name 'Falcon SQL Client'
-  homepage 'https://plot.ly/free-sql-client-download'
+  homepage 'https://plot.ly/free-sql-client-download/'
 
   app 'Falcon SQL Client.app'
 

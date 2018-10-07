@@ -6,7 +6,7 @@ cask 'astromenace' do
   url "https://downloads.sourceforge.net/openastromenace/astromenace-macosx-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/openastromenace/rss'
   name 'AstroMenace'
-  homepage 'http://www.viewizard.com/'
+  homepage 'https://viewizard.com/'
 
   app 'AstroMenace.app'
 end

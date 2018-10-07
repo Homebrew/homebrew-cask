@@ -6,7 +6,7 @@ cask 'sonic-visualiser' do
   url "https://code.soundsoftware.ac.uk/attachments/download/#{version.after_comma}/Sonic%20Visualiser-#{version.before_comma}.dmg"
   appcast 'https://code.soundsoftware.ac.uk/projects/sonic-visualiser/repository/raw/CHANGELOG'
   name 'Sonic Visualiser'
-  homepage 'http://www.sonicvisualiser.org/'
+  homepage 'https://www.sonicvisualiser.org/'
 
   app 'Sonic Visualiser.app'
 end

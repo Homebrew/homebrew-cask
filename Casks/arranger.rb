@@ -5,7 +5,7 @@ cask 'arranger' do
   url "http://bucketomac.de/downloads/Arranger#{version}.zip"
   appcast 'http://bucketomac.de/appcast/arrangercast.xml'
   name 'Arranger'
-  homepage 'http://bucketomac.de/arranger/arranger/'
+  homepage 'http://bucketomac.de/?cat=14'
 
   accessibility_access true
   depends_on macos: '>= :mountain_lion'

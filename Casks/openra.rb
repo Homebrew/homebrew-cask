@@ -6,7 +6,7 @@ cask 'openra' do
   url "https://github.com/OpenRA/OpenRA/releases/download/release-#{version}/OpenRA-release-#{version}.dmg"
   appcast 'https://github.com/OpenRA/OpenRA/releases.atom'
   name 'OpenRA'
-  homepage 'http://www.openra.net/'
+  homepage 'https://www.openra.net/'
 
   depends_on cask: 'mono-mdk'
 

@@ -3,7 +3,7 @@ cask 'youdaonote' do
   sha256 :no_check
 
   # download.ydstatic.com/notewebsite/downloads was verified as official when first introduced to the cask
-  url 'http://download.ydstatic.com/notewebsite/downloads/YoudaoNote.dmg'
+  url 'https://download.ydstatic.com/notewebsite/downloads/YoudaoNote.dmg'
   name 'YoudaoNote'
   name '有道云笔记'
   homepage 'https://note.youdao.com/'

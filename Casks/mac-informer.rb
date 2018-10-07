@@ -2,9 +2,9 @@ cask 'mac-informer' do
   version :latest
   sha256 :no_check
 
-  url 'http://files.informer.com/simac.dmg'
+  url 'https://files.informer.com/simac.dmg'
   name 'Mac Informer'
-  homepage 'http://macdownload.informer.com/landing/'
+  homepage 'https://macdownload.informer.com/landing/'
 
   app 'Mac Informer.app'
 
