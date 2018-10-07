@@ -7,5 +7,7 @@ cask 'gas-mask' do
   name 'Gas Mask'
   homepage 'http://clockwise.ee/'
 
+  auto_updates true
+
   app 'Gas Mask.app'
 end
