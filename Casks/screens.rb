@@ -8,6 +8,7 @@ cask 'screens' do
   name 'Screens'
   homepage 'https://edovia.com/screens-mac/'
 
+  auto_updates true
   depends_on macos: '>= :sierra'
 
   app "Screens #{version.major}.app"
