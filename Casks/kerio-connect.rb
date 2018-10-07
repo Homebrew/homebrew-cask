@@ -11,12 +11,13 @@ cask 'kerio-connect' do
 
   uninstall early_script: {
                             executable:   '/bin/launchctl',
-                            args:         ['unload', 'KerioConnect'],
+                            args:         ['unload', '-w', '/Library/LaunchDaemons/com.kerio.mailserver.plist'],
                             must_succeed: false,
+                            sudo:         true,
                           },
-            pkgutil: [
-                       'com.kerio.connect.server.pkg',
-                       'com.kerio.connect.server.installer.pkg',
-                     ],
-            launchctl: 'KerioConnect'
+            pkgutil:      [
+                            'com.kerio.connect.server.pkg',
+                            'com.kerio.connect.server.installer.pkg',
+                          ],
+            launchctl:    'KerioConnect'
 end
