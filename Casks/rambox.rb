@@ -6,7 +6,7 @@ cask 'rambox' do
   url "https://github.com/saenzramiro/rambox/releases/download/#{version}/Rambox-#{version}-mac.zip"
   appcast 'https://github.com/saenzramiro/rambox/releases.atom'
   name 'Rambox'
-  homepage 'http://rambox.pro/'
+  homepage 'https://rambox.pro/'
 
   app 'Rambox.app'
 

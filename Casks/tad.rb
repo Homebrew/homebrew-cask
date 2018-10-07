@@ -6,7 +6,7 @@ cask 'tad' do
   url "https://github.com/antonycourtney/tad/releases/download/v#{version}/tad-#{version}.dmg"
   appcast 'https://github.com/antonycourtney/tad/releases.atom'
   name 'Tad'
-  homepage 'http://tadviewer.com/'
+  homepage 'https://www.tadviewer.com/'
 
   app 'Tad.app'
   binary "#{appdir}/Tad.app/Contents/Resources/tad.sh", target: 'tad'

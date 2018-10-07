@@ -4,7 +4,7 @@ cask 'vu' do
 
   # dl.devmate.com/com.boriskarulin.vu was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.boriskarulin.vu/#{version.before_comma}/#{version.after_comma}/vu-#{version.before_comma}.dmg"
-  appcast 'http://updates.devmate.com/com.boriskarulin.vu.xml'
+  appcast 'https://updates.devmate.com/com.boriskarulin.vu.xml'
   name 'vu'
   homepage 'https://datastills.com/vu/'
 

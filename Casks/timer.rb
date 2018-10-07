@@ -2,7 +2,7 @@ cask 'timer' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.apimac.com/download/Timer.zip'
+  url 'https://www.apimac.com/download/Timer.zip'
   name 'Timer'
   homepage 'https://www.apimac.com/mac/timer/'
 

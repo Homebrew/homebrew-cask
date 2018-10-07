@@ -6,7 +6,7 @@ cask 'portfolioperformance' do
   url "https://bintray.com/buchen/downloads/download_file?file_path=#{version}%2FPortfolioPerformance-distro-#{version}-macosx.cocoa.x86_64.tar.gz"
   appcast 'https://github.com/buchen/portfolio/releases.atom'
   name 'Portfolio Performance'
-  homepage 'http://www.portfolio-performance.info/portfolio/'
+  homepage 'https://www.portfolio-performance.info/portfolio/'
 
   auto_updates true
 

@@ -2,9 +2,9 @@ cask 'qobuz' do
   version :latest
   sha256 :no_check
 
-  url 'http://static.qobuz.com/apps/qobuz-desktop/osx/QobuzDesktopInstaller.pkg'
+  url 'https://static.qobuz.com/apps/qobuz-desktop/osx/QobuzDesktopInstaller.pkg'
   name 'Qobuz Desktop'
-  homepage 'http://www.qobuz.com/applications'
+  homepage 'https://www.qobuz.com/applications'
 
   pkg 'QobuzDesktopInstaller.pkg'
 

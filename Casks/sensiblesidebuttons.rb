@@ -6,7 +6,7 @@ cask 'sensiblesidebuttons' do
   url "https://github.com/archagon/sensible-side-buttons/releases/download/#{version}/SensibleSideButtons-#{version}.dmg"
   appcast 'https://github.com/archagon/sensible-side-buttons/releases.atom'
   name 'Sensible Side Buttons'
-  homepage 'http://sensible-side-buttons.archagon.net/'
+  homepage 'https://sensible-side-buttons.archagon.net/'
 
   app 'SensibleSideButtons.app'
 end

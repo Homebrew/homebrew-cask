@@ -4,7 +4,7 @@ cask 'teamspeak-client' do
 
   # dl.4players.de/ts was verified as official when first introduced to the cask
   url "http://dl.4players.de/ts/releases/#{version}/TeamSpeak#{version.major}-Client-macosx-#{version}.dmg"
-  appcast 'http://versions.teamspeak.com/ts3-client-2'
+  appcast 'https://versions.teamspeak.com/ts3-client-2'
   name 'TeamSpeak Client'
   homepage 'https://www.teamspeak.com/'
 

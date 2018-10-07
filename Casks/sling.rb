@@ -3,8 +3,8 @@ cask 'sling' do
   sha256 '7422424417eff1ea73f9b465dfd270639b9f37042d02b38fcb80fe3d25196fe3'
 
   # webapp.movetv.com was verified as official when first introduced to the cask
-  url 'http://webapp.movetv.com/player/osx/slingtv.dmg'
-  appcast 'http://webapp.movetv.com/config/desktopupdate/sling/osx/production/Sling-snowleopard-sparkle.xml'
+  url 'https://webapp.movetv.com/player/osx/slingtv.dmg'
+  appcast 'https://webapp.movetv.com/config/desktopupdate/sling/osx/production/Sling-snowleopard-sparkle.xml'
   name 'Sling TV'
   homepage 'http://www.sling.com/'
 

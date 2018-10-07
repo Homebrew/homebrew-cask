@@ -10,9 +10,9 @@ cask 'time-out' do
     sha256 '4687b901e502c98cabf37cd52862782fab08c0c8406a16484c12c8ca50cb82ac'
   end
 
-  url "http://www.dejal.com/download/timeout-#{version}.zip"
+  url "https://www.dejal.com/download/timeout-#{version}.zip"
   name 'Time Out'
-  homepage 'http://www.dejal.com/timeout/'
+  homepage 'https://www.dejal.com/timeout/'
 
   app 'Time Out.app'
 end
