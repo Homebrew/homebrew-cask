@@ -7,6 +7,8 @@ cask 'sloth' do
   name 'Sloth'
   homepage 'https://sveinbjorn.org/sloth'
 
+  auto_updates true
+
   app 'Sloth.app'
 
   zap trash: [
