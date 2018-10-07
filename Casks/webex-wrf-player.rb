@@ -1,6 +1,6 @@
 cask 'webex-wrf-player' do
   version 'T33L'
-  sha256 '073396a04cf1bbd1aa87f3be43abfc9278acf0425e49220f930b7515cd93962f'
+  sha256 :no_check # required as upstream package is updated in-place
 
   url "https://welcome.webex.com/client/#{version}/mac/intel/webexplayer_intel.dmg"
   name 'WebEx Player'
