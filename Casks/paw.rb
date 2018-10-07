@@ -7,6 +7,8 @@ cask 'paw' do
   name 'Paw'
   homepage 'https://paw.cloud/'
 
+  auto_updates true
+
   app 'Paw.app'
 
   zap trash: [
