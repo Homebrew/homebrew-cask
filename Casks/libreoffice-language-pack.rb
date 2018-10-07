@@ -564,30 +564,9 @@ cask 'libreoffice-language-pack' do
 
   depends_on cask: 'libreoffice'
 
-  stage_only true
-
-  preflight do
-    system_command '/usr/bin/osascript', args: ['-e', <<~APPLESCRIPT]
-      try
-        if application "LibreOffice" is not running
-          with timeout of 30 seconds
-            tell application "LibreOffice" to activate
-          end timeout
-        end if
-        tell application "LibreOffice" to quit
-      on error
-        -- Ignore errors (probably running under Travis)
-        return 0
-      end try
-    APPLESCRIPT
-    system_command '/usr/bin/tar', args: ['-C', "#{appdir}/LibreOffice.app/", '-xjf', "#{staged_path}/LibreOffice Language Pack.app/Contents/tarball.tar.bz2"]
-    system_command '/usr/bin/touch', args: ["#{appdir}/LibreOffice.app/Contents/Resources/extensions"]
-  end
+  installer manual: 'LibreOffice Language Pack.app'
 
   caveats <<~EOS
-    LibreOffice MUST be opened at least once before installing #{token}.
-    This Cask will do it for you.
-
     #{token} assumes LibreOffice is installed in '#{appdir}'. If it is not, you’ll need to run '#{staged_path}/LibreOffice Language Pack.app' manually.
   EOS
 end
