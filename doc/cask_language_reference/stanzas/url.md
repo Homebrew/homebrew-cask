@@ -62,13 +62,11 @@ We prefer URLs of this format:
 https://downloads.sourceforge.net/{{project_name}}/{{filename}}.{{ext}}
 ```
 
-Or, if it’s from [OSDN](https://osdn.jp/):
+Or, if it’s from [OSDN](https://osdn.net/):
 
 ```
-http://{{subdomain}}.osdn.jp/{{project_name}}/{{release_id}}/{{filename}}.{{ext}}
+https://osdn.net/dl/{{project_name}}/{{filename}}.{{ext}}
 ```
-
-`{{subdomain}}` is typically of the form `dl` or `{{user}}.dl`.
 
 If these formats are not available, and the application is macOS-exclusive (otherwise a command-line download defaults to the Windows version) we prefer the use of this format:
 
