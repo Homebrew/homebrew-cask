@@ -4,7 +4,7 @@ cask 'beamdog-client' do
 
   url "http://client.beamdog.com/download/#{version}/osx_64/Beamdog%20Client-#{version}.dmg"
   name 'Beamdog Client'
-  homepage 'https://beamdog.com/about/client'
+  homepage 'https://www.beamdog.com/about/client'
 
   app 'Beamdog Client.app'
 

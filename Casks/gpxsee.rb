@@ -6,7 +6,7 @@ cask 'gpxsee' do
   url "https://downloads.sourceforge.net/gpxsee/Mac%20OS%20X/GPXSee-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/gpxsee/rss?path=/Mac%20OS%20X'
   name 'GPXSee'
-  homepage 'http://www.gpxsee.org/'
+  homepage 'https://www.gpxsee.org/'
 
   app 'GPXSee.app'
 end

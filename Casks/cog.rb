@@ -4,8 +4,8 @@ cask 'cog' do
 
   # the stable package on sourceforge is a bzip-inside-bzip that we can't handle
 
-  url "http://cogx.org/nightly_builds/cog-#{version}.tbz"
-  appcast 'http://mamburu.net/cog/stable.xml'
+  url "https://cogx.org/nightly_builds/cog-#{version}.tbz"
+  appcast 'https://mamburu.net/cog/stable.xml'
   name 'Cog'
   homepage 'https://cogx.org/'
 

@@ -6,7 +6,7 @@ cask 'fips' do
   url "https://github.com/matwey/fips3/releases/download/#{version}/Fips-#{version}-Darwin.dmg"
   appcast 'https://github.com/matwey/fips3/releases.atom'
   name 'Fips'
-  homepage 'http://fips.space/'
+  homepage 'https://fips.space/'
 
   app 'Fips.app'
 end

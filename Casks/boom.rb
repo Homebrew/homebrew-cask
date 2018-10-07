@@ -6,7 +6,7 @@ cask 'boom' do
   url "https://dl.devmate.com/com.globaldelight.Boom2/#{version.before_comma}/#{version.after_comma}/Boom2-#{version.before_comma}.dmg"
   appcast 'https://updates.devmate.com/com.globaldelight.Boom2.xml'
   name 'Boom'
-  homepage 'http://www.globaldelight.com/boom'
+  homepage 'https://www.globaldelight.com/boom'
 
   depends_on macos: '>= :yosemite'
 

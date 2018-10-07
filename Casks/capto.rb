@@ -6,7 +6,7 @@ cask 'capto' do
   url "https://dl.devmate.com/com.globaldelight.Capto/#{version.before_comma}/#{version.after_comma}/Capto-#{version.before_comma}.dmg"
   appcast 'https://updates.devmate.com/com.globaldelight.Capto.xml'
   name 'Capto'
-  homepage 'http://www.globaldelight.com/capto/'
+  homepage 'https://www.globaldelight.com/capto/'
 
   app 'Capto.app'
 end
