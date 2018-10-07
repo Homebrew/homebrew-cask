@@ -7,6 +7,7 @@ cask 'soulver' do
   name 'Soulver'
   homepage 'https://www.acqualia.com/soulver/'
 
+  auto_updates true
   depends_on macos: '>= :yosemite'
 
   app 'Soulver.app'
