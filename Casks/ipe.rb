@@ -4,9 +4,9 @@ cask 'ipe' do
 
   # bintray.com/otfried was verified as official when first introduced to the cask
   url "https://dl.bintray.com/otfried/generic/ipe/#{version.major_minor}/ipe-#{version}-mac.dmg"
-  appcast 'http://ipe.otfried.org/'
+  appcast 'https://ipe.otfried.org/'
   name 'Ipe'
-  homepage 'http://ipe.otfried.org/'
+  homepage 'https://ipe.otfried.org/'
 
   depends_on macos: '>= :mavericks'
 

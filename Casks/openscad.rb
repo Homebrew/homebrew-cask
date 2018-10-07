@@ -5,7 +5,7 @@ cask 'openscad' do
   url "http://files.openscad.org/OpenSCAD-#{version}.dmg"
   appcast 'http://files.openscad.org/appcast.xml'
   name 'OpenSCAD'
-  homepage 'http://www.openscad.org/'
+  homepage 'https://www.openscad.org/'
 
   app 'OpenSCAD.app'
   binary "#{appdir}/OpenSCAD.app/Contents/MacOS/OpenSCAD", target: 'openscad'

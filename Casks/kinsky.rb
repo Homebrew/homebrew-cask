@@ -3,7 +3,7 @@ cask 'kinsky' do
   sha256 '86be0b0c7b50d65a44a1cac24dc47dce55b5a6dceed36e8d66b8842db31574bc'
 
   url "https://oss.linn.co.uk/Releases/Kinsky/Davaar/Kinsky_#{version}_osx.pkg"
-  appcast 'http://oss.linn.co.uk/Releases/Kinsky/Davaar/'
+  appcast 'https://oss.linn.co.uk/Releases/Kinsky/Davaar/'
   name 'Kinsky'
   homepage 'https://oss.linn.co.uk/trac/wiki/DownloadKinsky'
 

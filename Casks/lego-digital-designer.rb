@@ -5,7 +5,7 @@ cask 'lego-digital-designer' do
   # lc-www-live-s.legocdn.com was verified as official when first introduced to the cask
   url "https://lc-www-live-s.legocdn.com/downloads/ldd2.0/installer/setupLDD-MAC-#{version.dots_to_underscores}.zip"
   name 'Lego Digital Designer'
-  homepage 'http://ldd.lego.com/'
+  homepage 'https://www.lego.com/en-us/ldd'
 
   pkg 'LDD.pkg'
 
