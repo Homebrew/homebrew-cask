@@ -7,6 +7,7 @@ cask 'downie' do
   name 'Downie'
   homepage 'https://software.charliemonroe.net/downie.php'
 
+  auto_updates true
   depends_on macos: '>= :el_capitan'
 
   app "Downie #{version.major}.app"
