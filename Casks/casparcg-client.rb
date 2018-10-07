@@ -6,7 +6,7 @@ cask 'casparcg-client' do
   url "https://downloads.sourceforge.net/casparcg/CasparCG_Client/CasparCG_Client_#{version.major_minor}/CasparCG_Client_#{version}_Mac.dmg"
   appcast 'https://sourceforge.net/projects/casparcg/rss?path=/CasparCG_Client'
   name 'CasparCG Client'
-  homepage 'http://casparcg.com/'
+  homepage 'https://casparcg.com/'
 
   app 'CasparCG Client.app'
 end

@@ -6,7 +6,7 @@ cask 'ganache' do
   url "https://github.com/trufflesuite/ganache/releases/download/v#{version}/Ganache-#{version}.dmg"
   appcast 'https://github.com/trufflesuite/ganache/releases.atom'
   name 'Ganache'
-  homepage 'http://truffleframework.com/ganache/'
+  homepage 'https://truffleframework.com/ganache/'
 
   app 'Ganache.app'
 end

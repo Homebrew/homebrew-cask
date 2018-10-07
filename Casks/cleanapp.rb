@@ -9,7 +9,7 @@ cask 'cleanapp' do
 
   url "https://download.syniumsoftware.com/CleanApp/CleanApp%20#{version}.dmg"
   name 'Synium Software CleanApp'
-  homepage 'http://www.syniumsoftware.com/cleanapp'
+  homepage 'https://www.syniumsoftware.com/cleanapp'
 
   app 'CleanApp.app'
 

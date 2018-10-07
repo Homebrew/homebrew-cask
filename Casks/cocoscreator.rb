@@ -5,7 +5,7 @@ cask 'cocoscreator' do
   # download.cocos.com was verified as official when first introduced to the cask
   url "http://download.cocos.com/CocosCreator/v#{version.before_comma}/CocosCreator_v#{version.before_comma}_#{version.after_comma}.dmg"
   name 'CocosCreator'
-  homepage 'http://www.cocos2d-x.org/'
+  homepage 'https://www.cocos2d-x.org/'
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/cocos.wrapper.sh"

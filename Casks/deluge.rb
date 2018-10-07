@@ -4,7 +4,7 @@ cask 'deluge' do
 
   url "http://download.deluge-torrent.org/mac_osx/deluge-#{version}-macosx-x64.dmg"
   name 'Deluge'
-  homepage 'http://deluge-torrent.org/'
+  homepage 'https://deluge-torrent.org/'
 
   app 'Deluge.app'
 end
