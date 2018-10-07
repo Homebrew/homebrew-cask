@@ -5,7 +5,7 @@ cask 'ionic-lab' do
   # ionic-io-assets.s3.amazonaws.com was verified as official when first introduced to the cask
   url 'https://ionic-io-assets.s3.amazonaws.com/labs/IonicLab.dmg'
   name 'IonicLab'
-  homepage 'http://lab.ionic.io/'
+  homepage 'https://lab.ionic.io/'
 
   app 'Ionic Lab.app'
 end

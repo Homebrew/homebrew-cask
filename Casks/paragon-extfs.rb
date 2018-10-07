@@ -2,7 +2,7 @@ cask 'paragon-extfs' do
   version '11'
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "http://dl.paragon-software.com/demo/trial_extfs#{version}.dmg"
+  url "https://dl.paragon-software.com/demo/trial_extfs#{version}.dmg"
   name 'Paragon ExtFS'
   homepage 'https://www.paragon-software.com/ufsdhome/extfs-mac/'
 

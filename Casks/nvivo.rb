@@ -5,7 +5,7 @@ cask 'nvivo' do
   url "https://download.qsrinternational.com/Software/NVivo#{version.major}forMac/#{version}/NVivo%20#{version.major}.dmg"
   appcast "https://download.qsrinternational.com/Software/NVivo#{version.major}forMac/appcast.xml"
   name 'NVivo'
-  homepage 'http://www.qsrinternational.com/'
+  homepage 'https://www.qsrinternational.com/'
 
   app "NVivo #{version.major}.app"
 
