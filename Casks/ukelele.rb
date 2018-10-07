@@ -4,7 +4,7 @@ cask 'ukelele' do
 
   url "https://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Ukelele_#{version}&filename=Ukelele_#{version}.dmg"
   name 'Ukelele'
-  homepage 'http://scripts.sil.org/ukelele'
+  homepage 'https://scripts.sil.org/ukelele'
 
   app 'Ukelele.app'
 

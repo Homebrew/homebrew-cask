@@ -2,9 +2,9 @@ cask 'screensleeves' do
   version :latest
   sha256 :no_check
 
-  url 'http://peacockmedia.software/mac/screensleeves/screensleeves.dmg'
+  url 'https://peacockmedia.software/mac/screensleeves/screensleevesSA.dmg'
   name 'ScreenSleeves screensaver'
-  homepage 'http://peacockmedia.software/mac/screensleeves/'
+  homepage 'https://peacockmedia.software/mac/screensleeves/'
 
   screen_saver 'ScreenSleeves.saver'
 end

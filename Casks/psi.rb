@@ -6,7 +6,7 @@ cask 'psi' do
   url "https://downloads.sourceforge.net/psi/psi-#{version}-mac.dmg"
   appcast 'https://sourceforge.net/projects/psi/rss'
   name 'Psi'
-  homepage 'http://psi-im.org/'
+  homepage 'https://psi-im.org/'
 
   app 'Psi.app'
 

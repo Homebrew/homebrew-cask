@@ -4,7 +4,7 @@ cask 'thumbsup' do
 
   # s3.amazonaws.com/DTWebsiteSupport was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/freeware/thumbsup/#{version}/ThumbsUp.app.zip"
-  appcast 'http://www.devontechnologies.com/download/thank-you-for-downloading.html?productid=900000015'
+  appcast 'https://www.devontechnologies.com/download/thank-you-for-downloading.html?productid=900000015'
   name 'ThumbsUp'
   homepage 'https://www.devontechnologies.com/products/freeware.html#c966'
 

@@ -6,7 +6,7 @@ cask 'script-debugger' do
   url "https://s3.amazonaws.com/latenightsw.com/ScriptDebugger#{version}.dmg"
   appcast "https://www.latenightsw.com/versions/com.latenightsw.ScriptDebugger#{version.major}.php"
   name 'Script Debugger'
-  homepage 'http://latenightsw.com/'
+  homepage 'https://latenightsw.com/'
 
   app 'Script Debugger.app'
 

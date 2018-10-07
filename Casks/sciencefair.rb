@@ -6,7 +6,7 @@ cask 'sciencefair' do
   url "https://github.com/codeforscience/sciencefair/releases/download/v#{version}/scienceFair-#{version}.dmg"
   appcast 'https://github.com/codeforscience/sciencefair/releases.atom'
   name 'ScienceFair'
-  homepage 'http://sciencefair-app.com/'
+  homepage 'https://sciencefair-app.com/'
 
   app 'ScienceFair.app'
 

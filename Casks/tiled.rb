@@ -6,7 +6,7 @@ cask 'tiled' do
   url "https://github.com/bjorn/tiled/releases/download/v#{version}/Tiled-#{version}-macos.zip"
   appcast 'https://github.com/bjorn/tiled/releases.atom'
   name 'Tiled'
-  homepage 'http://www.mapeditor.org/'
+  homepage 'https://www.mapeditor.org/'
 
   app 'Tiled.app'
 end
