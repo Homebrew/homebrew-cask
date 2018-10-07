@@ -7,8 +7,6 @@ cask 'shortcutdetective' do
   name 'ShortcutDetective'
   homepage 'https://www.irradiatedsoftware.com/labs/'
 
-  accessibility_access true
-
   app 'ShortcutDetective.app'
 
   zap trash: '~/Library/Preferences/com.irradiatedsoftware.ShortcutDetective.plist'

@@ -8,7 +8,5 @@ cask 'typinator' do
   name 'Typinator'
   homepage 'https://www.ergonis.com/'
 
-  accessibility_access true
-
   app 'Typinator.app'
 end

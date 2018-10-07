@@ -7,7 +7,6 @@ cask 'arranger' do
   name 'Arranger'
   homepage 'http://bucketomac.de/?cat=14'
 
-  accessibility_access true
   depends_on macos: '>= :mountain_lion'
 
   app 'Arranger.app'
