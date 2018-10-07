@@ -6,7 +6,7 @@ cask 'daylite' do
     pkg 'Install Daylite & Mail Assistant.pkg'
   else
     version '6.6.1'
-    sha256 '529477859f49bcca08c0704522338201bc0b64de5d58f650c3011d5e711aa223'
+    sha256 '6dfca8f331b03dd61e612884dce10c94d76465cf2392292eab5f3f42a9b800e6'
     url "https://download.marketcircle.com/daylite/daylitedma#{version.no_dots}.pkg"
     pkg "daylitedma#{version.no_dots}.pkg"
   end
