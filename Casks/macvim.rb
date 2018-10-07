@@ -7,6 +7,7 @@ cask 'macvim' do
   name 'MacVim'
   homepage 'https://github.com/macvim-dev/macvim'
 
+  auto_updates true
   conflicts_with formula: 'macvim'
   depends_on macos: '>= :mountain_lion'
 
