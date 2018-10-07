@@ -7,6 +7,8 @@ cask 'textual' do
   name 'Textual'
   homepage 'https://www.codeux.com/textual/'
 
+  auto_updates true
+
   app 'Textual.app'
 
   zap trash: [
