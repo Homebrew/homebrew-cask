@@ -1,9 +1,8 @@
 cask 'archipelago' do
-  version :latest
-  sha256 :no_check
+  version '2.3.2'
+  sha256 'b8136372aba64f209acc4b3142004940120ef2038ef8b7562c44a2a60df8297a'
 
-  url 'https://archipelago-terminal.herokuapp.com/download/osx'
-  appcast 'https://github.com/npezza93/archipelago/releases.atom'
+  url 'https://github.com/npezza93/archipelago/releases/tag/v2.3.2'
   name 'Archipelago'
   homepage 'https://github.com/npezza93/archipelago'
 
