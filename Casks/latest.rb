@@ -1,6 +1,6 @@
 cask 'latest' do
-  version '0.4.4'
-  sha256 '5c61d2fdec9bdbfc60d55d107c82505a7c8f6708f083c0a8f958a8e0e14ac19f'
+  version '0.4.5'
+  sha256 'be339097f606008d9a6c5e33ca356caffc6056ac63508909ef95a08ecd7fc51e'
 
   url 'https://max.codes/latest/Latest.zip'
   appcast 'https://max.codes/latest/feed.xml'
