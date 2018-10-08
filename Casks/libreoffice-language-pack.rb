@@ -566,7 +566,9 @@ cask 'libreoffice-language-pack' do
 
   installer manual: 'LibreOffice Language Pack.app'
 
-  caveats <<~EOS
-    #{token} assumes LibreOffice is installed in '#{appdir}'. If it is not, you’ll need to run '#{staged_path}/LibreOffice Language Pack.app' manually.
-  EOS
+  # Not actually necessary, since it would be deleted anyway.
+  # It is present to make clear an uninstall was not forgotten
+  # and that for this cask it is indeed this simple.
+  # See https://github.com/Homebrew/homebrew-cask/pull/52893
+  uninstall delete: "#{staged_path}/#{token}"
 end
