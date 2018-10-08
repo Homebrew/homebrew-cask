@@ -30,7 +30,6 @@ cask 'bettertouchtool' do
   homepage 'https://folivora.ai/'
 
   auto_updates true
-  accessibility_access true
 
   app 'BetterTouchTool.app'
 

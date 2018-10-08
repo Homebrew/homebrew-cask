@@ -7,7 +7,6 @@ cask 'qbserve' do
   name 'Qbserve'
   homepage 'https://qotoqot.com/qbserve/'
 
-  accessibility_access true
   depends_on macos: '>= :yosemite'
 
   app 'Qbserve.app'

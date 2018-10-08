@@ -14,7 +14,6 @@ cask 'hammerspoon' do
   homepage 'https://www.hammerspoon.org/'
 
   auto_updates true
-  accessibility_access true
 
   app 'Hammerspoon.app'
 

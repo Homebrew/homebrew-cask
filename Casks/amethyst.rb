@@ -18,8 +18,6 @@ cask 'amethyst' do
   name 'Amethyst'
   homepage 'https://ianyh.com/amethyst/'
 
-  accessibility_access true
-
   app 'Amethyst.app'
 
   uninstall login_item: 'Amethyst'

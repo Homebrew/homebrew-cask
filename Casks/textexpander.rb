@@ -9,7 +9,6 @@ cask 'textexpander' do
   homepage 'https://smilesoftware.com/TextExpander'
 
   auto_updates true
-  accessibility_access true
 
   app 'TextExpander.app'
 
