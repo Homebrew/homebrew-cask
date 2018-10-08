@@ -1,4 +1,4 @@
-cask 'github-classroom-assistant' do
+cask 'classroom-assistant' do
   version '1.0.1'
   sha256 'c6be6a373dc043b1760628d750a123195788bec23935b1c7dfa8cf7a1bf98976'
 
