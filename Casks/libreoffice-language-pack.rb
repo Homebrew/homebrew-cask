@@ -564,14 +564,11 @@ cask 'libreoffice-language-pack' do
 
   depends_on cask: 'libreoffice'
 
-  stage_only true
+  installer manual: 'LibreOffice Language Pack.app'
 
-  preflight do
-    system_command '/usr/bin/tar', args: ['-C', "#{appdir}/LibreOffice.app/", '-xjf', "#{staged_path}/LibreOffice Language Pack.app/Contents/tarball.tar.bz2"]
-    system_command '/usr/bin/touch', args: ["#{appdir}/LibreOffice.app/Contents/Resources/extensions"]
-  end
-
-  caveats <<~EOS
-    #{token} assumes LibreOffice is installed in '#{appdir}'. If it is not, you’ll need to run '#{staged_path}/LibreOffice Language Pack.app' manually.
-  EOS
+  # Not actually necessary, since it would be deleted anyway.
+  # It is present to make clear an uninstall was not forgotten
+  # and that for this cask it is indeed this simple.
+  # See https://github.com/Homebrew/homebrew-cask/pull/52893
+  uninstall delete: "#{staged_path}/#{token}"
 end
