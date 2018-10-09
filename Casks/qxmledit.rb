@@ -4,9 +4,9 @@ cask 'qxmledit' do
 
   # sourceforge.net/qxmledit was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/qxmledit/QXmlEdit-#{version}.dmg"
+  appcast 'https://sourceforge.net/projects/qxmledit/rss'
   name 'QXmlEdit'
   homepage 'http://qxmledit.org/'
-  appcast 'https://sourceforge.net/projects/qxmledit/rss'
 
   app 'QXmlEdit.app'
 end
