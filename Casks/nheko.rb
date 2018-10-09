@@ -1,6 +1,6 @@
 cask 'nheko' do
-  version '0.6.1'
-  sha256 'caef9bd13e7177453ba8b49b22b64e98c6dba8ce8ab1d28c437514f2e13f381c'
+  version '0.6.2'
+  sha256 'b78a8322f9463a7bbb7b1c04aee2b5318c16cef9b5dafddac828e8fd59f2813e'
 
   url "https://github.com/mujx/nheko/releases/download/v#{version}/nheko-v#{version}.dmg"
   appcast 'https://github.com/mujx/nheko/releases.atom'
