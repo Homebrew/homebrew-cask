@@ -1,6 +1,6 @@
 cask 'intel-power-gadget' do
-  version '3.5.4,770353'
-  sha256 '761f7dd4de7cd7150e6abfedba08f4b1da3a04dc571992dd46b3aca6f699f734'
+  version '3.5.5,778485'
+  sha256 'ff2f82e095cdea62393e78e69b0616b1d34a95c4b16960891d91943c7c3b62ec'
 
   url "https://software.intel.com/file/#{version.after_comma}/download"
   name 'Intel Power Gadget'
