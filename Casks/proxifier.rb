@@ -1,5 +1,5 @@
 cask 'proxifier' do
-  version '2.22'
+  version '2.22.1'
   sha256 'fe998ac7bbbfcf2bf6cc422e84099a11439711fa4a86618970dade62107c2d0d'
 
   url 'https://www.proxifier.com/distr/ProxifierMac.dmg'
