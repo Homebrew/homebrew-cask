@@ -10,8 +10,8 @@ cask 'poedit' do
 
     url "https://poedit.net/dl/Poedit-#{version}.zip"
   else
-    version '2.1.1'
-    sha256 '7e2113cd4ac355f726ec23f6fe0d965c0be23d187074667df0b7df0b6af8fd2a'
+    version '2.2'
+    sha256 'd059b8c9780819ef2ceebba17391b3f5742767253e36c78a8b63d34d6e987f96'
 
     url "https://download.poedit.net/Poedit-#{version}.zip"
     appcast 'https://poedit.net/updates/osx/appcast'
