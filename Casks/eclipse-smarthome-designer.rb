@@ -1,6 +1,6 @@
 cask 'eclipse-smarthome-designer' do
-  version '0.8.0'
-  sha256 '348d27b7c11ae188b0bd80c9f6330952731ea73e39213e89408dff3663931c65'
+  version '0.9.0'
+  sha256 'fd46c514f23f3b4f86c20e7557c2eb82debd1f1060fa751b07306ec93a1fa77e'
 
   url "https://eclipse.org/downloads/download.php?file=/smarthome/releases/#{version}/eclipsesmarthome-incubation-#{version}-designer-macosx64.zip&r=1"
   name 'Eclipse SmartHome Designer'
