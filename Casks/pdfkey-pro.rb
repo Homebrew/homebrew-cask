@@ -4,7 +4,7 @@ cask 'pdfkey-pro' do
 
   url 'https://pdfkey.com/PDFKeyPro.dmg'
   name 'PDFKey Pro'
-  homepage 'http://pdfkey.com/'
+  homepage 'https://pdfkey.com/'
 
   app 'PDFKey Pro.app'
 end

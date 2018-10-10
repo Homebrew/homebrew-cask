@@ -20,7 +20,7 @@ end
 
 ## The Cask Language Is Declarative
 
-Each Cask contains a series of stanzas (or “fields”) which *declare* how the software is to be obtained and installed. In a declarative language, the author does not need to worry about **order**. As long as all the needed fields are present, Homebrew-Cask will figure out what needs to be done at install time.
+Each Cask contains a series of stanzas (or “fields”) which *declare* how the software is to be obtained and installed. In a declarative language, the author does not need to worry about **order**. As long as all the needed fields are present, Homebrew Cask will figure out what needs to be done at install time.
 
 To make maintenance easier, the most-frequently-updated stanzas are usually placed at the top. But that’s a convention, not a rule.
 
@@ -95,7 +95,7 @@ end
 
 This should be used sparingly: any method which is needed by two or more Casks should instead be rolled into the core. Care must also be taken that such methods be very efficient.
 
-Variables and methods should not be defined outside the `Utils` namespace, as they may collide with Homebrew-Cask internals.
+Variables and methods should not be defined outside the `Utils` namespace, as they may collide with Homebrew Cask internals.
 
 ## Header Line Details
 
@@ -125,10 +125,8 @@ url
 appcast
 name
 homepage
-gpg, key_id: # on same line, since first part is typically small
 
 auto_updates
-accessibility_access
 conflicts_with
 depends_on
 container
@@ -168,4 +166,4 @@ zap
 caveats
 ```
 
-Note that every stanza that has additional parameters (`:symbols` after a `,`) shall have them on separate lines, one per line, in alphabetical order. Exceptions are `gpg` and `target:` (when not applied to `url`) which typically consist of short lines.
+Note that every stanza that has additional parameters (`:symbols` after a `,`) shall have them on separate lines, one per line, in alphabetical order. An exception is `target:` which typically consists of short lines.

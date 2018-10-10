@@ -106,7 +106,7 @@ class Check
 
     pkg_files = diff[:installed_pkgs]
                  .added
-                 .flat_map { |id| Hbc::Pkg.new(id).pkgutil_bom_all.map(&:to_s) }
+                 .flat_map { |id| Cask::Pkg.new(id).pkgutil_bom_all.map(&:to_s) }
 
     installed_apps = diff[:installed_apps].added - pkg_files
 

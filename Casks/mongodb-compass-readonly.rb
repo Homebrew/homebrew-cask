@@ -1,6 +1,6 @@
 cask 'mongodb-compass-readonly' do
-  version '1.14.6'
-  sha256 '9e6007a2bd3d642566cf8a1c50e938ed21b234f67f5296ad43ef037535941e44'
+  version '1.15.2'
+  sha256 '304d6787a1d50d351f37455c0b1744ff1c1c688c0f8b133fa6f3c006640e42f7'
 
   url "https://downloads.mongodb.com/compass/mongodb-compass-readonly-#{version}-darwin-x64.dmg"
   name 'MongoDB Compass Readonly'

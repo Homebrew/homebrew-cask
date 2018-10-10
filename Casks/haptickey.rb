@@ -7,5 +7,7 @@ cask 'haptickey' do
   name 'HapticKey'
   homepage 'https://github.com/niw/HapticKey'
 
+  depends_on macos: '>= :sierra'
+
   app 'HapticKey.app'
 end

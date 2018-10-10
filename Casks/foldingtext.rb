@@ -6,7 +6,7 @@ cask 'foldingtext' do
   url 'https://s3.amazonaws.com/foldingtext/FoldingText.dmg'
   appcast 'https://foldingtext.s3.amazonaws.com/FoldingText.rss'
   name 'FoldingText'
-  homepage 'http://www.foldingtext.com/'
+  homepage 'https://www.foldingtext.com/'
 
   app 'FoldingText.app'
 end

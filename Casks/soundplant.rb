@@ -1,8 +1,8 @@
 cask 'soundplant' do
   version '45'
-  sha256 'b38d0b6396b259196d16b916a9faf2b46ebffd6f2d32f088079cb050393e9285'
+  sha256 '2e7ed3a944f6b988e059272e4ea17d9e2453732e90692f03b3f7507ee64b0190'
 
-  url "http://soundplant.org/downloads/Soundplant#{version}.dmg"
+  url "https://soundplant.org/downloads/Soundplant#{version}.dmg"
   name 'Soundplant'
   homepage 'https://soundplant.org/'
 

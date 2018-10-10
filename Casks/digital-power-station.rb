@@ -1,6 +1,6 @@
 cask 'digital-power-station' do
-  version '2.1.0.15,2017.10'
-  sha256 '3404af04dafc3fd91851564f711ba1ef16c8d90662637ed18cf940c712f3287d'
+  version '2.2.0.9,2018.08'
+  sha256 '251573a04075f85d458f7bf55b05dc2dd29a7afbccf03ab4a93ff9a845f23ff0'
 
   url "https://bongiovidps.com/wp-content/uploads/#{version.after_comma.dots_to_slashes}/Bongiovi_DPS_Mac_#{version.before_comma}.zip"
   appcast 'https://bongiovidps.com/download/'

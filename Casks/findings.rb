@@ -5,9 +5,9 @@ cask 'findings' do
   url "http://downloads.findingsapp.com/Findings_#{version.after_comma}_#{version.before_comma}.zip"
   appcast "https://s3.amazonaws.com/downloads.findingsapp.com/appcastv#{version.major}.xml"
   name 'Findings'
-  homepage 'http://findingsapp.com/'
+  homepage 'https://findingsapp.com/'
 
-  depends_on macos: '>= :el_capitan'
+  depends_on macos: '>= :sierra'
 
   app 'Findings.app'
 end

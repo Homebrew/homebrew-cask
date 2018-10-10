@@ -1,6 +1,6 @@
 cask 'tunnelbear' do
-  version '3.6.3'
-  sha256 '08ca0f052b41f900cfcf5385b850701000c3e9acc62f43c20c261fa64752a963'
+  version '3.7.1'
+  sha256 '67b29918887c6cbdd7dfdc88841f52761c27f7e35f11096cf96fcf9cbba2ebeb'
 
   # s3.amazonaws.com/tunnelbear was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/tunnelbear/downloads/mac/TunnelBear-#{version}.zip"

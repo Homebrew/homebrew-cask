@@ -1,6 +1,6 @@
 cask 'mailbutler' do
-  version '2.1.1-9632'
-  sha256 '9208d2ad15f13b7ae574e109dc921fec418a2b5c90a2e09aa8b6699b76f647ab'
+  version '2.1.3-9666'
+  sha256 '53ea2df680b7e258d6e8caa37a1658b5480aecfa5d1ed1a3bef5319fdb519b17'
 
   # mailbutler-data.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://mailbutler-data.s3.amazonaws.com/downloads/Mailbutler_#{version}.zip"

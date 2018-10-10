@@ -4,8 +4,8 @@ cask 'launchbar' do
     sha256 '22a1ec0c10de940e5efbcccd18b8b048d95fb7c63213a01c7976a76d6be69a4d'
     url "https://www.obdev.at/downloads/launchbar/legacy/LaunchBar-#{version}.dmg"
   else
-    version '6.9.5'
-    sha256 '836f0f9d4f9f9b516cea1ec7e26ca94a08434ababc6bbc9ed34d5b0de05ab551'
+    version '6.9.6'
+    sha256 'c784dc1206a8707c1254577b71ab85834e92aeae0fe9adb5b9baf168f029b993'
 
     url "https://www.obdev.at/downloads/launchbar/LaunchBar-#{version}.dmg"
     appcast "https://sw-update.obdev.at/update-feeds/launchbar-#{version.major}.plist"

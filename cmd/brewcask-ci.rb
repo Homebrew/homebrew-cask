@@ -7,8 +7,8 @@ require_relative "lib/capture"
 require_relative "lib/check"
 require_relative "lib/travis"
 
-module Hbc
-  class CLI
+module Cask
+  class Cmd
     class Ci < AbstractCommand
       def run
         unless ENV.key?("TRAVIS")
@@ -98,7 +98,7 @@ module Hbc
         output = nil
 
         Travis.fold travis_id do
-          print "#{Tty.bold}#{Tty.yellow}#{name}#{Tty.reset} "
+          print Formatter.headline("#{name} ", color: :yellow)
 
           real_stdout = $stdout.dup
 

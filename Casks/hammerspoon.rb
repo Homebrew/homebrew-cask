@@ -11,10 +11,9 @@ cask 'hammerspoon' do
   url "https://github.com/Hammerspoon/hammerspoon/releases/download/#{version}/Hammerspoon-#{version}.zip"
   appcast 'https://github.com/Hammerspoon/hammerspoon/releases.atom'
   name 'Hammerspoon'
-  homepage 'http://www.hammerspoon.org/'
+  homepage 'https://www.hammerspoon.org/'
 
   auto_updates true
-  accessibility_access true
 
   app 'Hammerspoon.app'
 

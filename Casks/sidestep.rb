@@ -6,7 +6,7 @@ cask 'sidestep' do
   url "https://github.com/chetan51/sidestep/releases/download/#{version}/Sidestep.zip"
   appcast 'https://github.com/chetan51/sidestep/releases.atom'
   name 'Sidestep'
-  homepage 'http://chetansurpur.com/projects/sidestep/'
+  homepage 'https://chetansurpur.com/projects/sidestep/'
 
   app 'Sidestep.app'
 end

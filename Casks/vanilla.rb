@@ -6,7 +6,9 @@ cask 'vanilla' do
   url "https://dl.devmate.com/net.matthewpalmer.Vanilla/#{version.after_comma.before_colon}/#{version.after_colon}/Vanilla-#{version.after_comma.before_colon}.zip"
   appcast 'https://updates.devmate.com/net.matthewpalmer.Vanilla.xml'
   name 'Vanilla'
-  homepage 'http://matthewpalmer.net/vanilla/'
+  homepage 'https://matthewpalmer.net/vanilla/'
+
+  depends_on macos: '>= :sierra'
 
   app 'Vanilla.app'
 end

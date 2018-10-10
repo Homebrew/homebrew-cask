@@ -1,16 +1,14 @@
 cask 'cctalk' do
-  version '7.3.1,692'
-  sha256 'e9e372308560f3438f56769cfc0918dfa725cc192a940fb7a307eb3c4f62ab58'
+  version '7.3.4,722'
+  sha256 '2b45ee3bf2fee72dc3d00f260697b3998fa34cc6bc9865bd2ca297dd1b446e8c'
 
   # n1other.hjfile.cn was verified as official when first introduced to the cask
-  url "https://n1other.hjfile.cn/wx/CCtalk/#{version.after_comma}/CCtalk.#{version.before_comma}-#{version.after_comma}.pkg"
-  appcast 'http://f1.ct.hjfile.cn/api/AutoUpdate/newupdate/out/mac/cctalk/update/info.xml'
+  url "https://n1other.hjfile.cn/wx/CCtalk/#{version.after_comma}/CCtalk_#{version.before_comma}-#{version.after_comma}.dmg"
+  appcast 'https://cc.hjfile.cn/mac/update/info.xml'
   name 'CCtalk'
   homepage 'https://www.cctalk.com/download/'
 
   depends_on macos: '>= :yosemite'
 
-  pkg "CCtalk.#{version.before_comma}-#{version.after_comma}.pkg"
-
-  uninstall pkgutil: 'com.hujiang.mac.cctalk'
+  app 'CCtalk.app'
 end

@@ -1,13 +1,12 @@
 cask 'mullvadvpn' do
-  version '2018.2'
-  sha256 '9a3436e566cd7577e78cfe87a77b874ce631da1502dc09914e14ca49ad26642f'
+  version '2018.3'
+  sha256 '4c5424ed7843e83aa3488b3abcb446aade13e9341364b267ada6471d595255d1'
 
   # github.com/mullvad/mullvadvpn-app was verified as official when first introduced to the cask
   url "https://github.com/mullvad/mullvadvpn-app/releases/download/#{version}/MullvadVPN-#{version}.pkg"
   appcast 'https://github.com/mullvad/mullvadvpn-app/releases.atom'
   name 'Mullvad'
   homepage 'https://mullvad.net/'
-  gpg "#{url}.asc", key_id: 'a1198702fc3e0a09a9ae5b75d5a1d4f266de8ddf'
 
   conflicts_with cask: 'mullvad-vpn-beta'
 

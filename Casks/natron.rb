@@ -1,6 +1,6 @@
 cask 'natron' do
-  version '2.3.13'
-  sha256 '117aa5df7843a25e48941cd904236d510c679740b17c1eca98e94cccf7925e4c'
+  version '2.3.14'
+  sha256 '7afe4ab02f2538b695e6d36f26fade558a9625fd4d228f587cff38dd5478b804'
 
   # downloads.sourceforge.net/natron was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/natron/Natron-#{version}.dmg"

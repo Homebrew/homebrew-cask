@@ -7,5 +7,7 @@ cask 'rhodes-kite' do
   name 'Kite Compositor'
   homepage 'https://kiteapp.co/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Kite.app'
 end

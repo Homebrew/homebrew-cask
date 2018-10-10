@@ -2,8 +2,8 @@ cask 'wallpaper-wizard' do
   version '2.1.6'
   sha256 '250b877fb73d4c8a968b56990b8847bce83b005801dcf3fef915bdecaab4259b'
 
-  # dl.devmate.com/ was verified as official when first introduced to the cask
-  url 'https://dl.devmate.com/com.macpaw.WallWiz-site/WallpaperWizard-2.dmg'
+  # dl.devmate.com/com.macpaw.WallWiz-site was verified as official when first introduced to the cask
+  url "https://dl.devmate.com/com.macpaw.WallWiz-site/WallpaperWizard-#{version.major}.dmg"
   appcast 'https://updates.devmate.com/com.macpaw.WallWiz-site.xml'
   name 'Wallpaper Wizard'
   homepage 'https://wallwiz.com/'

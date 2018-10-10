@@ -15,7 +15,6 @@ cask 'spectacle' do
   homepage 'https://www.spectacleapp.com/'
 
   auto_updates true
-  accessibility_access true
   depends_on macos: '>= :lion'
 
   app 'Spectacle.app'

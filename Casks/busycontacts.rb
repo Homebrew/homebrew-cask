@@ -1,6 +1,6 @@
 cask 'busycontacts' do
-  version '1.2.15'
-  sha256 '6411eed67fd9cbbf437497371d1855e026dd9a427f5d194606df366791da07ae'
+  version '1.2.17'
+  sha256 '4819822ab9e795222ace5896b9ed9859d824e047b40b7d0c4e989a6ff7f5ad76'
 
   url 'https://www.busymac.com/download/BusyContacts.zip'
   appcast 'https://www.busymac.com/busycontacts/releasenotes.html'
@@ -9,5 +9,6 @@ cask 'busycontacts' do
 
   pkg 'BusyContacts Installer.pkg'
 
-  uninstall pkgutil: 'com.busymac.busycontacts.pkg'
+  uninstall pkgutil: 'com.busymac.busycontacts.pkg',
+            signal:  ['KILL', 'com.busymac.busycontacts']
 end

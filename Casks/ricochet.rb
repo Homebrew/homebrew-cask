@@ -6,7 +6,6 @@ cask 'ricochet' do
   appcast 'https://github.com/ricochet-im/ricochet/releases.atom'
   name 'Ricochet'
   homepage 'https://ricochet.im/'
-  gpg "#{url}.asc", key_id: '9032cae4cbfa933a5a2145d5ff97c53f183c045d'
 
   app 'Ricochet.app'
 end

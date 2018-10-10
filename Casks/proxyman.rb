@@ -1,6 +1,6 @@
 cask 'proxyman' do
-  version '0.5'
-  sha256 '5d20623ee217b034fb1f41fad424293cc3e542177ea5f3975a926424ff0929f5'
+  version '0.8.1'
+  sha256 'cf422497588c0ca92305f95cd42be9e82f73a845ac0d93203179e0693c1c37e4'
 
   # github.com/ProxymanApp/Proxyman was verified as official when first introduced to the cask
   url "https://github.com/ProxymanApp/Proxyman/releases/download/#{version}/Proxyman_#{version}.dmg"
@@ -14,9 +14,13 @@ cask 'proxyman' do
 
   zap trash: [
                '~/Library/Application Support/com.proxyman',
+               '~/Library/Application Support/com.proxyman.NSProxy',
                '~/Library/Caches/Proxyman',
+               '~/Library/Caches/com.proxyman.NSProxy',
                '~/Library/Cookies/com.proxyman.binarycookies',
+               '~/Library/Cookies/com.proxyman.NSProxy.binarycookies',
                '~/Library/Preferences/com.proxyman.plist',
+               '~/Library/Preferences/com.proxyman.NSProxy.plist',
                '~/.proxyman',
              ]
 end

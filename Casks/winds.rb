@@ -1,6 +1,6 @@
 cask 'winds' do
-  version '2.1.90'
-  sha256 'ff4877c575bdd82e4003c58f6c01f924c54b0d74b735c7439619be8538a6cd43'
+  version '2.1.174'
+  sha256 '53a316dc6a229b290eadc088376925d88f59777f73c8d153f74b282c8a41d906'
 
   # s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/winds-#{version.major}.0-releases/releases/Winds-#{version}.dmg"

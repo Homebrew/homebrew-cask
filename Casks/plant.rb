@@ -8,6 +8,7 @@ cask 'plant' do
   homepage 'https://plantapp.io/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Plant.app'
 end

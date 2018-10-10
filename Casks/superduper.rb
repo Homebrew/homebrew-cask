@@ -1,11 +1,12 @@
 cask 'superduper' do
-  version :latest
-  sha256 :no_check
+  version '3.2.2,115'
+  sha256 '1ea1fdac5f0f541b68bcaa0161082b321a2d72f62092516eb9d40706d2a810d9'
 
   # amazonaws.com/shirtpocket/SuperDuper was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/shirtpocket/SuperDuper/SuperDuper!.dmg'
+  appcast 'https://versioncheck.blacey.com/superduper/version.xml?VSN=100'
   name 'SuperDuper!'
-  homepage 'http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html'
+  homepage 'https://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html'
 
   app 'SuperDuper!.app'
 

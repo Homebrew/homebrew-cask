@@ -6,7 +6,7 @@ cask 'tigervnc-viewer' do
   url "https://bintray.com/tigervnc/stable/download_file?file_path=TigerVNC-#{version}.dmg"
   appcast 'https://github.com/TigerVNC/tigervnc/releases.atom'
   name 'TigerVNC'
-  homepage 'http://tigervnc.org/'
+  homepage 'https://tigervnc.org/'
 
   app "TigerVNC Viewer #{version}.app"
 end

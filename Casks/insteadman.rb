@@ -6,7 +6,7 @@ cask 'insteadman' do
   url "https://github.com/jhekasoft/insteadman3/releases/download/v#{version}/InsteadMan-#{version}.dmg"
   appcast 'https://github.com/jhekasoft/insteadman3/releases.atom'
   name 'InsteadMan'
-  homepage 'http://jhekasoft.github.io/insteadman/en/'
+  homepage 'https://jhekasoft.github.io/insteadman/en/'
 
   app 'InsteadMan.app'
 end

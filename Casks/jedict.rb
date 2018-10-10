@@ -4,7 +4,7 @@ cask 'jedict' do
 
   url "http://jedict.com/Downloads/JEDict#{version.no_dots}.dmg"
   name 'Jedict'
-  homepage 'http://www.jedict.com/'
+  homepage 'http://jedict.com/'
 
   app 'JEDict.app'
 end

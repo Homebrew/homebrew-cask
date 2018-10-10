@@ -1,6 +1,6 @@
 cask 'supertuxkart' do
-  version '0.9.2'
-  sha256 'ad0dc0169098c340cf4be203ce6038f4bbe8b7fe616c2af14690a7b30595a202'
+  version '0.9.3'
+  sha256 'b95923943e37ca3203fa1b339fce5af57f5a4d121d1c84b3d4ba84389373d05b'
 
   # sourceforge.net/supertuxkart was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/supertuxkart/SuperTuxKart-#{version}-osx.dmg"

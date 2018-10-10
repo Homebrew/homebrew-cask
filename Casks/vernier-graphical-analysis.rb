@@ -1,6 +1,6 @@
 cask 'vernier-graphical-analysis' do
-  version '4.3.0-759'
-  sha256 '500f8f0bf399e9bd01fc8c23a660a7675a1f4905d871d40f7c732307e5f1bff6'
+  version '4.6.0-1050'
+  sha256 '3a4c8ee29f95e4d02abbbf5504073db0b2c6436f841ebddaff779c4fdcb17f3e'
 
   # graphicalanalysis.com was verified as official when first introduced to the cask
   url "https://software-releases.graphicalanalysis.com/ga/mac/release/Vernier-Graphical-Analysis-#{version}.dmg"

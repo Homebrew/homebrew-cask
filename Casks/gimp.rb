@@ -1,15 +1,15 @@
 cask 'gimp' do
-  version '2.10.4'
-  sha256 'f7b73608b9f476f168962d34f8de09b6f3bb80c98f03159cdd98145f54f9696b'
+  version '2.10.6'
+  sha256 '52fe241b69d5353c546ffac008d89328fa3126d8f2557642c4661ba68e4ad6c8'
 
   url "https://download.gimp.org/pub/gimp/v#{version.major_minor}/osx/gimp-#{version}-x86_64.dmg"
   name 'GIMP'
   homepage 'https://www.gimp.org/'
 
-  app "Gimp-#{version.major_minor}.app"
+  app "GIMP-#{version.major_minor}.app"
 
   postflight do
-    set_permissions "#{appdir}/Gimp-#{version.major_minor}.app/Contents/MacOS/gimp", 'a+rx'
+    set_permissions "#{appdir}/GIMP-#{version.major_minor}.app/Contents/MacOS/gimp", 'a+rx'
   end
 
   zap trash: [

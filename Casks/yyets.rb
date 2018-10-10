@@ -1,6 +1,6 @@
 cask 'yyets' do
-  version '2.54'
-  sha256 'bfa6f664935a2dbe34222e850084487c1ffd7715821ac7cc81dca16fdebe1042'
+  version '2.55'
+  sha256 '3ac6d420585003160ce3e4053c749502c8e034c2c63f34dcecb30b180e768e2d'
 
   # appdown.rrys.tv was verified as official when first introduced to the cask
   url "http://appdown.rrys.tv/YYetsShare.#{version}.dmg"

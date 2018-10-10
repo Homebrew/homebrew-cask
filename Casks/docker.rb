@@ -1,6 +1,6 @@
 cask 'docker' do
-  version '18.06.0-ce-mac70,26399'
-  sha256 '5ca2ff76d9b717be10690248ff4bb4997158593a3b02058e8347f44592e3a2b5'
+  version '18.06.1-ce-mac73,26764'
+  sha256 '3429eac38cf0d198039ad6e1adce0016f642cdb914a34c67ce40f069cdb047a5'
 
   url "https://download.docker.com/mac/stable/#{version.after_comma}/Docker.dmg"
   appcast 'https://download.docker.com/mac/stable/appcast.xml'

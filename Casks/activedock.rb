@@ -1,12 +1,12 @@
 cask 'activedock' do
-  version '150,1533741609'
-  sha256 'c98f884745f1a255f464c7d2b044ea21a1e0c5acdefbc9b7710cefbb53fc1964'
+  version '176,1536031893'
+  sha256 'ae6f8d070c44b5db84a0df608c5852a59f4d307364470247ee0bbf27bbf1a2e1'
 
   # dl.devmate.com/com.sergey-gerasimenko.ActiveDock was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.sergey-gerasimenko.ActiveDock/#{version.before_comma}/#{version.after_comma}/ActiveDock-#{version.before_comma}.zip"
   appcast 'https://updates.devmate.com/com.sergey-gerasimenko.ActiveDock.xml'
   name 'ActiveDock'
-  homepage 'http://www.noteifyapp.com/activedock/'
+  homepage 'https://www.noteifyapp.com/activedock/'
 
   app 'ActiveDock.app'
 end

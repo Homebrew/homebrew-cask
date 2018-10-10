@@ -6,7 +6,9 @@ cask 'renamer' do
   url "https://storage.googleapis.com/incrediblebee/apps/Renamer-#{version.major}/Renamer-#{version}.zip"
   appcast "https://api.incrediblebee.com/appcasts/renamer-#{version.major}.xml"
   name 'Renamer'
-  homepage 'http://renamer.com/'
+  homepage 'https://renamer.com/'
+
+  depends_on macos: '>= :sierra'
 
   app 'Renamer.app'
 end

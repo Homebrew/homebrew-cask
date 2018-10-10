@@ -10,8 +10,7 @@ cask 'amazon-music' do
   auto_updates true
 
   installer script: {
-                      executable: 'Amazon Music Installer.app/Contents/MacOS/osx-intel',
-                      args:       ['--unattendedmodeui', 'none'],
+                      executable: 'Amazon Music Installer.app/Contents/MacOS/installbuilder.sh',
                     }
 
   uninstall quit:      [

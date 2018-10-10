@@ -7,7 +7,5 @@ cask 'keycastr' do
   name 'KeyCastr'
   homepage 'https://github.com/keycastr/keycastr'
 
-  accessibility_access true
-
   app 'KeyCastr.app'
 end

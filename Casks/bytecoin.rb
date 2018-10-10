@@ -1,8 +1,8 @@
 cask 'bytecoin' do
-  version '3.2.1'
-  sha256 '6e9d2e33e96350915cd4ef5c88c399d9e4b99661312e2e8ab130e9eb696a23b5'
+  version '3.2.4'
+  sha256 'e5b007e62a87de517c6e8cf56f3bdccd917ac8064c480258a31fa06ff3b97b30'
 
-  # github.com was verified as official when first introduced to the cask
+  # github.com/bcndev/bytecoin-gui was verified as official when first introduced to the cask
   url "https://github.com/bcndev/bytecoin-gui/releases/download/v#{version}/bytecoin-desktop-#{version}-macos.zip"
   appcast 'https://github.com/bcndev/bytecoin-gui/releases.atom'
   name 'Bytecoin Wallet'

@@ -1,6 +1,6 @@
 cask 'razorsql' do
-  version '8.0.4'
-  sha256 '2664afd6e009dd56c23e86197e2acd4f540bc963fc2b811b3f65dcb089e859b2'
+  version '8.0.9'
+  sha256 '6f40e1901a52e424797b2458e78d2f8f4d54cf554c41c7266296803013dc3eff'
 
   url "http://downloads.razorsql.com/downloads/#{version.dots_to_underscores}/razorsql#{version.dots_to_underscores}_x64.dmg"
   appcast 'https://razorsql.com/updates.html'

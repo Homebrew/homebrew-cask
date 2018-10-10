@@ -5,7 +5,7 @@ cask 'my-image-garden' do
   # c-wss.com was verified as official when first introduced to the cask
   url "http://gdlp01.c-wss.com/gds/3/0200004873/06/mmig-mac-#{version.dots_to_underscores}-ea11.dmg"
   name 'Canon My Image Garden'
-  homepage 'http://support-asia.canon-asia.com/?personal'
+  homepage 'https://support-asia.canon-asia.com/?personal'
 
   depends_on macos: '>= :mountain_lion'
 

@@ -1,5 +1,5 @@
 cask 'airmedia' do
-  version '3.1.2'
+  version '3.1.3'
   sha256 '7e36017df29860cfc7bf613b1da160cdab80f633fa5f21f6f734eca933a1dda4'
 
   # p.widencdn.net/c0b4qy was verified as official when first introduced to the cask

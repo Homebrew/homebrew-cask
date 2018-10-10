@@ -1,6 +1,6 @@
 cask 'android-ndk' do
-  version '17'
-  sha256 '0ccd8fbbd987932f846c76a1a0c8402925461feb161ead353339c508ab3bf1f5'
+  version '18'
+  sha256 'd57c2a1558dfd9264c3ce280c0c21b1a5f73467bf9639f26042007687893ed51'
 
   # dl.google.com/android/repository/android-ndk was verified as official when first introduced to the cask
   url "https://dl.google.com/android/repository/android-ndk-r#{version}-darwin-x86_64.zip"

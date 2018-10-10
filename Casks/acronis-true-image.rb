@@ -1,5 +1,5 @@
 cask 'acronis-true-image' do
-  version '2018'
+  version '2019'
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://dl.acronis.com/u/AcronisTrueImage#{version}.dmg"

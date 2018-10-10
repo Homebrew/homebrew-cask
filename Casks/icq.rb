@@ -1,9 +1,10 @@
 cask 'icq' do
-  version :latest
-  sha256 :no_check
+  version '3.0.16597'
+  sha256 'f92c6af7a02f070e50ec31e75c7e308e42668e54e40200dc24465ee751a573f8'
 
-  # r.mail.ru/clo12053316/ftp.icq.com was verified as official when first introduced to the cask
-  url 'https://r.mail.ru/clo12053316/ftp.icq.com/pub/ICQ_Mac/ICQ.dmg'
+  # mra.mail.ru/icq_mac3_update was verified as official when first introduced to the cask
+  url 'https://mra.mail.ru/icq_mac3_update/icq.dmg'
+  appcast 'https://mra.mail.ru/icq_mac3_update/icq_update.xml'
   name 'ICQ for macOS'
   homepage 'https://icq.com/mac/en'
 

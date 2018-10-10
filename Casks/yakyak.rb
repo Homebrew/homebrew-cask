@@ -1,6 +1,6 @@
 cask 'yakyak' do
-  version '1.5.1'
-  sha256 '0f131b9d754888f5a73bc5984594e1941a2586cc1b574739aa322f07f263fd72'
+  version '1.5.2'
+  sha256 '896463e6f1c73e97575e3570f4058619400202b51ebbb6c8aaa6cc9605f6cc34'
 
   url "https://github.com/yakyak/yakyak/releases/download/v#{version}/yakyak-#{version}-osx.zip"
   appcast 'https://github.com/yakyak/yakyak/releases.atom'

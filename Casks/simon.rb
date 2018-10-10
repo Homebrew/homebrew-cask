@@ -2,10 +2,10 @@ cask 'simon' do
   version '4.2.2'
   sha256 '611a50df550d2a446616be1c794a886047c34d79b58c5701e9b7cc06f3e327ac'
 
-  url "http://www.dejal.com/download/simon-#{version}.zip"
-  appcast 'http://www.dejal.com/appcast/?prod=simon'
+  url "https://www.dejal.com/download/simon-#{version}.zip"
+  appcast 'https://www.dejal.com/appcast/?prod=simon'
   name 'Simon'
-  homepage 'http://www.dejal.com/simon/'
+  homepage 'https://www.dejal.com/simon/'
 
   app 'Simon.app'
 
