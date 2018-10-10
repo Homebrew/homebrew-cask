@@ -1,6 +1,6 @@
 cask 'bluej' do
-  version '4.1.2'
-  sha256 '64f33dc1df320fbe742b3972b4563fea8f3f4786133f2dd39202a8d67160786d'
+  version '4.1.3'
+  sha256 'f7fdd3c94912cec06da69f8db482f7f41ad115026e73f767c1ff62d18ce60081'
 
   url "https://www.bluej.org/download/files/BlueJ-mac-#{version.no_dots}.zip"
   name 'BlueJ'
