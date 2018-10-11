@@ -1,4 +1,4 @@
-cask 'altair' do
+cask 'altair-graphql-client' do
   version '1.9.1'
   sha256 '3206dcdeae176d84f55fac01d33dc46d8c4a39ce1cf4a18dc81c5c3a88877b2f'
 
