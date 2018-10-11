@@ -5,7 +5,6 @@ cask 'litecoin' do
   url "https://download.litecoin.org/litecoin-#{version}/osx/litecoin-#{version}-osx.dmg"
   name 'Litecoin'
   homepage 'https://litecoin.org/'
-  gpg "#{url}.asc", key_id: 'fe3348877809386c'
 
   app 'Litecoin-Qt.app'
 

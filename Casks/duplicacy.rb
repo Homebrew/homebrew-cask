@@ -1,6 +1,6 @@
 cask 'duplicacy' do
-  version '2.1.0'
-  sha256 'eb7ef9d82c923293efc6ad000ec821b4564b464766224a86a13cce8aaf550e24'
+  version '2.1.1'
+  sha256 '823d9264658e76d559a2ea8234947439ace0b706d77aa162258e1d64bea6b803'
 
   # acrosync.com/duplicacy was verified as official when first introduced to the cask
   url "https://acrosync.com/duplicacy/duplicacy_gui_osx_#{version}.dmg"

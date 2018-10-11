@@ -1,6 +1,6 @@
 cask 'mongodb' do
-  version '4.0.0-build.1'
-  sha256 'c1279ea26b51515bf037a8830e3c236e1ce891a263e1c92dd20c5db7b355abac'
+  version '4.0.1-build.1'
+  sha256 '24473afa59d99b7ef5ad1a18c702aaa122bd3ca890d8f5c2b7900c0bcf1b3888'
 
   # github.com/gcollazo/mongodbapp was verified as official when first introduced to the cask
   url "https://github.com/gcollazo/mongodbapp/releases/download/#{version}/MongoDB.zip"

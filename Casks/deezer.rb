@@ -1,10 +1,10 @@
 cask 'deezer' do
-  version '0.9.2'
-  sha256 '0e2685af1ff884a4ac542ef1dc7dbac2d9baa9eac4f940393c4aac0e93cd4ecc'
+  version '0.14.4'
+  sha256 'c3b5d1f08f1c789aabfdf7ddcfc13b740f74cf1075064d978f384c51eac0ff52'
 
   url "https://www.deezer.com/desktop/download/artifact/darwin/x64/#{version}"
   name 'Deezer'
-  homepage 'https://www.deezer.com/formac'
+  homepage 'https://www.deezer.com/download'
 
   app 'Deezer.app'
 

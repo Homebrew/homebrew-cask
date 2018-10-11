@@ -1,6 +1,6 @@
 cask 'gzdoom' do
-  version '3.4.1'
-  sha256 'f8724a28ad36ad197e2e0b54c648d272ef7438bec4b13bf389c924f5701ef2af'
+  version '3.5.1'
+  sha256 'cb22dafebafc87a66487c9c66889b487be48063f91354eb42476caa49ff6f34a'
 
   url "https://zdoom.org/files/gzdoom/bin/gzdoom-bin-#{version.dots_to_hyphens}.dmg"
   appcast 'https://github.com/coelckers/gzdoom/releases.atom'

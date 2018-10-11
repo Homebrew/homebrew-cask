@@ -7,7 +7,6 @@ cask 'mumble' do
   appcast 'https://github.com/mumble-voip/mumble/releases.atom'
   name 'Mumble'
   homepage 'https://wiki.mumble.info/wiki/Main_Page'
-  gpg "#{url}.sig", key_url: 'https://github.com/mumble-voip/mumble-gpg-signatures/raw/master/mumble-auto-build-2017.asc'
 
   app 'Mumble.app'
 end

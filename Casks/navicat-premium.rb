@@ -1,6 +1,6 @@
 cask 'navicat-premium' do
-  version '12.0.28'
-  sha256 'af038992d0dfbf2ce41006e57e40bb3b5469c2b5763dcc8b475b46c6ba4bb474'
+  version '12.1.9'
+  sha256 '868daee1d17f22fc6b2eef4d9813f462d7b07ce642a410f2e621cc8717b5974a'
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_premium_en.dmg"
   appcast 'https://www.navicat.com/en/products/navicat-premium-release-note'

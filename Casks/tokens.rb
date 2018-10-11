@@ -6,7 +6,7 @@ cask 'tokens' do
   url "https://peerassembly.net/apps/tokens/#{version}/Tokens.zip"
   appcast 'https://peerassembly.net/apps/tokens/stable.xml'
   name 'Tokens'
-  homepage 'http://usetokens.com/'
+  homepage 'https://usetokens.com/'
 
   auto_updates true
 

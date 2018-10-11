@@ -1,13 +1,13 @@
 cask 'wewechat' do
-  version '1.1.6'
-  sha256 '346f187e8191ff04210c87bc9e6cca8c5009ba09499958f1efe7f8047e75178e'
+  version '1.1.7'
+  sha256 '4673347d6192fba598f9e9271ad4dea52f633b8da623056cac84de88d4e72c5e'
 
-  url "https://github.com/trazyn/weweChat/releases/download/v#{version}/weweChat-#{version}-mac.dmg"
+  url "https://github.com/trazyn/weweChat/releases/download/v#{version}/wewechat-#{version}-mac.dmg"
   appcast 'https://github.com/trazyn/weweChat/releases.atom'
   name 'weweChat'
   homepage 'https://github.com/trazyn/weweChat'
 
-  app 'weweChat.app'
+  app 'wewechat.app'
 
   zap trash: [
                '~/Library/Application Support/wewechat',

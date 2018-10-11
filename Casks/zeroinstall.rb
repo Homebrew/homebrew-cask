@@ -6,7 +6,7 @@ cask 'zeroinstall' do
   url "https://downloads.sourceforge.net/zero-install/0install/#{version}/ZeroInstall.pkg"
   appcast 'https://sourceforge.net/projects/zero-install/rss'
   name 'Zero Install'
-  homepage 'http://0install.net/'
+  homepage 'https://0install.net/'
 
   pkg 'ZeroInstall.pkg'
 

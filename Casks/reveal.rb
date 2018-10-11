@@ -1,13 +1,13 @@
 cask 'reveal' do
-  version '16'
-  sha256 '17e67e58b0ec8766c06c996a572b53e6b3b2beeb1f823d9d3412de9b6a38ede6'
+  version '18'
+  sha256 '2739838f486c43c90c094b8912490d4232d7f5fd7beb16e792534ad7aa9b082c'
 
   url "https://download.revealapp.com/Reveal.app-#{version}.zip"
   appcast 'https://revealapp.com/download/'
   name 'Reveal'
   homepage 'https://revealapp.com/'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   app 'Reveal.app'
 end

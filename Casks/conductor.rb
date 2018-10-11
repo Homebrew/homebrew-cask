@@ -7,7 +7,5 @@ cask 'conductor' do
   name 'Conductor'
   homepage 'https://github.com/keith/conductor'
 
-  accessibility_access true
-
   app 'Conductor.app'
 end

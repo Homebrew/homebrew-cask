@@ -1,10 +1,10 @@
 cask 'cctalk' do
-  version '1.0.2-633,2018-05-02'
-  sha256 '911d55e413237d59fb6c56ef385ea1b4844af1125f2da4fabf9d442e07931eba'
+  version '7.3.4,722'
+  sha256 '2b45ee3bf2fee72dc3d00f260697b3998fa34cc6bc9865bd2ca297dd1b446e8c'
 
-  # f1.ct.hjfile.cn was verified as official when first introduced to the cask
-  url "http://f1.ct.hjfile.cn/api/AutoUpdate/newupdate/in/mac/cctalk/archive/#{version.before_comma.hyphens_to_dots}/CCtalk-#{version.before_comma}-xianghu-#{version.after_comma}.dmg"
-  appcast 'http://f1.ct.hjfile.cn/api/AutoUpdate/newupdate/out/mac/cctalk/update/info.xml'
+  # n1other.hjfile.cn was verified as official when first introduced to the cask
+  url "https://n1other.hjfile.cn/wx/CCtalk/#{version.after_comma}/CCtalk_#{version.before_comma}-#{version.after_comma}.dmg"
+  appcast 'https://cc.hjfile.cn/mac/update/info.xml'
   name 'CCtalk'
   homepage 'https://www.cctalk.com/download/'
 

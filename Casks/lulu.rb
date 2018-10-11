@@ -1,10 +1,10 @@
 cask 'lulu' do
-  version '0.9.7'
-  sha256 '0a9f0f45f9fb7dfc447ca31a34fa09f637681f1f87968e230476d3214d0010f8'
+  version '1.1.1'
+  sha256 '88ad8042b711a2f17f93ea9423f45927c4358af73f78feedf02c7885e795e817'
 
-  # github.com/objective-see/LuLu was verified as official when first introduced to the cask
-  url "https://github.com/objective-see/LuLu/releases/download/#{version}/LuLu_#{version.dots_to_underscores}.zip"
-  appcast 'https://github.com/objective-see/LuLu/releases.atom'
+  # bitbucket.org/objective-see was verified as official when first introduced to the cask
+  url "https://bitbucket.org/objective-see/deploy/downloads/LuLu_#{version}.zip"
+  appcast 'https://objective-see.com/products/changelogs/LuLu.txt'
   name 'LuLu'
   homepage 'https://objective-see.com/products/lulu.html'
 

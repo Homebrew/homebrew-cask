@@ -1,9 +1,9 @@
 cask 'kollaborate-folder-watcher' do
-  version '1.2.1.0'
-  sha256 '0dbc9a1563df0cee0a8fde79145a9840d80906c0c31f0579340cebbde3d33ec4'
+  version '1.3.2.0'
+  sha256 'f894254e44993bf1211af1c32c20902fcad329894b862e08481133950cd382af'
 
   # digitalrebellion.com was verified as official when first introduced to the cask
-  url "http://www.digitalrebellion.com/download/kollabfolderwatcher?version=#{version.no_dots}"
+  url "https://www.digitalrebellion.com/download/kollabfolderwatcher?version=#{version.no_dots}"
   name 'Kollaborate Folder Watcher'
   homepage 'https://www.kollaborate.tv/resources'
 

@@ -1,6 +1,6 @@
 cask 'texpad' do
-  version '1.8.4,392,0ea1407'
-  sha256 '88c0c140e136099656a21a3534078edf00ba7970c5a6f6c29b8718a4eff1438f'
+  version '1.8.6,420,2e56cc8'
+  sha256 'b61d4dc7fbc59e9d35798a5733875c384ac5804a108dad3cbe734728874a7860'
 
   # download.texpadapp.com was verified as official when first introduced to the cask
   url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.before_comma.dots_to_underscores}__#{version.after_comma.before_comma}__#{version.after_comma.after_comma}.dmg"

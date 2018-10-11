@@ -1,6 +1,6 @@
 cask 'aseprite' do
-  version '1.2.8'
-  sha256 '0c128dd104fb76eb5417e9666310847cc601ee4bee0280a67a28eba18a121ae1'
+  version '1.2.9'
+  sha256 '45b7d238958215f9b4eed3edd89b40cd5032ab008b55584bda5bc5782c969b51'
 
   url "https://www.aseprite.org/downloads/trial/Aseprite-v#{version}-trial-MacOSX.dmg"
   appcast 'https://github.com/aseprite/aseprite/releases.atom'

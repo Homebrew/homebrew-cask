@@ -2,7 +2,7 @@ cask 'after-dark-classic' do
   version :latest
   sha256 :no_check
 
-  url 'ftp://www.infinisys.co.jp/online/online_afterdarkclassicset_e.dmg.gz'
+  url 'https://www.infinisys.co.jp/archive/online/online_afterdarkclassicset_e.dmg.gz'
   name 'After Dark Classic Set'
   homepage 'http://en.infinisys.co.jp/product/afterdarkclassicset/index.shtml'
 

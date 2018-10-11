@@ -7,7 +7,6 @@ cask 'onionshare' do
   appcast 'https://github.com/micahflee/onionshare/releases.atom'
   name 'OnionShare'
   homepage 'https://onionshare.org/'
-  gpg "#{url}.sig", key_url: 'https://onionshare.org/signing-key.asc'
 
   pkg "OnionShare-#{version}.pkg"
 

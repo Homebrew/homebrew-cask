@@ -7,6 +7,8 @@ cask 'peakhour' do
   name 'PeakHour'
   homepage 'https://www.peakhourapp.com/'
 
+  auto_updates true
+
   app "PeakHour #{version.major}.app"
 
   uninstall launchctl: "com.digitician.peakhour#{version.major}.launchAtLoginHelper",

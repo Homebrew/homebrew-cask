@@ -1,6 +1,6 @@
 cask 'sciebo' do
-  version '2.4.1.2038'
-  sha256 '7de4af04d0187ad2ed849e06d608e16576c85a10be31f9ce08c24865a9688ccc'
+  version 'qt5.6.2-2.4.3.2161'
+  sha256 '2fb6120746ae86d0d4eade2c4cd867e45b21d492f1b1e046ba4bf6701dd59139'
 
   url "https://www.sciebo.de/install/sciebo-#{version}.pkg"
   name 'sciebo'

@@ -6,7 +6,7 @@ cask 'beotsmusic' do
   url "https://github.com/kiding/beotsmusic/releases/download/#{version}/BeotsMusic.dmg"
   appcast 'https://github.com/kiding/beotsmusic/releases.atom'
   name 'BeotsMusic'
-  homepage 'http://beotsmusic.kiding.net/'
+  homepage 'https://beotsmusic.kiding.net/'
 
   app 'BeotsMusic.app'
 

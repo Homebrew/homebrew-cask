@@ -1,6 +1,6 @@
 cask 'graphicconverter' do
-  version '10.6.2,3115'
-  sha256 '06f8ec2647751a475e2bb908a17d6be9dba22d35debd0a7cee1a1ef3dc226f99'
+  version '10.6.5,3200'
+  sha256 '052c0b15cc870481bdddab1d383d3457bf7fb4a670346952f9043b79e44e1a3d'
 
   # lemkesoft.info was verified as official when first introduced to the cask
   url "https://www.lemkesoft.info/files/graphicconverter/gc#{version.major}_build#{version.after_comma}.zip"

@@ -6,7 +6,7 @@ cask 'mucommander' do
   url "https://github.com/mucommander/mucommander/releases/download/#{version}/mucommander-#{version}.dmg"
   appcast 'https://github.com/mucommander/mucommander/releases.atom'
   name 'muCommander'
-  homepage 'http://www.mucommander.com/'
+  homepage 'https://www.mucommander.com/'
 
   app 'muCommander.app'
 end

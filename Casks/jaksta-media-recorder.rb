@@ -1,6 +1,6 @@
 cask 'jaksta-media-recorder' do
-  version '2.2.3'
-  sha256 '92cb1eeff5360e0d2ac890556f92c1f0ada74c32209eea5e4eaa27ca3204cc7c'
+  version '2.2.5'
+  sha256 'f5bb7554c1361c574dcada598ce53f6b38e198395513466e3fa23f21a4dcf324'
 
   url "https://www.jaksta.com/services/download/mac/jaksta-media-recorder/#{version}"
   appcast 'https://www.jaksta.com/Services/VersionDirector/jmr-mac'

@@ -39,7 +39,7 @@ Since `pkg` installers can do arbitrary things, different techniques are needed 
 
 Each `uninstall` technique is applied according to the order above. The order in which `uninstall` keys appear in the Cask file is ignored.
 
-For assistance filling in the right values for `uninstall` keys, there are several helper scripts found under `developer/bin` in the Homebrew-Cask repository. Each of these scripts responds to the `-help` option with additional documentation.
+For assistance filling in the right values for `uninstall` keys, there are several helper scripts found under `developer/bin` in the Homebrew Cask repository. Each of these scripts responds to the `-help` option with additional documentation.
 
 The easiest way to work out an `uninstall` stanza is on a system where the `pkg` is currently installed and operational. To operate on an uninstalled `pkg` file, see [Working With a pkg File Manually](#working-with-a-pkg-file-manually), below.
 

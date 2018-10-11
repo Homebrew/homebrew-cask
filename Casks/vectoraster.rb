@@ -1,6 +1,6 @@
 cask 'vectoraster' do
-  version '7.3.1'
-  sha256 '4998eeeb0660df95d73c903c23292fa7135b2f7866e4933f102a3b9ae627e9a1'
+  version '7.3.3'
+  sha256 '5025a7e5775cbba6134d09fd3ad7443b5bceb233b4497a5cafda85aa03f5bf85'
 
   url "https://www.lostminds.com/downloads/vectoraster#{version.major}.dmg"
   appcast "https://www.lostminds.com/vectoraster#{version.major}/version_history.php"

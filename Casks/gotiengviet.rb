@@ -6,8 +6,6 @@ cask 'gotiengviet' do
   name 'GoTiengViet'
   homepage 'https://www.trankynam.com/gotv/'
 
-  accessibility_access true
-
   app 'GoTiengViet.app'
 
   uninstall login_item: 'GoTiengViet'

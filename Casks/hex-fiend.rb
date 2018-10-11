@@ -6,7 +6,7 @@ cask 'hex-fiend' do
   url "https://github.com/ridiculousfish/HexFiend/releases/download/v#{version}/Hex_Fiend_#{version.major_minor}.dmg"
   appcast 'https://github.com/ridiculousfish/HexFiend/releases.atom'
   name 'Hex Fiend'
-  homepage 'http://ridiculousfish.com/hexfiend/'
+  homepage 'https://ridiculousfish.com/hexfiend/'
 
   conflicts_with cask: 'hex-fiend-beta'
 

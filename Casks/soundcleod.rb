@@ -1,6 +1,6 @@
 cask 'soundcleod' do
-  version '1.3.4'
-  sha256 '8fb6ee8024d8773d4389227b0bfc0725ff2aae33b12064365bd32aba6ea5cc70'
+  version '1.4.0'
+  sha256 '6242f0de6b0970006b5cfc08e9a40c4bf034eac7439d609c89956489558edc73'
 
   # github.com/salomvary/soundcleod was verified as official when first introduced to the cask
   url "https://github.com/salomvary/soundcleod/releases/download/v#{version}/SoundCleod-#{version}.dmg"

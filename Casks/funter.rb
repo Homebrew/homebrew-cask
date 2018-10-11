@@ -1,6 +1,6 @@
 cask 'funter' do
-  version '4.1'
-  sha256 '1faaad4f2882116cb13715750c3b6fb00d1a0c281b7a67c9ab81ab1ddb5d65eb'
+  version '4.2'
+  sha256 'f6a06b1a5a8a6356e24781324669b6f41318c65481e191e1a6c49c34e7ec0596'
 
   url "https://nektony.com/promo/funter/update/funter_v#{version}.zip"
   appcast 'https://nektony.com/promo/funter/update/update.xml'

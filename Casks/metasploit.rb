@@ -1,12 +1,11 @@
 cask 'metasploit' do
-  version '4.17.0+20180724104257'
-  sha256 '855d7b701544d1f565263b1d3a2b0ac891a69972d146e2360a14343149388346'
+  version '4.17.16+20181003193853'
+  sha256 '8818c41337a337e668d1b99a48e6eacc219c0f42b69ef01626fbfd640a5e9c00'
 
   url "https://osx.metasploit.com/metasploit-framework-#{version}-1rapid7-1.pkg"
   appcast 'https://osx.metasploit.com/LATEST'
   name 'Metasploit Framework'
   homepage 'https://www.metasploit.com/'
-  gpg "#{url}.asc", key_id: '2007B954'
 
   depends_on formula: 'nmap'
 

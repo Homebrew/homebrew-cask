@@ -4,7 +4,7 @@ cask 'algodoo' do
 
   url "http://www.algodoo.com/download/Algodoo_#{version.dots_to_underscores}-MacOS.dmg"
   name 'Algodoo'
-  homepage 'http://www.algodoo.com/'
+  homepage 'https://www.algodoo.com/'
 
   app 'Algodoo.app'
 end

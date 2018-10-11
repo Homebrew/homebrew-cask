@@ -6,7 +6,7 @@ cask 'aether' do
   url "https://github.com/nehbit/aether/releases/download/v#{version}-OSX/Aether.#{version}.dmg"
   appcast 'https://github.com/nehbit/aether/releases.atom'
   name 'Aether'
-  homepage 'http://getaether.net/'
+  homepage 'https://getaether.net/'
 
   app 'Aether.app'
 end

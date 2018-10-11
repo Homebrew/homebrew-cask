@@ -1,6 +1,6 @@
 cask 'fork' do
-  version '1.0.69.3'
-  sha256 'a349d2b063c98a334026b0be3e7e864bbe24db49f67344735127e7e680b998e7'
+  version '1.0.71.1'
+  sha256 'b5c40da3f38bef6a3961a977bc5dda1854c735fdd75fa00d8f8b95faea12b31f'
 
   url 'https://git-fork.com/update/files/Fork.dmg'
   appcast 'https://git-fork.com/update/feed.xml'

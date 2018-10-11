@@ -1,6 +1,6 @@
 cask 'blockblock' do
-  version '0.9.9.3'
-  sha256 '885298a2fff4af416e7698428690832f54e835bcd67ae1fd41529dab8bdaa9de'
+  version '0.9.9.4'
+  sha256 '6ab3a8224e8bc77b9abe8d41492c161454c6b0266e60e61b06931fed4b431282'
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/BlockBlock_#{version}.zip"

@@ -8,5 +8,7 @@ cask 'cocoarestclient' do
   name 'CocoaRestClient'
   homepage 'https://mmattozzi.github.io/cocoa-rest-client/'
 
+  depends_on macos: '>= :sierra'
+
   app 'CocoaRestClient.app'
 end

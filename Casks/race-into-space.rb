@@ -6,7 +6,7 @@ cask 'race-into-space' do
   url "https://downloads.sourceforge.net/raceintospace/Race_Into_Space_#{version}.dmg"
   appcast 'https://sourceforge.net/projects/raceintospace/rss'
   name 'Race Into Space'
-  homepage 'http://www.raceintospace.org/'
+  homepage 'https://www.raceintospace.org/'
 
   app 'Race Into Space.app'
 end

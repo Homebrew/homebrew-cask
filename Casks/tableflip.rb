@@ -1,6 +1,6 @@
 cask 'tableflip' do
   version '1.1.8'
-  sha256 '4b9e19c22b49594b88226648f5ac23c780a214aaead6bfd777a59b76c498bf9f'
+  sha256 '0e1e735c90c36ea7e595a915ad974975879785dc79383e0386f866ceb67a5bef'
 
   # s3.amazonaws.com/tableflip was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/tableflip/TableFlip-v#{version}.zip"

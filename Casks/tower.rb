@@ -1,6 +1,6 @@
 cask 'tower' do
-  version '3.1.0-157,5d201a39'
-  sha256 '118810f0ad232a4f58ab43c79cfa91c9f978346d5940a31fa6306b81d3ed8c1a'
+  version '3.2.0-163,935d64be'
+  sha256 'f53ba331de767ffe7980f709ec44653c39f0a0cdb51197b26553b42e3ef8ca86'
 
   # fournova-app-updates.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://fournova-app-updates.s3.amazonaws.com/apps/tower#{version.major}-mac/#{version.split('-').last.tr(',', '-')}/Tower-#{version.before_comma}.zip"

@@ -6,7 +6,9 @@ cask 'archiver' do
   url "https://storage.googleapis.com/incrediblebee/apps/Archiver-#{version.major}/Archiver-#{version}.zip"
   appcast "https://api.incrediblebee.com/appcasts/archiver-#{version.major}.xml"
   name 'Archiver'
-  homepage 'http://archiverapp.com/'
+  homepage 'https://archiverapp.com/'
+
+  depends_on macos: '>= :sierra'
 
   app 'Archiver.app'
 end

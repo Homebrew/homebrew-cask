@@ -6,7 +6,7 @@ cask 'feedbinnotifier' do
   url "https://github.com/kmikael/FeedbinNotifier/releases/download/v#{version}/FeedbinNotifier.zip"
   appcast 'https://github.com/kmikael/FeedbinNotifier/releases.atom'
   name 'Feedbin Notifier'
-  homepage 'http://kmikael.com/FeedbinNotifier/'
+  homepage 'https://kmikael.com/FeedbinNotifier/'
 
   app 'FeedbinNotifier.app'
 end
