@@ -1,6 +1,6 @@
 cask 'texmacs' do
-  version '1.99.7'
-  sha256 '7a92f690cc0a92b2d16fd865669e0aa7027e04c9bf07fc96a2ec9044b854f368'
+  version '1.99.8'
+  sha256 'f38b52fea3260df68e1df47c063719b8ac0aa81937a03f921da5352ac2572381'
 
   url "http://www.texmacs.org/Download/ftp/tmftp/macos/TeXmacs-#{version}.dmg"
   appcast 'http://www.texmacs.org/tmweb/download/macosx.en.html'
