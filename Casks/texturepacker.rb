@@ -1,6 +1,6 @@
 cask 'texturepacker' do
-  version '4.8.3'
-  sha256 'e637ce7592c86cf783b26beff3724f4357e77315c321573d7ceb342926ec3488'
+  version '4.9.0'
+  sha256 'd76483a47cdbef26f276efc1c3c765ad395b4ad63416be1fb63798c237ce85e3'
 
   url "https://www.codeandweb.com/download/texturepacker/#{version}/TexturePacker-#{version}-uni.dmg"
   appcast 'https://www.codeandweb.com/releases/TexturePacker/appcast-mac-release.xml'
