@@ -1,6 +1,6 @@
 cask 'framer' do
-  version '18184,1526378841'
-  sha256 'bd9ea7dd6eb7be752b8cb6a7c514b639991bd8344fc132a3b876e656325fafa7'
+  version '18201,1536243769'
+  sha256 '55d4deb0a96865be5a23c182ca9e3abb0d1dd5ca745b309f23485c73dadb9761'
 
   # devmate.com/com.motif.framer was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.motif.framer/#{version.before_comma}/#{version.after_comma}/FramerStudio-#{version.before_comma}.zip"
