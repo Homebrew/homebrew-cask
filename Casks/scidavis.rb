@@ -1,6 +1,6 @@
 cask 'scidavis' do
-  version '1.23'
-  sha256 '5b3925dfdf0b5dcda9d2a9929b5ae8a9f83cb6130389cea2a9248e84e396fdf2'
+  version '1.23.2'
+  sha256 '5549e1f400a4d36df3d1f3750f4b66820409ccad1c748f700dac0299f55f7f82'
 
   # downloads.sourceforge.net/scidavis was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/scidavis/scidavis-#{version}.pkg"
