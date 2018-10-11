@@ -153,4 +153,4 @@ If a Homebrew formula and a Homebrew Cask cask both exist with the same token an
 
 If the token for a piece of unofficial software that interacts with a popular service would make it look official and the vendor is not authorised to use the name, [a prefix must be added](../development/adding_a_cask.md#forks-and-apps-with-conflicting-names) for disambiguation.
 
-In cases that the prefix is ambiguous and would make the app appear official, the `-unofficial` suffix may be used.
+In cases where the prefix is ambiguous and would make the app appear official, the `-unofficial` suffix may be used.
