@@ -1,6 +1,6 @@
 cask 'git-it' do
-  version '4.3.0'
-  sha256 '95b45c3671a439823084ffd67af28032f9769e8e0fbb154a30764c6ae2b75f87'
+  version '4.4.0'
+  sha256 'b96c06bca744af94e2f035824fbd16f59673c4c454fd4bf96aa4bde965fe711d'
 
   url "https://github.com/jlord/git-it-electron/releases/download/#{version}/Git-it-Mac-x64.zip"
   appcast 'https://github.com/jlord/git-it-electron/releases.atom'
