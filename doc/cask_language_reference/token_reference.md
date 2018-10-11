@@ -152,3 +152,7 @@ If a Homebrew formula and a Homebrew Cask cask both exist with the same token an
 ## Potentially Misleading Name
 
 If the token for a piece of unofficial software that interacts with a popular service would make it look official and the vendor is not authorised to use the name, [a prefix must be added](../development/adding_a_cask.md#forks-and-apps-with-conflicting-names) for disambiguation.
+
+In most cases, the prefix should be the vendor's name. For example, `google-play-music-desktop-player` is unofficial, so [its cask was renamed to `marshallofsound-google-play-music-player`](https://github.com/Homebrew/homebrew-cask/pull/39923).
+
+In cases that the prefix is ambiguous and would make the app appear official, the `unofficial-` prefix may be used.
