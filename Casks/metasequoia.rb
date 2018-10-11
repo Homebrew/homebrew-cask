@@ -1,6 +1,6 @@
 cask 'metasequoia' do
-  version '4.6.7'
-  sha256 'ce9f936fa75804b279654179aedccef86ac511a2ec72608f143fea209f471742'
+  version '4.6.8'
+  sha256 'c4ea80fced7cba5f82d5ead8ccb7d9df1537729076fd434bcdd85e89cf21a583'
 
   # metaseq2.sakura.ne.jp was verified as official when first introduced to the cask
   url "http://metaseq2.sakura.ne.jp/metaseq/Metasequoia-#{version}-Installer.dmg"
