@@ -3,7 +3,7 @@ cask 'pdfkey-pro' do
   sha256 'c00cd822f0453d87fb296858dc2e85f7617c96c3b67123711a2396ffc2fb46cd'
 
   url 'https://pdfkey.com/PDFKeyPro.dmg'
-  appcast 'http://pdfkey.com/PDFKeyProUpdateFX.xml'
+  appcast 'https://pdfkey.com/PDFKeyProUpdateFX.xml'
   name 'PDFKey Pro'
   homepage 'https://pdfkey.com/'
 
