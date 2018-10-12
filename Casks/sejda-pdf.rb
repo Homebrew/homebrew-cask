@@ -1,6 +1,6 @@
 cask 'sejda-pdf' do
-  version '3.4.0'
-  sha256 'da8d92037fb48d5794b250aa789ec616c0a865c60fda047e246f5983e9bff1c3'
+  version '4.5.2'
+  sha256 'b9f707bfb328488b52c2d998c7a8addffa92b34985296f24b645a34508e463c6'
 
   # bitbucket.org/sejdapdf/sejda-desktop-public was verified as official when first introduced to the cask
   url "https://bitbucket.org/sejdapdf/sejda-desktop-public/downloads/sejda-desktop_#{version}.dmg"
