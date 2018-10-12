@@ -7,4 +7,8 @@ cask 'xonotic' do
   homepage 'https://www.xonotic.org/'
 
   app 'Xonotic/Xonotic.app'
+
+  postflight do
+    system_command '/bin/cp', args: ['-r', File.join(staged_path, 'Xonotic/data'), '/Applications/Xonotic.app/Contents/Resources/']
+  end
 end
