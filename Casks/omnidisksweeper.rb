@@ -11,6 +11,10 @@ cask 'omnidisksweeper' do
     version '1.10'
     sha256 '0d8f5b7ff075fca4503a41e1ea898a145001f3f602f6b53ffb310e0a465af080'
     url "https://downloads.omnigroup.com/software/MacOSX/10.12/OmniDiskSweeper-#{version}.dmg"
+  elsif MacOS.version <= :mojave
+    version '1.11'
+    sha256 '07922414eb5f0a98f4440fb45f4ab91e058db71319feb0f995b649565a801cdd'
+    url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniDiskSweeper-#{version}.dmg"
   else
     version :latest
     sha256 :no_check
