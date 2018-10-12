@@ -1,6 +1,6 @@
 cask 'pdf-converter-master' do
-  version '6.1.0'
-  sha256 '707ba6aaa97e36d3fec5b4c2717b0001a165063331fe391cc166ec8b74d08097'
+  version '6.2.0'
+  sha256 '8cd777bf9dde5d21ba5e073a8ee4b31282fa3c57f6ca31cb8100b31a4e1bcfd4'
 
   url "https://www.lightenpdf.com/download/download.aspx?file=PDF-Converter-Master-#{version.no_dots}.zip"
   appcast 'https://www.lightenpdf.com/xml/PDF-Converter-Mac.xml'

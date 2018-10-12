@@ -1,6 +1,6 @@
 cask 'kotori' do
-  version '0.25'
-  sha256 'd834a47b864cda419f9f778a40c82c3c7a01cc0d802999f0ec5de614229b81f7'
+  version '0.26'
+  sha256 'f72f808a0e08574bce1161cb1546c169e60825688d4e065d8832270cad03feff'
 
   url "https://github.com/Watson1978/kotori/releases/download/v#{version}/kotori_#{version}.dmg"
   appcast 'https://github.com/Watson1978/kotori/releases.atom'

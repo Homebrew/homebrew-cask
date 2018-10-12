@@ -1,6 +1,6 @@
 cask 'cashculator' do
-  version '1.4'
-  sha256 'ea5a1754909d84f725703c58f8444581ab321cd647af232458d10173c1856c36'
+  version '1.5'
+  sha256 '97629125ce974b24df77be8808a3e9b233eef1f4d2ce57ec8c1a42d823dec0ac'
 
   url "https://dl.apparentsoft.com/Cashculator_#{version}.dmg"
   appcast 'https://dl.apparentsoft.com/cashculator.rss'
