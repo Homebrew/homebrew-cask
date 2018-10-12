@@ -10,7 +10,7 @@ cask 'multipass' do
   pkg "multipass-#{version}-full-Darwin.pkg"
 
   uninstall launchctl: 'com.canonical.multipassd',
-            pkgutil:   'com\.canonical\.multipass.*',
+            pkgutil:   'com.canonical.multipass.*',
             delete:    [
                          '/Library/LaunchDaemons/com.canonical.multipassd.plist',
                          '/usr/local/bin/multipass',
