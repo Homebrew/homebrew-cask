@@ -27,6 +27,9 @@ cask 'anaconda' do
   zap trash: [
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.io.sfl*',
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.python.sfl*',
+               '~/.anaconda',
+               '~/.conda',
+               '~/.condarc',
              ]
 
   caveats do
