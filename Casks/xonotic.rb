@@ -6,5 +6,5 @@ cask 'xonotic' do
   name 'Xonotic'
   homepage 'https://www.xonotic.org/'
 
-  app 'Xonotic/Xonotic.app'
+  suite 'Xonotic'
 end
