@@ -1,6 +1,6 @@
 cask 'fox' do
-  version '1.8.2'
-  sha256 '9d44fa0a9b53928d4087db0c40384dec497b635c938a13cfce84e2f5bf0bc704'
+  version '1.8.5'
+  sha256 'a7e6f00137b35307a21ba7ea7560f4dd10941a0787615ea914b02ee1fe94caa6'
 
   url "https://www.fox.one/build/Fox-#{version}.dmg"
   name 'Fox'

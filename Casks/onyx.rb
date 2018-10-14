@@ -22,8 +22,11 @@ cask 'onyx' do
   elsif MacOS.version == :sierra
     version '3.3.1'
     sha256 '887272335926005f49bbd35f66eb3ea5a6c19d3a35a8fada68357ab5860a7c1b'
-  else
+  elsif MacOS.version == :high_sierra
     version '3.4.9'
+    sha256 '60e4f56fb2e5457aca1aa1d2a9be95502a310b0de75112e91b7c89bf4a2be829'
+  else
+    version '3.5.1'
     sha256 '60e4f56fb2e5457aca1aa1d2a9be95502a310b0de75112e91b7c89bf4a2be829'
   end
 
@@ -42,6 +45,7 @@ cask 'onyx' do
                       :el_capitan,
                       :sierra,
                       :high_sierra,
+                      :mojave,
                     ]
 
   app 'OnyX.app'

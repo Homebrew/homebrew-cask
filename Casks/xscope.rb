@@ -6,7 +6,7 @@ cask 'xscope' do
   url "https://iconfactory.com/assets/software/xscope/xScope-#{version}.zip"
   appcast 'https://iconfactory.com/appcasts/xScope/appcast.xml'
   name 'xScope'
-  homepage 'http://xscopeapp.com/'
+  homepage 'https://xscopeapp.com/'
 
   app 'xScope.app'
 

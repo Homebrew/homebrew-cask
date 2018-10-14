@@ -1,4 +1,4 @@
-cask 'etrecheck' do
+cask 'etrecheckpro' do
   version :latest
   sha256 :no_check
 
@@ -6,7 +6,7 @@ cask 'etrecheck' do
   name 'EtreCheck'
   homepage 'https://etrecheck.com/'
 
-  app 'EtreCheck.app'
+  app 'EtreCheckPro.app'
 
   zap trash: [
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.etresoft.etrecheck*.sfl*',

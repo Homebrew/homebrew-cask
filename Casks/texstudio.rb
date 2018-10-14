@@ -6,7 +6,7 @@ cask 'texstudio' do
   url "https://github.com/texstudio-org/texstudio/releases/download/#{version}/texstudio-#{version}-osx.dmg"
   appcast 'https://github.com/texstudio-org/texstudio/releases.atom'
   name 'TeXstudio'
-  homepage 'http://texstudio.org/'
+  homepage 'https://texstudio.org/'
 
   conflicts_with cask: 'texstudio-beta'
 

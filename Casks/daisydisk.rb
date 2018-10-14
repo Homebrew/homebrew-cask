@@ -17,6 +17,8 @@ cask 'daisydisk' do
   name 'DaisyDisk'
   homepage 'https://daisydiskapp.com/'
 
+  auto_updates true
+
   app 'DaisyDisk.app'
 
   uninstall delete:    '/Library/PrivilegedHelperTools/com.daisydiskapp.DaisyDiskAdminHelper',

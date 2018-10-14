@@ -4,7 +4,7 @@ cask 'bluestacks' do
 
   url "https://cdn3.bluestacks.com/mac/#{version}/BlueStacksInstaller.dmg"
   name 'BlueStacks'
-  homepage 'http://www.bluestacks.com/'
+  homepage 'https://www.bluestacks.com/'
 
   installer manual: 'BlueStacks Installer.app'
 

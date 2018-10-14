@@ -11,6 +11,7 @@ cask 'hyper' do
   auto_updates true
 
   app 'Hyper.app'
+  binary "#{appdir}/Hyper.app/Contents/Resources/bin/hyper"
 
   zap trash: [
                '~/.hyper.js',

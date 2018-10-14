@@ -1,6 +1,6 @@
 cask 'fcs-remover' do
-  version '3.1.4.0'
-  sha256 '794dc7bc37b64e28f5610c2fcbe159ad82d31e2842eeca6e18147edbf0dc5476'
+  version '3.1.5.0'
+  sha256 'c0d0526f3d7a9b48ae130cda6faed3f3393ea1c08a78850c9f71efa6e04b5e91'
 
   url "https://www.digitalrebellion.com/download/fcsremover?version=#{version.no_dots}"
   name 'FCS Remover'

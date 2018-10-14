@@ -1,6 +1,6 @@
 cask 'vscodium' do
-  version '1.27.2'
-  sha256 'fa7f09be214ad8581ac587c7c31827afeff63158df0f145f4c160a0ca6602860'
+  version '1.28.1'
+  sha256 '45f994c728499b99cb442f993d8abb5d861042e4879b66695845dd363d125cf0'
 
   url "https://github.com/VSCodium/vscodium/releases/download/#{version}/VSCode-darwin-#{version}.zip"
   appcast 'https://github.com/VSCodium/vscodium/releases.atom'

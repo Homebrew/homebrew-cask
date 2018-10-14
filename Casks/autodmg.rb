@@ -7,6 +7,8 @@ cask 'autodmg' do
   name 'AutoDMG'
   homepage 'https://github.com/MagerValp/AutoDMG'
 
+  depends_on macos: '>= :sierra'
+
   app 'AutoDMG.app'
 
   zap trash: [

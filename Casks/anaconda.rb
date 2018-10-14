@@ -1,6 +1,6 @@
 cask 'anaconda' do
-  version '5.2.0'
-  sha256 'c8089121dc89ffe8f9a0c01205bab75a112821a13d413152d6690f5eef094afa'
+  version '5.3.0'
+  sha256 'bc073b6e6d3b2ef29d01a2caf1de7c206c95968231ef0492d958eae1a314b4e9'
 
   url "https://repo.anaconda.com/archive/Anaconda3-#{version}-MacOSX-x86_64.sh"
   name 'Continuum Analytics Anaconda'
@@ -27,6 +27,9 @@ cask 'anaconda' do
   zap trash: [
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.io.sfl*',
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.python.sfl*',
+               '~/.anaconda',
+               '~/.conda',
+               '~/.condarc',
              ]
 
   caveats do

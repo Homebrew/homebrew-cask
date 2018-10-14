@@ -7,6 +7,8 @@ cask 'virtualbox' do
   name 'Oracle VirtualBox'
   homepage 'https://www.virtualbox.org/'
 
+  conflicts_with cask: 'virtualbox-beta'
+
   pkg 'VirtualBox.pkg'
 
   uninstall script:  {

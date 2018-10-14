@@ -3,13 +3,13 @@ cask 'isyncr' do
     version '5.6.5'
     sha256 '8cd6b1c96a902d8810e52aab6a980424370237617bfd3ff574367ff1ce8d4f4e'
   else
-    version '5.14.0'
-    sha256 '68e65554b12083c35b0180c6535cefcc7897c0aa4902848dcf706459ecfab3ad'
+    version '5.14.9'
+    sha256 '886877b524148cd305189088b8cb54ee5599ab75186493d7e69624cc7d19fed6'
   end
 
-  url "http://www.jrtstudio.com/files/iSyncr%20Desktop%20#{version}.pkg"
+  url "https://www.jrtstudio.com/files/iSyncr%20Desktop%20#{version}.pkg"
   name 'iSyncr Desktop'
-  homepage 'http://www.jrtstudio.com/iSyncr-iTunes-for-Android'
+  homepage 'https://www.jrtstudio.com/iSyncr-iTunes-for-Android'
 
   depends_on macos: '>= :mountain_lion'
 

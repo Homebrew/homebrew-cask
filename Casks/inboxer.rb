@@ -6,7 +6,7 @@ cask 'inboxer' do
   url "https://github.com/denysdovhan/inboxer/releases/download/v#{version}/Inboxer-#{version}.dmg"
   appcast 'https://github.com/denysdovhan/inboxer/releases.atom'
   name 'inboxer'
-  homepage 'https://denysdovhan.com/inboxer'
+  homepage 'https://denysdovhan.com/inboxer/'
 
   app 'inboxer.app'
 end

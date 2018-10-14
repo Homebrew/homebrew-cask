@@ -1,11 +1,13 @@
 cask 'propresenter' do
-  version '6.3.5_b16156'
-  sha256 '54482ee8492211ed8c94eabbdfcc610285fee746278548ba52b3a84aacd9979f'
+  version '6.3.6_b16192'
+  sha256 '06321bfb5ede71576108a37fcbb767cfd6b7217a0598be8ced7fe002b17a8027'
 
   url "https://www.renewedvision.com/downloads/ProPresenter#{version.major}_#{version}.dmg"
   appcast "https://www.renewedvision.com/update/ProPresenter#{version.major}.php"
   name 'ProPresenter'
   homepage 'https://www.renewedvision.com/propresenter.php'
+
+  depends_on macos: '>= :sierra'
 
   app "ProPresenter #{version.major}.app"
 

@@ -1,11 +1,11 @@
 cask 'diskmaker-x' do
-  version '7.0.1'
-  sha256 'c9b12c63d9742b2eb0136d352725b364a2af98f26e7efd310520a44a3d367471'
+  version '8'
+  sha256 '32b4600ae6a51ecfa819125dc85d179d632fba5e04b11d41235f6fe20e834ccf'
 
   url "https://diskmakerx.com/downloads/DiskMaker_X_#{version.no_dots}.dmg"
   appcast 'https://diskmakerx.com/feed/'
   name 'DiskMaker X'
   homepage 'https://diskmakerx.com/'
 
-  app "DiskMaker X #{version.major} for High Sierra.app"
+  app "DiskMaker X #{version.major} for macOS Mojave.app"
 end

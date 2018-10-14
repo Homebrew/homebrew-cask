@@ -6,7 +6,7 @@ cask 'tikzit' do
   url "https://bintray.com/tikzit/tikzit/download_file?file_path=releases%2F#{version}%2FTikZiT-osx.zip"
   appcast 'https://github.com/tikzit/tikzit/releases.atom'
   name 'TikZiT'
-  homepage 'http://tikzit.github.io/'
+  homepage 'https://tikzit.github.io/'
 
   app 'TikZiT.app'
 end

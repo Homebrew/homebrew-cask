@@ -7,9 +7,9 @@ cask 'interarchy' do
     sha256 'c1f8fbb9add4d134123d72b80d1d04540d38157f7c51478cb9efb0e88138c090'
   end
 
-  url "https://nolobe.com/interarchy/download?v=#{version}"
+  url "https://download.interarchy.com/Interarchy_#{version}.zip"
   name 'Interarchy'
-  homepage 'https://nolobe.com/interarchy/'
+  homepage 'https://interarchy.com/'
 
   app 'Interarchy.app'
 end

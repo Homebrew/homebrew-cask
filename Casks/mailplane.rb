@@ -7,6 +7,7 @@ cask 'mailplane' do
   name 'Mailplane'
   homepage 'https://mailplaneapp.com/'
 
+  auto_updates true
   depends_on macos: '>= :sierra'
 
   app 'Mailplane.app'

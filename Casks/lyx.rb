@@ -1,8 +1,8 @@
 cask 'lyx' do
-  version '2.3.1'
-  sha256 '0b823024883a30e23d4952ca2246210643f2c0e42f35ae663747e8f8f9858a6b'
+  version '2.3.1-1'
+  sha256 '540cf37ae2f35df21dcc92957d5c48c7ea3cbb6cd6aa5ff4169804c7501f2f48'
 
-  url "ftp://ftp.lyx.org/pub/lyx/bin/#{version}/LyX-#{version}+qt5-x86_64-cocoa.dmg"
+  url "http://ftp.lyx.org/pub/lyx/bin/#{version.major_minor_patch}/LyX-#{version}+qt5-x86_64-cocoa.dmg"
   appcast 'https://www.lyx.org/misc/rss/lyx_news_feed.xml'
   name 'LyX'
   homepage 'https://www.lyx.org/'

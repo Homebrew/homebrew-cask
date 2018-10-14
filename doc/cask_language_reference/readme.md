@@ -127,7 +127,6 @@ name
 homepage
 
 auto_updates
-accessibility_access
 conflicts_with
 depends_on
 container

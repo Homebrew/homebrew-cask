@@ -1,6 +1,6 @@
 cask 'etcher' do
-  version '1.4.4'
-  sha256 'b09f9352d69741ffbef9d99afbfd3db0230e2e9fe93f37723fe5028005df7a5e'
+  version '1.4.5'
+  sha256 'd78b0f0a2bc2f1685133598e31f23b862fb7c0ecba3e28d1bd328218d19cc5f3'
 
   # github.com/resin-io/etcher was verified as official when first introduced to the cask
   url "https://github.com/resin-io/etcher/releases/download/v#{version}/Etcher-#{version}.dmg"

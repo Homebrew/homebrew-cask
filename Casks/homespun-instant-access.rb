@@ -3,7 +3,7 @@ cask 'homespun-instant-access' do
   sha256 :no_check
 
   # vault.platformpurple.com/static/installers/homespun_installer was verified as official when first introduced to the cask
-  url 'http://vault.platformpurple.com/static/installers/homespun_installer.zip'
+  url 'https://vault.platformpurple.com/static/installers/homespun_installer.zip'
   name 'Homespun Instant Access'
   homepage 'https://www.homespun.com/direct-download/'
 

@@ -3,7 +3,7 @@ cask 'lynx' do
   sha256 '23e5146676323fa0d882525f3371d39c78134e271974c4947839e8bd44b5b65c'
 
   url 'https://download.saharasupport.com/lynx/production/macx/Lynx-install.dmg'
-  appcast 'http://downloads.saharasupport.com/lynx/production/macx/version.txt'
+  appcast 'https://downloads.saharasupport.com/lynx/production/macx/version.txt'
   name 'Lynx by Clevertouch'
   homepage 'https://download.saharasupport.com/'
 

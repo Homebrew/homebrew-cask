@@ -8,7 +8,7 @@ cask 'voodoopad' do
   name 'VoodooPad'
   homepage 'https://www.voodoopad.com/'
 
-  depends_on macos: '>= :lion'
+  depends_on macos: '>= :sierra'
 
   app 'VoodooPad.app'
 end

@@ -6,7 +6,7 @@ cask 'i1profiler' do
   name 'i1Profiler'
   name 'Eye-One Profiler'
   name 'i1Publish'
-  homepage "http://www.xrite.com/service-support/downloads/I/i1Profiler-i1Publish_V#{version.dots_to_underscores}"
+  homepage "https://www.xrite.com/service-support/downloads/I/i1Profiler-i1Publish_V#{version.dots_to_underscores}"
 
   pkg 'i1Profiler.pkg'
 

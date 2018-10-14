@@ -1,11 +1,13 @@
 cask 'kitty' do
-  version '0.12.2'
-  sha256 'dcfa715f9eba613416d1bf290943651e2c4777ae0e0553dda4fabd04dca7f12f'
+  version '0.12.3'
+  sha256 '0ce3f543e9b605ca16b8153218b283a2a13351c09499feaccfcffb42f39f7416'
 
   url "https://github.com/kovidgoyal/kitty/releases/download/v#{version}/kitty-#{version}.dmg"
   appcast 'https://github.com/kovidgoyal/kitty/releases.atom'
   name 'kitty'
   homepage 'https://github.com/kovidgoyal/kitty'
+
+  depends_on macos: '>= :sierra'
 
   app 'kitty.app'
 

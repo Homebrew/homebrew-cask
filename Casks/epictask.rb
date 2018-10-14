@@ -6,7 +6,7 @@ cask 'epictask' do
   url "https://s3.amazonaws.com/epictask-releases/electron/epictask-macos-#{version}.dmg"
   appcast 'https://github.com/densebrain/epictask/releases.atom'
   name 'Epictask'
-  homepage 'http://epictask.run/'
+  homepage 'https://epictask.run/'
 
   app 'Epictask.app'
 end

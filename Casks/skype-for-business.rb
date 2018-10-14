@@ -1,6 +1,6 @@
 cask 'skype-for-business' do
-  version '16.20.0.90'
-  sha256 '34bddff03ef6d314ac3e3ebf6facf1c892d7dd09f998a9c21edacb82528ffe2f'
+  version '16.21.0.87'
+  sha256 '027506dc13e33bf6862d8a4f7051e16bea9aca37451e28f5056794f4063ef25e'
 
   url "https://download.microsoft.com/download/D/0/5/D055DA17-C7B8-4257-89A1-78E7BBE3833F/SkypeForBusinessInstaller-#{version}.pkg"
   name 'Skype for Business'

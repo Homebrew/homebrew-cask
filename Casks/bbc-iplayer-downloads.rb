@@ -1,6 +1,6 @@
 cask 'bbc-iplayer-downloads' do
-  version '2.6.1'
-  sha256 '8b48d70db98ac2206e2a253b658bc8ed8631cefe1ec4ed3ba03a346e3c6b6209'
+  version '2.6.2'
+  sha256 'f195def4e2509a352d786b2471f116eacc7107f84f4d463f9d7b48cfc1fdf53c'
 
   # live-downloads-app-bucket-staticassetsbucket-ydn3z4ggyaof.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://live-downloads-app-bucket-staticassetsbucket-ydn3z4ggyaof.s3.amazonaws.com/releases/darwin-x64/BBCiPlayerDownloads-#{version}.dmg"

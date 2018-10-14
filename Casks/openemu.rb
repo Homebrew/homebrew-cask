@@ -11,7 +11,9 @@ cask 'openemu' do
   url "https://github.com/OpenEmu/OpenEmu/releases/download/v#{version}/OpenEmu_#{version}.zip"
   appcast 'https://github.com/OpenEmu/OpenEmu/releases.atom'
   name 'OpenEmu'
-  homepage 'http://openemu.org/'
+  homepage 'https://openemu.org/'
+
+  auto_updates true
 
   app 'OpenEmu.app'
 

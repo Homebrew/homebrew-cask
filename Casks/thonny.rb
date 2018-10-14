@@ -4,9 +4,9 @@ cask 'thonny' do
 
   # bitbucket.org/plas/thonny/downloads was verified as official when first introduced to the cask
   url "https://bitbucket.org/plas/thonny/downloads/thonny-#{version}.dmg"
-  appcast 'http://thonny.org/blog/categories/releases.html'
+  appcast 'https://thonny.org/blog/categories/releases.html'
   name 'Thonny'
-  homepage 'http://thonny.org/'
+  homepage 'https://thonny.org/'
 
   app 'Thonny.app'
 

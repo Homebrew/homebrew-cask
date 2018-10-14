@@ -1,12 +1,12 @@
 cask 'portfolioperformance' do
-  version '0.34.0'
-  sha256 'f36a49585821bd2a7244058ad8e87887d7580e836f289e5f865781e8a650eb14'
+  version '0.34.1'
+  sha256 'ccce469f69070c7f791743223c42f9abc27d4b66c6aa99c5de074c306fbcf0bd'
 
   # bintray.com/buchen/downloads was verified as official when first introduced to the cask
   url "https://bintray.com/buchen/downloads/download_file?file_path=#{version}%2FPortfolioPerformance-distro-#{version}-macosx.cocoa.x86_64.tar.gz"
   appcast 'https://github.com/buchen/portfolio/releases.atom'
   name 'Portfolio Performance'
-  homepage 'http://www.portfolio-performance.info/portfolio/'
+  homepage 'https://www.portfolio-performance.info/portfolio/'
 
   auto_updates true
 

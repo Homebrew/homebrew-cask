@@ -6,7 +6,7 @@ cask 'data-integration' do
   url "https://downloads.sourceforge.net/pentaho/pdi-ce-#{version}.zip"
   appcast 'https://sourceforge.net/projects/pentaho/rss?path=/Data%20Integration'
   name 'Pentaho Data Integration'
-  homepage 'http://community.pentaho.com/'
+  homepage 'https://community.hitachivantara.com/community/products-and-solutions/pentaho/'
 
   app 'data-integration/Data Integration.app'
 end

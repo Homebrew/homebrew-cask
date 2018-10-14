@@ -6,7 +6,7 @@ cask 'frostwire' do
   url "https://downloads.sourceforge.net/frostwire/frostwire-#{version.before_comma}.dmg"
   appcast 'https://sourceforge.net/projects/frostwire/rss'
   name 'FrostWire'
-  homepage 'http://www.frostwire.com/'
+  homepage 'https://www.frostwire.com/'
 
   app 'FrostWire.app'
 end

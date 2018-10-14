@@ -11,4 +11,12 @@ cask 'mailspring' do
   auto_updates true
 
   app 'Mailspring.app'
+
+  zap trash: [
+               '~/Library/Application Support/Mailspring',
+               '~/Library/Preferences/com.mailspring.*',
+               '~/Library/Caches/com.mailspring.*',
+               '~/Library/Saved Application State/com.mailspring.*',
+               '~/Library/Logs/Mailspring',
+             ]
 end
