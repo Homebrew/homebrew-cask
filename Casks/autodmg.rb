@@ -9,6 +9,7 @@ cask 'autodmg' do
 
   depends_on macos: '>= :sierra'
 
+
   app 'AutoDMG.app'
 
   zap trash: [
