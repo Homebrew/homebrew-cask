@@ -7,5 +7,15 @@ cask 'texnicle' do
   name 'TeXnicle'
   homepage 'http://www.bobsoft-mac.de/texnicle/texnicle.html'
 
+  auto_updates true
+  depends_on macos: '>= :mavericks'
+
   app 'TeXnicle.app'
+
+  zap trash: [
+               '~/Library/Application Support/TeXnicle',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bobsoft.texnicle.sfl*',
+               '~/Library/Caches/com.bobsoft.TeXnicle',
+               '~/Library/Preferences/com.bobsoft.TeXnicle.plist',
+             ]
 end
