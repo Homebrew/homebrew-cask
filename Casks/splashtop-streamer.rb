@@ -10,7 +10,7 @@ cask 'splashtop-streamer' do
 
   pkg 'Splashtop Streamer.pkg'
 
-  uninstall signal:    ['KILL', 'com.splashtop.Splashtop-Streamer'],
+  uninstall quit:      'com.splashtop.Splashtop-Streamer',
             launchctl: [
                          'com.splashtop.streamer-daemon',
                          'com.splashtop.streamer-for-user',
