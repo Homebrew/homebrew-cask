@@ -1,6 +1,6 @@
 cask 'watchguard-mobile-vpn-with-ssl' do
-  version '12.0,534193'
-  sha256 'e294bff0c61b9ac6a6ef0304d7e14dddab5b53b8d3844067641fbe8616725890'
+  version '12.2,562079'
+  sha256 'accfeff2bf955f5eeb25cc2ed140b3c73dd4c3a34226d87cfdd2352b871a07f2'
 
   url "http://cdn.watchguard.com/SoftwareCenter/Files/MUVPN_SSL/#{version.before_comma.dots_to_underscores}/WG-MVPN-SSL_#{version.before_comma.dots_to_underscores}.dmg"
   name 'WatchGuard Mobile VPN with SSL'
