@@ -1,6 +1,6 @@
 cask 'family-tree-builder' do
-  version '7.0.2,155'
-  sha256 '67e346320510ee1e0be3ad5d10b3a68e68f29c63693e67470160be4da9140623'
+  version '8.2.0,474'
+  sha256 '852a30b1ae53ec656fb8045c9b830f71ed7da91667bbf68f421f3311c4c0a742'
 
   # mhcache-myheritage.netdna-ssl.com was verified as official when first introduced to the cask
   url "https://mhcache-myheritage.netdna-ssl.com/FP/FamilyTreeBuilder/family_tree_builder_#{version.major}#{version.after_comma}.dmg"
