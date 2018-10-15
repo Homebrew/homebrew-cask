@@ -1,6 +1,6 @@
 cask 'across-lite' do
-  version '2.4.2'
-  sha256 'd4279d07914fc5654fc7eeb6816952e8e89504f6b9e34d631403db02b56173d2'
+  version '2.4.3'
+  sha256 '4e3a60742e6700602014e9c23196cecba4ba40c00fcb0221e4c48d9f02883868'
 
   url "http://www.litsoft.com/across/alite/download/download.php/al#{version.no_dots}osx.dmg?os=macosx"
   name 'Across Lite'
