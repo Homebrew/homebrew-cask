@@ -1,12 +1,14 @@
 cask 'itch' do
-  version '23.6.3'
-  sha256 '3ed905c4e7e0ad37004dd235a0dcf27325adac10fb829d3bfcd076c25442fda4'
+  version '25.0.0'
+  sha256 '8dc76228c8e5e75da5e3c4b32a709762d339d5766fcb7c3a74eca3a75728fa10'
 
-  # github.com/itchio/itch was verified as official when first introduced to the cask
-  url "https://github.com/itchio/itch/releases/download/v#{version}/itch-mac.dmg"
+  # nuts.itch.zone was verified as official when first introduced to the cask
+  url 'http://nuts.itch.zone/download/osx'
   appcast 'https://github.com/itchio/itch/releases.atom'
   name 'itch'
   homepage 'https://itch.io/app'
 
-  app 'itch.app'
+  installer manual: 'Install itch.app'
+
+  uninstall delete: '~/Applications/itch.app'
 end
