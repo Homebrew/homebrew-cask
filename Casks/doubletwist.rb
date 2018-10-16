@@ -1,11 +1,10 @@
 cask 'doubletwist' do
-  version '3.1.2'
-  sha256 '47975cc7517a6cf8c90362536a7feb53f0ff8af7d45866481d37cad2fcae4dac'
+  version '3.2.0'
+  sha256 '426a4468c79a99bdcf51d1be9601b7ebe5222fcc97d38b38d80b8116b75a8b13'
 
-  url "http://download.doubletwist.com/releases/mac/dT-#{version}-kronos-patch1-r11040/doubleTwist.dmg"
-  appcast 'http://download.doubletwist.com/mac/appcast.xml'
+  url 'http://download.doubletwist.com/mac/doubleTwist.dmg'
   name 'doubleTwist'
-  homepage 'https://www.doubletwist.com/'
+  homepage 'https://www.doubletwist.com/desktop'
 
   app 'doubleTwist.app'
 
