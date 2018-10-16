@@ -6,7 +6,7 @@ cask 'mailslurper' do
   url "https://github.com/mailslurper/mailslurper/releases/download/#{version}/mailslurper-#{version}-osx.zip"
   appcast 'https://github.com/mailslurper/mailslurper/releases'
   name 'MailSlurper'
-  homepage 'http://mailslurper.com'
+  homepage 'http://mailslurper.com/'
 
   shimscript = "#{staged_path}/mailslurper.wrapper.sh"
   binary shimscript, target: 'mailslurper'
