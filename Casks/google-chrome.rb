@@ -1,6 +1,6 @@
 cask 'google-chrome' do
-  version '69.0.3497.100'
-  sha256 '612eac055306c19b6b0d02a99c18c91c170d262092e95d46dcb68987753f7504'
+  version '70.0.3538.67'
+  sha256 '8ea5efb18326a8900b1ca53acfae46b40e6a4b2ba25b9c957db6c1ea59d50654'
 
   url 'https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg'
   appcast 'https://omahaproxy.appspot.com/history?os=mac;channel=stable'
