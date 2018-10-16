@@ -1,6 +1,6 @@
 cask 'gobdokumente' do
-  version '1.3'
-  sha256 '1a40b3cfcd9ed1124b40ee62b3bf516494f9941fd14a01c1ddfe71c327c45292'
+  version '1.3.1'
+  sha256 '6bafc9d954e944d4b057d81a6be17c5a06cab0438593663b6d31af9876b0ad98'
 
   # moapp.software was verified as official when first introduced to the cask
   url 'https://download.moapp.software/GoBDokumente.zip'
