@@ -11,6 +11,9 @@ module Cask
   class Cmd
     class Ci < AbstractCommand
       def run
+        ENV["HOMEBREW_DEBUG"] = "1"
+        ENV["HOMEBREW_VERBOSE"] = "1"
+
         unless ENV.key?("TRAVIS")
           raise CaskError, "This command isn’t meant to be run locally."
         end
@@ -45,7 +48,7 @@ module Cask
           end
 
           overall_success &= step "brew cask style #{cask.token}", "style" do
-            Style.run(path)
+            Style.run(path, "--debug")
           end
 
           was_installed = cask.installed?
