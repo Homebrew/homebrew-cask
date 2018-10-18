@@ -1,6 +1,6 @@
 cask 'fluid' do
   version '2.1'
-  sha256 '7b27dfcec1b74209496eb1150f38e464c95ae695dc9d95f1eab3d11925189e58'
+  sha256 'befc2b345bb7ac0d44b2d209457079eb6ba7ed8eb9d595272a71584c0647bcb9'
 
   url "https://fluidapp.com/dist/Fluid_#{version}.zip"
   appcast "https://fluidapp.com/appcast/fluid#{version.major}.rss"
