@@ -12,14 +12,13 @@ cask 'multipass' do
   uninstall launchctl: 'com.canonical.multipassd',
             pkgutil:   'com.canonical.multipass.*',
             delete:    [
-                         '/Library/LaunchDaemons/com.canonical.multipassd.plist',
                          '/usr/local/bin/multipass',
                          '/usr/local/etc/bash_completion.d/multipass',
-                         '/var/root/Library/Caches/multipassd/',
+                         '/var/root/Library/Caches/multipassd',
                        ]
 
-  zap delete: [
-                '/var/root/Library/Application Support/multipassd/',
-                '/Library/Logs/Multipass/',
-              ]
+  zap trash: [
+               '/var/root/Library/Application Support/multipassd',
+               '/Library/Logs/Multipass',
+             ]
 end
