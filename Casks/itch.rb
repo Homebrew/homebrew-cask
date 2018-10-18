@@ -8,6 +8,8 @@ cask 'itch' do
   name 'itch'
   homepage 'https://itch.io/app'
 
+  container nested: 'Install itch.dmg'
+  
   installer script: "Install itch/Install itch.app"
 
   uninstall delete: '~/Applications/itch.app'
