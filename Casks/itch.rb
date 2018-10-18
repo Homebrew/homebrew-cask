@@ -9,8 +9,12 @@ cask 'itch' do
   homepage 'https://itch.io/app'
 
   container nested: 'Install itch.dmg'
-  
-  installer script: "Install itch.app"
+
+  installer script: 'Install itch.app'
+
+  preflight do
+    set_permissions "#{staged_path}/Install itch.app", '0777'
+  end
 
   uninstall delete: '~/Applications/itch.app'
 end
