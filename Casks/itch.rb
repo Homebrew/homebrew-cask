@@ -10,7 +10,7 @@ cask 'itch' do
 
   container nested: 'Install itch.dmg'
   
-  installer script: "Install itch/Install itch.app"
+  installer script: "Install itch.app"
 
   uninstall delete: '~/Applications/itch.app'
 end
