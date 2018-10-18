@@ -8,6 +8,5 @@ cask 'opensong' do
   name 'OpenSong'
   homepage 'http://www.opensong.org/'
 
-  app "OpenSong V#{version}/OpenSongOSX-Cocoa.app"
-  app "Opensong V#{version}/OpenSongOSX.app"
+  app 'OpenSongOSX.app'
 end
