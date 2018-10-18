@@ -1,6 +1,6 @@
 cask 'stattransfer' do
-  version '14'
-  sha256 :no_check # required as upstream package is updated in-place
+  version :latest
+  sha256 :no_check
 
   url 'https://www.stattransfer.com/downloads/stdemo.dmg'
   name 'Stat/Transfer'
