@@ -8,7 +8,7 @@ cask 'itch' do
   name 'itch'
   homepage 'https://itch.io/app'
 
-  installer manual: 'Install itch.app'
+  installer script: "Install itch/Install itch.app"
 
   uninstall delete: '~/Applications/itch.app'
 end
