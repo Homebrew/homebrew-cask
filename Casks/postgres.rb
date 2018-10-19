@@ -9,6 +9,7 @@ cask 'postgres' do
   homepage 'https://postgresapp.com/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Postgres.app'
 
