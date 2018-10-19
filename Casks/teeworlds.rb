@@ -7,6 +7,6 @@ cask 'teeworlds' do
   name 'Teeworlds'
   homepage 'https://www.teeworlds.com/'
 
-  app 'Teeworlds.app'
-  app 'Teeworlds Server.app'
+  app 'teeworlds.app'
+  app 'teeworlds_srv.app'
 end
