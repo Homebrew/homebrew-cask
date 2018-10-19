@@ -7,7 +7,7 @@ cask 'simplenote' do
   name 'Simplenote'
   homepage 'https://github.com/Automattic/simplenote-electron'
 
-  app 'Simplenote.app'
+  app 'mac/Simplenote.app'
 
   zap trash: [
                '~/Library/Application Support/Simplenote',
