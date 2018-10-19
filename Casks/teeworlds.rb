@@ -2,7 +2,6 @@ cask 'teeworlds' do
   version '0.6.5'
   sha256 '3bcfb67d1631c39a519d1c78876871eff0a150687eade01ff2c5553bcdc5b9d9'
 
-  # github.com/teeworlds/teeworlds was verified as official when first introduced to the cask
   url "https://downloads.teeworlds.com/teeworlds-#{version}-osx.dmg"
   appcast 'https://teeworlds.com/?page=downloads'
   name 'Teeworlds'
