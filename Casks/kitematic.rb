@@ -8,7 +8,7 @@ cask 'kitematic' do
   name 'Kitematic'
   homepage 'https://kitematic.com/'
 
-  app 'Kitematic (Beta).app'
+  app 'Kitematic.app'
 
   zap trash: [
                '~/Kitematic',
