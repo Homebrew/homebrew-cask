@@ -6,7 +6,7 @@ cask 'iconizer' do
   url "https://github.com/raphaelhanneken/iconizer/releases/download/#{version}/Iconizer.dmg"
   appcast 'https://github.com/raphaelhanneken/iconizer/releases.atom'
   name 'Iconizer'
-  homepage 'http://raphaelhanneken.github.io/iconizer/'
+  homepage 'https://raphaelhanneken.github.io/iconizer/'
 
   auto_updates true
 
