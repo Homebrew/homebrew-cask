@@ -7,6 +7,8 @@ cask 'netspot' do
   name 'NetSpot'
   homepage 'https://www.netspotapp.com/'
 
+  auto_updates true
+
   app 'NetSpot.app'
 
   zap trash: [
