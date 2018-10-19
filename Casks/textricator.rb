@@ -1,10 +1,10 @@
 cask 'textricator' do
-  version '9.0.43'
-  sha256 'ca899bbf527cdd6a29ff9fc872e7974609df22ed921827f9de0bef24e492838d'
+  version '9.0.44'
+  sha256 'd2dd8e8583da43281f6aabe8f80cb256f9a527d5ffacdf9126393352d26650c1'
 
   # repo1.maven.org/maven2/io/mfj/textricator was verified as official when first introduced to the cask
   url "https://repo1.maven.org/maven2/io/mfj/textricator/#{version}/textricator-#{version}-bin.tgz"
-  appcast 'https://github.com/measuresforjustice/textricator/releases.atom'
+  appcast 'https://repo1.maven.org/maven2/io/mfj/textricator/'
   name 'Textricator'
   homepage 'https://textricator.mfj.io/'
 
