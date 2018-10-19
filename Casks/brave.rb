@@ -11,7 +11,7 @@ cask 'brave' do
   auto_updates true
   depends_on macos: '>= :mavericks'
 
-  app 'Brave.app'
+  app 'Brave Browser.app'
 
   zap trash: [
                '~/Library/Application Support/brave',
