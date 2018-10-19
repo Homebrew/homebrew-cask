@@ -1,6 +1,6 @@
 cask 'spriteilluminator' do
-  version '1.5.0'
-  sha256 '59f623fc31a7ab4412434d126929c4fecd7f85432562e019476c1cbe8a4c8e2f'
+  version '1.5.2'
+  sha256 '90b2702e5315784113546a95113455423d4814aa2eccef63a5dec979bec78431'
 
   url "https://www.codeandweb.com/download/spriteilluminator/#{version}/SpriteIlluminator-#{version}-uni.dmg"
   appcast 'https://www.codeandweb.com/releases/SpriteIlluminator/appcast-mac-release.xml'
