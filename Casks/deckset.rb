@@ -1,6 +1,6 @@
 cask 'deckset' do
-  version '2.0.7,2500'
-  sha256 'd5149edf26b4c8e2c20dbfe34dc5a6eb805eea486f1c7be885141ad713a88026'
+  version '2.0.8,2503'
+  sha256 'eb74188d7e8810085f44eb3532ec9aad2fa35f58bc73a735cc4314e785084db7'
 
   url "https://dl.decksetapp.com/Deckset+#{version.before_comma}+(#{version.after_comma}).dmg"
   appcast 'https://dl.decksetapp.com/appcast.xml'
