@@ -1,6 +1,6 @@
 cask 'reborn' do
-  version '0.5.53'
-  sha256 'b93d4a14cd21337912cf4923df4a25b3597582558d77562bba72c3d30f64ca76'
+  version '0.5.60'
+  sha256 '2b48e12eb3da6b6b6667b3e1bbf0893d176549c636dd75191c31ca5fcfeb647f'
 
   url "https://github.com/langyanduan/Reborn/releases/download/#{version}/Reborn.zip"
   appcast 'https://github.com/langyanduan/Reborn/releases.atom'
