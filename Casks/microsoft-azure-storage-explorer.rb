@@ -7,6 +7,4 @@ cask 'microsoft-azure-storage-explorer' do
   homepage 'https://azure.microsoft.com/en-us/features/storage-explorer/'
 
   app 'MicrosoftAzureStorageExplorer/Microsoft Azure Storage Explorer.app'
-
-  uninstall pkgutil: 'com.microsoft.StorageExplorer.*'
 end
