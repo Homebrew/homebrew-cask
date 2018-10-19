@@ -6,7 +6,7 @@ cask 'qxmledit' do
   url "https://downloads.sourceforge.net/qxmledit/QXmlEdit-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/qxmledit/rss'
   name 'QXmlEdit'
-  homepage 'http://qxmledit.org/'
+  homepage 'https://qxmledit.org/'
 
   app 'QXmlEdit.app'
 end
