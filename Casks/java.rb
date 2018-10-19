@@ -8,9 +8,9 @@ cask 'java' do
 
   postflight do
     system_command '/bin/mkdir',
-                   args: ['-p', '--', "/Library/Java/JavaVirtualMachines/"],
+                   args: ['-p', '--', '/Library/Java/JavaVirtualMachines/'],
                    sudo: true
-                   
+
     system_command '/bin/mv',
                    args: ['-f', '--', "#{staged_path}/jdk-#{version.before_comma}.jdk",
                           "/Library/Java/JavaVirtualMachines/openjdk-#{version.before_comma}.jdk"],
