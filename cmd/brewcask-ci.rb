@@ -48,6 +48,22 @@ module Cask
             Style.run(path)
           end
 
+          blacklist = %w[
+            docker-toolbox
+            dusty
+            genymotion
+            local-by-flywheel
+            intel-haxm
+            virtualbox
+            virtualbox-beta
+          ]
+
+          if blacklist.include?(cask.token) ||
+            cask.artifacts.any? { |k| k.is_a?(Artifact::Installer::ManualInstaller) }
+
+            raise CaskError, "skipping install/uninstall of #{cask.token}"
+          end
+
           was_installed = cask.installed?
           cask_dependencies = CaskDependencies.new(cask).reject(&:installed?)
 
