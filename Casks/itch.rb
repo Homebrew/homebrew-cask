@@ -16,5 +16,6 @@ cask 'itch' do
     set_permissions "#{staged_path}/Install itch.app", '0777'
   end
 
-  uninstall delete: '~/Applications/itch.app'
+  uninstall delete: '~/Applications/itch.app',
+            quit:   'io.itch.mac'
 end
