@@ -10,7 +10,7 @@ cask 'itch' do
 
   container nested: 'Install itch.dmg'
 
-  installer script: 'Install itch.app'
+  installer script: 'Install itch.app/Contents/MacOS/itch-setup'
 
   preflight do
     set_permissions "#{staged_path}/Install itch.app", '0777'
