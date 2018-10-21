@@ -5,15 +5,15 @@ cask 'maciasl' do
 
     url "https://downloads.sourceforge.net/maciasl/#{version}/MaciASL_Lion.zip"
   else
-    version '1.4'
-    sha256 '24c0dbaa9a13231b8c8e364ef0e6d60656718320ce69d8bb23aa5bc27e82e87d'
+    version '1.5.2'
+    sha256 '279e4fea7fae95ee00cb773b1a96c1312113c5bf009471bf46c4c03ccb43c14d'
 
-    url "https://downloads.sourceforge.net/maciasl/#{version}/MaciASL.zip"
-    appcast 'https://sourceforge.net/projects/maciasl/rss'
+    url "https://github.com/acidanthera/MaciASL/releases/download/#{version}/#{version}.RELEASE.zip"
+    appcast 'https://github.com/acidanthera/MaciASL/releases.atom'
   end
 
   name 'MaciASL'
-  homepage 'https://sourceforge.net/projects/maciasl/'
+  homepage 'https://github.com/acidanthera/MaciASL'
 
   depends_on macos: '>= :lion'
 
