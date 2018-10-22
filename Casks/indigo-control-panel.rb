@@ -1,4 +1,4 @@
-cask 'indi-control-panel' do
+cask 'indigo-control-panel' do
   version '3.5'
   sha256 '4d1402b819e5b1d63bf5308ceab6e73f21fc8589859104f7704d419d15a35868'
 
