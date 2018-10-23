@@ -9,7 +9,7 @@ cask 'gobdokumente' do
   name 'GoBDocuments'
   homepage 'https://gobdokumente.de/'
 
-  depends_on macos: '>= 10.11'
+  depends_on macos: '>= :el_capitan'
 
   app 'GoBDokumente.app'
 
