@@ -1,6 +1,6 @@
 cask 'chai' do
-  version '3.0.0'
-  sha256 '64a94fca62f8390d5b10bdd1c480ecc1117125af27e2c8d86c541d0addf23c80'
+  version '3.1.0'
+  sha256 '46c4bb62c753e480522aa213bb1e48136123a283aeda786e74c396be8d30c2ad'
 
   url "https://github.com/lvillani/chai/releases/download/v#{version}/Chai-v#{version}.zip"
   appcast 'https://github.com/lvillani/chai/releases.atom'
