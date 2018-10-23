@@ -8,6 +8,8 @@ cask 'chatmate-for-facebook' do
   name 'ChatMate for Facebook'
   homepage 'https://chatmate.io/mac/facebook/'
 
+  depends_on macos: '>= :sierra'
+
   app 'ChatMate for Facebook.app'
 
   zap trash: [
