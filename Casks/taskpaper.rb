@@ -7,5 +7,7 @@ cask 'taskpaper' do
   name 'TaskPaper'
   homepage 'https://www.taskpaper.com/'
 
+  auto_updates true
+
   app 'TaskPaper.app'
 end
