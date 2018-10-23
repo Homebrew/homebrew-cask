@@ -7,7 +7,9 @@ cask 'chatmate-for-facebook' do
   appcast 'https://updates.devmate.com/net.coldx.mac.Facebook.xml'
   name 'ChatMate for Facebook'
   homepage 'https://chatmate.io/mac/facebook/'
-
+  
+  depends_on macos: '>= :sierra'
+  
   app 'ChatMate for Facebook.app'
 
   zap trash: [
