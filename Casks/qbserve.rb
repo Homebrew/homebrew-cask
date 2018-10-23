@@ -7,6 +7,7 @@ cask 'qbserve' do
   name 'Qbserve'
   homepage 'https://qotoqot.com/qbserve/'
 
+  auto_updates true
   depends_on macos: '>= :yosemite'
 
   app 'Qbserve.app'
