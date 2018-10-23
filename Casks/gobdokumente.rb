@@ -6,7 +6,10 @@ cask 'gobdokumente' do
   url 'https://download.moapp.software/GoBDokumente.zip'
   appcast 'https://sparkle.moapp.software/gobdokumente.xml'
   name 'GoBDokumente'
+  name 'GoBDocuments'
   homepage 'https://gobdokumente.de/'
+
+  depends_on macos: '>= :el_capitan'
 
   app 'GoBDokumente.app'
 
