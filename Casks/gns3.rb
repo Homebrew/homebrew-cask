@@ -9,5 +9,7 @@ cask 'gns3' do
   name 'GNS3'
   homepage 'https://www.gns3.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'GNS3.app'
 end
