@@ -1,6 +1,6 @@
 cask 'gisto' do
-  version '1.10.9'
-  sha256 'cbc8639bc127a65504c082a114a08fb8b02262a0a60ae7d6d8a914e5e9e1ff57'
+  version '1.10.10'
+  sha256 '2553e10ac78feef786d5d2e000fc903b65a28b215455cb3f7dcb98535425919e'
 
   # github.com/Gisto/Gisto was verified as official when first introduced to the cask
   url "https://github.com/Gisto/Gisto/releases/download/v#{version}/Gisto-#{version}.dmg"
