@@ -4,6 +4,7 @@ cask 'sourcetree' do
 
   # atlassian.com/software/sourcetree was verified as official when first introduced to the cask
   url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_#{version}.zip"
+  appcast 'https://www.sourcetreeapp.com/update/SparkleAppcastGroup1.xml
   name 'Atlassian SourceTree'
   homepage 'https://www.sourcetreeapp.com/'
 
