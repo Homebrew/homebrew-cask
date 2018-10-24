@@ -1,6 +1,7 @@
 # toplevel
 /.bundle/
 /bin/
+#anywhere u can do it
 /vendor/
 
 # anywhere in the tree
