@@ -63,3 +63,6 @@ Some style guidelines:
 * Make one Pull Request per Cask change.
 * Do not squash commits after updating a Pull Request.
 * Use descriptive commit messages - mention app name and version (ie. `Upgrade Transmission.app to v2.82`).
+Name: "Vineetha VG"  
+   Place: "Kerala,India"  
+   Github: [vineethaaa](https://github.com/vineethaaa) 
