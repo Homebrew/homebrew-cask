@@ -8,6 +8,7 @@ cask 'retrobatch' do
   homepage 'https://flyingmeat.com/retrobatch/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Retrobatch.app'
 end

@@ -1,6 +1,6 @@
 cask 'flexiglass' do
-  version '1.6.1-12795'
-  sha256 '29d1322239efde57e87dd75fefc2fa59aac29e509dd1287ec86d3ee11efa1828'
+  version '1.7-12830'
+  sha256 'bd0647bdc3de6ffaa78efd6f171e37a04c990910db2e4d59991a2846d3b57e9d'
 
   url "https://downloads.nulana.com/flexiglass/Flexiglass-#{version}.zip"
   appcast 'https://downloads.nulana.com/flexiglass/appcast.xml'

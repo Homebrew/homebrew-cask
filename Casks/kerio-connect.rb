@@ -3,7 +3,7 @@ cask 'kerio-connect' do
   sha256 'a771933ead0810f5b195c3a77a94b0e41c6beb81cc2cf3002e90e73186575da5'
 
   # cdn.kerio.com was verified as official when first introduced to the cask
-  url "http://cdn.kerio.com/dwn/connect/connect-#{version.before_comma}/kerio-connect-#{version.before_comma}-#{version.after_comma}-mac.dmg"
+  url "https://cdn.kerio.com/dwn/connect/connect-#{version.before_comma}/kerio-connect-#{version.before_comma}-#{version.after_comma}-mac.dmg"
   name 'Kerio Connect'
   homepage 'https://www.kerio.de/products/kerio-connect'
 

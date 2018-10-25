@@ -6,6 +6,7 @@ cask 'free-download-manager' do
   name 'Free Download Manager'
   homepage 'https://www.freedownloadmanager.org/'
 
+  auto_updates true
   depends_on macos: '>= :mavericks'
 
   app 'Free Download Manager.app'

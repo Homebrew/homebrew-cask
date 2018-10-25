@@ -22,9 +22,12 @@ cask 'deeper' do
   elsif MacOS.version == :sierra
     version '2.2.3'
     sha256 '33fee21b65279e4459b6469dbc68f0c6df91663ed26d6b62042b21883efda0ed'
-  else
+  elsif MacOS.version == :high_sierra
     version '2.3.3'
     sha256 '08ac5820428bcce74548786e8fda947edfaa31cf4a822d5c443835e73a11dd3b'
+  else
+    version '2.3.5'
+    sha256 '8a8a6dec420ec7dd04eedec6400b5a2b40f4db60da628e817b61322761b91f08'
   end
 
   url "https://www.titanium-software.fr/download/#{macos_release}/Deeper.dmg"
@@ -42,6 +45,7 @@ cask 'deeper' do
                       :el_capitan,
                       :sierra,
                       :high_sierra,
+                      :mojave,
                     ]
 
   app 'Deeper.app'
