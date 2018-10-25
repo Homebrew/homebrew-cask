@@ -4,7 +4,7 @@ cask 'brave-browser' do
 
   # github.com/brave/brave-browser was verified as official when first introduced to the cask
   url "https://github.com/brave/brave-browser/releases/download/v#{version}/Brave-Browser.dmg"
-  appcast 'https://github.com/brave/brave-browser/releases.atom'
+  appcast 'https://updates.bravesoftware.com/sparkle/Brave-Browser/stable/appcast.xml'
   name 'Brave'
   homepage 'https://brave.com/'
 
