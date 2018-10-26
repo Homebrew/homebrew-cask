@@ -17,6 +17,7 @@ cask 'gfortran' do
 
   name 'gfortran'
   homepage 'https://gcc.gnu.org/wiki/GFortranBinaries'
+  appcast 'https://github.com/fxcoudert/gfortran-for-macOS/releases.atom'
 
   conflicts_with formula: 'gcc'
   depends_on macos: '>= :el_capitan'
