@@ -13,7 +13,7 @@ cask 'syncplay' do
   app 'Syncplay.app'
 
   as_dir  = [Dir.home, 'Library', 'Application Support']
-  our_dir = %w[org.videolan.vlc lua intf]
+  our_dir = ['org.videolan.vlc', 'lua', 'intf']
 
   postflight do
     (0..our_dir.length - 1).each do |i|
