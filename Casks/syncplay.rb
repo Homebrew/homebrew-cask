@@ -12,32 +12,6 @@ cask 'syncplay' do
 
   app 'Syncplay.app'
 
-  as_dir  = [Dir.home, 'Library', 'Application Support']
-  our_dir = ['org.videolan.vlc', 'lua', 'intf']
-
-  postflight do
-    (0..our_dir.length - 1).each do |i|
-      dir = File.join(as_dir, our_dir[0..i])
-      break if Dir.exist? dir
-
-      Dir.mkdir dir
-    end
-    FileUtils.cd staged_path do
-      FileUtils.cp '.syncplay.lua',
-                   File.join(as_dir, our_dir, 'syncplay.lua')
-    end
-  end
-
-  uninstall_postflight do
-    FileUtils.rm_f File.join(as_dir, our_dir, 'syncplay.lua')
-    (0..our_dir.length - 1).reverse_each do |i|
-      dir = File.join(as_dir, our_dir[0..i])
-      break unless Dir.entries(dir).reject { |e| e =~ %r{^\.\.?$} }.empty?
-
-      Dir.rmdir dir
-    end
-  end
-
   zap trash: [
                '~/.syncplay',
                '~/Library/Saved Application State/pl.syncplay.Syncplay.savedState',
@@ -47,4 +21,13 @@ cask 'syncplay' do
                '~/Library/Preferences/pl.syncplay.Syncplay.plist',
                '~/Library/Preferences/com.syncplay.PlayerList.plist',
              ]
+
+  caveats do
+    <<~EOS
+      If using VLC, add support using the following commands:
+
+      mkdir -p "${HOME}/Library/Application Support/org.videolan.vlc/lua/intf"
+      cp "#{staged_path}/.syncplay.lua" "${HOME}/Library/Application Support/org.videolan.vlc/lua/intf/syncplay.lua"
+    EOS
+  end
 end
