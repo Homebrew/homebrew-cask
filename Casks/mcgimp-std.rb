@@ -1,10 +1,10 @@
 cask 'mcgimp-std' do
-  version '2.10.4'
-  sha256 '34d396976d4ac95b5dc83f2a6e631d72f06bbf6c1087d608a0373e55c313aae5'
+  version '2.10.6'
+  sha256 '0776c1fd3a3c9ab137926465119275cd84f99ad0407ff1ff63bd21e479fdaa84'
 
-  url "https://www.partha.com/downloads/McGimp-#{version}-std.app.zip"
+  url "https://www.partha.com/downloads/McGimp-#{version}.app.zip"
   name 'McGimp'
   homepage 'https://www.partha.com/'
 
-  app "McGimp-#{version}-std.app"
+  app "McGimp-#{version}.app"
 end
