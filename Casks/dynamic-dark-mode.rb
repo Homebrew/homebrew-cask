@@ -7,6 +7,8 @@ cask 'dynamic-dark-mode' do
   name 'dynamic-dark-mode'
   homepage 'https://github.com/ApolloZhu/Dynamic-Dark-Mode'
 
+  depends_on macos: '>= :mojave'
+
   app 'Dynamic.app'
 
   uninstall pkgutil: 'io.github.apollozhu.Dynamic'
