@@ -4,7 +4,7 @@ cask 'dynamic-dark-mode' do
 
   url "https://github.com/ApolloZhu/Dynamic-Dark-Mode/releases/download/#{version}/Dynamic-#{version}.zip"
   appcast 'https://github.com/ApolloZhu/Dynamic-Dark-Mode/releases.atom'
-  name 'dynamic-dark-mode'
+  name 'Dynamic Dark Mode'
   homepage 'https://github.com/ApolloZhu/Dynamic-Dark-Mode'
 
   depends_on macos: '>= :mojave'
