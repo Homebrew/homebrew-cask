@@ -7,7 +7,7 @@ cask 'dynamic-dark-mode' do
   name 'dynamic-dark-mode'
   homepage 'https://github.com/ApolloZhu/Dynamic-Dark-Mode'
 
-  app 'dynamic.app'
+  app 'Dynamic.app'
 
   uninstall pkgutil: 'io.github.apollozhu.Dynamic'
 end
