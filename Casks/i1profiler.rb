@@ -1,6 +1,6 @@
 cask 'i1profiler' do
-  version '1.7.2'
-  sha256 '276aeda81784d074e50fc6b0a6f4b9a7ffca4e15496b58733ae50acb68091b15'
+  version '1.8.1'
+  sha256 '0085551a7da1736200e49cc84a79b9ac4b35abca5866d1189f6ac09572ac6634'
 
   url "https://downloads.xrite.com/downloads/software/i1Profiler/#{version}/Mac/i1Profiler.zip"
   name 'i1Profiler'
@@ -18,6 +18,8 @@ cask 'i1profiler' do
             launchctl: [
                          'com.xrite.device.softwareupdate.plist',
                          'com.xrite.device.xrdd.plist',
+                         'com.aladdin.aksusbd.plist',
+                         'com.aladdin.hasplmd.plist',
                        ],
             delete:    '/Applications/i1Profiler/i1Profiler.app',
             rmdir:     '/Applications/i1Profiler'
