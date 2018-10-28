@@ -1,6 +1,6 @@
 cask 'provisionql' do
-  version '1.4.1'
-  sha256 'faebd520c79b0d8a598745a8d0a1ad7042d6b3d65cc4c49b29c0cc6b3c162e8d'
+  version '1.5.0'
+  sha256 '01a8cae466cdcc5fc8677a31343bda2c8f0e5ebb6a271890b5f11a7cab52b838'
 
   url "https://github.com/ealeksandrov/ProvisionQL/releases/download/#{version}/ProvisionQL.zip"
   appcast 'https://github.com/ealeksandrov/ProvisionQL/releases.atom'
