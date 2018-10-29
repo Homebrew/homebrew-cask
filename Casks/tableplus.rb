@@ -1,6 +1,6 @@
 cask 'tableplus' do
-  version '1.0,142'
-  sha256 'dd5f9011503a73293ea1b6548badffa121661f436f3d257a02a89bf1a49594a9'
+  version '1.0,146'
+  sha256 '7abd9fee3f4c8508c18144e07a1d5528993b4ab4bf6e549885e9ab87e38e2dfb'
 
   # s3.amazonaws.com/tableplus-osx-builds was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/tableplus-osx-builds/#{version.after_comma}/TablePlus.dmg"
