@@ -1,6 +1,6 @@
 cask 'syncovery' do
-  version '8.05a'
-  sha256 'd1aca51f8280925a4a84b18213ccdadbe66e68c0dadc879c4a6ad6a2a9c82735'
+  version '8.07c'
+  sha256 '2ee0d8c2cdf6546f93f26c1207eec5775ed8cd7805dd1bcd197531bec36804df'
 
   url "https://www.syncovery.com/release/SyncoveryMac#{version}.dmg"
   name 'Syncovery'
