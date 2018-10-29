@@ -1,6 +1,6 @@
 cask 'wechat' do
-  version '2.3.18.19'
-  sha256 '94277bacdb2163ab8e41978c85464b4495cba5b1c11f631727381356178ccee6'
+  version '2.3.19.18'
+  sha256 '11016b77e6af6a006c3074cbeed68dd33c252ba8cbc721cf75fdab736c630f84'
 
   url "https://dldir1.qq.com/weixin/mac/WeChat_#{version}.dmg"
   name 'WeChat for Mac'
