@@ -1,6 +1,6 @@
 cask 'birdfont' do
-  version '3.12.14'
-  sha256 '82d6615125dd6953a51f4503c4bdd54e750da3f13850a5013b8225de18e5bb99'
+  version '3.14.2'
+  sha256 '4463556f7beb8e00bb33b91e4ccb5134f69987971f1cf62f5875fab719adeee5'
 
   url "https://birdfont.org/download/birdfont-#{version}-free.dmg"
   name 'BirdFont'
