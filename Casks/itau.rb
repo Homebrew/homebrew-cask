@@ -8,7 +8,5 @@ cask 'itau' do
 
   app 'Itau.app'
 
-  zap trash: [
-               '~/.aplicativoitau',
-             ]
+  zap trash: '~/.aplicativoitau'
 end
