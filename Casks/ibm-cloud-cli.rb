@@ -9,8 +9,6 @@ cask 'ibm-cloud-cli' do
   name 'IBM Cloud CLI'
   homepage 'https://clis.ng.bluemix.net/ui/home.html'
 
-  # depends_on, uninstall and zap are based on the idt-installer script found at:
-  # https://github.com/IBM-Cloud/ibm-cloud-developer-tools/blob/334ec5c/linux-installer/idt-installer
   depends_on cask: 'docker'
   depends_on formula: 'kubectl'
   depends_on formula: 'kubernetes-helm'
@@ -59,12 +57,10 @@ cask 'ibm-cloud-cli' do
                        '/usr/local/bin/bx',
                        '/usr/local/bin/bluemix-analytics',
                        '/usr/local/Bluemix',
+                       '/usr/local/ibmcloud',
                      ]
 
-  zap trash: [
-               '~/.bluemix',
-               '/usr/local/ibmcloud',
-             ]
+  zap trash: '~/.bluemix'
 
   caveats do
     files_in_usr_local
