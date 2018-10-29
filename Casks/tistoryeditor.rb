@@ -6,7 +6,7 @@ cask 'tistoryeditor' do
   url "https://github.com/joostory/tistory-editor/releases/download/v#{version}/TistoryEditor-#{version}-mac.zip"
   appcast 'https://github.com/joostory/tistory-editor/releases.atom'
   name 'TistoryEditor'
-  homepage 'http://tistory-editor.tistory.com/'
+  homepage 'https://tistory-editor.tistory.com/'
 
   app 'TistoryEditor.app'
 

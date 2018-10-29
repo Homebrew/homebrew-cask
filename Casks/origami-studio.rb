@@ -5,7 +5,7 @@ cask 'origami-studio' do
   # fb.me/getorigamistudio was verified as official when first introduced to the cask
   url 'https://fb.me/getorigamistudio'
   name 'Origami Studio'
-  homepage 'http://origami.design/'
+  homepage 'https://origami.design/'
 
   app 'Origami Studio.app'
 end

@@ -6,7 +6,7 @@ cask 'rocket' do
   url "https://dl.devmate.com/net.matthewpalmer.Rocket/#{version.after_comma.before_colon}/#{version.after_colon}/Rocket-#{version.after_comma.before_colon}.zip"
   appcast 'https://updates.devmate.com/net.matthewpalmer.Rocket.xml'
   name 'Rocket'
-  homepage 'http://matthewpalmer.net/rocket/'
+  homepage 'https://matthewpalmer.net/rocket/'
 
   app 'Rocket.app'
 

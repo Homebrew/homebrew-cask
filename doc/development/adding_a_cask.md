@@ -32,9 +32,9 @@ cask 'advancedcolors' do
   version :latest
   sha256 :no_check
 
-  url 'http://advancedcolors.com/AdvancedColors.zip'
+  url 'https://advancedcolors.com/AdvancedColors.zip'
   name 'Advanced Colors'
-  homepage 'http://advancedcolors.com/'
+  homepage 'https://advancedcolors.com/'
 
   app 'AdvancedColors.app'
 end
@@ -211,7 +211,7 @@ Before submitting a trial, make sure it can be made into a full working version 
 
 ### Forks and Apps with Conflicting Names
 
-Forks should have the vendor’s name as a prefix on the Cask’s file name and token. For unrelated Apps that share a name, the most popular one (usually the one already present) stays unprefixed. Since this can be subjective, if you disagree with a decision open an issue and make your case to the maintainers.
+Forks should have the vendor’s name as a prefix on the Cask’s file name and token. For unrelated Apps that share a name, the most popular one (usually the one already present) stays unprefixed. Since this can be subjective, if you disagree with a decision, open an issue and make your case to the maintainers.
 
 ### Unofficial, Vendorless, and Walled Builds
 
@@ -265,7 +265,7 @@ For any git project, some good rules for commit messages are:
 * Followed by an empty line,
 * Followed by an explanation of the commit, wrapped to 72 characters.
 
-See [a note about git commit messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) for more.
+See [a note about git commit messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) for more.
 
 The first line of a commit message becomes the **title** of a pull request on GitHub, like the subject line of an email. Including the key info in the first line will help us respond faster to your pull.
 

@@ -1,11 +1,13 @@
 cask 'sloth' do
-  version '2.5'
-  sha256 '92ee4a26b5347be2276f3807552f121a5a25f95801bea3751d63e322e33fef36'
+  version '2.6'
+  sha256 '709eb4778bcde615f23e77d3914ced79670716619414dc768d10b15968a98acc'
 
   url "https://sveinbjorn.org/files/software/sloth/sloth-#{version}.zip"
   appcast 'https://sveinbjorn.org/files/appcasts/SlothAppcast.xml'
   name 'Sloth'
   homepage 'https://sveinbjorn.org/sloth'
+
+  auto_updates true
 
   app 'Sloth.app'
 

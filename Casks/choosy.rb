@@ -15,4 +15,9 @@ cask 'choosy' do
   depends_on macos: '>= :yosemite'
 
   prefpane 'Choosy.prefPane'
+
+  zap trash: [
+               '~/Library/Application Support/Choosy',
+               '~/Library/Preferences/com.choosyosx.ChoosyPrefPane.plist',
+             ]
 end

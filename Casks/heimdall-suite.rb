@@ -5,7 +5,7 @@ cask 'heimdall-suite' do
   # bitbucket.org/benjamin_dobell/heimdall was verified as official when first introduced to the cask
   url "https://bitbucket.org/benjamin_dobell/heimdall/downloads/heimdall-suite-#{version}-mac.dmg"
   name 'Heimdall Suite'
-  homepage 'http://glassechidna.com.au/heimdall/'
+  homepage 'https://glassechidna.com.au/heimdall/'
 
   pkg "Heimdall Suite #{version}.pkg"
 

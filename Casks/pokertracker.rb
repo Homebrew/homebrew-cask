@@ -1,9 +1,9 @@
 cask 'pokertracker' do
-  version '4.15.3'
-  sha256 '9751eb70dfc0747692c4565c4604dc79c335e69fa558507b8d15f15f5d2f4dbd'
+  version '4.15.6'
+  sha256 'fb8e4b30446ecda0f6ff5f1674fe47062810fb0621b77ab398459247bd28e88e'
 
   # s3-us1.ptrackupdate.com was verified as official when first introduced to the cask
-  url "http://s3-us1.ptrackupdate.com/releases/PT-Install-v#{version}.dmg"
+  url "https://s3-us1.ptrackupdate.com/releases/PT-Install-v#{version}.dmg"
   name 'PokerTracker'
   homepage 'https://www.pokertracker.com/'
 

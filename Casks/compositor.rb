@@ -1,11 +1,11 @@
 cask 'compositor' do
-  version '1.4.1'
-  sha256 '7a8cceb474307773c7f51853d7c802aba69840395d2e09281922e0b4fe8b9b6f'
+  version '1.5.3'
+  sha256 '953b17c2701d204c218b7ea9b68f5fb186fb752f30a69894a5e46def31a50f11'
 
-  url "http://compositorapp.com/updates/Compositor_#{version}.zip"
-  appcast 'http://compositorapp.com/updates/appcast.xml'
+  url "https://compositorapp.com/updates/Compositor_#{version}.zip"
+  appcast 'https://compositorapp.com/updates/appcast.xml'
   name 'Compositor'
-  homepage 'http://compositorapp.com/'
+  homepage 'https://compositorapp.com/'
 
   app 'Compositor.app'
 

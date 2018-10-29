@@ -1,6 +1,6 @@
 cask 'royal-tsx' do
-  version '3.3.0.1000'
-  sha256 '825e17a500940848b35cf48696bb7cb50ba56be4d408f46403bc5d0a9988d5e1'
+  version '3.3.2.1000'
+  sha256 'e93793191c0e93078ef2025ec02cd84fad3cb8f7b554f6b86d89dd4b2ca0a622'
 
   # https://royaltsx-v3.royalapplications.com was verified as official when first introduced to the cask
   url "https://royaltsx-v3.royalapplications.com/updates/royaltsx_#{version}.dmg"

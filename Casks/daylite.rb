@@ -1,6 +1,6 @@
 cask 'daylite' do
-  version '6.6'
-  sha256 'dde1ebdc27b4a63c763c901004520401c984a4c1fb06c2a40a93ef5b11095b8b'
+  version '6.6.1'
+  sha256 '6dfca8f331b03dd61e612884dce10c94d76465cf2392292eab5f3f42a9b800e6'
 
   url "https://download.marketcircle.com/daylite/daylitedma#{version.no_dots}.pkg"
   appcast 'https://www.marketcircle.com/appcasts/daylite.xml'

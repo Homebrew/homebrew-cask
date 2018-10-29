@@ -4,6 +4,7 @@ cask 'rstudio' do
 
   # rstudio.org was verified as official when first introduced to the cask
   url "https://download1.rstudio.org/RStudio-#{version}.dmg"
+  appcast 'https://www.rstudio.com/products/rstudio/download/'
   name 'RStudio'
   homepage 'https://www.rstudio.com/'
 

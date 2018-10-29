@@ -1,6 +1,6 @@
 cask 'screens-connect' do
-  version '4.7.5790,1523046092'
-  sha256 '19cbf3dbbd7a2028b95efe1d6ccae8051f0ece032188195f08b56d02cc86384d'
+  version '4.8.6030,1536865249'
+  sha256 'dd569ea8941514707c46859c33607e181d373039ccd5238134990b8b07405fd2'
 
   # dl.devmate.com/com.edovia.Screens-Connect was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.edovia.Screens-Connect/#{version.patch}/#{version.after_comma}/ScreensConnect-#{version.patch}.zip"

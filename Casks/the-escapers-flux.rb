@@ -4,9 +4,9 @@ cask 'the-escapers-flux' do
 
   # amazonaws.com/Flux was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/Flux/FluxV#{version.major}.zip"
-  appcast 'http://s3.amazonaws.com/Flux/flux.xml'
+  appcast 'https://s3.amazonaws.com/Flux/flux.xml'
   name 'Flux'
-  homepage 'http://www.theescapers.com/product.php?product=flux'
+  homepage 'http://www.theescapers.com/flux/'
 
   app 'Flux.app'
 end

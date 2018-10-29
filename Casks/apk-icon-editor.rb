@@ -6,7 +6,7 @@ cask 'apk-icon-editor' do
   url "https://github.com/kefir500/apk-icon-editor/releases/download/v#{version}/apk-icon-editor_#{version}.dmg"
   appcast 'https://github.com/kefir500/apk-icon-editor/releases.atom'
   name 'APK Icon Editor'
-  homepage 'http://kefir500.github.io/apk-icon-editor/'
+  homepage 'https://kefir500.github.io/apk-icon-editor/'
 
   app 'APK Icon Editor.app'
 end

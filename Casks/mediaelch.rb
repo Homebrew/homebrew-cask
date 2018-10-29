@@ -6,7 +6,7 @@ cask 'mediaelch' do
   url "https://bintray.com/artifact/download/komet/MediaElch/MediaElch_macOS_#{version}.dmg"
   appcast 'https://github.com/Komet/MediaElch/releases.atom'
   name 'MediaElch'
-  homepage 'http://www.kvibes.de/en/mediaelch/'
+  homepage 'https://www.kvibes.de/en/mediaelch/'
 
   app 'MediaElch.app'
 end

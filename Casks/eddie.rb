@@ -6,7 +6,7 @@ cask 'eddie' do
   url "https://eddie.website/download/?platform=macos&arch=x64&ui=ui&format=disk.dmg&version=#{version}"
   name 'Air VPN'
   name 'Eddie'
-  homepage 'https://airvpn.org/macosx/'
+  homepage 'https://airvpn.org/macos/'
 
   app 'Eddie.app'
 

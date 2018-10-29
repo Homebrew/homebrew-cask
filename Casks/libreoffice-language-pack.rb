@@ -557,21 +557,18 @@ cask 'libreoffice-language-pack' do
   end
 
   # documentfoundation.org was verified as official when first introduced to the cask
-  url "http://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64_langpack_#{language}.dmg"
+  url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64_langpack_#{language}.dmg"
   appcast 'https://download.documentfoundation.org/libreoffice/stable/'
   name 'LibreOffice Language Pack'
   homepage 'https://www.libreoffice.org/'
 
   depends_on cask: 'libreoffice'
 
-  stage_only true
+  installer manual: 'LibreOffice Language Pack.app'
 
-  preflight do
-    system_command '/usr/bin/tar', args: ['-C', "#{appdir}/LibreOffice.app/", '-xjf', "#{staged_path}/LibreOffice Language Pack.app/Contents/tarball.tar.bz2"]
-    system_command '/usr/bin/touch', args: ["#{appdir}/LibreOffice.app/Contents/Resources/extensions"]
-  end
-
-  caveats <<~EOS
-    #{token} assumes LibreOffice is installed in '#{appdir}'. If it is not, you’ll need to run '#{staged_path}/LibreOffice Language Pack.app' manually.
-  EOS
+  # Not actually necessary, since it would be deleted anyway.
+  # It is present to make clear an uninstall was not forgotten
+  # and that for this cask it is indeed this simple.
+  # See https://github.com/Homebrew/homebrew-cask/pull/52893
+  uninstall delete: "#{staged_path}/#{token}"
 end

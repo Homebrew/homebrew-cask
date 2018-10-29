@@ -6,7 +6,7 @@ cask 'raven' do
   url "https://github.com/robotlolita/raven/releases/download/v#{version}/Raven-osx.zip"
   appcast 'https://github.com/robotlolita/raven/releases.atom'
   name 'Raven'
-  homepage 'http://robotlolita.me/raven/'
+  homepage 'https://robotlolita.me/raven/'
 
   app 'Raven.app'
 end

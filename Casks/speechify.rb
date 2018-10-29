@@ -1,6 +1,6 @@
 cask 'speechify' do
-  version '2.1.4'
-  sha256 '390f674e254e3a7e2131b2b159e211f22baf4e9d779f2380618f6d9e5ee425bb'
+  version '2.1.5'
+  sha256 '4975f2f7eb61f722694f56ecd2301b937162cdabff487184a674d5fcefb18bfd'
 
   url 'https://getspeechify.com/Speechify.zip'
   appcast 'https://getspeechify.com/appcast.xml'

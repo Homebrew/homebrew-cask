@@ -4,9 +4,9 @@ cask 'find-any-file' do
 
   # files.tempel.org.s3.amazonaws.com was verified as official when first introduced to the cask
   url "http://files.tempel.org.s3.amazonaws.com/FindAnyFile_#{version}.zip"
-  appcast 'http://apps.tempel.org/FindAnyFile/appcast.xml'
+  appcast 'https://apps.tempel.org/FindAnyFile/appcast.xml'
   name 'Find Any File'
-  homepage 'http://apps.tempel.org/FindAnyFile/'
+  homepage 'https://apps.tempel.org/FindAnyFile/'
 
   app 'Find Any File.app'
 

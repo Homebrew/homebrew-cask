@@ -5,7 +5,7 @@ cask 'sirimote' do
   url 'https://eternalstorms.at/sirimote/SiriMote.zip'
   appcast 'https://eternalstorms.at/sirimote/updatefeed.xml'
   name 'SiriMote'
-  homepage 'http://eternalstorms.at/sirimote'
+  homepage 'https://eternalstorms.at/sirimote'
 
   app 'SiriMote.app'
 end

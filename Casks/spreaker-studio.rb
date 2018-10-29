@@ -1,6 +1,6 @@
 cask 'spreaker-studio' do
-  version '1.4.13'
-  sha256 'e33a16176ca72c8804bae23792123d6c6a4981f83483a89f423acd32cbbc998e'
+  version '1.4.21'
+  sha256 'b62cebb7ccd25c0b7c39216ec8f6f0a5fa2a6d299c5baa807edeee61c12a21cc'
 
   url "https://download.spreaker.com/studio/spreaker-studio-#{version}.dmg"
   name 'Spreaker Studio'

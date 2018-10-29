@@ -7,5 +7,7 @@ cask 'mactracker' do
   name 'Mactracker'
   homepage 'https://mactracker.ca/'
 
+  auto_updates true
+
   app 'Mactracker.app'
 end

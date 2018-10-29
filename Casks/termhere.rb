@@ -6,7 +6,7 @@ cask 'termhere' do
   url "https://github.com/hbang/TermHere/releases/download/#{version}/TermHere.#{version}.dmg"
   appcast 'https://github.com/hbang/TermHere/releases.atom'
   name 'TermHere'
-  homepage 'https://hbang.ws/apps/termhere'
+  homepage 'https://hbang.ws/apps/termhere/'
 
   app 'TermHere.app'
 

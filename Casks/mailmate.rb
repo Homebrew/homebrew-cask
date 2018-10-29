@@ -8,6 +8,8 @@ cask 'mailmate' do
   name 'MailMate'
   homepage 'https://freron.com/'
 
+  auto_updates true
+
   app 'MailMate.app'
   binary "#{appdir}/MailMate.app/Contents/Resources/emate"
 end

@@ -17,5 +17,7 @@ cask 'istumbler' do
   name 'iStumbler'
   homepage 'https://istumbler.net/'
 
+  auto_updates true
+
   app 'iStumbler.app'
 end

@@ -4,6 +4,7 @@ cask 'musescore' do
 
   # ftp.osuosl.org/pub/musescore was verified as official when first introduced to the cask
   url "https://ftp.osuosl.org/pub/musescore/releases/MuseScore-#{version.major_minor_patch}/MuseScore-#{version}.dmg"
+  appcast 'https://ftp.osuosl.org/pub/musescore/releases/'
   name 'MuseScore'
   homepage 'https://musescore.org/'
 

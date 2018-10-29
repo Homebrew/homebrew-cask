@@ -13,4 +13,14 @@ cask 'owncloud' do
                        'com.ownCloud.client',
                        'com.owncCloud.finderPlugin',
                      ]
+
+  zap trash: [
+               '~/Library/Group Containers/9B5WD74GWJ.com.owncloud.desktopclient',
+               '~/Library/Caches/com.owncloud.desktopclient',
+               '~/Library/Application Scripts/com.owncloud.desktopclient.FinderSyncExt',
+               '~/Library/Containers/com.owncloud.desktopclient.FinderSyncExt',
+               '~/Library/Preferences/com.owncloud.desktopclient.plist',
+               '~/Library/Application Support/ownCloud',
+               '~/Library/Preferences/ownCloud',
+             ]
 end

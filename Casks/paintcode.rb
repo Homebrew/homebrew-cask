@@ -1,6 +1,6 @@
 cask 'paintcode' do
-  version '3.4.1'
-  sha256 '2498dc7c402dde4f478f92642ef0fbdbbd01cebb483e9faacefcb2d106d4c3f2'
+  version '3.4.3'
+  sha256 '78bbfdb06879176befe8ab5c46310ba9663b0644db02dd7ce068b44bf88921cd'
 
   # pixelcut.com/paintcode was verified as official when first introduced to the cask
   url "https://www.pixelcut.com/paintcode#{version.major}/paintcode.zip"

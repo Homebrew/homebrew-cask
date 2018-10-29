@@ -1,6 +1,6 @@
 cask 'opensc' do
-  version '0.18.0'
-  sha256 'adb8f79a983ef6c4262e7601373e0502c474951582cc014c7ed48eba71e99be3'
+  version '0.19.0'
+  sha256 'caa6151241652d5448ea3bb83958e1c823f0138841d187a347ca5cbeb2ce0e9d'
 
   url "https://github.com/OpenSC/OpenSC/releases/download/#{version}/OpenSC-#{version}.dmg"
   appcast 'https://github.com/OpenSC/OpenSC/releases.atom'

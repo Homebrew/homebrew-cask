@@ -1,6 +1,6 @@
 cask 'gogs' do
-  version '0.11.43'
-  sha256 'cdb4e2178d0e0a4f2ef79c31326150c7cbd9a029cc4fa565a12a5e3c67292a41'
+  version '0.11.66'
+  sha256 'f92e7bb780efd66ba0c714c333ca4c67152f93396644b75750da6bf413b762d5'
 
   # github.com/gogits/gogs was verified as official when first introduced to the cask
   url "https://github.com/gogits/gogs/releases/download/v#{version}/darwin_amd64.zip"

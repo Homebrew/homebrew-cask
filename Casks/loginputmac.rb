@@ -1,9 +1,9 @@
 cask 'loginputmac' do
-  version '1.16.1,2758'
-  sha256 '95577fba9ff26aaaba510a895f1bf3605100d3258e7dfcea0d803f3087a3832d'
+  version '1.18,2768'
+  sha256 'd3f87ba0a1249ff6a81af2f90fe034ff8f283a1bdb39d6b19dc08a88b66ce41c'
 
-  # nzhm461a0.qnssl.com was verified as official when first introduced to the cask
-  url "https://nzhm461a0.qnssl.com/LogInputMac#{version.after_comma}.app.zip"
+  # ebypiovrn28j.maimaim.ai was verified as official when first introduced to the cask
+  url "https://ebypiovrn28j.maimaim.ai/LogInputMac#{version.after_comma}.app.zip"
   appcast 'https://im.logcg.com/appcast.xml'
   name 'LoginputMac'
   homepage 'https://im.logcg.com/loginputmac'

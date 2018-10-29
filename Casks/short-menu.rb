@@ -1,6 +1,6 @@
 cask 'short-menu' do
-  version '3.0.4,589:1511958035'
-  sha256 '0c33a300fc3de7cba9db22630014a5bf5f05adc0c974edf16a33f6694627f4b7'
+  version '3.0.5,594:1538255759'
+  sha256 '3a0fd82c6370708f640908f6dfe8f7ed2d82b7fd6352b0fbd8f5db2290f08a9e'
 
   # dl.devmate.com/com.floschliep.Short-Menu was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.floschliep.Short-Menu/#{version.after_comma.before_colon}/#{version.after_colon}/ShortMenu-#{version.after_comma.before_colon}.zip"

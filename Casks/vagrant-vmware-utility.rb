@@ -8,7 +8,7 @@ cask 'vagrant-vmware-utility' do
   name 'Vagrant VMware Utility'
   homepage 'https://www.vagrantup.com/vmware/downloads.html'
 
-  pkg 'VagrantVmwareUtility.pkg'
+  pkg 'VagrantVMwareUtility.pkg'
 
   uninstall script:  {
                        executable: 'uninstall.tool',
