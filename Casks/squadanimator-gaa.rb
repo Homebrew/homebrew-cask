@@ -6,5 +6,5 @@ cask 'squadanimator-gaa' do
   name 'SquadAnimator GAA'
   homepage 'https://www.squadanimator.com/'
 
-  app "SquadAnimator-GAA.app"
+  app 'SquadAnimator-GAA.app'
 end
