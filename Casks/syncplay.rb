@@ -21,13 +21,4 @@ cask 'syncplay' do
                '~/Library/Preferences/pl.syncplay.Syncplay.plist',
                '~/Library/Preferences/com.syncplay.PlayerList.plist',
              ]
-
-  caveats do
-    <<~EOS
-      If using VLC, add support using the following commands:
-
-      mkdir -p "${HOME}/Library/Application Support/org.videolan.vlc/lua/intf"
-      cp "#{staged_path}/.syncplay.lua" "${HOME}/Library/Application Support/org.videolan.vlc/lua/intf/syncplay.lua"
-    EOS
-  end
 end
