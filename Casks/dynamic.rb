@@ -1,4 +1,4 @@
-cask 'dynamic-dark-mode' do
+cask 'dynamic' do
   version '1.0.6'
   sha256 '2e82507ad65cf4eda208a8f41b4fe54944d0c04d15d1a49d1bcf546c65b7454d'
 
