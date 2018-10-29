@@ -10,7 +10,10 @@ cask 'blast2go' do
 
   installer script: {
                       executable: 'Blast2GO Installer.app/Contents/MacOS/JavaApplicationStub',
-                      args:       ['-q'],
+                      args:       [
+                                    '-q',
+                                    '-VexecuteLauncherAction$Boolean=false',
+                                  ],
                     }
 
   uninstall delete: '/Applications/Blast2GO',
