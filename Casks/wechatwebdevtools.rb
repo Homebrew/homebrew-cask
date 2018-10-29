@@ -1,6 +1,6 @@
 cask 'wechatwebdevtools' do
-  version '1.02.1810190'
-  sha256 '6c0f7416c0d9258525f0aa954b2ede2395c0460fd2b8f9c949296ac0c9959658'
+  version '1.02.1810250'
+  sha256 '1ceaedc36d070e788e3ceaa8d2b0047f876f559154d5c4f869c65e52920ece43'
 
   url "https://dldir1.qq.com/WechatWebDev/#{version.major}.0.0/20#{version.patch}/wechat_devtools_#{version}.dmg"
   name 'wechat web devtools'
