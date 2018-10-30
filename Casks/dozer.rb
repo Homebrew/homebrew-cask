@@ -7,7 +7,7 @@ cask 'dozer' do
   name 'Dozer'
   homepage 'https://github.com/Mortennn/Dozer'
 
-  auto_updates :yes
+  auto_updates true
   depends_on macos: '>= :high_sierra'
 
   app 'Dozer.app'
