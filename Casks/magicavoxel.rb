@@ -7,5 +7,5 @@ cask 'magicavoxel' do
   name 'MagicaVoxel'
   homepage 'https://ephtracy.github.io/'
 
-  suite "MagicaVoxel-#{version}-mac"
+  suite staged_path, target: 'MagicaVoxel'
 end
