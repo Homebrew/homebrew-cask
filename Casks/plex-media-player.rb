@@ -10,4 +10,11 @@ cask 'plex-media-player' do
   depends_on macos: '>= :yosemite'
 
   app 'Plex Media Player.app'
+
+  zap trash: [
+               '~/Library/Application Support/Plex Media Player',
+               '~/Library/Caches/Plex Media Player',
+               '~/Library/Logs/Plex Media Player',
+               '~/Library/Preferences/tv.plex.Plex Media Player.plist',
+             ]
 end
