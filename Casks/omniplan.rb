@@ -3,6 +3,7 @@ cask 'omniplan' do
   sha256 'e045659e786edba3fa449dbbb33e294f3d94f29cc17845421f3c12ad77431ef3'
 
   url "https://downloads.omnigroup.com/software/MacOSX/10.12/OmniPlan-#{version}.dmg"
+  appcast "https://update.omnigroup.com/appcast/com.omnigroup.OmniPlan#{version.major}"
   name 'OmniPlan'
   homepage 'https://www.omnigroup.com/omniplan/'
 
