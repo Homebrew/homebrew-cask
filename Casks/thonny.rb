@@ -1,6 +1,6 @@
 cask 'thonny' do
-  version '3.0.1'
-  sha256 '1510524d54c5ce3e16692ff54b88509202358509797f5bb301d8d1c49547084e'
+  version '3.0.5'
+  sha256 '5f1eb4c100b8088a2afdf2aef2342235479f38c175dc4d9952e9bd7d8dd12816'
 
   # bitbucket.org/plas/thonny/downloads was verified as official when first introduced to the cask
   url "https://bitbucket.org/plas/thonny/downloads/thonny-#{version}.dmg"
