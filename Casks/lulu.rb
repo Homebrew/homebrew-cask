@@ -8,7 +8,7 @@ cask 'lulu' do
   name 'LuLu'
   homepage 'https://objective-see.com/products/lulu.html'
 
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :sierra'
 
   installer script: {
                       executable: "#{staged_path}/Lulu Installer.app/Contents/MacOS/LuLu Installer",
