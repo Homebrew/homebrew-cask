@@ -1,11 +1,11 @@
 cask 'simple-hub' do
-  version '5.0.5-1565'
-  sha256 'df168e883cbd389d7df1ffaef1087807af038dbcbec837e0994add95f732cc54'
+  version '5.6.1'
+  sha256 '3519df0c5ce82a57683a624ac10d2f7e209e71ad7e6e0d2f802fe53f1477780a'
 
-  url "https://www.simplecontrol.com/b/SimpleHub-macOS-#{version.no_dots}.zip"
-  appcast 'https://www.simplecontrol.com/b/Simple-HubAppcast.xml'
+  url 'https://www.simplecontrol.com/b/SimpleHub.dmg'
+  appcast 'https://www.simplecontrol.com/b/Simple-HubAppcast5.xml'
   name 'Simple Hub'
-  homepage 'https://store.simplecontrol.com/simple-sync.html/'
+  homepage 'https://www.simplecontrol.com/sc5release/'
 
   app 'Simple Hub.app'
 
