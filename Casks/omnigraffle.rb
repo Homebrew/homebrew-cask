@@ -9,6 +9,7 @@ cask 'omnigraffle' do
     url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniGraffle-#{version}.dmg"
   end
 
+  appcast "https://update.omnigroup.com/appcast/com.omnigroup.OmniGraffle#{version.major}"
   name 'OmniGraffle'
   homepage 'https://www.omnigroup.com/omnigraffle/'
 
