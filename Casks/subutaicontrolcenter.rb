@@ -12,12 +12,6 @@ cask 'subutaicontrolcenter' do
 
   pkg 'subutai-control-center.pkg'
 
-  # This is a horrible hack to force the file extension.
-  # The backend code should be fixed so that this is not needed.
-  preflight do
-    system_command '/bin/mv', args: ['--', staged_path.join('get'), staged_path.join('subutai-control-center.pkg')]
-  end
-
   uninstall pkgutil: 'com.Subutai.Control.Center',
             delete:  '/Applications/SubutaiControlCenter.app'
 end
