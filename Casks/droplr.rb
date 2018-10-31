@@ -7,6 +7,7 @@ cask 'droplr' do
   homepage 'https://droplr.com/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Droplr.app'
 
