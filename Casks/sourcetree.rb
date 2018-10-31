@@ -9,6 +9,7 @@ cask 'sourcetree' do
   homepage 'https://www.sourcetreeapp.com/'
 
   auto_updates true
+  depends_on macos: '>= :high_sierra'
 
   app 'Sourcetree.app'
   binary "#{appdir}/Sourcetree.app/Contents/Resources/stree"
