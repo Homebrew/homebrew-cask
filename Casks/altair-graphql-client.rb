@@ -8,7 +8,7 @@ cask 'altair-graphql-client' do
   name 'Altair GraphQL Client'
   homepage 'https://altair.sirmuel.design/'
 
-  app 'Altair GraphQL CLient.app'
+  app 'Altair GraphQL Client.app'
 
   zap trash: [
                '~/Library/Application Support/altair',
