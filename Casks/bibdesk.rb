@@ -1,6 +1,6 @@
 cask 'bibdesk' do
-  version '1.6.16'
-  sha256 '7b253c276eb1b29f3f0a20caef90ed8b24ddfeef1434bf0bab452a6c17fbfdb0'
+  version '1.6.17'
+  sha256 'b6196c56fe977403d94c2e6a05b5b93e7973ebd907f5e49cf717700fe4ebb1c4'
 
   # downloads.sourceforge.net/bibdesk was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/bibdesk/BibDesk/BibDesk-#{version}/BibDesk-#{version}.dmg"
