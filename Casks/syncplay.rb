@@ -8,8 +8,6 @@ cask 'syncplay' do
   name 'Syncplay'
   homepage 'https://syncplay.pl/'
 
-  auto_updates true
-
   app 'Syncplay.app'
 
   zap trash: [
