@@ -16,7 +16,7 @@ cask 'subutaicontrolcenter' do
   preflight do
     system_command '/bin/mv', args: ['--', staged_path.join('raw'), staged_path.join('subutai-control-center.pkg')]
   end
-  
+
   uninstall pkgutil: 'com.Subutai.Control.Center',
             delete:  '/Applications/SubutaiControlCenter.app'
 end
