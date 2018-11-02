@@ -151,7 +151,7 @@ Example:
 
 Give it a shot with:
 
-```
+```bash
 export HOMEBREW_NO_AUTO_UPDATE=1
 brew cask install my-new-cask
 ```
