@@ -1,8 +1,9 @@
 cask 'inky' do
-  version '3.3.0_114'
-  sha256 '77627cef367177adbf081a7772863f7b448951261f0036ce759b96526cb70140'
+  version '4.1.0_146'
+  sha256 'da19f8405c8599b7c4b25247346442325b4eb5b7e53c0b63d8c7c760681908cb'
 
   url "http://download.inky.com/InkyInstall_osx_#{version}.dmg"
+  appcast 'http://download.inky.com/inky_appcast_osx.xml'
   name 'Inky'
   homepage 'https://inky.com/'
 
