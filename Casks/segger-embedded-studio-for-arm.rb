@@ -1,6 +1,6 @@
 cask 'segger-embedded-studio-for-arm' do
-  version '3.52a'
-  sha256 'f6b7aa74c491f4a7bc07b94ec5e52cb2d9d924e6287dba23307e9ef0179f7086'
+  version '4.10a'
+  sha256 '57a94313d57782574669c86f891d443e11de1e4ebc4078f34c5d027c0d5cacb9'
 
   url "https://www.segger.com/downloads/embedded-studio/Setup_EmbeddedStudio_ARM_v#{version.no_dots}_macos_x64.dmg"
   name 'SEGGER Embedded Studio for ARM'
