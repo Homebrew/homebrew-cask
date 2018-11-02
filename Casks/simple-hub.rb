@@ -7,6 +7,8 @@ cask 'simple-hub' do
   name 'Simple Hub'
   homepage 'https://www.simplecontrol.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Simple Hub.app'
 
   zap trash: [
