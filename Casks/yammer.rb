@@ -1,6 +1,6 @@
 cask 'yammer' do
-  version '2.0.0'
-  sha256 'a85539e06ccf5f7eacd9fab7387a2e7df8cb091056d67d02f6f65248eec778b5'
+  version '2.0.1'
+  sha256 '3e253446920ce2ede00f1ad6840b9b6883aac4289473acb0ebcdd1d75038564c'
 
   # yammerdesktopapp.blob.core.windows.net/binaries/dist was verified as official when first introduced to the cask
   url "https://yammerdesktopapp.blob.core.windows.net/binaries/dist/darwin/x64/#{version}/Yammer-#{version}.dmg"
