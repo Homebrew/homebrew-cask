@@ -152,7 +152,8 @@ Example:
 Give it a shot with:
 
 ```
-HOMEBREW_NO_AUTO_UPDATE=1 brew cask install my-new-cask
+export HOMEBREW_NO_AUTO_UPDATE=1
+brew cask install my-new-cask
 ```
 
 Did it install? If something went wrong, `brew cask uninstall my-new-cask` and edit your Cask with `brew cask edit my-new-cask` to fix it.
