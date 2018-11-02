@@ -1,6 +1,6 @@
 cask 'standard-notes' do
-  version '2.3.8'
-  sha256 '53fb0b050d386ebeaf2cef0f4b4e948f1e41975acaf2319a0ecc4965c09eaba6'
+  version '2.3.11'
+  sha256 'bac5d3b69a927963d2397849de88313845e19c7271ddd0b518428b7e7bbe3719'
 
   # github.com/standardnotes/desktop was verified as official when first introduced to the cask
   url "https://github.com/standardnotes/desktop/releases/download/v#{version}/Standard-Notes-#{version}-mac.zip"
