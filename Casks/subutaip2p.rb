@@ -15,7 +15,7 @@ cask 'subutaip2p' do
   # This is a horrible hack to force the file extension.
   # The backend code should be fixed so that this is not needed.
   preflight do
-    system_command '/bin/mv', args: ['--', staged_path.join('get'), staged_path.join('subutai-p2p.pkg')]
+    system_command '/bin/mv', args: ['--', staged_path.join('raw'), staged_path.join('subutai-p2p.pkg')]
   end
 
   uninstall pkgutil:   [
