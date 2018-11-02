@@ -1,6 +1,6 @@
 cask 'textmate' do
-  version '2.0-rc.13'
-  sha256 'ae978646fbabf8c05009439a43c21100035aff6d945e57fc5fed99a409b9222b'
+  version '2.0-rc.14'
+  sha256 'cea965d3a101af03b5aae691b415b783a55122ce1204cb330af9f426ec1adeb9'
 
   # github.com/textmate/textmate was verified as official when first introduced to the cask
   url "https://github.com/textmate/textmate/releases/download/v#{version}/TextMate_#{version}.tbz"
