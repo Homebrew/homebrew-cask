@@ -1,6 +1,6 @@
 cask 'vudu' do
   version :latest
-  sha256 '43397db0a86b757d5301ed0466563871fec67aea1ff81f65c2a06cf5cb80c5f7'
+  sha256 :no_check
 
   url 'http://www.vudu.com/flash/VUDUToGo.dmg'
   name 'VUDUToGo'
