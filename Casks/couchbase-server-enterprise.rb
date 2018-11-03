@@ -11,5 +11,5 @@ cask 'couchbase-server-enterprise' do
   name 'Couchbase Server'
   homepage 'https://www.couchbase.com/'
 
-  app "couchbase-server-enterprise_#{version.major}/Couchbase Server.app"
+  app "couchbase-server-enterprise_#{version}/Couchbase Server.app"
 end
