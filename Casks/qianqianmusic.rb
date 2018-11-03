@@ -1,4 +1,4 @@
-cask 'baidumusic' do
+cask 'qianqianmusic' do
   version :latest
   sha256 :no_check
 
