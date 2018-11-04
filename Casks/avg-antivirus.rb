@@ -13,5 +13,6 @@ cask 'avg-antivirus' do
                        'com.avast.VpsPlugin',
                        'com.avast.installer.AppClosePlugin',
                        'com.avg.avg',
+                       'com.avg.pkg.hub',
                      ]
 end
