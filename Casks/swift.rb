@@ -7,4 +7,11 @@ cask 'swift' do
   homepage 'https://swift.im/'
 
   app 'Swift.app'
+
+  zap trash: [
+               '~/Library/Application Support/Swift',
+               '~/Library/Caches/im.swift.Swift',
+               '~/Library/Preferences/im.swift.Swift.plist',
+               '~/Library/Saved Application State/im.swift.Swift.savedState',
+             ]
 end
