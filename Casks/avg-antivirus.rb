@@ -9,11 +9,16 @@ cask 'avg-antivirus' do
 
   pkg 'Install AVG AntiVirus.pkg'
 
-  uninstall script:  {
-                       executable: '/Applications/AVGAntivirus.app/Contents/Backend/utils/com.avg.uninstall.app/Contents/Resources/uninstall.sh',
-                       sudo:       true,
-                     },
-            pkgutil: 'com.avg.pkg.hub'
+  uninstall script:    {
+                         executable: '/Applications/AVGAntivirus.app/Contents/Backend/utils/com.avg.uninstall.app/Contents/Resources/uninstall.sh',
+                         sudo:       true,
+                       },
+            pkgutil:   'com.avg.pkg.hub',
+            launchctl: [
+                         'com.avg.hub',
+                         'com.avg.hub.schedule',
+                         'com.avg.hub.xpc',
+                       ]
 
   zap trash: [
                '/Library/Application Support/AVGAntivirus',
