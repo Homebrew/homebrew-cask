@@ -9,15 +9,14 @@ cask 'avg-antivirus' do
 
   pkg 'Install AVG AntiVirus.pkg'
 
-  uninstall pkgutil: [
-                       'com.avast.VpsPlugin',
-                       'com.avast.installer.AppClosePlugin',
-                       'com.avg.avg',
-                       'com.avg.pkg.hub',
-                     ],
-            quit:    [
-                       'com.avg.Antivirus',
-                       'com.avg.hub',
-                       'com.avg.userinit',
-                     ]
+  uninstall pkgutil:   [
+                         'com.avast.VpsPlugin',
+                         'com.avast.installer.AppClosePlugin',
+                         'com.avg.avg',
+                         'com.avg.pkg.hub',
+                       ],
+            launchctl: [
+                         'com.avg.hub',
+                         'com.avg.userinit',
+                       ]
 end
