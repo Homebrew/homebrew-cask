@@ -4,6 +4,7 @@ cask 'vsee' do
 
   # d2q5hugz2rti4w.cloudfront.net was verified as official when first introduced to the cask
   url "https://d2q5hugz2rti4w.cloudfront.net/mac/#{version.after_comma}/vseemac.dmg"
+  appcast 'https://client.vsee.com/mac/appcast.xml'
   name 'VSee'
   homepage 'https://vsee.com/'
 
