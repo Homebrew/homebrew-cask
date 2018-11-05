@@ -9,19 +9,15 @@ cask 'avg-antivirus' do
 
   pkg 'Install AVG AntiVirus.pkg'
 
-  uninstall pkgutil:   [
-                         'com.avast.VpsPlugin',
-                         'com.avast.installer.AppClosePlugin',
-                         'com.avg.avg',
-                         'com.avg.pkg.hub',
-                       ],
-            launchctl: [
-                         'com.avg.hub',
-                         'com.avg.userinit',
-                         'com.avg.Antivirus',
-                       ],
-            kext:      [
-                         'com.avg.FileShield',
-                         'com.avg.PacketForwarder',
-                       ]
+  uninstall script: {
+                      executable: '/Applications/AVGAntivirus.app/Contents/Backend/utils/com.avg.uninstall.app/Contents/Resources/uninstall.sh',
+                      sudo:       true,
+                    }
+
+  zap trash: [
+               '/Library/Application Support/AVGAntivirus',
+               '/Library/Application Support/AVGHUB',
+               '~/Library/Application Support/AVGAntivirus',
+               '~/Library/Application Support/AVGHUB',
+             ]
 end
