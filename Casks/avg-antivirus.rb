@@ -18,6 +18,6 @@ cask 'avg-antivirus' do
             launchctl: [
                          'com.avg.hub',
                          'com.avg.userinit',
-                         'com.avg.Antivirus,
+                         'com.avg.Antivirus',
                        ]
 end
