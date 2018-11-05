@@ -19,5 +19,9 @@ cask 'avg-antivirus' do
                          'com.avg.hub',
                          'com.avg.userinit',
                          'com.avg.Antivirus',
+                       ],
+            kext:      [
+                         'com.avg.FileShield',
+                         'com.avg.PacketForwarder',
                        ]
 end
