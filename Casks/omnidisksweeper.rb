@@ -17,6 +17,7 @@ cask 'omnidisksweeper' do
     url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniDiskSweeper-#{version}.dmg"
   end
 
+  appcast 'https://update.omnigroup.com/appcast/com.omnigroup.OmniDiskSweeper'
   name 'OmniDiskSweeper'
   homepage 'https://www.omnigroup.com/more/'
 
