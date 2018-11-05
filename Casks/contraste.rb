@@ -6,5 +6,7 @@ cask 'contraste' do
   name 'Contraste'
   homepage 'https://contrasteapp.com/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'Contraste.app'
 end
