@@ -12,6 +12,7 @@ cask 'google-earth-pro' do
                         'com.google.pkg.Keystone'],
             launchctl: [
                          'com.google.keystone.agent',
+                         'com.google.keystone.system.agent',
                          'com.google.keystone.daemon',
                        ]
 
