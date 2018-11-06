@@ -8,5 +8,6 @@ cask 'dmm-player' do
 
   pkg "DMMPlayerInstaller_#{version.dots_to_underscores}.pkg"
 
-  uninstall pkgutil: 'com.apple.ScriptEditor.id.DMMPlayer*'
+  uninstall pkgutil: ['com.apple.ScriptEditor.id.DMMPlayer*',
+                      '3117044984.dmm.player.dmm.com']
 end
