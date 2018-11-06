@@ -1,6 +1,6 @@
 cask 'controllermate' do
-  version '4.10.6'
-  sha256 'f5093f29532e072e821758dd3cd3ef93bfafe8372b0db19342a15eb515422df7'
+  version '4.11.1'
+  sha256 'dd95d0b2abd6c23148092c96593fb303befc374c6a912afad57efb48b0a1e04b'
 
   # amazonaws.com/orderedbytes was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/orderedbytes/ControllerMate#{version.no_dots}.zip"
