@@ -25,5 +25,6 @@ cask 'avg-antivirus' do
                '/Library/Application Support/AVGHUB',
                '~/Library/Application Support/AVGAntivirus',
                '~/Library/Application Support/AVGHUB',
+               '~/Library/Logs/AVGHUB',
              ]
 end
