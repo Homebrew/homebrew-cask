@@ -1,6 +1,6 @@
 cask 'astah-professional' do
-  version '7.2.0,1ff236'
-  sha256 'e2faa50e8ecaaaa9f6f68dda143bf4495c0cc7b9f17fe7defda4645bb52e2751'
+  version '8.0.0,d641d4'
+  sha256 '3c449a08c6c4ba2404a4cf418d5322ed43fd460daaebcbc81fc8d274c085d2f8'
 
   # cdn.change-vision.com/files was verified as official when first introduced to the cask
   url "http://cdn.change-vision.com/files/astah-professional-#{version.before_comma.dots_to_underscores}-#{version.after_comma}-MacOs.dmg"
