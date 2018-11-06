@@ -16,10 +16,8 @@ cask 'i1profiler' do
                          'com.xrite.hasp.installer.*',
                        ],
             launchctl: [
-                         'com.xrite.device.softwareupdate.plist',
-                         'com.xrite.device.xrdd.plist',
-                         'com.aladdin.aksusbd.plist',
-                         'com.aladdin.hasplmd.plist',
+                         'com.aladdin.aksusbd',
+                         'com.aladdin.hasplmd',
                        ],
             delete:    '/Applications/i1Profiler/i1Profiler.app',
             rmdir:     '/Applications/i1Profiler'
