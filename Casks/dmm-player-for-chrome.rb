@@ -8,5 +8,6 @@ cask 'dmm-player-for-chrome' do
 
   pkg "DMMPlayerForChromeInstaller_#{version.dots_to_underscores}.pkg"
 
-  uninstall pkgutil: 'com.apple.ScriptEditor.id.DMMPlayerForChrome*'
+  uninstall pkgutil: ['com.apple.ScriptEditor.id.DMMPlayerForChrome*',
+                      '1022638813.chrome.player.dmm.com']
 end
