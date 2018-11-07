@@ -8,14 +8,21 @@ cask 'google-earth-pro' do
 
   pkg "Install Google Earth Pro #{version}.pkg"
 
-  uninstall pkgutil: 'com.Google.GoogleEarthPro'
+  uninstall pkgutil:   [
+                         'com.Google.GoogleEarthPro',
+                         'com.google.pkg.Keystone',
+                       ],
+            launchctl: [
+                         'com.google.keystone.agent',
+                         'com.google.keystone.system.agent',
+                         'com.google.keystone.daemon',
+                       ]
 
-  zap trash:   [
-                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.googleearthpro.sfl*',
-                 '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.googleearthupdatehelper.sfl*',
-                 '~/Library/Application Support/Google Earth',
-                 '~/Library/Caches/Google Earth',
-                 '~/Library/Caches/com.Google.GoogleEarthPro',
-               ],
-      pkgutil: 'com.google.pkg.Keystone'
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.googleearthpro.sfl*',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.googleearthupdatehelper.sfl*',
+               '~/Library/Application Support/Google Earth',
+               '~/Library/Caches/Google Earth',
+               '~/Library/Caches/com.Google.GoogleEarthPro',
+             ]
 end
