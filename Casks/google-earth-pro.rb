@@ -8,8 +8,10 @@ cask 'google-earth-pro' do
 
   pkg "Install Google Earth Pro #{version}.pkg"
 
-  uninstall pkgutil:   ['com.Google.GoogleEarthPro',
-                        'com.google.pkg.Keystone'],
+  uninstall pkgutil:   [
+                         'com.Google.GoogleEarthPro',
+                         'com.google.pkg.Keystone',
+                       ],
             launchctl: [
                          'com.google.keystone.agent',
                          'com.google.keystone.system.agent',
