@@ -8,5 +8,5 @@ cask 'openconnect-gui' do
   name 'OpenConnect-GUI'
   homepage 'https://openconnect.github.io/openconnect-gui/'
 
-  app 'openconnect-gui/#{version}/OpenConnect-GUI.app'
+  app "openconnect-gui/#{version}/OpenConnect-GUI.app"
 end
