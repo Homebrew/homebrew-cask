@@ -4,6 +4,7 @@ cask 'bitcoin-core' do
 
   # bitcoin.org was verified as official when first introduced to the cask
   url "https://bitcoin.org/bin/bitcoin-core-#{version}/bitcoin-#{version}-osx.dmg"
+  appcast 'https://github.com/bitcoin/bitcoin/releases.atom'
   name 'Bitcoin Core'
   homepage 'https://bitcoincore.org/'
 
