@@ -1,9 +1,8 @@
 cask 'runtastic-connect' do
   version '1.2.5'
-  sha256 '2f6da674b3e90c6d6c44519287827703e937921ba2c1d36ca4266a864cffa218'
+  sha256 '280bdcb3eb21430670d88877085426b3495f8843792264ba93529c3adac76e9d'
 
-  url "http://download.runtastic.com/connect/mac/Connect_#{version}.zip"
-  appcast 'http://download.runtastic.com/connect/mac/appcast.xml'
+  url 'http://download.runtastic.com/connect/mac/runtasticConnect.dmg
   name 'Runtastic Connect'
   homepage 'https://www.runtastic.com/connect'
 
