@@ -153,15 +153,15 @@ Give it a shot with:
 
 ```bash
 export HOMEBREW_NO_AUTO_UPDATE=1
-brew cask install my-new-cask
+brew cask install Casks/my-new-cask.rb
 ```
 
-Did it install? If something went wrong, `brew cask uninstall my-new-cask` and edit your Cask with `brew cask edit my-new-cask` to fix it.
+Did it install? If something went wrong, `brew cask uninstall Casks/my-new-cask.rb` and edit your Cask with `brew cask edit Casks/my-new-cask.rb` to fix it.
 
 If everything looks good, you’ll also want to make sure your Cask passes audit with:
 
 ```bash
-brew cask audit my-new-cask --download
+brew cask audit --download Casks/my-new-cask.rb
 ```
 
 You should also check stylistic details with `brew cask style`:
