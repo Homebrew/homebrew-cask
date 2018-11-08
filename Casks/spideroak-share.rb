@@ -6,7 +6,7 @@ cask 'spideroak-share' do
   name 'SpiderOak Share'
   homepage 'https://spideroak.com/spideroak-share/'
 
-  depends_on macos: '>= :mountain_lion'
+  depends_on macos: '>= :sierra'
 
   app 'Share.app'
 
