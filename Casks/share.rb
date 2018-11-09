@@ -1,4 +1,4 @@
-cask 'spideroak-share' do
+cask 'share' do
   version '1.0.0'
   sha256 '3a2eea9b7e87e80ecf0ffeee9e54b83af0729ec42dcf0a875e81b8ef144dc628'
 
