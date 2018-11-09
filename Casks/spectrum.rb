@@ -1,9 +1,9 @@
 cask 'spectrum' do
-  version '1.0.1'
-  sha256 '230b2315c77252568454b168ccd585e6e177e180567367cdba4fe4e5124b5fc1'
+  version '1.0.5'
+  sha256 'f6434f821b9c9a9384e58db5ae1dbad45922d2b63b47ea3f93651bc6dd4a9f18'
 
   # github.com/withspectrum/spectrum was verified as official when first introduced to the cask
-  url "https://github.com/withspectrum/spectrum/releases/download/desktop-v#{version}/Spectrum-#{version}-mac.zip"
+  url "https://github.com/withspectrum/spectrum/releases/download/v#{version}/Spectrum-#{version}-mac.zip"
   appcast 'https://github.com/withspectrum/spectrum/releases.atom'
   name 'Spectrum'
   homepage 'http://spectrum.chat/'
