@@ -3,6 +3,7 @@ cask 'path-finder' do
   sha256 :no_check
 
   url 'https://get.cocoatech.com/PF8.zip'
+  appcast 'https://get.cocoatech.com/releasecast.xml'
   name 'Path Finder'
   homepage 'https://cocoatech.com/'
 

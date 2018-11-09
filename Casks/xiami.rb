@@ -4,6 +4,7 @@ cask 'xiami' do
 
   # gxiami.alicdn.com/xiami-desktop was verified as official when first introduced to the cask
   url "https://gxiami.alicdn.com/xiami-desktop/update/XiamiMac-#{version.after_comma}.dmg"
+  appcast 'https://g.alicdn.com/music/desktop-app/XiamiMac.xml'
   name 'Xiami'
   name '虾米音乐'
   homepage 'https://www.xiami.com/'

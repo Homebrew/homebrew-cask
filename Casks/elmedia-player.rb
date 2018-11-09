@@ -3,6 +3,7 @@ cask 'elmedia-player' do
   sha256 :no_check
 
   url 'https://cdn.eltima.com/download/elmediaplayer.dmg'
+  appcast 'https://cdn.eltima.com/download/elmediaplayer-update/elmediaplayer.xml'
   name 'Elmedia Player'
   homepage 'https://mac.eltima.com/media-player.html'
 

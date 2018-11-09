@@ -4,6 +4,7 @@ cask 'tiny' do
 
   # kaomojiformac.github.io was verified as official when first introduced to the cask
   url 'https://kaomojiformac.github.io/tiny-download/Tiny.zip'
+  appcast 'https://kaomojiformac.github.io/tiny-download/tinyupdate.xml'
   name 'Tiny'
   homepage 'https://www.delightfuldev.com/tiny/'
 

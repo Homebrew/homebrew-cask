@@ -3,6 +3,7 @@ cask 'bluesense' do
   sha256 :no_check
 
   url 'https://apps.inspira.io/updates/bluesense.zip'
+  appcast 'https://apps.inspira.io/updates/bluesense-appcast.xml'
   name 'BlueSense'
   homepage 'https://apps.inspira.io/bluesense/'
 

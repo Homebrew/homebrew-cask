@@ -4,6 +4,7 @@ cask 'vitalsource-bookshelf' do
 
   # downloads.vitalbook.com/vsti/bookshelf was verified as official when first introduced to the cask
   url "https://downloads.vitalbook.com/vsti/bookshelf/#{version}/MAC/Bookshelf/VitalSource-Bookshelf.dmg"
+  appcast 'https://rink.hockeyapp.net/api/2/apps/ed52bc178e094f39a32f4aaa99ad71c2'
   name 'VitalSource Bookshelf'
   homepage 'https://www.vitalsource.com/bookshelf-features'
 

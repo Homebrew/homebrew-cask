@@ -11,6 +11,7 @@ cask 'time-out' do
   end
 
   url "https://www.dejal.com/download/timeout-#{version}.zip"
+  appcast 'https://dejal.net/appcast/?prod=timeout&aed=direct&from=2037&rel=gen'
   name 'Time Out'
   homepage 'https://www.dejal.com/timeout/'
 

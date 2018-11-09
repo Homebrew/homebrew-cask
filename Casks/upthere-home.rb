@@ -3,6 +3,7 @@ cask 'upthere-home' do
   sha256 :no_check
 
   url 'https://upthere.com/apps/mac/UpthereHome.zip'
+  appcast 'https://upthere.com/apps/mac/UpthereHome-appcast.xml'
   name 'Upthere Home'
   homepage 'https://upthere.com/'
 

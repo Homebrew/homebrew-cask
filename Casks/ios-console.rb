@@ -3,6 +3,7 @@ cask 'ios-console' do
   sha256 :no_check
 
   url 'https://downloads.lemonjar.com/iosconsole_latest.zip'
+  appcast 'https://updates.lemonjar.com/iosconsole.xml'
   name 'iOS Console'
   homepage 'https://lemonjar.com/iosconsole/'
 

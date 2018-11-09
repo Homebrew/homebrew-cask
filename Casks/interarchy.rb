@@ -8,6 +8,7 @@ cask 'interarchy' do
   end
 
   url "https://download.interarchy.com/Interarchy_#{version}.zip"
+  appcast 'http://updates.nolobe.com/interarchy.xml'
   name 'Interarchy'
   homepage 'https://interarchy.com/'
 
