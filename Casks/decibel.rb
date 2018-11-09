@@ -4,6 +4,7 @@ cask 'decibel' do
 
   # s3.amazonaws.com/feisty-dog/ was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/feisty-dog/versions/binaries/000/000/#{version.after_comma}/Decibel-#{version.before_comma}.zip"
+  appcast 'https://www.feisty-dog.com/panel/updates/Decibel'
   name 'Decibel'
   homepage 'https://www.feisty-dog.com/decibel/'
 
