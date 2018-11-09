@@ -20,7 +20,7 @@ cask 'jdownloader' do
                    print_stderr: false
   end
 
-  uninstall delete: "#{appdir}/JDownloader2.app"
+  uninstall delete: "#{appdir}/JDownloader 2.0.app"
 
   caveats do
     depends_on_java '8'
