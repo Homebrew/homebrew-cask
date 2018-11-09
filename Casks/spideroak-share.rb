@@ -8,7 +8,7 @@ cask 'spideroak-share' do
 
   depends_on macos: '>= :sierra'
 
-  app 'Share.app'  ]
+  app 'Share.app'
 
   zap trash: [
                '~/Library/Logs/Share',
