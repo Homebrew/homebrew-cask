@@ -7,5 +7,7 @@ cask 'unshaky' do
   name 'Unshaky'
   homepage 'https://github.com/aahung/Unshaky'
 
+  depends_on macos: '>= :sierra'
+
   app 'Unshaky.app'
 end
