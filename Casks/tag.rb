@@ -1,6 +1,6 @@
 cask 'tag' do
   version '1.0.5,017'
-  sha256 '3b3b21909dc00d4ff87a501c6451fb14e99ef1c10bea64d69ace5cfaa5bfe1a4'
+  sha256 '1bfc83427aa474d9df3c5413ee5645a0e5b134ceef642bf99a717af1798e72df'
 
   # s3.amazonaws.com/feisty-dog/ was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/feisty-dog/versions/binaries/000/000/#{version.after_comma}/Tag-#{version.before_comma}.zip"
