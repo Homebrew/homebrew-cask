@@ -1,13 +1,13 @@
 cask 'owncloud' do
-  version '2.5.0.10516,qt5.10.1'
-  sha256 '5d59305a432bf6e24f456ff5221c8945c7df7cf0e17680645a156c5cf2f7c767'
+  version '2.5.1.10818'
+  sha256 'ebc936a14bd53946c6e75b2f606424c926bfe08b500b9475f97203f26b4eec34'
 
-  url "https://download.owncloud.com/desktop/stable/ownCloud-#{version.after_comma}-#{version.before_comma}.pkg"
+  url "https://download.owncloud.com/desktop/stable/ownCloud-#{version}.pkg"
   appcast 'https://github.com/owncloud/client/releases.atom'
   name 'ownCloud'
   homepage 'https://owncloud.com/'
 
-  pkg "ownCloud-#{version.after_comma}-#{version.before_comma}.pkg"
+  pkg "ownCloud-#{version}.pkg"
 
   uninstall pkgutil: [
                        'com.ownCloud.client',
