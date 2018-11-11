@@ -7,5 +7,5 @@ cask 'ogdesign-eagle' do
   name 'Eagle'
   homepage 'https://eagle.cool/macOS'
 
-  app "Eagle-#{version}.app"
+  app 'Eagle.app'
 end
