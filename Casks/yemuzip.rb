@@ -3,7 +3,7 @@ cask 'yemuzip' do
   sha256 '9c97ac9a715857dc8679b0e1d7fbddb253b0f56275641be2cd9a47b45bd29727'
 
   url "http://yellowmug.com/download/YemuZip_#{version}.dmg"
-  appcast 'http://www.yellowmug.com/yemuzip/revision'
+  appcast 'http://yellowmug.com/yemuzip/appcast-1014.xml'
   name 'YemuZip'
   homepage 'http://www.yellowmug.com/yemuzip/'
 
