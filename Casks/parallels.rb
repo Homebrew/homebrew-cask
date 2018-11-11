@@ -3,6 +3,7 @@ cask 'parallels' do
   sha256 '2d3157fa684c9e255927ae4a04f303107427a3ea166eea6ea86f0963cb24e4bb'
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
+  appcast 'http://www.corecode.io/cgi-bin/check_url_redirect/check_url_redirect.cgi?url=https://www.parallels.com/directdownload/pd/'
   name 'Parallels Desktop'
   homepage 'https://www.parallels.com/products/desktop/'
 
