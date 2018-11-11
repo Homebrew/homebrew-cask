@@ -14,7 +14,9 @@ cask 'datadog-agent' do
     File.open('/tmp/datadog-install-user', 'w') { |f| f.write(Etc.getlogin) }
   end
 
-  uninstall pkgutil: 'com.datadoghq.agent'
+  uninstall launchctl: 'com.datadoghq.agent',
+            delete:    '/Applications/Datadog Agent.app',
+            pkgutil:   'com.datadoghq.agent'
 
   zap trash: '/opt/datadog-agent'
 
