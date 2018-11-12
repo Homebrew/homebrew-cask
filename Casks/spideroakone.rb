@@ -4,7 +4,7 @@ cask 'spideroakone' do
 
   if MacOS.version <= :sierra
     url 'https://spideroak.com/release/spideroak/osx'
-  elsif MacOS.version == :high_sierra
+  elsif MacOS.version <= :high_sierra
     url 'https://spideroak.com/release/spideroak/osx_hs'
   else
     url 'https://spideroak.com/release/spideroak/osx'
