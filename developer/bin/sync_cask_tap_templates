@@ -40,6 +40,7 @@ function copy_templates {
     --include '.github/***'                   \
     --include '.gitignore'                    \
     --include '.travis.yml'                   \
+    --include 'Casks/.rubocop.yml'            \
     --include 'CODE_OF_CONDUCT.md'            \
     --exclude '*' "${main_repo_dir}/" '.'
   rm '.github/ISSUE_TEMPLATE/02_feature_request.md' # Feature requests only make sense in the main repo
