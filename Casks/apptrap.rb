@@ -8,4 +8,6 @@ cask 'apptrap' do
   homepage 'http://onnati.net/apptrap/'
 
   prefpane 'AppTrap.prefPane'
+
+  zap trash: ['~/Library/Preferences/com.KumaranVijayan.AppTrap.prefpanel.plist']
 end
