@@ -26,4 +26,6 @@ cask 'itsycal' do
   depends_on macos: '>= :mountain_lion'
 
   app 'Itsycal.app'
+
+  zap trash: ['~/Library/Preferences/com.mowglii.ItsycalApp.plist']
 end
