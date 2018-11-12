@@ -16,10 +16,11 @@ cask 'google-chrome' do
 
   app 'Google Chrome.app'
 
-  uninstall launchctl: [
-                         'com.google.keystone.agent',
-                         'com.google.keystone.daemon',
-                       ]
+  uninstall launchctl:  [
+                          'com.google.keystone.agent',
+                          'com.google.keystone.daemon',
+                        ],
+            login_item: 'Google Chrome'
 
   zap trash: [
                '/Library/Caches/com.google.SoftwareUpdate.*',
