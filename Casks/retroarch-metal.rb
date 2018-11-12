@@ -11,7 +11,5 @@ cask 'retroarch-metal' do
 
   app 'RetroArch.app'
 
-  zap trash: [
-               '~/Library/Application Support/RetroArch',
-             ]
+  zap trash: '~/Library/Application Support/RetroArch'
 end
