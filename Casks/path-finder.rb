@@ -1,6 +1,6 @@
 cask 'path-finder' do
-  version :latest
-  sha256 :no_check
+  version '8.3.3'
+  sha256 '4f87b4242785e9f8c5a21fa3573a860c91f3ceed65fbb7cc3e8a248f9d02caf0'
 
   url 'https://get.cocoatech.com/PF8.zip'
   appcast 'https://get.cocoatech.com/releasecast.xml'
