@@ -9,5 +9,7 @@ cask 'apptrap' do
 
   prefpane 'AppTrap.prefPane'
 
+  uninstall login_item: 'AppTrap'
+
   zap trash: ['~/Library/Preferences/com.KumaranVijayan.AppTrap.prefpanel.plist']
 end
