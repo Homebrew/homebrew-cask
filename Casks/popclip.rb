@@ -4,7 +4,7 @@ cask 'popclip' do
 
   url "https://pilotmoon.com/downloads/PopClip-#{version}.zip"
   appcast 'https://rink.hockeyapp.net/api/2/apps/58adb6c5bea28ffe22f304f2f383d089'
-  name 'Popclip'
+  name 'PopClip'
   homepage 'https://pilotmoon.com/popclip/'
 
   app 'PopClip.app'
