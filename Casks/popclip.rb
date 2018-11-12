@@ -7,5 +7,5 @@ cask 'popclip' do
   name 'Popclip'
   homepage 'https://pilotmoon.com/popclip/'
 
-  app 'Popclip.app'
+  app 'PopClip.app'
 end
