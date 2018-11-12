@@ -4,6 +4,7 @@ cask 'bill' do
 
   # myownapp.com was verified as official when first introduced to the cask
   url 'https://myownapp.com/downloads/Bill2.zip'
+  appcast 'https://sparkle.moapp.software/bill.xml'
   name 'Bill'
   homepage 'https://billtheapp.com/'
 

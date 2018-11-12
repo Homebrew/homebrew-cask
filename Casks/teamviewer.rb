@@ -3,6 +3,7 @@ cask 'teamviewer' do
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://download.teamviewer.com/download/version_#{version}x/TeamViewer.dmg"
+  appcast 'https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=13.1.4170&os=macos&osversion=10.14.1&type=0'
   name 'TeamViewer'
   homepage 'https://www.teamviewer.com/'
 

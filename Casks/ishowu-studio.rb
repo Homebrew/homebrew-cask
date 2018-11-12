@@ -3,6 +3,7 @@ cask 'ishowu-studio' do
   sha256 :no_check
 
   url 'https://www.shinywhitebox.com/store/file.php?p=12'
+  appcast 'https://www.shinywhitebox.com/store/appcast.php?p=12'
   name 'iShowU Studio'
   homepage 'https://www.shinywhitebox.com/ishowu-studio'
 

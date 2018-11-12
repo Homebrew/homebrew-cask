@@ -4,6 +4,7 @@ cask 'amazon-workdocs' do
 
   # d28gdqadgmua23.cloudfront.net was verified as official when first introduced to the cask
   url 'https://d28gdqadgmua23.cloudfront.net/mac/Amazon%20WorkDocs.pkg'
+  appcast 'https://d28gdqadgmua23.cloudfront.net/mac/appcast/appcast-workdocs-prod.xml'
   name 'Amazon WorkDocs'
   homepage 'https://aws.amazon.com/workdocs/'
 

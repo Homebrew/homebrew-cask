@@ -3,6 +3,7 @@ cask 'easycrop' do
   sha256 :no_check
 
   url 'http://www.yellowmug.com/download/EasyCrop.dmg'
+  appcast 'http://yellowmug.com/easycrop/appcast-1014.xml'
   name 'EasyCrop'
   homepage 'http://www.yellowmug.com/easycrop/'
 

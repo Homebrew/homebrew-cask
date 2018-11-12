@@ -4,6 +4,7 @@ cask 'neteasemusic' do
 
   # d1.music.126.net was verified as official when first introduced to the cask
   url "https://d1.music.126.net/dmusic/NeteaseMusic_#{version}_web.dmg"
+  appcast 'https://music.163.com/api/mac/appcast.xml'
   name 'NetEase cloud music'
   name '网易云音乐'
   homepage 'https://music.163.com/'

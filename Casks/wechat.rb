@@ -3,6 +3,7 @@ cask 'wechat' do
   sha256 'e5f70b735cccfb83ccfc8011e7aefe1d063b14bf0d3065a0b9d8cb10695628d7'
 
   url "https://dldir1.qq.com/weixin/mac/WeChat_#{version}.dmg"
+  appcast 'https://dldir1.qq.com/weixin/mac/mac-release.xml'
   name 'WeChat for Mac'
   name '微信 Mac 版'
   homepage 'https://mac.weixin.qq.com/'
