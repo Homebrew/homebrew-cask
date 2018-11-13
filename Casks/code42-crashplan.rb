@@ -1,4 +1,4 @@
-cask 'crashplan' do
+cask 'code42-crashplan' do
   version '6.8.4'
   sha256 '7c6c9b6a6363c62944b58799610e0ffa4dc953d3a5bba25e509f49e7bc1dc1a6'
 
