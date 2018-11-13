@@ -1,6 +1,6 @@
 cask 'izip' do
-  version :latest
-  sha256 :no_check
+  version '3.3'
+  sha256 'd51cd6a698cb40a02f6930dd374a85bac6f78cb5d104a60476c9aefd45239329'
 
   url 'https://www.izip.com/izip.dmg'
   appcast 'https://www.izip.com/updates'
