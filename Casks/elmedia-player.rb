@@ -1,5 +1,5 @@
 cask 'elmedia-player' do
-  version '6.13'
+  version '6.13.1435'
   sha256 '2e7a7bc05050a58f18e9f6c7356552aa5842d7ef8e920765fd2b0242ce18cc0a'
 
   url 'https://cdn.eltima.com/download/elmediaplayer.dmg'
