@@ -1,6 +1,6 @@
 cask 'iholdem-indicator' do
-  version :latest
-  sha256 :no_check
+  version '6.2'
+  sha256 'bd726fd32c5f89d75f58968acaa4fda9f26bb004abe6161e3e779ba86fbbb06e'
 
   url 'http://www.iholdemindicator.com/download/iHoldemIndicatorInstaller.pkg'
   appcast 'http://www.iholdemindicator.com/download/sparklerv2.xml'
