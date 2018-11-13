@@ -13,7 +13,8 @@ cask 'xamarin-ios' do
                        'com.xamarin.xamarin.ios.pkg',
                        'com.xamarin.xamarin-ios-build-host.pkg',
                      ]
-  trash zap: [
+
+  zap trash: [
                '/Developer/MonoTouch',
                '/Library/Frameworks/Xamarin.iOS.framework',
              ]
