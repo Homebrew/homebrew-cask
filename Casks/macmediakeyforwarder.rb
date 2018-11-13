@@ -6,6 +6,8 @@ cask 'macmediakeyforwarder' do
   name 'Mac Media Key Forwarder'
   homepage 'http://milgra.com/mac-media-key-forwarder.html'
 
+  depends_on macos: '>= :sierra'
+
   app 'MacMediaKeyForwarder.app'
 
   uninstall login_item: 'MacMediaKeyForwarder'
