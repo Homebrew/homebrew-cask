@@ -1,6 +1,6 @@
 cask 'easycrop' do
-  version :latest
-  sha256 :no_check
+  version '2.6.1'
+  sha256 '62acadbb140f456d3b6e184660b887eae1ee493b56035e58925d97cc19d7fce7'
 
   url 'http://www.yellowmug.com/download/EasyCrop.dmg'
   appcast 'http://yellowmug.com/easycrop/appcast-1014.xml'
