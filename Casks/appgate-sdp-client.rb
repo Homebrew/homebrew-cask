@@ -17,7 +17,10 @@ cask 'appgate-sdp-client' do
                          'com.cyxtera.appgate.sdp.tun',
                          'com.cyxtera.appgate.sdp.updater',
                        ],
-            quit:      'com.cyxtera.appgate.helper',
+            quit:      [
+                         'com.cyxtera.appgate.helper',
+                         'com.cyxtera.appgate.sdp',
+                       ],
             signal:    [
                          ['QUIT', 'com.cyxtera.appgate'],
                        ],
