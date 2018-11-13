@@ -1,0 +1,17 @@
+cask 'ibm-data-server-driver-for-odbc-and-cli' do
+  version '10.5.0.5'
+  sha256 '66875721d96ac39b7ca39540245cc6f6f08b4cf7d0d2e55bf6b8fa1838705b8a'
+
+  url 'https://public.dhe.ibm.com/ibmdl/export/pub/software/data/db2/drivers/odbc_cli/macos64_odbc_cli.tar.gz'
+  name 'IBM Data Server Driver for ODBC and CLI'
+  homepage 'http://www-01.ibm.com/support/docview.wss?uid=swg21418043'
+
+  binary "#{appdir}/#{name[0]}/bin/db2cli"
+  binary "#{appdir}/#{name[0]}/bin/db2diag"
+  binary "#{appdir}/#{name[0]}/bin/db2drdat"
+  binary "#{appdir}/#{name[0]}/bin/db2dsdcfgfill"
+  binary "#{appdir}/#{name[0]}/bin/db2level"
+  binary "#{appdir}/#{name[0]}/bin/db2support"
+  binary "#{appdir}/#{name[0]}/bin/db2trc"
+  artifact 'clidriver', target: "#{appdir}/#{name[0]}"
+end
