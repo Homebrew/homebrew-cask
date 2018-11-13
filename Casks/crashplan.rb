@@ -1,6 +1,6 @@
 cask 'crashplan' do
   version '6.8.4'
-  sha256 'b4722b49d04bab9001c07aba8906bd1883484eef5e428eb2be1099cc6381d015'
+  sha256 '7c6c9b6a6363c62944b58799610e0ffa4dc953d3a5bba25e509f49e7bc1dc1a6'
 
   # download.code42.com was verified as official when first introduced to the cask
   url "https://download.code42.com/installs/mac/install/Code42CrashPlan/Code42CrashPlan_#{version}_Mac.dmg"
