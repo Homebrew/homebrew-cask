@@ -9,7 +9,7 @@ cask 'crashplan' do
 
   auto_updates true
 
-  pkg 'Install CrashPlan.pkg'
+  pkg 'Install Code42 CrashPlan.pkg'
 
   uninstall launchctl: 'com.backup42.desktop',
             pkgutil:   'com.crashplan.app.pkg',
