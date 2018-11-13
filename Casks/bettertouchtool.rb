@@ -23,7 +23,7 @@ cask 'bettertouchtool' do
 
     # bettertouchtool.net/releases was verified as official when first introduced to the cask
     url "https://bettertouchtool.net/releases/btt#{version}.zip"
-    appcast 'https://bettertouchtool.net/releases/'
+    appcast 'https://updates.bettertouchtool.net/highsierra_new.xml?bttversion=967'
   end
 
   name 'BetterTouchTool'
