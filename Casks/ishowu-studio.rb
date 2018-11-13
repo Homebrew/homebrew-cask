@@ -1,6 +1,6 @@
 cask 'ishowu-studio' do
-  version :latest
-  sha256 :no_check
+  version '1.7.6'
+  sha256 '80384f3a4f072ba72cf0c73d12bfd40c1a36f37c46fcc20b56ccec3cbbe98035'
 
   url 'https://www.shinywhitebox.com/store/file.php?p=12'
   appcast 'https://www.shinywhitebox.com/store/appcast.php?p=12'
