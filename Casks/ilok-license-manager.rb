@@ -14,5 +14,8 @@ cask 'ilok-license-manager' do
                          'com.paceap.pkg.eden.licensed',
                          'com.paceap.pkg.eden.activationexperience',
                        ],
-            launchctl: 'com.paceap.eden.licensed'
+            launchctl: [
+                         'com.paceap.eden.licensed',
+                         'com.paceap.eden.licensed.agent',
+                       ]
 end
