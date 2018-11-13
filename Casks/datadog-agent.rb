@@ -4,6 +4,7 @@ cask 'datadog-agent' do
 
   # s3.amazonaws.com/dd-agent was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/dd-agent/datadog-agent-#{version}.dmg"
+  appcast 'https://github.com/DataDog/datadog-agent/releases.atom'
   name 'Datadog Agent'
   homepage 'https://www.datadoghq.com/'
 
