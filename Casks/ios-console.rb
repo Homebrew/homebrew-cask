@@ -1,6 +1,6 @@
 cask 'ios-console' do
-  version :latest
-  sha256 :no_check
+  version '1.0.2'
+  sha256 '84e3c4fbf685744fddf7ab87ac9fcb7fbccbc0d82baf22351d500ed1616ae84f'
 
   url 'https://downloads.lemonjar.com/iosconsole_latest.zip'
   appcast 'https://updates.lemonjar.com/iosconsole.xml'
