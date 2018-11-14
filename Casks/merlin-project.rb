@@ -7,5 +7,5 @@ cask 'merlin-project' do
   name 'Merlin Project'
   homepage 'https://www.projectwizards.net/en/products/merlin-project/what-is'
 
-  app 'Merlin Project.app'
+  app 'Merlin Project 5.app'
 end
