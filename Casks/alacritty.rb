@@ -7,8 +7,5 @@ cask 'alacritty' do
   name 'Alacritty'
   homepage 'https://github.com/jwilm/alacritty/'
 
-  auto_updates false
-
   app 'Alacritty.app'
-  binary "#{appdir}/Alacritty.app/Contents/MacOS/alacritty"
 end
