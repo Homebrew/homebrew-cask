@@ -1,6 +1,6 @@
 cask 'origami-studio' do
-  version :latest
-  sha256 :no_check
+  version '2.5'
+  sha256 '3d47d5119184bbb59125d7ed2c75a75c375d8a0e04a7ce3dcb0604a83c649482'
 
   # fb.me/getorigamistudio was verified as official when first introduced to the cask
   url 'https://fb.me/getorigamistudio'
