@@ -19,7 +19,7 @@ cask 'datadog-agent' do
   zap trash: '/opt/datadog-agent'
 
   caveats <<~EOS
-    You will need to update /opt/datadog-agent/etc/datadog.conf and replace APIKEY with your api key
+    You will need to update /opt/datadog-agent/etc/datadog.yaml and replace APIKEY with your api key
 
     If you ever want to start/stop the Agent, please use the Datadog Agent App or datadog-agent command.
     It will start automatically at login, if you want to enable it at startup, run these commands:
