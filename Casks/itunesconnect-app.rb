@@ -7,5 +7,5 @@ cask 'itunesconnect-app' do
   name 'iTunesConnect'
   homepage 'https://github.com/ronakdev/itunesconnect'
 
-  app 'iTunesConnect,app'
+  app 'iTunesConnect.app'
 end
