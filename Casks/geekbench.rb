@@ -8,9 +8,9 @@ cask 'geekbench' do
   else
     version '4.3.1'
     sha256 '3f1a645dd9eeb49328a77d42651cd2b214ea67e670912d53ea49ef6a4ad9766b'
-    appcast "https://www.primatelabs.com/appcast/geekbench#{version.major}.xml"
 
     url "http://cdn.geekbench.com/Geekbench-#{version}-Mac.zip"
+    appcast "https://www.primatelabs.com/appcast/geekbench#{version.major}.xml"
   end
 
   name 'Geekbench'
