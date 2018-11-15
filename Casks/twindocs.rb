@@ -7,7 +7,7 @@ cask 'twindocs' do
   name 'Twindocs tools'
   homepage 'https://www.twindocs.com/'
 
-  pkg 'Twindocs tools.pkg'
+  pkg 'Twindocs tools.pkg', allow_untrusted: true
 
   uninstall pkgutil: 'com.twindocs.ambassador'
 end
