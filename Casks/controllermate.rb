@@ -28,10 +28,26 @@ cask 'controllermate' do
                          'com.orderedbytes.driver.CMUSBDevices',
                          'com.orderedbytes.driver.ControllerMateFamily',
                        ],
-            pkgutil:   'com.orderedbytes.controllermate.*',
+            pkgutil:   [
+                         'com.orderedbytes.controllermate.*',
+                         'com.orderedbytes.controllermate.ControllerMate.pkg',
+                         'com.orderedbytes.controllermate.ControllerMateHelper.pkg',
+                         'com.orderedbytes.controllermate.ControllerMateKext.pkg',
+                         'com.orderedbytes.controllermate.ControllerMate_keyboard.pkg',
+                         'com.orderedbytes.controllermate.ControllerMate_none.pkg',
+                         'com.orderedbytes.controllermate.ControllerMate_pointer.pkg',
+                         'com.orderedbytes.controllermate.com.orderedbytes.ControllerMateHelper.pkg',
+                       ],
             signal:    [
                          ['TERM', "com.orderedbytes.ControllerMate#{version.major}"],
                          ['TERM', 'com.orderedbytes.ControllerMateHelper'],
+                       ],
+            delete:    [
+                         '/Library/Extensions/ControllerMate.kext,/Library/Application Support/ControllerMate/',
+                         '/Library/LaunchAgents/com.orderedbytes.ControllerMateHelper.plist',
+                         '/Library/StagedExtensions/Library/Extensions/ControllerMate.kext',
+                         '/Applications/ControllerMate.app ',
+                         '/private/var/db/receipts/com.orderedbytes.controllermate.*',
                        ]
 
   zap trash: [
@@ -39,6 +55,7 @@ cask 'controllermate' do
                '~/Library/Caches/com.orderedbytes.ControllerMate4',
                '~/Library/Logs/ControllerMate MIDI',
                '~/Library/Logs/ControllerMate',
+               '/Applications/ControllerMate.app',
              ]
 
   caveats do
