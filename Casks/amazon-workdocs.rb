@@ -10,6 +10,6 @@ cask 'amazon-workdocs' do
 
   pkg 'Amazon WorkDocs.pkg'
 
-  uninstall signal:  'com.amazon.AmazonWorkDocs',
+  uninstall signal:  ['TERM', 'com.amazon.AmazonWorkDocs'],
             pkgutil: 'com.amazon.aws.AmazonWorkDocs'
 end
