@@ -1,5 +1,5 @@
 cask 'teamviewer' do
-  version '13'
+  version '14'
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://download.teamviewer.com/download/version_#{version}x/TeamViewer.dmg"
@@ -12,7 +12,20 @@ cask 'teamviewer' do
 
   pkg 'Install TeamViewer.pkg'
 
-  uninstall delete: "#{staged_path}/#{token}" # This Cask should be uninstalled manually.
+  uninstall delete:    [
+                         "#{staged_path}/#{token}", # This Cask should be uninstalled manually.
+                         '/Applications/TeamViewer.app',
+                       ],
+            pkgutil:   'com.teamviewer.teamviewer.*',
+            launchctl: [
+                         'com.teamviewer.desktop',
+                         'com.teamviewer.service',
+                         'com.teamviewer.Helper',
+                         'com.teamviewer.teamviewer',
+                         'com.teamviewer.teamviewer_desktop',
+                         'com.teamviewer.teamviewer_service',
+                       ],
+            quit:      'com.teamviewer.TeamViewer'
 
   zap trash: [
                '/Library/Preferences/com.teamviewer.teamviewer.preferences.plist',
