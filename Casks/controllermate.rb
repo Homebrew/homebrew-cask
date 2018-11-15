@@ -35,7 +35,6 @@ cask 'controllermate' do
             delete:    [
                          '/Library/Extensions/ControllerMate.kext,/Library/Application Support/ControllerMate/',
                          '/Library/LaunchAgents/com.orderedbytes.ControllerMateHelper.plist',
-                         '/Library/StagedExtensions/Library/Extensions/ControllerMate.kext',
                          '/Applications/ControllerMate.app',
                          '/private/var/db/receipts/com.orderedbytes.controllermate.*',
                        ]
