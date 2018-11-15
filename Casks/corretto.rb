@@ -1,4 +1,4 @@
-cask 'correto' do
+cask 'corretto' do
   version '8,8u192'
   sha256 '5836ca06194bee33a476bd9412ef810a8e8a98eb0202553567933b70f3aa17e4'
 
