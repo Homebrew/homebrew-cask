@@ -1,8 +1,5 @@
 cask 'controllermate' do
-  if MacOS.version <= :el_capitan
-    version '4.9.10'
-    sha256 '4f24f5763e96b0b0e959197dba5cc064928b59b74d49210bf5a484f4f9766d38'
-  elsif MacOS.version == :sierra
+  if MacOS.version <= :sierra
     version '4.10.4'
     sha256 'fdeb37ca8df145d927b9daef6dfa22ef6d1535f9ad1459c4f4ffcb52fbc19c3b'
   else
@@ -16,7 +13,7 @@ cask 'controllermate' do
   name 'ControllerMate'
   homepage 'https://www.orderedbytes.com/controllermate/'
 
-  depends_on macos: '>= :high_sierra'
+  depends_on macos: '>= :sierra'
 
   pkg '#temp#/ControllerMate.sparkle_interactive.pkg'
 
