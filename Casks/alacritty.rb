@@ -8,4 +8,9 @@ cask 'alacritty' do
   homepage 'https://github.com/jwilm/alacritty/'
 
   app 'Alacritty.app'
+
+  zap delete: [
+                '~/Library/Saved Application State/io.alacritty.savedState',
+                '~/.config/alacritty',
+              ]
 end
