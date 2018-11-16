@@ -10,6 +10,8 @@ cask 'rocket' do
 
   app 'Rocket.app'
 
+  uninstall login_item: 'Rocket'
+
   zap trash: [
                '~/Library/Application Support/Rocket',
                '~/Library/Preferences/net.matthewpalmer.Rocket.plist',

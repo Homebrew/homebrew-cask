@@ -1,6 +1,6 @@
 cask 'sia-ui' do
-  version '1.3.4'
-  sha256 '7922e632eaf64f809c11900d3ba57100ca4ad298efe9d3c87efd566cd0a4ef7a'
+  version '1.3.7'
+  sha256 '759da9bb4df6744b6d90884f2e52bbcb078940ceae22b0c1ffc4f8e410d56f0f'
 
   # github.com/NebulousLabs/Sia-UI was verified as official when first introduced to the cask
   url "https://github.com/NebulousLabs/Sia-UI/releases/download/v#{version}/Sia-UI-v#{version}-osx-x64.zip"

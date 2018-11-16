@@ -4,6 +4,7 @@ cask 'sookasa' do
 
   # d2rs8uj3cnos4.cloudfront.net was verified as official when first introduced to the cask
   url "https://d2rs8uj3cnos4.cloudfront.net/mac-apps/releases/Sookasa_#{version}.pkg"
+  appcast 'https://s3.amazonaws.com/sookasa-static-assets/mac-apps/appcats/appcast_mac.xml'
   name 'Sookasa'
   homepage 'https://www.sookasa.com/'
 

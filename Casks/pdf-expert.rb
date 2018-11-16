@@ -1,6 +1,6 @@
 cask 'pdf-expert' do
-  version '2.4.10,555'
-  sha256 '683d220be2604f4b527a6e30336326c9ca8ac75e7d2047e826a9d58ddbc4d88c'
+  version '2.4.13,589'
+  sha256 'eac9822940faca8d7067f25dd6e374dbf42e65c19e05b1d62e9cf632eaa23560'
 
   # readdle-test-binaries.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://readdle-test-binaries.s3.amazonaws.com/versions/#{version.after_comma}/PDFExpert.dmg"

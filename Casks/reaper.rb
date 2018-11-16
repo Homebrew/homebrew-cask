@@ -1,6 +1,6 @@
 cask 'reaper' do
-  version '5.96'
-  sha256 '85e7cb28ca7319c7987db1424b2638eb63da6dc4b284c8035240ed421d6611c9'
+  version '5.961'
+  sha256 '7b10b0e1fde20ceadfb9538a67f09a623bbb8706c2f8351a999c313100cffe08'
 
   url "https://www.reaper.fm/files/#{version.major}.x/reaper#{version.no_dots}_x86_64.dmg"
   appcast 'https://www.cockos.com/reaper/latestversion/?p=osx_64'

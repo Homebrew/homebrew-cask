@@ -3,6 +3,7 @@ cask 'breeze' do
   sha256 'eaa54f9ccc6539fb548ffa274a7317913840ee3144ed781acd4da8b0b2d0d5ba'
 
   url "https://autumnapps.com/downloads/Breeze#{version}.dmg"
+  appcast 'https://www.autumnapps.com/updates/profiles/breeze.php'
   name 'Breeze'
   homepage 'https://autumnapps.com/breeze/'
 

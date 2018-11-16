@@ -8,5 +8,7 @@ cask 'loadmytracks' do
   name 'LoadMyTracks'
   homepage 'https://www.loadmytracks.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'LoadMyTracks.app'
 end

@@ -1,8 +1,9 @@
 cask 'prezi-classic' do
-  version '6.13.1'
-  sha256 '9870c55a6e7f9d6163bb45e8a4eadb39192319219638941b08a9eb10841750fb'
+  version '6.14.0'
+  sha256 'ed9cc68796e4a055fa01cd28ab593370b6f4d87a937237e2f23f7fba9c70f332'
 
   url "https://desktopassets.prezi.com/mac/pd6/releases/Prezi_Classic_#{version}.dmg"
+  appcast 'https://s3.amazonaws.com/prezidesktop/assets/mac/pd6/updates/prezi-classic.xml'
   name 'Prezi Classic'
   homepage 'https://prezi.com/desktop'
 

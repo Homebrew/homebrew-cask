@@ -10,6 +10,11 @@ cask 'arduino' do
   app 'Arduino.app'
   binary "#{appdir}/Arduino.app/Contents/Java/arduino-builder"
 
+  zap trash: [
+               '~/Library/Arduino15',
+               '~/Library/Preferences/cc.arduino.Arduino.plist',
+             ]
+
   caveats do
     depends_on_java
   end

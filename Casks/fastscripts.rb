@@ -7,5 +7,7 @@ cask 'fastscripts' do
   name 'FastScripts'
   homepage 'https://red-sweater.com/fastscripts/'
 
+  depends_on macos: '>= :sierra'
+
   app 'FastScripts.app'
 end

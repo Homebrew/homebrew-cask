@@ -8,6 +8,8 @@ cask 'chatmate-for-whatsapp' do
   name 'ChatMate for WhatsApp'
   homepage 'https://chatmate.io/'
 
+  depends_on macos: '>= :sierra'
+
   app 'ChatMate for WhatsApp.app'
 
   zap trash: [

@@ -3,7 +3,7 @@ cask 'duplicati' do
   sha256 '427a5ad9fe96ae63b85473b704f379c8d1ba064cfea619475e24cfe2d5ddf238'
 
   url "https://updates.duplicati.com/beta/duplicati-#{version.before_comma}_beta_#{version.after_comma}.dmg"
-  appcast 'https://github.com/duplicati/duplicati/releases.atom'
+  appcast 'https://www.duplicati.com/download'
   name 'Duplicati'
   homepage 'https://www.duplicati.com/'
 

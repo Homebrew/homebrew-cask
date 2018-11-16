@@ -1,6 +1,6 @@
 cask 'torguard' do
-  version '3.89.0'
-  sha256 '6eb4007e361365a18eb9fdb3e38a553cd4c558252544670f378b1263d880831f'
+  version '3.90.0'
+  sha256 'cb6ec61496ec1d9ac4009504a0f6a606f7f1be929c53e8423e6b6b2385a8747f'
 
   # torguard.biz was verified as official when first introduced to the cask
   url "https://updates.torguard.biz/Software/MacOSX/TorGuard-v#{version}.dmg"

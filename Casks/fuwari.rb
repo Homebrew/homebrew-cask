@@ -8,7 +8,7 @@ cask 'fuwari' do
   name 'Fuwari'
   homepage 'https://fuwari-app.com/'
 
-  app 'Fuwari.app'
+  app 'Fuwari/Fuwari.app'
 
   uninstall login_item: 'Fuwari',
             quit:       'com.appknop.Fuwari'

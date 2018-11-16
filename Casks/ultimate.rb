@@ -1,8 +1,9 @@
 cask 'ultimate' do
-  version '3.0.10.918'
-  sha256 '9030e7e7a305c32cdad46ba829a4462b675b783476e7277a13b23121f52738fc'
+  version '3.0.10.1025'
+  sha256 '99b9490e4a32b61a11def5ead4be95e70f94c8c0515fbb8a2c472f372092b909'
 
   url 'https://download.epubor.com/epubor_ultimate.zip'
+  appcast 'https://www.epubor.com/ultimate.html'
   name 'Ultimate Converter'
   homepage 'https://www.epubor.com/'
 

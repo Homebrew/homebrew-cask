@@ -1,6 +1,6 @@
 cask 'astrotelescope' do
-  version '1.13'
-  sha256 'd6dac278f7b25d5b5d703c643f8bc3eac300a07cdef721585f9f4b9d7b9cd0b8'
+  version '3.5'
+  sha256 'd388df0d9a13be3f31c99d93d95e6140b6aa62764fb668d197dff94f4a060b2c'
 
   url "http://download.cloudmakers.eu/AstroTelescope_#{version}.dmg"
   name 'AstroTelescope'

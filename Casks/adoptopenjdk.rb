@@ -10,8 +10,10 @@ cask 'adoptopenjdk' do
 
   postflight do
     system_command '/bin/mv',
-                   args: ['-f', '--', "#{staged_path}/jdk-#{version.before_comma}+#{version.after_comma}",
-                          "/Library/Java/JavaVirtualMachines/adoptopenjdk-#{version.before_comma}.jdk"],
+                   args: [
+                           '-f', '--', "#{staged_path}/jdk-#{version.before_comma}+#{version.after_comma}",
+                           "/Library/Java/JavaVirtualMachines/adoptopenjdk-#{version.before_comma}.jdk"
+                         ],
                    sudo: true
 
     system_command '/bin/mkdir',
@@ -19,30 +21,55 @@ cask 'adoptopenjdk' do
                    sudo: true
 
     system_command '/bin/ln',
-                   args: ['-nsf', '--', "/Library/Java/JavaVirtualMachines/adoptopenjdk-#{version.before_comma}.jdk/Contents/Home/lib/server/libjvm.dylib",
-                          "/Library/Java/JavaVirtualMachines/adoptopenjdk-#{version.before_comma}.jdk/Contents/Home/bundle/Libraries/libserver.dylib"],
+                   args: [
+                           '-nsf', '--',
+                           "/Library/Java/JavaVirtualMachines/adoptopenjdk-#{version.before_comma}.jdk/Contents/Home/lib/server/libjvm.dylib",
+                           "/Library/Java/JavaVirtualMachines/adoptopenjdk-#{version.before_comma}.jdk/Contents/Home/bundle/Libraries/libserver.dylib"
+                         ],
                    sudo: true
 
     system_command '/usr/libexec/PlistBuddy',
-                   args: ['-c', "Set :CFBundleGetInfoString AdoptOpenJDK #{version.before_comma}+#{version.after_comma}", "/Library/Java/JavaVirtualMachines/adoptopenjdk-#{version.before_comma}.jdk/Contents/Info.plist"],
+                   args: [
+                           '-c', "Set :CFBundleGetInfoString AdoptOpenJDK #{version.before_comma}+#{version.after_comma}",
+                           "/Library/Java/JavaVirtualMachines/adoptopenjdk-#{version.before_comma}.jdk/Contents/Info.plist"
+                         ],
                    sudo: true
 
     system_command '/usr/libexec/PlistBuddy',
-                   args: ['-c', "Set :CFBundleIdentifier net.adoptopenjdk.#{version.before_comma}.jdk", "/Library/Java/JavaVirtualMachines/adoptopenjdk-#{version.before_comma}.jdk/Contents/Info.plist"],
+                   args: [
+                           '-c', "Set :CFBundleIdentifier net.adoptopenjdk.#{version.before_comma}.jdk",
+                           "/Library/Java/JavaVirtualMachines/adoptopenjdk-#{version.before_comma}.jdk/Contents/Info.plist"
+                         ],
                    sudo: true
 
     system_command '/usr/libexec/PlistBuddy',
-                   args: ['-c', "Set :CFBundleName AdoptOpenJDK #{version.before_comma}", "/Library/Java/JavaVirtualMachines/adoptopenjdk-#{version.before_comma}.jdk/Contents/Info.plist"],
+                   args: [
+                           '-c', "Set :CFBundleName AdoptOpenJDK #{version.before_comma}",
+                           "/Library/Java/JavaVirtualMachines/adoptopenjdk-#{version.before_comma}.jdk/Contents/Info.plist"
+                         ],
                    sudo: true
 
     system_command '/usr/libexec/PlistBuddy',
-                   args: ['-c', "Set :JavaVM:JVMPlatformVersion #{version.before_comma}.#{version.after_comma}", "/Library/Java/JavaVirtualMachines/adoptopenjdk-#{version.before_comma}.jdk/Contents/Info.plist"],
+                   args: [
+                           '-c', "Set :JavaVM:JVMPlatformVersion #{version.before_comma}.#{version.after_comma}",
+                           "/Library/Java/JavaVirtualMachines/adoptopenjdk-#{version.before_comma}.jdk/Contents/Info.plist"
+                         ],
                    sudo: true
 
     system_command '/usr/libexec/PlistBuddy',
-                   args: ['-c', 'Set :JavaVM:JVMVendor AdoptOpenJDK', "/Library/Java/JavaVirtualMachines/adoptopenjdk-#{version.before_comma}.jdk/Contents/Info.plist"],
+                   args: [
+                           '-c', 'Set :JavaVM:JVMVendor AdoptOpenJDK',
+                           "/Library/Java/JavaVirtualMachines/adoptopenjdk-#{version.before_comma}.jdk/Contents/Info.plist"
+                         ],
                    sudo: true
   end
 
   uninstall delete: "/Library/Java/JavaVirtualMachines/adoptopenjdk-#{version.before_comma}.jdk"
+
+  caveats <<~EOS
+    More versions are available in the AdoptOpenJDK tap:
+      #{Formatter.url('https://github.com/AdoptOpenJDK/homebrew-openjdk')}
+
+      brew tap adoptopenjdk/openjdk
+  EOS
 end

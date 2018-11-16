@@ -1,6 +1,6 @@
 cask 'boom-recorder' do
-  version '8.7.2'
-  sha256 'ededc361ccde003d54d21d00065717b0b6910c9655998251bf2ac284593a5316'
+  version '8.7.3'
+  sha256 '6356370b4462d3a3fa8d05a9e789284c50973f75f3cf2798ce582b54fc9bc1ed'
 
   url "http://www.vosgames.nl/media/downloads/Boom%20Recorder-#{version}.dmg"
   name 'Boom Recorder'

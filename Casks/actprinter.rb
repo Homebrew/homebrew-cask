@@ -4,7 +4,7 @@ cask 'actprinter' do
 
   # actprinter.com was verified as official when first introduced to the cask
   url "https://www.actprinter.com/mac/ACTPrinter%20for%20Mac%20#{version}.zip"
-  appcast 'https://www.houdah.com/ACTPrinter/releaseNotes.html'
+  appcast 'https://www.houdah.com/ACTPrinter/updates/profileInfo.php'
   name 'ACTPrinter'
   homepage 'https://www.houdah.com/ACTPrinter/'
 
