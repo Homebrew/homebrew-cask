@@ -7,6 +7,7 @@ cask 'namechanger' do
   name 'NameChanger'
   homepage 'https://mrrsoftware.com/namechanger/'
 
+  auto_updates true
   depends_on macos: '>= :lion'
 
   app 'NameChanger.app'
