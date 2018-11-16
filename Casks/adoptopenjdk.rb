@@ -1,9 +1,9 @@
 cask 'adoptopenjdk' do
-  version '11,28'
-  sha256 'ca0ec49548c626904061b491cae0a29b9b4b00fb34d8973dc217e10ab21fb0f3'
+  version '11.0.1,13'
+  sha256 'e219e7e2d586ed09ae65f4ec390fca5d5f0c37a61b47677648610194daf1aaa7'
 
   # github.com/AdoptOpenJDK was verified as official when first introduced to the cask
-  url "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-#{version.before_comma}%2B#{version.after_comma}/OpenJDK11-jdk_x64_mac_hotspot_#{version.before_comma}_#{version.after_comma}.tar.gz"
+  url "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-#{version.before_comma}%2B#{version.after_comma}/OpenJDK11U-jdk_x64_mac_hotspot_#{version.before_comma}_#{version.after_comma}.tar.gz"
   appcast 'https://github.com/adoptopenjdk/openjdk11-binaries/releases.atom'
   name 'AdoptOpenJDK'
   homepage 'https://adoptopenjdk.net/'
