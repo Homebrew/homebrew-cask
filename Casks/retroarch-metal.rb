@@ -7,7 +7,10 @@ cask 'retroarch-metal' do
   name 'RetroArch Metal'
   homepage 'https://www.libretro.com/'
 
-  conflicts_with cask: 'retroarch retroarch-cg'
+  conflicts_with cask: [
+                         'retroarch',
+                         'retroarch-cg',
+                       ]
 
   app 'RetroArch.app'
 
