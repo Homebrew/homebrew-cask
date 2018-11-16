@@ -1,22 +1,23 @@
 cask 'skype' do
   name 'Skype'
-  language 'en', default: true do
+
+  language 'XW', default: true do
     version '8.34.0.78'
     sha256 '814b60d85381d4a6332944cdf5f67f0e067b01843821989e685e53b49e6edf80'
     # endpoint920510.azureedge.net/s4l/s4l/download/mac was verified as official when first introduced to the cask
     url "https://endpoint920510.azureedge.net/s4l/s4l/download/mac/Skype-#{version}.dmg"
-    'en-US'
+    homepage 'https://www.skype.com/'
+    'XW'
   end
 
-  language 'zh' do
+  language 'CN' do
     version '7.59.37'
     sha256 '1f0ced6a3b50e9c43a684992a1d63d576eeb689e84ff6572a73105e9a92796cd'
-    # Sype in China has a different release version and homepage
+    # Skype in China has a different release version and homepage
     url "http://imgskype.gmw.cn/resource/uploadimg/mac/Skype_#{version}.dmg"
-    'zh-CN'
+    homepage 'http://skype.gmw.cn/'
+    'CN'
   end
-
-  homepage 'https://www.skype.com/'
 
   auto_updates true
 
