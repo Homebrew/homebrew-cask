@@ -1,5 +1,5 @@
 cask 'vox' do
-  version '3.3.4'
+  version '3.3.5'
   sha256 '3924248033f0e28b30091dc150f272a662c7b930cd6b778a1be6e549bbf6923c'
 
   # devmate.com/com.coppertino.Vox was verified as official when first introduced to the cask
