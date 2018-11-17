@@ -19,6 +19,6 @@ cask 'dendroscope' do
   end
 
   caveats do
-    depends_on_java 
+    depends_on_java
   end
 end
