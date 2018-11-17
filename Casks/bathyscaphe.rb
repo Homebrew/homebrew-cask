@@ -4,6 +4,7 @@ cask 'bathyscaphe' do
 
   # bitbucket.org/bathyscaphe/public/downloads was verified as official when first introduced to the cask
   url "https://bitbucket.org/bathyscaphe/public/downloads/BathyScaphe-#{version}.dmg"
+  appcast 'https://bathyscaphe.bitbucket.io/appcast.xml'
   name 'BathyScaphe'
   homepage 'https://bathyscaphe.bitbucket.io/'
 

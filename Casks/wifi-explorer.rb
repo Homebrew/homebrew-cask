@@ -1,8 +1,8 @@
 cask 'wifi-explorer' do
-  version '2.5.1'
-  sha256 '305c86f339dae6afa18bc788ba4cb2fba067c97aed88888c31cd7475ac61b87d'
+  version '2.5.2'
+  sha256 'e83e0c9286beabb01190c67b79ad9cba0c482d1c5d5e721476cc3082928cc927'
 
-  url 'https://www.adriangranados.com/downloads/wifiexplorer.zip'
+  url 'https://www.adriangranados.com/apps/wifiexplorer-download'
   appcast 'https://www.adriangranados.com/appcasts/wifiexplorercast.xml'
   name 'WiFi Explorer'
   homepage 'https://www.adriangranados.com/apps/wifi-explorer'

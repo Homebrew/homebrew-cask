@@ -4,6 +4,7 @@ cask 'mimecast' do
 
   # system.na3.netsuite.com was verified as official when first introduced to the cask
   url 'https://system.na3.netsuite.com/core/media/media.nl?id=57223086&c=601905&h=8cc4b2493f0770cef5f0'
+  appcast 'http://updates-us.mimecast.com/update/descriptors/msm/latest'
   name 'Mimecast for Mac'
   homepage 'https://community.mimecast.com/community/knowledge-base/mimecast-for-mac'
 

@@ -26,4 +26,8 @@ cask 'itsycal' do
   depends_on macos: '>= :mountain_lion'
 
   app 'Itsycal.app'
+
+  uninstall login_item: 'Itsycal'
+
+  zap trash: '~/Library/Preferences/com.mowglii.ItsycalApp.plist'
 end

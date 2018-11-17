@@ -9,6 +9,8 @@ cask 'bitbar' do
 
   app 'BitBar.app'
 
+  uninstall login_item: 'BitBar'
+
   zap trash: [
                '~/Library/BitBar Plugins',
                '~/Library/Caches/com.matryer.BitBar',

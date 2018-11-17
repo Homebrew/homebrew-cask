@@ -1,6 +1,6 @@
 cask 'zoc' do
-  version '7.21.2'
-  sha256 'a3adb6f9491ce22478ed2e5a6c4e605a47e6662c440677ee6b84fcce81eecf24'
+  version '7.21.5'
+  sha256 'fbc9e47277c3de4a042c8c5bbc6f0b3eafeba99be9fc1c9ac03c2e88103f8372'
 
   url "https://www.emtec.com/downloads/zoc/zoc#{version.no_dots}.dmg"
   appcast 'https://www.emtec.com/downloads/zoc/zoc_changes.txt'

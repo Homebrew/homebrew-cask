@@ -6,6 +6,8 @@ cask 'deezer' do
   name 'Deezer'
   homepage 'https://www.deezer.com/download'
 
+  auto_updates true
+
   app 'Deezer.app'
 
   zap trash: [

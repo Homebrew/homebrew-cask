@@ -3,6 +3,7 @@ cask 'sciebo' do
   sha256 '2fb6120746ae86d0d4eade2c4cd867e45b21d492f1b1e046ba4bf6701dd59139'
 
   url "https://www.sciebo.de/install/sciebo-#{version}.pkg"
+  appcast 'https://www.sciebo.de/updateserver/?version=2.3.3.1812&platform=macos&oem=sciebo&sparkle=true'
   name 'sciebo'
   homepage 'https://sciebo.de/'
 

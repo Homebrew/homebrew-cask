@@ -1,8 +1,9 @@
 cask 'bluesense' do
-  version :latest
-  sha256 :no_check
+  version '1.2'
+  sha256 '248ea7eb6784c396231a27da34fbb02a4ab153e2f764388e6d640b8b9f097f51'
 
   url 'https://apps.inspira.io/updates/bluesense.zip'
+  appcast 'https://apps.inspira.io/updates/bluesense-appcast.xml'
   name 'BlueSense'
   homepage 'https://apps.inspira.io/bluesense/'
 
