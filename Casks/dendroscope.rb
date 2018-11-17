@@ -19,6 +19,6 @@ cask 'dendroscope' do
   end
 
   caveats do
-    depends_on java: ['11', 'openjdk 11']
+    depends_on_java 
   end
 end
