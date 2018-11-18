@@ -11,7 +11,5 @@ cask 'gray' do
   name 'Gray'
   homepage 'https://github.com/zenangst/Gray'
 
-  depends_on macos: '>= :mojave'
-
   app 'Gray.app'
 end
