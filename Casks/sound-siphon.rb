@@ -4,6 +4,7 @@ cask 'sound-siphon' do
 
   # staticz.net was verified as official when first introduced to the cask
   url "http://staticz.net/downloads/SoundSiphon_#{version}.dmg"
+  appcast "http://staticz.net/updates/soundsiphon#{version.major}.rss"
   name 'SoundSiphon'
   homepage 'https://staticz.com/soundsiphon/'
 
