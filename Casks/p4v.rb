@@ -13,6 +13,20 @@ cask 'p4v' do
   app 'p4admin.app'
   app 'p4merge.app'
   binary 'p4vc'
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  p4_wrapper = "#{staged_path}/p4.wrapper.sh"
+  binary p4_wrapper, target: 'p4v'
+  binary p4_wrapper, target: 'p4admin'
+  binary p4_wrapper, target: 'p4merge'
+
+  preflight do
+    IO.write p4_wrapper, <<~EOS
+      #!/bin/bash
+      set -euo pipefail
+      COMMAND=$(basename "$0")
+      exec "#{appdir}/${COMMAND}.app/Contents/MacOS/${COMMAND}" $@ 2> /dev/null
+    EOS
+  end
 
   zap trash: [
                '~/Library/Preferences/com.perforce.p4v',
