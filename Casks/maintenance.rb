@@ -22,9 +22,12 @@ cask 'maintenance' do
   elsif MacOS.version == :sierra
     version '2.3.0'
     sha256 '8fde91742126d10234451a3c973461f5d84c771e52c6ee14aff93f1d66a0dbca'
+  elsif MacOS.version == :high_sierra
+    version '2.3.0'
+    sha256 '94c7a322d4d796afc5e52534f3564a562240d9c0ec0a60de210e68372fef2137'
   else
     version '2.4.6'
-    sha256 '94c7a322d4d796afc5e52534f3564a562240d9c0ec0a60de210e68372fef2137'
+    sha256 '94b439175513c4bab5d61c0d567f5998c69ddbf068bed68ce6c2d005a598c14f'
   end
 
   url "https://www.titanium-software.fr/download/#{macos_release}/Maintenance.dmg"
