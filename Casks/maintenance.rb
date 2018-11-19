@@ -1,6 +1,4 @@
 cask 'maintenance' do
-  macos_release = MacOS.version.to_s.delete('.')
-
   if MacOS.version == :snow_leopard
     version '1.4.1'
     sha256 '91404f8f60b1950ee2b84e66e9c22bdf23760dacfcfd1bc76110976f1377faae'
@@ -26,11 +24,11 @@ cask 'maintenance' do
     version '2.4.2'
     sha256 '94c7a322d4d796afc5e52534f3564a562240d9c0ec0a60de210e68372fef2137'
   else
-    version '2.4.6'
+    version '2.4.7'
     sha256 '94b439175513c4bab5d61c0d567f5998c69ddbf068bed68ce6c2d005a598c14f'
   end
 
-  url "https://www.titanium-software.fr/download/#{macos_release}/Maintenance.dmg"
+  url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete('.')}/Maintenance.dmg"
   appcast 'https://www.titanium-software.fr/en/release_maintenance.html'
   name 'Maintenance'
   homepage 'https://www.titanium-software.fr/en/maintenance.html'

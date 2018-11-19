@@ -7,6 +7,7 @@ cask 'the-clock' do
   name 'The Clock'
   homepage 'https://seense.com/the_clock/'
 
+  auto_updates true
   depends_on macos: '>= :yosemite'
 
   app 'The Clock.app'
