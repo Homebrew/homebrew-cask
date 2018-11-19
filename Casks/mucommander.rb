@@ -8,7 +8,9 @@ cask 'mucommander' do
   name 'muCommander'
   homepage 'https://www.mucommander.com/'
 
-  depends_on java: '1.8'
-
   app 'muCommander.app'
+
+  caveats do
+    depends_on_java '8'
+  end
 end
