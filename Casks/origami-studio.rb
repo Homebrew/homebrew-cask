@@ -8,5 +8,7 @@ cask 'origami-studio' do
   name 'Origami Studio'
   homepage 'https://origami.design/'
 
+  depends_on macos: '>= 10.12'
+
   app 'Origami Studio.app'
 end
