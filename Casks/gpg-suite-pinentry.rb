@@ -95,20 +95,13 @@ cask 'gpg-suite-pinentry' do
                  },
                ]
 
-  uninstall pkgutil: 'org.gpgtools.pinentry*',
+  uninstall pkgutil: 'org.gpgtools.pinentry.*',
             quit:    'org.gpgtools.pinentry-mac',
             delete:  '/usr/local/MacGPG2'
 
-  zap trash: ['~/Library/Preferences/org.gpgtools.common.plist']
+  zap trash: '~/Library/Preferences/org.gpgtools.common.plist'
 
   caveats do
     files_in_usr_local
-    <<~EOS
-      You can now set this as your pinentry program by adding the following line to ~/.gnupg/gpg-agent.conf:
-        pinentry-program /usr/local/MacGPG2/libexec/pinentry-mac.app/Contents/MacOS/pinentry-mac
-
-      The "Save in Keychain" option is enabled by default, it can be disabled with the following command:
-        defaults write org.gpgtools.common UseKeychain -bool false
-    EOS
   end
 end
