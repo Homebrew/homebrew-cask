@@ -4,7 +4,7 @@ cask 'sound-siphon' do
 
   # staticz.net was verified as official when first introduced to the cask
   url "http://staticz.net/downloads/SoundSiphon_#{version}.dmg"
-  appcast '/Users/julian/Library/Caches/Homebrew/downloads/8d687f4f2'
+  appcast 'http://staticz.net/updates/soundsiphon3.rss'
   name 'SoundSiphon'
   homepage 'https://staticz.com/soundsiphon/'
 
