@@ -8,8 +8,8 @@ cask 'istumbler' do
     sha256 '71f6a6b0e255a853664ed4900835a42f2d23dcb05de35acfb3ac2ec1c5fb2edc'
     url "https://istumbler.net/downloads/istumbler-#{version}.dmg"
   else
-    version '103.36'
-    sha256 '347d6a871cd995a394c4934d05fdf2ed802b28caf7b77ad1f229ac1a4e8cf893'
+    version '103.40'
+    sha256 '9d0021cfb79b00d31d3551ec5f50c7439354d0bc449a14859b46956f6bb1a9fb'
     url "https://istumbler.net/downloads/istumbler-#{version}.dmg"
   end
 
