@@ -1,8 +1,8 @@
 cask 'docker' do
-  version '18.06.1-ce-mac73,26764'
+  version '18.09.0-ce,4d60db4'
   sha256 '3429eac38cf0d198039ad6e1adce0016f642cdb914a34c67ce40f069cdb047a5'
 
-  url "https://download.docker.com/mac/stable/#{version.after_comma}/Docker.dmg"
+  url 'https://download.docker.com/mac/stable/Docker.dmg'
   appcast 'https://download.docker.com/mac/stable/appcast.xml'
   name 'Docker Community Edition'
   name 'Docker CE'
