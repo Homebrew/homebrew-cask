@@ -4,7 +4,7 @@ cask 'drjava' do
 
   url 'https://sourceforge.net/projects/drjava/files/latest/download'
   name 'DrJava'
-  homepage 'http://www.drjava.org/'
+  homepage 'https://sourceforge.net/p/drjava'
 
   app 'drjava.jar'
 end
