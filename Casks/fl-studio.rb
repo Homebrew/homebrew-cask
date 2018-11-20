@@ -1,9 +1,9 @@
 cask 'fl-studio' do
   version '20.0.99.123'
-  sha256 'b84de41ab59d98f3cc61e0d79a1e22c6f29f5cafbf3e8729a74a754f3aff9f15'
+  sha256 '53166826d25940684e0dc66d8217cfa38820f760ea180b3778a73571c6517d30'
 
-  url "http://demodownload.image-line.com/flstudio/flstudio_mac_#{version}.dmg"
-  name 'FL Studio'
+  url "https://support.image-line.com/redirect/flstudio#{version.major}_mac_installer"
+  name 'FL Studio 20'
   homepage 'https://www.image-line.com/flstudio/'
 
   pkg 'Install FL Studio.pkg'
