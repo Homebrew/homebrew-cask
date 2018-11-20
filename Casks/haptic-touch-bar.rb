@@ -8,5 +8,7 @@ cask 'haptic-touch-bar' do
   name 'Haptic Touch Bar'
   homepage 'https://www.haptictouchbar.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Haptic Touch Bar.app'
 end
