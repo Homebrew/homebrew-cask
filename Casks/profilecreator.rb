@@ -7,5 +7,7 @@ cask 'profilecreator' do
   name 'ProfileCreator'
   homepage 'https://github.com/erikberglund/ProfileCreator'
 
+  depends_on macos: '>= :sierra'
+
   app 'ProfileCreator.app'
 end
