@@ -8,6 +8,7 @@ cask 'paw' do
   homepage 'https://paw.cloud/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Paw.app'
 
