@@ -7,5 +7,7 @@ cask 'macpilot' do
   name 'MacPilot'
   homepage 'https://www.koingosw.com/products/macpilot/'
 
+  depends_on macos: '>= :sierra'
+
   app 'MacPilot.app'
 end
