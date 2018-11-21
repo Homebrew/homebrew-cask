@@ -3,6 +3,7 @@ cask 'parallels' do
   sha256 '74a286c18a5bc62496a7b841a453a68082a398de3b952f0c46a2bf7a67aaa7ec'
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
+  appcast 'https://kb.parallels.com/eu/124521'
   name 'Parallels Desktop'
   homepage 'https://www.parallels.com/products/desktop/'
 
