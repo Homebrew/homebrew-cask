@@ -5,7 +5,8 @@ cask 'birdfont' do
   else
     version '3.16.0'
     sha256 '43a9ef571cae34b9f8f3b4f5e2846472d5dce2dc8297dad76c358f4966f50502'
-end
+  end
+
   url "https://birdfont.org/download/birdfont-#{version}-free.dmg"
   name 'BirdFont'
   homepage 'https://birdfont.org/'
