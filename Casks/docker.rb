@@ -9,7 +9,7 @@ cask 'docker' do
   homepage 'https://www.docker.com/community-edition'
 
   auto_updates true
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :sierra'
 
   app 'Docker.app'
 
