@@ -1,12 +1,12 @@
 cask 'sdformatter' do
-  version '0.5.0.0'
-  sha256 '4dba087a5a639d12b9e34666834c1b9f09914e92dc0aec20bd9f43e2fffb1ba9'
+  version '5.0.1'
+  sha256 'dc40dd0c7c55a0ddb76af1fce84efc8993ac810b3d554e6e2228c9c6bb8a3544'
 
-  url "https://www.sdcard.org/downloads/formatter_4/eula_mac/InstallSD_CardFormatter#{version.no_dots}.mpkg"
+  url "https://www.sdcard.org/downloads/formatter_4/eula_mac/SDCardFormatterv#{version.major}_Mac.zip"
   name 'SD Formatter'
   homepage 'https://www.sdcard.org/'
 
-  pkg "InstallSD_CardFormatter#{version.no_dots}.mpkg"
+  pkg "SDCardFormatterv#{version.major}_Mac/Install SD Card Formatter #{version}.mpkg"
 
   uninstall pkgutil: 'com.tuxera.pkg.SD_Card_Formatter'
 
