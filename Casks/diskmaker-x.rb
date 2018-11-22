@@ -1,6 +1,6 @@
 cask 'diskmaker-x' do
-  version '8.0.1'
-  sha256 'd541ece9cae7d6e46fe707132db55bf35b651082eb8694e6c6d6cc380c8cb977'
+  version '8.0.2'
+  sha256 'b63537c31faa49e8a3f850d86d93a7185fcbf50ff50d242a8ff79fb748b9374e'
 
   url "https://diskmakerx.com/downloads/DiskMaker_X_#{version.no_dots}.dmg"
   appcast 'https://diskmakerx.com/feed/'
