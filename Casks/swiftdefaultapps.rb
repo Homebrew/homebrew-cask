@@ -1,4 +1,4 @@
-cask 'swiftdefaultapps' do
+cask 'swiftdefaultappsprefpane' do
   version '1.1.3'
   sha256 '240c97148580cca3ce256dd185346d1d31b36f4116c97273b3ab6a0d0f7d974b'
 
