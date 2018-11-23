@@ -10,7 +10,7 @@ cask 'gpg-suite-pinentry' do
   auto_updates true
   conflicts_with cask: [
                          'gpg-suite',
-                         'gpg-suite-nightly'
+                         'gpg-suite-nightly',
                        ]
   depends_on macos: '>= :sierra'
 
