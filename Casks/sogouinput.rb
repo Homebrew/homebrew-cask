@@ -7,7 +7,7 @@ cask 'sogouinput' do
   name '搜狗输入法'
   homepage 'https://pinyin.sogou.com/mac/'
 
-  installer manual: 'sogou_mac_50.app'
+  installer manual: "sogou_mac_#{version.before_comma}.app"
 
   uninstall delete:    [
                          '/Library/Input Methods/SogouInput.app',
