@@ -1,6 +1,6 @@
 cask 'amazon-workspaces' do
-  version '2.4.10'
-  sha256 '0ba1895985bfd45333ecaa20fc4b516ffc019e62d950a4dc4f35cf2e0f71777b'
+  version '2.5.0'
+  sha256 '2e185ad524b1e80013b30cff48cab118cb9c71b946bc5587784efdb7866152a5'
 
   # d2td7dqidlhjx7.cloudfront.net was verified as official when first introduced to the cask
   url 'https://d2td7dqidlhjx7.cloudfront.net/prod/global/osx/WorkSpaces.pkg'
