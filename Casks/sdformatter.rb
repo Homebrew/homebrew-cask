@@ -1,6 +1,6 @@
 cask 'sdformatter' do
   version '5.0.1'
-  sha256 'dc40dd0c7c55a0ddb76af1fce84efc8993ac810b3d554e6e2228c9c6bb8a3544'
+  sha256 '0150d9e53a0811b51275196d4e80eed9c86c2ccd00abe1200769ccd31df6ad2a'
 
   url "https://www.sdcard.org/downloads/formatter_4/eula_mac/SDCardFormatterv#{version.major}_Mac.zip"
   name 'SD Formatter'
