@@ -8,5 +8,5 @@ cask 'dashlane' do
   name 'Dashlane'
   homepage 'https://www.dashlane.com/'
 
-  app 'Dashlane.app'
+  app 'Install Dashlane.app'
 end
