@@ -8,12 +8,12 @@ cask 'etcher' do
   name 'Etcher'
   homepage 'https://balena.io/etcher'
 
-  app 'Etcher.app'
+  app 'balenaEtcher.app'
 
   zap trash: [
-               '~/Library/Application Support/etcher',
-               '~/Library/Preferences/io.resin.etcher.helper.plist',
-               '~/Library/Preferences/io.resin.etcher.plist',
-               '~/Library/Saved Application State/io.resin.etcher.savedState',
+               '~/Library/Application Support/balena-etcher',
+               '~/Library/Preferences/io.balena.etcher.helper.plist',
+               '~/Library/Preferences/io.balena.etcher.plist',
+               '~/Library/Saved Application State/io.balena.etcher.savedState',
              ]
 end
