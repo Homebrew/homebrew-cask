@@ -11,4 +11,3 @@ cask 'dashlane' do
 
   app 'Dashlane.app'
 end
-
