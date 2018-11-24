@@ -7,5 +7,8 @@ cask 'dashlane' do
   name 'Dashlane'
   homepage 'https://www.dashlane.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Dashlane.app'
 end
+
