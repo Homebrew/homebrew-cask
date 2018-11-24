@@ -1,12 +1,12 @@
 cask 'etcher' do
-  version '1.4.6'
-  sha256 '753ecccfe4054823ddd4bc90cb64c27178b58aff4264ebe57dbbcafd9a166e46'
+  version '1.4.8'
+  sha256 'b2e4577dd50561cdbfd45540c0506acd67d362ba1a571e80974863cef2135d76'
 
-  # github.com/resin-io/etcher was verified as official when first introduced to the cask
-  url "https://github.com/resin-io/etcher/releases/download/v#{version}/Etcher-#{version}.dmg"
-  appcast 'https://github.com/resin-io/etcher/releases.atom'
+  # github.com/balena-io/etcher was verified as official when first introduced to the cask
+  url "https://github.com/balena-io/etcher/releases/download/v#{version}/balenaEtcher-#{version}.dmg"
+  appcast 'https://github.com/balena-io/etcher/releases.atom'
   name 'Etcher'
-  homepage 'https://etcher.io/'
+  homepage 'https://balena.io/etcher'
 
   app 'Etcher.app'
 
