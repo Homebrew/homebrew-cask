@@ -7,7 +7,7 @@ cask 'smartsvn' do
   name 'SmartSVN'
   homepage 'https://www.smartsvn.com/'
 
-  app "SmartSVN #{version.major_minor}.app"
+  app "SmartSVN #{version.major}.app"
 
   zap trash: [
                '~/Library/Preferences/com.syntevo.smartsvn.plist',
