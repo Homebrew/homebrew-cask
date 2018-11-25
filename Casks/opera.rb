@@ -9,4 +9,10 @@ cask 'opera' do
   auto_updates true
 
   app 'Opera.app'
+
+  zap trash: [
+    '~/Library/Application Support/com.operasoftware.Opera'
+    '~/Library/Caches/com.operasoftware.Opera'
+    '~/Library/Saved Application State/com.operasoftware.Opera.savedState'
+  ]
 end
