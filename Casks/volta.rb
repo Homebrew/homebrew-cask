@@ -2,9 +2,9 @@ cask 'volta' do
   version :latest
   sha256 :no_check
 
-  url 'http://volta.garymathews.com/Volta.dmg'
+  url 'https://volta.garymathews.com/Volta.dmg'
   name 'Volta'
-  homepage 'http://volta.garymathews.com/'
+  homepage 'https://volta.garymathews.com/'
 
   depends_on macos: '>= :yosemite'
 
