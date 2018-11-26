@@ -10,6 +10,4 @@ cask 'bowser' do
   app 'Bowser.app'
 
   zap trash: '~/.config/bowser'
-
-  caveats "Please see #{homepage} in order to get started with configuration."
 end
