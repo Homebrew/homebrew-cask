@@ -1,6 +1,6 @@
 cask 'bonitastudiocommunity' do
-  version '7.7.0'
-  sha256 'f06550bc218c0b1410c2aa00a546093474aa149badee996eec9160e61f2a5558'
+  version '7.7.1'
+  sha256 '9f6679f9bdb1a3d853cd519e9eade72ac531faabfae92c38e8d9fe52dd832f12'
 
   # download.forge.ow2.org was verified as official when first introduced to the cask
   url "https://download.forge.ow2.org/bonita/BonitaStudioCommunity-#{version}-x86_64.dmg"
