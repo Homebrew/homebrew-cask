@@ -9,5 +9,5 @@ cask 'platypus' do
 
   auto_updates true
 
-  app "Platypus-#{version}/Platypus.app"
+  app 'Platypus.app'
 end
