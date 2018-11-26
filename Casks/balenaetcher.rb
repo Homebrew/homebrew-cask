@@ -1,4 +1,4 @@
-cask 'etcher' do
+cask 'balenaetcher' do
   version '1.4.8'
   sha256 'b2e4577dd50561cdbfd45540c0506acd67d362ba1a571e80974863cef2135d76'
 
