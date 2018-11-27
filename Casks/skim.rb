@@ -8,10 +8,17 @@ cask 'skim' do
   name 'Skim'
   homepage 'https://skim-app.sourceforge.io/'
 
+  auto_updates true
+
   app 'Skim.app'
   binary "#{appdir}/Skim.app/Contents/SharedSupport/displayline"
   binary "#{appdir}/Skim.app/Contents/SharedSupport/skimnotes"
   binary "#{appdir}/Skim.app/Contents/SharedSupport/skimpdf"
 
-  zap trash: '~/Library/Preferences/net.sourceforge.skim-app.skim.plist'
+  zap trash: [
+               '~/Library/Preferences/net.sourceforge.skim-app.skim.plist',
+               '~/Library/Preferences/net.sourceforge.skim-app.skim.bookmarks.plist',
+               '~/Library/Caches/net.sourceforge.skim-app.skim',
+               '~/Library/Cookies/net.sourceforge.skim-app.skim.binarycookies',
+             ]
 end
