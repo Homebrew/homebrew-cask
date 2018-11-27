@@ -3,6 +3,7 @@ cask 'blue-jeans' do
   sha256 'fc95742ddbd3814c203d691052792db5c75fbeba7c354195837338cffd09606d'
 
   url "https://swdl.bluejeans.com/desktop-app/mac/#{version.major_minor_patch}/#{version}/BlueJeansInstaller.dmg"
+  appcast 'https://www.bluejeans.com/downloads'
   name 'Blue Jeans videoconferencing'
   homepage 'https://www.bluejeans.com/'
 
