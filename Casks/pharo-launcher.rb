@@ -4,7 +4,7 @@ cask 'pharo-launcher' do
 
   url "https://files.pharo.org/pharo-launcher/#{version}/PharoLauncher-#{version}-x64.dmg"
   name 'Pharo Launcher'
-  homepage 'http://pharo.org/download'
+  homepage 'https://pharo.org/download'
 
   app 'PharoLauncher.app'
 end

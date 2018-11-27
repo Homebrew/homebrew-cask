@@ -6,7 +6,7 @@ cask 'spectrum' do
   url "https://github.com/withspectrum/spectrum/releases/download/v#{version}/Spectrum-#{version}-mac.zip"
   appcast 'https://github.com/withspectrum/spectrum/releases.atom'
   name 'Spectrum'
-  homepage 'http://spectrum.chat/'
+  homepage 'https://spectrum.chat/'
 
   app 'Spectrum.app'
 end

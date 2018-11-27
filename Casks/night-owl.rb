@@ -4,7 +4,7 @@ cask 'night-owl' do
 
   # aki-null.net was verified as official when first introduced to the cask
   url 'https://aki-null.net/yf/NightOwl.zip'
-  appcast 'http://sites.google.com/site/yorufukurou/distribution/appcast.xml'
+  appcast 'https://sites.google.com/site/yorufukurou/distribution/appcast.xml'
   name 'NightOwl'
   name 'YoruFukurou'
   homepage 'https://sites.google.com/site/yorufukurou/home-en'

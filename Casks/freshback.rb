@@ -2,9 +2,9 @@ cask 'freshback' do
   version :latest
   sha256 :no_check
 
-  url 'http://arkanath.com/FreshBackMac/FreshBackMac.zip'
+  url 'https://arkanath.com/FreshBackMac/FreshBackMac.zip'
   name 'FreshBackMac'
-  homepage 'http://arkanath.com/FreshBackMac/'
+  homepage 'https://arkanath.com/FreshBackMac/'
 
   app 'FreshBackMac.app'
 end

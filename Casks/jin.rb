@@ -6,7 +6,7 @@ cask 'jin' do
   url "https://downloads.sourceforge.net/jin/jin/jin-#{version}/jin-#{version}-macosx-lion.dmg"
   appcast 'https://sourceforge.net/projects/jin/rss?path=/jin'
   name 'Jin'
-  homepage 'http://www.jinchess.com/'
+  homepage 'https://www.jinchess.com/'
 
   app 'Jin.app'
 end

@@ -5,7 +5,7 @@ cask 'slic3r' do
   url "https://dl.slic3r.org/mac/slic3r-#{version}.dmg"
   appcast 'https://dl.slic3r.org/mac/'
   name 'Slic3r'
-  homepage 'http://slic3r.org/'
+  homepage 'https://slic3r.org/'
 
   conflicts_with cask: 'prusa-slic3r'
 

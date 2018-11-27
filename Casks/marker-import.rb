@@ -4,7 +4,7 @@ cask 'marker-import' do
 
   # digitalrebellion.com was verified as official when first introduced to the cask
   url "https://www.digitalrebellion.com/download/markerimport?version=#{version.no_dots}"
-  appcast 'http://www.digitalrebellion.com/rss/appcasts/cnmi_appcast.xml'
+  appcast 'https://www.digitalrebellion.com/rss/appcasts/cnmi_appcast.xml'
   name 'Kollaborate Marker Import'
   homepage 'https://www.kollaborate.tv/resources'
 
