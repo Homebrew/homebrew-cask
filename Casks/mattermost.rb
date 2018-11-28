@@ -1,6 +1,6 @@
 cask 'mattermost' do
-  version '4.1.2'
-  sha256 '1320be7402b330bbccf6fbac5eecadedb4c92b420743c6d8548534a636b335e8'
+  version '4.2.0'
+  sha256 '04643630aa9801cb12252960118f65a5c742100f5bcef51d9db4461ab076584c'
 
   url "https://releases.mattermost.com/desktop/#{version}/mattermost-desktop-#{version}-mac.zip"
   appcast 'https://github.com/mattermost/desktop/releases.atom'
