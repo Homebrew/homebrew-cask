@@ -1,6 +1,6 @@
 cask 'opensim' do
-  version '0.4.1'
-  sha256 '64660977c64940be0c541eb0457c5c9c467ec7a75914f64462969b4d9bc9ed94'
+  version '0.4.2'
+  sha256 'ef86b5fec6fde94adfd8d35c7f72ba8549ebd18f200169e9ed1bcc67aedfeae1'
 
   url "https://github.com/luosheng/OpenSim/releases/download/#{version}/OpenSim.app.zip"
   appcast 'https://github.com/luosheng/OpenSim/releases.atom'
