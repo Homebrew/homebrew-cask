@@ -1,6 +1,6 @@
 cask 'vagrant-vmware-utility' do
-  version '1.0.5'
-  sha256 'b50c60b65eeee4dad54526694175efea6a65a968bcaba5f14746d31800a71efc'
+  version '1.0.6'
+  sha256 '0a7cedef020441df70b05f25c540420f31d73568d4b1381d64ecb804da8866bd'
 
   # releases.hashicorp.com/vagrant-vmware-utility was verified as official when first introduced to the cask
   url "https://releases.hashicorp.com/vagrant-vmware-utility/#{version}/vagrant-vmware-utility_#{version}_x86_64.dmg"
