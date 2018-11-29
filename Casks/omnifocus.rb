@@ -25,6 +25,8 @@ cask 'omnifocus' do
   name 'OmniFocus'
   homepage 'https://www.omnigroup.com/omnifocus/'
 
+  auto_updates true
+
   app 'OmniFocus.app'
 
   uninstall quit: "com.omnigroup.OmniFocus#{version.major}"
