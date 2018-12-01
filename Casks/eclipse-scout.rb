@@ -1,6 +1,6 @@
 cask 'eclipse-scout' do
-  version '4.7.3a,oxygen:3a'
-  sha256 '98d244b15a7cec11e2a703f2fb6c5ab1a7595d87b20aa192bf641500b9380dc0'
+  version '4.8.0,photon:R'
+  sha256 '978770a15f12c25978575993285bb1d1c0ceadfbc52dbcae3b2d03586ea189fe'
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-scout-#{version.after_comma.before_colon}-#{version.after_colon}-macosx-cocoa-x86_64.dmg&r=1"
   name 'Eclipse for Scout Developers'
