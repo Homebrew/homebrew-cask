@@ -7,9 +7,4 @@ cask 'selflanguage-self-control' do
   homepage 'http://www.selflanguage.org/'
 
   app 'Self Control.app'
-  binary 'Clean.snap', target: '/Users/Shared/Self/Clean.snap'
-
-  caveats <<~EOS
-    A clean snapshot is available in /Users/Shared/Self/Clean.snap
-  EOS
 end
