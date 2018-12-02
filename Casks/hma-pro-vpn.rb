@@ -1,6 +1,6 @@
 cask 'hma-pro-vpn' do
-  version '3.2.11.2'
-  sha256 '77ef3863352702697052dbbec5eff6087a5e2b5f18bde70827e98be748628978'
+  version '3.3.0.3'
+  sha256 '7ace9037ff1e531dd501633a330d659651b03e9424b73e679577ffb6476b677c'
 
   # d1llq9kjmh5kle.cloudfront.net/HMA-Pro-VPN-macOS- was verified as official when first introduced to the cask
   url "https://d1llq9kjmh5kle.cloudfront.net/HMA-Pro-VPN-macOS-#{version}.dmg"
