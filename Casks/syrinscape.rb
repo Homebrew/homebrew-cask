@@ -1,6 +1,6 @@
 cask 'syrinscape' do
   version '1.3.7-20180730'
-  sha256 'e5f49aae95968689400c72e03156790f8d49b49585979a230de573044fbbcb05'
+  sha256 'cff21438b856171fa8f1b7f7fea670535366060338af4483dde41dfb4cc6982e'
 
   url "https://syrinscape.com/get-download/syrinscape-mac-#{version}?type=mac&version=#{version}"
   name 'Syrinscape Fantasy Player'
