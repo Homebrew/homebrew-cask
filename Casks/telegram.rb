@@ -3,7 +3,7 @@ cask 'telegram' do
   sha256 '3f7c1b5b75a9b563f3a3fab218cc34057253d21d2265569c0f03a10a086830af'
 
   url "https://macos.telegram.org/updates/Telegram-#{version}.app.zip"
-  appcast 'https://macos.telegram.org/updates/versions.xml'
+  appcast 'https://osx.telegram.org/updates/versions.xml'
   name 'Telegram for macOS'
   homepage 'https://macos.telegram.org/'
 
