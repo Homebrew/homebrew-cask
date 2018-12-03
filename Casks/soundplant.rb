@@ -1,12 +1,12 @@
 cask 'soundplant' do
-  version '45'
-  sha256 '2e7ed3a944f6b988e059272e4ea17d9e2453732e90692f03b3f7507ee64b0190'
+  version '47.1.2'
+  sha256 '802c8fdc66d7c8891a65ea244cc77bb00584e59b0a875d58c780cd99789cfa75'
 
-  url "https://soundplant.org/downloads/Soundplant#{version}.dmg"
+  url "https://soundplant.org/downloads/Soundplant#{version.major}.dmg"
   name 'Soundplant'
   homepage 'https://soundplant.org/'
 
-  app "Soundplant #{version}.app"
+  app "Soundplant #{version.major}.app"
 
   zap trash: [
                '~/Library/Application Support/Soundplant',
