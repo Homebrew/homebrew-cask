@@ -4,8 +4,8 @@ cask 'seashore' do
 
   # The following is a fork of the original Seashore (hosted on SourceForge) based on the original source code
   # A fork was included in place of the original project since the original project is unmaintained
-  url 'https://github.com/robaho/seashore/releases/download/v0.6.5/seashore-bin-0.6.5.dmg'
-  appcast 'https://github.com/robaho/seashore/releases'
+  url "https://github.com/robaho/seashore/releases/download/v#{version}/seashore-bin-#{version}.dmg"
+  appcast 'https://github.com/robaho/seashore/releases.atom'
   name 'Seashore'
   homepage 'https://github.com/robaho/seashore'
 
