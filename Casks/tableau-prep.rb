@@ -15,7 +15,7 @@ cask 'tableau-prep' do
                        'simba.sparkodbc',
                        'com.simba.sparkodbc',
                        'com.simba.sqlserverodbc',
-                       'com.tableausoftware.maestro.app',
+                       'com.tableausoftware.Maestro.app',
                        'com.tableausoftware.desktopShortcut',
                        'com.tableausoftware.telemetry',
                        'com.tableausoftware.FLEXNet.11.*',
