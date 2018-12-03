@@ -1,4 +1,4 @@
-cask 'beersmith3' do
+cask 'beersmith' do
   version '3.0.8'
   sha256 'ac9033f214e1f3879acefe37b01698e904ad25d2b7947c7263dd5e97f13567bb'
 
