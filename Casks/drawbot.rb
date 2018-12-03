@@ -1,6 +1,6 @@
 cask 'drawbot' do
-  version '3.116'
-  sha256 '81aa59361b9525e0bfaada902bccbd95e524952f52bbb8bd7d3971bca1894e7a'
+  version '3.117'
+  sha256 '2df0165493463a1057525cf97fb8e2df89374082d53f180958a745936aa86607'
 
   # typemytype.com/drawBot was verified as official when first introduced to the cask
   url 'https://static.typemytype.com/drawBot/DrawBot.dmg'
