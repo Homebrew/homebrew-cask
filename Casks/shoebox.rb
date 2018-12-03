@@ -4,6 +4,7 @@ cask 'shoebox' do
 
   # amazonaws.com/couch-downloads was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/couch-downloads/shoebox/mac/Shoebox%20v#{version}.zip"
+  appcast 'https://s3.amazonaws.com/couch-downloads/shoebox/mac/appcast2.xml'
   name 'Shoebox'
   homepage 'https://shoeboxapp.com/'
 
