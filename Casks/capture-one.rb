@@ -6,5 +6,7 @@ cask 'capture-one' do
   name 'Capture One'
   homepage 'https://www.phaseone.com/en/Products/Software/Capture-One-Pro/Whats-new.aspx'
 
+  depends_on macos: '>= :sierra'
+
   app "Capture One #{version.major}.app"
 end
