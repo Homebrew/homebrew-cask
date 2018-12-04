@@ -1,6 +1,6 @@
 cask 'bisq' do
-  version '0.8.0'
-  sha256 '897c569891d7c6ea1e38c25aad1a62d0b9551abed6c600f16395134e19826990'
+  version '0.9.0'
+  sha256 '4a344c9759889a364b60ca35b8b577284548bb0f866d70bafd29bf452251bc3e'
 
   # github.com/bisq-network/bisq-desktop was verified as official when first introduced to the cask
   url "https://github.com/bisq-network/bisq-desktop/releases/download/v#{version}/Bisq-#{version}.dmg"
