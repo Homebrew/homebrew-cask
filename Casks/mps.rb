@@ -1,6 +1,6 @@
 cask 'mps' do
-  version '2018.2.6,182.1603'
-  sha256 'f84cbaf0fc8b8c49d95a4bc5502cb4e88cc8f6f85da065f8d048424a96aebb73'
+  version '2018.3,183.1458'
+  sha256 '9adece8b49926dbe36e3a9dc48459c3859cd069c62932e4e8372566b20c391ac'
 
   url "https://download.jetbrains.com/mps/#{version.before_comma.major_minor}/MPS-#{version.before_comma}-macos-jdk-bundled.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=MPS&latest=true&type=release'
