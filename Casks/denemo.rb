@@ -4,7 +4,7 @@ cask 'denemo' do
 
   url "http://denemo.org/downloads/denemo-#{version}-darwin-x64.tar.bz2"
   name 'Denemo'
-  homepage 'http://denemo.org'
+  homepage 'http://denemo.org/'
 
   app 'Denemo.app'
 end
