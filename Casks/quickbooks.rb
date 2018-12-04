@@ -7,5 +7,7 @@ cask 'quickbooks' do
   name 'QuickBooks Desktop'
   homepage 'https://quickbooks.intuit.com/mac/'
 
+  depends_on macos: '>= :sierra'
+
   app "QuickBooks #{version}.app"
 end
