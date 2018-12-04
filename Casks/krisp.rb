@@ -1,6 +1,6 @@
 cask 'krisp' do
-  version '0.5.7'
-  sha256 '5a43643864c30191dfafd2d17bf941cd049124146562f27be1bafc56421809b4'
+  version '0.6.8'
+  sha256 '3bb1e8f497dd8e1d3e021352765c8f49efd8dfe9b592eee7ed52c122288b497b'
 
   url "https://cdn.krisp.ai/installer/release/krisp_#{version}.pkg"
   name 'Krisp'
