@@ -2,7 +2,8 @@ cask 'rpvoip' do
   version :latest
   sha256 :no_check
 
-  url 'https://www.intercall.com/downloads/rpvoip_mac.pkg'
+  # shop.west.com/downloads/ was verified as official when first introduced to the cask
+  url 'https://shop.west.com/downloads/rpvoip_mac.pkg'
   name 'RPVoIP'
   homepage 'https://www.intercall.com/'
 
