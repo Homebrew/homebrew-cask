@@ -1,6 +1,6 @@
 cask 'silo' do
-  version '2.5.6b'
-  sha256 'e50cbcf455906504fce52b3f2086145effa1395841122d2aefe8ea756f9f00fb'
+  version '2.5.6'
+  sha256 'c0c0075fc410ec6ca2fad349a75c8040b5f24f1fa96b0fbb0953d1d6e2264e55'
 
   url "https://nevercenter.com/silo/download_file/filearchive/Install_Silo_#{version.dots_to_underscores}_mac.dmg"
   appcast 'https://nevercenter.com/silo/release_notes/'
