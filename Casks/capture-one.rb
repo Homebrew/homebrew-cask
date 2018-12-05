@@ -4,7 +4,9 @@ cask 'capture-one' do
 
   url "http://downloads.phaseone.com/e7f45a0e-447c-4878-84fb-bca6db2de475/International/CaptureOne.Mac.#{version}.dmg"
   name 'Capture One'
-  homepage 'https://www.phaseone.com/en/Products/Software/Capture-One-Pro/Whats-new.aspx'
+  homepage 'https://www.phaseone.com/en/Capture-One.aspx'
+
+  depends_on macos: '>= :sierra'
 
   app "Capture One #{version.major}.app"
 end
