@@ -1,6 +1,6 @@
 cask 'jungle-disk-workgroup' do
-  version '3.30.1'
-  sha256 'fe6f76a675d3a5fde061d615eafd8b31e085d597604c2f5381323e4fa734ced1'
+  version '3.23.0'
+  sha256 'd5b65092ecab6c321de4dfd13f6c2040910438f65d5453ff8b43df9eed787036'
 
   url "https://downloads.jungledisk.com/jungledisk/JungleDiskWorkgroup#{version.no_dots}.dmg"
   appcast 'https://www.jungledisk.com/downloads/'
