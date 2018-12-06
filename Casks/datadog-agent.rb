@@ -12,7 +12,7 @@ cask 'datadog-agent' do
 
   preflight do
     require 'etc'
-    File.open('/tmp/datadog-install-user', 'w') { |f| f.write(Etc.getlogin) }
+    File.write('/tmp/datadog-install-user', Etc.getlogin)
   end
 
   uninstall launchctl: 'com.datadoghq.agent',
