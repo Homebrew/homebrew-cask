@@ -1,9 +1,10 @@
 cask 'datadog-agent' do
-  version '6.1.2-1'
-  sha256 'e2399cc9ddbf9f2ffecd32b48698857d1fd23cd504bd3527f0bb73c94d83542f'
+  version '6.6.0-1'
+  sha256 '7192d6ce534a34c47818de3535ef491306e26a339b0e6d7edd61112e607abe2c'
 
   # s3.amazonaws.com/dd-agent was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/dd-agent/datadog-agent-#{version}.dmg"
+  appcast 'https://github.com/DataDog/datadog-agent/releases.atom'
   name 'Datadog Agent'
   homepage 'https://www.datadoghq.com/'
 
@@ -11,10 +12,12 @@ cask 'datadog-agent' do
 
   preflight do
     require 'etc'
-    File.open('/tmp/datadog-install-user', 'w') { |f| f.write(Etc.getlogin) }
+    File.write('/tmp/datadog-install-user', Etc.getlogin)
   end
 
-  uninstall pkgutil: 'com.datadoghq.agent'
+  uninstall launchctl: 'com.datadoghq.agent',
+            delete:    '/Applications/Datadog Agent.app',
+            pkgutil:   'com.datadoghq.agent'
 
   zap trash: '/opt/datadog-agent'
 
