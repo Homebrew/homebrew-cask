@@ -6,8 +6,11 @@ cask 'jcryptool' do
   name 'JCrypTool'
   homepage 'https://www.cryptool.org/en/jcryptool'
 
-  depends_on cask: 'java8'
   depends_on arch: :x86_64
 
   app 'jcryptool.app'
+
+  caveats do
+    depends_on_java('8')
+  end
 end
