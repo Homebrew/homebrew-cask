@@ -7,7 +7,7 @@ cask 'airdisplay' do
   name 'Air Display'
   homepage 'https://avatron.com/applications/air-display/'
 
-  pkg 'Air Display Installer Signed.pkg'
+  pkg 'Air Display Installer.pkg'
 
   uninstall pkgutil: [
                        'com.avatron.pkg.AirDisplay',
