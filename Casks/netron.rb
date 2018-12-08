@@ -1,6 +1,6 @@
 cask 'netron' do
-  version '2.7.0'
-  sha256 'cc72f2391db910a3b6f05d87347e3e2f441869e4e60bb61cfb92cf820b25f175'
+  version '2.7.1'
+  sha256 '7aede7968d539d4f8b89add10506d4ec0ddfca142f895ee2376c5978d0f9eda4'
 
   url "https://github.com/lutzroeder/Netron/releases/download/v#{version}/Netron-#{version}-mac.zip"
   appcast 'https://github.com/lutzroeder/Netron/releases.atom'
