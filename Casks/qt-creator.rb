@@ -6,5 +6,7 @@ cask 'qt-creator' do
   name 'Qt Creator'
   homepage 'https://www.qt.io/developers/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Qt Creator.app'
 end
