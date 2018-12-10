@@ -5,7 +5,7 @@ cask 'doxygen' do
   url "http://doxygen.nl/files/Doxygen-#{version}.dmg"
   appcast 'http://www.doxygen.nl/manual/changelog.html'
   name 'Doxygen'
-  homepage 'http://www.doxygen.nl'
+  homepage 'http://www.doxygen.nl/'
 
   app 'Doxygen.app'
 end
