@@ -10,7 +10,7 @@ cask 'youdaonote' do
     sha256 'bb8dceba9d1be665d473294325434a3308f34768c488494cb9361193976040fb'
 
     # download.ydstatic.com/notewebsite/downloads was verified as official when first introduced to the cask
-    url 'http://download.ydstatic.com/notewebsite/downloads/YoudaoNote_mojave.dmg'
+    url 'https://download.ydstatic.com/notewebsite/downloads/YoudaoNote_mojave.dmg'
   end
 
   name 'YoudaoNote'
