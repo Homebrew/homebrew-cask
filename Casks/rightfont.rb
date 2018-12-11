@@ -1,9 +1,9 @@
 cask 'rightfont' do
-  version '4.10'
-  sha256 '9ff22c538b96cc928dca659abc63158be5f8b156c6fdef776392c0cbd6e2ab84'
+  version '5.2.3'
+  sha256 '203a9bb92c6e07e028bdeeab6758a9e05bb0bcd428b2b9c61d9ca8d3ee09e948'
 
-  url "https://rightfontapp.com/downloads/#{version}/rightfont.zip"
-  appcast 'https://rightfontapp.com/update/appcast.xml'
+  url 'https://rightfontapp.com/update/rightfont.zip'
+  appcast 'https://rightfontapp.com/update/appcast5.xml'
   name 'RightFont'
   homepage 'https://rightfontapp.com/'
 
