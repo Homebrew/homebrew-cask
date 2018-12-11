@@ -4,7 +4,7 @@ cask 'auristor-client' do
   if MacOS.version <= :el_capitan
     sha256 '55477dd0db061dd46e203cd81be5c13377a11005f142fe9d052702d1d4ea47fe'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.11/AuriStor-client-#{version}-ElCapitan.dmg"
-  elsif MacOS.version == :sierra
+  elsif MacOS.version <= :sierra
     sha256 'b0769ccf920f8af37b6789fe977f1798d1861b2a57ca93a8f10fe3ffbb37ff5d'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.12/AuriStor-client-#{version}-Sierra.dmg"
   else
