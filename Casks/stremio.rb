@@ -1,6 +1,6 @@
 cask 'stremio' do
-  version '4.4.21'
-  sha256 'a12e85e2e3798ca37ad0c60420d5d3b8b9f1524e0b51010d69cc757c612550d0'
+  version '4.4.25'
+  sha256 '385df67729d8ac7af2f1431b4adfdee91489152e8668687fa2c8e7b8814e6351'
 
   url "https://dl.strem.io/mac/v#{version}/Stremio+#{version}.dmg"
   appcast 'https://www.stremio.com/downloads'
