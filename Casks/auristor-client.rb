@@ -1,7 +1,7 @@
 cask 'auristor-client' do
   version '0.180'
 
-  if MacOS.version == :el_capitan
+  if MacOS.version <= :el_capitan
     sha256 '55477dd0db061dd46e203cd81be5c13377a11005f142fe9d052702d1d4ea47fe'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.11/AuriStor-client-#{version}-ElCapitan.dmg"
   elsif MacOS.version == :sierra
@@ -17,8 +17,6 @@ cask 'auristor-client' do
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
   depends_on macos: [
-                      :mavericks,
-                      :yosemite,
                       :el_capitan,
                       :sierra,
                       :high_sierra,
