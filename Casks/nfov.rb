@@ -1,6 +1,6 @@
 cask 'nfov' do
-  version '1.2.0'
-  sha256 'a11640d169a1b07dbaecc170aadb8ebea2bdc643bce79a8eb4aecd3b714ed581'
+  version '1.2.1'
+  sha256 'a65309bef5c56c3702b1c3ff86ad7e32d2504c24f0aefce89fb6ffad32d545e0'
 
   url "https://github.com/nrlquaker/nfov/releases/download/v#{version}/nfov-darwin-x64-#{version}.zip"
   appcast 'https://github.com/nrlquaker/nfov/releases.atom'
