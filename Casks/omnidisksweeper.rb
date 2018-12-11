@@ -22,4 +22,11 @@ cask 'omnidisksweeper' do
   homepage 'https://www.omnigroup.com/more/'
 
   app 'OmniDiskSweeper.app'
+
+  zap trash: [
+               '~/Library/Application Scripts/com.omnigroup.OmniSoftwareUpdate.OSUCheckService',
+               '~/Library/Containers/com.omnigroup.OmniSoftwareUpdate.OSUCheckService',
+               '~/Library/Preferences/com.omnigroup.OmniDiskSweeper.plist',
+               '~/Library/Preferences/com.omnigroup.OmniSoftwareUpdate.plist',
+             ]
 end
