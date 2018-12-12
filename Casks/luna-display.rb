@@ -5,7 +5,7 @@ cask 'luna-display' do
   url "https://s3.amazonaws.com/s3.lunadisplay.com/downloads/LunaDisplay-#{version}.zip"
   appcast 'https://s3.amazonaws.com/lunadisplay.com/downloads/sparkle.xml'
   name 'LunaDisplay'
-  homepage 'https://lunadisplay.com'
+  homepage 'https://lunadisplay.com/'
 
   depends_on macos: '>= :el_capitan'
 
@@ -14,9 +14,8 @@ cask 'luna-display' do
   uninstall quit: 'com.astro-hq.LunaDisplayMac'
 
   zap trash: [
-    '~/Library/Caches/com.astro-hq.LunaDisplayMac',
-    '~/Library/Preferences/com.astro-hq.LunaDisplayMac.plist',
-    '~/Library/Saved Application State/com.astro-hq.LunaDisplayMac.savedState',
-  ]
-
+               '~/Library/Caches/com.astro-hq.LunaDisplayMac',
+               '~/Library/Preferences/com.astro-hq.LunaDisplayMac.plist',
+               '~/Library/Saved Application State/com.astro-hq.LunaDisplayMac.savedState',
+             ]
 end
