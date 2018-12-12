@@ -6,5 +6,7 @@ cask 'snagit' do
   name 'Snagit'
   homepage 'https://www.techsmith.com/screen-capture.html'
 
+  depends_on macos: '>= :sierra'
+
   app "Snagit #{version}.app"
 end
