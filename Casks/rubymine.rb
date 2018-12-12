@@ -1,6 +1,6 @@
 cask 'rubymine' do
-  version '2018.3,183.4284.145'
-  sha256 'e83f62754dc3ebda485465bd045bf80ff8338e9acf3c46bf201b517a874ad71b'
+  version '2018.3.1,183.4588.71'
+  sha256 '9722e2c692838c276e0c5e71d2fbe3dfdb66e5bed47ebac8f7b894a01d1e0f80'
 
   url "https://download.jetbrains.com/ruby/RubyMine-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=RM&latest=true&type=release'
