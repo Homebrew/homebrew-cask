@@ -1,6 +1,6 @@
 cask 'marginnote' do
-  version '3.1.9002'
-  sha256 '3cdb46ac212f6a422c1004e7f101f392a3c5f26a14e9e37193a697f30aa745a1'
+  version '3.1.10'
+  sha256 'de63c95a23f8112ce34b1a4ca30bb422e4cce0d0c655f6c8d4d3de758030716c'
 
   # s3.amazonaws.com/marginnote-product/macapp was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/marginnote-product/macapp/MarginNote#{version.major}.dmg"
