@@ -9,5 +9,5 @@ cask 'rightfont' do
 
   depends_on macos: '>= :yosemite'
 
-  app 'RightFont.app'
+  app 'RightFont 5.app'
 end
