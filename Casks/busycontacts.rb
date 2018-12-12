@@ -1,6 +1,6 @@
 cask 'busycontacts' do
   version '1.3.1'
-  sha256 '7be2a61e524b29f9d3383c90cf1f33f24cd983dd301d8cd6a05a4de401c3b574'
+  sha256 '166488d7d7a2c81dbb6f7a24b6ae453f15c4ce46b68692b552e31c87d5c56808'
 
   url 'https://www.busymac.com/download/BusyContacts.zip'
   appcast 'https://www.busymac.com/busycontacts/releasenotes.html'

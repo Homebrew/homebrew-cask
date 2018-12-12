@@ -1,6 +1,6 @@
 cask 'kitematic' do
-  version '0.17.5'
-  sha256 'dd697ee05d520e9dbbddb6177ca66a84a02eceb863d24845d1f787d226036e9d'
+  version '0.17.6'
+  sha256 '827756c4b7de7b23b474aba12ed2b4a333d3a5f1b2fad5bc5819da405d72ed83'
 
   # github.com/docker/kitematic was verified as official when first introduced to the cask
   url "https://github.com/docker/kitematic/releases/download/v#{version}/Kitematic-#{version}-Mac.zip"

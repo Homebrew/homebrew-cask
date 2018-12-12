@@ -1,6 +1,6 @@
 cask 'nextcloud' do
-  version '2.5.0.20181112'
-  sha256 '5d416355da5ebff60015b5da0a5bceca17aad6640e82ce4308e6f847001cc48b'
+  version '2.5.1.20181204'
+  sha256 '503bbb2ff5a0aae78f272e694b03b2e9829c3c615baacd3bf024d5987bcda8f9'
 
   url "https://download.nextcloud.com/desktop/releases/Mac/Installer/Nextcloud-#{version}.pkg"
   appcast 'https://github.com/nextcloud/client_theming/releases.atom'

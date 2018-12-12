@@ -24,7 +24,7 @@ cask 'p4v' do
       #!/bin/bash
       set -euo pipefail
       COMMAND=$(basename "$0")
-      exec "#{appdir}/${COMMAND}.app/Contents/MacOS/${COMMAND}" $@ 2> /dev/null
+      exec "#{appdir}/${COMMAND}.app/Contents/MacOS/${COMMAND}" "$@" 2> /dev/null
     EOS
   end
 
