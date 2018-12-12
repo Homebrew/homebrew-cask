@@ -1,6 +1,6 @@
 cask 'notebooks' do
-  version '1.4.3'
-  sha256 'e71889f63548ab7d255ccfe75f4eef7750f4959b70f1e80c1c023a004d3d7fb6'
+  version '1.4.4'
+  sha256 'c16902d821adfcc26ece070a813423ffe5d61c7793ba55160be40a8b4716bf4b'
 
   url 'https://notebooksapp.com/Download/Notebooks.zip'
   appcast 'https://www.notebooksapp.com/NBMacAppcast.xml'
