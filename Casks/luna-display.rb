@@ -5,7 +5,7 @@ cask 'luna-display' do
   # s3.amazonaws.com/s3.lunadisplay was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/s3.lunadisplay.com/downloads/LunaDisplay-#{version}.zip"
   appcast 'https://s3.amazonaws.com/lunadisplay.com/downloads/sparkle.xml'
-  name 'LunaDisplay'
+  name 'Luna Display'
   homepage 'https://lunadisplay.com/'
 
   depends_on macos: '>= :el_capitan'
