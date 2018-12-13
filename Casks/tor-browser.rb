@@ -92,7 +92,7 @@ cask 'tor-browser' do
   end
 
   language 'pt' do
-    sha256 '9ed318b922a1e6d3f5f5ca26b046b0c89c10f329d04373e1ba48ddac7b92097a'
+    sha256 '12ff7c64378f5e47e43d6b07e3c44257fa3d54329ae7bf44ed26806e718a53c9'
     'pt-BR'
   end
 
