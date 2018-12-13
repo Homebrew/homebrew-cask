@@ -1,6 +1,6 @@
 cask 'wondershare-video-converter-ultimate' do
-  version '10.3.0.10,735'
-  sha256 '28045e87d8c773dbc4c23962d2522538c9e40256bacb5576ba80495e1dbf16af'
+  version '10.3.0.11,735'
+  sha256 '0eb8123a3004e2376bb2db913bd1f808acbfd6d2413cd6c93535c9d066882fa9'
 
   url "http://download.wondershare.com/cbs_down/video-converter-ultimate-mac_full#{version.after_comma}.dmg"
   name 'Wondershare Video Converter Ultimate'
