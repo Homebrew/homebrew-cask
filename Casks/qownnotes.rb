@@ -8,5 +8,7 @@ cask 'qownnotes' do
   name 'QOwnNotes'
   homepage 'https://www.qownnotes.org/'
 
+  depends_on macos: '>= :sierra'
+
   app 'QOwnNotes.app'
 end
