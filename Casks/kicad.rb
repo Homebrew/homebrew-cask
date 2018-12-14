@@ -7,7 +7,7 @@ cask 'kicad' do
   name 'KiCad'
   homepage 'http://kicad-pcb.org/'
 
-  suite 'Kicad-apps', target: 'Kicad'
+  suite 'KiCad'
   artifact 'kicad', target: '/Library/Application Support/kicad'
 
   preflight do
