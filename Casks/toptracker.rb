@@ -4,7 +4,7 @@ cask 'toptracker' do
 
   # d101nvfmxunqnl.cloudfront.net was verified as official when first introduced to the cask
   url "https://d101nvfmxunqnl.cloudfront.net/desktop/builds/mac/toptracker_#{version}.dmg"
-  appcast 'https://tracker.toptal.com/tracker/'
+  appcast 'https://tracker-api.toptal.com/desktop/updates/mac'
   name 'TopTracker'
   homepage 'https://tracker.toptal.com/tracker/'
 
