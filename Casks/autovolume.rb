@@ -8,5 +8,7 @@ cask 'autovolume' do
   name 'AutoVolume'
   homepage 'http://jesseclaven.com/projects/AutoVolume/'
 
+  depends_on macos: '>= :sierra'
+
   app 'AutoVolume.app'
 end
