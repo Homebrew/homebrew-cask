@@ -1,6 +1,6 @@
 cask 'vienna' do
-  version '3.5.1'
-  sha256 '354cec4b51b0c3659a777c7c33094a8337868348adfcda8ac46f522f4b983848'
+  version '3.5.2'
+  sha256 '369c037363a3197d7458af6ca601abf17f04b258e6dcc7a5585aaa0bcf0f90f3'
 
   # bintray.com/viennarss was verified as official when first introduced to the cask
   url "https://dl.bintray.com/viennarss/vienna-rss/Vienna#{version}.tar.gz"
