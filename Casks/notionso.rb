@@ -4,6 +4,7 @@ cask 'notionso' do
 
   # desktop-release.notion-static.com was verified as official when first introduced to the cask
   url "https://desktop-release.notion-static.com/Notion-#{version}.dmg"
+  appcast 'https://www.notion.so/desktop'
   name 'Notion'
   homepage 'https://www.notion.so/'
 
