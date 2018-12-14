@@ -7,5 +7,5 @@ cask 'moneywiz' do
   name 'MoneyWiz'
   homepage 'https://wiz.money/'
 
-  app 'MoneyWiz 3.app'
+  app "MoneyWiz #{version.major}.app"
 end
