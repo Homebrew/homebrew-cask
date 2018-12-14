@@ -1,6 +1,6 @@
 cask 'subutaicontrolcenter' do
-  version '7.3.1'
-  sha256 '6e48d6fa8522efdbdb0c65473cbefbb71a0c1c88bf7750a9ee52de1ea175c1f8'
+  version '7.3.2'
+  sha256 '646138e650cb348679db8516c616d340f0a464412143170b01915995f05c6c7d'
 
   url 'https://bazaar.subutai.io/rest/v1/cdn/raw?name=subutai-control-center.pkg&latest&download'
   appcast 'https://github.com/subutai-io/control-center/releases.atom'
