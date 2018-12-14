@@ -1,6 +1,6 @@
 cask 'pgmanage' do
-  version '10.3.1'
-  sha256 'd58c557c2e93424857915346f34467d9f2c43e781c35c0c179c619c122eccf44'
+  version '11.0.0'
+  sha256 'ff81f151389223d0e484414516de57722df08f17d182b73aeefdfd57feb78881'
 
   # github.com/pgManage/pgManage was verified as official when first introduced to the cask
   url "https://github.com/pgManage/pgManage/releases/download/v#{version}/pgManage-#{version}.dmg"
