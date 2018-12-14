@@ -6,7 +6,7 @@ cask 'syncterm' do
   url "https://downloads.sourceforge.net/syncterm/syncterm/syncterm-#{version}/SyncTERM.dmg"
   appcast 'https://sourceforge.net/projects/syncterm/rss'
   name 'SyncTERM'
-  homepage 'https://syncterm.bbsdev.net/'
+  homepage 'http://syncterm.bbsdev.net/'
 
   pkg 'SyncTERM.pkg'
 
