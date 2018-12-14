@@ -3,7 +3,7 @@ cask 'notionso' do
   sha256 :no_check
 
   # desktop-release.notion-static.com was verified as official when first introduced to the cask
-  url 'https://desktop-release.notion-static.com/Notion-0.3.0.dmg'
+  url "https://desktop-release.notion-static.com/Notion-#{version}.dmg"
   name 'Notion'
   homepage 'https://www.notion.so/'
 
