@@ -8,5 +8,5 @@ cask 'arkclient' do
   name 'Ark Client'
   homepage 'https://ark.io/'
 
-  app 'ArkClient.app'
+  app 'Ark Desktop Wallet.app'
 end
