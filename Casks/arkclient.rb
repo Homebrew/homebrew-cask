@@ -1,9 +1,9 @@
 cask 'arkclient' do
-  version '1.6.1'
-  sha256 'b4a6ac066981c05cf6ebec389bea8b2d0610ea4e283870b6b469a67f95b76e37'
+  version '2.1.0'
+  sha256 '58fe5c8c7683a83ea0857f294e00502fee81204eaf5471d8b040209c06de0291'
 
   # github.com/ArkEcosystem/ark-desktop was verified as official when first introduced to the cask
-  url "https://github.com/ArkEcosystem/ark-desktop/releases/download/#{version}/ArkClient-MacOS-#{version}.dmg"
+  url "https://github.com/ArkEcosystem/ark-desktop/releases/download/#{version}/Ark.Desktop.Wallet-#{version}.dmg"
   appcast 'https://github.com/ArkEcosystem/ark-desktop/releases.atom'
   name 'Ark Client'
   homepage 'https://ark.io/'
