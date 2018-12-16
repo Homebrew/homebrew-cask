@@ -6,5 +6,7 @@ cask 'vmware-horizon-client' do
   name 'VMware Horizon Client'
   homepage 'https://www.vmware.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'VMware Horizon Client.app'
 end
