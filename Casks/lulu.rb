@@ -10,11 +10,21 @@ cask 'lulu' do
 
   depends_on macos: '>= :sierra'
 
-  installer script: {
-                      executable: "#{staged_path}/Lulu Installer.app/Contents/MacOS/LuLu Installer",
-                      args:       ['-install'],
-                      sudo:       true,
-                    }
+  # Lulu's uninstall deletes its settings, so `brew cask upgrade` also does it
+  # `postflight` and `uninstall_preflight` are trying to mitigate this by backing them up and restoring
+  settings_dir = '/Library/Objective-See/LuLu'
+  backup_settings_dir = '/tmp/Homebrew_tmp_LuLu_settings'
+
+  postflight do
+    FileUtils.cp_r(backup_setting_dir, settings_dir) if Dir.exist?(backup_settings_dir)
+  end
+
+  uninstall_preflight do
+    settings_dir = '/Library/Objective-See/LuLu'
+    backup_settings_dir = '/tmp/Homebrew_tmp_LuLu_settings'
+    FileUtils.cp_r(settings_dir, backup_settings_dir)
+    FileUtils.rm_r(backup_settings_dir)
+  end
 
   uninstall script: {
                       executable: "#{staged_path}/Lulu Installer.app/Contents/MacOS/LuLu Installer",
