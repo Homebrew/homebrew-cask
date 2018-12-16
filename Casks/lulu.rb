@@ -20,6 +20,7 @@ cask 'lulu' do
   # `postflight` and `uninstall_preflight` are trying to mitigate this by backing them up and restoring
   settings_dir = '/Library/Objective-See/LuLu'
   backup_settings_dir = '/tmp/Homebrew_tmp_LuLu_settings'
+
   postflight do
     FileUtils.cp_r(backup_setting_dir, settings_dir) if Dir.exist?(backup_settings_dir)
   end
