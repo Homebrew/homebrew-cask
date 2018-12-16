@@ -8,6 +8,7 @@ cask 'karabiner' do
   homepage 'https://pqrs.org/osx/karabiner/'
 
   auto_updates true
+  depends_on macos: '<= :el_capitan'
 
   pkg 'Karabiner.sparkle_guided.pkg'
   binary '/Applications/Karabiner.app/Contents/Library/bin/karabiner'
