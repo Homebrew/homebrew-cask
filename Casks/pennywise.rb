@@ -1,6 +1,6 @@
 cask 'pennywise' do
   version '0.6.3'
-  sha256 '032a0fbcf1f37e74d7a83382c185d0f1cb29ed094005c42520c98a4030b65079'
+  sha256 'b80fe0af58748fbfe43a7d29dd302ffbc23a7883de89a66fc1ccc1649c3a4daa'
 
   url "https://github.com/kamranahmedse/pennywise/releases/download/v#{version}/Pennywise-#{version}.dmg"
   appcast 'https://github.com/kamranahmedse/pennywise/releases.atom'
