@@ -4,9 +4,9 @@ cask 'tusk' do
 
   # github.com/klaussinani/tusk was verified as official when first introduced to the cask
   url "https://github.com/klaussinani/tusk/releases/download/v#{version}/Tusk-#{version}.dmg"
-  appcast 'https://github.com/klauscfhq/tusk/releases.atom'
+  appcast 'https://github.com/klaussinani/tusk/releases.atom'
   name 'Tusk'
-  homepage 'https://klauscfhq.github.io/tusk/'
+  homepage 'https://klaussinani.github.io/tusk/'
 
   app 'Tusk.app'
 
