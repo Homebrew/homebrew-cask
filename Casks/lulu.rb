@@ -26,8 +26,6 @@ cask 'lulu' do
   end
 
   uninstall_preflight do
-    settings_dir = '/Library/Objective-See/LuLu'
-    backup_settings_dir = '/tmp/Homebrew_tmp_LuLu_settings'
     FileUtils.cp_r(settings_dir, backup_settings_dir)
     FileUtils.rm_r(backup_settings_dir)
   end
