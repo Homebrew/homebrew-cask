@@ -16,4 +16,8 @@ cask 'visitors' do
                '~/Library/Caches/com.mediaatelier.Visitors',
                '~/Library/Preferences/com.mediaatelier.Visitors.plist',
              ]
+
+  caveats do
+    discontinued
+  end
 end
