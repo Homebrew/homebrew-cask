@@ -9,4 +9,8 @@ cask 'tilemill' do
   homepage 'https://www.mapbox.com/tilemill/'
 
   app 'TileMill.app'
+
+  caveats do
+    discontinued
+  end
 end
