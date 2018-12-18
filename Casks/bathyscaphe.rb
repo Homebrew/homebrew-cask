@@ -8,5 +8,7 @@ cask 'bathyscaphe' do
   name 'BathyScaphe'
   homepage 'https://bathyscaphe.bitbucket.io/'
 
+  depends_on macos: '>= :sierra'
+
   app 'BathyScaphe.app'
 end
