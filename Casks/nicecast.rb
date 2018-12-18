@@ -8,4 +8,8 @@ cask 'nicecast' do
   homepage 'https://rogueamoeba.com/nicecast/'
 
   app 'Nicecast.app'
+
+  caveats do
+    discontinued
+  end
 end
