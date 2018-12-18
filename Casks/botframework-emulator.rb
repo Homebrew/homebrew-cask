@@ -9,7 +9,7 @@ cask 'botframework-emulator' do
 
   auto_updates true
 
-  app 'botframework-emulator.app'
+  app 'Bot Framework Emulator.app'
 
   uninstall quit: 'com.electron.botframework-emulator'
 
