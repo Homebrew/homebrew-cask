@@ -1,6 +1,6 @@
 cask 'rawtherapee' do
-  version '5.4'
-  sha256 'a3f88a3d65332a013c45b01a0f88c37191a6fda8045a6d03d07c54e3438e6315'
+  version '5.5'
+  sha256 '2ca1635ab86decb46285a16f21e334e2949ebbf27ffc09567d83be7d36a4ec86'
 
   url "https://rawtherapee.com/releases_head/mac/RawTherapee_OSX_10.9_64_#{version}.zip"
   appcast 'https://github.com/Beep6581/RawTherapee/releases.atom'
