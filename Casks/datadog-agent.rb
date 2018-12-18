@@ -16,7 +16,7 @@ cask 'datadog-agent' do
   end
 
   uninstall launchctl: 'com.datadoghq.agent',
-#             pkgutil:   'com.datadoghq.agent' #this is commented out because PKG uninstallation seems to fail due to missing files caused by case insensitivity and files that differ only in case
+            # pkgutil: 'com.datadoghq.agent' # this is commented out because PKG uninstallation seems to fail due to missing files caused by case insensitivity and files that differ only in case. See https://github.com/Homebrew/homebrew-cask/pull/54739.
             delete:    [
                          '/Applications/Datadog Agent.app',
                          '/opt/datadog-agent/',
