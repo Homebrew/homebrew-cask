@@ -11,4 +11,8 @@ cask 'paragon-vmdk-mounter' do
   uninstall launchctl: 'com.paragon-software.vdmounter',
             kext:      'com.paragon-software.kext.VDMounter',
             pkgutil:   'com.paragon-software.VDMounter.pkg'
+
+  caveats do
+    discontinued
+  end
 end
