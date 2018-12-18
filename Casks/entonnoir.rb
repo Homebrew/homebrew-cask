@@ -8,4 +8,8 @@ cask 'entonnoir' do
   homepage 'http://tools.chocoflop.com/entonnoir_en.html'
 
   app 'Entonnoir.app'
+
+  caveats do
+    discontinued
+  end
 end
