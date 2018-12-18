@@ -8,4 +8,8 @@ cask 'snippet-edit' do
   homepage 'https://cocoaholic.com/snippet_edit/'
 
   app 'Snippet Edit.app'
+
+  caveats do
+    discontinued
+  end
 end
