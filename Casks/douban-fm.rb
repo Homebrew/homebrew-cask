@@ -8,4 +8,8 @@ cask 'douban-fm' do
   homepage 'https://github.com/cyrilis/Douban-FM-Express'
 
   app 'Douban FM.app'
+
+  caveats do
+    discontinued
+  end
 end
