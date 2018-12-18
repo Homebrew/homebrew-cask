@@ -6,7 +6,7 @@ cask 'tilemill' do
   url "https://tilemill.s3.amazonaws.com/latest/TileMill-#{version}.zip"
   appcast 'https://www.mapbox.com/tilemill/platforms/osx/appcast2.xml'
   name 'TileMill'
-  homepage 'https://www.mapbox.com/tilemill/'
+  homepage 'http://tilemill-project.github.io/tilemill/'
 
   app 'TileMill.app'
 
