@@ -9,7 +9,7 @@ cask 'rider' do
 
   auto_updates true
 
-  app "Rider #{version.before_comma}.app"
+  app 'Rider.app'
 
   uninstall_postflight do
     ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'rider') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }
