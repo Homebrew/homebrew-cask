@@ -7,7 +7,7 @@ cask 'principle' do
   name 'Principle'
   homepage 'http://principleformac.com/'
 
-  depends_on macos: '>= :el_capitan'
+  depends_on macos: '>= :high_sierra'
 
   app 'Principle.app'
 end
