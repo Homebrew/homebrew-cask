@@ -1,6 +1,6 @@
 cask 'paragon-extfs' do
   version :latest
-  sha256 :no_check # required as upstream package is updated in-place
+  sha256 :no_check
 
   url 'https://dl.paragon-software.com/demo/trial_extfs.dmg'
   name 'Paragon ExtFS'
