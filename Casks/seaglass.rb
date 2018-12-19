@@ -4,7 +4,7 @@ cask 'seaglass' do
 
   # github.com/neilalexander/seaglass was verified as official when first introduced to the cask
   url "https://github.com/neilalexander/seaglass/releases/download/#{version}/Seaglass-#{version}.zip"
-  appcast 'https://s3.eu-west-2.amazonaws.com/seaglass-ci/appcast.xml'
+  appcast 'https://github.com/neilalexander/seaglass/releases.atom'
   name 'Seaglass'
   homepage 'https://neilalexander.eu/seaglass/'
 
