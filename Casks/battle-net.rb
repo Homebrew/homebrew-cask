@@ -15,6 +15,10 @@ cask 'battle-net' do
 
   installer manual: 'Battle.net-Setup.app'
 
+  preflight do
+    set_permissions "#{staged_path}/Battle.net-Setup.app", 'a+x'
+  end
+
   uninstall delete: '/Applications/Battle.net.app'
 
   zap trash: [

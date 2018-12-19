@@ -1,10 +1,10 @@
 cask 'tableau' do
-  version '2018.1.0'
-  sha256 'd8dd5275bc4af733343ed0bb8dbc8b3974ca2fe0ea23965afa54c264e69db183'
+  version '2018.3.1'
+  sha256 '51e1a861ccf66186604457a19628b1f06e115422e352826d7e0115a6de6c9462'
 
   url "https://downloads.tableau.com/tssoftware/TableauDesktop-#{version.dots_to_hyphens}.dmg"
   name 'Tableau Desktop'
-  homepage 'https://public.tableau.com/s/'
+  homepage 'https://www.tableau.com/products/desktop/download'
 
   depends_on macos: '>= :yosemite'
 
@@ -17,7 +17,7 @@ cask 'tableau' do
                        'com.simba.sqlserverodbc',
                        'com.tableausoftware.Desktop.app',
                        'com.tableausoftware.DesktopShortcut',
-                       'com.tableausoftware.FLEXNet.11.14.0',
+                       'com.tableausoftware.FLEXNet.11.*',
                        'com.tableausoftware.mysql',
                        'com.tableausoftware.oracle',
                        'com.tableausoftware.postgresql',

@@ -1,12 +1,12 @@
 cask 'stattransfer' do
-  version '13'
-  sha256 'a4a4372982fba0ebb4896b30d6bd51abf740ceda0bcf17f3603cc8843b2222dc'
+  version '14'
+  sha256 :no_check # required as upstream package is updated in-place
 
   url 'https://www.stattransfer.com/downloads/stdemo.dmg'
   name 'Stat/Transfer'
   homepage 'https://stattransfer.com/'
 
-  pkg "st_installer_v#{version}.pkg"
+  pkg "st_installer#{version}.pkg"
 
-  uninstall pkgutil: 'com.circlesys.pkg'
+  uninstall pkgutil: "com.circlesys.v#{version}.pkg"
 end

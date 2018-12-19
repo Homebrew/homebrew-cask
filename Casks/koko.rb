@@ -3,8 +3,7 @@ cask 'koko' do
   sha256 '74b0d69d372b6f4db481f51b283cdab572bd4042731247cc300d41bfbcc199ed'
 
   url "https://github.com/KokoIRC/koko/releases/download/v#{version}/koko-mac.zip"
-  appcast 'https://github.com/KokoIRC/koko/releases.atom',
-          checkpoint: '85f27bf39a1c83f87db2f5e6aecc85640c5dabf99bc43130b4a2315b546934f8'
+  appcast 'https://github.com/KokoIRC/koko/releases.atom'
   name 'koko'
   homepage 'https://github.com/KokoIRC/koko'
 

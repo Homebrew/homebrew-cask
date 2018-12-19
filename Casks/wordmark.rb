@@ -1,13 +1,12 @@
 cask 'wordmark' do
-  version '2.2.5'
-  sha256 'd572b6dc97aeddcb9df6414ad12eb2e6c2b9ed7da85eb969c814d59fd349ccb3'
+  version '3.0.1-beta.17'
+  sha256 '3595fe19623cf605c21ec99810694a2a60358e0354d26f57d1463960b38bf493'
 
   # github.com/wordmark/wordmark was verified as official when first introduced to the cask
-  url "https://github.com/wordmark/wordmark/releases/download/v#{version}/WordMark-darwin-x64.zip"
-  appcast 'https://github.com/wordmark/wordmark/releases.atom',
-          checkpoint: '0de99e8bc71d3e8c29ec350af6edc0c59faf2ed832fbe4864eecc75dd3073c55'
+  url "https://github.com/wordmark/wordmark/releases/download/v#{version}/wordmark-#{version}-mac.zip"
+  appcast 'https://github.com/wordmark/wordmark/releases.atom'
   name "WordMark #{version.major}"
-  homepage 'http://wordmarkapp.com/'
+  homepage 'https://wordmarkapp.com/'
 
-  app 'WordMark-darwin-x64/WordMark.app'
+  app 'wordmark.app'
 end

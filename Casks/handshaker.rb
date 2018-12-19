@@ -4,10 +4,9 @@ cask 'handshaker' do
 
   # dl2.smartisan.cn was verified as official when first introduced to the cask
   url "http://dl2.smartisan.cn/app/HandShaker.v#{version}.dmg"
-  appcast 'https://sf.smartisan.com/update.plist',
-          checkpoint: '652bf99baae7e0a9c0da1bde3a86ad2fd7df318912e24e8323bf9475a28a309c'
+  appcast 'https://sf.smartisan.com/update.plist'
   name 'HandShaker'
-  homepage 'http://www.smartisan.com/apps/'
+  homepage 'https://www.smartisan.com/apps/'
 
   app 'HandShaker.app'
 end

@@ -4,8 +4,7 @@ cask 'easyfig' do
 
   # github.com/mjsull/Easyfig was verified as official when first introduced to the cask
   url "https://github.com/mjsull/Easyfig/releases/download/#{version}/Easyfig_#{version}_OSX.zip"
-  appcast 'https://github.com/mjsull/Easyfig/releases.atom',
-          checkpoint: '71dc2c415e2c51651c6c603cdda1f7a58bce89627072f68366651a33df0a9ba8'
+  appcast 'https://github.com/mjsull/Easyfig/releases.atom'
   name 'EasyFig'
   homepage 'https://mjsull.github.io/Easyfig/'
 

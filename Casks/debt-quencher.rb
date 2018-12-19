@@ -4,8 +4,7 @@ cask 'debt-quencher' do
 
   # paddle.s3.amazonaws.com/fulfillment_downloads was verified as official when first introduced to the cask
   url "https://paddle.s3.amazonaws.com/fulfillment_downloads/#{version.after_colon.before_comma}/#{version.after_colon.after_comma}/Debt_Quencher.zip"
-  appcast 'http://nothirst.com/feeds/DebtQuencherAppcast.xml',
-          checkpoint: 'e9dfeda02779bfceea5fb34278f5d28f97d2c6403242d6ba0520c8850a910195'
+  appcast 'http://nothirst.com/feeds/DebtQuencherAppcast.xml'
   name 'Debt Quencher'
   homepage 'http://nothirst.com/debtquencher/'
 

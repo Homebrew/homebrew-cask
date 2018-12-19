@@ -1,12 +1,14 @@
 cask 'soulver' do
-  version '2.6.6-5881'
-  sha256 'a95219084fba53c99a0aec44e283d6acfad157399b004eae7cd1597b12f935ae'
+  version '2.6.8-5949'
+  sha256 '216110f8118783194fb80f30e7a63584308f6569e3ff3214d13026231130ab7a'
 
-  url "http://www.acqualia.com/files/sparkle/soulver_#{version}.zip"
-  appcast "http://www.acqualia.com/soulver/appcast/soulver#{version.major}.xml",
-          checkpoint: 'a4e78d3e73ac5772ff213c2b2bfe700294afce50b1b745e79d7e448959d7669b'
+  url "https://www.acqualia.com/files/sparkle/soulver_#{version}.zip"
+  appcast "https://www.acqualia.com/soulver/appcast/soulver#{version.major}.xml"
   name 'Soulver'
-  homepage 'http://www.acqualia.com/soulver/'
+  homepage 'https://www.acqualia.com/soulver/'
+
+  auto_updates true
+  depends_on macos: '>= :yosemite'
 
   app 'Soulver.app'
 

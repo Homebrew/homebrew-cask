@@ -1,6 +1,6 @@
 cask 'lookback' do
-  version '1.88.0.31.g5e60c5a'
-  sha256 'aa2f5a956fd1a4f3636ea7e580c58e33ee192d7cf3edc14af507205a0e005d65'
+  version '1.90.6.g6e2b8a9'
+  sha256 '93e9704158e28fcdf8d43e1ccfa6dac9857b90693c492c6832c046e1a5ea580b'
 
   # deungs2vexe3s.cloudfront.net/apps/mac was verified as official when first introduced to the cask
   url "https://deungs2vexe3s.cloudfront.net/apps/mac/Lookback-#{version}.app.zip"

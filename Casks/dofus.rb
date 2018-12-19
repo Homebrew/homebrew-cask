@@ -5,7 +5,7 @@ cask 'dofus' do
   # dl.ak.ankama.com was verified as official when first introduced to the cask
   url 'http://dl.ak.ankama.com/games/installers/dofus.dmg'
   name 'Dofus'
-  homepage 'http://www.dofus.com/'
+  homepage 'https://www.dofus.com/'
 
   app 'Dofus.app'
 end

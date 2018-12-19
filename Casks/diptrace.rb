@@ -2,9 +2,9 @@ cask 'diptrace' do
   version :latest
   sha256 :no_check
 
-  url 'http://diptrace.com/downloads/DipTrace.dmg'
+  url 'https://diptrace.com/downloads/DipTrace.dmg'
   name 'diptrace'
-  homepage 'http://diptrace.com/'
+  homepage 'https://diptrace.com/'
 
   depends_on x11: true
 

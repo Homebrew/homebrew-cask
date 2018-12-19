@@ -4,10 +4,9 @@ cask 'simplesynth' do
 
   # amazonaws.com/notahat was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/notahat/SimpleSynth-#{version}.zip"
-  appcast 'http://notahat.com/simplesynth/',
-          checkpoint: '3cb96e0949843a3f34dd8c0c605942cdeafc0379022684cc469174c5a0db085e'
+  appcast 'https://notahat.com/simplesynth/'
   name 'SimpleSynth'
-  homepage 'http://notahat.com/simplesynth/'
+  homepage 'https://notahat.com/simplesynth/'
 
   app 'SimpleSynth.app'
 end

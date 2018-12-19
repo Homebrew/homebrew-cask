@@ -1,8 +1,9 @@
 cask 'riverdesign-sparkle' do
-  version :latest
-  sha256 :no_check
+  version '2.7.1'
+  sha256 '349e0344531a174b088e562169295d3f921040151465873461a99864737d4054'
 
-  url 'https://sparkleapp.com/download'
+  url 'https://sparkleapp.com/update/Sparkle.zip'
+  appcast 'https://sparkleapp.com/update/appcast.php'
   name 'Sparkle'
   homepage 'https://sparkleapp.com/'
 

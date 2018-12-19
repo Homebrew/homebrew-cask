@@ -5,7 +5,7 @@ cask 'league-of-legends' do
   # riotgamespatcher-a.akamaihd.net was verified as official when first introduced to the cask
   url 'https://riotgamespatcher-a.akamaihd.net/releases/Maclive/installer/deploy/League%20of%20Legends%20installer%20NA.dmg'
   name 'League of Legends'
-  homepage 'https://leagueoflegends.com/'
+  homepage 'https://eune.leagueoflegends.com/en/'
 
   app 'League of Legends.app'
 

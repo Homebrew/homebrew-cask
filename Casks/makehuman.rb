@@ -4,8 +4,7 @@ cask 'makehuman' do
 
   # tuxfamily.org/makehuman was verified as official when first introduced to the cask
   url "https://download.tuxfamily.org/makehuman/releases/#{version}/makehuman-#{version}-osx.dmg"
-  appcast 'https://download.tuxfamily.org/makehuman/releases/',
-          checkpoint: '75064672d3c4afcf777057fba4176be9c6ccd36c15f52ca4e736abd273c24068'
+  appcast 'https://download.tuxfamily.org/makehuman/releases/'
   name 'MakeHuman'
   homepage 'http://www.makehuman.org/'
 

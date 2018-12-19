@@ -4,8 +4,7 @@ cask 'lighttable' do
 
   # github.com/LightTable/LightTable was verified as official when first introduced to the cask
   url "https://github.com/LightTable/LightTable/releases/download/#{version}/lighttable-#{version}-mac.tar.gz"
-  appcast 'https://github.com/LightTable/LightTable/releases.atom',
-          checkpoint: '82351dbb67ea8a9051843b9690917ca22ead040fd0cad9b6cd3a81743da08366'
+  appcast 'https://github.com/LightTable/LightTable/releases.atom'
   name 'Light Table'
   homepage 'http://lighttable.com/'
 

@@ -1,11 +1,10 @@
 cask 'colorsnapper' do
-  version '1.3.2'
-  sha256 'd866cf1040cfab7f4036050d1b50f9d9e05a65316607a0c55c3d96eb7443eaef'
+  version '1.5.1'
+  sha256 '7e14a69e521153d9aa6fb8c75932b52e1ddb0f60b00178123fc0636b32010016'
 
   # amazonaws.com/cs2-binaries was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/cs2-binaries/ColorSnapper2-#{version.dots_to_underscores}.zip"
-  appcast 'https://colorsnapper.com/app/appcast.xml',
-          checkpoint: '189b0b3b11a3116495c11cc64d59d78e6c5fa1cc8ed7645bb3551296f3a5476b'
+  appcast 'https://s3.amazonaws.com/cs2-appcast/appcast.xml'
   name 'ColorSnapper 2'
   homepage 'https://colorsnapper.com/'
 

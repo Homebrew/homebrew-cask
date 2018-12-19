@@ -4,8 +4,7 @@ cask 'wordcounter' do
 
   # amazonaws.com/wordcounterapp was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/wordcounterapp/WordCounter-v#{version}.zip"
-  appcast "https://update.christiantietze.de/wordcounter/v#{version.major}/beta.xml",
-          checkpoint: '5954d7e5f01c1e966b19997613f0172f47f1b780f3045ddc0df673f3ab6c3b70'
+  appcast "https://update.christiantietze.de/wordcounter/v#{version.major}/beta.xml"
   name 'WordCounter'
   homepage 'https://wordcounterapp.com/'
 

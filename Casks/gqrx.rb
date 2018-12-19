@@ -1,11 +1,10 @@
 cask 'gqrx' do
-  version '2.11.4'
-  sha256 '56bfcfe071e1e3ca19fe599f91150894ef1206a4babd0e08f23efa9999825e01'
+  version '2.11.5'
+  sha256 '896cefcb2825840178b6dbfb894b01543b1c8225539e6969052133223a59ffee'
 
   # github.com/csete/gqrx was verified as official when first introduced to the cask
   url "https://github.com/csete/gqrx/releases/download/v#{version.major_minor_patch}/Gqrx-#{version}.dmg"
-  appcast 'https://github.com/csete/gqrx/releases.atom',
-          checkpoint: '2602e49adc35a61db9d2f7e1843d1502078be353e6b7a3a9c77492710b1591f6'
+  appcast 'https://github.com/csete/gqrx/releases.atom'
   name 'Gqrx'
   homepage 'http://gqrx.dk/'
 
@@ -27,7 +26,7 @@ cask 'gqrx' do
   binary "#{appdir}/Gqrx.app/Contents/MacOS/rtl_test"
   binary "#{appdir}/Gqrx.app/Contents/MacOS/SoapySDRUtil", target: 'soapysdrutil'
   binary "#{appdir}/Gqrx.app/Contents/MacOS/volk_profile"
-  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/gqrx.wrapper.sh"
   binary shimscript, target: 'gqrx'
 

@@ -1,10 +1,9 @@
 cask 'scratch' do
-  version '2.0,460'
-  sha256 '5f57d60f26f7fa7de4c76d87c17d135c81bc4018a052f81a62903994c21a3b9b'
+  version '2.0,461'
+  sha256 'dcd311b455be8c19861df3b1077c4175b168688ea8e69296a3f5aee6192a13e0'
 
   url "https://scratch.mit.edu/scratchr2/static/sa/Scratch-#{version.after_comma}.dmg"
-  appcast 'https://scratch.mit.edu/scratchr2/static/sa/version.xml',
-          checkpoint: 'ab701ad4d672d730d41b10c48467031cc21e4335066911d4cca2fbfa086a5844'
+  appcast 'https://scratch.mit.edu/scratchr2/static/sa/version.xml'
   name 'Scratch'
   homepage 'https://scratch.mit.edu/download'
 
@@ -17,7 +16,7 @@ cask 'scratch' do
                     }
 
   uninstall script: {
-                      executable: Hbc::Container::Air::INSTALLER_PATHNAME,
+                      executable: '/Applications/Utilities/Adobe AIR Application Installer.app/Contents/MacOS/Adobe AIR Application Installer',
                       args:       ['-uninstall', '-silent', "/Applications/Scratch #{version.major}.app"],
                       sudo:       true,
                     }

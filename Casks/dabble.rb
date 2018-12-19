@@ -1,6 +1,6 @@
 cask 'dabble' do
-  version '0.2.13'
-  sha256 '269d0c04c63dda4c4e8ca440218237b1f43e3ea6e39fddc58d80a7effbc904a3'
+  version '1.0.15'
+  sha256 '7db6b85083a33c9da72ec5ed459585de763db5c79b05bdea5b804cc7b22bc27b'
 
   url "https://www.dabblewriter.com/releases/mac/downloads/Dabble-#{version}.dmg"
   name 'Dabble'

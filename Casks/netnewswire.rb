@@ -1,17 +1,14 @@
 cask 'netnewswire' do
-  version '4.1.0-546'
-  sha256 '5198e5f52fa1fc7a951212760e17cefae14fe6b4e8aaf291c5c0818a14df8fb7'
+  version '5.0d7'
+  sha256 'db2dd7363c910f1e6a6c4fc9734cfb9d13cffd3d1b30f9501d3a9a2be63b0b9f'
 
-  url "https://cdn.netnewswireapp.com/releases/NetNewsWire-#{version}.zip"
-  appcast 'https://updates.blackpixel.com/updates?app=nnw',
-          checkpoint: 'cd4a2ff2e246facea0d4fa0abfc4aa400017b9cecf9cf19a3ef45b78116a7ca3'
-  name 'NetNewsWire'
-  homepage 'http://netnewswireapp.com/'
+  url "https://ranchero.com/downloads/NetNewsWire#{version}.zip"
+  appcast 'https://ranchero.com/downloads/netnewswire-beta.xml'
+  name 'NetNetsWire'
+  homepage 'https://ranchero.com/netnewswire/'
+
+  auto_updates true
+  depends_on macos: '>= :high_sierra'
 
   app 'NetNewsWire.app'
-
-  zap trash: [
-               '~/Library/Application Scripts/com.blackpixel.netnewswire',
-               '~/Library/Containers/com.blackpixel.netnewswire',
-             ]
 end

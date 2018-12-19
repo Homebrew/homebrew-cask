@@ -5,7 +5,7 @@ cask 'bricklink-studio' do
   # s3.amazonaws.com/blstudio was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/blstudio/Stud.io.pkg'
   name 'Stud.io'
-  homepage 'http://studio.bricklink.com/v2/build/studio.page'
+  homepage 'https://studio.bricklink.com/v2/build/studio.page'
 
   pkg 'Stud.io.pkg'
 

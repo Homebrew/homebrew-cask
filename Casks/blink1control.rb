@@ -1,13 +1,12 @@
 cask 'blink1control' do
-  version '1.98'
-  sha256 '49c680f3ec174662cc00a4f4649074a891e8fc55b82aec284c5aade0efb44ce1'
+  version '2.2.1'
+  sha256 '56c4b028babb20f425450b4fd8a76a46716325c5d2a879548aa76fc07b08640c'
 
-  # github.com/todbot/blink1 was verified as official when first introduced to the cask
-  url "https://github.com/todbot/blink1/releases/download/v#{version}/Blink1Control-mac.zip"
-  appcast 'https://github.com/todbot/blink1/releases.atom',
-          checkpoint: '24cfd383676be45990be81aac906b73ff876b13437af6f6f8b4cba6cc119e384'
+  # github.com/todbot/Blink1Control2 was verified as official when first introduced to the cask
+  url "https://github.com/todbot/Blink1Control2/releases/download/v#{version}/Blink1Control#{version.major}-#{version}-mac.dmg"
+  appcast 'https://github.com/todbot/Blink1Control2/releases.atom'
   name 'Blink1Control'
   homepage 'https://blink1.thingm.com/'
 
-  app 'Blink1Control.app'
+  app "Blink1Control#{version.major}.app"
 end

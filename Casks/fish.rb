@@ -4,8 +4,7 @@ cask 'fish' do
 
   # github.com/fish-shell/fish-shell was verified as official when first introduced to the cask
   url "https://github.com/fish-shell/fish-shell/releases/download/#{version}/fish-#{version}.app.zip"
-  appcast 'https://fishshell.com/release_notes.html',
-          checkpoint: 'd4345708490da3b072c98441c94e7b2c379d9dba141ed0e602e44f81624b62c3'
+  appcast 'https://fishshell.com/release_notes.html'
   name 'Fish App'
   homepage 'https://fishshell.com/'
 

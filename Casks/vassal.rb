@@ -4,8 +4,7 @@ cask 'vassal' do
 
   # sourceforge.net/vassalengine was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/vassalengine/VASSAL-current/VASSAL-#{version}/VASSAL-#{version}-macosx.dmg"
-  appcast 'https://sourceforge.net/projects/vassalengine/rss?path=/VASSAL-current',
-          checkpoint: '67bb5754515d3d563f0f1aa879462f38844ff90f5443dac6f92450c40526d20f'
+  appcast 'https://sourceforge.net/projects/vassalengine/rss?path=/VASSAL-current'
   name 'VASSAL'
   homepage 'http://www.vassalengine.org/'
 

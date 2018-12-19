@@ -1,10 +1,10 @@
 cask 'photo-supreme-postgresql' do
   version '4'
-  sha256 '5adb6a010e48398cbdf84a11acc8581ef2ce757cefa236b201f7cf97c2a8e7c3'
+  sha256 :no_check # required as upstream package is updated in-place
 
-  url "http://trial.idimager.com/PhotoSupremePostgreSQL_V#{version}.pkg"
+  url "https://trial.idimager.com/PhotoSupremePostgreSQL_V#{version}.pkg"
   name 'Photo Supreme with PostreSQL'
-  homepage 'http://www.idimager.com/WP/?page_id=20'
+  homepage 'https://www.idimager.com/home'
 
   depends_on formula: 'postgresql'
 

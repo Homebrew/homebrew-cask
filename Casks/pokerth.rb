@@ -4,8 +4,7 @@ cask 'pokerth' do
 
   # downloads.sourceforge.net/pokerth was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/pokerth/PokerTH-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/pokerth/rss',
-          checkpoint: '294d7d18116357667bdbb40b2fc371ff6a6517e2ed84e06e4155006eaeacb8b2'
+  appcast 'https://sourceforge.net/projects/pokerth/rss'
   name 'PokerTH'
   homepage 'https://www.pokerth.net/'
 

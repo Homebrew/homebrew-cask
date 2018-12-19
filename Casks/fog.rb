@@ -1,14 +1,13 @@
 cask 'fog' do
-  version '1.4.2'
-  sha256 'f1c68466539b8ad9e0fc8c05413cc9ee18b1be58872b698e60d9d08ebf4502e4'
+  version '1.4.4'
+  sha256 '555e1a878694595b5367d3172fb87a570793409551f7be07911d1d0b428775c7'
 
   url "https://github.com/vitorgalvao/fog/releases/download/#{version}/Fog-#{version}-mac.zip"
-  appcast 'https://github.com/vitorgalvao/fog/releases.atom',
-          checkpoint: 'bce87096bbb42438431dac20096735cbd5fbf820d6d38ee7f3e87b5248e73422'
+  appcast 'https://github.com/vitorgalvao/fog/releases.atom'
   name 'Fog'
   homepage 'https://github.com/vitorgalvao/fog'
 
-  app 'Fog.app'
+  app 'mac/Fog.app'
 
   uninstall quit: 'com.vitorgalvao.fog'
 

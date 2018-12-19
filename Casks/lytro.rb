@@ -4,8 +4,7 @@ cask 'lytro' do
 
   # amazonaws.com/lytro-distro was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/lytro-distro/lytro-#{version.after_comma}.dmg"
-  appcast 'https://pictures.lytro.com/support/software_update',
-          checkpoint: 'c806ff660e791f181371f9946412ee07ebd03459db8791832ed4b0be378d587a'
+  appcast 'http://optics.miloush.net/lytro/TheResources.aspx'
   name 'Lytro Desktop'
   homepage 'https://www.lytro.com/'
 

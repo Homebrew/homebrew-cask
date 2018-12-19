@@ -1,16 +1,15 @@
 cask 'bonitastudiocommunity' do
-  version '7.6.3'
-  sha256 '9883dcd04d939cacc21bfcbb74e9dcde437c8e4eb94c977fba1f1e17f7665dc0'
+  version '7.8.0'
+  sha256 '678be6e4f16e60059790fd51cb1d2bd6bf33f90bc8f669d7f1101a6e921c767d'
 
-  # download.forge.ow2.org was verified as official when first introduced to the cask
-  url "https://download.forge.ow2.org/bonita/BonitaStudioCommunity-#{version}-x86_64.dmg"
-  appcast 'https://documentation.bonitasoft.com/release-notes',
-          checkpoint: '04b8fbc92e8cb1cd4c029bf1349cf0b06f5fa8738c145030cd9a1d3c00c02b22'
+  # release.ow2.org was verified as official when first introduced to the cask
+  url "https://release.ow2.org/bonita/BonitaStudioCommunity-#{version}-x86_64.dmg"
+  appcast 'https://www.bonitasoft.com/downloads'
   name 'Bonita Studio Community Edition'
   homepage 'https://www.bonitasoft.com/downloads'
 
   installer script: {
-                      executable: "#{staged_path}/BonitaStudioCommunity-#{version}-osx.app/Contents/MacOS/installbuilder.sh",
+                      executable: "#{staged_path}/BonitaStudioCommunity-#{version}.app/Contents/MacOS/installbuilder.sh",
                       args:       ['--mode', 'unattended'],
                     }
 

@@ -4,8 +4,7 @@ cask 'airunlock' do
 
   # github.com/pinetum/AirUnlock-for-Mac was verified as official when first introduced to the cask
   url "https://github.com/pinetum/AirUnlock-for-Mac/releases/download/#{version}/AirUnlock_mac_#{version}.zip"
-  appcast 'https://github.com/pinetum/AirUnlock-for-Mac/releases.atom',
-          checkpoint: '9726ba88fbaae1966769444d7dc4f845602b2c4e0fdcb723ae9ef792db696bdb'
+  appcast 'https://github.com/pinetum/AirUnlock-for-Mac/releases.atom'
   name 'AirUnlock'
   homepage 'https://airunlock.qtlin.tw/'
 

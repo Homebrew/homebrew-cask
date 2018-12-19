@@ -7,7 +7,7 @@ cask 'mousepose' do
   homepage 'https://boinx.com/mousepose/overview/'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
-  # Original discussion: https://github.com/caskroom/homebrew-cask/pull/15708
+  # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/15708
   app 'Mousepose.app', target: "Mousepose\314\201.app"
 
   zap trash: [

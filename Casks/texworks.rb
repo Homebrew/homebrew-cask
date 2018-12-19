@@ -4,8 +4,7 @@ cask 'texworks' do
 
   # github.com/TeXworks/texworks was verified as official when first introduced to the cask
   url "https://github.com/TeXworks/texworks/releases/download/release-#{version.before_comma}/TeXworks-osx-#{version.before_comma}-#{version.after_comma.before_colon}-git_#{version.after_colon}.dmg"
-  appcast 'https://github.com/TeXworks/texworks/releases.atom',
-          checkpoint: '65bd655851715490fc8743798328d01d00518b5bb2b483a525c5fd8dfba9e4ea'
+  appcast 'https://github.com/TeXworks/texworks/releases.atom'
   name 'TeXworks'
   homepage 'https://www.tug.org/texworks/'
 

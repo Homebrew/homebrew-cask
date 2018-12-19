@@ -1,11 +1,10 @@
 cask 'marp' do
-  version '0.0.12'
-  sha256 '6372ff9b102ed281509733c27eafa757c4d8fd3dd52ac16853d970235a82f09f'
+  version '0.0.14'
+  sha256 '3ef77ac8e8c9ed3afac9dbc069e55a958a431dc3c2bc26ac15188f977497e266'
 
   # github.com/yhatt/marp was verified as official when first introduced to the cask
   url "https://github.com/yhatt/marp/releases/download/v#{version}/#{version}-Marp-darwin-x64.dmg"
-  appcast 'https://github.com/yhatt/marp/releases.atom',
-          checkpoint: '784caa17c9ed9c7aed6fdb22d7e266ebf6f6e6c21e8906c3f0d8918c9cc30fbf'
+  appcast 'https://github.com/yhatt/marp/releases.atom'
   name 'Marp'
   homepage 'https://yhatt.github.io/marp/'
 

@@ -1,6 +1,6 @@
 cask 'android-ndk' do
-  version '16b'
-  sha256 '9654a692ed97713e35154bfcacb0028fdc368128d636326f9644ed83eec5d88b'
+  version '18'
+  sha256 'd57c2a1558dfd9264c3ce280c0c21b1a5f73467bf9639f26042007687893ed51'
 
   # dl.google.com/android/repository/android-ndk was verified as official when first introduced to the cask
   url "https://dl.google.com/android/repository/android-ndk-r#{version}-darwin-x86_64.zip"
@@ -9,7 +9,7 @@ cask 'android-ndk' do
 
   conflicts_with cask: 'crystax-ndk'
 
-  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/ndk_exec.sh"
   preflight do
     FileUtils.ln_sf("#{staged_path}/android-ndk-r#{version}", "#{HOMEBREW_PREFIX}/share/android-ndk")

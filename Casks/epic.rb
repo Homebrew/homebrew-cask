@@ -4,8 +4,7 @@ cask 'epic' do
 
   # macepic-cbe.kxcdn.com was verified as official when first introduced to the cask
   url "https://cdn.epicbrowser.com/epic_#{version}.dmg"
-  appcast 'https://updates.epicbrowser.com/mac_updates/appcast.xml',
-          checkpoint: 'baa4248683b2bde4cb5124bada0f5f7330ed865ef266ef7a7014729269debdf3'
+  appcast 'https://epicbrowser.com/thank_you.php'
   name 'Epic Privacy Browser'
   homepage 'https://www.epicbrowser.com/'
 

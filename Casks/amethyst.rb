@@ -8,18 +8,15 @@ cask 'amethyst' do
     sha256 '9fd1ac2cfb8159b2945a4482046ee6d365353df617f4edbabc4e8cadc448c1e7'
     url "https://ianyh.com/amethyst/versions/Amethyst-#{version}.zip"
   else
-    version '0.12.0'
-    sha256 '7425304f643b67b88b7e851595cdd89bbc58bb7361f7c2dc35239d2ee5569af4'
+    version '0.12.2'
+    sha256 '42bbdaa8ce0117435d4e56bcc17b51180e9b2c783d2c37751d0ca4b068f2bca2'
     # github.com/ianyh/Amethyst was verified as official when first introduced to the cask
     url "https://github.com/ianyh/Amethyst/releases/download/v#{version}/Amethyst-#{version}.zip"
   end
 
-  appcast 'https://ianyh.com/amethyst/appcast.xml',
-          checkpoint: '4bfc1fb4b264b2508b3f33dca188a22264ef196598dcd16c08219f1c55f8f0c6'
+  appcast 'https://ianyh.com/amethyst/appcast.xml'
   name 'Amethyst'
   homepage 'https://ianyh.com/amethyst/'
-
-  accessibility_access true
 
   app 'Amethyst.app'
 

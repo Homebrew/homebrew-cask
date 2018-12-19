@@ -4,8 +4,7 @@ cask 'vagrant-manager' do
 
   # github.com/lanayotech/vagrant-manager was verified as official when first introduced to the cask
   url "https://github.com/lanayotech/vagrant-manager/releases/download/#{version}/vagrant-manager-#{version}.dmg"
-  appcast 'https://github.com/lanayotech/vagrant-manager/releases.atom',
-          checkpoint: 'bb3f4660861c88890122d0a388d847c54501de7109967d2f63484b3865a351d4'
+  appcast 'https://github.com/lanayotech/vagrant-manager/releases.atom'
   name 'Vagrant Manager'
   homepage 'http://vagrantmanager.com/'
 

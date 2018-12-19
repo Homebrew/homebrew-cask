@@ -6,8 +6,7 @@ cask 'spectacle' do
     version '1.2'
     sha256 '766d5bf3b404ec567110a25de1d221290bc829302283b28ed0fbe73b9557f30c'
 
-    appcast 'https://www.spectacleapp.com/updates/appcast.xml',
-            checkpoint: 'f6b3d6282b56296885c8e0dc3ff3218f12b6c045dfc946379a9322323dd85fac'
+    appcast 'https://www.spectacleapp.com/updates/appcast.xml'
   end
 
   # amazonaws.com/spectacle was verified as official when first introduced to the cask
@@ -16,7 +15,6 @@ cask 'spectacle' do
   homepage 'https://www.spectacleapp.com/'
 
   auto_updates true
-  accessibility_access true
   depends_on macos: '>= :lion'
 
   app 'Spectacle.app'

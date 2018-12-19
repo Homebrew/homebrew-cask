@@ -1,10 +1,15 @@
 cask 'funter' do
-  version '2.9'
-  sha256 '1c03415b1550e8758089d3b748d9142c148821f2c0bea006c83da39e50593927'
+  if MacOS.version <= :sierra
+    version '4.1b64'
+    sha256 'b059000717f7f8af67ee027d81aea6c2d9f343e0eb72e439a9f286ab265b7b93'
+    url 'https://nektony.com/download/funter/funter_10.12.dmg'
+  else
+    version '4.3b79'
+    sha256 'd5b7ba9d8dd48581875dacdcfc9e521b518e19256fe6e5d51366f14fb6f3db79'
+    url "https://nektony.com/promo/funter/update/update_#{version}.zip"
+    appcast 'https://nektony.com/promo/funter/update/update.xml'
+  end
 
-  url "https://nektony.com/promo/funter/update/funter_v#{version}.zip"
-  appcast 'https://nektony.com/promo/funter/update/update.xml',
-          checkpoint: '257e38748c84d5e706b9a0557cb95f073797267599bee63a54ee0297c864dbb8'
   name 'Funter'
   homepage 'https://nektony.com/products/funter'
 

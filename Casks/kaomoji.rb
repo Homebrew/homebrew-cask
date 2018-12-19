@@ -4,10 +4,9 @@ cask 'kaomoji' do
 
   # kaomojiformac.github.io was verified as official when first introduced to the cask
   url 'https://kaomojiformac.github.io/download/Kaomoji.zip'
-  appcast 'https://kaomojiformac.github.io/download/kaomojiupdate.xml',
-          checkpoint: '0a5b54f892c7389dfead42f4941816dc028b909599d6ba4306137c69f9bdd1a8'
+  appcast 'https://kaomojiformac.github.io/download/kaomojiupdate.xml'
   name 'Kaomoji'
-  homepage 'http://www.kaomojiapp.com/'
+  homepage 'https://www.kaomojiapp.com/'
 
   auto_updates true
 

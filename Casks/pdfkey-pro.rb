@@ -1,11 +1,11 @@
 cask 'pdfkey-pro' do
-  version :latest
-  sha256 :no_check
+  version '4.3.9'
+  sha256 'c00cd822f0453d87fb296858dc2e85f7617c96c3b67123711a2396ffc2fb46cd'
 
-  # pdfkeypro.s3.amazonaws.com was verified as official when first introduced to the cask
-  url 'https://pdfkeypro.s3.amazonaws.com/PDFKeyPro.dmg'
+  url 'https://pdfkey.com/PDFKeyPro.dmg'
+  appcast 'https://pdfkey.com/PDFKeyProUpdateFX.xml'
   name 'PDFKey Pro'
-  homepage 'http://pdfkey.com/'
+  homepage 'https://pdfkey.com/'
 
   app 'PDFKey Pro.app'
 end

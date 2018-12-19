@@ -20,7 +20,7 @@ end
 
 ## The Cask Language Is Declarative
 
-Each Cask contains a series of stanzas (or “fields”) which *declare* how the software is to be obtained and installed. In a declarative language, the author does not need to worry about **order**. As long as all the needed fields are present, Homebrew-Cask will figure out what needs to be done at install time.
+Each Cask contains a series of stanzas (or “fields”) which *declare* how the software is to be obtained and installed. In a declarative language, the author does not need to worry about **order**. As long as all the needed fields are present, Homebrew Cask will figure out what needs to be done at install time.
 
 To make maintenance easier, the most-frequently-updated stanzas are usually placed at the top. But that’s a convention, not a rule.
 
@@ -35,7 +35,7 @@ Tests on the following values are known to be acceptable:
 
 | value                       | examples
 | ----------------------------|--------------------------------------
-| `MacOS.version`             | [macports.rb](https://github.com/caskroom/homebrew-cask/blob/90e2d103a0069b9366e9d6cd5346c98686c40dce/Casks/macports.rb#L4#L29), [coconutbattery.rb](https://github.com/caskroom/homebrew-cask/blob/2c801af44be29fff7f3cb2996455fce5dd95d1cc/Casks/coconutbattery.rb#L3#L17)
+| `MacOS.version`             | [coconutbattery.rb](https://github.com/Homebrew/homebrew-cask/blob/a11ee55e8ed8255f7dab77120dfb1fb955789559/Casks/coconutbattery.rb#L2-L16), [yasu.rb](https://github.com/Homebrew/homebrew-cask/blob/21d3f7ac8a4adac0fe474b3d4b020d284eeef88d/Casks/yasu.rb#L2-L23)
 
 ### Version Comparisons
 
@@ -50,11 +50,11 @@ if MacOS.version <= :mavericks     # symbolic name
 if MacOS.version <= '10.9'         # version string
 ```
 
-The available symbols for macOS versions are: `:cheetah`, `:puma`, `:jaguar`, `:panther`, `:tiger`, `:leopard`, `:snow_leopard`, `:lion`, `:mountain_lion`, `:mavericks`, `:yosemite`, `:el_capitan`, `:sierra`, and `:high_sierra`. The corresponding numeric version strings should be given as major releases containing a single dot.
+The available symbols for macOS versions are: `:cheetah`, `:puma`, `:jaguar`, `:panther`, `:tiger`, `:leopard`, `:snow_leopard`, `:lion`, `:mountain_lion`, `:mavericks`, `:yosemite`, `:el_capitan`, `:sierra`, `:high_sierra`, and `:mojave`. The corresponding numeric version strings should be given as major releases containing a single dot.
 
 ### Always Fall Through to the Newest Case
 
-Conditionals should be constructed so that the default is the newest OS version. When using an `if` statement, test for older versions, and then let the `else` statement hold the latest and greatest. This makes it more likely that the Cask will work without alteration when a new OS is released. Example (from [coconutbattery.rb](https://github.com/caskroom/homebrew-cask/blob/2c801af44be29fff7f3cb2996455fce5dd95d1cc/Casks/coconutbattery.rb)):
+Conditionals should be constructed so that the default is the newest OS version. When using an `if` statement, test for older versions, and then let the `else` statement hold the latest and greatest. This makes it more likely that the Cask will work without alteration when a new OS is released. Example (from [coconutbattery.rb](https://github.com/Homebrew/homebrew-cask/blob/2c801af44be29fff7f3cb2996455fce5dd95d1cc/Casks/coconutbattery.rb)):
 
 ```ruby
 if MacOS.version <= :tiger
@@ -95,7 +95,7 @@ end
 
 This should be used sparingly: any method which is needed by two or more Casks should instead be rolled into the core. Care must also be taken that such methods be very efficient.
 
-Variables and methods should not be defined outside the `Utils` namespace, as they may collide with Homebrew-Cask internals.
+Variables and methods should not be defined outside the `Utils` namespace, as they may collide with Homebrew Cask internals.
 
 ## Header Line Details
 
@@ -122,14 +122,11 @@ sha256
 language
 
 url
-appcast,
-  checkpoint: # shown here as it is required with `appcast`
+appcast
 name
 homepage
-gpg, key_id: # on same line, since first part is typically small
 
 auto_updates
-accessibility_access
 conflicts_with
 depends_on
 container
@@ -169,4 +166,4 @@ zap
 caveats
 ```
 
-Note that every stanza that has additional parameters (`:symbols` after a `,`) shall have them on separate lines, one per line, in alphabetical order. Exceptions are `gpg` and `target:` (when not applied to `url`) which typically consist of short lines.
+Note that every stanza that has additional parameters (`:symbols` after a `,`) shall have them on separate lines, one per line, in alphabetical order. An exception is `target:` which typically consists of short lines.

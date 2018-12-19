@@ -8,7 +8,7 @@ cask 'flymaster-designer' do
   homepage 'https://www.flymaster.net/'
 
   # Renamed for clarity: app name is inconsistent with its branding.
-  # Original discussion: https://github.com/caskroom/homebrew-cask/pull/9334
+  # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/9334
   app 'B2designer.app', target: 'Flymaster Designer.app'
 
   uninstall quit: 'net.flymaster.designer'

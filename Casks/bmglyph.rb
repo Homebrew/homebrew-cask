@@ -1,10 +1,9 @@
 cask 'bmglyph' do
-  version '2.2.0'
-  sha256 'b4e42720274ec4825651d5e6376c7e9d80d62770edd5d9f4dc5dc8e24f3fe3fe'
+  version '2.2.3'
+  sha256 '7f78050dc47087e7a14a608792cefb48d578dc3701424409497f346f3b2918ef'
 
-  url "https://www.bmglyph.com/application/bmGlyph.#{version}.zip"
-  appcast 'https://www.bmglyph.com/application/bmGlyphVersion.xml',
-          checkpoint: 'a758ecf728343284d3271c230483f31ba5c0165e79c0462c83690a9b7fe0039e'
+  url 'https://www.bmglyph.com/application/bmGlyph.dmg'
+  appcast 'https://www.bmglyph.com/'
   name 'bmGlyph'
   homepage 'https://www.bmglyph.com/'
 

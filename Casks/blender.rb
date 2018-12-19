@@ -9,7 +9,7 @@ cask 'blender' do
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "blender-#{version}-macOS-10.6/blender.app", target: 'Blender.app'
   app "blender-#{version}-macOS-10.6/blenderplayer.app", target: 'Blenderplayer.app'
-  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/blender.wrapper.sh"
   binary shimscript, target: 'blender'
 

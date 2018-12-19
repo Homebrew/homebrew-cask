@@ -4,10 +4,9 @@ cask 'alcatraz' do
 
   # github.com/alcatraz/Alcatraz was verified as official when first introduced to the cask
   url "https://github.com/alcatraz/Alcatraz/releases/download/#{version}/Alcatraz.tar.gz"
-  appcast 'https://github.com/alcatraz/Alcatraz/releases.atom',
-          checkpoint: '81d85c5ef11fd873f22145b9045e372a7c8bf2f50687b29b950162116439830c'
+  appcast 'https://github.com/alcatraz/Alcatraz/releases.atom'
   name 'alcatraz'
-  homepage 'http://alcatraz.io/'
+  homepage 'https://alcatraz.io/'
 
   artifact 'Alcatraz.xcplugin', target: "#{ENV['HOME']}/Library/Application Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin"
 

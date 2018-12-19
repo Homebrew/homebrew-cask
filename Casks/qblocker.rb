@@ -4,12 +4,9 @@ cask 'qblocker' do
 
   # devmate.com/uk.co.wearecocoon.QBlocker was verified as official when first introduced to the cask
   url "https://dl.devmate.com/uk.co.wearecocoon.QBlocker/#{version.before_comma}/#{version.after_comma}/QBlocker-#{version.before_comma}.zip"
-  appcast 'https://updates.devmate.com/uk.co.wearecocoon.QBlocker.xml',
-          checkpoint: '9e2b0dd2a34cf6bb9349ed7671a9fd1926f574e38aebbf95266663866f6708bf'
+  appcast 'https://updates.devmate.com/uk.co.wearecocoon.QBlocker.xml'
   name 'QBlocker'
   homepage 'https://qblocker.com/'
-
-  accessibility_access true
 
   app 'QBlocker.app'
 

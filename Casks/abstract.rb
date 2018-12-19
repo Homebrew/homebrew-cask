@@ -1,6 +1,6 @@
 cask 'abstract' do
-  version '0.70.1'
-  sha256 '5d282ea03f21048a54305f04c9daa05e31d4d10d09a2df753dddf244bd8ed8f5'
+  version '75.0.3'
+  sha256 'f6ce8a60715420354d3d2e0cb45fe433f9b6de017e275a7710cc7d8ab8f38a22'
 
   # s3.amazonaws.com/propeller-internal-releases was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/propeller-internal-releases/Abstract-#{version}.dmg"

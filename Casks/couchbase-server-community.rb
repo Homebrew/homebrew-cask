@@ -1,8 +1,8 @@
 cask 'couchbase-server-community' do
-  version '5.0.1'
-  sha256 '14ccc4fad7f4fc4cc66e6dcaa384781b1c5f18b60a5bb58c6b508dbc29bab9be'
+  version '6.0.0'
+  sha256 '26d835f0a45767d9f663a6bc4dafdddbd200e0dc3da55a2e1dac87beda1ee241'
 
-  url "http://packages.couchbase.com/releases/#{version}/couchbase-server-community_#{version}-macos_x86_64.zip"
+  url "https://packages.couchbase.com/releases/#{version}/couchbase-server-community_#{version}-macos_x86_64.zip"
   name 'Couchbase Server'
   homepage 'https://www.couchbase.com/'
 

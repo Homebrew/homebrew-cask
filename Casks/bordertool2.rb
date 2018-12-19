@@ -7,7 +7,5 @@ cask 'bordertool2' do
   name 'BorderTool 2'
   homepage 'http://xvi.rpc1.free.fr/'
 
-  auto_updates true
-
   app 'BorderTool 2.app'
 end

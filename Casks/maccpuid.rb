@@ -1,10 +1,10 @@
 cask 'maccpuid' do
-  version '2.2'
-  sha256 '9d645a0c7bc0e9b547ced80978c053c20d0e42ab822cac949f36b85f6ed19223'
+  version '3.1'
+  sha256 'f0546d65372c15fdf88c4bbfb625a4002136704a2839ab8c1f90dae68548eb46'
 
-  url "https://software.intel.com/sites/default/files/managed/b4/98/maccpuid-#{version}.dmg"
+  url 'https://software.intel.com/sites/default/files/MacCPUID.zip'
   name 'MacCPUID'
-  homepage 'https://software.intel.com/en-us/articles/download-maccpuid'
+  homepage 'https://software.intel.com/en-us/download/download-maccpuid'
 
   app 'MacCPUID.app'
 

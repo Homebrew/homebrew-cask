@@ -1,19 +1,21 @@
 cask 'microsoft-office' do
-  version '16.12.18041000'
-  sha256 '27957e2a2111bd0bc321d1ac39774875309792de22353ac380c0efcf2d91977b'
+  version '16.20.18120801'
+  sha256 '61ed9026f803a31d442e0f6a2896328e84e0e350a264c6ea9314b68c066eb5cc'
 
-  # officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/OfficeMac/ was verified as official when first introduced to the cask
-  url "https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/OfficeMac/Microsoft_Office_2016_#{version}_Installer.pkg"
-  name 'Microsoft Office 2016'
+  # officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate was verified as official when first introduced to the cask
+  url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_#{version}_Installer.pkg"
+  name 'Microsoft Office'
   homepage 'https://products.office.com/mac/microsoft-office-for-mac/'
 
   auto_updates true
 
-  pkg "Microsoft_Office_2016_#{version}_Installer.pkg"
+  pkg "Microsoft_Office_#{version}_Installer.pkg"
 
   uninstall pkgutil:   [
+                         'com.microsoft.package.OneDrive',
                          'com.microsoft.package.Fonts',
                          'com.microsoft.package.Frameworks',
+                         'com.microsoft.package.Microsoft_AutoUpdate.app',
                          'com.microsoft.package.Microsoft_Excel.app',
                          'com.microsoft.package.Microsoft_OneNote.app',
                          'com.microsoft.package.Microsoft_Outlook.app',
@@ -25,13 +27,6 @@ cask 'microsoft-office' do
             launchctl: [
                          'com.microsoft.office.licensing.helper',
                          'com.microsoft.office.licensingV2.helper',
-                       ],
-            delete:    [
-                         '/Applications/Microsoft Excel.app',
-                         '/Applications/Microsoft OneNote.app',
-                         '/Applications/Microsoft Outlook.app',
-                         '/Applications/Microsoft PowerPoint.app',
-                         '/Applications/Microsoft Word.app',
                        ]
 
   zap trash:     [
@@ -53,15 +48,19 @@ cask 'microsoft-office' do
                    '~/Library/Containers/com.microsoft.Office365ServiceV2',
                    '~/Library/Containers/com.microsoft.Outlook',
                    '~/Library/Containers/com.microsoft.Powerpoint',
+                   '~/Library/Containers/com.microsoft.com.microsoft.RMS-XPCService',
                    '~/Library/Containers/com.microsoft.Word',
                    '~/Library/Containers/com.microsoft.errorreporting',
+                   '~/Library/Containers/com.microsoft.netlib.shipassertprocess',
                    '~/Library/Containers/com.microsoft.onenote.mac',
                    '~/Library/Cookies/com.microsoft.autoupdate.fba.binarycookies',
                    '~/Library/Cookies/com.microsoft.autoupdate2.binarycookies',
                    '~/Library/Group Containers/UBF8T346G9.Office',
+                   '~/Library/Group Containers/UBF8T346G9.OfficeOneDriveSyncIntegration',
                    '~/Library/Group Containers/UBF8T346G9.OfficeOsfWebHost',
                    '~/Library/Group Containers/UBF8T346G9.ms',
                    '~/Library/Preferences/com.microsoft.Excel.plist',
+                   '~/Library/Preferences/com.microsoft.Outlook.plist',
                    '~/Library/Preferences/com.microsoft.Powerpoint.plist',
                    '~/Library/Preferences/com.microsoft.Word.plist',
                    '~/Library/Preferences/com.microsoft.autoupdate.fba.plist',
@@ -76,6 +75,7 @@ cask 'microsoft-office' do
       launchctl: [
                    'com.microsoft.autoupdate.helpertool',
                    'com.microsoft.autoupdate.helper',
+                   'com.microsoft.update.agent',
                    'com.microsoft.OneDriveUpdaterDaemon',
                  ],
       pkgutil:   [

@@ -1,13 +1,12 @@
 cask 'script-debugger' do
-  version '7.0-7A40'
-  sha256 '284f6d3a5506f5f996e371d9cbf1ac93f9611ec227e90b59fc4a67b5cc896d4c'
+  version '7.0.5-7A65'
+  sha256 '975729d046c4e5d39cd0afb614f717d314545d17b38febc3a6edcd68910c797c'
 
   # s3.amazonaws.com/latenightsw.com was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/latenightsw.com/ScriptDebugger#{version}.dmg"
-  appcast "https://www.latenightsw.com/versions/com.latenightsw.ScriptDebugger#{version.major}.php",
-          checkpoint: '598dfae5f421535329a211069183f4a6f0e919d476247232a9f7b99f502f6a65'
+  appcast "https://www.latenightsw.com/versions/com.latenightsw.ScriptDebugger#{version.major}.php"
   name 'Script Debugger'
-  homepage 'http://latenightsw.com/'
+  homepage 'https://latenightsw.com/'
 
   app 'Script Debugger.app'
 

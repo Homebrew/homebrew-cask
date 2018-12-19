@@ -4,8 +4,7 @@ cask 'spotdox' do
 
   # spotdox.herokuapp.com was verified as official when first introduced to the cask
   url 'https://spotdox.herokuapp.com/downloads/Spotdox.zip'
-  appcast 'https://spotdox.herokuapp.com/downloads/appcast.xml',
-          checkpoint: '26089478ca99f1e237f3a13a879f327f732a1f4396d5077a6f8007632c8cf18d'
+  appcast 'https://spotdox.herokuapp.com/downloads/appcast.xml'
   name 'Spotdox'
   homepage 'https://spotdox.com/'
 

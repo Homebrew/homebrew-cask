@@ -1,10 +1,10 @@
 cask 'bluestacks' do
-  version '2.0.0.12'
-  sha256 '80896cb2c3f000ff75c7bda3e6481fbe65600b26ea1df9004fed3ed7e5e54f07'
+  version '2.0.1.14'
+  sha256 'b3e2f0133b21a1c92866735e0e4f4b08ce53d6f2e77ab87ca6b402cf73f040b0'
 
   url "https://cdn3.bluestacks.com/mac/#{version}/BlueStacksInstaller.dmg"
   name 'BlueStacks'
-  homepage 'http://www.bluestacks.com/'
+  homepage 'https://www.bluestacks.com/'
 
   installer manual: 'BlueStacks Installer.app'
 

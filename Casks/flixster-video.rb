@@ -4,8 +4,7 @@ cask 'flixster-video' do
 
   # dtmmt9rxsy2no.cloudfront.net was verified as official when first introduced to the cask
   url 'https://dtmmt9rxsy2no.cloudfront.net/desktop/mac/FlixsterDesktop.zip'
-  appcast 'https://dtmmt9rxsy2no.cloudfront.net/desktop/mac/FlixsterDesktopMacAppcast.xml',
-          checkpoint: '58614097c1c907f7a693ffd55ffcfc493a51d5ad1e176f80ba7deebe361f606d'
+  appcast 'https://dtmmt9rxsy2no.cloudfront.net/desktop/mac/FlixsterDesktopMacAppcast.xml'
   name 'Flixster Video'
   homepage 'https://www.flixstervideo.com/apps'
 

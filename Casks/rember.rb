@@ -4,7 +4,7 @@ cask 'rember' do
 
   url 'https://www.kelleycomputing.net/downloads/Rember.dmg'
   name 'Rember'
-  homepage 'http://www.kelleycomputing.net/rember/'
+  homepage 'https://www.kelleycomputing.net/rember/'
 
   app 'Rember.app'
 end

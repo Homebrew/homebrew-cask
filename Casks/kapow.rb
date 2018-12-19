@@ -1,6 +1,6 @@
 cask 'kapow' do
-  version '1.5.5'
-  sha256 '5a2cf0db4123b77d172f1ac1d486adab98abb3ac982ed1d39c3b2fcbacd33e24'
+  version '1.5.8'
+  sha256 'd254ae782bee0d0e88d254d44e4dcec9bc471847645822647bb8fa85b258cee6'
 
   url "https://gottcode.org/kapow/Kapow_#{version}.dmg"
   name 'Kapow'

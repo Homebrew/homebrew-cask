@@ -4,8 +4,7 @@ cask 'hobo' do
 
   # downloads-clickonideas.netdna-ssl.com/hobo was verified as official when first introduced to the cask
   url "https://downloads-clickonideas.netdna-ssl.com/hobo/hobo_#{version}.zip"
-  appcast 'https://shine.clickontyler.com/appcast.php?id=31',
-          checkpoint: '7e1bee541054caae98209bdb7039350806173a1baf9ffff81e659f12bc8d1460'
+  appcast 'https://shine.clickontyler.com/appcast.php?id=31'
   name 'Hobo'
   homepage 'https://clickontyler.com/hobo/'
 

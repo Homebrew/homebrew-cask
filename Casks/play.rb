@@ -1,11 +1,10 @@
 cask 'play' do
-  version '2.0.16'
-  sha256 '6554961e11bc78873a2ccf1bed33c387763f969541556d119f506c4eaee77c3f'
+  version '2.0.17'
+  sha256 '7023dd54055cd306494dd6d3531d9e07ccdfcb434e22bd6ac60e8f7fbf1a39bd'
 
   # github.com/pmsaue0/play was verified as official when first introduced to the cask
   url "https://github.com/pmsaue0/play/releases/download/v#{version}/play_#{version}.dmg.zip"
-  appcast 'https://github.com/pmsaue0/play/releases.atom',
-          checkpoint: '19544fa2c74c79d9c56016dacf785749a09873bf0f00f7d239272bc73702955f'
+  appcast 'https://github.com/pmsaue0/play/releases.atom'
   name 'Play'
   homepage 'https://pmsaue0.github.io/play/'
 

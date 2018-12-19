@@ -4,8 +4,7 @@ cask 'dat' do
 
   # github.com/datproject/dat-desktop was verified as official when first introduced to the cask
   url "https://github.com/datproject/dat-desktop/releases/download/v#{version}/dat-desktop-#{version}-mac.zip"
-  appcast 'https://github.com/datproject/dat-desktop/releases.atom',
-          checkpoint: '1746131bcd806395bb64105c9bde9a783f3aff6b36ad39f40a1e85cb8b34583b'
+  appcast 'https://github.com/datproject/dat-desktop/releases.atom'
   name 'Dat Desktop'
   homepage 'https://datproject.org/'
 

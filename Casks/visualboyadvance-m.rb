@@ -1,13 +1,12 @@
 cask 'visualboyadvance-m' do
-  version '2.0.2'
-  sha256 '29e7ce42d69f1916fbb158079fab01e7ab43836e1ff4ce43a3c2800cbd248250'
+  version '2.1.0'
+  sha256 'ccbb87374dad140d5359758b2c064403e1ea0a3c171525a9df98a7bee9ee3168'
 
   # github.com/visualboyadvance-m/visualboyadvance-m was verified as official when first introduced to the cask
   url "https://github.com/visualboyadvance-m/visualboyadvance-m/releases/download/v#{version}/visualboyadvance-m-Mac.zip"
-  appcast 'https://github.com/visualboyadvance-m/visualboyadvance-m/releases.atom',
-          checkpoint: '2a176560f40052fd7a6af786b02cb910495a29d8ad29710133d8e6a2dc5e25d4'
+  appcast 'https://github.com/visualboyadvance-m/visualboyadvance-m/releases.atom'
   name 'Visual Boy Advance - M'
-  homepage 'http://vba-m.com/'
+  homepage 'https://vba-m.com/'
 
   app 'visualboyadvance-m.app'
 

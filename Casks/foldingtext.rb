@@ -4,10 +4,9 @@ cask 'foldingtext' do
 
   # amazonaws.com/foldingtext was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/foldingtext/FoldingText.dmg'
-  appcast 'https://foldingtext.s3.amazonaws.com/FoldingText.rss',
-          checkpoint: '5335e89ce209b69d8c69be935456c2708f5188f35f0a780c2282d948cefd0a4a'
+  appcast 'https://foldingtext.s3.amazonaws.com/FoldingText.rss'
   name 'FoldingText'
-  homepage 'http://www.foldingtext.com/'
+  homepage 'https://www.foldingtext.com/'
 
   app 'FoldingText.app'
 end

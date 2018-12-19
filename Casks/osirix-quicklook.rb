@@ -2,7 +2,7 @@ cask 'osirix-quicklook' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.osirix-viewer.com/Museum/OsiriXQuickLookInstaller.zip'
+  url 'https://www.osirix-viewer.com/Museum/OsiriXQuickLookInstaller.zip'
   name 'OsiriX DICOM QuickLook'
   homepage 'https://www.osirix-viewer.com/'
 

@@ -4,8 +4,7 @@ cask 'harmony' do
 
   # github.com/vincelwt/harmony was verified as official when first introduced to the cask
   url "https://github.com/vincelwt/harmony/releases/download/v#{version}/harmony-#{version}-mac.app.zip"
-  appcast 'https://github.com/vincelwt/harmony/releases.atom',
-          checkpoint: '348aa7be95f5d56fc931ad2c20f878bfb51048e864d1e084fac41ecf8f90d5a2'
+  appcast 'https://github.com/vincelwt/harmony/releases.atom'
   name 'Harmony'
   homepage 'https://getharmony.xyz/'
 

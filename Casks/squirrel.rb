@@ -5,7 +5,7 @@ cask 'squirrel' do
   # dl.bintray.com/lotem/rime was verified as official when first introduced to the cask
   url "https://dl.bintray.com/lotem/rime/Squirrel-#{version}.zip"
   name 'Squirrel'
-  homepage 'http://rime.im/download/'
+  homepage 'https://rime.im/download/'
 
   depends_on macos: '>= :lion'
 

@@ -6,8 +6,6 @@ cask 'starleaf' do
   name 'Starleaf'
   homepage 'https://www.starleaf.com/'
 
-  auto_updates true
-
   pkg 'StarLeaf.pkg'
 
   uninstall login_item: 'StarLeaf',

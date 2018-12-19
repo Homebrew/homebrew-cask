@@ -1,12 +1,11 @@
 cask 'anka-build' do
-  version '1.2.2.88'
-  sha256 '09fe1493e41b339590709f0d58b881203fb1ca31f086c56419775e950267e8a1'
+  version '1.4.1.99'
+  sha256 'a9840a3bbc76e52d9a987e03e553bd614544f5069ef35e3346d66d114a9af994'
 
   # d1efqjhnhbvc57.cloudfront.net was verified as official when first introduced to the cask
   url "https://d1efqjhnhbvc57.cloudfront.net/AnkaBuild-#{version}.pkg",
       referer: 'https://veertu.com/download-anka-build/'
-  appcast 'https://ankadoc.bitbucket.io/release-notes/index.html',
-          checkpoint: '2016e6da466725f424883294813c44ed959b04ce25f9e32737c3ecec58beb1ab'
+  appcast 'https://ankadoc.bitbucket.io/release-notes/index.html'
   name 'Veertu Anka Build'
   homepage 'https://veertu.com/'
 
@@ -17,6 +16,7 @@ cask 'anka-build' do
   uninstall launchctl: [
                          'com.veertu.nlimit',
                          'com.veertu.vlaunch',
+                         'com.veertu.anka.lupd',
                        ],
             script:    {
                          executable: '/Library/Application Support/Veertu/Anka/tools/uninstall.sh',
@@ -36,10 +36,7 @@ cask 'anka-build' do
                '/Library/Application Support/Veertu',
              ]
 
-  caveats <<~EOS
-    Installing this Cask means you have AGREED to the
-    Veertu End User License Agreement at
-
-    https://veertu.com/terms-and-conditions/
-  EOS
+  caveats do
+    license 'https://veertu.com/terms-and-conditions/'
+  end
 end

@@ -1,10 +1,18 @@
 cask 'mi' do
-  version '2.1.12r5'
-  sha256 'f594e33451fd70cf16c36af205f59294609d910836a91c877e9d2f74261b5d38'
+  version '3.0.1'
+  sha256 'c8ff11f8b8836920d2db33a74e2c7a5aa53153772024dcd4fe9aae386725f44a'
 
   url "https://www.mimikaki.net/download/mi#{version}.dmg"
-  name 'Mi'
+  appcast 'https://www.mimikaki.net/download/appcast.xml'
+  name 'mi'
   homepage 'https://www.mimikaki.net/'
 
+  depends_on macos: '>= :lion'
+
   app 'mi.app'
+
+  zap trash: [
+               '~/Library/Caches/net.mimikaki.mi',
+               '~/Library/Preferences/net.mimikaki.mi.plist',
+             ]
 end

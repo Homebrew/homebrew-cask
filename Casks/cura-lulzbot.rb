@@ -1,6 +1,6 @@
 cask 'cura-lulzbot' do
-  version '2.6.69'
-  sha256 'efcd685b2ad6b0914d099988a33fd086389ed0b9dfbecf826c8965fe836ca74f'
+  version '3.2.27'
+  sha256 'db6ca23e3e5d8f225323d2bcdbcdf6d8156c426d879f7b465dce77a23fb8aff5'
 
   url "https://download.lulzbot.com/Software/cura-lulzbot/mac/cura-lulzbot_#{version}.dmg"
   name 'Cura LulzBot Edition'

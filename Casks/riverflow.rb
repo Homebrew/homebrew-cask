@@ -4,8 +4,7 @@ cask 'riverflow' do
 
   # amazonaws.com/sparkle-appcasts/riverflow was verified as official when first introduced to the cask
   url "https://s3-ap-northeast-1.amazonaws.com/sparkle-appcasts/riverflow/riverflow-#{version}.zip"
-  appcast 'http://questbe.at/riverflow/',
-          checkpoint: 'f31705d2fee50ef8e8bfc62ecb346f590ecfcc7d6222cdcfe4a9c4c609191325'
+  appcast 'http://questbe.at/riverflow/'
   name 'Riverflow'
   homepage 'http://questbe.at/riverflow/'
 

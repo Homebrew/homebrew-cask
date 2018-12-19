@@ -4,10 +4,9 @@ cask 'termhere' do
 
   # github.com/hbang/TermHere was verified as official when first introduced to the cask
   url "https://github.com/hbang/TermHere/releases/download/#{version}/TermHere.#{version}.dmg"
-  appcast 'https://github.com/hbang/TermHere/releases.atom',
-          checkpoint: '02b386209318733f89017fabc2af9d6262c8cd907ce0e8bbf8f8dd882753d377'
+  appcast 'https://github.com/hbang/TermHere/releases.atom'
   name 'TermHere'
-  homepage 'https://hbang.ws/apps/termhere'
+  homepage 'https://hbang.ws/apps/termhere/'
 
   app 'TermHere.app'
 

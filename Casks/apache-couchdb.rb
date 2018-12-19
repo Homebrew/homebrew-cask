@@ -1,11 +1,10 @@
 cask 'apache-couchdb' do
-  version '2.1.1'
-  sha256 '31f780432af0d9cdbe942beb56e181de9f0e1fb69535d6e5af957fd4ccb9e147'
+  version '2.2.0'
+  sha256 '8c6a5b4e7d23283ea7cbde033b97fc2abdeed89d6f9a035d6c30f492067ff94e'
 
   # bintray.com/apache/couchdb was verified as official when first introduced to the cask
   url "https://dl.bintray.com/apache/couchdb/mac/#{version}/Apache-CouchDB-#{version}.zip"
-  appcast 'https://github.com/apache/couchdb/releases.atom',
-          checkpoint: '9b6339769352a4b5e9396691b84174c0b8f0e92b361fa8deca33aaa558f638d9'
+  appcast 'https://github.com/apache/couchdb/releases.atom'
   name 'Apache CouchDB'
   homepage 'https://couchdb.apache.org/'
 

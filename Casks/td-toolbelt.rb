@@ -2,7 +2,7 @@ cask 'td-toolbelt' do
   version :latest
   sha256 :no_check
 
-  url 'http://toolbelt.treasuredata.com/mac'
+  url 'https://toolbelt.treasuredata.com/mac_dl'
   name 'Treasure Data Toolbelt'
   homepage 'https://toolbelt.treasuredata.com/'
 

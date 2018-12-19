@@ -1,11 +1,14 @@
 cask 'chatmate-for-facebook' do
-  version :latest
-  sha256 :no_check
+  version '4.3.1,482:1537946763'
+  sha256 '7e658246e0ac4c35c36de5f730f5f2fca6c644f25cb134d165167e38c4b7771e'
 
   # dl.devmate.com/net.coldx.mac.Facebook was verified as official when first introduced to the cask
-  url 'https://dl.devmate.com/net.coldx.mac.Facebook/ChatMateforFacebook.dmg'
+  url "https://dl.devmate.com/net.coldx.mac.Facebook/#{version.after_comma.before_colon}/#{version.after_colon}/ChatMateforFacebook-#{version.after_comma.before_colon}.zip"
+  appcast 'https://updates.devmate.com/net.coldx.mac.Facebook.xml'
   name 'ChatMate for Facebook'
   homepage 'https://chatmate.io/mac/facebook/'
+
+  depends_on macos: '>= :sierra'
 
   app 'ChatMate for Facebook.app'
 

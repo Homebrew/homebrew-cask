@@ -1,8 +1,8 @@
 cask 'rationalplan-viewer' do
-  version '4.15.7389'
-  sha256 '73945254e36c5bd7839421a7f02962db1cfe033b6a0a3962f2c7be3c3929537d'
+  version '5.0.7699'
+  sha256 '94143eb7bf08a87a2c1cf4b16eb8847acb7616dd43b28825753861a8d3aa7c50'
 
-  url "http://www.rationalplan.com/download/RationalPlan-Viewer-#{version}.dmg"
+  url "https://www.rationalplan.com/download/RationalPlan-Viewer-#{version}.dmg"
   name 'RationalPlan Viewer'
   homepage 'https://www.rationalplan.com/on-premise/'
 

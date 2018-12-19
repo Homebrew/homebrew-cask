@@ -1,12 +1,11 @@
 cask 'grids' do
-  version '4.9'
-  sha256 '4c6dc7865f8df3b1d0861c7fcf7f3944a39f6768e74dbf3f47e66aac4cd72bb0'
+  version '5.2'
+  sha256 'fc0369955a4f333784268f6528e9ed6b41d3b3e33c67b96c2ee10958d1570093'
 
-  url "http://thegridsapp.com/bin/Grids_#{version}.zip"
-  appcast 'http://thegridsapp.com/appcast.json',
-          checkpoint: '6b843c86f2455792329c473bfb9f29f1db72244450c3ec4a10c56f7ff70f4352'
+  url "https://gridsapp.net/bin/Grids_#{version}.zip"
+  appcast 'https://gridsapp.net/appcast.json'
   name 'Grids'
-  homepage 'http://thegridsapp.com/'
+  homepage 'https://gridsapp.net/'
 
   auto_updates true
 

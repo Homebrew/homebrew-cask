@@ -5,7 +5,7 @@ cask 'gom-player' do
   url 'https://app.gomtv.com/GOMForMac/gom.pkg'
   name 'GOM Player'
   name '곰플레이어'
-  homepage 'http://gom2.gomtv.com/release/gom_player_mac.htm'
+  homepage 'https://gom2.gomtv.com/release/gom_player_mac.htm'
 
   pkg 'gom.pkg'
 

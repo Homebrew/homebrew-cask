@@ -4,10 +4,11 @@ cask 'touche' do
 
   # redsweater.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://redsweater.s3.amazonaws.com/Touche#{version}.zip"
-  appcast 'https://red-sweater.com/touche/appcast.php',
-          checkpoint: '8dcc3d671b2df9c2889801fed2d42ee2ebde6a61042b5559027dac6cfa5c6a38'
+  appcast 'https://red-sweater.com/touche/appcast.php'
   name 'Touché'
   homepage 'https://red-sweater.com/touche/'
+
+  depends_on macos: '>= :sierra'
 
   app 'Touché.app'
 

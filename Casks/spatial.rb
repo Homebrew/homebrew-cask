@@ -6,7 +6,6 @@ cask 'spatial' do
   name 'Spatial'
   homepage 'https://spatialos.improbable.io/docs'
 
-  auto_updates true
   container type: :naked
 
   binary 'mac', target: 'spatial'

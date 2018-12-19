@@ -4,8 +4,7 @@ cask 'rabbitmq-app' do
 
   # github.com/jpadilla/rabbitmqapp was verified as official when first introduced to the cask
   url "https://github.com/jpadilla/rabbitmqapp/releases/download/#{version}/RabbitMQ.zip"
-  appcast 'https://github.com/jpadilla/rabbitmqapp/releases.atom',
-          checkpoint: '90cec6b712cb208b42599676a94d9462a60e92c7501884e49eb9a01284dcd3a3'
+  appcast 'https://github.com/jpadilla/rabbitmqapp/releases.atom'
   name 'RabbitMQ'
   homepage 'https://jpadilla.github.io/rabbitmqapp/'
 

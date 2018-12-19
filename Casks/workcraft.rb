@@ -1,6 +1,6 @@
 cask 'workcraft' do
-  version '3.1.9'
-  sha256 '07602681f9a90eb0271b45620f1be5aa559ea9bb2cc69f49f0e178a28fb1f149'
+  version '3.2.0'
+  sha256 '36b20f6b6fa188a3de112cbd60d9fdcc0cbedb3d8932fac4a532afe1ed6d31c2'
 
   url "https://www.workcraft.org/_media/download/workcraft-v#{version}-osx.tar.gz"
   name 'Workcraft'

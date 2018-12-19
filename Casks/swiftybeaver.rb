@@ -4,8 +4,7 @@ cask 'swiftybeaver' do
 
   # s3.amazonaws.com/swiftybeaver was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/swiftybeaver/SBMac-#{version}.zip"
-  appcast 'https://s3.amazonaws.com/swiftybeaver/sbmac-appcast.xml',
-          checkpoint: '565d43c26994964606e69037232c1b30e492e08ae871f3bb5cf576bb7736dd56'
+  appcast 'https://s3.amazonaws.com/swiftybeaver/sbmac-appcast.xml'
   name 'SwiftyBeaver'
   homepage 'https://swiftybeaver.com/'
 

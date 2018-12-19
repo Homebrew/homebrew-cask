@@ -4,8 +4,7 @@ cask 'koala' do
 
   # github.com/oklai/koala was verified as official when first introduced to the cask
   url "https://github.com/oklai/koala/releases/download/v#{version}/Koala.dmg"
-  appcast 'https://github.com/oklai/koala/releases.atom',
-          checkpoint: 'eb41b1f9b5834ab1f4150a3c784dbcf301ff163097d06bf0222ed5bc618dcc64'
+  appcast 'https://github.com/oklai/koala/releases.atom'
   name 'Koala'
   homepage 'http://koala-app.com/'
 

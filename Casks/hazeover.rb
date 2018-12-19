@@ -1,10 +1,9 @@
 cask 'hazeover' do
-  version '1.7.7'
-  sha256 '32a3cc47e165a2bf3ce56df0932648ef3b9dee7be2ef3eced8a1b595d1318421'
+  version '1.8.1-700'
+  sha256 '6b1185a16d9d4950d9324c57906df844f959df3ffd308bcaba6dae49ae4ff1c5'
 
   url 'https://hazeover.com/HazeOver.dmg'
-  appcast 'https://hazeover.com/updates.xml',
-          checkpoint: 'd6fd039ed6610bf3d96c76d14768d012911be3055e1327242b150ab94f9c8fe0'
+  appcast 'https://hazeover.com/updates.xml'
   name 'HazeOver'
   homepage 'https://hazeover.com/'
 

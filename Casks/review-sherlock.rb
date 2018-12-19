@@ -7,7 +7,7 @@ cask 'review-sherlock' do
   name 'Review Sherlock'
   homepage 'https://www.rbcafe.com/software/review-sherlock/'
 
-  depends_on macos: '>= :mountain_lion'
+  depends_on macos: '>= :el_capitan'
 
   app 'Review Sherlock.app'
 end

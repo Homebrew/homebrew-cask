@@ -1,11 +1,10 @@
 cask 'nanowallet' do
-  version '2.1.2'
-  sha256 '3457aeb6c9d3db09383d688ecebc2dead4b09580ead17cda6b9a6da86de05107'
+  version '2.3.2'
+  sha256 '145618e2e6fc9b5a98a0579391eccc3cf79cbb9a29c97d9c64e398c5a9d2e402'
 
   # github.com/NemProject/NanoWallet was verified as official when first introduced to the cask
   url "https://github.com/NemProject/NanoWallet/releases/download/#{version}/NanoWallet-#{version}-osx64.zip"
-  appcast 'https://github.com/NemProject/NanoWallet/releases.atom',
-          checkpoint: '221c0bc423fe71211c27da1cb3c441d7849a9fdd6bc9ed03dc4a70d65ac40b4d'
+  appcast 'https://github.com/NemProject/NanoWallet/releases.atom'
   name 'NanoWallet'
   homepage 'https://nem.io/'
 

@@ -4,8 +4,7 @@ cask 'cartographica' do
 
   # cluetrust.com was verified as official when first introduced to the cask
   url 'https://www.cluetrust.com/Downloads/Cartographica.dmg'
-  appcast 'https://www.cluetrust.com/AppCasts/Cartographica.xml',
-          checkpoint: '4724e8450e080ac2e780cba94651b1ff312333a68d3682c48c6c2e76bc10d951'
+  appcast 'https://www.cluetrust.com/AppCasts/Cartographica.xml'
   name 'Cartographica'
   homepage 'https://www.macgis.com/'
 

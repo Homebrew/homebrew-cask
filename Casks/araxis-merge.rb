@@ -12,13 +12,12 @@ cask 'araxis-merge' do
     sha256 'abba11a92e1f50d913356d31123bed5bb08838ce39c4659206fd24c32432c4b3'
     url "https://www.araxis.com/download/Merge#{version}-OSX10.10.dmg"
   else
-    version '2018.4971'
-    sha256 'f16f7aa874dab7fa3f48e7284f9613e0c8c872034ffa4ddce20f37b38c8200f4'
+    version '2018.5008'
+    sha256 'db47fa9e0d90313a3eb0239248e2cb23489d3ca695ebe9a1299e188efd4a4bb2'
     url "https://www.araxis.com/download/Merge#{version}-macOS.dmg"
   end
 
-  appcast 'https://www.araxis.com/news-feed.atom',
-          checkpoint: '7c405cb5dcce28e0ee8da41c76bb2cd4a908f77bb81896c58257e526909c5341'
+  appcast 'https://www.araxis.com/news-feed.atom'
   name 'Araxis Merge'
   homepage 'https://www.araxis.com/merge/'
 

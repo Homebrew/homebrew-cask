@@ -1,12 +1,11 @@
 cask 'dollydrive' do
-  version '3.99,39996'
-  sha256 '5bdc7492102302684c4cb1b6f5c1673afc1ef432073a911b4f3dd8a4aa3a232d'
+  version '4.2,42000'
+  sha256 '9808eea1ca3bf784694aac2e5212a28fb84793954b33e72dfd3e401b9feffda0'
 
-  url "http://dollydrive.com/download-center/dollydrive/DollyDrive_#{version.before_comma}_#{version.after_comma}_CERTIFIED.zip"
-  appcast "http://www.dollydrive.com/dolly#{version.major}.xml",
-          checkpoint: '054f899600656ad6e38548c31994edffbc1dbb589ed7db58dbcb9ae8fc503de5'
+  url "https://sparkle.dollydrive.com/downloadcenter/DollyDrive_#{version.before_comma}_#{version.after_comma}_CERTIFIED.zip"
+  appcast "https://www.dollydrive.com/dolly#{version.major}.xml"
   name 'DollyDrive'
-  homepage 'http://www.dollydrive.com/'
+  homepage 'https://www.dollydrive.com/'
 
   app 'DollyDrive.app'
 end

@@ -1,10 +1,9 @@
 cask 'xamarin-mac' do
-  version '4.2.1.28'
-  sha256 '78bf27b6e7682150c1eb688af0c13edc69456b26856811f87124f23fbac9a312'
+  version '5.2.0.0'
+  sha256 'e20254f476fcda2a55a6d5e099a483c2e889fd77f14e5d402da1d35ad0753db2'
 
   url "https://dl.xamarin.com/XamarinforMac/Mac/xamarin.mac-#{version}.pkg"
-  appcast 'https://xampubdl.blob.core.windows.net/static/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
-          checkpoint: 'b86124b8760fa01636931c40f473476e40d303d4d9a321422973becbea1efc33'
+  appcast 'https://xampubdl.blob.core.windows.net/static/installer_assets/v4/Mac/Universal/InstallationManifest.xml'
   name 'Xamarin Mac'
   homepage 'https://www.xamarin.com/platform'
 

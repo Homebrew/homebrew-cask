@@ -1,13 +1,12 @@
 cask 'asciidocfx' do
-  version '1.5.9'
-  sha256 '5bd97c4dc9f3dc7d16d46245adab74d83bf5a83ae41b90ca68e0d3aa964caa6b'
+  version '1.6.9'
+  sha256 '2cb7492ace5fbe1a384954f7cc68fabf6d3b7f5dfd3f35cfe546a301869ea47f'
 
   # github.com/asciidocfx/AsciidocFX was verified as official when first introduced to the cask
   url "https://github.com/asciidocfx/AsciidocFX/releases/download/v#{version}/AsciidocFX_Mac.dmg"
-  appcast 'https://github.com/asciidocfx/AsciidocFX/releases.atom',
-          checkpoint: '032f9803edea520fe8b57d7a2caae6e0a6246c10fafee50aa7fecd31f1ee7ac6'
+  appcast 'https://github.com/asciidocfx/AsciidocFX/releases.atom'
   name 'AsciidocFX'
-  homepage 'http://www.asciidocfx.com/'
+  homepage 'https://www.asciidocfx.com/'
 
   installer script: {
                       executable: 'AsciidocFX Installer.app/Contents/MacOS/JavaApplicationStub',

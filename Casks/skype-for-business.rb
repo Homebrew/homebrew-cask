@@ -1,6 +1,6 @@
 cask 'skype-for-business' do
-  version '16.16.0.102'
-  sha256 '6bdf075fae7e7b3a01ab88c656cf6368bd1cf1bad02edfbd8dbc2826b0be95fa'
+  version '16.23.0.64'
+  sha256 '2030d149b52e37d338cae99437219ffb7d148b4c0f85a2131a8974c5a3949f78'
 
   url "https://download.microsoft.com/download/D/0/5/D055DA17-C7B8-4257-89A1-78E7BBE3833F/SkypeForBusinessInstaller-#{version}.pkg"
   name 'Skype for Business'
@@ -17,13 +17,14 @@ cask 'skype-for-business' do
                         ],
             login_item: 'Skype for Business'
 
-  zap trash:   [
-                 '/Library/Internet Plug-Ins/MeetingJoinPlugin.plugin',
-                 '~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.plist',
-                 '~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.debuglogging.plist',
-                 '~/Library/Application Support/com.microsoft.SkypeForBusinessTAP',
-                 '~/Library/Application Support/Skype for Business',
-               ],
-      rmdir:   '/Library/Application Support/Microsoft',
-      pkgutil: 'com.microsoft.package.Microsoft_AutoUpdate.app'
+  zap trash:     [
+                   '/Library/Internet Plug-Ins/MeetingJoinPlugin.plugin',
+                   '~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.plist',
+                   '~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.debuglogging.plist',
+                   '~/Library/Application Support/com.microsoft.SkypeForBusinessTAP',
+                   '~/Library/Application Support/Skype for Business',
+                 ],
+      launchctl: 'com.microsoft.autoupdate.helper',
+      rmdir:     '/Library/Application Support/Microsoft',
+      pkgutil:   'com.microsoft.package.Microsoft_AutoUpdate.app'
 end

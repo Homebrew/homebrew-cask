@@ -4,10 +4,9 @@ cask 'nimble' do
 
   # github.com/Maybulb/Nimble was verified as official when first introduced to the cask
   url "https://github.com/Maybulb/Nimble/releases/download/#{version}/Nimble-#{version}.dmg"
-  appcast 'https://github.com/Maybulb/Nimble/releases.atom',
-          checkpoint: '59612688040237acec569456b374bcd12da6bbb39c0eaebd2f9753caa98d3a14'
+  appcast 'https://github.com/Maybulb/Nimble/releases.atom'
   name 'Nimble'
-  homepage 'http://maybulb.com/'
+  homepage 'https://maybulb.com/'
 
   app 'Nimble.app'
 

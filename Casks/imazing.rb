@@ -1,9 +1,10 @@
 cask 'imazing' do
-  version '2'
-  sha256 :no_check # required as upstream package is updated in-place
+  version '2.8.2,9842:1543486503'
+  sha256 '707c69d414ce87a30c6ea49c220b95972be0c22ccc4c7ed5b0591b77c0c50912'
 
-  # dl.devmate.com was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.DigiDNA.iMazing#{version}Mac/iMazing#{version}forMac.dmg"
+  # dl.devmate.com/com.DigiDNA.iMazing2Mac was verified as official when first introduced to the cask
+  url "https://dl.devmate.com/com.DigiDNA.iMazing2Mac/#{version.after_comma.before_colon}/#{version.after_colon}/iMazing#{version.major}forMac-#{version.after_comma.before_colon}.dmg"
+  appcast "https://updates.devmate.com/com.DigiDNA.iMazing#{version.major}Mac.xml"
   name 'iMazing'
   homepage 'https://imazing.com/'
 
@@ -22,12 +23,12 @@ cask 'imazing' do
                '~/Library/Application Support/iMazing',
                '~/Library/Application Support/iMazing Mini',
                '~/Library/Application Support/MobileSync/Backup/iMazing.Versions',
-               "~/Library/Caches/com.DigiDNA.iMazing#{version}Mac",
-               "~/Library/Caches/com.DigiDNA.iMazing#{version}Mac.Mini",
-               "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.DigiDNA.iMazing#{version}Mac.Mini",
+               "~/Library/Caches/com.DigiDNA.iMazing#{version.major}Mac",
+               "~/Library/Caches/com.DigiDNA.iMazing#{version.major}Mac.Mini",
+               "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.DigiDNA.iMazing#{version.major}Mac.Mini",
                '~/Library/Caches/iMazing',
-               "~/Library/Preferences/com.DigiDNA.iMazing#{version}Mac.plist",
-               "~/Library/Preferences/com.DigiDNA.iMazing#{version}Mac.Mini.plist",
+               "~/Library/Preferences/com.DigiDNA.iMazing#{version.major}Mac.plist",
+               "~/Library/Preferences/com.DigiDNA.iMazing#{version.major}Mac.Mini.plist",
                '/Users/Shared/iMazing Mini',
                '/Users/Shared/iMazing',
              ]

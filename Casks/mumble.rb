@@ -4,11 +4,9 @@ cask 'mumble' do
 
   # github.com/mumble-voip/mumble was verified as official when first introduced to the cask
   url "https://github.com/mumble-voip/mumble/releases/download/#{version}/Mumble-#{version}.dmg"
-  appcast 'https://github.com/mumble-voip/mumble/releases.atom',
-          checkpoint: '5eac67f1b7255a216e79b745ff7b86f1c29c5628be463c4789c52c775457a6ce'
+  appcast 'https://github.com/mumble-voip/mumble/releases.atom'
   name 'Mumble'
   homepage 'https://wiki.mumble.info/wiki/Main_Page'
-  gpg "#{url}.sig", key_url: 'https://github.com/mumble-voip/mumble-gpg-signatures/raw/master/mumble-auto-build-2017.asc'
 
   app 'Mumble.app'
 end

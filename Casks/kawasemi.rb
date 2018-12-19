@@ -2,7 +2,7 @@ cask 'kawasemi' do
   version :latest
   sha256 :no_check
 
-  url 'https://store.monokakido.jp/download/Kawasemi2/Kawasemi2.dmg'
+  url 'https://www.monokakido.jp/download/Kawasemi2/Kawasemi2.dmg'
   name 'Kawasemi'
   name 'かわせみ'
   homepage 'https://www.monokakido.jp/kawasemi/kawasemi2/index.html'

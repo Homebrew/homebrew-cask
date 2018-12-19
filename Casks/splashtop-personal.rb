@@ -4,8 +4,7 @@ cask 'splashtop-personal' do
 
   # d17kmd0va0f0mp.cloudfront.net was verified as official when first introduced to the cask
   url "https://d17kmd0va0f0mp.cloudfront.net/macclient/STP/Splashtop_Personal_v#{version}.dmg"
-  appcast 'https://www.splashtop.com/wp-content/themes/responsive/downloadx.php?product=stp&platform=mac-client',
-          checkpoint: 'b5a5ffb074407dcc0685e2e380d005742846c8aeaaae7a8c7c1ba7bfe3fd23a7'
+  appcast 'https://www.splashtop.com/wp-content/themes/responsive/downloadx.php?product=stp&platform=mac-client'
   name 'Splashtop Personal'
   homepage 'https://www.splashtop.com/personal'
 

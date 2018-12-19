@@ -4,8 +4,7 @@ cask 'castbridge' do
 
   # s3.amazonaws.com/updates.castbridge.io was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/updates.castbridge.io/Castbridge-#{version}-mac.zip"
-  appcast 'https://s3.amazonaws.com/updates.castbridge.io/latest-mac.json',
-          checkpoint: '4020c048dacd6ec25b5404af53108e2ff716e4e52b9e9388845815bbdf0d0784'
+  appcast 'https://s3.amazonaws.com/updates.castbridge.io/latest-mac.json'
   name 'Castbridge'
   homepage 'https://castbridge.io/'
 

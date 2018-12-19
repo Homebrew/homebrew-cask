@@ -7,7 +7,6 @@ cask 'orfo-plus' do
   name 'ОРФО Плюс'
   homepage 'http://www.orfo.ru/'
 
-  auto_updates true
   conflicts_with cask: 'orfo'
 
   pkg 'ORFO2016Plus.pkg'

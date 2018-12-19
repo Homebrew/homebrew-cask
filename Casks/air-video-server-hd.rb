@@ -4,8 +4,7 @@ cask 'air-video-server-hd' do
 
   # amazonaws.com/AirVideoHD was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/AirVideoHD/Download/Air+Video+Server+HD+#{version}.dmg"
-  appcast 'https://s3.amazonaws.com/AirVideoHD/Download/appcast.xml',
-          checkpoint: '2edab1e42ef53acc10dc26be789885edeb737bc83fd75b987c3642a5c533fb5a'
+  appcast 'https://s3.amazonaws.com/AirVideoHD/Download/appcast.xml'
   name 'Air Video Server HD'
   homepage 'http://www.inmethod.com/airvideohd'
 

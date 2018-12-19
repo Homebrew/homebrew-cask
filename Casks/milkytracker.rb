@@ -4,10 +4,9 @@ cask 'milkytracker' do
 
   # github.com/milkytracker/MilkyTracker was verified as official when first introduced to the cask
   url "https://github.com/milkytracker/MilkyTracker/releases/download/v#{version}/milkytracker-#{version}.dmg"
-  appcast 'https://github.com/milkytracker/MilkyTracker/releases.atom',
-          checkpoint: 'e2b2d0a0d1f755e77a3ff467cb5e91b1bdc69a5851ed31d1dbde341684fd9568'
+  appcast 'https://github.com/milkytracker/MilkyTracker/releases.atom'
   name 'MilkyTracker'
-  homepage 'http://milkytracker.titandemo.org/'
+  homepage 'https://milkytracker.titandemo.org/'
 
   app 'MilkyTracker.app'
 end

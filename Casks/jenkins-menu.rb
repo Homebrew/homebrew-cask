@@ -4,8 +4,7 @@ cask 'jenkins-menu' do
 
   # github.com/qvacua/jenkins-menu was verified as official when first introduced to the cask
   url "https://github.com/qvacua/jenkins-menu/releases/download/v#{version}/Jenkins.Menu-#{version}.zip"
-  appcast 'http://qvacua.com/jenkinsmenu/appcast.xml',
-          checkpoint: '7d022aadeae3d7bafc6a0b580f4159b4b14d15fe24d08f360835557d5e2c5156'
+  appcast 'http://qvacua.com/jenkinsmenu/appcast.xml'
   name 'Jenkins Menu'
   homepage 'http://qvacua.com/'
 

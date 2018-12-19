@@ -2,7 +2,7 @@ cask 'applepi-baker' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.tweaking4all.com/downloads/raspberrypi/ApplePi-Baker.zip',
+  url 'https://www.tweaking4all.com/downloads/raspberrypi/ApplePi-Baker.zip',
       cookies: {
                  'gdbbx_session_activity' => '0',
                }

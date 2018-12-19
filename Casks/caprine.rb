@@ -1,10 +1,9 @@
 cask 'caprine' do
-  version '2.12.1'
-  sha256 'dbe40db6855d7e658d7b20a9b41d7c299d5a8f6e53cb76899825f3c43ec59390'
+  version '2.23.0'
+  sha256 '328c81bb0a467bd941e967115f1d20e0a51f2a1ab0868ebc7495946d239fbc29'
 
   url "https://github.com/sindresorhus/caprine/releases/download/v#{version}/Caprine-#{version}.dmg"
-  appcast 'https://github.com/sindresorhus/caprine/releases.atom',
-          checkpoint: 'adbab2c6371a253e9873733cb7829244ec026ad0fb9fdbf674f085a843ab6c99'
+  appcast 'https://github.com/sindresorhus/caprine/releases.atom'
   name 'Caprine'
   homepage 'https://github.com/sindresorhus/caprine'
 
@@ -15,6 +14,8 @@ cask 'caprine' do
   zap trash: [
                '~/Library/Application Support/Caprine',
                '~/Library/Logs/Caprine',
+               '~/Library/Caches/com.sindresorhus.caprine',
+               '~/Library/Caches/com.sindresorhus.caprine.ShipIt',
                '~/Library/Preferences/com.sindresorhus.caprine.helper.plist',
                '~/Library/Preferences/com.sindresorhus.caprine.plist',
                '~/Library/Saved Application State/com.sindresorhus.caprine.savedState',

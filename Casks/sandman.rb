@@ -4,8 +4,7 @@ cask 'sandman' do
 
   # github.com/alexanderepstein/Sandman was verified as official when first introduced to the cask
   url "https://github.com/alexanderepstein/Sandman/releases/download/v#{version}/Sandman-#{version}.dmg"
-  appcast 'https://github.com/alexanderepstein/Sandman/releases.atom',
-          checkpoint: 'b6bc71dd796dc5d37028616ccd320bb9654a6c8ed740c73761af8ef512d4a890'
+  appcast 'https://github.com/alexanderepstein/Sandman/releases.atom'
   name 'Sandman'
   homepage 'https://alexanderepstein.github.io/Sandman/'
 

@@ -1,10 +1,9 @@
 cask 'viscosity' do
-  version '1.7.9'
-  sha256 'fbb7111c59c0b2e5164a520ebf5a49fe5baddaad4314b1d1d1c066f923b501c1'
+  version '1.7.12'
+  sha256 'bc60b724e262472016159aa55aab1ebb1af4e416aea0d8a581d68200d1385e75'
 
   url "https://swupdate.sparklabs.com/download/mac/release/viscosity/Viscosity%20#{version}.dmg"
-  appcast 'https://swupdate.sparklabs.com/appcast/mac/release/viscosity/',
-          checkpoint: '42e436e3d57dbd738ab898bc9fe10cf499a80f8638885bb8f5f2176bca0428a6'
+  appcast 'https://swupdate.sparklabs.com/appcast/mac/release/viscosity/'
   name 'Viscosity'
   homepage 'https://www.sparklabs.com/viscosity/'
 

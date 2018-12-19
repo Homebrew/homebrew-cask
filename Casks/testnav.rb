@@ -1,10 +1,10 @@
 cask 'testnav' do
-  version '1.6.5'
-  sha256 'bdc201983df28d34f8b4fab8b5b0cf9ae625631022e56a673ae6dbb5c9dfca0a'
+  version '1.7.3'
+  sha256 '9fca7d7e9bb57af5841b9e34722f680383b397b37f298c0b69efdc6565272335'
 
-  url "http://download.testnav.com/installers/testnav-#{version}.dmg"
+  url "https://download.testnav.com/installers/testnav-#{version}.dmg"
   name 'TestNav'
-  homepage 'http://download.testnav.com/'
+  homepage 'https://download.testnav.com/'
 
   app 'TestNav.app'
 end

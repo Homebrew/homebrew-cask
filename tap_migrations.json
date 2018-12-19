@@ -31,7 +31,7 @@
   "packer": "homebrew/core",
   "pandoc": "homebrew/core",
   "pgloader": "homebrew/core",
-  "phantomjs": "homebrew/core",
+  "pgweb": "homebrew/core",
   "purescript": "homebrew/core",
   "python": "homebrew/core",
   "python3": "homebrew/core",
@@ -47,5 +47,6 @@
   "syncthing": "homebrew/core",
   "terraform": "homebrew/core",
   "vault": "homebrew/core",
+  "vfuse": "homebrew/core",
   "volatility": "homebrew/core"
 }

@@ -1,13 +1,12 @@
 cask 'headset' do
-  version '1.8.1'
-  sha256 '4487eb62bfe5e2088676c1e555d32699474664cd9f1452f2086aa05f176b5cd8'
+  version '2.1.1'
+  sha256 '336f1403c64fef27b852370353dcd6f2801244d646a61042ec7a3aebefad5d1f'
 
   # github.com/headsetapp/headset-electron was verified as official when first introduced to the cask
   url "https://github.com/headsetapp/headset-electron/releases/download/v#{version}/Headset-#{version}.dmg"
-  appcast 'https://github.com/headsetapp/headset-electron/releases.atom',
-          checkpoint: '5a042f25952e37c3f76f74ce3fe8f0af5619de7d039fcfb1cdca67474a7d4aa2'
+  appcast 'https://github.com/headsetapp/headset-electron/releases.atom'
   name 'Headset'
-  homepage 'http://headsetapp.co/'
+  homepage 'https://headsetapp.co/'
 
   app 'Headset.app'
 

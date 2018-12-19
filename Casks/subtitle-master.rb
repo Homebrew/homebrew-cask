@@ -3,8 +3,7 @@ cask 'subtitle-master' do
   sha256 '8936495ef4aefe9bf59c28dd4d5a92574c194062067c318667e3f55428245304'
 
   url "https://github.com/subtitle-master/subtitlemaster/releases/download/v#{version}-SNAPSHOT/Subtitle.Master-osx-v#{version}-SNAPSHOT.zip"
-  appcast 'https://github.com/subtitle-master/subtitlemaster/releases.atom',
-          checkpoint: 'e12b1034eeb5c53a908d9ddaea48e3e58d408853b4d0836bbbc50334e7a70878'
+  appcast 'https://github.com/subtitle-master/subtitlemaster/releases.atom'
   name 'Subtitle Master'
   homepage 'https://github.com/subtitle-master/subtitlemaster/releases'
 

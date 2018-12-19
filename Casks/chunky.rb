@@ -4,8 +4,7 @@ cask 'chunky' do
 
   # launchpad.net/chunky was verified as official when first introduced to the cask
   url "https://launchpad.net/chunky/#{version.major_minor}/#{version}/+download/Chunky-#{version}.dmg"
-  appcast 'https://github.com/llbit/chunky/releases.atom',
-          checkpoint: '5e546cbd266cc7db6388f21aaad0a9a8035cff552a91763b9ffbfff1b8c2d834'
+  appcast 'https://github.com/llbit/chunky/releases.atom'
   name 'Chunky'
   homepage 'https://chunky.llbit.se/'
 

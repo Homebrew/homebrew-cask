@@ -1,11 +1,10 @@
 cask 'neat' do
-  version '1.5.1.10'
-  sha256 '350b9aec6140d9305ef37b630c5ad92d34bcdd65f32847eb34115cdeb0b4aa9f'
+  version '1.5.2.11'
+  sha256 'c00a69a137b0515e621abe3df939c3469b30e6f0480c5c2aec71df4f770b9374'
 
   # neatsupport.wpengine.com was verified as official when first introduced to the cask
   url 'https://neatsupport.wpengine.com/wp-content/uploads/helpcenter/software/Neat-Mac.dmg'
-  appcast 'https://s3.amazonaws.com/helium-updater/Autoupdate/UPDATE.XML',
-          checkpoint: '31e2b5b59bb53c19c10c7c907b3ecdb09b56c122c71e90300b5d18072caa929d'
+  appcast 'https://s3.amazonaws.com/helium-updater/Autoupdate/UPDATE.XML'
   name 'Neat'
   homepage 'https://www.neat.com/'
 

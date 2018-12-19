@@ -1,11 +1,10 @@
 cask 'zxpinstaller' do
-  version '1.6.2'
-  sha256 '94202eea57c9c87c67a40514cdee1d1b9cb3680e7be32f3086115b4e80a50aca'
+  version '1.6.3'
+  sha256 'f9ffa59008030f1e73bc7f7d99b5aac0c5fed94b2c8d6ba6de35e5e6edb8d11a'
 
   # github.com/CreativeDo/ZXPInstaller was verified as official when first introduced to the cask
   url "https://github.com/CreativeDo/ZXPInstaller/releases/download/#{version}/ZXPInstaller.dmg"
-  appcast 'https://github.com/CreativeDo/ZXPInstaller/releases.atom',
-          checkpoint: 'a9e95e5ee12c086bdc392f5e0f9cbb034a5b3c8d46ae17d44c2b1794699abf6a'
+  appcast 'https://github.com/CreativeDo/ZXPInstaller/releases.atom'
   name 'ZXPInstaller'
   homepage 'http://zxpinstaller.com/'
 
