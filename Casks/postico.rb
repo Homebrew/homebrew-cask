@@ -4,7 +4,7 @@ cask 'postico' do
 
   # amazonaws.com/eggerapps-downloads was verified as official when first introduced to the cask
   url "https://s3-eu-west-1.amazonaws.com/eggerapps-downloads/postico-#{version}.zip"
-  appcast 'https://eggerapps.at/postico/docs/v1.5/changelist.html'
+  appcast 'https://eggerapps.at/postico/docs/?file=changelist.html'
   name 'Postico'
   homepage 'https://eggerapps.at/postico/'
 
