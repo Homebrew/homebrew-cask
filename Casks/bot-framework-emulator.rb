@@ -1,4 +1,4 @@
-cask 'botframework-emulator' do
+cask 'bot-framework-emulator' do
   version '4.2.1'
   sha256 '6f9a525969ccd748d486d1b3a4d4f58dc7efbe0f4cc6802024bc9be542e8f8b3'
 
