@@ -1,12 +1,12 @@
 cask 'paragon-extfs' do
-  version 'latest'
+  version :latest
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "https://dl.paragon-software.com/demo/trial_extfs.dmg"
+  url 'https://dl.paragon-software.com/demo/trial_extfs.dmg'
   name 'Paragon ExtFS'
   homepage 'https://www.paragon-software.com/ufsdhome/extfs-mac/'
 
-  installer manual: "Install Paragon ExtFS for Mac.app"
+  installer manual: 'Install Paragon ExtFS for Mac.app'
 
   uninstall kext:      'com.paragon-software.filesystems.extfs',
             launchctl: 'com.paragon-software.extfs*',
