@@ -6,7 +6,7 @@ cask 'daemon-tools' do
   url 'http://web-search-home.com/download/dtLiteMac'
   appcast 'http://resources.web-search-home.com/xml/DAEMONToolsLite-appcast.xml'
   name 'DAEMON Tools'
-  homepage 'https://www.daemon-tools.cc/home'
+  homepage 'https://www.daemon-tools.cc/'
 
   app 'DAEMON Tools.app'
 end
