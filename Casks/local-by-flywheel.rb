@@ -10,7 +10,14 @@ cask 'local-by-flywheel' do
   depends_on cask: 'virtualbox'
 
   app 'Local by Flywheel.app'
-
+  
+  uninstall launchctl: 'org.virtualbox.startup',
+            delete:    [
+                         '/Applications/VirtualBox.app',
+                         '/Applications/VirtualBox.app/Contents/Resources/VirtualBoxVM.app',
+                         '/Applications/VirtualBox.app/Contents/Resources/vmstarter.app',
+                       ]
+  
   zap trash: [
                '~/Library/Application Support/Local by Flywheel',
                '~/Library/Logs/local-by-flywheel.log',
