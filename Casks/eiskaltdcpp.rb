@@ -1,6 +1,6 @@
 cask 'eiskaltdcpp' do
-  version '2.2.10-280-macOS10.11'
-  sha256 'd9b900587e165e49192e6ce31992f39a335839371b9e76f250c6f323dde286bd'
+  version '2.2.10-284-macOS10.12'
+  sha256 'a4d5fc1d73e97da8f1ad393094dd57cef0dffb38392b035ea64090597b5cf132'
 
   url "https://downloads.sourceforge.net/eiskaltdcpp/EiskaltDC++-#{version}-x86_64.dmg"
   appcast 'https://sourceforge.net/projects/eiskaltdcpp/rss'
