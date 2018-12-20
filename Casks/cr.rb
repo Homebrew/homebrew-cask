@@ -7,11 +7,11 @@ cask 'cr' do
   name 'Cool Reader'
   homepage 'https://sourceforge.net/projects/crengine/'
 
-  app "cr#{version}.app"
+  app "cr#{version.major}.app"
 
   zap trash: [
-               "~/.cr#{version}",
-               "~/Library/Saved Application State/org.coolreader.cr#{version}.savedState",
-               "/Applications/cr#{version}.ini",
+               "~/.cr#{version.major}",
+               "~/Library/Saved Application State/org.coolreader.cr#{version.major}.savedState",
+               "/Applications/cr#{version.major}.ini",
              ]
 end
