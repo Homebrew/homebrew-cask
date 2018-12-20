@@ -1,6 +1,6 @@
 cask 'knockknock' do
-  version '2.0.1'
-  sha256 '67916905ccd03b1339db578583ea72dbcec88caccd51b61300ad9561b124b393'
+  version '2.0.2'
+  sha256 '5b57a14a360d747028d9e2917cc424d13b8166c1ae8398a48157367225ee0745'
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/KnockKnock_#{version}.zip"
