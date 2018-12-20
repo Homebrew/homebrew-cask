@@ -1,6 +1,6 @@
 cask 'quassel-client' do
-  version '0.12.5'
-  sha256 '9eb001db3bf40d7160a78c95c0ace73967b9413d7da0f7bc12528c883fc6685c'
+  version '0.13.0'
+  sha256 'c81bb026f103395d087706bd79887bf385ca511125f9d60af083bd218d9e2da0'
 
   url "https://quassel-irc.org/pub/QuasselClient_MacOSX-x86_64_#{version}.dmg"
   name 'Quassel IRC'
