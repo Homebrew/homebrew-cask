@@ -1,4 +1,4 @@
-cask 'pdfelement.express' do
+cask 'pdfelement-express' do
   version '1.2.0,4133'
   sha256 '13d506e32998e88c92a056ac978cb158085ef278df7867a20bfd68e20627d576'
 
