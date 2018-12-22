@@ -1,6 +1,6 @@
 cask 'taskexplorer' do
-  version '1.6.0'
-  sha256 '61a645e9a886a4631d9ed82182bdba9177845d1ce4cfbd1f0c0e7c2e96a9df9e'
+  version '2.0.0'
+  sha256 '7637f5011048dc3c5bd8dfd82220bc3ffdac00f024cd2f58bd8b4880229e52f5'
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/TaskExplorer_#{version}.zip"
