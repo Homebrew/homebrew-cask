@@ -5,7 +5,7 @@ cask 'kate' do
   # binary-factory.kde.org was verified as official when first introduced to the cask
   url "https://binary-factory.kde.org/job/Kate_Release_macos/#{version.after_comma}/artifact/kate-#{version.before_comma}-#{version.after_comma}-macos-64-clang.dmg"
   appcast 'https://binary-factory.kde.org/job/Kate_Release_macos/rssAll'
-  name 'kate'
+  name 'Kate'
   homepage 'https://kate-editor.org/'
 
   app 'kate.app'
