@@ -1,6 +1,6 @@
 cask 'i1profiler' do
-  version '1.8.1'
-  sha256 '0085551a7da1736200e49cc84a79b9ac4b35abca5866d1189f6ac09572ac6634'
+  version '1.8.2'
+  sha256 'c5d1fa7c04fc2479472f6826638b1f59b4a76eb31b480dca52b44d035f908fea'
 
   url "https://downloads.xrite.com/downloads/software/i1Profiler/#{version}/Mac/i1Profiler.zip"
   appcast 'https://www.xrite.com/Downloads/Autoupdate/i1profiler_mac_appcast.xml'
