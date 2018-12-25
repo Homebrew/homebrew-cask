@@ -26,8 +26,8 @@ cask 'deeper' do
     version '2.3.3'
     sha256 '08ac5820428bcce74548786e8fda947edfaa31cf4a822d5c443835e73a11dd3b'
   else
-    version '2.3.7'
-    sha256 '7f4c0399191bf8109ab1987598b42b2a83cdf3ad85f3a0d82d61ec421e68d724'
+    version '2.3.9'
+    sha256 '08ac5820428bcce74548786e8fda947edfaa31cf4a822d5c443835e73a11dd3b'
   end
 
   url "https://www.titanium-software.fr/download/#{macos_release}/Deeper.dmg"
