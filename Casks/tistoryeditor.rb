@@ -1,6 +1,6 @@
 cask 'tistoryeditor' do
-  version '0.8.1'
-  sha256 '48fb68bee8f4166f07e973370084ab43bd5c9af92f511d301cee04409a9dda01'
+  version '0.8.2'
+  sha256 'a1770c3a2d2abd369bb63f9776f31f19cdc36cec802c154414a6b9616f4418d2'
 
   # github.com/joostory/tistory-editor was verified as official when first introduced to the cask
   url "https://github.com/joostory/tistory-editor/releases/download/v#{version}/TistoryEditor-#{version}-mac.zip"
