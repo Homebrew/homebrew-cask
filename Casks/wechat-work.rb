@@ -5,8 +5,8 @@ cask 'wechat-work' do
   url "https://dldir1.qq.com/foxmail/work_weixin/WXWork_#{version}.dmg"
   name 'WeChat Work'
   name '企业微信'
-  homepage 'https://work.weixin.qq.com'
-  
+  homepage 'https://work.weixin.qq.com/'
+
   app '企业微信.app'
 
   uninstall quit: 'com.tencent.WeWorkMac'
