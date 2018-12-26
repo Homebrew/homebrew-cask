@@ -25,7 +25,7 @@ cask 'intika-firefox' do
                '~/Library/Preferences/org.mozilla.firefox.plist',
              ],
       rmdir: [
-               '~/Library/Application Support/Mozilla', #  May also contain non-Firefox data
+               '~/Library/Application Support/Mozilla',
                '~/Library/Caches/Mozilla/updates/Applications',
                '~/Library/Caches/Mozilla/updates',
                '~/Library/Caches/Mozilla',
