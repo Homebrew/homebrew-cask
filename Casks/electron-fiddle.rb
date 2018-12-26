@@ -1,6 +1,6 @@
 cask 'electron-fiddle' do
-  version '0.3.0'
-  sha256 '96cc50d0f3a8b3a58ca1e55093d0c20fb387f74c437ccbce88ae05796a7eb514'
+  version '0.4.1'
+  sha256 '0cbca2c942118e0a4cbb128551948f32e34881096376b242e8657270e5abb615'
 
   # github.com/electron/fiddle was verified as official when first introduced to the cask
   url "https://github.com/electron/fiddle/releases/download/v#{version}/electron-fiddle-#{version}-mac.zip"
