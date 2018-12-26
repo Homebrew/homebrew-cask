@@ -6,5 +6,5 @@ cask 'quickhash' do
   name 'Quickhash'
   homepage 'https://quickhash-gui.org/'
 
-  app 'QuickHash.app'
+  app 'AppleOSX/QuickHash.app'
 end
