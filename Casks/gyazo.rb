@@ -1,6 +1,6 @@
 cask 'gyazo' do
-  version '3.6.0'
-  sha256 '96b5dd8e1ffe7869b039222b748bc3a4e4455381abcbc422f12a2f9c6c2172b6'
+  version '3.6.2'
+  sha256 '1397ccd966cbe3200f1b1827f8104dc5d0f7ca2cf6fb31a0fcaa9e15ee663d8a'
 
   url "https://files.gyazo.com/setup/Gyazo-#{version}.dmg"
   appcast 'https://gyazo.com/api/gy_mac.xml'
