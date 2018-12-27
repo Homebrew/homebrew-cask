@@ -9,4 +9,10 @@ cask 'freac' do
   homepage 'https://www.freac.org/'
 
   app 'freac.app'
+
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.freac.freac.sfl*',
+               '~/Library/Preferences/org.freac.freac.plist',
+               '~/Library/Saved Application State/org.freac.freac.savedState',
+             ]
 end
