@@ -8,7 +8,7 @@ cask 'wire' do
   name 'Wire'
   homepage 'https://wire.com/'
 
-  pkg "Wire.pkg"
+  pkg 'Wire.pkg'
 
   uninstall pkgutil: 'com.wearezeta.zclient.mac',
             signal:  [
